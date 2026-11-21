@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200299D RID: 10653
+// Token: 0x02001F18 RID: 7960
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class ShipTowerBuffListItem : GridProxyAbstract<ShipTowerBuffQuality>
 {
-	// Token: 0x0601615B RID: 90459 RVA: 0x00595760 File Offset: 0x00593960
+	// Token: 0x06013B61 RID: 80737 RVA: 0x005C0720 File Offset: 0x005BE920
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class ShipTowerBuffListItem : GridProxyAbstract<ShipTowerBuffQuality>
 		};
 	}
 
-	// Token: 0x0601615C RID: 90460 RVA: 0x005957BC File Offset: 0x005939BC
+	// Token: 0x06013B62 RID: 80738 RVA: 0x005C077C File Offset: 0x005BE97C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerBuffListItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ public class ShipTowerBuffListItem : GridProxyAbstract<ShipTowerBuffQuality>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601615D RID: 90461 RVA: 0x00595800 File Offset: 0x00593A00
+	// Token: 0x06013B63 RID: 80739 RVA: 0x005C07C0 File Offset: 0x005BE9C0
 	public override UniTask RefreshAsync(ShipTowerBuffQuality data, bool isSelected, int gridIndex)
 	{
 		ShipTowerBuffListItem.<RefreshAsync>d__8 <RefreshAsync>d__;
@@ -49,7 +49,7 @@ public class ShipTowerBuffListItem : GridProxyAbstract<ShipTowerBuffQuality>
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601615E RID: 90462 RVA: 0x0059584C File Offset: 0x00593A4C
+	// Token: 0x06013B64 RID: 80740 RVA: 0x005C080C File Offset: 0x005BEA0C
 	public override void Refresh(ShipTowerBuffQuality data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -62,7 +62,7 @@ public class ShipTowerBuffListItem : GridProxyAbstract<ShipTowerBuffQuality>
 		base.GetText(0).ShowTextNew(this.ItemData.Title);
 	}
 
-	// Token: 0x0601615F RID: 90463 RVA: 0x005958A5 File Offset: 0x00593AA5
+	// Token: 0x06013B65 RID: 80741 RVA: 0x005C0865 File Offset: 0x005BEA65
 	private ShipTowerBuffItem CreateBuffItem()
 	{
 		return new ShipTowerBuffItem
@@ -73,7 +73,7 @@ public class ShipTowerBuffListItem : GridProxyAbstract<ShipTowerBuffQuality>
 		};
 	}
 
-	// Token: 0x06016160 RID: 90464 RVA: 0x005958D0 File Offset: 0x00593AD0
+	// Token: 0x06013B66 RID: 80742 RVA: 0x005C0890 File Offset: 0x005BEA90
 	public void UpdateBuffInfo()
 	{
 		GenericLayout<ShipTowerBuffItem, ShipTowerBuffData> itemLayout = this.ItemLayout;
@@ -88,7 +88,7 @@ public class ShipTowerBuffListItem : GridProxyAbstract<ShipTowerBuffQuality>
 		}
 	}
 
-	// Token: 0x06016161 RID: 90465 RVA: 0x00595914 File Offset: 0x00593B14
+	// Token: 0x06013B67 RID: 80743 RVA: 0x005C08D4 File Offset: 0x005BEAD4
 	public void UpdateBuffSelected()
 	{
 		GenericLayout<ShipTowerBuffItem, ShipTowerBuffData> itemLayout = this.ItemLayout;
@@ -103,7 +103,7 @@ public class ShipTowerBuffListItem : GridProxyAbstract<ShipTowerBuffQuality>
 		}
 	}
 
-	// Token: 0x06016162 RID: 90466 RVA: 0x00595958 File Offset: 0x00593B58
+	// Token: 0x06013B68 RID: 80744 RVA: 0x005C0918 File Offset: 0x005BEB18
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -137,11 +137,11 @@ public class ShipTowerBuffListItem : GridProxyAbstract<ShipTowerBuffQuality>
 		};
 	}
 
-	// Token: 0x0400A49E RID: 42142
+	// Token: 0x0400A888 RID: 43144
 	[Nullable(2)]
 	private ShipTowerBuffQuality ItemData;
 
-	// Token: 0x0400A49F RID: 42143
+	// Token: 0x0400A889 RID: 43145
 	[Nullable(new byte[]
 	{
 		2,
@@ -150,7 +150,7 @@ public class ShipTowerBuffListItem : GridProxyAbstract<ShipTowerBuffQuality>
 	})]
 	private GenericLayout<ShipTowerBuffItem, ShipTowerBuffData> ItemLayout;
 
-	// Token: 0x0400A4A0 RID: 42144
+	// Token: 0x0400A88A RID: 43146
 	[Nullable(new byte[]
 	{
 		2,
@@ -158,25 +158,25 @@ public class ShipTowerBuffListItem : GridProxyAbstract<ShipTowerBuffQuality>
 	})]
 	public Action<ShipTowerBuffData> OnItemClickCallback;
 
-	// Token: 0x0400A4A1 RID: 42145
+	// Token: 0x0400A88B RID: 43147
 	[Nullable(2)]
 	public Func<int?> GetStageIdCallback;
 
-	// Token: 0x0400A4A2 RID: 42146
+	// Token: 0x0400A88C RID: 43148
 	[Nullable(2)]
 	public Action BuffComponentLoadedCallback;
 
-	// Token: 0x02008FA1 RID: 36769
+	// Token: 0x020081EA RID: 33258
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E854 RID: 190548
+		// Token: 0x04029F53 RID: 171859
 		public const int TxtTitle = 0;
 
-		// Token: 0x0402E855 RID: 190549
+		// Token: 0x04029F54 RID: 171860
 		public const int GridLayoutItemList = 1;
 
-		// Token: 0x0402E856 RID: 190550
+		// Token: 0x04029F55 RID: 171861
 		public const int ItemItem = 2;
 	}
 }

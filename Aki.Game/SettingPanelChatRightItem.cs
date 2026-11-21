@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200251D RID: 9501
+// Token: 0x02001A04 RID: 6660
 [NullableContext(2)]
 [Nullable(0)]
 public class SettingPanelChatRightItem : UiPanelBase
 {
-	// Token: 0x060131CB RID: 78283 RVA: 0x004BE8DC File Offset: 0x004BCADC
+	// Token: 0x0601068B RID: 67211 RVA: 0x004CC5E8 File Offset: 0x004CA7E8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,13 +35,13 @@ public class SettingPanelChatRightItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060131CC RID: 78284 RVA: 0x004BEA16 File Offset: 0x004BCC16
+	// Token: 0x0601068C RID: 67212 RVA: 0x004CC722 File Offset: 0x004CA922
 	public void InitView()
 	{
 		this.RefreshSpeakerInfo();
 	}
 
-	// Token: 0x060131CD RID: 78285 RVA: 0x004BEA20 File Offset: 0x004BCC20
+	// Token: 0x0601068D RID: 67213 RVA: 0x004CC72C File Offset: 0x004CA92C
 	private void RefreshSpeakerInfo()
 	{
 		int value = RoleModel.Instance.GetCurSelectMainRoleId().Value;
@@ -54,7 +54,7 @@ public class SettingPanelChatRightItem : UiPanelBase
 		base.SetTextureShowUntilLoaded(roleHeadIconCircle, base.GetTexture(1), null);
 	}
 
-	// Token: 0x060131CE RID: 78286 RVA: 0x004BEAC0 File Offset: 0x004BCCC0
+	// Token: 0x0601068E RID: 67214 RVA: 0x004CC7CC File Offset: 0x004CA9CC
 	public void OnNameChange()
 	{
 		string text = FunctionModel.Instance.GetPlayerName() ?? "";
@@ -69,7 +69,7 @@ public class SettingPanelChatRightItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060131CF RID: 78287 RVA: 0x004BEB0C File Offset: 0x004BCD0C
+	// Token: 0x0601068F RID: 67215 RVA: 0x004CC818 File Offset: 0x004CAA18
 	public void RefreshDialog(int dialogId)
 	{
 		ChatDialog? chatDialogConfig = PhoneMsgConfig.Instance.GetChatDialogConfig(dialogId);
@@ -82,7 +82,7 @@ public class SettingPanelChatRightItem : UiPanelBase
 		base.GetText(4).SetColor(FColor.FromHex(chatDialogConfig.Value.TextColor));
 	}
 
-	// Token: 0x060131D0 RID: 78288 RVA: 0x004BEB8C File Offset: 0x004BCD8C
+	// Token: 0x06010690 RID: 67216 RVA: 0x004CC898 File Offset: 0x004CAA98
 	private void TryLoadDynamicDialogNode(string path)
 	{
 		SettingPanelChatRightItem.<>c__DisplayClass7_0 CS$<>8__locals1 = new SettingPanelChatRightItem.<>c__DisplayClass7_0();
@@ -100,7 +100,7 @@ public class SettingPanelChatRightItem : UiPanelBase
 		base.RunAsyncTask(task).Forget();
 	}
 
-	// Token: 0x060131D1 RID: 78289 RVA: 0x004BEBD4 File Offset: 0x004BCDD4
+	// Token: 0x06010691 RID: 67217 RVA: 0x004CC8E0 File Offset: 0x004CAAE0
 	private UniTask TryLoadDynamicDialogNodeAsync(string path)
 	{
 		SettingPanelChatRightItem.<TryLoadDynamicDialogNodeAsync>d__8 <TryLoadDynamicDialogNodeAsync>d__;
@@ -112,7 +112,7 @@ public class SettingPanelChatRightItem : UiPanelBase
 		return <TryLoadDynamicDialogNodeAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060131D2 RID: 78290 RVA: 0x004BEC20 File Offset: 0x004BCE20
+	// Token: 0x06010692 RID: 67218 RVA: 0x004CC92C File Offset: 0x004CAB2C
 	public void RefreshSpeakerNameTextColor(int bgId)
 	{
 		bool flag = PhoneMsgModel.Instance.IsDefaultChatBg(bgId);
@@ -125,15 +125,15 @@ public class SettingPanelChatRightItem : UiPanelBase
 		text.SetUIActive(!flag);
 	}
 
-	// Token: 0x060131D3 RID: 78291 RVA: 0x004BEC5C File Offset: 0x004BCE5C
+	// Token: 0x06010693 RID: 67219 RVA: 0x004CC968 File Offset: 0x004CAB68
 	public void HideRedDot()
 	{
 		base.GetItem(6).SetUIActive(false);
 	}
 
-	// Token: 0x04009047 RID: 36935
+	// Token: 0x0400919C RID: 37276
 	private AActor DynamicDialogActor;
 
-	// Token: 0x04009048 RID: 36936
+	// Token: 0x0400919D RID: 37277
 	private LevelSequencePlayer DialogSequencePlayer;
 }

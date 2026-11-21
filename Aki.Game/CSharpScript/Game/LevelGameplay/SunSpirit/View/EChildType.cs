@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 {
-	// Token: 0x020069F6 RID: 27126
+	// Token: 0x02005B53 RID: 23379
 	public enum EChildType
 	{
-		// Token: 0x0402339B RID: 144283
+		// Token: 0x0401E58D RID: 124301
 		NormalTxtNum,
-		// Token: 0x0402339C RID: 144284
+		// Token: 0x0401E58E RID: 124302
 		DefaultBg,
-		// Token: 0x0402339D RID: 144285
+		// Token: 0x0401E58F RID: 124303
 		NotEnoughBgOverlay,
-		// Token: 0x0402339E RID: 144286
+		// Token: 0x0401E590 RID: 124304
 		NotEnoughTxtNum,
-		// Token: 0x0402339F RID: 144287
+		// Token: 0x0401E591 RID: 124305
 		EnoughBgOverlay,
-		// Token: 0x040233A0 RID: 144288
+		// Token: 0x0401E592 RID: 124306
 		EnoughTxtNum
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002765 RID: 10085
+// Token: 0x02001C50 RID: 7248
 internal enum <RogueBattleBuyRoleItem>F18A1F262A15C72EFA2BAD125AB5B6E29E1C04CB95E6255458BB03E7065B54C24__EComponents
 {
-	// Token: 0x04009B6D RID: 39789
+	// Token: 0x04009CC5 RID: 40133
 	RoleItem1,
-	// Token: 0x04009B6E RID: 39790
+	// Token: 0x04009CC6 RID: 40134
 	RoleItem2
 }

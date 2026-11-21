@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 {
-	// Token: 0x02003BA8 RID: 15272
+	// Token: 0x02003FB0 RID: 16304
 	public class IShowTimelineBaseT
 	{
-		// Token: 0x170068B1 RID: 26801
-		// (get) Token: 0x06014EF7 RID: 85751 RVA: 0x0030955A File Offset: 0x0030775A
-		// (set) Token: 0x06014EF8 RID: 85752 RVA: 0x00309562 File Offset: 0x00307762
+		// Token: 0x17006E50 RID: 28240
+		// (get) Token: 0x060163C1 RID: 91073 RVA: 0x0032FAF2 File Offset: 0x0032DCF2
+		// (set) Token: 0x060163C2 RID: 91074 RVA: 0x0032FAFA File Offset: 0x0032DCFA
 		public EShowTimelineType Type { get; set; }
 
-		// Token: 0x06014EF9 RID: 85753 RVA: 0x0030956B File Offset: 0x0030776B
+		// Token: 0x060163C3 RID: 91075 RVA: 0x0032FB03 File Offset: 0x0032DD03
 		public IShowTimelineBaseT()
 		{
 			this.Type = EShowTimelineType.Checkpoint;

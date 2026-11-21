@@ -8,7 +8,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.GaCha.Struct
 {
-	// Token: 0x02003F4C RID: 16204
+	// Token: 0x020031F3 RID: 12787
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(72, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 72)]
@@ -16,7 +16,7 @@ namespace AkiClient.Game.Aki.Data.GaCha.Struct
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 72)]
 	public struct SGachaWeaponTransform : IEqualityOperators<SGachaWeaponTransform, SGachaWeaponTransform, bool>, IEquatable<SGachaWeaponTransform>, IUnrealScriptStruct
 	{
-		// Token: 0x0602940F RID: 168975 RVA: 0x009BF7B4 File Offset: 0x009BD9B4
+		// Token: 0x0601FCF2 RID: 130290 RVA: 0x009363A8 File Offset: 0x009345A8
 		public SGachaWeaponTransform(FVector Location, FVector Rotation, float Size, float RotateTime, FVector ScabbardOffset, bool ShowScabbard, FVector AxisRotate, FVector ScabbardRotationOffset)
 		{
 			this.Location = Location;
@@ -29,25 +29,25 @@ namespace AkiClient.Game.Aki.Data.GaCha.Struct
 			this.ScabbardRotationOffset = ScabbardRotationOffset;
 		}
 
-		// Token: 0x06029410 RID: 168976 RVA: 0x009BF7F4 File Offset: 0x009BD9F4
+		// Token: 0x0601FCF3 RID: 130291 RVA: 0x009363E8 File Offset: 0x009345E8
 		public static bool operator ==(SGachaWeaponTransform left, SGachaWeaponTransform right)
 		{
 			return left.Location == right.Location && left.Rotation == right.Rotation && left.Size == right.Size && left.RotateTime == right.RotateTime && left.ScabbardOffset == right.ScabbardOffset && left.ShowScabbard == right.ShowScabbard && left.AxisRotate == right.AxisRotate && left.ScabbardRotationOffset == right.ScabbardRotationOffset;
 		}
 
-		// Token: 0x06029411 RID: 168977 RVA: 0x009BF88A File Offset: 0x009BDA8A
+		// Token: 0x0601FCF4 RID: 130292 RVA: 0x0093647E File Offset: 0x0093467E
 		public static bool operator !=(SGachaWeaponTransform left, SGachaWeaponTransform right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x06029412 RID: 168978 RVA: 0x009BF896 File Offset: 0x009BDA96
+		// Token: 0x0601FCF5 RID: 130293 RVA: 0x0093648A File Offset: 0x0093468A
 		public bool Equals(SGachaWeaponTransform other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06029413 RID: 168979 RVA: 0x009BF8A4 File Offset: 0x009BDAA4
+		// Token: 0x0601FCF6 RID: 130294 RVA: 0x00936498 File Offset: 0x00934698
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -59,54 +59,54 @@ namespace AkiClient.Game.Aki.Data.GaCha.Struct
 			return false;
 		}
 
-		// Token: 0x06029414 RID: 168980 RVA: 0x009BF8C9 File Offset: 0x009BDAC9
+		// Token: 0x0601FCF7 RID: 130295 RVA: 0x009364BD File Offset: 0x009346BD
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<FVector, FVector, float, float, FVector, bool, FVector, FVector>(this.Location, this.Rotation, this.Size, this.RotateTime, this.ScabbardOffset, this.ShowScabbard, this.AxisRotate, this.ScabbardRotationOffset);
 		}
 
-		// Token: 0x06029415 RID: 168981 RVA: 0x009BF900 File Offset: 0x009BDB00
+		// Token: 0x0601FCF8 RID: 130296 RVA: 0x009364F4 File Offset: 0x009346F4
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SGachaWeaponTransform._ScriptStructPtr != 0) ? SGachaWeaponTransform._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/GaCha/Struct/SGachaWeaponTransform.SGachaWeaponTransform", ref SGachaWeaponTransform._ScriptStructPtr);
 		}
 
-		// Token: 0x04015209 RID: 86537
+		// Token: 0x04011125 RID: 69925
 		[FieldOffset(0)]
 		public FVector Location;
 
-		// Token: 0x0401520A RID: 86538
+		// Token: 0x04011126 RID: 69926
 		[FieldOffset(12)]
 		public FVector Rotation;
 
-		// Token: 0x0401520B RID: 86539
+		// Token: 0x04011127 RID: 69927
 		[FieldOffset(24)]
 		public float Size;
 
-		// Token: 0x0401520C RID: 86540
+		// Token: 0x04011128 RID: 69928
 		[FieldOffset(28)]
 		public float RotateTime;
 
-		// Token: 0x0401520D RID: 86541
+		// Token: 0x04011129 RID: 69929
 		[FieldOffset(32)]
 		public FVector ScabbardOffset;
 
-		// Token: 0x0401520E RID: 86542
+		// Token: 0x0401112A RID: 69930
 		[FieldOffset(44)]
 		public bool ShowScabbard;
 
-		// Token: 0x0401520F RID: 86543
+		// Token: 0x0401112B RID: 69931
 		[FieldOffset(48)]
 		public FVector AxisRotate;
 
-		// Token: 0x04015210 RID: 86544
+		// Token: 0x0401112C RID: 69932
 		[FieldOffset(60)]
 		public FVector ScabbardRotationOffset;
 
-		// Token: 0x04015211 RID: 86545
+		// Token: 0x0401112D RID: 69933
 		public const string __ObjectPath = "/Game/Aki/Data/GaCha/Struct/SGachaWeaponTransform.SGachaWeaponTransform";
 
-		// Token: 0x04015212 RID: 86546
+		// Token: 0x0401112E RID: 69934
 		private static IntPtr _ScriptStructPtr;
 	}
 }

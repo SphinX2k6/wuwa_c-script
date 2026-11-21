@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.MingSu.View
 {
-	// Token: 0x020053D7 RID: 21463
+	// Token: 0x020043BA RID: 17338
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 	})]
 	public class CollectSmallItemGrid : LoopScrollSmallItemGrid<IRewardItemData>
 	{
-		// Token: 0x06036DC9 RID: 224713 RVA: 0x00CFE188 File Offset: 0x00CFC388
+		// Token: 0x0602BD10 RID: 179472 RVA: 0x00C4D258 File Offset: 0x00C4B458
 		protected override void OnRefresh(IRewardItemData data, bool isSelected, int gridIndex)
 		{
 			bool value = false;

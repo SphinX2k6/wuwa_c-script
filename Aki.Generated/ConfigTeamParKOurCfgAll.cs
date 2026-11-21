@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009C3 RID: 2499
+	// Token: 0x02000A98 RID: 2712
 	public class ConfigTeamParKOurCfgAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003AA6 RID: 15014 RVA: 0x001A5774 File Offset: 0x001A3974
+		// Token: 0x06003FA4 RID: 16292 RVA: 0x001C4B08 File Offset: 0x001C2D08
 		static ConfigTeamParKOurCfgAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTeamParKOurCfgAll.CreateStaticDefaultValue), new Action(ConfigTeamParKOurCfgAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003AA7 RID: 15015 RVA: 0x001A5794 File Offset: 0x001A3994
+		// Token: 0x06003FA5 RID: 16293 RVA: 0x001C4B28 File Offset: 0x001C2D28
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTeamParKOurCfgAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003AA8 RID: 15016 RVA: 0x001A5813 File Offset: 0x001A3A13
+		// Token: 0x06003FA6 RID: 16294 RVA: 0x001C4BA7 File Offset: 0x001C2DA7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTeamParKOurCfgAll.LogPair = null;
 			ConfigTeamParKOurCfgAll.HandleId = 0;
 		}
 
-		// Token: 0x06003AA9 RID: 15017 RVA: 0x001A5821 File Offset: 0x001A3A21
+		// Token: 0x06003FA7 RID: 16295 RVA: 0x001C4BB5 File Offset: 0x001C2DB5
 		public static void Init()
 		{
 			ConfigTeamParKOurCfgAll.HandleId = ConfigCommon.InitDataStatement(ConfigTeamParKOurCfgAll.HandleId, "db_teamparkour.db", "select BinData from `TeamParKOurCfg`");
 		}
 
-		// Token: 0x06003AAA RID: 15018 RVA: 0x001A583C File Offset: 0x001A3A3C
+		// Token: 0x06003FA8 RID: 16296 RVA: 0x001C4BD0 File Offset: 0x001C2DD0
 		[NullableContext(2)]
 		public static IReadOnlyList<TeamParKOurCfg> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400443B RID: 17467
+		// Token: 0x04004A0E RID: 18958
 		private const string DB = "db_teamparkour.db";
 
-		// Token: 0x0400443C RID: 17468
+		// Token: 0x04004A0F RID: 18959
 		private const string FILE = "l.联机跑酷活动.xlsx";
 
-		// Token: 0x0400443D RID: 17469
+		// Token: 0x04004A10 RID: 18960
 		private const string TABLE = "TeamParKOurCfg";
 
-		// Token: 0x0400443E RID: 17470
+		// Token: 0x04004A11 RID: 18961
 		private const string COMMAND = "select BinData from `TeamParKOurCfg`";
 
-		// Token: 0x0400443F RID: 17471
+		// Token: 0x04004A12 RID: 18962
 		private const string KEY_PREFIX = "TeamParKOurCfgAll";
 
-		// Token: 0x04004440 RID: 17472
+		// Token: 0x04004A13 RID: 18963
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004441 RID: 17473
+		// Token: 0x04004A14 RID: 18964
 		private static int HandleId;
 	}
 }

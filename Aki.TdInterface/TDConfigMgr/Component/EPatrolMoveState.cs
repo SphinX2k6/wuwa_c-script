@@ -2,14 +2,14 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000111 RID: 273
+	// Token: 0x02000120 RID: 288
 	public enum EPatrolMoveState
 	{
-		// Token: 0x040005A0 RID: 1440
+		// Token: 0x040005D8 RID: 1496
 		Walk = 1,
-		// Token: 0x040005A1 RID: 1441
+		// Token: 0x040005D9 RID: 1497
 		Run,
-		// Token: 0x040005A2 RID: 1442
+		// Token: 0x040005DA RID: 1498
 		Sprint
 	}
 }

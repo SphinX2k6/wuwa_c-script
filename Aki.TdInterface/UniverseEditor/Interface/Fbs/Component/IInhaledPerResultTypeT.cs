@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005414 RID: 21524
+	// Token: 0x0200599A RID: 22938
 	public class IInhaledPerResultTypeT
 	{
-		// Token: 0x17009E5E RID: 40542
-		// (get) Token: 0x060235AB RID: 144811 RVA: 0x004E4AA6 File Offset: 0x004E2CA6
-		// (set) Token: 0x060235AC RID: 144812 RVA: 0x004E4AAE File Offset: 0x004E2CAE
+		// Token: 0x1700A698 RID: 42648
+		// (get) Token: 0x06025663 RID: 153187 RVA: 0x00521AD2 File Offset: 0x0051FCD2
+		// (set) Token: 0x06025664 RID: 153188 RVA: 0x00521ADA File Offset: 0x0051FCDA
 		public EInhaledPerResultType Type { get; set; }
 
-		// Token: 0x060235AD RID: 144813 RVA: 0x004E4AB7 File Offset: 0x004E2CB7
+		// Token: 0x06025665 RID: 153189 RVA: 0x00521AE3 File Offset: 0x0051FCE3
 		public IInhaledPerResultTypeT()
 		{
 			this.Type = EInhaledPerResultType.DestroySelf;

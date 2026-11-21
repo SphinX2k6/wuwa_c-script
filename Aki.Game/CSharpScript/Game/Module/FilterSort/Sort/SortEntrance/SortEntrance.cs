@@ -12,19 +12,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 {
-	// Token: 0x02005B35 RID: 23349
+	// Token: 0x02004B16 RID: 19222
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SortEntrance<[Nullable(2)] T> : UiPanelBase
 	{
-		// Token: 0x0603B1DA RID: 242138 RVA: 0x00E18B50 File Offset: 0x00E16D50
+		// Token: 0x0603014C RID: 196940 RVA: 0x00D69868 File Offset: 0x00D67A68
 		public SortEntrance(UUIItem uiItem, TUpdateDataListFunction<T> updateDataListFunction)
 		{
 			this.UpdateDataListFunction = updateDataListFunction;
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B1DB RID: 242139 RVA: 0x00E18BB8 File Offset: 0x00E16DB8
+		// Token: 0x0603014D RID: 196941 RVA: 0x00D698D0 File Offset: 0x00D67AD0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B1DC RID: 242140 RVA: 0x00E18CE4 File Offset: 0x00E16EE4
+		// Token: 0x0603014E RID: 196942 RVA: 0x00D699FC File Offset: 0x00D67BFC
 		private void HandleSortShow(EToggleState toggleState)
 		{
 			if (this.IsMultipleSelect)
@@ -67,34 +67,34 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			this.ChangeScrollActive(!bIsUIActive);
 		}
 
-		// Token: 0x0603B1DD RID: 242141 RVA: 0x00E18D57 File Offset: 0x00E16F57
+		// Token: 0x0603014F RID: 196943 RVA: 0x00D69A6F File Offset: 0x00D67C6F
 		private void ConfirmFunction()
 		{
 			this.SetButtonName();
 			this.UpdateDataList(false);
 		}
 
-		// Token: 0x0603B1DE RID: 242142 RVA: 0x00E18D66 File Offset: 0x00E16F66
+		// Token: 0x06030150 RID: 196944 RVA: 0x00D69A7E File Offset: 0x00D67C7E
 		private void SortData(EToggleState state)
 		{
 			this.ResultData.SetIsAscending(state == EToggleState.ETT_Checked);
 			this.UpdateDataList(false);
 		}
 
-		// Token: 0x0603B1DF RID: 242143 RVA: 0x00E18D7E File Offset: 0x00E16F7E
+		// Token: 0x06030151 RID: 196945 RVA: 0x00D69A96 File Offset: 0x00D67C96
 		private void HideScroll()
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, true, false, false);
 		}
 
-		// Token: 0x0603B1E0 RID: 242144 RVA: 0x00E18D94 File Offset: 0x00E16F94
+		// Token: 0x06030152 RID: 196946 RVA: 0x00D69AAC File Offset: 0x00D67CAC
 		protected override void OnStart()
 		{
 			this.Scroll = new GenericScrollViewNew<SortItem, ISortData>(base.GetScrollViewWithScrollbar(3), new Func<SortItem>(this.InitSortItem), base.GetItem(4).GetOwner() as AUIBaseActor, false, null);
 			base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603B1E1 RID: 242145 RVA: 0x00E18DE2 File Offset: 0x00E16FE2
+		// Token: 0x06030153 RID: 196947 RVA: 0x00D69AFA File Offset: 0x00D67CFA
 		private SortItem InitSortItem()
 		{
 			SortItem sortItem = new SortItem();
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			return sortItem;
 		}
 
-		// Token: 0x0603B1E2 RID: 242146 RVA: 0x00E18E0D File Offset: 0x00E1700D
+		// Token: 0x06030154 RID: 196948 RVA: 0x00D69B25 File Offset: 0x00D67D25
 		private void SortItemToggleEvent(int ruleId, string name)
 		{
 			this.ResetLastSelect();
@@ -114,14 +114,14 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, true, false, false);
 		}
 
-		// Token: 0x0603B1E3 RID: 242147 RVA: 0x00E18E4D File Offset: 0x00E1704D
+		// Token: 0x06030155 RID: 196949 RVA: 0x00D69B65 File Offset: 0x00D67D65
 		private bool CanExecuteChange(int ruleId)
 		{
 			SortViewBaseSort selectBaseSort = this.ResultData.GetSelectBaseSort();
 			return selectBaseSort == null || selectBaseSort.RuleId != ruleId;
 		}
 
-		// Token: 0x0603B1E4 RID: 242148 RVA: 0x00E18E6C File Offset: 0x00E1706C
+		// Token: 0x06030156 RID: 196950 RVA: 0x00D69B84 File Offset: 0x00D67D84
 		protected override void OnBeforeDestroy()
 		{
 			DynamicMaskButton maskButton = this.MaskButton;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			this.UniqueIdMap.Clear();
 		}
 
-		// Token: 0x0603B1E5 RID: 242149 RVA: 0x00E18EEC File Offset: 0x00E170EC
+		// Token: 0x06030157 RID: 196951 RVA: 0x00D69C04 File Offset: 0x00D67E04
 		private void SaveStorage()
 		{
 			if (this.SaveConfigId != null && this.GroupId != EFilterSortGroupId.None)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			}
 		}
 
-		// Token: 0x0603B1E6 RID: 242150 RVA: 0x00E18F3C File Offset: 0x00E1713C
+		// Token: 0x06030158 RID: 196952 RVA: 0x00D69C54 File Offset: 0x00D67E54
 		[NullableContext(2)]
 		private void InitConfigId(EFilterSortGroupId groupId, EFilterSortConfigId? saveConfigId = null, string saveConfigExtraParam = null)
 		{
@@ -157,19 +157,19 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			this.SaveConfigExtraParam = (saveConfigExtraParam ?? "");
 		}
 
-		// Token: 0x0603B1E7 RID: 242151 RVA: 0x00E18F70 File Offset: 0x00E17170
+		// Token: 0x06030159 RID: 196953 RVA: 0x00D69C88 File Offset: 0x00D67E88
 		private void InitIsMultipleSelect()
 		{
 			this.IsMultipleSelect = (SortConfig.Instance.GetSortConfig(this.ConfigId).Value.AttributeSortListLength > 0);
 		}
 
-		// Token: 0x0603B1E8 RID: 242152 RVA: 0x00E18FA8 File Offset: 0x00E171A8
+		// Token: 0x0603015A RID: 196954 RVA: 0x00D69CC0 File Offset: 0x00D67EC0
 		private void InitDataType()
 		{
 			this.DataType = (ESortDataType)SortConfig.Instance.GetSortConfig(this.ConfigId).Value.DataId;
 		}
 
-		// Token: 0x0603B1E9 RID: 242153 RVA: 0x00E18FDC File Offset: 0x00E171DC
+		// Token: 0x0603015B RID: 196955 RVA: 0x00D69CF4 File Offset: 0x00D67EF4
 		[NullableContext(2)]
 		private void InitResultData(SortStorageData storageData = null)
 		{
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			}
 		}
 
-		// Token: 0x0603B1EA RID: 242154 RVA: 0x00E191EC File Offset: 0x00E173EC
+		// Token: 0x0603015C RID: 196956 RVA: 0x00D69F04 File Offset: 0x00D68104
 		private void ChangeScrollActive(bool value)
 		{
 			this.Scroll.SetActive(value);
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			this.HideMaskButton();
 		}
 
-		// Token: 0x0603B1EB RID: 242155 RVA: 0x00E19210 File Offset: 0x00E17410
+		// Token: 0x0603015D RID: 196957 RVA: 0x00D69F28 File Offset: 0x00D68128
 		private void InitSort()
 		{
 			this.ChangeScrollActive(false);
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			this.Scroll.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603B1EC RID: 242156 RVA: 0x00E192B4 File Offset: 0x00E174B4
+		// Token: 0x0603015E RID: 196958 RVA: 0x00D69FCC File Offset: 0x00D681CC
 		private void InitSortToggle()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(2);
@@ -265,21 +265,21 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			extendToggle.SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x0603B1ED RID: 242157 RVA: 0x00E192E4 File Offset: 0x00E174E4
+		// Token: 0x0603015F RID: 196959 RVA: 0x00D69FFC File Offset: 0x00D681FC
 		private void ResetLastSelect()
 		{
 			SortViewBaseSort selectBaseSort = this.ResultData.GetSelectBaseSort();
 			this.Scroll.GetScrollItemByKey(selectBaseSort.RuleId).SetToggleStateForce(false);
 		}
 
-		// Token: 0x0603B1EE RID: 242158 RVA: 0x00E1931C File Offset: 0x00E1751C
+		// Token: 0x06030160 RID: 196960 RVA: 0x00D6A034 File Offset: 0x00D68234
 		private void SetButtonName()
 		{
 			string newText = this.ResultData.ShowAllSortContent();
 			base.GetText(1).SetText(newText, true);
 		}
 
-		// Token: 0x0603B1EF RID: 242159 RVA: 0x00E19344 File Offset: 0x00E17544
+		// Token: 0x06030161 RID: 196961 RVA: 0x00D6A05C File Offset: 0x00D6825C
 		private void UpdateDataList(bool isOutSideChange)
 		{
 			List<T> dataList = this.DataList;
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			updateDataListFunction(dataList, isOutSideChange, EFilterSortType.Sort);
 		}
 
-		// Token: 0x0603B1F0 RID: 242160 RVA: 0x00E193C8 File Offset: 0x00E175C8
+		// Token: 0x06030162 RID: 196962 RVA: 0x00D6A0E0 File Offset: 0x00D682E0
 		private UniTask ShowMaskButton()
 		{
 			SortEntrance<T>.<ShowMaskButton>d__38 <ShowMaskButton>d__;
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			return <ShowMaskButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B1F1 RID: 242161 RVA: 0x00E1940B File Offset: 0x00E1760B
+		// Token: 0x06030163 RID: 196963 RVA: 0x00D6A123 File Offset: 0x00D68323
 		private void HideMaskButton()
 		{
 			if (this.MaskButton == null)
@@ -321,13 +321,13 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			this.MaskButton.SetActive(false);
 		}
 
-		// Token: 0x0603B1F2 RID: 242162 RVA: 0x00E1942D File Offset: 0x00E1762D
+		// Token: 0x06030164 RID: 196964 RVA: 0x00D6A145 File Offset: 0x00D68345
 		private void HandleSortActive()
 		{
 			this.SetActive(this.ConfigId > 0);
 		}
 
-		// Token: 0x0603B1F3 RID: 242163 RVA: 0x00E19440 File Offset: 0x00E17640
+		// Token: 0x06030165 RID: 196965 RVA: 0x00D6A158 File Offset: 0x00D68358
 		public void UpdateData(EFilterSortGroupId groupId, List<T> dataList, params object[] parameters)
 		{
 			this.InitConfigId(groupId, null, null);
@@ -347,7 +347,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			this.UpdateDataList(true);
 		}
 
-		// Token: 0x0603B1F4 RID: 242164 RVA: 0x00E194B0 File Offset: 0x00E176B0
+		// Token: 0x06030166 RID: 196966 RVA: 0x00D6A1C8 File Offset: 0x00D683C8
 		public void UpdateDataWithConfig(EFilterSortGroupId groupId, EFilterSortConfigId saveConfigId, List<T> dataList, string saveConfigExtraParam = "", params object[] parameters)
 		{
 			FilterSortConfig sortFilterConfig = SortConfig.Instance.GetSortFilterConfig(saveConfigId);
@@ -375,20 +375,20 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			this.UpdateDataList(true);
 		}
 
-		// Token: 0x0603B1F5 RID: 242165 RVA: 0x00E19561 File Offset: 0x00E17761
+		// Token: 0x06030167 RID: 196967 RVA: 0x00D6A279 File Offset: 0x00D68479
 		public void SetResultDataDirty()
 		{
 			this.IsResultDataDirty = true;
 		}
 
-		// Token: 0x0603B1F6 RID: 242166 RVA: 0x00E1956C File Offset: 0x00E1776C
+		// Token: 0x06030168 RID: 196968 RVA: 0x00D6A284 File Offset: 0x00D68484
 		public void SetSortToggleState(bool isAscending)
 		{
 			EToggleState state = isAscending ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(2).SetToggleStateForce(state, false, false, false);
 		}
 
-		// Token: 0x0603B1F7 RID: 242167 RVA: 0x00E19594 File Offset: 0x00E17794
+		// Token: 0x06030169 RID: 196969 RVA: 0x00D6A2AC File Offset: 0x00D684AC
 		public int GetUniqueIdByGroupId(EFilterSortGroupId groupId)
 		{
 			int result;
@@ -399,7 +399,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			return -1;
 		}
 
-		// Token: 0x0603B1F8 RID: 242168 RVA: 0x00E195B4 File Offset: 0x00E177B4
+		// Token: 0x0603016A RID: 196970 RVA: 0x00D6A2CC File Offset: 0x00D684CC
 		public void DeleteUniqueIdByGroupId(EFilterSortGroupId groupId)
 		{
 			int uniqueId;
@@ -410,47 +410,47 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 			}
 		}
 
-		// Token: 0x0603B1F9 RID: 242169 RVA: 0x00E195E9 File Offset: 0x00E177E9
+		// Token: 0x0603016B RID: 196971 RVA: 0x00D6A301 File Offset: 0x00D68501
 		public void SetFilterUniqueId(int uniqueId)
 		{
 			this.FilterUniqueId = uniqueId;
 		}
 
-		// Token: 0x0401ED14 RID: 126228
+		// Token: 0x040197D0 RID: 104400
 		private readonly Dictionary<int, int> UniqueIdMap = new Dictionary<int, int>();
 
-		// Token: 0x0401ED15 RID: 126229
+		// Token: 0x040197D1 RID: 104401
 		private int FilterUniqueId = -1;
 
-		// Token: 0x0401ED16 RID: 126230
+		// Token: 0x040197D2 RID: 104402
 		[Nullable(2)]
 		private SortResultData ResultData;
 
-		// Token: 0x0401ED17 RID: 126231
+		// Token: 0x040197D3 RID: 104403
 		private bool IsResultDataDirty;
 
-		// Token: 0x0401ED18 RID: 126232
+		// Token: 0x040197D4 RID: 104404
 		private EFilterSortGroupId GroupId = EFilterSortGroupId.Role;
 
-		// Token: 0x0401ED19 RID: 126233
+		// Token: 0x040197D5 RID: 104405
 		private int ConfigId;
 
-		// Token: 0x0401ED1A RID: 126234
+		// Token: 0x040197D6 RID: 104406
 		private EFilterSortConfigId? SaveConfigId;
 
-		// Token: 0x0401ED1B RID: 126235
+		// Token: 0x040197D7 RID: 104407
 		private string SaveConfigExtraParam = "";
 
-		// Token: 0x0401ED1C RID: 126236
+		// Token: 0x040197D8 RID: 104408
 		private ESortDataType DataType = ESortDataType.Role;
 
-		// Token: 0x0401ED1D RID: 126237
+		// Token: 0x040197D9 RID: 104409
 		private List<T> DataList = new List<T>();
 
-		// Token: 0x0401ED1E RID: 126238
+		// Token: 0x040197DA RID: 104410
 		private List<object> ExtraParams = new List<object>();
 
-		// Token: 0x0401ED1F RID: 126239
+		// Token: 0x040197DB RID: 104411
 		[Nullable(new byte[]
 		{
 			2,
@@ -459,29 +459,29 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 		})]
 		private GenericScrollViewNew<SortItem, ISortData> Scroll;
 
-		// Token: 0x0401ED20 RID: 126240
+		// Token: 0x040197DC RID: 104412
 		private bool IsMultipleSelect;
 
-		// Token: 0x0401ED21 RID: 126241
+		// Token: 0x040197DD RID: 104413
 		[Nullable(2)]
 		private DynamicMaskButton MaskButton;
 
-		// Token: 0x0401ED22 RID: 126242
+		// Token: 0x040197DE RID: 104414
 		protected TUpdateDataListFunction<T> UpdateDataListFunction;
 
-		// Token: 0x0200BD6C RID: 48492
+		// Token: 0x0200A775 RID: 42869
 		[NullableContext(0)]
 		private enum ECompDefine
 		{
-			// Token: 0x04039234 RID: 234036
+			// Token: 0x04033C00 RID: 211968
 			Toggle,
-			// Token: 0x04039235 RID: 234037
+			// Token: 0x04033C01 RID: 211969
 			Name,
-			// Token: 0x04039236 RID: 234038
+			// Token: 0x04033C02 RID: 211970
 			SortToggle,
-			// Token: 0x04039237 RID: 234039
+			// Token: 0x04033C03 RID: 211971
 			SortScroll,
-			// Token: 0x04039238 RID: 234040
+			// Token: 0x04033C04 RID: 211972
 			SortItem
 		}
 	}

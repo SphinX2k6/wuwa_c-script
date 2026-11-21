@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025B5 RID: 9653
+// Token: 0x02001AA0 RID: 6816
 [NullableContext(1)]
 [Nullable(0)]
 public class FightPhotoDropDownItem : FightPhotoSetupBase
 {
-	// Token: 0x0601391F RID: 80159 RVA: 0x004E46B4 File Offset: 0x004E28B4
+	// Token: 0x06010DFF RID: 69119 RVA: 0x004F32B4 File Offset: 0x004F14B4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class FightPhotoDropDownItem : FightPhotoSetupBase
 		};
 	}
 
-	// Token: 0x06013920 RID: 80160 RVA: 0x004E4710 File Offset: 0x004E2910
+	// Token: 0x06010E00 RID: 69120 RVA: 0x004F3310 File Offset: 0x004F1510
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FightPhotoDropDownItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -35,7 +35,7 @@ public class FightPhotoDropDownItem : FightPhotoSetupBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013921 RID: 80161 RVA: 0x004E4753 File Offset: 0x004E2953
+	// Token: 0x06010E01 RID: 69121 RVA: 0x004F3353 File Offset: 0x004F1553
 	protected override void OnBeforeDestroy()
 	{
 		if (EventSystem.Instance.Has(EEventName.UIViewPortSizeChanged, new Action(this.OnViewPortSizeChange)))
@@ -44,7 +44,7 @@ public class FightPhotoDropDownItem : FightPhotoSetupBase
 		}
 	}
 
-	// Token: 0x06013922 RID: 80162 RVA: 0x004E4788 File Offset: 0x004E2988
+	// Token: 0x06010E02 RID: 69122 RVA: 0x004F3388 File Offset: 0x004F1588
 	public override void Refresh()
 	{
 		if (this.SetupConfig == null)
@@ -56,7 +56,7 @@ public class FightPhotoDropDownItem : FightPhotoSetupBase
 		this.RefreshResolutionText();
 	}
 
-	// Token: 0x06013923 RID: 80163 RVA: 0x004E47D8 File Offset: 0x004E29D8
+	// Token: 0x06010E03 RID: 69123 RVA: 0x004F33D8 File Offset: 0x004F15D8
 	private int GetSelectedDropDownId()
 	{
 		int? fightPhotoSetupOption = FightPhotoModel.Instance.GetFightPhotoSetupOption((EFightPhotoSetupOptionType)this.SetupConfig.Value.Id);
@@ -67,7 +67,7 @@ public class FightPhotoDropDownItem : FightPhotoSetupBase
 		return fightPhotoSetupOption.GetValueOrDefault();
 	}
 
-	// Token: 0x06013924 RID: 80164 RVA: 0x004E4828 File Offset: 0x004E2A28
+	// Token: 0x06010E04 RID: 69124 RVA: 0x004F3428 File Offset: 0x004F1628
 	private void RefreshDropDown()
 	{
 		int[] dropDownListArray = this.SetupConfig.Value.GetDropDownListArray();
@@ -85,7 +85,7 @@ public class FightPhotoDropDownItem : FightPhotoSetupBase
 		this.DropDown.InitScroll(list, new Func<PhotoDropDown, TableTextArgNew>(this.GetDropDownTextId), list.FindIndex((PhotoDropDown d) => d.Id == selectedId), true);
 	}
 
-	// Token: 0x06013925 RID: 80165 RVA: 0x004E48E0 File Offset: 0x004E2AE0
+	// Token: 0x06010E05 RID: 69125 RVA: 0x004F34E0 File Offset: 0x004F16E0
 	private void RefreshResolutionText()
 	{
 		UUIText text = base.GetText(2);
@@ -119,20 +119,20 @@ public class FightPhotoDropDownItem : FightPhotoSetupBase
 		instance.SetLocalTextNew(uiText, textStringId, new <>z__ReadOnlySingleElementList<object>(defaultInterpolatedStringHandler.ToStringAndClear()));
 	}
 
-	// Token: 0x06013926 RID: 80166 RVA: 0x004E49C1 File Offset: 0x004E2BC1
+	// Token: 0x06010E06 RID: 69126 RVA: 0x004F35C1 File Offset: 0x004F17C1
 	private TableTextArgNew GetDropDownTextId(PhotoDropDown data)
 	{
 		return new TableTextArgNew(data.TextId, Array.Empty<object>());
 	}
 
-	// Token: 0x06013927 RID: 80167 RVA: 0x004E49D4 File Offset: 0x004E2BD4
+	// Token: 0x06010E07 RID: 69127 RVA: 0x004F35D4 File Offset: 0x004F17D4
 	private void OnSelectChange(int index, PhotoDropDown data)
 	{
 		base.OnSetupValueChange(data.Id);
 		this.RefreshResolutionText();
 	}
 
-	// Token: 0x06013928 RID: 80168 RVA: 0x004E49E9 File Offset: 0x004E2BE9
+	// Token: 0x06010E08 RID: 69128 RVA: 0x004F35E9 File Offset: 0x004F17E9
 	private void OnViewPortSizeChange()
 	{
 		if (this.SetupConfig == null)
@@ -142,19 +142,19 @@ public class FightPhotoDropDownItem : FightPhotoSetupBase
 		this.RefreshResolutionText();
 	}
 
-	// Token: 0x06013929 RID: 80169 RVA: 0x004E49FF File Offset: 0x004E2BFF
+	// Token: 0x06010E09 RID: 69129 RVA: 0x004F35FF File Offset: 0x004F17FF
 	private OneTextDropDownItem CreateDropDownItem(UUIItem uiItem, PhotoDropDown data)
 	{
 		return new OneTextDropDownItem(uiItem);
 	}
 
-	// Token: 0x0601392A RID: 80170 RVA: 0x004E4A07 File Offset: 0x004E2C07
+	// Token: 0x06010E0A RID: 69130 RVA: 0x004F3607 File Offset: 0x004F1807
 	private OneTextTitleItem CreateTitleItem(UUIItem uiItem)
 	{
 		return new OneTextTitleItem(uiItem);
 	}
 
-	// Token: 0x040093BE RID: 37822
+	// Token: 0x04009514 RID: 38164
 	[Nullable(new byte[]
 	{
 		2,
@@ -162,15 +162,15 @@ public class FightPhotoDropDownItem : FightPhotoSetupBase
 	})]
 	private CommonDropDown<TableTextArgNew, PhotoDropDown> DropDown;
 
-	// Token: 0x02008BB9 RID: 35769
+	// Token: 0x02007D41 RID: 32065
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402D5A6 RID: 185766
+		// Token: 0x040288BB RID: 166075
 		ItemDropDown,
-		// Token: 0x0402D5A7 RID: 185767
+		// Token: 0x040288BC RID: 166076
 		TxtTitle,
-		// Token: 0x0402D5A8 RID: 185768
+		// Token: 0x040288BD RID: 166077
 		TextResolution
 	}
 }

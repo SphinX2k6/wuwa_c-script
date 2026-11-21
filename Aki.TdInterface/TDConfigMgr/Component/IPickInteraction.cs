@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005FC RID: 1532
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000699 RID: 1689
 	public class IPickInteraction
 	{
-		// Token: 0x06002094 RID: 8340 RVA: 0x0005A994 File Offset: 0x00058B94
+		// Token: 0x0600239A RID: 9114 RVA: 0x000616A8 File Offset: 0x0005F8A8
 		private IPickInteraction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002095 RID: 8341 RVA: 0x0005A9CC File Offset: 0x00058BCC
+		// Token: 0x0600239B RID: 9115 RVA: 0x000616E0 File Offset: 0x0005F8E0
 		public static IPickInteraction Create([Nullable(2)] IPickInteraction instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002096 RID: 8342 RVA: 0x0005A9DF File Offset: 0x00058BDF
+		// Token: 0x0600239C RID: 9116 RVA: 0x000616F3 File Offset: 0x0005F8F3
 		public static IPickInteraction CreateFromSetValue([Nullable(2)] IPickInteraction_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002097 RID: 8343 RVA: 0x0005A9F2 File Offset: 0x00058BF2
+		// Token: 0x0600239D RID: 9117 RVA: 0x00061706 File Offset: 0x0005F906
 		public IPickInteraction_SetValue ToSetValue()
 		{
 			return new IPickInteraction_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008AF RID: 2223
-		// (get) Token: 0x06002098 RID: 8344 RVA: 0x0005AA1D File Offset: 0x00058C1D
-		// (set) Token: 0x06002099 RID: 8345 RVA: 0x0005AA48 File Offset: 0x00058C48
+		// Token: 0x17000966 RID: 2406
+		// (get) Token: 0x0600239E RID: 9118 RVA: 0x00061731 File Offset: 0x0005F931
+		// (set) Token: 0x0600239F RID: 9119 RVA: 0x0006175C File Offset: 0x0005F95C
 		public virtual EPickInteraction Type
 		{
 			get
@@ -87,20 +85,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008B0 RID: 2224
-		// (get) Token: 0x0600209A RID: 8346 RVA: 0x0005AA58 File Offset: 0x00058C58
-		// (set) Token: 0x0600209B RID: 8347 RVA: 0x0005AAEB File Offset: 0x00058CEB
+		// Token: 0x17000967 RID: 2407
+		// (get) Token: 0x060023A0 RID: 9120 RVA: 0x0006176C File Offset: 0x0005F96C
+		// (set) Token: 0x060023A1 RID: 9121 RVA: 0x000617FF File Offset: 0x0005F9FF
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> CheckedActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -131,7 +129,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -140,20 +138,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008B1 RID: 2225
-		// (get) Token: 0x0600209C RID: 8348 RVA: 0x0005AB00 File Offset: 0x00058D00
-		// (set) Token: 0x0600209D RID: 8349 RVA: 0x0005AB93 File Offset: 0x00058D93
+		// Token: 0x17000968 RID: 2408
+		// (get) Token: 0x060023A2 RID: 9122 RVA: 0x00061814 File Offset: 0x0005FA14
+		// (set) Token: 0x060023A3 RID: 9123 RVA: 0x000618A7 File Offset: 0x0005FAA7
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> UncheckedActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -184,7 +182,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -193,34 +191,34 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040016D5 RID: 5845
+		// Token: 0x040018C7 RID: 6343
 		[Nullable(2)]
 		protected IPickInteraction FbInstance;
 
-		// Token: 0x040016D6 RID: 5846
+		// Token: 0x040018C8 RID: 6344
 		[Nullable(2)]
 		protected IPickInteraction_SetValue PocoInterface;
 
-		// Token: 0x040016D7 RID: 5847
+		// Token: 0x040018C9 RID: 6345
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _CheckedActionsCache;
 
-		// Token: 0x040016D8 RID: 5848
+		// Token: 0x040018CA RID: 6346
 		private bool _CheckedActionsInited;
 
-		// Token: 0x040016D9 RID: 5849
+		// Token: 0x040018CB RID: 6347
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _UncheckedActionsCache;
 
-		// Token: 0x040016DA RID: 5850
+		// Token: 0x040018CC RID: 6348
 		private bool _UncheckedActionsInited;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200029A RID: 666
+	// Token: 0x020002DF RID: 735
 	public class ICustomBulletLogic_SetValue
 	{
-		// Token: 0x04000BAB RID: 2987
+		// Token: 0x04000C90 RID: 3216
 		public ECustomBulletLogic Type;
 	}
 }

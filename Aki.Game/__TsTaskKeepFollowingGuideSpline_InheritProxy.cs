@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x02003602 RID: 13826
+// Token: 0x02002B77 RID: 11127
 public class __TsTaskKeepFollowingGuideSpline_InheritProxy : TsTaskKeepFollowingGuideSpline
 {
-	// Token: 0x0601E176 RID: 123254 RVA: 0x0088076C File Offset: 0x0087E96C
+	// Token: 0x0601BE9E RID: 114334 RVA: 0x008A8800 File Offset: 0x008A6A00
 	[NullableContext(1)]
 	public __TsTaskKeepFollowingGuideSpline_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskKeepFollowingGuideSpline.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E177 RID: 123255 RVA: 0x0088079F File Offset: 0x0087E99F
+	// Token: 0x0601BE9F RID: 114335 RVA: 0x008A8833 File Offset: 0x008A6A33
 	protected __TsTaskKeepFollowingGuideSpline_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E178 RID: 123256 RVA: 0x008807A8 File Offset: 0x0087E9A8
+	// Token: 0x0601BEA0 RID: 114336 RVA: 0x008A883C File Offset: 0x008A6A3C
 	protected unsafe override void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

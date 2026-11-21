@@ -2,19 +2,19 @@
 
 namespace WorldMap
 {
-	// Token: 0x020044C5 RID: 17605
+	// Token: 0x02002F52 RID: 12114
 	public static class WorldMapConst
 	{
-		// Token: 0x04018416 RID: 99350
+		// Token: 0x0400F1BE RID: 61886
 		public const int MARKICON_HALFSIZE = 70;
 
-		// Token: 0x04018417 RID: 99351
+		// Token: 0x0400F1BF RID: 61887
 		public const int MAX_INT32_NUMBER = 2147483647;
 
-		// Token: 0x04018418 RID: 99352
+		// Token: 0x0400F1C0 RID: 61888
 		public const int VIEW_PORT_BUFFER_REGION = 400;
 
-		// Token: 0x04018419 RID: 99353
+		// Token: 0x0400F1C1 RID: 61889
 		public const int BIG_WORLD_MAP_ID = 8;
 	}
 }

@@ -3,40 +3,40 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02000EA8 RID: 3752
+// Token: 0x0200035D RID: 861
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballBattleActivityEntityModel : PinballBattleEntityModel, IPinballBattleActivityEntityInfo, IPinballBattleCombatInfo, IPinballBattleConfigInfo
 {
-	// Token: 0x170006E4 RID: 1764
-	// (get) Token: 0x06005C9E RID: 23710 RVA: 0x00110B79 File Offset: 0x0010ED79
-	// (set) Token: 0x06005C9F RID: 23711 RVA: 0x00110B81 File Offset: 0x0010ED81
+	// Token: 0x17000708 RID: 1800
+	// (get) Token: 0x06003035 RID: 12341 RVA: 0x00118815 File Offset: 0x00116A15
+	// (set) Token: 0x06003036 RID: 12342 RVA: 0x0011881D File Offset: 0x00116A1D
 	public int ConfigId { get; set; }
 
-	// Token: 0x170006E5 RID: 1765
-	// (get) Token: 0x06005CA0 RID: 23712 RVA: 0x00110B8A File Offset: 0x0010ED8A
-	// (set) Token: 0x06005CA1 RID: 23713 RVA: 0x00110B92 File Offset: 0x0010ED92
+	// Token: 0x17000709 RID: 1801
+	// (get) Token: 0x06003037 RID: 12343 RVA: 0x00118826 File Offset: 0x00116A26
+	// (set) Token: 0x06003038 RID: 12344 RVA: 0x0011882E File Offset: 0x00116A2E
 	public EPinballBattleMonsterDeathType DeathType { get; set; }
 
-	// Token: 0x06005CA2 RID: 23714 RVA: 0x00110B9B File Offset: 0x0010ED9B
+	// Token: 0x06003039 RID: 12345 RVA: 0x00118837 File Offset: 0x00116A37
 	static PinballBattleActivityEntityModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PinballBattleActivityEntityModel.CreateStaticDefaultValue), new Action(PinballBattleActivityEntityModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06005CA3 RID: 23715 RVA: 0x00110BBA File Offset: 0x0010EDBA
+	// Token: 0x0600303A RID: 12346 RVA: 0x00118856 File Offset: 0x00116A56
 	public new static void CreateStaticDefaultValue()
 	{
 		PinballBattleActivityEntityModel.ActivityEntityPool = new Pool<PinballBattleActivityEntityModel>(100, () => new PinballBattleActivityEntityModel(), null);
 	}
 
-	// Token: 0x06005CA4 RID: 23716 RVA: 0x00110BE8 File Offset: 0x0010EDE8
+	// Token: 0x0600303B RID: 12347 RVA: 0x00118884 File Offset: 0x00116A84
 	public new static void ResetStaticDefaultValue()
 	{
 		PinballBattleActivityEntityModel.ActivityEntityPool = null;
 	}
 
-	// Token: 0x06005CA5 RID: 23717 RVA: 0x00110BF0 File Offset: 0x0010EDF0
+	// Token: 0x0600303C RID: 12348 RVA: 0x0011888C File Offset: 0x00116A8C
 	public static PinballBattleActivityEntityModel InitFromConfigId(int configId)
 	{
 		PinballBattleActivityEntityModel pinballBattleActivityEntityModel = PinballBattleActivityEntityModel.ActivityEntityPool.Get();
@@ -51,7 +51,7 @@ public class PinballBattleActivityEntityModel : PinballBattleEntityModel, IPinba
 		return pinballBattleActivityEntityModel;
 	}
 
-	// Token: 0x06005CA6 RID: 23718 RVA: 0x00110C24 File Offset: 0x0010EE24
+	// Token: 0x0600303D RID: 12349 RVA: 0x001188C0 File Offset: 0x00116AC0
 	[return: Nullable(2)]
 	public new static IPinballBattleCombatInfo BuildModel(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 	{
@@ -76,13 +76,13 @@ public class PinballBattleActivityEntityModel : PinballBattleEntityModel, IPinba
 		return pinballBattleActivityEntityModel;
 	}
 
-	// Token: 0x06005CA7 RID: 23719 RVA: 0x00110C91 File Offset: 0x0010EE91
+	// Token: 0x0600303E RID: 12350 RVA: 0x0011892D File Offset: 0x00116B2D
 	public new static void Clear()
 	{
 		PinballBattleActivityEntityModel.ActivityEntityPool.Clear();
 	}
 
-	// Token: 0x06005CA8 RID: 23720 RVA: 0x00110CA0 File Offset: 0x0010EEA0
+	// Token: 0x0600303F RID: 12351 RVA: 0x0011893C File Offset: 0x00116B3C
 	protected override void InitFromProto(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 	{
 		base.InitFromProto(entityData, componentDataMap);
@@ -90,7 +90,7 @@ public class PinballBattleActivityEntityModel : PinballBattleEntityModel, IPinba
 		this.ConfigId = activityComponentPb.ConfigId;
 	}
 
-	// Token: 0x06005CA9 RID: 23721 RVA: 0x00110CD4 File Offset: 0x0010EED4
+	// Token: 0x06003040 RID: 12352 RVA: 0x00118970 File Offset: 0x00116B70
 	public override void Update(IPinballBattleCombatInfo other)
 	{
 		base.Update(other);
@@ -99,7 +99,7 @@ public class PinballBattleActivityEntityModel : PinballBattleEntityModel, IPinba
 		this.DeathType = pinballBattleActivityEntityInfo.DeathType;
 	}
 
-	// Token: 0x06005CAA RID: 23722 RVA: 0x00110D07 File Offset: 0x0010EF07
+	// Token: 0x06003041 RID: 12353 RVA: 0x001189A3 File Offset: 0x00116BA3
 	public override void Reset()
 	{
 		base.Reset();
@@ -107,14 +107,14 @@ public class PinballBattleActivityEntityModel : PinballBattleEntityModel, IPinba
 		this.DeathType = EPinballBattleMonsterDeathType.Normal;
 	}
 
-	// Token: 0x06005CAB RID: 23723 RVA: 0x00110D1D File Offset: 0x0010EF1D
+	// Token: 0x06003042 RID: 12354 RVA: 0x001189B9 File Offset: 0x00116BB9
 	public override void Release()
 	{
 		this.Reset();
 		PinballBattleActivityEntityModel.ActivityEntityPool.Put(this);
 	}
 
-	// Token: 0x06005CAC RID: 23724 RVA: 0x00110D34 File Offset: 0x0010EF34
+	// Token: 0x06003043 RID: 12355 RVA: 0x001189D0 File Offset: 0x00116BD0
 	public override IPinballBattleCombatInfo Clone()
 	{
 		PinballBattleActivityEntityModel pinballBattleActivityEntityModel = PinballBattleActivityEntityModel.ActivityEntityPool.Get();
@@ -129,7 +129,7 @@ public class PinballBattleActivityEntityModel : PinballBattleEntityModel, IPinba
 		return pinballBattleActivityEntityModel;
 	}
 
-	// Token: 0x04002A46 RID: 10822
+	// Token: 0x04002AE1 RID: 10977
 	[Nullable(new byte[]
 	{
 		2,

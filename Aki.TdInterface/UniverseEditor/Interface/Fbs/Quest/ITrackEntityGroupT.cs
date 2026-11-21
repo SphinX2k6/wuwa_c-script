@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004200 RID: 16896
+	// Token: 0x02004659 RID: 18009
 	public class ITrackEntityGroupT
 	{
-		// Token: 0x170077F0 RID: 30704
-		// (get) Token: 0x06018F10 RID: 102160 RVA: 0x00396CFA File Offset: 0x00394EFA
-		// (set) Token: 0x06018F11 RID: 102161 RVA: 0x00396D02 File Offset: 0x00394F02
+		// Token: 0x17007E1E RID: 32286
+		// (get) Token: 0x0601A66A RID: 108138 RVA: 0x003C225A File Offset: 0x003C045A
+		// (set) Token: 0x0601A66B RID: 108139 RVA: 0x003C2262 File Offset: 0x003C0462
 		public ETrackType Type { get; set; }
 
-		// Token: 0x170077F1 RID: 30705
-		// (get) Token: 0x06018F12 RID: 102162 RVA: 0x00396D0B File Offset: 0x00394F0B
-		// (set) Token: 0x06018F13 RID: 102163 RVA: 0x00396D13 File Offset: 0x00394F13
+		// Token: 0x17007E1F RID: 32287
+		// (get) Token: 0x0601A66C RID: 108140 RVA: 0x003C226B File Offset: 0x003C046B
+		// (set) Token: 0x0601A66D RID: 108141 RVA: 0x003C2273 File Offset: 0x003C0473
 		public TGravityDirectionUnion GravityDirection { get; set; }
 
-		// Token: 0x170077F2 RID: 30706
-		// (get) Token: 0x06018F14 RID: 102164 RVA: 0x00396D1C File Offset: 0x00394F1C
-		// (set) Token: 0x06018F15 RID: 102165 RVA: 0x00396D24 File Offset: 0x00394F24
+		// Token: 0x17007E20 RID: 32288
+		// (get) Token: 0x0601A66E RID: 108142 RVA: 0x003C227C File Offset: 0x003C047C
+		// (set) Token: 0x0601A66F RID: 108143 RVA: 0x003C2284 File Offset: 0x003C0484
 		public List<int> Entities { get; set; }
 
-		// Token: 0x170077F3 RID: 30707
-		// (get) Token: 0x06018F16 RID: 102166 RVA: 0x00396D2D File Offset: 0x00394F2D
-		// (set) Token: 0x06018F17 RID: 102167 RVA: 0x00396D35 File Offset: 0x00394F35
+		// Token: 0x17007E21 RID: 32289
+		// (get) Token: 0x0601A670 RID: 108144 RVA: 0x003C228D File Offset: 0x003C048D
+		// (set) Token: 0x0601A671 RID: 108145 RVA: 0x003C2295 File Offset: 0x003C0495
 		public TTrackRuleTypeUnion TrackRuleType { get; set; }
 
-		// Token: 0x06018F18 RID: 102168 RVA: 0x00396D3E File Offset: 0x00394F3E
+		// Token: 0x0601A672 RID: 108146 RVA: 0x003C229E File Offset: 0x003C049E
 		public ITrackEntityGroupT()
 		{
 			this.Type = ETrackType.Locations;

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A1E RID: 18974
+	// Token: 0x02004EDE RID: 20190
 	public enum ICheckEntityType_Union : byte
 	{
-		// Token: 0x0400D26C RID: 53868
+		// Token: 0x0400DD40 RID: 56640
 		NONE,
-		// Token: 0x0400D26D RID: 53869
+		// Token: 0x0400DD41 RID: 56641
 		ICheckEntityType,
-		// Token: 0x0400D26E RID: 53870
+		// Token: 0x0400DD42 RID: 56642
 		ICheckOnlinePlayer,
-		// Token: 0x0400D26F RID: 53871
+		// Token: 0x0400DD43 RID: 56643
 		ICheckTargetEntity
 	}
 }

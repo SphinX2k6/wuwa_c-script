@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061F0 RID: 25072
+	// Token: 0x0200516E RID: 20846
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardPanel : UiPanelBase
 	{
-		// Token: 0x0603F463 RID: 259171 RVA: 0x00F4A3C0 File Offset: 0x00F485C0
+		// Token: 0x06034124 RID: 213284 RVA: 0x00E91318 File Offset: 0x00E8F518
 		public RewardPanel(ActivityRoadBookData activityBaseData)
 		{
 			this.ActivityBaseData = activityBaseData;
 		}
 
-		// Token: 0x0603F464 RID: 259172 RVA: 0x00F4A3D0 File Offset: 0x00F485D0
+		// Token: 0x06034125 RID: 213285 RVA: 0x00E91328 File Offset: 0x00E8F528
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F465 RID: 259173 RVA: 0x00F4A490 File Offset: 0x00F48690
+		// Token: 0x06034126 RID: 213286 RVA: 0x00E913E8 File Offset: 0x00E8F5E8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RewardPanel.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F466 RID: 259174 RVA: 0x00F4A4D3 File Offset: 0x00F486D3
+		// Token: 0x06034127 RID: 213287 RVA: 0x00E9142B File Offset: 0x00E8F62B
 		protected override void OnBeforeShow()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0603F467 RID: 259175 RVA: 0x00F4A4DC File Offset: 0x00F486DC
+		// Token: 0x06034128 RID: 213288 RVA: 0x00E91434 File Offset: 0x00E8F634
 		public void Refresh()
 		{
 			RoadBookConfig activityConfig = this.ActivityBaseData.GetActivityConfig();
@@ -81,17 +81,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.RewardItemGrid.Refresh(data);
 		}
 
-		// Token: 0x0603F468 RID: 259176 RVA: 0x00F4A5EE File Offset: 0x00F487EE
+		// Token: 0x06034129 RID: 213289 RVA: 0x00E91546 File Offset: 0x00E8F746
 		private void OnClickedButton()
 		{
 			ActivityRoadBookController.Instance.RequestTakeTaskFinalReward();
 		}
 
-		// Token: 0x04021005 RID: 135173
+		// Token: 0x0401B934 RID: 112948
 		[Nullable(2)]
 		private ActivitySmallItemGrid RewardItemGrid;
 
-		// Token: 0x04021006 RID: 135174
+		// Token: 0x0401B935 RID: 112949
 		protected ActivityRoadBookData ActivityBaseData;
 	}
 }

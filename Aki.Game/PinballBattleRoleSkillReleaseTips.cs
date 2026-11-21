@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D07 RID: 7431
+// Token: 0x020011C9 RID: 4553
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballBattleRoleSkillReleaseTips : PinballBattleTipsBase
 {
-	// Token: 0x0600E0B5 RID: 57525 RVA: 0x0034B25A File Offset: 0x0034945A
+	// Token: 0x0600B4D2 RID: 46290 RVA: 0x00356C8A File Offset: 0x00354E8A
 	public PinballBattleRoleSkillReleaseTips(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E0B6 RID: 57526 RVA: 0x0034B270 File Offset: 0x00349470
+	// Token: 0x0600B4D3 RID: 46291 RVA: 0x00356CA0 File Offset: 0x00354EA0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -33,7 +33,7 @@ public class PinballBattleRoleSkillReleaseTips : PinballBattleTipsBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E0B7 RID: 57527 RVA: 0x0034B2DC File Offset: 0x003494DC
+	// Token: 0x0600B4D4 RID: 46292 RVA: 0x00356D0C File Offset: 0x00354F0C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PinballBattleRoleSkillReleaseTips.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ public class PinballBattleRoleSkillReleaseTips : PinballBattleTipsBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E0B8 RID: 57528 RVA: 0x0034B31F File Offset: 0x0034951F
+	// Token: 0x0600B4D5 RID: 46293 RVA: 0x00356D4F File Offset: 0x00354F4F
 	public void AddNewRole(int roleId)
 	{
 		if (!this.TryAddRoleId(roleId))
@@ -63,7 +63,7 @@ public class PinballBattleRoleSkillReleaseTips : PinballBattleTipsBase
 		base.ResetCloseTimer();
 	}
 
-	// Token: 0x0600E0B9 RID: 57529 RVA: 0x0034B353 File Offset: 0x00349553
+	// Token: 0x0600B4D6 RID: 46294 RVA: 0x00356D83 File Offset: 0x00354F83
 	private bool TryAddRoleId(int roleId)
 	{
 		if (this.RoleIdList.Contains(roleId))
@@ -74,7 +74,7 @@ public class PinballBattleRoleSkillReleaseTips : PinballBattleTipsBase
 		return true;
 	}
 
-	// Token: 0x0600E0BA RID: 57530 RVA: 0x0034B374 File Offset: 0x00349574
+	// Token: 0x0600B4D7 RID: 46295 RVA: 0x00356DA4 File Offset: 0x00354FA4
 	protected override UniTask OnBeforeHideAsync()
 	{
 		PinballBattleRoleSkillReleaseTips.<OnBeforeHideAsync>d__7 <OnBeforeHideAsync>d__;
@@ -85,7 +85,7 @@ public class PinballBattleRoleSkillReleaseTips : PinballBattleTipsBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E0BB RID: 57531 RVA: 0x0034B3B8 File Offset: 0x003495B8
+	// Token: 0x0600B4D8 RID: 46296 RVA: 0x00356DE8 File Offset: 0x00354FE8
 	protected override void OnBeforeHide()
 	{
 		PinballBattleSubController pinballBattleSubController = KuroSimpleCombatController.Instance.CurSubController as PinballBattleSubController;
@@ -100,10 +100,10 @@ public class PinballBattleRoleSkillReleaseTips : PinballBattleTipsBase
 		}
 	}
 
-	// Token: 0x040067C0 RID: 26560
+	// Token: 0x0400689F RID: 26783
 	private readonly List<int> RoleIdList = new List<int>();
 
-	// Token: 0x040067C1 RID: 26561
+	// Token: 0x040068A0 RID: 26784
 	[Nullable(new byte[]
 	{
 		2,

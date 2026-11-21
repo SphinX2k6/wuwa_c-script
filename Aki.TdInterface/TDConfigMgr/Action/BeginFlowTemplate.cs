@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014AB RID: 5291
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001604 RID: 5636
 	public class BeginFlowTemplate : ActionParams
 	{
-		// Token: 0x06007878 RID: 30840 RVA: 0x00120D3C File Offset: 0x0011EF3C
+		// Token: 0x06007F45 RID: 32581 RVA: 0x0012F988 File Offset: 0x0012DB88
 		private BeginFlowTemplate_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007879 RID: 30841 RVA: 0x00120D74 File Offset: 0x0011EF74
+		// Token: 0x06007F46 RID: 32582 RVA: 0x0012F9C0 File Offset: 0x0012DBC0
 		public static BeginFlowTemplate Create([Nullable(2)] BeginFlowTemplate instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600787A RID: 30842 RVA: 0x00120D87 File Offset: 0x0011EF87
+		// Token: 0x06007F47 RID: 32583 RVA: 0x0012F9D3 File Offset: 0x0012DBD3
 		public static BeginFlowTemplate CreateFromSetValue([Nullable(2)] BeginFlowTemplate_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600787B RID: 30843 RVA: 0x00120D9C File Offset: 0x0011EF9C
+		// Token: 0x06007F48 RID: 32584 RVA: 0x0012F9E8 File Offset: 0x0012DBE8
 		public BeginFlowTemplate_SetValue ToSetValue()
 		{
 			return new BeginFlowTemplate_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002871 RID: 10353
-		// (get) Token: 0x0600787C RID: 30844 RVA: 0x00120DF8 File Offset: 0x0011EFF8
-		// (set) Token: 0x0600787D RID: 30845 RVA: 0x00120E32 File Offset: 0x0011F032
+		// Token: 0x17002A5B RID: 10843
+		// (get) Token: 0x06007F49 RID: 32585 RVA: 0x0012FA44 File Offset: 0x0012DC44
+		// (set) Token: 0x06007F4A RID: 32586 RVA: 0x0012FA7E File Offset: 0x0012DC7E
 		public virtual bool? _Folded
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002872 RID: 10354
-		// (get) Token: 0x0600787E RID: 30846 RVA: 0x00120E40 File Offset: 0x0011F040
-		// (set) Token: 0x0600787F RID: 30847 RVA: 0x00120ED3 File Offset: 0x0011F0D3
+		// Token: 0x17002A5C RID: 10844
+		// (get) Token: 0x06007F4B RID: 32587 RVA: 0x0012FA8C File Offset: 0x0012DC8C
+		// (set) Token: 0x06007F4C RID: 32588 RVA: 0x0012FB1F File Offset: 0x0012DD1F
 		public virtual List<IFlowActorUnit> Actors
 		{
 			get
@@ -127,9 +125,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002873 RID: 10355
-		// (get) Token: 0x06007880 RID: 30848 RVA: 0x00120EE8 File Offset: 0x0011F0E8
-		// (set) Token: 0x06007881 RID: 30849 RVA: 0x00120F0F File Offset: 0x0011F10F
+		// Token: 0x17002A5D RID: 10845
+		// (get) Token: 0x06007F4D RID: 32589 RVA: 0x0012FB34 File Offset: 0x0012DD34
+		// (set) Token: 0x06007F4E RID: 32590 RVA: 0x0012FB5B File Offset: 0x0012DD5B
 		[Nullable(2)]
 		public virtual List<int> MontageIds
 		{
@@ -154,9 +152,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002874 RID: 10356
-		// (get) Token: 0x06007882 RID: 30850 RVA: 0x00120F20 File Offset: 0x0011F120
-		// (set) Token: 0x06007883 RID: 30851 RVA: 0x00120F5A File Offset: 0x0011F15A
+		// Token: 0x17002A5E RID: 10846
+		// (get) Token: 0x06007F4F RID: 32591 RVA: 0x0012FB6C File Offset: 0x0012DD6C
+		// (set) Token: 0x06007F50 RID: 32592 RVA: 0x0012FBA6 File Offset: 0x0012DDA6
 		public virtual bool? UseFreeCamera
 		{
 			get
@@ -178,9 +176,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002875 RID: 10357
-		// (get) Token: 0x06007884 RID: 30852 RVA: 0x00120F68 File Offset: 0x0011F168
-		// (set) Token: 0x06007885 RID: 30853 RVA: 0x00120FA2 File Offset: 0x0011F1A2
+		// Token: 0x17002A5F RID: 10847
+		// (get) Token: 0x06007F51 RID: 32593 RVA: 0x0012FBB4 File Offset: 0x0012DDB4
+		// (set) Token: 0x06007F52 RID: 32594 RVA: 0x0012FBEE File Offset: 0x0012DDEE
 		public virtual bool? IsSwitchMainRole
 		{
 			get
@@ -202,9 +200,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002876 RID: 10358
-		// (get) Token: 0x06007886 RID: 30854 RVA: 0x00120FB0 File Offset: 0x0011F1B0
-		// (set) Token: 0x06007887 RID: 30855 RVA: 0x00120FEA File Offset: 0x0011F1EA
+		// Token: 0x17002A60 RID: 10848
+		// (get) Token: 0x06007F53 RID: 32595 RVA: 0x0012FBFC File Offset: 0x0012DDFC
+		// (set) Token: 0x06007F54 RID: 32596 RVA: 0x0012FC36 File Offset: 0x0012DE36
 		public virtual bool? IsUseSeqFace
 		{
 			get
@@ -226,18 +224,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004603 RID: 17923
+		// Token: 0x0400499E RID: 18846
 		[Nullable(2)]
 		protected new BeginFlowTemplate FbInstance;
 
-		// Token: 0x04004604 RID: 17924
+		// Token: 0x0400499F RID: 18847
 		[Nullable(2)]
 		protected BeginFlowTemplate_SetValue PocoInterface;
 
-		// Token: 0x04004605 RID: 17925
+		// Token: 0x040049A0 RID: 18848
 		private List<IFlowActorUnit> _ActorsCache;
 
-		// Token: 0x04004606 RID: 17926
+		// Token: 0x040049A1 RID: 18849
 		private bool _ActorsInited;
 	}
 }

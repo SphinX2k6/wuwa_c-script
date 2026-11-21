@@ -5,18 +5,18 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002682 RID: 9858
+// Token: 0x02001B6D RID: 7021
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestReviewNodeNormalItem : QuestReviewNodeItemBase
 {
-	// Token: 0x0601433D RID: 82749 RVA: 0x0051A411 File Offset: 0x00518611
+	// Token: 0x0601181F RID: 71711 RVA: 0x00529149 File Offset: 0x00527349
 	public QuestReviewNodeNormalItem(UUIItem redDot)
 	{
 		this.RedDot = redDot;
 	}
 
-	// Token: 0x0601433E RID: 82750 RVA: 0x0051A420 File Offset: 0x00518620
+	// Token: 0x06011820 RID: 71712 RVA: 0x00529158 File Offset: 0x00527358
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -63,19 +63,19 @@ public class QuestReviewNodeNormalItem : QuestReviewNodeItemBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601433F RID: 82751 RVA: 0x0051A67B File Offset: 0x0051887B
+	// Token: 0x06011821 RID: 71713 RVA: 0x005293B3 File Offset: 0x005275B3
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnOpenQuestReviewDetail, new Action<int>(this.OnOpenQuestReviewDetail));
 	}
 
-	// Token: 0x06014340 RID: 82752 RVA: 0x0051A699 File Offset: 0x00518899
+	// Token: 0x06011822 RID: 71714 RVA: 0x005293D1 File Offset: 0x005275D1
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnOpenQuestReviewDetail, new Action<int>(this.OnOpenQuestReviewDetail));
 	}
 
-	// Token: 0x06014341 RID: 82753 RVA: 0x0051A6B8 File Offset: 0x005188B8
+	// Token: 0x06011823 RID: 71715 RVA: 0x005293F0 File Offset: 0x005275F0
 	public override void Refresh(IQuestReviewNodeParam param)
 	{
 		this.Data = param.Data;
@@ -97,14 +97,14 @@ public class QuestReviewNodeNormalItem : QuestReviewNodeItemBase
 		this.RedDot.SetUIActive(param.Data.HasRedDot && !questReviewLineDataById.IsDestroy);
 	}
 
-	// Token: 0x06014342 RID: 82754 RVA: 0x0051A845 File Offset: 0x00518A45
+	// Token: 0x06011824 RID: 71716 RVA: 0x0052957D File Offset: 0x0052777D
 	public void SetToggleInteractive(bool interactive)
 	{
 		base.GetExtendToggle(13).SetSelfInteractive(interactive);
 	}
 
-	// Token: 0x170019F6 RID: 6646
-	// (get) Token: 0x06014343 RID: 82755 RVA: 0x0051A855 File Offset: 0x00518A55
+	// Token: 0x17001A2E RID: 6702
+	// (get) Token: 0x06011825 RID: 71717 RVA: 0x0052958D File Offset: 0x0052778D
 	private UUISprite SpriteLineVertical
 	{
 		get
@@ -117,8 +117,8 @@ public class QuestReviewNodeNormalItem : QuestReviewNodeItemBase
 		}
 	}
 
-	// Token: 0x170019F7 RID: 6647
-	// (get) Token: 0x06014344 RID: 82756 RVA: 0x0051A874 File Offset: 0x00518A74
+	// Token: 0x17001A2F RID: 6703
+	// (get) Token: 0x06011826 RID: 71718 RVA: 0x005295AC File Offset: 0x005277AC
 	private UUISprite SpriteLineHorizontal
 	{
 		get
@@ -131,8 +131,8 @@ public class QuestReviewNodeNormalItem : QuestReviewNodeItemBase
 		}
 	}
 
-	// Token: 0x170019F8 RID: 6648
-	// (get) Token: 0x06014345 RID: 82757 RVA: 0x0051A893 File Offset: 0x00518A93
+	// Token: 0x17001A30 RID: 6704
+	// (get) Token: 0x06011827 RID: 71719 RVA: 0x005295CB File Offset: 0x005277CB
 	private UUISprite SpriteLineRound
 	{
 		get
@@ -145,7 +145,7 @@ public class QuestReviewNodeNormalItem : QuestReviewNodeItemBase
 		}
 	}
 
-	// Token: 0x06014346 RID: 82758 RVA: 0x0051A8B4 File Offset: 0x00518AB4
+	// Token: 0x06011828 RID: 71720 RVA: 0x005295EC File Offset: 0x005277EC
 	private void RefreshLineColor(IQuestReviewNodeParam param)
 	{
 		this.SpriteLineVertical.SetColor(FColor.FromHex(param.LineColorHex));
@@ -153,7 +153,7 @@ public class QuestReviewNodeNormalItem : QuestReviewNodeItemBase
 		this.SpriteLineRound.SetColor(FColor.FromHex(param.LineColorHex));
 	}
 
-	// Token: 0x06014347 RID: 82759 RVA: 0x0051A904 File Offset: 0x00518B04
+	// Token: 0x06011829 RID: 71721 RVA: 0x0052963C File Offset: 0x0052783C
 	private void OnToggleNodeClick(EToggleState toggleState)
 	{
 		QuestReviewController.Instance.OpenQuestNodeDetail(this.Data.Id);
@@ -162,7 +162,7 @@ public class QuestReviewNodeNormalItem : QuestReviewNodeItemBase
 		this.RedDot.SetUIActive(false);
 	}
 
-	// Token: 0x06014348 RID: 82760 RVA: 0x0051A950 File Offset: 0x00518B50
+	// Token: 0x0601182A RID: 71722 RVA: 0x00529688 File Offset: 0x00527888
 	private void OnOpenQuestReviewDetail(int nodeId)
 	{
 		QuestReviewNodeData data = this.Data;
@@ -172,59 +172,59 @@ public class QuestReviewNodeNormalItem : QuestReviewNodeItemBase
 		}
 	}
 
-	// Token: 0x0400980E RID: 38926
+	// Token: 0x04009966 RID: 39270
 	private QuestReviewNodeData Data;
 
-	// Token: 0x0400980F RID: 38927
+	// Token: 0x04009967 RID: 39271
 	private UUIItem RedDot;
 
-	// Token: 0x02008CD3 RID: 36051
+	// Token: 0x02007E5C RID: 32348
 	[NullableContext(0)]
 	private class ENodeNormalComponentDefine
 	{
-		// Token: 0x0402DB25 RID: 187173
+		// Token: 0x04028E3C RID: 167484
 		public const int TextureQuest = 0;
 
-		// Token: 0x0402DB26 RID: 187174
+		// Token: 0x04028E3D RID: 167485
 		public const int SpriteLineHorizontalSolid = 1;
 
-		// Token: 0x0402DB27 RID: 187175
+		// Token: 0x04028E3E RID: 167486
 		public const int SpriteLineVerticalSolid = 2;
 
-		// Token: 0x0402DB28 RID: 187176
+		// Token: 0x04028E3F RID: 167487
 		public const int TextDesc = 3;
 
-		// Token: 0x0402DB29 RID: 187177
+		// Token: 0x04028E40 RID: 167488
 		public const int SpriteStartPoint = 4;
 
-		// Token: 0x0402DB2A RID: 187178
+		// Token: 0x04028E41 RID: 167489
 		public const int SpriteEndPoint = 5;
 
-		// Token: 0x0402DB2B RID: 187179
+		// Token: 0x04028E42 RID: 167490
 		public const int SpriteLineRoundSolid = 6;
 
-		// Token: 0x0402DB2C RID: 187180
+		// Token: 0x04028E43 RID: 167491
 		public const int SpriteDescLabel = 7;
 
-		// Token: 0x0402DB2D RID: 187181
+		// Token: 0x04028E44 RID: 167492
 		public const int ItemLineDotted = 8;
 
-		// Token: 0x0402DB2E RID: 187182
+		// Token: 0x04028E45 RID: 167493
 		public const int ItemLineSolid = 9;
 
-		// Token: 0x0402DB2F RID: 187183
+		// Token: 0x04028E46 RID: 167494
 		public const int SpriteLineHorizontalDotted = 10;
 
-		// Token: 0x0402DB30 RID: 187184
+		// Token: 0x04028E47 RID: 167495
 		public const int SpriteLineRoundDotted = 11;
 
-		// Token: 0x0402DB31 RID: 187185
+		// Token: 0x04028E48 RID: 167496
 		public const int SpriteLineVerticalDotted = 12;
 
-		// Token: 0x0402DB32 RID: 187186
+		// Token: 0x04028E49 RID: 167497
 		public const int ToggleNode = 13;
 
-		// Token: 0x0402DB33 RID: 187187
+		// Token: 0x04028E4A RID: 167498
 		public const int TextureSeq = 14;
 	}
 }

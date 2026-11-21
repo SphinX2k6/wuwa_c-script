@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020029F9 RID: 10745
+// Token: 0x02001F74 RID: 8052
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class ShopItemNew : GridProxyAbstract<ShopItemFullInfo>
 {
-	// Token: 0x060164A8 RID: 91304 RVA: 0x005A42B8 File Offset: 0x005A24B8
+	// Token: 0x06013EAF RID: 81583 RVA: 0x005CF290 File Offset: 0x005CD490
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class ShopItemNew : GridProxyAbstract<ShopItemFullInfo>
 		};
 	}
 
-	// Token: 0x060164A9 RID: 91305 RVA: 0x005A4390 File Offset: 0x005A2590
+	// Token: 0x06013EB0 RID: 81584 RVA: 0x005CF368 File Offset: 0x005CD568
 	public void UpdateItem(ShopItemFullInfo data)
 	{
 		if (data == null)
@@ -51,14 +51,14 @@ public class ShopItemNew : GridProxyAbstract<ShopItemFullInfo>
 		base.GetSprite(11).SetUIActive(this.ItemInfo.IsLocked);
 	}
 
-	// Token: 0x060164AA RID: 91306 RVA: 0x005A4450 File Offset: 0x005A2650
+	// Token: 0x06013EB1 RID: 81585 RVA: 0x005CF428 File Offset: 0x005CD628
 	private void ButtonClick(EToggleState toggleState)
 	{
 		ShopModel.Instance.OpenItemInfo = this.ItemInfo;
 		EventSystem.Instance.Emit(EEventName.OpenItemInfo);
 	}
 
-	// Token: 0x060164AB RID: 91307 RVA: 0x005A4472 File Offset: 0x005A2672
+	// Token: 0x06013EB2 RID: 81586 RVA: 0x005CF44A File Offset: 0x005CD64A
 	public override void OnSelected(bool fireEvent)
 	{
 		if (fireEvent)
@@ -67,33 +67,33 @@ public class ShopItemNew : GridProxyAbstract<ShopItemFullInfo>
 		}
 	}
 
-	// Token: 0x060164AC RID: 91308 RVA: 0x005A447E File Offset: 0x005A267E
+	// Token: 0x06013EB3 RID: 81587 RVA: 0x005CF456 File Offset: 0x005CD656
 	public override void Refresh(ShopItemFullInfo data, bool isSelected, int gridIndex)
 	{
 		this.UpdateItem(data);
 	}
 
-	// Token: 0x0400A5DC RID: 42460
+	// Token: 0x0400A9C6 RID: 43462
 	[Nullable(2)]
 	public ShopItemFullInfo ItemInfo;
 
-	// Token: 0x02009031 RID: 36913
+	// Token: 0x02008278 RID: 33400
 	[NullableContext(0)]
 	private enum EShopItemNewDefine
 	{
-		// Token: 0x0402EB0E RID: 191246
+		// Token: 0x0402A206 RID: 172550
 		QualitySprite,
-		// Token: 0x0402EB0F RID: 191247
+		// Token: 0x0402A207 RID: 172551
 		TextureIcon,
-		// Token: 0x0402EB10 RID: 191248
+		// Token: 0x0402A208 RID: 172552
 		TxtName,
-		// Token: 0x0402EB11 RID: 191249
+		// Token: 0x0402A209 RID: 172553
 		PanelName,
-		// Token: 0x0402EB12 RID: 191250
+		// Token: 0x0402A20A RID: 172554
 		Toggle,
-		// Token: 0x0402EB13 RID: 191251
+		// Token: 0x0402A20B RID: 172555
 		SoldOutSprite = 10,
-		// Token: 0x0402EB14 RID: 191252
+		// Token: 0x0402A20C RID: 172556
 		LockSprite
 	}
 }

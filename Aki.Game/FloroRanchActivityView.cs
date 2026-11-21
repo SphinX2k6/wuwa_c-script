@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B59 RID: 7001
+// Token: 0x02001018 RID: 4120
 [NullableContext(2)]
 [Nullable(0)]
 public class FloroRanchActivityView : ActivitySubViewBase
 {
-	// Token: 0x0600CF9F RID: 53151 RVA: 0x002F4A66 File Offset: 0x002F2C66
+	// Token: 0x0600A3B0 RID: 41904 RVA: 0x002FFB3E File Offset: 0x002FDD3E
 	protected override void OnSetData()
 	{
 		this.ActivityData = (FloroRanchActivityData)this.ActivityBaseData;
 	}
 
-	// Token: 0x0600CFA0 RID: 53152 RVA: 0x002F4A7C File Offset: 0x002F2C7C
+	// Token: 0x0600A3B1 RID: 41905 RVA: 0x002FFB54 File Offset: 0x002FDD54
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -38,7 +38,7 @@ public class FloroRanchActivityView : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600CFA1 RID: 53153 RVA: 0x002F4B48 File Offset: 0x002F2D48
+	// Token: 0x0600A3B2 RID: 41906 RVA: 0x002FFC20 File Offset: 0x002FDE20
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchActivityView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ public class FloroRanchActivityView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CFA2 RID: 53154 RVA: 0x002F4B8B File Offset: 0x002F2D8B
+	// Token: 0x0600A3B3 RID: 41907 RVA: 0x002FFC63 File Offset: 0x002FDE63
 	protected override void OnBeforeShow()
 	{
 		this.RefreshTimeText();
@@ -59,7 +59,7 @@ public class FloroRanchActivityView : ActivitySubViewBase
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x0600CFA3 RID: 53155 RVA: 0x002F4BBC File Offset: 0x002F2DBC
+	// Token: 0x0600A3B4 RID: 41908 RVA: 0x002FFC94 File Offset: 0x002FDE94
 	protected override void OnRefreshView()
 	{
 		this.RefreshCondition();
@@ -93,7 +93,7 @@ public class FloroRanchActivityView : ActivitySubViewBase
 		spine.SetAnimation(0, "star", false);
 	}
 
-	// Token: 0x0600CFA4 RID: 53156 RVA: 0x002F4C60 File Offset: 0x002F2E60
+	// Token: 0x0600A3B5 RID: 41909 RVA: 0x002FFD38 File Offset: 0x002FDF38
 	private void RefreshTimeText()
 	{
 		if (!this.ActivityData.IsInLimitTime() && this.TimerHandle != null)
@@ -115,7 +115,7 @@ public class FloroRanchActivityView : ActivitySubViewBase
 		limitRewardBtn.SetText(remainTimeText);
 	}
 
-	// Token: 0x0600CFA5 RID: 53157 RVA: 0x002F4CE4 File Offset: 0x002F2EE4
+	// Token: 0x0600A3B6 RID: 41910 RVA: 0x002FFDBC File Offset: 0x002FDFBC
 	private void RefreshCondition()
 	{
 		ActivityFunctionalTypeA functional = this.CommonInfoPanel.GetFunctional();
@@ -127,7 +127,7 @@ public class FloroRanchActivityView : ActivitySubViewBase
 		functional.RefreshGeneralPerformance(parameters);
 	}
 
-	// Token: 0x0600CFA6 RID: 53158 RVA: 0x002F4D28 File Offset: 0x002F2F28
+	// Token: 0x0600A3B7 RID: 41911 RVA: 0x002FFE00 File Offset: 0x002FE000
 	private void RefreshRecommendQuestTips()
 	{
 		bool flag = !this.ActivityData.IsRecommendQuestFinished();
@@ -139,7 +139,7 @@ public class FloroRanchActivityView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600CFA7 RID: 53159 RVA: 0x002F4D78 File Offset: 0x002F2F78
+	// Token: 0x0600A3B8 RID: 41912 RVA: 0x002FFE50 File Offset: 0x002FE050
 	protected override void OnBeforeHide()
 	{
 		if (this.TimerHandle != null)
@@ -149,7 +149,7 @@ public class FloroRanchActivityView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600CFA8 RID: 53160 RVA: 0x002F4D9A File Offset: 0x002F2F9A
+	// Token: 0x0600A3B9 RID: 41913 RVA: 0x002FFE72 File Offset: 0x002FE072
 	protected override void OnBeforeDestroy()
 	{
 		USpineSkeletonAnimationComponent spine = base.GetSpine(3);
@@ -160,13 +160,13 @@ public class FloroRanchActivityView : ActivitySubViewBase
 		spine.AnimationComplete.Remove(new Action<UTrackEntry>(this.OnAnimationComplete));
 	}
 
-	// Token: 0x0600CFA9 RID: 53161 RVA: 0x002F4DBE File Offset: 0x002F2FBE
+	// Token: 0x0600A3BA RID: 41914 RVA: 0x002FFE96 File Offset: 0x002FE096
 	private void OnConfirmBtnClick(ActivityBaseData data)
 	{
 		this.OnConfirmBtnClick();
 	}
 
-	// Token: 0x0600CFAA RID: 53162 RVA: 0x002F4DC6 File Offset: 0x002F2FC6
+	// Token: 0x0600A3BB RID: 41915 RVA: 0x002FFE9E File Offset: 0x002FE09E
 	private void OnConfirmBtnClick()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -185,19 +185,19 @@ public class FloroRanchActivityView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0600CFAB RID: 53163 RVA: 0x002F4DE4 File Offset: 0x002F2FE4
+	// Token: 0x0600A3BC RID: 41916 RVA: 0x002FFEBC File Offset: 0x002FE0BC
 	private void OnLimitRewardBtnClick(int _)
 	{
 		UiManager.Instance.OpenView(EUiViewName.FloroRanchLimitRewardView, null, null);
 	}
 
-	// Token: 0x0600CFAC RID: 53164 RVA: 0x002F4DF7 File Offset: 0x002F2FF7
+	// Token: 0x0600A3BD RID: 41917 RVA: 0x002FFECF File Offset: 0x002FE0CF
 	private void OnPermanentRewardBtnClick(int _)
 	{
 		UiManager.Instance.OpenView(EUiViewName.FloroRanchPermanentRewardView, null, null);
 	}
 
-	// Token: 0x0600CFAD RID: 53165 RVA: 0x002F4E0C File Offset: 0x002F300C
+	// Token: 0x0600A3BE RID: 41918 RVA: 0x002FFEE4 File Offset: 0x002FE0E4
 	private void OnRecommendBtnClick()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.DirectTrainRecommendQuest);
@@ -210,7 +210,7 @@ public class FloroRanchActivityView : ActivitySubViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600CFAE RID: 53166 RVA: 0x002F4E4A File Offset: 0x002F304A
+	// Token: 0x0600A3BF RID: 41919 RVA: 0x002FFF22 File Offset: 0x002FE122
 	private void OnAnimationComplete(UTrackEntry entry)
 	{
 		if (entry == null)
@@ -228,42 +228,42 @@ public class FloroRanchActivityView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x04005F74 RID: 24436
+	// Token: 0x04006043 RID: 24643
 	[Nullable(1)]
 	protected FloroRanchActivityData ActivityData;
 
-	// Token: 0x04005F75 RID: 24437
+	// Token: 0x04006044 RID: 24644
 	protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x04005F76 RID: 24438
+	// Token: 0x04006045 RID: 24645
 	private RecommendQuestTipsSubPanel RecommendQuestTipsSubPanel;
 
-	// Token: 0x04005F77 RID: 24439
+	// Token: 0x04006046 RID: 24646
 	private ButtonItem LimitRewardBtn;
 
-	// Token: 0x04005F78 RID: 24440
+	// Token: 0x04006047 RID: 24647
 	private ButtonItem PermanentRewardBtn;
 
-	// Token: 0x04005F79 RID: 24441
+	// Token: 0x04006048 RID: 24648
 	private TimerHandle TimerHandle;
 
-	// Token: 0x020080A5 RID: 32933
+	// Token: 0x02007233 RID: 29235
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04029F5A RID: 171866
+		// Token: 0x0402528E RID: 152206
 		public const int CommonActionInfo = 0;
 
-		// Token: 0x04029F5B RID: 171867
+		// Token: 0x0402528F RID: 152207
 		public const int ItemLimitRewardBtn = 1;
 
-		// Token: 0x04029F5C RID: 171868
+		// Token: 0x04025290 RID: 152208
 		public const int ItemPermanentRewardBtn = 2;
 
-		// Token: 0x04029F5D RID: 171869
+		// Token: 0x04025291 RID: 152209
 		public const int Spine = 3;
 
-		// Token: 0x04029F5E RID: 171870
+		// Token: 0x04025292 RID: 152210
 		public const int ItemRecommendQuest = 4;
 	}
 }

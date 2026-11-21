@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200213B RID: 8507
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200239C RID: 9116
 	public class ReignsChangeBackground : ActionParams
 	{
-		// Token: 0x0600BB54 RID: 47956 RVA: 0x001B09F4 File Offset: 0x001AEBF4
+		// Token: 0x0600C6E2 RID: 50914 RVA: 0x001C7BA8 File Offset: 0x001C5DA8
 		private ReignsChangeBackground_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BB55 RID: 47957 RVA: 0x001B0A2C File Offset: 0x001AEC2C
+		// Token: 0x0600C6E3 RID: 50915 RVA: 0x001C7BE0 File Offset: 0x001C5DE0
 		public static ReignsChangeBackground Create([Nullable(2)] ReignsChangeBackground instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB56 RID: 47958 RVA: 0x001B0A3F File Offset: 0x001AEC3F
+		// Token: 0x0600C6E4 RID: 50916 RVA: 0x001C7BF3 File Offset: 0x001C5DF3
 		public static ReignsChangeBackground CreateFromSetValue([Nullable(2)] ReignsChangeBackground_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB57 RID: 47959 RVA: 0x001B0A52 File Offset: 0x001AEC52
+		// Token: 0x0600C6E5 RID: 50917 RVA: 0x001C7C06 File Offset: 0x001C5E06
 		public ReignsChangeBackground_SetValue ToSetValue()
 		{
 			return new ReignsChangeBackground_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700392E RID: 14638
-		// (get) Token: 0x0600BB58 RID: 47960 RVA: 0x001B0A71 File Offset: 0x001AEC71
-		// (set) Token: 0x0600BB59 RID: 47961 RVA: 0x001B0A9C File Offset: 0x001AEC9C
+		// Token: 0x17003C1B RID: 15387
+		// (get) Token: 0x0600C6E6 RID: 50918 RVA: 0x001C7C25 File Offset: 0x001C5E25
+		// (set) Token: 0x0600C6E7 RID: 50919 RVA: 0x001C7C50 File Offset: 0x001C5E50
 		public virtual string Background
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700392F RID: 14639
-		// (get) Token: 0x0600BB5A RID: 47962 RVA: 0x001B0AAA File Offset: 0x001AECAA
-		// (set) Token: 0x0600BB5B RID: 47963 RVA: 0x001B0AD5 File Offset: 0x001AECD5
+		// Token: 0x17003C1C RID: 15388
+		// (get) Token: 0x0600C6E8 RID: 50920 RVA: 0x001C7C5E File Offset: 0x001C5E5E
+		// (set) Token: 0x0600C6E9 RID: 50921 RVA: 0x001C7C89 File Offset: 0x001C5E89
 		public virtual EReignsBackgroundChangeMode ChangeMode
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400700B RID: 28683
+		// Token: 0x04007640 RID: 30272
 		[Nullable(2)]
 		protected new ReignsChangeBackground FbInstance;
 
-		// Token: 0x0400700C RID: 28684
+		// Token: 0x04007641 RID: 30273
 		[Nullable(2)]
 		protected ReignsChangeBackground_SetValue PocoInterface;
 	}

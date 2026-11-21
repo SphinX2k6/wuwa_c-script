@@ -3,15 +3,15 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200409B RID: 16539
+	// Token: 0x020044DC RID: 17628
 	public class IRecallVehicleT
 	{
-		// Token: 0x170074B6 RID: 29878
-		// (get) Token: 0x06018143 RID: 98627 RVA: 0x00378C82 File Offset: 0x00376E82
-		// (set) Token: 0x06018144 RID: 98628 RVA: 0x00378C8A File Offset: 0x00376E8A
+		// Token: 0x17007AB8 RID: 31416
+		// (get) Token: 0x060197DC RID: 104412 RVA: 0x003A2ABA File Offset: 0x003A0CBA
+		// (set) Token: 0x060197DD RID: 104413 RVA: 0x003A2AC2 File Offset: 0x003A0CC2
 		public EVehicleType Type { get; set; }
 
-		// Token: 0x06018145 RID: 98629 RVA: 0x00378C93 File Offset: 0x00376E93
+		// Token: 0x060197DE RID: 104414 RVA: 0x003A2ACB File Offset: 0x003A0CCB
 		public IRecallVehicleT()
 		{
 			this.Type = EVehicleType.Gongduola;

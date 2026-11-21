@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x0200437D RID: 17277
+	// Token: 0x0200339E RID: 13214
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ConditionCheckInstState.BP_SM_ConditionCheckInstState_C")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 68)]
 	public class BP_SM_ConditionCheckInstState_C : UASMConditionBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CC42 RID: 183362 RVA: 0x00A2808C File Offset: 0x00A2628C
+		// Token: 0x06021860 RID: 137312 RVA: 0x00962EE0 File Offset: 0x009610E0
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SM_ConditionCheckInstState_C._ClassPtr == IntPtr.Zero)
@@ -22,48 +22,48 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			return BP_SM_ConditionCheckInstState_C._ClassPtr;
 		}
 
-		// Token: 0x0602CC43 RID: 183363 RVA: 0x00A280B0 File Offset: 0x00A262B0
+		// Token: 0x06021861 RID: 137313 RVA: 0x00962F04 File Offset: 0x00961104
 		public BP_SM_ConditionCheckInstState_C() : this(BuiltinUtils.AllocNativeUObject(BP_SM_ConditionCheckInstState_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CC44 RID: 183364 RVA: 0x00A280D8 File Offset: 0x00A262D8
+		// Token: 0x06021862 RID: 137314 RVA: 0x00962F2C File Offset: 0x0096112C
 		[NullableContext(1)]
 		public BP_SM_ConditionCheckInstState_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SM_ConditionCheckInstState_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170070BF RID: 28863
-		// (get) Token: 0x0602CC45 RID: 183365 RVA: 0x00A2810B File Offset: 0x00A2630B
-		// (set) Token: 0x0602CC46 RID: 183366 RVA: 0x00A2811F File Offset: 0x00A2631F
+		// Token: 0x170044C1 RID: 17601
+		// (get) Token: 0x06021863 RID: 137315 RVA: 0x00962F5F File Offset: 0x0096115F
+		// (set) Token: 0x06021864 RID: 137316 RVA: 0x00962F73 File Offset: 0x00961173
 		public unsafe FGameplayTag Tag
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_ConditionCheckInstState_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_SM_ConditionCheckInstState_C.__PropertyOffset_Tag);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_ConditionCheckInstState_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_ConditionCheckInstState_C.__PropertyOffset_Tag) = value;
 			}
 		}
 
-		// Token: 0x0602CC47 RID: 183367 RVA: 0x00A28134 File Offset: 0x00A26334
+		// Token: 0x06021865 RID: 137317 RVA: 0x00962F88 File Offset: 0x00961188
 		protected BP_SM_ConditionCheckInstState_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040179C9 RID: 96713
+		// Token: 0x0401254A RID: 75082
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ConditionCheckInstState.BP_SM_ConditionCheckInstState_C";
 
-		// Token: 0x040179CA RID: 96714
+		// Token: 0x0401254B RID: 75083
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040179CB RID: 96715
+		// Token: 0x0401254C RID: 75084
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040179CC RID: 96716
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401254D RID: 75085
+		internal static int __PropertyOffset_Tag;
 	}
 }

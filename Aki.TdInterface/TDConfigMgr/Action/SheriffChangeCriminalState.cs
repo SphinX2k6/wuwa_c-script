@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021F7 RID: 8695
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002462 RID: 9314
 	public class SheriffChangeCriminalState : ActionParams
 	{
-		// Token: 0x0600BEF5 RID: 48885 RVA: 0x001B7494 File Offset: 0x001B5694
+		// Token: 0x0600CAB1 RID: 51889 RVA: 0x001CEB20 File Offset: 0x001CCD20
 		private SheriffChangeCriminalState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BEF6 RID: 48886 RVA: 0x001B74CC File Offset: 0x001B56CC
+		// Token: 0x0600CAB2 RID: 51890 RVA: 0x001CEB58 File Offset: 0x001CCD58
 		public static SheriffChangeCriminalState Create([Nullable(2)] SheriffChangeCriminalState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEF7 RID: 48887 RVA: 0x001B74DF File Offset: 0x001B56DF
+		// Token: 0x0600CAB3 RID: 51891 RVA: 0x001CEB6B File Offset: 0x001CCD6B
 		public static SheriffChangeCriminalState CreateFromSetValue([Nullable(2)] SheriffChangeCriminalState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEF8 RID: 48888 RVA: 0x001B74F2 File Offset: 0x001B56F2
+		// Token: 0x0600CAB4 RID: 51892 RVA: 0x001CEB7E File Offset: 0x001CCD7E
 		public SheriffChangeCriminalState_SetValue ToSetValue()
 		{
 			return new SheriffChangeCriminalState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039EA RID: 14826
-		// (get) Token: 0x0600BEF9 RID: 48889 RVA: 0x001B7511 File Offset: 0x001B5711
-		// (set) Token: 0x0600BEFA RID: 48890 RVA: 0x001B753C File Offset: 0x001B573C
+		// Token: 0x17003CDF RID: 15583
+		// (get) Token: 0x0600CAB5 RID: 51893 RVA: 0x001CEB9D File Offset: 0x001CCD9D
+		// (set) Token: 0x0600CAB6 RID: 51894 RVA: 0x001CEBC8 File Offset: 0x001CCDC8
 		public virtual int CriminalId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039EB RID: 14827
-		// (get) Token: 0x0600BEFB RID: 48891 RVA: 0x001B754A File Offset: 0x001B574A
-		// (set) Token: 0x0600BEFC RID: 48892 RVA: 0x001B7575 File Offset: 0x001B5775
+		// Token: 0x17003CE0 RID: 15584
+		// (get) Token: 0x0600CAB7 RID: 51895 RVA: 0x001CEBD6 File Offset: 0x001CCDD6
+		// (set) Token: 0x0600CAB8 RID: 51896 RVA: 0x001CEC01 File Offset: 0x001CCE01
 		public virtual ESheriffCriminalState CriminalState
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071DF RID: 29151
+		// Token: 0x04007828 RID: 30760
 		[Nullable(2)]
 		protected new SheriffChangeCriminalState FbInstance;
 
-		// Token: 0x040071E0 RID: 29152
+		// Token: 0x04007829 RID: 30761
 		[Nullable(2)]
 		protected SheriffChangeCriminalState_SetValue PocoInterface;
 	}

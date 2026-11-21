@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005425 RID: 21541
+	// Token: 0x020059AB RID: 22955
 	public struct IInitStateMagneticStorm : IFlatbufferObject
 	{
-		// Token: 0x17009E6F RID: 40559
-		// (get) Token: 0x0602360B RID: 144907 RVA: 0x004E52CD File Offset: 0x004E34CD
+		// Token: 0x1700A6A9 RID: 42665
+		// (get) Token: 0x060256C3 RID: 153283 RVA: 0x005222F9 File Offset: 0x005204F9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602360C RID: 144908 RVA: 0x004E52DA File Offset: 0x004E34DA
+		// Token: 0x060256C4 RID: 153284 RVA: 0x00522306 File Offset: 0x00520506
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602360D RID: 144909 RVA: 0x004E52E4 File Offset: 0x004E34E4
+		// Token: 0x060256C5 RID: 153285 RVA: 0x00522310 File Offset: 0x00520510
 		public static IInitStateMagneticStorm GetRootAsIInitStateMagneticStorm(ByteBuffer _bb)
 		{
 			return IInitStateMagneticStorm.GetRootAsIInitStateMagneticStorm(_bb, default(IInitStateMagneticStorm));
 		}
 
-		// Token: 0x0602360E RID: 144910 RVA: 0x004E5300 File Offset: 0x004E3500
+		// Token: 0x060256C6 RID: 153286 RVA: 0x0052232C File Offset: 0x0052052C
 		public static IInitStateMagneticStorm GetRootAsIInitStateMagneticStorm(ByteBuffer _bb, IInitStateMagneticStorm obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602360F RID: 144911 RVA: 0x004E531D File Offset: 0x004E351D
+		// Token: 0x060256C7 RID: 153287 RVA: 0x00522349 File Offset: 0x00520549
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023610 RID: 144912 RVA: 0x004E532C File Offset: 0x004E352C
+		// Token: 0x060256C8 RID: 153288 RVA: 0x00522358 File Offset: 0x00520558
 		public IInitStateMagneticStorm __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009E70 RID: 40560
-		// (get) Token: 0x06023611 RID: 144913 RVA: 0x004E533C File Offset: 0x004E353C
+		// Token: 0x1700A6AA RID: 42666
+		// (get) Token: 0x060256C9 RID: 153289 RVA: 0x00522368 File Offset: 0x00520568
 		public EInitStateType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023612 RID: 144914 RVA: 0x004E5378 File Offset: 0x004E3578
+		// Token: 0x060256CA RID: 153290 RVA: 0x005223A4 File Offset: 0x005205A4
 		public static Offset<IInitStateMagneticStorm> CreateIInitStateMagneticStorm(FlatBufferBuilder builder, EInitStateType Type = EInitStateType.Birth)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IInitStateMagneticStorm.EndIInitStateMagneticStorm(builder);
 		}
 
-		// Token: 0x06023613 RID: 144915 RVA: 0x004E538E File Offset: 0x004E358E
+		// Token: 0x060256CB RID: 153291 RVA: 0x005223BA File Offset: 0x005205BA
 		public static void StartIInitStateMagneticStorm(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06023614 RID: 144916 RVA: 0x004E5397 File Offset: 0x004E3597
+		// Token: 0x060256CC RID: 153292 RVA: 0x005223C3 File Offset: 0x005205C3
 		public static void AddType(FlatBufferBuilder builder, EInitStateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06023615 RID: 144917 RVA: 0x004E53A2 File Offset: 0x004E35A2
+		// Token: 0x060256CD RID: 153293 RVA: 0x005223CE File Offset: 0x005205CE
 		public static Offset<IInitStateMagneticStorm> EndIInitStateMagneticStorm(FlatBufferBuilder builder)
 		{
 			return new Offset<IInitStateMagneticStorm>(builder.EndTable());
 		}
 
-		// Token: 0x06023616 RID: 144918 RVA: 0x004E53B0 File Offset: 0x004E35B0
+		// Token: 0x060256CE RID: 153294 RVA: 0x005223DC File Offset: 0x005205DC
 		public IInitStateMagneticStormT UnPack()
 		{
 			IInitStateMagneticStormT initStateMagneticStormT = new IInitStateMagneticStormT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return initStateMagneticStormT;
 		}
 
-		// Token: 0x06023617 RID: 144919 RVA: 0x004E53CB File Offset: 0x004E35CB
+		// Token: 0x060256CF RID: 153295 RVA: 0x005223F7 File Offset: 0x005205F7
 		public void UnPackTo(IInitStateMagneticStormT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06023618 RID: 144920 RVA: 0x004E53DC File Offset: 0x004E35DC
+		// Token: 0x060256D0 RID: 153296 RVA: 0x00522408 File Offset: 0x00520608
 		public static Offset<IInitStateMagneticStorm> Pack(FlatBufferBuilder builder, IInitStateMagneticStormT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IInitStateMagneticStorm.CreateIInitStateMagneticStorm(builder, _o.Type);
 		}
 
-		// Token: 0x0400E66E RID: 58990
+		// Token: 0x0400F29F RID: 62111
 		private Table __p;
 	}
 }

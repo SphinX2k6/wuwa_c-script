@@ -2,22 +2,22 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02001808 RID: 6152
+// Token: 0x02000CC1 RID: 3265
 [NullableContext(1)]
 [Nullable(0)]
 public struct TCommonMultipleConsumeData
 {
-	// Token: 0x17000F26 RID: 3878
-	// (get) Token: 0x0600B46E RID: 46190 RVA: 0x0028BC4F File Offset: 0x00289E4F
-	// (set) Token: 0x0600B46F RID: 46191 RVA: 0x0028BC57 File Offset: 0x00289E57
+	// Token: 0x17000F49 RID: 3913
+	// (get) Token: 0x06008859 RID: 34905 RVA: 0x0029636F File Offset: 0x0029456F
+	// (set) Token: 0x0600885A RID: 34906 RVA: 0x00296377 File Offset: 0x00294577
 	public InventoryDefine.IGetItemData ItemData { readonly get; set; }
 
-	// Token: 0x17000F27 RID: 3879
-	// (get) Token: 0x0600B470 RID: 46192 RVA: 0x0028BC60 File Offset: 0x00289E60
-	// (set) Token: 0x0600B471 RID: 46193 RVA: 0x0028BC68 File Offset: 0x00289E68
+	// Token: 0x17000F4A RID: 3914
+	// (get) Token: 0x0600885B RID: 34907 RVA: 0x00296380 File Offset: 0x00294580
+	// (set) Token: 0x0600885C RID: 34908 RVA: 0x00296388 File Offset: 0x00294588
 	public int Count { readonly get; set; }
 
-	// Token: 0x0600B472 RID: 46194 RVA: 0x0028BC71 File Offset: 0x00289E71
+	// Token: 0x0600885D RID: 34909 RVA: 0x00296391 File Offset: 0x00294591
 	public TCommonMultipleConsumeData(InventoryDefine.IGetItemData itemData, int count)
 	{
 		this.ItemData = itemData;

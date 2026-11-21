@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020031BE RID: 12734
+// Token: 0x0200272D RID: 10029
 public enum EResultForExitClimb
 {
-	// Token: 0x0400D745 RID: 55109
+	// Token: 0x0400DBCC RID: 56268
 	NoHit,
-	// Token: 0x0400D746 RID: 55110
+	// Token: 0x0400DBCD RID: 56269
 	NoSafety,
-	// Token: 0x0400D747 RID: 55111
+	// Token: 0x0400DBCE RID: 56270
 	Safety
 }

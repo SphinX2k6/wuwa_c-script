@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200480D RID: 18445
+	// Token: 0x02004C75 RID: 19573
 	public enum EFragmentType : byte
 	{
-		// Token: 0x0400CCE0 RID: 52448
+		// Token: 0x0400D71A RID: 55066
 		LevelPlay,
-		// Token: 0x0400CCE1 RID: 52449
+		// Token: 0x0400D71B RID: 55067
 		Quest
 	}
 }

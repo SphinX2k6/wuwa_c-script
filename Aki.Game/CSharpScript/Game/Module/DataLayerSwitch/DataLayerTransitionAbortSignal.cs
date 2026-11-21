@@ -5,11 +5,11 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.DataLayerSwitch
 {
-	// Token: 0x02005AD3 RID: 23251
+	// Token: 0x02004AB4 RID: 19124
 	internal class DataLayerTransitionAbortSignal : ISequenceAbortSignal
 	{
-		// Token: 0x17008C2E RID: 35886
-		// (get) Token: 0x0603AE44 RID: 241220 RVA: 0x00E0AC36 File Offset: 0x00E08E36
+		// Token: 0x17006008 RID: 24584
+		// (get) Token: 0x0602FDB6 RID: 196022 RVA: 0x00D5B91E File Offset: 0x00D59B1E
 		public bool Aborted
 		{
 			get
@@ -18,8 +18,8 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x17008C2F RID: 35887
-		// (get) Token: 0x0603AE45 RID: 241221 RVA: 0x00E0AC43 File Offset: 0x00E08E43
+		// Token: 0x17006009 RID: 24585
+		// (get) Token: 0x0602FDB7 RID: 196023 RVA: 0x00D5B92B File Offset: 0x00D59B2B
 		public UniTask<bool>? Promise
 		{
 			get
@@ -28,13 +28,13 @@ namespace CSharpScript.Game.Module.DataLayerSwitch
 			}
 		}
 
-		// Token: 0x0603AE46 RID: 241222 RVA: 0x00E0AC55 File Offset: 0x00E08E55
+		// Token: 0x0602FDB8 RID: 196024 RVA: 0x00D5B93D File Offset: 0x00D59B3D
 		public void Abort()
 		{
 			this.AbortPromise.SetResult(true);
 		}
 
-		// Token: 0x0401EBCD RID: 125901
+		// Token: 0x04019689 RID: 104073
 		[Nullable(1)]
 		private readonly CustomPromise<bool> AbortPromise = new CustomPromise<bool>();
 	}

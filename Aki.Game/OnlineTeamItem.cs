@@ -12,7 +12,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020022F7 RID: 8951
+// Token: 0x020017DB RID: 6107
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -21,7 +21,7 @@ using UnrealEngine;
 })]
 public class OnlineTeamItem : GridProxyAbstract<OnlineTeamData>
 {
-	// Token: 0x06011A66 RID: 72294 RVA: 0x004559C4 File Offset: 0x00453BC4
+	// Token: 0x0600EEFE RID: 61182 RVA: 0x00462690 File Offset: 0x00460890
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 19;
@@ -82,7 +82,7 @@ public class OnlineTeamItem : GridProxyAbstract<OnlineTeamData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011A67 RID: 72295 RVA: 0x00455D18 File Offset: 0x00453F18
+	// Token: 0x0600EEFF RID: 61183 RVA: 0x004629E4 File Offset: 0x00460BE4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		OnlineTeamItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -93,7 +93,7 @@ public class OnlineTeamItem : GridProxyAbstract<OnlineTeamData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011A68 RID: 72296 RVA: 0x00455D5B File Offset: 0x00453F5B
+	// Token: 0x0600EF00 RID: 61184 RVA: 0x00462A27 File Offset: 0x00460C27
 	protected override void OnStart()
 	{
 		base.GetItem(18).SetUIActive(false);
@@ -101,19 +101,19 @@ public class OnlineTeamItem : GridProxyAbstract<OnlineTeamData>
 		this.AddEventListener();
 	}
 
-	// Token: 0x06011A69 RID: 72297 RVA: 0x00455D7F File Offset: 0x00453F7F
+	// Token: 0x0600EF01 RID: 61185 RVA: 0x00462A4B File Offset: 0x00460C4B
 	protected void AddEventListener()
 	{
 		EventSystem.Instance.Add<int, ENetPingState>(EEventName.OnRefreshPlayerPing, new Action<int, ENetPingState>(this.OnRefreshPlayerPing));
 	}
 
-	// Token: 0x06011A6A RID: 72298 RVA: 0x00455D9D File Offset: 0x00453F9D
+	// Token: 0x0600EF02 RID: 61186 RVA: 0x00462A69 File Offset: 0x00460C69
 	protected void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshPlayerPing, new Action<int, ENetPingState>(this.OnRefreshPlayerPing));
 	}
 
-	// Token: 0x06011A6B RID: 72299 RVA: 0x00455DBB File Offset: 0x00453FBB
+	// Token: 0x0600EF03 RID: 61187 RVA: 0x00462A87 File Offset: 0x00460C87
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEventListener();
@@ -125,7 +125,7 @@ public class OnlineTeamItem : GridProxyAbstract<OnlineTeamData>
 		this.TitleItem = null;
 	}
 
-	// Token: 0x06011A6C RID: 72300 RVA: 0x00455DDC File Offset: 0x00453FDC
+	// Token: 0x0600EF04 RID: 61188 RVA: 0x00462AA8 File Offset: 0x00460CA8
 	[NullableContext(1)]
 	public override void Refresh(OnlineTeamData data, bool isSelected, int gridIndex)
 	{
@@ -237,7 +237,7 @@ public class OnlineTeamItem : GridProxyAbstract<OnlineTeamData>
 		titleItem.Refresh(new int?(data.PlayerTitleId), new int?(data.PlayerTitleStarLevel), new int?(data.Sex));
 	}
 
-	// Token: 0x06011A6D RID: 72301 RVA: 0x0045615C File Offset: 0x0045435C
+	// Token: 0x0600EF05 RID: 61189 RVA: 0x00462E28 File Offset: 0x00461028
 	private void RefreshPcItem(string onlineName)
 	{
 		KuroSdkController instance = KuroSdkController.Instance;
@@ -276,7 +276,7 @@ public class OnlineTeamItem : GridProxyAbstract<OnlineTeamData>
 		}
 	}
 
-	// Token: 0x06011A6E RID: 72302 RVA: 0x004561E0 File Offset: 0x004543E0
+	// Token: 0x0600EF06 RID: 61190 RVA: 0x00462EAC File Offset: 0x004610AC
 	private void RefreshPlayStationItem(string onlineName)
 	{
 		KuroSdkController instance = KuroSdkController.Instance;
@@ -330,14 +330,14 @@ public class OnlineTeamItem : GridProxyAbstract<OnlineTeamData>
 		}
 	}
 
-	// Token: 0x06011A6F RID: 72303 RVA: 0x004562EE File Offset: 0x004544EE
+	// Token: 0x0600EF07 RID: 61191 RVA: 0x00462FBA File Offset: 0x004611BA
 	private void OnClickOperationBtn()
 	{
 		FriendController.Instance.RequestFriendApplyAddSend(this.OnlineTeamData.PlayerId, FriendApplyWay.RecentlyTeam);
 		this.IsApplyFriend = true;
 	}
 
-	// Token: 0x06011A70 RID: 72304 RVA: 0x00456310 File Offset: 0x00454510
+	// Token: 0x0600EF08 RID: 61192 RVA: 0x00462FDC File Offset: 0x004611DC
 	private void OnClickExitBtn()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew;
@@ -356,7 +356,7 @@ public class OnlineTeamItem : GridProxyAbstract<OnlineTeamData>
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06011A71 RID: 72305 RVA: 0x00456360 File Offset: 0x00454560
+	// Token: 0x0600EF09 RID: 61193 RVA: 0x0046302C File Offset: 0x0046122C
 	private void OnClickKickOutBtn()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.KnockPlayerOnlineWorld);
@@ -367,14 +367,14 @@ public class OnlineTeamItem : GridProxyAbstract<OnlineTeamData>
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06011A72 RID: 72306 RVA: 0x00456399 File Offset: 0x00454599
+	// Token: 0x0600EF0A RID: 61194 RVA: 0x00463065 File Offset: 0x00461265
 	private void OnClickItemBtn()
 	{
 		OnlineModel.Instance.CachePlayerData = this.OnlineTeamData;
 		UiManager.Instance.OpenView(EUiViewName.OnlineProcessView, null, null);
 	}
 
-	// Token: 0x06011A73 RID: 72307 RVA: 0x004563BC File Offset: 0x004545BC
+	// Token: 0x0600EF0B RID: 61195 RVA: 0x00463088 File Offset: 0x00461288
 	private void OnRefreshPlayerPing(int playerId, ENetPingState ping)
 	{
 		if (this.OnlineTeamData.PlayerId != playerId)
@@ -384,7 +384,7 @@ public class OnlineTeamItem : GridProxyAbstract<OnlineTeamData>
 		this.RefreshPlayerPingItem(ping);
 	}
 
-	// Token: 0x06011A74 RID: 72308 RVA: 0x004563D4 File Offset: 0x004545D4
+	// Token: 0x0600EF0C RID: 61196 RVA: 0x004630A0 File Offset: 0x004612A0
 	private void RefreshPlayerPingItem(ENetPingState ping)
 	{
 		UUISprite sprite = base.GetSprite(19);
@@ -418,72 +418,72 @@ public class OnlineTeamItem : GridProxyAbstract<OnlineTeamData>
 		}
 	}
 
-	// Token: 0x040085E4 RID: 34276
+	// Token: 0x04008722 RID: 34594
 	private OnlineTeamData OnlineTeamData;
 
-	// Token: 0x040085E5 RID: 34277
+	// Token: 0x04008723 RID: 34595
 	private bool IsApplyFriend;
 
-	// Token: 0x040085E6 RID: 34278
+	// Token: 0x04008724 RID: 34596
 	private PlayerTitleItem TitleItem;
 
-	// Token: 0x02008879 RID: 34937
+	// Token: 0x020079FD RID: 31229
 	[NullableContext(0)]
 	private enum EOnlineTeamItem
 	{
-		// Token: 0x0402C5AA RID: 181674
+		// Token: 0x040278AC RID: 161964
 		PlayerName,
-		// Token: 0x0402C5AB RID: 181675
+		// Token: 0x040278AD RID: 161965
 		TipText,
-		// Token: 0x0402C5AC RID: 181676
+		// Token: 0x040278AE RID: 161966
 		Level,
-		// Token: 0x0402C5AD RID: 181677
+		// Token: 0x040278AF RID: 161967
 		RoleHead,
-		// Token: 0x0402C5AE RID: 181678
+		// Token: 0x040278B0 RID: 161968
 		ApplyEnterBtn,
-		// Token: 0x0402C5AF RID: 181679
+		// Token: 0x040278B1 RID: 161969
 		PlayerCount2,
-		// Token: 0x0402C5B0 RID: 181680
+		// Token: 0x040278B2 RID: 161970
 		PlayerCount3,
-		// Token: 0x0402C5B1 RID: 181681
+		// Token: 0x040278B3 RID: 161971
 		Sign,
-		// Token: 0x0402C5B2 RID: 181682
+		// Token: 0x040278B4 RID: 161972
 		ApplyEnterBtnInteraction,
-		// Token: 0x0402C5B3 RID: 181683
+		// Token: 0x040278B5 RID: 161973
 		ApplyEnterBtnText,
-		// Token: 0x0402C5B4 RID: 181684
+		// Token: 0x040278B6 RID: 161974
 		ApplyCountDown,
-		// Token: 0x0402C5B5 RID: 181685
+		// Token: 0x040278B7 RID: 161975
 		ApplyCountDownText,
-		// Token: 0x0402C5B6 RID: 181686
+		// Token: 0x040278B8 RID: 161976
 		TeamCount,
-		// Token: 0x0402C5B7 RID: 181687
+		// Token: 0x040278B9 RID: 161977
 		TeamItem,
-		// Token: 0x0402C5B8 RID: 181688
+		// Token: 0x040278BA RID: 161978
 		OperationBtn,
-		// Token: 0x0402C5B9 RID: 181689
+		// Token: 0x040278BB RID: 161979
 		ExitBtn,
-		// Token: 0x0402C5BA RID: 181690
+		// Token: 0x040278BC RID: 161980
 		KickOutBtn,
-		// Token: 0x0402C5BB RID: 181691
+		// Token: 0x040278BD RID: 161981
 		PlayerSprite,
-		// Token: 0x0402C5BC RID: 181692
+		// Token: 0x040278BE RID: 161982
 		HallItem,
-		// Token: 0x0402C5BD RID: 181693
+		// Token: 0x040278BF RID: 161983
 		NetStateSprite,
-		// Token: 0x0402C5BE RID: 181694
+		// Token: 0x040278C0 RID: 161984
 		SignTeamItem,
-		// Token: 0x0402C5BF RID: 181695
+		// Token: 0x040278C1 RID: 161985
 		PlayerTextureBg,
-		// Token: 0x0402C5C0 RID: 181696
+		// Token: 0x040278C2 RID: 161986
 		BtnPlayerHead,
-		// Token: 0x0402C5C1 RID: 181697
+		// Token: 0x040278C3 RID: 161987
 		ThirdPartyTexture,
-		// Token: 0x0402C5C2 RID: 181698
+		// Token: 0x040278C4 RID: 161988
 		ThirdPartyText,
-		// Token: 0x0402C5C3 RID: 181699
+		// Token: 0x040278C5 RID: 161989
 		PcItem,
-		// Token: 0x0402C5C4 RID: 181700
+		// Token: 0x040278C6 RID: 161990
 		PlayerTitleItem
 	}
 }

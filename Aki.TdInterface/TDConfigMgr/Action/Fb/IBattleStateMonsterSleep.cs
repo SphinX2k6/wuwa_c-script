@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026D9 RID: 9945
+	// Token: 0x0200299D RID: 10653
 	public class IBattleStateMonsterSleep : ISetBattleTagType
 	{
-		// Token: 0x0600DE3D RID: 56893 RVA: 0x0020FA9F File Offset: 0x0020DC9F
-		[NullableContext(1)]
+		// Token: 0x0600EC19 RID: 60441 RVA: 0x0022C2DF File Offset: 0x0022A4DF
 		public static IBattleStateMonsterSleep Create(IBattleStateMonsterSleep? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700424D RID: 16973
-		// (get) Token: 0x0600DE3E RID: 56894 RVA: 0x0020FABE File Offset: 0x0020DCBE
+		// Token: 0x1700458D RID: 17805
+		// (get) Token: 0x0600EC1A RID: 60442 RVA: 0x0022C2FE File Offset: 0x0022A4FE
 		public override ESetBattleTagType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B61 RID: 31585
+		// Token: 0x04008201 RID: 33281
 		private IBattleStateMonsterSleep Instance;
 	}
 }

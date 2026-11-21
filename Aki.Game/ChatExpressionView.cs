@@ -8,17 +8,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017A4 RID: 6052
+// Token: 0x02000C5D RID: 3165
 [NullableContext(1)]
 [Nullable(0)]
 public class ChatExpressionView : UiViewBase
 {
-	// Token: 0x0600B057 RID: 45143 RVA: 0x0027D6FD File Offset: 0x0027B8FD
+	// Token: 0x0600843F RID: 33855 RVA: 0x00287C95 File Offset: 0x00285E95
 	public ChatExpressionView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600B058 RID: 45144 RVA: 0x0027D714 File Offset: 0x0027B914
+	// Token: 0x06008440 RID: 33856 RVA: 0x00287CAC File Offset: 0x00285EAC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -47,7 +47,7 @@ public class ChatExpressionView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B059 RID: 45145 RVA: 0x0027D840 File Offset: 0x0027BA40
+	// Token: 0x06008441 RID: 33857 RVA: 0x00287DD8 File Offset: 0x00285FD8
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(1);
@@ -59,7 +59,7 @@ public class ChatExpressionView : UiViewBase
 		this.Refresh();
 	}
 
-	// Token: 0x0600B05A RID: 45146 RVA: 0x0027D899 File Offset: 0x0027BA99
+	// Token: 0x06008442 RID: 33858 RVA: 0x00287E31 File Offset: 0x00286031
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearExpressionGroupItems();
@@ -68,7 +68,7 @@ public class ChatExpressionView : UiViewBase
 		this.ExpressionScrollView = null;
 	}
 
-	// Token: 0x0600B05B RID: 45147 RVA: 0x0027D8BC File Offset: 0x0027BABC
+	// Token: 0x06008443 RID: 33859 RVA: 0x00287E54 File Offset: 0x00286054
 	private void Refresh()
 	{
 		this.ClearExpressionGroupItems();
@@ -85,7 +85,7 @@ public class ChatExpressionView : UiViewBase
 		this.SelectExpressionGroup(id);
 	}
 
-	// Token: 0x0600B05C RID: 45148 RVA: 0x0027D934 File Offset: 0x0027BB34
+	// Token: 0x06008444 RID: 33860 RVA: 0x00287ECC File Offset: 0x002860CC
 	private void SelectExpressionGroup(int groupId)
 	{
 		if (this.CurrentGroupItem != null)
@@ -99,7 +99,7 @@ public class ChatExpressionView : UiViewBase
 		this.ExpressionScrollView.ReloadData(allExpressionConfigByGroupId, false);
 	}
 
-	// Token: 0x0600B05D RID: 45149 RVA: 0x0027D988 File Offset: 0x0027BB88
+	// Token: 0x06008445 RID: 33861 RVA: 0x00287F20 File Offset: 0x00286120
 	private void NewExpressionGroupItem(ChatExpressionGroup expressionGroupConfig)
 	{
 		AActor owner = base.GetItem(1).GetOwner();
@@ -111,7 +111,7 @@ public class ChatExpressionView : UiViewBase
 		this.ExpressionGroupItemMap[expressionGroupConfig.Id] = chatExpressionGroupItem;
 	}
 
-	// Token: 0x0600B05E RID: 45150 RVA: 0x0027D9F8 File Offset: 0x0027BBF8
+	// Token: 0x06008446 RID: 33862 RVA: 0x00287F90 File Offset: 0x00286190
 	[NullableContext(2)]
 	private ChatExpressionGroupItem GetExpressionGroupItem(int expressionGroupId)
 	{
@@ -120,7 +120,7 @@ public class ChatExpressionView : UiViewBase
 		return result;
 	}
 
-	// Token: 0x0600B05F RID: 45151 RVA: 0x0027DA18 File Offset: 0x0027BC18
+	// Token: 0x06008447 RID: 33863 RVA: 0x00287FB0 File Offset: 0x002861B0
 	private void ClearExpressionGroupItems()
 	{
 		foreach (ChatExpressionGroupItem chatExpressionGroupItem in this.ExpressionGroupItemMap.Values)
@@ -129,7 +129,7 @@ public class ChatExpressionView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B060 RID: 45152 RVA: 0x0027DA70 File Offset: 0x0027BC70
+	// Token: 0x06008448 RID: 33864 RVA: 0x00288008 File Offset: 0x00286208
 	private ChatExpressionItem OnGridProxyCreate()
 	{
 		ChatExpressionItem chatExpressionItem = new ChatExpressionItem();
@@ -137,26 +137,26 @@ public class ChatExpressionView : UiViewBase
 		return chatExpressionItem;
 	}
 
-	// Token: 0x0600B061 RID: 45153 RVA: 0x0027DA89 File Offset: 0x0027BC89
+	// Token: 0x06008449 RID: 33865 RVA: 0x00288021 File Offset: 0x00286221
 	private void OnClickedExpressionGroupItem(int expressionGroupId)
 	{
 		this.SelectExpressionGroup(expressionGroupId);
 	}
 
-	// Token: 0x0600B062 RID: 45154 RVA: 0x0027DA92 File Offset: 0x0027BC92
+	// Token: 0x0600844A RID: 33866 RVA: 0x0028802A File Offset: 0x0028622A
 	private void OnClickedExpressionItem(int expressionId)
 	{
 		EventSystem.Instance.Emit<int>(EEventName.OnSelectExpression, expressionId);
 		UiManager.Instance.CloseView(EUiViewName.ChatExpressionView, null);
 	}
 
-	// Token: 0x0600B063 RID: 45155 RVA: 0x0027DAB5 File Offset: 0x0027BCB5
+	// Token: 0x0600844B RID: 33867 RVA: 0x0028804D File Offset: 0x0028624D
 	private void OnClickedMaskButton()
 	{
 		UiManager.Instance.CloseView(EUiViewName.ChatExpressionView, null);
 	}
 
-	// Token: 0x0400501D RID: 20509
+	// Token: 0x040050C7 RID: 20679
 	[Nullable(new byte[]
 	{
 		2,
@@ -164,33 +164,33 @@ public class ChatExpressionView : UiViewBase
 	})]
 	private LoopScrollView<ChatExpressionItem, ChatExpression> ExpressionScrollView;
 
-	// Token: 0x0400501E RID: 20510
+	// Token: 0x040050C8 RID: 20680
 	private readonly Dictionary<int, ChatExpressionGroupItem> ExpressionGroupItemMap = new Dictionary<int, ChatExpressionGroupItem>();
 
-	// Token: 0x0400501F RID: 20511
+	// Token: 0x040050C9 RID: 20681
 	[Nullable(2)]
 	private ChatExpressionGroupItem CurrentGroupItem;
 
-	// Token: 0x02007DB4 RID: 32180
+	// Token: 0x02006F3A RID: 28474
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x04029272 RID: 168562
+		// Token: 0x0402459D RID: 148893
 		public const int SourceExpressionItem = 0;
 
-		// Token: 0x04029273 RID: 168563
+		// Token: 0x0402459E RID: 148894
 		public const int SourceExpressionGroupItem = 1;
 
-		// Token: 0x04029274 RID: 168564
+		// Token: 0x0402459F RID: 148895
 		public const int ExpressionContentItem = 2;
 
-		// Token: 0x04029275 RID: 168565
+		// Token: 0x040245A0 RID: 148896
 		public const int ExpressionLoopScrollView = 3;
 
-		// Token: 0x04029276 RID: 168566
+		// Token: 0x040245A1 RID: 148897
 		public const int ExpressionGroupContentItem = 4;
 
-		// Token: 0x04029277 RID: 168567
+		// Token: 0x040245A2 RID: 148898
 		public const int MaskButton = 5;
 	}
 }

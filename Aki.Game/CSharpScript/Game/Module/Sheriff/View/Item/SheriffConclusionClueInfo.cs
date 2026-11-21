@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C6D RID: 19565
+	// Token: 0x02003C1E RID: 15390
 	public class SheriffConclusionClueInfo : GridProxyAbstract<int>
 	{
-		// Token: 0x0603292E RID: 207150 RVA: 0x00BC9980 File Offset: 0x00BC7B80
+		// Token: 0x060276E1 RID: 161505 RVA: 0x00B0E5E4 File Offset: 0x00B0C7E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603292F RID: 207151 RVA: 0x00BC99C8 File Offset: 0x00BC7BC8
+		// Token: 0x060276E2 RID: 161506 RVA: 0x00B0E62C File Offset: 0x00B0C82C
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			SheriffClue? clueConfigById = SheriffConfig.Instance.GetClueConfigById(data);
@@ -33,10 +33,10 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			base.SetTextureByPath(clueConfigById.Value.Icon, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x0200AE20 RID: 44576
+		// Token: 0x0200983E RID: 38974
 		private static class EClueInfo
 		{
-			// Token: 0x04034E22 RID: 216610
+			// Token: 0x0402F7C7 RID: 194503
 			public const int TexIcon = 0;
 		}
 	}

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B96 RID: 23446
+	// Token: 0x020061AC RID: 25004
 	public class IWorldLevelBonusType_UnionUnion
 	{
-		// Token: 0x1700B12F RID: 45359
-		// (get) Token: 0x06028237 RID: 164407 RVA: 0x005844AD File Offset: 0x005826AD
-		// (set) Token: 0x06028238 RID: 164408 RVA: 0x005844B5 File Offset: 0x005826B5
+		// Token: 0x1700BA77 RID: 47735
+		// (get) Token: 0x0602A7FB RID: 174075 RVA: 0x005CBF3D File Offset: 0x005CA13D
+		// (set) Token: 0x0602A7FC RID: 174076 RVA: 0x005CBF45 File Offset: 0x005CA145
 		public IWorldLevelBonusType_Union Type { get; set; }
 
-		// Token: 0x1700B130 RID: 45360
-		// (get) Token: 0x06028239 RID: 164409 RVA: 0x005844BE File Offset: 0x005826BE
-		// (set) Token: 0x0602823A RID: 164410 RVA: 0x005844C6 File Offset: 0x005826C6
+		// Token: 0x1700BA78 RID: 47736
+		// (get) Token: 0x0602A7FD RID: 174077 RVA: 0x005CBF4E File Offset: 0x005CA14E
+		// (set) Token: 0x0602A7FE RID: 174078 RVA: 0x005CBF56 File Offset: 0x005CA156
 		public object Value { get; set; }
 
-		// Token: 0x0602823B RID: 164411 RVA: 0x005844CF File Offset: 0x005826CF
+		// Token: 0x0602A7FF RID: 174079 RVA: 0x005CBF5F File Offset: 0x005CA15F
 		public IWorldLevelBonusType_UnionUnion()
 		{
 			this.Type = IWorldLevelBonusType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602823C RID: 164412 RVA: 0x005844E5 File Offset: 0x005826E5
+		// Token: 0x0602A800 RID: 174080 RVA: 0x005CBF75 File Offset: 0x005CA175
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602823D RID: 164413 RVA: 0x005844F7 File Offset: 0x005826F7
+		// Token: 0x0602A801 RID: 174081 RVA: 0x005CBF87 File Offset: 0x005CA187
 		public IWorldLevelBonusTypeT AsIWorldLevelBonusType()
 		{
 			return this.As<IWorldLevelBonusTypeT>();
 		}
 
-		// Token: 0x0602823E RID: 164414 RVA: 0x005844FF File Offset: 0x005826FF
+		// Token: 0x0602A802 RID: 174082 RVA: 0x005CBF8F File Offset: 0x005CA18F
 		public static IWorldLevelBonusType_UnionUnion FromIWorldLevelBonusType(IWorldLevelBonusTypeT _iworldlevelbonustype)
 		{
 			return new IWorldLevelBonusType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602823F RID: 164415 RVA: 0x00584514 File Offset: 0x00582714
+		// Token: 0x0602A803 RID: 174083 RVA: 0x005CBFA4 File Offset: 0x005CA1A4
 		public IAreaBounsT AsIAreaBouns()
 		{
 			return this.As<IAreaBounsT>();
 		}
 
-		// Token: 0x06028240 RID: 164416 RVA: 0x0058451C File Offset: 0x0058271C
+		// Token: 0x0602A804 RID: 174084 RVA: 0x005CBFAC File Offset: 0x005CA1AC
 		public static IWorldLevelBonusType_UnionUnion FromIAreaBouns(IAreaBounsT _iareabouns)
 		{
 			return new IWorldLevelBonusType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028241 RID: 164417 RVA: 0x00584531 File Offset: 0x00582731
+		// Token: 0x0602A805 RID: 174085 RVA: 0x005CBFC1 File Offset: 0x005CA1C1
 		public IWorldLevelTableT AsIWorldLevelTable()
 		{
 			return this.As<IWorldLevelTableT>();
 		}
 
-		// Token: 0x06028242 RID: 164418 RVA: 0x00584539 File Offset: 0x00582739
+		// Token: 0x0602A806 RID: 174086 RVA: 0x005CBFC9 File Offset: 0x005CA1C9
 		public static IWorldLevelBonusType_UnionUnion FromIWorldLevelTable(IWorldLevelTableT _iworldleveltable)
 		{
 			return new IWorldLevelBonusType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028243 RID: 164419 RVA: 0x00584550 File Offset: 0x00582750
+		// Token: 0x0602A807 RID: 174087 RVA: 0x005CBFE0 File Offset: 0x005CA1E0
 		public static int Pack(FlatBufferBuilder builder, IWorldLevelBonusType_UnionUnion _o)
 		{
 			switch (_o.Type)

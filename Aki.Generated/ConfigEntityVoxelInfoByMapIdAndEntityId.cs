@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000281 RID: 641
+	// Token: 0x02000295 RID: 661
 	public class ConfigEntityVoxelInfoByMapIdAndEntityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000F0B RID: 3851 RVA: 0x000AE79C File Offset: 0x000AC99C
+		// Token: 0x06000F83 RID: 3971 RVA: 0x000B4A60 File Offset: 0x000B2C60
 		static ConfigEntityVoxelInfoByMapIdAndEntityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEntityVoxelInfoByMapIdAndEntityId.CreateStaticDefaultValue), new Action(ConfigEntityVoxelInfoByMapIdAndEntityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000F0C RID: 3852 RVA: 0x000AE7BC File Offset: 0x000AC9BC
+		// Token: 0x06000F84 RID: 3972 RVA: 0x000B4A80 File Offset: 0x000B2C80
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEntityVoxelInfoByMapIdAndEntityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000F0D RID: 3853 RVA: 0x000AE83B File Offset: 0x000ACA3B
+		// Token: 0x06000F85 RID: 3973 RVA: 0x000B4AFF File Offset: 0x000B2CFF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEntityVoxelInfoByMapIdAndEntityId.LogPair = null;
 			ConfigEntityVoxelInfoByMapIdAndEntityId.HandleId = 0;
 		}
 
-		// Token: 0x06000F0E RID: 3854 RVA: 0x000AE849 File Offset: 0x000ACA49
+		// Token: 0x06000F86 RID: 3974 RVA: 0x000B4B0D File Offset: 0x000B2D0D
 		public static void Init()
 		{
 			ConfigEntityVoxelInfoByMapIdAndEntityId.HandleId = ConfigCommon.InitDataStatement(ConfigEntityVoxelInfoByMapIdAndEntityId.HandleId, "db_entityvoxelinfo.db", "select BinData from `EntityVoxelInfo` where MapId=? and EntityId=?");
 		}
 
-		// Token: 0x06000F0F RID: 3855 RVA: 0x000AE864 File Offset: 0x000ACA64
+		// Token: 0x06000F87 RID: 3975 RVA: 0x000B4B28 File Offset: 0x000B2D28
 		public static EntityVoxelInfo? GetConfig(int p0MapId, int p1EntityId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEntityVoxelInfoByMapIdAndEntityId.HandleId, ConfigEntityVoxelInfoByMapIdAndEntityId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new EntityVoxelInfo?(rootAsEntityVoxelInfo);
 		}
 
-		// Token: 0x0400116B RID: 4459
+		// Token: 0x040011F7 RID: 4599
 		private const string DB = "db_entityvoxelinfo.db";
 
-		// Token: 0x0400116C RID: 4460
+		// Token: 0x040011F8 RID: 4600
 		private const string FILE = "UniverseEditor/EntityVoxelInfo.csv";
 
-		// Token: 0x0400116D RID: 4461
+		// Token: 0x040011F9 RID: 4601
 		private const string TABLE = "EntityVoxelInfo";
 
-		// Token: 0x0400116E RID: 4462
+		// Token: 0x040011FA RID: 4602
 		private const string COMMAND = "select BinData from `EntityVoxelInfo` where MapId=? and EntityId=?";
 
-		// Token: 0x0400116F RID: 4463
+		// Token: 0x040011FB RID: 4603
 		private const string KEY_PREFIX = "EntityVoxelInfoByMapIdAndEntityId";
 
-		// Token: 0x04001170 RID: 4464
+		// Token: 0x040011FC RID: 4604
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001171 RID: 4465
+		// Token: 0x040011FD RID: 4605
 		private static int HandleId;
 	}
 }

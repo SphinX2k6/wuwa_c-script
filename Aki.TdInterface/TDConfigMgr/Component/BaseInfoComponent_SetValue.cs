@@ -11,141 +11,141 @@ namespace Aki.TDConfigMgr.Component
 	[Nullable(0)]
 	public class BaseInfoComponent_SetValue
 	{
-		// Token: 0x040000BD RID: 189
+		// Token: 0x040000C2 RID: 194
 		public bool? Disabled;
 
-		// Token: 0x040000BE RID: 190
+		// Token: 0x040000C3 RID: 195
 		public bool? EdIsLocked;
 
-		// Token: 0x040000BF RID: 191
-		[Nullable(1)]
+		// Token: 0x040000C4 RID: 196
+		[Nullable(0)]
 		public string TidName;
 
-		// Token: 0x040000C0 RID: 192
+		// Token: 0x040000C5 RID: 197
 		public bool? IsShowNameOnHead;
 
-		// Token: 0x040000C1 RID: 193
-		[Nullable(1)]
+		// Token: 0x040000C6 RID: 198
+		[Nullable(0)]
 		public IEntityCategory Category;
 
-		// Token: 0x040000C2 RID: 194
+		// Token: 0x040000C7 RID: 199
 		public IEntityScanFunction ScanFunction;
 
-		// Token: 0x040000C3 RID: 195
+		// Token: 0x040000C8 RID: 200
 		public int? HeadInfo;
 
-		// Token: 0x040000C4 RID: 196
+		// Token: 0x040000C9 RID: 201
 		public ECamp Camp;
 
-		// Token: 0x040000C5 RID: 197
+		// Token: 0x040000CA RID: 202
 		public EAoiLayer AoiLayer;
 
-		// Token: 0x040000C6 RID: 198
+		// Token: 0x040000CB RID: 203
 		public AoiZRadius AoiZRadius;
 
-		// Token: 0x040000C7 RID: 199
+		// Token: 0x040000CC RID: 204
 		public string AoiGroupKey;
 
-		// Token: 0x040000C8 RID: 200
+		// Token: 0x040000CD RID: 205
 		public bool? IsAoiFitterPlatform;
 
-		// Token: 0x040000C9 RID: 201
+		// Token: 0x040000CE RID: 206
 		public ICustomAoizRadius CustomAoiZRadius;
 
-		// Token: 0x040000CA RID: 202
+		// Token: 0x040000CF RID: 207
 		public int? MapIcon;
 
-		// Token: 0x040000CB RID: 203
+		// Token: 0x040000D0 RID: 208
 		public int? PackId;
 
-		// Token: 0x040000CC RID: 204
+		// Token: 0x040000D1 RID: 209
 		public string Occupation;
 
-		// Token: 0x040000CD RID: 205
+		// Token: 0x040000D2 RID: 210
 		public IHeadStateViewConfig HeadStateViewConfig;
 
-		// Token: 0x040000CE RID: 206
+		// Token: 0x040000D3 RID: 211
 		public int EntityPropertyId;
 
-		// Token: 0x040000CF RID: 207
+		// Token: 0x040000D4 RID: 212
 		public int? FocusPriority;
 
-		// Token: 0x040000D0 RID: 208
+		// Token: 0x040000D5 RID: 213
 		public EOnlineInteractType OnlineInteractType;
 
-		// Token: 0x040000D1 RID: 209
+		// Token: 0x040000D6 RID: 214
 		public bool? NotAllowHidedByTargetRange;
 
-		// Token: 0x040000D2 RID: 210
+		// Token: 0x040000D7 RID: 215
 		public ENpcDensity? LowerNpcDensity;
 
-		// Token: 0x040000D3 RID: 211
+		// Token: 0x040000D8 RID: 216
 		public List<int> DataLayers;
 
-		// Token: 0x040000D4 RID: 212
+		// Token: 0x040000D9 RID: 217
 		public List<int> ChildEntityIds;
 
-		// Token: 0x040000D5 RID: 213
+		// Token: 0x040000DA RID: 218
 		public bool? IsOnlineStandalone;
 
-		// Token: 0x040000D6 RID: 214
+		// Token: 0x040000DB RID: 219
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> SpecifiedOnlineStandaloneParentUids;
 
-		// Token: 0x040000D7 RID: 215
+		// Token: 0x040000DC RID: 220
 		public IFixProcessor FixProcessor;
 
-		// Token: 0x040000D8 RID: 216
+		// Token: 0x040000DD RID: 221
 		public EEntityUpdateStrategy? EntityUpdateStrategy;
 
-		// Token: 0x040000D9 RID: 217
+		// Token: 0x040000DE RID: 222
 		public EMaterialUpdateStrategy? MaterialUpdateStrategy;
 
-		// Token: 0x040000DA RID: 218
+		// Token: 0x040000DF RID: 223
 		public ETimeScaleModifyStrategy? TimeScaleModifyStrategy;
 
-		// Token: 0x040000DB RID: 219
+		// Token: 0x040000E0 RID: 224
 		public IEntityGravityConfig GravityConfig;
 
-		// Token: 0x040000DC RID: 220
+		// Token: 0x040000E1 RID: 225
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IHeadInfoChangeData> HeadInfoChangeConfig;
 
-		// Token: 0x040000DD RID: 221
+		// Token: 0x040000E2 RID: 226
 		public bool? IsForceDestroy;
 
-		// Token: 0x040000DE RID: 222
+		// Token: 0x040000E3 RID: 227
 		public ITimeScaleConfig TimeScaleConfig;
 
-		// Token: 0x040000DF RID: 223
+		// Token: 0x040000E4 RID: 228
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IEntityAttachPoint> EntityAttachPointList;
 
-		// Token: 0x040000E0 RID: 224
+		// Token: 0x040000E5 RID: 229
 		public int? DelayDestroyDistance;
 
-		// Token: 0x040000E1 RID: 225
+		// Token: 0x040000E6 RID: 230
 		public EClientEntityMark? IsClientEntityFlag;
 
-		// Token: 0x040000E2 RID: 226
+		// Token: 0x040000E7 RID: 231
 		public bool? KeepAnimationRateWithShadow;
 
-		// Token: 0x040000E3 RID: 227
+		// Token: 0x040000E8 RID: 232
 		public string EdTidName;
 
-		// Token: 0x040000E4 RID: 228
+		// Token: 0x040000E9 RID: 233
 		public ESnapFloorType? EdSnapFloor;
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.GameMainView.TrapDefense
 {
-	// Token: 0x020059F7 RID: 23031
+	// Token: 0x020049D3 RID: 18899
 	public enum ECampsiteHpState
 	{
-		// Token: 0x0401E6E6 RID: 124646
+		// Token: 0x0401918D RID: 102797
 		Normal,
-		// Token: 0x0401E6E7 RID: 124647
+		// Token: 0x0401918E RID: 102798
 		Add,
-		// Token: 0x0401E6E8 RID: 124648
+		// Token: 0x0401918F RID: 102799
 		Reduce
 	}
 }

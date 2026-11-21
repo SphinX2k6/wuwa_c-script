@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200118C RID: 4492
+// Token: 0x02000640 RID: 1600
 public class BabelTowerTeamRoleItem : GridProxyAbstract<int>
 {
-	// Token: 0x060076DF RID: 30431 RVA: 0x0018C454 File Offset: 0x0018A654
+	// Token: 0x06004A76 RID: 19062 RVA: 0x00195004 File Offset: 0x00193204
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -26,7 +26,7 @@ public class BabelTowerTeamRoleItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060076E0 RID: 30432 RVA: 0x0018C500 File Offset: 0x0018A700
+	// Token: 0x06004A77 RID: 19063 RVA: 0x001950B0 File Offset: 0x001932B0
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.RoleId = data;
@@ -55,7 +55,7 @@ public class BabelTowerTeamRoleItem : GridProxyAbstract<int>
 		this.RefreshSkillBranchIcon();
 	}
 
-	// Token: 0x060076E1 RID: 30433 RVA: 0x0018C598 File Offset: 0x0018A798
+	// Token: 0x06004A78 RID: 19064 RVA: 0x00195148 File Offset: 0x00193348
 	public void RefreshSkillBranchIcon()
 	{
 		int roleSkillBranchIndexInCurrentGamePlay = RoleModel.Instance.GetRoleSkillBranchIndexInCurrentGamePlay(this.RoleId);
@@ -71,22 +71,22 @@ public class BabelTowerTeamRoleItem : GridProxyAbstract<int>
 		base.GetSprite(3).SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x04003686 RID: 13958
+	// Token: 0x0400371F RID: 14111
 	private int RoleId;
 
-	// Token: 0x02007770 RID: 30576
+	// Token: 0x020068FD RID: 26877
 	private class EComponentDefine
 	{
-		// Token: 0x04027662 RID: 161378
+		// Token: 0x0402299B RID: 141723
 		public const int Button = 0;
 
-		// Token: 0x04027663 RID: 161379
+		// Token: 0x0402299C RID: 141724
 		public const int BgSprite = 1;
 
-		// Token: 0x04027664 RID: 161380
+		// Token: 0x0402299D RID: 141725
 		public const int RoleTexture = 2;
 
-		// Token: 0x04027665 RID: 161381
+		// Token: 0x0402299E RID: 141726
 		public const int TagSprite = 3;
 	}
 }

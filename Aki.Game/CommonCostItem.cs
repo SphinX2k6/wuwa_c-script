@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001956 RID: 6486
+// Token: 0x02000E13 RID: 3603
 public class CommonCostItem : UiPanelBase
 {
-	// Token: 0x0600BD62 RID: 48482 RVA: 0x002AD8F0 File Offset: 0x002ABAF0
+	// Token: 0x06009165 RID: 37221 RVA: 0x002B8734 File Offset: 0x002B6934
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -23,7 +23,7 @@ public class CommonCostItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BD63 RID: 48483 RVA: 0x002AD97C File Offset: 0x002ABB7C
+	// Token: 0x06009166 RID: 37222 RVA: 0x002B87C0 File Offset: 0x002B69C0
 	public void UpdateItem(int id, int count)
 	{
 		this.ItemId = id;
@@ -32,7 +32,7 @@ public class CommonCostItem : UiPanelBase
 		base.GetText(1).SetText(count.ToString(), true);
 	}
 
-	// Token: 0x0600BD64 RID: 48484 RVA: 0x002AD9C4 File Offset: 0x002ABBC4
+	// Token: 0x06009167 RID: 37223 RVA: 0x002B8808 File Offset: 0x002B6A08
 	public void RefreshCountEnableState()
 	{
 		UUIText text = base.GetText(1);
@@ -42,8 +42,8 @@ public class CommonCostItem : UiPanelBase
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x17000FCD RID: 4045
-	// (get) Token: 0x0600BD65 RID: 48485 RVA: 0x002AD9F6 File Offset: 0x002ABBF6
+	// Token: 0x17000FF1 RID: 4081
+	// (get) Token: 0x06009168 RID: 37224 RVA: 0x002B883A File Offset: 0x002B6A3A
 	public bool IsEnough
 	{
 		get
@@ -52,20 +52,20 @@ public class CommonCostItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04005570 RID: 21872
+	// Token: 0x0400561D RID: 22045
 	private int ItemId;
 
-	// Token: 0x04005571 RID: 21873
+	// Token: 0x0400561E RID: 22046
 	private int Count;
 
-	// Token: 0x02007EB3 RID: 32435
+	// Token: 0x02007042 RID: 28738
 	private enum ECommonCostItemDefine
 	{
-		// Token: 0x040296C2 RID: 169666
+		// Token: 0x040249FF RID: 150015
 		Tips,
-		// Token: 0x040296C3 RID: 169667
+		// Token: 0x04024A00 RID: 150016
 		CostText,
-		// Token: 0x040296C4 RID: 169668
+		// Token: 0x04024A01 RID: 150017
 		Icon
 	}
 }

@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.World.Controller
 {
-	// Token: 0x02004541 RID: 17729
+	// Token: 0x02003469 RID: 13417
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class WorldDebugController : ControllerBase
 	{
-		// Token: 0x0602DD40 RID: 187712 RVA: 0x00A887E8 File Offset: 0x00A869E8
+		// Token: 0x06022422 RID: 140322 RVA: 0x009B3F1C File Offset: 0x009B211C
 		protected override bool OnInit()
 		{
 			if (!UKuroStaticLibrary.IsEditor(GlobalData.World))
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.World.Controller
 			return true;
 		}
 
-		// Token: 0x0602DD41 RID: 187713 RVA: 0x00A8884C File Offset: 0x00A86A4C
+		// Token: 0x06022423 RID: 140323 RVA: 0x009B3F80 File Offset: 0x009B2180
 		protected override bool OnClear()
 		{
 			if (!UKuroStaticLibrary.IsEditor(GlobalData.World))
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.World.Controller
 			return true;
 		}
 
-		// Token: 0x0602DD42 RID: 187714 RVA: 0x00A888B0 File Offset: 0x00A86AB0
+		// Token: 0x06022424 RID: 140324 RVA: 0x009B3FE4 File Offset: 0x009B21E4
 		private void OnAddEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
 			if (!handle)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.World.Controller
 			this.CheckAddShowFightingLog();
 		}
 
-		// Token: 0x0602DD43 RID: 187715 RVA: 0x00A888EC File Offset: 0x00A86AEC
+		// Token: 0x06022425 RID: 140325 RVA: 0x009B4020 File Offset: 0x009B2220
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (!handle)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.World.Controller
 			WorldDebugModel.Instance.RemoveEntity(component.GetEntityType(), handle);
 		}
 
-		// Token: 0x0602DD44 RID: 187716 RVA: 0x00A88920 File Offset: 0x00A86B20
+		// Token: 0x06022426 RID: 140326 RVA: 0x009B4054 File Offset: 0x009B2254
 		private void CheckAddShowFightingLog()
 		{
 			int count = WorldDebugModel.Instance.AoiNpcSet.Count;
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.World.Controller
 			Log.Instance.Error(ELogModule.World, ELogAuthor.LFJW, message, default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602DD45 RID: 187717 RVA: 0x00A88E28 File Offset: 0x00A87028
+		// Token: 0x06022427 RID: 140327 RVA: 0x009B455C File Offset: 0x009B275C
 		[NullableContext(2)]
 		private static string GetEntityTypeName(EEntityType entityType)
 		{
@@ -206,8 +206,8 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x1700754E RID: 30030
-		// (get) Token: 0x0602DD46 RID: 187718 RVA: 0x00A88E5B File Offset: 0x00A8705B
+		// Token: 0x17004805 RID: 18437
+		// (get) Token: 0x06022428 RID: 140328 RVA: 0x009B458F File Offset: 0x009B278F
 		public static WorldDebugController Instance
 		{
 			get
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DD47 RID: 187719 RVA: 0x00A88E62 File Offset: 0x00A87062
+		// Token: 0x06022429 RID: 140329 RVA: 0x009B4596 File Offset: 0x009B2796
 		public static WorldDebugController GetOrCreateInstance()
 		{
 			if (WorldDebugController._Instance == null)
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.World.Controller
 			return WorldDebugController._Instance;
 		}
 
-		// Token: 0x0602DD48 RID: 187720 RVA: 0x00A88E76 File Offset: 0x00A87076
+		// Token: 0x0602242A RID: 140330 RVA: 0x009B45AA File Offset: 0x009B27AA
 		public static bool CreateInstance()
 		{
 			if (WorldDebugController._Instance != null)
@@ -237,41 +237,41 @@ namespace CSharpScript.Game.World.Controller
 			return true;
 		}
 
-		// Token: 0x0602DD49 RID: 187721 RVA: 0x00A88E8C File Offset: 0x00A8708C
+		// Token: 0x0602242B RID: 140331 RVA: 0x009B45C0 File Offset: 0x009B27C0
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DD4A RID: 187722 RVA: 0x00A88E8E File Offset: 0x00A8708E
+		// Token: 0x0602242C RID: 140332 RVA: 0x009B45C2 File Offset: 0x009B27C2
 		public static void ResetStaticDefaultValue()
 		{
 			WorldDebugController._Instance = null;
 		}
 
-		// Token: 0x0602DD4B RID: 187723 RVA: 0x00A88E96 File Offset: 0x00A87096
+		// Token: 0x0602242D RID: 140333 RVA: 0x009B45CA File Offset: 0x009B27CA
 		static WorldDebugController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WorldDebugController.CreateStaticDefaultValue), new Action(WorldDebugController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018775 RID: 100213
+		// Token: 0x04012DAF RID: 77231
 		[Nullable(2)]
 		private static WorldDebugController _Instance;
 
-		// Token: 0x0200A81B RID: 43035
+		// Token: 0x020091D1 RID: 37329
 		[Nullable(0)]
 		private class EntityInfo
 		{
-			// Token: 0x04033328 RID: 209704
+			// Token: 0x0402DAB2 RID: 187058
 			public long CreatureDataId;
 
-			// Token: 0x04033329 RID: 209705
+			// Token: 0x0402DAB3 RID: 187059
 			public string EntityType = string.Empty;
 
-			// Token: 0x0403332A RID: 209706
+			// Token: 0x0402DAB4 RID: 187060
 			public int PbDataId;
 
-			// Token: 0x0403332B RID: 209707
+			// Token: 0x0402DAB5 RID: 187061
 			public string Name = string.Empty;
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005775 RID: 22389
+	// Token: 0x02005D7C RID: 23932
 	public struct IPrefabCompTransform : IFlatbufferObject
 	{
-		// Token: 0x1700A6FE RID: 42750
-		// (get) Token: 0x0602586D RID: 153709 RVA: 0x0052D5A8 File Offset: 0x0052B7A8
+		// Token: 0x1700B022 RID: 45090
+		// (get) Token: 0x06027D8D RID: 163213 RVA: 0x00573734 File Offset: 0x00571934
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602586E RID: 153710 RVA: 0x0052D5B5 File Offset: 0x0052B7B5
+		// Token: 0x06027D8E RID: 163214 RVA: 0x00573741 File Offset: 0x00571941
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602586F RID: 153711 RVA: 0x0052D5BC File Offset: 0x0052B7BC
+		// Token: 0x06027D8F RID: 163215 RVA: 0x00573748 File Offset: 0x00571948
 		public static IPrefabCompTransform GetRootAsIPrefabCompTransform(ByteBuffer _bb)
 		{
 			return IPrefabCompTransform.GetRootAsIPrefabCompTransform(_bb, default(IPrefabCompTransform));
 		}
 
-		// Token: 0x06025870 RID: 153712 RVA: 0x0052D5D8 File Offset: 0x0052B7D8
+		// Token: 0x06027D90 RID: 163216 RVA: 0x00573764 File Offset: 0x00571964
 		public static IPrefabCompTransform GetRootAsIPrefabCompTransform(ByteBuffer _bb, IPrefabCompTransform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025871 RID: 153713 RVA: 0x0052D5F5 File Offset: 0x0052B7F5
+		// Token: 0x06027D91 RID: 163217 RVA: 0x00573781 File Offset: 0x00571981
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025872 RID: 153714 RVA: 0x0052D604 File Offset: 0x0052B804
+		// Token: 0x06027D92 RID: 163218 RVA: 0x00573790 File Offset: 0x00571990
 		public IPrefabCompTransform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A6FF RID: 42751
-		// (get) Token: 0x06025873 RID: 153715 RVA: 0x0052D614 File Offset: 0x0052B814
+		// Token: 0x1700B023 RID: 45091
+		// (get) Token: 0x06027D93 RID: 163219 RVA: 0x005737A0 File Offset: 0x005719A0
 		public string ReferenceActorKey
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025874 RID: 153716 RVA: 0x0052D64B File Offset: 0x0052B84B
+		// Token: 0x06027D94 RID: 163220 RVA: 0x005737D7 File Offset: 0x005719D7
 		public Span<byte> GetReferenceActorKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06025875 RID: 153717 RVA: 0x0052D65A File Offset: 0x0052B85A
+		// Token: 0x06027D95 RID: 163221 RVA: 0x005737E6 File Offset: 0x005719E6
 		public byte[] GetReferenceActorKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700A700 RID: 42752
-		// (get) Token: 0x06025876 RID: 153718 RVA: 0x0052D668 File Offset: 0x0052B868
+		// Token: 0x1700B024 RID: 45092
+		// (get) Token: 0x06027D96 RID: 163222 RVA: 0x005737F4 File Offset: 0x005719F4
 		public IPrefabCompTransformItem? Location
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A701 RID: 42753
-		// (get) Token: 0x06025877 RID: 153719 RVA: 0x0052D6C8 File Offset: 0x0052B8C8
+		// Token: 0x1700B025 RID: 45093
+		// (get) Token: 0x06027D97 RID: 163223 RVA: 0x00573854 File Offset: 0x00571A54
 		public IPrefabCompTransformItem? Rotation
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A702 RID: 42754
-		// (get) Token: 0x06025878 RID: 153720 RVA: 0x0052D728 File Offset: 0x0052B928
+		// Token: 0x1700B026 RID: 45094
+		// (get) Token: 0x06027D98 RID: 163224 RVA: 0x005738B4 File Offset: 0x00571AB4
 		public IPrefabCompTransformItem? Scale
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025879 RID: 153721 RVA: 0x0052D786 File Offset: 0x0052B986
+		// Token: 0x06027D99 RID: 163225 RVA: 0x00573912 File Offset: 0x00571B12
 		public static Offset<IPrefabCompTransform> CreateIPrefabCompTransform(FlatBufferBuilder builder, StringOffset ReferenceActorKeyOffset = default(StringOffset), Offset<IPrefabCompTransformItem> LocationOffset = default(Offset<IPrefabCompTransformItem>), Offset<IPrefabCompTransformItem> RotationOffset = default(Offset<IPrefabCompTransformItem>), Offset<IPrefabCompTransformItem> ScaleOffset = default(Offset<IPrefabCompTransformItem>))
 		{
 			builder.StartTable(4);
@@ -130,43 +130,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPrefabCompTransform.EndIPrefabCompTransform(builder);
 		}
 
-		// Token: 0x0602587A RID: 153722 RVA: 0x0052D7B2 File Offset: 0x0052B9B2
+		// Token: 0x06027D9A RID: 163226 RVA: 0x0057393E File Offset: 0x00571B3E
 		public static void StartIPrefabCompTransform(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602587B RID: 153723 RVA: 0x0052D7BB File Offset: 0x0052B9BB
+		// Token: 0x06027D9B RID: 163227 RVA: 0x00573947 File Offset: 0x00571B47
 		public static void AddReferenceActorKey(FlatBufferBuilder builder, StringOffset referenceActorKeyOffset)
 		{
 			builder.AddOffset(0, referenceActorKeyOffset.Value, 0);
 		}
 
-		// Token: 0x0602587C RID: 153724 RVA: 0x0052D7CB File Offset: 0x0052B9CB
+		// Token: 0x06027D9C RID: 163228 RVA: 0x00573957 File Offset: 0x00571B57
 		public static void AddLocation(FlatBufferBuilder builder, Offset<IPrefabCompTransformItem> locationOffset)
 		{
 			builder.AddOffset(1, locationOffset.Value, 0);
 		}
 
-		// Token: 0x0602587D RID: 153725 RVA: 0x0052D7DB File Offset: 0x0052B9DB
+		// Token: 0x06027D9D RID: 163229 RVA: 0x00573967 File Offset: 0x00571B67
 		public static void AddRotation(FlatBufferBuilder builder, Offset<IPrefabCompTransformItem> rotationOffset)
 		{
 			builder.AddOffset(2, rotationOffset.Value, 0);
 		}
 
-		// Token: 0x0602587E RID: 153726 RVA: 0x0052D7EB File Offset: 0x0052B9EB
+		// Token: 0x06027D9E RID: 163230 RVA: 0x00573977 File Offset: 0x00571B77
 		public static void AddScale(FlatBufferBuilder builder, Offset<IPrefabCompTransformItem> scaleOffset)
 		{
 			builder.AddOffset(3, scaleOffset.Value, 0);
 		}
 
-		// Token: 0x0602587F RID: 153727 RVA: 0x0052D7FB File Offset: 0x0052B9FB
+		// Token: 0x06027D9F RID: 163231 RVA: 0x00573987 File Offset: 0x00571B87
 		public static Offset<IPrefabCompTransform> EndIPrefabCompTransform(FlatBufferBuilder builder)
 		{
 			return new Offset<IPrefabCompTransform>(builder.EndTable());
 		}
 
-		// Token: 0x06025880 RID: 153728 RVA: 0x0052D808 File Offset: 0x0052BA08
+		// Token: 0x06027DA0 RID: 163232 RVA: 0x00573994 File Offset: 0x00571B94
 		public IPrefabCompTransformT UnPack()
 		{
 			IPrefabCompTransformT prefabCompTransformT = new IPrefabCompTransformT();
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return prefabCompTransformT;
 		}
 
-		// Token: 0x06025881 RID: 153729 RVA: 0x0052D824 File Offset: 0x0052BA24
+		// Token: 0x06027DA1 RID: 163233 RVA: 0x005739B0 File Offset: 0x00571BB0
 		public void UnPackTo(IPrefabCompTransformT _o)
 		{
 			_o.ReferenceActorKey = this.ReferenceActorKey;
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.Scale = ((this.Scale != null) ? this.Scale.Value.UnPack() : null);
 		}
 
-		// Token: 0x06025882 RID: 153730 RVA: 0x0052D8CC File Offset: 0x0052BACC
+		// Token: 0x06027DA2 RID: 163234 RVA: 0x00573A58 File Offset: 0x00571C58
 		public static Offset<IPrefabCompTransform> Pack(FlatBufferBuilder builder, IPrefabCompTransformT _o)
 		{
 			if (_o == null)
@@ -197,7 +197,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPrefabCompTransform.CreateIPrefabCompTransform(builder, referenceActorKeyOffset, locationOffset, rotationOffset, scaleOffset);
 		}
 
-		// Token: 0x0400EC20 RID: 60448
+		// Token: 0x0400F90B RID: 63755
 		private Table __p;
 	}
 }

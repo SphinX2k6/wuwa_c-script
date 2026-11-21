@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002223 RID: 8739
+	// Token: 0x0200248E RID: 9358
 	public class StopSceneItemMove_SetValue
 	{
-		// Token: 0x04007264 RID: 29284
-		[Nullable(1)]
+		// Token: 0x040078AE RID: 30894
 		public List<int> EntityIds;
 
-		// Token: 0x04007265 RID: 29285
+		// Token: 0x040078AF RID: 30895
 		public EStopSceneItemMoveType? StopType;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A37 RID: 14903
+	// Token: 0x02003E12 RID: 15890
 	public class IBvbCardFilterCheckIsCoreT
 	{
-		// Token: 0x17006620 RID: 26144
-		// (get) Token: 0x060142AE RID: 82606 RVA: 0x002F2E1C File Offset: 0x002F101C
-		// (set) Token: 0x060142AF RID: 82607 RVA: 0x002F2E24 File Offset: 0x002F1024
+		// Token: 0x17006B50 RID: 27472
+		// (get) Token: 0x060155CA RID: 87498 RVA: 0x00316008 File Offset: 0x00314208
+		// (set) Token: 0x060155CB RID: 87499 RVA: 0x00316010 File Offset: 0x00314210
 		public EBvbCardFilterType Type { get; set; }
 
-		// Token: 0x17006621 RID: 26145
-		// (get) Token: 0x060142B0 RID: 82608 RVA: 0x002F2E2D File Offset: 0x002F102D
-		// (set) Token: 0x060142B1 RID: 82609 RVA: 0x002F2E35 File Offset: 0x002F1035
+		// Token: 0x17006B51 RID: 27473
+		// (get) Token: 0x060155CC RID: 87500 RVA: 0x00316019 File Offset: 0x00314219
+		// (set) Token: 0x060155CD RID: 87501 RVA: 0x00316021 File Offset: 0x00314221
 		public bool IsCore { get; set; }
 
-		// Token: 0x060142B2 RID: 82610 RVA: 0x002F2E3E File Offset: 0x002F103E
+		// Token: 0x060155CE RID: 87502 RVA: 0x0031602A File Offset: 0x0031422A
 		public IBvbCardFilterCheckIsCoreT()
 		{
 			this.Type = EBvbCardFilterType.CompareCost;

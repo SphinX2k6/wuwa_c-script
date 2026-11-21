@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C7B RID: 3195
+	// Token: 0x02000D5A RID: 3418
 	public class IAttachTarget
 	{
-		// Token: 0x06004933 RID: 18739 RVA: 0x000B7B89 File Offset: 0x000B5D89
-		[NullableContext(1)]
+		// Token: 0x06004DD2 RID: 19922 RVA: 0x000C238D File Offset: 0x000C058D
 		public static IAttachTarget Create(IAttachTarget? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015FA RID: 5626
-		// (get) Token: 0x06004934 RID: 18740 RVA: 0x000B7BA8 File Offset: 0x000B5DA8
+		// Token: 0x17001719 RID: 5913
+		// (get) Token: 0x06004DD3 RID: 19923 RVA: 0x000C23AC File Offset: 0x000C05AC
 		public virtual EAttachType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029C4 RID: 10692
+		// Token: 0x04002C31 RID: 11313
 		private IAttachTarget Instance;
 	}
 }

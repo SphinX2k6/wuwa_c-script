@@ -8,15 +8,15 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction;
 
 namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 {
-	// Token: 0x020049FC RID: 18940
+	// Token: 0x02003976 RID: 14710
 	public class DangobrawlLockShopGoodsComponent : DangobrawlHotKeyComponentBase
 	{
-		// Token: 0x060312B7 RID: 201399 RVA: 0x00B67882 File Offset: 0x00B65A82
+		// Token: 0x06025DED RID: 155117 RVA: 0x00AA283E File Offset: 0x00AA0A3E
 		public DangobrawlLockShopGoodsComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060312B8 RID: 201400 RVA: 0x00B6788C File Offset: 0x00B65A8C
+		// Token: 0x06025DEE RID: 155118 RVA: 0x00AA2848 File Offset: 0x00AA0A48
 		protected override bool ShouldShow()
 		{
 			DangoBrawlSelection currentHovered = DangobrawlHotKeyComponentBase.CurrentHovered;
@@ -27,21 +27,21 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			return flag2 && flag3 && flag;
 		}
 
-		// Token: 0x060312B9 RID: 201401 RVA: 0x00B678DC File Offset: 0x00B65ADC
+		// Token: 0x06025DEF RID: 155119 RVA: 0x00AA2898 File Offset: 0x00AA0A98
 		protected override void OnAddEventListener()
 		{
 			base.OnAddEventListener();
 			EventSystem.Instance.Add(EEventName.OnDangoBrawlShopLockChangedNotify, new Action<int, bool>(this.OnShopLockChanged));
 		}
 
-		// Token: 0x060312BA RID: 201402 RVA: 0x00B67900 File Offset: 0x00B65B00
+		// Token: 0x06025DF0 RID: 155120 RVA: 0x00AA28BC File Offset: 0x00AA0ABC
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnDangoBrawlShopLockChangedNotify, new Action<int, bool>(this.OnShopLockChanged));
 			base.OnRemoveEventListener();
 		}
 
-		// Token: 0x060312BB RID: 201403 RVA: 0x00B67924 File Offset: 0x00B65B24
+		// Token: 0x06025DF1 RID: 155121 RVA: 0x00AA28E0 File Offset: 0x00AA0AE0
 		[NullableContext(1)]
 		protected override void OnRefreshHotKeyTextId(UiNavigationViewHandle _)
 		{
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			base.RefreshHotKeyNameText();
 		}
 
-		// Token: 0x060312BC RID: 201404 RVA: 0x00B67948 File Offset: 0x00B65B48
+		// Token: 0x06025DF2 RID: 155122 RVA: 0x00AA2904 File Offset: 0x00AA0B04
 		private bool IsHoveredGoodsLocked()
 		{
 			DangoBrawlSelection currentHovered = DangobrawlHotKeyComponentBase.CurrentHovered;
@@ -80,13 +80,13 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			return flag2.GetValueOrDefault();
 		}
 
-		// Token: 0x060312BD RID: 201405 RVA: 0x00B679D2 File Offset: 0x00B65BD2
+		// Token: 0x06025DF3 RID: 155123 RVA: 0x00AA298E File Offset: 0x00AA0B8E
 		private void OnShopLockChanged(int uid, bool locked)
 		{
 			base.RequestRefresh();
 		}
 
-		// Token: 0x060312BE RID: 201406 RVA: 0x00B679DC File Offset: 0x00B65BDC
+		// Token: 0x06025DF4 RID: 155124 RVA: 0x00AA2998 File Offset: 0x00AA0B98
 		protected override void OnRelease(HotKeyMap config)
 		{
 			DangoBrawlSelection currentHovered = DangobrawlHotKeyComponentBase.CurrentHovered;

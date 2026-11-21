@@ -7,25 +7,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIItem
 {
-	// Token: 0x02006A56 RID: 27222
+	// Token: 0x02005BB3 RID: 23475
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LinkingLineItem : UiPanelBase
 	{
-		// Token: 0x06043B23 RID: 277283 RVA: 0x010909D6 File Offset: 0x0108EBD6
+		// Token: 0x06039B71 RID: 236401 RVA: 0x0103520A File Offset: 0x0103340A
 		protected LinkingLineItem(ELineType lineType)
 		{
 			this.LineType = lineType;
 		}
 
-		// Token: 0x06043B24 RID: 277284 RVA: 0x010909EC File Offset: 0x0108EBEC
+		// Token: 0x06039B72 RID: 236402 RVA: 0x01035220 File Offset: 0x01033420
 		[NullableContext(1)]
 		public static LinkingLineItem Create(ELineType lineType)
 		{
 			return new LinkingLineItem(lineType);
 		}
 
-		// Token: 0x06043B25 RID: 277285 RVA: 0x010909F4 File Offset: 0x0108EBF4
+		// Token: 0x06039B73 RID: 236403 RVA: 0x01035228 File Offset: 0x01033428
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			};
 		}
 
-		// Token: 0x06043B26 RID: 277286 RVA: 0x01090A90 File Offset: 0x0108EC90
+		// Token: 0x06039B74 RID: 236404 RVA: 0x010352C4 File Offset: 0x010334C4
 		protected override void OnStart()
 		{
 			this.SprBg = base.GetSprite(0);
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			this.SprRayHalf.SetUIActive(false);
 		}
 
-		// Token: 0x06043B27 RID: 277287 RVA: 0x01090B34 File Offset: 0x0108ED34
+		// Token: 0x06039B75 RID: 236405 RVA: 0x01035368 File Offset: 0x01033568
 		public void InitIcon(ENeighborType neighborType, bool isHalf = false)
 		{
 			bool flag = SignalDeviceModel.Instance.ViewType == EViewType.ChasingMoon;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			this.SprSpot.SetUIActive(true);
 		}
 
-		// Token: 0x06043B28 RID: 277288 RVA: 0x01090CF8 File Offset: 0x0108EEF8
+		// Token: 0x06039B76 RID: 236406 RVA: 0x0103552C File Offset: 0x0103372C
 		protected void RotateLine(ENeighborType neighborType)
 		{
 			int num;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			rootItem.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x06043B29 RID: 277289 RVA: 0x01090D40 File Offset: 0x0108EF40
+		// Token: 0x06039B77 RID: 236407 RVA: 0x01035574 File Offset: 0x01033774
 		public void SetLineHalf(ENeighborType neighborType)
 		{
 			this.SprLine.SetUIActive(false);
@@ -131,28 +131,28 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			rootItem.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x0402359D RID: 144797
+		// Token: 0x0401E78F RID: 124815
 		public ELineType LineType = ELineType.LinkingLineStraight;
 
-		// Token: 0x0402359E RID: 144798
+		// Token: 0x0401E790 RID: 124816
 		protected UUISprite SprBg;
 
-		// Token: 0x0402359F RID: 144799
+		// Token: 0x0401E791 RID: 124817
 		protected UUISprite SprLine;
 
-		// Token: 0x040235A0 RID: 144800
+		// Token: 0x0401E792 RID: 124818
 		protected UUISprite SprLineHalf;
 
-		// Token: 0x040235A1 RID: 144801
+		// Token: 0x0401E793 RID: 124819
 		protected UUISprite SprSpot;
 
-		// Token: 0x040235A2 RID: 144802
+		// Token: 0x0401E794 RID: 124820
 		protected UUISprite SprRay;
 
-		// Token: 0x040235A3 RID: 144803
+		// Token: 0x0401E795 RID: 124821
 		protected UUISprite SprRayHalf;
 
-		// Token: 0x040235A4 RID: 144804
+		// Token: 0x0401E796 RID: 124822
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		protected static readonly Dictionary<EPieceColorType, string> ColorSpotIconMap = new Dictionary<EPieceColorType, string>
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		};
 
-		// Token: 0x040235A5 RID: 144805
+		// Token: 0x0401E797 RID: 124823
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		protected static readonly Dictionary<EPieceColorType, string> ColorRayIconMap = new Dictionary<EPieceColorType, string>
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		};
 
-		// Token: 0x040235A6 RID: 144806
+		// Token: 0x0401E798 RID: 124824
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		protected static readonly Dictionary<EPieceColorType, string> ColorSprBgMap = new Dictionary<EPieceColorType, string>
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		};
 
-		// Token: 0x040235A7 RID: 144807
+		// Token: 0x0401E799 RID: 124825
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		protected static readonly Dictionary<EPieceColorType, string> ColorMap = new Dictionary<EPieceColorType, string>

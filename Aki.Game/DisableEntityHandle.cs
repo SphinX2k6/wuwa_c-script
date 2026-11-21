@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200326E RID: 12910
+// Token: 0x020027DD RID: 10205
 [NullableContext(1)]
 [Nullable(0)]
 public class DisableEntityHandle
 {
-	// Token: 0x0601BE6D RID: 114285 RVA: 0x007BCD0D File Offset: 0x007BAF0D
+	// Token: 0x06019A48 RID: 105032 RVA: 0x007E45E5 File Offset: 0x007E27E5
 	public DisableEntityHandle(string type)
 	{
 		this.Type = type;
 	}
 
-	// Token: 0x17002664 RID: 9828
-	// (get) Token: 0x0601BE6E RID: 114286 RVA: 0x007BCD27 File Offset: 0x007BAF27
+	// Token: 0x170028F7 RID: 10487
+	// (get) Token: 0x06019A49 RID: 105033 RVA: 0x007E45FF File Offset: 0x007E27FF
 	public bool Empty
 	{
 		get
@@ -23,7 +23,7 @@ public class DisableEntityHandle
 		}
 	}
 
-	// Token: 0x0601BE6F RID: 114287 RVA: 0x007BCD38 File Offset: 0x007BAF38
+	// Token: 0x06019A4A RID: 105034 RVA: 0x007E4610 File Offset: 0x007E2810
 	public unsafe int Disable(string reason, string constructorName)
 	{
 		if (string.IsNullOrEmpty(reason))
@@ -54,7 +54,7 @@ public class DisableEntityHandle
 		return num2;
 	}
 
-	// Token: 0x0601BE70 RID: 114288 RVA: 0x007BCE10 File Offset: 0x007BB010
+	// Token: 0x06019A4B RID: 105035 RVA: 0x007E46E8 File Offset: 0x007E28E8
 	public unsafe bool Enable(int handle, string constructorName)
 	{
 		string text;
@@ -74,13 +74,13 @@ public class DisableEntityHandle
 		return this.DisableMap.Remove(handle);
 	}
 
-	// Token: 0x0601BE71 RID: 114289 RVA: 0x007BCEAF File Offset: 0x007BB0AF
+	// Token: 0x06019A4C RID: 105036 RVA: 0x007E4787 File Offset: 0x007E2987
 	public void Clear()
 	{
 		this.DisableMap.Clear();
 	}
 
-	// Token: 0x0601BE72 RID: 114290 RVA: 0x007BCEBC File Offset: 0x007BB0BC
+	// Token: 0x06019A4D RID: 105037 RVA: 0x007E4794 File Offset: 0x007E2994
 	public string DumpDisableInfo()
 	{
 		List<string> list = new List<string>();
@@ -103,12 +103,12 @@ public class DisableEntityHandle
 		return string.Join("", list);
 	}
 
-	// Token: 0x0400DC34 RID: 56372
+	// Token: 0x0400E0D3 RID: 57555
 	private int DisableCount;
 
-	// Token: 0x0400DC35 RID: 56373
+	// Token: 0x0400E0D4 RID: 57556
 	private readonly Dictionary<int, string> DisableMap = new Dictionary<int, string>();
 
-	// Token: 0x0400DC36 RID: 56374
+	// Token: 0x0400E0D5 RID: 57557
 	private readonly string Type;
 }

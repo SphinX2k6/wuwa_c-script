@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005139 RID: 20793
+	// Token: 0x0200569E RID: 22174
 	public class IElementalRangeTypeBaseT
 	{
-		// Token: 0x1700978E RID: 38798
-		// (get) Token: 0x0602189E RID: 137374 RVA: 0x004A806A File Offset: 0x004A626A
-		// (set) Token: 0x0602189F RID: 137375 RVA: 0x004A8072 File Offset: 0x004A6272
+		// Token: 0x17009F7B RID: 40827
+		// (get) Token: 0x060237F2 RID: 145394 RVA: 0x004E1FF6 File Offset: 0x004E01F6
+		// (set) Token: 0x060237F3 RID: 145395 RVA: 0x004E1FFE File Offset: 0x004E01FE
 		public EElementalRangeType Type { get; set; }
 
-		// Token: 0x060218A0 RID: 137376 RVA: 0x004A807B File Offset: 0x004A627B
+		// Token: 0x060237F4 RID: 145396 RVA: 0x004E2007 File Offset: 0x004E0207
 		public IElementalRangeTypeBaseT()
 		{
 			this.Type = EElementalRangeType.BaseShape;

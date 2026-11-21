@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BC7 RID: 23495
+	// Token: 0x02004BA7 RID: 19367
 	internal class CiacconaGalPlayerBeforeSubEndingState : BaseCiacconaGalPlayerState
 	{
-		// Token: 0x0603B657 RID: 243287 RVA: 0x00E2ABB2 File Offset: 0x00E28DB2
+		// Token: 0x060305A3 RID: 198051 RVA: 0x00D7AEA6 File Offset: 0x00D790A6
 		[NullableContext(1)]
 		public CiacconaGalPlayerBeforeSubEndingState(CiacconaGalPlayer owner, ECiacconaGalPlayerState state, [Nullable(new byte[]
 		{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 		{
 		}
 
-		// Token: 0x0603B658 RID: 243288 RVA: 0x00E2ABC0 File Offset: 0x00E28DC0
+		// Token: 0x060305A4 RID: 198052 RVA: 0x00D7AEB4 File Offset: 0x00D790B4
 		protected override void OnEnter(ECiacconaGalPlayerState? lastState)
 		{
 			base.OnEnter(lastState);

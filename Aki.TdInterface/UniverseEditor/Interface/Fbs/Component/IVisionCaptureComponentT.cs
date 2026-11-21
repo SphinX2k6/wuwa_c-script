@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B3C RID: 23356
+	// Token: 0x02006152 RID: 24914
 	public class IVisionCaptureComponentT
 	{
-		// Token: 0x1700B044 RID: 45124
-		// (get) Token: 0x06027EBE RID: 163518 RVA: 0x0057D44C File Offset: 0x0057B64C
-		// (set) Token: 0x06027EBF RID: 163519 RVA: 0x0057D454 File Offset: 0x0057B654
+		// Token: 0x1700B98C RID: 47500
+		// (get) Token: 0x0602A482 RID: 173186 RVA: 0x005C4EDC File Offset: 0x005C30DC
+		// (set) Token: 0x0602A483 RID: 173187 RVA: 0x005C4EE4 File Offset: 0x005C30E4
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700B045 RID: 45125
-		// (get) Token: 0x06027EC0 RID: 163520 RVA: 0x0057D45D File Offset: 0x0057B65D
-		// (set) Token: 0x06027EC1 RID: 163521 RVA: 0x0057D465 File Offset: 0x0057B665
+		// Token: 0x1700B98D RID: 47501
+		// (get) Token: 0x0602A484 RID: 173188 RVA: 0x005C4EED File Offset: 0x005C30ED
+		// (set) Token: 0x0602A485 RID: 173189 RVA: 0x005C4EF5 File Offset: 0x005C30F5
 		public int VisionCaptureId { get; set; }
 
-		// Token: 0x1700B046 RID: 45126
-		// (get) Token: 0x06027EC2 RID: 163522 RVA: 0x0057D46E File Offset: 0x0057B66E
-		// (set) Token: 0x06027EC3 RID: 163523 RVA: 0x0057D476 File Offset: 0x0057B676
+		// Token: 0x1700B98E RID: 47502
+		// (get) Token: 0x0602A486 RID: 173190 RVA: 0x005C4EFE File Offset: 0x005C30FE
+		// (set) Token: 0x0602A487 RID: 173191 RVA: 0x005C4F06 File Offset: 0x005C3106
 		public int VisionCaptureProb { get; set; }
 
-		// Token: 0x1700B047 RID: 45127
-		// (get) Token: 0x06027EC4 RID: 163524 RVA: 0x0057D47F File Offset: 0x0057B67F
-		// (set) Token: 0x06027EC5 RID: 163525 RVA: 0x0057D487 File Offset: 0x0057B687
+		// Token: 0x1700B98F RID: 47503
+		// (get) Token: 0x0602A488 RID: 173192 RVA: 0x005C4F0F File Offset: 0x005C310F
+		// (set) Token: 0x0602A489 RID: 173193 RVA: 0x005C4F17 File Offset: 0x005C3117
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027EC6 RID: 163526 RVA: 0x0057D490 File Offset: 0x0057B690
+		// Token: 0x0602A48A RID: 173194 RVA: 0x005C4F20 File Offset: 0x005C3120
 		public IVisionCaptureComponentT()
 		{
 			this.Disabled = false;

@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x020011D2 RID: 4562
+// Token: 0x02000686 RID: 1670
 public interface IChessItemParams
 {
-	// Token: 0x17000A58 RID: 2648
-	// (get) Token: 0x0600798A RID: 31114
-	// (set) Token: 0x0600798B RID: 31115
+	// Token: 0x17000A78 RID: 2680
+	// (get) Token: 0x06004D21 RID: 19745
+	// (set) Token: 0x06004D22 RID: 19746
 	int Id { get; set; }
 
-	// Token: 0x17000A59 RID: 2649
-	// (get) Token: 0x0600798C RID: 31116
-	// (set) Token: 0x0600798D RID: 31117
+	// Token: 0x17000A79 RID: 2681
+	// (get) Token: 0x06004D23 RID: 19747
+	// (set) Token: 0x06004D24 RID: 19748
 	long CreatureDataId { get; set; }
 
-	// Token: 0x17000A5A RID: 2650
-	// (get) Token: 0x0600798E RID: 31118
-	// (set) Token: 0x0600798F RID: 31119
+	// Token: 0x17000A7A RID: 2682
+	// (get) Token: 0x06004D25 RID: 19749
+	// (set) Token: 0x06004D26 RID: 19750
 	bool RotationIsForward { get; set; }
 
-	// Token: 0x17000A5B RID: 2651
-	// (get) Token: 0x06007990 RID: 31120
-	// (set) Token: 0x06007991 RID: 31121
+	// Token: 0x17000A7B RID: 2683
+	// (get) Token: 0x06004D27 RID: 19751
+	// (set) Token: 0x06004D28 RID: 19752
 	int InitPointId { get; set; }
 }

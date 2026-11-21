@@ -6,10 +6,10 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.UI.Framework;
 using UnrealEngine;
 
-// Token: 0x02002E3B RID: 11835
+// Token: 0x02002397 RID: 9111
 public class FightLibrary
 {
-	// Token: 0x06018FB4 RID: 102324 RVA: 0x00670888 File Offset: 0x0066EA88
+	// Token: 0x06016881 RID: 92289 RVA: 0x00696750 File Offset: 0x00694950
 	public static void Init()
 	{
 		TArray<SCamp> tarray = DataTableUtil_C.LoadAllCampConfigs(GlobalData.GameInstance);
@@ -27,7 +27,7 @@ public class FightLibrary
 		}
 	}
 
-	// Token: 0x06018FB5 RID: 102325 RVA: 0x00670914 File Offset: 0x0066EB14
+	// Token: 0x06016882 RID: 92290 RVA: 0x006967DC File Offset: 0x006949DC
 	[NullableContext(2)]
 	public static SHitMapping GetHitMapConfig(int mapId)
 	{

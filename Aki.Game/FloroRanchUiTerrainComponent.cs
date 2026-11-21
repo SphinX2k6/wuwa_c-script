@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001B1F RID: 6943
+// Token: 0x02000FDE RID: 4062
 [NullableContext(2)]
 [Nullable(0)]
 [FloroRanchEntityComponent(EFloroRanchEntityComponent.FloroRanchUiTerrainComponent)]
 public class FloroRanchUiTerrainComponent : FloroRanchUiItemBaseComponent
 {
-	// Token: 0x0600CE0D RID: 52749 RVA: 0x002EE7C4 File Offset: 0x002EC9C4
+	// Token: 0x0600A21E RID: 41502 RVA: 0x002F98A4 File Offset: 0x002F7AA4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -25,7 +25,7 @@ public class FloroRanchUiTerrainComponent : FloroRanchUiItemBaseComponent
 		return <PlayShowAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE0E RID: 52750 RVA: 0x002EE808 File Offset: 0x002ECA08
+	// Token: 0x0600A21F RID: 41503 RVA: 0x002F98E8 File Offset: 0x002F7AE8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -41,7 +41,7 @@ public class FloroRanchUiTerrainComponent : FloroRanchUiItemBaseComponent
 		return <CreateUiItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE0F RID: 52751 RVA: 0x002EE84C File Offset: 0x002ECA4C
+	// Token: 0x0600A220 RID: 41504 RVA: 0x002F992C File Offset: 0x002F7B2C
 	public override UniTask PlayHideAnim()
 	{
 		FloroRanchUiTerrainComponent.<PlayHideAnim>d__3 <PlayHideAnim>d__;
@@ -52,7 +52,7 @@ public class FloroRanchUiTerrainComponent : FloroRanchUiItemBaseComponent
 		return <PlayHideAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE10 RID: 52752 RVA: 0x002EE890 File Offset: 0x002ECA90
+	// Token: 0x0600A221 RID: 41505 RVA: 0x002F9970 File Offset: 0x002F7B70
 	public override UniTask PlayNormalAnim()
 	{
 		FloroRanchUiTerrainComponent.<PlayNormalAnim>d__4 <PlayNormalAnim>d__;
@@ -63,7 +63,7 @@ public class FloroRanchUiTerrainComponent : FloroRanchUiItemBaseComponent
 		return <PlayNormalAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE11 RID: 52753 RVA: 0x002EE8D4 File Offset: 0x002ECAD4
+	// Token: 0x0600A222 RID: 41506 RVA: 0x002F99B4 File Offset: 0x002F7BB4
 	[PreserveBaseOverrides]
 	public new virtual FloroRanchUiTerrainItem GetUiItem()
 	{
@@ -79,6 +79,6 @@ public class FloroRanchUiTerrainComponent : FloroRanchUiItemBaseComponent
 		return this.FloroRanchUiTerrainItem;
 	}
 
-	// Token: 0x04005E6B RID: 24171
+	// Token: 0x04005F3A RID: 24378
 	private FloroRanchUiTerrainItem FloroRanchUiTerrainItem;
 }

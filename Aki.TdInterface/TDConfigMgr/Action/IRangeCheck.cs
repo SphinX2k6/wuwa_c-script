@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D88 RID: 7560
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F99 RID: 8089
 	public class IRangeCheck
 	{
-		// Token: 0x0600A20F RID: 41487 RVA: 0x00170CDC File Offset: 0x0016EEDC
+		// Token: 0x0600ABFB RID: 44027 RVA: 0x00185100 File Offset: 0x00183300
 		private IRangeCheck_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A210 RID: 41488 RVA: 0x00170D14 File Offset: 0x0016EF14
+		// Token: 0x0600ABFC RID: 44028 RVA: 0x00185138 File Offset: 0x00183338
 		public static IRangeCheck Create([Nullable(2)] IRangeCheck instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A211 RID: 41489 RVA: 0x00170D27 File Offset: 0x0016EF27
+		// Token: 0x0600ABFD RID: 44029 RVA: 0x0018514B File Offset: 0x0018334B
 		public static IRangeCheck CreateFromSetValue([Nullable(2)] IRangeCheck_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A212 RID: 41490 RVA: 0x00170D3A File Offset: 0x0016EF3A
+		// Token: 0x0600ABFE RID: 44030 RVA: 0x0018515E File Offset: 0x0018335E
 		public IRangeCheck_SetValue ToSetValue()
 		{
 			return new IRangeCheck_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003212 RID: 12818
-		// (get) Token: 0x0600A213 RID: 41491 RVA: 0x00170D4D File Offset: 0x0016EF4D
-		// (set) Token: 0x0600A214 RID: 41492 RVA: 0x00170D78 File Offset: 0x0016EF78
+		// Token: 0x170034A6 RID: 13478
+		// (get) Token: 0x0600ABFF RID: 44031 RVA: 0x00185171 File Offset: 0x00183371
+		// (set) Token: 0x0600AC00 RID: 44032 RVA: 0x0018519C File Offset: 0x0018339C
 		public virtual ERangeCheckType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006165 RID: 24933
+		// Token: 0x040066E1 RID: 26337
 		[Nullable(2)]
 		protected IRangeCheck FbInstance;
 
-		// Token: 0x04006166 RID: 24934
+		// Token: 0x040066E2 RID: 26338
 		[Nullable(2)]
 		protected IRangeCheck_SetValue PocoInterface;
 	}

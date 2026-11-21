@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D04 RID: 23812
+	// Token: 0x02006338 RID: 25400
 	public enum EOutAreaBorderType : byte
 	{
-		// Token: 0x0400F675 RID: 63093
+		// Token: 0x040103C4 RID: 66500
 		TeleportTimer
 	}
 }

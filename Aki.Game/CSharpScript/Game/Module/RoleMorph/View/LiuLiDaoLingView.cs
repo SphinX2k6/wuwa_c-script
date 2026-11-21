@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleMorph.View
 {
-	// Token: 0x02004D6A RID: 19818
+	// Token: 0x02003D33 RID: 15667
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LiuLiDaoLingView : UiTickViewBase
 	{
-		// Token: 0x060333B1 RID: 209841 RVA: 0x00BF2A62 File Offset: 0x00BF0C62
+		// Token: 0x0602821F RID: 164383 RVA: 0x00B3BC86 File Offset: 0x00B39E86
 		public LiuLiDaoLingView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060333B2 RID: 209842 RVA: 0x00BF2A78 File Offset: 0x00BF0C78
+		// Token: 0x06028220 RID: 164384 RVA: 0x00B3BC9C File Offset: 0x00B39E9C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060333B3 RID: 209843 RVA: 0x00BF2C08 File Offset: 0x00BF0E08
+		// Token: 0x06028221 RID: 164385 RVA: 0x00B3BE2C File Offset: 0x00B3A02C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			LiuLiDaoLingView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060333B4 RID: 209844 RVA: 0x00BF2C4C File Offset: 0x00BF0E4C
+		// Token: 0x06028222 RID: 164386 RVA: 0x00B3BE70 File Offset: 0x00B3A070
 		public UniTask NewAllSkillItems()
 		{
 			LiuLiDaoLingView.<NewAllSkillItems>d__5 <NewAllSkillItems>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			return <NewAllSkillItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060333B5 RID: 209845 RVA: 0x00BF2C90 File Offset: 0x00BF0E90
+		// Token: 0x06028223 RID: 164387 RVA: 0x00B3BEB4 File Offset: 0x00B3A0B4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			return <NewSkillItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060333B6 RID: 209846 RVA: 0x00BF2CE4 File Offset: 0x00BF0EE4
+		// Token: 0x06028224 RID: 164388 RVA: 0x00B3BF08 File Offset: 0x00B3A108
 		private void RefreshAllSkillItems()
 		{
 			this.SkillItemList[0].RefreshByMoveType(0, EInputAxis.MoveRight, -1f, new Action<int>(this.OnPressItem));
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			this.SkillItemList[3].RefreshByMoveType(3, EInputAxis.MoveForward, -1f, new Action<int>(this.OnPressItem));
 		}
 
-		// Token: 0x060333B7 RID: 209847 RVA: 0x00BF2D94 File Offset: 0x00BF0F94
+		// Token: 0x06028225 RID: 164389 RVA: 0x00B3BFB8 File Offset: 0x00B3A1B8
 		private void OnPressItem(int index)
 		{
 			for (int i = 0; i < this.SkillItemList.Count; i++)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			}
 		}
 
-		// Token: 0x060333B8 RID: 209848 RVA: 0x00BF2DD0 File Offset: 0x00BF0FD0
+		// Token: 0x06028226 RID: 164390 RVA: 0x00B3BFF4 File Offset: 0x00B3A1F4
 		protected override void OnAddEventListener()
 		{
 			InputDistributeController.Instance.BindActions(new List<string>
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			EventSystem.Instance.Add<EInputControllerMainType, EInputControllerMainType>(EEventName.InputControllerMainTypeChange, new Action<EInputControllerMainType, EInputControllerMainType>(this.OnInputControllerMainTypeChange));
 		}
 
-		// Token: 0x060333B9 RID: 209849 RVA: 0x00BF2E40 File Offset: 0x00BF1040
+		// Token: 0x06028227 RID: 164391 RVA: 0x00B3C064 File Offset: 0x00B3A264
 		protected override void OnRemoveEventListener()
 		{
 			this.ClearPress();
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			EventSystem.Instance.Remove<EInputControllerMainType, EInputControllerMainType>(EEventName.InputControllerMainTypeChange, new Action<EInputControllerMainType, EInputControllerMainType>(this.OnInputControllerMainTypeChange));
 		}
 
-		// Token: 0x060333BA RID: 209850 RVA: 0x00BF2EB8 File Offset: 0x00BF10B8
+		// Token: 0x06028228 RID: 164392 RVA: 0x00B3C0DC File Offset: 0x00B3A2DC
 		protected override void OnBeforeDestroy()
 		{
 			foreach (LiuLiDaoLingSkillItem liuLiDaoLingSkillItem in this.SkillItemList)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			this.SkillItemList.Clear();
 		}
 
-		// Token: 0x060333BB RID: 209851 RVA: 0x00BF2F14 File Offset: 0x00BF1114
+		// Token: 0x06028229 RID: 164393 RVA: 0x00B3C138 File Offset: 0x00B3A338
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification _)
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			}
 		}
 
-		// Token: 0x060333BC RID: 209852 RVA: 0x00BF2FB4 File Offset: 0x00BF11B4
+		// Token: 0x0602822A RID: 164394 RVA: 0x00B3C1D8 File Offset: 0x00B3A3D8
 		private void OnInputControllerMainTypeChange(EInputControllerMainType last, EInputControllerMainType now)
 		{
 			if (last == EInputControllerMainType.Gamepad)
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			}
 		}
 
-		// Token: 0x060333BD RID: 209853 RVA: 0x00BF2FC0 File Offset: 0x00BF11C0
+		// Token: 0x0602822B RID: 164395 RVA: 0x00B3C1E4 File Offset: 0x00B3A3E4
 		private void ClearPress()
 		{
 			foreach (LiuLiDaoLingSkillItem liuLiDaoLingSkillItem in this.SkillItemList)
@@ -202,19 +202,19 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			}
 		}
 
-		// Token: 0x060333BE RID: 209854 RVA: 0x00BF3014 File Offset: 0x00BF1214
+		// Token: 0x0602822C RID: 164396 RVA: 0x00B3C238 File Offset: 0x00B3A438
 		private void OnClickReset()
 		{
 			EventSystem.Instance.Emit<string>(EEventName.ChallengeAgain, "重新挑战");
 		}
 
-		// Token: 0x060333BF RID: 209855 RVA: 0x00BF302B File Offset: 0x00BF122B
+		// Token: 0x0602822D RID: 164397 RVA: 0x00B3C24F File Offset: 0x00B3A44F
 		private void OnClickClose()
 		{
 			EventSystem.Instance.Emit<string>(EEventName.ChallengeAgain, "玩法放弃");
 		}
 
-		// Token: 0x060333C0 RID: 209856 RVA: 0x00BF3044 File Offset: 0x00BF1244
+		// Token: 0x0602822E RID: 164398 RVA: 0x00B3C268 File Offset: 0x00B3A468
 		protected override void OnTick(float delta)
 		{
 			foreach (LiuLiDaoLingSkillItem liuLiDaoLingSkillItem in this.SkillItemList)
@@ -223,28 +223,28 @@ namespace CSharpScript.Game.Module.RoleMorph.View
 			}
 		}
 
-		// Token: 0x0401B328 RID: 111400
+		// Token: 0x04015CFA RID: 89338
 		private readonly List<LiuLiDaoLingSkillItem> SkillItemList = new List<LiuLiDaoLingSkillItem>();
 
-		// Token: 0x0200AEDF RID: 44767
+		// Token: 0x02009912 RID: 39186
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x040351C5 RID: 217541
+			// Token: 0x0402FBF6 RID: 195574
 			LeftContainer,
-			// Token: 0x040351C6 RID: 217542
+			// Token: 0x0402FBF7 RID: 195575
 			Item1,
-			// Token: 0x040351C7 RID: 217543
+			// Token: 0x0402FBF8 RID: 195576
 			Item2,
-			// Token: 0x040351C8 RID: 217544
+			// Token: 0x0402FBF9 RID: 195577
 			Item3,
-			// Token: 0x040351C9 RID: 217545
+			// Token: 0x0402FBFA RID: 195578
 			Item4,
-			// Token: 0x040351CA RID: 217546
+			// Token: 0x0402FBFB RID: 195579
 			BtnReset,
-			// Token: 0x040351CB RID: 217547
+			// Token: 0x0402FBFC RID: 195580
 			BtnClose,
-			// Token: 0x040351CC RID: 217548
+			// Token: 0x0402FBFD RID: 195581
 			BtnHelp
 		}
 	}

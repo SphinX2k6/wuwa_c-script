@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C8E RID: 23694
+	// Token: 0x020062BF RID: 25279
 	public class TProceduralVisualUnion
 	{
-		// Token: 0x1700B23C RID: 45628
-		// (get) Token: 0x06028957 RID: 166231 RVA: 0x005943F6 File Offset: 0x005925F6
-		// (set) Token: 0x06028958 RID: 166232 RVA: 0x005943FE File Offset: 0x005925FE
+		// Token: 0x1700BB96 RID: 48022
+		// (get) Token: 0x0602AF9D RID: 176029 RVA: 0x005DCB2E File Offset: 0x005DAD2E
+		// (set) Token: 0x0602AF9E RID: 176030 RVA: 0x005DCB36 File Offset: 0x005DAD36
 		public TProceduralVisual Type { get; set; }
 
-		// Token: 0x1700B23D RID: 45629
-		// (get) Token: 0x06028959 RID: 166233 RVA: 0x00594407 File Offset: 0x00592607
-		// (set) Token: 0x0602895A RID: 166234 RVA: 0x0059440F File Offset: 0x0059260F
+		// Token: 0x1700BB97 RID: 48023
+		// (get) Token: 0x0602AF9F RID: 176031 RVA: 0x005DCB3F File Offset: 0x005DAD3F
+		// (set) Token: 0x0602AFA0 RID: 176032 RVA: 0x005DCB47 File Offset: 0x005DAD47
 		public object Value { get; set; }
 
-		// Token: 0x0602895B RID: 166235 RVA: 0x00594418 File Offset: 0x00592618
+		// Token: 0x0602AFA1 RID: 176033 RVA: 0x005DCB50 File Offset: 0x005DAD50
 		public TProceduralVisualUnion()
 		{
 			this.Type = TProceduralVisual.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602895C RID: 166236 RVA: 0x0059442E File Offset: 0x0059262E
+		// Token: 0x0602AFA2 RID: 176034 RVA: 0x005DCB66 File Offset: 0x005DAD66
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602895D RID: 166237 RVA: 0x00594440 File Offset: 0x00592640
+		// Token: 0x0602AFA3 RID: 176035 RVA: 0x005DCB78 File Offset: 0x005DAD78
 		public IProceduralVisualLookAtT AsIProceduralVisualLookAt()
 		{
 			return this.As<IProceduralVisualLookAtT>();
 		}
 
-		// Token: 0x0602895E RID: 166238 RVA: 0x00594448 File Offset: 0x00592648
+		// Token: 0x0602AFA4 RID: 176036 RVA: 0x005DCB80 File Offset: 0x005DAD80
 		public static TProceduralVisualUnion FromIProceduralVisualLookAt(IProceduralVisualLookAtT _iproceduralvisuallookat)
 		{
 			return new TProceduralVisualUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602895F RID: 166239 RVA: 0x0059445D File Offset: 0x0059265D
+		// Token: 0x0602AFA5 RID: 176037 RVA: 0x005DCB95 File Offset: 0x005DAD95
 		public ISearchlightRotateT AsISearchlightRotate()
 		{
 			return this.As<ISearchlightRotateT>();
 		}
 
-		// Token: 0x06028960 RID: 166240 RVA: 0x00594465 File Offset: 0x00592665
+		// Token: 0x0602AFA6 RID: 176038 RVA: 0x005DCB9D File Offset: 0x005DAD9D
 		public static TProceduralVisualUnion FromISearchlightRotate(ISearchlightRotateT _isearchlightrotate)
 		{
 			return new TProceduralVisualUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028961 RID: 166241 RVA: 0x0059447C File Offset: 0x0059267C
+		// Token: 0x0602AFA7 RID: 176039 RVA: 0x005DCBB4 File Offset: 0x005DADB4
 		public static int Pack(FlatBufferBuilder builder, TProceduralVisualUnion _o)
 		{
 			TProceduralVisual type = _o.Type;

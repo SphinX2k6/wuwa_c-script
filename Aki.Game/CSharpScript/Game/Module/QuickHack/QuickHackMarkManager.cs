@@ -5,12 +5,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F6B RID: 20331
+	// Token: 0x02003F34 RID: 16180
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackMarkManager
 	{
-		// Token: 0x06034150 RID: 213328 RVA: 0x00C37394 File Offset: 0x00C35594
+		// Token: 0x06028FBE RID: 167870 RVA: 0x00B80B34 File Offset: 0x00B7ED34
 		public void StartMark(EntityHandle entityHandle, double uploadTime, double duration, string iconPath)
 		{
 			int num = this.MarkId + 1;
@@ -22,13 +22,13 @@ namespace CSharpScript.Game.Module.QuickHack
 			EventSystem.Instance.Emit<QuickHackMarkInstance>(EEventName.OnQuickHackStartMark, quickHackMarkInstance);
 		}
 
-		// Token: 0x06034151 RID: 213329 RVA: 0x00C373E3 File Offset: 0x00C355E3
+		// Token: 0x06028FBF RID: 167871 RVA: 0x00B80B83 File Offset: 0x00B7ED83
 		public IEnumerable<QuickHackMarkInstance> GetMarks()
 		{
 			return this.EntityMarksMap.Values;
 		}
 
-		// Token: 0x06034152 RID: 213330 RVA: 0x00C373F0 File Offset: 0x00C355F0
+		// Token: 0x06028FC0 RID: 167872 RVA: 0x00B80B90 File Offset: 0x00B7ED90
 		public void Clear()
 		{
 			foreach (QuickHackMarkInstance quickHackMarkInstance in this.EntityMarksMap.Values)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.EntityMarksMap.Clear();
 		}
 
-		// Token: 0x06034153 RID: 213331 RVA: 0x00C37450 File Offset: 0x00C35650
+		// Token: 0x06028FC1 RID: 167873 RVA: 0x00B80BF0 File Offset: 0x00B7EDF0
 		public void UpdateMarks()
 		{
 			if (this.EntityMarksMap.Count <= 0)
@@ -65,10 +65,10 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0401BABA RID: 113338
+		// Token: 0x0401648F RID: 91279
 		private int MarkId;
 
-		// Token: 0x0401BABB RID: 113339
+		// Token: 0x04016490 RID: 91280
 		private readonly Dictionary<int, QuickHackMarkInstance> EntityMarksMap = new Dictionary<int, QuickHackMarkInstance>();
 	}
 }

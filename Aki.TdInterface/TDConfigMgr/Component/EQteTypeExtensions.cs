@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009E6 RID: 2534
+	// Token: 0x02000AAB RID: 2731
 	public static class EQteTypeExtensions
 	{
-		// Token: 0x0600383C RID: 14396 RVA: 0x00091C68 File Offset: 0x0008FE68
+		// Token: 0x06003C14 RID: 15380 RVA: 0x0009A528 File Offset: 0x00098728
 		public static string ToEnumString(this EQteType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600383D RID: 14397 RVA: 0x00091C90 File Offset: 0x0008FE90
+		// Token: 0x06003C15 RID: 15381 RVA: 0x0009A550 File Offset: 0x00098750
 		public static EQteType FromString(string name)
 		{
 			EQteType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600383E RID: 14398 RVA: 0x00091CB9 File Offset: 0x0008FEB9
+		// Token: 0x06003C16 RID: 15382 RVA: 0x0009A579 File Offset: 0x00098779
 		public static bool TryFromString(string name, out EQteType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x0600383F RID: 14399 RVA: 0x00091CDE File Offset: 0x0008FEDE
+		// Token: 0x06003C17 RID: 15383 RVA: 0x0009A59E File Offset: 0x0009879E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003840 RID: 14400 RVA: 0x00091CEE File Offset: 0x0008FEEE
+		// Token: 0x06003C18 RID: 15384 RVA: 0x0009A5AE File Offset: 0x000987AE
 		public static EQteType[] GetValues()
 		{
 			return new EQteType[1];
 		}
 
-		// Token: 0x06003841 RID: 14401 RVA: 0x00091CF6 File Offset: 0x0008FEF6
+		// Token: 0x06003C19 RID: 15385 RVA: 0x0009A5B6 File Offset: 0x000987B6
 		public static string[] GetNames()
 		{
 			return new string[]

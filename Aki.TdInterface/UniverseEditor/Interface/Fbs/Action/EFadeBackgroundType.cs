@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F6E RID: 24430
+	// Token: 0x020065B3 RID: 26035
 	public enum EFadeBackgroundType : byte
 	{
-		// Token: 0x0400FD6F RID: 64879
+		// Token: 0x04010AF3 RID: 68339
 		Spine,
-		// Token: 0x0400FD70 RID: 64880
+		// Token: 0x04010AF4 RID: 68340
 		BackgroundImage,
-		// Token: 0x0400FD71 RID: 64881
+		// Token: 0x04010AF5 RID: 68341
 		UiPrefab
 	}
 }

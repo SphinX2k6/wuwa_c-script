@@ -10,12 +10,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006038 RID: 24632
+	// Token: 0x02004FB6 RID: 20406
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpringManorData : ActivityBaseData
 	{
-		// Token: 0x0603E57E RID: 255358 RVA: 0x00F0E780 File Offset: 0x00F0C980
+		// Token: 0x06033242 RID: 209474 RVA: 0x00E55544 File Offset: 0x00E53744
 		protected override void PhraseEx(ActivityData data)
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.ParseBrochureInfos(springFestivalActivityInfo.OneBrochureInfos);
 		}
 
-		// Token: 0x0603E57F RID: 255359 RVA: 0x00F0E844 File Offset: 0x00F0CA44
+		// Token: 0x06033243 RID: 209475 RVA: 0x00E55608 File Offset: 0x00E53808
 		public void ParseSkipEntryList(RepeatedField<SpringSkipEntry> skipEntryList)
 		{
 			this.SkipEntryMap.Clear();
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E580 RID: 255360 RVA: 0x00F0E8A4 File Offset: 0x00F0CAA4
+		// Token: 0x06033244 RID: 209476 RVA: 0x00E55668 File Offset: 0x00E53868
 		public void OnSkipEntryUpdateNotify(SpringSkipEntry skipEntry)
 		{
 			if (this.SkipEntryMap.ContainsKey(skipEntry.Id))
@@ -61,21 +61,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.SkipEntryMap.Add(skipEntry.Id, skipEntry);
 		}
 
-		// Token: 0x0603E581 RID: 255361 RVA: 0x00F0E8E0 File Offset: 0x00F0CAE0
+		// Token: 0x06033245 RID: 209477 RVA: 0x00E556A4 File Offset: 0x00E538A4
 		public bool IsSkipEntryUnLock(int skipEntryId)
 		{
 			SpringSkipEntry springSkipEntry;
 			return !this.SkipEntryMap.TryGetValue(skipEntryId, out springSkipEntry) || springSkipEntry == null || springSkipEntry.UnLock;
 		}
 
-		// Token: 0x0603E582 RID: 255362 RVA: 0x00F0E90C File Offset: 0x00F0CB0C
+		// Token: 0x06033246 RID: 209478 RVA: 0x00E556D0 File Offset: 0x00E538D0
 		public bool IsSkipEntryFinish(int skipEntryId)
 		{
 			SpringSkipEntry springSkipEntry;
 			return this.SkipEntryMap.TryGetValue(skipEntryId, out springSkipEntry) && springSkipEntry != null && springSkipEntry.Finish;
 		}
 
-		// Token: 0x0603E583 RID: 255363 RVA: 0x00F0E938 File Offset: 0x00F0CB38
+		// Token: 0x06033247 RID: 209479 RVA: 0x00E556FC File Offset: 0x00E538FC
 		private void ParseRewardScoreIdList(RepeatedField<int> rewardScoreIds)
 		{
 			foreach (int item in rewardScoreIds)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E584 RID: 255364 RVA: 0x00F0E988 File Offset: 0x00F0CB88
+		// Token: 0x06033248 RID: 209480 RVA: 0x00E5574C File Offset: 0x00E5394C
 		public void OnScoreRewardClaimed(List<int> scoreRewardIdList)
 		{
 			foreach (int item in scoreRewardIdList)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E585 RID: 255365 RVA: 0x00F0E9DC File Offset: 0x00F0CBDC
+		// Token: 0x06033249 RID: 209481 RVA: 0x00E557A0 File Offset: 0x00E539A0
 		public int GetCurrentMilestone()
 		{
 			if (this.MilestoneItemId == 0)
@@ -103,13 +103,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return InventoryModel.Instance.GetItemCountByConfigId(this.MilestoneItemId, 0);
 		}
 
-		// Token: 0x0603E586 RID: 255366 RVA: 0x00F0EA1A File Offset: 0x00F0CC1A
+		// Token: 0x0603324A RID: 209482 RVA: 0x00E557DE File Offset: 0x00E539DE
 		public bool IsScoreRewardReceived(int scoreRewardId)
 		{
 			return this.ScoreRewardClaimedSet.Contains(scoreRewardId);
 		}
 
-		// Token: 0x0603E587 RID: 255367 RVA: 0x00F0EA28 File Offset: 0x00F0CC28
+		// Token: 0x0603324B RID: 209483 RVA: 0x00E557EC File Offset: 0x00E539EC
 		public bool IsScoreRewardCanReceived(int scoreRewardId)
 		{
 			if (this.IsScoreRewardReceived(scoreRewardId))
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return this.GetCurrentMilestone() >= scoreRewardConfigById.Value.Score;
 		}
 
-		// Token: 0x0603E588 RID: 255368 RVA: 0x00F0EA68 File Offset: 0x00F0CC68
+		// Token: 0x0603324C RID: 209484 RVA: 0x00E5582C File Offset: 0x00E53A2C
 		public List<int> GetCanClaimedScoreRewardList()
 		{
 			List<int> list = new List<int>();
@@ -134,13 +134,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return list;
 		}
 
-		// Token: 0x0603E589 RID: 255369 RVA: 0x00F0EADC File Offset: 0x00F0CCDC
+		// Token: 0x0603324D RID: 209485 RVA: 0x00E558A0 File Offset: 0x00E53AA0
 		public bool HasAnyScoreRewardCanClaim()
 		{
 			return this.GetCanClaimedScoreRewardList().Count > 0;
 		}
 
-		// Token: 0x0603E58A RID: 255370 RVA: 0x00F0EAEC File Offset: 0x00F0CCEC
+		// Token: 0x0603324E RID: 209486 RVA: 0x00E558B0 File Offset: 0x00E53AB0
 		private void ParseRewardTaskInfo(RepeatedField<ConditionTask> rewardTaskInfo)
 		{
 			this.RewardTaskMap.Clear();
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E58B RID: 255371 RVA: 0x00F0EB80 File Offset: 0x00F0CD80
+		// Token: 0x0603324F RID: 209487 RVA: 0x00E55944 File Offset: 0x00E53B44
 		public void OnTaskUpdateNotify(ConditionTask conditionTask)
 		{
 			ActivitySpringManorTaskData rewardTaskData = this.GetRewardTaskData(conditionTask.Id);
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RewardTaskMap.Add(activitySpringManorTaskData.Id, activitySpringManorTaskData);
 		}
 
-		// Token: 0x0603E58C RID: 255372 RVA: 0x00F0EBC4 File Offset: 0x00F0CDC4
+		// Token: 0x06033250 RID: 209488 RVA: 0x00E55988 File Offset: 0x00E53B88
 		public void OnRewardTaskClaimed(List<int> claimedTaskIdList)
 		{
 			foreach (int taskId in claimedTaskIdList)
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E58D RID: 255373 RVA: 0x00F0EC20 File Offset: 0x00F0CE20
+		// Token: 0x06033251 RID: 209489 RVA: 0x00E559E4 File Offset: 0x00E53BE4
 		[NullableContext(2)]
 		public ActivitySpringManorTaskData GetRewardTaskData(int taskId)
 		{
@@ -198,14 +198,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return null;
 		}
 
-		// Token: 0x0603E58E RID: 255374 RVA: 0x00F0EC40 File Offset: 0x00F0CE40
+		// Token: 0x06033252 RID: 209490 RVA: 0x00E55A04 File Offset: 0x00E53C04
 		public bool IsTaskCanClaim(int taskId)
 		{
 			ActivitySpringManorTaskData activitySpringManorTaskData;
 			return this.RewardTaskMap.TryGetValue(taskId, out activitySpringManorTaskData) && activitySpringManorTaskData.Status == EActivityTaskState.FinishedAndUnclaimed;
 		}
 
-		// Token: 0x0603E58F RID: 255375 RVA: 0x00F0EC68 File Offset: 0x00F0CE68
+		// Token: 0x06033253 RID: 209491 RVA: 0x00E55A2C File Offset: 0x00E53C2C
 		public List<int> GetTabCanClaimableTaskId(int tabId)
 		{
 			List<int> rewardTaskListByTabId = this.GetRewardTaskListByTabId(tabId);
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return list;
 		}
 
-		// Token: 0x0603E590 RID: 255376 RVA: 0x00F0ECCC File Offset: 0x00F0CECC
+		// Token: 0x06033254 RID: 209492 RVA: 0x00E55A90 File Offset: 0x00E53C90
 		public bool IsTabHasAnyClaimable(int tabId)
 		{
 			foreach (int taskId in this.GetRewardTaskListByTabId(tabId))
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return false;
 		}
 
-		// Token: 0x0603E591 RID: 255377 RVA: 0x00F0ED2C File Offset: 0x00F0CF2C
+		// Token: 0x06033255 RID: 209493 RVA: 0x00E55AF0 File Offset: 0x00E53CF0
 		public bool HasAnyClaimable()
 		{
 			foreach (int tabId in SpringManorModel.Instance.GetRewardTaskTabList())
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return false;
 		}
 
-		// Token: 0x0603E592 RID: 255378 RVA: 0x00F0ED8C File Offset: 0x00F0CF8C
+		// Token: 0x06033256 RID: 209494 RVA: 0x00E55B50 File Offset: 0x00E53D50
 		public List<int> GetRewardTaskListByTabId(int tabId)
 		{
 			List<int> list = new List<int>();
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return list;
 		}
 
-		// Token: 0x0603E593 RID: 255379 RVA: 0x00F0EE24 File Offset: 0x00F0D024
+		// Token: 0x06033257 RID: 209495 RVA: 0x00E55BE8 File Offset: 0x00E53DE8
 		public int GetTotalRewardTaskProgress()
 		{
 			int num = 0;
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return num;
 		}
 
-		// Token: 0x0603E594 RID: 255380 RVA: 0x00F0EE88 File Offset: 0x00F0D088
+		// Token: 0x06033258 RID: 209496 RVA: 0x00E55C4C File Offset: 0x00E53E4C
 		public int GetCurrentRewardTaskProgress()
 		{
 			int num = 0;
@@ -292,19 +292,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return num;
 		}
 
-		// Token: 0x0603E595 RID: 255381 RVA: 0x00F0EF34 File Offset: 0x00F0D134
+		// Token: 0x06033259 RID: 209497 RVA: 0x00E55CF8 File Offset: 0x00E53EF8
 		public int GetAtmosphere()
 		{
 			return this.CurrentAtmosphere;
 		}
 
-		// Token: 0x0603E596 RID: 255382 RVA: 0x00F0EF3C File Offset: 0x00F0D13C
+		// Token: 0x0603325A RID: 209498 RVA: 0x00E55D00 File Offset: 0x00E53F00
 		public int GetAtmosphereLevel()
 		{
 			return this.AtmosphereLevel;
 		}
 
-		// Token: 0x0603E597 RID: 255383 RVA: 0x00F0EF44 File Offset: 0x00F0D144
+		// Token: 0x0603325B RID: 209499 RVA: 0x00E55D08 File Offset: 0x00E53F08
 		public void OnAtmosphereUpdateNotify(int newAtmosphere, int newLevel)
 		{
 			this.CurrentAtmosphere = newAtmosphere;
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E598 RID: 255384 RVA: 0x00F0EF60 File Offset: 0x00F0D160
+		// Token: 0x0603325C RID: 209500 RVA: 0x00E55D24 File Offset: 0x00E53F24
 		private void ParseAtmosphere(SpringFestivalActivityInfo activityData)
 		{
 			foreach (int item in activityData.RewardLevelIds)
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.CurrentAtmosphere = activityData.Atmosphere;
 		}
 
-		// Token: 0x0603E599 RID: 255385 RVA: 0x00F0EFCC File Offset: 0x00F0D1CC
+		// Token: 0x0603325D RID: 209501 RVA: 0x00E55D90 File Offset: 0x00E53F90
 		public void OnAtmosphereLevelRewardUpdateNotify(List<int> levelIdList)
 		{
 			foreach (int item in levelIdList)
@@ -334,13 +334,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E59A RID: 255386 RVA: 0x00F0F020 File Offset: 0x00F0D220
+		// Token: 0x0603325E RID: 209502 RVA: 0x00E55DE4 File Offset: 0x00E53FE4
 		public bool IsLevelRewardClaimed(int level)
 		{
 			return this.ClaimedLevelRewardSet.Contains(level);
 		}
 
-		// Token: 0x0603E59B RID: 255387 RVA: 0x00F0F030 File Offset: 0x00F0D230
+		// Token: 0x0603325F RID: 209503 RVA: 0x00E55DF4 File Offset: 0x00E53FF4
 		public bool IsLevelCanReceive(int level)
 		{
 			if (this.IsLevelRewardClaimed(level))
@@ -361,7 +361,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return false;
 		}
 
-		// Token: 0x0603E59C RID: 255388 RVA: 0x00F0F0B0 File Offset: 0x00F0D2B0
+		// Token: 0x06033260 RID: 209504 RVA: 0x00E55E74 File Offset: 0x00E54074
 		public bool HasAnyLevelCanReceive()
 		{
 			int maxLevel = SpringManorModel.Instance.GetMaxLevel();
@@ -375,7 +375,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return false;
 		}
 
-		// Token: 0x0603E59D RID: 255389 RVA: 0x00F0F0E0 File Offset: 0x00F0D2E0
+		// Token: 0x06033261 RID: 209505 RVA: 0x00E55EA4 File Offset: 0x00E540A4
 		private void ParseUnlockedFunctionIdList(RepeatedField<int> unlockedFunctionIdList)
 		{
 			this.UnlockedFunctionSet.Clear();
@@ -385,13 +385,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E59E RID: 255390 RVA: 0x00F0F13C File Offset: 0x00F0D33C
+		// Token: 0x06033262 RID: 209506 RVA: 0x00E55F00 File Offset: 0x00E54100
 		public void OnFunctionUpdateNotify(int functionId)
 		{
 			this.UnlockedFunctionSet.Add((ESpringFunctionType)functionId);
 		}
 
-		// Token: 0x0603E59F RID: 255391 RVA: 0x00F0F14B File Offset: 0x00F0D34B
+		// Token: 0x06033263 RID: 209507 RVA: 0x00E55F0F File Offset: 0x00E5410F
 		public bool IsFunctionUnlocked(ESpringFunctionType functionType)
 		{
 			if (functionType == ESpringFunctionType.Gameplay)
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return this.UnlockedFunctionSet.Contains(functionType);
 		}
 
-		// Token: 0x0603E5A0 RID: 255392 RVA: 0x00F0F164 File Offset: 0x00F0D364
+		// Token: 0x06033264 RID: 209508 RVA: 0x00E55F28 File Offset: 0x00E54128
 		public bool HasAnyGameUnlocked()
 		{
 			foreach (ESpringFunctionType functionType in SpringManorDefine.gameTypeList)
@@ -414,7 +414,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return false;
 		}
 
-		// Token: 0x0603E5A1 RID: 255393 RVA: 0x00F0F1C0 File Offset: 0x00F0D3C0
+		// Token: 0x06033265 RID: 209509 RVA: 0x00E55F84 File Offset: 0x00E54184
 		public void ParseGuessJokerGameData(RepeatedField<Aki.Protocol.GuessJokerLevelInfo> guessJokerGameData)
 		{
 			this.GuessJokerGameDataMap.Clear();
@@ -440,7 +440,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			EventSystem.Instance.Emit(EEventName.OnGuessJokerRedDotNotify);
 		}
 
-		// Token: 0x0603E5A2 RID: 255394 RVA: 0x00F0F2A0 File Offset: 0x00F0D4A0
+		// Token: 0x06033266 RID: 209510 RVA: 0x00E56064 File Offset: 0x00E54264
 		public void UpdateGuessJokerGameData(RepeatedField<Aki.Protocol.GuessJokerLevelInfo> data)
 		{
 			bool flag = false;
@@ -484,7 +484,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E5A3 RID: 255395 RVA: 0x00F0F40C File Offset: 0x00F0D60C
+		// Token: 0x06033267 RID: 209511 RVA: 0x00E561D0 File Offset: 0x00E543D0
 		[NullableContext(2)]
 		public IGuessJokerLevelInfo GetGuessJokerGameData(int levelId)
 		{
@@ -504,7 +504,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return null;
 		}
 
-		// Token: 0x0603E5A4 RID: 255396 RVA: 0x00F0F478 File Offset: 0x00F0D678
+		// Token: 0x06033268 RID: 209512 RVA: 0x00E5623C File Offset: 0x00E5443C
 		public int GetGuessJokerCurrentProgress()
 		{
 			int num = 0;
@@ -518,13 +518,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return num;
 		}
 
-		// Token: 0x0603E5A5 RID: 255397 RVA: 0x00F0F4DC File Offset: 0x00F0D6DC
+		// Token: 0x06033269 RID: 209513 RVA: 0x00E562A0 File Offset: 0x00E544A0
 		public int GetGuessJokerTotalProgress()
 		{
 			return this.GuessJokerGameDataMap.Count;
 		}
 
-		// Token: 0x0603E5A6 RID: 255398 RVA: 0x00F0F4EC File Offset: 0x00F0D6EC
+		// Token: 0x0603326A RID: 209514 RVA: 0x00E562B0 File Offset: 0x00E544B0
 		public void UpdateLevelGetReward(int levelId)
 		{
 			IGuessJokerLevelInfo guessJokerGameData = this.GetGuessJokerGameData(levelId);
@@ -535,7 +535,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E5A7 RID: 255399 RVA: 0x00F0F51C File Offset: 0x00F0D71C
+		// Token: 0x0603326B RID: 209515 RVA: 0x00E562E0 File Offset: 0x00E544E0
 		[NullableContext(2)]
 		private void ParseDrinksGameData(DrinkMixData data)
 		{
@@ -564,7 +564,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			EventSystem.Instance.Emit(EEventName.OnDrinksUnlockClickedNotify);
 		}
 
-		// Token: 0x0603E5A8 RID: 255400 RVA: 0x00F0F5E8 File Offset: 0x00F0D7E8
+		// Token: 0x0603326C RID: 209516 RVA: 0x00E563AC File Offset: 0x00E545AC
 		public int GetDrinksCurrentProgress()
 		{
 			int num = 0;
@@ -578,19 +578,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return num;
 		}
 
-		// Token: 0x0603E5A9 RID: 255401 RVA: 0x00F0F64C File Offset: 0x00F0D84C
+		// Token: 0x0603326D RID: 209517 RVA: 0x00E56410 File Offset: 0x00E54610
 		public int GetDrinksTotalProgress()
 		{
 			return DrinksConfig.Instance.GetAllInvite().Count;
 		}
 
-		// Token: 0x0603E5AA RID: 255402 RVA: 0x00F0F65D File Offset: 0x00F0D85D
+		// Token: 0x0603326E RID: 209518 RVA: 0x00E56421 File Offset: 0x00E54621
 		public Dictionary<int, IDrinksMixRoleInfo> GetDrinksProgressMap()
 		{
 			return this.DrinksRoleDataMap;
 		}
 
-		// Token: 0x0603E5AB RID: 255403 RVA: 0x00F0F668 File Offset: 0x00F0D868
+		// Token: 0x0603326F RID: 209519 RVA: 0x00E5642C File Offset: 0x00E5462C
 		public void ParseBrochureInfos(RepeatedField<OneBrochureInfo> data)
 		{
 			this.InitTargetTypeBookItemData(EBrochureType.Character);
@@ -623,7 +623,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			EventSystem.Instance.Emit(EEventName.OnBrochureBookItemStateUpdate);
 		}
 
-		// Token: 0x0603E5AC RID: 255404 RVA: 0x00F0F760 File Offset: 0x00F0D960
+		// Token: 0x06033270 RID: 209520 RVA: 0x00E56524 File Offset: 0x00E54724
 		public void InitTargetTypeBookItemData(EBrochureType brochureType)
 		{
 			SpringManorConfig instance = SpringManorConfig.Instance;
@@ -651,7 +651,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E5AD RID: 255405 RVA: 0x00F0F806 File Offset: 0x00F0DA06
+		// Token: 0x06033271 RID: 209521 RVA: 0x00E565CA File Offset: 0x00E547CA
 		public void AddUnlockBrochureId(int id)
 		{
 			if (this.BrochureUnlockIds == null)
@@ -666,7 +666,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			brochureUnlockIds.Add(id);
 		}
 
-		// Token: 0x0603E5AE RID: 255406 RVA: 0x00F0F822 File Offset: 0x00F0DA22
+		// Token: 0x06033272 RID: 209522 RVA: 0x00E565E6 File Offset: 0x00E547E6
 		public void SetBookItemDataById(int id, BookItemInfo info)
 		{
 			if (info == null)
@@ -681,7 +681,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.BookItemMap.Add(id, info);
 		}
 
-		// Token: 0x0603E5AF RID: 255407 RVA: 0x00F0F854 File Offset: 0x00F0DA54
+		// Token: 0x06033273 RID: 209523 RVA: 0x00E56618 File Offset: 0x00E54818
 		[NullableContext(2)]
 		public BookItemInfo GetBookItemDataById(int id)
 		{
@@ -697,7 +697,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return null;
 		}
 
-		// Token: 0x0603E5B0 RID: 255408 RVA: 0x00F0F884 File Offset: 0x00F0DA84
+		// Token: 0x06033274 RID: 209524 RVA: 0x00E56648 File Offset: 0x00E54848
 		public void SetTargetBookItemState(int id, BookItemState state)
 		{
 			BookItemInfo bookItemDataById = this.GetBookItemDataById(id);
@@ -707,7 +707,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E5B1 RID: 255409 RVA: 0x00F0F8A4 File Offset: 0x00F0DAA4
+		// Token: 0x06033275 RID: 209525 RVA: 0x00E56668 File Offset: 0x00E54868
 		public EBrochureState GetBookItemStateById(int id)
 		{
 			BookItemInfo bookItemDataById = this.GetBookItemDataById(id);
@@ -718,7 +718,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return EBrochureState.None;
 		}
 
-		// Token: 0x0603E5B2 RID: 255410 RVA: 0x00F0F8CA File Offset: 0x00F0DACA
+		// Token: 0x06033276 RID: 209526 RVA: 0x00E5668E File Offset: 0x00E5488E
 		public EBrochureState SwitchBookItemState(BookItemState state)
 		{
 			switch (state)
@@ -734,7 +734,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E5B3 RID: 255411 RVA: 0x00F0F8E8 File Offset: 0x00F0DAE8
+		// Token: 0x06033277 RID: 209527 RVA: 0x00E566AC File Offset: 0x00E548AC
 		public int GetNextLockBookItemId(int currentItemId)
 		{
 			SpringManorConfig instance = SpringManorConfig.Instance;
@@ -759,7 +759,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return num;
 		}
 
-		// Token: 0x0603E5B4 RID: 255412 RVA: 0x00F0F96A File Offset: 0x00F0DB6A
+		// Token: 0x06033278 RID: 209528 RVA: 0x00E5672E File Offset: 0x00E5492E
 		public void ReadFirstOpenRedDot()
 		{
 			ActivityModel instance = ActivityModel.Instance;
@@ -770,7 +770,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603E5B5 RID: 255413 RVA: 0x00F0F99C File Offset: 0x00F0DB9C
+		// Token: 0x06033279 RID: 209529 RVA: 0x00E56760 File Offset: 0x00E54960
 		public bool HasActivityRedDot()
 		{
 			ActivityModel instance = ActivityModel.Instance;
@@ -787,19 +787,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return true;
 		}
 
-		// Token: 0x0603E5B6 RID: 255414 RVA: 0x00F0FA40 File Offset: 0x00F0DC40
+		// Token: 0x0603327A RID: 209530 RVA: 0x00E56804 File Offset: 0x00E54A04
 		public bool HasRewardRedDot()
 		{
 			return this.HasAnyClaimable() || this.HasAnyScoreRewardCanClaim();
 		}
 
-		// Token: 0x0603E5B7 RID: 255415 RVA: 0x00F0FA52 File Offset: 0x00F0DC52
+		// Token: 0x0603327B RID: 209531 RVA: 0x00E56816 File Offset: 0x00E54A16
 		public bool HasAtmosphereRedDot()
 		{
 			return this.HasAnyLevelCanReceive();
 		}
 
-		// Token: 0x0603E5B8 RID: 255416 RVA: 0x00F0FA5C File Offset: 0x00F0DC5C
+		// Token: 0x0603327C RID: 209532 RVA: 0x00E56820 File Offset: 0x00E54A20
 		public bool HasAnySubQuestRedDot()
 		{
 			foreach (int questId in SpringManorModel.Instance.GetSubQuestList())
@@ -812,14 +812,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return false;
 		}
 
-		// Token: 0x0603E5B9 RID: 255417 RVA: 0x00F0FABC File Offset: 0x00F0DCBC
+		// Token: 0x0603327D RID: 209533 RVA: 0x00E56880 File Offset: 0x00E54A80
 		public bool HasSubQuestRedDot(int questId)
 		{
 			ActivityModel instance = ActivityModel.Instance;
 			return ((instance != null) ? new int?(instance.GetActivityCacheData(base.Id, 0, 1, questId, 0)) : null).GetValueOrDefault() != 1;
 		}
 
-		// Token: 0x0603E5BA RID: 255418 RVA: 0x00F0FAFF File Offset: 0x00F0DCFF
+		// Token: 0x0603327E RID: 209534 RVA: 0x00E568C3 File Offset: 0x00E54AC3
 		public void ReadSubQuestRedDot(int questId)
 		{
 			ActivityModel instance = ActivityModel.Instance;
@@ -830,13 +830,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			instance.SaveActivityData(base.Id, 1, questId, 0, 1);
 		}
 
-		// Token: 0x0603E5BB RID: 255419 RVA: 0x00F0FB1A File Offset: 0x00F0DD1A
+		// Token: 0x0603327F RID: 209535 RVA: 0x00E568DE File Offset: 0x00E54ADE
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.HasActivityRedDot();
 		}
 
-		// Token: 0x0603E5BC RID: 255420 RVA: 0x00F0FB24 File Offset: 0x00F0DD24
+		// Token: 0x06033280 RID: 209536 RVA: 0x00E568E8 File Offset: 0x00E54AE8
 		protected override bool GetExDataFinishShowState()
 		{
 			foreach (ESpringFunctionType key in SpringManorDefine.gameTypeList)
@@ -862,40 +862,40 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return this.ClaimedLevelRewardSet.Count >= maxLevel;
 		}
 
-		// Token: 0x04020915 RID: 133397
+		// Token: 0x0401B242 RID: 111170
 		private readonly Dictionary<int, SpringSkipEntry> SkipEntryMap = new Dictionary<int, SpringSkipEntry>();
 
-		// Token: 0x04020916 RID: 133398
+		// Token: 0x0401B243 RID: 111171
 		private readonly HashSet<int> ScoreRewardClaimedSet = new HashSet<int>();
 
-		// Token: 0x04020917 RID: 133399
+		// Token: 0x0401B244 RID: 111172
 		private int MilestoneItemId;
 
-		// Token: 0x04020918 RID: 133400
+		// Token: 0x0401B245 RID: 111173
 		private readonly Dictionary<int, ActivitySpringManorTaskData> RewardTaskMap = new Dictionary<int, ActivitySpringManorTaskData>();
 
-		// Token: 0x04020919 RID: 133401
+		// Token: 0x0401B246 RID: 111174
 		private int CurrentAtmosphere;
 
-		// Token: 0x0402091A RID: 133402
+		// Token: 0x0401B247 RID: 111175
 		private int AtmosphereLevel;
 
-		// Token: 0x0402091B RID: 133403
+		// Token: 0x0401B248 RID: 111176
 		private readonly HashSet<int> ClaimedLevelRewardSet = new HashSet<int>();
 
-		// Token: 0x0402091C RID: 133404
+		// Token: 0x0401B249 RID: 111177
 		private readonly HashSet<ESpringFunctionType> UnlockedFunctionSet = new HashSet<ESpringFunctionType>();
 
-		// Token: 0x0402091D RID: 133405
+		// Token: 0x0401B24A RID: 111178
 		private readonly Dictionary<int, IGuessJokerLevelInfo> GuessJokerGameDataMap = new Dictionary<int, IGuessJokerLevelInfo>();
 
-		// Token: 0x0402091E RID: 133406
+		// Token: 0x0401B24B RID: 111179
 		private readonly Dictionary<int, IDrinksMixRoleInfo> DrinksRoleDataMap = new Dictionary<int, IDrinksMixRoleInfo>();
 
-		// Token: 0x0402091F RID: 133407
+		// Token: 0x0401B24C RID: 111180
 		private readonly Dictionary<int, BookItemInfo> BookItemMap = new Dictionary<int, BookItemInfo>();
 
-		// Token: 0x04020920 RID: 133408
+		// Token: 0x0401B24D RID: 111181
 		[Nullable(2)]
 		private readonly List<int> BrochureUnlockIds = new List<int>();
 	}

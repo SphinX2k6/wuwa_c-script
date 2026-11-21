@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007551 RID: 30033
+	// Token: 0x02007D47 RID: 32071
 	public class IVisualNovelActivityActionConfigBaseT
 	{
-		// Token: 0x1700E3DE RID: 58334
-		// (get) Token: 0x06036A54 RID: 223828 RVA: 0x0076C2D2 File Offset: 0x0076A4D2
-		// (set) Token: 0x06036A55 RID: 223829 RVA: 0x0076C2DA File Offset: 0x0076A4DA
+		// Token: 0x1700F008 RID: 61448
+		// (get) Token: 0x06039E6A RID: 237162 RVA: 0x007CF57A File Offset: 0x007CD77A
+		// (set) Token: 0x06039E6B RID: 237163 RVA: 0x007CF582 File Offset: 0x007CD782
 		public EVisualNovelSubType Type { get; set; }
 
-		// Token: 0x06036A56 RID: 223830 RVA: 0x0076C2E3 File Offset: 0x0076A4E3
+		// Token: 0x06039E6C RID: 237164 RVA: 0x007CF58B File Offset: 0x007CD78B
 		public IVisualNovelActivityActionConfigBaseT()
 		{
 			this.Type = EVisualNovelSubType.SolarSchool;

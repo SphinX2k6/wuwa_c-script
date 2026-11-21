@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002FCA RID: 12234
+// Token: 0x0200251E RID: 9502
 [NullableContext(1)]
 [Nullable(0)]
 public class GameplayCueMonsterBeam : GameplayCueBeam
 {
-	// Token: 0x06019EF8 RID: 106232 RVA: 0x006C8D59 File Offset: 0x006C6F59
+	// Token: 0x0601780A RID: 96266 RVA: 0x006EF62D File Offset: 0x006ED82D
 	protected override void OnInit()
 	{
 		base.OnInit();
 		this.FallbackForwardOffset = this.ParseParamNumber("FallbackForwardOffset", 600f);
 	}
 
-	// Token: 0x06019EF9 RID: 106233 RVA: 0x006C8D77 File Offset: 0x006C6F77
+	// Token: 0x0601780B RID: 96267 RVA: 0x006EF64B File Offset: 0x006ED84B
 	protected override void OnTick(float delta)
 	{
 		this.RefreshTarget();
 		base.OnTick(delta);
 	}
 
-	// Token: 0x06019EFA RID: 106234 RVA: 0x006C8D88 File Offset: 0x006C6F88
+	// Token: 0x0601780C RID: 96268 RVA: 0x006EF65C File Offset: 0x006ED85C
 	protected override void OnCreate()
 	{
 		this.RefreshTarget();
@@ -32,12 +32,12 @@ public class GameplayCueMonsterBeam : GameplayCueBeam
 		});
 	}
 
-	// Token: 0x06019EFB RID: 106235 RVA: 0x006C8DD6 File Offset: 0x006C6FD6
+	// Token: 0x0601780D RID: 96269 RVA: 0x006EF6AA File Offset: 0x006ED8AA
 	protected override void ValidateBeamConfig()
 	{
 	}
 
-	// Token: 0x06019EFC RID: 106236 RVA: 0x006C8DD8 File Offset: 0x006C6FD8
+	// Token: 0x0601780E RID: 96270 RVA: 0x006EF6AC File Offset: 0x006ED8AC
 	protected override bool ShouldHideBeam()
 	{
 		if (!this.HasTarget())
@@ -47,7 +47,7 @@ public class GameplayCueMonsterBeam : GameplayCueBeam
 		return this.ActorInternal.bHidden || this.TargetActor.bHidden;
 	}
 
-	// Token: 0x06019EFD RID: 106237 RVA: 0x006C8E08 File Offset: 0x006C7008
+	// Token: 0x0601780F RID: 96271 RVA: 0x006EF6DC File Offset: 0x006ED8DC
 	protected override ABaseCharacter GetBeamOwner()
 	{
 		if (!this.HasTarget())
@@ -57,7 +57,7 @@ public class GameplayCueMonsterBeam : GameplayCueBeam
 		return this.TargetActor;
 	}
 
-	// Token: 0x06019EFE RID: 106238 RVA: 0x006C8E20 File Offset: 0x006C7020
+	// Token: 0x06017810 RID: 96272 RVA: 0x006EF6F4 File Offset: 0x006ED8F4
 	protected override FVectorDouble[] GetBeamPoints()
 	{
 		if (this.HasTarget())
@@ -79,14 +79,14 @@ public class GameplayCueMonsterBeam : GameplayCueBeam
 		return array2;
 	}
 
-	// Token: 0x06019EFF RID: 106239 RVA: 0x006C8EC0 File Offset: 0x006C70C0
+	// Token: 0x06017811 RID: 96273 RVA: 0x006EF794 File Offset: 0x006ED994
 	private bool HasTarget()
 	{
 		TsBaseCharacter targetActor = this.TargetActor;
 		return targetActor != null && targetActor.IsValid() && this.TargetActor != this.ActorInternal;
 	}
 
-	// Token: 0x06019F00 RID: 106240 RVA: 0x006C8EEC File Offset: 0x006C70EC
+	// Token: 0x06017812 RID: 96274 RVA: 0x006EF7C0 File Offset: 0x006ED9C0
 	private void RefreshTarget()
 	{
 		ValueTuple<TsBaseCharacter, string> valueTuple = this.ResolveLockOnOrSkillTarget();
@@ -96,7 +96,7 @@ public class GameplayCueMonsterBeam : GameplayCueBeam
 		this.TargetSocketName = item2;
 	}
 
-	// Token: 0x06019F01 RID: 106241 RVA: 0x006C8F1C File Offset: 0x006C711C
+	// Token: 0x06017813 RID: 96275 RVA: 0x006EF7F0 File Offset: 0x006ED9F0
 	[return: TupleElementNames(new string[]
 	{
 		"Target",
@@ -159,7 +159,7 @@ public class GameplayCueMonsterBeam : GameplayCueBeam
 		return new ValueTuple<TsBaseCharacter, string>((component != null) ? component.Actor : null, item);
 	}
 
-	// Token: 0x06019F02 RID: 106242 RVA: 0x006C903C File Offset: 0x006C723C
+	// Token: 0x06017814 RID: 96276 RVA: 0x006EF910 File Offset: 0x006EDB10
 	private FVectorDouble GetTargetPoint()
 	{
 		TsBaseCharacter targetActor = this.TargetActor;
@@ -186,7 +186,7 @@ public class GameplayCueMonsterBeam : GameplayCueBeam
 		return mesh.D_GetSocketLocation(fname2.Value);
 	}
 
-	// Token: 0x06019F03 RID: 106243 RVA: 0x006C90D4 File Offset: 0x006C72D4
+	// Token: 0x06017815 RID: 96277 RVA: 0x006EF9A8 File Offset: 0x006EDBA8
 	private FVectorDouble GetFallbackPoint()
 	{
 		FVectorDouble fvectorDouble = this.ActorInternal.D_K2_GetActorLocation();
@@ -195,7 +195,7 @@ public class GameplayCueMonsterBeam : GameplayCueBeam
 		return new FVectorDouble(fvectorDouble.X + (double)(actorForwardVector.X * fallbackForwardOffset), fvectorDouble.Y + (double)(actorForwardVector.Y * fallbackForwardOffset), fvectorDouble.Z + (double)(actorForwardVector.Z * fallbackForwardOffset));
 	}
 
-	// Token: 0x06019F04 RID: 106244 RVA: 0x006C9138 File Offset: 0x006C7338
+	// Token: 0x06017816 RID: 96278 RVA: 0x006EFA0C File Offset: 0x006EDC0C
 	private static FVectorDouble GetMeshSocketLocation(ABaseCharacter actor, FName? socket)
 	{
 		USkeletalMeshComponent mesh = actor.Mesh;
@@ -206,7 +206,7 @@ public class GameplayCueMonsterBeam : GameplayCueBeam
 		return actor.D_K2_GetActorLocation();
 	}
 
-	// Token: 0x06019F05 RID: 106245 RVA: 0x006C916C File Offset: 0x006C736C
+	// Token: 0x06017817 RID: 96279 RVA: 0x006EFA40 File Offset: 0x006EDC40
 	private float ParseParamNumber(string key, float defaultValue)
 	{
 		int parametersLength = this.CueConfig.ParametersLength;
@@ -232,16 +232,16 @@ public class GameplayCueMonsterBeam : GameplayCueBeam
 		return defaultValue;
 	}
 
-	// Token: 0x0400C449 RID: 50249
+	// Token: 0x0400C7F2 RID: 51186
 	private const float DEFAULT_FALLBACK_FORWARD_OFFSET = 600f;
 
-	// Token: 0x0400C44A RID: 50250
+	// Token: 0x0400C7F3 RID: 51187
 	private float FallbackForwardOffset = 600f;
 
-	// Token: 0x0400C44B RID: 50251
+	// Token: 0x0400C7F4 RID: 51188
 	[Nullable(2)]
 	private TsBaseCharacter TargetActor;
 
-	// Token: 0x0400C44C RID: 50252
+	// Token: 0x0400C7F5 RID: 51189
 	private string TargetSocketName = string.Empty;
 }

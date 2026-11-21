@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052C5 RID: 21189
+	// Token: 0x02005830 RID: 22576
 	public class IFoxJumpInteractPointRelationTypeT
 	{
-		// Token: 0x17009B69 RID: 39785
-		// (get) Token: 0x06022903 RID: 141571 RVA: 0x004CA7AC File Offset: 0x004C89AC
-		// (set) Token: 0x06022904 RID: 141572 RVA: 0x004CA7B4 File Offset: 0x004C89B4
+		// Token: 0x1700A372 RID: 41842
+		// (get) Token: 0x060248C7 RID: 149703 RVA: 0x005058A8 File Offset: 0x00503AA8
+		// (set) Token: 0x060248C8 RID: 149704 RVA: 0x005058B0 File Offset: 0x00503AB0
 		public EFoxJumpInteractPointRelationType Type { get; set; }
 
-		// Token: 0x17009B6A RID: 39786
-		// (get) Token: 0x06022905 RID: 141573 RVA: 0x004CA7BD File Offset: 0x004C89BD
-		// (set) Token: 0x06022906 RID: 141574 RVA: 0x004CA7C5 File Offset: 0x004C89C5
+		// Token: 0x1700A373 RID: 41843
+		// (get) Token: 0x060248C9 RID: 149705 RVA: 0x005058B9 File Offset: 0x00503AB9
+		// (set) Token: 0x060248CA RID: 149706 RVA: 0x005058C1 File Offset: 0x00503AC1
 		public IVectorInfoT Offset { get; set; }
 
-		// Token: 0x17009B6B RID: 39787
-		// (get) Token: 0x06022907 RID: 141575 RVA: 0x004CA7CE File Offset: 0x004C89CE
-		// (set) Token: 0x06022908 RID: 141576 RVA: 0x004CA7D6 File Offset: 0x004C89D6
+		// Token: 0x1700A374 RID: 41844
+		// (get) Token: 0x060248CB RID: 149707 RVA: 0x005058CA File Offset: 0x00503ACA
+		// (set) Token: 0x060248CC RID: 149708 RVA: 0x005058D2 File Offset: 0x00503AD2
 		public IVectorInfoT RaycastDestOffset { get; set; }
 
-		// Token: 0x06022909 RID: 141577 RVA: 0x004CA7DF File Offset: 0x004C89DF
+		// Token: 0x060248CD RID: 149709 RVA: 0x005058DB File Offset: 0x00503ADB
 		public IFoxJumpInteractPointRelationTypeT()
 		{
 			this.Type = EFoxJumpInteractPointRelationType.ThisEntity;

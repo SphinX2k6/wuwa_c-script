@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
@@ -10,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BF5 RID: 23541
+	// Token: 0x02004BD5 RID: 19413
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +18,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 	})]
 	public class CiacconaActivityRewardItem : GridProxyAbstract<CiacconaGalRewardData>
 	{
-		// Token: 0x0603B7E7 RID: 243687 RVA: 0x00E30464 File Offset: 0x00E2E664
+		// Token: 0x06030732 RID: 198450 RVA: 0x00D80774 File Offset: 0x00D7E974
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -43,7 +42,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B7E8 RID: 243688 RVA: 0x00E30574 File Offset: 0x00E2E774
+		// Token: 0x06030733 RID: 198451 RVA: 0x00D80884 File Offset: 0x00D7EA84
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CiacconaActivityRewardItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -54,13 +53,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B7E9 RID: 243689 RVA: 0x00E305B7 File Offset: 0x00E2E7B7
+		// Token: 0x06030734 RID: 198452 RVA: 0x00D808C7 File Offset: 0x00D7EAC7
 		protected override void OnStart()
 		{
 			this.ScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(6), new Func<CommonItemSmallItemGrid>(this.CreateItem), null, false, null);
 		}
 
-		// Token: 0x0603B7EA RID: 243690 RVA: 0x00E305DC File Offset: 0x00E2E7DC
+		// Token: 0x06030735 RID: 198453 RVA: 0x00D808EC File Offset: 0x00D7EAEC
 		[NullableContext(1)]
 		public override void Refresh(CiacconaGalRewardData data, bool isSelected, int gridIndex)
 		{
@@ -72,24 +71,24 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.BtnE.SetActive(false);
 			base.GetText(2).SetUIActive(!data.CanReceive);
 			base.GetItem(3).SetUIActive(data.IsReceived);
-			this.ScrollView.RefreshByData(data.RewardItemDataList.ToList<TItem>(), null, false);
+			this.ScrollView.RefreshByData(data.RewardItemDataList, null, false);
 		}
 
-		// Token: 0x0603B7EB RID: 243691 RVA: 0x00E306B1 File Offset: 0x00E2E8B1
+		// Token: 0x06030736 RID: 198454 RVA: 0x00D809BC File Offset: 0x00D7EBBC
 		[NullableContext(1)]
 		private CommonItemSmallItemGrid CreateItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0603B7EC RID: 243692 RVA: 0x00E306B8 File Offset: 0x00E2E8B8
+		// Token: 0x06030737 RID: 198455 RVA: 0x00D809C4 File Offset: 0x00D7EBC4
 		private void OnReceive(int _)
 		{
 			int id = CiacconaGalModel.Instance.ActivityData.Id;
 			CiacconaGalController.Instance.RequestGetActivityProgressReward(id, this.Data.Id);
 		}
 
-		// Token: 0x0401EFE4 RID: 126948
+		// Token: 0x04019A95 RID: 105109
 		[Nullable(new byte[]
 		{
 			2,
@@ -97,38 +96,38 @@ namespace CSharpScript.Game.Module.CiacconaGal
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> ScrollView;
 
-		// Token: 0x0401EFE5 RID: 126949
+		// Token: 0x04019A96 RID: 105110
 		private ButtonItem BtnE;
 
-		// Token: 0x0401EFE6 RID: 126950
+		// Token: 0x04019A97 RID: 105111
 		private ButtonItem BtnB;
 
-		// Token: 0x0401EFE7 RID: 126951
+		// Token: 0x04019A98 RID: 105112
 		private CiacconaGalRewardData Data;
 
-		// Token: 0x0200BDDE RID: 48606
+		// Token: 0x0200A7E6 RID: 42982
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040393FD RID: 234493
+			// Token: 0x04033DC0 RID: 212416
 			public const int BtnE = 0;
 
-			// Token: 0x040393FE RID: 234494
+			// Token: 0x04033DC1 RID: 212417
 			public const int BtnB = 1;
 
-			// Token: 0x040393FF RID: 234495
+			// Token: 0x04033DC2 RID: 212418
 			public const int TextUnfinished = 2;
 
-			// Token: 0x04039400 RID: 234496
+			// Token: 0x04033DC3 RID: 212419
 			public const int ItemFinished = 3;
 
-			// Token: 0x04039401 RID: 234497
+			// Token: 0x04033DC4 RID: 212420
 			public const int TextTitle = 4;
 
-			// Token: 0x04039402 RID: 234498
+			// Token: 0x04033DC5 RID: 212421
 			public const int TextDesc = 5;
 
-			// Token: 0x04039403 RID: 234499
+			// Token: 0x04033DC6 RID: 212422
 			public const int ScrollView = 6;
 		}
 	}

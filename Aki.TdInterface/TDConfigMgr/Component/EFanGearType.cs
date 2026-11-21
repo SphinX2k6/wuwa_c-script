@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000A6 RID: 166
+	// Token: 0x020000AC RID: 172
 	[EnumExtensions]
 	public enum EFanGearType
 	{
-		// Token: 0x040003E5 RID: 997
+		// Token: 0x04000401 RID: 1025
 		ReboundPlateGear,
-		// Token: 0x040003E6 RID: 998
+		// Token: 0x04000402 RID: 1026
 		[EnumStringMember("LightDeliver ")]
 		LightDeliver
 	}

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000C05 RID: 3077
+	// Token: 0x02000BF5 RID: 3061
 	public sealed class PbHandInItem : IMessage<PbHandInItem>, IMessage, IEquatable<PbHandInItem>, IDeepCloneable<PbHandInItem>, IBufferMessage
 	{
-		// Token: 0x06010B3C RID: 68412 RVA: 0x0027206C File Offset: 0x0027026C
+		// Token: 0x06010A3C RID: 68156 RVA: 0x00270304 File Offset: 0x0026E504
 		[NullableContext(1)]
 		public static PbHandInItem Create()
 		{
 			return new PbHandInItem();
 		}
 
-		// Token: 0x17003714 RID: 14100
-		// (get) Token: 0x06010B3D RID: 68413 RVA: 0x00272073 File Offset: 0x00270273
+		// Token: 0x170036DD RID: 14045
+		// (get) Token: 0x06010A3D RID: 68157 RVA: 0x0027030B File Offset: 0x0026E50B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<PbHandInItem> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003715 RID: 14101
-		// (get) Token: 0x06010B3E RID: 68414 RVA: 0x0027207A File Offset: 0x0027027A
+		// Token: 0x170036DE RID: 14046
+		// (get) Token: 0x06010A3E RID: 68158 RVA: 0x00270312 File Offset: 0x0026E512
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003716 RID: 14102
-		// (get) Token: 0x06010B3F RID: 68415 RVA: 0x0027207D File Offset: 0x0027027D
+		// Token: 0x170036DF RID: 14047
+		// (get) Token: 0x06010A3F RID: 68159 RVA: 0x00270315 File Offset: 0x0026E515
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010B40 RID: 68416 RVA: 0x00272084 File Offset: 0x00270284
+		// Token: 0x06010A40 RID: 68160 RVA: 0x0027031C File Offset: 0x0026E51C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbHandInItem()
 		{
 		}
 
-		// Token: 0x06010B41 RID: 68417 RVA: 0x00272098 File Offset: 0x00270298
+		// Token: 0x06010A41 RID: 68161 RVA: 0x00270330 File Offset: 0x0026E530
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbHandInItem(PbHandInItem other) : this()
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06010B42 RID: 68418 RVA: 0x002720E5 File Offset: 0x002702E5
+		// Token: 0x06010A42 RID: 68162 RVA: 0x0027037D File Offset: 0x0026E57D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbHandInItem Clone()
@@ -80,8 +80,8 @@ namespace Aki.Protocol
 			return new PbHandInItem(this);
 		}
 
-		// Token: 0x17003717 RID: 14103
-		// (get) Token: 0x06010B43 RID: 68419 RVA: 0x002720ED File Offset: 0x002702ED
+		// Token: 0x170036E0 RID: 14048
+		// (get) Token: 0x06010A43 RID: 68163 RVA: 0x00270385 File Offset: 0x0026E585
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PbHandInItemInfo> HandItemInfo
@@ -92,9 +92,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003718 RID: 14104
-		// (get) Token: 0x06010B44 RID: 68420 RVA: 0x002720F5 File Offset: 0x002702F5
-		// (set) Token: 0x06010B45 RID: 68421 RVA: 0x002720FD File Offset: 0x002702FD
+		// Token: 0x170036E1 RID: 14049
+		// (get) Token: 0x06010A44 RID: 68164 RVA: 0x0027038D File Offset: 0x0026E58D
+		// (set) Token: 0x06010A45 RID: 68165 RVA: 0x00270395 File Offset: 0x0026E595
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Count
@@ -109,9 +109,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003719 RID: 14105
-		// (get) Token: 0x06010B46 RID: 68422 RVA: 0x00272106 File Offset: 0x00270306
-		// (set) Token: 0x06010B47 RID: 68423 RVA: 0x0027210E File Offset: 0x0027030E
+		// Token: 0x170036E2 RID: 14050
+		// (get) Token: 0x06010A46 RID: 68166 RVA: 0x0027039E File Offset: 0x0026E59E
+		// (set) Token: 0x06010A47 RID: 68167 RVA: 0x002703A6 File Offset: 0x0026E5A6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbHandInItemType PbHandInItemType
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010B48 RID: 68424 RVA: 0x00272117 File Offset: 0x00270317
+		// Token: 0x06010A48 RID: 68168 RVA: 0x002703AF File Offset: 0x0026E5AF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PbHandInItem);
 		}
 
-		// Token: 0x06010B49 RID: 68425 RVA: 0x00272128 File Offset: 0x00270328
+		// Token: 0x06010A49 RID: 68169 RVA: 0x002703C0 File Offset: 0x0026E5C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PbHandInItem other)
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.handItemInfo_.Equals(other.handItemInfo_) && this.Count == other.Count && this.PbHandInItemType == other.PbHandInItemType && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06010B4A RID: 68426 RVA: 0x00272188 File Offset: 0x00270388
+		// Token: 0x06010A4A RID: 68170 RVA: 0x00270420 File Offset: 0x0026E620
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010B4B RID: 68427 RVA: 0x002721F4 File Offset: 0x002703F4
+		// Token: 0x06010A4B RID: 68171 RVA: 0x0027048C File Offset: 0x0026E68C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06010B4C RID: 68428 RVA: 0x00272201 File Offset: 0x00270401
+		// Token: 0x06010A4C RID: 68172 RVA: 0x00270499 File Offset: 0x0026E699
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06010B4D RID: 68429 RVA: 0x0027220C File Offset: 0x0027040C
+		// Token: 0x06010A4D RID: 68173 RVA: 0x002704A4 File Offset: 0x0026E6A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010B4E RID: 68430 RVA: 0x00272278 File Offset: 0x00270478
+		// Token: 0x06010A4E RID: 68174 RVA: 0x00270510 File Offset: 0x0026E710
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010B4F RID: 68431 RVA: 0x002722E4 File Offset: 0x002704E4
+		// Token: 0x06010A4F RID: 68175 RVA: 0x0027057C File Offset: 0x0026E77C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PbHandInItem other)
@@ -245,7 +245,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06010B50 RID: 68432 RVA: 0x00272345 File Offset: 0x00270545
+		// Token: 0x06010A50 RID: 68176 RVA: 0x002705DD File Offset: 0x0026E7DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -253,7 +253,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06010B51 RID: 68433 RVA: 0x00272350 File Offset: 0x00270550
+		// Token: 0x06010A51 RID: 68177 RVA: 0x002705E8 File Offset: 0x0026E7E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -290,31 +290,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006A22 RID: 27170
+		// Token: 0x04006A36 RID: 27190
 		private static readonly MessageParser<PbHandInItem> _parser = new MessageParser<PbHandInItem>(() => new PbHandInItem());
 
-		// Token: 0x04006A23 RID: 27171
+		// Token: 0x04006A37 RID: 27191
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006A24 RID: 27172
+		// Token: 0x04006A38 RID: 27192
 		public const int HandItemInfoFieldNumber = 1;
 
-		// Token: 0x04006A25 RID: 27173
+		// Token: 0x04006A39 RID: 27193
 		private static readonly FieldCodec<PbHandInItemInfo> _repeated_handItemInfo_codec = FieldCodec.ForMessage<PbHandInItemInfo>(10U, PbHandInItemInfo.Parser);
 
-		// Token: 0x04006A26 RID: 27174
+		// Token: 0x04006A3A RID: 27194
 		private readonly RepeatedField<PbHandInItemInfo> handItemInfo_ = new RepeatedField<PbHandInItemInfo>();
 
-		// Token: 0x04006A27 RID: 27175
+		// Token: 0x04006A3B RID: 27195
 		public const int CountFieldNumber = 2;
 
-		// Token: 0x04006A28 RID: 27176
+		// Token: 0x04006A3C RID: 27196
 		private int count_;
 
-		// Token: 0x04006A29 RID: 27177
+		// Token: 0x04006A3D RID: 27197
 		public const int PbHandInItemTypeFieldNumber = 3;
 
-		// Token: 0x04006A2A RID: 27178
+		// Token: 0x04006A3E RID: 27198
 		private PbHandInItemType pbHandInItemType_;
 	}
 }

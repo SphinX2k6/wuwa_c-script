@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.KuroSimpleCombat.PB
 {
-	// Token: 0x02006FBC RID: 28604
+	// Token: 0x0200613D RID: 24893
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballBattleEntityRedirectFilter : KscEntityRedirectFilter
 	{
-		// Token: 0x06045829 RID: 284713 RVA: 0x0113E824 File Offset: 0x0113CA24
+		// Token: 0x0603B9D9 RID: 244185 RVA: 0x010E85F4 File Offset: 0x010E67F4
 		protected unsafe override bool OnCreateEntity(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 		{
 			IPinballBattleCombatInfo pinballBattleCombatInfo = PinballBattleEntityModelBuilder.Get(entityData, componentDataMap);
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return true;
 		}
 
-		// Token: 0x0604582A RID: 284714 RVA: 0x0113E918 File Offset: 0x0113CB18
+		// Token: 0x0603B9DA RID: 244186 RVA: 0x010E86E8 File Offset: 0x010E68E8
 		private unsafe void CreateEntityFromModel(IPinballBattleCombatInfo model)
 		{
 			IPinballBattleCombatInfo pinballBattleCombatInfo = model;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.PendingEntities.Add(pinballBattleCombatInfo);
 		}
 
-		// Token: 0x0604582B RID: 284715 RVA: 0x0113EA2C File Offset: 0x0113CC2C
+		// Token: 0x0603B9DB RID: 244187 RVA: 0x010E87FC File Offset: 0x010E69FC
 		protected override void OnInstantiateEntities()
 		{
 			foreach (IPinballBattleCombatInfo model in this.PendingEntities)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.PendingEntities.Clear();
 		}
 
-		// Token: 0x0604582C RID: 284716 RVA: 0x0113EA8C File Offset: 0x0113CC8C
+		// Token: 0x0603B9DC RID: 244188 RVA: 0x010E885C File Offset: 0x010E6A5C
 		private void InstantiateEntity(IPinballBattleCombatInfo model)
 		{
 			AActor renderActor = null;
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			});
 		}
 
-		// Token: 0x0604582D RID: 284717 RVA: 0x0113F1FC File Offset: 0x0113D3FC
+		// Token: 0x0603B9DD RID: 244189 RVA: 0x010E8FCC File Offset: 0x010E71CC
 		protected override bool OnRemoveEntity(int creatureDataId)
 		{
 			PinballBattleSubModel pinballBattleSubModel = KuroSimpleCombatController.Instance.GetSubModel(EKscGameplayType.PinballBattle) as PinballBattleSubModel;
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return true;
 		}
 
-		// Token: 0x0604582E RID: 284718 RVA: 0x0113F250 File Offset: 0x0113D450
+		// Token: 0x0603B9DE RID: 244190 RVA: 0x010E9020 File Offset: 0x010E7220
 		private void RemoveEntity(IPinballBattleCombatInfo model, EKscEntityRemoveReasonType removeReasonType)
 		{
 			PinballBattleWorldEntityModel pinballBattleWorldEntityModel;
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x0604582F RID: 284719 RVA: 0x0113F2DC File Offset: 0x0113D4DC
+		// Token: 0x0603B9DF RID: 244191 RVA: 0x010E90AC File Offset: 0x010E72AC
 		private bool IsBarOrPlayerEntity(PinballBattleSubModel pinballBattleModel, int uid)
 		{
 			KscEntityHandle kscEntityHandle = pinballBattleModel.GetKscEntityHandle((long)uid);
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return aksc_Entity is AKSC_Shape2D_Entity_Bar || aksc_Entity is AKSC_Shape2D_Entity_Player || aksc_Entity is AKSC_Shape2D_Entity_TeamPlayer;
 		}
 
-		// Token: 0x06045830 RID: 284720 RVA: 0x0113F320 File Offset: 0x0113D520
+		// Token: 0x0603B9E0 RID: 244192 RVA: 0x010E90F0 File Offset: 0x010E72F0
 		public override void Reset()
 		{
 			(KuroSimpleCombatController.Instance.GetSubModel(EKscGameplayType.PinballBattle) as PinballBattleSubModel).GetAllEntities(this.CachedAllEntities);
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.PendingEntities.Clear();
 		}
 
-		// Token: 0x06045831 RID: 284721 RVA: 0x0113F418 File Offset: 0x0113D618
+		// Token: 0x0603B9E1 RID: 244193 RVA: 0x010E91E8 File Offset: 0x010E73E8
 		public void PreReset()
 		{
 			UiTimeDilation.Instance.AddWaitSetTimeDilationTag("PinballPreReset");
@@ -378,7 +378,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}, null, null);
 		}
 
-		// Token: 0x06045832 RID: 284722 RVA: 0x0113F59C File Offset: 0x0113D79C
+		// Token: 0x0603B9E2 RID: 244194 RVA: 0x010E936C File Offset: 0x010E756C
 		[return: Nullable(2)]
 		public string FillUpModelInfo(IPinballBattleCombatInfo model)
 		{
@@ -405,19 +405,19 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return null;
 		}
 
-		// Token: 0x04024452 RID: 148562
+		// Token: 0x0401F707 RID: 128775
 		public const string PINBALL_PRE_RESET_TAG = "PinballPreReset";
 
-		// Token: 0x04024453 RID: 148563
+		// Token: 0x0401F708 RID: 128776
 		private static readonly Pool<PinballBattleWorldEntityModel> WorldEntityPool = new Pool<PinballBattleWorldEntityModel>(100, () => new PinballBattleWorldEntityModel(), null);
 
-		// Token: 0x04024454 RID: 148564
+		// Token: 0x0401F709 RID: 128777
 		private readonly List<IPinballBattleCombatInfo> PendingEntities = new List<IPinballBattleCombatInfo>();
 
-		// Token: 0x04024455 RID: 148565
+		// Token: 0x0401F70A RID: 128778
 		private readonly List<IPinballBattleCombatInfo> CachedAllEntities = new List<IPinballBattleCombatInfo>();
 
-		// Token: 0x04024456 RID: 148566
+		// Token: 0x0401F70B RID: 128779
 		private readonly Dictionary<int, PinballBattleWorldEntityModel> InitializedEntities = new Dictionary<int, PinballBattleWorldEntityModel>();
 	}
 }

@@ -9,13 +9,13 @@ using UnrealEngine;
 [Nullable(0)]
 public class RangeEntityInfo : IStaticVariableResetter
 {
-	// Token: 0x06000D1A RID: 3354 RVA: 0x00046C94 File Offset: 0x00044E94
+	// Token: 0x06000D20 RID: 3360 RVA: 0x00047830 File Offset: 0x00045A30
 	static RangeEntityInfo()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RangeEntityInfo.CreateStaticDefaultValue), new Action(RangeEntityInfo.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06000D1B RID: 3355 RVA: 0x00046CB4 File Offset: 0x00044EB4
+	// Token: 0x06000D21 RID: 3361 RVA: 0x00047850 File Offset: 0x00045A50
 	public static void CreateStaticDefaultValue()
 	{
 		RangeEntityInfo.TmpVector1 = Vector.Create();
@@ -26,7 +26,7 @@ public class RangeEntityInfo : IStaticVariableResetter
 		RangeEntityInfo.IsInit = true;
 	}
 
-	// Token: 0x06000D1C RID: 3356 RVA: 0x00046D1D File Offset: 0x00044F1D
+	// Token: 0x06000D22 RID: 3362 RVA: 0x000478B9 File Offset: 0x00045AB9
 	public static void ResetStaticDefaultValue()
 	{
 		RangeEntityInfo.TmpVector1 = null;
@@ -37,7 +37,7 @@ public class RangeEntityInfo : IStaticVariableResetter
 		RangeEntityInfo.IsInit = false;
 	}
 
-	// Token: 0x06000D1D RID: 3357 RVA: 0x00046D43 File Offset: 0x00044F43
+	// Token: 0x06000D23 RID: 3363 RVA: 0x000478DF File Offset: 0x00045ADF
 	private static void EnsureStaticDefaultValue()
 	{
 		if (RangeEntityInfo.IsInit)
@@ -47,7 +47,7 @@ public class RangeEntityInfo : IStaticVariableResetter
 		RangeEntityInfo.CreateStaticDefaultValue();
 	}
 
-	// Token: 0x06000D1E RID: 3358 RVA: 0x00046D54 File Offset: 0x00044F54
+	// Token: 0x06000D24 RID: 3364 RVA: 0x000478F0 File Offset: 0x00045AF0
 	public RangeEntityInfo(ITriggerShape config, [Nullable(2)] Aki.TDConfigMgr.Action.ITransform rootTrans)
 	{
 		RangeEntityInfo.EnsureStaticDefaultValue();
@@ -69,7 +69,7 @@ public class RangeEntityInfo : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D1F RID: 3359 RVA: 0x00046E1C File Offset: 0x0004501C
+	// Token: 0x06000D25 RID: 3365 RVA: 0x000479B8 File Offset: 0x00045BB8
 	protected static void FromVectorInfo([Nullable(2)] IVector vec, Vector _out)
 	{
 		_out.X = ((vec != null) ? vec.X : 0.0);
@@ -77,7 +77,7 @@ public class RangeEntityInfo : IStaticVariableResetter
 		_out.Z = ((vec != null) ? vec.Z : 0.0);
 	}
 
-	// Token: 0x06000D20 RID: 3360 RVA: 0x00046E78 File Offset: 0x00045078
+	// Token: 0x06000D26 RID: 3366 RVA: 0x00047A14 File Offset: 0x00045C14
 	protected void InverseTransformNoScale(Vector v, Vector _out)
 	{
 		RangeEntityInfo.EnsureStaticDefaultValue();
@@ -90,36 +90,36 @@ public class RangeEntityInfo : IStaticVariableResetter
 		RangeEntityInfo.TmpQuat.RotateVector(_out, _out);
 	}
 
-	// Token: 0x06000D21 RID: 3361 RVA: 0x00046EC7 File Offset: 0x000450C7
+	// Token: 0x06000D27 RID: 3367 RVA: 0x00047A63 File Offset: 0x00045C63
 	public virtual bool IsInRange(Vector sample)
 	{
 		return true;
 	}
 
-	// Token: 0x04000A7B RID: 2683
+	// Token: 0x04000A83 RID: 2691
 	public Transform Transform = Transform.Create();
 
-	// Token: 0x04000A7C RID: 2684
+	// Token: 0x04000A84 RID: 2692
 	public ETriggerShape Shape;
 
-	// Token: 0x04000A7D RID: 2685
+	// Token: 0x04000A85 RID: 2693
 	protected bool NoRotation = true;
 
-	// Token: 0x04000A7E RID: 2686
+	// Token: 0x04000A86 RID: 2694
 	public static Vector TmpVector1;
 
-	// Token: 0x04000A7F RID: 2687
+	// Token: 0x04000A87 RID: 2695
 	public static Vector TmpVector2;
 
-	// Token: 0x04000A80 RID: 2688
+	// Token: 0x04000A88 RID: 2696
 	public static Vector TmpVector3;
 
-	// Token: 0x04000A81 RID: 2689
+	// Token: 0x04000A89 RID: 2697
 	public static Rotator TmpRotator;
 
-	// Token: 0x04000A82 RID: 2690
+	// Token: 0x04000A8A RID: 2698
 	public static Quat TmpQuat;
 
-	// Token: 0x04000A83 RID: 2691
+	// Token: 0x04000A8B RID: 2699
 	private static bool IsInit;
 }

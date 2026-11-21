@@ -5,12 +5,12 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.HonamiStory;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02001E7B RID: 7803
+// Token: 0x0200133D RID: 4925
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryQuickEquipAllManager
 {
-	// Token: 0x0600EDD2 RID: 60882 RVA: 0x0038A9AC File Offset: 0x00388BAC
+	// Token: 0x0600C1F1 RID: 49649 RVA: 0x0039659C File Offset: 0x0039479C
 	public bool Refresh(bool force)
 	{
 		if (!this.IsDirty && !force)
@@ -119,19 +119,19 @@ public class HonamiStoryQuickEquipAllManager
 		return this.CurPowerLevel > this.OldPowerLevel && this.CurPowerLevel > powerLevel;
 	}
 
-	// Token: 0x0600EDD3 RID: 60883 RVA: 0x0038AFCC File Offset: 0x003891CC
+	// Token: 0x0600C1F2 RID: 49650 RVA: 0x00396BBC File Offset: 0x00394DBC
 	public int GetCurPowerLevel()
 	{
 		return this.CurPowerLevel;
 	}
 
-	// Token: 0x0600EDD4 RID: 60884 RVA: 0x0038AFD4 File Offset: 0x003891D4
+	// Token: 0x0600C1F3 RID: 49651 RVA: 0x00396BC4 File Offset: 0x00394DC4
 	public int GetRealPowerLevel()
 	{
 		return this.CurRealPowerLevel;
 	}
 
-	// Token: 0x0600EDD5 RID: 60885 RVA: 0x0038AFDC File Offset: 0x003891DC
+	// Token: 0x0600C1F4 RID: 49652 RVA: 0x00396BCC File Offset: 0x00394DCC
 	public void ApplyQuickAll()
 	{
 		List<HonamiStoryRoleEquipData> roleEquipDataList = HonamiStoryModel.Instance.GetPlayerBackpackData().GetRoleEquipDataList(true);
@@ -221,7 +221,7 @@ public class HonamiStoryQuickEquipAllManager
 		}
 	}
 
-	// Token: 0x0600EDD6 RID: 60886 RVA: 0x0038B36C File Offset: 0x0038956C
+	// Token: 0x0600C1F5 RID: 49653 RVA: 0x00396F5C File Offset: 0x0039515C
 	private Dictionary<int, List<HonamiStoryItemDataBase>> GetAllItem(List<HonamiStoryRoleEquipData> roleDataList)
 	{
 		Dictionary<int, List<HonamiStoryItemDataBase>> dictionary = new Dictionary<int, List<HonamiStoryItemDataBase>>();
@@ -277,7 +277,7 @@ public class HonamiStoryQuickEquipAllManager
 		return dictionary;
 	}
 
-	// Token: 0x0600EDD7 RID: 60887 RVA: 0x0038B544 File Offset: 0x00389744
+	// Token: 0x0600C1F6 RID: 49654 RVA: 0x00397134 File Offset: 0x00395334
 	public void SetDirty()
 	{
 		this.OccupySet.Clear();
@@ -285,13 +285,13 @@ public class HonamiStoryQuickEquipAllManager
 		this.IsDirty = true;
 	}
 
-	// Token: 0x0600EDD8 RID: 60888 RVA: 0x0038B563 File Offset: 0x00389763
+	// Token: 0x0600C1F7 RID: 49655 RVA: 0x00397153 File Offset: 0x00395353
 	public bool GetDirty()
 	{
 		return this.IsDirty;
 	}
 
-	// Token: 0x0600EDD9 RID: 60889 RVA: 0x0038B56C File Offset: 0x0038976C
+	// Token: 0x0600C1F8 RID: 49656 RVA: 0x0039715C File Offset: 0x0039535C
 	private List<HonamiStoryItemDataBase> GetRolePluginList(int roleId, Dictionary<int, List<HonamiStoryItemDataBase>> itemMap)
 	{
 		List<HonamiStoryItemDataBase> list = new List<HonamiStoryItemDataBase>();
@@ -331,24 +331,24 @@ public class HonamiStoryQuickEquipAllManager
 		return list;
 	}
 
-	// Token: 0x04006E59 RID: 28249
+	// Token: 0x04006F3A RID: 28474
 	public int CurPowerLevel;
 
-	// Token: 0x04006E5A RID: 28250
+	// Token: 0x04006F3B RID: 28475
 	public int CurRealPowerLevel;
 
-	// Token: 0x04006E5B RID: 28251
+	// Token: 0x04006F3C RID: 28476
 	private int OldPowerLevel;
 
-	// Token: 0x04006E5C RID: 28252
+	// Token: 0x04006F3D RID: 28477
 	protected bool IsDirty = true;
 
-	// Token: 0x04006E5D RID: 28253
+	// Token: 0x04006F3E RID: 28478
 	private readonly HashSet<HonamiStoryItemDataBase> OccupySet = new HashSet<HonamiStoryItemDataBase>();
 
-	// Token: 0x04006E5E RID: 28254
+	// Token: 0x04006F3F RID: 28479
 	private readonly Dictionary<int, HonamiStoryQuickRoleData> RoleDataMap = new Dictionary<int, HonamiStoryQuickRoleData>();
 
-	// Token: 0x04006E5F RID: 28255
+	// Token: 0x04006F40 RID: 28480
 	private readonly HonamiSortOrderListClass SortOrderClass = new HonamiSortOrderListClass();
 }

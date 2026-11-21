@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200207E RID: 8318
+	// Token: 0x020022C9 RID: 8905
 	public class IVisualNovelPerformanceBase_SetValue
 	{
-		// Token: 0x04006DB8 RID: 28088
+		// Token: 0x040073C5 RID: 29637
 		public EVisualNovelPerformanceType Type;
 
-		// Token: 0x04006DB9 RID: 28089
+		// Token: 0x040073C6 RID: 29638
 		public float? StartTime;
 	}
 }

@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001FFD RID: 8189
+// Token: 0x020014D0 RID: 5328
 [NullableContext(2)]
 [Nullable(0)]
 public abstract class ItemHintItemBase<T> : SliderItem
 {
-	// Token: 0x060100D3 RID: 65747 RVA: 0x003E9975 File Offset: 0x003E7B75
+	// Token: 0x0600D53B RID: 54587 RVA: 0x003F5F6D File Offset: 0x003F416D
 	public void SetShiftData([Nullable(new byte[]
 	{
 		1,
@@ -18,7 +18,7 @@ public abstract class ItemHintItemBase<T> : SliderItem
 		this.ShiftData = shiftData;
 	}
 
-	// Token: 0x060100D4 RID: 65748 RVA: 0x003E9980 File Offset: 0x003E7B80
+	// Token: 0x0600D53C RID: 54588 RVA: 0x003F5F78 File Offset: 0x003F4178
 	public override UniTask AsyncLoadUiResource()
 	{
 		ItemHintItemBase<T>.<AsyncLoadUiResource>d__3 <AsyncLoadUiResource>d__;
@@ -29,15 +29,15 @@ public abstract class ItemHintItemBase<T> : SliderItem
 		return <AsyncLoadUiResource>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060100D5 RID: 65749 RVA: 0x003E99C3 File Offset: 0x003E7BC3
+	// Token: 0x0600D53D RID: 54589 RVA: 0x003F5FBB File Offset: 0x003F41BB
 	protected virtual UniTask OnRefresh(T data)
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x040076BD RID: 30397
+	// Token: 0x040077A6 RID: 30630
 	protected T Data;
 
-	// Token: 0x040076BE RID: 30398
+	// Token: 0x040077A7 RID: 30631
 	protected Func<T> ShiftData;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022BB RID: 8891
+	// Token: 0x0200252A RID: 9514
 	public static class EBlackScreenWhiteTextStartAnimNameExtensions
 	{
-		// Token: 0x0600C2C8 RID: 49864 RVA: 0x001C7594 File Offset: 0x001C5794
+		// Token: 0x0600CE97 RID: 52887 RVA: 0x001DF39C File Offset: 0x001DD59C
 		public static string ToEnumString(this EBlackScreenWhiteTextStartAnimName value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2C9 RID: 49865 RVA: 0x001C75DC File Offset: 0x001C57DC
+		// Token: 0x0600CE98 RID: 52888 RVA: 0x001DF3E4 File Offset: 0x001DD5E4
 		public static EBlackScreenWhiteTextStartAnimName FromString(string name)
 		{
 			EBlackScreenWhiteTextStartAnimName result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2CA RID: 49866 RVA: 0x001C7608 File Offset: 0x001C5808
+		// Token: 0x0600CE99 RID: 52889 RVA: 0x001DF410 File Offset: 0x001DD610
 		public static bool TryFromString(string name, out EBlackScreenWhiteTextStartAnimName value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C2CB RID: 49867 RVA: 0x001C765E File Offset: 0x001C585E
+		// Token: 0x0600CE9A RID: 52890 RVA: 0x001DF466 File Offset: 0x001DD666
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C2CC RID: 49868 RVA: 0x001C767E File Offset: 0x001C587E
+		// Token: 0x0600CE9B RID: 52891 RVA: 0x001DF486 File Offset: 0x001DD686
 		public static EBlackScreenWhiteTextStartAnimName[] GetValues()
 		{
 			return new EBlackScreenWhiteTextStartAnimName[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C2CD RID: 49869 RVA: 0x001C768E File Offset: 0x001C588E
+		// Token: 0x0600CE9C RID: 52892 RVA: 0x001DF496 File Offset: 0x001DD696
 		public static string[] GetNames()
 		{
 			return new string[]

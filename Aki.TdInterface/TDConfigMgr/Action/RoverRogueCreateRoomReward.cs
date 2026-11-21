@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200217C RID: 8572
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023DD RID: 9181
 	public class RoverRogueCreateRoomReward : ActionParams
 	{
-		// Token: 0x0600BC6C RID: 48236 RVA: 0x001B26BC File Offset: 0x001B08BC
+		// Token: 0x0600C7FA RID: 51194 RVA: 0x001C9870 File Offset: 0x001C7A70
 		private RoverRogueCreateRoomReward_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BC6D RID: 48237 RVA: 0x001B26F4 File Offset: 0x001B08F4
+		// Token: 0x0600C7FB RID: 51195 RVA: 0x001C98A8 File Offset: 0x001C7AA8
 		public static RoverRogueCreateRoomReward Create([Nullable(2)] RoverRogueCreateRoomReward instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC6E RID: 48238 RVA: 0x001B2707 File Offset: 0x001B0907
+		// Token: 0x0600C7FC RID: 51196 RVA: 0x001C98BB File Offset: 0x001C7ABB
 		public static RoverRogueCreateRoomReward CreateFromSetValue([Nullable(2)] RoverRogueCreateRoomReward_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC6F RID: 48239 RVA: 0x001B271A File Offset: 0x001B091A
+		// Token: 0x0600C7FD RID: 51197 RVA: 0x001C98CE File Offset: 0x001C7ACE
 		public RoverRogueCreateRoomReward_SetValue ToSetValue()
 		{
 			return new RoverRogueCreateRoomReward_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700395C RID: 14684
-		// (get) Token: 0x0600BC70 RID: 48240 RVA: 0x001B272D File Offset: 0x001B092D
-		// (set) Token: 0x0600BC71 RID: 48241 RVA: 0x001B2758 File Offset: 0x001B0958
+		// Token: 0x17003C49 RID: 15433
+		// (get) Token: 0x0600C7FE RID: 51198 RVA: 0x001C98E1 File Offset: 0x001C7AE1
+		// (set) Token: 0x0600C7FF RID: 51199 RVA: 0x001C990C File Offset: 0x001C7B0C
 		public virtual int RewardType
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007088 RID: 28808
+		// Token: 0x040076BD RID: 30397
 		[Nullable(2)]
 		protected new RoverRogueCreateRoomReward FbInstance;
 
-		// Token: 0x04007089 RID: 28809
+		// Token: 0x040076BE RID: 30398
 		[Nullable(2)]
 		protected RoverRogueCreateRoomReward_SetValue PocoInterface;
 	}

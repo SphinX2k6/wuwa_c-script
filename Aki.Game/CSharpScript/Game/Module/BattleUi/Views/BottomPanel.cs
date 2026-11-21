@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CB7 RID: 23735
+	// Token: 0x02004C99 RID: 19609
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BottomPanel : BattleChildViewPanel
 	{
-		// Token: 0x0603BF89 RID: 245641 RVA: 0x00E55498 File Offset: 0x00E53698
+		// Token: 0x06030EDC RID: 200412 RVA: 0x00DA5B40 File Offset: 0x00DA3D40
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BF8A RID: 245642 RVA: 0x00E555A8 File Offset: 0x00E537A8
+		// Token: 0x06030EDD RID: 200413 RVA: 0x00DA5C50 File Offset: 0x00DA3E50
 		public override UniTask InitializeAsync()
 		{
 			BottomPanel.<InitializeAsync>d__18 <InitializeAsync>d__;
@@ -52,21 +52,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BF8B RID: 245643 RVA: 0x00E555EB File Offset: 0x00E537EB
+		// Token: 0x06030EDE RID: 200414 RVA: 0x00DA5C93 File Offset: 0x00DA3E93
 		private void RefreshBuffView(BattleUiRoleData roleData)
 		{
 			this.RoleBuffView.Refresh(roleData);
 			this.RoleUniqueBuffView.Refresh(roleData);
 		}
 
-		// Token: 0x0603BF8C RID: 245644 RVA: 0x00E55608 File Offset: 0x00E53808
+		// Token: 0x06030EDF RID: 200415 RVA: 0x00DA5CB0 File Offset: 0x00DA3EB0
 		private void OnSeamlessTravelRefresh()
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
 			this.RefreshBuffView(curRoleData);
 		}
 
-		// Token: 0x0603BF8D RID: 245645 RVA: 0x00E55628 File Offset: 0x00E53828
+		// Token: 0x06030EE0 RID: 200416 RVA: 0x00DA5CD0 File Offset: 0x00DA3ED0
 		public override void Reset()
 		{
 			this.RoleStateView = null;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603BF8E RID: 245646 RVA: 0x00E55677 File Offset: 0x00E53877
+		// Token: 0x06030EE1 RID: 200417 RVA: 0x00DA5D1F File Offset: 0x00DA3F1F
 		protected override void OnShowBattleChildViewPanel(bool isFirst)
 		{
 			RoleStateView roleStateView = this.RoleStateView;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			roleStateView.SetNiagaraActive(false);
 		}
 
-		// Token: 0x0603BF8F RID: 245647 RVA: 0x00E5568C File Offset: 0x00E5388C
+		// Token: 0x06030EE2 RID: 200418 RVA: 0x00DA5D34 File Offset: 0x00DA3F34
 		public override void OnTickBattleChildViewPanel(float delta)
 		{
 			RoleStateView roleStateView = this.RoleStateView;
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			bossBuffNumItem.Tick(delta);
 		}
 
-		// Token: 0x0603BF90 RID: 245648 RVA: 0x00E556F4 File Offset: 0x00E538F4
+		// Token: 0x06030EE3 RID: 200419 RVA: 0x00DA5D9C File Offset: 0x00DA3F9C
 		private UniTask NewRoleStateViewAsync()
 		{
 			BottomPanel.<NewRoleStateViewAsync>d__24 <NewRoleStateViewAsync>d__;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewRoleStateViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BF91 RID: 245649 RVA: 0x00E55738 File Offset: 0x00E53938
+		// Token: 0x06030EE4 RID: 200420 RVA: 0x00DA5DE0 File Offset: 0x00DA3FE0
 		private UniTask NewElementBallItemAsync()
 		{
 			BottomPanel.<NewElementBallItemAsync>d__25 <NewElementBallItemAsync>d__;
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewElementBallItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BF92 RID: 245650 RVA: 0x00E5577C File Offset: 0x00E5397C
+		// Token: 0x06030EE5 RID: 200421 RVA: 0x00DA5E24 File Offset: 0x00DA4024
 		private UniTask NewRoleBuffViewAsync()
 		{
 			BottomPanel.<NewRoleBuffViewAsync>d__26 <NewRoleBuffViewAsync>d__;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewRoleBuffViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BF93 RID: 245651 RVA: 0x00E557C0 File Offset: 0x00E539C0
+		// Token: 0x06030EE6 RID: 200422 RVA: 0x00DA5E68 File Offset: 0x00DA4068
 		private UniTask NewSpecialEnergyBarAsync()
 		{
 			BottomPanel.<NewSpecialEnergyBarAsync>d__27 <NewSpecialEnergyBarAsync>d__;
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewSpecialEnergyBarAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BF94 RID: 245652 RVA: 0x00E55804 File Offset: 0x00E53A04
+		// Token: 0x06030EE7 RID: 200423 RVA: 0x00DA5EAC File Offset: 0x00DA40AC
 		private UniTask NewRoleTopBuffViewAsync()
 		{
 			BottomPanel.<NewRoleTopBuffViewAsync>d__28 <NewRoleTopBuffViewAsync>d__;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewRoleTopBuffViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BF95 RID: 245653 RVA: 0x00E55848 File Offset: 0x00E53A48
+		// Token: 0x06030EE8 RID: 200424 RVA: 0x00DA5EF0 File Offset: 0x00DA40F0
 		private UniTask NewHonamiStoryViewAsync()
 		{
 			BottomPanel.<NewHonamiStoryViewAsync>d__29 <NewHonamiStoryViewAsync>d__;
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewHonamiStoryViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BF96 RID: 245654 RVA: 0x00E5588C File Offset: 0x00E53A8C
+		// Token: 0x06030EE9 RID: 200425 RVA: 0x00DA5F34 File Offset: 0x00DA4134
 		protected override void AddEvents()
 		{
 			EventSystem.Instance.Add<int, int>(EEventName.BattleUiCurRoleDataChangedNextTick, new Action<int, int>(this.OnChangeRole));
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.SeamlessTravelUIRefresh, new Action(this.OnSeamlessTravelRefresh));
 		}
 
-		// Token: 0x0603BF97 RID: 245655 RVA: 0x00E559D0 File Offset: 0x00E53BD0
+		// Token: 0x06030EEA RID: 200426 RVA: 0x00DA6078 File Offset: 0x00DA4278
 		protected override void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiCurRoleDataChangedNextTick, new Action<int, int>(this.OnChangeRole));
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.SeamlessTravelUIRefresh, new Action(this.OnSeamlessTravelRefresh));
 		}
 
-		// Token: 0x0603BF98 RID: 245656 RVA: 0x00E55B11 File Offset: 0x00E53D11
+		// Token: 0x06030EEB RID: 200427 RVA: 0x00DA61B9 File Offset: 0x00DA43B9
 		private void OnConcertoResponseOpen(bool isOpen)
 		{
 			ConcertoResponseItem concertoResponseItem = this.ConcertoResponseItem;
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			concertoResponseItem.RefreshVisible();
 		}
 
-		// Token: 0x0603BF99 RID: 245657 RVA: 0x00E55B24 File Offset: 0x00E53D24
+		// Token: 0x06030EEC RID: 200428 RVA: 0x00DA61CC File Offset: 0x00DA43CC
 		private void OnChangeRole(int i, int i1)
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBuffView(curRoleData);
 		}
 
-		// Token: 0x0603BF9A RID: 245658 RVA: 0x00E55BB8 File Offset: 0x00E53DB8
+		// Token: 0x06030EED RID: 200429 RVA: 0x00DA6260 File Offset: 0x00DA4460
 		private void OnEnergyBarVisibleChange(bool visible)
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SpecialEnergyBarContainer.OnChangeRole(visible ? curRoleData : null);
 		}
 
-		// Token: 0x0603BF9B RID: 245659 RVA: 0x00E55C24 File Offset: 0x00E53E24
+		// Token: 0x06030EEE RID: 200430 RVA: 0x00DA62CC File Offset: 0x00DA44CC
 		[NullableContext(1)]
 		private void OnRemoveEntity(Entity entity)
 		{
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SpecialEnergyBarContainer.OnRemoveEntity(entity.Id);
 		}
 
-		// Token: 0x0603BF9C RID: 245660 RVA: 0x00E55CE8 File Offset: 0x00E53EE8
+		// Token: 0x06030EEF RID: 200431 RVA: 0x00DA6390 File Offset: 0x00DA4590
 		[NullableContext(1)]
 		private void OnServerAttributeChange(int entityId, AttributeChangedNotify attributeData)
 		{
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF9D RID: 245661 RVA: 0x00E55D6C File Offset: 0x00E53F6C
+		// Token: 0x06030EF0 RID: 200432 RVA: 0x00DA6414 File Offset: 0x00DA4614
 		private void OnAddOrRemoveBuff(int entityId, GameplayCue cue, bool isAdd, int handleId)
 		{
 			if (cue.CueType == 38)
@@ -360,14 +360,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF9E RID: 245662 RVA: 0x00E55DFF File Offset: 0x00E53FFF
+		// Token: 0x06030EF1 RID: 200433 RVA: 0x00DA64A7 File Offset: 0x00DA46A7
 		private void OnDriveFishingShipStateChanged(bool isDriving)
 		{
 			this.SetRoleViewVisible(2, !isDriving);
 			this.SetFishingStateViewActive(isDriving);
 		}
 
-		// Token: 0x0603BF9F RID: 245663 RVA: 0x00E55E13 File Offset: 0x00E54013
+		// Token: 0x06030EF2 RID: 200434 RVA: 0x00DA64BB File Offset: 0x00DA46BB
 		private void OnBattleStateChanged(bool isInBattleState)
 		{
 			if (MoraleBattleModel.Instance.IsMoraleActive())
@@ -380,7 +380,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFA0 RID: 245664 RVA: 0x00E55E3B File Offset: 0x00E5403B
+		// Token: 0x06030EF3 RID: 200435 RVA: 0x00DA64E3 File Offset: 0x00DA46E3
 		private void OnMoraleActiveChanged(bool active)
 		{
 			if (!active)
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFA1 RID: 245665 RVA: 0x00E55E5B File Offset: 0x00E5405B
+		// Token: 0x06030EF4 RID: 200436 RVA: 0x00DA6503 File Offset: 0x00DA4703
 		private void OnFlagChallengeDungeonActiveChanged(bool active)
 		{
 			if (!active)
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFA2 RID: 245666 RVA: 0x00E55E7C File Offset: 0x00E5407C
+		// Token: 0x06030EF5 RID: 200437 RVA: 0x00DA6524 File Offset: 0x00DA4724
 		private void SetRoleViewVisible(int reason, bool bVisible)
 		{
 			RoleStateView roleStateView = this.RoleStateView;
@@ -439,7 +439,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			roleUniqueBuffView.SetVisible(reason, bVisible);
 		}
 
-		// Token: 0x0603BFA3 RID: 245667 RVA: 0x00E55EE8 File Offset: 0x00E540E8
+		// Token: 0x06030EF6 RID: 200438 RVA: 0x00DA6590 File Offset: 0x00DA4790
 		private void SetFishingStateViewActive(bool bActive)
 		{
 			if (bActive)
@@ -457,7 +457,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFA4 RID: 245668 RVA: 0x00E55F38 File Offset: 0x00E54138
+		// Token: 0x06030EF7 RID: 200439 RVA: 0x00DA65E0 File Offset: 0x00DA47E0
 		private UniTask NewMoraleTempExpViewAsync()
 		{
 			BottomPanel.<NewMoraleTempExpViewAsync>d__44 <NewMoraleTempExpViewAsync>d__;
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewMoraleTempExpViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BFA5 RID: 245669 RVA: 0x00E55F7C File Offset: 0x00E5417C
+		// Token: 0x06030EF8 RID: 200440 RVA: 0x00DA6624 File Offset: 0x00DA4824
 		private void SetMoraleTempExpViewActive(bool active)
 		{
 			if (active)
@@ -509,7 +509,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFA6 RID: 245670 RVA: 0x00E55FD4 File Offset: 0x00E541D4
+		// Token: 0x06030EF9 RID: 200441 RVA: 0x00DA667C File Offset: 0x00DA487C
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -539,7 +539,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			};
 		}
 
-		// Token: 0x0603BFA7 RID: 245671 RVA: 0x00E56024 File Offset: 0x00E54224
+		// Token: 0x06030EFA RID: 200442 RVA: 0x00DA66CC File Offset: 0x00DA48CC
 		private UniTask NewFlagChallengeTempExpViewAsync()
 		{
 			BottomPanel.<NewFlagChallengeTempExpViewAsync>d__47 <NewFlagChallengeTempExpViewAsync>d__;
@@ -550,7 +550,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewFlagChallengeTempExpViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BFA8 RID: 245672 RVA: 0x00E56068 File Offset: 0x00E54268
+		// Token: 0x06030EFB RID: 200443 RVA: 0x00DA6710 File Offset: 0x00DA4910
 		private void SetFlagChallengeTempExpViewActive(bool active)
 		{
 			if (active)
@@ -591,7 +591,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BFA9 RID: 245673 RVA: 0x00E560BC File Offset: 0x00E542BC
+		// Token: 0x06030EFC RID: 200444 RVA: 0x00DA6764 File Offset: 0x00DA4964
 		private void OnBossBuffCueChanged(GameplayCue cueConfig, bool isAdd, int handleId, int entityId)
 		{
 			if (isAdd && !this.ValidateFormationBuff(entityId, handleId))
@@ -608,7 +608,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CreateBossBuffNumItem().Forget();
 		}
 
-		// Token: 0x0603BFAA RID: 245674 RVA: 0x00E56134 File Offset: 0x00E54334
+		// Token: 0x06030EFD RID: 200445 RVA: 0x00DA67DC File Offset: 0x00DA49DC
 		private UniTask CreateBossBuffNumItem()
 		{
 			BottomPanel.<CreateBossBuffNumItem>d__51 <CreateBossBuffNumItem>d__;
@@ -619,7 +619,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <CreateBossBuffNumItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BFAB RID: 245675 RVA: 0x00E56178 File Offset: 0x00E54378
+		// Token: 0x06030EFE RID: 200446 RVA: 0x00DA6820 File Offset: 0x00DA4A20
 		private IActiveBuff GetBuffByHandleId(int entityId, int handleId)
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(entityId);
@@ -647,7 +647,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return activeBuff;
 		}
 
-		// Token: 0x0603BFAC RID: 245676 RVA: 0x00E561E4 File Offset: 0x00E543E4
+		// Token: 0x06030EFF RID: 200447 RVA: 0x00DA688C File Offset: 0x00DA4A8C
 		private bool ValidateFormationBuff(int entityId, int handleId)
 		{
 			IActiveBuff buffByHandleId = this.GetBuffByHandleId(entityId, handleId);
@@ -689,59 +689,59 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0401F4B4 RID: 128180
+		// Token: 0x04019F6D RID: 106349
 		private RoleStateView RoleStateView;
 
-		// Token: 0x0401F4B5 RID: 128181
+		// Token: 0x04019F6E RID: 106350
 		private RoleBuffView RoleBuffView;
 
-		// Token: 0x0401F4B6 RID: 128182
+		// Token: 0x04019F6F RID: 106351
 		private ConcertoResponseItem ConcertoResponseItem;
 
-		// Token: 0x0401F4B7 RID: 128183
+		// Token: 0x04019F70 RID: 106352
 		private SpecialEnergyBarContainer SpecialEnergyBarContainer;
 
-		// Token: 0x0401F4B8 RID: 128184
+		// Token: 0x04019F71 RID: 106353
 		private RoleUniqueBuffView RoleUniqueBuffView;
 
-		// Token: 0x0401F4B9 RID: 128185
+		// Token: 0x04019F72 RID: 106354
 		private FishingStateView FishingStateView;
 
-		// Token: 0x0401F4BA RID: 128186
+		// Token: 0x04019F73 RID: 106355
 		private MoraleTempExpView MoraleTempExpView;
 
-		// Token: 0x0401F4BB RID: 128187
+		// Token: 0x04019F74 RID: 106356
 		private FlagChallengeTempExpView FlagChallengeTempExpView;
 
-		// Token: 0x0401F4BC RID: 128188
+		// Token: 0x04019F75 RID: 106357
 		private HonamiStoryView HonamiStoryView;
 
-		// Token: 0x0401F4BD RID: 128189
+		// Token: 0x04019F76 RID: 106358
 		private HonamiStoryMainQuestView HonamiStoryMainQuestView;
 
-		// Token: 0x0401F4BE RID: 128190
+		// Token: 0x04019F77 RID: 106359
 		private bool IsLoadingMoraleView;
 
-		// Token: 0x0401F4BF RID: 128191
+		// Token: 0x04019F78 RID: 106360
 		private bool IsLoadingFlagChallengeView;
 
-		// Token: 0x0401F4C0 RID: 128192
+		// Token: 0x04019F79 RID: 106361
 		private BossBuffNumItem BossBuffNumItem;
 
-		// Token: 0x0401F4C1 RID: 128193
+		// Token: 0x04019F7A RID: 106362
 		private bool IsLoadingBossBuffNumView;
 
-		// Token: 0x0401F4C2 RID: 128194
+		// Token: 0x04019F7B RID: 106363
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat BattleViewTickStatsObject = Stat.Create("[BattleView]BottomPanelTick", "", "");
 
-		// Token: 0x0401F4C3 RID: 128195
+		// Token: 0x04019F7C RID: 106364
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat ChangeRoleStat = Stat.Create("[ChangeRole]BottomPanel", "", "");
 
-		// Token: 0x0401F4C4 RID: 128196
+		// Token: 0x04019F7D RID: 106365
 		[TupleElementNames(new string[]
 		{
 			"HandleId",
@@ -756,23 +756,23 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private readonly List<ValueTuple<int, int, EBossBuffNumMode, bool>> PendingBossBuffCues = new List<ValueTuple<int, int, EBossBuffNumMode, bool>>();
 
-		// Token: 0x0200BE93 RID: 48787
+		// Token: 0x0200A899 RID: 43161
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403978C RID: 235404
+			// Token: 0x0403414D RID: 213325
 			RoleStateItem,
-			// Token: 0x0403978D RID: 235405
+			// Token: 0x0403414E RID: 213326
 			ConcertoResponseItem,
-			// Token: 0x0403978E RID: 235406
+			// Token: 0x0403414F RID: 213327
 			SpecialEnergyItem,
-			// Token: 0x0403978F RID: 235407
+			// Token: 0x04034150 RID: 213328
 			RoleBuffItem,
-			// Token: 0x04039790 RID: 235408
+			// Token: 0x04034151 RID: 213329
 			PhantomContainerItem,
-			// Token: 0x04039791 RID: 235409
+			// Token: 0x04034152 RID: 213330
 			RoleTopBuffItem,
-			// Token: 0x04039792 RID: 235410
+			// Token: 0x04034153 RID: 213331
 			MoraleTempExpItem
 		}
 	}

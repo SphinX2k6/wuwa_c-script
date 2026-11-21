@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AB5 RID: 19125
+	// Token: 0x02003A5D RID: 14941
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseLevelTargetPanel : UiPanelBase
 	{
-		// Token: 0x060318D6 RID: 202966 RVA: 0x00B7DA44 File Offset: 0x00B7BC44
+		// Token: 0x06026666 RID: 157286 RVA: 0x00AC19F8 File Offset: 0x00ABFBF8
 		public UniTask Init(UUIItem item)
 		{
 			TrapDefenseLevelTargetPanel.<Init>d__6 <Init>d__;
@@ -27,12 +27,12 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060318D7 RID: 202967 RVA: 0x00B7DA8F File Offset: 0x00B7BC8F
+		// Token: 0x06026667 RID: 157287 RVA: 0x00AC1A43 File Offset: 0x00ABFC43
 		protected override void OnBeforeCreate()
 		{
 		}
 
-		// Token: 0x060318D8 RID: 202968 RVA: 0x00B7DA94 File Offset: 0x00B7BC94
+		// Token: 0x06026668 RID: 157288 RVA: 0x00AC1A48 File Offset: 0x00ABFC48
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060318D9 RID: 202969 RVA: 0x00B7DB84 File Offset: 0x00B7BD84
+		// Token: 0x06026669 RID: 157289 RVA: 0x00AC1B38 File Offset: 0x00ABFD38
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseLevelTargetPanel.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -65,22 +65,22 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060318DA RID: 202970 RVA: 0x00B7DBC7 File Offset: 0x00B7BDC7
+		// Token: 0x0602666A RID: 157290 RVA: 0x00AC1B7B File Offset: 0x00ABFD7B
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x060318DB RID: 202971 RVA: 0x00B7DBC9 File Offset: 0x00B7BDC9
+		// Token: 0x0602666B RID: 157291 RVA: 0x00AC1B7D File Offset: 0x00ABFD7D
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x060318DC RID: 202972 RVA: 0x00B7DBCB File Offset: 0x00B7BDCB
+		// Token: 0x0602666C RID: 157292 RVA: 0x00AC1B7F File Offset: 0x00ABFD7F
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x060318DD RID: 202973 RVA: 0x00B7DBCD File Offset: 0x00B7BDCD
+		// Token: 0x0602666D RID: 157293 RVA: 0x00AC1B81 File Offset: 0x00ABFD81
 		public void UpdateData(TrapDefenseLevelData data)
 		{
 			this.LevelData = data;
@@ -90,47 +90,47 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.PanelGoToInfo.UpdateData(data);
 		}
 
-		// Token: 0x060318DE RID: 202974 RVA: 0x00B7DC0D File Offset: 0x00B7BE0D
+		// Token: 0x0602666E RID: 157294 RVA: 0x00AC1BC1 File Offset: 0x00ABFDC1
 		public TrapDefenseLevelTargetItem CreateItemTarget()
 		{
 			return new TrapDefenseLevelTargetItem();
 		}
 
-		// Token: 0x0401A7AD RID: 108461
+		// Token: 0x040150FF RID: 86271
 		public TrapDefenseLevelData LevelData;
 
-		// Token: 0x0401A7AE RID: 108462
+		// Token: 0x04015100 RID: 86272
 		public GenericLayout<TrapDefenseLevelTargetItem, ITrapDefenseLevelTargetItemData> LayoutTarget;
 
-		// Token: 0x0401A7AF RID: 108463
+		// Token: 0x04015101 RID: 86273
 		public TrapDefenseLevelRewardPanel PanelRewardInfo;
 
-		// Token: 0x0401A7B0 RID: 108464
+		// Token: 0x04015102 RID: 86274
 		public TrapDefenseLevelWavePanel PanelWaveInfo;
 
-		// Token: 0x0401A7B1 RID: 108465
+		// Token: 0x04015103 RID: 86275
 		public TrapDefenseLevelGoToPanel PanelGoToInfo;
 
-		// Token: 0x0200AC19 RID: 44057
+		// Token: 0x02009639 RID: 38457
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040344B3 RID: 214195
+			// Token: 0x0402EE64 RID: 192100
 			public const int LayoutTarget = 0;
 
-			// Token: 0x040344B4 RID: 214196
+			// Token: 0x0402EE65 RID: 192101
 			public const int ItemTarget = 1;
 
-			// Token: 0x040344B5 RID: 214197
+			// Token: 0x0402EE66 RID: 192102
 			public const int ItemRewardRoot = 2;
 
-			// Token: 0x040344B6 RID: 214198
+			// Token: 0x0402EE67 RID: 192103
 			public const int ItemRewardInfo = 3;
 
-			// Token: 0x040344B7 RID: 214199
+			// Token: 0x0402EE68 RID: 192104
 			public const int ItemWaveInfo = 4;
 
-			// Token: 0x040344B8 RID: 214200
+			// Token: 0x0402EE69 RID: 192105
 			public const int ItemGoTo = 5;
 		}
 	}

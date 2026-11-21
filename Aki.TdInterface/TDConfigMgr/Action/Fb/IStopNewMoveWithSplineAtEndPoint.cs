@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200272F RID: 10031
+	// Token: 0x020029FB RID: 10747
 	public class IStopNewMoveWithSplineAtEndPoint : IStopNewMoveWithSplineType
 	{
-		// Token: 0x0600DFA7 RID: 57255 RVA: 0x002122BA File Offset: 0x002104BA
-		[NullableContext(1)]
+		// Token: 0x0600EDA7 RID: 60839 RVA: 0x0022EDF2 File Offset: 0x0022CFF2
 		public static IStopNewMoveWithSplineAtEndPoint Create(IStopNewMoveWithSplineAtEndPoint? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700430B RID: 17163
-		// (get) Token: 0x0600DFA8 RID: 57256 RVA: 0x002122D9 File Offset: 0x002104D9
+		// Token: 0x1700465F RID: 18015
+		// (get) Token: 0x0600EDA8 RID: 60840 RVA: 0x0022EE11 File Offset: 0x0022D011
 		public override EStopNewMoveWithSplineType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C1B RID: 31771
+		// Token: 0x040082C9 RID: 33481
 		private IStopNewMoveWithSplineAtEndPoint Instance;
 	}
 }

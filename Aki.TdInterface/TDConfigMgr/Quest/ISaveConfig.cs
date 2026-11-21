@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001120 RID: 4384
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200124E RID: 4686
 	public class ISaveConfig
 	{
-		// Token: 0x060062F2 RID: 25330 RVA: 0x000EDE2C File Offset: 0x000EC02C
+		// Token: 0x060068ED RID: 26861 RVA: 0x000FAFA0 File Offset: 0x000F91A0
 		private ISaveConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060062F3 RID: 25331 RVA: 0x000EDE64 File Offset: 0x000EC064
+		// Token: 0x060068EE RID: 26862 RVA: 0x000FAFD8 File Offset: 0x000F91D8
 		public static ISaveConfig Create([Nullable(2)] ISaveConfig instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060062F4 RID: 25332 RVA: 0x000EDE77 File Offset: 0x000EC077
+		// Token: 0x060068EF RID: 26863 RVA: 0x000FAFEB File Offset: 0x000F91EB
 		public static ISaveConfig CreateFromSetValue([Nullable(2)] ISaveConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060062F5 RID: 25333 RVA: 0x000EDE8C File Offset: 0x000EC08C
+		// Token: 0x060068F0 RID: 26864 RVA: 0x000FB000 File Offset: 0x000F9200
 		public ISaveConfig_SetValue ToSetValue()
 		{
 			return new ISaveConfig_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700204D RID: 8269
-		// (get) Token: 0x060062F6 RID: 25334 RVA: 0x000EDEE8 File Offset: 0x000EC0E8
-		// (set) Token: 0x060062F7 RID: 25335 RVA: 0x000EDF22 File Offset: 0x000EC122
+		// Token: 0x17002200 RID: 8704
+		// (get) Token: 0x060068F1 RID: 26865 RVA: 0x000FB05C File Offset: 0x000F925C
+		// (set) Token: 0x060068F2 RID: 26866 RVA: 0x000FB096 File Offset: 0x000F9296
 		public virtual bool? IsTemp
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700204E RID: 8270
-		// (get) Token: 0x060062F8 RID: 25336 RVA: 0x000EDF30 File Offset: 0x000EC130
-		// (set) Token: 0x060062F9 RID: 25337 RVA: 0x000EDF6A File Offset: 0x000EC16A
+		// Token: 0x17002201 RID: 8705
+		// (get) Token: 0x060068F3 RID: 26867 RVA: 0x000FB0A4 File Offset: 0x000F92A4
+		// (set) Token: 0x060068F4 RID: 26868 RVA: 0x000FB0DE File Offset: 0x000F92DE
 		public virtual bool? EnableRollbackWhileSwitchOnlineMode
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700204F RID: 8271
-		// (get) Token: 0x060062FA RID: 25338 RVA: 0x000EDF78 File Offset: 0x000EC178
-		// (set) Token: 0x060062FB RID: 25339 RVA: 0x000EDFB2 File Offset: 0x000EC1B2
+		// Token: 0x17002202 RID: 8706
+		// (get) Token: 0x060068F5 RID: 26869 RVA: 0x000FB0EC File Offset: 0x000F92EC
+		// (set) Token: 0x060068F6 RID: 26870 RVA: 0x000FB126 File Offset: 0x000F9326
 		public virtual bool? DisableRollbackWhileReconnect
 		{
 			get
@@ -139,9 +137,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002050 RID: 8272
-		// (get) Token: 0x060062FC RID: 25340 RVA: 0x000EDFC0 File Offset: 0x000EC1C0
-		// (set) Token: 0x060062FD RID: 25341 RVA: 0x000EE021 File Offset: 0x000EC221
+		// Token: 0x17002203 RID: 8707
+		// (get) Token: 0x060068F7 RID: 26871 RVA: 0x000FB134 File Offset: 0x000F9334
+		// (set) Token: 0x060068F8 RID: 26872 RVA: 0x000FB195 File Offset: 0x000F9395
 		[Nullable(2)]
 		public virtual IPosRollbackConfig PosRollbackCfg
 		{
@@ -172,20 +170,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002051 RID: 8273
-		// (get) Token: 0x060062FE RID: 25342 RVA: 0x000EE038 File Offset: 0x000EC238
-		// (set) Token: 0x060062FF RID: 25343 RVA: 0x000EE0CB File Offset: 0x000EC2CB
+		// Token: 0x17002204 RID: 8708
+		// (get) Token: 0x060068F9 RID: 26873 RVA: 0x000FB1AC File Offset: 0x000F93AC
+		// (set) Token: 0x060068FA RID: 26874 RVA: 0x000FB23F File Offset: 0x000F943F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> EnterActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -216,7 +214,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -225,20 +223,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002052 RID: 8274
-		// (get) Token: 0x06006300 RID: 25344 RVA: 0x000EE0E0 File Offset: 0x000EC2E0
-		// (set) Token: 0x06006301 RID: 25345 RVA: 0x000EE173 File Offset: 0x000EC373
+		// Token: 0x17002205 RID: 8709
+		// (get) Token: 0x060068FB RID: 26875 RVA: 0x000FB254 File Offset: 0x000F9454
+		// (set) Token: 0x060068FC RID: 26876 RVA: 0x000FB2E7 File Offset: 0x000F94E7
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IInitConditionActions> InitConditionActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -269,7 +267,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -278,40 +276,40 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B52 RID: 15186
+		// Token: 0x04003EA0 RID: 16032
 		[Nullable(2)]
 		protected ISaveConfig FbInstance;
 
-		// Token: 0x04003B53 RID: 15187
+		// Token: 0x04003EA1 RID: 16033
 		[Nullable(2)]
 		protected ISaveConfig_SetValue PocoInterface;
 
-		// Token: 0x04003B54 RID: 15188
+		// Token: 0x04003EA2 RID: 16034
 		private IPosRollbackConfig _PosRollbackCfgCache;
 
-		// Token: 0x04003B55 RID: 15189
+		// Token: 0x04003EA3 RID: 16035
 		private bool _PosRollbackCfgInited;
 
-		// Token: 0x04003B56 RID: 15190
+		// Token: 0x04003EA4 RID: 16036
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _EnterActionsCache;
 
-		// Token: 0x04003B57 RID: 15191
+		// Token: 0x04003EA5 RID: 16037
 		private bool _EnterActionsInited;
 
-		// Token: 0x04003B58 RID: 15192
+		// Token: 0x04003EA6 RID: 16038
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IInitConditionActions> _InitConditionActionsCache;
 
-		// Token: 0x04003B59 RID: 15193
+		// Token: 0x04003EA7 RID: 16039
 		private bool _InitConditionActionsInited;
 	}
 }

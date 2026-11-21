@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020000ED RID: 237
+// Token: 0x020000EF RID: 239
 [NullableContext(1)]
 [Nullable(0)]
 public class DataTableKeyRow<[Nullable(2)] T>
 {
-	// Token: 0x170000E5 RID: 229
-	// (get) Token: 0x06000740 RID: 1856 RVA: 0x00027E2C File Offset: 0x0002602C
-	// (set) Token: 0x06000741 RID: 1857 RVA: 0x00027E34 File Offset: 0x00026034
+	// Token: 0x170000F7 RID: 247
+	// (get) Token: 0x06000782 RID: 1922 RVA: 0x0002842C File Offset: 0x0002662C
+	// (set) Token: 0x06000783 RID: 1923 RVA: 0x00028434 File Offset: 0x00026634
 	public string Key
 	{
 		get
@@ -21,9 +21,9 @@ public class DataTableKeyRow<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x170000E6 RID: 230
-	// (get) Token: 0x06000742 RID: 1858 RVA: 0x00027E3D File Offset: 0x0002603D
-	// (set) Token: 0x06000743 RID: 1859 RVA: 0x00027E45 File Offset: 0x00026045
+	// Token: 0x170000F8 RID: 248
+	// (get) Token: 0x06000784 RID: 1924 RVA: 0x0002843D File Offset: 0x0002663D
+	// (set) Token: 0x06000785 RID: 1925 RVA: 0x00028445 File Offset: 0x00026645
 	public T Value
 	{
 		get
@@ -36,7 +36,7 @@ public class DataTableKeyRow<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x170000E7 RID: 231
+	// Token: 0x170000F9 RID: 249
 	public object this[int index]
 	{
 		get
@@ -66,23 +66,23 @@ public class DataTableKeyRow<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x06000746 RID: 1862 RVA: 0x00027E9B File Offset: 0x0002609B
+	// Token: 0x06000788 RID: 1928 RVA: 0x0002849B File Offset: 0x0002669B
 	public DataTableKeyRow()
 	{
 		this._key = null;
 		this._value = default(T);
 	}
 
-	// Token: 0x06000747 RID: 1863 RVA: 0x00027EB6 File Offset: 0x000260B6
+	// Token: 0x06000789 RID: 1929 RVA: 0x000284B6 File Offset: 0x000266B6
 	public DataTableKeyRow(string key, T value)
 	{
 		this._key = key;
 		this._value = value;
 	}
 
-	// Token: 0x040005C3 RID: 1475
+	// Token: 0x040005D2 RID: 1490
 	private string _key;
 
-	// Token: 0x040005C4 RID: 1476
+	// Token: 0x040005D3 RID: 1491
 	private T _value;
 }

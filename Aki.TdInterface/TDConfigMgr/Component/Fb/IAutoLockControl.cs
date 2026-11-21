@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BEA RID: 3050
+	// Token: 0x02000CB9 RID: 3257
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IAutoLockControl
 	{
-		// Token: 0x06004607 RID: 17927 RVA: 0x000B10A2 File Offset: 0x000AF2A2
-		[NullableContext(1)]
+		// Token: 0x06004A65 RID: 19045 RVA: 0x000BB21E File Offset: 0x000B941E
+		[NullableContext(0)]
 		public static IAutoLockControl Create(IAutoLockControl? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013F0 RID: 5104
-		// (get) Token: 0x06004608 RID: 17928 RVA: 0x000B10C1 File Offset: 0x000AF2C1
+		// Token: 0x170014EE RID: 5358
+		// (get) Token: 0x06004A66 RID: 19046 RVA: 0x000BB23D File Offset: 0x000B943D
 		public virtual IConditionGroup EnableCondition
 		{
 			get
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013F1 RID: 5105
-		// (get) Token: 0x06004609 RID: 17929 RVA: 0x000B10F5 File Offset: 0x000AF2F5
+		// Token: 0x170014EF RID: 5359
+		// (get) Token: 0x06004A67 RID: 19047 RVA: 0x000BB271 File Offset: 0x000B9471
 		public virtual IConditionGroup DisableCondition
 		{
 			get
@@ -56,19 +56,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027DF RID: 10207
+		// Token: 0x04002A2A RID: 10794
 		private IAutoLockControl Instance;
 
-		// Token: 0x040027E0 RID: 10208
+		// Token: 0x04002A2B RID: 10795
 		private IConditionGroup _EnableConditionCache;
 
-		// Token: 0x040027E1 RID: 10209
+		// Token: 0x04002A2C RID: 10796
 		private bool _EnableConditionInited;
 
-		// Token: 0x040027E2 RID: 10210
+		// Token: 0x04002A2D RID: 10797
 		private IConditionGroup _DisableConditionCache;
 
-		// Token: 0x040027E3 RID: 10211
+		// Token: 0x04002A2E RID: 10798
 		private bool _DisableConditionInited;
 	}
 }

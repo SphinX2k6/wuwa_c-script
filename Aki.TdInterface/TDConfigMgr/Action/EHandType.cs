@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015F4 RID: 5620
+	// Token: 0x02001756 RID: 5974
 	public enum EHandType
 	{
-		// Token: 0x04004B04 RID: 19204
+		// Token: 0x04004ECA RID: 20170
 		Left,
-		// Token: 0x04004B05 RID: 19205
+		// Token: 0x04004ECB RID: 20171
 		Right
 	}
 }

@@ -7,15 +7,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006E90 RID: 28304
+	// Token: 0x02006010 RID: 24592
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	[TickController(0)]
 	public class ElementalFieldDebugDrawController : ControllerBase
 	{
-		// Token: 0x17009A58 RID: 39512
-		// (get) Token: 0x06044FAA RID: 282538 RVA: 0x0110BF10 File Offset: 0x0110A110
+		// Token: 0x17006F8F RID: 28559
+		// (get) Token: 0x0603B14B RID: 241995 RVA: 0x010B5FEC File Offset: 0x010B41EC
 		public bool Enabled
 		{
 			get
@@ -29,14 +29,14 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x06044FAB RID: 282539 RVA: 0x0110BF37 File Offset: 0x0110A137
+		// Token: 0x0603B14C RID: 241996 RVA: 0x010B6013 File Offset: 0x010B4213
 		protected override bool OnInit()
 		{
 			EventSystem.Instance.Add<string, int>(EEventName.OnChangeModuleDebugLevel, new Action<string, int>(this.OnChangeModuleDebugLevel));
 			return true;
 		}
 
-		// Token: 0x06044FAC RID: 282540 RVA: 0x0110BF56 File Offset: 0x0110A156
+		// Token: 0x0603B14D RID: 241997 RVA: 0x010B6032 File Offset: 0x010B4232
 		protected override bool OnClear()
 		{
 			this.ClearShapes();
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return true;
 		}
 
-		// Token: 0x06044FAD RID: 282541 RVA: 0x0110BF7C File Offset: 0x0110A17C
+		// Token: 0x0603B14E RID: 241998 RVA: 0x010B6058 File Offset: 0x010B4258
 		protected override void OnTick(float delta)
 		{
 			if (!GlobalData.IsPlayInEditor)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x06044FAE RID: 282542 RVA: 0x0110C098 File Offset: 0x0110A298
+		// Token: 0x0603B14F RID: 241999 RVA: 0x010B6174 File Offset: 0x010B4374
 		public void RegisterShape(int ownerId, IElementalDebugDrawShapeInfo shapeInfo)
 		{
 			if (!GlobalData.IsPlayInEditor)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.ApplyShape(shapeInfo, this.Enabled);
 		}
 
-		// Token: 0x06044FAF RID: 282543 RVA: 0x0110C11C File Offset: 0x0110A31C
+		// Token: 0x0603B150 RID: 242000 RVA: 0x010B61F8 File Offset: 0x010B43F8
 		[NullableContext(2)]
 		public void UnregisterShape(int ownerId, UObject shape = null)
 		{
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.DisableShapeDebugDraw(elementalDebugDrawShapeInfo2);
 		}
 
-		// Token: 0x06044FB0 RID: 282544 RVA: 0x0110C230 File Offset: 0x0110A430
+		// Token: 0x0603B151 RID: 242001 RVA: 0x010B630C File Offset: 0x010B450C
 		public void ClearShapes()
 		{
 			if (!GlobalData.IsPlayInEditor)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.ShapeInfos.Clear();
 		}
 
-		// Token: 0x06044FB1 RID: 282545 RVA: 0x0110C2D4 File Offset: 0x0110A4D4
+		// Token: 0x0603B152 RID: 242002 RVA: 0x010B63B0 File Offset: 0x010B45B0
 		private void PrintScreen(string message, EElementalFieldDebugShapeRole role)
 		{
 			if (!this.Enabled)
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			UKismetSystemLibrary.PrintString(GlobalData.World, message, true, true, new FLinearColor?(value), 5f);
 		}
 
-		// Token: 0x06044FB2 RID: 282546 RVA: 0x0110C314 File Offset: 0x0110A514
+		// Token: 0x0603B153 RID: 242003 RVA: 0x010B63F0 File Offset: 0x010B45F0
 		private void DrawShapeInfo(int ownerId, IElementalDebugDrawShapeInfo shapeInfo)
 		{
 			if (!shapeInfo.Shape.IsValid())
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			UKismetSystemLibrary.D_DrawDebugString(GlobalData.World, textLocation, "[" + str + "] " + this.DescribeShape(ownerId, shape), null, new FLinearColor?(value), 0f);
 		}
 
-		// Token: 0x06044FB3 RID: 282547 RVA: 0x0110C3B0 File Offset: 0x0110A5B0
+		// Token: 0x0603B154 RID: 242004 RVA: 0x010B648C File Offset: 0x010B468C
 		private string DescribeShape(int ownerId, UKuroFastCollisionShapeComponent shape)
 		{
 			switch (shape.Kind)
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x06044FB4 RID: 282548 RVA: 0x0110C6F9 File Offset: 0x0110A8F9
+		// Token: 0x0603B155 RID: 242005 RVA: 0x010B67D5 File Offset: 0x010B49D5
 		private void DisableShapeDebugDraw(IElementalDebugDrawShapeInfo shapeInfo)
 		{
 			if (shapeInfo.Shape.IsValid())
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x06044FB5 RID: 282549 RVA: 0x0110C719 File Offset: 0x0110A919
+		// Token: 0x0603B156 RID: 242006 RVA: 0x010B67F5 File Offset: 0x010B49F5
 		private void ApplyShape(IElementalDebugDrawShapeInfo shapeInfo, bool enabled)
 		{
 			if (!shapeInfo.Shape.IsValid() || !shapeInfo.Shape.IsA(UKuroFastCollisionShapeComponent.StaticClass()))
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			UObject shape = shapeInfo.Shape;
 		}
 
-		// Token: 0x06044FB6 RID: 282550 RVA: 0x0110C744 File Offset: 0x0110A944
+		// Token: 0x0603B157 RID: 242007 RVA: 0x010B6820 File Offset: 0x010B4A20
 		private void OnChangeModuleDebugLevel(string key, int level)
 		{
 			if (key != "ElementalCasket")
@@ -320,14 +320,14 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x06044FB7 RID: 282551 RVA: 0x0110C7EC File Offset: 0x0110A9EC
+		// Token: 0x0603B158 RID: 242008 RVA: 0x010B68C8 File Offset: 0x010B4AC8
 		public bool IsSnapshotDebugDrawEnabled<[Nullable(2)] T>(ISceneItemElementalFieldSnapshot<T> snapshot)
 		{
 			SundryModel instance = SundryModel.Instance;
 			return ((instance != null) ? instance.GetModuleDebugLevel("ElementalCasket") : 0) >= 4 && snapshot.Enabled;
 		}
 
-		// Token: 0x06044FB8 RID: 282552 RVA: 0x0110C810 File Offset: 0x0110AA10
+		// Token: 0x0603B159 RID: 242009 RVA: 0x010B68EC File Offset: 0x010B4AEC
 		public void DebugDrawConeSnapshot(ISceneItemElementalFieldConeSnapshot snapshot)
 		{
 			if (!this.IsSnapshotDebugDrawEnabled<ESceneItemElementalFieldShapeType>(snapshot))
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			UKismetSystemLibrary.D_DrawDebugCone(GlobalData.World, snapshot.Center, new FVectorDouble((double)snapshot.ConeAxis.X, (double)snapshot.ConeAxis.Y, (double)snapshot.ConeAxis.Z), (float)snapshot.ConeHeight, (float)snapshot.ConeHalfAngle, (float)snapshot.ConeHalfAngle, 16, ElementalCasketDefine.snapshotDebugDrawColor, 0.2f, 1f);
 		}
 
-		// Token: 0x06044FB9 RID: 282553 RVA: 0x0110C886 File Offset: 0x0110AA86
+		// Token: 0x0603B15A RID: 242010 RVA: 0x010B6962 File Offset: 0x010B4B62
 		public void DebugDrawSphereSnapshot(ISceneItemElementalFieldSphereSnapshot snapshot)
 		{
 			if (!this.IsSnapshotDebugDrawEnabled<ESceneItemElementalFieldShapeType>(snapshot))
@@ -347,7 +347,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			UKismetSystemLibrary.D_DrawDebugSphere(GlobalData.World, snapshot.Center, (float)snapshot.SphereRadius, 16, new FLinearColor?(ElementalCasketDefine.snapshotDebugDrawColor), 0.2f, 1f);
 		}
 
-		// Token: 0x06044FBA RID: 282554 RVA: 0x0110C8C0 File Offset: 0x0110AAC0
+		// Token: 0x0603B15B RID: 242011 RVA: 0x010B699C File Offset: 0x010B4B9C
 		public void DebugDrawBoxSnapshot(ISceneItemElementalFieldBoxSnapshot snapshot)
 		{
 			if (!this.IsSnapshotDebugDrawEnabled<ESceneItemElementalFieldShapeType>(snapshot))
@@ -357,8 +357,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			UKismetSystemLibrary.D_DrawDebugBox(GlobalData.World, snapshot.Center, snapshot.BoxSize, ElementalCasketDefine.snapshotDebugDrawColor, snapshot.BoxRotation ?? new FRotator(), 0.2f, 1f);
 		}
 
-		// Token: 0x17009A59 RID: 39513
-		// (get) Token: 0x06044FBB RID: 282555 RVA: 0x0110C91A File Offset: 0x0110AB1A
+		// Token: 0x17006F90 RID: 28560
+		// (get) Token: 0x0603B15C RID: 242012 RVA: 0x010B69F6 File Offset: 0x010B4BF6
 		public static ElementalFieldDebugDrawController Instance
 		{
 			get
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x06044FBC RID: 282556 RVA: 0x0110C921 File Offset: 0x0110AB21
+		// Token: 0x0603B15D RID: 242013 RVA: 0x010B69FD File Offset: 0x010B4BFD
 		public static ElementalFieldDebugDrawController GetOrCreateInstance()
 		{
 			if (ElementalFieldDebugDrawController._Instance == null)
@@ -377,7 +377,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return ElementalFieldDebugDrawController._Instance;
 		}
 
-		// Token: 0x06044FBD RID: 282557 RVA: 0x0110C935 File Offset: 0x0110AB35
+		// Token: 0x0603B15E RID: 242014 RVA: 0x010B6A11 File Offset: 0x010B4C11
 		public static bool CreateInstance()
 		{
 			if (ElementalFieldDebugDrawController._Instance != null)
@@ -388,27 +388,27 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return true;
 		}
 
-		// Token: 0x06044FBE RID: 282558 RVA: 0x0110C94B File Offset: 0x0110AB4B
+		// Token: 0x0603B15F RID: 242015 RVA: 0x010B6A27 File Offset: 0x010B4C27
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06044FBF RID: 282559 RVA: 0x0110C94D File Offset: 0x0110AB4D
+		// Token: 0x0603B160 RID: 242016 RVA: 0x010B6A29 File Offset: 0x010B4C29
 		public static void ResetStaticDefaultValue()
 		{
 			ElementalFieldDebugDrawController._Instance = null;
 		}
 
-		// Token: 0x06044FC0 RID: 282560 RVA: 0x0110C955 File Offset: 0x0110AB55
+		// Token: 0x0603B161 RID: 242017 RVA: 0x010B6A31 File Offset: 0x010B4C31
 		static ElementalFieldDebugDrawController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ElementalFieldDebugDrawController.CreateStaticDefaultValue), new Action(ElementalFieldDebugDrawController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023EB3 RID: 147123
+		// Token: 0x0401F166 RID: 127334
 		private readonly Dictionary<int, Dictionary<UObject, IElementalDebugDrawShapeInfo>> ShapeInfos = new Dictionary<int, Dictionary<UObject, IElementalDebugDrawShapeInfo>>();
 
-		// Token: 0x04023EB4 RID: 147124
+		// Token: 0x0401F167 RID: 127335
 		[Nullable(2)]
 		private static ElementalFieldDebugDrawController _Instance;
 	}

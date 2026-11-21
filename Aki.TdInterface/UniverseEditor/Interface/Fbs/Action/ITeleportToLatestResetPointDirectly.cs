@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200738E RID: 29582
+	// Token: 0x02007B75 RID: 31605
 	public struct ITeleportToLatestResetPointDirectly : IFlatbufferObject
 	{
-		// Token: 0x1700E092 RID: 57490
-		// (get) Token: 0x06035B1F RID: 219935 RVA: 0x0074F7D7 File Offset: 0x0074D9D7
+		// Token: 0x1700ECA2 RID: 60578
+		// (get) Token: 0x06038EBA RID: 233146 RVA: 0x007B1D17 File Offset: 0x007AFF17
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035B20 RID: 219936 RVA: 0x0074F7E4 File Offset: 0x0074D9E4
+		// Token: 0x06038EBB RID: 233147 RVA: 0x007B1D24 File Offset: 0x007AFF24
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035B21 RID: 219937 RVA: 0x0074F7EC File Offset: 0x0074D9EC
+		// Token: 0x06038EBC RID: 233148 RVA: 0x007B1D2C File Offset: 0x007AFF2C
 		public static ITeleportToLatestResetPointDirectly GetRootAsITeleportToLatestResetPointDirectly(ByteBuffer _bb)
 		{
 			return ITeleportToLatestResetPointDirectly.GetRootAsITeleportToLatestResetPointDirectly(_bb, default(ITeleportToLatestResetPointDirectly));
 		}
 
-		// Token: 0x06035B22 RID: 219938 RVA: 0x0074F808 File Offset: 0x0074DA08
+		// Token: 0x06038EBD RID: 233149 RVA: 0x007B1D48 File Offset: 0x007AFF48
 		public static ITeleportToLatestResetPointDirectly GetRootAsITeleportToLatestResetPointDirectly(ByteBuffer _bb, ITeleportToLatestResetPointDirectly obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035B23 RID: 219939 RVA: 0x0074F825 File Offset: 0x0074DA25
+		// Token: 0x06038EBE RID: 233150 RVA: 0x007B1D65 File Offset: 0x007AFF65
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035B24 RID: 219940 RVA: 0x0074F834 File Offset: 0x0074DA34
+		// Token: 0x06038EBF RID: 233151 RVA: 0x007B1D74 File Offset: 0x007AFF74
 		public ITeleportToLatestResetPointDirectly __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E093 RID: 57491
-		// (get) Token: 0x06035B25 RID: 219941 RVA: 0x0074F844 File Offset: 0x0074DA44
+		// Token: 0x1700ECA3 RID: 60579
+		// (get) Token: 0x06038EC0 RID: 233152 RVA: 0x007B1D84 File Offset: 0x007AFF84
 		public ETeleportToLatestResetPointType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035B26 RID: 219942 RVA: 0x0074F880 File Offset: 0x0074DA80
+		// Token: 0x06038EC1 RID: 233153 RVA: 0x007B1DC0 File Offset: 0x007AFFC0
 		public static Offset<ITeleportToLatestResetPointDirectly> CreateITeleportToLatestResetPointDirectly(FlatBufferBuilder builder, ETeleportToLatestResetPointType Type = ETeleportToLatestResetPointType.Directly)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportToLatestResetPointDirectly.EndITeleportToLatestResetPointDirectly(builder);
 		}
 
-		// Token: 0x06035B27 RID: 219943 RVA: 0x0074F896 File Offset: 0x0074DA96
+		// Token: 0x06038EC2 RID: 233154 RVA: 0x007B1DD6 File Offset: 0x007AFFD6
 		public static void StartITeleportToLatestResetPointDirectly(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06035B28 RID: 219944 RVA: 0x0074F89F File Offset: 0x0074DA9F
+		// Token: 0x06038EC3 RID: 233155 RVA: 0x007B1DDF File Offset: 0x007AFFDF
 		public static void AddType(FlatBufferBuilder builder, ETeleportToLatestResetPointType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035B29 RID: 219945 RVA: 0x0074F8AA File Offset: 0x0074DAAA
+		// Token: 0x06038EC4 RID: 233156 RVA: 0x007B1DEA File Offset: 0x007AFFEA
 		public static Offset<ITeleportToLatestResetPointDirectly> EndITeleportToLatestResetPointDirectly(FlatBufferBuilder builder)
 		{
 			return new Offset<ITeleportToLatestResetPointDirectly>(builder.EndTable());
 		}
 
-		// Token: 0x06035B2A RID: 219946 RVA: 0x0074F8B8 File Offset: 0x0074DAB8
+		// Token: 0x06038EC5 RID: 233157 RVA: 0x007B1DF8 File Offset: 0x007AFFF8
 		public ITeleportToLatestResetPointDirectlyT UnPack()
 		{
 			ITeleportToLatestResetPointDirectlyT teleportToLatestResetPointDirectlyT = new ITeleportToLatestResetPointDirectlyT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return teleportToLatestResetPointDirectlyT;
 		}
 
-		// Token: 0x06035B2B RID: 219947 RVA: 0x0074F8D3 File Offset: 0x0074DAD3
+		// Token: 0x06038EC6 RID: 233158 RVA: 0x007B1E13 File Offset: 0x007B0013
 		public void UnPackTo(ITeleportToLatestResetPointDirectlyT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06035B2C RID: 219948 RVA: 0x0074F8E4 File Offset: 0x0074DAE4
+		// Token: 0x06038EC7 RID: 233159 RVA: 0x007B1E24 File Offset: 0x007B0024
 		public static Offset<ITeleportToLatestResetPointDirectly> Pack(FlatBufferBuilder builder, ITeleportToLatestResetPointDirectlyT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportToLatestResetPointDirectly.CreateITeleportToLatestResetPointDirectly(builder, _o.Type);
 		}
 
-		// Token: 0x040121A8 RID: 74152
+		// Token: 0x040131C1 RID: 78273
 		private Table __p;
 	}
 }

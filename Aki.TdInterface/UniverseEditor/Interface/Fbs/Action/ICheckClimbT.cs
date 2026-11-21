@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006359 RID: 25433
+	// Token: 0x020069CA RID: 27082
 	public class ICheckClimbT
 	{
-		// Token: 0x1700BDC1 RID: 48577
-		// (get) Token: 0x0602BFF3 RID: 180211 RVA: 0x0060BC4B File Offset: 0x00609E4B
-		// (set) Token: 0x0602BFF4 RID: 180212 RVA: 0x0060BC53 File Offset: 0x00609E53
+		// Token: 0x1700C749 RID: 51017
+		// (get) Token: 0x0602E75D RID: 190301 RVA: 0x00656D9F File Offset: 0x00654F9F
+		// (set) Token: 0x0602E75E RID: 190302 RVA: 0x00656DA7 File Offset: 0x00654FA7
 		public IVectorInfoT Direction { get; set; }
 
-		// Token: 0x1700BDC2 RID: 48578
-		// (get) Token: 0x0602BFF5 RID: 180213 RVA: 0x0060BC5C File Offset: 0x00609E5C
-		// (set) Token: 0x0602BFF6 RID: 180214 RVA: 0x0060BC64 File Offset: 0x00609E64
+		// Token: 0x1700C74A RID: 51018
+		// (get) Token: 0x0602E75F RID: 190303 RVA: 0x00656DB0 File Offset: 0x00654FB0
+		// (set) Token: 0x0602E760 RID: 190304 RVA: 0x00656DB8 File Offset: 0x00654FB8
 		public int Distance { get; set; }
 
-		// Token: 0x1700BDC3 RID: 48579
-		// (get) Token: 0x0602BFF7 RID: 180215 RVA: 0x0060BC6D File Offset: 0x00609E6D
-		// (set) Token: 0x0602BFF8 RID: 180216 RVA: 0x0060BC75 File Offset: 0x00609E75
+		// Token: 0x1700C74B RID: 51019
+		// (get) Token: 0x0602E761 RID: 190305 RVA: 0x00656DC1 File Offset: 0x00654FC1
+		// (set) Token: 0x0602E762 RID: 190306 RVA: 0x00656DC9 File Offset: 0x00654FC9
 		public int FallBackClimbPointId { get; set; }
 
-		// Token: 0x1700BDC4 RID: 48580
-		// (get) Token: 0x0602BFF9 RID: 180217 RVA: 0x0060BC7E File Offset: 0x00609E7E
-		// (set) Token: 0x0602BFFA RID: 180218 RVA: 0x0060BC86 File Offset: 0x00609E86
+		// Token: 0x1700C74C RID: 51020
+		// (get) Token: 0x0602E763 RID: 190307 RVA: 0x00656DD2 File Offset: 0x00654FD2
+		// (set) Token: 0x0602E764 RID: 190308 RVA: 0x00656DDA File Offset: 0x00654FDA
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602BFFB RID: 180219 RVA: 0x0060BC8F File Offset: 0x00609E8F
+		// Token: 0x0602E765 RID: 190309 RVA: 0x00656DE3 File Offset: 0x00654FE3
 		public ICheckClimbT()
 		{
 			this.Direction = null;

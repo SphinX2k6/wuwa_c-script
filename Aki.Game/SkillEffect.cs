@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020027C0 RID: 10176
+// Token: 0x02001D3B RID: 7483
 public class SkillEffect
 {
-	// Token: 0x04009D47 RID: 40263
+	// Token: 0x0400A12D RID: 41261
 	public int Level;
 
-	// Token: 0x04009D48 RID: 40264
+	// Token: 0x0400A12E RID: 41262
 	[Nullable(1)]
 	public List<OneSkillEffect> EffectDescList;
 }

@@ -2,60 +2,60 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002BA5 RID: 11173
+// Token: 0x02002121 RID: 8481
 [NullableContext(2)]
 [Nullable(0)]
 public class TermExplanationRegistryParam : ITermExplanationRegistryParam
 {
-	// Token: 0x17001F3C RID: 7996
-	// (get) Token: 0x06017255 RID: 94805 RVA: 0x005DE354 File Offset: 0x005DC554
-	// (set) Token: 0x06017256 RID: 94806 RVA: 0x005DE35C File Offset: 0x005DC55C
+	// Token: 0x17001F94 RID: 8084
+	// (get) Token: 0x06014C86 RID: 85126 RVA: 0x0060AF28 File Offset: 0x00609128
+	// (set) Token: 0x06014C87 RID: 85127 RVA: 0x0060AF30 File Offset: 0x00609130
 	[Nullable(1)]
 	public UUIText UiText { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17001F3D RID: 7997
-	// (get) Token: 0x06017257 RID: 94807 RVA: 0x005DE365 File Offset: 0x005DC565
-	// (set) Token: 0x06017258 RID: 94808 RVA: 0x005DE36D File Offset: 0x005DC56D
+	// Token: 0x17001F95 RID: 8085
+	// (get) Token: 0x06014C88 RID: 85128 RVA: 0x0060AF39 File Offset: 0x00609139
+	// (set) Token: 0x06014C89 RID: 85129 RVA: 0x0060AF41 File Offset: 0x00609141
 	public ETermExplanationViewType ViewType { get; set; }
 
-	// Token: 0x17001F3E RID: 7998
-	// (get) Token: 0x06017259 RID: 94809 RVA: 0x005DE376 File Offset: 0x005DC576
-	// (set) Token: 0x0601725A RID: 94810 RVA: 0x005DE37E File Offset: 0x005DC57E
+	// Token: 0x17001F96 RID: 8086
+	// (get) Token: 0x06014C8A RID: 85130 RVA: 0x0060AF4A File Offset: 0x0060914A
+	// (set) Token: 0x06014C8B RID: 85131 RVA: 0x0060AF52 File Offset: 0x00609152
 	public ETermExplanationReportType ReportType { get; set; }
 
-	// Token: 0x17001F3F RID: 7999
-	// (get) Token: 0x0601725B RID: 94811 RVA: 0x005DE387 File Offset: 0x005DC587
-	// (set) Token: 0x0601725C RID: 94812 RVA: 0x005DE38F File Offset: 0x005DC58F
+	// Token: 0x17001F97 RID: 8087
+	// (get) Token: 0x06014C8C RID: 85132 RVA: 0x0060AF5B File Offset: 0x0060915B
+	// (set) Token: 0x06014C8D RID: 85133 RVA: 0x0060AF63 File Offset: 0x00609163
 	public ETermExplanationViewAttachDirection? AttachDirection { get; set; }
 
-	// Token: 0x17001F40 RID: 8000
-	// (get) Token: 0x0601725D RID: 94813 RVA: 0x005DE398 File Offset: 0x005DC598
-	// (set) Token: 0x0601725E RID: 94814 RVA: 0x005DE3A0 File Offset: 0x005DC5A0
+	// Token: 0x17001F98 RID: 8088
+	// (get) Token: 0x06014C8E RID: 85134 RVA: 0x0060AF6C File Offset: 0x0060916C
+	// (set) Token: 0x06014C8F RID: 85135 RVA: 0x0060AF74 File Offset: 0x00609174
 	public UUIItem AttachItem { get; set; }
 
-	// Token: 0x17001F41 RID: 8001
-	// (get) Token: 0x0601725F RID: 94815 RVA: 0x005DE3A9 File Offset: 0x005DC5A9
-	// (set) Token: 0x06017260 RID: 94816 RVA: 0x005DE3B1 File Offset: 0x005DC5B1
+	// Token: 0x17001F99 RID: 8089
+	// (get) Token: 0x06014C90 RID: 85136 RVA: 0x0060AF7D File Offset: 0x0060917D
+	// (set) Token: 0x06014C91 RID: 85137 RVA: 0x0060AF85 File Offset: 0x00609185
 	public Action OnDisableClick { get; set; }
 
-	// Token: 0x17001F42 RID: 8002
-	// (get) Token: 0x06017261 RID: 94817 RVA: 0x005DE3BA File Offset: 0x005DC5BA
-	// (set) Token: 0x06017262 RID: 94818 RVA: 0x005DE3C2 File Offset: 0x005DC5C2
+	// Token: 0x17001F9A RID: 8090
+	// (get) Token: 0x06014C92 RID: 85138 RVA: 0x0060AF8E File Offset: 0x0060918E
+	// (set) Token: 0x06014C93 RID: 85139 RVA: 0x0060AF96 File Offset: 0x00609196
 	[Nullable(0)]
 	public ValueTuple<float, float>? CustomOffset { [NullableContext(0)] get; [NullableContext(0)] set; }
 
-	// Token: 0x17001F43 RID: 8003
-	// (get) Token: 0x06017263 RID: 94819 RVA: 0x005DE3CB File Offset: 0x005DC5CB
-	// (set) Token: 0x06017264 RID: 94820 RVA: 0x005DE3D3 File Offset: 0x005DC5D3
+	// Token: 0x17001F9B RID: 8091
+	// (get) Token: 0x06014C94 RID: 85140 RVA: 0x0060AF9F File Offset: 0x0060919F
+	// (set) Token: 0x06014C95 RID: 85141 RVA: 0x0060AFA7 File Offset: 0x006091A7
 	public ETermExplanationGroup? Group { get; set; }
 
-	// Token: 0x17001F44 RID: 8004
-	// (get) Token: 0x06017265 RID: 94821 RVA: 0x005DE3DC File Offset: 0x005DC5DC
-	// (set) Token: 0x06017266 RID: 94822 RVA: 0x005DE3E4 File Offset: 0x005DC5E4
+	// Token: 0x17001F9C RID: 8092
+	// (get) Token: 0x06014C96 RID: 85142 RVA: 0x0060AFB0 File Offset: 0x006091B0
+	// (set) Token: 0x06014C97 RID: 85143 RVA: 0x0060AFB8 File Offset: 0x006091B8
 	public int? Priority { get; set; }
 
-	// Token: 0x17001F45 RID: 8005
-	// (get) Token: 0x06017267 RID: 94823 RVA: 0x005DE3ED File Offset: 0x005DC5ED
-	// (set) Token: 0x06017268 RID: 94824 RVA: 0x005DE3F5 File Offset: 0x005DC5F5
+	// Token: 0x17001F9D RID: 8093
+	// (get) Token: 0x06014C98 RID: 85144 RVA: 0x0060AFC1 File Offset: 0x006091C1
+	// (set) Token: 0x06014C99 RID: 85145 RVA: 0x0060AFC9 File Offset: 0x006091C9
 	public ETermExplanationViewStyle? Style { get; set; }
 }

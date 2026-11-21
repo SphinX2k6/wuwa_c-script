@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -10,14 +9,14 @@ using CSharpScript.Game.Module.Area;
 using CSharpScript.Game.Module.Map;
 using CSharpScript.Game.Module.WorldMap;
 
-// Token: 0x02001AB1 RID: 6833
+// Token: 0x02000F70 RID: 3952
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ExploreProgressModel : ModelBase
 {
-	// Token: 0x170010BA RID: 4282
-	// (get) Token: 0x0600CA4A RID: 51786 RVA: 0x002E196A File Offset: 0x002DFB6A
+	// Token: 0x170010DF RID: 4319
+	// (get) Token: 0x06009E5B RID: 40539 RVA: 0x002ECABA File Offset: 0x002EACBA
 	public bool GetIsRedDotAreaRewardBox
 	{
 		get
@@ -26,21 +25,21 @@ public class ExploreProgressModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CA4B RID: 51787 RVA: 0x002E1972 File Offset: 0x002DFB72
+	// Token: 0x06009E5C RID: 40540 RVA: 0x002ECAC2 File Offset: 0x002EACC2
 	protected override bool OnClear()
 	{
 		this.ClearExploreAreaData();
 		return true;
 	}
 
-	// Token: 0x0600CA4C RID: 51788 RVA: 0x002E197B File Offset: 0x002DFB7B
+	// Token: 0x06009E5D RID: 40541 RVA: 0x002ECACB File Offset: 0x002EACCB
 	protected override bool OnLeaveLevel()
 	{
 		this.ClearExploreAreaData();
 		return true;
 	}
 
-	// Token: 0x0600CA4D RID: 51789 RVA: 0x002E1984 File Offset: 0x002DFB84
+	// Token: 0x06009E5E RID: 40542 RVA: 0x002ECAD4 File Offset: 0x002EACD4
 	public void InitializeExploreAreaData()
 	{
 		List<Country> countryList = InfluenceConfig.Instance.GetCountryList();
@@ -69,7 +68,7 @@ public class ExploreProgressModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CA4E RID: 51790 RVA: 0x002E1A94 File Offset: 0x002DFC94
+	// Token: 0x06009E5F RID: 40543 RVA: 0x002ECBE4 File Offset: 0x002EADE4
 	public void InitializeCurrentCountryIdAndAreaId()
 	{
 		AreaModel instance = AreaModel.Instance;
@@ -100,7 +99,7 @@ public class ExploreProgressModel : ModelBase
 		instance3.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 	}
 
-	// Token: 0x0600CA4F RID: 51791 RVA: 0x002E1B71 File Offset: 0x002DFD71
+	// Token: 0x06009E60 RID: 40544 RVA: 0x002ECCC1 File Offset: 0x002EAEC1
 	public void ClearExploreAreaData()
 	{
 		this.ExploreCountryDataMap.Clear();
@@ -108,7 +107,7 @@ public class ExploreProgressModel : ModelBase
 		this.AllAreaIdList.Clear();
 	}
 
-	// Token: 0x0600CA50 RID: 51792 RVA: 0x002E1B94 File Offset: 0x002DFD94
+	// Token: 0x06009E61 RID: 40545 RVA: 0x002ECCE4 File Offset: 0x002EAEE4
 	public void RefreshExploreAreaData(AreaExploreInfo areaExploreInfo)
 	{
 		ExploreAreaData exploreAreaData;
@@ -118,7 +117,7 @@ public class ExploreProgressModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CA51 RID: 51793 RVA: 0x002E1BC0 File Offset: 0x002DFDC0
+	// Token: 0x06009E62 RID: 40546 RVA: 0x002ECD10 File Offset: 0x002EAF10
 	[NullableContext(2)]
 	public ExploreCountryData GetExploreCountryData(int countryId)
 	{
@@ -127,7 +126,7 @@ public class ExploreProgressModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600CA52 RID: 51794 RVA: 0x002E1BE0 File Offset: 0x002DFDE0
+	// Token: 0x06009E63 RID: 40547 RVA: 0x002ECD30 File Offset: 0x002EAF30
 	[NullableContext(2)]
 	public ExploreAreaData GetExploreAreaData(int areaId)
 	{
@@ -136,19 +135,19 @@ public class ExploreProgressModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600CA53 RID: 51795 RVA: 0x002E1BFD File Offset: 0x002DFDFD
+	// Token: 0x06009E64 RID: 40548 RVA: 0x002ECD4D File Offset: 0x002EAF4D
 	public IReadOnlyDictionary<int, ExploreCountryData> GetExploreCountryDataMap()
 	{
 		return this.ExploreCountryDataMap;
 	}
 
-	// Token: 0x0600CA54 RID: 51796 RVA: 0x002E1C05 File Offset: 0x002DFE05
+	// Token: 0x06009E65 RID: 40549 RVA: 0x002ECD55 File Offset: 0x002EAF55
 	public IReadOnlyList<ExploreCountryData> GetExploreCountryDataList()
 	{
-		return this.ExploreCountryDataMap.Values.ToArray<ExploreCountryData>();
+		return new List<ExploreCountryData>(this.ExploreCountryDataMap.Values);
 	}
 
-	// Token: 0x0600CA55 RID: 51797 RVA: 0x002E1C18 File Offset: 0x002DFE18
+	// Token: 0x06009E66 RID: 40550 RVA: 0x002ECD68 File Offset: 0x002EAF68
 	public List<ExploreAreaData> GetAllAreaDataListSortCountryState()
 	{
 		List<ExploreAreaData> list = new List<ExploreAreaData>();
@@ -162,13 +161,13 @@ public class ExploreProgressModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600CA56 RID: 51798 RVA: 0x002E1CBC File Offset: 0x002DFEBC
+	// Token: 0x06009E67 RID: 40551 RVA: 0x002ECE0C File Offset: 0x002EB00C
 	public List<int> GetAllAreaIdList()
 	{
 		return this.AllAreaIdList;
 	}
 
-	// Token: 0x0600CA57 RID: 51799 RVA: 0x002E1CC4 File Offset: 0x002DFEC4
+	// Token: 0x06009E68 RID: 40552 RVA: 0x002ECE14 File Offset: 0x002EB014
 	public void InitAreaStageRewardIdToAreaIdMap()
 	{
 		if (this.AreaStageRewardIdToAreaIdMap.Count > 0)
@@ -185,7 +184,7 @@ public class ExploreProgressModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CA58 RID: 51800 RVA: 0x002E1D3C File Offset: 0x002DFF3C
+	// Token: 0x06009E69 RID: 40553 RVA: 0x002ECE8C File Offset: 0x002EB08C
 	public void UpdateAreaStageRewardDataList(IReadOnlyList<int> rewardIds)
 	{
 		this.InitAreaStageRewardIdToAreaIdMap();
@@ -206,20 +205,20 @@ public class ExploreProgressModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.RedDotUpdateMapAreaBoxReward);
 	}
 
-	// Token: 0x0600CA59 RID: 51801 RVA: 0x002E1DCC File Offset: 0x002DFFCC
+	// Token: 0x06009E6A RID: 40554 RVA: 0x002ECF1C File Offset: 0x002EB11C
 	public bool IsAreaStageRewardIdAchieved(int rewardId)
 	{
 		return this.AchievedAreaRewardIds.Contains(rewardId);
 	}
 
-	// Token: 0x0600CA5A RID: 51802 RVA: 0x002E1DDA File Offset: 0x002DFFDA
+	// Token: 0x06009E6B RID: 40555 RVA: 0x002ECF2A File Offset: 0x002EB12A
 	[NullableContext(2)]
 	public ExploreCountryData GetCurrentCountryData()
 	{
 		return this.GetExploreCountryData(this.SelectedCountryId);
 	}
 
-	// Token: 0x0600CA5B RID: 51803 RVA: 0x002E1DE8 File Offset: 0x002DFFE8
+	// Token: 0x06009E6C RID: 40556 RVA: 0x002ECF38 File Offset: 0x002EB138
 	private void CheckRedDotAreaRewardBox()
 	{
 		foreach (int areaId in this.AllAreaIdList)
@@ -234,13 +233,13 @@ public class ExploreProgressModel : ModelBase
 		this.IsRedDotAreaRewardBox = false;
 	}
 
-	// Token: 0x0600CA5C RID: 51804 RVA: 0x002E1E58 File Offset: 0x002E0058
+	// Token: 0x06009E6D RID: 40557 RVA: 0x002ECFA8 File Offset: 0x002EB1A8
 	public void SureHasAreaRewardBox()
 	{
 		this.IsRedDotAreaRewardBox = true;
 	}
 
-	// Token: 0x0600CA5D RID: 51805 RVA: 0x002E1E64 File Offset: 0x002E0064
+	// Token: 0x06009E6E RID: 40558 RVA: 0x002ECFB4 File Offset: 0x002EB1B4
 	public bool IsCollectAllStageReward()
 	{
 		foreach (int areaId in this.AllAreaIdList)
@@ -254,7 +253,7 @@ public class ExploreProgressModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600CA5E RID: 51806 RVA: 0x002E1ECC File Offset: 0x002E00CC
+	// Token: 0x06009E6F RID: 40559 RVA: 0x002ED01C File Offset: 0x002EB21C
 	public void UpdatePlayPointState(int areaId, Dictionary<int, LevelPlayStateMsg> playPointStateDict)
 	{
 		ExploreAreaData exploreAreaData = this.GetExploreAreaData(areaId);
@@ -265,7 +264,7 @@ public class ExploreProgressModel : ModelBase
 		exploreAreaData.UpdatePlayPointData(playPointStateDict);
 	}
 
-	// Token: 0x0600CA5F RID: 51807 RVA: 0x002E1EE0 File Offset: 0x002E00E0
+	// Token: 0x06009E70 RID: 40560 RVA: 0x002ED030 File Offset: 0x002EB230
 	public void UpdateTraceEntities(int areaId, int exploratoryDegree, int[] entities)
 	{
 		ExploreAreaData exploreAreaData = this.GetExploreAreaData(areaId);
@@ -276,7 +275,7 @@ public class ExploreProgressModel : ModelBase
 		exploreAreaData.UpdateTraceEntities(exploratoryDegree, entities);
 	}
 
-	// Token: 0x0600CA60 RID: 51808 RVA: 0x002E1EF8 File Offset: 0x002E00F8
+	// Token: 0x06009E71 RID: 40561 RVA: 0x002ED048 File Offset: 0x002EB248
 	public void UpdateOnlinePlayersArea(Dictionary<int, int> areaDict)
 	{
 		this.OnlinePlayersAreaMap.Clear();
@@ -289,7 +288,7 @@ public class ExploreProgressModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.UpdateOnlinePlayersArea);
 	}
 
-	// Token: 0x0600CA61 RID: 51809 RVA: 0x002E1F78 File Offset: 0x002E0178
+	// Token: 0x06009E72 RID: 40562 RVA: 0x002ED0C8 File Offset: 0x002EB2C8
 	public int? GetOnlinePlayersArea(int playerId)
 	{
 		int value;
@@ -300,7 +299,7 @@ public class ExploreProgressModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600CA62 RID: 51810 RVA: 0x002E1FA8 File Offset: 0x002E01A8
+	// Token: 0x06009E73 RID: 40563 RVA: 0x002ED0F8 File Offset: 0x002EB2F8
 	public List<int> GetOnlinePlayerIndexListByAreaId(int areaId)
 	{
 		List<int> list = new List<int>();
@@ -322,27 +321,27 @@ public class ExploreProgressModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600CA63 RID: 51811 RVA: 0x002E2048 File Offset: 0x002E0248
+	// Token: 0x06009E74 RID: 40564 RVA: 0x002ED198 File Offset: 0x002EB398
 	public void SetTrackTaskAreaId(int areaId, string taskIconPath)
 	{
 		this.TrackTaskAreaId = areaId;
 		this.TrackTaskIconPath = taskIconPath;
 	}
 
-	// Token: 0x0600CA64 RID: 51812 RVA: 0x002E2058 File Offset: 0x002E0258
+	// Token: 0x06009E75 RID: 40565 RVA: 0x002ED1A8 File Offset: 0x002EB3A8
 	public void ClearTrackTaskAreaId()
 	{
 		this.TrackTaskAreaId = 0;
 		this.TrackTaskIconPath = "";
 	}
 
-	// Token: 0x0600CA65 RID: 51813 RVA: 0x002E206C File Offset: 0x002E026C
+	// Token: 0x06009E76 RID: 40566 RVA: 0x002ED1BC File Offset: 0x002EB3BC
 	public void ClearTrackExploreAreaItemData()
 	{
 		this.TrackExploreAreaItemData = null;
 	}
 
-	// Token: 0x0600CA66 RID: 51814 RVA: 0x002E2075 File Offset: 0x002E0275
+	// Token: 0x06009E77 RID: 40567 RVA: 0x002ED1C5 File Offset: 0x002EB3C5
 	public void CheckTrackExploreAreaItemData()
 	{
 		if (this.TrackExploreAreaItemData != null)
@@ -352,7 +351,7 @@ public class ExploreProgressModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CA67 RID: 51815 RVA: 0x002E2090 File Offset: 0x002E0290
+	// Token: 0x06009E78 RID: 40568 RVA: 0x002ED1E0 File Offset: 0x002EB3E0
 	public void SetTrackExploreAreaItemData(int areaId, int exploreType)
 	{
 		ExploreAreaData exploreAreaData = this.GetExploreAreaData(areaId);
@@ -362,20 +361,20 @@ public class ExploreProgressModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CA68 RID: 51816 RVA: 0x002E20B5 File Offset: 0x002E02B5
+	// Token: 0x06009E79 RID: 40569 RVA: 0x002ED205 File Offset: 0x002EB405
 	public void SetTrackExploreAreaItemData(ExploreAreaItemData data)
 	{
 		this.TrackExploreAreaItemData = data;
 	}
 
-	// Token: 0x0600CA69 RID: 51817 RVA: 0x002E20BE File Offset: 0x002E02BE
+	// Token: 0x06009E7A RID: 40570 RVA: 0x002ED20E File Offset: 0x002EB40E
 	public void WorldMapViewClose()
 	{
 		this.ClearTrackExploreAreaItemData();
 		this.SaveLocalAreaExplorePlayState();
 	}
 
-	// Token: 0x0600CA6A RID: 51818 RVA: 0x002E20CC File Offset: 0x002E02CC
+	// Token: 0x06009E7B RID: 40571 RVA: 0x002ED21C File Offset: 0x002EB41C
 	private void SaveLocalAreaExplorePlayState()
 	{
 		int worldMapLevelOneAreaId = MapUtil.GetWorldMapLevelOneAreaId();
@@ -391,38 +390,38 @@ public class ExploreProgressModel : ModelBase
 		exploreAreaData.ClearFlagSaveLocalAreaExplorePlayState();
 	}
 
-	// Token: 0x0600CA6B RID: 51819 RVA: 0x002E20FC File Offset: 0x002E02FC
+	// Token: 0x06009E7C RID: 40572 RVA: 0x002ED24C File Offset: 0x002EB44C
 	public IReadOnlySet<EMapNoteId> GetLocalShowNoteIdMap()
 	{
 		return this.ShowNoteIdMap;
 	}
 
-	// Token: 0x0600CA6C RID: 51820 RVA: 0x002E2104 File Offset: 0x002E0304
+	// Token: 0x06009E7D RID: 40573 RVA: 0x002ED254 File Offset: 0x002EB454
 	public void SetLocalShowNoteIdMap(EMapNoteId noteId)
 	{
 		this.ShowNoteIdMap.Add(noteId);
 	}
 
-	// Token: 0x0600CA6D RID: 51821 RVA: 0x002E2113 File Offset: 0x002E0313
+	// Token: 0x06009E7E RID: 40574 RVA: 0x002ED263 File Offset: 0x002EB463
 	public void SaveToLocalShowNoteIdMap()
 	{
 		LocalStorage.SetPlayer<HashSet<EMapNoteId>>(ELocalStoragePlayerKey.ShowNoteIdMap, this.ShowNoteIdMap);
 	}
 
-	// Token: 0x0600CA6E RID: 51822 RVA: 0x002E2126 File Offset: 0x002E0326
+	// Token: 0x06009E7F RID: 40575 RVA: 0x002ED276 File Offset: 0x002EB476
 	public void LoadLocalShowNoteIdMap()
 	{
 		this.ShowNoteIdMap = (LocalStorage.GetPlayer<HashSet<EMapNoteId>>(ELocalStoragePlayerKey.ShowNoteIdMap, null) ?? new HashSet<EMapNoteId>());
 	}
 
-	// Token: 0x0600CA6F RID: 51823 RVA: 0x002E2142 File Offset: 0x002E0342
+	// Token: 0x06009E80 RID: 40576 RVA: 0x002ED292 File Offset: 0x002EB492
 	public void ClearShowNoteIdMap()
 	{
 		this.ShowNoteIdMap.Clear();
 	}
 
-	// Token: 0x170010BB RID: 4283
-	// (get) Token: 0x0600CA70 RID: 51824 RVA: 0x002E214F File Offset: 0x002E034F
+	// Token: 0x170010E0 RID: 4320
+	// (get) Token: 0x06009E81 RID: 40577 RVA: 0x002ED29F File Offset: 0x002EB49F
 	public static ExploreProgressModel Instance
 	{
 		get
@@ -431,7 +430,7 @@ public class ExploreProgressModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CA71 RID: 51825 RVA: 0x002E2156 File Offset: 0x002E0356
+	// Token: 0x06009E82 RID: 40578 RVA: 0x002ED2A6 File Offset: 0x002EB4A6
 	public static ExploreProgressModel GetOrCreateInstance()
 	{
 		if (ExploreProgressModel._Instance == null)
@@ -441,7 +440,7 @@ public class ExploreProgressModel : ModelBase
 		return ExploreProgressModel._Instance;
 	}
 
-	// Token: 0x0600CA72 RID: 51826 RVA: 0x002E216A File Offset: 0x002E036A
+	// Token: 0x06009E83 RID: 40579 RVA: 0x002ED2BA File Offset: 0x002EB4BA
 	public static bool CreateInstance()
 	{
 		if (ExploreProgressModel._Instance != null)
@@ -452,64 +451,64 @@ public class ExploreProgressModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600CA73 RID: 51827 RVA: 0x002E2180 File Offset: 0x002E0380
+	// Token: 0x06009E84 RID: 40580 RVA: 0x002ED2D0 File Offset: 0x002EB4D0
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600CA74 RID: 51828 RVA: 0x002E2182 File Offset: 0x002E0382
+	// Token: 0x06009E85 RID: 40581 RVA: 0x002ED2D2 File Offset: 0x002EB4D2
 	public static void ResetStaticDefaultValue()
 	{
 		ExploreProgressModel._Instance = null;
 	}
 
-	// Token: 0x0600CA75 RID: 51829 RVA: 0x002E218A File Offset: 0x002E038A
+	// Token: 0x06009E86 RID: 40582 RVA: 0x002ED2DA File Offset: 0x002EB4DA
 	static ExploreProgressModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ExploreProgressModel.CreateStaticDefaultValue), new Action(ExploreProgressModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005D2F RID: 23855
+	// Token: 0x04005DFE RID: 24062
 	private readonly Dictionary<int, ExploreCountryData> ExploreCountryDataMap = new Dictionary<int, ExploreCountryData>();
 
-	// Token: 0x04005D30 RID: 23856
+	// Token: 0x04005DFF RID: 24063
 	private readonly Dictionary<int, ExploreAreaData> ExploreAreaDataMap = new Dictionary<int, ExploreAreaData>();
 
-	// Token: 0x04005D31 RID: 23857
+	// Token: 0x04005E00 RID: 24064
 	private readonly List<int> AllAreaIdList = new List<int>();
 
-	// Token: 0x04005D32 RID: 23858
+	// Token: 0x04005E01 RID: 24065
 	public int SelectedCountryId;
 
-	// Token: 0x04005D33 RID: 23859
+	// Token: 0x04005E02 RID: 24066
 	public int SelectedAreaId;
 
-	// Token: 0x04005D34 RID: 23860
+	// Token: 0x04005E03 RID: 24067
 	private readonly Dictionary<int, int> AreaStageRewardIdToAreaIdMap = new Dictionary<int, int>();
 
-	// Token: 0x04005D35 RID: 23861
+	// Token: 0x04005E04 RID: 24068
 	private readonly HashSet<int> AchievedAreaRewardIds = new HashSet<int>();
 
-	// Token: 0x04005D36 RID: 23862
+	// Token: 0x04005E05 RID: 24069
 	private bool IsRedDotAreaRewardBox;
 
-	// Token: 0x04005D37 RID: 23863
+	// Token: 0x04005E06 RID: 24070
 	public readonly Dictionary<int, int> OnlinePlayersAreaMap = new Dictionary<int, int>();
 
-	// Token: 0x04005D38 RID: 23864
+	// Token: 0x04005E07 RID: 24071
 	public int TrackTaskAreaId;
 
-	// Token: 0x04005D39 RID: 23865
+	// Token: 0x04005E08 RID: 24072
 	public string TrackTaskIconPath = "";
 
-	// Token: 0x04005D3A RID: 23866
+	// Token: 0x04005E09 RID: 24073
 	[Nullable(2)]
 	private ExploreAreaItemData TrackExploreAreaItemData;
 
-	// Token: 0x04005D3B RID: 23867
+	// Token: 0x04005E0A RID: 24074
 	private HashSet<EMapNoteId> ShowNoteIdMap = new HashSet<EMapNoteId>();
 
-	// Token: 0x04005D3C RID: 23868
+	// Token: 0x04005E0B RID: 24075
 	[Nullable(2)]
 	private static ExploreProgressModel _Instance;
 }

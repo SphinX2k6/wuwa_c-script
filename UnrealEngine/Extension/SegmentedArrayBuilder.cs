@@ -5,11 +5,11 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine.Extension
 {
-	// Token: 0x02002AE2 RID: 10978
+	// Token: 0x02000891 RID: 2193
 	[CompilerFeatureRequired("RefStructs")]
 	internal ref struct SegmentedArrayBuilder<[Nullable(2)] T>
 	{
-		// Token: 0x060283FA RID: 164858 RVA: 0x003D3744 File Offset: 0x003D1944
+		// Token: 0x0600BDAF RID: 48559 RVA: 0x0012EA54 File Offset: 0x0012CC54
 		public SegmentedArrayBuilder([Nullable(new byte[]
 		{
 			0,
@@ -24,7 +24,7 @@ namespace UnrealEngine.Extension
 			this._currentSegment = scratchBuffer;
 		}
 
-		// Token: 0x060283FB RID: 164859 RVA: 0x003D3784 File Offset: 0x003D1984
+		// Token: 0x0600BDB0 RID: 48560 RVA: 0x0012EA94 File Offset: 0x0012CC94
 		public void Dispose()
 		{
 			int segmentsCount = this._segmentsCount;
@@ -34,7 +34,7 @@ namespace UnrealEngine.Extension
 			}
 		}
 
-		// Token: 0x060283FC RID: 164860 RVA: 0x003D37A4 File Offset: 0x003D19A4
+		// Token: 0x0600BDB1 RID: 48561 RVA: 0x0012EAB4 File Offset: 0x0012CCB4
 		private unsafe void ReturnArrays(int segmentsCount)
 		{
 			ReadOnlySpan<T[]> readOnlySpan = <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<SegmentedArrayBuilder<T>.Arrays, T[]>(this._segments, 27);
@@ -64,8 +64,8 @@ namespace UnrealEngine.Extension
 			}
 		}
 
-		// Token: 0x1700999D RID: 39325
-		// (get) Token: 0x060283FD RID: 164861 RVA: 0x003D385D File Offset: 0x003D1A5D
+		// Token: 0x17002326 RID: 8998
+		// (get) Token: 0x0600BDB2 RID: 48562 RVA: 0x0012EB6D File Offset: 0x0012CD6D
 		public readonly int Count
 		{
 			get
@@ -74,7 +74,7 @@ namespace UnrealEngine.Extension
 			}
 		}
 
-		// Token: 0x060283FE RID: 164862 RVA: 0x003D386C File Offset: 0x003D1A6C
+		// Token: 0x0600BDB3 RID: 48563 RVA: 0x0012EB7C File Offset: 0x0012CD7C
 		[NullableContext(1)]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		internal unsafe void AddNonICollectionRangeInlined(IEnumerable<T> source)
@@ -99,7 +99,7 @@ namespace UnrealEngine.Extension
 			this._countInCurrentSegment = num;
 		}
 
-		// Token: 0x060283FF RID: 164863 RVA: 0x003D3900 File Offset: 0x003D1B00
+		// Token: 0x0600BDB4 RID: 48564 RVA: 0x0012EC10 File Offset: 0x0012CE10
 		[NullableContext(1)]
 		internal readonly T[] ToSharedArray()
 		{
@@ -117,7 +117,7 @@ namespace UnrealEngine.Extension
 			return array;
 		}
 
-		// Token: 0x06028400 RID: 164864 RVA: 0x003D3938 File Offset: 0x003D1B38
+		// Token: 0x0600BDB5 RID: 48565 RVA: 0x0012EC48 File Offset: 0x0012CE48
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		private unsafe readonly void ToSpanInlined([Nullable(new byte[]
 		{
@@ -146,7 +146,7 @@ namespace UnrealEngine.Extension
 			this._currentSegment.Slice(0, this._countInCurrentSegment).CopyTo(destination);
 		}
 
-		// Token: 0x06028401 RID: 164865 RVA: 0x003D39EC File Offset: 0x003D1BEC
+		// Token: 0x0600BDB6 RID: 48566 RVA: 0x0012ECFC File Offset: 0x0012CEFC
 		private unsafe void Expand(int minimumRequired = 16)
 		{
 			if (minimumRequired < 16)
@@ -169,16 +169,16 @@ namespace UnrealEngine.Extension
 			this._segmentsCount++;
 		}
 
-		// Token: 0x04016288 RID: 90760
+		// Token: 0x0400569F RID: 22175
 		private const int ScratchBufferSize = 8;
 
-		// Token: 0x04016289 RID: 90761
+		// Token: 0x040056A0 RID: 22176
 		private const int MinimumRentSize = 16;
 
-		// Token: 0x0401628A RID: 90762
+		// Token: 0x040056A1 RID: 22177
 		private SegmentedArrayBuilder<T>.Arrays _segments;
 
-		// Token: 0x0401628B RID: 90763
+		// Token: 0x040056A2 RID: 22178
 		[Nullable(new byte[]
 		{
 			0,
@@ -186,7 +186,7 @@ namespace UnrealEngine.Extension
 		})]
 		private Span<T> _firstSegment;
 
-		// Token: 0x0401628C RID: 90764
+		// Token: 0x040056A3 RID: 22179
 		[Nullable(new byte[]
 		{
 			0,
@@ -194,29 +194,29 @@ namespace UnrealEngine.Extension
 		})]
 		private Span<T> _currentSegment;
 
-		// Token: 0x0401628D RID: 90765
+		// Token: 0x040056A4 RID: 22180
 		private int _segmentsCount;
 
-		// Token: 0x0401628E RID: 90766
+		// Token: 0x040056A5 RID: 22181
 		private int _countInFinishedSegments;
 
-		// Token: 0x0401628F RID: 90767
+		// Token: 0x040056A6 RID: 22182
 		private int _countInCurrentSegment;
 
-		// Token: 0x02003C0C RID: 15372
+		// Token: 0x02001415 RID: 5141
 		[InlineArray(27)]
 		private struct Arrays
 		{
-			// Token: 0x04017E44 RID: 97860
+			// Token: 0x040068C5 RID: 26821
 			[Nullable(1)]
 			private T[] _values;
 		}
 
-		// Token: 0x02003C0D RID: 15373
+		// Token: 0x02001416 RID: 5142
 		[InlineArray(8)]
 		public struct ScratchBuffer
 		{
-			// Token: 0x04017E45 RID: 97861
+			// Token: 0x040068C6 RID: 26822
 			[Nullable(1)]
 			private T _item;
 		}

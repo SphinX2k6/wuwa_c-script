@@ -6,16 +6,16 @@ using Aki.Protocol;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002D53 RID: 11603
+// Token: 0x020022AD RID: 8877
 public class WeeklyRogueResultCheckView : UiViewBase
 {
-	// Token: 0x0601861A RID: 99866 RVA: 0x00634FD9 File Offset: 0x006331D9
+	// Token: 0x06015EBC RID: 89788 RVA: 0x0065AFE9 File Offset: 0x006591E9
 	[NullableContext(1)]
 	public WeeklyRogueResultCheckView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0601861B RID: 99867 RVA: 0x00634FE4 File Offset: 0x006331E4
+	// Token: 0x06015EBD RID: 89789 RVA: 0x0065AFF4 File Offset: 0x006591F4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -33,7 +33,7 @@ public class WeeklyRogueResultCheckView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601861C RID: 99868 RVA: 0x00635090 File Offset: 0x00633290
+	// Token: 0x06015EBE RID: 89790 RVA: 0x0065B0A0 File Offset: 0x006592A0
 	protected override void OnBeforeCreate()
 	{
 		WeeklyRogueResultCheckData weeklyRogueResultCheckData = this.OpenParam as WeeklyRogueResultCheckData;
@@ -41,7 +41,7 @@ public class WeeklyRogueResultCheckView : UiViewBase
 		this.MaxInGameScore = ((weeklyRogueResultCheckData != null) ? weeklyRogueResultCheckData.MaxInGameScore : 0);
 	}
 
-	// Token: 0x0601861D RID: 99869 RVA: 0x006350D0 File Offset: 0x006332D0
+	// Token: 0x06015EBF RID: 89791 RVA: 0x0065B0E0 File Offset: 0x006592E0
 	protected override void OnStart()
 	{
 		this.ButtonItemSettle = new ButtonItem(base.GetItem(1));
@@ -58,13 +58,13 @@ public class WeeklyRogueResultCheckView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "PrefabtextItem_Roguetuichu02_Text", Array.Empty<object>());
 	}
 
-	// Token: 0x0601861E RID: 99870 RVA: 0x006351B1 File Offset: 0x006333B1
+	// Token: 0x06015EC0 RID: 89792 RVA: 0x0065B1C1 File Offset: 0x006593C1
 	private void OnClickBtnSettle(int _)
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601861F RID: 99871 RVA: 0x006351BA File Offset: 0x006333BA
+	// Token: 0x06015EC1 RID: 89793 RVA: 0x0065B1CA File Offset: 0x006593CA
 	private void OnClickBtnExit(int _)
 	{
 		UiManager.Instance.CloseView(this.ViewInfo.Name, delegate(bool success)
@@ -78,33 +78,33 @@ public class WeeklyRogueResultCheckView : UiViewBase
 		});
 	}
 
-	// Token: 0x0400B4E7 RID: 46311
+	// Token: 0x0400B85C RID: 47196
 	private int CurrentInGameScore;
 
-	// Token: 0x0400B4E8 RID: 46312
+	// Token: 0x0400B85D RID: 47197
 	private int MaxInGameScore;
 
-	// Token: 0x0400B4E9 RID: 46313
+	// Token: 0x0400B85E RID: 47198
 	[Nullable(2)]
 	private ButtonItem ButtonItemSettle;
 
-	// Token: 0x0400B4EA RID: 46314
+	// Token: 0x0400B85F RID: 47199
 	[Nullable(2)]
 	private ButtonItem ButtonItemExit;
 
-	// Token: 0x020092E8 RID: 37608
+	// Token: 0x0200850F RID: 34063
 	private class EWeeklyRogueResultCheckDefine
 	{
-		// Token: 0x0402F7B9 RID: 194489
+		// Token: 0x0402AE41 RID: 175681
 		public const int TxtCurRoom = 0;
 
-		// Token: 0x0402F7BA RID: 194490
+		// Token: 0x0402AE42 RID: 175682
 		public const int BtnSettle = 1;
 
-		// Token: 0x0402F7BB RID: 194491
+		// Token: 0x0402AE43 RID: 175683
 		public const int BtnExit = 2;
 
-		// Token: 0x0402F7BC RID: 194492
+		// Token: 0x0402AE44 RID: 175684
 		public const int TxtTips = 3;
 	}
 }

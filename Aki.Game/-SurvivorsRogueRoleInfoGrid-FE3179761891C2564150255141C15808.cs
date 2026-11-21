@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002B64 RID: 11108
+// Token: 0x020020E0 RID: 8416
 internal enum <SurvivorsRogueRoleInfoGrid>FE3179761891C2564150255141C15808E5F073B78A5CDBEC340680088764B1000__EComponents
 {
-	// Token: 0x0400AC14 RID: 44052
+	// Token: 0x0400B01A RID: 45082
 	BtnRole,
-	// Token: 0x0400AC15 RID: 44053
+	// Token: 0x0400B01B RID: 45083
 	TexRole,
-	// Token: 0x0400AC16 RID: 44054
+	// Token: 0x0400B01C RID: 45084
 	UpItem,
-	// Token: 0x0400AC17 RID: 44055
+	// Token: 0x0400B01D RID: 45085
 	TxtLv
 }

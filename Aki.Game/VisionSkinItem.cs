@@ -4,12 +4,12 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x020024F2 RID: 9458
+// Token: 0x020019D9 RID: 6617
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionSkinItem : LoopScrollSmallItemGrid<int>
 {
-	// Token: 0x06013058 RID: 77912 RVA: 0x004B5D3C File Offset: 0x004B3F3C
+	// Token: 0x06010517 RID: 66839 RVA: 0x004C39E4 File Offset: 0x004C1BE4
 	protected override void OnRefresh(int data, bool isSelected, int gridIndex)
 	{
 		this.ItemId = data;
@@ -30,7 +30,7 @@ public class VisionSkinItem : LoopScrollSmallItemGrid<int>
 		}
 	}
 
-	// Token: 0x06013059 RID: 77913 RVA: 0x004B5DEC File Offset: 0x004B3FEC
+	// Token: 0x06010518 RID: 66840 RVA: 0x004C3A94 File Offset: 0x004C1C94
 	protected override void OnStart()
 	{
 		base.BindOnExtendToggleStateChanged(new Action<MediumItemGridExtendCallback>(this.OnClickEvent));
@@ -42,7 +42,7 @@ public class VisionSkinItem : LoopScrollSmallItemGrid<int>
 		itemGridExtendToggle.CanExecuteChange.Bind(new Func<bool>(this.CanToggleExecuteChange));
 	}
 
-	// Token: 0x0601305A RID: 77914 RVA: 0x004B5E21 File Offset: 0x004B4021
+	// Token: 0x06010519 RID: 66841 RVA: 0x004C3AC9 File Offset: 0x004C1CC9
 	public override void OnSelected(bool fireEvent)
 	{
 		if (this.GetItemGridExtendToggle().ToggleState != EToggleState.ETT_Checked)
@@ -51,7 +51,7 @@ public class VisionSkinItem : LoopScrollSmallItemGrid<int>
 		}
 	}
 
-	// Token: 0x0601305B RID: 77915 RVA: 0x004B5E3C File Offset: 0x004B403C
+	// Token: 0x0601051A RID: 66842 RVA: 0x004C3AE4 File Offset: 0x004C1CE4
 	private void OnClickEvent(MediumItemGridExtendCallback _)
 	{
 		Action<int, UUIExtendToggle> onClickCallBack = this.OnClickCallBack;
@@ -64,25 +64,25 @@ public class VisionSkinItem : LoopScrollSmallItemGrid<int>
 		NewFlagModel.Instance.SaveNewFlagConfig(ELocalStoragePlayerKey.VisionSkin);
 	}
 
-	// Token: 0x0601305C RID: 77916 RVA: 0x004B5E92 File Offset: 0x004B4092
+	// Token: 0x0601051B RID: 66843 RVA: 0x004C3B3A File Offset: 0x004C1D3A
 	public void SetClickToggleEvent(Action<int, UUIExtendToggle> call)
 	{
 		this.OnClickCallBack = call;
 	}
 
-	// Token: 0x0601305D RID: 77917 RVA: 0x004B5E9B File Offset: 0x004B409B
+	// Token: 0x0601051C RID: 66844 RVA: 0x004C3B43 File Offset: 0x004C1D43
 	public void BindCanToggleExecuteChange(Func<int, bool> toggle)
 	{
 		this.OnCanToggleClicked = toggle;
 	}
 
-	// Token: 0x0601305E RID: 77918 RVA: 0x004B5EA4 File Offset: 0x004B40A4
+	// Token: 0x0601051D RID: 66845 RVA: 0x004C3B4C File Offset: 0x004C1D4C
 	private bool CanToggleExecuteChange()
 	{
 		return this.OnCanToggleClicked == null || this.OnCanToggleClicked(this.ItemId);
 	}
 
-	// Token: 0x04008F29 RID: 36649
+	// Token: 0x04009073 RID: 36979
 	[Nullable(new byte[]
 	{
 		2,
@@ -90,10 +90,10 @@ public class VisionSkinItem : LoopScrollSmallItemGrid<int>
 	})]
 	private Action<int, UUIExtendToggle> OnClickCallBack;
 
-	// Token: 0x04008F2A RID: 36650
+	// Token: 0x04009074 RID: 36980
 	[Nullable(2)]
 	private Func<int, bool> OnCanToggleClicked;
 
-	// Token: 0x04008F2B RID: 36651
+	// Token: 0x04009075 RID: 36981
 	private int ItemId = -1;
 }

@@ -4,14 +4,14 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061C2 RID: 25026
+	// Token: 0x02005140 RID: 20800
 	[EnumExtensions]
 	public enum ERoadBookAnim
 	{
-		// Token: 0x04020F24 RID: 134948
+		// Token: 0x0401B853 RID: 112723
 		[EnumMember(Value = "AniOpen")]
 		AniOpen,
-		// Token: 0x04020F25 RID: 134949
+		// Token: 0x0401B854 RID: 112724
 		[EnumMember(Value = "AniClose")]
 		AniClose
 	}

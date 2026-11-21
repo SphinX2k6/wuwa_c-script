@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A33 RID: 27187
+	// Token: 0x02007155 RID: 29013
 	public class ILockEntityT
 	{
-		// Token: 0x1700C9A8 RID: 51624
-		// (get) Token: 0x0602F94C RID: 194892 RVA: 0x0067A011 File Offset: 0x00678211
-		// (set) Token: 0x0602F94D RID: 194893 RVA: 0x0067A019 File Offset: 0x00678219
+		// Token: 0x1700D453 RID: 54355
+		// (get) Token: 0x06032672 RID: 206450 RVA: 0x006D00D1 File Offset: 0x006CE2D1
+		// (set) Token: 0x06032673 RID: 206451 RVA: 0x006D00D9 File Offset: 0x006CE2D9
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x0602F94E RID: 194894 RVA: 0x0067A022 File Offset: 0x00678222
+		// Token: 0x06032674 RID: 206452 RVA: 0x006D00E2 File Offset: 0x006CE2E2
 		public ILockEntityT()
 		{
 			this.EntityIds = null;

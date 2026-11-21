@@ -2,42 +2,42 @@
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x0200556B RID: 21867
+	// Token: 0x0200453E RID: 17726
 	public class WorldMapNavigateImpl : IWorldMapNavigate
 	{
-		// Token: 0x1700860D RID: 34317
-		// (get) Token: 0x06037C10 RID: 228368 RVA: 0x00D38EF7 File Offset: 0x00D370F7
-		// (set) Token: 0x06037C11 RID: 228369 RVA: 0x00D38EFF File Offset: 0x00D370FF
+		// Token: 0x170059B6 RID: 22966
+		// (get) Token: 0x0602CAEA RID: 183018 RVA: 0x00C869CB File Offset: 0x00C84BCB
+		// (set) Token: 0x0602CAEB RID: 183019 RVA: 0x00C869D3 File Offset: 0x00C84BD3
 		public int AreaId { get; set; }
 
-		// Token: 0x1700860E RID: 34318
-		// (get) Token: 0x06037C12 RID: 228370 RVA: 0x00D38F08 File Offset: 0x00D37108
-		// (set) Token: 0x06037C13 RID: 228371 RVA: 0x00D38F10 File Offset: 0x00D37110
+		// Token: 0x170059B7 RID: 22967
+		// (get) Token: 0x0602CAEC RID: 183020 RVA: 0x00C869DC File Offset: 0x00C84BDC
+		// (set) Token: 0x0602CAED RID: 183021 RVA: 0x00C869E4 File Offset: 0x00C84BE4
 		public int? StateId { get; set; }
 
-		// Token: 0x1700860F RID: 34319
-		// (get) Token: 0x06037C14 RID: 228372 RVA: 0x00D38F19 File Offset: 0x00D37119
-		// (set) Token: 0x06037C15 RID: 228373 RVA: 0x00D38F21 File Offset: 0x00D37121
+		// Token: 0x170059B8 RID: 22968
+		// (get) Token: 0x0602CAEE RID: 183022 RVA: 0x00C869ED File Offset: 0x00C84BED
+		// (set) Token: 0x0602CAEF RID: 183023 RVA: 0x00C869F5 File Offset: 0x00C84BF5
 		public int CountryId { get; set; }
 
-		// Token: 0x17008610 RID: 34320
-		// (get) Token: 0x06037C16 RID: 228374 RVA: 0x00D38F2A File Offset: 0x00D3712A
-		// (set) Token: 0x06037C17 RID: 228375 RVA: 0x00D38F32 File Offset: 0x00D37132
+		// Token: 0x170059B9 RID: 22969
+		// (get) Token: 0x0602CAF0 RID: 183024 RVA: 0x00C869FE File Offset: 0x00C84BFE
+		// (set) Token: 0x0602CAF1 RID: 183025 RVA: 0x00C86A06 File Offset: 0x00C84C06
 		public int MarkId { get; set; }
 
-		// Token: 0x17008611 RID: 34321
-		// (get) Token: 0x06037C18 RID: 228376 RVA: 0x00D38F3B File Offset: 0x00D3713B
-		// (set) Token: 0x06037C19 RID: 228377 RVA: 0x00D38F43 File Offset: 0x00D37143
+		// Token: 0x170059BA RID: 22970
+		// (get) Token: 0x0602CAF2 RID: 183026 RVA: 0x00C86A0F File Offset: 0x00C84C0F
+		// (set) Token: 0x0602CAF3 RID: 183027 RVA: 0x00C86A17 File Offset: 0x00C84C17
 		public EMarkType MarkType { get; set; }
 
-		// Token: 0x17008612 RID: 34322
-		// (get) Token: 0x06037C1A RID: 228378 RVA: 0x00D38F4C File Offset: 0x00D3714C
-		// (set) Token: 0x06037C1B RID: 228379 RVA: 0x00D38F54 File Offset: 0x00D37154
+		// Token: 0x170059BB RID: 22971
+		// (get) Token: 0x0602CAF4 RID: 183028 RVA: 0x00C86A20 File Offset: 0x00C84C20
+		// (set) Token: 0x0602CAF5 RID: 183029 RVA: 0x00C86A28 File Offset: 0x00C84C28
 		public int SortIndex { get; set; }
 
-		// Token: 0x17008613 RID: 34323
-		// (get) Token: 0x06037C1C RID: 228380 RVA: 0x00D38F5D File Offset: 0x00D3715D
-		// (set) Token: 0x06037C1D RID: 228381 RVA: 0x00D38F65 File Offset: 0x00D37165
+		// Token: 0x170059BC RID: 22972
+		// (get) Token: 0x0602CAF6 RID: 183030 RVA: 0x00C86A31 File Offset: 0x00C84C31
+		// (set) Token: 0x0602CAF7 RID: 183031 RVA: 0x00C86A39 File Offset: 0x00C84C39
 		public int MapConfigId { get; set; }
 	}
 }

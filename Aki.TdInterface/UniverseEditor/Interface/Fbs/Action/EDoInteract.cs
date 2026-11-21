@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F54 RID: 24404
+	// Token: 0x02006598 RID: 26008
 	public enum EDoInteract : byte
 	{
-		// Token: 0x0400FCFE RID: 64766
+		// Token: 0x04010A7C RID: 68220
 		Direct,
-		// Token: 0x0400FCFF RID: 64767
+		// Token: 0x04010A7D RID: 68221
 		Option,
-		// Token: 0x0400FD00 RID: 64768
+		// Token: 0x04010A7E RID: 68222
 		Auto
 	}
 }

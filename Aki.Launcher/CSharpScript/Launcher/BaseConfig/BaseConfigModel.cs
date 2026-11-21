@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000257 RID: 599
+	// Token: 0x0200025C RID: 604
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BaseConfigModel : Singleton
 	{
-		// Token: 0x06000F15 RID: 3861 RVA: 0x0005873B File Offset: 0x0005693B
+		// Token: 0x06000F5C RID: 3932 RVA: 0x0005B569 File Offset: 0x00059769
 		[NullableContext(2)]
 		private void parseGrayBox(IGrayBoxConfig grayBoxConfig)
 		{
 		}
 
-		// Token: 0x06000F16 RID: 3862 RVA: 0x00058740 File Offset: 0x00056940
+		// Token: 0x06000F5D RID: 3933 RVA: 0x0005B56C File Offset: 0x0005976C
 		public void parseClientEntryJson(string parallelName, Dictionary<string, EntryJson> jsonFileData)
 		{
 			EntryJson defaultObject = null;
@@ -38,8 +38,8 @@ namespace CSharpScript.Launcher.BaseConfig
 			this.parseGrayBox(entryJson.GrayBox);
 		}
 
-		// Token: 0x1700016E RID: 366
-		// (get) Token: 0x06000F17 RID: 3863 RVA: 0x000587DC File Offset: 0x000569DC
+		// Token: 0x17000175 RID: 373
+		// (get) Token: 0x06000F5E RID: 3934 RVA: 0x0005B608 File Offset: 0x00059808
 		public static BaseConfigModel Instance
 		{
 			get
@@ -53,12 +53,12 @@ namespace CSharpScript.Launcher.BaseConfig
 			}
 		}
 
-		// Token: 0x06000F18 RID: 3864 RVA: 0x000587FF File Offset: 0x000569FF
+		// Token: 0x06000F5F RID: 3935 RVA: 0x0005B62B File Offset: 0x0005982B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000F19 RID: 3865 RVA: 0x00058801 File Offset: 0x00056A01
+		// Token: 0x06000F60 RID: 3936 RVA: 0x0005B62D File Offset: 0x0005982D
 		public static void ResetStaticDefaultValue()
 		{
 			BaseConfigModel instance = BaseConfigModel._instance;
@@ -69,38 +69,38 @@ namespace CSharpScript.Launcher.BaseConfig
 			BaseConfigModel._instance = null;
 		}
 
-		// Token: 0x06000F1A RID: 3866 RVA: 0x0005881A File Offset: 0x00056A1A
+		// Token: 0x06000F61 RID: 3937 RVA: 0x0005B646 File Offset: 0x00059846
 		static BaseConfigModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BaseConfigModel.CreateStaticDefaultValue), new Action(BaseConfigModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040009A8 RID: 2472
+		// Token: 0x040009F2 RID: 2546
 		public Dictionary<string, string> BaseConfig = new Dictionary<string, string>();
 
-		// Token: 0x040009A9 RID: 2473
+		// Token: 0x040009F3 RID: 2547
 		public bool PublicConfigLoaded;
 
-		// Token: 0x040009AA RID: 2474
+		// Token: 0x040009F4 RID: 2548
 		public Dictionary<string, string> BuildInfoMap = new Dictionary<string, string>();
 
-		// Token: 0x040009AB RID: 2475
+		// Token: 0x040009F5 RID: 2549
 		public Dictionary<string, string> ConfigVersionMap = new Dictionary<string, string>();
 
-		// Token: 0x040009AC RID: 2476
+		// Token: 0x040009F6 RID: 2550
 		public bool ParamsConfigInited;
 
-		// Token: 0x040009AD RID: 2477
+		// Token: 0x040009F7 RID: 2551
 		[Nullable(2)]
 		public EntryJson EntryJson;
 
-		// Token: 0x040009AE RID: 2478
+		// Token: 0x040009F8 RID: 2552
 		public readonly Dictionary<string, IGrayBoxItem> GrayBoxConfigMap = new Dictionary<string, IGrayBoxItem>();
 
-		// Token: 0x040009AF RID: 2479
+		// Token: 0x040009F9 RID: 2553
 		public readonly Dictionary<string, EHitResult> BoxResultMap = new Dictionary<string, EHitResult>();
 
-		// Token: 0x040009B0 RID: 2480
+		// Token: 0x040009FA RID: 2554
 		[Nullable(2)]
 		private static BaseConfigModel _instance;
 	}

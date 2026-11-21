@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000962 RID: 2402
+	// Token: 0x02000A15 RID: 2581
 	public static class EHitLogicTypeExtensions
 	{
-		// Token: 0x060035EA RID: 13802 RVA: 0x0008C724 File Offset: 0x0008A924
+		// Token: 0x06003971 RID: 14705 RVA: 0x00094678 File Offset: 0x00092878
 		public static string ToEnumString(this EHitLogicType value)
 		{
 			string result;
@@ -39,7 +39,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035EB RID: 13803 RVA: 0x0008C79C File Offset: 0x0008A99C
+		// Token: 0x06003972 RID: 14706 RVA: 0x000946F0 File Offset: 0x000928F0
 		public static EHitLogicType FromString(string name)
 		{
 			EHitLogicType result;
@@ -50,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035EC RID: 13804 RVA: 0x0008C7C8 File Offset: 0x0008A9C8
+		// Token: 0x06003973 RID: 14707 RVA: 0x0009471C File Offset: 0x0009291C
 		public static bool TryFromString(string name, out EHitLogicType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -135,7 +135,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060035ED RID: 13805 RVA: 0x0008C8CE File Offset: 0x0008AACE
+		// Token: 0x06003974 RID: 14708 RVA: 0x00094822 File Offset: 0x00092A22
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -150,7 +150,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060035EE RID: 13806 RVA: 0x0008C90E File Offset: 0x0008AB0E
+		// Token: 0x06003975 RID: 14709 RVA: 0x00094862 File Offset: 0x00092A62
 		public static EHitLogicType[] GetValues()
 		{
 			return new EHitLogicType[]
@@ -165,7 +165,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060035EF RID: 13807 RVA: 0x0008C921 File Offset: 0x0008AB21
+		// Token: 0x06003976 RID: 14710 RVA: 0x00094875 File Offset: 0x00092A75
 		public static string[] GetNames()
 		{
 			return new string[]

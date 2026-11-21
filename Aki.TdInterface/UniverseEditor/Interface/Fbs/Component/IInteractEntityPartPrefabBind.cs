@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200544F RID: 21583
+	// Token: 0x020059D5 RID: 22997
 	public struct IInteractEntityPartPrefabBind : IFlatbufferObject
 	{
-		// Token: 0x17009EE7 RID: 40679
-		// (get) Token: 0x060237F3 RID: 145395 RVA: 0x004E9614 File Offset: 0x004E7814
+		// Token: 0x1700A721 RID: 42785
+		// (get) Token: 0x060258AB RID: 153771 RVA: 0x00526688 File Offset: 0x00524888
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060237F4 RID: 145396 RVA: 0x004E9621 File Offset: 0x004E7821
+		// Token: 0x060258AC RID: 153772 RVA: 0x00526695 File Offset: 0x00524895
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060237F5 RID: 145397 RVA: 0x004E9628 File Offset: 0x004E7828
+		// Token: 0x060258AD RID: 153773 RVA: 0x0052669C File Offset: 0x0052489C
 		public static IInteractEntityPartPrefabBind GetRootAsIInteractEntityPartPrefabBind(ByteBuffer _bb)
 		{
 			return IInteractEntityPartPrefabBind.GetRootAsIInteractEntityPartPrefabBind(_bb, default(IInteractEntityPartPrefabBind));
 		}
 
-		// Token: 0x060237F6 RID: 145398 RVA: 0x004E9644 File Offset: 0x004E7844
+		// Token: 0x060258AE RID: 153774 RVA: 0x005266B8 File Offset: 0x005248B8
 		public static IInteractEntityPartPrefabBind GetRootAsIInteractEntityPartPrefabBind(ByteBuffer _bb, IInteractEntityPartPrefabBind obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060237F7 RID: 145399 RVA: 0x004E9661 File Offset: 0x004E7861
+		// Token: 0x060258AF RID: 153775 RVA: 0x005266D5 File Offset: 0x005248D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060237F8 RID: 145400 RVA: 0x004E9670 File Offset: 0x004E7870
+		// Token: 0x060258B0 RID: 153776 RVA: 0x005266E4 File Offset: 0x005248E4
 		public IInteractEntityPartPrefabBind __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009EE8 RID: 40680
-		// (get) Token: 0x060237F9 RID: 145401 RVA: 0x004E9680 File Offset: 0x004E7880
+		// Token: 0x1700A722 RID: 42786
+		// (get) Token: 0x060258B1 RID: 153777 RVA: 0x005266F4 File Offset: 0x005248F4
 		public EInteractEntityPartBindType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060237FA RID: 145402 RVA: 0x004E96BC File Offset: 0x004E78BC
+		// Token: 0x060258B2 RID: 153778 RVA: 0x00526730 File Offset: 0x00524930
 		public IInteractEntityPartPrefabOptionPoint? OptionPoints(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IInteractEntityPartPrefabOptionPoint?(default(IInteractEntityPartPrefabOptionPoint).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009EE9 RID: 40681
-		// (get) Token: 0x060237FB RID: 145403 RVA: 0x004E971C File Offset: 0x004E791C
+		// Token: 0x1700A723 RID: 42787
+		// (get) Token: 0x060258B3 RID: 153779 RVA: 0x00526790 File Offset: 0x00524990
 		public int OptionPointsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060237FC RID: 145404 RVA: 0x004E9747 File Offset: 0x004E7947
+		// Token: 0x060258B4 RID: 153780 RVA: 0x005267BB File Offset: 0x005249BB
 		public static Offset<IInteractEntityPartPrefabBind> CreateIInteractEntityPartPrefabBind(FlatBufferBuilder builder, EInteractEntityPartBindType Type = EInteractEntityPartBindType.Prefab, VectorOffset OptionPointsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IInteractEntityPartPrefabBind.EndIInteractEntityPartPrefabBind(builder);
 		}
 
-		// Token: 0x060237FD RID: 145405 RVA: 0x004E9764 File Offset: 0x004E7964
+		// Token: 0x060258B5 RID: 153781 RVA: 0x005267D8 File Offset: 0x005249D8
 		public static void StartIInteractEntityPartPrefabBind(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060237FE RID: 145406 RVA: 0x004E976D File Offset: 0x004E796D
+		// Token: 0x060258B6 RID: 153782 RVA: 0x005267E1 File Offset: 0x005249E1
 		public static void AddType(FlatBufferBuilder builder, EInteractEntityPartBindType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060237FF RID: 145407 RVA: 0x004E9778 File Offset: 0x004E7978
+		// Token: 0x060258B7 RID: 153783 RVA: 0x005267EC File Offset: 0x005249EC
 		public static void AddOptionPoints(FlatBufferBuilder builder, VectorOffset optionPointsOffset)
 		{
 			builder.AddOffset(1, optionPointsOffset.Value, 0);
 		}
 
-		// Token: 0x06023800 RID: 145408 RVA: 0x004E9788 File Offset: 0x004E7988
+		// Token: 0x060258B8 RID: 153784 RVA: 0x005267FC File Offset: 0x005249FC
 		public static VectorOffset CreateOptionPointsVector(FlatBufferBuilder builder, Offset<IInteractEntityPartPrefabOptionPoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023801 RID: 145409 RVA: 0x004E97C8 File Offset: 0x004E79C8
+		// Token: 0x060258B9 RID: 153785 RVA: 0x0052683C File Offset: 0x00524A3C
 		public static VectorOffset CreateOptionPointsVectorBlock(FlatBufferBuilder builder, Offset<IInteractEntityPartPrefabOptionPoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023802 RID: 145410 RVA: 0x004E97E2 File Offset: 0x004E79E2
+		// Token: 0x060258BA RID: 153786 RVA: 0x00526856 File Offset: 0x00524A56
 		public static VectorOffset CreateOptionPointsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IInteractEntityPartPrefabOptionPoint>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023803 RID: 145411 RVA: 0x004E9800 File Offset: 0x004E7A00
+		// Token: 0x060258BB RID: 153787 RVA: 0x00526874 File Offset: 0x00524A74
 		public static VectorOffset CreateOptionPointsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023804 RID: 145412 RVA: 0x004E9819 File Offset: 0x004E7A19
+		// Token: 0x060258BC RID: 153788 RVA: 0x0052688D File Offset: 0x00524A8D
 		public static void StartOptionPointsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06023805 RID: 145413 RVA: 0x004E9824 File Offset: 0x004E7A24
+		// Token: 0x060258BD RID: 153789 RVA: 0x00526898 File Offset: 0x00524A98
 		public static Offset<IInteractEntityPartPrefabBind> EndIInteractEntityPartPrefabBind(FlatBufferBuilder builder)
 		{
 			return new Offset<IInteractEntityPartPrefabBind>(builder.EndTable());
 		}
 
-		// Token: 0x06023806 RID: 145414 RVA: 0x004E9834 File Offset: 0x004E7A34
+		// Token: 0x060258BE RID: 153790 RVA: 0x005268A8 File Offset: 0x00524AA8
 		public IInteractEntityPartPrefabBindT UnPack()
 		{
 			IInteractEntityPartPrefabBindT interactEntityPartPrefabBindT = new IInteractEntityPartPrefabBindT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return interactEntityPartPrefabBindT;
 		}
 
-		// Token: 0x06023807 RID: 145415 RVA: 0x004E9850 File Offset: 0x004E7A50
+		// Token: 0x060258BF RID: 153791 RVA: 0x005268C4 File Offset: 0x00524AC4
 		public void UnPackTo(IInteractEntityPartPrefabBindT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023808 RID: 145416 RVA: 0x004E98BC File Offset: 0x004E7ABC
+		// Token: 0x060258C0 RID: 153792 RVA: 0x00526930 File Offset: 0x00524B30
 		public static Offset<IInteractEntityPartPrefabBind> Pack(FlatBufferBuilder builder, IInteractEntityPartPrefabBindT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IInteractEntityPartPrefabBind.CreateIInteractEntityPartPrefabBind(builder, _o.Type, optionPointsOffset);
 		}
 
-		// Token: 0x0400E6C4 RID: 59076
+		// Token: 0x0400F2F5 RID: 62197
 		private Table __p;
 	}
 }

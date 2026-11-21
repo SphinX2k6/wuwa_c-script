@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002A0D RID: 10765
+// Token: 0x02001F88 RID: 8072
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class SignalDecodeModel : ModelBase
 {
-	// Token: 0x06016562 RID: 91490 RVA: 0x005A70D0 File Offset: 0x005A52D0
+	// Token: 0x06013F69 RID: 81769 RVA: 0x005D20A8 File Offset: 0x005D02A8
 	public void GameplayStart(string id)
 	{
 		this.CurrentGameplayId = id;
@@ -31,8 +31,8 @@ public class SignalDecodeModel : ModelBase
 		this.EndDecisionSize = difficultyConfig.Value.ReleaseTimeWindow;
 	}
 
-	// Token: 0x17001DD0 RID: 7632
-	// (get) Token: 0x06016563 RID: 91491 RVA: 0x005A71C0 File Offset: 0x005A53C0
+	// Token: 0x17001E29 RID: 7721
+	// (get) Token: 0x06013F6A RID: 81770 RVA: 0x005D2198 File Offset: 0x005D0398
 	public static SignalDecodeModel Instance
 	{
 		get
@@ -41,7 +41,7 @@ public class SignalDecodeModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016564 RID: 91492 RVA: 0x005A71C7 File Offset: 0x005A53C7
+	// Token: 0x06013F6B RID: 81771 RVA: 0x005D219F File Offset: 0x005D039F
 	public static SignalDecodeModel GetOrCreateInstance()
 	{
 		if (SignalDecodeModel._Instance == null)
@@ -51,7 +51,7 @@ public class SignalDecodeModel : ModelBase
 		return SignalDecodeModel._Instance;
 	}
 
-	// Token: 0x06016565 RID: 91493 RVA: 0x005A71DB File Offset: 0x005A53DB
+	// Token: 0x06013F6C RID: 81772 RVA: 0x005D21B3 File Offset: 0x005D03B3
 	public static bool CreateInstance()
 	{
 		if (SignalDecodeModel._Instance != null)
@@ -62,48 +62,48 @@ public class SignalDecodeModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06016566 RID: 91494 RVA: 0x005A71F1 File Offset: 0x005A53F1
+	// Token: 0x06013F6D RID: 81773 RVA: 0x005D21C9 File Offset: 0x005D03C9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016567 RID: 91495 RVA: 0x005A71F3 File Offset: 0x005A53F3
+	// Token: 0x06013F6E RID: 81774 RVA: 0x005D21CB File Offset: 0x005D03CB
 	public static void ResetStaticDefaultValue()
 	{
 		SignalDecodeModel._Instance = null;
 	}
 
-	// Token: 0x06016568 RID: 91496 RVA: 0x005A71FB File Offset: 0x005A53FB
+	// Token: 0x06013F6F RID: 81775 RVA: 0x005D21D3 File Offset: 0x005D03D3
 	static SignalDecodeModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SignalDecodeModel.CreateStaticDefaultValue), new Action(SignalDecodeModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A625 RID: 42533
+	// Token: 0x0400AA0F RID: 43535
 	public string CurrentGameplayId = "";
 
-	// Token: 0x0400A626 RID: 42534
+	// Token: 0x0400AA10 RID: 43536
 	public ESignalGameplayType CurrentGameplayType = ESignalGameplayType.Catch;
 
-	// Token: 0x0400A627 RID: 42535
+	// Token: 0x0400AA11 RID: 43537
 	public string CurrentMorseCode = "";
 
-	// Token: 0x0400A628 RID: 42536
+	// Token: 0x0400AA12 RID: 43538
 	public int CurrentDifficulty;
 
-	// Token: 0x0400A629 RID: 42537
+	// Token: 0x0400AA13 RID: 43539
 	public int TargetCompletion = 100;
 
-	// Token: 0x0400A62A RID: 42538
+	// Token: 0x0400AA14 RID: 43540
 	public float Speed = 100f;
 
-	// Token: 0x0400A62B RID: 42539
+	// Token: 0x0400AA15 RID: 43541
 	public int StartDecisionSize;
 
-	// Token: 0x0400A62C RID: 42540
+	// Token: 0x0400AA16 RID: 43542
 	public int EndDecisionSize;
 
-	// Token: 0x0400A62D RID: 42541
+	// Token: 0x0400AA17 RID: 43543
 	[Nullable(2)]
 	private static SignalDecodeModel _Instance;
 }

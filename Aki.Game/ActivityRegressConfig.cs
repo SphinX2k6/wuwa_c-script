@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Launcher.NetworkDetection;
 
-// Token: 0x0200144D RID: 5197
+// Token: 0x02000901 RID: 2305
 [NullableContext(2)]
 [Nullable(0)]
 [Config(0)]
 public class ActivityRegressConfig : ConfigBase
 {
-	// Token: 0x060092C7 RID: 37575 RVA: 0x001F7FA8 File Offset: 0x001F61A8
+	// Token: 0x0600665C RID: 26204 RVA: 0x00200AE4 File Offset: 0x001FECE4
 	public unsafe IReadOnlyList<RegressSignReward> GetRegressSignRewards(int activityId, ERegressGrade grade)
 	{
 		IReadOnlyList<RegressSignReward> configList = ConfigRegressSignRewardByGradeAndActivityId.GetConfigList((int)grade, activityId, true);
@@ -38,7 +37,7 @@ public class ActivityRegressConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x060092C8 RID: 37576 RVA: 0x001F8078 File Offset: 0x001F6278
+	// Token: 0x0600665D RID: 26205 RVA: 0x00200BB4 File Offset: 0x001FEDB4
 	public unsafe RegressInvestigation? GetRegressQuestionnaireConfig(ERegressQuestionnaireType type)
 	{
 		bool flag = LauncherNetworkDetectionController.Instance.IsGlobalPlayer();
@@ -58,7 +57,7 @@ public class ActivityRegressConfig : ConfigBase
 		return new RegressInvestigation?(config.Value);
 	}
 
-	// Token: 0x060092C9 RID: 37577 RVA: 0x001F8118 File Offset: 0x001F6318
+	// Token: 0x0600665E RID: 26206 RVA: 0x00200C54 File Offset: 0x001FEE54
 	public IReadOnlyList<RegressBase> GetRegressBaseConfigListByType(EActivityRegressEntranceType entryType)
 	{
 		if (entryType == EActivityRegressEntranceType.NewRole2)
@@ -84,7 +83,7 @@ public class ActivityRegressConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x060092CA RID: 37578 RVA: 0x001F8194 File Offset: 0x001F6394
+	// Token: 0x0600665F RID: 26207 RVA: 0x00200CD0 File Offset: 0x001FEED0
 	public RewardConfig? GetRewardConfig(int rewardGroupId)
 	{
 		RewardConfig? config = ConfigRewardConfigById.GetConfig(rewardGroupId, true);
@@ -101,7 +100,7 @@ public class ActivityRegressConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x060092CB RID: 37579 RVA: 0x001F81EC File Offset: 0x001F63EC
+	// Token: 0x06006660 RID: 26208 RVA: 0x00200D28 File Offset: 0x001FEF28
 	public RegressQuest? GetRegressQuestConfig(int taskId)
 	{
 		RegressQuest? config = ConfigRegressQuestById.GetConfig(taskId, true);
@@ -112,7 +111,7 @@ public class ActivityRegressConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x060092CC RID: 37580 RVA: 0x001F8220 File Offset: 0x001F6420
+	// Token: 0x06006661 RID: 26209 RVA: 0x00200D5C File Offset: 0x001FEF5C
 	public IReadOnlyList<RegressBonusReward> GetRegressBonusRewardConfigList(ERegressGrade grade)
 	{
 		IReadOnlyList<RegressBonusReward> configList = ConfigRegressBonusRewardByGrade.GetConfigList((int)grade, true);
@@ -128,7 +127,7 @@ public class ActivityRegressConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x060092CD RID: 37581 RVA: 0x001F828C File Offset: 0x001F648C
+	// Token: 0x06006662 RID: 26210 RVA: 0x00200DC8 File Offset: 0x001FEFC8
 	[NullableContext(0)]
 	public ValueTuple<RegressEntry?, RegressEntry?> GetRegressRoleEntryConfigTuple()
 	{
@@ -136,7 +135,7 @@ public class ActivityRegressConfig : ConfigBase
 		return new ValueTuple<RegressEntry?, RegressEntry?>(sortedOpenRegressEntryConfigList[0], sortedOpenRegressEntryConfigList[1]);
 	}
 
-	// Token: 0x060092CE RID: 37582 RVA: 0x001F82B4 File Offset: 0x001F64B4
+	// Token: 0x06006663 RID: 26211 RVA: 0x00200DF0 File Offset: 0x001FEFF0
 	[NullableContext(1)]
 	public List<RegressEntry?> GetSortedOpenRegressEntryConfigList()
 	{
@@ -168,7 +167,7 @@ public class ActivityRegressConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x060092CF RID: 37583 RVA: 0x001F8344 File Offset: 0x001F6544
+	// Token: 0x06006664 RID: 26212 RVA: 0x00200E80 File Offset: 0x001FF080
 	[NullableContext(1)]
 	public List<RegressBase?> GetSortedOpenRegressBaseConfigList()
 	{
@@ -188,7 +187,7 @@ public class ActivityRegressConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x060092D0 RID: 37584 RVA: 0x001F83C0 File Offset: 0x001F65C0
+	// Token: 0x06006665 RID: 26213 RVA: 0x00200EFC File Offset: 0x001FF0FC
 	public RegressEntry? GetRegressEntrySingleConfigByType(EActivityRegressEntranceType entryType)
 	{
 		List<RegressEntry> regressEntryConfigByType = this.GetRegressEntryConfigByType(entryType);
@@ -199,7 +198,7 @@ public class ActivityRegressConfig : ConfigBase
 		return new RegressEntry?(regressEntryConfigByType[0]);
 	}
 
-	// Token: 0x060092D1 RID: 37585 RVA: 0x001F83F8 File Offset: 0x001F65F8
+	// Token: 0x06006666 RID: 26214 RVA: 0x00200F34 File Offset: 0x001FF134
 	[NullableContext(1)]
 	public List<RegressEntry> GetRegressEntryConfigByType(EActivityRegressEntranceType entryType)
 	{
@@ -224,10 +223,10 @@ public class ActivityRegressConfig : ConfigBase
 			instance2.Error(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 			return new List<RegressEntry>();
 		}
-		return configList.ToList<RegressEntry>();
+		return new List<RegressEntry>(configList);
 	}
 
-	// Token: 0x060092D2 RID: 37586 RVA: 0x001F8484 File Offset: 0x001F6684
+	// Token: 0x06006667 RID: 26215 RVA: 0x00200FC0 File Offset: 0x001FF1C0
 	[NullableContext(1)]
 	public List<RegressEntry> GetUnlockRegressEntryViewConfigList()
 	{
@@ -269,7 +268,7 @@ public class ActivityRegressConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x060092D3 RID: 37587 RVA: 0x001F8574 File Offset: 0x001F6774
+	// Token: 0x06006668 RID: 26216 RVA: 0x002010B0 File Offset: 0x001FF2B0
 	public RegressDoubleDrop? GetDoubleDropConfig(ERegressGrade grade)
 	{
 		RegressDoubleDrop? config = ConfigRegressDoubleDropByGrade.GetConfig((int)grade, true);
@@ -280,7 +279,7 @@ public class ActivityRegressConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x060092D4 RID: 37588 RVA: 0x001F85A8 File Offset: 0x001F67A8
+	// Token: 0x06006669 RID: 26217 RVA: 0x002010E4 File Offset: 0x001FF2E4
 	public ConditionGroup? GetConditionGroup(int conditionId)
 	{
 		ConditionGroup? config = ConfigConditionGroupById.GetConfig(conditionId, true);
@@ -291,7 +290,7 @@ public class ActivityRegressConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x060092D5 RID: 37589 RVA: 0x001F85DC File Offset: 0x001F67DC
+	// Token: 0x0600666A RID: 26218 RVA: 0x00201118 File Offset: 0x001FF318
 	public RegressRecommend? GetRegressRecommend(int id)
 	{
 		RegressRecommend? config = ConfigRegressRecommendById.GetConfig(id, true);
@@ -302,25 +301,25 @@ public class ActivityRegressConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x060092D6 RID: 37590 RVA: 0x001F8610 File Offset: 0x001F6810
+	// Token: 0x0600666B RID: 26219 RVA: 0x0020114C File Offset: 0x001FF34C
 	public IReadOnlyList<RegressRecommend> GetAllRegressRecommend()
 	{
 		return ConfigRegressRecommendAll.GetConfigList(true);
 	}
 
-	// Token: 0x060092D7 RID: 37591 RVA: 0x001F8618 File Offset: 0x001F6818
+	// Token: 0x0600666C RID: 26220 RVA: 0x00201154 File Offset: 0x001FF354
 	public IReadOnlyList<RegressRecommend> GetRegressRecommendByType(ERegressRecommendType type)
 	{
 		return ConfigRegressRecommendByType.GetConfigList((int)type, true);
 	}
 
-	// Token: 0x060092D8 RID: 37592 RVA: 0x001F8621 File Offset: 0x001F6821
+	// Token: 0x0600666D RID: 26221 RVA: 0x0020115D File Offset: 0x001FF35D
 	public IReadOnlyList<RegressRecommend> GetRegressRecommendByGroup(int groupId)
 	{
 		return ConfigRegressRecommendByActivityGroup.GetConfigList(groupId, true);
 	}
 
-	// Token: 0x060092D9 RID: 37593 RVA: 0x001F862C File Offset: 0x001F682C
+	// Token: 0x0600666E RID: 26222 RVA: 0x00201168 File Offset: 0x001FF368
 	public RegressDisposableReward? GetRegressDisposableReward(int id)
 	{
 		RegressDisposableReward? config = ConfigRegressDisposableRewardById.GetConfig(id, true);
@@ -331,7 +330,7 @@ public class ActivityRegressConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x060092DA RID: 37594 RVA: 0x001F8660 File Offset: 0x001F6860
+	// Token: 0x0600666F RID: 26223 RVA: 0x0020119C File Offset: 0x001FF39C
 	public GachaRoleDevelopIns? GetGachaRoleDevelopIns(int id)
 	{
 		GachaRoleDevelopIns? config = ConfigGachaRoleDevelopInsById.GetConfig(id, true);
@@ -342,13 +341,13 @@ public class ActivityRegressConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x060092DB RID: 37595 RVA: 0x001F8694 File Offset: 0x001F6894
+	// Token: 0x06006670 RID: 26224 RVA: 0x002011D0 File Offset: 0x001FF3D0
 	public IReadOnlyList<GachaRoleDevelopIns> GetGachaRoleDevelopInsByRoleId(int roleId)
 	{
 		return ConfigGachaRoleDevelopInsByRoleId.GetConfigList(roleId, true);
 	}
 
-	// Token: 0x060092DC RID: 37596 RVA: 0x001F86A0 File Offset: 0x001F68A0
+	// Token: 0x06006671 RID: 26225 RVA: 0x002011DC File Offset: 0x001FF3DC
 	public GachaRoleDevelopIns? GetGachaRoleDevelopInsByDungeonId(int dungeon)
 	{
 		GachaRoleDevelopIns? config = ConfigGachaRoleDevelopInsByDungeonDetection.GetConfig(dungeon, true);
@@ -359,13 +358,13 @@ public class ActivityRegressConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x060092DD RID: 37597 RVA: 0x001F86D4 File Offset: 0x001F68D4
+	// Token: 0x06006672 RID: 26226 RVA: 0x00201210 File Offset: 0x001FF410
 	public IReadOnlyList<RegressTrialRole> GetTrialRoleAll()
 	{
 		return ConfigRegressTrialRoleAll.GetConfigList(true);
 	}
 
-	// Token: 0x060092DE RID: 37598 RVA: 0x001F86DC File Offset: 0x001F68DC
+	// Token: 0x06006673 RID: 26227 RVA: 0x00201218 File Offset: 0x001FF418
 	[NullableContext(1)]
 	public Dictionary<int, string> GetTrialRoleUnlockDesc()
 	{
@@ -382,8 +381,8 @@ public class ActivityRegressConfig : ConfigBase
 		return dictionary;
 	}
 
-	// Token: 0x17000CD3 RID: 3283
-	// (get) Token: 0x060092DF RID: 37599 RVA: 0x001F8770 File Offset: 0x001F6970
+	// Token: 0x17000CF3 RID: 3315
+	// (get) Token: 0x06006674 RID: 26228 RVA: 0x002012AC File Offset: 0x001FF4AC
 	[Nullable(1)]
 	public static ActivityRegressConfig Instance
 	{
@@ -394,7 +393,7 @@ public class ActivityRegressConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060092E0 RID: 37600 RVA: 0x001F8777 File Offset: 0x001F6977
+	// Token: 0x06006675 RID: 26229 RVA: 0x002012B3 File Offset: 0x001FF4B3
 	[NullableContext(1)]
 	public static ActivityRegressConfig GetOrCreateInstance()
 	{
@@ -405,7 +404,7 @@ public class ActivityRegressConfig : ConfigBase
 		return ActivityRegressConfig._Instance;
 	}
 
-	// Token: 0x060092E1 RID: 37601 RVA: 0x001F878B File Offset: 0x001F698B
+	// Token: 0x06006676 RID: 26230 RVA: 0x002012C7 File Offset: 0x001FF4C7
 	public static bool CreateInstance()
 	{
 		if (ActivityRegressConfig._Instance != null)
@@ -416,23 +415,23 @@ public class ActivityRegressConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060092E2 RID: 37602 RVA: 0x001F87A1 File Offset: 0x001F69A1
+	// Token: 0x06006677 RID: 26231 RVA: 0x002012DD File Offset: 0x001FF4DD
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060092E3 RID: 37603 RVA: 0x001F87A3 File Offset: 0x001F69A3
+	// Token: 0x06006678 RID: 26232 RVA: 0x002012DF File Offset: 0x001FF4DF
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityRegressConfig._Instance = null;
 	}
 
-	// Token: 0x060092E4 RID: 37604 RVA: 0x001F87AB File Offset: 0x001F69AB
+	// Token: 0x06006679 RID: 26233 RVA: 0x002012E7 File Offset: 0x001FF4E7
 	static ActivityRegressConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityRegressConfig.CreateStaticDefaultValue), new Action(ActivityRegressConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004106 RID: 16646
+	// Token: 0x0400419E RID: 16798
 	private static ActivityRegressConfig _Instance;
 }

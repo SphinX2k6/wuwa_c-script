@@ -12,7 +12,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C9C RID: 7324
+// Token: 0x0200115B RID: 4443
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -21,7 +21,7 @@ using UnrealEngine;
 })]
 public class GachaResultItemNew : GridProxyAbstract<global::GachaResult>
 {
-	// Token: 0x0600DD05 RID: 56581 RVA: 0x00339170 File Offset: 0x00337370
+	// Token: 0x0600B11B RID: 45339 RVA: 0x003446B8 File Offset: 0x003428B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,7 +45,7 @@ public class GachaResultItemNew : GridProxyAbstract<global::GachaResult>
 		};
 	}
 
-	// Token: 0x0600DD06 RID: 56582 RVA: 0x003392B8 File Offset: 0x003374B8
+	// Token: 0x0600B11C RID: 45340 RVA: 0x00344800 File Offset: 0x00342A00
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GachaResultItemNew.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ public class GachaResultItemNew : GridProxyAbstract<global::GachaResult>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DD07 RID: 56583 RVA: 0x003392FC File Offset: 0x003374FC
+	// Token: 0x0600B11D RID: 45341 RVA: 0x00344844 File Offset: 0x00342A44
 	private unsafe void OnPreviewBtnClick()
 	{
 		InventoryDefine.EItemDataType itemIdType = GachaConfig.Instance.GetItemIdType(this.ItemId);
@@ -94,7 +94,7 @@ public class GachaResultItemNew : GridProxyAbstract<global::GachaResult>
 		}
 	}
 
-	// Token: 0x0600DD08 RID: 56584 RVA: 0x003393BC File Offset: 0x003375BC
+	// Token: 0x0600B11E RID: 45342 RVA: 0x00344904 File Offset: 0x00342B04
 	public void UpdateQuality(int quality)
 	{
 		for (int i = 0; i < quality - 1; i++)
@@ -138,7 +138,7 @@ public class GachaResultItemNew : GridProxyAbstract<global::GachaResult>
 		uiNiagara.SetUIActive(false);
 	}
 
-	// Token: 0x0600DD09 RID: 56585 RVA: 0x003394D0 File Offset: 0x003376D0
+	// Token: 0x0600B11F RID: 45343 RVA: 0x00344A18 File Offset: 0x00342C18
 	public void Update(global::GachaResult data)
 	{
 		int itemId = data.Proto_GachaReward.ItemId;
@@ -230,56 +230,56 @@ public class GachaResultItemNew : GridProxyAbstract<global::GachaResult>
 		base.SetTextureByPath(gachaTextureInfo.Value.GachaResultViewTexture, base.GetTexture(8), new EUiViewName?(EUiViewName.GachaResultView), null);
 	}
 
-	// Token: 0x0600DD0A RID: 56586 RVA: 0x003397A2 File Offset: 0x003379A2
+	// Token: 0x0600B120 RID: 45344 RVA: 0x00344CEA File Offset: 0x00342EEA
 	public override void Refresh(global::GachaResult data, bool isSelected, int gridIndex)
 	{
 		this.Update(data);
 	}
 
-	// Token: 0x0600DD0B RID: 56587 RVA: 0x003397AB File Offset: 0x003379AB
+	// Token: 0x0600B121 RID: 45345 RVA: 0x00344CF3 File Offset: 0x00342EF3
 	public void RefreshShare()
 	{
 		base.GetItem(5).SetUIActive(false);
 		base.GetItem(6).SetUIActive(false);
 	}
 
-	// Token: 0x0400655D RID: 25949
+	// Token: 0x0400662F RID: 26159
 	private int ItemId;
 
-	// Token: 0x0400655E RID: 25950
+	// Token: 0x04006630 RID: 26160
 	private int TrialId;
 
-	// Token: 0x0400655F RID: 25951
+	// Token: 0x04006631 RID: 26161
 	[Nullable(2)]
 	private SmallItemGrid ConvertItem;
 
-	// Token: 0x02008275 RID: 33397
+	// Token: 0x020073FC RID: 29692
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402A8FD RID: 174333
+		// Token: 0x04025C1C RID: 154652
 		QualityBgSprite,
-		// Token: 0x0402A8FE RID: 174334
+		// Token: 0x04025C1D RID: 154653
 		QualitySprite,
-		// Token: 0x0402A8FF RID: 174335
+		// Token: 0x04025C1E RID: 154654
 		PreviewBtn,
-		// Token: 0x0402A900 RID: 174336
+		// Token: 0x04025C1F RID: 154655
 		AttributeRootItem,
-		// Token: 0x0402A901 RID: 174337
+		// Token: 0x04025C20 RID: 154656
 		AttributeTexture,
-		// Token: 0x0402A902 RID: 174338
+		// Token: 0x04025C21 RID: 154657
 		NewItemTips,
-		// Token: 0x0402A903 RID: 174339
+		// Token: 0x04025C22 RID: 154658
 		ConvertRootItem,
-		// Token: 0x0402A904 RID: 174340
+		// Token: 0x04025C23 RID: 154659
 		ConvertItem,
-		// Token: 0x0402A905 RID: 174341
+		// Token: 0x04025C24 RID: 154660
 		ItemTexture,
-		// Token: 0x0402A906 RID: 174342
+		// Token: 0x04025C25 RID: 154661
 		StarRootItem,
-		// Token: 0x0402A907 RID: 174343
+		// Token: 0x04025C26 RID: 154662
 		StarItem,
-		// Token: 0x0402A908 RID: 174344
+		// Token: 0x04025C27 RID: 154663
 		QualityNiagara
 	}
 }

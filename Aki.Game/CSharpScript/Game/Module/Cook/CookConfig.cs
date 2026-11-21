@@ -5,19 +5,19 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005AEF RID: 23279
+	// Token: 0x02004AD0 RID: 19152
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class CookConfig : ConfigBase
 	{
-		// Token: 0x0603AED6 RID: 241366 RVA: 0x00E0C8C3 File Offset: 0x00E0AAC3
+		// Token: 0x0602FE48 RID: 196168 RVA: 0x00D5D587 File Offset: 0x00D5B787
 		public string GetLocalText(string id)
 		{
 			return ConfigMultiTextLang.GetLocalTextNew(id, null) ?? "";
 		}
 
-		// Token: 0x0603AED7 RID: 241367 RVA: 0x00E0C8D8 File Offset: 0x00E0AAD8
+		// Token: 0x0602FE49 RID: 196169 RVA: 0x00D5D59C File Offset: 0x00D5B79C
 		public CookFormula GetCookFormulaByFormulaItemId(int id)
 		{
 			CookFormula? config = ConfigCookFormulaByFormulaItemId.GetConfig(id, true);
@@ -33,14 +33,14 @@ namespace CSharpScript.Game.Module.Cook
 			return config.Value;
 		}
 
-		// Token: 0x0603AED8 RID: 241368 RVA: 0x00E0C92C File Offset: 0x00E0AB2C
+		// Token: 0x0602FE4A RID: 196170 RVA: 0x00D5D5F0 File Offset: 0x00D5B7F0
 		[NullableContext(2)]
 		public IReadOnlyList<CookFormula> GetCookFormula()
 		{
 			return ConfigCookFormulaAll.GetConfigList(true);
 		}
 
-		// Token: 0x0603AED9 RID: 241369 RVA: 0x00E0C934 File Offset: 0x00E0AB34
+		// Token: 0x0602FE4B RID: 196171 RVA: 0x00D5D5F8 File Offset: 0x00D5B7F8
 		public CookFormula GetCookFormulaById(int id)
 		{
 			CookFormula? config = ConfigCookFormulaById.GetConfig(id, true);
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Cook
 			return config.Value;
 		}
 
-		// Token: 0x0603AEDA RID: 241370 RVA: 0x00E0C988 File Offset: 0x00E0AB88
+		// Token: 0x0602FE4C RID: 196172 RVA: 0x00D5D64C File Offset: 0x00D5B84C
 		public CookProcessed GetCookProcessedById(int id)
 		{
 			CookProcessed? config = ConfigCookProcessedById.GetConfig(id, true);
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Cook
 			return config.Value;
 		}
 
-		// Token: 0x0603AEDB RID: 241371 RVA: 0x00E0C9DC File Offset: 0x00E0ABDC
+		// Token: 0x0602FE4D RID: 196173 RVA: 0x00D5D6A0 File Offset: 0x00D5B8A0
 		public IReadOnlyList<CookProcessed> GetCookProcessed()
 		{
 			IReadOnlyList<CookProcessed> configList = ConfigCookProcessedAll.GetConfigList(true);
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Cook
 			return configList;
 		}
 
-		// Token: 0x0603AEDC RID: 241372 RVA: 0x00E0CA14 File Offset: 0x00E0AC14
+		// Token: 0x0602FE4E RID: 196174 RVA: 0x00D5D6D8 File Offset: 0x00D5B8D8
 		public CookProcessMsg GetCookProcessMsgById(int id)
 		{
 			CookProcessMsg? config = ConfigCookProcessMsgById.GetConfig(id, true);
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Cook
 			return config.Value;
 		}
 
-		// Token: 0x0603AEDD RID: 241373 RVA: 0x00E0CA68 File Offset: 0x00E0AC68
+		// Token: 0x0602FE4F RID: 196175 RVA: 0x00D5D72C File Offset: 0x00D5B92C
 		public IReadOnlyList<CookLevel> GetCookLevel()
 		{
 			IReadOnlyList<CookLevel> configList = ConfigCookLevelAll.GetConfigList(true);
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Cook
 			return configList;
 		}
 
-		// Token: 0x0603AEDE RID: 241374 RVA: 0x00E0CAA0 File Offset: 0x00E0ACA0
+		// Token: 0x0602FE50 RID: 196176 RVA: 0x00D5D764 File Offset: 0x00D5B964
 		public CookLevel GetCookLevelByLevel(int level)
 		{
 			CookLevel? config = ConfigCookLevelById.GetConfig(level, true);
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Cook
 			return config.Value;
 		}
 
-		// Token: 0x0603AEDF RID: 241375 RVA: 0x00E0CAF4 File Offset: 0x00E0ACF4
+		// Token: 0x0602FE51 RID: 196177 RVA: 0x00D5D7B8 File Offset: 0x00D5B9B8
 		public CookFixTool GetCookFixToolById(int id)
 		{
 			CookFixTool? config = ConfigCookFixToolById.GetConfig(id, true);
@@ -142,8 +142,8 @@ namespace CSharpScript.Game.Module.Cook
 			return config.Value;
 		}
 
-		// Token: 0x17008C35 RID: 35893
-		// (get) Token: 0x0603AEE0 RID: 241376 RVA: 0x00E0CB48 File Offset: 0x00E0AD48
+		// Token: 0x1700600F RID: 24591
+		// (get) Token: 0x0602FE52 RID: 196178 RVA: 0x00D5D80C File Offset: 0x00D5BA0C
 		public static CookConfig Instance
 		{
 			get
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Cook
 			}
 		}
 
-		// Token: 0x0603AEE1 RID: 241377 RVA: 0x00E0CB4F File Offset: 0x00E0AD4F
+		// Token: 0x0602FE53 RID: 196179 RVA: 0x00D5D813 File Offset: 0x00D5BA13
 		public static CookConfig GetOrCreateInstance()
 		{
 			if (CookConfig._Instance == null)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Cook
 			return CookConfig._Instance;
 		}
 
-		// Token: 0x0603AEE2 RID: 241378 RVA: 0x00E0CB63 File Offset: 0x00E0AD63
+		// Token: 0x0602FE54 RID: 196180 RVA: 0x00D5D827 File Offset: 0x00D5BA27
 		public static bool CreateInstance()
 		{
 			if (CookConfig._Instance != null)
@@ -173,24 +173,24 @@ namespace CSharpScript.Game.Module.Cook
 			return true;
 		}
 
-		// Token: 0x0603AEE3 RID: 241379 RVA: 0x00E0CB79 File Offset: 0x00E0AD79
+		// Token: 0x0602FE55 RID: 196181 RVA: 0x00D5D83D File Offset: 0x00D5BA3D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603AEE4 RID: 241380 RVA: 0x00E0CB7B File Offset: 0x00E0AD7B
+		// Token: 0x0602FE56 RID: 196182 RVA: 0x00D5D83F File Offset: 0x00D5BA3F
 		public static void ResetStaticDefaultValue()
 		{
 			CookConfig._Instance = null;
 		}
 
-		// Token: 0x0603AEE5 RID: 241381 RVA: 0x00E0CB83 File Offset: 0x00E0AD83
+		// Token: 0x0602FE57 RID: 196183 RVA: 0x00D5D847 File Offset: 0x00D5BA47
 		static CookConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CookConfig.CreateStaticDefaultValue), new Action(CookConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EC25 RID: 125989
+		// Token: 0x040196E1 RID: 104161
 		[Nullable(2)]
 		private static CookConfig _Instance;
 	}

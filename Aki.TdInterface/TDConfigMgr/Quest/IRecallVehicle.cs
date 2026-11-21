@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010EC RID: 4332
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200121A RID: 4634
 	public class IRecallVehicle
 	{
-		// Token: 0x060061F4 RID: 25076 RVA: 0x000EC344 File Offset: 0x000EA544
+		// Token: 0x060067ED RID: 26605 RVA: 0x000F9464 File Offset: 0x000F7664
 		private IRecallVehicle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060061F5 RID: 25077 RVA: 0x000EC37C File Offset: 0x000EA57C
+		// Token: 0x060067EE RID: 26606 RVA: 0x000F949C File Offset: 0x000F769C
 		public static IRecallVehicle Create([Nullable(2)] IRecallVehicle instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060061F6 RID: 25078 RVA: 0x000EC38F File Offset: 0x000EA58F
+		// Token: 0x060067EF RID: 26607 RVA: 0x000F94AF File Offset: 0x000F76AF
 		public static IRecallVehicle CreateFromSetValue([Nullable(2)] IRecallVehicle_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060061F7 RID: 25079 RVA: 0x000EC3A2 File Offset: 0x000EA5A2
+		// Token: 0x060067F0 RID: 26608 RVA: 0x000F94C2 File Offset: 0x000F76C2
 		public IRecallVehicle_SetValue ToSetValue()
 		{
 			return new IRecallVehicle_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700201C RID: 8220
-		// (get) Token: 0x060061F8 RID: 25080 RVA: 0x000EC3B5 File Offset: 0x000EA5B5
-		// (set) Token: 0x060061F9 RID: 25081 RVA: 0x000EC3E0 File Offset: 0x000EA5E0
+		// Token: 0x170021CE RID: 8654
+		// (get) Token: 0x060067F1 RID: 26609 RVA: 0x000F94D5 File Offset: 0x000F76D5
+		// (set) Token: 0x060067F2 RID: 26610 RVA: 0x000F9500 File Offset: 0x000F7700
 		public virtual EVehicleType Type
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003AE3 RID: 15075
+		// Token: 0x04003E30 RID: 15920
 		[Nullable(2)]
 		protected IRecallVehicle FbInstance;
 
-		// Token: 0x04003AE4 RID: 15076
+		// Token: 0x04003E31 RID: 15921
 		[Nullable(2)]
 		protected IRecallVehicle_SetValue PocoInterface;
 	}

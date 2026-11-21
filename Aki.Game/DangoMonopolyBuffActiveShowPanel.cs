@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001225 RID: 4645
+// Token: 0x020006D9 RID: 1753
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoMonopolyBuffActiveShowPanel : UiPanelBase
 {
-	// Token: 0x06007DB0 RID: 32176 RVA: 0x001AA684 File Offset: 0x001A8884
+	// Token: 0x06005147 RID: 20807 RVA: 0x001B3344 File Offset: 0x001B1544
 	public UniTask Init(UUIItem item, DangoMonopolyGridData gridData)
 	{
 		DangoMonopolyBuffActiveShowPanel.<Init>d__2 <Init>d__;
@@ -25,12 +25,12 @@ public class DangoMonopolyBuffActiveShowPanel : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007DB1 RID: 32177 RVA: 0x001AA6D7 File Offset: 0x001A88D7
+	// Token: 0x06005148 RID: 20808 RVA: 0x001B3397 File Offset: 0x001B1597
 	protected override void OnBeforeCreate()
 	{
 	}
 
-	// Token: 0x06007DB2 RID: 32178 RVA: 0x001AA6DC File Offset: 0x001A88DC
+	// Token: 0x06005149 RID: 20809 RVA: 0x001B339C File Offset: 0x001B159C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ public class DangoMonopolyBuffActiveShowPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06007DB3 RID: 32179 RVA: 0x001AA738 File Offset: 0x001A8938
+	// Token: 0x0600514A RID: 20810 RVA: 0x001B33F8 File Offset: 0x001B15F8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoMonopolyBuffActiveShowPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ public class DangoMonopolyBuffActiveShowPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007DB4 RID: 32180 RVA: 0x001AA77B File Offset: 0x001A897B
+	// Token: 0x0600514B RID: 20811 RVA: 0x001B343B File Offset: 0x001B163B
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(1);
@@ -63,13 +63,13 @@ public class DangoMonopolyBuffActiveShowPanel : UiPanelBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x06007DB5 RID: 32181 RVA: 0x001AA78F File Offset: 0x001A898F
+	// Token: 0x0600514C RID: 20812 RVA: 0x001B344F File Offset: 0x001B164F
 	protected override void OnBeforeShow()
 	{
 		this.UpdateData();
 	}
 
-	// Token: 0x06007DB6 RID: 32182 RVA: 0x001AA798 File Offset: 0x001A8998
+	// Token: 0x0600514D RID: 20813 RVA: 0x001B3458 File Offset: 0x001B1658
 	public void UpdateData()
 	{
 		DangoData dangoData = this.GridData.GetDangoData();
@@ -92,7 +92,7 @@ public class DangoMonopolyBuffActiveShowPanel : UiPanelBase
 		this.SetSpriteByPath(this.GetSpriteTitlePath(true), sprite, true, null, null);
 	}
 
-	// Token: 0x06007DB7 RID: 32183 RVA: 0x001AA834 File Offset: 0x001A8A34
+	// Token: 0x0600514E RID: 20814 RVA: 0x001B34F4 File Offset: 0x001B16F4
 	public string GetSpriteTitlePath(bool isGet = true)
 	{
 		string resourceId = isGet ? "SP_TuanziGetTxt" : "SP_TuanziUnlockTxt";
@@ -100,18 +100,18 @@ public class DangoMonopolyBuffActiveShowPanel : UiPanelBase
 		return ((instance != null) ? instance.GetResourcePath(resourceId) : null) ?? "";
 	}
 
-	// Token: 0x04003929 RID: 14633
+	// Token: 0x040039C1 RID: 14785
 	public DangoMonopolyGridData GridData;
 
-	// Token: 0x02007817 RID: 30743
+	// Token: 0x020069A2 RID: 27042
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04027944 RID: 162116
+		// Token: 0x04022C75 RID: 142453
 		TxtTitle,
-		// Token: 0x04027945 RID: 162117
+		// Token: 0x04022C76 RID: 142454
 		TxtDesc,
-		// Token: 0x04027946 RID: 162118
+		// Token: 0x04022C77 RID: 142455
 		SpriteTitle
 	}
 }

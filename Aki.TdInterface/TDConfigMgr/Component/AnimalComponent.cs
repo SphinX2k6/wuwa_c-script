@@ -6,11 +6,12 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000021 RID: 33
-	[NullableContext(1)]
+	[NullableContext(2)]
 	[Nullable(0)]
 	public class AnimalComponent : IComponentBase
 	{
-		// Token: 0x060000BA RID: 186 RVA: 0x000153A8 File Offset: 0x000135A8
+		// Token: 0x060000BC RID: 188 RVA: 0x00015CD8 File Offset: 0x00013ED8
+		[NullableContext(0)]
 		private AnimalComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060000BB RID: 187 RVA: 0x000153E0 File Offset: 0x000135E0
+		// Token: 0x060000BD RID: 189 RVA: 0x00015D10 File Offset: 0x00013F10
+		[NullableContext(0)]
 		public static AnimalComponent Create([Nullable(2)] AnimalComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060000BC RID: 188 RVA: 0x000153F3 File Offset: 0x000135F3
+		// Token: 0x060000BE RID: 190 RVA: 0x00015D23 File Offset: 0x00013F23
+		[NullableContext(0)]
 		public static AnimalComponent CreateFromSetValue([Nullable(2)] AnimalComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060000BD RID: 189 RVA: 0x00015408 File Offset: 0x00013608
+		// Token: 0x060000BF RID: 191 RVA: 0x00015D38 File Offset: 0x00013F38
+		[NullableContext(0)]
 		public new AnimalComponent_SetValue ToSetValue()
 		{
 			return new AnimalComponent_SetValue
@@ -65,13 +69,14 @@ namespace Aki.TDConfigMgr.Component
 				CanKillSelf = this.CanKillSelf,
 				PlayDeathAnimOnDestroy = this.PlayDeathAnimOnDestroy,
 				SpecialAnimalConfig = this.SpecialAnimalConfig,
-				EmotionBubbleMap = this.EmotionBubbleMap
+				EmotionBubbleMap = this.EmotionBubbleMap,
+				ExtraMovementAbilities = this.ExtraMovementAbilities
 			};
 		}
 
-		// Token: 0x1700003C RID: 60
-		// (get) Token: 0x060000BE RID: 190 RVA: 0x00015494 File Offset: 0x00013694
-		// (set) Token: 0x060000BF RID: 191 RVA: 0x000154CE File Offset: 0x000136CE
+		// Token: 0x1700003D RID: 61
+		// (get) Token: 0x060000C0 RID: 192 RVA: 0x00015DD0 File Offset: 0x00013FD0
+		// (set) Token: 0x060000C1 RID: 193 RVA: 0x00015E0A File Offset: 0x0001400A
 		public override bool? Disabled
 		{
 			get
@@ -93,9 +98,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700003D RID: 61
-		// (get) Token: 0x060000C0 RID: 192 RVA: 0x000154DC File Offset: 0x000136DC
-		// (set) Token: 0x060000C1 RID: 193 RVA: 0x00015506 File Offset: 0x00013706
+		// Token: 0x1700003E RID: 62
+		// (get) Token: 0x060000C2 RID: 194 RVA: 0x00015E18 File Offset: 0x00014018
+		// (set) Token: 0x060000C3 RID: 195 RVA: 0x00015E42 File Offset: 0x00014042
 		public override bool? EdIsLocked
 		{
 			get
@@ -112,9 +117,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700003E RID: 62
-		// (get) Token: 0x060000C2 RID: 194 RVA: 0x00015514 File Offset: 0x00013714
-		// (set) Token: 0x060000C3 RID: 195 RVA: 0x0001553F File Offset: 0x0001373F
+		// Token: 0x1700003F RID: 63
+		// (get) Token: 0x060000C4 RID: 196 RVA: 0x00015E50 File Offset: 0x00014050
+		// (set) Token: 0x060000C5 RID: 197 RVA: 0x00015E7B File Offset: 0x0001407B
 		public virtual bool IsStare
 		{
 			get
@@ -131,9 +136,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700003F RID: 63
-		// (get) Token: 0x060000C4 RID: 196 RVA: 0x00015550 File Offset: 0x00013750
-		// (set) Token: 0x060000C5 RID: 197 RVA: 0x0001558A File Offset: 0x0001378A
+		// Token: 0x17000040 RID: 64
+		// (get) Token: 0x060000C6 RID: 198 RVA: 0x00015E8C File Offset: 0x0001408C
+		// (set) Token: 0x060000C7 RID: 199 RVA: 0x00015EC6 File Offset: 0x000140C6
 		public virtual int? AnimalAttackRange
 		{
 			get
@@ -155,9 +160,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000040 RID: 64
-		// (get) Token: 0x060000C6 RID: 198 RVA: 0x00015598 File Offset: 0x00013798
-		// (set) Token: 0x060000C7 RID: 199 RVA: 0x000155D2 File Offset: 0x000137D2
+		// Token: 0x17000041 RID: 65
+		// (get) Token: 0x060000C8 RID: 200 RVA: 0x00015ED4 File Offset: 0x000140D4
+		// (set) Token: 0x060000C9 RID: 201 RVA: 0x00015F0E File Offset: 0x0001410E
 		public virtual int? MoveRange
 		{
 			get
@@ -179,9 +184,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000041 RID: 65
-		// (get) Token: 0x060000C8 RID: 200 RVA: 0x000155E0 File Offset: 0x000137E0
-		// (set) Token: 0x060000C9 RID: 201 RVA: 0x0001561A File Offset: 0x0001381A
+		// Token: 0x17000042 RID: 66
+		// (get) Token: 0x060000CA RID: 202 RVA: 0x00015F1C File Offset: 0x0001411C
+		// (set) Token: 0x060000CB RID: 203 RVA: 0x00015F56 File Offset: 0x00014156
 		public virtual bool? UseRangeComponentAsMoveRange
 		{
 			get
@@ -203,9 +208,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000042 RID: 66
-		// (get) Token: 0x060000CA RID: 202 RVA: 0x00015628 File Offset: 0x00013828
-		// (set) Token: 0x060000CB RID: 203 RVA: 0x00015662 File Offset: 0x00013862
+		// Token: 0x17000043 RID: 67
+		// (get) Token: 0x060000CC RID: 204 RVA: 0x00015F64 File Offset: 0x00014164
+		// (set) Token: 0x060000CD RID: 205 RVA: 0x00015F9E File Offset: 0x0001419E
 		public virtual bool? CanKillSelf
 		{
 			get
@@ -227,9 +232,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000043 RID: 67
-		// (get) Token: 0x060000CC RID: 204 RVA: 0x00015670 File Offset: 0x00013870
-		// (set) Token: 0x060000CD RID: 205 RVA: 0x000156AA File Offset: 0x000138AA
+		// Token: 0x17000044 RID: 68
+		// (get) Token: 0x060000CE RID: 206 RVA: 0x00015FAC File Offset: 0x000141AC
+		// (set) Token: 0x060000CF RID: 207 RVA: 0x00015FE6 File Offset: 0x000141E6
 		public virtual bool? PlayDeathAnimOnDestroy
 		{
 			get
@@ -251,13 +256,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000044 RID: 68
-		// (get) Token: 0x060000CE RID: 206 RVA: 0x000156B8 File Offset: 0x000138B8
-		// (set) Token: 0x060000CF RID: 207 RVA: 0x00015719 File Offset: 0x00013919
-		[Nullable(2)]
+		// Token: 0x17000045 RID: 69
+		// (get) Token: 0x060000D0 RID: 208 RVA: 0x00015FF4 File Offset: 0x000141F4
+		// (set) Token: 0x060000D1 RID: 209 RVA: 0x00016055 File Offset: 0x00014255
 		public virtual ICollectAnimalConfig SpecialAnimalConfig
 		{
-			[NullableContext(2)]
 			get
 			{
 				if (this._SpecialAnimalConfigInited)
@@ -276,7 +279,6 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this._SpecialAnimalConfigCache;
 			}
-			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().SpecialAnimalConfig = value;
@@ -284,20 +286,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000045 RID: 69
-		// (get) Token: 0x060000D0 RID: 208 RVA: 0x00015730 File Offset: 0x00013930
-		// (set) Token: 0x060000D1 RID: 209 RVA: 0x000157C3 File Offset: 0x000139C3
+		// Token: 0x17000046 RID: 70
+		// (get) Token: 0x060000D2 RID: 210 RVA: 0x0001606C File Offset: 0x0001426C
+		// (set) Token: 0x060000D3 RID: 211 RVA: 0x000160FF File Offset: 0x000142FF
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IAnimalEmotionBubbleEntry> EmotionBubbleMap
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -328,7 +330,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -337,29 +339,52 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000075 RID: 117
-		[Nullable(2)]
-		protected new AnimalComponent FbInstance;
-
-		// Token: 0x04000076 RID: 118
-		[Nullable(2)]
-		protected new AnimalComponent_SetValue PocoInterface;
-
-		// Token: 0x04000077 RID: 119
-		private ICollectAnimalConfig _SpecialAnimalConfigCache;
-
-		// Token: 0x04000078 RID: 120
-		private bool _SpecialAnimalConfigInited;
+		// Token: 0x17000047 RID: 71
+		// (get) Token: 0x060000D4 RID: 212 RVA: 0x00016114 File Offset: 0x00014314
+		// (set) Token: 0x060000D5 RID: 213 RVA: 0x0001613B File Offset: 0x0001433B
+		public virtual List<EExtraMovementAbility> ExtraMovementAbilities
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.ExtraMovementAbilities;
+				}
+				AnimalComponent_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.ExtraMovementAbilities;
+			}
+			set
+			{
+				this.GetOrCreatePoco().ExtraMovementAbilities = value;
+			}
+		}
 
 		// Token: 0x04000079 RID: 121
+		protected new AnimalComponent FbInstance;
+
+		// Token: 0x0400007A RID: 122
+		protected new AnimalComponent_SetValue PocoInterface;
+
+		// Token: 0x0400007B RID: 123
+		[Nullable(0)]
+		private ICollectAnimalConfig _SpecialAnimalConfigCache;
+
+		// Token: 0x0400007C RID: 124
+		private bool _SpecialAnimalConfigInited;
+
+		// Token: 0x0400007D RID: 125
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IAnimalEmotionBubbleEntry> _EmotionBubbleMapCache;
 
-		// Token: 0x0400007A RID: 122
+		// Token: 0x0400007E RID: 126
 		private bool _EmotionBubbleMapInited;
 	}
 }

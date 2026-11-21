@@ -6,41 +6,41 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002869 RID: 10345
+	// Token: 0x02000825 RID: 2085
 	[UnrealObjectPath("/Script/SMSystem.ASMTask")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
-	public abstract class UASMTask : UObject, IUnrealUObject, IUnrealObject
+	public abstract class UASMTask : UASMConfigBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06026567 RID: 157031 RVA: 0x003A3CB6 File Offset: 0x003A1EB6
+		// Token: 0x0600B616 RID: 46614 RVA: 0x00121A51 File Offset: 0x0011FC51
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UASMTask._ClassPtr;
 		}
 
-		// Token: 0x06026568 RID: 157032 RVA: 0x003A3CC2 File Offset: 0x003A1EC2
+		// Token: 0x0600B617 RID: 46615 RVA: 0x00121A5D File Offset: 0x0011FC5D
 		static UASMTask()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SMSystem.ASMTask");
 		}
 
-		// Token: 0x06026569 RID: 157033 RVA: 0x003A3CD0 File Offset: 0x003A1ED0
+		// Token: 0x0600B618 RID: 46616 RVA: 0x00121A6C File Offset: 0x0011FC6C
 		protected UASMTask() : this(BuiltinUtils.AllocNativeUObject(UASMTask.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602656A RID: 157034 RVA: 0x003A3CF8 File Offset: 0x003A1EF8
+		// Token: 0x0600B619 RID: 46617 RVA: 0x00121A94 File Offset: 0x0011FC94
 		protected UASMTask(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401505C RID: 86108
+		// Token: 0x0400524C RID: 21068
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/SMSystem.ASMTask";
 
-		// Token: 0x0401505D RID: 86109
+		// Token: 0x0400524D RID: 21069
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401505E RID: 86110
+		// Token: 0x0400524E RID: 21070
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

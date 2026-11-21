@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002523 RID: 9507
+	// Token: 0x020027CA RID: 10186
 	public class ITalkBackgroundSpineImage : ITalkBackground
 	{
-		// Token: 0x0600D403 RID: 54275 RVA: 0x001F6705 File Offset: 0x001F4905
-		[NullableContext(1)]
+		// Token: 0x0600E163 RID: 57699 RVA: 0x00212165 File Offset: 0x00210365
 		public static ITalkBackgroundSpineImage Create(ITalkBackgroundSpineImage? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B7F RID: 15231
-		// (get) Token: 0x0600D404 RID: 54276 RVA: 0x001F6724 File Offset: 0x001F4924
+		// Token: 0x17003E7D RID: 15997
+		// (get) Token: 0x0600E164 RID: 57700 RVA: 0x00212184 File Offset: 0x00210384
 		public override ETalkBackgroundType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B80 RID: 15232
-		// (get) Token: 0x0600D405 RID: 54277 RVA: 0x001F6731 File Offset: 0x001F4931
+		// Token: 0x17003E7E RID: 15998
+		// (get) Token: 0x0600E165 RID: 57701 RVA: 0x00212191 File Offset: 0x00210391
 		public virtual int Id
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B81 RID: 15233
-		// (get) Token: 0x0600D406 RID: 54278 RVA: 0x001F6740 File Offset: 0x001F4940
+		// Token: 0x17003E7F RID: 15999
+		// (get) Token: 0x0600E166 RID: 57702 RVA: 0x002121A0 File Offset: 0x002103A0
 		public virtual bool? IsLoop
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007429 RID: 29737
+		// Token: 0x04007A7E RID: 31358
 		private ITalkBackgroundSpineImage Instance;
 	}
 }

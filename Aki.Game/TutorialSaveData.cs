@@ -2,27 +2,27 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002C2E RID: 11310
+// Token: 0x020021A9 RID: 8617
 public class TutorialSaveData : ITutorialSaveData
 {
-	// Token: 0x17001FBF RID: 8127
-	// (get) Token: 0x060178F0 RID: 96496 RVA: 0x005FD2BB File Offset: 0x005FB4BB
-	// (set) Token: 0x060178F1 RID: 96497 RVA: 0x005FD2C3 File Offset: 0x005FB4C3
+	// Token: 0x17002017 RID: 8215
+	// (get) Token: 0x06015322 RID: 86818 RVA: 0x00629CDF File Offset: 0x00627EDF
+	// (set) Token: 0x06015323 RID: 86819 RVA: 0x00629CE7 File Offset: 0x00627EE7
 	public int TimeStamp { get; set; }
 
-	// Token: 0x17001FC0 RID: 8128
-	// (get) Token: 0x060178F2 RID: 96498 RVA: 0x005FD2CC File Offset: 0x005FB4CC
-	// (set) Token: 0x060178F3 RID: 96499 RVA: 0x005FD2D4 File Offset: 0x005FB4D4
+	// Token: 0x17002018 RID: 8216
+	// (get) Token: 0x06015324 RID: 86820 RVA: 0x00629CF0 File Offset: 0x00627EF0
+	// (set) Token: 0x06015325 RID: 86821 RVA: 0x00629CF8 File Offset: 0x00627EF8
 	public int TutorialId { get; set; }
 
-	// Token: 0x17001FC1 RID: 8129
-	// (get) Token: 0x060178F4 RID: 96500 RVA: 0x005FD2DD File Offset: 0x005FB4DD
-	// (set) Token: 0x060178F5 RID: 96501 RVA: 0x005FD2E5 File Offset: 0x005FB4E5
+	// Token: 0x17002019 RID: 8217
+	// (get) Token: 0x06015326 RID: 86822 RVA: 0x00629D01 File Offset: 0x00627F01
+	// (set) Token: 0x06015327 RID: 86823 RVA: 0x00629D09 File Offset: 0x00627F09
 	public bool HasRedDot { get; set; }
 
-	// Token: 0x17001FC2 RID: 8130
-	// (get) Token: 0x060178F6 RID: 96502 RVA: 0x005FD2F0 File Offset: 0x005FB4F0
-	// (set) Token: 0x060178F7 RID: 96503 RVA: 0x005FD393 File Offset: 0x005FB593
+	// Token: 0x1700201A RID: 8218
+	// (get) Token: 0x06015328 RID: 86824 RVA: 0x00629D14 File Offset: 0x00627F14
+	// (set) Token: 0x06015329 RID: 86825 RVA: 0x00629DB7 File Offset: 0x00627FB7
 	public bool IsExcludedFromWiki
 	{
 		get
@@ -49,8 +49,8 @@ public class TutorialSaveData : ITutorialSaveData
 		}
 	}
 
-	// Token: 0x17001FC3 RID: 8131
-	// (get) Token: 0x060178F8 RID: 96504 RVA: 0x005FD3A1 File Offset: 0x005FB5A1
+	// Token: 0x1700201B RID: 8219
+	// (get) Token: 0x0601532A RID: 86826 RVA: 0x00629DC5 File Offset: 0x00627FC5
 	public GuideTutorial? TutorialData
 	{
 		get
@@ -59,13 +59,13 @@ public class TutorialSaveData : ITutorialSaveData
 		}
 	}
 
-	// Token: 0x060178F9 RID: 96505 RVA: 0x005FD3B4 File Offset: 0x005FB5B4
+	// Token: 0x0601532B RID: 86827 RVA: 0x00629DD8 File Offset: 0x00627FD8
 	[NullableContext(1)]
 	public string GetTutorialTitle()
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.TutorialData.Value.GroupName, null) ?? "";
 	}
 
-	// Token: 0x0400AFC1 RID: 44993
+	// Token: 0x0400B3C6 RID: 46022
 	private bool? IsExcludedFromWikiInternal;
 }

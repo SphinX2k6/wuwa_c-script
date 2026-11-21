@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048DE RID: 18654
+	// Token: 0x02003855 RID: 14421
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LoopScrollView<TProxy, [Nullable(2)] TData> : IGridPreserver where TProxy : class, IGridProxy<TData>
 	{
-		// Token: 0x17007993 RID: 31123
-		// (get) Token: 0x06030C21 RID: 199713 RVA: 0x00B524F7 File Offset: 0x00B506F7
+		// Token: 0x17004CFB RID: 19707
+		// (get) Token: 0x0602574E RID: 153422 RVA: 0x00A8D367 File Offset: 0x00A8B567
 		private int DisplayGridNum
 		{
 			get
@@ -26,9 +26,9 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x17007994 RID: 31124
-		// (get) Token: 0x06030C22 RID: 199714 RVA: 0x00B52512 File Offset: 0x00B50712
-		// (set) Token: 0x06030C23 RID: 199715 RVA: 0x00B5251A File Offset: 0x00B5071A
+		// Token: 0x17004CFC RID: 19708
+		// (get) Token: 0x0602574F RID: 153423 RVA: 0x00A8D382 File Offset: 0x00A8B582
+		// (set) Token: 0x06025750 RID: 153424 RVA: 0x00A8D38A File Offset: 0x00A8B58A
 		public int StartGridIndex
 		{
 			get
@@ -41,9 +41,9 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x17007995 RID: 31125
-		// (get) Token: 0x06030C24 RID: 199716 RVA: 0x00B52523 File Offset: 0x00B50723
-		// (set) Token: 0x06030C25 RID: 199717 RVA: 0x00B5252B File Offset: 0x00B5072B
+		// Token: 0x17004CFD RID: 19709
+		// (get) Token: 0x06025751 RID: 153425 RVA: 0x00A8D393 File Offset: 0x00A8B593
+		// (set) Token: 0x06025752 RID: 153426 RVA: 0x00A8D39B File Offset: 0x00A8B59B
 		public int EndGridIndex
 		{
 			get
@@ -56,8 +56,8 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x17007996 RID: 31126
-		// (get) Token: 0x06030C26 RID: 199718 RVA: 0x00B52534 File Offset: 0x00B50734
+		// Token: 0x17004CFE RID: 19710
+		// (get) Token: 0x06025753 RID: 153427 RVA: 0x00A8D3A4 File Offset: 0x00A8B5A4
 		private bool IsEmpty
 		{
 			get
@@ -66,8 +66,8 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x17007997 RID: 31127
-		// (get) Token: 0x06030C27 RID: 199719 RVA: 0x00B5254A File Offset: 0x00B5074A
+		// Token: 0x17004CFF RID: 19711
+		// (get) Token: 0x06025754 RID: 153428 RVA: 0x00A8D3BA File Offset: 0x00A8B5BA
 		public bool DataInited
 		{
 			get
@@ -76,8 +76,8 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x17007998 RID: 31128
-		// (get) Token: 0x06030C28 RID: 199720 RVA: 0x00B52552 File Offset: 0x00B50752
+		// Token: 0x17004D00 RID: 19712
+		// (get) Token: 0x06025755 RID: 153429 RVA: 0x00A8D3C2 File Offset: 0x00A8B5C2
 		private bool IsLock
 		{
 			get
@@ -86,13 +86,13 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C29 RID: 199721 RVA: 0x00B5255A File Offset: 0x00B5075A
+		// Token: 0x06025756 RID: 153430 RVA: 0x00A8D3CA File Offset: 0x00A8B5CA
 		private void Lock()
 		{
 			this.Operating = true;
 		}
 
-		// Token: 0x06030C2A RID: 199722 RVA: 0x00B52564 File Offset: 0x00B50764
+		// Token: 0x06025757 RID: 153431 RVA: 0x00A8D3D4 File Offset: 0x00A8B5D4
 		private void Unlock()
 		{
 			this.Operating = false;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C2B RID: 199723 RVA: 0x00B525B0 File Offset: 0x00B507B0
+		// Token: 0x06025758 RID: 153432 RVA: 0x00A8D420 File Offset: 0x00A8B620
 		public LoopScrollView(UUILoopScrollViewComponent scrollView, [Nullable(2)] AUIBaseActor gridActor, Func<TProxy> gridProxyCreateFunction, bool isAsync = false)
 		{
 			if (gridActor == null)
@@ -134,13 +134,13 @@ namespace CSharpScript.Game.Module.Util
 			this.GridsController.RegisterAnimController();
 		}
 
-		// Token: 0x06030C2C RID: 199724 RVA: 0x00B526C5 File Offset: 0x00B508C5
+		// Token: 0x06025759 RID: 153433 RVA: 0x00A8D535 File Offset: 0x00A8B735
 		public int GetDisplayGridNum()
 		{
 			return this.DisplayGridNum;
 		}
 
-		// Token: 0x06030C2D RID: 199725 RVA: 0x00B526CD File Offset: 0x00B508CD
+		// Token: 0x0602575A RID: 153434 RVA: 0x00A8D53D File Offset: 0x00A8B73D
 		public int GetPreservedGridNum()
 		{
 			UUILoopScrollViewComponent targetScroll = this.TargetScroll;
@@ -151,37 +151,37 @@ namespace CSharpScript.Game.Module.Util
 			return targetScroll.GridArray.Num();
 		}
 
-		// Token: 0x06030C2E RID: 199726 RVA: 0x00B526E5 File Offset: 0x00B508E5
+		// Token: 0x0602575B RID: 153435 RVA: 0x00A8D555 File Offset: 0x00A8B755
 		public int GetDisplayGridStartIndex()
 		{
 			return this.StartGridIndex;
 		}
 
-		// Token: 0x06030C2F RID: 199727 RVA: 0x00B526ED File Offset: 0x00B508ED
+		// Token: 0x0602575C RID: 153436 RVA: 0x00A8D55D File Offset: 0x00A8B75D
 		public int GetDisplayGridEndIndex()
 		{
 			return this.EndGridIndex;
 		}
 
-		// Token: 0x06030C30 RID: 199728 RVA: 0x00B526F5 File Offset: 0x00B508F5
+		// Token: 0x0602575D RID: 153437 RVA: 0x00A8D565 File Offset: 0x00A8B765
 		public float GetGridAnimationInterval()
 		{
 			return this.TargetScroll.GetGridAnimationInterval();
 		}
 
-		// Token: 0x06030C31 RID: 199729 RVA: 0x00B52702 File Offset: 0x00B50902
+		// Token: 0x0602575E RID: 153438 RVA: 0x00A8D572 File Offset: 0x00A8B772
 		public float GetGridAnimationStartTime()
 		{
 			return this.TargetScroll.GetGridAnimationStartTime();
 		}
 
-		// Token: 0x06030C32 RID: 199730 RVA: 0x00B5270F File Offset: 0x00B5090F
+		// Token: 0x0602575F RID: 153439 RVA: 0x00A8D57F File Offset: 0x00A8B77F
 		public void NotifyAnimationStart()
 		{
 			this.TargetScroll.SetInAnimation(true);
 		}
 
-		// Token: 0x06030C33 RID: 199731 RVA: 0x00B5271D File Offset: 0x00B5091D
+		// Token: 0x06025760 RID: 153440 RVA: 0x00A8D58D File Offset: 0x00A8B78D
 		public void NotifyAnimationEnd()
 		{
 			this.TargetScroll.SetInAnimation(false);
@@ -193,13 +193,13 @@ namespace CSharpScript.Game.Module.Util
 			animFinishDelegate();
 		}
 
-		// Token: 0x06030C34 RID: 199732 RVA: 0x00B5273B File Offset: 0x00B5093B
+		// Token: 0x06025761 RID: 153441 RVA: 0x00A8D5AB File Offset: 0x00A8B7AB
 		public void SetAnimFinishDelegate(Action @delegate)
 		{
 			this.AnimFinishDelegate = @delegate;
 		}
 
-		// Token: 0x06030C35 RID: 199733 RVA: 0x00B52744 File Offset: 0x00B50944
+		// Token: 0x06025762 RID: 153442 RVA: 0x00A8D5B4 File Offset: 0x00A8B7B4
 		[NullableContext(2)]
 		public UUIItem GetGrid(int gridIndex)
 		{
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.Util
 			return grid.GetUIItem();
 		}
 
-		// Token: 0x06030C36 RID: 199734 RVA: 0x00B52760 File Offset: 0x00B50960
+		// Token: 0x06025763 RID: 153443 RVA: 0x00A8D5D0 File Offset: 0x00A8B7D0
 		[NullableContext(2)]
 		public UUIItem GetGridByDisplayIndex(int displayIndex)
 		{
@@ -233,11 +233,11 @@ namespace CSharpScript.Game.Module.Util
 			return tweakObjectPtr.Get().GetUIItem();
 		}
 
-		// Token: 0x06030C37 RID: 199735 RVA: 0x00B527D8 File Offset: 0x00B509D8
+		// Token: 0x06025764 RID: 153444 RVA: 0x00A8D648 File Offset: 0x00A8B848
 		[NullableContext(2)]
 		public TProxy UnsafeGetGridProxy(int gridIndex, bool logError = false)
 		{
-			int gridDisplayIndex = this.GetGridDisplayIndex(gridIndex, true);
+			int gridDisplayIndex = this.GetGridDisplayIndex(gridIndex, logError);
 			if (gridDisplayIndex == -1)
 			{
 				return default(TProxy);
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.Util
 			return this.Delegate.GetGridProxy(gridDisplayIndex);
 		}
 
-		// Token: 0x06030C38 RID: 199736 RVA: 0x00B52866 File Offset: 0x00B50A66
+		// Token: 0x06025765 RID: 153445 RVA: 0x00A8D6D6 File Offset: 0x00A8B8D6
 		public void ReloadGrids(int length)
 		{
 			if (length == this.Delegate.GetDataLength())
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Module.Util
 			this.UpdateDataInternal(length, false);
 		}
 
-		// Token: 0x06030C39 RID: 199737 RVA: 0x00B5287F File Offset: 0x00B50A7F
+		// Token: 0x06025766 RID: 153446 RVA: 0x00A8D6EF File Offset: 0x00A8B8EF
 		[Obsolete("请使用RefreshByData或 RefreshByDataAsync")]
 		public void ReloadProxyData(Func<int, TData> dataProxyFunction, int dataLength, bool cacheData = true, bool keepContentPosition = false)
 		{
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.Module.Util
 			this.UpdateDataInternal(dataLength, keepContentPosition);
 		}
 
-		// Token: 0x06030C3A RID: 199738 RVA: 0x00B528A4 File Offset: 0x00B50AA4
+		// Token: 0x06025767 RID: 153447 RVA: 0x00A8D714 File Offset: 0x00A8B914
 		[Obsolete("请使用RefreshByData或 RefreshByDataAsync")]
 		public void ReloadData(IReadOnlyList<TData> data, bool keepContentPosition = false)
 		{
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.Module.Util
 			gridsController.PlayGridAnim(this.DisplayGridNum, true);
 		}
 
-		// Token: 0x06030C3B RID: 199739 RVA: 0x00B52908 File Offset: 0x00B50B08
+		// Token: 0x06025768 RID: 153448 RVA: 0x00A8D778 File Offset: 0x00A8B978
 		public void UpdateData(IReadOnlyList<TData> data)
 		{
 			if (data.Count != this.Delegate.GetDataLength())
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.Util
 			this.RefreshAllGridProxies();
 		}
 
-		// Token: 0x06030C3C RID: 199740 RVA: 0x00B5299C File Offset: 0x00B50B9C
+		// Token: 0x06025769 RID: 153449 RVA: 0x00A8D80C File Offset: 0x00A8BA0C
 		public void RefreshAllGridProxies()
 		{
 			if (this.IsEmpty)
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C3D RID: 199741 RVA: 0x00B529D0 File Offset: 0x00B50BD0
+		// Token: 0x0602576A RID: 153450 RVA: 0x00A8D840 File Offset: 0x00A8BA40
 		public void RefreshGridProxy(int gridIndex)
 		{
 			if (gridIndex >= this.StartGridIndex && gridIndex <= this.EndGridIndex)
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C3E RID: 199742 RVA: 0x00B52A08 File Offset: 0x00B50C08
+		// Token: 0x0602576B RID: 153451 RVA: 0x00A8D878 File Offset: 0x00A8BA78
 		public void ClearGridProxies()
 		{
 			this.Delegate.ClearData();
@@ -355,49 +355,49 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C3F RID: 199743 RVA: 0x00B52A54 File Offset: 0x00B50C54
+		// Token: 0x0602576C RID: 153452 RVA: 0x00A8D8C4 File Offset: 0x00A8BAC4
 		public void ClearSelectInfo()
 		{
 			this.Delegate.ClearSelectInfo();
 		}
 
-		// Token: 0x06030C40 RID: 199744 RVA: 0x00B52A61 File Offset: 0x00B50C61
+		// Token: 0x0602576D RID: 153453 RVA: 0x00A8D8D1 File Offset: 0x00A8BAD1
 		public TData TryGetCachedData(int gridIndex)
 		{
 			return this.Delegate.TryGetCachedData(gridIndex);
 		}
 
-		// Token: 0x06030C41 RID: 199745 RVA: 0x00B52A6F File Offset: 0x00B50C6F
+		// Token: 0x0602576E RID: 153454 RVA: 0x00A8D8DF File Offset: 0x00A8BADF
 		public void SelectGridProxy(int gridIndex, bool fireEvent = false)
 		{
 			this.Delegate.SelectGridProxy(gridIndex, this.GetGridDisplayIndex(gridIndex, false), fireEvent);
 		}
 
-		// Token: 0x06030C42 RID: 199746 RVA: 0x00B52A86 File Offset: 0x00B50C86
+		// Token: 0x0602576F RID: 153455 RVA: 0x00A8D8F6 File Offset: 0x00A8BAF6
 		public void DeselectCurrentGridProxy(bool fireEvent = false)
 		{
 			this.Delegate.DeselectCurrentGridProxy(fireEvent);
 		}
 
-		// Token: 0x06030C43 RID: 199747 RVA: 0x00B52A94 File Offset: 0x00B50C94
+		// Token: 0x06025770 RID: 153456 RVA: 0x00A8D904 File Offset: 0x00A8BB04
 		public int GetSelectedGridIndex()
 		{
 			return this.Delegate.GetSelectedGridIndex();
 		}
 
-		// Token: 0x06030C44 RID: 199748 RVA: 0x00B52AA1 File Offset: 0x00B50CA1
+		// Token: 0x06025771 RID: 153457 RVA: 0x00A8D911 File Offset: 0x00A8BB11
 		public void BindLateUpdate(Action<float> callBack)
 		{
 			this.TargetScroll.OnLateUpdate.Bind(callBack);
 		}
 
-		// Token: 0x06030C45 RID: 199749 RVA: 0x00B52AB4 File Offset: 0x00B50CB4
+		// Token: 0x06025772 RID: 153458 RVA: 0x00A8D924 File Offset: 0x00A8BB24
 		public void UnBindLateUpdate()
 		{
 			this.TargetScroll.OnLateUpdate.Unbind();
 		}
 
-		// Token: 0x06030C46 RID: 199750 RVA: 0x00B52AC8 File Offset: 0x00B50CC8
+		// Token: 0x06025773 RID: 153459 RVA: 0x00A8D938 File Offset: 0x00A8BB38
 		private void UpdateDataInternal(int gridNum, bool keepContentPosition)
 		{
 			if (this.TargetScroll == null)
@@ -422,7 +422,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C47 RID: 199751 RVA: 0x00B52B68 File Offset: 0x00B50D68
+		// Token: 0x06025774 RID: 153460 RVA: 0x00A8D9D8 File Offset: 0x00A8BBD8
 		public void RefreshByData(IReadOnlyList<TData> data, bool keepContentPosition = false, [Nullable(2)] Action callBack = null, bool playGridAnim = false)
 		{
 			if (this.IsLock)
@@ -443,7 +443,7 @@ namespace CSharpScript.Game.Module.Util
 			});
 		}
 
-		// Token: 0x06030C48 RID: 199752 RVA: 0x00B52BD0 File Offset: 0x00B50DD0
+		// Token: 0x06025775 RID: 153461 RVA: 0x00A8DA40 File Offset: 0x00A8BC40
 		public UniTask RefreshByDataAsync(IReadOnlyList<TData> data, bool keepContentPosition = false, bool playGridAnim = false)
 		{
 			LoopScrollView<TProxy, TData>.<RefreshByDataAsync>d__58 <RefreshByDataAsync>d__;
@@ -457,7 +457,7 @@ namespace CSharpScript.Game.Module.Util
 			return <RefreshByDataAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030C49 RID: 199753 RVA: 0x00B52C2C File Offset: 0x00B50E2C
+		// Token: 0x06025776 RID: 153462 RVA: 0x00A8DA9C File Offset: 0x00A8BC9C
 		private UniTask UpdateDataInternalAsync(int gridNum, bool keepContentPosition)
 		{
 			LoopScrollView<TProxy, TData>.<UpdateDataInternalAsync>d__60 <UpdateDataInternalAsync>d__;
@@ -470,14 +470,14 @@ namespace CSharpScript.Game.Module.Util
 			return <UpdateDataInternalAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030C4A RID: 199754 RVA: 0x00B52C80 File Offset: 0x00B50E80
+		// Token: 0x06025777 RID: 153463 RVA: 0x00A8DAF0 File Offset: 0x00A8BCF0
 		public bool IsGridDisplaying(int gridIndex)
 		{
 			int gridDisplayIndex = this.GetGridDisplayIndex(gridIndex, false);
 			return gridDisplayIndex >= 0 && gridDisplayIndex < this.DisplayGridNum;
 		}
 
-		// Token: 0x06030C4B RID: 199755 RVA: 0x00B52CA5 File Offset: 0x00B50EA5
+		// Token: 0x06025778 RID: 153464 RVA: 0x00A8DB15 File Offset: 0x00A8BD15
 		public void ScrollToGridIndex(int gridIndex, bool playGridAnim = true)
 		{
 			this.TargetScroll.ScrollToGridIndex(gridIndex, false);
@@ -487,7 +487,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C4C RID: 199756 RVA: 0x00B52CBD File Offset: 0x00B50EBD
+		// Token: 0x06025779 RID: 153465 RVA: 0x00A8DB2D File Offset: 0x00A8BD2D
 		public void ScrollToGridIndexLate(int gridIndex, bool playGridAnim = true)
 		{
 			this.TargetScroll.ScrollToGridIndexLater(gridIndex, false);
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C4D RID: 199757 RVA: 0x00B52CD5 File Offset: 0x00B50ED5
+		// Token: 0x0602577A RID: 153466 RVA: 0x00A8DB45 File Offset: 0x00A8BD45
 		public void ScrollToGridIndexWithTween(int gridIndex, bool playGridAnim = true)
 		{
 			this.TargetScroll.ScrollToGridIndex(gridIndex, true);
@@ -507,14 +507,14 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C4E RID: 199758 RVA: 0x00B52CED File Offset: 0x00B50EED
+		// Token: 0x0602577B RID: 153467 RVA: 0x00A8DB5D File Offset: 0x00A8BD5D
 		[NullableContext(2)]
 		private void OnGridCreate(int displayIndex, AUIBaseActor actor)
 		{
 			this.Delegate.CreateGridProxy(displayIndex, actor);
 		}
 
-		// Token: 0x06030C4F RID: 199759 RVA: 0x00B52D00 File Offset: 0x00B50F00
+		// Token: 0x0602577C RID: 153468 RVA: 0x00A8DB70 File Offset: 0x00A8BD70
 		[NullableContext(2)]
 		private void OnGridCreateAsync(int displayIndex, AUIBaseActor actor)
 		{
@@ -532,7 +532,7 @@ namespace CSharpScript.Game.Module.Util
 			}).Forget();
 		}
 
-		// Token: 0x06030C50 RID: 199760 RVA: 0x00B52D78 File Offset: 0x00B50F78
+		// Token: 0x0602577D RID: 153469 RVA: 0x00A8DBE8 File Offset: 0x00A8BDE8
 		private void OnGridsUpdate(int startGridIndex, int endGridIndex)
 		{
 			if (this.TempGridCreatePromiseList.Count > 0)
@@ -582,14 +582,14 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C51 RID: 199761 RVA: 0x00B52E8C File Offset: 0x00B5108C
+		// Token: 0x0602577E RID: 153470 RVA: 0x00A8DCFC File Offset: 0x00A8BEFC
 		private void OnGridUpdate(int gridIndex)
 		{
 			int gridDisplayIndex = this.GetGridDisplayIndex(gridIndex, false);
 			this.Delegate.OnGridsUpdate(gridIndex, gridDisplayIndex, this.StartGridIndex, this.EndGridIndex);
 		}
 
-		// Token: 0x06030C52 RID: 199762 RVA: 0x00B52EBC File Offset: 0x00B510BC
+		// Token: 0x0602577F RID: 153471 RVA: 0x00A8DD2C File Offset: 0x00A8BF2C
 		private unsafe int GetGridDisplayIndex(int gridIndex, bool logError = false)
 		{
 			if (this.StartGridIndex < 0 || this.DisplayGridNum <= 0)
@@ -626,7 +626,7 @@ namespace CSharpScript.Game.Module.Util
 			return gridIndex % this.DisplayGridNum;
 		}
 
-		// Token: 0x06030C53 RID: 199763 RVA: 0x00B53000 File Offset: 0x00B51200
+		// Token: 0x06025780 RID: 153472 RVA: 0x00A8DE70 File Offset: 0x00A8C070
 		private void OnDestroy(AActor actor)
 		{
 			(this.TargetScroll.GetOwner() as AUIBaseActor).OnPreDestroyed.Remove(new Action<AActor>(this.OnDestroy));
@@ -641,13 +641,13 @@ namespace CSharpScript.Game.Module.Util
 			this.Delegate.Destroy();
 		}
 
-		// Token: 0x06030C54 RID: 199764 RVA: 0x00B5307F File Offset: 0x00B5127F
+		// Token: 0x06025781 RID: 153473 RVA: 0x00A8DEEF File Offset: 0x00A8C0EF
 		public void BindOnScrollValueChanged(Action<FVector2D> callback)
 		{
 			this.TargetScroll.OnScrollValueChange.Bind(callback);
 		}
 
-		// Token: 0x06030C55 RID: 199765 RVA: 0x00B53094 File Offset: 0x00B51294
+		// Token: 0x06025782 RID: 153474 RVA: 0x00A8DF04 File Offset: 0x00A8C104
 		[return: Nullable(2)]
 		public UUIItem GetGridAndScrollToByJudge(object targetData, Func<object, TData, bool> judge, bool playGridAnim = true)
 		{
@@ -674,19 +674,19 @@ namespace CSharpScript.Game.Module.Util
 			return this.GetGrid(num);
 		}
 
-		// Token: 0x06030C56 RID: 199766 RVA: 0x00B53114 File Offset: 0x00B51314
+		// Token: 0x06025783 RID: 153475 RVA: 0x00A8DF84 File Offset: 0x00A8C184
 		public void ScrollToNextLine(bool bReversed = true)
 		{
 			this.TargetScroll.ScrollToNextLine(bReversed);
 		}
 
-		// Token: 0x06030C57 RID: 199767 RVA: 0x00B53122 File Offset: 0x00B51322
+		// Token: 0x06025784 RID: 153476 RVA: 0x00A8DF92 File Offset: 0x00A8C192
 		public void SetTargetRootComponentActive(bool value)
 		{
 			this.TargetScroll.GetRootComponent().SetUIActive(value);
 		}
 
-		// Token: 0x06030C58 RID: 199768 RVA: 0x00B53135 File Offset: 0x00B51335
+		// Token: 0x06025785 RID: 153477 RVA: 0x00A8DFA5 File Offset: 0x00A8C1A5
 		public void ResetGridController()
 		{
 			if (this.GridsController != null)
@@ -695,7 +695,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C59 RID: 199769 RVA: 0x00B53154 File Offset: 0x00B51354
+		// Token: 0x06025786 RID: 153478 RVA: 0x00A8DFC4 File Offset: 0x00A8C1C4
 		public void ScrollToDisplayingIndex(int displayIndex)
 		{
 			UUIItem gridByDisplayIndex = this.GetGridByDisplayIndex(displayIndex);
@@ -705,7 +705,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C5A RID: 199770 RVA: 0x00B53179 File Offset: 0x00B51379
+		// Token: 0x06025787 RID: 153479 RVA: 0x00A8DFE9 File Offset: 0x00A8C1E9
 		public UUIInturnAnimController GetUiAnimController()
 		{
 			UUILoopScrollViewComponent targetScroll = this.TargetScroll;
@@ -713,7 +713,7 @@ namespace CSharpScript.Game.Module.Util
 			return ((auibaseActor != null) ? auibaseActor.GetComponentByClass(UUIInturnAnimController.StaticClass()) : null) as UUIInturnAnimController;
 		}
 
-		// Token: 0x06030C5B RID: 199771 RVA: 0x00B531A8 File Offset: 0x00B513A8
+		// Token: 0x06025788 RID: 153480 RVA: 0x00A8E018 File Offset: 0x00A8C218
 		public int GetDisplayGridEndIndexPurely()
 		{
 			if (this.LineCount == -1)
@@ -768,14 +768,14 @@ namespace CSharpScript.Game.Module.Util
 			return this.StartGridIndex + this.LineCount - 1;
 		}
 
-		// Token: 0x0401A2F4 RID: 107252
+		// Token: 0x04014B67 RID: 84839
 		public const bool IS_DEBUG = false;
 
-		// Token: 0x0401A2F5 RID: 107253
+		// Token: 0x04014B68 RID: 84840
 		[Nullable(2)]
 		private readonly UUILoopScrollViewComponent TargetScroll;
 
-		// Token: 0x0401A2F6 RID: 107254
+		// Token: 0x04014B69 RID: 84841
 		[Nullable(new byte[]
 		{
 			2,
@@ -784,11 +784,11 @@ namespace CSharpScript.Game.Module.Util
 		})]
 		private readonly ScrollViewDelegate<TProxy, TData> Delegate;
 
-		// Token: 0x0401A2F7 RID: 107255
+		// Token: 0x04014B6A RID: 84842
 		[Nullable(2)]
 		private readonly GridAppearAnimationBase GridsController;
 
-		// Token: 0x0401A2F8 RID: 107256
+		// Token: 0x04014B6B RID: 84843
 		[Nullable(new byte[]
 		{
 			1,
@@ -797,35 +797,35 @@ namespace CSharpScript.Game.Module.Util
 		})]
 		private readonly List<UniTask<TProxy>> TempGridCreatePromiseList = new List<UniTask<TProxy>>();
 
-		// Token: 0x0401A2F9 RID: 107257
+		// Token: 0x04014B6C RID: 84844
 		private int GridNum;
 
-		// Token: 0x0401A2FA RID: 107258
+		// Token: 0x04014B6D RID: 84845
 		private int PrivateStartGridIndex = -1;
 
-		// Token: 0x0401A2FB RID: 107259
+		// Token: 0x04014B6E RID: 84846
 		private int PrivateEndGridIndex = -1;
 
-		// Token: 0x0401A2FC RID: 107260
+		// Token: 0x04014B6F RID: 84847
 		[Nullable(2)]
 		private readonly AUIBaseActor TemplateGridActor;
 
-		// Token: 0x0401A2FD RID: 107261
+		// Token: 0x04014B70 RID: 84848
 		private bool DataInitedInternal;
 
-		// Token: 0x0401A2FE RID: 107262
+		// Token: 0x04014B71 RID: 84849
 		private bool Operating;
 
-		// Token: 0x0401A2FF RID: 107263
+		// Token: 0x04014B72 RID: 84850
 		private readonly Queue<OperationParam<TData>> OperationQueue = new Queue<OperationParam<TData>>(4);
 
-		// Token: 0x0401A300 RID: 107264
+		// Token: 0x04014B73 RID: 84851
 		private Action AnimFinishDelegate;
 
-		// Token: 0x0401A301 RID: 107265
+		// Token: 0x04014B74 RID: 84852
 		private bool IsInRefreshAsync;
 
-		// Token: 0x0401A302 RID: 107266
+		// Token: 0x04014B75 RID: 84853
 		private int LineCount = -1;
 	}
 }

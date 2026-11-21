@@ -2,26 +2,26 @@
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BB8 RID: 23480
+	// Token: 0x02004B98 RID: 19352
 	public enum ECiacconaGalPlayerState
 	{
-		// Token: 0x0401EF17 RID: 126743
+		// Token: 0x040199C8 RID: 104904
 		Initializing,
-		// Token: 0x0401EF18 RID: 126744
+		// Token: 0x040199C9 RID: 104905
 		Pausing,
-		// Token: 0x0401EF19 RID: 126745
+		// Token: 0x040199CA RID: 104906
 		Playing,
-		// Token: 0x0401EF1A RID: 126746
+		// Token: 0x040199CB RID: 104907
 		Skipping,
-		// Token: 0x0401EF1B RID: 126747
+		// Token: 0x040199CC RID: 104908
 		Choosing,
-		// Token: 0x0401EF1C RID: 126748
+		// Token: 0x040199CD RID: 104909
 		SubEnding,
-		// Token: 0x0401EF1D RID: 126749
+		// Token: 0x040199CE RID: 104910
 		Protecting,
-		// Token: 0x0401EF1E RID: 126750
+		// Token: 0x040199CF RID: 104911
 		BeforeSubEnding,
-		// Token: 0x0401EF1F RID: 126751
+		// Token: 0x040199D0 RID: 104912
 		ChoiceProtecting
 	}
 }

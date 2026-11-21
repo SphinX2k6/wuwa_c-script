@@ -4,15 +4,15 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Core.Common;
 
-// Token: 0x02003243 RID: 12867
+// Token: 0x020027B2 RID: 10162
 [NullableContext(2)]
 [Nullable(0)]
-public class RoleGaitComponent : EntityComponent, IComponentDependency
+public class RoleGaitComponent : EntityComponent
 {
-	// Token: 0x17002645 RID: 9797
-	// (get) Token: 0x0601BC41 RID: 113729 RVA: 0x007A7376 File Offset: 0x007A5576
+	// Token: 0x170028AB RID: 10411
+	// (get) Token: 0x060197EE RID: 104430 RVA: 0x007CFB89 File Offset: 0x007CDD89
 	[Nullable(1)]
-	public static Type[] Dependencies
+	public override Type[] Dependencies
 	{
 		[NullableContext(1)]
 		get
@@ -25,7 +25,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601BC42 RID: 113730 RVA: 0x007A7398 File Offset: 0x007A5598
+	// Token: 0x060197EF RID: 104431 RVA: 0x007CFBAC File Offset: 0x007CDDAC
 	private void OnForceWalkTagChanged(bool tagExist)
 	{
 		if (tagExist)
@@ -51,7 +51,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		this.RefreshMoveState();
 	}
 
-	// Token: 0x0601BC43 RID: 113731 RVA: 0x007A748C File Offset: 0x007A568C
+	// Token: 0x060197F0 RID: 104432 RVA: 0x007CFCA0 File Offset: 0x007CDEA0
 	private void OnForceRunTagChanged(bool tagExist)
 	{
 		if (tagExist)
@@ -77,7 +77,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		this.RefreshMoveState();
 	}
 
-	// Token: 0x0601BC44 RID: 113732 RVA: 0x007A7580 File Offset: 0x007A5780
+	// Token: 0x060197F1 RID: 104433 RVA: 0x007CFD94 File Offset: 0x007CDF94
 	private void OnForceNotWalkTagChanged(bool tagExist)
 	{
 		if (tagExist)
@@ -91,7 +91,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		this.RefreshMoveState();
 	}
 
-	// Token: 0x0601BC45 RID: 113733 RVA: 0x007A75DC File Offset: 0x007A57DC
+	// Token: 0x060197F2 RID: 104434 RVA: 0x007CFDF0 File Offset: 0x007CDFF0
 	private void OnForbidSprintTagTagChanged(bool tagExist)
 	{
 		if (tagExist)
@@ -105,14 +105,14 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		this.RefreshMoveState();
 	}
 
-	// Token: 0x0601BC46 RID: 113734 RVA: 0x007A7636 File Offset: 0x007A5836
+	// Token: 0x060197F3 RID: 104435 RVA: 0x007CFE4A File Offset: 0x007CE04A
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
 		this.RoleForbidMovementHelper = new RoleForbidMovementHelper();
 		return true;
 	}
 
-	// Token: 0x0601BC47 RID: 113735 RVA: 0x007A7644 File Offset: 0x007A5844
+	// Token: 0x060197F4 RID: 104436 RVA: 0x007CFE58 File Offset: 0x007CE058
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.CheckGetComponent<CharacterActorComponent>();
@@ -128,7 +128,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601BC48 RID: 113736 RVA: 0x007A76E0 File Offset: 0x007A58E0
+	// Token: 0x060197F5 RID: 104437 RVA: 0x007CFEF4 File Offset: 0x007CE0F4
 	public unsafe void InitRoleForbidMovementHelper()
 	{
 		this.RoleGaitUnEnableState[ERoleGaitEnableType.Run] = new HashSet<int>();
@@ -152,7 +152,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		this.RoleForbidMovementHelper.Awake();
 	}
 
-	// Token: 0x0601BC49 RID: 113737 RVA: 0x007A7834 File Offset: 0x007A5A34
+	// Token: 0x060197F6 RID: 104438 RVA: 0x007D0048 File Offset: 0x007CE248
 	protected override bool OnClear()
 	{
 		RoleForbidMovementHelper roleForbidMovementHelper = this.RoleForbidMovementHelper;
@@ -163,13 +163,13 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601BC4A RID: 113738 RVA: 0x007A7848 File Offset: 0x007A5A48
+	// Token: 0x060197F7 RID: 104439 RVA: 0x007D005C File Offset: 0x007CE25C
 	protected override void OnTick(float delta)
 	{
 		this.RefreshMoveState();
 	}
 
-	// Token: 0x0601BC4B RID: 113739 RVA: 0x007A7850 File Offset: 0x007A5A50
+	// Token: 0x060197F8 RID: 104440 RVA: 0x007D0064 File Offset: 0x007CE264
 	private void RefreshMoveState()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -192,14 +192,14 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		this.UpdateMoveReleasing(hasSprintRetain, positionState, moveState, directionState);
 	}
 
-	// Token: 0x0601BC4C RID: 113740 RVA: 0x007A78EA File Offset: 0x007A5AEA
+	// Token: 0x060197F9 RID: 104441 RVA: 0x007D00FE File Offset: 0x007CE2FE
 	public bool EnableRoleGaitState(ERoleGaitEnableType type)
 	{
 		HashSet<int> valueOrDefault = this.RoleGaitUnEnableState.GetValueOrDefault(type);
 		return valueOrDefault != null && valueOrDefault.Count == 0;
 	}
 
-	// Token: 0x0601BC4D RID: 113741 RVA: 0x007A7908 File Offset: 0x007A5B08
+	// Token: 0x060197FA RID: 104442 RVA: 0x007D011C File Offset: 0x007CE31C
 	public ERoleGaitEnableType? FindEnableGaitState()
 	{
 		foreach (KeyValuePair<ERoleGaitEnableType, HashSet<int>> keyValuePair in this.RoleGaitUnEnableState)
@@ -212,7 +212,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		return null;
 	}
 
-	// Token: 0x0601BC4E RID: 113742 RVA: 0x007A797C File Offset: 0x007A5B7C
+	// Token: 0x060197FB RID: 104443 RVA: 0x007D0190 File Offset: 0x007CE390
 	public ECharMoveState? FindEnableCharMoveState()
 	{
 		ERoleGaitEnableType? eroleGaitEnableType = this.FindEnableGaitState();
@@ -231,7 +231,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		return null;
 	}
 
-	// Token: 0x0601BC4F RID: 113743 RVA: 0x007A79E0 File Offset: 0x007A5BE0
+	// Token: 0x060197FC RID: 104444 RVA: 0x007D01F4 File Offset: 0x007CE3F4
 	protected void UpdateMovePressing(bool hasSprintRetain, ECharPositionState positionState, ECharMoveState moveState, ECharDirectionState cameraState)
 	{
 		switch (positionState)
@@ -355,7 +355,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601BC50 RID: 113744 RVA: 0x007A7B54 File Offset: 0x007A5D54
+	// Token: 0x060197FD RID: 104445 RVA: 0x007D0368 File Offset: 0x007CE568
 	protected void UpdateMoveReleasing(bool hasSprintRetain, ECharPositionState positionState, ECharMoveState moveState, ECharDirectionState cameraState)
 	{
 		if (hasSprintRetain)
@@ -473,7 +473,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601BC51 RID: 113745 RVA: 0x007A7CF8 File Offset: 0x007A5EF8
+	// Token: 0x060197FE RID: 104446 RVA: 0x007D050C File Offset: 0x007CE70C
 	protected void SetRunStop()
 	{
 		CharacterUnifiedStateComponent unifiedStateComponent = this.UnifiedStateComponent;
@@ -526,13 +526,13 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601BC52 RID: 113746 RVA: 0x007A7D9C File Offset: 0x007A5F9C
+	// Token: 0x060197FF RID: 104447 RVA: 0x007D05B0 File Offset: 0x007CE7B0
 	public void SetMoveInputGaitSwitchEnabled(bool enabled)
 	{
 		this.MoveInputGaitSwitchEnabled = enabled;
 	}
 
-	// Token: 0x0601BC53 RID: 113747 RVA: 0x007A7DA8 File Offset: 0x007A5FA8
+	// Token: 0x06019800 RID: 104448 RVA: 0x007D05BC File Offset: 0x007CE7BC
 	private void UpdateMoveStateByControllerType()
 	{
 		CharacterMoveComponent moveComp = this.MoveComp;
@@ -565,7 +565,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601BC54 RID: 113748 RVA: 0x007A7E40 File Offset: 0x007A6040
+	// Token: 0x06019801 RID: 104449 RVA: 0x007D0654 File Offset: 0x007CE854
 	private void UpdateMoveStateByGamepad()
 	{
 		CharacterInputComponent inputComp = this.InputComp;
@@ -585,7 +585,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601BC55 RID: 113749 RVA: 0x007A7EE4 File Offset: 0x007A60E4
+	// Token: 0x06019802 RID: 104450 RVA: 0x007D06F8 File Offset: 0x007CE8F8
 	private void UpdateMoveStateByTouch()
 	{
 		CharacterInputComponent inputComp = this.InputComp;
@@ -619,7 +619,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601BC56 RID: 113750 RVA: 0x007A7F78 File Offset: 0x007A6178
+	// Token: 0x06019803 RID: 104451 RVA: 0x007D078C File Offset: 0x007CE98C
 	public void EnableSprintStop(bool enable)
 	{
 		if (this.IsDisableSprintStop != enable)
@@ -629,7 +629,7 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		this.IsDisableSprintStop = !enable;
 	}
 
-	// Token: 0x0601BC57 RID: 113751 RVA: 0x007A7F90 File Offset: 0x007A6190
+	// Token: 0x06019804 RID: 104452 RVA: 0x007D07A4 File Offset: 0x007CE9A4
 	private bool CanSprintStop()
 	{
 		if (this.IsDisableSprintStop)
@@ -641,13 +641,13 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 		return this.MoveComp.Speed + num >= sprintSpeed;
 	}
 
-	// Token: 0x0601BC58 RID: 113752 RVA: 0x007A7FDB File Offset: 0x007A61DB
+	// Token: 0x06019805 RID: 104453 RVA: 0x007D07EF File Offset: 0x007CE9EF
 	public void SetDisableStopAnim(bool enable)
 	{
 		this.DisableStopAnim = enable;
 	}
 
-	// Token: 0x0601BC59 RID: 113753 RVA: 0x007A7FE4 File Offset: 0x007A61E4
+	// Token: 0x06019806 RID: 104454 RVA: 0x007D07F8 File Offset: 0x007CE9F8
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -656,150 +656,144 @@ public class RoleGaitComponent : EntityComponent, IComponentDependency
 			return false;
 		}
 		RoleGaitComponent roleGaitComponent = (RoleGaitComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (roleGaitComponent.ActorComp == null)
 		{
-			if (roleGaitComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("InputComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (roleGaitComponent.InputComp == null)
-			{
-				this.InputComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterInputComponent>(this.InputComp), "InputComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("MoveComp"))
+		if (roleGaitComponent.InputComp == null)
 		{
-			if (roleGaitComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
+			this.InputComp = null;
 		}
-		if (base.CanResetComponentProperty("BuffComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputComp), "InputComp"))
 		{
-			if (roleGaitComponent.BuffComp == null)
-			{
-				this.BuffComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterBuffComponent>(this.BuffComp), "BuffComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("UnifiedStateComponent"))
+		if (roleGaitComponent.MoveComp == null)
 		{
-			if (roleGaitComponent.UnifiedStateComponent == null)
-			{
-				this.UnifiedStateComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComponent), "UnifiedStateComponent"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("TagComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			if (roleGaitComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("RoleForbidMovementHelper"))
+		if (roleGaitComponent.BuffComp == null)
 		{
-			if (roleGaitComponent.RoleForbidMovementHelper == null)
-			{
-				this.RoleForbidMovementHelper = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RoleForbidMovementHelper>(this.RoleForbidMovementHelper), "RoleForbidMovementHelper"))
-			{
-				return false;
-			}
+			this.BuffComp = null;
 		}
-		if (base.CanResetComponentProperty("RoleGaitUnEnableState"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComp), "BuffComp"))
 		{
-			if (roleGaitComponent.RoleGaitUnEnableState == null)
-			{
-				this.RoleGaitUnEnableState = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<ERoleGaitEnableType, HashSet<int>>>(this.RoleGaitUnEnableState), "RoleGaitUnEnableState"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("DisableStopAnim"))
+		if (roleGaitComponent.UnifiedStateComponent == null)
 		{
-			this.DisableStopAnim = roleGaitComponent.DisableStopAnim;
+			this.UnifiedStateComponent = null;
 		}
-		if (base.CanResetComponentProperty("LastInKeyBoard"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComponent), "UnifiedStateComponent"))
 		{
-			this.LastInKeyBoard = roleGaitComponent.LastInKeyBoard;
+			return false;
 		}
-		if (base.CanResetComponentProperty("MoveInputGaitSwitchEnabled"))
+		if (roleGaitComponent.TagComponent == null)
 		{
-			this.MoveInputGaitSwitchEnabled = roleGaitComponent.MoveInputGaitSwitchEnabled;
+			this.TagComponent = null;
 		}
-		if (base.CanResetComponentProperty("IsDisableSprintStop"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 		{
-			this.IsDisableSprintStop = roleGaitComponent.IsDisableSprintStop;
+			return false;
 		}
+		if (roleGaitComponent.RoleForbidMovementHelper == null)
+		{
+			this.RoleForbidMovementHelper = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RoleForbidMovementHelper), "RoleForbidMovementHelper"))
+		{
+			return false;
+		}
+		if (roleGaitComponent.RoleGaitUnEnableState == null)
+		{
+			this.RoleGaitUnEnableState = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RoleGaitUnEnableState), "RoleGaitUnEnableState"))
+		{
+			return false;
+		}
+		this.DisableStopAnim = roleGaitComponent.DisableStopAnim;
+		this.LastInKeyBoard = roleGaitComponent.LastInKeyBoard;
+		this.MoveInputGaitSwitchEnabled = roleGaitComponent.MoveInputGaitSwitchEnabled;
+		this.IsDisableSprintStop = roleGaitComponent.IsDisableSprintStop;
 		return true;
 	}
 
-	// Token: 0x0400DABD RID: 55997
+	// Token: 0x170028AC RID: 10412
+	// (get) Token: 0x06019807 RID: 104455 RVA: 0x007D09A0 File Offset: 0x007CEBA0
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028AD RID: 10413
+	// (get) Token: 0x06019808 RID: 104456 RVA: 0x007D09A3 File Offset: 0x007CEBA3
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028AE RID: 10414
+	// (get) Token: 0x06019809 RID: 104457 RVA: 0x007D09A6 File Offset: 0x007CEBA6
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DF5C RID: 57180
 	private const float STOP_SPEED = 5f;
 
-	// Token: 0x0400DABE RID: 55998
+	// Token: 0x0400DF5D RID: 57181
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400DABF RID: 55999
+	// Token: 0x0400DF5E RID: 57182
 	private CharacterInputComponent InputComp;
 
-	// Token: 0x0400DAC0 RID: 56000
+	// Token: 0x0400DF5F RID: 57183
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400DAC1 RID: 56001
+	// Token: 0x0400DF60 RID: 57184
 	private CharacterBuffComponent BuffComp;
 
-	// Token: 0x0400DAC2 RID: 56002
+	// Token: 0x0400DF61 RID: 57185
 	private CharacterUnifiedStateComponent UnifiedStateComponent;
 
-	// Token: 0x0400DAC3 RID: 56003
+	// Token: 0x0400DF62 RID: 57186
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400DAC4 RID: 56004
+	// Token: 0x0400DF63 RID: 57187
 	public RoleForbidMovementHelper RoleForbidMovementHelper;
 
-	// Token: 0x0400DAC5 RID: 56005
+	// Token: 0x0400DF64 RID: 57188
 	[Nullable(1)]
 	public Dictionary<ERoleGaitEnableType, HashSet<int>> RoleGaitUnEnableState = new Dictionary<ERoleGaitEnableType, HashSet<int>>();
 
-	// Token: 0x0400DAC6 RID: 56006
+	// Token: 0x0400DF65 RID: 57189
 	private bool DisableStopAnim;
 
-	// Token: 0x0400DAC7 RID: 56007
+	// Token: 0x0400DF66 RID: 57190
 	private bool LastInKeyBoard = true;
 
-	// Token: 0x0400DAC8 RID: 56008
+	// Token: 0x0400DF67 RID: 57191
 	private bool MoveInputGaitSwitchEnabled = true;
 
-	// Token: 0x0400DAC9 RID: 56009
+	// Token: 0x0400DF68 RID: 57192
 	private bool IsDisableSprintStop;
 }

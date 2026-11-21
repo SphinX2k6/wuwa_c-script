@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.NPC.Animal;
 using UnrealEngine;
 
-// Token: 0x02002E23 RID: 11811
+// Token: 0x0200237F RID: 9087
 [NullableContext(2)]
 [Nullable(0)]
 public class AnimalStateMachineComponent : EntityComponent
 {
-	// Token: 0x06018E1C RID: 101916 RVA: 0x00669636 File Offset: 0x00667836
+	// Token: 0x060166E5 RID: 91877 RVA: 0x0068F54E File Offset: 0x0068D74E
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
 		this.StateMachine = new StateMachine<Entity, EAnimalPerformState>(base.Entity, new Action<EAnimalPerformState, EAnimalPerformState>(this.OnSwitchState));
 		return true;
 	}
 
-	// Token: 0x06018E1D RID: 101917 RVA: 0x00669658 File Offset: 0x00667858
+	// Token: 0x060166E6 RID: 91878 RVA: 0x0068F570 File Offset: 0x0068D770
 	protected override bool OnStart()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -45,13 +45,13 @@ public class AnimalStateMachineComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x06018E1E RID: 101918 RVA: 0x00669778 File Offset: 0x00667978
+	// Token: 0x060166E7 RID: 91879 RVA: 0x0068F690 File Offset: 0x0068D890
 	protected override void OnActivate()
 	{
 		this.StartStateMachine();
 	}
 
-	// Token: 0x06018E1F RID: 101919 RVA: 0x00669780 File Offset: 0x00667980
+	// Token: 0x060166E8 RID: 91880 RVA: 0x0068F698 File Offset: 0x0068D898
 	protected override void OnTick(float delta)
 	{
 		if (!this.Initialize)
@@ -61,7 +61,7 @@ public class AnimalStateMachineComponent : EntityComponent
 		this.StateMachine.Update(delta);
 	}
 
-	// Token: 0x06018E20 RID: 101920 RVA: 0x00669797 File Offset: 0x00667997
+	// Token: 0x060166E9 RID: 91881 RVA: 0x0068F6AF File Offset: 0x0068D8AF
 	protected override bool OnEnd()
 	{
 		this.Initialize = false;
@@ -69,25 +69,25 @@ public class AnimalStateMachineComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x06018E21 RID: 101921 RVA: 0x006697AC File Offset: 0x006679AC
+	// Token: 0x060166EA RID: 91882 RVA: 0x0068F6C4 File Offset: 0x0068D8C4
 	private void OnSwitchState(EAnimalPerformState oldState, EAnimalPerformState newState)
 	{
 	}
 
-	// Token: 0x06018E22 RID: 101922 RVA: 0x006697AE File Offset: 0x006679AE
+	// Token: 0x060166EB RID: 91883 RVA: 0x0068F6C6 File Offset: 0x0068D8C6
 	public void StartStateMachine()
 	{
 		this.StateMachine.Start(this.StartState);
 		this.Initialize = true;
 	}
 
-	// Token: 0x06018E23 RID: 101923 RVA: 0x006697CC File Offset: 0x006679CC
+	// Token: 0x060166EC RID: 91884 RVA: 0x0068F6E4 File Offset: 0x0068D8E4
 	public EAnimalEcologicalState CurrentState()
 	{
 		return AnimalStateMachineComponent.GetUeState(this.StateMachine.CurrentState.Value);
 	}
 
-	// Token: 0x06018E24 RID: 101924 RVA: 0x006697F1 File Offset: 0x006679F1
+	// Token: 0x060166ED RID: 91885 RVA: 0x0068F709 File Offset: 0x0068D909
 	public void SwitchState(EAnimalPerformState state)
 	{
 		if (!this.Initialize)
@@ -97,7 +97,7 @@ public class AnimalStateMachineComponent : EntityComponent
 		this.StateMachine.Switch(state);
 	}
 
-	// Token: 0x06018E25 RID: 101925 RVA: 0x0066980C File Offset: 0x00667A0C
+	// Token: 0x060166EE RID: 91886 RVA: 0x0068F724 File Offset: 0x0068D924
 	public float GetWaitTime()
 	{
 		AnimalPerformStateBase animalPerformStateBase = this.StateMachine.GetState(this.StateMachine.CurrentState.Value) as AnimalPerformStateBase;
@@ -108,7 +108,7 @@ public class AnimalStateMachineComponent : EntityComponent
 		return animalPerformStateBase.GetActionTime();
 	}
 
-	// Token: 0x06018E26 RID: 101926 RVA: 0x0066984B File Offset: 0x00667A4B
+	// Token: 0x060166EF RID: 91887 RVA: 0x0068F763 File Offset: 0x0068D963
 	public AnimalPerformStateBase GetState(EAnimalPerformState state)
 	{
 		if (!this.Initialize)
@@ -118,7 +118,7 @@ public class AnimalStateMachineComponent : EntityComponent
 		return this.StateMachine.GetState(state) as AnimalPerformStateBase;
 	}
 
-	// Token: 0x06018E27 RID: 101927 RVA: 0x00669868 File Offset: 0x00667A68
+	// Token: 0x060166F0 RID: 91888 RVA: 0x0068F780 File Offset: 0x0068D980
 	public AnimalPerformStateBase GetCurrentState()
 	{
 		if (!this.Initialize)
@@ -128,7 +128,7 @@ public class AnimalStateMachineComponent : EntityComponent
 		return this.GetState(this.StateMachine.CurrentState.Value);
 	}
 
-	// Token: 0x06018E28 RID: 101928 RVA: 0x00669898 File Offset: 0x00667A98
+	// Token: 0x060166F1 RID: 91889 RVA: 0x0068F7B0 File Offset: 0x0068D9B0
 	[NullableContext(1)]
 	public static string GetStateName(EAnimalPerformState state)
 	{
@@ -155,7 +155,7 @@ public class AnimalStateMachineComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x06018E29 RID: 101929 RVA: 0x00669902 File Offset: 0x00667B02
+	// Token: 0x060166F2 RID: 91890 RVA: 0x0068F81A File Offset: 0x0068DA1A
 	public static EAnimalEcologicalState GetUeState(EAnimalPerformState state)
 	{
 		switch (state)
@@ -181,7 +181,7 @@ public class AnimalStateMachineComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x06018E2A RID: 101930 RVA: 0x0066993D File Offset: 0x00667B3D
+	// Token: 0x060166F3 RID: 91891 RVA: 0x0068F855 File Offset: 0x0068DA55
 	public static EAnimalPerformState GetTsState(EAnimalEcologicalState state)
 	{
 		switch (state)
@@ -205,7 +205,7 @@ public class AnimalStateMachineComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x06018E2B RID: 101931 RVA: 0x00669974 File Offset: 0x00667B74
+	// Token: 0x060166F4 RID: 91892 RVA: 0x0068F88C File Offset: 0x0068DA8C
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -214,60 +214,85 @@ public class AnimalStateMachineComponent : EntityComponent
 			return false;
 		}
 		AnimalStateMachineComponent animalStateMachineComponent = (AnimalStateMachineComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ConfigId"))
+		this.ConfigId = animalStateMachineComponent.ConfigId;
+		if (animalStateMachineComponent.AnimComp == null)
 		{
-			this.ConfigId = animalStateMachineComponent.ConfigId;
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("AnimComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			if (animalStateMachineComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("EcologicalInterface"))
+		if (animalStateMachineComponent.EcologicalInterface == null)
 		{
-			if (animalStateMachineComponent.EcologicalInterface == null)
-			{
-				this.EcologicalInterface = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IBPI_AnimalEcological_C>(this.EcologicalInterface), "EcologicalInterface"))
-			{
-				return false;
-			}
+			this.EcologicalInterface = null;
 		}
-		if (base.CanResetComponentProperty("StateMachine"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EcologicalInterface), "EcologicalInterface"))
 		{
-			if (animalStateMachineComponent.StateMachine == null)
-			{
-				this.StateMachine = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<StateMachine<Entity, EAnimalPerformState>>(this.StateMachine), "StateMachine"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("Initialize"))
+		if (animalStateMachineComponent.StateMachine == null)
 		{
-			this.Initialize = animalStateMachineComponent.Initialize;
+			this.StateMachine = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateMachine), "StateMachine"))
+		{
+			return false;
+		}
+		this.Initialize = animalStateMachineComponent.Initialize;
 		return true;
 	}
 
-	// Token: 0x0400BAA2 RID: 47778
+	// Token: 0x170022EE RID: 8942
+	// (get) Token: 0x060166F5 RID: 91893 RVA: 0x0068F945 File Offset: 0x0068DB45
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170022EF RID: 8943
+	// (get) Token: 0x060166F6 RID: 91894 RVA: 0x0068F948 File Offset: 0x0068DB48
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170022F0 RID: 8944
+	// (get) Token: 0x060166F7 RID: 91895 RVA: 0x0068F94B File Offset: 0x0068DB4B
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170022F1 RID: 8945
+	// (get) Token: 0x060166F8 RID: 91896 RVA: 0x0068F94E File Offset: 0x0068DB4E
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400BE30 RID: 48688
 	private int ConfigId;
 
-	// Token: 0x0400BAA3 RID: 47779
+	// Token: 0x0400BE31 RID: 48689
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400BAA4 RID: 47780
+	// Token: 0x0400BE32 RID: 48690
 	private IBPI_AnimalEcological_C EcologicalInterface;
 
-	// Token: 0x0400BAA5 RID: 47781
+	// Token: 0x0400BE33 RID: 48691
 	[Nullable(new byte[]
 	{
 		2,
@@ -275,9 +300,9 @@ public class AnimalStateMachineComponent : EntityComponent
 	})]
 	private StateMachine<Entity, EAnimalPerformState> StateMachine;
 
-	// Token: 0x0400BAA6 RID: 47782
+	// Token: 0x0400BE34 RID: 48692
 	private readonly EAnimalPerformState StartState;
 
-	// Token: 0x0400BAA7 RID: 47783
+	// Token: 0x0400BE35 RID: 48693
 	private bool Initialize;
 }

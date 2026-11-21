@@ -5,37 +5,37 @@ using System.Runtime.CompilerServices;
 using System.Text.Json;
 using CSharpScript.Utils;
 
-// Token: 0x02002FDF RID: 12255
+// Token: 0x02002534 RID: 9524
 [NullableContext(2)]
 [Nullable(0)]
 public abstract class Trigger
 {
-	// Token: 0x170023BA RID: 9146
-	// (get) Token: 0x06019F8F RID: 106383 RVA: 0x006CBE21 File Offset: 0x006CA021
-	// (set) Token: 0x06019F90 RID: 106384 RVA: 0x006CBE29 File Offset: 0x006CA029
+	// Token: 0x1700247C RID: 9340
+	// (get) Token: 0x060178C3 RID: 96451 RVA: 0x006F3CA9 File Offset: 0x006F1EA9
+	// (set) Token: 0x060178C4 RID: 96452 RVA: 0x006F3CB1 File Offset: 0x006F1EB1
 	public ITriggerConfig Config { get; set; }
 
-	// Token: 0x170023BB RID: 9147
-	// (get) Token: 0x06019F91 RID: 106385 RVA: 0x006CBE32 File Offset: 0x006CA032
-	// (set) Token: 0x06019F92 RID: 106386 RVA: 0x006CBE3A File Offset: 0x006CA03A
+	// Token: 0x1700247D RID: 9341
+	// (get) Token: 0x060178C5 RID: 96453 RVA: 0x006F3CBA File Offset: 0x006F1EBA
+	// (set) Token: 0x060178C6 RID: 96454 RVA: 0x006F3CC2 File Offset: 0x006F1EC2
 	public int Handle { get; set; }
 
-	// Token: 0x170023BC RID: 9148
-	// (get) Token: 0x06019F93 RID: 106387 RVA: 0x006CBE43 File Offset: 0x006CA043
-	// (set) Token: 0x06019F94 RID: 106388 RVA: 0x006CBE4B File Offset: 0x006CA04B
+	// Token: 0x1700247E RID: 9342
+	// (get) Token: 0x060178C7 RID: 96455 RVA: 0x006F3CCB File Offset: 0x006F1ECB
+	// (set) Token: 0x060178C8 RID: 96456 RVA: 0x006F3CD3 File Offset: 0x006F1ED3
 	public CharacterTriggerComponent OwnerTriggerComp { get; set; }
 
-	// Token: 0x170023BD RID: 9149
-	// (get) Token: 0x06019F95 RID: 106389 RVA: 0x006CBE54 File Offset: 0x006CA054
-	// (set) Token: 0x06019F96 RID: 106390 RVA: 0x006CBE5C File Offset: 0x006CA05C
+	// Token: 0x1700247F RID: 9343
+	// (get) Token: 0x060178C9 RID: 96457 RVA: 0x006F3CDC File Offset: 0x006F1EDC
+	// (set) Token: 0x060178CA RID: 96458 RVA: 0x006F3CE4 File Offset: 0x006F1EE4
 	public TTriggerCallback Callback { get; set; }
 
-	// Token: 0x170023BE RID: 9150
-	// (get) Token: 0x06019F97 RID: 106391 RVA: 0x006CBE65 File Offset: 0x006CA065
-	// (set) Token: 0x06019F98 RID: 106392 RVA: 0x006CBE6D File Offset: 0x006CA06D
+	// Token: 0x17002480 RID: 9344
+	// (get) Token: 0x060178CB RID: 96459 RVA: 0x006F3CED File Offset: 0x006F1EED
+	// (set) Token: 0x060178CC RID: 96460 RVA: 0x006F3CF5 File Offset: 0x006F1EF5
 	public TTriggerChecker Checker { get; set; }
 
-	// Token: 0x06019F99 RID: 106393 RVA: 0x006CBE78 File Offset: 0x006CA078
+	// Token: 0x060178CD RID: 96461 RVA: 0x006F3D00 File Offset: 0x006F1F00
 	public Trigger(ITriggerConfig config, int handle, CharacterTriggerComponent ownerTriggerComp, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> functions, TTriggerCallback callback, TTriggerChecker checker)
 	{
 		if (config == null)
@@ -75,7 +75,7 @@ public abstract class Trigger
 		}).SetDefaultParams(config.Params).SetDefaultParam("Owner", TFormulaValue.FromEntity((ownerTriggerComp != null) ? ownerTriggerComp.Entity : null));
 	}
 
-	// Token: 0x06019F9A RID: 106394 RVA: 0x006CBF70 File Offset: 0x006CA170
+	// Token: 0x060178CE RID: 96462 RVA: 0x006F3DF8 File Offset: 0x006F1FF8
 	private static TFormulaValue FromJsonElement(JsonElement json)
 	{
 		switch (json.ValueKind)
@@ -108,13 +108,13 @@ public abstract class Trigger
 		return default(TFormulaValue);
 	}
 
-	// Token: 0x06019F9B RID: 106395 RVA: 0x006CC002 File Offset: 0x006CA202
+	// Token: 0x060178CF RID: 96463 RVA: 0x006F3E8A File Offset: 0x006F208A
 	public bool CanContinuousTrigger()
 	{
 		return this.ExecuteType != EExecuteType.DisableContinuousTrigger;
 	}
 
-	// Token: 0x06019F9C RID: 106396 RVA: 0x006CC010 File Offset: 0x006CA210
+	// Token: 0x060178D0 RID: 96464 RVA: 0x006F3E98 File Offset: 0x006F2098
 	public unsafe void EvaluateAndExecute([Nullable(new byte[]
 	{
 		2,
@@ -173,7 +173,7 @@ public abstract class Trigger
 		}
 	}
 
-	// Token: 0x06019F9D RID: 106397 RVA: 0x006CC1AC File Offset: 0x006CA3AC
+	// Token: 0x060178D1 RID: 96465 RVA: 0x006F4034 File Offset: 0x006F2234
 	protected bool TryLock()
 	{
 		if (this.IterationLock == Time.Instance.Frame)
@@ -184,19 +184,19 @@ public abstract class Trigger
 		return true;
 	}
 
-	// Token: 0x06019F9E RID: 106398 RVA: 0x006CC1D3 File Offset: 0x006CA3D3
+	// Token: 0x060178D2 RID: 96466 RVA: 0x006F405B File Offset: 0x006F225B
 	protected void Unlock()
 	{
 		this.IterationLock = -1;
 	}
 
-	// Token: 0x06019F9F RID: 106399 RVA: 0x006CC1DC File Offset: 0x006CA3DC
+	// Token: 0x060178D3 RID: 96467 RVA: 0x006F4064 File Offset: 0x006F2264
 	[NullableContext(1)]
 	public virtual void OnInitParams(string[] triggerParams)
 	{
 	}
 
-	// Token: 0x06019FA0 RID: 106400 RVA: 0x006CC1DE File Offset: 0x006CA3DE
+	// Token: 0x060178D4 RID: 96468 RVA: 0x006F4066 File Offset: 0x006F2266
 	public void SetActive(bool isActive)
 	{
 		if (this.IsActive == isActive)
@@ -212,13 +212,13 @@ public abstract class Trigger
 		this.OnInactive();
 	}
 
-	// Token: 0x06019FA1 RID: 106401
+	// Token: 0x060178D5 RID: 96469
 	protected abstract void OnActive();
 
-	// Token: 0x06019FA2 RID: 106402
+	// Token: 0x060178D6 RID: 96470
 	protected abstract void OnInactive();
 
-	// Token: 0x06019FA3 RID: 106403 RVA: 0x006CC201 File Offset: 0x006CA401
+	// Token: 0x060178D7 RID: 96471 RVA: 0x006F4089 File Offset: 0x006F2289
 	public virtual void Destroy()
 	{
 		this.SetActive(false);
@@ -234,35 +234,35 @@ public abstract class Trigger
 		this.Callback = null;
 	}
 
-	// Token: 0x06019FA4 RID: 106404 RVA: 0x006CC23E File Offset: 0x006CA43E
+	// Token: 0x060178D8 RID: 96472 RVA: 0x006F40C6 File Offset: 0x006F22C6
 	[NullableContext(1)]
 	public string GetLastFormulaResult()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x06019FA5 RID: 106405 RVA: 0x006CC245 File Offset: 0x006CA445
+	// Token: 0x060178D9 RID: 96473 RVA: 0x006F40CD File Offset: 0x006F22CD
 	[NullableContext(1)]
 	[Conditional("DEBUG")]
 	public void SetDebugName(string name)
 	{
 	}
 
-	// Token: 0x06019FA6 RID: 106406 RVA: 0x006CC247 File Offset: 0x006CA447
+	// Token: 0x060178DA RID: 96474 RVA: 0x006F40CF File Offset: 0x006F22CF
 	[NullableContext(1)]
 	public virtual string GetDebugName()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x06019FA7 RID: 106407 RVA: 0x006CC24E File Offset: 0x006CA44E
+	// Token: 0x060178DB RID: 96475 RVA: 0x006F40D6 File Offset: 0x006F22D6
 	[NullableContext(1)]
 	public virtual string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x06019FA8 RID: 106408 RVA: 0x006CC255 File Offset: 0x006CA455
+	// Token: 0x060178DC RID: 96476 RVA: 0x006F40DD File Offset: 0x006F22DD
 	[NullableContext(1)]
 	protected static string GetDamageCalculationTypeText(ECalculationType calculationType)
 	{
@@ -279,13 +279,13 @@ public abstract class Trigger
 		}
 	}
 
-	// Token: 0x06019FA9 RID: 106409 RVA: 0x006CC28A File Offset: 0x006CA48A
+	// Token: 0x060178DD RID: 96477 RVA: 0x006F4112 File Offset: 0x006F2312
 	public string GetDebugFormulaString()
 	{
 		return null;
 	}
 
-	// Token: 0x06019FAA RID: 106410 RVA: 0x006CC290 File Offset: 0x006CA490
+	// Token: 0x060178DE RID: 96478 RVA: 0x006F4118 File Offset: 0x006F2318
 	public static Trigger Create(ETriggerEvent triggerType, ITriggerConfig config, int handle, CharacterTriggerComponent ownerTriggerComp, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> functions, TTriggerCallback callback, TTriggerChecker checker)
 	{
 		switch (triggerType)
@@ -352,33 +352,34 @@ public abstract class Trigger
 			return new BuffStackInstigatorTrigger(config, handle, ownerTriggerComp, functions, callback, checker);
 		case ETriggerEvent.SquadAttributeChangeTrigger:
 			return new SquadAttributeChangeTrigger(config, handle, ownerTriggerComp, functions, callback, checker);
-		default:
-			return null;
+		case ETriggerEvent.BuffStackMaxTrigger:
+			return new BuffStackMaxTrigger(config, handle, ownerTriggerComp, functions, callback, checker);
 		}
+		return null;
 	}
 
-	// Token: 0x0400C4A3 RID: 50339
+	// Token: 0x0400C86B RID: 51307
 	[Nullable(1)]
 	private readonly Formula Formula;
 
-	// Token: 0x0400C4A4 RID: 50340
+	// Token: 0x0400C86C RID: 51308
 	protected ETriggerEvent TriggerType;
 
-	// Token: 0x0400C4A5 RID: 50341
+	// Token: 0x0400C86D RID: 51309
 	private bool IsActive;
 
-	// Token: 0x0400C4A6 RID: 50342
+	// Token: 0x0400C86E RID: 51310
 	protected EExecuteType ExecuteType;
 
-	// Token: 0x0400C4A7 RID: 50343
+	// Token: 0x0400C86F RID: 51311
 	private bool LastFormulaResult;
 
-	// Token: 0x0400C4A8 RID: 50344
+	// Token: 0x0400C870 RID: 51312
 	private double accumulateValue;
 
-	// Token: 0x0400C4AE RID: 50350
+	// Token: 0x0400C876 RID: 51318
 	public int IterationLock = -1;
 
-	// Token: 0x0400C4AF RID: 50351
+	// Token: 0x0400C877 RID: 51319
 	protected string DebugName;
 }

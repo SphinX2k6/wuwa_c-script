@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004010 RID: 16400
+	// Token: 0x02004451 RID: 17489
 	public struct IQuestRewardConfig : IFlatbufferObject
 	{
-		// Token: 0x1700733D RID: 29501
-		// (get) Token: 0x06017AB8 RID: 96952 RVA: 0x00369FEF File Offset: 0x003681EF
+		// Token: 0x1700793F RID: 31039
+		// (get) Token: 0x06019151 RID: 102737 RVA: 0x00393DE3 File Offset: 0x00391FE3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017AB9 RID: 96953 RVA: 0x00369FFC File Offset: 0x003681FC
+		// Token: 0x06019152 RID: 102738 RVA: 0x00393DF0 File Offset: 0x00391FF0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017ABA RID: 96954 RVA: 0x0036A004 File Offset: 0x00368204
+		// Token: 0x06019153 RID: 102739 RVA: 0x00393DF8 File Offset: 0x00391FF8
 		public static IQuestRewardConfig GetRootAsIQuestRewardConfig(ByteBuffer _bb)
 		{
 			return IQuestRewardConfig.GetRootAsIQuestRewardConfig(_bb, default(IQuestRewardConfig));
 		}
 
-		// Token: 0x06017ABB RID: 96955 RVA: 0x0036A020 File Offset: 0x00368220
+		// Token: 0x06019154 RID: 102740 RVA: 0x00393E14 File Offset: 0x00392014
 		public static IQuestRewardConfig GetRootAsIQuestRewardConfig(ByteBuffer _bb, IQuestRewardConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017ABC RID: 96956 RVA: 0x0036A03D File Offset: 0x0036823D
+		// Token: 0x06019155 RID: 102741 RVA: 0x00393E31 File Offset: 0x00392031
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017ABD RID: 96957 RVA: 0x0036A04C File Offset: 0x0036824C
+		// Token: 0x06019156 RID: 102742 RVA: 0x00393E40 File Offset: 0x00392040
 		public IQuestRewardConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700733E RID: 29502
-		// (get) Token: 0x06017ABE RID: 96958 RVA: 0x0036A05C File Offset: 0x0036825C
+		// Token: 0x17007940 RID: 31040
+		// (get) Token: 0x06019157 RID: 102743 RVA: 0x00393E50 File Offset: 0x00392050
 		public int RewardId
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700733F RID: 29503
-		// (get) Token: 0x06017ABF RID: 96959 RVA: 0x0036A098 File Offset: 0x00368298
+		// Token: 0x17007941 RID: 31041
+		// (get) Token: 0x06019158 RID: 102744 RVA: 0x00393E8C File Offset: 0x0039208C
 		public EItemGetUiType RewardGetUiType
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007340 RID: 29504
-		// (get) Token: 0x06017AC0 RID: 96960 RVA: 0x0036A0D4 File Offset: 0x003682D4
+		// Token: 0x17007942 RID: 31042
+		// (get) Token: 0x06019159 RID: 102745 RVA: 0x00393EC8 File Offset: 0x003920C8
 		public IItemGetUiConfigSpecialQuest? UiConfig
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007341 RID: 29505
-		// (get) Token: 0x06017AC1 RID: 96961 RVA: 0x0036A134 File Offset: 0x00368334
+		// Token: 0x17007943 RID: 31043
+		// (get) Token: 0x0601915A RID: 102746 RVA: 0x00393F28 File Offset: 0x00392128
 		public byte NullMask
 		{
 			get
@@ -108,7 +108,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017AC2 RID: 96962 RVA: 0x0036A171 File Offset: 0x00368371
+		// Token: 0x0601915B RID: 102747 RVA: 0x00393F65 File Offset: 0x00392165
 		public static Offset<IQuestRewardConfig> CreateIQuestRewardConfig(FlatBufferBuilder builder, int RewardId = 0, EItemGetUiType RewardGetUiType = EItemGetUiType.None, Offset<IItemGetUiConfigSpecialQuest> UiConfigOffset = default(Offset<IItemGetUiConfigSpecialQuest>), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -119,43 +119,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestRewardConfig.EndIQuestRewardConfig(builder);
 		}
 
-		// Token: 0x06017AC3 RID: 96963 RVA: 0x0036A19D File Offset: 0x0036839D
+		// Token: 0x0601915C RID: 102748 RVA: 0x00393F91 File Offset: 0x00392191
 		public static void StartIQuestRewardConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06017AC4 RID: 96964 RVA: 0x0036A1A6 File Offset: 0x003683A6
+		// Token: 0x0601915D RID: 102749 RVA: 0x00393F9A File Offset: 0x0039219A
 		public static void AddRewardId(FlatBufferBuilder builder, int rewardId)
 		{
 			builder.AddInt(0, rewardId, 0);
 		}
 
-		// Token: 0x06017AC5 RID: 96965 RVA: 0x0036A1B1 File Offset: 0x003683B1
+		// Token: 0x0601915E RID: 102750 RVA: 0x00393FA5 File Offset: 0x003921A5
 		public static void AddRewardGetUiType(FlatBufferBuilder builder, EItemGetUiType rewardGetUiType)
 		{
 			builder.AddByte(1, (byte)rewardGetUiType, 0);
 		}
 
-		// Token: 0x06017AC6 RID: 96966 RVA: 0x0036A1BC File Offset: 0x003683BC
+		// Token: 0x0601915F RID: 102751 RVA: 0x00393FB0 File Offset: 0x003921B0
 		public static void AddUiConfig(FlatBufferBuilder builder, Offset<IItemGetUiConfigSpecialQuest> uiConfigOffset)
 		{
 			builder.AddOffset(2, uiConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06017AC7 RID: 96967 RVA: 0x0036A1CC File Offset: 0x003683CC
+		// Token: 0x06019160 RID: 102752 RVA: 0x00393FC0 File Offset: 0x003921C0
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06017AC8 RID: 96968 RVA: 0x0036A1D7 File Offset: 0x003683D7
+		// Token: 0x06019161 RID: 102753 RVA: 0x00393FCB File Offset: 0x003921CB
 		public static Offset<IQuestRewardConfig> EndIQuestRewardConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestRewardConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06017AC9 RID: 96969 RVA: 0x0036A1E4 File Offset: 0x003683E4
+		// Token: 0x06019162 RID: 102754 RVA: 0x00393FD8 File Offset: 0x003921D8
 		public IQuestRewardConfigT UnPack()
 		{
 			IQuestRewardConfigT questRewardConfigT = new IQuestRewardConfigT();
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return questRewardConfigT;
 		}
 
-		// Token: 0x06017ACA RID: 96970 RVA: 0x0036A200 File Offset: 0x00368400
+		// Token: 0x06019163 RID: 102755 RVA: 0x00393FF4 File Offset: 0x003921F4
 		public void UnPackTo(IQuestRewardConfigT _o)
 		{
 			_o.RewardId = this.RewardId;
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06017ACB RID: 96971 RVA: 0x0036A260 File Offset: 0x00368460
+		// Token: 0x06019164 RID: 102756 RVA: 0x00394054 File Offset: 0x00392254
 		public static Offset<IQuestRewardConfig> Pack(FlatBufferBuilder builder, IQuestRewardConfigT _o)
 		{
 			if (_o == null)
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestRewardConfig.CreateIQuestRewardConfig(builder, _o.RewardId, _o.RewardGetUiType, uiConfigOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400BB2B RID: 47915
+		// Token: 0x0400C512 RID: 50450
 		private Table __p;
 	}
 }

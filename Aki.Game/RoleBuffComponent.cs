@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200323A RID: 12858
+// Token: 0x020027A9 RID: 10153
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleBuffComponent : CharacterBuffComponent
 {
-	// Token: 0x0601BBCE RID: 113614 RVA: 0x007A38D4 File Offset: 0x007A1AD4
+	// Token: 0x06019763 RID: 104291 RVA: 0x007CC160 File Offset: 0x007CA360
 	protected override bool OnStart()
 	{
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -21,7 +21,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return true;
 	}
 
-	// Token: 0x0601BBCF RID: 113615 RVA: 0x007A398C File Offset: 0x007A1B8C
+	// Token: 0x06019764 RID: 104292 RVA: 0x007CC218 File Offset: 0x007CA418
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.Remove(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -33,7 +33,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return true;
 	}
 
-	// Token: 0x0601BBD0 RID: 113616 RVA: 0x007A3A44 File Offset: 0x007A1C44
+	// Token: 0x06019765 RID: 104293 RVA: 0x007CC2D0 File Offset: 0x007CA4D0
 	[NullableContext(2)]
 	public PlayerBuffComponent GetFormationBuffComp()
 	{
@@ -50,7 +50,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return playerEntity.GetComponent<PlayerBuffComponent>();
 	}
 
-	// Token: 0x0601BBD1 RID: 113617 RVA: 0x007A3A99 File Offset: 0x007A1C99
+	// Token: 0x06019766 RID: 104294 RVA: 0x007CC325 File Offset: 0x007CA525
 	protected override bool OnInit()
 	{
 		base.OnInit();
@@ -58,7 +58,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return true;
 	}
 
-	// Token: 0x0601BBD2 RID: 113618 RVA: 0x007A3AAC File Offset: 0x007A1CAC
+	// Token: 0x06019767 RID: 104295 RVA: 0x007CC338 File Offset: 0x007CA538
 	[NullableContext(2)]
 	public override int AddBuffInner(long buffId, BuffDefinition config, long? instigatorId, int level, int? outerStackCount, ApplyGEType? applyType, long? preMessageId, long? messageId, float? duration, bool? isActive, int serverId, string reason, bool fromServer, bool isIterable, bool isServerOrder, int? handle, long? bulletMessageId = null, bool? bornBuff = null)
 	{
@@ -92,7 +92,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return formationBuffComp.AddBuffInner(buffId, config, instigatorId, level, outerStackCount, applyType, preMessageId, messageId, duration, isActive, serverId, reason, fromServer, isIterable, isServerOrder, handle, bulletMessageId, bornBuff);
 	}
 
-	// Token: 0x0601BBD3 RID: 113619 RVA: 0x007A3B6C File Offset: 0x007A1D6C
+	// Token: 0x06019768 RID: 104296 RVA: 0x007CC3F8 File Offset: 0x007CA5F8
 	public unsafe override int RemoveBuffLocal(long buffId, int stackCount, string reason, long? preMessageId = null, bool? isServerRequest = null, long? instigatorId = null)
 	{
 		BuffDefinition buffDefinition = BuffController.Instance.GetBuffDefinition(buffId, reason);
@@ -121,7 +121,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return formationBuffComp.RemoveBuffLocal(buffId, stackCount, reason, preMessageId, isServerRequest, instigatorId);
 	}
 
-	// Token: 0x0601BBD4 RID: 113620 RVA: 0x007A3C38 File Offset: 0x007A1E38
+	// Token: 0x06019769 RID: 104297 RVA: 0x007CC4C4 File Offset: 0x007CA6C4
 	[NullableContext(2)]
 	protected unsafe override void RemoveBuffOrder(long buffId, int stackCount, string reason, long? instigatorId = null)
 	{
@@ -141,7 +141,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		base.RemoveBuffOrder(buffId, stackCount, reason, instigatorId);
 	}
 
-	// Token: 0x0601BBD5 RID: 113621 RVA: 0x007A3CCC File Offset: 0x007A1ECC
+	// Token: 0x0601976A RID: 104298 RVA: 0x007CC558 File Offset: 0x007CA758
 	public unsafe override void RefreshBuffDuration(long[] buffIds, [Nullable(2)] string reason)
 	{
 		List<long> list = new List<long>();
@@ -183,7 +183,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		}
 	}
 
-	// Token: 0x0601BBD6 RID: 113622 RVA: 0x007A3DD2 File Offset: 0x007A1FD2
+	// Token: 0x0601976B RID: 104299 RVA: 0x007CC65E File Offset: 0x007CA85E
 	public override void RemoveBuffByServerId(int serverId, int stackCount, long preMessageId, string reason, long? instigatorId = null)
 	{
 		base.RemoveBuffByServerId(serverId, stackCount, preMessageId, reason, instigatorId);
@@ -195,7 +195,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		formationBuffComp.RemoveBuffByServerId(serverId, stackCount, preMessageId, reason, instigatorId);
 	}
 
-	// Token: 0x0601BBD7 RID: 113623 RVA: 0x007A3DF8 File Offset: 0x007A1FF8
+	// Token: 0x0601976C RID: 104300 RVA: 0x007CC684 File Offset: 0x007CA884
 	[NullableContext(2)]
 	public override void RemoveBuffByTagLocal(int tagId, string reason, long? instigatorId = null)
 	{
@@ -210,7 +210,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		base.RemoveBuffByTagLocal(tagId, reason, instigatorId);
 	}
 
-	// Token: 0x0601BBD8 RID: 113624 RVA: 0x007A3E20 File Offset: 0x007A2020
+	// Token: 0x0601976D RID: 104301 RVA: 0x007CC6AC File Offset: 0x007CA8AC
 	[NullableContext(2)]
 	public override int RemoveBuffInner(int handle, int removeStackCount, bool isPrematureRemoval, string reason, long? preMessageId = null, bool? isServerRequest = null, long? instigatorId = null)
 	{
@@ -218,7 +218,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return ((formationBuffComp != null) ? formationBuffComp.RemoveBuffInner(handle, removeStackCount, isPrematureRemoval, reason, preMessageId, isServerRequest, instigatorId) : 0) + base.RemoveBuffInner(handle, removeStackCount, isPrematureRemoval, reason, preMessageId, isServerRequest, instigatorId);
 	}
 
-	// Token: 0x0601BBD9 RID: 113625 RVA: 0x007A3E5C File Offset: 0x007A205C
+	// Token: 0x0601976E RID: 104302 RVA: 0x007CC6E8 File Offset: 0x007CA8E8
 	public override bool HasBuffAuthority()
 	{
 		CreatureDataComponent creatureDataComponent = this.CreatureDataComponent;
@@ -228,7 +228,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return num.GetValueOrDefault() == num2.GetValueOrDefault() & num != null == (num2 != null);
 	}
 
-	// Token: 0x0601BBDA RID: 113626 RVA: 0x007A3ECC File Offset: 0x007A20CC
+	// Token: 0x0601976F RID: 104303 RVA: 0x007CC758 File Offset: 0x007CA958
 	protected override void ShareApplyBuffInner(ActiveBuffInternal newBuff, int? outerStackCount, ApplyGEType applyType, long? preMessageId, float? duration, int serverId)
 	{
 		if (!this.HasBuffAuthority())
@@ -296,7 +296,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		base.ShareApplyBuffInner(newBuff, outerStackCount, applyType, newBuff.MessageId, duration, serverId);
 	}
 
-	// Token: 0x0601BBDB RID: 113627 RVA: 0x007A40E0 File Offset: 0x007A22E0
+	// Token: 0x06019770 RID: 104304 RVA: 0x007CC96C File Offset: 0x007CAB6C
 	public override bool CheckImmune(BuffDefinition config)
 	{
 		PlayerBuffComponent formationBuffComp = this.GetFormationBuffComp();
@@ -325,7 +325,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return base.CheckImmune(config);
 	}
 
-	// Token: 0x0601BBDC RID: 113628 RVA: 0x007A414E File Offset: 0x007A234E
+	// Token: 0x06019771 RID: 104305 RVA: 0x007CC9DA File Offset: 0x007CABDA
 	public override bool HasBuffRoutineExpirationLock(long buffId)
 	{
 		if (this.BuffRoutineExpirationLock.GetValueOrDefault(buffId, 0) <= 0)
@@ -336,7 +336,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return true;
 	}
 
-	// Token: 0x0601BBDD RID: 113629 RVA: 0x007A417D File Offset: 0x007A237D
+	// Token: 0x06019772 RID: 104306 RVA: 0x007CCA09 File Offset: 0x007CAC09
 	public override void TriggerEvents(EBuffTriggerType passiveEffectType, [Nullable(2)] BaseBuffComponent opponentBuffComp, Partial_RequirementPayload payload)
 	{
 		base.TriggerEvents(passiveEffectType, opponentBuffComp, payload);
@@ -348,7 +348,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		formationBuffComp.TriggerEvents(passiveEffectType, opponentBuffComp, payload);
 	}
 
-	// Token: 0x0601BBDE RID: 113630 RVA: 0x007A419B File Offset: 0x007A239B
+	// Token: 0x06019773 RID: 104307 RVA: 0x007CCA27 File Offset: 0x007CAC27
 	public override void AddPauseLock(string key, float timeScale = 0f)
 	{
 		base.AddPauseLock(key, timeScale);
@@ -360,7 +360,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		formationBuffComp.RefreshTimeScale();
 	}
 
-	// Token: 0x0601BBDF RID: 113631 RVA: 0x007A41B5 File Offset: 0x007A23B5
+	// Token: 0x06019774 RID: 104308 RVA: 0x007CCA41 File Offset: 0x007CAC41
 	public override void RemovePauseLock(string key)
 	{
 		base.RemovePauseLock(key);
@@ -372,14 +372,14 @@ public class RoleBuffComponent : CharacterBuffComponent
 		formationBuffComp.RefreshTimeScale();
 	}
 
-	// Token: 0x0601BBE0 RID: 113632 RVA: 0x007A41CE File Offset: 0x007A23CE
+	// Token: 0x06019775 RID: 104309 RVA: 0x007CCA5A File Offset: 0x007CAC5A
 	[NullableContext(2)]
 	protected override bool NeedBroadcastBuff(ActiveBuffInternal buff, bool fromServer = false)
 	{
 		return (buff == null || !NoBroadCastBuff.Values.Contains(buff.Id)) && base.NeedBroadcastBuff(buff, fromServer);
 	}
 
-	// Token: 0x0601BBE1 RID: 113633 RVA: 0x007A41F0 File Offset: 0x007A23F0
+	// Token: 0x06019776 RID: 104310 RVA: 0x007CCA7C File Offset: 0x007CAC7C
 	private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		if (newEntity.Entity != null && CurrentRoleIdHolder.currentRoleId != newEntity.Entity.Id && base.Entity.Id == newEntity.Entity.Id)
@@ -392,13 +392,13 @@ public class RoleBuffComponent : CharacterBuffComponent
 		}
 	}
 
-	// Token: 0x0601BBE2 RID: 113634 RVA: 0x007A4254 File Offset: 0x007A2454
+	// Token: 0x06019777 RID: 104311 RVA: 0x007CCAE0 File Offset: 0x007CACE0
 	private void ClearCurrentRoleId()
 	{
 		CurrentRoleIdHolder.currentRoleId = 0;
 	}
 
-	// Token: 0x0601BBE3 RID: 113635 RVA: 0x007A425C File Offset: 0x007A245C
+	// Token: 0x06019778 RID: 104312 RVA: 0x007CCAE8 File Offset: 0x007CACE8
 	public override float CalculateDurationExtraRate(long buffId, bool asInstigator)
 	{
 		float num = base.CalculateDurationExtraRate(buffId, asInstigator);
@@ -419,7 +419,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return num;
 	}
 
-	// Token: 0x0601BBE4 RID: 113636 RVA: 0x007A42E8 File Offset: 0x007A24E8
+	// Token: 0x06019779 RID: 104313 RVA: 0x007CCB74 File Offset: 0x007CAD74
 	public override float CalculatePeriodExtraRate(long buffId, bool asInstigator)
 	{
 		float num = base.CalculatePeriodExtraRate(buffId, asInstigator);
@@ -440,7 +440,7 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return num;
 	}
 
-	// Token: 0x0601BBE5 RID: 113637 RVA: 0x007A4374 File Offset: 0x007A2574
+	// Token: 0x0601977A RID: 104314 RVA: 0x007CCC00 File Offset: 0x007CAE00
 	[NullableContext(2)]
 	public override BaseBuffComponent GetBuffApplyTarget(long buffId, long instigatorId)
 	{
@@ -452,13 +452,13 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return this;
 	}
 
-	// Token: 0x0601BBE6 RID: 113638 RVA: 0x007A439B File Offset: 0x007A259B
+	// Token: 0x0601977B RID: 104315 RVA: 0x007CCC27 File Offset: 0x007CAE27
 	protected override bool NeedAddBuffOrder(long buffId)
 	{
 		return true;
 	}
 
-	// Token: 0x0601BBE7 RID: 113639 RVA: 0x007A43A0 File Offset: 0x007A25A0
+	// Token: 0x0601977C RID: 104316 RVA: 0x007CCC2C File Offset: 0x007CAE2C
 	protected new bool SeamlessTravelBuffRetain(IActiveBuff buff)
 	{
 		if (NoBroadCastBuff.Values.Contains(buff.Id))
@@ -477,19 +477,19 @@ public class RoleBuffComponent : CharacterBuffComponent
 		return base.SeamlessTravelBuffRetain(buff);
 	}
 
-	// Token: 0x0601BBE8 RID: 113640 RVA: 0x007A43F4 File Offset: 0x007A25F4
+	// Token: 0x0601977D RID: 104317 RVA: 0x007CCC80 File Offset: 0x007CAE80
 	public void SetSeamlessTravelBuffPreMessageId(long preMessageId)
 	{
 		this.SeamlessTravelRetainBuffPreMessage = preMessageId;
 	}
 
-	// Token: 0x0601BBE9 RID: 113641 RVA: 0x007A43FD File Offset: 0x007A25FD
+	// Token: 0x0601977E RID: 104318 RVA: 0x007CCC89 File Offset: 0x007CAE89
 	protected override void OnSeamlessTravelingRefreshEnd()
 	{
 		this.SeamlessTravelRetainBuffPreMessage = 0L;
 	}
 
-	// Token: 0x0601BBEA RID: 113642 RVA: 0x007A4408 File Offset: 0x007A2608
+	// Token: 0x0601977F RID: 104319 RVA: 0x007CCC94 File Offset: 0x007CAE94
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -497,14 +497,81 @@ public class RoleBuffComponent : CharacterBuffComponent
 			return false;
 		}
 		RoleBuffComponent roleBuffComponent = (RoleBuffComponent)componentTemplate;
-		if (base.CanResetComponentProperty("SeamlessTravelRetainBuffPreMessage"))
-		{
-			this.SeamlessTravelRetainBuffPreMessage = roleBuffComponent.SeamlessTravelRetainBuffPreMessage;
-		}
+		this.SeamlessTravelRetainBuffPreMessage = roleBuffComponent.SeamlessTravelRetainBuffPreMessage;
 		return true;
 	}
 
-	// Token: 0x0400DA91 RID: 55953
+	// Token: 0x17002891 RID: 10385
+	// (get) Token: 0x06019780 RID: 104320 RVA: 0x007CCCC0 File Offset: 0x007CAEC0
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002892 RID: 10386
+	// (get) Token: 0x06019781 RID: 104321 RVA: 0x007CCCC3 File Offset: 0x007CAEC3
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002893 RID: 10387
+	// (get) Token: 0x06019782 RID: 104322 RVA: 0x007CCCC6 File Offset: 0x007CAEC6
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002894 RID: 10388
+	// (get) Token: 0x06019783 RID: 104323 RVA: 0x007CCCC9 File Offset: 0x007CAEC9
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002895 RID: 10389
+	// (get) Token: 0x06019784 RID: 104324 RVA: 0x007CCCCC File Offset: 0x007CAECC
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002896 RID: 10390
+	// (get) Token: 0x06019785 RID: 104325 RVA: 0x007CCCCF File Offset: 0x007CAECF
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002897 RID: 10391
+	// (get) Token: 0x06019786 RID: 104326 RVA: 0x007CCCD2 File Offset: 0x007CAED2
+	public override bool NeedChangeTimeDilationInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DF30 RID: 57136
 	[StaticVariableRuleIgnore]
 	protected static readonly int[] FrozenImmuneTags = new int[]
 	{
@@ -518,6 +585,6 @@ public class RoleBuffComponent : CharacterBuffComponent
 		GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.无敌"]
 	};
 
-	// Token: 0x0400DA92 RID: 55954
+	// Token: 0x0400DF31 RID: 57137
 	protected long SeamlessTravelRetainBuffPreMessage;
 }

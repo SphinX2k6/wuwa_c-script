@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002284 RID: 8836
+// Token: 0x02001768 RID: 5992
 public enum EStickerParts
 {
-	// Token: 0x0400833F RID: 33599
+	// Token: 0x0400847D RID: 33917
 	AleftPart = 1,
-	// Token: 0x04008340 RID: 33600
+	// Token: 0x0400847E RID: 33918
 	ArightPart,
-	// Token: 0x04008341 RID: 33601
+	// Token: 0x0400847F RID: 33919
 	BPart
 }

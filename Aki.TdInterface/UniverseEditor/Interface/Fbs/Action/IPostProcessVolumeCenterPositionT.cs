@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D84 RID: 28036
+	// Token: 0x020074FF RID: 29951
 	public class IPostProcessVolumeCenterPositionT
 	{
-		// Token: 0x1700D12D RID: 53549
-		// (get) Token: 0x0603186A RID: 202858 RVA: 0x006B69E7 File Offset: 0x006B4BE7
-		// (set) Token: 0x0603186B RID: 202859 RVA: 0x006B69EF File Offset: 0x006B4BEF
+		// Token: 0x1700DC75 RID: 56437
+		// (get) Token: 0x06034866 RID: 215142 RVA: 0x007120CF File Offset: 0x007102CF
+		// (set) Token: 0x06034867 RID: 215143 RVA: 0x007120D7 File Offset: 0x007102D7
 		public EMpcEffectParamType Type { get; set; }
 
-		// Token: 0x1700D12E RID: 53550
-		// (get) Token: 0x0603186C RID: 202860 RVA: 0x006B69F8 File Offset: 0x006B4BF8
-		// (set) Token: 0x0603186D RID: 202861 RVA: 0x006B6A00 File Offset: 0x006B4C00
+		// Token: 0x1700DC76 RID: 56438
+		// (get) Token: 0x06034868 RID: 215144 RVA: 0x007120E0 File Offset: 0x007102E0
+		// (set) Token: 0x06034869 RID: 215145 RVA: 0x007120E8 File Offset: 0x007102E8
 		public IVectorInfoT Position { get; set; }
 
-		// Token: 0x0603186E RID: 202862 RVA: 0x006B6A09 File Offset: 0x006B4C09
+		// Token: 0x0603486A RID: 215146 RVA: 0x007120F1 File Offset: 0x007102F1
 		public IPostProcessVolumeCenterPositionT()
 		{
 			this.Type = EMpcEffectParamType.PostProcessVolumeCenterPosition;

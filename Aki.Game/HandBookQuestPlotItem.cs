@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E16 RID: 7702
+// Token: 0x020012D8 RID: 4824
 [NullableContext(1)]
 [Nullable(0)]
 public class HandBookQuestPlotItem : UiPanelBase, IDynamicScrollItem<HandBookQuestDynamicData>
 {
-	// Token: 0x0600EA30 RID: 59952 RVA: 0x00376DA4 File Offset: 0x00374FA4
+	// Token: 0x0600BE4F RID: 48719 RVA: 0x00382AAC File Offset: 0x00380CAC
 	public UniTask Init(UUIItem actor)
 	{
 		HandBookQuestPlotItem.<Init>d__3 <Init>d__;
@@ -24,7 +24,7 @@ public class HandBookQuestPlotItem : UiPanelBase, IDynamicScrollItem<HandBookQue
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EA31 RID: 59953 RVA: 0x00376DF0 File Offset: 0x00374FF0
+	// Token: 0x0600BE50 RID: 48720 RVA: 0x00382AF8 File Offset: 0x00380CF8
 	private UniTask InitChildItem()
 	{
 		HandBookQuestPlotItem.<InitChildItem>d__4 <InitChildItem>d__;
@@ -35,7 +35,7 @@ public class HandBookQuestPlotItem : UiPanelBase, IDynamicScrollItem<HandBookQue
 		return <InitChildItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EA32 RID: 59954 RVA: 0x00376E33 File Offset: 0x00375033
+	// Token: 0x0600BE51 RID: 48721 RVA: 0x00382B3B File Offset: 0x00380D3B
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,57 +45,57 @@ public class HandBookQuestPlotItem : UiPanelBase, IDynamicScrollItem<HandBookQue
 		};
 	}
 
-	// Token: 0x0600EA33 RID: 59955 RVA: 0x00376E6C File Offset: 0x0037506C
+	// Token: 0x0600BE52 RID: 48722 RVA: 0x00382B74 File Offset: 0x00380D74
 	[return: Nullable(2)]
 	public AUIBaseActor GetUsingItem(HandBookQuestDynamicData data)
 	{
 		return base.GetItem(1).GetOwner() as AUIBaseActor;
 	}
 
-	// Token: 0x0600EA34 RID: 59956 RVA: 0x00376E7F File Offset: 0x0037507F
+	// Token: 0x0600BE53 RID: 48723 RVA: 0x00382B87 File Offset: 0x00380D87
 	public void Update(HandBookQuestDynamicData data, int index)
 	{
 		this.PlotNodeItem.SetUiActive(true);
 		this.PlotNodeItem.Update(data.TidText, this.IsSelectNode(data.TidText));
 	}
 
-	// Token: 0x0600EA35 RID: 59957 RVA: 0x00376EAA File Offset: 0x003750AA
+	// Token: 0x0600BE54 RID: 48724 RVA: 0x00382BB2 File Offset: 0x00380DB2
 	public UUIExtendToggle GetNodeToggle()
 	{
 		return this.PlotNodeItem.GetNodeToggle();
 	}
 
-	// Token: 0x0600EA36 RID: 59958 RVA: 0x00376EB7 File Offset: 0x003750B7
+	// Token: 0x0600BE55 RID: 48725 RVA: 0x00382BBF File Offset: 0x00380DBF
 	public void SetToggleState(EToggleState state)
 	{
 		this.PlotNodeItem.SetToggleState(state);
 	}
 
-	// Token: 0x0600EA37 RID: 59959 RVA: 0x00376EC5 File Offset: 0x003750C5
+	// Token: 0x0600BE56 RID: 48726 RVA: 0x00382BCD File Offset: 0x00380DCD
 	public void ClearItem()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x0600EA38 RID: 59960 RVA: 0x00376ECE File Offset: 0x003750CE
+	// Token: 0x0600BE57 RID: 48727 RVA: 0x00382BD6 File Offset: 0x00380DD6
 	public void BindClickCallback(TSelectedCallback onClickCallback)
 	{
 		this.OnCallBack = onClickCallback;
 	}
 
-	// Token: 0x0600EA39 RID: 59961 RVA: 0x00376ED7 File Offset: 0x003750D7
+	// Token: 0x0600BE58 RID: 48728 RVA: 0x00382BDF File Offset: 0x00380DDF
 	private bool IsSelectNode(string tidText)
 	{
 		return this.IsSelectFunction != null && this.IsSelectFunction(tidText);
 	}
 
-	// Token: 0x0600EA3A RID: 59962 RVA: 0x00376EEF File Offset: 0x003750EF
+	// Token: 0x0600BE59 RID: 48729 RVA: 0x00382BF7 File Offset: 0x00380DF7
 	public void BindIsSelectFunction(TSelectFunction isSelectFunction)
 	{
 		this.IsSelectFunction = isSelectFunction;
 	}
 
-	// Token: 0x0600EA3B RID: 59963 RVA: 0x00376EF8 File Offset: 0x003750F8
+	// Token: 0x0600BE5A RID: 48730 RVA: 0x00382C00 File Offset: 0x00380E00
 	[NullableContext(2)]
 	public string GetTidText()
 	{
@@ -107,7 +107,7 @@ public class HandBookQuestPlotItem : UiPanelBase, IDynamicScrollItem<HandBookQue
 		return plotNodeItem.GetTidText();
 	}
 
-	// Token: 0x0600EA3C RID: 59964 RVA: 0x00376F0B File Offset: 0x0037510B
+	// Token: 0x0600BE5B RID: 48731 RVA: 0x00382C13 File Offset: 0x00380E13
 	[NullableContext(2)]
 	public UUIExtendToggle GetToggleItem()
 	{
@@ -119,15 +119,15 @@ public class HandBookQuestPlotItem : UiPanelBase, IDynamicScrollItem<HandBookQue
 		return plotNodeItem.GetNodeToggle();
 	}
 
-	// Token: 0x04006CAB RID: 27819
+	// Token: 0x04006D8C RID: 28044
 	[Nullable(2)]
 	public PlotNodeItem PlotNodeItem;
 
-	// Token: 0x04006CAC RID: 27820
+	// Token: 0x04006D8D RID: 28045
 	[Nullable(2)]
 	private TSelectedCallback OnCallBack;
 
-	// Token: 0x04006CAD RID: 27821
+	// Token: 0x04006D8E RID: 28046
 	[Nullable(2)]
 	private TSelectFunction IsSelectFunction;
 }

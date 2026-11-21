@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D52 RID: 19794
+	// Token: 0x02003D1B RID: 15643
 	public class RoleDevelopSelectTargetHintItem : UiPanelBase, IGridProxy<RoleDevelopSelectTargetHintItemData>
 	{
-		// Token: 0x0603325D RID: 209501 RVA: 0x00BEDCF0 File Offset: 0x00BEBEF0
+		// Token: 0x060280C7 RID: 164039 RVA: 0x00B372F8 File Offset: 0x00B354F8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603325E RID: 209502 RVA: 0x00BEDD5C File Offset: 0x00BEBF5C
+		// Token: 0x060280C8 RID: 164040 RVA: 0x00B37364 File Offset: 0x00B35564
 		[NullableContext(1)]
 		public void Refresh(RoleDevelopSelectTargetHintItemData data, bool isSelected, int gridIndex)
 		{
@@ -35,9 +35,9 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			LguiUtil.Instance.SetLocalTextNew(text, data.DescKey, Array.Empty<object>());
 		}
 
-		// Token: 0x17007E62 RID: 32354
-		// (get) Token: 0x0603325F RID: 209503 RVA: 0x00BEDDA7 File Offset: 0x00BEBFA7
-		// (set) Token: 0x06033260 RID: 209504 RVA: 0x00BEDDAF File Offset: 0x00BEBFAF
+		// Token: 0x17005212 RID: 21010
+		// (get) Token: 0x060280C9 RID: 164041 RVA: 0x00B373AF File Offset: 0x00B355AF
+		// (set) Token: 0x060280CA RID: 164042 RVA: 0x00B373B7 File Offset: 0x00B355B7
 		[Nullable(new byte[]
 		{
 			2,
@@ -59,46 +59,45 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			1
 		})] set; }
 
-		// Token: 0x17007E63 RID: 32355
-		// (get) Token: 0x06033261 RID: 209505 RVA: 0x00BEDDB8 File Offset: 0x00BEBFB8
-		// (set) Token: 0x06033262 RID: 209506 RVA: 0x00BEDDC0 File Offset: 0x00BEBFC0
+		// Token: 0x17005213 RID: 21011
+		// (get) Token: 0x060280CB RID: 164043 RVA: 0x00B373C0 File Offset: 0x00B355C0
+		// (set) Token: 0x060280CC RID: 164044 RVA: 0x00B373C8 File Offset: 0x00B355C8
 		public int GridIndex { get; set; }
 
-		// Token: 0x17007E64 RID: 32356
-		// (get) Token: 0x06033263 RID: 209507 RVA: 0x00BEDDC9 File Offset: 0x00BEBFC9
-		// (set) Token: 0x06033264 RID: 209508 RVA: 0x00BEDDD1 File Offset: 0x00BEBFD1
+		// Token: 0x17005214 RID: 21012
+		// (get) Token: 0x060280CD RID: 164045 RVA: 0x00B373D1 File Offset: 0x00B355D1
+		// (set) Token: 0x060280CE RID: 164046 RVA: 0x00B373D9 File Offset: 0x00B355D9
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x06033265 RID: 209509 RVA: 0x00BEDDDA File Offset: 0x00BEBFDA
+		// Token: 0x060280CF RID: 164047 RVA: 0x00B373E2 File Offset: 0x00B355E2
 		public void Clear()
 		{
 		}
 
-		// Token: 0x06033266 RID: 209510 RVA: 0x00BEDDDC File Offset: 0x00BEBFDC
+		// Token: 0x060280D0 RID: 164048 RVA: 0x00B373E4 File Offset: 0x00B355E4
 		public void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x06033267 RID: 209511 RVA: 0x00BEDDDE File Offset: 0x00BEBFDE
+		// Token: 0x060280D1 RID: 164049 RVA: 0x00B373E6 File Offset: 0x00B355E6
 		public void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x06033268 RID: 209512 RVA: 0x00BEDDE0 File Offset: 0x00BEBFE0
+		// Token: 0x060280D2 RID: 164050 RVA: 0x00B373E8 File Offset: 0x00B355E8
 		[NullableContext(1)]
 		public object GetKey(RoleDevelopSelectTargetHintItemData data, int gridIndex)
 		{
 			return gridIndex;
 		}
 
-		// Token: 0x0200AEC7 RID: 44743
-		public static class EComponentType
+		// Token: 0x020098FB RID: 39163
+		private enum EComponentType
 		{
-			// Token: 0x04035161 RID: 217441
-			public const int IconTexture = 0;
-
-			// Token: 0x04035162 RID: 217442
-			public const int DescText = 1;
+			// Token: 0x0402FB8F RID: 195471
+			IconTexture,
+			// Token: 0x0402FB90 RID: 195472
+			DescText
 		}
 	}
 }

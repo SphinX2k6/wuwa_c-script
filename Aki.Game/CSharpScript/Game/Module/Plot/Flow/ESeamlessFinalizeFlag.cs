@@ -2,21 +2,21 @@
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x02005097 RID: 20631
+	// Token: 0x02004067 RID: 16487
 	[Flags]
 	public enum ESeamlessFinalizeFlag
 	{
-		// Token: 0x0401C28B RID: 115339
+		// Token: 0x04016CBA RID: 93370
 		None = 0,
-		// Token: 0x0401C28C RID: 115340
+		// Token: 0x04016CBB RID: 93371
 		ActorAllStop = 1,
-		// Token: 0x0401C28D RID: 115341
+		// Token: 0x04016CBC RID: 93372
 		ExitMovieMode = 2,
-		// Token: 0x0401C28E RID: 115342
+		// Token: 0x04016CBD RID: 93373
 		ExitSequenceCamera = 4,
-		// Token: 0x0401C28F RID: 115343
+		// Token: 0x04016CBE RID: 93374
 		UiRemoveAspectView = 8,
-		// Token: 0x0401C290 RID: 115344
+		// Token: 0x04016CBF RID: 93375
 		TemplateResetCamera = 16
 	}
 }

@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001163 RID: 4451
+	// Token: 0x02001293 RID: 4755
 	public class ISurvivorsRougeSystemConfig_SetValue
 	{
-		// Token: 0x04003C9E RID: 15518
+		// Token: 0x04003FF1 RID: 16369
 		public EEnableSystemType Type;
 
-		// Token: 0x04003C9F RID: 15519
-		[Nullable(1)]
+		// Token: 0x04003FF2 RID: 16370
 		public List<ISurvivorsRougeSystemVar> Vars;
 	}
 }

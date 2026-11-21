@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008F4 RID: 2292
+	// Token: 0x0200093F RID: 2367
 	public class ConfigRoverRogueRoleTypeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060035CB RID: 13771 RVA: 0x001895AF File Offset: 0x001877AF
+		// Token: 0x0600378D RID: 14221 RVA: 0x001967CF File Offset: 0x001949CF
 		static ConfigRoverRogueRoleTypeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoverRogueRoleTypeById.CreateStaticDefaultValue), new Action(ConfigRoverRogueRoleTypeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060035CC RID: 13772 RVA: 0x001895D0 File Offset: 0x001877D0
+		// Token: 0x0600378E RID: 14222 RVA: 0x001967F0 File Offset: 0x001949F0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoverRogueRoleTypeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060035CD RID: 13773 RVA: 0x0018964F File Offset: 0x0018784F
+		// Token: 0x0600378F RID: 14223 RVA: 0x0019686F File Offset: 0x00194A6F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoverRogueRoleTypeById.LogPair = null;
 			ConfigRoverRogueRoleTypeById.HandleId = 0;
 		}
 
-		// Token: 0x060035CE RID: 13774 RVA: 0x0018965D File Offset: 0x0018785D
+		// Token: 0x06003790 RID: 14224 RVA: 0x0019687D File Offset: 0x00194A7D
 		public static void Init()
 		{
 			ConfigRoverRogueRoleTypeById.HandleId = ConfigCommon.InitDataStatement(ConfigRoverRogueRoleTypeById.HandleId, "db_roverlike.db", "select BinData from `RoverRogueRoleType` where Id=?");
 		}
 
-		// Token: 0x060035CF RID: 13775 RVA: 0x00189678 File Offset: 0x00187878
+		// Token: 0x06003791 RID: 14225 RVA: 0x00196898 File Offset: 0x00194A98
 		public static RoverRogueRoleType? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoverRogueRoleTypeById.HandleId, ConfigRoverRogueRoleTypeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoverRogueRoleType?(rootAsRoverRogueRoleType);
 		}
 
-		// Token: 0x04003E92 RID: 16018
+		// Token: 0x0400409F RID: 16543
 		private const string DB = "db_roverlike.db";
 
-		// Token: 0x04003E93 RID: 16019
+		// Token: 0x040040A0 RID: 16544
 		private const string FILE = "f.俯视肉鸽_局外.xlsx";
 
-		// Token: 0x04003E94 RID: 16020
+		// Token: 0x040040A1 RID: 16545
 		private const string TABLE = "RoverRogueRoleType";
 
-		// Token: 0x04003E95 RID: 16021
+		// Token: 0x040040A2 RID: 16546
 		private const string COMMAND = "select BinData from `RoverRogueRoleType` where Id=?";
 
-		// Token: 0x04003E96 RID: 16022
+		// Token: 0x040040A3 RID: 16547
 		private const string KEY_PREFIX = "RoverRogueRoleTypeById";
 
-		// Token: 0x04003E97 RID: 16023
+		// Token: 0x040040A4 RID: 16548
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003E98 RID: 16024
+		// Token: 0x040040A5 RID: 16549
 		private static int HandleId;
 	}
 }

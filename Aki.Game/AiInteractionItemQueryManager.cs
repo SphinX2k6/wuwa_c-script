@@ -7,25 +7,25 @@ using CSharpScript.Game.NewWorld.SceneItem;
 using CSharpScript.Game.NewWorld.SceneItem.Util;
 using UnrealEngine;
 
-// Token: 0x020032A6 RID: 12966
+// Token: 0x02002817 RID: 10263
 [NullableContext(1)]
 [Nullable(0)]
 public class AiInteractionItemQueryManager : IStaticVariableResetter
 {
-	// Token: 0x0601C0EF RID: 114927 RVA: 0x007CD287 File Offset: 0x007CB487
+	// Token: 0x06019D26 RID: 105766 RVA: 0x007F44AD File Offset: 0x007F26AD
 	static AiInteractionItemQueryManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AiInteractionItemQueryManager.CreateStaticDefaultValue), new Action(AiInteractionItemQueryManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601C0F0 RID: 114928 RVA: 0x007CD2A6 File Offset: 0x007CB4A6
+	// Token: 0x06019D27 RID: 105767 RVA: 0x007F44CC File Offset: 0x007F26CC
 	private void Init()
 	{
 		this.ItemsSearch = new HashSet<Entity>();
 		this.TempVector = Vector.Create(0.0, 0.0, 0.0);
 	}
 
-	// Token: 0x0601C0F1 RID: 114929 RVA: 0x007CD2D9 File Offset: 0x007CB4D9
+	// Token: 0x06019D28 RID: 105768 RVA: 0x007F44FF File Offset: 0x007F26FF
 	public static AiInteractionItemQueryManager Get()
 	{
 		if (AiInteractionItemQueryManager.Manager != null)
@@ -37,7 +37,7 @@ public class AiInteractionItemQueryManager : IStaticVariableResetter
 		return AiInteractionItemQueryManager.Manager;
 	}
 
-	// Token: 0x0601C0F2 RID: 114930 RVA: 0x007CD301 File Offset: 0x007CB501
+	// Token: 0x06019D29 RID: 105769 RVA: 0x007F4527 File Offset: 0x007F2727
 	public bool RegisterItem(Entity actor)
 	{
 		if (actor == null || this.ItemsSearch.Contains(actor))
@@ -48,7 +48,7 @@ public class AiInteractionItemQueryManager : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601C0F3 RID: 114931 RVA: 0x007CD324 File Offset: 0x007CB524
+	// Token: 0x06019D2A RID: 105770 RVA: 0x007F454A File Offset: 0x007F274A
 	public bool UnRegisterItem(Entity actor)
 	{
 		if (this.ItemsSearch.Contains(actor))
@@ -59,7 +59,7 @@ public class AiInteractionItemQueryManager : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601C0F4 RID: 114932 RVA: 0x007CD344 File Offset: 0x007CB544
+	// Token: 0x06019D2B RID: 105771 RVA: 0x007F456A File Offset: 0x007F276A
 	[NullableContext(2)]
 	public ItemQueryResult GetCloseActor(FVectorDouble origin, EItemQuerySearchType type = EItemQuerySearchType.Line, AiInteractionSearchFilter filter = null, AAIController controller = null)
 	{
@@ -78,7 +78,7 @@ public class AiInteractionItemQueryManager : IStaticVariableResetter
 		return this.GetCloseActorByRangeWithPath(origin, controller, filter);
 	}
 
-	// Token: 0x0601C0F5 RID: 114933 RVA: 0x007CD374 File Offset: 0x007CB574
+	// Token: 0x06019D2C RID: 105772 RVA: 0x007F459C File Offset: 0x007F279C
 	[NullableContext(2)]
 	[return: Nullable(1)]
 	public List<ItemQueryResult> GetCloseActorsByRange(FVectorDouble origin, double range, EItemQuerySearchType type = EItemQuerySearchType.Line, AiInteractionSearchFilter filter = null, TsAiController controller = null)
@@ -98,7 +98,7 @@ public class AiInteractionItemQueryManager : IStaticVariableResetter
 		return this.GetCloseActorsByRangeWithPath(origin, range, controller, filter);
 	}
 
-	// Token: 0x0601C0F6 RID: 114934 RVA: 0x007CD3C8 File Offset: 0x007CB5C8
+	// Token: 0x06019D2D RID: 105773 RVA: 0x007F45F0 File Offset: 0x007F27F0
 	private List<ItemQueryResult> GetCloseActorsByRangeWithLine(FVectorDouble origin, double range, [Nullable(2)] AiInteractionSearchFilter filter)
 	{
 		List<ItemQueryResult> list = new List<ItemQueryResult>();
@@ -121,7 +121,7 @@ public class AiInteractionItemQueryManager : IStaticVariableResetter
 		return list;
 	}
 
-	// Token: 0x0601C0F7 RID: 114935 RVA: 0x007CD460 File Offset: 0x007CB660
+	// Token: 0x06019D2E RID: 105774 RVA: 0x007F4688 File Offset: 0x007F2888
 	private List<ItemQueryResult> GetCloseActorsByRangeWithPath(FVectorDouble origin, double range, TsAiController controller, [Nullable(2)] AiInteractionSearchFilter filter)
 	{
 		List<ItemQueryResult> list = new List<ItemQueryResult>();
@@ -147,7 +147,7 @@ public class AiInteractionItemQueryManager : IStaticVariableResetter
 		return list;
 	}
 
-	// Token: 0x0601C0F8 RID: 114936 RVA: 0x007CD500 File Offset: 0x007CB700
+	// Token: 0x06019D2F RID: 105775 RVA: 0x007F4728 File Offset: 0x007F2928
 	private ItemQueryResult GetCloseActorByRangeWithLine(FVectorDouble origin, [Nullable(2)] AiInteractionSearchFilter filter)
 	{
 		ItemQueryResult itemQueryResult = new ItemQueryResult();
@@ -169,7 +169,7 @@ public class AiInteractionItemQueryManager : IStaticVariableResetter
 		return itemQueryResult;
 	}
 
-	// Token: 0x0601C0F9 RID: 114937 RVA: 0x007CD598 File Offset: 0x007CB798
+	// Token: 0x06019D30 RID: 105776 RVA: 0x007F47C0 File Offset: 0x007F29C0
 	private ItemQueryResult GetCloseActorByRangeWithPath(FVectorDouble origin, AAIController controller, [Nullable(2)] AiInteractionSearchFilter filter)
 	{
 		ItemQueryResult itemQueryResult = new ItemQueryResult();
@@ -193,7 +193,7 @@ public class AiInteractionItemQueryManager : IStaticVariableResetter
 		return itemQueryResult;
 	}
 
-	// Token: 0x0601C0FA RID: 114938 RVA: 0x007CD638 File Offset: 0x007CB838
+	// Token: 0x06019D31 RID: 105777 RVA: 0x007F4860 File Offset: 0x007F2A60
 	private double GetDistanceSquareFromLine(FVectorDouble origin, Entity item)
 	{
 		Vector tempVector = this.TempVector;
@@ -203,7 +203,7 @@ public class AiInteractionItemQueryManager : IStaticVariableResetter
 		return tempVector.SizeSquared();
 	}
 
-	// Token: 0x0601C0FB RID: 114939 RVA: 0x007CD67C File Offset: 0x007CB87C
+	// Token: 0x06019D32 RID: 105778 RVA: 0x007F48A4 File Offset: 0x007F2AA4
 	[return: Nullable(0)]
 	private ValueTuple<double, bool> GetDistanceSquareFromPath(FVectorDouble origin, Entity item, AAIController controller)
 	{
@@ -216,7 +216,7 @@ public class AiInteractionItemQueryManager : IStaticVariableResetter
 		return new ValueTuple<double, bool>(-1.0, false);
 	}
 
-	// Token: 0x0601C0FC RID: 114940 RVA: 0x007CD6D8 File Offset: 0x007CB8D8
+	// Token: 0x06019D33 RID: 105779 RVA: 0x007F4900 File Offset: 0x007F2B00
 	private bool FilterItem(Entity item, AiInteractionSearchFilter filter)
 	{
 		SceneItemAiInteractionComponent component = item.GetComponent<SceneItemAiInteractionComponent>();
@@ -266,23 +266,23 @@ public class AiInteractionItemQueryManager : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601C0FD RID: 114941 RVA: 0x007CD7B4 File Offset: 0x007CB9B4
+	// Token: 0x06019D34 RID: 105780 RVA: 0x007F49DC File Offset: 0x007F2BDC
 	public static void CreateStaticDefaultValue()
 	{
 		AiInteractionItemQueryManager.Manager = null;
 	}
 
-	// Token: 0x0601C0FE RID: 114942 RVA: 0x007CD7BC File Offset: 0x007CB9BC
+	// Token: 0x06019D35 RID: 105781 RVA: 0x007F49E4 File Offset: 0x007F2BE4
 	public static void ResetStaticDefaultValue()
 	{
 		AiInteractionItemQueryManager.Manager = null;
 	}
 
-	// Token: 0x0400DDCB RID: 56779
+	// Token: 0x0400E272 RID: 57970
 	[Nullable(2)]
 	private static AiInteractionItemQueryManager Manager;
 
-	// Token: 0x0400DDCC RID: 56780
+	// Token: 0x0400E273 RID: 57971
 	[Nullable(new byte[]
 	{
 		2,
@@ -290,7 +290,7 @@ public class AiInteractionItemQueryManager : IStaticVariableResetter
 	})]
 	private HashSet<Entity> ItemsSearch;
 
-	// Token: 0x0400DDCD RID: 56781
+	// Token: 0x0400E274 RID: 57972
 	[Nullable(2)]
 	private Vector TempVector;
 }

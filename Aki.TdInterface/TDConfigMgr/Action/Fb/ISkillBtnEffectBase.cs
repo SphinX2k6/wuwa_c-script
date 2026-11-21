@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AB1 RID: 10929
+	// Token: 0x02002DA5 RID: 11685
 	public class ISkillBtnEffectBase
 	{
-		// Token: 0x0600EFEB RID: 61419 RVA: 0x0022DC48 File Offset: 0x0022BE48
-		[NullableContext(1)]
+		// Token: 0x0600FEA1 RID: 65185 RVA: 0x0024B954 File Offset: 0x00249B54
 		public static ISkillBtnEffectBase Create(ISkillBtnEffectBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C4B RID: 19531
-		// (get) Token: 0x0600EFEC RID: 61420 RVA: 0x0022DC67 File Offset: 0x0022BE67
+		// Token: 0x17005005 RID: 20485
+		// (get) Token: 0x0600FEA2 RID: 65186 RVA: 0x0024B973 File Offset: 0x00249B73
 		public virtual ESkillBtnEffectType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083FD RID: 33789
+		// Token: 0x04008B01 RID: 35585
 		private ISkillBtnEffectBase Instance;
 	}
 }

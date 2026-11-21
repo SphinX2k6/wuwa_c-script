@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017A6 RID: 6054
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001927 RID: 6439
 	public class IActorVisibilityEffectType
 	{
-		// Token: 0x06008021 RID: 32801 RVA: 0x00131E54 File Offset: 0x00130054
+		// Token: 0x06008711 RID: 34577 RVA: 0x001410B4 File Offset: 0x0013F2B4
 		private IActorVisibilityEffectType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008022 RID: 32802 RVA: 0x00131E8C File Offset: 0x0013008C
+		// Token: 0x06008712 RID: 34578 RVA: 0x001410EC File Offset: 0x0013F2EC
 		public static IActorVisibilityEffectType Create([Nullable(2)] IActorVisibilityEffectType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008023 RID: 32803 RVA: 0x00131E9F File Offset: 0x0013009F
+		// Token: 0x06008713 RID: 34579 RVA: 0x001410FF File Offset: 0x0013F2FF
 		public static IActorVisibilityEffectType CreateFromSetValue([Nullable(2)] IActorVisibilityEffectType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008024 RID: 32804 RVA: 0x00131EB2 File Offset: 0x001300B2
+		// Token: 0x06008714 RID: 34580 RVA: 0x00141112 File Offset: 0x0013F312
 		public IActorVisibilityEffectType_SetValue ToSetValue()
 		{
 			return new IActorVisibilityEffectType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029EC RID: 10732
-		// (get) Token: 0x06008025 RID: 32805 RVA: 0x00131EC5 File Offset: 0x001300C5
-		// (set) Token: 0x06008026 RID: 32806 RVA: 0x00131EF0 File Offset: 0x001300F0
+		// Token: 0x17002BDA RID: 11226
+		// (get) Token: 0x06008715 RID: 34581 RVA: 0x00141125 File Offset: 0x0013F325
+		// (set) Token: 0x06008716 RID: 34582 RVA: 0x00141150 File Offset: 0x0013F350
 		public virtual EActorVisibilityEffectType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005155 RID: 20821
+		// Token: 0x0400558B RID: 21899
 		[Nullable(2)]
 		protected IActorVisibilityEffectType FbInstance;
 
-		// Token: 0x04005156 RID: 20822
+		// Token: 0x0400558C RID: 21900
 		[Nullable(2)]
 		protected IActorVisibilityEffectType_SetValue PocoInterface;
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006391 RID: 25489
+	// Token: 0x02006A02 RID: 27138
 	public struct IClientDisableModulePlayerOperation : IFlatbufferObject
 	{
-		// Token: 0x1700BE09 RID: 48649
-		// (get) Token: 0x0602C170 RID: 180592 RVA: 0x0060E274 File Offset: 0x0060C474
+		// Token: 0x1700C78D RID: 51085
+		// (get) Token: 0x0602E8D2 RID: 190674 RVA: 0x006592AC File Offset: 0x006574AC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C171 RID: 180593 RVA: 0x0060E281 File Offset: 0x0060C481
+		// Token: 0x0602E8D3 RID: 190675 RVA: 0x006592B9 File Offset: 0x006574B9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C172 RID: 180594 RVA: 0x0060E288 File Offset: 0x0060C488
+		// Token: 0x0602E8D4 RID: 190676 RVA: 0x006592C0 File Offset: 0x006574C0
 		public static IClientDisableModulePlayerOperation GetRootAsIClientDisableModulePlayerOperation(ByteBuffer _bb)
 		{
 			return IClientDisableModulePlayerOperation.GetRootAsIClientDisableModulePlayerOperation(_bb, default(IClientDisableModulePlayerOperation));
 		}
 
-		// Token: 0x0602C173 RID: 180595 RVA: 0x0060E2A4 File Offset: 0x0060C4A4
+		// Token: 0x0602E8D5 RID: 190677 RVA: 0x006592DC File Offset: 0x006574DC
 		public static IClientDisableModulePlayerOperation GetRootAsIClientDisableModulePlayerOperation(ByteBuffer _bb, IClientDisableModulePlayerOperation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C174 RID: 180596 RVA: 0x0060E2C1 File Offset: 0x0060C4C1
+		// Token: 0x0602E8D6 RID: 190678 RVA: 0x006592F9 File Offset: 0x006574F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C175 RID: 180597 RVA: 0x0060E2D0 File Offset: 0x0060C4D0
+		// Token: 0x0602E8D7 RID: 190679 RVA: 0x00659308 File Offset: 0x00657508
 		public IClientDisableModulePlayerOperation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BE0A RID: 48650
-		// (get) Token: 0x0602C176 RID: 180598 RVA: 0x0060E2E0 File Offset: 0x0060C4E0
+		// Token: 0x1700C78E RID: 51086
+		// (get) Token: 0x0602E8D8 RID: 190680 RVA: 0x00659318 File Offset: 0x00657518
 		public EPlayerOperationType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BE0B RID: 48651
-		// (get) Token: 0x0602C177 RID: 180599 RVA: 0x0060E31C File Offset: 0x0060C51C
+		// Token: 0x1700C78F RID: 51087
+		// (get) Token: 0x0602E8D9 RID: 190681 RVA: 0x00659354 File Offset: 0x00657554
 		public TMoveOperation MoveOptionType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C178 RID: 180600 RVA: 0x0060E358 File Offset: 0x0060C558
+		// Token: 0x0602E8DA RID: 190682 RVA: 0x00659390 File Offset: 0x00657590
 		public TTable? MoveOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,20 +88,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602C179 RID: 180601 RVA: 0x0060E39C File Offset: 0x0060C59C
+		// Token: 0x0602E8DB RID: 190683 RVA: 0x006593D4 File Offset: 0x006575D4
 		public IDisableMoveOperation MoveOptionAsIDisableMoveOperation()
 		{
 			return this.MoveOption<IDisableMoveOperation>().Value;
 		}
 
-		// Token: 0x0602C17A RID: 180602 RVA: 0x0060E3B8 File Offset: 0x0060C5B8
+		// Token: 0x0602E8DC RID: 190684 RVA: 0x006593F0 File Offset: 0x006575F0
 		public IEnableMoveOperation MoveOptionAsIEnableMoveOperation()
 		{
 			return this.MoveOption<IEnableMoveOperation>().Value;
 		}
 
-		// Token: 0x1700BE0C RID: 48652
-		// (get) Token: 0x0602C17B RID: 180603 RVA: 0x0060E3D4 File Offset: 0x0060C5D4
+		// Token: 0x1700C790 RID: 51088
+		// (get) Token: 0x0602E8DD RID: 190685 RVA: 0x0065940C File Offset: 0x0065760C
 		public TSkillOperation SkillOptionType
 		{
 			get
@@ -115,7 +115,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C17C RID: 180604 RVA: 0x0060E414 File Offset: 0x0060C614
+		// Token: 0x0602E8DE RID: 190686 RVA: 0x0065944C File Offset: 0x0065764C
 		public TTable? SkillOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -126,26 +126,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602C17D RID: 180605 RVA: 0x0060E45C File Offset: 0x0060C65C
+		// Token: 0x0602E8DF RID: 190687 RVA: 0x00659494 File Offset: 0x00657694
 		public IDisableSectionalSkillOperation SkillOptionAsIDisableSectionalSkillOperation()
 		{
 			return this.SkillOption<IDisableSectionalSkillOperation>().Value;
 		}
 
-		// Token: 0x0602C17E RID: 180606 RVA: 0x0060E478 File Offset: 0x0060C678
+		// Token: 0x0602E8E0 RID: 190688 RVA: 0x006594B0 File Offset: 0x006576B0
 		public IDisableSkillOperation SkillOptionAsIDisableSkillOperation()
 		{
 			return this.SkillOption<IDisableSkillOperation>().Value;
 		}
 
-		// Token: 0x0602C17F RID: 180607 RVA: 0x0060E494 File Offset: 0x0060C694
+		// Token: 0x0602E8E1 RID: 190689 RVA: 0x006594CC File Offset: 0x006576CC
 		public IEnableSkillOperation SkillOptionAsIEnableSkillOperation()
 		{
 			return this.SkillOption<IEnableSkillOperation>().Value;
 		}
 
-		// Token: 0x1700BE0D RID: 48653
-		// (get) Token: 0x0602C180 RID: 180608 RVA: 0x0060E4B0 File Offset: 0x0060C6B0
+		// Token: 0x1700C791 RID: 51089
+		// (get) Token: 0x0602E8E2 RID: 190690 RVA: 0x006594E8 File Offset: 0x006576E8
 		public TCameraOperation CameraOptionType
 		{
 			get
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C181 RID: 180609 RVA: 0x0060E4F0 File Offset: 0x0060C6F0
+		// Token: 0x0602E8E3 RID: 190691 RVA: 0x00659528 File Offset: 0x00657728
 		public TTable? CameraOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(16);
@@ -170,26 +170,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602C182 RID: 180610 RVA: 0x0060E538 File Offset: 0x0060C738
+		// Token: 0x0602E8E4 RID: 190692 RVA: 0x00659570 File Offset: 0x00657770
 		public IDisableCameraOperation CameraOptionAsIDisableCameraOperation()
 		{
 			return this.CameraOption<IDisableCameraOperation>().Value;
 		}
 
-		// Token: 0x0602C183 RID: 180611 RVA: 0x0060E554 File Offset: 0x0060C754
+		// Token: 0x0602E8E5 RID: 190693 RVA: 0x0065958C File Offset: 0x0065778C
 		public IEnableCameraOperation CameraOptionAsIEnableCameraOperation()
 		{
 			return this.CameraOption<IEnableCameraOperation>().Value;
 		}
 
-		// Token: 0x0602C184 RID: 180612 RVA: 0x0060E570 File Offset: 0x0060C770
+		// Token: 0x0602E8E6 RID: 190694 RVA: 0x006595A8 File Offset: 0x006577A8
 		public IEnableSectionalCameraOperation CameraOptionAsIEnableSectionalCameraOperation()
 		{
 			return this.CameraOption<IEnableSectionalCameraOperation>().Value;
 		}
 
-		// Token: 0x1700BE0E RID: 48654
-		// (get) Token: 0x0602C185 RID: 180613 RVA: 0x0060E58C File Offset: 0x0060C78C
+		// Token: 0x1700C792 RID: 51090
+		// (get) Token: 0x0602E8E7 RID: 190695 RVA: 0x006595C4 File Offset: 0x006577C4
 		public TUiOperation UiOptionType
 		{
 			get
@@ -203,7 +203,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C186 RID: 180614 RVA: 0x0060E5CC File Offset: 0x0060C7CC
+		// Token: 0x0602E8E8 RID: 190696 RVA: 0x00659604 File Offset: 0x00657804
 		public TTable? UiOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(20);
@@ -214,26 +214,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602C187 RID: 180615 RVA: 0x0060E614 File Offset: 0x0060C814
+		// Token: 0x0602E8E9 RID: 190697 RVA: 0x0065964C File Offset: 0x0065784C
 		public IDisableUiOperation UiOptionAsIDisableUiOperation()
 		{
 			return this.UiOption<IDisableUiOperation>().Value;
 		}
 
-		// Token: 0x0602C188 RID: 180616 RVA: 0x0060E630 File Offset: 0x0060C830
+		// Token: 0x0602E8EA RID: 190698 RVA: 0x00659668 File Offset: 0x00657868
 		public IEnableSectionalUi UiOptionAsIEnableSectionalUi()
 		{
 			return this.UiOption<IEnableSectionalUi>().Value;
 		}
 
-		// Token: 0x0602C189 RID: 180617 RVA: 0x0060E64C File Offset: 0x0060C84C
+		// Token: 0x0602E8EB RID: 190699 RVA: 0x00659684 File Offset: 0x00657884
 		public IEnableUiOperation UiOptionAsIEnableUiOperation()
 		{
 			return this.UiOption<IEnableUiOperation>().Value;
 		}
 
-		// Token: 0x1700BE0F RID: 48655
-		// (get) Token: 0x0602C18A RID: 180618 RVA: 0x0060E668 File Offset: 0x0060C868
+		// Token: 0x1700C793 RID: 51091
+		// (get) Token: 0x0602E8EC RID: 190700 RVA: 0x006596A0 File Offset: 0x006578A0
 		public TSceneInteractionOperation SceneInteractionOptionType
 		{
 			get
@@ -247,7 +247,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C18B RID: 180619 RVA: 0x0060E6A8 File Offset: 0x0060C8A8
+		// Token: 0x0602E8ED RID: 190701 RVA: 0x006596E0 File Offset: 0x006578E0
 		public TTable? SceneInteractionOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(24);
@@ -258,19 +258,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602C18C RID: 180620 RVA: 0x0060E6F0 File Offset: 0x0060C8F0
+		// Token: 0x0602E8EE RID: 190702 RVA: 0x00659728 File Offset: 0x00657928
 		public IDisableSceneInteractionOperation SceneInteractionOptionAsIDisableSceneInteractionOperation()
 		{
 			return this.SceneInteractionOption<IDisableSceneInteractionOperation>().Value;
 		}
 
-		// Token: 0x0602C18D RID: 180621 RVA: 0x0060E70C File Offset: 0x0060C90C
+		// Token: 0x0602E8EF RID: 190703 RVA: 0x00659744 File Offset: 0x00657944
 		public IEnableSceneInteractionOperation SceneInteractionOptionAsIEnableSceneInteractionOperation()
 		{
 			return this.SceneInteractionOption<IEnableSceneInteractionOperation>().Value;
 		}
 
-		// Token: 0x0602C18E RID: 180622 RVA: 0x0060E728 File Offset: 0x0060C928
+		// Token: 0x0602E8F0 RID: 190704 RVA: 0x00659760 File Offset: 0x00657960
 		public static Offset<IClientDisableModulePlayerOperation> CreateIClientDisableModulePlayerOperation(FlatBufferBuilder builder, EPlayerOperationType Type = EPlayerOperationType.EnableAll, TMoveOperation MoveOption_type = TMoveOperation.NONE, int MoveOptionOffset = 0, TSkillOperation SkillOption_type = TSkillOperation.NONE, int SkillOptionOffset = 0, TCameraOperation CameraOption_type = TCameraOperation.NONE, int CameraOptionOffset = 0, TUiOperation UiOption_type = TUiOperation.NONE, int UiOptionOffset = 0, TSceneInteractionOperation SceneInteractionOption_type = TSceneInteractionOperation.NONE, int SceneInteractionOptionOffset = 0)
 		{
 			builder.StartTable(11);
@@ -288,85 +288,85 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientDisableModulePlayerOperation.EndIClientDisableModulePlayerOperation(builder);
 		}
 
-		// Token: 0x0602C18F RID: 180623 RVA: 0x0060E798 File Offset: 0x0060C998
+		// Token: 0x0602E8F1 RID: 190705 RVA: 0x006597D0 File Offset: 0x006579D0
 		public static void StartIClientDisableModulePlayerOperation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(11);
 		}
 
-		// Token: 0x0602C190 RID: 180624 RVA: 0x0060E7A2 File Offset: 0x0060C9A2
+		// Token: 0x0602E8F2 RID: 190706 RVA: 0x006597DA File Offset: 0x006579DA
 		public static void AddType(FlatBufferBuilder builder, EPlayerOperationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602C191 RID: 180625 RVA: 0x0060E7AD File Offset: 0x0060C9AD
+		// Token: 0x0602E8F3 RID: 190707 RVA: 0x006597E5 File Offset: 0x006579E5
 		public static void AddMoveOptionType(FlatBufferBuilder builder, TMoveOperation moveOptionType)
 		{
 			builder.AddByte(1, (byte)moveOptionType, 0);
 		}
 
-		// Token: 0x0602C192 RID: 180626 RVA: 0x0060E7B8 File Offset: 0x0060C9B8
+		// Token: 0x0602E8F4 RID: 190708 RVA: 0x006597F0 File Offset: 0x006579F0
 		public static void AddMoveOption(FlatBufferBuilder builder, int moveOptionOffset)
 		{
 			builder.AddOffset(2, moveOptionOffset, 0);
 		}
 
-		// Token: 0x0602C193 RID: 180627 RVA: 0x0060E7C3 File Offset: 0x0060C9C3
+		// Token: 0x0602E8F5 RID: 190709 RVA: 0x006597FB File Offset: 0x006579FB
 		public static void AddSkillOptionType(FlatBufferBuilder builder, TSkillOperation skillOptionType)
 		{
 			builder.AddByte(3, (byte)skillOptionType, 0);
 		}
 
-		// Token: 0x0602C194 RID: 180628 RVA: 0x0060E7CE File Offset: 0x0060C9CE
+		// Token: 0x0602E8F6 RID: 190710 RVA: 0x00659806 File Offset: 0x00657A06
 		public static void AddSkillOption(FlatBufferBuilder builder, int skillOptionOffset)
 		{
 			builder.AddOffset(4, skillOptionOffset, 0);
 		}
 
-		// Token: 0x0602C195 RID: 180629 RVA: 0x0060E7D9 File Offset: 0x0060C9D9
+		// Token: 0x0602E8F7 RID: 190711 RVA: 0x00659811 File Offset: 0x00657A11
 		public static void AddCameraOptionType(FlatBufferBuilder builder, TCameraOperation cameraOptionType)
 		{
 			builder.AddByte(5, (byte)cameraOptionType, 0);
 		}
 
-		// Token: 0x0602C196 RID: 180630 RVA: 0x0060E7E4 File Offset: 0x0060C9E4
+		// Token: 0x0602E8F8 RID: 190712 RVA: 0x0065981C File Offset: 0x00657A1C
 		public static void AddCameraOption(FlatBufferBuilder builder, int cameraOptionOffset)
 		{
 			builder.AddOffset(6, cameraOptionOffset, 0);
 		}
 
-		// Token: 0x0602C197 RID: 180631 RVA: 0x0060E7EF File Offset: 0x0060C9EF
+		// Token: 0x0602E8F9 RID: 190713 RVA: 0x00659827 File Offset: 0x00657A27
 		public static void AddUiOptionType(FlatBufferBuilder builder, TUiOperation uiOptionType)
 		{
 			builder.AddByte(7, (byte)uiOptionType, 0);
 		}
 
-		// Token: 0x0602C198 RID: 180632 RVA: 0x0060E7FA File Offset: 0x0060C9FA
+		// Token: 0x0602E8FA RID: 190714 RVA: 0x00659832 File Offset: 0x00657A32
 		public static void AddUiOption(FlatBufferBuilder builder, int uiOptionOffset)
 		{
 			builder.AddOffset(8, uiOptionOffset, 0);
 		}
 
-		// Token: 0x0602C199 RID: 180633 RVA: 0x0060E805 File Offset: 0x0060CA05
+		// Token: 0x0602E8FB RID: 190715 RVA: 0x0065983D File Offset: 0x00657A3D
 		public static void AddSceneInteractionOptionType(FlatBufferBuilder builder, TSceneInteractionOperation sceneInteractionOptionType)
 		{
 			builder.AddByte(9, (byte)sceneInteractionOptionType, 0);
 		}
 
-		// Token: 0x0602C19A RID: 180634 RVA: 0x0060E811 File Offset: 0x0060CA11
+		// Token: 0x0602E8FC RID: 190716 RVA: 0x00659849 File Offset: 0x00657A49
 		public static void AddSceneInteractionOption(FlatBufferBuilder builder, int sceneInteractionOptionOffset)
 		{
 			builder.AddOffset(10, sceneInteractionOptionOffset, 0);
 		}
 
-		// Token: 0x0602C19B RID: 180635 RVA: 0x0060E81D File Offset: 0x0060CA1D
+		// Token: 0x0602E8FD RID: 190717 RVA: 0x00659855 File Offset: 0x00657A55
 		public static Offset<IClientDisableModulePlayerOperation> EndIClientDisableModulePlayerOperation(FlatBufferBuilder builder)
 		{
 			return new Offset<IClientDisableModulePlayerOperation>(builder.EndTable());
 		}
 
-		// Token: 0x0602C19C RID: 180636 RVA: 0x0060E82C File Offset: 0x0060CA2C
+		// Token: 0x0602E8FE RID: 190718 RVA: 0x00659864 File Offset: 0x00657A64
 		public IClientDisableModulePlayerOperationT UnPack()
 		{
 			IClientDisableModulePlayerOperationT clientDisableModulePlayerOperationT = new IClientDisableModulePlayerOperationT();
@@ -374,7 +374,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return clientDisableModulePlayerOperationT;
 		}
 
-		// Token: 0x0602C19D RID: 180637 RVA: 0x0060E848 File Offset: 0x0060CA48
+		// Token: 0x0602E8FF RID: 190719 RVA: 0x00659880 File Offset: 0x00657A80
 		public void UnPackTo(IClientDisableModulePlayerOperationT _o)
 		{
 			_o.Type = this.Type;
@@ -449,7 +449,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.SceneInteractionOption.Value = ((this.SceneInteractionOption<IEnableSceneInteractionOperation>() != null) ? this.SceneInteractionOption<IEnableSceneInteractionOperation>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0602C19E RID: 180638 RVA: 0x0060EC4C File Offset: 0x0060CE4C
+		// Token: 0x0602E900 RID: 190720 RVA: 0x00659C84 File Offset: 0x00657E84
 		public static Offset<IClientDisableModulePlayerOperation> Pack(FlatBufferBuilder builder, IClientDisableModulePlayerOperationT _o)
 		{
 			if (_o == null)
@@ -469,7 +469,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientDisableModulePlayerOperation.CreateIClientDisableModulePlayerOperation(builder, _o.Type, moveOption_type, moveOptionOffset, skillOption_type, skillOptionOffset, cameraOption_type, cameraOptionOffset, uiOption_type, uiOptionOffset, sceneInteractionOption_type, sceneInteractionOptionOffset);
 		}
 
-		// Token: 0x0401095D RID: 67933
+		// Token: 0x04011770 RID: 71536
 		private Table __p;
 	}
 }

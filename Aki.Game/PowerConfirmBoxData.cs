@@ -1,10 +1,10 @@
 ﻿using System;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020025F6 RID: 9718
+// Token: 0x02001AE1 RID: 6881
 public class PowerConfirmBoxData : UiPopViewData
 {
-	// Token: 0x06013C59 RID: 80985 RVA: 0x004F4F2D File Offset: 0x004F312D
+	// Token: 0x0601113B RID: 69947 RVA: 0x00503CB9 File Offset: 0x00501EB9
 	public PowerConfirmBoxData(int powerCount, EPowerMenuType type = EPowerMenuType.Supply, bool updateCurrentNeedPower = false, int autoClosePowerCount = -1)
 	{
 		this.PowerCount = powerCount;
@@ -13,15 +13,15 @@ public class PowerConfirmBoxData : UiPopViewData
 		this.AutoClosePowerCount = autoClosePowerCount;
 	}
 
-	// Token: 0x040094F7 RID: 38135
+	// Token: 0x0400964E RID: 38478
 	public int PowerCount;
 
-	// Token: 0x040094F8 RID: 38136
+	// Token: 0x0400964F RID: 38479
 	public EPowerMenuType Type = EPowerMenuType.Supply;
 
-	// Token: 0x040094F9 RID: 38137
+	// Token: 0x04009650 RID: 38480
 	public bool UpdateCurrentNeedPower;
 
-	// Token: 0x040094FA RID: 38138
+	// Token: 0x04009651 RID: 38481
 	public int AutoClosePowerCount = -1;
 }

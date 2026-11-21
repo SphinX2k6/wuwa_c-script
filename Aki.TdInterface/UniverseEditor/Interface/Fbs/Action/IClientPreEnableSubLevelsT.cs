@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063E0 RID: 25568
+	// Token: 0x02006A60 RID: 27232
 	public class IClientPreEnableSubLevelsT
 	{
-		// Token: 0x1700BE77 RID: 48759
-		// (get) Token: 0x0602C3BB RID: 181179 RVA: 0x00612774 File Offset: 0x00610974
-		// (set) Token: 0x0602C3BC RID: 181180 RVA: 0x0061277C File Offset: 0x0061097C
+		// Token: 0x1700C811 RID: 51217
+		// (get) Token: 0x0602EB91 RID: 191377 RVA: 0x0065E600 File Offset: 0x0065C800
+		// (set) Token: 0x0602EB92 RID: 191378 RVA: 0x0065E608 File Offset: 0x0065C808
 		public List<string> EnableLevels { get; set; }
 
-		// Token: 0x1700BE78 RID: 48760
-		// (get) Token: 0x0602C3BD RID: 181181 RVA: 0x00612785 File Offset: 0x00610985
-		// (set) Token: 0x0602C3BE RID: 181182 RVA: 0x0061278D File Offset: 0x0061098D
+		// Token: 0x1700C812 RID: 51218
+		// (get) Token: 0x0602EB93 RID: 191379 RVA: 0x0065E611 File Offset: 0x0065C811
+		// (set) Token: 0x0602EB94 RID: 191380 RVA: 0x0065E619 File Offset: 0x0065C819
 		public List<string> DisableLevels { get; set; }
 
-		// Token: 0x1700BE79 RID: 48761
-		// (get) Token: 0x0602C3BF RID: 181183 RVA: 0x00612796 File Offset: 0x00610996
-		// (set) Token: 0x0602C3C0 RID: 181184 RVA: 0x0061279E File Offset: 0x0061099E
+		// Token: 0x1700C813 RID: 51219
+		// (get) Token: 0x0602EB95 RID: 191381 RVA: 0x0065E622 File Offset: 0x0065C822
+		// (set) Token: 0x0602EB96 RID: 191382 RVA: 0x0065E62A File Offset: 0x0065C82A
 		public IEnableSubLevelTransitionWithSceneCaptureT TransitionOption { get; set; }
 
-		// Token: 0x1700BE7A RID: 48762
-		// (get) Token: 0x0602C3C1 RID: 181185 RVA: 0x006127A7 File Offset: 0x006109A7
-		// (set) Token: 0x0602C3C2 RID: 181186 RVA: 0x006127AF File Offset: 0x006109AF
+		// Token: 0x1700C814 RID: 51220
+		// (get) Token: 0x0602EB97 RID: 191383 RVA: 0x0065E633 File Offset: 0x0065C833
+		// (set) Token: 0x0602EB98 RID: 191384 RVA: 0x0065E63B File Offset: 0x0065C83B
 		public bool IsWaitForEnableComplete { get; set; }
 
-		// Token: 0x1700BE7B RID: 48763
-		// (get) Token: 0x0602C3C3 RID: 181187 RVA: 0x006127B8 File Offset: 0x006109B8
-		// (set) Token: 0x0602C3C4 RID: 181188 RVA: 0x006127C0 File Offset: 0x006109C0
+		// Token: 0x1700C815 RID: 51221
+		// (get) Token: 0x0602EB99 RID: 191385 RVA: 0x0065E644 File Offset: 0x0065C844
+		// (set) Token: 0x0602EB9A RID: 191386 RVA: 0x0065E64C File Offset: 0x0065C84C
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602C3C5 RID: 181189 RVA: 0x006127C9 File Offset: 0x006109C9
+		// Token: 0x0602EB9B RID: 191387 RVA: 0x0065E655 File Offset: 0x0065C855
 		public IClientPreEnableSubLevelsT()
 		{
 			this.EnableLevels = null;

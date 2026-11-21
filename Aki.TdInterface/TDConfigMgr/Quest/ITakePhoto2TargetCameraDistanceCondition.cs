@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200117A RID: 4474
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012B4 RID: 4788
 	public class ITakePhoto2TargetCameraDistanceCondition
 	{
-		// Token: 0x060065A0 RID: 26016 RVA: 0x000F3D24 File Offset: 0x000F1F24
+		// Token: 0x06006BD7 RID: 27607 RVA: 0x001014F0 File Offset: 0x000FF6F0
 		private ITakePhoto2TargetCameraDistanceCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060065A1 RID: 26017 RVA: 0x000F3D5C File Offset: 0x000F1F5C
+		// Token: 0x06006BD8 RID: 27608 RVA: 0x00101528 File Offset: 0x000FF728
 		public static ITakePhoto2TargetCameraDistanceCondition Create([Nullable(2)] ITakePhoto2TargetCameraDistanceCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060065A2 RID: 26018 RVA: 0x000F3D6F File Offset: 0x000F1F6F
+		// Token: 0x06006BD9 RID: 27609 RVA: 0x0010153B File Offset: 0x000FF73B
 		public static ITakePhoto2TargetCameraDistanceCondition CreateFromSetValue([Nullable(2)] ITakePhoto2TargetCameraDistanceCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060065A3 RID: 26019 RVA: 0x000F3D82 File Offset: 0x000F1F82
+		// Token: 0x06006BDA RID: 27610 RVA: 0x0010154E File Offset: 0x000FF74E
 		public ITakePhoto2TargetCameraDistanceCondition_SetValue ToSetValue()
 		{
 			return new ITakePhoto2TargetCameraDistanceCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700211E RID: 8478
-		// (get) Token: 0x060065A4 RID: 26020 RVA: 0x000F3D95 File Offset: 0x000F1F95
-		// (set) Token: 0x060065A5 RID: 26021 RVA: 0x000F3DC0 File Offset: 0x000F1FC0
+		// Token: 0x170022DD RID: 8925
+		// (get) Token: 0x06006BDB RID: 27611 RVA: 0x00101561 File Offset: 0x000FF761
+		// (set) Token: 0x06006BDC RID: 27612 RVA: 0x0010158C File Offset: 0x000FF78C
 		public virtual int MaxDistance
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003CFD RID: 15613
+		// Token: 0x04004065 RID: 16485
 		[Nullable(2)]
 		protected ITakePhoto2TargetCameraDistanceCondition FbInstance;
 
-		// Token: 0x04003CFE RID: 15614
+		// Token: 0x04004066 RID: 16486
 		[Nullable(2)]
 		protected ITakePhoto2TargetCameraDistanceCondition_SetValue PocoInterface;
 	}

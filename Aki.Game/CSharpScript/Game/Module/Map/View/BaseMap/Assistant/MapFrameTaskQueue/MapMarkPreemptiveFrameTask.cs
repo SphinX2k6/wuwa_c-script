@@ -4,50 +4,50 @@ using CSharpScript.Game.Module.Map.MapDefine;
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 {
-	// Token: 0x020054A8 RID: 21672
+	// Token: 0x0200448B RID: 17547
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MapMarkPreemptiveFrameTask : IMapMarkPreemptiveFrameTask, IPreemptiveFrameTask
 	{
-		// Token: 0x170084B0 RID: 33968
-		// (get) Token: 0x060375ED RID: 226797 RVA: 0x00D275BE File Offset: 0x00D257BE
-		// (set) Token: 0x060375EE RID: 226798 RVA: 0x00D275C6 File Offset: 0x00D257C6
+		// Token: 0x1700587C RID: 22652
+		// (get) Token: 0x0602C543 RID: 181571 RVA: 0x00C7733A File Offset: 0x00C7553A
+		// (set) Token: 0x0602C544 RID: 181572 RVA: 0x00C77342 File Offset: 0x00C75542
 		public int Priority { get; set; }
 
-		// Token: 0x170084B1 RID: 33969
-		// (get) Token: 0x060375EF RID: 226799 RVA: 0x00D275CF File Offset: 0x00D257CF
-		// (set) Token: 0x060375F0 RID: 226800 RVA: 0x00D275D7 File Offset: 0x00D257D7
+		// Token: 0x1700587D RID: 22653
+		// (get) Token: 0x0602C545 RID: 181573 RVA: 0x00C7734B File Offset: 0x00C7554B
+		// (set) Token: 0x0602C546 RID: 181574 RVA: 0x00C77353 File Offset: 0x00C75553
 		[Nullable(1)]
 		public TPreemptiveExecuteMethod Execute { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x170084B2 RID: 33970
-		// (get) Token: 0x060375F1 RID: 226801 RVA: 0x00D275E0 File Offset: 0x00D257E0
-		// (set) Token: 0x060375F2 RID: 226802 RVA: 0x00D275E8 File Offset: 0x00D257E8
+		// Token: 0x1700587E RID: 22654
+		// (get) Token: 0x0602C547 RID: 181575 RVA: 0x00C7735C File Offset: 0x00C7555C
+		// (set) Token: 0x0602C548 RID: 181576 RVA: 0x00C77364 File Offset: 0x00C75564
 		public TPreemptiveExecuteMethod FrameExecute { get; set; }
 
-		// Token: 0x170084B3 RID: 33971
-		// (get) Token: 0x060375F3 RID: 226803 RVA: 0x00D275F1 File Offset: 0x00D257F1
-		// (set) Token: 0x060375F4 RID: 226804 RVA: 0x00D275F9 File Offset: 0x00D257F9
+		// Token: 0x1700587F RID: 22655
+		// (get) Token: 0x0602C549 RID: 181577 RVA: 0x00C7736D File Offset: 0x00C7556D
+		// (set) Token: 0x0602C54A RID: 181578 RVA: 0x00C77375 File Offset: 0x00C75575
 		public TPreemptiveIsCompleteMethod IsComplete { get; set; }
 
-		// Token: 0x170084B4 RID: 33972
-		// (get) Token: 0x060375F5 RID: 226805 RVA: 0x00D27602 File Offset: 0x00D25802
-		// (set) Token: 0x060375F6 RID: 226806 RVA: 0x00D2760A File Offset: 0x00D2580A
+		// Token: 0x17005880 RID: 22656
+		// (get) Token: 0x0602C54B RID: 181579 RVA: 0x00C7737E File Offset: 0x00C7557E
+		// (set) Token: 0x0602C54C RID: 181580 RVA: 0x00C77386 File Offset: 0x00C75586
 		public TPreemptiveCancelMethod Cancel { get; set; }
 
-		// Token: 0x170084B5 RID: 33973
-		// (get) Token: 0x060375F7 RID: 226807 RVA: 0x00D27613 File Offset: 0x00D25813
-		// (set) Token: 0x060375F8 RID: 226808 RVA: 0x00D2761B File Offset: 0x00D2581B
+		// Token: 0x17005881 RID: 22657
+		// (get) Token: 0x0602C54D RID: 181581 RVA: 0x00C7738F File Offset: 0x00C7558F
+		// (set) Token: 0x0602C54E RID: 181582 RVA: 0x00C77397 File Offset: 0x00C75597
 		public TGetPreemptiveResultMethod GetResult { get; set; }
 
-		// Token: 0x170084B6 RID: 33974
-		// (get) Token: 0x060375F9 RID: 226809 RVA: 0x00D27624 File Offset: 0x00D25824
-		// (set) Token: 0x060375FA RID: 226810 RVA: 0x00D2762C File Offset: 0x00D2582C
+		// Token: 0x17005882 RID: 22658
+		// (get) Token: 0x0602C54F RID: 181583 RVA: 0x00C773A0 File Offset: 0x00C755A0
+		// (set) Token: 0x0602C550 RID: 181584 RVA: 0x00C773A8 File Offset: 0x00C755A8
 		public EMarkType MarkType { get; set; }
 
-		// Token: 0x170084B7 RID: 33975
-		// (get) Token: 0x060375FB RID: 226811 RVA: 0x00D27635 File Offset: 0x00D25835
-		// (set) Token: 0x060375FC RID: 226812 RVA: 0x00D2763D File Offset: 0x00D2583D
+		// Token: 0x17005883 RID: 22659
+		// (get) Token: 0x0602C551 RID: 181585 RVA: 0x00C773B1 File Offset: 0x00C755B1
+		// (set) Token: 0x0602C552 RID: 181586 RVA: 0x00C773B9 File Offset: 0x00C755B9
 		public int MarkId { get; set; }
 	}
 }

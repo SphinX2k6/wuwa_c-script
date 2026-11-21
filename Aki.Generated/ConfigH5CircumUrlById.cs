@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003C9 RID: 969
+	// Token: 0x020003DF RID: 991
 	public class ConfigH5CircumUrlById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060016BD RID: 5821 RVA: 0x000DA0FC File Offset: 0x000D82FC
+		// Token: 0x06001741 RID: 5953 RVA: 0x000E0850 File Offset: 0x000DEA50
 		static ConfigH5CircumUrlById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigH5CircumUrlById.CreateStaticDefaultValue), new Action(ConfigH5CircumUrlById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060016BE RID: 5822 RVA: 0x000DA11C File Offset: 0x000D831C
+		// Token: 0x06001742 RID: 5954 RVA: 0x000E0870 File Offset: 0x000DEA70
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigH5CircumUrlById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060016BF RID: 5823 RVA: 0x000DA19B File Offset: 0x000D839B
+		// Token: 0x06001743 RID: 5955 RVA: 0x000E08EF File Offset: 0x000DEAEF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigH5CircumUrlById.LogPair = null;
 			ConfigH5CircumUrlById.HandleId = 0;
 		}
 
-		// Token: 0x060016C0 RID: 5824 RVA: 0x000DA1A9 File Offset: 0x000D83A9
+		// Token: 0x06001744 RID: 5956 RVA: 0x000E08FD File Offset: 0x000DEAFD
 		public static void Init()
 		{
 			ConfigH5CircumUrlById.HandleId = ConfigCommon.InitDataStatement(ConfigH5CircumUrlById.HandleId, "db_h5circum.db", "select BinData from `H5CircumUrl` where Id=?");
 		}
 
-		// Token: 0x060016C1 RID: 5825 RVA: 0x000DA1C4 File Offset: 0x000D83C4
+		// Token: 0x06001745 RID: 5957 RVA: 0x000E0918 File Offset: 0x000DEB18
 		public static H5CircumUrl? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigH5CircumUrlById.HandleId, ConfigH5CircumUrlById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new H5CircumUrl?(rootAsH5CircumUrl);
 		}
 
-		// Token: 0x04001A63 RID: 6755
+		// Token: 0x04001AFD RID: 6909
 		private const string DB = "db_h5circum.db";
 
-		// Token: 0x04001A64 RID: 6756
+		// Token: 0x04001AFE RID: 6910
 		private const string FILE = "h.H5拉人活动.xlsx";
 
-		// Token: 0x04001A65 RID: 6757
+		// Token: 0x04001AFF RID: 6911
 		private const string TABLE = "H5CircumUrl";
 
-		// Token: 0x04001A66 RID: 6758
+		// Token: 0x04001B00 RID: 6912
 		private const string COMMAND = "select BinData from `H5CircumUrl` where Id=?";
 
-		// Token: 0x04001A67 RID: 6759
+		// Token: 0x04001B01 RID: 6913
 		private const string KEY_PREFIX = "H5CircumUrlById";
 
-		// Token: 0x04001A68 RID: 6760
+		// Token: 0x04001B02 RID: 6914
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001A69 RID: 6761
+		// Token: 0x04001B03 RID: 6915
 		private static int HandleId;
 	}
 }

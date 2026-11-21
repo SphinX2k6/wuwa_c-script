@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DC2 RID: 24002
+	// Token: 0x02004DA6 RID: 19878
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SilentAreaInfoSubItem : UiPanelBase
 	{
-		// Token: 0x0603CFDC RID: 249820 RVA: 0x00EAA160 File Offset: 0x00EA8360
+		// Token: 0x06031F53 RID: 204627 RVA: 0x00DFB03C File Offset: 0x00DF923C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,13 +29,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CFDD RID: 249821 RVA: 0x00EAA1C9 File Offset: 0x00EA83C9
+		// Token: 0x06031F54 RID: 204628 RVA: 0x00DFB0A5 File Offset: 0x00DF92A5
 		public void SetCurrentShowType(EInformationViewType type)
 		{
 			this.CurrentShowType = type;
 		}
 
-		// Token: 0x0603CFDE RID: 249822 RVA: 0x00EAA1D4 File Offset: 0x00EA83D4
+		// Token: 0x06031F55 RID: 204629 RVA: 0x00DFB0B0 File Offset: 0x00DF92B0
 		public void Initialize(AActor actor, IInformationSubTitle config)
 		{
 			base.CreateByActorAsync(actor, null, false).ContinueWith(delegate()
@@ -44,14 +44,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}).Forget();
 		}
 
-		// Token: 0x0603CFDF RID: 249823 RVA: 0x00EAA214 File Offset: 0x00EA8414
+		// Token: 0x06031F56 RID: 204630 RVA: 0x00DFB0F0 File Offset: 0x00DF92F0
 		public void UpdateItem(IInformationSubTitle config)
 		{
 			bool flag = this.UpdateTitleText(config.TidTitle);
 			this.UpdateDescribeText(config.TidContent, flag ? 32 : 36);
 		}
 
-		// Token: 0x0603CFE0 RID: 249824 RVA: 0x00EAA244 File Offset: 0x00EA8444
+		// Token: 0x06031F57 RID: 204631 RVA: 0x00DFB120 File Offset: 0x00DF9320
 		private bool UpdateTitleText(string title)
 		{
 			UUIText text = base.GetText(0);
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603CFE1 RID: 249825 RVA: 0x00EAA2B8 File Offset: 0x00EA84B8
+		// Token: 0x06031F58 RID: 204632 RVA: 0x00DFB194 File Offset: 0x00DF9394
 		private void UpdateDescribeText(string title, int fontSize)
 		{
 			UUIText text = base.GetText(1);
@@ -126,16 +126,16 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FC6F RID: 130159
+		// Token: 0x0401A72C RID: 108332
 		private EInformationViewType CurrentShowType;
 
-		// Token: 0x0200C0C4 RID: 49348
+		// Token: 0x0200AACD RID: 43725
 		[NullableContext(0)]
 		private enum EChildComponent
 		{
-			// Token: 0x0403A299 RID: 238233
+			// Token: 0x04034C6B RID: 216171
 			Title,
-			// Token: 0x0403A29A RID: 238234
+			// Token: 0x04034C6C RID: 216172
 			Describe
 		}
 	}

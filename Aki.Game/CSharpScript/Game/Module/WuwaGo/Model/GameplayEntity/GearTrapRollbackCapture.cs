@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 {
-	// Token: 0x02004747 RID: 18247
+	// Token: 0x02003678 RID: 13944
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,7 +12,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 	})]
 	public class GearTrapRollbackCapture : GameplayEntityRollbackCapture<WuWaGoGearTrapEntity>
 	{
-		// Token: 0x0602FB04 RID: 195332 RVA: 0x00B0CF04 File Offset: 0x00B0B104
+		// Token: 0x060242CE RID: 148174 RVA: 0x00A3CED0 File Offset: 0x00A3B0D0
 		public GearTrapRollbackCapture(WuWaGoGearTrapEntity entity) : base(entity)
 		{
 			this.MoveDirection = Vector.Create();
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 			this.PendingAttackTargetUnitId = entity.PeekPendingAttackTargetUnitId();
 		}
 
-		// Token: 0x0602FB05 RID: 195333 RVA: 0x00B0CF94 File Offset: 0x00B0B194
+		// Token: 0x060242CF RID: 148175 RVA: 0x00A3CF60 File Offset: 0x00A3B160
 		public override void Restore()
 		{
 			base.Restore();
@@ -37,19 +37,19 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 			base.Entity.SetPendingAttackTargetUnitIdForRollback(this.PendingAttackTargetUnitId);
 		}
 
-		// Token: 0x04019BEB RID: 105451
+		// Token: 0x0401429B RID: 82587
 		private readonly Vector MoveDirection;
 
-		// Token: 0x04019BEC RID: 105452
+		// Token: 0x0401429C RID: 82588
 		private readonly Vector Position;
 
-		// Token: 0x04019BED RID: 105453
+		// Token: 0x0401429D RID: 82589
 		private readonly Vector Coordinate;
 
-		// Token: 0x04019BEE RID: 105454
+		// Token: 0x0401429E RID: 82590
 		private readonly Rotator Rotator;
 
-		// Token: 0x04019BEF RID: 105455
+		// Token: 0x0401429F RID: 82591
 		private readonly int? PendingAttackTargetUnitId;
 	}
 }

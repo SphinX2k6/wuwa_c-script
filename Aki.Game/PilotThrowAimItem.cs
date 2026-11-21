@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020025E2 RID: 9698
+// Token: 0x02001ACD RID: 6861
 public class PilotThrowAimItem : UiPanelBase
 {
-	// Token: 0x06013B79 RID: 80761 RVA: 0x004F1880 File Offset: 0x004EFA80
+	// Token: 0x0601105B RID: 69723 RVA: 0x005005B0 File Offset: 0x004FE7B0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,7 +18,7 @@ public class PilotThrowAimItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013B7A RID: 80762 RVA: 0x004F18DA File Offset: 0x004EFADA
+	// Token: 0x0601105C RID: 69724 RVA: 0x0050060A File Offset: 0x004FE80A
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(0);
@@ -34,7 +34,7 @@ public class PilotThrowAimItem : UiPanelBase
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x06013B7B RID: 80763 RVA: 0x004F1904 File Offset: 0x004EFB04
+	// Token: 0x0601105D RID: 69725 RVA: 0x00500634 File Offset: 0x004FE834
 	[NullableContext(2)]
 	public void OnFocusTarget(string targetPointText)
 	{
@@ -75,16 +75,16 @@ public class PilotThrowAimItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x02008C1A RID: 35866
+	// Token: 0x02007DA3 RID: 32163
 	private class EViewComponent
 	{
-		// Token: 0x0402D7BD RID: 186301
+		// Token: 0x04028AD5 RID: 166613
 		public const int NormalItem = 0;
 
-		// Token: 0x0402D7BE RID: 186302
+		// Token: 0x04028AD6 RID: 166614
 		public const int AimItem = 1;
 
-		// Token: 0x0402D7BF RID: 186303
+		// Token: 0x04028AD7 RID: 166615
 		public const int TargetNameText = 2;
 	}
 }

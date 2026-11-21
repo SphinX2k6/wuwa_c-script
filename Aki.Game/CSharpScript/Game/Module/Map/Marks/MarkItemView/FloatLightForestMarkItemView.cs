@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x0200550F RID: 21775
+	// Token: 0x020044E2 RID: 17634
 	public class FloatLightForestMarkItemView : ConfigMarkItemView
 	{
-		// Token: 0x060379B9 RID: 227769 RVA: 0x00D33991 File Offset: 0x00D31B91
+		// Token: 0x0602C887 RID: 182407 RVA: 0x00C8186E File Offset: 0x00C7FA6E
 		[NullableContext(1)]
 		public FloatLightForestMarkItemView(FloatLightForestMarkItem holder) : base(holder)
 		{
 		}
 
-		// Token: 0x060379BA RID: 227770 RVA: 0x00D3399C File Offset: 0x00D31B9C
+		// Token: 0x0602C888 RID: 182408 RVA: 0x00C81878 File Offset: 0x00C7FA78
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FloatLightForestMarkItemView.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -27,14 +27,14 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060379BB RID: 227771 RVA: 0x00D339DF File Offset: 0x00D31BDF
+		// Token: 0x0602C889 RID: 182409 RVA: 0x00C818BB File Offset: 0x00C7FABB
 		protected override void OnBeforeDestroy()
 		{
 			this.DestroyEffect();
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x060379BC RID: 227772 RVA: 0x00D339F0 File Offset: 0x00D31BF0
+		// Token: 0x0602C88A RID: 182410 RVA: 0x00C818CC File Offset: 0x00C7FACC
 		private UniTask LoadEffect()
 		{
 			FloatLightForestMarkItemView.<LoadEffect>d__4 <LoadEffect>d__;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			return <LoadEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060379BD RID: 227773 RVA: 0x00D33A33 File Offset: 0x00D31C33
+		// Token: 0x0602C88B RID: 182411 RVA: 0x00C8190F File Offset: 0x00C7FB0F
 		private void DestroyEffect()
 		{
 			if (this.Effect != null)
@@ -55,18 +55,18 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x060379BE RID: 227774 RVA: 0x00D33A55 File Offset: 0x00D31C55
+		// Token: 0x0602C88C RID: 182412 RVA: 0x00C81931 File Offset: 0x00C7FB31
 		public override void SetScale(float scale)
 		{
 		}
 
-		// Token: 0x060379BF RID: 227775 RVA: 0x00D33A57 File Offset: 0x00D31C57
+		// Token: 0x0602C88D RID: 182413 RVA: 0x00C81933 File Offset: 0x00C7FB33
 		public override bool GetInteractiveFlag()
 		{
 			return false;
 		}
 
-		// Token: 0x0401D40A RID: 119818
+		// Token: 0x04017E8E RID: 97934
 		[Nullable(2)]
 		private UUIItem Effect;
 	}

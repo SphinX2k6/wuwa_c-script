@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004691 RID: 18065
+	// Token: 0x020035C2 RID: 13762
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputKeyHandle : InputDistributeHandle<InputDistributeDefine.EActionType>
 	{
-		// Token: 0x0602E9B0 RID: 190896 RVA: 0x00ACAA51 File Offset: 0x00AC8C51
+		// Token: 0x060230FA RID: 143610 RVA: 0x009F8785 File Offset: 0x009F6985
 		public InputKeyHandle(string inputDistributeTag, string name) : base(inputDistributeTag, name)
 		{
 		}
 
-		// Token: 0x0602E9B1 RID: 190897 RVA: 0x00ACAA5B File Offset: 0x00AC8C5B
+		// Token: 0x060230FB RID: 143611 RVA: 0x009F878F File Offset: 0x009F698F
 		public void BindAction(TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			base.Bind(actionCallback);
 		}
 
-		// Token: 0x0602E9B2 RID: 190898 RVA: 0x00ACAA64 File Offset: 0x00AC8C64
+		// Token: 0x060230FC RID: 143612 RVA: 0x009F8798 File Offset: 0x009F6998
 		public void UnBindAction(TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			base.UnBind(actionCallback);
 		}
 
-		// Token: 0x0602E9B3 RID: 190899 RVA: 0x00ACAA6D File Offset: 0x00AC8C6D
+		// Token: 0x060230FD RID: 143613 RVA: 0x009F87A1 File Offset: 0x009F69A1
 		public void InputKey(bool bPress)
 		{
 			if (bPress)

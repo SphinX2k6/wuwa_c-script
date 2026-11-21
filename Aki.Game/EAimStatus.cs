@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001F20 RID: 7968
+// Token: 0x020013E2 RID: 5090
 public enum EAimStatus
 {
-	// Token: 0x0400717D RID: 29053
+	// Token: 0x0400725E RID: 29278
 	None,
-	// Token: 0x0400717E RID: 29054
+	// Token: 0x0400725F RID: 29279
 	NoTarget,
-	// Token: 0x0400717F RID: 29055
+	// Token: 0x04007260 RID: 29280
 	Target,
-	// Token: 0x04007180 RID: 29056
+	// Token: 0x04007261 RID: 29281
 	Weakness
 }

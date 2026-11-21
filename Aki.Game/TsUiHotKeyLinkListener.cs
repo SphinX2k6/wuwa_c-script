@@ -6,15 +6,15 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002CCE RID: 11470
+// Token: 0x02002227 RID: 8743
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Module/UiNavigation/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/UiNavigation/TsUiHotKeyLinkListener.TsUiHotKeyLinkListener_C")]
 public class TsUiHotKeyLinkListener : ULGUIBehaviour, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17002071 RID: 8305
-	// (get) Token: 0x060180EC RID: 98540 RVA: 0x0061E298 File Offset: 0x0061C498
+	// Token: 0x170020C4 RID: 8388
+	// (get) Token: 0x06015969 RID: 88425 RVA: 0x00643E54 File Offset: 0x00642054
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<AActor> ActorList
 	{
@@ -30,7 +30,7 @@ public class TsUiHotKeyLinkListener : ULGUIBehaviour, IUnrealUObject, IUnrealObj
 		}
 	}
 
-	// Token: 0x060180ED RID: 98541 RVA: 0x0061E2D1 File Offset: 0x0061C4D1
+	// Token: 0x0601596A RID: 88426 RVA: 0x00643E8D File Offset: 0x0064208D
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsUiHotKeyLinkListener._ClassPtr == IntPtr.Zero)
@@ -40,34 +40,34 @@ public class TsUiHotKeyLinkListener : ULGUIBehaviour, IUnrealUObject, IUnrealObj
 		return TsUiHotKeyLinkListener._ClassPtr;
 	}
 
-	// Token: 0x060180EE RID: 98542 RVA: 0x0061E2F8 File Offset: 0x0061C4F8
+	// Token: 0x0601596B RID: 88427 RVA: 0x00643EB4 File Offset: 0x006420B4
 	public TsUiHotKeyLinkListener() : this(BuiltinUtils.AllocNativeUObject(TsUiHotKeyLinkListener.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060180EF RID: 98543 RVA: 0x0061E320 File Offset: 0x0061C520
+	// Token: 0x0601596C RID: 88428 RVA: 0x00643EDC File Offset: 0x006420DC
 	public TsUiHotKeyLinkListener(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsUiHotKeyLinkListener.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060180F0 RID: 98544 RVA: 0x0061E353 File Offset: 0x0061C553
+	// Token: 0x0601596D RID: 88429 RVA: 0x00643F0F File Offset: 0x0064210F
 	protected TsUiHotKeyLinkListener(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B2FB RID: 45819
+	// Token: 0x0400B667 RID: 46695
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/UiNavigation/TsUiHotKeyLinkListener.TsUiHotKeyLinkListener_C";
 
-	// Token: 0x0400B2FC RID: 45820
+	// Token: 0x0400B668 RID: 46696
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B2FD RID: 45821
+	// Token: 0x0400B669 RID: 46697
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B2FE RID: 45822
+	// Token: 0x0400B66A RID: 46698
 	private static int __PropertyOffset_ActorList;
 
-	// Token: 0x0400B2FF RID: 45823
+	// Token: 0x0400B66B RID: 46699
 	[Nullable(new byte[]
 	{
 		2,

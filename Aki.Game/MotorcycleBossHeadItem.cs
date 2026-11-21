@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CC5 RID: 7365
+// Token: 0x02001187 RID: 4487
 [NullableContext(2)]
 [Nullable(0)]
 public class MotorcycleBossHeadItem : UiPanelBase
 {
-	// Token: 0x0600DF01 RID: 57089 RVA: 0x003435F0 File Offset: 0x003417F0
+	// Token: 0x0600B31E RID: 45854 RVA: 0x0034F018 File Offset: 0x0034D218
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class MotorcycleBossHeadItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DF02 RID: 57090 RVA: 0x0034368C File Offset: 0x0034188C
+	// Token: 0x0600B31F RID: 45855 RVA: 0x0034F0B4 File Offset: 0x0034D2B4
 	protected override void OnStart()
 	{
 		this.Attack = base.GetItem(0);
@@ -35,21 +35,21 @@ public class MotorcycleBossHeadItem : UiPanelBase
 		this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600DF03 RID: 57091 RVA: 0x003436F8 File Offset: 0x003418F8
+	// Token: 0x0600B320 RID: 45856 RVA: 0x0034F120 File Offset: 0x0034D320
 	protected override void OnBeforeDestroy()
 	{
 		this.SequencePlayer.Clear();
 		this.SequencePlayer = null;
 	}
 
-	// Token: 0x0600DF04 RID: 57092 RVA: 0x0034370C File Offset: 0x0034190C
+	// Token: 0x0600B321 RID: 45857 RVA: 0x0034F134 File Offset: 0x0034D334
 	[NullableContext(1)]
 	public void SetBossIconPath(string path)
 	{
 		base.SetTextureByPath(path, this.BossHead, null, null);
 	}
 
-	// Token: 0x0600DF05 RID: 57093 RVA: 0x00343730 File Offset: 0x00341930
+	// Token: 0x0600B322 RID: 45858 RVA: 0x0034F158 File Offset: 0x0034D358
 	public void SetBossState(EBossState state, bool bForceRefresh = false)
 	{
 		if (this.BossState == state && !bForceRefresh)
@@ -60,7 +60,7 @@ public class MotorcycleBossHeadItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x0600DF06 RID: 57094 RVA: 0x0034374C File Offset: 0x0034194C
+	// Token: 0x0600B323 RID: 45859 RVA: 0x0034F174 File Offset: 0x0034D374
 	protected void Refresh()
 	{
 		this.SequencePlayer.StopPlayingSequence(false, true);
@@ -143,50 +143,50 @@ public class MotorcycleBossHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400667D RID: 26237
+	// Token: 0x0400675C RID: 26460
 	protected EBossState BossState;
 
-	// Token: 0x0400667E RID: 26238
+	// Token: 0x0400675D RID: 26461
 	protected UUIItem Attack;
 
-	// Token: 0x0400667F RID: 26239
+	// Token: 0x0400675E RID: 26462
 	protected UUITexture BossHead;
 
-	// Token: 0x04006680 RID: 26240
+	// Token: 0x0400675F RID: 26463
 	protected UUISprite HeadBase;
 
-	// Token: 0x04006681 RID: 26241
+	// Token: 0x04006760 RID: 26464
 	protected UUISprite BossIcon;
 
-	// Token: 0x04006682 RID: 26242
+	// Token: 0x04006761 RID: 26465
 	protected UUISprite FinishIcon;
 
-	// Token: 0x04006683 RID: 26243
+	// Token: 0x04006762 RID: 26466
 	protected UUIItem StateAttack;
 
-	// Token: 0x04006684 RID: 26244
+	// Token: 0x04006763 RID: 26467
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x020082C3 RID: 33475
+	// Token: 0x0200744C RID: 29772
 	[NullableContext(0)]
 	private static class EComponentBossHeadItem
 	{
-		// Token: 0x0402AA82 RID: 174722
+		// Token: 0x04025DAA RID: 155050
 		public const int Attack = 0;
 
-		// Token: 0x0402AA83 RID: 174723
+		// Token: 0x04025DAB RID: 155051
 		public const int BossHead = 1;
 
-		// Token: 0x0402AA84 RID: 174724
+		// Token: 0x04025DAC RID: 155052
 		public const int HeadBase = 2;
 
-		// Token: 0x0402AA85 RID: 174725
+		// Token: 0x04025DAD RID: 155053
 		public const int BossIcon = 3;
 
-		// Token: 0x0402AA86 RID: 174726
+		// Token: 0x04025DAE RID: 155054
 		public const int FinishIcon = 4;
 
-		// Token: 0x0402AA87 RID: 174727
+		// Token: 0x04025DAF RID: 155055
 		public const int StateAttack = 5;
 	}
 }

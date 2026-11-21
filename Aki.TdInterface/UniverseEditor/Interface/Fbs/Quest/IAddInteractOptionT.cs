@@ -3,40 +3,40 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CF3 RID: 15603
+	// Token: 0x0200410A RID: 16650
 	public class IAddInteractOptionT
 	{
-		// Token: 0x17006AF5 RID: 27381
-		// (get) Token: 0x060157DF RID: 88031 RVA: 0x0031AD63 File Offset: 0x00318F63
-		// (set) Token: 0x060157E0 RID: 88032 RVA: 0x0031AD6B File Offset: 0x00318F6B
+		// Token: 0x170070AF RID: 28847
+		// (get) Token: 0x06016D17 RID: 93463 RVA: 0x00341FDB File Offset: 0x003401DB
+		// (set) Token: 0x06016D18 RID: 93464 RVA: 0x00341FE3 File Offset: 0x003401E3
 		public IInteractOptionT Option { get; set; }
 
-		// Token: 0x17006AF6 RID: 27382
-		// (get) Token: 0x060157E1 RID: 88033 RVA: 0x0031AD74 File Offset: 0x00318F74
-		// (set) Token: 0x060157E2 RID: 88034 RVA: 0x0031AD7C File Offset: 0x00318F7C
+		// Token: 0x170070B0 RID: 28848
+		// (get) Token: 0x06016D19 RID: 93465 RVA: 0x00341FEC File Offset: 0x003401EC
+		// (set) Token: 0x06016D1A RID: 93466 RVA: 0x00341FF4 File Offset: 0x003401F4
 		public int EntityId { get; set; }
 
-		// Token: 0x17006AF7 RID: 27383
-		// (get) Token: 0x060157E3 RID: 88035 RVA: 0x0031AD85 File Offset: 0x00318F85
-		// (set) Token: 0x060157E4 RID: 88036 RVA: 0x0031AD8D File Offset: 0x00318F8D
+		// Token: 0x170070B1 RID: 28849
+		// (get) Token: 0x06016D1B RID: 93467 RVA: 0x00341FFD File Offset: 0x003401FD
+		// (set) Token: 0x06016D1C RID: 93468 RVA: 0x00342005 File Offset: 0x00340205
 		public bool IsManualFinish { get; set; }
 
-		// Token: 0x17006AF8 RID: 27384
-		// (get) Token: 0x060157E5 RID: 88037 RVA: 0x0031AD96 File Offset: 0x00318F96
-		// (set) Token: 0x060157E6 RID: 88038 RVA: 0x0031AD9E File Offset: 0x00318F9E
+		// Token: 0x170070B2 RID: 28850
+		// (get) Token: 0x06016D1D RID: 93469 RVA: 0x0034200E File Offset: 0x0034020E
+		// (set) Token: 0x06016D1E RID: 93470 RVA: 0x00342016 File Offset: 0x00340216
 		public bool IsManualDelete { get; set; }
 
-		// Token: 0x17006AF9 RID: 27385
-		// (get) Token: 0x060157E7 RID: 88039 RVA: 0x0031ADA7 File Offset: 0x00318FA7
-		// (set) Token: 0x060157E8 RID: 88040 RVA: 0x0031ADAF File Offset: 0x00318FAF
+		// Token: 0x170070B3 RID: 28851
+		// (get) Token: 0x06016D1F RID: 93471 RVA: 0x0034201F File Offset: 0x0034021F
+		// (set) Token: 0x06016D20 RID: 93472 RVA: 0x00342027 File Offset: 0x00340227
 		public string InteractToken { get; set; }
 
-		// Token: 0x17006AFA RID: 27386
-		// (get) Token: 0x060157E9 RID: 88041 RVA: 0x0031ADB8 File Offset: 0x00318FB8
-		// (set) Token: 0x060157EA RID: 88042 RVA: 0x0031ADC0 File Offset: 0x00318FC0
+		// Token: 0x170070B4 RID: 28852
+		// (get) Token: 0x06016D21 RID: 93473 RVA: 0x00342030 File Offset: 0x00340230
+		// (set) Token: 0x06016D22 RID: 93474 RVA: 0x00342038 File Offset: 0x00340238
 		public byte NullMask { get; set; }
 
-		// Token: 0x060157EB RID: 88043 RVA: 0x0031ADC9 File Offset: 0x00318FC9
+		// Token: 0x06016D23 RID: 93475 RVA: 0x00342041 File Offset: 0x00340241
 		public IAddInteractOptionT()
 		{
 			this.Option = null;

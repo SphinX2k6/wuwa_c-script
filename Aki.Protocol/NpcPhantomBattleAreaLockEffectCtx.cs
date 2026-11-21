@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000B66 RID: 2918
+	// Token: 0x02000B56 RID: 2902
 	public sealed class NpcPhantomBattleAreaLockEffectCtx : IMessage<NpcPhantomBattleAreaLockEffectCtx>, IMessage, IEquatable<NpcPhantomBattleAreaLockEffectCtx>, IDeepCloneable<NpcPhantomBattleAreaLockEffectCtx>, IBufferMessage
 	{
-		// Token: 0x0600FCCA RID: 64714 RVA: 0x0024CDF4 File Offset: 0x0024AFF4
+		// Token: 0x0600FBC6 RID: 64454 RVA: 0x0024AF24 File Offset: 0x00249124
 		[NullableContext(1)]
 		public static NpcPhantomBattleAreaLockEffectCtx Create()
 		{
 			return new NpcPhantomBattleAreaLockEffectCtx();
 		}
 
-		// Token: 0x17003386 RID: 13190
-		// (get) Token: 0x0600FCCB RID: 64715 RVA: 0x0024CDFB File Offset: 0x0024AFFB
+		// Token: 0x1700334D RID: 13133
+		// (get) Token: 0x0600FBC7 RID: 64455 RVA: 0x0024AF2B File Offset: 0x0024912B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003387 RID: 13191
-		// (get) Token: 0x0600FCCC RID: 64716 RVA: 0x0024CDFE File Offset: 0x0024AFFE
+		// Token: 0x1700334E RID: 13134
+		// (get) Token: 0x0600FBC8 RID: 64456 RVA: 0x0024AF2E File Offset: 0x0024912E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FCCD RID: 64717 RVA: 0x0024CE05 File Offset: 0x0024B005
+		// Token: 0x0600FBC9 RID: 64457 RVA: 0x0024AF35 File Offset: 0x00249135
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleAreaLockEffectCtx()
 		{
 		}
 
-		// Token: 0x0600FCCE RID: 64718 RVA: 0x0024CE10 File Offset: 0x0024B010
+		// Token: 0x0600FBCA RID: 64458 RVA: 0x0024AF40 File Offset: 0x00249140
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleAreaLockEffectCtx(NpcPhantomBattleAreaLockEffectCtx other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600FCCF RID: 64719 RVA: 0x0024CE80 File Offset: 0x0024B080
+		// Token: 0x0600FBCB RID: 64459 RVA: 0x0024AFB0 File Offset: 0x002491B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleAreaLockEffectCtx Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new NpcPhantomBattleAreaLockEffectCtx(this);
 		}
 
-		// Token: 0x17003388 RID: 13192
-		// (get) Token: 0x0600FCD0 RID: 64720 RVA: 0x0024CE88 File Offset: 0x0024B088
-		// (set) Token: 0x0600FCD1 RID: 64721 RVA: 0x0024CE90 File Offset: 0x0024B090
+		// Token: 0x1700334F RID: 13135
+		// (get) Token: 0x0600FBCC RID: 64460 RVA: 0x0024AFB8 File Offset: 0x002491B8
+		// (set) Token: 0x0600FBCD RID: 64461 RVA: 0x0024AFC0 File Offset: 0x002491C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattleAreaType AreaType
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003389 RID: 13193
-		// (get) Token: 0x0600FCD2 RID: 64722 RVA: 0x0024CE99 File Offset: 0x0024B099
-		// (set) Token: 0x0600FCD3 RID: 64723 RVA: 0x0024CEA1 File Offset: 0x0024B0A1
+		// Token: 0x17003350 RID: 13136
+		// (get) Token: 0x0600FBCE RID: 64462 RVA: 0x0024AFC9 File Offset: 0x002491C9
+		// (set) Token: 0x0600FBCF RID: 64463 RVA: 0x0024AFD1 File Offset: 0x002491D1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Seal
@@ -103,9 +103,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700338A RID: 13194
-		// (get) Token: 0x0600FCD4 RID: 64724 RVA: 0x0024CEAA File Offset: 0x0024B0AA
-		// (set) Token: 0x0600FCD5 RID: 64725 RVA: 0x0024CEB2 File Offset: 0x0024B0B2
+		// Token: 0x17003351 RID: 13137
+		// (get) Token: 0x0600FBD0 RID: 64464 RVA: 0x0024AFDA File Offset: 0x002491DA
+		// (set) Token: 0x0600FBD1 RID: 64465 RVA: 0x0024AFE2 File Offset: 0x002491E2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int UnLockRound
@@ -120,9 +120,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700338B RID: 13195
-		// (get) Token: 0x0600FCD6 RID: 64726 RVA: 0x0024CEBB File Offset: 0x0024B0BB
-		// (set) Token: 0x0600FCD7 RID: 64727 RVA: 0x0024CEC3 File Offset: 0x0024B0C3
+		// Token: 0x17003352 RID: 13138
+		// (get) Token: 0x0600FBD2 RID: 64466 RVA: 0x0024AFEB File Offset: 0x002491EB
+		// (set) Token: 0x0600FBD3 RID: 64467 RVA: 0x0024AFF3 File Offset: 0x002491F3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleEffectCardCamp Camp
@@ -137,9 +137,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700338C RID: 13196
-		// (get) Token: 0x0600FCD8 RID: 64728 RVA: 0x0024CECC File Offset: 0x0024B0CC
-		// (set) Token: 0x0600FCD9 RID: 64729 RVA: 0x0024CED4 File Offset: 0x0024B0D4
+		// Token: 0x17003353 RID: 13139
+		// (get) Token: 0x0600FBD4 RID: 64468 RVA: 0x0024AFFC File Offset: 0x002491FC
+		// (set) Token: 0x0600FBD5 RID: 64469 RVA: 0x0024B004 File Offset: 0x00249204
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleFighterInfo PhantomBattleFighterInfo
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FCDA RID: 64730 RVA: 0x0024CEDD File Offset: 0x0024B0DD
+		// Token: 0x0600FBD6 RID: 64470 RVA: 0x0024B00D File Offset: 0x0024920D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -162,7 +162,7 @@ namespace Aki.Protocol
 			return this.Equals(other as NpcPhantomBattleAreaLockEffectCtx);
 		}
 
-		// Token: 0x0600FCDB RID: 64731 RVA: 0x0024CEEC File Offset: 0x0024B0EC
+		// Token: 0x0600FBD7 RID: 64471 RVA: 0x0024B01C File Offset: 0x0024921C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(NpcPhantomBattleAreaLockEffectCtx other)
@@ -170,7 +170,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.AreaType == other.AreaType && this.Seal == other.Seal && this.UnLockRound == other.UnLockRound && this.Camp == other.Camp && object.Equals(this.PhantomBattleFighterInfo, other.PhantomBattleFighterInfo) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600FCDC RID: 64732 RVA: 0x0024CF6C File Offset: 0x0024B16C
+		// Token: 0x0600FBD8 RID: 64472 RVA: 0x0024B09C File Offset: 0x0024929C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -203,7 +203,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FCDD RID: 64733 RVA: 0x0024D019 File Offset: 0x0024B219
+		// Token: 0x0600FBD9 RID: 64473 RVA: 0x0024B149 File Offset: 0x00249349
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -211,7 +211,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600FCDE RID: 64734 RVA: 0x0024D026 File Offset: 0x0024B226
+		// Token: 0x0600FBDA RID: 64474 RVA: 0x0024B156 File Offset: 0x00249356
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -219,7 +219,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600FCDF RID: 64735 RVA: 0x0024D030 File Offset: 0x0024B230
+		// Token: 0x0600FBDB RID: 64475 RVA: 0x0024B160 File Offset: 0x00249360
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -255,7 +255,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FCE0 RID: 64736 RVA: 0x0024D0DC File Offset: 0x0024B2DC
+		// Token: 0x0600FBDC RID: 64476 RVA: 0x0024B20C File Offset: 0x0024940C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -288,7 +288,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FCE1 RID: 64737 RVA: 0x0024D170 File Offset: 0x0024B370
+		// Token: 0x0600FBDD RID: 64477 RVA: 0x0024B2A0 File Offset: 0x002494A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(NpcPhantomBattleAreaLockEffectCtx other)
@@ -324,7 +324,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600FCE2 RID: 64738 RVA: 0x0024D214 File Offset: 0x0024B414
+		// Token: 0x0600FBDE RID: 64478 RVA: 0x0024B344 File Offset: 0x00249544
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -332,7 +332,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600FCE3 RID: 64739 RVA: 0x0024D220 File Offset: 0x0024B420
+		// Token: 0x0600FBDF RID: 64479 RVA: 0x0024B350 File Offset: 0x00249550
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -383,37 +383,37 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040064D9 RID: 25817
+		// Token: 0x040064E9 RID: 25833
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040064DA RID: 25818
+		// Token: 0x040064EA RID: 25834
 		public const int AreaTypeFieldNumber = 1;
 
-		// Token: 0x040064DB RID: 25819
+		// Token: 0x040064EB RID: 25835
 		private BattleAreaType areaType_;
 
-		// Token: 0x040064DC RID: 25820
+		// Token: 0x040064EC RID: 25836
 		public const int SealFieldNumber = 2;
 
-		// Token: 0x040064DD RID: 25821
+		// Token: 0x040064ED RID: 25837
 		private bool seal_;
 
-		// Token: 0x040064DE RID: 25822
+		// Token: 0x040064EE RID: 25838
 		public const int UnLockRoundFieldNumber = 3;
 
-		// Token: 0x040064DF RID: 25823
+		// Token: 0x040064EF RID: 25839
 		private int unLockRound_;
 
-		// Token: 0x040064E0 RID: 25824
+		// Token: 0x040064F0 RID: 25840
 		public const int CampFieldNumber = 5;
 
-		// Token: 0x040064E1 RID: 25825
+		// Token: 0x040064F1 RID: 25841
 		private PhantomBattleEffectCardCamp camp_;
 
-		// Token: 0x040064E2 RID: 25826
+		// Token: 0x040064F2 RID: 25842
 		public const int PhantomBattleFighterInfoFieldNumber = 6;
 
-		// Token: 0x040064E3 RID: 25827
+		// Token: 0x040064F3 RID: 25843
 		private PhantomBattleFighterInfo phantomBattleFighterInfo_;
 	}
 }

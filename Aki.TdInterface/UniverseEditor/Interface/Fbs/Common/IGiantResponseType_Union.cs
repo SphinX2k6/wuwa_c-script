@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DCA RID: 24010
+	// Token: 0x02006407 RID: 25607
 	public enum IGiantResponseType_Union : byte
 	{
-		// Token: 0x0400F7AB RID: 63403
+		// Token: 0x04010506 RID: 66822
 		NONE,
-		// Token: 0x0400F7AC RID: 63404
+		// Token: 0x04010507 RID: 66823
 		IGiantResponseType,
-		// Token: 0x0400F7AD RID: 63405
+		// Token: 0x04010508 RID: 66824
 		IGiantResponsePlayAnimation,
-		// Token: 0x0400F7AE RID: 63406
+		// Token: 0x04010509 RID: 66825
 		IGiantResponsePlayFlow
 	}
 }

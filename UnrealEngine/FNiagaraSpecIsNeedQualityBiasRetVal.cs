@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001925 RID: 6437
+	// Token: 0x02000413 RID: 1043
 	public sealed class FNiagaraSpecIsNeedQualityBiasRetVal : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06017DF6 RID: 97782 RVA: 0x0022FB02 File Offset: 0x0022DD02
+		// Token: 0x0600656C RID: 25964 RVA: 0x00091102 File Offset: 0x0008F302
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FNiagaraSpecIsNeedQualityBiasRetVal.StaticFunctionPtr();
 		}
 
-		// Token: 0x06017DF7 RID: 97783 RVA: 0x0022FB0E File Offset: 0x0022DD0E
+		// Token: 0x0600656D RID: 25965 RVA: 0x0009110E File Offset: 0x0008F30E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FNiagaraSpecIsNeedQualityBiasRetVal._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FNiagaraSpecIsNeedQualityBiasRetVal._FunctionPtr;
 		}
 
-		// Token: 0x06017DF8 RID: 97784 RVA: 0x0022FB31 File Offset: 0x0022DD31
+		// Token: 0x0600656E RID: 25966 RVA: 0x00091131 File Offset: 0x0008F331
 		public FNiagaraSpecIsNeedQualityBiasRetVal()
 		{
 		}
 
-		// Token: 0x06017DF9 RID: 97785 RVA: 0x0022FB39 File Offset: 0x0022DD39
+		// Token: 0x0600656F RID: 25967 RVA: 0x00091139 File Offset: 0x0008F339
 		[NullableContext(2)]
 		public FNiagaraSpecIsNeedQualityBiasRetVal(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017DFA RID: 97786 RVA: 0x0022FB43 File Offset: 0x0022DD43
+		// Token: 0x06006570 RID: 25968 RVA: 0x00091143 File Offset: 0x0008F343
 		public FNiagaraSpecIsNeedQualityBiasRetVal(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017DFB RID: 97787 RVA: 0x0022FB4E File Offset: 0x0022DD4E
+		// Token: 0x06006571 RID: 25969 RVA: 0x0009114E File Offset: 0x0008F34E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<int, bool>) ?? ((Func<int, bool>)Delegate.CreateDelegate(typeof(Func<int, bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017DFC RID: 97788 RVA: 0x0022FB80 File Offset: 0x0022DD80
+		// Token: 0x06006572 RID: 25970 RVA: 0x00091180 File Offset: 0x0008F380
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Func<int, bool> Callback)
 		{
 			if (FNiagaraSpecIsNeedQualityBiasRetVal.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FNiagaraSpecIsNeedQualityBiasRetVal.RegisterId);
 		}
 
-		// Token: 0x06017DFD RID: 97789 RVA: 0x0022FBBC File Offset: 0x0022DDBC
+		// Token: 0x06006573 RID: 25971 RVA: 0x000911BC File Offset: 0x0008F3BC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool Execute(int EntityId)
 		{
 			FNiagaraSpecIsNeedQualityBiasRetVal.__FNiagaraSpecIsNeedQualityBiasRetVal_DelegateParams* ptr = stackalloc FNiagaraSpecIsNeedQualityBiasRetVal.__FNiagaraSpecIsNeedQualityBiasRetVal_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FNiagaraSpecIsNeedQualityBiasRetVal.__FNiagaraSpecIsNeedQualityBiasRetVal_DelegateParams) & -16L;
@@ -77,10 +75,9 @@ namespace UnrealEngine
 			return ptr->__Result;
 		}
 
-		// Token: 0x06017DFE RID: 97790 RVA: 0x0022FC00 File Offset: 0x0022DE00
+		// Token: 0x06006574 RID: 25972 RVA: 0x00091200 File Offset: 0x0008F400
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<int, bool> func = target as Func<int, bool>;
@@ -92,35 +89,35 @@ namespace UnrealEngine
 			((FNiagaraSpecIsNeedQualityBiasRetVal.__FNiagaraSpecIsNeedQualityBiasRetVal_DelegateParams*)__Parameters)->__Result = _Result;
 		}
 
-		// Token: 0x0400CEE4 RID: 52964
+		// Token: 0x04002AA9 RID: 10921
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CEE5 RID: 52965
+		// Token: 0x04002AAA RID: 10922
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.NiagaraSpecIsNeedQualityBiasRetVal__DelegateSignature";
 
-		// Token: 0x0400CEE6 RID: 52966
+		// Token: 0x04002AAB RID: 10923
 		private static int RegisterId;
 
-		// Token: 0x02002FF1 RID: 12273
+		// Token: 0x02000B05 RID: 2821
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FNiagaraSpecIsNeedQualityBiasRetVal_DelegateParams
+		private ref struct __FNiagaraSpecIsNeedQualityBiasRetVal_DelegateParams
 		{
-			// Token: 0x04016BF4 RID: 93172
+			// Token: 0x04005B9D RID: 23453
 			[FieldOffset(0)]
 			public int EntityId;
 
-			// Token: 0x04016BF5 RID: 93173
+			// Token: 0x04005B9E RID: 23454
 			[FieldOffset(4)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002FF2 RID: 12274
+		// Token: 0x02000B06 RID: 2822
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016BF6 RID: 93174
+			// Token: 0x04005B9F RID: 23455
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

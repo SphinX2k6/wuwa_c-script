@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlement
 {
-	// Token: 0x020062F9 RID: 25337
+	// Token: 0x02005277 RID: 21111
 	[Nullable(new byte[]
 	{
 		0,
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 	})]
 	public class DamageLayoutItemView : GridProxyAbstract<IDamageLayoutItemData>
 	{
-		// Token: 0x0603FC41 RID: 261185 RVA: 0x00F6DB28 File Offset: 0x00F6BD28
+		// Token: 0x06034902 RID: 215298 RVA: 0x00EB4A84 File Offset: 0x00EB2C84
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FC42 RID: 261186 RVA: 0x00F6DC58 File Offset: 0x00F6BE58
+		// Token: 0x06034903 RID: 215299 RVA: 0x00EB4BB4 File Offset: 0x00EB2DB4
 		[NullableContext(1)]
 		public override void Refresh(IDamageLayoutItemData data, bool isSelected, int gridIndex)
 		{
@@ -141,24 +141,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			text4.SetChangeColor(bUseChangeColor5, fcolor);
 		}
 
-		// Token: 0x0200C4F3 RID: 50419
+		// Token: 0x0200AEDA RID: 44762
 		private enum EDamageLayoutItemComponent
 		{
-			// Token: 0x0403B6FC RID: 243452
+			// Token: 0x0403605E RID: 221278
 			SpriteBg,
-			// Token: 0x0403B6FD RID: 243453
+			// Token: 0x0403605F RID: 221279
 			HeadTexture,
-			// Token: 0x0403B6FE RID: 243454
+			// Token: 0x04036060 RID: 221280
 			TextName,
-			// Token: 0x0403B6FF RID: 243455
+			// Token: 0x04036061 RID: 221281
 			SpriteBarBg,
-			// Token: 0x0403B700 RID: 243456
+			// Token: 0x04036062 RID: 221282
 			SpriteSuccessBar,
-			// Token: 0x0403B701 RID: 243457
+			// Token: 0x04036063 RID: 221283
 			SpriteFailBar,
-			// Token: 0x0403B702 RID: 243458
+			// Token: 0x04036064 RID: 221284
 			TextDamageProgressPercent,
-			// Token: 0x0403B703 RID: 243459
+			// Token: 0x04036065 RID: 221285
 			TextDamageProgress
 		}
 	}

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 {
-	// Token: 0x02004834 RID: 18484
+	// Token: 0x02003765 RID: 14181
 	public class WorldMapChangeGravityButtonItem : UiPanelBase
 	{
-		// Token: 0x0603060F RID: 198159 RVA: 0x00B3B3F4 File Offset: 0x00B395F4
+		// Token: 0x06024DDF RID: 151007 RVA: 0x00A6B4C0 File Offset: 0x00A696C0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06030610 RID: 198160 RVA: 0x00B3B4DC File Offset: 0x00B396DC
+		// Token: 0x06024DE0 RID: 151008 RVA: 0x00A6B5A8 File Offset: 0x00A697A8
 		private void ButtonClick()
 		{
 			Action buttonFunction = this.ButtonFunction;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			buttonFunction();
 		}
 
-		// Token: 0x06030611 RID: 198161 RVA: 0x00B3B4EE File Offset: 0x00B396EE
+		// Token: 0x06024DE1 RID: 151009 RVA: 0x00A6B5BA File Offset: 0x00A697BA
 		public void SetEnableClick(bool state)
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -57,14 +57,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			button.SetSelfInteractive(state);
 		}
 
-		// Token: 0x06030612 RID: 198162 RVA: 0x00B3B502 File Offset: 0x00B39702
+		// Token: 0x06024DE2 RID: 151010 RVA: 0x00A6B5CE File Offset: 0x00A697CE
 		[NullableContext(1)]
 		public void SetFunction(Action buttonFunction)
 		{
 			this.ButtonFunction = buttonFunction;
 		}
 
-		// Token: 0x06030613 RID: 198163 RVA: 0x00B3B50C File Offset: 0x00B3970C
+		// Token: 0x06024DE3 RID: 151011 RVA: 0x00A6B5D8 File Offset: 0x00A697D8
 		[NullableContext(1)]
 		public void SetSprite(string path)
 		{
@@ -77,23 +77,23 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			});
 		}
 
-		// Token: 0x0401A03A RID: 106554
+		// Token: 0x040146EE RID: 83694
 		[Nullable(2)]
 		private Action ButtonFunction;
 
-		// Token: 0x0200AB10 RID: 43792
+		// Token: 0x020094BF RID: 38079
 		public static class EButtonItemDefine
 		{
-			// Token: 0x04033FD9 RID: 212953
+			// Token: 0x0402E759 RID: 190297
 			public const int Button = 0;
 
-			// Token: 0x04033FDA RID: 212954
+			// Token: 0x0402E75A RID: 190298
 			public const int Sprite = 1;
 
-			// Token: 0x04033FDB RID: 212955
+			// Token: 0x0402E75B RID: 190299
 			public const int Text = 2;
 
-			// Token: 0x04033FDC RID: 212956
+			// Token: 0x0402E75C RID: 190300
 			public const int SpriteTransition = 3;
 		}
 	}

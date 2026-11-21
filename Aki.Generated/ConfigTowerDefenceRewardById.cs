@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009FE RID: 2558
+	// Token: 0x02000AD3 RID: 2771
 	public class ConfigTowerDefenceRewardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003C08 RID: 15368 RVA: 0x001AD273 File Offset: 0x001AB473
+		// Token: 0x06004106 RID: 16646 RVA: 0x001CC607 File Offset: 0x001CA807
 		static ConfigTowerDefenceRewardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTowerDefenceRewardById.CreateStaticDefaultValue), new Action(ConfigTowerDefenceRewardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003C09 RID: 15369 RVA: 0x001AD294 File Offset: 0x001AB494
+		// Token: 0x06004107 RID: 16647 RVA: 0x001CC628 File Offset: 0x001CA828
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTowerDefenceRewardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003C0A RID: 15370 RVA: 0x001AD313 File Offset: 0x001AB513
+		// Token: 0x06004108 RID: 16648 RVA: 0x001CC6A7 File Offset: 0x001CA8A7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTowerDefenceRewardById.LogPair = null;
 			ConfigTowerDefenceRewardById.HandleId = 0;
 		}
 
-		// Token: 0x06003C0B RID: 15371 RVA: 0x001AD321 File Offset: 0x001AB521
+		// Token: 0x06004109 RID: 16649 RVA: 0x001CC6B5 File Offset: 0x001CA8B5
 		public static void Init()
 		{
 			ConfigTowerDefenceRewardById.HandleId = ConfigCommon.InitDataStatement(ConfigTowerDefenceRewardById.HandleId, "db_towerdefense.db", "select BinData from `TowerDefenceReward` where Id = ?");
 		}
 
-		// Token: 0x06003C0C RID: 15372 RVA: 0x001AD33C File Offset: 0x001AB53C
+		// Token: 0x0600410A RID: 16650 RVA: 0x001CC6D0 File Offset: 0x001CA8D0
 		public static TowerDefenceReward? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTowerDefenceRewardById.HandleId, ConfigTowerDefenceRewardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TowerDefenceReward?(rootAsTowerDefenceReward);
 		}
 
-		// Token: 0x040045D8 RID: 17880
+		// Token: 0x04004BAB RID: 19371
 		private const string DB = "db_towerdefense.db";
 
-		// Token: 0x040045D9 RID: 17881
+		// Token: 0x04004BAC RID: 19372
 		private const string FILE = "l.联机塔防活动.xlsx";
 
-		// Token: 0x040045DA RID: 17882
+		// Token: 0x04004BAD RID: 19373
 		private const string TABLE = "TowerDefenceReward";
 
-		// Token: 0x040045DB RID: 17883
+		// Token: 0x04004BAE RID: 19374
 		private const string COMMAND = "select BinData from `TowerDefenceReward` where Id = ?";
 
-		// Token: 0x040045DC RID: 17884
+		// Token: 0x04004BAF RID: 19375
 		private const string KEY_PREFIX = "TowerDefenceRewardById";
 
-		// Token: 0x040045DD RID: 17885
+		// Token: 0x04004BB0 RID: 19376
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040045DE RID: 17886
+		// Token: 0x04004BB1 RID: 19377
 		private static int HandleId;
 	}
 }

@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200289A RID: 10394
+	// Token: 0x02002B6F RID: 11119
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SetWeather : ActionParams
 	{
-		// Token: 0x0600E623 RID: 58915 RVA: 0x0021D1FC File Offset: 0x0021B3FC
-		[NullableContext(1)]
+		// Token: 0x0600F452 RID: 62546 RVA: 0x0023A17C File Offset: 0x0023837C
+		[NullableContext(0)]
 		public static SetWeather Create(ISetWeather? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170046B1 RID: 18097
-		// (get) Token: 0x0600E624 RID: 58916 RVA: 0x0021D21B File Offset: 0x0021B41B
+		// Token: 0x17004A22 RID: 18978
+		// (get) Token: 0x0600F453 RID: 62547 RVA: 0x0023A19B File Offset: 0x0023839B
 		public virtual int WeatherId
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046B2 RID: 18098
-		// (get) Token: 0x0600E625 RID: 58917 RVA: 0x0021D228 File Offset: 0x0021B428
+		// Token: 0x17004A23 RID: 18979
+		// (get) Token: 0x0600F454 RID: 62548 RVA: 0x0023A1A8 File Offset: 0x002383A8
 		public virtual List<int> AreaIds
 		{
 			get
@@ -59,13 +59,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F3C RID: 32572
+		// Token: 0x040085FB RID: 34299
 		private ISetWeather Instance;
 
-		// Token: 0x04007F3D RID: 32573
+		// Token: 0x040085FC RID: 34300
 		private List<int> _AreaIdsCache;
 
-		// Token: 0x04007F3E RID: 32574
+		// Token: 0x040085FD RID: 34301
 		private bool _AreaIdsInited;
 	}
 }

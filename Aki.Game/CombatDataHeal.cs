@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002ED9 RID: 11993
+// Token: 0x0200242C RID: 9260
 public class CombatDataHeal : CombatDataBase
 {
-	// Token: 0x060199F1 RID: 104945 RVA: 0x006A7976 File Offset: 0x006A5B76
+	// Token: 0x060172F0 RID: 94960 RVA: 0x006CDB1A File Offset: 0x006CBD1A
 	public CombatDataHeal(int attackerId, long healId, int healValue, int skillId, int targetId = 0) : base(attackerId, targetId)
 	{
 		this.HealId = healId;
@@ -13,7 +13,7 @@ public class CombatDataHeal : CombatDataBase
 		this.SkillId = skillId;
 	}
 
-	// Token: 0x060199F2 RID: 104946 RVA: 0x006A7998 File Offset: 0x006A5B98
+	// Token: 0x060172F1 RID: 94961 RVA: 0x006CDB3C File Offset: 0x006CBD3C
 	[NullableContext(1)]
 	public override string ParseToString()
 	{
@@ -37,12 +37,12 @@ public class CombatDataHeal : CombatDataBase
 		});
 	}
 
-	// Token: 0x0400BFE2 RID: 49122
+	// Token: 0x0400C37D RID: 50045
 	public readonly long HealId;
 
-	// Token: 0x0400BFE3 RID: 49123
+	// Token: 0x0400C37E RID: 50046
 	public readonly int HealValue;
 
-	// Token: 0x0400BFE4 RID: 49124
+	// Token: 0x0400C37F RID: 50047
 	public readonly int SkillId;
 }

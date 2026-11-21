@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B00 RID: 11008
+// Token: 0x0200207C RID: 8316
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRoleDetailTabView : UiPanelBase
 {
-	// Token: 0x06016E49 RID: 93769 RVA: 0x005CECBC File Offset: 0x005CCEBC
+	// Token: 0x0601487A RID: 84090 RVA: 0x005FB83C File Offset: 0x005F9A3C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class SurvivorsRoleDetailTabView : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016E4A RID: 93770 RVA: 0x005CEDB4 File Offset: 0x005CCFB4
+	// Token: 0x0601487B RID: 84091 RVA: 0x005FB934 File Offset: 0x005F9B34
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRoleDetailTabView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ public class SurvivorsRoleDetailTabView : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016E4B RID: 93771 RVA: 0x005CEDF8 File Offset: 0x005CCFF8
+	// Token: 0x0601487C RID: 84092 RVA: 0x005FB978 File Offset: 0x005F9B78
 	protected override void OnStart()
 	{
 		SurvivorsRoleGainData roleGainData = SurvivorsRogueModel.Instance.GainData.GetRoleGainData();
@@ -63,7 +63,7 @@ public class SurvivorsRoleDetailTabView : UiPanelBase
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x06016E4C RID: 93772 RVA: 0x005CEEB4 File Offset: 0x005CD0B4
+	// Token: 0x0601487D RID: 84093 RVA: 0x005FBA34 File Offset: 0x005F9C34
 	private void RefreshRoleInfo(int survivorsRoleId, int level)
 	{
 		RoleCardItem roleCardItem = this.RoleCardItem;
@@ -79,7 +79,7 @@ public class SurvivorsRoleDetailTabView : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "SurvivorsCombat_Lv", new <>z__ReadOnlySingleElementList<object>(level));
 	}
 
-	// Token: 0x06016E4D RID: 93773 RVA: 0x005CEF08 File Offset: 0x005CD108
+	// Token: 0x0601487E RID: 84094 RVA: 0x005FBA88 File Offset: 0x005F9C88
 	private void RefreshRoleStatus(double hp, double maxHp, double dp)
 	{
 		double num = (maxHp != 0.0) ? (hp / maxHp) : 0.0;
@@ -106,7 +106,7 @@ public class SurvivorsRoleDetailTabView : UiPanelBase
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x06016E4E RID: 93774 RVA: 0x005CEFB4 File Offset: 0x005CD1B4
+	// Token: 0x0601487F RID: 84095 RVA: 0x005FBB34 File Offset: 0x005F9D34
 	private void RefreshSkillInfo(int roleEvolveId)
 	{
 		SurvivorsRoleEvolve? survivorsRoleEvolve = SurvivorsRogueConfig.Instance.GetSurvivorsRoleEvolve(roleEvolveId);
@@ -115,7 +115,7 @@ public class SurvivorsRoleDetailTabView : UiPanelBase
 		base.SetTextureByPath(survivorsRoleEvolve.Value.Icon, base.GetTexture(7), null, null);
 	}
 
-	// Token: 0x06016E4F RID: 93775 RVA: 0x005CF040 File Offset: 0x005CD240
+	// Token: 0x06014880 RID: 84096 RVA: 0x005FBBC0 File Offset: 0x005F9DC0
 	private void RefreshAttributeList(int survivorsRoleId, TMap<EKSC_AttrType, int> attributeMap)
 	{
 		SurvivorsRole? survivorsRole = SurvivorsRogueConfig.Instance.GetSurvivorsRole(survivorsRoleId);
@@ -161,17 +161,17 @@ public class SurvivorsRoleDetailTabView : UiPanelBase
 		this.AttributeScrollView.RefreshByData(list, false, null, false);
 	}
 
-	// Token: 0x06016E50 RID: 93776 RVA: 0x005CF19F File Offset: 0x005CD39F
+	// Token: 0x06014881 RID: 84097 RVA: 0x005FBD1F File Offset: 0x005F9F1F
 	private SurvivorsAttributeItem CreateGridProxy()
 	{
 		return new SurvivorsAttributeItem();
 	}
 
-	// Token: 0x0400AA01 RID: 43521
+	// Token: 0x0400AE07 RID: 44551
 	[Nullable(2)]
 	private RoleCardItem RoleCardItem;
 
-	// Token: 0x0400AA02 RID: 43522
+	// Token: 0x0400AE08 RID: 44552
 	[Nullable(new byte[]
 	{
 		2,

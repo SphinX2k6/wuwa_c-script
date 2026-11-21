@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002C74 RID: 11380
+// Token: 0x020021CD RID: 8653
 public class RoleSpecialCaseConfig : IStaticVariableResetter
 {
-	// Token: 0x06017C46 RID: 97350 RVA: 0x0060B996 File Offset: 0x00609B96
+	// Token: 0x060154B8 RID: 87224 RVA: 0x0063143E File Offset: 0x0062F63E
 	static RoleSpecialCaseConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleSpecialCaseConfig.CreateStaticDefaultValue), new Action(RoleSpecialCaseConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17001FEB RID: 8171
-	// (get) Token: 0x06017C47 RID: 97351 RVA: 0x0060B9B5 File Offset: 0x00609BB5
+	// Token: 0x1700203C RID: 8252
+	// (get) Token: 0x060154B9 RID: 87225 RVA: 0x0063145D File Offset: 0x0062F65D
 	[Nullable(1)]
 	public static IReadOnlyDictionary<int, RoleSpecialCaseData> RoleSpecialCaseMap
 	{
@@ -23,7 +23,7 @@ public class RoleSpecialCaseConfig : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06017C48 RID: 97352 RVA: 0x0060B9BC File Offset: 0x00609BBC
+	// Token: 0x060154BA RID: 87226 RVA: 0x00631464 File Offset: 0x0062F664
 	public static void CreateStaticDefaultValue()
 	{
 		Dictionary<int, RoleSpecialCaseData> dictionary = new Dictionary<int, RoleSpecialCaseData>();
@@ -44,13 +44,13 @@ public class RoleSpecialCaseConfig : IStaticVariableResetter
 		RoleSpecialCaseConfig._roleSpecialCaseMap = dictionary;
 	}
 
-	// Token: 0x06017C49 RID: 97353 RVA: 0x0060BA21 File Offset: 0x00609C21
+	// Token: 0x060154BB RID: 87227 RVA: 0x006314C9 File Offset: 0x0062F6C9
 	public static void ResetStaticDefaultValue()
 	{
 		RoleSpecialCaseConfig._roleSpecialCaseMap = null;
 	}
 
-	// Token: 0x0400B122 RID: 45346
+	// Token: 0x0400B48D RID: 46221
 	[Nullable(new byte[]
 	{
 		2,

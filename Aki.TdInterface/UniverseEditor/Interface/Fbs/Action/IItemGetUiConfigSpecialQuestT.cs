@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069C4 RID: 27076
+	// Token: 0x02007074 RID: 28788
 	public class IItemGetUiConfigSpecialQuestT
 	{
-		// Token: 0x1700C8D1 RID: 51409
-		// (get) Token: 0x0602F4F7 RID: 193783 RVA: 0x0067157F File Offset: 0x0066F77F
-		// (set) Token: 0x0602F4F8 RID: 193784 RVA: 0x00671587 File Offset: 0x0066F787
+		// Token: 0x1700D2D1 RID: 53969
+		// (get) Token: 0x06031EB7 RID: 204471 RVA: 0x006C18D7 File Offset: 0x006BFAD7
+		// (set) Token: 0x06031EB8 RID: 204472 RVA: 0x006C18DF File Offset: 0x006BFADF
 		public EItemGetUiType Type { get; set; }
 
-		// Token: 0x1700C8D2 RID: 51410
-		// (get) Token: 0x0602F4F9 RID: 193785 RVA: 0x00671590 File Offset: 0x0066F790
-		// (set) Token: 0x0602F4FA RID: 193786 RVA: 0x00671598 File Offset: 0x0066F798
+		// Token: 0x1700D2D2 RID: 53970
+		// (get) Token: 0x06031EB9 RID: 204473 RVA: 0x006C18E8 File Offset: 0x006BFAE8
+		// (set) Token: 0x06031EBA RID: 204474 RVA: 0x006C18F0 File Offset: 0x006BFAF0
 		public string Title { get; set; }
 
-		// Token: 0x1700C8D3 RID: 51411
-		// (get) Token: 0x0602F4FB RID: 193787 RVA: 0x006715A1 File Offset: 0x0066F7A1
-		// (set) Token: 0x0602F4FC RID: 193788 RVA: 0x006715A9 File Offset: 0x0066F7A9
+		// Token: 0x1700D2D3 RID: 53971
+		// (get) Token: 0x06031EBB RID: 204475 RVA: 0x006C18F9 File Offset: 0x006BFAF9
+		// (set) Token: 0x06031EBC RID: 204476 RVA: 0x006C1901 File Offset: 0x006BFB01
 		public bool ShowDetail { get; set; }
 
-		// Token: 0x1700C8D4 RID: 51412
-		// (get) Token: 0x0602F4FD RID: 193789 RVA: 0x006715B2 File Offset: 0x0066F7B2
-		// (set) Token: 0x0602F4FE RID: 193790 RVA: 0x006715BA File Offset: 0x0066F7BA
+		// Token: 0x1700D2D4 RID: 53972
+		// (get) Token: 0x06031EBD RID: 204477 RVA: 0x006C190A File Offset: 0x006BFB0A
+		// (set) Token: 0x06031EBE RID: 204478 RVA: 0x006C1912 File Offset: 0x006BFB12
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602F4FF RID: 193791 RVA: 0x006715C3 File Offset: 0x0066F7C3
+		// Token: 0x06031EBF RID: 204479 RVA: 0x006C191B File Offset: 0x006BFB1B
 		public IItemGetUiConfigSpecialQuestT()
 		{
 			this.Type = EItemGetUiType.None;

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048BA RID: 18618
+	// Token: 0x02004D1F RID: 19743
 	public class ITwoDimensionOutlineTreeT
 	{
-		// Token: 0x17008708 RID: 34568
-		// (get) Token: 0x0601D140 RID: 119104 RVA: 0x0041B12F File Offset: 0x0041932F
-		// (set) Token: 0x0601D141 RID: 119105 RVA: 0x0041B137 File Offset: 0x00419337
+		// Token: 0x17008D50 RID: 36176
+		// (get) Token: 0x0601E92D RID: 125229 RVA: 0x004478CB File Offset: 0x00445ACB
+		// (set) Token: 0x0601E92E RID: 125230 RVA: 0x004478D3 File Offset: 0x00445AD3
 		public ITwoDimensionOutlineFolderNodeT Root { get; set; }
 
-		// Token: 0x17008709 RID: 34569
-		// (get) Token: 0x0601D142 RID: 119106 RVA: 0x0041B140 File Offset: 0x00419340
-		// (set) Token: 0x0601D143 RID: 119107 RVA: 0x0041B148 File Offset: 0x00419348
+		// Token: 0x17008D51 RID: 36177
+		// (get) Token: 0x0601E92F RID: 125231 RVA: 0x004478DC File Offset: 0x00445ADC
+		// (set) Token: 0x0601E930 RID: 125232 RVA: 0x004478E4 File Offset: 0x00445AE4
 		public int NextFolderIndex { get; set; }
 
-		// Token: 0x0601D144 RID: 119108 RVA: 0x0041B151 File Offset: 0x00419351
+		// Token: 0x0601E931 RID: 125233 RVA: 0x004478ED File Offset: 0x00445AED
 		public ITwoDimensionOutlineTreeT()
 		{
 			this.Root = null;

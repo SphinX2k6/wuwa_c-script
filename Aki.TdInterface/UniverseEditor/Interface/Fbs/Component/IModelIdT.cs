@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005564 RID: 21860
+	// Token: 0x02005AF6 RID: 23286
 	public class IModelIdT
 	{
-		// Token: 0x1700A17A RID: 41338
-		// (get) Token: 0x06024283 RID: 148099 RVA: 0x004FE820 File Offset: 0x004FCA20
-		// (set) Token: 0x06024284 RID: 148100 RVA: 0x004FE828 File Offset: 0x004FCA28
+		// Token: 0x1700A9F0 RID: 43504
+		// (get) Token: 0x06026428 RID: 156712 RVA: 0x0053E0E4 File Offset: 0x0053C2E4
+		// (set) Token: 0x06026429 RID: 156713 RVA: 0x0053E0EC File Offset: 0x0053C2EC
 		public EModelType Type { get; set; }
 
-		// Token: 0x1700A17B RID: 41339
-		// (get) Token: 0x06024285 RID: 148101 RVA: 0x004FE831 File Offset: 0x004FCA31
-		// (set) Token: 0x06024286 RID: 148102 RVA: 0x004FE839 File Offset: 0x004FCA39
+		// Token: 0x1700A9F1 RID: 43505
+		// (get) Token: 0x0602642A RID: 156714 RVA: 0x0053E0F5 File Offset: 0x0053C2F5
+		// (set) Token: 0x0602642B RID: 156715 RVA: 0x0053E0FD File Offset: 0x0053C2FD
 		public int ModelId { get; set; }
 
-		// Token: 0x06024287 RID: 148103 RVA: 0x004FE842 File Offset: 0x004FCA42
+		// Token: 0x0602642C RID: 156716 RVA: 0x0053E106 File Offset: 0x0053C306
 		public IModelIdT()
 		{
 			this.Type = EModelType.LevelPrefab;

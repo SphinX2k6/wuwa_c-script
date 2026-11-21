@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000F0 RID: 240
+	// Token: 0x020000FF RID: 255
 	public class ConfigBirthDayByMsgId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060005A1 RID: 1441 RVA: 0x000797F8 File Offset: 0x000779F8
+		// Token: 0x060005FB RID: 1531 RVA: 0x0007F15C File Offset: 0x0007D35C
 		static ConfigBirthDayByMsgId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBirthDayByMsgId.CreateStaticDefaultValue), new Action(ConfigBirthDayByMsgId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060005A2 RID: 1442 RVA: 0x00079818 File Offset: 0x00077A18
+		// Token: 0x060005FC RID: 1532 RVA: 0x0007F17C File Offset: 0x0007D37C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBirthDayByMsgId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060005A3 RID: 1443 RVA: 0x00079897 File Offset: 0x00077A97
+		// Token: 0x060005FD RID: 1533 RVA: 0x0007F1FB File Offset: 0x0007D3FB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBirthDayByMsgId.LogPair = null;
 			ConfigBirthDayByMsgId.HandleId = 0;
 		}
 
-		// Token: 0x060005A4 RID: 1444 RVA: 0x000798A5 File Offset: 0x00077AA5
+		// Token: 0x060005FE RID: 1534 RVA: 0x0007F209 File Offset: 0x0007D409
 		public static void Init()
 		{
 			ConfigBirthDayByMsgId.HandleId = ConfigCommon.InitDataStatement(ConfigBirthDayByMsgId.HandleId, "db_birthday.db", "select BinData from `BirthDay` where SendShortMessage=?");
 		}
 
-		// Token: 0x060005A5 RID: 1445 RVA: 0x000798C0 File Offset: 0x00077AC0
+		// Token: 0x060005FF RID: 1535 RVA: 0x0007F224 File Offset: 0x0007D424
 		public static BirthDay? GetConfig(int p0SendShortMessage, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBirthDayByMsgId.HandleId, ConfigBirthDayByMsgId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BirthDay?(rootAsBirthDay);
 		}
 
-		// Token: 0x04000674 RID: 1652
+		// Token: 0x040006DD RID: 1757
 		private const string DB = "db_birthday.db";
 
-		// Token: 0x04000675 RID: 1653
+		// Token: 0x040006DE RID: 1758
 		private const string FILE = "s.生日.xlsx";
 
-		// Token: 0x04000676 RID: 1654
+		// Token: 0x040006DF RID: 1759
 		private const string TABLE = "BirthDay";
 
-		// Token: 0x04000677 RID: 1655
+		// Token: 0x040006E0 RID: 1760
 		private const string COMMAND = "select BinData from `BirthDay` where SendShortMessage=?";
 
-		// Token: 0x04000678 RID: 1656
+		// Token: 0x040006E1 RID: 1761
 		private const string KEY_PREFIX = "BirthDayByMsgId";
 
-		// Token: 0x04000679 RID: 1657
+		// Token: 0x040006E2 RID: 1762
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400067A RID: 1658
+		// Token: 0x040006E3 RID: 1763
 		private static int HandleId;
 	}
 }

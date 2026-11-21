@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F4E RID: 8014
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002187 RID: 8583
 	public class ITalkItemPhoneMessageEmoji : ITalkItemPhoneMessageBase
 	{
-		// Token: 0x0600AE56 RID: 44630 RVA: 0x001918EC File Offset: 0x0018FAEC
+		// Token: 0x0600B928 RID: 47400 RVA: 0x001A78E4 File Offset: 0x001A5AE4
 		private ITalkItemPhoneMessageEmoji_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AE57 RID: 44631 RVA: 0x00191924 File Offset: 0x0018FB24
+		// Token: 0x0600B929 RID: 47401 RVA: 0x001A791C File Offset: 0x001A5B1C
 		public static ITalkItemPhoneMessageEmoji Create([Nullable(2)] ITalkItemPhoneMessageEmoji instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AE58 RID: 44632 RVA: 0x00191937 File Offset: 0x0018FB37
+		// Token: 0x0600B92A RID: 47402 RVA: 0x001A792F File Offset: 0x001A5B2F
 		public static ITalkItemPhoneMessageEmoji CreateFromSetValue([Nullable(2)] ITalkItemPhoneMessageEmoji_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AE59 RID: 44633 RVA: 0x0019194A File Offset: 0x0018FB4A
+		// Token: 0x0600B92B RID: 47403 RVA: 0x001A7942 File Offset: 0x001A5B42
 		public new ITalkItemPhoneMessageEmoji_SetValue ToSetValue()
 		{
 			return new ITalkItemPhoneMessageEmoji_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700358E RID: 13710
-		// (get) Token: 0x0600AE5A RID: 44634 RVA: 0x00191969 File Offset: 0x0018FB69
-		// (set) Token: 0x0600AE5B RID: 44635 RVA: 0x00191994 File Offset: 0x0018FB94
+		// Token: 0x17003859 RID: 14425
+		// (get) Token: 0x0600B92C RID: 47404 RVA: 0x001A7961 File Offset: 0x001A5B61
+		// (set) Token: 0x0600B92D RID: 47405 RVA: 0x001A798C File Offset: 0x001A5B8C
 		public override EPhoneMessageType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700358F RID: 13711
-		// (get) Token: 0x0600AE5C RID: 44636 RVA: 0x001919A2 File Offset: 0x0018FBA2
-		// (set) Token: 0x0600AE5D RID: 44637 RVA: 0x001919CD File Offset: 0x0018FBCD
+		// Token: 0x1700385A RID: 14426
+		// (get) Token: 0x0600B92E RID: 47406 RVA: 0x001A799A File Offset: 0x001A5B9A
+		// (set) Token: 0x0600B92F RID: 47407 RVA: 0x001A79C5 File Offset: 0x001A5BC5
 		public virtual int EmojiId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040068CE RID: 26830
+		// Token: 0x04006EBD RID: 28349
 		[Nullable(2)]
 		protected new ITalkItemPhoneMessageEmoji FbInstance;
 
-		// Token: 0x040068CF RID: 26831
+		// Token: 0x04006EBE RID: 28350
 		[Nullable(2)]
 		protected new ITalkItemPhoneMessageEmoji_SetValue PocoInterface;
 	}

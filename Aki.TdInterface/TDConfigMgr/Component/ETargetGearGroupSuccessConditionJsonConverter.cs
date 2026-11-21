@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A2D RID: 2605
+	// Token: 0x02000AF2 RID: 2802
 	public class ETargetGearGroupSuccessConditionJsonConverter : JsonConverter<ETargetGearGroupSuccessCondition>
 	{
-		// Token: 0x0600397D RID: 14717 RVA: 0x0009478C File Offset: 0x0009298C
+		// Token: 0x06003D55 RID: 15701 RVA: 0x0009D0C0 File Offset: 0x0009B2C0
 		public override ETargetGearGroupSuccessCondition Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ETargetGearGroupSuccessConditionExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600397E RID: 14718 RVA: 0x000947B0 File Offset: 0x000929B0
+		// Token: 0x06003D56 RID: 15702 RVA: 0x0009D0E4 File Offset: 0x0009B2E4
 		public override void Write(Utf8JsonWriter writer, ETargetGearGroupSuccessCondition value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

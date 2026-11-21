@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
+using CSharpScript.Game.Module.LinkedItem;
 using CSharpScript.Game.ServerStorage;
 using CSharpScript.Game.ServerStorage.Container;
 using CSharpScript.Game.Ui;
 using Google.Protobuf.Collections;
 
-// Token: 0x02002299 RID: 8857
+// Token: 0x0200177D RID: 6013
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class MotorcycleDiyModel : ModelBase
 {
-	// Token: 0x06011469 RID: 70761 RVA: 0x00436F28 File Offset: 0x00435128
+	// Token: 0x0600E8FF RID: 59647 RVA: 0x00443B34 File Offset: 0x00441D34
 	protected override bool OnInit()
 	{
 		this.CurUsingStickerDict[EStickerParts.AleftPart] = 0;
@@ -27,7 +27,7 @@ public class MotorcycleDiyModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601146A RID: 70762 RVA: 0x00436F68 File Offset: 0x00435168
+	// Token: 0x0600E900 RID: 59648 RVA: 0x00443B74 File Offset: 0x00441D74
 	private void InitSceneData()
 	{
 		foreach (MotorScene motorScene in MotorDiyConfig.Instance.GetAllMotorSceneList())
@@ -45,7 +45,7 @@ public class MotorcycleDiyModel : ModelBase
 		this.CurSceneId = this.DefaultSceneId;
 	}
 
-	// Token: 0x0601146B RID: 70763 RVA: 0x00436FFC File Offset: 0x004351FC
+	// Token: 0x0600E901 RID: 59649 RVA: 0x00443C08 File Offset: 0x00441E08
 	private void AddMotorOutlookItemList(Dictionary<int, int> dataMap)
 	{
 		List<AddCountItemInfo> list = new List<AddCountItemInfo>();
@@ -60,7 +60,7 @@ public class MotorcycleDiyModel : ModelBase
 		ItemHintModel.Instance.MainInterfaceInsertItemRewardInfo(list.ToArray());
 	}
 
-	// Token: 0x0601146C RID: 70764 RVA: 0x00437088 File Offset: 0x00435288
+	// Token: 0x0600E902 RID: 59650 RVA: 0x00443C94 File Offset: 0x00441E94
 	private void InitRedDotInfo()
 	{
 		if (this.RedDotCache != null)
@@ -70,7 +70,7 @@ public class MotorcycleDiyModel : ModelBase
 		this.RedDotCache = (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.MotorDiyNewUnlockId) as ServerStorageSet);
 	}
 
-	// Token: 0x0601146D RID: 70765 RVA: 0x004370AA File Offset: 0x004352AA
+	// Token: 0x0600E903 RID: 59651 RVA: 0x00443CB6 File Offset: 0x00441EB6
 	private void TryInitSceneRedDotInfo()
 	{
 		if (this.SceneRedDotCache != null)
@@ -80,7 +80,7 @@ public class MotorcycleDiyModel : ModelBase
 		this.SceneRedDotCache = (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.MotorSceneHadCheck) as ServerStorageSet);
 	}
 
-	// Token: 0x0601146E RID: 70766 RVA: 0x004370CC File Offset: 0x004352CC
+	// Token: 0x0600E904 RID: 59652 RVA: 0x00443CD8 File Offset: 0x00441ED8
 	private void CheckLocalSaveItemIds(EOutlookType outlookType, List<int> itemIds, bool isSkin = false)
 	{
 		object obj = null;
@@ -133,7 +133,7 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601146F RID: 70767 RVA: 0x00437284 File Offset: 0x00435484
+	// Token: 0x0600E905 RID: 59653 RVA: 0x00443E90 File Offset: 0x00442090
 	private void UpdateOwnedOutlookInfo(MotorOutlookOwnedPb ownedOutlookData)
 	{
 		if (ownedOutlookData.SkinOwned != null)
@@ -154,7 +154,7 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011470 RID: 70768 RVA: 0x004372F8 File Offset: 0x004354F8
+	// Token: 0x0600E906 RID: 59654 RVA: 0x00443F04 File Offset: 0x00442104
 	[NullableContext(2)]
 	private void UpdateRedDotInfo(IList<int> skinOwned, IList<int> stickerOwned, IList<int> frameOwned, IList<int> decorationsOwned)
 	{
@@ -176,7 +176,7 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011471 RID: 70769 RVA: 0x00437370 File Offset: 0x00435570
+	// Token: 0x0600E907 RID: 59655 RVA: 0x00443F7C File Offset: 0x0044217C
 	private void UpdateEquippedOutlookInfo(MotorOutlookEquippedPb equippedOutlookData)
 	{
 		int curSkinId = this.CurSkinId;
@@ -209,7 +209,7 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011472 RID: 70770 RVA: 0x00437430 File Offset: 0x00435630
+	// Token: 0x0600E908 RID: 59656 RVA: 0x0044403C File Offset: 0x0044223C
 	public void UpdateSkinSuitInfo(IList<MotorOutlookEquippedPb> skinSuitDataList)
 	{
 		foreach (MotorOutlookEquippedPb motorOutlookEquippedPb in skinSuitDataList)
@@ -217,26 +217,25 @@ public class MotorcycleDiyModel : ModelBase
 			if (motorOutlookEquippedPb != null)
 			{
 				int skinEquipped = motorOutlookEquippedPb.SkinEquipped;
-				MotorcycleDiySkinEquipRecord motorcycleDiySkinEquipRecord = new MotorcycleDiySkinEquipRecord();
-				motorcycleDiySkinEquipRecord.FrameId = motorOutlookEquippedPb.FrameEquipped;
-				RepeatedField<int> stickerEquipped = motorOutlookEquippedPb.StickerEquipped;
-				motorcycleDiySkinEquipRecord.StickerIds = (((stickerEquipped != null) ? stickerEquipped.ToArray<int>() : null) ?? Array.Empty<int>());
-				RepeatedField<int> decorationsEquipped = motorOutlookEquippedPb.DecorationsEquipped;
-				motorcycleDiySkinEquipRecord.DecorateIds = (((decorationsEquipped != null) ? decorationsEquipped.ToArray<int>() : null) ?? Array.Empty<int>());
-				MotorcycleDiySkinEquipRecord value = motorcycleDiySkinEquipRecord;
+				MotorcycleDiySkinEquipRecord value = new MotorcycleDiySkinEquipRecord
+				{
+					FrameId = motorOutlookEquippedPb.FrameEquipped,
+					StickerIds = MotorcycleDiyModel.ToIntArrayOrEmpty(motorOutlookEquippedPb.StickerEquipped),
+					DecorateIds = MotorcycleDiyModel.ToIntArrayOrEmpty(motorOutlookEquippedPb.DecorationsEquipped)
+				};
 				this.SkinSuitDict[skinEquipped] = value;
 			}
 		}
 	}
 
-	// Token: 0x06011473 RID: 70771 RVA: 0x004374DC File Offset: 0x004356DC
+	// Token: 0x0600E909 RID: 59657 RVA: 0x004440C8 File Offset: 0x004422C8
 	public void InitCustomPresetInfo(MotorOutlookPlayerPresetPb playerPreset)
 	{
 		this.CustomPresetDataList.Clear();
 		this.UpdateCustomPresetInfo(playerPreset);
 	}
 
-	// Token: 0x06011474 RID: 70772 RVA: 0x004374F0 File Offset: 0x004356F0
+	// Token: 0x0600E90A RID: 59658 RVA: 0x004440DC File Offset: 0x004422DC
 	public void UpdateCustomPresetInfo(MotorOutlookPlayerPresetPb playerPreset)
 	{
 		RepeatedField<MotorOutlookPresetPlanPb> plan = playerPreset.Plan;
@@ -250,13 +249,13 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011475 RID: 70773 RVA: 0x00437544 File Offset: 0x00435744
+	// Token: 0x0600E90B RID: 59659 RVA: 0x00444130 File Offset: 0x00442330
 	public void RemoveSingleCustomPresetInfo(int presetId)
 	{
 		this.CustomPresetDataList.RemoveAll((MotorcycleDiyPresetData preset) => preset.CustomId == presetId);
 	}
 
-	// Token: 0x06011476 RID: 70774 RVA: 0x00437578 File Offset: 0x00435778
+	// Token: 0x0600E90C RID: 59660 RVA: 0x00444164 File Offset: 0x00442364
 	public void UpdateSingleCustomPresetInfo(MotorOutlookPresetPlanPb presetPlan)
 	{
 		int customPresetId = presetPlan.Id;
@@ -274,17 +273,13 @@ public class MotorcycleDiyModel : ModelBase
 		if (preset2 != null)
 		{
 			motorcycleDiyPresetData.SkinId = preset2.SkinEquipped;
-			MotorcycleDiyPresetData motorcycleDiyPresetData2 = motorcycleDiyPresetData;
-			RepeatedField<int> stickerEquipped = preset2.StickerEquipped;
-			motorcycleDiyPresetData2.StickerIds = (((stickerEquipped != null) ? stickerEquipped.ToArray<int>() : null) ?? Array.Empty<int>());
-			MotorcycleDiyPresetData motorcycleDiyPresetData3 = motorcycleDiyPresetData;
-			RepeatedField<int> decorationsEquipped = preset2.DecorationsEquipped;
-			motorcycleDiyPresetData3.DecorateIds = (((decorationsEquipped != null) ? decorationsEquipped.ToArray<int>() : null) ?? Array.Empty<int>());
+			motorcycleDiyPresetData.StickerIds = MotorcycleDiyModel.ToIntArrayOrEmpty(preset2.StickerEquipped);
+			motorcycleDiyPresetData.DecorateIds = MotorcycleDiyModel.ToIntArrayOrEmpty(preset2.DecorationsEquipped);
 			motorcycleDiyPresetData.FrameId = preset2.FrameEquipped;
 		}
 	}
 
-	// Token: 0x06011477 RID: 70775 RVA: 0x0043764C File Offset: 0x0043584C
+	// Token: 0x0600E90D RID: 59661 RVA: 0x00444218 File Offset: 0x00442418
 	public void UpdateMotorCanUseOutlookInfo(MotorOutlookRegionInfoNotify message)
 	{
 		if (message != null && message.MotorOutlookRegion != null)
@@ -320,7 +315,7 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011478 RID: 70776 RVA: 0x004377CC File Offset: 0x004359CC
+	// Token: 0x0600E90E RID: 59662 RVA: 0x00444398 File Offset: 0x00442598
 	private void UpdateSceneInUse(int? sceneInUse)
 	{
 		if (sceneInUse != null && sceneInUse.Value > 0)
@@ -329,7 +324,7 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011479 RID: 70777 RVA: 0x004377F0 File Offset: 0x004359F0
+	// Token: 0x0600E90F RID: 59663 RVA: 0x004443BC File Offset: 0x004425BC
 	public void UpdateMotorOutlookInfo(MotorOutlookInfoResponse message)
 	{
 		if (message != null && message.MotorOutlook != null)
@@ -360,7 +355,7 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601147A RID: 70778 RVA: 0x00437870 File Offset: 0x00435A70
+	// Token: 0x0600E910 RID: 59664 RVA: 0x0044443C File Offset: 0x0044263C
 	public void AddMotorOutlookInfo(MotorOutlookAddNotify message)
 	{
 		if (message != null)
@@ -412,7 +407,7 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601147B RID: 70779 RVA: 0x004379F8 File Offset: 0x00435BF8
+	// Token: 0x0600E911 RID: 59665 RVA: 0x004445C4 File Offset: 0x004427C4
 	public void UpdateMotorOutlookOwnedChange(MotorOutlookOwnedChangeNotify message)
 	{
 		MotorOutlookOwnedPb motorOutlookOwned = message.MotorOutlookOwned;
@@ -422,7 +417,7 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601147C RID: 70780 RVA: 0x00437A18 File Offset: 0x00435C18
+	// Token: 0x0600E912 RID: 59666 RVA: 0x004445E4 File Offset: 0x004427E4
 	public void UpdateMotorOutlookEquippedChange(MotorOutlookEquippedChangeNotify message)
 	{
 		MotorOutlookEquippedPb motorOutlookEquipped = message.MotorOutlookEquipped;
@@ -437,7 +432,7 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601147D RID: 70781 RVA: 0x00437A48 File Offset: 0x00435C48
+	// Token: 0x0600E913 RID: 59667 RVA: 0x00444614 File Offset: 0x00442814
 	public void UpdateMotorOutlookFullChange(MotorOutlookFullChangeNotify message)
 	{
 		MotorOutlookPb motorOutlook = message.MotorOutlook;
@@ -463,7 +458,7 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601147E RID: 70782 RVA: 0x00437AC0 File Offset: 0x00435CC0
+	// Token: 0x0600E914 RID: 59668 RVA: 0x0044468C File Offset: 0x0044288C
 	public List<UiDynamicTab> GetMotorDiyTabList(EUiViewName viewName)
 	{
 		List<UiDynamicTab> viewTabList = DynamicTabConfig.Instance.GetViewTabList(viewName);
@@ -480,7 +475,7 @@ public class MotorcycleDiyModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0601147F RID: 70783 RVA: 0x00437B1C File Offset: 0x00435D1C
+	// Token: 0x0600E915 RID: 59669 RVA: 0x004446E8 File Offset: 0x004428E8
 	public int GetDefaultFrameId()
 	{
 		if (this.DefaultFrameId == 0)
@@ -498,7 +493,7 @@ public class MotorcycleDiyModel : ModelBase
 		return this.DefaultFrameId;
 	}
 
-	// Token: 0x06011480 RID: 70784 RVA: 0x00437BA8 File Offset: 0x00435DA8
+	// Token: 0x0600E916 RID: 59670 RVA: 0x00444774 File Offset: 0x00442974
 	public List<int> GetDefaultStickerIdList()
 	{
 		List<int> list = new List<int>();
@@ -509,7 +504,7 @@ public class MotorcycleDiyModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06011481 RID: 70785 RVA: 0x00437BDC File Offset: 0x00435DDC
+	// Token: 0x0600E917 RID: 59671 RVA: 0x004447A8 File Offset: 0x004429A8
 	public List<int> GetDefaultDecorationIdList()
 	{
 		List<int> list = new List<int>();
@@ -520,7 +515,7 @@ public class MotorcycleDiyModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06011482 RID: 70786 RVA: 0x00437C10 File Offset: 0x00435E10
+	// Token: 0x0600E918 RID: 59672 RVA: 0x004447DC File Offset: 0x004429DC
 	public List<MotorcycleDiyPresetData> GetAllPresetDataList(bool isCustom = false)
 	{
 		List<MotorcycleDiyPresetData> list = new List<MotorcycleDiyPresetData>();
@@ -535,8 +530,8 @@ public class MotorcycleDiyModel : ModelBase
 				if (motorLoadProject.Show)
 				{
 					int frame = motorLoadProject.Frame;
-					List<int> list2 = (motorLoadProject.GetStickerArray() ?? Array.Empty<int>()).ToList<int>();
-					List<int> list3 = (motorLoadProject.GetDecorationsArray() ?? Array.Empty<int>()).ToList<int>();
+					List<int> list2 = new List<int>(motorLoadProject.GetStickerArray() ?? Array.Empty<int>());
+					List<int> list3 = new List<int>(motorLoadProject.GetDecorationsArray() ?? Array.Empty<int>());
 					if (list2.Count == 0)
 					{
 						list2 = this.GetDefaultStickerIdList();
@@ -587,7 +582,7 @@ public class MotorcycleDiyModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06011483 RID: 70787 RVA: 0x00437E18 File Offset: 0x00436018
+	// Token: 0x0600E919 RID: 59673 RVA: 0x004449E4 File Offset: 0x00442BE4
 	public EOutLookState GetItemState(EOutlookType outlookType, int itemId)
 	{
 		List<int> list = new List<int>();
@@ -643,7 +638,7 @@ public class MotorcycleDiyModel : ModelBase
 		return EOutLookState.CanEquipped;
 	}
 
-	// Token: 0x06011484 RID: 70788 RVA: 0x00437F54 File Offset: 0x00436154
+	// Token: 0x0600E91A RID: 59674 RVA: 0x00444B20 File Offset: 0x00442D20
 	public void CollectRedDotOnViewOpen(EOutlookType outlookType, int? part = null)
 	{
 		this.RedDotOnViewOpenCache.Clear();
@@ -704,7 +699,7 @@ public class MotorcycleDiyModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.MotorDiyInfoRedDotUpdate);
 	}
 
-	// Token: 0x06011485 RID: 70789 RVA: 0x00438100 File Offset: 0x00436300
+	// Token: 0x0600E91B RID: 59675 RVA: 0x00444CCC File Offset: 0x00442ECC
 	public void CheckRedDotForAnyItem(int itemId)
 	{
 		if (this.RedDotCache.Has(itemId))
@@ -714,19 +709,19 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011486 RID: 70790 RVA: 0x0043812C File Offset: 0x0043632C
+	// Token: 0x0600E91C RID: 59676 RVA: 0x00444CF8 File Offset: 0x00442EF8
 	public bool CheckRedDotInViewOpenCache(int id)
 	{
 		return this.RedDotOnViewOpenCache.Contains(id);
 	}
 
-	// Token: 0x06011487 RID: 70791 RVA: 0x0043813A File Offset: 0x0043633A
+	// Token: 0x0600E91D RID: 59677 RVA: 0x00444D06 File Offset: 0x00442F06
 	public void RemoveRedDotInViewOpenCache(int id)
 	{
 		this.RedDotOnViewOpenCache.Remove(id);
 	}
 
-	// Token: 0x06011488 RID: 70792 RVA: 0x0043814C File Offset: 0x0043634C
+	// Token: 0x0600E91E RID: 59678 RVA: 0x00444D18 File Offset: 0x00442F18
 	private IMotorDiyItemGroupConfigInfo GetItemGroupConfigInfo(EOutlookType outlookType, int itemId)
 	{
 		MotorDiyItemGroupConfigInfo motorDiyItemGroupConfigInfo = new MotorDiyItemGroupConfigInfo();
@@ -769,7 +764,7 @@ public class MotorcycleDiyModel : ModelBase
 		return motorDiyItemGroupConfigInfo;
 	}
 
-	// Token: 0x06011489 RID: 70793 RVA: 0x0043824C File Offset: 0x0043644C
+	// Token: 0x0600E91F RID: 59679 RVA: 0x00444E18 File Offset: 0x00443018
 	private bool CheckIsBan(EOutlookType outlookType, int itemId)
 	{
 		MotorcycleDiyModel.<>c__DisplayClass59_0 CS$<>8__locals1;
@@ -805,7 +800,7 @@ public class MotorcycleDiyModel : ModelBase
 		return this.<CheckIsBan>g__isConflict|59_0(EOutlookType.Frame, this.SelectedFrameId, null, ref CS$<>8__locals1);
 	}
 
-	// Token: 0x0601148A RID: 70794 RVA: 0x004383D8 File Offset: 0x004365D8
+	// Token: 0x0600E920 RID: 59680 RVA: 0x00444FA4 File Offset: 0x004431A4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -849,30 +844,46 @@ public class MotorcycleDiyModel : ModelBase
 		return new ValueTuple<string, string>?(new ValueTuple<string, string>(item, CS$<>8__locals1.banItemName));
 	}
 
-	// Token: 0x0601148B RID: 70795 RVA: 0x004385A8 File Offset: 0x004367A8
+	// Token: 0x0600E921 RID: 59681 RVA: 0x00445174 File Offset: 0x00443374
 	public List<int> GetSelectedItemIdList(EOutlookType outlookType, bool checkHasItem = false)
 	{
 		List<int> list = new List<int>();
-		List<int> list2 = new List<int>();
+		int[] array = Array.Empty<int>();
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
 		Dictionary<int, int> dictionary2 = new Dictionary<int, int>();
 		Func<int, bool> func = (int id) => false;
 		switch (outlookType)
 		{
 		case EOutlookType.Sticker:
-			list2 = MotorcycleDiyDefine.MOTORCYCLE_DIY_STICKER_PART.ToList<int>();
-			dictionary = this.SelectedStickerDict.ToDictionary((KeyValuePair<EStickerParts, int> kvp) => (int)kvp.Key, (KeyValuePair<EStickerParts, int> kvp) => kvp.Value);
-			dictionary2 = this.CurUsingStickerDict.ToDictionary((KeyValuePair<EStickerParts, int> kvp) => (int)kvp.Key, (KeyValuePair<EStickerParts, int> kvp) => kvp.Value);
+			array = MotorcycleDiyDefine.MOTORCYCLE_DIY_STICKER_PART;
+			dictionary = new Dictionary<int, int>(this.SelectedStickerDict.Count);
+			foreach (KeyValuePair<EStickerParts, int> keyValuePair in this.SelectedStickerDict)
+			{
+				dictionary[(int)keyValuePair.Key] = keyValuePair.Value;
+			}
+			dictionary2 = new Dictionary<int, int>(this.CurUsingStickerDict.Count);
+			foreach (KeyValuePair<EStickerParts, int> keyValuePair2 in this.CurUsingStickerDict)
+			{
+				dictionary2[(int)keyValuePair2.Key] = keyValuePair2.Value;
+			}
 			func = new Func<int, bool>(this.HasSticker);
 			break;
 		case EOutlookType.Decoration:
-			list2 = MotorcycleDiyDefine.MOTORCYCLE_DIY_DECORATION_PART.ToList<int>();
-			dictionary = this.SelectedDecorationDict.ToDictionary((KeyValuePair<EDecorationParts, int> kvp) => (int)kvp.Key, (KeyValuePair<EDecorationParts, int> kvp) => kvp.Value);
-			dictionary2 = this.CurUsingDecorationDict.ToDictionary((KeyValuePair<EDecorationParts, int> kvp) => (int)kvp.Key, (KeyValuePair<EDecorationParts, int> kvp) => kvp.Value);
+			array = MotorcycleDiyDefine.MOTORCYCLE_DIY_DECORATION_PART;
+			dictionary = new Dictionary<int, int>(this.SelectedDecorationDict.Count);
+			foreach (KeyValuePair<EDecorationParts, int> keyValuePair3 in this.SelectedDecorationDict)
+			{
+				dictionary[(int)keyValuePair3.Key] = keyValuePair3.Value;
+			}
+			dictionary2 = new Dictionary<int, int>(this.CurUsingDecorationDict.Count);
+			foreach (KeyValuePair<EDecorationParts, int> keyValuePair4 in this.CurUsingDecorationDict)
+			{
+				dictionary2[(int)keyValuePair4.Key] = keyValuePair4.Value;
+			}
 			func = new Func<int, bool>(this.HasDecoration);
 			break;
 		}
-		foreach (int key in list2)
+		foreach (int key in array)
 		{
 			int valueOrDefault = dictionary.GetValueOrDefault(key, 0);
 			if (checkHasItem)
@@ -895,24 +906,43 @@ public class MotorcycleDiyModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0601148C RID: 70796 RVA: 0x004387E8 File Offset: 0x004369E8
+	// Token: 0x0600E922 RID: 59682 RVA: 0x004453EC File Offset: 0x004435EC
 	private List<int> GetEquippedItemIdList(EOutlookType outlookType)
 	{
 		List<int> list = new List<int>();
-		List<int> list2 = new List<int>();
+		int[] array = Array.Empty<int>();
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
 		switch (outlookType)
 		{
+		case EOutlookType.None:
+		case EOutlookType.Frame:
+			goto IL_E4;
 		case EOutlookType.Sticker:
-			list2 = MotorcycleDiyDefine.MOTORCYCLE_DIY_STICKER_PART.ToList<int>();
-			dictionary = this.CurUsingStickerDict.ToDictionary((KeyValuePair<EStickerParts, int> kvp) => (int)kvp.Key, (KeyValuePair<EStickerParts, int> kvp) => kvp.Value);
+			array = MotorcycleDiyDefine.MOTORCYCLE_DIY_STICKER_PART;
+			dictionary = new Dictionary<int, int>(this.CurUsingStickerDict.Count);
+			using (Dictionary<EStickerParts, int>.Enumerator enumerator = this.CurUsingStickerDict.GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					KeyValuePair<EStickerParts, int> keyValuePair = enumerator.Current;
+					dictionary[(int)keyValuePair.Key] = keyValuePair.Value;
+				}
+				goto IL_E4;
+			}
 			break;
 		case EOutlookType.Decoration:
-			list2 = MotorcycleDiyDefine.MOTORCYCLE_DIY_DECORATION_PART.ToList<int>();
-			dictionary = this.CurUsingDecorationDict.ToDictionary((KeyValuePair<EDecorationParts, int> kvp) => (int)kvp.Key, (KeyValuePair<EDecorationParts, int> kvp) => kvp.Value);
 			break;
+		default:
+			goto IL_E4;
 		}
-		foreach (int key in list2)
+		array = MotorcycleDiyDefine.MOTORCYCLE_DIY_DECORATION_PART;
+		dictionary = new Dictionary<int, int>(this.CurUsingDecorationDict.Count);
+		foreach (KeyValuePair<EDecorationParts, int> keyValuePair2 in this.CurUsingDecorationDict)
+		{
+			dictionary[(int)keyValuePair2.Key] = keyValuePair2.Value;
+		}
+		IL_E4:
+		foreach (int key in array)
 		{
 			int item = dictionary.ContainsKey(key) ? dictionary[key] : 0;
 			list.Add(item);
@@ -920,7 +950,7 @@ public class MotorcycleDiyModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0601148D RID: 70797 RVA: 0x0043892C File Offset: 0x00436B2C
+	// Token: 0x0600E923 RID: 59683 RVA: 0x00445538 File Offset: 0x00443738
 	public int GetSelectedItemId(EOutlookType outlookType, int? part = null)
 	{
 		int result = 0;
@@ -939,7 +969,7 @@ public class MotorcycleDiyModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0601148E RID: 70798 RVA: 0x004389C8 File Offset: 0x00436BC8
+	// Token: 0x0600E924 RID: 59684 RVA: 0x004455D4 File Offset: 0x004437D4
 	public int GetEquippedItemId(EOutlookType outlookType, int part)
 	{
 		int result = 0;
@@ -955,7 +985,7 @@ public class MotorcycleDiyModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0601148F RID: 70799 RVA: 0x00438A30 File Offset: 0x00436C30
+	// Token: 0x0600E925 RID: 59685 RVA: 0x0044563C File Offset: 0x0044383C
 	public void ResetSelectedItemInfo()
 	{
 		this.SelectedStickerDict.Clear();
@@ -971,20 +1001,20 @@ public class MotorcycleDiyModel : ModelBase
 		this.SelectedFrameId = this.CurFrameId;
 	}
 
-	// Token: 0x06011490 RID: 70800 RVA: 0x00438B0C File Offset: 0x00436D0C
+	// Token: 0x0600E926 RID: 59686 RVA: 0x00445718 File Offset: 0x00443918
 	public bool RedDotHasNewItemByAnyPart(EOutlookType outlookType)
 	{
-		List<int> list = new List<int>();
+		int[] array = Array.Empty<int>();
 		switch (outlookType)
 		{
 		case EOutlookType.Sticker:
-			list = MotorcycleDiyDefine.MOTORCYCLE_DIY_STICKER_PART.ToList<int>();
+			array = MotorcycleDiyDefine.MOTORCYCLE_DIY_STICKER_PART;
 			break;
 		case EOutlookType.Decoration:
-			list = MotorcycleDiyDefine.MOTORCYCLE_DIY_DECORATION_PART.ToList<int>();
+			array = MotorcycleDiyDefine.MOTORCYCLE_DIY_DECORATION_PART;
 			break;
 		}
-		foreach (int part in list)
+		foreach (int part in array)
 		{
 			if (this.RedDotHasNewItemByPart(outlookType, part))
 			{
@@ -994,7 +1024,7 @@ public class MotorcycleDiyModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06011491 RID: 70801 RVA: 0x00438B9C File Offset: 0x00436D9C
+	// Token: 0x0600E927 RID: 59687 RVA: 0x00445774 File Offset: 0x00443974
 	public bool RedDotHasNewItemByPart(EOutlookType outlookType, int part)
 	{
 		List<int> list = new List<int>();
@@ -1041,25 +1071,25 @@ public class MotorcycleDiyModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06011492 RID: 70802 RVA: 0x00438D10 File Offset: 0x00436F10
+	// Token: 0x0600E928 RID: 59688 RVA: 0x004458E8 File Offset: 0x00443AE8
 	public List<int> GetCanUseStickerIdsInRegion()
 	{
-		return this.CurCanUseStickerIds;
+		return this.CurCanUseStickerIds.FindAll((int id) => !LinkedItemConfig.Instance.ShouldHide(id, this.HasSticker(id)));
 	}
 
-	// Token: 0x06011493 RID: 70803 RVA: 0x00438D18 File Offset: 0x00436F18
+	// Token: 0x0600E929 RID: 59689 RVA: 0x00445901 File Offset: 0x00443B01
 	public List<int> GetCanUseFrameIdsInRegion()
 	{
 		return this.CurCanUseFrameIds;
 	}
 
-	// Token: 0x06011494 RID: 70804 RVA: 0x00438D20 File Offset: 0x00436F20
+	// Token: 0x0600E92A RID: 59690 RVA: 0x00445909 File Offset: 0x00443B09
 	public List<int> GetCanUseDecorationsIdsInRegion()
 	{
 		return this.CurCanUseDecorationsIds;
 	}
 
-	// Token: 0x06011495 RID: 70805 RVA: 0x00438D28 File Offset: 0x00436F28
+	// Token: 0x0600E92B RID: 59691 RVA: 0x00445914 File Offset: 0x00443B14
 	public bool IsRegionItemInOpenTime(int itemId)
 	{
 		long num2;
@@ -1067,31 +1097,31 @@ public class MotorcycleDiyModel : ModelBase
 		return (long)TimeUtil.Instance.GetServerTime() >= num;
 	}
 
-	// Token: 0x06011496 RID: 70806 RVA: 0x00438D5C File Offset: 0x00436F5C
+	// Token: 0x0600E92C RID: 59692 RVA: 0x00445948 File Offset: 0x00443B48
 	public int GetEquippedSkinId()
 	{
 		return this.CurSkinId;
 	}
 
-	// Token: 0x06011497 RID: 70807 RVA: 0x00438D64 File Offset: 0x00436F64
+	// Token: 0x0600E92D RID: 59693 RVA: 0x00445950 File Offset: 0x00443B50
 	public int GetCurrentSceneId()
 	{
 		return this.CurSceneId;
 	}
 
-	// Token: 0x06011498 RID: 70808 RVA: 0x00438D6C File Offset: 0x00436F6C
+	// Token: 0x0600E92E RID: 59694 RVA: 0x00445958 File Offset: 0x00443B58
 	public void SetCurrentSceneId(int sceneId)
 	{
 		this.CurSceneId = sceneId;
 	}
 
-	// Token: 0x06011499 RID: 70809 RVA: 0x00438D75 File Offset: 0x00436F75
+	// Token: 0x0600E92F RID: 59695 RVA: 0x00445961 File Offset: 0x00443B61
 	public List<int> GetMotorSceneIdList()
 	{
 		return this.SceneIdList;
 	}
 
-	// Token: 0x0601149A RID: 70810 RVA: 0x00438D80 File Offset: 0x00436F80
+	// Token: 0x0600E930 RID: 59696 RVA: 0x0044596C File Offset: 0x00443B6C
 	public bool HasScene(int sceneId)
 	{
 		if (sceneId <= 0)
@@ -1106,7 +1136,7 @@ public class MotorcycleDiyModel : ModelBase
 		return motorSceneConfig != null && InventoryModel.Instance.GetItemCountByConfigId(motorSceneConfig.Value.UnlockItem, 0) > 0;
 	}
 
-	// Token: 0x0601149B RID: 70811 RVA: 0x00438DD2 File Offset: 0x00436FD2
+	// Token: 0x0600E931 RID: 59697 RVA: 0x004459BE File Offset: 0x00443BBE
 	public bool RedDotHasNewScene(int sceneId)
 	{
 		if (sceneId == this.DefaultSceneId)
@@ -1121,7 +1151,7 @@ public class MotorcycleDiyModel : ModelBase
 		return this.SceneRedDotCache == null || !this.SceneRedDotCache.Has(sceneId);
 	}
 
-	// Token: 0x0601149C RID: 70812 RVA: 0x00438E0C File Offset: 0x0043700C
+	// Token: 0x0600E932 RID: 59698 RVA: 0x004459F8 File Offset: 0x00443BF8
 	public bool RedDotHasAnyNewScene()
 	{
 		foreach (int sceneId in this.SceneIdList)
@@ -1134,7 +1164,7 @@ public class MotorcycleDiyModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0601149D RID: 70813 RVA: 0x00438E68 File Offset: 0x00437068
+	// Token: 0x0600E933 RID: 59699 RVA: 0x00445A54 File Offset: 0x00443C54
 	public void RecordHadCheckNewScene(int sceneId)
 	{
 		if (sceneId == this.DefaultSceneId)
@@ -1154,13 +1184,13 @@ public class MotorcycleDiyModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.MotorDiySceneItemUpdate);
 	}
 
-	// Token: 0x0601149E RID: 70814 RVA: 0x00438EA6 File Offset: 0x004370A6
+	// Token: 0x0600E934 RID: 59700 RVA: 0x00445A92 File Offset: 0x00443C92
 	public bool IsSceneItemId(int itemId)
 	{
 		return this.SceneItemIdSet.Contains(itemId);
 	}
 
-	// Token: 0x0601149F RID: 70815 RVA: 0x00438EB4 File Offset: 0x004370B4
+	// Token: 0x0600E935 RID: 59701 RVA: 0x00445AA0 File Offset: 0x00443CA0
 	public bool IsEquipDefaultSkin()
 	{
 		if (this.CurSkinId <= 0)
@@ -1176,7 +1206,7 @@ public class MotorcycleDiyModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060114A0 RID: 70816 RVA: 0x00438EFC File Offset: 0x004370FC
+	// Token: 0x0600E936 RID: 59702 RVA: 0x00445AE8 File Offset: 0x00443CE8
 	[NullableContext(2)]
 	public MotorcycleDiySkinEquipRecord GetSkinSuitRecord(int skinId)
 	{
@@ -1200,49 +1230,49 @@ public class MotorcycleDiyModel : ModelBase
 		return motorcycleDiySkinEquipRecord;
 	}
 
-	// Token: 0x060114A1 RID: 70817 RVA: 0x00438F85 File Offset: 0x00437185
+	// Token: 0x0600E937 RID: 59703 RVA: 0x00445B71 File Offset: 0x00443D71
 	public bool HasSkin(int skinId)
 	{
 		return this.OwnedSkinIds.Contains(skinId);
 	}
 
-	// Token: 0x060114A2 RID: 70818 RVA: 0x00438F93 File Offset: 0x00437193
+	// Token: 0x0600E938 RID: 59704 RVA: 0x00445B7F File Offset: 0x00443D7F
 	public EOutLookState GetFrameState(int frameId)
 	{
 		return this.GetItemState(EOutlookType.Frame, frameId);
 	}
 
-	// Token: 0x060114A3 RID: 70819 RVA: 0x00438F9D File Offset: 0x0043719D
+	// Token: 0x0600E939 RID: 59705 RVA: 0x00445B89 File Offset: 0x00443D89
 	public int GetSelectedFrameId()
 	{
 		return this.SelectedFrameId;
 	}
 
-	// Token: 0x060114A4 RID: 70820 RVA: 0x00438FA5 File Offset: 0x004371A5
+	// Token: 0x0600E93A RID: 59706 RVA: 0x00445B91 File Offset: 0x00443D91
 	public int GetEquippedFrameId()
 	{
 		return this.CurFrameId;
 	}
 
-	// Token: 0x060114A5 RID: 70821 RVA: 0x00438FAD File Offset: 0x004371AD
+	// Token: 0x0600E93B RID: 59707 RVA: 0x00445B99 File Offset: 0x00443D99
 	public void SetSelectFrame(int frameId)
 	{
 		this.SelectedFrameId = frameId;
 	}
 
-	// Token: 0x060114A6 RID: 70822 RVA: 0x00438FB6 File Offset: 0x004371B6
+	// Token: 0x0600E93C RID: 59708 RVA: 0x00445BA2 File Offset: 0x00443DA2
 	public bool HasFrame(int frameId)
 	{
 		return this.OwnedFrameIds.Contains(frameId);
 	}
 
-	// Token: 0x060114A7 RID: 70823 RVA: 0x00438FC4 File Offset: 0x004371C4
+	// Token: 0x0600E93D RID: 59709 RVA: 0x00445BB0 File Offset: 0x00443DB0
 	public bool IsBanFrame(int frameId)
 	{
 		return this.CheckIsBan(EOutlookType.Frame, frameId);
 	}
 
-	// Token: 0x060114A8 RID: 70824 RVA: 0x00438FD0 File Offset: 0x004371D0
+	// Token: 0x0600E93E RID: 59710 RVA: 0x00445BBC File Offset: 0x00443DBC
 	public bool IsEquipFrameLockedByPlayer()
 	{
 		BaseTagComponent component = SceneTeamModel.Instance.GetCurrentEntity.Entity.GetComponent<BaseTagComponent>();
@@ -1251,19 +1281,19 @@ public class MotorcycleDiyModel : ModelBase
 		return flag || flag2;
 	}
 
-	// Token: 0x060114A9 RID: 70825 RVA: 0x00439039 File Offset: 0x00437239
+	// Token: 0x0600E93F RID: 59711 RVA: 0x00445C25 File Offset: 0x00443E25
 	public EOutLookState GetStickerState(int stickerId)
 	{
 		return this.GetItemState(EOutlookType.Sticker, stickerId);
 	}
 
-	// Token: 0x060114AA RID: 70826 RVA: 0x00439043 File Offset: 0x00437243
+	// Token: 0x0600E940 RID: 59712 RVA: 0x00445C2F File Offset: 0x00443E2F
 	public List<int> GetSelectedStickerIdList(bool checkHasSticker = false)
 	{
 		return this.GetSelectedItemIdList(EOutlookType.Sticker, checkHasSticker);
 	}
 
-	// Token: 0x060114AB RID: 70827 RVA: 0x0043904D File Offset: 0x0043724D
+	// Token: 0x0600E941 RID: 59713 RVA: 0x00445C39 File Offset: 0x00443E39
 	public int GetSelectedStickerId(int stickerPart)
 	{
 		if (!this.SelectedStickerDict.ContainsKey((EStickerParts)stickerPart))
@@ -1273,13 +1303,13 @@ public class MotorcycleDiyModel : ModelBase
 		return this.SelectedStickerDict[(EStickerParts)stickerPart];
 	}
 
-	// Token: 0x060114AC RID: 70828 RVA: 0x0043906B File Offset: 0x0043726B
+	// Token: 0x0600E942 RID: 59714 RVA: 0x00445C57 File Offset: 0x00443E57
 	public List<int> GetEquippedStickerIdList()
 	{
 		return this.GetEquippedItemIdList(EOutlookType.Sticker);
 	}
 
-	// Token: 0x060114AD RID: 70829 RVA: 0x00439074 File Offset: 0x00437274
+	// Token: 0x0600E943 RID: 59715 RVA: 0x00445C60 File Offset: 0x00443E60
 	public int GetEquippedStickerId(int stickerPart)
 	{
 		if (!this.CurUsingStickerDict.ContainsKey((EStickerParts)stickerPart))
@@ -1289,43 +1319,43 @@ public class MotorcycleDiyModel : ModelBase
 		return this.CurUsingStickerDict[(EStickerParts)stickerPart];
 	}
 
-	// Token: 0x060114AE RID: 70830 RVA: 0x00439092 File Offset: 0x00437292
+	// Token: 0x0600E944 RID: 59716 RVA: 0x00445C7E File Offset: 0x00443E7E
 	public void SetSelectStickerInfo(int stickerPart, int stickerId)
 	{
 		this.SelectedStickerDict[(EStickerParts)stickerPart] = stickerId;
 	}
 
-	// Token: 0x060114AF RID: 70831 RVA: 0x004390A1 File Offset: 0x004372A1
+	// Token: 0x0600E945 RID: 59717 RVA: 0x00445C8D File Offset: 0x00443E8D
 	public bool IsEquipDefaultSticker(int stickerPart)
 	{
 		return this.CurUsingStickerDict.ContainsKey((EStickerParts)stickerPart) && this.CurUsingStickerDict[(EStickerParts)stickerPart] == 0;
 	}
 
-	// Token: 0x060114B0 RID: 70832 RVA: 0x004390C2 File Offset: 0x004372C2
+	// Token: 0x0600E946 RID: 59718 RVA: 0x00445CAE File Offset: 0x00443EAE
 	public bool IsBanSticker(int stickerId)
 	{
 		return this.CheckIsBan(EOutlookType.Sticker, stickerId);
 	}
 
-	// Token: 0x060114B1 RID: 70833 RVA: 0x004390CC File Offset: 0x004372CC
+	// Token: 0x0600E947 RID: 59719 RVA: 0x00445CB8 File Offset: 0x00443EB8
 	public bool HasSticker(int stickerId)
 	{
 		return stickerId <= 0 || this.OwnedStickerIds.Contains(stickerId);
 	}
 
-	// Token: 0x060114B2 RID: 70834 RVA: 0x004390E0 File Offset: 0x004372E0
+	// Token: 0x0600E948 RID: 59720 RVA: 0x00445CCC File Offset: 0x00443ECC
 	public EOutLookState GetDecorationState(int decorationId)
 	{
 		return this.GetItemState(EOutlookType.Decoration, decorationId);
 	}
 
-	// Token: 0x060114B3 RID: 70835 RVA: 0x004390EA File Offset: 0x004372EA
+	// Token: 0x0600E949 RID: 59721 RVA: 0x00445CD6 File Offset: 0x00443ED6
 	public List<int> GetSelectedDecorationIdList(bool checkHasDecoration = false)
 	{
 		return this.GetSelectedItemIdList(EOutlookType.Decoration, checkHasDecoration);
 	}
 
-	// Token: 0x060114B4 RID: 70836 RVA: 0x004390F4 File Offset: 0x004372F4
+	// Token: 0x0600E94A RID: 59722 RVA: 0x00445CE0 File Offset: 0x00443EE0
 	public int GetSelectedDecorationId(int decorationPart)
 	{
 		if (!this.SelectedDecorationDict.ContainsKey((EDecorationParts)decorationPart))
@@ -1335,13 +1365,13 @@ public class MotorcycleDiyModel : ModelBase
 		return this.SelectedDecorationDict[(EDecorationParts)decorationPart];
 	}
 
-	// Token: 0x060114B5 RID: 70837 RVA: 0x00439112 File Offset: 0x00437312
+	// Token: 0x0600E94B RID: 59723 RVA: 0x00445CFE File Offset: 0x00443EFE
 	public List<int> GetEquippedDecorationIdList()
 	{
 		return this.GetEquippedItemIdList(EOutlookType.Decoration);
 	}
 
-	// Token: 0x060114B6 RID: 70838 RVA: 0x0043911B File Offset: 0x0043731B
+	// Token: 0x0600E94C RID: 59724 RVA: 0x00445D07 File Offset: 0x00443F07
 	public int GetEquippedDecorationId(int decorationPart)
 	{
 		if (!this.CurUsingDecorationDict.ContainsKey((EDecorationParts)decorationPart))
@@ -1351,73 +1381,73 @@ public class MotorcycleDiyModel : ModelBase
 		return this.CurUsingDecorationDict[(EDecorationParts)decorationPart];
 	}
 
-	// Token: 0x060114B7 RID: 70839 RVA: 0x00439139 File Offset: 0x00437339
+	// Token: 0x0600E94D RID: 59725 RVA: 0x00445D25 File Offset: 0x00443F25
 	public void SetSelectDecorationInfo(int decorationPart, int decorationId)
 	{
 		this.SelectedDecorationDict[(EDecorationParts)decorationPart] = decorationId;
 	}
 
-	// Token: 0x060114B8 RID: 70840 RVA: 0x00439148 File Offset: 0x00437348
+	// Token: 0x0600E94E RID: 59726 RVA: 0x00445D34 File Offset: 0x00443F34
 	public bool IsEquipDefaultDecoration(int decorationPart)
 	{
 		return this.CurUsingDecorationDict.ContainsKey((EDecorationParts)decorationPart) && this.CurUsingDecorationDict[(EDecorationParts)decorationPart] == 0;
 	}
 
-	// Token: 0x060114B9 RID: 70841 RVA: 0x00439169 File Offset: 0x00437369
+	// Token: 0x0600E94F RID: 59727 RVA: 0x00445D55 File Offset: 0x00443F55
 	public bool IsBanDecoration(int decorationId)
 	{
 		return this.CheckIsBan(EOutlookType.Decoration, decorationId);
 	}
 
-	// Token: 0x060114BA RID: 70842 RVA: 0x00439173 File Offset: 0x00437373
+	// Token: 0x0600E950 RID: 59728 RVA: 0x00445D5F File Offset: 0x00443F5F
 	public bool HasDecoration(int decorationId)
 	{
 		return decorationId <= 0 || this.OwnedDecorationsIds.Contains(decorationId);
 	}
 
-	// Token: 0x060114BB RID: 70843 RVA: 0x00439187 File Offset: 0x00437387
+	// Token: 0x0600E951 RID: 59729 RVA: 0x00445D73 File Offset: 0x00443F73
 	public bool CanShowDiyPartRedDot()
 	{
 		return this.IsEquipDefaultSkin();
 	}
 
-	// Token: 0x060114BC RID: 70844 RVA: 0x0043918F File Offset: 0x0043738F
+	// Token: 0x0600E952 RID: 59730 RVA: 0x00445D7B File Offset: 0x00443F7B
 	public bool RedDotHasAnyNewItem()
 	{
 		return this.RedDotHasNewFrame() || this.RedDotHasNewStickerByAnyPart() || this.RedDotHasNewDecorationByAnyPart() || this.RedDotHasNewSkin();
 	}
 
-	// Token: 0x060114BD RID: 70845 RVA: 0x004391B1 File Offset: 0x004373B1
+	// Token: 0x0600E953 RID: 59731 RVA: 0x00445D9D File Offset: 0x00443F9D
 	public bool RedDotHasAnyNewItemVisible()
 	{
 		return this.CanShowDiyPartRedDot() && this.RedDotHasAnyNewItem();
 	}
 
-	// Token: 0x060114BE RID: 70846 RVA: 0x004391C3 File Offset: 0x004373C3
+	// Token: 0x0600E954 RID: 59732 RVA: 0x00445DAF File Offset: 0x00443FAF
 	public bool RedDotForDiyTab()
 	{
 		return this.RedDotHasAnyNewItemVisible() || this.RedDotHasAnyNewScene();
 	}
 
-	// Token: 0x060114BF RID: 70847 RVA: 0x004391D5 File Offset: 0x004373D5
+	// Token: 0x0600E955 RID: 59733 RVA: 0x00445DC1 File Offset: 0x00443FC1
 	public bool RedDotHasNewFrameVisible()
 	{
 		return this.CanShowDiyPartRedDot() && this.RedDotHasNewFrame();
 	}
 
-	// Token: 0x060114C0 RID: 70848 RVA: 0x004391E7 File Offset: 0x004373E7
+	// Token: 0x0600E956 RID: 59734 RVA: 0x00445DD3 File Offset: 0x00443FD3
 	public bool RedDotHasNewStickerByAnyPartVisible()
 	{
 		return this.CanShowDiyPartRedDot() && this.RedDotHasNewStickerByAnyPart();
 	}
 
-	// Token: 0x060114C1 RID: 70849 RVA: 0x004391F9 File Offset: 0x004373F9
+	// Token: 0x0600E957 RID: 59735 RVA: 0x00445DE5 File Offset: 0x00443FE5
 	public bool RedDotHasNewDecorationByAnyPartVisible()
 	{
 		return this.CanShowDiyPartRedDot() && this.RedDotHasNewDecorationByAnyPart();
 	}
 
-	// Token: 0x060114C2 RID: 70850 RVA: 0x0043920C File Offset: 0x0043740C
+	// Token: 0x0600E958 RID: 59736 RVA: 0x00445DF8 File Offset: 0x00443FF8
 	public bool RedDotHasNewFrame()
 	{
 		foreach (int itemId in this.OwnedFrameIds)
@@ -1430,31 +1460,31 @@ public class MotorcycleDiyModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060114C3 RID: 70851 RVA: 0x00439268 File Offset: 0x00437468
+	// Token: 0x0600E959 RID: 59737 RVA: 0x00445E54 File Offset: 0x00444054
 	public bool RedDotHasNewStickerByAnyPart()
 	{
 		return this.RedDotHasNewItemByAnyPart(EOutlookType.Sticker);
 	}
 
-	// Token: 0x060114C4 RID: 70852 RVA: 0x00439271 File Offset: 0x00437471
+	// Token: 0x0600E95A RID: 59738 RVA: 0x00445E5D File Offset: 0x0044405D
 	public bool RedDotHasNewStickerByPart(int stickerPart)
 	{
 		return this.RedDotHasNewItemByPart(EOutlookType.Sticker, stickerPart);
 	}
 
-	// Token: 0x060114C5 RID: 70853 RVA: 0x0043927B File Offset: 0x0043747B
+	// Token: 0x0600E95B RID: 59739 RVA: 0x00445E67 File Offset: 0x00444067
 	public bool RedDotHasNewDecorationByAnyPart()
 	{
 		return this.RedDotHasNewItemByAnyPart(EOutlookType.Decoration);
 	}
 
-	// Token: 0x060114C6 RID: 70854 RVA: 0x00439284 File Offset: 0x00437484
+	// Token: 0x0600E95C RID: 59740 RVA: 0x00445E70 File Offset: 0x00444070
 	public bool RedDotHasNewDecorationByPart(int decorationPart)
 	{
 		return this.RedDotHasNewItemByPart(EOutlookType.Decoration, decorationPart);
 	}
 
-	// Token: 0x060114C7 RID: 70855 RVA: 0x00439290 File Offset: 0x00437490
+	// Token: 0x0600E95D RID: 59741 RVA: 0x00445E7C File Offset: 0x0044407C
 	public bool RedDotHasNewSkin()
 	{
 		foreach (int itemId in this.OwnedSkinIds)
@@ -1467,26 +1497,26 @@ public class MotorcycleDiyModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060114C8 RID: 70856 RVA: 0x004392EC File Offset: 0x004374EC
+	// Token: 0x0600E95E RID: 59742 RVA: 0x00445ED8 File Offset: 0x004440D8
 	public bool RedDotHasNewItem(int itemId)
 	{
 		ServerStorageSet redDotCache = this.RedDotCache;
 		return redDotCache != null && redDotCache.Has(itemId);
 	}
 
-	// Token: 0x060114C9 RID: 70857 RVA: 0x00439300 File Offset: 0x00437500
+	// Token: 0x0600E95F RID: 59743 RVA: 0x00445EEC File Offset: 0x004440EC
 	public bool RedDotIsPreviewInAnyPart(EOutlookType outlookType)
 	{
-		List<int> list = new List<int>();
+		int[] array = Array.Empty<int>();
 		if (outlookType == EOutlookType.Sticker)
 		{
-			list = MotorcycleDiyDefine.MOTORCYCLE_DIY_STICKER_PART.ToList<int>();
+			array = MotorcycleDiyDefine.MOTORCYCLE_DIY_STICKER_PART;
 		}
 		else if (outlookType == EOutlookType.Decoration)
 		{
-			list = MotorcycleDiyDefine.MOTORCYCLE_DIY_DECORATION_PART.ToList<int>();
+			array = MotorcycleDiyDefine.MOTORCYCLE_DIY_DECORATION_PART;
 		}
-		foreach (int value in list)
+		foreach (int value in array)
 		{
 			if (this.RedDotIsPreview(outlookType, new int?(value)))
 			{
@@ -1496,15 +1526,27 @@ public class MotorcycleDiyModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060114CA RID: 70858 RVA: 0x00439384 File Offset: 0x00437584
+	// Token: 0x0600E960 RID: 59744 RVA: 0x00445F3C File Offset: 0x0044413C
 	public bool RedDotIsPreview(EOutlookType outlookType, int? part = null)
 	{
 		int selectedItemId = this.GetSelectedItemId(outlookType, part);
 		return this.GetItemState(outlookType, selectedItemId) == EOutLookState.IsLock;
 	}
 
-	// Token: 0x17001611 RID: 5649
-	// (get) Token: 0x060114CB RID: 70859 RVA: 0x004393A5 File Offset: 0x004375A5
+	// Token: 0x0600E961 RID: 59745 RVA: 0x00445F60 File Offset: 0x00444160
+	private static int[] ToIntArrayOrEmpty([Nullable(2)] RepeatedField<int> source)
+	{
+		if (source == null)
+		{
+			return Array.Empty<int>();
+		}
+		int[] array = new int[source.Count];
+		source.CopyTo(array, 0);
+		return array;
+	}
+
+	// Token: 0x17001648 RID: 5704
+	// (get) Token: 0x0600E962 RID: 59746 RVA: 0x00445F8B File Offset: 0x0044418B
 	public static MotorcycleDiyModel Instance
 	{
 		get
@@ -1513,7 +1555,7 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x060114CC RID: 70860 RVA: 0x004393AC File Offset: 0x004375AC
+	// Token: 0x0600E963 RID: 59747 RVA: 0x00445F92 File Offset: 0x00444192
 	public static MotorcycleDiyModel GetOrCreateInstance()
 	{
 		if (MotorcycleDiyModel._Instance == null)
@@ -1523,7 +1565,7 @@ public class MotorcycleDiyModel : ModelBase
 		return MotorcycleDiyModel._Instance;
 	}
 
-	// Token: 0x060114CD RID: 70861 RVA: 0x004393C0 File Offset: 0x004375C0
+	// Token: 0x0600E964 RID: 59748 RVA: 0x00445FA6 File Offset: 0x004441A6
 	public static bool CreateInstance()
 	{
 		if (MotorcycleDiyModel._Instance != null)
@@ -1534,24 +1576,24 @@ public class MotorcycleDiyModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060114CE RID: 70862 RVA: 0x004393D6 File Offset: 0x004375D6
+	// Token: 0x0600E965 RID: 59749 RVA: 0x00445FBC File Offset: 0x004441BC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060114CF RID: 70863 RVA: 0x004393D8 File Offset: 0x004375D8
+	// Token: 0x0600E966 RID: 59750 RVA: 0x00445FBE File Offset: 0x004441BE
 	public static void ResetStaticDefaultValue()
 	{
 		MotorcycleDiyModel._Instance = null;
 	}
 
-	// Token: 0x060114D0 RID: 70864 RVA: 0x004393E0 File Offset: 0x004375E0
+	// Token: 0x0600E967 RID: 59751 RVA: 0x00445FC6 File Offset: 0x004441C6
 	static MotorcycleDiyModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleDiyModel.CreateStaticDefaultValue), new Action(MotorcycleDiyModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060114D2 RID: 70866 RVA: 0x004394DC File Offset: 0x004376DC
+	// Token: 0x0600E969 RID: 59753 RVA: 0x004460C4 File Offset: 0x004442C4
 	[CompilerGenerated]
 	private bool <CheckIsBan>g__isConflict|59_0(EOutlookType type, int id, int? part = null, ref MotorcycleDiyModel.<>c__DisplayClass59_0 A_4)
 	{
@@ -1567,12 +1609,12 @@ public class MotorcycleDiyModel : ModelBase
 				}
 			}
 			int? groupId = this.GetItemGroupConfigInfo(type, id).GroupId;
-			return groupId != null && A_4.conflictGroupIds.Contains(groupId.Value);
+			return groupId != null && Array.IndexOf<int>(A_4.conflictGroupIds, groupId.Value) >= 0;
 		}
 		return false;
 	}
 
-	// Token: 0x060114D3 RID: 70867 RVA: 0x00439554 File Offset: 0x00437754
+	// Token: 0x0600E96A RID: 59754 RVA: 0x00446140 File Offset: 0x00444340
 	[CompilerGenerated]
 	internal static string <GetBanTips>g__getItemName|60_0(EOutlookType type, int id)
 	{
@@ -1601,7 +1643,7 @@ public class MotorcycleDiyModel : ModelBase
 		return ConfigMultiTextLang.GetLocalTextNew(id2, null) ?? "";
 	}
 
-	// Token: 0x060114D4 RID: 70868 RVA: 0x00439620 File Offset: 0x00437820
+	// Token: 0x0600E96B RID: 59755 RVA: 0x0044620C File Offset: 0x0044440C
 	[CompilerGenerated]
 	private void <GetBanTips>g__checkAndAdd|60_1(EOutlookType type, int id, int? part = null, ref MotorcycleDiyModel.<>c__DisplayClass60_0 A_4)
 	{
@@ -1617,7 +1659,7 @@ public class MotorcycleDiyModel : ModelBase
 				}
 			}
 			IMotorDiyItemGroupConfigInfo itemGroupConfigInfo = this.GetItemGroupConfigInfo(type, id);
-			if (itemGroupConfigInfo.GroupId != null && A_4.conflictGroupIds.Contains(itemGroupConfigInfo.GroupId.Value) && !A_4.addedGroupIds.Contains(itemGroupConfigInfo.GroupId.Value))
+			if (itemGroupConfigInfo.GroupId != null && Array.IndexOf<int>(A_4.conflictGroupIds, itemGroupConfigInfo.GroupId.Value) >= 0 && !A_4.addedGroupIds.Contains(itemGroupConfigInfo.GroupId.Value))
 			{
 				A_4.addedGroupIds.Add(itemGroupConfigInfo.GroupId.Value);
 				string text = MotorcycleDiyModel.<GetBanTips>g__getItemName|60_0(type, id);
@@ -1630,90 +1672,90 @@ public class MotorcycleDiyModel : ModelBase
 		}
 	}
 
-	// Token: 0x0400837C RID: 33660
+	// Token: 0x040084BA RID: 33978
 	private List<int> CurCanUseStickerIds = new List<int>();
 
-	// Token: 0x0400837D RID: 33661
+	// Token: 0x040084BB RID: 33979
 	private List<int> CurCanUseFrameIds = new List<int>();
 
-	// Token: 0x0400837E RID: 33662
+	// Token: 0x040084BC RID: 33980
 	private List<int> CurCanUseDecorationsIds = new List<int>();
 
-	// Token: 0x0400837F RID: 33663
+	// Token: 0x040084BD RID: 33981
 	private readonly Dictionary<int, long> CanUseIdsTimeStamp = new Dictionary<int, long>();
 
-	// Token: 0x04008380 RID: 33664
+	// Token: 0x040084BE RID: 33982
 	private List<int> OwnedSkinIds = new List<int>();
 
-	// Token: 0x04008381 RID: 33665
+	// Token: 0x040084BF RID: 33983
 	private List<int> OwnedStickerIds = new List<int>();
 
-	// Token: 0x04008382 RID: 33666
+	// Token: 0x040084C0 RID: 33984
 	private List<int> OwnedFrameIds = new List<int>();
 
-	// Token: 0x04008383 RID: 33667
+	// Token: 0x040084C1 RID: 33985
 	private List<int> OwnedDecorationsIds = new List<int>();
 
-	// Token: 0x04008384 RID: 33668
+	// Token: 0x040084C2 RID: 33986
 	private int CurSkinId;
 
-	// Token: 0x04008385 RID: 33669
+	// Token: 0x040084C3 RID: 33987
 	private int CurFrameId;
 
-	// Token: 0x04008386 RID: 33670
+	// Token: 0x040084C4 RID: 33988
 	private readonly Dictionary<EStickerParts, int> CurUsingStickerDict = new Dictionary<EStickerParts, int>();
 
-	// Token: 0x04008387 RID: 33671
+	// Token: 0x040084C5 RID: 33989
 	private readonly Dictionary<EDecorationParts, int> CurUsingDecorationDict = new Dictionary<EDecorationParts, int>();
 
-	// Token: 0x04008388 RID: 33672
+	// Token: 0x040084C6 RID: 33990
 	private readonly Dictionary<int, MotorcycleDiySkinEquipRecord> SkinSuitDict = new Dictionary<int, MotorcycleDiySkinEquipRecord>();
 
-	// Token: 0x04008389 RID: 33673
+	// Token: 0x040084C7 RID: 33991
 	private List<MotorcycleDiyPresetData> CustomPresetDataList = new List<MotorcycleDiyPresetData>();
 
-	// Token: 0x0400838A RID: 33674
+	// Token: 0x040084C8 RID: 33992
 	private int SelectedFrameId;
 
-	// Token: 0x0400838B RID: 33675
+	// Token: 0x040084C9 RID: 33993
 	private readonly Dictionary<EStickerParts, int> SelectedStickerDict = new Dictionary<EStickerParts, int>();
 
-	// Token: 0x0400838C RID: 33676
+	// Token: 0x040084CA RID: 33994
 	private readonly Dictionary<EDecorationParts, int> SelectedDecorationDict = new Dictionary<EDecorationParts, int>();
 
-	// Token: 0x0400838D RID: 33677
+	// Token: 0x040084CB RID: 33995
 	private int DefaultFrameId;
 
-	// Token: 0x0400838E RID: 33678
+	// Token: 0x040084CC RID: 33996
 	private readonly HashSet<int> ProcessedItemIds = new HashSet<int>();
 
-	// Token: 0x0400838F RID: 33679
+	// Token: 0x040084CD RID: 33997
 	[Nullable(2)]
 	private ServerStorageSet RedDotCache;
 
-	// Token: 0x04008390 RID: 33680
+	// Token: 0x040084CE RID: 33998
 	private bool HasInitSelectedInfo;
 
-	// Token: 0x04008391 RID: 33681
+	// Token: 0x040084CF RID: 33999
 	private readonly HashSet<int> RedDotOnViewOpenCache = new HashSet<int>();
 
-	// Token: 0x04008392 RID: 33682
+	// Token: 0x040084D0 RID: 34000
 	private int CurSceneId;
 
-	// Token: 0x04008393 RID: 33683
+	// Token: 0x040084D1 RID: 34001
 	private int DefaultSceneId;
 
-	// Token: 0x04008394 RID: 33684
+	// Token: 0x040084D2 RID: 34002
 	private readonly List<int> SceneIdList = new List<int>();
 
-	// Token: 0x04008395 RID: 33685
+	// Token: 0x040084D3 RID: 34003
 	private readonly HashSet<int> SceneItemIdSet = new HashSet<int>();
 
-	// Token: 0x04008396 RID: 33686
+	// Token: 0x040084D4 RID: 34004
 	[Nullable(2)]
 	private ServerStorageSet SceneRedDotCache;
 
-	// Token: 0x04008397 RID: 33687
+	// Token: 0x040084D5 RID: 34005
 	[Nullable(2)]
 	private static MotorcycleDiyModel _Instance;
 }

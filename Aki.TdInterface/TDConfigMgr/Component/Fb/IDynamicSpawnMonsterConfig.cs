@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DB4 RID: 3508
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EB0 RID: 3760
 	public class IDynamicSpawnMonsterConfig
 	{
-		// Token: 0x06004FA3 RID: 20387 RVA: 0x000C51AE File Offset: 0x000C33AE
+		// Token: 0x060054C8 RID: 21704 RVA: 0x000D09FE File Offset: 0x000CEBFE
 		public static IDynamicSpawnMonsterConfig Create(IDynamicSpawnMonsterConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019F8 RID: 6648
-		// (get) Token: 0x06004FA4 RID: 20388 RVA: 0x000C51CD File Offset: 0x000C33CD
+		// Token: 0x17001B63 RID: 7011
+		// (get) Token: 0x060054C9 RID: 21705 RVA: 0x000D0A1D File Offset: 0x000CEC1D
 		public virtual int Id
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019F9 RID: 6649
-		// (get) Token: 0x06004FA5 RID: 20389 RVA: 0x000C51DA File Offset: 0x000C33DA
+		// Token: 0x17001B64 RID: 7012
+		// (get) Token: 0x060054CA RID: 21706 RVA: 0x000D0A2A File Offset: 0x000CEC2A
 		public virtual float DelayTime
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019FA RID: 6650
-		// (get) Token: 0x06004FA6 RID: 20390 RVA: 0x000C51E7 File Offset: 0x000C33E7
+		// Token: 0x17001B65 RID: 7013
+		// (get) Token: 0x060054CB RID: 21707 RVA: 0x000D0A37 File Offset: 0x000CEC37
 		public virtual ISpawnMonsterCompleteCondition CompleteCondition
 		{
 			get
@@ -58,8 +56,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019FB RID: 6651
-		// (get) Token: 0x06004FA7 RID: 20391 RVA: 0x000C5216 File Offset: 0x000C3416
+		// Token: 0x17001B66 RID: 7014
+		// (get) Token: 0x060054CC RID: 21708 RVA: 0x000D0A66 File Offset: 0x000CEC66
 		public virtual ISpawnMonsterPreDependOnPreceding PreCondition
 		{
 			get
@@ -74,8 +72,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019FC RID: 6652
-		// (get) Token: 0x06004FA8 RID: 20392 RVA: 0x000C524C File Offset: 0x000C344C
+		// Token: 0x17001B67 RID: 7015
+		// (get) Token: 0x060054CD RID: 21709 RVA: 0x000D0A9C File Offset: 0x000CEC9C
 		public virtual float? Interval
 		{
 			get
@@ -88,8 +86,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019FD RID: 6653
-		// (get) Token: 0x06004FA9 RID: 20393 RVA: 0x000C5282 File Offset: 0x000C3482
+		// Token: 0x17001B68 RID: 7016
+		// (get) Token: 0x060054CE RID: 21710 RVA: 0x000D0AD2 File Offset: 0x000CECD2
 		public virtual IRandomPoolChoose MonsterChooseType
 		{
 			get
@@ -104,8 +102,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019FE RID: 6654
-		// (get) Token: 0x06004FAA RID: 20394 RVA: 0x000C52B6 File Offset: 0x000C34B6
+		// Token: 0x17001B69 RID: 7017
+		// (get) Token: 0x060054CF RID: 21711 RVA: 0x000D0B06 File Offset: 0x000CED06
 		public virtual ISpawnMonsterPoint PointChooseType
 		{
 			get
@@ -120,34 +118,34 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DAD RID: 11693
+		// Token: 0x04003073 RID: 12403
 		private IDynamicSpawnMonsterConfig Instance;
 
-		// Token: 0x04002DAE RID: 11694
+		// Token: 0x04003074 RID: 12404
 		private ISpawnMonsterCompleteCondition _CompleteConditionCache;
 
-		// Token: 0x04002DAF RID: 11695
+		// Token: 0x04003075 RID: 12405
 		private bool _CompleteConditionInited;
 
-		// Token: 0x04002DB0 RID: 11696
+		// Token: 0x04003076 RID: 12406
 		[Nullable(2)]
 		private ISpawnMonsterPreDependOnPreceding _PreConditionCache;
 
-		// Token: 0x04002DB1 RID: 11697
+		// Token: 0x04003077 RID: 12407
 		private bool _PreConditionInited;
 
-		// Token: 0x04002DB2 RID: 11698
+		// Token: 0x04003078 RID: 12408
 		[Nullable(2)]
 		private IRandomPoolChoose _MonsterChooseTypeCache;
 
-		// Token: 0x04002DB3 RID: 11699
+		// Token: 0x04003079 RID: 12409
 		private bool _MonsterChooseTypeInited;
 
-		// Token: 0x04002DB4 RID: 11700
+		// Token: 0x0400307A RID: 12410
 		[Nullable(2)]
 		private ISpawnMonsterPoint _PointChooseTypeCache;
 
-		// Token: 0x04002DB5 RID: 11701
+		// Token: 0x0400307B RID: 12411
 		private bool _PointChooseTypeInited;
 	}
 }

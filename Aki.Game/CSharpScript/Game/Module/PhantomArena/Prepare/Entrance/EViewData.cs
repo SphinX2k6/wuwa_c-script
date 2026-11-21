@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x0200516C RID: 20844
+	// Token: 0x0200413C RID: 16700
 	public enum EViewData
 	{
-		// Token: 0x0401C586 RID: 116102
+		// Token: 0x04016FBB RID: 94139
 		TabViewName,
-		// Token: 0x0401C587 RID: 116103
+		// Token: 0x04016FBC RID: 94140
 		RepeatChallengeId
 	}
 }

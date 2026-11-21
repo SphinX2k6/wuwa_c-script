@@ -5,13 +5,13 @@ using CSharpScript.Game.Common;
 
 namespace CSharpScript.Game.Module.Item
 {
-	// Token: 0x0200582B RID: 22571
+	// Token: 0x02004802 RID: 18434
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class ItemModel : ModelBase
 	{
-		// Token: 0x06039567 RID: 234855 RVA: 0x00D9962C File Offset: 0x00D9782C
+		// Token: 0x0602E47B RID: 189563 RVA: 0x00CE84C0 File Offset: 0x00CE66C0
 		protected override bool OnInit()
 		{
 			this.LastCloseTimeStamp = 0.0;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Item
 			return true;
 		}
 
-		// Token: 0x06039568 RID: 234856 RVA: 0x00D99654 File Offset: 0x00D97854
+		// Token: 0x0602E47C RID: 189564 RVA: 0x00CE84E8 File Offset: 0x00CE66E8
 		protected override bool OnClear()
 		{
 			this.WaitItemList.Clear();
@@ -30,44 +30,44 @@ namespace CSharpScript.Game.Module.Item
 			return true;
 		}
 
-		// Token: 0x06039569 RID: 234857 RVA: 0x00D99683 File Offset: 0x00D97883
+		// Token: 0x0602E47D RID: 189565 RVA: 0x00CE8517 File Offset: 0x00CE6717
 		public void LoadGetItemConfigIdList()
 		{
 			this.GetItemConfigIdList = (LocalStorage.GetPlayer<List<int>>(ELocalStoragePlayerKey.GetItemConfigListSaveKey, null) ?? new List<int>());
 		}
 
-		// Token: 0x0603956A RID: 234858 RVA: 0x00D9969C File Offset: 0x00D9789C
+		// Token: 0x0602E47E RID: 189566 RVA: 0x00CE8530 File Offset: 0x00CE6730
 		public void AddGetItemConfigIdList(int configId)
 		{
 			this.GetItemConfigIdList.Add(configId);
 			this.SaveGetItemConfigIdList();
 		}
 
-		// Token: 0x0603956B RID: 234859 RVA: 0x00D996B0 File Offset: 0x00D978B0
+		// Token: 0x0602E47F RID: 189567 RVA: 0x00CE8544 File Offset: 0x00CE6744
 		public bool IsGotItem(int configId)
 		{
 			return this.GetItemConfigIdList.Contains(configId);
 		}
 
-		// Token: 0x0603956C RID: 234860 RVA: 0x00D996BE File Offset: 0x00D978BE
+		// Token: 0x0602E480 RID: 189568 RVA: 0x00CE8552 File Offset: 0x00CE6752
 		public void SaveGetItemConfigIdList()
 		{
 			LocalStorage.SetPlayer<List<int>>(ELocalStoragePlayerKey.GetItemConfigListSaveKey, this.GetItemConfigIdList);
 		}
 
-		// Token: 0x0603956D RID: 234861 RVA: 0x00D996CE File Offset: 0x00D978CE
+		// Token: 0x0602E481 RID: 189569 RVA: 0x00CE8562 File Offset: 0x00CE6762
 		public bool IsWaitItemListEmpty()
 		{
 			return this.WaitItemList.Count == 0;
 		}
 
-		// Token: 0x0603956E RID: 234862 RVA: 0x00D996DE File Offset: 0x00D978DE
+		// Token: 0x0602E482 RID: 189570 RVA: 0x00CE8572 File Offset: 0x00CE6772
 		public void PushWaitItemList(int itemId)
 		{
 			this.WaitItemList.Add(itemId);
 		}
 
-		// Token: 0x0603956F RID: 234863 RVA: 0x00D996EC File Offset: 0x00D978EC
+		// Token: 0x0602E483 RID: 189571 RVA: 0x00CE8580 File Offset: 0x00CE6780
 		public int? ShiftWaitItemList()
 		{
 			if (this.WaitItemList.Count == 0)
@@ -79,19 +79,19 @@ namespace CSharpScript.Game.Module.Item
 			return new int?(value);
 		}
 
-		// Token: 0x06039570 RID: 234864 RVA: 0x00D9972D File Offset: 0x00D9792D
+		// Token: 0x0602E484 RID: 189572 RVA: 0x00CE85C1 File Offset: 0x00CE67C1
 		public bool IsWaitPhantomListEmpty()
 		{
 			return this.WaitPhantomList.Count == 0;
 		}
 
-		// Token: 0x06039571 RID: 234865 RVA: 0x00D9973D File Offset: 0x00D9793D
+		// Token: 0x0602E485 RID: 189573 RVA: 0x00CE85D1 File Offset: 0x00CE67D1
 		public void PushWaitPhantomItem(int uniqueId)
 		{
 			this.WaitPhantomList.Add(uniqueId);
 		}
 
-		// Token: 0x06039572 RID: 234866 RVA: 0x00D9974C File Offset: 0x00D9794C
+		// Token: 0x0602E486 RID: 189574 RVA: 0x00CE85E0 File Offset: 0x00CE67E0
 		public int? ShiftWaitPhantomList()
 		{
 			if (this.WaitPhantomList.Count == 0)
@@ -103,19 +103,19 @@ namespace CSharpScript.Game.Module.Item
 			return new int?(value);
 		}
 
-		// Token: 0x06039573 RID: 234867 RVA: 0x00D9978D File Offset: 0x00D9798D
+		// Token: 0x0602E487 RID: 189575 RVA: 0x00CE8621 File Offset: 0x00CE6821
 		public bool IsWaitVillageInfrTreeListEmpty()
 		{
 			return this.WaitVillageInfrTreeList.Count == 0;
 		}
 
-		// Token: 0x06039574 RID: 234868 RVA: 0x00D9979D File Offset: 0x00D9799D
+		// Token: 0x0602E488 RID: 189576 RVA: 0x00CE8631 File Offset: 0x00CE6831
 		public void PushWaitVillageInfrTree(int treeId)
 		{
 			this.WaitVillageInfrTreeList.Add(treeId);
 		}
 
-		// Token: 0x06039575 RID: 234869 RVA: 0x00D997AC File Offset: 0x00D979AC
+		// Token: 0x0602E489 RID: 189577 RVA: 0x00CE8640 File Offset: 0x00CE6840
 		public int? ShiftWaitVillageInfrTree()
 		{
 			if (this.WaitVillageInfrTreeList.Count == 0)
@@ -127,14 +127,14 @@ namespace CSharpScript.Game.Module.Item
 			return new int?(value);
 		}
 
-		// Token: 0x06039576 RID: 234870 RVA: 0x00D997ED File Offset: 0x00D979ED
+		// Token: 0x0602E48A RID: 189578 RVA: 0x00CE8681 File Offset: 0x00CE6881
 		public void GmClearWaitItemList()
 		{
 			this.WaitItemList = new List<int>();
 		}
 
-		// Token: 0x17008A2B RID: 35371
-		// (get) Token: 0x06039577 RID: 234871 RVA: 0x00D997FA File Offset: 0x00D979FA
+		// Token: 0x17005DF5 RID: 24053
+		// (get) Token: 0x0602E48B RID: 189579 RVA: 0x00CE868E File Offset: 0x00CE688E
 		public static ItemModel Instance
 		{
 			get
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Item
 			}
 		}
 
-		// Token: 0x06039578 RID: 234872 RVA: 0x00D99801 File Offset: 0x00D97A01
+		// Token: 0x0602E48C RID: 189580 RVA: 0x00CE8695 File Offset: 0x00CE6895
 		public static ItemModel GetOrCreateInstance()
 		{
 			if (ItemModel._Instance == null)
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Item
 			return ItemModel._Instance;
 		}
 
-		// Token: 0x06039579 RID: 234873 RVA: 0x00D99815 File Offset: 0x00D97A15
+		// Token: 0x0602E48D RID: 189581 RVA: 0x00CE86A9 File Offset: 0x00CE68A9
 		public static bool CreateInstance()
 		{
 			if (ItemModel._Instance != null)
@@ -164,39 +164,39 @@ namespace CSharpScript.Game.Module.Item
 			return true;
 		}
 
-		// Token: 0x0603957A RID: 234874 RVA: 0x00D9982B File Offset: 0x00D97A2B
+		// Token: 0x0602E48E RID: 189582 RVA: 0x00CE86BF File Offset: 0x00CE68BF
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603957B RID: 234875 RVA: 0x00D9982D File Offset: 0x00D97A2D
+		// Token: 0x0602E48F RID: 189583 RVA: 0x00CE86C1 File Offset: 0x00CE68C1
 		public static void ResetStaticDefaultValue()
 		{
 			ItemModel._Instance = null;
 		}
 
-		// Token: 0x0603957C RID: 234876 RVA: 0x00D99835 File Offset: 0x00D97A35
+		// Token: 0x0602E490 RID: 189584 RVA: 0x00CE86C9 File Offset: 0x00CE68C9
 		static ItemModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ItemModel.CreateStaticDefaultValue), new Action(ItemModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401DFD5 RID: 122837
+		// Token: 0x04018A6D RID: 100973
 		public double LastCloseTimeStamp;
 
-		// Token: 0x0401DFD6 RID: 122838
+		// Token: 0x04018A6E RID: 100974
 		private List<int> WaitItemList = new List<int>();
 
-		// Token: 0x0401DFD7 RID: 122839
+		// Token: 0x04018A6F RID: 100975
 		private List<int> WaitPhantomList = new List<int>();
 
-		// Token: 0x0401DFD8 RID: 122840
+		// Token: 0x04018A70 RID: 100976
 		private List<int> WaitVillageInfrTreeList = new List<int>();
 
-		// Token: 0x0401DFD9 RID: 122841
+		// Token: 0x04018A71 RID: 100977
 		private List<int> GetItemConfigIdList = new List<int>();
 
-		// Token: 0x0401DFDA RID: 122842
+		// Token: 0x04018A72 RID: 100978
 		[Nullable(2)]
 		private static ItemModel _Instance;
 	}

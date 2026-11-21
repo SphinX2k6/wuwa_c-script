@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060EF RID: 24815
+	// Token: 0x0200506D RID: 20589
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeFloatTextData : IRoverlikeFloatTextData
 	{
-		// Token: 0x1700914C RID: 37196
-		// (get) Token: 0x0603EC12 RID: 257042 RVA: 0x00F28D06 File Offset: 0x00F26F06
-		// (set) Token: 0x0603EC13 RID: 257043 RVA: 0x00F28D0E File Offset: 0x00F26F0E
+		// Token: 0x170064AE RID: 25774
+		// (get) Token: 0x060338D4 RID: 211156 RVA: 0x00E6FB1A File Offset: 0x00E6DD1A
+		// (set) Token: 0x060338D5 RID: 211157 RVA: 0x00E6FB22 File Offset: 0x00E6DD22
 		public ERoverlikeFloatTextType Type { get; set; }
 
-		// Token: 0x1700914D RID: 37197
-		// (get) Token: 0x0603EC14 RID: 257044 RVA: 0x00F28D17 File Offset: 0x00F26F17
-		// (set) Token: 0x0603EC15 RID: 257045 RVA: 0x00F28D1F File Offset: 0x00F26F1F
+		// Token: 0x170064AF RID: 25775
+		// (get) Token: 0x060338D6 RID: 211158 RVA: 0x00E6FB2B File Offset: 0x00E6DD2B
+		// (set) Token: 0x060338D7 RID: 211159 RVA: 0x00E6FB33 File Offset: 0x00E6DD33
 		public string TextKey { get; set; } = string.Empty;
 
-		// Token: 0x1700914E RID: 37198
-		// (get) Token: 0x0603EC16 RID: 257046 RVA: 0x00F28D28 File Offset: 0x00F26F28
-		// (set) Token: 0x0603EC17 RID: 257047 RVA: 0x00F28D30 File Offset: 0x00F26F30
+		// Token: 0x170064B0 RID: 25776
+		// (get) Token: 0x060338D8 RID: 211160 RVA: 0x00E6FB3C File Offset: 0x00E6DD3C
+		// (set) Token: 0x060338D9 RID: 211161 RVA: 0x00E6FB44 File Offset: 0x00E6DD44
 		public string[] TextParam { get; set; } = new string[0];
 	}
 }

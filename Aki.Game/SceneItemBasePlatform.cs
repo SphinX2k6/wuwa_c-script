@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Common.Component;
 using UnrealEngine;
 
-// Token: 0x0200326B RID: 12907
+// Token: 0x020027DA RID: 10202
 [NullableContext(1)]
 [Nullable(0)]
 public class SceneItemBasePlatform : BasePlatform
 {
-	// Token: 0x0601BE60 RID: 114272 RVA: 0x007BC170 File Offset: 0x007BA370
+	// Token: 0x06019A3B RID: 105019 RVA: 0x007E3A48 File Offset: 0x007E1C48
 	public SceneItemBasePlatform(EntityHandle entityHandle) : base(entityHandle)
 	{
 		this.IsDeltaBaseSpeedNeedZ = true;
@@ -80,7 +80,7 @@ public class SceneItemBasePlatform : BasePlatform
 		}
 	}
 
-	// Token: 0x0601BE61 RID: 114273 RVA: 0x007BC350 File Offset: 0x007BA550
+	// Token: 0x06019A3C RID: 105020 RVA: 0x007E3C28 File Offset: 0x007E1E28
 	public override FTransformDouble? GetTransform()
 	{
 		EntityHandle entityHandle = this.EntityHandle;
@@ -91,7 +91,7 @@ public class SceneItemBasePlatform : BasePlatform
 		return new FTransformDouble?(entityHandle.Entity.GetComponent<BaseActorComponent>().ActorTransform);
 	}
 
-	// Token: 0x0601BE62 RID: 114274 RVA: 0x007BC388 File Offset: 0x007BA588
+	// Token: 0x06019A3D RID: 105021 RVA: 0x007E3C60 File Offset: 0x007E1E60
 	public override bool CheckLeave(Entity entity, Vector location)
 	{
 		EntityHandle entityHandle = this.EntityHandle;
@@ -191,13 +191,13 @@ public class SceneItemBasePlatform : BasePlatform
 		return false;
 	}
 
-	// Token: 0x0601BE63 RID: 114275 RVA: 0x007BC5C8 File Offset: 0x007BA7C8
+	// Token: 0x06019A3E RID: 105022 RVA: 0x007E3EA0 File Offset: 0x007E20A0
 	private bool IsPointInsideBox(Vector point, Vector bounds, Vector origin)
 	{
 		return point.X >= origin.X - bounds.X && point.X <= origin.X + bounds.X && point.Y >= origin.Y - bounds.Y && point.Y <= origin.Y + bounds.Y && point.Z >= origin.Z - bounds.Z && point.Z <= origin.Z + bounds.Z;
 	}
 
-	// Token: 0x0601BE64 RID: 114276 RVA: 0x007BC658 File Offset: 0x007BA858
+	// Token: 0x06019A3F RID: 105023 RVA: 0x007E3F30 File Offset: 0x007E2130
 	public override void OnCharacterEnter(Entity entity, UCharacterMovementComponent characterMovement)
 	{
 		if (!this.EntityHandle.Valid)
@@ -264,15 +264,15 @@ public class SceneItemBasePlatform : BasePlatform
 		}
 	}
 
-	// Token: 0x0400DC2C RID: 56364
+	// Token: 0x0400E0CB RID: 57547
 	public double LeaveSphereRadiusSq;
 
-	// Token: 0x0400DC2D RID: 56365
+	// Token: 0x0400E0CC RID: 57548
 	protected readonly Vector CacheLocation = Vector.Create();
 
-	// Token: 0x0400DC2E RID: 56366
+	// Token: 0x0400E0CD RID: 57549
 	private readonly List<int> PlatformTags = new List<int>();
 
-	// Token: 0x0400DC2F RID: 56367
+	// Token: 0x0400E0CE RID: 57550
 	private readonly bool NeedAttach;
 }

@@ -5,12 +5,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060DA RID: 24794
+	// Token: 0x02005058 RID: 20568
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeChooseData
 	{
-		// Token: 0x0603EAEF RID: 256751 RVA: 0x00F23B30 File Offset: 0x00F21D30
+		// Token: 0x060337B3 RID: 210867 RVA: 0x00E6A920 File Offset: 0x00E68B20
 		public RoverlikeChooseData(RoverRogueChooseData proto)
 		{
 			this.BindId = proto.BindId;
@@ -30,55 +30,55 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EAF0 RID: 256752 RVA: 0x00F23C00 File Offset: 0x00F21E00
+		// Token: 0x060337B4 RID: 210868 RVA: 0x00E6A9F0 File Offset: 0x00E68BF0
 		public bool EnableRefresh()
 		{
 			return this.MaxTime > 0;
 		}
 
-		// Token: 0x0603EAF1 RID: 256753 RVA: 0x00F23C0B File Offset: 0x00F21E0B
+		// Token: 0x060337B5 RID: 210869 RVA: 0x00E6A9FB File Offset: 0x00E68BFB
 		public bool HasRefreshTime()
 		{
 			return this.UseTime < this.MaxTime;
 		}
 
-		// Token: 0x0603EAF2 RID: 256754 RVA: 0x00F23C1B File Offset: 0x00F21E1B
+		// Token: 0x060337B6 RID: 210870 RVA: 0x00E6AA0B File Offset: 0x00E68C0B
 		public bool HasRefreshCost()
 		{
 			return RoverlikeModel.Instance.Gold >= this.RefreshCost;
 		}
 
-		// Token: 0x0603EAF3 RID: 256755 RVA: 0x00F23C32 File Offset: 0x00F21E32
+		// Token: 0x060337B7 RID: 210871 RVA: 0x00E6AA22 File Offset: 0x00E68C22
 		public bool CanRefresh()
 		{
 			return this.EnableRefresh() && this.UseTime < this.MaxTime && RoverlikeModel.Instance.Gold >= this.RefreshCost;
 		}
 
-		// Token: 0x04020C44 RID: 134212
+		// Token: 0x0401B571 RID: 111985
 		public int BindId;
 
-		// Token: 0x04020C45 RID: 134213
+		// Token: 0x0401B572 RID: 111986
 		public int SubViewIncId;
 
-		// Token: 0x04020C46 RID: 134214
+		// Token: 0x0401B573 RID: 111987
 		public RoverRogueGainOperateType Type;
 
-		// Token: 0x04020C47 RID: 134215
+		// Token: 0x0401B574 RID: 111988
 		public int Layer;
 
-		// Token: 0x04020C48 RID: 134216
+		// Token: 0x0401B575 RID: 111989
 		public bool IsSelect;
 
-		// Token: 0x04020C49 RID: 134217
+		// Token: 0x0401B576 RID: 111990
 		public int MaxTime;
 
-		// Token: 0x04020C4A RID: 134218
+		// Token: 0x0401B577 RID: 111991
 		public int UseTime;
 
-		// Token: 0x04020C4B RID: 134219
+		// Token: 0x0401B578 RID: 111992
 		public int RefreshCost;
 
-		// Token: 0x04020C4C RID: 134220
+		// Token: 0x0401B579 RID: 111993
 		public List<RoverlikeGainEntry> Entries = new List<RoverlikeGainEntry>();
 	}
 }

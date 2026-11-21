@@ -9,18 +9,18 @@ using CSharpScript.Game.LevelGamePlay.SceneInteractExplorePlaced;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x0200721B RID: 29211
+	// Token: 0x020062D0 RID: 25296
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemExploreInteractGroupComponent : EntityComponent, ISceneInteractPointSource
 	{
-		// Token: 0x06047836 RID: 292918 RVA: 0x0123BEBE File Offset: 0x0123A0BE
+		// Token: 0x0603D15E RID: 250206 RVA: 0x0119554A File Offset: 0x0119374A
 		public IReadOnlyList<ISceneInteractPoint> GetInteractPoints()
 		{
 			return this.InteractPoints;
 		}
 
-		// Token: 0x06047837 RID: 292919 RVA: 0x0123BEC8 File Offset: 0x0123A0C8
+		// Token: 0x0603D15F RID: 250207 RVA: 0x01195554 File Offset: 0x01193754
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return this.Config != null;
 		}
 
-		// Token: 0x06047838 RID: 292920 RVA: 0x0123BF02 File Offset: 0x0123A102
+		// Token: 0x0603D160 RID: 250208 RVA: 0x0119558E File Offset: 0x0119378E
 		protected override bool OnStart()
 		{
 			this.CreateInteractPoints();
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047839 RID: 292921 RVA: 0x0123BF18 File Offset: 0x0123A118
+		// Token: 0x0603D161 RID: 250209 RVA: 0x011955A4 File Offset: 0x011937A4
 		protected override void OnActivate()
 		{
 			foreach (IExploreInteractPointSource exploreInteractPointSource in this.ExtraSource)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604783A RID: 292922 RVA: 0x0123BF68 File Offset: 0x0123A168
+		// Token: 0x0603D162 RID: 250210 RVA: 0x011955F4 File Offset: 0x011937F4
 		protected override bool OnEnd()
 		{
 			SceneInteractPointManager.Instance.Unregister(this);
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604783B RID: 292923 RVA: 0x0123BFDC File Offset: 0x0123A1DC
+		// Token: 0x0603D163 RID: 250211 RVA: 0x01195668 File Offset: 0x01193868
 		private void CreateInteractPoints()
 		{
 			ExploreSkillInteractGroupComponent config = this.Config;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604783C RID: 292924 RVA: 0x0123C0E0 File Offset: 0x0123A2E0
+		// Token: 0x0603D164 RID: 250212 RVA: 0x0119576C File Offset: 0x0119396C
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -101,35 +101,62 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemExploreInteractGroupComponent sceneItemExploreInteractGroupComponent = (SceneItemExploreInteractGroupComponent)componentTemplate;
-			if (base.CanResetComponentProperty("InteractPoints") && sceneItemExploreInteractGroupComponent.InteractPoints != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ISceneInteractPoint>>(this.InteractPoints), "InteractPoints"))
+			if (sceneItemExploreInteractGroupComponent.InteractPoints != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractPoints), "InteractPoints"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ExtraSource") && sceneItemExploreInteractGroupComponent.ExtraSource != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<IExploreInteractPointSource>>(this.ExtraSource), "ExtraSource"))
+			if (sceneItemExploreInteractGroupComponent.ExtraSource != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ExtraSource), "ExtraSource"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemExploreInteractGroupComponent.Config == null)
 			{
-				if (sceneItemExploreInteractGroupComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ExploreSkillInteractGroupComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040259FA RID: 154106
+		// Token: 0x170073A5 RID: 29605
+		// (get) Token: 0x0603D165 RID: 250213 RVA: 0x011957FB File Offset: 0x011939FB
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073A6 RID: 29606
+		// (get) Token: 0x0603D166 RID: 250214 RVA: 0x011957FE File Offset: 0x011939FE
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073A7 RID: 29607
+		// (get) Token: 0x0603D167 RID: 250215 RVA: 0x01195801 File Offset: 0x01193A01
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020669 RID: 132713
 		private readonly List<ISceneInteractPoint> InteractPoints = new List<ISceneInteractPoint>();
 
-		// Token: 0x040259FB RID: 154107
+		// Token: 0x0402066A RID: 132714
 		private readonly List<IExploreInteractPointSource> ExtraSource = new List<IExploreInteractPointSource>();
 
-		// Token: 0x040259FC RID: 154108
+		// Token: 0x0402066B RID: 132715
 		[Nullable(2)]
 		private ExploreSkillInteractGroupComponent Config;
 	}

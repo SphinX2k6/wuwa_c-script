@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058EE RID: 22766
+	// Token: 0x02005EFB RID: 24315
 	public enum ISceneTextTypeBase_Union : byte
 	{
-		// Token: 0x0400EE7F RID: 61055
+		// Token: 0x0400FB74 RID: 64372
 		NONE,
-		// Token: 0x0400EE80 RID: 61056
+		// Token: 0x0400FB75 RID: 64373
 		ISceneTextTypeBase,
-		// Token: 0x0400EE81 RID: 61057
+		// Token: 0x0400FB76 RID: 64374
 		ISceneTextSubtitleWithVoice,
-		// Token: 0x0400EE82 RID: 61058
+		// Token: 0x0400FB77 RID: 64375
 		ISceneTextGuideUi
 	}
 }

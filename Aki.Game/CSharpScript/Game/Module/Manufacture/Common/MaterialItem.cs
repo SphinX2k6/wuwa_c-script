@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x0200568B RID: 22155
+	// Token: 0x02004661 RID: 18017
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MaterialItem : UiPanelBase
 	{
-		// Token: 0x060385EE RID: 230894 RVA: 0x00D61FDF File Offset: 0x00D601DF
+		// Token: 0x0602D4EB RID: 185579 RVA: 0x00CB012F File Offset: 0x00CAE32F
 		public MaterialItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x060385EF RID: 230895 RVA: 0x00D61FF4 File Offset: 0x00D601F4
+		// Token: 0x0602D4EC RID: 185580 RVA: 0x00CB0144 File Offset: 0x00CAE344
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060385F0 RID: 230896 RVA: 0x00D62100 File Offset: 0x00D60300
+		// Token: 0x0602D4ED RID: 185581 RVA: 0x00CB0250 File Offset: 0x00CAE450
 		public void Update(ISingleItemInfo info)
 		{
 			this.ItemData = info;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.RefreshQuality();
 		}
 
-		// Token: 0x060385F1 RID: 230897 RVA: 0x00D62164 File Offset: 0x00D60364
+		// Token: 0x0602D4EE RID: 185582 RVA: 0x00CB02B4 File Offset: 0x00CAE4B4
 		public void RefreshNeed(int num = 1)
 		{
 			int num2 = this.ItemData.Proto_ItemNum;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetText(2).SetText(num2.ToString(), true);
 		}
 
-		// Token: 0x060385F2 RID: 230898 RVA: 0x00D6219C File Offset: 0x00D6039C
+		// Token: 0x0602D4EF RID: 185583 RVA: 0x00CB02EC File Offset: 0x00CAE4EC
 		protected void RefreshHave()
 		{
 			int itemCountByConfigId = InventoryModel.Instance.GetItemCountByConfigId(this.ItemData.Proto_ItemId, 0);
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetText(1).SetText(newText, true);
 		}
 
-		// Token: 0x060385F3 RID: 230899 RVA: 0x00D6225C File Offset: 0x00D6045C
+		// Token: 0x0602D4F0 RID: 185584 RVA: 0x00CB03AC File Offset: 0x00CAE5AC
 		private void RefreshIcon()
 		{
 			if (this.ItemData.Proto_IsUnlock)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetTexture(3).SetUIActive(false);
 		}
 
-		// Token: 0x060385F4 RID: 230900 RVA: 0x00D622BC File Offset: 0x00D604BC
+		// Token: 0x0602D4F1 RID: 185585 RVA: 0x00CB040C File Offset: 0x00CAE60C
 		private void RefreshQuality()
 		{
 			if (this.ItemData.Proto_IsUnlock)
@@ -131,13 +131,13 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetSprite(4).SetUIActive(false);
 		}
 
-		// Token: 0x060385F5 RID: 230901 RVA: 0x00D6231C File Offset: 0x00D6051C
+		// Token: 0x0602D4F2 RID: 185586 RVA: 0x00CB046C File Offset: 0x00CAE66C
 		public void BindOnClickedCallback(Action<ISingleItemInfo> onItemButtonClicked)
 		{
 			this.OnClickedCallback = onItemButtonClicked;
 		}
 
-		// Token: 0x060385F6 RID: 230902 RVA: 0x00D62325 File Offset: 0x00D60525
+		// Token: 0x0602D4F3 RID: 185587 RVA: 0x00CB0475 File Offset: 0x00CAE675
 		protected void OnClick(EToggleState state)
 		{
 			if (this.OnClickedCallback != null)
@@ -146,14 +146,14 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x0401D9FB RID: 121339
+		// Token: 0x04018486 RID: 99462
 		[Nullable(2)]
 		protected ISingleItemInfo ItemData;
 
-		// Token: 0x0401D9FC RID: 121340
+		// Token: 0x04018487 RID: 99463
 		protected ItemInfo? ItemInfo;
 
-		// Token: 0x0401D9FD RID: 121341
+		// Token: 0x04018488 RID: 99464
 		[Nullable(new byte[]
 		{
 			2,
@@ -161,23 +161,23 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 		})]
 		private Action<ISingleItemInfo> OnClickedCallback;
 
-		// Token: 0x0200B853 RID: 47187
+		// Token: 0x0200A27B RID: 41595
 		[NullableContext(0)]
 		private class EMaterialDefine
 		{
-			// Token: 0x04037CA5 RID: 228517
+			// Token: 0x040326C2 RID: 206530
 			public const int MaterialExtendToggle = 0;
 
-			// Token: 0x04037CA6 RID: 228518
+			// Token: 0x040326C3 RID: 206531
 			public const int HaveText = 1;
 
-			// Token: 0x04037CA7 RID: 228519
+			// Token: 0x040326C4 RID: 206532
 			public const int NeedText = 2;
 
-			// Token: 0x04037CA8 RID: 228520
+			// Token: 0x040326C5 RID: 206533
 			public const int MaterialIconTexture = 3;
 
-			// Token: 0x04037CA9 RID: 228521
+			// Token: 0x040326C6 RID: 206534
 			public const int MaterialQualitySprite = 4;
 		}
 	}

@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F2B RID: 7979
+	// Token: 0x02000632 RID: 1586
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroVehicle.MotorAccelConfig")]
 	[UnrealStructLayout(384, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 384)]
 	public class FMotorAccelConfig : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E54E RID: 124238 RVA: 0x002D10F2 File Offset: 0x002CF2F2
+		// Token: 0x06008B25 RID: 35621 RVA: 0x000D1536 File Offset: 0x000CF736
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMotorAccelConfig._ScriptStructPtr != 0) ? FMotorAccelConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroVehicle.MotorAccelConfig", ref FMotorAccelConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x17007882 RID: 30850
-		// (get) Token: 0x0601E54F RID: 124239 RVA: 0x002D1116 File Offset: 0x002CF316
-		// (set) Token: 0x0601E550 RID: 124240 RVA: 0x002D1126 File Offset: 0x002CF326
+		// Token: 0x17001A20 RID: 6688
+		// (get) Token: 0x06008B26 RID: 35622 RVA: 0x000D155A File Offset: 0x000CF75A
+		// (set) Token: 0x06008B27 RID: 35623 RVA: 0x000D156A File Offset: 0x000CF76A
 		public unsafe bool bDoubleDrive
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007883 RID: 30851
-		// (get) Token: 0x0601E551 RID: 124241 RVA: 0x002D1138 File Offset: 0x002CF338
-		// (set) Token: 0x0601E552 RID: 124242 RVA: 0x002D117B File Offset: 0x002CF37B
+		// Token: 0x17001A21 RID: 6689
+		// (get) Token: 0x06008B28 RID: 35624 RVA: 0x000D157C File Offset: 0x000CF77C
+		// (set) Token: 0x06008B29 RID: 35625 RVA: 0x000D15BF File Offset: 0x000CF7BF
 		public FMotorFloatRange BackWheelRate
 		{
 			get
@@ -55,9 +55,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007884 RID: 30852
-		// (get) Token: 0x0601E553 RID: 124243 RVA: 0x002D119C File Offset: 0x002CF39C
-		// (set) Token: 0x0601E554 RID: 124244 RVA: 0x002D11AC File Offset: 0x002CF3AC
+		// Token: 0x17001A22 RID: 6690
+		// (get) Token: 0x06008B2A RID: 35626 RVA: 0x000D15E0 File Offset: 0x000CF7E0
+		// (set) Token: 0x06008B2B RID: 35627 RVA: 0x000D15F0 File Offset: 0x000CF7F0
 		public unsafe float NormalDrag
 		{
 			get
@@ -70,9 +70,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007885 RID: 30853
-		// (get) Token: 0x0601E555 RID: 124245 RVA: 0x002D11BD File Offset: 0x002CF3BD
-		// (set) Token: 0x0601E556 RID: 124246 RVA: 0x002D11CD File Offset: 0x002CF3CD
+		// Token: 0x17001A23 RID: 6691
+		// (get) Token: 0x06008B2C RID: 35628 RVA: 0x000D1601 File Offset: 0x000CF801
+		// (set) Token: 0x06008B2D RID: 35629 RVA: 0x000D1611 File Offset: 0x000CF811
 		public unsafe float FrontWheelBrakingDrag
 		{
 			get
@@ -85,9 +85,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007886 RID: 30854
-		// (get) Token: 0x0601E557 RID: 124247 RVA: 0x002D11DE File Offset: 0x002CF3DE
-		// (set) Token: 0x0601E558 RID: 124248 RVA: 0x002D11EE File Offset: 0x002CF3EE
+		// Token: 0x17001A24 RID: 6692
+		// (get) Token: 0x06008B2E RID: 35630 RVA: 0x000D1622 File Offset: 0x000CF822
+		// (set) Token: 0x06008B2F RID: 35631 RVA: 0x000D1632 File Offset: 0x000CF832
 		public unsafe float BackWheelBrakingDrag
 		{
 			get
@@ -100,9 +100,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007887 RID: 30855
-		// (get) Token: 0x0601E559 RID: 124249 RVA: 0x002D11FF File Offset: 0x002CF3FF
-		// (set) Token: 0x0601E55A RID: 124250 RVA: 0x002D120F File Offset: 0x002CF40F
+		// Token: 0x17001A25 RID: 6693
+		// (get) Token: 0x06008B30 RID: 35632 RVA: 0x000D1643 File Offset: 0x000CF843
+		// (set) Token: 0x06008B31 RID: 35633 RVA: 0x000D1653 File Offset: 0x000CF853
 		public unsafe float DragNormalNoInput
 		{
 			get
@@ -115,9 +115,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007888 RID: 30856
-		// (get) Token: 0x0601E55B RID: 124251 RVA: 0x002D1220 File Offset: 0x002CF420
-		// (set) Token: 0x0601E55C RID: 124252 RVA: 0x002D1230 File Offset: 0x002CF430
+		// Token: 0x17001A26 RID: 6694
+		// (get) Token: 0x06008B32 RID: 35634 RVA: 0x000D1664 File Offset: 0x000CF864
+		// (set) Token: 0x06008B33 RID: 35635 RVA: 0x000D1674 File Offset: 0x000CF874
 		public unsafe float BackMoveBrakingDragAbs
 		{
 			get
@@ -130,9 +130,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007889 RID: 30857
-		// (get) Token: 0x0601E55D RID: 124253 RVA: 0x002D1241 File Offset: 0x002CF441
-		// (set) Token: 0x0601E55E RID: 124254 RVA: 0x002D1251 File Offset: 0x002CF451
+		// Token: 0x17001A27 RID: 6695
+		// (get) Token: 0x06008B34 RID: 35636 RVA: 0x000D1685 File Offset: 0x000CF885
+		// (set) Token: 0x06008B35 RID: 35637 RVA: 0x000D1695 File Offset: 0x000CF895
 		public unsafe float BackMoveBrakingDragRate
 		{
 			get
@@ -145,9 +145,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700788A RID: 30858
-		// (get) Token: 0x0601E55F RID: 124255 RVA: 0x002D1264 File Offset: 0x002CF464
-		// (set) Token: 0x0601E560 RID: 124256 RVA: 0x002D12A7 File Offset: 0x002CF4A7
+		// Token: 0x17001A28 RID: 6696
+		// (get) Token: 0x06008B36 RID: 35638 RVA: 0x000D16A8 File Offset: 0x000CF8A8
+		// (set) Token: 0x06008B37 RID: 35639 RVA: 0x000D16EB File Offset: 0x000CF8EB
 		public FMotorFloatRange PowerAccel
 		{
 			get
@@ -166,9 +166,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700788B RID: 30859
-		// (get) Token: 0x0601E561 RID: 124257 RVA: 0x002D12C8 File Offset: 0x002CF4C8
-		// (set) Token: 0x0601E562 RID: 124258 RVA: 0x002D12D8 File Offset: 0x002CF4D8
+		// Token: 0x17001A29 RID: 6697
+		// (get) Token: 0x06008B38 RID: 35640 RVA: 0x000D170C File Offset: 0x000CF90C
+		// (set) Token: 0x06008B39 RID: 35641 RVA: 0x000D171C File Offset: 0x000CF91C
 		public unsafe float MaxTimeLengthWhenNoSupport
 		{
 			get
@@ -181,9 +181,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700788C RID: 30860
-		// (get) Token: 0x0601E563 RID: 124259 RVA: 0x002D12E9 File Offset: 0x002CF4E9
-		// (set) Token: 0x0601E564 RID: 124260 RVA: 0x002D12F9 File Offset: 0x002CF4F9
+		// Token: 0x17001A2A RID: 6698
+		// (get) Token: 0x06008B3A RID: 35642 RVA: 0x000D172D File Offset: 0x000CF92D
+		// (set) Token: 0x06008B3B RID: 35643 RVA: 0x000D173D File Offset: 0x000CF93D
 		public unsafe float RotateAccelNormal
 		{
 			get
@@ -196,9 +196,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700788D RID: 30861
-		// (get) Token: 0x0601E565 RID: 124261 RVA: 0x002D130C File Offset: 0x002CF50C
-		// (set) Token: 0x0601E566 RID: 124262 RVA: 0x002D134F File Offset: 0x002CF54F
+		// Token: 0x17001A2B RID: 6699
+		// (get) Token: 0x06008B3C RID: 35644 RVA: 0x000D1750 File Offset: 0x000CF950
+		// (set) Token: 0x06008B3D RID: 35645 RVA: 0x000D1793 File Offset: 0x000CF993
 		public FMotorFloatRange TurnSpeedNormal
 		{
 			get
@@ -217,9 +217,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700788E RID: 30862
-		// (get) Token: 0x0601E567 RID: 124263 RVA: 0x002D1370 File Offset: 0x002CF570
-		// (set) Token: 0x0601E568 RID: 124264 RVA: 0x002D13B3 File Offset: 0x002CF5B3
+		// Token: 0x17001A2C RID: 6700
+		// (get) Token: 0x06008B3E RID: 35646 RVA: 0x000D17B4 File Offset: 0x000CF9B4
+		// (set) Token: 0x06008B3F RID: 35647 RVA: 0x000D17F7 File Offset: 0x000CF9F7
 		public FMotorFloatRange TurnSpeedRateNormal
 		{
 			get
@@ -238,9 +238,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700788F RID: 30863
-		// (get) Token: 0x0601E569 RID: 124265 RVA: 0x002D13D4 File Offset: 0x002CF5D4
-		// (set) Token: 0x0601E56A RID: 124266 RVA: 0x002D13E4 File Offset: 0x002CF5E4
+		// Token: 0x17001A2D RID: 6701
+		// (get) Token: 0x06008B40 RID: 35648 RVA: 0x000D1818 File Offset: 0x000CFA18
+		// (set) Token: 0x06008B41 RID: 35649 RVA: 0x000D1828 File Offset: 0x000CFA28
 		public unsafe float RotateAccelFrontBraking
 		{
 			get
@@ -253,9 +253,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007890 RID: 30864
-		// (get) Token: 0x0601E56B RID: 124267 RVA: 0x002D13F8 File Offset: 0x002CF5F8
-		// (set) Token: 0x0601E56C RID: 124268 RVA: 0x002D143B File Offset: 0x002CF63B
+		// Token: 0x17001A2E RID: 6702
+		// (get) Token: 0x06008B42 RID: 35650 RVA: 0x000D183C File Offset: 0x000CFA3C
+		// (set) Token: 0x06008B43 RID: 35651 RVA: 0x000D187F File Offset: 0x000CFA7F
 		public FMotorFloatRange TurnSpeedFrontBraking
 		{
 			get
@@ -274,9 +274,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007891 RID: 30865
-		// (get) Token: 0x0601E56D RID: 124269 RVA: 0x002D145C File Offset: 0x002CF65C
-		// (set) Token: 0x0601E56E RID: 124270 RVA: 0x002D149F File Offset: 0x002CF69F
+		// Token: 0x17001A2F RID: 6703
+		// (get) Token: 0x06008B44 RID: 35652 RVA: 0x000D18A0 File Offset: 0x000CFAA0
+		// (set) Token: 0x06008B45 RID: 35653 RVA: 0x000D18E3 File Offset: 0x000CFAE3
 		public FMotorFloatRange TurnSpeedRateFrontBraking
 		{
 			get
@@ -295,9 +295,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007892 RID: 30866
-		// (get) Token: 0x0601E56F RID: 124271 RVA: 0x002D14C0 File Offset: 0x002CF6C0
-		// (set) Token: 0x0601E570 RID: 124272 RVA: 0x002D14D0 File Offset: 0x002CF6D0
+		// Token: 0x17001A30 RID: 6704
+		// (get) Token: 0x06008B46 RID: 35654 RVA: 0x000D1904 File Offset: 0x000CFB04
+		// (set) Token: 0x06008B47 RID: 35655 RVA: 0x000D1914 File Offset: 0x000CFB14
 		public unsafe float RotateAccelBackMove
 		{
 			get
@@ -310,9 +310,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007893 RID: 30867
-		// (get) Token: 0x0601E571 RID: 124273 RVA: 0x002D14E4 File Offset: 0x002CF6E4
-		// (set) Token: 0x0601E572 RID: 124274 RVA: 0x002D1527 File Offset: 0x002CF727
+		// Token: 0x17001A31 RID: 6705
+		// (get) Token: 0x06008B48 RID: 35656 RVA: 0x000D1928 File Offset: 0x000CFB28
+		// (set) Token: 0x06008B49 RID: 35657 RVA: 0x000D196B File Offset: 0x000CFB6B
 		public FMotorFloatRange TurnSpeedBackMove
 		{
 			get
@@ -331,9 +331,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007894 RID: 30868
-		// (get) Token: 0x0601E573 RID: 124275 RVA: 0x002D1548 File Offset: 0x002CF748
-		// (set) Token: 0x0601E574 RID: 124276 RVA: 0x002D158B File Offset: 0x002CF78B
+		// Token: 0x17001A32 RID: 6706
+		// (get) Token: 0x06008B4A RID: 35658 RVA: 0x000D198C File Offset: 0x000CFB8C
+		// (set) Token: 0x06008B4B RID: 35659 RVA: 0x000D19CF File Offset: 0x000CFBCF
 		public FMotorFloatRange FrontWheelPressureRateIncreaseBackBraking
 		{
 			get
@@ -352,9 +352,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007895 RID: 30869
-		// (get) Token: 0x0601E575 RID: 124277 RVA: 0x002D15AC File Offset: 0x002CF7AC
-		// (set) Token: 0x0601E576 RID: 124278 RVA: 0x002D15EF File Offset: 0x002CF7EF
+		// Token: 0x17001A33 RID: 6707
+		// (get) Token: 0x06008B4C RID: 35660 RVA: 0x000D19F0 File Offset: 0x000CFBF0
+		// (set) Token: 0x06008B4D RID: 35661 RVA: 0x000D1A33 File Offset: 0x000CFC33
 		public FMotorFloatRange FrontWheelAccelRateBackBraking
 		{
 			get
@@ -373,9 +373,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007896 RID: 30870
-		// (get) Token: 0x0601E577 RID: 124279 RVA: 0x002D1610 File Offset: 0x002CF810
-		// (set) Token: 0x0601E578 RID: 124280 RVA: 0x002D1653 File Offset: 0x002CF853
+		// Token: 0x17001A34 RID: 6708
+		// (get) Token: 0x06008B4E RID: 35662 RVA: 0x000D1A54 File Offset: 0x000CFC54
+		// (set) Token: 0x06008B4F RID: 35663 RVA: 0x000D1A97 File Offset: 0x000CFC97
 		public FMotorFloatRange RotateAccelBackBraking
 		{
 			get
@@ -394,9 +394,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007897 RID: 30871
-		// (get) Token: 0x0601E579 RID: 124281 RVA: 0x002D1674 File Offset: 0x002CF874
-		// (set) Token: 0x0601E57A RID: 124282 RVA: 0x002D16B7 File Offset: 0x002CF8B7
+		// Token: 0x17001A35 RID: 6709
+		// (get) Token: 0x06008B50 RID: 35664 RVA: 0x000D1AB8 File Offset: 0x000CFCB8
+		// (set) Token: 0x06008B51 RID: 35665 RVA: 0x000D1AFB File Offset: 0x000CFCFB
 		public FMotorFloatRange RotateAccelRateBackBraking
 		{
 			get
@@ -415,9 +415,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007898 RID: 30872
-		// (get) Token: 0x0601E57B RID: 124283 RVA: 0x002D16D8 File Offset: 0x002CF8D8
-		// (set) Token: 0x0601E57C RID: 124284 RVA: 0x002D171B File Offset: 0x002CF91B
+		// Token: 0x17001A36 RID: 6710
+		// (get) Token: 0x06008B52 RID: 35666 RVA: 0x000D1B1C File Offset: 0x000CFD1C
+		// (set) Token: 0x06008B53 RID: 35667 RVA: 0x000D1B5F File Offset: 0x000CFD5F
 		public FMotorFloatRange TurnSpeedBackBraking
 		{
 			get
@@ -436,9 +436,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007899 RID: 30873
-		// (get) Token: 0x0601E57D RID: 124285 RVA: 0x002D173C File Offset: 0x002CF93C
-		// (set) Token: 0x0601E57E RID: 124286 RVA: 0x002D177F File Offset: 0x002CF97F
+		// Token: 0x17001A37 RID: 6711
+		// (get) Token: 0x06008B54 RID: 35668 RVA: 0x000D1B80 File Offset: 0x000CFD80
+		// (set) Token: 0x06008B55 RID: 35669 RVA: 0x000D1BC3 File Offset: 0x000CFDC3
 		public FMotorFloatRange TurnSpeedRateBackBraking
 		{
 			get
@@ -457,9 +457,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700789A RID: 30874
-		// (get) Token: 0x0601E57F RID: 124287 RVA: 0x002D17A0 File Offset: 0x002CF9A0
-		// (set) Token: 0x0601E580 RID: 124288 RVA: 0x002D17B0 File Offset: 0x002CF9B0
+		// Token: 0x17001A38 RID: 6712
+		// (get) Token: 0x06008B56 RID: 35670 RVA: 0x000D1BE4 File Offset: 0x000CFDE4
+		// (set) Token: 0x06008B57 RID: 35671 RVA: 0x000D1BF4 File Offset: 0x000CFDF4
 		public unsafe float MaxSpeed
 		{
 			get
@@ -472,9 +472,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700789B RID: 30875
-		// (get) Token: 0x0601E581 RID: 124289 RVA: 0x002D17C1 File Offset: 0x002CF9C1
-		// (set) Token: 0x0601E582 RID: 124290 RVA: 0x002D17D1 File Offset: 0x002CF9D1
+		// Token: 0x17001A39 RID: 6713
+		// (get) Token: 0x06008B58 RID: 35672 RVA: 0x000D1C05 File Offset: 0x000CFE05
+		// (set) Token: 0x06008B59 RID: 35673 RVA: 0x000D1C15 File Offset: 0x000CFE15
 		public unsafe float MaxBackSpeed
 		{
 			get
@@ -487,9 +487,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700789C RID: 30876
-		// (get) Token: 0x0601E583 RID: 124291 RVA: 0x002D17E2 File Offset: 0x002CF9E2
-		// (set) Token: 0x0601E584 RID: 124292 RVA: 0x002D17F2 File Offset: 0x002CF9F2
+		// Token: 0x17001A3A RID: 6714
+		// (get) Token: 0x06008B5A RID: 35674 RVA: 0x000D1C26 File Offset: 0x000CFE26
+		// (set) Token: 0x06008B5B RID: 35675 RVA: 0x000D1C36 File Offset: 0x000CFE36
 		public unsafe float MaxSpeedInTurn
 		{
 			get
@@ -502,209 +502,177 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E585 RID: 124293 RVA: 0x002D1803 File Offset: 0x002CFA03
+		// Token: 0x06008B5C RID: 35676 RVA: 0x000D1C47 File Offset: 0x000CFE47
 		public FMotorAccelConfig()
 		{
 		}
 
-		// Token: 0x0601E586 RID: 124294 RVA: 0x002D180C File Offset: 0x002CFA0C
-		public FMotorAccelConfig(bool bDoubleDrive, FMotorFloatRange BackWheelRate, float NormalDrag, float FrontWheelBrakingDrag, float BackWheelBrakingDrag, float DragNormalNoInput, float BackMoveBrakingDragAbs, float BackMoveBrakingDragRate, FMotorFloatRange PowerAccel, float MaxTimeLengthWhenNoSupport, float RotateAccelNormal, FMotorFloatRange TurnSpeedNormal, FMotorFloatRange TurnSpeedRateNormal, float RotateAccelFrontBraking, FMotorFloatRange TurnSpeedFrontBraking, FMotorFloatRange TurnSpeedRateFrontBraking, float RotateAccelBackMove, FMotorFloatRange TurnSpeedBackMove, FMotorFloatRange FrontWheelPressureRateIncreaseBackBraking, FMotorFloatRange FrontWheelAccelRateBackBraking, FMotorFloatRange RotateAccelBackBraking, FMotorFloatRange RotateAccelRateBackBraking, FMotorFloatRange TurnSpeedBackBraking, FMotorFloatRange TurnSpeedRateBackBraking, float MaxSpeed, float MaxBackSpeed, float MaxSpeedInTurn)
-		{
-			this.bDoubleDrive = bDoubleDrive;
-			this.BackWheelRate = BackWheelRate;
-			this.NormalDrag = NormalDrag;
-			this.FrontWheelBrakingDrag = FrontWheelBrakingDrag;
-			this.BackWheelBrakingDrag = BackWheelBrakingDrag;
-			this.DragNormalNoInput = DragNormalNoInput;
-			this.BackMoveBrakingDragAbs = BackMoveBrakingDragAbs;
-			this.BackMoveBrakingDragRate = BackMoveBrakingDragRate;
-			this.PowerAccel = PowerAccel;
-			this.MaxTimeLengthWhenNoSupport = MaxTimeLengthWhenNoSupport;
-			this.RotateAccelNormal = RotateAccelNormal;
-			this.TurnSpeedNormal = TurnSpeedNormal;
-			this.TurnSpeedRateNormal = TurnSpeedRateNormal;
-			this.RotateAccelFrontBraking = RotateAccelFrontBraking;
-			this.TurnSpeedFrontBraking = TurnSpeedFrontBraking;
-			this.TurnSpeedRateFrontBraking = TurnSpeedRateFrontBraking;
-			this.RotateAccelBackMove = RotateAccelBackMove;
-			this.TurnSpeedBackMove = TurnSpeedBackMove;
-			this.FrontWheelPressureRateIncreaseBackBraking = FrontWheelPressureRateIncreaseBackBraking;
-			this.FrontWheelAccelRateBackBraking = FrontWheelAccelRateBackBraking;
-			this.RotateAccelBackBraking = RotateAccelBackBraking;
-			this.RotateAccelRateBackBraking = RotateAccelRateBackBraking;
-			this.TurnSpeedBackBraking = TurnSpeedBackBraking;
-			this.TurnSpeedRateBackBraking = TurnSpeedRateBackBraking;
-			this.MaxSpeed = MaxSpeed;
-			this.MaxBackSpeed = MaxBackSpeed;
-			this.MaxSpeedInTurn = MaxSpeedInTurn;
-		}
-
-		// Token: 0x0601E587 RID: 124295 RVA: 0x002D18F4 File Offset: 0x002CFAF4
+		// Token: 0x06008B5D RID: 35677 RVA: 0x000D1C4F File Offset: 0x000CFE4F
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMotorAccelConfig.StaticStruct();
 		}
 
-		// Token: 0x0601E588 RID: 124296 RVA: 0x002D1900 File Offset: 0x002CFB00
+		// Token: 0x06008B5E RID: 35678 RVA: 0x000D1C5B File Offset: 0x000CFE5B
 		[NullableContext(2)]
 		public FMotorAccelConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E589 RID: 124297 RVA: 0x002D190A File Offset: 0x002CFB0A
+		// Token: 0x06008B5F RID: 35679 RVA: 0x000D1C65 File Offset: 0x000CFE65
 		public FMotorAccelConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E58A RID: 124298 RVA: 0x002D1915 File Offset: 0x002CFB15
+		// Token: 0x06008B60 RID: 35680 RVA: 0x000D1C70 File Offset: 0x000CFE70
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMotorAccelConfig(Pointer, false, true);
 		}
 
-		// Token: 0x0601E58B RID: 124299 RVA: 0x002D191F File Offset: 0x002CFB1F
+		// Token: 0x06008B61 RID: 35681 RVA: 0x000D1C7A File Offset: 0x000CFE7A
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMotorAccelConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040105BC RID: 67004
+		// Token: 0x04003C60 RID: 15456
 		public const string __ObjectPath = "/Script/KuroVehicle.MotorAccelConfig";
 
-		// Token: 0x040105BD RID: 67005
+		// Token: 0x04003C61 RID: 15457
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040105BE RID: 67006
+		// Token: 0x04003C62 RID: 15458
 		internal static int __PropertyOffset_bDoubleDrive;
 
-		// Token: 0x040105BF RID: 67007
+		// Token: 0x04003C63 RID: 15459
 		internal static int __PropertyOffset_BackWheelRate;
 
-		// Token: 0x040105C0 RID: 67008
+		// Token: 0x04003C64 RID: 15460
 		[Nullable(2)]
 		private FMotorFloatRange _BackWheelRate;
 
-		// Token: 0x040105C1 RID: 67009
+		// Token: 0x04003C65 RID: 15461
 		internal static int __PropertyOffset_NormalDrag;
 
-		// Token: 0x040105C2 RID: 67010
+		// Token: 0x04003C66 RID: 15462
 		internal static int __PropertyOffset_FrontWheelBrakingDrag;
 
-		// Token: 0x040105C3 RID: 67011
+		// Token: 0x04003C67 RID: 15463
 		internal static int __PropertyOffset_BackWheelBrakingDrag;
 
-		// Token: 0x040105C4 RID: 67012
+		// Token: 0x04003C68 RID: 15464
 		internal static int __PropertyOffset_DragNormalNoInput;
 
-		// Token: 0x040105C5 RID: 67013
+		// Token: 0x04003C69 RID: 15465
 		internal static int __PropertyOffset_BackMoveBrakingDragAbs;
 
-		// Token: 0x040105C6 RID: 67014
+		// Token: 0x04003C6A RID: 15466
 		internal static int __PropertyOffset_BackMoveBrakingDragRate;
 
-		// Token: 0x040105C7 RID: 67015
+		// Token: 0x04003C6B RID: 15467
 		internal static int __PropertyOffset_PowerAccel;
 
-		// Token: 0x040105C8 RID: 67016
+		// Token: 0x04003C6C RID: 15468
 		[Nullable(2)]
 		private FMotorFloatRange _PowerAccel;
 
-		// Token: 0x040105C9 RID: 67017
+		// Token: 0x04003C6D RID: 15469
 		internal static int __PropertyOffset_MaxTimeLengthWhenNoSupport;
 
-		// Token: 0x040105CA RID: 67018
+		// Token: 0x04003C6E RID: 15470
 		internal static int __PropertyOffset_RotateAccelNormal;
 
-		// Token: 0x040105CB RID: 67019
+		// Token: 0x04003C6F RID: 15471
 		internal static int __PropertyOffset_TurnSpeedNormal;
 
-		// Token: 0x040105CC RID: 67020
+		// Token: 0x04003C70 RID: 15472
 		[Nullable(2)]
 		private FMotorFloatRange _TurnSpeedNormal;
 
-		// Token: 0x040105CD RID: 67021
+		// Token: 0x04003C71 RID: 15473
 		internal static int __PropertyOffset_TurnSpeedRateNormal;
 
-		// Token: 0x040105CE RID: 67022
+		// Token: 0x04003C72 RID: 15474
 		[Nullable(2)]
 		private FMotorFloatRange _TurnSpeedRateNormal;
 
-		// Token: 0x040105CF RID: 67023
+		// Token: 0x04003C73 RID: 15475
 		internal static int __PropertyOffset_RotateAccelFrontBraking;
 
-		// Token: 0x040105D0 RID: 67024
+		// Token: 0x04003C74 RID: 15476
 		internal static int __PropertyOffset_TurnSpeedFrontBraking;
 
-		// Token: 0x040105D1 RID: 67025
+		// Token: 0x04003C75 RID: 15477
 		[Nullable(2)]
 		private FMotorFloatRange _TurnSpeedFrontBraking;
 
-		// Token: 0x040105D2 RID: 67026
+		// Token: 0x04003C76 RID: 15478
 		internal static int __PropertyOffset_TurnSpeedRateFrontBraking;
 
-		// Token: 0x040105D3 RID: 67027
+		// Token: 0x04003C77 RID: 15479
 		[Nullable(2)]
 		private FMotorFloatRange _TurnSpeedRateFrontBraking;
 
-		// Token: 0x040105D4 RID: 67028
+		// Token: 0x04003C78 RID: 15480
 		internal static int __PropertyOffset_RotateAccelBackMove;
 
-		// Token: 0x040105D5 RID: 67029
+		// Token: 0x04003C79 RID: 15481
 		internal static int __PropertyOffset_TurnSpeedBackMove;
 
-		// Token: 0x040105D6 RID: 67030
+		// Token: 0x04003C7A RID: 15482
 		[Nullable(2)]
 		private FMotorFloatRange _TurnSpeedBackMove;
 
-		// Token: 0x040105D7 RID: 67031
+		// Token: 0x04003C7B RID: 15483
 		internal static int __PropertyOffset_FrontWheelPressureRateIncreaseBackBraking;
 
-		// Token: 0x040105D8 RID: 67032
+		// Token: 0x04003C7C RID: 15484
 		[Nullable(2)]
 		private FMotorFloatRange _FrontWheelPressureRateIncreaseBackBraking;
 
-		// Token: 0x040105D9 RID: 67033
+		// Token: 0x04003C7D RID: 15485
 		internal static int __PropertyOffset_FrontWheelAccelRateBackBraking;
 
-		// Token: 0x040105DA RID: 67034
+		// Token: 0x04003C7E RID: 15486
 		[Nullable(2)]
 		private FMotorFloatRange _FrontWheelAccelRateBackBraking;
 
-		// Token: 0x040105DB RID: 67035
+		// Token: 0x04003C7F RID: 15487
 		internal static int __PropertyOffset_RotateAccelBackBraking;
 
-		// Token: 0x040105DC RID: 67036
+		// Token: 0x04003C80 RID: 15488
 		[Nullable(2)]
 		private FMotorFloatRange _RotateAccelBackBraking;
 
-		// Token: 0x040105DD RID: 67037
+		// Token: 0x04003C81 RID: 15489
 		internal static int __PropertyOffset_RotateAccelRateBackBraking;
 
-		// Token: 0x040105DE RID: 67038
+		// Token: 0x04003C82 RID: 15490
 		[Nullable(2)]
 		private FMotorFloatRange _RotateAccelRateBackBraking;
 
-		// Token: 0x040105DF RID: 67039
+		// Token: 0x04003C83 RID: 15491
 		internal static int __PropertyOffset_TurnSpeedBackBraking;
 
-		// Token: 0x040105E0 RID: 67040
+		// Token: 0x04003C84 RID: 15492
 		[Nullable(2)]
 		private FMotorFloatRange _TurnSpeedBackBraking;
 
-		// Token: 0x040105E1 RID: 67041
+		// Token: 0x04003C85 RID: 15493
 		internal static int __PropertyOffset_TurnSpeedRateBackBraking;
 
-		// Token: 0x040105E2 RID: 67042
+		// Token: 0x04003C86 RID: 15494
 		[Nullable(2)]
 		private FMotorFloatRange _TurnSpeedRateBackBraking;
 
-		// Token: 0x040105E3 RID: 67043
+		// Token: 0x04003C87 RID: 15495
 		internal static int __PropertyOffset_MaxSpeed;
 
-		// Token: 0x040105E4 RID: 67044
+		// Token: 0x04003C88 RID: 15496
 		internal static int __PropertyOffset_MaxBackSpeed;
 
-		// Token: 0x040105E5 RID: 67045
+		// Token: 0x04003C89 RID: 15497
 		internal static int __PropertyOffset_MaxSpeedInTurn;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C7C RID: 7292
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E81 RID: 7809
 	public class INpcSitDown : INpcLeisureInteractType
 	{
-		// Token: 0x06009C5B RID: 40027 RVA: 0x001669B0 File Offset: 0x00164BB0
+		// Token: 0x0600A5F5 RID: 42485 RVA: 0x0017A3A4 File Offset: 0x001785A4
 		private INpcSitDown_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009C5C RID: 40028 RVA: 0x001669E8 File Offset: 0x00164BE8
+		// Token: 0x0600A5F6 RID: 42486 RVA: 0x0017A3DC File Offset: 0x001785DC
 		public static INpcSitDown Create([Nullable(2)] INpcSitDown instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C5D RID: 40029 RVA: 0x001669FB File Offset: 0x00164BFB
+		// Token: 0x0600A5F7 RID: 42487 RVA: 0x0017A3EF File Offset: 0x001785EF
 		public static INpcSitDown CreateFromSetValue([Nullable(2)] INpcSitDown_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C5E RID: 40030 RVA: 0x00166A10 File Offset: 0x00164C10
+		// Token: 0x0600A5F8 RID: 42488 RVA: 0x0017A404 File Offset: 0x00178604
 		public new INpcSitDown_SetValue ToSetValue()
 		{
 			return new INpcSitDown_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030CA RID: 12490
-		// (get) Token: 0x06009C5F RID: 40031 RVA: 0x00166A5E File Offset: 0x00164C5E
-		// (set) Token: 0x06009C60 RID: 40032 RVA: 0x00166A89 File Offset: 0x00164C89
+		// Token: 0x17003347 RID: 13127
+		// (get) Token: 0x0600A5F9 RID: 42489 RVA: 0x0017A452 File Offset: 0x00178652
+		// (set) Token: 0x0600A5FA RID: 42490 RVA: 0x0017A47D File Offset: 0x0017867D
 		public override ENpcLeisureInteract Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030CB RID: 12491
-		// (get) Token: 0x06009C61 RID: 40033 RVA: 0x00166A98 File Offset: 0x00164C98
-		// (set) Token: 0x06009C62 RID: 40034 RVA: 0x00166AD2 File Offset: 0x00164CD2
+		// Token: 0x17003348 RID: 13128
+		// (get) Token: 0x0600A5FB RID: 42491 RVA: 0x0017A48C File Offset: 0x0017868C
+		// (set) Token: 0x0600A5FC RID: 42492 RVA: 0x0017A4C6 File Offset: 0x001786C6
 		public override bool? KeepState
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030CC RID: 12492
-		// (get) Token: 0x06009C63 RID: 40035 RVA: 0x00166AE0 File Offset: 0x00164CE0
-		// (set) Token: 0x06009C64 RID: 40036 RVA: 0x00166B41 File Offset: 0x00164D41
+		// Token: 0x17003349 RID: 13129
+		// (get) Token: 0x0600A5FD RID: 42493 RVA: 0x0017A4D4 File Offset: 0x001786D4
+		// (set) Token: 0x0600A5FE RID: 42494 RVA: 0x0017A535 File Offset: 0x00178735
 		public virtual IMontageId MontageId
 		{
 			get
@@ -140,9 +138,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030CD RID: 12493
-		// (get) Token: 0x06009C65 RID: 40037 RVA: 0x00166B56 File Offset: 0x00164D56
-		// (set) Token: 0x06009C66 RID: 40038 RVA: 0x00166B81 File Offset: 0x00164D81
+		// Token: 0x1700334A RID: 13130
+		// (get) Token: 0x0600A5FF RID: 42495 RVA: 0x0017A54A File Offset: 0x0017874A
+		// (set) Token: 0x0600A600 RID: 42496 RVA: 0x0017A575 File Offset: 0x00178775
 		public virtual int PosEntityId
 		{
 			get
@@ -163,9 +161,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030CE RID: 12494
-		// (get) Token: 0x06009C67 RID: 40039 RVA: 0x00166B8F File Offset: 0x00164D8F
-		// (set) Token: 0x06009C68 RID: 40040 RVA: 0x00166BBE File Offset: 0x00164DBE
+		// Token: 0x1700334B RID: 13131
+		// (get) Token: 0x0600A601 RID: 42497 RVA: 0x0017A583 File Offset: 0x00178783
+		// (set) Token: 0x0600A602 RID: 42498 RVA: 0x0017A5B2 File Offset: 0x001787B2
 		public virtual float Duration
 		{
 			get
@@ -186,18 +184,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005ED1 RID: 24273
+		// Token: 0x04006424 RID: 25636
 		[Nullable(2)]
 		protected new INpcSitDown FbInstance;
 
-		// Token: 0x04005ED2 RID: 24274
+		// Token: 0x04006425 RID: 25637
 		[Nullable(2)]
 		protected new INpcSitDown_SetValue PocoInterface;
 
-		// Token: 0x04005ED3 RID: 24275
+		// Token: 0x04006426 RID: 25638
 		private IMontageId _MontageIdCache;
 
-		// Token: 0x04005ED4 RID: 24276
+		// Token: 0x04006427 RID: 25639
 		private bool _MontageIdInited;
 	}
 }

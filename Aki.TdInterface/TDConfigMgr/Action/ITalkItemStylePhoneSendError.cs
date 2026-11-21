@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F5A RID: 8026
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002193 RID: 8595
 	public class ITalkItemStylePhoneSendError : ITalkItemStyle
 	{
-		// Token: 0x0600AECE RID: 44750 RVA: 0x001933F8 File Offset: 0x001915F8
+		// Token: 0x0600B9A0 RID: 47520 RVA: 0x001A93F0 File Offset: 0x001A75F0
 		private ITalkItemStylePhoneSendError_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AECF RID: 44751 RVA: 0x00193430 File Offset: 0x00191630
+		// Token: 0x0600B9A1 RID: 47521 RVA: 0x001A9428 File Offset: 0x001A7628
 		public static ITalkItemStylePhoneSendError Create([Nullable(2)] ITalkItemStylePhoneSendError instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AED0 RID: 44752 RVA: 0x00193443 File Offset: 0x00191643
+		// Token: 0x0600B9A2 RID: 47522 RVA: 0x001A943B File Offset: 0x001A763B
 		public static ITalkItemStylePhoneSendError CreateFromSetValue([Nullable(2)] ITalkItemStylePhoneSendError_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AED1 RID: 44753 RVA: 0x00193456 File Offset: 0x00191656
+		// Token: 0x0600B9A3 RID: 47523 RVA: 0x001A944E File Offset: 0x001A764E
 		public new ITalkItemStylePhoneSendError_SetValue ToSetValue()
 		{
 			return new ITalkItemStylePhoneSendError_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170035B8 RID: 13752
-		// (get) Token: 0x0600AED2 RID: 44754 RVA: 0x00193469 File Offset: 0x00191669
-		// (set) Token: 0x0600AED3 RID: 44755 RVA: 0x00193494 File Offset: 0x00191694
+		// Token: 0x17003883 RID: 14467
+		// (get) Token: 0x0600B9A4 RID: 47524 RVA: 0x001A9461 File Offset: 0x001A7661
+		// (set) Token: 0x0600B9A5 RID: 47525 RVA: 0x001A948C File Offset: 0x001A768C
 		public override ETalkItemStyle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006927 RID: 26919
+		// Token: 0x04006F16 RID: 28438
 		[Nullable(2)]
 		protected new ITalkItemStylePhoneSendError FbInstance;
 
-		// Token: 0x04006928 RID: 26920
+		// Token: 0x04006F17 RID: 28439
 		[Nullable(2)]
 		protected new ITalkItemStylePhoneSendError_SetValue PocoInterface;
 	}

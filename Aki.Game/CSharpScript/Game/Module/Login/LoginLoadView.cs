@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056B0 RID: 22192
+	// Token: 0x02004686 RID: 18054
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LoginLoadView : UiPanelBase
 	{
-		// Token: 0x06038751 RID: 231249 RVA: 0x00D676D2 File Offset: 0x00D658D2
+		// Token: 0x0602D64E RID: 185934 RVA: 0x00CB5896 File Offset: 0x00CB3A96
 		public LoginLoadView(AActor actor)
 		{
 			base.CreateThenShowByActor(actor, null);
 		}
 
-		// Token: 0x06038752 RID: 231250 RVA: 0x00D676E4 File Offset: 0x00D658E4
+		// Token: 0x0602D64F RID: 185935 RVA: 0x00CB58A8 File Offset: 0x00CB3AA8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.Module.Login
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038753 RID: 231251 RVA: 0x00D6776E File Offset: 0x00D6596E
+		// Token: 0x0602D650 RID: 185936 RVA: 0x00CB5932 File Offset: 0x00CB3B32
 		protected override void OnStart()
 		{
 			this.ProgressText = base.GetText(1);
 			this.DownLoadTipsText = base.GetText(2);
 		}
 
-		// Token: 0x06038754 RID: 231252 RVA: 0x00D6778A File Offset: 0x00D6598A
+		// Token: 0x0602D651 RID: 185937 RVA: 0x00CB594E File Offset: 0x00CB3B4E
 		public void SetDownLoadTipsTextActive(bool value)
 		{
 			UUIText downLoadTipsText = this.DownLoadTipsText;
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.Module.Login
 			downLoadTipsText.SetUIActive(value);
 		}
 
-		// Token: 0x06038755 RID: 231253 RVA: 0x00D6779D File Offset: 0x00D6599D
+		// Token: 0x0602D652 RID: 185938 RVA: 0x00CB5961 File Offset: 0x00CB3B61
 		public void SetDownLoadTipsText(string textId)
 		{
 			LguiUtil.Instance.SetLocalText(this.DownLoadTipsText, textId, Array.Empty<object>());
 		}
 
-		// Token: 0x06038756 RID: 231254 RVA: 0x00D677B5 File Offset: 0x00D659B5
+		// Token: 0x0602D653 RID: 185939 RVA: 0x00CB5979 File Offset: 0x00CB3B79
 		public void SetProgressSprite(float value)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -69,16 +69,16 @@ namespace CSharpScript.Game.Module.Login
 			sprite.SetFillAmount(value);
 		}
 
-		// Token: 0x06038757 RID: 231255 RVA: 0x00D677C9 File Offset: 0x00D659C9
+		// Token: 0x0602D654 RID: 185940 RVA: 0x00CB598D File Offset: 0x00CB3B8D
 		public void SetProgressText(string textId, params object[] args)
 		{
 			LguiUtil.Instance.SetLocalText(this.ProgressText, textId, args);
 		}
 
-		// Token: 0x0401DA66 RID: 121446
+		// Token: 0x040184F1 RID: 99569
 		private UUIText ProgressText;
 
-		// Token: 0x0401DA67 RID: 121447
+		// Token: 0x040184F2 RID: 99570
 		private UUIText DownLoadTipsText;
 	}
 }

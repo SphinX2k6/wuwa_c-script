@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002820 RID: 10272
+	// Token: 0x02002AF3 RID: 10995
 	public class IPlayMapMusic : IAkEventMapType
 	{
-		// Token: 0x0600E3D4 RID: 58324 RVA: 0x00218F3F File Offset: 0x0021713F
-		[NullableContext(1)]
+		// Token: 0x0600F1F9 RID: 61945 RVA: 0x00235DA3 File Offset: 0x00233FA3
 		public static IPlayMapMusic Create(IPlayMapMusic? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004556 RID: 17750
-		// (get) Token: 0x0600E3D5 RID: 58325 RVA: 0x00218F5E File Offset: 0x0021715E
+		// Token: 0x170048C1 RID: 18625
+		// (get) Token: 0x0600F1FA RID: 61946 RVA: 0x00235DC2 File Offset: 0x00233FC2
 		public override EAkEventMap Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E18 RID: 32280
+		// Token: 0x040084D5 RID: 34005
 		private IPlayMapMusic Instance;
 	}
 }

@@ -1,27 +1,27 @@
 ﻿using System;
 
-// Token: 0x02002D9F RID: 11679
+// Token: 0x020022F9 RID: 8953
 public class BulletSpecialActionDeclare : IStaticVariableResetter
 {
-	// Token: 0x0601886A RID: 100458 RVA: 0x00643F5C File Offset: 0x0064215C
+	// Token: 0x0601610F RID: 90383 RVA: 0x00669D98 File Offset: 0x00667F98
 	static BulletSpecialActionDeclare()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BulletSpecialActionDeclare.CreateStaticDefaultValue), new Action(BulletSpecialActionDeclare.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601886B RID: 100459 RVA: 0x00643F7B File Offset: 0x0064217B
+	// Token: 0x06016110 RID: 90384 RVA: 0x00669DB7 File Offset: 0x00667FB7
 	public static void CreateStaticDefaultValue()
 	{
 		BulletSpecialActionDeclare.Registered = false;
 	}
 
-	// Token: 0x0601886C RID: 100460 RVA: 0x00643F83 File Offset: 0x00642183
+	// Token: 0x06016111 RID: 90385 RVA: 0x00669DBF File Offset: 0x00667FBF
 	public static void ResetStaticDefaultValue()
 	{
 		BulletSpecialActionDeclare.Registered = false;
 	}
 
-	// Token: 0x0601886D RID: 100461 RVA: 0x00643F8C File Offset: 0x0064218C
+	// Token: 0x06016112 RID: 90386 RVA: 0x00669DC8 File Offset: 0x00667FC8
 	public static void RegisterAll()
 	{
 		if (BulletSpecialActionDeclare.Registered)
@@ -77,6 +77,6 @@ public class BulletSpecialActionDeclare : IStaticVariableResetter
 		});
 	}
 
-	// Token: 0x0400B5E6 RID: 46566
+	// Token: 0x0400B95C RID: 47452
 	private static bool Registered;
 }

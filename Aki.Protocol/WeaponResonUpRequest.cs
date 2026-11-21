@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020014F6 RID: 5366
+	// Token: 0x0200156C RID: 5484
 	[NetMessage(EMessageId.WeaponResonUpRequest)]
 	public sealed class WeaponResonUpRequest : IMessage<WeaponResonUpRequest>, IMessage, IEquatable<WeaponResonUpRequest>, IDeepCloneable<WeaponResonUpRequest>, IBufferMessage
 	{
-		// Token: 0x0601C5E9 RID: 116201 RVA: 0x00419459 File Offset: 0x00417659
+		// Token: 0x0601D0B0 RID: 118960 RVA: 0x00434F15 File Offset: 0x00433115
 		[NullableContext(1)]
 		public static WeaponResonUpRequest Create()
 		{
 			return new WeaponResonUpRequest();
 		}
 
-		// Token: 0x17005FA5 RID: 24485
-		// (get) Token: 0x0601C5EA RID: 116202 RVA: 0x00419460 File Offset: 0x00417660
+		// Token: 0x17006246 RID: 25158
+		// (get) Token: 0x0601D0B1 RID: 118961 RVA: 0x00434F1C File Offset: 0x0043311C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005FA6 RID: 24486
-		// (get) Token: 0x0601C5EB RID: 116203 RVA: 0x00419463 File Offset: 0x00417663
+		// Token: 0x17006247 RID: 25159
+		// (get) Token: 0x0601D0B2 RID: 118962 RVA: 0x00434F1F File Offset: 0x0043311F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C5EC RID: 116204 RVA: 0x0041946A File Offset: 0x0041766A
+		// Token: 0x0601D0B3 RID: 118963 RVA: 0x00434F26 File Offset: 0x00433126
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeaponResonUpRequest()
 		{
 		}
 
-		// Token: 0x0601C5ED RID: 116205 RVA: 0x00419488 File Offset: 0x00417688
+		// Token: 0x0601D0B4 RID: 118964 RVA: 0x00434F44 File Offset: 0x00433144
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeaponResonUpRequest(WeaponResonUpRequest other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601C5EE RID: 116206 RVA: 0x004194DA File Offset: 0x004176DA
+		// Token: 0x0601D0B5 RID: 118965 RVA: 0x00434F96 File Offset: 0x00433196
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeaponResonUpRequest Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new WeaponResonUpRequest(this);
 		}
 
-		// Token: 0x17005FA7 RID: 24487
-		// (get) Token: 0x0601C5EF RID: 116207 RVA: 0x004194E2 File Offset: 0x004176E2
-		// (set) Token: 0x0601C5F0 RID: 116208 RVA: 0x004194EA File Offset: 0x004176EA
+		// Token: 0x17006248 RID: 25160
+		// (get) Token: 0x0601D0B6 RID: 118966 RVA: 0x00434F9E File Offset: 0x0043319E
+		// (set) Token: 0x0601D0B7 RID: 118967 RVA: 0x00434FA6 File Offset: 0x004331A6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int IncId
@@ -86,8 +86,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005FA8 RID: 24488
-		// (get) Token: 0x0601C5F1 RID: 116209 RVA: 0x004194F3 File Offset: 0x004176F3
+		// Token: 0x17006249 RID: 25161
+		// (get) Token: 0x0601D0B8 RID: 118968 RVA: 0x00434FAF File Offset: 0x004331AF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> ConsumeList
@@ -98,8 +98,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005FA9 RID: 24489
-		// (get) Token: 0x0601C5F2 RID: 116210 RVA: 0x004194FB File Offset: 0x004176FB
+		// Token: 0x1700624A RID: 25162
+		// (get) Token: 0x0601D0B9 RID: 118969 RVA: 0x00434FB7 File Offset: 0x004331B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<WeaponConsumeItem> ConsumeItemList
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C5F3 RID: 116211 RVA: 0x00419503 File Offset: 0x00417703
+		// Token: 0x0601D0BA RID: 118970 RVA: 0x00434FBF File Offset: 0x004331BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -118,7 +118,7 @@ namespace Aki.Protocol
 			return this.Equals(other as WeaponResonUpRequest);
 		}
 
-		// Token: 0x0601C5F4 RID: 116212 RVA: 0x00419514 File Offset: 0x00417714
+		// Token: 0x0601D0BB RID: 118971 RVA: 0x00434FD0 File Offset: 0x004331D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(WeaponResonUpRequest other)
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.IncId == other.IncId && this.consumeList_.Equals(other.consumeList_) && this.consumeItemList_.Equals(other.consumeItemList_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601C5F5 RID: 116213 RVA: 0x00419578 File Offset: 0x00417778
+		// Token: 0x0601D0BC RID: 118972 RVA: 0x00435034 File Offset: 0x00433234
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C5F6 RID: 116214 RVA: 0x004195D3 File Offset: 0x004177D3
+		// Token: 0x0601D0BD RID: 118973 RVA: 0x0043508F File Offset: 0x0043328F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601C5F7 RID: 116215 RVA: 0x004195E0 File Offset: 0x004177E0
+		// Token: 0x0601D0BE RID: 118974 RVA: 0x0043509C File Offset: 0x0043329C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -161,17 +161,17 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601C5F8 RID: 116216 RVA: 0x004195EC File Offset: 0x004177EC
+		// Token: 0x0601D0BF RID: 118975 RVA: 0x004350A8 File Offset: 0x004332A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.consumeList_.WriteTo(ref output, WeaponResonUpRequest._repeated_consumeList_codec);
 			if (this.IncId != 0)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(8);
 				output.WriteInt32(this.IncId);
 			}
+			this.consumeList_.WriteTo(ref output, WeaponResonUpRequest._repeated_consumeList_codec);
 			this.consumeItemList_.WriteTo(ref output, WeaponResonUpRequest._repeated_consumeItemList_codec);
 			if (this._unknownFields != null)
 			{
@@ -179,7 +179,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C5F9 RID: 116217 RVA: 0x0041964C File Offset: 0x0041784C
+		// Token: 0x0601D0C0 RID: 118976 RVA: 0x00435108 File Offset: 0x00433308
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C5FA RID: 116218 RVA: 0x004196B0 File Offset: 0x004178B0
+		// Token: 0x0601D0C1 RID: 118977 RVA: 0x0043516C File Offset: 0x0043336C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(WeaponResonUpRequest other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601C5FB RID: 116219 RVA: 0x0041970E File Offset: 0x0041790E
+		// Token: 0x0601D0C2 RID: 118978 RVA: 0x004351CA File Offset: 0x004333CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601C5FC RID: 116220 RVA: 0x00419718 File Offset: 0x00417918
+		// Token: 0x0601D0C3 RID: 118979 RVA: 0x004351D4 File Offset: 0x004333D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,56 +236,62 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 50U)
+				if (num <= 16U)
 				{
-					if (num == 48U || num == 50U)
-					{
-						this.consumeList_.AddEntriesFrom(ref input, WeaponResonUpRequest._repeated_consumeList_codec);
-						continue;
-					}
-				}
-				else
-				{
-					if (num == 56U)
+					if (num == 8U)
 					{
 						this.IncId = input.ReadInt32();
 						continue;
 					}
-					if (num == 74U)
+					if (num == 16U)
+					{
+						goto IL_45;
+					}
+				}
+				else
+				{
+					if (num == 18U)
+					{
+						goto IL_45;
+					}
+					if (num == 50U)
 					{
 						this.consumeItemList_.AddEntriesFrom(ref input, WeaponResonUpRequest._repeated_consumeItemList_codec);
 						continue;
 					}
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
+				continue;
+				IL_45:
+				this.consumeList_.AddEntriesFrom(ref input, WeaponResonUpRequest._repeated_consumeList_codec);
 			}
 		}
 
-		// Token: 0x0400A282 RID: 41602
+		// Token: 0x0400A6DB RID: 42715
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400A283 RID: 41603
-		public const int IncIdFieldNumber = 7;
+		// Token: 0x0400A6DC RID: 42716
+		public const int IncIdFieldNumber = 1;
 
-		// Token: 0x0400A284 RID: 41604
+		// Token: 0x0400A6DD RID: 42717
 		private int incId_;
 
-		// Token: 0x0400A285 RID: 41605
-		public const int ConsumeListFieldNumber = 6;
+		// Token: 0x0400A6DE RID: 42718
+		public const int ConsumeListFieldNumber = 2;
 
-		// Token: 0x0400A286 RID: 41606
-		private static readonly FieldCodec<int> _repeated_consumeList_codec = FieldCodec.ForInt32(50U);
+		// Token: 0x0400A6DF RID: 42719
+		private static readonly FieldCodec<int> _repeated_consumeList_codec = FieldCodec.ForInt32(18U);
 
-		// Token: 0x0400A287 RID: 41607
+		// Token: 0x0400A6E0 RID: 42720
 		private readonly RepeatedField<int> consumeList_ = new RepeatedField<int>();
 
-		// Token: 0x0400A288 RID: 41608
-		public const int ConsumeItemListFieldNumber = 9;
+		// Token: 0x0400A6E1 RID: 42721
+		public const int ConsumeItemListFieldNumber = 6;
 
-		// Token: 0x0400A289 RID: 41609
-		private static readonly FieldCodec<WeaponConsumeItem> _repeated_consumeItemList_codec = FieldCodec.ForMessage<WeaponConsumeItem>(74U, WeaponConsumeItem.Parser);
+		// Token: 0x0400A6E2 RID: 42722
+		private static readonly FieldCodec<WeaponConsumeItem> _repeated_consumeItemList_codec = FieldCodec.ForMessage<WeaponConsumeItem>(50U, WeaponConsumeItem.Parser);
 
-		// Token: 0x0400A28A RID: 41610
+		// Token: 0x0400A6E3 RID: 42723
 		private readonly RepeatedField<WeaponConsumeItem> consumeItemList_ = new RepeatedField<WeaponConsumeItem>();
 	}
 }

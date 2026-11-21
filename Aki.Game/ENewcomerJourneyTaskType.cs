@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020013A7 RID: 5031
+// Token: 0x0200085B RID: 2139
 public enum ENewcomerJourneyTaskType
 {
-	// Token: 0x04003EAC RID: 16044
+	// Token: 0x04003F44 RID: 16196
 	None,
-	// Token: 0x04003EAD RID: 16045
+	// Token: 0x04003F45 RID: 16197
 	Normal,
-	// Token: 0x04003EAE RID: 16046
+	// Token: 0x04003F46 RID: 16198
 	Special
 }

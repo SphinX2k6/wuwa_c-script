@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F33 RID: 24371
+	// Token: 0x02006577 RID: 25975
 	public enum EChangeTimerType : byte
 	{
-		// Token: 0x0400FC79 RID: 64633
+		// Token: 0x040109EF RID: 68079
 		Add,
-		// Token: 0x0400FC7A RID: 64634
+		// Token: 0x040109F0 RID: 68080
 		Reduce,
-		// Token: 0x0400FC7B RID: 64635
+		// Token: 0x040109F1 RID: 68081
 		Set
 	}
 }

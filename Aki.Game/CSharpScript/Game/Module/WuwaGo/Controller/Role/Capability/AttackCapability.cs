@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 {
-	// Token: 0x02004761 RID: 18273
+	// Token: 0x02003692 RID: 13970
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AttackCapability : CapabilityBase
 	{
-		// Token: 0x0602FC55 RID: 195669 RVA: 0x00B11051 File Offset: 0x00B0F251
+		// Token: 0x0602441F RID: 148511 RVA: 0x00A41011 File Offset: 0x00A3F211
 		public AttackCapability(WuWaGoRole role) : base(role)
 		{
 		}
 
-		// Token: 0x0602FC56 RID: 195670 RVA: 0x00B1105C File Offset: 0x00B0F25C
+		// Token: 0x06024420 RID: 148512 RVA: 0x00A4101C File Offset: 0x00A3F21C
 		public IAttackSession Attack()
 		{
 			AttackCapability.<>c__DisplayClass4_0 CS$<>8__locals1 = new AttackCapability.<>c__DisplayClass4_0();
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			};
 		}
 
-		// Token: 0x0602FC57 RID: 195671 RVA: 0x00B110C8 File Offset: 0x00B0F2C8
+		// Token: 0x06024421 RID: 148513 RVA: 0x00A41088 File Offset: 0x00A3F288
 		private UniTask PerformAttackAnim()
 		{
 			AttackCapability.<PerformAttackAnim>d__5 <PerformAttackAnim>d__;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			return <PerformAttackAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC58 RID: 195672 RVA: 0x00B1110C File Offset: 0x00B0F30C
+		// Token: 0x06024422 RID: 148514 RVA: 0x00A410CC File Offset: 0x00A3F2CC
 		private unsafe float ComputeRootMotionScale(UAnimMontage montage)
 		{
 			BP_WuWaGo_C setting = WuWaGoGlobal.Setting;
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			return Math.Min(5f, Math.Max(0.1f, num3));
 		}
 
-		// Token: 0x04019C56 RID: 105558
+		// Token: 0x04014306 RID: 82694
 		private const int DEFAULT_ATTACK_MONTAGE_ORIGINAL_FORWARD_CM = 700;
 
-		// Token: 0x04019C57 RID: 105559
+		// Token: 0x04014307 RID: 82695
 		private const float ATTACK_RM_SCALE_MIN = 0.1f;
 
-		// Token: 0x04019C58 RID: 105560
+		// Token: 0x04014308 RID: 82696
 		private const int ATTACK_RM_SCALE_MAX = 5;
 	}
 }

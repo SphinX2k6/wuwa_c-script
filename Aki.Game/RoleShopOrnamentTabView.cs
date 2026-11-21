@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002379 RID: 9081
+// Token: 0x0200185E RID: 6238
 public class RoleShopOrnamentTabView : UiTabViewBase, IUiTabViewRefresh
 {
-	// Token: 0x06012244 RID: 74308 RVA: 0x00475389 File Offset: 0x00473589
+	// Token: 0x0600F6F4 RID: 63220 RVA: 0x00482509 File Offset: 0x00480709
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ public class RoleShopOrnamentTabView : UiTabViewBase, IUiTabViewRefresh
 		};
 	}
 
-	// Token: 0x06012245 RID: 74309 RVA: 0x004753C4 File Offset: 0x004735C4
+	// Token: 0x0600F6F5 RID: 63221 RVA: 0x00482544 File Offset: 0x00480744
 	protected override void OnStart()
 	{
 		this.CurrentShopId = (int)(this.ExtraParams ?? 0);
@@ -28,20 +28,20 @@ public class RoleShopOrnamentTabView : UiTabViewBase, IUiTabViewRefresh
 		this.Layout = new GenericLayout<OrnamentItemContent, OrnamentItemContentData>(base.GetHorizontalLayout(0), new Func<OrnamentItemContent>(this.OnCreateItem), null, false, true);
 	}
 
-	// Token: 0x06012246 RID: 74310 RVA: 0x00475428 File Offset: 0x00473628
+	// Token: 0x0600F6F6 RID: 63222 RVA: 0x004825A8 File Offset: 0x004807A8
 	[NullableContext(1)]
 	private OrnamentItemContent OnCreateItem()
 	{
 		return new OrnamentItemContent();
 	}
 
-	// Token: 0x06012247 RID: 74311 RVA: 0x0047542F File Offset: 0x0047362F
+	// Token: 0x0600F6F7 RID: 63223 RVA: 0x004825AF File Offset: 0x004807AF
 	protected override void OnBeforeShow()
 	{
 		this.RefreshLayout();
 	}
 
-	// Token: 0x06012248 RID: 74312 RVA: 0x00475438 File Offset: 0x00473638
+	// Token: 0x0600F6F8 RID: 63224 RVA: 0x004825B8 File Offset: 0x004807B8
 	private void RefreshLayout()
 	{
 		List<PayShopGoods> payShopTabData = PayShopModel.Instance.GetPayShopTabData((PayShopDefine.EPayShopTabType)this.CurrentShopId, this.TabId, true);
@@ -59,19 +59,19 @@ public class RoleShopOrnamentTabView : UiTabViewBase, IUiTabViewRefresh
 		this.Layout.RefreshByData(list, null, true);
 	}
 
-	// Token: 0x06012249 RID: 74313 RVA: 0x004754B2 File Offset: 0x004736B2
+	// Token: 0x0600F6F9 RID: 63225 RVA: 0x00482632 File Offset: 0x00480832
 	[NullableContext(2)]
 	public void RefreshView(object @params)
 	{
 	}
 
-	// Token: 0x04008921 RID: 35105
+	// Token: 0x04008A66 RID: 35430
 	private int CurrentShopId;
 
-	// Token: 0x04008922 RID: 35106
+	// Token: 0x04008A67 RID: 35431
 	private int TabId;
 
-	// Token: 0x04008923 RID: 35107
+	// Token: 0x04008A68 RID: 35432
 	[Nullable(new byte[]
 	{
 		2,
@@ -80,12 +80,12 @@ public class RoleShopOrnamentTabView : UiTabViewBase, IUiTabViewRefresh
 	})]
 	private GenericLayout<OrnamentItemContent, OrnamentItemContentData> Layout;
 
-	// Token: 0x02008915 RID: 35093
+	// Token: 0x02007A9F RID: 31391
 	private enum EComponent
 	{
-		// Token: 0x0402C8D7 RID: 182487
+		// Token: 0x04027BEF RID: 162799
 		HorizontalLayout,
-		// Token: 0x0402C8D8 RID: 182488
+		// Token: 0x04027BF0 RID: 162800
 		Item
 	}
 }

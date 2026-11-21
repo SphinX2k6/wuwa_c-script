@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C99 RID: 27801
+	// Token: 0x02007403 RID: 29699
 	public struct IPetalGrabConfig : IFlatbufferObject
 	{
-		// Token: 0x1700CF09 RID: 53001
-		// (get) Token: 0x06030FE9 RID: 200681 RVA: 0x006A6BFF File Offset: 0x006A4DFF
+		// Token: 0x1700DA27 RID: 55847
+		// (get) Token: 0x06033F56 RID: 212822 RVA: 0x00701275 File Offset: 0x006FF475
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030FEA RID: 200682 RVA: 0x006A6C0C File Offset: 0x006A4E0C
+		// Token: 0x06033F57 RID: 212823 RVA: 0x00701282 File Offset: 0x006FF482
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030FEB RID: 200683 RVA: 0x006A6C14 File Offset: 0x006A4E14
+		// Token: 0x06033F58 RID: 212824 RVA: 0x0070128C File Offset: 0x006FF48C
 		public static IPetalGrabConfig GetRootAsIPetalGrabConfig(ByteBuffer _bb)
 		{
 			return IPetalGrabConfig.GetRootAsIPetalGrabConfig(_bb, default(IPetalGrabConfig));
 		}
 
-		// Token: 0x06030FEC RID: 200684 RVA: 0x006A6C30 File Offset: 0x006A4E30
+		// Token: 0x06033F59 RID: 212825 RVA: 0x007012A8 File Offset: 0x006FF4A8
 		public static IPetalGrabConfig GetRootAsIPetalGrabConfig(ByteBuffer _bb, IPetalGrabConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030FED RID: 200685 RVA: 0x006A6C4D File Offset: 0x006A4E4D
+		// Token: 0x06033F5A RID: 212826 RVA: 0x007012C5 File Offset: 0x006FF4C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030FEE RID: 200686 RVA: 0x006A6C5C File Offset: 0x006A4E5C
+		// Token: 0x06033F5B RID: 212827 RVA: 0x007012D4 File Offset: 0x006FF4D4
 		public IPetalGrabConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CF0A RID: 53002
-		// (get) Token: 0x06030FEF RID: 200687 RVA: 0x006A6C6C File Offset: 0x006A4E6C
+		// Token: 0x1700DA28 RID: 55848
+		// (get) Token: 0x06033F5C RID: 212828 RVA: 0x007012E4 File Offset: 0x006FF4E4
 		public ESportStateType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF0B RID: 53003
-		// (get) Token: 0x06030FF0 RID: 200688 RVA: 0x006A6CA8 File Offset: 0x006A4EA8
+		// Token: 0x1700DA29 RID: 55849
+		// (get) Token: 0x06033F5D RID: 212829 RVA: 0x00701320 File Offset: 0x006FF520
 		public int FirstGrabEntityId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030FF1 RID: 200689 RVA: 0x006A6CE4 File Offset: 0x006A4EE4
+		// Token: 0x06033F5E RID: 212830 RVA: 0x0070135C File Offset: 0x006FF55C
 		public static Offset<IPetalGrabConfig> CreateIPetalGrabConfig(FlatBufferBuilder builder, ESportStateType Type = ESportStateType.Slide, int FirstGrabEntityId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPetalGrabConfig.EndIPetalGrabConfig(builder);
 		}
 
-		// Token: 0x06030FF2 RID: 200690 RVA: 0x006A6D01 File Offset: 0x006A4F01
+		// Token: 0x06033F5F RID: 212831 RVA: 0x00701379 File Offset: 0x006FF579
 		public static void StartIPetalGrabConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06030FF3 RID: 200691 RVA: 0x006A6D0A File Offset: 0x006A4F0A
+		// Token: 0x06033F60 RID: 212832 RVA: 0x00701382 File Offset: 0x006FF582
 		public static void AddType(FlatBufferBuilder builder, ESportStateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06030FF4 RID: 200692 RVA: 0x006A6D15 File Offset: 0x006A4F15
+		// Token: 0x06033F61 RID: 212833 RVA: 0x0070138D File Offset: 0x006FF58D
 		public static void AddFirstGrabEntityId(FlatBufferBuilder builder, int firstGrabEntityId)
 		{
 			builder.AddInt(1, firstGrabEntityId, 0);
 		}
 
-		// Token: 0x06030FF5 RID: 200693 RVA: 0x006A6D20 File Offset: 0x006A4F20
+		// Token: 0x06033F62 RID: 212834 RVA: 0x00701398 File Offset: 0x006FF598
 		public static Offset<IPetalGrabConfig> EndIPetalGrabConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IPetalGrabConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06030FF6 RID: 200694 RVA: 0x006A6D30 File Offset: 0x006A4F30
+		// Token: 0x06033F63 RID: 212835 RVA: 0x007013A8 File Offset: 0x006FF5A8
 		public IPetalGrabConfigT UnPack()
 		{
 			IPetalGrabConfigT petalGrabConfigT = new IPetalGrabConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return petalGrabConfigT;
 		}
 
-		// Token: 0x06030FF7 RID: 200695 RVA: 0x006A6D4B File Offset: 0x006A4F4B
+		// Token: 0x06033F64 RID: 212836 RVA: 0x007013C3 File Offset: 0x006FF5C3
 		public void UnPackTo(IPetalGrabConfigT _o)
 		{
 			_o.Type = this.Type;
 			_o.FirstGrabEntityId = this.FirstGrabEntityId;
 		}
 
-		// Token: 0x06030FF8 RID: 200696 RVA: 0x006A6D68 File Offset: 0x006A4F68
+		// Token: 0x06033F65 RID: 212837 RVA: 0x007013E0 File Offset: 0x006FF5E0
 		public static Offset<IPetalGrabConfig> Pack(FlatBufferBuilder builder, IPetalGrabConfigT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPetalGrabConfig.CreateIPetalGrabConfig(builder, _o.Type, _o.FirstGrabEntityId);
 		}
 
-		// Token: 0x040115F0 RID: 71152
+		// Token: 0x0401254A RID: 75082
 		private Table __p;
 	}
 }

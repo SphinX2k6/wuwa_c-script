@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019A2 RID: 6562
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B29 RID: 6953
 	public class IDisableAllMotorRadioOperation : IMotorRadioOperationRestriction
 	{
-		// Token: 0x06008C6B RID: 35947 RVA: 0x0014975C File Offset: 0x0014795C
+		// Token: 0x0600938F RID: 37775 RVA: 0x00158F6C File Offset: 0x0015716C
 		private IDisableAllMotorRadioOperation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008C6C RID: 35948 RVA: 0x00149794 File Offset: 0x00147994
+		// Token: 0x06009390 RID: 37776 RVA: 0x00158FA4 File Offset: 0x001571A4
 		public static IDisableAllMotorRadioOperation Create([Nullable(2)] IDisableAllMotorRadioOperation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C6D RID: 35949 RVA: 0x001497A7 File Offset: 0x001479A7
+		// Token: 0x06009391 RID: 37777 RVA: 0x00158FB7 File Offset: 0x001571B7
 		public static IDisableAllMotorRadioOperation CreateFromSetValue([Nullable(2)] IDisableAllMotorRadioOperation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C6E RID: 35950 RVA: 0x001497BA File Offset: 0x001479BA
+		// Token: 0x06009392 RID: 37778 RVA: 0x00158FCA File Offset: 0x001571CA
 		public new IDisableAllMotorRadioOperation_SetValue ToSetValue()
 		{
 			return new IDisableAllMotorRadioOperation_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D17 RID: 11543
-		// (get) Token: 0x06008C6F RID: 35951 RVA: 0x001497CD File Offset: 0x001479CD
-		// (set) Token: 0x06008C70 RID: 35952 RVA: 0x001497F8 File Offset: 0x001479F8
+		// Token: 0x17002F16 RID: 12054
+		// (get) Token: 0x06009393 RID: 37779 RVA: 0x00158FDD File Offset: 0x001571DD
+		// (set) Token: 0x06009394 RID: 37780 RVA: 0x00159008 File Offset: 0x00157208
 		public override EMotorRadioOperationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005768 RID: 22376
+		// Token: 0x04005BB1 RID: 23473
 		[Nullable(2)]
 		protected new IDisableAllMotorRadioOperation FbInstance;
 
-		// Token: 0x04005769 RID: 22377
+		// Token: 0x04005BB2 RID: 23474
 		[Nullable(2)]
 		protected new IDisableAllMotorRadioOperation_SetValue PocoInterface;
 	}

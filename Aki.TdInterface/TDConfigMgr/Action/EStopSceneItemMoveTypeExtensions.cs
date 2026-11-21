@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002431 RID: 9265
+	// Token: 0x020026D2 RID: 9938
 	public static class EStopSceneItemMoveTypeExtensions
 	{
-		// Token: 0x0600C95B RID: 51547 RVA: 0x001D7C18 File Offset: 0x001D5E18
+		// Token: 0x0600D60B RID: 54795 RVA: 0x001F1AE0 File Offset: 0x001EFCE0
 		public static string ToEnumString(this EStopSceneItemMoveType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C95C RID: 51548 RVA: 0x001D7C50 File Offset: 0x001D5E50
+		// Token: 0x0600D60C RID: 54796 RVA: 0x001F1B18 File Offset: 0x001EFD18
 		public static EStopSceneItemMoveType FromString(string name)
 		{
 			EStopSceneItemMoveType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C95D RID: 51549 RVA: 0x001D7C79 File Offset: 0x001D5E79
+		// Token: 0x0600D60D RID: 54797 RVA: 0x001F1B41 File Offset: 0x001EFD41
 		public static bool TryFromString(string name, out EStopSceneItemMoveType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C95E RID: 51550 RVA: 0x001D7CB2 File Offset: 0x001D5EB2
+		// Token: 0x0600D60E RID: 54798 RVA: 0x001F1B7A File Offset: 0x001EFD7A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C95F RID: 51551 RVA: 0x001D7CCA File Offset: 0x001D5ECA
+		// Token: 0x0600D60F RID: 54799 RVA: 0x001F1B92 File Offset: 0x001EFD92
 		public static EStopSceneItemMoveType[] GetValues()
 		{
 			return new EStopSceneItemMoveType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C960 RID: 51552 RVA: 0x001D7CD6 File Offset: 0x001D5ED6
+		// Token: 0x0600D610 RID: 54800 RVA: 0x001F1B9E File Offset: 0x001EFD9E
 		public static string[] GetNames()
 		{
 			return new string[]

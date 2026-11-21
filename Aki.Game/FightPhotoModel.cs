@@ -11,19 +11,19 @@ using CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode;
 using CSharpScript.Game.Module.RoleUi;
 using UnrealEngine;
 
-// Token: 0x02001277 RID: 4727
+// Token: 0x0200072B RID: 1835
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class FightPhotoModel : ModelBase
 {
-	// Token: 0x060080D6 RID: 32982 RVA: 0x001B439D File Offset: 0x001B259D
+	// Token: 0x0600546D RID: 21613 RVA: 0x001BD06D File Offset: 0x001BB26D
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x060080D7 RID: 32983 RVA: 0x001B43A0 File Offset: 0x001B25A0
+	// Token: 0x0600546E RID: 21614 RVA: 0x001BD070 File Offset: 0x001BB270
 	protected override bool OnClear()
 	{
 		this.CurrentTab = null;
@@ -35,7 +35,7 @@ public class FightPhotoModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060080D8 RID: 32984 RVA: 0x001B43E0 File Offset: 0x001B25E0
+	// Token: 0x0600546F RID: 21615 RVA: 0x001BD0B0 File Offset: 0x001BB2B0
 	public void RefreshTabList()
 	{
 		if (this.SortedAllTabIds == null)
@@ -71,7 +71,7 @@ public class FightPhotoModel : ModelBase
 		}
 	}
 
-	// Token: 0x060080D9 RID: 32985 RVA: 0x001B4564 File Offset: 0x001B2764
+	// Token: 0x06005470 RID: 21616 RVA: 0x001BD234 File Offset: 0x001BB434
 	public void InitDefaultSetupOption()
 	{
 		this.FightPhotoSetupOptionMap.Clear();
@@ -106,7 +106,7 @@ public class FightPhotoModel : ModelBase
 		}
 	}
 
-	// Token: 0x060080DA RID: 32986 RVA: 0x001B4674 File Offset: 0x001B2874
+	// Token: 0x06005471 RID: 21617 RVA: 0x001BD344 File Offset: 0x001BB544
 	public void ApplyAllOptionsToCamera()
 	{
 		foreach (KeyValuePair<EFightPhotoSetupOptionType, int> keyValuePair in this.FightPhotoSetupOptionMap)
@@ -119,7 +119,7 @@ public class FightPhotoModel : ModelBase
 		}
 	}
 
-	// Token: 0x060080DB RID: 32987 RVA: 0x001B4724 File Offset: 0x001B2924
+	// Token: 0x06005472 RID: 21618 RVA: 0x001BD3F4 File Offset: 0x001BB5F4
 	private bool IsEntityOnCamera(EntityHandle entityHandle, EOnCameraCheckType checkType)
 	{
 		AActor actor = CharacterController.Instance.GetActor(entityHandle);
@@ -153,7 +153,7 @@ public class FightPhotoModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060080DC RID: 32988 RVA: 0x001B47DC File Offset: 0x001B29DC
+	// Token: 0x06005473 RID: 21619 RVA: 0x001BD4AC File Offset: 0x001BB6AC
 	[NullableContext(2)]
 	public bool CheckIsTargetRole(IPhotographTarget target)
 	{
@@ -187,7 +187,7 @@ public class FightPhotoModel : ModelBase
 		return num2 == roleId.GetValueOrDefault() & roleId != null;
 	}
 
-	// Token: 0x060080DD RID: 32989 RVA: 0x001B486C File Offset: 0x001B2A6C
+	// Token: 0x06005474 RID: 21620 RVA: 0x001BD53C File Offset: 0x001BB73C
 	[NullableContext(2)]
 	public bool CheckRoleInCamera(IPhotographCondition photographCondition)
 	{
@@ -273,7 +273,7 @@ public class FightPhotoModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060080DE RID: 32990 RVA: 0x001B4A98 File Offset: 0x001B2C98
+	// Token: 0x06005475 RID: 21621 RVA: 0x001BD768 File Offset: 0x001BB968
 	[NullableContext(2)]
 	public bool CheckPhotographCondition(IPhotographCondition photographCondition)
 	{
@@ -364,14 +364,14 @@ public class FightPhotoModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060080DF RID: 32991 RVA: 0x001B4D20 File Offset: 0x001B2F20
+	// Token: 0x06005476 RID: 21622 RVA: 0x001BD9F0 File Offset: 0x001BBBF0
 	[NullableContext(2)]
 	public bool CheckCameraCondition(ICameraCondition cameraCondition)
 	{
 		return LevelGeneralController.Instance.CheckConditionNew((cameraCondition != null) ? cameraCondition.Condition : null, null, null, null);
 	}
 
-	// Token: 0x060080E0 RID: 32992 RVA: 0x001B4D50 File Offset: 0x001B2F50
+	// Token: 0x06005477 RID: 21623 RVA: 0x001BDA20 File Offset: 0x001BBC20
 	[NullableContext(2)]
 	public void ParseCameraConditionRecommend(ICameraCondition cameraCondition)
 	{
@@ -405,15 +405,15 @@ public class FightPhotoModel : ModelBase
 		};
 	}
 
-	// Token: 0x060080E1 RID: 32993 RVA: 0x001B4E64 File Offset: 0x001B3064
+	// Token: 0x06005478 RID: 21624 RVA: 0x001BDB34 File Offset: 0x001BBD34
 	public ICameraConditionRecommend GetCameraConditionRecommend()
 	{
 		return this.CameraConditionRecommend;
 	}
 
-	// Token: 0x17000B17 RID: 2839
-	// (get) Token: 0x060080E2 RID: 32994 RVA: 0x001B4E6C File Offset: 0x001B306C
-	// (set) Token: 0x060080E3 RID: 32995 RVA: 0x001B4E74 File Offset: 0x001B3074
+	// Token: 0x17000B37 RID: 2871
+	// (get) Token: 0x06005479 RID: 21625 RVA: 0x001BDB3C File Offset: 0x001BBD3C
+	// (set) Token: 0x0600547A RID: 21626 RVA: 0x001BDB44 File Offset: 0x001BBD44
 	public bool IsNewTaskCreated
 	{
 		get
@@ -426,7 +426,7 @@ public class FightPhotoModel : ModelBase
 		}
 	}
 
-	// Token: 0x060080E4 RID: 32996 RVA: 0x001B4E80 File Offset: 0x001B3080
+	// Token: 0x0600547B RID: 21627 RVA: 0x001BDB50 File Offset: 0x001BBD50
 	public int? GetFightPhotoSetupOption(EFightPhotoSetupOptionType optionType)
 	{
 		int value;
@@ -437,13 +437,13 @@ public class FightPhotoModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060080E5 RID: 32997 RVA: 0x001B4EAD File Offset: 0x001B30AD
+	// Token: 0x0600547C RID: 21628 RVA: 0x001BDB7D File Offset: 0x001BBD7D
 	public void SetFightPhotoSetupOption(EFightPhotoSetupOptionType optionType, int value)
 	{
 		this.FightPhotoSetupOptionMap[optionType] = value;
 	}
 
-	// Token: 0x060080E6 RID: 32998 RVA: 0x001B4EBC File Offset: 0x001B30BC
+	// Token: 0x0600547D RID: 21629 RVA: 0x001BDB8C File Offset: 0x001BBD8C
 	public int? GetFightPhotoExtraOption(EFightPhotoExtraOptionType optionType)
 	{
 		int value;
@@ -454,13 +454,13 @@ public class FightPhotoModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060080E7 RID: 32999 RVA: 0x001B4EE9 File Offset: 0x001B30E9
+	// Token: 0x0600547E RID: 21630 RVA: 0x001BDBB9 File Offset: 0x001BBDB9
 	public void SetFightPhotoExtraOption(EFightPhotoExtraOptionType optionType, int value)
 	{
 		this.FightPhotoExtraOptionMap[optionType] = value;
 	}
 
-	// Token: 0x060080E8 RID: 33000 RVA: 0x001B4EF8 File Offset: 0x001B30F8
+	// Token: 0x0600547F RID: 21631 RVA: 0x001BDBC8 File Offset: 0x001BBDC8
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -490,9 +490,9 @@ public class FightPhotoModel : ModelBase
 		return new ValueTuple<float, float, float, float>(num3, num4, num3 / num, num4 / num2);
 	}
 
-	// Token: 0x17000B18 RID: 2840
-	// (get) Token: 0x060080E9 RID: 33001 RVA: 0x001B4F68 File Offset: 0x001B3168
-	// (set) Token: 0x060080EA RID: 33002 RVA: 0x001B4FB2 File Offset: 0x001B31B2
+	// Token: 0x17000B38 RID: 2872
+	// (get) Token: 0x06005480 RID: 21632 RVA: 0x001BDC38 File Offset: 0x001BBE38
+	// (set) Token: 0x06005481 RID: 21633 RVA: 0x001BDC82 File Offset: 0x001BBE82
 	public EFightPhotoTab? SelectedTab
 	{
 		get
@@ -513,20 +513,20 @@ public class FightPhotoModel : ModelBase
 		}
 	}
 
-	// Token: 0x060080EB RID: 33003 RVA: 0x001B4FBB File Offset: 0x001B31BB
+	// Token: 0x06005482 RID: 21634 RVA: 0x001BDC8B File Offset: 0x001BBE8B
 	public void SetTabList(List<EFightPhotoTab> tabList)
 	{
 		this.TabList = tabList;
 	}
 
-	// Token: 0x060080EC RID: 33004 RVA: 0x001B4FC4 File Offset: 0x001B31C4
+	// Token: 0x06005483 RID: 21635 RVA: 0x001BDC94 File Offset: 0x001BBE94
 	public List<EFightPhotoTab> GetTabList()
 	{
 		return this.TabList;
 	}
 
-	// Token: 0x17000B19 RID: 2841
-	// (get) Token: 0x060080ED RID: 33005 RVA: 0x001B4FCC File Offset: 0x001B31CC
+	// Token: 0x17000B39 RID: 2873
+	// (get) Token: 0x06005484 RID: 21636 RVA: 0x001BDC9C File Offset: 0x001BBE9C
 	public static FightPhotoModel Instance
 	{
 		get
@@ -535,7 +535,7 @@ public class FightPhotoModel : ModelBase
 		}
 	}
 
-	// Token: 0x060080EE RID: 33006 RVA: 0x001B4FD3 File Offset: 0x001B31D3
+	// Token: 0x06005485 RID: 21637 RVA: 0x001BDCA3 File Offset: 0x001BBEA3
 	public static FightPhotoModel GetOrCreateInstance()
 	{
 		if (FightPhotoModel._Instance == null)
@@ -545,7 +545,7 @@ public class FightPhotoModel : ModelBase
 		return FightPhotoModel._Instance;
 	}
 
-	// Token: 0x060080EF RID: 33007 RVA: 0x001B4FE7 File Offset: 0x001B31E7
+	// Token: 0x06005486 RID: 21638 RVA: 0x001BDCB7 File Offset: 0x001BBEB7
 	public static bool CreateInstance()
 	{
 		if (FightPhotoModel._Instance != null)
@@ -556,24 +556,24 @@ public class FightPhotoModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060080F0 RID: 33008 RVA: 0x001B4FFD File Offset: 0x001B31FD
+	// Token: 0x06005487 RID: 21639 RVA: 0x001BDCCD File Offset: 0x001BBECD
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060080F1 RID: 33009 RVA: 0x001B4FFF File Offset: 0x001B31FF
+	// Token: 0x06005488 RID: 21640 RVA: 0x001BDCCF File Offset: 0x001BBECF
 	public static void ResetStaticDefaultValue()
 	{
 		FightPhotoModel._Instance = null;
 	}
 
-	// Token: 0x060080F2 RID: 33010 RVA: 0x001B5007 File Offset: 0x001B3207
+	// Token: 0x06005489 RID: 21641 RVA: 0x001BDCD7 File Offset: 0x001BBED7
 	static FightPhotoModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FightPhotoModel.CreateStaticDefaultValue), new Action(FightPhotoModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060080F4 RID: 33012 RVA: 0x001B50AC File Offset: 0x001B32AC
+	// Token: 0x0600548B RID: 21643 RVA: 0x001BDD7C File Offset: 0x001BBF7C
 	[CompilerGenerated]
 	internal static bool <IsEntityOnCamera>g__IsBoneOnScreen|12_0(string boneName, ref FightPhotoModel.<>c__DisplayClass12_0 A_1)
 	{
@@ -593,26 +593,26 @@ public class FightPhotoModel : ModelBase
 		return fvector2D.X > 0f && fvector2D.X < (float)num && fvector2D.Y > 0f && fvector2D.Y < (float)num2;
 	}
 
-	// Token: 0x04003A74 RID: 14964
+	// Token: 0x04003B0C RID: 15116
 	private EFightPhotoTab? CurrentTab;
 
-	// Token: 0x04003A75 RID: 14965
+	// Token: 0x04003B0D RID: 15117
 	private List<EFightPhotoTab> TabList = new List<EFightPhotoTab>();
 
-	// Token: 0x04003A76 RID: 14966
+	// Token: 0x04003B0E RID: 15118
 	[Nullable(2)]
 	private List<EFightPhotoTab> SortedAllTabIds;
 
-	// Token: 0x04003A77 RID: 14967
+	// Token: 0x04003B0F RID: 15119
 	private bool IsNewTaskCreatedInternal;
 
-	// Token: 0x04003A78 RID: 14968
+	// Token: 0x04003B10 RID: 15120
 	private readonly Dictionary<EFightPhotoSetupOptionType, int> FightPhotoSetupOptionMap = new Dictionary<EFightPhotoSetupOptionType, int>();
 
-	// Token: 0x04003A79 RID: 14969
+	// Token: 0x04003B11 RID: 15121
 	private readonly Dictionary<EFightPhotoExtraOptionType, int> FightPhotoExtraOptionMap = new Dictionary<EFightPhotoExtraOptionType, int>();
 
-	// Token: 0x04003A7A RID: 14970
+	// Token: 0x04003B12 RID: 15122
 	private readonly string[] CheckNameAll = new string[]
 	{
 		"Bip001Head",
@@ -621,14 +621,14 @@ public class FightPhotoModel : ModelBase
 		"Bip001RFoot"
 	};
 
-	// Token: 0x04003A7B RID: 14971
+	// Token: 0x04003B13 RID: 15123
 	private ICameraConditionRecommend CameraConditionRecommend = new CameraConditionRecommend
 	{
 		FilterIds = new HashSet<int>(),
 		FrameIds = new HashSet<int>()
 	};
 
-	// Token: 0x04003A7C RID: 14972
+	// Token: 0x04003B14 RID: 15124
 	[Nullable(2)]
 	private static FightPhotoModel _Instance;
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -26,13 +25,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose
 {
-	// Token: 0x02005655 RID: 22101
+	// Token: 0x0200462B RID: 17963
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ComposeController : UiControllerBase
 	{
-		// Token: 0x17008740 RID: 34624
-		// (get) Token: 0x06038337 RID: 230199 RVA: 0x00D5179C File Offset: 0x00D4F99C
+		// Token: 0x17005B07 RID: 23303
+		// (get) Token: 0x0602D235 RID: 184885 RVA: 0x00C9F5EC File Offset: 0x00C9D7EC
 		public int ComposeCoinId
 		{
 			get
@@ -41,21 +40,21 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			}
 		}
 
-		// Token: 0x06038338 RID: 230200 RVA: 0x00D517BC File Offset: 0x00D4F9BC
+		// Token: 0x0602D236 RID: 184886 RVA: 0x00C9F60C File Offset: 0x00C9D80C
 		protected override bool OnClear()
 		{
 			this.ClearCurrentInteractionEntityDisplay();
 			return true;
 		}
 
-		// Token: 0x06038339 RID: 230201 RVA: 0x00D517C5 File Offset: 0x00D4F9C5
+		// Token: 0x0602D237 RID: 184887 RVA: 0x00C9F615 File Offset: 0x00C9D815
 		protected override bool OnLeaveLevel()
 		{
 			this.ClearCurrentInteractionEntityDisplay();
 			return true;
 		}
 
-		// Token: 0x0603833A RID: 230202 RVA: 0x00D517D0 File Offset: 0x00D4F9D0
+		// Token: 0x0602D238 RID: 184888 RVA: 0x00C9F620 File Offset: 0x00C9D820
 		protected override void OnAddEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -72,7 +71,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 		}
 
-		// Token: 0x0603833B RID: 230203 RVA: 0x00D51878 File Offset: 0x00D4FA78
+		// Token: 0x0602D239 RID: 184889 RVA: 0x00C9F6C8 File Offset: 0x00C9D8C8
 		protected override void OnRemoveEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -89,13 +88,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 		}
 
-		// Token: 0x0603833C RID: 230204 RVA: 0x00D5191D File Offset: 0x00D4FB1D
+		// Token: 0x0602D23A RID: 184890 RVA: 0x00C9F76D File Offset: 0x00C9D96D
 		private void LoadNewList()
 		{
 			ComposeModel.Instance.CreatePurificationDataList();
 		}
 
-		// Token: 0x0603833D RID: 230205 RVA: 0x00D5192C File Offset: 0x00D4FB2C
+		// Token: 0x0602D23B RID: 184891 RVA: 0x00C9F77C File Offset: 0x00C9D97C
 		private void SwitchViewType(CSharpScript.Game.Module.Manufacture.Common.EViewType viewType)
 		{
 			if (CommonManager.Instance.GetCurrentSystem() != CSharpScript.Game.Module.Manufacture.Common.ESystemType.ComposeSystem)
@@ -118,11 +117,11 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			}
 		}
 
-		// Token: 0x0603833E RID: 230206 RVA: 0x00D51980 File Offset: 0x00D4FB80
+		// Token: 0x0602D23C RID: 184892 RVA: 0x00C9F7D0 File Offset: 0x00C9D9D0
 		private void ShowComposeStudy(int configId, int count)
 		{
 			ItemInfo? config = ItemConfig.Instance.GetConfig(configId);
-			if (!config.Value.ShowTypes().Contains(35) && !config.Value.ShowTypes().Contains(37))
+			if (Array.IndexOf<int>(config.Value.ShowTypes(), 35) < 0 && Array.IndexOf<int>(config.Value.ShowTypes(), 37) < 0)
 			{
 				return;
 			}
@@ -135,7 +134,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			EventSystem.Instance.Emit(EEventName.UpdateFormula);
 		}
 
-		// Token: 0x0603833F RID: 230207 RVA: 0x00D51A1A File Offset: 0x00D4FC1A
+		// Token: 0x0602D23D RID: 184893 RVA: 0x00C9F86C File Offset: 0x00C9DA6C
 		private void OnCloseView(EUiViewName view, int viewId)
 		{
 			if (view == EUiViewName.ItemTipsView)
@@ -144,19 +143,19 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			}
 		}
 
-		// Token: 0x06038340 RID: 230208 RVA: 0x00D51A34 File Offset: 0x00D4FC34
+		// Token: 0x0602D23E RID: 184894 RVA: 0x00C9F886 File Offset: 0x00C9DA86
 		private static void UpdateHelpRoleItemDataList(int i)
 		{
 			ComposeModel.Instance.UpdateHelpRoleItemDataList();
 		}
 
-		// Token: 0x06038341 RID: 230209 RVA: 0x00D51A40 File Offset: 0x00D4FC40
+		// Token: 0x0602D23F RID: 184895 RVA: 0x00C9F892 File Offset: 0x00C9DA92
 		public void RegisterCurrentInteractionEntity()
 		{
 			this.CurrentInteractionEntityId = InteractionModel.Instance.CurrentInteractEntityId;
 		}
 
-		// Token: 0x06038342 RID: 230210 RVA: 0x00D51A52 File Offset: 0x00D4FC52
+		// Token: 0x0602D240 RID: 184896 RVA: 0x00C9F8A4 File Offset: 0x00C9DAA4
 		public void ClearCurrentInteractionEntityDisplay()
 		{
 			if (this.CurrentInteractionEntityId == null)
@@ -167,7 +166,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			this.CurrentInteractionEntityId = null;
 		}
 
-		// Token: 0x06038343 RID: 230211 RVA: 0x00D51A74 File Offset: 0x00D4FC74
+		// Token: 0x0602D241 RID: 184897 RVA: 0x00C9F8C8 File Offset: 0x00C9DAC8
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.SynthesisInfoUpdateNotify, delegate(IMessage msg, Net.CallbackStatus _)
@@ -184,14 +183,14 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			});
 		}
 
-		// Token: 0x06038344 RID: 230212 RVA: 0x00D51ADF File Offset: 0x00D4FCDF
+		// Token: 0x0602D242 RID: 184898 RVA: 0x00C9F933 File Offset: 0x00C9DB33
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.SynthesisInfoUpdateNotify);
 			Net.Instance.UnRegister(ENotifyMessageId.SynthesisLevelUpdateNotify);
 		}
 
-		// Token: 0x06038345 RID: 230213 RVA: 0x00D51B04 File Offset: 0x00D4FD04
+		// Token: 0x0602D243 RID: 184899 RVA: 0x00C9F958 File Offset: 0x00C9DB58
 		[NullableContext(2)]
 		private void HandleSynthesisInfoRequestCore(SynthesisInfoResponse response)
 		{
@@ -201,7 +200,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			ComposeModel.Instance.SaveLimitRefreshTime(response.LimitRefreshTime);
 		}
 
-		// Token: 0x06038346 RID: 230214 RVA: 0x00D51B54 File Offset: 0x00D4FD54
+		// Token: 0x0602D244 RID: 184900 RVA: 0x00C9F9A8 File Offset: 0x00C9DBA8
 		public UniTask SendSynthesisInfoRequestAsync()
 		{
 			ComposeController.<SendSynthesisInfoRequestAsync>d__24 <SendSynthesisInfoRequestAsync>d__;
@@ -212,7 +211,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return <SendSynthesisInfoRequestAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038347 RID: 230215 RVA: 0x00D51B98 File Offset: 0x00D4FD98
+		// Token: 0x0602D245 RID: 184901 RVA: 0x00C9F9EC File Offset: 0x00C9DBEC
 		public UniTask SendSynthesisItemRequestBatchNew(List<IComposePopupGridItemData> composeGridData, [Nullable(2)] Action successCallback = null)
 		{
 			ComposeController.<SendSynthesisItemRequestBatchNew>d__25 <SendSynthesisItemRequestBatchNew>d__;
@@ -225,7 +224,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return <SendSynthesisItemRequestBatchNew>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038348 RID: 230216 RVA: 0x00D51BEC File Offset: 0x00D4FDEC
+		// Token: 0x0602D246 RID: 184902 RVA: 0x00C9FA40 File Offset: 0x00C9DC40
 		public UniTask SendSynthesisItemRequestNew(int id, int composeCount, List<SingleItemInfo> composeMaterialList, [Nullable(2)] Action successCallback = null)
 		{
 			ComposeController.<SendSynthesisItemRequestNew>d__26 <SendSynthesisItemRequestNew>d__;
@@ -240,7 +239,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return <SendSynthesisItemRequestNew>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038349 RID: 230217 RVA: 0x00D51C50 File Offset: 0x00D4FE50
+		// Token: 0x0602D247 RID: 184903 RVA: 0x00C9FAA4 File Offset: 0x00C9DCA4
 		public UniTask SendSynthesisItemRequest(int id, int roleId, int composeCount)
 		{
 			ComposeController.<SendSynthesisItemRequest>d__27 <SendSynthesisItemRequest>d__;
@@ -254,36 +253,42 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return <SendSynthesisItemRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603834A RID: 230218 RVA: 0x00D51CAB File Offset: 0x00D4FEAB
+		// Token: 0x0602D248 RID: 184904 RVA: 0x00C9FB00 File Offset: 0x00C9DD00
 		private static string FormatItemInfoList(IEnumerable<SingleItemInfo> list)
 		{
-			return string.Join(",", list.Select(delegate(SingleItemInfo item)
+			List<string> list2 = new List<string>();
+			foreach (SingleItemInfo singleItemInfo in list)
 			{
+				List<string> list3 = list2;
 				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
-				defaultInterpolatedStringHandler.AppendFormatted<int>(item.ItemId);
+				defaultInterpolatedStringHandler.AppendFormatted<int>(singleItemInfo.ItemId);
 				defaultInterpolatedStringHandler.AppendLiteral("x");
-				defaultInterpolatedStringHandler.AppendFormatted<int>(item.ItemNum);
-				return defaultInterpolatedStringHandler.ToStringAndClear();
-			}));
+				defaultInterpolatedStringHandler.AppendFormatted<int>(singleItemInfo.ItemNum);
+				list3.Add(defaultInterpolatedStringHandler.ToStringAndClear());
+			}
+			return string.Join(",", list2);
 		}
 
-		// Token: 0x0603834B RID: 230219 RVA: 0x00D51CDC File Offset: 0x00D4FEDC
+		// Token: 0x0602D249 RID: 184905 RVA: 0x00C9FB90 File Offset: 0x00C9DD90
 		private static string FormatBatchItems(IEnumerable<BatchItem> items)
 		{
-			return string.Join("|", items.Select(delegate(BatchItem it)
+			List<string> list = new List<string>();
+			foreach (BatchItem batchItem in items)
 			{
+				List<string> list2 = list;
 				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(3, 3);
-				defaultInterpolatedStringHandler.AppendFormatted<int>(it.Id);
+				defaultInterpolatedStringHandler.AppendFormatted<int>(batchItem.Id);
 				defaultInterpolatedStringHandler.AppendLiteral("x");
-				defaultInterpolatedStringHandler.AppendFormatted<int>(it.Count);
+				defaultInterpolatedStringHandler.AppendFormatted<int>(batchItem.Count);
 				defaultInterpolatedStringHandler.AppendLiteral("{");
-				defaultInterpolatedStringHandler.AppendFormatted(ComposeController.FormatItemInfoList(it.CostItems));
+				defaultInterpolatedStringHandler.AppendFormatted(ComposeController.FormatItemInfoList(batchItem.CostItems));
 				defaultInterpolatedStringHandler.AppendLiteral("}");
-				return defaultInterpolatedStringHandler.ToStringAndClear();
-			}));
+				list2.Add(defaultInterpolatedStringHandler.ToStringAndClear());
+			}
+			return string.Join("|", list);
 		}
 
-		// Token: 0x0603834C RID: 230220 RVA: 0x00D51D10 File Offset: 0x00D4FF10
+		// Token: 0x0602D24A RID: 184906 RVA: 0x00C9FC48 File Offset: 0x00C9DE48
 		private static string FormatConsumeMap(Dictionary<int, int> consumeItems)
 		{
 			List<string> list = new List<string>();
@@ -304,7 +309,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return string.Join(",", list);
 		}
 
-		// Token: 0x0603834D RID: 230221 RVA: 0x00D51DAC File Offset: 0x00D4FFAC
+		// Token: 0x0602D24B RID: 184907 RVA: 0x00C9FCE4 File Offset: 0x00C9DEE4
 		private unsafe void ProcessComposeResponseSuccess(IList<SingleItemInfo> tmpList, [Nullable(2)] Action successCallback = null)
 		{
 			ComposeController.<>c__DisplayClass31_0 CS$<>8__locals1 = new ComposeController.<>c__DisplayClass31_0();
@@ -361,7 +366,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			EventSystem.Instance.Emit(EEventName.ComposeSuccess);
 		}
 
-		// Token: 0x0603834E RID: 230222 RVA: 0x00D51F70 File Offset: 0x00D50170
+		// Token: 0x0602D24C RID: 184908 RVA: 0x00C9FEA8 File Offset: 0x00C9E0A8
 		[NullableContext(2)]
 		public UniTask SendExchangeItemRequest(int targetId, int consumeItemId, int consumeCount, Action successCallback = null)
 		{
@@ -376,7 +381,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return <SendExchangeItemRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603834F RID: 230223 RVA: 0x00D51FCC File Offset: 0x00D501CC
+		// Token: 0x0602D24D RID: 184909 RVA: 0x00C9FF04 File Offset: 0x00C9E104
 		public UniTask SendBatchMaterialReplaceRequest(int targetId, Dictionary<int, int> consumeItems, [Nullable(2)] Action successCallback = null)
 		{
 			ComposeController.<SendBatchMaterialReplaceRequest>d__33 <SendBatchMaterialReplaceRequest>d__;
@@ -389,7 +394,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return <SendBatchMaterialReplaceRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038350 RID: 230224 RVA: 0x00D52020 File Offset: 0x00D50220
+		// Token: 0x0602D24E RID: 184910 RVA: 0x00C9FF58 File Offset: 0x00C9E158
 		public void SendSynthesisLevelRewardRequest()
 		{
 			if (this.SendRewardFlag)
@@ -407,11 +412,11 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 					EventSystem.Instance.Emit(EEventName.UpgradeComposeLevel);
 					return;
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(synthesisLevelRewardResponse.Code, 26239, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(synthesisLevelRewardResponse.Code, 21274, null, true, true);
 			}, 0);
 		}
 
-		// Token: 0x06038351 RID: 230225 RVA: 0x00D52060 File Offset: 0x00D50260
+		// Token: 0x0602D24F RID: 184911 RVA: 0x00C9FF98 File Offset: 0x00C9E198
 		public void SendSynthesisFormulaUnlockRequest(int formulaId)
 		{
 			SynthesisFormulaUnlockRequest synthesisFormulaUnlockRequest = SynthesisFormulaUnlockRequest.Create();
@@ -432,11 +437,11 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 					EventSystem.Instance.Emit(EEventName.UpdateComposeFormula);
 					return;
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(synthesisFormulaUnlockResponse.Code, 17641, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(synthesisFormulaUnlockResponse.Code, 23763, null, true, true);
 			}, 0);
 		}
 
-		// Token: 0x06038352 RID: 230226 RVA: 0x00D520AC File Offset: 0x00D502AC
+		// Token: 0x0602D250 RID: 184912 RVA: 0x00C9FFE4 File Offset: 0x00C9E1E4
 		public bool CheckIsBuff(int roleId, int itemId)
 		{
 			SynthesisFormula? synthesisFormulaById = ComposeConfig.Instance.GetSynthesisFormulaById(itemId);
@@ -450,7 +455,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return false;
 		}
 
-		// Token: 0x06038353 RID: 230227 RVA: 0x00D520F8 File Offset: 0x00D502F8
+		// Token: 0x0602D251 RID: 184913 RVA: 0x00CA0030 File Offset: 0x00C9E230
 		public string GetComposeInfoText(int roleId)
 		{
 			RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(roleId);
@@ -471,7 +476,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return result;
 		}
 
-		// Token: 0x06038354 RID: 230228 RVA: 0x00D521B8 File Offset: 0x00D503B8
+		// Token: 0x0602D252 RID: 184914 RVA: 0x00CA00F0 File Offset: 0x00C9E2F0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -482,80 +487,80 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return ComposeModel.Instance.GetComposeItemList();
 		}
 
-		// Token: 0x06038355 RID: 230229 RVA: 0x00D521C4 File Offset: 0x00D503C4
+		// Token: 0x0602D253 RID: 184915 RVA: 0x00CA00FC File Offset: 0x00C9E2FC
 		public void SetSelectedComposeLevel(int level)
 		{
 			ComposeModel.Instance.SelectedComposeLevel = level;
 		}
 
-		// Token: 0x06038356 RID: 230230 RVA: 0x00D521D1 File Offset: 0x00D503D1
+		// Token: 0x0602D254 RID: 184916 RVA: 0x00CA0109 File Offset: 0x00C9E309
 		public int GetSelectedComposeLevel()
 		{
 			return ComposeModel.Instance.SelectedComposeLevel;
 		}
 
-		// Token: 0x06038357 RID: 230231 RVA: 0x00D521DD File Offset: 0x00D503DD
+		// Token: 0x0602D255 RID: 184917 RVA: 0x00CA0115 File Offset: 0x00C9E315
 		[NullableContext(2)]
 		public IComposeLevelInfoData GetRewardLevelInfo()
 		{
 			return ComposeModel.Instance.GetComposeInfo();
 		}
 
-		// Token: 0x06038358 RID: 230232 RVA: 0x00D521E9 File Offset: 0x00D503E9
+		// Token: 0x0602D256 RID: 184918 RVA: 0x00CA0121 File Offset: 0x00C9E321
 		public SynthesisLevel? GetComposeLevelByLevel(int level)
 		{
 			return ComposeModel.Instance.GetComposeLevelByLevel(level);
 		}
 
-		// Token: 0x06038359 RID: 230233 RVA: 0x00D521F6 File Offset: 0x00D503F6
+		// Token: 0x0602D257 RID: 184919 RVA: 0x00CA012E File Offset: 0x00C9E32E
 		public int GetSumExpByLevel(int level)
 		{
 			return ComposeModel.Instance.GetSumExpByLevel(level);
 		}
 
-		// Token: 0x0603835A RID: 230234 RVA: 0x00D52203 File Offset: 0x00D50403
+		// Token: 0x0602D258 RID: 184920 RVA: 0x00CA013B File Offset: 0x00C9E33B
 		public int GetDropIdByLevel(int level)
 		{
 			return ComposeModel.Instance.GetDropIdByLevel(level);
 		}
 
-		// Token: 0x0603835B RID: 230235 RVA: 0x00D52210 File Offset: 0x00D50410
+		// Token: 0x0602D259 RID: 184921 RVA: 0x00CA0148 File Offset: 0x00C9E348
 		public int GetComposeMaxLevel()
 		{
 			return ComposeModel.Instance.GetComposeMaxLevel();
 		}
 
-		// Token: 0x0603835C RID: 230236 RVA: 0x00D5221C File Offset: 0x00D5041C
+		// Token: 0x0602D25A RID: 184922 RVA: 0x00CA0154 File Offset: 0x00C9E354
 		public bool CheckCanReagentProduction(int id)
 		{
 			return ComposeModel.Instance.CheckCanReagentProduction(id);
 		}
 
-		// Token: 0x0603835D RID: 230237 RVA: 0x00D52229 File Offset: 0x00D50429
+		// Token: 0x0602D25B RID: 184923 RVA: 0x00CA0161 File Offset: 0x00C9E361
 		public bool CheckCanPurification(int id)
 		{
 			return ComposeModel.Instance.CheckCanPurification(id);
 		}
 
-		// Token: 0x0603835E RID: 230238 RVA: 0x00D52236 File Offset: 0x00D50436
+		// Token: 0x0602D25C RID: 184924 RVA: 0x00CA016E File Offset: 0x00C9E36E
 		public bool CheckCanCollect(int id)
 		{
 			return ComposeModel.Instance.CheckCanCollect(id);
 		}
 
-		// Token: 0x0603835F RID: 230239 RVA: 0x00D52243 File Offset: 0x00D50443
+		// Token: 0x0602D25D RID: 184925 RVA: 0x00CA017B File Offset: 0x00C9E37B
 		public bool CheckCanExchange(int id)
 		{
 			return ComposeModel.Instance.CheckCanExchange(id);
 		}
 
-		// Token: 0x06038360 RID: 230240 RVA: 0x00D52250 File Offset: 0x00D50450
+		// Token: 0x0602D25E RID: 184926 RVA: 0x00CA0188 File Offset: 0x00C9E388
 		public bool CheckCanStructure(int id)
 		{
 			return ComposeModel.Instance.CheckCanStructure(id);
 		}
 
-		// Token: 0x06038361 RID: 230241 RVA: 0x00D52260 File Offset: 0x00D50460
+		// Token: 0x0602D25F RID: 184927 RVA: 0x00CA0198 File Offset: 0x00C9E398
 		public bool CheckIsBuffEx(int roleId, int itemId)
 		{
 			int[] array = ComposeConfig.Instance.GetSynthesisFormulaById(itemId).Value.RoleList();
@@ -567,9 +572,9 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 					return false;
 				}
 			}
-			foreach (int value in RoleModel.Instance.GetRoleIdList())
+			foreach (int value in RoleModel.Instance.GetRoleIdList(null))
 			{
-				if (array.Contains(value))
+				if (Array.IndexOf<int>(array, value) >= 0)
 				{
 					return true;
 				}
@@ -577,25 +582,25 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return false;
 		}
 
-		// Token: 0x06038362 RID: 230242 RVA: 0x00D52300 File Offset: 0x00D50500
+		// Token: 0x0602D260 RID: 184928 RVA: 0x00CA0238 File Offset: 0x00C9E438
 		public string GetComposeText(int itemId)
 		{
 			return ComposeModel.Instance.GetComposeText(itemId);
 		}
 
-		// Token: 0x06038363 RID: 230243 RVA: 0x00D5230D File Offset: 0x00D5050D
+		// Token: 0x0602D261 RID: 184929 RVA: 0x00CA0245 File Offset: 0x00C9E445
 		public int GetComposeId(int itemId)
 		{
 			return ComposeModel.Instance.GetComposeId(itemId);
 		}
 
-		// Token: 0x06038364 RID: 230244 RVA: 0x00D5231A File Offset: 0x00D5051A
+		// Token: 0x0602D262 RID: 184930 RVA: 0x00CA0252 File Offset: 0x00C9E452
 		public bool CheckShowRoleView()
 		{
 			return true;
 		}
 
-		// Token: 0x06038365 RID: 230245 RVA: 0x00D52320 File Offset: 0x00D50520
+		// Token: 0x0602D263 RID: 184931 RVA: 0x00CA0258 File Offset: 0x00C9E458
 		[NullableContext(2)]
 		public int GetMaxCreateCount(int configId, IBaseItemData itemData = null)
 		{
@@ -622,7 +627,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return Math.Min(num, val);
 		}
 
-		// Token: 0x06038366 RID: 230246 RVA: 0x00D523E8 File Offset: 0x00D505E8
+		// Token: 0x0602D264 RID: 184932 RVA: 0x00CA0320 File Offset: 0x00C9E520
 		private int DoGetMaxCreateCount(IList<OneItemConfig> itemMap, int limitCount)
 		{
 			int num = 0;
@@ -648,7 +653,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return num;
 		}
 
-		// Token: 0x06038367 RID: 230247 RVA: 0x00D52484 File Offset: 0x00D50684
+		// Token: 0x0602D265 RID: 184933 RVA: 0x00CA03BC File Offset: 0x00C9E5BC
 		public UniTask SendManufacture(int configId, int count)
 		{
 			ComposeController.<SendManufacture>d__58 <SendManufacture>d__;
@@ -661,7 +666,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return <SendManufacture>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038368 RID: 230248 RVA: 0x00D524D8 File Offset: 0x00D506D8
+		// Token: 0x0602D266 RID: 184934 RVA: 0x00CA0410 File Offset: 0x00C9E610
 		[NullableContext(2)]
 		public UniTask SendExchangeRequest(int targetId, int consumeItemId, int consumeCount, Action successCallback = null)
 		{
@@ -677,31 +682,31 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return <SendExchangeRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038369 RID: 230249 RVA: 0x00D5253C File Offset: 0x00D5073C
+		// Token: 0x0602D267 RID: 184935 RVA: 0x00CA0474 File Offset: 0x00C9E674
 		public int GetCurrentRoleId()
 		{
 			return ComposeModel.Instance.CurrentComposeRoleId;
 		}
 
-		// Token: 0x0603836A RID: 230250 RVA: 0x00D52548 File Offset: 0x00D50748
+		// Token: 0x0602D268 RID: 184936 RVA: 0x00CA0480 File Offset: 0x00C9E680
 		public void SetCurrentRoleId(int roleId)
 		{
 			ComposeModel.Instance.CurrentComposeRoleId = roleId;
 		}
 
-		// Token: 0x0603836B RID: 230251 RVA: 0x00D52555 File Offset: 0x00D50755
+		// Token: 0x0602D269 RID: 184937 RVA: 0x00CA048D File Offset: 0x00C9E68D
 		public List<ISingleItemInfo> GetManufactureMaterialList(int itemId)
 		{
 			return ComposeModel.Instance.GetComposeMaterialList(itemId);
 		}
 
-		// Token: 0x0603836C RID: 230252 RVA: 0x00D52562 File Offset: 0x00D50762
+		// Token: 0x0602D26A RID: 184938 RVA: 0x00CA049A File Offset: 0x00C9E69A
 		public List<ICommonRoleItemData> GetHelpRoleItemDataList(int itemId)
 		{
 			return ComposeModel.Instance.GetHelpRoleItemDataList(itemId);
 		}
 
-		// Token: 0x0603836D RID: 230253 RVA: 0x00D52570 File Offset: 0x00D50770
+		// Token: 0x0602D26B RID: 184939 RVA: 0x00CA04A8 File Offset: 0x00C9E6A8
 		public int GetComposeRoleId(int itemId)
 		{
 			switch (ComposeModel.Instance.CurrentComposeListType)
@@ -718,13 +723,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return 0;
 		}
 
-		// Token: 0x0603836E RID: 230254 RVA: 0x00D525D7 File Offset: 0x00D507D7
+		// Token: 0x0602D26C RID: 184940 RVA: 0x00CA050F File Offset: 0x00C9E70F
 		public bool CheckCanShowExpItem()
 		{
 			return ComposeModel.Instance.CurrentComposeListType == EComposeListType.ReagentProduction;
 		}
 
-		// Token: 0x0603836F RID: 230255 RVA: 0x00D525EC File Offset: 0x00D507EC
+		// Token: 0x0602D26D RID: 184941 RVA: 0x00CA0524 File Offset: 0x00C9E724
 		public bool CheckCanGetComposeLevel()
 		{
 			IComposeLevelInfoData composeInfo = ComposeModel.Instance.GetComposeInfo();
@@ -739,7 +744,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return false;
 		}
 
-		// Token: 0x06038370 RID: 230256 RVA: 0x00D52634 File Offset: 0x00D50834
+		// Token: 0x0602D26E RID: 184942 RVA: 0x00CA056C File Offset: 0x00C9E76C
 		[NullableContext(2)]
 		public void PlayCompositeEnterDisplay(Action onFinished = null)
 		{
@@ -765,7 +770,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			}, 3000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06038371 RID: 230257 RVA: 0x00D526D8 File Offset: 0x00D508D8
+		// Token: 0x0602D26F RID: 184943 RVA: 0x00CA0610 File Offset: 0x00C9E810
 		public void PlayCompositeLoopDisplay()
 		{
 			this.ClearCompositeDisplay();
@@ -778,7 +783,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			currentEntityTagComponent.AddTag(new int?(GameplayTagDefine.EGameplayTagId["关卡.场景交互物.循环"]));
 		}
 
-		// Token: 0x06038372 RID: 230258 RVA: 0x00D5272C File Offset: 0x00D5092C
+		// Token: 0x0602D270 RID: 184944 RVA: 0x00CA0664 File Offset: 0x00C9E864
 		[NullableContext(2)]
 		public bool PlayCompositeWorkingDisplay(Action onFinished = null)
 		{
@@ -804,7 +809,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return true;
 		}
 
-		// Token: 0x06038373 RID: 230259 RVA: 0x00D527C4 File Offset: 0x00D509C4
+		// Token: 0x0602D271 RID: 184945 RVA: 0x00CA06FC File Offset: 0x00C9E8FC
 		[NullableContext(2)]
 		public unsafe void PlayCompositeFlow(PlayFlow playFlow)
 		{
@@ -829,7 +834,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			}
 		}
 
-		// Token: 0x06038374 RID: 230260 RVA: 0x00D528AC File Offset: 0x00D50AAC
+		// Token: 0x0602D272 RID: 184946 RVA: 0x00CA07E4 File Offset: 0x00C9E9E4
 		private void PlayCompositeAudio(string audioId, [Nullable(2)] PlayResult result = null)
 		{
 			Audio? audioPath = AudioConfig.Instance.GetAudioPath(audioId);
@@ -840,13 +845,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			AudioController.Instance.PostEventByUi(audioPath.Value.Path, result, null, null);
 		}
 
-		// Token: 0x06038375 RID: 230261 RVA: 0x00D528F3 File Offset: 0x00D50AF3
+		// Token: 0x0602D273 RID: 184947 RVA: 0x00CA082B File Offset: 0x00C9EA2B
 		public void PlayLeaveCompositeAudio()
 		{
 			this.PlayCompositeAudio("play_ui_fx_spl_gen_page_close", null);
 		}
 
-		// Token: 0x06038376 RID: 230262 RVA: 0x00D52904 File Offset: 0x00D50B04
+		// Token: 0x0602D274 RID: 184948 RVA: 0x00CA083C File Offset: 0x00C9EA3C
 		[NullableContext(2)]
 		public void PlayCompositeFailDisplay(Action onFinished = null)
 		{
@@ -871,7 +876,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			}, 2000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06038377 RID: 230263 RVA: 0x00D5299C File Offset: 0x00D50B9C
+		// Token: 0x0602D275 RID: 184949 RVA: 0x00CA08D4 File Offset: 0x00C9EAD4
 		public void ClearCompositeDisplay()
 		{
 			LevelTagComponent currentEntityTagComponent = this.GetCurrentEntityTagComponent();
@@ -893,7 +898,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			}
 		}
 
-		// Token: 0x06038378 RID: 230264 RVA: 0x00D52A88 File Offset: 0x00D50C88
+		// Token: 0x0602D276 RID: 184950 RVA: 0x00CA09C0 File Offset: 0x00C9EBC0
 		[NullableContext(2)]
 		private LevelTagComponent GetCurrentEntityTagComponent()
 		{
@@ -909,8 +914,8 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return entity.GetComponent<LevelTagComponent>();
 		}
 
-		// Token: 0x17008741 RID: 34625
-		// (get) Token: 0x06038379 RID: 230265 RVA: 0x00D52AC5 File Offset: 0x00D50CC5
+		// Token: 0x17005B08 RID: 23304
+		// (get) Token: 0x0602D277 RID: 184951 RVA: 0x00CA09FD File Offset: 0x00C9EBFD
 		public static ComposeController Instance
 		{
 			get
@@ -919,7 +924,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			}
 		}
 
-		// Token: 0x0603837A RID: 230266 RVA: 0x00D52ACC File Offset: 0x00D50CCC
+		// Token: 0x0602D278 RID: 184952 RVA: 0x00CA0A04 File Offset: 0x00C9EC04
 		public static ComposeController GetOrCreateInstance()
 		{
 			if (ComposeController._Instance == null)
@@ -929,7 +934,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return ComposeController._Instance;
 		}
 
-		// Token: 0x0603837B RID: 230267 RVA: 0x00D52AE0 File Offset: 0x00D50CE0
+		// Token: 0x0602D279 RID: 184953 RVA: 0x00CA0A18 File Offset: 0x00C9EC18
 		public static bool CreateInstance()
 		{
 			if (ComposeController._Instance != null)
@@ -940,63 +945,63 @@ namespace CSharpScript.Game.Module.Manufacture.Compose
 			return true;
 		}
 
-		// Token: 0x0603837C RID: 230268 RVA: 0x00D52AF6 File Offset: 0x00D50CF6
+		// Token: 0x0602D27A RID: 184954 RVA: 0x00CA0A2E File Offset: 0x00C9EC2E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603837D RID: 230269 RVA: 0x00D52AF8 File Offset: 0x00D50CF8
+		// Token: 0x0602D27B RID: 184955 RVA: 0x00CA0A30 File Offset: 0x00C9EC30
 		public static void ResetStaticDefaultValue()
 		{
 			ComposeController._Instance = null;
 		}
 
-		// Token: 0x0603837E RID: 230270 RVA: 0x00D52B00 File Offset: 0x00D50D00
+		// Token: 0x0602D27C RID: 184956 RVA: 0x00CA0A38 File Offset: 0x00C9EC38
 		static ComposeController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ComposeController.CreateStaticDefaultValue), new Action(ComposeController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401D8EF RID: 121071
+		// Token: 0x0401837A RID: 99194
 		private const string ENTER_AUDIO_ID = "play_ui_fx_spl_gen_page_open";
 
-		// Token: 0x0401D8F0 RID: 121072
+		// Token: 0x0401837B RID: 99195
 		private const string LEAVE_AUDIO_ID = "play_ui_fx_spl_gen_page_close";
 
-		// Token: 0x0401D8F1 RID: 121073
+		// Token: 0x0401837C RID: 99196
 		private const string SUCCESS_AUDIO_ID = "play_ui_fx_spl_gen_robot_success_vo";
 
-		// Token: 0x0401D8F2 RID: 121074
+		// Token: 0x0401837D RID: 99197
 		[Nullable(2)]
 		private TimerHandle CompositeDisplayTimerId;
 
-		// Token: 0x0401D8F3 RID: 121075
+		// Token: 0x0401837E RID: 99198
 		[Nullable(2)]
 		private Action OnEnterDisplayFinished;
 
-		// Token: 0x0401D8F4 RID: 121076
+		// Token: 0x0401837F RID: 99199
 		[Nullable(2)]
 		private Action OnWorkingDisplayFinished;
 
-		// Token: 0x0401D8F5 RID: 121077
+		// Token: 0x04018380 RID: 99200
 		[Nullable(2)]
 		private Action OnFailDisplayFinished;
 
-		// Token: 0x0401D8F6 RID: 121078
+		// Token: 0x04018381 RID: 99201
 		private int? CurrentInteractionEntityId;
 
-		// Token: 0x0401D8F7 RID: 121079
+		// Token: 0x04018382 RID: 99202
 		private bool SendRewardFlag;
 
-		// Token: 0x0401D8F8 RID: 121080
+		// Token: 0x04018383 RID: 99203
 		[Nullable(2)]
 		private static ComposeController _Instance;
 
-		// Token: 0x0200B814 RID: 47124
+		// Token: 0x0200A23D RID: 41533
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04037B29 RID: 228137
+			// Token: 0x0403254D RID: 206157
 			[Nullable(0)]
 			public static Action<int> <0>__UpdateHelpRoleItemDataList;
 		}

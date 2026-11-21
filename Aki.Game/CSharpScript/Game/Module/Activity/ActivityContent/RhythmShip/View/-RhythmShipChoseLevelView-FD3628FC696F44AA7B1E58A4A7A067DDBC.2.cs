@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006212 RID: 25106
+	// Token: 0x02005190 RID: 20880
 	internal enum <RhythmShipChoseLevelView>FD3628FC696F44AA7B1E58A4A7A067DDBCAF0F1D7D6AA146CBCEAD77217B0CF93__ERhythmShipChoseLevelItem
 	{
-		// Token: 0x040210CB RID: 135371
+		// Token: 0x0401B9FA RID: 113146
 		Toggle,
-		// Token: 0x040210CC RID: 135372
+		// Token: 0x0401B9FB RID: 113147
 		IconTexture,
-		// Token: 0x040210CD RID: 135373
+		// Token: 0x0401B9FC RID: 113148
 		NumberTexture,
-		// Token: 0x040210CE RID: 135374
+		// Token: 0x0401B9FD RID: 113149
 		NameText,
-		// Token: 0x040210CF RID: 135375
+		// Token: 0x0401B9FE RID: 113150
 		Star1Item,
-		// Token: 0x040210D0 RID: 135376
+		// Token: 0x0401B9FF RID: 113151
 		Star2Item,
-		// Token: 0x040210D1 RID: 135377
+		// Token: 0x0401BA00 RID: 113152
 		Star3Item,
-		// Token: 0x040210D2 RID: 135378
+		// Token: 0x0401BA01 RID: 113153
 		BgAItem,
-		// Token: 0x040210D3 RID: 135379
+		// Token: 0x0401BA02 RID: 113154
 		BgBItem,
-		// Token: 0x040210D4 RID: 135380
+		// Token: 0x0401BA03 RID: 113155
 		LockItem,
-		// Token: 0x040210D5 RID: 135381
+		// Token: 0x0401BA04 RID: 113156
 		LockAboutItem,
-		// Token: 0x040210D6 RID: 135382
+		// Token: 0x0401BA05 RID: 113157
 		RedDotItem
 	}
 }

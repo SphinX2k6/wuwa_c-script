@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DC3 RID: 19907
+	// Token: 0x02003D8C RID: 15756
 	public class RoguelikeBossChallengeBuffDetailView : UiViewBase
 	{
-		// Token: 0x0603363F RID: 210495 RVA: 0x00BFF8C6 File Offset: 0x00BFDAC6
+		// Token: 0x060284AC RID: 165036 RVA: 0x00B48E06 File Offset: 0x00B47006
 		[NullableContext(1)]
 		public RoguelikeBossChallengeBuffDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06033640 RID: 210496 RVA: 0x00BFF8D0 File Offset: 0x00BFDAD0
+		// Token: 0x060284AD RID: 165037 RVA: 0x00B48E10 File Offset: 0x00B47010
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033641 RID: 210497 RVA: 0x00BFF93C File Offset: 0x00BFDB3C
+		// Token: 0x060284AE RID: 165038 RVA: 0x00B48E7C File Offset: 0x00B4707C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeBossChallengeBuffDetailView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -44,20 +44,20 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033642 RID: 210498 RVA: 0x00BFF97F File Offset: 0x00BFDB7F
+		// Token: 0x060284AF RID: 165039 RVA: 0x00B48EBF File Offset: 0x00B470BF
 		protected override void OnStart()
 		{
 			this.InitBuffData();
 		}
 
-		// Token: 0x06033643 RID: 210499 RVA: 0x00BFF987 File Offset: 0x00BFDB87
+		// Token: 0x060284B0 RID: 165040 RVA: 0x00B48EC7 File Offset: 0x00B470C7
 		protected override void OnBeforeDestroy()
 		{
 			this.CaptionItem = null;
 			this.DebuffListPanel = null;
 		}
 
-		// Token: 0x06033644 RID: 210500 RVA: 0x00BFF998 File Offset: 0x00BFDB98
+		// Token: 0x060284B1 RID: 165041 RVA: 0x00B48ED8 File Offset: 0x00B470D8
 		private void InitBuffData()
 		{
 			int[] array = (int[])this.OpenParam;
@@ -97,27 +97,27 @@ namespace CSharpScript.Game.Module.Roguelike
 			debuffListPanel.RefreshBuffList(list);
 		}
 
-		// Token: 0x06033645 RID: 210501 RVA: 0x00BFFA79 File Offset: 0x00BFDC79
+		// Token: 0x060284B2 RID: 165042 RVA: 0x00B48FB9 File Offset: 0x00B471B9
 		private void OnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401B49A RID: 111770
+		// Token: 0x04015E6D RID: 89709
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401B49B RID: 111771
+		// Token: 0x04015E6E RID: 89710
 		[Nullable(2)]
 		private RoguelikeBossChallengeBuffListItem DebuffListPanel;
 
-		// Token: 0x0200AF39 RID: 44857
+		// Token: 0x0200996E RID: 39278
 		private class EComponents
 		{
-			// Token: 0x0403535B RID: 217947
+			// Token: 0x0402FD90 RID: 195984
 			public const int ItemCaption = 0;
 
-			// Token: 0x0403535C RID: 217948
+			// Token: 0x0402FD91 RID: 195985
 			public const int ItemDebuffList = 1;
 		}
 	}

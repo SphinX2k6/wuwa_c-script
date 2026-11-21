@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021CE RID: 8654
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002439 RID: 9273
 	public class SetPlayerPos : ActionParams
 	{
-		// Token: 0x0600BE07 RID: 48647 RVA: 0x001B57E0 File Offset: 0x001B39E0
+		// Token: 0x0600C9C1 RID: 51649 RVA: 0x001CCE18 File Offset: 0x001CB018
 		private SetPlayerPos_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BE08 RID: 48648 RVA: 0x001B5818 File Offset: 0x001B3A18
+		// Token: 0x0600C9C2 RID: 51650 RVA: 0x001CCE50 File Offset: 0x001CB050
 		public static SetPlayerPos Create([Nullable(2)] SetPlayerPos instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE09 RID: 48649 RVA: 0x001B582B File Offset: 0x001B3A2B
+		// Token: 0x0600C9C3 RID: 51651 RVA: 0x001CCE63 File Offset: 0x001CB063
 		public static SetPlayerPos CreateFromSetValue([Nullable(2)] SetPlayerPos_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE0A RID: 48650 RVA: 0x001B5840 File Offset: 0x001B3A40
+		// Token: 0x0600C9C4 RID: 51652 RVA: 0x001CCE78 File Offset: 0x001CB078
 		public SetPlayerPos_SetValue ToSetValue()
 		{
 			return new SetPlayerPos_SetValue
@@ -59,13 +57,14 @@ namespace Aki.TDConfigMgr.Action
 				TeammateTeleportConfig = this.TeammateTeleportConfig,
 				TransitionOption = this.TransitionOption,
 				DisableAutoFadeInScreen = this.DisableAutoFadeInScreen,
-				OnlinePreciseTransport = this.OnlinePreciseTransport
+				OnlinePreciseTransport = this.OnlinePreciseTransport,
+				IsBanMapSound = this.IsBanMapSound
 			};
 		}
 
-		// Token: 0x170039B0 RID: 14768
-		// (get) Token: 0x0600BE0B RID: 48651 RVA: 0x001B588E File Offset: 0x001B3A8E
-		// (set) Token: 0x0600BE0C RID: 48652 RVA: 0x001B58B5 File Offset: 0x001B3AB5
+		// Token: 0x17003CA4 RID: 15524
+		// (get) Token: 0x0600C9C5 RID: 51653 RVA: 0x001CCED2 File Offset: 0x001CB0D2
+		// (set) Token: 0x0600C9C6 RID: 51654 RVA: 0x001CCEF9 File Offset: 0x001CB0F9
 		public virtual ITeleportConfig TelePortConfig
 		{
 			get
@@ -87,9 +86,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039B1 RID: 14769
-		// (get) Token: 0x0600BE0D RID: 48653 RVA: 0x001B58C4 File Offset: 0x001B3AC4
-		// (set) Token: 0x0600BE0E RID: 48654 RVA: 0x001B5925 File Offset: 0x001B3B25
+		// Token: 0x17003CA5 RID: 15525
+		// (get) Token: 0x0600C9C7 RID: 51655 RVA: 0x001CCF08 File Offset: 0x001CB108
+		// (set) Token: 0x0600C9C8 RID: 51656 RVA: 0x001CCF69 File Offset: 0x001CB169
 		[Nullable(2)]
 		public virtual ITelePortAfterTimeOut TeammateTeleportConfig
 		{
@@ -120,9 +119,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039B2 RID: 14770
-		// (get) Token: 0x0600BE0F RID: 48655 RVA: 0x001B593A File Offset: 0x001B3B3A
-		// (set) Token: 0x0600BE10 RID: 48656 RVA: 0x001B5961 File Offset: 0x001B3B61
+		// Token: 0x17003CA6 RID: 15526
+		// (get) Token: 0x0600C9C9 RID: 51657 RVA: 0x001CCF7E File Offset: 0x001CB17E
+		// (set) Token: 0x0600C9CA RID: 51658 RVA: 0x001CCFA5 File Offset: 0x001CB1A5
 		[Nullable(2)]
 		public virtual ITeleportTransitionType TransitionOption
 		{
@@ -147,9 +146,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039B3 RID: 14771
-		// (get) Token: 0x0600BE11 RID: 48657 RVA: 0x001B5970 File Offset: 0x001B3B70
-		// (set) Token: 0x0600BE12 RID: 48658 RVA: 0x001B59AA File Offset: 0x001B3BAA
+		// Token: 0x17003CA7 RID: 15527
+		// (get) Token: 0x0600C9CB RID: 51659 RVA: 0x001CCFB4 File Offset: 0x001CB1B4
+		// (set) Token: 0x0600C9CC RID: 51660 RVA: 0x001CCFEE File Offset: 0x001CB1EE
 		public virtual bool? DisableAutoFadeInScreen
 		{
 			get
@@ -171,9 +170,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039B4 RID: 14772
-		// (get) Token: 0x0600BE13 RID: 48659 RVA: 0x001B59B8 File Offset: 0x001B3BB8
-		// (set) Token: 0x0600BE14 RID: 48660 RVA: 0x001B59F2 File Offset: 0x001B3BF2
+		// Token: 0x17003CA8 RID: 15528
+		// (get) Token: 0x0600C9CD RID: 51661 RVA: 0x001CCFFC File Offset: 0x001CB1FC
+		// (set) Token: 0x0600C9CE RID: 51662 RVA: 0x001CD036 File Offset: 0x001CB236
 		public virtual bool? OnlinePreciseTransport
 		{
 			get
@@ -195,18 +194,42 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007164 RID: 29028
+		// Token: 0x17003CA9 RID: 15529
+		// (get) Token: 0x0600C9CF RID: 51663 RVA: 0x001CD044 File Offset: 0x001CB244
+		// (set) Token: 0x0600C9D0 RID: 51664 RVA: 0x001CD07E File Offset: 0x001CB27E
+		public virtual bool? IsBanMapSound
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.IsBanMapSound;
+				}
+				SetPlayerPos_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.IsBanMapSound;
+			}
+			set
+			{
+				this.GetOrCreatePoco().IsBanMapSound = value;
+			}
+		}
+
+		// Token: 0x040077AC RID: 30636
 		[Nullable(2)]
 		protected new SetPlayerPos FbInstance;
 
-		// Token: 0x04007165 RID: 29029
+		// Token: 0x040077AD RID: 30637
 		[Nullable(2)]
 		protected SetPlayerPos_SetValue PocoInterface;
 
-		// Token: 0x04007166 RID: 29030
+		// Token: 0x040077AE RID: 30638
 		private ITelePortAfterTimeOut _TeammateTeleportConfigCache;
 
-		// Token: 0x04007167 RID: 29031
+		// Token: 0x040077AF RID: 30639
 		private bool _TeammateTeleportConfigInited;
 	}
 }

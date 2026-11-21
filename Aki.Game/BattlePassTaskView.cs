@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002336 RID: 9014
+// Token: 0x0200181B RID: 6171
 [NullableContext(1)]
 [Nullable(0)]
 public class BattlePassTaskView : UiTabViewBase
 {
-	// Token: 0x06011D7F RID: 73087 RVA: 0x00465638 File Offset: 0x00463838
+	// Token: 0x0600F22F RID: 61999 RVA: 0x00472700 File Offset: 0x00470900
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -32,7 +32,7 @@ public class BattlePassTaskView : UiTabViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06011D80 RID: 73088 RVA: 0x004656E4 File Offset: 0x004638E4
+	// Token: 0x0600F230 RID: 62000 RVA: 0x004727AC File Offset: 0x004709AC
 	private UniTask InitBattlePassBackgroundPanel()
 	{
 		BattlePassTaskView.<InitBattlePassBackgroundPanel>d__8 <InitBattlePassBackgroundPanel>d__;
@@ -43,7 +43,7 @@ public class BattlePassTaskView : UiTabViewBase
 		return <InitBattlePassBackgroundPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011D81 RID: 73089 RVA: 0x00465728 File Offset: 0x00463928
+	// Token: 0x0600F231 RID: 62001 RVA: 0x004727F0 File Offset: 0x004709F0
 	private UniTask InitTaskLoopView()
 	{
 		BattlePassTaskView.<InitTaskLoopView>d__9 <InitTaskLoopView>d__;
@@ -54,7 +54,7 @@ public class BattlePassTaskView : UiTabViewBase
 		return <InitTaskLoopView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011D82 RID: 73090 RVA: 0x0046576C File Offset: 0x0046396C
+	// Token: 0x0600F232 RID: 62002 RVA: 0x00472834 File Offset: 0x00470A34
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BattlePassTaskView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -65,7 +65,7 @@ public class BattlePassTaskView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011D83 RID: 73091 RVA: 0x004657B0 File Offset: 0x004639B0
+	// Token: 0x0600F233 RID: 62003 RVA: 0x00472878 File Offset: 0x00470A78
 	protected override void OnAfterShow()
 	{
 		UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -76,7 +76,7 @@ public class BattlePassTaskView : UiTabViewBase
 		this.RefreshTaskData();
 	}
 
-	// Token: 0x06011D84 RID: 73092 RVA: 0x004657E4 File Offset: 0x004639E4
+	// Token: 0x0600F234 RID: 62004 RVA: 0x004728AC File Offset: 0x00470AAC
 	public void SelectToggleByIndex(int index, bool bIgnored = false)
 	{
 		if (bIgnored)
@@ -95,27 +95,27 @@ public class BattlePassTaskView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06011D85 RID: 73093 RVA: 0x00465830 File Offset: 0x00463A30
+	// Token: 0x0600F235 RID: 62005 RVA: 0x004728F8 File Offset: 0x00470AF8
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.UpdateBattlePassTaskEvent, new Action(this.OnReceiveBattlePassTaskUpdate));
 		EventSystem.Instance.Add(EEventName.ReceiveBattlePassTaskEvent, new Action<bool>(this.OnReceiveBattlePassTaskData));
 	}
 
-	// Token: 0x06011D86 RID: 73094 RVA: 0x0046586A File Offset: 0x00463A6A
+	// Token: 0x0600F236 RID: 62006 RVA: 0x00472932 File Offset: 0x00470B32
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.UpdateBattlePassTaskEvent, new Action(this.OnReceiveBattlePassTaskUpdate));
 		EventSystem.Instance.Remove(EEventName.ReceiveBattlePassTaskEvent, new Action<bool>(this.OnReceiveBattlePassTaskData));
 	}
 
-	// Token: 0x06011D87 RID: 73095 RVA: 0x004658A4 File Offset: 0x00463AA4
+	// Token: 0x0600F237 RID: 62007 RVA: 0x0047296C File Offset: 0x00470B6C
 	private void OnReceiveBattlePassTaskUpdate()
 	{
 		this.RefreshTaskData();
 	}
 
-	// Token: 0x06011D88 RID: 73096 RVA: 0x004658AC File Offset: 0x00463AAC
+	// Token: 0x0600F238 RID: 62008 RVA: 0x00472974 File Offset: 0x00470B74
 	private void OnReceiveBattlePassTaskData(bool isWeekUpdate)
 	{
 		if (this.CurrentIndex == -1)
@@ -129,13 +129,13 @@ public class BattlePassTaskView : UiTabViewBase
 		this.RefreshTaskData();
 	}
 
-	// Token: 0x06011D89 RID: 73097 RVA: 0x0046590A File Offset: 0x00463B0A
+	// Token: 0x0600F239 RID: 62009 RVA: 0x004729D2 File Offset: 0x00470BD2
 	private BattlePassTaskLoopItem CreateLoopItem()
 	{
 		return new BattlePassTaskLoopItem();
 	}
 
-	// Token: 0x06011D8A RID: 73098 RVA: 0x00465911 File Offset: 0x00463B11
+	// Token: 0x0600F23A RID: 62010 RVA: 0x004729D9 File Offset: 0x00470BD9
 	private BattlePassTaskTabItem InitDetail()
 	{
 		BattlePassTaskTabItem battlePassTaskTabItem = new BattlePassTaskTabItem();
@@ -144,7 +144,7 @@ public class BattlePassTaskView : UiTabViewBase
 		return battlePassTaskTabItem;
 	}
 
-	// Token: 0x06011D8B RID: 73099 RVA: 0x0046593C File Offset: 0x00463B3C
+	// Token: 0x0600F23B RID: 62011 RVA: 0x00472A04 File Offset: 0x00470C04
 	private void OnClickTypeToggle(int index)
 	{
 		if (index == this.CurrentIndex)
@@ -164,13 +164,13 @@ public class BattlePassTaskView : UiTabViewBase
 		this.RefreshTaskData();
 	}
 
-	// Token: 0x06011D8C RID: 73100 RVA: 0x00465983 File Offset: 0x00463B83
+	// Token: 0x0600F23C RID: 62012 RVA: 0x00472A4B File Offset: 0x00470C4B
 	private bool OnCanExecuteChange(int index)
 	{
 		return this.CurrentIndex != index;
 	}
 
-	// Token: 0x06011D8D RID: 73101 RVA: 0x00465994 File Offset: 0x00463B94
+	// Token: 0x0600F23D RID: 62013 RVA: 0x00472A5C File Offset: 0x00470C5C
 	private void RefreshTaskData()
 	{
 		if (this.CurrentIndex == -1)
@@ -181,7 +181,7 @@ public class BattlePassTaskView : UiTabViewBase
 		this.TaskLoopView.RefreshByData(this.TaskList, false, null, true);
 	}
 
-	// Token: 0x06011D8E RID: 73102 RVA: 0x004659E0 File Offset: 0x00463BE0
+	// Token: 0x0600F23E RID: 62014 RVA: 0x00472AA8 File Offset: 0x00470CA8
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TaskLoopView != null)
@@ -192,14 +192,14 @@ public class BattlePassTaskView : UiTabViewBase
 		this.TaskList = new List<BattlePassTaskData>();
 	}
 
-	// Token: 0x0400873D RID: 34621
+	// Token: 0x04008880 RID: 34944
 	private int CurrentIndex = -1;
 
-	// Token: 0x0400873E RID: 34622
+	// Token: 0x04008881 RID: 34945
 	[Nullable(2)]
 	private BattlePassBackgroundPanel BackgroundPanel;
 
-	// Token: 0x0400873F RID: 34623
+	// Token: 0x04008882 RID: 34946
 	[Nullable(new byte[]
 	{
 		2,
@@ -207,7 +207,7 @@ public class BattlePassTaskView : UiTabViewBase
 	})]
 	private GenericLayout<BattlePassTaskTabItem, EBattlePassTaskUpdateState> TypeLayout;
 
-	// Token: 0x04008740 RID: 34624
+	// Token: 0x04008883 RID: 34947
 	[Nullable(new byte[]
 	{
 		2,
@@ -216,10 +216,10 @@ public class BattlePassTaskView : UiTabViewBase
 	})]
 	private LoopScrollView<BattlePassTaskLoopItem, BattlePassTaskData> TaskLoopView;
 
-	// Token: 0x04008741 RID: 34625
+	// Token: 0x04008884 RID: 34948
 	private List<BattlePassTaskData> TaskList = new List<BattlePassTaskData>();
 
-	// Token: 0x04008742 RID: 34626
+	// Token: 0x04008885 RID: 34949
 	private readonly List<EBattlePassTaskUpdateState> TypeList = new List<EBattlePassTaskUpdateState>
 	{
 		EBattlePassTaskUpdateState.EveryDay,
@@ -227,17 +227,17 @@ public class BattlePassTaskView : UiTabViewBase
 		EBattlePassTaskUpdateState.Always
 	};
 
-	// Token: 0x020088B8 RID: 35000
+	// Token: 0x02007A41 RID: 31297
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402C6F5 RID: 182005
+		// Token: 0x04027A09 RID: 162313
 		BattlePassBackground,
-		// Token: 0x0402C6F6 RID: 182006
+		// Token: 0x04027A0A RID: 162314
 		TypeLayout,
-		// Token: 0x0402C6F7 RID: 182007
+		// Token: 0x04027A0B RID: 162315
 		TaskLoop,
-		// Token: 0x0402C6F8 RID: 182008
+		// Token: 0x04027A0C RID: 162316
 		TaskItem
 	}
 }

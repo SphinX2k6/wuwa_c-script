@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000863 RID: 2147
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000906 RID: 2310
 	public class QuickHackComponent : IComponentBase
 	{
-		// Token: 0x06002F79 RID: 12153 RVA: 0x0007A7CC File Offset: 0x000789CC
+		// Token: 0x060032B5 RID: 12981 RVA: 0x00081CB4 File Offset: 0x0007FEB4
 		private QuickHackComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002F7A RID: 12154 RVA: 0x0007A804 File Offset: 0x00078A04
+		// Token: 0x060032B6 RID: 12982 RVA: 0x00081CEC File Offset: 0x0007FEEC
 		public static QuickHackComponent Create([Nullable(2)] QuickHackComponent instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F7B RID: 12155 RVA: 0x0007A817 File Offset: 0x00078A17
+		// Token: 0x060032B7 RID: 12983 RVA: 0x00081CFF File Offset: 0x0007FEFF
 		public static QuickHackComponent CreateFromSetValue([Nullable(2)] QuickHackComponent_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F7C RID: 12156 RVA: 0x0007A82C File Offset: 0x00078A2C
+		// Token: 0x060032B8 RID: 12984 RVA: 0x00081D14 File Offset: 0x0007FF14
 		public new QuickHackComponent_SetValue ToSetValue()
 		{
 			return new QuickHackComponent_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C8B RID: 3211
-		// (get) Token: 0x06002F7D RID: 12157 RVA: 0x0007A894 File Offset: 0x00078A94
-		// (set) Token: 0x06002F7E RID: 12158 RVA: 0x0007A8CE File Offset: 0x00078ACE
+		// Token: 0x17000D54 RID: 3412
+		// (get) Token: 0x060032B9 RID: 12985 RVA: 0x00081D7C File Offset: 0x0007FF7C
+		// (set) Token: 0x060032BA RID: 12986 RVA: 0x00081DB6 File Offset: 0x0007FFB6
 		public override bool? Disabled
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C8C RID: 3212
-		// (get) Token: 0x06002F7F RID: 12159 RVA: 0x0007A8DC File Offset: 0x00078ADC
-		// (set) Token: 0x06002F80 RID: 12160 RVA: 0x0007A906 File Offset: 0x00078B06
+		// Token: 0x17000D55 RID: 3413
+		// (get) Token: 0x060032BB RID: 12987 RVA: 0x00081DC4 File Offset: 0x0007FFC4
+		// (set) Token: 0x060032BC RID: 12988 RVA: 0x00081DEE File Offset: 0x0007FFEE
 		public override bool? EdIsLocked
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C8D RID: 3213
-		// (get) Token: 0x06002F81 RID: 12161 RVA: 0x0007A914 File Offset: 0x00078B14
-		// (set) Token: 0x06002F82 RID: 12162 RVA: 0x0007A943 File Offset: 0x00078B43
+		// Token: 0x17000D56 RID: 3414
+		// (get) Token: 0x060032BD RID: 12989 RVA: 0x00081DFC File Offset: 0x0007FFFC
+		// (set) Token: 0x060032BE RID: 12990 RVA: 0x00081E2B File Offset: 0x0008002B
 		public virtual float Time
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C8E RID: 3214
-		// (get) Token: 0x06002F83 RID: 12163 RVA: 0x0007A954 File Offset: 0x00078B54
-		// (set) Token: 0x06002F84 RID: 12164 RVA: 0x0007A9B5 File Offset: 0x00078BB5
+		// Token: 0x17000D57 RID: 3415
+		// (get) Token: 0x060032BF RID: 12991 RVA: 0x00081E3C File Offset: 0x0008003C
+		// (set) Token: 0x060032C0 RID: 12992 RVA: 0x00081E9D File Offset: 0x0008009D
 		[Nullable(2)]
 		public virtual VectorInfo IconOffset
 		{
@@ -166,9 +164,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C8F RID: 3215
-		// (get) Token: 0x06002F85 RID: 12165 RVA: 0x0007A9CC File Offset: 0x00078BCC
-		// (set) Token: 0x06002F86 RID: 12166 RVA: 0x0007AA5F File Offset: 0x00078C5F
+		// Token: 0x17000D58 RID: 3416
+		// (get) Token: 0x060032C1 RID: 12993 RVA: 0x00081EB4 File Offset: 0x000800B4
+		// (set) Token: 0x060032C2 RID: 12994 RVA: 0x00081F47 File Offset: 0x00080147
 		public virtual List<IQuickHackSkill> Skills
 		{
 			get
@@ -204,9 +202,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C90 RID: 3216
-		// (get) Token: 0x06002F87 RID: 12167 RVA: 0x0007AA74 File Offset: 0x00078C74
-		// (set) Token: 0x06002F88 RID: 12168 RVA: 0x0007AAAE File Offset: 0x00078CAE
+		// Token: 0x17000D59 RID: 3417
+		// (get) Token: 0x060032C3 RID: 12995 RVA: 0x00081F5C File Offset: 0x0008015C
+		// (set) Token: 0x060032C4 RID: 12996 RVA: 0x00081F96 File Offset: 0x00080196
 		public virtual EQuickHackAutoCloseType? AutoClose
 		{
 			get
@@ -228,9 +226,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C91 RID: 3217
-		// (get) Token: 0x06002F89 RID: 12169 RVA: 0x0007AABC File Offset: 0x00078CBC
-		// (set) Token: 0x06002F8A RID: 12170 RVA: 0x0007AB1D File Offset: 0x00078D1D
+		// Token: 0x17000D5A RID: 3418
+		// (get) Token: 0x060032C5 RID: 12997 RVA: 0x00081FA4 File Offset: 0x000801A4
+		// (set) Token: 0x060032C6 RID: 12998 RVA: 0x00082005 File Offset: 0x00080205
 		[Nullable(2)]
 		public virtual IQuickHackLinkEffect LinkEffect
 		{
@@ -261,30 +259,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001F51 RID: 8017
+		// Token: 0x04002163 RID: 8547
 		[Nullable(2)]
 		protected new QuickHackComponent FbInstance;
 
-		// Token: 0x04001F52 RID: 8018
+		// Token: 0x04002164 RID: 8548
 		[Nullable(2)]
 		protected new QuickHackComponent_SetValue PocoInterface;
 
-		// Token: 0x04001F53 RID: 8019
+		// Token: 0x04002165 RID: 8549
 		private VectorInfo _IconOffsetCache;
 
-		// Token: 0x04001F54 RID: 8020
+		// Token: 0x04002166 RID: 8550
 		private bool _IconOffsetInited;
 
-		// Token: 0x04001F55 RID: 8021
+		// Token: 0x04002167 RID: 8551
 		private List<IQuickHackSkill> _SkillsCache;
 
-		// Token: 0x04001F56 RID: 8022
+		// Token: 0x04002168 RID: 8552
 		private bool _SkillsInited;
 
-		// Token: 0x04001F57 RID: 8023
+		// Token: 0x04002169 RID: 8553
 		private IQuickHackLinkEffect _LinkEffectCache;
 
-		// Token: 0x04001F58 RID: 8024
+		// Token: 0x0400216A RID: 8554
 		private bool _LinkEffectInited;
 	}
 }

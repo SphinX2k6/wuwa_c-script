@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006AD RID: 1709
+	// Token: 0x020006C5 RID: 1733
 	public class ConfigPhantomOneKeyEquipById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600281E RID: 10270 RVA: 0x0013C6C7 File Offset: 0x0013A8C7
+		// Token: 0x060028AE RID: 10414 RVA: 0x00143143 File Offset: 0x00141343
 		static ConfigPhantomOneKeyEquipById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomOneKeyEquipById.CreateStaticDefaultValue), new Action(ConfigPhantomOneKeyEquipById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600281F RID: 10271 RVA: 0x0013C6E8 File Offset: 0x0013A8E8
+		// Token: 0x060028AF RID: 10415 RVA: 0x00143164 File Offset: 0x00141364
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomOneKeyEquipById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002820 RID: 10272 RVA: 0x0013C767 File Offset: 0x0013A967
+		// Token: 0x060028B0 RID: 10416 RVA: 0x001431E3 File Offset: 0x001413E3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomOneKeyEquipById.LogPair = null;
 			ConfigPhantomOneKeyEquipById.HandleId = 0;
 		}
 
-		// Token: 0x06002821 RID: 10273 RVA: 0x0013C775 File Offset: 0x0013A975
+		// Token: 0x060028B1 RID: 10417 RVA: 0x001431F1 File Offset: 0x001413F1
 		public static void Init()
 		{
 			ConfigPhantomOneKeyEquipById.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomOneKeyEquipById.HandleId, "db_visionrecommend.db", "select BinData from `PhantomOneKeyEquip` where Id=?");
 		}
 
-		// Token: 0x06002822 RID: 10274 RVA: 0x0013C790 File Offset: 0x0013A990
+		// Token: 0x060028B2 RID: 10418 RVA: 0x0014320C File Offset: 0x0014140C
 		public static PhantomOneKeyEquip? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomOneKeyEquipById.HandleId, ConfigPhantomOneKeyEquipById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomOneKeyEquip?(rootAsPhantomOneKeyEquip);
 		}
 
-		// Token: 0x04002EA1 RID: 11937
+		// Token: 0x04002F49 RID: 12105
 		private const string DB = "db_visionrecommend.db";
 
-		// Token: 0x04002EA2 RID: 11938
+		// Token: 0x04002F4A RID: 12106
 		private const string FILE = "h.幻象推荐.xlsx";
 
-		// Token: 0x04002EA3 RID: 11939
+		// Token: 0x04002F4B RID: 12107
 		private const string TABLE = "PhantomOneKeyEquip";
 
-		// Token: 0x04002EA4 RID: 11940
+		// Token: 0x04002F4C RID: 12108
 		private const string COMMAND = "select BinData from `PhantomOneKeyEquip` where Id=?";
 
-		// Token: 0x04002EA5 RID: 11941
+		// Token: 0x04002F4D RID: 12109
 		private const string KEY_PREFIX = "PhantomOneKeyEquipById";
 
-		// Token: 0x04002EA6 RID: 11942
+		// Token: 0x04002F4E RID: 12110
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002EA7 RID: 11943
+		// Token: 0x04002F4F RID: 12111
 		private static int HandleId;
 	}
 }

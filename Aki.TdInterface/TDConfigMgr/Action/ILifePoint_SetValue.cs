@@ -4,35 +4,33 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B7B RID: 7035
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D28 RID: 7464
 	public class ILifePoint_SetValue
 	{
-		// Token: 0x04005C12 RID: 23570
+		// Token: 0x040060AB RID: 24747
 		public ESimpleGameplayType Type;
 
-		// Token: 0x04005C13 RID: 23571
+		// Token: 0x040060AC RID: 24748
 		public ILifePointColorBoard ColorBoard;
 
-		// Token: 0x04005C14 RID: 23572
+		// Token: 0x040060AD RID: 24749
 		public int StepLimit;
 
-		// Token: 0x04005C15 RID: 23573
+		// Token: 0x040060AE RID: 24750
 		public string TidDesc;
 
-		// Token: 0x04005C16 RID: 23574
+		// Token: 0x040060AF RID: 24751
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ILifePointMaxStepRewardRuleItem> MaxStepRewardRule;
 
-		// Token: 0x04005C17 RID: 23575
+		// Token: 0x040060B0 RID: 24752
 		public bool? CloseUiAfterCompletion;
 
-		// Token: 0x04005C18 RID: 23576
+		// Token: 0x040060B1 RID: 24753
 		[Nullable(2)]
 		public string EdTidDesc;
 	}

@@ -9,12 +9,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x0200293E RID: 10558
+// Token: 0x02001EB9 RID: 7865
 [NullableContext(1)]
 [Nullable(0)]
 public class TrapDefenseRouletteMainViewProxy : RouletteMainViewProxyBase
 {
-	// Token: 0x06015CD8 RID: 89304 RVA: 0x0057FBE4 File Offset: 0x0057DDE4
+	// Token: 0x060136DD RID: 79581 RVA: 0x005AAC1C File Offset: 0x005A8E1C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TrapDefenseRouletteMainViewProxy.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -25,7 +25,7 @@ public class TrapDefenseRouletteMainViewProxy : RouletteMainViewProxyBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015CD9 RID: 89305 RVA: 0x0057FC28 File Offset: 0x0057DE28
+	// Token: 0x060136DE RID: 79582 RVA: 0x005AAC60 File Offset: 0x005A8E60
 	protected override void OnBeforeShow()
 	{
 		if (!Info.Instance.IsInTouch())
@@ -38,13 +38,13 @@ public class TrapDefenseRouletteMainViewProxy : RouletteMainViewProxyBase
 		}
 	}
 
-	// Token: 0x06015CDA RID: 89306 RVA: 0x0057FC61 File Offset: 0x0057DE61
+	// Token: 0x060136DF RID: 79583 RVA: 0x005AAC99 File Offset: 0x005A8E99
 	protected override bool OnCanOpenView()
 	{
 		return RouletteModel.Instance.IsExploreRouletteOpen(true) && TrapDefenseModel.Instance.GetCurInstToLevelDataHasShop();
 	}
 
-	// Token: 0x06015CDB RID: 89307 RVA: 0x0057FC7C File Offset: 0x0057DE7C
+	// Token: 0x060136E0 RID: 79584 RVA: 0x005AACB4 File Offset: 0x005A8EB4
 	protected override RouletteComponentMain OnGetRouletteComponent()
 	{
 		if (this.RouletteComponentExplore == null)
@@ -56,31 +56,31 @@ public class TrapDefenseRouletteMainViewProxy : RouletteMainViewProxyBase
 		return this.RouletteComponentExplore;
 	}
 
-	// Token: 0x06015CDC RID: 89308 RVA: 0x0057FCCA File Offset: 0x0057DECA
+	// Token: 0x060136E1 RID: 79585 RVA: 0x005AAD02 File Offset: 0x005A8F02
 	protected override ERouletteType OnGetRouletteType()
 	{
 		return ERouletteType.Explore;
 	}
 
-	// Token: 0x06015CDD RID: 89309 RVA: 0x0057FCCD File Offset: 0x0057DECD
+	// Token: 0x060136E2 RID: 79586 RVA: 0x005AAD05 File Offset: 0x005A8F05
 	protected override bool OnGetCanSwitchType()
 	{
 		return false;
 	}
 
-	// Token: 0x06015CDE RID: 89310 RVA: 0x0057FCD0 File Offset: 0x0057DED0
+	// Token: 0x060136E3 RID: 79587 RVA: 0x005AAD08 File Offset: 0x005A8F08
 	protected override bool OnGetPanelSwitchOpen()
 	{
 		return false;
 	}
 
-	// Token: 0x06015CDF RID: 89311 RVA: 0x0057FCD3 File Offset: 0x0057DED3
+	// Token: 0x060136E4 RID: 79588 RVA: 0x005AAD0B File Offset: 0x005A8F0B
 	protected override bool OnGetCanOpenAssembly(ERouletteType rouletteType)
 	{
 		return false;
 	}
 
-	// Token: 0x06015CE0 RID: 89312 RVA: 0x0057FCD6 File Offset: 0x0057DED6
+	// Token: 0x060136E5 RID: 79589 RVA: 0x005AAD0E File Offset: 0x005A8F0E
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -92,7 +92,7 @@ public class TrapDefenseRouletteMainViewProxy : RouletteMainViewProxyBase
 		return this.TrapDefenseExploreRouletteMap;
 	}
 
-	// Token: 0x06015CE1 RID: 89313 RVA: 0x0057FCE0 File Offset: 0x0057DEE0
+	// Token: 0x060136E6 RID: 79590 RVA: 0x005AAD18 File Offset: 0x005A8F18
 	protected override int OnGetRouletteGridId(int index, ERouletteGridType gridType)
 	{
 		RouletteListDataBase rouletteListDataBase;
@@ -103,13 +103,13 @@ public class TrapDefenseRouletteMainViewProxy : RouletteMainViewProxyBase
 		return 0;
 	}
 
-	// Token: 0x06015CE2 RID: 89314 RVA: 0x0057FD19 File Offset: 0x0057DF19
+	// Token: 0x060136E7 RID: 79591 RVA: 0x005AAD51 File Offset: 0x005A8F51
 	protected override string OnGetActionName()
 	{
 		return "塔防轮盘";
 	}
 
-	// Token: 0x06015CE3 RID: 89315 RVA: 0x0057FD20 File Offset: 0x0057DF20
+	// Token: 0x060136E8 RID: 79592 RVA: 0x005AAD58 File Offset: 0x005A8F58
 	protected override void OnRefreshTips()
 	{
 		RouletteComponentMainExplore rouletteComponentExplore = this.RouletteComponentExplore;
@@ -124,7 +124,7 @@ public class TrapDefenseRouletteMainViewProxy : RouletteMainViewProxyBase
 		this.ItemTips.RefreshTips(null);
 	}
 
-	// Token: 0x06015CE4 RID: 89316 RVA: 0x0057FDA4 File Offset: 0x0057DFA4
+	// Token: 0x060136E9 RID: 79593 RVA: 0x005AADDC File Offset: 0x005A8FDC
 	protected override void OnDestroy()
 	{
 		if (this.RouletteComponentExplore != null)
@@ -134,7 +134,7 @@ public class TrapDefenseRouletteMainViewProxy : RouletteMainViewProxyBase
 		}
 	}
 
-	// Token: 0x0400A24F RID: 41551
+	// Token: 0x0400A63A RID: 42554
 	[Nullable(new byte[]
 	{
 		1,
@@ -177,10 +177,10 @@ public class TrapDefenseRouletteMainViewProxy : RouletteMainViewProxyBase
 		}, ERouletteComponentNode.RouletteItem8, ERouletteGridType.Explore)
 	};
 
-	// Token: 0x0400A250 RID: 41552
+	// Token: 0x0400A63B RID: 42555
 	[Nullable(2)]
 	private RouletteComponentMainExplore RouletteComponentExplore;
 
-	// Token: 0x0400A251 RID: 41553
+	// Token: 0x0400A63C RID: 42556
 	protected TrapDefenseRouletteItemTips ItemTips;
 }

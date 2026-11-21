@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D59 RID: 23897
+	// Token: 0x02006390 RID: 25488
 	public class IBvbPlayerTurnStartDataT
 	{
-		// Token: 0x1700B310 RID: 45840
-		// (get) Token: 0x06028E2E RID: 167470 RVA: 0x0059E30A File Offset: 0x0059C50A
-		// (set) Token: 0x06028E2F RID: 167471 RVA: 0x0059E312 File Offset: 0x0059C512
+		// Token: 0x1700BC71 RID: 48241
+		// (get) Token: 0x0602B498 RID: 177304 RVA: 0x005E6D7A File Offset: 0x005E4F7A
+		// (set) Token: 0x0602B499 RID: 177305 RVA: 0x005E6D82 File Offset: 0x005E4F82
 		public EBvbEventName Type { get; set; }
 
-		// Token: 0x06028E30 RID: 167472 RVA: 0x0059E31B File Offset: 0x0059C51B
+		// Token: 0x0602B49A RID: 177306 RVA: 0x005E6D8B File Offset: 0x005E4F8B
 		public IBvbPlayerTurnStartDataT()
 		{
 			this.Type = EBvbEventName.AIEvolution;

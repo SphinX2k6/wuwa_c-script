@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E1F RID: 24095
+	// Token: 0x0200645C RID: 25692
 	public class IOutAreaBorderTimerConfigT
 	{
-		// Token: 0x1700B445 RID: 46149
-		// (get) Token: 0x06029412 RID: 168978 RVA: 0x005A8A19 File Offset: 0x005A6C19
-		// (set) Token: 0x06029413 RID: 168979 RVA: 0x005A8A21 File Offset: 0x005A6C21
+		// Token: 0x1700BDAB RID: 48555
+		// (get) Token: 0x0602BA9C RID: 178844 RVA: 0x005F1749 File Offset: 0x005EF949
+		// (set) Token: 0x0602BA9D RID: 178845 RVA: 0x005F1751 File Offset: 0x005EF951
 		public EOutAreaBorderType Type { get; set; }
 
-		// Token: 0x1700B446 RID: 46150
-		// (get) Token: 0x06029414 RID: 168980 RVA: 0x005A8A2A File Offset: 0x005A6C2A
-		// (set) Token: 0x06029415 RID: 168981 RVA: 0x005A8A32 File Offset: 0x005A6C32
+		// Token: 0x1700BDAC RID: 48556
+		// (get) Token: 0x0602BA9E RID: 178846 RVA: 0x005F175A File Offset: 0x005EF95A
+		// (set) Token: 0x0602BA9F RID: 178847 RVA: 0x005F1762 File Offset: 0x005EF962
 		public float OutAreaBorderTime { get; set; }
 
-		// Token: 0x1700B447 RID: 46151
-		// (get) Token: 0x06029416 RID: 168982 RVA: 0x005A8A3B File Offset: 0x005A6C3B
-		// (set) Token: 0x06029417 RID: 168983 RVA: 0x005A8A43 File Offset: 0x005A6C43
+		// Token: 0x1700BDAD RID: 48557
+		// (get) Token: 0x0602BAA0 RID: 178848 RVA: 0x005F176B File Offset: 0x005EF96B
+		// (set) Token: 0x0602BAA1 RID: 178849 RVA: 0x005F1773 File Offset: 0x005EF973
 		public int TeleportTransitionConfigId { get; set; }
 
-		// Token: 0x1700B448 RID: 46152
-		// (get) Token: 0x06029418 RID: 168984 RVA: 0x005A8A4C File Offset: 0x005A6C4C
-		// (set) Token: 0x06029419 RID: 168985 RVA: 0x005A8A54 File Offset: 0x005A6C54
+		// Token: 0x1700BDAE RID: 48558
+		// (get) Token: 0x0602BAA2 RID: 178850 RVA: 0x005F177C File Offset: 0x005EF97C
+		// (set) Token: 0x0602BAA3 RID: 178851 RVA: 0x005F1784 File Offset: 0x005EF984
 		public IOutAreaBorderDownTimeTextTipT OutAreaBorderTipOption { get; set; }
 
-		// Token: 0x1700B449 RID: 46153
-		// (get) Token: 0x0602941A RID: 168986 RVA: 0x005A8A5D File Offset: 0x005A6C5D
-		// (set) Token: 0x0602941B RID: 168987 RVA: 0x005A8A65 File Offset: 0x005A6C65
+		// Token: 0x1700BDAF RID: 48559
+		// (get) Token: 0x0602BAA4 RID: 178852 RVA: 0x005F178D File Offset: 0x005EF98D
+		// (set) Token: 0x0602BAA5 RID: 178853 RVA: 0x005F1795 File Offset: 0x005EF995
 		public IOutAreaBorderBuffEffectT OutAreaBorderEffectOption { get; set; }
 
-		// Token: 0x0602941C RID: 168988 RVA: 0x005A8A6E File Offset: 0x005A6C6E
+		// Token: 0x0602BAA6 RID: 178854 RVA: 0x005F179E File Offset: 0x005EF99E
 		public IOutAreaBorderTimerConfigT()
 		{
 			this.Type = EOutAreaBorderType.TeleportTimer;

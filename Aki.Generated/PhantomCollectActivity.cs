@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EE0 RID: 3808
+	// Token: 0x02000FC5 RID: 4037
 	public struct PhantomCollectActivity : IFlatbufferObject
 	{
-		// Token: 0x1700269F RID: 9887
-		// (get) Token: 0x0600A812 RID: 43026 RVA: 0x002B1F81 File Offset: 0x002B0181
+		// Token: 0x17002705 RID: 9989
+		// (get) Token: 0x0600AE33 RID: 44595 RVA: 0x002CF025 File Offset: 0x002CD225
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A813 RID: 43027 RVA: 0x002B1F8E File Offset: 0x002B018E
+		// Token: 0x0600AE34 RID: 44596 RVA: 0x002CF032 File Offset: 0x002CD232
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A814 RID: 43028 RVA: 0x002B1F98 File Offset: 0x002B0198
+		// Token: 0x0600AE35 RID: 44597 RVA: 0x002CF03C File Offset: 0x002CD23C
 		public static PhantomCollectActivity GetRootAsPhantomCollectActivity(ByteBuffer _bb)
 		{
 			return PhantomCollectActivity.GetRootAsPhantomCollectActivity(_bb, default(PhantomCollectActivity));
 		}
 
-		// Token: 0x0600A815 RID: 43029 RVA: 0x002B1FB4 File Offset: 0x002B01B4
+		// Token: 0x0600AE36 RID: 44598 RVA: 0x002CF058 File Offset: 0x002CD258
 		public static PhantomCollectActivity GetRootAsPhantomCollectActivity(ByteBuffer _bb, PhantomCollectActivity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A816 RID: 43030 RVA: 0x002B1FD1 File Offset: 0x002B01D1
+		// Token: 0x0600AE37 RID: 44599 RVA: 0x002CF075 File Offset: 0x002CD275
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A817 RID: 43031 RVA: 0x002B1FE0 File Offset: 0x002B01E0
+		// Token: 0x0600AE38 RID: 44600 RVA: 0x002CF084 File Offset: 0x002CD284
 		public PhantomCollectActivity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170026A0 RID: 9888
-		// (get) Token: 0x0600A818 RID: 43032 RVA: 0x002B1FF0 File Offset: 0x002B01F0
+		// Token: 0x17002706 RID: 9990
+		// (get) Token: 0x0600AE39 RID: 44601 RVA: 0x002CF094 File Offset: 0x002CD294
 		public int Id
 		{
 			get
@@ -66,7 +66,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A819 RID: 43033 RVA: 0x002B202C File Offset: 0x002B022C
+		// Token: 0x0600AE3A RID: 44602 RVA: 0x002CF0D0 File Offset: 0x002CD2D0
 		public int Phantoms(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -77,8 +77,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170026A1 RID: 9889
-		// (get) Token: 0x0600A81A RID: 43034 RVA: 0x002B206C File Offset: 0x002B026C
+		// Token: 0x17002707 RID: 9991
+		// (get) Token: 0x0600AE3B RID: 44603 RVA: 0x002CF110 File Offset: 0x002CD310
 		public int PhantomsLength
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A81B RID: 43035 RVA: 0x002B2097 File Offset: 0x002B0297
+		// Token: 0x0600AE3C RID: 44604 RVA: 0x002CF13B File Offset: 0x002CD33B
 		public Span<int> GetPhantomsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600A81C RID: 43036 RVA: 0x002B20A6 File Offset: 0x002B02A6
+		// Token: 0x0600AE3D RID: 44605 RVA: 0x002CF14A File Offset: 0x002CD34A
 		public int[] GetPhantomsArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170026A2 RID: 9890
-		// (get) Token: 0x0600A81D RID: 43037 RVA: 0x002B20C0 File Offset: 0x002B02C0
+		// Token: 0x17002708 RID: 9992
+		// (get) Token: 0x0600AE3E RID: 44606 RVA: 0x002CF164 File Offset: 0x002CD364
 		public int PhantomReward
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A81E RID: 43038 RVA: 0x002B20FC File Offset: 0x002B02FC
+		// Token: 0x0600AE3F RID: 44607 RVA: 0x002CF1A0 File Offset: 0x002CD3A0
 		public DicIntString? PhantomDesc(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -130,8 +130,8 @@ namespace Aki.Config
 			return new DicIntString?(default(DicIntString).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170026A3 RID: 9891
-		// (get) Token: 0x0600A81F RID: 43039 RVA: 0x002B2160 File Offset: 0x002B0360
+		// Token: 0x17002709 RID: 9993
+		// (get) Token: 0x0600AE40 RID: 44608 RVA: 0x002CF204 File Offset: 0x002CD404
 		public int PhantomDescLength
 		{
 			get
@@ -145,7 +145,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A820 RID: 43040 RVA: 0x002B218C File Offset: 0x002B038C
+		// Token: 0x0600AE41 RID: 44609 RVA: 0x002CF230 File Offset: 0x002CD430
 		public DicIntString? PhantomActivityImage(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -156,8 +156,8 @@ namespace Aki.Config
 			return new DicIntString?(default(DicIntString).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170026A4 RID: 9892
-		// (get) Token: 0x0600A821 RID: 43041 RVA: 0x002B21F0 File Offset: 0x002B03F0
+		// Token: 0x1700270A RID: 9994
+		// (get) Token: 0x0600AE42 RID: 44610 RVA: 0x002CF294 File Offset: 0x002CD494
 		public int PhantomActivityImageLength
 		{
 			get
@@ -171,8 +171,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170026A5 RID: 9893
-		// (get) Token: 0x0600A822 RID: 43042 RVA: 0x002B221C File Offset: 0x002B041C
+		// Token: 0x1700270B RID: 9995
+		// (get) Token: 0x0600AE43 RID: 44611 RVA: 0x002CF2C0 File Offset: 0x002CD4C0
 		public int DataDockLevel
 		{
 			get
@@ -186,8 +186,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170026A6 RID: 9894
-		// (get) Token: 0x0600A823 RID: 43043 RVA: 0x002B225C File Offset: 0x002B045C
+		// Token: 0x1700270C RID: 9996
+		// (get) Token: 0x0600AE44 RID: 44612 RVA: 0x002CF300 File Offset: 0x002CD500
 		public int DataDockReward
 		{
 			get
@@ -201,7 +201,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A824 RID: 43044 RVA: 0x002B229C File Offset: 0x002B049C
+		// Token: 0x0600AE45 RID: 44613 RVA: 0x002CF340 File Offset: 0x002CD540
 		public int PhantomSideQuest(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -212,8 +212,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170026A7 RID: 9895
-		// (get) Token: 0x0600A825 RID: 43045 RVA: 0x002B22DC File Offset: 0x002B04DC
+		// Token: 0x1700270D RID: 9997
+		// (get) Token: 0x0600AE46 RID: 44614 RVA: 0x002CF380 File Offset: 0x002CD580
 		public int PhantomSideQuestLength
 		{
 			get
@@ -227,20 +227,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A826 RID: 43046 RVA: 0x002B2308 File Offset: 0x002B0508
+		// Token: 0x0600AE47 RID: 44615 RVA: 0x002CF3AC File Offset: 0x002CD5AC
 		public Span<int> GetPhantomSideQuestBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x0600A827 RID: 43047 RVA: 0x002B2318 File Offset: 0x002B0518
+		// Token: 0x0600AE48 RID: 44616 RVA: 0x002CF3BC File Offset: 0x002CD5BC
 		public int[] GetPhantomSideQuestArray()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170026A8 RID: 9896
-		// (get) Token: 0x0600A828 RID: 43048 RVA: 0x002B2330 File Offset: 0x002B0530
+		// Token: 0x1700270E RID: 9998
+		// (get) Token: 0x0600AE49 RID: 44617 RVA: 0x002CF3D4 File Offset: 0x002CD5D4
 		public int PhantomSideQuestReward
 		{
 			get
@@ -254,77 +254,71 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A829 RID: 43049 RVA: 0x002B2370 File Offset: 0x002B0570
+		// Token: 0x0600AE4A RID: 44618 RVA: 0x002CF414 File Offset: 0x002CD614
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用PhantomActivityImageFrozenDict()缓存字典，遍历请使用PhantomActivityImageIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, string> PhantomActivityImage()
+		public Dictionary<int, string> PhantomActivityImage()
 		{
 			return this.PhantomActivityImageIter().ToDictionary((DicIntString element) => element.Key, (DicIntString element) => element.Value);
 		}
 
-		// Token: 0x0600A82A RID: 43050 RVA: 0x002B23C6 File Offset: 0x002B05C6
+		// Token: 0x0600AE4B RID: 44619 RVA: 0x002CF46A File Offset: 0x002CD66A
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntString> PhantomActivityImageIter()
+		public IEnumerable<DicIntString> PhantomActivityImageIter()
 		{
 			PhantomCollectActivity.<PhantomActivityImageIter>d__35 <PhantomActivityImageIter>d__ = new PhantomCollectActivity.<PhantomActivityImageIter>d__35(-2);
 			<PhantomActivityImageIter>d__.<>3__<>4__this = this;
 			return <PhantomActivityImageIter>d__;
 		}
 
-		// Token: 0x0600A82B RID: 43051 RVA: 0x002B23DC File Offset: 0x002B05DC
+		// Token: 0x0600AE4C RID: 44620 RVA: 0x002CF480 File Offset: 0x002CD680
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用PhantomDescFrozenDict()缓存字典，遍历请使用PhantomDescIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, string> PhantomDesc()
+		public Dictionary<int, string> PhantomDesc()
 		{
 			return this.PhantomDescIter().ToDictionary((DicIntString element) => element.Key, (DicIntString element) => element.Value);
 		}
 
-		// Token: 0x0600A82C RID: 43052 RVA: 0x002B2432 File Offset: 0x002B0632
+		// Token: 0x0600AE4D RID: 44621 RVA: 0x002CF4D6 File Offset: 0x002CD6D6
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntString> PhantomDescIter()
+		public IEnumerable<DicIntString> PhantomDescIter()
 		{
 			PhantomCollectActivity.<PhantomDescIter>d__37 <PhantomDescIter>d__ = new PhantomCollectActivity.<PhantomDescIter>d__37(-2);
 			<PhantomDescIter>d__.<>3__<>4__this = this;
 			return <PhantomDescIter>d__;
 		}
 
-		// Token: 0x0600A82D RID: 43053 RVA: 0x002B2448 File Offset: 0x002B0648
+		// Token: 0x0600AE4E RID: 44622 RVA: 0x002CF4EB File Offset: 0x002CD6EB
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PhantomSideQuestIter()或GetPhantomSideQuestBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PhantomSideQuest()
+		public int[] PhantomSideQuest()
 		{
-			PhantomCollectActivity phantomCollectActivity = this;
-			return phantomCollectActivity.GetPhantomSideQuestArray() ?? Array.Empty<int>();
+			return this.GetPhantomSideQuestArray();
 		}
 
-		// Token: 0x0600A82E RID: 43054 RVA: 0x002B246C File Offset: 0x002B066C
+		// Token: 0x0600AE4F RID: 44623 RVA: 0x002CF4F3 File Offset: 0x002CD6F3
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PhantomSideQuestIter()
+		public IEnumerable<int> PhantomSideQuestIter()
 		{
 			PhantomCollectActivity.<PhantomSideQuestIter>d__39 <PhantomSideQuestIter>d__ = new PhantomCollectActivity.<PhantomSideQuestIter>d__39(-2);
 			<PhantomSideQuestIter>d__.<>3__<>4__this = this;
 			return <PhantomSideQuestIter>d__;
 		}
 
-		// Token: 0x0600A82F RID: 43055 RVA: 0x002B2484 File Offset: 0x002B0684
+		// Token: 0x0600AE50 RID: 44624 RVA: 0x002CF508 File Offset: 0x002CD708
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PhantomsIter()或GetPhantomsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Phantoms()
+		public int[] Phantoms()
 		{
-			PhantomCollectActivity phantomCollectActivity = this;
-			return phantomCollectActivity.GetPhantomsArray() ?? Array.Empty<int>();
+			return this.GetPhantomsArray();
 		}
 
-		// Token: 0x0600A830 RID: 43056 RVA: 0x002B24A8 File Offset: 0x002B06A8
+		// Token: 0x0600AE51 RID: 44625 RVA: 0x002CF510 File Offset: 0x002CD710
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PhantomsIter()
+		public IEnumerable<int> PhantomsIter()
 		{
 			PhantomCollectActivity.<PhantomsIter>d__41 <PhantomsIter>d__ = new PhantomCollectActivity.<PhantomsIter>d__41(-2);
 			<PhantomsIter>d__.<>3__<>4__this = this;
 			return <PhantomsIter>d__;
 		}
 
-		// Token: 0x0600A831 RID: 43057 RVA: 0x002B24C0 File Offset: 0x002B06C0
+		// Token: 0x0600AE52 RID: 44626 RVA: 0x002CF528 File Offset: 0x002CD728
 		[NullableContext(2)]
 		public string GetPhantomActivityImage(int key)
 		{
@@ -337,7 +331,7 @@ namespace Aki.Config
 			return result;
 		}
 
-		// Token: 0x0600A832 RID: 43058 RVA: 0x002B24E8 File Offset: 0x002B06E8
+		// Token: 0x0600AE53 RID: 44627 RVA: 0x002CF550 File Offset: 0x002CD750
 		[NullableContext(2)]
 		public string GetPhantomDesc(int key)
 		{
@@ -350,7 +344,7 @@ namespace Aki.Config
 			return result;
 		}
 
-		// Token: 0x0600A833 RID: 43059 RVA: 0x002B2510 File Offset: 0x002B0710
+		// Token: 0x0600AE54 RID: 44628 RVA: 0x002CF578 File Offset: 0x002CD778
 		private void EnsurePhantomActivityImageCacheIfNeeded()
 		{
 			if (this.PhantomActivityImageCache != null)
@@ -360,7 +354,7 @@ namespace Aki.Config
 			this.PhantomActivityImageCache = this.PhantomActivityImageIter().ToFrozenDictionary((DicIntString kvp) => kvp.Key, (DicIntString kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600A834 RID: 43060 RVA: 0x002B2578 File Offset: 0x002B0778
+		// Token: 0x0600AE55 RID: 44629 RVA: 0x002CF5E0 File Offset: 0x002CD7E0
 		private void EnsurePhantomDescCacheIfNeeded()
 		{
 			if (this.PhantomDescCache != null)
@@ -370,34 +364,26 @@ namespace Aki.Config
 			this.PhantomDescCache = this.PhantomDescIter().ToFrozenDictionary((DicIntString kvp) => kvp.Key, (DicIntString kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600A835 RID: 43061 RVA: 0x002B25DE File Offset: 0x002B07DE
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		public FrozenDictionary<int, string> GetPhantomActivityImageFrozenDict(int key)
+		// Token: 0x0600AE56 RID: 44630 RVA: 0x002CF646 File Offset: 0x002CD846
+		[NullableContext(1)]
+		public FrozenDictionary<int, string> GetPhantomActivityImageFrozenDict()
 		{
 			this.EnsurePhantomActivityImageCacheIfNeeded();
 			return this.PhantomActivityImageCache;
 		}
 
-		// Token: 0x0600A836 RID: 43062 RVA: 0x002B25EC File Offset: 0x002B07EC
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		public FrozenDictionary<int, string> GetPhantomDescFrozenDict(int key)
+		// Token: 0x0600AE57 RID: 44631 RVA: 0x002CF654 File Offset: 0x002CD854
+		[NullableContext(1)]
+		public FrozenDictionary<int, string> GetPhantomDescFrozenDict()
 		{
 			this.EnsurePhantomDescCacheIfNeeded();
 			return this.PhantomDescCache;
 		}
 
-		// Token: 0x04004F9E RID: 20382
+		// Token: 0x04005583 RID: 21891
 		private Table __p;
 
-		// Token: 0x04004F9F RID: 20383
+		// Token: 0x04005584 RID: 21892
 		[Nullable(new byte[]
 		{
 			2,
@@ -405,7 +391,7 @@ namespace Aki.Config
 		})]
 		private FrozenDictionary<int, string> PhantomActivityImageCache;
 
-		// Token: 0x04004FA0 RID: 20384
+		// Token: 0x04005585 RID: 21893
 		[Nullable(new byte[]
 		{
 			2,

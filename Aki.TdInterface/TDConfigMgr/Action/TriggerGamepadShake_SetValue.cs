@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200225B RID: 8795
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024C8 RID: 9416
 	public class TriggerGamepadShake_SetValue
 	{
-		// Token: 0x04007308 RID: 29448
+		// Token: 0x04007955 RID: 31061
 		public string KuroForceFeedbackEffect;
 
-		// Token: 0x04007309 RID: 29449
+		// Token: 0x04007956 RID: 31062
 		public IGamepadShakeConfig GamepadShakeConfig;
 	}
 }

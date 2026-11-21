@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001435 RID: 5173
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200158D RID: 5517
 	public class IFailedTeleport
 	{
-		// Token: 0x0600759D RID: 30109 RVA: 0x00118EBB File Offset: 0x001170BB
+		// Token: 0x06007C62 RID: 31842 RVA: 0x00127907 File Offset: 0x00125B07
 		public static IFailedTeleport Create(IFailedTeleport? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002706 RID: 9990
-		// (get) Token: 0x0600759E RID: 30110 RVA: 0x00118EDA File Offset: 0x001170DA
+		// Token: 0x170028EA RID: 10474
+		// (get) Token: 0x06007C63 RID: 31843 RVA: 0x00127926 File Offset: 0x00125B26
 		public virtual Aki.TDConfigMgr.Action.Fb.PosA Position
 		{
 			get
@@ -40,8 +38,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002707 RID: 9991
-		// (get) Token: 0x0600759F RID: 30111 RVA: 0x00118F10 File Offset: 0x00117110
+		// Token: 0x170028EB RID: 10475
+		// (get) Token: 0x06007C64 RID: 31844 RVA: 0x0012795C File Offset: 0x00125B5C
 		public virtual int? PositionEntityId
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002708 RID: 9992
-		// (get) Token: 0x060075A0 RID: 30112 RVA: 0x00118F46 File Offset: 0x00117146
+		// Token: 0x170028EC RID: 10476
+		// (get) Token: 0x06007C65 RID: 31845 RVA: 0x00127992 File Offset: 0x00125B92
 		public virtual bool IsConfirm
 		{
 			get
@@ -64,8 +62,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002709 RID: 9993
-		// (get) Token: 0x060075A1 RID: 30113 RVA: 0x00118F53 File Offset: 0x00117153
+		// Token: 0x170028ED RID: 10477
+		// (get) Token: 0x06007C66 RID: 31846 RVA: 0x0012799F File Offset: 0x00125B9F
 		public virtual int ConfirmId
 		{
 			get
@@ -74,8 +72,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700270A RID: 9994
-		// (get) Token: 0x060075A2 RID: 30114 RVA: 0x00118F60 File Offset: 0x00117160
+		// Token: 0x170028EE RID: 10478
+		// (get) Token: 0x06007C67 RID: 31847 RVA: 0x001279AC File Offset: 0x00125BAC
 		public virtual Aki.TDConfigMgr.Action.ITeleportTransitionType TransitionOption
 		{
 			get
@@ -90,8 +88,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700270B RID: 9995
-		// (get) Token: 0x060075A3 RID: 30115 RVA: 0x00118F90 File Offset: 0x00117190
+		// Token: 0x170028EF RID: 10479
+		// (get) Token: 0x06007C68 RID: 31848 RVA: 0x001279DC File Offset: 0x00125BDC
 		public virtual bool? GravityFlip
 		{
 			get
@@ -104,20 +102,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004423 RID: 17443
+		// Token: 0x040047B7 RID: 18359
 		private IFailedTeleport Instance;
 
-		// Token: 0x04004424 RID: 17444
+		// Token: 0x040047B8 RID: 18360
 		[Nullable(2)]
 		private Aki.TDConfigMgr.Action.Fb.PosA _PositionCache;
 
-		// Token: 0x04004425 RID: 17445
+		// Token: 0x040047B9 RID: 18361
 		private bool _PositionInited;
 
-		// Token: 0x04004426 RID: 17446
+		// Token: 0x040047BA RID: 18362
 		private Aki.TDConfigMgr.Action.ITeleportTransitionType _TransitionOptionCache;
 
-		// Token: 0x04004427 RID: 17447
+		// Token: 0x040047BB RID: 18363
 		private bool _TransitionOptionInited;
 	}
 }

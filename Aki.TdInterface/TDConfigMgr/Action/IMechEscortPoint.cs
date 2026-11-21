@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BCA RID: 7114
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001DB1 RID: 7601
 	public class IMechEscortPoint
 	{
-		// Token: 0x0600986B RID: 39019 RVA: 0x0015F574 File Offset: 0x0015D774
-		[NullableContext(1)]
+		// Token: 0x0600A16F RID: 41327 RVA: 0x00172034 File Offset: 0x00170234
 		private IMechEscortPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600986C RID: 39020 RVA: 0x0015F5AC File Offset: 0x0015D7AC
-		[NullableContext(1)]
+		// Token: 0x0600A170 RID: 41328 RVA: 0x0017206C File Offset: 0x0017026C
 		public static IMechEscortPoint Create([Nullable(2)] IMechEscortPoint instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600986D RID: 39021 RVA: 0x0015F5BF File Offset: 0x0015D7BF
-		[NullableContext(1)]
+		// Token: 0x0600A171 RID: 41329 RVA: 0x0017207F File Offset: 0x0017027F
 		public static IMechEscortPoint CreateFromSetValue([Nullable(2)] IMechEscortPoint_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600986E RID: 39022 RVA: 0x0015F5D4 File Offset: 0x0015D7D4
-		[NullableContext(1)]
+		// Token: 0x0600A172 RID: 41330 RVA: 0x00172094 File Offset: 0x00170294
 		public IMechEscortPoint_SetValue ToSetValue()
 		{
 			return new IMechEscortPoint_SetValue
@@ -67,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FDD RID: 12253
-		// (get) Token: 0x0600986F RID: 39023 RVA: 0x0015F622 File Offset: 0x0015D822
-		// (set) Token: 0x06009870 RID: 39024 RVA: 0x0015F64D File Offset: 0x0015D84D
+		// Token: 0x1700323C RID: 12860
+		// (get) Token: 0x0600A173 RID: 41331 RVA: 0x001720E2 File Offset: 0x001702E2
+		// (set) Token: 0x0600A174 RID: 41332 RVA: 0x0017210D File Offset: 0x0017030D
 		public virtual int SplinePointIndex
 		{
 			get
@@ -90,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002FDE RID: 12254
-		// (get) Token: 0x06009871 RID: 39025 RVA: 0x0015F65B File Offset: 0x0015D85B
-		// (set) Token: 0x06009872 RID: 39026 RVA: 0x0015F68A File Offset: 0x0015D88A
+		// Token: 0x1700323D RID: 12861
+		// (get) Token: 0x0600A175 RID: 41333 RVA: 0x0017211B File Offset: 0x0017031B
+		// (set) Token: 0x0600A176 RID: 41334 RVA: 0x0017214A File Offset: 0x0017034A
 		public virtual float ForwardOffset
 		{
 			get
@@ -113,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002FDF RID: 12255
-		// (get) Token: 0x06009873 RID: 39027 RVA: 0x0015F698 File Offset: 0x0015D898
-		// (set) Token: 0x06009874 RID: 39028 RVA: 0x0015F6C7 File Offset: 0x0015D8C7
+		// Token: 0x1700323E RID: 12862
+		// (get) Token: 0x0600A177 RID: 41335 RVA: 0x00172158 File Offset: 0x00170358
+		// (set) Token: 0x0600A178 RID: 41336 RVA: 0x00172187 File Offset: 0x00170387
 		public virtual float Radius
 		{
 			get
@@ -136,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002FE0 RID: 12256
-		// (get) Token: 0x06009875 RID: 39029 RVA: 0x0015F6D5 File Offset: 0x0015D8D5
-		// (set) Token: 0x06009876 RID: 39030 RVA: 0x0015F704 File Offset: 0x0015D904
+		// Token: 0x1700323F RID: 12863
+		// (get) Token: 0x0600A179 RID: 41337 RVA: 0x00172195 File Offset: 0x00170395
+		// (set) Token: 0x0600A17A RID: 41338 RVA: 0x001721C4 File Offset: 0x001703C4
 		public virtual float Angle
 		{
 			get
@@ -159,11 +153,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002FE1 RID: 12257
-		// (get) Token: 0x06009877 RID: 39031 RVA: 0x0015F712 File Offset: 0x0015D912
-		// (set) Token: 0x06009878 RID: 39032 RVA: 0x0015F739 File Offset: 0x0015D939
+		// Token: 0x17003240 RID: 12864
+		// (get) Token: 0x0600A17B RID: 41339 RVA: 0x001721D2 File Offset: 0x001703D2
+		// (set) Token: 0x0600A17C RID: 41340 RVA: 0x001721F9 File Offset: 0x001703F9
+		[Nullable(2)]
 		public virtual IEnterMovieCameraType MovieCamera
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -177,16 +173,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.MovieCamera;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().MovieCamera = value;
 			}
 		}
 
-		// Token: 0x04005CF8 RID: 23800
+		// Token: 0x0400620D RID: 25101
+		[Nullable(2)]
 		protected IMechEscortPoint FbInstance;
 
-		// Token: 0x04005CF9 RID: 23801
+		// Token: 0x0400620E RID: 25102
+		[Nullable(2)]
 		protected IMechEscortPoint_SetValue PocoInterface;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003C8 RID: 968
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000413 RID: 1043
 	public class IFreeAngleTurntable : ITurntableControlType
 	{
-		// Token: 0x06001365 RID: 4965 RVA: 0x0003F124 File Offset: 0x0003D324
+		// Token: 0x060014BB RID: 5307 RVA: 0x000426C4 File Offset: 0x000408C4
 		private IFreeAngleTurntable_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001366 RID: 4966 RVA: 0x0003F15C File Offset: 0x0003D35C
+		// Token: 0x060014BC RID: 5308 RVA: 0x000426FC File Offset: 0x000408FC
 		public static IFreeAngleTurntable Create([Nullable(2)] IFreeAngleTurntable instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001367 RID: 4967 RVA: 0x0003F16F File Offset: 0x0003D36F
+		// Token: 0x060014BD RID: 5309 RVA: 0x0004270F File Offset: 0x0004090F
 		public static IFreeAngleTurntable CreateFromSetValue([Nullable(2)] IFreeAngleTurntable_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001368 RID: 4968 RVA: 0x0003F182 File Offset: 0x0003D382
+		// Token: 0x060014BE RID: 5310 RVA: 0x00042722 File Offset: 0x00040922
 		public new IFreeAngleTurntable_SetValue ToSetValue()
 		{
 			return new IFreeAngleTurntable_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000564 RID: 1380
-		// (get) Token: 0x06001369 RID: 4969 RVA: 0x0003F1B9 File Offset: 0x0003D3B9
-		// (set) Token: 0x0600136A RID: 4970 RVA: 0x0003F1E4 File Offset: 0x0003D3E4
+		// Token: 0x170005BE RID: 1470
+		// (get) Token: 0x060014BF RID: 5311 RVA: 0x00042759 File Offset: 0x00040959
+		// (set) Token: 0x060014C0 RID: 5312 RVA: 0x00042784 File Offset: 0x00040984
 		public override EControllerType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000565 RID: 1381
-		// (get) Token: 0x0600136B RID: 4971 RVA: 0x0003F1F2 File Offset: 0x0003D3F2
-		// (set) Token: 0x0600136C RID: 4972 RVA: 0x0003F21D File Offset: 0x0003D41D
+		// Token: 0x170005BF RID: 1471
+		// (get) Token: 0x060014C1 RID: 5313 RVA: 0x00042792 File Offset: 0x00040992
+		// (set) Token: 0x060014C2 RID: 5314 RVA: 0x000427BD File Offset: 0x000409BD
 		public override int RotationSpeed
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000566 RID: 1382
-		// (get) Token: 0x0600136D RID: 4973 RVA: 0x0003F22C File Offset: 0x0003D42C
-		// (set) Token: 0x0600136E RID: 4974 RVA: 0x0003F2BF File Offset: 0x0003D4BF
+		// Token: 0x170005C0 RID: 1472
+		// (get) Token: 0x060014C3 RID: 5315 RVA: 0x000427CC File Offset: 0x000409CC
+		// (set) Token: 0x060014C4 RID: 5316 RVA: 0x0004285F File Offset: 0x00040A5F
 		public virtual List<IFreeAngleItem> ItemConfig
 		{
 			get
@@ -147,9 +145,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000567 RID: 1383
-		// (get) Token: 0x0600136F RID: 4975 RVA: 0x0003F2D4 File Offset: 0x0003D4D4
-		// (set) Token: 0x06001370 RID: 4976 RVA: 0x0003F2FF File Offset: 0x0003D4FF
+		// Token: 0x170005C1 RID: 1473
+		// (get) Token: 0x060014C5 RID: 5317 RVA: 0x00042874 File Offset: 0x00040A74
+		// (set) Token: 0x060014C6 RID: 5318 RVA: 0x0004289F File Offset: 0x00040A9F
 		public virtual int IntervalAngle
 		{
 			get
@@ -170,18 +168,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F77 RID: 3959
+		// Token: 0x04001078 RID: 4216
 		[Nullable(2)]
 		protected new IFreeAngleTurntable FbInstance;
 
-		// Token: 0x04000F78 RID: 3960
+		// Token: 0x04001079 RID: 4217
 		[Nullable(2)]
 		protected new IFreeAngleTurntable_SetValue PocoInterface;
 
-		// Token: 0x04000F79 RID: 3961
+		// Token: 0x0400107A RID: 4218
 		private List<IFreeAngleItem> _ItemConfigCache;
 
-		// Token: 0x04000F7A RID: 3962
+		// Token: 0x0400107B RID: 4219
 		private bool _ItemConfigInited;
 	}
 }

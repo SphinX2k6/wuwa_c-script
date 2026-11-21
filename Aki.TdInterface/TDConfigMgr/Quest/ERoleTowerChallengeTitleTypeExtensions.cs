@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001280 RID: 4736
+	// Token: 0x020013C0 RID: 5056
 	public static class ERoleTowerChallengeTitleTypeExtensions
 	{
-		// Token: 0x06006AE7 RID: 27367 RVA: 0x00100758 File Offset: 0x000FE958
+		// Token: 0x0600713A RID: 28986 RVA: 0x0010E384 File Offset: 0x0010C584
 		public static string ToEnumString(this ERoleTowerChallengeTitleType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006AE8 RID: 27368 RVA: 0x001007A0 File Offset: 0x000FE9A0
+		// Token: 0x0600713B RID: 28987 RVA: 0x0010E3CC File Offset: 0x0010C5CC
 		public static ERoleTowerChallengeTitleType FromString(string name)
 		{
 			ERoleTowerChallengeTitleType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006AE9 RID: 27369 RVA: 0x001007CC File Offset: 0x000FE9CC
+		// Token: 0x0600713C RID: 28988 RVA: 0x0010E3F8 File Offset: 0x0010C5F8
 		public static bool TryFromString(string name, out ERoleTowerChallengeTitleType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006AEA RID: 27370 RVA: 0x00100822 File Offset: 0x000FEA22
+		// Token: 0x0600713D RID: 28989 RVA: 0x0010E44E File Offset: 0x0010C64E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006AEB RID: 27371 RVA: 0x00100842 File Offset: 0x000FEA42
+		// Token: 0x0600713E RID: 28990 RVA: 0x0010E46E File Offset: 0x0010C66E
 		public static ERoleTowerChallengeTitleType[] GetValues()
 		{
 			return new ERoleTowerChallengeTitleType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006AEC RID: 27372 RVA: 0x00100852 File Offset: 0x000FEA52
+		// Token: 0x0600713F RID: 28991 RVA: 0x0010E47E File Offset: 0x0010C67E
 		public static string[] GetNames()
 		{
 			return new string[]

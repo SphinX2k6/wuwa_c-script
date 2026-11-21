@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 {
-	// Token: 0x020047CC RID: 18380
+	// Token: 0x020036FD RID: 14077
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 	})]
 	public class NavigateIconItem : GridProxyAbstract<INavigateIconItemData>
 	{
-		// Token: 0x060302B5 RID: 197301 RVA: 0x00B29A80 File Offset: 0x00B27C80
+		// Token: 0x06024A85 RID: 150149 RVA: 0x00A5991C File Offset: 0x00A57B1C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060302B6 RID: 197302 RVA: 0x00B29B28 File Offset: 0x00B27D28
+		// Token: 0x06024A86 RID: 150150 RVA: 0x00A599C4 File Offset: 0x00A57BC4
 		[NullableContext(1)]
 		public override void Refresh(INavigateIconItemData data, bool isSelected, int gridIndex)
 		{
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.SetSpriteByPath(path, sprite, false, null, null);
 		}
 
-		// Token: 0x060302B7 RID: 197303 RVA: 0x00B29B78 File Offset: 0x00B27D78
+		// Token: 0x06024A87 RID: 150151 RVA: 0x00A59A14 File Offset: 0x00A57C14
 		private void OnClick()
 		{
 			if (this.DataParam != null)
@@ -55,17 +55,17 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x04019F09 RID: 106249
+		// Token: 0x040145BD RID: 83389
 		[Nullable(2)]
 		private INavigateIconItemData DataParam;
 
-		// Token: 0x0200AA8E RID: 43662
+		// Token: 0x02009440 RID: 37952
 		public static class EChildType
 		{
-			// Token: 0x04033E40 RID: 212544
+			// Token: 0x0402E5C8 RID: 189896
 			public const int BtnRoot = 0;
 
-			// Token: 0x04033E41 RID: 212545
+			// Token: 0x0402E5C9 RID: 189897
 			public const int SpriteIcon = 1;
 		}
 	}

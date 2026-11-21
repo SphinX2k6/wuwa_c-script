@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000448 RID: 1096
+	// Token: 0x0200045E RID: 1118
 	public class ConfigInstanceEnterControlById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060019BA RID: 6586 RVA: 0x000EAF00 File Offset: 0x000E9100
+		// Token: 0x06001A3E RID: 6718 RVA: 0x000F1654 File Offset: 0x000EF854
 		static ConfigInstanceEnterControlById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInstanceEnterControlById.CreateStaticDefaultValue), new Action(ConfigInstanceEnterControlById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060019BB RID: 6587 RVA: 0x000EAF20 File Offset: 0x000E9120
+		// Token: 0x06001A3F RID: 6719 RVA: 0x000F1674 File Offset: 0x000EF874
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInstanceEnterControlById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060019BC RID: 6588 RVA: 0x000EAF9F File Offset: 0x000E919F
+		// Token: 0x06001A40 RID: 6720 RVA: 0x000F16F3 File Offset: 0x000EF8F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInstanceEnterControlById.LogPair = null;
 			ConfigInstanceEnterControlById.HandleId = 0;
 		}
 
-		// Token: 0x060019BD RID: 6589 RVA: 0x000EAFAD File Offset: 0x000E91AD
+		// Token: 0x06001A41 RID: 6721 RVA: 0x000F1701 File Offset: 0x000EF901
 		public static void Init()
 		{
 			ConfigInstanceEnterControlById.HandleId = ConfigCommon.InitDataStatement(ConfigInstanceEnterControlById.HandleId, "db_instance_dungeon.db", "select BinData from `InstanceEnterControl` where Id=?");
 		}
 
-		// Token: 0x060019BE RID: 6590 RVA: 0x000EAFC8 File Offset: 0x000E91C8
+		// Token: 0x06001A42 RID: 6722 RVA: 0x000F171C File Offset: 0x000EF91C
 		public static InstanceEnterControl? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInstanceEnterControlById.HandleId, ConfigInstanceEnterControlById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new InstanceEnterControl?(rootAsInstanceEnterControl);
 		}
 
-		// Token: 0x04001DDC RID: 7644
+		// Token: 0x04001E76 RID: 7798
 		private const string DB = "db_instance_dungeon.db";
 
-		// Token: 0x04001DDD RID: 7645
+		// Token: 0x04001E77 RID: 7799
 		private const string FILE = "f.副本.xlsx";
 
-		// Token: 0x04001DDE RID: 7646
+		// Token: 0x04001E78 RID: 7800
 		private const string TABLE = "InstanceEnterControl";
 
-		// Token: 0x04001DDF RID: 7647
+		// Token: 0x04001E79 RID: 7801
 		private const string COMMAND = "select BinData from `InstanceEnterControl` where Id=?";
 
-		// Token: 0x04001DE0 RID: 7648
+		// Token: 0x04001E7A RID: 7802
 		private const string KEY_PREFIX = "InstanceEnterControlById";
 
-		// Token: 0x04001DE1 RID: 7649
+		// Token: 0x04001E7B RID: 7803
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001DE2 RID: 7650
+		// Token: 0x04001E7C RID: 7804
 		private static int HandleId;
 	}
 }

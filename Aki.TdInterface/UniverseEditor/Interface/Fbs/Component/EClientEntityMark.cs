@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D7D RID: 19837
+	// Token: 0x0200527E RID: 21118
 	public enum EClientEntityMark : byte
 	{
-		// Token: 0x0400D82C RID: 55340
+		// Token: 0x0400E36E RID: 58222
 		ServerEntity,
-		// Token: 0x0400D82D RID: 55341
+		// Token: 0x0400E36F RID: 58223
 		ClientEntity,
-		// Token: 0x0400D82E RID: 55342
+		// Token: 0x0400E370 RID: 58224
 		ClientEntityToServerEntity,
-		// Token: 0x0400D82F RID: 55343
+		// Token: 0x0400E371 RID: 58225
 		ForceServerEntity
 	}
 }

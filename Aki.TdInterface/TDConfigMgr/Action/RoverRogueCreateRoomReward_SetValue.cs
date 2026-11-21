@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200217D RID: 8573
+	// Token: 0x020023DE RID: 9182
 	public class RoverRogueCreateRoomReward_SetValue
 	{
-		// Token: 0x0400708A RID: 28810
+		// Token: 0x040076BF RID: 30399
 		public int RewardType;
 	}
 }

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B7A RID: 23418
+	// Token: 0x02006190 RID: 24976
 	public struct IWindDirectional : IFlatbufferObject
 	{
-		// Token: 0x1700B0FB RID: 45307
-		// (get) Token: 0x0602815B RID: 164187 RVA: 0x00582A58 File Offset: 0x00580C58
+		// Token: 0x1700BA43 RID: 47683
+		// (get) Token: 0x0602A71F RID: 173855 RVA: 0x005CA4E8 File Offset: 0x005C86E8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602815C RID: 164188 RVA: 0x00582A65 File Offset: 0x00580C65
+		// Token: 0x0602A720 RID: 173856 RVA: 0x005CA4F5 File Offset: 0x005C86F5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602815D RID: 164189 RVA: 0x00582A6C File Offset: 0x00580C6C
+		// Token: 0x0602A721 RID: 173857 RVA: 0x005CA4FC File Offset: 0x005C86FC
 		public static IWindDirectional GetRootAsIWindDirectional(ByteBuffer _bb)
 		{
 			return IWindDirectional.GetRootAsIWindDirectional(_bb, default(IWindDirectional));
 		}
 
-		// Token: 0x0602815E RID: 164190 RVA: 0x00582A88 File Offset: 0x00580C88
+		// Token: 0x0602A722 RID: 173858 RVA: 0x005CA518 File Offset: 0x005C8718
 		public static IWindDirectional GetRootAsIWindDirectional(ByteBuffer _bb, IWindDirectional obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602815F RID: 164191 RVA: 0x00582AA5 File Offset: 0x00580CA5
+		// Token: 0x0602A723 RID: 173859 RVA: 0x005CA535 File Offset: 0x005C8735
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028160 RID: 164192 RVA: 0x00582AB4 File Offset: 0x00580CB4
+		// Token: 0x0602A724 RID: 173860 RVA: 0x005CA544 File Offset: 0x005C8744
 		public IWindDirectional __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B0FC RID: 45308
-		// (get) Token: 0x06028161 RID: 164193 RVA: 0x00582AC4 File Offset: 0x00580CC4
+		// Token: 0x1700BA44 RID: 47684
+		// (get) Token: 0x0602A725 RID: 173861 RVA: 0x005CA554 File Offset: 0x005C8754
 		public EWindSourceType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B0FD RID: 45309
-		// (get) Token: 0x06028162 RID: 164194 RVA: 0x00582B00 File Offset: 0x00580D00
+		// Token: 0x1700BA45 RID: 47685
+		// (get) Token: 0x0602A726 RID: 173862 RVA: 0x005CA590 File Offset: 0x005C8790
 		public IVectorInfo? Rot
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028163 RID: 164195 RVA: 0x00582B60 File Offset: 0x00580D60
+		// Token: 0x0602A727 RID: 173863 RVA: 0x005CA5F0 File Offset: 0x005C87F0
 		public IWindDirectionalStateGrade? Grades(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IWindDirectionalStateGrade?(default(IWindDirectionalStateGrade).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700B0FE RID: 45310
-		// (get) Token: 0x06028164 RID: 164196 RVA: 0x00582BC0 File Offset: 0x00580DC0
+		// Token: 0x1700BA46 RID: 47686
+		// (get) Token: 0x0602A728 RID: 173864 RVA: 0x005CA650 File Offset: 0x005C8850
 		public int GradesLength
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028165 RID: 164197 RVA: 0x00582BEB File Offset: 0x00580DEB
+		// Token: 0x0602A729 RID: 173865 RVA: 0x005CA67B File Offset: 0x005C887B
 		public static Offset<IWindDirectional> CreateIWindDirectional(FlatBufferBuilder builder, EWindSourceType Type = EWindSourceType.Directional, Offset<IVectorInfo> RotOffset = default(Offset<IVectorInfo>), VectorOffset GradesOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -115,31 +115,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWindDirectional.EndIWindDirectional(builder);
 		}
 
-		// Token: 0x06028166 RID: 164198 RVA: 0x00582C0F File Offset: 0x00580E0F
+		// Token: 0x0602A72A RID: 173866 RVA: 0x005CA69F File Offset: 0x005C889F
 		public static void StartIWindDirectional(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06028167 RID: 164199 RVA: 0x00582C18 File Offset: 0x00580E18
+		// Token: 0x0602A72B RID: 173867 RVA: 0x005CA6A8 File Offset: 0x005C88A8
 		public static void AddType(FlatBufferBuilder builder, EWindSourceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06028168 RID: 164200 RVA: 0x00582C23 File Offset: 0x00580E23
+		// Token: 0x0602A72C RID: 173868 RVA: 0x005CA6B3 File Offset: 0x005C88B3
 		public static void AddRot(FlatBufferBuilder builder, Offset<IVectorInfo> rotOffset)
 		{
 			builder.AddOffset(1, rotOffset.Value, 0);
 		}
 
-		// Token: 0x06028169 RID: 164201 RVA: 0x00582C33 File Offset: 0x00580E33
+		// Token: 0x0602A72D RID: 173869 RVA: 0x005CA6C3 File Offset: 0x005C88C3
 		public static void AddGrades(FlatBufferBuilder builder, VectorOffset gradesOffset)
 		{
 			builder.AddOffset(2, gradesOffset.Value, 0);
 		}
 
-		// Token: 0x0602816A RID: 164202 RVA: 0x00582C44 File Offset: 0x00580E44
+		// Token: 0x0602A72E RID: 173870 RVA: 0x005CA6D4 File Offset: 0x005C88D4
 		public static VectorOffset CreateGradesVector(FlatBufferBuilder builder, Offset<IWindDirectionalStateGrade>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602816B RID: 164203 RVA: 0x00582C84 File Offset: 0x00580E84
+		// Token: 0x0602A72F RID: 173871 RVA: 0x005CA714 File Offset: 0x005C8914
 		public static VectorOffset CreateGradesVectorBlock(FlatBufferBuilder builder, Offset<IWindDirectionalStateGrade>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602816C RID: 164204 RVA: 0x00582C9E File Offset: 0x00580E9E
+		// Token: 0x0602A730 RID: 173872 RVA: 0x005CA72E File Offset: 0x005C892E
 		public static VectorOffset CreateGradesVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IWindDirectionalStateGrade>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -166,7 +166,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602816D RID: 164205 RVA: 0x00582CBC File Offset: 0x00580EBC
+		// Token: 0x0602A731 RID: 173873 RVA: 0x005CA74C File Offset: 0x005C894C
 		public static VectorOffset CreateGradesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -174,19 +174,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602816E RID: 164206 RVA: 0x00582CD5 File Offset: 0x00580ED5
+		// Token: 0x0602A732 RID: 173874 RVA: 0x005CA765 File Offset: 0x005C8965
 		public static void StartGradesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602816F RID: 164207 RVA: 0x00582CE0 File Offset: 0x00580EE0
+		// Token: 0x0602A733 RID: 173875 RVA: 0x005CA770 File Offset: 0x005C8970
 		public static Offset<IWindDirectional> EndIWindDirectional(FlatBufferBuilder builder)
 		{
 			return new Offset<IWindDirectional>(builder.EndTable());
 		}
 
-		// Token: 0x06028170 RID: 164208 RVA: 0x00582CF0 File Offset: 0x00580EF0
+		// Token: 0x0602A734 RID: 173876 RVA: 0x005CA780 File Offset: 0x005C8980
 		public IWindDirectionalT UnPack()
 		{
 			IWindDirectionalT windDirectionalT = new IWindDirectionalT();
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return windDirectionalT;
 		}
 
-		// Token: 0x06028171 RID: 164209 RVA: 0x00582D0C File Offset: 0x00580F0C
+		// Token: 0x0602A735 RID: 173877 RVA: 0x005CA79C File Offset: 0x005C899C
 		public void UnPackTo(IWindDirectionalT _o)
 		{
 			_o.Type = this.Type;
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028172 RID: 164210 RVA: 0x00582DA8 File Offset: 0x00580FA8
+		// Token: 0x0602A736 RID: 173878 RVA: 0x005CA838 File Offset: 0x005C8A38
 		public static Offset<IWindDirectional> Pack(FlatBufferBuilder builder, IWindDirectionalT _o)
 		{
 			if (_o == null)
@@ -227,7 +227,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWindDirectional.CreateIWindDirectional(builder, _o.Type, rotOffset, gradesOffset);
 		}
 
-		// Token: 0x0400F2D3 RID: 62163
+		// Token: 0x0400FFD9 RID: 65497
 		private Table __p;
 	}
 }

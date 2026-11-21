@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002A08 RID: 10760
+// Token: 0x02001F83 RID: 8067
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class SignalDecodeConfig : ConfigBase
 {
-	// Token: 0x06016551 RID: 91473 RVA: 0x005A6F54 File Offset: 0x005A5154
+	// Token: 0x06013F58 RID: 81752 RVA: 0x005D1F2C File Offset: 0x005D012C
 	public CatchSignalGameplay? GetGameplayConfig(string id)
 	{
 		CatchSignalGameplay? config = ConfigCatchSignalGameplayById.GetConfig(id, true);
@@ -24,7 +24,7 @@ public class SignalDecodeConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06016552 RID: 91474 RVA: 0x005A6FA0 File Offset: 0x005A51A0
+	// Token: 0x06013F59 RID: 81753 RVA: 0x005D1F78 File Offset: 0x005D0178
 	public CatchSignalDifficulty? GetDifficultyConfig(int id)
 	{
 		CatchSignalDifficulty? config = ConfigCatchSignalDifficultyById.GetConfig(id, true);
@@ -40,8 +40,8 @@ public class SignalDecodeConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x17001DCE RID: 7630
-	// (get) Token: 0x06016553 RID: 91475 RVA: 0x005A6FEE File Offset: 0x005A51EE
+	// Token: 0x17001E27 RID: 7719
+	// (get) Token: 0x06013F5A RID: 81754 RVA: 0x005D1FC6 File Offset: 0x005D01C6
 	public static SignalDecodeConfig Instance
 	{
 		get
@@ -50,7 +50,7 @@ public class SignalDecodeConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06016554 RID: 91476 RVA: 0x005A6FF5 File Offset: 0x005A51F5
+	// Token: 0x06013F5B RID: 81755 RVA: 0x005D1FCD File Offset: 0x005D01CD
 	public static SignalDecodeConfig GetOrCreateInstance()
 	{
 		if (SignalDecodeConfig._Instance == null)
@@ -60,7 +60,7 @@ public class SignalDecodeConfig : ConfigBase
 		return SignalDecodeConfig._Instance;
 	}
 
-	// Token: 0x06016555 RID: 91477 RVA: 0x005A7009 File Offset: 0x005A5209
+	// Token: 0x06013F5C RID: 81756 RVA: 0x005D1FE1 File Offset: 0x005D01E1
 	public static bool CreateInstance()
 	{
 		if (SignalDecodeConfig._Instance != null)
@@ -71,24 +71,24 @@ public class SignalDecodeConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06016556 RID: 91478 RVA: 0x005A701F File Offset: 0x005A521F
+	// Token: 0x06013F5D RID: 81757 RVA: 0x005D1FF7 File Offset: 0x005D01F7
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016557 RID: 91479 RVA: 0x005A7021 File Offset: 0x005A5221
+	// Token: 0x06013F5E RID: 81758 RVA: 0x005D1FF9 File Offset: 0x005D01F9
 	public static void ResetStaticDefaultValue()
 	{
 		SignalDecodeConfig._Instance = null;
 	}
 
-	// Token: 0x06016558 RID: 91480 RVA: 0x005A7029 File Offset: 0x005A5229
+	// Token: 0x06013F5F RID: 81759 RVA: 0x005D2001 File Offset: 0x005D0201
 	static SignalDecodeConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SignalDecodeConfig.CreateStaticDefaultValue), new Action(SignalDecodeConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A616 RID: 42518
+	// Token: 0x0400AA00 RID: 43520
 	[Nullable(2)]
 	private static SignalDecodeConfig _Instance;
 }

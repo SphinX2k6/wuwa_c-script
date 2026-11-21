@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002A7 RID: 679
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002EC RID: 748
 	public class IDamageTextOptimizationConfig : IPerformanceOptimization
 	{
-		// Token: 0x06000CB1 RID: 3249 RVA: 0x00030A28 File Offset: 0x0002EC28
+		// Token: 0x06000DD5 RID: 3541 RVA: 0x00033818 File Offset: 0x00031A18
 		private IDamageTextOptimizationConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000CB2 RID: 3250 RVA: 0x00030A60 File Offset: 0x0002EC60
+		// Token: 0x06000DD6 RID: 3542 RVA: 0x00033850 File Offset: 0x00031A50
 		public static IDamageTextOptimizationConfig Create([Nullable(2)] IDamageTextOptimizationConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CB3 RID: 3251 RVA: 0x00030A73 File Offset: 0x0002EC73
+		// Token: 0x06000DD7 RID: 3543 RVA: 0x00033863 File Offset: 0x00031A63
 		public static IDamageTextOptimizationConfig CreateFromSetValue([Nullable(2)] IDamageTextOptimizationConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CB4 RID: 3252 RVA: 0x00030A86 File Offset: 0x0002EC86
+		// Token: 0x06000DD8 RID: 3544 RVA: 0x00033876 File Offset: 0x00031A76
 		public new IDamageTextOptimizationConfig_SetValue ToSetValue()
 		{
 			return new IDamageTextOptimizationConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003BB RID: 955
-		// (get) Token: 0x06000CB5 RID: 3253 RVA: 0x00030AA5 File Offset: 0x0002ECA5
-		// (set) Token: 0x06000CB6 RID: 3254 RVA: 0x00030AD0 File Offset: 0x0002ECD0
+		// Token: 0x17000405 RID: 1029
+		// (get) Token: 0x06000DD9 RID: 3545 RVA: 0x00033895 File Offset: 0x00031A95
+		// (set) Token: 0x06000DDA RID: 3546 RVA: 0x000338C0 File Offset: 0x00031AC0
 		public override EPerformanceOptimizationType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003BC RID: 956
-		// (get) Token: 0x06000CB7 RID: 3255 RVA: 0x00030AE0 File Offset: 0x0002ECE0
-		// (set) Token: 0x06000CB8 RID: 3256 RVA: 0x00030B1A File Offset: 0x0002ED1A
+		// Token: 0x17000406 RID: 1030
+		// (get) Token: 0x06000DDB RID: 3547 RVA: 0x000338D0 File Offset: 0x00031AD0
+		// (set) Token: 0x06000DDC RID: 3548 RVA: 0x0003390A File Offset: 0x00031B0A
 		public virtual bool? UseRange
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BCA RID: 3018
+		// Token: 0x04000CAF RID: 3247
 		[Nullable(2)]
 		protected new IDamageTextOptimizationConfig FbInstance;
 
-		// Token: 0x04000BCB RID: 3019
+		// Token: 0x04000CB0 RID: 3248
 		[Nullable(2)]
 		protected new IDamageTextOptimizationConfig_SetValue PocoInterface;
 	}

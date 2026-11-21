@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200489B RID: 18587
+	// Token: 0x02004D00 RID: 19712
 	public struct IQuestAreaConflictSelector : IFlatbufferObject
 	{
-		// Token: 0x170086CB RID: 34507
-		// (get) Token: 0x0601D01A RID: 118810 RVA: 0x00418FAF File Offset: 0x004171AF
+		// Token: 0x17008D13 RID: 36115
+		// (get) Token: 0x0601E807 RID: 124935 RVA: 0x0044574B File Offset: 0x0044394B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D01B RID: 118811 RVA: 0x00418FBC File Offset: 0x004171BC
+		// Token: 0x0601E808 RID: 124936 RVA: 0x00445758 File Offset: 0x00443958
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D01C RID: 118812 RVA: 0x00418FC4 File Offset: 0x004171C4
+		// Token: 0x0601E809 RID: 124937 RVA: 0x00445760 File Offset: 0x00443960
 		public static IQuestAreaConflictSelector GetRootAsIQuestAreaConflictSelector(ByteBuffer _bb)
 		{
 			return IQuestAreaConflictSelector.GetRootAsIQuestAreaConflictSelector(_bb, default(IQuestAreaConflictSelector));
 		}
 
-		// Token: 0x0601D01D RID: 118813 RVA: 0x00418FE0 File Offset: 0x004171E0
+		// Token: 0x0601E80A RID: 124938 RVA: 0x0044577C File Offset: 0x0044397C
 		public static IQuestAreaConflictSelector GetRootAsIQuestAreaConflictSelector(ByteBuffer _bb, IQuestAreaConflictSelector obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D01E RID: 118814 RVA: 0x00418FFD File Offset: 0x004171FD
+		// Token: 0x0601E80B RID: 124939 RVA: 0x00445799 File Offset: 0x00443999
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D01F RID: 118815 RVA: 0x0041900C File Offset: 0x0041720C
+		// Token: 0x0601E80C RID: 124940 RVA: 0x004457A8 File Offset: 0x004439A8
 		public IQuestAreaConflictSelector __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170086CC RID: 34508
-		// (get) Token: 0x0601D020 RID: 118816 RVA: 0x0041901C File Offset: 0x0041721C
+		// Token: 0x17008D14 RID: 36116
+		// (get) Token: 0x0601E80D RID: 124941 RVA: 0x004457B8 File Offset: 0x004439B8
 		public EAreaConflictSelector Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x170086CD RID: 34509
-		// (get) Token: 0x0601D021 RID: 118817 RVA: 0x00419058 File Offset: 0x00417258
+		// Token: 0x17008D15 RID: 36117
+		// (get) Token: 0x0601E80E RID: 124942 RVA: 0x004457F4 File Offset: 0x004439F4
 		public int Id
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D022 RID: 118818 RVA: 0x00419094 File Offset: 0x00417294
+		// Token: 0x0601E80F RID: 124943 RVA: 0x00445830 File Offset: 0x00443A30
 		public static Offset<IQuestAreaConflictSelector> CreateIQuestAreaConflictSelector(FlatBufferBuilder builder, EAreaConflictSelector Type = EAreaConflictSelector.Quest, int Id = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IQuestAreaConflictSelector.EndIQuestAreaConflictSelector(builder);
 		}
 
-		// Token: 0x0601D023 RID: 118819 RVA: 0x004190B1 File Offset: 0x004172B1
+		// Token: 0x0601E810 RID: 124944 RVA: 0x0044584D File Offset: 0x00443A4D
 		public static void StartIQuestAreaConflictSelector(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601D024 RID: 118820 RVA: 0x004190BA File Offset: 0x004172BA
+		// Token: 0x0601E811 RID: 124945 RVA: 0x00445856 File Offset: 0x00443A56
 		public static void AddType(FlatBufferBuilder builder, EAreaConflictSelector type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601D025 RID: 118821 RVA: 0x004190C5 File Offset: 0x004172C5
+		// Token: 0x0601E812 RID: 124946 RVA: 0x00445861 File Offset: 0x00443A61
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x0601D026 RID: 118822 RVA: 0x004190D0 File Offset: 0x004172D0
+		// Token: 0x0601E813 RID: 124947 RVA: 0x0044586C File Offset: 0x00443A6C
 		public static Offset<IQuestAreaConflictSelector> EndIQuestAreaConflictSelector(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestAreaConflictSelector>(builder.EndTable());
 		}
 
-		// Token: 0x0601D027 RID: 118823 RVA: 0x004190E0 File Offset: 0x004172E0
+		// Token: 0x0601E814 RID: 124948 RVA: 0x0044587C File Offset: 0x00443A7C
 		public IQuestAreaConflictSelectorT UnPack()
 		{
 			IQuestAreaConflictSelectorT questAreaConflictSelectorT = new IQuestAreaConflictSelectorT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return questAreaConflictSelectorT;
 		}
 
-		// Token: 0x0601D028 RID: 118824 RVA: 0x004190FB File Offset: 0x004172FB
+		// Token: 0x0601E815 RID: 124949 RVA: 0x00445897 File Offset: 0x00443A97
 		public void UnPackTo(IQuestAreaConflictSelectorT _o)
 		{
 			_o.Type = this.Type;
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x0601D029 RID: 118825 RVA: 0x00419118 File Offset: 0x00417318
+		// Token: 0x0601E816 RID: 124950 RVA: 0x004458B4 File Offset: 0x00443AB4
 		public static Offset<IQuestAreaConflictSelector> Pack(FlatBufferBuilder builder, IQuestAreaConflictSelectorT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IQuestAreaConflictSelector.CreateIQuestAreaConflictSelector(builder, _o.Type, _o.Id);
 		}
 
-		// Token: 0x0400CE88 RID: 52872
+		// Token: 0x0400D8C1 RID: 55489
 		private Table __p;
 	}
 }

@@ -14,9 +14,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskPlayGazePerform.TsTaskPlayGazePerform_C")]
 public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170001B8 RID: 440
-	// (get) Token: 0x060009C9 RID: 2505 RVA: 0x00031778 File Offset: 0x0002F978
-	// (set) Token: 0x060009CA RID: 2506 RVA: 0x000317B1 File Offset: 0x0002F9B1
+	// Token: 0x170001BB RID: 443
+	// (get) Token: 0x060009CF RID: 2511 RVA: 0x00032874 File Offset: 0x00030A74
+	// (set) Token: 0x060009D0 RID: 2512 RVA: 0x000328AD File Offset: 0x00030AAD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UAnimMontage> PerceptionMontage
 	{
@@ -36,9 +36,9 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170001B9 RID: 441
-	// (get) Token: 0x060009CB RID: 2507 RVA: 0x000317D8 File Offset: 0x0002F9D8
-	// (set) Token: 0x060009CC RID: 2508 RVA: 0x00031811 File Offset: 0x0002FA11
+	// Token: 0x170001BC RID: 444
+	// (get) Token: 0x060009D1 RID: 2513 RVA: 0x000328D4 File Offset: 0x00030AD4
+	// (set) Token: 0x060009D2 RID: 2514 RVA: 0x0003290D File Offset: 0x00030B0D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UAnimMontage> TurnPerformLeft90
 	{
@@ -58,9 +58,9 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170001BA RID: 442
-	// (get) Token: 0x060009CD RID: 2509 RVA: 0x00031838 File Offset: 0x0002FA38
-	// (set) Token: 0x060009CE RID: 2510 RVA: 0x00031871 File Offset: 0x0002FA71
+	// Token: 0x170001BD RID: 445
+	// (get) Token: 0x060009D3 RID: 2515 RVA: 0x00032934 File Offset: 0x00030B34
+	// (set) Token: 0x060009D4 RID: 2516 RVA: 0x0003296D File Offset: 0x00030B6D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UAnimMontage> TurnPerformLeft180
 	{
@@ -80,9 +80,9 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170001BB RID: 443
-	// (get) Token: 0x060009CF RID: 2511 RVA: 0x00031898 File Offset: 0x0002FA98
-	// (set) Token: 0x060009D0 RID: 2512 RVA: 0x000318D1 File Offset: 0x0002FAD1
+	// Token: 0x170001BE RID: 446
+	// (get) Token: 0x060009D5 RID: 2517 RVA: 0x00032994 File Offset: 0x00030B94
+	// (set) Token: 0x060009D6 RID: 2518 RVA: 0x000329CD File Offset: 0x00030BCD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UAnimMontage> TurnPerformRight90
 	{
@@ -102,9 +102,9 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170001BC RID: 444
-	// (get) Token: 0x060009D1 RID: 2513 RVA: 0x000318F8 File Offset: 0x0002FAF8
-	// (set) Token: 0x060009D2 RID: 2514 RVA: 0x00031931 File Offset: 0x0002FB31
+	// Token: 0x170001BF RID: 447
+	// (get) Token: 0x060009D7 RID: 2519 RVA: 0x000329F4 File Offset: 0x00030BF4
+	// (set) Token: 0x060009D8 RID: 2520 RVA: 0x00032A2D File Offset: 0x00030C2D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UAnimMontage> TurnPerformRight180
 	{
@@ -124,7 +124,7 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x060009D3 RID: 2515 RVA: 0x00031958 File Offset: 0x0002FB58
+	// Token: 0x060009D9 RID: 2521 RVA: 0x00032A54 File Offset: 0x00030C54
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -143,30 +143,27 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x060009D4 RID: 2516 RVA: 0x00031A24 File Offset: 0x0002FC24
+	// Token: 0x060009DA RID: 2522 RVA: 0x00032B20 File Offset: 0x00030D20
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskPlayGazePerform) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskPlayGazePerform.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060009D5 RID: 2517 RVA: 0x00031AC0 File Offset: 0x0002FCC0
+	// Token: 0x060009DB RID: 2523 RVA: 0x00032BD0 File Offset: 0x00030DD0
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -208,7 +205,7 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		this.EnqueueTurnPerform();
 	}
 
-	// Token: 0x060009D6 RID: 2518 RVA: 0x00031BB5 File Offset: 0x0002FDB5
+	// Token: 0x060009DC RID: 2524 RVA: 0x00032CC5 File Offset: 0x00030EC5
 	protected override void OnAbort()
 	{
 		this.IsTaskRunning = false;
@@ -220,7 +217,7 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		customActionComp.AbortAllAction(false);
 	}
 
-	// Token: 0x060009D7 RID: 2519 RVA: 0x00031BCF File Offset: 0x0002FDCF
+	// Token: 0x060009DD RID: 2525 RVA: 0x00032CDF File Offset: 0x00030EDF
 	protected override void OnClear()
 	{
 		this.CustomActionComp = null;
@@ -234,7 +231,7 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		endForward.Reset();
 	}
 
-	// Token: 0x060009D8 RID: 2520 RVA: 0x00031BF6 File Offset: 0x0002FDF6
+	// Token: 0x060009DE RID: 2526 RVA: 0x00032D06 File Offset: 0x00030F06
 	private void OnPerceptionFinished()
 	{
 		if (!this.IsTaskRunning)
@@ -244,7 +241,7 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		this.EnqueueTurnPerform();
 	}
 
-	// Token: 0x060009D9 RID: 2521 RVA: 0x00031C07 File Offset: 0x0002FE07
+	// Token: 0x060009DF RID: 2527 RVA: 0x00032D17 File Offset: 0x00030F17
 	private void OnTurnPerformFinished()
 	{
 		if (!this.IsTaskRunning)
@@ -254,7 +251,7 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		base.Finish(true);
 	}
 
-	// Token: 0x060009DA RID: 2522 RVA: 0x00031C1C File Offset: 0x0002FE1C
+	// Token: 0x060009E0 RID: 2528 RVA: 0x00032D2C File Offset: 0x00030F2C
 	private void EnqueueTurnPerform()
 	{
 		if (!this.IsTaskRunning)
@@ -276,7 +273,7 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		customActionComp.AddCustomPlayMontage(path, null, null, null, new Action(this.OnTurnPerformFinished));
 	}
 
-	// Token: 0x060009DB RID: 2523 RVA: 0x00031C78 File Offset: 0x0002FE78
+	// Token: 0x060009E1 RID: 2529 RVA: 0x00032D88 File Offset: 0x00030F88
 	private string SelectTurnPerformPath()
 	{
 		CharacterActorComponent aiActorComp = this.AiActorComp;
@@ -313,7 +310,7 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x060009DC RID: 2524 RVA: 0x00031D54 File Offset: 0x0002FF54
+	// Token: 0x060009E2 RID: 2530 RVA: 0x00032E64 File Offset: 0x00031064
 	private void UpdateFacingToPlayer()
 	{
 		CharacterActorComponent aiActorComp = this.AiActorComp;
@@ -336,13 +333,13 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		aiActorComp.SetInputFacing(this.EndForward, true);
 	}
 
-	// Token: 0x060009DD RID: 2525 RVA: 0x00031E05 File Offset: 0x00030005
+	// Token: 0x060009E3 RID: 2531 RVA: 0x00032F15 File Offset: 0x00031115
 	private bool HasMontage(string path)
 	{
 		return path.Length > 0;
 	}
 
-	// Token: 0x060009DE RID: 2526 RVA: 0x00031E10 File Offset: 0x00030010
+	// Token: 0x060009E4 RID: 2532 RVA: 0x00032F20 File Offset: 0x00031120
 	[NullableContext(2)]
 	private AiController GetAiController(AAIController ownerController)
 	{
@@ -354,7 +351,7 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		return tsAiController.AiController;
 	}
 
-	// Token: 0x060009DF RID: 2527 RVA: 0x00031E30 File Offset: 0x00030030
+	// Token: 0x060009E5 RID: 2533 RVA: 0x00032F40 File Offset: 0x00031140
 	[NullableContext(2)]
 	private void LogInvalidController(AAIController ownerController)
 	{
@@ -366,7 +363,7 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060009E0 RID: 2528 RVA: 0x00031E80 File Offset: 0x00030080
+	// Token: 0x060009E6 RID: 2534 RVA: 0x00032F90 File Offset: 0x00031190
 	[NullableContext(2)]
 	private bool CheckCustomActionComp(int entityId, CharacterCustomActionComponent customActionComp)
 	{
@@ -383,7 +380,7 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		return false;
 	}
 
-	// Token: 0x060009E1 RID: 2529 RVA: 0x00031EC8 File Offset: 0x000300C8
+	// Token: 0x060009E7 RID: 2535 RVA: 0x00032FD8 File Offset: 0x000311D8
 	private bool CheckAnimationComp(int entityId, bool hasAnimationComp)
 	{
 		if (hasAnimationComp)
@@ -399,7 +396,7 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		return false;
 	}
 
-	// Token: 0x060009E2 RID: 2530 RVA: 0x00031F07 File Offset: 0x00030107
+	// Token: 0x060009E8 RID: 2536 RVA: 0x00033017 File Offset: 0x00031217
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskPlayGazePerform._ClassPtr == IntPtr.Zero)
@@ -409,22 +406,22 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		return TsTaskPlayGazePerform._ClassPtr;
 	}
 
-	// Token: 0x060009E3 RID: 2531 RVA: 0x00031F2C File Offset: 0x0003012C
+	// Token: 0x060009E9 RID: 2537 RVA: 0x0003303C File Offset: 0x0003123C
 	public TsTaskPlayGazePerform() : this(BuiltinUtils.AllocNativeUObject(TsTaskPlayGazePerform.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060009E4 RID: 2532 RVA: 0x00031F54 File Offset: 0x00030154
+	// Token: 0x060009EA RID: 2538 RVA: 0x00033064 File Offset: 0x00031264
 	public TsTaskPlayGazePerform(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskPlayGazePerform.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060009E5 RID: 2533 RVA: 0x00031F87 File Offset: 0x00030187
+	// Token: 0x060009EB RID: 2539 RVA: 0x00033097 File Offset: 0x00031297
 	protected TsTaskPlayGazePerform(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060009E6 RID: 2534 RVA: 0x00031FC8 File Offset: 0x000301C8
+	// Token: 0x060009EC RID: 2540 RVA: 0x000330D8 File Offset: 0x000312D8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -433,55 +430,55 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0400078C RID: 1932
+	// Token: 0x04000794 RID: 1940
 	private const float TURN_PERFORM_ANGLE_THRESHOLD = 90f;
 
-	// Token: 0x0400078D RID: 1933
+	// Token: 0x04000795 RID: 1941
 	private bool IsInitTsVariables;
 
-	// Token: 0x0400078E RID: 1934
+	// Token: 0x04000796 RID: 1942
 	private string TsPerceptionMontage = "";
 
-	// Token: 0x0400078F RID: 1935
+	// Token: 0x04000797 RID: 1943
 	private string TsTurnPerformLeft90 = "";
 
-	// Token: 0x04000790 RID: 1936
+	// Token: 0x04000798 RID: 1944
 	private string TsTurnPerformLeft180 = "";
 
-	// Token: 0x04000791 RID: 1937
+	// Token: 0x04000799 RID: 1945
 	private string TsTurnPerformRight90 = "";
 
-	// Token: 0x04000792 RID: 1938
+	// Token: 0x0400079A RID: 1946
 	private string TsTurnPerformRight180 = "";
 
-	// Token: 0x04000793 RID: 1939
+	// Token: 0x0400079B RID: 1947
 	[Nullable(2)]
 	private CharacterCustomActionComponent CustomActionComp;
 
-	// Token: 0x04000794 RID: 1940
+	// Token: 0x0400079C RID: 1948
 	[Nullable(2)]
 	private CharacterActorComponent AiActorComp;
 
-	// Token: 0x04000795 RID: 1941
+	// Token: 0x0400079D RID: 1949
 	private bool IsTaskRunning;
 
-	// Token: 0x04000796 RID: 1942
+	// Token: 0x0400079E RID: 1950
 	[Nullable(2)]
 	private Vector EndForward;
 
-	// Token: 0x04000797 RID: 1943
+	// Token: 0x0400079F RID: 1951
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskPlayGazePerform.TsTaskPlayGazePerform_C";
 
-	// Token: 0x04000798 RID: 1944
+	// Token: 0x040007A0 RID: 1952
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000799 RID: 1945
+	// Token: 0x040007A1 RID: 1953
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400079A RID: 1946
+	// Token: 0x040007A2 RID: 1954
 	private static int __PropertyOffset_PerceptionMontage;
 
-	// Token: 0x0400079B RID: 1947
+	// Token: 0x040007A3 RID: 1955
 	[Nullable(new byte[]
 	{
 		2,
@@ -489,10 +486,10 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 	})]
 	private TSoftObjectPtr<UAnimMontage> _PerceptionMontage;
 
-	// Token: 0x0400079C RID: 1948
+	// Token: 0x040007A4 RID: 1956
 	private static int __PropertyOffset_TurnPerformLeft90;
 
-	// Token: 0x0400079D RID: 1949
+	// Token: 0x040007A5 RID: 1957
 	[Nullable(new byte[]
 	{
 		2,
@@ -500,10 +497,10 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 	})]
 	private TSoftObjectPtr<UAnimMontage> _TurnPerformLeft90;
 
-	// Token: 0x0400079E RID: 1950
+	// Token: 0x040007A6 RID: 1958
 	private static int __PropertyOffset_TurnPerformLeft180;
 
-	// Token: 0x0400079F RID: 1951
+	// Token: 0x040007A7 RID: 1959
 	[Nullable(new byte[]
 	{
 		2,
@@ -511,10 +508,10 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 	})]
 	private TSoftObjectPtr<UAnimMontage> _TurnPerformLeft180;
 
-	// Token: 0x040007A0 RID: 1952
+	// Token: 0x040007A8 RID: 1960
 	private static int __PropertyOffset_TurnPerformRight90;
 
-	// Token: 0x040007A1 RID: 1953
+	// Token: 0x040007A9 RID: 1961
 	[Nullable(new byte[]
 	{
 		2,
@@ -522,10 +519,10 @@ public class TsTaskPlayGazePerform : TsTaskAbortImmediatelyBase, IUnrealUObject,
 	})]
 	private TSoftObjectPtr<UAnimMontage> _TurnPerformRight90;
 
-	// Token: 0x040007A2 RID: 1954
+	// Token: 0x040007AA RID: 1962
 	private static int __PropertyOffset_TurnPerformRight180;
 
-	// Token: 0x040007A3 RID: 1955
+	// Token: 0x040007AB RID: 1963
 	[Nullable(new byte[]
 	{
 		2,

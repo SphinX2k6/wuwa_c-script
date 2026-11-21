@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200127A RID: 4730
+	// Token: 0x020013BA RID: 5050
 	public static class ERecallOperationExtensions
 	{
-		// Token: 0x06006ACC RID: 27340 RVA: 0x001001F8 File Offset: 0x000FE3F8
+		// Token: 0x0600711F RID: 28959 RVA: 0x0010DE24 File Offset: 0x0010C024
 		public static string ToEnumString(this ERecallOperation value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006ACD RID: 27341 RVA: 0x00100230 File Offset: 0x000FE430
+		// Token: 0x06007120 RID: 28960 RVA: 0x0010DE5C File Offset: 0x0010C05C
 		public static ERecallOperation FromString(string name)
 		{
 			ERecallOperation result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006ACE RID: 27342 RVA: 0x00100259 File Offset: 0x000FE459
+		// Token: 0x06007121 RID: 28961 RVA: 0x0010DE85 File Offset: 0x0010C085
 		public static bool TryFromString(string name, out ERecallOperation value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006ACF RID: 27343 RVA: 0x00100292 File Offset: 0x000FE492
+		// Token: 0x06007122 RID: 28962 RVA: 0x0010DEBE File Offset: 0x0010C0BE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006AD0 RID: 27344 RVA: 0x001002AA File Offset: 0x000FE4AA
+		// Token: 0x06007123 RID: 28963 RVA: 0x0010DED6 File Offset: 0x0010C0D6
 		public static ERecallOperation[] GetValues()
 		{
 			return new ERecallOperation[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006AD1 RID: 27345 RVA: 0x001002B6 File Offset: 0x000FE4B6
+		// Token: 0x06007124 RID: 28964 RVA: 0x0010DEE2 File Offset: 0x0010C0E2
 		public static string[] GetNames()
 		{
 			return new string[]

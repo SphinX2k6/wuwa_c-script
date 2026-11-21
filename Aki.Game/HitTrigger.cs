@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 using CSharpScript.Utils;
 
-// Token: 0x02002FE1 RID: 12257
+// Token: 0x02002536 RID: 9526
 [NullableContext(1)]
 [Nullable(0)]
 public class HitTrigger : Trigger
 {
-	// Token: 0x06019FB4 RID: 106420 RVA: 0x006CC801 File Offset: 0x006CAA01
+	// Token: 0x060178E8 RID: 96488 RVA: 0x006F46A1 File Offset: 0x006F28A1
 	[NullableContext(2)]
 	public HitTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x06019FB5 RID: 106421 RVA: 0x006CC812 File Offset: 0x006CAA12
+	// Token: 0x060178E9 RID: 96489 RVA: 0x006F46B2 File Offset: 0x006F28B2
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TargetType = (ETriggerTargetType)Convert.ToInt32((triggerParams.Length != 0) ? triggerParams[0] : "0");
 	}
 
-	// Token: 0x06019FB6 RID: 106422 RVA: 0x006CC830 File Offset: 0x006CAA30
+	// Token: 0x060178EA RID: 96490 RVA: 0x006F46D0 File Offset: 0x006F28D0
 	protected override void OnActive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -39,7 +39,7 @@ public class HitTrigger : Trigger
 		}
 	}
 
-	// Token: 0x06019FB7 RID: 106423 RVA: 0x006CC8B4 File Offset: 0x006CAAB4
+	// Token: 0x060178EB RID: 96491 RVA: 0x006F4754 File Offset: 0x006F2954
 	protected override void OnInactive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -57,19 +57,19 @@ public class HitTrigger : Trigger
 		}
 	}
 
-	// Token: 0x06019FB8 RID: 106424 RVA: 0x006CC936 File Offset: 0x006CAB36
+	// Token: 0x060178EC RID: 96492 RVA: 0x006F47D6 File Offset: 0x006F29D6
 	protected void OnHitLocal(HitInformation _, HitContext hitContext)
 	{
 		this.OnEvent(hitContext);
 	}
 
-	// Token: 0x06019FB9 RID: 106425 RVA: 0x006CC93F File Offset: 0x006CAB3F
+	// Token: 0x060178ED RID: 96493 RVA: 0x006F47DF File Offset: 0x006F29DF
 	protected void OnHitRemote(HitContext hitContext)
 	{
 		this.OnEvent(hitContext);
 	}
 
-	// Token: 0x06019FBA RID: 106426 RVA: 0x006CC948 File Offset: 0x006CAB48
+	// Token: 0x060178EE RID: 96494 RVA: 0x006F47E8 File Offset: 0x006F29E8
 	protected virtual void OnEvent(HitContext hitContext)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -97,12 +97,12 @@ public class HitTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x06019FBB RID: 106427 RVA: 0x006CCAB0 File Offset: 0x006CACB0
+	// Token: 0x060178EF RID: 96495 RVA: 0x006F4950 File Offset: 0x006F2B50
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4B2 RID: 50354
+	// Token: 0x0400C87A RID: 51322
 	protected ETriggerTargetType TargetType;
 }

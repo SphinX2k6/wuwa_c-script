@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020028C1 RID: 10433
+// Token: 0x02001E3C RID: 7740
 public enum ESkillTabShowType
 {
-	// Token: 0x0400A04E RID: 41038
+	// Token: 0x0400A437 RID: 42039
 	Introduction = 1,
-	// Token: 0x0400A04F RID: 41039
+	// Token: 0x0400A438 RID: 42040
 	Detail
 }

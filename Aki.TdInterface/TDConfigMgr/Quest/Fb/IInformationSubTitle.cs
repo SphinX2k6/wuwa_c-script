@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012CC RID: 4812
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001412 RID: 5138
 	public class IInformationSubTitle
 	{
-		// Token: 0x06006E16 RID: 28182 RVA: 0x0010A5CE File Offset: 0x001087CE
+		// Token: 0x06007494 RID: 29844 RVA: 0x0011885E File Offset: 0x00116A5E
 		public static IInformationSubTitle Create(IInformationSubTitle? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002251 RID: 8785
-		// (get) Token: 0x06006E17 RID: 28183 RVA: 0x0010A5ED File Offset: 0x001087ED
+		// Token: 0x17002412 RID: 9234
+		// (get) Token: 0x06007495 RID: 29845 RVA: 0x0011887D File Offset: 0x00116A7D
 		public virtual string TidTitle
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002252 RID: 8786
-		// (get) Token: 0x06006E18 RID: 28184 RVA: 0x0010A5FA File Offset: 0x001087FA
+		// Token: 0x17002413 RID: 9235
+		// (get) Token: 0x06007496 RID: 29846 RVA: 0x0011888A File Offset: 0x00116A8A
 		public virtual string TidContent
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002253 RID: 8787
-		// (get) Token: 0x06006E19 RID: 28185 RVA: 0x0010A607 File Offset: 0x00108807
+		// Token: 0x17002414 RID: 9236
+		// (get) Token: 0x06007497 RID: 29847 RVA: 0x00118897 File Offset: 0x00116A97
 		[Nullable(2)]
 		public virtual string EdTidTitle
 		{
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002254 RID: 8788
-		// (get) Token: 0x06006E1A RID: 28186 RVA: 0x0010A60A File Offset: 0x0010880A
+		// Token: 0x17002415 RID: 9237
+		// (get) Token: 0x06007498 RID: 29848 RVA: 0x0011889A File Offset: 0x00116A9A
 		[Nullable(2)]
 		public virtual string EdTidContent
 		{
@@ -66,7 +64,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F1A RID: 16154
+		// Token: 0x04004288 RID: 17032
 		private IInformationSubTitle Instance;
 	}
 }

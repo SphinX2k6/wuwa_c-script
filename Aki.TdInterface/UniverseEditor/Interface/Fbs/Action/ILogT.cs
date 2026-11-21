@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A36 RID: 27190
+	// Token: 0x02007158 RID: 29016
 	public class ILogT
 	{
-		// Token: 0x1700C9AC RID: 51628
-		// (get) Token: 0x0602F964 RID: 194916 RVA: 0x0067A256 File Offset: 0x00678456
-		// (set) Token: 0x0602F965 RID: 194917 RVA: 0x0067A25E File Offset: 0x0067845E
+		// Token: 0x1700D457 RID: 54359
+		// (get) Token: 0x0603268A RID: 206474 RVA: 0x006D0316 File Offset: 0x006CE516
+		// (set) Token: 0x0603268B RID: 206475 RVA: 0x006D031E File Offset: 0x006CE51E
 		public string Level { get; set; }
 
-		// Token: 0x1700C9AD RID: 51629
-		// (get) Token: 0x0602F966 RID: 194918 RVA: 0x0067A267 File Offset: 0x00678467
-		// (set) Token: 0x0602F967 RID: 194919 RVA: 0x0067A26F File Offset: 0x0067846F
+		// Token: 0x1700D458 RID: 54360
+		// (get) Token: 0x0603268C RID: 206476 RVA: 0x006D0327 File Offset: 0x006CE527
+		// (set) Token: 0x0603268D RID: 206477 RVA: 0x006D032F File Offset: 0x006CE52F
 		public string Content { get; set; }
 
-		// Token: 0x0602F968 RID: 194920 RVA: 0x0067A278 File Offset: 0x00678478
+		// Token: 0x0603268E RID: 206478 RVA: 0x006D0338 File Offset: 0x006CE538
 		public ILogT()
 		{
 			this.Level = null;

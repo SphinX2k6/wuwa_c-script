@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002283 RID: 8835
+// Token: 0x02001767 RID: 5991
 public enum EOutLookState
 {
-	// Token: 0x04008339 RID: 33593
+	// Token: 0x04008477 RID: 33911
 	IsHide,
-	// Token: 0x0400833A RID: 33594
+	// Token: 0x04008478 RID: 33912
 	IsEquipped,
-	// Token: 0x0400833B RID: 33595
+	// Token: 0x04008479 RID: 33913
 	CanEquipped,
-	// Token: 0x0400833C RID: 33596
+	// Token: 0x0400847A RID: 33914
 	IsLock,
-	// Token: 0x0400833D RID: 33597
+	// Token: 0x0400847B RID: 33915
 	IsBan
 }

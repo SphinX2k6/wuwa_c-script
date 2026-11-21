@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013C2 RID: 5058
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001519 RID: 5401
 	public class ICheckConditionGroupQuestCondition : IQuestCondition
 	{
-		// Token: 0x06007386 RID: 29574 RVA: 0x001153D6 File Offset: 0x001135D6
-		[NullableContext(1)]
+		// Token: 0x06007A47 RID: 31303 RVA: 0x00123DBB File Offset: 0x00121FBB
 		public static ICheckConditionGroupQuestCondition Create(ICheckConditionGroupQuestCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025D5 RID: 9685
-		// (get) Token: 0x06007387 RID: 29575 RVA: 0x001153F5 File Offset: 0x001135F5
+		// Token: 0x170027B7 RID: 10167
+		// (get) Token: 0x06007A48 RID: 31304 RVA: 0x00123DDA File Offset: 0x00121FDA
 		public override EChildQuest Type
 		{
 			get
@@ -34,10 +31,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025D6 RID: 9686
-		// (get) Token: 0x06007388 RID: 29576 RVA: 0x00115402 File Offset: 0x00113602
+		// Token: 0x170027B8 RID: 10168
+		// (get) Token: 0x06007A49 RID: 31305 RVA: 0x00123DE7 File Offset: 0x00121FE7
+		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._PreConditionsInited)
@@ -50,12 +49,10 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025D7 RID: 9687
-		// (get) Token: 0x06007389 RID: 29577 RVA: 0x00115436 File Offset: 0x00113636
-		[Nullable(1)]
+		// Token: 0x170027B9 RID: 10169
+		// (get) Token: 0x06007A4A RID: 31306 RVA: 0x00123E1B File Offset: 0x0012201B
 		public virtual IConditionGroup Condition
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._ConditionInited)
@@ -68,19 +65,21 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040042DE RID: 17118
+		// Token: 0x0400466F RID: 18031
 		private ICheckConditionGroupQuestCondition Instance;
 
-		// Token: 0x040042DF RID: 17119
+		// Token: 0x04004670 RID: 18032
+		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040042E0 RID: 17120
+		// Token: 0x04004671 RID: 18033
 		private bool _PreConditionsInited;
 
-		// Token: 0x040042E1 RID: 17121
+		// Token: 0x04004672 RID: 18034
+		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x040042E2 RID: 17122
+		// Token: 0x04004673 RID: 18035
 		private bool _ConditionInited;
 	}
 }

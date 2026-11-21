@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028A6 RID: 10406
+	// Token: 0x02002B7B RID: 11131
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IAdjustPlayerCameraType
 	{
-		// Token: 0x0600E65B RID: 58971 RVA: 0x0021D8A2 File Offset: 0x0021BAA2
-		[NullableContext(1)]
+		// Token: 0x0600F48A RID: 62602 RVA: 0x0023A822 File Offset: 0x00238A22
+		[NullableContext(0)]
 		public static IAdjustPlayerCameraType Create(IAdjustPlayerCameraType? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170046D1 RID: 18129
-		// (get) Token: 0x0600E65C RID: 58972 RVA: 0x0021D8C1 File Offset: 0x0021BAC1
+		// Token: 0x17004A42 RID: 19010
+		// (get) Token: 0x0600F48B RID: 62603 RVA: 0x0023A841 File Offset: 0x00238A41
 		public virtual EAdjustPlayerCamera Type
 		{
 			get
@@ -35,8 +35,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046D2 RID: 18130
-		// (get) Token: 0x0600E65D RID: 58973 RVA: 0x0021D8CE File Offset: 0x0021BACE
+		// Token: 0x17004A43 RID: 19011
+		// (get) Token: 0x0600F48C RID: 62604 RVA: 0x0023A84E File Offset: 0x00238A4E
 		public virtual int Priority
 		{
 			get
@@ -45,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046D3 RID: 18131
-		// (get) Token: 0x0600E65E RID: 58974 RVA: 0x0021D8DB File Offset: 0x0021BADB
+		// Token: 0x17004A44 RID: 19012
+		// (get) Token: 0x0600F48D RID: 62605 RVA: 0x0023A85B File Offset: 0x00238A5B
 		public virtual float FadeInTime
 		{
 			get
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046D4 RID: 18132
-		// (get) Token: 0x0600E65F RID: 58975 RVA: 0x0021D8E8 File Offset: 0x0021BAE8
+		// Token: 0x17004A45 RID: 19013
+		// (get) Token: 0x0600F48E RID: 62606 RVA: 0x0023A868 File Offset: 0x00238A68
 		public virtual IBaseCurve FadeInCurve
 		{
 			get
@@ -71,8 +71,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046D5 RID: 18133
-		// (get) Token: 0x0600E660 RID: 58976 RVA: 0x0021D91C File Offset: 0x0021BB1C
+		// Token: 0x17004A46 RID: 19014
+		// (get) Token: 0x0600F48F RID: 62607 RVA: 0x0023A89C File Offset: 0x00238A9C
 		public virtual float FadeOutTime
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046D6 RID: 18134
-		// (get) Token: 0x0600E661 RID: 58977 RVA: 0x0021D929 File Offset: 0x0021BB29
+		// Token: 0x17004A47 RID: 19015
+		// (get) Token: 0x0600F490 RID: 62608 RVA: 0x0023A8A9 File Offset: 0x00238AA9
 		public virtual IBaseCurve FadeOutCurve
 		{
 			get
@@ -97,8 +97,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046D7 RID: 18135
-		// (get) Token: 0x0600E662 RID: 58978 RVA: 0x0021D95D File Offset: 0x0021BB5D
+		// Token: 0x17004A48 RID: 19016
+		// (get) Token: 0x0600F491 RID: 62609 RVA: 0x0023A8DD File Offset: 0x00238ADD
 		public virtual float ArmLength
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046D8 RID: 18136
-		// (get) Token: 0x0600E663 RID: 58979 RVA: 0x0021D96A File Offset: 0x0021BB6A
+		// Token: 0x17004A49 RID: 19017
+		// (get) Token: 0x0600F492 RID: 62610 RVA: 0x0023A8EA File Offset: 0x00238AEA
 		public virtual float MinumArmLength
 		{
 			get
@@ -117,8 +117,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046D9 RID: 18137
-		// (get) Token: 0x0600E664 RID: 58980 RVA: 0x0021D977 File Offset: 0x0021BB77
+		// Token: 0x17004A4A RID: 19018
+		// (get) Token: 0x0600F493 RID: 62611 RVA: 0x0023A8F7 File Offset: 0x00238AF7
 		public virtual float MaxiumArmLength
 		{
 			get
@@ -127,12 +127,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046DA RID: 18138
-		// (get) Token: 0x0600E665 RID: 58981 RVA: 0x0021D984 File Offset: 0x0021BB84
-		[Nullable(1)]
+		// Token: 0x17004A4B RID: 19019
+		// (get) Token: 0x0600F494 RID: 62612 RVA: 0x0023A904 File Offset: 0x00238B04
+		[Nullable(0)]
 		public virtual VectorInfo Offset
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._OffsetInited)
@@ -145,8 +145,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046DB RID: 18139
-		// (get) Token: 0x0600E666 RID: 58982 RVA: 0x0021D9B8 File Offset: 0x0021BBB8
+		// Token: 0x17004A4C RID: 19020
+		// (get) Token: 0x0600F495 RID: 62613 RVA: 0x0023A938 File Offset: 0x00238B38
 		public virtual VectorInfo ArmOffset
 		{
 			get
@@ -161,8 +161,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046DC RID: 18140
-		// (get) Token: 0x0600E667 RID: 58983 RVA: 0x0021D9EC File Offset: 0x0021BBEC
+		// Token: 0x17004A4D RID: 19021
+		// (get) Token: 0x0600F496 RID: 62614 RVA: 0x0023A96C File Offset: 0x00238B6C
 		public virtual float? YawLimitMin
 		{
 			get
@@ -175,8 +175,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046DD RID: 18141
-		// (get) Token: 0x0600E668 RID: 58984 RVA: 0x0021DA24 File Offset: 0x0021BC24
+		// Token: 0x17004A4E RID: 19022
+		// (get) Token: 0x0600F497 RID: 62615 RVA: 0x0023A9A4 File Offset: 0x00238BA4
 		public virtual float? YawLimitMax
 		{
 			get
@@ -189,8 +189,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046DE RID: 18142
-		// (get) Token: 0x0600E669 RID: 58985 RVA: 0x0021DA5C File Offset: 0x0021BC5C
+		// Token: 0x17004A4F RID: 19023
+		// (get) Token: 0x0600F498 RID: 62616 RVA: 0x0023A9DC File Offset: 0x00238BDC
 		public virtual float? PitchLimitMin
 		{
 			get
@@ -203,8 +203,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046DF RID: 18143
-		// (get) Token: 0x0600E66A RID: 58986 RVA: 0x0021DA94 File Offset: 0x0021BC94
+		// Token: 0x17004A50 RID: 19024
+		// (get) Token: 0x0600F499 RID: 62617 RVA: 0x0023AA14 File Offset: 0x00238C14
 		public virtual float? PitchLimitMax
 		{
 			get
@@ -217,8 +217,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046E0 RID: 18144
-		// (get) Token: 0x0600E66B RID: 58987 RVA: 0x0021DACA File Offset: 0x0021BCCA
+		// Token: 0x17004A51 RID: 19025
+		// (get) Token: 0x0600F49A RID: 62618 RVA: 0x0023AA4A File Offset: 0x00238C4A
 		public virtual float Fov
 		{
 			get
@@ -227,8 +227,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046E1 RID: 18145
-		// (get) Token: 0x0600E66C RID: 58988 RVA: 0x0021DAD8 File Offset: 0x0021BCD8
+		// Token: 0x17004A52 RID: 19026
+		// (get) Token: 0x0600F49B RID: 62619 RVA: 0x0023AA58 File Offset: 0x00238C58
 		public virtual bool? IsDisableResetFocus
 		{
 			get
@@ -241,12 +241,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046E2 RID: 18146
-		// (get) Token: 0x0600E66D RID: 58989 RVA: 0x0021DB0F File Offset: 0x0021BD0F
-		[Nullable(1)]
+		// Token: 0x17004A53 RID: 19027
+		// (get) Token: 0x0600F49C RID: 62620 RVA: 0x0023AA8F File Offset: 0x00238C8F
+		[Nullable(0)]
 		public virtual IGravityDirectionType GravityDirection
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._GravityDirectionInited)
@@ -259,8 +259,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046E3 RID: 18147
-		// (get) Token: 0x0600E66E RID: 58990 RVA: 0x0021DB40 File Offset: 0x0021BD40
+		// Token: 0x17004A54 RID: 19028
+		// (get) Token: 0x0600F49D RID: 62621 RVA: 0x0023AAC0 File Offset: 0x00238CC0
 		public virtual bool? IsDisableCollision
 		{
 			get
@@ -273,8 +273,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046E4 RID: 18148
-		// (get) Token: 0x0600E66F RID: 58991 RVA: 0x0021DB78 File Offset: 0x0021BD78
+		// Token: 0x17004A55 RID: 19029
+		// (get) Token: 0x0600F49E RID: 62622 RVA: 0x0023AAF8 File Offset: 0x00238CF8
 		public virtual bool? IsDisableDither
 		{
 			get
@@ -287,8 +287,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046E5 RID: 18149
-		// (get) Token: 0x0600E670 RID: 58992 RVA: 0x0021DBAF File Offset: 0x0021BDAF
+		// Token: 0x17004A56 RID: 19030
+		// (get) Token: 0x0600F49F RID: 62623 RVA: 0x0023AB2F File Offset: 0x00238D2F
 		public virtual string SubScreenBindKey
 		{
 			get
@@ -297,38 +297,38 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F5C RID: 32604
+		// Token: 0x0400861B RID: 34331
 		private IAdjustPlayerCameraType Instance;
 
-		// Token: 0x04007F5D RID: 32605
+		// Token: 0x0400861C RID: 34332
 		private IBaseCurve _FadeInCurveCache;
 
-		// Token: 0x04007F5E RID: 32606
+		// Token: 0x0400861D RID: 34333
 		private bool _FadeInCurveInited;
 
-		// Token: 0x04007F5F RID: 32607
+		// Token: 0x0400861E RID: 34334
 		private IBaseCurve _FadeOutCurveCache;
 
-		// Token: 0x04007F60 RID: 32608
+		// Token: 0x0400861F RID: 34335
 		private bool _FadeOutCurveInited;
 
-		// Token: 0x04007F61 RID: 32609
+		// Token: 0x04008620 RID: 34336
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04007F62 RID: 32610
+		// Token: 0x04008621 RID: 34337
 		private bool _OffsetInited;
 
-		// Token: 0x04007F63 RID: 32611
+		// Token: 0x04008622 RID: 34338
 		private VectorInfo _ArmOffsetCache;
 
-		// Token: 0x04007F64 RID: 32612
+		// Token: 0x04008623 RID: 34339
 		private bool _ArmOffsetInited;
 
-		// Token: 0x04007F65 RID: 32613
-		[Nullable(1)]
+		// Token: 0x04008624 RID: 34340
+		[Nullable(0)]
 		private IGravityDirectionType _GravityDirectionCache;
 
-		// Token: 0x04007F66 RID: 32614
+		// Token: 0x04008625 RID: 34341
 		private bool _GravityDirectionInited;
 	}
 }

@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051E0 RID: 20960
+	// Token: 0x02005745 RID: 22341
 	public struct IExploreSkillEavesdrop : IFlatbufferObject
 	{
-		// Token: 0x17009969 RID: 39273
-		// (get) Token: 0x06021FE6 RID: 139238 RVA: 0x004B71CA File Offset: 0x004B53CA
+		// Token: 0x1700A158 RID: 41304
+		// (get) Token: 0x06023F3E RID: 147262 RVA: 0x004F1232 File Offset: 0x004EF432
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021FE7 RID: 139239 RVA: 0x004B71D7 File Offset: 0x004B53D7
+		// Token: 0x06023F3F RID: 147263 RVA: 0x004F123F File Offset: 0x004EF43F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021FE8 RID: 139240 RVA: 0x004B71E0 File Offset: 0x004B53E0
+		// Token: 0x06023F40 RID: 147264 RVA: 0x004F1248 File Offset: 0x004EF448
 		public static IExploreSkillEavesdrop GetRootAsIExploreSkillEavesdrop(ByteBuffer _bb)
 		{
 			return IExploreSkillEavesdrop.GetRootAsIExploreSkillEavesdrop(_bb, default(IExploreSkillEavesdrop));
 		}
 
-		// Token: 0x06021FE9 RID: 139241 RVA: 0x004B71FC File Offset: 0x004B53FC
+		// Token: 0x06023F41 RID: 147265 RVA: 0x004F1264 File Offset: 0x004EF464
 		public static IExploreSkillEavesdrop GetRootAsIExploreSkillEavesdrop(ByteBuffer _bb, IExploreSkillEavesdrop obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021FEA RID: 139242 RVA: 0x004B7219 File Offset: 0x004B5419
+		// Token: 0x06023F42 RID: 147266 RVA: 0x004F1281 File Offset: 0x004EF481
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021FEB RID: 139243 RVA: 0x004B7228 File Offset: 0x004B5428
+		// Token: 0x06023F43 RID: 147267 RVA: 0x004F1290 File Offset: 0x004EF490
 		public IExploreSkillEavesdrop __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700996A RID: 39274
-		// (get) Token: 0x06021FEC RID: 139244 RVA: 0x004B7238 File Offset: 0x004B5438
+		// Token: 0x1700A159 RID: 41305
+		// (get) Token: 0x06023F44 RID: 147268 RVA: 0x004F12A0 File Offset: 0x004EF4A0
 		public EExploreSkillInteractType Type
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021FED RID: 139245 RVA: 0x004B7274 File Offset: 0x004B5474
+		// Token: 0x06023F45 RID: 147269 RVA: 0x004F12DC File Offset: 0x004EF4DC
 		public IActionInfo? Actions(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700996B RID: 39275
-		// (get) Token: 0x06021FEE RID: 139246 RVA: 0x004B72D4 File Offset: 0x004B54D4
+		// Token: 0x1700A15A RID: 41306
+		// (get) Token: 0x06023F46 RID: 147270 RVA: 0x004F133C File Offset: 0x004EF53C
 		public int ActionsLength
 		{
 			get
@@ -91,8 +91,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700996C RID: 39276
-		// (get) Token: 0x06021FEF RID: 139247 RVA: 0x004B7300 File Offset: 0x004B5500
+		// Token: 0x1700A15B RID: 41307
+		// (get) Token: 0x06023F47 RID: 147271 RVA: 0x004F1368 File Offset: 0x004EF568
 		public IVectorInfo? InteractOffset
 		{
 			get
@@ -106,7 +106,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021FF0 RID: 139248 RVA: 0x004B735D File Offset: 0x004B555D
+		// Token: 0x06023F48 RID: 147272 RVA: 0x004F13C5 File Offset: 0x004EF5C5
 		public static Offset<IExploreSkillEavesdrop> CreateIExploreSkillEavesdrop(FlatBufferBuilder builder, EExploreSkillInteractType Type = EExploreSkillInteractType.PullGiant, VectorOffset ActionsOffset = default(VectorOffset), Offset<IVectorInfo> InteractOffsetOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(3);
@@ -116,25 +116,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExploreSkillEavesdrop.EndIExploreSkillEavesdrop(builder);
 		}
 
-		// Token: 0x06021FF1 RID: 139249 RVA: 0x004B7381 File Offset: 0x004B5581
+		// Token: 0x06023F49 RID: 147273 RVA: 0x004F13E9 File Offset: 0x004EF5E9
 		public static void StartIExploreSkillEavesdrop(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06021FF2 RID: 139250 RVA: 0x004B738A File Offset: 0x004B558A
+		// Token: 0x06023F4A RID: 147274 RVA: 0x004F13F2 File Offset: 0x004EF5F2
 		public static void AddType(FlatBufferBuilder builder, EExploreSkillInteractType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06021FF3 RID: 139251 RVA: 0x004B7395 File Offset: 0x004B5595
+		// Token: 0x06023F4B RID: 147275 RVA: 0x004F13FD File Offset: 0x004EF5FD
 		public static void AddActions(FlatBufferBuilder builder, VectorOffset actionsOffset)
 		{
 			builder.AddOffset(1, actionsOffset.Value, 0);
 		}
 
-		// Token: 0x06021FF4 RID: 139252 RVA: 0x004B73A8 File Offset: 0x004B55A8
+		// Token: 0x06023F4C RID: 147276 RVA: 0x004F1410 File Offset: 0x004EF610
 		public static VectorOffset CreateActionsVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -145,7 +145,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021FF5 RID: 139253 RVA: 0x004B73E8 File Offset: 0x004B55E8
+		// Token: 0x06023F4D RID: 147277 RVA: 0x004F1450 File Offset: 0x004EF650
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -153,7 +153,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021FF6 RID: 139254 RVA: 0x004B7402 File Offset: 0x004B5602
+		// Token: 0x06023F4E RID: 147278 RVA: 0x004F146A File Offset: 0x004EF66A
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021FF7 RID: 139255 RVA: 0x004B7420 File Offset: 0x004B5620
+		// Token: 0x06023F4F RID: 147279 RVA: 0x004F1488 File Offset: 0x004EF688
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -169,25 +169,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021FF8 RID: 139256 RVA: 0x004B7439 File Offset: 0x004B5639
+		// Token: 0x06023F50 RID: 147280 RVA: 0x004F14A1 File Offset: 0x004EF6A1
 		public static void StartActionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06021FF9 RID: 139257 RVA: 0x004B7444 File Offset: 0x004B5644
+		// Token: 0x06023F51 RID: 147281 RVA: 0x004F14AC File Offset: 0x004EF6AC
 		public static void AddInteractOffset(FlatBufferBuilder builder, Offset<IVectorInfo> interactOffsetOffset)
 		{
 			builder.AddOffset(2, interactOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x06021FFA RID: 139258 RVA: 0x004B7454 File Offset: 0x004B5654
+		// Token: 0x06023F52 RID: 147282 RVA: 0x004F14BC File Offset: 0x004EF6BC
 		public static Offset<IExploreSkillEavesdrop> EndIExploreSkillEavesdrop(FlatBufferBuilder builder)
 		{
 			return new Offset<IExploreSkillEavesdrop>(builder.EndTable());
 		}
 
-		// Token: 0x06021FFB RID: 139259 RVA: 0x004B7464 File Offset: 0x004B5664
+		// Token: 0x06023F53 RID: 147283 RVA: 0x004F14CC File Offset: 0x004EF6CC
 		public IExploreSkillEavesdropT UnPack()
 		{
 			IExploreSkillEavesdropT exploreSkillEavesdropT = new IExploreSkillEavesdropT();
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return exploreSkillEavesdropT;
 		}
 
-		// Token: 0x06021FFC RID: 139260 RVA: 0x004B7480 File Offset: 0x004B5680
+		// Token: 0x06023F54 RID: 147284 RVA: 0x004F14E8 File Offset: 0x004EF6E8
 		public void UnPackTo(IExploreSkillEavesdropT _o)
 		{
 			_o.Type = this.Type;
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.InteractOffset = ((this.InteractOffset != null) ? this.InteractOffset.Value.UnPack() : null);
 		}
 
-		// Token: 0x06021FFD RID: 139261 RVA: 0x004B751C File Offset: 0x004B571C
+		// Token: 0x06023F55 RID: 147285 RVA: 0x004F1584 File Offset: 0x004EF784
 		public static Offset<IExploreSkillEavesdrop> Pack(FlatBufferBuilder builder, IExploreSkillEavesdropT _o)
 		{
 			if (_o == null)
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExploreSkillEavesdrop.CreateIExploreSkillEavesdrop(builder, _o.Type, actionsOffset, interactOffsetOffset);
 		}
 
-		// Token: 0x0400E2ED RID: 58093
+		// Token: 0x0400EEEB RID: 61163
 		private Table __p;
 	}
 }

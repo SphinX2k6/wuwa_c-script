@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000307 RID: 775
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200034E RID: 846
 	public class IEnterScreenWeight : IExploreSkillSearchTargetCfg
 	{
-		// Token: 0x06000F03 RID: 3843 RVA: 0x00035764 File Offset: 0x00033964
+		// Token: 0x06001033 RID: 4147 RVA: 0x00038698 File Offset: 0x00036898
 		private IEnterScreenWeight_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000F04 RID: 3844 RVA: 0x0003579C File Offset: 0x0003399C
+		// Token: 0x06001034 RID: 4148 RVA: 0x000386D0 File Offset: 0x000368D0
 		public static IEnterScreenWeight Create([Nullable(2)] IEnterScreenWeight instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000F05 RID: 3845 RVA: 0x000357AF File Offset: 0x000339AF
+		// Token: 0x06001035 RID: 4149 RVA: 0x000386E3 File Offset: 0x000368E3
 		public static IEnterScreenWeight CreateFromSetValue([Nullable(2)] IEnterScreenWeight_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000F06 RID: 3846 RVA: 0x000357C2 File Offset: 0x000339C2
+		// Token: 0x06001036 RID: 4150 RVA: 0x000386F6 File Offset: 0x000368F6
 		public new IEnterScreenWeight_SetValue ToSetValue()
 		{
 			return new IEnterScreenWeight_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000454 RID: 1108
-		// (get) Token: 0x06000F07 RID: 3847 RVA: 0x000357E1 File Offset: 0x000339E1
-		// (set) Token: 0x06000F08 RID: 3848 RVA: 0x0003580C File Offset: 0x00033A0C
+		// Token: 0x170004A1 RID: 1185
+		// (get) Token: 0x06001037 RID: 4151 RVA: 0x00038715 File Offset: 0x00036915
+		// (set) Token: 0x06001038 RID: 4152 RVA: 0x00038740 File Offset: 0x00036940
 		public override EExploreSkillSearchTargetCfg Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000455 RID: 1109
-		// (get) Token: 0x06000F09 RID: 3849 RVA: 0x0003581A File Offset: 0x00033A1A
-		// (set) Token: 0x06000F0A RID: 3850 RVA: 0x00035845 File Offset: 0x00033A45
+		// Token: 0x170004A2 RID: 1186
+		// (get) Token: 0x06001039 RID: 4153 RVA: 0x0003874E File Offset: 0x0003694E
+		// (set) Token: 0x0600103A RID: 4154 RVA: 0x00038779 File Offset: 0x00036979
 		public virtual int Weight
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D0F RID: 3343
+		// Token: 0x04000DF9 RID: 3577
 		[Nullable(2)]
 		protected new IEnterScreenWeight FbInstance;
 
-		// Token: 0x04000D10 RID: 3344
+		// Token: 0x04000DFA RID: 3578
 		[Nullable(2)]
 		protected new IEnterScreenWeight_SetValue PocoInterface;
 	}

@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x02002049 RID: 8265
+// Token: 0x0200151C RID: 5404
 public class KingShipResultViewData : IKingShipResultViewData
 {
-	// Token: 0x170013DC RID: 5084
-	// (get) Token: 0x060103C7 RID: 66503 RVA: 0x003F60E2 File Offset: 0x003F42E2
-	// (set) Token: 0x060103C8 RID: 66504 RVA: 0x003F60EA File Offset: 0x003F42EA
+	// Token: 0x17001409 RID: 5129
+	// (get) Token: 0x0600D82F RID: 55343 RVA: 0x004026DA File Offset: 0x004008DA
+	// (set) Token: 0x0600D830 RID: 55344 RVA: 0x004026E2 File Offset: 0x004008E2
 	public int CardId { get; set; }
 
-	// Token: 0x170013DD RID: 5085
-	// (get) Token: 0x060103C9 RID: 66505 RVA: 0x003F60F3 File Offset: 0x003F42F3
-	// (set) Token: 0x060103CA RID: 66506 RVA: 0x003F60FB File Offset: 0x003F42FB
+	// Token: 0x1700140A RID: 5130
+	// (get) Token: 0x0600D831 RID: 55345 RVA: 0x004026EB File Offset: 0x004008EB
+	// (set) Token: 0x0600D832 RID: 55346 RVA: 0x004026F3 File Offset: 0x004008F3
 	public int ReignsId { get; set; }
 
-	// Token: 0x170013DE RID: 5086
-	// (get) Token: 0x060103CB RID: 66507 RVA: 0x003F6104 File Offset: 0x003F4304
-	// (set) Token: 0x060103CC RID: 66508 RVA: 0x003F610C File Offset: 0x003F430C
+	// Token: 0x1700140B RID: 5131
+	// (get) Token: 0x0600D833 RID: 55347 RVA: 0x004026FC File Offset: 0x004008FC
+	// (set) Token: 0x0600D834 RID: 55348 RVA: 0x00402704 File Offset: 0x00400904
 	public bool IsSuccess { get; set; }
 
-	// Token: 0x170013DF RID: 5087
-	// (get) Token: 0x060103CD RID: 66509 RVA: 0x003F6115 File Offset: 0x003F4315
-	// (set) Token: 0x060103CE RID: 66510 RVA: 0x003F611D File Offset: 0x003F431D
+	// Token: 0x1700140C RID: 5132
+	// (get) Token: 0x0600D835 RID: 55349 RVA: 0x0040270D File Offset: 0x0040090D
+	// (set) Token: 0x0600D836 RID: 55350 RVA: 0x00402715 File Offset: 0x00400915
 	public int NextReignsId { get; set; }
 }

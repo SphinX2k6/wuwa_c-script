@@ -4,17 +4,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071DD RID: 29149
+	// Token: 0x02006292 RID: 25234
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemManipulableAdsorbedState : SceneItemManipulableBaseState
 	{
-		// Token: 0x0604758D RID: 292237 RVA: 0x01223F80 File Offset: 0x01222180
+		// Token: 0x0603CE8F RID: 249487 RVA: 0x0117DDB4 File Offset: 0x0117BFB4
 		public SceneItemManipulableAdsorbedState(SceneItemManipulatableComponent sceneItem) : base(sceneItem)
 		{
 		}
 
-		// Token: 0x0604758E RID: 292238 RVA: 0x01223FE0 File Offset: 0x012221E0
+		// Token: 0x0603CE90 RID: 249488 RVA: 0x0117DE14 File Offset: 0x0117C014
 		protected override void OnEnter()
 		{
 			this.SceneItem.ClearCastDestroyTimer();
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			startRot.DeepCopy(actorRotation);
 		}
 
-		// Token: 0x0604758F RID: 292239 RVA: 0x01224130 File Offset: 0x01222330
+		// Token: 0x0603CE91 RID: 249489 RVA: 0x0117DF64 File Offset: 0x0117C164
 		protected override void OnExit()
 		{
 			base.OnExit();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.IsInit = false;
 		}
 
-		// Token: 0x06047590 RID: 292240 RVA: 0x0122414C File Offset: 0x0122234C
+		// Token: 0x0603CE92 RID: 249490 RVA: 0x0117DF80 File Offset: 0x0117C180
 		protected override void OnTick(float delta)
 		{
 			if (this.IsFirst)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x06047591 RID: 292241 RVA: 0x01224254 File Offset: 0x01222454
+		// Token: 0x0603CE93 RID: 249491 RVA: 0x0117E088 File Offset: 0x0117C288
 		public void InitAdsorptionConfig([Nullable(2)] UCurveFloat adsorptionCurve, Vector endLoc, Rotator endRot)
 		{
 			this.IsInit = true;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.EndRot.DeepCopy(endRot);
 		}
 
-		// Token: 0x06047592 RID: 292242 RVA: 0x012242A7 File Offset: 0x012224A7
+		// Token: 0x0603CE94 RID: 249492 RVA: 0x0117E0DB File Offset: 0x0117C2DB
 		private void MatchOutlet()
 		{
 			this.SceneItem.ActivatedOutlet = this.SceneItem.TargetOutletComponent;
@@ -115,38 +115,38 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SceneItem.RequestAttachToOutlet();
 		}
 
-		// Token: 0x0402582A RID: 153642
+		// Token: 0x04020499 RID: 132249
 		private bool IsInit;
 
-		// Token: 0x0402582B RID: 153643
+		// Token: 0x0402049A RID: 132250
 		[Nullable(2)]
 		private UCurveFloat AdsorptionCurve;
 
-		// Token: 0x0402582C RID: 153644
+		// Token: 0x0402049B RID: 132251
 		private float AdsorptionCurveLength;
 
-		// Token: 0x0402582D RID: 153645
+		// Token: 0x0402049C RID: 132252
 		private float AdsorbTimer;
 
-		// Token: 0x0402582E RID: 153646
+		// Token: 0x0402049D RID: 132253
 		private bool IsFirst = true;
 
-		// Token: 0x0402582F RID: 153647
+		// Token: 0x0402049E RID: 132254
 		private readonly Vector StartLoc = Vector.Create();
 
-		// Token: 0x04025830 RID: 153648
+		// Token: 0x0402049F RID: 132255
 		private readonly Vector EndLoc = Vector.Create();
 
-		// Token: 0x04025831 RID: 153649
+		// Token: 0x040204A0 RID: 132256
 		private readonly Vector CurrentLoc = Vector.Create();
 
-		// Token: 0x04025832 RID: 153650
+		// Token: 0x040204A1 RID: 132257
 		private readonly Rotator StartRot = Rotator.Create();
 
-		// Token: 0x04025833 RID: 153651
+		// Token: 0x040204A2 RID: 132258
 		private readonly Rotator EndRot = Rotator.Create();
 
-		// Token: 0x04025834 RID: 153652
+		// Token: 0x040204A3 RID: 132259
 		private readonly Rotator CurrentRot = Rotator.Create();
 	}
 }

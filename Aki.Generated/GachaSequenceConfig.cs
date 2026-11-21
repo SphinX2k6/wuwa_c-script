@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CE2 RID: 3298
+	// Token: 0x02000DC6 RID: 3526
 	public struct GachaSequenceConfig : IFlatbufferObject
 	{
-		// Token: 0x170014B4 RID: 5300
-		// (get) Token: 0x06007833 RID: 30771 RVA: 0x0024614A File Offset: 0x0024434A
+		// Token: 0x17001511 RID: 5393
+		// (get) Token: 0x06007E3E RID: 32318 RVA: 0x00264CC6 File Offset: 0x00262EC6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007834 RID: 30772 RVA: 0x00246157 File Offset: 0x00244357
+		// Token: 0x06007E3F RID: 32319 RVA: 0x00264CD3 File Offset: 0x00262ED3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007835 RID: 30773 RVA: 0x00246160 File Offset: 0x00244360
+		// Token: 0x06007E40 RID: 32320 RVA: 0x00264CDC File Offset: 0x00262EDC
 		public static GachaSequenceConfig GetRootAsGachaSequenceConfig(ByteBuffer _bb)
 		{
 			return GachaSequenceConfig.GetRootAsGachaSequenceConfig(_bb, default(GachaSequenceConfig));
 		}
 
-		// Token: 0x06007836 RID: 30774 RVA: 0x0024617C File Offset: 0x0024437C
+		// Token: 0x06007E41 RID: 32321 RVA: 0x00264CF8 File Offset: 0x00262EF8
 		public static GachaSequenceConfig GetRootAsGachaSequenceConfig(ByteBuffer _bb, GachaSequenceConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007837 RID: 30775 RVA: 0x00246199 File Offset: 0x00244399
+		// Token: 0x06007E42 RID: 32322 RVA: 0x00264D15 File Offset: 0x00262F15
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007838 RID: 30776 RVA: 0x002461A8 File Offset: 0x002443A8
+		// Token: 0x06007E43 RID: 32323 RVA: 0x00264D24 File Offset: 0x00262F24
 		public GachaSequenceConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170014B5 RID: 5301
-		// (get) Token: 0x06007839 RID: 30777 RVA: 0x002461B8 File Offset: 0x002443B8
+		// Token: 0x17001512 RID: 5394
+		// (get) Token: 0x06007E44 RID: 32324 RVA: 0x00264D34 File Offset: 0x00262F34
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014B6 RID: 5302
-		// (get) Token: 0x0600783A RID: 30778 RVA: 0x002461F4 File Offset: 0x002443F4
+		// Token: 0x17001513 RID: 5395
+		// (get) Token: 0x06007E45 RID: 32325 RVA: 0x00264D70 File Offset: 0x00262F70
 		public string SequencePath
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600783B RID: 30779 RVA: 0x0024622B File Offset: 0x0024442B
+		// Token: 0x06007E46 RID: 32326 RVA: 0x00264DA7 File Offset: 0x00262FA7
 		public Span<byte> GetSequencePathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600783C RID: 30780 RVA: 0x0024623A File Offset: 0x0024443A
+		// Token: 0x06007E47 RID: 32327 RVA: 0x00264DB6 File Offset: 0x00262FB6
 		public byte[] GetSequencePathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004D53 RID: 19795
+		// Token: 0x04005337 RID: 21303
 		private Table __p;
 	}
 }

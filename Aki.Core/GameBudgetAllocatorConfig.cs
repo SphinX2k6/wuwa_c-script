@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020000A7 RID: 167
+// Token: 0x020000A9 RID: 169
 [NullableContext(1)]
 [Nullable(0)]
 public class GameBudgetAllocatorConfig
 {
-	// Token: 0x170000A3 RID: 163
-	// (get) Token: 0x060004EC RID: 1260 RVA: 0x0001B54E File Offset: 0x0001974E
-	// (set) Token: 0x060004ED RID: 1261 RVA: 0x0001B556 File Offset: 0x00019756
+	// Token: 0x170000B5 RID: 181
+	// (get) Token: 0x0600052D RID: 1325 RVA: 0x0001BC36 File Offset: 0x00019E36
+	// (set) Token: 0x0600052E RID: 1326 RVA: 0x0001BC3E File Offset: 0x00019E3E
 	public TsGameBudgetAllocatorTickIntervalDetailConfig Default
 	{
 		get
@@ -23,9 +23,9 @@ public class GameBudgetAllocatorConfig
 		}
 	}
 
-	// Token: 0x170000A4 RID: 164
-	// (get) Token: 0x060004EE RID: 1262 RVA: 0x0001B570 File Offset: 0x00019770
-	// (set) Token: 0x060004EF RID: 1263 RVA: 0x0001B578 File Offset: 0x00019778
+	// Token: 0x170000B6 RID: 182
+	// (get) Token: 0x0600052F RID: 1327 RVA: 0x0001BC58 File Offset: 0x00019E58
+	// (set) Token: 0x06000530 RID: 1328 RVA: 0x0001BC60 File Offset: 0x00019E60
 	public TsGameBudgetAllocatorTickIntervalDetailConfig Normal_Render
 	{
 		get
@@ -39,9 +39,9 @@ public class GameBudgetAllocatorConfig
 		}
 	}
 
-	// Token: 0x170000A5 RID: 165
-	// (get) Token: 0x060004F0 RID: 1264 RVA: 0x0001B592 File Offset: 0x00019792
-	// (set) Token: 0x060004F1 RID: 1265 RVA: 0x0001B59A File Offset: 0x0001979A
+	// Token: 0x170000B7 RID: 183
+	// (get) Token: 0x06000531 RID: 1329 RVA: 0x0001BC7A File Offset: 0x00019E7A
+	// (set) Token: 0x06000532 RID: 1330 RVA: 0x0001BC82 File Offset: 0x00019E82
 	public TsGameBudgetAllocatorTickIntervalDetailConfig Normal_NotRendered
 	{
 		get
@@ -55,9 +55,9 @@ public class GameBudgetAllocatorConfig
 		}
 	}
 
-	// Token: 0x170000A6 RID: 166
-	// (get) Token: 0x060004F2 RID: 1266 RVA: 0x0001B5B4 File Offset: 0x000197B4
-	// (set) Token: 0x060004F3 RID: 1267 RVA: 0x0001B5BC File Offset: 0x000197BC
+	// Token: 0x170000B8 RID: 184
+	// (get) Token: 0x06000533 RID: 1331 RVA: 0x0001BC9C File Offset: 0x00019E9C
+	// (set) Token: 0x06000534 RID: 1332 RVA: 0x0001BCA4 File Offset: 0x00019EA4
 	public TsGameBudgetAllocatorTickIntervalDetailConfig Normal_Fighting
 	{
 		get
@@ -71,9 +71,9 @@ public class GameBudgetAllocatorConfig
 		}
 	}
 
-	// Token: 0x170000A7 RID: 167
-	// (get) Token: 0x060004F4 RID: 1268 RVA: 0x0001B5D6 File Offset: 0x000197D6
-	// (set) Token: 0x060004F5 RID: 1269 RVA: 0x0001B5DE File Offset: 0x000197DE
+	// Token: 0x170000B9 RID: 185
+	// (get) Token: 0x06000535 RID: 1333 RVA: 0x0001BCBE File Offset: 0x00019EBE
+	// (set) Token: 0x06000536 RID: 1334 RVA: 0x0001BCC6 File Offset: 0x00019EC6
 	public TsGameBudgetAllocatorTickIntervalDetailConfig Fighting_Rendered
 	{
 		get
@@ -87,9 +87,9 @@ public class GameBudgetAllocatorConfig
 		}
 	}
 
-	// Token: 0x170000A8 RID: 168
-	// (get) Token: 0x060004F6 RID: 1270 RVA: 0x0001B5F8 File Offset: 0x000197F8
-	// (set) Token: 0x060004F7 RID: 1271 RVA: 0x0001B600 File Offset: 0x00019800
+	// Token: 0x170000BA RID: 186
+	// (get) Token: 0x06000537 RID: 1335 RVA: 0x0001BCE0 File Offset: 0x00019EE0
+	// (set) Token: 0x06000538 RID: 1336 RVA: 0x0001BCE8 File Offset: 0x00019EE8
 	public TsGameBudgetAllocatorTickIntervalDetailConfig Fighting_NotRendered
 	{
 		get
@@ -103,9 +103,9 @@ public class GameBudgetAllocatorConfig
 		}
 	}
 
-	// Token: 0x170000A9 RID: 169
-	// (get) Token: 0x060004F8 RID: 1272 RVA: 0x0001B61A File Offset: 0x0001981A
-	// (set) Token: 0x060004F9 RID: 1273 RVA: 0x0001B622 File Offset: 0x00019822
+	// Token: 0x170000BB RID: 187
+	// (get) Token: 0x06000539 RID: 1337 RVA: 0x0001BD02 File Offset: 0x00019F02
+	// (set) Token: 0x0600053A RID: 1338 RVA: 0x0001BD0A File Offset: 0x00019F0A
 	public TsGameBudgetAllocatorTickIntervalDetailConfig Fighting_Fighting
 	{
 		get
@@ -119,9 +119,9 @@ public class GameBudgetAllocatorConfig
 		}
 	}
 
-	// Token: 0x170000AA RID: 170
-	// (get) Token: 0x060004FA RID: 1274 RVA: 0x0001B63C File Offset: 0x0001983C
-	// (set) Token: 0x060004FB RID: 1275 RVA: 0x0001B644 File Offset: 0x00019844
+	// Token: 0x170000BC RID: 188
+	// (get) Token: 0x0600053B RID: 1339 RVA: 0x0001BD24 File Offset: 0x00019F24
+	// (set) Token: 0x0600053C RID: 1340 RVA: 0x0001BD2C File Offset: 0x00019F2C
 	public TsGameBudgetAllocatorTickIntervalDetailConfig Cutscene_Rendered
 	{
 		get
@@ -135,9 +135,9 @@ public class GameBudgetAllocatorConfig
 		}
 	}
 
-	// Token: 0x170000AB RID: 171
-	// (get) Token: 0x060004FC RID: 1276 RVA: 0x0001B65E File Offset: 0x0001985E
-	// (set) Token: 0x060004FD RID: 1277 RVA: 0x0001B666 File Offset: 0x00019866
+	// Token: 0x170000BD RID: 189
+	// (get) Token: 0x0600053D RID: 1341 RVA: 0x0001BD46 File Offset: 0x00019F46
+	// (set) Token: 0x0600053E RID: 1342 RVA: 0x0001BD4E File Offset: 0x00019F4E
 	public TsGameBudgetAllocatorTickIntervalDetailConfig Cutscene_NotRendered
 	{
 		get
@@ -151,9 +151,9 @@ public class GameBudgetAllocatorConfig
 		}
 	}
 
-	// Token: 0x170000AC RID: 172
-	// (get) Token: 0x060004FE RID: 1278 RVA: 0x0001B680 File Offset: 0x00019880
-	// (set) Token: 0x060004FF RID: 1279 RVA: 0x0001B688 File Offset: 0x00019888
+	// Token: 0x170000BE RID: 190
+	// (get) Token: 0x0600053F RID: 1343 RVA: 0x0001BD68 File Offset: 0x00019F68
+	// (set) Token: 0x06000540 RID: 1344 RVA: 0x0001BD70 File Offset: 0x00019F70
 	public TsGameBudgetAllocatorTickIntervalDetailConfig Cutscene_Fighting
 	{
 		get
@@ -167,7 +167,7 @@ public class GameBudgetAllocatorConfig
 		}
 	}
 
-	// Token: 0x170000AD RID: 173
+	// Token: 0x170000BF RID: 191
 	public TsGameBudgetAllocatorTickIntervalDetailConfig this[string key]
 	{
 		get
@@ -176,8 +176,8 @@ public class GameBudgetAllocatorConfig
 		}
 	}
 
-	// Token: 0x170000AE RID: 174
-	// (get) Token: 0x06000501 RID: 1281 RVA: 0x0001B6B0 File Offset: 0x000198B0
+	// Token: 0x170000C0 RID: 192
+	// (get) Token: 0x06000542 RID: 1346 RVA: 0x0001BD98 File Offset: 0x00019F98
 	public Dictionary<string, TsGameBudgetAllocatorTickIntervalDetailConfig>.KeyCollection Keys
 	{
 		get
@@ -186,46 +186,46 @@ public class GameBudgetAllocatorConfig
 		}
 	}
 
-	// Token: 0x0400042F RID: 1071
+	// Token: 0x0400043D RID: 1085
 	[Nullable(2)]
 	private TsGameBudgetAllocatorTickIntervalDetailConfig _Default;
 
-	// Token: 0x04000430 RID: 1072
+	// Token: 0x0400043E RID: 1086
 	[Nullable(2)]
 	private TsGameBudgetAllocatorTickIntervalDetailConfig _Normal_Render;
 
-	// Token: 0x04000431 RID: 1073
+	// Token: 0x0400043F RID: 1087
 	[Nullable(2)]
 	private TsGameBudgetAllocatorTickIntervalDetailConfig _Normal_NotRendered;
 
-	// Token: 0x04000432 RID: 1074
+	// Token: 0x04000440 RID: 1088
 	[Nullable(2)]
 	private TsGameBudgetAllocatorTickIntervalDetailConfig _Normal_Fighting;
 
-	// Token: 0x04000433 RID: 1075
+	// Token: 0x04000441 RID: 1089
 	[Nullable(2)]
 	private TsGameBudgetAllocatorTickIntervalDetailConfig _Fighting_Rendered;
 
-	// Token: 0x04000434 RID: 1076
+	// Token: 0x04000442 RID: 1090
 	[Nullable(2)]
 	private TsGameBudgetAllocatorTickIntervalDetailConfig _Fighting_NotRendered;
 
-	// Token: 0x04000435 RID: 1077
+	// Token: 0x04000443 RID: 1091
 	[Nullable(2)]
 	private TsGameBudgetAllocatorTickIntervalDetailConfig _Fighting_Fighting;
 
-	// Token: 0x04000436 RID: 1078
+	// Token: 0x04000444 RID: 1092
 	[Nullable(2)]
 	public TsGameBudgetAllocatorTickIntervalDetailConfig _Cutscene_Rendered;
 
-	// Token: 0x04000437 RID: 1079
+	// Token: 0x04000445 RID: 1093
 	[Nullable(2)]
 	public TsGameBudgetAllocatorTickIntervalDetailConfig _Cutscene_NotRendered;
 
-	// Token: 0x04000438 RID: 1080
+	// Token: 0x04000446 RID: 1094
 	[Nullable(2)]
 	public TsGameBudgetAllocatorTickIntervalDetailConfig _Cutscene_Fighting;
 
-	// Token: 0x04000439 RID: 1081
+	// Token: 0x04000447 RID: 1095
 	private readonly Dictionary<string, TsGameBudgetAllocatorTickIntervalDetailConfig> ConfigMap = new Dictionary<string, TsGameBudgetAllocatorTickIntervalDetailConfig>();
 }

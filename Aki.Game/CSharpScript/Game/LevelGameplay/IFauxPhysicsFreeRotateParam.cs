@@ -3,37 +3,37 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006975 RID: 26997
+	// Token: 0x02005AD1 RID: 23249
 	public class IFauxPhysicsFreeRotateParam : IFauxPhysicsRotateParam
 	{
-		// Token: 0x1700981C RID: 38940
-		// (get) Token: 0x06043342 RID: 275266 RVA: 0x01062466 File Offset: 0x01060666
-		// (set) Token: 0x06043343 RID: 275267 RVA: 0x0106246E File Offset: 0x0106066E
+		// Token: 0x17006CFC RID: 27900
+		// (get) Token: 0x0603937A RID: 234362 RVA: 0x010066CE File Offset: 0x010048CE
+		// (set) Token: 0x0603937B RID: 234363 RVA: 0x010066D6 File Offset: 0x010048D6
 		public EFauxPhysicsRotateParam Type { get; set; }
 
-		// Token: 0x1700981D RID: 38941
-		// (get) Token: 0x06043344 RID: 275268 RVA: 0x01062477 File Offset: 0x01060677
-		// (set) Token: 0x06043345 RID: 275269 RVA: 0x0106247F File Offset: 0x0106067F
+		// Token: 0x17006CFD RID: 27901
+		// (get) Token: 0x0603937C RID: 234364 RVA: 0x010066DF File Offset: 0x010048DF
+		// (set) Token: 0x0603937D RID: 234365 RVA: 0x010066E7 File Offset: 0x010048E7
 		public FVector? Origin { get; set; }
 
-		// Token: 0x1700981E RID: 38942
-		// (get) Token: 0x06043346 RID: 275270 RVA: 0x01062488 File Offset: 0x01060688
-		// (set) Token: 0x06043347 RID: 275271 RVA: 0x01062490 File Offset: 0x01060690
+		// Token: 0x17006CFE RID: 27902
+		// (get) Token: 0x0603937E RID: 234366 RVA: 0x010066F0 File Offset: 0x010048F0
+		// (set) Token: 0x0603937F RID: 234367 RVA: 0x010066F8 File Offset: 0x010048F8
 		public FVector? RelativeOffset { get; set; }
 
-		// Token: 0x1700981F RID: 38943
-		// (get) Token: 0x06043348 RID: 275272 RVA: 0x01062499 File Offset: 0x01060699
-		// (set) Token: 0x06043349 RID: 275273 RVA: 0x010624A1 File Offset: 0x010606A1
+		// Token: 0x17006CFF RID: 27903
+		// (get) Token: 0x06039380 RID: 234368 RVA: 0x01006701 File Offset: 0x01004901
+		// (set) Token: 0x06039381 RID: 234369 RVA: 0x01006709 File Offset: 0x01004909
 		public FVector? Force { get; set; }
 
-		// Token: 0x17009820 RID: 38944
-		// (get) Token: 0x0604334A RID: 275274 RVA: 0x010624AA File Offset: 0x010606AA
-		// (set) Token: 0x0604334B RID: 275275 RVA: 0x010624B2 File Offset: 0x010606B2
+		// Token: 0x17006D00 RID: 27904
+		// (get) Token: 0x06039382 RID: 234370 RVA: 0x01006712 File Offset: 0x01004912
+		// (set) Token: 0x06039383 RID: 234371 RVA: 0x0100671A File Offset: 0x0100491A
 		public FVector? Impulse { get; set; }
 
-		// Token: 0x17009821 RID: 38945
-		// (get) Token: 0x0604334C RID: 275276 RVA: 0x010624BB File Offset: 0x010606BB
-		// (set) Token: 0x0604334D RID: 275277 RVA: 0x010624C3 File Offset: 0x010606C3
+		// Token: 0x17006D01 RID: 27905
+		// (get) Token: 0x06039384 RID: 234372 RVA: 0x01006723 File Offset: 0x01004923
+		// (set) Token: 0x06039385 RID: 234373 RVA: 0x0100672B File Offset: 0x0100492B
 		public FVector? Movement { get; set; }
 	}
 }

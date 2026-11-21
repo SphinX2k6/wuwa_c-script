@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028A0 RID: 10400
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B75 RID: 11125
 	public class ILoopSeasonChange : IClientSetSeasonStateConfig
 	{
-		// Token: 0x0600E63A RID: 58938 RVA: 0x0021D448 File Offset: 0x0021B648
+		// Token: 0x0600F469 RID: 62569 RVA: 0x0023A3C8 File Offset: 0x002385C8
 		public static ILoopSeasonChange Create(ILoopSeasonChange? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170046BC RID: 18108
-		// (get) Token: 0x0600E63B RID: 58939 RVA: 0x0021D467 File Offset: 0x0021B667
+		// Token: 0x17004A2D RID: 18989
+		// (get) Token: 0x0600F46A RID: 62570 RVA: 0x0023A3E7 File Offset: 0x002385E7
 		public override EClientSetSeasonStateType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046BD RID: 18109
-		// (get) Token: 0x0600E63C RID: 58940 RVA: 0x0021D474 File Offset: 0x0021B674
+		// Token: 0x17004A2E RID: 18990
+		// (get) Token: 0x0600F46B RID: 62571 RVA: 0x0023A3F4 File Offset: 0x002385F4
 		public virtual bool EnableLoop
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046BE RID: 18110
-		// (get) Token: 0x0600E63D RID: 58941 RVA: 0x0021D481 File Offset: 0x0021B681
+		// Token: 0x17004A2F RID: 18991
+		// (get) Token: 0x0600F46C RID: 62572 RVA: 0x0023A401 File Offset: 0x00238601
 		public virtual ISeasonLoopConfig SpringConfig
 		{
 			get
@@ -58,8 +56,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046BF RID: 18111
-		// (get) Token: 0x0600E63E RID: 58942 RVA: 0x0021D4B5 File Offset: 0x0021B6B5
+		// Token: 0x17004A30 RID: 18992
+		// (get) Token: 0x0600F46D RID: 62573 RVA: 0x0023A435 File Offset: 0x00238635
 		public virtual ISeasonLoopConfig SummerConfig
 		{
 			get
@@ -74,8 +72,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046C0 RID: 18112
-		// (get) Token: 0x0600E63F RID: 58943 RVA: 0x0021D4E9 File Offset: 0x0021B6E9
+		// Token: 0x17004A31 RID: 18993
+		// (get) Token: 0x0600F46E RID: 62574 RVA: 0x0023A469 File Offset: 0x00238669
 		public virtual ISeasonLoopConfig AutumnConfig
 		{
 			get
@@ -90,8 +88,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046C1 RID: 18113
-		// (get) Token: 0x0600E640 RID: 58944 RVA: 0x0021D51D File Offset: 0x0021B71D
+		// Token: 0x17004A32 RID: 18994
+		// (get) Token: 0x0600F46F RID: 62575 RVA: 0x0023A49D File Offset: 0x0023869D
 		public virtual ISeasonLoopConfig WinterConfig
 		{
 			get
@@ -106,35 +104,35 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F46 RID: 32582
+		// Token: 0x04008605 RID: 34309
 		private ILoopSeasonChange Instance;
 
-		// Token: 0x04007F47 RID: 32583
+		// Token: 0x04008606 RID: 34310
 		[Nullable(2)]
 		private ISeasonLoopConfig _SpringConfigCache;
 
-		// Token: 0x04007F48 RID: 32584
+		// Token: 0x04008607 RID: 34311
 		private bool _SpringConfigInited;
 
-		// Token: 0x04007F49 RID: 32585
+		// Token: 0x04008608 RID: 34312
 		[Nullable(2)]
 		private ISeasonLoopConfig _SummerConfigCache;
 
-		// Token: 0x04007F4A RID: 32586
+		// Token: 0x04008609 RID: 34313
 		private bool _SummerConfigInited;
 
-		// Token: 0x04007F4B RID: 32587
+		// Token: 0x0400860A RID: 34314
 		[Nullable(2)]
 		private ISeasonLoopConfig _AutumnConfigCache;
 
-		// Token: 0x04007F4C RID: 32588
+		// Token: 0x0400860B RID: 34315
 		private bool _AutumnConfigInited;
 
-		// Token: 0x04007F4D RID: 32589
+		// Token: 0x0400860C RID: 34316
 		[Nullable(2)]
 		private ISeasonLoopConfig _WinterConfigCache;
 
-		// Token: 0x04007F4E RID: 32590
+		// Token: 0x0400860D RID: 34317
 		private bool _WinterConfigInited;
 	}
 }

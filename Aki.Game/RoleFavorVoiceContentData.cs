@@ -2,20 +2,20 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002844 RID: 10308
+// Token: 0x02001DBF RID: 7615
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleFavorVoiceContentData : RoleFavorContentDataBase
 {
-	// Token: 0x0601541E RID: 87070 RVA: 0x0055F20F File Offset: 0x0055D40F
+	// Token: 0x06012E1C RID: 77340 RVA: 0x00589F6B File Offset: 0x0058816B
 	public RoleFavorVoiceContentData(int roleId, EFavorVoiceType favorVoiceParamType, FavorWord configData) : base(roleId)
 	{
 		this.FavorVoiceParamType = favorVoiceParamType;
 		this.ConfigData = configData;
 	}
 
-	// Token: 0x17001C51 RID: 7249
-	// (get) Token: 0x0601541F RID: 87071 RVA: 0x0055F22D File Offset: 0x0055D42D
+	// Token: 0x17001CA9 RID: 7337
+	// (get) Token: 0x06012E1D RID: 77341 RVA: 0x00589F89 File Offset: 0x00588189
 	public override int ConfigId
 	{
 		get
@@ -24,8 +24,8 @@ public class RoleFavorVoiceContentData : RoleFavorContentDataBase
 		}
 	}
 
-	// Token: 0x17001C52 RID: 7250
-	// (get) Token: 0x06015420 RID: 87072 RVA: 0x0055F23A File Offset: 0x0055D43A
+	// Token: 0x17001CAA RID: 7338
+	// (get) Token: 0x06012E1E RID: 77342 RVA: 0x00589F96 File Offset: 0x00588196
 	public override int ConfigConGroupId
 	{
 		get
@@ -34,8 +34,8 @@ public class RoleFavorVoiceContentData : RoleFavorContentDataBase
 		}
 	}
 
-	// Token: 0x17001C53 RID: 7251
-	// (get) Token: 0x06015421 RID: 87073 RVA: 0x0055F247 File Offset: 0x0055D447
+	// Token: 0x17001CAB RID: 7339
+	// (get) Token: 0x06012E1F RID: 77343 RVA: 0x00589FA3 File Offset: 0x005881A3
 	public override string TitleTextId
 	{
 		get
@@ -44,8 +44,8 @@ public class RoleFavorVoiceContentData : RoleFavorContentDataBase
 		}
 	}
 
-	// Token: 0x17001C54 RID: 7252
-	// (get) Token: 0x06015422 RID: 87074 RVA: 0x0055F254 File Offset: 0x0055D454
+	// Token: 0x17001CAC RID: 7340
+	// (get) Token: 0x06012E20 RID: 77344 RVA: 0x00589FB0 File Offset: 0x005881B0
 	public override string ContentTextId
 	{
 		get
@@ -54,15 +54,15 @@ public class RoleFavorVoiceContentData : RoleFavorContentDataBase
 		}
 	}
 
-	// Token: 0x06015423 RID: 87075 RVA: 0x0055F261 File Offset: 0x0055D461
+	// Token: 0x06012E21 RID: 77345 RVA: 0x00589FBD File Offset: 0x005881BD
 	protected override EFavorContentType GetFavorContentType()
 	{
 		return EFavorContentType.Voice;
 	}
 
-	// Token: 0x04009EC6 RID: 40646
+	// Token: 0x0400A2AF RID: 41647
 	public EFavorVoiceType FavorVoiceParamType = EFavorVoiceType.FavorNatureVoice;
 
-	// Token: 0x04009EC7 RID: 40647
+	// Token: 0x0400A2B0 RID: 41648
 	public FavorWord ConfigData;
 }

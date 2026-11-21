@@ -4,10 +4,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006960 RID: 26976
+	// Token: 0x02005ABB RID: 23227
 	public class BreakWeakness : ActionParams
 	{
-		// Token: 0x04022FE2 RID: 143330
+		// Token: 0x0401E1CC RID: 123340
 		[Nullable(2)]
 		public ActionSendGameplayEvent SuccessEvent;
 	}

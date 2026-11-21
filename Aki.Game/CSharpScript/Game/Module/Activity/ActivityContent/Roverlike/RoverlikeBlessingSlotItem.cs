@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006135 RID: 24885
+	// Token: 0x020050B3 RID: 20659
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeBlessingSlotItem : GridProxyAbstract<IRoverlikeBlessingSlotItemData>
 	{
-		// Token: 0x0603EE9A RID: 257690 RVA: 0x00F322A8 File Offset: 0x00F304A8
+		// Token: 0x06033B5A RID: 211802 RVA: 0x00E79188 File Offset: 0x00E77388
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EE9B RID: 257691 RVA: 0x00F32353 File Offset: 0x00F30553
+		// Token: 0x06033B5B RID: 211803 RVA: 0x00E79233 File Offset: 0x00E77433
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x0603EE9C RID: 257692 RVA: 0x00F32368 File Offset: 0x00F30568
+		// Token: 0x06033B5C RID: 211804 RVA: 0x00E79248 File Offset: 0x00E77448
 		public void PlaySelectAnim()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			levelSequencePlayer.PlayOrReplaySequenceByName("Select", false, null);
 		}
 
-		// Token: 0x0603EE9D RID: 257693 RVA: 0x00F32394 File Offset: 0x00F30594
+		// Token: 0x06033B5D RID: 211805 RVA: 0x00E79274 File Offset: 0x00E77474
 		public override void Refresh(IRoverlikeBlessingSlotItemData data, bool isSelected, int gridIndex)
 		{
 			UUITexture texture = base.GetTexture(1);
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EE9E RID: 257694 RVA: 0x00F324A4 File Offset: 0x00F306A4
+		// Token: 0x06033B5E RID: 211806 RVA: 0x00E79384 File Offset: 0x00E77584
 		[NullableContext(2)]
 		private string GetSlotEmptyIconPath(int slotId)
 		{
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return null;
 		}
 
-		// Token: 0x0603EE9F RID: 257695 RVA: 0x00F32544 File Offset: 0x00F30744
+		// Token: 0x06033B5F RID: 211807 RVA: 0x00E79424 File Offset: 0x00E77624
 		private void SetIconByPath(string iconPath, UUITexture iconTexture, UUISprite iconSprite)
 		{
 			bool flag = iconPath.Contains("Atlas");
@@ -139,36 +139,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.SetTextureShowUntilLoaded(iconPath, iconTexture, null);
 		}
 
-		// Token: 0x0603EEA0 RID: 257696 RVA: 0x00F3258E File Offset: 0x00F3078E
+		// Token: 0x06033B60 RID: 211808 RVA: 0x00E7946E File Offset: 0x00E7766E
 		public void SetSelectOn(bool bSelectOn)
 		{
 			base.GetItem(2).SetUIActive(bSelectOn);
 		}
 
-		// Token: 0x0603EEA1 RID: 257697 RVA: 0x00F3259D File Offset: 0x00F3079D
+		// Token: 0x06033B61 RID: 211809 RVA: 0x00E7947D File Offset: 0x00E7767D
 		public override object GetKey(IRoverlikeBlessingSlotItemData data, int displayIndex)
 		{
 			return data.SlotId;
 		}
 
-		// Token: 0x04020D85 RID: 134533
+		// Token: 0x0401B6B2 RID: 112306
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200C392 RID: 50066
+		// Token: 0x0200AD79 RID: 44409
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B04C RID: 241740
+			// Token: 0x040359AD RID: 219565
 			public const int BlessSlotQuality = 0;
 
-			// Token: 0x0403B04D RID: 241741
+			// Token: 0x040359AE RID: 219566
 			public const int TexIcon = 1;
 
-			// Token: 0x0403B04E RID: 241742
+			// Token: 0x040359AF RID: 219567
 			public const int ItemSelectOn = 2;
 
-			// Token: 0x0403B04F RID: 241743
+			// Token: 0x040359B0 RID: 219568
 			public const int SpriteIcon = 3;
 		}
 	}

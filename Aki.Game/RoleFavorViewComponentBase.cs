@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002874 RID: 10356
+// Token: 0x02001DEF RID: 7663
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleFavorViewComponentBase : UiPanelBase
 {
-	// Token: 0x060154F3 RID: 87283 RVA: 0x00561EFD File Offset: 0x005600FD
+	// Token: 0x06012EF1 RID: 77553 RVA: 0x0058CC59 File Offset: 0x0058AE59
 	public void SetData(RoleFavorContentDataBase contentData, bool isActive = true)
 	{
 		this.ContentData = contentData;
@@ -20,17 +20,17 @@ public class RoleFavorViewComponentBase : UiPanelBase
 		this.SetComponentActive(isActive);
 	}
 
-	// Token: 0x060154F4 RID: 87284 RVA: 0x00561F24 File Offset: 0x00560124
+	// Token: 0x06012EF2 RID: 77554 RVA: 0x0058CC80 File Offset: 0x0058AE80
 	protected virtual void OnSetData(RoleFavorContentDataBase contentData)
 	{
 	}
 
-	// Token: 0x060154F5 RID: 87285 RVA: 0x00561F26 File Offset: 0x00560126
+	// Token: 0x06012EF3 RID: 77555 RVA: 0x0058CC82 File Offset: 0x0058AE82
 	protected virtual void OnRefreshView()
 	{
 	}
 
-	// Token: 0x060154F6 RID: 87286 RVA: 0x00561F28 File Offset: 0x00560128
+	// Token: 0x06012EF4 RID: 77556 RVA: 0x0058CC84 File Offset: 0x0058AE84
 	public void SetComponentActive(bool active)
 	{
 		this.IsActive = active;
@@ -40,24 +40,24 @@ public class RoleFavorViewComponentBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x060154F7 RID: 87287 RVA: 0x00561F45 File Offset: 0x00560145
+	// Token: 0x06012EF5 RID: 77557 RVA: 0x0058CCA1 File Offset: 0x0058AEA1
 	[NullableContext(2)]
 	public RoleFavorContentDataBase GetContentData()
 	{
 		return this.ContentData;
 	}
 
-	// Token: 0x060154F8 RID: 87288 RVA: 0x00561F4D File Offset: 0x0056014D
+	// Token: 0x06012EF6 RID: 77558 RVA: 0x0058CCA9 File Offset: 0x0058AEA9
 	protected override void OnBeforeDestroy()
 	{
 		this.ContentData = null;
 		this.IsActive = false;
 	}
 
-	// Token: 0x04009F4A RID: 40778
+	// Token: 0x0400A333 RID: 41779
 	[Nullable(2)]
 	protected RoleFavorContentDataBase ContentData;
 
-	// Token: 0x04009F4B RID: 40779
+	// Token: 0x0400A334 RID: 41780
 	protected bool IsActive;
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003ABB RID: 15035
+	// Token: 0x02003EBD RID: 16061
 	public class IRectT
 	{
-		// Token: 0x17006726 RID: 26406
-		// (get) Token: 0x0601471E RID: 83742 RVA: 0x002FACB2 File Offset: 0x002F8EB2
-		// (set) Token: 0x0601471F RID: 83743 RVA: 0x002FACBA File Offset: 0x002F8EBA
+		// Token: 0x17006CC1 RID: 27841
+		// (get) Token: 0x06015BC8 RID: 89032 RVA: 0x00320F42 File Offset: 0x0031F142
+		// (set) Token: 0x06015BC9 RID: 89033 RVA: 0x00320F4A File Offset: 0x0031F14A
 		public IVector2T Min { get; set; }
 
-		// Token: 0x17006727 RID: 26407
-		// (get) Token: 0x06014720 RID: 83744 RVA: 0x002FACC3 File Offset: 0x002F8EC3
-		// (set) Token: 0x06014721 RID: 83745 RVA: 0x002FACCB File Offset: 0x002F8ECB
+		// Token: 0x17006CC2 RID: 27842
+		// (get) Token: 0x06015BCA RID: 89034 RVA: 0x00320F53 File Offset: 0x0031F153
+		// (set) Token: 0x06015BCB RID: 89035 RVA: 0x00320F5B File Offset: 0x0031F15B
 		public IVector2T Max { get; set; }
 
-		// Token: 0x06014722 RID: 83746 RVA: 0x002FACD4 File Offset: 0x002F8ED4
+		// Token: 0x06015BCC RID: 89036 RVA: 0x00320F64 File Offset: 0x0031F164
 		public IRectT()
 		{
 			this.Min = null;

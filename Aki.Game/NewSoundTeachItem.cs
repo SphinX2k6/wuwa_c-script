@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.AdventureGuide.Views;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016A9 RID: 5801
+// Token: 0x02000B61 RID: 2913
 public class NewSoundTeachItem : UiPanelBase, INewSoundItem
 {
-	// Token: 0x0600A581 RID: 42369 RVA: 0x0024FF50 File Offset: 0x0024E150
+	// Token: 0x06007961 RID: 31073 RVA: 0x0025A364 File Offset: 0x00258564
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -24,7 +24,7 @@ public class NewSoundTeachItem : UiPanelBase, INewSoundItem
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A582 RID: 42370 RVA: 0x0024FFBC File Offset: 0x0024E1BC
+	// Token: 0x06007962 RID: 31074 RVA: 0x0025A3D0 File Offset: 0x002585D0
 	[NullableContext(1)]
 	public void Update(NewSoundDetectItemData sourceData)
 	{
@@ -35,12 +35,12 @@ public class NewSoundTeachItem : UiPanelBase, INewSoundItem
 		base.SetTextureShowUntilLoaded(detectRecordData.BigIcon, texture, null);
 	}
 
-	// Token: 0x02007C81 RID: 31873
+	// Token: 0x02006E06 RID: 28166
 	private enum EChildType
 	{
-		// Token: 0x04028D94 RID: 167316
+		// Token: 0x040240BD RID: 147645
 		NameText,
-		// Token: 0x04028D95 RID: 167317
+		// Token: 0x040240BE RID: 147646
 		IconTexture
 	}
 }

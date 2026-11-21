@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ADD RID: 6877
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C84 RID: 7300
 	public class IGreatSwordChallenge : ICommonTipType
 	{
-		// Token: 0x06009362 RID: 37730 RVA: 0x0015612C File Offset: 0x0015432C
+		// Token: 0x06009B20 RID: 39712 RVA: 0x0016694C File Offset: 0x00164B4C
 		private IGreatSwordChallenge_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009363 RID: 37731 RVA: 0x00156164 File Offset: 0x00154364
+		// Token: 0x06009B21 RID: 39713 RVA: 0x00166984 File Offset: 0x00164B84
 		public static IGreatSwordChallenge Create([Nullable(2)] IGreatSwordChallenge instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009364 RID: 37732 RVA: 0x00156177 File Offset: 0x00154377
+		// Token: 0x06009B22 RID: 39714 RVA: 0x00166997 File Offset: 0x00164B97
 		public static IGreatSwordChallenge CreateFromSetValue([Nullable(2)] IGreatSwordChallenge_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009365 RID: 37733 RVA: 0x0015618A File Offset: 0x0015438A
+		// Token: 0x06009B23 RID: 39715 RVA: 0x001669AA File Offset: 0x00164BAA
 		public new IGreatSwordChallenge_SetValue ToSetValue()
 		{
 			return new IGreatSwordChallenge_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EBB RID: 11963
-		// (get) Token: 0x06009366 RID: 37734 RVA: 0x001561B5 File Offset: 0x001543B5
-		// (set) Token: 0x06009367 RID: 37735 RVA: 0x001561E0 File Offset: 0x001543E0
+		// Token: 0x170030D7 RID: 12503
+		// (get) Token: 0x06009B24 RID: 39716 RVA: 0x001669D5 File Offset: 0x00164BD5
+		// (set) Token: 0x06009B25 RID: 39717 RVA: 0x00166A00 File Offset: 0x00164C00
 		public override ECommonTipType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EBC RID: 11964
-		// (get) Token: 0x06009368 RID: 37736 RVA: 0x001561EE File Offset: 0x001543EE
-		// (set) Token: 0x06009369 RID: 37737 RVA: 0x00156219 File Offset: 0x00154419
+		// Token: 0x170030D8 RID: 12504
+		// (get) Token: 0x06009B26 RID: 39718 RVA: 0x00166A0E File Offset: 0x00164C0E
+		// (set) Token: 0x06009B27 RID: 39719 RVA: 0x00166A39 File Offset: 0x00164C39
 		public virtual string MainText
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EBD RID: 11965
-		// (get) Token: 0x0600936A RID: 37738 RVA: 0x00156227 File Offset: 0x00154427
-		// (set) Token: 0x0600936B RID: 37739 RVA: 0x00156252 File Offset: 0x00154452
+		// Token: 0x170030D9 RID: 12505
+		// (get) Token: 0x06009B28 RID: 39720 RVA: 0x00166A47 File Offset: 0x00164C47
+		// (set) Token: 0x06009B29 RID: 39721 RVA: 0x00166A72 File Offset: 0x00164C72
 		public virtual string SubText
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A96 RID: 23190
+		// Token: 0x04005F20 RID: 24352
 		[Nullable(2)]
 		protected new IGreatSwordChallenge FbInstance;
 
-		// Token: 0x04005A97 RID: 23191
+		// Token: 0x04005F21 RID: 24353
 		[Nullable(2)]
 		protected new IGreatSwordChallenge_SetValue PocoInterface;
 	}

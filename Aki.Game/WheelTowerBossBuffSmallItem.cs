@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015B6 RID: 5558
+// Token: 0x02000A6E RID: 2670
 public class WheelTowerBossBuffSmallItem : GridProxyAbstract<int>
 {
-	// Token: 0x06009DC5 RID: 40389 RVA: 0x00224388 File Offset: 0x00222588
+	// Token: 0x060071A3 RID: 29091 RVA: 0x0022E138 File Offset: 0x0022C338
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -35,7 +35,7 @@ public class WheelTowerBossBuffSmallItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009DC6 RID: 40390 RVA: 0x00224470 File Offset: 0x00222670
+	// Token: 0x060071A4 RID: 29092 RVA: 0x0022E220 File Offset: 0x0022C420
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.BuffId = data;
@@ -54,7 +54,7 @@ public class WheelTowerBossBuffSmallItem : GridProxyAbstract<int>
 		sprite.SetColor(FColor.FromHex(bossBuffConfig.Value.BuffColor));
 	}
 
-	// Token: 0x06009DC7 RID: 40391 RVA: 0x0022450C File Offset: 0x0022270C
+	// Token: 0x060071A5 RID: 29093 RVA: 0x0022E2BC File Offset: 0x0022C4BC
 	private void OnButtonClick()
 	{
 		WheelTowerBossBuffData param = new WheelTowerBossBuffData
@@ -66,6 +66,6 @@ public class WheelTowerBossBuffSmallItem : GridProxyAbstract<int>
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerBossBuffTip, param, null);
 	}
 
-	// Token: 0x040045B8 RID: 17848
+	// Token: 0x0400465E RID: 18014
 	private int BuffId;
 }

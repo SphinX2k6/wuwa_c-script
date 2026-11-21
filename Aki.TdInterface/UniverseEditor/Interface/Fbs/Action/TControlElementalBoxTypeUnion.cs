@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007693 RID: 30355
+	// Token: 0x02007E9E RID: 32414
 	public class TControlElementalBoxTypeUnion
 	{
-		// Token: 0x1700E5F5 RID: 58869
-		// (get) Token: 0x060373C0 RID: 226240 RVA: 0x0077C4F2 File Offset: 0x0077A6F2
-		// (set) Token: 0x060373C1 RID: 226241 RVA: 0x0077C4FA File Offset: 0x0077A6FA
+		// Token: 0x1700F231 RID: 62001
+		// (get) Token: 0x0603A863 RID: 239715 RVA: 0x007E0647 File Offset: 0x007DE847
+		// (set) Token: 0x0603A864 RID: 239716 RVA: 0x007E064F File Offset: 0x007DE84F
 		public TControlElementalBoxType Type { get; set; }
 
-		// Token: 0x1700E5F6 RID: 58870
-		// (get) Token: 0x060373C2 RID: 226242 RVA: 0x0077C503 File Offset: 0x0077A703
-		// (set) Token: 0x060373C3 RID: 226243 RVA: 0x0077C50B File Offset: 0x0077A70B
+		// Token: 0x1700F232 RID: 62002
+		// (get) Token: 0x0603A865 RID: 239717 RVA: 0x007E0658 File Offset: 0x007DE858
+		// (set) Token: 0x0603A866 RID: 239718 RVA: 0x007E0660 File Offset: 0x007DE860
 		public object Value { get; set; }
 
-		// Token: 0x060373C4 RID: 226244 RVA: 0x0077C514 File Offset: 0x0077A714
+		// Token: 0x0603A867 RID: 239719 RVA: 0x007E0669 File Offset: 0x007DE869
 		public TControlElementalBoxTypeUnion()
 		{
 			this.Type = TControlElementalBoxType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060373C5 RID: 226245 RVA: 0x0077C52A File Offset: 0x0077A72A
+		// Token: 0x0603A868 RID: 239720 RVA: 0x007E067F File Offset: 0x007DE87F
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060373C6 RID: 226246 RVA: 0x0077C53C File Offset: 0x0077A73C
+		// Token: 0x0603A869 RID: 239721 RVA: 0x007E0691 File Offset: 0x007DE891
 		public IControlElementalBoxCaptureT AsIControlElementalBoxCapture()
 		{
 			return this.As<IControlElementalBoxCaptureT>();
 		}
 
-		// Token: 0x060373C7 RID: 226247 RVA: 0x0077C544 File Offset: 0x0077A744
+		// Token: 0x0603A86A RID: 239722 RVA: 0x007E0699 File Offset: 0x007DE899
 		public static TControlElementalBoxTypeUnion FromIControlElementalBoxCapture(IControlElementalBoxCaptureT _icontrolelementalboxcapture)
 		{
 			return new TControlElementalBoxTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060373C8 RID: 226248 RVA: 0x0077C559 File Offset: 0x0077A759
+		// Token: 0x0603A86B RID: 239723 RVA: 0x007E06AE File Offset: 0x007DE8AE
 		public IControlElementalBoxReturnT AsIControlElementalBoxReturn()
 		{
 			return this.As<IControlElementalBoxReturnT>();
 		}
 
-		// Token: 0x060373C9 RID: 226249 RVA: 0x0077C561 File Offset: 0x0077A761
+		// Token: 0x0603A86C RID: 239724 RVA: 0x007E06B6 File Offset: 0x007DE8B6
 		public static TControlElementalBoxTypeUnion FromIControlElementalBoxReturn(IControlElementalBoxReturnT _icontrolelementalboxreturn)
 		{
 			return new TControlElementalBoxTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060373CA RID: 226250 RVA: 0x0077C578 File Offset: 0x0077A778
+		// Token: 0x0603A86D RID: 239725 RVA: 0x007E06CC File Offset: 0x007DE8CC
 		public static int Pack(FlatBufferBuilder builder, TControlElementalBoxTypeUnion _o)
 		{
 			TControlElementalBoxType type = _o.Type;

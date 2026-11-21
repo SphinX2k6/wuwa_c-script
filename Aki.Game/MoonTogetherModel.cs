@@ -4,14 +4,14 @@ using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020029FE RID: 10750
+// Token: 0x02001F79 RID: 8057
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class MoonTogetherModel : ModelBase
 {
-	// Token: 0x17001DC5 RID: 7621
-	// (get) Token: 0x060164DD RID: 91357 RVA: 0x005A5101 File Offset: 0x005A3301
+	// Token: 0x17001E1E RID: 7710
+	// (get) Token: 0x06013EE4 RID: 81636 RVA: 0x005D00D9 File Offset: 0x005CE2D9
 	public int CurInviteRoleId
 	{
 		get
@@ -20,13 +20,13 @@ public class MoonTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060164DE RID: 91358 RVA: 0x005A5109 File Offset: 0x005A3309
+	// Token: 0x06013EE5 RID: 81637 RVA: 0x005D00E1 File Offset: 0x005CE2E1
 	public void InviteRole(int roleId)
 	{
 		this.SelectRole = roleId;
 	}
 
-	// Token: 0x060164DF RID: 91359 RVA: 0x005A5114 File Offset: 0x005A3314
+	// Token: 0x06013EE6 RID: 81638 RVA: 0x005D00EC File Offset: 0x005CE2EC
 	public void ExitAndClear()
 	{
 		this.IsInMoonTogether = false;
@@ -40,7 +40,7 @@ public class MoonTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060164E0 RID: 91360 RVA: 0x005A516C File Offset: 0x005A336C
+	// Token: 0x06013EE7 RID: 81639 RVA: 0x005D0144 File Offset: 0x005CE344
 	public void SendAndSave()
 	{
 		this.IsInMoonTogether = true;
@@ -59,28 +59,28 @@ public class MoonTogetherModel : ModelBase
 		this.CurInviteRole = this.SelectRole;
 	}
 
-	// Token: 0x060164E1 RID: 91361 RVA: 0x005A51DC File Offset: 0x005A33DC
+	// Token: 0x06013EE8 RID: 81640 RVA: 0x005D01B4 File Offset: 0x005CE3B4
 	public bool IsLinkageRole(int roleId)
 	{
 		VehicleRidingRoles? vehicleRidingRolesById = MoonTogetherConfig.Instance.GetVehicleRidingRolesById(roleId);
 		return vehicleRidingRolesById != null && vehicleRidingRolesById.GetValueOrDefault().RegionId == 1006;
 	}
 
-	// Token: 0x060164E2 RID: 91362 RVA: 0x005A5216 File Offset: 0x005A3416
+	// Token: 0x06013EE9 RID: 81641 RVA: 0x005D01EE File Offset: 0x005CE3EE
 	public bool IsLinkageRegion(int regionId)
 	{
 		return regionId == 1006;
 	}
 
-	// Token: 0x060164E3 RID: 91363 RVA: 0x005A5220 File Offset: 0x005A3420
+	// Token: 0x06013EEA RID: 81642 RVA: 0x005D01F8 File Offset: 0x005CE3F8
 	public void ClearCurInviteRole()
 	{
 		this.CurInviteRole = 0;
 		this.SelectRole = 0;
 	}
 
-	// Token: 0x17001DC6 RID: 7622
-	// (get) Token: 0x060164E4 RID: 91364 RVA: 0x005A5230 File Offset: 0x005A3430
+	// Token: 0x17001E1F RID: 7711
+	// (get) Token: 0x06013EEB RID: 81643 RVA: 0x005D0208 File Offset: 0x005CE408
 	public static MoonTogetherModel Instance
 	{
 		get
@@ -89,7 +89,7 @@ public class MoonTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060164E5 RID: 91365 RVA: 0x005A5237 File Offset: 0x005A3437
+	// Token: 0x06013EEC RID: 81644 RVA: 0x005D020F File Offset: 0x005CE40F
 	public static MoonTogetherModel GetOrCreateInstance()
 	{
 		if (MoonTogetherModel._Instance == null)
@@ -99,7 +99,7 @@ public class MoonTogetherModel : ModelBase
 		return MoonTogetherModel._Instance;
 	}
 
-	// Token: 0x060164E6 RID: 91366 RVA: 0x005A524B File Offset: 0x005A344B
+	// Token: 0x06013EED RID: 81645 RVA: 0x005D0223 File Offset: 0x005CE423
 	public static bool CreateInstance()
 	{
 		if (MoonTogetherModel._Instance != null)
@@ -110,39 +110,39 @@ public class MoonTogetherModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060164E7 RID: 91367 RVA: 0x005A5261 File Offset: 0x005A3461
+	// Token: 0x06013EEE RID: 81646 RVA: 0x005D0239 File Offset: 0x005CE439
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060164E8 RID: 91368 RVA: 0x005A5263 File Offset: 0x005A3463
+	// Token: 0x06013EEF RID: 81647 RVA: 0x005D023B File Offset: 0x005CE43B
 	public static void ResetStaticDefaultValue()
 	{
 		MoonTogetherModel._Instance = null;
 	}
 
-	// Token: 0x060164E9 RID: 91369 RVA: 0x005A526B File Offset: 0x005A346B
+	// Token: 0x06013EF0 RID: 81648 RVA: 0x005D0243 File Offset: 0x005CE443
 	static MoonTogetherModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MoonTogetherModel.CreateStaticDefaultValue), new Action(MoonTogetherModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A5E8 RID: 42472
+	// Token: 0x0400A9D2 RID: 43474
 	private const int LINKAGE_ROLE_REGION = 1006;
 
-	// Token: 0x0400A5E9 RID: 42473
+	// Token: 0x0400A9D3 RID: 43475
 	public bool IsInMoonTogether;
 
-	// Token: 0x0400A5EA RID: 42474
+	// Token: 0x0400A9D4 RID: 43476
 	private int CurInviteRole;
 
-	// Token: 0x0400A5EB RID: 42475
+	// Token: 0x0400A9D5 RID: 43477
 	private int SelectRole;
 
-	// Token: 0x0400A5EC RID: 42476
+	// Token: 0x0400A9D6 RID: 43478
 	public int HandleEntityId;
 
-	// Token: 0x0400A5ED RID: 42477
+	// Token: 0x0400A9D7 RID: 43479
 	[Nullable(2)]
 	private static MoonTogetherModel _Instance;
 }

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x0200700D RID: 28685
+	// Token: 0x0200618E RID: 24974
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonTouchUiEditContainer : ITouchUiEditContainer
 	{
-		// Token: 0x06045CD5 RID: 285909 RVA: 0x0115B820 File Offset: 0x01159A20
+		// Token: 0x0603BE8B RID: 245387 RVA: 0x01105C2C File Offset: 0x01103E2C
 		public UniTask LoadPanel(UUIItem parent, string[] resIdList, CommonTouchUiEditGroup groupConfig)
 		{
 			CommonTouchUiEditContainer.<LoadPanel>d__2 <LoadPanel>d__;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.InputSetting
 			return <LoadPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045CD6 RID: 285910 RVA: 0x0115B87C File Offset: 0x01159A7C
+		// Token: 0x0603BE8C RID: 245388 RVA: 0x01105C88 File Offset: 0x01103E88
 		[return: Nullable(2)]
 		public UUIItem GetItem(string resId, int index, int subPanelIndex)
 		{
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.InputSetting
 			return aactor3.GetComponentByClass(UUIItem.StaticClass()) as UUIItem;
 		}
 
-		// Token: 0x06045CD7 RID: 285911 RVA: 0x0115B934 File Offset: 0x01159B34
+		// Token: 0x0603BE8D RID: 245389 RVA: 0x01105D40 File Offset: 0x01103F40
 		public UUIItem[] GetRegistryItemList(string resId)
 		{
 			UiPanelBase panel;
@@ -99,13 +99,13 @@ namespace CSharpScript.Game.InputSetting
 			return list.ToArray();
 		}
 
-		// Token: 0x06045CD8 RID: 285912 RVA: 0x0115B9C2 File Offset: 0x01159BC2
+		// Token: 0x0603BE8E RID: 245390 RVA: 0x01105DCE File Offset: 0x01103FCE
 		public UUIItem GetRootItem()
 		{
 			return this.RootPanel.GetRootItem();
 		}
 
-		// Token: 0x06045CD9 RID: 285913 RVA: 0x0115B9D0 File Offset: 0x01159BD0
+		// Token: 0x0603BE8F RID: 245391 RVA: 0x01105DDC File Offset: 0x01103FDC
 		public void OnViewDestroy()
 		{
 			foreach (UiPanelBase uiPanelBase in this.PanelMap.Values)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045CDA RID: 285914 RVA: 0x0115BA48 File Offset: 0x01159C48
+		// Token: 0x0603BE90 RID: 245392 RVA: 0x01105E54 File Offset: 0x01104054
 		[return: Nullable(2)]
 		private ULGUIComponentsRegistry GetLguiComponentsRegistry(UiPanelBase panel)
 		{
@@ -131,11 +131,11 @@ namespace CSharpScript.Game.InputSetting
 			return rootActor.GetComponentByClass(ULGUIComponentsRegistry.StaticClass()) as ULGUIComponentsRegistry;
 		}
 
-		// Token: 0x04024804 RID: 149508
+		// Token: 0x0401FABA RID: 129722
 		[Nullable(2)]
 		private CommonTouchUiEditRootPanel RootPanel;
 
-		// Token: 0x04024805 RID: 149509
+		// Token: 0x0401FABB RID: 129723
 		private readonly Dictionary<string, UiPanelBase> PanelMap = new Dictionary<string, UiPanelBase>();
 	}
 }

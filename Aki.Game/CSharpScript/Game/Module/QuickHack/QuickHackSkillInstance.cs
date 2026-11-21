@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F76 RID: 20342
+	// Token: 0x02003F3F RID: 16191
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackSkillInstance
 	{
-		// Token: 0x06034190 RID: 213392 RVA: 0x00C39DD4 File Offset: 0x00C37FD4
+		// Token: 0x06028FFE RID: 167934 RVA: 0x00B83580 File Offset: 0x00B81780
 		public void Init(QuickHackSkill config)
 		{
 			this.Config = new QuickHackSkill?(config);
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034191 RID: 213393 RVA: 0x00C39ED8 File Offset: 0x00C380D8
+		// Token: 0x06028FFF RID: 167935 RVA: 0x00B83684 File Offset: 0x00B81884
 		private void AddCondition(EQuickHackSkillCondition type, [Nullable(new byte[]
 		{
 			2,
@@ -62,14 +62,14 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.ConditionInfos.Add(quickHackConditionInfo);
 		}
 
-		// Token: 0x06034192 RID: 213394 RVA: 0x00C39F16 File Offset: 0x00C38116
+		// Token: 0x06029000 RID: 167936 RVA: 0x00B836C2 File Offset: 0x00B818C2
 		public void Clear()
 		{
 			this.OnCheckSkillCanUseSet.Clear();
 			this.UnRegisterSkillCanUseListener();
 		}
 
-		// Token: 0x06034193 RID: 213395 RVA: 0x00C39F29 File Offset: 0x00C38129
+		// Token: 0x06029001 RID: 167937 RVA: 0x00B836D5 File Offset: 0x00B818D5
 		public void RegisterSkillCanUseListener()
 		{
 			if (this.IsRegisterConditionListener)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			QuickHackModel.Instance.ConditionHelper.RegisterConditionsListener(this.ConditionMap.Keys, new GenericEventHandler(this.OnReceiveConditionEvent));
 		}
 
-		// Token: 0x06034194 RID: 213396 RVA: 0x00C39F67 File Offset: 0x00C38167
+		// Token: 0x06029002 RID: 167938 RVA: 0x00B83713 File Offset: 0x00B81913
 		public void UnRegisterSkillCanUseListener()
 		{
 			if (!this.IsRegisterConditionListener)
@@ -92,19 +92,19 @@ namespace CSharpScript.Game.Module.QuickHack
 			QuickHackModel.Instance.ConditionHelper.UnRegisterConditionsListener(this.ConditionMap.Keys, new GenericEventHandler(this.OnReceiveConditionEvent));
 		}
 
-		// Token: 0x06034195 RID: 213397 RVA: 0x00C39F9F File Offset: 0x00C3819F
+		// Token: 0x06029003 RID: 167939 RVA: 0x00B8374B File Offset: 0x00B8194B
 		public QuickHackSkill GetConfig()
 		{
 			return this.Config.Value;
 		}
 
-		// Token: 0x06034196 RID: 213398 RVA: 0x00C39FAC File Offset: 0x00C381AC
+		// Token: 0x06029004 RID: 167940 RVA: 0x00B83758 File Offset: 0x00B81958
 		public int GetUsageCount()
 		{
 			return this.UsageCount;
 		}
 
-		// Token: 0x06034197 RID: 213399 RVA: 0x00C39FB4 File Offset: 0x00C381B4
+		// Token: 0x06029005 RID: 167941 RVA: 0x00B83760 File Offset: 0x00B81960
 		public void ReduceUsageCount()
 		{
 			if (this.UsageCount > 0)
@@ -114,13 +114,13 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034198 RID: 213400 RVA: 0x00C39FD3 File Offset: 0x00C381D3
+		// Token: 0x06029006 RID: 167942 RVA: 0x00B8377F File Offset: 0x00B8197F
 		public QuickHackSkillConditionResult GetSkillCanUseInfo()
 		{
 			return this.CanUseResult;
 		}
 
-		// Token: 0x06034199 RID: 213401 RVA: 0x00C39FDC File Offset: 0x00C381DC
+		// Token: 0x06029007 RID: 167943 RVA: 0x00B83788 File Offset: 0x00B81988
 		public bool CheckTargetExtraConditions(EntityHandle target)
 		{
 			if (this.TargetConditionInfos.Count <= 0)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return QuickHackModel.Instance.ConditionHelper.CheckConditions(this.TargetConditionInfos, this, new EQuickHackTargetType?((EQuickHackTargetType)this.Config.Value.TargetType), this.TargetArray).IsSuccess;
 		}
 
-		// Token: 0x0603419A RID: 213402 RVA: 0x00C3A060 File Offset: 0x00C38260
+		// Token: 0x06029008 RID: 167944 RVA: 0x00B8380C File Offset: 0x00B81A0C
 		public void CheckSkillCanUse()
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -152,50 +152,50 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603419B RID: 213403 RVA: 0x00C3A108 File Offset: 0x00C38308
+		// Token: 0x06029009 RID: 167945 RVA: 0x00B838B4 File Offset: 0x00B81AB4
 		private void OnReceiveConditionEvent(params object[] args)
 		{
 			this.CheckSkillCanUse();
 		}
 
-		// Token: 0x0603419C RID: 213404 RVA: 0x00C3A110 File Offset: 0x00C38310
+		// Token: 0x0602900A RID: 167946 RVA: 0x00B838BC File Offset: 0x00B81ABC
 		public void RegisterOnCheckSkillCanUse(Action<QuickHackSkillConditionResult> onCheckSkillCanUse)
 		{
 			this.OnCheckSkillCanUseSet.Add(onCheckSkillCanUse);
 		}
 
-		// Token: 0x0603419D RID: 213405 RVA: 0x00C3A11F File Offset: 0x00C3831F
+		// Token: 0x0602900B RID: 167947 RVA: 0x00B838CB File Offset: 0x00B81ACB
 		public void UnRegisterOnCheckSkillCanUse(Action<QuickHackSkillConditionResult> onCheckSkillCanUse)
 		{
 			this.OnCheckSkillCanUseSet.Remove(onCheckSkillCanUse);
 		}
 
-		// Token: 0x0401BB39 RID: 113465
+		// Token: 0x0401650E RID: 91406
 		private QuickHackSkill? Config;
 
-		// Token: 0x0401BB3A RID: 113466
+		// Token: 0x0401650F RID: 91407
 		private readonly Dictionary<EQuickHackSkillCondition, QuickHackConditionInfo> ConditionMap = new Dictionary<EQuickHackSkillCondition, QuickHackConditionInfo>();
 
-		// Token: 0x0401BB3B RID: 113467
+		// Token: 0x04016510 RID: 91408
 		private readonly List<QuickHackConditionInfo> ConditionInfos = new List<QuickHackConditionInfo>();
 
-		// Token: 0x0401BB3C RID: 113468
+		// Token: 0x04016511 RID: 91409
 		private readonly List<QuickHackConditionInfo> TargetConditionInfos = new List<QuickHackConditionInfo>();
 
-		// Token: 0x0401BB3D RID: 113469
+		// Token: 0x04016512 RID: 91410
 		private int UsageCount = -1;
 
-		// Token: 0x0401BB3E RID: 113470
+		// Token: 0x04016513 RID: 91411
 		[Nullable(2)]
 		private QuickHackSkillConditionResult CanUseResult;
 
-		// Token: 0x0401BB3F RID: 113471
+		// Token: 0x04016514 RID: 91412
 		private readonly HashSet<Action<QuickHackSkillConditionResult>> OnCheckSkillCanUseSet = new HashSet<Action<QuickHackSkillConditionResult>>();
 
-		// Token: 0x0401BB40 RID: 113472
+		// Token: 0x04016515 RID: 91413
 		private bool IsRegisterConditionListener;
 
-		// Token: 0x0401BB41 RID: 113473
+		// Token: 0x04016516 RID: 91414
 		[Nullable(new byte[]
 		{
 			2,

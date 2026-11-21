@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006849 RID: 26697
+	// Token: 0x02006ECF RID: 28367
 	public enum IFocusOnMapMark_Union : byte
 	{
-		// Token: 0x04010F91 RID: 69521
+		// Token: 0x04011DCB RID: 73163
 		NONE,
-		// Token: 0x04010F92 RID: 69522
+		// Token: 0x04011DCC RID: 73164
 		IFocusOnMapMark,
-		// Token: 0x04010F93 RID: 69523
+		// Token: 0x04011DCD RID: 73165
 		IFocusOnCustomMapMark,
-		// Token: 0x04010F94 RID: 69524
+		// Token: 0x04011DCE RID: 73166
 		IFocusOnQuestMapMark
 	}
 }

@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x0200486B RID: 18539
+	// Token: 0x020037E2 RID: 14306
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class VillageInfrActivityMainView : ActivitySubViewBase
 	{
-		// Token: 0x1700792D RID: 31021
-		// (get) Token: 0x06030867 RID: 198759 RVA: 0x00B4478C File Offset: 0x00B4298C
+		// Token: 0x17004C95 RID: 19605
+		// (get) Token: 0x06025393 RID: 152467 RVA: 0x00A7F528 File Offset: 0x00A7D728
 		protected new VillageInfrActivityData ActivityBaseData
 		{
 			get
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x06030868 RID: 198760 RVA: 0x00B4479C File Offset: 0x00B4299C
+		// Token: 0x06025394 RID: 152468 RVA: 0x00A7F538 File Offset: 0x00A7D738
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			};
 		}
 
-		// Token: 0x06030869 RID: 198761 RVA: 0x00B4480C File Offset: 0x00B42A0C
+		// Token: 0x06025395 RID: 152469 RVA: 0x00A7F5A8 File Offset: 0x00A7D7A8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			VillageInfrActivityMainView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603086A RID: 198762 RVA: 0x00B44850 File Offset: 0x00B42A50
+		// Token: 0x06025396 RID: 152470 RVA: 0x00A7F5EC File Offset: 0x00A7D7EC
 		[NullableContext(0)]
 		private UniTask<bool> RequestInfrV2Info()
 		{
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <RequestInfrV2Info>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603086B RID: 198763 RVA: 0x00B4488C File Offset: 0x00B42A8C
+		// Token: 0x06025397 RID: 152471 RVA: 0x00A7F628 File Offset: 0x00A7D828
 		private UniTask CreateRewardButton()
 		{
 			VillageInfrActivityMainView.<CreateRewardButton>d__7 <CreateRewardButton>d__;
@@ -69,20 +69,20 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <CreateRewardButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603086C RID: 198764 RVA: 0x00B448CF File Offset: 0x00B42ACF
+		// Token: 0x06025398 RID: 152472 RVA: 0x00A7F66B File Offset: 0x00A7D86B
 		protected override void OnStart()
 		{
 			this.RefreshActivityInfo();
 			this.RefreshRewardBtn();
 		}
 
-		// Token: 0x0603086D RID: 198765 RVA: 0x00B448DD File Offset: 0x00B42ADD
+		// Token: 0x06025399 RID: 152473 RVA: 0x00A7F679 File Offset: 0x00A7D879
 		protected override void OnRefreshView()
 		{
 			this.RefreshRewardBtn();
 		}
 
-		// Token: 0x0603086E RID: 198766 RVA: 0x00B448E8 File Offset: 0x00B42AE8
+		// Token: 0x0602539A RID: 152474 RVA: 0x00A7F684 File Offset: 0x00A7D884
 		private void RefreshActivityInfo()
 		{
 			this.CommonInfoPanel.SetBtnText("LongShanStage_Join01", Array.Empty<object>());
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			functional.RefreshGeneralPerformance(parameters);
 		}
 
-		// Token: 0x0603086F RID: 198767 RVA: 0x00B4496C File Offset: 0x00B42B6C
+		// Token: 0x0602539B RID: 152475 RVA: 0x00A7F708 File Offset: 0x00A7D908
 		private void RefreshRewardBtn()
 		{
 			if (!FunctionModel.Instance.IsOpen(EFunctionType.VillageInfr))
@@ -127,13 +127,13 @@ namespace CSharpScript.Game.Module.VillageInfr
 			rewardButton.SetText(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06030870 RID: 198768 RVA: 0x00B44A44 File Offset: 0x00B42C44
+		// Token: 0x0602539C RID: 152476 RVA: 0x00A7F7E0 File Offset: 0x00A7D9E0
 		private void OnConfirmBtnClick(ActivityBaseData _)
 		{
 			this.OnConfirmBtnClick();
 		}
 
-		// Token: 0x06030871 RID: 198769 RVA: 0x00B44A4C File Offset: 0x00B42C4C
+		// Token: 0x0602539D RID: 152477 RVA: 0x00A7F7E8 File Offset: 0x00A7D9E8
 		private void OnConfirmBtnClick()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -155,17 +155,17 @@ namespace CSharpScript.Game.Module.VillageInfr
 			});
 		}
 
-		// Token: 0x06030872 RID: 198770 RVA: 0x00B44A6A File Offset: 0x00B42C6A
+		// Token: 0x0602539E RID: 152478 RVA: 0x00A7F806 File Offset: 0x00A7DA06
 		private void OnClickBtnReward(int _)
 		{
 			UiManager.Instance.OpenView(EUiViewName.VillageInfrTaskMainView, null, null);
 		}
 
-		// Token: 0x0401A0FD RID: 106749
+		// Token: 0x04014970 RID: 84336
 		[Nullable(1)]
 		protected ActivitySubViewGeneralInfo CommonInfoPanel = new ActivitySubViewGeneralInfo();
 
-		// Token: 0x0401A0FE RID: 106750
+		// Token: 0x04014971 RID: 84337
 		[Nullable(1)]
 		private readonly ButtonItem RewardButton = new ButtonItem(null);
 	}

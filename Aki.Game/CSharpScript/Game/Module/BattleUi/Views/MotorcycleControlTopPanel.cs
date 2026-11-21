@@ -16,12 +16,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D9C RID: 23964
+	// Token: 0x02004D7E RID: 19838
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleControlTopPanel : BattleVisibleChildView
 	{
-		// Token: 0x0603CD3A RID: 249146 RVA: 0x00E9B830 File Offset: 0x00E99A30
+		// Token: 0x06031C97 RID: 203927 RVA: 0x00DEC0E8 File Offset: 0x00DEA2E8
 		public UniTask Init(UUIItem parentItem, string resourceId)
 		{
 			MotorcycleControlTopPanel.<Init>d__22 <Init>d__;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CD3B RID: 249147 RVA: 0x00E9B884 File Offset: 0x00E99A84
+		// Token: 0x06031C98 RID: 203928 RVA: 0x00DEC13C File Offset: 0x00DEA33C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603CD3C RID: 249148 RVA: 0x00E9BB08 File Offset: 0x00E99D08
+		// Token: 0x06031C99 RID: 203929 RVA: 0x00DEC3C0 File Offset: 0x00DEA5C0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorcycleControlTopPanel.<OnBeforeStartAsync>d__24 <OnBeforeStartAsync>d__;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CD3D RID: 249149 RVA: 0x00E9BB4C File Offset: 0x00E99D4C
+		// Token: 0x06031C9A RID: 203930 RVA: 0x00DEC404 File Offset: 0x00DEA604
 		private UniTask InitKeyItem(UUIItem item)
 		{
 			MotorcycleControlTopPanel.<InitKeyItem>d__25 <InitKeyItem>d__;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitKeyItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CD3E RID: 249150 RVA: 0x00E9BB98 File Offset: 0x00E99D98
+		// Token: 0x06031C9B RID: 203931 RVA: 0x00DEC450 File Offset: 0x00DEA650
 		protected override void OnStart()
 		{
 			this.TweenAnimPlayer.InitTweenAnim(8, base.GetItem(8), false);
@@ -132,26 +132,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603CD3F RID: 249151 RVA: 0x00E9BC94 File Offset: 0x00E99E94
+		// Token: 0x06031C9C RID: 203932 RVA: 0x00DEC54C File Offset: 0x00DEA74C
 		public void OnShowBattleChildViewPanel()
 		{
 			this.MusicPlayStateDirty = true;
 			this.RefreshMusicTitle();
 		}
 
-		// Token: 0x0603CD40 RID: 249152 RVA: 0x00E9BCA3 File Offset: 0x00E99EA3
+		// Token: 0x06031C9D RID: 203933 RVA: 0x00DEC55B File Offset: 0x00DEA75B
 		public void OnHideBattleChildViewPanel()
 		{
 		}
 
-		// Token: 0x0603CD41 RID: 249153 RVA: 0x00E9BCA5 File Offset: 0x00E99EA5
+		// Token: 0x06031C9E RID: 203934 RVA: 0x00DEC55D File Offset: 0x00DEA75D
 		protected override void OnBeforeShow()
 		{
 			base.OnBeforeShow();
 			BattleUiModel.Instance.UpdateBossStateArea(EBossStateAreaType.MotorcycleControlTop, true);
 		}
 
-		// Token: 0x0603CD42 RID: 249154 RVA: 0x00E9BCBC File Offset: 0x00E99EBC
+		// Token: 0x06031C9F RID: 203935 RVA: 0x00DEC574 File Offset: 0x00DEA774
 		protected override void OnAfterShow()
 		{
 			string sequenceName = AutoPilotModel.Instance.GetIsInMovieMode() ? "MovieIn" : "Start";
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ResetAlpha();
 		}
 
-		// Token: 0x0603CD43 RID: 249155 RVA: 0x00E9BD18 File Offset: 0x00E99F18
+		// Token: 0x06031CA0 RID: 203936 RVA: 0x00DEC5D0 File Offset: 0x00DEA7D0
 		protected override UniTask OnBeforeHideAsync()
 		{
 			MotorcycleControlTopPanel.<OnBeforeHideAsync>d__32 <OnBeforeHideAsync>d__;
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CD44 RID: 249156 RVA: 0x00E9BD5B File Offset: 0x00E99F5B
+		// Token: 0x06031CA1 RID: 203937 RVA: 0x00DEC613 File Offset: 0x00DEA813
 		protected override void OnAutoDestroy()
 		{
 			base.OnAutoDestroy();
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD45 RID: 249157 RVA: 0x00E9BD7E File Offset: 0x00E99F7E
+		// Token: 0x06031CA2 RID: 203938 RVA: 0x00DEC636 File Offset: 0x00DEA836
 		protected override void OnBeforeDestroy()
 		{
 			this.TweenAnimPlayer.Clear(false);
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RemoveEvents();
 		}
 
-		// Token: 0x0603CD46 RID: 249158 RVA: 0x00E9BDAC File Offset: 0x00E99FAC
+		// Token: 0x06031CA3 RID: 203939 RVA: 0x00DEC664 File Offset: 0x00DEA864
 		private void AddEvents()
 		{
 			base.GetExtendToggle(4).OnStateChange.Add(new Action<EToggleState>(this.OnMusicTogPlayStateChanged));
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<EMotorcycleHudColorState>(EEventName.BattleUiMotorcycleHudColorStateChanged, new Action<EMotorcycleHudColorState>(this.OnHudColorStateChanged));
 		}
 
-		// Token: 0x0603CD47 RID: 249159 RVA: 0x00E9BEC0 File Offset: 0x00E9A0C0
+		// Token: 0x06031CA4 RID: 203940 RVA: 0x00DEC778 File Offset: 0x00DEA978
 		private void RemoveEvents()
 		{
 			base.GetExtendToggle(4).OnStateChange.Remove(new Action<EToggleState>(this.OnMusicTogPlayStateChanged));
@@ -238,28 +238,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.BattleUiMotorcycleHudColorStateChanged, new Action<EMotorcycleHudColorState>(this.OnHudColorStateChanged));
 		}
 
-		// Token: 0x0603CD48 RID: 249160 RVA: 0x00E9BFD3 File Offset: 0x00E9A1D3
+		// Token: 0x06031CA5 RID: 203941 RVA: 0x00DEC88B File Offset: 0x00DEAA8B
 		private void OnClickMusicTitleButton()
 		{
 			this.ResetAlpha();
 			MotorcycleMusicPlayerController.Instance.OpenMusicPlayerView();
 		}
 
-		// Token: 0x0603CD49 RID: 249161 RVA: 0x00E9BFE5 File Offset: 0x00E9A1E5
+		// Token: 0x06031CA6 RID: 203942 RVA: 0x00DEC89D File Offset: 0x00DEAA9D
 		private void OnClickMusicBtnPrev()
 		{
 			this.ResetAlpha();
 			MotorcycleMusicPlayerController.Instance.QuickPlayMusic(false);
 		}
 
-		// Token: 0x0603CD4A RID: 249162 RVA: 0x00E9BFF8 File Offset: 0x00E9A1F8
+		// Token: 0x06031CA7 RID: 203943 RVA: 0x00DEC8B0 File Offset: 0x00DEAAB0
 		private void OnClickMusicBtnNext()
 		{
 			this.ResetAlpha();
 			MotorcycleMusicPlayerController.Instance.QuickPlayMusic(true);
 		}
 
-		// Token: 0x0603CD4B RID: 249163 RVA: 0x00E9C00C File Offset: 0x00E9A20C
+		// Token: 0x06031CA8 RID: 203944 RVA: 0x00DEC8C4 File Offset: 0x00DEAAC4
 		private void OnMusicTogPlayStateChanged(EToggleState state)
 		{
 			this.ResetAlpha();
@@ -290,45 +290,45 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshMusicPlayEffect(flag);
 		}
 
-		// Token: 0x0603CD4C RID: 249164 RVA: 0x00E9C082 File Offset: 0x00E9A282
+		// Token: 0x06031CA9 RID: 203945 RVA: 0x00DEC93A File Offset: 0x00DEAB3A
 		private void OnBattleUiBossStateAreaChanged(EBossStateAreaType lastType, EBossStateAreaType curType)
 		{
 			this.RefreshBossStateAreaVisible();
 		}
 
-		// Token: 0x0603CD4D RID: 249165 RVA: 0x00E9C08A File Offset: 0x00E9A28A
+		// Token: 0x06031CAA RID: 203946 RVA: 0x00DEC942 File Offset: 0x00DEAB42
 		private void OnMotorMusicEnableStateChanged(bool isEnable)
 		{
 			this.RefreshMusicPlayState();
 			this.RefreshMusicVisible();
 		}
 
-		// Token: 0x0603CD4E RID: 249166 RVA: 0x00E9C098 File Offset: 0x00E9A298
+		// Token: 0x06031CAB RID: 203947 RVA: 0x00DEC950 File Offset: 0x00DEAB50
 		private void RefreshMusicVisible()
 		{
 			base.SetVisible(2, MotorcycleMusicPlayerModel.Instance.IsEnable);
 		}
 
-		// Token: 0x0603CD4F RID: 249167 RVA: 0x00E9C0AB File Offset: 0x00E9A2AB
+		// Token: 0x06031CAC RID: 203948 RVA: 0x00DEC963 File Offset: 0x00DEAB63
 		private void OnMotorSwitchMusic()
 		{
 			this.RefreshMusicTitle();
 			this.RefreshMusicPlayState();
 		}
 
-		// Token: 0x0603CD50 RID: 249168 RVA: 0x00E9C0B9 File Offset: 0x00E9A2B9
+		// Token: 0x06031CAD RID: 203949 RVA: 0x00DEC971 File Offset: 0x00DEAB71
 		private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			this.RefreshKeyNodeVisible();
 		}
 
-		// Token: 0x0603CD51 RID: 249169 RVA: 0x00E9C0C1 File Offset: 0x00E9A2C1
+		// Token: 0x06031CAE RID: 203950 RVA: 0x00DEC979 File Offset: 0x00DEAB79
 		private void OnInputCombineButton(bool isPress)
 		{
 			this.RefreshKeyNodeVisible();
 		}
 
-		// Token: 0x0603CD52 RID: 249170 RVA: 0x00E9C0CC File Offset: 0x00E9A2CC
+		// Token: 0x06031CAF RID: 203951 RVA: 0x00DEC984 File Offset: 0x00DEAB84
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (!BattleUiModel.Instance.MotorcycleData.IsDriving)
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD53 RID: 249171 RVA: 0x00E9C15C File Offset: 0x00E9A35C
+		// Token: 0x06031CB0 RID: 203952 RVA: 0x00DECA14 File Offset: 0x00DEAC14
 		private void RefreshKeyNodeVisible()
 		{
 			if (Info.Instance.IsInGamepad())
@@ -378,7 +378,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(6).SetUIActive(false);
 		}
 
-		// Token: 0x0603CD54 RID: 249172 RVA: 0x00E9C1A8 File Offset: 0x00E9A3A8
+		// Token: 0x06031CB1 RID: 203953 RVA: 0x00DECA60 File Offset: 0x00DEAC60
 		private void RefreshMusicTitle()
 		{
 			int curPlayMusicId = MotorcycleMusicPlayerModel.Instance.GetCurPlayMusicId();
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ResetMusicTitleScroll();
 		}
 
-		// Token: 0x0603CD55 RID: 249173 RVA: 0x00E9C228 File Offset: 0x00E9A428
+		// Token: 0x06031CB2 RID: 203954 RVA: 0x00DECAE0 File Offset: 0x00DEACE0
 		private void RefreshMusicPlayState()
 		{
 			bool flag = false;
@@ -416,7 +416,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.MusicPlayStateDirty = false;
 		}
 
-		// Token: 0x0603CD56 RID: 249174 RVA: 0x00E9C284 File Offset: 0x00E9A484
+		// Token: 0x06031CB3 RID: 203955 RVA: 0x00DECB3C File Offset: 0x00DEAD3C
 		private void RefreshMusicPlayEffect(bool bPlaying)
 		{
 			if (this.MusicEffectPlaying == bPlaying)
@@ -447,7 +447,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD57 RID: 249175 RVA: 0x00E9C2ED File Offset: 0x00E9A4ED
+		// Token: 0x06031CB4 RID: 203956 RVA: 0x00DECBA5 File Offset: 0x00DEADA5
 		private void ResetMusicTitleScroll()
 		{
 			this.MusicTitleScrollState = MotorcycleControlTopPanel.EScrollState.Begin;
@@ -459,14 +459,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			musicTitleText.SetAnchorOffsetX(0f);
 		}
 
-		// Token: 0x0603CD58 RID: 249176 RVA: 0x00E9C30C File Offset: 0x00E9A50C
+		// Token: 0x06031CB5 RID: 203957 RVA: 0x00DECBC4 File Offset: 0x00DEADC4
 		private void RefreshBossStateAreaVisible()
 		{
 			bool bVisible = BattleUiModel.Instance.GetBossStateAreaType() >= EBossStateAreaType.MotorcycleControlTop;
 			base.SetVisible(1, bVisible);
 		}
 
-		// Token: 0x0603CD59 RID: 249177 RVA: 0x00E9C334 File Offset: 0x00E9A534
+		// Token: 0x06031CB6 RID: 203958 RVA: 0x00DECBEC File Offset: 0x00DEADEC
 		private void RefreshKeyItems()
 		{
 			if (this.IsInTouch)
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD5A RID: 249178 RVA: 0x00E9C388 File Offset: 0x00E9A588
+		// Token: 0x06031CB7 RID: 203959 RVA: 0x00DECC40 File Offset: 0x00DEAE40
 		public void Tick(float delta)
 		{
 			if (!base.IsShowOrShowing)
@@ -540,13 +540,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateAlpha(delta);
 		}
 
-		// Token: 0x0603CD5B RID: 249179 RVA: 0x00E9C4CA File Offset: 0x00E9A6CA
+		// Token: 0x06031CB8 RID: 203960 RVA: 0x00DECD82 File Offset: 0x00DEAF82
 		private void OnHudColorStateChanged(EMotorcycleHudColorState state)
 		{
 			this.SetColorState(state);
 		}
 
-		// Token: 0x0603CD5C RID: 249180 RVA: 0x00E9C4D4 File Offset: 0x00E9A6D4
+		// Token: 0x06031CB9 RID: 203961 RVA: 0x00DECD8C File Offset: 0x00DEAF8C
 		private void SetColorState(EMotorcycleHudColorState state)
 		{
 			if (state == EMotorcycleHudColorState.Parkour)
@@ -590,7 +590,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD5D RID: 249181 RVA: 0x00E9C570 File Offset: 0x00E9A770
+		// Token: 0x06031CBA RID: 203962 RVA: 0x00DECE28 File Offset: 0x00DEB028
 		private void UpdateAlpha(float delta)
 		{
 			if (this.AlphaTimeCountdown < 0f)
@@ -606,7 +606,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD5E RID: 249182 RVA: 0x00E9C5CA File Offset: 0x00E9A7CA
+		// Token: 0x06031CBB RID: 203963 RVA: 0x00DECE82 File Offset: 0x00DEB082
 		private void ResetAlpha()
 		{
 			if (this.AlphaTimeCountdown == -1f)
@@ -617,13 +617,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AlphaTimeCountdown = 5000f;
 		}
 
-		// Token: 0x0603CD5F RID: 249183 RVA: 0x00E9C5FD File Offset: 0x00E9A7FD
+		// Token: 0x06031CBC RID: 203964 RVA: 0x00DECEB5 File Offset: 0x00DEB0B5
 		private void ApplyTouchUiEditData()
 		{
 			TouchUiEditApplyHelper.ApplyCommonTouchUiEditData(ECommonTouchUiEditGroup.Motorcycle, this, "UiItem_MotorcycleControlTopEdit");
 		}
 
-		// Token: 0x0603CD60 RID: 249184 RVA: 0x00E9C60B File Offset: 0x00E9A80B
+		// Token: 0x06031CBD RID: 203965 RVA: 0x00DECEC3 File Offset: 0x00DEB0C3
 		private void OnTouchUiEditSave(ECommonTouchUiEditGroup group)
 		{
 			if (group != ECommonTouchUiEditGroup.Motorcycle)
@@ -633,7 +633,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ApplyTouchUiEditData();
 		}
 
-		// Token: 0x0401FAED RID: 129773
+		// Token: 0x0401A5A5 RID: 107941
 		[StaticVariableRuleIgnore]
 		private static readonly string[] ActionNameList = new string[]
 		{
@@ -642,122 +642,122 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			"载具音乐下一首"
 		};
 
-		// Token: 0x0401FAEE RID: 129774
+		// Token: 0x0401A5A6 RID: 107942
 		private readonly BattleUiTweenAnimPlayer TweenAnimPlayer = new BattleUiTweenAnimPlayer();
 
-		// Token: 0x0401FAEF RID: 129775
+		// Token: 0x0401A5A7 RID: 107943
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401FAF0 RID: 129776
+		// Token: 0x0401A5A8 RID: 107944
 		private bool MusicPlayStateDirty;
 
-		// Token: 0x0401FAF1 RID: 129777
+		// Token: 0x0401A5A9 RID: 107945
 		[Nullable(2)]
 		private UUIText MusicTitleText;
 
-		// Token: 0x0401FAF2 RID: 129778
+		// Token: 0x0401A5AA RID: 107946
 		private float MusicTitleViewWidth;
 
-		// Token: 0x0401FAF3 RID: 129779
+		// Token: 0x0401A5AB RID: 107947
 		private float MusicTitleTextWidth;
 
-		// Token: 0x0401FAF4 RID: 129780
+		// Token: 0x0401A5AC RID: 107948
 		private MotorcycleControlTopPanel.EScrollState MusicTitleScrollState;
 
-		// Token: 0x0401FAF5 RID: 129781
+		// Token: 0x0401A5AD RID: 107949
 		private float MusicTitleScrollTime;
 
-		// Token: 0x0401FAF6 RID: 129782
+		// Token: 0x0401A5AE RID: 107950
 		private float MusicTitleScrollSpeed = 0.1f;
 
-		// Token: 0x0401FAF7 RID: 129783
+		// Token: 0x0401A5AF RID: 107951
 		private float MusicTitleScrollBeginTime = 1000f;
 
-		// Token: 0x0401FAF8 RID: 129784
+		// Token: 0x0401A5B0 RID: 107952
 		private float MusicTitleScrollEndTime = 1000f;
 
-		// Token: 0x0401FAF9 RID: 129785
+		// Token: 0x0401A5B1 RID: 107953
 		private float MusicTitleTextCurX;
 
-		// Token: 0x0401FAFA RID: 129786
+		// Token: 0x0401A5B2 RID: 107954
 		[Nullable(2)]
 		private IUiItemAspectOffsetConfig UiItemOffsetConfig;
 
-		// Token: 0x0401FAFB RID: 129787
+		// Token: 0x0401A5B3 RID: 107955
 		private readonly List<InputMultiKeyItem> KeyItemList = new List<InputMultiKeyItem>();
 
-		// Token: 0x0401FAFC RID: 129788
+		// Token: 0x0401A5B4 RID: 107956
 		private EMotorcycleHudColorState ColorState;
 
-		// Token: 0x0401FAFD RID: 129789
+		// Token: 0x0401A5B5 RID: 107957
 		private float AlphaTimeCountdown = -1f;
 
-		// Token: 0x0401FAFE RID: 129790
+		// Token: 0x0401A5B6 RID: 107958
 		private bool IsInTouch;
 
-		// Token: 0x0401FAFF RID: 129791
+		// Token: 0x0401A5B7 RID: 107959
 		private bool MusicEffectPlaying;
 
-		// Token: 0x0401FB00 RID: 129792
+		// Token: 0x0401A5B8 RID: 107960
 		[Nullable(2)]
 		private CustomPromise<bool> StopPromise;
 
-		// Token: 0x0200C06D RID: 49261
+		// Token: 0x0200AA73 RID: 43635
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A104 RID: 237828
+			// Token: 0x04034AC7 RID: 215751
 			MusicTitleButton,
-			// Token: 0x0403A105 RID: 237829
+			// Token: 0x04034AC8 RID: 215752
 			MusicTitleNode,
-			// Token: 0x0403A106 RID: 237830
+			// Token: 0x04034AC9 RID: 215753
 			MusicTitleText,
-			// Token: 0x0403A107 RID: 237831
+			// Token: 0x04034ACA RID: 215754
 			MusicBtnPrev,
-			// Token: 0x0403A108 RID: 237832
+			// Token: 0x04034ACB RID: 215755
 			MusicTogPlay,
-			// Token: 0x0403A109 RID: 237833
+			// Token: 0x04034ACC RID: 215756
 			MusicBtnNext,
-			// Token: 0x0403A10A RID: 237834
+			// Token: 0x04034ACD RID: 215757
 			KeyNode,
-			// Token: 0x0403A10B RID: 237835
+			// Token: 0x04034ACE RID: 215758
 			RootItem,
-			// Token: 0x0403A10C RID: 237836
+			// Token: 0x04034ACF RID: 215759
 			AniAlphaIn,
-			// Token: 0x0403A10D RID: 237837
+			// Token: 0x04034AD0 RID: 215760
 			AniAlphaOut,
-			// Token: 0x0403A10E RID: 237838
+			// Token: 0x04034AD1 RID: 215761
 			MusicPlayEffect,
-			// Token: 0x0403A10F RID: 237839
+			// Token: 0x04034AD2 RID: 215762
 			KeyItem1,
-			// Token: 0x0403A110 RID: 237840
+			// Token: 0x04034AD3 RID: 215763
 			KeyItem2,
-			// Token: 0x0403A111 RID: 237841
+			// Token: 0x04034AD4 RID: 215764
 			KeyItem3
 		}
 
-		// Token: 0x0200C06E RID: 49262
+		// Token: 0x0200AA74 RID: 43636
 		[NullableContext(0)]
 		private enum EScrollState
 		{
-			// Token: 0x0403A113 RID: 237843
+			// Token: 0x04034AD6 RID: 215766
 			NoScroll,
-			// Token: 0x0403A114 RID: 237844
+			// Token: 0x04034AD7 RID: 215767
 			Begin,
-			// Token: 0x0403A115 RID: 237845
+			// Token: 0x04034AD8 RID: 215768
 			Scrolling,
-			// Token: 0x0403A116 RID: 237846
+			// Token: 0x04034AD9 RID: 215769
 			End
 		}
 
-		// Token: 0x0200C06F RID: 49263
+		// Token: 0x0200AA75 RID: 43637
 		[NullableContext(0)]
 		private enum EVisibleReason
 		{
-			// Token: 0x0403A118 RID: 237848
+			// Token: 0x04034ADB RID: 215771
 			BossStateArea = 1,
-			// Token: 0x0403A119 RID: 237849
+			// Token: 0x04034ADC RID: 215772
 			MotorMusicEnable
 		}
 	}

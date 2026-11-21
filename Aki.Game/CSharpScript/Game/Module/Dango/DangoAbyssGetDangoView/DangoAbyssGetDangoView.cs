@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
@@ -8,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 {
-	// Token: 0x02005AE8 RID: 23272
+	// Token: 0x02004AC9 RID: 19145
 	[NullableContext(2)]
 	[Nullable(0)]
-	public class DangoAbyssGetDangoView : UiViewBase, IUiCameraBehavior
+	public class DangoAbyssGetDangoView : UiViewBase, IUiViewCameraBehavior
 	{
-		// Token: 0x17008C33 RID: 35891
-		// (get) Token: 0x0603AEB7 RID: 241335 RVA: 0x00E0C198 File Offset: 0x00E0A398
+		// Token: 0x1700600D RID: 24589
+		// (get) Token: 0x0602FE29 RID: 196137 RVA: 0x00D5CE7C File Offset: 0x00D5B07C
 		public new DangoAbyssGetDangoViewParams OpenParam
 		{
 			get
@@ -23,13 +24,13 @@ namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 			}
 		}
 
-		// Token: 0x0603AEB8 RID: 241336 RVA: 0x00E0C1A5 File Offset: 0x00E0A3A5
+		// Token: 0x0602FE2A RID: 196138 RVA: 0x00D5CE89 File Offset: 0x00D5B089
 		[NullableContext(1)]
 		public DangoAbyssGetDangoView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603AEB9 RID: 241337 RVA: 0x00E0C1B0 File Offset: 0x00E0A3B0
+		// Token: 0x0602FE2B RID: 196139 RVA: 0x00D5CE94 File Offset: 0x00D5B094
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,19 +41,19 @@ namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 			};
 		}
 
-		// Token: 0x0603AEBA RID: 241338 RVA: 0x00E0C20A File Offset: 0x00E0A40A
+		// Token: 0x0602FE2C RID: 196140 RVA: 0x00D5CEEE File Offset: 0x00D5B0EE
 		protected override void OnHandleLoadScene()
 		{
 			DangoAbyssActorManager.InitIndexDangoSkeletalObserverHandle(99);
 		}
 
-		// Token: 0x0603AEBB RID: 241339 RVA: 0x00E0C213 File Offset: 0x00E0A413
+		// Token: 0x0602FE2D RID: 196141 RVA: 0x00D5CEF7 File Offset: 0x00D5B0F7
 		protected override void OnHandleReleaseScene()
 		{
 			DangoAbyssActorManager.DestroyDangoSkeletalObserverHandle(99);
 		}
 
-		// Token: 0x0603AEBC RID: 241340 RVA: 0x00E0C21C File Offset: 0x00E0A41C
+		// Token: 0x0602FE2E RID: 196142 RVA: 0x00D5CF00 File Offset: 0x00D5B100
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoAbyssGetDangoView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -63,7 +64,7 @@ namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AEBD RID: 241341 RVA: 0x00E0C260 File Offset: 0x00E0A460
+		// Token: 0x0602FE2F RID: 196143 RVA: 0x00D5CF44 File Offset: 0x00D5B144
 		public void OnClickBtnConfirm()
 		{
 			this.CurrentShowIndex++;
@@ -88,28 +89,28 @@ namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 			this.RefreshViewByCurrentShowIndex();
 		}
 
-		// Token: 0x0603AEBE RID: 241342 RVA: 0x00E0C2CB File Offset: 0x00E0A4CB
-		public void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+		// Token: 0x0602FE30 RID: 196144 RVA: 0x00D5CFAF File Offset: 0x00D5B1AF
+		public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 		{
-			UiCameraAnimationController.Instance.PushCameraHandle((EUiViewName)"DangoGet", new int?(base.GetViewId()), true);
+			UiCameraController.Instance.PushCameraHandleByOpenView((EUiViewName)"DangoGet", viewId, operationType);
 		}
 
-		// Token: 0x0603AEBF RID: 241343 RVA: 0x00E0C2ED File Offset: 0x00E0A4ED
-		public void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+		// Token: 0x0602FE31 RID: 196145 RVA: 0x00D5CFC7 File Offset: 0x00D5B1C7
+		public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 		{
-			UiCameraAnimationController.Instance.PopCameraHandle((EUiViewName)"DangoGet", stackTopInfo, closeViewId, popOrDelete);
+			UiCameraController.Instance.PopCameraHandleByCloseView((EUiViewName)"DangoGet", nextViewName, closeViewId, operationType);
 		}
 
-		// Token: 0x0603AEC0 RID: 241344 RVA: 0x00E0C307 File Offset: 0x00E0A507
+		// Token: 0x0602FE32 RID: 196146 RVA: 0x00D5CFE1 File Offset: 0x00D5B1E1
 		protected override void OnBeforeShow()
 		{
 			this.DLSSPastValue = UKismetSystemLibrary.GetConsoleVariableIntValue("r.NGX.DLSS.Enable");
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.NGX.DLSS.Enable 0", null);
-			this.PushCameraHandle((EUiViewName)"DangoGet", base.GetViewId(), true);
+			this.PushCameraHandleByOpenView((EUiViewName)"DangoGet", base.GetViewId(), EUiCameraHandleOperationType.Blend);
 			this.RefreshViewByCurrentShowIndex();
 		}
 
-		// Token: 0x0603AEC1 RID: 241345 RVA: 0x00E0C348 File Offset: 0x00E0A548
+		// Token: 0x0602FE33 RID: 196147 RVA: 0x00D5D020 File Offset: 0x00D5B220
 		private void RefreshViewByCurrentShowIndex()
 		{
 			DangoAbyssGetDangoViewParams openParam = this.OpenParam;
@@ -128,7 +129,7 @@ namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 			DangoAbyssController.Instance.RefreshAbyssDangoModel(99, dangoUnlockData.DangoId, "MonsterCase", null);
 		}
 
-		// Token: 0x0603AEC2 RID: 241346 RVA: 0x00E0C3F0 File Offset: 0x00E0A5F0
+		// Token: 0x0602FE34 RID: 196148 RVA: 0x00D5D0C8 File Offset: 0x00D5B2C8
 		protected override void OnBeforeDestroy()
 		{
 			UObject world = GlobalData.World;
@@ -138,7 +139,7 @@ namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 			UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
 		}
 
-		// Token: 0x0603AEC3 RID: 241347 RVA: 0x00E0C432 File Offset: 0x00E0A632
+		// Token: 0x0602FE35 RID: 196149 RVA: 0x00D5D10A File Offset: 0x00D5B30A
 		private void ShowDango()
 		{
 			DangoGetTitlePanel titlePanel = this.TitlePanel;
@@ -154,34 +155,34 @@ namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 			detailPanel.SetActive(true);
 		}
 
-		// Token: 0x0401EBFF RID: 125951
+		// Token: 0x040196BB RID: 104123
 		private const int HANDLEINDEX = 99;
 
-		// Token: 0x0401EC00 RID: 125952
+		// Token: 0x040196BC RID: 104124
 		[Nullable(1)]
 		private const string DANGOGET = "DangoGet";
 
-		// Token: 0x0401EC01 RID: 125953
+		// Token: 0x040196BD RID: 104125
 		private DangoGetTitlePanel TitlePanel;
 
-		// Token: 0x0401EC02 RID: 125954
+		// Token: 0x040196BE RID: 104126
 		private DangoGetDetailPanel DetailPanel;
 
-		// Token: 0x0401EC03 RID: 125955
+		// Token: 0x040196BF RID: 104127
 		private int CurrentShowIndex;
 
-		// Token: 0x0401EC04 RID: 125956
+		// Token: 0x040196C0 RID: 104128
 		private int DLSSPastValue;
 
-		// Token: 0x0200BD3E RID: 48446
+		// Token: 0x0200A746 RID: 42822
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x04039131 RID: 233777
+			// Token: 0x04033AFB RID: 211707
 			ItemPop,
-			// Token: 0x04039132 RID: 233778
+			// Token: 0x04033AFC RID: 211708
 			ItemGet,
-			// Token: 0x04039133 RID: 233779
+			// Token: 0x04033AFD RID: 211709
 			ItemShowLayer
 		}
 	}

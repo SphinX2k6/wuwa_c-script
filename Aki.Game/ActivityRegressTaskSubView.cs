@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014B0 RID: 5296
+// Token: 0x02000964 RID: 2404
 public class ActivityRegressTaskSubView : ActivityRegressTaskSubViewBase
 {
-	// Token: 0x0600960A RID: 38410 RVA: 0x002061E8 File Offset: 0x002043E8
+	// Token: 0x0600699F RID: 27039 RVA: 0x0020F154 File Offset: 0x0020D354
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class ActivityRegressTaskSubView : ActivityRegressTaskSubViewBase
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x0600960B RID: 38411 RVA: 0x002062D4 File Offset: 0x002044D4
+	// Token: 0x060069A0 RID: 27040 RVA: 0x0020F240 File Offset: 0x0020D440
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegressTaskSubView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -38,27 +38,27 @@ public class ActivityRegressTaskSubView : ActivityRegressTaskSubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600960C RID: 38412 RVA: 0x00206317 File Offset: 0x00204517
+	// Token: 0x060069A1 RID: 27041 RVA: 0x0020F283 File Offset: 0x0020D483
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
 		this.RefreshView();
 	}
 
-	// Token: 0x0600960D RID: 38413 RVA: 0x00206325 File Offset: 0x00204525
+	// Token: 0x060069A2 RID: 27042 RVA: 0x0020F291 File Offset: 0x0020D491
 	protected override void OnUpdate()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600960E RID: 38414 RVA: 0x0020632D File Offset: 0x0020452D
+	// Token: 0x060069A3 RID: 27043 RVA: 0x0020F299 File Offset: 0x0020D499
 	protected override void OnAfterHide()
 	{
 		base.OnAfterHide();
 		this.ClearTimer();
 	}
 
-	// Token: 0x0600960F RID: 38415 RVA: 0x0020633B File Offset: 0x0020453B
+	// Token: 0x060069A4 RID: 27044 RVA: 0x0020F2A7 File Offset: 0x0020D4A7
 	protected override void OnBeforeDestroy()
 	{
 		if (this.ContentGenericLayout != null)
@@ -69,7 +69,7 @@ public class ActivityRegressTaskSubView : ActivityRegressTaskSubViewBase
 		this.TaskDynamicScrollItemList = null;
 	}
 
-	// Token: 0x06009610 RID: 38416 RVA: 0x0020635E File Offset: 0x0020455E
+	// Token: 0x060069A5 RID: 27045 RVA: 0x0020F2CA File Offset: 0x0020D4CA
 	private void ClearTimer()
 	{
 		if (TimerSystem.Instance.Has(this.RefreshTimerHandle))
@@ -79,14 +79,14 @@ public class ActivityRegressTaskSubView : ActivityRegressTaskSubViewBase
 		}
 	}
 
-	// Token: 0x06009611 RID: 38417 RVA: 0x0020638A File Offset: 0x0020458A
+	// Token: 0x060069A6 RID: 27046 RVA: 0x0020F2F6 File Offset: 0x0020D4F6
 	protected override void OnStart()
 	{
 		base.OnStart();
 		this.RecallTaskScoreRewardLayout = new GenericScrollViewNew<ActivityRegressTaskLayoutItemPanel, ActivityRegressTaskScoreRewardGridData>(base.GetScrollViewWithScrollbar(1), new Func<ActivityRegressTaskLayoutItemPanel>(this.InitScoreRewardGridItem), null, false, null);
 	}
 
-	// Token: 0x06009612 RID: 38418 RVA: 0x002063B4 File Offset: 0x002045B4
+	// Token: 0x060069A7 RID: 27047 RVA: 0x0020F320 File Offset: 0x0020D520
 	[NullableContext(1)]
 	private ActivityRegressTaskDynamicScrollItem CreateItemFunc(ActivityRegressTaskDynamicData data, UUIItem uiItem, int index)
 	{
@@ -95,14 +95,14 @@ public class ActivityRegressTaskSubView : ActivityRegressTaskSubViewBase
 		return activityRegressTaskDynamicScrollItem;
 	}
 
-	// Token: 0x06009613 RID: 38419 RVA: 0x002063D4 File Offset: 0x002045D4
+	// Token: 0x060069A8 RID: 27048 RVA: 0x0020F340 File Offset: 0x0020D540
 	[NullableContext(1)]
 	private ActivityRegressTaskLayoutItemPanel InitScoreRewardGridItem()
 	{
 		return new ActivityRegressTaskLayoutItemPanel();
 	}
 
-	// Token: 0x06009614 RID: 38420 RVA: 0x002063DC File Offset: 0x002045DC
+	// Token: 0x060069A9 RID: 27049 RVA: 0x0020F348 File Offset: 0x0020D548
 	private void RefreshScoreRewards()
 	{
 		UUIText text = base.GetText(3);
@@ -141,14 +141,14 @@ public class ActivityRegressTaskSubView : ActivityRegressTaskSubViewBase
 		this.RefreshMainTaskScoreRewardRedDotIndexes(regressMainTaskScoreRewardGridDataArr);
 	}
 
-	// Token: 0x06009615 RID: 38421 RVA: 0x002064E8 File Offset: 0x002046E8
+	// Token: 0x060069AA RID: 27050 RVA: 0x0020F454 File Offset: 0x0020D654
 	private void RefreshRegressTasks()
 	{
 		List<ActivityRegressTaskDynamicData> regressMainTaskGridDataGroupByTypeAndSortedArr = ActivityRegressModel.Instance.GetRegressMainTaskGridDataGroupByTypeAndSortedArr();
 		this.ContentGenericLayout.RefreshByData(regressMainTaskGridDataGroupByTypeAndSortedArr.ToArray(), false, false);
 	}
 
-	// Token: 0x06009616 RID: 38422 RVA: 0x00206514 File Offset: 0x00204714
+	// Token: 0x060069AB RID: 27051 RVA: 0x0020F480 File Offset: 0x0020D680
 	private void RefreshView()
 	{
 		this.RefreshScoreRewards();
@@ -158,7 +158,7 @@ public class ActivityRegressTaskSubView : ActivityRegressTaskSubViewBase
 		base.GetTexture(6).SetUIActive(ActivityRegressModel.Instance.Grade == ERegressGrade.Hyper);
 	}
 
-	// Token: 0x06009617 RID: 38423 RVA: 0x00206578 File Offset: 0x00204778
+	// Token: 0x060069AC RID: 27052 RVA: 0x0020F4E4 File Offset: 0x0020D6E4
 	[NullableContext(1)]
 	private void RefreshMainTaskScoreRewardRedDotIndexes(List<ActivityRegressTaskScoreRewardGridData> gridDataList)
 	{
@@ -186,7 +186,7 @@ public class ActivityRegressTaskSubView : ActivityRegressTaskSubViewBase
 		this.MinAndMaxScoreRewardIndexTuple = new ValueTuple<int?, int?>(new int?(num), new int?(num2));
 	}
 
-	// Token: 0x06009618 RID: 38424 RVA: 0x00206600 File Offset: 0x00204800
+	// Token: 0x060069AD RID: 27053 RVA: 0x0020F56C File Offset: 0x0020D76C
 	private void OnScrollUpdateRedDot(FVector2D _)
 	{
 		if (this.MinAndMaxScoreRewardIndexTuple.Item1 == null && this.MinAndMaxScoreRewardIndexTuple.Item2 == null)
@@ -203,7 +203,7 @@ public class ActivityRegressTaskSubView : ActivityRegressTaskSubViewBase
 		base.GetItem(8).SetUIActive(valueOrDefault2 > displayGridEndIndex);
 	}
 
-	// Token: 0x0400424A RID: 16970
+	// Token: 0x040042E2 RID: 17122
 	[Nullable(new byte[]
 	{
 		2,
@@ -213,7 +213,7 @@ public class ActivityRegressTaskSubView : ActivityRegressTaskSubViewBase
 	})]
 	private DynamicScrollView<ActivityRegressTaskDynamicScrollItem, ActivityRegressTaskDynamicItem, ActivityRegressTaskDynamicData> ContentGenericLayout;
 
-	// Token: 0x0400424B RID: 16971
+	// Token: 0x040042E3 RID: 17123
 	[Nullable(new byte[]
 	{
 		2,
@@ -221,11 +221,11 @@ public class ActivityRegressTaskSubView : ActivityRegressTaskSubViewBase
 	})]
 	private List<ActivityRegressTaskDynamicScrollItem> TaskDynamicScrollItemList;
 
-	// Token: 0x0400424C RID: 16972
+	// Token: 0x040042E4 RID: 17124
 	[Nullable(2)]
 	private TimerHandle RefreshTimerHandle;
 
-	// Token: 0x0400424D RID: 16973
+	// Token: 0x040042E5 RID: 17125
 	[Nullable(new byte[]
 	{
 		2,
@@ -234,37 +234,37 @@ public class ActivityRegressTaskSubView : ActivityRegressTaskSubViewBase
 	})]
 	private GenericScrollViewNew<ActivityRegressTaskLayoutItemPanel, ActivityRegressTaskScoreRewardGridData> RecallTaskScoreRewardLayout;
 
-	// Token: 0x0400424E RID: 16974
+	// Token: 0x040042E6 RID: 17126
 	private ValueTuple<int?, int?> MinAndMaxScoreRewardIndexTuple = new ValueTuple<int?, int?>(null, null);
 
-	// Token: 0x02007AE8 RID: 31464
+	// Token: 0x02006C6C RID: 27756
 	private class EComponents
 	{
-		// Token: 0x040286E4 RID: 165604
+		// Token: 0x040239FE RID: 145918
 		public const int DynScrollView = 0;
 
-		// Token: 0x040286E5 RID: 165605
+		// Token: 0x040239FF RID: 145919
 		public const int RewardScrollView = 1;
 
-		// Token: 0x040286E6 RID: 165606
+		// Token: 0x04023A00 RID: 145920
 		public const int PnlItem = 2;
 
-		// Token: 0x040286E7 RID: 165607
+		// Token: 0x04023A01 RID: 145921
 		public const int TxtNum = 3;
 
-		// Token: 0x040286E8 RID: 165608
+		// Token: 0x04023A02 RID: 145922
 		public const int PnlNor = 4;
 
-		// Token: 0x040286E9 RID: 165609
+		// Token: 0x04023A03 RID: 145923
 		public const int PnlSenior = 5;
 
-		// Token: 0x040286EA RID: 165610
+		// Token: 0x04023A04 RID: 145924
 		public const int TexSeniorBg = 6;
 
-		// Token: 0x040286EB RID: 165611
+		// Token: 0x04023A05 RID: 145925
 		public const int LeftRedPoint = 7;
 
-		// Token: 0x040286EC RID: 165612
+		// Token: 0x04023A06 RID: 145926
 		public const int RightRedPoint = 8;
 	}
 }

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AC6 RID: 2758
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B90 RID: 2960
 	public class IRandomBatchPoolRefresh : IEntityBatchRefreshMode
 	{
-		// Token: 0x06003F80 RID: 16256 RVA: 0x000A2331 File Offset: 0x000A0531
+		// Token: 0x060043AA RID: 17322 RVA: 0x000AB925 File Offset: 0x000A9B25
 		public static IRandomBatchPoolRefresh Create(IRandomBatchPoolRefresh? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FB1 RID: 4017
-		// (get) Token: 0x06003F81 RID: 16257 RVA: 0x000A2350 File Offset: 0x000A0550
+		// Token: 0x17001085 RID: 4229
+		// (get) Token: 0x060043AB RID: 17323 RVA: 0x000AB944 File Offset: 0x000A9B44
 		public override EEntityBatchRefreshMode Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FB2 RID: 4018
-		// (get) Token: 0x06003F82 RID: 16258 RVA: 0x000A2360 File Offset: 0x000A0560
+		// Token: 0x17001086 RID: 4230
+		// (get) Token: 0x060043AC RID: 17324 RVA: 0x000AB954 File Offset: 0x000A9B54
 		public override List<IEntityListBatch> EntityBatches
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FB3 RID: 4019
-		// (get) Token: 0x06003F83 RID: 16259 RVA: 0x000A23CC File Offset: 0x000A05CC
+		// Token: 0x17001087 RID: 4231
+		// (get) Token: 0x060043AD RID: 17325 RVA: 0x000AB9C0 File Offset: 0x000A9BC0
 		public virtual bool? IsRestartAfterAllBatchesFinished
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002349 RID: 9033
+		// Token: 0x04002565 RID: 9573
 		private IRandomBatchPoolRefresh Instance;
 
-		// Token: 0x0400234A RID: 9034
+		// Token: 0x04002566 RID: 9574
 		private List<IEntityListBatch> _EntityBatchesCache;
 
-		// Token: 0x0400234B RID: 9035
+		// Token: 0x04002567 RID: 9575
 		private bool _EntityBatchesInited;
 	}
 }

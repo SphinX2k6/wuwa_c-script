@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000410 RID: 1040
+	// Token: 0x02000426 RID: 1062
 	public class ConfigHotKeyIconByKeyName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001867 RID: 6247 RVA: 0x000E3CDB File Offset: 0x000E1EDB
+		// Token: 0x060018EB RID: 6379 RVA: 0x000EA42F File Offset: 0x000E862F
 		static ConfigHotKeyIconByKeyName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHotKeyIconByKeyName.CreateStaticDefaultValue), new Action(ConfigHotKeyIconByKeyName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001868 RID: 6248 RVA: 0x000E3CFC File Offset: 0x000E1EFC
+		// Token: 0x060018EC RID: 6380 RVA: 0x000EA450 File Offset: 0x000E8650
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHotKeyIconByKeyName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001869 RID: 6249 RVA: 0x000E3D7B File Offset: 0x000E1F7B
+		// Token: 0x060018ED RID: 6381 RVA: 0x000EA4CF File Offset: 0x000E86CF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHotKeyIconByKeyName.LogPair = null;
 			ConfigHotKeyIconByKeyName.HandleId = 0;
 		}
 
-		// Token: 0x0600186A RID: 6250 RVA: 0x000E3D89 File Offset: 0x000E1F89
+		// Token: 0x060018EE RID: 6382 RVA: 0x000EA4DD File Offset: 0x000E86DD
 		public static void Init()
 		{
 			ConfigHotKeyIconByKeyName.HandleId = ConfigCommon.InitDataStatement(ConfigHotKeyIconByKeyName.HandleId, "db_uihotkot.db", "select BinData from `HotKeyIcon` where KeyName=?");
 		}
 
-		// Token: 0x0600186B RID: 6251 RVA: 0x000E3DA4 File Offset: 0x000E1FA4
+		// Token: 0x060018EF RID: 6383 RVA: 0x000EA4F8 File Offset: 0x000E86F8
 		public static HotKeyIcon? GetConfig(string p0KeyName, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHotKeyIconByKeyName.HandleId, ConfigHotKeyIconByKeyName.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new HotKeyIcon?(rootAsHotKeyIcon);
 		}
 
-		// Token: 0x04001C54 RID: 7252
+		// Token: 0x04001CEE RID: 7406
 		private const string DB = "db_uihotkot.db";
 
-		// Token: 0x04001C55 RID: 7253
+		// Token: 0x04001CEF RID: 7407
 		private const string FILE = "j.界面快捷键.xlsx";
 
-		// Token: 0x04001C56 RID: 7254
+		// Token: 0x04001CF0 RID: 7408
 		private const string TABLE = "HotKeyIcon";
 
-		// Token: 0x04001C57 RID: 7255
+		// Token: 0x04001CF1 RID: 7409
 		private const string COMMAND = "select BinData from `HotKeyIcon` where KeyName=?";
 
-		// Token: 0x04001C58 RID: 7256
+		// Token: 0x04001CF2 RID: 7410
 		private const string KEY_PREFIX = "HotKeyIconByKeyName";
 
-		// Token: 0x04001C59 RID: 7257
+		// Token: 0x04001CF3 RID: 7411
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001C5A RID: 7258
+		// Token: 0x04001CF4 RID: 7412
 		private static int HandleId;
 	}
 }

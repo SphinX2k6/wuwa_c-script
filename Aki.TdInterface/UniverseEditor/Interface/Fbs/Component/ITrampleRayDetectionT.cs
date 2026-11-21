@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005ACD RID: 23245
+	// Token: 0x020060DA RID: 24794
 	public class ITrampleRayDetectionT
 	{
 	}

@@ -6,19 +6,19 @@ using CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 {
-	// Token: 0x0200527C RID: 21116
+	// Token: 0x0200424C RID: 16972
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBuffEffectAddBuff
 	{
-		// Token: 0x06036026 RID: 221222 RVA: 0x00CC7FB9 File Offset: 0x00CC61B9
+		// Token: 0x0602AF21 RID: 175905 RVA: 0x00C156B9 File Offset: 0x00C138B9
 		public PhantomArenaBuffEffectAddBuff(IBuffEffectData data, PhantomArenaBuffEffectManager manager)
 		{
 			this.Data = data;
 			this.Manager = manager;
 		}
 
-		// Token: 0x06036027 RID: 221223 RVA: 0x00CC7FD0 File Offset: 0x00CC61D0
+		// Token: 0x0602AF22 RID: 175906 RVA: 0x00C156D0 File Offset: 0x00C138D0
 		public void ShowBuffEffect()
 		{
 			foreach (int buffConfigId in this.Data.Effect.PhantomBattleAddBuffEffectCtx.PhantomBattleBuffId)
@@ -31,10 +31,10 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			}
 		}
 
-		// Token: 0x0401C996 RID: 117142
+		// Token: 0x040173CB RID: 95179
 		protected IBuffEffectData Data;
 
-		// Token: 0x0401C997 RID: 117143
+		// Token: 0x040173CC RID: 95180
 		protected PhantomArenaBuffEffectManager Manager;
 	}
 }

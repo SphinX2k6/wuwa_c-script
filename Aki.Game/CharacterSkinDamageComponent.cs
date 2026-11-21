@@ -6,18 +6,18 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02003088 RID: 12424
+// Token: 0x020025DF RID: 9695
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601A899 RID: 108697 RVA: 0x0071AE34 File Offset: 0x00719034
+	// Token: 0x0601827E RID: 98942 RVA: 0x0074129C File Offset: 0x0073F49C
 	static CharacterSkinDamageComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterSkinDamageComponent.CreateStaticDefaultValue), new Action(CharacterSkinDamageComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601A89A RID: 108698 RVA: 0x0071AED8 File Offset: 0x007190D8
+	// Token: 0x0601827F RID: 98943 RVA: 0x00741340 File Offset: 0x0073F540
 	protected override bool OnStart()
 	{
 		this.CreatureDataComp = base.Entity.CheckGetComponent<CreatureDataComponent>();
@@ -35,7 +35,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		return true;
 	}
 
-	// Token: 0x0601A89B RID: 108699 RVA: 0x0071B004 File Offset: 0x00719204
+	// Token: 0x06018280 RID: 98944 RVA: 0x0074146C File Offset: 0x0073F66C
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.Remove(EEventName.OnBattleStateChanged, new Action<bool>(this.OnBattleStateChanged));
@@ -50,7 +50,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		return true;
 	}
 
-	// Token: 0x0601A89C RID: 108700 RVA: 0x0071B0F8 File Offset: 0x007192F8
+	// Token: 0x06018281 RID: 98945 RVA: 0x00741560 File Offset: 0x0073F760
 	private void TryAddKuroChangeSkeletalMaterialsComponent()
 	{
 		this.KuroChangeSkeletalMaterialsComponent = (this.ActorComp.Actor.GetComponentByClass(UKuroChangeSkeletalMaterialsComponent.StaticClass()) as UKuroChangeSkeletalMaterialsComponent);
@@ -61,7 +61,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601A89D RID: 108701 RVA: 0x0071B17C File Offset: 0x0071937C
+	// Token: 0x06018282 RID: 98946 RVA: 0x007415E4 File Offset: 0x0073F7E4
 	private void OnBattleStateChanged(bool inFight)
 	{
 		this.DestroyTimer();
@@ -79,7 +79,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		this.BeHitCount = 0;
 	}
 
-	// Token: 0x0601A89E RID: 108702 RVA: 0x0071B1E0 File Offset: 0x007193E0
+	// Token: 0x06018283 RID: 98947 RVA: 0x00741648 File Offset: 0x0073F848
 	private void OnBeHit(HitInformation hitData, HitContext _)
 	{
 		if (this.BattleStartTime == 0.0)
@@ -95,7 +95,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		this.ApplyBeHitCount();
 	}
 
-	// Token: 0x0601A89F RID: 108703 RVA: 0x0071B248 File Offset: 0x00719448
+	// Token: 0x06018284 RID: 98948 RVA: 0x007416B0 File Offset: 0x0073F8B0
 	private unsafe void ApplyBeHitCount()
 	{
 		double num = Time.Instance.WorldTimeSeconds - this.BattleStartTime;
@@ -125,7 +125,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601A8A0 RID: 108704 RVA: 0x0071B344 File Offset: 0x00719544
+	// Token: 0x06018285 RID: 98949 RVA: 0x007417AC File Offset: 0x0073F9AC
 	private void OnRevive()
 	{
 		if (FormationDataController.Instance.GlobalIsInFight)
@@ -134,20 +134,20 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601A8A1 RID: 108705 RVA: 0x0071B374 File Offset: 0x00719574
+	// Token: 0x06018286 RID: 98950 RVA: 0x007417DC File Offset: 0x0073F9DC
 	private void OnTeleportStart(bool _)
 	{
 		this.ApplySkinDamageByType(ESkinDamageType.Normal, false, "战损恢复（传送）", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0601A8A2 RID: 108706 RVA: 0x0071B397 File Offset: 0x00719597
+	// Token: 0x06018287 RID: 98951 RVA: 0x007417FF File Offset: 0x0073F9FF
 	private void OnCharacterMorphTypeChanged(Entity entity, EMorphType morphType, EMorphType oldMorphType)
 	{
 		this.DestroyMorphTimer();
 		this.MorphTimer = TimerSystem.Instance.Delay(new TTimerAction(this.OnDelayAfterMorphTypeChanged), 100f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601A8A3 RID: 108707 RVA: 0x0071B3C8 File Offset: 0x007195C8
+	// Token: 0x06018288 RID: 98952 RVA: 0x00741830 File Offset: 0x0073FA30
 	private void OnDelayAfterMorphTypeChanged(float delta)
 	{
 		this.MorphTimer = null;
@@ -168,7 +168,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		charRenderingComponent.SetMaterialPropertyFloatV2(CharacterSkinDamageComponent.newDamageIntensityName, this.MaterialPropertyValue, EKuroCharBodySpecifiedType.Body, EKuroCharSlotSpecifiedType.Body, EKuroCharMeshPart.ECharacterMeshPart_Max);
 	}
 
-	// Token: 0x0601A8A4 RID: 108708 RVA: 0x0071B418 File Offset: 0x00719618
+	// Token: 0x06018289 RID: 98953 RVA: 0x00741880 File Offset: 0x0073FA80
 	private void DestroyMorphTimer()
 	{
 		if (!TimerSystem.Instance.Has(this.MorphTimer))
@@ -179,7 +179,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		this.MorphTimer = null;
 	}
 
-	// Token: 0x0601A8A5 RID: 108709 RVA: 0x0071B448 File Offset: 0x00719648
+	// Token: 0x0601828A RID: 98954 RVA: 0x007418B0 File Offset: 0x0073FAB0
 	private void OnRoleGoDown(int entityId)
 	{
 		if (entityId != base.Entity.Id)
@@ -196,7 +196,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601A8A6 RID: 108710 RVA: 0x0071B4A8 File Offset: 0x007196A8
+	// Token: 0x0601828B RID: 98955 RVA: 0x00741910 File Offset: 0x0073FB10
 	private void DestroyTimer()
 	{
 		if (this.EndSkinDamageTimer != null)
@@ -206,7 +206,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601A8A7 RID: 108711 RVA: 0x0071B4CA File Offset: 0x007196CA
+	// Token: 0x0601828C RID: 98956 RVA: 0x00741932 File Offset: 0x0073FB32
 	private void SetTimer()
 	{
 		this.EndSkinDamageTimer = TimerSystem.Instance.Delay(delegate(float _)
@@ -222,7 +222,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		}, 20f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601A8A8 RID: 108712 RVA: 0x0071B4F8 File Offset: 0x007196F8
+	// Token: 0x0601828D RID: 98957 RVA: 0x00741960 File Offset: 0x0073FB60
 	[NullableContext(2)]
 	private string GetSkinDamagePath(ESkinDamageType type)
 	{
@@ -240,7 +240,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		return text2;
 	}
 
-	// Token: 0x0601A8A9 RID: 108713 RVA: 0x0071B550 File Offset: 0x00719750
+	// Token: 0x0601828E RID: 98958 RVA: 0x007419B8 File Offset: 0x0073FBB8
 	public void ApplySkinDamageByType(ESkinDamageType type, bool force, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -269,7 +269,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601A8AA RID: 108714 RVA: 0x0071B5A8 File Offset: 0x007197A8
+	// Token: 0x0601828F RID: 98959 RVA: 0x00741A10 File Offset: 0x0073FC10
 	public void ApplySkinDamage(string damagePath, bool force, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -348,7 +348,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601A8AB RID: 108715 RVA: 0x0071B5F8 File Offset: 0x007197F8
+	// Token: 0x06018290 RID: 98960 RVA: 0x00741A60 File Offset: 0x0073FC60
 	private void OnResetSkinDamageMode()
 	{
 		if (!string.IsNullOrEmpty(this.CuePath) && this.IsCueIgnoreEnableSetting)
@@ -369,7 +369,7 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		this.ApplyBeHitCount();
 	}
 
-	// Token: 0x0601A8AC RID: 108716 RVA: 0x0071B684 File Offset: 0x00719884
+	// Token: 0x06018291 RID: 98961 RVA: 0x00741AEC File Offset: 0x0073FCEC
 	public void ResetCueSkinDamage()
 	{
 		if (string.IsNullOrEmpty(this.CuePath))
@@ -387,9 +387,9 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		this.ApplySkinDamageByType(ESkinDamageType.Normal, isCueIgnoreEnableSetting, "GameplayCueSkinDamage销毁", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x17002489 RID: 9353
-	// (get) Token: 0x0601A8AD RID: 108717 RVA: 0x0071B6F1 File Offset: 0x007198F1
-	// (set) Token: 0x0601A8AE RID: 108718 RVA: 0x0071B6FC File Offset: 0x007198FC
+	// Token: 0x170025E2 RID: 9698
+	// (get) Token: 0x06018292 RID: 98962 RVA: 0x00741B59 File Offset: 0x0073FD59
+	// (set) Token: 0x06018293 RID: 98963 RVA: 0x00741B64 File Offset: 0x0073FD64
 	public ESkinDamageType SkinDamageType
 	{
 		get
@@ -404,19 +404,19 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601A8AF RID: 108719 RVA: 0x0071B751 File Offset: 0x00719951
+	// Token: 0x06018294 RID: 98964 RVA: 0x00741BB9 File Offset: 0x0073FDB9
 	public static void CreateStaticDefaultValue()
 	{
 		CharacterSkinDamageComponent.EnableSkinDamage = true;
 	}
 
-	// Token: 0x0601A8B0 RID: 108720 RVA: 0x0071B759 File Offset: 0x00719959
+	// Token: 0x06018295 RID: 98965 RVA: 0x00741BC1 File Offset: 0x0073FDC1
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterSkinDamageComponent.EnableSkinDamage = true;
 	}
 
-	// Token: 0x0601A8B1 RID: 108721 RVA: 0x0071B764 File Offset: 0x00719964
+	// Token: 0x06018296 RID: 98966 RVA: 0x00741BCC File Offset: 0x0073FDCC
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -424,129 +424,107 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 			return false;
 		}
 		CharacterSkinDamageComponent characterSkinDamageComponent = (CharacterSkinDamageComponent)componentTemplate;
-		if (base.CanResetComponentProperty("CreatureDataComp"))
+		if (characterSkinDamageComponent.CreatureDataComp == null)
 		{
-			if (characterSkinDamageComponent.CreatureDataComp == null)
-			{
-				this.CreatureDataComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-			{
-				return false;
-			}
+			this.CreatureDataComp = null;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 		{
-			if (characterSkinDamageComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
+		if (characterSkinDamageComponent.ActorComp == null)
 		{
-			if (characterSkinDamageComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("KuroChangeSkeletalMaterialsComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (characterSkinDamageComponent.KuroChangeSkeletalMaterialsComponent == null)
-			{
-				this.KuroChangeSkeletalMaterialsComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroChangeSkeletalMaterialsComponent>(this.KuroChangeSkeletalMaterialsComponent), "KuroChangeSkeletalMaterialsComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("SkinDamageTypeInternal"))
+		if (characterSkinDamageComponent.TagComp == null)
 		{
-			this.SkinDamageTypeInternal = characterSkinDamageComponent.SkinDamageTypeInternal;
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("BattleStartTime"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			this.BattleStartTime = characterSkinDamageComponent.BattleStartTime;
+			return false;
 		}
-		if (base.CanResetComponentProperty("BattleEndTime"))
+		if (characterSkinDamageComponent.KuroChangeSkeletalMaterialsComponent == null)
 		{
-			this.BattleEndTime = characterSkinDamageComponent.BattleEndTime;
+			this.KuroChangeSkeletalMaterialsComponent = null;
 		}
-		if (base.CanResetComponentProperty("BeHitCount"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.KuroChangeSkeletalMaterialsComponent), "KuroChangeSkeletalMaterialsComponent"))
 		{
-			this.BeHitCount = characterSkinDamageComponent.BeHitCount;
+			return false;
 		}
-		if (base.CanResetComponentProperty("Path"))
+		this.SkinDamageTypeInternal = characterSkinDamageComponent.SkinDamageTypeInternal;
+		this.BattleStartTime = characterSkinDamageComponent.BattleStartTime;
+		this.BattleEndTime = characterSkinDamageComponent.BattleEndTime;
+		this.BeHitCount = characterSkinDamageComponent.BeHitCount;
+		this.Path = characterSkinDamageComponent.Path;
+		if (characterSkinDamageComponent.EndSkinDamageTimer == null)
 		{
-			this.Path = characterSkinDamageComponent.Path;
+			this.EndSkinDamageTimer = null;
 		}
-		if (base.CanResetComponentProperty("EndSkinDamageTimer"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndSkinDamageTimer), "EndSkinDamageTimer"))
 		{
-			if (characterSkinDamageComponent.EndSkinDamageTimer == null)
-			{
-				this.EndSkinDamageTimer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.EndSkinDamageTimer), "EndSkinDamageTimer"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CuePath"))
+		this.CuePath = characterSkinDamageComponent.CuePath;
+		this.IsCueIgnoreEnableSetting = characterSkinDamageComponent.IsCueIgnoreEnableSetting;
+		if (characterSkinDamageComponent.MorphTimer == null)
 		{
-			this.CuePath = characterSkinDamageComponent.CuePath;
+			this.MorphTimer = null;
 		}
-		if (base.CanResetComponentProperty("IsCueIgnoreEnableSetting"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MorphTimer), "MorphTimer"))
 		{
-			this.IsCueIgnoreEnableSetting = characterSkinDamageComponent.IsCueIgnoreEnableSetting;
+			return false;
 		}
-		if (base.CanResetComponentProperty("MorphTimer"))
-		{
-			if (characterSkinDamageComponent.MorphTimer == null)
-			{
-				this.MorphTimer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.MorphTimer), "MorphTimer"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MaterialPropertyValue"))
-		{
-			this.MaterialPropertyValue = characterSkinDamageComponent.MaterialPropertyValue;
-		}
+		this.MaterialPropertyValue = characterSkinDamageComponent.MaterialPropertyValue;
 		return true;
 	}
 
-	// Token: 0x0400CBDC RID: 52188
+	// Token: 0x170025E3 RID: 9699
+	// (get) Token: 0x06018297 RID: 98967 RVA: 0x00741D4E File Offset: 0x0073FF4E
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025E4 RID: 9700
+	// (get) Token: 0x06018298 RID: 98968 RVA: 0x00741D51 File Offset: 0x0073FF51
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CFBF RID: 53183
 	private const int SKIN_DAMAGE_TIME = 20;
 
-	// Token: 0x0400CBDD RID: 52189
+	// Token: 0x0400CFC0 RID: 53184
 	private const int SKIN_DAMAGE_LEVEL1_COUNT = 7;
 
-	// Token: 0x0400CBDE RID: 52190
+	// Token: 0x0400CFC1 RID: 53185
 	private const int SKIN_DAMAGE_LEVEL2_COUNT = 14;
 
-	// Token: 0x0400CBDF RID: 52191
+	// Token: 0x0400CFC2 RID: 53186
 	[StaticVariableRuleIgnore]
 	private static readonly FName newDamageIntensityName = new FName("DamageIntensity");
 
-	// Token: 0x0400CBE0 RID: 52192
+	// Token: 0x0400CFC3 RID: 53187
 	[StaticVariableRuleIgnore]
 	private static readonly FName newDamageOnName = new FName("NewDamageOn");
 
-	// Token: 0x0400CBE1 RID: 52193
+	// Token: 0x0400CFC4 RID: 53188
 	[StaticVariableRuleIgnore]
 	private static readonly FName newDamageOffName = new FName("NewDamageOff");
 
-	// Token: 0x0400CBE2 RID: 52194
+	// Token: 0x0400CFC5 RID: 53189
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<ESkinDamageType, int> skinDamageTagMap = new Dictionary<ESkinDamageType, int>
 	{
@@ -564,54 +542,54 @@ public class CharacterSkinDamageComponent : EntityComponent, IStaticVariableRese
 		}
 	};
 
-	// Token: 0x0400CBE3 RID: 52195
+	// Token: 0x0400CFC6 RID: 53190
 	[Nullable(2)]
 	private CreatureDataComponent CreatureDataComp;
 
-	// Token: 0x0400CBE4 RID: 52196
+	// Token: 0x0400CFC7 RID: 53191
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CBE5 RID: 52197
+	// Token: 0x0400CFC8 RID: 53192
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400CBE6 RID: 52198
+	// Token: 0x0400CFC9 RID: 53193
 	[Nullable(2)]
 	private UKuroChangeSkeletalMaterialsComponent KuroChangeSkeletalMaterialsComponent;
 
-	// Token: 0x0400CBE7 RID: 52199
+	// Token: 0x0400CFCA RID: 53194
 	private ESkinDamageType SkinDamageTypeInternal;
 
-	// Token: 0x0400CBE8 RID: 52200
+	// Token: 0x0400CFCB RID: 53195
 	private double BattleStartTime;
 
-	// Token: 0x0400CBE9 RID: 52201
+	// Token: 0x0400CFCC RID: 53196
 	private double BattleEndTime;
 
-	// Token: 0x0400CBEA RID: 52202
+	// Token: 0x0400CFCD RID: 53197
 	private int BeHitCount;
 
-	// Token: 0x0400CBEB RID: 52203
+	// Token: 0x0400CFCE RID: 53198
 	private string Path = "";
 
-	// Token: 0x0400CBEC RID: 52204
+	// Token: 0x0400CFCF RID: 53199
 	[Nullable(2)]
 	private TimerHandle EndSkinDamageTimer;
 
-	// Token: 0x0400CBED RID: 52205
+	// Token: 0x0400CFD0 RID: 53200
 	public string CuePath = "";
 
-	// Token: 0x0400CBEE RID: 52206
+	// Token: 0x0400CFD1 RID: 53201
 	public bool IsCueIgnoreEnableSetting;
 
-	// Token: 0x0400CBEF RID: 52207
+	// Token: 0x0400CFD2 RID: 53202
 	[Nullable(2)]
 	private TimerHandle MorphTimer;
 
-	// Token: 0x0400CBF0 RID: 52208
+	// Token: 0x0400CFD3 RID: 53203
 	private float MaterialPropertyValue = -1f;
 
-	// Token: 0x0400CBF1 RID: 52209
+	// Token: 0x0400CFD4 RID: 53204
 	public static bool EnableSkinDamage;
 }

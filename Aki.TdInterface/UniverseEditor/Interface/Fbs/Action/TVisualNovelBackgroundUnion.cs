@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200780B RID: 30731
+	// Token: 0x02008049 RID: 32841
 	public class TVisualNovelBackgroundUnion
 	{
-		// Token: 0x1700E6F5 RID: 59125
-		// (get) Token: 0x06037B94 RID: 228244 RVA: 0x007887D6 File Offset: 0x007869D6
-		// (set) Token: 0x06037B95 RID: 228245 RVA: 0x007887DE File Offset: 0x007869DE
+		// Token: 0x1700F353 RID: 62291
+		// (get) Token: 0x0603B139 RID: 241977 RVA: 0x007EE14E File Offset: 0x007EC34E
+		// (set) Token: 0x0603B13A RID: 241978 RVA: 0x007EE156 File Offset: 0x007EC356
 		public TVisualNovelBackground Type { get; set; }
 
-		// Token: 0x1700E6F6 RID: 59126
-		// (get) Token: 0x06037B96 RID: 228246 RVA: 0x007887E7 File Offset: 0x007869E7
-		// (set) Token: 0x06037B97 RID: 228247 RVA: 0x007887EF File Offset: 0x007869EF
+		// Token: 0x1700F354 RID: 62292
+		// (get) Token: 0x0603B13B RID: 241979 RVA: 0x007EE15F File Offset: 0x007EC35F
+		// (set) Token: 0x0603B13C RID: 241980 RVA: 0x007EE167 File Offset: 0x007EC367
 		public object Value { get; set; }
 
-		// Token: 0x06037B98 RID: 228248 RVA: 0x007887F8 File Offset: 0x007869F8
+		// Token: 0x0603B13D RID: 241981 RVA: 0x007EE170 File Offset: 0x007EC370
 		public TVisualNovelBackgroundUnion()
 		{
 			this.Type = TVisualNovelBackground.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037B99 RID: 228249 RVA: 0x0078880E File Offset: 0x00786A0E
+		// Token: 0x0603B13E RID: 241982 RVA: 0x007EE186 File Offset: 0x007EC386
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037B9A RID: 228250 RVA: 0x00788820 File Offset: 0x00786A20
+		// Token: 0x0603B13F RID: 241983 RVA: 0x007EE198 File Offset: 0x007EC398
 		public IVisualNovelBackgroundCleanT AsIVisualNovelBackgroundClean()
 		{
 			return this.As<IVisualNovelBackgroundCleanT>();
 		}
 
-		// Token: 0x06037B9B RID: 228251 RVA: 0x00788828 File Offset: 0x00786A28
+		// Token: 0x0603B140 RID: 241984 RVA: 0x007EE1A0 File Offset: 0x007EC3A0
 		public static TVisualNovelBackgroundUnion FromIVisualNovelBackgroundClean(IVisualNovelBackgroundCleanT _ivisualnovelbackgroundclean)
 		{
 			return new TVisualNovelBackgroundUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037B9C RID: 228252 RVA: 0x0078883D File Offset: 0x00786A3D
+		// Token: 0x0603B141 RID: 241985 RVA: 0x007EE1B5 File Offset: 0x007EC3B5
 		public IVisualNovelBackgroundLoadT AsIVisualNovelBackgroundLoad()
 		{
 			return this.As<IVisualNovelBackgroundLoadT>();
 		}
 
-		// Token: 0x06037B9D RID: 228253 RVA: 0x00788845 File Offset: 0x00786A45
+		// Token: 0x0603B142 RID: 241986 RVA: 0x007EE1BD File Offset: 0x007EC3BD
 		public static TVisualNovelBackgroundUnion FromIVisualNovelBackgroundLoad(IVisualNovelBackgroundLoadT _ivisualnovelbackgroundload)
 		{
 			return new TVisualNovelBackgroundUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037B9E RID: 228254 RVA: 0x0078885C File Offset: 0x00786A5C
+		// Token: 0x0603B143 RID: 241987 RVA: 0x007EE1D4 File Offset: 0x007EC3D4
 		public static int Pack(FlatBufferBuilder builder, TVisualNovelBackgroundUnion _o)
 		{
 			TVisualNovelBackground type = _o.Type;

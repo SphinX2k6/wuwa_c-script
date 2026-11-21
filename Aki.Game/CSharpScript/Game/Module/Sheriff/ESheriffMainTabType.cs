@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C3B RID: 19515
+	// Token: 0x02003BEC RID: 15340
 	public enum ESheriffMainTabType
 	{
-		// Token: 0x0401ADEE RID: 110062
+		// Token: 0x0401574B RID: 87883
 		Event,
-		// Token: 0x0401ADEF RID: 110063
+		// Token: 0x0401574C RID: 87884
 		Quest
 	}
 }

@@ -9,7 +9,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Effect;
 using CSharpScript.Game.InputSetting;
 using CSharpScript.Game.Module.RoleUi.Component;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.UiComponent;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Render;
@@ -21,18 +21,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi
 {
-	// Token: 0x02004CE3 RID: 19683
+	// Token: 0x02003C95 RID: 15509
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleRootView : UiViewBase
 	{
-		// Token: 0x06032CC8 RID: 208072 RVA: 0x00BD6274 File Offset: 0x00BD4474
+		// Token: 0x06027A9D RID: 162461 RVA: 0x00B1B97C File Offset: 0x00B19B7C
 		public RoleRootView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x17007D9D RID: 32157
-		// (get) Token: 0x06032CC9 RID: 208073 RVA: 0x00BD62C3 File Offset: 0x00BD44C3
+		// Token: 0x17005147 RID: 20807
+		// (get) Token: 0x06027A9E RID: 162462 RVA: 0x00B1B9CB File Offset: 0x00B19BCB
 		private bool IsLock
 		{
 			get
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032CCA RID: 208074 RVA: 0x00BD62CB File Offset: 0x00BD44CB
+		// Token: 0x06027A9F RID: 162463 RVA: 0x00B1B9D3 File Offset: 0x00B19BD3
 		private void Lock()
 		{
 			this.Operating = true;
 		}
 
-		// Token: 0x06032CCB RID: 208075 RVA: 0x00BD62D4 File Offset: 0x00BD44D4
+		// Token: 0x06027AA0 RID: 162464 RVA: 0x00B1B9DC File Offset: 0x00B19BDC
 		private void Unlock()
 		{
 			this.Operating = false;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032CCC RID: 208076 RVA: 0x00BD6338 File Offset: 0x00BD4538
+		// Token: 0x06027AA1 RID: 162465 RVA: 0x00B1BA40 File Offset: 0x00B19C40
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -103,40 +103,40 @@ namespace CSharpScript.Game.Module.RoleUi
 			};
 		}
 
-		// Token: 0x06032CCD RID: 208077 RVA: 0x00BD64CC File Offset: 0x00BD46CC
+		// Token: 0x06027AA2 RID: 162466 RVA: 0x00B1BBD4 File Offset: 0x00B19DD4
 		protected override UniTask OnBeforeStartAsync()
 		{
-			RoleRootView.<OnBeforeStartAsync>d__30 <OnBeforeStartAsync>d__;
+			RoleRootView.<OnBeforeStartAsync>d__31 <OnBeforeStartAsync>d__;
 			<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnBeforeStartAsync>d__.<>4__this = this;
 			<OnBeforeStartAsync>d__.<>1__state = -1;
-			<OnBeforeStartAsync>d__.<>t__builder.Start<RoleRootView.<OnBeforeStartAsync>d__30>(ref <OnBeforeStartAsync>d__);
+			<OnBeforeStartAsync>d__.<>t__builder.Start<RoleRootView.<OnBeforeStartAsync>d__31>(ref <OnBeforeStartAsync>d__);
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032CCE RID: 208078 RVA: 0x00BD6510 File Offset: 0x00BD4710
+		// Token: 0x06027AA3 RID: 162467 RVA: 0x00B1BC18 File Offset: 0x00B19E18
 		private UniTask InitRoleDevelopEntranceItem()
 		{
-			RoleRootView.<InitRoleDevelopEntranceItem>d__31 <InitRoleDevelopEntranceItem>d__;
+			RoleRootView.<InitRoleDevelopEntranceItem>d__32 <InitRoleDevelopEntranceItem>d__;
 			<InitRoleDevelopEntranceItem>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<InitRoleDevelopEntranceItem>d__.<>4__this = this;
 			<InitRoleDevelopEntranceItem>d__.<>1__state = -1;
-			<InitRoleDevelopEntranceItem>d__.<>t__builder.Start<RoleRootView.<InitRoleDevelopEntranceItem>d__31>(ref <InitRoleDevelopEntranceItem>d__);
+			<InitRoleDevelopEntranceItem>d__.<>t__builder.Start<RoleRootView.<InitRoleDevelopEntranceItem>d__32>(ref <InitRoleDevelopEntranceItem>d__);
 			return <InitRoleDevelopEntranceItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032CCF RID: 208079 RVA: 0x00BD6554 File Offset: 0x00BD4754
+		// Token: 0x06027AA4 RID: 162468 RVA: 0x00B1BC5C File Offset: 0x00B19E5C
 		private UniTask TryRequestTrialRoleInfo()
 		{
-			RoleRootView.<TryRequestTrialRoleInfo>d__32 <TryRequestTrialRoleInfo>d__;
+			RoleRootView.<TryRequestTrialRoleInfo>d__33 <TryRequestTrialRoleInfo>d__;
 			<TryRequestTrialRoleInfo>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<TryRequestTrialRoleInfo>d__.<>4__this = this;
 			<TryRequestTrialRoleInfo>d__.<>1__state = -1;
-			<TryRequestTrialRoleInfo>d__.<>t__builder.Start<RoleRootView.<TryRequestTrialRoleInfo>d__32>(ref <TryRequestTrialRoleInfo>d__);
+			<TryRequestTrialRoleInfo>d__.<>t__builder.Start<RoleRootView.<TryRequestTrialRoleInfo>d__33>(ref <TryRequestTrialRoleInfo>d__);
 			return <TryRequestTrialRoleInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032CD0 RID: 208080 RVA: 0x00BD6598 File Offset: 0x00BD4798
+		// Token: 0x06027AA5 RID: 162469 RVA: 0x00B1BCA0 File Offset: 0x00B19EA0
 		private void UpdateTrialRoleResonanceData(List<int> trialRoleIdList)
 		{
 			foreach (int num in trialRoleIdList)
@@ -160,11 +160,11 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032CD1 RID: 208081 RVA: 0x00BD6664 File Offset: 0x00BD4864
+		// Token: 0x06027AA6 RID: 162470 RVA: 0x00B1BD6C File Offset: 0x00B19F6C
 		private void ClearTrialRoleResonanceData()
 		{
 			List<int> list = new List<int>();
-			foreach (int num in this.RoleViewAgent.GetRoleIdList())
+			foreach (int num in this.RoleViewAgent.GetRoleIdList(null))
 			{
 				if (RoleUtils.IsTrialRole(num))
 				{
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032CD2 RID: 208082 RVA: 0x00BD674C File Offset: 0x00BD494C
+		// Token: 0x06027AA7 RID: 162471 RVA: 0x00B1BE54 File Offset: 0x00B1A054
 		private void HandleLoadScene()
 		{
 			if (!this.CanHandleLoadScene)
@@ -217,13 +217,13 @@ namespace CSharpScript.Game.Module.RoleUi
 			uiModelActorComponent.SetTransformByTag("RoleCase");
 		}
 
-		// Token: 0x06032CD3 RID: 208083 RVA: 0x00BD67C3 File Offset: 0x00BD49C3
+		// Token: 0x06027AA8 RID: 162472 RVA: 0x00B1BECB File Offset: 0x00B1A0CB
 		protected override void OnHandleLoadScene()
 		{
 			this.HandleLoadScene();
 		}
 
-		// Token: 0x06032CD4 RID: 208084 RVA: 0x00BD67CC File Offset: 0x00BD49CC
+		// Token: 0x06027AA9 RID: 162473 RVA: 0x00B1BED4 File Offset: 0x00B1A0D4
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add<EUiTabViewName, int>(EEventName.SelectRoleTabOutside, new Action<EUiTabViewName, int>(this.OnSelectRoleTabOutside));
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.RefreshSkillShowTagRoot();
 		}
 
-		// Token: 0x06032CD5 RID: 208085 RVA: 0x00BD681D File Offset: 0x00BD4A1D
+		// Token: 0x06027AAA RID: 162474 RVA: 0x00B1BF25 File Offset: 0x00B1A125
 		protected override void OnBeforeShow()
 		{
 			this.HandleLoadScene();
@@ -245,7 +245,57 @@ namespace CSharpScript.Game.Module.RoleUi
 			tabViewComponent.SetCurrentTabViewState(true);
 		}
 
-		// Token: 0x06032CD6 RID: 208086 RVA: 0x00BD683C File Offset: 0x00BD4A3C
+		// Token: 0x06027AAB RID: 162475 RVA: 0x00B1BF44 File Offset: 0x00B1A144
+		protected override void OnAfterShow()
+		{
+			this.TryShowNoPhantomEquippedConfirm();
+		}
+
+		// Token: 0x06027AAC RID: 162476 RVA: 0x00B1BF4C File Offset: 0x00B1A14C
+		private void TryShowNoPhantomEquippedConfirm()
+		{
+			if (!MainRoleModel.Instance.IsElementChanged())
+			{
+				return;
+			}
+			int valueOrDefault = RoleModel.Instance.GetCurSelectMainRoleId().GetValueOrDefault();
+			if (valueOrDefault != 0 && !this.HasAnyPhantomEquipped(valueOrDefault))
+			{
+				this.ShowNoPhantomEquippedConfirm();
+			}
+			MainRoleModel.Instance.ResetElementChangeState();
+		}
+
+		// Token: 0x06027AAD RID: 162477 RVA: 0x00B1BF95 File Offset: 0x00B1A195
+		private bool HasAnyPhantomEquipped(int roleId)
+		{
+			return roleId == 0 || PhantomBattleModel.Instance.GetBattleDataById(roleId).GetEquippedNum() > 0;
+		}
+
+		// Token: 0x06027AAE RID: 162478 RVA: 0x00B1BFB0 File Offset: 0x00B1A1B0
+		private void ShowNoPhantomEquippedConfirm()
+		{
+			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew((EConfirmBoxConfigId)591);
+			confirmBoxDataNew.FunctionMap[2] = new Action(this.GoEquipPhantom);
+			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
+		}
+
+		// Token: 0x06027AAF RID: 162479 RVA: 0x00B1BFEC File Offset: 0x00B1A1EC
+		private void GoEquipPhantom()
+		{
+			int index = 0;
+			for (int i = 0; i < this.TabDataList.Count; i++)
+			{
+				if (this.TabDataList[i].ChildViewName == EUiTabViewName.RolePhantomTabView)
+				{
+					index = i;
+					break;
+				}
+			}
+			this.TabComponent.SelectToggleByIndex(index, false);
+		}
+
+		// Token: 0x06027AB0 RID: 162480 RVA: 0x00B1C048 File Offset: 0x00B1A248
 		protected void RefreshRoleList()
 		{
 			if (this.IsLock)
@@ -258,30 +308,30 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.RefreshRoleListAsync().ContinueWith(new Action(this.Unlock));
 		}
 
-		// Token: 0x06032CD7 RID: 208087 RVA: 0x00BD6884 File Offset: 0x00BD4A84
+		// Token: 0x06027AB1 RID: 162481 RVA: 0x00B1C090 File Offset: 0x00B1A290
 		protected UniTask RefreshRoleListAsync()
 		{
-			RoleRootView.<RefreshRoleListAsync>d__40 <RefreshRoleListAsync>d__;
+			RoleRootView.<RefreshRoleListAsync>d__46 <RefreshRoleListAsync>d__;
 			<RefreshRoleListAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<RefreshRoleListAsync>d__.<>4__this = this;
 			<RefreshRoleListAsync>d__.<>1__state = -1;
-			<RefreshRoleListAsync>d__.<>t__builder.Start<RoleRootView.<RefreshRoleListAsync>d__40>(ref <RefreshRoleListAsync>d__);
+			<RefreshRoleListAsync>d__.<>t__builder.Start<RoleRootView.<RefreshRoleListAsync>d__46>(ref <RefreshRoleListAsync>d__);
 			return <RefreshRoleListAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032CD8 RID: 208088 RVA: 0x00BD68C8 File Offset: 0x00BD4AC8
+		// Token: 0x06027AB2 RID: 162482 RVA: 0x00B1C0D4 File Offset: 0x00B1A2D4
 		private UniTask UpdateRoleListAndScrollAsync(int targetRoleId)
 		{
-			RoleRootView.<UpdateRoleListAndScrollAsync>d__41 <UpdateRoleListAndScrollAsync>d__;
+			RoleRootView.<UpdateRoleListAndScrollAsync>d__47 <UpdateRoleListAndScrollAsync>d__;
 			<UpdateRoleListAndScrollAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<UpdateRoleListAndScrollAsync>d__.<>4__this = this;
 			<UpdateRoleListAndScrollAsync>d__.targetRoleId = targetRoleId;
 			<UpdateRoleListAndScrollAsync>d__.<>1__state = -1;
-			<UpdateRoleListAndScrollAsync>d__.<>t__builder.Start<RoleRootView.<UpdateRoleListAndScrollAsync>d__41>(ref <UpdateRoleListAndScrollAsync>d__);
+			<UpdateRoleListAndScrollAsync>d__.<>t__builder.Start<RoleRootView.<UpdateRoleListAndScrollAsync>d__47>(ref <UpdateRoleListAndScrollAsync>d__);
 			return <UpdateRoleListAndScrollAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032CD9 RID: 208089 RVA: 0x00BD6914 File Offset: 0x00BD4B14
+		// Token: 0x06027AB3 RID: 162483 RVA: 0x00B1C120 File Offset: 0x00B1A320
 		protected void RefreshTabList()
 		{
 			if (this.IsLock)
@@ -294,18 +344,32 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.RefreshTabListAsync().ContinueWith(new Action(this.Unlock));
 		}
 
-		// Token: 0x06032CDA RID: 208090 RVA: 0x00BD695C File Offset: 0x00BD4B5C
+		// Token: 0x06027AB4 RID: 162484 RVA: 0x00B1C168 File Offset: 0x00B1A368
 		protected UniTask RefreshTabListAsync()
 		{
-			RoleRootView.<RefreshTabListAsync>d__43 <RefreshTabListAsync>d__;
+			RoleRootView.<RefreshTabListAsync>d__49 <RefreshTabListAsync>d__;
 			<RefreshTabListAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<RefreshTabListAsync>d__.<>4__this = this;
 			<RefreshTabListAsync>d__.<>1__state = -1;
-			<RefreshTabListAsync>d__.<>t__builder.Start<RoleRootView.<RefreshTabListAsync>d__43>(ref <RefreshTabListAsync>d__);
+			<RefreshTabListAsync>d__.<>t__builder.Start<RoleRootView.<RefreshTabListAsync>d__49>(ref <RefreshTabListAsync>d__);
 			return <RefreshTabListAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032CDB RID: 208091 RVA: 0x00BD69A0 File Offset: 0x00BD4BA0
+		// Token: 0x06027AB5 RID: 162485 RVA: 0x00B1C1AC File Offset: 0x00B1A3AC
+		private static bool HasTabIdChanged(IReadOnlyList<UiDynamicTab> oldTabDataList, IReadOnlyList<UiDynamicTab> newTabDataList)
+		{
+			int num = Math.Min(oldTabDataList.Count, newTabDataList.Count);
+			for (int i = 0; i < num; i++)
+			{
+				if (oldTabDataList[i].Id != newTabDataList[i].Id)
+				{
+					return true;
+				}
+			}
+			return oldTabDataList.Count != newTabDataList.Count;
+		}
+
+		// Token: 0x06027AB6 RID: 162486 RVA: 0x00B1C20C File Offset: 0x00B1A40C
 		protected void OnRoleSelect(int i = 0)
 		{
 			if (this.IsLock)
@@ -318,50 +382,50 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.OnRoleSelectAsync().ContinueWith(new Action(this.Unlock));
 		}
 
-		// Token: 0x06032CDC RID: 208092 RVA: 0x00BD69E8 File Offset: 0x00BD4BE8
+		// Token: 0x06027AB7 RID: 162487 RVA: 0x00B1C254 File Offset: 0x00B1A454
 		protected UniTask OnRoleSelectAsync()
 		{
-			RoleRootView.<OnRoleSelectAsync>d__45 <OnRoleSelectAsync>d__;
+			RoleRootView.<OnRoleSelectAsync>d__52 <OnRoleSelectAsync>d__;
 			<OnRoleSelectAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnRoleSelectAsync>d__.<>4__this = this;
 			<OnRoleSelectAsync>d__.<>1__state = -1;
-			<OnRoleSelectAsync>d__.<>t__builder.Start<RoleRootView.<OnRoleSelectAsync>d__45>(ref <OnRoleSelectAsync>d__);
+			<OnRoleSelectAsync>d__.<>t__builder.Start<RoleRootView.<OnRoleSelectAsync>d__52>(ref <OnRoleSelectAsync>d__);
 			return <OnRoleSelectAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032CDD RID: 208093 RVA: 0x00BD6A2B File Offset: 0x00BD4C2B
+		// Token: 0x06027AB8 RID: 162488 RVA: 0x00B1C297 File Offset: 0x00B1A497
 		protected void OnSelectRoleTabOutside(EUiTabViewName tabViewName, int roleId)
 		{
 			this.Lock();
 			this.SelectRoleTabOutSide(tabViewName, roleId).ContinueWith(new Action(this.Unlock));
 		}
 
-		// Token: 0x06032CDE RID: 208094 RVA: 0x00BD6A50 File Offset: 0x00BD4C50
+		// Token: 0x06027AB9 RID: 162489 RVA: 0x00B1C2BC File Offset: 0x00B1A4BC
 		protected UniTask SelectRoleTabOutSide(EUiTabViewName tabViewName, int roleId)
 		{
-			RoleRootView.<SelectRoleTabOutSide>d__47 <SelectRoleTabOutSide>d__;
+			RoleRootView.<SelectRoleTabOutSide>d__54 <SelectRoleTabOutSide>d__;
 			<SelectRoleTabOutSide>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SelectRoleTabOutSide>d__.<>4__this = this;
 			<SelectRoleTabOutSide>d__.tabViewName = tabViewName;
 			<SelectRoleTabOutSide>d__.roleId = roleId;
 			<SelectRoleTabOutSide>d__.<>1__state = -1;
-			<SelectRoleTabOutSide>d__.<>t__builder.Start<RoleRootView.<SelectRoleTabOutSide>d__47>(ref <SelectRoleTabOutSide>d__);
+			<SelectRoleTabOutSide>d__.<>t__builder.Start<RoleRootView.<SelectRoleTabOutSide>d__54>(ref <SelectRoleTabOutSide>d__);
 			return <SelectRoleTabOutSide>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032CDF RID: 208095 RVA: 0x00BD6AA4 File Offset: 0x00BD4CA4
+		// Token: 0x06027ABA RID: 162490 RVA: 0x00B1C310 File Offset: 0x00B1A510
 		protected UniTask SelectRoleOutside(int roleId)
 		{
-			RoleRootView.<SelectRoleOutside>d__48 <SelectRoleOutside>d__;
+			RoleRootView.<SelectRoleOutside>d__55 <SelectRoleOutside>d__;
 			<SelectRoleOutside>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SelectRoleOutside>d__.<>4__this = this;
 			<SelectRoleOutside>d__.roleId = roleId;
 			<SelectRoleOutside>d__.<>1__state = -1;
-			<SelectRoleOutside>d__.<>t__builder.Start<RoleRootView.<SelectRoleOutside>d__48>(ref <SelectRoleOutside>d__);
+			<SelectRoleOutside>d__.<>t__builder.Start<RoleRootView.<SelectRoleOutside>d__55>(ref <SelectRoleOutside>d__);
 			return <SelectRoleOutside>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032CE0 RID: 208096 RVA: 0x00BD6AF0 File Offset: 0x00BD4CF0
+		// Token: 0x06027ABB RID: 162491 RVA: 0x00B1C35C File Offset: 0x00B1A55C
 		protected void InitTabComponent()
 		{
 			CommonTabComponentData<RoleTabItem> data = new CommonTabComponentData<RoleTabItem>(new Func<UUIItem, int?, RoleTabItem>(this.ProxyCreate), new Action<int>(this.ToggleCallBack), new Func<int, CommonTabData>(this.GetCommonData));
@@ -371,7 +435,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.TabViewComponent = new TabViewComponent<UiDynamicTab>(base.GetItem(4), EKeyMode.Default);
 		}
 
-		// Token: 0x06032CE1 RID: 208097 RVA: 0x00BD6B80 File Offset: 0x00BD4D80
+		// Token: 0x06027ABC RID: 162492 RVA: 0x00B1C3EC File Offset: 0x00B1A5EC
 		protected bool CanToggleChange(int index, bool? forceSwitch = false)
 		{
 			if (forceSwitch.GetValueOrDefault())
@@ -401,7 +465,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return true;
 		}
 
-		// Token: 0x06032CE2 RID: 208098 RVA: 0x00BD6C68 File Offset: 0x00BD4E68
+		// Token: 0x06027ABD RID: 162493 RVA: 0x00B1C4D4 File Offset: 0x00B1A6D4
 		private bool GetCurrentTabCanNotShowByRoleType(int index)
 		{
 			if (this.TabDataList.Count <= 0)
@@ -414,7 +478,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return (roleSystemMode == ERoleSystemMode.Trial || roleSystemMode == ERoleSystemMode.SpecialTrial) && roleConfig.Value.RoleType == 5 && this.TabDataList[index].ChildViewName != EUiTabViewName.RoleAttributeTabView && this.TabDataList[index].ChildViewName != EUiTabViewName.RolePhantomTabView && this.TabDataList[index].ChildViewName != EUiTabViewName.RolePreviewAttributeTabView;
 		}
 
-		// Token: 0x06032CE3 RID: 208099 RVA: 0x00BD6D38 File Offset: 0x00BD4F38
+		// Token: 0x06027ABE RID: 162494 RVA: 0x00B1C5A4 File Offset: 0x00B1A7A4
 		private bool IsConflict(int index)
 		{
 			if (this.RoleViewAgent.Source == ERoleViewSource.WheelTower)
@@ -433,7 +497,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return false;
 		}
 
-		// Token: 0x06032CE4 RID: 208100 RVA: 0x00BD6DB1 File Offset: 0x00BD4FB1
+		// Token: 0x06027ABF RID: 162495 RVA: 0x00B1C61D File Offset: 0x00B1A81D
 		private RoleTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new RoleTabItem
@@ -442,7 +506,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			};
 		}
 
-		// Token: 0x06032CE5 RID: 208101 RVA: 0x00BD6DCC File Offset: 0x00BD4FCC
+		// Token: 0x06027AC0 RID: 162496 RVA: 0x00B1C638 File Offset: 0x00B1A838
 		private void ToggleCallBack(int index)
 		{
 			this.ClickTimes++;
@@ -466,13 +530,13 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.RefreshSkillShowTagRoot();
 		}
 
-		// Token: 0x06032CE6 RID: 208102 RVA: 0x00BD6EB4 File Offset: 0x00BD50B4
+		// Token: 0x06027AC1 RID: 162497 RVA: 0x00B1C720 File Offset: 0x00B1A920
 		private void RefreshRoleDevButtonVisibility()
 		{
 			this.RoleDevelopEntranceItem.RefreshView();
 		}
 
-		// Token: 0x06032CE7 RID: 208103 RVA: 0x00BD6EC4 File Offset: 0x00BD50C4
+		// Token: 0x06027AC2 RID: 162498 RVA: 0x00B1C730 File Offset: 0x00B1A930
 		private void RefreshTabHelpId(string currentTabName)
 		{
 			TabComponentWithCaptionItem<RoleTabItem> tabComponent = this.TabComponent;
@@ -499,7 +563,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032CE8 RID: 208104 RVA: 0x00BD6F3C File Offset: 0x00BD513C
+		// Token: 0x06027AC3 RID: 162499 RVA: 0x00B1C7A8 File Offset: 0x00B1A9A8
 		private void UpdateHomeBtnState()
 		{
 			if (this.TabComponent == null)
@@ -510,7 +574,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.TabComponent.SetHomeBtnShowState(!flag || !GameModeController.Instance.IsInInstance());
 		}
 
-		// Token: 0x06032CE9 RID: 208105 RVA: 0x00BD6F88 File Offset: 0x00BD5188
+		// Token: 0x06027AC4 RID: 162500 RVA: 0x00B1C7F4 File Offset: 0x00B1A9F4
 		private void PlayLightSequence(int tabIndex, int clickTimes)
 		{
 			string sequencePath = this.TabDataList[tabIndex].LightSequence;
@@ -576,51 +640,74 @@ namespace CSharpScript.Game.Module.RoleUi
 			}, 100, this.MemoryTag);
 		}
 
-		// Token: 0x06032CEA RID: 208106 RVA: 0x00BD706E File Offset: 0x00BD526E
+		// Token: 0x06027AC5 RID: 162501 RVA: 0x00B1C8DA File Offset: 0x00B1AADA
 		private void OnInputUiLookUp(float value)
 		{
 			if (value == 0f || !this.CanCameraInput || !Info.Instance.IsInGamepad())
 			{
 				return;
 			}
-			this.UiCameraControlRotationComponent.AddPitchInput(-value);
+			this.UiCameraInputComponent.AddPitchInput(-value);
 		}
 
-		// Token: 0x06032CEB RID: 208107 RVA: 0x00BD709A File Offset: 0x00BD529A
+		// Token: 0x06027AC6 RID: 162502 RVA: 0x00B1C906 File Offset: 0x00B1AB06
 		private void OnInputUiTurn(float value)
 		{
 			if (value == 0f || !this.CanCameraInput || !Info.Instance.IsInGamepad())
 			{
 				return;
 			}
-			this.UiCameraControlRotationComponent.AddYawInput(value);
+			this.UiCameraInputComponent.AddYawInput(value);
 		}
 
-		// Token: 0x06032CEC RID: 208108 RVA: 0x00BD70C5 File Offset: 0x00BD52C5
+		// Token: 0x06027AC7 RID: 162503 RVA: 0x00B1C931 File Offset: 0x00B1AB31
 		private void OnInputUiZoom(string axisName, float value)
 		{
 			if (value == 0f || !this.CanCameraInput || !Info.Instance.IsInGamepad())
 			{
 				return;
 			}
-			this.UiCameraControlRotationComponent.AddZoomInput(value);
+			this.UiCameraInputComponent.AddZoomInput(value);
 		}
 
-		// Token: 0x06032CED RID: 208109 RVA: 0x00BD70F0 File Offset: 0x00BD52F0
+		// Token: 0x06027AC8 RID: 162504 RVA: 0x00B1C95C File Offset: 0x00B1AB5C
 		private void OnRightStickPress()
 		{
 			if (!this.CanCameraInput)
 			{
 				return;
 			}
-			UiCameraHandleData lastHandleData = UiCameraAnimationManager.Instance.GetLastHandleData();
-			if (lastHandleData != null)
+			UiCameraModel instance = UiCameraModel.Instance;
+			UiCamera camera = instance.Camera;
+			UiCameraHandleData lastHandleData = instance.GetLastHandleData();
+			if (camera == null || !camera.IsEntered || camera.CurrentMode != EUiCameraMode.Normal || lastHandleData == null || lastHandleData.ShouldSkipApply())
 			{
-				UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(lastHandleData.HandleName, true, true, "1001", false, null, null);
+				return;
+			}
+			UiCameraNormalMode mode = camera.GetMode<UiCameraNormalMode>();
+			if (mode.State != EUiCameraNormalState.Active || mode.IsInputBlocked || mode.TryGetLastAppliedData() != lastHandleData)
+			{
+				return;
+			}
+			if (camera.RefreshCameraActor())
+			{
+				UCineCameraComponent cineCameraComponent = camera.CineCameraComponent;
+				if (cineCameraComponent != null && cineCameraComponent.IsValid())
+				{
+					if (!lastHandleData.Refresh(instance) || lastHandleData.GetUiCameraAnimationConfig() == null)
+					{
+						return;
+					}
+					if (!mode.PushCameraHandle(lastHandleData, lastHandleData, true, false, "1001", null))
+					{
+						Log.Instance.Warn(ELogModule.UiCamera, ELogAuthor.BB, "手柄重置角色Ui镜头失败，当前镜头不可重置", default(ReadOnlySpan<ValueTuple<string, object>>));
+					}
+					return;
+				}
 			}
 		}
 
-		// Token: 0x06032CEE RID: 208110 RVA: 0x00BD7137 File Offset: 0x00BD5337
+		// Token: 0x06027AC9 RID: 162505 RVA: 0x00B1CA2E File Offset: 0x00B1AC2E
 		private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification _)
 		{
 			if (!this.CanCameraInput)
@@ -633,24 +720,24 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032CEF RID: 208111 RVA: 0x00BD7154 File Offset: 0x00BD5354
+		// Token: 0x06027ACA RID: 162506 RVA: 0x00B1CA48 File Offset: 0x00B1AC48
 		private void TouchMoved()
 		{
 			if (TouchFingerManager.Instance.GetTouchFingerCount() > 1)
 			{
 				float fingerExpandCloseValue = TouchFingerManager.Instance.GetFingerExpandCloseValue(EFingerIndex.One, EFingerIndex.Two);
-				this.UiCameraControlRotationComponent.AddZoomInput(-fingerExpandCloseValue);
+				this.UiCameraInputComponent.AddZoomInput(-fingerExpandCloseValue);
 			}
 		}
 
-		// Token: 0x06032CF0 RID: 208112 RVA: 0x00BD7188 File Offset: 0x00BD5388
+		// Token: 0x06027ACB RID: 162507 RVA: 0x00B1CA7C File Offset: 0x00B1AC7C
 		private CommonTabData GetCommonData(int index)
 		{
 			UiDynamicTab uiDynamicTab = this.TabDataList[index];
 			return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 		}
 
-		// Token: 0x06032CF1 RID: 208113 RVA: 0x00BD71C0 File Offset: 0x00BD53C0
+		// Token: 0x06027ACC RID: 162508 RVA: 0x00B1CAB4 File Offset: 0x00B1ACB4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -658,7 +745,7 @@ namespace CSharpScript.Game.Module.RoleUi
 		})]
 		public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 		{
-			RoleRootView.<>c__DisplayClass66_0 CS$<>8__locals1 = new RoleRootView.<>c__DisplayClass66_0();
+			RoleRootView.<>c__DisplayClass73_0 CS$<>8__locals1 = new RoleRootView.<>c__DisplayClass73_0();
 			CS$<>8__locals1.<>4__this = this;
 			if (this.IsLock)
 			{
@@ -667,33 +754,24 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 			if (configParams[0] == "Rover")
 			{
-				RoleRootView.<>c__DisplayClass66_1 CS$<>8__locals2 = new RoleRootView.<>c__DisplayClass66_1();
+				RoleRootView.<>c__DisplayClass73_1 CS$<>8__locals2 = new RoleRootView.<>c__DisplayClass73_1();
 				CS$<>8__locals2.CS$<>8__locals1 = CS$<>8__locals1;
-				IReadOnlyList<int> roleIdList = this.RoleViewAgent.GetRoleIdList();
-				int num = -1;
-				for (int i = 0; i < roleIdList.Count; i++)
-				{
-					int roleId = roleIdList[i];
-					if (RoleModel.Instance.IsMainRole(roleId))
-					{
-						num = i;
-						break;
-					}
-				}
-				if (num < 0 || num >= roleIdList.Count)
+				RoleListComponent roleListComponent = this.RoleListComponent;
+				int num = (roleListComponent != null) ? roleListComponent.FindDisplayIndex(new Predicate<int>(RoleModel.Instance.IsMainRole)) : -1;
+				if (num < 0)
 				{
 					return null;
 				}
-				RoleRootView.<>c__DisplayClass66_1 CS$<>8__locals3 = CS$<>8__locals2;
-				RoleListComponent roleListComponent = this.RoleListComponent;
+				RoleRootView.<>c__DisplayClass73_1 CS$<>8__locals3 = CS$<>8__locals2;
+				RoleListComponent roleListComponent2 = this.RoleListComponent;
 				RoleListItem targetItem;
-				if (roleListComponent == null)
+				if (roleListComponent2 == null)
 				{
 					targetItem = null;
 				}
 				else
 				{
-					GenericScrollViewNew<RoleListItem, RoleListItemData> selfScrollView = roleListComponent.GetSelfScrollView();
+					GenericScrollViewNew<RoleListItem, RoleListItemData> selfScrollView = roleListComponent2.GetSelfScrollView();
 					targetItem = ((selfScrollView != null) ? selfScrollView.GetScrollItemByIndex(num) : null);
 				}
 				CS$<>8__locals3.targetItem = targetItem;
@@ -761,47 +839,40 @@ namespace CSharpScript.Game.Module.RoleUi
 						rootUIComp
 					};
 				}
-				string s;
+				string text;
 				if (configParams.Length == 2)
 				{
-					s = Array.Find<string>(configParams, (string param) => int.Parse(param) == PlayerInfoModel.Instance.GetPlayerRoleId());
+					text = Array.Find<string>(configParams, (string param) => int.Parse(param) == PlayerInfoModel.Instance.GetPlayerRoleId());
 				}
 				else
 				{
-					s = configParams[0];
+					text = configParams[0];
 				}
-				int num2 = int.Parse(s);
-				IReadOnlyList<int> roleIdList2 = this.RoleViewAgent.GetRoleIdList();
-				int num3 = -1;
-				for (int j = 0; j < roleIdList2.Count; j++)
-				{
-					if (roleIdList2[j] == num2)
-					{
-						num3 = j;
-						break;
-					}
-				}
-				if (num3 < 0 || num3 >= roleIdList2.Count)
+				string s = text;
+				CS$<>8__locals1.roleId = int.Parse(s);
+				RoleListComponent roleListComponent3 = this.RoleListComponent;
+				int num2 = (roleListComponent3 != null) ? roleListComponent3.FindDisplayIndex((int id) => id == CS$<>8__locals1.roleId) : -1;
+				if (num2 < 0)
 				{
 					Log instance2 = Log.Instance;
 					ELogModule module2 = ELogModule.Guide;
 					ELogAuthor author2 = ELogAuthor.TL;
 					string message2 = "角色界面聚焦引导的额外参数配置有误, 找不到角色Id";
-					ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("roleId", num2);
+					ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("roleId", CS$<>8__locals1.roleId);
 					instance2.Error(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 					return null;
 				}
-				RoleRootView.<>c__DisplayClass66_0 CS$<>8__locals4 = CS$<>8__locals1;
-				RoleListComponent roleListComponent2 = this.RoleListComponent;
+				RoleRootView.<>c__DisplayClass73_0 CS$<>8__locals4 = CS$<>8__locals1;
+				RoleListComponent roleListComponent4 = this.RoleListComponent;
 				RoleListItem targetItem2;
-				if (roleListComponent2 == null)
+				if (roleListComponent4 == null)
 				{
 					targetItem2 = null;
 				}
 				else
 				{
-					GenericScrollViewNew<RoleListItem, RoleListItemData> selfScrollView2 = roleListComponent2.GetSelfScrollView();
-					targetItem2 = ((selfScrollView2 != null) ? selfScrollView2.GetScrollItemByIndex(num3) : null);
+					GenericScrollViewNew<RoleListItem, RoleListItemData> selfScrollView2 = roleListComponent4.GetSelfScrollView();
+					targetItem2 = ((selfScrollView2 != null) ? selfScrollView2.GetScrollItemByIndex(num2) : null);
 				}
 				CS$<>8__locals4.targetItem2 = targetItem2;
 				if (CS$<>8__locals1.targetItem2 == null)
@@ -810,7 +881,7 @@ namespace CSharpScript.Game.Module.RoleUi
 					ELogModule module3 = ELogModule.Guide;
 					ELogAuthor author3 = ELogAuthor.LZK;
 					string message3 = "角色界面聚焦引导的额外参数配置有误, 找不到角色Id";
-					ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("roleId", num2);
+					ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("roleId", CS$<>8__locals1.roleId);
 					instance3.Error(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
 					return null;
 				}
@@ -826,7 +897,7 @@ namespace CSharpScript.Game.Module.RoleUi
 					ELogModule module4 = ELogModule.Guide;
 					ELogAuthor author4 = ELogAuthor.LZK;
 					string message4 = "角色界面聚焦引导的额外参数配置有误, 找不到角色Id";
-					ValueTuple<string, object> valueTuple4 = new ValueTuple<string, object>("roleId", num2);
+					ValueTuple<string, object> valueTuple4 = new ValueTuple<string, object>("roleId", CS$<>8__locals1.roleId);
 					instance4.Error(module4, author4, message4, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple4));
 					return null;
 				}
@@ -838,7 +909,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032CF2 RID: 208114 RVA: 0x00BD75D2 File Offset: 0x00BD57D2
+		// Token: 0x06027ACD RID: 162509 RVA: 0x00B1CE8F File Offset: 0x00B1B08F
 		protected void CloseClick()
 		{
 			if (this.RoleViewAgent.Source == ERoleViewSource.WheelTower)
@@ -848,7 +919,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06032CF3 RID: 208115 RVA: 0x00BD75EF File Offset: 0x00BD57EF
+		// Token: 0x06027ACE RID: 162510 RVA: 0x00B1CEAC File Offset: 0x00B1B0AC
 		protected void OnInternalViewQuit()
 		{
 			this.RoleViewAgent.RoleViewState = ERoleViewState.External;
@@ -856,7 +927,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.TabComponent.ShowItem();
 		}
 
-		// Token: 0x06032CF4 RID: 208116 RVA: 0x00BD760E File Offset: 0x00BD580E
+		// Token: 0x06027ACF RID: 162511 RVA: 0x00B1CECB File Offset: 0x00B1B0CB
 		protected void OnInternalViewEnter()
 		{
 			this.RoleViewAgent.RoleViewState = ERoleViewState.Internal;
@@ -864,25 +935,25 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.TabComponent.HideItem();
 		}
 
-		// Token: 0x06032CF5 RID: 208117 RVA: 0x00BD7630 File Offset: 0x00BD5830
+		// Token: 0x06027AD0 RID: 162512 RVA: 0x00B1CEEC File Offset: 0x00B1B0EC
 		private void ShowRoleList()
 		{
 			this.UiViewSequence.PlaySequence("RoleListStart", false, null);
 		}
 
-		// Token: 0x06032CF6 RID: 208118 RVA: 0x00BD7658 File Offset: 0x00BD5858
+		// Token: 0x06027AD1 RID: 162513 RVA: 0x00B1CF14 File Offset: 0x00B1B114
 		private void HideRoleList()
 		{
 			this.UiViewSequence.PlaySequence("RoleListClose", false, null);
 		}
 
-		// Token: 0x06032CF7 RID: 208119 RVA: 0x00BD767F File Offset: 0x00BD587F
+		// Token: 0x06027AD2 RID: 162514 RVA: 0x00B1CF3B File Offset: 0x00B1B13B
 		protected void RoleListClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RoleSelectionView, this.RoleViewAgent, null);
 		}
 
-		// Token: 0x06032CF8 RID: 208120 RVA: 0x00BD7698 File Offset: 0x00BD5898
+		// Token: 0x06027AD3 RID: 162515 RVA: 0x00B1CF54 File Offset: 0x00B1B154
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<bool>(EEventName.SwitchRootTabState, new Action<bool>(this.SwitchPanelTabState));
@@ -911,7 +982,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 		}
 
-		// Token: 0x06032CF9 RID: 208121 RVA: 0x00BD78B0 File Offset: 0x00BD5AB0
+		// Token: 0x06027AD4 RID: 162516 RVA: 0x00B1D16C File Offset: 0x00B1B36C
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<bool>(EEventName.SwitchRootTabState, new Action<bool>(this.SwitchPanelTabState));
@@ -924,7 +995,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			EventSystem.Instance.Remove<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 		}
 
-		// Token: 0x06032CFA RID: 208122 RVA: 0x00BD79A0 File Offset: 0x00BD5BA0
+		// Token: 0x06027AD5 RID: 162517 RVA: 0x00B1D25C File Offset: 0x00B1B45C
 		private void RemoveCameraEventListener()
 		{
 			EventSystem.Instance.Remove<UiCameraHandleData, UiCameraHandleData, string>(EEventName.OnPlayCameraAnimationStart, new Action<UiCameraHandleData, UiCameraHandleData, string>(this.OnPlayCameraAnimationStart));
@@ -945,7 +1016,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}), new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 		}
 
-		// Token: 0x06032CFB RID: 208123 RVA: 0x00BD7AAC File Offset: 0x00BD5CAC
+		// Token: 0x06027AD6 RID: 162518 RVA: 0x00B1D368 File Offset: 0x00B1B568
 		[NullableContext(2)]
 		private void OnPointerBeginDragCallBack(ULGUIPointerEventData eventData)
 		{
@@ -956,7 +1027,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.CurrentDragPosition = new FVector?(eventData.GetLocalPointInPlane());
 		}
 
-		// Token: 0x06032CFC RID: 208124 RVA: 0x00BD7AC8 File Offset: 0x00BD5CC8
+		// Token: 0x06027AD7 RID: 162519 RVA: 0x00B1D384 File Offset: 0x00B1B584
 		[NullableContext(2)]
 		private void OnPointerDragCallBack(ULGUIPointerEventData eventData)
 		{
@@ -975,15 +1046,15 @@ namespace CSharpScript.Game.Module.RoleUi
 			float num2 = this.CurrentDragPosition.Value.Y - currentDragPosition.Value.Y;
 			if (num != 0f)
 			{
-				this.UiCameraControlRotationComponent.AddYawInput(num);
+				this.UiCameraInputComponent.AddYawInput(num);
 			}
 			if (num2 != 0f)
 			{
-				this.UiCameraControlRotationComponent.AddPitchInput(num2);
+				this.UiCameraInputComponent.AddPitchInput(num2);
 			}
 		}
 
-		// Token: 0x06032CFD RID: 208125 RVA: 0x00BD7B8E File Offset: 0x00BD5D8E
+		// Token: 0x06027AD8 RID: 162520 RVA: 0x00B1D44A File Offset: 0x00B1B64A
 		[NullableContext(2)]
 		private void OnPointerEndDragCallBack(ULGUIPointerEventData eventData)
 		{
@@ -994,7 +1065,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.CurrentDragPosition = null;
 		}
 
-		// Token: 0x06032CFE RID: 208126 RVA: 0x00BD7BA5 File Offset: 0x00BD5DA5
+		// Token: 0x06027AD9 RID: 162521 RVA: 0x00B1D461 File Offset: 0x00B1B661
 		[NullableContext(2)]
 		private void OnPointerScrollCallBack(ULGUIPointerEventData eventData)
 		{
@@ -1004,38 +1075,39 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 			if (eventData.scrollAxisValue != 0f)
 			{
-				this.UiCameraControlRotationComponent.AddZoomInput(-eventData.scrollAxisValue);
+				this.UiCameraInputComponent.AddZoomInput(-eventData.scrollAxisValue);
 			}
 		}
 
-		// Token: 0x06032CFF RID: 208127 RVA: 0x00BD7BCF File Offset: 0x00BD5DCF
+		// Token: 0x06027ADA RID: 162522 RVA: 0x00B1D48B File Offset: 0x00B1B68B
 		private void OnPlayCameraAnimationStart(UiCameraHandleData uiCameraHandleData, UiCameraHandleData cameraHandleData, string arg3)
 		{
 			this.CanCameraInput = false;
-			UiCameraControlRotationComponent uiCameraControlRotationComponent = this.UiCameraControlRotationComponent;
-			if (uiCameraControlRotationComponent == null)
+			UiCameraInputComponent uiCameraInputComponent = this.UiCameraInputComponent;
+			if (uiCameraInputComponent == null)
 			{
 				return;
 			}
-			uiCameraControlRotationComponent.PauseTick();
+			uiCameraInputComponent.PauseTick();
 		}
 
-		// Token: 0x06032D00 RID: 208128 RVA: 0x00BD7BE8 File Offset: 0x00BD5DE8
+		// Token: 0x06027ADB RID: 162523 RVA: 0x00B1D4A4 File Offset: 0x00B1B6A4
 		private void OnActivateUiCameraAnimationHandle(UiCameraHandleData handleData)
 		{
-			if (!this.CheckCameraViewNameInTabView(handleData.ViewName))
+			if (!this.CheckCameraViewNameInTabView(handleData.GetViewName()))
 			{
 				return;
 			}
-			UiCamera uiCamera = UiCameraManager.Get();
-			this.UiCameraControlRotationComponent = (uiCamera.AddUiCameraComponent(typeof(UiCameraControlRotationComponent), false) as UiCameraControlRotationComponent);
+			UiCamera orCreateCamera = UiCameraModel.Instance.GetOrCreateCamera();
+			this.UiCameraInputComponent = orCreateCamera.GetUiCameraComponent<UiCameraInputComponent>();
+			this.UiCameraLogicComponent = orCreateCamera.GetUiCameraComponent<UiCameraLogicComponent>();
 			this.RefreshRoleCameraConfig();
 		}
 
-		// Token: 0x06032D01 RID: 208129 RVA: 0x00BD7C2C File Offset: 0x00BD5E2C
+		// Token: 0x06027ADC RID: 162524 RVA: 0x00B1D4EC File Offset: 0x00B1B6EC
 		private void RefreshRoleCameraConfig()
 		{
-			if (this.UiCameraControlRotationComponent == null)
+			if (this.UiCameraInputComponent == null || this.UiCameraLogicComponent == null)
 			{
 				return;
 			}
@@ -1048,8 +1120,8 @@ namespace CSharpScript.Game.Module.RoleUi
 			{
 				return;
 			}
-			this.UiCameraControlRotationComponent.InitDataByConfig(roleCameraConfigBySkin.Value);
-			this.UiCameraControlRotationComponent.SetNeedFloorReflection(true);
+			this.UiCameraLogicComponent.InitDataByConfig(roleCameraConfigBySkin.Value);
+			this.UiCameraLogicComponent.SetNeedFloorReflection(true);
 			this.CanCameraInput = this.CheckCanCameraInput();
 			if (this.CanCameraInput)
 			{
@@ -1057,9 +1129,9 @@ namespace CSharpScript.Game.Module.RoleUi
 				int roleConfigId = uiRoleDataComponent.RoleConfigId;
 				string roleBody = RoleConfig.Instance.GetRoleConfig(roleConfigId).Value.RoleBody;
 				SUiRoleCameraOffsetSetting value = UiRoleCameraConfig.Instance.GetRoleCameraOffsetConfig(roleBody).Value;
-				this.UiCameraControlRotationComponent.UpdateData(sourceLocation, value.镜头浮动最大高度, value.镜头浮动最低高度, value.镜头浮动最长臂长, value.镜头浮动最短臂长);
-				this.UiCameraControlRotationComponent.Activate();
-				this.UiCameraControlRotationComponent.ResumeTick();
+				this.UiCameraLogicComponent.UpdateData(sourceLocation, value.镜头浮动最大高度, value.镜头浮动最低高度, value.镜头浮动最长臂长, value.镜头浮动最短臂长);
+				this.UiCameraInputComponent.Activate();
+				this.UiCameraInputComponent.ResumeTick();
 				return;
 			}
 			TimerSystem.Instance.Next(delegate(float _)
@@ -1068,10 +1140,10 @@ namespace CSharpScript.Game.Module.RoleUi
 			}, null, null);
 		}
 
-		// Token: 0x06032D02 RID: 208130 RVA: 0x00BD7D6C File Offset: 0x00BD5F6C
+		// Token: 0x06027ADD RID: 162525 RVA: 0x00B1D634 File Offset: 0x00B1B834
 		private bool CheckCanCameraInput()
 		{
-			if (UiCameraAnimationManager.Instance.IsPlayingAnimation())
+			if (UiCameraModel.Instance.IsPlayingAnimation())
 			{
 				return false;
 			}
@@ -1088,7 +1160,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return result;
 		}
 
-		// Token: 0x06032D03 RID: 208131 RVA: 0x00BD7DE4 File Offset: 0x00BD5FE4
+		// Token: 0x06027ADE RID: 162526 RVA: 0x00B1D6AC File Offset: 0x00B1B8AC
 		private bool CheckCameraViewNameInTabView(string viewName)
 		{
 			foreach (UiDynamicTab uiDynamicTab in this.TabDataList)
@@ -1101,25 +1173,25 @@ namespace CSharpScript.Game.Module.RoleUi
 			return false;
 		}
 
-		// Token: 0x06032D04 RID: 208132 RVA: 0x00BD7E48 File Offset: 0x00BD6048
+		// Token: 0x06027ADF RID: 162527 RVA: 0x00B1D710 File Offset: 0x00B1B910
 		private void SwitchPanelTabState(bool bActive)
 		{
 			base.GetItem(2).SetUIActive(bActive);
 		}
 
-		// Token: 0x06032D05 RID: 208133 RVA: 0x00BD7E57 File Offset: 0x00BD6057
+		// Token: 0x06027AE0 RID: 162528 RVA: 0x00B1D71F File Offset: 0x00B1B91F
 		private void PlayRightAnimation(bool bOpen)
 		{
 			this.UiViewSequence.PlaySequencePurely(bOpen ? "hide" : "show", false, false);
 		}
 
-		// Token: 0x06032D06 RID: 208134 RVA: 0x00BD7E75 File Offset: 0x00BD6075
+		// Token: 0x06027AE1 RID: 162529 RVA: 0x00B1D73D File Offset: 0x00B1B93D
 		protected void RefreshUiMode()
 		{
 			this.RefreshRoleSystemModeUiParam();
 		}
 
-		// Token: 0x06032D07 RID: 208135 RVA: 0x00BD7E80 File Offset: 0x00BD6080
+		// Token: 0x06027AE2 RID: 162530 RVA: 0x00B1D748 File Offset: 0x00B1B948
 		protected void RefreshRoleSystemModeUiParam()
 		{
 			IRoleSystemUiParams roleSystemUiParams = this.RoleViewAgent.GetRoleSystemUiParams();
@@ -1129,7 +1201,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.RefreshRoleBackgroundMusicSwitchItem();
 		}
 
-		// Token: 0x06032D08 RID: 208136 RVA: 0x00BD7EC4 File Offset: 0x00BD60C4
+		// Token: 0x06027AE3 RID: 162531 RVA: 0x00B1D78C File Offset: 0x00B1B98C
 		protected virtual void LoadFloorEffect()
 		{
 			AActor actorByTag = UiSceneManager.Instance.GetActorByTag("RoleFloorCase");
@@ -1139,7 +1211,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032D09 RID: 208137 RVA: 0x00BD7F1C File Offset: 0x00BD611C
+		// Token: 0x06027AE4 RID: 162532 RVA: 0x00B1D7E4 File Offset: 0x00B1B9E4
 		protected ERedDotName? GetRedDotName(EUiTabViewName tabViewName)
 		{
 			if (tabViewName == EUiTabViewName.RoleAttributeTabView)
@@ -1165,7 +1237,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return null;
 		}
 
-		// Token: 0x06032D0A RID: 208138 RVA: 0x00BD7F9B File Offset: 0x00BD619B
+		// Token: 0x06027AE5 RID: 162533 RVA: 0x00B1D863 File Offset: 0x00B1BA63
 		protected void BindRedDot(bool roleListButtonRedDot)
 		{
 			if (roleListButtonRedDot)
@@ -1177,7 +1249,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			base.GetItem(8).SetUIActive(false);
 		}
 
-		// Token: 0x06032D0B RID: 208139 RVA: 0x00BD7FD8 File Offset: 0x00BD61D8
+		// Token: 0x06027AE6 RID: 162534 RVA: 0x00B1D8A0 File Offset: 0x00B1BAA0
 		protected void UnBindRedDot()
 		{
 			foreach (RoleTabItem roleTabItem in this.TabComponent.GetTabItemMap().Values)
@@ -1187,19 +1259,19 @@ namespace CSharpScript.Game.Module.RoleUi
 			RedDotController.Instance.UnBindRedDot(ERedDotName.RoleSelectionList);
 		}
 
-		// Token: 0x06032D0C RID: 208140 RVA: 0x00BD8040 File Offset: 0x00BD6240
+		// Token: 0x06027AE7 RID: 162535 RVA: 0x00B1D908 File Offset: 0x00B1BB08
 		public void SetRoleListButtonVisible(bool bVisible)
 		{
 			base.GetButton(1).RootUIComp.Get().SetUIActive(bVisible);
 		}
 
-		// Token: 0x06032D0D RID: 208141 RVA: 0x00BD8067 File Offset: 0x00BD6267
+		// Token: 0x06027AE8 RID: 162536 RVA: 0x00B1D92F File Offset: 0x00B1BB2F
 		public void SetRoleListVisible(bool bVisible)
 		{
 			base.GetItem(3).SetUIActive(bVisible);
 		}
 
-		// Token: 0x06032D0E RID: 208142 RVA: 0x00BD8078 File Offset: 0x00BD6278
+		// Token: 0x06027AE9 RID: 162537 RVA: 0x00B1D940 File Offset: 0x00B1BB40
 		public void RefreshRoleBackgroundMusicSwitchItem()
 		{
 			IRoleSystemUiParams roleSystemUiParams = this.RoleViewAgent.GetRoleSystemUiParams();
@@ -1219,7 +1291,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			roleBackgroundMusicSwitchItem.RefreshByRoleData(roleDataBase);
 		}
 
-		// Token: 0x06032D0F RID: 208143 RVA: 0x00BD8120 File Offset: 0x00BD6320
+		// Token: 0x06027AEA RID: 162538 RVA: 0x00B1D9E8 File Offset: 0x00B1BBE8
 		protected override void OnBeforeHide()
 		{
 			this.RemoveCameraEventListener();
@@ -1230,24 +1302,30 @@ namespace CSharpScript.Game.Module.RoleUi
 				this.ShowSequencePlayer.Stop();
 				this.ShowSequencePlayer = null;
 			}
-			UiCameraManager.Get().DestroyUiCameraComponent(typeof(UiCameraControlRotationComponent));
-			this.UiCameraControlRotationComponent = null;
+			UiCameraModel.Instance.GetOrCreateCamera();
+			UiCameraInputComponent uiCameraInputComponent = this.UiCameraInputComponent;
+			if (uiCameraInputComponent != null)
+			{
+				uiCameraInputComponent.Deactivate();
+			}
+			this.UiCameraInputComponent = null;
+			this.UiCameraLogicComponent = null;
 		}
 
-		// Token: 0x06032D10 RID: 208144 RVA: 0x00BD8176 File Offset: 0x00BD6376
+		// Token: 0x06027AEB RID: 162539 RVA: 0x00B1DA4D File Offset: 0x00B1BC4D
 		protected override void OnHandleReleaseScene()
 		{
 			this.HandleReleaseScene();
 		}
 
-		// Token: 0x06032D11 RID: 208145 RVA: 0x00BD817E File Offset: 0x00BD637E
+		// Token: 0x06027AEC RID: 162540 RVA: 0x00B1DA55 File Offset: 0x00B1BC55
 		protected override void OnAfterHide()
 		{
 			this.RoleListComponent.UnBindRedDot();
 			this.TabViewComponent.SetCurrentTabViewState(false);
 		}
 
-		// Token: 0x06032D12 RID: 208146 RVA: 0x00BD8198 File Offset: 0x00BD6398
+		// Token: 0x06027AED RID: 162541 RVA: 0x00B1DA70 File Offset: 0x00B1BC70
 		protected override void OnBeforeDestroy()
 		{
 			this.UnBindRedDot();
@@ -1261,7 +1339,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			showTagTipsMaskButton.Destroy(null);
 		}
 
-		// Token: 0x06032D13 RID: 208147 RVA: 0x00BD81F4 File Offset: 0x00BD63F4
+		// Token: 0x06027AEE RID: 162542 RVA: 0x00B1DACC File Offset: 0x00B1BCCC
 		private void HandleReleaseScene()
 		{
 			if (this.CanHandleLoadScene)
@@ -1279,14 +1357,14 @@ namespace CSharpScript.Game.Module.RoleUi
 			WeaponModel.Instance.SetCurSelectViewName(EWeaponViewName.None);
 		}
 
-		// Token: 0x06032D14 RID: 208148 RVA: 0x00BD8270 File Offset: 0x00BD6470
+		// Token: 0x06027AEF RID: 162543 RVA: 0x00B1DB48 File Offset: 0x00B1BD48
 		protected override void OnBeforeDestroyImplement()
 		{
 			this.HandleReleaseScene();
 			this.ClearData();
 		}
 
-		// Token: 0x06032D15 RID: 208149 RVA: 0x00BD8280 File Offset: 0x00BD6480
+		// Token: 0x06027AF0 RID: 162544 RVA: 0x00B1DB58 File Offset: 0x00B1BD58
 		protected void ClearData()
 		{
 			if (this.TabViewComponent != null)
@@ -1306,32 +1384,57 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.LevelSequenceActorCache.Clear();
 			this.CurSelectTabIndex = 0;
 			this.ClickTimes = 0;
-			UiCameraManager.Get().DestroyUiCameraComponent(typeof(UiCameraControlRotationComponent));
-			foreach (int num in this.RoleViewAgent.GetRoleIdList())
+			UiCameraModel.Instance.GetOrCreateCamera();
+			UiCameraInputComponent uiCameraInputComponent = this.UiCameraInputComponent;
+			if (uiCameraInputComponent != null)
+			{
+				uiCameraInputComponent.Deactivate();
+			}
+			foreach (int num in this.RoleViewAgent.GetRoleIdList(null))
 			{
 				SortModel.Instance.ClearSortConfigData(EFilterSortConfigId.VisionEquipment, 10, num.ToString());
 				FilterModel.Instance.ClearFilterConfigData(EFilterSortConfigId.VisionEquipment, 10, num.ToString());
 			}
 		}
 
-		// Token: 0x06032D16 RID: 208150 RVA: 0x00BD83B8 File Offset: 0x00BD65B8
+		// Token: 0x06027AF1 RID: 162545 RVA: 0x00B1DC9C File Offset: 0x00B1BE9C
 		private void UiRoleSequenceEndKeyFrame()
 		{
 			if (!this.IsLightSequenceLoop)
 			{
 				return;
 			}
-			FMovieSceneSequencePlaybackParams playbackPosition = new FMovieSceneSequencePlaybackParams(new FFrameTime(new FFrameNumber(UiSceneManager.Instance.GetUiStartSequenceFrame()), 0f), 0f, "", EMovieScenePositionType.Frame, EUpdatePositionMethod.Jump);
+			int uiStartSequenceFrame = UiSceneManager.Instance.GetUiStartSequenceFrame();
+			FFrameNumber frameNumber = new FFrameNumber
+			{
+				Value = uiStartSequenceFrame
+			};
+			FFrameTime frame = new FFrameTime
+			{
+				FrameNumber = frameNumber
+			};
+			FMovieSceneSequencePlaybackParams playbackPosition = new FMovieSceneSequencePlaybackParams
+			{
+				Frame = frame,
+				PositionType = EMovieScenePositionType.Frame,
+				UpdateMethod = EUpdatePositionMethod.Jump
+			};
 			this.ShowSequencePlayer.SetPlaybackPosition(playbackPosition);
 		}
 
-		// Token: 0x06032D17 RID: 208151 RVA: 0x00BD8405 File Offset: 0x00BD6605
+		// Token: 0x06027AF2 RID: 162546 RVA: 0x00B1DCFE File Offset: 0x00B1BEFE
 		private void OnRoleDevTargetRoleIdChange()
 		{
 			this.RefreshRoleDevButtonVisibility();
+			RoleListComponent roleListComponent = this.RoleListComponent;
+			if (roleListComponent == null)
+			{
+				return;
+			}
+			roleListComponent.RefreshVisibleItems();
 		}
 
-		// Token: 0x06032D18 RID: 208152 RVA: 0x00BD8410 File Offset: 0x00BD6610
+		// Token: 0x06027AF3 RID: 162547 RVA: 0x00B1DD18 File Offset: 0x00B1BF18
 		private void RefreshSkillShowTagRoot()
 		{
 			bool flag = this.CurSelectTabView == EUiTabViewName.RoleSkillTabView;
@@ -1344,7 +1447,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			base.GetItem(15).SetUIActive(false);
 		}
 
-		// Token: 0x06032D19 RID: 208153 RVA: 0x00BD8488 File Offset: 0x00BD6688
+		// Token: 0x06027AF4 RID: 162548 RVA: 0x00B1DD90 File Offset: 0x00B1BF90
 		private void OnSkillShowTagToggleClick(EToggleState state)
 		{
 			bool flag = state == EToggleState.ETT_Checked;
@@ -1353,7 +1456,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			RoleController.Instance.LogRoleDevelopSkillRecommendClick(this.RoleViewAgent.GetCurSelectRoleData().GetDataId(), flag);
 		}
 
-		// Token: 0x06032D1A RID: 208154 RVA: 0x00BD84D1 File Offset: 0x00BD66D1
+		// Token: 0x06027AF5 RID: 162549 RVA: 0x00B1DDD9 File Offset: 0x00B1BFD9
 		private void OnSkillShowTagHelpButtonClick()
 		{
 			if (base.GetItem(15).bIsUIActive)
@@ -1364,18 +1467,18 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.ShowShowTagTips();
 		}
 
-		// Token: 0x06032D1B RID: 208155 RVA: 0x00BD84F0 File Offset: 0x00BD66F0
+		// Token: 0x06027AF6 RID: 162550 RVA: 0x00B1DDF8 File Offset: 0x00B1BFF8
 		private UniTask ShowShowTagTips()
 		{
-			RoleRootView.<ShowShowTagTips>d__109 <ShowShowTagTips>d__;
+			RoleRootView.<ShowShowTagTips>d__116 <ShowShowTagTips>d__;
 			<ShowShowTagTips>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<ShowShowTagTips>d__.<>4__this = this;
 			<ShowShowTagTips>d__.<>1__state = -1;
-			<ShowShowTagTips>d__.<>t__builder.Start<RoleRootView.<ShowShowTagTips>d__109>(ref <ShowShowTagTips>d__);
+			<ShowShowTagTips>d__.<>t__builder.Start<RoleRootView.<ShowShowTagTips>d__116>(ref <ShowShowTagTips>d__);
 			return <ShowShowTagTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032D1C RID: 208156 RVA: 0x00BD8533 File Offset: 0x00BD6733
+		// Token: 0x06027AF7 RID: 162551 RVA: 0x00B1DE3B File Offset: 0x00B1C03B
 		private void HideShowTagTips()
 		{
 			base.GetItem(15).SetUIActive(false);
@@ -1386,7 +1489,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032D1D RID: 208157 RVA: 0x00BD8562 File Offset: 0x00BD6762
+		// Token: 0x06027AF8 RID: 162552 RVA: 0x00B1DE6A File Offset: 0x00B1C06A
 		private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -1399,19 +1502,19 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x0401B0BF RID: 110783
+		// Token: 0x04015A43 RID: 88643
 		[Nullable(2)]
 		protected RoleBackgroundMusicSwitchItem RoleBackgroundMusicSwitchItem;
 
-		// Token: 0x0401B0C0 RID: 110784
+		// Token: 0x04015A44 RID: 88644
 		[Nullable(2)]
 		protected RoleListComponent RoleListComponent;
 
-		// Token: 0x0401B0C1 RID: 110785
+		// Token: 0x04015A45 RID: 88645
 		[Nullable(2)]
 		protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-		// Token: 0x0401B0C2 RID: 110786
+		// Token: 0x04015A46 RID: 88646
 		[Nullable(new byte[]
 		{
 			2,
@@ -1419,73 +1522,77 @@ namespace CSharpScript.Game.Module.RoleUi
 		})]
 		protected TabComponentWithCaptionItem<RoleTabItem> TabComponent;
 
-		// Token: 0x0401B0C3 RID: 110787
+		// Token: 0x04015A47 RID: 88647
 		[Nullable(2)]
 		private TsUiSceneRoleActor TsUiSceneRoleActor;
 
-		// Token: 0x0401B0C4 RID: 110788
+		// Token: 0x04015A48 RID: 88648
 		protected List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x0401B0C5 RID: 110789
+		// Token: 0x04015A49 RID: 88649
 		private int FloorEffect;
 
-		// Token: 0x0401B0C6 RID: 110790
+		// Token: 0x04015A4A RID: 88650
 		[Nullable(2)]
 		protected UiCameraHandleData RoleRootUiCameraHandleData;
 
-		// Token: 0x0401B0C7 RID: 110791
+		// Token: 0x04015A4B RID: 88651
 		private int CurSelectTabIndex;
 
-		// Token: 0x0401B0C8 RID: 110792
+		// Token: 0x04015A4C RID: 88652
 		private EUiTabViewName? CurSelectTabView;
 
-		// Token: 0x0401B0C9 RID: 110793
+		// Token: 0x04015A4D RID: 88653
 		[Nullable(2)]
 		private ULevelSequencePlayer ShowSequencePlayer;
 
-		// Token: 0x0401B0CA RID: 110794
+		// Token: 0x04015A4E RID: 88654
 		private int ClickTimes;
 
-		// Token: 0x0401B0CB RID: 110795
+		// Token: 0x04015A4F RID: 88655
 		private double? LastClickTime;
 
-		// Token: 0x0401B0CC RID: 110796
+		// Token: 0x04015A50 RID: 88656
 		private bool IsLightSequenceLoop = true;
 
-		// Token: 0x0401B0CD RID: 110797
+		// Token: 0x04015A51 RID: 88657
 		private readonly Dictionary<int, ALevelSequenceActor> LevelSequenceActorCache = new Dictionary<int, ALevelSequenceActor>();
 
-		// Token: 0x0401B0CE RID: 110798
+		// Token: 0x04015A52 RID: 88658
 		private readonly Dictionary<int, int> LevelSequenceActorLoadStatus = new Dictionary<int, int>();
 
-		// Token: 0x0401B0CF RID: 110799
+		// Token: 0x04015A53 RID: 88659
 		private bool CanCameraInput;
 
-		// Token: 0x0401B0D0 RID: 110800
+		// Token: 0x04015A54 RID: 88660
 		[Nullable(2)]
-		private UiCameraControlRotationComponent UiCameraControlRotationComponent;
+		private UiCameraInputComponent UiCameraInputComponent;
 
-		// Token: 0x0401B0D1 RID: 110801
+		// Token: 0x04015A55 RID: 88661
+		[Nullable(2)]
+		private UiCameraLogicComponent UiCameraLogicComponent;
+
+		// Token: 0x04015A56 RID: 88662
 		[Nullable(2)]
 		private RoleViewAgent RoleViewAgent;
 
-		// Token: 0x0401B0D2 RID: 110802
+		// Token: 0x04015A57 RID: 88663
 		private readonly Queue<OperationParam> ViewOperationQueue = new Queue<OperationParam>(4);
 
-		// Token: 0x0401B0D3 RID: 110803
+		// Token: 0x04015A58 RID: 88664
 		private bool Operating;
 
-		// Token: 0x0401B0D4 RID: 110804
+		// Token: 0x04015A59 RID: 88665
 		private bool CanHandleLoadScene = true;
 
-		// Token: 0x0401B0D5 RID: 110805
+		// Token: 0x04015A5A RID: 88666
 		private RoleDevelopEntranceItem RoleDevelopEntranceItem;
 
-		// Token: 0x0401B0D6 RID: 110806
+		// Token: 0x04015A5B RID: 88667
 		[Nullable(2)]
 		private DynamicMaskButton ShowTagTipsMaskButton;
 
-		// Token: 0x0401B0D7 RID: 110807
+		// Token: 0x04015A5C RID: 88668
 		private FVector? CurrentDragPosition;
 	}
 }

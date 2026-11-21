@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D19 RID: 3353
+	// Token: 0x02000DFE RID: 3582
 	public struct GuideFromMontage : IFlatbufferObject
 	{
-		// Token: 0x17001677 RID: 5751
-		// (get) Token: 0x06007CE8 RID: 31976 RVA: 0x00250915 File Offset: 0x0024EB15
+		// Token: 0x170016D8 RID: 5848
+		// (get) Token: 0x06008300 RID: 33536 RVA: 0x0026F29B File Offset: 0x0026D49B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007CE9 RID: 31977 RVA: 0x00250922 File Offset: 0x0024EB22
+		// Token: 0x06008301 RID: 33537 RVA: 0x0026F2A8 File Offset: 0x0026D4A8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007CEA RID: 31978 RVA: 0x0025092C File Offset: 0x0024EB2C
+		// Token: 0x06008302 RID: 33538 RVA: 0x0026F2B0 File Offset: 0x0026D4B0
 		public static GuideFromMontage GetRootAsGuideFromMontage(ByteBuffer _bb)
 		{
 			return GuideFromMontage.GetRootAsGuideFromMontage(_bb, default(GuideFromMontage));
 		}
 
-		// Token: 0x06007CEB RID: 31979 RVA: 0x00250948 File Offset: 0x0024EB48
+		// Token: 0x06008303 RID: 33539 RVA: 0x0026F2CC File Offset: 0x0026D4CC
 		public static GuideFromMontage GetRootAsGuideFromMontage(ByteBuffer _bb, GuideFromMontage obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007CEC RID: 31980 RVA: 0x00250965 File Offset: 0x0024EB65
+		// Token: 0x06008304 RID: 33540 RVA: 0x0026F2E9 File Offset: 0x0026D4E9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007CED RID: 31981 RVA: 0x00250974 File Offset: 0x0024EB74
+		// Token: 0x06008305 RID: 33541 RVA: 0x0026F2F8 File Offset: 0x0026D4F8
 		public GuideFromMontage __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001678 RID: 5752
-		// (get) Token: 0x06007CEE RID: 31982 RVA: 0x00250984 File Offset: 0x0024EB84
+		// Token: 0x170016D9 RID: 5849
+		// (get) Token: 0x06008306 RID: 33542 RVA: 0x0026F308 File Offset: 0x0026D508
 		public int EventGroupId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001679 RID: 5753
-		// (get) Token: 0x06007CEF RID: 31983 RVA: 0x002509C0 File Offset: 0x0024EBC0
+		// Token: 0x170016DA RID: 5850
+		// (get) Token: 0x06008307 RID: 33543 RVA: 0x0026F344 File Offset: 0x0026D544
 		public int GuideGroupId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004D91 RID: 19857
+		// Token: 0x04005376 RID: 21366
 		private Table __p;
 	}
 }

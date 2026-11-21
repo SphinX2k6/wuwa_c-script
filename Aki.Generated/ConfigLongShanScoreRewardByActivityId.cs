@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004EC RID: 1260
+	// Token: 0x02000502 RID: 1282
 	public class ConfigLongShanScoreRewardByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001D93 RID: 7571 RVA: 0x00100664 File Offset: 0x000FE864
+		// Token: 0x06001E17 RID: 7703 RVA: 0x00106DB8 File Offset: 0x00104FB8
 		static ConfigLongShanScoreRewardByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLongShanScoreRewardByActivityId.CreateStaticDefaultValue), new Action(ConfigLongShanScoreRewardByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001D94 RID: 7572 RVA: 0x00100684 File Offset: 0x000FE884
+		// Token: 0x06001E18 RID: 7704 RVA: 0x00106DD8 File Offset: 0x00104FD8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLongShanScoreRewardByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001D95 RID: 7573 RVA: 0x00100703 File Offset: 0x000FE903
+		// Token: 0x06001E19 RID: 7705 RVA: 0x00106E57 File Offset: 0x00105057
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLongShanScoreRewardByActivityId.LogPair = null;
 			ConfigLongShanScoreRewardByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06001D96 RID: 7574 RVA: 0x00100711 File Offset: 0x000FE911
+		// Token: 0x06001E1A RID: 7706 RVA: 0x00106E65 File Offset: 0x00105065
 		public static void Init()
 		{
 			ConfigLongShanScoreRewardByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigLongShanScoreRewardByActivityId.HandleId, "db_longshanactivity.db", "select BinData from `LongShanScoreReward` where ActivityId=?");
 		}
 
-		// Token: 0x06001D97 RID: 7575 RVA: 0x0010072C File Offset: 0x000FE92C
+		// Token: 0x06001E1B RID: 7707 RVA: 0x00106E80 File Offset: 0x00105080
 		[NullableContext(2)]
 		public static IReadOnlyList<LongShanScoreReward> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002258 RID: 8792
+		// Token: 0x040022F2 RID: 8946
 		private const string DB = "db_longshanactivity.db";
 
-		// Token: 0x04002259 RID: 8793
+		// Token: 0x040022F3 RID: 8947
 		private const string FILE = "l.龙山主题活动.xlsx";
 
-		// Token: 0x0400225A RID: 8794
+		// Token: 0x040022F4 RID: 8948
 		private const string TABLE = "LongShanScoreReward";
 
-		// Token: 0x0400225B RID: 8795
+		// Token: 0x040022F5 RID: 8949
 		private const string COMMAND = "select BinData from `LongShanScoreReward` where ActivityId=?";
 
-		// Token: 0x0400225C RID: 8796
+		// Token: 0x040022F6 RID: 8950
 		private const string KEY_PREFIX = "LongShanScoreRewardByActivityId";
 
-		// Token: 0x0400225D RID: 8797
+		// Token: 0x040022F7 RID: 8951
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400225E RID: 8798
+		// Token: 0x040022F8 RID: 8952
 		private static int HandleId;
 	}
 }

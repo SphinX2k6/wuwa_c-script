@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004ABF RID: 19135
+	// Token: 0x02003A67 RID: 14951
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseMonsterDescPanel : UiPanelBase
 	{
-		// Token: 0x06031924 RID: 203044 RVA: 0x00B7EB24 File Offset: 0x00B7CD24
+		// Token: 0x060266B4 RID: 157364 RVA: 0x00AC2AD8 File Offset: 0x00AC0CD8
 		public UniTask Init(UUIItem item)
 		{
 			TrapDefenseMonsterDescPanel.<Init>d__5 <Init>d__;
@@ -27,12 +27,12 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031925 RID: 203045 RVA: 0x00B7EB6F File Offset: 0x00B7CD6F
+		// Token: 0x060266B5 RID: 157365 RVA: 0x00AC2B23 File Offset: 0x00AC0D23
 		protected override void OnBeforeCreate()
 		{
 		}
 
-		// Token: 0x06031926 RID: 203046 RVA: 0x00B7EB74 File Offset: 0x00B7CD74
+		// Token: 0x060266B6 RID: 157366 RVA: 0x00AC2B28 File Offset: 0x00AC0D28
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031927 RID: 203047 RVA: 0x00B7ECC8 File Offset: 0x00B7CEC8
+		// Token: 0x060266B7 RID: 157367 RVA: 0x00AC2C7C File Offset: 0x00AC0E7C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseMonsterDescPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -71,22 +71,22 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031928 RID: 203048 RVA: 0x00B7ED0B File Offset: 0x00B7CF0B
+		// Token: 0x060266B8 RID: 157368 RVA: 0x00AC2CBF File Offset: 0x00AC0EBF
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06031929 RID: 203049 RVA: 0x00B7ED0D File Offset: 0x00B7CF0D
+		// Token: 0x060266B9 RID: 157369 RVA: 0x00AC2CC1 File Offset: 0x00AC0EC1
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x0603192A RID: 203050 RVA: 0x00B7ED0F File Offset: 0x00B7CF0F
+		// Token: 0x060266BA RID: 157370 RVA: 0x00AC2CC3 File Offset: 0x00AC0EC3
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0603192B RID: 203051 RVA: 0x00B7ED14 File Offset: 0x00B7CF14
+		// Token: 0x060266BB RID: 157371 RVA: 0x00AC2CC8 File Offset: 0x00AC0EC8
 		public void UpdateData(TrapDefenseMonsterData data)
 		{
 			this.ItemData = data;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.UpdateAttrShow();
 		}
 
-		// Token: 0x0603192C RID: 203052 RVA: 0x00B7EDB4 File Offset: 0x00B7CFB4
+		// Token: 0x060266BC RID: 157372 RVA: 0x00AC2D68 File Offset: 0x00AC0F68
 		public void UpdateAttrShow()
 		{
 			List<ITrapDefenseAttrItemData> attrDataShowList = this.ItemData.GetAttrDataShowList();
@@ -137,59 +137,59 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603192D RID: 203053 RVA: 0x00B7EE57 File Offset: 0x00B7D057
+		// Token: 0x060266BD RID: 157373 RVA: 0x00AC2E0B File Offset: 0x00AC100B
 		public TrapDefenseAttrItem CreateItemAttr()
 		{
 			return new TrapDefenseAttrItem();
 		}
 
-		// Token: 0x0603192E RID: 203054 RVA: 0x00B7EE5E File Offset: 0x00B7D05E
+		// Token: 0x060266BE RID: 157374 RVA: 0x00AC2E12 File Offset: 0x00AC1012
 		public TrapDefenseTagAttrItem CreateItemTag()
 		{
 			return new TrapDefenseTagAttrItem();
 		}
 
-		// Token: 0x0401A7C8 RID: 108488
+		// Token: 0x0401511A RID: 86298
 		public TrapDefenseMonsterData ItemData;
 
-		// Token: 0x0401A7C9 RID: 108489
+		// Token: 0x0401511B RID: 86299
 		public TrapDefenseMonsterViewModel ViewModel = TrapDefenseModel.Instance.ViewModelMonster;
 
-		// Token: 0x0401A7CA RID: 108490
+		// Token: 0x0401511C RID: 86300
 		public GenericLayout<TrapDefenseAttrItem, ITrapDefenseAttrItemData> LayoutAttr;
 
-		// Token: 0x0401A7CB RID: 108491
+		// Token: 0x0401511D RID: 86301
 		public GenericLayout<TrapDefenseTagAttrItem, ITrapDefenseAttrItemData> LayoutTag;
 
-		// Token: 0x0200AC24 RID: 44068
+		// Token: 0x02009644 RID: 38468
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040344EC RID: 214252
+			// Token: 0x0402EE9D RID: 192157
 			public const int TextureIcon = 0;
 
-			// Token: 0x040344ED RID: 214253
+			// Token: 0x0402EE9E RID: 192158
 			public const int TextureQuality = 1;
 
-			// Token: 0x040344EE RID: 214254
+			// Token: 0x0402EE9F RID: 192159
 			public const int TextName = 2;
 
-			// Token: 0x040344EF RID: 214255
+			// Token: 0x0402EEA0 RID: 192160
 			public const int TextRiskType = 3;
 
-			// Token: 0x040344F0 RID: 214256
+			// Token: 0x0402EEA1 RID: 192161
 			public const int TextBodyType = 4;
 
-			// Token: 0x040344F1 RID: 214257
+			// Token: 0x0402EEA2 RID: 192162
 			public const int LayoutAttr = 5;
 
-			// Token: 0x040344F2 RID: 214258
+			// Token: 0x0402EEA3 RID: 192163
 			public const int ItemAttr = 6;
 
-			// Token: 0x040344F3 RID: 214259
+			// Token: 0x0402EEA4 RID: 192164
 			public const int LayoutTag = 7;
 
-			// Token: 0x040344F4 RID: 214260
+			// Token: 0x0402EEA5 RID: 192165
 			public const int ItemTag = 8;
 		}
 	}

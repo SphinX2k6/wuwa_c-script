@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002590 RID: 9616
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200283E RID: 10302
 	public class IVisualNovelPerformanceActivityAction : IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600D7C3 RID: 55235 RVA: 0x00201F77 File Offset: 0x00200177
+		// Token: 0x0600E53D RID: 58685 RVA: 0x0021DCAB File Offset: 0x0021BEAB
 		public static IVisualNovelPerformanceActivityAction Create(IVisualNovelPerformanceActivityAction? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E65 RID: 15973
-		// (get) Token: 0x0600D7C4 RID: 55236 RVA: 0x00201F96 File Offset: 0x00200196
+		// Token: 0x1700416F RID: 16751
+		// (get) Token: 0x0600E53E RID: 58686 RVA: 0x0021DCCA File Offset: 0x0021BECA
 		public override EVisualNovelPerformanceType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E66 RID: 15974
-		// (get) Token: 0x0600D7C5 RID: 55237 RVA: 0x00201FA4 File Offset: 0x002001A4
+		// Token: 0x17004170 RID: 16752
+		// (get) Token: 0x0600E53F RID: 58687 RVA: 0x0021DCD8 File Offset: 0x0021BED8
 		public override float? StartTime
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E67 RID: 15975
-		// (get) Token: 0x0600D7C6 RID: 55238 RVA: 0x00201FDA File Offset: 0x002001DA
+		// Token: 0x17004171 RID: 16753
+		// (get) Token: 0x0600E540 RID: 58688 RVA: 0x0021DD0E File Offset: 0x0021BF0E
 		public virtual IVisualNovelActivityActionSolarSchool ActivityActionConfig
 		{
 			get
@@ -62,14 +60,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400775E RID: 30558
+		// Token: 0x04007DC4 RID: 32196
 		private IVisualNovelPerformanceActivityAction Instance;
 
-		// Token: 0x0400775F RID: 30559
+		// Token: 0x04007DC5 RID: 32197
 		[Nullable(2)]
 		private IVisualNovelActivityActionSolarSchool _ActivityActionConfigCache;
 
-		// Token: 0x04007760 RID: 30560
+		// Token: 0x04007DC6 RID: 32198
 		private bool _ActivityActionConfigInited;
 	}
 }

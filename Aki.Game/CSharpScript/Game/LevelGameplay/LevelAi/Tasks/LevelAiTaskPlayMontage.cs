@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 {
-	// Token: 0x02006DC1 RID: 28097
+	// Token: 0x02005F40 RID: 24384
 	public class LevelAiTaskPlayMontage : LevelAiTask
 	{
-		// Token: 0x060448C6 RID: 280774 RVA: 0x010E7A7C File Offset: 0x010E5C7C
+		// Token: 0x0603AA2A RID: 240170 RVA: 0x01091CBC File Offset: 0x0108FEBC
 		protected override ELevelAiNodeResult ExecuteTask()
 		{
 			PlayRegisteredMontage @params = this.Params as PlayRegisteredMontage;
@@ -65,20 +65,20 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			return ELevelAiNodeResult.InProgress;
 		}
 
-		// Token: 0x060448C7 RID: 280775 RVA: 0x010E7BAB File Offset: 0x010E5DAB
+		// Token: 0x0603AA2B RID: 240171 RVA: 0x01091DEB File Offset: 0x0108FFEB
 		protected override ELevelAiNodeResult AbortTask()
 		{
 			base.CreatureDataComponent.Entity.GetComponent<BasePerformComponent>().VolatileMontageStopByLoad(EPerformMode.Ecology, this.MontagePlayId, EStopMethod.BlendOut);
 			return ELevelAiNodeResult.Aborted;
 		}
 
-		// Token: 0x04023A5B RID: 146011
+		// Token: 0x0401ECFD RID: 126205
 		private float LoopDuration;
 
-		// Token: 0x04023A5C RID: 146012
+		// Token: 0x0401ECFE RID: 126206
 		private int RepeatTimes;
 
-		// Token: 0x04023A5D RID: 146013
+		// Token: 0x0401ECFF RID: 126207
 		private int MontagePlayId = -1;
 	}
 }

@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BD4 RID: 3028
+	// Token: 0x02000CA3 RID: 3235
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class NpcPerformComponent : IComponentBase
 	{
-		// Token: 0x0600458B RID: 17803 RVA: 0x000B00AC File Offset: 0x000AE2AC
-		[NullableContext(1)]
+		// Token: 0x060049E8 RID: 18920 RVA: 0x000BA1B1 File Offset: 0x000B83B1
+		[NullableContext(0)]
 		public static NpcPerformComponent Create(INpcPerformComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013A0 RID: 5024
-		// (get) Token: 0x0600458C RID: 17804 RVA: 0x000B00CC File Offset: 0x000AE2CC
+		// Token: 0x1700149D RID: 5277
+		// (get) Token: 0x060049E9 RID: 18921 RVA: 0x000BA1D0 File Offset: 0x000B83D0
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013A1 RID: 5025
-		// (get) Token: 0x0600458D RID: 17805 RVA: 0x000B0104 File Offset: 0x000AE304
+		// Token: 0x1700149E RID: 5278
+		// (get) Token: 0x060049EA RID: 18922 RVA: 0x000BA208 File Offset: 0x000B8408
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013A2 RID: 5026
-		// (get) Token: 0x0600458E RID: 17806 RVA: 0x000B011A File Offset: 0x000AE31A
+		// Token: 0x1700149F RID: 5279
+		// (get) Token: 0x060049EB RID: 18923 RVA: 0x000BA21E File Offset: 0x000B841E
 		public virtual IBaseRoleNpcPerform SpecialNpcPerformConfig
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013A3 RID: 5027
-		// (get) Token: 0x0600458F RID: 17807 RVA: 0x000B014E File Offset: 0x000AE34E
+		// Token: 0x170014A0 RID: 5280
+		// (get) Token: 0x060049EC RID: 18924 RVA: 0x000BA252 File Offset: 0x000B8452
 		public virtual bool IsStare
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013A4 RID: 5028
-		// (get) Token: 0x06004590 RID: 17808 RVA: 0x000B015B File Offset: 0x000AE35B
+		// Token: 0x170014A1 RID: 5281
+		// (get) Token: 0x060049ED RID: 18925 RVA: 0x000BA25F File Offset: 0x000B845F
 		public virtual INpcHitShow NpcHitShow
 		{
 			get
@@ -90,8 +90,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013A5 RID: 5029
-		// (get) Token: 0x06004591 RID: 17809 RVA: 0x000B018F File Offset: 0x000AE38F
+		// Token: 0x170014A2 RID: 5282
+		// (get) Token: 0x060049EE RID: 18926 RVA: 0x000BA293 File Offset: 0x000B8493
 		public virtual bool IsShowStrike
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013A6 RID: 5030
-		// (get) Token: 0x06004592 RID: 17810 RVA: 0x000B019C File Offset: 0x000AE39C
+		// Token: 0x170014A3 RID: 5283
+		// (get) Token: 0x060049EF RID: 18927 RVA: 0x000BA2A0 File Offset: 0x000B84A0
 		public virtual INpcBumpShow NpcBumpShow
 		{
 			get
@@ -116,8 +116,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013A7 RID: 5031
-		// (get) Token: 0x06004593 RID: 17811 RVA: 0x000B01D0 File Offset: 0x000AE3D0
+		// Token: 0x170014A4 RID: 5284
+		// (get) Token: 0x060049F0 RID: 18928 RVA: 0x000BA2D4 File Offset: 0x000B84D4
 		public virtual INpcAwakeShow ShowOnAwake
 		{
 			get
@@ -132,12 +132,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013A8 RID: 5032
-		// (get) Token: 0x06004594 RID: 17812 RVA: 0x000B0204 File Offset: 0x000AE404
-		[Nullable(1)]
+		// Token: 0x170014A5 RID: 5285
+		// (get) Token: 0x060049F1 RID: 18929 RVA: 0x000BA308 File Offset: 0x000B8508
+		[Nullable(0)]
 		public virtual INpcStandbyShowMode ShowOnStandby
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ShowOnStandbyInited)
@@ -150,8 +150,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013A9 RID: 5033
-		// (get) Token: 0x06004595 RID: 17813 RVA: 0x000B0233 File Offset: 0x000AE433
+		// Token: 0x170014A6 RID: 5286
+		// (get) Token: 0x060049F2 RID: 18930 RVA: 0x000BA337 File Offset: 0x000B8537
 		public virtual INpcPerformOnInteract ShowOnInteract
 		{
 			get
@@ -166,19 +166,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013AA RID: 5034
-		// (get) Token: 0x06004596 RID: 17814 RVA: 0x000B0268 File Offset: 0x000AE468
+		// Token: 0x170014A7 RID: 5287
+		// (get) Token: 0x060049F3 RID: 18931 RVA: 0x000BA36C File Offset: 0x000B856C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IConditionalNpcPerformOnInteract> ConditionalShowOnInteracts
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -201,12 +201,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013AB RID: 5035
-		// (get) Token: 0x06004597 RID: 17815 RVA: 0x000B02E2 File Offset: 0x000AE4E2
-		[Nullable(1)]
+		// Token: 0x170014A8 RID: 5288
+		// (get) Token: 0x060049F4 RID: 18932 RVA: 0x000BA3E6 File Offset: 0x000B85E6
+		[Nullable(0)]
 		public virtual INpcUiInteractType ShowOnUiInteract
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ShowOnUiInteractInited)
@@ -219,19 +219,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013AC RID: 5036
-		// (get) Token: 0x06004598 RID: 17816 RVA: 0x000B0311 File Offset: 0x000AE511
+		// Token: 0x170014A9 RID: 5289
+		// (get) Token: 0x060049F5 RID: 18933 RVA: 0x000BA415 File Offset: 0x000B8615
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<INpcRideInVehiclePerformType> ShowOnRideInVehicle
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -249,8 +249,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013AD RID: 5037
-		// (get) Token: 0x06004599 RID: 17817 RVA: 0x000B0351 File Offset: 0x000AE551
+		// Token: 0x170014AA RID: 5290
+		// (get) Token: 0x060049F6 RID: 18934 RVA: 0x000BA455 File Offset: 0x000B8655
 		public virtual INpcPerformOnMonsterCloseby NpcMonsterClosePerform
 		{
 			get
@@ -265,8 +265,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013AE RID: 5038
-		// (get) Token: 0x0600459A RID: 17818 RVA: 0x000B0385 File Offset: 0x000AE585
+		// Token: 0x170014AB RID: 5291
+		// (get) Token: 0x060049F7 RID: 18935 RVA: 0x000BA489 File Offset: 0x000B8689
 		public virtual INpcPerformState NpcPerformState
 		{
 			get
@@ -281,8 +281,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013AF RID: 5039
-		// (get) Token: 0x0600459B RID: 17819 RVA: 0x000B03B9 File Offset: 0x000AE5B9
+		// Token: 0x170014AC RID: 5292
+		// (get) Token: 0x060049F8 RID: 18936 RVA: 0x000BA4BD File Offset: 0x000B86BD
 		public virtual INpcDeathInteract DeathInteract
 		{
 			get
@@ -297,8 +297,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013B0 RID: 5040
-		// (get) Token: 0x0600459C RID: 17820 RVA: 0x000B03F0 File Offset: 0x000AE5F0
+		// Token: 0x170014AD RID: 5293
+		// (get) Token: 0x060049F9 RID: 18937 RVA: 0x000BA4F4 File Offset: 0x000B86F4
 		public virtual bool? FixedPosition
 		{
 			get
@@ -311,8 +311,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013B1 RID: 5041
-		// (get) Token: 0x0600459D RID: 17821 RVA: 0x000B0426 File Offset: 0x000AE626
+		// Token: 0x170014AE RID: 5294
+		// (get) Token: 0x060049FA RID: 18938 RVA: 0x000BA52A File Offset: 0x000B872A
 		public virtual string DefaultAbpState
 		{
 			get
@@ -321,8 +321,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013B2 RID: 5042
-		// (get) Token: 0x0600459E RID: 17822 RVA: 0x000B0434 File Offset: 0x000AE634
+		// Token: 0x170014AF RID: 5295
+		// (get) Token: 0x060049FB RID: 18939 RVA: 0x000BA538 File Offset: 0x000B8738
 		public virtual int? DefaultFaceExpressionId
 		{
 			get
@@ -335,8 +335,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013B3 RID: 5043
-		// (get) Token: 0x0600459F RID: 17823 RVA: 0x000B046B File Offset: 0x000AE66B
+		// Token: 0x170014B0 RID: 5296
+		// (get) Token: 0x060049FC RID: 18940 RVA: 0x000BA56F File Offset: 0x000B876F
 		public virtual INpcDefaultPerform DefaultPerform
 		{
 			get
@@ -351,19 +351,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013B4 RID: 5044
-		// (get) Token: 0x060045A0 RID: 17824 RVA: 0x000B04A0 File Offset: 0x000AE6A0
+		// Token: 0x170014B1 RID: 5297
+		// (get) Token: 0x060049FD RID: 18941 RVA: 0x000BA5A4 File Offset: 0x000B87A4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<INpcSpecialMarkBase> NpcSpecialMarks
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -381,108 +381,139 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002791 RID: 10129
+		// Token: 0x170014B2 RID: 5298
+		// (get) Token: 0x060049FE RID: 18942 RVA: 0x000BA5F0 File Offset: 0x000B87F0
+		public virtual List<EExtraMovementAbility> ExtraMovementAbilities
+		{
+			get
+			{
+				if (this._ExtraMovementAbilitiesInited)
+				{
+					return this._ExtraMovementAbilitiesCache;
+				}
+				this._ExtraMovementAbilitiesInited = true;
+				if ((this.Instance.NullMask & 64) == 0)
+				{
+					return null;
+				}
+				int extraMovementAbilitiesLength = this.Instance.ExtraMovementAbilitiesLength;
+				this._ExtraMovementAbilitiesCache = new List<EExtraMovementAbility>(extraMovementAbilitiesLength);
+				for (int i = 0; i < extraMovementAbilitiesLength; i++)
+				{
+					this._ExtraMovementAbilitiesCache.Add((EExtraMovementAbility)this.Instance.ExtraMovementAbilities(i));
+				}
+				return this._ExtraMovementAbilitiesCache;
+			}
+		}
+
+		// Token: 0x040029DA RID: 10714
 		private INpcPerformComponent Instance;
 
-		// Token: 0x04002792 RID: 10130
+		// Token: 0x040029DB RID: 10715
 		private IBaseRoleNpcPerform _SpecialNpcPerformConfigCache;
 
-		// Token: 0x04002793 RID: 10131
+		// Token: 0x040029DC RID: 10716
 		private bool _SpecialNpcPerformConfigInited;
 
-		// Token: 0x04002794 RID: 10132
+		// Token: 0x040029DD RID: 10717
 		private INpcHitShow _NpcHitShowCache;
 
-		// Token: 0x04002795 RID: 10133
+		// Token: 0x040029DE RID: 10718
 		private bool _NpcHitShowInited;
 
-		// Token: 0x04002796 RID: 10134
+		// Token: 0x040029DF RID: 10719
 		private INpcBumpShow _NpcBumpShowCache;
 
-		// Token: 0x04002797 RID: 10135
+		// Token: 0x040029E0 RID: 10720
 		private bool _NpcBumpShowInited;
 
-		// Token: 0x04002798 RID: 10136
+		// Token: 0x040029E1 RID: 10721
 		private INpcAwakeShow _ShowOnAwakeCache;
 
-		// Token: 0x04002799 RID: 10137
+		// Token: 0x040029E2 RID: 10722
 		private bool _ShowOnAwakeInited;
 
-		// Token: 0x0400279A RID: 10138
-		[Nullable(1)]
+		// Token: 0x040029E3 RID: 10723
+		[Nullable(0)]
 		private INpcStandbyShowMode _ShowOnStandbyCache;
 
-		// Token: 0x0400279B RID: 10139
+		// Token: 0x040029E4 RID: 10724
 		private bool _ShowOnStandbyInited;
 
-		// Token: 0x0400279C RID: 10140
+		// Token: 0x040029E5 RID: 10725
 		private INpcPerformOnInteract _ShowOnInteractCache;
 
-		// Token: 0x0400279D RID: 10141
+		// Token: 0x040029E6 RID: 10726
 		private bool _ShowOnInteractInited;
 
-		// Token: 0x0400279E RID: 10142
+		// Token: 0x040029E7 RID: 10727
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IConditionalNpcPerformOnInteract> _ConditionalShowOnInteractsCache;
 
-		// Token: 0x0400279F RID: 10143
+		// Token: 0x040029E8 RID: 10728
 		private bool _ConditionalShowOnInteractsInited;
 
-		// Token: 0x040027A0 RID: 10144
-		[Nullable(1)]
+		// Token: 0x040029E9 RID: 10729
+		[Nullable(0)]
 		private INpcUiInteractType _ShowOnUiInteractCache;
 
-		// Token: 0x040027A1 RID: 10145
+		// Token: 0x040029EA RID: 10730
 		private bool _ShowOnUiInteractInited;
 
-		// Token: 0x040027A2 RID: 10146
+		// Token: 0x040029EB RID: 10731
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<INpcRideInVehiclePerformType> _ShowOnRideInVehicleCache;
 
-		// Token: 0x040027A3 RID: 10147
+		// Token: 0x040029EC RID: 10732
 		private bool _ShowOnRideInVehicleInited;
 
-		// Token: 0x040027A4 RID: 10148
+		// Token: 0x040029ED RID: 10733
 		private INpcPerformOnMonsterCloseby _NpcMonsterClosePerformCache;
 
-		// Token: 0x040027A5 RID: 10149
+		// Token: 0x040029EE RID: 10734
 		private bool _NpcMonsterClosePerformInited;
 
-		// Token: 0x040027A6 RID: 10150
+		// Token: 0x040029EF RID: 10735
 		private INpcPerformState _NpcPerformStateCache;
 
-		// Token: 0x040027A7 RID: 10151
+		// Token: 0x040029F0 RID: 10736
 		private bool _NpcPerformStateInited;
 
-		// Token: 0x040027A8 RID: 10152
+		// Token: 0x040029F1 RID: 10737
 		private INpcDeathInteract _DeathInteractCache;
 
-		// Token: 0x040027A9 RID: 10153
+		// Token: 0x040029F2 RID: 10738
 		private bool _DeathInteractInited;
 
-		// Token: 0x040027AA RID: 10154
+		// Token: 0x040029F3 RID: 10739
 		private INpcDefaultPerform _DefaultPerformCache;
 
-		// Token: 0x040027AB RID: 10155
+		// Token: 0x040029F4 RID: 10740
 		private bool _DefaultPerformInited;
 
-		// Token: 0x040027AC RID: 10156
+		// Token: 0x040029F5 RID: 10741
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<INpcSpecialMarkBase> _NpcSpecialMarksCache;
 
-		// Token: 0x040027AD RID: 10157
+		// Token: 0x040029F6 RID: 10742
 		private bool _NpcSpecialMarksInited;
+
+		// Token: 0x040029F7 RID: 10743
+		private List<EExtraMovementAbility> _ExtraMovementAbilitiesCache;
+
+		// Token: 0x040029F8 RID: 10744
+		private bool _ExtraMovementAbilitiesInited;
 	}
 }

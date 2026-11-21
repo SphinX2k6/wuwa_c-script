@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065DF RID: 26079
+	// Token: 0x0200555D RID: 21853
 	public enum EFishingEntrustType
 	{
-		// Token: 0x04022062 RID: 139362
+		// Token: 0x0401C993 RID: 117139
 		Fishing,
-		// Token: 0x04022063 RID: 139363
+		// Token: 0x0401C994 RID: 117140
 		Material,
-		// Token: 0x04022064 RID: 139364
+		// Token: 0x0401C995 RID: 117141
 		Deliver
 	}
 }

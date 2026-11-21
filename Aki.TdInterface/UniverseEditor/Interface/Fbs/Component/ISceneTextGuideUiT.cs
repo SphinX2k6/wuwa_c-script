@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058DD RID: 22749
+	// Token: 0x02005EEA RID: 24298
 	public class ISceneTextGuideUiT
 	{
-		// Token: 0x1700AA66 RID: 43622
-		// (get) Token: 0x06026692 RID: 157330 RVA: 0x0054B279 File Offset: 0x00549479
-		// (set) Token: 0x06026693 RID: 157331 RVA: 0x0054B281 File Offset: 0x00549481
+		// Token: 0x1700B396 RID: 45974
+		// (get) Token: 0x06028BF4 RID: 166900 RVA: 0x00591DC5 File Offset: 0x0058FFC5
+		// (set) Token: 0x06028BF5 RID: 166901 RVA: 0x00591DCD File Offset: 0x0058FFCD
 		public ESceneTextType Type { get; set; }
 
-		// Token: 0x1700AA67 RID: 43623
-		// (get) Token: 0x06026694 RID: 157332 RVA: 0x0054B28A File Offset: 0x0054948A
-		// (set) Token: 0x06026695 RID: 157333 RVA: 0x0054B292 File Offset: 0x00549492
+		// Token: 0x1700B397 RID: 45975
+		// (get) Token: 0x06028BF6 RID: 166902 RVA: 0x00591DD6 File Offset: 0x0058FFD6
+		// (set) Token: 0x06028BF7 RID: 166903 RVA: 0x00591DDE File Offset: 0x0058FFDE
 		public ISceneTextGuideUiScaleConfigT ScaleConfig { get; set; }
 
-		// Token: 0x1700AA68 RID: 43624
-		// (get) Token: 0x06026696 RID: 157334 RVA: 0x0054B29B File Offset: 0x0054949B
-		// (set) Token: 0x06026697 RID: 157335 RVA: 0x0054B2A3 File Offset: 0x005494A3
+		// Token: 0x1700B398 RID: 45976
+		// (get) Token: 0x06028BF8 RID: 166904 RVA: 0x00591DE7 File Offset: 0x0058FFE7
+		// (set) Token: 0x06028BF9 RID: 166905 RVA: 0x00591DEF File Offset: 0x0058FFEF
 		public ISceneTextGuideUiContentT Content { get; set; }
 
-		// Token: 0x06026698 RID: 157336 RVA: 0x0054B2AC File Offset: 0x005494AC
+		// Token: 0x06028BFA RID: 166906 RVA: 0x00591DF8 File Offset: 0x0058FFF8
 		public ISceneTextGuideUiT()
 		{
 			this.Type = ESceneTextType.SubtitleWithVoice;

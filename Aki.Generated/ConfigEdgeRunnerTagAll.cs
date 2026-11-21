@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200024F RID: 591
+	// Token: 0x02000263 RID: 611
 	public class ConfigEdgeRunnerTagAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000DDE RID: 3550 RVA: 0x000A7E7C File Offset: 0x000A607C
+		// Token: 0x06000E56 RID: 3670 RVA: 0x000AE140 File Offset: 0x000AC340
 		static ConfigEdgeRunnerTagAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEdgeRunnerTagAll.CreateStaticDefaultValue), new Action(ConfigEdgeRunnerTagAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000DDF RID: 3551 RVA: 0x000A7E9C File Offset: 0x000A609C
+		// Token: 0x06000E57 RID: 3671 RVA: 0x000AE160 File Offset: 0x000AC360
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEdgeRunnerTagAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000DE0 RID: 3552 RVA: 0x000A7F1B File Offset: 0x000A611B
+		// Token: 0x06000E58 RID: 3672 RVA: 0x000AE1DF File Offset: 0x000AC3DF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEdgeRunnerTagAll.LogPair = null;
 			ConfigEdgeRunnerTagAll.HandleId = 0;
 		}
 
-		// Token: 0x06000DE1 RID: 3553 RVA: 0x000A7F29 File Offset: 0x000A6129
+		// Token: 0x06000E59 RID: 3673 RVA: 0x000AE1ED File Offset: 0x000AC3ED
 		public static void Init()
 		{
 			ConfigEdgeRunnerTagAll.HandleId = ConfigCommon.InitDataStatement(ConfigEdgeRunnerTagAll.HandleId, "db_edgerunner.db", "select BinData from `EdgeRunnerTag`");
 		}
 
-		// Token: 0x06000DE2 RID: 3554 RVA: 0x000A7F44 File Offset: 0x000A6144
+		// Token: 0x06000E5A RID: 3674 RVA: 0x000AE208 File Offset: 0x000AC408
 		[NullableContext(2)]
 		public static IReadOnlyList<EdgeRunnerTag> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400100D RID: 4109
+		// Token: 0x04001099 RID: 4249
 		private const string DB = "db_edgerunner.db";
 
-		// Token: 0x0400100E RID: 4110
+		// Token: 0x0400109A RID: 4250
 		private const string FILE = "b.边缘行者联动.xlsx";
 
-		// Token: 0x0400100F RID: 4111
+		// Token: 0x0400109B RID: 4251
 		private const string TABLE = "EdgeRunnerTag";
 
-		// Token: 0x04001010 RID: 4112
+		// Token: 0x0400109C RID: 4252
 		private const string COMMAND = "select BinData from `EdgeRunnerTag`";
 
-		// Token: 0x04001011 RID: 4113
+		// Token: 0x0400109D RID: 4253
 		private const string KEY_PREFIX = "EdgeRunnerTagAll";
 
-		// Token: 0x04001012 RID: 4114
+		// Token: 0x0400109E RID: 4254
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001013 RID: 4115
+		// Token: 0x0400109F RID: 4255
 		private static int HandleId;
 	}
 }

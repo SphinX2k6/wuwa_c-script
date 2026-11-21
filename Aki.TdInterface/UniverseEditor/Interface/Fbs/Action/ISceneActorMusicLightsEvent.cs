@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F24 RID: 28452
+	// Token: 0x020076AB RID: 30379
 	public struct ISceneActorMusicLightsEvent : IFlatbufferObject
 	{
-		// Token: 0x1700D37E RID: 54142
-		// (get) Token: 0x06032443 RID: 205891 RVA: 0x006CA336 File Offset: 0x006C8536
+		// Token: 0x1700DEDA RID: 57050
+		// (get) Token: 0x0603549B RID: 218267 RVA: 0x0072629E File Offset: 0x0072449E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032444 RID: 205892 RVA: 0x006CA343 File Offset: 0x006C8543
+		// Token: 0x0603549C RID: 218268 RVA: 0x007262AB File Offset: 0x007244AB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032445 RID: 205893 RVA: 0x006CA34C File Offset: 0x006C854C
+		// Token: 0x0603549D RID: 218269 RVA: 0x007262B4 File Offset: 0x007244B4
 		public static ISceneActorMusicLightsEvent GetRootAsISceneActorMusicLightsEvent(ByteBuffer _bb)
 		{
 			return ISceneActorMusicLightsEvent.GetRootAsISceneActorMusicLightsEvent(_bb, default(ISceneActorMusicLightsEvent));
 		}
 
-		// Token: 0x06032446 RID: 205894 RVA: 0x006CA368 File Offset: 0x006C8568
+		// Token: 0x0603549E RID: 218270 RVA: 0x007262D0 File Offset: 0x007244D0
 		public static ISceneActorMusicLightsEvent GetRootAsISceneActorMusicLightsEvent(ByteBuffer _bb, ISceneActorMusicLightsEvent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032447 RID: 205895 RVA: 0x006CA385 File Offset: 0x006C8585
+		// Token: 0x0603549F RID: 218271 RVA: 0x007262ED File Offset: 0x007244ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032448 RID: 205896 RVA: 0x006CA394 File Offset: 0x006C8594
+		// Token: 0x060354A0 RID: 218272 RVA: 0x007262FC File Offset: 0x007244FC
 		public ISceneActorMusicLightsEvent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D37F RID: 54143
-		// (get) Token: 0x06032449 RID: 205897 RVA: 0x006CA3A4 File Offset: 0x006C85A4
+		// Token: 0x1700DEDB RID: 57051
+		// (get) Token: 0x060354A1 RID: 218273 RVA: 0x0072630C File Offset: 0x0072450C
 		public ESceneActorEventType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603244A RID: 205898 RVA: 0x006CA3E0 File Offset: 0x006C85E0
+		// Token: 0x060354A2 RID: 218274 RVA: 0x00726348 File Offset: 0x00724548
 		public static Offset<ISceneActorMusicLightsEvent> CreateISceneActorMusicLightsEvent(FlatBufferBuilder builder, ESceneActorEventType Type = ESceneActorEventType.PlayMusicPlants)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISceneActorMusicLightsEvent.EndISceneActorMusicLightsEvent(builder);
 		}
 
-		// Token: 0x0603244B RID: 205899 RVA: 0x006CA3F6 File Offset: 0x006C85F6
+		// Token: 0x060354A3 RID: 218275 RVA: 0x0072635E File Offset: 0x0072455E
 		public static void StartISceneActorMusicLightsEvent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0603244C RID: 205900 RVA: 0x006CA3FF File Offset: 0x006C85FF
+		// Token: 0x060354A4 RID: 218276 RVA: 0x00726367 File Offset: 0x00724567
 		public static void AddType(FlatBufferBuilder builder, ESceneActorEventType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603244D RID: 205901 RVA: 0x006CA40A File Offset: 0x006C860A
+		// Token: 0x060354A5 RID: 218277 RVA: 0x00726372 File Offset: 0x00724572
 		public static Offset<ISceneActorMusicLightsEvent> EndISceneActorMusicLightsEvent(FlatBufferBuilder builder)
 		{
 			return new Offset<ISceneActorMusicLightsEvent>(builder.EndTable());
 		}
 
-		// Token: 0x0603244E RID: 205902 RVA: 0x006CA418 File Offset: 0x006C8618
+		// Token: 0x060354A6 RID: 218278 RVA: 0x00726380 File Offset: 0x00724580
 		public ISceneActorMusicLightsEventT UnPack()
 		{
 			ISceneActorMusicLightsEventT sceneActorMusicLightsEventT = new ISceneActorMusicLightsEventT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return sceneActorMusicLightsEventT;
 		}
 
-		// Token: 0x0603244F RID: 205903 RVA: 0x006CA433 File Offset: 0x006C8633
+		// Token: 0x060354A7 RID: 218279 RVA: 0x0072639B File Offset: 0x0072459B
 		public void UnPackTo(ISceneActorMusicLightsEventT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06032450 RID: 205904 RVA: 0x006CA444 File Offset: 0x006C8644
+		// Token: 0x060354A8 RID: 218280 RVA: 0x007263AC File Offset: 0x007245AC
 		public static Offset<ISceneActorMusicLightsEvent> Pack(FlatBufferBuilder builder, ISceneActorMusicLightsEventT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISceneActorMusicLightsEvent.CreateISceneActorMusicLightsEvent(builder, _o.Type);
 		}
 
-		// Token: 0x04011913 RID: 71955
+		// Token: 0x0401289B RID: 75931
 		private Table __p;
 	}
 }

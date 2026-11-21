@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048C6 RID: 18630
+	// Token: 0x02004D2B RID: 19755
 	public class IVersionControlSaveConfig_CommitTasks_SwarmRequestStatusT
 	{
-		// Token: 0x1700873E RID: 34622
-		// (get) Token: 0x0601D20A RID: 119306 RVA: 0x0041CDF7 File Offset: 0x0041AFF7
-		// (set) Token: 0x0601D20B RID: 119307 RVA: 0x0041CDFF File Offset: 0x0041AFFF
+		// Token: 0x17008D86 RID: 36230
+		// (get) Token: 0x0601E9F7 RID: 125431 RVA: 0x00449593 File Offset: 0x00447793
+		// (set) Token: 0x0601E9F8 RID: 125432 RVA: 0x0044959B File Offset: 0x0044779B
 		public int SwarmState { get; set; }
 
-		// Token: 0x1700873F RID: 34623
-		// (get) Token: 0x0601D20C RID: 119308 RVA: 0x0041CE08 File Offset: 0x0041B008
-		// (set) Token: 0x0601D20D RID: 119309 RVA: 0x0041CE10 File Offset: 0x0041B010
+		// Token: 0x17008D87 RID: 36231
+		// (get) Token: 0x0601E9F9 RID: 125433 RVA: 0x004495A4 File Offset: 0x004477A4
+		// (set) Token: 0x0601E9FA RID: 125434 RVA: 0x004495AC File Offset: 0x004477AC
 		public string SwarmRequestInvalidMsg { get; set; }
 
-		// Token: 0x0601D20E RID: 119310 RVA: 0x0041CE19 File Offset: 0x0041B019
+		// Token: 0x0601E9FB RID: 125435 RVA: 0x004495B5 File Offset: 0x004477B5
 		public IVersionControlSaveConfig_CommitTasks_SwarmRequestStatusT()
 		{
 			this.SwarmState = 0;

@@ -6,23 +6,23 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005CA6 RID: 23718
+	// Token: 0x02004C88 RID: 19592
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiTowerMergeHeadStateData
 	{
-		// Token: 0x0603BEBC RID: 245436 RVA: 0x00E517B6 File Offset: 0x00E4F9B6
+		// Token: 0x06030E0F RID: 200207 RVA: 0x00DA1E5E File Offset: 0x00DA005E
 		public void Init()
 		{
 		}
 
-		// Token: 0x0603BEBD RID: 245437 RVA: 0x00E517B8 File Offset: 0x00E4F9B8
+		// Token: 0x06030E10 RID: 200208 RVA: 0x00DA1E60 File Offset: 0x00DA0060
 		public void OnLeaveLevel()
 		{
 			this.Clear();
 		}
 
-		// Token: 0x0603BEBE RID: 245438 RVA: 0x00E517C0 File Offset: 0x00E4F9C0
+		// Token: 0x06030E11 RID: 200209 RVA: 0x00DA1E68 File Offset: 0x00DA0068
 		public void Clear()
 		{
 			if (this.Info != null)
@@ -42,13 +42,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.ListenMonsterRemoveMap.Clear();
 		}
 
-		// Token: 0x0603BEBF RID: 245439 RVA: 0x00E51870 File Offset: 0x00E4FA70
+		// Token: 0x06030E12 RID: 200210 RVA: 0x00DA1F18 File Offset: 0x00DA0118
 		public void UpdateTowerMonsterHpInfo(NewTowerMonsterHpInfoNotify notify)
 		{
 			this.UpdateProgress(notify.MonsterHpInfos);
 		}
 
-		// Token: 0x0603BEC0 RID: 245440 RVA: 0x00E51880 File Offset: 0x00E4FA80
+		// Token: 0x06030E13 RID: 200211 RVA: 0x00DA1F28 File Offset: 0x00DA0128
 		public void UpdateProgress(IList<NewTowerMonsterHpInfo> param)
 		{
 			if (param == null || param.Count <= 1)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.DispatchHpChanged();
 		}
 
-		// Token: 0x0603BEC1 RID: 245441 RVA: 0x00E51AF0 File Offset: 0x00E4FCF0
+		// Token: 0x06030E14 RID: 200212 RVA: 0x00DA2198 File Offset: 0x00DA0398
 		public void OnAddEntity(EntityHandle handle)
 		{
 			if (this.ListenMonsterAddMap.Count <= 0)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BEC2 RID: 245442 RVA: 0x00E51BA0 File Offset: 0x00E4FDA0
+		// Token: 0x06030E15 RID: 200213 RVA: 0x00DA2248 File Offset: 0x00DA0448
 		public void OnRemoveEntity(EntityHandle handle)
 		{
 			if (this.ListenMonsterRemoveMap.Count <= 0)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BEC3 RID: 245443 RVA: 0x00E51C10 File Offset: 0x00E4FE10
+		// Token: 0x06030E16 RID: 200214 RVA: 0x00DA22B8 File Offset: 0x00DA04B8
 		public void OnMonsterHpChanged(int monsterInfoId)
 		{
 			if (this.Info == null)
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.DispatchHpChanged();
 		}
 
-		// Token: 0x0603BEC4 RID: 245444 RVA: 0x00E51C74 File Offset: 0x00E4FE74
+		// Token: 0x06030E17 RID: 200215 RVA: 0x00DA231C File Offset: 0x00DA051C
 		private void TryAttachListener(TowerMergeHeadStateMonsterInfo monsterInfo)
 		{
 			if (monsterInfo.CreatureDataId <= 0L)
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BEC5 RID: 245445 RVA: 0x00E51D02 File Offset: 0x00E4FF02
+		// Token: 0x06030E18 RID: 200216 RVA: 0x00DA23AA File Offset: 0x00DA05AA
 		private void AttachMonsterListener(TowerMergeHeadStateMonsterInfo monsterInfo)
 		{
 			if (!monsterInfo.AddListener())
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.ListenMonsterRemoveMap[monsterInfo.EntityHandle.Id] = monsterInfo;
 		}
 
-		// Token: 0x0603BEC6 RID: 245446 RVA: 0x00E51D24 File Offset: 0x00E4FF24
+		// Token: 0x06030E19 RID: 200217 RVA: 0x00DA23CC File Offset: 0x00DA05CC
 		private void ReCalcTotalHp()
 		{
 			if (this.Info == null)
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BEC7 RID: 245447 RVA: 0x00E51E00 File Offset: 0x00E50000
+		// Token: 0x06030E1A RID: 200218 RVA: 0x00DA24A8 File Offset: 0x00DA06A8
 		private void DispatchHpChanged()
 		{
 			if (this.Info == null)
@@ -259,14 +259,14 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit<TowerMergeHeadStateInfo>(EEventName.BattleUiTowerMergeHeadStateMonsterHpChanged, this.Info);
 		}
 
-		// Token: 0x0401F450 RID: 128080
+		// Token: 0x04019F09 RID: 106249
 		[Nullable(2)]
 		public TowerMergeHeadStateInfo Info;
 
-		// Token: 0x0401F451 RID: 128081
+		// Token: 0x04019F0A RID: 106250
 		private readonly Dictionary<long, TowerMergeHeadStateMonsterInfo> ListenMonsterAddMap = new Dictionary<long, TowerMergeHeadStateMonsterInfo>();
 
-		// Token: 0x0401F452 RID: 128082
+		// Token: 0x04019F0B RID: 106251
 		private readonly Dictionary<int, TowerMergeHeadStateMonsterInfo> ListenMonsterRemoveMap = new Dictionary<int, TowerMergeHeadStateMonsterInfo>();
 	}
 }

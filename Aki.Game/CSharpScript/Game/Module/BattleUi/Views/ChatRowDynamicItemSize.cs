@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D18 RID: 23832
+	// Token: 0x02004CFA RID: 19706
 	public class ChatRowDynamicItemSize : UiPanelBase, IDynamicScrollBaseItem<ChatRowData>
 	{
-		// Token: 0x0603C675 RID: 247413 RVA: 0x00E7B000 File Offset: 0x00E79200
+		// Token: 0x060315CE RID: 202190 RVA: 0x00DCB680 File Offset: 0x00DC9880
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C676 RID: 247414 RVA: 0x00E7B06C File Offset: 0x00E7926C
+		// Token: 0x060315CF RID: 202191 RVA: 0x00DCB6EC File Offset: 0x00DC98EC
 		[NullableContext(1)]
 		public FVector2D GetItemSize(ChatRowData data)
 		{
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new FVector2D(width, height);
 		}
 
-		// Token: 0x0603C677 RID: 247415 RVA: 0x00E7B098 File Offset: 0x00E79298
+		// Token: 0x060315D0 RID: 202192 RVA: 0x00DCB718 File Offset: 0x00DC9918
 		[NullableContext(1)]
 		public UniTask Init(UUIItem actor)
 		{
@@ -49,17 +49,17 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C678 RID: 247416 RVA: 0x00E7B0E3 File Offset: 0x00E792E3
+		// Token: 0x060315D1 RID: 202193 RVA: 0x00DCB763 File Offset: 0x00DC9963
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0200BF8F RID: 49039
+		// Token: 0x0200A995 RID: 43413
 		private enum EChild
 		{
-			// Token: 0x04039CB3 RID: 236723
+			// Token: 0x04034675 RID: 214645
 			RootItem,
-			// Token: 0x04039CB4 RID: 236724
+			// Token: 0x04034676 RID: 214646
 			PanelHorizon
 		}
 	}

@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CC1 RID: 23745
+	// Token: 0x02004CA3 RID: 19619
 	public static class EMissionRuleIdExtensions
 	{
-		// Token: 0x0603C0BE RID: 245950 RVA: 0x00E5C844 File Offset: 0x00E5AA44
+		// Token: 0x06031013 RID: 200723 RVA: 0x00DACF58 File Offset: 0x00DAB158
 		[NullableContext(1)]
 		public static string ToString(this EMissionRuleId ruleId)
 		{

@@ -5,21 +5,21 @@ using CSharpScript.Launcher.Define.SimpleTabel;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 {
-	// Token: 0x020000B7 RID: 183
+	// Token: 0x020000BA RID: 186
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestRefMapBlockRow : TableBaseRow
 	{
-		// Token: 0x0600062B RID: 1579 RVA: 0x00036D4D File Offset: 0x00034F4D
+		// Token: 0x06000646 RID: 1606 RVA: 0x0003884D File Offset: 0x00036A4D
 		public override object GetId()
 		{
 			return this.QuestId;
 		}
 
-		// Token: 0x040003C9 RID: 969
+		// Token: 0x040003F8 RID: 1016
 		public int QuestId;
 
-		// Token: 0x040003CA RID: 970
+		// Token: 0x040003F9 RID: 1017
 		public List<int> MapBlockId = new List<int>();
 	}
 }

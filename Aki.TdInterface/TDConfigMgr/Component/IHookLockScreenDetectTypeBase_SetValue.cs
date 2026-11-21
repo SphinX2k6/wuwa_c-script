@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200043F RID: 1087
+	// Token: 0x02000498 RID: 1176
 	public class IHookLockScreenDetectTypeBase_SetValue
 	{
-		// Token: 0x040010DF RID: 4319
+		// Token: 0x04001201 RID: 4609
 		public EHookLockScreenDetectType Type;
 	}
 }

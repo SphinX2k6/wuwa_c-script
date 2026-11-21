@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A3E RID: 2622
+	// Token: 0x020001DA RID: 474
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EDataLayerState")]
 	public enum EDataLayerState : byte
 	{
-		// Token: 0x04004623 RID: 17955
+		// Token: 0x04000BA3 RID: 2979
 		Unloaded,
-		// Token: 0x04004624 RID: 17956
+		// Token: 0x04000BA4 RID: 2980
 		Loaded,
-		// Token: 0x04004625 RID: 17957
+		// Token: 0x04000BA5 RID: 2981
 		Activated,
-		// Token: 0x04004626 RID: 17958
+		// Token: 0x04000BA6 RID: 2982
 		EDataLayerState_MAX
 	}
 }

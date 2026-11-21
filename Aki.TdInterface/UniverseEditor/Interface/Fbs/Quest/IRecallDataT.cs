@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004086 RID: 16518
+	// Token: 0x020044C7 RID: 17607
 	public class IRecallDataT
 	{
-		// Token: 0x17007493 RID: 29843
-		// (get) Token: 0x0601807D RID: 98429 RVA: 0x00377644 File Offset: 0x00375844
-		// (set) Token: 0x0601807E RID: 98430 RVA: 0x0037764C File Offset: 0x0037584C
+		// Token: 0x17007A95 RID: 31381
+		// (get) Token: 0x06019716 RID: 104214 RVA: 0x003A147C File Offset: 0x0039F67C
+		// (set) Token: 0x06019717 RID: 104215 RVA: 0x003A1484 File Offset: 0x0039F684
 		public ERecallDataType Type { get; set; }
 
-		// Token: 0x17007494 RID: 29844
-		// (get) Token: 0x0601807F RID: 98431 RVA: 0x00377655 File Offset: 0x00375855
-		// (set) Token: 0x06018080 RID: 98432 RVA: 0x0037765D File Offset: 0x0037585D
+		// Token: 0x17007A96 RID: 31382
+		// (get) Token: 0x06019718 RID: 104216 RVA: 0x003A148D File Offset: 0x0039F68D
+		// (set) Token: 0x06019719 RID: 104217 RVA: 0x003A1495 File Offset: 0x0039F695
 		public int Id { get; set; }
 
-		// Token: 0x06018081 RID: 98433 RVA: 0x00377666 File Offset: 0x00375866
+		// Token: 0x0601971A RID: 104218 RVA: 0x003A149E File Offset: 0x0039F69E
 		public IRecallDataT()
 		{
 			this.Type = ERecallDataType.LevelPlay;

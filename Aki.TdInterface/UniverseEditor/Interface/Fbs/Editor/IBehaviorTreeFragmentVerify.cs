@@ -6,10 +6,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004825 RID: 18469
+	// Token: 0x02004C8D RID: 19597
 	public static class IBehaviorTreeFragmentVerify
 	{
-		// Token: 0x0601C8C2 RID: 116930 RVA: 0x00409890 File Offset: 0x00407A90
+		// Token: 0x0601E0BF RID: 123071 RVA: 0x004361E0 File Offset: 0x004343E0
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyString(tablePos, 4, false) && verifier.VerifyVectorOfStrings(tablePos, 6, false) && verifier.VerifyVectorOfStrings(tablePos, 8, false) && verifier.VerifyVectorOfStrings(tablePos, 10, false) && verifier.VerifyField(tablePos, 12, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 14, 4UL, 4UL, false) && verifier.VerifyString(tablePos, 16, false) && verifier.VerifyField(tablePos, 18, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 20, 1UL, 1UL, false))
@@ -37,14 +37,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return false;
 		}
 
-		// Token: 0x02007A08 RID: 31240
+		// Token: 0x02008251 RID: 33361
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040133B7 RID: 78775
+			// Token: 0x0401441E RID: 82974
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x040133B8 RID: 78776
+			// Token: 0x0401441F RID: 82975
 			public static VerifyTableAction <1>__Verify;
 		}
 	}

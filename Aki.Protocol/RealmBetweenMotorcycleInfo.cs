@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000EA0 RID: 3744
+	// Token: 0x02000E90 RID: 3728
 	public sealed class RealmBetweenMotorcycleInfo : IMessage<RealmBetweenMotorcycleInfo>, IMessage, IEquatable<RealmBetweenMotorcycleInfo>, IDeepCloneable<RealmBetweenMotorcycleInfo>, IBufferMessage
 	{
-		// Token: 0x06014191 RID: 82321 RVA: 0x002ECEB5 File Offset: 0x002EB0B5
+		// Token: 0x060140AC RID: 82092 RVA: 0x002EB808 File Offset: 0x002E9A08
 		[NullableContext(1)]
 		public static RealmBetweenMotorcycleInfo Create()
 		{
 			return new RealmBetweenMotorcycleInfo();
 		}
 
-		// Token: 0x170042DA RID: 17114
-		// (get) Token: 0x06014192 RID: 82322 RVA: 0x002ECEBC File Offset: 0x002EB0BC
+		// Token: 0x170042B0 RID: 17072
+		// (get) Token: 0x060140AD RID: 82093 RVA: 0x002EB80F File Offset: 0x002E9A0F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<RealmBetweenMotorcycleInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042DB RID: 17115
-		// (get) Token: 0x06014193 RID: 82323 RVA: 0x002ECEC3 File Offset: 0x002EB0C3
+		// Token: 0x170042B1 RID: 17073
+		// (get) Token: 0x060140AE RID: 82094 RVA: 0x002EB816 File Offset: 0x002E9A16
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042DC RID: 17116
-		// (get) Token: 0x06014194 RID: 82324 RVA: 0x002ECEC6 File Offset: 0x002EB0C6
+		// Token: 0x170042B2 RID: 17074
+		// (get) Token: 0x060140AF RID: 82095 RVA: 0x002EB819 File Offset: 0x002E9A19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014195 RID: 82325 RVA: 0x002ECECD File Offset: 0x002EB0CD
+		// Token: 0x060140B0 RID: 82096 RVA: 0x002EB820 File Offset: 0x002E9A20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RealmBetweenMotorcycleInfo()
 		{
 		}
 
-		// Token: 0x06014196 RID: 82326 RVA: 0x002ECEE0 File Offset: 0x002EB0E0
+		// Token: 0x060140B1 RID: 82097 RVA: 0x002EB834 File Offset: 0x002E9A34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RealmBetweenMotorcycleInfo(RealmBetweenMotorcycleInfo other) : this()
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06014197 RID: 82327 RVA: 0x002ECF2D File Offset: 0x002EB12D
+		// Token: 0x060140B2 RID: 82098 RVA: 0x002EB881 File Offset: 0x002E9A81
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RealmBetweenMotorcycleInfo Clone()
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			return new RealmBetweenMotorcycleInfo(this);
 		}
 
-		// Token: 0x170042DD RID: 17117
-		// (get) Token: 0x06014198 RID: 82328 RVA: 0x002ECF35 File Offset: 0x002EB135
-		// (set) Token: 0x06014199 RID: 82329 RVA: 0x002ECF3D File Offset: 0x002EB13D
+		// Token: 0x170042B3 RID: 17075
+		// (get) Token: 0x060140B3 RID: 82099 RVA: 0x002EB889 File Offset: 0x002E9A89
+		// (set) Token: 0x060140B4 RID: 82100 RVA: 0x002EB891 File Offset: 0x002E9A91
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MotorcyclePlayId
@@ -97,9 +97,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042DE RID: 17118
-		// (get) Token: 0x0601419A RID: 82330 RVA: 0x002ECF46 File Offset: 0x002EB146
-		// (set) Token: 0x0601419B RID: 82331 RVA: 0x002ECF4E File Offset: 0x002EB14E
+		// Token: 0x170042B4 RID: 17076
+		// (get) Token: 0x060140B5 RID: 82101 RVA: 0x002EB89A File Offset: 0x002E9A9A
+		// (set) Token: 0x060140B6 RID: 82102 RVA: 0x002EB8A2 File Offset: 0x002E9AA2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int HistorySoarScore
@@ -114,8 +114,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042DF RID: 17119
-		// (get) Token: 0x0601419C RID: 82332 RVA: 0x002ECF57 File Offset: 0x002EB157
+		// Token: 0x170042B5 RID: 17077
+		// (get) Token: 0x060140B7 RID: 82103 RVA: 0x002EB8AB File Offset: 0x002E9AAB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> ReceiveIds
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601419D RID: 82333 RVA: 0x002ECF5F File Offset: 0x002EB15F
+		// Token: 0x060140B8 RID: 82104 RVA: 0x002EB8B3 File Offset: 0x002E9AB3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RealmBetweenMotorcycleInfo);
 		}
 
-		// Token: 0x0601419E RID: 82334 RVA: 0x002ECF70 File Offset: 0x002EB170
+		// Token: 0x060140B9 RID: 82105 RVA: 0x002EB8C4 File Offset: 0x002E9AC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RealmBetweenMotorcycleInfo other)
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.MotorcyclePlayId == other.MotorcyclePlayId && this.HistorySoarScore == other.HistorySoarScore && this.receiveIds_.Equals(other.receiveIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601419F RID: 82335 RVA: 0x002ECFD0 File Offset: 0x002EB1D0
+		// Token: 0x060140BA RID: 82106 RVA: 0x002EB924 File Offset: 0x002E9B24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060141A0 RID: 82336 RVA: 0x002ED036 File Offset: 0x002EB236
+		// Token: 0x060140BB RID: 82107 RVA: 0x002EB98A File Offset: 0x002E9B8A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060141A1 RID: 82337 RVA: 0x002ED043 File Offset: 0x002EB243
+		// Token: 0x060140BC RID: 82108 RVA: 0x002EB997 File Offset: 0x002E9B97
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060141A2 RID: 82338 RVA: 0x002ED04C File Offset: 0x002EB24C
+		// Token: 0x060140BD RID: 82109 RVA: 0x002EB9A0 File Offset: 0x002E9BA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060141A3 RID: 82339 RVA: 0x002ED0B8 File Offset: 0x002EB2B8
+		// Token: 0x060140BE RID: 82110 RVA: 0x002EBA0C File Offset: 0x002E9C0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060141A4 RID: 82340 RVA: 0x002ED124 File Offset: 0x002EB324
+		// Token: 0x060140BF RID: 82111 RVA: 0x002EBA78 File Offset: 0x002E9C78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RealmBetweenMotorcycleInfo other)
@@ -245,7 +245,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060141A5 RID: 82341 RVA: 0x002ED185 File Offset: 0x002EB385
+		// Token: 0x060140C0 RID: 82112 RVA: 0x002EBAD9 File Offset: 0x002E9CD9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -253,7 +253,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060141A6 RID: 82342 RVA: 0x002ED190 File Offset: 0x002EB390
+		// Token: 0x060140C1 RID: 82113 RVA: 0x002EBAE4 File Offset: 0x002E9CE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -287,31 +287,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007A81 RID: 31361
+		// Token: 0x04007AAB RID: 31403
 		private static readonly MessageParser<RealmBetweenMotorcycleInfo> _parser = new MessageParser<RealmBetweenMotorcycleInfo>(() => new RealmBetweenMotorcycleInfo());
 
-		// Token: 0x04007A82 RID: 31362
+		// Token: 0x04007AAC RID: 31404
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007A83 RID: 31363
+		// Token: 0x04007AAD RID: 31405
 		public const int MotorcyclePlayIdFieldNumber = 1;
 
-		// Token: 0x04007A84 RID: 31364
+		// Token: 0x04007AAE RID: 31406
 		private int motorcyclePlayId_;
 
-		// Token: 0x04007A85 RID: 31365
+		// Token: 0x04007AAF RID: 31407
 		public const int HistorySoarScoreFieldNumber = 2;
 
-		// Token: 0x04007A86 RID: 31366
+		// Token: 0x04007AB0 RID: 31408
 		private int historySoarScore_;
 
-		// Token: 0x04007A87 RID: 31367
+		// Token: 0x04007AB1 RID: 31409
 		public const int ReceiveIdsFieldNumber = 3;
 
-		// Token: 0x04007A88 RID: 31368
+		// Token: 0x04007AB2 RID: 31410
 		private static readonly FieldCodec<int> _repeated_receiveIds_codec = FieldCodec.ForInt32(26U);
 
-		// Token: 0x04007A89 RID: 31369
+		// Token: 0x04007AB3 RID: 31411
 		private readonly RepeatedField<int> receiveIds_ = new RepeatedField<int>();
 	}
 }

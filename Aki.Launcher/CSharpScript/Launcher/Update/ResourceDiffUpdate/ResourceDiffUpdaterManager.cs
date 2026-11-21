@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 {
-	// Token: 0x020000A3 RID: 163
+	// Token: 0x020000A6 RID: 166
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ResourceDiffUpdaterManager : Singleton
 	{
-		// Token: 0x06000588 RID: 1416 RVA: 0x00031F08 File Offset: 0x00030108
+		// Token: 0x0600059F RID: 1439 RVA: 0x00033470 File Offset: 0x00031670
 		[NullableContext(2)]
 		public void UpdatePlayerInfoFromHttpData(SubPackageHttpData httpData = null, string uid = null)
 		{
@@ -39,7 +39,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			this.InitFinishedQuests(uid, (httpData != null) ? httpData.Mp4FinishQuestFlag : null, (httpData != null) ? httpData.FinishQuestIdSet : null);
 		}
 
-		// Token: 0x06000589 RID: 1417 RVA: 0x00031FCC File Offset: 0x000301CC
+		// Token: 0x060005A0 RID: 1440 RVA: 0x00033534 File Offset: 0x00031734
 		public unsafe void MergeRecallQuests(int? curRecallId)
 		{
 			if (curRecallId != null)
@@ -75,9 +75,9 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			}
 		}
 
-		// Token: 0x0600058A RID: 1418 RVA: 0x00032108 File Offset: 0x00030308
+		// Token: 0x060005A1 RID: 1441 RVA: 0x00033670 File Offset: 0x00031870
 		[NullableContext(2)]
-		public void InitFinishedQuests(string sdkUid, List<uint> mp4FinishQuestFlag, List<int> finishQuestIdSet)
+		public unsafe void InitFinishedQuests(string sdkUid, List<uint> mp4FinishQuestFlag, List<int> finishQuestIdSet)
 		{
 			this.Context.FinishedQuests.Clear();
 			if (sdkUid == null)
@@ -85,11 +85,11 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 				LauncherLog.Instance.Warn("Optional package 用户SDK Uid未定义, 无法初始化已完成任务列表", default(ReadOnlySpan<ValueTuple<string, object>>));
 				return;
 			}
+			string item = (mp4FinishQuestFlag != null) ? "HTTP位图" : "本地缓存";
+			string item2 = "未使用";
 			if (mp4FinishQuestFlag != null)
 			{
-				HashSet<int> hashSet = ResourceUpdateUtils.ParseMp4FinishQuestFlagToSet(mp4FinishQuestFlag);
-				LauncherLog.Instance.Info("Optional package 解析Mp4FinishQuestFlag: " + string.Join<uint>(",", mp4FinishQuestFlag) + ", QuestBitIds: " + string.Join<int>(",", hashSet), default(ReadOnlySpan<ValueTuple<string, object>>));
-				using (HashSet<int>.Enumerator enumerator = hashSet.GetEnumerator())
+				using (HashSet<int>.Enumerator enumerator = ResourceUpdateUtils.ParseMp4FinishQuestFlagToSet(mp4FinishQuestFlag).GetEnumerator())
 				{
 					while (enumerator.MoveNext())
 					{
@@ -100,26 +100,36 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 							this.Context.FinishedQuests.Add(byId.QuestId);
 						}
 					}
-					goto IL_130;
+					goto IL_127;
 				}
 			}
 			Dictionary<string, HashSet<int>> global = LauncherStorageLib.Instance.GetGlobal<Dictionary<string, HashSet<int>>>(ELauncherStorageGlobalKey.UserFinishedQuests, null);
+			item2 = ((global == null) ? "不存在" : "未命中UID");
 			if (global != null && global.ContainsKey(sdkUid))
 			{
-				foreach (int item in global[sdkUid])
+				item2 = "命中UID";
+				foreach (int item3 in global[sdkUid])
 				{
-					this.Context.FinishedQuests.Add(item);
+					this.Context.FinishedQuests.Add(item3);
 				}
 			}
-			IL_130:
-			foreach (int item2 in (finishQuestIdSet ?? new List<int>()))
+			IL_127:
+			foreach (int item4 in (finishQuestIdSet ?? new List<int>()))
 			{
-				this.Context.FinishedQuests.Add(item2);
+				this.Context.FinishedQuests.Add(item4);
 			}
-			LauncherLog.Instance.Info("Optional package 用户已完成任务列表: " + string.Join<int>(",", this.Context.FinishedQuests), default(ReadOnlySpan<ValueTuple<string, object>>));
+			LauncherLog instance = LauncherLog.Instance;
+			string message = "Optional package 用户已完成任务列表";
+			<>y__InlineArray5<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray5<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("sdkUid", sdkUid);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("source", item);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("cacheState", item2);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("FinishQuestIdSet", ResourceUpdateUtils.FormatLogList<int>(finishQuestIdSet));
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("FinishedQuests", ResourceUpdateUtils.FormatLogList<int>(this.Context.FinishedQuests));
+			instance.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
 		}
 
-		// Token: 0x0600058B RID: 1419 RVA: 0x000322E8 File Offset: 0x000304E8
+		// Token: 0x060005A2 RID: 1442 RVA: 0x000338C0 File Offset: 0x00031AC0
 		public void AddCurQuest(int questId)
 		{
 			if (!this.Context.ActiveQuestIds.Contains(questId))
@@ -128,7 +138,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			}
 		}
 
-		// Token: 0x0600058C RID: 1420 RVA: 0x00032310 File Offset: 0x00030510
+		// Token: 0x060005A3 RID: 1443 RVA: 0x000338E8 File Offset: 0x00031AE8
 		public void UpdateFinishedQuests(List<int> quests)
 		{
 			LauncherLog.Instance.Info("Optional package 更新已完成任务列表: " + string.Join<int>(",", quests), default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -139,20 +149,20 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			}
 		}
 
-		// Token: 0x0600058D RID: 1421 RVA: 0x000323A4 File Offset: 0x000305A4
+		// Token: 0x060005A4 RID: 1444 RVA: 0x0003397C File Offset: 0x00031B7C
 		public void AddFinishedQuest(int questId)
 		{
 			this.Context.FinishedQuests.Add(questId);
 		}
 
-		// Token: 0x0600058E RID: 1422 RVA: 0x000323B8 File Offset: 0x000305B8
+		// Token: 0x060005A5 RID: 1445 RVA: 0x00033990 File Offset: 0x00031B90
 		public void UpdateCurrentBlockIds(List<int> blockIds)
 		{
 			LauncherLog.Instance.Info("Optional package 更新当前地块列表: " + string.Join<int>(",", blockIds), default(ReadOnlySpan<ValueTuple<string, object>>));
 			this.Context.CurrentBlockIds = blockIds;
 		}
 
-		// Token: 0x0600058F RID: 1423 RVA: 0x000323FC File Offset: 0x000305FC
+		// Token: 0x060005A6 RID: 1446 RVA: 0x000339D4 File Offset: 0x00031BD4
 		public void UpdatePositions(int instanceId, double x, double y, double z)
 		{
 			ResourcePackagePositionData resourcePackagePositionData = new ResourcePackagePositionData();
@@ -166,7 +176,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			};
 		}
 
-		// Token: 0x06000590 RID: 1424 RVA: 0x00032444 File Offset: 0x00030644
+		// Token: 0x060005A7 RID: 1447 RVA: 0x00033A1C File Offset: 0x00031C1C
 		public UniTask Init()
 		{
 			ResourceDiffUpdaterManager.<Init>d__22 <Init>d__;
@@ -177,7 +187,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000591 RID: 1425 RVA: 0x00032488 File Offset: 0x00030688
+		// Token: 0x060005A8 RID: 1448 RVA: 0x00033A60 File Offset: 0x00031C60
 		public UniTask CheckOptionalPacks(DiffUpdate diffUpdate, HotFixManager viewMgr)
 		{
 			ResourceDiffUpdaterManager.<CheckOptionalPacks>d__23 <CheckOptionalPacks>d__;
@@ -190,7 +200,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			return <CheckOptionalPacks>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000592 RID: 1426 RVA: 0x000324DC File Offset: 0x000306DC
+		// Token: 0x060005A9 RID: 1449 RVA: 0x00033AB4 File Offset: 0x00031CB4
 		private UniTask ApplyDecision(DiffUpdate diffUpdate, HotFixManager viewMgr)
 		{
 			ResourceDiffUpdaterManager.<ApplyDecision>d__24 <ApplyDecision>d__;
@@ -203,7 +213,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			return <ApplyDecision>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000593 RID: 1427 RVA: 0x00032530 File Offset: 0x00030730
+		// Token: 0x060005AA RID: 1450 RVA: 0x00033B08 File Offset: 0x00031D08
 		private unsafe void LogEffectiveResourceSelection()
 		{
 			string item = (RemoteInfo.Instance.ActiveTier == ETier.None) ? "未分级" : LauncherDeviceTierLib.TierToLabel(RemoteInfo.Instance.ActiveTier);
@@ -216,7 +226,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			instance.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06000594 RID: 1428 RVA: 0x000325D5 File Offset: 0x000307D5
+		// Token: 0x060005AB RID: 1451 RVA: 0x00033BAD File Offset: 0x00031DAD
 		private void DeleteLegacyVideoDirForTierPlatform()
 		{
 			if (!RemoteInfo.Instance.IsResourceQualityTierEnabled() || RemoteInfo.Instance.ActiveTier == ETier.None)
@@ -226,7 +236,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			VideoResUpdate.Instance.DeleteLegacyVideoDir();
 		}
 
-		// Token: 0x06000595 RID: 1429 RVA: 0x000325FC File Offset: 0x000307FC
+		// Token: 0x060005AC RID: 1452 RVA: 0x00033BD4 File Offset: 0x00031DD4
 		private void ClearNonCurrentTierResourcesOnMobile()
 		{
 			ETier activeTier = RemoteInfo.Instance.ActiveTier;
@@ -264,7 +274,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			}
 		}
 
-		// Token: 0x06000596 RID: 1430 RVA: 0x0003272C File Offset: 0x0003092C
+		// Token: 0x060005AD RID: 1453 RVA: 0x00033D04 File Offset: 0x00031F04
 		public void UpdateDecision()
 		{
 			IReadOnlyList<IResourceTypeModule> modules = new IResourceTypeModule[]
@@ -297,7 +307,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			instance.Info(defaultInterpolatedStringHandler.ToStringAndClear(), default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06000597 RID: 1431 RVA: 0x0003287C File Offset: 0x00030A7C
+		// Token: 0x060005AE RID: 1454 RVA: 0x00033E54 File Offset: 0x00032054
 		public void SwitchResTier(ETier? tier = null)
 		{
 			if (tier != null)
@@ -319,7 +329,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			this.UpdateDecision();
 		}
 
-		// Token: 0x06000598 RID: 1432 RVA: 0x0003291C File Offset: 0x00030B1C
+		// Token: 0x060005AF RID: 1455 RVA: 0x00033EF4 File Offset: 0x000320F4
 		public bool IsGrayBoxHit()
 		{
 			if (Platform.Instance.IsCloudGame())
@@ -330,6 +340,12 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			if (!UKuroLauncherLibrary.NeedHotPatch())
 			{
 				LauncherLog.Instance.Info("Hot patch not needed, skipping optional package gray box check", default(ReadOnlySpan<ValueTuple<string, object>>));
+				return false;
+			}
+			EResUpdateType eresUpdateType = Platform.Instance.IsWindowsOnlyPlatform() ? LauncherPackageStateLib.GetCommandLinePackageType() : EResUpdateType.NotSet;
+			if (Platform.Instance.IsWindowsOnlyPlatform() && eresUpdateType == EResUpdateType.NotSet)
+			{
+				LauncherLog.Instance.Info("Windows平台未获取到包体类型命令行参数,分包关闭", default(ReadOnlySpan<ValueTuple<string, object>>));
 				return false;
 			}
 			bool flag = UKuroLauncherLibrary.IsEnableOptionalPackage();
@@ -353,10 +369,10 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			return true;
 		}
 
-		// Token: 0x06000599 RID: 1433 RVA: 0x00032A44 File Offset: 0x00030C44
+		// Token: 0x060005B0 RID: 1456 RVA: 0x00034058 File Offset: 0x00032258
 		public void RecordUserSelection()
 		{
-			LauncherStorageLib.Instance.SetDeviceSaved<EResUpdateType>(ELauncherStorageDeviceKey.SelectedMaxOrMinPackType, this.ResUpdateState);
+			LauncherPackageStateLib.SetSavedPackageType(RemoteInfo.Instance.ActiveTier, this.ResUpdateState);
 			LauncherLog instance = LauncherLog.Instance;
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(30, 1);
 			defaultInterpolatedStringHandler.AppendLiteral("Optional package 记录玩家选择的包体类型: ");
@@ -366,12 +382,20 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			{
 				return;
 			}
+			if (Platform.Instance.IsWindowsOnlyPlatform() && !LauncherPackageStateLib.SetPackageType(RemoteInfo.Instance.ActiveTier, this.ResUpdateState))
+			{
+				LauncherLog instance2 = LauncherLog.Instance;
+				defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(30, 1);
+				defaultInterpolatedStringHandler.AppendLiteral("Optional package 同步启动器包体类型失败: ");
+				defaultInterpolatedStringHandler.AppendFormatted<EResUpdateType>(this.ResUpdateState);
+				instance2.Error(defaultInterpolatedStringHandler.ToStringAndClear(), default(ReadOnlySpan<ValueTuple<string, object>>));
+			}
 			ETier etier = (RemoteInfo.Instance.ActiveTier != ETier.None) ? RemoteInfo.Instance.ActiveTier : LauncherDeviceTierLib.GetRecommendedTier();
 			LauncherStorageLib.Instance.SetDeviceSaved<ETier>(ELauncherStorageDeviceKey.ResourceQualityTier, etier);
 			LauncherLog.Instance.Info("Optional package 记录玩家选择的画质档位: " + LauncherDeviceTierLib.TierToLabel(etier), default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0600059A RID: 1434 RVA: 0x00032B00 File Offset: 0x00030D00
+		// Token: 0x060005B1 RID: 1457 RVA: 0x00034174 File Offset: 0x00032374
 		private ETier ResolveTierKey(ETier? tier = null)
 		{
 			ETier? etier = tier;
@@ -382,7 +406,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			return etier.GetValueOrDefault();
 		}
 
-		// Token: 0x0600059B RID: 1435 RVA: 0x00032B2C File Offset: 0x00030D2C
+		// Token: 0x060005B2 RID: 1458 RVA: 0x000341A0 File Offset: 0x000323A0
 		private void SetResSize(EResUpdateType resType, long size, ETier? tier = null)
 		{
 			ETier key = this.ResolveTierKey(tier);
@@ -395,7 +419,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			dictionary[resType] = size;
 		}
 
-		// Token: 0x0600059C RID: 1436 RVA: 0x00032B6C File Offset: 0x00030D6C
+		// Token: 0x060005B3 RID: 1459 RVA: 0x000341E0 File Offset: 0x000323E0
 		public long GetResSize(EResUpdateType resType, ETier? tier = null)
 		{
 			ETier key = this.ResolveTierKey(tier);
@@ -408,7 +432,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			return result;
 		}
 
-		// Token: 0x0600059D RID: 1437 RVA: 0x00032BA0 File Offset: 0x00030DA0
+		// Token: 0x060005B4 RID: 1460 RVA: 0x00034214 File Offset: 0x00032414
 		public long GetTierPacksSavedSize(ETier tier)
 		{
 			long num = 0L;
@@ -433,19 +457,15 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			return num;
 		}
 
-		// Token: 0x0600059E RID: 1438 RVA: 0x00032C94 File Offset: 0x00030E94
+		// Token: 0x060005B5 RID: 1461 RVA: 0x00034308 File Offset: 0x00032508
 		public double GetSpendTime()
 		{
 			return (double)((long)DateTime.UtcNow.Subtract(DateTime.UnixEpoch).TotalMilliseconds - this.StartTime) * 0.001;
 		}
 
-		// Token: 0x0600059F RID: 1439 RVA: 0x00032CD0 File Offset: 0x00030ED0
+		// Token: 0x060005B6 RID: 1462 RVA: 0x00034344 File Offset: 0x00032544
 		public void ReportInitialResDownloadState(bool successDownload, bool bStart = false)
 		{
-			if (successDownload && this.ResUpdateState != EResUpdateType.NotSet)
-			{
-				LauncherStorageLib.Instance.SetDeviceSaved<EResUpdateType>(ELauncherStorageDeviceKey.SelectedMaxOrMinPackType, this.ResUpdateState);
-			}
 			if (!ProcedureUtil.IsFirstTimeUpdateForPackage())
 			{
 				return;
@@ -457,15 +477,18 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			string uniqueId = ((loginData != null) ? loginData.Uid : null) ?? "";
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 1);
 			defaultInterpolatedStringHandler.AppendFormatted<int>(this.TraceId);
-			new InitialResDownloadStateLog(resUpdateState, downloadTime, downloadStatus, uniqueId, defaultInterpolatedStringHandler.ToStringAndClear(), this.UserChoose, (int)(HotFixManager.GetAllCanClearSpace() / 1048576L), (int)(this.GetResSize(this.ResUpdateState, null) / 1048576L), null)
+			InitialResDownloadStateLog initialResDownloadStateLog = new InitialResDownloadStateLog(resUpdateState, downloadTime, downloadStatus, uniqueId, defaultInterpolatedStringHandler.ToStringAndClear(), this.UserChoose, (int)(HotFixManager.GetAllCanClearSpace() / 1048576L), (int)(this.GetResSize(this.ResUpdateState, null) / 1048576L), null);
+			initialResDownloadStateLog.i_download_pkg = (int)HotFixManager.LocalResourceQualityTier;
+			if (initialResDownloadStateLog.i_download_pkg == 0)
 			{
-				i_download_pkg = (int)LauncherDeviceTierLib.GetActiveTier(),
-				i_recommand_pkg = (int)LauncherDeviceTierLib.GetRecommendedTier(),
-				i_storage_bef = (int)(VideoResUpdate.Instance.GetFreeSpace() / 1073741824L)
-			}.Report();
+				initialResDownloadStateLog.i_download_pkg = (int)LauncherDeviceTierLib.GetActiveTier();
+			}
+			initialResDownloadStateLog.i_recommand_pkg = (int)LauncherDeviceTierLib.GetRecommendedTier();
+			initialResDownloadStateLog.i_storage_bef = (int)(VideoResUpdate.Instance.GetFreeSpace() / 1073741824L);
+			initialResDownloadStateLog.Report();
 		}
 
-		// Token: 0x060005A0 RID: 1440 RVA: 0x00032DC0 File Offset: 0x00030FC0
+		// Token: 0x060005B7 RID: 1463 RVA: 0x00034428 File Offset: 0x00032628
 		public void ReportResDownloadDeviceStorageState(long needSize, long freeSize, bool isRetry)
 		{
 			int resUpdateState = (int)this.ResUpdateState;
@@ -479,8 +502,8 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			new ResDownloadDeviceStorageState(resUpdateState, ifStorageAlert, requiredSpace, remainingSpace, uniqueId, defaultInterpolatedStringHandler.ToStringAndClear(), this.UserChoose, null).Report();
 		}
 
-		// Token: 0x170000C9 RID: 201
-		// (get) Token: 0x060005A1 RID: 1441 RVA: 0x00032E31 File Offset: 0x00031031
+		// Token: 0x170000CB RID: 203
+		// (get) Token: 0x060005B8 RID: 1464 RVA: 0x00034499 File Offset: 0x00032699
 		public static ResourceDiffUpdaterManager Instance
 		{
 			get
@@ -494,12 +517,12 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			}
 		}
 
-		// Token: 0x060005A2 RID: 1442 RVA: 0x00032E54 File Offset: 0x00031054
+		// Token: 0x060005B9 RID: 1465 RVA: 0x000344BC File Offset: 0x000326BC
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060005A3 RID: 1443 RVA: 0x00032E56 File Offset: 0x00031056
+		// Token: 0x060005BA RID: 1466 RVA: 0x000344BE File Offset: 0x000326BE
 		public static void ResetStaticDefaultValue()
 		{
 			ResourceDiffUpdaterManager instance = ResourceDiffUpdaterManager._instance;
@@ -510,57 +533,57 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			ResourceDiffUpdaterManager._instance = null;
 		}
 
-		// Token: 0x060005A4 RID: 1444 RVA: 0x00032E6F File Offset: 0x0003106F
+		// Token: 0x060005BB RID: 1467 RVA: 0x000344D7 File Offset: 0x000326D7
 		static ResourceDiffUpdaterManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ResourceDiffUpdaterManager.CreateStaticDefaultValue), new Action(ResourceDiffUpdaterManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04000376 RID: 886
+		// Token: 0x040003A4 RID: 932
 		private const string OPTIONAL_RESOURCE_DOWNLOAD_GRAY_BOX = "OptionalResourceDownloadGrayBox";
 
-		// Token: 0x04000377 RID: 887
+		// Token: 0x040003A5 RID: 933
 		private const long MB_SIZE = 1048576L;
 
-		// Token: 0x04000378 RID: 888
+		// Token: 0x040003A6 RID: 934
 		public readonly BlockResourceModule BlockModule = new BlockResourceModule();
 
-		// Token: 0x04000379 RID: 889
+		// Token: 0x040003A7 RID: 935
 		public readonly VideoResourceModule VideoModule = new VideoResourceModule();
 
-		// Token: 0x0400037A RID: 890
+		// Token: 0x040003A8 RID: 936
 		public readonly VoiceResourceModule VoiceModule = new VoiceResourceModule();
 
-		// Token: 0x0400037B RID: 891
+		// Token: 0x040003A9 RID: 937
 		private readonly Dictionary<ETier, Dictionary<EResUpdateType, long>> ResourceSizeMap = new Dictionary<ETier, Dictionary<EResUpdateType, long>>();
 
-		// Token: 0x0400037C RID: 892
+		// Token: 0x040003AA RID: 938
 		[Nullable(2)]
 		private SelectionDecision CurrentDecision;
 
-		// Token: 0x0400037D RID: 893
+		// Token: 0x040003AB RID: 939
 		private long BaseReqFileSize;
 
-		// Token: 0x0400037E RID: 894
+		// Token: 0x040003AC RID: 940
 		[Nullable(2)]
 		private DiffUpdate CurrentDiffUpdate;
 
-		// Token: 0x0400037F RID: 895
+		// Token: 0x040003AD RID: 941
 		public EResUpdateType ResUpdateState;
 
-		// Token: 0x04000380 RID: 896
+		// Token: 0x040003AE RID: 942
 		public int TraceId = -1;
 
-		// Token: 0x04000381 RID: 897
+		// Token: 0x040003AF RID: 943
 		public long StartTime = -1L;
 
-		// Token: 0x04000382 RID: 898
+		// Token: 0x040003B0 RID: 944
 		private int UserChoose = 2;
 
-		// Token: 0x04000383 RID: 899
+		// Token: 0x040003B1 RID: 945
 		public readonly ResourceSelectionContext Context = new ResourceSelectionContext();
 
-		// Token: 0x04000384 RID: 900
+		// Token: 0x040003B2 RID: 946
 		[Nullable(2)]
 		private static ResourceDiffUpdaterManager _instance;
 	}

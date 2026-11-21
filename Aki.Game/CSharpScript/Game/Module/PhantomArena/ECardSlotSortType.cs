@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x02005108 RID: 20744
+	// Token: 0x020040D8 RID: 16600
 	public enum ECardSlotSortType
 	{
-		// Token: 0x0401C40E RID: 115726
+		// Token: 0x04016E43 RID: 93763
 		Cost = 1,
-		// Token: 0x0401C40F RID: 115727
+		// Token: 0x04016E44 RID: 93764
 		IceFirst,
-		// Token: 0x0401C410 RID: 115728
+		// Token: 0x04016E45 RID: 93765
 		FireFirst,
-		// Token: 0x0401C411 RID: 115729
+		// Token: 0x04016E46 RID: 93766
 		ThunderFirst,
-		// Token: 0x0401C412 RID: 115730
+		// Token: 0x04016E47 RID: 93767
 		WindFirst,
-		// Token: 0x0401C413 RID: 115731
+		// Token: 0x04016E48 RID: 93768
 		LightFirst,
-		// Token: 0x0401C414 RID: 115732
+		// Token: 0x04016E49 RID: 93769
 		DarkFirst
 	}
 }

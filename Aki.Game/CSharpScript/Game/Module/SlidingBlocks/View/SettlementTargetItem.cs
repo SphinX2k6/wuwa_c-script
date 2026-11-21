@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View
 {
-	// Token: 0x02004B94 RID: 19348
+	// Token: 0x02003B3E RID: 15166
 	public class SettlementTargetItem : UiPanelBase
 	{
-		// Token: 0x06032229 RID: 205353 RVA: 0x00BA5A8E File Offset: 0x00BA3C8E
+		// Token: 0x06026FB9 RID: 159673 RVA: 0x00AE9BDA File Offset: 0x00AE7DDA
 		[NullableContext(1)]
 		public SettlementTargetItem(ITargetDescribeAndScore config)
 		{
 		}
 
-		// Token: 0x0603222A RID: 205354 RVA: 0x00BA5AA0 File Offset: 0x00BA3CA0
+		// Token: 0x06026FBA RID: 159674 RVA: 0x00AE9BEC File Offset: 0x00AE7DEC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603222B RID: 205355 RVA: 0x00BA5B2C File Offset: 0x00BA3D2C
+		// Token: 0x06026FBB RID: 159675 RVA: 0x00AE9C78 File Offset: 0x00AE7E78
 		protected override void OnStart()
 		{
 			UUIText text = base.GetText(1);
@@ -49,18 +49,18 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			item.SetUIActive(score >= (double)this.Config.Score);
 		}
 
-		// Token: 0x0401AB54 RID: 109396
+		// Token: 0x040154A8 RID: 87208
 		[Nullable(1)]
 		public readonly ITargetDescribeAndScore Config = config;
 
-		// Token: 0x0200ADA6 RID: 44454
+		// Token: 0x020097C5 RID: 38853
 		private enum EViewComponent
 		{
-			// Token: 0x04034BD1 RID: 216017
+			// Token: 0x0402F578 RID: 193912
 			AchieveBg,
-			// Token: 0x04034BD2 RID: 216018
+			// Token: 0x0402F579 RID: 193913
 			TargetText,
-			// Token: 0x04034BD3 RID: 216019
+			// Token: 0x0402F57A RID: 193914
 			AchieveItem
 		}
 	}

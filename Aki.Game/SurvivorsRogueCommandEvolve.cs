@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002AE0 RID: 10976
+// Token: 0x0200205C RID: 8284
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueCommandEvolve : SurvivorsRogueCommandBase
 {
-	// Token: 0x06016D74 RID: 93556 RVA: 0x005CC25B File Offset: 0x005CA45B
+	// Token: 0x060147A5 RID: 83877 RVA: 0x005F8DAB File Offset: 0x005F6FAB
 	public SurvivorsRogueCommandEvolve(ESurvivorsRogueCommandType type) : base(type)
 	{
 	}
 
-	// Token: 0x06016D75 RID: 93557 RVA: 0x005CC264 File Offset: 0x005CA464
+	// Token: 0x060147A6 RID: 83878 RVA: 0x005F8DB4 File Offset: 0x005F6FB4
 	public override string ToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(16, 1);
@@ -23,50 +23,50 @@ public class SurvivorsRogueCommandEvolve : SurvivorsRogueCommandBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06016D76 RID: 93558 RVA: 0x005CC2A0 File Offset: 0x005CA4A0
+	// Token: 0x060147A7 RID: 83879 RVA: 0x005F8DF0 File Offset: 0x005F6FF0
 	protected override void OnStartExecute()
 	{
 		base.OpenView(EUiViewName.SurvivorsRogueEvolveView, true);
 	}
 
-	// Token: 0x06016D77 RID: 93559 RVA: 0x005CC2AE File Offset: 0x005CA4AE
+	// Token: 0x060147A8 RID: 83880 RVA: 0x005F8DFE File Offset: 0x005F6FFE
 	private IList<Aki.Protocol.SurvivorsGainData> GetEvolveData()
 	{
 		return this.Data.EvolveView.SurvivorsGainDatas;
 	}
 
-	// Token: 0x06016D78 RID: 93560 RVA: 0x005CC2C0 File Offset: 0x005CA4C0
+	// Token: 0x060147A9 RID: 83881 RVA: 0x005F8E10 File Offset: 0x005F7010
 	protected override void OnUpdate()
 	{
 	}
 
-	// Token: 0x06016D79 RID: 93561 RVA: 0x005CC2C2 File Offset: 0x005CA4C2
+	// Token: 0x060147AA RID: 83882 RVA: 0x005F8E12 File Offset: 0x005F7012
 	protected override void Back2Fore()
 	{
 	}
 
-	// Token: 0x06016D7A RID: 93562 RVA: 0x005CC2C4 File Offset: 0x005CA4C4
+	// Token: 0x060147AB RID: 83883 RVA: 0x005F8E14 File Offset: 0x005F7014
 	protected override void Fore2Back()
 	{
 	}
 
-	// Token: 0x06016D7B RID: 93563 RVA: 0x005CC2C6 File Offset: 0x005CA4C6
+	// Token: 0x060147AC RID: 83884 RVA: 0x005F8E16 File Offset: 0x005F7016
 	protected override void OnExecute()
 	{
 	}
 
-	// Token: 0x06016D7C RID: 93564 RVA: 0x005CC2C8 File Offset: 0x005CA4C8
+	// Token: 0x060147AD RID: 83885 RVA: 0x005F8E18 File Offset: 0x005F7018
 	protected override void OnFinish()
 	{
 		base.RequestCommand(new int[1], null);
 	}
 
-	// Token: 0x06016D7D RID: 93565 RVA: 0x005CC2D7 File Offset: 0x005CA4D7
+	// Token: 0x060147AE RID: 83886 RVA: 0x005F8E27 File Offset: 0x005F7027
 	protected override void OnDelete()
 	{
 	}
 
-	// Token: 0x06016D7E RID: 93566 RVA: 0x005CC2DC File Offset: 0x005CA4DC
+	// Token: 0x060147AF RID: 83887 RVA: 0x005F8E2C File Offset: 0x005F702C
 	public List<SurvivorsEvolveViewInfo> GetViewInfoList()
 	{
 		List<SurvivorsEvolveViewInfo> list = new List<SurvivorsEvolveViewInfo>();

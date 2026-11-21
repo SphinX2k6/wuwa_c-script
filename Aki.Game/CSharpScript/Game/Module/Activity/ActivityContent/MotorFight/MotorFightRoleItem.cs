@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006418 RID: 25624
+	// Token: 0x02005396 RID: 21398
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 	})]
 	public class MotorFightRoleItem : GridProxyAbstract<MotorFightRoleData>
 	{
-		// Token: 0x06040713 RID: 263955 RVA: 0x00F976E0 File Offset: 0x00F958E0
+		// Token: 0x060353D4 RID: 218068 RVA: 0x00EDE680 File Offset: 0x00EDC880
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040714 RID: 263956 RVA: 0x00F978B4 File Offset: 0x00F95AB4
+		// Token: 0x060353D5 RID: 218069 RVA: 0x00EDE854 File Offset: 0x00EDCA54
 		public override void Refresh(MotorFightRoleData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -122,14 +122,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			item5.SetUIActive(data.HasRedDot);
 		}
 
-		// Token: 0x06040715 RID: 263957 RVA: 0x00F97A54 File Offset: 0x00F95C54
+		// Token: 0x060353D6 RID: 218070 RVA: 0x00EDE9F4 File Offset: 0x00EDCBF4
 		public void SetToggleState(bool state)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
 		}
 
-		// Token: 0x06040716 RID: 263958 RVA: 0x00F97A7C File Offset: 0x00F95C7C
+		// Token: 0x060353D7 RID: 218071 RVA: 0x00EDEA1C File Offset: 0x00EDCC1C
 		public override void OnSelected(bool fireEvent)
 		{
 			this.Data.ReadRedDot();
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.SetToggleState(true);
 		}
 
-		// Token: 0x06040717 RID: 263959 RVA: 0x00F97AE4 File Offset: 0x00F95CE4
+		// Token: 0x060353D8 RID: 218072 RVA: 0x00EDEA84 File Offset: 0x00EDCC84
 		public override void OnDeselected(bool fireEvent)
 		{
 			string hexStr = this.Data.IsUnLock ? "ffffffff" : "2e403c7f";
@@ -159,19 +159,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.SetToggleState(false);
 		}
 
-		// Token: 0x06040718 RID: 263960 RVA: 0x00F97B2A File Offset: 0x00F95D2A
+		// Token: 0x060353D9 RID: 218073 RVA: 0x00EDEACA File Offset: 0x00EDCCCA
 		private void OnToggleClick(EToggleState _)
 		{
 			this.OnToggleClickCallback(this.Data);
 		}
 
-		// Token: 0x06040719 RID: 263961 RVA: 0x00F97B3D File Offset: 0x00F95D3D
+		// Token: 0x060353DA RID: 218074 RVA: 0x00EDEADD File Offset: 0x00EDCCDD
 		public override object GetKey(MotorFightRoleData data, int displayIndex)
 		{
 			return data.Id;
 		}
 
-		// Token: 0x04021814 RID: 137236
+		// Token: 0x0401C143 RID: 115011
 		public readonly List<string> numberList = new List<string>
 		{
 			"/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity31/MotorcycleBattle/SelectRole/SP_SelectRoleNum01.SP_SelectRoleNum01",
@@ -180,55 +180,55 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			"/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity31/MotorcycleBattle/SelectRole/SP_SelectRoleNum04.SP_SelectRoleNum04"
 		};
 
-		// Token: 0x04021815 RID: 137237
+		// Token: 0x0401C144 RID: 115012
 		private MotorFightRoleData Data;
 
-		// Token: 0x04021816 RID: 137238
+		// Token: 0x0401C145 RID: 115013
 		public List<int> RecommendRoleIds = new List<int>();
 
-		// Token: 0x04021817 RID: 137239
+		// Token: 0x0401C146 RID: 115014
 		public Action<MotorFightRoleData> OnToggleClickCallback = delegate(MotorFightRoleData data)
 		{
 		};
 
-		// Token: 0x04021818 RID: 137240
+		// Token: 0x0401C147 RID: 115015
 		public Func<int, bool> IsSelected = (int roleId) => false;
 
-		// Token: 0x0200C63C RID: 50748
+		// Token: 0x0200B023 RID: 45091
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BD9A RID: 245146
+			// Token: 0x040366F7 RID: 222967
 			public const int ToggleRoot = 0;
 
-			// Token: 0x0403BD9B RID: 245147
+			// Token: 0x040366F8 RID: 222968
 			public const int ItemBgLockPanel = 1;
 
-			// Token: 0x0403BD9C RID: 245148
+			// Token: 0x040366F9 RID: 222969
 			public const int ItemLockPanel = 2;
 
-			// Token: 0x0403BD9D RID: 245149
+			// Token: 0x040366FA RID: 222970
 			public const int ItemBgUnlockPanel = 3;
 
-			// Token: 0x0403BD9E RID: 245150
+			// Token: 0x040366FB RID: 222971
 			public const int ItemUnlockPanel = 4;
 
-			// Token: 0x0403BD9F RID: 245151
+			// Token: 0x040366FC RID: 222972
 			public const int TextureRole = 5;
 
-			// Token: 0x0403BDA0 RID: 245152
+			// Token: 0x040366FD RID: 222973
 			public const int SpriteSelected = 6;
 
-			// Token: 0x0403BDA1 RID: 245153
+			// Token: 0x040366FE RID: 222974
 			public const int TextureLock = 7;
 
-			// Token: 0x0403BDA2 RID: 245154
+			// Token: 0x040366FF RID: 222975
 			public const int SpriteRecommend = 8;
 
-			// Token: 0x0403BDA3 RID: 245155
+			// Token: 0x04036700 RID: 222976
 			public const int SpriteNumber = 9;
 
-			// Token: 0x0403BDA4 RID: 245156
+			// Token: 0x04036701 RID: 222977
 			public const int ItemRedDot = 10;
 		}
 	}

@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FE7 RID: 16359
+	// Token: 0x02004428 RID: 17448
 	public class IQuestFailedConditionPlayerMovementModeT
 	{
-		// Token: 0x170072CC RID: 29388
-		// (get) Token: 0x060178C3 RID: 96451 RVA: 0x003655C4 File Offset: 0x003637C4
-		// (set) Token: 0x060178C4 RID: 96452 RVA: 0x003655CC File Offset: 0x003637CC
+		// Token: 0x170078CE RID: 30926
+		// (get) Token: 0x06018F5C RID: 102236 RVA: 0x0038F3B8 File Offset: 0x0038D5B8
+		// (set) Token: 0x06018F5D RID: 102237 RVA: 0x0038F3C0 File Offset: 0x0038D5C0
 		public EPlayerMovementMode Mode { get; set; }
 
-		// Token: 0x170072CD RID: 29389
-		// (get) Token: 0x060178C5 RID: 96453 RVA: 0x003655D5 File Offset: 0x003637D5
-		// (set) Token: 0x060178C6 RID: 96454 RVA: 0x003655DD File Offset: 0x003637DD
+		// Token: 0x170078CF RID: 30927
+		// (get) Token: 0x06018F5E RID: 102238 RVA: 0x0038F3C9 File Offset: 0x0038D5C9
+		// (set) Token: 0x06018F5F RID: 102239 RVA: 0x0038F3D1 File Offset: 0x0038D5D1
 		public ECompare Compare { get; set; }
 
-		// Token: 0x060178C7 RID: 96455 RVA: 0x003655E6 File Offset: 0x003637E6
+		// Token: 0x06018F60 RID: 102240 RVA: 0x0038F3DA File Offset: 0x0038D5DA
 		public IQuestFailedConditionPlayerMovementModeT()
 		{
 			this.Mode = EPlayerMovementMode.Ski;

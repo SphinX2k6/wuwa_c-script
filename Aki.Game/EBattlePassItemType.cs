@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200232A RID: 9002
+// Token: 0x0200180F RID: 6159
 public enum EBattlePassItemType
 {
-	// Token: 0x04008713 RID: 34579
+	// Token: 0x04008856 RID: 34902
 	Locked,
-	// Token: 0x04008714 RID: 34580
+	// Token: 0x04008857 RID: 34903
 	CanGet,
-	// Token: 0x04008715 RID: 34581
+	// Token: 0x04008858 RID: 34904
 	HasGet
 }

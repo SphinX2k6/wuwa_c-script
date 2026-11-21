@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D2C RID: 7468
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F3D RID: 7997
 	public class IPlotModeUiStyleBase
 	{
-		// Token: 0x0600A043 RID: 41027 RVA: 0x0016DB58 File Offset: 0x0016BD58
+		// Token: 0x0600AA2F RID: 43567 RVA: 0x00181F7C File Offset: 0x0018017C
 		private IPlotModeUiStyleBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A044 RID: 41028 RVA: 0x0016DB90 File Offset: 0x0016BD90
+		// Token: 0x0600AA30 RID: 43568 RVA: 0x00181FB4 File Offset: 0x001801B4
 		public static IPlotModeUiStyleBase Create([Nullable(2)] IPlotModeUiStyleBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A045 RID: 41029 RVA: 0x0016DBA3 File Offset: 0x0016BDA3
+		// Token: 0x0600AA31 RID: 43569 RVA: 0x00181FC7 File Offset: 0x001801C7
 		public static IPlotModeUiStyleBase CreateFromSetValue([Nullable(2)] IPlotModeUiStyleBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A046 RID: 41030 RVA: 0x0016DBB6 File Offset: 0x0016BDB6
+		// Token: 0x0600AA32 RID: 43570 RVA: 0x00181FDA File Offset: 0x001801DA
 		public IPlotModeUiStyleBase_SetValue ToSetValue()
 		{
 			return new IPlotModeUiStyleBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031B6 RID: 12726
-		// (get) Token: 0x0600A047 RID: 41031 RVA: 0x0016DBC9 File Offset: 0x0016BDC9
-		// (set) Token: 0x0600A048 RID: 41032 RVA: 0x0016DBF4 File Offset: 0x0016BDF4
+		// Token: 0x1700344A RID: 13386
+		// (get) Token: 0x0600AA33 RID: 43571 RVA: 0x00181FED File Offset: 0x001801ED
+		// (set) Token: 0x0600AA34 RID: 43572 RVA: 0x00182018 File Offset: 0x00180218
 		public virtual EPlotModeUiStyleType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400609D RID: 24733
+		// Token: 0x04006619 RID: 26137
 		[Nullable(2)]
 		protected IPlotModeUiStyleBase FbInstance;
 
-		// Token: 0x0400609E RID: 24734
+		// Token: 0x0400661A RID: 26138
 		[Nullable(2)]
 		protected IPlotModeUiStyleBase_SetValue PocoInterface;
 	}

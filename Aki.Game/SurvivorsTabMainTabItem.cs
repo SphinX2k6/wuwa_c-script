@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B04 RID: 11012
+// Token: 0x02002080 RID: 8320
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsTabMainTabItem : CommonTabItemBase
 {
-	// Token: 0x06016E56 RID: 93782 RVA: 0x005CF2BC File Offset: 0x005CD4BC
+	// Token: 0x06014887 RID: 84103 RVA: 0x005FBE3C File Offset: 0x005FA03C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,14 +27,14 @@ public class SurvivorsTabMainTabItem : CommonTabItemBase
 		};
 	}
 
-	// Token: 0x06016E57 RID: 93783 RVA: 0x005CF391 File Offset: 0x005CD591
+	// Token: 0x06014888 RID: 84104 RVA: 0x005FBF11 File Offset: 0x005FA111
 	protected override void OnStart()
 	{
 		base.OnStart();
 		base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06016E58 RID: 93784 RVA: 0x005CF3AC File Offset: 0x005CD5AC
+	// Token: 0x06014889 RID: 84105 RVA: 0x005FBF2C File Offset: 0x005FA12C
 	public void RefreshTabState(ETabState state)
 	{
 		this.CachedState = state;
@@ -56,20 +56,20 @@ public class SurvivorsTabMainTabItem : CommonTabItemBase
 		item3.SetUIActive(state == ETabState.None);
 	}
 
-	// Token: 0x06016E59 RID: 93785 RVA: 0x005CF401 File Offset: 0x005CD601
+	// Token: 0x0601488A RID: 84106 RVA: 0x005FBF81 File Offset: 0x005FA181
 	public void RefreshLevel(int level)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "SurvivorsCombat_Lv", new <>z__ReadOnlySingleElementList<object>(level));
 	}
 
-	// Token: 0x06016E5A RID: 93786 RVA: 0x005CF424 File Offset: 0x005CD624
+	// Token: 0x0601488B RID: 84107 RVA: 0x005FBFA4 File Offset: 0x005FA1A4
 	public void RefreshUnlockWave(int unlockWave)
 	{
 		this.CachedUnlockWave = unlockWave;
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), "SurvivorsWeaponAttribute_WaveUnlockButton", new <>z__ReadOnlySingleElementList<object>(unlockWave));
 	}
 
-	// Token: 0x06016E5B RID: 93787 RVA: 0x005CF44E File Offset: 0x005CD64E
+	// Token: 0x0601488C RID: 84108 RVA: 0x005FBFCE File Offset: 0x005FA1CE
 	public void SetTextById(string textId)
 	{
 		UUIText text = base.GetText(3);
@@ -80,14 +80,14 @@ public class SurvivorsTabMainTabItem : CommonTabItemBase
 		text.ShowTextNew(textId);
 	}
 
-	// Token: 0x06016E5C RID: 93788 RVA: 0x005CF464 File Offset: 0x005CD664
+	// Token: 0x0601488D RID: 84109 RVA: 0x005FBFE4 File Offset: 0x005FA1E4
 	public void RefreshInfo(string iconPath, int level)
 	{
 		this.RefreshLevel(level);
 		base.SetTextureByPath(iconPath, base.GetTexture(2), null, null);
 	}
 
-	// Token: 0x06016E5D RID: 93789 RVA: 0x005CF490 File Offset: 0x005CD690
+	// Token: 0x0601488E RID: 84110 RVA: 0x005FC010 File Offset: 0x005FA210
 	private void ToggleClick(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -122,26 +122,26 @@ public class SurvivorsTabMainTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x06016E5E RID: 93790 RVA: 0x005CF51D File Offset: 0x005CD71D
+	// Token: 0x0601488F RID: 84111 RVA: 0x005FC09D File Offset: 0x005FA29D
 	protected override void OnUpdateTabIcon(string iconPath)
 	{
 	}
 
-	// Token: 0x06016E5F RID: 93791 RVA: 0x005CF51F File Offset: 0x005CD71F
+	// Token: 0x06014890 RID: 84112 RVA: 0x005FC09F File Offset: 0x005FA29F
 	protected override void OnSetToggleState(EToggleState state, bool bFire)
 	{
 		base.GetExtendToggle(1).SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x06016E60 RID: 93792 RVA: 0x005CF532 File Offset: 0x005CD732
+	// Token: 0x06014891 RID: 84113 RVA: 0x005FC0B2 File Offset: 0x005FA2B2
 	protected override UUIExtendToggle GetTabToggle()
 	{
 		return base.GetExtendToggle(1);
 	}
 
-	// Token: 0x0400AA0F RID: 43535
+	// Token: 0x0400AE15 RID: 44565
 	private ETabState CachedState;
 
-	// Token: 0x0400AA10 RID: 43536
+	// Token: 0x0400AE16 RID: 44566
 	private int CachedUnlockWave = -1;
 }

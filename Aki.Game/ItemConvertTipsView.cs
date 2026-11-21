@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002025 RID: 8229
+// Token: 0x020014F8 RID: 5368
 [NullableContext(2)]
 [Nullable(0)]
 public class ItemConvertTipsView : UiViewBase
 {
-	// Token: 0x06010203 RID: 66051 RVA: 0x003ED0FA File Offset: 0x003EB2FA
+	// Token: 0x0600D66B RID: 54891 RVA: 0x003F96F2 File Offset: 0x003F78F2
 	[NullableContext(1)]
 	public ItemConvertTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010204 RID: 66052 RVA: 0x003ED104 File Offset: 0x003EB304
+	// Token: 0x0600D66C RID: 54892 RVA: 0x003F96FC File Offset: 0x003F78FC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -39,21 +39,21 @@ public class ItemConvertTipsView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06010205 RID: 66053 RVA: 0x003ED1D0 File Offset: 0x003EB3D0
+	// Token: 0x0600D66D RID: 54893 RVA: 0x003F97C8 File Offset: 0x003F79C8
 	private void OnCancelButtonClick(int _)
 	{
 		this.Param.OnCancelCallBack();
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06010206 RID: 66054 RVA: 0x003ED1E9 File Offset: 0x003EB3E9
+	// Token: 0x0600D66E RID: 54894 RVA: 0x003F97E1 File Offset: 0x003F79E1
 	private void OnConfirmButtonClick(int _)
 	{
 		this.Param.OnConfirmCallBack();
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06010207 RID: 66055 RVA: 0x003ED204 File Offset: 0x003EB404
+	// Token: 0x0600D66F RID: 54895 RVA: 0x003F97FC File Offset: 0x003F79FC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ItemConvertTipsView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -64,13 +64,13 @@ public class ItemConvertTipsView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010208 RID: 66056 RVA: 0x003ED247 File Offset: 0x003EB447
+	// Token: 0x0600D670 RID: 54896 RVA: 0x003F983F File Offset: 0x003F7A3F
 	protected override void OnBeforeShow()
 	{
 		this.Refresh(this.Param);
 	}
 
-	// Token: 0x06010209 RID: 66057 RVA: 0x003ED258 File Offset: 0x003EB458
+	// Token: 0x0600D671 RID: 54897 RVA: 0x003F9850 File Offset: 0x003F7A50
 	[NullableContext(1)]
 	public void Refresh(ItemConvertTipsParam param)
 	{
@@ -79,18 +79,18 @@ public class ItemConvertTipsView : UiViewBase
 		base.GetText(0).SetText(param.ShowText, true);
 	}
 
-	// Token: 0x04007758 RID: 30552
+	// Token: 0x04007841 RID: 30785
 	private ItemConvertTipsParam Param;
 
-	// Token: 0x04007759 RID: 30553
+	// Token: 0x04007842 RID: 30786
 	private CommonItemSmallItemGrid BeforeItem;
 
-	// Token: 0x0400775A RID: 30554
+	// Token: 0x04007843 RID: 30787
 	private CommonItemSmallItemGrid AfterItem;
 
-	// Token: 0x0400775B RID: 30555
+	// Token: 0x04007844 RID: 30788
 	private ButtonItem CancelButton;
 
-	// Token: 0x0400775C RID: 30556
+	// Token: 0x04007845 RID: 30789
 	private ButtonItem ConfirmButton;
 }

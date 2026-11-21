@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024BE RID: 9406
+// Token: 0x020019A5 RID: 6565
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionMainFetterSuitItem : GridProxyAbstract<PhantomFetterGroup>
 {
-	// Token: 0x06012DD7 RID: 77271 RVA: 0x004A890D File Offset: 0x004A6B0D
+	// Token: 0x06010297 RID: 66199 RVA: 0x004B64C1 File Offset: 0x004B46C1
 	public VisionMainFetterSuitItem(UUIItem uiItem = null)
 	{
 		this.SourceItem = uiItem;
 	}
 
-	// Token: 0x06012DD8 RID: 77272 RVA: 0x004A891C File Offset: 0x004A6B1C
+	// Token: 0x06010298 RID: 66200 RVA: 0x004B64D0 File Offset: 0x004B46D0
 	public UniTask Init()
 	{
 		VisionMainFetterSuitItem.<Init>d__2 <Init>d__;
@@ -29,7 +29,7 @@ public class VisionMainFetterSuitItem : GridProxyAbstract<PhantomFetterGroup>
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012DD9 RID: 77273 RVA: 0x004A895F File Offset: 0x004A6B5F
+	// Token: 0x06010299 RID: 66201 RVA: 0x004B6513 File Offset: 0x004B4713
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class VisionMainFetterSuitItem : GridProxyAbstract<PhantomFetterGroup>
 		};
 	}
 
-	// Token: 0x06012DDA RID: 77274 RVA: 0x004A8998 File Offset: 0x004A6B98
+	// Token: 0x0601029A RID: 66202 RVA: 0x004B654C File Offset: 0x004B474C
 	public void Update(PhantomFetterGroup? fetterGroupData)
 	{
 		string hexStr;
@@ -73,12 +73,12 @@ public class VisionMainFetterSuitItem : GridProxyAbstract<PhantomFetterGroup>
 		texture.SetAnchorOffset(new FVector2D(0f, 0f));
 	}
 
-	// Token: 0x06012DDB RID: 77275 RVA: 0x004A8A55 File Offset: 0x004A6C55
+	// Token: 0x0601029B RID: 66203 RVA: 0x004B6609 File Offset: 0x004B4809
 	public override void Refresh(PhantomFetterGroup data, bool isSelected, int gridIndex)
 	{
 		this.Update(new PhantomFetterGroup?(data));
 	}
 
-	// Token: 0x04008E2C RID: 36396
+	// Token: 0x04008F76 RID: 36726
 	private readonly UUIItem SourceItem;
 }

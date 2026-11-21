@@ -9,21 +9,21 @@ using CSharpScript.Game.NewWorld.Character.Common.Component.Move;
 using CSharpScript.Game.TickScore;
 using UnrealEngine;
 
-// Token: 0x02003092 RID: 12434
+// Token: 0x020025E9 RID: 9705
 [NullableContext(2)]
 [Nullable(0)]
-public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComponentDependency, IStaticVariableResetter
+public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IStaticVariableResetter
 {
-	// Token: 0x0601A8F4 RID: 108788 RVA: 0x0071E420 File Offset: 0x0071C620
+	// Token: 0x060182E1 RID: 99041 RVA: 0x007446F0 File Offset: 0x007428F0
 	static CharacterSwimComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterSwimComponent.CreateStaticDefaultValue), new Action(CharacterSwimComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700248B RID: 9355
-	// (get) Token: 0x0601A8F5 RID: 108789 RVA: 0x0071E484 File Offset: 0x0071C684
+	// Token: 0x170025EC RID: 9708
+	// (get) Token: 0x060182E2 RID: 99042 RVA: 0x00744754 File Offset: 0x00742954
 	[Nullable(1)]
-	public static Type[] Dependencies
+	public override Type[] Dependencies
 	{
 		[NullableContext(1)]
 		get
@@ -37,19 +37,19 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		}
 	}
 
-	// Token: 0x0601A8F6 RID: 108790 RVA: 0x0071E4B3 File Offset: 0x0071C6B3
+	// Token: 0x060182E3 RID: 99043 RVA: 0x00744783 File Offset: 0x00742983
 	private void TeleportComplete(TeleportContext teleportContext)
 	{
 		this.SetForceCheck();
 	}
 
-	// Token: 0x0601A8F7 RID: 108791 RVA: 0x0071E4BB File Offset: 0x0071C6BB
+	// Token: 0x060182E4 RID: 99044 RVA: 0x0074478B File Offset: 0x0074298B
 	private void SetForceCheck()
 	{
 		this.ForceCheck = true;
 	}
 
-	// Token: 0x0601A8F8 RID: 108792 RVA: 0x0071E4C4 File Offset: 0x0071C6C4
+	// Token: 0x060182E5 RID: 99045 RVA: 0x00744794 File Offset: 0x00742994
 	private void ReceiveMoveStateChange(global::ECharMoveState oldMoveState, global::ECharMoveState newMoveState)
 	{
 		this.TagComp.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.空中入水"]));
@@ -79,7 +79,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		this.LeaveSwim();
 	}
 
-	// Token: 0x0601A8F9 RID: 108793 RVA: 0x0071E5AA File Offset: 0x0071C7AA
+	// Token: 0x060182E6 RID: 99046 RVA: 0x0074487A File Offset: 0x00742A7A
 	private void ReceivePositionStateChanged(global::ECharPositionState oldPositionState, global::ECharPositionState newPositionState)
 	{
 		if (oldPositionState == global::ECharPositionState.Water)
@@ -93,13 +93,13 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		}
 	}
 
-	// Token: 0x0601A8FA RID: 108794 RVA: 0x0071E5C1 File Offset: 0x0071C7C1
+	// Token: 0x060182E7 RID: 99047 RVA: 0x00744891 File Offset: 0x00742A91
 	private void SwimStrengthTagChanged(int count, int tagId, int exactTagId, int oldCount)
 	{
 		this.RefreshSwimBuff();
 	}
 
-	// Token: 0x0601A8FB RID: 108795 RVA: 0x0071E5CC File Offset: 0x0071C7CC
+	// Token: 0x060182E8 RID: 99048 RVA: 0x0074489C File Offset: 0x00742A9C
 	private void ReceiveSwimEvent(float deltaTime)
 	{
 		double num = (double)((-(double)MathUtils.Instance.Clamp(this.MoveComp.Speed / 75f, 0f, 1f) + 1f) * 10000f + 1f) * 0.01;
@@ -110,9 +110,9 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		this.MoveComp.CharacterMovement.KuroSwimming(deltaTime, true, this.Depth, (float)num2, (float)num, this.MaxSpeed, this.WaterSlope, accelerator, 0.06f);
 	}
 
-	// Token: 0x1700248C RID: 9356
-	// (get) Token: 0x0601A8FC RID: 108796 RVA: 0x0071E69F File Offset: 0x0071C89F
-	// (set) Token: 0x0601A8FD RID: 108797 RVA: 0x0071E6A7 File Offset: 0x0071C8A7
+	// Token: 0x170025ED RID: 9709
+	// (get) Token: 0x060182E9 RID: 99049 RVA: 0x0074496F File Offset: 0x00742B6F
+	// (set) Token: 0x060182EA RID: 99050 RVA: 0x00744977 File Offset: 0x00742B77
 	protected long BuffIndex
 	{
 		get
@@ -130,9 +130,9 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		}
 	}
 
-	// Token: 0x1700248D RID: 9357
-	// (get) Token: 0x0601A8FE RID: 108798 RVA: 0x0071E6D6 File Offset: 0x0071C8D6
-	// (set) Token: 0x0601A8FF RID: 108799 RVA: 0x0071E6E0 File Offset: 0x0071C8E0
+	// Token: 0x170025EE RID: 9710
+	// (get) Token: 0x060182EB RID: 99051 RVA: 0x007449A6 File Offset: 0x00742BA6
+	// (set) Token: 0x060182EC RID: 99052 RVA: 0x007449B0 File Offset: 0x00742BB0
 	protected int WaterType
 	{
 		get
@@ -150,14 +150,14 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		}
 	}
 
-	// Token: 0x0601A900 RID: 108800 RVA: 0x0071E717 File Offset: 0x0071C917
+	// Token: 0x060182ED RID: 99053 RVA: 0x007449E7 File Offset: 0x00742BE7
 	[NullableContext(1)]
 	private void StateInheritHandle(Entity oldEntity, bool notInheritMoveAndAnim)
 	{
 		this.LastTickLocation.DeepCopy(this.ActorComp.ActorLocationProxy);
 	}
 
-	// Token: 0x0601A901 RID: 108801 RVA: 0x0071E730 File Offset: 0x0071C930
+	// Token: 0x060182EE RID: 99054 RVA: 0x00744A00 File Offset: 0x00742C00
 	private void EnterSwimmingState()
 	{
 		if (!this.ActorComp.IsBoss)
@@ -202,7 +202,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		});
 	}
 
-	// Token: 0x0601A902 RID: 108802 RVA: 0x0071E894 File Offset: 0x0071CA94
+	// Token: 0x060182EF RID: 99055 RVA: 0x00744B64 File Offset: 0x00742D64
 	protected override bool OnStart()
 	{
 		this.Depth = 0f;
@@ -249,7 +249,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return true;
 	}
 
-	// Token: 0x0601A903 RID: 108803 RVA: 0x0071EA6C File Offset: 0x0071CC6C
+	// Token: 0x060182F0 RID: 99056 RVA: 0x00744D3C File Offset: 0x00742F3C
 	private void InitTraceElements()
 	{
 		this.WaterTrace = new UTraceSphereElement();
@@ -264,7 +264,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		TraceElementCommon.Instance.SetTraceHitColor(this.WaterTrace, CharacterSwimUtils.DebugColor4);
 	}
 
-	// Token: 0x0601A904 RID: 108804 RVA: 0x0071EB24 File Offset: 0x0071CD24
+	// Token: 0x060182F1 RID: 99057 RVA: 0x00744DF4 File Offset: 0x00742FF4
 	private void RefreshSwimAreaHeight()
 	{
 		if (this.MoveComp != null && !this.MoveComp.IsStandardGravity)
@@ -321,13 +321,13 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		this.SwimAreaHeightAboveActor = 0f;
 	}
 
-	// Token: 0x0601A905 RID: 108805 RVA: 0x0071ED7C File Offset: 0x0071CF7C
+	// Token: 0x060182F2 RID: 99058 RVA: 0x0074504C File Offset: 0x0074324C
 	private bool InSwimArea()
 	{
 		return this.InSwimAreaInternal;
 	}
 
-	// Token: 0x0601A906 RID: 108806 RVA: 0x0071ED84 File Offset: 0x0071CF84
+	// Token: 0x060182F3 RID: 99059 RVA: 0x00745054 File Offset: 0x00743254
 	private void RemoveTraceElements()
 	{
 		if (this.WaterTrace != null)
@@ -337,7 +337,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		}
 	}
 
-	// Token: 0x0601A907 RID: 108807 RVA: 0x0071EDA0 File Offset: 0x0071CFA0
+	// Token: 0x060182F4 RID: 99060 RVA: 0x00745070 File Offset: 0x00743270
 	protected unsafe override void OnTick(float deltaTime)
 	{
 		this.ResetWaterLocation();
@@ -458,7 +458,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		this.ForceCheck = false;
 	}
 
-	// Token: 0x0601A908 RID: 108808 RVA: 0x0071F213 File Offset: 0x0071D413
+	// Token: 0x060182F5 RID: 99061 RVA: 0x007454E3 File Offset: 0x007436E3
 	public void ScoreUpdate()
 	{
 		if (!base.Active || this.ActorComp == null)
@@ -469,7 +469,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		this.SimpleCheckInWater();
 	}
 
-	// Token: 0x0601A909 RID: 108809 RVA: 0x0071F244 File Offset: 0x0071D444
+	// Token: 0x060182F6 RID: 99062 RVA: 0x00745514 File Offset: 0x00743714
 	protected override bool OnEnd()
 	{
 		this.ClearTempVector();
@@ -487,7 +487,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return true;
 	}
 
-	// Token: 0x0601A90A RID: 108810 RVA: 0x0071F344 File Offset: 0x0071D544
+	// Token: 0x060182F7 RID: 99063 RVA: 0x00745614 File Offset: 0x00743814
 	private void CreateTempVector()
 	{
 		this.TempStartPoint = global::Vector.Create(0.0, 0.0, 0.0);
@@ -504,7 +504,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		this.TempSwimNormalPoint = global::Vector.Create(0.0, 0.0, 0.0);
 	}
 
-	// Token: 0x0601A90B RID: 108811 RVA: 0x0071F51C File Offset: 0x0071D71C
+	// Token: 0x060182F8 RID: 99064 RVA: 0x007457EC File Offset: 0x007439EC
 	private void ClearTempVector()
 	{
 		this.TempVector = null;
@@ -521,7 +521,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		this.TempSwimNormalPoint = null;
 	}
 
-	// Token: 0x0601A90C RID: 108812 RVA: 0x0071F580 File Offset: 0x0071D780
+	// Token: 0x060182F9 RID: 99065 RVA: 0x00745850 File Offset: 0x00743A50
 	private bool LoadActorInfo()
 	{
 		this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -547,7 +547,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return true;
 	}
 
-	// Token: 0x0601A90D RID: 108813 RVA: 0x0071F66C File Offset: 0x0071D86C
+	// Token: 0x060182FA RID: 99066 RVA: 0x0074593C File Offset: 0x00743B3C
 	private bool LoadConfig()
 	{
 		if (!this.IsRole)
@@ -564,7 +564,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return false;
 	}
 
-	// Token: 0x0601A90E RID: 108814 RVA: 0x0071F6E8 File Offset: 0x0071D8E8
+	// Token: 0x060182FB RID: 99067 RVA: 0x007459B8 File Offset: 0x00743BB8
 	private bool LoadCurve()
 	{
 		if (!this.IsRole)
@@ -581,7 +581,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return false;
 	}
 
-	// Token: 0x0601A90F RID: 108815 RVA: 0x0071F758 File Offset: 0x0071D958
+	// Token: 0x060182FC RID: 99068 RVA: 0x00745A28 File Offset: 0x00743C28
 	private ECheckFloorResult CheckHasArrivedFloorInSwimming()
 	{
 		if (!this.MoveComp.HasSwimmingBlock)
@@ -619,7 +619,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return ECheckFloorResult.Floor;
 	}
 
-	// Token: 0x0601A910 RID: 108816 RVA: 0x0071F7DC File Offset: 0x0071D9DC
+	// Token: 0x060182FD RID: 99069 RVA: 0x00745AAC File Offset: 0x00743CAC
 	private void CheckTagInWater(bool forceCheck = false)
 	{
 		if (!this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.水中"]) && !forceCheck)
@@ -640,7 +640,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		this.FixNormal(this.TempSwimNormalPoint);
 	}
 
-	// Token: 0x0601A911 RID: 108817 RVA: 0x0071F8EC File Offset: 0x0071DAEC
+	// Token: 0x060182FE RID: 99070 RVA: 0x00745BBC File Offset: 0x00743DBC
 	[NullableContext(1)]
 	private bool UpdateWaterTraceResult(UKuroHitResult hitResult)
 	{
@@ -692,7 +692,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return flag;
 	}
 
-	// Token: 0x0601A912 RID: 108818 RVA: 0x0071FAA0 File Offset: 0x0071DCA0
+	// Token: 0x060182FF RID: 99071 RVA: 0x00745D70 File Offset: 0x00743F70
 	private EEnterWaterState GetCurrentExpectedEnterState()
 	{
 		if (this.MoveComp.FallingIntoWater)
@@ -714,7 +714,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return EEnterWaterState.None;
 	}
 
-	// Token: 0x0601A913 RID: 108819 RVA: 0x0071FB18 File Offset: 0x0071DD18
+	// Token: 0x06018300 RID: 99072 RVA: 0x00745DE8 File Offset: 0x00743FE8
 	[NullableContext(1)]
 	private bool SimpleVisibleTrace(global::Vector start, global::Vector end, float scale = -1f)
 	{
@@ -735,7 +735,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return TraceElementCommon.Instance.ShapeTrace(this.ActorComp.Actor.CapsuleComponent, actorTrace, "CharacterSwimComponent_CheckHasArrivedFloorInSwimming", "CharacterSwimComponent_CheckHasArrivedFloorInSwimming");
 	}
 
-	// Token: 0x0601A914 RID: 108820 RVA: 0x0071FBF8 File Offset: 0x0071DDF8
+	// Token: 0x06018301 RID: 99073 RVA: 0x00745EC8 File Offset: 0x007440C8
 	[NullableContext(1)]
 	private bool SimpleWaterTrace(global::Vector start, global::Vector end)
 	{
@@ -753,7 +753,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return flag && this.WaterTrace.HitResult.bBlockingHit;
 	}
 
-	// Token: 0x0601A915 RID: 108821 RVA: 0x0071FC80 File Offset: 0x0071DE80
+	// Token: 0x06018302 RID: 99074 RVA: 0x00745F50 File Offset: 0x00744150
 	private void CheckHitWaterType()
 	{
 		TArray<TWeakObjectPtr<UPhysicalMaterial>> physMaterials = this.WaterTrace.HitResult.PhysMaterials;
@@ -761,11 +761,19 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		int i = 0;
 		while (i < hitCount)
 		{
-			TWeakObjectPtr<UPrimitiveComponent> weak = this.WaterTrace.HitResult.Components.Get(i);
-			UPhysicalMaterial uphysicalMaterial = UKuroCollisionLibrary.GetBodyInstance(this.WaterTrace.HitResult, i).PhysMaterialOverride;
+			UPrimitiveComponent uprimitiveComponent = this.WaterTrace.HitResult.Components.Get(i).Get();
+			UPhysicalMaterial uphysicalMaterial;
+			if (uprimitiveComponent is ULandscapeHeightfieldCollisionComponent)
+			{
+				uphysicalMaterial = physMaterials.Get(i);
+			}
+			else
+			{
+				uphysicalMaterial = UKuroCollisionLibrary.GetBodyInstance(this.WaterTrace.HitResult, i).PhysMaterialOverride;
+			}
 			if (uphysicalMaterial == null)
 			{
-				uphysicalMaterial = UKuroRenderingRuntimeBPPluginBPLibrary.GetComponentPhysicalMaterial(weak);
+				uphysicalMaterial = UKuroRenderingRuntimeBPPluginBPLibrary.GetComponentPhysicalMaterial(uprimitiveComponent);
 			}
 			if (uphysicalMaterial != null)
 			{
@@ -790,7 +798,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		}
 	}
 
-	// Token: 0x0601A916 RID: 108822 RVA: 0x0071FD48 File Offset: 0x0071DF48
+	// Token: 0x06018303 RID: 99075 RVA: 0x00746034 File Offset: 0x00744234
 	private bool SimpleCheckInWater()
 	{
 		global::Vector tempStartPoint = this.TempStartPoint;
@@ -836,7 +844,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return false;
 	}
 
-	// Token: 0x0601A917 RID: 108823 RVA: 0x0071FED0 File Offset: 0x0071E0D0
+	// Token: 0x06018304 RID: 99076 RVA: 0x007461BC File Offset: 0x007443BC
 	[NullableContext(1)]
 	private unsafe void SetDetectFallIntoWaterPosition(global::Vector hitLocation, float rootMotionBaseOffset)
 	{
@@ -872,7 +880,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		}
 	}
 
-	// Token: 0x0601A918 RID: 108824 RVA: 0x0071FFE0 File Offset: 0x0071E1E0
+	// Token: 0x06018305 RID: 99077 RVA: 0x007462CC File Offset: 0x007444CC
 	public void DetectEnterWaterFromAir()
 	{
 		if (GravityUtils.Instance.GetZnInGravityForActor(this.ActorComp, this.ActorComp.ActorVelocityProxy) > 0.0 || this.MoveComp.FallingIntoWater)
@@ -936,7 +944,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		this.LastEnterWaterTime = (float)Time.Instance.Now + 500f;
 	}
 
-	// Token: 0x0601A919 RID: 108825 RVA: 0x00720204 File Offset: 0x0071E404
+	// Token: 0x06018306 RID: 99078 RVA: 0x007464F0 File Offset: 0x007446F0
 	[NullableContext(1)]
 	private void FixNormal(global::Vector inVector)
 	{
@@ -947,7 +955,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		}
 	}
 
-	// Token: 0x0601A91A RID: 108826 RVA: 0x0072024C File Offset: 0x0071E44C
+	// Token: 0x06018307 RID: 99079 RVA: 0x00746538 File Offset: 0x00744738
 	[NullableContext(1)]
 	private bool CheckIntoWater(global::Vector start, global::Vector end, float enterWaterZ)
 	{
@@ -968,7 +976,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return this.IsNormalAccepted(this.TempSwimNormalPoint);
 	}
 
-	// Token: 0x0601A91B RID: 108827 RVA: 0x007202D0 File Offset: 0x0071E4D0
+	// Token: 0x06018308 RID: 99080 RVA: 0x007465BC File Offset: 0x007447BC
 	private bool CheckTagFromAir()
 	{
 		if (!this.MoveComp.FallingIntoWater)
@@ -1004,7 +1012,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return true;
 	}
 
-	// Token: 0x0601A91C RID: 108828 RVA: 0x00720450 File Offset: 0x0071E650
+	// Token: 0x06018309 RID: 99081 RVA: 0x0074673C File Offset: 0x0074493C
 	private bool CheckTagFromGround()
 	{
 		global::Vector tempStartPoint = this.TempStartPoint;
@@ -1026,7 +1034,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return false;
 	}
 
-	// Token: 0x0601A91D RID: 108829 RVA: 0x0072052C File Offset: 0x0071E72C
+	// Token: 0x0601830A RID: 99082 RVA: 0x00746818 File Offset: 0x00744A18
 	private bool CheckTagFromClimb()
 	{
 		if (this.ClimbComp.GetTsClimbState().攀爬状态 == EClimbState.退出攀爬)
@@ -1055,7 +1063,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return true;
 	}
 
-	// Token: 0x0601A91E RID: 108830 RVA: 0x00720628 File Offset: 0x0071E828
+	// Token: 0x0601830B RID: 99083 RVA: 0x00746914 File Offset: 0x00744B14
 	public bool CheckUpWaterSurface()
 	{
 		global::Vector tempStartPoint = this.TempStartPoint;
@@ -1081,7 +1089,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return flag;
 	}
 
-	// Token: 0x0601A91F RID: 108831 RVA: 0x00720738 File Offset: 0x0071E938
+	// Token: 0x0601830C RID: 99084 RVA: 0x00746A24 File Offset: 0x00744C24
 	private bool CheckTagFromUp()
 	{
 		bool flag = this.CheckUpWaterSurface();
@@ -1097,7 +1105,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return flag;
 	}
 
-	// Token: 0x0601A920 RID: 108832 RVA: 0x00720784 File Offset: 0x0071E984
+	// Token: 0x0601830D RID: 99085 RVA: 0x00746A70 File Offset: 0x00744C70
 	private bool CheckTagInOtherStateThenEnterWater(EEnterWaterState enterState)
 	{
 		if (this.MoveComp.FallingIntoWater && Time.Instance.Now > (double)this.LastEnterWaterTime)
@@ -1137,7 +1145,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return flag;
 	}
 
-	// Token: 0x0601A921 RID: 108833 RVA: 0x00720874 File Offset: 0x0071EA74
+	// Token: 0x0601830E RID: 99086 RVA: 0x00746B60 File Offset: 0x00744D60
 	private void CheckCustomMovementIsSwim(float deltaTime)
 	{
 		if (this.MoveComp.CharacterMovement.MovementMode == EMovementMode.MOVE_Custom && this.MoveComp.CharacterMovement.CustomMovementMode == 1)
@@ -1147,21 +1155,21 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		}
 	}
 
-	// Token: 0x0601A922 RID: 108834 RVA: 0x00720907 File Offset: 0x0071EB07
+	// Token: 0x0601830F RID: 99087 RVA: 0x00746BF3 File Offset: 0x00744DF3
 	[NullableContext(1)]
 	private bool IsNormalAccepted(global::Vector normal)
 	{
 		return MathUtils.Instance.DotProduct(normal, this.MoveComp.GravityUp) > 0.173;
 	}
 
-	// Token: 0x0601A923 RID: 108835 RVA: 0x0072092A File Offset: 0x0071EB2A
+	// Token: 0x06018310 RID: 99088 RVA: 0x00746C16 File Offset: 0x00744E16
 	private void LeaveSwim()
 	{
 		this.BuffIndex = 0L;
 		this.SprintSwimOffset = 0f;
 	}
 
-	// Token: 0x0601A924 RID: 108836 RVA: 0x00720940 File Offset: 0x0071EB40
+	// Token: 0x06018311 RID: 99089 RVA: 0x00746C2C File Offset: 0x00744E2C
 	private unsafe void CheckSwimState()
 	{
 		if (!this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.水中"]))
@@ -1257,13 +1265,13 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		}
 	}
 
-	// Token: 0x0601A925 RID: 108837 RVA: 0x00720B9D File Offset: 0x0071ED9D
+	// Token: 0x06018312 RID: 99090 RVA: 0x00746E89 File Offset: 0x00745089
 	public bool CheckCanEnterClimbFromSwim()
 	{
 		return !this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.水中"]) || (double)this.Depth <= 0.8;
 	}
 
-	// Token: 0x0601A926 RID: 108838 RVA: 0x00720BD4 File Offset: 0x0071EDD4
+	// Token: 0x06018313 RID: 99091 RVA: 0x00746EC0 File Offset: 0x007450C0
 	[NullableContext(1)]
 	private float DetectWaterDepth(global::Vector start, global::Vector end)
 	{
@@ -1280,7 +1288,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return (float)(GravityUtils.Instance.GetZnInGravityForActor(this.ActorComp, this.TempVector3) * (double)(1f - this.SwimTime) / (double)(2f * this.CharacterHalfHeight));
 	}
 
-	// Token: 0x0601A927 RID: 108839 RVA: 0x00720C5C File Offset: 0x0071EE5C
+	// Token: 0x06018314 RID: 99092 RVA: 0x00746F48 File Offset: 0x00745148
 	private void RefreshSwimBuff()
 	{
 		CharacterUnifiedStateComponent unifiedStateComp = this.UnifiedStateComp;
@@ -1298,7 +1306,7 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		this.BuffIndex = SwimConfig.Instance.GetSwimBuffId(hasMoveInput, this.IsFastSwim).Value;
 	}
 
-	// Token: 0x0601A928 RID: 108840 RVA: 0x00720CDC File Offset: 0x0071EEDC
+	// Token: 0x06018315 RID: 99093 RVA: 0x00746FC8 File Offset: 0x007451C8
 	private void ResetWaterLocation()
 	{
 		if (this.TempSwimImpactPoint != null)
@@ -1317,31 +1325,31 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		}
 	}
 
-	// Token: 0x0601A929 RID: 108841 RVA: 0x00720D60 File Offset: 0x0071EF60
+	// Token: 0x06018316 RID: 99094 RVA: 0x0074704C File Offset: 0x0074524C
 	public FVectorDouble GetWaterLocation()
 	{
 		return this.TempWaterImpactPoint.ToUeVector(false);
 	}
 
-	// Token: 0x0601A92A RID: 108842 RVA: 0x00720D6E File Offset: 0x0071EF6E
+	// Token: 0x06018317 RID: 99095 RVA: 0x0074705A File Offset: 0x0074525A
 	public FVectorDouble GetSwimLocation()
 	{
 		return this.TempSwimImpactPoint.ToUeVector(false);
 	}
 
-	// Token: 0x0601A92B RID: 108843 RVA: 0x00720D7C File Offset: 0x0071EF7C
+	// Token: 0x06018318 RID: 99096 RVA: 0x00747068 File Offset: 0x00745268
 	public bool GetWaterVolume()
 	{
 		return this.WaterVolume;
 	}
 
-	// Token: 0x0601A92C RID: 108844 RVA: 0x00720D84 File Offset: 0x0071EF84
+	// Token: 0x06018319 RID: 99097 RVA: 0x00747070 File Offset: 0x00745270
 	public void SetEnterWaterState(bool isEnter)
 	{
 		this.SwimState = (isEnter ? ESwimState.Other : ESwimState.Swim);
 	}
 
-	// Token: 0x0601A92D RID: 108845 RVA: 0x00720D94 File Offset: 0x0071EF94
+	// Token: 0x0601831A RID: 99098 RVA: 0x00747080 File Offset: 0x00745280
 	[return: TupleElementNames(new string[]
 	{
 		"Depth",
@@ -1383,44 +1391,44 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 		return new ValueTuple<float, float, global::Vector, global::Vector, global::Vector>?(new ValueTuple<float, float, global::Vector, global::Vector, global::Vector>(this.Depth, item, item2, item3, vector));
 	}
 
-	// Token: 0x0601A92E RID: 108846 RVA: 0x00720E74 File Offset: 0x0071F074
+	// Token: 0x0601831B RID: 99099 RVA: 0x00747160 File Offset: 0x00745360
 	private void DrawDebugCapsuleComponent(FLinearColor color)
 	{
 		UKismetSystemLibrary.D_DrawDebugCapsule(this.ActorComp.Actor, this.ActorComp.Actor.D_K2_GetActorLocation(), this.ActorComp.Actor.CapsuleComponent.CapsuleHalfHeight, this.ActorComp.Actor.CapsuleComponent.CapsuleRadius, this.ActorComp.Actor.K2_GetActorRotation(), new FLinearColor?(color), 5f, 2f);
 	}
 
-	// Token: 0x0601A92F RID: 108847 RVA: 0x00720EEB File Offset: 0x0071F0EB
+	// Token: 0x0601831C RID: 99100 RVA: 0x007471D7 File Offset: 0x007453D7
 	private void DrawDebugSphere(FVector location, FLinearColor color)
 	{
 		UKismetSystemLibrary.D_DrawDebugSphere(this.ActorComp.Actor, location, this.ActorComp.Actor.CapsuleComponent.CapsuleHalfHeight, 12, new FLinearColor?(color), 0f, 1f);
 	}
 
-	// Token: 0x0601A930 RID: 108848 RVA: 0x00720F2B File Offset: 0x0071F12B
+	// Token: 0x0601831D RID: 99101 RVA: 0x00747217 File Offset: 0x00745417
 	public void SetDebug(bool debug)
 	{
 		this.IsDebug = debug;
 		this.WaterTrace.SetDrawDebugTrace(this.IsDebug ? EDrawDebugTrace.ForDuration : EDrawDebugTrace.None);
 	}
 
-	// Token: 0x0601A931 RID: 108849 RVA: 0x00720F4B File Offset: 0x0071F14B
+	// Token: 0x0601831E RID: 99102 RVA: 0x00747237 File Offset: 0x00745437
 	public void LogSwimTriggerCount()
 	{
 		bool isDebug = this.IsDebug;
 	}
 
-	// Token: 0x0601A932 RID: 108850 RVA: 0x00720F54 File Offset: 0x0071F154
+	// Token: 0x0601831F RID: 99103 RVA: 0x00747240 File Offset: 0x00745440
 	public static void CreateStaticDefaultValue()
 	{
 		CharacterSwimComponent.UseSwimTrigger = false;
 	}
 
-	// Token: 0x0601A933 RID: 108851 RVA: 0x00720F5C File Offset: 0x0071F15C
+	// Token: 0x06018320 RID: 99104 RVA: 0x00747248 File Offset: 0x00745448
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterSwimComponent.UseSwimTrigger = false;
 	}
 
-	// Token: 0x0601A934 RID: 108852 RVA: 0x00720F64 File Offset: 0x0071F164
+	// Token: 0x06018321 RID: 99105 RVA: 0x00747250 File Offset: 0x00745450
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -1429,569 +1437,458 @@ public class CharacterSwimComponent : EntityComponent, IScoreUpdateObject, IComp
 			return false;
 		}
 		CharacterSwimComponent characterSwimComponent = (CharacterSwimComponent)componentTemplate;
-		if (base.CanResetComponentProperty("IsDebug"))
+		this.IsDebug = characterSwimComponent.IsDebug;
+		if (characterSwimComponent.TempPlayerLocation == null)
 		{
-			this.IsDebug = characterSwimComponent.IsDebug;
+			this.TempPlayerLocation = null;
 		}
-		if (base.CanResetComponentProperty("TempPlayerLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempPlayerLocation), "TempPlayerLocation"))
 		{
-			if (characterSwimComponent.TempPlayerLocation == null)
-			{
-				this.TempPlayerLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempPlayerLocation), "TempPlayerLocation"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TempPlayerGravityUp"))
+		if (characterSwimComponent.TempPlayerGravityUp == null)
 		{
-			if (characterSwimComponent.TempPlayerGravityUp == null)
-			{
-				this.TempPlayerGravityUp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempPlayerGravityUp), "TempPlayerGravityUp"))
-			{
-				return false;
-			}
+			this.TempPlayerGravityUp = null;
 		}
-		if (base.CanResetComponentProperty("CharacterHalfHeight"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempPlayerGravityUp), "TempPlayerGravityUp"))
 		{
-			this.CharacterHalfHeight = characterSwimComponent.CharacterHalfHeight;
+			return false;
 		}
-		if (base.CanResetComponentProperty("LastTickLocation"))
+		this.CharacterHalfHeight = characterSwimComponent.CharacterHalfHeight;
+		if (characterSwimComponent.LastTickLocation == null)
 		{
-			if (characterSwimComponent.LastTickLocation == null)
-			{
-				this.LastTickLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastTickLocation), "LastTickLocation"))
-			{
-				return false;
-			}
+			this.LastTickLocation = null;
 		}
-		if (base.CanResetComponentProperty("HasFloor"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastTickLocation), "LastTickLocation"))
 		{
-			this.HasFloor = characterSwimComponent.HasFloor;
+			return false;
 		}
-		if (base.CanResetComponentProperty("Depth"))
+		this.HasFloor = characterSwimComponent.HasFloor;
+		this.Depth = characterSwimComponent.Depth;
+		this.RotateSpeed = characterSwimComponent.RotateSpeed;
+		if (characterSwimComponent.SwimAcceleratorCurve == null)
 		{
-			this.Depth = characterSwimComponent.Depth;
+			this.SwimAcceleratorCurve = null;
 		}
-		if (base.CanResetComponentProperty("RotateSpeed"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SwimAcceleratorCurve), "SwimAcceleratorCurve"))
 		{
-			this.RotateSpeed = characterSwimComponent.RotateSpeed;
+			return false;
 		}
-		if (base.CanResetComponentProperty("SwimAcceleratorCurve"))
+		if (characterSwimComponent.SwimRotationCurve == null)
 		{
-			if (characterSwimComponent.SwimAcceleratorCurve == null)
-			{
-				this.SwimAcceleratorCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCurveFloat>(this.SwimAcceleratorCurve), "SwimAcceleratorCurve"))
-			{
-				return false;
-			}
+			this.SwimRotationCurve = null;
 		}
-		if (base.CanResetComponentProperty("SwimRotationCurve"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SwimRotationCurve), "SwimRotationCurve"))
 		{
-			if (characterSwimComponent.SwimRotationCurve == null)
-			{
-				this.SwimRotationCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCurveFloat>(this.SwimRotationCurve), "SwimRotationCurve"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TempWaterImpactPoint"))
+		if (characterSwimComponent.TempWaterImpactPoint == null)
 		{
-			if (characterSwimComponent.TempWaterImpactPoint == null)
-			{
-				this.TempWaterImpactPoint = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempWaterImpactPoint), "TempWaterImpactPoint"))
-			{
-				return false;
-			}
+			this.TempWaterImpactPoint = null;
 		}
-		if (base.CanResetComponentProperty("TempSwimImpactPoint"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempWaterImpactPoint), "TempWaterImpactPoint"))
 		{
-			if (characterSwimComponent.TempSwimImpactPoint == null)
-			{
-				this.TempSwimImpactPoint = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempSwimImpactPoint), "TempSwimImpactPoint"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TempSwimNormalPoint"))
+		if (characterSwimComponent.TempSwimImpactPoint == null)
 		{
-			if (characterSwimComponent.TempSwimNormalPoint == null)
-			{
-				this.TempSwimNormalPoint = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempSwimNormalPoint), "TempSwimNormalPoint"))
-			{
-				return false;
-			}
+			this.TempSwimImpactPoint = null;
 		}
-		if (base.CanResetComponentProperty("SwimTime"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempSwimImpactPoint), "TempSwimImpactPoint"))
 		{
-			this.SwimTime = characterSwimComponent.SwimTime;
+			return false;
 		}
-		if (base.CanResetComponentProperty("WaterVolume"))
+		if (characterSwimComponent.TempSwimNormalPoint == null)
 		{
-			this.WaterVolume = characterSwimComponent.WaterVolume;
+			this.TempSwimNormalPoint = null;
 		}
-		if (base.CanResetComponentProperty("WaterSlope"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempSwimNormalPoint), "TempSwimNormalPoint"))
 		{
-			this.WaterSlope = characterSwimComponent.WaterSlope;
+			return false;
 		}
-		if (base.CanResetComponentProperty("MaxSpeed"))
+		this.SwimTime = characterSwimComponent.SwimTime;
+		this.WaterVolume = characterSwimComponent.WaterVolume;
+		this.WaterSlope = characterSwimComponent.WaterSlope;
+		this.MaxSpeed = characterSwimComponent.MaxSpeed;
+		if (characterSwimComponent.ActorComp == null)
 		{
-			this.MaxSpeed = characterSwimComponent.MaxSpeed;
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (characterSwimComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
+		if (characterSwimComponent.TagComp == null)
 		{
-			if (characterSwimComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("UnifiedStateComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			if (characterSwimComponent.UnifiedStateComp == null)
-			{
-				this.UnifiedStateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComp), "UnifiedStateComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("AnimComp"))
+		if (characterSwimComponent.UnifiedStateComp == null)
 		{
-			if (characterSwimComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
+			this.UnifiedStateComp = null;
 		}
-		if (base.CanResetComponentProperty("SkillComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComp), "UnifiedStateComp"))
 		{
-			if (characterSwimComponent.SkillComp == null)
-			{
-				this.SkillComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterSkillComponent>(this.SkillComp), "SkillComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("ClimbComp"))
+		if (characterSwimComponent.AnimComp == null)
 		{
-			if (characterSwimComponent.ClimbComp == null)
-			{
-				this.ClimbComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterClimbComponent>(this.ClimbComp), "ClimbComp"))
-			{
-				return false;
-			}
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("MoveComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			if (characterSwimComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TempVector"))
+		if (characterSwimComponent.SkillComp == null)
 		{
-			if (characterSwimComponent.TempVector == null)
-			{
-				this.TempVector = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector), "TempVector"))
-			{
-				return false;
-			}
+			this.SkillComp = null;
 		}
-		if (base.CanResetComponentProperty("TempVector2"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComp), "SkillComp"))
 		{
-			if (characterSwimComponent.TempVector2 == null)
-			{
-				this.TempVector2 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector2), "TempVector2"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TempVector3"))
+		if (characterSwimComponent.ClimbComp == null)
 		{
-			if (characterSwimComponent.TempVector3 == null)
-			{
-				this.TempVector3 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector3), "TempVector3"))
-			{
-				return false;
-			}
+			this.ClimbComp = null;
 		}
-		if (base.CanResetComponentProperty("TempStartPoint"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClimbComp), "ClimbComp"))
 		{
-			if (characterSwimComponent.TempStartPoint == null)
-			{
-				this.TempStartPoint = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempStartPoint), "TempStartPoint"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TempEndPoint"))
+		if (characterSwimComponent.MoveComp == null)
 		{
-			if (characterSwimComponent.TempEndPoint == null)
-			{
-				this.TempEndPoint = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempEndPoint), "TempEndPoint"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("SwimConfigInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			this.SwimConfigInternal = characterSwimComponent.SwimConfigInternal;
+			return false;
 		}
-		if (base.CanResetComponentProperty("SprintSwimOffset"))
+		if (characterSwimComponent.TempVector == null)
 		{
-			this.SprintSwimOffset = characterSwimComponent.SprintSwimOffset;
+			this.TempVector = null;
 		}
-		if (base.CanResetComponentProperty("SprintSwimOffsetLerpSpeed"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
 		{
-			this.SprintSwimOffsetLerpSpeed = characterSwimComponent.SprintSwimOffsetLerpSpeed;
+			return false;
 		}
-		if (base.CanResetComponentProperty("DeltaTime"))
+		if (characterSwimComponent.TempVector2 == null)
 		{
-			this.DeltaTime = characterSwimComponent.DeltaTime;
+			this.TempVector2 = null;
 		}
-		if (base.CanResetComponentProperty("DetectFallIntoWaterPosition"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector2), "TempVector2"))
 		{
-			if (characterSwimComponent.DetectFallIntoWaterPosition == null)
-			{
-				this.DetectFallIntoWaterPosition = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.DetectFallIntoWaterPosition), "DetectFallIntoWaterPosition"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("BuffIndexInternal"))
+		if (characterSwimComponent.TempVector3 == null)
 		{
-			this.BuffIndexInternal = characterSwimComponent.BuffIndexInternal;
+			this.TempVector3 = null;
 		}
-		if (base.CanResetComponentProperty("EnterSwimFromAirBuffIndex"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector3), "TempVector3"))
 		{
-			this.EnterSwimFromAirBuffIndex = characterSwimComponent.EnterSwimFromAirBuffIndex;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsFastSwim"))
+		if (characterSwimComponent.TempStartPoint == null)
 		{
-			this.IsFastSwim = characterSwimComponent.IsFastSwim;
+			this.TempStartPoint = null;
 		}
-		if (base.CanResetComponentProperty("SwimState"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempStartPoint), "TempStartPoint"))
 		{
-			this.SwimState = characterSwimComponent.SwimState;
+			return false;
 		}
-		if (base.CanResetComponentProperty("LastEnterWaterTime"))
+		if (characterSwimComponent.TempEndPoint == null)
 		{
-			this.LastEnterWaterTime = characterSwimComponent.LastEnterWaterTime;
+			this.TempEndPoint = null;
 		}
-		if (base.CanResetComponentProperty("WaterTrace"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempEndPoint), "TempEndPoint"))
 		{
-			if (characterSwimComponent.WaterTrace == null)
-			{
-				this.WaterTrace = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.WaterTrace), "WaterTrace"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("InSwimTriggerCount"))
+		this.SwimConfigInternal = characterSwimComponent.SwimConfigInternal;
+		this.SprintSwimOffset = characterSwimComponent.SprintSwimOffset;
+		this.SprintSwimOffsetLerpSpeed = characterSwimComponent.SprintSwimOffsetLerpSpeed;
+		this.DeltaTime = characterSwimComponent.DeltaTime;
+		if (characterSwimComponent.DetectFallIntoWaterPosition == null)
 		{
-			this.InSwimTriggerCount = characterSwimComponent.InSwimTriggerCount;
+			this.DetectFallIntoWaterPosition = null;
 		}
-		if (base.CanResetComponentProperty("IsRole"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DetectFallIntoWaterPosition), "DetectFallIntoWaterPosition"))
 		{
-			this.IsRole = characterSwimComponent.IsRole;
+			return false;
 		}
-		if (base.CanResetComponentProperty("SwimAreaHeightAboveActor"))
+		this.BuffIndexInternal = characterSwimComponent.BuffIndexInternal;
+		this.EnterSwimFromAirBuffIndex = characterSwimComponent.EnterSwimFromAirBuffIndex;
+		this.IsFastSwim = characterSwimComponent.IsFastSwim;
+		this.SwimState = characterSwimComponent.SwimState;
+		this.LastEnterWaterTime = characterSwimComponent.LastEnterWaterTime;
+		if (characterSwimComponent.WaterTrace == null)
 		{
-			this.SwimAreaHeightAboveActor = characterSwimComponent.SwimAreaHeightAboveActor;
+			this.WaterTrace = null;
 		}
-		if (base.CanResetComponentProperty("InSwimAreaInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaterTrace), "WaterTrace"))
 		{
-			this.InSwimAreaInternal = characterSwimComponent.InSwimAreaInternal;
+			return false;
 		}
-		if (base.CanResetComponentProperty("WaterHeightAboveMe"))
-		{
-			this.WaterHeightAboveMe = characterSwimComponent.WaterHeightAboveMe;
-		}
-		if (base.CanResetComponentProperty("ForceCheck"))
-		{
-			this.ForceCheck = characterSwimComponent.ForceCheck;
-		}
-		if (base.CanResetComponentProperty("WaterTypeInternal"))
-		{
-			this.WaterTypeInternal = characterSwimComponent.WaterTypeInternal;
-		}
+		this.InSwimTriggerCount = characterSwimComponent.InSwimTriggerCount;
+		this.IsRole = characterSwimComponent.IsRole;
+		this.SwimAreaHeightAboveActor = characterSwimComponent.SwimAreaHeightAboveActor;
+		this.InSwimAreaInternal = characterSwimComponent.InSwimAreaInternal;
+		this.WaterHeightAboveMe = characterSwimComponent.WaterHeightAboveMe;
+		this.ForceCheck = characterSwimComponent.ForceCheck;
+		this.WaterTypeInternal = characterSwimComponent.WaterTypeInternal;
 		return true;
 	}
 
-	// Token: 0x0400CC2E RID: 52270
+	// Token: 0x170025EF RID: 9711
+	// (get) Token: 0x06018322 RID: 99106 RVA: 0x0074774E File Offset: 0x0074594E
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025F0 RID: 9712
+	// (get) Token: 0x06018323 RID: 99107 RVA: 0x00747751 File Offset: 0x00745951
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025F1 RID: 9713
+	// (get) Token: 0x06018324 RID: 99108 RVA: 0x00747754 File Offset: 0x00745954
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D011 RID: 53265
 	[Nullable(1)]
 	private const string PROFILE_DETECT_WATER_DEPTH = "CharacterSwimComponent_DetectWaterDepth";
 
-	// Token: 0x0400CC2F RID: 52271
+	// Token: 0x0400D012 RID: 53266
 	[Nullable(1)]
 	private const string PROFILE_FLOOR = "CharacterSwimComponent_CheckHasArrivedFloorInSwimming";
 
-	// Token: 0x0400CC30 RID: 52272
+	// Token: 0x0400D013 RID: 53267
 	private const long MAX_LAST_TICK_OFFSET_SQUARE = 100000000L;
 
-	// Token: 0x0400CC31 RID: 52273
+	// Token: 0x0400D014 RID: 53268
 	private const int MAX_SPEED_INTO_WATER = 50;
 
-	// Token: 0x0400CC32 RID: 52274
+	// Token: 0x0400D015 RID: 53269
 	private const double ENTER_SWIM_BIGGER_THAN_THIS = 0.75;
 
-	// Token: 0x0400CC33 RID: 52275
+	// Token: 0x0400D016 RID: 53270
 	public const double LEAVE_SWIM_LESS_THAN_THIS = 0.7;
 
-	// Token: 0x0400CC34 RID: 52276
+	// Token: 0x0400D017 RID: 53271
 	public const double LEAVE_SWIM_LESS_THAN_THIS_AIR = 0.6;
 
-	// Token: 0x0400CC35 RID: 52277
+	// Token: 0x0400D018 RID: 53272
 	private const double CLIMB_CHECK_ENTER_WATER_RATE = 0.8;
 
-	// Token: 0x0400CC36 RID: 52278
+	// Token: 0x0400D019 RID: 53273
 	private const int ONE_HUNDRED_TO_FIND_SURFACE = 100;
 
-	// Token: 0x0400CC37 RID: 52279
+	// Token: 0x0400D01A RID: 53274
 	private const int FIVE_HUNDRED_TO_FIND_SURFACE = 500;
 
-	// Token: 0x0400CC38 RID: 52280
+	// Token: 0x0400D01B RID: 53275
 	private const int TIME_CLEAR_ENTER_WATER = 500;
 
-	// Token: 0x0400CC39 RID: 52281
+	// Token: 0x0400D01C RID: 53276
 	public const double SWIMMING_BUOYANCY = 1.4;
 
-	// Token: 0x0400CC3A RID: 52282
+	// Token: 0x0400D01D RID: 53277
 	private const double SWIMMING_FRICTION = 0.01;
 
-	// Token: 0x0400CC3B RID: 52283
+	// Token: 0x0400D01E RID: 53278
 	private const int SWIMMING_FRICTION_MIN_SPEED = 75;
 
-	// Token: 0x0400CC3C RID: 52284
+	// Token: 0x0400D01F RID: 53279
 	private const int SWIMMING_FRICTION_RATION = 10000;
 
-	// Token: 0x0400CC3D RID: 52285
+	// Token: 0x0400D020 RID: 53280
 	private const int SWIMMING_MAX_DEPTH = 2;
 
-	// Token: 0x0400CC3E RID: 52286
+	// Token: 0x0400D021 RID: 53281
 	private const int SWIMMING_ACCELERATOR = 200;
 
-	// Token: 0x0400CC3F RID: 52287
+	// Token: 0x0400D022 RID: 53282
 	public const float SWIMMING_DECELERATION = 0.06f;
 
-	// Token: 0x0400CC40 RID: 52288
+	// Token: 0x0400D023 RID: 53283
 	private const double COS_EIGHTY = 0.173;
 
-	// Token: 0x0400CC41 RID: 52289
+	// Token: 0x0400D024 RID: 53284
 	private const double MIN_DEPTH = -1.7976931348623157E+308;
 
-	// Token: 0x0400CC42 RID: 52290
+	// Token: 0x0400D025 RID: 53285
 	private static readonly FVectorDouble waterAreaDetectExtent = new FVectorDouble(500.0, 500.0, 10000.0);
 
-	// Token: 0x0400CC43 RID: 52291
+	// Token: 0x0400D026 RID: 53286
 	private const int WATER_BOTTOM_TOLERANCE = 50;
 
-	// Token: 0x0400CC44 RID: 52292
+	// Token: 0x0400D027 RID: 53287
 	private const int VEHICLE_ADDITIONAL_HEIGHT = 600;
 
-	// Token: 0x0400CC45 RID: 52293
+	// Token: 0x0400D028 RID: 53288
 	private const int VEHICLE_ADDITIONAL_DEPTH = 250;
 
-	// Token: 0x0400CC46 RID: 52294
+	// Token: 0x0400D029 RID: 53289
 	public bool IsDebug;
 
-	// Token: 0x0400CC47 RID: 52295
+	// Token: 0x0400D02A RID: 53290
 	private static readonly FName TagWaterNoSwim = new FName("Water_No_Swim");
 
-	// Token: 0x0400CC48 RID: 52296
+	// Token: 0x0400D02B RID: 53291
 	public static bool UseSwimTrigger = false;
 
-	// Token: 0x0400CC49 RID: 52297
+	// Token: 0x0400D02C RID: 53292
 	private global::Vector TempPlayerLocation;
 
-	// Token: 0x0400CC4A RID: 52298
+	// Token: 0x0400D02D RID: 53293
 	private global::Vector TempPlayerGravityUp;
 
-	// Token: 0x0400CC4B RID: 52299
+	// Token: 0x0400D02E RID: 53294
 	private float CharacterHalfHeight;
 
-	// Token: 0x0400CC4C RID: 52300
+	// Token: 0x0400D02F RID: 53295
 	private global::Vector LastTickLocation;
 
-	// Token: 0x0400CC4D RID: 52301
+	// Token: 0x0400D030 RID: 53296
 	private ECheckFloorResult HasFloor;
 
-	// Token: 0x0400CC4E RID: 52302
+	// Token: 0x0400D031 RID: 53297
 	public float Depth;
 
-	// Token: 0x0400CC4F RID: 52303
+	// Token: 0x0400D032 RID: 53298
 	public float RotateSpeed;
 
-	// Token: 0x0400CC50 RID: 52304
+	// Token: 0x0400D033 RID: 53299
 	public UCurveFloat SwimAcceleratorCurve;
 
-	// Token: 0x0400CC51 RID: 52305
+	// Token: 0x0400D034 RID: 53300
 	public UCurveFloat SwimRotationCurve;
 
-	// Token: 0x0400CC52 RID: 52306
+	// Token: 0x0400D035 RID: 53301
 	private global::Vector TempWaterImpactPoint;
 
-	// Token: 0x0400CC53 RID: 52307
+	// Token: 0x0400D036 RID: 53302
 	private global::Vector TempSwimImpactPoint;
 
-	// Token: 0x0400CC54 RID: 52308
+	// Token: 0x0400D037 RID: 53303
 	private global::Vector TempSwimNormalPoint;
 
-	// Token: 0x0400CC55 RID: 52309
+	// Token: 0x0400D038 RID: 53304
 	private float SwimTime;
 
-	// Token: 0x0400CC56 RID: 52310
+	// Token: 0x0400D039 RID: 53305
 	private bool WaterVolume;
 
-	// Token: 0x0400CC57 RID: 52311
+	// Token: 0x0400D03A RID: 53306
 	public float WaterSlope;
 
-	// Token: 0x0400CC58 RID: 52312
+	// Token: 0x0400D03B RID: 53307
 	public float MaxSpeed;
 
-	// Token: 0x0400CC59 RID: 52313
+	// Token: 0x0400D03C RID: 53308
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CC5A RID: 52314
+	// Token: 0x0400D03D RID: 53309
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400CC5B RID: 52315
+	// Token: 0x0400D03E RID: 53310
 	private CharacterUnifiedStateComponent UnifiedStateComp;
 
-	// Token: 0x0400CC5C RID: 52316
+	// Token: 0x0400D03F RID: 53311
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400CC5D RID: 52317
+	// Token: 0x0400D040 RID: 53312
 	private CharacterSkillComponent SkillComp;
 
-	// Token: 0x0400CC5E RID: 52318
+	// Token: 0x0400D041 RID: 53313
 	private CharacterClimbComponent ClimbComp;
 
-	// Token: 0x0400CC5F RID: 52319
+	// Token: 0x0400D042 RID: 53314
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400CC60 RID: 52320
+	// Token: 0x0400D043 RID: 53315
 	private global::Vector TempVector;
 
-	// Token: 0x0400CC61 RID: 52321
+	// Token: 0x0400D044 RID: 53316
 	private global::Vector TempVector2;
 
-	// Token: 0x0400CC62 RID: 52322
+	// Token: 0x0400D045 RID: 53317
 	private global::Vector TempVector3;
 
-	// Token: 0x0400CC63 RID: 52323
+	// Token: 0x0400D046 RID: 53318
 	private global::Vector TempStartPoint;
 
-	// Token: 0x0400CC64 RID: 52324
+	// Token: 0x0400D047 RID: 53319
 	private global::Vector TempEndPoint;
 
-	// Token: 0x0400CC65 RID: 52325
+	// Token: 0x0400D048 RID: 53320
 	private Swim? SwimConfigInternal;
 
-	// Token: 0x0400CC66 RID: 52326
+	// Token: 0x0400D049 RID: 53321
 	public float SprintSwimOffset;
 
-	// Token: 0x0400CC67 RID: 52327
+	// Token: 0x0400D04A RID: 53322
 	public float SprintSwimOffsetLerpSpeed;
 
-	// Token: 0x0400CC68 RID: 52328
+	// Token: 0x0400D04B RID: 53323
 	private float DeltaTime;
 
-	// Token: 0x0400CC69 RID: 52329
+	// Token: 0x0400D04C RID: 53324
 	private global::Vector DetectFallIntoWaterPosition;
 
-	// Token: 0x0400CC6A RID: 52330
+	// Token: 0x0400D04D RID: 53325
 	private long BuffIndexInternal;
 
-	// Token: 0x0400CC6B RID: 52331
+	// Token: 0x0400D04E RID: 53326
 	protected int EnterSwimFromAirBuffIndex;
 
-	// Token: 0x0400CC6C RID: 52332
+	// Token: 0x0400D04F RID: 53327
 	private bool IsFastSwim;
 
-	// Token: 0x0400CC6D RID: 52333
+	// Token: 0x0400D050 RID: 53328
 	private ESwimState SwimState = ESwimState.Other;
 
-	// Token: 0x0400CC6E RID: 52334
+	// Token: 0x0400D051 RID: 53329
 	private float LastEnterWaterTime;
 
-	// Token: 0x0400CC6F RID: 52335
+	// Token: 0x0400D052 RID: 53330
 	private UTraceSphereElement WaterTrace;
 
-	// Token: 0x0400CC70 RID: 52336
+	// Token: 0x0400D053 RID: 53331
 	public int InSwimTriggerCount;
 
-	// Token: 0x0400CC71 RID: 52337
+	// Token: 0x0400D054 RID: 53332
 	public bool IsRole;
 
-	// Token: 0x0400CC72 RID: 52338
+	// Token: 0x0400D055 RID: 53333
 	private float SwimAreaHeightAboveActor;
 
-	// Token: 0x0400CC73 RID: 52339
+	// Token: 0x0400D056 RID: 53334
 	private bool InSwimAreaInternal;
 
-	// Token: 0x0400CC74 RID: 52340
+	// Token: 0x0400D057 RID: 53335
 	public float WaterHeightAboveMe;
 
-	// Token: 0x0400CC75 RID: 52341
+	// Token: 0x0400D058 RID: 53336
 	private bool ForceCheck;
 
-	// Token: 0x0400CC76 RID: 52342
+	// Token: 0x0400D059 RID: 53337
 	private EInteractionWaterType WaterTypeInternal;
 }

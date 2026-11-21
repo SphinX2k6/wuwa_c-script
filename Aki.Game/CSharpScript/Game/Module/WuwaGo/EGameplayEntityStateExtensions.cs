@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x0200471E RID: 18206
+	// Token: 0x0200364E RID: 13902
 	public static class EGameplayEntityStateExtensions
 	{
-		// Token: 0x0602F94B RID: 194891 RVA: 0x00B054C8 File Offset: 0x00B036C8
+		// Token: 0x06024111 RID: 147729 RVA: 0x00A35198 File Offset: 0x00A33398
 		public static string ToEnumString(this EGameplayEntityState value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return result;
 		}
 
-		// Token: 0x0602F94C RID: 194892 RVA: 0x00B0551C File Offset: 0x00B0371C
+		// Token: 0x06024112 RID: 147730 RVA: 0x00A351EC File Offset: 0x00A333EC
 		public static EGameplayEntityState FromString(string name)
 		{
 			EGameplayEntityState result;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return result;
 		}
 
-		// Token: 0x0602F94D RID: 194893 RVA: 0x00B05548 File Offset: 0x00B03748
+		// Token: 0x06024113 RID: 147731 RVA: 0x00A35218 File Offset: 0x00A33418
 		public static bool TryFromString(string name, out EGameplayEntityState value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return true;
 		}
 
-		// Token: 0x0602F94E RID: 194894 RVA: 0x00B055B0 File Offset: 0x00B037B0
+		// Token: 0x06024114 RID: 147732 RVA: 0x00A35280 File Offset: 0x00A33480
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			};
 		}
 
-		// Token: 0x0602F94F RID: 194895 RVA: 0x00B055D8 File Offset: 0x00B037D8
+		// Token: 0x06024115 RID: 147733 RVA: 0x00A352A8 File Offset: 0x00A334A8
 		public static EGameplayEntityState[] GetValues()
 		{
 			return new EGameplayEntityState[]
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			};
 		}
 
-		// Token: 0x0602F950 RID: 194896 RVA: 0x00B055EB File Offset: 0x00B037EB
+		// Token: 0x06024116 RID: 147734 RVA: 0x00A352BB File Offset: 0x00A334BB
 		public static string[] GetNames()
 		{
 			return new string[]

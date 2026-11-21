@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200610F RID: 24847
+	// Token: 0x0200508D RID: 20621
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeSubViewBlessingSuitSelect : RoverlikeActionSubViewBase
 	{
-		// Token: 0x1700917A RID: 37242
-		// (get) Token: 0x0603ED10 RID: 257296 RVA: 0x00F2B9EC File Offset: 0x00F29BEC
+		// Token: 0x170064DC RID: 25820
+		// (get) Token: 0x060339D2 RID: 211410 RVA: 0x00E72800 File Offset: 0x00E70A00
 		public override ERoverActionSubViewType SubViewType
 		{
 			get
@@ -24,8 +24,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x1700917B RID: 37243
-		// (get) Token: 0x0603ED11 RID: 257297 RVA: 0x00F2B9EF File Offset: 0x00F29BEF
+		// Token: 0x170064DD RID: 25821
+		// (get) Token: 0x060339D3 RID: 211411 RVA: 0x00E72803 File Offset: 0x00E70A03
 		public override string ResourceId
 		{
 			get
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603ED12 RID: 257298 RVA: 0x00F2B9F8 File Offset: 0x00F29BF8
+		// Token: 0x060339D4 RID: 211412 RVA: 0x00E7280C File Offset: 0x00E70A0C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603ED13 RID: 257299 RVA: 0x00F2BB68 File Offset: 0x00F29D68
+		// Token: 0x060339D5 RID: 211413 RVA: 0x00E7297C File Offset: 0x00E70B7C
 		protected override void OnStart()
 		{
 			this.ConfirmBtn = new ButtonItem(base.GetItem(6));
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RoleLayout = new GenericLayout<RoverlikeBlessingRoleItem, IRoverlikeBlessingRoleData>(base.GetVerticalLayout(4), new Func<RoverlikeBlessingRoleItem>(this.CreateRoleItem), base.GetItem(5).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x0603ED14 RID: 257300 RVA: 0x00F2BBF0 File Offset: 0x00F29DF0
+		// Token: 0x060339D6 RID: 211414 RVA: 0x00E72A04 File Offset: 0x00E70C04
 		private void OnBtnArrowRightClick()
 		{
 			if (this.AllSuitDataList.Count <= 1)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshCurrentSuit();
 		}
 
-		// Token: 0x0603ED15 RID: 257301 RVA: 0x00F2BC21 File Offset: 0x00F29E21
+		// Token: 0x060339D7 RID: 211415 RVA: 0x00E72A35 File Offset: 0x00E70C35
 		private void OnBtnArrowLeftClick()
 		{
 			if (this.AllSuitDataList.Count <= 1)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshCurrentSuit();
 		}
 
-		// Token: 0x0603ED16 RID: 257302 RVA: 0x00F2BC5E File Offset: 0x00F29E5E
+		// Token: 0x060339D8 RID: 211416 RVA: 0x00E72A72 File Offset: 0x00E70C72
 		private void OnConfirmClick()
 		{
 			base.TryInteractAction(delegate
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x0603ED17 RID: 257303 RVA: 0x00F2BC74 File Offset: 0x00F29E74
+		// Token: 0x060339D9 RID: 211417 RVA: 0x00E72A88 File Offset: 0x00E70C88
 		private void OnRoleItemClick(IRoverlikeBlessingRoleData data)
 		{
 			if (this.GetCurrentRoleId() == data.RoleId)
@@ -141,13 +141,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603ED18 RID: 257304 RVA: 0x00F2BCB2 File Offset: 0x00F29EB2
+		// Token: 0x060339DA RID: 211418 RVA: 0x00E72AC6 File Offset: 0x00E70CC6
 		private RoverlikeBlessingCardItem CreateAttributeItem()
 		{
 			return new RoverlikeBlessingCardItem();
 		}
 
-		// Token: 0x0603ED19 RID: 257305 RVA: 0x00F2BCB9 File Offset: 0x00F29EB9
+		// Token: 0x060339DB RID: 211419 RVA: 0x00E72ACD File Offset: 0x00E70CCD
 		private RoverlikeBlessingRoleItem CreateRoleItem()
 		{
 			RoverlikeBlessingRoleItem roverlikeBlessingRoleItem = new RoverlikeBlessingRoleItem();
@@ -155,14 +155,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return roverlikeBlessingRoleItem;
 		}
 
-		// Token: 0x0603ED1A RID: 257306 RVA: 0x00F2BCD2 File Offset: 0x00F29ED2
+		// Token: 0x060339DC RID: 211420 RVA: 0x00E72AE6 File Offset: 0x00E70CE6
 		private void RefreshCurrentSuit()
 		{
 			this.SelectCurrentRole();
 			this.RefreshAttributeScroll();
 		}
 
-		// Token: 0x0603ED1B RID: 257307 RVA: 0x00F2BCE0 File Offset: 0x00F29EE0
+		// Token: 0x060339DD RID: 211421 RVA: 0x00E72AF4 File Offset: 0x00E70CF4
 		private void InitRoleSlots()
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshRoleLayout();
 		}
 
-		// Token: 0x0603ED1C RID: 257308 RVA: 0x00F2BDC8 File Offset: 0x00F29FC8
+		// Token: 0x060339DE RID: 211422 RVA: 0x00E72BDC File Offset: 0x00E70DDC
 		private void RefreshRoleLayout()
 		{
 			bool uiactive = this.RoleDataList.Count > 1;
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}, true);
 		}
 
-		// Token: 0x0603ED1D RID: 257309 RVA: 0x00F2BE3C File Offset: 0x00F2A03C
+		// Token: 0x060339DF RID: 211423 RVA: 0x00E72C50 File Offset: 0x00E70E50
 		private void SelectCurrentRole()
 		{
 			int currentRoleId = this.GetCurrentRoleId();
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603ED1E RID: 257310 RVA: 0x00F2BE6C File Offset: 0x00F2A06C
+		// Token: 0x060339E0 RID: 211424 RVA: 0x00E72C80 File Offset: 0x00E70E80
 		private int GetCurrentRoleId()
 		{
 			IRoverlikeBlessingSuitData roverlikeBlessingSuitData = this.AllSuitDataList[this.CurrentSuitIndex];
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return blessGroupConfig.GetValueOrDefault().BlessRoleId;
 		}
 
-		// Token: 0x0603ED1F RID: 257311 RVA: 0x00F2BEBC File Offset: 0x00F2A0BC
+		// Token: 0x060339E1 RID: 211425 RVA: 0x00E72CD0 File Offset: 0x00E70ED0
 		private void RefreshAttributeScroll()
 		{
 			IRoverlikeBlessingSuitData roverlikeBlessingSuitData = this.AllSuitDataList[this.CurrentSuitIndex];
@@ -254,13 +254,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.AttributeScroll.RefreshByData(list, new Action(this.OnAttributeScrollRefreshed), true);
 		}
 
-		// Token: 0x0603ED20 RID: 257312 RVA: 0x00F2BF5C File Offset: 0x00F2A15C
+		// Token: 0x060339E2 RID: 211426 RVA: 0x00E72D70 File Offset: 0x00E70F70
 		private void OnAttributeScrollRefreshed()
 		{
 			EventSystem.Instance.Emit<string>(EEventName.OnGuideTriggerEvent, "RoverlikeBlessingSuitSelect");
 		}
 
-		// Token: 0x0603ED21 RID: 257313 RVA: 0x00F2BF74 File Offset: 0x00F2A174
+		// Token: 0x060339E3 RID: 211427 RVA: 0x00E72D88 File Offset: 0x00E70F88
 		public override void OnRefreshSubView()
 		{
 			IRoverlikeBlessingSuitSelectParam roverlikeBlessingSuitSelectParam = this.OpenParam as IRoverlikeBlessingSuitSelectParam;
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshAttributeScroll();
 		}
 
-		// Token: 0x04020D05 RID: 134405
+		// Token: 0x0401B632 RID: 112178
 		[Nullable(new byte[]
 		{
 			2,
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericScrollViewNew<RoverlikeBlessingCardItem, IRoverlikeBlessingItemData> AttributeScroll;
 
-		// Token: 0x04020D06 RID: 134406
+		// Token: 0x0401B633 RID: 112179
 		[Nullable(new byte[]
 		{
 			2,
@@ -292,45 +292,45 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeBlessingRoleItem, IRoverlikeBlessingRoleData> RoleLayout;
 
-		// Token: 0x04020D07 RID: 134407
+		// Token: 0x0401B634 RID: 112180
 		private List<IRoverlikeBlessingRoleData> RoleDataList = new List<IRoverlikeBlessingRoleData>();
 
-		// Token: 0x04020D08 RID: 134408
+		// Token: 0x0401B635 RID: 112181
 		[Nullable(2)]
 		private ButtonItem ConfirmBtn;
 
-		// Token: 0x04020D09 RID: 134409
+		// Token: 0x0401B636 RID: 112182
 		private List<IRoverlikeBlessingSuitData> AllSuitDataList = new List<IRoverlikeBlessingSuitData>();
 
-		// Token: 0x04020D0A RID: 134410
+		// Token: 0x0401B637 RID: 112183
 		private int CurrentSuitIndex;
 
-		// Token: 0x04020D0B RID: 134411
+		// Token: 0x0401B638 RID: 112184
 		private readonly Dictionary<int, int> RoleIdToSuitIndexMap = new Dictionary<int, int>();
 
-		// Token: 0x0200C367 RID: 50023
+		// Token: 0x0200AD4F RID: 44367
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403AF7E RID: 241534
+			// Token: 0x040358E3 RID: 219363
 			public const int ScrollView = 0;
 
-			// Token: 0x0403AF7F RID: 241535
+			// Token: 0x040358E4 RID: 219364
 			public const int ItemAttribute = 1;
 
-			// Token: 0x0403AF80 RID: 241536
+			// Token: 0x040358E5 RID: 219365
 			public const int BtnArrowRight = 2;
 
-			// Token: 0x0403AF81 RID: 241537
+			// Token: 0x040358E6 RID: 219366
 			public const int BtnArrowLeft = 3;
 
-			// Token: 0x0403AF82 RID: 241538
+			// Token: 0x040358E7 RID: 219367
 			public const int RoleLayout = 4;
 
-			// Token: 0x0403AF83 RID: 241539
+			// Token: 0x040358E8 RID: 219368
 			public const int ItemRoleTemplate = 5;
 
-			// Token: 0x0403AF84 RID: 241540
+			// Token: 0x040358E9 RID: 219369
 			public const int ItemConfirm = 6;
 		}
 	}

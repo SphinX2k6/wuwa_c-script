@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F22 RID: 7970
+	// Token: 0x0200062A RID: 1578
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroVehicle.EKuroVehicleMovementMode")]
 	public enum EKuroVehicleMovementMode
 	{
-		// Token: 0x04010505 RID: 66821
+		// Token: 0x04003BC0 RID: 15296
 		KURO_VEHICLE_MOVE_None,
-		// Token: 0x04010506 RID: 66822
+		// Token: 0x04003BC1 RID: 15297
 		KURO_VEHICLE_MOVE_Falling,
-		// Token: 0x04010507 RID: 66823
+		// Token: 0x04003BC2 RID: 15298
 		KURO_VEHICLE_MOVE_Shipping,
-		// Token: 0x04010508 RID: 66824
+		// Token: 0x04003BC3 RID: 15299
 		KURO_VEHICLE_MOVE_Motorcycling,
-		// Token: 0x04010509 RID: 66825
+		// Token: 0x04003BC4 RID: 15300
 		KURO_VEHICLE_MOVE_Custom,
-		// Token: 0x0401050A RID: 66826
+		// Token: 0x04003BC5 RID: 15301
 		KURO_VEHICLE_MOVE_MAX
 	}
 }

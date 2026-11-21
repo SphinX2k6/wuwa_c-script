@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200168E RID: 5774
+	// Token: 0x02001803 RID: 6147
 	[EnumExtensions]
 	public enum ERogueSelectRoomType
 	{
-		// Token: 0x04004D5F RID: 19807
+		// Token: 0x0400516A RID: 20842
 		Role
 	}
 }

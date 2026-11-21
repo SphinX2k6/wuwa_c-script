@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014FD RID: 5373
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001658 RID: 5720
 	public class ClientFollowShooterLeisureInteract : ActionParams
 	{
-		// Token: 0x06007A26 RID: 31270 RVA: 0x00123D70 File Offset: 0x00121F70
+		// Token: 0x060080F9 RID: 33017 RVA: 0x00132A50 File Offset: 0x00130C50
 		private ClientFollowShooterLeisureInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007A27 RID: 31271 RVA: 0x00123DA8 File Offset: 0x00121FA8
+		// Token: 0x060080FA RID: 33018 RVA: 0x00132A88 File Offset: 0x00130C88
 		public static ClientFollowShooterLeisureInteract Create([Nullable(2)] ClientFollowShooterLeisureInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A28 RID: 31272 RVA: 0x00123DBB File Offset: 0x00121FBB
+		// Token: 0x060080FB RID: 33019 RVA: 0x00132A9B File Offset: 0x00130C9B
 		public static ClientFollowShooterLeisureInteract CreateFromSetValue([Nullable(2)] ClientFollowShooterLeisureInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A29 RID: 31273 RVA: 0x00123DCE File Offset: 0x00121FCE
+		// Token: 0x060080FC RID: 33020 RVA: 0x00132AAE File Offset: 0x00130CAE
 		public ClientFollowShooterLeisureInteract_SetValue ToSetValue()
 		{
 			return new ClientFollowShooterLeisureInteract_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028CF RID: 10447
-		// (get) Token: 0x06007A2A RID: 31274 RVA: 0x00123DED File Offset: 0x00121FED
-		// (set) Token: 0x06007A2B RID: 31275 RVA: 0x00123E18 File Offset: 0x00122018
+		// Token: 0x17002AB9 RID: 10937
+		// (get) Token: 0x060080FD RID: 33021 RVA: 0x00132ACD File Offset: 0x00130CCD
+		// (set) Token: 0x060080FE RID: 33022 RVA: 0x00132AF8 File Offset: 0x00130CF8
 		public virtual int Id
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028D0 RID: 10448
-		// (get) Token: 0x06007A2C RID: 31276 RVA: 0x00123E26 File Offset: 0x00122026
-		// (set) Token: 0x06007A2D RID: 31277 RVA: 0x00123E4D File Offset: 0x0012204D
+		// Token: 0x17002ABA RID: 10938
+		// (get) Token: 0x060080FF RID: 33023 RVA: 0x00132B06 File Offset: 0x00130D06
+		// (set) Token: 0x06008100 RID: 33024 RVA: 0x00132B2D File Offset: 0x00130D2D
 		public virtual IClientFollowShooterLeisureInteractType InteractType
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040046C9 RID: 18121
+		// Token: 0x04004A68 RID: 19048
 		[Nullable(2)]
 		protected new ClientFollowShooterLeisureInteract FbInstance;
 
-		// Token: 0x040046CA RID: 18122
+		// Token: 0x04004A69 RID: 19049
 		[Nullable(2)]
 		protected ClientFollowShooterLeisureInteract_SetValue PocoInterface;
 	}

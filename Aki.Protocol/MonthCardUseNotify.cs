@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000A0E RID: 2574
+	// Token: 0x020009FD RID: 2557
 	[NetMessage(EMessageId.MonthCardUseNotify)]
 	public sealed class MonthCardUseNotify : IMessage<MonthCardUseNotify>, IMessage, IEquatable<MonthCardUseNotify>, IDeepCloneable<MonthCardUseNotify>, IBufferMessage
 	{
-		// Token: 0x0600E12C RID: 57644 RVA: 0x0020FB43 File Offset: 0x0020DD43
+		// Token: 0x0600E012 RID: 57362 RVA: 0x0020D957 File Offset: 0x0020BB57
 		[NullableContext(1)]
 		public static MonthCardUseNotify Create()
 		{
 			return new MonthCardUseNotify();
 		}
 
-		// Token: 0x17002DA5 RID: 11685
-		// (get) Token: 0x0600E12D RID: 57645 RVA: 0x0020FB4A File Offset: 0x0020DD4A
+		// Token: 0x17002D67 RID: 11623
+		// (get) Token: 0x0600E013 RID: 57363 RVA: 0x0020D95E File Offset: 0x0020BB5E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002DA6 RID: 11686
-		// (get) Token: 0x0600E12E RID: 57646 RVA: 0x0020FB4D File Offset: 0x0020DD4D
+		// Token: 0x17002D68 RID: 11624
+		// (get) Token: 0x0600E014 RID: 57364 RVA: 0x0020D961 File Offset: 0x0020BB61
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600E12F RID: 57647 RVA: 0x0020FB54 File Offset: 0x0020DD54
+		// Token: 0x0600E015 RID: 57365 RVA: 0x0020D968 File Offset: 0x0020BB68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonthCardUseNotify()
 		{
 		}
 
-		// Token: 0x0600E130 RID: 57648 RVA: 0x0020FB5C File Offset: 0x0020DD5C
+		// Token: 0x0600E016 RID: 57366 RVA: 0x0020D970 File Offset: 0x0020BB70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonthCardUseNotify(MonthCardUseNotify other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600E131 RID: 57649 RVA: 0x0020FBC8 File Offset: 0x0020DDC8
+		// Token: 0x0600E017 RID: 57367 RVA: 0x0020D9DC File Offset: 0x0020BBDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonthCardUseNotify Clone()
@@ -71,9 +71,9 @@ namespace Aki.Protocol
 			return new MonthCardUseNotify(this);
 		}
 
-		// Token: 0x17002DA7 RID: 11687
-		// (get) Token: 0x0600E132 RID: 57650 RVA: 0x0020FBD0 File Offset: 0x0020DDD0
-		// (set) Token: 0x0600E133 RID: 57651 RVA: 0x0020FBD8 File Offset: 0x0020DDD8
+		// Token: 0x17002D69 RID: 11625
+		// (get) Token: 0x0600E018 RID: 57368 RVA: 0x0020D9E4 File Offset: 0x0020BBE4
+		// (set) Token: 0x0600E019 RID: 57369 RVA: 0x0020D9EC File Offset: 0x0020BBEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemId
@@ -88,9 +88,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002DA8 RID: 11688
-		// (get) Token: 0x0600E134 RID: 57652 RVA: 0x0020FBE1 File Offset: 0x0020DDE1
-		// (set) Token: 0x0600E135 RID: 57653 RVA: 0x0020FBE9 File Offset: 0x0020DDE9
+		// Token: 0x17002D6A RID: 11626
+		// (get) Token: 0x0600E01A RID: 57370 RVA: 0x0020D9F5 File Offset: 0x0020BBF5
+		// (set) Token: 0x0600E01B RID: 57371 RVA: 0x0020D9FD File Offset: 0x0020BBFD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Count
@@ -105,9 +105,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002DA9 RID: 11689
-		// (get) Token: 0x0600E136 RID: 57654 RVA: 0x0020FBF2 File Offset: 0x0020DDF2
-		// (set) Token: 0x0600E137 RID: 57655 RVA: 0x0020FBFA File Offset: 0x0020DDFA
+		// Token: 0x17002D6B RID: 11627
+		// (get) Token: 0x0600E01C RID: 57372 RVA: 0x0020DA06 File Offset: 0x0020BC06
+		// (set) Token: 0x0600E01D RID: 57373 RVA: 0x0020DA0E File Offset: 0x0020BC0E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Days
@@ -122,9 +122,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002DAA RID: 11690
-		// (get) Token: 0x0600E138 RID: 57656 RVA: 0x0020FC03 File Offset: 0x0020DE03
-		// (set) Token: 0x0600E139 RID: 57657 RVA: 0x0020FC0B File Offset: 0x0020DE0B
+		// Token: 0x17002D6C RID: 11628
+		// (get) Token: 0x0600E01E RID: 57374 RVA: 0x0020DA17 File Offset: 0x0020BC17
+		// (set) Token: 0x0600E01F RID: 57375 RVA: 0x0020DA1F File Offset: 0x0020BC1F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DailyRewardItemId
@@ -139,9 +139,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002DAB RID: 11691
-		// (get) Token: 0x0600E13A RID: 57658 RVA: 0x0020FC14 File Offset: 0x0020DE14
-		// (set) Token: 0x0600E13B RID: 57659 RVA: 0x0020FC1C File Offset: 0x0020DE1C
+		// Token: 0x17002D6D RID: 11629
+		// (get) Token: 0x0600E020 RID: 57376 RVA: 0x0020DA28 File Offset: 0x0020BC28
+		// (set) Token: 0x0600E021 RID: 57377 RVA: 0x0020DA30 File Offset: 0x0020BC30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DailyRewardItemCount
@@ -156,9 +156,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002DAC RID: 11692
-		// (get) Token: 0x0600E13C RID: 57660 RVA: 0x0020FC25 File Offset: 0x0020DE25
-		// (set) Token: 0x0600E13D RID: 57661 RVA: 0x0020FC2D File Offset: 0x0020DE2D
+		// Token: 0x17002D6E RID: 11630
+		// (get) Token: 0x0600E022 RID: 57378 RVA: 0x0020DA39 File Offset: 0x0020BC39
+		// (set) Token: 0x0600E023 RID: 57379 RVA: 0x0020DA41 File Offset: 0x0020BC41
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ExtendedDays
@@ -173,7 +173,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600E13E RID: 57662 RVA: 0x0020FC36 File Offset: 0x0020DE36
+		// Token: 0x0600E024 RID: 57380 RVA: 0x0020DA4A File Offset: 0x0020BC4A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MonthCardUseNotify);
 		}
 
-		// Token: 0x0600E13F RID: 57663 RVA: 0x0020FC44 File Offset: 0x0020DE44
+		// Token: 0x0600E025 RID: 57381 RVA: 0x0020DA58 File Offset: 0x0020BC58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MonthCardUseNotify other)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ItemId == other.ItemId && this.Count == other.Count && this.Days == other.Days && this.DailyRewardItemId == other.DailyRewardItemId && this.DailyRewardItemCount == other.DailyRewardItemCount && this.ExtendedDays == other.ExtendedDays && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600E140 RID: 57664 RVA: 0x0020FCD0 File Offset: 0x0020DED0
+		// Token: 0x0600E026 RID: 57382 RVA: 0x0020DAE4 File Offset: 0x0020BCE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -226,7 +226,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600E141 RID: 57665 RVA: 0x0020FD8C File Offset: 0x0020DF8C
+		// Token: 0x0600E027 RID: 57383 RVA: 0x0020DBA0 File Offset: 0x0020BDA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -234,7 +234,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600E142 RID: 57666 RVA: 0x0020FD99 File Offset: 0x0020DF99
+		// Token: 0x0600E028 RID: 57384 RVA: 0x0020DBAD File Offset: 0x0020BDAD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -242,40 +242,40 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600E143 RID: 57667 RVA: 0x0020FDA4 File Offset: 0x0020DFA4
+		// Token: 0x0600E029 RID: 57385 RVA: 0x0020DBB8 File Offset: 0x0020BDB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.DailyRewardItemId != 0)
+			if (this.ExtendedDays != 0)
 			{
-				output.WriteRawTag(24);
-				output.WriteInt32(this.DailyRewardItemId);
+				output.WriteRawTag(8);
+				output.WriteInt32(this.ExtendedDays);
 			}
 			if (this.ItemId != 0)
 			{
-				output.WriteRawTag(48);
+				output.WriteRawTag(32);
 				output.WriteInt32(this.ItemId);
+			}
+			if (this.Days != 0)
+			{
+				output.WriteRawTag(56);
+				output.WriteInt32(this.Days);
+			}
+			if (this.DailyRewardItemId != 0)
+			{
+				output.WriteRawTag(64);
+				output.WriteInt32(this.DailyRewardItemId);
 			}
 			if (this.DailyRewardItemCount != 0)
 			{
-				output.WriteRawTag(64);
+				output.WriteRawTag(72);
 				output.WriteInt32(this.DailyRewardItemCount);
 			}
 			if (this.Count != 0)
 			{
-				output.WriteRawTag(96);
-				output.WriteInt32(this.Count);
-			}
-			if (this.ExtendedDays != 0)
-			{
 				output.WriteRawTag(112);
-				output.WriteInt32(this.ExtendedDays);
-			}
-			if (this.Days != 0)
-			{
-				output.WriteRawTag(120);
-				output.WriteInt32(this.Days);
+				output.WriteInt32(this.Count);
 			}
 			if (this._unknownFields != null)
 			{
@@ -283,7 +283,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600E144 RID: 57668 RVA: 0x0020FE70 File Offset: 0x0020E070
+		// Token: 0x0600E02A RID: 57386 RVA: 0x0020DC80 File Offset: 0x0020BE80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -320,7 +320,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600E145 RID: 57669 RVA: 0x0020FF28 File Offset: 0x0020E128
+		// Token: 0x0600E02B RID: 57387 RVA: 0x0020DD38 File Offset: 0x0020BF38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MonthCardUseNotify other)
@@ -356,7 +356,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600E146 RID: 57670 RVA: 0x0020FFC8 File Offset: 0x0020E1C8
+		// Token: 0x0600E02C RID: 57388 RVA: 0x0020DDD8 File Offset: 0x0020BFD8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -364,7 +364,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600E147 RID: 57671 RVA: 0x0020FFD4 File Offset: 0x0020E1D4
+		// Token: 0x0600E02D RID: 57389 RVA: 0x0020DDE4 File Offset: 0x0020BFE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -376,39 +376,39 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 64U)
+				if (num <= 56U)
 				{
-					if (num == 24U)
+					if (num == 8U)
 					{
-						this.DailyRewardItemId = input.ReadInt32();
+						this.ExtendedDays = input.ReadInt32();
 						continue;
 					}
-					if (num == 48U)
+					if (num == 32U)
 					{
 						this.ItemId = input.ReadInt32();
 						continue;
 					}
-					if (num == 64U)
+					if (num == 56U)
 					{
-						this.DailyRewardItemCount = input.ReadInt32();
+						this.Days = input.ReadInt32();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 96U)
+					if (num == 64U)
 					{
-						this.Count = input.ReadInt32();
+						this.DailyRewardItemId = input.ReadInt32();
+						continue;
+					}
+					if (num == 72U)
+					{
+						this.DailyRewardItemCount = input.ReadInt32();
 						continue;
 					}
 					if (num == 112U)
 					{
-						this.ExtendedDays = input.ReadInt32();
-						continue;
-					}
-					if (num == 120U)
-					{
-						this.Days = input.ReadInt32();
+						this.Count = input.ReadInt32();
 						continue;
 					}
 				}
@@ -416,43 +416,43 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005C92 RID: 23698
+		// Token: 0x04005C9B RID: 23707
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005C93 RID: 23699
-		public const int ItemIdFieldNumber = 6;
-
-		// Token: 0x04005C94 RID: 23700
-		private int itemId_;
-
-		// Token: 0x04005C95 RID: 23701
-		public const int CountFieldNumber = 12;
-
-		// Token: 0x04005C96 RID: 23702
-		private int count_;
-
-		// Token: 0x04005C97 RID: 23703
-		public const int DaysFieldNumber = 15;
-
-		// Token: 0x04005C98 RID: 23704
-		private int days_;
-
-		// Token: 0x04005C99 RID: 23705
-		public const int DailyRewardItemIdFieldNumber = 3;
-
-		// Token: 0x04005C9A RID: 23706
-		private int dailyRewardItemId_;
-
-		// Token: 0x04005C9B RID: 23707
-		public const int DailyRewardItemCountFieldNumber = 8;
-
 		// Token: 0x04005C9C RID: 23708
-		private int dailyRewardItemCount_;
+		public const int ItemIdFieldNumber = 4;
 
 		// Token: 0x04005C9D RID: 23709
-		public const int ExtendedDaysFieldNumber = 14;
+		private int itemId_;
 
 		// Token: 0x04005C9E RID: 23710
+		public const int CountFieldNumber = 14;
+
+		// Token: 0x04005C9F RID: 23711
+		private int count_;
+
+		// Token: 0x04005CA0 RID: 23712
+		public const int DaysFieldNumber = 7;
+
+		// Token: 0x04005CA1 RID: 23713
+		private int days_;
+
+		// Token: 0x04005CA2 RID: 23714
+		public const int DailyRewardItemIdFieldNumber = 8;
+
+		// Token: 0x04005CA3 RID: 23715
+		private int dailyRewardItemId_;
+
+		// Token: 0x04005CA4 RID: 23716
+		public const int DailyRewardItemCountFieldNumber = 9;
+
+		// Token: 0x04005CA5 RID: 23717
+		private int dailyRewardItemCount_;
+
+		// Token: 0x04005CA6 RID: 23718
+		public const int ExtendedDaysFieldNumber = 1;
+
+		// Token: 0x04005CA7 RID: 23719
 		private int extendedDays_;
 	}
 }

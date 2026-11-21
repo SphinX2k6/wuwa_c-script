@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000676 RID: 1654
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000715 RID: 1813
 	public class IRenderBookPage : IRenderSpecifiedRangeType
 	{
-		// Token: 0x0600235C RID: 9052 RVA: 0x000609A8 File Offset: 0x0005EBA8
+		// Token: 0x0600266E RID: 9838 RVA: 0x0006786C File Offset: 0x00065A6C
 		private IRenderBookPage_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600235D RID: 9053 RVA: 0x000609E0 File Offset: 0x0005EBE0
+		// Token: 0x0600266F RID: 9839 RVA: 0x000678A4 File Offset: 0x00065AA4
 		public static IRenderBookPage Create([Nullable(2)] IRenderBookPage instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600235E RID: 9054 RVA: 0x000609F3 File Offset: 0x0005EBF3
+		// Token: 0x06002670 RID: 9840 RVA: 0x000678B7 File Offset: 0x00065AB7
 		public static IRenderBookPage CreateFromSetValue([Nullable(2)] IRenderBookPage_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600235F RID: 9055 RVA: 0x00060A06 File Offset: 0x0005EC06
+		// Token: 0x06002671 RID: 9841 RVA: 0x000678CA File Offset: 0x00065ACA
 		public new IRenderBookPage_SetValue ToSetValue()
 		{
 			return new IRenderBookPage_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700095C RID: 2396
-		// (get) Token: 0x06002360 RID: 9056 RVA: 0x00060A3D File Offset: 0x0005EC3D
-		// (set) Token: 0x06002361 RID: 9057 RVA: 0x00060A68 File Offset: 0x0005EC68
+		// Token: 0x17000A16 RID: 2582
+		// (get) Token: 0x06002672 RID: 9842 RVA: 0x00067901 File Offset: 0x00065B01
+		// (set) Token: 0x06002673 RID: 9843 RVA: 0x0006792C File Offset: 0x00065B2C
 		public override ERenderSpecifiedRangeType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700095D RID: 2397
-		// (get) Token: 0x06002362 RID: 9058 RVA: 0x00060A76 File Offset: 0x0005EC76
-		// (set) Token: 0x06002363 RID: 9059 RVA: 0x00060AA1 File Offset: 0x0005ECA1
+		// Token: 0x17000A17 RID: 2583
+		// (get) Token: 0x06002674 RID: 9844 RVA: 0x0006793A File Offset: 0x00065B3A
+		// (set) Token: 0x06002675 RID: 9845 RVA: 0x00067965 File Offset: 0x00065B65
 		public virtual int Radius
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700095E RID: 2398
-		// (get) Token: 0x06002364 RID: 9060 RVA: 0x00060AAF File Offset: 0x0005ECAF
-		// (set) Token: 0x06002365 RID: 9061 RVA: 0x00060AD6 File Offset: 0x0005ECD6
+		// Token: 0x17000A18 RID: 2584
+		// (get) Token: 0x06002676 RID: 9846 RVA: 0x00067973 File Offset: 0x00065B73
+		// (set) Token: 0x06002677 RID: 9847 RVA: 0x0006799A File Offset: 0x00065B9A
 		public virtual ITargetEntityType CenterTarget
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700095F RID: 2399
-		// (get) Token: 0x06002366 RID: 9062 RVA: 0x00060AE4 File Offset: 0x0005ECE4
-		// (set) Token: 0x06002367 RID: 9063 RVA: 0x00060B0F File Offset: 0x0005ED0F
+		// Token: 0x17000A19 RID: 2585
+		// (get) Token: 0x06002678 RID: 9848 RVA: 0x000679A8 File Offset: 0x00065BA8
+		// (set) Token: 0x06002679 RID: 9849 RVA: 0x000679D3 File Offset: 0x00065BD3
 		public virtual string AkEvent
 		{
 			get
@@ -156,11 +154,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001870 RID: 6256
+		// Token: 0x04001A69 RID: 6761
 		[Nullable(2)]
 		protected new IRenderBookPage FbInstance;
 
-		// Token: 0x04001871 RID: 6257
+		// Token: 0x04001A6A RID: 6762
 		[Nullable(2)]
 		protected new IRenderBookPage_SetValue PocoInterface;
 	}

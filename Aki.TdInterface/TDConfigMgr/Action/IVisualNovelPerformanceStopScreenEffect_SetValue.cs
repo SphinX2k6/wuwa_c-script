@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002096 RID: 8342
+	// Token: 0x020022E1 RID: 8929
 	public class IVisualNovelPerformanceStopScreenEffect_SetValue
 	{
-		// Token: 0x04006E1E RID: 28190
+		// Token: 0x0400742D RID: 29741
 		public EVisualNovelPerformanceType Type;
 
-		// Token: 0x04006E1F RID: 28191
+		// Token: 0x0400742E RID: 29742
 		public float? StartTime;
 
-		// Token: 0x04006E20 RID: 28192
-		[Nullable(1)]
-		public string ScreenEffectDa;
+		// Token: 0x0400742F RID: 29743
+		public IVisualNovelStopScreenEffectPersistent EffectConfig;
 	}
 }

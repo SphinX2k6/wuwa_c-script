@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006844 RID: 26692
+	// Token: 0x02006ECA RID: 28362
 	public class IFocusOnMapMarkT
 	{
-		// Token: 0x1700C64A RID: 50762
-		// (get) Token: 0x0602E8A9 RID: 190633 RVA: 0x006599EA File Offset: 0x00657BEA
-		// (set) Token: 0x0602E8AA RID: 190634 RVA: 0x006599F2 File Offset: 0x00657BF2
+		// Token: 0x1700D00E RID: 53262
+		// (get) Token: 0x06031131 RID: 201009 RVA: 0x006A792A File Offset: 0x006A5B2A
+		// (set) Token: 0x06031132 RID: 201010 RVA: 0x006A7932 File Offset: 0x006A5B32
 		public EMapMarkType Type { get; set; }
 
-		// Token: 0x0602E8AB RID: 190635 RVA: 0x006599FB File Offset: 0x00657BFB
+		// Token: 0x06031133 RID: 201011 RVA: 0x006A793B File Offset: 0x006A5B3B
 		public IFocusOnMapMarkT()
 		{
 			this.Type = EMapMarkType.Custom;

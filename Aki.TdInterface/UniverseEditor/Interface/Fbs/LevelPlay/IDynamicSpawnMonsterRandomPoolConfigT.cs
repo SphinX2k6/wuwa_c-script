@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044A4 RID: 17572
+	// Token: 0x0200490C RID: 18700
 	public class IDynamicSpawnMonsterRandomPoolConfigT
 	{
-		// Token: 0x17007C01 RID: 31745
-		// (get) Token: 0x0601A3CC RID: 107468 RVA: 0x003BF9E9 File Offset: 0x003BDBE9
-		// (set) Token: 0x0601A3CD RID: 107469 RVA: 0x003BF9F1 File Offset: 0x003BDBF1
+		// Token: 0x17008240 RID: 33344
+		// (get) Token: 0x0601BB9D RID: 113565 RVA: 0x003EBBF5 File Offset: 0x003E9DF5
+		// (set) Token: 0x0601BB9E RID: 113566 RVA: 0x003EBBFD File Offset: 0x003E9DFD
 		public int Id { get; set; }
 
-		// Token: 0x17007C02 RID: 31746
-		// (get) Token: 0x0601A3CE RID: 107470 RVA: 0x003BF9FA File Offset: 0x003BDBFA
-		// (set) Token: 0x0601A3CF RID: 107471 RVA: 0x003BFA02 File Offset: 0x003BDC02
+		// Token: 0x17008241 RID: 33345
+		// (get) Token: 0x0601BB9F RID: 113567 RVA: 0x003EBC06 File Offset: 0x003E9E06
+		// (set) Token: 0x0601BBA0 RID: 113568 RVA: 0x003EBC0E File Offset: 0x003E9E0E
 		public EMonsterSourceType MonsterSource { get; set; }
 
-		// Token: 0x17007C03 RID: 31747
-		// (get) Token: 0x0601A3D0 RID: 107472 RVA: 0x003BFA0B File Offset: 0x003BDC0B
-		// (set) Token: 0x0601A3D1 RID: 107473 RVA: 0x003BFA13 File Offset: 0x003BDC13
+		// Token: 0x17008242 RID: 33346
+		// (get) Token: 0x0601BBA1 RID: 113569 RVA: 0x003EBC17 File Offset: 0x003E9E17
+		// (set) Token: 0x0601BBA2 RID: 113570 RVA: 0x003EBC1F File Offset: 0x003E9E1F
 		public List<IDynamicSpawnMonsterGroupT> MonsterGroup { get; set; }
 
-		// Token: 0x0601A3D2 RID: 107474 RVA: 0x003BFA1C File Offset: 0x003BDC1C
+		// Token: 0x0601BBA3 RID: 113571 RVA: 0x003EBC28 File Offset: 0x003E9E28
 		public IDynamicSpawnMonsterRandomPoolConfigT()
 		{
 			this.Id = 0;

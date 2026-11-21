@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053A2 RID: 21410
+	// Token: 0x02004385 RID: 17285
 	public class MoraleAreaSumViewParams
 	{
-		// Token: 0x0401CE43 RID: 118339
+		// Token: 0x040178DB RID: 96475
 		public int AreaId;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020F6 RID: 8438
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002357 RID: 9047
 	public class OverrideAbpAnimScheme : ActionParams
 	{
-		// Token: 0x0600B9A8 RID: 47528 RVA: 0x001AD3E0 File Offset: 0x001AB5E0
+		// Token: 0x0600C534 RID: 50484 RVA: 0x001C4540 File Offset: 0x001C2740
 		private OverrideAbpAnimScheme_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B9A9 RID: 47529 RVA: 0x001AD418 File Offset: 0x001AB618
+		// Token: 0x0600C535 RID: 50485 RVA: 0x001C4578 File Offset: 0x001C2778
 		public static OverrideAbpAnimScheme Create([Nullable(2)] OverrideAbpAnimScheme instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9AA RID: 47530 RVA: 0x001AD42B File Offset: 0x001AB62B
+		// Token: 0x0600C536 RID: 50486 RVA: 0x001C458B File Offset: 0x001C278B
 		public static OverrideAbpAnimScheme CreateFromSetValue([Nullable(2)] OverrideAbpAnimScheme_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9AB RID: 47531 RVA: 0x001AD43E File Offset: 0x001AB63E
+		// Token: 0x0600C537 RID: 50487 RVA: 0x001C459E File Offset: 0x001C279E
 		public OverrideAbpAnimScheme_SetValue ToSetValue()
 		{
 			return new OverrideAbpAnimScheme_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170038BC RID: 14524
-		// (get) Token: 0x0600B9AC RID: 47532 RVA: 0x001AD454 File Offset: 0x001AB654
-		// (set) Token: 0x0600B9AD RID: 47533 RVA: 0x001AD4E7 File Offset: 0x001AB6E7
+		// Token: 0x17003BA8 RID: 15272
+		// (get) Token: 0x0600C538 RID: 50488 RVA: 0x001C45B4 File Offset: 0x001C27B4
+		// (set) Token: 0x0600C539 RID: 50489 RVA: 0x001C4647 File Offset: 0x001C2847
 		public virtual List<IOverrideAbpAnimSchemeConfig> OverrideConfigs
 		{
 			get
@@ -98,18 +96,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006F30 RID: 28464
+		// Token: 0x04007564 RID: 30052
 		[Nullable(2)]
 		protected new OverrideAbpAnimScheme FbInstance;
 
-		// Token: 0x04006F31 RID: 28465
+		// Token: 0x04007565 RID: 30053
 		[Nullable(2)]
 		protected OverrideAbpAnimScheme_SetValue PocoInterface;
 
-		// Token: 0x04006F32 RID: 28466
+		// Token: 0x04007566 RID: 30054
 		private List<IOverrideAbpAnimSchemeConfig> _OverrideConfigsCache;
 
-		// Token: 0x04006F33 RID: 28467
+		// Token: 0x04007567 RID: 30055
 		private bool _OverrideConfigsInited;
 	}
 }

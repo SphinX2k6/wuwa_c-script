@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 {
-	// Token: 0x0200525E RID: 21086
+	// Token: 0x0200422E RID: 16942
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaSkill : UiPanelBase, IAreaCanvas, ISkillInteractMainInterface
 	{
-		// Token: 0x06035E65 RID: 220773 RVA: 0x00CC1430 File Offset: 0x00CBF630
+		// Token: 0x0602AD60 RID: 175456 RVA: 0x00C0EAC0 File Offset: 0x00C0CCC0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			};
 		}
 
-		// Token: 0x06035E66 RID: 220774 RVA: 0x00CC14DC File Offset: 0x00CBF6DC
+		// Token: 0x0602AD61 RID: 175457 RVA: 0x00C0EB6C File Offset: 0x00C0CD6C
 		protected override void OnStart()
 		{
 			this.Sequence = new UiSequencePlayer(this.RootItem);
@@ -44,19 +44,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.ViewProxy.BanButtonClickModule.RegisterButton(base.GetButton(2));
 		}
 
-		// Token: 0x06035E67 RID: 220775 RVA: 0x00CC1545 File Offset: 0x00CBF745
+		// Token: 0x0602AD62 RID: 175458 RVA: 0x00C0EBD5 File Offset: 0x00C0CDD5
 		private void OnPointEnter()
 		{
 			this.ViewProxy.ShowSkillTips(this.SkillData, base.GetItem(4));
 		}
 
-		// Token: 0x06035E68 RID: 220776 RVA: 0x00CC155F File Offset: 0x00CBF75F
+		// Token: 0x0602AD63 RID: 175459 RVA: 0x00C0EBEF File Offset: 0x00C0CDEF
 		private void OnPointExit()
 		{
 			this.ViewProxy.HideSkillTips();
 		}
 
-		// Token: 0x06035E69 RID: 220777 RVA: 0x00CC156C File Offset: 0x00CBF76C
+		// Token: 0x0602AD64 RID: 175460 RVA: 0x00C0EBFC File Offset: 0x00C0CDFC
 		private void OnClick()
 		{
 			if (this.ViewProxy.InCantDragState())
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.OnHandleRoleSkillClick().Forget();
 		}
 
-		// Token: 0x06035E6A RID: 220778 RVA: 0x00CC1654 File Offset: 0x00CBF854
+		// Token: 0x0602AD65 RID: 175461 RVA: 0x00C0ECE4 File Offset: 0x00C0CEE4
 		protected UniTask OnHandleRoleSkillClick()
 		{
 			PhantomArenaSkill.<OnHandleRoleSkillClick>d__10 <OnHandleRoleSkillClick>d__;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <OnHandleRoleSkillClick>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E6B RID: 220779 RVA: 0x00CC1698 File Offset: 0x00CBF898
+		// Token: 0x0602AD66 RID: 175462 RVA: 0x00C0ED28 File Offset: 0x00C0CF28
 		protected UniTask ExecuteBuffEffect()
 		{
 			PhantomArenaSkill.<ExecuteBuffEffect>d__11 <ExecuteBuffEffect>d__;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <ExecuteBuffEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E6C RID: 220780 RVA: 0x00CC16DC File Offset: 0x00CBF8DC
+		// Token: 0x0602AD67 RID: 175463 RVA: 0x00C0ED6C File Offset: 0x00C0CF6C
 		private void RefreshPassiveSkill()
 		{
 			base.GetText(1).SetUIActive(false);
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			base.SetTextureByPath(this.SkillData.Icon, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x06035E6D RID: 220781 RVA: 0x00CC1728 File Offset: 0x00CBF928
+		// Token: 0x0602AD68 RID: 175464 RVA: 0x00C0EDB8 File Offset: 0x00C0CFB8
 		private void RefreshActiveSkill()
 		{
 			base.GetText(1).SetUIActive(true);
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			base.GetText(1).SetText(this.SkillData.CostConsume.ToString(), true);
 		}
 
-		// Token: 0x06035E6E RID: 220782 RVA: 0x00CC1791 File Offset: 0x00CBF991
+		// Token: 0x0602AD69 RID: 175465 RVA: 0x00C0EE21 File Offset: 0x00C0D021
 		public void Refresh(IPhantomArenaSkillData skillData)
 		{
 			this.SkillData = skillData;
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.RefreshSkillEffect();
 		}
 
-		// Token: 0x06035E6F RID: 220783 RVA: 0x00CC17B8 File Offset: 0x00CBF9B8
+		// Token: 0x0602AD6A RID: 175466 RVA: 0x00C0EE48 File Offset: 0x00C0D048
 		public void RefreshSkillEffect()
 		{
 			if (this.SkillData == null || this.SkillData.IsPassive)
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.IsCanUse = flag;
 		}
 
-		// Token: 0x06035E70 RID: 220784 RVA: 0x00CC1850 File Offset: 0x00CBFA50
+		// Token: 0x0602AD6B RID: 175467 RVA: 0x00C0EEE0 File Offset: 0x00C0D0E0
 		public bool CheckCanvasSortOrder(List<EPhantomArenaInteractTag> tagList, ISkillTriggerInfo skillTriggerInfo)
 		{
 			if (!tagList.Contains(EPhantomArenaInteractTag.OwnSkill))
@@ -185,75 +185,75 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return dataId.GetValueOrDefault() == skillId & dataId != null;
 		}
 
-		// Token: 0x06035E71 RID: 220785 RVA: 0x00CC1892 File Offset: 0x00CBFA92
+		// Token: 0x0602AD6C RID: 175468 RVA: 0x00C0EF22 File Offset: 0x00C0D122
 		public void HandleSortOrder()
 		{
 			this.RootItem.GetRenderCanvas().SetSortOrderNew(2, true);
 		}
 
-		// Token: 0x06035E72 RID: 220786 RVA: 0x00CC18A6 File Offset: 0x00CBFAA6
+		// Token: 0x0602AD6D RID: 175469 RVA: 0x00C0EF36 File Offset: 0x00C0D136
 		public void CancelSortOrder()
 		{
 			this.RootItem.GetRenderCanvas().SetSortOrderNew(0, true);
 		}
 
-		// Token: 0x06035E73 RID: 220787 RVA: 0x00CC18BC File Offset: 0x00CBFABC
+		// Token: 0x0602AD6E RID: 175470 RVA: 0x00C0EF4C File Offset: 0x00C0D14C
 		public UniTask StartSkillInteract()
 		{
 			return default(UniTask);
 		}
 
-		// Token: 0x06035E74 RID: 220788 RVA: 0x00CC18D2 File Offset: 0x00CBFAD2
+		// Token: 0x0602AD6F RID: 175471 RVA: 0x00C0EF62 File Offset: 0x00C0D162
 		public ISkillTriggerInfo GetData()
 		{
 			return PhantomArenaBattleModel.Instance.BuffEffectData.RoleSkillTriggerInfo;
 		}
 
-		// Token: 0x06035E75 RID: 220789 RVA: 0x00CC18E3 File Offset: 0x00CBFAE3
+		// Token: 0x0602AD70 RID: 175472 RVA: 0x00C0EF73 File Offset: 0x00C0D173
 		public void FinishSkillInteract()
 		{
 		}
 
-		// Token: 0x06035E76 RID: 220790 RVA: 0x00CC18E5 File Offset: 0x00CBFAE5
+		// Token: 0x0602AD71 RID: 175473 RVA: 0x00C0EF75 File Offset: 0x00C0D175
 		public void CancelSkillInteract()
 		{
 		}
 
-		// Token: 0x06035E77 RID: 220791 RVA: 0x00CC18E7 File Offset: 0x00CBFAE7
+		// Token: 0x0602AD72 RID: 175474 RVA: 0x00C0EF77 File Offset: 0x00C0D177
 		[NullableContext(2)]
 		public void ReceiveUiInteract(ISkillInteractMainUiInteract uiInteract)
 		{
 		}
 
-		// Token: 0x0401C8EA RID: 116970
+		// Token: 0x0401731F RID: 95007
 		private IPhantomArenaSkillData SkillData;
 
-		// Token: 0x0401C8EB RID: 116971
+		// Token: 0x04017320 RID: 95008
 		private bool IsCanUse;
 
-		// Token: 0x0401C8EC RID: 116972
+		// Token: 0x04017321 RID: 95009
 		public PhantomArenaBattleProxy ViewProxy;
 
-		// Token: 0x0401C8ED RID: 116973
+		// Token: 0x04017322 RID: 95010
 		protected UiSequencePlayer Sequence;
 
-		// Token: 0x0200B436 RID: 46134
+		// Token: 0x02009E6E RID: 40558
 		[NullableContext(0)]
 		private class ESkillDefine
 		{
-			// Token: 0x040369A1 RID: 223649
+			// Token: 0x040313F4 RID: 201716
 			public const int SkillIcon = 0;
 
-			// Token: 0x040369A2 RID: 223650
+			// Token: 0x040313F5 RID: 201717
 			public const int CostNum = 1;
 
-			// Token: 0x040369A3 RID: 223651
+			// Token: 0x040313F6 RID: 201718
 			public const int Button = 2;
 
-			// Token: 0x040369A4 RID: 223652
+			// Token: 0x040313F7 RID: 201719
 			public const int CostItem = 3;
 
-			// Token: 0x040369A5 RID: 223653
+			// Token: 0x040313F8 RID: 201720
 			public const int AttachItem = 4;
 		}
 	}

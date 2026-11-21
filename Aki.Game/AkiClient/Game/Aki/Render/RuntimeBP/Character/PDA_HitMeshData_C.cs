@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Character
 {
-	// Token: 0x02003DF3 RID: 15859
+	// Token: 0x02003118 RID: 12568
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Character/PDA_HitMeshData.PDA_HitMeshData_C")]
 	[UnrealStructLayout(160, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 148)]
 	public class PDA_HitMeshData_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060279A1 RID: 162209 RVA: 0x00995CEB File Offset: 0x00993EEB
+		// Token: 0x0601EC9E RID: 126110 RVA: 0x0091D521 File Offset: 0x0091B721
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (PDA_HitMeshData_C._ClassPtr == IntPtr.Zero)
@@ -22,87 +22,87 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character
 			return PDA_HitMeshData_C._ClassPtr;
 		}
 
-		// Token: 0x060279A2 RID: 162210 RVA: 0x00995D10 File Offset: 0x00993F10
+		// Token: 0x0601EC9F RID: 126111 RVA: 0x0091D548 File Offset: 0x0091B748
 		public PDA_HitMeshData_C() : this(BuiltinUtils.AllocNativeUObject(PDA_HitMeshData_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060279A3 RID: 162211 RVA: 0x00995D38 File Offset: 0x00993F38
+		// Token: 0x0601ECA0 RID: 126112 RVA: 0x0091D570 File Offset: 0x0091B770
 		[NullableContext(1)]
 		public PDA_HitMeshData_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(PDA_HitMeshData_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170058FA RID: 22778
-		// (get) Token: 0x060279A4 RID: 162212 RVA: 0x00995D6B File Offset: 0x00993F6B
-		// (set) Token: 0x060279A5 RID: 162213 RVA: 0x00995D7F File Offset: 0x00993F7F
+		// Token: 0x1700358E RID: 13710
+		// (get) Token: 0x0601ECA1 RID: 126113 RVA: 0x0091D5A3 File Offset: 0x0091B7A3
+		// (set) Token: 0x0601ECA2 RID: 126114 RVA: 0x0091D5B7 File Offset: 0x0091B7B7
 		[Nullable(2)]
 		public unsafe USkeletalMesh HitSkeletalMesh
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMesh>(base.NativePtr / (IntPtr)sizeof(void*) + PDA_HitMeshData_C.__PropertyOffset_0);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMesh>(base.NativePtr / (IntPtr)sizeof(void*) + PDA_HitMeshData_C.__PropertyOffset_HitSkeletalMesh);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PDA_HitMeshData_C.__PropertyOffset_0, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PDA_HitMeshData_C.__PropertyOffset_HitSkeletalMesh, value);
 			}
 		}
 
-		// Token: 0x170058FB RID: 22779
-		// (get) Token: 0x060279A6 RID: 162214 RVA: 0x00995D94 File Offset: 0x00993F94
-		// (set) Token: 0x060279A7 RID: 162215 RVA: 0x00995DA8 File Offset: 0x00993FA8
+		// Token: 0x1700358F RID: 13711
+		// (get) Token: 0x0601ECA3 RID: 126115 RVA: 0x0091D5CC File Offset: 0x0091B7CC
+		// (set) Token: 0x0601ECA4 RID: 126116 RVA: 0x0091D5E0 File Offset: 0x0091B7E0
 		public unsafe FTransform HitSkeletalMeshTransform
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_HitMeshData_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)PDA_HitMeshData_C.__PropertyOffset_HitSkeletalMeshTransform);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_HitMeshData_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)PDA_HitMeshData_C.__PropertyOffset_HitSkeletalMeshTransform) = value;
 			}
 		}
 
-		// Token: 0x170058FC RID: 22780
-		// (get) Token: 0x060279A8 RID: 162216 RVA: 0x00995DBD File Offset: 0x00993FBD
-		// (set) Token: 0x060279A9 RID: 162217 RVA: 0x00995DCD File Offset: 0x00993FCD
+		// Token: 0x17003590 RID: 13712
+		// (get) Token: 0x0601ECA5 RID: 126117 RVA: 0x0091D5F5 File Offset: 0x0091B7F5
+		// (set) Token: 0x0601ECA6 RID: 126118 RVA: 0x0091D605 File Offset: 0x0091B805
 		public unsafe float LastTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_HitMeshData_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)PDA_HitMeshData_C.__PropertyOffset_LastTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_HitMeshData_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)PDA_HitMeshData_C.__PropertyOffset_LastTime) = value;
 			}
 		}
 
-		// Token: 0x060279AA RID: 162218 RVA: 0x00995DDE File Offset: 0x00993FDE
+		// Token: 0x0601ECA7 RID: 126119 RVA: 0x0091D616 File Offset: 0x0091B816
 		protected PDA_HitMeshData_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014070 RID: 82032
+		// Token: 0x040105B8 RID: 67000
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Character/PDA_HitMeshData.PDA_HitMeshData_C";
 
-		// Token: 0x04014071 RID: 82033
+		// Token: 0x040105B9 RID: 67001
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014072 RID: 82034
+		// Token: 0x040105BA RID: 67002
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014073 RID: 82035
-		internal static int __PropertyOffset_0;
+		// Token: 0x040105BB RID: 67003
+		internal static int __PropertyOffset_HitSkeletalMesh;
 
-		// Token: 0x04014074 RID: 82036
-		internal static int __PropertyOffset_1;
+		// Token: 0x040105BC RID: 67004
+		internal static int __PropertyOffset_HitSkeletalMeshTransform;
 
-		// Token: 0x04014075 RID: 82037
-		internal static int __PropertyOffset_2;
+		// Token: 0x040105BD RID: 67005
+		internal static int __PropertyOffset_LastTime;
 	}
 }

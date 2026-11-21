@@ -13,17 +13,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C40 RID: 7232
+// Token: 0x020010FF RID: 4351
 [NullableContext(1)]
 [Nullable(0)]
 public class FriendView : UiViewBase
 {
-	// Token: 0x0600D9FB RID: 55803 RVA: 0x00329D9B File Offset: 0x00327F9B
+	// Token: 0x0600AE11 RID: 44561 RVA: 0x0033519B File Offset: 0x0033339B
 	public FriendView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600D9FC RID: 55804 RVA: 0x00329DB0 File Offset: 0x00327FB0
+	// Token: 0x0600AE12 RID: 44562 RVA: 0x003351B0 File Offset: 0x003333B0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -66,7 +66,7 @@ public class FriendView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D9FD RID: 55805 RVA: 0x00329FCC File Offset: 0x003281CC
+	// Token: 0x0600AE13 RID: 44563 RVA: 0x003353CC File Offset: 0x003335CC
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.UpdateFriendViewShow, new Action(this.CallBackUpdateFriendViewShow));
@@ -76,7 +76,7 @@ public class FriendView : UiViewBase
 		EventSystem.Instance.Add(EEventName.UpdateRecentlyTeamDataEvent, new Action(this.RefreshRecentlyTeamView));
 	}
 
-	// Token: 0x0600D9FE RID: 55806 RVA: 0x0032A068 File Offset: 0x00328268
+	// Token: 0x0600AE14 RID: 44564 RVA: 0x00335468 File Offset: 0x00333668
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.UpdateFriendViewShow, new Action(this.CallBackUpdateFriendViewShow));
@@ -86,7 +86,7 @@ public class FriendView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.UpdateRecentlyTeamDataEvent, new Action(this.RefreshRecentlyTeamView));
 	}
 
-	// Token: 0x0600D9FF RID: 55807 RVA: 0x0032A104 File Offset: 0x00328304
+	// Token: 0x0600AE15 RID: 44565 RVA: 0x00335504 File Offset: 0x00333704
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FriendView.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -97,13 +97,13 @@ public class FriendView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DA00 RID: 55808 RVA: 0x0032A147 File Offset: 0x00328347
+	// Token: 0x0600AE16 RID: 44566 RVA: 0x00335547 File Offset: 0x00333747
 	protected override void OnBeforeShow()
 	{
 		this.RefreshShow();
 	}
 
-	// Token: 0x0600DA01 RID: 55809 RVA: 0x0032A150 File Offset: 0x00328350
+	// Token: 0x0600AE17 RID: 44567 RVA: 0x00335550 File Offset: 0x00333750
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TabComponent != null)
@@ -121,13 +121,13 @@ public class FriendView : UiViewBase
 		FriendModel.Instance.ClearTestFriendData();
 	}
 
-	// Token: 0x0600DA02 RID: 55810 RVA: 0x0032A1B7 File Offset: 0x003283B7
+	// Token: 0x0600AE18 RID: 44568 RVA: 0x003355B7 File Offset: 0x003337B7
 	private FriendItem CreateFriendItem()
 	{
 		return new FriendItem(this.ViewInfo.Name, null);
 	}
 
-	// Token: 0x0600DA03 RID: 55811 RVA: 0x0032A1CC File Offset: 0x003283CC
+	// Token: 0x0600AE19 RID: 44569 RVA: 0x003355CC File Offset: 0x003337CC
 	private UniTask InitFilter()
 	{
 		FriendView.<InitFilter>d__20 <InitFilter>d__;
@@ -138,19 +138,19 @@ public class FriendView : UiViewBase
 		return <InitFilter>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DA04 RID: 55812 RVA: 0x0032A20F File Offset: 0x0032840F
+	// Token: 0x0600AE1A RID: 44570 RVA: 0x0033560F File Offset: 0x0033380F
 	protected void CloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600DA05 RID: 55813 RVA: 0x0032A218 File Offset: 0x00328418
+	// Token: 0x0600AE1B RID: 44571 RVA: 0x00335618 File Offset: 0x00333818
 	private CommonTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new CommonTabItem();
 	}
 
-	// Token: 0x0600DA06 RID: 55814 RVA: 0x0032A220 File Offset: 0x00328420
+	// Token: 0x0600AE1C RID: 44572 RVA: 0x00335620 File Offset: 0x00333820
 	private void ToggleCallBack(int index)
 	{
 		FriendFilter friendFilter = this.FilterConfigList[index];
@@ -158,7 +158,7 @@ public class FriendView : UiViewBase
 		this.RefreshShow();
 	}
 
-	// Token: 0x0600DA07 RID: 55815 RVA: 0x0032A258 File Offset: 0x00328458
+	// Token: 0x0600AE1D RID: 44573 RVA: 0x00335658 File Offset: 0x00333858
 	private CommonTabData GetCommonData(int index)
 	{
 		FriendFilter friendFilter = this.FilterConfigList[index];
@@ -178,7 +178,7 @@ public class FriendView : UiViewBase
 		return new CommonTabData(friendFilter.IconPath, new CommonTabTitleData(textId, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x0600DA08 RID: 55816 RVA: 0x0032A2E0 File Offset: 0x003284E0
+	// Token: 0x0600AE1E RID: 44574 RVA: 0x003356E0 File Offset: 0x003338E0
 	private void RefreshShow()
 	{
 		FriendModel instance = FriendModel.Instance;
@@ -220,7 +220,7 @@ public class FriendView : UiViewBase
 		EventSystem.Instance.Emit(EEventName.RefreshFriendApplicationRedDot);
 	}
 
-	// Token: 0x0600DA09 RID: 55817 RVA: 0x0032A448 File Offset: 0x00328648
+	// Token: 0x0600AE1F RID: 44575 RVA: 0x00335848 File Offset: 0x00333A48
 	private void RefreshBtnShowState()
 	{
 		bool active = false;
@@ -252,7 +252,7 @@ public class FriendView : UiViewBase
 		this.CancelButtonItem.SetActive(active);
 	}
 
-	// Token: 0x0600DA0A RID: 55818 RVA: 0x0032A554 File Offset: 0x00328754
+	// Token: 0x0600AE20 RID: 44576 RVA: 0x00335954 File Offset: 0x00333B54
 	private void ShowCurrentStateNecessaryItem()
 	{
 		EFriendFilter? filterState = FriendModel.Instance.FilterState;
@@ -273,7 +273,7 @@ public class FriendView : UiViewBase
 		this.RefreshBtnShowState();
 	}
 
-	// Token: 0x0600DA0B RID: 55819 RVA: 0x0032A5C4 File Offset: 0x003287C4
+	// Token: 0x0600AE21 RID: 44577 RVA: 0x003359C4 File Offset: 0x00333BC4
 	private void ShowFriendsCount()
 	{
 		int friendLimitByViewType = FriendConfig.Instance.GetFriendLimitByViewType(FriendModel.Instance.FilterState.Value);
@@ -301,7 +301,7 @@ public class FriendView : UiViewBase
 		base.GetItem(4).SetUIActive(count <= 0);
 	}
 
-	// Token: 0x0600DA0C RID: 55820 RVA: 0x0032A68C File Offset: 0x0032888C
+	// Token: 0x0600AE22 RID: 44578 RVA: 0x00335A8C File Offset: 0x00333C8C
 	private void OnClickAddFriendBtn(int num)
 	{
 		EFriendFilter? filterState = FriendModel.Instance.FilterState;
@@ -317,7 +317,7 @@ public class FriendView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600DA0D RID: 55821 RVA: 0x0032A6D8 File Offset: 0x003288D8
+	// Token: 0x0600AE23 RID: 44579 RVA: 0x00335AD8 File Offset: 0x00333CD8
 	private void OnClickAllAcceptBtn(int num)
 	{
 		this.ConfirmButtonItem.GetRootItem().SetRaycastTarget(false);
@@ -341,7 +341,7 @@ public class FriendView : UiViewBase
 		FriendController.Instance.RequestFriendApplyHandle(this.RequestSendIdList, FriendApplyOperator.Approve);
 	}
 
-	// Token: 0x0600DA0E RID: 55822 RVA: 0x0032A7D8 File Offset: 0x003289D8
+	// Token: 0x0600AE24 RID: 44580 RVA: 0x00335BD8 File Offset: 0x00333DD8
 	private void OnClickAllIgnoreBtn(int num)
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.IgnoreAllFriendApplication);
@@ -370,7 +370,7 @@ public class FriendView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600DA0F RID: 55823 RVA: 0x0032A884 File Offset: 0x00328A84
+	// Token: 0x0600AE25 RID: 44581 RVA: 0x00335C84 File Offset: 0x00333E84
 	private void OnClickBlackListBtn(int num)
 	{
 		EFriendFilter? filterState = FriendModel.Instance.FilterState;
@@ -386,20 +386,20 @@ public class FriendView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600DA10 RID: 55824 RVA: 0x0032A8D0 File Offset: 0x00328AD0
+	// Token: 0x0600AE26 RID: 44582 RVA: 0x00335CD0 File Offset: 0x00333ED0
 	private void OnClickCopyUid()
 	{
 		GenericPromptController.Instance.ShowPromptByCode("CopiedMyUid", Array.Empty<object>());
 		ULGUIBPLibrary.ClipBoardCopy(PlayerInfoModel.Instance.GetId().ToString());
 	}
 
-	// Token: 0x0600DA11 RID: 55825 RVA: 0x0032A90E File Offset: 0x00328B0E
+	// Token: 0x0600AE27 RID: 44583 RVA: 0x00335D0E File Offset: 0x00333F0E
 	private void CallBackUpdateFriendViewShow()
 	{
 		this.RefreshShow();
 	}
 
-	// Token: 0x0600DA12 RID: 55826 RVA: 0x0032A918 File Offset: 0x00328B18
+	// Token: 0x0600AE28 RID: 44584 RVA: 0x00335D18 File Offset: 0x00333F18
 	private void CallBackFriendApplyListUpdate()
 	{
 		if (FriendModel.Instance.FilterState.GetValueOrDefault() == EFriendFilter.FriendRequest)
@@ -408,7 +408,7 @@ public class FriendView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600DA13 RID: 55827 RVA: 0x0032A940 File Offset: 0x00328B40
+	// Token: 0x0600AE29 RID: 44585 RVA: 0x00335D40 File Offset: 0x00333F40
 	private void RefreshItemMuteState(int playerId)
 	{
 		int i = 0;
@@ -431,7 +431,7 @@ public class FriendView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600DA14 RID: 55828 RVA: 0x0032A990 File Offset: 0x00328B90
+	// Token: 0x0600AE2A RID: 44586 RVA: 0x00335D90 File Offset: 0x00333F90
 	private void RefreshScroller(List<FriendItemSt> friendData)
 	{
 		if (this.FriendScrollListLayout != null && friendData.Count > 0)
@@ -452,7 +452,7 @@ public class FriendView : UiViewBase
 		friendScrollView2.SetUIActive(false);
 	}
 
-	// Token: 0x0600DA15 RID: 55829 RVA: 0x0032A9E1 File Offset: 0x00328BE1
+	// Token: 0x0600AE2B RID: 44587 RVA: 0x00335DE1 File Offset: 0x00333FE1
 	private void RefreshRecentlyTeamView()
 	{
 		this.PlayerSortedIdList = FriendController.Instance.CreateFriendItemSt(FriendModel.Instance.GetRecentlyTeamIds(), EFriendItemOperation.Default);
@@ -460,7 +460,7 @@ public class FriendView : UiViewBase
 		this.ShowFriendsCount();
 	}
 
-	// Token: 0x0600DA16 RID: 55830 RVA: 0x0032AA10 File Offset: 0x00328C10
+	// Token: 0x0600AE2C RID: 44588 RVA: 0x00335E10 File Offset: 0x00334010
 	private void OnClickSwitchToggle(EToggleState toggleState)
 	{
 		bool state = !KuroSdkController.Instance.GetSdkFriendOnlyState();
@@ -468,7 +468,7 @@ public class FriendView : UiViewBase
 		this.RefreshShow();
 	}
 
-	// Token: 0x0600DA17 RID: 55831 RVA: 0x0032AA3C File Offset: 0x00328C3C
+	// Token: 0x0600AE2D RID: 44589 RVA: 0x00335E3C File Offset: 0x0033403C
 	private void RefreshPlayStationShowToggle()
 	{
 		if (KuroSdkController.Instance.SupportSwitchFriendShowType())
@@ -490,14 +490,14 @@ public class FriendView : UiViewBase
 		base.GetText(11).SetUIActive(false);
 	}
 
-	// Token: 0x0600DA18 RID: 55832 RVA: 0x0032AB04 File Offset: 0x00328D04
+	// Token: 0x0600AE2E RID: 44590 RVA: 0x00335F04 File Offset: 0x00334104
 	private void RefreshToggleBySelectState()
 	{
 		EToggleState state = KuroSdkController.Instance.GetSdkFriendOnlyState() ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(10).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x04006344 RID: 25412
+	// Token: 0x04006416 RID: 25622
 	[Nullable(new byte[]
 	{
 		2,
@@ -505,7 +505,7 @@ public class FriendView : UiViewBase
 	})]
 	private List<FriendItemSt> PlayerSortedIdList;
 
-	// Token: 0x04006345 RID: 25413
+	// Token: 0x04006417 RID: 25623
 	[Nullable(new byte[]
 	{
 		2,
@@ -514,7 +514,7 @@ public class FriendView : UiViewBase
 	})]
 	private LoopScrollView<FriendItem, FriendItemSt> FriendScrollListLayout;
 
-	// Token: 0x04006346 RID: 25414
+	// Token: 0x04006418 RID: 25624
 	[Nullable(new byte[]
 	{
 		2,
@@ -522,30 +522,30 @@ public class FriendView : UiViewBase
 	})]
 	private List<FriendItemSt> FriendApplicationItemList;
 
-	// Token: 0x04006347 RID: 25415
+	// Token: 0x04006419 RID: 25625
 	[Nullable(2)]
 	private ButtonItem ConfirmButtonItem;
 
-	// Token: 0x04006348 RID: 25416
+	// Token: 0x0400641A RID: 25626
 	[Nullable(2)]
 	private ButtonItem CancelButtonItem;
 
-	// Token: 0x04006349 RID: 25417
+	// Token: 0x0400641B RID: 25627
 	[Nullable(2)]
 	private TimerHandle AllAgreeButtonMaskTimerId;
 
-	// Token: 0x0400634A RID: 25418
+	// Token: 0x0400641C RID: 25628
 	[Nullable(2)]
 	private TimerHandle AllIgnoreButtonMaskTimerId;
 
-	// Token: 0x0400634B RID: 25419
+	// Token: 0x0400641D RID: 25629
 	[Nullable(2)]
 	private List<int> RequestSendIdList;
 
-	// Token: 0x0400634C RID: 25420
+	// Token: 0x0400641E RID: 25630
 	private List<FriendFilter> FilterConfigList = new List<FriendFilter>();
 
-	// Token: 0x0400634D RID: 25421
+	// Token: 0x0400641F RID: 25631
 	[Nullable(new byte[]
 	{
 		2,
@@ -553,48 +553,48 @@ public class FriendView : UiViewBase
 	})]
 	private TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-	// Token: 0x0400634E RID: 25422
+	// Token: 0x04006420 RID: 25632
 	[Nullable(2)]
 	private UUIItem FriendScrollView;
 
-	// Token: 0x02008208 RID: 33288
+	// Token: 0x02007391 RID: 29585
 	[NullableContext(0)]
 	private class EFriendViewComponents
 	{
-		// Token: 0x0402A6FF RID: 173823
+		// Token: 0x04025A26 RID: 154150
 		public const int TabComponent = 0;
 
-		// Token: 0x0402A700 RID: 173824
+		// Token: 0x04025A27 RID: 154151
 		public const int FriendCountText = 1;
 
-		// Token: 0x0402A701 RID: 173825
+		// Token: 0x04025A28 RID: 154152
 		public const int FriendScrollView = 2;
 
-		// Token: 0x0402A702 RID: 173826
+		// Token: 0x04025A29 RID: 154153
 		public const int FriendItemModel = 3;
 
-		// Token: 0x0402A703 RID: 173827
+		// Token: 0x04025A2A RID: 154154
 		public const int FriendListEmptyBox = 4;
 
-		// Token: 0x0402A704 RID: 173828
+		// Token: 0x04025A2B RID: 154155
 		public const int EmptyText = 5;
 
-		// Token: 0x0402A705 RID: 173829
+		// Token: 0x04025A2C RID: 154156
 		public const int ConfirmBtnItem = 6;
 
-		// Token: 0x0402A706 RID: 173830
+		// Token: 0x04025A2D RID: 154157
 		public const int CancelBtnItem = 7;
 
-		// Token: 0x0402A707 RID: 173831
+		// Token: 0x04025A2E RID: 154158
 		public const int MyUIDText = 8;
 
-		// Token: 0x0402A708 RID: 173832
+		// Token: 0x04025A2F RID: 154159
 		public const int CopyUIDBtn = 9;
 
-		// Token: 0x0402A709 RID: 173833
+		// Token: 0x04025A30 RID: 154160
 		public const int SwitchPlayStationShowToggle = 10;
 
-		// Token: 0x0402A70A RID: 173834
+		// Token: 0x04025A31 RID: 154161
 		public const int SwitchPlayStationShowToggleText = 11;
 	}
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002EF1 RID: 12017
+// Token: 0x02002444 RID: 9284
 public enum EAddBattleFlagType
 {
-	// Token: 0x0400C09F RID: 49311
+	// Token: 0x0400C440 RID: 50240
 	AllSkill = 1,
-	// Token: 0x0400C0A0 RID: 49312
+	// Token: 0x0400C441 RID: 50241
 	SkillId,
-	// Token: 0x0400C0A1 RID: 49313
+	// Token: 0x0400C442 RID: 50242
 	SkillGenre
 }

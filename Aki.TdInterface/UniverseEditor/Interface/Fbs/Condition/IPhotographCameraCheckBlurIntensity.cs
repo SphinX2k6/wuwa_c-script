@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C73 RID: 19571
+	// Token: 0x0200516C RID: 20844
 	public struct IPhotographCameraCheckBlurIntensity : IFlatbufferObject
 	{
-		// Token: 0x17008E25 RID: 36389
-		// (get) Token: 0x0601F08B RID: 127115 RVA: 0x00456A6E File Offset: 0x00454C6E
+		// Token: 0x17009553 RID: 38227
+		// (get) Token: 0x06020CAD RID: 134317 RVA: 0x0048A5BE File Offset: 0x004887BE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F08C RID: 127116 RVA: 0x00456A7B File Offset: 0x00454C7B
+		// Token: 0x06020CAE RID: 134318 RVA: 0x0048A5CB File Offset: 0x004887CB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F08D RID: 127117 RVA: 0x00456A84 File Offset: 0x00454C84
+		// Token: 0x06020CAF RID: 134319 RVA: 0x0048A5D4 File Offset: 0x004887D4
 		public static IPhotographCameraCheckBlurIntensity GetRootAsIPhotographCameraCheckBlurIntensity(ByteBuffer _bb)
 		{
 			return IPhotographCameraCheckBlurIntensity.GetRootAsIPhotographCameraCheckBlurIntensity(_bb, default(IPhotographCameraCheckBlurIntensity));
 		}
 
-		// Token: 0x0601F08E RID: 127118 RVA: 0x00456AA0 File Offset: 0x00454CA0
+		// Token: 0x06020CB0 RID: 134320 RVA: 0x0048A5F0 File Offset: 0x004887F0
 		public static IPhotographCameraCheckBlurIntensity GetRootAsIPhotographCameraCheckBlurIntensity(ByteBuffer _bb, IPhotographCameraCheckBlurIntensity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F08F RID: 127119 RVA: 0x00456ABD File Offset: 0x00454CBD
+		// Token: 0x06020CB1 RID: 134321 RVA: 0x0048A60D File Offset: 0x0048880D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F090 RID: 127120 RVA: 0x00456ACC File Offset: 0x00454CCC
+		// Token: 0x06020CB2 RID: 134322 RVA: 0x0048A61C File Offset: 0x0048881C
 		public IPhotographCameraCheckBlurIntensity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008E26 RID: 36390
-		// (get) Token: 0x0601F091 RID: 127121 RVA: 0x00456ADC File Offset: 0x00454CDC
+		// Token: 0x17009554 RID: 38228
+		// (get) Token: 0x06020CB3 RID: 134323 RVA: 0x0048A62C File Offset: 0x0048882C
 		public EPhotographCameraCheckType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008E27 RID: 36391
-		// (get) Token: 0x0601F092 RID: 127122 RVA: 0x00456B18 File Offset: 0x00454D18
+		// Token: 0x17009555 RID: 38229
+		// (get) Token: 0x06020CB4 RID: 134324 RVA: 0x0048A668 File Offset: 0x00488868
 		public int MinBlurIntensity
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008E28 RID: 36392
-		// (get) Token: 0x0601F093 RID: 127123 RVA: 0x00456B54 File Offset: 0x00454D54
+		// Token: 0x17009556 RID: 38230
+		// (get) Token: 0x06020CB5 RID: 134325 RVA: 0x0048A6A4 File Offset: 0x004888A4
 		public int MaxBlurIntensity
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F094 RID: 127124 RVA: 0x00456B90 File Offset: 0x00454D90
+		// Token: 0x06020CB6 RID: 134326 RVA: 0x0048A6E0 File Offset: 0x004888E0
 		public static Offset<IPhotographCameraCheckBlurIntensity> CreateIPhotographCameraCheckBlurIntensity(FlatBufferBuilder builder, EPhotographCameraCheckType Type = EPhotographCameraCheckType.CameraTemplate, int MinBlurIntensity = 0, int MaxBlurIntensity = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IPhotographCameraCheckBlurIntensity.EndIPhotographCameraCheckBlurIntensity(builder);
 		}
 
-		// Token: 0x0601F095 RID: 127125 RVA: 0x00456BB4 File Offset: 0x00454DB4
+		// Token: 0x06020CB7 RID: 134327 RVA: 0x0048A704 File Offset: 0x00488904
 		public static void StartIPhotographCameraCheckBlurIntensity(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601F096 RID: 127126 RVA: 0x00456BBD File Offset: 0x00454DBD
+		// Token: 0x06020CB8 RID: 134328 RVA: 0x0048A70D File Offset: 0x0048890D
 		public static void AddType(FlatBufferBuilder builder, EPhotographCameraCheckType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601F097 RID: 127127 RVA: 0x00456BC8 File Offset: 0x00454DC8
+		// Token: 0x06020CB9 RID: 134329 RVA: 0x0048A718 File Offset: 0x00488918
 		public static void AddMinBlurIntensity(FlatBufferBuilder builder, int minBlurIntensity)
 		{
 			builder.AddInt(1, minBlurIntensity, 0);
 		}
 
-		// Token: 0x0601F098 RID: 127128 RVA: 0x00456BD3 File Offset: 0x00454DD3
+		// Token: 0x06020CBA RID: 134330 RVA: 0x0048A723 File Offset: 0x00488923
 		public static void AddMaxBlurIntensity(FlatBufferBuilder builder, int maxBlurIntensity)
 		{
 			builder.AddInt(2, maxBlurIntensity, 0);
 		}
 
-		// Token: 0x0601F099 RID: 127129 RVA: 0x00456BDE File Offset: 0x00454DDE
+		// Token: 0x06020CBB RID: 134331 RVA: 0x0048A72E File Offset: 0x0048892E
 		public static Offset<IPhotographCameraCheckBlurIntensity> EndIPhotographCameraCheckBlurIntensity(FlatBufferBuilder builder)
 		{
 			return new Offset<IPhotographCameraCheckBlurIntensity>(builder.EndTable());
 		}
 
-		// Token: 0x0601F09A RID: 127130 RVA: 0x00456BEC File Offset: 0x00454DEC
+		// Token: 0x06020CBC RID: 134332 RVA: 0x0048A73C File Offset: 0x0048893C
 		public IPhotographCameraCheckBlurIntensityT UnPack()
 		{
 			IPhotographCameraCheckBlurIntensityT photographCameraCheckBlurIntensityT = new IPhotographCameraCheckBlurIntensityT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return photographCameraCheckBlurIntensityT;
 		}
 
-		// Token: 0x0601F09B RID: 127131 RVA: 0x00456C07 File Offset: 0x00454E07
+		// Token: 0x06020CBD RID: 134333 RVA: 0x0048A757 File Offset: 0x00488957
 		public void UnPackTo(IPhotographCameraCheckBlurIntensityT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.MaxBlurIntensity = this.MaxBlurIntensity;
 		}
 
-		// Token: 0x0601F09C RID: 127132 RVA: 0x00456C30 File Offset: 0x00454E30
+		// Token: 0x06020CBE RID: 134334 RVA: 0x0048A780 File Offset: 0x00488980
 		public static Offset<IPhotographCameraCheckBlurIntensity> Pack(FlatBufferBuilder builder, IPhotographCameraCheckBlurIntensityT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IPhotographCameraCheckBlurIntensity.CreateIPhotographCameraCheckBlurIntensity(builder, _o.Type, _o.MinBlurIntensity, _o.MaxBlurIntensity);
 		}
 
-		// Token: 0x0400D624 RID: 54820
+		// Token: 0x0400E14B RID: 57675
 		private Table __p;
 	}
 }

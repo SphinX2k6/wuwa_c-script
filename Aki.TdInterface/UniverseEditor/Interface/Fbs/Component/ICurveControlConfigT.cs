@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200504C RID: 20556
+	// Token: 0x020055AE RID: 21934
 	public class ICurveControlConfigT
 	{
-		// Token: 0x1700952B RID: 38187
-		// (get) Token: 0x06020F17 RID: 134935 RVA: 0x004945B6 File Offset: 0x004927B6
-		// (set) Token: 0x06020F18 RID: 134936 RVA: 0x004945BE File Offset: 0x004927BE
+		// Token: 0x17009D11 RID: 40209
+		// (get) Token: 0x06022E51 RID: 142929 RVA: 0x004CE26A File Offset: 0x004CC46A
+		// (set) Token: 0x06022E52 RID: 142930 RVA: 0x004CE272 File Offset: 0x004CC472
 		public ECurveControlType Type { get; set; }
 
-		// Token: 0x06020F19 RID: 134937 RVA: 0x004945C7 File Offset: 0x004927C7
+		// Token: 0x06022E53 RID: 142931 RVA: 0x004CE27B File Offset: 0x004CC47B
 		public ICurveControlConfigT()
 		{
 			this.Type = ECurveControlType.ChargeSlash;

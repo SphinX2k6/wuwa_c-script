@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020020AA RID: 8362
+// Token: 0x02001581 RID: 5505
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class LogReportConfig : ConfigBase
 {
-	// Token: 0x0601083B RID: 67643 RVA: 0x00409A0C File Offset: 0x00407C0C
+	// Token: 0x0600DCAB RID: 56491 RVA: 0x00416114 File Offset: 0x00414314
 	public BeginnerGuide? GetBeginnerGuideConfig(int id)
 	{
 		BeginnerGuide? config = ConfigBeginnerGuideById.GetConfig(id, true);
@@ -24,8 +24,8 @@ public class LogReportConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x1700145B RID: 5211
-	// (get) Token: 0x0601083C RID: 67644 RVA: 0x00409A59 File Offset: 0x00407C59
+	// Token: 0x17001488 RID: 5256
+	// (get) Token: 0x0600DCAC RID: 56492 RVA: 0x00416161 File Offset: 0x00414361
 	public static LogReportConfig Instance
 	{
 		get
@@ -34,7 +34,7 @@ public class LogReportConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601083D RID: 67645 RVA: 0x00409A60 File Offset: 0x00407C60
+	// Token: 0x0600DCAD RID: 56493 RVA: 0x00416168 File Offset: 0x00414368
 	public static LogReportConfig GetOrCreateInstance()
 	{
 		if (LogReportConfig._Instance == null)
@@ -44,7 +44,7 @@ public class LogReportConfig : ConfigBase
 		return LogReportConfig._Instance;
 	}
 
-	// Token: 0x0601083E RID: 67646 RVA: 0x00409A74 File Offset: 0x00407C74
+	// Token: 0x0600DCAE RID: 56494 RVA: 0x0041617C File Offset: 0x0041437C
 	public static bool CreateInstance()
 	{
 		if (LogReportConfig._Instance != null)
@@ -55,24 +55,24 @@ public class LogReportConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601083F RID: 67647 RVA: 0x00409A8A File Offset: 0x00407C8A
+	// Token: 0x0600DCAF RID: 56495 RVA: 0x00416192 File Offset: 0x00414392
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010840 RID: 67648 RVA: 0x00409A8C File Offset: 0x00407C8C
+	// Token: 0x0600DCB0 RID: 56496 RVA: 0x00416194 File Offset: 0x00414394
 	public static void ResetStaticDefaultValue()
 	{
 		LogReportConfig._Instance = null;
 	}
 
-	// Token: 0x06010841 RID: 67649 RVA: 0x00409A94 File Offset: 0x00407C94
+	// Token: 0x0600DCB1 RID: 56497 RVA: 0x0041619C File Offset: 0x0041439C
 	static LogReportConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LogReportConfig.CreateStaticDefaultValue), new Action(LogReportConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007A18 RID: 31256
+	// Token: 0x04007B16 RID: 31510
 	[Nullable(2)]
 	private static LogReportConfig _Instance;
 }

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AE6 RID: 19174
+	// Token: 0x02003A8E RID: 14990
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseGoldCostItem : CommonCurrencyItem
 	{
-		// Token: 0x06031AC0 RID: 203456 RVA: 0x00B87E1C File Offset: 0x00B8601C
+		// Token: 0x06026850 RID: 157776 RVA: 0x00ACBDD0 File Offset: 0x00AC9FD0
 		public UniTask Init(UUIItem item)
 		{
 			TrapDefenseGoldCostItem.<Init>d__0 <Init>d__;
@@ -25,26 +25,26 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031AC1 RID: 203457 RVA: 0x00B87E67 File Offset: 0x00B86067
+		// Token: 0x06026851 RID: 157777 RVA: 0x00ACBE1B File Offset: 0x00ACA01B
 		public override void AddEventListener()
 		{
 			TrapDefenseModel.Instance.BattleData.AddTreeVarUpdateDelegate(ETrapDefenseSystemVarType.Gold, new TTreeVarUpdateDelegate(this.OnCurrentGoldUpdate));
 		}
 
-		// Token: 0x06031AC2 RID: 203458 RVA: 0x00B87E85 File Offset: 0x00B86085
+		// Token: 0x06026852 RID: 157778 RVA: 0x00ACBE39 File Offset: 0x00ACA039
 		public override void RemoveEventListener()
 		{
 			TrapDefenseModel.Instance.BattleData.RemoveTreeVarUpdateDelegate(ETrapDefenseSystemVarType.Gold, new TTreeVarUpdateDelegate(this.OnCurrentGoldUpdate));
 		}
 
-		// Token: 0x06031AC3 RID: 203459 RVA: 0x00B87EA4 File Offset: 0x00B860A4
+		// Token: 0x06026853 RID: 157779 RVA: 0x00ACBE58 File Offset: 0x00ACA058
 		public void OnCurrentGoldUpdate(VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 		{
 			long num = MathUtils.Instance.LongToNumber(newVarDefine.Int);
 			base.SetCount((int)num);
 		}
 
-		// Token: 0x06031AC4 RID: 203460 RVA: 0x00B87ECA File Offset: 0x00B860CA
+		// Token: 0x06026854 RID: 157780 RVA: 0x00ACBE7E File Offset: 0x00ACA07E
 		public void UpdateGoldCostNum()
 		{
 			base.SetCount((int)TrapDefenseModel.Instance.BattleData.GetGoldNum());

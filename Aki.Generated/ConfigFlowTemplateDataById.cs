@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000339 RID: 825
+	// Token: 0x0200034E RID: 846
 	public class ConfigFlowTemplateDataById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600135B RID: 4955 RVA: 0x000C6B11 File Offset: 0x000C4D11
+		// Token: 0x060013D9 RID: 5081 RVA: 0x000CD01D File Offset: 0x000CB21D
 		static ConfigFlowTemplateDataById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFlowTemplateDataById.CreateStaticDefaultValue), new Action(ConfigFlowTemplateDataById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600135C RID: 4956 RVA: 0x000C6B30 File Offset: 0x000C4D30
+		// Token: 0x060013DA RID: 5082 RVA: 0x000CD03C File Offset: 0x000CB23C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFlowTemplateDataById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600135D RID: 4957 RVA: 0x000C6BAF File Offset: 0x000C4DAF
+		// Token: 0x060013DB RID: 5083 RVA: 0x000CD0BB File Offset: 0x000CB2BB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFlowTemplateDataById.LogPair = null;
 			ConfigFlowTemplateDataById.HandleId = 0;
 		}
 
-		// Token: 0x0600135E RID: 4958 RVA: 0x000C6BBD File Offset: 0x000C4DBD
+		// Token: 0x060013DC RID: 5084 RVA: 0x000CD0C9 File Offset: 0x000CB2C9
 		public static void Init()
 		{
 			ConfigFlowTemplateDataById.HandleId = ConfigCommon.InitDataStatement(ConfigFlowTemplateDataById.HandleId, "db_flowtemplatedata.db", "select BinData from `FlowTemplateData` where Id=?");
 		}
 
-		// Token: 0x0600135F RID: 4959 RVA: 0x000C6BD8 File Offset: 0x000C4DD8
+		// Token: 0x060013DD RID: 5085 RVA: 0x000CD0E4 File Offset: 0x000CB2E4
 		public static FlowTemplateData? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFlowTemplateDataById.HandleId, ConfigFlowTemplateDataById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FlowTemplateData?(rootAsFlowTemplateData);
 		}
 
-		// Token: 0x04001673 RID: 5747
+		// Token: 0x04001706 RID: 5894
 		private const string DB = "db_flowtemplatedata.db";
 
-		// Token: 0x04001674 RID: 5748
+		// Token: 0x04001707 RID: 5895
 		private const string FILE = "UniverseEditor/CameraTemplate/FlowTemplateCamera.csv";
 
-		// Token: 0x04001675 RID: 5749
+		// Token: 0x04001708 RID: 5896
 		private const string TABLE = "FlowTemplateData";
 
-		// Token: 0x04001676 RID: 5750
+		// Token: 0x04001709 RID: 5897
 		private const string COMMAND = "select BinData from `FlowTemplateData` where Id=?";
 
-		// Token: 0x04001677 RID: 5751
+		// Token: 0x0400170A RID: 5898
 		private const string KEY_PREFIX = "FlowTemplateDataById";
 
-		// Token: 0x04001678 RID: 5752
+		// Token: 0x0400170B RID: 5899
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001679 RID: 5753
+		// Token: 0x0400170C RID: 5900
 		private static int HandleId;
 	}
 }

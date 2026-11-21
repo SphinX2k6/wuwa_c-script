@@ -6,15 +6,15 @@ using CSharpScript.Module.InstanceDungeon;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B03 RID: 27395
+	// Token: 0x02005C7B RID: 23675
 	public class LevelEventClaimDungeonReward : LevelEventBase
 	{
-		// Token: 0x06044053 RID: 278611 RVA: 0x010B697D File Offset: 0x010B4B7D
+		// Token: 0x0603A1A5 RID: 237989 RVA: 0x01060219 File Offset: 0x0105E419
 		public LevelEventClaimDungeonReward(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044054 RID: 278612 RVA: 0x010B6988 File Offset: 0x010B4B88
+		// Token: 0x0603A1A6 RID: 237990 RVA: 0x01060224 File Offset: 0x0105E424
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

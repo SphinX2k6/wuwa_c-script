@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006AE2 RID: 27362
+	// Token: 0x02005C5A RID: 23642
 	public class LevelConditionListenerCheckMusicBeatsEvent : LevelListenerBase
 	{
-		// Token: 0x06043F88 RID: 278408 RVA: 0x010AC1D0 File Offset: 0x010AA3D0
+		// Token: 0x0603A0DA RID: 237786 RVA: 0x01055A48 File Offset: 0x01053C48
 		private void EventHandle(EMusicEventType musicEventType, EAkCallbackType callbackType)
 		{
 			if ((this.ListeningInfo as ICheckMusicEvent).MusicEvent.Type == musicEventType)
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F89 RID: 278409 RVA: 0x010AC22C File Offset: 0x010AA42C
+		// Token: 0x0603A0DB RID: 237787 RVA: 0x01055AA4 File Offset: 0x01053CA4
 		[NullableContext(1)]
 		protected override void OnListen(object listeningInfo, TListenerCallbackFunc callback, [Nullable(2)] GeneralContext context = null, params object[] otherParams)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F8A RID: 278410 RVA: 0x010AC268 File Offset: 0x010AA468
+		// Token: 0x0603A0DC RID: 237788 RVA: 0x01055AE0 File Offset: 0x01053CE0
 		protected override void OnUnListen()
 		{
 			if (new Action<EMusicEventType, EAkCallbackType>(this.EventHandle) != null && EventSystem.Instance.Has(EEventName.CheckMusicBeatsEvent, new Action<EMusicEventType, EAkCallbackType>(this.EventHandle)))

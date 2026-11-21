@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056E4 RID: 22244
+	// Token: 0x020046BB RID: 18107
 	public class KurotatoWeaponData : IKurotatoWeaponData
 	{
-		// Token: 0x170087B2 RID: 34738
-		// (get) Token: 0x06038940 RID: 231744 RVA: 0x00D7037C File Offset: 0x00D6E57C
-		// (set) Token: 0x06038941 RID: 231745 RVA: 0x00D70384 File Offset: 0x00D6E584
+		// Token: 0x17005B7A RID: 23418
+		// (get) Token: 0x0602D850 RID: 186448 RVA: 0x00CBE964 File Offset: 0x00CBCB64
+		// (set) Token: 0x0602D851 RID: 186449 RVA: 0x00CBE96C File Offset: 0x00CBCB6C
 		public int WeaponId { get; set; }
 
-		// Token: 0x170087B3 RID: 34739
-		// (get) Token: 0x06038942 RID: 231746 RVA: 0x00D7038D File Offset: 0x00D6E58D
-		// (set) Token: 0x06038943 RID: 231747 RVA: 0x00D70395 File Offset: 0x00D6E595
+		// Token: 0x17005B7B RID: 23419
+		// (get) Token: 0x0602D852 RID: 186450 RVA: 0x00CBE975 File Offset: 0x00CBCB75
+		// (set) Token: 0x0602D853 RID: 186451 RVA: 0x00CBE97D File Offset: 0x00CBCB7D
 		public int IncId { get; set; }
 
-		// Token: 0x170087B4 RID: 34740
-		// (get) Token: 0x06038944 RID: 231748 RVA: 0x00D7039E File Offset: 0x00D6E59E
-		// (set) Token: 0x06038945 RID: 231749 RVA: 0x00D703A6 File Offset: 0x00D6E5A6
+		// Token: 0x17005B7C RID: 23420
+		// (get) Token: 0x0602D854 RID: 186452 RVA: 0x00CBE986 File Offset: 0x00CBCB86
+		// (set) Token: 0x0602D855 RID: 186453 RVA: 0x00CBE98E File Offset: 0x00CBCB8E
 		public int SellPrice { get; set; }
 
-		// Token: 0x170087B5 RID: 34741
-		// (get) Token: 0x06038946 RID: 231750 RVA: 0x00D703AF File Offset: 0x00D6E5AF
-		// (set) Token: 0x06038947 RID: 231751 RVA: 0x00D703B7 File Offset: 0x00D6E5B7
+		// Token: 0x17005B7D RID: 23421
+		// (get) Token: 0x0602D856 RID: 186454 RVA: 0x00CBE997 File Offset: 0x00CBCB97
+		// (set) Token: 0x0602D857 RID: 186455 RVA: 0x00CBE99F File Offset: 0x00CBCB9F
 		public int PreWaveDealtDamage { get; set; }
 	}
 }

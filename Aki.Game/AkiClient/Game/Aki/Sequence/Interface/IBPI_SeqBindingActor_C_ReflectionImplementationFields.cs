@@ -2,10 +2,10 @@
 
 namespace AkiClient.Game.Aki.Sequence.Interface
 {
-	// Token: 0x02003A3D RID: 14909
+	// Token: 0x0200307D RID: 12413
 	internal static class IBPI_SeqBindingActor_C_ReflectionImplementationFields
 	{
-		// Token: 0x0400F132 RID: 61746
+		// Token: 0x0400F978 RID: 63864
 		public static IntPtr __GetSeqBindingTag_NativeFunctionPtr;
 	}
 }

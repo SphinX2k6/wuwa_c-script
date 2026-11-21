@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002BF6 RID: 11254
+// Token: 0x02002171 RID: 8561
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class TowerFormationRoleTeamItem : GridProxyAbstract<FormationData>
 {
-	// Token: 0x06017605 RID: 95749 RVA: 0x005F2B10 File Offset: 0x005F0D10
+	// Token: 0x06015036 RID: 86070 RVA: 0x0061F64C File Offset: 0x0061D84C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class TowerFormationRoleTeamItem : GridProxyAbstract<FormationData>
 		};
 	}
 
-	// Token: 0x06017606 RID: 95750 RVA: 0x005F2BBC File Offset: 0x005F0DBC
+	// Token: 0x06015037 RID: 86071 RVA: 0x0061F6F8 File Offset: 0x0061D8F8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TowerFormationRoleTeamItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -45,14 +45,14 @@ public class TowerFormationRoleTeamItem : GridProxyAbstract<FormationData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017607 RID: 95751 RVA: 0x005F2BFF File Offset: 0x005F0DFF
+	// Token: 0x06015038 RID: 86072 RVA: 0x0061F73B File Offset: 0x0061D93B
 	[NullableContext(2)]
 	private UUIExtendToggle GetItemToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x06017608 RID: 95752 RVA: 0x005F2C08 File Offset: 0x005F0E08
+	// Token: 0x06015039 RID: 86073 RVA: 0x0061F744 File Offset: 0x0061D944
 	private void OnClickToggleRoot(EToggleState state)
 	{
 		UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -68,7 +68,7 @@ public class TowerFormationRoleTeamItem : GridProxyAbstract<FormationData>
 		scrollViewDelegate.SelectGridProxy(base.GridIndex, base.DisplayIndex, false);
 	}
 
-	// Token: 0x06017609 RID: 95753 RVA: 0x005F2C3C File Offset: 0x005F0E3C
+	// Token: 0x0601503A RID: 86074 RVA: 0x0061F778 File Offset: 0x0061D978
 	public override void Refresh(FormationData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -124,7 +124,7 @@ public class TowerFormationRoleTeamItem : GridProxyAbstract<FormationData>
 		base.GetText(1).SetText(data.FormationId.ToString(), true);
 	}
 
-	// Token: 0x0601760A RID: 95754 RVA: 0x005F2ED0 File Offset: 0x005F10D0
+	// Token: 0x0601503B RID: 86075 RVA: 0x0061FA0C File Offset: 0x0061DC0C
 	private int GetTeamSlot(int roleId)
 	{
 		foreach (KeyValuePair<int, RoleDataBase> keyValuePair in RoleSelectModel.Instance.RoleIndexMap)
@@ -137,7 +137,7 @@ public class TowerFormationRoleTeamItem : GridProxyAbstract<FormationData>
 		return -1;
 	}
 
-	// Token: 0x0601760B RID: 95755 RVA: 0x005F2F3C File Offset: 0x005F113C
+	// Token: 0x0601503C RID: 86076 RVA: 0x0061FA78 File Offset: 0x0061DC78
 	public void RefreshRoleState()
 	{
 		if (this.ItemData != null)
@@ -146,7 +146,7 @@ public class TowerFormationRoleTeamItem : GridProxyAbstract<FormationData>
 		}
 	}
 
-	// Token: 0x0601760C RID: 95756 RVA: 0x005F2F59 File Offset: 0x005F1159
+	// Token: 0x0601503D RID: 86077 RVA: 0x0061FA95 File Offset: 0x0061DC95
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -162,7 +162,7 @@ public class TowerFormationRoleTeamItem : GridProxyAbstract<FormationData>
 		onClickCallback(this.ItemData);
 	}
 
-	// Token: 0x0601760D RID: 95757 RVA: 0x005F2F86 File Offset: 0x005F1186
+	// Token: 0x0601503E RID: 86078 RVA: 0x0061FAC2 File Offset: 0x0061DCC2
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -173,13 +173,13 @@ public class TowerFormationRoleTeamItem : GridProxyAbstract<FormationData>
 		itemToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0400AEE8 RID: 44776
+	// Token: 0x0400B2ED RID: 45805
 	private readonly List<MediumItemGrid> RoleList = new List<MediumItemGrid>();
 
-	// Token: 0x0400AEE9 RID: 44777
+	// Token: 0x0400B2EE RID: 45806
 	private FormationData ItemData;
 
-	// Token: 0x0400AEEA RID: 44778
+	// Token: 0x0400B2EF RID: 45807
 	[Nullable(new byte[]
 	{
 		2,
@@ -187,23 +187,23 @@ public class TowerFormationRoleTeamItem : GridProxyAbstract<FormationData>
 	})]
 	public Action<FormationData> OnClickCallback;
 
-	// Token: 0x020091B8 RID: 37304
+	// Token: 0x020083FB RID: 33787
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402F252 RID: 193106
+		// Token: 0x0402A953 RID: 174419
 		public const int ToggleRoot = 0;
 
-		// Token: 0x0402F253 RID: 193107
+		// Token: 0x0402A954 RID: 174420
 		public const int TxtTeamIndex = 1;
 
-		// Token: 0x0402F254 RID: 193108
+		// Token: 0x0402A955 RID: 174421
 		public const int ItemRole1 = 2;
 
-		// Token: 0x0402F255 RID: 193109
+		// Token: 0x0402A956 RID: 174422
 		public const int ItemRole2 = 3;
 
-		// Token: 0x0402F256 RID: 193110
+		// Token: 0x0402A957 RID: 174423
 		public const int ItemRole3 = 4;
 	}
 }

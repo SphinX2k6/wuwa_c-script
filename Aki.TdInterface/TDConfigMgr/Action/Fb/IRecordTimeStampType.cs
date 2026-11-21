@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A03 RID: 10755
+	// Token: 0x02002CF0 RID: 11504
 	public class IRecordTimeStampType : IDungeonEventType
 	{
-		// Token: 0x0600ED54 RID: 60756 RVA: 0x00229B7F File Offset: 0x00227D7F
-		[NullableContext(1)]
+		// Token: 0x0600FBEB RID: 64491 RVA: 0x00247503 File Offset: 0x00245703
 		public static IRecordTimeStampType Create(IRecordTimeStampType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B10 RID: 19216
-		// (get) Token: 0x0600ED55 RID: 60757 RVA: 0x00229B9E File Offset: 0x00227D9E
+		// Token: 0x17004EB9 RID: 20153
+		// (get) Token: 0x0600FBEC RID: 64492 RVA: 0x00247522 File Offset: 0x00245722
 		public override EDungeonEventType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B11 RID: 19217
-		// (get) Token: 0x0600ED56 RID: 60758 RVA: 0x00229BAB File Offset: 0x00227DAB
+		// Token: 0x17004EBA RID: 20154
+		// (get) Token: 0x0600FBED RID: 64493 RVA: 0x0024752F File Offset: 0x0024572F
 		public virtual ETimeStampType TimeStampType
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082A5 RID: 33445
+		// Token: 0x04008996 RID: 35222
 		private IRecordTimeStampType Instance;
 	}
 }

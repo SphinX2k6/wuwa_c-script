@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001095 RID: 4245
+// Token: 0x02000549 RID: 1353
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRecommendColors : IStaticVariableResetter
 {
-	// Token: 0x06006E87 RID: 28295 RVA: 0x001687C3 File Offset: 0x001669C3
+	// Token: 0x0600421C RID: 16924 RVA: 0x001710F7 File Offset: 0x0016F2F7
 	static ActivityRecommendColors()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityRecommendColors.CreateStaticDefaultValue), new Action(ActivityRecommendColors.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06006E88 RID: 28296 RVA: 0x001687E2 File Offset: 0x001669E2
+	// Token: 0x0600421D RID: 16925 RVA: 0x00171116 File Offset: 0x0016F316
 	public static void CreateStaticDefaultValue()
 	{
 		ActivityRecommendColors.RecommendYellowColor = new FColor?(FColor.FromHex("8D784C"));
@@ -21,7 +21,7 @@ public class ActivityRecommendColors : IStaticVariableResetter
 		ActivityRecommendColors.RecommendGreenColor = new FColor?(FColor.FromHex("4A6256"));
 	}
 
-	// Token: 0x06006E89 RID: 28297 RVA: 0x00168820 File Offset: 0x00166A20
+	// Token: 0x0600421E RID: 16926 RVA: 0x00171154 File Offset: 0x0016F354
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityRecommendColors.RecommendYellowColor = null;
@@ -29,21 +29,21 @@ public class ActivityRecommendColors : IStaticVariableResetter
 		ActivityRecommendColors.RecommendGreenColor = null;
 	}
 
-	// Token: 0x0400332F RID: 13103
+	// Token: 0x040033C8 RID: 13256
 	private const string YELLOW_COLOR = "8D784C";
 
-	// Token: 0x04003330 RID: 13104
+	// Token: 0x040033C9 RID: 13257
 	public static FColor? RecommendYellowColor;
 
-	// Token: 0x04003331 RID: 13105
+	// Token: 0x040033CA RID: 13258
 	private const string BLUE_COLOR = "476188";
 
-	// Token: 0x04003332 RID: 13106
+	// Token: 0x040033CB RID: 13259
 	public static FColor? RecommendBlueColor;
 
-	// Token: 0x04003333 RID: 13107
+	// Token: 0x040033CC RID: 13260
 	private const string GREEN_COLOR = "4A6256";
 
-	// Token: 0x04003334 RID: 13108
+	// Token: 0x040033CD RID: 13261
 	public static FColor? RecommendGreenColor;
 }

@@ -1,70 +1,70 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020017F0 RID: 6128
+// Token: 0x02000CA9 RID: 3241
 public class CommonComponentDefine
 {
-	// Token: 0x04005138 RID: 20792
+	// Token: 0x040051E3 RID: 20963
 	public const int WEAPON_ITEMTYPE = 2;
 
-	// Token: 0x04005139 RID: 20793
+	// Token: 0x040051E4 RID: 20964
 	public const int WEAPONMATERIAL_ITEMTYPE = 4;
 
-	// Token: 0x0400513A RID: 20794
+	// Token: 0x040051E5 RID: 20965
 	public const float UNPHANTOMTYPEALPHA = 0.5f;
 
-	// Token: 0x0400513B RID: 20795
+	// Token: 0x040051E6 RID: 20966
 	public const int PHANTOMTYPEALPHA = 1;
 
-	// Token: 0x0400513C RID: 20796
+	// Token: 0x040051E7 RID: 20967
 	public const int MINLEVEL = 5;
 
-	// Token: 0x0400513D RID: 20797
+	// Token: 0x040051E8 RID: 20968
 	public const int RATIO = 2;
 
-	// Token: 0x0400513E RID: 20798
+	// Token: 0x040051E9 RID: 20969
 	public const int FIXED = 1;
 
-	// Token: 0x02007DDE RID: 32222
+	// Token: 0x02006F64 RID: 28516
 	public enum ECommonTipsType
 	{
-		// Token: 0x04029324 RID: 168740
+		// Token: 0x0402464F RID: 149071
 		Weapon = 2,
-		// Token: 0x04029325 RID: 168741
+		// Token: 0x04024650 RID: 149072
 		Phantom = 9
 	}
 
-	// Token: 0x02007DDF RID: 32223
+	// Token: 0x02006F65 RID: 28517
 	public enum ECommonTipsHighType
 	{
-		// Token: 0x04029327 RID: 168743
+		// Token: 0x04024652 RID: 149074
 		WeaponType,
-		// Token: 0x04029328 RID: 168744
+		// Token: 0x04024653 RID: 149075
 		PhantomType
 	}
 
-	// Token: 0x02007DE0 RID: 32224
+	// Token: 0x02006F66 RID: 28518
 	public enum ENurturePropType
 	{
-		// Token: 0x0402932A RID: 168746
+		// Token: 0x04024655 RID: 149077
 		Weapon = 2,
-		// Token: 0x0402932B RID: 168747
+		// Token: 0x04024656 RID: 149078
 		WeaponMaterial = 4
 	}
 
-	// Token: 0x02007DE1 RID: 32225
+	// Token: 0x02006F67 RID: 28519
 	public enum ENurturePropUseType
 	{
-		// Token: 0x0402932D RID: 168749
+		// Token: 0x04024658 RID: 149080
 		UseItemId,
-		// Token: 0x0402932E RID: 168750
+		// Token: 0x04024659 RID: 149081
 		UseIncId
 	}
 
-	// Token: 0x02007DE2 RID: 32226
+	// Token: 0x02006F68 RID: 28520
 	public class TipsAttributeData
 	{
-		// Token: 0x06049AFA RID: 301818 RVA: 0x013168C2 File Offset: 0x01314AC2
+		// Token: 0x0603FF09 RID: 261897 RVA: 0x012B9A92 File Offset: 0x012B7C92
 		public TipsAttributeData(int id, double value, bool isRatio)
 		{
 			this.Id = id;
@@ -72,58 +72,58 @@ public class CommonComponentDefine
 			this.IsRatio = isRatio;
 		}
 
-		// Token: 0x0402932F RID: 168751
+		// Token: 0x0402465A RID: 149082
 		public int Id;
 
-		// Token: 0x04029330 RID: 168752
+		// Token: 0x0402465B RID: 149083
 		public double Value;
 
-		// Token: 0x04029331 RID: 168753
+		// Token: 0x0402465C RID: 149084
 		public bool IsRatio;
 	}
 
-	// Token: 0x02007DE3 RID: 32227
+	// Token: 0x02006F69 RID: 28521
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NurturePropItemData
 	{
-		// Token: 0x04029332 RID: 168754
+		// Token: 0x0402465D RID: 149085
 		public int Id;
 
-		// Token: 0x04029333 RID: 168755
+		// Token: 0x0402465E RID: 149086
 		public int Count;
 
-		// Token: 0x04029334 RID: 168756
+		// Token: 0x0402465F RID: 149087
 		public CommonComponentDefine.ENurturePropType ItemType = CommonComponentDefine.ENurturePropType.Weapon;
 
-		// Token: 0x04029335 RID: 168757
+		// Token: 0x04024660 RID: 149088
 		public string BottomText = "";
 
-		// Token: 0x04029336 RID: 168758
+		// Token: 0x04024661 RID: 149089
 		public string TopText = "";
 
-		// Token: 0x04029337 RID: 168759
+		// Token: 0x04024662 RID: 149090
 		public int RoleId;
 
-		// Token: 0x04029338 RID: 168760
+		// Token: 0x04024663 RID: 149091
 		public bool IsSingle;
 
-		// Token: 0x04029339 RID: 168761
+		// Token: 0x04024664 RID: 149092
 		public int? HoleId;
 	}
 
-	// Token: 0x02007DE4 RID: 32228
+	// Token: 0x02006F6A RID: 28522
 	public enum EAttributeType
 	{
-		// Token: 0x0402933B RID: 168763
+		// Token: 0x04024666 RID: 149094
 		NormalType,
-		// Token: 0x0402933C RID: 168764
+		// Token: 0x04024667 RID: 149095
 		PhantomType,
-		// Token: 0x0402933D RID: 168765
+		// Token: 0x04024668 RID: 149096
 		VisionLevelUp,
-		// Token: 0x0402933E RID: 168766
+		// Token: 0x04024669 RID: 149097
 		VisionSlotLevelUp,
-		// Token: 0x0402933F RID: 168767
+		// Token: 0x0402466A RID: 149098
 		VisionSlot
 	}
 }

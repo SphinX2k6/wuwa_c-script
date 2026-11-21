@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020024E5 RID: 9445
+// Token: 0x020019CC RID: 6604
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionNewRecommendProxy
 {
-	// Token: 0x06012FE1 RID: 77793 RVA: 0x004B4099 File Offset: 0x004B2299
+	// Token: 0x060104A0 RID: 66720 RVA: 0x004C1C31 File Offset: 0x004BFE31
 	public VisionFetterRecommendInfo GetCurrentSelectRecommendInfo()
 	{
 		return this.CurrentSelectFetterRecommendInfo;
 	}
 
-	// Token: 0x06012FE2 RID: 77794 RVA: 0x004B40A1 File Offset: 0x004B22A1
+	// Token: 0x060104A1 RID: 66721 RVA: 0x004C1C39 File Offset: 0x004BFE39
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -25,7 +25,7 @@ public class VisionNewRecommendProxy
 		return VisionRecommendModel.Instance.GetRoleSystemFetterRecommendList(this.CurrentSelectRoleId);
 	}
 
-	// Token: 0x06012FE3 RID: 77795 RVA: 0x004B40B3 File Offset: 0x004B22B3
+	// Token: 0x060104A2 RID: 66722 RVA: 0x004C1C4B File Offset: 0x004BFE4B
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -36,33 +36,33 @@ public class VisionNewRecommendProxy
 		return VisionRecommendModel.Instance.GetRoleUsageFetterRecommendList(this.CurrentSelectRoleId);
 	}
 
-	// Token: 0x04008EEC RID: 36588
+	// Token: 0x04009036 RID: 36918
 	public bool IsFromRoleDev;
 
-	// Token: 0x04008EED RID: 36589
+	// Token: 0x04009037 RID: 36919
 	public int CurrentSelectRoleId;
 
-	// Token: 0x04008EEE RID: 36590
+	// Token: 0x04009038 RID: 36920
 	public VisionFetterRecommendInfo CurrentSelectFetterRecommendInfo;
 
-	// Token: 0x04008EEF RID: 36591
+	// Token: 0x04009039 RID: 36921
 	public bool IsSimpleMode = true;
 
-	// Token: 0x04008EF0 RID: 36592
+	// Token: 0x0400903A RID: 36922
 	public int CurrentSelectFirstVisionMonsterId;
 
-	// Token: 0x04008EF1 RID: 36593
+	// Token: 0x0400903B RID: 36923
 	public Func<int, int> GetSelectedPlanIdCallBack;
 
-	// Token: 0x04008EF2 RID: 36594
+	// Token: 0x0400903C RID: 36924
 	public Func<int, int> GetSelectedFirstVisionMonsterIdCallBack;
 
-	// Token: 0x04008EF3 RID: 36595
+	// Token: 0x0400903D RID: 36925
 	public Action<Action> RefreshSelectedRecommendDetail;
 
-	// Token: 0x04008EF4 RID: 36596
+	// Token: 0x0400903E RID: 36926
 	public bool IsFromRoleDevFirstSelect;
 
-	// Token: 0x04008EF5 RID: 36597
+	// Token: 0x0400903F RID: 36927
 	public UiBehaviorLevelSequence MainViewSequence;
 }

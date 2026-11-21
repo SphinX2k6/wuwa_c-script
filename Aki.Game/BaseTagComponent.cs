@@ -1,28 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003276 RID: 12918
+// Token: 0x020027E5 RID: 10213
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601BF17 RID: 114455 RVA: 0x007C1CC0 File Offset: 0x007BFEC0
+	// Token: 0x06019AFA RID: 105210 RVA: 0x007E90F8 File Offset: 0x007E72F8
 	static BaseTagComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BaseTagComponent.CreateStaticDefaultValue), new Action(BaseTagComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601BF18 RID: 114456 RVA: 0x007C1D35 File Offset: 0x007BFF35
+	// Token: 0x06019AFB RID: 105211 RVA: 0x007E916D File Offset: 0x007E736D
 	protected override bool OnInit()
 	{
 		this.TagContainer.AddAnyTagListener(new TAnyTagChangeCallback(this.OnAnyTagChanged));
 		return true;
 	}
 
-	// Token: 0x0601BF19 RID: 114457 RVA: 0x007C1D50 File Offset: 0x007BFF50
+	// Token: 0x06019AFC RID: 105212 RVA: 0x007E9188 File Offset: 0x007E7388
 	protected override bool OnStart()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -64,14 +63,14 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601BF1A RID: 114458 RVA: 0x007C1DDA File Offset: 0x007BFFDA
+	// Token: 0x06019AFD RID: 105213 RVA: 0x007E9212 File Offset: 0x007E7412
 	protected override bool OnEnd()
 	{
 		this.TagContainer.Clear();
 		return true;
 	}
 
-	// Token: 0x0601BF1B RID: 114459 RVA: 0x007C1DEC File Offset: 0x007BFFEC
+	// Token: 0x06019AFE RID: 105214 RVA: 0x007E9224 File Offset: 0x007E7424
 	protected unsafe void Emit(int tagId, [Nullable(new byte[]
 	{
 		2,
@@ -103,7 +102,7 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BF1C RID: 114460 RVA: 0x007C1EB0 File Offset: 0x007C00B0
+	// Token: 0x06019AFF RID: 105215 RVA: 0x007E92E8 File Offset: 0x007E74E8
 	protected unsafe void Emit(int tagId, [Nullable(new byte[]
 	{
 		2,
@@ -135,7 +134,7 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BF1D RID: 114461 RVA: 0x007C1F78 File Offset: 0x007C0178
+	// Token: 0x06019B00 RID: 105216 RVA: 0x007E93B0 File Offset: 0x007E75B0
 	public virtual void AddTag(int? tagId)
 	{
 		if (tagId == null)
@@ -145,7 +144,7 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		this.TagContainer.AddExactTag(ETagChannel.Common, tagId.Value);
 	}
 
-	// Token: 0x0601BF1E RID: 114462 RVA: 0x007C1F97 File Offset: 0x007C0197
+	// Token: 0x06019B01 RID: 105217 RVA: 0x007E93CF File Offset: 0x007E75CF
 	public virtual bool RemoveTag(int? tagId)
 	{
 		if (tagId == null)
@@ -157,19 +156,19 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601BF1F RID: 114463 RVA: 0x007C1FCB File Offset: 0x007C01CB
+	// Token: 0x06019B02 RID: 105218 RVA: 0x007E9403 File Offset: 0x007E7603
 	public virtual bool HasTag(int tagId)
 	{
 		return this.TagContainer.ContainsTag(tagId);
 	}
 
-	// Token: 0x0601BF20 RID: 114464 RVA: 0x007C1FD9 File Offset: 0x007C01D9
+	// Token: 0x06019B03 RID: 105219 RVA: 0x007E9411 File Offset: 0x007E7611
 	public bool HasExactTag(int tagId)
 	{
 		return this.TagContainer.ContainsExactTag(tagId);
 	}
 
-	// Token: 0x0601BF21 RID: 114465 RVA: 0x007C1FE8 File Offset: 0x007C01E8
+	// Token: 0x06019B04 RID: 105220 RVA: 0x007E9420 File Offset: 0x007E7620
 	public bool HasAnyTag(IEnumerable<int> tagIds)
 	{
 		foreach (int tagId in tagIds)
@@ -182,7 +181,7 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601BF22 RID: 114466 RVA: 0x007C203C File Offset: 0x007C023C
+	// Token: 0x06019B05 RID: 105221 RVA: 0x007E9474 File Offset: 0x007E7674
 	[NullableContext(0)]
 	public unsafe bool HasAnyTag(in ReadOnlySpan<int> tagIds)
 	{
@@ -198,7 +197,7 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601BF23 RID: 114467 RVA: 0x007C2078 File Offset: 0x007C0278
+	// Token: 0x06019B06 RID: 105222 RVA: 0x007E94B0 File Offset: 0x007E76B0
 	public bool HasAnyTag(IEnumerable<int?> tagIds)
 	{
 		foreach (int? num in tagIds)
@@ -211,7 +210,7 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601BF24 RID: 114468 RVA: 0x007C20D0 File Offset: 0x007C02D0
+	// Token: 0x06019B07 RID: 105223 RVA: 0x007E9508 File Offset: 0x007E7708
 	public bool HasAnyTagContainer(FGameplayTagContainer tagContainer)
 	{
 		TArray<FGameplayTag> gameplayTags = tagContainer.GameplayTags;
@@ -225,7 +224,7 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601BF25 RID: 114469 RVA: 0x007C2110 File Offset: 0x007C0310
+	// Token: 0x06019B08 RID: 105224 RVA: 0x007E9548 File Offset: 0x007E7748
 	public bool HasAllTag(IEnumerable<int> tagIds)
 	{
 		foreach (int tagId in tagIds)
@@ -238,7 +237,7 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601BF26 RID: 114470 RVA: 0x007C2164 File Offset: 0x007C0364
+	// Token: 0x06019B09 RID: 105225 RVA: 0x007E959C File Offset: 0x007E779C
 	public int GetTagCount(int tagId)
 	{
 		if (tagId == 0)
@@ -248,7 +247,7 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		return this.TagContainer.GetTagCount(tagId);
 	}
 
-	// Token: 0x0601BF27 RID: 114471 RVA: 0x007C2178 File Offset: 0x007C0378
+	// Token: 0x06019B0A RID: 105226 RVA: 0x007E95B0 File Offset: 0x007E77B0
 	[NullableContext(2)]
 	public ITagTask ListenForTagAddOrRemove(int? tagId, [Nullable(1)] BaseTagComponent.TTagSwitchedCallback callback, Stat callbackStat = null)
 	{
@@ -267,14 +266,14 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		return tagSwitchedTask;
 	}
 
-	// Token: 0x0601BF28 RID: 114472 RVA: 0x007C21DC File Offset: 0x007C03DC
+	// Token: 0x06019B0B RID: 105227 RVA: 0x007E9614 File Offset: 0x007E7814
 	public bool HasTagAddOrRemoveListener(int tagId, BaseTagComponent.TTagSwitchedCallback callback)
 	{
 		HashSet<BaseTagComponent.TTagSwitchedCallback> hashSet;
 		return this.TagSwitchedCallbacks.TryGetValue(tagId, out hashSet) && hashSet.Contains(callback);
 	}
 
-	// Token: 0x0601BF29 RID: 114473 RVA: 0x007C2204 File Offset: 0x007C0404
+	// Token: 0x06019B0C RID: 105228 RVA: 0x007E963C File Offset: 0x007E783C
 	public unsafe void AddTagAddOrRemoveListener(int tagId, BaseTagComponent.TTagSwitchedCallback callback, [Nullable(2)] Stat callbackStat = null)
 	{
 		if (tagId == 0 || callback == null)
@@ -310,7 +309,7 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		hashSet.Add(callback);
 	}
 
-	// Token: 0x0601BF2A RID: 114474 RVA: 0x007C2318 File Offset: 0x007C0518
+	// Token: 0x06019B0D RID: 105229 RVA: 0x007E9750 File Offset: 0x007E7950
 	public void RemoveTagAddOrRemoveListener(int tagId, BaseTagComponent.TTagSwitchedCallback callback)
 	{
 		HashSet<BaseTagComponent.TTagSwitchedCallback> hashSet;
@@ -320,7 +319,7 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BF2B RID: 114475 RVA: 0x007C2340 File Offset: 0x007C0540
+	// Token: 0x06019B0E RID: 105230 RVA: 0x007E9778 File Offset: 0x007E7978
 	[NullableContext(2)]
 	public ITagTask ListenForTagAnyCountChanged(int tagId, BaseTagComponent.TTagChangedCallback callback)
 	{
@@ -339,7 +338,7 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		return tagChangedTask;
 	}
 
-	// Token: 0x0601BF2C RID: 114476 RVA: 0x007C2390 File Offset: 0x007C0590
+	// Token: 0x06019B0F RID: 105231 RVA: 0x007E97C8 File Offset: 0x007E79C8
 	public unsafe void AddTagChangedListener(int tagId, BaseTagComponent.TTagChangedCallback callback, [Nullable(2)] Stat callbackStat = null)
 	{
 		if (tagId == 0 || callback == null)
@@ -376,13 +375,13 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BF2D RID: 114477 RVA: 0x007C247C File Offset: 0x007C067C
+	// Token: 0x06019B10 RID: 105232 RVA: 0x007E98B4 File Offset: 0x007E7AB4
 	private bool? AddTagChangedListenerInEditor(HashSet<BaseTagComponent.TTagChangedCallback> callbackSet, int tagId, BaseTagComponent.TTagChangedCallback callback, [Nullable(2)] Stat callbackStat = null)
 	{
 		return null;
 	}
 
-	// Token: 0x0601BF2E RID: 114478 RVA: 0x007C2494 File Offset: 0x007C0694
+	// Token: 0x06019B11 RID: 105233 RVA: 0x007E98CC File Offset: 0x007E7ACC
 	public void RemoveTagChangedListener(int tagId, BaseTagComponent.TTagChangedCallback callback)
 	{
 		HashSet<BaseTagComponent.TTagChangedCallback> hashSet;
@@ -393,20 +392,20 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BF2F RID: 114479 RVA: 0x007C24C4 File Offset: 0x007C06C4
+	// Token: 0x06019B12 RID: 105234 RVA: 0x007E98FC File Offset: 0x007E7AFC
 	private bool? RemoveTagChangedListenerInEditor(HashSet<BaseTagComponent.TTagChangedCallback> callbackSet, int tagId, BaseTagComponent.TTagChangedCallback callback)
 	{
 		return null;
 	}
 
-	// Token: 0x0601BF30 RID: 114480 RVA: 0x007C24DA File Offset: 0x007C06DA
+	// Token: 0x06019B13 RID: 105235 RVA: 0x007E9912 File Offset: 0x007E7B12
 	public string GetTagDebugStrings()
 	{
 		TagContainer tagContainer = this.TagContainer;
 		return ((tagContainer != null) ? tagContainer.GetDebugString() : null) ?? "";
 	}
 
-	// Token: 0x0601BF31 RID: 114481 RVA: 0x007C24F8 File Offset: 0x007C06F8
+	// Token: 0x06019B14 RID: 105236 RVA: 0x007E9930 File Offset: 0x007E7B30
 	protected virtual void OnAnyTagChanged(int tagId, int newCount, int oldCount, int exactTagId)
 	{
 		if (tagId == 0 || oldCount == newCount)
@@ -428,47 +427,51 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 		component.OnTagChanged(tagId);
 	}
 
-	// Token: 0x0601BF32 RID: 114482 RVA: 0x007C2568 File Offset: 0x007C0768
+	// Token: 0x06019B15 RID: 105237 RVA: 0x007E99A0 File Offset: 0x007E7BA0
 	private void EmitSwitchedCallbacks(int tagId, bool tagExist)
 	{
-		HashSet<BaseTagComponent.TTagSwitchedCallback> source;
-		if (this.TagSwitchedCallbacks.TryGetValue(tagId, out source))
+		HashSet<BaseTagComponent.TTagSwitchedCallback> hashSet;
+		if (this.TagSwitchedCallbacks.TryGetValue(tagId, out hashSet))
 		{
-			BaseTagComponent.TTagSwitchedCallback[] array = source.ToArray<BaseTagComponent.TTagSwitchedCallback>();
-			for (int i = 0; i < array.Length; i++)
+			BaseTagComponent.TTagSwitchedCallback[] array = new BaseTagComponent.TTagSwitchedCallback[hashSet.Count];
+			hashSet.CopyTo(array);
+			BaseTagComponent.TTagSwitchedCallback[] array2 = array;
+			for (int i = 0; i < array2.Length; i++)
 			{
-				array[i](tagId, tagExist);
+				array2[i](tagId, tagExist);
 			}
 		}
 	}
 
-	// Token: 0x0601BF33 RID: 114483 RVA: 0x007C25A4 File Offset: 0x007C07A4
+	// Token: 0x06019B16 RID: 105238 RVA: 0x007E99EC File Offset: 0x007E7BEC
 	private void EmitChangedCallbacks(int newCount, int tagId, int exactTagId, int oldCount)
 	{
-		HashSet<BaseTagComponent.TTagChangedCallback> source;
-		if (this.TagChangedCallbacks.TryGetValue(tagId, out source))
+		HashSet<BaseTagComponent.TTagChangedCallback> hashSet;
+		if (this.TagChangedCallbacks.TryGetValue(tagId, out hashSet))
 		{
-			BaseTagComponent.TTagChangedCallback[] array = source.ToArray<BaseTagComponent.TTagChangedCallback>();
-			for (int i = 0; i < array.Length; i++)
+			BaseTagComponent.TTagChangedCallback[] array = new BaseTagComponent.TTagChangedCallback[hashSet.Count];
+			hashSet.CopyTo(array);
+			BaseTagComponent.TTagChangedCallback[] array2 = array;
+			for (int i = 0; i < array2.Length; i++)
 			{
-				array[i](newCount, tagId, exactTagId, oldCount);
+				array2[i](newCount, tagId, exactTagId, oldCount);
 			}
 		}
 	}
 
-	// Token: 0x0601BF34 RID: 114484 RVA: 0x007C25E3 File Offset: 0x007C07E3
+	// Token: 0x06019B17 RID: 105239 RVA: 0x007E9A39 File Offset: 0x007E7C39
 	public static void CreateStaticDefaultValue()
 	{
 		BaseTagComponent.TagChangedStats = new Dictionary<int, Stat>();
 	}
 
-	// Token: 0x0601BF35 RID: 114485 RVA: 0x007C25EF File Offset: 0x007C07EF
+	// Token: 0x06019B18 RID: 105240 RVA: 0x007E9A45 File Offset: 0x007E7C45
 	public static void ResetStaticDefaultValue()
 	{
 		BaseTagComponent.TagChangedStats = null;
 	}
 
-	// Token: 0x0601BF36 RID: 114486 RVA: 0x007C25F8 File Offset: 0x007C07F8
+	// Token: 0x06019B19 RID: 105241 RVA: 0x007E9A50 File Offset: 0x007E7C50
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -476,62 +479,89 @@ public class BaseTagComponent : EntityComponent, IStaticVariableResetter
 			return false;
 		}
 		BaseTagComponent baseTagComponent = (BaseTagComponent)componentTemplate;
-		if (base.CanResetComponentProperty("TagSwitchedCallbacks") && baseTagComponent.TagSwitchedCallbacks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, HashSet<BaseTagComponent.TTagSwitchedCallback>>>(this.TagSwitchedCallbacks), "TagSwitchedCallbacks"))
+		if (baseTagComponent.TagSwitchedCallbacks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagSwitchedCallbacks), "TagSwitchedCallbacks"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TagChangedCallbacks") && baseTagComponent.TagChangedCallbacks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, HashSet<BaseTagComponent.TTagChangedCallback>>>(this.TagChangedCallbacks), "TagChangedCallbacks"))
+		if (baseTagComponent.TagChangedCallbacks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagChangedCallbacks), "TagChangedCallbacks"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TagContainer"))
+		if (baseTagComponent.TagContainer == null)
 		{
-			if (baseTagComponent.TagContainer == null)
-			{
-				this.TagContainer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TagContainer>(this.TagContainer), "TagContainer"))
-			{
-				return false;
-			}
+			this.TagContainer = null;
 		}
-		return !base.CanResetComponentProperty("WrappedTagChangedListenerMap") || baseTagComponent.WrappedTagChangedListenerMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, Dictionary<BaseTagComponent.TTagChangedCallback, BaseTagComponent.TTagChangedCallback>>>(this.WrappedTagChangedListenerMap), "WrappedTagChangedListenerMap");
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagContainer), "TagContainer"))
+		{
+			return false;
+		}
+		return baseTagComponent.WrappedTagChangedListenerMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.WrappedTagChangedListenerMap), "WrappedTagChangedListenerMap");
 	}
 
-	// Token: 0x0400DCC5 RID: 56517
+	// Token: 0x1700292A RID: 10538
+	// (get) Token: 0x06019B1A RID: 105242 RVA: 0x007E9B01 File Offset: 0x007E7D01
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700292B RID: 10539
+	// (get) Token: 0x06019B1B RID: 105243 RVA: 0x007E9B04 File Offset: 0x007E7D04
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700292C RID: 10540
+	// (get) Token: 0x06019B1C RID: 105244 RVA: 0x007E9B07 File Offset: 0x007E7D07
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E164 RID: 57700
 	protected readonly Dictionary<int, HashSet<BaseTagComponent.TTagSwitchedCallback>> TagSwitchedCallbacks = new Dictionary<int, HashSet<BaseTagComponent.TTagSwitchedCallback>>();
 
-	// Token: 0x0400DCC6 RID: 56518
+	// Token: 0x0400E165 RID: 57701
 	protected readonly Dictionary<int, HashSet<BaseTagComponent.TTagChangedCallback>> TagChangedCallbacks = new Dictionary<int, HashSet<BaseTagComponent.TTagChangedCallback>>();
 
-	// Token: 0x0400DCC7 RID: 56519
+	// Token: 0x0400E166 RID: 57702
 	public TagContainer TagContainer = new TagContainer();
 
-	// Token: 0x0400DCC8 RID: 56520
+	// Token: 0x0400E167 RID: 57703
 	private static Dictionary<int, Stat> TagChangedStats;
 
-	// Token: 0x0400DCC9 RID: 56521
+	// Token: 0x0400E168 RID: 57704
 	private readonly Dictionary<int, Dictionary<BaseTagComponent.TTagChangedCallback, BaseTagComponent.TTagChangedCallback>> WrappedTagChangedListenerMap = new Dictionary<int, Dictionary<BaseTagComponent.TTagChangedCallback, BaseTagComponent.TTagChangedCallback>>();
 
-	// Token: 0x0400DCCA RID: 56522
+	// Token: 0x0400E169 RID: 57705
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnAnyTagChangedStat = Stat.Create("BaseTagComponent.OnAnyTagChanged", "", "");
 
-	// Token: 0x0400DCCB RID: 56523
+	// Token: 0x0400E16A RID: 57706
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnAnyTagChangedCallbacksStat = Stat.Create("BaseTagComponent.OnAnyTagChanged.Callbacks", "", "");
 
-	// Token: 0x0400DCCC RID: 56524
+	// Token: 0x0400E16B RID: 57707
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnAnyTagChangedOnGlobalGameplayTagChanged = Stat.Create("BaseTagComponent.OnAnyTagChanged.OnGlobalGameplayTagChanged", "", "");
 
-	// Token: 0x0200973B RID: 38715
-	// (Invoke) Token: 0x0604C4E2 RID: 312546
+	// Token: 0x02008961 RID: 35169
+	// (Invoke) Token: 0x06042970 RID: 272752
 	[NullableContext(0)]
 	public delegate void TTagSwitchedCallback(int tagId, bool tagExist);
 
-	// Token: 0x0200973C RID: 38716
-	// (Invoke) Token: 0x0604C4E6 RID: 312550
+	// Token: 0x02008962 RID: 35170
+	// (Invoke) Token: 0x06042974 RID: 272756
 	[NullableContext(0)]
 	public delegate void TTagChangedCallback(int count, int tagId, int exactTagId, int oldCount);
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,26 +7,26 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x0200137F RID: 4991
+// Token: 0x02000833 RID: 2099
 [NullableContext(1)]
 [Nullable(0)]
 public class MowingTowerData : ActivityBaseData
 {
-	// Token: 0x06008BC8 RID: 35784 RVA: 0x001DE50C File Offset: 0x001DC70C
+	// Token: 0x06005F63 RID: 24419 RVA: 0x001E733C File Offset: 0x001E553C
 	protected override void PhraseEx(ActivityData data)
 	{
 		this.CurrentLevelInfoMap.Clear();
 		this.CurrentLevelRewardInfoMap.Clear();
-		this.PhraseLevelInfo(data.MowTowerActivityInfo.MowTowerLevelInfos.ToList<MowTowerLevelsInfo>());
+		this.PhraseLevelInfo(data.MowTowerActivityInfo.MowTowerLevelInfos);
 		this.CheckIfNewMowingTowerOpen();
-		this.PhraseRewardInfo(data.MowTowerActivityInfo.MowTowerLevelInfos.ToList<MowTowerLevelsInfo>());
+		this.PhraseRewardInfo(data.MowTowerActivityInfo.MowTowerLevelInfos);
 		this.CurrentData = data;
 		EventSystem.Instance.Emit(EEventName.RefreshMowingTowerData);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshMowingTowerRewardRedDot, base.Id);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06008BC9 RID: 35785 RVA: 0x001DE5A4 File Offset: 0x001DC7A4
+	// Token: 0x06005F64 RID: 24420 RVA: 0x001E73CA File Offset: 0x001E55CA
 	public void RebuildData()
 	{
 		if (this.CurrentData != null)
@@ -36,8 +35,8 @@ public class MowingTowerData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06008BCA RID: 35786 RVA: 0x001DE5BC File Offset: 0x001DC7BC
-	public void PhraseRewardInfo(List<MowTowerLevelsInfo> levelData)
+	// Token: 0x06005F65 RID: 24421 RVA: 0x001E73E0 File Offset: 0x001E55E0
+	public void PhraseRewardInfo(IEnumerable<MowTowerLevelsInfo> levelData)
 	{
 		foreach (MowTowerLevelsInfo mowTowerLevelsInfo in levelData)
 		{
@@ -46,8 +45,8 @@ public class MowingTowerData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06008BCB RID: 35787 RVA: 0x001DE624 File Offset: 0x001DC824
-	public void PhraseLevelInfo(List<MowTowerLevelsInfo> data)
+	// Token: 0x06005F66 RID: 24422 RVA: 0x001E7444 File Offset: 0x001E5644
+	public void PhraseLevelInfo(IEnumerable<MowTowerLevelsInfo> data)
 	{
 		foreach (MowTowerLevelsInfo mowTowerLevelsInfo in data)
 		{
@@ -68,7 +67,7 @@ public class MowingTowerData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06008BCC RID: 35788 RVA: 0x001DE6F8 File Offset: 0x001DC8F8
+	// Token: 0x06005F67 RID: 24423 RVA: 0x001E7514 File Offset: 0x001E5714
 	[NullableContext(2)]
 	public MowingTowerLevelDetailInfo GetMowingTowerLevelDetailInfoById(int levelsId)
 	{
@@ -83,25 +82,27 @@ public class MowingTowerData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x06008BCD RID: 35789 RVA: 0x001DE75C File Offset: 0x001DC95C
+	// Token: 0x06005F68 RID: 24424 RVA: 0x001E7578 File Offset: 0x001E5778
 	public MowingTowerLevelDetailInfo[] GetMowingTowerLevelDetailInfo()
 	{
-		return this.CurrentLevelInfoMap.Values.ToArray<MowingTowerLevelDetailInfo>();
+		MowingTowerLevelDetailInfo[] array = new MowingTowerLevelDetailInfo[this.CurrentLevelInfoMap.Count];
+		this.CurrentLevelInfoMap.Values.CopyTo(array, 0);
+		return array;
 	}
 
-	// Token: 0x06008BCE RID: 35790 RVA: 0x001DE76E File Offset: 0x001DC96E
+	// Token: 0x06005F69 RID: 24425 RVA: 0x001E75A9 File Offset: 0x001E57A9
 	public override bool GetExDataRedPointShowState()
 	{
 		return base.GetPreGuideQuestFinishState() && (this.NewOpenMowingTowerState || this.GetIfCanTakeReward());
 	}
 
-	// Token: 0x06008BCF RID: 35791 RVA: 0x001DE78A File Offset: 0x001DC98A
+	// Token: 0x06005F6A RID: 24426 RVA: 0x001E75C5 File Offset: 0x001E57C5
 	public bool GetNewUnlockState()
 	{
 		return this.NeedShowNewUnlock;
 	}
 
-	// Token: 0x06008BD0 RID: 35792 RVA: 0x001DE794 File Offset: 0x001DC994
+	// Token: 0x06005F6B RID: 24427 RVA: 0x001E75D0 File Offset: 0x001E57D0
 	private bool GetIfCanTakeReward()
 	{
 		foreach (KeyValuePair<int, List<IActivityRewardData>> keyValuePair in this.CurrentLevelRewardInfoMap)
@@ -120,7 +121,7 @@ public class MowingTowerData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06008BD1 RID: 35793 RVA: 0x001DE82C File Offset: 0x001DCA2C
+	// Token: 0x06005F6C RID: 24428 RVA: 0x001E7668 File Offset: 0x001E5868
 	private bool GetIfCanTakeRewardByLevelId(int levelId)
 	{
 		List<IActivityRewardData> list;
@@ -139,7 +140,7 @@ public class MowingTowerData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06008BD2 RID: 35794 RVA: 0x001DE8B8 File Offset: 0x001DCAB8
+	// Token: 0x06005F6D RID: 24429 RVA: 0x001E76F4 File Offset: 0x001E58F4
 	public void CheckIfNewMowingTowerOpen()
 	{
 		int activityCacheData = ActivityModel.Instance.GetActivityCacheData(base.Id, 0, base.Id, 0, 0);
@@ -150,7 +151,7 @@ public class MowingTowerData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06008BD3 RID: 35795 RVA: 0x001DE92C File Offset: 0x001DCB2C
+	// Token: 0x06005F6E RID: 24430 RVA: 0x001E7768 File Offset: 0x001E5968
 	public int GetCurrentCheckBuffIndex()
 	{
 		int result = 0;
@@ -166,7 +167,7 @@ public class MowingTowerData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06008BD4 RID: 35796 RVA: 0x001DE960 File Offset: 0x001DCB60
+	// Token: 0x06005F6F RID: 24431 RVA: 0x001E779C File Offset: 0x001E599C
 	private int GetCurrentOpenBossNum()
 	{
 		int num = 0;
@@ -181,7 +182,7 @@ public class MowingTowerData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06008BD5 RID: 35797 RVA: 0x001DE994 File Offset: 0x001DCB94
+	// Token: 0x06005F70 RID: 24432 RVA: 0x001E77D0 File Offset: 0x001E59D0
 	public void CacheNewUnlock()
 	{
 		this.NeedShowNewUnlock = false;
@@ -190,7 +191,7 @@ public class MowingTowerData : ActivityBaseData
 		this.CheckIfNewMowingTowerOpen();
 	}
 
-	// Token: 0x06008BD6 RID: 35798 RVA: 0x001DE9D0 File Offset: 0x001DCBD0
+	// Token: 0x06005F71 RID: 24433 RVA: 0x001E780C File Offset: 0x001E5A0C
 	public void CacheCurrentOpenBossNum()
 	{
 		int currentOpenBossNum = this.GetCurrentOpenBossNum();
@@ -198,25 +199,25 @@ public class MowingTowerData : ActivityBaseData
 		this.CheckIfNewMowingTowerOpen();
 	}
 
-	// Token: 0x06008BD7 RID: 35799 RVA: 0x001DEA03 File Offset: 0x001DCC03
+	// Token: 0x06005F72 RID: 24434 RVA: 0x001E783F File Offset: 0x001E5A3F
 	public bool EntranceRedDot()
 	{
 		return this.GetExDataRedPointShowState();
 	}
 
-	// Token: 0x06008BD8 RID: 35800 RVA: 0x001DEA0B File Offset: 0x001DCC0B
+	// Token: 0x06005F73 RID: 24435 RVA: 0x001E7847 File Offset: 0x001E5A47
 	public bool HaveRewardCanTake()
 	{
 		return this.GetIfCanTakeReward();
 	}
 
-	// Token: 0x06008BD9 RID: 35801 RVA: 0x001DEA13 File Offset: 0x001DCC13
+	// Token: 0x06005F74 RID: 24436 RVA: 0x001E784F File Offset: 0x001E5A4F
 	public bool HaveLevelRewardCanTake(int levelId)
 	{
 		return this.GetIfCanTakeRewardByLevelId(levelId);
 	}
 
-	// Token: 0x06008BDA RID: 35802 RVA: 0x001DEA1C File Offset: 0x001DCC1C
+	// Token: 0x06005F75 RID: 24437 RVA: 0x001E7858 File Offset: 0x001E5A58
 	public int GetFullScore()
 	{
 		int num = 0;
@@ -228,7 +229,7 @@ public class MowingTowerData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06008BDB RID: 35803 RVA: 0x001DEA7C File Offset: 0x001DCC7C
+	// Token: 0x06005F76 RID: 24438 RVA: 0x001E78B8 File Offset: 0x001E5AB8
 	private string GetButtonText(int state)
 	{
 		string result = "";
@@ -247,7 +248,7 @@ public class MowingTowerData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06008BDC RID: 35804 RVA: 0x001DEABC File Offset: 0x001DCCBC
+	// Token: 0x06005F77 RID: 24439 RVA: 0x001E78F8 File Offset: 0x001E5AF8
 	private List<TItem> GetRewardItems(int dropId)
 	{
 		List<TItem> list = new List<TItem>();
@@ -262,11 +263,12 @@ public class MowingTowerData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06008BDD RID: 35805 RVA: 0x001DEB38 File Offset: 0x001DCD38
+	// Token: 0x06005F78 RID: 24440 RVA: 0x001E7974 File Offset: 0x001E5B74
 	private List<IActivityRewardData> CreateLevelReward(int levelId, MowTowerLevelsInfo levelData)
 	{
 		List<IActivityRewardData> list = new List<IActivityRewardData>();
-		int[] array = levelData.LevelRewardStatus.Keys.ToArray<int>();
+		int[] array = new int[levelData.LevelRewardStatus.Keys.Count];
+		levelData.LevelRewardStatus.Keys.CopyTo(array, 0);
 		for (int i = 0; i < array.Length; i++)
 		{
 			int num = array[i];
@@ -299,7 +301,7 @@ public class MowingTowerData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06008BDE RID: 35806 RVA: 0x001DECAC File Offset: 0x001DCEAC
+	// Token: 0x06005F79 RID: 24441 RVA: 0x001E7B00 File Offset: 0x001E5D00
 	public List<IActivityRewardData> GetRewardByLevelId(int? levelId = null)
 	{
 		List<IActivityRewardData> result;
@@ -310,7 +312,7 @@ public class MowingTowerData : ActivityBaseData
 		return new List<IActivityRewardData>();
 	}
 
-	// Token: 0x06008BDF RID: 35807 RVA: 0x001DECD8 File Offset: 0x001DCED8
+	// Token: 0x06005F7A RID: 24442 RVA: 0x001E7B2C File Offset: 0x001E5D2C
 	public void SetRewardStateClaimed(int levelId, int index)
 	{
 		List<IActivityRewardData> list;
@@ -330,19 +332,19 @@ public class MowingTowerData : ActivityBaseData
 		activityRewardData.RewardState = EActivityRewardState.Claimed;
 	}
 
-	// Token: 0x04003DFA RID: 15866
+	// Token: 0x04003E92 RID: 16018
 	private readonly Dictionary<int, List<IActivityRewardData>> CurrentLevelRewardInfoMap = new Dictionary<int, List<IActivityRewardData>>();
 
-	// Token: 0x04003DFB RID: 15867
+	// Token: 0x04003E93 RID: 16019
 	private bool NewOpenMowingTowerState;
 
-	// Token: 0x04003DFC RID: 15868
+	// Token: 0x04003E94 RID: 16020
 	private bool NeedShowNewUnlock;
 
-	// Token: 0x04003DFD RID: 15869
+	// Token: 0x04003E95 RID: 16021
 	private readonly Dictionary<int, MowingTowerLevelDetailInfo> CurrentLevelInfoMap = new Dictionary<int, MowingTowerLevelDetailInfo>();
 
-	// Token: 0x04003DFE RID: 15870
+	// Token: 0x04003E96 RID: 16022
 	[Nullable(2)]
 	private ActivityData CurrentData;
 }

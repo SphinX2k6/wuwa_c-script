@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003042 RID: 12354
+// Token: 0x02002598 RID: 9624
 [NullableContext(1)]
 [Nullable(0)]
 internal class PathLineSegment
 {
-	// Token: 0x0601A38B RID: 107403 RVA: 0x006E86AC File Offset: 0x006E68AC
+	// Token: 0x06017D00 RID: 97536 RVA: 0x0070FFA4 File Offset: 0x0070E1A4
 	public PathLineSegment(Vector start, Vector end)
 	{
 		this.Start.DeepCopy(start);
@@ -28,7 +28,7 @@ internal class PathLineSegment
 		this.Max[2] = Math.Max(start[2], end[2]);
 	}
 
-	// Token: 0x0601A38C RID: 107404 RVA: 0x006E87F0 File Offset: 0x006E69F0
+	// Token: 0x06017D01 RID: 97537 RVA: 0x007100E8 File Offset: 0x0070E2E8
 	public double FindNearestLocation(Vector point, Vector outVect, double distSquared)
 	{
 		if (!this.PossibleInDistSquared(point, distSquared))
@@ -48,7 +48,7 @@ internal class PathLineSegment
 		return num;
 	}
 
-	// Token: 0x0601A38D RID: 107405 RVA: 0x006E8884 File Offset: 0x006E6A84
+	// Token: 0x06017D02 RID: 97538 RVA: 0x0071017C File Offset: 0x0070E37C
 	public bool PossibleInDistSquared(Vector point, double distSquared)
 	{
 		double num = 0.0;
@@ -66,18 +66,18 @@ internal class PathLineSegment
 		return num < distSquared;
 	}
 
-	// Token: 0x0400C775 RID: 51061
+	// Token: 0x0400CB4F RID: 52047
 	public Vector Start = Vector.Create();
 
-	// Token: 0x0400C776 RID: 51062
+	// Token: 0x0400CB50 RID: 52048
 	public Vector Direct = Vector.Create();
 
-	// Token: 0x0400C777 RID: 51063
+	// Token: 0x0400CB51 RID: 52049
 	public double Length;
 
-	// Token: 0x0400C778 RID: 51064
+	// Token: 0x0400CB52 RID: 52050
 	private double[] Min = new double[3];
 
-	// Token: 0x0400C779 RID: 51065
+	// Token: 0x0400CB53 RID: 52051
 	private double[] Max = new double[3];
 }

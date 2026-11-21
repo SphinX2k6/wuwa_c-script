@@ -2,48 +2,48 @@
 
 namespace CSharpScript.Game.Module.QuickHack.View
 {
-	// Token: 0x02004F95 RID: 20373
+	// Token: 0x02003F5E RID: 16222
 	public enum EQuickHackUiType
 	{
-		// Token: 0x0401BBB9 RID: 113593
+		// Token: 0x0401658E RID: 91534
 		RamItem,
-		// Token: 0x0401BBBA RID: 113594
+		// Token: 0x0401658F RID: 91535
 		SkillPanelLayout,
-		// Token: 0x0401BBBB RID: 113595
+		// Token: 0x04016590 RID: 91536
 		RamTitleText,
-		// Token: 0x0401BBBC RID: 113596
+		// Token: 0x04016591 RID: 91537
 		TipItem,
-		// Token: 0x0401BBBD RID: 113597
+		// Token: 0x04016592 RID: 91538
 		TipText,
-		// Token: 0x0401BBBE RID: 113598
+		// Token: 0x04016593 RID: 91539
 		InfoTitleText,
-		// Token: 0x0401BBBF RID: 113599
+		// Token: 0x04016594 RID: 91540
 		InfoTagText,
-		// Token: 0x0401BBC0 RID: 113600
+		// Token: 0x04016595 RID: 91541
 		InfoDescText,
-		// Token: 0x0401BBC1 RID: 113601
+		// Token: 0x04016596 RID: 91542
 		InfoDurationText,
-		// Token: 0x0401BBC2 RID: 113602
+		// Token: 0x04016597 RID: 91543
 		InfoUploadText,
-		// Token: 0x0401BBC3 RID: 113603
+		// Token: 0x04016598 RID: 91544
 		DurationLimitItem,
-		// Token: 0x0401BBC4 RID: 113604
+		// Token: 0x04016599 RID: 91545
 		DurationLimitBarSprite,
-		// Token: 0x0401BBC5 RID: 113605
+		// Token: 0x0401659A RID: 91546
 		DurationLimitText,
-		// Token: 0x0401BBC6 RID: 113606
+		// Token: 0x0401659B RID: 91547
 		TargetItem,
-		// Token: 0x0401BBC7 RID: 113607
+		// Token: 0x0401659C RID: 91548
 		RamSpriteDarkBlue,
-		// Token: 0x0401BBC8 RID: 113608
+		// Token: 0x0401659D RID: 91549
 		RamSpriteBlue,
-		// Token: 0x0401BBC9 RID: 113609
+		// Token: 0x0401659E RID: 91550
 		RamSpriteRedA,
-		// Token: 0x0401BBCA RID: 113610
+		// Token: 0x0401659F RID: 91551
 		RamSpriteRedB,
-		// Token: 0x0401BBCB RID: 113611
+		// Token: 0x040165A0 RID: 91552
 		UseSkillKeyItem,
-		// Token: 0x0401BBCC RID: 113612
+		// Token: 0x040165A1 RID: 91553
 		InfoLineItem
 	}
 }

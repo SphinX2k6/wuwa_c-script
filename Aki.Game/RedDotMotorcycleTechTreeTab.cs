@@ -1,16 +1,16 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020033D2 RID: 13266
+// Token: 0x02002944 RID: 10564
 public class RedDotMotorcycleTechTreeTab : RedDotBase
 {
-	// Token: 0x0601CC06 RID: 117766 RVA: 0x00809478 File Offset: 0x00807678
+	// Token: 0x0601A8FE RID: 108798 RVA: 0x0082FA3C File Offset: 0x0082DC3C
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0601CC07 RID: 117767 RVA: 0x0080947C File Offset: 0x0080767C
+	// Token: 0x0601A8FF RID: 108799 RVA: 0x0082FA40 File Offset: 0x0082DC40
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.MotorDevelopInfoUpdate, new Action(base.EventCheck));
@@ -19,7 +19,7 @@ public class RedDotMotorcycleTechTreeTab : RedDotBase
 		EventSystem.Instance.Add(EEventName.MotorDevelopTreeTypeRedDotUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CC08 RID: 117768 RVA: 0x008094FC File Offset: 0x008076FC
+	// Token: 0x0601A900 RID: 108800 RVA: 0x0082FAC0 File Offset: 0x0082DCC0
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.MotorDevelopInfoUpdate, new Action(base.EventCheck));
@@ -28,7 +28,7 @@ public class RedDotMotorcycleTechTreeTab : RedDotBase
 		EventSystem.Instance.Remove(EEventName.MotorDevelopTreeTypeRedDotUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CC09 RID: 117769 RVA: 0x0080957C File Offset: 0x0080777C
+	// Token: 0x0601A901 RID: 108801 RVA: 0x0082FB40 File Offset: 0x0082DD40
 	protected override bool OnCheck(int uId = 0)
 	{
 		bool flag = MotorcycleDevelopModel.Instance.RedDotHasAnyNewTechTree();
@@ -36,7 +36,7 @@ public class RedDotMotorcycleTechTreeTab : RedDotBase
 		return flag || flag2;
 	}
 
-	// Token: 0x0601CC0A RID: 117770 RVA: 0x008095A9 File Offset: 0x008077A9
+	// Token: 0x0601A902 RID: 108802 RVA: 0x0082FB6D File Offset: 0x0082DD6D
 	private void OnMotorDevelopTechTreeUpdate(bool isUpdateNode)
 	{
 		base.EventCheck();

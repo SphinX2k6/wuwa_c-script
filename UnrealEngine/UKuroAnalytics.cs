@@ -6,30 +6,30 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020015E5 RID: 5605
+	// Token: 0x020002D5 RID: 725
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KRDataAnalyticsPlugin.KuroAnalytics")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroAnalytics : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601434E RID: 82766 RVA: 0x001DAE30 File Offset: 0x001D9030
+		// Token: 0x06004E4F RID: 20047 RVA: 0x0006D862 File Offset: 0x0006BA62
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroAnalytics._ClassPtr;
 		}
 
-		// Token: 0x0601434F RID: 82767 RVA: 0x001DAE3C File Offset: 0x001D903C
+		// Token: 0x06004E50 RID: 20048 RVA: 0x0006D870 File Offset: 0x0006BA70
 		public UKuroAnalytics() : this(BuiltinUtils.AllocNativeUObject(UKuroAnalytics.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06014350 RID: 82768 RVA: 0x001DAE64 File Offset: 0x001D9064
+		// Token: 0x06004E51 RID: 20049 RVA: 0x0006D898 File Offset: 0x0006BA98
 		public UKuroAnalytics(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroAnalytics.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06014351 RID: 82769 RVA: 0x001DAE98 File Offset: 0x001D9098
+		// Token: 0x06004E52 RID: 20050 RVA: 0x0006D8CC File Offset: 0x0006BACC
 		public unsafe static void UserUnset(string Property, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(Property);
@@ -37,7 +37,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06014352 RID: 82770 RVA: 0x001DAEC0 File Offset: 0x001D90C0
+		// Token: 0x06004E53 RID: 20051 RVA: 0x0006D8F4 File Offset: 0x0006BAF4
 		public unsafe static void UserUniqueAppend(string Properties, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(Properties);
@@ -45,7 +45,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06014353 RID: 82771 RVA: 0x001DAEE8 File Offset: 0x001D90E8
+		// Token: 0x06004E54 RID: 20052 RVA: 0x0006D91C File Offset: 0x0006BB1C
 		public unsafe static void UserSetOnce(string Properties, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(Properties);
@@ -53,7 +53,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06014354 RID: 82772 RVA: 0x001DAF10 File Offset: 0x001D9110
+		// Token: 0x06004E55 RID: 20053 RVA: 0x0006D944 File Offset: 0x0006BB44
 		public unsafe static void UserSet(string Properties, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(Properties);
@@ -61,11 +61,11 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06014355 RID: 82773
+		// Token: 0x06004E56 RID: 20054
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void UserDelete(int Index = 0);
 
-		// Token: 0x06014356 RID: 82774 RVA: 0x001DAF38 File Offset: 0x001D9138
+		// Token: 0x06004E57 RID: 20055 RVA: 0x0006D96C File Offset: 0x0006BB6C
 		public unsafe static void UserAppend(string Properties, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(Properties);
@@ -73,7 +73,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06014357 RID: 82775 RVA: 0x001DAF60 File Offset: 0x001D9160
+		// Token: 0x06004E58 RID: 20056 RVA: 0x0006D994 File Offset: 0x0006BB94
 		public unsafe static void UserAdd(string Property, float Value, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(Property);
@@ -81,7 +81,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06014358 RID: 82776 RVA: 0x001DAF88 File Offset: 0x001D9188
+		// Token: 0x06004E59 RID: 20057 RVA: 0x0006D9BC File Offset: 0x0006BBBC
 		public unsafe static bool TrackUpdate(string EventName, string Properties, string EventId, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(EventName);
@@ -94,7 +94,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06014359 RID: 82777 RVA: 0x001DAFD4 File Offset: 0x001D91D4
+		// Token: 0x06004E5A RID: 20058 RVA: 0x0006DA08 File Offset: 0x0006BC08
 		public unsafe static bool TrackOverwrite(string EventName, string Properties, string EventId, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(EventName);
@@ -107,7 +107,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601435A RID: 82778 RVA: 0x001DB020 File Offset: 0x001D9220
+		// Token: 0x06004E5B RID: 20059 RVA: 0x0006DA54 File Offset: 0x0006BC54
 		public unsafe static bool TrackFirstWithId(string EventName, string Properties, string FirstCheckId, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(EventName);
@@ -120,7 +120,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601435B RID: 82779 RVA: 0x001DB06C File Offset: 0x001D926C
+		// Token: 0x06004E5C RID: 20060 RVA: 0x0006DAA0 File Offset: 0x0006BCA0
 		public unsafe static bool TrackFirst(string EventName, string Properties, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(EventName);
@@ -131,7 +131,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601435C RID: 82780 RVA: 0x001DB0A4 File Offset: 0x001D92A4
+		// Token: 0x06004E5D RID: 20061 RVA: 0x0006DAD8 File Offset: 0x0006BCD8
 		public unsafe static bool Track(string EventName, string Properties, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(EventName);
@@ -142,11 +142,11 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601435D RID: 82781
+		// Token: 0x06004E5E RID: 20062
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ToggleSampleCPUFrequency(bool bActive, float SampleInterval);
 
-		// Token: 0x0601435E RID: 82782 RVA: 0x001DB0DC File Offset: 0x001D92DC
+		// Token: 0x06004E5F RID: 20063 RVA: 0x0006DB10 File Offset: 0x0006BD10
 		public unsafe static void TimeEvent(string EventName, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(EventName);
@@ -154,23 +154,23 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x0601435F RID: 82783
+		// Token: 0x06004E60 RID: 20064
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetTrackStatus(int Status = 1, int Index = 0);
 
-		// Token: 0x06014360 RID: 82784
+		// Token: 0x06004E61 RID: 20065
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void OptOutTracking(int Index = 0);
 
-		// Token: 0x06014361 RID: 82785
+		// Token: 0x06004E62 RID: 20066
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void OptInTracking(int Index = 0);
 
-		// Token: 0x06014362 RID: 82786
+		// Token: 0x06004E63 RID: 20067
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Logout(int Index = 0);
 
-		// Token: 0x06014363 RID: 82787 RVA: 0x001DB104 File Offset: 0x001D9304
+		// Token: 0x06004E64 RID: 20068 RVA: 0x0006DB38 File Offset: 0x0006BD38
 		public unsafe static void Login(string AccountId, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(AccountId);
@@ -178,7 +178,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06014364 RID: 82788 RVA: 0x001DB12C File Offset: 0x001D932C
+		// Token: 0x06004E65 RID: 20069 RVA: 0x0006DB60 File Offset: 0x0006BD60
 		public unsafe static void InitializeEncryptInstance(string appid, string serverurl, KAMode mode, bool bEnableLog, string timeZone, bool bEnableEncrypt, string EncryptPublicKey, int EncryptVersion, string SymmetricEncryption, string AsymmetricEncryption)
 		{
 			FString fstring = FString.AllocTemp(appid);
@@ -196,7 +196,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring6, 1);
 		}
 
-		// Token: 0x06014365 RID: 82789 RVA: 0x001DB1B8 File Offset: 0x001D93B8
+		// Token: 0x06004E66 RID: 20070 RVA: 0x0006DBEC File Offset: 0x0006BDEC
 		public unsafe static bool InitializeDefaultInsWithURL_Appid(string ServerURL, string Appid, float ExitWaitTime, int MaxPendingLog, float SendHttpTimeout, bool bExitFlush, float CalibrateIntervalTime, bool bCalibratedStopTimer)
 		{
 			FString fstring = FString.AllocTemp(ServerURL);
@@ -207,11 +207,11 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06014366 RID: 82790
+		// Token: 0x06004E67 RID: 20071
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Initialize();
 
-		// Token: 0x06014367 RID: 82791 RVA: 0x001DB1F8 File Offset: 0x001D93F8
+		// Token: 0x06004E68 RID: 20072 RVA: 0x0006DC2C File Offset: 0x0006BE2C
 		public unsafe static void Identify(string DistinctId, int Index = 0)
 		{
 			FString fstring = FString.AllocTemp(DistinctId);
@@ -219,77 +219,77 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06014368 RID: 82792
+		// Token: 0x06004E69 RID: 20073
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool HasInstanceTimeCalibrated(int Index);
 
-		// Token: 0x06014369 RID: 82793
+		// Token: 0x06004E6A RID: 20074
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool HasInstanceInitialized(int Index);
 
-		// Token: 0x0601436A RID: 82794
+		// Token: 0x06004E6B RID: 20075
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool HasDefaultInstanceInitialized();
 
-		// Token: 0x0601436B RID: 82795 RVA: 0x001DB21D File Offset: 0x001D941D
+		// Token: 0x06004E6C RID: 20076 RVA: 0x0006DC51 File Offset: 0x0006BE51
 		public static string GetSuperProperties(int Index = 0)
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroAnalytics.__GetSuperProperties_Internal(Index));
 		}
 
-		// Token: 0x0601436C RID: 82796 RVA: 0x001DB22A File Offset: 0x001D942A
+		// Token: 0x06004E6D RID: 20077 RVA: 0x0006DC5E File Offset: 0x0006BE5E
 		public static string GetServerUrl(int Index = 0)
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroAnalytics.__GetServerUrl_Internal(Index));
 		}
 
-		// Token: 0x0601436D RID: 82797 RVA: 0x001DB237 File Offset: 0x001D9437
+		// Token: 0x06004E6E RID: 20078 RVA: 0x0006DC6B File Offset: 0x0006BE6B
 		public static string GetPresetProperties(int Index = 0)
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroAnalytics.__GetPresetProperties_Internal(Index));
 		}
 
-		// Token: 0x0601436E RID: 82798 RVA: 0x001DB244 File Offset: 0x001D9444
+		// Token: 0x06004E6F RID: 20079 RVA: 0x0006DC78 File Offset: 0x0006BE78
 		public static string GetMachineID()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroAnalytics.__GetMachineID_Internal());
 		}
 
-		// Token: 0x0601436F RID: 82799 RVA: 0x001DB250 File Offset: 0x001D9450
+		// Token: 0x06004E70 RID: 20080 RVA: 0x0006DC84 File Offset: 0x0006BE84
 		public static string GetDistinctId(int Index = 0)
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroAnalytics.__GetDistinctId_Internal(Index));
 		}
 
-		// Token: 0x06014370 RID: 82800 RVA: 0x001DB25D File Offset: 0x001D945D
+		// Token: 0x06004E71 RID: 20081 RVA: 0x0006DC91 File Offset: 0x0006BE91
 		public static string GetDeviceId(int Index = 0)
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroAnalytics.__GetDeviceId_Internal(Index));
 		}
 
-		// Token: 0x06014371 RID: 82801
+		// Token: 0x06004E72 RID: 20082
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetCurrentCPUSampledMaxFrequency();
 
-		// Token: 0x06014372 RID: 82802
+		// Token: 0x06004E73 RID: 20083
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetCurrentCPUSampledAvgFrequency();
 
-		// Token: 0x06014373 RID: 82803 RVA: 0x001DB26A File Offset: 0x001D946A
+		// Token: 0x06004E74 RID: 20084 RVA: 0x0006DC9E File Offset: 0x0006BE9E
 		public static string GetAppId(int Index = 0)
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroAnalytics.__GetAppId_Internal(Index));
 		}
 
-		// Token: 0x06014374 RID: 82804
+		// Token: 0x06004E75 RID: 20085
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Flush(int Index = 0);
 
-		// Token: 0x06014375 RID: 82805
+		// Token: 0x06004E76 RID: 20086
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void EnableTracking(bool bIsEnable, int Index = 0);
 
-		// Token: 0x06014376 RID: 82806 RVA: 0x001DB277 File Offset: 0x001D9477
+		// Token: 0x06004E77 RID: 20087 RVA: 0x0006DCAB File Offset: 0x0006BEAB
 		public static void EnableThirdPartySharing([Nullable(new byte[]
 		{
 			2,
@@ -299,7 +299,7 @@ namespace UnrealEngine
 			UKuroAnalytics.__EnableThirdPartySharing_Internal((EventTypeList ?? new TArray<string>()).NativePtr, Index);
 		}
 
-		// Token: 0x06014377 RID: 82807 RVA: 0x001DB290 File Offset: 0x001D9490
+		// Token: 0x06004E78 RID: 20088 RVA: 0x0006DCC4 File Offset: 0x0006BEC4
 		public unsafe static void EnableAutoTrackWithTypeAndProperties([Nullable(new byte[]
 		{
 			2,
@@ -311,7 +311,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06014378 RID: 82808 RVA: 0x001DB2C5 File Offset: 0x001D94C5
+		// Token: 0x06004E79 RID: 20089 RVA: 0x0006DCF9 File Offset: 0x0006BEF9
 		public static void EnableAutoTrackWithType([Nullable(new byte[]
 		{
 			2,
@@ -321,26 +321,26 @@ namespace UnrealEngine
 			UKuroAnalytics.__EnableAutoTrackWithType_Internal((EventTypeList ?? new TArray<string>()).NativePtr, Index);
 		}
 
-		// Token: 0x06014379 RID: 82809
+		// Token: 0x06004E7A RID: 20090
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void EnableAutoTrack(int Index = 0);
 
-		// Token: 0x0601437A RID: 82810
+		// Token: 0x06004E7B RID: 20091
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void DestroyInstance(int Index, bool Flush = true);
 
-		// Token: 0x0601437B RID: 82811
+		// Token: 0x06004E7C RID: 20092
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void DestroyAllInstance(bool Flush);
 
-		// Token: 0x0601437C RID: 82812 RVA: 0x001DB2DD File Offset: 0x001D94DD
+		// Token: 0x06004E7D RID: 20093 RVA: 0x0006DD11 File Offset: 0x0006BF11
 		[NullableContext(2)]
 		public static bool CreateSimpleInstance(in FKACreateInstanceParam Param)
 		{
 			return UKuroAnalytics.__CreateSimpleInstance_Internal((Param ?? new FKACreateInstanceParam()).NativePtr);
 		}
 
-		// Token: 0x0601437D RID: 82813 RVA: 0x001DB2F4 File Offset: 0x001D94F4
+		// Token: 0x06004E7E RID: 20094 RVA: 0x0006DD28 File Offset: 0x0006BF28
 		[NullableContext(2)]
 		public static void CalibrateTime(in FKAOnTimeCalibrated OnTimeCalibrated, int Index = 0)
 		{
@@ -348,143 +348,143 @@ namespace UnrealEngine
 			UKuroAnalytics.__CalibrateTime_Internal((fkaonTimeCalibrated != null) ? fkaonTimeCalibrated.NativePtr : ((IntPtr)0), Index);
 		}
 
-		// Token: 0x0601437E RID: 82814
+		// Token: 0x06004E7F RID: 20095
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UserUnset_Internal(in FString Property, int Index);
 
-		// Token: 0x0601437F RID: 82815
+		// Token: 0x06004E80 RID: 20096
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UserUniqueAppend_Internal(in FString Properties, int Index);
 
-		// Token: 0x06014380 RID: 82816
+		// Token: 0x06004E81 RID: 20097
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UserSetOnce_Internal(in FString Properties, int Index);
 
-		// Token: 0x06014381 RID: 82817
+		// Token: 0x06004E82 RID: 20098
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UserSet_Internal(in FString Properties, int Index);
 
-		// Token: 0x06014382 RID: 82818
+		// Token: 0x06004E83 RID: 20099
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UserAppend_Internal(in FString Properties, int Index);
 
-		// Token: 0x06014383 RID: 82819
+		// Token: 0x06004E84 RID: 20100
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UserAdd_Internal(in FString Property, float Value, int Index);
 
-		// Token: 0x06014384 RID: 82820
+		// Token: 0x06004E85 RID: 20101
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __TrackUpdate_Internal(in FString EventName, in FString Properties, in FString EventId, int Index);
 
-		// Token: 0x06014385 RID: 82821
+		// Token: 0x06004E86 RID: 20102
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __TrackOverwrite_Internal(in FString EventName, in FString Properties, in FString EventId, int Index);
 
-		// Token: 0x06014386 RID: 82822
+		// Token: 0x06004E87 RID: 20103
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __TrackFirstWithId_Internal(in FString EventName, in FString Properties, in FString FirstCheckId, int Index);
 
-		// Token: 0x06014387 RID: 82823
+		// Token: 0x06004E88 RID: 20104
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __TrackFirst_Internal(in FString EventName, in FString Properties, int Index);
 
-		// Token: 0x06014388 RID: 82824
+		// Token: 0x06004E89 RID: 20105
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Track_Internal(in FString EventName, in FString Properties, int Index);
 
-		// Token: 0x06014389 RID: 82825
+		// Token: 0x06004E8A RID: 20106
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __TimeEvent_Internal(in FString EventName, int Index);
 
-		// Token: 0x0601438A RID: 82826
+		// Token: 0x06004E8B RID: 20107
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Login_Internal(in FString AccountId, int Index);
 
-		// Token: 0x0601438B RID: 82827
+		// Token: 0x06004E8C RID: 20108
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InitializeEncryptInstance_Internal(in FString appid, in FString serverurl, KAMode mode, bool bEnableLog, in FString timeZone, bool bEnableEncrypt, in FString EncryptPublicKey, int EncryptVersion, in FString SymmetricEncryption, in FString AsymmetricEncryption);
 
-		// Token: 0x0601438C RID: 82828
+		// Token: 0x06004E8D RID: 20109
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __InitializeDefaultInsWithURL_Appid_Internal(in FString ServerURL, in FString Appid, float ExitWaitTime, int MaxPendingLog, float SendHttpTimeout, bool bExitFlush, float CalibrateIntervalTime, bool bCalibratedStopTimer);
 
-		// Token: 0x0601438D RID: 82829
+		// Token: 0x06004E8E RID: 20110
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Identify_Internal(in FString DistinctId, int Index);
 
-		// Token: 0x0601438E RID: 82830
+		// Token: 0x06004E8F RID: 20111
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetSuperProperties_Internal(int Index);
 
-		// Token: 0x0601438F RID: 82831
+		// Token: 0x06004E90 RID: 20112
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetServerUrl_Internal(int Index);
 
-		// Token: 0x06014390 RID: 82832
+		// Token: 0x06004E91 RID: 20113
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetPresetProperties_Internal(int Index);
 
-		// Token: 0x06014391 RID: 82833
+		// Token: 0x06004E92 RID: 20114
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetMachineID_Internal();
 
-		// Token: 0x06014392 RID: 82834
+		// Token: 0x06004E93 RID: 20115
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetDistinctId_Internal(int Index);
 
-		// Token: 0x06014393 RID: 82835
+		// Token: 0x06004E94 RID: 20116
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetDeviceId_Internal(int Index);
 
-		// Token: 0x06014394 RID: 82836
+		// Token: 0x06004E95 RID: 20117
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetAppId_Internal(int Index);
 
-		// Token: 0x06014395 RID: 82837
+		// Token: 0x06004E96 RID: 20118
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __EnableThirdPartySharing_Internal(IntPtr EventTypeList, int Index);
 
-		// Token: 0x06014396 RID: 82838
+		// Token: 0x06004E97 RID: 20119
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __EnableAutoTrackWithTypeAndProperties_Internal(IntPtr EventTypeList, in FString Properties, int Index);
 
-		// Token: 0x06014397 RID: 82839
+		// Token: 0x06004E98 RID: 20120
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __EnableAutoTrackWithType_Internal(IntPtr EventTypeList, int Index);
 
-		// Token: 0x06014398 RID: 82840
+		// Token: 0x06004E99 RID: 20121
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __CreateSimpleInstance_Internal(IntPtr Param);
 
-		// Token: 0x06014399 RID: 82841
+		// Token: 0x06004E9A RID: 20122
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CalibrateTime_Internal(IntPtr OnTimeCalibrated, int Index);
 
-		// Token: 0x0601439A RID: 82842 RVA: 0x001DB30B File Offset: 0x001D950B
+		// Token: 0x06004E9B RID: 20123 RVA: 0x0006DD3F File Offset: 0x0006BF3F
 		static UKuroAnalytics()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KRDataAnalyticsPlugin.KuroAnalytics");
 		}
 
-		// Token: 0x0601439B RID: 82843 RVA: 0x001DB319 File Offset: 0x001D9519
+		// Token: 0x06004E9C RID: 20124 RVA: 0x0006DD4D File Offset: 0x0006BF4D
 		protected UKuroAnalytics(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400AFD9 RID: 45017
+		// Token: 0x04001F6C RID: 8044
 		public new const string __ObjectPath = "/Script/KRDataAnalyticsPlugin.KuroAnalytics";
 
-		// Token: 0x0400AFDA RID: 45018
+		// Token: 0x04001F6D RID: 8045
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400AFDB RID: 45019
+		// Token: 0x04001F6E RID: 8046
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

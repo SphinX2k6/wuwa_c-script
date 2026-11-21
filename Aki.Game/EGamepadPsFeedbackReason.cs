@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001D4C RID: 7500
+// Token: 0x0200120E RID: 4622
 public enum EGamepadPsFeedbackReason
 {
-	// Token: 0x04006905 RID: 26885
+	// Token: 0x040069E4 RID: 27108
 	TrapDefense,
-	// Token: 0x04006906 RID: 26886
+	// Token: 0x040069E5 RID: 27109
 	ListenTag,
-	// Token: 0x04006907 RID: 26887
+	// Token: 0x040069E6 RID: 27110
 	PilotThrow,
-	// Token: 0x04006908 RID: 26888
+	// Token: 0x040069E7 RID: 27111
 	FirstPersonTurret
 }

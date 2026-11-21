@@ -8,33 +8,33 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064DF RID: 25823
+	// Token: 0x0200545D RID: 21597
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MatchThreePieceItemView : UiPanelBase
 	{
-		// Token: 0x06040CF5 RID: 265461 RVA: 0x00FB2993 File Offset: 0x00FB0B93
+		// Token: 0x060359B9 RID: 219577 RVA: 0x00EF99C3 File Offset: 0x00EF7BC3
 		public void BindData(EPieceType type, bool skipInitialVisualReset = false)
 		{
 			this.Type = type;
 			this.SkipInitialVisualReset = skipInitialVisualReset;
 		}
 
-		// Token: 0x06040CF6 RID: 265462 RVA: 0x00FB29A3 File Offset: 0x00FB0BA3
+		// Token: 0x060359BA RID: 219578 RVA: 0x00EF99D3 File Offset: 0x00EF7BD3
 		public void SetType(EPieceType type)
 		{
 			this.Type = type;
 			this.RefreshAppearance();
 		}
 
-		// Token: 0x06040CF7 RID: 265463 RVA: 0x00FB29B2 File Offset: 0x00FB0BB2
+		// Token: 0x060359BB RID: 219579 RVA: 0x00EF99E2 File Offset: 0x00EF7BE2
 		public void RefreshState(Piece piece)
 		{
 			this.Piece = piece;
 			this.RefreshAppearance();
 		}
 
-		// Token: 0x06040CF8 RID: 265464 RVA: 0x00FB29C4 File Offset: 0x00FB0BC4
+		// Token: 0x060359BC RID: 219580 RVA: 0x00EF99F4 File Offset: 0x00EF7BF4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MatchThreePieceItemView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040CF9 RID: 265465 RVA: 0x00FB2A07 File Offset: 0x00FB0C07
+		// Token: 0x060359BD RID: 219581 RVA: 0x00EF9A37 File Offset: 0x00EF7C37
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -57,14 +57,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.ResetVisualState();
 		}
 
-		// Token: 0x06040CFA RID: 265466 RVA: 0x00FB2A30 File Offset: 0x00FB0C30
+		// Token: 0x060359BE RID: 219582 RVA: 0x00EF9A60 File Offset: 0x00EF7C60
 		protected virtual UniTask PrepareAppearanceAsync()
 		{
 			this.RefreshAppearance();
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x06040CFB RID: 265467 RVA: 0x00FB2A40 File Offset: 0x00FB0C40
+		// Token: 0x060359BF RID: 219583 RVA: 0x00EF9A70 File Offset: 0x00EF7C70
 		public virtual void ResetVisualState()
 		{
 			if (!UiManager.Instance.IsViewShow(EUiViewName.MatchThreeGameplayView))
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			sequencePlayer3.StopSequenceByKey("Start", false, true);
 		}
 
-		// Token: 0x06040CFC RID: 265468 RVA: 0x00FB2B04 File Offset: 0x00FB0D04
+		// Token: 0x060359C0 RID: 219584 RVA: 0x00EF9B34 File Offset: 0x00EF7D34
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -118,17 +118,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x06040CFD RID: 265469 RVA: 0x00FB2B1E File Offset: 0x00FB0D1E
+		// Token: 0x060359C1 RID: 219585 RVA: 0x00EF9B4E File Offset: 0x00EF7D4E
 		protected virtual void RefreshAppearance()
 		{
 		}
 
-		// Token: 0x06040CFE RID: 265470 RVA: 0x00FB2B20 File Offset: 0x00FB0D20
+		// Token: 0x060359C2 RID: 219586 RVA: 0x00EF9B50 File Offset: 0x00EF7D50
 		public virtual void RefreshLives(int lives)
 		{
 		}
 
-		// Token: 0x06040CFF RID: 265471 RVA: 0x00FB2B24 File Offset: 0x00FB0D24
+		// Token: 0x060359C3 RID: 219587 RVA: 0x00EF9B54 File Offset: 0x00EF7D54
 		[NullableContext(1)]
 		public UniTask PlayAnimAsync(string sequence)
 		{
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return sequencePlayer.PlaySequenceAsync(sequence, new CustomPromise<bool>(), false, false, null);
 		}
 
-		// Token: 0x06040D00 RID: 265472 RVA: 0x00FB2B58 File Offset: 0x00FB0D58
+		// Token: 0x060359C4 RID: 219588 RVA: 0x00EF9B88 File Offset: 0x00EF7D88
 		public UniTask PlayBoardRefreshAsync()
 		{
 			string text = EMatchThreePieceSequence.Born.ToEnumString();
@@ -158,16 +158,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.PlayAnimAsync(text);
 		}
 
-		// Token: 0x04021C35 RID: 138293
+		// Token: 0x0401C566 RID: 116070
 		protected EPieceType Type;
 
-		// Token: 0x04021C36 RID: 138294
+		// Token: 0x0401C567 RID: 116071
 		protected Piece Piece;
 
-		// Token: 0x04021C37 RID: 138295
+		// Token: 0x0401C568 RID: 116072
 		protected UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04021C38 RID: 138296
+		// Token: 0x0401C569 RID: 116073
 		private bool SkipInitialVisualReset;
 	}
 }

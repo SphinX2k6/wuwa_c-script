@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x020016C0 RID: 5824
+// Token: 0x02000B78 RID: 2936
 [NullableContext(1)]
 [Nullable(0)]
 public class AdviceContentData
 {
-	// Token: 0x0600A666 RID: 42598 RVA: 0x00253DE5 File Offset: 0x00251FE5
+	// Token: 0x06007A46 RID: 31302 RVA: 0x0025E1F5 File Offset: 0x0025C3F5
 	public void Phrase(PbAdviceContent data)
 	{
 		this.Id = data.Id;
@@ -15,7 +15,7 @@ public class AdviceContentData
 		this.Type = new PbAdviceContentType?(data.Type);
 	}
 
-	// Token: 0x0600A667 RID: 42599 RVA: 0x00253E10 File Offset: 0x00252010
+	// Token: 0x06007A47 RID: 31303 RVA: 0x0025E220 File Offset: 0x0025C420
 	public void PhraseData(object data)
 	{
 		AdviceContentData adviceContentData = data as AdviceContentData;
@@ -35,7 +35,7 @@ public class AdviceContentData
 		}
 	}
 
-	// Token: 0x0600A668 RID: 42600 RVA: 0x00253E7F File Offset: 0x0025207F
+	// Token: 0x06007A48 RID: 31304 RVA: 0x0025E28F File Offset: 0x0025C48F
 	public void SetData(int id, int word, PbAdviceContentType type)
 	{
 		this.Id = id;
@@ -43,25 +43,25 @@ public class AdviceContentData
 		this.Type = new PbAdviceContentType?(type);
 	}
 
-	// Token: 0x0600A669 RID: 42601 RVA: 0x00253E9B File Offset: 0x0025209B
+	// Token: 0x06007A49 RID: 31305 RVA: 0x0025E2AB File Offset: 0x0025C4AB
 	public int GetId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x0600A66A RID: 42602 RVA: 0x00253EA3 File Offset: 0x002520A3
+	// Token: 0x06007A4A RID: 31306 RVA: 0x0025E2B3 File Offset: 0x0025C4B3
 	public int GetWord()
 	{
 		return this.Word;
 	}
 
-	// Token: 0x0600A66B RID: 42603 RVA: 0x00253EAB File Offset: 0x002520AB
+	// Token: 0x06007A4B RID: 31307 RVA: 0x0025E2BB File Offset: 0x0025C4BB
 	public new PbAdviceContentType? GetType()
 	{
 		return this.Type;
 	}
 
-	// Token: 0x0600A66C RID: 42604 RVA: 0x00253EB3 File Offset: 0x002520B3
+	// Token: 0x06007A4C RID: 31308 RVA: 0x0025E2C3 File Offset: 0x0025C4C3
 	public PbAdviceContent ConvertToPb()
 	{
 		return new PbAdviceContent
@@ -72,12 +72,12 @@ public class AdviceContentData
 		};
 	}
 
-	// Token: 0x04004B1A RID: 19226
+	// Token: 0x04004BC1 RID: 19393
 	private int Id;
 
-	// Token: 0x04004B1B RID: 19227
+	// Token: 0x04004BC2 RID: 19394
 	private int Word;
 
-	// Token: 0x04004B1C RID: 19228
+	// Token: 0x04004BC3 RID: 19395
 	private PbAdviceContentType? Type;
 }

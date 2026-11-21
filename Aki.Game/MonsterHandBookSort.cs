@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200188B RID: 6283
+// Token: 0x02000D44 RID: 3396
 public class MonsterHandBookSort : CommonSort<MonsterHandBookSort.EAdventureGuideSortType>
 {
-	// Token: 0x0600B80A RID: 47114 RVA: 0x0029AAB4 File Offset: 0x00298CB4
+	// Token: 0x06008BF3 RID: 35827 RVA: 0x002A51CC File Offset: 0x002A33CC
 	[NullableContext(2)]
 	private int SortDanger(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
@@ -54,16 +54,16 @@ public class MonsterHandBookSort : CommonSort<MonsterHandBookSort.EAdventureGuid
 		return 0;
 	}
 
-	// Token: 0x0600B80B RID: 47115 RVA: 0x0029ABC8 File Offset: 0x00298DC8
+	// Token: 0x06008BF4 RID: 35828 RVA: 0x002A52E0 File Offset: 0x002A34E0
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(MonsterHandBookSort.EAdventureGuideSortType.Danger, new TSortResult(this.SortDanger));
 	}
 
-	// Token: 0x02007E37 RID: 32311
+	// Token: 0x02006FBE RID: 28606
 	public enum EAdventureGuideSortType
 	{
-		// Token: 0x040294EF RID: 169199
+		// Token: 0x0402481C RID: 149532
 		Danger = 1
 	}
 }

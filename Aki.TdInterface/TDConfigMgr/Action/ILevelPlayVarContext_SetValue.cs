@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B77 RID: 7031
+	// Token: 0x02001D24 RID: 7460
 	public class ILevelPlayVarContext_SetValue
 	{
-		// Token: 0x04005C06 RID: 23558
+		// Token: 0x0400609F RID: 24735
 		public EVarContext Type;
 
-		// Token: 0x04005C07 RID: 23559
+		// Token: 0x040060A0 RID: 24736
 		public int Id;
 	}
 }

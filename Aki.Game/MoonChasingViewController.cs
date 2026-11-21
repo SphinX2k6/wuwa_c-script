@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001357 RID: 4951
+// Token: 0x0200080B RID: 2059
 [NullableContext(1)]
 [Nullable(0)]
 public class MoonChasingViewController
 {
-	// Token: 0x060089DB RID: 35291 RVA: 0x001D75D4 File Offset: 0x001D57D4
+	// Token: 0x06005D76 RID: 23926 RVA: 0x001E0438 File Offset: 0x001DE638
 	public void RegisterView(MoonChasingMainView view)
 	{
 		this.View = view;
 		this.Model = (MoonChasingMainViewModel)view.OpenParam;
 	}
 
-	// Token: 0x060089DC RID: 35292 RVA: 0x001D75F0 File Offset: 0x001D57F0
+	// Token: 0x06005D77 RID: 23927 RVA: 0x001E0454 File Offset: 0x001DE654
 	private void Skip()
 	{
 		if (this.Model.SkipTarget == EMoonChasingSkipDefine.Build)
@@ -31,7 +31,7 @@ public class MoonChasingViewController
 		this.Model.SkipTarget = EMoonChasingSkipDefine.None;
 	}
 
-	// Token: 0x060089DD RID: 35293 RVA: 0x001D765F File Offset: 0x001D585F
+	// Token: 0x06005D78 RID: 23928 RVA: 0x001E04C3 File Offset: 0x001DE6C3
 	private void RefreshMapModule()
 	{
 		if (this.Model.RefreshBuildingId > 0)
@@ -41,7 +41,7 @@ public class MoonChasingViewController
 		}
 	}
 
-	// Token: 0x060089DE RID: 35294 RVA: 0x001D7691 File Offset: 0x001D5891
+	// Token: 0x06005D79 RID: 23929 RVA: 0x001E04F5 File Offset: 0x001DE6F5
 	public void Show()
 	{
 		this.Skip();
@@ -51,51 +51,51 @@ public class MoonChasingViewController
 		this.View.RefreshRedDot();
 	}
 
-	// Token: 0x060089DF RID: 35295 RVA: 0x001D76BB File Offset: 0x001D58BB
+	// Token: 0x06005D7A RID: 23930 RVA: 0x001E051F File Offset: 0x001DE71F
 	public void SkipToBusinessByParam(int _)
 	{
 		this.SkipToBusiness();
 	}
 
-	// Token: 0x060089E0 RID: 35296 RVA: 0x001D76C3 File Offset: 0x001D58C3
+	// Token: 0x06005D7B RID: 23931 RVA: 0x001E0527 File Offset: 0x001DE727
 	public void SkipToBusiness()
 	{
 		MoonChasingModel.Instance.RemoveDelegationRedDot();
 		MoonChasingController.Instance.OpenBusinessMainView();
 	}
 
-	// Token: 0x060089E1 RID: 35297 RVA: 0x001D76D9 File Offset: 0x001D58D9
+	// Token: 0x06005D7C RID: 23932 RVA: 0x001E053D File Offset: 0x001DE73D
 	public void SkipToReward(int _)
 	{
 		MoonChasingController.Instance.OpenRewardView(true);
 	}
 
-	// Token: 0x060089E2 RID: 35298 RVA: 0x001D76E6 File Offset: 0x001D58E6
+	// Token: 0x06005D7D RID: 23933 RVA: 0x001E054A File Offset: 0x001DE74A
 	public void SkipToBuildByParam(int _)
 	{
 		this.SkipToBuild();
 	}
 
-	// Token: 0x060089E3 RID: 35299 RVA: 0x001D76EE File Offset: 0x001D58EE
+	// Token: 0x06005D7E RID: 23934 RVA: 0x001E0552 File Offset: 0x001DE752
 	public void SkipToBuild()
 	{
 		this.Model.IsInBuildingModule = true;
 		this.View.SkipToBuild();
 	}
 
-	// Token: 0x060089E4 RID: 35300 RVA: 0x001D7707 File Offset: 0x001D5907
+	// Token: 0x06005D7F RID: 23935 RVA: 0x001E056B File Offset: 0x001DE76B
 	public void SkipToTask(EMoonChasingTaskType taskType = EMoonChasingTaskType.MainLine, bool isLastTask = false)
 	{
 		MoonChasingController.Instance.OpenTaskView(taskType, 0, isLastTask);
 	}
 
-	// Token: 0x060089E5 RID: 35301 RVA: 0x001D7716 File Offset: 0x001D5916
+	// Token: 0x06005D80 RID: 23936 RVA: 0x001E057A File Offset: 0x001DE77A
 	public void SkipToHandbook(int _)
 	{
 		MoonChasingController.Instance.OpenHandbookView();
 	}
 
-	// Token: 0x060089E6 RID: 35302 RVA: 0x001D7722 File Offset: 0x001D5922
+	// Token: 0x06005D81 RID: 23937 RVA: 0x001E0586 File Offset: 0x001DE786
 	public void CloseSelf()
 	{
 		if (this.Model.IsInBuildingModule)
@@ -106,7 +106,7 @@ public class MoonChasingViewController
 		this.View.CloseMe(null);
 	}
 
-	// Token: 0x060089E7 RID: 35303 RVA: 0x001D7744 File Offset: 0x001D5944
+	// Token: 0x06005D82 RID: 23938 RVA: 0x001E05A8 File Offset: 0x001DE7A8
 	public void OpenHelpView()
 	{
 		if (this.Model.IsInBuildingModule)
@@ -117,7 +117,7 @@ public class MoonChasingViewController
 		HelpController.Instance.OpenHelpById(107);
 	}
 
-	// Token: 0x060089E8 RID: 35304 RVA: 0x001D776C File Offset: 0x001D596C
+	// Token: 0x06005D83 RID: 23939 RVA: 0x001E05D0 File Offset: 0x001DE7D0
 	public void BuildingBackToMainView()
 	{
 		this.View.RefreshRedDot();
@@ -130,7 +130,7 @@ public class MoonChasingViewController
 		}
 	}
 
-	// Token: 0x060089E9 RID: 35305 RVA: 0x001D77BC File Offset: 0x001D59BC
+	// Token: 0x06005D84 RID: 23940 RVA: 0x001E0620 File Offset: 0x001DE820
 	private void RefreshShowAnimation()
 	{
 		if (MoonChasingModel.Instance.HasEnteredMainViewFlag)
@@ -142,9 +142,9 @@ public class MoonChasingViewController
 		MoonChasingModel.Instance.HasEnteredMainViewFlag = true;
 	}
 
-	// Token: 0x04003D85 RID: 15749
+	// Token: 0x04003E1D RID: 15901
 	private MoonChasingMainView View;
 
-	// Token: 0x04003D86 RID: 15750
+	// Token: 0x04003E1E RID: 15902
 	private MoonChasingMainViewModel Model;
 }

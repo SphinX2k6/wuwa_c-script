@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043D3 RID: 17363
+	// Token: 0x02004838 RID: 18488
 	public class TOccupationDataUnion
 	{
-		// Token: 0x17007AC3 RID: 31427
-		// (get) Token: 0x06019E52 RID: 106066 RVA: 0x003B495D File Offset: 0x003B2B5D
-		// (set) Token: 0x06019E53 RID: 106067 RVA: 0x003B4965 File Offset: 0x003B2B65
+		// Token: 0x170080FD RID: 33021
+		// (get) Token: 0x0601B5FF RID: 112127 RVA: 0x003E076D File Offset: 0x003DE96D
+		// (set) Token: 0x0601B600 RID: 112128 RVA: 0x003E0775 File Offset: 0x003DE975
 		public TOccupationData Type { get; set; }
 
-		// Token: 0x17007AC4 RID: 31428
-		// (get) Token: 0x06019E54 RID: 106068 RVA: 0x003B496E File Offset: 0x003B2B6E
-		// (set) Token: 0x06019E55 RID: 106069 RVA: 0x003B4976 File Offset: 0x003B2B76
+		// Token: 0x170080FE RID: 33022
+		// (get) Token: 0x0601B601 RID: 112129 RVA: 0x003E077E File Offset: 0x003DE97E
+		// (set) Token: 0x0601B602 RID: 112130 RVA: 0x003E0786 File Offset: 0x003DE986
 		public object Value { get; set; }
 
-		// Token: 0x06019E56 RID: 106070 RVA: 0x003B497F File Offset: 0x003B2B7F
+		// Token: 0x0601B603 RID: 112131 RVA: 0x003E078F File Offset: 0x003DE98F
 		public TOccupationDataUnion()
 		{
 			this.Type = TOccupationData.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06019E57 RID: 106071 RVA: 0x003B4995 File Offset: 0x003B2B95
+		// Token: 0x0601B604 RID: 112132 RVA: 0x003E07A5 File Offset: 0x003DE9A5
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06019E58 RID: 106072 RVA: 0x003B49A7 File Offset: 0x003B2BA7
+		// Token: 0x0601B605 RID: 112133 RVA: 0x003E07B7 File Offset: 0x003DE9B7
 		public IAreaOccupationDataT AsIAreaOccupationData()
 		{
 			return this.As<IAreaOccupationDataT>();
 		}
 
-		// Token: 0x06019E59 RID: 106073 RVA: 0x003B49AF File Offset: 0x003B2BAF
+		// Token: 0x0601B606 RID: 112134 RVA: 0x003E07BF File Offset: 0x003DE9BF
 		public static TOccupationDataUnion FromIAreaOccupationData(IAreaOccupationDataT _iareaoccupationdata)
 		{
 			return new TOccupationDataUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			};
 		}
 
-		// Token: 0x06019E5A RID: 106074 RVA: 0x003B49C4 File Offset: 0x003B2BC4
+		// Token: 0x0601B607 RID: 112135 RVA: 0x003E07D4 File Offset: 0x003DE9D4
 		public IClosedSegmentOccupationDataT AsIClosedSegmentOccupationData()
 		{
 			return this.As<IClosedSegmentOccupationDataT>();
 		}
 
-		// Token: 0x06019E5B RID: 106075 RVA: 0x003B49CC File Offset: 0x003B2BCC
+		// Token: 0x0601B608 RID: 112136 RVA: 0x003E07DC File Offset: 0x003DE9DC
 		public static TOccupationDataUnion FromIClosedSegmentOccupationData(IClosedSegmentOccupationDataT _iclosedsegmentoccupationdata)
 		{
 			return new TOccupationDataUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			};
 		}
 
-		// Token: 0x06019E5C RID: 106076 RVA: 0x003B49E1 File Offset: 0x003B2BE1
+		// Token: 0x0601B609 RID: 112137 RVA: 0x003E07F1 File Offset: 0x003DE9F1
 		public INpcOccupationDataT AsINpcOccupationData()
 		{
 			return this.As<INpcOccupationDataT>();
 		}
 
-		// Token: 0x06019E5D RID: 106077 RVA: 0x003B49E9 File Offset: 0x003B2BE9
+		// Token: 0x0601B60A RID: 112138 RVA: 0x003E07F9 File Offset: 0x003DE9F9
 		public static TOccupationDataUnion FromINpcOccupationData(INpcOccupationDataT _inpcoccupationdata)
 		{
 			return new TOccupationDataUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			};
 		}
 
-		// Token: 0x06019E5E RID: 106078 RVA: 0x003B49FE File Offset: 0x003B2BFE
+		// Token: 0x0601B60B RID: 112139 RVA: 0x003E080E File Offset: 0x003DEA0E
 		public IScreenResourceOccupationDataT AsIScreenResourceOccupationData()
 		{
 			return this.As<IScreenResourceOccupationDataT>();
 		}
 
-		// Token: 0x06019E5F RID: 106079 RVA: 0x003B4A06 File Offset: 0x003B2C06
+		// Token: 0x0601B60C RID: 112140 RVA: 0x003E0816 File Offset: 0x003DEA16
 		public static TOccupationDataUnion FromIScreenResourceOccupationData(IScreenResourceOccupationDataT _iscreenresourceoccupationdata)
 		{
 			return new TOccupationDataUnion
@@ -93,13 +93,29 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			};
 		}
 
-		// Token: 0x06019E60 RID: 106080 RVA: 0x003B4A1B File Offset: 0x003B2C1B
+		// Token: 0x0601B60D RID: 112141 RVA: 0x003E082B File Offset: 0x003DEA2B
+		public ISeasonRotationOccupationDataT AsISeasonRotationOccupationData()
+		{
+			return this.As<ISeasonRotationOccupationDataT>();
+		}
+
+		// Token: 0x0601B60E RID: 112142 RVA: 0x003E0833 File Offset: 0x003DEA33
+		public static TOccupationDataUnion FromISeasonRotationOccupationData(ISeasonRotationOccupationDataT _iseasonrotationoccupationdata)
+		{
+			return new TOccupationDataUnion
+			{
+				Type = TOccupationData.ISeasonRotationOccupationData,
+				Value = _iseasonrotationoccupationdata
+			};
+		}
+
+		// Token: 0x0601B60F RID: 112143 RVA: 0x003E0848 File Offset: 0x003DEA48
 		public ISilentAreaOccupationDataT AsISilentAreaOccupationData()
 		{
 			return this.As<ISilentAreaOccupationDataT>();
 		}
 
-		// Token: 0x06019E61 RID: 106081 RVA: 0x003B4A23 File Offset: 0x003B2C23
+		// Token: 0x0601B610 RID: 112144 RVA: 0x003E0850 File Offset: 0x003DEA50
 		public static TOccupationDataUnion FromISilentAreaOccupationData(ISilentAreaOccupationDataT _isilentareaoccupationdata)
 		{
 			return new TOccupationDataUnion
@@ -109,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			};
 		}
 
-		// Token: 0x06019E62 RID: 106082 RVA: 0x003B4A38 File Offset: 0x003B2C38
+		// Token: 0x0601B611 RID: 112145 RVA: 0x003E0865 File Offset: 0x003DEA65
 		public ITimeOccupationDataT AsITimeOccupationData()
 		{
 			return this.As<ITimeOccupationDataT>();
 		}
 
-		// Token: 0x06019E63 RID: 106083 RVA: 0x003B4A40 File Offset: 0x003B2C40
+		// Token: 0x0601B612 RID: 112146 RVA: 0x003E086D File Offset: 0x003DEA6D
 		public static TOccupationDataUnion FromITimeOccupationData(ITimeOccupationDataT _itimeoccupationdata)
 		{
 			return new TOccupationDataUnion
@@ -125,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			};
 		}
 
-		// Token: 0x06019E64 RID: 106084 RVA: 0x003B4A58 File Offset: 0x003B2C58
+		// Token: 0x0601B613 RID: 112147 RVA: 0x003E0884 File Offset: 0x003DEA84
 		public static int Pack(FlatBufferBuilder builder, TOccupationDataUnion _o)
 		{
 			switch (_o.Type)
@@ -138,6 +154,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 				return INpcOccupationData.Pack(builder, _o.AsINpcOccupationData()).Value;
 			case TOccupationData.IScreenResourceOccupationData:
 				return IScreenResourceOccupationData.Pack(builder, _o.AsIScreenResourceOccupationData()).Value;
+			case TOccupationData.ISeasonRotationOccupationData:
+				return ISeasonRotationOccupationData.Pack(builder, _o.AsISeasonRotationOccupationData()).Value;
 			case TOccupationData.ISilentAreaOccupationData:
 				return ISilentAreaOccupationData.Pack(builder, _o.AsISilentAreaOccupationData()).Value;
 			case TOccupationData.ITimeOccupationData:

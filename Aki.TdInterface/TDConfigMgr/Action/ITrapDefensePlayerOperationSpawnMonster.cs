@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FF2 RID: 8178
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002239 RID: 8761
 	public class ITrapDefensePlayerOperationSpawnMonster : ITrapDefensePlayerOperationType
 	{
-		// Token: 0x0600B3E2 RID: 46050 RVA: 0x001A28C8 File Offset: 0x001A0AC8
+		// Token: 0x0600BEF8 RID: 48888 RVA: 0x001B8E34 File Offset: 0x001B7034
 		private ITrapDefensePlayerOperationSpawnMonster_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B3E3 RID: 46051 RVA: 0x001A2900 File Offset: 0x001A0B00
+		// Token: 0x0600BEF9 RID: 48889 RVA: 0x001B8E6C File Offset: 0x001B706C
 		public static ITrapDefensePlayerOperationSpawnMonster Create([Nullable(2)] ITrapDefensePlayerOperationSpawnMonster instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B3E4 RID: 46052 RVA: 0x001A2913 File Offset: 0x001A0B13
+		// Token: 0x0600BEFA RID: 48890 RVA: 0x001B8E7F File Offset: 0x001B707F
 		public static ITrapDefensePlayerOperationSpawnMonster CreateFromSetValue([Nullable(2)] ITrapDefensePlayerOperationSpawnMonster_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B3E5 RID: 46053 RVA: 0x001A2926 File Offset: 0x001A0B26
+		// Token: 0x0600BEFB RID: 48891 RVA: 0x001B8E92 File Offset: 0x001B7092
 		public new ITrapDefensePlayerOperationSpawnMonster_SetValue ToSetValue()
 		{
 			return new ITrapDefensePlayerOperationSpawnMonster_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700375E RID: 14174
-		// (get) Token: 0x0600B3E6 RID: 46054 RVA: 0x001A2939 File Offset: 0x001A0B39
-		// (set) Token: 0x0600B3E7 RID: 46055 RVA: 0x001A2964 File Offset: 0x001A0B64
+		// Token: 0x17003A36 RID: 14902
+		// (get) Token: 0x0600BEFC RID: 48892 RVA: 0x001B8EA5 File Offset: 0x001B70A5
+		// (set) Token: 0x0600BEFD RID: 48893 RVA: 0x001B8ED0 File Offset: 0x001B70D0
 		public override ETrapDefensePlayerOperationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C79 RID: 27769
+		// Token: 0x0400727B RID: 29307
 		[Nullable(2)]
 		protected new ITrapDefensePlayerOperationSpawnMonster FbInstance;
 
-		// Token: 0x04006C7A RID: 27770
+		// Token: 0x0400727C RID: 29308
 		[Nullable(2)]
 		protected new ITrapDefensePlayerOperationSpawnMonster_SetValue PocoInterface;
 	}

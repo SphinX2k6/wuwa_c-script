@@ -7,13 +7,13 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.Item;
 using CSharpScript.Launcher.Platform.PlatformSdk;
 
-// Token: 0x0200231C RID: 8988
+// Token: 0x02001801 RID: 6145
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class PayItemModel : ModelBase
 {
-	// Token: 0x06011C33 RID: 72755 RVA: 0x0045F558 File Offset: 0x0045D758
+	// Token: 0x0600F0E3 RID: 61667 RVA: 0x0046C5BC File Offset: 0x0046A7BC
 	public void UpdateProductInfoMap(IEnumerable<DisplayProductInfo> data)
 	{
 		foreach (DisplayProductInfo displayProductInfo in data)
@@ -22,7 +22,7 @@ public class PayItemModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011C34 RID: 72756 RVA: 0x0045F5AC File Offset: 0x0045D7AC
+	// Token: 0x0600F0E4 RID: 61668 RVA: 0x0046C610 File Offset: 0x0046A810
 	[return: Nullable(2)]
 	public string GetProductLabelByGoodsId(string goodsId)
 	{
@@ -34,7 +34,7 @@ public class PayItemModel : ModelBase
 		return displayProductInfo.GoodLabel;
 	}
 
-	// Token: 0x06011C35 RID: 72757 RVA: 0x0045F5D4 File Offset: 0x0045D7D4
+	// Token: 0x0600F0E5 RID: 61669 RVA: 0x0046C638 File Offset: 0x0046A838
 	[return: Nullable(2)]
 	public string GetProductChannelGoodsIdByGoodsId(string goodsId)
 	{
@@ -46,7 +46,7 @@ public class PayItemModel : ModelBase
 		return displayProductInfo.ChannelGoodId;
 	}
 
-	// Token: 0x06011C36 RID: 72758 RVA: 0x0045F5FC File Offset: 0x0045D7FC
+	// Token: 0x0600F0E6 RID: 61670 RVA: 0x0046C660 File Offset: 0x0046A860
 	[return: Nullable(2)]
 	public DisplayProductInfo GetProductInfoByGoodsId(string goodsId)
 	{
@@ -58,7 +58,7 @@ public class PayItemModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06011C37 RID: 72759 RVA: 0x0045F61C File Offset: 0x0045D81C
+	// Token: 0x0600F0E7 RID: 61671 RVA: 0x0046C680 File Offset: 0x0046A880
 	[return: Nullable(2)]
 	public string GetProductCurrencyByGoodsId(string goodsId)
 	{
@@ -77,7 +77,7 @@ public class PayItemModel : ModelBase
 		return match.Value;
 	}
 
-	// Token: 0x06011C38 RID: 72760 RVA: 0x0045F674 File Offset: 0x0045D874
+	// Token: 0x0600F0E8 RID: 61672 RVA: 0x0046C6D8 File Offset: 0x0046A8D8
 	[return: Nullable(2)]
 	public string GetProductPriceByGoodsId(string goodsId)
 	{
@@ -96,7 +96,7 @@ public class PayItemModel : ModelBase
 		return match.Value;
 	}
 
-	// Token: 0x06011C39 RID: 72761 RVA: 0x0045F6CC File Offset: 0x0045D8CC
+	// Token: 0x0600F0E9 RID: 61673 RVA: 0x0046C730 File Offset: 0x0046A930
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -107,26 +107,26 @@ public class PayItemModel : ModelBase
 		return this.CurrentPayItemDataList;
 	}
 
-	// Token: 0x06011C3A RID: 72762 RVA: 0x0045F6D4 File Offset: 0x0045D8D4
+	// Token: 0x0600F0EA RID: 61674 RVA: 0x0046C738 File Offset: 0x0046A938
 	[NullableContext(2)]
 	public string GetPayingItemName()
 	{
 		return this.PayingItemName;
 	}
 
-	// Token: 0x06011C3B RID: 72763 RVA: 0x0045F6DC File Offset: 0x0045D8DC
+	// Token: 0x0600F0EB RID: 61675 RVA: 0x0046C740 File Offset: 0x0046A940
 	public void CleanPayingItemName()
 	{
 		this.PayingItemName = null;
 	}
 
-	// Token: 0x06011C3C RID: 72764 RVA: 0x0045F6E5 File Offset: 0x0045D8E5
+	// Token: 0x0600F0EC RID: 61676 RVA: 0x0046C749 File Offset: 0x0046A949
 	public PayShopItemBaseSt ConvertPayItemDataToPayShopItemBaseSt(PayItemData source)
 	{
 		return source.ConvertPayItemDataToPayShopItemBaseSt();
 	}
 
-	// Token: 0x06011C3D RID: 72765 RVA: 0x0045F6F0 File Offset: 0x0045D8F0
+	// Token: 0x0600F0ED RID: 61677 RVA: 0x0046C754 File Offset: 0x0046A954
 	public void UpdatePayingItemName(int payItemId)
 	{
 		PayItem? payItem = PayItemConfig.Instance.GetPayItem(payItemId);
@@ -134,8 +134,8 @@ public class PayItemModel : ModelBase
 		this.PayingItemName = itemName;
 	}
 
-	// Token: 0x06011C3E RID: 72766 RVA: 0x0045F72C File Offset: 0x0045D92C
-	public void ResetSpecialBonus(int[] ids)
+	// Token: 0x0600F0EE RID: 61678 RVA: 0x0046C790 File Offset: 0x0046A990
+	public void ResetSpecialBonus(IReadOnlyList<int> ids)
 	{
 		foreach (int key in ids)
 		{
@@ -147,10 +147,10 @@ public class PayItemModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011C3F RID: 72767 RVA: 0x0045F764 File Offset: 0x0045D964
-	public void InitDataListByServer(PayItemInfo[] infos)
+	// Token: 0x0600F0EF RID: 61679 RVA: 0x0046C7E8 File Offset: 0x0046A9E8
+	public void InitDataListByServer(IReadOnlyList<PayItemInfo> infos)
 	{
-		if (this.CurrentPayItemDataList.Count != 0 && infos.Length != 0)
+		if (this.CurrentPayItemDataList.Count != 0 && infos.Count != 0)
 		{
 			this.CurrentPayItemDataList.Clear();
 		}
@@ -163,7 +163,7 @@ public class PayItemModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011C40 RID: 72768 RVA: 0x0045F7CC File Offset: 0x0045D9CC
+	// Token: 0x0600F0F0 RID: 61680 RVA: 0x0046C874 File Offset: 0x0046AA74
 	protected override bool OnClear()
 	{
 		this.CurrentPayItemDataList.Clear();
@@ -174,7 +174,7 @@ public class PayItemModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011C41 RID: 72769 RVA: 0x0045F800 File Offset: 0x0045DA00
+	// Token: 0x0600F0F1 RID: 61681 RVA: 0x0046C8A8 File Offset: 0x0046AAA8
 	public ISDKPayment CreateSdkPayment(int payItemId, string orderId, string callBackUrl)
 	{
 		PayItem? payItem = PayItemConfig.Instance.GetPayItem(payItemId);
@@ -201,7 +201,7 @@ public class PayItemModel : ModelBase
 		return sdkpayment;
 	}
 
-	// Token: 0x06011C42 RID: 72770 RVA: 0x0045F924 File Offset: 0x0045DB24
+	// Token: 0x0600F0F2 RID: 61682 RVA: 0x0046C9CC File Offset: 0x0046ABCC
 	public bool HasBonusData()
 	{
 		if (this.CurrentPayItemDataList.Count == 0)
@@ -221,8 +221,8 @@ public class PayItemModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x170016B3 RID: 5811
-	// (get) Token: 0x06011C43 RID: 72771 RVA: 0x0045F98C File Offset: 0x0045DB8C
+	// Token: 0x170016ED RID: 5869
+	// (get) Token: 0x0600F0F3 RID: 61683 RVA: 0x0046CA34 File Offset: 0x0046AC34
 	public static PayItemModel Instance
 	{
 		get
@@ -231,7 +231,7 @@ public class PayItemModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011C44 RID: 72772 RVA: 0x0045F993 File Offset: 0x0045DB93
+	// Token: 0x0600F0F4 RID: 61684 RVA: 0x0046CA3B File Offset: 0x0046AC3B
 	public static PayItemModel GetOrCreateInstance()
 	{
 		if (PayItemModel._Instance == null)
@@ -241,7 +241,7 @@ public class PayItemModel : ModelBase
 		return PayItemModel._Instance;
 	}
 
-	// Token: 0x06011C45 RID: 72773 RVA: 0x0045F9A7 File Offset: 0x0045DBA7
+	// Token: 0x0600F0F5 RID: 61685 RVA: 0x0046CA4F File Offset: 0x0046AC4F
 	public static bool CreateInstance()
 	{
 		if (PayItemModel._Instance != null)
@@ -252,24 +252,24 @@ public class PayItemModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011C46 RID: 72774 RVA: 0x0045F9BD File Offset: 0x0045DBBD
+	// Token: 0x0600F0F6 RID: 61686 RVA: 0x0046CA65 File Offset: 0x0046AC65
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011C47 RID: 72775 RVA: 0x0045F9BF File Offset: 0x0045DBBF
+	// Token: 0x0600F0F7 RID: 61687 RVA: 0x0046CA67 File Offset: 0x0046AC67
 	public static void ResetStaticDefaultValue()
 	{
 		PayItemModel._Instance = null;
 	}
 
-	// Token: 0x06011C48 RID: 72776 RVA: 0x0045F9C7 File Offset: 0x0045DBC7
+	// Token: 0x0600F0F8 RID: 61688 RVA: 0x0046CA6F File Offset: 0x0046AC6F
 	static PayItemModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PayItemModel.CreateStaticDefaultValue), new Action(PayItemModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040086CA RID: 34506
+	// Token: 0x0400880D RID: 34829
 	[Nullable(new byte[]
 	{
 		2,
@@ -277,20 +277,20 @@ public class PayItemModel : ModelBase
 	})]
 	private List<PayItemData> CurrentPayItemDataList = new List<PayItemData>();
 
-	// Token: 0x040086CB RID: 34507
+	// Token: 0x0400880E RID: 34830
 	private readonly Dictionary<int, PayItemData> CurrencyPayItemMap = new Dictionary<int, PayItemData>();
 
-	// Token: 0x040086CC RID: 34508
+	// Token: 0x0400880F RID: 34831
 	public string Version = "";
 
-	// Token: 0x040086CD RID: 34509
+	// Token: 0x04008810 RID: 34832
 	[Nullable(2)]
 	private string PayingItemName;
 
-	// Token: 0x040086CE RID: 34510
+	// Token: 0x04008811 RID: 34833
 	private readonly Dictionary<string, DisplayProductInfo> ProductInfoMap = new Dictionary<string, DisplayProductInfo>();
 
-	// Token: 0x040086CF RID: 34511
+	// Token: 0x04008812 RID: 34834
 	[Nullable(2)]
 	private static PayItemModel _Instance;
 }

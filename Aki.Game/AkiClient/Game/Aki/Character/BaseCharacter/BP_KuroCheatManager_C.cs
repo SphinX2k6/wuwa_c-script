@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004280 RID: 17024
+	// Token: 0x020032E3 RID: 13027
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/BP_KuroCheatManager.BP_KuroCheatManager_C")]
 	[UnrealStructLayout(296, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 296)]
 	public class BP_KuroCheatManager_C : UCheatManager, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602C321 RID: 181025 RVA: 0x00A19A60 File Offset: 0x00A17C60
+		// Token: 0x06021172 RID: 135538 RVA: 0x00958DCF File Offset: 0x00956FCF
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_KuroCheatManager_C._ClassPtr == IntPtr.Zero)
@@ -25,37 +25,37 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			return BP_KuroCheatManager_C._ClassPtr;
 		}
 
-		// Token: 0x0602C322 RID: 181026 RVA: 0x00A19A84 File Offset: 0x00A17C84
+		// Token: 0x06021173 RID: 135539 RVA: 0x00958DF4 File Offset: 0x00956FF4
 		public BP_KuroCheatManager_C() : this(BuiltinUtils.AllocNativeUObject(BP_KuroCheatManager_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602C323 RID: 181027 RVA: 0x00A19AAC File Offset: 0x00A17CAC
+		// Token: 0x06021174 RID: 135540 RVA: 0x00958E1C File Offset: 0x0095701C
 		public BP_KuroCheatManager_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_KuroCheatManager_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006E18 RID: 28184
-		// (get) Token: 0x0602C324 RID: 181028 RVA: 0x00A19ADF File Offset: 0x00A17CDF
-		// (set) Token: 0x0602C325 RID: 181029 RVA: 0x00A19AF3 File Offset: 0x00A17CF3
+		// Token: 0x17004289 RID: 17033
+		// (get) Token: 0x06021175 RID: 135541 RVA: 0x00958E4F File Offset: 0x0095704F
+		// (set) Token: 0x06021176 RID: 135542 RVA: 0x00958E63 File Offset: 0x00957063
 		[Nullable(2)]
 		public unsafe BP_CharacterController_C CharacterController
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<BP_CharacterController_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroCheatManager_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<BP_CharacterController_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroCheatManager_C.__PropertyOffset_CharacterController);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroCheatManager_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroCheatManager_C.__PropertyOffset_CharacterController, value);
 			}
 		}
 
-		// Token: 0x17006E19 RID: 28185
-		// (get) Token: 0x0602C326 RID: 181030 RVA: 0x00A19B08 File Offset: 0x00A17D08
-		// (set) Token: 0x0602C327 RID: 181031 RVA: 0x00A19B41 File Offset: 0x00A17D41
+		// Token: 0x1700428A RID: 17034
+		// (get) Token: 0x06021177 RID: 135543 RVA: 0x00958E78 File Offset: 0x00957078
+		// (set) Token: 0x06021178 RID: 135544 RVA: 0x00958EB1 File Offset: 0x009570B1
 		public FKey 输入按键
 		{
 			get
@@ -64,124 +64,124 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				FKey result;
 				if ((result = this._输入按键) == null)
 				{
-					result = (this._输入按键 = new FKey(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_2, this));
+					result = (this._输入按键 = new FKey(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_输入按键, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FKey.StaticStruct(), base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_2, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FKey.StaticStruct(), base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_输入按键, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006E1A RID: 28186
-		// (get) Token: 0x0602C328 RID: 181032 RVA: 0x00A19B62 File Offset: 0x00A17D62
-		// (set) Token: 0x0602C329 RID: 181033 RVA: 0x00A19B72 File Offset: 0x00A17D72
+		// Token: 0x1700428B RID: 17035
+		// (get) Token: 0x06021179 RID: 135545 RVA: 0x00958ED2 File Offset: 0x009570D2
+		// (set) Token: 0x0602117A RID: 135546 RVA: 0x00958EE2 File Offset: 0x009570E2
 		public unsafe bool 按下
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_按下) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_按下) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006E1B RID: 28187
-		// (get) Token: 0x0602C32A RID: 181034 RVA: 0x00A19B83 File Offset: 0x00A17D83
-		// (set) Token: 0x0602C32B RID: 181035 RVA: 0x00A19B93 File Offset: 0x00A17D93
+		// Token: 0x1700428C RID: 17036
+		// (get) Token: 0x0602117B RID: 135547 RVA: 0x00958EF3 File Offset: 0x009570F3
+		// (set) Token: 0x0602117C RID: 135548 RVA: 0x00958F03 File Offset: 0x00957103
 		public unsafe bool LeftAlt
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_4) != 0;
+				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_LeftAlt) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_4) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_LeftAlt) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006E1C RID: 28188
-		// (get) Token: 0x0602C32C RID: 181036 RVA: 0x00A19BA4 File Offset: 0x00A17DA4
-		// (set) Token: 0x0602C32D RID: 181037 RVA: 0x00A19BB4 File Offset: 0x00A17DB4
+		// Token: 0x1700428D RID: 17037
+		// (get) Token: 0x0602117D RID: 135549 RVA: 0x00958F14 File Offset: 0x00957114
+		// (set) Token: 0x0602117E RID: 135550 RVA: 0x00958F24 File Offset: 0x00957124
 		public unsafe bool LeftCtrl
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_5) != 0;
+				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_LeftCtrl) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_5) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_LeftCtrl) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006E1D RID: 28189
-		// (get) Token: 0x0602C32E RID: 181038 RVA: 0x00A19BC5 File Offset: 0x00A17DC5
-		// (set) Token: 0x0602C32F RID: 181039 RVA: 0x00A19BD5 File Offset: 0x00A17DD5
+		// Token: 0x1700428E RID: 17038
+		// (get) Token: 0x0602117F RID: 135551 RVA: 0x00958F35 File Offset: 0x00957135
+		// (set) Token: 0x06021180 RID: 135552 RVA: 0x00958F45 File Offset: 0x00957145
 		public unsafe float 全局TimeDilation倍数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_全局TimeDilation倍数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_全局TimeDilation倍数) = value;
 			}
 		}
 
-		// Token: 0x17006E1E RID: 28190
-		// (get) Token: 0x0602C330 RID: 181040 RVA: 0x00A19BE6 File Offset: 0x00A17DE6
-		// (set) Token: 0x0602C331 RID: 181041 RVA: 0x00A19BF6 File Offset: 0x00A17DF6
+		// Token: 0x1700428F RID: 17039
+		// (get) Token: 0x06021181 RID: 135553 RVA: 0x00958F56 File Offset: 0x00957156
+		// (set) Token: 0x06021182 RID: 135554 RVA: 0x00958F66 File Offset: 0x00957166
 		public unsafe float LastDebugPressTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_LastDebugPressTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_LastDebugPressTime) = value;
 			}
 		}
 
-		// Token: 0x17006E1F RID: 28191
-		// (get) Token: 0x0602C332 RID: 181042 RVA: 0x00A19C07 File Offset: 0x00A17E07
-		// (set) Token: 0x0602C333 RID: 181043 RVA: 0x00A19C17 File Offset: 0x00A17E17
+		// Token: 0x17004290 RID: 17040
+		// (get) Token: 0x06021183 RID: 135555 RVA: 0x00958F77 File Offset: 0x00957177
+		// (set) Token: 0x06021184 RID: 135556 RVA: 0x00958F87 File Offset: 0x00957187
 		public unsafe bool DebugSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_8) != 0;
+				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_DebugSpeed) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_8) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_DebugSpeed) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006E20 RID: 28192
-		// (get) Token: 0x0602C334 RID: 181044 RVA: 0x00A19C28 File Offset: 0x00A17E28
-		// (set) Token: 0x0602C335 RID: 181045 RVA: 0x00A19C38 File Offset: 0x00A17E38
+		// Token: 0x17004291 RID: 17041
+		// (get) Token: 0x06021185 RID: 135557 RVA: 0x00958F98 File Offset: 0x00957198
+		// (set) Token: 0x06021186 RID: 135558 RVA: 0x00958FA8 File Offset: 0x009571A8
 		public unsafe bool GhostMode
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_9) != 0;
+				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_GhostMode) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_9) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_GhostMode) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006E21 RID: 28193
-		// (get) Token: 0x0602C336 RID: 181046 RVA: 0x00A19C4C File Offset: 0x00A17E4C
-		// (set) Token: 0x0602C337 RID: 181047 RVA: 0x00A19C85 File Offset: 0x00A17E85
+		// Token: 0x17004292 RID: 17042
+		// (get) Token: 0x06021187 RID: 135559 RVA: 0x00958FBC File Offset: 0x009571BC
+		// (set) Token: 0x06021188 RID: 135560 RVA: 0x00958FF5 File Offset: 0x009571F5
 		public TSet<TsBaseCharacter> 被销毁怪物缓存
 		{
 			get
@@ -190,7 +190,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TSet<TsBaseCharacter> result;
 				if ((result = this._被销毁怪物缓存) == null)
 				{
-					result = (this._被销毁怪物缓存 = new TSet<TsBaseCharacter>(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_10, this));
+					result = (this._被销毁怪物缓存 = new TSet<TsBaseCharacter>(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_被销毁怪物缓存, this));
 				}
 				return result;
 			}
@@ -200,54 +200,53 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x17006E22 RID: 28194
-		// (get) Token: 0x0602C338 RID: 181048 RVA: 0x00A19C93 File Offset: 0x00A17E93
-		// (set) Token: 0x0602C339 RID: 181049 RVA: 0x00A19CA3 File Offset: 0x00A17EA3
+		// Token: 0x17004293 RID: 17043
+		// (get) Token: 0x06021189 RID: 135561 RVA: 0x00959003 File Offset: 0x00957203
+		// (set) Token: 0x0602118A RID: 135562 RVA: 0x00959013 File Offset: 0x00957213
 		public unsafe float TouchDebugSize
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_TouchDebugSize);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_TouchDebugSize) = value;
 			}
 		}
 
-		// Token: 0x17006E23 RID: 28195
-		// (get) Token: 0x0602C33A RID: 181050 RVA: 0x00A19CB4 File Offset: 0x00A17EB4
-		// (set) Token: 0x0602C33B RID: 181051 RVA: 0x00A19CC4 File Offset: 0x00A17EC4
+		// Token: 0x17004294 RID: 17044
+		// (get) Token: 0x0602118B RID: 135563 RVA: 0x00959024 File Offset: 0x00957224
+		// (set) Token: 0x0602118C RID: 135564 RVA: 0x00959034 File Offset: 0x00957234
 		public unsafe bool 角色是否已强化
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_12) != 0;
+				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_角色是否已强化) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_12) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_角色是否已强化) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006E24 RID: 28196
-		// (get) Token: 0x0602C33C RID: 181052 RVA: 0x00A19CD5 File Offset: 0x00A17ED5
-		// (set) Token: 0x0602C33D RID: 181053 RVA: 0x00A19CE5 File Offset: 0x00A17EE5
+		// Token: 0x17004295 RID: 17045
+		// (get) Token: 0x0602118D RID: 135565 RVA: 0x00959045 File Offset: 0x00957245
+		// (set) Token: 0x0602118E RID: 135566 RVA: 0x00959055 File Offset: 0x00957255
 		public unsafe bool RightCtrl
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_13) != 0;
+				return *(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_RightCtrl) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_13) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_KuroCheatManager_C.__PropertyOffset_RightCtrl) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602C33E RID: 181054 RVA: 0x00A19CF8 File Offset: 0x00A17EF8
+		// Token: 0x0602118F RID: 135567 RVA: 0x00959068 File Offset: 0x00957268
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 强化或还原角色(bool 是否需要强化)
 		{
 			BP_KuroCheatManager_C.__强化或还原角色_FunctionParams* ptr = stackalloc BP_KuroCheatManager_C.__强化或还原角色_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(BP_KuroCheatManager_C.__强化或还原角色_FunctionParams) & -16L;
@@ -256,34 +255,30 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroCheatManager_C.__强化或还原角色_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C33F RID: 181055 RVA: 0x00A19D3E File Offset: 0x00A17F3E
+		// Token: 0x06021190 RID: 135568 RVA: 0x009590AE File Offset: 0x009572AE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void TouchDebug()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroCheatManager_C.__TouchDebug_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C340 RID: 181056 RVA: 0x00A19D52 File Offset: 0x00A17F52
+		// Token: 0x06021191 RID: 135569 RVA: 0x009590C2 File Offset: 0x009572C2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void PrintTimeScale()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroCheatManager_C.__PrintTimeScale_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C341 RID: 181057 RVA: 0x00A19D66 File Offset: 0x00A17F66
+		// Token: 0x06021192 RID: 135570 RVA: 0x009590D6 File Offset: 0x009572D6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void UpdateFunctionKey()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroCheatManager_C.__UpdateFunctionKey_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C342 RID: 181058 RVA: 0x00A19D7C File Offset: 0x00A17F7C
+		// Token: 0x06021193 RID: 135571 RVA: 0x009590EC File Offset: 0x009572EC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 作弊指令(FKey 输入按键, bool 按下)
 		{
 			BP_KuroCheatManager_C.__作弊指令_FunctionParams* ptr = stackalloc BP_KuroCheatManager_C.__作弊指令_FunctionParams[(UIntPtr)287] + 15L / (long)sizeof(BP_KuroCheatManager_C.__作弊指令_FunctionParams) & -16L;
@@ -297,71 +292,69 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			UnrealReflectionUtils.DestroyStruct(BP_KuroCheatManager_C.__作弊指令_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602C343 RID: 181059 RVA: 0x00A19DF8 File Offset: 0x00A17FF8
+		// Token: 0x06021194 RID: 135572 RVA: 0x00959168 File Offset: 0x00957368
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveInitCheatManager()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroCheatManager_C.__ReceiveInitCheatManager_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C344 RID: 181060 RVA: 0x00A19E0C File Offset: 0x00A1800C
+		// Token: 0x06021195 RID: 135573 RVA: 0x0095917C File Offset: 0x0095737C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveInitCheatManager_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroCheatManager_C.__ReceiveInitCheatManager_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroCheatManager_C.__ReceiveInitCheatManager_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C345 RID: 181061 RVA: 0x00A19E21 File Offset: 0x00A18021
+		// Token: 0x06021196 RID: 135574 RVA: 0x00959190 File Offset: 0x00957390
 		protected BP_KuroCheatManager_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04017218 RID: 94744
+		// Token: 0x04011F43 RID: 73539
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/BP_KuroCheatManager.BP_KuroCheatManager_C";
 
-		// Token: 0x04017219 RID: 94745
+		// Token: 0x04011F44 RID: 73540
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401721A RID: 94746
+		// Token: 0x04011F45 RID: 73541
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401721B RID: 94747
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011F46 RID: 73542
+		internal static int __PropertyOffset_CharacterController;
 
-		// Token: 0x0401721C RID: 94748
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011F47 RID: 73543
+		internal static int __PropertyOffset_输入按键;
 
-		// Token: 0x0401721D RID: 94749
+		// Token: 0x04011F48 RID: 73544
 		[Nullable(2)]
 		private FKey _输入按键;
 
-		// Token: 0x0401721E RID: 94750
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011F49 RID: 73545
+		internal static int __PropertyOffset_按下;
 
-		// Token: 0x0401721F RID: 94751
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011F4A RID: 73546
+		internal static int __PropertyOffset_LeftAlt;
 
-		// Token: 0x04017220 RID: 94752
-		internal static int __PropertyOffset_5;
+		// Token: 0x04011F4B RID: 73547
+		internal static int __PropertyOffset_LeftCtrl;
 
-		// Token: 0x04017221 RID: 94753
-		internal static int __PropertyOffset_6;
+		// Token: 0x04011F4C RID: 73548
+		internal static int __PropertyOffset_全局TimeDilation倍数;
 
-		// Token: 0x04017222 RID: 94754
-		internal static int __PropertyOffset_7;
+		// Token: 0x04011F4D RID: 73549
+		internal static int __PropertyOffset_LastDebugPressTime;
 
-		// Token: 0x04017223 RID: 94755
-		internal static int __PropertyOffset_8;
+		// Token: 0x04011F4E RID: 73550
+		internal static int __PropertyOffset_DebugSpeed;
 
-		// Token: 0x04017224 RID: 94756
-		internal static int __PropertyOffset_9;
+		// Token: 0x04011F4F RID: 73551
+		internal static int __PropertyOffset_GhostMode;
 
-		// Token: 0x04017225 RID: 94757
-		internal static int __PropertyOffset_10;
+		// Token: 0x04011F50 RID: 73552
+		internal static int __PropertyOffset_被销毁怪物缓存;
 
-		// Token: 0x04017226 RID: 94758
+		// Token: 0x04011F51 RID: 73553
 		[Nullable(new byte[]
 		{
 			2,
@@ -369,58 +362,55 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 		})]
 		private TSet<TsBaseCharacter> _被销毁怪物缓存;
 
-		// Token: 0x04017227 RID: 94759
-		internal static int __PropertyOffset_11;
+		// Token: 0x04011F52 RID: 73554
+		internal static int __PropertyOffset_TouchDebugSize;
 
-		// Token: 0x04017228 RID: 94760
-		internal static int __PropertyOffset_12;
+		// Token: 0x04011F53 RID: 73555
+		internal static int __PropertyOffset_角色是否已强化;
 
-		// Token: 0x04017229 RID: 94761
-		internal static int __PropertyOffset_13;
+		// Token: 0x04011F54 RID: 73556
+		internal static int __PropertyOffset_RightCtrl;
 
-		// Token: 0x0401722A RID: 94762
-		internal static int __PropertyOffset_14;
-
-		// Token: 0x0401722B RID: 94763
+		// Token: 0x04011F55 RID: 73557
 		private static IntPtr __强化或还原角色_NativeFunctionPtr;
 
-		// Token: 0x0401722C RID: 94764
+		// Token: 0x04011F56 RID: 73558
 		private static IntPtr __TouchDebug_NativeFunctionPtr;
 
-		// Token: 0x0401722D RID: 94765
+		// Token: 0x04011F57 RID: 73559
 		private static IntPtr __PrintTimeScale_NativeFunctionPtr;
 
-		// Token: 0x0401722E RID: 94766
+		// Token: 0x04011F58 RID: 73560
 		private static IntPtr __UpdateFunctionKey_NativeFunctionPtr;
 
-		// Token: 0x0401722F RID: 94767
+		// Token: 0x04011F59 RID: 73561
 		private static IntPtr __作弊指令_NativeFunctionPtr;
 
-		// Token: 0x04017230 RID: 94768
+		// Token: 0x04011F5A RID: 73562
 		private static IntPtr __ReceiveInitCheatManager_NativeFunctionPtr;
 
-		// Token: 0x0200A66D RID: 42605
+		// Token: 0x02009083 RID: 36995
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __强化或还原角色_FunctionParams
 		{
-			// Token: 0x040325A8 RID: 206248
+			// Token: 0x0402CE96 RID: 183958
 			[FieldOffset(0)]
 			public bool 是否需要强化;
 		}
 
-		// Token: 0x0200A66E RID: 42606
+		// Token: 0x02009084 RID: 36996
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 272)]
 		protected ref struct __作弊指令_FunctionParams
 		{
-			// Token: 0x040325A9 RID: 206249
+			// Token: 0x0402CE97 RID: 183959
 			[FieldOffset(0)]
 			public byte 输入按键;
 
-			// Token: 0x040325AA RID: 206250
+			// Token: 0x0402CE98 RID: 183960
 			[FieldOffset(32)]
 			public bool 按下;
 		}

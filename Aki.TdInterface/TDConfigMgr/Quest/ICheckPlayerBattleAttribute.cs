@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EF0 RID: 3824
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001006 RID: 4102
 	public class ICheckPlayerBattleAttribute : ITargetBattleAttribute
 	{
-		// Token: 0x06005462 RID: 21602 RVA: 0x000CF35C File Offset: 0x000CD55C
+		// Token: 0x060059DE RID: 23006 RVA: 0x000DB504 File Offset: 0x000D9704
 		private ICheckPlayerBattleAttribute_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005463 RID: 21603 RVA: 0x000CF394 File Offset: 0x000CD594
+		// Token: 0x060059DF RID: 23007 RVA: 0x000DB53C File Offset: 0x000D973C
 		public static ICheckPlayerBattleAttribute Create([Nullable(2)] ICheckPlayerBattleAttribute instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005464 RID: 21604 RVA: 0x000CF3A7 File Offset: 0x000CD5A7
+		// Token: 0x060059E0 RID: 23008 RVA: 0x000DB54F File Offset: 0x000D974F
 		public static ICheckPlayerBattleAttribute CreateFromSetValue([Nullable(2)] ICheckPlayerBattleAttribute_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005465 RID: 21605 RVA: 0x000CF3BA File Offset: 0x000CD5BA
+		// Token: 0x060059E1 RID: 23009 RVA: 0x000DB562 File Offset: 0x000D9762
 		public new ICheckPlayerBattleAttribute_SetValue ToSetValue()
 		{
 			return new ICheckPlayerBattleAttribute_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C4A RID: 7242
-		// (get) Token: 0x06005466 RID: 21606 RVA: 0x000CF3D9 File Offset: 0x000CD5D9
-		// (set) Token: 0x06005467 RID: 21607 RVA: 0x000CF404 File Offset: 0x000CD604
+		// Token: 0x17001DE2 RID: 7650
+		// (get) Token: 0x060059E2 RID: 23010 RVA: 0x000DB581 File Offset: 0x000D9781
+		// (set) Token: 0x060059E3 RID: 23011 RVA: 0x000DB5AC File Offset: 0x000D97AC
 		public override ETargetBattleAttribute Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C4B RID: 7243
-		// (get) Token: 0x06005468 RID: 21608 RVA: 0x000CF414 File Offset: 0x000CD614
-		// (set) Token: 0x06005469 RID: 21609 RVA: 0x000CF475 File Offset: 0x000CD675
+		// Token: 0x17001DE3 RID: 7651
+		// (get) Token: 0x060059E4 RID: 23012 RVA: 0x000DB5BC File Offset: 0x000D97BC
+		// (set) Token: 0x060059E5 RID: 23013 RVA: 0x000DB61D File Offset: 0x000D981D
 		public virtual IHealthAttributeToTarget Option
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400331F RID: 13087
+		// Token: 0x0400362C RID: 13868
 		[Nullable(2)]
 		protected new ICheckPlayerBattleAttribute FbInstance;
 
-		// Token: 0x04003320 RID: 13088
+		// Token: 0x0400362D RID: 13869
 		[Nullable(2)]
 		protected new ICheckPlayerBattleAttribute_SetValue PocoInterface;
 
-		// Token: 0x04003321 RID: 13089
+		// Token: 0x0400362E RID: 13870
 		private IHealthAttributeToTarget _OptionCache;
 
-		// Token: 0x04003322 RID: 13090
+		// Token: 0x0400362F RID: 13871
 		private bool _OptionInited;
 	}
 }

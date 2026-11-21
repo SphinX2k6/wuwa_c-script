@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014DC RID: 5340
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001635 RID: 5685
 	public class ChangeNpcPerformState : ActionParams
 	{
-		// Token: 0x06007990 RID: 31120 RVA: 0x00122DF0 File Offset: 0x00120FF0
+		// Token: 0x0600805D RID: 32861 RVA: 0x00131A3C File Offset: 0x0012FC3C
 		private ChangeNpcPerformState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007991 RID: 31121 RVA: 0x00122E28 File Offset: 0x00121028
+		// Token: 0x0600805E RID: 32862 RVA: 0x00131A74 File Offset: 0x0012FC74
 		public static ChangeNpcPerformState Create([Nullable(2)] ChangeNpcPerformState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007992 RID: 31122 RVA: 0x00122E3B File Offset: 0x0012103B
+		// Token: 0x0600805F RID: 32863 RVA: 0x00131A87 File Offset: 0x0012FC87
 		public static ChangeNpcPerformState CreateFromSetValue([Nullable(2)] ChangeNpcPerformState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007993 RID: 31123 RVA: 0x00122E4E File Offset: 0x0012104E
+		// Token: 0x06008060 RID: 32864 RVA: 0x00131A9A File Offset: 0x0012FC9A
 		public ChangeNpcPerformState_SetValue ToSetValue()
 		{
 			return new ChangeNpcPerformState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028B4 RID: 10420
-		// (get) Token: 0x06007994 RID: 31124 RVA: 0x00122E6D File Offset: 0x0012106D
-		// (set) Token: 0x06007995 RID: 31125 RVA: 0x00122E98 File Offset: 0x00121098
+		// Token: 0x17002A9E RID: 10910
+		// (get) Token: 0x06008061 RID: 32865 RVA: 0x00131AB9 File Offset: 0x0012FCB9
+		// (set) Token: 0x06008062 RID: 32866 RVA: 0x00131AE4 File Offset: 0x0012FCE4
 		public virtual int EntityId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028B5 RID: 10421
-		// (get) Token: 0x06007996 RID: 31126 RVA: 0x00122EA6 File Offset: 0x001210A6
-		// (set) Token: 0x06007997 RID: 31127 RVA: 0x00122ED1 File Offset: 0x001210D1
+		// Token: 0x17002A9F RID: 10911
+		// (get) Token: 0x06008063 RID: 32867 RVA: 0x00131AF2 File Offset: 0x0012FCF2
+		// (set) Token: 0x06008064 RID: 32868 RVA: 0x00131B1D File Offset: 0x0012FD1D
 		public virtual string State
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004687 RID: 18055
+		// Token: 0x04004A22 RID: 18978
 		[Nullable(2)]
 		protected new ChangeNpcPerformState FbInstance;
 
-		// Token: 0x04004688 RID: 18056
+		// Token: 0x04004A23 RID: 18979
 		[Nullable(2)]
 		protected ChangeNpcPerformState_SetValue PocoInterface;
 	}

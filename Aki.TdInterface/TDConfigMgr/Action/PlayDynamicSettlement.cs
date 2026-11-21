@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002107 RID: 8455
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002368 RID: 9064
 	public class PlayDynamicSettlement : ActionParams
 	{
-		// Token: 0x0600BA04 RID: 47620 RVA: 0x001ADF3C File Offset: 0x001AC13C
+		// Token: 0x0600C590 RID: 50576 RVA: 0x001C509C File Offset: 0x001C329C
 		private PlayDynamicSettlement_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BA05 RID: 47621 RVA: 0x001ADF74 File Offset: 0x001AC174
+		// Token: 0x0600C591 RID: 50577 RVA: 0x001C50D4 File Offset: 0x001C32D4
 		public static PlayDynamicSettlement Create([Nullable(2)] PlayDynamicSettlement instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BA06 RID: 47622 RVA: 0x001ADF87 File Offset: 0x001AC187
+		// Token: 0x0600C592 RID: 50578 RVA: 0x001C50E7 File Offset: 0x001C32E7
 		public static PlayDynamicSettlement CreateFromSetValue([Nullable(2)] PlayDynamicSettlement_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BA07 RID: 47623 RVA: 0x001ADF9A File Offset: 0x001AC19A
+		// Token: 0x0600C593 RID: 50579 RVA: 0x001C50FA File Offset: 0x001C32FA
 		public PlayDynamicSettlement_SetValue ToSetValue()
 		{
 			return new PlayDynamicSettlement_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170038D1 RID: 14545
-		// (get) Token: 0x0600BA08 RID: 47624 RVA: 0x001ADFAD File Offset: 0x001AC1AD
-		// (set) Token: 0x0600BA09 RID: 47625 RVA: 0x001ADFD4 File Offset: 0x001AC1D4
+		// Token: 0x17003BBD RID: 15293
+		// (get) Token: 0x0600C594 RID: 50580 RVA: 0x001C510D File Offset: 0x001C330D
+		// (set) Token: 0x0600C595 RID: 50581 RVA: 0x001C5134 File Offset: 0x001C3334
 		public virtual IDynamicSettlementConfig DynamicSettlementConfig
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006F60 RID: 28512
+		// Token: 0x04007594 RID: 30100
 		[Nullable(2)]
 		protected new PlayDynamicSettlement FbInstance;
 
-		// Token: 0x04006F61 RID: 28513
+		// Token: 0x04007595 RID: 30101
 		[Nullable(2)]
 		protected PlayDynamicSettlement_SetValue PocoInterface;
 	}

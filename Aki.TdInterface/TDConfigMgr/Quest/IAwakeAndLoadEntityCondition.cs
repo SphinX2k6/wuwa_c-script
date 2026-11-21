@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000ED6 RID: 3798
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FEC RID: 4076
 	public class IAwakeAndLoadEntityCondition : IQuestCondition
 	{
-		// Token: 0x060053D2 RID: 21458 RVA: 0x000CDFF4 File Offset: 0x000CC1F4
+		// Token: 0x0600594E RID: 22862 RVA: 0x000DA19C File Offset: 0x000D839C
 		private IAwakeAndLoadEntityCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060053D3 RID: 21459 RVA: 0x000CE02C File Offset: 0x000CC22C
+		// Token: 0x0600594F RID: 22863 RVA: 0x000DA1D4 File Offset: 0x000D83D4
 		public static IAwakeAndLoadEntityCondition Create([Nullable(2)] IAwakeAndLoadEntityCondition instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060053D4 RID: 21460 RVA: 0x000CE03F File Offset: 0x000CC23F
+		// Token: 0x06005950 RID: 22864 RVA: 0x000DA1E7 File Offset: 0x000D83E7
 		public static IAwakeAndLoadEntityCondition CreateFromSetValue([Nullable(2)] IAwakeAndLoadEntityCondition_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060053D5 RID: 21461 RVA: 0x000CE052 File Offset: 0x000CC252
+		// Token: 0x06005951 RID: 22865 RVA: 0x000DA1FA File Offset: 0x000D83FA
 		public new IAwakeAndLoadEntityCondition_SetValue ToSetValue()
 		{
 			return new IAwakeAndLoadEntityCondition_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C27 RID: 7207
-		// (get) Token: 0x060053D6 RID: 21462 RVA: 0x000CE089 File Offset: 0x000CC289
-		// (set) Token: 0x060053D7 RID: 21463 RVA: 0x000CE0B4 File Offset: 0x000CC2B4
+		// Token: 0x17001DBF RID: 7615
+		// (get) Token: 0x06005952 RID: 22866 RVA: 0x000DA231 File Offset: 0x000D8431
+		// (set) Token: 0x06005953 RID: 22867 RVA: 0x000DA25C File Offset: 0x000D845C
 		public override EChildQuest Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C28 RID: 7208
-		// (get) Token: 0x060053D8 RID: 21464 RVA: 0x000CE0C4 File Offset: 0x000CC2C4
-		// (set) Token: 0x060053D9 RID: 21465 RVA: 0x000CE125 File Offset: 0x000CC325
+		// Token: 0x17001DC0 RID: 7616
+		// (get) Token: 0x06005954 RID: 22868 RVA: 0x000DA26C File Offset: 0x000D846C
+		// (set) Token: 0x06005955 RID: 22869 RVA: 0x000DA2CD File Offset: 0x000D84CD
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -120,9 +118,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C29 RID: 7209
-		// (get) Token: 0x060053DA RID: 21466 RVA: 0x000CE13A File Offset: 0x000CC33A
-		// (set) Token: 0x060053DB RID: 21467 RVA: 0x000CE161 File Offset: 0x000CC361
+		// Token: 0x17001DC1 RID: 7617
+		// (get) Token: 0x06005956 RID: 22870 RVA: 0x000DA2E2 File Offset: 0x000D84E2
+		// (set) Token: 0x06005957 RID: 22871 RVA: 0x000DA309 File Offset: 0x000D8509
 		public virtual List<int> EntityIds
 		{
 			get
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C2A RID: 7210
-		// (get) Token: 0x060053DC RID: 21468 RVA: 0x000CE170 File Offset: 0x000CC370
-		// (set) Token: 0x060053DD RID: 21469 RVA: 0x000CE1AA File Offset: 0x000CC3AA
+		// Token: 0x17001DC2 RID: 7618
+		// (get) Token: 0x06005958 RID: 22872 RVA: 0x000DA318 File Offset: 0x000D8518
+		// (set) Token: 0x06005959 RID: 22873 RVA: 0x000DA352 File Offset: 0x000D8552
 		public virtual bool? IsWaitForShow
 		{
 			get
@@ -168,18 +166,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040032BD RID: 12989
+		// Token: 0x040035CA RID: 13770
 		[Nullable(2)]
 		protected new IAwakeAndLoadEntityCondition FbInstance;
 
-		// Token: 0x040032BE RID: 12990
+		// Token: 0x040035CB RID: 13771
 		[Nullable(2)]
 		protected new IAwakeAndLoadEntityCondition_SetValue PocoInterface;
 
-		// Token: 0x040032BF RID: 12991
+		// Token: 0x040035CC RID: 13772
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040032C0 RID: 12992
+		// Token: 0x040035CD RID: 13773
 		private bool _PreConditionsInited;
 	}
 }

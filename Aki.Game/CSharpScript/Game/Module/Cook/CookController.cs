@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -21,34 +20,34 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005AF0 RID: 23280
+	// Token: 0x02004AD1 RID: 19153
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class CookController : UiControllerBase
 	{
-		// Token: 0x0603AEE7 RID: 241383 RVA: 0x00E0CBAC File Offset: 0x00E0ADAC
+		// Token: 0x0602FE59 RID: 196185 RVA: 0x00D5D870 File Offset: 0x00D5BA70
 		protected override bool OnInit()
 		{
 			this.CookCoinId = ConfigCommonParamById.GetIntConfig("CookCost").GetValueOrDefault(-1);
 			return base.OnInit();
 		}
 
-		// Token: 0x0603AEE8 RID: 241384 RVA: 0x00E0CBD8 File Offset: 0x00E0ADD8
+		// Token: 0x0602FE5A RID: 196186 RVA: 0x00D5D89C File Offset: 0x00D5BA9C
 		protected override bool OnClear()
 		{
 			this.ClearCookDisplay();
 			return true;
 		}
 
-		// Token: 0x0603AEE9 RID: 241385 RVA: 0x00E0CBE1 File Offset: 0x00E0ADE1
+		// Token: 0x0602FE5B RID: 196187 RVA: 0x00D5D8A5 File Offset: 0x00D5BAA5
 		protected override bool OnLeaveLevel()
 		{
 			this.ClearCookDisplay();
 			return true;
 		}
 
-		// Token: 0x0603AEEA RID: 241386 RVA: 0x00E0CBEC File Offset: 0x00E0ADEC
+		// Token: 0x0602FE5C RID: 196188 RVA: 0x00D5D8B0 File Offset: 0x00D5BAB0
 		protected override void OnAddEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -63,7 +62,7 @@ namespace CSharpScript.Game.Module.Cook
 			EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.LoadNewList));
 		}
 
-		// Token: 0x0603AEEB RID: 241387 RVA: 0x00E0CC5C File Offset: 0x00E0AE5C
+		// Token: 0x0602FE5D RID: 196189 RVA: 0x00D5D920 File Offset: 0x00D5BB20
 		protected override void OnRemoveEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -78,16 +77,16 @@ namespace CSharpScript.Game.Module.Cook
 			EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.LoadNewList));
 		}
 
-		// Token: 0x0603AEEC RID: 241388 RVA: 0x00E0CCCC File Offset: 0x00E0AECC
+		// Token: 0x0602FE5E RID: 196190 RVA: 0x00D5D990 File Offset: 0x00D5BB90
 		private static void UpdateCookRoleItemDataList(int i)
 		{
 			CookModel.Instance.UpdateCookRoleItemDataList();
 		}
 
-		// Token: 0x0603AEED RID: 241389 RVA: 0x00E0CCD8 File Offset: 0x00E0AED8
+		// Token: 0x0602FE5F RID: 196191 RVA: 0x00D5D99C File Offset: 0x00D5BB9C
 		private void ShowCookStudy(int configId, int count)
 		{
-			if (!CSharpScript.Game.Module.Item.ItemConfig.Instance.GetConfig(configId).Value.ShowTypes().Contains(24))
+			if (Array.IndexOf<int>(CSharpScript.Game.Module.Item.ItemConfig.Instance.GetConfig(configId).Value.ShowTypes(), 24) < 0)
 			{
 				return;
 			}
@@ -100,20 +99,20 @@ namespace CSharpScript.Game.Module.Cook
 			EventSystem.Instance.Emit(EEventName.UpdateFormula);
 		}
 
-		// Token: 0x0603AEEE RID: 241390 RVA: 0x00E0CD51 File Offset: 0x00E0AF51
+		// Token: 0x0602FE60 RID: 196192 RVA: 0x00D5DA16 File Offset: 0x00D5BC16
 		private void LoadNewList()
 		{
 			CookModel.Instance.CreateMachiningDataList();
 		}
 
-		// Token: 0x0603AEEF RID: 241391 RVA: 0x00E0CD5D File Offset: 0x00E0AF5D
+		// Token: 0x0602FE61 RID: 196193 RVA: 0x00D5DA22 File Offset: 0x00D5BC22
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.CookingInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.HandleCookingInfoUpdateNotify));
 			Net.Instance.Register(ENotifyMessageId.CookingFormulaUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.HandleCookingFormulaUpdateNotify));
 		}
 
-		// Token: 0x0603AEF0 RID: 241392 RVA: 0x00E0CD98 File Offset: 0x00E0AF98
+		// Token: 0x0602FE62 RID: 196194 RVA: 0x00D5DA5C File Offset: 0x00D5BC5C
 		private void HandleCookingInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			CookingInfoUpdateNotify cookingInfoUpdateNotify = (CookingInfoUpdateNotify)msg;
@@ -121,7 +120,7 @@ namespace CSharpScript.Game.Module.Cook
 			EventSystem.Instance.Emit(EEventName.UpdateCookerInfo);
 		}
 
-		// Token: 0x0603AEF1 RID: 241393 RVA: 0x00E0CDCC File Offset: 0x00E0AFCC
+		// Token: 0x0602FE63 RID: 196195 RVA: 0x00D5DA90 File Offset: 0x00D5BC90
 		private void HandleCookingFormulaUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			CookingFormulaUpdateNotify cookingFormulaUpdateNotify = (CookingFormulaUpdateNotify)msg;
@@ -129,20 +128,20 @@ namespace CSharpScript.Game.Module.Cook
 			CookModel.Instance.UpdateMachiningDataList(cookingFormulaUpdateNotify.ProcessedFoodFormulaInfos, true);
 		}
 
-		// Token: 0x0603AEF2 RID: 241394 RVA: 0x00E0CE01 File Offset: 0x00E0B001
+		// Token: 0x0602FE64 RID: 196196 RVA: 0x00D5DAC5 File Offset: 0x00D5BCC5
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.CookingInfoUpdateNotify);
 			Net.Instance.UnRegister(ENotifyMessageId.CookingFormulaUpdateNotify);
 		}
 
-		// Token: 0x0603AEF3 RID: 241395 RVA: 0x00E0CE23 File Offset: 0x00E0B023
+		// Token: 0x0602FE65 RID: 196197 RVA: 0x00D5DAE7 File Offset: 0x00D5BCE7
 		public bool CheckCanShowExpItem()
 		{
 			return CookModel.Instance.GetCookerInfo().AddExp != 0;
 		}
 
-		// Token: 0x0603AEF4 RID: 241396 RVA: 0x00E0CE38 File Offset: 0x00E0B038
+		// Token: 0x0602FE66 RID: 196198 RVA: 0x00D5DAFC File Offset: 0x00D5BCFC
 		private void HandleCookingProtocolResponse(CookingDataResponse response)
 		{
 			CookModel.Instance.CreateCookerInfo(response.CookingInfo);
@@ -152,7 +151,7 @@ namespace CSharpScript.Game.Module.Cook
 			CookModel.Instance.SaveLimitRefreshTime(response.LimitRefreshTime);
 		}
 
-		// Token: 0x0603AEF5 RID: 241397 RVA: 0x00E0CE98 File Offset: 0x00E0B098
+		// Token: 0x0602FE67 RID: 196199 RVA: 0x00D5DB5C File Offset: 0x00D5BD5C
 		[NullableContext(0)]
 		public UniTask<bool> SendCookingDataRequestAsync()
 		{
@@ -164,7 +163,7 @@ namespace CSharpScript.Game.Module.Cook
 			return <SendCookingDataRequestAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AEF6 RID: 241398 RVA: 0x00E0CEDC File Offset: 0x00E0B0DC
+		// Token: 0x0602FE68 RID: 196200 RVA: 0x00D5DBA0 File Offset: 0x00D5BDA0
 		public void SendCookFormulaRequest(int formulaId)
 		{
 			CookFormulaRequest cookFormulaRequest = CookFormulaRequest.Create();
@@ -172,7 +171,7 @@ namespace CSharpScript.Game.Module.Cook
 			Net.Instance.Call(ERequestMessageId.CookFormulaRequest, cookFormulaRequest, new Action<IMessage, Net.CallbackStatus>(this.HandleCookFormulaResponse), 0);
 		}
 
-		// Token: 0x0603AEF7 RID: 241399 RVA: 0x00E0CF14 File Offset: 0x00E0B114
+		// Token: 0x0602FE69 RID: 196201 RVA: 0x00D5DBD8 File Offset: 0x00D5BDD8
 		private void HandleCookFormulaResponse(IMessage msg, Net.CallbackStatus _)
 		{
 			CookFormulaResponse cookFormulaResponse = (CookFormulaResponse)msg;
@@ -188,10 +187,10 @@ namespace CSharpScript.Game.Module.Cook
 				EventSystem.Instance.Emit(EEventName.UpdateFormula);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(cookFormulaResponse.Code, 25849, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(cookFormulaResponse.Code, 23024, null, true, true);
 		}
 
-		// Token: 0x0603AEF8 RID: 241400 RVA: 0x00E0CFA8 File Offset: 0x00E0B1A8
+		// Token: 0x0602FE6A RID: 196202 RVA: 0x00D5DC6C File Offset: 0x00D5BE6C
 		public void SendCookFoodRequest(int formulaId, int roleId, int cookCount)
 		{
 			CookFoodRequest cookFoodRequest = CookFoodRequest.Create();
@@ -202,7 +201,7 @@ namespace CSharpScript.Game.Module.Cook
 			Net.Instance.Call(ERequestMessageId.CookFoodRequest, cookFoodRequest, new Action<IMessage, Net.CallbackStatus>(this.HandleCookFoodResponse), 0);
 		}
 
-		// Token: 0x0603AEF9 RID: 241401 RVA: 0x00E0D004 File Offset: 0x00E0B204
+		// Token: 0x0602FE6B RID: 196203 RVA: 0x00D5DCC8 File Offset: 0x00D5BEC8
 		private void HandleCookFoodResponse(IMessage msg, Net.CallbackStatus _)
 		{
 			CookFoodResponse cookFoodResponse = (CookFoodResponse)msg;
@@ -237,11 +236,11 @@ namespace CSharpScript.Game.Module.Cook
 				EventSystem.Instance.Emit(EEventName.CookSuccess);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(cookFoodResponse.Code, 23290, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(cookFoodResponse.Code, 23883, null, true, true);
 			EventSystem.Instance.Emit(EEventName.CookFail);
 		}
 
-		// Token: 0x0603AEFA RID: 241402 RVA: 0x00E0D15C File Offset: 0x00E0B35C
+		// Token: 0x0602FE6C RID: 196204 RVA: 0x00D5DE20 File Offset: 0x00D5C020
 		[NullableContext(1)]
 		private void SetCompositeRewardView(CookFoodResponse response)
 		{
@@ -290,7 +289,7 @@ namespace CSharpScript.Game.Module.Cook
 			ItemRewardController.Instance.SetProgressQueue(progressQueue);
 		}
 
-		// Token: 0x0603AEFB RID: 241403 RVA: 0x00E0D308 File Offset: 0x00E0B508
+		// Token: 0x0602FE6D RID: 196205 RVA: 0x00D5DFCC File Offset: 0x00D5C1CC
 		[NullableContext(1)]
 		private List<ISingleItemInfo> PrimaryFoodFilter(List<ISingleItemInfo> primaryFoodList)
 		{
@@ -305,7 +304,7 @@ namespace CSharpScript.Game.Module.Cook
 			return list;
 		}
 
-		// Token: 0x0603AEFC RID: 241404 RVA: 0x00E0D368 File Offset: 0x00E0B568
+		// Token: 0x0602FE6E RID: 196206 RVA: 0x00D5E02C File Offset: 0x00D5C22C
 		[NullableContext(1)]
 		public void SendFoodProcessRequest(int formulaId, List<ISingleItemInfo> primaryFoodList, int cookCount)
 		{
@@ -323,13 +322,13 @@ namespace CSharpScript.Game.Module.Cook
 			Net.Instance.Call(ERequestMessageId.FoodProcessRequest, foodProcessRequest, new Action<IMessage, Net.CallbackStatus>(this.HandleFoodProcessResponse), 0);
 		}
 
-		// Token: 0x0603AEFD RID: 241405 RVA: 0x00E0D428 File Offset: 0x00E0B628
+		// Token: 0x0602FE6F RID: 196207 RVA: 0x00D5E0EC File Offset: 0x00D5C2EC
 		private void HandleFoodProcessResponse(IMessage msg, Net.CallbackStatus _)
 		{
 			FoodProcessResponse foodProcessResponse = (FoodProcessResponse)msg;
 			if (foodProcessResponse.Code != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(foodProcessResponse.Code, 25197, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(foodProcessResponse.Code, 23327, null, true, true);
 				return;
 			}
 			IMachiningData machiningDataById = CookModel.Instance.GetMachiningDataById(foodProcessResponse.Id);
@@ -369,14 +368,14 @@ namespace CSharpScript.Game.Module.Cook
 			EventSystem.Instance.Emit(EEventName.MachiningStudyFail);
 		}
 
-		// Token: 0x0603AEFE RID: 241406 RVA: 0x00E0D574 File Offset: 0x00E0B774
+		// Token: 0x0602FE70 RID: 196208 RVA: 0x00D5E238 File Offset: 0x00D5C438
 		public void SendCertificateLevelRewardRequest()
 		{
 			CertificateLevelRewardRequest message = CertificateLevelRewardRequest.Create();
 			Net.Instance.Call(ERequestMessageId.CertificateLevelRewardRequest, message, new Action<IMessage, Net.CallbackStatus>(this.HandleCertificateLevelRewardResponse), 0);
 		}
 
-		// Token: 0x0603AEFF RID: 241407 RVA: 0x00E0D5A4 File Offset: 0x00E0B7A4
+		// Token: 0x0602FE71 RID: 196209 RVA: 0x00D5E268 File Offset: 0x00D5C468
 		private void HandleCertificateLevelRewardResponse(IMessage msg, Net.CallbackStatus _)
 		{
 			CertificateLevelRewardResponse certificateLevelRewardResponse = (CertificateLevelRewardResponse)msg;
@@ -385,10 +384,10 @@ namespace CSharpScript.Game.Module.Cook
 				EventSystem.Instance.Emit(EEventName.UpgradeCookerLevel);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(certificateLevelRewardResponse.Code, 20218, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(certificateLevelRewardResponse.Code, 25731, null, true, true);
 		}
 
-		// Token: 0x0603AF00 RID: 241408 RVA: 0x00E0D5EC File Offset: 0x00E0B7EC
+		// Token: 0x0602FE72 RID: 196210 RVA: 0x00D5E2B0 File Offset: 0x00D5C4B0
 		public void SendFixToolRequest(int fixId, long entityId)
 		{
 			FixToolRequest fixToolRequest = FixToolRequest.Create();
@@ -401,7 +400,7 @@ namespace CSharpScript.Game.Module.Cook
 			}, 0);
 		}
 
-		// Token: 0x0603AF01 RID: 241409 RVA: 0x00E0D644 File Offset: 0x00E0B844
+		// Token: 0x0602FE73 RID: 196211 RVA: 0x00D5E308 File Offset: 0x00D5C508
 		private void HandleFixToolResponse(FixToolResponse response, Net.CallbackStatus _, int fixId)
 		{
 			if (response.Code == Aki.Protocol.ErrorCode.Success)
@@ -415,40 +414,40 @@ namespace CSharpScript.Game.Module.Cook
 				EventSystem.Instance.Emit(EEventName.FixSuccess);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(response.Code, 23245, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(response.Code, 20809, null, true, true);
 		}
 
-		// Token: 0x0603AF02 RID: 241410 RVA: 0x00E0D6B1 File Offset: 0x00E0B8B1
+		// Token: 0x0602FE74 RID: 196212 RVA: 0x00D5E375 File Offset: 0x00D5C575
 		public void SetCurrentFixId(int fixId)
 		{
 			CookModel.Instance.CurrentFixId = fixId;
 		}
 
-		// Token: 0x0603AF03 RID: 241411 RVA: 0x00E0D6BE File Offset: 0x00E0B8BE
+		// Token: 0x0602FE75 RID: 196213 RVA: 0x00D5E382 File Offset: 0x00D5C582
 		public int GetCurrentFixId()
 		{
 			return CookModel.Instance.CurrentFixId;
 		}
 
-		// Token: 0x0603AF04 RID: 241412 RVA: 0x00E0D6CA File Offset: 0x00E0B8CA
+		// Token: 0x0602FE76 RID: 196214 RVA: 0x00D5E38E File Offset: 0x00D5C58E
 		public void SetCurrentEntityId(long entityId)
 		{
 			CookModel.Instance.CurrentEntityId = new long?(entityId);
 		}
 
-		// Token: 0x0603AF05 RID: 241413 RVA: 0x00E0D6DC File Offset: 0x00E0B8DC
+		// Token: 0x0602FE77 RID: 196215 RVA: 0x00D5E3A0 File Offset: 0x00D5C5A0
 		public long? GetCurrentEntityId()
 		{
 			return CookModel.Instance.CurrentEntityId;
 		}
 
-		// Token: 0x0603AF06 RID: 241414 RVA: 0x00E0D6E8 File Offset: 0x00E0B8E8
+		// Token: 0x0602FE78 RID: 196216 RVA: 0x00D5E3AC File Offset: 0x00D5C5AC
 		public bool CheckCanCook(int itemId)
 		{
 			return CookModel.Instance.CheckCanCook(itemId);
 		}
 
-		// Token: 0x0603AF07 RID: 241415 RVA: 0x00E0D6F8 File Offset: 0x00E0B8F8
+		// Token: 0x0602FE79 RID: 196217 RVA: 0x00D5E3BC File Offset: 0x00D5C5BC
 		public bool CheckCanProcessed(int itemId)
 		{
 			CookProcessed cookProcessedById = CookConfig.Instance.GetCookProcessedById(itemId);
@@ -465,7 +464,7 @@ namespace CSharpScript.Game.Module.Cook
 			return true;
 		}
 
-		// Token: 0x0603AF08 RID: 241416 RVA: 0x00E0D758 File Offset: 0x00E0B958
+		// Token: 0x0602FE7A RID: 196218 RVA: 0x00D5E41C File Offset: 0x00D5C61C
 		public bool CheckCanAdd(int sum, int itemId, ECookListType type)
 		{
 			if (type != ECookListType.Cooking)
@@ -475,7 +474,7 @@ namespace CSharpScript.Game.Module.Cook
 			return this.DoCheckCanAdd(sum, CookConfig.Instance.GetCookFormulaById(itemId).ConsumeItems());
 		}
 
-		// Token: 0x0603AF09 RID: 241417 RVA: 0x00E0D7A8 File Offset: 0x00E0B9A8
+		// Token: 0x0602FE7B RID: 196219 RVA: 0x00D5E46C File Offset: 0x00D5C66C
 		[NullableContext(1)]
 		private bool DoCheckCanAdd(int sum, OneItemConfig[] itemMap)
 		{
@@ -493,7 +492,7 @@ namespace CSharpScript.Game.Module.Cook
 			return true;
 		}
 
-		// Token: 0x0603AF0A RID: 241418 RVA: 0x00E0D7F0 File Offset: 0x00E0B9F0
+		// Token: 0x0602FE7C RID: 196220 RVA: 0x00D5E4B4 File Offset: 0x00D5C6B4
 		public int GetMaxCreateCount(int itemId, ECookListType type)
 		{
 			if (type == ECookListType.Cooking)
@@ -507,7 +506,7 @@ namespace CSharpScript.Game.Module.Cook
 			return this.DoGetMaxCreateCount(CookConfig.Instance.GetCookProcessedById(itemId).ConsumeItemsId());
 		}
 
-		// Token: 0x0603AF0B RID: 241419 RVA: 0x00E0D83C File Offset: 0x00E0BA3C
+		// Token: 0x0602FE7D RID: 196221 RVA: 0x00D5E500 File Offset: 0x00D5C700
 		[NullableContext(1)]
 		private int DoGetMaxCreateCount(OneItemConfig[] itemMap)
 		{
@@ -528,7 +527,7 @@ namespace CSharpScript.Game.Module.Cook
 			return num;
 		}
 
-		// Token: 0x0603AF0C RID: 241420 RVA: 0x00E0D8BC File Offset: 0x00E0BABC
+		// Token: 0x0602FE7E RID: 196222 RVA: 0x00D5E580 File Offset: 0x00D5C780
 		public bool CheckIsBuff(int roleId, int itemId)
 		{
 			CookFormula cookFormulaById = CookConfig.Instance.GetCookFormulaById(itemId);
@@ -543,7 +542,7 @@ namespace CSharpScript.Game.Module.Cook
 			return false;
 		}
 
-		// Token: 0x0603AF0D RID: 241421 RVA: 0x00E0D8FC File Offset: 0x00E0BAFC
+		// Token: 0x0602FE7F RID: 196223 RVA: 0x00D5E5C0 File Offset: 0x00D5C7C0
 		public bool CheckIsBuffEx(int roleId, int itemId)
 		{
 			int[] array = CookConfig.Instance.GetCookFormulaById(itemId).RoleList();
@@ -561,7 +560,7 @@ namespace CSharpScript.Game.Module.Cook
 			{
 				return false;
 			}
-			foreach (int num2 in RoleModel.Instance.GetRoleIdList())
+			foreach (int num2 in RoleModel.Instance.GetRoleIdList(null))
 			{
 				for (int j = 0; j < num; j++)
 				{
@@ -574,7 +573,7 @@ namespace CSharpScript.Game.Module.Cook
 			return false;
 		}
 
-		// Token: 0x0603AF0E RID: 241422 RVA: 0x00E0D9AC File Offset: 0x00E0BBAC
+		// Token: 0x0602FE80 RID: 196224 RVA: 0x00D5E670 File Offset: 0x00D5C870
 		[NullableContext(1)]
 		public string GetCookInfoText(int roleId)
 		{
@@ -594,7 +593,7 @@ namespace CSharpScript.Game.Module.Cook
 			return result;
 		}
 
-		// Token: 0x0603AF0F RID: 241423 RVA: 0x00E0DA48 File Offset: 0x00E0BC48
+		// Token: 0x0602FE81 RID: 196225 RVA: 0x00D5E70C File Offset: 0x00D5C90C
 		public bool CheckCanFix()
 		{
 			foreach (KeyValuePair<int, int> keyValuePair in CookConfig.Instance.GetCookFixToolById(this.GetCurrentFixId()).Items())
@@ -610,7 +609,7 @@ namespace CSharpScript.Game.Module.Cook
 			return true;
 		}
 
-		// Token: 0x0603AF10 RID: 241424 RVA: 0x00E0DAD0 File Offset: 0x00E0BCD0
+		// Token: 0x0602FE82 RID: 196226 RVA: 0x00D5E794 File Offset: 0x00D5C994
 		[NullableContext(1)]
 		public List<CommonItemData> GetCookItemSelectedList(int itemId)
 		{
@@ -627,7 +626,7 @@ namespace CSharpScript.Game.Module.Cook
 			return list;
 		}
 
-		// Token: 0x0603AF11 RID: 241425 RVA: 0x00E0DB50 File Offset: 0x00E0BD50
+		// Token: 0x0602FE83 RID: 196227 RVA: 0x00D5E814 File Offset: 0x00D5CA14
 		public bool CheckTmpListHasLock()
 		{
 			foreach (ISingleItemInfo singleItemInfo in CookModel.Instance.GetTmpMachiningItemList())
@@ -645,13 +644,13 @@ namespace CSharpScript.Game.Module.Cook
 			return false;
 		}
 
-		// Token: 0x0603AF12 RID: 241426 RVA: 0x00E0DBD0 File Offset: 0x00E0BDD0
+		// Token: 0x0602FE84 RID: 196228 RVA: 0x00D5E894 File Offset: 0x00D5CA94
 		public bool CheckIsUnlock(int machiningId, int itemId)
 		{
 			return CookModel.Instance.GetMachiningDataById(machiningId).UnlockList.Contains(itemId);
 		}
 
-		// Token: 0x0603AF13 RID: 241427 RVA: 0x00E0DBE8 File Offset: 0x00E0BDE8
+		// Token: 0x0602FE85 RID: 196229 RVA: 0x00D5E8AC File Offset: 0x00D5CAAC
 		public bool CheckCanGetCookerLevel()
 		{
 			ICookerInfoData cookerInfo = CookModel.Instance.GetCookerInfo();
@@ -666,7 +665,7 @@ namespace CSharpScript.Game.Module.Cook
 			return false;
 		}
 
-		// Token: 0x0603AF14 RID: 241428 RVA: 0x00E0DC30 File Offset: 0x00E0BE30
+		// Token: 0x0602FE86 RID: 196230 RVA: 0x00D5E8F4 File Offset: 0x00D5CAF4
 		[NullableContext(0)]
 		public UniTask<bool> ShowFixCookView()
 		{
@@ -678,7 +677,7 @@ namespace CSharpScript.Game.Module.Cook
 			return <ShowFixCookView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AF15 RID: 241429 RVA: 0x00E0DC74 File Offset: 0x00E0BE74
+		// Token: 0x0602FE87 RID: 196231 RVA: 0x00D5E938 File Offset: 0x00D5CB38
 		public void PlayCookSuccessDisplay(Action onFinished = null)
 		{
 			this.ClearCookDisplay();
@@ -728,7 +727,7 @@ namespace CSharpScript.Game.Module.Cook
 			}, 300f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603AF16 RID: 241430 RVA: 0x00E0DD50 File Offset: 0x00E0BF50
+		// Token: 0x0602FE88 RID: 196232 RVA: 0x00D5EA14 File Offset: 0x00D5CC14
 		public void SkipCookSuccessDisplay()
 		{
 			if (!this.IsPlayingSuccessDisplay)
@@ -742,7 +741,7 @@ namespace CSharpScript.Game.Module.Cook
 			this.OnCookSuccessFinished = null;
 		}
 
-		// Token: 0x0603AF17 RID: 241431 RVA: 0x00E0DD78 File Offset: 0x00E0BF78
+		// Token: 0x0602FE89 RID: 196233 RVA: 0x00D5EA3C File Offset: 0x00D5CC3C
 		public void PlayCookFailDisplay(Action onFinished = null)
 		{
 			this.ClearCookDisplay();
@@ -788,7 +787,7 @@ namespace CSharpScript.Game.Module.Cook
 			}, 300f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603AF18 RID: 241432 RVA: 0x00E0DE4B File Offset: 0x00E0C04B
+		// Token: 0x0602FE8A RID: 196234 RVA: 0x00D5EB0F File Offset: 0x00D5CD0F
 		public void SkipCookFailDisplay()
 		{
 			if (!this.IsPlayingFailDisplay)
@@ -802,7 +801,7 @@ namespace CSharpScript.Game.Module.Cook
 			this.OnCookFailFinished = null;
 		}
 
-		// Token: 0x0603AF19 RID: 241433 RVA: 0x00E0DE70 File Offset: 0x00E0C070
+		// Token: 0x0602FE8B RID: 196235 RVA: 0x00D5EB34 File Offset: 0x00D5CD34
 		public void ClearCookDisplay()
 		{
 			LevelTagComponent currentEntityTagComponent = CookController.GetCurrentEntityTagComponent();
@@ -822,7 +821,7 @@ namespace CSharpScript.Game.Module.Cook
 			this.OnCookFailFinished = null;
 		}
 
-		// Token: 0x0603AF1A RID: 241434 RVA: 0x00E0DF0C File Offset: 0x00E0C10C
+		// Token: 0x0602FE8C RID: 196236 RVA: 0x00D5EBD0 File Offset: 0x00D5CDD0
 		private static LevelTagComponent GetCurrentEntityTagComponent()
 		{
 			int valueOrDefault = InteractionModel.Instance.CurrentInteractEntityId.GetValueOrDefault();
@@ -838,11 +837,22 @@ namespace CSharpScript.Game.Module.Cook
 			return entity.GetComponent<LevelTagComponent>();
 		}
 
-		// Token: 0x0603AF1B RID: 241435 RVA: 0x00E0DF48 File Offset: 0x00E0C148
+		// Token: 0x0602FE8D RID: 196237 RVA: 0x00D5EC0C File Offset: 0x00D5CE0C
 		[NullableContext(1)]
 		public void TryRequestChangeEntityStateByEvent(ECookMechanismState @event, UiViewBase view)
 		{
-			if (!CookDefine.CookEntityCanChangeArray.Contains(view.ViewInfo.Name))
+			bool flag = false;
+			IReadOnlyList<EUiViewName> cookEntityCanChangeArray = CookDefine.CookEntityCanChangeArray;
+			EUiViewName name = view.ViewInfo.Name;
+			for (int i = 0; i < cookEntityCanChangeArray.Count; i++)
+			{
+				if (cookEntityCanChangeArray[i] == name)
+				{
+					flag = true;
+					break;
+				}
+			}
+			if (!flag)
 			{
 				return;
 			}
@@ -866,8 +876,8 @@ namespace CSharpScript.Game.Module.Cook
 			LevelGeneralNetworks.RequestEntitySendEvent(creatureDataId, @event.ToString());
 		}
 
-		// Token: 0x17008C36 RID: 35894
-		// (get) Token: 0x0603AF1C RID: 241436 RVA: 0x00E0DFF6 File Offset: 0x00E0C1F6
+		// Token: 0x17006010 RID: 24592
+		// (get) Token: 0x0602FE8E RID: 196238 RVA: 0x00D5ECE7 File Offset: 0x00D5CEE7
 		[Nullable(1)]
 		public static CookController Instance
 		{
@@ -878,7 +888,7 @@ namespace CSharpScript.Game.Module.Cook
 			}
 		}
 
-		// Token: 0x0603AF1D RID: 241437 RVA: 0x00E0DFFD File Offset: 0x00E0C1FD
+		// Token: 0x0602FE8F RID: 196239 RVA: 0x00D5ECEE File Offset: 0x00D5CEEE
 		[NullableContext(1)]
 		public static CookController GetOrCreateInstance()
 		{
@@ -889,7 +899,7 @@ namespace CSharpScript.Game.Module.Cook
 			return CookController._Instance;
 		}
 
-		// Token: 0x0603AF1E RID: 241438 RVA: 0x00E0E011 File Offset: 0x00E0C211
+		// Token: 0x0602FE90 RID: 196240 RVA: 0x00D5ED02 File Offset: 0x00D5CF02
 		public static bool CreateInstance()
 		{
 			if (CookController._Instance != null)
@@ -900,49 +910,49 @@ namespace CSharpScript.Game.Module.Cook
 			return true;
 		}
 
-		// Token: 0x0603AF1F RID: 241439 RVA: 0x00E0E027 File Offset: 0x00E0C227
+		// Token: 0x0602FE91 RID: 196241 RVA: 0x00D5ED18 File Offset: 0x00D5CF18
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603AF20 RID: 241440 RVA: 0x00E0E029 File Offset: 0x00E0C229
+		// Token: 0x0602FE92 RID: 196242 RVA: 0x00D5ED1A File Offset: 0x00D5CF1A
 		public static void ResetStaticDefaultValue()
 		{
 			CookController._Instance = null;
 		}
 
-		// Token: 0x0603AF21 RID: 241441 RVA: 0x00E0E031 File Offset: 0x00E0C231
+		// Token: 0x0602FE93 RID: 196243 RVA: 0x00D5ED22 File Offset: 0x00D5CF22
 		static CookController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CookController.CreateStaticDefaultValue), new Action(CookController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EC26 RID: 125990
+		// Token: 0x040196E2 RID: 104162
 		public int CookCoinId;
 
-		// Token: 0x0401EC27 RID: 125991
+		// Token: 0x040196E3 RID: 104163
 		private TimerHandle CookDisplayTimerId;
 
-		// Token: 0x0401EC28 RID: 125992
+		// Token: 0x040196E4 RID: 104164
 		public bool IsPlayingSuccessDisplay;
 
-		// Token: 0x0401EC29 RID: 125993
+		// Token: 0x040196E5 RID: 104165
 		public bool IsPlayingFailDisplay;
 
-		// Token: 0x0401EC2A RID: 125994
+		// Token: 0x040196E6 RID: 104166
 		private Action OnCookSuccessFinished;
 
-		// Token: 0x0401EC2B RID: 125995
+		// Token: 0x040196E7 RID: 104167
 		private Action OnCookFailFinished;
 
-		// Token: 0x0401EC2C RID: 125996
+		// Token: 0x040196E8 RID: 104168
 		private static CookController _Instance;
 
-		// Token: 0x0200BD40 RID: 48448
+		// Token: 0x0200A748 RID: 42824
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04039138 RID: 233784
+			// Token: 0x04033B02 RID: 211714
 			[Nullable(0)]
 			public static Action<int> <0>__UpdateCookRoleItemDataList;
 		}

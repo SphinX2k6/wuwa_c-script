@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200769E RID: 30366
+	// Token: 0x02007EA9 RID: 32425
 	public enum TCustomScreen : byte
 	{
-		// Token: 0x040126CB RID: 75467
+		// Token: 0x04013714 RID: 79636
 		NONE,
-		// Token: 0x040126CC RID: 75468
+		// Token: 0x04013715 RID: 79637
 		ICustomScreenBackgroundImage,
-		// Token: 0x040126CD RID: 75469
+		// Token: 0x04013716 RID: 79638
 		ICustomScreenLoading,
-		// Token: 0x040126CE RID: 75470
+		// Token: 0x04013717 RID: 79639
 		ICustomScreenSpine
 	}
 }

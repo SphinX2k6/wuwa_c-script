@@ -7,14 +7,14 @@ using CSharpScript.Game.NewWorld.Character.Role.Component;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 {
-	// Token: 0x02007119 RID: 28953
+	// Token: 0x02006347 RID: 25415
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharacterExploreComponent : BaseExploreComponent
 	{
-		// Token: 0x17009D1F RID: 40223
-		// (get) Token: 0x06046B03 RID: 289539 RVA: 0x011CC9E5 File Offset: 0x011CABE5
-		// (set) Token: 0x06046B04 RID: 289540 RVA: 0x011CC9ED File Offset: 0x011CABED
+		// Token: 0x170074E8 RID: 29928
+		// (get) Token: 0x0603D94B RID: 252235 RVA: 0x011D56EE File Offset: 0x011D38EE
+		// (set) Token: 0x0603D94C RID: 252236 RVA: 0x011D56F6 File Offset: 0x011D38F6
 		public bool NeedChangeTargetState
 		{
 			get
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B05 RID: 289541 RVA: 0x011CCA18 File Offset: 0x011CAC18
+		// Token: 0x0603D94D RID: 252237 RVA: 0x011D5724 File Offset: 0x011D3924
 		protected override bool OnStart()
 		{
 			this.LogKey = "(角色)探索组件";
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B06 RID: 289542 RVA: 0x011CCAD8 File Offset: 0x011CACD8
+		// Token: 0x0603D94E RID: 252238 RVA: 0x011D57E4 File Offset: 0x011D39E4
 		protected override bool OnEnd()
 		{
 			base.OnEnd();
@@ -64,14 +64,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B07 RID: 289543 RVA: 0x011CCB63 File Offset: 0x011CAD63
+		// Token: 0x0603D94F RID: 252239 RVA: 0x011D586F File Offset: 0x011D3A6F
 		protected override bool CheckDisableComponent()
 		{
 			BaseActorComponent actorComponent = this.ActorComponent;
 			return actorComponent == null || !actorComponent.IsRoleAndCtrlByMe;
 		}
 
-		// Token: 0x06046B08 RID: 289544 RVA: 0x011CCB7C File Offset: 0x011CAD7C
+		// Token: 0x0603D950 RID: 252240 RVA: 0x011D5888 File Offset: 0x011D3A88
 		protected override bool OnExploreComponentEnable(string reason)
 		{
 			if (!base.OnExploreComponentEnable(reason))
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B09 RID: 289545 RVA: 0x011CCBD4 File Offset: 0x011CADD4
+		// Token: 0x0603D951 RID: 252241 RVA: 0x011D58E0 File Offset: 0x011D3AE0
 		protected override bool OnExploreComponentDisable(string reason)
 		{
 			if (!base.OnExploreComponentDisable(reason))
@@ -96,13 +96,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B0A RID: 289546 RVA: 0x011CCC25 File Offset: 0x011CAE25
+		// Token: 0x0603D952 RID: 252242 RVA: 0x011D5931 File Offset: 0x011D3B31
 		protected override void OnTick(float delta)
 		{
 			this.CheckTick();
 		}
 
-		// Token: 0x06046B0B RID: 289547 RVA: 0x011CCC2D File Offset: 0x011CAE2D
+		// Token: 0x0603D953 RID: 252243 RVA: 0x011D5939 File Offset: 0x011D3B39
 		private void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsDriver || info.PassengerEntity != base.Entity)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.OnExploreComponentDisable("主控角色进入载具");
 		}
 
-		// Token: 0x06046B0C RID: 289548 RVA: 0x011CCC6A File Offset: 0x011CAE6A
+		// Token: 0x0603D954 RID: 252244 RVA: 0x011D5976 File Offset: 0x011D3B76
 		private void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsDriver || info.PassengerEntity != base.Entity)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.OnExploreComponentEnable("主控角色离开载具");
 		}
 
-		// Token: 0x06046B0D RID: 289549 RVA: 0x011CCC98 File Offset: 0x011CAE98
+		// Token: 0x0603D955 RID: 252245 RVA: 0x011D59A4 File Offset: 0x011D3BA4
 		private void CheckTick()
 		{
 			CharacterManipulateComponent manipulateComponent = this.ManipulateComponent;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B0E RID: 289550 RVA: 0x011CCD58 File Offset: 0x011CAF58
+		// Token: 0x0603D956 RID: 252246 RVA: 0x011D5A64 File Offset: 0x011D3C64
 		private void CheckSimpleTrue()
 		{
 			if (this.HookFound && this.CurHookEntityId != this.LastHookEntityId && this.FocusTargetLegalExceptSkill)
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B0F RID: 289551 RVA: 0x011CCDB8 File Offset: 0x011CAFB8
+		// Token: 0x0603D957 RID: 252247 RVA: 0x011D5AC4 File Offset: 0x011D3CC4
 		private void CheckBothTrue()
 		{
 			if (this.Manipulating)
@@ -213,27 +213,27 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.NeedChangeTargetState = true;
 		}
 
-		// Token: 0x06046B10 RID: 289552 RVA: 0x011CCE5F File Offset: 0x011CB05F
+		// Token: 0x0603D958 RID: 252248 RVA: 0x011D5B6B File Offset: 0x011D3D6B
 		public void SendHookMovePushProxy()
 		{
 			base.SendHookMovePush();
 		}
 
-		// Token: 0x06046B11 RID: 289553 RVA: 0x011CCE67 File Offset: 0x011CB067
+		// Token: 0x0603D959 RID: 252249 RVA: 0x011D5B73 File Offset: 0x011D3D73
 		[NullableContext(2)]
 		public void SendHookTargetRequestProxy(GrapplingHookPointComponent target, [Nullable(1)] Action onFailure, string compositeSessionName = null)
 		{
 			base.SendHookTargetRequest(target, onFailure, compositeSessionName);
 		}
 
-		// Token: 0x06046B12 RID: 289554 RVA: 0x011CCE72 File Offset: 0x011CB072
+		// Token: 0x0603D95A RID: 252250 RVA: 0x011D5B7E File Offset: 0x011D3D7E
 		[NullableContext(2)]
 		public void SendHookEndRequestProxy(GrapplingHookPointComponent target, string compositeSessionName = null)
 		{
 			base.SendHookEndRequest(target, compositeSessionName);
 		}
 
-		// Token: 0x06046B13 RID: 289555 RVA: 0x011CCE7C File Offset: 0x011CB07C
+		// Token: 0x0603D95B RID: 252251 RVA: 0x011D5B88 File Offset: 0x011D3D88
 		public void SetDataFromOldRole(EntityHandle oldEntity)
 		{
 			CharacterExploreComponent component = oldEntity.Entity.GetComponent<CharacterExploreComponent>();
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B14 RID: 289556 RVA: 0x011CCF8C File Offset: 0x011CB18C
+		// Token: 0x0603D95C RID: 252252 RVA: 0x011D5C98 File Offset: 0x011D3E98
 		[NullableContext(2)]
 		protected override void OnDetectedTargetChanged(GrapplingHookPointComponent prevTarget)
 		{
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.SceneInteractComponent.OnDetectedTargetChanged();
 		}
 
-		// Token: 0x06046B15 RID: 289557 RVA: 0x011CD0D0 File Offset: 0x011CB2D0
+		// Token: 0x0603D95D RID: 252253 RVA: 0x011D5DDC File Offset: 0x011D3FDC
 		private void OnChangeRoleCompleted(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
 			if (this.IsInVehicle)
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B16 RID: 289558 RVA: 0x011CD154 File Offset: 0x011CB354
+		// Token: 0x0603D95E RID: 252254 RVA: 0x011D5E60 File Offset: 0x011D4060
 		private void OnExploreVisionSkillChange()
 		{
 			this.HookFound = false;
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B17 RID: 289559 RVA: 0x011CD240 File Offset: 0x011CB440
+		// Token: 0x0603D95F RID: 252255 RVA: 0x011D5F4C File Offset: 0x011D414C
 		private void OnHookPointFound()
 		{
 			if (base.FocusTarget == null || !this.FocusTargetLegalExceptSkill)
@@ -407,7 +407,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.HookFound = true;
 		}
 
-		// Token: 0x06046B18 RID: 289560 RVA: 0x011CD2B0 File Offset: 0x011CB4B0
+		// Token: 0x0603D960 RID: 252256 RVA: 0x011D5FBC File Offset: 0x011D41BC
 		[NullableContext(2)]
 		private void OnManipulateFound(bool find, Entity entity, bool isCastTarget)
 		{
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.CurManipulateEntityId = entity.Id;
 		}
 
-		// Token: 0x06046B19 RID: 289561 RVA: 0x011CD310 File Offset: 0x011CB510
+		// Token: 0x0603D961 RID: 252257 RVA: 0x011D601C File Offset: 0x011D421C
 		private unsafe void OnCharSkillEnd(int entityId, int skillId)
 		{
 			CharacterExploreModel exploreModel = CharacterExploreModel.Instance;
@@ -474,7 +474,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B1A RID: 289562 RVA: 0x011CD4BC File Offset: 0x011CB6BC
+		// Token: 0x0603D962 RID: 252258 RVA: 0x011D61C8 File Offset: 0x011D43C8
 		private unsafe void TryChangeSkill(CharacterExploreComponent.ESkillType type)
 		{
 			int num = 0;
@@ -512,7 +512,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B1B RID: 289563 RVA: 0x011CD5C8 File Offset: 0x011CB7C8
+		// Token: 0x0603D963 RID: 252259 RVA: 0x011D62D4 File Offset: 0x011D44D4
 		private unsafe void CheckExit(CharacterExploreComponent.ESkillType type)
 		{
 			if (this.HookFound)
@@ -568,13 +568,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.NeedChangeTargetState = true;
 		}
 
-		// Token: 0x06046B1C RID: 289564 RVA: 0x011CD753 File Offset: 0x011CB953
+		// Token: 0x0603D964 RID: 252260 RVA: 0x011D645F File Offset: 0x011D465F
 		private bool CheckHasSkill(int skillId)
 		{
 			return RouletteModel.Instance.UnlockExploreSkillDataMap.ContainsKey(skillId);
 		}
 
-		// Token: 0x06046B1D RID: 289565 RVA: 0x011CD768 File Offset: 0x011CB968
+		// Token: 0x0603D965 RID: 252261 RVA: 0x011D6474 File Offset: 0x011D4674
 		private bool IsNeedAddListen(CharacterExploreComponent.ESkillType type)
 		{
 			BaseSkillComponent skillComponent = this.SkillComponent;
@@ -586,7 +586,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return (type == CharacterExploreComponent.ESkillType.Hook && CharacterExploreComponent.HookSkillIdMap.Contains((long)skillId)) || (type == CharacterExploreComponent.ESkillType.Manipulate && CharacterExploreComponent.ManipulateSkillIdMap.Contains((long)skillId));
 		}
 
-		// Token: 0x06046B1E RID: 289566 RVA: 0x011CD7C4 File Offset: 0x011CB9C4
+		// Token: 0x0603D966 RID: 252262 RVA: 0x011D64D0 File Offset: 0x011D46D0
 		public unsafe long GetFixHookBuffIdByTarget()
 		{
 			GrapplingHookPointComponent interactingTarget = base.InteractingTarget;
@@ -606,7 +606,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return valueOrDefault;
 		}
 
-		// Token: 0x06046B1F RID: 289567 RVA: 0x011CD868 File Offset: 0x011CBA68
+		// Token: 0x0603D967 RID: 252263 RVA: 0x011D6574 File Offset: 0x011D4774
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -614,118 +614,103 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 				return false;
 			}
 			CharacterExploreComponent characterExploreComponent = (CharacterExploreComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ManipulateComponent"))
+			if (characterExploreComponent.ManipulateComponent == null)
 			{
-				if (characterExploreComponent.ManipulateComponent == null)
-				{
-					this.ManipulateComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterManipulateComponent>(this.ManipulateComponent), "ManipulateComponent"))
-				{
-					return false;
-				}
+				this.ManipulateComponent = null;
 			}
-			if (base.CanResetComponentProperty("ManipulateInteractComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ManipulateComponent), "ManipulateComponent"))
 			{
-				if (characterExploreComponent.ManipulateInteractComponent == null)
-				{
-					this.ManipulateInteractComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterManipulateInteractComponent>(this.ManipulateInteractComponent), "ManipulateInteractComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SceneInteractComponent"))
+			if (characterExploreComponent.ManipulateInteractComponent == null)
 			{
-				if (characterExploreComponent.SceneInteractComponent == null)
-				{
-					this.SceneInteractComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RoleSceneInteractComponent>(this.SceneInteractComponent), "SceneInteractComponent"))
-				{
-					return false;
-				}
+				this.ManipulateInteractComponent = null;
 			}
-			if (base.CanResetComponentProperty("Manipulating"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ManipulateInteractComponent), "ManipulateInteractComponent"))
 			{
-				this.Manipulating = characterExploreComponent.Manipulating;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ListenSkillIdMap"))
+			if (characterExploreComponent.SceneInteractComponent == null)
 			{
-				if (characterExploreComponent.ListenSkillIdMap == null)
-				{
-					this.ListenSkillIdMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<long>(this.ListenSkillIdMap), "ListenSkillIdMap"))
-				{
-					return false;
-				}
+				this.SceneInteractComponent = null;
 			}
-			if (base.CanResetComponentProperty("IsInVehicle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SceneInteractComponent), "SceneInteractComponent"))
 			{
-				this.IsInVehicle = characterExploreComponent.IsInVehicle;
+				return false;
 			}
-			if (base.CanResetComponentProperty("NeedChangeTargetStateInternal"))
+			this.Manipulating = characterExploreComponent.Manipulating;
+			if (characterExploreComponent.ListenSkillIdMap == null)
 			{
-				this.NeedChangeTargetStateInternal = characterExploreComponent.NeedChangeTargetStateInternal;
+				this.ListenSkillIdMap = null;
 			}
-			if (base.CanResetComponentProperty("NeedAddTag"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<long>(this.ListenSkillIdMap), "ListenSkillIdMap"))
 			{
-				this.NeedAddTag = characterExploreComponent.NeedAddTag;
+				return false;
 			}
-			if (base.CanResetComponentProperty("HookFound"))
+			this.IsInVehicle = characterExploreComponent.IsInVehicle;
+			this.NeedChangeTargetStateInternal = characterExploreComponent.NeedChangeTargetStateInternal;
+			this.NeedAddTag = characterExploreComponent.NeedAddTag;
+			this.HookFound = characterExploreComponent.HookFound;
+			this.ManipulateFound = characterExploreComponent.ManipulateFound;
+			this.LastManipulateEntityId = characterExploreComponent.LastManipulateEntityId;
+			this.CurManipulateEntityId = characterExploreComponent.CurManipulateEntityId;
+			this.LastHookEntityId = characterExploreComponent.LastHookEntityId;
+			this.CurHookEntityId = characterExploreComponent.CurHookEntityId;
+			if (characterExploreComponent.ManipulateActorComp == null)
 			{
-				this.HookFound = characterExploreComponent.HookFound;
+				this.ManipulateActorComp = null;
 			}
-			if (base.CanResetComponentProperty("ManipulateFound"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ManipulateActorComp), "ManipulateActorComp"))
 			{
-				this.ManipulateFound = characterExploreComponent.ManipulateFound;
-			}
-			if (base.CanResetComponentProperty("LastManipulateEntityId"))
-			{
-				this.LastManipulateEntityId = characterExploreComponent.LastManipulateEntityId;
-			}
-			if (base.CanResetComponentProperty("CurManipulateEntityId"))
-			{
-				this.CurManipulateEntityId = characterExploreComponent.CurManipulateEntityId;
-			}
-			if (base.CanResetComponentProperty("LastHookEntityId"))
-			{
-				this.LastHookEntityId = characterExploreComponent.LastHookEntityId;
-			}
-			if (base.CanResetComponentProperty("CurHookEntityId"))
-			{
-				this.CurHookEntityId = characterExploreComponent.CurHookEntityId;
-			}
-			if (base.CanResetComponentProperty("ManipulateActorComp"))
-			{
-				if (characterExploreComponent.ManipulateActorComp == null)
-				{
-					this.ManipulateActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ManipulateActorComp), "ManipulateActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040251B7 RID: 151991
+		// Token: 0x170074E9 RID: 29929
+		// (get) Token: 0x0603D968 RID: 252264 RVA: 0x011D66E3 File Offset: 0x011D48E3
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074EA RID: 29930
+		// (get) Token: 0x0603D969 RID: 252265 RVA: 0x011D66E6 File Offset: 0x011D48E6
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074EB RID: 29931
+		// (get) Token: 0x0603D96A RID: 252266 RVA: 0x011D66E9 File Offset: 0x011D48E9
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020A97 RID: 133783
 		private const int MANIPULATE_VISION_ID = 1003;
 
-		// Token: 0x040251B8 RID: 151992
+		// Token: 0x04020A98 RID: 133784
 		private const long DEFAULT_FIX_HOOK_BUFF_ID = 640003009L;
 
-		// Token: 0x040251B9 RID: 151993
+		// Token: 0x04020A99 RID: 133785
 		[StaticVariableRuleIgnore]
 		private static readonly HashSet<long> ManipulateSkillIdMap = new HashSet<long>
 		{
 			210007L
 		};
 
-		// Token: 0x040251BA RID: 151994
+		// Token: 0x04020A9A RID: 133786
 		[StaticVariableRuleIgnore]
 		private static readonly HashSet<long> HookSkillIdMap = new HashSet<long>
 		{
@@ -738,63 +723,63 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			210032L
 		};
 
-		// Token: 0x040251BB RID: 151995
+		// Token: 0x04020A9B RID: 133787
 		[Nullable(2)]
 		private CharacterManipulateComponent ManipulateComponent;
 
-		// Token: 0x040251BC RID: 151996
+		// Token: 0x04020A9C RID: 133788
 		[Nullable(2)]
 		private CharacterManipulateInteractComponent ManipulateInteractComponent;
 
-		// Token: 0x040251BD RID: 151997
+		// Token: 0x04020A9D RID: 133789
 		[Nullable(2)]
 		private RoleSceneInteractComponent SceneInteractComponent;
 
-		// Token: 0x040251BE RID: 151998
+		// Token: 0x04020A9E RID: 133790
 		private bool Manipulating;
 
-		// Token: 0x040251BF RID: 151999
+		// Token: 0x04020A9F RID: 133791
 		[Nullable(2)]
 		private HashSet<long> ListenSkillIdMap;
 
-		// Token: 0x040251C0 RID: 152000
+		// Token: 0x04020AA0 RID: 133792
 		private bool IsInVehicle;
 
-		// Token: 0x040251C1 RID: 152001
+		// Token: 0x04020AA1 RID: 133793
 		private bool NeedChangeTargetStateInternal = true;
 
-		// Token: 0x040251C2 RID: 152002
+		// Token: 0x04020AA2 RID: 133794
 		private bool NeedAddTag;
 
-		// Token: 0x040251C3 RID: 152003
+		// Token: 0x04020AA3 RID: 133795
 		private bool HookFound;
 
-		// Token: 0x040251C4 RID: 152004
+		// Token: 0x04020AA4 RID: 133796
 		private bool ManipulateFound;
 
-		// Token: 0x040251C5 RID: 152005
+		// Token: 0x04020AA5 RID: 133797
 		private int LastManipulateEntityId;
 
-		// Token: 0x040251C6 RID: 152006
+		// Token: 0x04020AA6 RID: 133798
 		private int CurManipulateEntityId;
 
-		// Token: 0x040251C7 RID: 152007
+		// Token: 0x04020AA7 RID: 133799
 		private int LastHookEntityId;
 
-		// Token: 0x040251C8 RID: 152008
+		// Token: 0x04020AA8 RID: 133800
 		private int CurHookEntityId;
 
-		// Token: 0x040251C9 RID: 152009
+		// Token: 0x04020AA9 RID: 133801
 		[Nullable(2)]
 		private BaseActorComponent ManipulateActorComp;
 
-		// Token: 0x0200CE81 RID: 52865
+		// Token: 0x0200BB49 RID: 47945
 		[NullableContext(0)]
 		private enum ESkillType
 		{
-			// Token: 0x0403E289 RID: 254601
+			// Token: 0x04039993 RID: 235923
 			Hook,
-			// Token: 0x0403E28A RID: 254602
+			// Token: 0x04039994 RID: 235924
 			Manipulate
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DAC RID: 7596
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FC3 RID: 8131
 	public class IResetPlayerFocusType
 	{
-		// Token: 0x0600A2C3 RID: 41667 RVA: 0x00172028 File Offset: 0x00170228
+		// Token: 0x0600ACCD RID: 44237 RVA: 0x00186750 File Offset: 0x00184950
 		private IResetPlayerFocusType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A2C4 RID: 41668 RVA: 0x00172060 File Offset: 0x00170260
+		// Token: 0x0600ACCE RID: 44238 RVA: 0x00186788 File Offset: 0x00184988
 		public static IResetPlayerFocusType Create([Nullable(2)] IResetPlayerFocusType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2C5 RID: 41669 RVA: 0x00172073 File Offset: 0x00170273
+		// Token: 0x0600ACCF RID: 44239 RVA: 0x0018679B File Offset: 0x0018499B
 		public static IResetPlayerFocusType CreateFromSetValue([Nullable(2)] IResetPlayerFocusType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2C6 RID: 41670 RVA: 0x00172086 File Offset: 0x00170286
+		// Token: 0x0600ACD0 RID: 44240 RVA: 0x001867AE File Offset: 0x001849AE
 		public IResetPlayerFocusType_SetValue ToSetValue()
 		{
 			return new IResetPlayerFocusType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003236 RID: 12854
-		// (get) Token: 0x0600A2C7 RID: 41671 RVA: 0x00172099 File Offset: 0x00170299
-		// (set) Token: 0x0600A2C8 RID: 41672 RVA: 0x001720C4 File Offset: 0x001702C4
+		// Token: 0x170034D0 RID: 13520
+		// (get) Token: 0x0600ACD1 RID: 44241 RVA: 0x001867C1 File Offset: 0x001849C1
+		// (set) Token: 0x0600ACD2 RID: 44242 RVA: 0x001867EC File Offset: 0x001849EC
 		public virtual EResetPlayerFocusType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061B7 RID: 25015
+		// Token: 0x0400673F RID: 26431
 		[Nullable(2)]
 		protected IResetPlayerFocusType FbInstance;
 
-		// Token: 0x040061B8 RID: 25016
+		// Token: 0x04006740 RID: 26432
 		[Nullable(2)]
 		protected IResetPlayerFocusType_SetValue PocoInterface;
 	}

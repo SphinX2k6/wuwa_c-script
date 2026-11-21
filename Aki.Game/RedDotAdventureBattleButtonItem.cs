@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02003352 RID: 13138
+// Token: 0x020028C4 RID: 10436
 public class RedDotAdventureBattleButtonItem : RedDotBase
 {
-	// Token: 0x0601C9C1 RID: 117185 RVA: 0x00804D5A File Offset: 0x00802F5A
+	// Token: 0x0601A6B9 RID: 108217 RVA: 0x0082B31E File Offset: 0x0082951E
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.BattleViewMenu);

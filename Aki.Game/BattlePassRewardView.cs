@@ -10,10 +10,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200232E RID: 9006
+// Token: 0x02001813 RID: 6163
 public class BattlePassRewardView : UiTabViewBase
 {
-	// Token: 0x06011D47 RID: 73031 RVA: 0x00464934 File Offset: 0x00462B34
+	// Token: 0x0600F1F7 RID: 61943 RVA: 0x004719FC File Offset: 0x0046FBFC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -46,7 +46,7 @@ public class BattlePassRewardView : UiTabViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011D48 RID: 73032 RVA: 0x00464AA4 File Offset: 0x00462CA4
+	// Token: 0x0600F1F8 RID: 61944 RVA: 0x00471B6C File Offset: 0x0046FD6C
 	private void OnClickPayBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.BattlePassPayView, this.ExtraParams, null);
@@ -56,7 +56,7 @@ public class BattlePassRewardView : UiTabViewBase
 		LogReportController.Instance.LogReport(onBattlePassOperationLogEvent);
 	}
 
-	// Token: 0x06011D49 RID: 73033 RVA: 0x00464AEC File Offset: 0x00462CEC
+	// Token: 0x0600F1F9 RID: 61945 RVA: 0x00471BB4 File Offset: 0x0046FDB4
 	private void OnClickWeapon()
 	{
 		WeaponPreviewViewParam param = new WeaponPreviewViewParam
@@ -68,7 +68,7 @@ public class BattlePassRewardView : UiTabViewBase
 		UiManager.Instance.OpenView(EUiViewName.WeaponPreviewView, param, null);
 	}
 
-	// Token: 0x06011D4A RID: 73034 RVA: 0x00464B40 File Offset: 0x00462D40
+	// Token: 0x0600F1FA RID: 61946 RVA: 0x00471C08 File Offset: 0x0046FE08
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BattlePassRewardView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -79,7 +79,7 @@ public class BattlePassRewardView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011D4B RID: 73035 RVA: 0x00464B84 File Offset: 0x00462D84
+	// Token: 0x0600F1FB RID: 61947 RVA: 0x00471C4C File Offset: 0x0046FE4C
 	protected override void OnStart()
 	{
 		this.StartAnime = true;
@@ -89,13 +89,13 @@ public class BattlePassRewardView : UiTabViewBase
 		this.LoopScrollView.BindLateUpdate(new Action<float>(this.RewardScrollToShowLevel));
 	}
 
-	// Token: 0x06011D4C RID: 73036 RVA: 0x00464C0F File Offset: 0x00462E0F
+	// Token: 0x0600F1FC RID: 61948 RVA: 0x00471CD7 File Offset: 0x0046FED7
 	protected override void OnBeforeShow()
 	{
 		this.RefreshScrollView();
 	}
 
-	// Token: 0x06011D4D RID: 73037 RVA: 0x00464C18 File Offset: 0x00462E18
+	// Token: 0x0600F1FD RID: 61949 RVA: 0x00471CE0 File Offset: 0x0046FEE0
 	protected override void OnAfterShow()
 	{
 		UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -106,14 +106,14 @@ public class BattlePassRewardView : UiTabViewBase
 		this.StartAnime = false;
 	}
 
-	// Token: 0x06011D4E RID: 73038 RVA: 0x00464C5B File Offset: 0x00462E5B
+	// Token: 0x0600F1FE RID: 61950 RVA: 0x00471D23 File Offset: 0x0046FF23
 	[NullableContext(1)]
 	private BattlePassRewardGridItem CreateLoopItem()
 	{
 		return new BattlePassRewardGridItem();
 	}
 
-	// Token: 0x06011D4F RID: 73039 RVA: 0x00464C64 File Offset: 0x00462E64
+	// Token: 0x0600F1FF RID: 61951 RVA: 0x00471D2C File Offset: 0x0046FF2C
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add<int?>(EEventName.GetBattlePassRewardEvent, new Action<int?>(this.OnGetRewardUpdateView));
@@ -121,7 +121,7 @@ public class BattlePassRewardView : UiTabViewBase
 		EventSystem.Instance.Add(EEventName.BattlePassFirstUnlockAnime, new Action(this.OnBattlePassFirstUnlockAnime));
 	}
 
-	// Token: 0x06011D50 RID: 73040 RVA: 0x00464CC8 File Offset: 0x00462EC8
+	// Token: 0x0600F200 RID: 61952 RVA: 0x00471D90 File Offset: 0x0046FF90
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.GetBattlePassRewardEvent, new Action<int?>(this.OnGetRewardUpdateView));
@@ -129,13 +129,13 @@ public class BattlePassRewardView : UiTabViewBase
 		EventSystem.Instance.Remove(EEventName.BattlePassFirstUnlockAnime, new Action(this.OnBattlePassFirstUnlockAnime));
 	}
 
-	// Token: 0x06011D51 RID: 73041 RVA: 0x00464D29 File Offset: 0x00462F29
+	// Token: 0x0600F201 RID: 61953 RVA: 0x00471DF1 File Offset: 0x0046FFF1
 	private void OnBattlePassFirstUnlockAnime()
 	{
 		base.GetItem(2).SetUIActive(BattlePassModel.Instance.PayType == BattlePassPayStatus.NoPaid);
 	}
 
-	// Token: 0x06011D52 RID: 73042 RVA: 0x00464D44 File Offset: 0x00462F44
+	// Token: 0x0600F202 RID: 61954 RVA: 0x00471E0C File Offset: 0x0047000C
 	private void RewardScrollToShowLevel(float _)
 	{
 		if (this.NeedLateUpdate)
@@ -146,7 +146,7 @@ public class BattlePassRewardView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06011D53 RID: 73043 RVA: 0x00464D7C File Offset: 0x00462F7C
+	// Token: 0x0600F203 RID: 61955 RVA: 0x00471E44 File Offset: 0x00470044
 	private void OnGetRewardUpdateView(int? gridIndex)
 	{
 		if (gridIndex == null)
@@ -161,7 +161,7 @@ public class BattlePassRewardView : UiTabViewBase
 		this.RefreshStageRewardState();
 	}
 
-	// Token: 0x06011D54 RID: 73044 RVA: 0x00464DC8 File Offset: 0x00462FC8
+	// Token: 0x0600F204 RID: 61956 RVA: 0x00471E90 File Offset: 0x00470090
 	private void RefreshScrollView()
 	{
 		this.NeedLateUpdate = true;
@@ -170,7 +170,7 @@ public class BattlePassRewardView : UiTabViewBase
 		this.RefreshStageRewardState();
 	}
 
-	// Token: 0x06011D55 RID: 73045 RVA: 0x00464E0C File Offset: 0x0046300C
+	// Token: 0x0600F205 RID: 61957 RVA: 0x00471ED4 File Offset: 0x004700D4
 	private void RefreshStageReward(FVector2D _)
 	{
 		int endGridIndex = this.LoopScrollView.EndGridIndex;
@@ -186,7 +186,7 @@ public class BattlePassRewardView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06011D56 RID: 73046 RVA: 0x00464E78 File Offset: 0x00463078
+	// Token: 0x0600F206 RID: 61958 RVA: 0x00471F40 File Offset: 0x00470140
 	private void RefreshStageRewardState()
 	{
 		int girdLevel = this.StageRewardView.GetGirdLevel();
@@ -196,7 +196,7 @@ public class BattlePassRewardView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06011D57 RID: 73047 RVA: 0x00464EAD File Offset: 0x004630AD
+	// Token: 0x0600F207 RID: 61959 RVA: 0x00471F75 File Offset: 0x00470175
 	protected override void OnBeforeDestroy()
 	{
 		if (this.LoopScrollView != null)
@@ -206,21 +206,21 @@ public class BattlePassRewardView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0400871D RID: 34589
+	// Token: 0x04008860 RID: 34912
 	private bool NeedLateUpdate;
 
-	// Token: 0x0400871E RID: 34590
+	// Token: 0x04008861 RID: 34913
 	private bool StartAnime;
 
-	// Token: 0x0400871F RID: 34591
+	// Token: 0x04008862 RID: 34914
 	[Nullable(2)]
 	private BattlePassBackgroundPanel BackgroundPanel;
 
-	// Token: 0x04008720 RID: 34592
+	// Token: 0x04008863 RID: 34915
 	[Nullable(2)]
 	private BattlePassRewardGridItem StageRewardView;
 
-	// Token: 0x04008721 RID: 34593
+	// Token: 0x04008864 RID: 34916
 	[Nullable(new byte[]
 	{
 		2,
@@ -229,31 +229,31 @@ public class BattlePassRewardView : UiTabViewBase
 	})]
 	private LoopScrollView<BattlePassRewardGridItem, BattlePassRewardData> LoopScrollView;
 
-	// Token: 0x020088B1 RID: 34993
+	// Token: 0x02007A3A RID: 31290
 	private enum EReportOperation
 	{
-		// Token: 0x0402C6D0 RID: 181968
+		// Token: 0x040279E4 RID: 162276
 		BuyLevelBtn,
-		// Token: 0x0402C6D1 RID: 181969
+		// Token: 0x040279E5 RID: 162277
 		BuyPassBtn
 	}
 
-	// Token: 0x020088B2 RID: 34994
+	// Token: 0x02007A3B RID: 31291
 	private enum EComponents
 	{
-		// Token: 0x0402C6D3 RID: 181971
+		// Token: 0x040279E7 RID: 162279
 		BattlePassBackground,
-		// Token: 0x0402C6D4 RID: 181972
+		// Token: 0x040279E8 RID: 162280
 		BtnPay,
-		// Token: 0x0402C6D5 RID: 181973
+		// Token: 0x040279E9 RID: 162281
 		ImgUnlock,
-		// Token: 0x0402C6D6 RID: 181974
+		// Token: 0x040279EA RID: 162282
 		RewardLoopScroll,
-		// Token: 0x0402C6D7 RID: 181975
+		// Token: 0x040279EB RID: 162283
 		StateRewardItem,
-		// Token: 0x0402C6D8 RID: 181976
+		// Token: 0x040279EC RID: 162284
 		RewardItem,
-		// Token: 0x0402C6D9 RID: 181977
+		// Token: 0x040279ED RID: 162285
 		BtnWeapon
 	}
 }

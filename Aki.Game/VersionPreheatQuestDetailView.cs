@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001574 RID: 5492
+// Token: 0x02000A2C RID: 2604
 [NullableContext(1)]
 [Nullable(0)]
 public class VersionPreheatQuestDetailView : UiViewBase
 {
-	// Token: 0x06009D0B RID: 40203 RVA: 0x0021FA04 File Offset: 0x0021DC04
+	// Token: 0x060070E9 RID: 28905 RVA: 0x002297B4 File Offset: 0x002279B4
 	public VersionPreheatQuestDetailView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06009D0C RID: 40204 RVA: 0x0021FA64 File Offset: 0x0021DC64
+	// Token: 0x060070EA RID: 28906 RVA: 0x00229814 File Offset: 0x00227A14
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 41;
@@ -121,7 +121,7 @@ public class VersionPreheatQuestDetailView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009D0D RID: 40205 RVA: 0x0022007C File Offset: 0x0021E27C
+	// Token: 0x060070EB RID: 28907 RVA: 0x00229E2C File Offset: 0x0022802C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VersionPreheatQuestDetailView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -132,7 +132,7 @@ public class VersionPreheatQuestDetailView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009D0E RID: 40206 RVA: 0x002200C0 File Offset: 0x0021E2C0
+	// Token: 0x060070EC RID: 28908 RVA: 0x00229E70 File Offset: 0x00228070
 	protected override void OnBeforeShow()
 	{
 		if (this.IsFirstIn)
@@ -148,37 +148,37 @@ public class VersionPreheatQuestDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x06009D0F RID: 40207 RVA: 0x00220109 File Offset: 0x0021E309
+	// Token: 0x060070ED RID: 28909 RVA: 0x00229EB9 File Offset: 0x002280B9
 	protected override void OnBeforeDestroy()
 	{
 		VersionPreheatModel.Instance.CurrentUsingVersionPreheatId = null;
 	}
 
-	// Token: 0x06009D10 RID: 40208 RVA: 0x0022011C File Offset: 0x0021E31C
+	// Token: 0x060070EE RID: 28910 RVA: 0x00229ECC File Offset: 0x002280CC
 	private void HandleOnClickShare()
 	{
 		VersionPreheatQuestDetailPersistentData persistentData = (this.OpenParam as VersionPreheatQuestDetailData).PersistentData;
 		ActivityVersionPreheatController.Instance.OpenShareView(persistentData.QuestSharePhotoPath, persistentData.QuestTitleTextId, persistentData.QuestContentTextId);
 	}
 
-	// Token: 0x06009D11 RID: 40209 RVA: 0x00220156 File Offset: 0x0021E356
+	// Token: 0x060070EF RID: 28911 RVA: 0x00229F06 File Offset: 0x00228106
 	private void HandleOnClickSelfChatContent()
 	{
 	}
 
-	// Token: 0x06009D12 RID: 40210 RVA: 0x00220158 File Offset: 0x0021E358
+	// Token: 0x060070F0 RID: 28912 RVA: 0x00229F08 File Offset: 0x00228108
 	private void HandleOnClickExit()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009D13 RID: 40211 RVA: 0x00220161 File Offset: 0x0021E361
+	// Token: 0x060070F1 RID: 28913 RVA: 0x00229F11 File Offset: 0x00228111
 	private CommonItemSmallItemGrid GridProxyCreateFunction()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06009D14 RID: 40212 RVA: 0x00220168 File Offset: 0x0021E368
+	// Token: 0x060070F2 RID: 28914 RVA: 0x00229F18 File Offset: 0x00228118
 	private void RefreshPersistentByData(VersionPreheatQuestDetailPersistentData data)
 	{
 		base.SetTextureByPath(data.QuestPhotoPath, base.GetTexture(15), null, null);
@@ -208,7 +208,7 @@ public class VersionPreheatQuestDetailView : UiViewBase
 		texture3.SetUIActive(data.CanShare);
 	}
 
-	// Token: 0x06009D15 RID: 40213 RVA: 0x0022024C File Offset: 0x0021E44C
+	// Token: 0x060070F3 RID: 28915 RVA: 0x00229FFC File Offset: 0x002281FC
 	private void RefreshQuestItem(int index)
 	{
 		for (int i = 0; i < this.QuestItemList.Count; i++)
@@ -221,7 +221,7 @@ public class VersionPreheatQuestDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x06009D16 RID: 40214 RVA: 0x00220290 File Offset: 0x0021E490
+	// Token: 0x060070F4 RID: 28916 RVA: 0x0022A040 File Offset: 0x00228240
 	private void RefreshVoteByData(VersionPreheatQuestDetailVoteData data)
 	{
 		if (data == null)
@@ -283,7 +283,7 @@ public class VersionPreheatQuestDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x06009D17 RID: 40215 RVA: 0x002203B4 File Offset: 0x0021E5B4
+	// Token: 0x060070F5 RID: 28917 RVA: 0x0022A164 File Offset: 0x00228364
 	private void RefreshChatByData(VersionPreheatQuestDetailChatData data)
 	{
 		if (data == null)
@@ -352,7 +352,7 @@ public class VersionPreheatQuestDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x06009D18 RID: 40216 RVA: 0x002204CC File Offset: 0x0021E6CC
+	// Token: 0x060070F6 RID: 28918 RVA: 0x0022A27C File Offset: 0x0022847C
 	private void RefreshRewardByData(VersionPreheatQuestDetailRewardData data)
 	{
 		if (data != null)
@@ -376,7 +376,7 @@ public class VersionPreheatQuestDetailView : UiViewBase
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x06009D19 RID: 40217 RVA: 0x00220550 File Offset: 0x0021E750
+	// Token: 0x060070F7 RID: 28919 RVA: 0x0022A300 File Offset: 0x00228500
 	private UniTask RefreshRewardItemsAsync(VersionPreheatQuestDetailRewardData data)
 	{
 		VersionPreheatQuestDetailView.<RefreshRewardItemsAsync>d__21 <RefreshRewardItemsAsync>d__;
@@ -388,7 +388,7 @@ public class VersionPreheatQuestDetailView : UiViewBase
 		return <RefreshRewardItemsAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009D1A RID: 40218 RVA: 0x0022059C File Offset: 0x0021E79C
+	// Token: 0x060070F8 RID: 28920 RVA: 0x0022A34C File Offset: 0x0022854C
 	private void RefreshBonus(string data)
 	{
 		if (data != null)
@@ -409,7 +409,7 @@ public class VersionPreheatQuestDetailView : UiViewBase
 		text2.SetUIActive(false);
 	}
 
-	// Token: 0x06009D1B RID: 40219 RVA: 0x002205EC File Offset: 0x0021E7EC
+	// Token: 0x060070F9 RID: 28921 RVA: 0x0022A39C File Offset: 0x0022859C
 	private void RefreshExternal(VersionPreheatQuestDetailData data)
 	{
 		this.RefreshPersistentByData(data.PersistentData);
@@ -419,7 +419,7 @@ public class VersionPreheatQuestDetailView : UiViewBase
 		this.RefreshBonus(data.BonusTextId);
 	}
 
-	// Token: 0x040044EC RID: 17644
+	// Token: 0x04004592 RID: 17810
 	private readonly List<int> QuestItemList = new List<int>
 	{
 		31,
@@ -431,146 +431,146 @@ public class VersionPreheatQuestDetailView : UiViewBase
 		37
 	};
 
-	// Token: 0x040044ED RID: 17645
+	// Token: 0x04004593 RID: 17811
 	private VersionPreheatQuestDetailRoleItem NpcRoleItem;
 
-	// Token: 0x040044EE RID: 17646
+	// Token: 0x04004594 RID: 17812
 	private VersionPreheatQuestDetailRoleItem SelfRoleItem;
 
-	// Token: 0x040044EF RID: 17647
+	// Token: 0x04004595 RID: 17813
 	private GenericLayout<CommonItemSmallItemGrid, TItem> ItemLayoutInReward;
 
-	// Token: 0x040044F0 RID: 17648
+	// Token: 0x04004596 RID: 17814
 	private VersionPreheatButton RewardConfirmButtonItem;
 
-	// Token: 0x040044F1 RID: 17649
+	// Token: 0x04004597 RID: 17815
 	private bool IsFirstIn = true;
 
-	// Token: 0x02007BA3 RID: 31651
+	// Token: 0x02006D2E RID: 27950
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04028A41 RID: 166465
+		// Token: 0x04023D7C RID: 146812
 		public const int QuestContentText = 0;
 
-		// Token: 0x04028A42 RID: 166466
+		// Token: 0x04023D7D RID: 146813
 		public const int Crest1Texture = 1;
 
-		// Token: 0x04028A43 RID: 166467
+		// Token: 0x04023D7E RID: 146814
 		public const int Crest2Texture = 2;
 
-		// Token: 0x04028A44 RID: 166468
+		// Token: 0x04023D7F RID: 146815
 		public const int QuestTitleText = 3;
 
-		// Token: 0x04028A45 RID: 166469
+		// Token: 0x04023D80 RID: 146816
 		public const int VoteRootItem = 4;
 
-		// Token: 0x04028A46 RID: 166470
+		// Token: 0x04023D81 RID: 146817
 		public const int BlueSprite = 5;
 
-		// Token: 0x04028A47 RID: 166471
+		// Token: 0x04023D82 RID: 146818
 		public const int RedSprite = 6;
 
-		// Token: 0x04028A48 RID: 166472
+		// Token: 0x04023D83 RID: 146819
 		public const int BlueAndRedSlider = 7;
 
-		// Token: 0x04028A49 RID: 166473
+		// Token: 0x04023D84 RID: 146820
 		public const int HandleSprite = 8;
 
-		// Token: 0x04028A4A RID: 166474
+		// Token: 0x04023D85 RID: 146821
 		public const int LeftPercentageText = 9;
 
-		// Token: 0x04028A4B RID: 166475
+		// Token: 0x04023D86 RID: 146822
 		public const int LeftCheckSprite = 10;
 
-		// Token: 0x04028A4C RID: 166476
+		// Token: 0x04023D87 RID: 146823
 		public const int RightPercentageText = 11;
 
-		// Token: 0x04028A4D RID: 166477
+		// Token: 0x04023D88 RID: 146824
 		public const int RightCheckSprite = 12;
 
-		// Token: 0x04028A4E RID: 166478
+		// Token: 0x04023D89 RID: 146825
 		public const int LeftTipsText = 13;
 
-		// Token: 0x04028A4F RID: 166479
+		// Token: 0x04023D8A RID: 146826
 		public const int RightTipsText = 14;
 
-		// Token: 0x04028A50 RID: 166480
+		// Token: 0x04023D8B RID: 146827
 		public const int PhotoTexture = 15;
 
-		// Token: 0x04028A51 RID: 166481
+		// Token: 0x04023D8C RID: 146828
 		public const int ShareButton = 16;
 
-		// Token: 0x04028A52 RID: 166482
+		// Token: 0x04023D8D RID: 146829
 		public const int RewardRootItem = 17;
 
-		// Token: 0x04028A53 RID: 166483
+		// Token: 0x04023D8E RID: 146830
 		public const int RewardTitleText = 18;
 
-		// Token: 0x04028A54 RID: 166484
+		// Token: 0x04023D8F RID: 146831
 		public const int RewardItemLayout = 19;
 
-		// Token: 0x04028A55 RID: 166485
+		// Token: 0x04023D90 RID: 146832
 		public const int RewardItemLayoutItem = 20;
 
-		// Token: 0x04028A56 RID: 166486
+		// Token: 0x04023D91 RID: 146833
 		public const int ChatRootItem = 21;
 
-		// Token: 0x04028A57 RID: 166487
+		// Token: 0x04023D92 RID: 146834
 		public const int NpcRoleItem = 22;
 
-		// Token: 0x04028A58 RID: 166488
+		// Token: 0x04023D93 RID: 146835
 		public const int NpcChatContentText = 23;
 
-		// Token: 0x04028A59 RID: 166489
+		// Token: 0x04023D94 RID: 146836
 		public const int SelfChatRootItem = 24;
 
-		// Token: 0x04028A5A RID: 166490
+		// Token: 0x04023D95 RID: 146837
 		public const int SelfRoleItem = 25;
 
-		// Token: 0x04028A5B RID: 166491
+		// Token: 0x04023D96 RID: 146838
 		public const int SelfChatContentRootItem = 26;
 
-		// Token: 0x04028A5C RID: 166492
+		// Token: 0x04023D97 RID: 146839
 		public const int SelfChatContentButton = 27;
 
-		// Token: 0x04028A5D RID: 166493
+		// Token: 0x04023D98 RID: 146840
 		public const int SelfChatContentText = 28;
 
-		// Token: 0x04028A5E RID: 166494
+		// Token: 0x04023D99 RID: 146841
 		public const int SelfChatRedDotItem = 29;
 
-		// Token: 0x04028A5F RID: 166495
+		// Token: 0x04023D9A RID: 146842
 		public const int BonusTipsText = 30;
 
-		// Token: 0x04028A60 RID: 166496
+		// Token: 0x04023D9B RID: 146843
 		public const int Quest1RootItem = 31;
 
-		// Token: 0x04028A61 RID: 166497
+		// Token: 0x04023D9C RID: 146844
 		public const int Quest2RootItem = 32;
 
-		// Token: 0x04028A62 RID: 166498
+		// Token: 0x04023D9D RID: 146845
 		public const int Quest3RootItem = 33;
 
-		// Token: 0x04028A63 RID: 166499
+		// Token: 0x04023D9E RID: 146846
 		public const int Quest4RootItem = 34;
 
-		// Token: 0x04028A64 RID: 166500
+		// Token: 0x04023D9F RID: 146847
 		public const int Quest5RootItem = 35;
 
-		// Token: 0x04028A65 RID: 166501
+		// Token: 0x04023DA0 RID: 146848
 		public const int Quest6RootItem = 36;
 
-		// Token: 0x04028A66 RID: 166502
+		// Token: 0x04023DA1 RID: 146849
 		public const int Quest7RootItem = 37;
 
-		// Token: 0x04028A67 RID: 166503
+		// Token: 0x04023DA2 RID: 146850
 		public const int ExitButton = 38;
 
-		// Token: 0x04028A68 RID: 166504
+		// Token: 0x04023DA3 RID: 146851
 		public const int ShareBgTexture = 39;
 
-		// Token: 0x04028A69 RID: 166505
+		// Token: 0x04023DA4 RID: 146852
 		public const int RewardConfirmButtonItem = 40;
 	}
 }

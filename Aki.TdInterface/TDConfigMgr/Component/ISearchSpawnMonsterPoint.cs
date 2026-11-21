@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006BA RID: 1722
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200075B RID: 1883
 	public class ISearchSpawnMonsterPoint : IRangeConstraint
 	{
-		// Token: 0x06002500 RID: 9472 RVA: 0x00063EA4 File Offset: 0x000620A4
+		// Token: 0x06002820 RID: 10272 RVA: 0x0006AF14 File Offset: 0x00069114
 		private ISearchSpawnMonsterPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002501 RID: 9473 RVA: 0x00063EDC File Offset: 0x000620DC
+		// Token: 0x06002821 RID: 10273 RVA: 0x0006AF4C File Offset: 0x0006914C
 		public static ISearchSpawnMonsterPoint Create([Nullable(2)] ISearchSpawnMonsterPoint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002502 RID: 9474 RVA: 0x00063EEF File Offset: 0x000620EF
+		// Token: 0x06002822 RID: 10274 RVA: 0x0006AF5F File Offset: 0x0006915F
 		public static ISearchSpawnMonsterPoint CreateFromSetValue([Nullable(2)] ISearchSpawnMonsterPoint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002503 RID: 9475 RVA: 0x00063F02 File Offset: 0x00062102
+		// Token: 0x06002823 RID: 10275 RVA: 0x0006AF72 File Offset: 0x00069172
 		public new ISearchSpawnMonsterPoint_SetValue ToSetValue()
 		{
 			return new ISearchSpawnMonsterPoint_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009C8 RID: 2504
-		// (get) Token: 0x06002504 RID: 9476 RVA: 0x00063F2D File Offset: 0x0006212D
-		// (set) Token: 0x06002505 RID: 9477 RVA: 0x00063F58 File Offset: 0x00062158
+		// Token: 0x17000A86 RID: 2694
+		// (get) Token: 0x06002824 RID: 10276 RVA: 0x0006AF9D File Offset: 0x0006919D
+		// (set) Token: 0x06002825 RID: 10277 RVA: 0x0006AFC8 File Offset: 0x000691C8
 		public override ERangeConstraint Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009C9 RID: 2505
-		// (get) Token: 0x06002506 RID: 9478 RVA: 0x00063F66 File Offset: 0x00062166
-		// (set) Token: 0x06002507 RID: 9479 RVA: 0x00063F91 File Offset: 0x00062191
+		// Token: 0x17000A87 RID: 2695
+		// (get) Token: 0x06002826 RID: 10278 RVA: 0x0006AFD6 File Offset: 0x000691D6
+		// (set) Token: 0x06002827 RID: 10279 RVA: 0x0006B001 File Offset: 0x00069201
 		public virtual int Radius
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009CA RID: 2506
-		// (get) Token: 0x06002508 RID: 9480 RVA: 0x00063FA0 File Offset: 0x000621A0
-		// (set) Token: 0x06002509 RID: 9481 RVA: 0x00063FDA File Offset: 0x000621DA
+		// Token: 0x17000A88 RID: 2696
+		// (get) Token: 0x06002828 RID: 10280 RVA: 0x0006B010 File Offset: 0x00069210
+		// (set) Token: 0x06002829 RID: 10281 RVA: 0x0006B04A File Offset: 0x0006924A
 		public virtual int? TagId
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001954 RID: 6484
+		// Token: 0x04001B53 RID: 6995
 		[Nullable(2)]
 		protected new ISearchSpawnMonsterPoint FbInstance;
 
-		// Token: 0x04001955 RID: 6485
+		// Token: 0x04001B54 RID: 6996
 		[Nullable(2)]
 		protected new ISearchSpawnMonsterPoint_SetValue PocoInterface;
 	}

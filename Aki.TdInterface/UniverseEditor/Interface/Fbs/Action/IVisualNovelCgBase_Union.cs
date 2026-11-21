@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007568 RID: 30056
+	// Token: 0x02007D5E RID: 32094
 	public enum IVisualNovelCgBase_Union : byte
 	{
-		// Token: 0x04012464 RID: 74852
+		// Token: 0x04013495 RID: 78997
 		NONE,
-		// Token: 0x04012465 RID: 74853
+		// Token: 0x04013496 RID: 78998
 		IVisualNovelCgBase,
-		// Token: 0x04012466 RID: 74854
-		IVisualNovelCgLoadSpine,
-		// Token: 0x04012467 RID: 74855
+		// Token: 0x04013497 RID: 78999
+		IVisualNovelCgLoadPrefab,
+		// Token: 0x04013498 RID: 79000
 		IVisualNovelCgLoadImage,
-		// Token: 0x04012468 RID: 74856
+		// Token: 0x04013499 RID: 79001
 		IVisualNovelCgClean
 	}
 }

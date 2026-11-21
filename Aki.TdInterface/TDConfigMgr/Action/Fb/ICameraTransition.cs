@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002908 RID: 10504
+	// Token: 0x02002BE4 RID: 11236
 	public class ICameraTransition : ILevelSequenceTransitionType
 	{
-		// Token: 0x0600E92E RID: 59694 RVA: 0x002231EA File Offset: 0x002213EA
-		[NullableContext(1)]
+		// Token: 0x0600F77F RID: 63359 RVA: 0x0024050A File Offset: 0x0023E70A
 		public static ICameraTransition Create(ICameraTransition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048E0 RID: 18656
-		// (get) Token: 0x0600E92F RID: 59695 RVA: 0x00223209 File Offset: 0x00221409
+		// Token: 0x17004C65 RID: 19557
+		// (get) Token: 0x0600F780 RID: 63360 RVA: 0x00240529 File Offset: 0x0023E729
 		public override ELevelSequenceTransition Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048E1 RID: 18657
-		// (get) Token: 0x0600E930 RID: 59696 RVA: 0x00223218 File Offset: 0x00221418
+		// Token: 0x17004C66 RID: 19558
+		// (get) Token: 0x0600F781 RID: 63361 RVA: 0x00240538 File Offset: 0x0023E738
 		public override float? Duration
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080BA RID: 32954
+		// Token: 0x04008788 RID: 34696
 		private ICameraTransition Instance;
 	}
 }

@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200277B RID: 10107
+	// Token: 0x02002A4D RID: 10829
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IEndState
 	{
-		// Token: 0x0600E109 RID: 57609 RVA: 0x00213F95 File Offset: 0x00212195
-		[NullableContext(1)]
+		// Token: 0x0600EF27 RID: 61223 RVA: 0x00230D29 File Offset: 0x0022EF29
+		[NullableContext(0)]
 		public static IEndState Create(IEndState? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043D5 RID: 17365
-		// (get) Token: 0x0600E10A RID: 57610 RVA: 0x00213FB4 File Offset: 0x002121B4
+		// Token: 0x1700473B RID: 18235
+		// (get) Token: 0x0600EF28 RID: 61224 RVA: 0x00230D48 File Offset: 0x0022EF48
 		public virtual List<int> StayFlowMontageActors
 		{
 			get
@@ -49,13 +49,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CA1 RID: 31905
+		// Token: 0x04008357 RID: 33623
 		private IEndState Instance;
 
-		// Token: 0x04007CA2 RID: 31906
+		// Token: 0x04008358 RID: 33624
 		private List<int> _StayFlowMontageActorsCache;
 
-		// Token: 0x04007CA3 RID: 31907
+		// Token: 0x04008359 RID: 33625
 		private bool _StayFlowMontageActorsInited;
 	}
 }

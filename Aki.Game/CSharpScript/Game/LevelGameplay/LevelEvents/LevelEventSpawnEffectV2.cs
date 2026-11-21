@@ -4,15 +4,15 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B94 RID: 27540
+	// Token: 0x02005D0C RID: 23820
 	public class LevelEventSpawnEffectV2 : LevelEventBase
 	{
-		// Token: 0x060442C6 RID: 279238 RVA: 0x010CC7EC File Offset: 0x010CA9EC
+		// Token: 0x0603A419 RID: 238617 RVA: 0x01076577 File Offset: 0x01074777
 		public LevelEventSpawnEffectV2(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060442C7 RID: 279239 RVA: 0x010CC7F8 File Offset: 0x010CA9F8
+		// Token: 0x0603A41A RID: 238618 RVA: 0x01076580 File Offset: 0x01074780
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

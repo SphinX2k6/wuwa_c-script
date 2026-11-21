@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 {
-	// Token: 0x02004831 RID: 18481
+	// Token: 0x02003762 RID: 14178
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MediumItemListPanel : UiPanelBase
 	{
-		// Token: 0x060305F5 RID: 198133 RVA: 0x00B3AF18 File Offset: 0x00B39118
+		// Token: 0x06024DC5 RID: 150981 RVA: 0x00A6AFE4 File Offset: 0x00A691E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060305F6 RID: 198134 RVA: 0x00B3AFA2 File Offset: 0x00B391A2
+		// Token: 0x06024DC6 RID: 150982 RVA: 0x00A6B06E File Offset: 0x00A6926E
 		protected override void OnStart()
 		{
 			this.RewardLayout = new GenericLayout<MediumItemListItem, TItem>(base.GetGridLayout(1), new Func<MediumItemListItem>(this.CreateGridItem), null, false, true);
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			text.SetText("", true);
 		}
 
-		// Token: 0x060305F7 RID: 198135 RVA: 0x00B3AFDC File Offset: 0x00B391DC
+		// Token: 0x06024DC7 RID: 150983 RVA: 0x00A6B0A8 File Offset: 0x00A692A8
 		private MediumItemListItem CreateGridItem()
 		{
 			return new MediumItemListItem
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			};
 		}
 
-		// Token: 0x060305F8 RID: 198136 RVA: 0x00B3AFF0 File Offset: 0x00B391F0
+		// Token: 0x06024DC8 RID: 150984 RVA: 0x00A6B0BC File Offset: 0x00A692BC
 		public void Refresh(List<TItem> data)
 		{
 			GenericLayout<MediumItemListItem, TItem> rewardLayout = this.RewardLayout;
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			rewardLayout.RefreshByDataAsync(data, false, null).Forget();
 		}
 
-		// Token: 0x060305F9 RID: 198137 RVA: 0x00B3B01D File Offset: 0x00B3921D
+		// Token: 0x06024DC9 RID: 150985 RVA: 0x00A6B0E9 File Offset: 0x00A692E9
 		public void SetTitleNewTxt(string newTxtId)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), newTxtId, Array.Empty<object>());
 		}
 
-		// Token: 0x0401A037 RID: 106551
+		// Token: 0x040146EB RID: 83691
 		[Nullable(new byte[]
 		{
 			2,
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 		})]
 		private GenericLayout<MediumItemListItem, TItem> RewardLayout;
 
-		// Token: 0x0401A038 RID: 106552
+		// Token: 0x040146EC RID: 83692
 		[Nullable(new byte[]
 		{
 			2,
@@ -84,17 +84,17 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 		})]
 		public Func<int, string> GetBottomTextCallback;
 
-		// Token: 0x0200AB0D RID: 43789
+		// Token: 0x020094BC RID: 38076
 		[NullableContext(0)]
 		public static class ERewardItemBarChildCom
 		{
-			// Token: 0x04033FCB RID: 212939
+			// Token: 0x0402E74B RID: 190283
 			public const int UiTextInstanceTitle = 0;
 
-			// Token: 0x04033FCC RID: 212940
+			// Token: 0x0402E74C RID: 190284
 			public const int UiItemContainer = 1;
 
-			// Token: 0x04033FCD RID: 212941
+			// Token: 0x0402E74D RID: 190285
 			public const int UiItemItem = 2;
 		}
 	}

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CE3 RID: 7395
+	// Token: 0x02001EF2 RID: 7922
 	public class IPhoneRecordActionConfig_SetValue
 	{
-		// Token: 0x04005FE1 RID: 24545
+		// Token: 0x04006554 RID: 25940
 		public int? PhoneMessageId;
 
-		// Token: 0x04005FE2 RID: 24546
+		// Token: 0x04006555 RID: 25941
 		public int? DialogProgress;
 	}
 }

@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x0200330D RID: 13069
+// Token: 0x0200287F RID: 10367
 public enum EAssetType
 {
-	// Token: 0x0400E21C RID: 57884
+	// Token: 0x0400E6CD RID: 59085
 	ActorClass,
-	// Token: 0x0400E21D RID: 57885
+	// Token: 0x0400E6CE RID: 59086
 	Animation,
-	// Token: 0x0400E21E RID: 57886
+	// Token: 0x0400E6CF RID: 59087
 	Effect,
-	// Token: 0x0400E21F RID: 57887
+	// Token: 0x0400E6D0 RID: 59088
 	Audio,
-	// Token: 0x0400E220 RID: 57888
+	// Token: 0x0400E6D1 RID: 59089
 	Mesh,
-	// Token: 0x0400E221 RID: 57889
+	// Token: 0x0400E6D2 RID: 59090
 	Material,
-	// Token: 0x0400E222 RID: 57890
+	// Token: 0x0400E6D3 RID: 59091
 	AnimationBlueprint,
-	// Token: 0x0400E223 RID: 57891
+	// Token: 0x0400E6D4 RID: 59092
 	Other
 }

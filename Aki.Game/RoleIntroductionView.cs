@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014CF RID: 5327
+// Token: 0x02000987 RID: 2439
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleIntroductionView : UiViewBase
 {
-	// Token: 0x06009749 RID: 38729 RVA: 0x0020B003 File Offset: 0x00209203
+	// Token: 0x06006B23 RID: 27427 RVA: 0x00214D43 File Offset: 0x00212F43
 	[NullableContext(1)]
 	public RoleIntroductionView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600974A RID: 38730 RVA: 0x0020B00C File Offset: 0x0020920C
+	// Token: 0x06006B24 RID: 27428 RVA: 0x00214D4C File Offset: 0x00212F4C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -59,7 +59,7 @@ public class RoleIntroductionView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600974B RID: 38731 RVA: 0x0020B1E0 File Offset: 0x002093E0
+	// Token: 0x06006B25 RID: 27429 RVA: 0x00214F20 File Offset: 0x00213120
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleIntroductionView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -70,7 +70,7 @@ public class RoleIntroductionView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600974C RID: 38732 RVA: 0x0020B224 File Offset: 0x00209424
+	// Token: 0x06006B26 RID: 27430 RVA: 0x00214F64 File Offset: 0x00213164
 	public UniTask RefreshAsync()
 	{
 		RoleIntroductionView.<RefreshAsync>d__11 <RefreshAsync>d__;
@@ -81,7 +81,7 @@ public class RoleIntroductionView : UiViewBase
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600974D RID: 38733 RVA: 0x0020B268 File Offset: 0x00209468
+	// Token: 0x06006B27 RID: 27431 RVA: 0x00214FA8 File Offset: 0x002131A8
 	private void RefreshBtn()
 	{
 		string textId = (this.CurShowMode == 0) ? "RoleTrialButton2" : "RoleTrialButton1";
@@ -92,7 +92,7 @@ public class RoleIntroductionView : UiViewBase
 		this.RoleSkillInputPanel.SetTrickActive(this.CurShowMode == 1);
 	}
 
-	// Token: 0x0600974E RID: 38734 RVA: 0x0020B2EC File Offset: 0x002094EC
+	// Token: 0x06006B28 RID: 27432 RVA: 0x0021502C File Offset: 0x0021322C
 	private void RefreshTips()
 	{
 		string text = "";
@@ -118,19 +118,19 @@ public class RoleIntroductionView : UiViewBase
 		base.GetItem(7).SetUIActive(false);
 	}
 
-	// Token: 0x0600974F RID: 38735 RVA: 0x0020B3B8 File Offset: 0x002095B8
+	// Token: 0x06006B29 RID: 27433 RVA: 0x002150F8 File Offset: 0x002132F8
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Emit(EEventName.RoleIntroductionViewHide);
 	}
 
-	// Token: 0x06009750 RID: 38736 RVA: 0x0020B3CA File Offset: 0x002095CA
+	// Token: 0x06006B2A RID: 27434 RVA: 0x0021510A File Offset: 0x0021330A
 	protected override void OnBeforeDestroy()
 	{
 		this.PushCloseViewDone();
 	}
 
-	// Token: 0x06009751 RID: 38737 RVA: 0x0020B3D2 File Offset: 0x002095D2
+	// Token: 0x06006B2B RID: 27435 RVA: 0x00215112 File Offset: 0x00213312
 	private void PushCloseViewDone()
 	{
 		if (RoleSkinTrialController.CheckIfInRoleSkinTrialInstance())
@@ -141,13 +141,13 @@ public class RoleIntroductionView : UiViewBase
 		ActivityRoleTrialController.Instance.PushRoleIntroductionViewDone();
 	}
 
-	// Token: 0x06009752 RID: 38738 RVA: 0x0020B3EB File Offset: 0x002095EB
+	// Token: 0x06006B2C RID: 27436 RVA: 0x0021512B File Offset: 0x0021332B
 	private void OnBtnCloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009753 RID: 38739 RVA: 0x0020B3F4 File Offset: 0x002095F4
+	// Token: 0x06006B2D RID: 27437 RVA: 0x00215134 File Offset: 0x00213334
 	private void OnSwitchClick()
 	{
 		if (this.CurShowMode == 0)
@@ -161,76 +161,76 @@ public class RoleIntroductionView : UiViewBase
 		this.RefreshBtn();
 	}
 
-	// Token: 0x06009754 RID: 38740 RVA: 0x0020B414 File Offset: 0x00209614
+	// Token: 0x06006B2E RID: 27438 RVA: 0x00215154 File Offset: 0x00213354
 	private void OnTrialClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x040042A4 RID: 17060
+	// Token: 0x04004349 RID: 17225
 	private int RoleId;
 
-	// Token: 0x040042A5 RID: 17061
+	// Token: 0x0400434A RID: 17226
 	private RoleSkillInputPanel RoleSkillInputPanel;
 
-	// Token: 0x040042A6 RID: 17062
+	// Token: 0x0400434B RID: 17227
 	private SimpleGenericLayout StarLayout;
 
-	// Token: 0x040042A7 RID: 17063
+	// Token: 0x0400434C RID: 17228
 	private ButtonItem SwitchBtnItem;
 
-	// Token: 0x040042A8 RID: 17064
+	// Token: 0x0400434D RID: 17229
 	private ButtonItem TrialBtnItem;
 
-	// Token: 0x040042A9 RID: 17065
+	// Token: 0x0400434E RID: 17230
 	private int CurShowMode;
 
-	// Token: 0x02007B04 RID: 31492
+	// Token: 0x02006C90 RID: 27792
 	[NullableContext(0)]
 	private static class EIntroductionShowMode
 	{
-		// Token: 0x0402875A RID: 165722
+		// Token: 0x04023A98 RID: 146072
 		public const int Feature = 0;
 
-		// Token: 0x0402875B RID: 165723
+		// Token: 0x04023A99 RID: 146073
 		public const int Trick = 1;
 	}
 
-	// Token: 0x02007B05 RID: 31493
+	// Token: 0x02006C91 RID: 27793
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402875C RID: 165724
+		// Token: 0x04023A9A RID: 146074
 		public const int BtnBack = 0;
 
-		// Token: 0x0402875D RID: 165725
+		// Token: 0x04023A9B RID: 146075
 		public const int TexRole = 1;
 
-		// Token: 0x0402875E RID: 165726
+		// Token: 0x04023A9C RID: 146076
 		public const int StarLayout = 2;
 
-		// Token: 0x0402875F RID: 165727
+		// Token: 0x04023A9D RID: 146077
 		public const int RoleName = 3;
 
-		// Token: 0x04028760 RID: 165728
+		// Token: 0x04023A9E RID: 146078
 		public const int ElementIcon = 4;
 
-		// Token: 0x04028761 RID: 165729
+		// Token: 0x04023A9F RID: 146079
 		public const int ElementText = 5;
 
-		// Token: 0x04028762 RID: 165730
+		// Token: 0x04023AA0 RID: 146080
 		public const int TextTips = 6;
 
-		// Token: 0x04028763 RID: 165731
+		// Token: 0x04023AA1 RID: 146081
 		public const int PanelTips = 7;
 
-		// Token: 0x04028764 RID: 165732
+		// Token: 0x04023AA2 RID: 146082
 		public const int RoleSkillInputPanel = 8;
 
-		// Token: 0x04028765 RID: 165733
+		// Token: 0x04023AA3 RID: 146083
 		public const int BtnSwitchPage = 9;
 
-		// Token: 0x04028766 RID: 165734
+		// Token: 0x04023AA4 RID: 146084
 		public const int BtnTrial = 10;
 	}
 }

@@ -12,10 +12,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CEF RID: 23791
+	// Token: 0x02004CD1 RID: 19665
 	public class BattleSkillRouletteItem : UiPanelBase
 	{
-		// Token: 0x0603C3EF RID: 246767 RVA: 0x00E6C07C File Offset: 0x00E6A27C
+		// Token: 0x06031345 RID: 201541 RVA: 0x00DBC630 File Offset: 0x00DBA830
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C3F0 RID: 246768 RVA: 0x00E6C0C4 File Offset: 0x00E6A2C4
+		// Token: 0x06031346 RID: 201542 RVA: 0x00DBC678 File Offset: 0x00DBA878
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleSkillRouletteItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -38,27 +38,27 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C3F1 RID: 246769 RVA: 0x00E6C107 File Offset: 0x00E6A307
+		// Token: 0x06031347 RID: 201543 RVA: 0x00DBC6BB File Offset: 0x00DBA8BB
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiRouletteKeyChanged, new Action(this.OnRouletteKeyChanged));
 			EventSystem.Instance.Remove(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
 		}
 
-		// Token: 0x0603C3F2 RID: 246770 RVA: 0x00E6C141 File Offset: 0x00E6A341
+		// Token: 0x06031348 RID: 201544 RVA: 0x00DBC6F5 File Offset: 0x00DBA8F5
 		private void OnRouletteKeyChanged()
 		{
 			this.RefreshKeyItem();
 			this.RefreshVisible();
 		}
 
-		// Token: 0x0603C3F3 RID: 246771 RVA: 0x00E6C14F File Offset: 0x00E6A34F
+		// Token: 0x06031349 RID: 201545 RVA: 0x00DBC703 File Offset: 0x00DBA903
 		private void InputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			this.RefreshKeyItem();
 		}
 
-		// Token: 0x0603C3F4 RID: 246772 RVA: 0x00E6C158 File Offset: 0x00E6A358
+		// Token: 0x0603134A RID: 201546 RVA: 0x00DBC70C File Offset: 0x00DBA90C
 		public void RefreshKeyItem()
 		{
 			SkillButtonUiGamepadDataBase gamepadData = SkillButtonUiModel.Instance.GamepadData;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C3F5 RID: 246773 RVA: 0x00E6C1E8 File Offset: 0x00E6A3E8
+		// Token: 0x0603134B RID: 201547 RVA: 0x00DBC79C File Offset: 0x00DBA99C
 		public void RefreshVisible()
 		{
 			SkillButtonUiGamepadDataBase gamepadData = SkillButtonUiModel.Instance.GamepadData;
@@ -98,14 +98,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetActive(active);
 		}
 
-		// Token: 0x0401F654 RID: 128596
+		// Token: 0x0401A10D RID: 106765
 		[Nullable(2)]
 		private InputMultiKeyItem KeyItem;
 
-		// Token: 0x0200BF4D RID: 48973
+		// Token: 0x0200A953 RID: 43347
 		private enum EChildType
 		{
-			// Token: 0x04039B2C RID: 236332
+			// Token: 0x040344EE RID: 214254
 			KeyItem
 		}
 	}

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C09 RID: 3081
+	// Token: 0x02000CD9 RID: 3289
 	public class IColorStrategyOfSplineEffectType
 	{
-		// Token: 0x060046BD RID: 18109 RVA: 0x000B2892 File Offset: 0x000B0A92
-		[NullableContext(1)]
+		// Token: 0x06004B20 RID: 19232 RVA: 0x000BCA5E File Offset: 0x000BAC5E
 		public static IColorStrategyOfSplineEffectType Create(IColorStrategyOfSplineEffectType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001468 RID: 5224
-		// (get) Token: 0x060046BE RID: 18110 RVA: 0x000B28B1 File Offset: 0x000B0AB1
+		// Token: 0x17001569 RID: 5481
+		// (get) Token: 0x06004B21 RID: 19233 RVA: 0x000BCA7D File Offset: 0x000BAC7D
 		public virtual EColorChangeStrategyOfSplineEffect Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002838 RID: 10296
+		// Token: 0x04002A84 RID: 10884
 		private IColorStrategyOfSplineEffectType Instance;
 	}
 }

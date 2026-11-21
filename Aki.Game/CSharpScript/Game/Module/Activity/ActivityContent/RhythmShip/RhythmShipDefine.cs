@@ -5,18 +5,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 {
-	// Token: 0x02006209 RID: 25097
+	// Token: 0x02005187 RID: 20871
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RhythmShipDefine : IStaticVariableResetter
 	{
-		// Token: 0x0603F504 RID: 259332 RVA: 0x00F4CC15 File Offset: 0x00F4AE15
+		// Token: 0x060341C5 RID: 213445 RVA: 0x00E93B6D File Offset: 0x00E91D6D
 		static RhythmShipDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RhythmShipDefine.CreateStaticDefaultValue), new Action(RhythmShipDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603F505 RID: 259333 RVA: 0x00F4CC34 File Offset: 0x00F4AE34
+		// Token: 0x060341C6 RID: 213446 RVA: 0x00E93B8C File Offset: 0x00E91D8C
 		public static void CreateStaticDefaultValue()
 		{
 			Dictionary<int, string> dictionary = new Dictionary<int, string>();
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			RhythmShipDefine.rhythmShipRankNiaLightColor = dictionary5;
 		}
 
-		// Token: 0x0603F506 RID: 259334 RVA: 0x00F4CDA7 File Offset: 0x00F4AFA7
+		// Token: 0x060341C7 RID: 213447 RVA: 0x00E93CFF File Offset: 0x00E91EFF
 		public static void ResetStaticDefaultValue()
 		{
 			RhythmShipDefine.rhythmShipLevelRatingBgTexture = null;
@@ -65,40 +65,40 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			RhythmShipDefine.rhythmShipRankNiaLightColor = null;
 		}
 
-		// Token: 0x04021063 RID: 135267
+		// Token: 0x0401B992 RID: 113042
 		public const int RHYTHMSHIP_CAILBRATION_MOVE_TIME = 3000;
 
-		// Token: 0x04021064 RID: 135268
+		// Token: 0x0401B993 RID: 113043
 		public const int RHYTHMSHIP_RHYTHM_RANK_REQUEST_TIME = 1800;
 
-		// Token: 0x04021065 RID: 135269
+		// Token: 0x0401B994 RID: 113044
 		public const int RHYTHMSHIP_CAILBRATION_MAX_VALUE = 150;
 
-		// Token: 0x04021066 RID: 135270
+		// Token: 0x0401B995 RID: 113045
 		public const int RHYTHMSHIP_CAILBRATION_LONG_CLICK_CHANGE_TIME = 100;
 
-		// Token: 0x04021067 RID: 135271
+		// Token: 0x0401B996 RID: 113046
 		public const int RHYTHMSHIP_CAILBRATION_VIEW_MOVE_CIRCLE_MAX = 1000;
 
-		// Token: 0x04021068 RID: 135272
+		// Token: 0x0401B997 RID: 113047
 		public const int RHYTHMSHIP_CAILBRATION_STOP_CIRCLE_SHOW_TIME = 1000;
 
-		// Token: 0x04021069 RID: 135273
+		// Token: 0x0401B998 RID: 113048
 		public static Dictionary<int, string> rhythmShipLevelRatingBgTexture;
 
-		// Token: 0x0402106A RID: 135274
+		// Token: 0x0401B999 RID: 113049
 		public static Dictionary<int, string> rhythmShipLevelRatingSettlementTexture;
 
-		// Token: 0x0402106B RID: 135275
+		// Token: 0x0401B99A RID: 113050
 		public static Dictionary<int, string> rhythmShipDifficultyText;
 
-		// Token: 0x0402106C RID: 135276
+		// Token: 0x0401B99B RID: 113051
 		public static Dictionary<int, string> rhythmShipSettlementText;
 
-		// Token: 0x0402106D RID: 135277
+		// Token: 0x0401B99C RID: 113052
 		public static Dictionary<int, FColor> rhythmShipRankNiaLightColor;
 
-		// Token: 0x0402106E RID: 135278
+		// Token: 0x0401B99D RID: 113053
 		public const int RHYTHMSHIP_MAX_DIFFICUTY_STAR = 9;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000772 RID: 1906
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000813 RID: 2067
 	public class ITimedStrikeDevice : IProgressBarControl
 	{
-		// Token: 0x0600293F RID: 10559 RVA: 0x0006CECC File Offset: 0x0006B0CC
+		// Token: 0x06002C63 RID: 11363 RVA: 0x00074074 File Offset: 0x00072274
 		private ITimedStrikeDevice_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002940 RID: 10560 RVA: 0x0006CF04 File Offset: 0x0006B104
+		// Token: 0x06002C64 RID: 11364 RVA: 0x000740AC File Offset: 0x000722AC
 		public static ITimedStrikeDevice Create([Nullable(2)] ITimedStrikeDevice instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002941 RID: 10561 RVA: 0x0006CF17 File Offset: 0x0006B117
+		// Token: 0x06002C65 RID: 11365 RVA: 0x000740BF File Offset: 0x000722BF
 		public static ITimedStrikeDevice CreateFromSetValue([Nullable(2)] ITimedStrikeDevice_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002942 RID: 10562 RVA: 0x0006CF2C File Offset: 0x0006B12C
+		// Token: 0x06002C66 RID: 11366 RVA: 0x000740D4 File Offset: 0x000722D4
 		public new ITimedStrikeDevice_SetValue ToSetValue()
 		{
 			return new ITimedStrikeDevice_SetValue
@@ -69,9 +67,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AD5 RID: 2773
-		// (get) Token: 0x06002943 RID: 10563 RVA: 0x0006CFC2 File Offset: 0x0006B1C2
-		// (set) Token: 0x06002944 RID: 10564 RVA: 0x0006CFED File Offset: 0x0006B1ED
+		// Token: 0x17000B95 RID: 2965
+		// (get) Token: 0x06002C67 RID: 11367 RVA: 0x0007416A File Offset: 0x0007236A
+		// (set) Token: 0x06002C68 RID: 11368 RVA: 0x00074195 File Offset: 0x00072395
 		public override EProgressBarControlType Type
 		{
 			get
@@ -92,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AD6 RID: 2774
-		// (get) Token: 0x06002945 RID: 10565 RVA: 0x0006CFFB File Offset: 0x0006B1FB
-		// (set) Token: 0x06002946 RID: 10566 RVA: 0x0006D026 File Offset: 0x0006B226
+		// Token: 0x17000B96 RID: 2966
+		// (get) Token: 0x06002C69 RID: 11369 RVA: 0x000741A3 File Offset: 0x000723A3
+		// (set) Token: 0x06002C6A RID: 11370 RVA: 0x000741CE File Offset: 0x000723CE
 		public override int MaxValue
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AD7 RID: 2775
-		// (get) Token: 0x06002947 RID: 10567 RVA: 0x0006D034 File Offset: 0x0006B234
-		// (set) Token: 0x06002948 RID: 10568 RVA: 0x0006D05F File Offset: 0x0006B25F
+		// Token: 0x17000B97 RID: 2967
+		// (get) Token: 0x06002C6B RID: 11371 RVA: 0x000741DC File Offset: 0x000723DC
+		// (set) Token: 0x06002C6C RID: 11372 RVA: 0x00074207 File Offset: 0x00072407
 		public override int InitValue
 		{
 			get
@@ -138,9 +136,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AD8 RID: 2776
-		// (get) Token: 0x06002949 RID: 10569 RVA: 0x0006D070 File Offset: 0x0006B270
-		// (set) Token: 0x0600294A RID: 10570 RVA: 0x0006D0AA File Offset: 0x0006B2AA
+		// Token: 0x17000B98 RID: 2968
+		// (get) Token: 0x06002C6D RID: 11373 RVA: 0x00074218 File Offset: 0x00072418
+		// (set) Token: 0x06002C6E RID: 11374 RVA: 0x00074252 File Offset: 0x00072452
 		public override int? ProgressPerformanceAttribute
 		{
 			get
@@ -162,9 +160,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AD9 RID: 2777
-		// (get) Token: 0x0600294B RID: 10571 RVA: 0x0006D0B8 File Offset: 0x0006B2B8
-		// (set) Token: 0x0600294C RID: 10572 RVA: 0x0006D0E3 File Offset: 0x0006B2E3
+		// Token: 0x17000B99 RID: 2969
+		// (get) Token: 0x06002C6F RID: 11375 RVA: 0x00074260 File Offset: 0x00072460
+		// (set) Token: 0x06002C70 RID: 11376 RVA: 0x0007428B File Offset: 0x0007248B
 		public virtual int AddValue
 		{
 			get
@@ -185,9 +183,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000ADA RID: 2778
-		// (get) Token: 0x0600294D RID: 10573 RVA: 0x0006D0F1 File Offset: 0x0006B2F1
-		// (set) Token: 0x0600294E RID: 10574 RVA: 0x0006D11C File Offset: 0x0006B31C
+		// Token: 0x17000B9A RID: 2970
+		// (get) Token: 0x06002C71 RID: 11377 RVA: 0x00074299 File Offset: 0x00072499
+		// (set) Token: 0x06002C72 RID: 11378 RVA: 0x000742C4 File Offset: 0x000724C4
 		public virtual int Timeout
 		{
 			get
@@ -208,9 +206,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000ADB RID: 2779
-		// (get) Token: 0x0600294F RID: 10575 RVA: 0x0006D12A File Offset: 0x0006B32A
-		// (set) Token: 0x06002950 RID: 10576 RVA: 0x0006D155 File Offset: 0x0006B355
+		// Token: 0x17000B9B RID: 2971
+		// (get) Token: 0x06002C73 RID: 11379 RVA: 0x000742D2 File Offset: 0x000724D2
+		// (set) Token: 0x06002C74 RID: 11380 RVA: 0x000742FD File Offset: 0x000724FD
 		public virtual int FallbackValue
 		{
 			get
@@ -231,9 +229,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000ADC RID: 2780
-		// (get) Token: 0x06002951 RID: 10577 RVA: 0x0006D163 File Offset: 0x0006B363
-		// (set) Token: 0x06002952 RID: 10578 RVA: 0x0006D18E File Offset: 0x0006B38E
+		// Token: 0x17000B9C RID: 2972
+		// (get) Token: 0x06002C75 RID: 11381 RVA: 0x0007430B File Offset: 0x0007250B
+		// (set) Token: 0x06002C76 RID: 11382 RVA: 0x00074336 File Offset: 0x00072536
 		public virtual int FallbackInterval
 		{
 			get
@@ -254,9 +252,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000ADD RID: 2781
-		// (get) Token: 0x06002953 RID: 10579 RVA: 0x0006D19C File Offset: 0x0006B39C
-		// (set) Token: 0x06002954 RID: 10580 RVA: 0x0006D1D6 File Offset: 0x0006B3D6
+		// Token: 0x17000B9D RID: 2973
+		// (get) Token: 0x06002C77 RID: 11383 RVA: 0x00074344 File Offset: 0x00072544
+		// (set) Token: 0x06002C78 RID: 11384 RVA: 0x0007437E File Offset: 0x0007257E
 		public virtual int? ZeroValuePerformanceAttribute
 		{
 			get
@@ -278,9 +276,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000ADE RID: 2782
-		// (get) Token: 0x06002955 RID: 10581 RVA: 0x0006D1E4 File Offset: 0x0006B3E4
-		// (set) Token: 0x06002956 RID: 10582 RVA: 0x0006D21E File Offset: 0x0006B41E
+		// Token: 0x17000B9E RID: 2974
+		// (get) Token: 0x06002C79 RID: 11385 RVA: 0x0007438C File Offset: 0x0007258C
+		// (set) Token: 0x06002C7A RID: 11386 RVA: 0x000743C6 File Offset: 0x000725C6
 		public virtual int? AscendPerformanceAttribute
 		{
 			get
@@ -302,9 +300,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000ADF RID: 2783
-		// (get) Token: 0x06002957 RID: 10583 RVA: 0x0006D22C File Offset: 0x0006B42C
-		// (set) Token: 0x06002958 RID: 10584 RVA: 0x0006D266 File Offset: 0x0006B466
+		// Token: 0x17000B9F RID: 2975
+		// (get) Token: 0x06002C7B RID: 11387 RVA: 0x000743D4 File Offset: 0x000725D4
+		// (set) Token: 0x06002C7C RID: 11388 RVA: 0x0007440E File Offset: 0x0007260E
 		public virtual int? DescendPerformanceAttribute
 		{
 			get
@@ -326,11 +324,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001BB2 RID: 7090
+		// Token: 0x04001DB7 RID: 7607
 		[Nullable(2)]
 		protected new ITimedStrikeDevice FbInstance;
 
-		// Token: 0x04001BB3 RID: 7091
+		// Token: 0x04001DB8 RID: 7608
 		[Nullable(2)]
 		protected new ITimedStrikeDevice_SetValue PocoInterface;
 	}

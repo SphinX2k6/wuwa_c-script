@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015A4 RID: 5540
+	// Token: 0x02001703 RID: 5891
 	[EnumExtensions]
 	public enum EChangeEntityPrefabPerformanceType
 	{
-		// Token: 0x040049C3 RID: 18883
+		// Token: 0x04004D75 RID: 19829
 		Target,
-		// Token: 0x040049C4 RID: 18884
+		// Token: 0x04004D76 RID: 19830
 		Self
 	}
 }

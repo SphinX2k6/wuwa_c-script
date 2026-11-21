@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C5E RID: 23646
+	// Token: 0x02004C3E RID: 19518
 	public class SkillCdInfo
 	{
-		// Token: 0x0401F1F6 RID: 127478
+		// Token: 0x04019CA7 RID: 105639
 		public int SkillId;
 
-		// Token: 0x0401F1F7 RID: 127479
+		// Token: 0x04019CA8 RID: 105640
 		public float SkillCd;
 
-		// Token: 0x0401F1F8 RID: 127480
+		// Token: 0x04019CA9 RID: 105641
 		public float CdDelay;
 
-		// Token: 0x0401F1F9 RID: 127481
+		// Token: 0x04019CAA RID: 105642
 		public bool IsShareAllCdSkill;
 	}
 }

@@ -7,23 +7,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GenericPrompt.View
 {
-	// Token: 0x020059AD RID: 22957
+	// Token: 0x02004986 RID: 18822
 	public class RoguelikeRoomFloatTips : GenericPromptFloatTipsBase
 	{
-		// Token: 0x0603A38E RID: 238478 RVA: 0x00DD660D File Offset: 0x00DD480D
+		// Token: 0x0602F2B4 RID: 193204 RVA: 0x00D25A9D File Offset: 0x00D23C9D
 		[NullableContext(1)]
 		public RoguelikeRoomFloatTips(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A38F RID: 238479 RVA: 0x00DD6616 File Offset: 0x00DD4816
+		// Token: 0x0602F2B5 RID: 193205 RVA: 0x00D25AA6 File Offset: 0x00D23CA6
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(2, typeof(UUISprite)));
 		}
 
-		// Token: 0x0603A390 RID: 238480 RVA: 0x00DD663C File Offset: 0x00DD483C
+		// Token: 0x0602F2B6 RID: 193206 RVA: 0x00D25ACC File Offset: 0x00D23CCC
 		protected override void SetMainText([ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		}
 
-		// Token: 0x0603A391 RID: 238481 RVA: 0x00DD6728 File Offset: 0x00DD4928
+		// Token: 0x0602F2B7 RID: 193207 RVA: 0x00D25BB8 File Offset: 0x00D23DB8
 		protected override void SetExtraText([ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -82,10 +82,10 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		}
 
-		// Token: 0x0200BC1B RID: 48155
+		// Token: 0x0200A626 RID: 42534
 		private class ERoguelikeRoomFloatTipsDefine
 		{
-			// Token: 0x04038C5E RID: 232542
+			// Token: 0x0403362D RID: 210477
 			public const int Icon = 2;
 		}
 	}

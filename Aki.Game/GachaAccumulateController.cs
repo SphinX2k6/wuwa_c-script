@@ -7,49 +7,49 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02001C51 RID: 7249
+// Token: 0x02001110 RID: 4368
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class GachaAccumulateController : UiControllerBase
 {
-	// Token: 0x0600DAAB RID: 55979 RVA: 0x0032C7A3 File Offset: 0x0032A9A3
+	// Token: 0x0600AEC1 RID: 44737 RVA: 0x00337BAB File Offset: 0x00335DAB
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0600DAAC RID: 55980 RVA: 0x0032C7A6 File Offset: 0x0032A9A6
+	// Token: 0x0600AEC2 RID: 44738 RVA: 0x00337BAE File Offset: 0x00335DAE
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnOpenGachaChanged, new Action(this.OnOpenGachaChanged));
 	}
 
-	// Token: 0x0600DAAD RID: 55981 RVA: 0x0032C7C4 File Offset: 0x0032A9C4
+	// Token: 0x0600AEC3 RID: 44739 RVA: 0x00337BCC File Offset: 0x00335DCC
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnOpenGachaChanged, new Action(this.OnOpenGachaChanged));
 	}
 
-	// Token: 0x0600DAAE RID: 55982 RVA: 0x0032C7E2 File Offset: 0x0032A9E2
+	// Token: 0x0600AEC4 RID: 44740 RVA: 0x00337BEA File Offset: 0x00335DEA
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.GachaAccumulateInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnGachaAccumulateInfoNotify));
 	}
 
-	// Token: 0x0600DAAF RID: 55983 RVA: 0x0032C800 File Offset: 0x0032AA00
+	// Token: 0x0600AEC5 RID: 44741 RVA: 0x00337C08 File Offset: 0x00335E08
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.GachaAccumulateInfoNotify);
 	}
 
-	// Token: 0x0600DAB0 RID: 55984 RVA: 0x0032C812 File Offset: 0x0032AA12
+	// Token: 0x0600AEC6 RID: 44742 RVA: 0x00337C1A File Offset: 0x00335E1A
 	private void OnOpenGachaChanged()
 	{
 		this.OnOpenGachaChangedAsync().Forget();
 	}
 
-	// Token: 0x0600DAB1 RID: 55985 RVA: 0x0032C820 File Offset: 0x0032AA20
+	// Token: 0x0600AEC7 RID: 44743 RVA: 0x00337C28 File Offset: 0x00335E28
 	private UniTask OnOpenGachaChangedAsync()
 	{
 		GachaAccumulateController.<OnOpenGachaChangedAsync>d__6 <OnOpenGachaChangedAsync>d__;
@@ -60,7 +60,7 @@ public class GachaAccumulateController : UiControllerBase
 		return <OnOpenGachaChangedAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DAB2 RID: 55986 RVA: 0x0032C864 File Offset: 0x0032AA64
+	// Token: 0x0600AEC8 RID: 44744 RVA: 0x00337C6C File Offset: 0x00335E6C
 	[NullableContext(2)]
 	private void OnGachaAccumulateInfoNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -75,7 +75,7 @@ public class GachaAccumulateController : UiControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.GachaAccumulateDataUpdate, gachaAccumulateInfo.GachaAccumulateId);
 	}
 
-	// Token: 0x0600DAB3 RID: 55987 RVA: 0x0032C8D4 File Offset: 0x0032AAD4
+	// Token: 0x0600AEC9 RID: 44745 RVA: 0x00337CDC File Offset: 0x00335EDC
 	public UniTask RequestAccumulateInfoAsync(int accumulateId)
 	{
 		GachaAccumulateController.<RequestAccumulateInfoAsync>d__8 <RequestAccumulateInfoAsync>d__;
@@ -86,7 +86,7 @@ public class GachaAccumulateController : UiControllerBase
 		return <RequestAccumulateInfoAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DAB4 RID: 55988 RVA: 0x0032C918 File Offset: 0x0032AB18
+	// Token: 0x0600AECA RID: 44746 RVA: 0x00337D20 File Offset: 0x00335F20
 	[NullableContext(0)]
 	public UniTask<bool> ClaimAccumulateRewardAsync(int accumulateId, [Nullable(1)] int[] rewardIds, [Nullable(2)] int[] selectedIds = null)
 	{
@@ -100,7 +100,7 @@ public class GachaAccumulateController : UiControllerBase
 		return <ClaimAccumulateRewardAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DAB5 RID: 55989 RVA: 0x0032C96C File Offset: 0x0032AB6C
+	// Token: 0x0600AECB RID: 44747 RVA: 0x00337D74 File Offset: 0x00335F74
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -115,8 +115,8 @@ public class GachaAccumulateController : UiControllerBase
 		return <GetResonantChainOptionLimitInfoAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x170011DC RID: 4572
-	// (get) Token: 0x0600DAB6 RID: 55990 RVA: 0x0032C9A7 File Offset: 0x0032ABA7
+	// Token: 0x17001202 RID: 4610
+	// (get) Token: 0x0600AECC RID: 44748 RVA: 0x00337DAF File Offset: 0x00335FAF
 	public static GachaAccumulateController Instance
 	{
 		get
@@ -125,7 +125,7 @@ public class GachaAccumulateController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600DAB7 RID: 55991 RVA: 0x0032C9AE File Offset: 0x0032ABAE
+	// Token: 0x0600AECD RID: 44749 RVA: 0x00337DB6 File Offset: 0x00335FB6
 	public static GachaAccumulateController GetOrCreateInstance()
 	{
 		if (GachaAccumulateController._Instance == null)
@@ -135,7 +135,7 @@ public class GachaAccumulateController : UiControllerBase
 		return GachaAccumulateController._Instance;
 	}
 
-	// Token: 0x0600DAB8 RID: 55992 RVA: 0x0032C9C2 File Offset: 0x0032ABC2
+	// Token: 0x0600AECE RID: 44750 RVA: 0x00337DCA File Offset: 0x00335FCA
 	public static bool CreateInstance()
 	{
 		if (GachaAccumulateController._Instance != null)
@@ -146,24 +146,24 @@ public class GachaAccumulateController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600DAB9 RID: 55993 RVA: 0x0032C9D8 File Offset: 0x0032ABD8
+	// Token: 0x0600AECF RID: 44751 RVA: 0x00337DE0 File Offset: 0x00335FE0
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600DABA RID: 55994 RVA: 0x0032C9DA File Offset: 0x0032ABDA
+	// Token: 0x0600AED0 RID: 44752 RVA: 0x00337DE2 File Offset: 0x00335FE2
 	public static void ResetStaticDefaultValue()
 	{
 		GachaAccumulateController._Instance = null;
 	}
 
-	// Token: 0x0600DABB RID: 55995 RVA: 0x0032C9E2 File Offset: 0x0032ABE2
+	// Token: 0x0600AED1 RID: 44753 RVA: 0x00337DEA File Offset: 0x00335FEA
 	static GachaAccumulateController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GachaAccumulateController.CreateStaticDefaultValue), new Action(GachaAccumulateController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006406 RID: 25606
+	// Token: 0x040064D8 RID: 25816
 	[Nullable(2)]
 	private static GachaAccumulateController _Instance;
 }

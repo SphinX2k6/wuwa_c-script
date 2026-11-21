@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C86 RID: 7302
+	// Token: 0x02000520 RID: 1312
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FSceneUiAnchorRequest : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C57B RID: 116091 RVA: 0x0029C4CE File Offset: 0x0029A6CE
+		// Token: 0x06007AC3 RID: 31427 RVA: 0x000B4052 File Offset: 0x000B2252
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSceneUiAnchorRequest.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C57C RID: 116092 RVA: 0x0029C4DA File Offset: 0x0029A6DA
+		// Token: 0x06007AC4 RID: 31428 RVA: 0x000B405E File Offset: 0x000B225E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSceneUiAnchorRequest._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FSceneUiAnchorRequest._FunctionPtr;
 		}
 
-		// Token: 0x0601C57D RID: 116093 RVA: 0x0029C4FD File Offset: 0x0029A6FD
+		// Token: 0x06007AC5 RID: 31429 RVA: 0x000B4081 File Offset: 0x000B2281
 		public FSceneUiAnchorRequest()
 		{
 		}
 
-		// Token: 0x0601C57E RID: 116094 RVA: 0x0029C505 File Offset: 0x0029A705
+		// Token: 0x06007AC6 RID: 31430 RVA: 0x000B4089 File Offset: 0x000B2289
 		[NullableContext(2)]
 		public FSceneUiAnchorRequest(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C57F RID: 116095 RVA: 0x0029C50F File Offset: 0x0029A70F
+		// Token: 0x06007AC7 RID: 31431 RVA: 0x000B4093 File Offset: 0x000B2293
 		public FSceneUiAnchorRequest(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C580 RID: 116096 RVA: 0x0029C51A File Offset: 0x0029A71A
+		// Token: 0x06007AC8 RID: 31432 RVA: 0x000B409E File Offset: 0x000B229E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<ASceneUiAnchorActor>) ?? ((Action<ASceneUiAnchorActor>)Delegate.CreateDelegate(typeof(Action<ASceneUiAnchorActor>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C581 RID: 116097 RVA: 0x0029C54C File Offset: 0x0029A74C
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06007AC9 RID: 31433 RVA: 0x000B40D0 File Offset: 0x000B22D0
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -70,8 +69,7 @@ namespace UnrealEngine
 			base.Add(Callback, FSceneUiAnchorRequest.RegisterId);
 		}
 
-		// Token: 0x0601C582 RID: 116098 RVA: 0x0029C586 File Offset: 0x0029A786
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06007ACA RID: 31434 RVA: 0x000B410A File Offset: 0x000B230A
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C583 RID: 116099 RVA: 0x0029C590 File Offset: 0x0029A790
+		// Token: 0x06007ACB RID: 31435 RVA: 0x000B4114 File Offset: 0x000B2314
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(ASceneUiAnchorActor Anchor)
 		{
 			FSceneUiAnchorRequest.__FSceneUiAnchorRequest_DelegateParams* ptr = stackalloc FSceneUiAnchorRequest.__FSceneUiAnchorRequest_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FSceneUiAnchorRequest.__FSceneUiAnchorRequest_DelegateParams) & -16L;
@@ -93,10 +90,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601C584 RID: 116100 RVA: 0x0029C5DC File Offset: 0x0029A7DC
+		// Token: 0x06007ACC RID: 31436 RVA: 0x000B4160 File Offset: 0x000B2360
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<ASceneUiAnchorActor> action = target as Action<ASceneUiAnchorActor>;
@@ -108,31 +104,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0400F3C3 RID: 62403
+		// Token: 0x04003431 RID: 13361
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F3C4 RID: 62404
+		// Token: 0x04003432 RID: 13362
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSceneUI.SceneUiAnchorRequest__DelegateSignature";
 
-		// Token: 0x0400F3C5 RID: 62405
+		// Token: 0x04003433 RID: 13363
 		private static int RegisterId;
 
-		// Token: 0x02003218 RID: 12824
+		// Token: 0x02000C8D RID: 3213
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FSceneUiAnchorRequest_DelegateParams
+		private ref struct __FSceneUiAnchorRequest_DelegateParams
 		{
-			// Token: 0x0401707E RID: 94334
+			// Token: 0x04005EF2 RID: 24306
 			[FieldOffset(0)]
 			public IntPtr Anchor;
 		}
 
-		// Token: 0x02003219 RID: 12825
+		// Token: 0x02000C8E RID: 3214
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401707F RID: 94335
+			// Token: 0x04005EF3 RID: 24307
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010D4 RID: 4308
+	// Token: 0x020011CF RID: 4559
 	public struct Soar : IFlatbufferObject
 	{
-		// Token: 0x1700377D RID: 14205
-		// (get) Token: 0x0600D70D RID: 55053 RVA: 0x0031C2D0 File Offset: 0x0031A4D0
+		// Token: 0x1700388E RID: 14478
+		// (get) Token: 0x0600DEEA RID: 57066 RVA: 0x0033B1EC File Offset: 0x003393EC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D70E RID: 55054 RVA: 0x0031C2DD File Offset: 0x0031A4DD
+		// Token: 0x0600DEEB RID: 57067 RVA: 0x0033B1F9 File Offset: 0x003393F9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D70F RID: 55055 RVA: 0x0031C2E4 File Offset: 0x0031A4E4
+		// Token: 0x0600DEEC RID: 57068 RVA: 0x0033B200 File Offset: 0x00339400
 		public static Soar GetRootAsSoar(ByteBuffer _bb)
 		{
 			return Soar.GetRootAsSoar(_bb, default(Soar));
 		}
 
-		// Token: 0x0600D710 RID: 55056 RVA: 0x0031C300 File Offset: 0x0031A500
+		// Token: 0x0600DEED RID: 57069 RVA: 0x0033B21C File Offset: 0x0033941C
 		public static Soar GetRootAsSoar(ByteBuffer _bb, Soar obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D711 RID: 55057 RVA: 0x0031C31D File Offset: 0x0031A51D
+		// Token: 0x0600DEEE RID: 57070 RVA: 0x0033B239 File Offset: 0x00339439
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D712 RID: 55058 RVA: 0x0031C32C File Offset: 0x0031A52C
+		// Token: 0x0600DEEF RID: 57071 RVA: 0x0033B248 File Offset: 0x00339448
 		public Soar __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700377E RID: 14206
-		// (get) Token: 0x0600D713 RID: 55059 RVA: 0x0031C33C File Offset: 0x0031A53C
+		// Token: 0x1700388F RID: 14479
+		// (get) Token: 0x0600DEF0 RID: 57072 RVA: 0x0033B258 File Offset: 0x00339458
 		public string Id
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D714 RID: 55060 RVA: 0x0031C373 File Offset: 0x0031A573
+		// Token: 0x0600DEF1 RID: 57073 RVA: 0x0033B28F File Offset: 0x0033948F
 		public Span<byte> GetIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0600D715 RID: 55061 RVA: 0x0031C382 File Offset: 0x0031A582
+		// Token: 0x0600DEF2 RID: 57074 RVA: 0x0033B29E File Offset: 0x0033949E
 		public byte[] GetIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700377F RID: 14207
-		// (get) Token: 0x0600D716 RID: 55062 RVA: 0x0031C39C File Offset: 0x0031A59C
+		// Token: 0x17003890 RID: 14480
+		// (get) Token: 0x0600DEF3 RID: 57075 RVA: 0x0033B2B8 File Offset: 0x003394B8
 		public string HangSocket
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D717 RID: 55063 RVA: 0x0031C3D3 File Offset: 0x0031A5D3
+		// Token: 0x0600DEF4 RID: 57076 RVA: 0x0033B2EF File Offset: 0x003394EF
 		public Span<byte> GetHangSocketBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600D718 RID: 55064 RVA: 0x0031C3E2 File Offset: 0x0031A5E2
+		// Token: 0x0600DEF5 RID: 57077 RVA: 0x0033B2FE File Offset: 0x003394FE
 		public byte[] GetHangSocketArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003780 RID: 14208
-		// (get) Token: 0x0600D719 RID: 55065 RVA: 0x0031C3FC File Offset: 0x0031A5FC
+		// Token: 0x17003891 RID: 14481
+		// (get) Token: 0x0600DEF6 RID: 57078 RVA: 0x0033B318 File Offset: 0x00339518
 		public float Scale
 		{
 			get
@@ -116,7 +116,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005207 RID: 20999
+		// Token: 0x04005806 RID: 22534
 		private Table __p;
 	}
 }

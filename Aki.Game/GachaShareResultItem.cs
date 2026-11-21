@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CA1 RID: 7329
+// Token: 0x02001160 RID: 4448
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class GachaShareResultItem : GridProxyAbstract<GachaResult>
 {
-	// Token: 0x0600DD51 RID: 56657 RVA: 0x0033C548 File Offset: 0x0033A748
+	// Token: 0x0600B167 RID: 45415 RVA: 0x00347994 File Offset: 0x00345B94
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class GachaShareResultItem : GridProxyAbstract<GachaResult>
 		};
 	}
 
-	// Token: 0x0600DD52 RID: 56658 RVA: 0x0033C5A4 File Offset: 0x0033A7A4
+	// Token: 0x0600B168 RID: 45416 RVA: 0x003479F0 File Offset: 0x00345BF0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GachaShareResultItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ public class GachaShareResultItem : GridProxyAbstract<GachaResult>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DD53 RID: 56659 RVA: 0x0033C5E8 File Offset: 0x0033A7E8
+	// Token: 0x0600B169 RID: 45417 RVA: 0x00347A34 File Offset: 0x00345C34
 	public void Refresh(GachaResult data)
 	{
 		GachaResultItemNew infoItem = this.InfoItem;
@@ -70,25 +70,25 @@ public class GachaShareResultItem : GridProxyAbstract<GachaResult>
 		}
 	}
 
-	// Token: 0x0600DD54 RID: 56660 RVA: 0x0033C6A0 File Offset: 0x0033A8A0
+	// Token: 0x0600B16A RID: 45418 RVA: 0x00347AEC File Offset: 0x00345CEC
 	public override void Refresh(GachaResult data, bool isSelected, int gridIndex)
 	{
 		this.Refresh(data);
 	}
 
-	// Token: 0x04006596 RID: 26006
+	// Token: 0x04006667 RID: 26215
 	[Nullable(2)]
 	private GachaResultItemNew InfoItem;
 
-	// Token: 0x02008286 RID: 33414
+	// Token: 0x0200740D RID: 29709
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402A965 RID: 174437
+		// Token: 0x04025C83 RID: 154755
 		CommonItem,
-		// Token: 0x0402A966 RID: 174438
+		// Token: 0x04025C84 RID: 154756
 		CommonFrame,
-		// Token: 0x0402A967 RID: 174439
+		// Token: 0x04025C85 RID: 154757
 		TextureFrame
 	}
 }

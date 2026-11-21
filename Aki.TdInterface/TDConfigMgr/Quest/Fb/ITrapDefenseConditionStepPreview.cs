@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013D6 RID: 5078
+	// Token: 0x0200152D RID: 5421
 	public class ITrapDefenseConditionStepPreview : ITrapDefenseConditionStepBase
 	{
-		// Token: 0x060073E0 RID: 29664 RVA: 0x00115C54 File Offset: 0x00113E54
-		[NullableContext(1)]
+		// Token: 0x06007AA1 RID: 31393 RVA: 0x00124638 File Offset: 0x00122838
 		public static ITrapDefenseConditionStepPreview Create(ITrapDefenseConditionStepPreview? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002607 RID: 9735
-		// (get) Token: 0x060073E1 RID: 29665 RVA: 0x00115C73 File Offset: 0x00113E73
+		// Token: 0x170027E9 RID: 10217
+		// (get) Token: 0x06007AA2 RID: 31394 RVA: 0x00124657 File Offset: 0x00122857
 		public override ETrapDefenseConditionStep Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004314 RID: 17172
+		// Token: 0x040046A5 RID: 18085
 		private ITrapDefenseConditionStepPreview Instance;
 	}
 }

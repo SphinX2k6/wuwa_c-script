@@ -6,41 +6,34 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020026FE RID: 9982
+	// Token: 0x020007D3 RID: 2003
+	[NullableContext(1)]
+	[Nullable(0)]
 	[UnrealObjectPath("/Script/SequenceDialogue.MovieSceneSeqAnimDataTrack")]
-	[UnrealStructLayout(240, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 240)]
-	public class UMovieSceneSeqAnimDataTrack : UMovieSceneNameableTrack, IUnrealUObject, IUnrealObject, IMovieSceneTrackTemplateProducer, IUnrealNativeInterface, IUnrealInterface
+	[UnrealStructLayout(256, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 256)]
+	public class UMovieSceneSeqAnimDataTrack : UMovieSceneNameableTrack, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06025057 RID: 151639 RVA: 0x0036C4E2 File Offset: 0x0036A6E2
+		// Token: 0x0600ACBE RID: 44222 RVA: 0x000FF059 File Offset: 0x000FD259
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneSeqAnimDataTrack._ClassPtr;
 		}
 
-		// Token: 0x06025058 RID: 151640 RVA: 0x0036C4EE File Offset: 0x0036A6EE
-		int IMovieSceneTrackTemplateProducer.InterfaceOffset()
-		{
-			return UMovieSceneSeqAnimDataTrack.__InterfaceOffset_IMovieSceneTrackTemplateProducer;
-		}
-
-		// Token: 0x06025059 RID: 151641 RVA: 0x0036C4F8 File Offset: 0x0036A6F8
+		// Token: 0x0600ACBF RID: 44223 RVA: 0x000FF068 File Offset: 0x000FD268
 		public UMovieSceneSeqAnimDataTrack() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneSeqAnimDataTrack.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602505A RID: 151642 RVA: 0x0036C520 File Offset: 0x0036A720
-		[NullableContext(1)]
+		// Token: 0x0600ACC0 RID: 44224 RVA: 0x000FF090 File Offset: 0x000FD290
 		public UMovieSceneSeqAnimDataTrack(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneSeqAnimDataTrack.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008EEC RID: 36588
-		// (get) Token: 0x0602505B RID: 151643 RVA: 0x0036C554 File Offset: 0x0036A754
-		// (set) Token: 0x0602505C RID: 151644 RVA: 0x0036C58D File Offset: 0x0036A78D
-		[Nullable(1)]
+		// Token: 0x1700203C RID: 8252
+		// (get) Token: 0x0600ACC1 RID: 44225 RVA: 0x000FF0C4 File Offset: 0x000FD2C4
+		// (set) Token: 0x0600ACC2 RID: 44226 RVA: 0x000FF0FD File Offset: 0x000FD2FD
 		public TArray<UMovieSceneSection> Sections
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -51,41 +44,36 @@ namespace UnrealEngine
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.Sections.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x0602505D RID: 151645 RVA: 0x0036C59B File Offset: 0x0036A79B
+		// Token: 0x0600ACC3 RID: 44227 RVA: 0x000FF10B File Offset: 0x000FD30B
 		static UMovieSceneSeqAnimDataTrack()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SequenceDialogue.MovieSceneSeqAnimDataTrack");
 		}
 
-		// Token: 0x0602505E RID: 151646 RVA: 0x0036C5A9 File Offset: 0x0036A7A9
+		// Token: 0x0600ACC4 RID: 44228 RVA: 0x000FF119 File Offset: 0x000FD319
 		protected UMovieSceneSeqAnimDataTrack(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04013F2D RID: 81709
-		internal static int __InterfaceOffset_IMovieSceneTrackTemplateProducer;
-
-		// Token: 0x04013F2E RID: 81710
-		[Nullable(1)]
+		// Token: 0x04004A7E RID: 19070
 		public new const string __ObjectPath = "/Script/SequenceDialogue.MovieSceneSeqAnimDataTrack";
 
-		// Token: 0x04013F2F RID: 81711
+		// Token: 0x04004A7F RID: 19071
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04013F30 RID: 81712
+		// Token: 0x04004A80 RID: 19072
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04013F31 RID: 81713
+		// Token: 0x04004A81 RID: 19073
 		internal static int __PropertyOffset_Sections;
 
-		// Token: 0x04013F32 RID: 81714
+		// Token: 0x04004A82 RID: 19074
 		[Nullable(new byte[]
 		{
 			2,

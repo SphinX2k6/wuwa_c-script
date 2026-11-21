@@ -8,12 +8,12 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Core.Define.TdConfigExtensions
 {
-	// Token: 0x0200013B RID: 315
+	// Token: 0x0200013F RID: 319
 	[NullableContext(2)]
 	[Nullable(0)]
 	public static class RpcArgUtils
 	{
-		// Token: 0x06000B02 RID: 2818 RVA: 0x00034E6C File Offset: 0x0003306C
+		// Token: 0x06000B5D RID: 2909 RVA: 0x00035954 File Offset: 0x00033B54
 		[NullableContext(1)]
 		public static T To<T>([Nullable(2)] object value)
 		{
@@ -29,7 +29,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return t;
 		}
 
-		// Token: 0x06000B03 RID: 2819 RVA: 0x00034EDC File Offset: 0x000330DC
+		// Token: 0x06000B5E RID: 2910 RVA: 0x000359C4 File Offset: 0x00033BC4
 		public static T ToNullable<T>(object value)
 		{
 			if (value == null || RpcArgUtils.IsJsonNull(value))
@@ -39,7 +39,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return RpcArgUtils.Decode<T>(value);
 		}
 
-		// Token: 0x06000B04 RID: 2820 RVA: 0x00034F04 File Offset: 0x00033104
+		// Token: 0x06000B5F RID: 2911 RVA: 0x000359EC File Offset: 0x00033BEC
 		private static T Decode<T>([Nullable(1)] object value)
 		{
 			if (value is T)
@@ -70,7 +70,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			throw new ArgumentException(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06000B05 RID: 2821 RVA: 0x00034FD4 File Offset: 0x000331D4
+		// Token: 0x06000B60 RID: 2912 RVA: 0x00035ABC File Offset: 0x00033CBC
 		private static bool IsJsonNull(object value)
 		{
 			if (value is JsonElement)
@@ -84,7 +84,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return false;
 		}
 
-		// Token: 0x06000B06 RID: 2822 RVA: 0x00035008 File Offset: 0x00033208
+		// Token: 0x06000B61 RID: 2913 RVA: 0x00035AF0 File Offset: 0x00033CF0
 		private static bool TryConvert<T>([Nullable(1)] object value, out T result)
 		{
 			Type type = Nullable.GetUnderlyingType(typeof(T)) ?? typeof(T);
@@ -108,7 +108,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return false;
 		}
 
-		// Token: 0x06000B07 RID: 2823 RVA: 0x000350A0 File Offset: 0x000332A0
+		// Token: 0x06000B62 RID: 2914 RVA: 0x00035B88 File Offset: 0x00033D88
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -130,7 +130,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return RpcArgUtils.DecodeOneOf<T1, T2>(value);
 		}
 
-		// Token: 0x06000B08 RID: 2824 RVA: 0x00035128 File Offset: 0x00033328
+		// Token: 0x06000B63 RID: 2915 RVA: 0x00035C10 File Offset: 0x00033E10
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -146,7 +146,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return new OneOf<T1, T2>?(RpcArgUtils.DecodeOneOf<T1, T2>(value));
 		}
 
-		// Token: 0x06000B09 RID: 2825 RVA: 0x00035158 File Offset: 0x00033358
+		// Token: 0x06000B64 RID: 2916 RVA: 0x00035C40 File Offset: 0x00033E40
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -184,7 +184,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			throw new ArgumentException(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06000B0A RID: 2826 RVA: 0x00035238 File Offset: 0x00033438
+		// Token: 0x06000B65 RID: 2917 RVA: 0x00035D20 File Offset: 0x00033F20
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -237,7 +237,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			throw new ArgumentException(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06000B0B RID: 2827 RVA: 0x0003539C File Offset: 0x0003359C
+		// Token: 0x06000B66 RID: 2918 RVA: 0x00035E84 File Offset: 0x00034084
 		[NullableContext(1)]
 		private static bool KindMatches(Type type, JsonValueKind kind)
 		{
@@ -273,14 +273,14 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return kind == JsonValueKind.Object;
 		}
 
-		// Token: 0x06000B0C RID: 2828 RVA: 0x00035479 File Offset: 0x00033679
+		// Token: 0x06000B67 RID: 2919 RVA: 0x00035F61 File Offset: 0x00034161
 		[NullableContext(1)]
 		private static bool IsBase64Bytes(Type t)
 		{
 			return t == typeof(byte[]) || t == typeof(Memory<byte>) || t == typeof(ReadOnlyMemory<byte>);
 		}
 
-		// Token: 0x06000B0D RID: 2829 RVA: 0x000354B4 File Offset: 0x000336B4
+		// Token: 0x06000B68 RID: 2920 RVA: 0x00035F9C File Offset: 0x0003419C
 		[NullableContext(1)]
 		private static bool IsDictionary(Type t)
 		{
@@ -303,7 +303,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return false;
 		}
 
-		// Token: 0x06000B0E RID: 2830 RVA: 0x00035504 File Offset: 0x00033704
+		// Token: 0x06000B69 RID: 2921 RVA: 0x00035FEC File Offset: 0x000341EC
 		[NullableContext(1)]
 		private static bool IsDictionaryGenericInterface(Type i)
 		{

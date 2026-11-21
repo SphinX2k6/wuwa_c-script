@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066CF RID: 26319
+	// Token: 0x0200561F RID: 22047
 	public class EDropCatchRoleSkillStateJsonConverter : JsonConverter<EDropCatchRoleSkillState>
 	{
-		// Token: 0x06041CF8 RID: 269560 RVA: 0x00FF6068 File Offset: 0x00FF4268
+		// Token: 0x06036844 RID: 223300 RVA: 0x00F3746C File Offset: 0x00F3566C
 		public override EDropCatchRoleSkillState Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return EDropCatchRoleSkillStateExtensions.FromString(@string);
 		}
 
-		// Token: 0x06041CF9 RID: 269561 RVA: 0x00FF608C File Offset: 0x00FF428C
+		// Token: 0x06036845 RID: 223301 RVA: 0x00F37490 File Offset: 0x00F35690
 		public override void Write(Utf8JsonWriter writer, EDropCatchRoleSkillState value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

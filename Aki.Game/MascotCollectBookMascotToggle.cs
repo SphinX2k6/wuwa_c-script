@@ -8,7 +8,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F0F RID: 7951
+// Token: 0x020013D1 RID: 5073
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class MascotCollectBookMascotToggle : GridProxyAbstract<HonamiStoryMascotData>
 {
-	// Token: 0x0600F4F1 RID: 62705 RVA: 0x003B1C58 File Offset: 0x003AFE58
+	// Token: 0x0600C910 RID: 51472 RVA: 0x003BD744 File Offset: 0x003BB944
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,19 +32,19 @@ public class MascotCollectBookMascotToggle : GridProxyAbstract<HonamiStoryMascot
 		};
 	}
 
-	// Token: 0x0600F4F2 RID: 62706 RVA: 0x003B1CD5 File Offset: 0x003AFED5
+	// Token: 0x0600C911 RID: 51473 RVA: 0x003BD7C1 File Offset: 0x003BB9C1
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x0600F4F3 RID: 62707 RVA: 0x003B1CF3 File Offset: 0x003AFEF3
+	// Token: 0x0600C912 RID: 51474 RVA: 0x003BD7DF File Offset: 0x003BB9DF
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x0600F4F4 RID: 62708 RVA: 0x003B1D11 File Offset: 0x003AFF11
+	// Token: 0x0600C913 RID: 51475 RVA: 0x003BD7FD File Offset: 0x003BB9FD
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param == "Bozai_Unlock")
@@ -53,15 +53,15 @@ public class MascotCollectBookMascotToggle : GridProxyAbstract<HonamiStoryMascot
 		}
 	}
 
-	// Token: 0x0600F4F5 RID: 62709 RVA: 0x003B1D26 File Offset: 0x003AFF26
+	// Token: 0x0600C914 RID: 51476 RVA: 0x003BD812 File Offset: 0x003BBA12
 	protected override void OnBeforeCreateImplement()
 	{
 		this.LevelPlaySequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.LevelPlaySequence);
 	}
 
-	// Token: 0x17001323 RID: 4899
-	// (get) Token: 0x0600F4F6 RID: 62710 RVA: 0x003B1D40 File Offset: 0x003AFF40
+	// Token: 0x1700134D RID: 4941
+	// (get) Token: 0x0600C915 RID: 51477 RVA: 0x003BD82C File Offset: 0x003BBA2C
 	public HonamiStoryMascotData Data
 	{
 		get
@@ -70,7 +70,7 @@ public class MascotCollectBookMascotToggle : GridProxyAbstract<HonamiStoryMascot
 		}
 	}
 
-	// Token: 0x0600F4F7 RID: 62711 RVA: 0x003B1D48 File Offset: 0x003AFF48
+	// Token: 0x0600C916 RID: 51478 RVA: 0x003BD834 File Offset: 0x003BBA34
 	public override void Refresh(HonamiStoryMascotData mascotData, bool isSelected, int gridIndex)
 	{
 		this.MascotData = mascotData;
@@ -88,7 +88,7 @@ public class MascotCollectBookMascotToggle : GridProxyAbstract<HonamiStoryMascot
 		levelPlaySequence.PlaySequence("PnlHead_Unlock", false, null);
 	}
 
-	// Token: 0x0600F4F8 RID: 62712 RVA: 0x003B1DB4 File Offset: 0x003AFFB4
+	// Token: 0x0600C917 RID: 51479 RVA: 0x003BD8A0 File Offset: 0x003BBAA0
 	private void RefreshItem()
 	{
 		base.GetTexture(2).SetUIActive(this.MascotData.State == EHonamiStoryCollectState.Finished);
@@ -100,13 +100,13 @@ public class MascotCollectBookMascotToggle : GridProxyAbstract<HonamiStoryMascot
 		base.SetTextureByPath(path, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x0600F4F9 RID: 62713 RVA: 0x003B1E22 File Offset: 0x003B0022
+	// Token: 0x0600C918 RID: 51480 RVA: 0x003BD90E File Offset: 0x003BBB0E
 	public void BindMascotToggleClick(Action<MascotCollectBookMascotToggle> callback)
 	{
 		this.OnMascotToggleClick = callback;
 	}
 
-	// Token: 0x0600F4FA RID: 62714 RVA: 0x003B1E2B File Offset: 0x003B002B
+	// Token: 0x0600C919 RID: 51481 RVA: 0x003BD917 File Offset: 0x003BBB17
 	private void OnToggle(EToggleState toggleState)
 	{
 		Action<MascotCollectBookMascotToggle> onMascotToggleClick = this.OnMascotToggleClick;
@@ -117,22 +117,22 @@ public class MascotCollectBookMascotToggle : GridProxyAbstract<HonamiStoryMascot
 		onMascotToggleClick(this);
 	}
 
-	// Token: 0x0600F4FB RID: 62715 RVA: 0x003B1E3E File Offset: 0x003B003E
+	// Token: 0x0600C91A RID: 51482 RVA: 0x003BD92A File Offset: 0x003BBB2A
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x0600F4FC RID: 62716 RVA: 0x003B1E50 File Offset: 0x003B0050
+	// Token: 0x0600C91B RID: 51483 RVA: 0x003BD93C File Offset: 0x003BBB3C
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04007150 RID: 29008
+	// Token: 0x04007231 RID: 29233
 	private HonamiStoryMascotData MascotData;
 
-	// Token: 0x04007151 RID: 29009
+	// Token: 0x04007232 RID: 29234
 	[Nullable(new byte[]
 	{
 		2,
@@ -140,19 +140,19 @@ public class MascotCollectBookMascotToggle : GridProxyAbstract<HonamiStoryMascot
 	})]
 	private Action<MascotCollectBookMascotToggle> OnMascotToggleClick;
 
-	// Token: 0x04007152 RID: 29010
+	// Token: 0x04007233 RID: 29235
 	[Nullable(2)]
 	private UiBehaviorLevelSequence LevelPlaySequence;
 
-	// Token: 0x0200851E RID: 34078
+	// Token: 0x020076A3 RID: 30371
 	[NullableContext(0)]
 	private enum EMascotCollectBookMascotToggleComponent
 	{
-		// Token: 0x0402B52E RID: 177454
+		// Token: 0x04026852 RID: 157778
 		Toggle,
-		// Token: 0x0402B52F RID: 177455
+		// Token: 0x04026853 RID: 157779
 		PictureTexture,
-		// Token: 0x0402B530 RID: 177456
+		// Token: 0x04026854 RID: 157780
 		RewardTexture
 	}
 }

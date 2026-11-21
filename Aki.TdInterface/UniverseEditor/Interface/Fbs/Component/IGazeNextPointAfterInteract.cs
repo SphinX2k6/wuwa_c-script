@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052F1 RID: 21233
+	// Token: 0x02005874 RID: 22644
 	public struct IGazeNextPointAfterInteract : IFlatbufferObject
 	{
-		// Token: 0x17009BD6 RID: 39894
-		// (get) Token: 0x06022AA2 RID: 141986 RVA: 0x004CDF77 File Offset: 0x004CC177
+		// Token: 0x1700A407 RID: 41991
+		// (get) Token: 0x06024B3C RID: 150332 RVA: 0x0050AAA3 File Offset: 0x00508CA3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022AA3 RID: 141987 RVA: 0x004CDF84 File Offset: 0x004CC184
+		// Token: 0x06024B3D RID: 150333 RVA: 0x0050AAB0 File Offset: 0x00508CB0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022AA4 RID: 141988 RVA: 0x004CDF8C File Offset: 0x004CC18C
+		// Token: 0x06024B3E RID: 150334 RVA: 0x0050AAB8 File Offset: 0x00508CB8
 		public static IGazeNextPointAfterInteract GetRootAsIGazeNextPointAfterInteract(ByteBuffer _bb)
 		{
 			return IGazeNextPointAfterInteract.GetRootAsIGazeNextPointAfterInteract(_bb, default(IGazeNextPointAfterInteract));
 		}
 
-		// Token: 0x06022AA5 RID: 141989 RVA: 0x004CDFA8 File Offset: 0x004CC1A8
+		// Token: 0x06024B3F RID: 150335 RVA: 0x0050AAD4 File Offset: 0x00508CD4
 		public static IGazeNextPointAfterInteract GetRootAsIGazeNextPointAfterInteract(ByteBuffer _bb, IGazeNextPointAfterInteract obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022AA6 RID: 141990 RVA: 0x004CDFC5 File Offset: 0x004CC1C5
+		// Token: 0x06024B40 RID: 150336 RVA: 0x0050AAF1 File Offset: 0x00508CF1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022AA7 RID: 141991 RVA: 0x004CDFD4 File Offset: 0x004CC1D4
+		// Token: 0x06024B41 RID: 150337 RVA: 0x0050AB00 File Offset: 0x00508D00
 		public IGazeNextPointAfterInteract __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009BD7 RID: 39895
-		// (get) Token: 0x06022AA8 RID: 141992 RVA: 0x004CDFE4 File Offset: 0x004CC1E4
+		// Token: 0x1700A408 RID: 41992
+		// (get) Token: 0x06024B42 RID: 150338 RVA: 0x0050AB10 File Offset: 0x00508D10
 		public IGazeCondition? GazeCondition
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BD8 RID: 39896
-		// (get) Token: 0x06022AA9 RID: 141993 RVA: 0x004CE044 File Offset: 0x004CC244
+		// Token: 0x1700A409 RID: 41993
+		// (get) Token: 0x06024B43 RID: 150339 RVA: 0x0050AB70 File Offset: 0x00508D70
 		public IGazePerformance? GazePerformance
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022AAA RID: 141994 RVA: 0x004CE0A1 File Offset: 0x004CC2A1
+		// Token: 0x06024B44 RID: 150340 RVA: 0x0050ABCD File Offset: 0x00508DCD
 		public static Offset<IGazeNextPointAfterInteract> CreateIGazeNextPointAfterInteract(FlatBufferBuilder builder, Offset<IGazeCondition> GazeConditionOffset = default(Offset<IGazeCondition>), Offset<IGazePerformance> GazePerformanceOffset = default(Offset<IGazePerformance>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGazeNextPointAfterInteract.EndIGazeNextPointAfterInteract(builder);
 		}
 
-		// Token: 0x06022AAB RID: 141995 RVA: 0x004CE0BE File Offset: 0x004CC2BE
+		// Token: 0x06024B45 RID: 150341 RVA: 0x0050ABEA File Offset: 0x00508DEA
 		public static void StartIGazeNextPointAfterInteract(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06022AAC RID: 141996 RVA: 0x004CE0C7 File Offset: 0x004CC2C7
+		// Token: 0x06024B46 RID: 150342 RVA: 0x0050ABF3 File Offset: 0x00508DF3
 		public static void AddGazeCondition(FlatBufferBuilder builder, Offset<IGazeCondition> gazeConditionOffset)
 		{
 			builder.AddOffset(0, gazeConditionOffset.Value, 0);
 		}
 
-		// Token: 0x06022AAD RID: 141997 RVA: 0x004CE0D7 File Offset: 0x004CC2D7
+		// Token: 0x06024B47 RID: 150343 RVA: 0x0050AC03 File Offset: 0x00508E03
 		public static void AddGazePerformance(FlatBufferBuilder builder, Offset<IGazePerformance> gazePerformanceOffset)
 		{
 			builder.AddOffset(1, gazePerformanceOffset.Value, 0);
 		}
 
-		// Token: 0x06022AAE RID: 141998 RVA: 0x004CE0E7 File Offset: 0x004CC2E7
+		// Token: 0x06024B48 RID: 150344 RVA: 0x0050AC13 File Offset: 0x00508E13
 		public static Offset<IGazeNextPointAfterInteract> EndIGazeNextPointAfterInteract(FlatBufferBuilder builder)
 		{
 			return new Offset<IGazeNextPointAfterInteract>(builder.EndTable());
 		}
 
-		// Token: 0x06022AAF RID: 141999 RVA: 0x004CE0F4 File Offset: 0x004CC2F4
+		// Token: 0x06024B49 RID: 150345 RVA: 0x0050AC20 File Offset: 0x00508E20
 		public IGazeNextPointAfterInteractT UnPack()
 		{
 			IGazeNextPointAfterInteractT gazeNextPointAfterInteractT = new IGazeNextPointAfterInteractT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return gazeNextPointAfterInteractT;
 		}
 
-		// Token: 0x06022AB0 RID: 142000 RVA: 0x004CE110 File Offset: 0x004CC310
+		// Token: 0x06024B4A RID: 150346 RVA: 0x0050AC3C File Offset: 0x00508E3C
 		public void UnPackTo(IGazeNextPointAfterInteractT _o)
 		{
 			_o.GazeCondition = ((this.GazeCondition != null) ? this.GazeCondition.Value.UnPack() : null);
 			_o.GazePerformance = ((this.GazePerformance != null) ? this.GazePerformance.Value.UnPack() : null);
 		}
 
-		// Token: 0x06022AB1 RID: 142001 RVA: 0x004CE17C File Offset: 0x004CC37C
+		// Token: 0x06024B4B RID: 150347 RVA: 0x0050ACA8 File Offset: 0x00508EA8
 		public static Offset<IGazeNextPointAfterInteract> Pack(FlatBufferBuilder builder, IGazeNextPointAfterInteractT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGazeNextPointAfterInteract.CreateIGazeNextPointAfterInteract(builder, gazeConditionOffset, gazePerformanceOffset);
 		}
 
-		// Token: 0x0400E494 RID: 58516
+		// Token: 0x0400F0C0 RID: 61632
 		private Table __p;
 	}
 }

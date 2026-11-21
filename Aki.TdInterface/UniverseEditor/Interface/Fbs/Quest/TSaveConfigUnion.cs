@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004312 RID: 17170
+	// Token: 0x02004771 RID: 18289
 	public class TSaveConfigUnion
 	{
-		// Token: 0x1700796E RID: 31086
-		// (get) Token: 0x06019761 RID: 104289 RVA: 0x003A61DA File Offset: 0x003A43DA
-		// (set) Token: 0x06019762 RID: 104290 RVA: 0x003A61E2 File Offset: 0x003A43E2
+		// Token: 0x17007FA1 RID: 32673
+		// (get) Token: 0x0601AEE3 RID: 110307 RVA: 0x003D1B0A File Offset: 0x003CFD0A
+		// (set) Token: 0x0601AEE4 RID: 110308 RVA: 0x003D1B12 File Offset: 0x003CFD12
 		public TSaveConfig Type { get; set; }
 
-		// Token: 0x1700796F RID: 31087
-		// (get) Token: 0x06019763 RID: 104291 RVA: 0x003A61EB File Offset: 0x003A43EB
-		// (set) Token: 0x06019764 RID: 104292 RVA: 0x003A61F3 File Offset: 0x003A43F3
+		// Token: 0x17007FA2 RID: 32674
+		// (get) Token: 0x0601AEE5 RID: 110309 RVA: 0x003D1B1B File Offset: 0x003CFD1B
+		// (set) Token: 0x0601AEE6 RID: 110310 RVA: 0x003D1B23 File Offset: 0x003CFD23
 		public object Value { get; set; }
 
-		// Token: 0x06019765 RID: 104293 RVA: 0x003A61FC File Offset: 0x003A43FC
+		// Token: 0x0601AEE7 RID: 110311 RVA: 0x003D1B2C File Offset: 0x003CFD2C
 		public TSaveConfigUnion()
 		{
 			this.Type = TSaveConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06019766 RID: 104294 RVA: 0x003A6212 File Offset: 0x003A4412
+		// Token: 0x0601AEE8 RID: 110312 RVA: 0x003D1B42 File Offset: 0x003CFD42
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06019767 RID: 104295 RVA: 0x003A6224 File Offset: 0x003A4424
+		// Token: 0x0601AEE9 RID: 110313 RVA: 0x003D1B54 File Offset: 0x003CFD54
 		public ISaveNewT AsISaveNew()
 		{
 			return this.As<ISaveNewT>();
 		}
 
-		// Token: 0x06019768 RID: 104296 RVA: 0x003A622C File Offset: 0x003A442C
+		// Token: 0x0601AEEA RID: 110314 RVA: 0x003D1B5C File Offset: 0x003CFD5C
 		public static TSaveConfigUnion FromISaveNew(ISaveNewT _isavenew)
 		{
 			return new TSaveConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019769 RID: 104297 RVA: 0x003A6241 File Offset: 0x003A4441
+		// Token: 0x0601AEEB RID: 110315 RVA: 0x003D1B71 File Offset: 0x003CFD71
 		public ISavePointT AsISavePoint()
 		{
 			return this.As<ISavePointT>();
 		}
 
-		// Token: 0x0601976A RID: 104298 RVA: 0x003A6249 File Offset: 0x003A4449
+		// Token: 0x0601AEEC RID: 110316 RVA: 0x003D1B79 File Offset: 0x003CFD79
 		public static TSaveConfigUnion FromISavePoint(ISavePointT _isavepoint)
 		{
 			return new TSaveConfigUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601976B RID: 104299 RVA: 0x003A6260 File Offset: 0x003A4460
+		// Token: 0x0601AEED RID: 110317 RVA: 0x003D1B90 File Offset: 0x003CFD90
 		public static int Pack(FlatBufferBuilder builder, TSaveConfigUnion _o)
 		{
 			TSaveConfig type = _o.Type;

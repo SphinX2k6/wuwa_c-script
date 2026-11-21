@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003B0 RID: 944
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003FB RID: 1019
 	public class IFollowTrackEndType
 	{
-		// Token: 0x060012D5 RID: 4821 RVA: 0x0003DC4C File Offset: 0x0003BE4C
+		// Token: 0x0600142B RID: 5163 RVA: 0x000411EC File Offset: 0x0003F3EC
 		private IFollowTrackEndType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060012D6 RID: 4822 RVA: 0x0003DC84 File Offset: 0x0003BE84
+		// Token: 0x0600142C RID: 5164 RVA: 0x00041224 File Offset: 0x0003F424
 		public static IFollowTrackEndType Create([Nullable(2)] IFollowTrackEndType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012D7 RID: 4823 RVA: 0x0003DC97 File Offset: 0x0003BE97
+		// Token: 0x0600142D RID: 5165 RVA: 0x00041237 File Offset: 0x0003F437
 		public static IFollowTrackEndType CreateFromSetValue([Nullable(2)] IFollowTrackEndType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012D8 RID: 4824 RVA: 0x0003DCAA File Offset: 0x0003BEAA
+		// Token: 0x0600142E RID: 5166 RVA: 0x0004124A File Offset: 0x0003F44A
 		public IFollowTrackEndType_SetValue ToSetValue()
 		{
 			return new IFollowTrackEndType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000540 RID: 1344
-		// (get) Token: 0x060012D9 RID: 4825 RVA: 0x0003DCBD File Offset: 0x0003BEBD
-		// (set) Token: 0x060012DA RID: 4826 RVA: 0x0003DCE8 File Offset: 0x0003BEE8
+		// Token: 0x1700059A RID: 1434
+		// (get) Token: 0x0600142F RID: 5167 RVA: 0x0004125D File Offset: 0x0003F45D
+		// (set) Token: 0x06001430 RID: 5168 RVA: 0x00041288 File Offset: 0x0003F488
 		public virtual EFollowTrackEndType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F17 RID: 3863
+		// Token: 0x04001018 RID: 4120
 		[Nullable(2)]
 		protected IFollowTrackEndType FbInstance;
 
-		// Token: 0x04000F18 RID: 3864
+		// Token: 0x04001019 RID: 4121
 		[Nullable(2)]
 		protected IFollowTrackEndType_SetValue PocoInterface;
 	}

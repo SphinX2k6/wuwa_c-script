@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000841 RID: 2113
+	// Token: 0x02000182 RID: 386
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.AnimSlotGroup")]
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class FAnimSlotGroup : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060071DD RID: 29149 RVA: 0x000A3140 File Offset: 0x000A1340
+		// Token: 0x060018D0 RID: 6352 RVA: 0x000259CC File Offset: 0x00023BCC
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FAnimSlotGroup._ScriptStructPtr != 0) ? FAnimSlotGroup._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.AnimSlotGroup", ref FAnimSlotGroup._ScriptStructPtr);
 		}
 
-		// Token: 0x17001ACD RID: 6861
-		// (get) Token: 0x060071DE RID: 29150 RVA: 0x000A3164 File Offset: 0x000A1364
-		// (set) Token: 0x060071DF RID: 29151 RVA: 0x000A3178 File Offset: 0x000A1378
+		// Token: 0x170002C0 RID: 704
+		// (get) Token: 0x060018D1 RID: 6353 RVA: 0x000259F0 File Offset: 0x00023BF0
+		// (set) Token: 0x060018D2 RID: 6354 RVA: 0x00025A04 File Offset: 0x00023C04
 		public unsafe FName GroupName
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001ACE RID: 6862
-		// (get) Token: 0x060071E0 RID: 29152 RVA: 0x000A3190 File Offset: 0x000A1390
-		// (set) Token: 0x060071E1 RID: 29153 RVA: 0x000A31D3 File Offset: 0x000A13D3
+		// Token: 0x170002C1 RID: 705
+		// (get) Token: 0x060018D3 RID: 6355 RVA: 0x00025A1C File Offset: 0x00023C1C
+		// (set) Token: 0x060018D4 RID: 6356 RVA: 0x00025A5F File Offset: 0x00023C5F
 		public TArray<FName> SlotNames
 		{
 			get
@@ -54,60 +54,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060071E2 RID: 29154 RVA: 0x000A31E1 File Offset: 0x000A13E1
+		// Token: 0x060018D5 RID: 6357 RVA: 0x00025A6D File Offset: 0x00023C6D
 		public FAnimSlotGroup()
 		{
 		}
 
-		// Token: 0x060071E3 RID: 29155 RVA: 0x000A31E9 File Offset: 0x000A13E9
-		public FAnimSlotGroup(FName GroupName, TArray<FName> SlotNames)
-		{
-			this.GroupName = GroupName;
-			this.SlotNames = SlotNames;
-		}
-
-		// Token: 0x060071E4 RID: 29156 RVA: 0x000A31FF File Offset: 0x000A13FF
+		// Token: 0x060018D6 RID: 6358 RVA: 0x00025A75 File Offset: 0x00023C75
 		protected override IntPtr GetUStructPtr()
 		{
 			return FAnimSlotGroup.StaticStruct();
 		}
 
-		// Token: 0x060071E5 RID: 29157 RVA: 0x000A320B File Offset: 0x000A140B
+		// Token: 0x060018D7 RID: 6359 RVA: 0x00025A81 File Offset: 0x00023C81
 		[NullableContext(2)]
 		public FAnimSlotGroup(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060071E6 RID: 29158 RVA: 0x000A3215 File Offset: 0x000A1415
+		// Token: 0x060018D8 RID: 6360 RVA: 0x00025A8B File Offset: 0x00023C8B
 		public FAnimSlotGroup(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060071E7 RID: 29159 RVA: 0x000A3220 File Offset: 0x000A1420
+		// Token: 0x060018D9 RID: 6361 RVA: 0x00025A96 File Offset: 0x00023C96
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FAnimSlotGroup(Pointer, false, true);
 		}
 
-		// Token: 0x060071E8 RID: 29160 RVA: 0x000A322A File Offset: 0x000A142A
+		// Token: 0x060018DA RID: 6362 RVA: 0x00025AA0 File Offset: 0x00023CA0
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FAnimSlotGroup(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040036AF RID: 13999
+		// Token: 0x040007E0 RID: 2016
 		public const string __ObjectPath = "/Script/Engine.AnimSlotGroup";
 
-		// Token: 0x040036B0 RID: 14000
+		// Token: 0x040007E1 RID: 2017
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040036B1 RID: 14001
+		// Token: 0x040007E2 RID: 2018
 		internal static int __PropertyOffset_GroupName;
 
-		// Token: 0x040036B2 RID: 14002
+		// Token: 0x040007E3 RID: 2019
 		internal static int __PropertyOffset_SlotNames;
 
-		// Token: 0x040036B3 RID: 14003
+		// Token: 0x040007E4 RID: 2020
 		[Nullable(2)]
 		private TArray<FName> _SlotNames;
 	}

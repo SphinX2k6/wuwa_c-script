@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006FA8 RID: 28584
+	// Token: 0x02006129 RID: 24873
 	public class LevelFlowWaitLoadingDone : LevelFlowActionBase
 	{
-		// Token: 0x0604579D RID: 284573 RVA: 0x0113C3C0 File Offset: 0x0113A5C0
+		// Token: 0x0603B94B RID: 244043 RVA: 0x010E61C4 File Offset: 0x010E43C4
 		protected override void OnExecute()
 		{
 			if (!LoadingModel.Instance.IsLoading)
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x0604579E RID: 284574 RVA: 0x0113C3D5 File Offset: 0x0113A5D5
+		// Token: 0x0603B94C RID: 244044 RVA: 0x010E61D9 File Offset: 0x010E43D9
 		protected override void OnTick(float delta)
 		{
 			if (!LoadingModel.Instance.IsLoading)

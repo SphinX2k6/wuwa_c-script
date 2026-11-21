@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EF1 RID: 3825
+	// Token: 0x02001007 RID: 4103
 	public class ICheckPlayerBattleAttribute_SetValue
 	{
-		// Token: 0x04003323 RID: 13091
+		// Token: 0x04003630 RID: 13872
 		public ETargetBattleAttribute Type;
 
-		// Token: 0x04003324 RID: 13092
-		[Nullable(1)]
+		// Token: 0x04003631 RID: 13873
 		public IHealthAttributeToTarget Option;
 	}
 }

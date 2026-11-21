@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B2F RID: 2863
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000BFD RID: 3069
 	public class IMatchSequence
 	{
-		// Token: 0x0600421F RID: 16927 RVA: 0x000A970E File Offset: 0x000A790E
+		// Token: 0x06004678 RID: 18040 RVA: 0x000B37D2 File Offset: 0x000B19D2
 		public static IMatchSequence Create(IMatchSequence? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700117E RID: 4478
-		// (get) Token: 0x06004220 RID: 16928 RVA: 0x000A972D File Offset: 0x000A792D
+		// Token: 0x17001279 RID: 4729
+		// (get) Token: 0x06004679 RID: 18041 RVA: 0x000B37F1 File Offset: 0x000B19F1
 		public virtual EItemFoundationMatchType FoundationType
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700117F RID: 4479
-		// (get) Token: 0x06004221 RID: 16929 RVA: 0x000A973A File Offset: 0x000A793A
+		// Token: 0x1700127A RID: 4730
+		// (get) Token: 0x0600467A RID: 18042 RVA: 0x000B37FE File Offset: 0x000B19FE
 		public virtual VectorInfo MatchPoint
 		{
 			get
@@ -50,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001180 RID: 4480
-		// (get) Token: 0x06004222 RID: 16930 RVA: 0x000A976E File Offset: 0x000A796E
+		// Token: 0x1700127B RID: 4731
+		// (get) Token: 0x0600467B RID: 18043 RVA: 0x000B3832 File Offset: 0x000B1A32
 		[Nullable(2)]
 		public virtual string MatchSequence
 		{
@@ -62,14 +60,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400254C RID: 9548
+		// Token: 0x04002794 RID: 10132
 		private IMatchSequence Instance;
 
-		// Token: 0x0400254D RID: 9549
+		// Token: 0x04002795 RID: 10133
 		[Nullable(2)]
 		private VectorInfo _MatchPointCache;
 
-		// Token: 0x0400254E RID: 9550
+		// Token: 0x04002796 RID: 10134
 		private bool _MatchPointInited;
 	}
 }

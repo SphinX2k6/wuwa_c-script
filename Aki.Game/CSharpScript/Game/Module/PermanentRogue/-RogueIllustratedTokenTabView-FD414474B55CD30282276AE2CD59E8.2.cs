@@ -2,30 +2,30 @@
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005321 RID: 21281
+	// Token: 0x020042F1 RID: 17137
 	internal enum <RogueIllustratedTokenTabView>FD414474B55CD30282276AE2CD59E8BA5BEFFE8F74D0D4302CE769AFE958EDEA8__EComponentDefine
 	{
-		// Token: 0x0401CC43 RID: 117827
+		// Token: 0x04017679 RID: 95865
 		LoopScroll,
-		// Token: 0x0401CC44 RID: 117828
+		// Token: 0x0401767A RID: 95866
 		DetailInfo,
-		// Token: 0x0401CC45 RID: 117829
+		// Token: 0x0401767B RID: 95867
 		BtnRewardAll,
-		// Token: 0x0401CC46 RID: 117830
+		// Token: 0x0401767C RID: 95868
 		TxtProgress,
-		// Token: 0x0401CC47 RID: 117831
+		// Token: 0x0401767D RID: 95869
 		RewardItemView,
-		// Token: 0x0401CC48 RID: 117832
+		// Token: 0x0401767E RID: 95870
 		PanelReward,
-		// Token: 0x0401CC49 RID: 117833
+		// Token: 0x0401767F RID: 95871
 		BtnReward,
-		// Token: 0x0401CC4A RID: 117834
+		// Token: 0x04017680 RID: 95872
 		TokenItem,
-		// Token: 0x0401CC4B RID: 117835
+		// Token: 0x04017681 RID: 95873
 		TxtReward,
-		// Token: 0x0401CC4C RID: 117836
+		// Token: 0x04017682 RID: 95874
 		TexRewardBg,
-		// Token: 0x0401CC4D RID: 117837
+		// Token: 0x04017683 RID: 95875
 		Niagara
 	}
 }

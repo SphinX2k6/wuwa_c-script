@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -9,13 +8,47 @@ using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.LevelGamePlay.LevelConditions;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001DC3 RID: 7619
+// Token: 0x02001285 RID: 4741
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class GuideBaseView : UiViewBase
 {
-	// Token: 0x17001276 RID: 4726
-	// (get) Token: 0x0600E786 RID: 59270 RVA: 0x00369278 File Offset: 0x00367478
+	// Token: 0x0600BBA4 RID: 48036 RVA: 0x00374EF0 File Offset: 0x003730F0
+	private static HashSet<EUiViewName> BuildGuideConflictView()
+	{
+		HashSet<EUiViewName> hashSet = new HashSet<EUiViewName>
+		{
+			EUiViewName.MonthCardRewardView,
+			EUiViewName.QuestRewardView,
+			EUiViewName.ExploreRewardView,
+			EUiViewName.CommonRewardView,
+			EUiViewName.ItemTipsView,
+			EUiViewName.ExploreDetailView,
+			EUiViewName.TowerUnlockView,
+			EUiViewName.TowerOverLockUnlockView,
+			EUiViewName.PowerView,
+			EUiViewName.ActivityRewardPopUpView,
+			EUiViewName.RoleGenderChangeView,
+			EUiViewName.ConfirmBoxView,
+			EUiViewName.CdKeyInputView,
+			EUiViewName.CompositeRewardView,
+			EUiViewName.LogUploadView,
+			EUiViewName.RacingBetsSuccessTip,
+			EUiViewName.RacingBetsFailTip,
+			EUiViewName.DangoAbyssInfoView,
+			EUiViewName.PhantomArenaStartView,
+			EUiViewName.TutorialPopView,
+			EUiViewName.ResolutionListView
+		};
+		foreach (EUiViewName item in LoadingDefine.loadingViewList)
+		{
+			hashSet.Add(item);
+		}
+		return hashSet;
+	}
+
+	// Token: 0x170012A0 RID: 4768
+	// (get) Token: 0x0600BBA5 RID: 48037 RVA: 0x00375024 File Offset: 0x00373224
 	public float TotalDuration
 	{
 		get
@@ -28,12 +61,12 @@ public abstract class GuideBaseView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E787 RID: 59271 RVA: 0x003692A8 File Offset: 0x003674A8
+	// Token: 0x0600BBA6 RID: 48038 RVA: 0x00375053 File Offset: 0x00373253
 	public GuideBaseView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E788 RID: 59272 RVA: 0x003693E0 File Offset: 0x003675E0
+	// Token: 0x0600BBA7 RID: 48039 RVA: 0x00375074 File Offset: 0x00373274
 	private void CheckCondition()
 	{
 		GuideStep config = this.GuideStepInfo.Config;
@@ -55,7 +88,7 @@ public abstract class GuideBaseView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E789 RID: 59273 RVA: 0x00369464 File Offset: 0x00367664
+	// Token: 0x0600BBA8 RID: 48040 RVA: 0x003750F8 File Offset: 0x003732F8
 	protected bool CheckTickCondition()
 	{
 		int tickCondition = this.GuideStepInfo.Config.TickCondition;
@@ -70,21 +103,21 @@ public abstract class GuideBaseView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600E78A RID: 59274 RVA: 0x003694B8 File Offset: 0x003676B8
+	// Token: 0x0600BBA9 RID: 48041 RVA: 0x0037514C File Offset: 0x0037334C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.OnUiScreenRootVisibleChange, new Action<bool>(this.OnVisibleChanged));
 		this.OnGuideBaseViewAddEvent();
 	}
 
-	// Token: 0x0600E78B RID: 59275 RVA: 0x003694DC File Offset: 0x003676DC
+	// Token: 0x0600BBAA RID: 48042 RVA: 0x00375170 File Offset: 0x00373370
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnUiScreenRootVisibleChange, new Action<bool>(this.OnVisibleChanged));
 		this.OnGuideBaseViewRemoveEvent();
 	}
 
-	// Token: 0x0600E78C RID: 59276 RVA: 0x00369500 File Offset: 0x00367700
+	// Token: 0x0600BBAB RID: 48043 RVA: 0x00375194 File Offset: 0x00373394
 	private void OnVisibleChanged(bool isShow)
 	{
 		if (!base.GetActive())
@@ -99,7 +132,7 @@ public abstract class GuideBaseView : UiViewBase
 		this.OnAfterHide();
 	}
 
-	// Token: 0x0600E78D RID: 59277 RVA: 0x0036951C File Offset: 0x0036771C
+	// Token: 0x0600BBAC RID: 48044 RVA: 0x003751B0 File Offset: 0x003733B0
 	protected bool HasConflictView()
 	{
 		foreach (EUiViewName name in this.guideConflictView)
@@ -112,7 +145,7 @@ public abstract class GuideBaseView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x0600E78E RID: 59278 RVA: 0x0036957C File Offset: 0x0036777C
+	// Token: 0x0600BBAD RID: 48045 RVA: 0x00375210 File Offset: 0x00373410
 	public void DoCloseByFinished()
 	{
 		if (!this.IsFinished)
@@ -123,7 +156,7 @@ public abstract class GuideBaseView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E78F RID: 59279 RVA: 0x0036959C File Offset: 0x0036779C
+	// Token: 0x0600BBAE RID: 48046 RVA: 0x00375230 File Offset: 0x00373430
 	private void DoCloseWithMinShowDuration()
 	{
 		float remainMinShowDuration = this.RemainMinShowDuration;
@@ -138,7 +171,7 @@ public abstract class GuideBaseView : UiViewBase
 		}, remainMinShowDuration, null, null, true, 1f);
 	}
 
-	// Token: 0x0600E790 RID: 59280 RVA: 0x003695DF File Offset: 0x003677DF
+	// Token: 0x0600BBAF RID: 48047 RVA: 0x00375273 File Offset: 0x00373473
 	private void DoClose()
 	{
 		if (this.TimeTicker != null)
@@ -149,7 +182,7 @@ public abstract class GuideBaseView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600E791 RID: 59281 RVA: 0x00369604 File Offset: 0x00367804
+	// Token: 0x0600BBB0 RID: 48048 RVA: 0x00375298 File Offset: 0x00373498
 	protected unsafe void BindInput(List<string> rawInputEnums, List<string> inputEnums, TInputHandle<float> callback)
 	{
 		if (rawInputEnums.Count != inputEnums.Count)
@@ -188,7 +221,7 @@ public abstract class GuideBaseView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E792 RID: 59282 RVA: 0x00369736 File Offset: 0x00367936
+	// Token: 0x0600BBB1 RID: 48049 RVA: 0x003753CA File Offset: 0x003735CA
 	private void OnActionCall(string name, InputDistributeDefine.EActionType value, InputIdentification inputIdentification)
 	{
 		TInputHandle<float> inputCallback = this.InputCallback;
@@ -199,7 +232,7 @@ public abstract class GuideBaseView : UiViewBase
 		inputCallback(name, (float)value, inputIdentification);
 	}
 
-	// Token: 0x0600E793 RID: 59283 RVA: 0x0036974C File Offset: 0x0036794C
+	// Token: 0x0600BBB2 RID: 48050 RVA: 0x003753E0 File Offset: 0x003735E0
 	private void OnAxisCall(string name, float value, InputIdentification inputIdentification)
 	{
 		TInputHandle<float> inputCallback = this.InputCallback;
@@ -210,7 +243,7 @@ public abstract class GuideBaseView : UiViewBase
 		inputCallback(name, value, inputIdentification);
 	}
 
-	// Token: 0x0600E794 RID: 59284 RVA: 0x00369764 File Offset: 0x00367964
+	// Token: 0x0600BBB3 RID: 48051 RVA: 0x003753F8 File Offset: 0x003735F8
 	protected bool IsAllCombineInputPass()
 	{
 		bool flag = true;
@@ -230,7 +263,7 @@ public abstract class GuideBaseView : UiViewBase
 		return flag;
 	}
 
-	// Token: 0x0600E795 RID: 59285 RVA: 0x003697FC File Offset: 0x003679FC
+	// Token: 0x0600BBB4 RID: 48052 RVA: 0x00375490 File Offset: 0x00373690
 	protected unsafe void UnbindInput(string[] rawInputEnums, string[] inputEnums)
 	{
 		if (rawInputEnums.Length != inputEnums.Length)
@@ -268,7 +301,7 @@ public abstract class GuideBaseView : UiViewBase
 		this.InputCallback = null;
 	}
 
-	// Token: 0x0600E796 RID: 59286 RVA: 0x003698F4 File Offset: 0x00367AF4
+	// Token: 0x0600BBB5 RID: 48053 RVA: 0x00375588 File Offset: 0x00373788
 	protected void OnFinishConditionOk([Nullable(new byte[]
 	{
 		2,
@@ -282,7 +315,7 @@ public abstract class GuideBaseView : UiViewBase
 		this.DoCloseByFinished();
 	}
 
-	// Token: 0x0600E797 RID: 59287 RVA: 0x00369905 File Offset: 0x00367B05
+	// Token: 0x0600BBB6 RID: 48054 RVA: 0x00375599 File Offset: 0x00373799
 	protected void OnFinishConditionFail([Nullable(new byte[]
 	{
 		2,
@@ -296,7 +329,7 @@ public abstract class GuideBaseView : UiViewBase
 		this.DoCloseWithMinShowDuration();
 	}
 
-	// Token: 0x0600E798 RID: 59288 RVA: 0x00369918 File Offset: 0x00367B18
+	// Token: 0x0600BBB7 RID: 48055 RVA: 0x003755AC File Offset: 0x003737AC
 	protected override void OnBeforeCreate()
 	{
 		this.IsConditionRegistered = false;
@@ -308,14 +341,14 @@ public abstract class GuideBaseView : UiViewBase
 		this.OnBeforeGuideBaseViewCreate();
 	}
 
-	// Token: 0x0600E799 RID: 59289 RVA: 0x0036997B File Offset: 0x00367B7B
+	// Token: 0x0600BBB8 RID: 48056 RVA: 0x0037560F File Offset: 0x0037380F
 	protected override void OnStart()
 	{
 		this.OnGuideBaseViewStart();
 		this.TimeTicker = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnTick), 20f, 1f, null, null, true);
 	}
 
-	// Token: 0x0600E79A RID: 59290 RVA: 0x003699AC File Offset: 0x00367BAC
+	// Token: 0x0600BBB9 RID: 48057 RVA: 0x00375640 File Offset: 0x00373840
 	protected override void OnAfterShow()
 	{
 		GuideStep config = this.GuideStepInfo.Config;
@@ -333,7 +366,7 @@ public abstract class GuideBaseView : UiViewBase
 		this.OnGuideViewAfterShow();
 	}
 
-	// Token: 0x0600E79B RID: 59291 RVA: 0x00369A30 File Offset: 0x00367C30
+	// Token: 0x0600BBBA RID: 48058 RVA: 0x003756C4 File Offset: 0x003738C4
 	protected override void OnAfterHide()
 	{
 		if (this.GuideStepInfo.Config.TimeScale < 1f && !GameModeModel.Instance.IsMulti)
@@ -345,7 +378,7 @@ public abstract class GuideBaseView : UiViewBase
 		this.OnGuideBaseViewAfterHide();
 	}
 
-	// Token: 0x0600E79C RID: 59292 RVA: 0x00369A88 File Offset: 0x00367C88
+	// Token: 0x0600BBBB RID: 48059 RVA: 0x0037571C File Offset: 0x0037391C
 	private void RegisterFinishCondition()
 	{
 		if (this.IsConditionRegistered)
@@ -372,7 +405,7 @@ public abstract class GuideBaseView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E79D RID: 59293 RVA: 0x00369B20 File Offset: 0x00367D20
+	// Token: 0x0600BBBC RID: 48060 RVA: 0x003757B4 File Offset: 0x003739B4
 	private void UnRegisterFinishCondition()
 	{
 		if (!this.IsConditionRegistered)
@@ -395,7 +428,7 @@ public abstract class GuideBaseView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E79E RID: 59294 RVA: 0x00369BA8 File Offset: 0x00367DA8
+	// Token: 0x0600BBBD RID: 48061 RVA: 0x0037583C File Offset: 0x00373A3C
 	protected override void OnBeforeDestroy()
 	{
 		this.TickConditionDirtyFlag = false;
@@ -418,7 +451,7 @@ public abstract class GuideBaseView : UiViewBase
 		guideStepInfo.SwitchState(EGuideStepState.Break);
 	}
 
-	// Token: 0x0600E79F RID: 59295 RVA: 0x00369C04 File Offset: 0x00367E04
+	// Token: 0x0600BBBE RID: 48062 RVA: 0x00375898 File Offset: 0x00373A98
 	public void OnTick(float delta)
 	{
 		if (LoadingModel.Instance.IsLoadingView)
@@ -460,138 +493,115 @@ public abstract class GuideBaseView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E7A0 RID: 59296 RVA: 0x00369CBD File Offset: 0x00367EBD
+	// Token: 0x0600BBBF RID: 48063 RVA: 0x00375951 File Offset: 0x00373B51
 	private void CloseWhileDurationEnd()
 	{
 		this.DoClose();
 	}
 
-	// Token: 0x0600E7A1 RID: 59297 RVA: 0x00369CC5 File Offset: 0x00367EC5
+	// Token: 0x0600BBC0 RID: 48064 RVA: 0x00375959 File Offset: 0x00373B59
 	protected virtual void OnBeforeGuideBaseViewCreate()
 	{
 	}
 
-	// Token: 0x0600E7A2 RID: 59298 RVA: 0x00369CC7 File Offset: 0x00367EC7
+	// Token: 0x0600BBC1 RID: 48065 RVA: 0x0037595B File Offset: 0x00373B5B
 	protected virtual void OnGuideBaseViewStart()
 	{
 	}
 
-	// Token: 0x0600E7A3 RID: 59299 RVA: 0x00369CC9 File Offset: 0x00367EC9
+	// Token: 0x0600BBC2 RID: 48066 RVA: 0x0037595D File Offset: 0x00373B5D
 	protected virtual void OnGuideBaseViewAfterHide()
 	{
 	}
 
-	// Token: 0x0600E7A4 RID: 59300 RVA: 0x00369CCB File Offset: 0x00367ECB
+	// Token: 0x0600BBC3 RID: 48067 RVA: 0x0037595F File Offset: 0x00373B5F
 	protected virtual void OnGuideViewAfterShow()
 	{
 	}
 
-	// Token: 0x0600E7A5 RID: 59301 RVA: 0x00369CCD File Offset: 0x00367ECD
+	// Token: 0x0600BBC4 RID: 48068 RVA: 0x00375961 File Offset: 0x00373B61
 	protected virtual void OnGuideBaseViewDestroy()
 	{
 	}
 
-	// Token: 0x0600E7A6 RID: 59302 RVA: 0x00369CCF File Offset: 0x00367ECF
+	// Token: 0x0600BBC5 RID: 48069 RVA: 0x00375963 File Offset: 0x00373B63
 	protected virtual void OnGuideBaseViewAddEvent()
 	{
 	}
 
-	// Token: 0x0600E7A7 RID: 59303 RVA: 0x00369CD1 File Offset: 0x00367ED1
+	// Token: 0x0600BBC6 RID: 48070 RVA: 0x00375965 File Offset: 0x00373B65
 	protected virtual void OnGuideBaseViewRemoveEvent()
 	{
 	}
 
-	// Token: 0x0600E7A8 RID: 59304 RVA: 0x00369CD3 File Offset: 0x00367ED3
+	// Token: 0x0600BBC7 RID: 48071 RVA: 0x00375967 File Offset: 0x00373B67
 	protected virtual void OnGuideBaseViewTick(float delta)
 	{
 	}
 
-	// Token: 0x0600E7A9 RID: 59305 RVA: 0x00369CD5 File Offset: 0x00367ED5
+	// Token: 0x0600BBC8 RID: 48072 RVA: 0x00375969 File Offset: 0x00373B69
 	protected virtual void OnDurationChange(float remainDuration)
 	{
 	}
 
-	// Token: 0x0600E7AA RID: 59306 RVA: 0x00369CD7 File Offset: 0x00367ED7
+	// Token: 0x0600BBC9 RID: 48073 RVA: 0x0037596B File Offset: 0x00373B6B
 	protected virtual void OnGuideViewCloseWhenFinish()
 	{
 	}
 
-	// Token: 0x0600E7AB RID: 59307 RVA: 0x00369CD9 File Offset: 0x00367ED9
+	// Token: 0x0600BBCA RID: 48074 RVA: 0x0037596D File Offset: 0x00373B6D
 	protected virtual bool OnCheckBaseViewFinishConditionOk()
 	{
 		return true;
 	}
 
-	// Token: 0x0600E7AC RID: 59308 RVA: 0x00369CDC File Offset: 0x00367EDC
+	// Token: 0x0600BBCB RID: 48075 RVA: 0x00375970 File Offset: 0x00373B70
 	protected virtual bool OnCheckBaseViewFinishConditionFail()
 	{
 		return true;
 	}
 
-	// Token: 0x04006B18 RID: 27416
-	private HashSet<EUiViewName> guideConflictView = new HashSet<EUiViewName>
-	{
-		EUiViewName.MonthCardRewardView,
-		EUiViewName.QuestRewardView,
-		EUiViewName.ExploreRewardView,
-		EUiViewName.CommonRewardView,
-		EUiViewName.ItemTipsView,
-		EUiViewName.ExploreDetailView,
-		EUiViewName.TowerUnlockView,
-		EUiViewName.TowerOverLockUnlockView,
-		EUiViewName.PowerView,
-		EUiViewName.ActivityRewardPopUpView,
-		EUiViewName.RoleGenderChangeView,
-		EUiViewName.ConfirmBoxView,
-		EUiViewName.CdKeyInputView,
-		EUiViewName.CompositeRewardView,
-		EUiViewName.LogUploadView,
-		EUiViewName.RacingBetsSuccessTip,
-		EUiViewName.RacingBetsFailTip,
-		EUiViewName.DangoAbyssInfoView,
-		EUiViewName.PhantomArenaStartView,
-		EUiViewName.TutorialPopView,
-		EUiViewName.ResolutionListView
-	}.Concat(LoadingDefine.loadingViewList).ToHashSet<EUiViewName>();
+	// Token: 0x04006BF9 RID: 27641
+	private HashSet<EUiViewName> guideConflictView = GuideBaseView.BuildGuideConflictView();
 
-	// Token: 0x04006B19 RID: 27417
+	// Token: 0x04006BFA RID: 27642
 	public bool IgnoreState;
 
-	// Token: 0x04006B1A RID: 27418
+	// Token: 0x04006BFB RID: 27643
 	protected bool IsFinished;
 
-	// Token: 0x04006B1B RID: 27419
+	// Token: 0x04006BFC RID: 27644
 	[Nullable(2)]
 	protected GuideStepInfo GuideStepInfo;
 
-	// Token: 0x04006B1C RID: 27420
+	// Token: 0x04006BFD RID: 27645
 	protected readonly Dictionary<string, float> CombineInputMap = new Dictionary<string, float>();
 
-	// Token: 0x04006B1D RID: 27421
+	// Token: 0x04006BFE RID: 27646
 	protected float RemainDuration;
 
-	// Token: 0x04006B1E RID: 27422
+	// Token: 0x04006BFF RID: 27647
 	private float RemainMinShowDuration;
 
-	// Token: 0x04006B1F RID: 27423
+	// Token: 0x04006C00 RID: 27648
 	private bool IsConditionRegistered;
 
-	// Token: 0x04006B20 RID: 27424
+	// Token: 0x04006C01 RID: 27649
 	private bool TickConditionDirtyFlag;
 
-	// Token: 0x04006B21 RID: 27425
+	// Token: 0x04006C02 RID: 27650
 	[Nullable(2)]
 	private ConditionPassCallback SuccessConditionCallback;
 
-	// Token: 0x04006B22 RID: 27426
+	// Token: 0x04006C03 RID: 27651
 	[Nullable(2)]
 	private ConditionPassCallback FailureConditionCallback;
 
-	// Token: 0x04006B23 RID: 27427
+	// Token: 0x04006C04 RID: 27652
 	[Nullable(2)]
 	protected TimerHandle TimeTicker;
 
-	// Token: 0x04006B24 RID: 27428
+	// Token: 0x04006C05 RID: 27653
 	[Nullable(2)]
 	private TInputHandle<float> InputCallback;
 }

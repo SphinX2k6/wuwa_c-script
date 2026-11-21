@@ -5,13 +5,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C2C RID: 19500
+	// Token: 0x02003BDD RID: 15325
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class SheriffConfig : ConfigBase
 	{
-		// Token: 0x06032747 RID: 206663 RVA: 0x00BC1DB4 File Offset: 0x00BBFFB4
+		// Token: 0x060274FA RID: 161018 RVA: 0x00B069E4 File Offset: 0x00B04BE4
 		public SheriffAnomaly? GetAnomalyConfigById(int id)
 		{
 			SheriffAnomaly? config = ConfigSheriffAnomalyById.GetConfig(id, true);
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x06032748 RID: 206664 RVA: 0x00BC1E04 File Offset: 0x00BC0004
+		// Token: 0x060274FB RID: 161019 RVA: 0x00B06A34 File Offset: 0x00B04C34
 		public SheriffClue? GetClueConfigById(int id)
 		{
 			SheriffClue? config = ConfigSheriffClueById.GetConfig(id, true);
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x06032749 RID: 206665 RVA: 0x00BC1E54 File Offset: 0x00BC0054
+		// Token: 0x060274FC RID: 161020 RVA: 0x00B06A84 File Offset: 0x00B04C84
 		public SheriffAnomaly? GetAnomalyConfigByQuestionId(int questionId)
 		{
 			SheriffAnomaly? config = ConfigSheriffAnomalyByQuestionId.GetConfig(questionId, true);
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x0603274A RID: 206666 RVA: 0x00BC1EA4 File Offset: 0x00BC00A4
+		// Token: 0x060274FD RID: 161021 RVA: 0x00B06AD4 File Offset: 0x00B04CD4
 		public IReadOnlyList<SheriffClue> GetAllClueConfig()
 		{
 			IReadOnlyList<SheriffClue> configList = ConfigSheriffClueAll.GetConfigList(true);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return readOnlyList ?? new List<SheriffClue>();
 		}
 
-		// Token: 0x0603274B RID: 206667 RVA: 0x00BC1EE4 File Offset: 0x00BC00E4
+		// Token: 0x060274FE RID: 161022 RVA: 0x00B06B14 File Offset: 0x00B04D14
 		public SheriffCriminal? GetCriminalConfigById(int id)
 		{
 			SheriffCriminal? config = ConfigSheriffCriminalById.GetConfig(id, true);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x0603274C RID: 206668 RVA: 0x00BC1F34 File Offset: 0x00BC0134
+		// Token: 0x060274FF RID: 161023 RVA: 0x00B06B64 File Offset: 0x00B04D64
 		public SheriffCriminal? GetCriminalConfigByIdentityId(int identityId)
 		{
 			IReadOnlyList<SheriffCriminal> configList = ConfigSheriffCriminalByIdentityId.GetConfigList(identityId, true);
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return result;
 		}
 
-		// Token: 0x0603274D RID: 206669 RVA: 0x00BC1FA8 File Offset: 0x00BC01A8
+		// Token: 0x06027500 RID: 161024 RVA: 0x00B06BD8 File Offset: 0x00B04DD8
 		public SheriffEnding? GetEndingConfigById(int id)
 		{
 			SheriffEnding? config = ConfigSheriffEndingById.GetConfig(id, true);
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x0603274E RID: 206670 RVA: 0x00BC1FF8 File Offset: 0x00BC01F8
+		// Token: 0x06027501 RID: 161025 RVA: 0x00B06C28 File Offset: 0x00B04E28
 		public SheriffIdentity? GetIdentityConfigById(int id)
 		{
 			SheriffIdentity? config = ConfigSheriffIdentityById.GetConfig(id, true);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x0603274F RID: 206671 RVA: 0x00BC2048 File Offset: 0x00BC0248
+		// Token: 0x06027502 RID: 161026 RVA: 0x00B06C78 File Offset: 0x00B04E78
 		public SheriffProgress? GetProgressConfigById(int id)
 		{
 			SheriffProgress? config = ConfigSheriffProgressById.GetConfig(id, true);
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x06032750 RID: 206672 RVA: 0x00BC2098 File Offset: 0x00BC0298
+		// Token: 0x06027503 RID: 161027 RVA: 0x00B06CC8 File Offset: 0x00B04EC8
 		public SheriffZone? GetZoneConfigById(int id)
 		{
 			SheriffZone? config = ConfigSheriffZoneById.GetConfig(id, true);
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x06032751 RID: 206673 RVA: 0x00BC20E8 File Offset: 0x00BC02E8
+		// Token: 0x06027504 RID: 161028 RVA: 0x00B06D18 File Offset: 0x00B04F18
 		public IReadOnlyList<SheriffZone> GetZoneConfigAll()
 		{
 			IReadOnlyList<SheriffZone> configList = ConfigSheriffZoneAll.GetConfigList(true);
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return readOnlyList ?? new List<SheriffZone>();
 		}
 
-		// Token: 0x06032752 RID: 206674 RVA: 0x00BC2128 File Offset: 0x00BC0328
+		// Token: 0x06027505 RID: 161029 RVA: 0x00B06D58 File Offset: 0x00B04F58
 		public SheriffQuestionMainCsv? GetQuestionMainById(int id)
 		{
 			SheriffQuestionMainCsv? config = ConfigSheriffQuestionMainCsvById.GetConfig(id, true);
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x06032753 RID: 206675 RVA: 0x00BC2178 File Offset: 0x00BC0378
+		// Token: 0x06027506 RID: 161030 RVA: 0x00B06DA8 File Offset: 0x00B04FA8
 		public SheriffQuestionCsv? GetQuestionById(int id)
 		{
 			SheriffQuestionCsv? config = ConfigSheriffQuestionCsvById.GetConfig(id, true);
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x06032754 RID: 206676 RVA: 0x00BC21C8 File Offset: 0x00BC03C8
+		// Token: 0x06027507 RID: 161031 RVA: 0x00B06DF8 File Offset: 0x00B04FF8
 		public SheriffMap? GetMapConfigById(int id)
 		{
 			SheriffMap? config = ConfigSheriffMapById.GetConfig(id, true);
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x06032755 RID: 206677 RVA: 0x00BC2218 File Offset: 0x00BC0418
+		// Token: 0x06027508 RID: 161032 RVA: 0x00B06E48 File Offset: 0x00B05048
 		public SheriffAnomaly? GetAnomalyConfigByMarkId(int markId)
 		{
 			SheriffAnomaly? config = ConfigSheriffAnomalyByMarkId.GetConfig(markId, true);
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x06032756 RID: 206678 RVA: 0x00BC2258 File Offset: 0x00BC0458
+		// Token: 0x06027509 RID: 161033 RVA: 0x00B06E88 File Offset: 0x00B05088
 		public SheriffQuest? GetQuestConfigByMarkId(int markId)
 		{
 			SheriffQuest? config = ConfigSheriffQuestByMarkId.GetConfig(markId, true);
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x06032757 RID: 206679 RVA: 0x00BC2298 File Offset: 0x00BC0498
+		// Token: 0x0602750A RID: 161034 RVA: 0x00B06EC8 File Offset: 0x00B050C8
 		public SheriffQuest? GetQuestConfigByQuestId(int questId)
 		{
 			SheriffQuest? config = ConfigSheriffQuestByQuestId.GetConfig(questId, true);
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x06032758 RID: 206680 RVA: 0x00BC22D8 File Offset: 0x00BC04D8
+		// Token: 0x0602750B RID: 161035 RVA: 0x00B06F08 File Offset: 0x00B05108
 		[NullableContext(2)]
 		public IReadOnlyList<SheriffQuest> GetQuestConfigByZoneId(int zoneId)
 		{
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return configList;
 		}
 
-		// Token: 0x06032759 RID: 206681 RVA: 0x00BC2320 File Offset: 0x00BC0520
+		// Token: 0x0602750C RID: 161036 RVA: 0x00B06F50 File Offset: 0x00B05150
 		public SheriffAnomaly? GetAnomalyConfigByCriminalId(int criminalId)
 		{
 			SheriffAnomaly? config = ConfigSheriffAnomalyByCriminalId.GetConfig(criminalId, true);
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return config;
 		}
 
-		// Token: 0x0603275A RID: 206682 RVA: 0x00BC2360 File Offset: 0x00BC0560
+		// Token: 0x0602750D RID: 161037 RVA: 0x00B06F90 File Offset: 0x00B05190
 		public IReadOnlyList<SheriffProgress> GetProgressConfigListByAnomalyId(int anomalyId)
 		{
 			IReadOnlyList<SheriffProgress> configList = ConfigSheriffProgressBySheriffAnomalyId.GetConfigList(anomalyId, true);
@@ -306,8 +306,8 @@ namespace CSharpScript.Game.Module.Sheriff
 			return readOnlyList ?? new List<SheriffProgress>();
 		}
 
-		// Token: 0x17007C8E RID: 31886
-		// (get) Token: 0x0603275B RID: 206683 RVA: 0x00BC23B1 File Offset: 0x00BC05B1
+		// Token: 0x17005038 RID: 20536
+		// (get) Token: 0x0602750E RID: 161038 RVA: 0x00B06FE1 File Offset: 0x00B051E1
 		public static SheriffConfig Instance
 		{
 			get
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			}
 		}
 
-		// Token: 0x0603275C RID: 206684 RVA: 0x00BC23B8 File Offset: 0x00BC05B8
+		// Token: 0x0602750F RID: 161039 RVA: 0x00B06FE8 File Offset: 0x00B051E8
 		public static SheriffConfig GetOrCreateInstance()
 		{
 			if (SheriffConfig._Instance == null)
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return SheriffConfig._Instance;
 		}
 
-		// Token: 0x0603275D RID: 206685 RVA: 0x00BC23CC File Offset: 0x00BC05CC
+		// Token: 0x06027510 RID: 161040 RVA: 0x00B06FFC File Offset: 0x00B051FC
 		public static bool CreateInstance()
 		{
 			if (SheriffConfig._Instance != null)
@@ -337,24 +337,24 @@ namespace CSharpScript.Game.Module.Sheriff
 			return true;
 		}
 
-		// Token: 0x0603275E RID: 206686 RVA: 0x00BC23E2 File Offset: 0x00BC05E2
+		// Token: 0x06027511 RID: 161041 RVA: 0x00B07012 File Offset: 0x00B05212
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603275F RID: 206687 RVA: 0x00BC23E4 File Offset: 0x00BC05E4
+		// Token: 0x06027512 RID: 161042 RVA: 0x00B07014 File Offset: 0x00B05214
 		public static void ResetStaticDefaultValue()
 		{
 			SheriffConfig._Instance = null;
 		}
 
-		// Token: 0x06032760 RID: 206688 RVA: 0x00BC23EC File Offset: 0x00BC05EC
+		// Token: 0x06027513 RID: 161043 RVA: 0x00B0701C File Offset: 0x00B0521C
 		static SheriffConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SheriffConfig.CreateStaticDefaultValue), new Action(SheriffConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401ADBC RID: 110012
+		// Token: 0x04015719 RID: 87833
 		[Nullable(2)]
 		private static SheriffConfig _Instance;
 	}

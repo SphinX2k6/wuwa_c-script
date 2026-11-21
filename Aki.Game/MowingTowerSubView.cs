@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001393 RID: 5011
+// Token: 0x02000847 RID: 2119
 [NullableContext(2)]
 [Nullable(0)]
 public class MowingTowerSubView : ActivitySubViewBase
 {
-	// Token: 0x06008C60 RID: 35936 RVA: 0x001E1788 File Offset: 0x001DF988
+	// Token: 0x06005FFB RID: 24571 RVA: 0x001EA5DC File Offset: 0x001E87DC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,25 +33,25 @@ public class MowingTowerSubView : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06008C61 RID: 35937 RVA: 0x001E185D File Offset: 0x001DFA5D
+	// Token: 0x06005FFC RID: 24572 RVA: 0x001EA6B1 File Offset: 0x001E88B1
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.RefreshMowingTowerData, new Action(this.OnMowingTowerDataUpdate));
 	}
 
-	// Token: 0x06008C62 RID: 35938 RVA: 0x001E187B File Offset: 0x001DFA7B
+	// Token: 0x06005FFD RID: 24573 RVA: 0x001EA6CF File Offset: 0x001E88CF
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshMowingTowerData, new Action(this.OnMowingTowerDataUpdate));
 	}
 
-	// Token: 0x06008C63 RID: 35939 RVA: 0x001E1899 File Offset: 0x001DFA99
+	// Token: 0x06005FFE RID: 24574 RVA: 0x001EA6ED File Offset: 0x001E88ED
 	private void OnMowingTowerDataUpdate()
 	{
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06008C64 RID: 35940 RVA: 0x001E18A4 File Offset: 0x001DFAA4
+	// Token: 0x06005FFF RID: 24575 RVA: 0x001EA6F8 File Offset: 0x001E88F8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MowingTowerSubView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -62,25 +62,25 @@ public class MowingTowerSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008C65 RID: 35941 RVA: 0x001E18E7 File Offset: 0x001DFAE7
+	// Token: 0x06006000 RID: 24576 RVA: 0x001EA73B File Offset: 0x001E893B
 	protected override void OnStart()
 	{
 		this.MowingTowerData = (this.ActivityBaseData as MowingTowerData);
 	}
 
-	// Token: 0x06008C66 RID: 35942 RVA: 0x001E18FA File Offset: 0x001DFAFA
+	// Token: 0x06006001 RID: 24577 RVA: 0x001EA74E File Offset: 0x001E894E
 	protected override void OnBeforeShow()
 	{
 		this.BindRedDot();
 	}
 
-	// Token: 0x06008C67 RID: 35943 RVA: 0x001E1902 File Offset: 0x001DFB02
+	// Token: 0x06006002 RID: 24578 RVA: 0x001EA756 File Offset: 0x001E8956
 	protected override void OnBeforeHide()
 	{
 		this.RemoveRedDot();
 	}
 
-	// Token: 0x06008C68 RID: 35944 RVA: 0x001E190C File Offset: 0x001DFB0C
+	// Token: 0x06006003 RID: 24579 RVA: 0x001EA760 File Offset: 0x001E8960
 	protected override void OnRefreshView()
 	{
 		Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -98,19 +98,19 @@ public class MowingTowerSubView : ActivitySubViewBase
 		this.TryShowNewUnlockTips();
 	}
 
-	// Token: 0x06008C69 RID: 35945 RVA: 0x001E195F File Offset: 0x001DFB5F
+	// Token: 0x06006004 RID: 24580 RVA: 0x001EA7B3 File Offset: 0x001E89B3
 	private void BindRedDot()
 	{
 		RedDotController.Instance.BindRedDot(ERedDotName.MowingTowerReward, base.GetItem(6), null, this.MowingTowerData.Id);
 	}
 
-	// Token: 0x06008C6A RID: 35946 RVA: 0x001E1983 File Offset: 0x001DFB83
+	// Token: 0x06006005 RID: 24581 RVA: 0x001EA7D7 File Offset: 0x001E89D7
 	private void RemoveRedDot()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.MowingTowerReward, base.GetItem(6), this.MowingTowerData.Id);
 	}
 
-	// Token: 0x06008C6B RID: 35947 RVA: 0x001E19A8 File Offset: 0x001DFBA8
+	// Token: 0x06006006 RID: 24582 RVA: 0x001EA7FC File Offset: 0x001E89FC
 	private void TryShowNewUnlockTips()
 	{
 		if (this.MowingTowerData.GetNewUnlockState())
@@ -122,7 +122,7 @@ public class MowingTowerSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008C6C RID: 35948 RVA: 0x001E19F0 File Offset: 0x001DFBF0
+	// Token: 0x06006007 RID: 24583 RVA: 0x001EA844 File Offset: 0x001E8A44
 	private void RefreshState()
 	{
 		UUIItem item = base.GetItem(3);
@@ -139,14 +139,14 @@ public class MowingTowerSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008C6D RID: 35949 RVA: 0x001E1A60 File Offset: 0x001DFC60
+	// Token: 0x06006008 RID: 24584 RVA: 0x001EA8B4 File Offset: 0x001E8AB4
 	private void RefreshScoreText()
 	{
 		MowingTowerData mowingTowerData = this.ActivityBaseData as MowingTowerData;
 		base.GetText(5).SetText(mowingTowerData.GetFullScore().ToString() ?? "", true);
 	}
 
-	// Token: 0x06008C6E RID: 35950 RVA: 0x001E1AA0 File Offset: 0x001DFCA0
+	// Token: 0x06006009 RID: 24585 RVA: 0x001EA8F4 File Offset: 0x001E8AF4
 	private void RefreshTitle()
 	{
 		this.TitleComponent.SetActivityBaseData(this.ActivityBaseData);
@@ -161,7 +161,7 @@ public class MowingTowerSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008C6F RID: 35951 RVA: 0x001E1B04 File Offset: 0x001DFD04
+	// Token: 0x0600600A RID: 24586 RVA: 0x001EA958 File Offset: 0x001E8B58
 	private void RefreshDesc()
 	{
 		Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -176,7 +176,7 @@ public class MowingTowerSubView : ActivitySubViewBase
 		this.DescriptionComponent.SetContentByTextId(desc, Array.Empty<string>());
 	}
 
-	// Token: 0x06008C70 RID: 35952 RVA: 0x001E1B7C File Offset: 0x001DFD7C
+	// Token: 0x0600600B RID: 24587 RVA: 0x001EA9D0 File Offset: 0x001E8BD0
 	private void RefreshReward()
 	{
 		List<TItem> previewReward = this.ActivityBaseData.GetPreviewReward(null);
@@ -184,14 +184,14 @@ public class MowingTowerSubView : ActivitySubViewBase
 		this.RewardListComponent.RefreshItemLayout(previewReward, null);
 	}
 
-	// Token: 0x06008C71 RID: 35953 RVA: 0x001E1BBB File Offset: 0x001DFDBB
+	// Token: 0x0600600C RID: 24588 RVA: 0x001EAA0F File Offset: 0x001E8C0F
 	protected override void OnTimer(float gap)
 	{
 		base.OnTimer(gap);
 		this.RefreshTitle();
 	}
 
-	// Token: 0x06008C72 RID: 35954 RVA: 0x001E1BCA File Offset: 0x001DFDCA
+	// Token: 0x0600600D RID: 24589 RVA: 0x001EAA1E File Offset: 0x001E8C1E
 	private void OnClickBtnReward()
 	{
 		MowingTowerModel.Instance.CurrentSelectActivityId = this.ActivityBaseData.Id;
@@ -201,14 +201,14 @@ public class MowingTowerSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008C73 RID: 35955 RVA: 0x001E1C04 File Offset: 0x001DFE04
+	// Token: 0x0600600E RID: 24590 RVA: 0x001EAA58 File Offset: 0x001E8C58
 	private void RefreshFunctionalComponent()
 	{
 		string localTextNew = ConfigMultiTextLang.GetLocalTextNew("BossRushEnterText", null);
 		this.FunctionalComponent.FunctionButton.SetText(localTextNew);
 	}
 
-	// Token: 0x06008C74 RID: 35956 RVA: 0x001E1C2E File Offset: 0x001DFE2E
+	// Token: 0x0600600F RID: 24591 RVA: 0x001EAA82 File Offset: 0x001E8C82
 	private void FunctionExecute()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -223,7 +223,7 @@ public class MowingTowerSubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06008C75 RID: 35957 RVA: 0x001E1C4C File Offset: 0x001DFE4C
+	// Token: 0x06006010 RID: 24592 RVA: 0x001EAAA0 File Offset: 0x001E8CA0
 	private void RefreshRedDot()
 	{
 		bool flag = this.MowingTowerData.EntranceRedDot();
@@ -231,16 +231,16 @@ public class MowingTowerSubView : ActivitySubViewBase
 		this.FunctionalComponent.FunctionButton.SetRedDotVisible(preGuideQuestFinishState && flag);
 	}
 
-	// Token: 0x04003E56 RID: 15958
+	// Token: 0x04003EEE RID: 16110
 	private MowingTowerData MowingTowerData;
 
-	// Token: 0x04003E57 RID: 15959
+	// Token: 0x04003EEF RID: 16111
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x04003E58 RID: 15960
+	// Token: 0x04003EF0 RID: 16112
 	private ActivityDescriptionTypeA DescriptionComponent;
 
-	// Token: 0x04003E59 RID: 15961
+	// Token: 0x04003EF1 RID: 16113
 	[Nullable(new byte[]
 	{
 		2,
@@ -248,26 +248,26 @@ public class MowingTowerSubView : ActivitySubViewBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-	// Token: 0x04003E5A RID: 15962
+	// Token: 0x04003EF2 RID: 16114
 	private ActivityFunctionalTypeA FunctionalComponent;
 
-	// Token: 0x020079FF RID: 31231
+	// Token: 0x02006B89 RID: 27529
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04028274 RID: 164468
+		// Token: 0x040235A1 RID: 144801
 		TitleItem,
-		// Token: 0x04028275 RID: 164469
+		// Token: 0x040235A2 RID: 144802
 		DescItem,
-		// Token: 0x04028276 RID: 164470
+		// Token: 0x040235A3 RID: 144803
 		RewardItem,
-		// Token: 0x04028277 RID: 164471
+		// Token: 0x040235A4 RID: 144804
 		FunctionalAreaItem,
-		// Token: 0x04028278 RID: 164472
+		// Token: 0x040235A5 RID: 144805
 		RewardBtn,
-		// Token: 0x04028279 RID: 164473
+		// Token: 0x040235A6 RID: 144806
 		ScoreText,
-		// Token: 0x0402827A RID: 164474
+		// Token: 0x040235A7 RID: 144807
 		RewardRedDotItem
 	}
 }

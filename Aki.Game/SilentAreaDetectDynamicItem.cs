@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020016B8 RID: 5816
+// Token: 0x02000B70 RID: 2928
 [NullableContext(1)]
 [Nullable(0)]
 public class SilentAreaDetectDynamicItem : UiPanelBase, IDynamicScrollItem<ISilentAreaDetectionDynamicData>
 {
-	// Token: 0x0600A5F1 RID: 42481 RVA: 0x00251848 File Offset: 0x0024FA48
+	// Token: 0x060079D1 RID: 31185 RVA: 0x0025BC58 File Offset: 0x00259E58
 	public UniTask Init(UUIItem actor)
 	{
 		SilentAreaDetectDynamicItem.<Init>d__6 <Init>d__;
@@ -26,7 +26,7 @@ public class SilentAreaDetectDynamicItem : UiPanelBase, IDynamicScrollItem<ISile
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A5F2 RID: 42482 RVA: 0x00251894 File Offset: 0x0024FA94
+	// Token: 0x060079D2 RID: 31186 RVA: 0x0025BCA4 File Offset: 0x00259EA4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -40,7 +40,7 @@ public class SilentAreaDetectDynamicItem : UiPanelBase, IDynamicScrollItem<ISile
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A5F3 RID: 42483 RVA: 0x002518FD File Offset: 0x0024FAFD
+	// Token: 0x060079D3 RID: 31187 RVA: 0x0025BD0D File Offset: 0x00259F0D
 	protected override void OnStart()
 	{
 		if (this.SilentCategoryItem == null)
@@ -53,7 +53,7 @@ public class SilentAreaDetectDynamicItem : UiPanelBase, IDynamicScrollItem<ISile
 		}
 	}
 
-	// Token: 0x0600A5F4 RID: 42484 RVA: 0x00251933 File Offset: 0x0024FB33
+	// Token: 0x060079D4 RID: 31188 RVA: 0x0025BD43 File Offset: 0x00259F43
 	public AUIBaseActor GetUsingItem(ISilentAreaDetectionDynamicData data)
 	{
 		if (data.SilentAreaDetectionData != null)
@@ -63,7 +63,7 @@ public class SilentAreaDetectDynamicItem : UiPanelBase, IDynamicScrollItem<ISile
 		return base.GetItem(0).GetOwner() as AUIBaseActor;
 	}
 
-	// Token: 0x0600A5F5 RID: 42485 RVA: 0x00251960 File Offset: 0x0024FB60
+	// Token: 0x060079D5 RID: 31189 RVA: 0x0025BD70 File Offset: 0x00259F70
 	public void Update(ISilentAreaDetectionDynamicData data, int index)
 	{
 		this.Data = data;
@@ -81,25 +81,25 @@ public class SilentAreaDetectDynamicItem : UiPanelBase, IDynamicScrollItem<ISile
 		this.SilentCategoryItem.BindCategoryCallback(this.OnCategoryCallback);
 	}
 
-	// Token: 0x0600A5F6 RID: 42486 RVA: 0x002519F7 File Offset: 0x0024FBF7
+	// Token: 0x060079D6 RID: 31190 RVA: 0x0025BE07 File Offset: 0x0025A007
 	public void BindClickCategoryCallback(Action<int, UUIExtendToggle, bool> onCategoryCallback)
 	{
 		this.OnCategoryCallback = onCategoryCallback;
 	}
 
-	// Token: 0x0600A5F7 RID: 42487 RVA: 0x00251A00 File Offset: 0x0024FC00
+	// Token: 0x060079D7 RID: 31191 RVA: 0x0025BE10 File Offset: 0x0025A010
 	public void BindClickResultCallback(Action<int, UUIExtendToggle> onResultCallback)
 	{
 		this.OnResultCallback = onResultCallback;
 	}
 
-	// Token: 0x0600A5F8 RID: 42488 RVA: 0x00251A09 File Offset: 0x0024FC09
+	// Token: 0x060079D8 RID: 31192 RVA: 0x0025BE19 File Offset: 0x0025A019
 	public void ClearItem()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x0600A5F9 RID: 42489 RVA: 0x00251A12 File Offset: 0x0024FC12
+	// Token: 0x060079D9 RID: 31193 RVA: 0x0025BE22 File Offset: 0x0025A022
 	protected override void OnBeforeDestroy()
 	{
 		if (this.SilentCategoryItem != null)
@@ -114,19 +114,19 @@ public class SilentAreaDetectDynamicItem : UiPanelBase, IDynamicScrollItem<ISile
 		}
 	}
 
-	// Token: 0x04004AF1 RID: 19185
+	// Token: 0x04004B98 RID: 19352
 	[Nullable(2)]
 	protected ISilentAreaDetectionDynamicData Data;
 
-	// Token: 0x04004AF2 RID: 19186
+	// Token: 0x04004B99 RID: 19353
 	[Nullable(2)]
 	private SilentCategoryItem SilentCategoryItem;
 
-	// Token: 0x04004AF3 RID: 19187
+	// Token: 0x04004B9A RID: 19354
 	[Nullable(2)]
 	private SilentResultItem SilentResultItem;
 
-	// Token: 0x04004AF4 RID: 19188
+	// Token: 0x04004B9B RID: 19355
 	[Nullable(new byte[]
 	{
 		2,
@@ -134,7 +134,7 @@ public class SilentAreaDetectDynamicItem : UiPanelBase, IDynamicScrollItem<ISile
 	})]
 	private Action<int, UUIExtendToggle, bool> OnCategoryCallback;
 
-	// Token: 0x04004AF5 RID: 19189
+	// Token: 0x04004B9C RID: 19356
 	[Nullable(new byte[]
 	{
 		2,
@@ -142,13 +142,13 @@ public class SilentAreaDetectDynamicItem : UiPanelBase, IDynamicScrollItem<ISile
 	})]
 	private Action<int, UUIExtendToggle> OnResultCallback;
 
-	// Token: 0x02007C8B RID: 31883
+	// Token: 0x02006E10 RID: 28176
 	[NullableContext(0)]
 	public enum ESilentAreaDefine
 	{
-		// Token: 0x04028DCB RID: 167371
+		// Token: 0x040240F4 RID: 147700
 		SilentCategoryItem,
-		// Token: 0x04028DCC RID: 167372
+		// Token: 0x040240F5 RID: 147701
 		SilentResultItem
 	}
 }

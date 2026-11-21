@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -9,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200661C RID: 26140
+	// Token: 0x0200559A RID: 21914
 	public class FishingQuestShapePanel : UiPanelBase
 	{
-		// Token: 0x06041886 RID: 268422 RVA: 0x00FE2624 File Offset: 0x00FE0824
+		// Token: 0x0603654B RID: 222539 RVA: 0x00F29698 File Offset: 0x00F27898
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -32,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06041887 RID: 268423 RVA: 0x00FE26F0 File Offset: 0x00FE08F0
+		// Token: 0x0603654C RID: 222540 RVA: 0x00F29764 File Offset: 0x00F27964
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(1);
@@ -43,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x06041888 RID: 268424 RVA: 0x00FE273C File Offset: 0x00FE093C
+		// Token: 0x0603654D RID: 222541 RVA: 0x00F297B0 File Offset: 0x00F279B0
 		public void RefreshPanel(int itemId, bool isUnlock = true)
 		{
 			FishingItem? fishingItemConfig = FishingConfig.Instance.GetFishingItemConfig(itemId);
@@ -71,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			{
 				fishingQuestShapePanelItem.SetUiActive(false);
 			}
-			this.RefreshAllGird(array.ToList<IntArray>(), num, num3);
+			this.RefreshAllGird(array, num, num3);
 			float width = (float)(num4 - num3 + 1) * this.GirdWidth;
 			float height = (float)(num2 - num + 1) * this.GirdHeight;
 			UUITexture texture = base.GetTexture(2);
@@ -91,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetItem(4).useChangeColor = isUnlock;
 		}
 
-		// Token: 0x06041889 RID: 268425 RVA: 0x00FE2964 File Offset: 0x00FE0B64
+		// Token: 0x0603654E RID: 222542 RVA: 0x00F299D4 File Offset: 0x00F27BD4
 		private void SetTextureMaterialActive(bool value)
 		{
 			if (value)
@@ -102,9 +101,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetTexture(2).SetCustomMaterialScalarParameter(FishingDefine.materialProgressName, 0f);
 		}
 
-		// Token: 0x0604188A RID: 268426 RVA: 0x00FE2998 File Offset: 0x00FE0B98
+		// Token: 0x0603654F RID: 222543 RVA: 0x00F29A08 File Offset: 0x00F27C08
 		[NullableContext(1)]
-		private void RefreshAllGird(List<IntArray> targetList, int minValidRow, int minValidCol)
+		private void RefreshAllGird(IReadOnlyList<IntArray> targetList, int minValidRow, int minValidCol)
 		{
 			int num = 0;
 			for (int i = 0; i < targetList.Count; i++)
@@ -120,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604188B RID: 268427 RVA: 0x00FE29F0 File Offset: 0x00FE0BF0
+		// Token: 0x06036550 RID: 222544 RVA: 0x00F29A60 File Offset: 0x00F27C60
 		private void SetShapePanelItem(int index, int rowIndex, int columnIndex)
 		{
 			float anchorOffsetX = this.InitialGirdOffsetX + (float)columnIndex * this.GirdWidth;
@@ -142,38 +141,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			fishingQuestShapePanelItem.GetRootItem().SetAnchorOffsetY(anchorOffsetY);
 		}
 
-		// Token: 0x04022189 RID: 139657
+		// Token: 0x0401CABA RID: 117434
 		private float GirdWidth;
 
-		// Token: 0x0402218A RID: 139658
+		// Token: 0x0401CABB RID: 117435
 		private float GirdHeight;
 
-		// Token: 0x0402218B RID: 139659
+		// Token: 0x0401CABC RID: 117436
 		private float InitialGirdOffsetX;
 
-		// Token: 0x0402218C RID: 139660
+		// Token: 0x0401CABD RID: 117437
 		private float InitialGirdOffsetY;
 
-		// Token: 0x0402218D RID: 139661
+		// Token: 0x0401CABE RID: 117438
 		[Nullable(1)]
 		private readonly List<FishingQuestShapePanelItem> GirdList = new List<FishingQuestShapePanelItem>();
 
-		// Token: 0x0200C831 RID: 51249
+		// Token: 0x0200B213 RID: 45587
 		private class EComponentDefine
 		{
-			// Token: 0x0403C76C RID: 247660
+			// Token: 0x040370B1 RID: 225457
 			public const int GirdListItem = 0;
 
-			// Token: 0x0403C76D RID: 247661
+			// Token: 0x040370B2 RID: 225458
 			public const int GirdItem = 1;
 
-			// Token: 0x0403C76E RID: 247662
+			// Token: 0x040370B3 RID: 225459
 			public const int FishingIconTexture = 2;
 
-			// Token: 0x0403C76F RID: 247663
+			// Token: 0x040370B4 RID: 225460
 			public const int LockItem = 3;
 
-			// Token: 0x0403C770 RID: 247664
+			// Token: 0x040370B5 RID: 225461
 			public const int ColorItem = 4;
 		}
 	}

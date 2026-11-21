@@ -4,23 +4,23 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 {
-	// Token: 0x0200474E RID: 18254
+	// Token: 0x0200367F RID: 13951
 	[NullableContext(2)]
 	public interface IPullRodInteractResult
 	{
-		// Token: 0x1700773A RID: 30522
-		// (get) Token: 0x0602FB4E RID: 195406
-		// (set) Token: 0x0602FB4F RID: 195407
+		// Token: 0x170049F6 RID: 18934
+		// (get) Token: 0x06024318 RID: 148248
+		// (set) Token: 0x06024319 RID: 148249
 		EGameplayEntityState PreviousState { get; set; }
 
-		// Token: 0x1700773B RID: 30523
-		// (get) Token: 0x0602FB50 RID: 195408
-		// (set) Token: 0x0602FB51 RID: 195409
+		// Token: 0x170049F7 RID: 18935
+		// (get) Token: 0x0602431A RID: 148250
+		// (set) Token: 0x0602431B RID: 148251
 		EGameplayEntityState CurrentState { get; set; }
 
-		// Token: 0x1700773C RID: 30524
-		// (get) Token: 0x0602FB52 RID: 195410
-		// (set) Token: 0x0602FB53 RID: 195411
+		// Token: 0x170049F8 RID: 18936
+		// (get) Token: 0x0602431C RID: 148252
+		// (set) Token: 0x0602431D RID: 148253
 		IWuWaGoInteractStateAction StateAction { get; set; }
 	}
 }

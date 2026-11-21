@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EDE RID: 7902
+// Token: 0x020013A0 RID: 5024
 public class HonamiStoryNewTipsView : UiTickViewBase
 {
-	// Token: 0x0600F325 RID: 62245 RVA: 0x003A9A62 File Offset: 0x003A7C62
+	// Token: 0x0600C744 RID: 51012 RVA: 0x003B555E File Offset: 0x003B375E
 	[NullableContext(1)]
 	public HonamiStoryNewTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F326 RID: 62246 RVA: 0x003A9A6C File Offset: 0x003A7C6C
+	// Token: 0x0600C745 RID: 51013 RVA: 0x003B5568 File Offset: 0x003B3768
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class HonamiStoryNewTipsView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x0600F327 RID: 62247 RVA: 0x003A9B20 File Offset: 0x003A7D20
+	// Token: 0x0600C746 RID: 51014 RVA: 0x003B561C File Offset: 0x003B381C
 	private void ApplyGridItem(int itemId)
 	{
 		CSharpScript.Game.Module.Inventory.ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(itemId);
@@ -46,7 +46,7 @@ public class HonamiStoryNewTipsView : UiTickViewBase
 		this.GridItem.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x0600F328 RID: 62248 RVA: 0x003A9B70 File Offset: 0x003A7D70
+	// Token: 0x0600C747 RID: 51015 RVA: 0x003B566C File Offset: 0x003B386C
 	private UniTask CreateGridItem()
 	{
 		HonamiStoryNewTipsView.<CreateGridItem>d__7 <CreateGridItem>d__;
@@ -57,7 +57,7 @@ public class HonamiStoryNewTipsView : UiTickViewBase
 		return <CreateGridItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F329 RID: 62249 RVA: 0x003A9BB4 File Offset: 0x003A7DB4
+	// Token: 0x0600C748 RID: 51016 RVA: 0x003B56B0 File Offset: 0x003B38B0
 	private UniTask CreateNiagaraSystem()
 	{
 		HonamiStoryNewTipsView.<CreateNiagaraSystem>d__8 <CreateNiagaraSystem>d__;
@@ -68,7 +68,7 @@ public class HonamiStoryNewTipsView : UiTickViewBase
 		return <CreateNiagaraSystem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F32A RID: 62250 RVA: 0x003A9BF8 File Offset: 0x003A7DF8
+	// Token: 0x0600C749 RID: 51017 RVA: 0x003B56F4 File Offset: 0x003B38F4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryNewTipsView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -79,7 +79,7 @@ public class HonamiStoryNewTipsView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F32B RID: 62251 RVA: 0x003A9C3C File Offset: 0x003A7E3C
+	// Token: 0x0600C74A RID: 51018 RVA: 0x003B5738 File Offset: 0x003B3938
 	protected override void OnStart()
 	{
 		HonamiStoryItemDataBase honamiStoryItemDataBase = this.OpenParam as HonamiStoryItemDataBase;
@@ -153,7 +153,7 @@ public class HonamiStoryNewTipsView : UiTickViewBase
 		this.ApplyGridItem(itemId);
 	}
 
-	// Token: 0x0600F32C RID: 62252 RVA: 0x003A9EF4 File Offset: 0x003A80F4
+	// Token: 0x0600C74B RID: 51019 RVA: 0x003B59F0 File Offset: 0x003B3BF0
 	protected override void OnAfterShow()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -164,45 +164,45 @@ public class HonamiStoryNewTipsView : UiTickViewBase
 		AudioSystem.Instance.PostEvent("play_ui_honamistory_pick_up_normal");
 	}
 
-	// Token: 0x0600F32D RID: 62253 RVA: 0x003A9F41 File Offset: 0x003A8141
+	// Token: 0x0600C74C RID: 51020 RVA: 0x003B5A3D File Offset: 0x003B3C3D
 	protected override void OnBeforeDestroy()
 	{
 		ItemModel.Instance.LastCloseTimeStamp = TimeUtil.Instance.GetServerTimeStamp();
 	}
 
-	// Token: 0x040070A1 RID: 28833
+	// Token: 0x04007182 RID: 29058
 	[Nullable(2)]
 	private SmallItemGrid GridItem;
 
-	// Token: 0x040070A2 RID: 28834
+	// Token: 0x04007183 RID: 29059
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040070A3 RID: 28835
+	// Token: 0x04007184 RID: 29060
 	private bool IsGolden;
 
-	// Token: 0x020084C3 RID: 33987
+	// Token: 0x02007648 RID: 30280
 	private class ENewItemTipsViewCom
 	{
-		// Token: 0x0402B351 RID: 176977
+		// Token: 0x04026675 RID: 157301
 		public const int MainTypeIconTexture = 0;
 
-		// Token: 0x0402B352 RID: 176978
+		// Token: 0x04026676 RID: 157302
 		public const int ItemNameText = 1;
 
-		// Token: 0x0402B353 RID: 176979
+		// Token: 0x04026677 RID: 157303
 		public const int GridItem = 2;
 
-		// Token: 0x0402B354 RID: 176980
+		// Token: 0x04026678 RID: 157304
 		public const int ItemDescribeText = 3;
 
-		// Token: 0x0402B355 RID: 176981
+		// Token: 0x04026679 RID: 157305
 		public const int QualityTexture = 4;
 
-		// Token: 0x0402B356 RID: 176982
+		// Token: 0x0402667A RID: 157306
 		public const int QualityNiagara = 5;
 
-		// Token: 0x0402B357 RID: 176983
+		// Token: 0x0402667B RID: 157307
 		public const int FlowTexture = 7;
 	}
 }

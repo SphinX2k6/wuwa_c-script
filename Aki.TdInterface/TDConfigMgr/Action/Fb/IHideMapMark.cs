@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002961 RID: 10593
+	// Token: 0x02002C46 RID: 11334
 	public class IHideMapMark : ToggleMapMarkState
 	{
-		// Token: 0x0600EAD8 RID: 60120 RVA: 0x002261D2 File Offset: 0x002243D2
-		[NullableContext(1)]
+		// Token: 0x0600F94E RID: 63822 RVA: 0x0024388A File Offset: 0x00241A8A
 		public static IHideMapMark Create(IHideMapMark? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049D8 RID: 18904
-		// (get) Token: 0x0600EAD9 RID: 60121 RVA: 0x002261F1 File Offset: 0x002243F1
+		// Token: 0x17004D70 RID: 19824
+		// (get) Token: 0x0600F94F RID: 63823 RVA: 0x002438A9 File Offset: 0x00241AA9
 		public override EMapMarkState Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049D9 RID: 18905
-		// (get) Token: 0x0600EADA RID: 60122 RVA: 0x002261FE File Offset: 0x002243FE
+		// Token: 0x17004D71 RID: 19825
+		// (get) Token: 0x0600F950 RID: 63824 RVA: 0x002438B6 File Offset: 0x00241AB6
 		public virtual int MarkId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008169 RID: 33129
+		// Token: 0x0400884A RID: 34890
 		private IHideMapMark Instance;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002231 RID: 8753
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200249C RID: 9372
 	public class TCsvTeleportTransitionData
 	{
-		// Token: 0x0600C012 RID: 49170 RVA: 0x001B955E File Offset: 0x001B775E
+		// Token: 0x0600CBD0 RID: 52176 RVA: 0x001D0C2A File Offset: 0x001CEE2A
 		public static TCsvTeleportTransitionData Create([Nullable(2)] TCsvTeleportTransitionData instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A28 RID: 14888
-		// (get) Token: 0x0600C013 RID: 49171 RVA: 0x001B9571 File Offset: 0x001B7771
+		// Token: 0x17003D1E RID: 15646
+		// (get) Token: 0x0600CBD1 RID: 52177 RVA: 0x001D0C3D File Offset: 0x001CEE3D
 		public virtual int Id
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A29 RID: 14889
-		// (get) Token: 0x0600C014 RID: 49172 RVA: 0x001B957E File Offset: 0x001B777E
+		// Token: 0x17003D1F RID: 15647
+		// (get) Token: 0x0600CBD2 RID: 52178 RVA: 0x001D0C4A File Offset: 0x001CEE4A
 		public virtual ITeleportTransitionType Data
 		{
 			get
@@ -42,7 +40,7 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400728B RID: 29323
+		// Token: 0x040078D5 RID: 30933
 		private TCsvTeleportTransitionData FbInstance;
 	}
 }

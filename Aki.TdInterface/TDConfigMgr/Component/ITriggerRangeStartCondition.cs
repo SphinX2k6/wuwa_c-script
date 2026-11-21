@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007AA RID: 1962
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200084B RID: 2123
 	public class ITriggerRangeStartCondition : ISpawnMonsterStartCondition
 	{
-		// Token: 0x06002A8E RID: 10894 RVA: 0x0006F954 File Offset: 0x0006DB54
+		// Token: 0x06002DB6 RID: 11702 RVA: 0x00076BFC File Offset: 0x00074DFC
 		private ITriggerRangeStartCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002A8F RID: 10895 RVA: 0x0006F98C File Offset: 0x0006DB8C
+		// Token: 0x06002DB7 RID: 11703 RVA: 0x00076C34 File Offset: 0x00074E34
 		public static ITriggerRangeStartCondition Create([Nullable(2)] ITriggerRangeStartCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A90 RID: 10896 RVA: 0x0006F99F File Offset: 0x0006DB9F
+		// Token: 0x06002DB8 RID: 11704 RVA: 0x00076C47 File Offset: 0x00074E47
 		public static ITriggerRangeStartCondition CreateFromSetValue([Nullable(2)] ITriggerRangeStartCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A91 RID: 10897 RVA: 0x0006F9B2 File Offset: 0x0006DBB2
+		// Token: 0x06002DB9 RID: 11705 RVA: 0x00076C5A File Offset: 0x00074E5A
 		public new ITriggerRangeStartCondition_SetValue ToSetValue()
 		{
 			return new ITriggerRangeStartCondition_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B2A RID: 2858
-		// (get) Token: 0x06002A92 RID: 10898 RVA: 0x0006F9D1 File Offset: 0x0006DBD1
-		// (set) Token: 0x06002A93 RID: 10899 RVA: 0x0006F9FC File Offset: 0x0006DBFC
+		// Token: 0x17000BEC RID: 3052
+		// (get) Token: 0x06002DBA RID: 11706 RVA: 0x00076C79 File Offset: 0x00074E79
+		// (set) Token: 0x06002DBB RID: 11707 RVA: 0x00076CA4 File Offset: 0x00074EA4
 		public override ESpawnMonsterStartCondition Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B2B RID: 2859
-		// (get) Token: 0x06002A94 RID: 10900 RVA: 0x0006FA0A File Offset: 0x0006DC0A
-		// (set) Token: 0x06002A95 RID: 10901 RVA: 0x0006FA35 File Offset: 0x0006DC35
+		// Token: 0x17000BED RID: 3053
+		// (get) Token: 0x06002DBC RID: 11708 RVA: 0x00076CB2 File Offset: 0x00074EB2
+		// (set) Token: 0x06002DBD RID: 11709 RVA: 0x00076CDD File Offset: 0x00074EDD
 		public virtual int Range
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C66 RID: 7270
+		// Token: 0x04001E6F RID: 7791
 		[Nullable(2)]
 		protected new ITriggerRangeStartCondition FbInstance;
 
-		// Token: 0x04001C67 RID: 7271
+		// Token: 0x04001E70 RID: 7792
 		[Nullable(2)]
 		protected new ITriggerRangeStartCondition_SetValue PocoInterface;
 	}

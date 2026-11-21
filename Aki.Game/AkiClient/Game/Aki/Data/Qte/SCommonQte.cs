@@ -7,7 +7,7 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Qte
 {
-	// Token: 0x02003ED4 RID: 16084
+	// Token: 0x02003199 RID: 12697
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -15,30 +15,30 @@ namespace AkiClient.Game.Aki.Data.Qte
 	[UnrealStructLayout(1704, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 1704)]
 	public class SCommonQte : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06028A9A RID: 166554 RVA: 0x009B1A0C File Offset: 0x009AFC0C
+		// Token: 0x0601F4CD RID: 128205 RVA: 0x0092AB9D File Offset: 0x00928D9D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SCommonQte._ScriptStructPtr != 0) ? SCommonQte._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Qte/SCommonQte.SCommonQte", ref SCommonQte._ScriptStructPtr);
 		}
 
-		// Token: 0x17005EFA RID: 24314
-		// (get) Token: 0x06028A9B RID: 166555 RVA: 0x009B1A30 File Offset: 0x009AFC30
-		// (set) Token: 0x06028A9C RID: 166556 RVA: 0x009B1A44 File Offset: 0x009AFC44
+		// Token: 0x17003886 RID: 14470
+		// (get) Token: 0x0601F4CE RID: 128206 RVA: 0x0092ABC1 File Offset: 0x00928DC1
+		// (set) Token: 0x0601F4CF RID: 128207 RVA: 0x0092ABD5 File Offset: 0x00928DD5
 		public unsafe string Desc
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SCommonQte.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SCommonQte.__PropertyOffset_Desc)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SCommonQte.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SCommonQte.__PropertyOffset_Desc)), value);
 			}
 		}
 
-		// Token: 0x17005EFB RID: 24315
-		// (get) Token: 0x06028A9D RID: 166557 RVA: 0x009B1A5C File Offset: 0x009AFC5C
-		// (set) Token: 0x06028A9E RID: 166558 RVA: 0x009B1A9F File Offset: 0x009AFC9F
+		// Token: 0x17003887 RID: 14471
+		// (get) Token: 0x0601F4D0 RID: 128208 RVA: 0x0092ABEC File Offset: 0x00928DEC
+		// (set) Token: 0x0601F4D1 RID: 128209 RVA: 0x0092AC2F File Offset: 0x00928E2F
 		public SCommonQte_Base BaseConfig
 		{
 			get
@@ -47,19 +47,19 @@ namespace AkiClient.Game.Aki.Data.Qte
 				SCommonQte_Base result;
 				if ((result = this._BaseConfig) == null)
 				{
-					result = (this._BaseConfig = new SCommonQte_Base(base.NativePtr + (IntPtr)SCommonQte.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._BaseConfig = new SCommonQte_Base(base.NativePtr + (IntPtr)SCommonQte.__PropertyOffset_BaseConfig, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SCommonQte_Base.StaticStruct(), base.NativePtr + (IntPtr)SCommonQte.__PropertyOffset_1, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SCommonQte_Base.StaticStruct(), base.NativePtr + (IntPtr)SCommonQte.__PropertyOffset_BaseConfig, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005EFC RID: 24316
-		// (get) Token: 0x06028A9F RID: 166559 RVA: 0x009B1AC0 File Offset: 0x009AFCC0
-		// (set) Token: 0x06028AA0 RID: 166560 RVA: 0x009B1B03 File Offset: 0x009AFD03
+		// Token: 0x17003888 RID: 14472
+		// (get) Token: 0x0601F4D2 RID: 128210 RVA: 0x0092AC50 File Offset: 0x00928E50
+		// (set) Token: 0x0601F4D3 RID: 128211 RVA: 0x0092AC93 File Offset: 0x00928E93
 		public SCommonQte_Extra ExtraConfig
 		{
 			get
@@ -68,19 +68,19 @@ namespace AkiClient.Game.Aki.Data.Qte
 				SCommonQte_Extra result;
 				if ((result = this._ExtraConfig) == null)
 				{
-					result = (this._ExtraConfig = new SCommonQte_Extra(base.NativePtr + (IntPtr)SCommonQte.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._ExtraConfig = new SCommonQte_Extra(base.NativePtr + (IntPtr)SCommonQte.__PropertyOffset_ExtraConfig, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SCommonQte_Extra.StaticStruct(), base.NativePtr + (IntPtr)SCommonQte.__PropertyOffset_2, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SCommonQte_Extra.StaticStruct(), base.NativePtr + (IntPtr)SCommonQte.__PropertyOffset_ExtraConfig, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005EFD RID: 24317
-		// (get) Token: 0x06028AA1 RID: 166561 RVA: 0x009B1B24 File Offset: 0x009AFD24
-		// (set) Token: 0x06028AA2 RID: 166562 RVA: 0x009B1B67 File Offset: 0x009AFD67
+		// Token: 0x17003889 RID: 14473
+		// (get) Token: 0x0601F4D4 RID: 128212 RVA: 0x0092ACB4 File Offset: 0x00928EB4
+		// (set) Token: 0x0601F4D5 RID: 128213 RVA: 0x0092ACF7 File Offset: 0x00928EF7
 		public SCommonQte_Audio AudioConfig
 		{
 			get
@@ -89,86 +89,77 @@ namespace AkiClient.Game.Aki.Data.Qte
 				SCommonQte_Audio result;
 				if ((result = this._AudioConfig) == null)
 				{
-					result = (this._AudioConfig = new SCommonQte_Audio(base.NativePtr + (IntPtr)SCommonQte.__PropertyOffset_3, base.MemoryOwner ?? this));
+					result = (this._AudioConfig = new SCommonQte_Audio(base.NativePtr + (IntPtr)SCommonQte.__PropertyOffset_AudioConfig, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SCommonQte_Audio.StaticStruct(), base.NativePtr + (IntPtr)SCommonQte.__PropertyOffset_3, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SCommonQte_Audio.StaticStruct(), base.NativePtr + (IntPtr)SCommonQte.__PropertyOffset_AudioConfig, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x06028AA3 RID: 166563 RVA: 0x009B1B88 File Offset: 0x009AFD88
+		// Token: 0x0601F4D6 RID: 128214 RVA: 0x0092AD18 File Offset: 0x00928F18
 		public SCommonQte()
 		{
 		}
 
-		// Token: 0x06028AA4 RID: 166564 RVA: 0x009B1B90 File Offset: 0x009AFD90
-		public SCommonQte(string Desc, SCommonQte_Base BaseConfig, SCommonQte_Extra ExtraConfig, SCommonQte_Audio AudioConfig)
-		{
-			this.Desc = Desc;
-			this.BaseConfig = BaseConfig;
-			this.ExtraConfig = ExtraConfig;
-			this.AudioConfig = AudioConfig;
-		}
-
-		// Token: 0x06028AA5 RID: 166565 RVA: 0x009B1BB5 File Offset: 0x009AFDB5
+		// Token: 0x0601F4D7 RID: 128215 RVA: 0x0092AD20 File Offset: 0x00928F20
 		protected override IntPtr GetUStructPtr()
 		{
 			return SCommonQte.StaticStruct();
 		}
 
-		// Token: 0x06028AA6 RID: 166566 RVA: 0x009B1BC1 File Offset: 0x009AFDC1
+		// Token: 0x0601F4D8 RID: 128216 RVA: 0x0092AD2C File Offset: 0x00928F2C
 		[NullableContext(2)]
 		public SCommonQte(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06028AA7 RID: 166567 RVA: 0x009B1BCB File Offset: 0x009AFDCB
+		// Token: 0x0601F4D9 RID: 128217 RVA: 0x0092AD36 File Offset: 0x00928F36
 		public SCommonQte(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06028AA8 RID: 166568 RVA: 0x009B1BD6 File Offset: 0x009AFDD6
+		// Token: 0x0601F4DA RID: 128218 RVA: 0x0092AD41 File Offset: 0x00928F41
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SCommonQte(Pointer, false, true);
 		}
 
-		// Token: 0x06028AA9 RID: 166569 RVA: 0x009B1BE0 File Offset: 0x009AFDE0
+		// Token: 0x0601F4DB RID: 128219 RVA: 0x0092AD4B File Offset: 0x00928F4B
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SCommonQte(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014C8F RID: 85135
+		// Token: 0x04010C76 RID: 68726
 		public const string __ObjectPath = "/Game/Aki/Data/Qte/SCommonQte.SCommonQte";
 
-		// Token: 0x04014C90 RID: 85136
+		// Token: 0x04010C77 RID: 68727
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014C91 RID: 85137
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010C78 RID: 68728
+		internal static int __PropertyOffset_Desc;
 
-		// Token: 0x04014C92 RID: 85138
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010C79 RID: 68729
+		internal static int __PropertyOffset_BaseConfig;
 
-		// Token: 0x04014C93 RID: 85139
+		// Token: 0x04010C7A RID: 68730
 		[Nullable(2)]
 		private SCommonQte_Base _BaseConfig;
 
-		// Token: 0x04014C94 RID: 85140
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010C7B RID: 68731
+		internal static int __PropertyOffset_ExtraConfig;
 
-		// Token: 0x04014C95 RID: 85141
+		// Token: 0x04010C7C RID: 68732
 		[Nullable(2)]
 		private SCommonQte_Extra _ExtraConfig;
 
-		// Token: 0x04014C96 RID: 85142
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010C7D RID: 68733
+		internal static int __PropertyOffset_AudioConfig;
 
-		// Token: 0x04014C97 RID: 85143
+		// Token: 0x04010C7E RID: 68734
 		[Nullable(2)]
 		private SCommonQte_Audio _AudioConfig;
 	}

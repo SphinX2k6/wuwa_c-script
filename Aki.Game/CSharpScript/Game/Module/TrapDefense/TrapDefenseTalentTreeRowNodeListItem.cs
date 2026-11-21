@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AD7 RID: 19159
+	// Token: 0x02003A7F RID: 14975
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseTalentTreeRowNodeListItem : UiPanelBase
 	{
-		// Token: 0x060319F6 RID: 203254 RVA: 0x00B831B0 File Offset: 0x00B813B0
+		// Token: 0x06026786 RID: 157574 RVA: 0x00AC7164 File Offset: 0x00AC5364
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060319F7 RID: 203255 RVA: 0x00B832A0 File Offset: 0x00B814A0
+		// Token: 0x06026787 RID: 157575 RVA: 0x00AC7254 File Offset: 0x00AC5454
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseTalentTreeRowNodeListItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060319F8 RID: 203256 RVA: 0x00B832E3 File Offset: 0x00B814E3
+		// Token: 0x06026788 RID: 157576 RVA: 0x00AC7297 File Offset: 0x00AC5497
 		public TrapDefenseTalentTreeNodeItem GetNodeItem(int index)
 		{
 			if (index < 0 || index >= this.NodeItemList.Count)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.NodeItemList[index];
 		}
 
-		// Token: 0x060319F9 RID: 203257 RVA: 0x00B83308 File Offset: 0x00B81508
+		// Token: 0x06026789 RID: 157577 RVA: 0x00AC72BC File Offset: 0x00AC54BC
 		public List<UUIItem> GetAllLines()
 		{
 			List<UUIItem> list = new List<UUIItem>();
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x060319FA RID: 203258 RVA: 0x00B8337C File Offset: 0x00B8157C
+		// Token: 0x0602678A RID: 157578 RVA: 0x00AC7330 File Offset: 0x00AC5530
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -95,29 +95,29 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return null;
 		}
 
-		// Token: 0x0401A818 RID: 108568
+		// Token: 0x0401516A RID: 86378
 		private readonly List<TrapDefenseTalentTreeNodeItem> NodeItemList = new List<TrapDefenseTalentTreeNodeItem>();
 
-		// Token: 0x0200AC52 RID: 44114
+		// Token: 0x02009672 RID: 38514
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040345E5 RID: 214501
+			// Token: 0x0402EF96 RID: 192406
 			public const int Node1 = 0;
 
-			// Token: 0x040345E6 RID: 214502
+			// Token: 0x0402EF97 RID: 192407
 			public const int Node2 = 1;
 
-			// Token: 0x040345E7 RID: 214503
+			// Token: 0x0402EF98 RID: 192408
 			public const int Node3 = 2;
 
-			// Token: 0x040345E8 RID: 214504
+			// Token: 0x0402EF99 RID: 192409
 			public const int Node4 = 3;
 
-			// Token: 0x040345E9 RID: 214505
+			// Token: 0x0402EF9A RID: 192410
 			public const int Node5 = 4;
 
-			// Token: 0x040345EA RID: 214506
+			// Token: 0x0402EF9B RID: 192411
 			public const int Node6 = 5;
 		}
 	}

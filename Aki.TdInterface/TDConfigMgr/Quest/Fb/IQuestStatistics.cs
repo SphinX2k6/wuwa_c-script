@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001356 RID: 4950
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014A6 RID: 5286
 	public class IQuestStatistics
 	{
-		// Token: 0x0600715D RID: 29021 RVA: 0x001113E4 File Offset: 0x0010F5E4
+		// Token: 0x060077FD RID: 30717 RVA: 0x0011F950 File Offset: 0x0011DB50
 		public static IQuestStatistics Create(IQuestStatistics? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002484 RID: 9348
-		// (get) Token: 0x0600715E RID: 29022 RVA: 0x00111403 File Offset: 0x0010F603
+		// Token: 0x17002653 RID: 9811
+		// (get) Token: 0x060077FE RID: 30718 RVA: 0x0011F96F File Offset: 0x0011DB6F
 		public virtual List<IQuestStatisticsType> StatisticsConfig
 		{
 			get
@@ -40,19 +38,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002485 RID: 9349
-		// (get) Token: 0x0600715F RID: 29023 RVA: 0x00111434 File Offset: 0x0010F634
+		// Token: 0x17002654 RID: 9812
+		// (get) Token: 0x060077FF RID: 30719 RVA: 0x0011F9A0 File Offset: 0x0011DBA0
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ICommonCalculateVar> CalculationOnTriggeringStatistics
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -75,24 +73,24 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004178 RID: 16760
+		// Token: 0x040044F4 RID: 17652
 		private IQuestStatistics Instance;
 
-		// Token: 0x04004179 RID: 16761
+		// Token: 0x040044F5 RID: 17653
 		private List<IQuestStatisticsType> _StatisticsConfigCache;
 
-		// Token: 0x0400417A RID: 16762
+		// Token: 0x040044F6 RID: 17654
 		private bool _StatisticsConfigInited;
 
-		// Token: 0x0400417B RID: 16763
+		// Token: 0x040044F7 RID: 17655
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ICommonCalculateVar> _CalculationOnTriggeringStatisticsCache;
 
-		// Token: 0x0400417C RID: 16764
+		// Token: 0x040044F8 RID: 17656
 		private bool _CalculationOnTriggeringStatisticsInited;
 	}
 }

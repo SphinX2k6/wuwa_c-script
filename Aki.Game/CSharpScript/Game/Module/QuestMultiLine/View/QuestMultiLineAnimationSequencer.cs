@@ -8,13 +8,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View
 {
-	// Token: 0x02004FAC RID: 20396
+	// Token: 0x02003F75 RID: 16245
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestMultiLineAnimationSequencer
 	{
-		// Token: 0x17007F7E RID: 32638
-		// (get) Token: 0x0603435F RID: 213855 RVA: 0x00C41661 File Offset: 0x00C3F861
+		// Token: 0x1700532E RID: 21294
+		// (get) Token: 0x060291CD RID: 168397 RVA: 0x00B8AE0D File Offset: 0x00B8900D
 		public bool IsPlaying
 		{
 			get
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			}
 		}
 
-		// Token: 0x06034360 RID: 213856 RVA: 0x00C41669 File Offset: 0x00C3F869
+		// Token: 0x060291CE RID: 168398 RVA: 0x00B8AE15 File Offset: 0x00B89015
 		public void Stop()
 		{
 			if (!this.Playing)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			stopPromise.SetResult();
 		}
 
-		// Token: 0x06034361 RID: 213857 RVA: 0x00C4168C File Offset: 0x00C3F88C
+		// Token: 0x060291CF RID: 168399 RVA: 0x00B8AE38 File Offset: 0x00B89038
 		public UniTask PlayAsync(QuestMultiLineTimePointData timePoint, IAnimationSequencerContext context)
 		{
 			QuestMultiLineAnimationSequencer.<PlayAsync>d__6 <PlayAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <PlayAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034362 RID: 213858 RVA: 0x00C416E0 File Offset: 0x00C3F8E0
+		// Token: 0x060291D0 RID: 168400 RVA: 0x00B8AE8C File Offset: 0x00B8908C
 		public UniTask PlayBranchSelectAsync(IReadOnlyList<QuestMultiLineComponentData> components, IReadOnlyList<int> fightAreas, IAnimationSequencerContext context)
 		{
 			QuestMultiLineAnimationSequencer.<PlayBranchSelectAsync>d__7 <PlayBranchSelectAsync>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <PlayBranchSelectAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034363 RID: 213859 RVA: 0x00C4173C File Offset: 0x00C3F93C
+		// Token: 0x060291D1 RID: 168401 RVA: 0x00B8AEE8 File Offset: 0x00B890E8
 		private UniTask RunAsync(QuestMultiLineTimePointData timePoint, IAnimationSequencerContext context)
 		{
 			QuestMultiLineAnimationSequencer.<RunAsync>d__8 <RunAsync>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <RunAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034364 RID: 213860 RVA: 0x00C4178F File Offset: 0x00C3F98F
+		// Token: 0x060291D2 RID: 168402 RVA: 0x00B8AF3B File Offset: 0x00B8913B
 		private List<int> GetSortedUnlockedGroupIds(QuestMultiLineTimePointData timePoint)
 		{
 			List<int> list = this.ExtractGroupIds(timePoint);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return list;
 		}
 
-		// Token: 0x06034365 RID: 213861 RVA: 0x00C417C0 File Offset: 0x00C3F9C0
+		// Token: 0x060291D3 RID: 168403 RVA: 0x00B8AF6C File Offset: 0x00B8916C
 		private List<int> ExtractGroupIds(QuestMultiLineTimePointData timePoint)
 		{
 			List<int> list = new List<int>();
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return list;
 		}
 
-		// Token: 0x06034366 RID: 213862 RVA: 0x00C41854 File Offset: 0x00C3FA54
+		// Token: 0x060291D4 RID: 168404 RVA: 0x00B8B000 File Offset: 0x00B89200
 		private UniTask RaceEachWithStop<[Nullable(2)] T>(IReadOnlyList<T> items, Func<T, UniTask> run, int index = 0)
 		{
 			QuestMultiLineAnimationSequencer.<RaceEachWithStop>d__11<T> <RaceEachWithStop>d__;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <RaceEachWithStop>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034367 RID: 213863 RVA: 0x00C418B0 File Offset: 0x00C3FAB0
+		// Token: 0x060291D5 RID: 168405 RVA: 0x00B8B05C File Offset: 0x00B8925C
 		private UniTask RunOneGroupAnimations(int groupId, QuestMultiLineTimePointData timePoint, IAnimationSequencerContext context)
 		{
 			QuestMultiLineAnimationSequencer.<RunOneGroupAnimations>d__12 <RunOneGroupAnimations>d__;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <RunOneGroupAnimations>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034368 RID: 213864 RVA: 0x00C4190C File Offset: 0x00C3FB0C
+		// Token: 0x060291D6 RID: 168406 RVA: 0x00B8B0B8 File Offset: 0x00B892B8
 		private UniTask RunGroupsSequentially(QuestMultiLineTimePointData timePoint, IAnimationSequencerContext context, IReadOnlyList<int> groupIds, int index)
 		{
 			QuestMultiLineAnimationSequencer.<RunGroupsSequentially>d__13 <RunGroupsSequentially>d__;
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <RunGroupsSequentially>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034369 RID: 213865 RVA: 0x00C41970 File Offset: 0x00C3FB70
+		// Token: 0x060291D7 RID: 168407 RVA: 0x00B8B11C File Offset: 0x00B8931C
 		private UniTask RunBranchSelectAsync(IReadOnlyList<QuestMultiLineComponentData> components, IReadOnlyList<int> fightAreas, IAnimationSequencerContext context)
 		{
 			QuestMultiLineAnimationSequencer.<RunBranchSelectAsync>d__14 <RunBranchSelectAsync>d__;
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <RunBranchSelectAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603436A RID: 213866 RVA: 0x00C419CC File Offset: 0x00C3FBCC
+		// Token: 0x060291D8 RID: 168408 RVA: 0x00B8B178 File Offset: 0x00B89378
 		private List<QuestMultiLineComponentData> BuildComponentsOfGroup(int[] componentIds, Dictionary<int, QuestMultiLineComponentData> unlockMap)
 		{
 			List<QuestMultiLineComponentData> list = new List<QuestMultiLineComponentData>();
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return list;
 		}
 
-		// Token: 0x0603436B RID: 213867 RVA: 0x00C41A08 File Offset: 0x00C3FC08
+		// Token: 0x060291D9 RID: 168409 RVA: 0x00B8B1B4 File Offset: 0x00B893B4
 		private UniTask RaceWithStop(UniTask p)
 		{
 			QuestMultiLineAnimationSequencer.<RaceWithStop>d__16 <RaceWithStop>d__;
@@ -199,13 +199,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <RaceWithStop>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401BC2A RID: 113706
+		// Token: 0x040165FF RID: 91647
 		private bool Playing;
 
-		// Token: 0x0401BC2B RID: 113707
+		// Token: 0x04016600 RID: 91648
 		private bool StopRequested;
 
-		// Token: 0x0401BC2C RID: 113708
+		// Token: 0x04016601 RID: 91649
 		[Nullable(2)]
 		private CustomPromise StopPromise;
 	}

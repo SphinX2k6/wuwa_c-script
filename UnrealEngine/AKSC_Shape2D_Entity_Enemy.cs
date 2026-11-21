@@ -6,47 +6,47 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E36 RID: 7734
+	// Token: 0x0200058C RID: 1420
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_Shape2D_Entity_Enemy")]
 	[UnrealStructLayout(1512, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1512)]
 	public class AKSC_Shape2D_Entity_Enemy : AKSC_Shape2D_Entity, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D785 RID: 120709 RVA: 0x002B84F4 File Offset: 0x002B66F4
+		// Token: 0x060080A2 RID: 32930 RVA: 0x000BDFE8 File Offset: 0x000BC1E8
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKSC_Shape2D_Entity_Enemy._ClassPtr;
 		}
 
-		// Token: 0x0601D786 RID: 120710 RVA: 0x002B8500 File Offset: 0x002B6700
+		// Token: 0x060080A3 RID: 32931 RVA: 0x000BDFF4 File Offset: 0x000BC1F4
 		public AKSC_Shape2D_Entity_Enemy() : this(BuiltinUtils.AllocNativeUObject(AKSC_Shape2D_Entity_Enemy.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D787 RID: 120711 RVA: 0x002B8528 File Offset: 0x002B6728
+		// Token: 0x060080A4 RID: 32932 RVA: 0x000BE01C File Offset: 0x000BC21C
 		[NullableContext(1)]
 		public AKSC_Shape2D_Entity_Enemy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKSC_Shape2D_Entity_Enemy.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0601D788 RID: 120712 RVA: 0x002B855B File Offset: 0x002B675B
+		// Token: 0x060080A5 RID: 32933 RVA: 0x000BE04F File Offset: 0x000BC24F
 		static AKSC_Shape2D_Entity_Enemy()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_Shape2D_Entity_Enemy");
 		}
 
-		// Token: 0x0601D789 RID: 120713 RVA: 0x002B8569 File Offset: 0x002B6769
+		// Token: 0x060080A6 RID: 32934 RVA: 0x000BE05D File Offset: 0x000BC25D
 		protected AKSC_Shape2D_Entity_Enemy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FFA4 RID: 65444
+		// Token: 0x0400382C RID: 14380
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_Shape2D_Entity_Enemy";
 
-		// Token: 0x0400FFA5 RID: 65445
+		// Token: 0x0400382D RID: 14381
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FFA6 RID: 65446
+		// Token: 0x0400382E RID: 14382
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

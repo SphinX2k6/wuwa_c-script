@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002258 RID: 8792
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024C5 RID: 9413
 	public class TriggerDeadeyeMode : ActionParams
 	{
-		// Token: 0x0600C0DE RID: 49374 RVA: 0x001BAC78 File Offset: 0x001B8E78
+		// Token: 0x0600CCA4 RID: 52388 RVA: 0x001D23FC File Offset: 0x001D05FC
 		private TriggerDeadeyeMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C0DF RID: 49375 RVA: 0x001BACB0 File Offset: 0x001B8EB0
+		// Token: 0x0600CCA5 RID: 52389 RVA: 0x001D2434 File Offset: 0x001D0634
 		public static TriggerDeadeyeMode Create([Nullable(2)] TriggerDeadeyeMode instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0E0 RID: 49376 RVA: 0x001BACC3 File Offset: 0x001B8EC3
+		// Token: 0x0600CCA6 RID: 52390 RVA: 0x001D2447 File Offset: 0x001D0647
 		public static TriggerDeadeyeMode CreateFromSetValue([Nullable(2)] TriggerDeadeyeMode_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0E1 RID: 49377 RVA: 0x001BACD8 File Offset: 0x001B8ED8
+		// Token: 0x0600CCA7 RID: 52391 RVA: 0x001D245C File Offset: 0x001D065C
 		public TriggerDeadeyeMode_SetValue ToSetValue()
 		{
 			return new TriggerDeadeyeMode_SetValue
@@ -69,9 +67,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A58 RID: 14936
-		// (get) Token: 0x0600C0E2 RID: 49378 RVA: 0x001BAD64 File Offset: 0x001B8F64
-		// (set) Token: 0x0600C0E3 RID: 49379 RVA: 0x001BADC5 File Offset: 0x001B8FC5
+		// Token: 0x17003D4F RID: 15695
+		// (get) Token: 0x0600CCA8 RID: 52392 RVA: 0x001D24E8 File Offset: 0x001D06E8
+		// (set) Token: 0x0600CCA9 RID: 52393 RVA: 0x001D2549 File Offset: 0x001D0749
 		public virtual IDeadeyeFollowShooterConfig FollowShooterConfig
 		{
 			get
@@ -99,9 +97,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A59 RID: 14937
-		// (get) Token: 0x0600C0E4 RID: 49380 RVA: 0x001BADDA File Offset: 0x001B8FDA
-		// (set) Token: 0x0600C0E5 RID: 49381 RVA: 0x001BAE01 File Offset: 0x001B9001
+		// Token: 0x17003D50 RID: 15696
+		// (get) Token: 0x0600CCAA RID: 52394 RVA: 0x001D255E File Offset: 0x001D075E
+		// (set) Token: 0x0600CCAB RID: 52395 RVA: 0x001D2585 File Offset: 0x001D0785
 		public virtual List<int> FocusOnTags
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A5A RID: 14938
-		// (get) Token: 0x0600C0E6 RID: 49382 RVA: 0x001BAE0F File Offset: 0x001B900F
-		// (set) Token: 0x0600C0E7 RID: 49383 RVA: 0x001BAE3E File Offset: 0x001B903E
+		// Token: 0x17003D51 RID: 15697
+		// (get) Token: 0x0600CCAC RID: 52396 RVA: 0x001D2593 File Offset: 0x001D0793
+		// (set) Token: 0x0600CCAD RID: 52397 RVA: 0x001D25C2 File Offset: 0x001D07C2
 		public virtual float FocusRadius
 		{
 			get
@@ -146,9 +144,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A5B RID: 14939
-		// (get) Token: 0x0600C0E8 RID: 49384 RVA: 0x001BAE4C File Offset: 0x001B904C
-		// (set) Token: 0x0600C0E9 RID: 49385 RVA: 0x001BAE86 File Offset: 0x001B9086
+		// Token: 0x17003D52 RID: 15698
+		// (get) Token: 0x0600CCAE RID: 52398 RVA: 0x001D25D0 File Offset: 0x001D07D0
+		// (set) Token: 0x0600CCAF RID: 52399 RVA: 0x001D260A File Offset: 0x001D080A
 		public virtual float? TimeScale
 		{
 			get
@@ -170,9 +168,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A5C RID: 14940
-		// (get) Token: 0x0600C0EA RID: 49386 RVA: 0x001BAE94 File Offset: 0x001B9094
-		// (set) Token: 0x0600C0EB RID: 49387 RVA: 0x001BAECE File Offset: 0x001B90CE
+		// Token: 0x17003D53 RID: 15699
+		// (get) Token: 0x0600CCB0 RID: 52400 RVA: 0x001D2618 File Offset: 0x001D0818
+		// (set) Token: 0x0600CCB1 RID: 52401 RVA: 0x001D2652 File Offset: 0x001D0852
 		public virtual float? TimeScaleTransitionTime
 		{
 			get
@@ -194,9 +192,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A5D RID: 14941
-		// (get) Token: 0x0600C0EC RID: 49388 RVA: 0x001BAEDC File Offset: 0x001B90DC
-		// (set) Token: 0x0600C0ED RID: 49389 RVA: 0x001BAF3D File Offset: 0x001B913D
+		// Token: 0x17003D54 RID: 15700
+		// (get) Token: 0x0600CCB2 RID: 52402 RVA: 0x001D2660 File Offset: 0x001D0860
+		// (set) Token: 0x0600CCB3 RID: 52403 RVA: 0x001D26C1 File Offset: 0x001D08C1
 		[Nullable(2)]
 		public virtual IDeadeyeFadeOutConfig FadeOutConfig
 		{
@@ -227,9 +225,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A5E RID: 14942
-		// (get) Token: 0x0600C0EE RID: 49390 RVA: 0x001BAF54 File Offset: 0x001B9154
-		// (set) Token: 0x0600C0EF RID: 49391 RVA: 0x001BAFB5 File Offset: 0x001B91B5
+		// Token: 0x17003D55 RID: 15701
+		// (get) Token: 0x0600CCB4 RID: 52404 RVA: 0x001D26D8 File Offset: 0x001D08D8
+		// (set) Token: 0x0600CCB5 RID: 52405 RVA: 0x001D2739 File Offset: 0x001D0939
 		public virtual IDeadeyeEnergyConfig EnergyConfig
 		{
 			get
@@ -257,9 +255,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A5F RID: 14943
-		// (get) Token: 0x0600C0F0 RID: 49392 RVA: 0x001BAFCC File Offset: 0x001B91CC
-		// (set) Token: 0x0600C0F1 RID: 49393 RVA: 0x001BB02D File Offset: 0x001B922D
+		// Token: 0x17003D56 RID: 15702
+		// (get) Token: 0x0600CCB6 RID: 52406 RVA: 0x001D2750 File Offset: 0x001D0950
+		// (set) Token: 0x0600CCB7 RID: 52407 RVA: 0x001D27B1 File Offset: 0x001D09B1
 		[Nullable(2)]
 		public virtual IDeadeyeCameraConfig DefaultLookAt
 		{
@@ -290,9 +288,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A60 RID: 14944
-		// (get) Token: 0x0600C0F2 RID: 49394 RVA: 0x001BB044 File Offset: 0x001B9244
-		// (set) Token: 0x0600C0F3 RID: 49395 RVA: 0x001BB0A5 File Offset: 0x001B92A5
+		// Token: 0x17003D57 RID: 15703
+		// (get) Token: 0x0600CCB8 RID: 52408 RVA: 0x001D27C8 File Offset: 0x001D09C8
+		// (set) Token: 0x0600CCB9 RID: 52409 RVA: 0x001D2829 File Offset: 0x001D0A29
 		[Nullable(2)]
 		public virtual IDeadEyeEffectConfig EffectConfig
 		{
@@ -323,9 +321,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A61 RID: 14945
-		// (get) Token: 0x0600C0F4 RID: 49396 RVA: 0x001BB0BA File Offset: 0x001B92BA
-		// (set) Token: 0x0600C0F5 RID: 49397 RVA: 0x001BB0E1 File Offset: 0x001B92E1
+		// Token: 0x17003D58 RID: 15704
+		// (get) Token: 0x0600CCBA RID: 52410 RVA: 0x001D283E File Offset: 0x001D0A3E
+		// (set) Token: 0x0600CCBB RID: 52411 RVA: 0x001D2865 File Offset: 0x001D0A65
 		[Nullable(2)]
 		public virtual string FinishSendSelfEvent
 		{
@@ -350,42 +348,42 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040072F0 RID: 29424
+		// Token: 0x0400793D RID: 31037
 		[Nullable(2)]
 		protected new TriggerDeadeyeMode FbInstance;
 
-		// Token: 0x040072F1 RID: 29425
+		// Token: 0x0400793E RID: 31038
 		[Nullable(2)]
 		protected TriggerDeadeyeMode_SetValue PocoInterface;
 
-		// Token: 0x040072F2 RID: 29426
+		// Token: 0x0400793F RID: 31039
 		private IDeadeyeFollowShooterConfig _FollowShooterConfigCache;
 
-		// Token: 0x040072F3 RID: 29427
+		// Token: 0x04007940 RID: 31040
 		private bool _FollowShooterConfigInited;
 
-		// Token: 0x040072F4 RID: 29428
+		// Token: 0x04007941 RID: 31041
 		private IDeadeyeFadeOutConfig _FadeOutConfigCache;
 
-		// Token: 0x040072F5 RID: 29429
+		// Token: 0x04007942 RID: 31042
 		private bool _FadeOutConfigInited;
 
-		// Token: 0x040072F6 RID: 29430
+		// Token: 0x04007943 RID: 31043
 		private IDeadeyeEnergyConfig _EnergyConfigCache;
 
-		// Token: 0x040072F7 RID: 29431
+		// Token: 0x04007944 RID: 31044
 		private bool _EnergyConfigInited;
 
-		// Token: 0x040072F8 RID: 29432
+		// Token: 0x04007945 RID: 31045
 		private IDeadeyeCameraConfig _DefaultLookAtCache;
 
-		// Token: 0x040072F9 RID: 29433
+		// Token: 0x04007946 RID: 31046
 		private bool _DefaultLookAtInited;
 
-		// Token: 0x040072FA RID: 29434
+		// Token: 0x04007947 RID: 31047
 		private IDeadEyeEffectConfig _EffectConfigCache;
 
-		// Token: 0x040072FB RID: 29435
+		// Token: 0x04007948 RID: 31048
 		private bool _EffectConfigInited;
 	}
 }

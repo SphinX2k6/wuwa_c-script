@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x02001976 RID: 6518
+// Token: 0x02000E33 RID: 3635
 public class SmallItemGridEchoStackComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BED5 RID: 48853 RVA: 0x002B2C34 File Offset: 0x002B0E34
+	// Token: 0x060092DD RID: 37597 RVA: 0x002BDBB8 File Offset: 0x002BBDB8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,20 +22,20 @@ public class SmallItemGridEchoStackComponent : SmallItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BED6 RID: 48854 RVA: 0x002B2C9D File Offset: 0x002B0E9D
+	// Token: 0x060092DE RID: 37598 RVA: 0x002BDC21 File Offset: 0x002BBE21
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "PnlEchoStackB";
 	}
 
-	// Token: 0x0600BED7 RID: 48855 RVA: 0x002B2CA4 File Offset: 0x002B0EA4
+	// Token: 0x060092DF RID: 37599 RVA: 0x002BDC28 File Offset: 0x002BBE28
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;
 	}
 
-	// Token: 0x0600BED8 RID: 48856 RVA: 0x002B2CA8 File Offset: 0x002B0EA8
+	// Token: 0x060092E0 RID: 37600 RVA: 0x002BDC2C File Offset: 0x002BBE2C
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -59,13 +59,13 @@ public class SmallItemGridEchoStackComponent : SmallItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x02007EC2 RID: 32450
+	// Token: 0x02007051 RID: 28753
 	private class EChildType
 	{
-		// Token: 0x040296FC RID: 169724
+		// Token: 0x04024A39 RID: 150073
 		public const int SpriteStateIcon = 0;
 
-		// Token: 0x040296FD RID: 169725
+		// Token: 0x04024A3A RID: 150074
 		public const int TextNum = 1;
 	}
 }

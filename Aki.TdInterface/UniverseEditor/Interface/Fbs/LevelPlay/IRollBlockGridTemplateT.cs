@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200457F RID: 17791
+	// Token: 0x020049E7 RID: 18919
 	public class IRollBlockGridTemplateT
 	{
-		// Token: 0x17007E6D RID: 32365
-		// (get) Token: 0x0601ADFB RID: 110075 RVA: 0x003D5FF7 File Offset: 0x003D41F7
-		// (set) Token: 0x0601ADFC RID: 110076 RVA: 0x003D5FFF File Offset: 0x003D41FF
+		// Token: 0x170084AE RID: 33966
+		// (get) Token: 0x0601C5D0 RID: 116176 RVA: 0x00402293 File Offset: 0x00400493
+		// (set) Token: 0x0601C5D1 RID: 116177 RVA: 0x0040229B File Offset: 0x0040049B
 		public ERollBlockGridType GridType { get; set; }
 
-		// Token: 0x17007E6E RID: 32366
-		// (get) Token: 0x0601ADFD RID: 110077 RVA: 0x003D6008 File Offset: 0x003D4208
-		// (set) Token: 0x0601ADFE RID: 110078 RVA: 0x003D6010 File Offset: 0x003D4210
+		// Token: 0x170084AF RID: 33967
+		// (get) Token: 0x0601C5D2 RID: 116178 RVA: 0x004022A4 File Offset: 0x004004A4
+		// (set) Token: 0x0601C5D3 RID: 116179 RVA: 0x004022AC File Offset: 0x004004AC
 		public string TemplateId { get; set; }
 
-		// Token: 0x0601ADFF RID: 110079 RVA: 0x003D6019 File Offset: 0x003D4219
+		// Token: 0x0601C5D4 RID: 116180 RVA: 0x004022B5 File Offset: 0x004004B5
 		public IRollBlockGridTemplateT()
 		{
 			this.GridType = ERollBlockGridType.Empty;

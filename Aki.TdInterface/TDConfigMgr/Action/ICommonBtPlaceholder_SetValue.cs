@@ -1,24 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001907 RID: 6407
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A8E RID: 6798
 	public class ICommonBtPlaceholder_SetValue
 	{
-		// Token: 0x0400560A RID: 22026
+		// Token: 0x04005A54 RID: 23124
 		public int Id;
 
-		// Token: 0x0400560B RID: 22027
+		// Token: 0x04005A55 RID: 23125
 		public string Name;
 
-		// Token: 0x0400560C RID: 22028
+		// Token: 0x04005A56 RID: 23126
 		public ICommonBtOverrideTaskInfoBase Value;
 
-		// Token: 0x0400560D RID: 22029
+		// Token: 0x04005A57 RID: 23127
 		public List<int> RefTaskIds;
 	}
 }

@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001322 RID: 4898
+// Token: 0x020007D6 RID: 2006
 public interface IInvestData
 {
-	// Token: 0x17000B9A RID: 2970
-	// (get) Token: 0x060087F0 RID: 34800
-	// (set) Token: 0x060087F1 RID: 34801
+	// Token: 0x17000BBA RID: 3002
+	// (get) Token: 0x06005B8B RID: 23435
+	// (set) Token: 0x06005B8C RID: 23436
 	int SuccessProbability { get; set; }
 
-	// Token: 0x17000B9B RID: 2971
-	// (get) Token: 0x060087F2 RID: 34802
-	// (set) Token: 0x060087F3 RID: 34803
+	// Token: 0x17000BBB RID: 3003
+	// (get) Token: 0x06005B8D RID: 23437
+	// (set) Token: 0x06005B8E RID: 23438
 	int Ratio { get; set; }
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DBE RID: 7614
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FD5 RID: 8149
 	public class IRideMotorcycleInteract : ILeisureInteractType
 	{
-		// Token: 0x0600A317 RID: 41751 RVA: 0x00172878 File Offset: 0x00170A78
+		// Token: 0x0600AD21 RID: 44321 RVA: 0x00186FA0 File Offset: 0x001851A0
 		private IRideMotorcycleInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A318 RID: 41752 RVA: 0x001728B0 File Offset: 0x00170AB0
+		// Token: 0x0600AD22 RID: 44322 RVA: 0x00186FD8 File Offset: 0x001851D8
 		public static IRideMotorcycleInteract Create([Nullable(2)] IRideMotorcycleInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A319 RID: 41753 RVA: 0x001728C3 File Offset: 0x00170AC3
+		// Token: 0x0600AD23 RID: 44323 RVA: 0x00186FEB File Offset: 0x001851EB
 		public static IRideMotorcycleInteract CreateFromSetValue([Nullable(2)] IRideMotorcycleInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A31A RID: 41754 RVA: 0x001728D6 File Offset: 0x00170AD6
+		// Token: 0x0600AD24 RID: 44324 RVA: 0x00186FFE File Offset: 0x001851FE
 		public new IRideMotorcycleInteract_SetValue ToSetValue()
 		{
 			return new IRideMotorcycleInteract_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003245 RID: 12869
-		// (get) Token: 0x0600A31B RID: 41755 RVA: 0x001728F5 File Offset: 0x00170AF5
-		// (set) Token: 0x0600A31C RID: 41756 RVA: 0x00172920 File Offset: 0x00170B20
+		// Token: 0x170034DF RID: 13535
+		// (get) Token: 0x0600AD25 RID: 44325 RVA: 0x0018701D File Offset: 0x0018521D
+		// (set) Token: 0x0600AD26 RID: 44326 RVA: 0x00187048 File Offset: 0x00185248
 		public override ELeisureInteract Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003246 RID: 12870
-		// (get) Token: 0x0600A31D RID: 41757 RVA: 0x0017292E File Offset: 0x00170B2E
-		// (set) Token: 0x0600A31E RID: 41758 RVA: 0x00172959 File Offset: 0x00170B59
+		// Token: 0x170034E0 RID: 13536
+		// (get) Token: 0x0600AD27 RID: 44327 RVA: 0x00187056 File Offset: 0x00185256
+		// (set) Token: 0x0600AD28 RID: 44328 RVA: 0x00187081 File Offset: 0x00185281
 		public virtual int MotorcycleEntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061D8 RID: 25048
+		// Token: 0x04006760 RID: 26464
 		[Nullable(2)]
 		protected new IRideMotorcycleInteract FbInstance;
 
-		// Token: 0x040061D9 RID: 25049
+		// Token: 0x04006761 RID: 26465
 		[Nullable(2)]
 		protected new IRideMotorcycleInteract_SetValue PocoInterface;
 	}

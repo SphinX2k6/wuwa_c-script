@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x0200478B RID: 18315
+	// Token: 0x020036BC RID: 14012
 	public enum EOpenMapType
 	{
-		// Token: 0x04019DBA RID: 105914
+		// Token: 0x0401446A RID: 83050
 		HotKey,
-		// Token: 0x04019DBB RID: 105915
+		// Token: 0x0401446B RID: 83051
 		Mouse,
-		// Token: 0x04019DBC RID: 105916
+		// Token: 0x0401446C RID: 83052
 		Other
 	}
 }

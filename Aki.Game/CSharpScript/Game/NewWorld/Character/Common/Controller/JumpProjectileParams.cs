@@ -3,41 +3,41 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 {
-	// Token: 0x020070B4 RID: 28852
+	// Token: 0x02006313 RID: 25363
 	[RequiredMember]
 	public class JumpProjectileParams : IJumpProjectileParams
 	{
-		// Token: 0x17009C5F RID: 40031
-		// (get) Token: 0x06046575 RID: 288117 RVA: 0x011A1CFB File Offset: 0x0119FEFB
-		// (set) Token: 0x06046576 RID: 288118 RVA: 0x011A1D03 File Offset: 0x0119FF03
+		// Token: 0x17007453 RID: 29779
+		// (get) Token: 0x0603D61F RID: 251423 RVA: 0x011BF5CF File Offset: 0x011BD7CF
+		// (set) Token: 0x0603D620 RID: 251424 RVA: 0x011BF5D7 File Offset: 0x011BD7D7
 		[RequiredMember]
 		public float Length { get; set; }
 
-		// Token: 0x17009C60 RID: 40032
-		// (get) Token: 0x06046577 RID: 288119 RVA: 0x011A1D0C File Offset: 0x0119FF0C
-		// (set) Token: 0x06046578 RID: 288120 RVA: 0x011A1D14 File Offset: 0x0119FF14
+		// Token: 0x17007454 RID: 29780
+		// (get) Token: 0x0603D621 RID: 251425 RVA: 0x011BF5E0 File Offset: 0x011BD7E0
+		// (set) Token: 0x0603D622 RID: 251426 RVA: 0x011BF5E8 File Offset: 0x011BD7E8
 		[RequiredMember]
 		public float AllTime { get; set; }
 
-		// Token: 0x17009C61 RID: 40033
-		// (get) Token: 0x06046579 RID: 288121 RVA: 0x011A1D1D File Offset: 0x0119FF1D
-		// (set) Token: 0x0604657A RID: 288122 RVA: 0x011A1D25 File Offset: 0x0119FF25
+		// Token: 0x17007455 RID: 29781
+		// (get) Token: 0x0603D623 RID: 251427 RVA: 0x011BF5F1 File Offset: 0x011BD7F1
+		// (set) Token: 0x0603D624 RID: 251428 RVA: 0x011BF5F9 File Offset: 0x011BD7F9
 		[RequiredMember]
 		public float Height0 { get; set; }
 
-		// Token: 0x17009C62 RID: 40034
-		// (get) Token: 0x0604657B RID: 288123 RVA: 0x011A1D2E File Offset: 0x0119FF2E
-		// (set) Token: 0x0604657C RID: 288124 RVA: 0x011A1D36 File Offset: 0x0119FF36
+		// Token: 0x17007456 RID: 29782
+		// (get) Token: 0x0603D625 RID: 251429 RVA: 0x011BF602 File Offset: 0x011BD802
+		// (set) Token: 0x0603D626 RID: 251430 RVA: 0x011BF60A File Offset: 0x011BD80A
 		[RequiredMember]
 		public float ProjectileA { get; set; }
 
-		// Token: 0x17009C63 RID: 40035
-		// (get) Token: 0x0604657D RID: 288125 RVA: 0x011A1D3F File Offset: 0x0119FF3F
-		// (set) Token: 0x0604657E RID: 288126 RVA: 0x011A1D47 File Offset: 0x0119FF47
+		// Token: 0x17007457 RID: 29783
+		// (get) Token: 0x0603D627 RID: 251431 RVA: 0x011BF613 File Offset: 0x011BD813
+		// (set) Token: 0x0603D628 RID: 251432 RVA: 0x011BF61B File Offset: 0x011BD81B
 		[RequiredMember]
 		public float ProjectileB { get; set; }
 
-		// Token: 0x0604657F RID: 288127 RVA: 0x011A1D50 File Offset: 0x0119FF50
+		// Token: 0x0603D629 RID: 251433 RVA: 0x011BF624 File Offset: 0x011BD824
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public JumpProjectileParams()

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DFE RID: 7678
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002031 RID: 8241
 	public class ISendPhoneMessage : IPhoneSystemInteractBase
 	{
-		// Token: 0x0600A445 RID: 42053 RVA: 0x00174974 File Offset: 0x00172B74
+		// Token: 0x0600AEED RID: 44781 RVA: 0x0018A37C File Offset: 0x0018857C
 		private ISendPhoneMessage_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A446 RID: 42054 RVA: 0x001749AC File Offset: 0x00172BAC
+		// Token: 0x0600AEEE RID: 44782 RVA: 0x0018A3B4 File Offset: 0x001885B4
 		public static ISendPhoneMessage Create([Nullable(2)] ISendPhoneMessage instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A447 RID: 42055 RVA: 0x001749BF File Offset: 0x00172BBF
+		// Token: 0x0600AEEF RID: 44783 RVA: 0x0018A3C7 File Offset: 0x001885C7
 		public static ISendPhoneMessage CreateFromSetValue([Nullable(2)] ISendPhoneMessage_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A448 RID: 42056 RVA: 0x001749D2 File Offset: 0x00172BD2
+		// Token: 0x0600AEF0 RID: 44784 RVA: 0x0018A3DA File Offset: 0x001885DA
 		public new ISendPhoneMessage_SetValue ToSetValue()
 		{
 			return new ISendPhoneMessage_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700327C RID: 12924
-		// (get) Token: 0x0600A449 RID: 42057 RVA: 0x001749F1 File Offset: 0x00172BF1
-		// (set) Token: 0x0600A44A RID: 42058 RVA: 0x00174A1C File Offset: 0x00172C1C
+		// Token: 0x1700353B RID: 13627
+		// (get) Token: 0x0600AEF1 RID: 44785 RVA: 0x0018A3F9 File Offset: 0x001885F9
+		// (set) Token: 0x0600AEF2 RID: 44786 RVA: 0x0018A424 File Offset: 0x00188624
 		public override EPhoneSystemInteractType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700327D RID: 12925
-		// (get) Token: 0x0600A44B RID: 42059 RVA: 0x00174A2C File Offset: 0x00172C2C
-		// (set) Token: 0x0600A44C RID: 42060 RVA: 0x00174A8D File Offset: 0x00172C8D
+		// Token: 0x1700353C RID: 13628
+		// (get) Token: 0x0600AEF3 RID: 44787 RVA: 0x0018A434 File Offset: 0x00188634
+		// (set) Token: 0x0600AEF4 RID: 44788 RVA: 0x0018A495 File Offset: 0x00188695
 		public virtual IPhoneRecordActionConfig PhoneRecordActionConfig
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400625F RID: 25183
+		// Token: 0x04006836 RID: 26678
 		[Nullable(2)]
 		protected new ISendPhoneMessage FbInstance;
 
-		// Token: 0x04006260 RID: 25184
+		// Token: 0x04006837 RID: 26679
 		[Nullable(2)]
 		protected new ISendPhoneMessage_SetValue PocoInterface;
 
-		// Token: 0x04006261 RID: 25185
+		// Token: 0x04006838 RID: 26680
 		private IPhoneRecordActionConfig _PhoneRecordActionConfigCache;
 
-		// Token: 0x04006262 RID: 25186
+		// Token: 0x04006839 RID: 26681
 		private bool _PhoneRecordActionConfigInited;
 	}
 }

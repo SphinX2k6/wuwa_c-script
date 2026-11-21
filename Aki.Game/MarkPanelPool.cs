@@ -1,10 +1,10 @@
 ﻿using System;
 using CSharpScript.Game.Module.Map.Marks.MarkItemView;
 
-// Token: 0x020021EC RID: 8684
+// Token: 0x020016D0 RID: 5840
 public class MarkPanelPool : MarkItemViewPoolBase
 {
-	// Token: 0x06010E66 RID: 69222 RVA: 0x0041CC94 File Offset: 0x0041AE94
+	// Token: 0x0600E2F9 RID: 58105 RVA: 0x00429624 File Offset: 0x00427824
 	protected override void OnTick()
 	{
 		for (int i = this.Handles.Count - 1; i >= 0; i--)
@@ -22,7 +22,7 @@ public class MarkPanelPool : MarkItemViewPoolBase
 		}
 	}
 
-	// Token: 0x06010E67 RID: 69223 RVA: 0x0041CD00 File Offset: 0x0041AF00
+	// Token: 0x0600E2FA RID: 58106 RVA: 0x00429690 File Offset: 0x00427890
 	protected override void OnDispose()
 	{
 		foreach (IMarkPoolHandle markPoolHandle in this.Handles)
@@ -36,6 +36,6 @@ public class MarkPanelPool : MarkItemViewPoolBase
 		this.Handles.Clear();
 	}
 
-	// Token: 0x04008074 RID: 32884
+	// Token: 0x040081B2 RID: 33202
 	public const int MAX_PANEL_HANDLE_CACHE_TIME = 10000;
 }

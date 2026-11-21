@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Extension;
 using CSharpScript.Game.Common.Event;
@@ -13,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 {
-	// Token: 0x02005267 RID: 21095
+	// Token: 0x02004237 RID: 16951
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaDiscardCardPanel : UiPanelBase
 	{
-		// Token: 0x06035EF4 RID: 220916 RVA: 0x00CC2C28 File Offset: 0x00CC0E28
+		// Token: 0x0602ADEF RID: 175599 RVA: 0x00C102B8 File Offset: 0x00C0E4B8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,19 +39,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 			};
 		}
 
-		// Token: 0x06035EF5 RID: 220917 RVA: 0x00CC2D43 File Offset: 0x00CC0F43
+		// Token: 0x0602ADF0 RID: 175600 RVA: 0x00C103D3 File Offset: 0x00C0E5D3
 		protected override void OnStart()
 		{
 			this.Scroll = new GenericScrollViewNew<PhantomArenaDiscardCardItem, PhantomCardData>(base.GetScrollViewWithScrollbar(1), new Func<PhantomArenaDiscardCardItem>(this.InitItem), base.GetItem(2).GetOwner() as AUIBaseActor, false, null);
 		}
 
-		// Token: 0x06035EF6 RID: 220918 RVA: 0x00CC2D76 File Offset: 0x00CC0F76
+		// Token: 0x0602ADF1 RID: 175601 RVA: 0x00C10406 File Offset: 0x00C0E606
 		protected override void OnAfterShow()
 		{
 			EventSystem.Instance.Emit(EEventName.OnPhantomArenaChooseCardPanelShow);
 		}
 
-		// Token: 0x06035EF7 RID: 220919 RVA: 0x00CC2D88 File Offset: 0x00CC0F88
+		// Token: 0x0602ADF2 RID: 175602 RVA: 0x00C10418 File Offset: 0x00C0E618
 		protected override UniTask OnBeforeShowAsyncImplement()
 		{
 			PhantomArenaDiscardCardPanel.<OnBeforeShowAsyncImplement>d__9 <OnBeforeShowAsyncImplement>d__;
@@ -63,7 +62,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 			return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035EF8 RID: 220920 RVA: 0x00CC2DCC File Offset: 0x00CC0FCC
+		// Token: 0x0602ADF3 RID: 175603 RVA: 0x00C1045C File Offset: 0x00C0E65C
 		protected override void OnAfterHide()
 		{
 			base.GetItem(3).SetUIActive(true);
@@ -74,7 +73,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 			this.ViewProxy.SetInPanelInteractType(EPhantomArenaBattlePanelInteractType.MainView);
 		}
 
-		// Token: 0x06035EF9 RID: 220921 RVA: 0x00CC2E21 File Offset: 0x00CC1021
+		// Token: 0x0602ADF4 RID: 175604 RVA: 0x00C104B1 File Offset: 0x00C0E6B1
 		private PhantomArenaDiscardCardItem InitItem()
 		{
 			return new PhantomArenaDiscardCardItem
@@ -83,7 +82,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 			};
 		}
 
-		// Token: 0x06035EFA RID: 220922 RVA: 0x00CC2E3C File Offset: 0x00CC103C
+		// Token: 0x0602ADF5 RID: 175605 RVA: 0x00C104CC File Offset: 0x00C0E6CC
 		private void OnVisibleToggleClick(EToggleState state)
 		{
 			bool flag = state != EToggleState.ETT_Checked;
@@ -92,7 +91,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 			base.GetItem(3).SetUIActive(flag);
 		}
 
-		// Token: 0x06035EFB RID: 220923 RVA: 0x00CC2E78 File Offset: 0x00CC1078
+		// Token: 0x0602ADF6 RID: 175606 RVA: 0x00C10508 File Offset: 0x00C0E708
 		private void OnConfirmBtnClick()
 		{
 			this.Data.ConfirmFunc(new List<int>(this.SelectedIdSet)).Finally(delegate()
@@ -104,13 +103,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 			}).Forget();
 		}
 
-		// Token: 0x06035EFC RID: 220924 RVA: 0x00CC2EAB File Offset: 0x00CC10AB
+		// Token: 0x0602ADF7 RID: 175607 RVA: 0x00C1053B File Offset: 0x00C0E73B
 		private void OnEmptyBtnClick()
 		{
 			this.ViewProxy.HideCardTips();
 		}
 
-		// Token: 0x06035EFD RID: 220925 RVA: 0x00CC2EB8 File Offset: 0x00CC10B8
+		// Token: 0x0602ADF8 RID: 175608 RVA: 0x00C10548 File Offset: 0x00C0E748
 		private void CardClick(PhantomCardData data, bool isSelected)
 		{
 			int cardId = data.CardId;
@@ -136,7 +135,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 			this.RefreshConfirmInteractive();
 		}
 
-		// Token: 0x06035EFE RID: 220926 RVA: 0x00CC2F84 File Offset: 0x00CC1184
+		// Token: 0x0602ADF9 RID: 175609 RVA: 0x00C10614 File Offset: 0x00C0E814
 		private void HandleChooseState(int selectId, bool isSelected)
 		{
 			PhantomArenaDiscardCardItem scrollItemByKey = this.Scroll.GetScrollItemByKey(selectId);
@@ -152,14 +151,21 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 			this.SelectedIdSet.Remove(selectId);
 		}
 
-		// Token: 0x06035EFF RID: 220927 RVA: 0x00CC2FCC File Offset: 0x00CC11CC
+		// Token: 0x0602ADFA RID: 175610 RVA: 0x00C1065C File Offset: 0x00C0E85C
 		private void CancelChooseLastState()
 		{
 			if (this.SelectedIdSet.Count <= 0)
 			{
 				return;
 			}
-			int num = this.SelectedIdSet.First<int>();
+			int num = 0;
+			using (HashSet<int>.Enumerator enumerator = this.SelectedIdSet.GetEnumerator())
+			{
+				if (enumerator.MoveNext())
+				{
+					num = enumerator.Current;
+				}
+			}
 			if (num != 0)
 			{
 				this.HandleChooseState(num, false);
@@ -167,7 +173,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 			}
 		}
 
-		// Token: 0x06035F00 RID: 220928 RVA: 0x00CC3006 File Offset: 0x00CC1206
+		// Token: 0x0602ADFB RID: 175611 RVA: 0x00C106D0 File Offset: 0x00C0E8D0
 		private void ResetToggleState(int selectId)
 		{
 			PhantomArenaDiscardCardItem scrollItemByKey = this.Scroll.GetScrollItemByKey(selectId);
@@ -178,7 +184,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 			scrollItemByKey.Card.SetToggleState(EToggleState.ETT_UnChecked, false);
 		}
 
-		// Token: 0x06035F01 RID: 220929 RVA: 0x00CC302C File Offset: 0x00CC122C
+		// Token: 0x0602ADFC RID: 175612 RVA: 0x00C106F4 File Offset: 0x00C0E8F4
 		private void HandleSelectState(int selectId)
 		{
 			if (this.CurrentSelectId == selectId)
@@ -202,37 +208,37 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 			this.CurrentSelectId = selectId;
 		}
 
-		// Token: 0x06035F02 RID: 220930 RVA: 0x00CC30A8 File Offset: 0x00CC12A8
+		// Token: 0x0602ADFD RID: 175613 RVA: 0x00C10770 File Offset: 0x00C0E970
 		private void RefreshTitle()
 		{
 			base.GetText(0).SetText(this.SelectedIdSet.Count.ToString() + "/" + this.Data.LimitCount.ToString(), true);
 		}
 
-		// Token: 0x06035F03 RID: 220931 RVA: 0x00CC30F2 File Offset: 0x00CC12F2
+		// Token: 0x0602ADFE RID: 175614 RVA: 0x00C107BA File Offset: 0x00C0E9BA
 		private void RefreshTitleTips()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(7), this.Data.TitleTips, Array.Empty<object>());
 		}
 
-		// Token: 0x06035F04 RID: 220932 RVA: 0x00CC3115 File Offset: 0x00CC1315
+		// Token: 0x0602ADFF RID: 175615 RVA: 0x00C107DD File Offset: 0x00C0E9DD
 		private void RefreshConfirmInteractive()
 		{
 			base.GetButton(5).SetSelfInteractive(this.SelectedIdSet.Count >= this.Data.LimitCount);
 		}
 
-		// Token: 0x06035F05 RID: 220933 RVA: 0x00CC313E File Offset: 0x00CC133E
+		// Token: 0x0602AE00 RID: 175616 RVA: 0x00C10806 File Offset: 0x00C0EA06
 		public void RegisterViewProxy(PhantomArenaBattleProxy proxy)
 		{
 			this.ViewProxy = proxy;
 		}
 
-		// Token: 0x06035F06 RID: 220934 RVA: 0x00CC3147 File Offset: 0x00CC1347
+		// Token: 0x0602AE01 RID: 175617 RVA: 0x00C1080F File Offset: 0x00C0EA0F
 		public void SetDiscardCardData(IDiscardCardPanelData data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x06035F07 RID: 220935 RVA: 0x00CC3150 File Offset: 0x00CC1350
+		// Token: 0x0602AE02 RID: 175618 RVA: 0x00C10818 File Offset: 0x00C0EA18
 		public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 		{
 			if (configParams.Length == 0)
@@ -261,47 +267,47 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 			return null;
 		}
 
-		// Token: 0x0401C90B RID: 117003
+		// Token: 0x04017340 RID: 95040
 		protected PhantomArenaBattleProxy ViewProxy;
 
-		// Token: 0x0401C90C RID: 117004
+		// Token: 0x04017341 RID: 95041
 		protected GenericScrollViewNew<PhantomArenaDiscardCardItem, PhantomCardData> Scroll;
 
-		// Token: 0x0401C90D RID: 117005
+		// Token: 0x04017342 RID: 95042
 		protected HashSet<int> SelectedIdSet = new HashSet<int>();
 
-		// Token: 0x0401C90E RID: 117006
+		// Token: 0x04017343 RID: 95043
 		protected IDiscardCardPanelData Data;
 
-		// Token: 0x0401C90F RID: 117007
+		// Token: 0x04017344 RID: 95044
 		protected int CurrentSelectId = -1;
 
-		// Token: 0x0200B44F RID: 46159
+		// Token: 0x02009E87 RID: 40583
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04036A1A RID: 223770
+			// Token: 0x0403146D RID: 201837
 			public const int Title = 0;
 
-			// Token: 0x04036A1B RID: 223771
+			// Token: 0x0403146E RID: 201838
 			public const int Scroll = 1;
 
-			// Token: 0x04036A1C RID: 223772
+			// Token: 0x0403146F RID: 201839
 			public const int ScrollItem = 2;
 
-			// Token: 0x04036A1D RID: 223773
+			// Token: 0x04031470 RID: 201840
 			public const int ContentItem = 3;
 
-			// Token: 0x04036A1E RID: 223774
+			// Token: 0x04031471 RID: 201841
 			public const int VisibleToggle = 4;
 
-			// Token: 0x04036A1F RID: 223775
+			// Token: 0x04031472 RID: 201842
 			public const int ConfirmBtn = 5;
 
-			// Token: 0x04036A20 RID: 223776
+			// Token: 0x04031473 RID: 201843
 			public const int EmptyBtn = 6;
 
-			// Token: 0x04036A21 RID: 223777
+			// Token: 0x04031474 RID: 201844
 			public const int TitleTips = 7;
 		}
 	}

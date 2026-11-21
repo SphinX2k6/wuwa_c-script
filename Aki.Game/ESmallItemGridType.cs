@@ -1,22 +1,24 @@
 ﻿using System;
 
-// Token: 0x0200199C RID: 6556
+// Token: 0x02000E59 RID: 3673
 public enum ESmallItemGridType
 {
-	// Token: 0x040055DD RID: 21981
+	// Token: 0x0400568A RID: 22154
 	None,
-	// Token: 0x040055DE RID: 21982
+	// Token: 0x0400568B RID: 22155
 	Empty,
-	// Token: 0x040055DF RID: 21983
+	// Token: 0x0400568C RID: 22156
 	Character,
-	// Token: 0x040055E0 RID: 21984
+	// Token: 0x0400568D RID: 22157
 	Phantom,
-	// Token: 0x040055E1 RID: 21985
+	// Token: 0x0400568E RID: 22158
 	Prop,
-	// Token: 0x040055E2 RID: 21986
+	// Token: 0x0400568F RID: 22159
 	CharacterOrnament,
-	// Token: 0x040055E3 RID: 21987
+	// Token: 0x04005690 RID: 22160
 	ForecastCharacter,
-	// Token: 0x040055E4 RID: 21988
-	Kurotato
+	// Token: 0x04005691 RID: 22161
+	Kurotato,
+	// Token: 0x04005692 RID: 22162
+	Weapon
 }

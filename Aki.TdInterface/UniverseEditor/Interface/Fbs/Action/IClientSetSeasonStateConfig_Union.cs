@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063F4 RID: 25588
+	// Token: 0x02006A74 RID: 27252
 	public enum IClientSetSeasonStateConfig_Union : byte
 	{
-		// Token: 0x040109D9 RID: 68057
+		// Token: 0x040117FF RID: 71679
 		NONE,
-		// Token: 0x040109DA RID: 68058
+		// Token: 0x04011800 RID: 71680
 		IClientSetSeasonStateConfig,
-		// Token: 0x040109DB RID: 68059
+		// Token: 0x04011801 RID: 71681
 		ISwitchSeason,
-		// Token: 0x040109DC RID: 68060
+		// Token: 0x04011802 RID: 71682
 		ILoopSeasonChange
 	}
 }

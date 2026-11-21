@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200481B RID: 18459
+	// Token: 0x02004C83 RID: 19587
 	public class IActorDeployConfigT
 	{
-		// Token: 0x1700846F RID: 33903
-		// (get) Token: 0x0601C82D RID: 116781 RVA: 0x0040851A File Offset: 0x0040671A
-		// (set) Token: 0x0601C82E RID: 116782 RVA: 0x00408522 File Offset: 0x00406722
+		// Token: 0x17008ABA RID: 35514
+		// (get) Token: 0x0601E02A RID: 122922 RVA: 0x00434E6A File Offset: 0x0043306A
+		// (set) Token: 0x0601E02B RID: 122923 RVA: 0x00434E72 File Offset: 0x00433072
 		public string Folder { get; set; }
 
-		// Token: 0x17008470 RID: 33904
-		// (get) Token: 0x0601C82F RID: 116783 RVA: 0x0040852B File Offset: 0x0040672B
-		// (set) Token: 0x0601C830 RID: 116784 RVA: 0x00408533 File Offset: 0x00406733
+		// Token: 0x17008ABB RID: 35515
+		// (get) Token: 0x0601E02C RID: 122924 RVA: 0x00434E7B File Offset: 0x0043307B
+		// (set) Token: 0x0601E02D RID: 122925 RVA: 0x00434E83 File Offset: 0x00433083
 		public string SubFolder { get; set; }
 
-		// Token: 0x0601C831 RID: 116785 RVA: 0x0040853C File Offset: 0x0040673C
+		// Token: 0x0601E02E RID: 122926 RVA: 0x00434E8C File Offset: 0x0043308C
 		public IActorDeployConfigT()
 		{
 			this.Folder = null;

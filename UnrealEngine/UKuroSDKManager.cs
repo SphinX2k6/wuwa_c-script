@@ -7,32 +7,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C90 RID: 7312
+	// Token: 0x02000529 RID: 1321
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSDK.KuroSDKManager")]
 	[UnrealStructLayout(616, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 616)]
 	public class UKuroSDKManager : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601C5EE RID: 116206 RVA: 0x0029D17C File Offset: 0x0029B37C
+		// Token: 0x06007B2D RID: 31533 RVA: 0x000B4C16 File Offset: 0x000B2E16
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroSDKManager._ClassPtr;
 		}
 
-		// Token: 0x0601C5EF RID: 116207 RVA: 0x0029D188 File Offset: 0x0029B388
+		// Token: 0x06007B2E RID: 31534 RVA: 0x000B4C24 File Offset: 0x000B2E24
 		public UKuroSDKManager() : this(BuiltinUtils.AllocNativeUObject(UKuroSDKManager.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601C5F0 RID: 116208 RVA: 0x0029D1B0 File Offset: 0x0029B3B0
+		// Token: 0x06007B2F RID: 31535 RVA: 0x000B4C4C File Offset: 0x000B2E4C
 		public UKuroSDKManager(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroSDKManager.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170072A2 RID: 29346
-		// (get) Token: 0x0601C5F1 RID: 116209 RVA: 0x0029D1E4 File Offset: 0x0029B3E4
-		// (set) Token: 0x0601C5F2 RID: 116210 RVA: 0x0029D21D File Offset: 0x0029B41D
+		// Token: 0x170017F2 RID: 6130
+		// (get) Token: 0x06007B30 RID: 31536 RVA: 0x000B4C80 File Offset: 0x000B2E80
+		// (set) Token: 0x06007B31 RID: 31537 RVA: 0x000B4CB9 File Offset: 0x000B2EB9
 		public FSDKSdkInitDelegate InitDelegate
 		{
 			get
@@ -51,9 +51,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072A3 RID: 29347
-		// (get) Token: 0x0601C5F3 RID: 116211 RVA: 0x0029D240 File Offset: 0x0029B440
-		// (set) Token: 0x0601C5F4 RID: 116212 RVA: 0x0029D279 File Offset: 0x0029B479
+		// Token: 0x170017F3 RID: 6131
+		// (get) Token: 0x06007B32 RID: 31538 RVA: 0x000B4CDC File Offset: 0x000B2EDC
+		// (set) Token: 0x06007B33 RID: 31539 RVA: 0x000B4D15 File Offset: 0x000B2F15
 		public FSDKLoginSuccessType LoginSuccessDelegate
 		{
 			get
@@ -72,9 +72,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072A4 RID: 29348
-		// (get) Token: 0x0601C5F5 RID: 116213 RVA: 0x0029D29C File Offset: 0x0029B49C
-		// (set) Token: 0x0601C5F6 RID: 116214 RVA: 0x0029D2D5 File Offset: 0x0029B4D5
+		// Token: 0x170017F4 RID: 6132
+		// (get) Token: 0x06007B34 RID: 31540 RVA: 0x000B4D38 File Offset: 0x000B2F38
+		// (set) Token: 0x06007B35 RID: 31541 RVA: 0x000B4D71 File Offset: 0x000B2F71
 		public FSDKLoginDelegate LoginDelegate
 		{
 			get
@@ -93,9 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072A5 RID: 29349
-		// (get) Token: 0x0601C5F7 RID: 116215 RVA: 0x0029D2F8 File Offset: 0x0029B4F8
-		// (set) Token: 0x0601C5F8 RID: 116216 RVA: 0x0029D331 File Offset: 0x0029B531
+		// Token: 0x170017F5 RID: 6133
+		// (get) Token: 0x06007B36 RID: 31542 RVA: 0x000B4D94 File Offset: 0x000B2F94
+		// (set) Token: 0x06007B37 RID: 31543 RVA: 0x000B4DCD File Offset: 0x000B2FCD
 		public FSDKKickDelegate KickDelegate
 		{
 			get
@@ -114,9 +114,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072A6 RID: 29350
-		// (get) Token: 0x0601C5F9 RID: 116217 RVA: 0x0029D354 File Offset: 0x0029B554
-		// (set) Token: 0x0601C5FA RID: 116218 RVA: 0x0029D38D File Offset: 0x0029B58D
+		// Token: 0x170017F6 RID: 6134
+		// (get) Token: 0x06007B38 RID: 31544 RVA: 0x000B4DF0 File Offset: 0x000B2FF0
+		// (set) Token: 0x06007B39 RID: 31545 RVA: 0x000B4E29 File Offset: 0x000B3029
 		public FSDKLogoutDelegate LogoutDelegate
 		{
 			get
@@ -135,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072A7 RID: 29351
-		// (get) Token: 0x0601C5FB RID: 116219 RVA: 0x0029D3B0 File Offset: 0x0029B5B0
-		// (set) Token: 0x0601C5FC RID: 116220 RVA: 0x0029D3E9 File Offset: 0x0029B5E9
+		// Token: 0x170017F7 RID: 6135
+		// (get) Token: 0x06007B3A RID: 31546 RVA: 0x000B4E4C File Offset: 0x000B304C
+		// (set) Token: 0x06007B3B RID: 31547 RVA: 0x000B4E85 File Offset: 0x000B3085
 		public FSDKExitDelegate ExitDelegate
 		{
 			get
@@ -156,9 +156,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072A8 RID: 29352
-		// (get) Token: 0x0601C5FD RID: 116221 RVA: 0x0029D40C File Offset: 0x0029B60C
-		// (set) Token: 0x0601C5FE RID: 116222 RVA: 0x0029D445 File Offset: 0x0029B645
+		// Token: 0x170017F8 RID: 6136
+		// (get) Token: 0x06007B3C RID: 31548 RVA: 0x000B4EA8 File Offset: 0x000B30A8
+		// (set) Token: 0x06007B3D RID: 31549 RVA: 0x000B4EE1 File Offset: 0x000B30E1
 		public FSDKHasExitDelegate HasExitDelegate
 		{
 			get
@@ -177,9 +177,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072A9 RID: 29353
-		// (get) Token: 0x0601C5FF RID: 116223 RVA: 0x0029D468 File Offset: 0x0029B668
-		// (set) Token: 0x0601C600 RID: 116224 RVA: 0x0029D4A1 File Offset: 0x0029B6A1
+		// Token: 0x170017F9 RID: 6137
+		// (get) Token: 0x06007B3E RID: 31550 RVA: 0x000B4F04 File Offset: 0x000B3104
+		// (set) Token: 0x06007B3F RID: 31551 RVA: 0x000B4F3D File Offset: 0x000B313D
 		public FSDKPaymentDelegate PaymentDelegate
 		{
 			get
@@ -198,9 +198,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072AA RID: 29354
-		// (get) Token: 0x0601C601 RID: 116225 RVA: 0x0029D4C4 File Offset: 0x0029B6C4
-		// (set) Token: 0x0601C602 RID: 116226 RVA: 0x0029D4FD File Offset: 0x0029B6FD
+		// Token: 0x170017FA RID: 6138
+		// (get) Token: 0x06007B40 RID: 31552 RVA: 0x000B4F60 File Offset: 0x000B3160
+		// (set) Token: 0x06007B41 RID: 31553 RVA: 0x000B4F99 File Offset: 0x000B3199
 		public FSDKPostRedPointDelegate PostRedPointDelegate
 		{
 			get
@@ -219,9 +219,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072AB RID: 29355
-		// (get) Token: 0x0601C603 RID: 116227 RVA: 0x0029D520 File Offset: 0x0029B720
-		// (set) Token: 0x0601C604 RID: 116228 RVA: 0x0029D559 File Offset: 0x0029B759
+		// Token: 0x170017FB RID: 6139
+		// (get) Token: 0x06007B42 RID: 31554 RVA: 0x000B4FBC File Offset: 0x000B31BC
+		// (set) Token: 0x06007B43 RID: 31555 RVA: 0x000B4FF5 File Offset: 0x000B31F5
 		public FSDKProductDelegate PostProductDelegate
 		{
 			get
@@ -240,9 +240,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072AC RID: 29356
-		// (get) Token: 0x0601C605 RID: 116229 RVA: 0x0029D57C File Offset: 0x0029B77C
-		// (set) Token: 0x0601C606 RID: 116230 RVA: 0x0029D5B5 File Offset: 0x0029B7B5
+		// Token: 0x170017FC RID: 6140
+		// (get) Token: 0x06007B44 RID: 31556 RVA: 0x000B5018 File Offset: 0x000B3218
+		// (set) Token: 0x06007B45 RID: 31557 RVA: 0x000B5051 File Offset: 0x000B3251
 		public FSDKProtocolDelegate ProtocolCallBack
 		{
 			get
@@ -261,9 +261,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072AD RID: 29357
-		// (get) Token: 0x0601C607 RID: 116231 RVA: 0x0029D5D8 File Offset: 0x0029B7D8
-		// (set) Token: 0x0601C608 RID: 116232 RVA: 0x0029D611 File Offset: 0x0029B811
+		// Token: 0x170017FD RID: 6141
+		// (get) Token: 0x06007B46 RID: 31558 RVA: 0x000B5074 File Offset: 0x000B3274
+		// (set) Token: 0x06007B47 RID: 31559 RVA: 0x000B50AD File Offset: 0x000B32AD
 		public FSDKGameStateChangeDelegate GameStateChangeCallBack
 		{
 			get
@@ -282,9 +282,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072AE RID: 29358
-		// (get) Token: 0x0601C609 RID: 116233 RVA: 0x0029D634 File Offset: 0x0029B834
-		// (set) Token: 0x0601C60A RID: 116234 RVA: 0x0029D66D File Offset: 0x0029B86D
+		// Token: 0x170017FE RID: 6142
+		// (get) Token: 0x06007B48 RID: 31560 RVA: 0x000B50D0 File Offset: 0x000B32D0
+		// (set) Token: 0x06007B49 RID: 31561 RVA: 0x000B5109 File Offset: 0x000B3309
 		public FSDKRequestPermissionResultDelagate RequestPhotoPermissionDelegate
 		{
 			get
@@ -303,9 +303,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072AF RID: 29359
-		// (get) Token: 0x0601C60B RID: 116235 RVA: 0x0029D690 File Offset: 0x0029B890
-		// (set) Token: 0x0601C60C RID: 116236 RVA: 0x0029D6C9 File Offset: 0x0029B8C9
+		// Token: 0x170017FF RID: 6143
+		// (get) Token: 0x06007B4A RID: 31562 RVA: 0x000B512C File Offset: 0x000B332C
+		// (set) Token: 0x06007B4B RID: 31563 RVA: 0x000B5165 File Offset: 0x000B3365
 		public FSDKAnnounceInitDelegate AnnounceInitDelegate
 		{
 			get
@@ -324,9 +324,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072B0 RID: 29360
-		// (get) Token: 0x0601C60D RID: 116237 RVA: 0x0029D6EC File Offset: 0x0029B8EC
-		// (set) Token: 0x0601C60E RID: 116238 RVA: 0x0029D725 File Offset: 0x0029B925
+		// Token: 0x17001800 RID: 6144
+		// (get) Token: 0x06007B4C RID: 31564 RVA: 0x000B5188 File Offset: 0x000B3388
+		// (set) Token: 0x06007B4D RID: 31565 RVA: 0x000B51C1 File Offset: 0x000B33C1
 		public FSDKAnnounceOpenDelegate AnnounceOpenDelegate
 		{
 			get
@@ -345,9 +345,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072B1 RID: 29361
-		// (get) Token: 0x0601C60F RID: 116239 RVA: 0x0029D748 File Offset: 0x0029B948
-		// (set) Token: 0x0601C610 RID: 116240 RVA: 0x0029D781 File Offset: 0x0029B981
+		// Token: 0x17001801 RID: 6145
+		// (get) Token: 0x06007B4E RID: 31566 RVA: 0x000B51E4 File Offset: 0x000B33E4
+		// (set) Token: 0x06007B4F RID: 31567 RVA: 0x000B521D File Offset: 0x000B341D
 		public FSDKAnnounceRedPointDelegate AnnounceRedPointDelegate
 		{
 			get
@@ -366,9 +366,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072B2 RID: 29362
-		// (get) Token: 0x0601C611 RID: 116241 RVA: 0x0029D7A4 File Offset: 0x0029B9A4
-		// (set) Token: 0x0601C612 RID: 116242 RVA: 0x0029D7DD File Offset: 0x0029B9DD
+		// Token: 0x17001802 RID: 6146
+		// (get) Token: 0x06007B50 RID: 31568 RVA: 0x000B5240 File Offset: 0x000B3440
+		// (set) Token: 0x06007B51 RID: 31569 RVA: 0x000B5279 File Offset: 0x000B3479
 		public FSDKCustomerServiceResultDelegate CustomerServiceResultDelegate
 		{
 			get
@@ -387,9 +387,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072B3 RID: 29363
-		// (get) Token: 0x0601C613 RID: 116243 RVA: 0x0029D800 File Offset: 0x0029BA00
-		// (set) Token: 0x0601C614 RID: 116244 RVA: 0x0029D839 File Offset: 0x0029BA39
+		// Token: 0x17001803 RID: 6147
+		// (get) Token: 0x06007B52 RID: 31570 RVA: 0x000B529C File Offset: 0x000B349C
+		// (set) Token: 0x06007B53 RID: 31571 RVA: 0x000B52D5 File Offset: 0x000B34D5
 		public FSDKGetParamsDelegate GetParamsDelegate
 		{
 			get
@@ -408,9 +408,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072B4 RID: 29364
-		// (get) Token: 0x0601C615 RID: 116245 RVA: 0x0029D85C File Offset: 0x0029BA5C
-		// (set) Token: 0x0601C616 RID: 116246 RVA: 0x0029D895 File Offset: 0x0029BA95
+		// Token: 0x17001804 RID: 6148
+		// (get) Token: 0x06007B54 RID: 31572 RVA: 0x000B52F8 File Offset: 0x000B34F8
+		// (set) Token: 0x06007B55 RID: 31573 RVA: 0x000B5331 File Offset: 0x000B3531
 		public FSDKOnLoginDelegate OnLoginDelegate
 		{
 			get
@@ -429,9 +429,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072B5 RID: 29365
-		// (get) Token: 0x0601C617 RID: 116247 RVA: 0x0029D8B8 File Offset: 0x0029BAB8
-		// (set) Token: 0x0601C618 RID: 116248 RVA: 0x0029D8F1 File Offset: 0x0029BAF1
+		// Token: 0x17001805 RID: 6149
+		// (get) Token: 0x06007B56 RID: 31574 RVA: 0x000B5354 File Offset: 0x000B3554
+		// (set) Token: 0x06007B57 RID: 31575 RVA: 0x000B538D File Offset: 0x000B358D
 		public FSDKDeepLinkDelegate DeepLinkDelegate
 		{
 			get
@@ -450,9 +450,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072B6 RID: 29366
-		// (get) Token: 0x0601C619 RID: 116249 RVA: 0x0029D914 File Offset: 0x0029BB14
-		// (set) Token: 0x0601C61A RID: 116250 RVA: 0x0029D94D File Offset: 0x0029BB4D
+		// Token: 0x17001806 RID: 6150
+		// (get) Token: 0x06007B58 RID: 31576 RVA: 0x000B53B0 File Offset: 0x000B35B0
+		// (set) Token: 0x06007B59 RID: 31577 RVA: 0x000B53E9 File Offset: 0x000B35E9
 		public FSDKGetAdsValueDelegate GetAdsValueDelegate
 		{
 			get
@@ -471,9 +471,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072B7 RID: 29367
-		// (get) Token: 0x0601C61B RID: 116251 RVA: 0x0029D970 File Offset: 0x0029BB70
-		// (set) Token: 0x0601C61C RID: 116252 RVA: 0x0029D9A9 File Offset: 0x0029BBA9
+		// Token: 0x17001807 RID: 6151
+		// (get) Token: 0x06007B5A RID: 31578 RVA: 0x000B540C File Offset: 0x000B360C
+		// (set) Token: 0x06007B5B RID: 31579 RVA: 0x000B5445 File Offset: 0x000B3645
 		public FSDKGetSharePlatformDelegate GetSharePlatformDelegate
 		{
 			get
@@ -492,9 +492,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072B8 RID: 29368
-		// (get) Token: 0x0601C61D RID: 116253 RVA: 0x0029D9CC File Offset: 0x0029BBCC
-		// (set) Token: 0x0601C61E RID: 116254 RVA: 0x0029DA05 File Offset: 0x0029BC05
+		// Token: 0x17001808 RID: 6152
+		// (get) Token: 0x06007B5C RID: 31580 RVA: 0x000B5468 File Offset: 0x000B3668
+		// (set) Token: 0x06007B5D RID: 31581 RVA: 0x000B54A1 File Offset: 0x000B36A1
 		public FSDKShareResultDelegate ShareResultDelegate
 		{
 			get
@@ -513,9 +513,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072B9 RID: 29369
-		// (get) Token: 0x0601C61F RID: 116255 RVA: 0x0029DA28 File Offset: 0x0029BC28
-		// (set) Token: 0x0601C620 RID: 116256 RVA: 0x0029DA61 File Offset: 0x0029BC61
+		// Token: 0x17001809 RID: 6153
+		// (get) Token: 0x06007B5E RID: 31582 RVA: 0x000B54C4 File Offset: 0x000B36C4
+		// (set) Token: 0x06007B5F RID: 31583 RVA: 0x000B54FD File Offset: 0x000B36FD
 		public FSDKLogDelegate LogDelegate
 		{
 			get
@@ -534,9 +534,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072BA RID: 29370
-		// (get) Token: 0x0601C621 RID: 116257 RVA: 0x0029DA84 File Offset: 0x0029BC84
-		// (set) Token: 0x0601C622 RID: 116258 RVA: 0x0029DABD File Offset: 0x0029BCBD
+		// Token: 0x1700180A RID: 6154
+		// (get) Token: 0x06007B60 RID: 31584 RVA: 0x000B5520 File Offset: 0x000B3720
+		// (set) Token: 0x06007B61 RID: 31585 RVA: 0x000B5559 File Offset: 0x000B3759
 		public FSDKWebViewCloseDelegate WebViewCloseDelegate
 		{
 			get
@@ -555,9 +555,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072BB RID: 29371
-		// (get) Token: 0x0601C623 RID: 116259 RVA: 0x0029DAE0 File Offset: 0x0029BCE0
-		// (set) Token: 0x0601C624 RID: 116260 RVA: 0x0029DB19 File Offset: 0x0029BD19
+		// Token: 0x1700180B RID: 6155
+		// (get) Token: 0x06007B62 RID: 31586 RVA: 0x000B557C File Offset: 0x000B377C
+		// (set) Token: 0x06007B63 RID: 31587 RVA: 0x000B55B5 File Offset: 0x000B37B5
 		public FSDKExternalLoginDelegate ExternalLoginCallBack
 		{
 			get
@@ -576,9 +576,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072BC RID: 29372
-		// (get) Token: 0x0601C625 RID: 116261 RVA: 0x0029DB3C File Offset: 0x0029BD3C
-		// (set) Token: 0x0601C626 RID: 116262 RVA: 0x0029DB75 File Offset: 0x0029BD75
+		// Token: 0x1700180C RID: 6156
+		// (get) Token: 0x06007B64 RID: 31588 RVA: 0x000B55D8 File Offset: 0x000B37D8
+		// (set) Token: 0x06007B65 RID: 31589 RVA: 0x000B5611 File Offset: 0x000B3811
 		public FSDKExternalQueryAchievementsDelegate ExternalQueryAchievementsDelegate
 		{
 			get
@@ -597,9 +597,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072BD RID: 29373
-		// (get) Token: 0x0601C627 RID: 116263 RVA: 0x0029DB98 File Offset: 0x0029BD98
-		// (set) Token: 0x0601C628 RID: 116264 RVA: 0x0029DBD1 File Offset: 0x0029BDD1
+		// Token: 0x1700180D RID: 6157
+		// (get) Token: 0x06007B66 RID: 31590 RVA: 0x000B5634 File Offset: 0x000B3834
+		// (set) Token: 0x06007B67 RID: 31591 RVA: 0x000B566D File Offset: 0x000B386D
 		public FSDKExternalWriteAchievementsDelegate ExternalWriteAchievementsDelegate
 		{
 			get
@@ -618,9 +618,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072BE RID: 29374
-		// (get) Token: 0x0601C629 RID: 116265 RVA: 0x0029DBF4 File Offset: 0x0029BDF4
-		// (set) Token: 0x0601C62A RID: 116266 RVA: 0x0029DC2D File Offset: 0x0029BE2D
+		// Token: 0x1700180E RID: 6158
+		// (get) Token: 0x06007B68 RID: 31592 RVA: 0x000B5690 File Offset: 0x000B3890
+		// (set) Token: 0x06007B69 RID: 31593 RVA: 0x000B56C9 File Offset: 0x000B38C9
 		public FSDKOnActivatedByApplinks OnActivatedByApplinksDelegate
 		{
 			get
@@ -639,68 +639,61 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601C62B RID: 116267 RVA: 0x0029DC50 File Offset: 0x0029BE50
+		// Token: 0x06007B6A RID: 31594 RVA: 0x000B56EC File Offset: 0x000B38EC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void WriteExternalAchievements(string data)
 		{
 			UKuroSDKManager.__WriteExternalAchievements_FunctionParams* ptr = stackalloc UKuroSDKManager.__WriteExternalAchievements_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__WriteExternalAchievements_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__WriteExternalAchievements_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->data), data);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__WriteExternalAchievements_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__WriteExternalAchievements_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__WriteExternalAchievements_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C62C RID: 116268 RVA: 0x0029DCB0 File Offset: 0x0029BEB0
+		// Token: 0x06007B6B RID: 31595 RVA: 0x000B5748 File Offset: 0x000B3948
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void UpdateChannelEvent(string data)
 		{
 			UKuroSDKManager.__UpdateChannelEvent_FunctionParams* ptr = stackalloc UKuroSDKManager.__UpdateChannelEvent_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__UpdateChannelEvent_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__UpdateChannelEvent_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->data), data);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__UpdateChannelEvent_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__UpdateChannelEvent_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__UpdateChannelEvent_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C62D RID: 116269 RVA: 0x0029DD0D File Offset: 0x0029BF0D
+		// Token: 0x06007B6C RID: 31596 RVA: 0x000B57A4 File Offset: 0x000B39A4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void Start()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__Start_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__Start_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C62E RID: 116270 RVA: 0x0029DD24 File Offset: 0x0029BF24
+		// Token: 0x06007B6D RID: 31597 RVA: 0x000B57B8 File Offset: 0x000B39B8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void ShowVirtualKeyboard(bool state)
 		{
 			UKuroSDKManager.__ShowVirtualKeyboard_FunctionParams* ptr = stackalloc UKuroSDKManager.__ShowVirtualKeyboard_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__ShowVirtualKeyboard_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__ShowVirtualKeyboard_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->state = state;
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__ShowVirtualKeyboard_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__ShowVirtualKeyboard_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601C62F RID: 116271 RVA: 0x0029DD6A File Offset: 0x0029BF6A
+		// Token: 0x06007B6E RID: 31598 RVA: 0x000B57FD File Offset: 0x000B39FD
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void ShowExternalLogin()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__ShowExternalLogin_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__ShowExternalLogin_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C630 RID: 116272 RVA: 0x0029DD7E File Offset: 0x0029BF7E
+		// Token: 0x06007B6F RID: 31599 RVA: 0x000B5810 File Offset: 0x000B3A10
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void ShowExitGameDialog()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__ShowExitGameDialog_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__ShowExitGameDialog_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C631 RID: 116273 RVA: 0x0029DD94 File Offset: 0x0029BF94
+		// Token: 0x06007B70 RID: 31600 RVA: 0x000B5824 File Offset: 0x000B3A24
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void Share([Nullable(2)] in TArray<byte> imageData, string sKuroSDKEventParameter)
 		{
 			UKuroSDKManager.__Share_FunctionParams* ptr = stackalloc UKuroSDKManager.__Share_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UKuroSDKManager.__Share_FunctionParams) & -16L;
@@ -711,7 +704,7 @@ namespace UnrealEngine
 				tarray.MoveTo(&ptr->imageData);
 			}
 			FString.CopyFrom((void*)(&ptr->sKuroSDKEventParameter), sKuroSDKEventParameter);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__Share_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__Share_NativeFunctionPtr, (void*)ptr);
 			TArray<byte> tarray2 = imageData;
 			if (tarray2 != null)
 			{
@@ -720,114 +713,103 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__Share_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C632 RID: 116274 RVA: 0x0029DE1C File Offset: 0x0029C01C
+		// Token: 0x06007B71 RID: 31601 RVA: 0x000B58A8 File Offset: 0x000B3AA8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void SetWindowsMode(bool mode)
 		{
 			UKuroSDKManager.__SetWindowsMode_FunctionParams* ptr = stackalloc UKuroSDKManager.__SetWindowsMode_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__SetWindowsMode_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__SetWindowsMode_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->mode = mode;
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__SetWindowsMode_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__SetWindowsMode_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601C633 RID: 116275 RVA: 0x0029DE64 File Offset: 0x0029C064
+		// Token: 0x06007B72 RID: 31602 RVA: 0x000B58F0 File Offset: 0x000B3AF0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void SetIfGlobalSdk(bool ifGlobal)
 		{
 			UKuroSDKManager.__SetIfGlobalSdk_FunctionParams* ptr = stackalloc UKuroSDKManager.__SetIfGlobalSdk_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__SetIfGlobalSdk_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__SetIfGlobalSdk_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->ifGlobal = ifGlobal;
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__SetIfGlobalSdk_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__SetIfGlobalSdk_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601C634 RID: 116276 RVA: 0x0029DEAC File Offset: 0x0029C0AC
+		// Token: 0x06007B73 RID: 31603 RVA: 0x000B5938 File Offset: 0x000B3B38
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void SetGamePadMode(bool mode)
 		{
 			UKuroSDKManager.__SetGamePadMode_FunctionParams* ptr = stackalloc UKuroSDKManager.__SetGamePadMode_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__SetGamePadMode_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__SetGamePadMode_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->mode = mode;
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__SetGamePadMode_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__SetGamePadMode_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601C635 RID: 116277 RVA: 0x0029DEF4 File Offset: 0x0029C0F4
+		// Token: 0x06007B74 RID: 31604 RVA: 0x000B5980 File Offset: 0x000B3B80
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void SetFont(string data)
 		{
 			UKuroSDKManager.__SetFont_FunctionParams* ptr = stackalloc UKuroSDKManager.__SetFont_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__SetFont_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__SetFont_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->data), data);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__SetFont_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__SetFont_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__SetFont_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C636 RID: 116278 RVA: 0x0029DF54 File Offset: 0x0029C154
+		// Token: 0x06007B75 RID: 31605 RVA: 0x000B59DC File Offset: 0x000B3BDC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void SetCursor(string data)
 		{
 			UKuroSDKManager.__SetCursor_FunctionParams* ptr = stackalloc UKuroSDKManager.__SetCursor_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__SetCursor_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__SetCursor_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->data), data);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__SetCursor_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__SetCursor_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__SetCursor_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C637 RID: 116279 RVA: 0x0029DFB4 File Offset: 0x0029C1B4
+		// Token: 0x06007B76 RID: 31606 RVA: 0x000B5A38 File Offset: 0x000B3C38
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void RequestReviewApp(string data)
 		{
 			UKuroSDKManager.__RequestReviewApp_FunctionParams* ptr = stackalloc UKuroSDKManager.__RequestReviewApp_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__RequestReviewApp_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__RequestReviewApp_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->data), data);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__RequestReviewApp_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__RequestReviewApp_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__RequestReviewApp_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C638 RID: 116280 RVA: 0x0029E011 File Offset: 0x0029C211
+		// Token: 0x06007B77 RID: 31607 RVA: 0x000B5A94 File Offset: 0x000B3C94
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void RequestPhotoPermission()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__RequestPhotoPermission_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__RequestPhotoPermission_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C639 RID: 116281 RVA: 0x0029E028 File Offset: 0x0029C228
+		// Token: 0x06007B78 RID: 31608 RVA: 0x000B5AA8 File Offset: 0x000B3CA8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void QueryProductInfo(string data)
 		{
 			UKuroSDKManager.__QueryProductInfo_FunctionParams* ptr = stackalloc UKuroSDKManager.__QueryProductInfo_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__QueryProductInfo_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__QueryProductInfo_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->data), data);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__QueryProductInfo_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__QueryProductInfo_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__QueryProductInfo_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C63A RID: 116282 RVA: 0x0029E085 File Offset: 0x0029C285
+		// Token: 0x06007B79 RID: 31609 RVA: 0x000B5B04 File Offset: 0x000B3D04
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void QueryExternalAchievements()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__QueryExternalAchievements_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__QueryExternalAchievements_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C63B RID: 116283 RVA: 0x0029E099 File Offset: 0x0029C299
+		// Token: 0x06007B7A RID: 31610 RVA: 0x000B5B17 File Offset: 0x000B3D17
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void PostSplashScreenEndSuccess()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__PostSplashScreenEndSuccess_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__PostSplashScreenEndSuccess_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C63C RID: 116284 RVA: 0x0029E0B0 File Offset: 0x0029C2B0
+		// Token: 0x06007B7B RID: 31611 RVA: 0x000B5B2C File Offset: 0x000B3D2C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void OpenWebView(string title, string url, bool isLandscape, bool transparent, bool webAccelerated, string identifier, string data)
 		{
 			UKuroSDKManager.__OpenWebView_FunctionParams* ptr = stackalloc UKuroSDKManager.__OpenWebView_FunctionParams[(UIntPtr)87] + 15L / (long)sizeof(UKuroSDKManager.__OpenWebView_FunctionParams) & -16L;
@@ -839,429 +821,391 @@ namespace UnrealEngine
 			ptr->webAccelerated = webAccelerated;
 			FString.CopyFrom((void*)(&ptr->identifier), identifier);
 			FString.CopyFrom((void*)(&ptr->data), data);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__OpenWebView_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__OpenWebView_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__OpenWebView_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C63D RID: 116285 RVA: 0x0029E14C File Offset: 0x0029C34C
+		// Token: 0x06007B7C RID: 31612 RVA: 0x000B5BC7 File Offset: 0x000B3DC7
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void OpenSdkQRScan()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__OpenSdkQRScan_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__OpenSdkQRScan_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C63E RID: 116286 RVA: 0x0029E160 File Offset: 0x0029C360
+		// Token: 0x06007B7D RID: 31613 RVA: 0x000B5BDC File Offset: 0x000B3DDC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void OpenDefaultWebView(string url)
 		{
 			UKuroSDKManager.__OpenDefaultWebView_FunctionParams* ptr = stackalloc UKuroSDKManager.__OpenDefaultWebView_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__OpenDefaultWebView_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__OpenDefaultWebView_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->url), url);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__OpenDefaultWebView_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__OpenDefaultWebView_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__OpenDefaultWebView_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C63F RID: 116287 RVA: 0x0029E1C0 File Offset: 0x0029C3C0
+		// Token: 0x06007B7E RID: 31614 RVA: 0x000B5C38 File Offset: 0x000B3E38
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void OpenCustomerService(string data)
 		{
 			UKuroSDKManager.__OpenCustomerService_FunctionParams* ptr = stackalloc UKuroSDKManager.__OpenCustomerService_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__OpenCustomerService_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__OpenCustomerService_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->data), data);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__OpenCustomerService_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__OpenCustomerService_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__OpenCustomerService_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C640 RID: 116288 RVA: 0x0029E220 File Offset: 0x0029C420
+		// Token: 0x06007B7F RID: 31615 RVA: 0x000B5C94 File Offset: 0x000B3E94
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LogMarketingEvent(string data)
 		{
 			UKuroSDKManager.__LogMarketingEvent_FunctionParams* ptr = stackalloc UKuroSDKManager.__LogMarketingEvent_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__LogMarketingEvent_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__LogMarketingEvent_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->data), data);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__LogMarketingEvent_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__LogMarketingEvent_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__LogMarketingEvent_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C641 RID: 116289 RVA: 0x0029E280 File Offset: 0x0029C480
+		// Token: 0x06007B80 RID: 31616 RVA: 0x000B5CF0 File Offset: 0x000B3EF0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void KuroSDKEvent(in UKuroSDKEventType iKuroSDKEvent, string sKuroSDKEventParameter)
 		{
 			UKuroSDKManager.__KuroSDKEvent_FunctionParams* ptr = stackalloc UKuroSDKManager.__KuroSDKEvent_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(UKuroSDKManager.__KuroSDKEvent_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__KuroSDKEvent_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->iKuroSDKEvent = iKuroSDKEvent;
 			FString.CopyFrom((void*)(&ptr->sKuroSDKEventParameter), sKuroSDKEventParameter);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__KuroSDKEvent_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__KuroSDKEvent_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__KuroSDKEvent_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C642 RID: 116290 RVA: 0x0029E2E8 File Offset: 0x0029C4E8
+		// Token: 0x06007B81 RID: 31617 RVA: 0x000B5D54 File Offset: 0x000B3F54
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool IsUserCenterEnable()
 		{
 			UKuroSDKManager.__IsUserCenterEnable_FunctionParams* ptr = stackalloc UKuroSDKManager.__IsUserCenterEnable_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__IsUserCenterEnable_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__IsUserCenterEnable_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__IsUserCenterEnable_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__IsUserCenterEnable_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C643 RID: 116291 RVA: 0x0029E330 File Offset: 0x0029C530
+		// Token: 0x06007B82 RID: 31618 RVA: 0x000B5D98 File Offset: 0x000B3F98
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool IsLogin()
 		{
 			UKuroSDKManager.__IsLogin_FunctionParams* ptr = stackalloc UKuroSDKManager.__IsLogin_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__IsLogin_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__IsLogin_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__IsLogin_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__IsLogin_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C644 RID: 116292 RVA: 0x0029E378 File Offset: 0x0029C578
+		// Token: 0x06007B83 RID: 31619 RVA: 0x000B5DDC File Offset: 0x000B3FDC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool IsCustomerServiceEnable()
 		{
 			UKuroSDKManager.__IsCustomerServiceEnable_FunctionParams* ptr = stackalloc UKuroSDKManager.__IsCustomerServiceEnable_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__IsCustomerServiceEnable_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__IsCustomerServiceEnable_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__IsCustomerServiceEnable_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__IsCustomerServiceEnable_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C645 RID: 116293 RVA: 0x0029E3BD File Offset: 0x0029C5BD
+		// Token: 0x06007B84 RID: 31620 RVA: 0x000B5E20 File Offset: 0x000B4020
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void Initialize()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__Initialize_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__Initialize_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C646 RID: 116294 RVA: 0x0029E3D1 File Offset: 0x0029C5D1
+		// Token: 0x06007B85 RID: 31621 RVA: 0x000B5E33 File Offset: 0x000B4033
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void GetSharePlatform()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetSharePlatform_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetSharePlatform_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C647 RID: 116295 RVA: 0x0029E3E8 File Offset: 0x0029C5E8
+		// Token: 0x06007B86 RID: 31622 RVA: 0x000B5E48 File Offset: 0x000B4048
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static string GetSdkParams(string data)
 		{
 			UKuroSDKManager.__GetSdkParams_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetSdkParams_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UKuroSDKManager.__GetSdkParams_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetSdkParams_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->data), data);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetSdkParams_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetSdkParams_NativeFunctionPtr, (void*)ptr);
 			string result = FString.ToString((void*)(&ptr->__Result));
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__GetSdkParams_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0601C648 RID: 116296 RVA: 0x0029E454 File Offset: 0x0029C654
+		// Token: 0x06007B87 RID: 31623 RVA: 0x000B5EB0 File Offset: 0x000B40B0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static string GetSdkLoginInfo()
 		{
 			UKuroSDKManager.__GetSdkLoginInfo_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetSdkLoginInfo_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__GetSdkLoginInfo_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetSdkLoginInfo_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetSdkLoginInfo_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetSdkLoginInfo_NativeFunctionPtr, (void*)ptr);
 			string result = FString.ToString((void*)(&ptr->__Result));
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__GetSdkLoginInfo_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0601C649 RID: 116297 RVA: 0x0029E4B0 File Offset: 0x0029C6B0
+		// Token: 0x06007B88 RID: 31624 RVA: 0x000B5F0C File Offset: 0x000B410C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool GetSdkIsShowQuitTips()
 		{
 			UKuroSDKManager.__GetSdkIsShowQuitTips_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetSdkIsShowQuitTips_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__GetSdkIsShowQuitTips_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetSdkIsShowQuitTips_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetSdkIsShowQuitTips_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetSdkIsShowQuitTips_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C64A RID: 116298 RVA: 0x0029E4F8 File Offset: 0x0029C6F8
+		// Token: 0x06007B89 RID: 31625 RVA: 0x000B5F50 File Offset: 0x000B4150
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool GetSdkIsQRScan()
 		{
 			UKuroSDKManager.__GetSdkIsQRScan_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetSdkIsQRScan_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__GetSdkIsQRScan_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetSdkIsQRScan_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetSdkIsQRScan_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetSdkIsQRScan_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C64B RID: 116299 RVA: 0x0029E540 File Offset: 0x0029C740
+		// Token: 0x06007B8A RID: 31626 RVA: 0x000B5F94 File Offset: 0x000B4194
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool GetSdkInitState()
 		{
 			UKuroSDKManager.__GetSdkInitState_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetSdkInitState_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__GetSdkInitState_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetSdkInitState_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetSdkInitState_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetSdkInitState_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C64C RID: 116300 RVA: 0x0029E588 File Offset: 0x0029C788
+		// Token: 0x06007B8B RID: 31627 RVA: 0x000B5FD8 File Offset: 0x000B41D8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static string GetProjectId()
 		{
 			UKuroSDKManager.__GetProjectId_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetProjectId_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__GetProjectId_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetProjectId_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetProjectId_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetProjectId_NativeFunctionPtr, (void*)ptr);
 			string result = FString.ToString((void*)(&ptr->__Result));
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__GetProjectId_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0601C64D RID: 116301 RVA: 0x0029E5E4 File Offset: 0x0029C7E4
+		// Token: 0x06007B8C RID: 31628 RVA: 0x000B6034 File Offset: 0x000B4234
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool GetPostWebViewInitState()
 		{
 			UKuroSDKManager.__GetPostWebViewInitState_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetPostWebViewInitState_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__GetPostWebViewInitState_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetPostWebViewInitState_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetPostWebViewInitState_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetPostWebViewInitState_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C64E RID: 116302 RVA: 0x0029E62C File Offset: 0x0029C82C
+		// Token: 0x06007B8D RID: 31629 RVA: 0x000B6078 File Offset: 0x000B4278
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static string GetPackageId()
 		{
 			UKuroSDKManager.__GetPackageId_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetPackageId_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__GetPackageId_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetPackageId_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetPackageId_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetPackageId_NativeFunctionPtr, (void*)ptr);
 			string result = FString.ToString((void*)(&ptr->__Result));
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__GetPackageId_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0601C64F RID: 116303 RVA: 0x0029E688 File Offset: 0x0029C888
+		// Token: 0x06007B8E RID: 31630 RVA: 0x000B60D4 File Offset: 0x000B42D4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool GetIsAgreeProtocol()
 		{
 			UKuroSDKManager.__GetIsAgreeProtocol_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetIsAgreeProtocol_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__GetIsAgreeProtocol_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetIsAgreeProtocol_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetIsAgreeProtocol_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetIsAgreeProtocol_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C650 RID: 116304 RVA: 0x0029E6D0 File Offset: 0x0029C8D0
+		// Token: 0x06007B8F RID: 31631 RVA: 0x000B6118 File Offset: 0x000B4318
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static string GetDeepLinkStr()
 		{
 			UKuroSDKManager.__GetDeepLinkStr_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetDeepLinkStr_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__GetDeepLinkStr_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetDeepLinkStr_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetDeepLinkStr_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetDeepLinkStr_NativeFunctionPtr, (void*)ptr);
 			string result = FString.ToString((void*)(&ptr->__Result));
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__GetDeepLinkStr_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0601C651 RID: 116305 RVA: 0x0029E72C File Offset: 0x0029C92C
+		// Token: 0x06007B90 RID: 31632 RVA: 0x000B6174 File Offset: 0x000B4374
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static FLoginStruct GetCurrentLoginInfo()
 		{
 			UKuroSDKManager.__GetCurrentLoginInfo_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetCurrentLoginInfo_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(UKuroSDKManager.__GetCurrentLoginInfo_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetCurrentLoginInfo_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetCurrentLoginInfo_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetCurrentLoginInfo_NativeFunctionPtr, (void*)ptr);
 			FLoginStruct result = new FLoginStruct(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__GetCurrentLoginInfo_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0601C652 RID: 116306 RVA: 0x0029E78C File Offset: 0x0029C98C
+		// Token: 0x06007B91 RID: 31633 RVA: 0x000B61D4 File Offset: 0x000B43D4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static string GetChannelName()
 		{
 			UKuroSDKManager.__GetChannelName_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetChannelName_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__GetChannelName_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetChannelName_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetChannelName_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetChannelName_NativeFunctionPtr, (void*)ptr);
 			string result = FString.ToString((void*)(&ptr->__Result));
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__GetChannelName_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0601C653 RID: 116307 RVA: 0x0029E7E8 File Offset: 0x0029C9E8
+		// Token: 0x06007B92 RID: 31634 RVA: 0x000B6230 File Offset: 0x000B4430
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static string GetChannelId()
 		{
 			UKuroSDKManager.__GetChannelId_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetChannelId_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__GetChannelId_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetChannelId_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetChannelId_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetChannelId_NativeFunctionPtr, (void*)ptr);
 			string result = FString.ToString((void*)(&ptr->__Result));
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__GetChannelId_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0601C654 RID: 116308 RVA: 0x0029E844 File Offset: 0x0029CA44
+		// Token: 0x06007B93 RID: 31635 RVA: 0x000B628C File Offset: 0x000B448C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static FBasicInfo GetBasicInfo()
 		{
 			UKuroSDKManager.__GetBasicInfo_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetBasicInfo_FunctionParams[(UIntPtr)87] + 15L / (long)sizeof(UKuroSDKManager.__GetBasicInfo_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetBasicInfo_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetBasicInfo_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetBasicInfo_NativeFunctionPtr, (void*)ptr);
 			FBasicInfo result = new FBasicInfo(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__GetBasicInfo_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0601C655 RID: 116309 RVA: 0x0029E8A4 File Offset: 0x0029CAA4
+		// Token: 0x06007B94 RID: 31636 RVA: 0x000B62EC File Offset: 0x000B44EC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static string GetAppChannelId()
 		{
 			UKuroSDKManager.__GetAppChannelId_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetAppChannelId_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__GetAppChannelId_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetAppChannelId_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetAppChannelId_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetAppChannelId_NativeFunctionPtr, (void*)ptr);
 			string result = FString.ToString((void*)(&ptr->__Result));
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__GetAppChannelId_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0601C656 RID: 116310 RVA: 0x0029E900 File Offset: 0x0029CB00
+		// Token: 0x06007B95 RID: 31637 RVA: 0x000B6348 File Offset: 0x000B4548
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static string GetAgreementUrl()
 		{
 			UKuroSDKManager.__GetAgreementUrl_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetAgreementUrl_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__GetAgreementUrl_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetAgreementUrl_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetAgreementUrl_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetAgreementUrl_NativeFunctionPtr, (void*)ptr);
 			string result = FString.ToString((void*)(&ptr->__Result));
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__GetAgreementUrl_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0601C657 RID: 116311 RVA: 0x0029E95C File Offset: 0x0029CB5C
+		// Token: 0x06007B96 RID: 31638 RVA: 0x000B63A4 File Offset: 0x000B45A4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void GetAdsValue(string income, string data)
 		{
 			UKuroSDKManager.__GetAdsValue_FunctionParams* ptr = stackalloc UKuroSDKManager.__GetAdsValue_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UKuroSDKManager.__GetAdsValue_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__GetAdsValue_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->income), income);
 			FString.CopyFrom((void*)(&ptr->data), data);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetAdsValue_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__GetAdsValue_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__GetAdsValue_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C658 RID: 116312 RVA: 0x0029E9C8 File Offset: 0x0029CBC8
+		// Token: 0x06007B97 RID: 31639 RVA: 0x000B6410 File Offset: 0x000B4610
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static UKuroSDKManager Get()
 		{
 			UKuroSDKManager.__Get_FunctionParams* ptr = stackalloc UKuroSDKManager.__Get_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UKuroSDKManager.__Get_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__Get_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__Get_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__Get_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroSDKManager>(ptr->__Result);
 		}
 
-		// Token: 0x0601C659 RID: 116313 RVA: 0x0029EA14 File Offset: 0x0029CC14
+		// Token: 0x06007B98 RID: 31640 RVA: 0x000B645C File Offset: 0x000B465C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void FreePlugin(string data)
 		{
 			UKuroSDKManager.__FreePlugin_FunctionParams* ptr = stackalloc UKuroSDKManager.__FreePlugin_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__FreePlugin_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__FreePlugin_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->data), data);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__FreePlugin_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__FreePlugin_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__FreePlugin_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C65A RID: 116314 RVA: 0x0029EA71 File Offset: 0x0029CC71
+		// Token: 0x06007B99 RID: 31641 RVA: 0x000B64B8 File Offset: 0x000B46B8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void ExitGame()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__ExitGame_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__ExitGame_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C65B RID: 116315 RVA: 0x0029EA88 File Offset: 0x0029CC88
+		// Token: 0x06007B9A RID: 31642 RVA: 0x000B64CC File Offset: 0x000B46CC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool DoInitSdkProcedure()
 		{
 			UKuroSDKManager.__DoInitSdkProcedure_FunctionParams* ptr = stackalloc UKuroSDKManager.__DoInitSdkProcedure_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__DoInitSdkProcedure_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__DoInitSdkProcedure_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__DoInitSdkProcedure_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__DoInitSdkProcedure_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C65C RID: 116316 RVA: 0x0029EACD File Offset: 0x0029CCCD
+		// Token: 0x06007B9B RID: 31643 RVA: 0x000B6510 File Offset: 0x000B4710
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void DoEngineExit()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__DoEngineExit_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__DoEngineExit_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C65D RID: 116317 RVA: 0x0029EAE4 File Offset: 0x0029CCE4
+		// Token: 0x06007B9C RID: 31644 RVA: 0x000B6524 File Offset: 0x000B4724
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void CloseWebView(string identifier)
 		{
 			UKuroSDKManager.__CloseWebView_FunctionParams* ptr = stackalloc UKuroSDKManager.__CloseWebView_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSDKManager.__CloseWebView_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__CloseWebView_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->identifier), identifier);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__CloseWebView_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__CloseWebView_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__CloseWebView_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C65E RID: 116318 RVA: 0x0029EB41 File Offset: 0x0029CD41
+		// Token: 0x06007B9D RID: 31645 RVA: 0x000B6580 File Offset: 0x000B4780
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void ClosePostWebView()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__ClosePostWebView_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__ClosePostWebView_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C65F RID: 116319 RVA: 0x0029EB55 File Offset: 0x0029CD55
+		// Token: 0x06007B9E RID: 31646 RVA: 0x000B6593 File Offset: 0x000B4793
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void ClearLoginInfo()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__ClearLoginInfo_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__ClearLoginInfo_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C660 RID: 116320 RVA: 0x0029EB6C File Offset: 0x0029CD6C
+		// Token: 0x06007B9F RID: 31647 RVA: 0x000B65A8 File Offset: 0x000B47A8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool CheckPhotoPermission()
 		{
 			UKuroSDKManager.__CheckPhotoPermission_FunctionParams* ptr = stackalloc UKuroSDKManager.__CheckPhotoPermission_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSDKManager.__CheckPhotoPermission_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__CheckPhotoPermission_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__CheckPhotoPermission_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__CheckPhotoPermission_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C661 RID: 116321 RVA: 0x0029EBB1 File Offset: 0x0029CDB1
+		// Token: 0x06007BA0 RID: 31648 RVA: 0x000B65EC File Offset: 0x000B47EC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void CheckApplinksActivation()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__CheckApplinksActivation_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__CheckApplinksActivation_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C662 RID: 116322 RVA: 0x0029EBC8 File Offset: 0x0029CDC8
+		// Token: 0x06007BA1 RID: 31649 RVA: 0x000B6600 File Offset: 0x000B4800
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool CallPluginAsync(string data, [Nullable(2)] in FPluginCallback callback)
 		{
 			UKuroSDKManager.__CallPluginAsync_FunctionParams* ptr = stackalloc UKuroSDKManager.__CallPluginAsync_FunctionParams[(UIntPtr)79] + 15L / (long)sizeof(UKuroSDKManager.__CallPluginAsync_FunctionParams) & -16L;
@@ -1270,952 +1214,950 @@ namespace UnrealEngine
 			IntPtr dest = &ptr->callback;
 			FPluginCallback fpluginCallback = callback;
 			FScriptDelegate.NativeCopy(dest, (fpluginCallback != null) ? fpluginCallback.NativePtr : ((IntPtr)0));
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__CallPluginAsync_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__CallPluginAsync_NativeFunctionPtr, (void*)ptr);
 			bool _Result = ptr->__Result;
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__CallPluginAsync_NativeFunctionPtr, (void*)ptr, 1);
 			return _Result;
 		}
 
-		// Token: 0x0601C663 RID: 116323 RVA: 0x0029EC48 File Offset: 0x0029CE48
+		// Token: 0x06007BA2 RID: 31650 RVA: 0x000B6680 File Offset: 0x000B4880
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static string CallPlugin(string data)
 		{
 			UKuroSDKManager.__CallPlugin_FunctionParams* ptr = stackalloc UKuroSDKManager.__CallPlugin_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UKuroSDKManager.__CallPlugin_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSDKManager.__CallPlugin_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->data), data);
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__CallPlugin_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__CallPlugin_NativeFunctionPtr, (void*)ptr);
 			string result = FString.ToString((void*)(&ptr->__Result));
 			UnrealReflectionUtils.DestroyStruct(UKuroSDKManager.__CallPlugin_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0601C664 RID: 116324 RVA: 0x0029ECB1 File Offset: 0x0029CEB1
+		// Token: 0x06007BA3 RID: 31651 RVA: 0x000B66E8 File Offset: 0x000B48E8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void BindAccount()
 		{
-			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__BindAccount_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSDKManager._ClassDefaultObjectPtr, UKuroSDKManager.__BindAccount_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601C665 RID: 116325 RVA: 0x0029ECC5 File Offset: 0x0029CEC5
+		// Token: 0x06007BA4 RID: 31652 RVA: 0x000B66FB File Offset: 0x000B48FB
 		static UKuroSDKManager()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSDK.KuroSDKManager");
 		}
 
-		// Token: 0x0601C666 RID: 116326 RVA: 0x0029ECD3 File Offset: 0x0029CED3
+		// Token: 0x06007BA5 RID: 31653 RVA: 0x000B6709 File Offset: 0x000B4909
 		protected UKuroSDKManager(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400F3F8 RID: 62456
+		// Token: 0x04003462 RID: 13410
 		public new const string __ObjectPath = "/Script/KuroSDK.KuroSDKManager";
 
-		// Token: 0x0400F3F9 RID: 62457
+		// Token: 0x04003463 RID: 13411
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400F3FA RID: 62458
+		// Token: 0x04003464 RID: 13412
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400F3FB RID: 62459
+		// Token: 0x04003465 RID: 13413
 		internal static int __PropertyOffset_InitDelegate;
 
-		// Token: 0x0400F3FC RID: 62460
+		// Token: 0x04003466 RID: 13414
 		[Nullable(2)]
 		private FSDKSdkInitDelegate _InitDelegate;
 
-		// Token: 0x0400F3FD RID: 62461
+		// Token: 0x04003467 RID: 13415
 		internal static int __PropertyOffset_LoginSuccessDelegate;
 
-		// Token: 0x0400F3FE RID: 62462
+		// Token: 0x04003468 RID: 13416
 		[Nullable(2)]
 		private FSDKLoginSuccessType _LoginSuccessDelegate;
 
-		// Token: 0x0400F3FF RID: 62463
+		// Token: 0x04003469 RID: 13417
 		internal static int __PropertyOffset_LoginDelegate;
 
-		// Token: 0x0400F400 RID: 62464
+		// Token: 0x0400346A RID: 13418
 		[Nullable(2)]
 		private FSDKLoginDelegate _LoginDelegate;
 
-		// Token: 0x0400F401 RID: 62465
+		// Token: 0x0400346B RID: 13419
 		internal static int __PropertyOffset_KickDelegate;
 
-		// Token: 0x0400F402 RID: 62466
+		// Token: 0x0400346C RID: 13420
 		[Nullable(2)]
 		private FSDKKickDelegate _KickDelegate;
 
-		// Token: 0x0400F403 RID: 62467
+		// Token: 0x0400346D RID: 13421
 		internal static int __PropertyOffset_LogoutDelegate;
 
-		// Token: 0x0400F404 RID: 62468
+		// Token: 0x0400346E RID: 13422
 		[Nullable(2)]
 		private FSDKLogoutDelegate _LogoutDelegate;
 
-		// Token: 0x0400F405 RID: 62469
+		// Token: 0x0400346F RID: 13423
 		internal static int __PropertyOffset_ExitDelegate;
 
-		// Token: 0x0400F406 RID: 62470
+		// Token: 0x04003470 RID: 13424
 		[Nullable(2)]
 		private FSDKExitDelegate _ExitDelegate;
 
-		// Token: 0x0400F407 RID: 62471
+		// Token: 0x04003471 RID: 13425
 		internal static int __PropertyOffset_HasExitDelegate;
 
-		// Token: 0x0400F408 RID: 62472
+		// Token: 0x04003472 RID: 13426
 		[Nullable(2)]
 		private FSDKHasExitDelegate _HasExitDelegate;
 
-		// Token: 0x0400F409 RID: 62473
+		// Token: 0x04003473 RID: 13427
 		internal static int __PropertyOffset_PaymentDelegate;
 
-		// Token: 0x0400F40A RID: 62474
+		// Token: 0x04003474 RID: 13428
 		[Nullable(2)]
 		private FSDKPaymentDelegate _PaymentDelegate;
 
-		// Token: 0x0400F40B RID: 62475
+		// Token: 0x04003475 RID: 13429
 		internal static int __PropertyOffset_PostRedPointDelegate;
 
-		// Token: 0x0400F40C RID: 62476
+		// Token: 0x04003476 RID: 13430
 		[Nullable(2)]
 		private FSDKPostRedPointDelegate _PostRedPointDelegate;
 
-		// Token: 0x0400F40D RID: 62477
+		// Token: 0x04003477 RID: 13431
 		internal static int __PropertyOffset_PostProductDelegate;
 
-		// Token: 0x0400F40E RID: 62478
+		// Token: 0x04003478 RID: 13432
 		[Nullable(2)]
 		private FSDKProductDelegate _PostProductDelegate;
 
-		// Token: 0x0400F40F RID: 62479
+		// Token: 0x04003479 RID: 13433
 		internal static int __PropertyOffset_ProtocolCallBack;
 
-		// Token: 0x0400F410 RID: 62480
+		// Token: 0x0400347A RID: 13434
 		[Nullable(2)]
 		private FSDKProtocolDelegate _ProtocolCallBack;
 
-		// Token: 0x0400F411 RID: 62481
+		// Token: 0x0400347B RID: 13435
 		internal static int __PropertyOffset_GameStateChangeCallBack;
 
-		// Token: 0x0400F412 RID: 62482
+		// Token: 0x0400347C RID: 13436
 		[Nullable(2)]
 		private FSDKGameStateChangeDelegate _GameStateChangeCallBack;
 
-		// Token: 0x0400F413 RID: 62483
+		// Token: 0x0400347D RID: 13437
 		internal static int __PropertyOffset_RequestPhotoPermissionDelegate;
 
-		// Token: 0x0400F414 RID: 62484
+		// Token: 0x0400347E RID: 13438
 		[Nullable(2)]
 		private FSDKRequestPermissionResultDelagate _RequestPhotoPermissionDelegate;
 
-		// Token: 0x0400F415 RID: 62485
+		// Token: 0x0400347F RID: 13439
 		internal static int __PropertyOffset_AnnounceInitDelegate;
 
-		// Token: 0x0400F416 RID: 62486
+		// Token: 0x04003480 RID: 13440
 		[Nullable(2)]
 		private FSDKAnnounceInitDelegate _AnnounceInitDelegate;
 
-		// Token: 0x0400F417 RID: 62487
+		// Token: 0x04003481 RID: 13441
 		internal static int __PropertyOffset_AnnounceOpenDelegate;
 
-		// Token: 0x0400F418 RID: 62488
+		// Token: 0x04003482 RID: 13442
 		[Nullable(2)]
 		private FSDKAnnounceOpenDelegate _AnnounceOpenDelegate;
 
-		// Token: 0x0400F419 RID: 62489
+		// Token: 0x04003483 RID: 13443
 		internal static int __PropertyOffset_AnnounceRedPointDelegate;
 
-		// Token: 0x0400F41A RID: 62490
+		// Token: 0x04003484 RID: 13444
 		[Nullable(2)]
 		private FSDKAnnounceRedPointDelegate _AnnounceRedPointDelegate;
 
-		// Token: 0x0400F41B RID: 62491
+		// Token: 0x04003485 RID: 13445
 		internal static int __PropertyOffset_CustomerServiceResultDelegate;
 
-		// Token: 0x0400F41C RID: 62492
+		// Token: 0x04003486 RID: 13446
 		[Nullable(2)]
 		private FSDKCustomerServiceResultDelegate _CustomerServiceResultDelegate;
 
-		// Token: 0x0400F41D RID: 62493
+		// Token: 0x04003487 RID: 13447
 		internal static int __PropertyOffset_GetParamsDelegate;
 
-		// Token: 0x0400F41E RID: 62494
+		// Token: 0x04003488 RID: 13448
 		[Nullable(2)]
 		private FSDKGetParamsDelegate _GetParamsDelegate;
 
-		// Token: 0x0400F41F RID: 62495
+		// Token: 0x04003489 RID: 13449
 		internal static int __PropertyOffset_OnLoginDelegate;
 
-		// Token: 0x0400F420 RID: 62496
+		// Token: 0x0400348A RID: 13450
 		[Nullable(2)]
 		private FSDKOnLoginDelegate _OnLoginDelegate;
 
-		// Token: 0x0400F421 RID: 62497
+		// Token: 0x0400348B RID: 13451
 		internal static int __PropertyOffset_DeepLinkDelegate;
 
-		// Token: 0x0400F422 RID: 62498
+		// Token: 0x0400348C RID: 13452
 		[Nullable(2)]
 		private FSDKDeepLinkDelegate _DeepLinkDelegate;
 
-		// Token: 0x0400F423 RID: 62499
+		// Token: 0x0400348D RID: 13453
 		internal static int __PropertyOffset_GetAdsValueDelegate;
 
-		// Token: 0x0400F424 RID: 62500
+		// Token: 0x0400348E RID: 13454
 		[Nullable(2)]
 		private FSDKGetAdsValueDelegate _GetAdsValueDelegate;
 
-		// Token: 0x0400F425 RID: 62501
+		// Token: 0x0400348F RID: 13455
 		internal static int __PropertyOffset_GetSharePlatformDelegate;
 
-		// Token: 0x0400F426 RID: 62502
+		// Token: 0x04003490 RID: 13456
 		[Nullable(2)]
 		private FSDKGetSharePlatformDelegate _GetSharePlatformDelegate;
 
-		// Token: 0x0400F427 RID: 62503
+		// Token: 0x04003491 RID: 13457
 		internal static int __PropertyOffset_ShareResultDelegate;
 
-		// Token: 0x0400F428 RID: 62504
+		// Token: 0x04003492 RID: 13458
 		[Nullable(2)]
 		private FSDKShareResultDelegate _ShareResultDelegate;
 
-		// Token: 0x0400F429 RID: 62505
+		// Token: 0x04003493 RID: 13459
 		internal static int __PropertyOffset_LogDelegate;
 
-		// Token: 0x0400F42A RID: 62506
+		// Token: 0x04003494 RID: 13460
 		[Nullable(2)]
 		private FSDKLogDelegate _LogDelegate;
 
-		// Token: 0x0400F42B RID: 62507
+		// Token: 0x04003495 RID: 13461
 		internal static int __PropertyOffset_WebViewCloseDelegate;
 
-		// Token: 0x0400F42C RID: 62508
+		// Token: 0x04003496 RID: 13462
 		[Nullable(2)]
 		private FSDKWebViewCloseDelegate _WebViewCloseDelegate;
 
-		// Token: 0x0400F42D RID: 62509
+		// Token: 0x04003497 RID: 13463
 		internal static int __PropertyOffset_ExternalLoginCallBack;
 
-		// Token: 0x0400F42E RID: 62510
+		// Token: 0x04003498 RID: 13464
 		[Nullable(2)]
 		private FSDKExternalLoginDelegate _ExternalLoginCallBack;
 
-		// Token: 0x0400F42F RID: 62511
+		// Token: 0x04003499 RID: 13465
 		internal static int __PropertyOffset_ExternalQueryAchievementsDelegate;
 
-		// Token: 0x0400F430 RID: 62512
+		// Token: 0x0400349A RID: 13466
 		[Nullable(2)]
 		private FSDKExternalQueryAchievementsDelegate _ExternalQueryAchievementsDelegate;
 
-		// Token: 0x0400F431 RID: 62513
+		// Token: 0x0400349B RID: 13467
 		internal static int __PropertyOffset_ExternalWriteAchievementsDelegate;
 
-		// Token: 0x0400F432 RID: 62514
+		// Token: 0x0400349C RID: 13468
 		[Nullable(2)]
 		private FSDKExternalWriteAchievementsDelegate _ExternalWriteAchievementsDelegate;
 
-		// Token: 0x0400F433 RID: 62515
+		// Token: 0x0400349D RID: 13469
 		internal static int __PropertyOffset_OnActivatedByApplinksDelegate;
 
-		// Token: 0x0400F434 RID: 62516
+		// Token: 0x0400349E RID: 13470
 		[Nullable(2)]
 		private FSDKOnActivatedByApplinks _OnActivatedByApplinksDelegate;
 
-		// Token: 0x0400F435 RID: 62517
+		// Token: 0x0400349F RID: 13471
 		private static IntPtr __WriteExternalAchievements_NativeFunctionPtr;
 
-		// Token: 0x0400F436 RID: 62518
+		// Token: 0x040034A0 RID: 13472
 		private static IntPtr __UpdateChannelEvent_NativeFunctionPtr;
 
-		// Token: 0x0400F437 RID: 62519
+		// Token: 0x040034A1 RID: 13473
 		private static IntPtr __Start_NativeFunctionPtr;
 
-		// Token: 0x0400F438 RID: 62520
+		// Token: 0x040034A2 RID: 13474
 		private static IntPtr __ShowVirtualKeyboard_NativeFunctionPtr;
 
-		// Token: 0x0400F439 RID: 62521
+		// Token: 0x040034A3 RID: 13475
 		private static IntPtr __ShowExternalLogin_NativeFunctionPtr;
 
-		// Token: 0x0400F43A RID: 62522
+		// Token: 0x040034A4 RID: 13476
 		private static IntPtr __ShowExitGameDialog_NativeFunctionPtr;
 
-		// Token: 0x0400F43B RID: 62523
+		// Token: 0x040034A5 RID: 13477
 		private static IntPtr __Share_NativeFunctionPtr;
 
-		// Token: 0x0400F43C RID: 62524
+		// Token: 0x040034A6 RID: 13478
 		private static IntPtr __SetWindowsMode_NativeFunctionPtr;
 
-		// Token: 0x0400F43D RID: 62525
+		// Token: 0x040034A7 RID: 13479
 		private static IntPtr __SetIfGlobalSdk_NativeFunctionPtr;
 
-		// Token: 0x0400F43E RID: 62526
+		// Token: 0x040034A8 RID: 13480
 		private static IntPtr __SetGamePadMode_NativeFunctionPtr;
 
-		// Token: 0x0400F43F RID: 62527
+		// Token: 0x040034A9 RID: 13481
 		private static IntPtr __SetFont_NativeFunctionPtr;
 
-		// Token: 0x0400F440 RID: 62528
+		// Token: 0x040034AA RID: 13482
 		private static IntPtr __SetCursor_NativeFunctionPtr;
 
-		// Token: 0x0400F441 RID: 62529
+		// Token: 0x040034AB RID: 13483
 		private static IntPtr __RequestReviewApp_NativeFunctionPtr;
 
-		// Token: 0x0400F442 RID: 62530
+		// Token: 0x040034AC RID: 13484
 		private static IntPtr __RequestPhotoPermission_NativeFunctionPtr;
 
-		// Token: 0x0400F443 RID: 62531
+		// Token: 0x040034AD RID: 13485
 		private static IntPtr __QueryProductInfo_NativeFunctionPtr;
 
-		// Token: 0x0400F444 RID: 62532
+		// Token: 0x040034AE RID: 13486
 		private static IntPtr __QueryExternalAchievements_NativeFunctionPtr;
 
-		// Token: 0x0400F445 RID: 62533
+		// Token: 0x040034AF RID: 13487
 		private static IntPtr __PostSplashScreenEndSuccess_NativeFunctionPtr;
 
-		// Token: 0x0400F446 RID: 62534
+		// Token: 0x040034B0 RID: 13488
 		private static IntPtr __OpenWebView_NativeFunctionPtr;
 
-		// Token: 0x0400F447 RID: 62535
+		// Token: 0x040034B1 RID: 13489
 		private static IntPtr __OpenSdkQRScan_NativeFunctionPtr;
 
-		// Token: 0x0400F448 RID: 62536
+		// Token: 0x040034B2 RID: 13490
 		private static IntPtr __OpenDefaultWebView_NativeFunctionPtr;
 
-		// Token: 0x0400F449 RID: 62537
+		// Token: 0x040034B3 RID: 13491
 		private static IntPtr __OpenCustomerService_NativeFunctionPtr;
 
-		// Token: 0x0400F44A RID: 62538
+		// Token: 0x040034B4 RID: 13492
 		private static IntPtr __LogMarketingEvent_NativeFunctionPtr;
 
-		// Token: 0x0400F44B RID: 62539
+		// Token: 0x040034B5 RID: 13493
 		private static IntPtr __KuroSDKEvent_NativeFunctionPtr;
 
-		// Token: 0x0400F44C RID: 62540
+		// Token: 0x040034B6 RID: 13494
 		private static IntPtr __IsUserCenterEnable_NativeFunctionPtr;
 
-		// Token: 0x0400F44D RID: 62541
+		// Token: 0x040034B7 RID: 13495
 		private static IntPtr __IsLogin_NativeFunctionPtr;
 
-		// Token: 0x0400F44E RID: 62542
+		// Token: 0x040034B8 RID: 13496
 		private static IntPtr __IsCustomerServiceEnable_NativeFunctionPtr;
 
-		// Token: 0x0400F44F RID: 62543
+		// Token: 0x040034B9 RID: 13497
 		private static IntPtr __Initialize_NativeFunctionPtr;
 
-		// Token: 0x0400F450 RID: 62544
+		// Token: 0x040034BA RID: 13498
 		private static IntPtr __GetSharePlatform_NativeFunctionPtr;
 
-		// Token: 0x0400F451 RID: 62545
+		// Token: 0x040034BB RID: 13499
 		private static IntPtr __GetSdkParams_NativeFunctionPtr;
 
-		// Token: 0x0400F452 RID: 62546
+		// Token: 0x040034BC RID: 13500
 		private static IntPtr __GetSdkLoginInfo_NativeFunctionPtr;
 
-		// Token: 0x0400F453 RID: 62547
+		// Token: 0x040034BD RID: 13501
 		private static IntPtr __GetSdkIsShowQuitTips_NativeFunctionPtr;
 
-		// Token: 0x0400F454 RID: 62548
+		// Token: 0x040034BE RID: 13502
 		private static IntPtr __GetSdkIsQRScan_NativeFunctionPtr;
 
-		// Token: 0x0400F455 RID: 62549
+		// Token: 0x040034BF RID: 13503
 		private static IntPtr __GetSdkInitState_NativeFunctionPtr;
 
-		// Token: 0x0400F456 RID: 62550
+		// Token: 0x040034C0 RID: 13504
 		private static IntPtr __GetProjectId_NativeFunctionPtr;
 
-		// Token: 0x0400F457 RID: 62551
+		// Token: 0x040034C1 RID: 13505
 		private static IntPtr __GetPostWebViewInitState_NativeFunctionPtr;
 
-		// Token: 0x0400F458 RID: 62552
+		// Token: 0x040034C2 RID: 13506
 		private static IntPtr __GetPackageId_NativeFunctionPtr;
 
-		// Token: 0x0400F459 RID: 62553
+		// Token: 0x040034C3 RID: 13507
 		private static IntPtr __GetIsAgreeProtocol_NativeFunctionPtr;
 
-		// Token: 0x0400F45A RID: 62554
+		// Token: 0x040034C4 RID: 13508
 		private static IntPtr __GetDeepLinkStr_NativeFunctionPtr;
 
-		// Token: 0x0400F45B RID: 62555
+		// Token: 0x040034C5 RID: 13509
 		private static IntPtr __GetCurrentLoginInfo_NativeFunctionPtr;
 
-		// Token: 0x0400F45C RID: 62556
+		// Token: 0x040034C6 RID: 13510
 		private static IntPtr __GetChannelName_NativeFunctionPtr;
 
-		// Token: 0x0400F45D RID: 62557
+		// Token: 0x040034C7 RID: 13511
 		private static IntPtr __GetChannelId_NativeFunctionPtr;
 
-		// Token: 0x0400F45E RID: 62558
+		// Token: 0x040034C8 RID: 13512
 		private static IntPtr __GetBasicInfo_NativeFunctionPtr;
 
-		// Token: 0x0400F45F RID: 62559
+		// Token: 0x040034C9 RID: 13513
 		private static IntPtr __GetAppChannelId_NativeFunctionPtr;
 
-		// Token: 0x0400F460 RID: 62560
+		// Token: 0x040034CA RID: 13514
 		private static IntPtr __GetAgreementUrl_NativeFunctionPtr;
 
-		// Token: 0x0400F461 RID: 62561
+		// Token: 0x040034CB RID: 13515
 		private static IntPtr __GetAdsValue_NativeFunctionPtr;
 
-		// Token: 0x0400F462 RID: 62562
+		// Token: 0x040034CC RID: 13516
 		private static IntPtr __Get_NativeFunctionPtr;
 
-		// Token: 0x0400F463 RID: 62563
+		// Token: 0x040034CD RID: 13517
 		private static IntPtr __FreePlugin_NativeFunctionPtr;
 
-		// Token: 0x0400F464 RID: 62564
+		// Token: 0x040034CE RID: 13518
 		private static IntPtr __ExitGame_NativeFunctionPtr;
 
-		// Token: 0x0400F465 RID: 62565
+		// Token: 0x040034CF RID: 13519
 		private static IntPtr __DoInitSdkProcedure_NativeFunctionPtr;
 
-		// Token: 0x0400F466 RID: 62566
+		// Token: 0x040034D0 RID: 13520
 		private static IntPtr __DoEngineExit_NativeFunctionPtr;
 
-		// Token: 0x0400F467 RID: 62567
+		// Token: 0x040034D1 RID: 13521
 		private static IntPtr __CloseWebView_NativeFunctionPtr;
 
-		// Token: 0x0400F468 RID: 62568
+		// Token: 0x040034D2 RID: 13522
 		private static IntPtr __ClosePostWebView_NativeFunctionPtr;
 
-		// Token: 0x0400F469 RID: 62569
+		// Token: 0x040034D3 RID: 13523
 		private static IntPtr __ClearLoginInfo_NativeFunctionPtr;
 
-		// Token: 0x0400F46A RID: 62570
+		// Token: 0x040034D4 RID: 13524
 		private static IntPtr __CheckPhotoPermission_NativeFunctionPtr;
 
-		// Token: 0x0400F46B RID: 62571
+		// Token: 0x040034D5 RID: 13525
 		private static IntPtr __CheckApplinksActivation_NativeFunctionPtr;
 
-		// Token: 0x0400F46C RID: 62572
+		// Token: 0x040034D6 RID: 13526
 		private static IntPtr __CallPluginAsync_NativeFunctionPtr;
 
-		// Token: 0x0400F46D RID: 62573
+		// Token: 0x040034D7 RID: 13527
 		private static IntPtr __CallPlugin_NativeFunctionPtr;
 
-		// Token: 0x0400F46E RID: 62574
+		// Token: 0x040034D8 RID: 13528
 		private static IntPtr __BindAccount_NativeFunctionPtr;
 
-		// Token: 0x02003220 RID: 12832
+		// Token: 0x02000C95 RID: 3221
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __WriteExternalAchievements_FunctionParams
 		{
-			// Token: 0x0401708A RID: 94346
+			// Token: 0x04005EFE RID: 24318
 			[FieldOffset(0)]
 			public FString data;
 		}
 
-		// Token: 0x02003221 RID: 12833
+		// Token: 0x02000C96 RID: 3222
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __UpdateChannelEvent_FunctionParams
 		{
-			// Token: 0x0401708B RID: 94347
+			// Token: 0x04005EFF RID: 24319
 			[FieldOffset(0)]
 			public FString data;
 		}
 
-		// Token: 0x02003222 RID: 12834
+		// Token: 0x02000C97 RID: 3223
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __ShowVirtualKeyboard_FunctionParams
 		{
-			// Token: 0x0401708C RID: 94348
+			// Token: 0x04005F00 RID: 24320
 			[FieldOffset(0)]
 			public bool state;
 		}
 
-		// Token: 0x02003223 RID: 12835
+		// Token: 0x02000C98 RID: 3224
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __Share_FunctionParams
 		{
-			// Token: 0x0401708D RID: 94349
+			// Token: 0x04005F01 RID: 24321
 			[FieldOffset(0)]
 			public byte imageData;
 
-			// Token: 0x0401708E RID: 94350
+			// Token: 0x04005F02 RID: 24322
 			[FieldOffset(16)]
 			public FString sKuroSDKEventParameter;
 		}
 
-		// Token: 0x02003224 RID: 12836
+		// Token: 0x02000C99 RID: 3225
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetWindowsMode_FunctionParams
 		{
-			// Token: 0x0401708F RID: 94351
+			// Token: 0x04005F03 RID: 24323
 			[FieldOffset(0)]
 			public bool mode;
 		}
 
-		// Token: 0x02003225 RID: 12837
+		// Token: 0x02000C9A RID: 3226
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetIfGlobalSdk_FunctionParams
 		{
-			// Token: 0x04017090 RID: 94352
+			// Token: 0x04005F04 RID: 24324
 			[FieldOffset(0)]
 			public bool ifGlobal;
 		}
 
-		// Token: 0x02003226 RID: 12838
+		// Token: 0x02000C9B RID: 3227
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetGamePadMode_FunctionParams
 		{
-			// Token: 0x04017091 RID: 94353
+			// Token: 0x04005F05 RID: 24325
 			[FieldOffset(0)]
 			public bool mode;
 		}
 
-		// Token: 0x02003227 RID: 12839
+		// Token: 0x02000C9C RID: 3228
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetFont_FunctionParams
 		{
-			// Token: 0x04017092 RID: 94354
+			// Token: 0x04005F06 RID: 24326
 			[FieldOffset(0)]
 			public FString data;
 		}
 
-		// Token: 0x02003228 RID: 12840
+		// Token: 0x02000C9D RID: 3229
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetCursor_FunctionParams
 		{
-			// Token: 0x04017093 RID: 94355
+			// Token: 0x04005F07 RID: 24327
 			[FieldOffset(0)]
 			public FString data;
 		}
 
-		// Token: 0x02003229 RID: 12841
+		// Token: 0x02000C9E RID: 3230
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __RequestReviewApp_FunctionParams
 		{
-			// Token: 0x04017094 RID: 94356
+			// Token: 0x04005F08 RID: 24328
 			[FieldOffset(0)]
 			public FString data;
 		}
 
-		// Token: 0x0200322A RID: 12842
+		// Token: 0x02000C9F RID: 3231
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __QueryProductInfo_FunctionParams
 		{
-			// Token: 0x04017095 RID: 94357
+			// Token: 0x04005F09 RID: 24329
 			[FieldOffset(0)]
 			public FString data;
 		}
 
-		// Token: 0x0200322B RID: 12843
+		// Token: 0x02000CA0 RID: 3232
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 72)]
 		protected ref struct __OpenWebView_FunctionParams
 		{
-			// Token: 0x04017096 RID: 94358
+			// Token: 0x04005F0A RID: 24330
 			[FieldOffset(0)]
 			public FString title;
 
-			// Token: 0x04017097 RID: 94359
+			// Token: 0x04005F0B RID: 24331
 			[FieldOffset(16)]
 			public FString url;
 
-			// Token: 0x04017098 RID: 94360
+			// Token: 0x04005F0C RID: 24332
 			[FieldOffset(32)]
 			public bool isLandscape;
 
-			// Token: 0x04017099 RID: 94361
+			// Token: 0x04005F0D RID: 24333
 			[FieldOffset(33)]
 			public bool transparent;
 
-			// Token: 0x0401709A RID: 94362
+			// Token: 0x04005F0E RID: 24334
 			[FieldOffset(34)]
 			public bool webAccelerated;
 
-			// Token: 0x0401709B RID: 94363
+			// Token: 0x04005F0F RID: 24335
 			[FieldOffset(40)]
 			public FString identifier;
 
-			// Token: 0x0401709C RID: 94364
+			// Token: 0x04005F10 RID: 24336
 			[FieldOffset(56)]
 			public FString data;
 		}
 
-		// Token: 0x0200322C RID: 12844
+		// Token: 0x02000CA1 RID: 3233
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OpenDefaultWebView_FunctionParams
 		{
-			// Token: 0x0401709D RID: 94365
+			// Token: 0x04005F11 RID: 24337
 			[FieldOffset(0)]
 			public FString url;
 		}
 
-		// Token: 0x0200322D RID: 12845
+		// Token: 0x02000CA2 RID: 3234
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OpenCustomerService_FunctionParams
 		{
-			// Token: 0x0401709E RID: 94366
+			// Token: 0x04005F12 RID: 24338
 			[FieldOffset(0)]
 			public FString data;
 		}
 
-		// Token: 0x0200322E RID: 12846
+		// Token: 0x02000CA3 RID: 3235
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __LogMarketingEvent_FunctionParams
 		{
-			// Token: 0x0401709F RID: 94367
+			// Token: 0x04005F13 RID: 24339
 			[FieldOffset(0)]
 			public FString data;
 		}
 
-		// Token: 0x0200322F RID: 12847
+		// Token: 0x02000CA4 RID: 3236
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __KuroSDKEvent_FunctionParams
 		{
-			// Token: 0x040170A0 RID: 94368
+			// Token: 0x04005F14 RID: 24340
 			[FieldOffset(0)]
 			public UKuroSDKEventType iKuroSDKEvent;
 
-			// Token: 0x040170A1 RID: 94369
+			// Token: 0x04005F15 RID: 24341
 			[FieldOffset(8)]
 			public FString sKuroSDKEventParameter;
 		}
 
-		// Token: 0x02003230 RID: 12848
+		// Token: 0x02000CA5 RID: 3237
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsUserCenterEnable_FunctionParams
 		{
-			// Token: 0x040170A2 RID: 94370
+			// Token: 0x04005F16 RID: 24342
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003231 RID: 12849
+		// Token: 0x02000CA6 RID: 3238
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsLogin_FunctionParams
 		{
-			// Token: 0x040170A3 RID: 94371
+			// Token: 0x04005F17 RID: 24343
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003232 RID: 12850
+		// Token: 0x02000CA7 RID: 3239
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsCustomerServiceEnable_FunctionParams
 		{
-			// Token: 0x040170A4 RID: 94372
+			// Token: 0x04005F18 RID: 24344
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003233 RID: 12851
+		// Token: 0x02000CA8 RID: 3240
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __GetSdkParams_FunctionParams
 		{
-			// Token: 0x040170A5 RID: 94373
+			// Token: 0x04005F19 RID: 24345
 			[FieldOffset(0)]
 			public FString data;
 
-			// Token: 0x040170A6 RID: 94374
+			// Token: 0x04005F1A RID: 24346
 			[FieldOffset(16)]
 			public FString __Result;
 		}
 
-		// Token: 0x02003234 RID: 12852
+		// Token: 0x02000CA9 RID: 3241
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetSdkLoginInfo_FunctionParams
 		{
-			// Token: 0x040170A7 RID: 94375
+			// Token: 0x04005F1B RID: 24347
 			[FieldOffset(0)]
 			public FString __Result;
 		}
 
-		// Token: 0x02003235 RID: 12853
+		// Token: 0x02000CAA RID: 3242
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __GetSdkIsShowQuitTips_FunctionParams
 		{
-			// Token: 0x040170A8 RID: 94376
+			// Token: 0x04005F1C RID: 24348
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003236 RID: 12854
+		// Token: 0x02000CAB RID: 3243
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __GetSdkIsQRScan_FunctionParams
 		{
-			// Token: 0x040170A9 RID: 94377
+			// Token: 0x04005F1D RID: 24349
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003237 RID: 12855
+		// Token: 0x02000CAC RID: 3244
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __GetSdkInitState_FunctionParams
 		{
-			// Token: 0x040170AA RID: 94378
+			// Token: 0x04005F1E RID: 24350
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003238 RID: 12856
+		// Token: 0x02000CAD RID: 3245
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetProjectId_FunctionParams
 		{
-			// Token: 0x040170AB RID: 94379
+			// Token: 0x04005F1F RID: 24351
 			[FieldOffset(0)]
 			public FString __Result;
 		}
 
-		// Token: 0x02003239 RID: 12857
+		// Token: 0x02000CAE RID: 3246
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __GetPostWebViewInitState_FunctionParams
 		{
-			// Token: 0x040170AC RID: 94380
+			// Token: 0x04005F20 RID: 24352
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200323A RID: 12858
+		// Token: 0x02000CAF RID: 3247
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetPackageId_FunctionParams
 		{
-			// Token: 0x040170AD RID: 94381
+			// Token: 0x04005F21 RID: 24353
 			[FieldOffset(0)]
 			public FString __Result;
 		}
 
-		// Token: 0x0200323B RID: 12859
+		// Token: 0x02000CB0 RID: 3248
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __GetIsAgreeProtocol_FunctionParams
 		{
-			// Token: 0x040170AE RID: 94382
+			// Token: 0x04005F22 RID: 24354
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200323C RID: 12860
+		// Token: 0x02000CB1 RID: 3249
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetDeepLinkStr_FunctionParams
 		{
-			// Token: 0x040170AF RID: 94383
+			// Token: 0x04005F23 RID: 24355
 			[FieldOffset(0)]
 			public FString __Result;
 		}
 
-		// Token: 0x0200323D RID: 12861
+		// Token: 0x02000CB2 RID: 3250
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 88)]
 		protected ref struct __GetCurrentLoginInfo_FunctionParams
 		{
-			// Token: 0x040170B0 RID: 94384
+			// Token: 0x04005F24 RID: 24356
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200323E RID: 12862
+		// Token: 0x02000CB3 RID: 3251
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetChannelName_FunctionParams
 		{
-			// Token: 0x040170B1 RID: 94385
+			// Token: 0x04005F25 RID: 24357
 			[FieldOffset(0)]
 			public FString __Result;
 		}
 
-		// Token: 0x0200323F RID: 12863
+		// Token: 0x02000CB4 RID: 3252
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetChannelId_FunctionParams
 		{
-			// Token: 0x040170B2 RID: 94386
+			// Token: 0x04005F26 RID: 24358
 			[FieldOffset(0)]
 			public FString __Result;
 		}
 
-		// Token: 0x02003240 RID: 12864
+		// Token: 0x02000CB5 RID: 3253
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 72)]
 		protected ref struct __GetBasicInfo_FunctionParams
 		{
-			// Token: 0x040170B3 RID: 94387
+			// Token: 0x04005F27 RID: 24359
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003241 RID: 12865
+		// Token: 0x02000CB6 RID: 3254
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetAppChannelId_FunctionParams
 		{
-			// Token: 0x040170B4 RID: 94388
+			// Token: 0x04005F28 RID: 24360
 			[FieldOffset(0)]
 			public FString __Result;
 		}
 
-		// Token: 0x02003242 RID: 12866
+		// Token: 0x02000CB7 RID: 3255
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetAgreementUrl_FunctionParams
 		{
-			// Token: 0x040170B5 RID: 94389
+			// Token: 0x04005F29 RID: 24361
 			[FieldOffset(0)]
 			public FString __Result;
 		}
 
-		// Token: 0x02003243 RID: 12867
+		// Token: 0x02000CB8 RID: 3256
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __GetAdsValue_FunctionParams
 		{
-			// Token: 0x040170B6 RID: 94390
+			// Token: 0x04005F2A RID: 24362
 			[FieldOffset(0)]
 			public FString income;
 
-			// Token: 0x040170B7 RID: 94391
+			// Token: 0x04005F2B RID: 24363
 			[FieldOffset(16)]
 			public FString data;
 		}
 
-		// Token: 0x02003244 RID: 12868
+		// Token: 0x02000CB9 RID: 3257
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __Get_FunctionParams
 		{
-			// Token: 0x040170B8 RID: 94392
+			// Token: 0x04005F2C RID: 24364
 			[FieldOffset(0)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003245 RID: 12869
+		// Token: 0x02000CBA RID: 3258
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __FreePlugin_FunctionParams
 		{
-			// Token: 0x040170B9 RID: 94393
+			// Token: 0x04005F2D RID: 24365
 			[FieldOffset(0)]
 			public FString data;
 		}
 
-		// Token: 0x02003246 RID: 12870
+		// Token: 0x02000CBB RID: 3259
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __DoInitSdkProcedure_FunctionParams
 		{
-			// Token: 0x040170BA RID: 94394
+			// Token: 0x04005F2E RID: 24366
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003247 RID: 12871
+		// Token: 0x02000CBC RID: 3260
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __CloseWebView_FunctionParams
 		{
-			// Token: 0x040170BB RID: 94395
+			// Token: 0x04005F2F RID: 24367
 			[FieldOffset(0)]
 			public FString identifier;
 		}
 
-		// Token: 0x02003248 RID: 12872
+		// Token: 0x02000CBD RID: 3261
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __CheckPhotoPermission_FunctionParams
 		{
-			// Token: 0x040170BC RID: 94396
+			// Token: 0x04005F30 RID: 24368
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003249 RID: 12873
+		// Token: 0x02000CBE RID: 3262
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
 		protected ref struct __CallPluginAsync_FunctionParams
 		{
-			// Token: 0x040170BD RID: 94397
+			// Token: 0x04005F31 RID: 24369
 			[FieldOffset(0)]
 			public FString data;
 
-			// Token: 0x040170BE RID: 94398
+			// Token: 0x04005F32 RID: 24370
 			[FieldOffset(16)]
 			public byte callback;
 
-			// Token: 0x040170BF RID: 94399
+			// Token: 0x04005F33 RID: 24371
 			[FieldOffset(56)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200324A RID: 12874
+		// Token: 0x02000CBF RID: 3263
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __CallPlugin_FunctionParams
 		{
-			// Token: 0x040170C0 RID: 94400
+			// Token: 0x04005F34 RID: 24372
 			[FieldOffset(0)]
 			public FString data;
 
-			// Token: 0x040170C1 RID: 94401
+			// Token: 0x04005F35 RID: 24373
 			[FieldOffset(16)]
 			public FString __Result;
 		}

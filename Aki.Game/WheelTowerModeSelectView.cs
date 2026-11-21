@@ -12,18 +12,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001620 RID: 5664
+// Token: 0x02000AD8 RID: 2776
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerModeSelectView : UiTickViewBase
 {
-	// Token: 0x06009F58 RID: 40792 RVA: 0x0022F023 File Offset: 0x0022D223
+	// Token: 0x06007336 RID: 29494 RVA: 0x00238E6F File Offset: 0x0023706F
 	[NullableContext(1)]
 	public WheelTowerModeSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009F59 RID: 40793 RVA: 0x0022F02C File Offset: 0x0022D22C
+	// Token: 0x06007337 RID: 29495 RVA: 0x00238E78 File Offset: 0x00237078
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 26;
@@ -94,7 +94,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009F5A RID: 40794 RVA: 0x0022F424 File Offset: 0x0022D624
+	// Token: 0x06007338 RID: 29496 RVA: 0x00239270 File Offset: 0x00237470
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerModeSelectView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -105,7 +105,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009F5B RID: 40795 RVA: 0x0022F468 File Offset: 0x0022D668
+	// Token: 0x06007339 RID: 29497 RVA: 0x002392B4 File Offset: 0x002374B4
 	protected override void OnStart()
 	{
 		PopupCaptionItem caption = this.Caption;
@@ -138,7 +138,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		this.AddHomeBtnExtraCallback();
 	}
 
-	// Token: 0x06009F5C RID: 40796 RVA: 0x0022F503 File Offset: 0x0022D703
+	// Token: 0x0600733A RID: 29498 RVA: 0x0023934F File Offset: 0x0023754F
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -149,7 +149,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		seqPlayer.Clear();
 	}
 
-	// Token: 0x06009F5D RID: 40797 RVA: 0x0022F518 File Offset: 0x0022D718
+	// Token: 0x0600733B RID: 29499 RVA: 0x00239364 File Offset: 0x00237564
 	protected override void OnTick(float delta)
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = ActivityModel.Instance.GetTimeVisibleAndRemainTime(WheelTowerModel.Instance.ActivityData, null);
@@ -166,26 +166,26 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06009F5E RID: 40798 RVA: 0x0022F568 File Offset: 0x0022D768
+	// Token: 0x0600733C RID: 29500 RVA: 0x002393B4 File Offset: 0x002375B4
 	protected override void OnBeforeShow()
 	{
 		this.OnTick(0f);
 		this.OnRedDotRefresh(0);
 	}
 
-	// Token: 0x06009F5F RID: 40799 RVA: 0x0022F57C File Offset: 0x0022D77C
+	// Token: 0x0600733D RID: 29501 RVA: 0x002393C8 File Offset: 0x002375C8
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 	}
 
-	// Token: 0x06009F60 RID: 40800 RVA: 0x0022F59A File Offset: 0x0022D79A
+	// Token: 0x0600733E RID: 29502 RVA: 0x002393E6 File Offset: 0x002375E6
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 	}
 
-	// Token: 0x06009F61 RID: 40801 RVA: 0x0022F5B8 File Offset: 0x0022D7B8
+	// Token: 0x0600733F RID: 29503 RVA: 0x00239404 File Offset: 0x00237604
 	protected override UniTask OnBeforeShowAsyncImplementImplement()
 	{
 		WheelTowerModeSelectView.<OnBeforeShowAsyncImplementImplement>d__16 <OnBeforeShowAsyncImplementImplement>d__;
@@ -196,7 +196,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009F62 RID: 40802 RVA: 0x0022F5FC File Offset: 0x0022D7FC
+	// Token: 0x06007340 RID: 29504 RVA: 0x00239448 File Offset: 0x00237648
 	private void SelectDefaultMode()
 	{
 		WheelTowerModel instance = WheelTowerModel.Instance;
@@ -220,13 +220,13 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		endlessToggleItem.SetToggleStateForce(flag);
 	}
 
-	// Token: 0x06009F63 RID: 40803 RVA: 0x0022F657 File Offset: 0x0022D857
+	// Token: 0x06007341 RID: 29505 RVA: 0x002394A3 File Offset: 0x002376A3
 	private void SetEndlessMode(bool endless)
 	{
 		WheelTowerModel.Instance.SetEndlessMode(endless);
 	}
 
-	// Token: 0x06009F64 RID: 40804 RVA: 0x0022F664 File Offset: 0x0022D864
+	// Token: 0x06007342 RID: 29506 RVA: 0x002394B0 File Offset: 0x002376B0
 	private void InitBgActive()
 	{
 		UUIItem item = base.GetItem(1);
@@ -252,7 +252,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		item4.SetUIActive(true);
 	}
 
-	// Token: 0x06009F65 RID: 40805 RVA: 0x0022F6C0 File Offset: 0x0022D8C0
+	// Token: 0x06007343 RID: 29507 RVA: 0x0023950C File Offset: 0x0023770C
 	private void RefreshView(bool skipSwitchAnim = false)
 	{
 		bool endlessMode = WheelTowerModel.Instance.EndlessMode;
@@ -324,7 +324,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		text4.SetText(totalRewardProgress.ToString(), true);
 	}
 
-	// Token: 0x06009F66 RID: 40806 RVA: 0x0022F871 File Offset: 0x0022DA71
+	// Token: 0x06007344 RID: 29508 RVA: 0x002396BD File Offset: 0x002378BD
 	private void RefreshToggle()
 	{
 		WheelTowerModeSelectView.ModeToggleItem normalToggleItem = this.NormalToggleItem;
@@ -340,7 +340,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		endlessToggleItem.Refresh(true);
 	}
 
-	// Token: 0x06009F67 RID: 40807 RVA: 0x0022F898 File Offset: 0x0022DA98
+	// Token: 0x06007345 RID: 29509 RVA: 0x002396E4 File Offset: 0x002378E4
 	private UniTask RefreshBossBgImage()
 	{
 		WheelTowerModeSelectView.<RefreshBossBgImage>d__22 <RefreshBossBgImage>d__;
@@ -351,7 +351,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		return <RefreshBossBgImage>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009F68 RID: 40808 RVA: 0x0022F8DB File Offset: 0x0022DADB
+	// Token: 0x06007346 RID: 29510 RVA: 0x00239727 File Offset: 0x00237927
 	private void OnRewardClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerRewardView, null, delegate(bool success, int viewId)
@@ -363,13 +363,13 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06009F69 RID: 40809 RVA: 0x0022F8F9 File Offset: 0x0022DAF9
+	// Token: 0x06007347 RID: 29511 RVA: 0x00239745 File Offset: 0x00237945
 	private void OnBattleClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerRoundSelectView, null, null);
 	}
 
-	// Token: 0x06009F6A RID: 40810 RVA: 0x0022F90C File Offset: 0x0022DB0C
+	// Token: 0x06007348 RID: 29512 RVA: 0x00239758 File Offset: 0x00237958
 	private void OnCloseClick()
 	{
 		if (GameModeController.Instance.IsInInstance())
@@ -380,7 +380,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009F6B RID: 40811 RVA: 0x0022F92F File Offset: 0x0022DB2F
+	// Token: 0x06007349 RID: 29513 RVA: 0x0023977B File Offset: 0x0023797B
 	private void AddHomeBtnExtraCallback()
 	{
 		UiBehaviourHomeBtn uiBehaviourHomeBtn = this.UiBehaviourHomeBtn;
@@ -398,7 +398,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06009F6C RID: 40812 RVA: 0x0022F960 File Offset: 0x0022DB60
+	// Token: 0x0600734A RID: 29514 RVA: 0x002397AC File Offset: 0x002379AC
 	private void OnRedDotRefresh(int _)
 	{
 		this.RefreshView(true);
@@ -410,42 +410,42 @@ public class WheelTowerModeSelectView : UiTickViewBase
 		item.SetUIActive(WheelTowerModel.Instance.ActivityData.ShouldShowRewardRedDot());
 	}
 
-	// Token: 0x040047FE RID: 18430
+	// Token: 0x040048A4 RID: 18596
 	[Nullable(1)]
 	private const string IconPlay = "/Game/Aki/UI/UIResources/UiActivity/Atlas/ActivityMowingTower/MowingTower30/Main/SP_IconPlay.SP_IconPlay";
 
-	// Token: 0x040047FF RID: 18431
+	// Token: 0x040048A5 RID: 18597
 	[Nullable(1)]
 	private const string IconLock = "/Game/Aki/UI/UIResources/UiActivity/Atlas/ActivityMowingTower/MowingTower30/Main/SP_IconLock.SP_IconLock";
 
-	// Token: 0x04004800 RID: 18432
+	// Token: 0x040048A6 RID: 18598
 	private PopupCaptionItem Caption;
 
-	// Token: 0x04004801 RID: 18433
+	// Token: 0x040048A7 RID: 18599
 	private WheelTowerModeSelectView.ModeToggleItem NormalToggleItem;
 
-	// Token: 0x04004802 RID: 18434
+	// Token: 0x040048A8 RID: 18600
 	private WheelTowerModeSelectView.ModeToggleItem EndlessToggleItem;
 
-	// Token: 0x04004803 RID: 18435
+	// Token: 0x040048A9 RID: 18601
 	private WheelTowerScoreItem ScoreItem;
 
-	// Token: 0x04004804 RID: 18436
+	// Token: 0x040048AA RID: 18602
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x02007BE7 RID: 31719
+	// Token: 0x02006D6F RID: 28015
 	[NullableContext(1)]
 	[Nullable(0)]
 	private class ModeToggleItem : UiPanelBase
 	{
-		// Token: 0x060497D6 RID: 301014 RVA: 0x01304D36 File Offset: 0x01302F36
+		// Token: 0x0603FBF2 RID: 261106 RVA: 0x012A7FDE File Offset: 0x012A61DE
 		public ModeToggleItem(string iconPlay, string iconLock)
 		{
 			this.IconPlay = iconPlay;
 			this.IconLock = iconLock;
 		}
 
-		// Token: 0x060497D7 RID: 301015 RVA: 0x01304D4C File Offset: 0x01302F4C
+		// Token: 0x0603FBF3 RID: 261107 RVA: 0x012A7FF4 File Offset: 0x012A61F4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -472,7 +472,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060497D8 RID: 301016 RVA: 0x01304E58 File Offset: 0x01303058
+		// Token: 0x0603FBF4 RID: 261108 RVA: 0x012A8100 File Offset: 0x012A6300
 		protected override void OnStart()
 		{
 			UUIExtendToggle toggle = base.GetExtendToggle(0);
@@ -480,7 +480,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 			this.SetToggleStateForce(false);
 		}
 
-		// Token: 0x060497D9 RID: 301017 RVA: 0x01304E9C File Offset: 0x0130309C
+		// Token: 0x0603FBF5 RID: 261109 RVA: 0x012A8144 File Offset: 0x012A6344
 		public void Refresh(bool endless)
 		{
 			WheelTowerModel instance = WheelTowerModel.Instance;
@@ -518,13 +518,13 @@ public class WheelTowerModeSelectView : UiTickViewBase
 			item2.SetUIActive(instance.ActivityData.HasLevelRedDot(endless));
 		}
 
-		// Token: 0x060497DA RID: 301018 RVA: 0x01304F7B File Offset: 0x0130317B
+		// Token: 0x0603FBF6 RID: 261110 RVA: 0x012A8223 File Offset: 0x012A6423
 		public void SetToggleClickCallback(Action callback)
 		{
 			this.ToggleClickCallback = callback;
 		}
 
-		// Token: 0x060497DB RID: 301019 RVA: 0x01304F84 File Offset: 0x01303184
+		// Token: 0x0603FBF7 RID: 261111 RVA: 0x012A822C File Offset: 0x012A642C
 		public void SetToggleStateForce(bool isSelect)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -535,7 +535,7 @@ public class WheelTowerModeSelectView : UiTickViewBase
 			extendToggle.SetToggleStateForce(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060497DC RID: 301020 RVA: 0x01304FA1 File Offset: 0x013031A1
+		// Token: 0x0603FBF8 RID: 261112 RVA: 0x012A8249 File Offset: 0x012A6449
 		private void OnToggleClick(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -549,13 +549,13 @@ public class WheelTowerModeSelectView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x04028B41 RID: 166721
+		// Token: 0x04023E74 RID: 147060
 		private readonly string IconPlay;
 
-		// Token: 0x04028B42 RID: 166722
+		// Token: 0x04023E75 RID: 147061
 		private readonly string IconLock;
 
-		// Token: 0x04028B43 RID: 166723
+		// Token: 0x04023E76 RID: 147062
 		[Nullable(2)]
 		private Action ToggleClickCallback;
 	}

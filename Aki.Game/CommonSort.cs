@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001878 RID: 6264
+// Token: 0x02000D31 RID: 3377
 public abstract class CommonSort
 {
-	// Token: 0x0600B7CB RID: 47051 RVA: 0x00299921 File Offset: 0x00297B21
+	// Token: 0x06008BB4 RID: 35764 RVA: 0x002A4039 File Offset: 0x002A2239
 	public void InitSortMap()
 	{
 		if (this.IsInit)
@@ -15,13 +15,13 @@ public abstract class CommonSort
 		this.OnInitSortMap();
 	}
 
-	// Token: 0x0600B7CC RID: 47052
+	// Token: 0x06008BB5 RID: 35765
 	protected abstract void OnInitSortMap();
 
-	// Token: 0x0600B7CD RID: 47053
+	// Token: 0x06008BB6 RID: 35766
 	[NullableContext(2)]
 	public abstract TSortResult GetSortFunctionByRuleId(int ruleId);
 
-	// Token: 0x040052EA RID: 21226
+	// Token: 0x04005395 RID: 21397
 	protected bool IsInit;
 }

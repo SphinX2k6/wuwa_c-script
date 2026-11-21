@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CEA RID: 7402
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EF9 RID: 7929
 	public class IPhotographCameraTransformBase
 	{
-		// Token: 0x06009EDD RID: 40669 RVA: 0x0016B284 File Offset: 0x00169484
+		// Token: 0x0600A8BD RID: 43197 RVA: 0x0017F4E4 File Offset: 0x0017D6E4
 		private IPhotographCameraTransformBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009EDE RID: 40670 RVA: 0x0016B2BC File Offset: 0x001694BC
+		// Token: 0x0600A8BE RID: 43198 RVA: 0x0017F51C File Offset: 0x0017D71C
 		public static IPhotographCameraTransformBase Create([Nullable(2)] IPhotographCameraTransformBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009EDF RID: 40671 RVA: 0x0016B2CF File Offset: 0x001694CF
+		// Token: 0x0600A8BF RID: 43199 RVA: 0x0017F52F File Offset: 0x0017D72F
 		public static IPhotographCameraTransformBase CreateFromSetValue([Nullable(2)] IPhotographCameraTransformBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009EE0 RID: 40672 RVA: 0x0016B2E2 File Offset: 0x001694E2
+		// Token: 0x0600A8C0 RID: 43200 RVA: 0x0017F542 File Offset: 0x0017D742
 		public IPhotographCameraTransformBase_SetValue ToSetValue()
 		{
 			return new IPhotographCameraTransformBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003166 RID: 12646
-		// (get) Token: 0x06009EE1 RID: 40673 RVA: 0x0016B2F5 File Offset: 0x001694F5
-		// (set) Token: 0x06009EE2 RID: 40674 RVA: 0x0016B320 File Offset: 0x00169520
+		// Token: 0x170033F7 RID: 13303
+		// (get) Token: 0x0600A8C1 RID: 43201 RVA: 0x0017F555 File Offset: 0x0017D755
+		// (set) Token: 0x0600A8C2 RID: 43202 RVA: 0x0017F580 File Offset: 0x0017D780
 		public virtual EPhotographCameraTransform Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005FF5 RID: 24565
+		// Token: 0x04006568 RID: 25960
 		[Nullable(2)]
 		protected IPhotographCameraTransformBase FbInstance;
 
-		// Token: 0x04005FF6 RID: 24566
+		// Token: 0x04006569 RID: 25961
 		[Nullable(2)]
 		protected IPhotographCameraTransformBase_SetValue PocoInterface;
 	}

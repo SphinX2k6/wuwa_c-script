@@ -11,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F10 RID: 7952
+// Token: 0x020013D2 RID: 5074
 [NullableContext(1)]
 [Nullable(0)]
 public class MascotCollectBookStagePanel : UiPanelBase
 {
-	// Token: 0x0600F4FE RID: 62718 RVA: 0x003B1E6C File Offset: 0x003B006C
+	// Token: 0x0600C91D RID: 51485 RVA: 0x003BD958 File Offset: 0x003BBB58
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -44,14 +44,14 @@ public class MascotCollectBookStagePanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F4FF RID: 62719 RVA: 0x003B1FBD File Offset: 0x003B01BD
+	// Token: 0x0600C91E RID: 51486 RVA: 0x003BDAA9 File Offset: 0x003BBCA9
 	protected override void OnBeforeCreateImplement()
 	{
 		this.LevelPlaySequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.LevelPlaySequence);
 	}
 
-	// Token: 0x0600F500 RID: 62720 RVA: 0x003B1FD8 File Offset: 0x003B01D8
+	// Token: 0x0600C91F RID: 51487 RVA: 0x003BDAC4 File Offset: 0x003BBCC4
 	protected override void OnStart()
 	{
 		this.InfoLayout = new GenericLayout<MascotCollectBookStageToggle, HonamiStoryAreaData>(base.GetVerticalLayout(0), new Func<MascotCollectBookStageToggle>(this.CreateInfoItem), null, false, true);
@@ -61,13 +61,13 @@ public class MascotCollectBookStagePanel : UiPanelBase
 		EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x0600F501 RID: 62721 RVA: 0x003B206C File Offset: 0x003B026C
+	// Token: 0x0600C920 RID: 51488 RVA: 0x003BDB58 File Offset: 0x003BBD58
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x0600F502 RID: 62722 RVA: 0x003B208A File Offset: 0x003B028A
+	// Token: 0x0600C921 RID: 51489 RVA: 0x003BDB76 File Offset: 0x003BBD76
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param == "Stadtage_Switch_2")
@@ -76,7 +76,7 @@ public class MascotCollectBookStagePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F503 RID: 62723 RVA: 0x003B20A0 File Offset: 0x003B02A0
+	// Token: 0x0600C922 RID: 51490 RVA: 0x003BDB8C File Offset: 0x003BBD8C
 	private MascotCollectBookStageToggle CreateInfoItem()
 	{
 		MascotCollectBookStageToggle mascotCollectBookStageToggle = new MascotCollectBookStageToggle();
@@ -85,13 +85,13 @@ public class MascotCollectBookStagePanel : UiPanelBase
 		return mascotCollectBookStageToggle;
 	}
 
-	// Token: 0x0600F504 RID: 62724 RVA: 0x003B20D2 File Offset: 0x003B02D2
+	// Token: 0x0600C923 RID: 51491 RVA: 0x003BDBBE File Offset: 0x003BBDBE
 	private ActivitySmallItemGrid CreatePropItem()
 	{
 		return new ActivitySmallItemGrid();
 	}
 
-	// Token: 0x0600F505 RID: 62725 RVA: 0x003B20DC File Offset: 0x003B02DC
+	// Token: 0x0600C924 RID: 51492 RVA: 0x003BDBC8 File Offset: 0x003BBDC8
 	public UniTask InitPanel()
 	{
 		MascotCollectBookStagePanel.<InitPanel>d__18 <InitPanel>d__;
@@ -102,13 +102,13 @@ public class MascotCollectBookStagePanel : UiPanelBase
 		return <InitPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F506 RID: 62726 RVA: 0x003B211F File Offset: 0x003B031F
+	// Token: 0x0600C925 RID: 51493 RVA: 0x003BDC0B File Offset: 0x003BBE0B
 	private void InitAreaDataList()
 	{
 		this.AreaDataList = this.ActivityData.GetHonamiStoryMascotAreaDataList();
 	}
 
-	// Token: 0x0600F507 RID: 62727 RVA: 0x003B2134 File Offset: 0x003B0334
+	// Token: 0x0600C926 RID: 51494 RVA: 0x003BDC20 File Offset: 0x003BBE20
 	private UniTask InitInfoLayout()
 	{
 		MascotCollectBookStagePanel.<InitInfoLayout>d__20 <InitInfoLayout>d__;
@@ -119,7 +119,7 @@ public class MascotCollectBookStagePanel : UiPanelBase
 		return <InitInfoLayout>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F508 RID: 62728 RVA: 0x003B2178 File Offset: 0x003B0378
+	// Token: 0x0600C927 RID: 51495 RVA: 0x003BDC64 File Offset: 0x003BBE64
 	private void RefreshDetailPanel()
 	{
 		if (this.CurSelectAreaData == null)
@@ -153,19 +153,19 @@ public class MascotCollectBookStagePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F509 RID: 62729 RVA: 0x003B22BC File Offset: 0x003B04BC
+	// Token: 0x0600C928 RID: 51496 RVA: 0x003BDDA8 File Offset: 0x003BBFA8
 	public void BindSwitchCallback(Action callback)
 	{
 		this.SwitchCallback = callback;
 	}
 
-	// Token: 0x0600F50A RID: 62730 RVA: 0x003B22C8 File Offset: 0x003B04C8
+	// Token: 0x0600C929 RID: 51497 RVA: 0x003BDDB4 File Offset: 0x003BBFB4
 	public void CloseWithSequence()
 	{
 		this.LevelPlaySequence.PlaySequence("Close", false, null);
 	}
 
-	// Token: 0x0600F50B RID: 62731 RVA: 0x003B22F0 File Offset: 0x003B04F0
+	// Token: 0x0600C92A RID: 51498 RVA: 0x003BDDDC File Offset: 0x003BBFDC
 	private void OnStageToggleClick(MascotCollectBookStageToggle areaSecretItem)
 	{
 		if (this.CurSelectAreaToggle == areaSecretItem)
@@ -187,7 +187,7 @@ public class MascotCollectBookStagePanel : UiPanelBase
 		this.LevelPlaySequence.PlaySequence("Switch_2", false, null);
 	}
 
-	// Token: 0x0600F50C RID: 62732 RVA: 0x003B2357 File Offset: 0x003B0557
+	// Token: 0x0600C92B RID: 51499 RVA: 0x003BDE43 File Offset: 0x003BC043
 	private void OnClickConfirm(int _)
 	{
 		if (this.CurSelectAreaData == null)
@@ -201,27 +201,27 @@ public class MascotCollectBookStagePanel : UiPanelBase
 		});
 	}
 
-	// Token: 0x04007153 RID: 29011
+	// Token: 0x04007234 RID: 29236
 	private HonamiStoryActivityData ActivityData;
 
-	// Token: 0x04007154 RID: 29012
+	// Token: 0x04007235 RID: 29237
 	[Nullable(2)]
 	private HonamiStoryAreaData CurSelectAreaData;
 
-	// Token: 0x04007155 RID: 29013
+	// Token: 0x04007236 RID: 29238
 	[Nullable(2)]
 	private MascotCollectBookStageToggle CurSelectAreaToggle;
 
-	// Token: 0x04007156 RID: 29014
+	// Token: 0x04007237 RID: 29239
 	private List<HonamiStoryAreaData> AreaDataList = new List<HonamiStoryAreaData>();
 
-	// Token: 0x04007157 RID: 29015
+	// Token: 0x04007238 RID: 29240
 	private GenericLayout<MascotCollectBookStageToggle, HonamiStoryAreaData> InfoLayout;
 
-	// Token: 0x04007158 RID: 29016
+	// Token: 0x04007239 RID: 29241
 	private readonly List<MascotCollectBookStageToggle> InfoToggleList = new List<MascotCollectBookStageToggle>();
 
-	// Token: 0x04007159 RID: 29017
+	// Token: 0x0400723A RID: 29242
 	[Nullable(new byte[]
 	{
 		2,
@@ -230,38 +230,38 @@ public class MascotCollectBookStagePanel : UiPanelBase
 	})]
 	private GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData> RewardScrollView;
 
-	// Token: 0x0400715A RID: 29018
+	// Token: 0x0400723B RID: 29243
 	private ButtonItem ConfirmButtonItem;
 
-	// Token: 0x0400715B RID: 29019
+	// Token: 0x0400723C RID: 29244
 	[Nullable(2)]
 	private UiBehaviorLevelSequence LevelPlaySequence;
 
-	// Token: 0x0400715C RID: 29020
+	// Token: 0x0400723D RID: 29245
 	[Nullable(2)]
 	private Action SwitchCallback;
 
-	// Token: 0x0200851F RID: 34079
+	// Token: 0x020076A4 RID: 30372
 	[NullableContext(0)]
 	private enum EMascotCollectBookStagePanelComponent
 	{
-		// Token: 0x0402B532 RID: 177458
+		// Token: 0x04026856 RID: 157782
 		InfoLayout,
-		// Token: 0x0402B533 RID: 177459
+		// Token: 0x04026857 RID: 157783
 		InfoItem,
-		// Token: 0x0402B534 RID: 177460
+		// Token: 0x04026858 RID: 157784
 		NameText,
-		// Token: 0x0402B535 RID: 177461
+		// Token: 0x04026859 RID: 157785
 		ScrollBar,
-		// Token: 0x0402B536 RID: 177462
+		// Token: 0x0402685A RID: 157786
 		DetailText,
-		// Token: 0x0402B537 RID: 177463
+		// Token: 0x0402685B RID: 157787
 		UnfinishPanel,
-		// Token: 0x0402B538 RID: 177464
+		// Token: 0x0402685C RID: 157788
 		RewardScrollView,
-		// Token: 0x0402B539 RID: 177465
+		// Token: 0x0402685D RID: 157789
 		RewardItem,
-		// Token: 0x0402B53A RID: 177466
+		// Token: 0x0402685E RID: 157790
 		ConfirmBtn
 	}
 }

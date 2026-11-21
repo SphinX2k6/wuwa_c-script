@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Item;
 using UnrealEngine;
 
-// Token: 0x020011CA RID: 4554
+// Token: 0x0200067E RID: 1662
 public class CheckInRewardItem : ActivitySubViewBase
 {
-	// Token: 0x06007950 RID: 31056 RVA: 0x00199874 File Offset: 0x00197A74
+	// Token: 0x06004CE7 RID: 19687 RVA: 0x001A2524 File Offset: 0x001A0724
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -35,7 +35,7 @@ public class CheckInRewardItem : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007951 RID: 31057 RVA: 0x00199980 File Offset: 0x00197B80
+	// Token: 0x06004CE8 RID: 19688 RVA: 0x001A2630 File Offset: 0x001A0830
 	[NullableContext(1)]
 	public void Refresh(TimePointRewardData data, int itemId, int num)
 	{
@@ -67,7 +67,7 @@ public class CheckInRewardItem : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007952 RID: 31058 RVA: 0x00199A4C File Offset: 0x00197C4C
+	// Token: 0x06004CE9 RID: 19689 RVA: 0x001A26FC File Offset: 0x001A08FC
 	[NullableContext(1)]
 	public void SetTextIcon(string pathId)
 	{
@@ -75,13 +75,13 @@ public class CheckInRewardItem : ActivitySubViewBase
 		base.SetTextureByPath(resourcePath, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x06007953 RID: 31059 RVA: 0x00199A7D File Offset: 0x00197C7D
+	// Token: 0x06004CEA RID: 19690 RVA: 0x001A272D File Offset: 0x001A092D
 	private void OnClickedButton()
 	{
 		TimePointRewardData data = this.Data;
 		if (data == null || data.RewardState != ETimePointRewardState.UnlockAndUnClaimed)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null, false);
 		}
 		Action onClickAction = this.OnClickAction;
 		if (onClickAction == null)
@@ -91,29 +91,29 @@ public class CheckInRewardItem : ActivitySubViewBase
 		onClickAction();
 	}
 
-	// Token: 0x040037D2 RID: 14290
+	// Token: 0x0400386B RID: 14443
 	private int ItemId;
 
-	// Token: 0x040037D3 RID: 14291
+	// Token: 0x0400386C RID: 14444
 	[Nullable(2)]
 	private TimePointRewardData Data;
 
-	// Token: 0x040037D4 RID: 14292
+	// Token: 0x0400386D RID: 14445
 	[Nullable(2)]
 	public Action OnClickAction;
 
-	// Token: 0x020077BB RID: 30651
+	// Token: 0x02006946 RID: 26950
 	private enum EComponents
 	{
-		// Token: 0x040277A8 RID: 161704
+		// Token: 0x04022ADA RID: 142042
 		BtnReward1,
-		// Token: 0x040277A9 RID: 161705
+		// Token: 0x04022ADB RID: 142043
 		TexIcon1,
-		// Token: 0x040277AA RID: 161706
+		// Token: 0x04022ADC RID: 142044
 		TxtNum1,
-		// Token: 0x040277AB RID: 161707
+		// Token: 0x04022ADD RID: 142045
 		SprNgNor,
-		// Token: 0x040277AC RID: 161708
+		// Token: 0x04022ADE RID: 142046
 		SprReceive
 	}
 }

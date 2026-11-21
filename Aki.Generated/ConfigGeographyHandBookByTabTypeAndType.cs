@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000389 RID: 905
+	// Token: 0x0200039F RID: 927
 	public class ConfigGeographyHandBookByTabTypeAndType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600153C RID: 5436 RVA: 0x000D1AC7 File Offset: 0x000CFCC7
+		// Token: 0x060015C0 RID: 5568 RVA: 0x000D821B File Offset: 0x000D641B
 		static ConfigGeographyHandBookByTabTypeAndType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGeographyHandBookByTabTypeAndType.CreateStaticDefaultValue), new Action(ConfigGeographyHandBookByTabTypeAndType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600153D RID: 5437 RVA: 0x000D1AE8 File Offset: 0x000CFCE8
+		// Token: 0x060015C1 RID: 5569 RVA: 0x000D823C File Offset: 0x000D643C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGeographyHandBookByTabTypeAndType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600153E RID: 5438 RVA: 0x000D1B67 File Offset: 0x000CFD67
+		// Token: 0x060015C2 RID: 5570 RVA: 0x000D82BB File Offset: 0x000D64BB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGeographyHandBookByTabTypeAndType.LogPair = null;
 			ConfigGeographyHandBookByTabTypeAndType.HandleId = 0;
 		}
 
-		// Token: 0x0600153F RID: 5439 RVA: 0x000D1B75 File Offset: 0x000CFD75
+		// Token: 0x060015C3 RID: 5571 RVA: 0x000D82C9 File Offset: 0x000D64C9
 		public static void Init()
 		{
 			ConfigGeographyHandBookByTabTypeAndType.HandleId = ConfigCommon.InitDataStatement(ConfigGeographyHandBookByTabTypeAndType.HandleId, "db_handbook.db", "select BinData from `GeographyHandBook` where GeographyTabType=? and Type=?");
 		}
 
-		// Token: 0x06001540 RID: 5440 RVA: 0x000D1B90 File Offset: 0x000CFD90
+		// Token: 0x060015C4 RID: 5572 RVA: 0x000D82E4 File Offset: 0x000D64E4
 		[NullableContext(2)]
 		public static IReadOnlyList<GeographyHandBook> GetConfigList(int p0GeographyTabType, int p1Type, bool useCache = true)
 		{
@@ -99,22 +99,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040018A3 RID: 6307
+		// Token: 0x0400193D RID: 6461
 		private const string DB = "db_handbook.db";
 
-		// Token: 0x040018A4 RID: 6308
+		// Token: 0x0400193E RID: 6462
 		private const string FILE = "t.图鉴系统.xlsx";
 
-		// Token: 0x040018A5 RID: 6309
+		// Token: 0x0400193F RID: 6463
 		private const string TABLE = "GeographyHandBook";
 
-		// Token: 0x040018A6 RID: 6310
+		// Token: 0x04001940 RID: 6464
 		private const string COMMAND = "select BinData from `GeographyHandBook` where GeographyTabType=? and Type=?";
 
-		// Token: 0x040018A7 RID: 6311
+		// Token: 0x04001941 RID: 6465
 		private const string KEY_PREFIX = "GeographyHandBookByTabTypeAndType";
 
-		// Token: 0x040018A8 RID: 6312
+		// Token: 0x04001942 RID: 6466
 		[Nullable(new byte[]
 		{
 			2,
@@ -124,7 +124,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040018A9 RID: 6313
+		// Token: 0x04001943 RID: 6467
 		private static int HandleId;
 	}
 }

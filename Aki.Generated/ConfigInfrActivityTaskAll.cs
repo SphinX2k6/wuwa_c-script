@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000420 RID: 1056
+	// Token: 0x02000436 RID: 1078
 	public class ConfigInfrActivityTaskAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060018C9 RID: 6345 RVA: 0x000E5DA8 File Offset: 0x000E3FA8
+		// Token: 0x0600194D RID: 6477 RVA: 0x000EC4FC File Offset: 0x000EA6FC
 		static ConfigInfrActivityTaskAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfrActivityTaskAll.CreateStaticDefaultValue), new Action(ConfigInfrActivityTaskAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060018CA RID: 6346 RVA: 0x000E5DC8 File Offset: 0x000E3FC8
+		// Token: 0x0600194E RID: 6478 RVA: 0x000EC51C File Offset: 0x000EA71C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfrActivityTaskAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060018CB RID: 6347 RVA: 0x000E5E47 File Offset: 0x000E4047
+		// Token: 0x0600194F RID: 6479 RVA: 0x000EC59B File Offset: 0x000EA79B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfrActivityTaskAll.LogPair = null;
 			ConfigInfrActivityTaskAll.HandleId = 0;
 		}
 
-		// Token: 0x060018CC RID: 6348 RVA: 0x000E5E55 File Offset: 0x000E4055
+		// Token: 0x06001950 RID: 6480 RVA: 0x000EC5A9 File Offset: 0x000EA7A9
 		public static void Init()
 		{
 			ConfigInfrActivityTaskAll.HandleId = ConfigCommon.InitDataStatement(ConfigInfrActivityTaskAll.HandleId, "db_infrastructure.db", "select BinData from `InfrActivityTask`");
 		}
 
-		// Token: 0x060018CD RID: 6349 RVA: 0x000E5E70 File Offset: 0x000E4070
+		// Token: 0x06001951 RID: 6481 RVA: 0x000EC5C4 File Offset: 0x000EA7C4
 		[NullableContext(2)]
 		public static IReadOnlyList<InfrActivityTask> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001CC4 RID: 7364
+		// Token: 0x04001D5E RID: 7518
 		private const string DB = "db_infrastructure.db";
 
-		// Token: 0x04001CC5 RID: 7365
+		// Token: 0x04001D5F RID: 7519
 		private const string FILE = "j.基建.xlsx";
 
-		// Token: 0x04001CC6 RID: 7366
+		// Token: 0x04001D60 RID: 7520
 		private const string TABLE = "InfrActivityTask";
 
-		// Token: 0x04001CC7 RID: 7367
+		// Token: 0x04001D61 RID: 7521
 		private const string COMMAND = "select BinData from `InfrActivityTask`";
 
-		// Token: 0x04001CC8 RID: 7368
+		// Token: 0x04001D62 RID: 7522
 		private const string KEY_PREFIX = "InfrActivityTaskAll";
 
-		// Token: 0x04001CC9 RID: 7369
+		// Token: 0x04001D63 RID: 7523
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001CCA RID: 7370
+		// Token: 0x04001D64 RID: 7524
 		private static int HandleId;
 	}
 }

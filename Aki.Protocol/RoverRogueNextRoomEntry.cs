@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001113 RID: 4371
+	// Token: 0x0200114D RID: 4429
 	public sealed class RoverRogueNextRoomEntry : IMessage<RoverRogueNextRoomEntry>, IMessage, IEquatable<RoverRogueNextRoomEntry>, IDeepCloneable<RoverRogueNextRoomEntry>, IBufferMessage
 	{
-		// Token: 0x06017500 RID: 95488 RVA: 0x00362858 File Offset: 0x00360A58
+		// Token: 0x06017AA1 RID: 96929 RVA: 0x00371BA4 File Offset: 0x0036FDA4
 		[NullableContext(1)]
 		public static RoverRogueNextRoomEntry Create()
 		{
 			return new RoverRogueNextRoomEntry();
 		}
 
-		// Token: 0x17004E2F RID: 20015
-		// (get) Token: 0x06017501 RID: 95489 RVA: 0x0036285F File Offset: 0x00360A5F
+		// Token: 0x17004F9B RID: 20379
+		// (get) Token: 0x06017AA2 RID: 96930 RVA: 0x00371BAB File Offset: 0x0036FDAB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<RoverRogueNextRoomEntry> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004E30 RID: 20016
-		// (get) Token: 0x06017502 RID: 95490 RVA: 0x00362866 File Offset: 0x00360A66
+		// Token: 0x17004F9C RID: 20380
+		// (get) Token: 0x06017AA3 RID: 96931 RVA: 0x00371BB2 File Offset: 0x0036FDB2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004E31 RID: 20017
-		// (get) Token: 0x06017503 RID: 95491 RVA: 0x00362869 File Offset: 0x00360A69
+		// Token: 0x17004F9D RID: 20381
+		// (get) Token: 0x06017AA4 RID: 96932 RVA: 0x00371BB5 File Offset: 0x0036FDB5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017504 RID: 95492 RVA: 0x00362870 File Offset: 0x00360A70
+		// Token: 0x06017AA5 RID: 96933 RVA: 0x00371BBC File Offset: 0x0036FDBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoverRogueNextRoomEntry()
 		{
 		}
 
-		// Token: 0x06017505 RID: 95493 RVA: 0x00362878 File Offset: 0x00360A78
+		// Token: 0x06017AA6 RID: 96934 RVA: 0x00371BC4 File Offset: 0x0036FDC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoverRogueNextRoomEntry(RoverRogueNextRoomEntry other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06017506 RID: 95494 RVA: 0x003628B5 File Offset: 0x00360AB5
+		// Token: 0x06017AA7 RID: 96935 RVA: 0x00371C01 File Offset: 0x0036FE01
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoverRogueNextRoomEntry Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new RoverRogueNextRoomEntry(this);
 		}
 
-		// Token: 0x17004E32 RID: 20018
-		// (get) Token: 0x06017507 RID: 95495 RVA: 0x003628BD File Offset: 0x00360ABD
-		// (set) Token: 0x06017508 RID: 95496 RVA: 0x003628C5 File Offset: 0x00360AC5
+		// Token: 0x17004F9E RID: 20382
+		// (get) Token: 0x06017AA8 RID: 96936 RVA: 0x00371C09 File Offset: 0x0036FE09
+		// (set) Token: 0x06017AA9 RID: 96937 RVA: 0x00371C11 File Offset: 0x0036FE11
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoomTypeId
@@ -96,9 +96,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004E33 RID: 20019
-		// (get) Token: 0x06017509 RID: 95497 RVA: 0x003628CE File Offset: 0x00360ACE
-		// (set) Token: 0x0601750A RID: 95498 RVA: 0x003628D6 File Offset: 0x00360AD6
+		// Token: 0x17004F9F RID: 20383
+		// (get) Token: 0x06017AAA RID: 96938 RVA: 0x00371C1A File Offset: 0x0036FE1A
+		// (set) Token: 0x06017AAB RID: 96939 RVA: 0x00371C22 File Offset: 0x0036FE22
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoomId
@@ -113,9 +113,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004E34 RID: 20020
-		// (get) Token: 0x0601750B RID: 95499 RVA: 0x003628DF File Offset: 0x00360ADF
-		// (set) Token: 0x0601750C RID: 95500 RVA: 0x003628E7 File Offset: 0x00360AE7
+		// Token: 0x17004FA0 RID: 20384
+		// (get) Token: 0x06017AAC RID: 96940 RVA: 0x00371C2B File Offset: 0x0036FE2B
+		// (set) Token: 0x06017AAD RID: 96941 RVA: 0x00371C33 File Offset: 0x0036FE33
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long EntityIncId
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601750D RID: 95501 RVA: 0x003628F0 File Offset: 0x00360AF0
+		// Token: 0x06017AAE RID: 96942 RVA: 0x00371C3C File Offset: 0x0036FE3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RoverRogueNextRoomEntry);
 		}
 
-		// Token: 0x0601750E RID: 95502 RVA: 0x00362900 File Offset: 0x00360B00
+		// Token: 0x06017AAF RID: 96943 RVA: 0x00371C4C File Offset: 0x0036FE4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RoverRogueNextRoomEntry other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.RoomTypeId == other.RoomTypeId && this.RoomId == other.RoomId && this.EntityIncId == other.EntityIncId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601750F RID: 95503 RVA: 0x0036295C File Offset: 0x00360B5C
+		// Token: 0x06017AB0 RID: 96944 RVA: 0x00371CA8 File Offset: 0x0036FEA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017510 RID: 95504 RVA: 0x003629CD File Offset: 0x00360BCD
+		// Token: 0x06017AB1 RID: 96945 RVA: 0x00371D19 File Offset: 0x0036FF19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -179,7 +179,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06017511 RID: 95505 RVA: 0x003629DA File Offset: 0x00360BDA
+		// Token: 0x06017AB2 RID: 96946 RVA: 0x00371D26 File Offset: 0x0036FF26
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -187,7 +187,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06017512 RID: 95506 RVA: 0x003629E4 File Offset: 0x00360BE4
+		// Token: 0x06017AB3 RID: 96947 RVA: 0x00371D30 File Offset: 0x0036FF30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017513 RID: 95507 RVA: 0x00362A58 File Offset: 0x00360C58
+		// Token: 0x06017AB4 RID: 96948 RVA: 0x00371DA4 File Offset: 0x0036FFA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017514 RID: 95508 RVA: 0x00362AC8 File Offset: 0x00360CC8
+		// Token: 0x06017AB5 RID: 96949 RVA: 0x00371E14 File Offset: 0x00370014
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RoverRogueNextRoomEntry other)
@@ -262,7 +262,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06017515 RID: 95509 RVA: 0x00362B2C File Offset: 0x00360D2C
+		// Token: 0x06017AB6 RID: 96950 RVA: 0x00371E78 File Offset: 0x00370078
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -270,7 +270,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06017516 RID: 95510 RVA: 0x00362B38 File Offset: 0x00360D38
+		// Token: 0x06017AB7 RID: 96951 RVA: 0x00371E84 File Offset: 0x00370084
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -307,28 +307,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008AA7 RID: 35495
+		// Token: 0x04008D3A RID: 36154
 		private static readonly MessageParser<RoverRogueNextRoomEntry> _parser = new MessageParser<RoverRogueNextRoomEntry>(() => new RoverRogueNextRoomEntry());
 
-		// Token: 0x04008AA8 RID: 35496
+		// Token: 0x04008D3B RID: 36155
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008AA9 RID: 35497
+		// Token: 0x04008D3C RID: 36156
 		public const int RoomTypeIdFieldNumber = 1;
 
-		// Token: 0x04008AAA RID: 35498
+		// Token: 0x04008D3D RID: 36157
 		private int roomTypeId_;
 
-		// Token: 0x04008AAB RID: 35499
+		// Token: 0x04008D3E RID: 36158
 		public const int RoomIdFieldNumber = 2;
 
-		// Token: 0x04008AAC RID: 35500
+		// Token: 0x04008D3F RID: 36159
 		private int roomId_;
 
-		// Token: 0x04008AAD RID: 35501
+		// Token: 0x04008D40 RID: 36160
 		public const int EntityIncIdFieldNumber = 3;
 
-		// Token: 0x04008AAE RID: 35502
+		// Token: 0x04008D41 RID: 36161
 		private long entityIncId_;
 	}
 }

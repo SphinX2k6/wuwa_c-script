@@ -4,15 +4,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C67 RID: 23655
+	// Token: 0x02004C47 RID: 19527
 	public class BattleUiAudioData
 	{
-		// Token: 0x0603BC9E RID: 244894 RVA: 0x00E48201 File Offset: 0x00E46401
+		// Token: 0x06030BE9 RID: 199657 RVA: 0x00D985E1 File Offset: 0x00D967E1
 		public void Init()
 		{
 		}
 
-		// Token: 0x0603BC9F RID: 244895 RVA: 0x00E48204 File Offset: 0x00E46404
+		// Token: 0x06030BEA RID: 199658 RVA: 0x00D985E4 File Offset: 0x00D967E4
 		public void OnLeaveLevel()
 		{
 			foreach (BattleUiAudioInfo battleUiAudioInfo in this.AudioInfoMap.Values)
@@ -21,12 +21,12 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BCA0 RID: 244896 RVA: 0x00E4825C File Offset: 0x00E4645C
+		// Token: 0x06030BEB RID: 199659 RVA: 0x00D9863C File Offset: 0x00D9683C
 		public void Clear()
 		{
 		}
 
-		// Token: 0x0603BCA1 RID: 244897 RVA: 0x00E48260 File Offset: 0x00E46460
+		// Token: 0x06030BEC RID: 199660 RVA: 0x00D98640 File Offset: 0x00D96840
 		public void PlayAudio(EBattleUiAudioType type, EBattleUiChild uiChildType = EBattleUiChild.Common)
 		{
 			BattleUiAudioInfo battleUiAudioInfo;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			battleUiAudioInfo.PlayAudio();
 		}
 
-		// Token: 0x0401F231 RID: 127537
+		// Token: 0x04019CE2 RID: 105698
 		[Nullable(1)]
 		private readonly Dictionary<EBattleUiAudioType, BattleUiAudioInfo> AudioInfoMap = new Dictionary<EBattleUiAudioType, BattleUiAudioInfo>();
 	}

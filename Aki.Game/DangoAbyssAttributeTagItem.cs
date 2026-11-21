@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A29 RID: 6697
+// Token: 0x02000EE8 RID: 3816
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoAbyssAttributeTagItem : UiPanelBase
 {
-	// Token: 0x0600C501 RID: 50433 RVA: 0x002CAF58 File Offset: 0x002C9158
+	// Token: 0x06009911 RID: 39185 RVA: 0x002D6078 File Offset: 0x002D4278
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,19 +23,19 @@ public class DangoAbyssAttributeTagItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600C502 RID: 50434 RVA: 0x002CAFB2 File Offset: 0x002C91B2
+	// Token: 0x06009912 RID: 39186 RVA: 0x002D60D2 File Offset: 0x002D42D2
 	public void Initialize(UUIItem uiItem)
 	{
 		base.CreateByActorAsync(uiItem.GetOwner(), null, false).Forget();
 	}
 
-	// Token: 0x0600C503 RID: 50435 RVA: 0x002CAFC7 File Offset: 0x002C91C7
+	// Token: 0x06009913 RID: 39187 RVA: 0x002D60E7 File Offset: 0x002D42E7
 	protected override void OnStart()
 	{
 		this.Sequence = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600C504 RID: 50436 RVA: 0x002CAFDC File Offset: 0x002C91DC
+	// Token: 0x06009914 RID: 39188 RVA: 0x002D60FC File Offset: 0x002D42FC
 	public void Refresh(DangoAbyssDefine.EquipViewAttributeData data)
 	{
 		DangoAbyssDefine.DangoAbyssTagData tag = data.Tag;
@@ -52,7 +52,7 @@ public class DangoAbyssAttributeTagItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C505 RID: 50437 RVA: 0x002CB090 File Offset: 0x002C9290
+	// Token: 0x06009915 RID: 39189 RVA: 0x002D61B0 File Offset: 0x002D43B0
 	public UniTask PlaySequence(string name)
 	{
 		DangoAbyssAttributeTagItem.<PlaySequence>d__6 <PlaySequence>d__;
@@ -64,19 +64,19 @@ public class DangoAbyssAttributeTagItem : UiPanelBase
 		return <PlaySequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005ACD RID: 23245
+	// Token: 0x04005B9C RID: 23452
 	[Nullable(2)]
 	public LevelSequencePlayer Sequence;
 
-	// Token: 0x02007F6F RID: 32623
+	// Token: 0x020070FE RID: 28926
 	[NullableContext(0)]
 	private enum ETagItemComponent
 	{
-		// Token: 0x040299A0 RID: 170400
+		// Token: 0x04024CDD RID: 150749
 		SpriteBg,
-		// Token: 0x040299A1 RID: 170401
+		// Token: 0x04024CDE RID: 150750
 		TextName,
-		// Token: 0x040299A2 RID: 170402
+		// Token: 0x04024CDF RID: 150751
 		TextValue
 	}
 }

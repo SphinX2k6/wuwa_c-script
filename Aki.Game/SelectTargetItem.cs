@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001757 RID: 5975
+// Token: 0x02000C10 RID: 3088
 internal class SelectTargetItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600ACDD RID: 44253 RVA: 0x0026DB18 File Offset: 0x0026BD18
+	// Token: 0x060080C4 RID: 32964 RVA: 0x00277F94 File Offset: 0x00276194
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ internal class SelectTargetItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0600ACDE RID: 44254 RVA: 0x0026DB98 File Offset: 0x0026BD98
+	// Token: 0x060080C5 RID: 32965 RVA: 0x00278014 File Offset: 0x00276214
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.FetterId = data;
@@ -43,7 +43,7 @@ internal class SelectTargetItem : GridProxyAbstract<int>
 		base.SetTextureByPath(fetterGroupById.FetterElementPath, base.GetTexture(2), null, null);
 	}
 
-	// Token: 0x0600ACDF RID: 44255 RVA: 0x0026DC54 File Offset: 0x0026BE54
+	// Token: 0x060080C6 RID: 32966 RVA: 0x002780D0 File Offset: 0x002762D0
 	private void OnClickToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -68,10 +68,10 @@ internal class SelectTargetItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x04004EA3 RID: 20131
+	// Token: 0x04004F4C RID: 20300
 	private int FetterId;
 
-	// Token: 0x04004EA4 RID: 20132
+	// Token: 0x04004F4D RID: 20301
 	[Nullable(new byte[]
 	{
 		2,
@@ -79,14 +79,14 @@ internal class SelectTargetItem : GridProxyAbstract<int>
 	})]
 	public Action<int, UUIExtendToggle> OnClickToggleCallBack;
 
-	// Token: 0x02007D3B RID: 32059
+	// Token: 0x02006EC1 RID: 28353
 	private enum ESelectTargetItem
 	{
-		// Token: 0x04029018 RID: 167960
+		// Token: 0x04024343 RID: 148291
 		NameText,
-		// Token: 0x04029019 RID: 167961
+		// Token: 0x04024344 RID: 148292
 		Toggle,
-		// Token: 0x0402901A RID: 167962
+		// Token: 0x04024345 RID: 148293
 		Texture
 	}
 }

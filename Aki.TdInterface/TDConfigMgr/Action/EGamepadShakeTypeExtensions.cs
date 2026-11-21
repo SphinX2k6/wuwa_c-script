@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002347 RID: 9031
+	// Token: 0x020025BA RID: 9658
 	public static class EGamepadShakeTypeExtensions
 	{
-		// Token: 0x0600C53E RID: 50494 RVA: 0x001CC9D4 File Offset: 0x001CABD4
+		// Token: 0x0600D11F RID: 53535 RVA: 0x001E4BA0 File Offset: 0x001E2DA0
 		public static string ToEnumString(this EGamepadShakeType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C53F RID: 50495 RVA: 0x001CCA28 File Offset: 0x001CAC28
+		// Token: 0x0600D120 RID: 53536 RVA: 0x001E4BF4 File Offset: 0x001E2DF4
 		public static EGamepadShakeType FromString(string name)
 		{
 			EGamepadShakeType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C540 RID: 50496 RVA: 0x001CCA54 File Offset: 0x001CAC54
+		// Token: 0x0600D121 RID: 53537 RVA: 0x001E4C20 File Offset: 0x001E2E20
 		public static bool TryFromString(string name, out EGamepadShakeType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C541 RID: 50497 RVA: 0x001CCABC File Offset: 0x001CACBC
+		// Token: 0x0600D122 RID: 53538 RVA: 0x001E4C88 File Offset: 0x001E2E88
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C542 RID: 50498 RVA: 0x001CCAE4 File Offset: 0x001CACE4
+		// Token: 0x0600D123 RID: 53539 RVA: 0x001E4CB0 File Offset: 0x001E2EB0
 		public static EGamepadShakeType[] GetValues()
 		{
 			return new EGamepadShakeType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C543 RID: 50499 RVA: 0x001CCAF7 File Offset: 0x001CACF7
+		// Token: 0x0600D124 RID: 53540 RVA: 0x001E4CC3 File Offset: 0x001E2EC3
 		public static string[] GetNames()
 		{
 			return new string[]

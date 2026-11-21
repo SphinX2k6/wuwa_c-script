@@ -2,40 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065E9 RID: 26089
+	// Token: 0x02006C54 RID: 27732
 	public class IDisableModulePlayerOperationT
 	{
-		// Token: 0x1700C1B7 RID: 49591
-		// (get) Token: 0x0602D459 RID: 185433 RVA: 0x006348A8 File Offset: 0x00632AA8
-		// (set) Token: 0x0602D45A RID: 185434 RVA: 0x006348B0 File Offset: 0x00632AB0
+		// Token: 0x1700CB4E RID: 52046
+		// (get) Token: 0x0602FC04 RID: 195588 RVA: 0x006810C9 File Offset: 0x0067F2C9
+		// (set) Token: 0x0602FC05 RID: 195589 RVA: 0x006810D1 File Offset: 0x0067F2D1
 		public EPlayerOperationType Type { get; set; }
 
-		// Token: 0x1700C1B8 RID: 49592
-		// (get) Token: 0x0602D45B RID: 185435 RVA: 0x006348B9 File Offset: 0x00632AB9
-		// (set) Token: 0x0602D45C RID: 185436 RVA: 0x006348C1 File Offset: 0x00632AC1
+		// Token: 0x1700CB4F RID: 52047
+		// (get) Token: 0x0602FC06 RID: 195590 RVA: 0x006810DA File Offset: 0x0067F2DA
+		// (set) Token: 0x0602FC07 RID: 195591 RVA: 0x006810E2 File Offset: 0x0067F2E2
 		public TMoveOperationUnion MoveOption { get; set; }
 
-		// Token: 0x1700C1B9 RID: 49593
-		// (get) Token: 0x0602D45D RID: 185437 RVA: 0x006348CA File Offset: 0x00632ACA
-		// (set) Token: 0x0602D45E RID: 185438 RVA: 0x006348D2 File Offset: 0x00632AD2
+		// Token: 0x1700CB50 RID: 52048
+		// (get) Token: 0x0602FC08 RID: 195592 RVA: 0x006810EB File Offset: 0x0067F2EB
+		// (set) Token: 0x0602FC09 RID: 195593 RVA: 0x006810F3 File Offset: 0x0067F2F3
 		public TSkillOperationUnion SkillOption { get; set; }
 
-		// Token: 0x1700C1BA RID: 49594
-		// (get) Token: 0x0602D45F RID: 185439 RVA: 0x006348DB File Offset: 0x00632ADB
-		// (set) Token: 0x0602D460 RID: 185440 RVA: 0x006348E3 File Offset: 0x00632AE3
+		// Token: 0x1700CB51 RID: 52049
+		// (get) Token: 0x0602FC0A RID: 195594 RVA: 0x006810FC File Offset: 0x0067F2FC
+		// (set) Token: 0x0602FC0B RID: 195595 RVA: 0x00681104 File Offset: 0x0067F304
 		public TCameraOperationUnion CameraOption { get; set; }
 
-		// Token: 0x1700C1BB RID: 49595
-		// (get) Token: 0x0602D461 RID: 185441 RVA: 0x006348EC File Offset: 0x00632AEC
-		// (set) Token: 0x0602D462 RID: 185442 RVA: 0x006348F4 File Offset: 0x00632AF4
+		// Token: 0x1700CB52 RID: 52050
+		// (get) Token: 0x0602FC0C RID: 195596 RVA: 0x0068110D File Offset: 0x0067F30D
+		// (set) Token: 0x0602FC0D RID: 195597 RVA: 0x00681115 File Offset: 0x0067F315
 		public TUiOperationUnion UiOption { get; set; }
 
-		// Token: 0x1700C1BC RID: 49596
-		// (get) Token: 0x0602D463 RID: 185443 RVA: 0x006348FD File Offset: 0x00632AFD
-		// (set) Token: 0x0602D464 RID: 185444 RVA: 0x00634905 File Offset: 0x00632B05
+		// Token: 0x1700CB53 RID: 52051
+		// (get) Token: 0x0602FC0E RID: 195598 RVA: 0x0068111E File Offset: 0x0067F31E
+		// (set) Token: 0x0602FC0F RID: 195599 RVA: 0x00681126 File Offset: 0x0067F326
 		public TSceneInteractionOperationUnion SceneInteractionOption { get; set; }
 
-		// Token: 0x0602D465 RID: 185445 RVA: 0x0063490E File Offset: 0x00632B0E
+		// Token: 0x1700CB54 RID: 52052
+		// (get) Token: 0x0602FC10 RID: 195600 RVA: 0x0068112F File Offset: 0x0067F32F
+		// (set) Token: 0x0602FC11 RID: 195601 RVA: 0x00681137 File Offset: 0x0067F337
+		public TPlayerAiControlUnion PlayerAiOption { get; set; }
+
+		// Token: 0x0602FC12 RID: 195602 RVA: 0x00681140 File Offset: 0x0067F340
 		public IDisableModulePlayerOperationT()
 		{
 			this.Type = EPlayerOperationType.EnableAll;
@@ -44,6 +49,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			this.CameraOption = null;
 			this.UiOption = null;
 			this.SceneInteractionOption = null;
+			this.PlayerAiOption = null;
 		}
 	}
 }

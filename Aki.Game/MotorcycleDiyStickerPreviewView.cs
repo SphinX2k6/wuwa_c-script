@@ -1,28 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Data.UiRoleCamera.Struct;
-using CSharpScript.Game.Module.Common.UiCamera;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Motorcycle.Model;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020022B0 RID: 8880
+// Token: 0x02001794 RID: 6036
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleDiyStickerPreviewView : UiViewBase
 {
-	// Token: 0x06011675 RID: 71285 RVA: 0x00443252 File Offset: 0x00441452
+	// Token: 0x0600EB0D RID: 60173 RVA: 0x0044FE4A File Offset: 0x0044E04A
 	public MotorcycleDiyStickerPreviewView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011676 RID: 71286 RVA: 0x00443270 File Offset: 0x00441470
-	private List<SkinRewardData> GetPreviewReward(List<int> itemIdList)
+	// Token: 0x0600EB0E RID: 60174 RVA: 0x0044FE68 File Offset: 0x0044E068
+	private List<SkinRewardData> GetPreviewReward(IEnumerable<int> itemIdList)
 	{
 		List<SkinRewardData> list = new List<SkinRewardData>();
 		int count = 1;
@@ -53,7 +52,7 @@ public class MotorcycleDiyStickerPreviewView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06011677 RID: 71287 RVA: 0x00443314 File Offset: 0x00441514
+	// Token: 0x0600EB0F RID: 60175 RVA: 0x0044FF08 File Offset: 0x0044E108
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -74,7 +73,7 @@ public class MotorcycleDiyStickerPreviewView : UiViewBase
 		};
 	}
 
-	// Token: 0x06011678 RID: 71288 RVA: 0x00443418 File Offset: 0x00441618
+	// Token: 0x0600EB10 RID: 60176 RVA: 0x0045000C File Offset: 0x0044E20C
 	protected override void OnStart()
 	{
 		this.CaptionItem = new PopupCaptionItem(base.GetItem(2));
@@ -94,17 +93,17 @@ public class MotorcycleDiyStickerPreviewView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), motorGeneralPreviewConfig.Value.SubTitle, Array.Empty<object>());
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(8), motorGeneralPreviewConfig.Value.Describe, Array.Empty<object>());
 		this.ItemRewardLayout = new GenericLayout<SkinRewardItemGrid, SkinRewardData>(base.GetHorizontalLayout(6), new Func<SkinRewardItemGrid>(this.InitGridItem), null, false, true);
-		List<SkinRewardData> previewReward = this.GetPreviewReward(motorGeneralPreviewConfig.Value.GetStickerArray().ToList<int>());
+		List<SkinRewardData> previewReward = this.GetPreviewReward(motorGeneralPreviewConfig.Value.GetStickerArray());
 		this.ItemRewardLayout.RefreshByData(previewReward, null, false);
 	}
 
-	// Token: 0x06011679 RID: 71289 RVA: 0x00443597 File Offset: 0x00441797
+	// Token: 0x0600EB11 RID: 60177 RVA: 0x00450186 File Offset: 0x0044E386
 	protected override void OnHandleLoadScene()
 	{
 		this.InitMotorModel();
 	}
 
-	// Token: 0x0601167A RID: 71290 RVA: 0x004435A0 File Offset: 0x004417A0
+	// Token: 0x0600EB12 RID: 60178 RVA: 0x00450190 File Offset: 0x0044E390
 	protected override void OnBeforeShow()
 	{
 		if (this.PreviewConfig == null)
@@ -115,33 +114,35 @@ public class MotorcycleDiyStickerPreviewView : UiViewBase
 		MotorcycleUiModelUtil.Instance.ShowMotor(true);
 	}
 
-	// Token: 0x0601167B RID: 71291 RVA: 0x004435DF File Offset: 0x004417DF
+	// Token: 0x0600EB13 RID: 60179 RVA: 0x004501CF File Offset: 0x0044E3CF
 	protected override void OnHandleReleaseScene()
 	{
 		MotorcycleUiModelUtil.Instance.DestroyMotor();
 	}
 
-	// Token: 0x0601167C RID: 71292 RVA: 0x004435EB File Offset: 0x004417EB
+	// Token: 0x0600EB14 RID: 60180 RVA: 0x004501DC File Offset: 0x0044E3DC
 	protected override void OnAfterShow()
 	{
-		this.CameraInputComponent.Start();
-		this.CameraInputComponent.TryActivate();
+		if (this.PreviewConfig != null && this.PreviewConfig.GetValueOrDefault().IsFree)
+		{
+			this.CameraInputBinding.Bind();
+		}
 	}
 
-	// Token: 0x0601167D RID: 71293 RVA: 0x00443604 File Offset: 0x00441804
+	// Token: 0x0600EB15 RID: 60181 RVA: 0x00450215 File Offset: 0x0044E415
 	protected override void OnBeforeHide()
 	{
-		this.CameraInputComponent.End();
+		this.CameraInputBinding.Unbind();
 		MotorcycleUiModelUtil.Instance.ShowMotor(false);
 	}
 
-	// Token: 0x0601167E RID: 71294 RVA: 0x0044361C File Offset: 0x0044181C
+	// Token: 0x0600EB16 RID: 60182 RVA: 0x0045022D File Offset: 0x0044E42D
 	private SkinRewardItemGrid InitGridItem()
 	{
 		return new SkinRewardItemGrid();
 	}
 
-	// Token: 0x0601167F RID: 71295 RVA: 0x00443624 File Offset: 0x00441824
+	// Token: 0x0600EB17 RID: 60183 RVA: 0x00450234 File Offset: 0x0044E434
 	private void InitMotorModel()
 	{
 		MotorcycleUiModelUtil.Instance.CreateMotor(EUiModelUseWay.MotorInMotorView);
@@ -159,7 +160,7 @@ public class MotorcycleDiyStickerPreviewView : UiViewBase
 		MotorcycleUiModelUtil.Instance.LoadMotorByParam(param, null);
 	}
 
-	// Token: 0x06011680 RID: 71296 RVA: 0x00443694 File Offset: 0x00441894
+	// Token: 0x0600EB18 RID: 60184 RVA: 0x004502A4 File Offset: 0x0044E4A4
 	private void InitCameraInputData(string cameraRotateConfig)
 	{
 		SUiRoleCameraSetting? roleCameraConfig = UiRoleCameraConfig.Instance.GetRoleCameraConfig(cameraRotateConfig);
@@ -173,20 +174,16 @@ public class MotorcycleDiyStickerPreviewView : UiViewBase
 			return;
 		}
 		FVectorDouble fvectorDouble = actorWithTag.D_K2_GetActorLocation();
-		UiCameraInputComponentData data = new UiCameraInputComponentData
+		UiCameraInputBindingData data = new UiCameraInputBindingData
 		{
 			DragComponent = base.GetDraggable(0),
 			CameraSettingConfig = roleCameraConfig.Value,
 			SourceLocation = fvectorDouble
 		};
-		this.CameraInputComponent.InitData(data);
-		if (this.PreviewConfig != null)
-		{
-			this.CameraInputComponent.CanCameraInput = this.PreviewConfig.Value.IsFree;
-		}
+		this.CameraInputBinding.Configure(data);
 	}
 
-	// Token: 0x06011681 RID: 71297 RVA: 0x00443744 File Offset: 0x00441944
+	// Token: 0x0600EB19 RID: 60185 RVA: 0x00450328 File Offset: 0x0044E528
 	private void PushExCameraHandle()
 	{
 		if (this.PreviewConfig == null)
@@ -196,18 +193,25 @@ public class MotorcycleDiyStickerPreviewView : UiViewBase
 		string handleName = this.IsNotHidingUi ? this.PreviewConfig.Value.CameraId : this.PreviewConfig.Value.FreeCamera;
 		if (!this.PreviewConfig.Value.IsFree)
 		{
-			this.CameraInputComponent.CanCameraInput = !this.IsNotHidingUi;
+			if (this.IsNotHidingUi)
+			{
+				this.CameraInputBinding.Unbind();
+			}
+			else
+			{
+				this.CameraInputBinding.Bind();
+			}
 		}
-		UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(handleName, true, true, "1001", false, null, null);
+		UiCameraModel.Instance.PushCameraHandleByHandleName(handleName, true, true, "1001", false, null);
 	}
 
-	// Token: 0x06011682 RID: 71298 RVA: 0x004437D7 File Offset: 0x004419D7
+	// Token: 0x0600EB1A RID: 60186 RVA: 0x004503BE File Offset: 0x0044E5BE
 	private void OnBackBtnClick()
 	{
 		UiManager.Instance.CloseView(EUiViewName.MotorcycleDiyStickerPreviewView, null);
 	}
 
-	// Token: 0x06011683 RID: 71299 RVA: 0x004437EC File Offset: 0x004419EC
+	// Token: 0x0600EB1B RID: 60187 RVA: 0x004503D0 File Offset: 0x0044E5D0
 	private void OnTogEyeClick(EToggleState toggleState)
 	{
 		this.IsNotHidingUi = !this.IsNotHidingUi;
@@ -230,17 +234,17 @@ public class MotorcycleDiyStickerPreviewView : UiViewBase
 		this.PushExCameraHandle();
 	}
 
-	// Token: 0x04008442 RID: 33858
+	// Token: 0x04008580 RID: 34176
 	private bool IsNotHidingUi = true;
 
-	// Token: 0x04008443 RID: 33859
+	// Token: 0x04008581 RID: 34177
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04008444 RID: 33860
+	// Token: 0x04008582 RID: 34178
 	private MotorGeneralPreview? PreviewConfig;
 
-	// Token: 0x04008445 RID: 33861
+	// Token: 0x04008583 RID: 34179
 	[Nullable(new byte[]
 	{
 		2,
@@ -249,41 +253,41 @@ public class MotorcycleDiyStickerPreviewView : UiViewBase
 	})]
 	private GenericLayout<SkinRewardItemGrid, SkinRewardData> ItemRewardLayout;
 
-	// Token: 0x04008446 RID: 33862
-	protected UiCameraInputComponent CameraInputComponent = new UiCameraInputComponent();
+	// Token: 0x04008584 RID: 34180
+	protected UiCameraInputBinding CameraInputBinding = new UiCameraInputBinding();
 
-	// Token: 0x0200881D RID: 34845
+	// Token: 0x020079A1 RID: 31137
 	[NullableContext(0)]
 	private class EMotorDecorationPreviewComponent
 	{
-		// Token: 0x0402C3BB RID: 181179
+		// Token: 0x040276C0 RID: 161472
 		public const int DragComponent = 0;
 
-		// Token: 0x0402C3BC RID: 181180
+		// Token: 0x040276C1 RID: 161473
 		public const int TogEye = 1;
 
-		// Token: 0x0402C3BD RID: 181181
+		// Token: 0x040276C2 RID: 161474
 		public const int CaptionItem = 2;
 
-		// Token: 0x0402C3BE RID: 181182
+		// Token: 0x040276C3 RID: 161475
 		public const int NotHideUIItem = 3;
 
-		// Token: 0x0402C3BF RID: 181183
+		// Token: 0x040276C4 RID: 161476
 		public const int TxtTitle = 4;
 
-		// Token: 0x0402C3C0 RID: 181184
+		// Token: 0x040276C5 RID: 161477
 		public const int TxtSubTitle = 5;
 
-		// Token: 0x0402C3C1 RID: 181185
+		// Token: 0x040276C6 RID: 161478
 		public const int ItemRewardLayout = 6;
 
-		// Token: 0x0402C3C2 RID: 181186
+		// Token: 0x040276C7 RID: 161479
 		public const int RewardItem = 7;
 
-		// Token: 0x0402C3C3 RID: 181187
+		// Token: 0x040276C8 RID: 161480
 		public const int TxtDescription = 8;
 
-		// Token: 0x0402C3C4 RID: 181188
+		// Token: 0x040276C9 RID: 161481
 		public const int TxtItemRewardTitle = 9;
 	}
 }

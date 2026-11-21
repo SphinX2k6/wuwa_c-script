@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -8,17 +7,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BF0 RID: 11248
+// Token: 0x0200216B RID: 8555
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerFloorDetailView : UiViewBase
 {
-	// Token: 0x060175BF RID: 95679 RVA: 0x005F0ECA File Offset: 0x005EF0CA
+	// Token: 0x06014FF0 RID: 86000 RVA: 0x0061DA2A File Offset: 0x0061BC2A
 	public TowerFloorDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060175C0 RID: 95680 RVA: 0x005F0ED4 File Offset: 0x005EF0D4
+	// Token: 0x06014FF1 RID: 86001 RVA: 0x0061DA34 File Offset: 0x0061BC34
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -36,7 +35,7 @@ public class TowerFloorDetailView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060175C1 RID: 95681 RVA: 0x005F0F80 File Offset: 0x005EF180
+	// Token: 0x06014FF2 RID: 86002 RVA: 0x0061DAE0 File Offset: 0x0061BCE0
 	protected override void OnStart()
 	{
 		int currentSelectDifficulties = TowerModel.Instance.CurrentSelectDifficulties;
@@ -46,10 +45,10 @@ public class TowerFloorDetailView : UiViewBase
 		this.MonsterLayout = new GenericLayout<TowerMonsterItem, int>(base.GetGridLayout(3), new Func<TowerMonsterItem>(this.InitMonsterItem), null, false, true);
 		TowerConfig? towerInfo = TowerClimbConfig.Instance.GetTowerInfo(TowerModel.Instance.CurrentSelectFloor);
 		int[] difficultyAreaAllFloor = TowerModel.Instance.GetDifficultyAreaAllFloor(currentSelectDifficulties, towerInfo.Value.AreaNum);
-		this.FloorLayout.RefreshByData(difficultyAreaAllFloor.ToList<int>(), null, false);
+		this.FloorLayout.RefreshByData(difficultyAreaAllFloor, null, false);
 	}
 
-	// Token: 0x060175C2 RID: 95682 RVA: 0x005F1060 File Offset: 0x005EF260
+	// Token: 0x06014FF3 RID: 86003 RVA: 0x0061DBBC File Offset: 0x0061BDBC
 	protected override void OnBeforeDestroy()
 	{
 		this.FloorLayout.ClearChildren();
@@ -62,7 +61,7 @@ public class TowerFloorDetailView : UiViewBase
 		this.MonsterLayout = null;
 	}
 
-	// Token: 0x060175C3 RID: 95683 RVA: 0x005F10B5 File Offset: 0x005EF2B5
+	// Token: 0x06014FF4 RID: 86004 RVA: 0x0061DC11 File Offset: 0x0061BE11
 	private TowerDetailItem InitFloorItem()
 	{
 		TowerDetailItem towerDetailItem = new TowerDetailItem();
@@ -70,32 +69,32 @@ public class TowerFloorDetailView : UiViewBase
 		return towerDetailItem;
 	}
 
-	// Token: 0x060175C4 RID: 95684 RVA: 0x005F10CE File Offset: 0x005EF2CE
+	// Token: 0x06014FF5 RID: 86005 RVA: 0x0061DC2A File Offset: 0x0061BE2A
 	private TowerBuffShowItem InitBuffItem()
 	{
 		return new TowerBuffShowItem();
 	}
 
-	// Token: 0x060175C5 RID: 95685 RVA: 0x005F10D5 File Offset: 0x005EF2D5
+	// Token: 0x06014FF6 RID: 86006 RVA: 0x0061DC31 File Offset: 0x0061BE31
 	private TowerStarsComplexItem InitTargetStarItem()
 	{
 		return new TowerStarsComplexItem();
 	}
 
-	// Token: 0x060175C6 RID: 95686 RVA: 0x005F10DC File Offset: 0x005EF2DC
+	// Token: 0x06014FF7 RID: 86007 RVA: 0x0061DC38 File Offset: 0x0061BE38
 	private TowerMonsterItem InitMonsterItem()
 	{
 		return new TowerMonsterItem();
 	}
 
-	// Token: 0x060175C7 RID: 95687 RVA: 0x005F10E4 File Offset: 0x005EF2E4
+	// Token: 0x06014FF8 RID: 86008 RVA: 0x0061DC40 File Offset: 0x0061BE40
 	private void RefreshView(int towerId)
 	{
 		TowerConfig value = TowerClimbConfig.Instance.GetTowerInfo(towerId).Value;
-		this.BuffShowLayout.RefreshByData(value.ShowBuffs().ToList<long>(), null, false);
+		this.BuffShowLayout.RefreshByData(value.ShowBuffs(), null, false);
 		int instanceId = value.InstanceId;
 		int levelText = InstanceDungeonConfig.Instance.GetRecommendLevel(instanceId, WorldLevelModel.Instance.CurWorldLevel);
-		this.MonsterLayout.RefreshByData(value.ShowMonsters().ToList<int>(), delegate
+		this.MonsterLayout.RefreshByData(value.ShowMonsters(), delegate
 		{
 			foreach (TowerMonsterItem towerMonsterItem in this.MonsterLayout.GetLayoutItemList())
 			{
@@ -117,7 +116,7 @@ public class TowerFloorDetailView : UiViewBase
 		this.TargetStarLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0400AECE RID: 44750
+	// Token: 0x0400B2D3 RID: 45779
 	[Nullable(new byte[]
 	{
 		2,
@@ -125,7 +124,7 @@ public class TowerFloorDetailView : UiViewBase
 	})]
 	private GenericLayout<TowerDetailItem, int> FloorLayout;
 
-	// Token: 0x0400AECF RID: 44751
+	// Token: 0x0400B2D4 RID: 45780
 	[Nullable(new byte[]
 	{
 		2,
@@ -133,7 +132,7 @@ public class TowerFloorDetailView : UiViewBase
 	})]
 	private GenericLayout<TowerBuffShowItem, long> BuffShowLayout;
 
-	// Token: 0x0400AED0 RID: 44752
+	// Token: 0x0400B2D5 RID: 45781
 	[Nullable(new byte[]
 	{
 		2,
@@ -142,7 +141,7 @@ public class TowerFloorDetailView : UiViewBase
 	})]
 	private GenericLayout<TowerStarsComplexItem, ValueTuple<bool, TowerTarget>> TargetStarLayout;
 
-	// Token: 0x0400AED1 RID: 44753
+	// Token: 0x0400B2D6 RID: 45782
 	[Nullable(new byte[]
 	{
 		2,
@@ -150,17 +149,17 @@ public class TowerFloorDetailView : UiViewBase
 	})]
 	private GenericLayout<TowerMonsterItem, int> MonsterLayout;
 
-	// Token: 0x020091AD RID: 37293
+	// Token: 0x020083F0 RID: 33776
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402F21F RID: 193055
+		// Token: 0x0402A920 RID: 174368
 		FloorLayout,
-		// Token: 0x0402F220 RID: 193056
+		// Token: 0x0402A921 RID: 174369
 		ShowBuffLayout,
-		// Token: 0x0402F221 RID: 193057
+		// Token: 0x0402A922 RID: 174370
 		TargetStarLayout,
-		// Token: 0x0402F222 RID: 193058
+		// Token: 0x0402A923 RID: 174371
 		MonsterLayout
 	}
 }

@@ -4,16 +4,16 @@ using CSharpScript.Game.Module.Map.Marks.MarkItem;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x0200550A RID: 21770
+	// Token: 0x020044DD RID: 17629
 	public class EnrichmentCollectProductItemView : ServerMarkItemView
 	{
-		// Token: 0x060379B1 RID: 227761 RVA: 0x00D338C2 File Offset: 0x00D31AC2
+		// Token: 0x0602C87F RID: 182399 RVA: 0x00C81796 File Offset: 0x00C7F996
 		[NullableContext(1)]
 		public EnrichmentCollectProductItemView(EnrichmentCollectProductItem holder) : base(holder)
 		{
 		}
 
-		// Token: 0x060379B2 RID: 227762 RVA: 0x00D338CB File Offset: 0x00D31ACB
+		// Token: 0x0602C880 RID: 182400 RVA: 0x00C8179F File Offset: 0x00C7F99F
 		public override bool GetInteractiveFlag()
 		{
 			return false;

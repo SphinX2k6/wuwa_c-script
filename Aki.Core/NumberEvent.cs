@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200009C RID: 156
+// Token: 0x0200009E RID: 158
 [NullableContext(1)]
 [Nullable(0)]
 public class NumberEvent : IStaticVariableResetter
 {
-	// Token: 0x06000490 RID: 1168 RVA: 0x0001A7AB File Offset: 0x000189AB
+	// Token: 0x060004D1 RID: 1233 RVA: 0x0001AF0F File Offset: 0x0001910F
 	static NumberEvent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(NumberEvent.CreateStaticDefaultValue), new Action(NumberEvent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17000099 RID: 153
-	// (get) Token: 0x06000491 RID: 1169 RVA: 0x0001A7CA File Offset: 0x000189CA
+	// Token: 0x170000AB RID: 171
+	// (get) Token: 0x060004D2 RID: 1234 RVA: 0x0001AF2E File Offset: 0x0001912E
 	private static Dictionary<string, Stat> NameStateMap
 	{
 		get
@@ -24,8 +24,8 @@ public class NumberEvent : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700009A RID: 154
-	// (get) Token: 0x06000492 RID: 1170 RVA: 0x0001A7D1 File Offset: 0x000189D1
+	// Token: 0x170000AC RID: 172
+	// (get) Token: 0x060004D3 RID: 1235 RVA: 0x0001AF35 File Offset: 0x00019135
 	private static Dictionary<MethodInfo, Stat> HandleStatMap
 	{
 		get
@@ -34,7 +34,7 @@ public class NumberEvent : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000493 RID: 1171 RVA: 0x0001A7D8 File Offset: 0x000189D8
+	// Token: 0x060004D4 RID: 1236 RVA: 0x0001AF3C File Offset: 0x0001913C
 	private void AddHoldKeyValueToMapInternal(long name, object holdKey, object objectKey, Dictionary<long, Dictionary<object, object>> keyMap)
 	{
 		Dictionary<object, object> dictionary;
@@ -46,7 +46,7 @@ public class NumberEvent : IStaticVariableResetter
 		dictionary[objectKey] = holdKey;
 	}
 
-	// Token: 0x06000494 RID: 1172 RVA: 0x0001A808 File Offset: 0x00018A08
+	// Token: 0x060004D5 RID: 1237 RVA: 0x0001AF6C File Offset: 0x0001916C
 	private void RemoveHoldKeyValueFromMapInternal(long name, object holdKey, Dictionary<long, Dictionary<object, object>> keyMap)
 	{
 		Dictionary<object, object> dictionary;
@@ -61,7 +61,7 @@ public class NumberEvent : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000495 RID: 1173 RVA: 0x0001A83C File Offset: 0x00018A3C
+	// Token: 0x060004D6 RID: 1238 RVA: 0x0001AFA0 File Offset: 0x000191A0
 	[return: Nullable(2)]
 	private object GetHoldKeyValueOfMapInternal(long name, object holdKey, Dictionary<long, Dictionary<object, object>> keyMap)
 	{
@@ -73,26 +73,26 @@ public class NumberEvent : IStaticVariableResetter
 		return dictionary.GetValueOrDefault(holdKey);
 	}
 
-	// Token: 0x06000496 RID: 1174 RVA: 0x0001A85D File Offset: 0x00018A5D
+	// Token: 0x060004D7 RID: 1239 RVA: 0x0001AFC1 File Offset: 0x000191C1
 	public void AddHoldKeyHandle(long name, object objectKey, object handle)
 	{
 		this.AddHoldKeyValueToMapInternal(name, handle, objectKey, this.HoldKeyHandles);
 	}
 
-	// Token: 0x06000497 RID: 1175 RVA: 0x0001A86E File Offset: 0x00018A6E
+	// Token: 0x060004D8 RID: 1240 RVA: 0x0001AFD2 File Offset: 0x000191D2
 	public void RemoveHoldKeyHandle(long name, object handle)
 	{
 		this.RemoveHoldKeyValueFromMapInternal(name, handle, this.HoldKeyHandles);
 	}
 
-	// Token: 0x06000498 RID: 1176 RVA: 0x0001A87E File Offset: 0x00018A7E
+	// Token: 0x060004D9 RID: 1241 RVA: 0x0001AFE2 File Offset: 0x000191E2
 	[return: Nullable(2)]
 	public object GetHoldKeyByHandle(long name, object handle)
 	{
 		return this.GetHoldKeyValueOfMapInternal(name, handle, this.HoldKeyHandles);
 	}
 
-	// Token: 0x06000499 RID: 1177 RVA: 0x0001A890 File Offset: 0x00018A90
+	// Token: 0x060004DA RID: 1242 RVA: 0x0001AFF4 File Offset: 0x000191F4
 	public bool Has(long name, Delegate handle)
 	{
 		List<EventHandleEntry> handles;
@@ -105,31 +105,31 @@ public class NumberEvent : IStaticVariableResetter
 		return this.PendingAddHandles.TryGetValue(name, out handles2) && handles2.ContainsHandle(handle);
 	}
 
-	// Token: 0x0600049A RID: 1178 RVA: 0x0001A8EC File Offset: 0x00018AEC
+	// Token: 0x060004DB RID: 1243 RVA: 0x0001B050 File Offset: 0x00019250
 	public bool HasAny(long name)
 	{
 		return this.Handles.ContainsKey(name) || this.PendingAddHandles.ContainsKey(name);
 	}
 
-	// Token: 0x0600049B RID: 1179 RVA: 0x0001A90A File Offset: 0x00018B0A
+	// Token: 0x060004DC RID: 1244 RVA: 0x0001B06E File Offset: 0x0001926E
 	public bool Add(long name, Delegate handle)
 	{
 		return this.AddInternal(name, handle, EHandleType.Forever);
 	}
 
-	// Token: 0x0600049C RID: 1180 RVA: 0x0001A915 File Offset: 0x00018B15
+	// Token: 0x060004DD RID: 1245 RVA: 0x0001B079 File Offset: 0x00019279
 	public bool Once(long name, Delegate handle)
 	{
 		return this.AddInternal(name, handle, EHandleType.Once);
 	}
 
-	// Token: 0x0600049D RID: 1181 RVA: 0x0001A920 File Offset: 0x00018B20
+	// Token: 0x060004DE RID: 1246 RVA: 0x0001B084 File Offset: 0x00019284
 	public bool Remove(long name, Delegate handle)
 	{
 		return this.IsRegistered(name, handle) && this.RemoveInternal(name, handle);
 	}
 
-	// Token: 0x0600049E RID: 1182 RVA: 0x0001A938 File Offset: 0x00018B38
+	// Token: 0x060004DF RID: 1247 RVA: 0x0001B09C File Offset: 0x0001929C
 	private bool IsRegistered(long name, Delegate handle)
 	{
 		List<EventHandleEntry> handles;
@@ -137,7 +137,7 @@ public class NumberEvent : IStaticVariableResetter
 		return (this.Handles.TryGetValue(name, out handles) && handles.ContainsHandle(handle)) || (this.PendingAddHandlesInternal != null && this.PendingAddHandlesInternal.TryGetValue(name, out handles2) && handles2.ContainsHandle(handle));
 	}
 
-	// Token: 0x0600049F RID: 1183 RVA: 0x0001A984 File Offset: 0x00018B84
+	// Token: 0x060004E0 RID: 1248 RVA: 0x0001B0E8 File Offset: 0x000192E8
 	public bool ClearObject(long name)
 	{
 		List<EventHandleEntry> list;
@@ -152,43 +152,43 @@ public class NumberEvent : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x060004A0 RID: 1184 RVA: 0x0001A9D0 File Offset: 0x00018BD0
+	// Token: 0x060004E1 RID: 1249 RVA: 0x0001B134 File Offset: 0x00019334
 	public bool Emit(long name)
 	{
 		return this.EmitInternal(name, default(EventArgs));
 	}
 
-	// Token: 0x060004A1 RID: 1185 RVA: 0x0001A9F2 File Offset: 0x00018BF2
+	// Token: 0x060004E2 RID: 1250 RVA: 0x0001B156 File Offset: 0x00019356
 	public bool Emit<[Nullable(2)] T1>(long name, T1 p1)
 	{
 		return this.EmitInternal(name, new EventArgs<T1>(p1));
 	}
 
-	// Token: 0x060004A2 RID: 1186 RVA: 0x0001AA06 File Offset: 0x00018C06
+	// Token: 0x060004E3 RID: 1251 RVA: 0x0001B16A File Offset: 0x0001936A
 	public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2>(long name, T1 p1, T2 p2)
 	{
 		return this.EmitInternal(name, new EventArgs<T1, T2>(p1, p2));
 	}
 
-	// Token: 0x060004A3 RID: 1187 RVA: 0x0001AA1B File Offset: 0x00018C1B
+	// Token: 0x060004E4 RID: 1252 RVA: 0x0001B17F File Offset: 0x0001937F
 	public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3>(long name, T1 p1, T2 p2, T3 p3)
 	{
 		return this.EmitInternal(name, new EventArgs<T1, T2, T3>(p1, p2, p3));
 	}
 
-	// Token: 0x060004A4 RID: 1188 RVA: 0x0001AA32 File Offset: 0x00018C32
+	// Token: 0x060004E5 RID: 1253 RVA: 0x0001B196 File Offset: 0x00019396
 	public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4>(long name, T1 p1, T2 p2, T3 p3, T4 p4)
 	{
 		return this.EmitInternal(name, new EventArgs<T1, T2, T3, T4>(p1, p2, p3, p4));
 	}
 
-	// Token: 0x060004A5 RID: 1189 RVA: 0x0001AA4B File Offset: 0x00018C4B
+	// Token: 0x060004E6 RID: 1254 RVA: 0x0001B1AF File Offset: 0x000193AF
 	public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5>(long name, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5)
 	{
 		return this.EmitInternal(name, new EventArgs<T1, T2, T3, T4, T5>(p1, p2, p3, p4, p5));
 	}
 
-	// Token: 0x060004A6 RID: 1190 RVA: 0x0001AA68 File Offset: 0x00018C68
+	// Token: 0x060004E7 RID: 1255 RVA: 0x0001B1CC File Offset: 0x000193CC
 	private unsafe bool EmitInternal(long name, IEventArgs args)
 	{
 		if (this.IsEmitting(name))
@@ -207,15 +207,6 @@ public class NumberEvent : IStaticVariableResetter
 		List<EventHandleEntry> list;
 		if (this.Handles.TryGetValue(name, out list))
 		{
-			Stat value = null;
-			if (Stat.Enable)
-			{
-				string key = name.ToString();
-				if (!NumberEvent.NameStateMap.TryGetValue(key, out value))
-				{
-					NumberEvent.NameStateMap[key] = value;
-				}
-			}
 			List<Delegate> list2 = null;
 			foreach (EventHandleEntry eventHandleEntry in list)
 			{
@@ -229,11 +220,6 @@ public class NumberEvent : IStaticVariableResetter
 					if (eventHandleEntry.HandleType == EHandleType.Once)
 					{
 						this.RemoveInternal(name, handle);
-					}
-					Stat stat = null;
-					if (Stat.Enable)
-					{
-						NumberEvent.HandleStatMap.TryGetValue(handle.Method, out stat);
 					}
 					try
 					{
@@ -278,7 +264,7 @@ public class NumberEvent : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x060004A7 RID: 1191 RVA: 0x0001AD3C File Offset: 0x00018F3C
+	// Token: 0x060004E8 RID: 1256 RVA: 0x0001B458 File Offset: 0x00019658
 	private bool AddInternal(long name, Delegate handle, EHandleType handleType)
 	{
 		NumberEvent.SetupHandleStat(handle);
@@ -326,25 +312,12 @@ public class NumberEvent : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060004A8 RID: 1192 RVA: 0x0001AE38 File Offset: 0x00019038
+	// Token: 0x060004E9 RID: 1257 RVA: 0x0001B554 File Offset: 0x00019754
 	private static void SetupHandleStat(Delegate handle)
 	{
-		if (!Stat.Enable)
-		{
-			return;
-		}
-		MethodInfo method = handle.Method;
-		if (NumberEvent.HandleStatMap.ContainsKey(method))
-		{
-			return;
-		}
-		string name = method.Name;
-		Stat value = null;
-		string.IsNullOrEmpty(name);
-		NumberEvent.HandleStatMap[method] = value;
 	}
 
-	// Token: 0x060004A9 RID: 1193 RVA: 0x0001AE7C File Offset: 0x0001907C
+	// Token: 0x060004EA RID: 1258 RVA: 0x0001B564 File Offset: 0x00019764
 	private bool DoAdd(long name, Delegate handle, EHandleType handleType)
 	{
 		List<EventHandleEntry> list;
@@ -367,7 +340,7 @@ public class NumberEvent : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x060004AA RID: 1194 RVA: 0x0001AEF4 File Offset: 0x000190F4
+	// Token: 0x060004EB RID: 1259 RVA: 0x0001B5DC File Offset: 0x000197DC
 	private bool RemoveInternal(long name, Delegate handle)
 	{
 		if (!this.IsEmitting(name))
@@ -414,7 +387,7 @@ public class NumberEvent : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060004AB RID: 1195 RVA: 0x0001AFE4 File Offset: 0x000191E4
+	// Token: 0x060004EC RID: 1260 RVA: 0x0001B6CC File Offset: 0x000198CC
 	private bool DoRemove(long name, Delegate handle)
 	{
 		List<EventHandleEntry> list;
@@ -435,13 +408,13 @@ public class NumberEvent : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x060004AC RID: 1196 RVA: 0x0001B04D File Offset: 0x0001924D
+	// Token: 0x060004ED RID: 1261 RVA: 0x0001B735 File Offset: 0x00019935
 	public bool IsEmitting(long name)
 	{
 		return this.EmittingMaskSet.Contains(name);
 	}
 
-	// Token: 0x060004AD RID: 1197 RVA: 0x0001B05B File Offset: 0x0001925B
+	// Token: 0x060004EE RID: 1262 RVA: 0x0001B743 File Offset: 0x00019943
 	private void SetEmitting(long name, bool isEmitting)
 	{
 		if (isEmitting)
@@ -452,8 +425,8 @@ public class NumberEvent : IStaticVariableResetter
 		this.EmittingMaskSet.Remove(name);
 	}
 
-	// Token: 0x1700009B RID: 155
-	// (get) Token: 0x060004AE RID: 1198 RVA: 0x0001B07B File Offset: 0x0001927B
+	// Token: 0x170000AD RID: 173
+	// (get) Token: 0x060004EF RID: 1263 RVA: 0x0001B763 File Offset: 0x00019963
 	private Dictionary<long, List<EventHandleEntry>> PendingAddHandles
 	{
 		get
@@ -466,8 +439,8 @@ public class NumberEvent : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700009C RID: 156
-	// (get) Token: 0x060004AF RID: 1199 RVA: 0x0001B096 File Offset: 0x00019296
+	// Token: 0x170000AE RID: 174
+	// (get) Token: 0x060004F0 RID: 1264 RVA: 0x0001B77E File Offset: 0x0001997E
 	private Dictionary<long, List<Delegate>> PendingRemoveHandles
 	{
 		get
@@ -480,21 +453,21 @@ public class NumberEvent : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060004B0 RID: 1200 RVA: 0x0001B0B1 File Offset: 0x000192B1
+	// Token: 0x060004F1 RID: 1265 RVA: 0x0001B799 File Offset: 0x00019999
 	public static void CreateStaticDefaultValue()
 	{
 		NumberEvent._nameStateMap = new Dictionary<string, Stat>();
 		NumberEvent._handleStatMap = new Dictionary<MethodInfo, Stat>();
 	}
 
-	// Token: 0x060004B1 RID: 1201 RVA: 0x0001B0C7 File Offset: 0x000192C7
+	// Token: 0x060004F2 RID: 1266 RVA: 0x0001B7AF File Offset: 0x000199AF
 	public static void ResetStaticDefaultValue()
 	{
 		NumberEvent._nameStateMap = null;
 		NumberEvent._handleStatMap = null;
 	}
 
-	// Token: 0x04000410 RID: 1040
+	// Token: 0x0400041E RID: 1054
 	[Nullable(new byte[]
 	{
 		2,
@@ -503,7 +476,7 @@ public class NumberEvent : IStaticVariableResetter
 	})]
 	private static Dictionary<string, Stat> _nameStateMap;
 
-	// Token: 0x04000411 RID: 1041
+	// Token: 0x0400041F RID: 1055
 	[Nullable(new byte[]
 	{
 		2,
@@ -512,10 +485,10 @@ public class NumberEvent : IStaticVariableResetter
 	})]
 	private static Dictionary<MethodInfo, Stat> _handleStatMap;
 
-	// Token: 0x04000412 RID: 1042
+	// Token: 0x04000420 RID: 1056
 	private readonly Dictionary<long, List<EventHandleEntry>> Handles = new Dictionary<long, List<EventHandleEntry>>();
 
-	// Token: 0x04000413 RID: 1043
+	// Token: 0x04000421 RID: 1057
 	[Nullable(new byte[]
 	{
 		2,
@@ -523,7 +496,7 @@ public class NumberEvent : IStaticVariableResetter
 	})]
 	private Dictionary<long, List<EventHandleEntry>> PendingAddHandlesInternal;
 
-	// Token: 0x04000414 RID: 1044
+	// Token: 0x04000422 RID: 1058
 	[Nullable(new byte[]
 	{
 		2,
@@ -532,9 +505,9 @@ public class NumberEvent : IStaticVariableResetter
 	})]
 	private Dictionary<long, List<Delegate>> PendingRemoveHandlesInternal;
 
-	// Token: 0x04000415 RID: 1045
+	// Token: 0x04000423 RID: 1059
 	private readonly HashSet<long> EmittingMaskSet = new HashSet<long>();
 
-	// Token: 0x04000416 RID: 1046
+	// Token: 0x04000424 RID: 1060
 	private readonly Dictionary<long, Dictionary<object, object>> HoldKeyHandles = new Dictionary<long, Dictionary<object, object>>();
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006285 RID: 25221
+	// Token: 0x020068F6 RID: 26870
 	public class ICameraLockTargetBaseT
 	{
-		// Token: 0x1700BC1A RID: 48154
-		// (get) Token: 0x0602B8DD RID: 178397 RVA: 0x005FF16E File Offset: 0x005FD36E
-		// (set) Token: 0x0602B8DE RID: 178398 RVA: 0x005FF176 File Offset: 0x005FD376
+		// Token: 0x1700C5A2 RID: 50594
+		// (get) Token: 0x0602E03E RID: 188478 RVA: 0x00649F76 File Offset: 0x00648176
+		// (set) Token: 0x0602E03F RID: 188479 RVA: 0x00649F7E File Offset: 0x0064817E
 		public ECameraLockTargetType Type { get; set; }
 
-		// Token: 0x0602B8DF RID: 178399 RVA: 0x005FF17F File Offset: 0x005FD37F
+		// Token: 0x0602E040 RID: 188480 RVA: 0x00649F87 File Offset: 0x00648187
 		public ICameraLockTargetBaseT()
 		{
 			this.Type = ECameraLockTargetType.TargetPosition;

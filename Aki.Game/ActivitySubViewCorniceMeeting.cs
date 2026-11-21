@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011FD RID: 4605
+// Token: 0x020006B1 RID: 1713
 public class ActivitySubViewCorniceMeeting : ActivitySubViewBase
 {
-	// Token: 0x06007B36 RID: 31542 RVA: 0x0019F7A0 File Offset: 0x0019D9A0
+	// Token: 0x06004ECC RID: 20172 RVA: 0x001A8458 File Offset: 0x001A6658
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -35,7 +35,7 @@ public class ActivitySubViewCorniceMeeting : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007B37 RID: 31543 RVA: 0x0019F868 File Offset: 0x0019DA68
+	// Token: 0x06004ECD RID: 20173 RVA: 0x001A8520 File Offset: 0x001A6720
 	private void OnBtnQuestClick()
 	{
 		if (!this.ActivityBaseData.IsUnLock())
@@ -61,7 +61,7 @@ public class ActivitySubViewCorniceMeeting : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007B38 RID: 31544 RVA: 0x0019F93C File Offset: 0x0019DB3C
+	// Token: 0x06004ECE RID: 20174 RVA: 0x001A85F4 File Offset: 0x001A67F4
 	[NullableContext(2)]
 	private void OnBtnClick(ActivityBaseData data)
 	{
@@ -78,7 +78,7 @@ public class ActivitySubViewCorniceMeeting : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06007B39 RID: 31545 RVA: 0x0019F95C File Offset: 0x0019DB5C
+	// Token: 0x06004ECF RID: 20175 RVA: 0x001A8614 File Offset: 0x001A6814
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewCorniceMeeting.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -89,7 +89,7 @@ public class ActivitySubViewCorniceMeeting : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007B3A RID: 31546 RVA: 0x0019F9A0 File Offset: 0x0019DBA0
+	// Token: 0x06004ED0 RID: 20176 RVA: 0x001A8658 File Offset: 0x001A6858
 	protected override void OnBeforeShow()
 	{
 		if (this.ActivityBaseData.GetUnFinishPreGuideQuestId() > 0)
@@ -107,13 +107,13 @@ public class ActivitySubViewCorniceMeeting : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007B3B RID: 31547 RVA: 0x0019FA32 File Offset: 0x0019DC32
+	// Token: 0x06004ED1 RID: 20177 RVA: 0x001A86EA File Offset: 0x001A68EA
 	protected override void OnBeforeHide()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.QuestViewItem, base.GetItem(2), 0);
 	}
 
-	// Token: 0x06007B3C RID: 31548 RVA: 0x0019FA48 File Offset: 0x0019DC48
+	// Token: 0x06004ED2 RID: 20178 RVA: 0x001A8700 File Offset: 0x001A6900
 	protected override void OnRefreshView()
 	{
 		ActivityCorniceMeetingData activityCorniceMeetingData = this.ActivityBaseData as ActivityCorniceMeetingData;
@@ -131,20 +131,20 @@ public class ActivitySubViewCorniceMeeting : ActivitySubViewBase
 		button.RootUIComp.Get().SetUIActive(activityCorniceMeetingData.IsUnlockTailQuest() && activityCorniceMeetingData.IsUnLock() && unFinishPreGuideQuestId <= 0);
 	}
 
-	// Token: 0x04003863 RID: 14435
+	// Token: 0x040038FC RID: 14588
 	[Nullable(2)]
 	private ActivitySubViewGeneralInfo InfoComponent;
 
-	// Token: 0x020077E5 RID: 30693
+	// Token: 0x02006970 RID: 26992
 	protected class EActivitySubViewCorniceMeetingComponents
 	{
-		// Token: 0x04027867 RID: 161895
+		// Token: 0x04022B99 RID: 142233
 		public const int InfoItem = 0;
 
-		// Token: 0x04027868 RID: 161896
+		// Token: 0x04022B9A RID: 142234
 		public const int BtnQuest = 1;
 
-		// Token: 0x04027869 RID: 161897
+		// Token: 0x04022B9B RID: 142235
 		public const int QuestRedDot = 2;
 	}
 }

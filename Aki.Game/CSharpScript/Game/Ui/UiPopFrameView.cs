@@ -6,23 +6,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004634 RID: 17972
+	// Token: 0x0200355E RID: 13662
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiPopFrameView : UiPanelBase, IUiPopFrameInterface
 	{
-		// Token: 0x170075E7 RID: 30183
-		// (get) Token: 0x0602E55C RID: 189788 RVA: 0x00AB5A81 File Offset: 0x00AB3C81
-		// (set) Token: 0x0602E55D RID: 189789 RVA: 0x00AB5A89 File Offset: 0x00AB3C89
+		// Token: 0x170048A1 RID: 18593
+		// (get) Token: 0x06022C80 RID: 142464 RVA: 0x009E2C5D File Offset: 0x009E0E5D
+		// (set) Token: 0x06022C81 RID: 142465 RVA: 0x009E2C65 File Offset: 0x009E0E65
 		public CommonPopViewBase PopItem { get; set; }
 
-		// Token: 0x0602E55E RID: 189790 RVA: 0x00AB5A92 File Offset: 0x00AB3C92
+		// Token: 0x06022C82 RID: 142466 RVA: 0x009E2C6E File Offset: 0x009E0E6E
 		public UiPopFrameView(UiViewInfo viewInfo)
 		{
 			this.ParentViewInfo = viewInfo;
 		}
 
-		// Token: 0x0602E55F RID: 189791 RVA: 0x00AB5AA4 File Offset: 0x00AB3CA4
+		// Token: 0x06022C83 RID: 142467 RVA: 0x009E2C80 File Offset: 0x009E0E80
 		protected override void OnBeforeCreate()
 		{
 			UiPopFrameViewInfo uiBehaviourPopInfo = UiPopFrameViewStorage.Instance.GetUiBehaviourPopInfo((int)this.ParentViewInfo.CommonPopBg);
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Ui
 			base.SetRootActorLoadInfo(resourceId, UiLayer.Instance.GetLayerRootUiItem(this.ParentViewInfo.Type), false, false);
 		}
 
-		// Token: 0x0602E560 RID: 189792 RVA: 0x00AB5B04 File Offset: 0x00AB3D04
+		// Token: 0x06022C84 RID: 142468 RVA: 0x009E2CE0 File Offset: 0x009E0EE0
 		protected override UniTask OnBeforeHideAsync()
 		{
 			UiPopFrameView.<OnBeforeHideAsync>d__8 <OnBeforeHideAsync>d__;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Ui
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E561 RID: 189793 RVA: 0x00AB5B48 File Offset: 0x00AB3D48
+		// Token: 0x06022C85 RID: 142469 RVA: 0x009E2D24 File Offset: 0x009E0F24
 		protected override UniTask OnBeforeStartAsync()
 		{
 			UiPopFrameView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Ui
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E562 RID: 189794 RVA: 0x00AB5B8C File Offset: 0x00AB3D8C
+		// Token: 0x06022C86 RID: 142470 RVA: 0x009E2D68 File Offset: 0x009E0F68
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			UiPopFrameView.<OnShowAsyncImplementImplement>d__10 <OnShowAsyncImplementImplement>d__;
@@ -68,79 +68,79 @@ namespace CSharpScript.Game.Ui
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E563 RID: 189795 RVA: 0x00AB5BCF File Offset: 0x00AB3DCF
+		// Token: 0x06022C87 RID: 142471 RVA: 0x009E2DAB File Offset: 0x009E0FAB
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x0602E564 RID: 189796 RVA: 0x00AB5BD4 File Offset: 0x00AB3DD4
+		// Token: 0x06022C88 RID: 142472 RVA: 0x009E2DB0 File Offset: 0x009E0FB0
 		protected override void OnAutoDestroy()
 		{
 			Log.Instance.Info(ELogModule.UiCommon, ELogAuthor.XXJ, "UiPopFrameView执行自动销毁", default(ReadOnlySpan<ValueTuple<string, object>>));
 			this.SequencePlayer.Clear();
 		}
 
-		// Token: 0x0602E565 RID: 189797 RVA: 0x00AB5C08 File Offset: 0x00AB3E08
+		// Token: 0x06022C89 RID: 142473 RVA: 0x009E2DE4 File Offset: 0x009E0FE4
 		public void SetCloseBtnInteractive(bool state)
 		{
 			this.PopItem.SetCloseBtnInteractive(state);
 		}
 
-		// Token: 0x0602E566 RID: 189798 RVA: 0x00AB5C16 File Offset: 0x00AB3E16
+		// Token: 0x06022C8A RID: 142474 RVA: 0x009E2DF2 File Offset: 0x009E0FF2
 		public void SetTitleByTextIdAndArg(string textId, params object[] args)
 		{
 			this.PopItem.SetTitleByTextIdAndArg(textId, args);
 		}
 
-		// Token: 0x0602E567 RID: 189799 RVA: 0x00AB5C25 File Offset: 0x00AB3E25
+		// Token: 0x06022C8B RID: 142475 RVA: 0x009E2E01 File Offset: 0x009E1001
 		public void SetBackBtnShowState(bool state)
 		{
 			this.PopItem.SetBackBtnShowState(state);
 		}
 
-		// Token: 0x0602E568 RID: 189800 RVA: 0x00AB5C33 File Offset: 0x00AB3E33
+		// Token: 0x06022C8C RID: 142476 RVA: 0x009E2E0F File Offset: 0x009E100F
 		public AActor GetPopViewRootActor()
 		{
 			return base.GetRootActor();
 		}
 
-		// Token: 0x0602E569 RID: 189801 RVA: 0x00AB5C3B File Offset: 0x00AB3E3B
+		// Token: 0x06022C8D RID: 142477 RVA: 0x009E2E17 File Offset: 0x009E1017
 		public UUIItem GetPopViewRootItem()
 		{
 			return base.GetRootItem();
 		}
 
-		// Token: 0x0602E56A RID: 189802 RVA: 0x00AB5C43 File Offset: 0x00AB3E43
+		// Token: 0x06022C8E RID: 142478 RVA: 0x009E2E1F File Offset: 0x009E101F
 		public AActor GetPopViewOriginalActor()
 		{
 			return base.GetOriginalActor();
 		}
 
-		// Token: 0x0602E56B RID: 189803 RVA: 0x00AB5C4B File Offset: 0x00AB3E4B
+		// Token: 0x06022C8F RID: 142479 RVA: 0x009E2E27 File Offset: 0x009E1027
 		public void HidePopView()
 		{
 			base.Hide(null);
 		}
 
-		// Token: 0x0602E56C RID: 189804 RVA: 0x00AB5C54 File Offset: 0x00AB3E54
+		// Token: 0x06022C90 RID: 142480 RVA: 0x009E2E30 File Offset: 0x009E1030
 		public void ShowPopView()
 		{
 			base.Show(null);
 		}
 
-		// Token: 0x0602E56D RID: 189805 RVA: 0x00AB5C5D File Offset: 0x00AB3E5D
+		// Token: 0x06022C91 RID: 142481 RVA: 0x009E2E39 File Offset: 0x009E1039
 		public void SetViewPermanent()
 		{
 			LguiUtil.Instance.SetActorIsPermanent(base.GetOriginalActor(), true, true);
 		}
 
-		// Token: 0x0602E56E RID: 189806 RVA: 0x00AB5C74 File Offset: 0x00AB3E74
+		// Token: 0x06022C92 RID: 142482 RVA: 0x009E2E50 File Offset: 0x009E1050
 		public void PlayLevelSequenceByName(string sequenceName, bool blockClick = false)
 		{
 			this.SequencePlayer.PlaySequence(sequenceName, blockClick, null);
 		}
 
-		// Token: 0x0602E56F RID: 189807 RVA: 0x00AB5C98 File Offset: 0x00AB3E98
+		// Token: 0x06022C93 RID: 142483 RVA: 0x009E2E74 File Offset: 0x009E1074
 		public UniTask PlaySequenceAsync(string sequenceName, CustomPromise<bool> stopPromise, bool blockClick = false, bool playReverse = false)
 		{
 			UiPopFrameView.<PlaySequenceAsync>d__23 <PlaySequenceAsync>d__;
@@ -155,30 +155,30 @@ namespace CSharpScript.Game.Ui
 			return <PlaySequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E570 RID: 189808 RVA: 0x00AB5CFC File Offset: 0x00AB3EFC
+		// Token: 0x06022C94 RID: 142484 RVA: 0x009E2ED8 File Offset: 0x009E10D8
 		public Action GetCloseCallback()
 		{
 			return null;
 		}
 
-		// Token: 0x0602E571 RID: 189809 RVA: 0x00AB5CFF File Offset: 0x00AB3EFF
+		// Token: 0x06022C95 RID: 142485 RVA: 0x009E2EDB File Offset: 0x009E10DB
 		public void SetCloseCallback(Action callback)
 		{
 		}
 
-		// Token: 0x0602E572 RID: 189810 RVA: 0x00AB5D01 File Offset: 0x00AB3F01
+		// Token: 0x06022C96 RID: 142486 RVA: 0x009E2EDD File Offset: 0x009E10DD
 		public void AddButtonClickEvent(string btnName, Action callback)
 		{
 		}
 
-		// Token: 0x0602E573 RID: 189811 RVA: 0x00AB5D03 File Offset: 0x00AB3F03
+		// Token: 0x06022C97 RID: 142487 RVA: 0x009E2EDF File Offset: 0x009E10DF
 		public void HidePopFrame()
 		{
 			this.HidePopView();
 		}
 
-		// Token: 0x170075E8 RID: 30184
-		// (get) Token: 0x0602E574 RID: 189812 RVA: 0x00AB5D0B File Offset: 0x00AB3F0B
+		// Token: 0x170048A2 RID: 18594
+		// (get) Token: 0x06022C98 RID: 142488 RVA: 0x009E2EE7 File Offset: 0x009E10E7
 		public int PopFrameId
 		{
 			get
@@ -187,10 +187,10 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x04018D88 RID: 101768
+		// Token: 0x040133D7 RID: 78807
 		private readonly UiViewInfo ParentViewInfo;
 
-		// Token: 0x04018D89 RID: 101769
+		// Token: 0x040133D8 RID: 78808
 		private UiSequencePlayer SequencePlayer;
 	}
 }

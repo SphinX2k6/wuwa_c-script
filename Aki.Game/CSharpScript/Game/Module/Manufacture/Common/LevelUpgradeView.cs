@@ -14,17 +14,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x02005696 RID: 22166
+	// Token: 0x0200466C RID: 18028
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelUpgradeView : UiViewBase
 	{
-		// Token: 0x0603865E RID: 231006 RVA: 0x00D6323B File Offset: 0x00D6143B
+		// Token: 0x0602D55B RID: 185691 RVA: 0x00CB138C File Offset: 0x00CAF58C
 		public LevelUpgradeView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603865F RID: 231007 RVA: 0x00D6324C File Offset: 0x00D6144C
+		// Token: 0x0602D55C RID: 185692 RVA: 0x00CB139C File Offset: 0x00CAF59C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 16;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038660 RID: 231008 RVA: 0x00D63556 File Offset: 0x00D61756
+		// Token: 0x0602D55D RID: 185693 RVA: 0x00CB16A6 File Offset: 0x00CAF8A6
 		protected override void OnBeforeDestroy()
 		{
 			if (this.RewardItemLayout != null)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.StarLayout.ClearChildren();
 		}
 
-		// Token: 0x06038661 RID: 231009 RVA: 0x00D6357D File Offset: 0x00D6177D
+		// Token: 0x0602D55E RID: 185694 RVA: 0x00CB16CD File Offset: 0x00CAF8CD
 		protected override void OnBeforeShow()
 		{
 			this.RefreshConfirmButton();
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			popItem.SetTexBgVisible(false);
 		}
 
-		// Token: 0x06038662 RID: 231010 RVA: 0x00D635A0 File Offset: 0x00D617A0
+		// Token: 0x0602D55F RID: 185695 RVA: 0x00CB16F0 File Offset: 0x00CAF8F0
 		protected override void OnStart()
 		{
 			this.RewardItemLayout = new GenericLayout<LevelRewardItem, IRewardData>(base.GetHorizontalLayout(7), new Func<LevelRewardItem>(this.InitReward), null, false, true);
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.Refresh();
 		}
 
-		// Token: 0x06038663 RID: 231011 RVA: 0x00D6367C File Offset: 0x00D6187C
+		// Token: 0x0602D560 RID: 185696 RVA: 0x00CB17CC File Offset: 0x00CAF9CC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -150,13 +150,13 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return null;
 		}
 
-		// Token: 0x06038664 RID: 231012 RVA: 0x00D636CE File Offset: 0x00D618CE
+		// Token: 0x0602D561 RID: 185697 RVA: 0x00CB181E File Offset: 0x00CAFA1E
 		private LevelRewardItem InitReward()
 		{
 			return new LevelRewardItem();
 		}
 
-		// Token: 0x06038665 RID: 231013 RVA: 0x00D636D8 File Offset: 0x00D618D8
+		// Token: 0x0602D562 RID: 185698 RVA: 0x00CB1828 File Offset: 0x00CAFA28
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.UpgradeComposeLevel, new Action(this.ShowRewardView));
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			EventSystem.Instance.Add(EEventName.SwitchComposeType, new Action(this.SwitchComposeType));
 		}
 
-		// Token: 0x06038666 RID: 231014 RVA: 0x00D63738 File Offset: 0x00D61938
+		// Token: 0x0602D563 RID: 185699 RVA: 0x00CB1888 File Offset: 0x00CAFA88
 		protected override void OnRemoveEventListener()
 		{
 			if (!this.IsFirstShow)
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			EventSystem.Instance.Remove(EEventName.SwitchComposeType, new Action(this.SwitchComposeType));
 		}
 
-		// Token: 0x06038667 RID: 231015 RVA: 0x00D6379D File Offset: 0x00D6199D
+		// Token: 0x0602D564 RID: 185700 RVA: 0x00CB18ED File Offset: 0x00CAFAED
 		private void ShowRewardView()
 		{
 			if (this.TmpRewardItem.Count == 0)
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.Update();
 		}
 
-		// Token: 0x06038668 RID: 231016 RVA: 0x00D637B3 File Offset: 0x00D619B3
+		// Token: 0x0602D565 RID: 185701 RVA: 0x00CB1903 File Offset: 0x00CAFB03
 		private void OpenView(EUiViewName uiView, int viewId)
 		{
 			if (uiView == EUiViewName.WorldMapView)
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x06038669 RID: 231017 RVA: 0x00D637C9 File Offset: 0x00D619C9
+		// Token: 0x0602D566 RID: 185702 RVA: 0x00CB1919 File Offset: 0x00CAFB19
 		private void SwitchComposeType()
 		{
 			base.CloseMe(null);
@@ -204,14 +204,14 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x0603866A RID: 231018 RVA: 0x00D637F4 File Offset: 0x00D619F4
+		// Token: 0x0602D567 RID: 185703 RVA: 0x00CB1944 File Offset: 0x00CAFB44
 		private void Update()
 		{
 			CommonManager.Instance.SetSelectedLevel(CommonManager.Instance.GetCurrentRewardLevel().Value);
 			this.Refresh();
 		}
 
-		// Token: 0x0603866B RID: 231019 RVA: 0x00D63824 File Offset: 0x00D61A24
+		// Token: 0x0602D568 RID: 185704 RVA: 0x00CB1974 File Offset: 0x00CAFB74
 		private void Refresh()
 		{
 			this.RefreshTypeIconSprite();
@@ -227,14 +227,14 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.RefreshRedDotVisible();
 		}
 
-		// Token: 0x0603866C RID: 231020 RVA: 0x00D63874 File Offset: 0x00D61A74
+		// Token: 0x0602D569 RID: 185705 RVA: 0x00CB19C4 File Offset: 0x00CAFBC4
 		private void RefreshTypeIconSprite()
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath("T_ComposeType");
 			base.SetTextureByPath(resourcePath, base.GetTexture(9), null, null);
 		}
 
-		// Token: 0x0603866D RID: 231021 RVA: 0x00D638AC File Offset: 0x00D61AAC
+		// Token: 0x0602D56A RID: 185706 RVA: 0x00CB19FC File Offset: 0x00CAFBFC
 		private void RefreshName()
 		{
 			SynthesisLevel? composeLevelByLevel = CommonManager.Instance.GetComposeLevelByLevel(CommonManager.Instance.GetSelectedLevel().Value);
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetText(0).SetText(localText, true);
 		}
 
-		// Token: 0x0603866E RID: 231022 RVA: 0x00D63900 File Offset: 0x00D61B00
+		// Token: 0x0602D56B RID: 185707 RVA: 0x00CB1A50 File Offset: 0x00CAFC50
 		private void RefreshInfo()
 		{
 			SynthesisLevel? composeLevelByLevel = CommonManager.Instance.GetComposeLevelByLevel(CommonManager.Instance.GetSelectedLevel().Value);
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetText(1).SetText(localText, true);
 		}
 
-		// Token: 0x0603866F RID: 231023 RVA: 0x00D63954 File Offset: 0x00D61B54
+		// Token: 0x0602D56C RID: 185708 RVA: 0x00CB1AA4 File Offset: 0x00CAFCA4
 		private void RefreshLevel()
 		{
 			List<bool> list = new List<bool>(new bool[CommonManager.Instance.GetComposeMaxLevel().Value]);
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.StarLayout.RebuildLayoutByDataNew<bool>(list, null);
 		}
 
-		// Token: 0x06038670 RID: 231024 RVA: 0x00D639B8 File Offset: 0x00D61BB8
+		// Token: 0x0602D56D RID: 185709 RVA: 0x00CB1B08 File Offset: 0x00CAFD08
 		private void RefreshSumExp()
 		{
 			int value = CommonManager.Instance.GetCurrentRewardTotalProficiency().Value;
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetText(2).SetText(newText, true);
 		}
 
-		// Token: 0x06038671 RID: 231025 RVA: 0x00D63A64 File Offset: 0x00D61C64
+		// Token: 0x0602D56E RID: 185710 RVA: 0x00CB1BB4 File Offset: 0x00CAFDB4
 		private void RefreshExpBarSprite()
 		{
 			int value = CommonManager.Instance.GetCurrentRewardTotalProficiency().Value;
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetSprite(3).SetFillAmount((float)num);
 		}
 
-		// Token: 0x06038672 RID: 231026 RVA: 0x00D63AE0 File Offset: 0x00D61CE0
+		// Token: 0x0602D56F RID: 185711 RVA: 0x00CB1C30 File Offset: 0x00CAFE30
 		private void RefreshConfirmButton()
 		{
 			int value = CommonManager.Instance.GetComposeMaxLevel().Value;
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetButton(4).SetSelfInteractive(value4 >= value5 && value2 < value);
 		}
 
-		// Token: 0x06038673 RID: 231027 RVA: 0x00D63BB8 File Offset: 0x00D61DB8
+		// Token: 0x0602D570 RID: 185712 RVA: 0x00CB1D08 File Offset: 0x00CAFF08
 		private void RefreshRewardList()
 		{
 			this.TmpRewardItem.Clear();
@@ -341,20 +341,20 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.RewardItemLayout.RefreshByData(this.TmpRewardItem, null, false);
 		}
 
-		// Token: 0x06038674 RID: 231028 RVA: 0x00D63CE4 File Offset: 0x00D61EE4
+		// Token: 0x0602D571 RID: 185713 RVA: 0x00CB1E34 File Offset: 0x00CB0034
 		private void RefreshLeftAndRightButtonEnable()
 		{
 			((base.GetButton(5).GetOwner() as AUIBaseActor).GetComponentByClass(UUIItem.StaticClass()) as UUIItem).SetUIActive(CommonManager.Instance.GetSelectedLevel().Value != 1);
 			((base.GetButton(6).GetOwner() as AUIBaseActor).GetComponentByClass(UUIItem.StaticClass()) as UUIItem).SetUIActive(CommonManager.Instance.GetSelectedLevel().Value != CommonManager.Instance.GetComposeMaxLevel().Value);
 		}
 
-		// Token: 0x06038675 RID: 231029 RVA: 0x00D63D88 File Offset: 0x00D61F88
+		// Token: 0x0602D572 RID: 185714 RVA: 0x00CB1ED8 File Offset: 0x00CB00D8
 		private void RefreshRewardItem()
 		{
 			base.GetItem(10).SetUIActive(CommonManager.Instance.GetSelectedLevel().Value != CommonManager.Instance.GetComposeMaxLevel().Value);
 		}
 
-		// Token: 0x06038676 RID: 231030 RVA: 0x00D63DCC File Offset: 0x00D61FCC
+		// Token: 0x0602D573 RID: 185715 RVA: 0x00CB1F1C File Offset: 0x00CB011C
 		private void RefreshRedDotVisible()
 		{
 			int value = CommonManager.Instance.GetCurrentRewardLevel().Value;
@@ -373,7 +373,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x06038677 RID: 231031 RVA: 0x00D63E40 File Offset: 0x00D62040
+		// Token: 0x0602D574 RID: 185716 RVA: 0x00CB1F90 File Offset: 0x00CB0190
 		private void OnClick()
 		{
 			if (base.GetButton(4).GetSelfInteractive())
@@ -384,27 +384,27 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			GenericPromptController.Instance.ShowPromptByCode("ComposeUpgrade", Array.Empty<object>());
 		}
 
-		// Token: 0x06038678 RID: 231032 RVA: 0x00D63E70 File Offset: 0x00D62070
+		// Token: 0x0602D575 RID: 185717 RVA: 0x00CB1FC0 File Offset: 0x00CB01C0
 		private void OnLeft()
 		{
 			CommonManager.Instance.SetSelectedLevel(CommonManager.Instance.GetSelectedLevel().Value - 1);
 			this.Refresh();
 		}
 
-		// Token: 0x06038679 RID: 231033 RVA: 0x00D63EA4 File Offset: 0x00D620A4
+		// Token: 0x0602D576 RID: 185718 RVA: 0x00CB1FF4 File Offset: 0x00CB01F4
 		private void OnRight()
 		{
 			CommonManager.Instance.SetSelectedLevel(CommonManager.Instance.GetSelectedLevel().Value + 1);
 			this.Refresh();
 		}
 
-		// Token: 0x0603867A RID: 231034 RVA: 0x00D63ED5 File Offset: 0x00D620D5
+		// Token: 0x0602D577 RID: 185719 RVA: 0x00CB2025 File Offset: 0x00CB0225
 		private void OnClickBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401DA16 RID: 121366
+		// Token: 0x040184A1 RID: 99489
 		[Nullable(new byte[]
 		{
 			2,
@@ -413,7 +413,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 		})]
 		private GenericLayout<LevelRewardItem, IRewardData> RewardItemLayout;
 
-		// Token: 0x0401DA17 RID: 121367
+		// Token: 0x040184A2 RID: 99490
 		[Nullable(new byte[]
 		{
 			2,
@@ -421,10 +421,10 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 		})]
 		private List<IRewardData> TmpRewardItem;
 
-		// Token: 0x0401DA18 RID: 121368
+		// Token: 0x040184A3 RID: 99491
 		private bool IsFirstShow = true;
 
-		// Token: 0x0401DA19 RID: 121369
+		// Token: 0x040184A4 RID: 99492
 		[Nullable(new byte[]
 		{
 			2,
@@ -432,56 +432,56 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 		})]
 		private GenericLayoutNew<StarItem> StarLayout;
 
-		// Token: 0x0200B857 RID: 47191
+		// Token: 0x0200A27F RID: 41599
 		[NullableContext(0)]
 		private class ELevelUpgradeDefine
 		{
-			// Token: 0x04037CB3 RID: 228531
+			// Token: 0x040326D0 RID: 206544
 			public const int NameText = 0;
 
-			// Token: 0x04037CB4 RID: 228532
+			// Token: 0x040326D1 RID: 206545
 			public const int InfoText = 1;
 
-			// Token: 0x04037CB5 RID: 228533
+			// Token: 0x040326D2 RID: 206546
 			public const int SumExpText = 2;
 
-			// Token: 0x04037CB6 RID: 228534
+			// Token: 0x040326D3 RID: 206547
 			public const int ExpBarSprite = 3;
 
-			// Token: 0x04037CB7 RID: 228535
+			// Token: 0x040326D4 RID: 206548
 			public const int ConfirmButton = 4;
 
-			// Token: 0x04037CB8 RID: 228536
+			// Token: 0x040326D5 RID: 206549
 			public const int LeftButton = 5;
 
-			// Token: 0x04037CB9 RID: 228537
+			// Token: 0x040326D6 RID: 206550
 			public const int RightButton = 6;
 
-			// Token: 0x04037CBA RID: 228538
+			// Token: 0x040326D7 RID: 206551
 			public const int RewardItemHorizontalLayout = 7;
 
-			// Token: 0x04037CBB RID: 228539
+			// Token: 0x040326D8 RID: 206552
 			public const int RewardLayoutItem = 8;
 
-			// Token: 0x04037CBC RID: 228540
+			// Token: 0x040326D9 RID: 206553
 			public const int TypeIconTexture = 9;
 
-			// Token: 0x04037CBD RID: 228541
+			// Token: 0x040326DA RID: 206554
 			public const int RewardItem = 10;
 
-			// Token: 0x04037CBE RID: 228542
+			// Token: 0x040326DB RID: 206555
 			public const int PnlStar = 11;
 
-			// Token: 0x04037CBF RID: 228543
+			// Token: 0x040326DC RID: 206556
 			public const int TxtConfirm = 12;
 
-			// Token: 0x04037CC0 RID: 228544
+			// Token: 0x040326DD RID: 206557
 			public const int RedDot = 13;
 
-			// Token: 0x04037CC1 RID: 228545
+			// Token: 0x040326DE RID: 206558
 			public const int MaskBtn = 14;
 
-			// Token: 0x04037CC2 RID: 228546
+			// Token: 0x040326DF RID: 206559
 			public const int BackBtn = 15;
 		}
 	}

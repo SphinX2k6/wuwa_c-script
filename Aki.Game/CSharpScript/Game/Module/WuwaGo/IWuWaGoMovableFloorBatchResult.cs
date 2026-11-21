@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x02004713 RID: 18195
+	// Token: 0x02003643 RID: 13891
 	[NullableContext(1)]
 	public interface IWuWaGoMovableFloorBatchResult
 	{
-		// Token: 0x170076E7 RID: 30439
-		// (get) Token: 0x0602F8CB RID: 194763
+		// Token: 0x170049A3 RID: 18851
+		// (get) Token: 0x06024091 RID: 147601
 		bool Committed { get; }
 
-		// Token: 0x170076E8 RID: 30440
-		// (get) Token: 0x0602F8CC RID: 194764
+		// Token: 0x170049A4 RID: 18852
+		// (get) Token: 0x06024092 RID: 147602
 		IReadOnlyList<int> MovedRoleIds { get; }
 	}
 }

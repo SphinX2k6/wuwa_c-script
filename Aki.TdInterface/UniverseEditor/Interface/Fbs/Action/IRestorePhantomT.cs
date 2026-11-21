@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EB6 RID: 28342
+	// Token: 0x0200763A RID: 30266
 	public class IRestorePhantomT
 	{
 	}

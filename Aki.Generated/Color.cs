@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011B0 RID: 4528
+	// Token: 0x020012E6 RID: 4838
 	public struct Color : IFlatbufferObject
 	{
-		// Token: 0x17003EAA RID: 16042
-		// (get) Token: 0x0600E9C1 RID: 59841 RVA: 0x00346C3C File Offset: 0x00344E3C
+		// Token: 0x1700420F RID: 16911
+		// (get) Token: 0x0600F732 RID: 63282 RVA: 0x003718C8 File Offset: 0x0036FAC8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E9C2 RID: 59842 RVA: 0x00346C49 File Offset: 0x00344E49
+		// Token: 0x0600F733 RID: 63283 RVA: 0x003718D5 File Offset: 0x0036FAD5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E9C3 RID: 59843 RVA: 0x00346C50 File Offset: 0x00344E50
+		// Token: 0x0600F734 RID: 63284 RVA: 0x003718DC File Offset: 0x0036FADC
 		public static Color GetRootAsColor(ByteBuffer _bb)
 		{
 			return Color.GetRootAsColor(_bb, default(Color));
 		}
 
-		// Token: 0x0600E9C4 RID: 59844 RVA: 0x00346C6C File Offset: 0x00344E6C
+		// Token: 0x0600F735 RID: 63285 RVA: 0x003718F8 File Offset: 0x0036FAF8
 		public static Color GetRootAsColor(ByteBuffer _bb, Color obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E9C5 RID: 59845 RVA: 0x00346C89 File Offset: 0x00344E89
+		// Token: 0x0600F736 RID: 63286 RVA: 0x00371915 File Offset: 0x0036FB15
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E9C6 RID: 59846 RVA: 0x00346C98 File Offset: 0x00344E98
+		// Token: 0x0600F737 RID: 63287 RVA: 0x00371924 File Offset: 0x0036FB24
 		public Color __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003EAB RID: 16043
-		// (get) Token: 0x0600E9C7 RID: 59847 RVA: 0x00346CA8 File Offset: 0x00344EA8
+		// Token: 0x17004210 RID: 16912
+		// (get) Token: 0x0600F738 RID: 63288 RVA: 0x00371934 File Offset: 0x0036FB34
 		public float R
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003EAC RID: 16044
-		// (get) Token: 0x0600E9C8 RID: 59848 RVA: 0x00346CE8 File Offset: 0x00344EE8
+		// Token: 0x17004211 RID: 16913
+		// (get) Token: 0x0600F739 RID: 63289 RVA: 0x00371974 File Offset: 0x0036FB74
 		public float G
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003EAD RID: 16045
-		// (get) Token: 0x0600E9C9 RID: 59849 RVA: 0x00346D28 File Offset: 0x00344F28
+		// Token: 0x17004212 RID: 16914
+		// (get) Token: 0x0600F73A RID: 63290 RVA: 0x003719B4 File Offset: 0x0036FBB4
 		public float B
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003EAE RID: 16046
-		// (get) Token: 0x0600E9CA RID: 59850 RVA: 0x00346D68 File Offset: 0x00344F68
+		// Token: 0x17004213 RID: 16915
+		// (get) Token: 0x0600F73B RID: 63291 RVA: 0x003719F4 File Offset: 0x0036FBF4
 		public float A
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040052FD RID: 21245
+		// Token: 0x04005940 RID: 22848
 		private Table __p;
 	}
 }

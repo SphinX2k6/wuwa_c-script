@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AC8 RID: 2760
+	// Token: 0x02000B92 RID: 2962
 	public class TreasureBoxComponent : IComponentBase
 	{
-		// Token: 0x06003F8C RID: 16268 RVA: 0x000A2519 File Offset: 0x000A0719
-		[NullableContext(1)]
+		// Token: 0x060043B6 RID: 17334 RVA: 0x000ABB0D File Offset: 0x000A9D0D
 		public static TreasureBoxComponent Create(ITreasureBoxComponent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FB9 RID: 4025
-		// (get) Token: 0x06003F8D RID: 16269 RVA: 0x000A2538 File Offset: 0x000A0738
+		// Token: 0x1700108D RID: 4237
+		// (get) Token: 0x060043B7 RID: 17335 RVA: 0x000ABB2C File Offset: 0x000A9D2C
 		public override bool? Disabled
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FBA RID: 4026
-		// (get) Token: 0x06003F8E RID: 16270 RVA: 0x000A2570 File Offset: 0x000A0770
+		// Token: 0x1700108E RID: 4238
+		// (get) Token: 0x060043B8 RID: 17336 RVA: 0x000ABB64 File Offset: 0x000A9D64
 		public override bool? EdIsLocked
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FBB RID: 4027
-		// (get) Token: 0x06003F8F RID: 16271 RVA: 0x000A2586 File Offset: 0x000A0786
+		// Token: 0x1700108F RID: 4239
+		// (get) Token: 0x060043B9 RID: 17337 RVA: 0x000ABB7A File Offset: 0x000A9D7A
 		public virtual int TypeId
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FBC RID: 4028
-		// (get) Token: 0x06003F90 RID: 16272 RVA: 0x000A2594 File Offset: 0x000A0794
+		// Token: 0x17001090 RID: 4240
+		// (get) Token: 0x060043BA RID: 17338 RVA: 0x000ABB88 File Offset: 0x000A9D88
 		public virtual bool? IsSupportDiscoverDevice
 		{
 			get
@@ -69,7 +67,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002353 RID: 9043
+		// Token: 0x0400256F RID: 9583
 		private ITreasureBoxComponent Instance;
 	}
 }

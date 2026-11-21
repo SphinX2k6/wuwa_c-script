@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052C2 RID: 21186
+	// Token: 0x0200582D RID: 22573
 	public class IFoxJumpInteractPointT
 	{
-		// Token: 0x17009B61 RID: 39777
-		// (get) Token: 0x060228E7 RID: 141543 RVA: 0x004CA3DC File Offset: 0x004C85DC
-		// (set) Token: 0x060228E8 RID: 141544 RVA: 0x004CA3E4 File Offset: 0x004C85E4
+		// Token: 0x1700A36A RID: 41834
+		// (get) Token: 0x060248AB RID: 149675 RVA: 0x005054D8 File Offset: 0x005036D8
+		// (set) Token: 0x060248AC RID: 149676 RVA: 0x005054E0 File Offset: 0x005036E0
 		public EExploreSkillInteractType Type { get; set; }
 
-		// Token: 0x17009B62 RID: 39778
-		// (get) Token: 0x060228E9 RID: 141545 RVA: 0x004CA3ED File Offset: 0x004C85ED
-		// (set) Token: 0x060228EA RID: 141546 RVA: 0x004CA3F5 File Offset: 0x004C85F5
+		// Token: 0x1700A36B RID: 41835
+		// (get) Token: 0x060248AD RID: 149677 RVA: 0x005054E9 File Offset: 0x005036E9
+		// (set) Token: 0x060248AE RID: 149678 RVA: 0x005054F1 File Offset: 0x005036F1
 		public int LockConfigId { get; set; }
 
-		// Token: 0x17009B63 RID: 39779
-		// (get) Token: 0x060228EB RID: 141547 RVA: 0x004CA3FE File Offset: 0x004C85FE
-		// (set) Token: 0x060228EC RID: 141548 RVA: 0x004CA406 File Offset: 0x004C8606
+		// Token: 0x1700A36C RID: 41836
+		// (get) Token: 0x060248AF RID: 149679 RVA: 0x005054FA File Offset: 0x005036FA
+		// (set) Token: 0x060248B0 RID: 149680 RVA: 0x00505502 File Offset: 0x00503702
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x17009B64 RID: 39780
-		// (get) Token: 0x060228ED RID: 141549 RVA: 0x004CA40F File Offset: 0x004C860F
-		// (set) Token: 0x060228EE RID: 141550 RVA: 0x004CA417 File Offset: 0x004C8617
+		// Token: 0x1700A36D RID: 41837
+		// (get) Token: 0x060248B1 RID: 149681 RVA: 0x0050550B File Offset: 0x0050370B
+		// (set) Token: 0x060248B2 RID: 149682 RVA: 0x00505513 File Offset: 0x00503713
 		public TFoxJumpInteractPointRelationTypeUnion PositionConfig { get; set; }
 
-		// Token: 0x060228EF RID: 141551 RVA: 0x004CA420 File Offset: 0x004C8620
+		// Token: 0x060248B3 RID: 149683 RVA: 0x0050551C File Offset: 0x0050371C
 		public IFoxJumpInteractPointT()
 		{
 			this.Type = EExploreSkillInteractType.PullGiant;

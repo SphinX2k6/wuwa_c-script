@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C7F RID: 15487
+	// Token: 0x02004091 RID: 16529
 	public enum TTipsActorTransform : byte
 	{
-		// Token: 0x0400B2D8 RID: 45784
+		// Token: 0x0400BC6F RID: 48239
 		NONE,
-		// Token: 0x0400B2D9 RID: 45785
+		// Token: 0x0400BC70 RID: 48240
 		IAbsoluteTipActorTransform,
-		// Token: 0x0400B2DA RID: 45786
+		// Token: 0x0400BC71 RID: 48241
 		IRelativeTipActorTransform
 	}
 }

@@ -9,13 +9,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D21 RID: 7457
+// Token: 0x020011E3 RID: 4579
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueRoleStatePanel : UiPanelBase
 {
-	// Token: 0x1700121A RID: 4634
-	// (get) Token: 0x0600E1AA RID: 57770 RVA: 0x0034FEA0 File Offset: 0x0034E0A0
+	// Token: 0x17001244 RID: 4676
+	// (get) Token: 0x0600B5C7 RID: 46535 RVA: 0x0035B8D0 File Offset: 0x00359AD0
 	private float CurHp
 	{
 		get
@@ -33,8 +33,8 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x1700121B RID: 4635
-	// (get) Token: 0x0600E1AB RID: 57771 RVA: 0x0034FED4 File Offset: 0x0034E0D4
+	// Token: 0x17001245 RID: 4677
+	// (get) Token: 0x0600B5C8 RID: 46536 RVA: 0x0035B904 File Offset: 0x00359B04
 	private float MaxHp
 	{
 		get
@@ -53,19 +53,19 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E1AC RID: 57772 RVA: 0x0034FF12 File Offset: 0x0034E112
+	// Token: 0x0600B5C9 RID: 46537 RVA: 0x0035B942 File Offset: 0x00359B42
 	public SurvivorsRogueRoleStatePanel()
 	{
 	}
 
-	// Token: 0x0600E1AD RID: 57773 RVA: 0x0034FF4C File Offset: 0x0034E14C
+	// Token: 0x0600B5CA RID: 46538 RVA: 0x0035B97C File Offset: 0x00359B7C
 	public SurvivorsRogueRoleStatePanel(bool NeedRoleUpdate, bool NeedWeaponUpdate)
 	{
 		this.NeedRoleUpdate = NeedRoleUpdate;
 		this.NeedWeaponUpdate = NeedWeaponUpdate;
 	}
 
-	// Token: 0x0600E1AE RID: 57774 RVA: 0x0034FF9C File Offset: 0x0034E19C
+	// Token: 0x0600B5CB RID: 46539 RVA: 0x0035B9CC File Offset: 0x00359BCC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -84,7 +84,7 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600E1AF RID: 57775 RVA: 0x003500A8 File Offset: 0x0034E2A8
+	// Token: 0x0600B5CC RID: 46540 RVA: 0x0035BAD8 File Offset: 0x00359CD8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRogueRoleStatePanel.<OnBeforeStartAsync>d__34 <OnBeforeStartAsync>d__;
@@ -95,7 +95,7 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E1B0 RID: 57776 RVA: 0x003500EC File Offset: 0x0034E2EC
+	// Token: 0x0600B5CD RID: 46541 RVA: 0x0035BB1C File Offset: 0x00359D1C
 	protected override void OnStart()
 	{
 		this.ShieldBarSprite = base.GetSprite(4);
@@ -113,13 +113,13 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		this.DeadEffectPlayer = new LevelSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x0600E1B1 RID: 57777 RVA: 0x003501EA File Offset: 0x0034E3EA
+	// Token: 0x0600B5CE RID: 46542 RVA: 0x0035BC1A File Offset: 0x00359E1A
 	private SurvivorsRogueWeaponStateGrid CreateWeaponItem()
 	{
 		return new SurvivorsRogueWeaponStateGrid();
 	}
 
-	// Token: 0x0600E1B2 RID: 57778 RVA: 0x003501F1 File Offset: 0x0034E3F1
+	// Token: 0x0600B5CF RID: 46543 RVA: 0x0035BC21 File Offset: 0x00359E21
 	protected override void OnBeforeShow()
 	{
 		this.RefreshRoleGain();
@@ -128,13 +128,13 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		this.InitPlayerData();
 	}
 
-	// Token: 0x0600E1B3 RID: 57779 RVA: 0x0035020B File Offset: 0x0034E40B
+	// Token: 0x0600B5D0 RID: 46544 RVA: 0x0035BC3B File Offset: 0x00359E3B
 	protected override void OnBeforeHide()
 	{
 		this.OnRemoveEventListener();
 	}
 
-	// Token: 0x0600E1B4 RID: 57780 RVA: 0x00350214 File Offset: 0x0034E414
+	// Token: 0x0600B5D1 RID: 46545 RVA: 0x0035BC44 File Offset: 0x00359E44
 	protected void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<string, string>(EEventName.TextLanguageChange, new Action<string, string>(this.OnRefreshText));
@@ -150,7 +150,7 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E1B5 RID: 57781 RVA: 0x003502C0 File Offset: 0x0034E4C0
+	// Token: 0x0600B5D2 RID: 46546 RVA: 0x0035BCF0 File Offset: 0x00359EF0
 	protected void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.TextLanguageChange, new Action<string, string>(this.OnRefreshText));
@@ -166,13 +166,13 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E1B6 RID: 57782 RVA: 0x00350369 File Offset: 0x0034E569
+	// Token: 0x0600B5D3 RID: 46547 RVA: 0x0035BD99 File Offset: 0x00359F99
 	private void OnPlayerEntityCreated()
 	{
 		this.InitPlayerData();
 	}
 
-	// Token: 0x0600E1B7 RID: 57783 RVA: 0x00350374 File Offset: 0x0034E574
+	// Token: 0x0600B5D4 RID: 46548 RVA: 0x0035BDA4 File Offset: 0x00359FA4
 	public void InitPlayerData()
 	{
 		KscSubModelBase curSubModel = KuroSimpleCombatController.Instance.CurSubModel;
@@ -204,49 +204,49 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		this.RoleHpBarItem.SetUIActive(true);
 	}
 
-	// Token: 0x0600E1B8 RID: 57784 RVA: 0x003503F1 File Offset: 0x0034E5F1
+	// Token: 0x0600B5D5 RID: 46549 RVA: 0x0035BE21 File Offset: 0x0035A021
 	public void OnTick(float delta)
 	{
 		this.LerpBarPercent(delta);
 	}
 
-	// Token: 0x0600E1B9 RID: 57785 RVA: 0x003503FA File Offset: 0x0034E5FA
+	// Token: 0x0600B5D6 RID: 46550 RVA: 0x0035BE2A File Offset: 0x0035A02A
 	private void RefreshRoleGain()
 	{
 		this.RoleGrid.Refresh(SurvivorsRogueModel.Instance.CurRoleId, SurvivorsRogueModel.Instance.CurRoleLevel);
 	}
 
-	// Token: 0x0600E1BA RID: 57786 RVA: 0x0035041B File Offset: 0x0034E61B
+	// Token: 0x0600B5D7 RID: 46551 RVA: 0x0035BE4B File Offset: 0x0035A04B
 	private void EventRefreshRoleGain(int roleId)
 	{
 		this.RefreshRoleGain();
 	}
 
-	// Token: 0x0600E1BB RID: 57787 RVA: 0x00350424 File Offset: 0x0034E624
+	// Token: 0x0600B5D8 RID: 46552 RVA: 0x0035BE54 File Offset: 0x0035A054
 	private void RefreshWeaponGain()
 	{
 		this.WeaponGridList.RefreshByData(SurvivorsRogueModel.Instance.GainData.GetWeaponGridDataList(null, null), null, false);
 	}
 
-	// Token: 0x0600E1BC RID: 57788 RVA: 0x00350457 File Offset: 0x0034E657
+	// Token: 0x0600B5D9 RID: 46553 RVA: 0x0035BE87 File Offset: 0x0035A087
 	private void EventRefreshWeaponGain(int weaponId, bool isLevelUp)
 	{
 		this.RefreshWeaponGain();
 	}
 
-	// Token: 0x0600E1BD RID: 57789 RVA: 0x0035045F File Offset: 0x0034E65F
+	// Token: 0x0600B5DA RID: 46554 RVA: 0x0035BE8F File Offset: 0x0035A08F
 	private void OnRefreshText(string oldLang, string newLang)
 	{
 		this.RefreshHpAndShield(false);
 	}
 
-	// Token: 0x0600E1BE RID: 57790 RVA: 0x00350468 File Offset: 0x0034E668
+	// Token: 0x0600B5DB RID: 46555 RVA: 0x0035BE98 File Offset: 0x0035A098
 	private void OnKscPlayerHpChanged()
 	{
 		this.RefreshHpAndShield(true);
 	}
 
-	// Token: 0x0600E1BF RID: 57791 RVA: 0x00350474 File Offset: 0x0034E674
+	// Token: 0x0600B5DC RID: 46556 RVA: 0x0035BEA4 File Offset: 0x0035A0A4
 	private void RefreshHpAndShield(bool bPlayBarAnimation = false)
 	{
 		if (this.AttrMap == null)
@@ -284,7 +284,7 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E1C0 RID: 57792 RVA: 0x003505B8 File Offset: 0x0034E7B8
+	// Token: 0x0600B5DD RID: 46557 RVA: 0x0035BFE8 File Offset: 0x0035A1E8
 	private void SetShieldBarPercent(float percent)
 	{
 		bool flag = percent > 0f;
@@ -303,7 +303,7 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E1C1 RID: 57793 RVA: 0x00350618 File Offset: 0x0034E818
+	// Token: 0x0600B5DE RID: 46558 RVA: 0x0035C048 File Offset: 0x0035A248
 	private void SetHpBarPercent(float percent)
 	{
 		if (percent <= 0.2f)
@@ -318,7 +318,7 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		this.HpBarSprite.SetFillAmount(percent);
 	}
 
-	// Token: 0x0600E1C2 RID: 57794 RVA: 0x00350678 File Offset: 0x0034E878
+	// Token: 0x0600B5DF RID: 46559 RVA: 0x0035C0A8 File Offset: 0x0035A2A8
 	private void PlayBarAnimation()
 	{
 		if (this.AttrMap == null)
@@ -336,7 +336,7 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		this.HpBufferAnimTime = 0f;
 	}
 
-	// Token: 0x0600E1C3 RID: 57795 RVA: 0x003506C1 File Offset: 0x0034E8C1
+	// Token: 0x0600B5E0 RID: 46560 RVA: 0x0035C0F1 File Offset: 0x0035A2F1
 	private void StopBarLerpAnimation()
 	{
 		this.TargetBarPercent = 0f;
@@ -345,14 +345,14 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		this.HpBufferSprite.SetUIActive(false);
 	}
 
-	// Token: 0x0600E1C4 RID: 57796 RVA: 0x003506F0 File Offset: 0x0034E8F0
+	// Token: 0x0600B5E1 RID: 46561 RVA: 0x0035C120 File Offset: 0x0035A320
 	private void SetBarBufferPercent(float percent)
 	{
 		this.HpBufferSprite.SetFillAmount(percent);
 		this.HpBufferSprite.SetUIActive(true);
 	}
 
-	// Token: 0x0600E1C5 RID: 57797 RVA: 0x0035070C File Offset: 0x0034E90C
+	// Token: 0x0600B5E2 RID: 46562 RVA: 0x0035C13C File Offset: 0x0035A33C
 	private void LerpBarPercent(float delta)
 	{
 		if (this.HpBufferAnimTime == -1f)
@@ -373,27 +373,27 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		this.HpBufferAnimTime += delta;
 	}
 
-	// Token: 0x0600E1C6 RID: 57798 RVA: 0x00350785 File Offset: 0x0034E985
+	// Token: 0x0600B5E3 RID: 46563 RVA: 0x0035C1B5 File Offset: 0x0035A3B5
 	[NullableContext(2)]
 	public SurvivorsRogueWeaponStateGrid GetWeaponGrid(int weaponId)
 	{
 		return this.WeaponGridList.GetLayoutItemByKey(weaponId);
 	}
 
-	// Token: 0x0600E1C7 RID: 57799 RVA: 0x00350798 File Offset: 0x0034E998
+	// Token: 0x0600B5E4 RID: 46564 RVA: 0x0035C1C8 File Offset: 0x0035A3C8
 	[NullableContext(2)]
 	public SurvivorsRogueWeaponStateGrid GetWeaponGridByIndex(int index)
 	{
 		return this.WeaponGridList.GetLayoutItemByIndex(index);
 	}
 
-	// Token: 0x0600E1C8 RID: 57800 RVA: 0x003507A6 File Offset: 0x0034E9A6
+	// Token: 0x0600B5E5 RID: 46565 RVA: 0x0035C1D6 File Offset: 0x0035A3D6
 	public List<SurvivorsRogueWeaponStateGrid> GetAllWeaponGrid()
 	{
 		return this.WeaponGridList.GetLayoutItemList();
 	}
 
-	// Token: 0x0600E1C9 RID: 57801 RVA: 0x003507B4 File Offset: 0x0034E9B4
+	// Token: 0x0600B5E6 RID: 46566 RVA: 0x0035C1E4 File Offset: 0x0035A3E4
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -435,76 +435,76 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400685A RID: 26714
+	// Token: 0x04006939 RID: 26937
 	private const float LOW_HP_PERCENT = 0.2f;
 
-	// Token: 0x0400685B RID: 26715
+	// Token: 0x0400693A RID: 26938
 	private const string DEAD_SEQUENCE_NAME = "Dead";
 
-	// Token: 0x0400685C RID: 26716
+	// Token: 0x0400693B RID: 26939
 	[Nullable(2)]
 	private TMap<EKSC_AttrType, int> AttrMap;
 
-	// Token: 0x0400685D RID: 26717
+	// Token: 0x0400693C RID: 26940
 	private UUISprite ShieldBarSprite;
 
-	// Token: 0x0400685E RID: 26718
+	// Token: 0x0400693D RID: 26941
 	private UUISprite HpBarSprite;
 
-	// Token: 0x0400685F RID: 26719
+	// Token: 0x0400693E RID: 26942
 	private UUISprite LowHpBarSprite;
 
-	// Token: 0x04006860 RID: 26720
+	// Token: 0x0400693F RID: 26943
 	private UUISprite HpBufferSprite;
 
-	// Token: 0x04006861 RID: 26721
+	// Token: 0x04006940 RID: 26944
 	private UUIText HpText;
 
-	// Token: 0x04006862 RID: 26722
+	// Token: 0x04006941 RID: 26945
 	private UUIText HpText2;
 
-	// Token: 0x04006863 RID: 26723
+	// Token: 0x04006942 RID: 26946
 	private ULGUICanvas HpTextMask;
 
-	// Token: 0x04006864 RID: 26724
+	// Token: 0x04006943 RID: 26947
 	private UUIItem RoleHpBarItem;
 
-	// Token: 0x04006865 RID: 26725
+	// Token: 0x04006944 RID: 26948
 	private float HpTextWidth;
 
-	// Token: 0x04006866 RID: 26726
+	// Token: 0x04006945 RID: 26949
 	private FMargin UeMargin;
 
-	// Token: 0x04006867 RID: 26727
+	// Token: 0x04006946 RID: 26950
 	private float CurrentBarPercent = -1f;
 
-	// Token: 0x04006868 RID: 26728
+	// Token: 0x04006947 RID: 26951
 	private float TargetBarPercent;
 
-	// Token: 0x04006869 RID: 26729
+	// Token: 0x04006948 RID: 26952
 	private float SourceBarPercent;
 
-	// Token: 0x0400686A RID: 26730
+	// Token: 0x04006949 RID: 26953
 	private float HpBufferAnimTime = -1f;
 
-	// Token: 0x0400686B RID: 26731
+	// Token: 0x0400694A RID: 26954
 	private float HpBufferAnimDuration;
 
-	// Token: 0x0400686C RID: 26732
+	// Token: 0x0400694B RID: 26955
 	private float LastValidMaxHp = -1f;
 
-	// Token: 0x0400686D RID: 26733
+	// Token: 0x0400694C RID: 26956
 	[Nullable(2)]
 	private LevelSequencePlayer ShieldBarPlayer;
 
-	// Token: 0x0400686E RID: 26734
+	// Token: 0x0400694D RID: 26957
 	private bool ExistShieldBar;
 
-	// Token: 0x0400686F RID: 26735
+	// Token: 0x0400694E RID: 26958
 	[Nullable(2)]
 	private LevelSequencePlayer DeadEffectPlayer;
 
-	// Token: 0x04006870 RID: 26736
+	// Token: 0x0400694F RID: 26959
 	[Nullable(new byte[]
 	{
 		2,
@@ -513,51 +513,51 @@ public class SurvivorsRogueRoleStatePanel : UiPanelBase
 	})]
 	private GenericLayout<SurvivorsRogueWeaponStateGrid, ISurvivorsWeaponGridData> WeaponGridList;
 
-	// Token: 0x04006871 RID: 26737
+	// Token: 0x04006950 RID: 26960
 	[Nullable(2)]
 	public SurvivorsRogueRoleInfoGrid RoleGrid;
 
-	// Token: 0x04006872 RID: 26738
+	// Token: 0x04006951 RID: 26961
 	private readonly bool NeedRoleUpdate = true;
 
-	// Token: 0x04006873 RID: 26739
+	// Token: 0x04006952 RID: 26962
 	private readonly bool NeedWeaponUpdate = true;
 
-	// Token: 0x0200831A RID: 33562
+	// Token: 0x020074A3 RID: 29859
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AC21 RID: 175137
+		// Token: 0x04025F49 RID: 155465
 		public const int RoleGrid = 0;
 
-		// Token: 0x0402AC22 RID: 175138
+		// Token: 0x04025F4A RID: 155466
 		public const int WeaponLayout = 1;
 
-		// Token: 0x0402AC23 RID: 175139
+		// Token: 0x04025F4B RID: 155467
 		public const int WeaponGrid = 2;
 
-		// Token: 0x0402AC24 RID: 175140
+		// Token: 0x04025F4C RID: 155468
 		public const int RoleHpBar = 3;
 
-		// Token: 0x0402AC25 RID: 175141
+		// Token: 0x04025F4D RID: 155469
 		public const int RoleShieldBar = 4;
 
-		// Token: 0x0402AC26 RID: 175142
+		// Token: 0x04025F4E RID: 155470
 		public const int RoleHpNumber = 5;
 
-		// Token: 0x0402AC27 RID: 175143
+		// Token: 0x04025F4F RID: 155471
 		public const int RoleHpBufferBar = 6;
 
-		// Token: 0x0402AC28 RID: 175144
+		// Token: 0x04025F50 RID: 155472
 		public const int RoleHpMask = 7;
 
-		// Token: 0x0402AC29 RID: 175145
+		// Token: 0x04025F51 RID: 155473
 		public const int RoleHpNumber2 = 8;
 
-		// Token: 0x0402AC2A RID: 175146
+		// Token: 0x04025F52 RID: 155474
 		public const int RoleLowHpBar = 9;
 
-		// Token: 0x0402AC2B RID: 175147
+		// Token: 0x04025F53 RID: 155475
 		public const int RoleHpBarItem = 10;
 	}
 }

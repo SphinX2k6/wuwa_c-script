@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C1C RID: 7196
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E0B RID: 7691
 	public class IMotorParamsChangeConfig
 	{
-		// Token: 0x06009A6B RID: 39531 RVA: 0x00163364 File Offset: 0x00161564
+		// Token: 0x0600A39B RID: 41883 RVA: 0x001762B0 File Offset: 0x001744B0
 		private IMotorParamsChangeConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009A6C RID: 39532 RVA: 0x0016339C File Offset: 0x0016159C
+		// Token: 0x0600A39C RID: 41884 RVA: 0x001762E8 File Offset: 0x001744E8
 		public static IMotorParamsChangeConfig Create([Nullable(2)] IMotorParamsChangeConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A6D RID: 39533 RVA: 0x001633AF File Offset: 0x001615AF
+		// Token: 0x0600A39D RID: 41885 RVA: 0x001762FB File Offset: 0x001744FB
 		public static IMotorParamsChangeConfig CreateFromSetValue([Nullable(2)] IMotorParamsChangeConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A6E RID: 39534 RVA: 0x001633C2 File Offset: 0x001615C2
+		// Token: 0x0600A39E RID: 41886 RVA: 0x0017630E File Offset: 0x0017450E
 		public IMotorParamsChangeConfig_SetValue ToSetValue()
 		{
 			return new IMotorParamsChangeConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003062 RID: 12386
-		// (get) Token: 0x06009A6F RID: 39535 RVA: 0x001633D5 File Offset: 0x001615D5
-		// (set) Token: 0x06009A70 RID: 39536 RVA: 0x00163400 File Offset: 0x00161600
+		// Token: 0x170032CB RID: 13003
+		// (get) Token: 0x0600A39F RID: 41887 RVA: 0x00176321 File Offset: 0x00174521
+		// (set) Token: 0x0600A3A0 RID: 41888 RVA: 0x0017634C File Offset: 0x0017454C
 		public virtual EMotorParamsChangeType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005DEF RID: 24047
+		// Token: 0x04006316 RID: 25366
 		[Nullable(2)]
 		protected IMotorParamsChangeConfig FbInstance;
 
-		// Token: 0x04005DF0 RID: 24048
+		// Token: 0x04006317 RID: 25367
 		[Nullable(2)]
 		protected IMotorParamsChangeConfig_SetValue PocoInterface;
 	}

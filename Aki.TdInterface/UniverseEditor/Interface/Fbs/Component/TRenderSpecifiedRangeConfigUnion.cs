@@ -3,39 +3,55 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C9D RID: 23709
+	// Token: 0x020062CE RID: 25294
 	public class TRenderSpecifiedRangeConfigUnion
 	{
-		// Token: 0x1700B246 RID: 45638
-		// (get) Token: 0x0602899B RID: 166299 RVA: 0x00594A00 File Offset: 0x00592C00
-		// (set) Token: 0x0602899C RID: 166300 RVA: 0x00594A08 File Offset: 0x00592C08
+		// Token: 0x1700BBA0 RID: 48032
+		// (get) Token: 0x0602AFE1 RID: 176097 RVA: 0x005DD138 File Offset: 0x005DB338
+		// (set) Token: 0x0602AFE2 RID: 176098 RVA: 0x005DD140 File Offset: 0x005DB340
 		public TRenderSpecifiedRangeConfig Type { get; set; }
 
-		// Token: 0x1700B247 RID: 45639
-		// (get) Token: 0x0602899D RID: 166301 RVA: 0x00594A11 File Offset: 0x00592C11
-		// (set) Token: 0x0602899E RID: 166302 RVA: 0x00594A19 File Offset: 0x00592C19
+		// Token: 0x1700BBA1 RID: 48033
+		// (get) Token: 0x0602AFE3 RID: 176099 RVA: 0x005DD149 File Offset: 0x005DB349
+		// (set) Token: 0x0602AFE4 RID: 176100 RVA: 0x005DD151 File Offset: 0x005DB351
 		public object Value { get; set; }
 
-		// Token: 0x0602899F RID: 166303 RVA: 0x00594A22 File Offset: 0x00592C22
+		// Token: 0x0602AFE5 RID: 176101 RVA: 0x005DD15A File Offset: 0x005DB35A
 		public TRenderSpecifiedRangeConfigUnion()
 		{
 			this.Type = TRenderSpecifiedRangeConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060289A0 RID: 166304 RVA: 0x00594A38 File Offset: 0x00592C38
+		// Token: 0x0602AFE6 RID: 176102 RVA: 0x005DD170 File Offset: 0x005DB370
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060289A1 RID: 166305 RVA: 0x00594A4A File Offset: 0x00592C4A
+		// Token: 0x0602AFE7 RID: 176103 RVA: 0x005DD182 File Offset: 0x005DB382
+		public IRenderBeforeYourEyesSceneRevealT AsIRenderBeforeYourEyesSceneReveal()
+		{
+			return this.As<IRenderBeforeYourEyesSceneRevealT>();
+		}
+
+		// Token: 0x0602AFE8 RID: 176104 RVA: 0x005DD18A File Offset: 0x005DB38A
+		public static TRenderSpecifiedRangeConfigUnion FromIRenderBeforeYourEyesSceneReveal(IRenderBeforeYourEyesSceneRevealT _irenderbeforeyoureyesscenereveal)
+		{
+			return new TRenderSpecifiedRangeConfigUnion
+			{
+				Type = TRenderSpecifiedRangeConfig.IRenderBeforeYourEyesSceneReveal,
+				Value = _irenderbeforeyoureyesscenereveal
+			};
+		}
+
+		// Token: 0x0602AFE9 RID: 176105 RVA: 0x005DD19F File Offset: 0x005DB39F
 		public IRenderBookPageT AsIRenderBookPage()
 		{
 			return this.As<IRenderBookPageT>();
 		}
 
-		// Token: 0x060289A2 RID: 166306 RVA: 0x00594A52 File Offset: 0x00592C52
+		// Token: 0x0602AFEA RID: 176106 RVA: 0x005DD1A7 File Offset: 0x005DB3A7
 		public static TRenderSpecifiedRangeConfigUnion FromIRenderBookPage(IRenderBookPageT _irenderbookpage)
 		{
 			return new TRenderSpecifiedRangeConfigUnion
@@ -45,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060289A3 RID: 166307 RVA: 0x00594A67 File Offset: 0x00592C67
+		// Token: 0x0602AFEB RID: 176107 RVA: 0x005DD1BC File Offset: 0x005DB3BC
 		public IRenderFlowerBridgeT AsIRenderFlowerBridge()
 		{
 			return this.As<IRenderFlowerBridgeT>();
 		}
 
-		// Token: 0x060289A4 RID: 166308 RVA: 0x00594A6F File Offset: 0x00592C6F
+		// Token: 0x0602AFEC RID: 176108 RVA: 0x005DD1C4 File Offset: 0x005DB3C4
 		public static TRenderSpecifiedRangeConfigUnion FromIRenderFlowerBridge(IRenderFlowerBridgeT _irenderflowerbridge)
 		{
 			return new TRenderSpecifiedRangeConfigUnion
@@ -61,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060289A5 RID: 166309 RVA: 0x00594A84 File Offset: 0x00592C84
+		// Token: 0x0602AFED RID: 176109 RVA: 0x005DD1D9 File Offset: 0x005DB3D9
 		public IRenderFogBarrierT AsIRenderFogBarrier()
 		{
 			return this.As<IRenderFogBarrierT>();
 		}
 
-		// Token: 0x060289A6 RID: 166310 RVA: 0x00594A8C File Offset: 0x00592C8C
+		// Token: 0x0602AFEE RID: 176110 RVA: 0x005DD1E1 File Offset: 0x005DB3E1
 		public static TRenderSpecifiedRangeConfigUnion FromIRenderFogBarrier(IRenderFogBarrierT _irenderfogbarrier)
 		{
 			return new TRenderSpecifiedRangeConfigUnion
@@ -77,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060289A7 RID: 166311 RVA: 0x00594AA1 File Offset: 0x00592CA1
+		// Token: 0x0602AFEF RID: 176111 RVA: 0x005DD1F6 File Offset: 0x005DB3F6
 		public IRenderQuantumFollowShooterT AsIRenderQuantumFollowShooter()
 		{
 			return this.As<IRenderQuantumFollowShooterT>();
 		}
 
-		// Token: 0x060289A8 RID: 166312 RVA: 0x00594AA9 File Offset: 0x00592CA9
+		// Token: 0x0602AFF0 RID: 176112 RVA: 0x005DD1FE File Offset: 0x005DB3FE
 		public static TRenderSpecifiedRangeConfigUnion FromIRenderQuantumFollowShooter(IRenderQuantumFollowShooterT _irenderquantumfollowshooter)
 		{
 			return new TRenderSpecifiedRangeConfigUnion
@@ -93,11 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060289A9 RID: 166313 RVA: 0x00594AC0 File Offset: 0x00592CC0
+		// Token: 0x0602AFF1 RID: 176113 RVA: 0x005DD214 File Offset: 0x005DB414
 		public static int Pack(FlatBufferBuilder builder, TRenderSpecifiedRangeConfigUnion _o)
 		{
 			switch (_o.Type)
 			{
+			case TRenderSpecifiedRangeConfig.IRenderBeforeYourEyesSceneReveal:
+				return IRenderBeforeYourEyesSceneReveal.Pack(builder, _o.AsIRenderBeforeYourEyesSceneReveal()).Value;
 			case TRenderSpecifiedRangeConfig.IRenderBookPage:
 				return IRenderBookPage.Pack(builder, _o.AsIRenderBookPage()).Value;
 			case TRenderSpecifiedRangeConfig.IRenderFlowerBridge:

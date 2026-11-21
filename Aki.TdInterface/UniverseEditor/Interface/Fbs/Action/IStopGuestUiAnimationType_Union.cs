@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071D5 RID: 29141
+	// Token: 0x020079AA RID: 31146
 	public enum IStopGuestUiAnimationType_Union : byte
 	{
-		// Token: 0x04011CB6 RID: 72886
+		// Token: 0x04012CB8 RID: 76984
 		NONE,
-		// Token: 0x04011CB7 RID: 72887
+		// Token: 0x04012CB9 RID: 76985
 		IStopGuestUiAnimationType,
-		// Token: 0x04011CB8 RID: 72888
+		// Token: 0x04012CBA RID: 76986
 		IStopGuestCartethyia
 	}
 }

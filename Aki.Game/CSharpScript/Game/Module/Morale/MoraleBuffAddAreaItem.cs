@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053A5 RID: 21413
+	// Token: 0x02004388 RID: 17288
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Morale
 	})]
 	public class MoraleBuffAddAreaItem : GridProxyAbstract<MoraleAreaData>
 	{
-		// Token: 0x06036B87 RID: 224135 RVA: 0x00CF37F0 File Offset: 0x00CF19F0
+		// Token: 0x0602BACD RID: 178893 RVA: 0x00C42898 File Offset: 0x00C40A98
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,13 +27,13 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036B88 RID: 224136 RVA: 0x00CF3860 File Offset: 0x00CF1A60
+		// Token: 0x0602BACE RID: 178894 RVA: 0x00C42908 File Offset: 0x00C40B08
 		public override void Refresh(MoraleAreaData data, bool isSelected, int gridIndex)
 		{
 			this.Refresh(data);
 		}
 
-		// Token: 0x06036B89 RID: 224137 RVA: 0x00CF3869 File Offset: 0x00CF1A69
+		// Token: 0x0602BACF RID: 178895 RVA: 0x00C42911 File Offset: 0x00C40B11
 		public void Refresh(MoraleAreaData data)
 		{
 			this.ItemData = data;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.SetLockState();
 		}
 
-		// Token: 0x06036B8A RID: 224138 RVA: 0x00CF388C File Offset: 0x00CF1A8C
+		// Token: 0x0602BAD0 RID: 178896 RVA: 0x00C42934 File Offset: 0x00C40B34
 		public void SetActiveState()
 		{
 			this.SetSpriteActive(true);
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.SetAlpha(1f);
 		}
 
-		// Token: 0x06036B8B RID: 224139 RVA: 0x00CF38BD File Offset: 0x00CF1ABD
+		// Token: 0x0602BAD1 RID: 178897 RVA: 0x00C42965 File Offset: 0x00C40B65
 		public void SetLockState()
 		{
 			this.SetSpriteActive(false);
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.SetAlpha(0.3f);
 		}
 
-		// Token: 0x06036B8C RID: 224140 RVA: 0x00CF38EE File Offset: 0x00CF1AEE
+		// Token: 0x0602BAD2 RID: 178898 RVA: 0x00C42996 File Offset: 0x00C40B96
 		private void SetSpriteActive(bool isActive)
 		{
 			UUISprite sprite = base.GetSprite(2);
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Morale
 			sprite.SetUIActive(isActive);
 		}
 
-		// Token: 0x06036B8D RID: 224141 RVA: 0x00CF3902 File Offset: 0x00CF1B02
+		// Token: 0x0602BAD3 RID: 178899 RVA: 0x00C429AA File Offset: 0x00C40BAA
 		private void SetTextName(string nameKey)
 		{
 			UUIText text = base.GetText(1);
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Morale
 			text.ShowTextNew(nameKey);
 		}
 
-		// Token: 0x06036B8E RID: 224142 RVA: 0x00CF3916 File Offset: 0x00CF1B16
+		// Token: 0x0602BAD4 RID: 178900 RVA: 0x00C429BE File Offset: 0x00C40BBE
 		private void SetAlpha(float alpha)
 		{
 			UUIItem item = base.GetItem(0);
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Morale
 			item.SetAlpha(alpha);
 		}
 
-		// Token: 0x06036B8F RID: 224143 RVA: 0x00CF392A File Offset: 0x00CF1B2A
+		// Token: 0x0602BAD5 RID: 178901 RVA: 0x00C429D2 File Offset: 0x00C40BD2
 		private void SetRedDotActive(bool isActive)
 		{
 			UUIItem item = base.GetItem(3);
@@ -107,23 +107,23 @@ namespace CSharpScript.Game.Module.Morale
 			item.SetUIActive(isActive);
 		}
 
-		// Token: 0x0401CE52 RID: 118354
+		// Token: 0x040178EA RID: 96490
 		public MoraleAreaData ItemData;
 
-		// Token: 0x0200B637 RID: 46647
+		// Token: 0x0200A06F RID: 41071
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04037329 RID: 226089
+			// Token: 0x04031D7E RID: 204158
 			public const int ItemRoot = 0;
 
-			// Token: 0x0403732A RID: 226090
+			// Token: 0x04031D7F RID: 204159
 			public const int TxtName = 1;
 
-			// Token: 0x0403732B RID: 226091
+			// Token: 0x04031D80 RID: 204160
 			public const int SpriteActive = 2;
 
-			// Token: 0x0403732C RID: 226092
+			// Token: 0x04031D81 RID: 204161
 			public const int ItemRedDot = 3;
 		}
 	}

@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001A52 RID: 6738
+// Token: 0x02000F11 RID: 3857
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,13 +14,13 @@ using UnrealEngine;
 })]
 internal class OnlineItem : GridProxyAbstract<OnlineData>
 {
-	// Token: 0x0600C653 RID: 50771 RVA: 0x002D18AB File Offset: 0x002CFAAB
+	// Token: 0x06009A63 RID: 39523 RVA: 0x002DC9BF File Offset: 0x002DABBF
 	public OnlineItem(bool isShowInBottom)
 	{
 		this.IsShowInBottom = isShowInBottom;
 	}
 
-	// Token: 0x0600C654 RID: 50772 RVA: 0x002D18BC File Offset: 0x002CFABC
+	// Token: 0x06009A64 RID: 39524 RVA: 0x002DC9D0 File Offset: 0x002DABD0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -34,7 +34,7 @@ internal class OnlineItem : GridProxyAbstract<OnlineData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C655 RID: 50773 RVA: 0x002D1928 File Offset: 0x002CFB28
+	// Token: 0x06009A65 RID: 39525 RVA: 0x002DCA3C File Offset: 0x002DAC3C
 	private void RefreshName()
 	{
 		int? id = PlayerInfoModel.Instance.GetId();
@@ -56,7 +56,7 @@ internal class OnlineItem : GridProxyAbstract<OnlineData>
 		text.SetText(playerName, true);
 	}
 
-	// Token: 0x0600C656 RID: 50774 RVA: 0x002D19C8 File Offset: 0x002CFBC8
+	// Token: 0x06009A66 RID: 39526 RVA: 0x002DCADC File Offset: 0x002DACDC
 	private void RefreshPosTexture()
 	{
 		UUITexture texture = base.GetTexture(0);
@@ -65,7 +65,7 @@ internal class OnlineItem : GridProxyAbstract<OnlineData>
 		base.SetTextureByPath(resourcePath, texture, null, null);
 	}
 
-	// Token: 0x0600C657 RID: 50775 RVA: 0x002D1A07 File Offset: 0x002CFC07
+	// Token: 0x06009A67 RID: 39527 RVA: 0x002DCB1B File Offset: 0x002DAD1B
 	public override void Refresh(OnlineData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -73,20 +73,20 @@ internal class OnlineItem : GridProxyAbstract<OnlineData>
 		this.RefreshPosTexture();
 	}
 
-	// Token: 0x04005B62 RID: 23394
+	// Token: 0x04005C31 RID: 23601
 	private OnlineData Data;
 
-	// Token: 0x04005B63 RID: 23395
+	// Token: 0x04005C32 RID: 23602
 	private readonly bool IsShowInBottom;
 
-	// Token: 0x02007F9A RID: 32666
+	// Token: 0x02007129 RID: 28969
 	[NullableContext(0)]
 	private class EOnlineItem
 	{
-		// Token: 0x04029A9C RID: 170652
+		// Token: 0x04024DD9 RID: 151001
 		public const int PosTexture = 0;
 
-		// Token: 0x04029A9D RID: 170653
+		// Token: 0x04024DDA RID: 151002
 		public const int Name = 1;
 	}
 }

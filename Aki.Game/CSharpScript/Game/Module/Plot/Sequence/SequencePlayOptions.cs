@@ -3,43 +3,43 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.Sequence
 {
-	// Token: 0x02005017 RID: 20503
+	// Token: 0x02003FE1 RID: 16353
 	public sealed class SequencePlayOptions
 	{
-		// Token: 0x17007FFC RID: 32764
-		// (get) Token: 0x06034786 RID: 214918 RVA: 0x00C5BE90 File Offset: 0x00C5A090
+		// Token: 0x170053B1 RID: 21425
+		// (get) Token: 0x06029629 RID: 169513 RVA: 0x00BA73D0 File Offset: 0x00BA55D0
 		public EPlotCameraMode? CameraMode { get; }
 
-		// Token: 0x17007FFD RID: 32765
-		// (get) Token: 0x06034787 RID: 214919 RVA: 0x00C5BE98 File Offset: 0x00C5A098
+		// Token: 0x170053B2 RID: 21426
+		// (get) Token: 0x0602962A RID: 169514 RVA: 0x00BA73D8 File Offset: 0x00BA55D8
 		public bool IsSubtitleUiUse { get; }
 
-		// Token: 0x17007FFE RID: 32766
-		// (get) Token: 0x06034788 RID: 214920 RVA: 0x00C5BEA0 File Offset: 0x00C5A0A0
+		// Token: 0x170053B3 RID: 21427
+		// (get) Token: 0x0602962B RID: 169515 RVA: 0x00BA73E0 File Offset: 0x00BA55E0
 		public bool IsWaitRenderData { get; }
 
-		// Token: 0x17007FFF RID: 32767
-		// (get) Token: 0x06034789 RID: 214921 RVA: 0x00C5BEA8 File Offset: 0x00C5A0A8
+		// Token: 0x170053B4 RID: 21428
+		// (get) Token: 0x0602962C RID: 169516 RVA: 0x00BA73E8 File Offset: 0x00BA55E8
 		public float PlayRate { get; }
 
-		// Token: 0x17008000 RID: 32768
-		// (get) Token: 0x0603478A RID: 214922 RVA: 0x00C5BEB0 File Offset: 0x00C5A0B0
+		// Token: 0x170053B5 RID: 21429
+		// (get) Token: 0x0602962D RID: 169517 RVA: 0x00BA73F0 File Offset: 0x00BA55F0
 		public bool IsControlEntity { get; }
 
-		// Token: 0x17008001 RID: 32769
-		// (get) Token: 0x0603478B RID: 214923 RVA: 0x00C5BEB8 File Offset: 0x00C5A0B8
+		// Token: 0x170053B6 RID: 21430
+		// (get) Token: 0x0602962E RID: 169518 RVA: 0x00BA73F8 File Offset: 0x00BA55F8
 		public bool HandlePlayer { get; }
 
-		// Token: 0x17008002 RID: 32770
-		// (get) Token: 0x0603478C RID: 214924 RVA: 0x00C5BEC0 File Offset: 0x00C5A0C0
+		// Token: 0x170053B7 RID: 21431
+		// (get) Token: 0x0602962F RID: 169519 RVA: 0x00BA7400 File Offset: 0x00BA5600
 		public bool UseSequenceCamera { get; }
 
-		// Token: 0x17008003 RID: 32771
-		// (get) Token: 0x0603478D RID: 214925 RVA: 0x00C5BEC8 File Offset: 0x00C5A0C8
+		// Token: 0x170053B8 RID: 21432
+		// (get) Token: 0x06029630 RID: 169520 RVA: 0x00BA7408 File Offset: 0x00BA5608
 		public bool FollowSequencePlayer { get; }
 
-		// Token: 0x17008004 RID: 32772
-		// (get) Token: 0x0603478E RID: 214926 RVA: 0x00C5BED0 File Offset: 0x00C5A0D0
+		// Token: 0x170053B9 RID: 21433
+		// (get) Token: 0x06029631 RID: 169521 RVA: 0x00BA7410 File Offset: 0x00BA5610
 		public bool IsViewTargetControl
 		{
 			get
@@ -48,8 +48,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x17008005 RID: 32773
-		// (get) Token: 0x0603478F RID: 214927 RVA: 0x00C5BEE2 File Offset: 0x00C5A0E2
+		// Token: 0x170053BA RID: 21434
+		// (get) Token: 0x06029632 RID: 169522 RVA: 0x00BA7422 File Offset: 0x00BA5622
 		public bool DoNotHandlePlayerForControlEntityMode
 		{
 			get
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x06034790 RID: 214928 RVA: 0x00C5BEF8 File Offset: 0x00C5A0F8
+		// Token: 0x06029633 RID: 169523 RVA: 0x00BA7438 File Offset: 0x00BA5638
 		[NullableContext(2)]
 		public SequencePlayOptions(EPlotCameraMode? cameraMode, EntityControlRuntimeOptions entityControlOptions, bool isSubtitleUiUse, bool isWaitRenderData, float playRate)
 		{

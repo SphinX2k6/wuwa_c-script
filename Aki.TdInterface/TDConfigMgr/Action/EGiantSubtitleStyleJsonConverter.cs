@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200234A RID: 9034
+	// Token: 0x020025BD RID: 9661
 	public class EGiantSubtitleStyleJsonConverter : JsonConverter<EGiantSubtitleStyle>
 	{
-		// Token: 0x0600C54D RID: 50509 RVA: 0x001CCCD8 File Offset: 0x001CAED8
+		// Token: 0x0600D12E RID: 53550 RVA: 0x001E4EA4 File Offset: 0x001E30A4
 		public override EGiantSubtitleStyle Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EGiantSubtitleStyleExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C54E RID: 50510 RVA: 0x001CCCFC File Offset: 0x001CAEFC
+		// Token: 0x0600D12F RID: 53551 RVA: 0x001E4EC8 File Offset: 0x001E30C8
 		public override void Write(Utf8JsonWriter writer, EGiantSubtitleStyle value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

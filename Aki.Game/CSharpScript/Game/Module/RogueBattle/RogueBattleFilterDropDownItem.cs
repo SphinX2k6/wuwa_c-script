@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E5F RID: 20063
+	// Token: 0x02003E28 RID: 15912
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,12 +16,12 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleFilterDropDownItem : DropDownItemBase<RoleBondInfo>
 	{
-		// Token: 0x06033AE6 RID: 211686 RVA: 0x00C19D59 File Offset: 0x00C17F59
+		// Token: 0x06028951 RID: 166225 RVA: 0x00B63281 File Offset: 0x00B61481
 		public RogueBattleFilterDropDownItem(UUIItem uiItem) : base(uiItem)
 		{
 		}
 
-		// Token: 0x06033AE7 RID: 211687 RVA: 0x00C19D64 File Offset: 0x00C17F64
+		// Token: 0x06028952 RID: 166226 RVA: 0x00B6328C File Offset: 0x00B6148C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033AE8 RID: 211688 RVA: 0x00C19DEA File Offset: 0x00C17FEA
+		// Token: 0x06028953 RID: 166227 RVA: 0x00B63312 File Offset: 0x00B61512
 		[NullableContext(2)]
 		protected override UUIExtendToggle GetDropDownToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x06033AE9 RID: 211689 RVA: 0x00C19DF4 File Offset: 0x00C17FF4
+		// Token: 0x06028954 RID: 166228 RVA: 0x00B6331C File Offset: 0x00B6151C
 		protected override void OnShowDropDownItemBase(RoleBondInfo fetterInfo)
 		{
 			if (fetterInfo.ConfigId == 0)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetItem(4).SetUIActive(uiactive);
 		}
 
-		// Token: 0x06033AEA RID: 211690 RVA: 0x00C19EC0 File Offset: 0x00C180C0
+		// Token: 0x06028955 RID: 166229 RVA: 0x00B633E8 File Offset: 0x00B615E8
 		private void SetFetterAllSelect()
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath("T_RogueSelectAll");

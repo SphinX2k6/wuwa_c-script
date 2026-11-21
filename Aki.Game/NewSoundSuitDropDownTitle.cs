@@ -6,16 +6,16 @@ using Aki.Config;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020016A7 RID: 5799
+// Token: 0x02000B5F RID: 2911
 public class NewSoundSuitDropDownTitle : TitleItemBase<int>
 {
-	// Token: 0x0600A579 RID: 42361 RVA: 0x0024FC90 File Offset: 0x0024DE90
+	// Token: 0x06007959 RID: 31065 RVA: 0x0025A0A4 File Offset: 0x002582A4
 	[NullableContext(1)]
 	public NewSoundSuitDropDownTitle(UUIItem uiItem) : base(uiItem)
 	{
 	}
 
-	// Token: 0x0600A57A RID: 42362 RVA: 0x0024FC9C File Offset: 0x0024DE9C
+	// Token: 0x0600795A RID: 31066 RVA: 0x0025A0B0 File Offset: 0x002582B0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -29,7 +29,7 @@ public class NewSoundSuitDropDownTitle : TitleItemBase<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A57B RID: 42363 RVA: 0x0024FD08 File Offset: 0x0024DF08
+	// Token: 0x0600795B RID: 31067 RVA: 0x0025A11C File Offset: 0x0025831C
 	[NullableContext(1)]
 	public override void ShowTemp(int data, DropDownItemBase<int> selectedItemObj)
 	{
@@ -55,7 +55,7 @@ public class NewSoundSuitDropDownTitle : TitleItemBase<int>
 		this.VisionFetterSuitItem.SetActive(true);
 	}
 
-	// Token: 0x0600A57C RID: 42364 RVA: 0x0024FDEC File Offset: 0x0024DFEC
+	// Token: 0x0600795C RID: 31068 RVA: 0x0025A200 File Offset: 0x00258400
 	protected override void OnBeforeDestroy()
 	{
 		VisionFetterSuitItem visionFetterSuitItem = this.VisionFetterSuitItem;
@@ -66,16 +66,16 @@ public class NewSoundSuitDropDownTitle : TitleItemBase<int>
 		visionFetterSuitItem.Destroy(null);
 	}
 
-	// Token: 0x04004AD7 RID: 19159
+	// Token: 0x04004B7E RID: 19326
 	[Nullable(2)]
 	private VisionFetterSuitItem VisionFetterSuitItem;
 
-	// Token: 0x02007C7E RID: 31870
+	// Token: 0x02006E03 RID: 28163
 	private enum EComponent
 	{
-		// Token: 0x04028D8C RID: 167308
+		// Token: 0x040240B5 RID: 147637
 		TxtOption,
-		// Token: 0x04028D8D RID: 167309
+		// Token: 0x040240B6 RID: 147638
 		SuitElementItem
 	}
 }

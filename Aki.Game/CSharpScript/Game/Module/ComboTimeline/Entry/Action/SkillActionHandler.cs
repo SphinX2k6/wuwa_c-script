@@ -5,13 +5,13 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.ComboTimeline.Entry.Action
 {
-	// Token: 0x02005BA6 RID: 23462
+	// Token: 0x02004B86 RID: 19334
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SkillActionHandler : ActionEntryHandlerBase
 	{
-		// Token: 0x17008CEA RID: 36074
-		// (get) Token: 0x0603B550 RID: 243024 RVA: 0x00E233CD File Offset: 0x00E215CD
+		// Token: 0x170060BC RID: 24764
+		// (get) Token: 0x0603049D RID: 197789 RVA: 0x00D7391D File Offset: 0x00D71B1D
 		public override EShowTimelineActionType ActionType
 		{
 			get
@@ -20,19 +20,19 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry.Action
 			}
 		}
 
-		// Token: 0x0603B551 RID: 243025 RVA: 0x00E233D0 File Offset: 0x00E215D0
+		// Token: 0x0603049E RID: 197790 RVA: 0x00D73920 File Offset: 0x00D71B20
 		protected override void OnStartCapture()
 		{
 			EventSystem.Instance.Add<int, int, bool>(EEventName.CharUseSkill, new Action<int, int, bool>(this.OnCharUseSkill));
 		}
 
-		// Token: 0x0603B552 RID: 243026 RVA: 0x00E233EB File Offset: 0x00E215EB
+		// Token: 0x0603049F RID: 197791 RVA: 0x00D7393B File Offset: 0x00D71B3B
 		protected override void OnStopCapture()
 		{
 			EventSystem.Instance.Remove<int, int, bool>(EEventName.CharUseSkill, new Action<int, int, bool>(this.OnCharUseSkill));
 		}
 
-		// Token: 0x0603B553 RID: 243027 RVA: 0x00E23408 File Offset: 0x00E21608
+		// Token: 0x060304A0 RID: 197792 RVA: 0x00D73958 File Offset: 0x00D71B58
 		public unsafe override bool Apply(IShowTimelineAction entry, IComboTimelineReplayContext context)
 		{
 			int actionParam = entry.ActionParam;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry.Action
 			return flag;
 		}
 
-		// Token: 0x0603B554 RID: 243028 RVA: 0x00E234B4 File Offset: 0x00E216B4
+		// Token: 0x060304A1 RID: 197793 RVA: 0x00D73A04 File Offset: 0x00D71C04
 		public override string Describe(IShowTimelineAction entry)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(12, 1);
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry.Action
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0603B555 RID: 243029 RVA: 0x00E234F8 File Offset: 0x00E216F8
+		// Token: 0x060304A2 RID: 197794 RVA: 0x00D73A48 File Offset: 0x00D71C48
 		private unsafe void OnCharUseSkill(int entityId, int skillId, bool _)
 		{
 			IComboTimelineCaptureContext context = this.Context;

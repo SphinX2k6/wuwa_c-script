@@ -3,54 +3,54 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CD8 RID: 19672
+	// Token: 0x02003C89 RID: 15497
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DisplayableItem : IDisplayableItem
 	{
-		// Token: 0x17007D94 RID: 32148
-		// (get) Token: 0x06032C7F RID: 207999 RVA: 0x00BD559A File Offset: 0x00BD379A
-		// (set) Token: 0x06032C80 RID: 208000 RVA: 0x00BD55A2 File Offset: 0x00BD37A2
+		// Token: 0x1700513E RID: 20798
+		// (get) Token: 0x06027A33 RID: 162355 RVA: 0x00B1A332 File Offset: 0x00B18532
+		// (set) Token: 0x06027A34 RID: 162356 RVA: 0x00B1A33A File Offset: 0x00B1853A
 		public string DisplayName { get; set; }
 
-		// Token: 0x17007D95 RID: 32149
-		// (get) Token: 0x06032C81 RID: 208001 RVA: 0x00BD55AB File Offset: 0x00BD37AB
-		// (set) Token: 0x06032C82 RID: 208002 RVA: 0x00BD55B3 File Offset: 0x00BD37B3
+		// Token: 0x1700513F RID: 20799
+		// (get) Token: 0x06027A35 RID: 162357 RVA: 0x00B1A343 File Offset: 0x00B18543
+		// (set) Token: 0x06027A36 RID: 162358 RVA: 0x00B1A34B File Offset: 0x00B1854B
 		public string DisplayIcon { get; set; }
 
-		// Token: 0x17007D96 RID: 32150
-		// (get) Token: 0x06032C83 RID: 208003 RVA: 0x00BD55BC File Offset: 0x00BD37BC
-		// (set) Token: 0x06032C84 RID: 208004 RVA: 0x00BD55C4 File Offset: 0x00BD37C4
+		// Token: 0x17005140 RID: 20800
+		// (get) Token: 0x06027A37 RID: 162359 RVA: 0x00B1A354 File Offset: 0x00B18554
+		// (set) Token: 0x06027A38 RID: 162360 RVA: 0x00B1A35C File Offset: 0x00B1855C
 		public int? DisplayCount { get; set; }
 
-		// Token: 0x17007D97 RID: 32151
-		// (get) Token: 0x06032C85 RID: 208005 RVA: 0x00BD55CD File Offset: 0x00BD37CD
-		// (set) Token: 0x06032C86 RID: 208006 RVA: 0x00BD55D5 File Offset: 0x00BD37D5
+		// Token: 0x17005141 RID: 20801
+		// (get) Token: 0x06027A39 RID: 162361 RVA: 0x00B1A365 File Offset: 0x00B18565
+		// (set) Token: 0x06027A3A RID: 162362 RVA: 0x00B1A36D File Offset: 0x00B1856D
 		public bool IsUnlocked { get; set; }
 
-		// Token: 0x17007D98 RID: 32152
-		// (get) Token: 0x06032C87 RID: 208007 RVA: 0x00BD55DE File Offset: 0x00BD37DE
-		// (set) Token: 0x06032C88 RID: 208008 RVA: 0x00BD55E6 File Offset: 0x00BD37E6
+		// Token: 0x17005142 RID: 20802
+		// (get) Token: 0x06027A3B RID: 162363 RVA: 0x00B1A376 File Offset: 0x00B18576
+		// (set) Token: 0x06027A3C RID: 162364 RVA: 0x00B1A37E File Offset: 0x00B1857E
 		public bool IsEquipped { get; set; }
 
-		// Token: 0x17007D99 RID: 32153
-		// (get) Token: 0x06032C89 RID: 208009 RVA: 0x00BD55EF File Offset: 0x00BD37EF
-		// (set) Token: 0x06032C8A RID: 208010 RVA: 0x00BD55F7 File Offset: 0x00BD37F7
+		// Token: 0x17005143 RID: 20803
+		// (get) Token: 0x06027A3D RID: 162365 RVA: 0x00B1A387 File Offset: 0x00B18587
+		// (set) Token: 0x06027A3E RID: 162366 RVA: 0x00B1A38F File Offset: 0x00B1858F
 		public int? QualityLevel { get; set; }
 
-		// Token: 0x17007D9A RID: 32154
-		// (get) Token: 0x06032C8B RID: 208011 RVA: 0x00BD5600 File Offset: 0x00BD3800
-		// (set) Token: 0x06032C8C RID: 208012 RVA: 0x00BD5608 File Offset: 0x00BD3808
+		// Token: 0x17005144 RID: 20804
+		// (get) Token: 0x06027A3F RID: 162367 RVA: 0x00B1A398 File Offset: 0x00B18598
+		// (set) Token: 0x06027A40 RID: 162368 RVA: 0x00B1A3A0 File Offset: 0x00B185A0
 		public bool? IsFinished { get; set; }
 
-		// Token: 0x17007D9B RID: 32155
-		// (get) Token: 0x06032C8D RID: 208013 RVA: 0x00BD5611 File Offset: 0x00BD3811
-		// (set) Token: 0x06032C8E RID: 208014 RVA: 0x00BD5619 File Offset: 0x00BD3819
+		// Token: 0x17005145 RID: 20805
+		// (get) Token: 0x06027A41 RID: 162369 RVA: 0x00B1A3A9 File Offset: 0x00B185A9
+		// (set) Token: 0x06027A42 RID: 162370 RVA: 0x00B1A3B1 File Offset: 0x00B185B1
 		public EClickActionType ClickAction { get; set; }
 
-		// Token: 0x17007D9C RID: 32156
-		// (get) Token: 0x06032C8F RID: 208015 RVA: 0x00BD5622 File Offset: 0x00BD3822
-		// (set) Token: 0x06032C90 RID: 208016 RVA: 0x00BD562A File Offset: 0x00BD382A
+		// Token: 0x17005146 RID: 20806
+		// (get) Token: 0x06027A43 RID: 162371 RVA: 0x00B1A3BA File Offset: 0x00B185BA
+		// (set) Token: 0x06027A44 RID: 162372 RVA: 0x00B1A3C2 File Offset: 0x00B185C2
 		public int? ClickParam { get; set; }
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000E8 RID: 232
+	// Token: 0x020000F7 RID: 247
 	public class ConfigBattlePassUnlockPopByBattlePassTypeId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000571 RID: 1393 RVA: 0x0007867C File Offset: 0x0007687C
+		// Token: 0x060005CB RID: 1483 RVA: 0x0007DFE0 File Offset: 0x0007C1E0
 		static ConfigBattlePassUnlockPopByBattlePassTypeId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBattlePassUnlockPopByBattlePassTypeId.CreateStaticDefaultValue), new Action(ConfigBattlePassUnlockPopByBattlePassTypeId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000572 RID: 1394 RVA: 0x0007869C File Offset: 0x0007689C
+		// Token: 0x060005CC RID: 1484 RVA: 0x0007E000 File Offset: 0x0007C200
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBattlePassUnlockPopByBattlePassTypeId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000573 RID: 1395 RVA: 0x0007871B File Offset: 0x0007691B
+		// Token: 0x060005CD RID: 1485 RVA: 0x0007E07F File Offset: 0x0007C27F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBattlePassUnlockPopByBattlePassTypeId.LogPair = null;
 			ConfigBattlePassUnlockPopByBattlePassTypeId.HandleId = 0;
 		}
 
-		// Token: 0x06000574 RID: 1396 RVA: 0x00078729 File Offset: 0x00076929
+		// Token: 0x060005CE RID: 1486 RVA: 0x0007E08D File Offset: 0x0007C28D
 		public static void Init()
 		{
 			ConfigBattlePassUnlockPopByBattlePassTypeId.HandleId = ConfigCommon.InitDataStatement(ConfigBattlePassUnlockPopByBattlePassTypeId.HandleId, "db_battle_pass.db", "select BinData from `BattlePassUnlockPop` where TpyeID=?");
 		}
 
-		// Token: 0x06000575 RID: 1397 RVA: 0x00078744 File Offset: 0x00076944
+		// Token: 0x060005CF RID: 1487 RVA: 0x0007E0A8 File Offset: 0x0007C2A8
 		public static BattlePassUnlockPop? GetConfig(int p0TpyeID, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBattlePassUnlockPopByBattlePassTypeId.HandleId, ConfigBattlePassUnlockPopByBattlePassTypeId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BattlePassUnlockPop?(rootAsBattlePassUnlockPop);
 		}
 
-		// Token: 0x0400063C RID: 1596
+		// Token: 0x040006A5 RID: 1701
 		private const string DB = "db_battle_pass.db";
 
-		// Token: 0x0400063D RID: 1597
+		// Token: 0x040006A6 RID: 1702
 		private const string FILE = "z.战令.xlsx";
 
-		// Token: 0x0400063E RID: 1598
+		// Token: 0x040006A7 RID: 1703
 		private const string TABLE = "BattlePassUnlockPop";
 
-		// Token: 0x0400063F RID: 1599
+		// Token: 0x040006A8 RID: 1704
 		private const string COMMAND = "select BinData from `BattlePassUnlockPop` where TpyeID=?";
 
-		// Token: 0x04000640 RID: 1600
+		// Token: 0x040006A9 RID: 1705
 		private const string KEY_PREFIX = "BattlePassUnlockPopByBattlePassTypeId";
 
-		// Token: 0x04000641 RID: 1601
+		// Token: 0x040006AA RID: 1706
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000642 RID: 1602
+		// Token: 0x040006AB RID: 1707
 		private static int HandleId;
 	}
 }

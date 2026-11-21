@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B69 RID: 27497
+	// Token: 0x020072AF RID: 29359
 	public struct IMoveWithSpline : IFlatbufferObject
 	{
-		// Token: 0x1700CC4D RID: 52301
-		// (get) Token: 0x06030459 RID: 197721 RVA: 0x0068F1CF File Offset: 0x0068D3CF
+		// Token: 0x1700D732 RID: 55090
+		// (get) Token: 0x060332B0 RID: 209584 RVA: 0x006E778B File Offset: 0x006E598B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603045A RID: 197722 RVA: 0x0068F1DC File Offset: 0x0068D3DC
+		// Token: 0x060332B1 RID: 209585 RVA: 0x006E7798 File Offset: 0x006E5998
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603045B RID: 197723 RVA: 0x0068F1E4 File Offset: 0x0068D3E4
+		// Token: 0x060332B2 RID: 209586 RVA: 0x006E77A0 File Offset: 0x006E59A0
 		public static IMoveWithSpline GetRootAsIMoveWithSpline(ByteBuffer _bb)
 		{
 			return IMoveWithSpline.GetRootAsIMoveWithSpline(_bb, default(IMoveWithSpline));
 		}
 
-		// Token: 0x0603045C RID: 197724 RVA: 0x0068F200 File Offset: 0x0068D400
+		// Token: 0x060332B3 RID: 209587 RVA: 0x006E77BC File Offset: 0x006E59BC
 		public static IMoveWithSpline GetRootAsIMoveWithSpline(ByteBuffer _bb, IMoveWithSpline obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603045D RID: 197725 RVA: 0x0068F21D File Offset: 0x0068D41D
+		// Token: 0x060332B4 RID: 209588 RVA: 0x006E77D9 File Offset: 0x006E59D9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603045E RID: 197726 RVA: 0x0068F22C File Offset: 0x0068D42C
+		// Token: 0x060332B5 RID: 209589 RVA: 0x006E77E8 File Offset: 0x006E59E8
 		public IMoveWithSpline __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CC4E RID: 52302
-		// (get) Token: 0x0603045F RID: 197727 RVA: 0x0068F23C File Offset: 0x0068D43C
+		// Token: 0x1700D733 RID: 55091
+		// (get) Token: 0x060332B6 RID: 209590 RVA: 0x006E77F8 File Offset: 0x006E59F8
 		public TSplineMoveTarget MoveTargetType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030460 RID: 197728 RVA: 0x0068F278 File Offset: 0x0068D478
+		// Token: 0x060332B7 RID: 209591 RVA: 0x006E7834 File Offset: 0x006E5A34
 		public TTable? MoveTarget<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,20 +73,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06030461 RID: 197729 RVA: 0x0068F2BC File Offset: 0x0068D4BC
+		// Token: 0x060332B8 RID: 209592 RVA: 0x006E7878 File Offset: 0x006E5A78
+		public IAssistCharacterSplineMoveTarget MoveTargetAsIAssistCharacterSplineMoveTarget()
+		{
+			return this.MoveTarget<IAssistCharacterSplineMoveTarget>().Value;
+		}
+
+		// Token: 0x060332B9 RID: 209593 RVA: 0x006E7894 File Offset: 0x006E5A94
 		public IEntitySplineMoveTarget MoveTargetAsIEntitySplineMoveTarget()
 		{
 			return this.MoveTarget<IEntitySplineMoveTarget>().Value;
 		}
 
-		// Token: 0x06030462 RID: 197730 RVA: 0x0068F2D8 File Offset: 0x0068D4D8
+		// Token: 0x060332BA RID: 209594 RVA: 0x006E78B0 File Offset: 0x006E5AB0
 		public IPlayerSplineMoveTarget MoveTargetAsIPlayerSplineMoveTarget()
 		{
 			return this.MoveTarget<IPlayerSplineMoveTarget>().Value;
 		}
 
-		// Token: 0x1700CC4F RID: 52303
-		// (get) Token: 0x06030463 RID: 197731 RVA: 0x0068F2F4 File Offset: 0x0068D4F4
+		// Token: 0x1700D734 RID: 55092
+		// (get) Token: 0x060332BB RID: 209595 RVA: 0x006E78CC File Offset: 0x006E5ACC
 		public int SplineEntityId
 		{
 			get
@@ -100,8 +106,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC50 RID: 52304
-		// (get) Token: 0x06030464 RID: 197732 RVA: 0x0068F330 File Offset: 0x0068D530
+		// Token: 0x1700D735 RID: 55093
+		// (get) Token: 0x060332BC RID: 209596 RVA: 0x006E7908 File Offset: 0x006E5B08
 		public ICheckClimb? CheckClimb
 		{
 			get
@@ -115,8 +121,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC51 RID: 52305
-		// (get) Token: 0x06030465 RID: 197733 RVA: 0x0068F390 File Offset: 0x0068D590
+		// Token: 0x1700D736 RID: 55094
+		// (get) Token: 0x060332BD RID: 209597 RVA: 0x006E7968 File Offset: 0x006E5B68
 		public IMoveOnWallConfig? MoveOnWallConfig
 		{
 			get
@@ -130,8 +136,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC52 RID: 52306
-		// (get) Token: 0x06030466 RID: 197734 RVA: 0x0068F3F0 File Offset: 0x0068D5F0
+		// Token: 0x1700D737 RID: 55095
+		// (get) Token: 0x060332BE RID: 209598 RVA: 0x006E79C8 File Offset: 0x006E5BC8
 		public EMoveSpeed MoveState
 		{
 			get
@@ -145,8 +151,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC53 RID: 52307
-		// (get) Token: 0x06030467 RID: 197735 RVA: 0x0068F430 File Offset: 0x0068D630
+		// Token: 0x1700D738 RID: 55096
+		// (get) Token: 0x060332BF RID: 209599 RVA: 0x006E7A08 File Offset: 0x006E5C08
 		public int StartPointIndex
 		{
 			get
@@ -160,8 +166,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC54 RID: 52308
-		// (get) Token: 0x06030468 RID: 197736 RVA: 0x0068F470 File Offset: 0x0068D670
+		// Token: 0x1700D739 RID: 55097
+		// (get) Token: 0x060332C0 RID: 209600 RVA: 0x006E7A48 File Offset: 0x006E5C48
 		public int EndPointIndex
 		{
 			get
@@ -175,8 +181,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC55 RID: 52309
-		// (get) Token: 0x06030469 RID: 197737 RVA: 0x0068F4B0 File Offset: 0x0068D6B0
+		// Token: 0x1700D73A RID: 55098
+		// (get) Token: 0x060332C1 RID: 209601 RVA: 0x006E7A88 File Offset: 0x006E5C88
 		public bool IsFollowStrictly
 		{
 			get
@@ -186,8 +192,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC56 RID: 52310
-		// (get) Token: 0x0603046A RID: 197738 RVA: 0x0068F4F0 File Offset: 0x0068D6F0
+		// Token: 0x1700D73B RID: 55099
+		// (get) Token: 0x060332C2 RID: 209602 RVA: 0x006E7AC8 File Offset: 0x006E5CC8
 		public bool IsForceToFirstPoint
 		{
 			get
@@ -197,8 +203,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC57 RID: 52311
-		// (get) Token: 0x0603046B RID: 197739 RVA: 0x0068F530 File Offset: 0x0068D730
+		// Token: 0x1700D73C RID: 55100
+		// (get) Token: 0x060332C3 RID: 209603 RVA: 0x006E7B08 File Offset: 0x006E5D08
 		public bool IsLookDir
 		{
 			get
@@ -208,8 +214,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC58 RID: 52312
-		// (get) Token: 0x0603046C RID: 197740 RVA: 0x0068F570 File Offset: 0x0068D770
+		// Token: 0x1700D73D RID: 55101
+		// (get) Token: 0x060332C4 RID: 209604 RVA: 0x006E7B48 File Offset: 0x006E5D48
 		public INpcFollowConfig? NpcFollow
 		{
 			get
@@ -223,8 +229,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC59 RID: 52313
-		// (get) Token: 0x0603046D RID: 197741 RVA: 0x0068F5D0 File Offset: 0x0068D7D0
+		// Token: 0x1700D73E RID: 55102
+		// (get) Token: 0x060332C5 RID: 209605 RVA: 0x006E7BA8 File Offset: 0x006E5DA8
 		public bool NpcCollisionEnabled
 		{
 			get
@@ -234,8 +240,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC5A RID: 52314
-		// (get) Token: 0x0603046E RID: 197742 RVA: 0x0068F610 File Offset: 0x0068D810
+		// Token: 0x1700D73F RID: 55103
+		// (get) Token: 0x060332C6 RID: 209606 RVA: 0x006E7BE8 File Offset: 0x006E5DE8
 		public byte NullMask
 		{
 			get
@@ -249,7 +255,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603046F RID: 197743 RVA: 0x0068F650 File Offset: 0x0068D850
+		// Token: 0x060332C7 RID: 209607 RVA: 0x006E7C28 File Offset: 0x006E5E28
 		public static Offset<IMoveWithSpline> CreateIMoveWithSpline(FlatBufferBuilder builder, TSplineMoveTarget MoveTarget_type = TSplineMoveTarget.NONE, int MoveTargetOffset = 0, int SplineEntityId = 0, Offset<ICheckClimb> CheckClimbOffset = default(Offset<ICheckClimb>), Offset<IMoveOnWallConfig> MoveOnWallConfigOffset = default(Offset<IMoveOnWallConfig>), EMoveSpeed MoveState = EMoveSpeed.None, int StartPointIndex = 0, int EndPointIndex = 0, bool IsFollowStrictly = false, bool IsForceToFirstPoint = false, bool IsLookDir = false, Offset<INpcFollowConfig> NpcFollowOffset = default(Offset<INpcFollowConfig>), bool NpcCollisionEnabled = false, byte NullMask = 0)
 		{
 			builder.StartTable(14);
@@ -270,103 +276,103 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMoveWithSpline.EndIMoveWithSpline(builder);
 		}
 
-		// Token: 0x06030470 RID: 197744 RVA: 0x0068F6D8 File Offset: 0x0068D8D8
+		// Token: 0x060332C8 RID: 209608 RVA: 0x006E7CB0 File Offset: 0x006E5EB0
 		public static void StartIMoveWithSpline(FlatBufferBuilder builder)
 		{
 			builder.StartTable(14);
 		}
 
-		// Token: 0x06030471 RID: 197745 RVA: 0x0068F6E2 File Offset: 0x0068D8E2
+		// Token: 0x060332C9 RID: 209609 RVA: 0x006E7CBA File Offset: 0x006E5EBA
 		public static void AddMoveTargetType(FlatBufferBuilder builder, TSplineMoveTarget moveTargetType)
 		{
 			builder.AddByte(0, (byte)moveTargetType, 0);
 		}
 
-		// Token: 0x06030472 RID: 197746 RVA: 0x0068F6ED File Offset: 0x0068D8ED
+		// Token: 0x060332CA RID: 209610 RVA: 0x006E7CC5 File Offset: 0x006E5EC5
 		public static void AddMoveTarget(FlatBufferBuilder builder, int moveTargetOffset)
 		{
 			builder.AddOffset(1, moveTargetOffset, 0);
 		}
 
-		// Token: 0x06030473 RID: 197747 RVA: 0x0068F6F8 File Offset: 0x0068D8F8
+		// Token: 0x060332CB RID: 209611 RVA: 0x006E7CD0 File Offset: 0x006E5ED0
 		public static void AddSplineEntityId(FlatBufferBuilder builder, int splineEntityId)
 		{
 			builder.AddInt(2, splineEntityId, 0);
 		}
 
-		// Token: 0x06030474 RID: 197748 RVA: 0x0068F703 File Offset: 0x0068D903
+		// Token: 0x060332CC RID: 209612 RVA: 0x006E7CDB File Offset: 0x006E5EDB
 		public static void AddCheckClimb(FlatBufferBuilder builder, Offset<ICheckClimb> checkClimbOffset)
 		{
 			builder.AddOffset(3, checkClimbOffset.Value, 0);
 		}
 
-		// Token: 0x06030475 RID: 197749 RVA: 0x0068F713 File Offset: 0x0068D913
+		// Token: 0x060332CD RID: 209613 RVA: 0x006E7CEB File Offset: 0x006E5EEB
 		public static void AddMoveOnWallConfig(FlatBufferBuilder builder, Offset<IMoveOnWallConfig> moveOnWallConfigOffset)
 		{
 			builder.AddOffset(4, moveOnWallConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06030476 RID: 197750 RVA: 0x0068F723 File Offset: 0x0068D923
+		// Token: 0x060332CE RID: 209614 RVA: 0x006E7CFB File Offset: 0x006E5EFB
 		public static void AddMoveState(FlatBufferBuilder builder, EMoveSpeed moveState)
 		{
 			builder.AddByte(5, (byte)moveState, 0);
 		}
 
-		// Token: 0x06030477 RID: 197751 RVA: 0x0068F72E File Offset: 0x0068D92E
+		// Token: 0x060332CF RID: 209615 RVA: 0x006E7D06 File Offset: 0x006E5F06
 		public static void AddStartPointIndex(FlatBufferBuilder builder, int startPointIndex)
 		{
 			builder.AddInt(6, startPointIndex, 0);
 		}
 
-		// Token: 0x06030478 RID: 197752 RVA: 0x0068F739 File Offset: 0x0068D939
+		// Token: 0x060332D0 RID: 209616 RVA: 0x006E7D11 File Offset: 0x006E5F11
 		public static void AddEndPointIndex(FlatBufferBuilder builder, int endPointIndex)
 		{
 			builder.AddInt(7, endPointIndex, 0);
 		}
 
-		// Token: 0x06030479 RID: 197753 RVA: 0x0068F744 File Offset: 0x0068D944
+		// Token: 0x060332D1 RID: 209617 RVA: 0x006E7D1C File Offset: 0x006E5F1C
 		public static void AddIsFollowStrictly(FlatBufferBuilder builder, bool isFollowStrictly)
 		{
 			builder.AddBool(8, isFollowStrictly, false);
 		}
 
-		// Token: 0x0603047A RID: 197754 RVA: 0x0068F74F File Offset: 0x0068D94F
+		// Token: 0x060332D2 RID: 209618 RVA: 0x006E7D27 File Offset: 0x006E5F27
 		public static void AddIsForceToFirstPoint(FlatBufferBuilder builder, bool isForceToFirstPoint)
 		{
 			builder.AddBool(9, isForceToFirstPoint, false);
 		}
 
-		// Token: 0x0603047B RID: 197755 RVA: 0x0068F75B File Offset: 0x0068D95B
+		// Token: 0x060332D3 RID: 209619 RVA: 0x006E7D33 File Offset: 0x006E5F33
 		public static void AddIsLookDir(FlatBufferBuilder builder, bool isLookDir)
 		{
 			builder.AddBool(10, isLookDir, false);
 		}
 
-		// Token: 0x0603047C RID: 197756 RVA: 0x0068F767 File Offset: 0x0068D967
+		// Token: 0x060332D4 RID: 209620 RVA: 0x006E7D3F File Offset: 0x006E5F3F
 		public static void AddNpcFollow(FlatBufferBuilder builder, Offset<INpcFollowConfig> npcFollowOffset)
 		{
 			builder.AddOffset(11, npcFollowOffset.Value, 0);
 		}
 
-		// Token: 0x0603047D RID: 197757 RVA: 0x0068F778 File Offset: 0x0068D978
+		// Token: 0x060332D5 RID: 209621 RVA: 0x006E7D50 File Offset: 0x006E5F50
 		public static void AddNpcCollisionEnabled(FlatBufferBuilder builder, bool npcCollisionEnabled)
 		{
 			builder.AddBool(12, npcCollisionEnabled, false);
 		}
 
-		// Token: 0x0603047E RID: 197758 RVA: 0x0068F784 File Offset: 0x0068D984
+		// Token: 0x060332D6 RID: 209622 RVA: 0x006E7D5C File Offset: 0x006E5F5C
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(13, nullMask, 0);
 		}
 
-		// Token: 0x0603047F RID: 197759 RVA: 0x0068F790 File Offset: 0x0068D990
+		// Token: 0x060332D7 RID: 209623 RVA: 0x006E7D68 File Offset: 0x006E5F68
 		public static Offset<IMoveWithSpline> EndIMoveWithSpline(FlatBufferBuilder builder)
 		{
 			return new Offset<IMoveWithSpline>(builder.EndTable());
 		}
 
-		// Token: 0x06030480 RID: 197760 RVA: 0x0068F7A0 File Offset: 0x0068D9A0
+		// Token: 0x060332D8 RID: 209624 RVA: 0x006E7D78 File Offset: 0x006E5F78
 		public IMoveWithSplineT UnPack()
 		{
 			IMoveWithSplineT moveWithSplineT = new IMoveWithSplineT();
@@ -374,22 +380,22 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return moveWithSplineT;
 		}
 
-		// Token: 0x06030481 RID: 197761 RVA: 0x0068F7BC File Offset: 0x0068D9BC
+		// Token: 0x060332D9 RID: 209625 RVA: 0x006E7D94 File Offset: 0x006E5F94
 		public void UnPackTo(IMoveWithSplineT _o)
 		{
 			_o.MoveTarget = new TSplineMoveTargetUnion();
 			_o.MoveTarget.Type = this.MoveTargetType;
-			TSplineMoveTarget moveTargetType = this.MoveTargetType;
-			if (moveTargetType != TSplineMoveTarget.IEntitySplineMoveTarget)
+			switch (this.MoveTargetType)
 			{
-				if (moveTargetType == TSplineMoveTarget.IPlayerSplineMoveTarget)
-				{
-					_o.MoveTarget.Value = ((this.MoveTarget<IPlayerSplineMoveTarget>() != null) ? this.MoveTarget<IPlayerSplineMoveTarget>().Value.UnPack() : null);
-				}
-			}
-			else
-			{
+			case TSplineMoveTarget.IAssistCharacterSplineMoveTarget:
+				_o.MoveTarget.Value = ((this.MoveTarget<IAssistCharacterSplineMoveTarget>() != null) ? this.MoveTarget<IAssistCharacterSplineMoveTarget>().Value.UnPack() : null);
+				break;
+			case TSplineMoveTarget.IEntitySplineMoveTarget:
 				_o.MoveTarget.Value = ((this.MoveTarget<IEntitySplineMoveTarget>() != null) ? this.MoveTarget<IEntitySplineMoveTarget>().Value.UnPack() : null);
+				break;
+			case TSplineMoveTarget.IPlayerSplineMoveTarget:
+				_o.MoveTarget.Value = ((this.MoveTarget<IPlayerSplineMoveTarget>() != null) ? this.MoveTarget<IPlayerSplineMoveTarget>().Value.UnPack() : null);
+				break;
 			}
 			_o.SplineEntityId = this.SplineEntityId;
 			_o.CheckClimb = ((this.CheckClimb != null) ? this.CheckClimb.Value.UnPack() : null);
@@ -405,7 +411,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06030482 RID: 197762 RVA: 0x0068F964 File Offset: 0x0068DB64
+		// Token: 0x060332DA RID: 209626 RVA: 0x006E7F84 File Offset: 0x006E6184
 		public static Offset<IMoveWithSpline> Pack(FlatBufferBuilder builder, IMoveWithSplineT _o)
 		{
 			if (_o == null)
@@ -420,7 +426,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMoveWithSpline.CreateIMoveWithSpline(builder, moveTarget_type, moveTargetOffset, _o.SplineEntityId, checkClimbOffset, moveOnWallConfigOffset, _o.MoveState, _o.StartPointIndex, _o.EndPointIndex, _o.IsFollowStrictly, _o.IsForceToFirstPoint, _o.IsLookDir, npcFollowOffset, _o.NpcCollisionEnabled, _o.NullMask);
 		}
 
-		// Token: 0x04011417 RID: 70679
+		// Token: 0x04012340 RID: 74560
 		private Table __p;
 	}
 }

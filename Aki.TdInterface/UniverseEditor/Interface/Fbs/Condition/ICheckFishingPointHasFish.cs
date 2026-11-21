@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A27 RID: 18983
+	// Token: 0x02004EEA RID: 20202
 	public struct ICheckFishingPointHasFish : IFlatbufferObject
 	{
-		// Token: 0x1700896A RID: 35178
-		// (get) Token: 0x0601DB45 RID: 121669 RVA: 0x0042DA94 File Offset: 0x0042BC94
+		// Token: 0x1700903F RID: 36927
+		// (get) Token: 0x0601F5CE RID: 128462 RVA: 0x0045E98C File Offset: 0x0045CB8C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DB46 RID: 121670 RVA: 0x0042DAA1 File Offset: 0x0042BCA1
+		// Token: 0x0601F5CF RID: 128463 RVA: 0x0045E999 File Offset: 0x0045CB99
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DB47 RID: 121671 RVA: 0x0042DAA8 File Offset: 0x0042BCA8
+		// Token: 0x0601F5D0 RID: 128464 RVA: 0x0045E9A0 File Offset: 0x0045CBA0
 		public static ICheckFishingPointHasFish GetRootAsICheckFishingPointHasFish(ByteBuffer _bb)
 		{
 			return ICheckFishingPointHasFish.GetRootAsICheckFishingPointHasFish(_bb, default(ICheckFishingPointHasFish));
 		}
 
-		// Token: 0x0601DB48 RID: 121672 RVA: 0x0042DAC4 File Offset: 0x0042BCC4
+		// Token: 0x0601F5D1 RID: 128465 RVA: 0x0045E9BC File Offset: 0x0045CBBC
 		public static ICheckFishingPointHasFish GetRootAsICheckFishingPointHasFish(ByteBuffer _bb, ICheckFishingPointHasFish obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DB49 RID: 121673 RVA: 0x0042DAE1 File Offset: 0x0042BCE1
+		// Token: 0x0601F5D2 RID: 128466 RVA: 0x0045E9D9 File Offset: 0x0045CBD9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DB4A RID: 121674 RVA: 0x0042DAF0 File Offset: 0x0042BCF0
+		// Token: 0x0601F5D3 RID: 128467 RVA: 0x0045E9E8 File Offset: 0x0045CBE8
 		public ICheckFishingPointHasFish __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700896B RID: 35179
-		// (get) Token: 0x0601DB4B RID: 121675 RVA: 0x0042DB00 File Offset: 0x0042BD00
+		// Token: 0x17009040 RID: 36928
+		// (get) Token: 0x0601F5D4 RID: 128468 RVA: 0x0045E9F8 File Offset: 0x0045CBF8
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700896C RID: 35180
-		// (get) Token: 0x0601DB4C RID: 121676 RVA: 0x0042DB3C File Offset: 0x0042BD3C
+		// Token: 0x17009041 RID: 36929
+		// (get) Token: 0x0601F5D5 RID: 128469 RVA: 0x0045EA34 File Offset: 0x0045CC34
 		public bool HasFish
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DB4D RID: 121677 RVA: 0x0042DB7B File Offset: 0x0042BD7B
+		// Token: 0x0601F5D6 RID: 128470 RVA: 0x0045EA73 File Offset: 0x0045CC73
 		public static Offset<ICheckFishingPointHasFish> CreateICheckFishingPointHasFish(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, bool HasFish = false)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckFishingPointHasFish.EndICheckFishingPointHasFish(builder);
 		}
 
-		// Token: 0x0601DB4E RID: 121678 RVA: 0x0042DB98 File Offset: 0x0042BD98
+		// Token: 0x0601F5D7 RID: 128471 RVA: 0x0045EA90 File Offset: 0x0045CC90
 		public static void StartICheckFishingPointHasFish(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601DB4F RID: 121679 RVA: 0x0042DBA1 File Offset: 0x0042BDA1
+		// Token: 0x0601F5D8 RID: 128472 RVA: 0x0045EA99 File Offset: 0x0045CC99
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DB50 RID: 121680 RVA: 0x0042DBAC File Offset: 0x0042BDAC
+		// Token: 0x0601F5D9 RID: 128473 RVA: 0x0045EAA4 File Offset: 0x0045CCA4
 		public static void AddHasFish(FlatBufferBuilder builder, bool hasFish)
 		{
 			builder.AddBool(1, hasFish, false);
 		}
 
-		// Token: 0x0601DB51 RID: 121681 RVA: 0x0042DBB7 File Offset: 0x0042BDB7
+		// Token: 0x0601F5DA RID: 128474 RVA: 0x0045EAAF File Offset: 0x0045CCAF
 		public static Offset<ICheckFishingPointHasFish> EndICheckFishingPointHasFish(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckFishingPointHasFish>(builder.EndTable());
 		}
 
-		// Token: 0x0601DB52 RID: 121682 RVA: 0x0042DBC4 File Offset: 0x0042BDC4
+		// Token: 0x0601F5DB RID: 128475 RVA: 0x0045EABC File Offset: 0x0045CCBC
 		public ICheckFishingPointHasFishT UnPack()
 		{
 			ICheckFishingPointHasFishT checkFishingPointHasFishT = new ICheckFishingPointHasFishT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkFishingPointHasFishT;
 		}
 
-		// Token: 0x0601DB53 RID: 121683 RVA: 0x0042DBDF File Offset: 0x0042BDDF
+		// Token: 0x0601F5DC RID: 128476 RVA: 0x0045EAD7 File Offset: 0x0045CCD7
 		public void UnPackTo(ICheckFishingPointHasFishT _o)
 		{
 			_o.Type = this.Type;
 			_o.HasFish = this.HasFish;
 		}
 
-		// Token: 0x0601DB54 RID: 121684 RVA: 0x0042DBFC File Offset: 0x0042BDFC
+		// Token: 0x0601F5DD RID: 128477 RVA: 0x0045EAF4 File Offset: 0x0045CCF4
 		public static Offset<ICheckFishingPointHasFish> Pack(FlatBufferBuilder builder, ICheckFishingPointHasFishT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckFishingPointHasFish.CreateICheckFishingPointHasFish(builder, _o.Type, _o.HasFish);
 		}
 
-		// Token: 0x0400D279 RID: 53881
+		// Token: 0x0400DD50 RID: 56656
 		private Table __p;
 	}
 }

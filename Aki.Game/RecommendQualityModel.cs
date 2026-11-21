@@ -7,13 +7,13 @@ using CSharpScript.Core.Extension;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002744 RID: 10052
+// Token: 0x02001C2F RID: 7215
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class RecommendQualityModel : ModelBase
 {
-	// Token: 0x060149F1 RID: 84465 RVA: 0x00537990 File Offset: 0x00535B90
+	// Token: 0x06011ED3 RID: 73427 RVA: 0x0054669C File Offset: 0x0054489C
 	protected override bool OnInit()
 	{
 		if (CloudGameManager.Instance.IsCloudGame)
@@ -35,22 +35,17 @@ public class RecommendQualityModel : ModelBase
 				return true;
 			}
 			this.IsFinishRecommendQuality = LocalStorage.GetGlobal<bool>(ELocalStorageGlobalKey.IsFinishRecommendQuality, false);
-			if (!this.IsFinishRecommendQuality)
-			{
-				this.InitQualityRangeMap();
-				this.InitQualityList();
-			}
 			return true;
 		}
 	}
 
-	// Token: 0x060149F2 RID: 84466 RVA: 0x00537A19 File Offset: 0x00535C19
+	// Token: 0x06011ED4 RID: 73428 RVA: 0x00546711 File Offset: 0x00544911
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x060149F3 RID: 84467 RVA: 0x00537A1C File Offset: 0x00535C1C
+	// Token: 0x06011ED5 RID: 73429 RVA: 0x00546714 File Offset: 0x00544914
 	public void InitQualityRangeMap()
 	{
 		this.QualityRangeMap = new Dictionary<EGameQualityRange, List<EGameQualitySettingLevel>>
@@ -109,71 +104,90 @@ public class RecommendQualityModel : ModelBase
 		};
 	}
 
-	// Token: 0x060149F4 RID: 84468 RVA: 0x00537AE8 File Offset: 0x00535CE8
+	// Token: 0x06011ED6 RID: 73430 RVA: 0x005467E0 File Offset: 0x005449E0
 	public void InitQualityList()
 	{
+		if (this.QualityRangeMap == null)
+		{
+			this.InitQualityRangeMap();
+		}
+		this.QualityList = new List<IRecommendQualityItemData>();
+		this.RecommendQualityIndex = 0;
 		EGameQualityRange qualityRange = GameSettingsDeviceRender.Instance.GetQualityRange();
 		List<EGameQualitySettingLevel> list;
 		if (this.QualityRangeMap == null || !this.QualityRangeMap.TryGetValue(qualityRange, out list))
 		{
 			return;
 		}
-		this.QualityList = new List<IRecommendQualityItemData>();
 		MenuConfig? valueOrNull = GameSettingsManager.Instance.ValidApplyConfigMap.GetValueOrNull(EFunction.IMAGEQUALITY);
 		string[] array = ((valueOrNull != null) ? valueOrNull.GetValueOrDefault().OptionsName() : null) ?? Array.Empty<string>();
-		EGameQualitySettingLevel? recommendQualityLv = GameSettingsDeviceRender.Instance.GetRecommendQualityLv();
-		for (int i = 0; i < list.Count; i++)
+		int[] array2 = ((valueOrNull != null) ? valueOrNull.GetValueOrDefault().OptionsValue() : null) ?? Array.Empty<int>();
+		EGameQualitySettingLevel? resourceCap = GameSettingsManager.Instance.GetMaxQualityLevelByResourceTier();
+		if (resourceCap != null && list.Exists((EGameQualitySettingLevel quality) => quality > resourceCap.Value))
 		{
-			EGameQualitySettingLevel egameQualitySettingLevel = list[i];
-			string resourceId = "T_LoginSetQuality" + ((int)(egameQualitySettingLevel + 1)).ToString();
-			string resourcePath = UiResourceConfig.Instance.GetResourcePath(resourceId);
-			int[] array2 = (valueOrNull != null) ? valueOrNull.GetValueOrDefault().OptionsValue() : null;
-			int num = -1;
-			if (array2 != null)
+			List<EGameQualitySettingLevel> list2 = new List<EGameQualitySettingLevel>();
+			foreach (EGameQualitySettingLevel egameQualitySettingLevel in array2)
 			{
-				num = Array.IndexOf<int>(array2, (int)egameQualitySettingLevel);
+				if (egameQualitySettingLevel <= resourceCap.Value && GameSettingsDeviceRender.Instance.GetDeviceRenderFeature(egameQualitySettingLevel) != null)
+				{
+					list2.Add(egameQualitySettingLevel);
+				}
 			}
+			list2.Sort();
+			if (list2.Count > list.Count)
+			{
+				list2.RemoveRange(0, list2.Count - list.Count);
+			}
+			list = list2;
+		}
+		EGameQualitySettingLevel? recommendQualityLv = GameSettingsDeviceRender.Instance.GetRecommendQualityLv();
+		for (int j = 0; j < list.Count; j++)
+		{
+			EGameQualitySettingLevel egameQualitySettingLevel2 = list[j];
+			string resourceId = "T_LoginSetQuality" + ((int)(egameQualitySettingLevel2 + 1)).ToString();
+			string resourcePath = UiResourceConfig.Instance.GetResourcePath(resourceId);
+			int num = Array.IndexOf<int>(array2, (int)egameQualitySettingLevel2);
 			RecommendQualityItemData recommendQualityItemData = new RecommendQualityItemData
 			{
-				Quality = egameQualitySettingLevel,
+				Quality = egameQualitySettingLevel2,
 				Name = ((num >= 0 && num < array.Length) ? array[num] : ((array.Length != 0) ? array[0] : "")),
-				IsRecommend = (recommendQualityLv != null && recommendQualityLv.Value == egameQualitySettingLevel),
+				IsRecommend = (recommendQualityLv != null && recommendQualityLv.Value == egameQualitySettingLevel2),
 				Bg = (resourcePath ?? "")
 			};
 			this.QualityList.Add(recommendQualityItemData);
 			if (recommendQualityItemData.IsRecommend)
 			{
-				this.RecommendQualityIndex = i;
+				this.RecommendQualityIndex = j;
 			}
 		}
 	}
 
-	// Token: 0x060149F5 RID: 84469 RVA: 0x00537C65 File Offset: 0x00535E65
+	// Token: 0x06011ED7 RID: 73431 RVA: 0x00546A39 File Offset: 0x00544C39
 	public List<IRecommendQualityItemData> GetQualityList()
 	{
 		return this.QualityList ?? new List<IRecommendQualityItemData>();
 	}
 
-	// Token: 0x060149F6 RID: 84470 RVA: 0x00537C76 File Offset: 0x00535E76
+	// Token: 0x06011ED8 RID: 73432 RVA: 0x00546A4A File Offset: 0x00544C4A
 	public int GetRecommendQualityIndex()
 	{
 		return this.RecommendQualityIndex;
 	}
 
-	// Token: 0x060149F7 RID: 84471 RVA: 0x00537C7E File Offset: 0x00535E7E
+	// Token: 0x06011ED9 RID: 73433 RVA: 0x00546A52 File Offset: 0x00544C52
 	public void SaveApply(EGameQualitySettingLevel quality)
 	{
 		this.IsNeedApply = true;
 		this.NeedApplyQuality = quality;
 	}
 
-	// Token: 0x060149F8 RID: 84472 RVA: 0x00537C8E File Offset: 0x00535E8E
+	// Token: 0x06011EDA RID: 73434 RVA: 0x00546A62 File Offset: 0x00544C62
 	public void FinishRecommendQualityShow()
 	{
 		LocalStorage.SetGlobal<bool>(ELocalStorageGlobalKey.IsFinishRecommendQuality, true);
 	}
 
-	// Token: 0x060149F9 RID: 84473 RVA: 0x00537C99 File Offset: 0x00535E99
+	// Token: 0x06011EDB RID: 73435 RVA: 0x00546A6D File Offset: 0x00544C6D
 	public void CheckOpenRecommendQuality()
 	{
 		if (this.IsFinishRecommendQuality || GameSettingsManager.HasImageQualityOrSubSettingLoginOverride())
@@ -184,8 +198,8 @@ public class RecommendQualityModel : ModelBase
 		UiManager.Instance.OpenView(EUiViewName.RecommendQualityView, null, null);
 	}
 
-	// Token: 0x17001B07 RID: 6919
-	// (get) Token: 0x060149FA RID: 84474 RVA: 0x00537CCC File Offset: 0x00535ECC
+	// Token: 0x17001B3F RID: 6975
+	// (get) Token: 0x06011EDC RID: 73436 RVA: 0x00546AA0 File Offset: 0x00544CA0
 	public static RecommendQualityModel Instance
 	{
 		get
@@ -194,7 +208,7 @@ public class RecommendQualityModel : ModelBase
 		}
 	}
 
-	// Token: 0x060149FB RID: 84475 RVA: 0x00537CD3 File Offset: 0x00535ED3
+	// Token: 0x06011EDD RID: 73437 RVA: 0x00546AA7 File Offset: 0x00544CA7
 	public static RecommendQualityModel GetOrCreateInstance()
 	{
 		if (RecommendQualityModel._Instance == null)
@@ -204,7 +218,7 @@ public class RecommendQualityModel : ModelBase
 		return RecommendQualityModel._Instance;
 	}
 
-	// Token: 0x060149FC RID: 84476 RVA: 0x00537CE7 File Offset: 0x00535EE7
+	// Token: 0x06011EDE RID: 73438 RVA: 0x00546ABB File Offset: 0x00544CBB
 	public static bool CreateInstance()
 	{
 		if (RecommendQualityModel._Instance != null)
@@ -215,24 +229,24 @@ public class RecommendQualityModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060149FD RID: 84477 RVA: 0x00537CFD File Offset: 0x00535EFD
+	// Token: 0x06011EDF RID: 73439 RVA: 0x00546AD1 File Offset: 0x00544CD1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060149FE RID: 84478 RVA: 0x00537CFF File Offset: 0x00535EFF
+	// Token: 0x06011EE0 RID: 73440 RVA: 0x00546AD3 File Offset: 0x00544CD3
 	public static void ResetStaticDefaultValue()
 	{
 		RecommendQualityModel._Instance = null;
 	}
 
-	// Token: 0x060149FF RID: 84479 RVA: 0x00537D07 File Offset: 0x00535F07
+	// Token: 0x06011EE1 RID: 73441 RVA: 0x00546ADB File Offset: 0x00544CDB
 	static RecommendQualityModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RecommendQualityModel.CreateStaticDefaultValue), new Action(RecommendQualityModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009AE9 RID: 39657
+	// Token: 0x04009C41 RID: 40001
 	[Nullable(new byte[]
 	{
 		2,
@@ -240,7 +254,7 @@ public class RecommendQualityModel : ModelBase
 	})]
 	public Dictionary<EGameQualityRange, List<EGameQualitySettingLevel>> QualityRangeMap;
 
-	// Token: 0x04009AEA RID: 39658
+	// Token: 0x04009C42 RID: 40002
 	[Nullable(new byte[]
 	{
 		2,
@@ -248,19 +262,19 @@ public class RecommendQualityModel : ModelBase
 	})]
 	private List<IRecommendQualityItemData> QualityList;
 
-	// Token: 0x04009AEB RID: 39659
+	// Token: 0x04009C43 RID: 40003
 	private int RecommendQualityIndex;
 
-	// Token: 0x04009AEC RID: 39660
+	// Token: 0x04009C44 RID: 40004
 	private bool IsFinishRecommendQuality;
 
-	// Token: 0x04009AED RID: 39661
+	// Token: 0x04009C45 RID: 40005
 	public bool IsNeedApply;
 
-	// Token: 0x04009AEE RID: 39662
+	// Token: 0x04009C46 RID: 40006
 	public EGameQualitySettingLevel NeedApplyQuality = EGameQualitySettingLevel.Middle;
 
-	// Token: 0x04009AEF RID: 39663
+	// Token: 0x04009C47 RID: 40007
 	[Nullable(2)]
 	private static RecommendQualityModel _Instance;
 }

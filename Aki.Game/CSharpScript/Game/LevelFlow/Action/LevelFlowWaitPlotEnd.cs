@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Plot;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006FA9 RID: 28585
+	// Token: 0x0200612A RID: 24874
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowWaitPlotEnd : LevelFlowActionBase
 	{
-		// Token: 0x060457A0 RID: 284576 RVA: 0x0113C3F2 File Offset: 0x0113A5F2
+		// Token: 0x0603B94E RID: 244046 RVA: 0x010E61F6 File Offset: 0x010E43F6
 		public LevelFlowWaitPlotEnd Init(string flowListName, int flowId, int stateId)
 		{
 			this.FlowListName = flowListName;
@@ -19,19 +19,19 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x060457A1 RID: 284577 RVA: 0x0113C40A File Offset: 0x0113A60A
+		// Token: 0x0603B94F RID: 244047 RVA: 0x010E620E File Offset: 0x010E440E
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<PlotResultInfo>(EEventName.PlotNetworkEnd, new Action<PlotResultInfo>(this.OnPlotNetworkEnd));
 		}
 
-		// Token: 0x060457A2 RID: 284578 RVA: 0x0113C428 File Offset: 0x0113A628
+		// Token: 0x0603B950 RID: 244048 RVA: 0x010E622C File Offset: 0x010E442C
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<PlotResultInfo>(EEventName.PlotNetworkEnd, new Action<PlotResultInfo>(this.OnPlotNetworkEnd));
 		}
 
-		// Token: 0x060457A3 RID: 284579 RVA: 0x0113C448 File Offset: 0x0113A648
+		// Token: 0x0603B951 RID: 244049 RVA: 0x010E624C File Offset: 0x010E444C
 		private void OnPlotNetworkEnd(PlotResultInfo plotResult)
 		{
 			if (plotResult.FlowListName == this.FlowListName)
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x04024404 RID: 148484
+		// Token: 0x0401F6B9 RID: 128697
 		private string FlowListName = string.Empty;
 
-		// Token: 0x04024405 RID: 148485
+		// Token: 0x0401F6BA RID: 128698
 		private int FlowId;
 
-		// Token: 0x04024406 RID: 148486
+		// Token: 0x0401F6BB RID: 128699
 		private int StateId;
 	}
 }

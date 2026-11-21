@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A9F RID: 2719
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B69 RID: 2921
 	public class IScanTraceEffect
 	{
-		// Token: 0x06003EA1 RID: 16033 RVA: 0x000A04E6 File Offset: 0x0009E6E6
+		// Token: 0x060042CB RID: 17099 RVA: 0x000A9ADA File Offset: 0x000A7CDA
 		public static IScanTraceEffect Create(IScanTraceEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F20 RID: 3872
-		// (get) Token: 0x06003EA2 RID: 16034 RVA: 0x000A0505 File Offset: 0x0009E705
+		// Token: 0x17000FF4 RID: 4084
+		// (get) Token: 0x060042CC RID: 17100 RVA: 0x000A9AF9 File Offset: 0x000A7CF9
 		public virtual string Effect
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F21 RID: 3873
-		// (get) Token: 0x06003EA3 RID: 16035 RVA: 0x000A0512 File Offset: 0x0009E712
+		// Token: 0x17000FF5 RID: 4085
+		// (get) Token: 0x060042CD RID: 17101 RVA: 0x000A9B06 File Offset: 0x000A7D06
 		public virtual int Target
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022CE RID: 8910
+		// Token: 0x040024EA RID: 9450
 		private IScanTraceEffect Instance;
 	}
 }

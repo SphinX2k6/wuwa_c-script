@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CE2 RID: 23778
+	// Token: 0x02004CC4 RID: 19652
 	public class BattleSkillDpadItem : UiPanelBase
 	{
-		// Token: 0x0603C2B7 RID: 246455 RVA: 0x00E6780C File Offset: 0x00E65A0C
+		// Token: 0x0603120D RID: 201229 RVA: 0x00DB7DC0 File Offset: 0x00DB5FC0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C2B8 RID: 246456 RVA: 0x00E678D8 File Offset: 0x00E65AD8
+		// Token: 0x0603120E RID: 201230 RVA: 0x00DB7E8C File Offset: 0x00DB608C
 		protected override void OnStart()
 		{
 			this.ItemList.Add(base.GetItem(1));
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C2B9 RID: 246457 RVA: 0x00E67945 File Offset: 0x00E65B45
+		// Token: 0x0603120F RID: 201231 RVA: 0x00DB7EF9 File Offset: 0x00DB60F9
 		public void SetVisible(bool bVisible)
 		{
 			if (bVisible)
@@ -60,19 +60,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C2BA RID: 246458 RVA: 0x00E67969 File Offset: 0x00E65B69
+		// Token: 0x06031210 RID: 201232 RVA: 0x00DB7F1D File Offset: 0x00DB611D
 		public void SetArrowVisible(int index, bool visible)
 		{
 			this.ItemList[index].SetUIActive(visible);
 		}
 
-		// Token: 0x0603C2BB RID: 246459 RVA: 0x00E6797D File Offset: 0x00E65B7D
+		// Token: 0x06031211 RID: 201233 RVA: 0x00DB7F31 File Offset: 0x00DB6131
 		public void SetBgVisible(bool visible)
 		{
 			base.GetItem(0).SetUIActive(visible);
 		}
 
-		// Token: 0x0603C2BC RID: 246460 RVA: 0x00E6798C File Offset: 0x00E65B8C
+		// Token: 0x06031212 RID: 201234 RVA: 0x00DB7F40 File Offset: 0x00DB6140
 		public void SetArrowEnable(int index, bool bEnable, bool bForce = false)
 		{
 			if (this.EnableList[index] == bEnable && !bForce)
@@ -90,26 +90,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.EnableList[index] = bEnable;
 		}
 
-		// Token: 0x0401F5E4 RID: 128484
+		// Token: 0x0401A09D RID: 106653
 		[Nullable(1)]
 		private readonly List<UUIItem> ItemList = new List<UUIItem>();
 
-		// Token: 0x0401F5E5 RID: 128485
+		// Token: 0x0401A09E RID: 106654
 		[Nullable(1)]
 		private readonly List<bool> EnableList = new List<bool>();
 
-		// Token: 0x0200BF3E RID: 48958
+		// Token: 0x0200A944 RID: 43332
 		private enum EChildType
 		{
-			// Token: 0x04039AF2 RID: 236274
+			// Token: 0x040344B4 RID: 214196
 			BgItem,
-			// Token: 0x04039AF3 RID: 236275
+			// Token: 0x040344B5 RID: 214197
 			UpItem,
-			// Token: 0x04039AF4 RID: 236276
+			// Token: 0x040344B6 RID: 214198
 			LeftItem,
-			// Token: 0x04039AF5 RID: 236277
+			// Token: 0x040344B7 RID: 214199
 			DownItem,
-			// Token: 0x04039AF6 RID: 236278
+			// Token: 0x040344B8 RID: 214200
 			RightItem
 		}
 	}

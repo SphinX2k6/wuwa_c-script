@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F22 RID: 24354
+	// Token: 0x02006566 RID: 25958
 	public enum EBattleSettlementBgmType : byte
 	{
-		// Token: 0x0400FC37 RID: 64567
+		// Token: 0x040109AD RID: 68013
 		BattleSoundWave
 	}
 }

@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E92 RID: 20114
+	// Token: 0x02003E5B RID: 15963
 	internal enum <RogueBattleSettleChallengeInfoPanel>FA31BD8E410AFF59147A451658CC212005DBE6257F846D6594AE05ECC543D62C6__ERogueBattleSettleChallengeInfoPanelDefine
 	{
-		// Token: 0x0401B764 RID: 112484
+		// Token: 0x04016137 RID: 90423
 		TxtTitle,
-		// Token: 0x0401B765 RID: 112485
+		// Token: 0x04016138 RID: 90424
 		TxtTime,
-		// Token: 0x0401B766 RID: 112486
+		// Token: 0x04016139 RID: 90425
 		TxtDesc,
-		// Token: 0x0401B767 RID: 112487
+		// Token: 0x0401613A RID: 90426
 		RoleLayoutItem,
-		// Token: 0x0401B768 RID: 112488
+		// Token: 0x0401613B RID: 90427
 		FetterLayoutItem
 	}
 }

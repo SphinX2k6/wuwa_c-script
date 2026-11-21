@@ -5,11 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001438 RID: 5176
+	// Token: 0x02001590 RID: 5520
 	public class IKillMonster
 	{
-		// Token: 0x060075AD RID: 30125 RVA: 0x0011909E File Offset: 0x0011729E
-		[NullableContext(1)]
+		// Token: 0x06007C72 RID: 31858 RVA: 0x00127AEA File Offset: 0x00125CEA
 		public static IKillMonster Create(IKillMonster? instance)
 		{
 			if (instance == null)
@@ -22,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002710 RID: 10000
-		// (get) Token: 0x060075AE RID: 30126 RVA: 0x001190BD File Offset: 0x001172BD
+		// Token: 0x170028F4 RID: 10484
+		// (get) Token: 0x06007C73 RID: 31859 RVA: 0x00127B09 File Offset: 0x00125D09
 		public virtual int NormalAddTime
 		{
 			get
@@ -32,19 +31,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002711 RID: 10001
-		// (get) Token: 0x060075AF RID: 30127 RVA: 0x001190CC File Offset: 0x001172CC
+		// Token: 0x170028F5 RID: 10485
+		// (get) Token: 0x06007C74 RID: 31860 RVA: 0x00127B18 File Offset: 0x00125D18
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IKillSingleMonster> SpecialTime
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -67,18 +66,18 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400442E RID: 17454
+		// Token: 0x040047C2 RID: 18370
 		private IKillMonster Instance;
 
-		// Token: 0x0400442F RID: 17455
+		// Token: 0x040047C3 RID: 18371
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IKillSingleMonster> _SpecialTimeCache;
 
-		// Token: 0x04004430 RID: 17456
+		// Token: 0x040047C4 RID: 18372
 		private bool _SpecialTimeInited;
 	}
 }

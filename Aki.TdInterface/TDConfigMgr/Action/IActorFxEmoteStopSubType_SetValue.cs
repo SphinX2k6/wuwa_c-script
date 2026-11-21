@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001773 RID: 6003
+	// Token: 0x020018F4 RID: 6388
 	public class IActorFxEmoteStopSubType_SetValue
 	{
-		// Token: 0x040050DA RID: 20698
+		// Token: 0x04005510 RID: 21776
 		public EActorFxEmoteStopSubType Type;
 	}
 }

@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008C3 RID: 2243
+	// Token: 0x02000966 RID: 2406
 	public class TimelineTrackControlComponent_SetValue
 	{
-		// Token: 0x04002123 RID: 8483
+		// Token: 0x04002335 RID: 9013
 		public bool? Disabled;
 
-		// Token: 0x04002124 RID: 8484
+		// Token: 0x04002336 RID: 9014
 		public bool? EdIsLocked;
 
-		// Token: 0x04002125 RID: 8485
-		[Nullable(1)]
+		// Token: 0x04002337 RID: 9015
 		public List<ITimelineControlGroup> ControlGroups;
 	}
 }

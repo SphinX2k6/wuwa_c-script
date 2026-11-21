@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BD8 RID: 23512
+	// Token: 0x02004BB8 RID: 19384
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CiacconaGalStepPlayerNormalPanel : UiPanelBase
 	{
-		// Token: 0x0603B705 RID: 243461 RVA: 0x00E2C6EC File Offset: 0x00E2A8EC
+		// Token: 0x06030650 RID: 198224 RVA: 0x00D7C9F4 File Offset: 0x00D7ABF4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B706 RID: 243462 RVA: 0x00E2C778 File Offset: 0x00E2A978
+		// Token: 0x06030651 RID: 198225 RVA: 0x00D7CA80 File Offset: 0x00D7AC80
 		protected override void OnStart()
 		{
 			this.ScrollComponent = base.GetScrollViewWithScrollbar(0);
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603B707 RID: 243463 RVA: 0x00E2C7E0 File Offset: 0x00E2A9E0
+		// Token: 0x06030652 RID: 198226 RVA: 0x00D7CAE8 File Offset: 0x00D7ACE8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CiacconaGalStepPlayerNormalPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B708 RID: 243464 RVA: 0x00E2C824 File Offset: 0x00E2AA24
+		// Token: 0x06030653 RID: 198227 RVA: 0x00D7CB2C File Offset: 0x00D7AD2C
 		protected override void OnBeforeDestroy()
 		{
 			if (this.ScrollComponent != null)
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B709 RID: 243465 RVA: 0x00E2C8B2 File Offset: 0x00E2AAB2
+		// Token: 0x06030654 RID: 198228 RVA: 0x00D7CBBA File Offset: 0x00D7ADBA
 		public void Refresh()
 		{
 			this.RefreshImp().Forget();
 		}
 
-		// Token: 0x0603B70A RID: 243466 RVA: 0x00E2C8C0 File Offset: 0x00E2AAC0
+		// Token: 0x06030655 RID: 198229 RVA: 0x00D7CBC8 File Offset: 0x00D7ADC8
 		public void PlayStart()
 		{
 			LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			seqPlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x0603B70B RID: 243467 RVA: 0x00E2C8F0 File Offset: 0x00E2AAF0
+		// Token: 0x06030656 RID: 198230 RVA: 0x00D7CBF8 File Offset: 0x00D7ADF8
 		public UniTask PlayCloseAsync()
 		{
 			CiacconaGalStepPlayerNormalPanel.<PlayCloseAsync>d__12 <PlayCloseAsync>d__;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <PlayCloseAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B70C RID: 243468 RVA: 0x00E2C934 File Offset: 0x00E2AB34
+		// Token: 0x06030657 RID: 198231 RVA: 0x00D7CC3C File Offset: 0x00D7AE3C
 		private UniTask RefreshImp()
 		{
 			CiacconaGalStepPlayerNormalPanel.<RefreshImp>d__13 <RefreshImp>d__;
@@ -109,14 +109,14 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <RefreshImp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B70D RID: 243469 RVA: 0x00E2C977 File Offset: 0x00E2AB77
+		// Token: 0x06030658 RID: 198232 RVA: 0x00D7CC7F File Offset: 0x00D7AE7F
 		[NullableContext(1)]
 		private CiacconaGalStepItemContainer GetStepItemContainer()
 		{
 			return new CiacconaGalStepItemContainer();
 		}
 
-		// Token: 0x0603B70E RID: 243470 RVA: 0x00E2C980 File Offset: 0x00E2AB80
+		// Token: 0x06030659 RID: 198233 RVA: 0x00D7CC88 File Offset: 0x00D7AE88
 		private void OnScrollViewPointerUp(ULGUIPointerEventData eventData)
 		{
 			if (eventData == null)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B70F RID: 243471 RVA: 0x00E2C9B4 File Offset: 0x00E2ABB4
+		// Token: 0x0603065A RID: 198234 RVA: 0x00D7CCBC File Offset: 0x00D7AEBC
 		private void OnScrollTweenStart()
 		{
 			UUIScrollViewWithScrollbarComponent scrollComponent = this.ScrollComponent;
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			scrollComponent.ContentUIItem.Get().SetBubbleUpToParent(false);
 		}
 
-		// Token: 0x0603B710 RID: 243472 RVA: 0x00E2C9E0 File Offset: 0x00E2ABE0
+		// Token: 0x0603065B RID: 198235 RVA: 0x00D7CCE8 File Offset: 0x00D7AEE8
 		private void OnScrollTweenEnd()
 		{
 			UUIScrollViewWithScrollbarComponent scrollComponent = this.ScrollComponent;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			scrollComponent.ContentUIItem.Get().SetBubbleUpToParent(true);
 		}
 
-		// Token: 0x0603B711 RID: 243473 RVA: 0x00E2CA0C File Offset: 0x00E2AC0C
+		// Token: 0x0603065C RID: 198236 RVA: 0x00D7CD14 File Offset: 0x00D7AF14
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return null;
 		}
 
-		// Token: 0x0401EF8A RID: 126858
+		// Token: 0x04019A3B RID: 105019
 		[Nullable(new byte[]
 		{
 			2,
@@ -188,29 +188,29 @@ namespace CSharpScript.Game.Module.CiacconaGal
 		})]
 		private GenericScrollViewNew<CiacconaGalStepItemContainer, CiacconaGalStepData> ScrollView;
 
-		// Token: 0x0401EF8B RID: 126859
+		// Token: 0x04019A3C RID: 105020
 		private UUIScrollViewWithScrollbarComponent ScrollComponent;
 
-		// Token: 0x0401EF8C RID: 126860
+		// Token: 0x04019A3D RID: 105021
 		private CiacconaGalFinishBtnItem BtnFinish;
 
-		// Token: 0x0401EF8D RID: 126861
+		// Token: 0x04019A3E RID: 105022
 		private TimerHandle ScrollDelayTimerHandle;
 
-		// Token: 0x0401EF8E RID: 126862
+		// Token: 0x04019A3F RID: 105023
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0200BDB3 RID: 48563
+		// Token: 0x0200A7BC RID: 42940
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04039356 RID: 234326
+			// Token: 0x04033D1B RID: 212251
 			public const int ScrollView = 0;
 
-			// Token: 0x04039357 RID: 234327
+			// Token: 0x04033D1C RID: 212252
 			public const int LayoutContent = 1;
 
-			// Token: 0x04039358 RID: 234328
+			// Token: 0x04033D1D RID: 212253
 			public const int ItemBtnFinish = 2;
 		}
 	}

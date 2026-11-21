@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200288E RID: 10382
+	// Token: 0x02002B63 RID: 11107
 	public class ChangeActorTalker : ActionParams
 	{
-		// Token: 0x0600E5F2 RID: 58866 RVA: 0x0021CC2E File Offset: 0x0021AE2E
-		[NullableContext(1)]
+		// Token: 0x0600F421 RID: 62497 RVA: 0x00239BAE File Offset: 0x00237DAE
 		public static ChangeActorTalker Create(IChangeActorTalker? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004698 RID: 18072
-		// (get) Token: 0x0600E5F3 RID: 58867 RVA: 0x0021CC4D File Offset: 0x0021AE4D
+		// Token: 0x17004A09 RID: 18953
+		// (get) Token: 0x0600F422 RID: 62498 RVA: 0x00239BCD File Offset: 0x00237DCD
 		public virtual int ActorIndex
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004699 RID: 18073
-		// (get) Token: 0x0600E5F4 RID: 58868 RVA: 0x0021CC5A File Offset: 0x0021AE5A
+		// Token: 0x17004A0A RID: 18954
+		// (get) Token: 0x0600F423 RID: 62499 RVA: 0x00239BDA File Offset: 0x00237DDA
 		public virtual int Talker
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F20 RID: 32544
+		// Token: 0x040085DF RID: 34271
 		private IChangeActorTalker Instance;
 	}
 }

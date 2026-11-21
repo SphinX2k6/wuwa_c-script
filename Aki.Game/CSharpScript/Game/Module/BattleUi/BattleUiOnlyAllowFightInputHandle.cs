@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C9A RID: 23706
+	// Token: 0x02004C7C RID: 19580
 	public class BattleUiOnlyAllowFightInputHandle
 	{
-		// Token: 0x0603BE56 RID: 245334 RVA: 0x00E4F41D File Offset: 0x00E4D61D
+		// Token: 0x06030DA9 RID: 200105 RVA: 0x00D9FAA5 File Offset: 0x00D9DCA5
 		public void SetEnable(bool isEnable)
 		{
 			if (this.IsEnable == isEnable)
@@ -19,13 +19,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			InputDistributeController.Instance.RefreshInputTag();
 		}
 
-		// Token: 0x0603BE57 RID: 245335 RVA: 0x00E4F457 File Offset: 0x00E4D657
+		// Token: 0x06030DAA RID: 200106 RVA: 0x00D9FADF File Offset: 0x00D9DCDF
 		public bool GetEnable()
 		{
 			return this.IsEnable;
 		}
 
-		// Token: 0x0401F3E1 RID: 127969
+		// Token: 0x04019E9A RID: 106138
 		[Nullable(1)]
 		private readonly EBattleUiChild[] HideBattleUiChildren = new EBattleUiChild[]
 		{
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			EBattleUiChild.Score
 		};
 
-		// Token: 0x0401F3E2 RID: 127970
+		// Token: 0x04019E9B RID: 106139
 		private bool IsEnable;
 	}
 }

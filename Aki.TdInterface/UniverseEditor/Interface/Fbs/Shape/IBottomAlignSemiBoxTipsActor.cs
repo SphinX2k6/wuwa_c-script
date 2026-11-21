@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003BEC RID: 15340
+	// Token: 0x02003FF8 RID: 16376
 	public struct IBottomAlignSemiBoxTipsActor : IFlatbufferObject
 	{
-		// Token: 0x1700693C RID: 26940
-		// (get) Token: 0x06015179 RID: 86393 RVA: 0x0030E6CD File Offset: 0x0030C8CD
+		// Token: 0x17006EE4 RID: 28388
+		// (get) Token: 0x0601666F RID: 91759 RVA: 0x00335255 File Offset: 0x00333455
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x0601517A RID: 86394 RVA: 0x0030E6DA File Offset: 0x0030C8DA
+		// Token: 0x06016670 RID: 91760 RVA: 0x00335262 File Offset: 0x00333462
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601517B RID: 86395 RVA: 0x0030E6E4 File Offset: 0x0030C8E4
+		// Token: 0x06016671 RID: 91761 RVA: 0x0033526C File Offset: 0x0033346C
 		public static IBottomAlignSemiBoxTipsActor GetRootAsIBottomAlignSemiBoxTipsActor(ByteBuffer _bb)
 		{
 			return IBottomAlignSemiBoxTipsActor.GetRootAsIBottomAlignSemiBoxTipsActor(_bb, default(IBottomAlignSemiBoxTipsActor));
 		}
 
-		// Token: 0x0601517C RID: 86396 RVA: 0x0030E700 File Offset: 0x0030C900
+		// Token: 0x06016672 RID: 91762 RVA: 0x00335288 File Offset: 0x00333488
 		public static IBottomAlignSemiBoxTipsActor GetRootAsIBottomAlignSemiBoxTipsActor(ByteBuffer _bb, IBottomAlignSemiBoxTipsActor obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601517D RID: 86397 RVA: 0x0030E71D File Offset: 0x0030C91D
+		// Token: 0x06016673 RID: 91763 RVA: 0x003352A5 File Offset: 0x003334A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601517E RID: 86398 RVA: 0x0030E72C File Offset: 0x0030C92C
+		// Token: 0x06016674 RID: 91764 RVA: 0x003352B4 File Offset: 0x003334B4
 		public IBottomAlignSemiBoxTipsActor __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700693D RID: 26941
-		// (get) Token: 0x0601517F RID: 86399 RVA: 0x0030E73C File Offset: 0x0030C93C
+		// Token: 0x17006EE5 RID: 28389
+		// (get) Token: 0x06016675 RID: 91765 RVA: 0x003352C4 File Offset: 0x003334C4
 		public ETipsActorType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x1700693E RID: 26942
-		// (get) Token: 0x06015180 RID: 86400 RVA: 0x0030E778 File Offset: 0x0030C978
+		// Token: 0x17006EE6 RID: 28390
+		// (get) Token: 0x06016676 RID: 91766 RVA: 0x00335300 File Offset: 0x00333500
 		public ETipsActorColorType ColorType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x1700693F RID: 26943
-		// (get) Token: 0x06015181 RID: 86401 RVA: 0x0030E7B4 File Offset: 0x0030C9B4
+		// Token: 0x17006EE7 RID: 28391
+		// (get) Token: 0x06016677 RID: 91767 RVA: 0x0033533C File Offset: 0x0033353C
 		public float X
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006940 RID: 26944
-		// (get) Token: 0x06015182 RID: 86402 RVA: 0x0030E7F4 File Offset: 0x0030C9F4
+		// Token: 0x17006EE8 RID: 28392
+		// (get) Token: 0x06016678 RID: 91768 RVA: 0x0033537C File Offset: 0x0033357C
 		public float Y
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006941 RID: 26945
-		// (get) Token: 0x06015183 RID: 86403 RVA: 0x0030E838 File Offset: 0x0030CA38
+		// Token: 0x17006EE9 RID: 28393
+		// (get) Token: 0x06016679 RID: 91769 RVA: 0x003353C0 File Offset: 0x003335C0
 		public float Z
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006942 RID: 26946
-		// (get) Token: 0x06015184 RID: 86404 RVA: 0x0030E87C File Offset: 0x0030CA7C
+		// Token: 0x17006EEA RID: 28394
+		// (get) Token: 0x0601667A RID: 91770 RVA: 0x00335404 File Offset: 0x00333604
 		public byte NullMask
 		{
 			get
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015185 RID: 86405 RVA: 0x0030E8B9 File Offset: 0x0030CAB9
+		// Token: 0x0601667B RID: 91771 RVA: 0x00335441 File Offset: 0x00333641
 		public static Offset<IBottomAlignSemiBoxTipsActor> CreateIBottomAlignSemiBoxTipsActor(FlatBufferBuilder builder, ETipsActorType Type = ETipsActorType.Sphere, ETipsActorColorType ColorType = ETipsActorColorType.Inner, float X = 0f, float Y = 0f, float Z = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -150,55 +150,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IBottomAlignSemiBoxTipsActor.EndIBottomAlignSemiBoxTipsActor(builder);
 		}
 
-		// Token: 0x06015186 RID: 86406 RVA: 0x0030E8F5 File Offset: 0x0030CAF5
+		// Token: 0x0601667C RID: 91772 RVA: 0x0033547D File Offset: 0x0033367D
 		public static void StartIBottomAlignSemiBoxTipsActor(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06015187 RID: 86407 RVA: 0x0030E8FE File Offset: 0x0030CAFE
+		// Token: 0x0601667D RID: 91773 RVA: 0x00335486 File Offset: 0x00333686
 		public static void AddType(FlatBufferBuilder builder, ETipsActorType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015188 RID: 86408 RVA: 0x0030E909 File Offset: 0x0030CB09
+		// Token: 0x0601667E RID: 91774 RVA: 0x00335491 File Offset: 0x00333691
 		public static void AddColorType(FlatBufferBuilder builder, ETipsActorColorType colorType)
 		{
 			builder.AddByte(1, (byte)colorType, 0);
 		}
 
-		// Token: 0x06015189 RID: 86409 RVA: 0x0030E914 File Offset: 0x0030CB14
+		// Token: 0x0601667F RID: 91775 RVA: 0x0033549C File Offset: 0x0033369C
 		public static void AddX(FlatBufferBuilder builder, float x)
 		{
 			builder.AddFloat(2, x, 0.0);
 		}
 
-		// Token: 0x0601518A RID: 86410 RVA: 0x0030E927 File Offset: 0x0030CB27
+		// Token: 0x06016680 RID: 91776 RVA: 0x003354AF File Offset: 0x003336AF
 		public static void AddY(FlatBufferBuilder builder, float y)
 		{
 			builder.AddFloat(3, y, 0.0);
 		}
 
-		// Token: 0x0601518B RID: 86411 RVA: 0x0030E93A File Offset: 0x0030CB3A
+		// Token: 0x06016681 RID: 91777 RVA: 0x003354C2 File Offset: 0x003336C2
 		public static void AddZ(FlatBufferBuilder builder, float z)
 		{
 			builder.AddFloat(4, z, 0.0);
 		}
 
-		// Token: 0x0601518C RID: 86412 RVA: 0x0030E94D File Offset: 0x0030CB4D
+		// Token: 0x06016682 RID: 91778 RVA: 0x003354D5 File Offset: 0x003336D5
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x0601518D RID: 86413 RVA: 0x0030E958 File Offset: 0x0030CB58
+		// Token: 0x06016683 RID: 91779 RVA: 0x003354E0 File Offset: 0x003336E0
 		public static Offset<IBottomAlignSemiBoxTipsActor> EndIBottomAlignSemiBoxTipsActor(FlatBufferBuilder builder)
 		{
 			return new Offset<IBottomAlignSemiBoxTipsActor>(builder.EndTable());
 		}
 
-		// Token: 0x0601518E RID: 86414 RVA: 0x0030E968 File Offset: 0x0030CB68
+		// Token: 0x06016684 RID: 91780 RVA: 0x003354F0 File Offset: 0x003336F0
 		public IBottomAlignSemiBoxTipsActorT UnPack()
 		{
 			IBottomAlignSemiBoxTipsActorT bottomAlignSemiBoxTipsActorT = new IBottomAlignSemiBoxTipsActorT();
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return bottomAlignSemiBoxTipsActorT;
 		}
 
-		// Token: 0x0601518F RID: 86415 RVA: 0x0030E984 File Offset: 0x0030CB84
+		// Token: 0x06016685 RID: 91781 RVA: 0x0033550C File Offset: 0x0033370C
 		public void UnPackTo(IBottomAlignSemiBoxTipsActorT _o)
 		{
 			_o.Type = this.Type;
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06015190 RID: 86416 RVA: 0x0030E9DC File Offset: 0x0030CBDC
+		// Token: 0x06016686 RID: 91782 RVA: 0x00335564 File Offset: 0x00333764
 		public static Offset<IBottomAlignSemiBoxTipsActor> Pack(FlatBufferBuilder builder, IBottomAlignSemiBoxTipsActorT _o)
 		{
 			if (_o == null)
@@ -227,7 +227,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IBottomAlignSemiBoxTipsActor.CreateIBottomAlignSemiBoxTipsActor(builder, _o.Type, _o.ColorType, _o.X, _o.Y, _o.Z, _o.NullMask);
 		}
 
-		// Token: 0x0400B1AF RID: 45487
+		// Token: 0x0400BB3A RID: 47930
 		private Table __p;
 	}
 }

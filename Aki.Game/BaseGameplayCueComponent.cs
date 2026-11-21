@@ -1,33 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Utils;
 
-// Token: 0x02002E79 RID: 11897
+// Token: 0x020023CB RID: 9163
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseGameplayCueComponent : EntityComponent
 {
-	// Token: 0x060196D0 RID: 104144 RVA: 0x006902E1 File Offset: 0x0068E4E1
+	// Token: 0x06016FA0 RID: 94112 RVA: 0x006B66D8 File Offset: 0x006B48D8
 	protected override bool OnStart()
 	{
 		return true;
 	}
 
-	// Token: 0x060196D1 RID: 104145 RVA: 0x006902E4 File Offset: 0x0068E4E4
+	// Token: 0x06016FA1 RID: 94113 RVA: 0x006B66DC File Offset: 0x006B48DC
 	protected override bool OnEnd()
 	{
-		foreach (long cueHandleId in this.CueContainer.Keys.ToArray<long>())
+		long[] array = new long[this.CueContainer.Count];
+		this.CueContainer.Keys.CopyTo(array, 0);
+		foreach (long cueHandleId in array)
 		{
 			this.RemoveCueByHandle(cueHandleId);
 		}
 		return true;
 	}
 
-	// Token: 0x060196D2 RID: 104146 RVA: 0x0069031C File Offset: 0x0068E51C
+	// Token: 0x06016FA2 RID: 94114 RVA: 0x006B6728 File Offset: 0x006B4928
 	protected override void OnTick(float delta)
 	{
 		float delta2 = delta * (float)TimeUtil.Instance.Millisecond;
@@ -37,7 +38,7 @@ public class BaseGameplayCueComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196D3 RID: 104147 RVA: 0x00690378 File Offset: 0x0068E578
+	// Token: 0x06016FA3 RID: 94115 RVA: 0x006B6784 File Offset: 0x006B4984
 	protected override void OnAfterTick(float delta)
 	{
 		float delta2 = delta * (float)TimeUtil.Instance.Millisecond;
@@ -47,7 +48,7 @@ public class BaseGameplayCueComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196D4 RID: 104148 RVA: 0x006903D4 File Offset: 0x0068E5D4
+	// Token: 0x06016FA4 RID: 94116 RVA: 0x006B67E0 File Offset: 0x006B49E0
 	public int AddCue(long cueId, GameplayCueParam? cueParam = null)
 	{
 		GameplayCueBase gameplayCueBase = this.CreateGameplayCueInner(cueId, cueParam);
@@ -78,7 +79,7 @@ public class BaseGameplayCueComponent : EntityComponent
 		return num;
 	}
 
-	// Token: 0x060196D5 RID: 104149 RVA: 0x0069046C File Offset: 0x0068E66C
+	// Token: 0x06016FA5 RID: 94117 RVA: 0x006B6878 File Offset: 0x006B4A78
 	public void RemoveCue(long cueId)
 	{
 		foreach (long cueHandleId in this.GetCueHandlesByCueId(cueId))
@@ -87,7 +88,7 @@ public class BaseGameplayCueComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196D6 RID: 104150 RVA: 0x006904C0 File Offset: 0x0068E6C0
+	// Token: 0x06016FA6 RID: 94118 RVA: 0x006B68CC File Offset: 0x006B4ACC
 	public void RemoveCueByHandle(long cueHandleId)
 	{
 		GameplayCueBase gameplayCueBase;
@@ -104,19 +105,19 @@ public class BaseGameplayCueComponent : EntityComponent
 		this.CueContainer.Remove(cueHandleId);
 	}
 
-	// Token: 0x060196D7 RID: 104151 RVA: 0x0069050C File Offset: 0x0068E70C
+	// Token: 0x06016FA7 RID: 94119 RVA: 0x006B6918 File Offset: 0x006B4B18
 	public virtual void AddCueEffectToSet(int effectViewHandle, ETimeScaleType timeScaleType, ECueHideRule hideRule)
 	{
 	}
 
-	// Token: 0x060196D8 RID: 104152 RVA: 0x0069050E File Offset: 0x0068E70E
+	// Token: 0x06016FA8 RID: 94120 RVA: 0x006B691A File Offset: 0x006B4B1A
 	[NullableContext(2)]
 	protected virtual EntityHandle GetEntityHandle()
 	{
 		return null;
 	}
 
-	// Token: 0x060196D9 RID: 104153 RVA: 0x00690511 File Offset: 0x0068E711
+	// Token: 0x06016FA9 RID: 94121 RVA: 0x006B691D File Offset: 0x006B4B1D
 	public IEnumerable<GameplayCueBase> GetAllCurrentCueRef()
 	{
 		BaseGameplayCueComponent.<GetAllCurrentCueRef>d__10 <GetAllCurrentCueRef>d__ = new BaseGameplayCueComponent.<GetAllCurrentCueRef>d__10(-2);
@@ -124,14 +125,14 @@ public class BaseGameplayCueComponent : EntityComponent
 		return <GetAllCurrentCueRef>d__;
 	}
 
-	// Token: 0x060196DA RID: 104154 RVA: 0x00690521 File Offset: 0x0068E721
+	// Token: 0x06016FAA RID: 94122 RVA: 0x006B692D File Offset: 0x006B4B2D
 	[NullableContext(2)]
 	public GameplayCueBase GetCueByHandle(long cueHandleId)
 	{
 		return this.CueContainer.GetValueOrDefault(cueHandleId);
 	}
 
-	// Token: 0x060196DB RID: 104155 RVA: 0x00690530 File Offset: 0x0068E730
+	// Token: 0x06016FAB RID: 94123 RVA: 0x006B693C File Offset: 0x006B4B3C
 	[NullableContext(2)]
 	public GameplayCueBase GetCueByCueId(long cueId)
 	{
@@ -145,7 +146,7 @@ public class BaseGameplayCueComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x060196DC RID: 104156 RVA: 0x00690598 File Offset: 0x0068E798
+	// Token: 0x06016FAC RID: 94124 RVA: 0x006B69A4 File Offset: 0x006B4BA4
 	public void ChangeBuffHandle(long cueHandleId, IActiveBuff newBuff)
 	{
 		GameplayCueBase gameplayCueBase;
@@ -155,7 +156,7 @@ public class BaseGameplayCueComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196DD RID: 104157 RVA: 0x006905C4 File Offset: 0x0068E7C4
+	// Token: 0x06016FAD RID: 94125 RVA: 0x006B69D0 File Offset: 0x006B4BD0
 	private void GameplayCueRequest(long cueId)
 	{
 		GameplayCuePush gameplayCuePush = GameplayCuePush.Create();
@@ -163,7 +164,7 @@ public class BaseGameplayCueComponent : EntityComponent
 		CombatNet.Instance.Send(EPushMessageId.GameplayCuePush, this.GetEntityHandle().Entity, gameplayCuePush, null, null, null);
 	}
 
-	// Token: 0x060196DE RID: 104158 RVA: 0x00690618 File Offset: 0x0068E818
+	// Token: 0x06016FAE RID: 94126 RVA: 0x006B6A24 File Offset: 0x006B4C24
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.GameplayCueNotify, true, false)]
 	public static void GameplayCueNotify(Entity entity, [Nullable(1)] GameplayCueNotify data, CombatCommon combatCommon = null)
@@ -181,7 +182,7 @@ public class BaseGameplayCueComponent : EntityComponent
 		}));
 	}
 
-	// Token: 0x060196DF RID: 104159 RVA: 0x0069065C File Offset: 0x0068E85C
+	// Token: 0x06016FAF RID: 94127 RVA: 0x006B6A68 File Offset: 0x006B4C68
 	private List<long> GetCueHandlesByCueId(long cueId)
 	{
 		List<long> list = new List<long>();
@@ -199,7 +200,7 @@ public class BaseGameplayCueComponent : EntityComponent
 		return list;
 	}
 
-	// Token: 0x060196E0 RID: 104160 RVA: 0x006906D4 File Offset: 0x0068E8D4
+	// Token: 0x06016FB0 RID: 94128 RVA: 0x006B6AE0 File Offset: 0x006B4CE0
 	[NullableContext(2)]
 	private unsafe GameplayCueBase CreateGameplayCueInner(long cueId, GameplayCueParam? cueParam = null)
 	{
@@ -272,7 +273,7 @@ public class BaseGameplayCueComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x060196E1 RID: 104161 RVA: 0x00690974 File Offset: 0x0068EB74
+	// Token: 0x06016FB1 RID: 94129 RVA: 0x006B6D80 File Offset: 0x006B4F80
 	private bool IsPriorityGroupSatisfied(GameplayCue cueConfig)
 	{
 		if (cueConfig.Group <= 0)
@@ -288,7 +289,7 @@ public class BaseGameplayCueComponent : EntityComponent
 		return cueByCueId == null || cueByCueId.CueConfig.Priority <= cueConfig.Priority;
 	}
 
-	// Token: 0x060196E2 RID: 104162 RVA: 0x006909CC File Offset: 0x0068EBCC
+	// Token: 0x06016FB2 RID: 94130 RVA: 0x006B6DD8 File Offset: 0x006B4FD8
 	private void AddToPriorityGroup(GameplayCue cueConfig)
 	{
 		if (cueConfig.Group <= 0)
@@ -312,7 +313,7 @@ public class BaseGameplayCueComponent : EntityComponent
 		this.CuePriorityGroup[cueConfig.Group] = cueConfig.Id;
 	}
 
-	// Token: 0x060196E3 RID: 104163 RVA: 0x00690A45 File Offset: 0x0068EC45
+	// Token: 0x06016FB3 RID: 94131 RVA: 0x006B6E51 File Offset: 0x006B5051
 	[NullableContext(2)]
 	private void RemoveFromPriorityGroup(GameplayCueBase cueRef = null)
 	{
@@ -322,7 +323,7 @@ public class BaseGameplayCueComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196E4 RID: 104164 RVA: 0x00690A70 File Offset: 0x0068EC70
+	// Token: 0x06016FB4 RID: 94132 RVA: 0x006B6E7C File Offset: 0x006B507C
 	[return: TupleElementNames(new string[]
 	{
 		"SpawnArgs",
@@ -468,12 +469,14 @@ public class BaseGameplayCueComponent : EntityComponent
 			return null;
 		case 41:
 			return new ValueTuple<Func<GameplayCueBase>, bool>?(new ValueTuple<Func<GameplayCueBase>, bool>(() => new GameplayCueFall(), GameplayCueBase.IsSingleInstance()));
+		case 42:
+			return new ValueTuple<Func<GameplayCueBase>, bool>?(new ValueTuple<Func<GameplayCueBase>, bool>(() => new GameplayCueTrailChain(), GameplayCueBase.IsSingleInstance()));
 		default:
 			return null;
 		}
 	}
 
-	// Token: 0x060196E5 RID: 104165 RVA: 0x00691264 File Offset: 0x0068F464
+	// Token: 0x06016FB5 RID: 94133 RVA: 0x006B76A0 File Offset: 0x006B58A0
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -481,12 +484,52 @@ public class BaseGameplayCueComponent : EntityComponent
 			return false;
 		}
 		BaseGameplayCueComponent baseGameplayCueComponent = (BaseGameplayCueComponent)componentTemplate;
-		return (!base.CanResetComponentProperty("CueContainer") || baseGameplayCueComponent.CueContainer == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, GameplayCueBase>>(this.CueContainer), "CueContainer")) && (!base.CanResetComponentProperty("CuePriorityGroup") || baseGameplayCueComponent.CuePriorityGroup == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, long>>(this.CuePriorityGroup), "CuePriorityGroup"));
+		return (baseGameplayCueComponent.CueContainer == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.CueContainer), "CueContainer")) && (baseGameplayCueComponent.CuePriorityGroup == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.CuePriorityGroup), "CuePriorityGroup"));
 	}
 
-	// Token: 0x0400BD27 RID: 48423
+	// Token: 0x17002379 RID: 9081
+	// (get) Token: 0x06016FB6 RID: 94134 RVA: 0x006B7704 File Offset: 0x006B5904
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700237A RID: 9082
+	// (get) Token: 0x06016FB7 RID: 94135 RVA: 0x006B7707 File Offset: 0x006B5907
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700237B RID: 9083
+	// (get) Token: 0x06016FB8 RID: 94136 RVA: 0x006B770A File Offset: 0x006B590A
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700237C RID: 9084
+	// (get) Token: 0x06016FB9 RID: 94137 RVA: 0x006B770D File Offset: 0x006B590D
+	public override bool NeedAfterTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C0BE RID: 49342
 	private readonly Dictionary<long, GameplayCueBase> CueContainer = new Dictionary<long, GameplayCueBase>();
 
-	// Token: 0x0400BD28 RID: 48424
+	// Token: 0x0400C0BF RID: 49343
 	private readonly Dictionary<int, long> CuePriorityGroup = new Dictionary<int, long>();
 }

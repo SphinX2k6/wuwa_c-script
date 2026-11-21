@@ -5,13 +5,13 @@ using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController;
 using AkiClient.Game.Aki.TypeScript.Game.NewWorld.Character.SimpleNpc.Blueprint;
 using UnrealEngine;
 
-// Token: 0x020031D7 RID: 12759
+// Token: 0x02002746 RID: 10054
 [NullableContext(2)]
 [Nullable(0)]
 public class NpcMaterialController
 {
-	// Token: 0x17002608 RID: 9736
-	// (get) Token: 0x0601B838 RID: 112696 RVA: 0x0078B66C File Offset: 0x0078986C
+	// Token: 0x1700282E RID: 10286
+	// (get) Token: 0x06019393 RID: 103315 RVA: 0x007B3464 File Offset: 0x007B1664
 	protected BP_NPCMaterialController_C SimpleMatControlComponent
 	{
 		get
@@ -30,7 +30,7 @@ public class NpcMaterialController
 		}
 	}
 
-	// Token: 0x0601B839 RID: 112697 RVA: 0x0078B6DD File Offset: 0x007898DD
+	// Token: 0x06019394 RID: 103316 RVA: 0x007B34D5 File Offset: 0x007B16D5
 	[NullableContext(1)]
 	public NpcMaterialController(Entity entity)
 	{
@@ -39,7 +39,7 @@ public class NpcMaterialController
 		this.ActorComp = this.Entity.GetComponent<BaseCharacterComponent>();
 	}
 
-	// Token: 0x0601B83A RID: 112698 RVA: 0x0078B71C File Offset: 0x0078991C
+	// Token: 0x06019395 RID: 103317 RVA: 0x007B3514 File Offset: 0x007B1714
 	public bool Dispose()
 	{
 		BP_NPCMaterialController_C simpleMatControlComponentInternal = this.SimpleMatControlComponentInternal;
@@ -64,7 +64,7 @@ public class NpcMaterialController
 		return true;
 	}
 
-	// Token: 0x0601B83B RID: 112699 RVA: 0x0078B7A0 File Offset: 0x007899A0
+	// Token: 0x06019396 RID: 103318 RVA: 0x007B3598 File Offset: 0x007B1798
 	public unsafe void LoadAndSetHolographicEffect()
 	{
 		AActor holographicEffectActor = this.HolographicEffectActor;
@@ -104,7 +104,7 @@ public class NpcMaterialController
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601B83C RID: 112700 RVA: 0x0078B800 File Offset: 0x00789A00
+	// Token: 0x06019397 RID: 103319 RVA: 0x007B35F8 File Offset: 0x007B17F8
 	[NullableContext(1)]
 	public unsafe int ApplyMaterialEffect(string daPath)
 	{
@@ -150,7 +150,7 @@ public class NpcMaterialController
 		return matInfo.Id;
 	}
 
-	// Token: 0x0601B83D RID: 112701 RVA: 0x0078B884 File Offset: 0x00789A84
+	// Token: 0x06019398 RID: 103320 RVA: 0x007B367C File Offset: 0x007B187C
 	[NullableContext(1)]
 	public int ApplyMaterialEffectByAsset(UPrimaryDataAsset effect)
 	{
@@ -159,7 +159,7 @@ public class NpcMaterialController
 		return npcMatHandleInfo.Id;
 	}
 
-	// Token: 0x0601B83E RID: 112702 RVA: 0x0078B8A8 File Offset: 0x00789AA8
+	// Token: 0x06019399 RID: 103321 RVA: 0x007B36A0 File Offset: 0x007B18A0
 	[NullableContext(1)]
 	protected unsafe void ApplyMaterialEffectInternal(UPrimaryDataAsset effect, NpcMatHandleInfo matInfo)
 	{
@@ -230,7 +230,7 @@ public class NpcMaterialController
 		this.MaterialEffectHandleMap[matInfo.Id] = matInfo;
 	}
 
-	// Token: 0x0601B83F RID: 112703 RVA: 0x0078BA24 File Offset: 0x00789C24
+	// Token: 0x0601939A RID: 103322 RVA: 0x007B381C File Offset: 0x007B1A1C
 	[NullableContext(1)]
 	public unsafe void ApplySimpleMaterialEffect(string daPath)
 	{
@@ -274,7 +274,7 @@ public class NpcMaterialController
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601B840 RID: 112704 RVA: 0x0078BAA8 File Offset: 0x00789CA8
+	// Token: 0x0601939B RID: 103323 RVA: 0x007B38A0 File Offset: 0x007B1AA0
 	[NullableContext(1)]
 	public void ApplySimpleMaterialEffectByAsset(PD_HolographicEffect_C effect)
 	{
@@ -291,7 +291,7 @@ public class NpcMaterialController
 		this.SimpleMatControlComponent.StartEffect();
 	}
 
-	// Token: 0x0601B841 RID: 112705 RVA: 0x0078BAF8 File Offset: 0x00789CF8
+	// Token: 0x0601939C RID: 103324 RVA: 0x007B38F0 File Offset: 0x007B1AF0
 	public void RemoveMaterialEffect(int id)
 	{
 		NpcMatHandleInfo npcMatHandleInfo;
@@ -334,7 +334,7 @@ public class NpcMaterialController
 		this.MaterialEffectHandleMap.Remove(id);
 	}
 
-	// Token: 0x0601B842 RID: 112706 RVA: 0x0078BB98 File Offset: 0x00789D98
+	// Token: 0x0601939D RID: 103325 RVA: 0x007B3990 File Offset: 0x007B1B90
 	public void RemoveSimpleMaterialEffect()
 	{
 		BP_NPCMaterialController_C simpleMatControlComponent = this.SimpleMatControlComponent;
@@ -345,7 +345,7 @@ public class NpcMaterialController
 		this.SimpleMatControlComponent.EndEffect();
 	}
 
-	// Token: 0x0601B843 RID: 112707 RVA: 0x0078BBBD File Offset: 0x00789DBD
+	// Token: 0x0601939E RID: 103326 RVA: 0x007B39B5 File Offset: 0x007B1BB5
 	public NpcMatHandleInfo GetMaterialInfo(int? id)
 	{
 		if (id == null || !this.MaterialEffectHandleMap.ContainsKey(id.Value))
@@ -355,25 +355,25 @@ public class NpcMaterialController
 		return this.MaterialEffectHandleMap[id.Value];
 	}
 
-	// Token: 0x0400D808 RID: 55304
+	// Token: 0x0400DC8F RID: 56463
 	protected Entity Entity;
 
-	// Token: 0x0400D809 RID: 55305
+	// Token: 0x0400DC90 RID: 56464
 	protected BaseCharacterComponent ActorComp;
 
-	// Token: 0x0400D80A RID: 55306
+	// Token: 0x0400DC91 RID: 56465
 	protected CreatureDataComponent CreatureData;
 
-	// Token: 0x0400D80B RID: 55307
+	// Token: 0x0400DC92 RID: 56466
 	protected AActor HolographicEffectActor;
 
-	// Token: 0x0400D80C RID: 55308
+	// Token: 0x0400DC93 RID: 56467
 	protected BP_NPCMaterialController_C SimpleMatControlComponentInternal;
 
-	// Token: 0x0400D80D RID: 55309
+	// Token: 0x0400DC94 RID: 56468
 	protected bool IsInitSimpleMatController;
 
-	// Token: 0x0400D80E RID: 55310
+	// Token: 0x0400DC95 RID: 56469
 	[Nullable(1)]
 	protected Dictionary<int, NpcMatHandleInfo> MaterialEffectHandleMap = new Dictionary<int, NpcMatHandleInfo>();
 }

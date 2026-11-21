@@ -4,20 +4,13 @@ using System.Runtime.InteropServices;
 using AkiClient.Game.Aki.AI.AIFunctionCommon.KFCS_WandersData;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Character.Vision;
-using AkiClient.Game.Aki.Data.AI.Struct;
-using AkiClient.Game.Aki.Data.Condition.Struct;
 using AkiClient.Game.Aki.Data.Entity.Struct;
 using AkiClient.Game.Aki.Data.Fight.Struct;
-using AkiClient.Game.Aki.Data.GMOrder.Struct;
 using AkiClient.Game.Aki.Data.Interaction.Struct;
 using AkiClient.Game.Aki.Data.Manipulate;
 using AkiClient.Game.Aki.Data.Parkour;
-using AkiClient.Game.Aki.Data.Role.Struct;
-using AkiClient.Game.Aki.Data.Scene3DUI.Struct;
 using AkiClient.Game.Aki.Data.Server.Struct;
 using AkiClient.Game.Aki.Data.UiCameraAnimation.Struct;
-using AkiClient.Game.Aki.GamePlay.Cipher;
-using AkiClient.Game.Aki.Sequence.Manager;
 using UnrealEngine;
 using UnrealEngine.Interface;
 using UnrealEngine.Service;
@@ -25,12 +18,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Framework
 {
-	// Token: 0x02003A08 RID: 14856
+	// Token: 0x02003060 RID: 12384
 	[UnrealObjectPath("/Game/Aki/UI/Framework/DataTableUtil.DataTableUtil_C")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class DataTableUtil_C : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601F215 RID: 127509 RVA: 0x008ABA7C File Offset: 0x008A9C7C
+		// Token: 0x0601D680 RID: 120448 RVA: 0x008F429F File Offset: 0x008F249F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (DataTableUtil_C._ClassPtr == IntPtr.Zero)
@@ -40,21 +33,20 @@ namespace AkiClient.Game.Aki.UI.Framework
 			return DataTableUtil_C._ClassPtr;
 		}
 
-		// Token: 0x0601F216 RID: 127510 RVA: 0x008ABAA0 File Offset: 0x008A9CA0
+		// Token: 0x0601D681 RID: 120449 RVA: 0x008F42C4 File Offset: 0x008F24C4
 		public DataTableUtil_C() : this(BuiltinUtils.AllocNativeUObject(DataTableUtil_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601F217 RID: 127511 RVA: 0x008ABAC8 File Offset: 0x008A9CC8
+		// Token: 0x0601D682 RID: 120450 RVA: 0x008F42EC File Offset: 0x008F24EC
 		[NullableContext(1)]
 		public DataTableUtil_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(DataTableUtil_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0601F218 RID: 127512 RVA: 0x008ABAFC File Offset: 0x008A9CFC
+		// Token: 0x0601D683 RID: 120451 RVA: 0x008F4320 File Offset: 0x008F2520
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadDecorationConfig([Nullable(1)] string Row, UObject __WorldContext, ref bool bSucc, ref SDecorationConfig result)
 		{
 			DataTableUtil_C.StaticClass();
@@ -76,10 +68,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadDecorationConfig_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F219 RID: 127513 RVA: 0x008ABBD0 File Offset: 0x008A9DD0
+		// Token: 0x0601D684 RID: 120452 RVA: 0x008F43F4 File Offset: 0x008F25F4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void GetDataTableOnEditor([Nullable(1)] string path, UObject __WorldContext, ref UDataTable Return)
 		{
 			DataTableUtil_C.StaticClass();
@@ -95,10 +86,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__GetDataTableOnEditor_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F21A RID: 127514 RVA: 0x008ABC70 File Offset: 0x008A9E70
+		// Token: 0x0601D685 RID: 120453 RVA: 0x008F4494 File Offset: 0x008F2694
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadAiWeaponSocketConfigs(FName RowName, in int Key, UObject __WorldContext, ref SWeaponSocketItem Weapon)
 		{
 			DataTableUtil_C.StaticClass();
@@ -119,10 +109,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadAiWeaponSocketConfigs_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F21B RID: 127515 RVA: 0x008ABD38 File Offset: 0x008A9F38
+		// Token: 0x0601D686 RID: 120454 RVA: 0x008F455C File Offset: 0x008F275C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadAiWeaponSocket(FName RowName, UObject __WorldContext, ref SAiWeaponSocket Out_Row)
 		{
 			DataTableUtil_C.StaticClass();
@@ -142,10 +131,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadAiWeaponSocket_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F21C RID: 127516 RVA: 0x008ABDF8 File Offset: 0x008A9FF8
+		// Token: 0x0601D687 RID: 120455 RVA: 0x008F461C File Offset: 0x008F281C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadAllAiWeaponSockets(UObject __WorldContext, [Nullable(new byte[]
 		{
 			2,
@@ -170,48 +158,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadAllAiWeaponSockets_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F21D RID: 127517 RVA: 0x008ABE90 File Offset: 0x008AA090
-		[NullableContext(1)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe static SSceneUITagConfig LoadSceneUITagConfig(string RowName, [Nullable(2)] UObject __WorldContext, ref bool bFound)
-		{
-			DataTableUtil_C.StaticClass();
-			DataTableUtil_C.__LoadSceneUITagConfig_FunctionParams* ptr = stackalloc DataTableUtil_C.__LoadSceneUITagConfig_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(DataTableUtil_C.__LoadSceneUITagConfig_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(DataTableUtil_C.__LoadSceneUITagConfig_NativeFunctionPtr, (void*)ptr, 1);
-			FString.CopyFrom((void*)(&ptr->RowName), RowName);
-			ptr->__WorldContext = ((__WorldContext != null) ? __WorldContext.NativePtr : IntPtr.Zero);
-			ptr->bFound = bFound;
-			UnrealReflectionUtils.CallVirtualUFunction(DataTableUtil_C._ClassDefaultObjectPtr, DataTableUtil_C.__LoadSceneUITagConfig_NativeFunctionPtr, (void*)ptr);
-			bFound = ptr->bFound;
-			SSceneUITagConfig result = new SSceneUITagConfig(&ptr->__Result, true, true);
-			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadSceneUITagConfig_NativeFunctionPtr, (void*)ptr, 1);
-			return result;
-		}
-
-		// Token: 0x0601F21E RID: 127518 RVA: 0x008ABF28 File Offset: 0x008AA128
-		[NullableContext(1)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe static SSceneDecorationConfig LoadSceneDecorationConfig(string RowName, [Nullable(2)] UObject __WorldContext, ref bool bFound)
-		{
-			DataTableUtil_C.StaticClass();
-			DataTableUtil_C.__LoadSceneDecorationConfig_FunctionParams* ptr = stackalloc DataTableUtil_C.__LoadSceneDecorationConfig_FunctionParams[(UIntPtr)159] + 15L / (long)sizeof(DataTableUtil_C.__LoadSceneDecorationConfig_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(DataTableUtil_C.__LoadSceneDecorationConfig_NativeFunctionPtr, (void*)ptr, 1);
-			FString.CopyFrom((void*)(&ptr->RowName), RowName);
-			ptr->__WorldContext = ((__WorldContext != null) ? __WorldContext.NativePtr : IntPtr.Zero);
-			ptr->bFound = bFound;
-			UnrealReflectionUtils.CallVirtualUFunction(DataTableUtil_C._ClassDefaultObjectPtr, DataTableUtil_C.__LoadSceneDecorationConfig_NativeFunctionPtr, (void*)ptr);
-			bFound = ptr->bFound;
-			SSceneDecorationConfig result = new SSceneDecorationConfig(&ptr->__Result, true, true);
-			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadSceneDecorationConfig_NativeFunctionPtr, (void*)ptr, 1);
-			return result;
-		}
-
-		// Token: 0x0601F21F RID: 127519 RVA: 0x008ABFC4 File Offset: 0x008AA1C4
+		// Token: 0x0601D688 RID: 120456 RVA: 0x008F46B4 File Offset: 0x008F28B4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadManipulateItemConfig([Nullable(1)] string inRow, UObject __WorldContext, ref SManipulateConfig outConfig, ref bool outFound)
 		{
 			DataTableUtil_C.StaticClass();
@@ -233,10 +182,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadManipulateItemConfig_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F220 RID: 127520 RVA: 0x008AC098 File Offset: 0x008AA298
+		// Token: 0x0601D689 RID: 120457 RVA: 0x008F4788 File Offset: 0x008F2988
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadManipulatePrecastConfig([Nullable(1)] string inRow, UObject __WorldContext, ref SManipulateConfig outConfig, ref bool outFound)
 		{
 			DataTableUtil_C.StaticClass();
@@ -258,10 +206,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadManipulatePrecastConfig_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F221 RID: 127521 RVA: 0x008AC16C File Offset: 0x008AA36C
+		// Token: 0x0601D68A RID: 120458 RVA: 0x008F485C File Offset: 0x008F2A5C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadCharacterFightInfo(UDataTable CharacterFightInfo, [Nullable(1)] string CharacterResourcePath, UObject __WorldContext, ref SCharacterFightInfo outInfo, ref bool outIsFound)
 		{
 			DataTableUtil_C.StaticClass();
@@ -284,10 +231,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadCharacterFightInfo_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F222 RID: 127522 RVA: 0x008AC258 File Offset: 0x008AA458
+		// Token: 0x0601D68B RID: 120459 RVA: 0x008F4948 File Offset: 0x008F2B48
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static TArray<SSkillMontage> LoadAllSkillMontages([Nullable(2)] UObject __WorldContext)
 		{
 			DataTableUtil_C.StaticClass();
@@ -300,10 +246,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			return result;
 		}
 
-		// Token: 0x0601F223 RID: 127523 RVA: 0x008AC2D4 File Offset: 0x008AA4D4
+		// Token: 0x0601D68C RID: 120460 RVA: 0x008F49C4 File Offset: 0x008F2BC4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadParkourConfig(FName RowName, UObject __WorldContext, ref SParkourConfig 输出行, ref bool found)
 		{
 			DataTableUtil_C.StaticClass();
@@ -325,10 +270,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadParkourConfig_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F224 RID: 127524 RVA: 0x008AC3A4 File Offset: 0x008AA5A4
+		// Token: 0x0601D68D RID: 120461 RVA: 0x008F4A94 File Offset: 0x008F2C94
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static TArray<SCamp> LoadAllCampConfigs([Nullable(2)] UObject __WorldContext)
 		{
 			DataTableUtil_C.StaticClass();
@@ -341,10 +285,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			return result;
 		}
 
-		// Token: 0x0601F225 RID: 127525 RVA: 0x008AC420 File Offset: 0x008AA620
+		// Token: 0x0601D68E RID: 120462 RVA: 0x008F4B10 File Offset: 0x008F2D10
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void GetCampNum(int Camp, UObject __WorldContext, ref ECamp Num)
 		{
 			DataTableUtil_C.StaticClass();
@@ -357,10 +300,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			Num = ptr->Num;
 		}
 
-		// Token: 0x0601F226 RID: 127526 RVA: 0x008AC49C File Offset: 0x008AA69C
+		// Token: 0x0601D68F RID: 120463 RVA: 0x008F4B8C File Offset: 0x008F2D8C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadHitMapConfig(int MapId, UObject __WorldContext, ref SHitMapping result, ref bool found)
 		{
 			DataTableUtil_C.StaticClass();
@@ -382,10 +324,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadHitMapConfig_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F227 RID: 127527 RVA: 0x008AC56C File Offset: 0x008AA76C
+		// Token: 0x0601D690 RID: 120464 RVA: 0x008F4C5C File Offset: 0x008F2E5C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadCampConfig(int CampNum, UObject __WorldContext, ref SCamp CampInfo, ref bool Found)
 		{
 			DataTableUtil_C.StaticClass();
@@ -407,35 +348,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadCampConfig_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F228 RID: 127528 RVA: 0x008AC63C File Offset: 0x008AA83C
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe static void LoadAIConfig([Nullable(1)] string inConfigId, UObject __WorldContext, ref SAIConfig Out_Row, ref bool outFound)
-		{
-			DataTableUtil_C.StaticClass();
-			DataTableUtil_C.__LoadAIConfig_FunctionParams* ptr = stackalloc DataTableUtil_C.__LoadAIConfig_FunctionParams[(UIntPtr)223] + 15L / (long)sizeof(DataTableUtil_C.__LoadAIConfig_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(DataTableUtil_C.__LoadAIConfig_NativeFunctionPtr, (void*)ptr, 1);
-			FString.CopyFrom((void*)(&ptr->inConfigId), inConfigId);
-			ptr->__WorldContext = ((__WorldContext != null) ? __WorldContext.NativePtr : IntPtr.Zero);
-			if (Out_Row != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(SAIConfig.StaticStruct(), &ptr->Out_Row, Out_Row.NativePtr, 1, false);
-			}
-			ptr->outFound = outFound;
-			UnrealReflectionUtils.CallVirtualUFunction(DataTableUtil_C._ClassDefaultObjectPtr, DataTableUtil_C.__LoadAIConfig_NativeFunctionPtr, (void*)ptr);
-			if (Out_Row != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(SAIConfig.StaticStruct(), Out_Row.NativePtr, &ptr->Out_Row, 1, false);
-			}
-			outFound = ptr->outFound;
-			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadAIConfig_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x0601F229 RID: 127529 RVA: 0x008AC710 File Offset: 0x008AA910
+		// Token: 0x0601D691 RID: 120465 RVA: 0x008F4D2C File Offset: 0x008F2F2C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static SUiCameraAnimationBlendSettings LoadUiCameraAnimationBlendSettings(string RowName, [Nullable(2)] UObject __WorldContext, ref bool bFound)
 		{
 			DataTableUtil_C.StaticClass();
@@ -451,10 +366,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			return result;
 		}
 
-		// Token: 0x0601F22A RID: 127530 RVA: 0x008AC7AC File Offset: 0x008AA9AC
+		// Token: 0x0601D692 RID: 120466 RVA: 0x008F4DC8 File Offset: 0x008F2FC8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static SUiCameraAnimationSettings LoadUiCameraAnimationSettings(string RowName, [Nullable(2)] UObject __WorldContext, ref bool bFound)
 		{
 			DataTableUtil_C.StaticClass();
@@ -470,10 +384,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			return result;
 		}
 
-		// Token: 0x0601F22B RID: 127531 RVA: 0x008AC848 File Offset: 0x008AAA48
+		// Token: 0x0601D693 RID: 120467 RVA: 0x008F4E64 File Offset: 0x008F3064
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadInteractionConfig([Nullable(1)] string inRow, UObject __WorldContext, ref SInteractionConfig ouConfig, ref bool outFound)
 		{
 			DataTableUtil_C.StaticClass();
@@ -495,114 +408,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadInteractionConfig_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F22C RID: 127532 RVA: 0x008AC91C File Offset: 0x008AAB1C
+		// Token: 0x0601D694 RID: 120468 RVA: 0x008F4F38 File Offset: 0x008F3138
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe static void LoadCipherInfo([Nullable(1)] string inRow, UObject __WorldContext, ref SCipherGameplay outConfig, ref bool outFound)
-		{
-			DataTableUtil_C.StaticClass();
-			DataTableUtil_C.__LoadCipherInfo_FunctionParams* ptr = stackalloc DataTableUtil_C.__LoadCipherInfo_FunctionParams[(UIntPtr)239] + 15L / (long)sizeof(DataTableUtil_C.__LoadCipherInfo_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(DataTableUtil_C.__LoadCipherInfo_NativeFunctionPtr, (void*)ptr, 1);
-			FString.CopyFrom((void*)(&ptr->inRow), inRow);
-			ptr->__WorldContext = ((__WorldContext != null) ? __WorldContext.NativePtr : IntPtr.Zero);
-			if (outConfig != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(SCipherGameplay.StaticStruct(), &ptr->outConfig, outConfig.NativePtr, 1, false);
-			}
-			ptr->outFound = outFound;
-			UnrealReflectionUtils.CallVirtualUFunction(DataTableUtil_C._ClassDefaultObjectPtr, DataTableUtil_C.__LoadCipherInfo_NativeFunctionPtr, (void*)ptr);
-			if (outConfig != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(SCipherGameplay.StaticStruct(), outConfig.NativePtr, &ptr->outConfig, 1, false);
-			}
-			outFound = ptr->outFound;
-			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadCipherInfo_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x0601F22D RID: 127533 RVA: 0x008AC9F0 File Offset: 0x008AABF0
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe static void LoadConditionGroupInfo([Nullable(1)] string inRow, UObject __WorldContext, ref SConditionGroup outConfig, ref bool outFound)
-		{
-			DataTableUtil_C.StaticClass();
-			DataTableUtil_C.__LoadConditionGroupInfo_FunctionParams* ptr = stackalloc DataTableUtil_C.__LoadConditionGroupInfo_FunctionParams[(UIntPtr)223] + 15L / (long)sizeof(DataTableUtil_C.__LoadConditionGroupInfo_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(DataTableUtil_C.__LoadConditionGroupInfo_NativeFunctionPtr, (void*)ptr, 1);
-			FString.CopyFrom((void*)(&ptr->inRow), inRow);
-			ptr->__WorldContext = ((__WorldContext != null) ? __WorldContext.NativePtr : IntPtr.Zero);
-			if (outConfig != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(SConditionGroup.StaticStruct(), &ptr->outConfig, outConfig.NativePtr, 1, false);
-			}
-			ptr->outFound = outFound;
-			UnrealReflectionUtils.CallVirtualUFunction(DataTableUtil_C._ClassDefaultObjectPtr, DataTableUtil_C.__LoadConditionGroupInfo_NativeFunctionPtr, (void*)ptr);
-			if (outConfig != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(SConditionGroup.StaticStruct(), outConfig.NativePtr, &ptr->outConfig, 1, false);
-			}
-			outFound = ptr->outFound;
-			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadConditionGroupInfo_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x0601F22E RID: 127534 RVA: 0x008ACAC4 File Offset: 0x008AACC4
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe static void LoadGmOrderInfo(UObject __WorldContext, [Nullable(new byte[]
-		{
-			2,
-			1
-		})] ref TArray<SGMOrderInfo> gmInfoList1)
-		{
-			DataTableUtil_C.StaticClass();
-			DataTableUtil_C.__LoadGmOrderInfo_FunctionParams* ptr = stackalloc DataTableUtil_C.__LoadGmOrderInfo_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(DataTableUtil_C.__LoadGmOrderInfo_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(DataTableUtil_C.__LoadGmOrderInfo_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->__WorldContext = ((__WorldContext != null) ? __WorldContext.NativePtr : IntPtr.Zero);
-			TArray<SGMOrderInfo> tarray = gmInfoList1;
-			if (tarray != null)
-			{
-				tarray.MoveTo(&ptr->gmInfoList1);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(DataTableUtil_C._ClassDefaultObjectPtr, DataTableUtil_C.__LoadGmOrderInfo_NativeFunctionPtr, (void*)ptr);
-			TArray<SGMOrderInfo> tarray2 = gmInfoList1;
-			if (tarray2 != null)
-			{
-				tarray2.MoveAssign(&ptr->gmInfoList1);
-			}
-			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadGmOrderInfo_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x0601F22F RID: 127535 RVA: 0x008ACB58 File Offset: 0x008AAD58
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe static void LoadSeqNetworksInfo(UDataTable inSeqNetwork, [Nullable(1)] string inRow, UObject __WorldContext, ref SSequencesNetwork outInfo, ref bool outIsFound)
-		{
-			DataTableUtil_C.StaticClass();
-			DataTableUtil_C.__LoadSeqNetworksInfo_FunctionParams* ptr = stackalloc DataTableUtil_C.__LoadSeqNetworksInfo_FunctionParams[(UIntPtr)327] + 15L / (long)sizeof(DataTableUtil_C.__LoadSeqNetworksInfo_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(DataTableUtil_C.__LoadSeqNetworksInfo_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->inSeqNetwork = ((inSeqNetwork != null) ? inSeqNetwork.NativePtr : IntPtr.Zero);
-			FString.CopyFrom((void*)(&ptr->inRow), inRow);
-			ptr->__WorldContext = ((__WorldContext != null) ? __WorldContext.NativePtr : IntPtr.Zero);
-			if (outInfo != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(SSequencesNetwork.StaticStruct(), &ptr->outInfo, outInfo.NativePtr, 1, false);
-			}
-			ptr->outIsFound = outIsFound;
-			UnrealReflectionUtils.CallVirtualUFunction(DataTableUtil_C._ClassDefaultObjectPtr, DataTableUtil_C.__LoadSeqNetworksInfo_NativeFunctionPtr, (void*)ptr);
-			if (outInfo != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(SSequencesNetwork.StaticStruct(), outInfo.NativePtr, &ptr->outInfo, 1, false);
-			}
-			outIsFound = ptr->outIsFound;
-			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadSeqNetworksInfo_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x0601F230 RID: 127536 RVA: 0x008ACC44 File Offset: 0x008AAE44
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadVisionInfo([Nullable(1)] string phantomId, UObject __WorldContext, ref SVisionData visionConfig, ref bool found)
 		{
 			DataTableUtil_C.StaticClass();
@@ -624,10 +432,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadVisionInfo_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F231 RID: 127537 RVA: 0x008ACD18 File Offset: 0x008AAF18
+		// Token: 0x0601D695 RID: 120469 RVA: 0x008F500C File Offset: 0x008F320C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadServerInfo(UObject __WorldContext, [Nullable(new byte[]
 		{
 			2,
@@ -652,10 +459,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadServerInfo_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F232 RID: 127538 RVA: 0x008ACDB0 File Offset: 0x008AAFB0
+		// Token: 0x0601D696 RID: 120470 RVA: 0x008F50A4 File Offset: 0x008F32A4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void LoadModelConfig([Nullable(1)] string Row, UObject __WorldContext, ref bool bSucc, ref SModelConfig result)
 		{
 			DataTableUtil_C.StaticClass();
@@ -677,698 +483,477 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadModelConfig_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F233 RID: 127539 RVA: 0x008ACE84 File Offset: 0x008AB084
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe static void LoadRoleQualityInfo([Nullable(1)] string Row, UObject __WorldContext, ref bool bSucc, ref SRoleQualityInfo result)
-		{
-			DataTableUtil_C.StaticClass();
-			DataTableUtil_C.__LoadRoleQualityInfo_FunctionParams* ptr = stackalloc DataTableUtil_C.__LoadRoleQualityInfo_FunctionParams[(UIntPtr)327] + 15L / (long)sizeof(DataTableUtil_C.__LoadRoleQualityInfo_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(DataTableUtil_C.__LoadRoleQualityInfo_NativeFunctionPtr, (void*)ptr, 1);
-			FString.CopyFrom((void*)(&ptr->Row), Row);
-			ptr->__WorldContext = ((__WorldContext != null) ? __WorldContext.NativePtr : IntPtr.Zero);
-			ptr->bSucc = bSucc;
-			if (result != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(SRoleQualityInfo.StaticStruct(), &ptr->result, result.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(DataTableUtil_C._ClassDefaultObjectPtr, DataTableUtil_C.__LoadRoleQualityInfo_NativeFunctionPtr, (void*)ptr);
-			bSucc = ptr->bSucc;
-			if (result != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(SRoleQualityInfo.StaticStruct(), result.NativePtr, &ptr->result, 1, false);
-			}
-			UnrealReflectionUtils.DestroyStruct(DataTableUtil_C.__LoadRoleQualityInfo_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x0601F234 RID: 127540 RVA: 0x008ACF57 File Offset: 0x008AB157
+		// Token: 0x0601D697 RID: 120471 RVA: 0x008F5177 File Offset: 0x008F3377
 		protected DataTableUtil_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400EE63 RID: 61027
+		// Token: 0x0400F78D RID: 63373
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/UI/Framework/DataTableUtil.DataTableUtil_C";
 
-		// Token: 0x0400EE64 RID: 61028
+		// Token: 0x0400F78E RID: 63374
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400EE65 RID: 61029
+		// Token: 0x0400F78F RID: 63375
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400EE66 RID: 61030
+		// Token: 0x0400F790 RID: 63376
 		private static IntPtr __LoadDecorationConfig_NativeFunctionPtr;
 
-		// Token: 0x0400EE67 RID: 61031
+		// Token: 0x0400F791 RID: 63377
 		private static IntPtr __GetDataTableOnEditor_NativeFunctionPtr;
 
-		// Token: 0x0400EE68 RID: 61032
+		// Token: 0x0400F792 RID: 63378
 		private static IntPtr __LoadAiWeaponSocketConfigs_NativeFunctionPtr;
 
-		// Token: 0x0400EE69 RID: 61033
+		// Token: 0x0400F793 RID: 63379
 		private static IntPtr __LoadAiWeaponSocket_NativeFunctionPtr;
 
-		// Token: 0x0400EE6A RID: 61034
+		// Token: 0x0400F794 RID: 63380
 		private static IntPtr __LoadAllAiWeaponSockets_NativeFunctionPtr;
 
-		// Token: 0x0400EE6B RID: 61035
-		private static IntPtr __LoadSceneUITagConfig_NativeFunctionPtr;
-
-		// Token: 0x0400EE6C RID: 61036
-		private static IntPtr __LoadSceneDecorationConfig_NativeFunctionPtr;
-
-		// Token: 0x0400EE6D RID: 61037
+		// Token: 0x0400F795 RID: 63381
 		private static IntPtr __LoadManipulateItemConfig_NativeFunctionPtr;
 
-		// Token: 0x0400EE6E RID: 61038
+		// Token: 0x0400F796 RID: 63382
 		private static IntPtr __LoadManipulatePrecastConfig_NativeFunctionPtr;
 
-		// Token: 0x0400EE6F RID: 61039
+		// Token: 0x0400F797 RID: 63383
 		private static IntPtr __LoadCharacterFightInfo_NativeFunctionPtr;
 
-		// Token: 0x0400EE70 RID: 61040
+		// Token: 0x0400F798 RID: 63384
 		private static IntPtr __LoadAllSkillMontages_NativeFunctionPtr;
 
-		// Token: 0x0400EE71 RID: 61041
+		// Token: 0x0400F799 RID: 63385
 		private static IntPtr __LoadParkourConfig_NativeFunctionPtr;
 
-		// Token: 0x0400EE72 RID: 61042
+		// Token: 0x0400F79A RID: 63386
 		private static IntPtr __LoadAllCampConfigs_NativeFunctionPtr;
 
-		// Token: 0x0400EE73 RID: 61043
+		// Token: 0x0400F79B RID: 63387
 		private static IntPtr __GetCampNum_NativeFunctionPtr;
 
-		// Token: 0x0400EE74 RID: 61044
+		// Token: 0x0400F79C RID: 63388
 		private static IntPtr __LoadHitMapConfig_NativeFunctionPtr;
 
-		// Token: 0x0400EE75 RID: 61045
+		// Token: 0x0400F79D RID: 63389
 		private static IntPtr __LoadCampConfig_NativeFunctionPtr;
 
-		// Token: 0x0400EE76 RID: 61046
-		private static IntPtr __LoadAIConfig_NativeFunctionPtr;
-
-		// Token: 0x0400EE77 RID: 61047
+		// Token: 0x0400F79E RID: 63390
 		private static IntPtr __LoadUiCameraAnimationBlendSettings_NativeFunctionPtr;
 
-		// Token: 0x0400EE78 RID: 61048
+		// Token: 0x0400F79F RID: 63391
 		private static IntPtr __LoadUiCameraAnimationSettings_NativeFunctionPtr;
 
-		// Token: 0x0400EE79 RID: 61049
+		// Token: 0x0400F7A0 RID: 63392
 		private static IntPtr __LoadInteractionConfig_NativeFunctionPtr;
 
-		// Token: 0x0400EE7A RID: 61050
-		private static IntPtr __LoadCipherInfo_NativeFunctionPtr;
-
-		// Token: 0x0400EE7B RID: 61051
-		private static IntPtr __LoadConditionGroupInfo_NativeFunctionPtr;
-
-		// Token: 0x0400EE7C RID: 61052
-		private static IntPtr __LoadGmOrderInfo_NativeFunctionPtr;
-
-		// Token: 0x0400EE7D RID: 61053
-		private static IntPtr __LoadSeqNetworksInfo_NativeFunctionPtr;
-
-		// Token: 0x0400EE7E RID: 61054
+		// Token: 0x0400F7A1 RID: 63393
 		private static IntPtr __LoadVisionInfo_NativeFunctionPtr;
 
-		// Token: 0x0400EE7F RID: 61055
+		// Token: 0x0400F7A2 RID: 63394
 		private static IntPtr __LoadServerInfo_NativeFunctionPtr;
 
-		// Token: 0x0400EE80 RID: 61056
+		// Token: 0x0400F7A3 RID: 63395
 		private static IntPtr __LoadModelConfig_NativeFunctionPtr;
 
-		// Token: 0x0400EE81 RID: 61057
-		private static IntPtr __LoadRoleQualityInfo_NativeFunctionPtr;
-
-		// Token: 0x02009A1D RID: 39453
+		// Token: 0x02008CD4 RID: 36052
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1080)]
 		protected ref struct __LoadDecorationConfig_FunctionParams
 		{
-			// Token: 0x04030F09 RID: 200457
+			// Token: 0x0402C7EC RID: 182252
 			[FieldOffset(0)]
 			public FString Row;
 
-			// Token: 0x04030F0A RID: 200458
+			// Token: 0x0402C7ED RID: 182253
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F0B RID: 200459
+			// Token: 0x0402C7EE RID: 182254
 			[FieldOffset(24)]
 			public bool bSucc;
 
-			// Token: 0x04030F0C RID: 200460
+			// Token: 0x0402C7EF RID: 182255
 			[FieldOffset(32)]
 			public byte result;
 		}
 
-		// Token: 0x02009A1E RID: 39454
+		// Token: 0x02008CD5 RID: 36053
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 152)]
 		protected ref struct __GetDataTableOnEditor_FunctionParams
 		{
-			// Token: 0x04030F0D RID: 200461
+			// Token: 0x0402C7F0 RID: 182256
 			[FieldOffset(0)]
 			public FString path;
 
-			// Token: 0x04030F0E RID: 200462
+			// Token: 0x0402C7F1 RID: 182257
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F0F RID: 200463
+			// Token: 0x0402C7F2 RID: 182258
 			[FieldOffset(24)]
 			public IntPtr Return;
 		}
 
-		// Token: 0x02009A1F RID: 39455
+		// Token: 0x02008CD6 RID: 36054
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 304)]
 		protected ref struct __LoadAiWeaponSocketConfigs_FunctionParams
 		{
-			// Token: 0x04030F10 RID: 200464
+			// Token: 0x0402C7F3 RID: 182259
 			[FieldOffset(0)]
 			public FName RowName;
 
-			// Token: 0x04030F11 RID: 200465
+			// Token: 0x0402C7F4 RID: 182260
 			[FieldOffset(12)]
 			public int Key;
 
-			// Token: 0x04030F12 RID: 200466
+			// Token: 0x0402C7F5 RID: 182261
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F13 RID: 200467
+			// Token: 0x0402C7F6 RID: 182262
 			[FieldOffset(24)]
 			public byte Weapon;
 		}
 
-		// Token: 0x02009A20 RID: 39456
+		// Token: 0x02008CD7 RID: 36055
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 208)]
 		protected ref struct __LoadAiWeaponSocket_FunctionParams
 		{
-			// Token: 0x04030F14 RID: 200468
+			// Token: 0x0402C7F7 RID: 182263
 			[FieldOffset(0)]
 			public FName RowName;
 
-			// Token: 0x04030F15 RID: 200469
+			// Token: 0x0402C7F8 RID: 182264
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F16 RID: 200470
+			// Token: 0x0402C7F9 RID: 182265
 			[FieldOffset(24)]
 			public byte Out_Row;
 		}
 
-		// Token: 0x02009A21 RID: 39457
+		// Token: 0x02008CD8 RID: 36056
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 344)]
 		protected ref struct __LoadAllAiWeaponSockets_FunctionParams
 		{
-			// Token: 0x04030F17 RID: 200471
+			// Token: 0x0402C7FA RID: 182266
 			[FieldOffset(0)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F18 RID: 200472
+			// Token: 0x0402C7FB RID: 182267
 			[FieldOffset(8)]
 			public byte Sockets;
 		}
 
-		// Token: 0x02009A22 RID: 39458
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 80)]
-		protected ref struct __LoadSceneUITagConfig_FunctionParams
-		{
-			// Token: 0x04030F19 RID: 200473
-			[FieldOffset(0)]
-			public FString RowName;
-
-			// Token: 0x04030F1A RID: 200474
-			[FieldOffset(16)]
-			public IntPtr __WorldContext;
-
-			// Token: 0x04030F1B RID: 200475
-			[FieldOffset(24)]
-			public byte __Result;
-
-			// Token: 0x04030F1C RID: 200476
-			[FieldOffset(40)]
-			public bool bFound;
-		}
-
-		// Token: 0x02009A23 RID: 39459
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 144)]
-		protected ref struct __LoadSceneDecorationConfig_FunctionParams
-		{
-			// Token: 0x04030F1D RID: 200477
-			[FieldOffset(0)]
-			public FString RowName;
-
-			// Token: 0x04030F1E RID: 200478
-			[FieldOffset(16)]
-			public IntPtr __WorldContext;
-
-			// Token: 0x04030F1F RID: 200479
-			[FieldOffset(24)]
-			public byte __Result;
-
-			// Token: 0x04030F20 RID: 200480
-			[FieldOffset(72)]
-			public bool bFound;
-		}
-
-		// Token: 0x02009A24 RID: 39460
+		// Token: 0x02008CD9 RID: 36057
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 128)]
 		protected ref struct __LoadManipulateItemConfig_FunctionParams
 		{
-			// Token: 0x04030F21 RID: 200481
+			// Token: 0x0402C7FC RID: 182268
 			[FieldOffset(0)]
 			public FString inRow;
 
-			// Token: 0x04030F22 RID: 200482
+			// Token: 0x0402C7FD RID: 182269
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F23 RID: 200483
+			// Token: 0x0402C7FE RID: 182270
 			[FieldOffset(24)]
 			public byte outConfig;
 
-			// Token: 0x04030F24 RID: 200484
+			// Token: 0x0402C7FF RID: 182271
 			[FieldOffset(64)]
 			public bool outFound;
 		}
 
-		// Token: 0x02009A25 RID: 39461
+		// Token: 0x02008CDA RID: 36058
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 128)]
 		protected ref struct __LoadManipulatePrecastConfig_FunctionParams
 		{
-			// Token: 0x04030F25 RID: 200485
+			// Token: 0x0402C800 RID: 182272
 			[FieldOffset(0)]
 			public FString inRow;
 
-			// Token: 0x04030F26 RID: 200486
+			// Token: 0x0402C801 RID: 182273
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F27 RID: 200487
+			// Token: 0x0402C802 RID: 182274
 			[FieldOffset(24)]
 			public byte outConfig;
 
-			// Token: 0x04030F28 RID: 200488
+			// Token: 0x0402C803 RID: 182275
 			[FieldOffset(64)]
 			public bool outFound;
 		}
 
-		// Token: 0x02009A26 RID: 39462
+		// Token: 0x02008CDB RID: 36059
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1544)]
 		protected ref struct __LoadCharacterFightInfo_FunctionParams
 		{
-			// Token: 0x04030F29 RID: 200489
+			// Token: 0x0402C804 RID: 182276
 			[FieldOffset(0)]
 			public IntPtr CharacterFightInfo;
 
-			// Token: 0x04030F2A RID: 200490
+			// Token: 0x0402C805 RID: 182277
 			[FieldOffset(8)]
 			public FString CharacterResourcePath;
 
-			// Token: 0x04030F2B RID: 200491
+			// Token: 0x0402C806 RID: 182278
 			[FieldOffset(24)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F2C RID: 200492
+			// Token: 0x0402C807 RID: 182279
 			[FieldOffset(32)]
 			public byte outInfo;
 
-			// Token: 0x04030F2D RID: 200493
+			// Token: 0x0402C808 RID: 182280
 			[FieldOffset(776)]
 			public bool outIsFound;
 		}
 
-		// Token: 0x02009A27 RID: 39463
+		// Token: 0x02008CDC RID: 36060
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __LoadAllSkillMontages_FunctionParams
 		{
-			// Token: 0x04030F2E RID: 200494
+			// Token: 0x0402C809 RID: 182281
 			[FieldOffset(0)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F2F RID: 200495
+			// Token: 0x0402C80A RID: 182282
 			[FieldOffset(8)]
 			public byte __Result;
 		}
 
-		// Token: 0x02009A28 RID: 39464
+		// Token: 0x02008CDD RID: 36061
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 520)]
 		protected ref struct __LoadParkourConfig_FunctionParams
 		{
-			// Token: 0x04030F30 RID: 200496
+			// Token: 0x0402C80B RID: 182283
 			[FieldOffset(0)]
 			public FName RowName;
 
-			// Token: 0x04030F31 RID: 200497
+			// Token: 0x0402C80C RID: 182284
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F32 RID: 200498
+			// Token: 0x0402C80D RID: 182285
 			[FieldOffset(24)]
 			public byte 输出行;
 
-			// Token: 0x04030F33 RID: 200499
+			// Token: 0x0402C80E RID: 182286
 			[FieldOffset(264)]
 			public bool found;
 		}
 
-		// Token: 0x02009A29 RID: 39465
+		// Token: 0x02008CDE RID: 36062
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 120)]
 		protected ref struct __LoadAllCampConfigs_FunctionParams
 		{
-			// Token: 0x04030F34 RID: 200500
+			// Token: 0x0402C80F RID: 182287
 			[FieldOffset(0)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F35 RID: 200501
+			// Token: 0x0402C810 RID: 182288
 			[FieldOffset(8)]
 			public byte __Result;
 		}
 
-		// Token: 0x02009A2A RID: 39466
+		// Token: 0x02008CDF RID: 36063
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __GetCampNum_FunctionParams
 		{
-			// Token: 0x04030F36 RID: 200502
+			// Token: 0x0402C811 RID: 182289
 			[FieldOffset(0)]
 			public int Camp;
 
-			// Token: 0x04030F37 RID: 200503
+			// Token: 0x0402C812 RID: 182290
 			[FieldOffset(8)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F38 RID: 200504
+			// Token: 0x0402C813 RID: 182291
 			[FieldOffset(16)]
 			public TEnumAsByte<ECamp> Num;
 		}
 
-		// Token: 0x02009A2B RID: 39467
+		// Token: 0x02008CE0 RID: 36064
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 144)]
 		protected ref struct __LoadHitMapConfig_FunctionParams
 		{
-			// Token: 0x04030F39 RID: 200505
+			// Token: 0x0402C814 RID: 182292
 			[FieldOffset(0)]
 			public int MapId;
 
-			// Token: 0x04030F3A RID: 200506
+			// Token: 0x0402C815 RID: 182293
 			[FieldOffset(8)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F3B RID: 200507
+			// Token: 0x0402C816 RID: 182294
 			[FieldOffset(16)]
 			public byte result;
 
-			// Token: 0x04030F3C RID: 200508
+			// Token: 0x0402C817 RID: 182295
 			[FieldOffset(56)]
 			public bool found;
 		}
 
-		// Token: 0x02009A2C RID: 39468
+		// Token: 0x02008CE1 RID: 36065
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 128)]
 		protected ref struct __LoadCampConfig_FunctionParams
 		{
-			// Token: 0x04030F3D RID: 200509
+			// Token: 0x0402C818 RID: 182296
 			[FieldOffset(0)]
 			public int CampNum;
 
-			// Token: 0x04030F3E RID: 200510
+			// Token: 0x0402C819 RID: 182297
 			[FieldOffset(8)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F3F RID: 200511
+			// Token: 0x0402C81A RID: 182298
 			[FieldOffset(16)]
 			public byte CampInfo;
 
-			// Token: 0x04030F40 RID: 200512
+			// Token: 0x0402C81B RID: 182299
 			[FieldOffset(32)]
 			public bool Found;
 		}
 
-		// Token: 0x02009A2D RID: 39469
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 208)]
-		protected ref struct __LoadAIConfig_FunctionParams
-		{
-			// Token: 0x04030F41 RID: 200513
-			[FieldOffset(0)]
-			public FString inConfigId;
-
-			// Token: 0x04030F42 RID: 200514
-			[FieldOffset(16)]
-			public IntPtr __WorldContext;
-
-			// Token: 0x04030F43 RID: 200515
-			[FieldOffset(24)]
-			public byte Out_Row;
-
-			// Token: 0x04030F44 RID: 200516
-			[FieldOffset(104)]
-			public bool outFound;
-		}
-
-		// Token: 0x02009A2E RID: 39470
+		// Token: 0x02008CE2 RID: 36066
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 432)]
 		protected ref struct __LoadUiCameraAnimationBlendSettings_FunctionParams
 		{
-			// Token: 0x04030F45 RID: 200517
+			// Token: 0x0402C81C RID: 182300
 			[FieldOffset(0)]
 			public FString RowName;
 
-			// Token: 0x04030F46 RID: 200518
+			// Token: 0x0402C81D RID: 182301
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F47 RID: 200519
+			// Token: 0x0402C81E RID: 182302
 			[FieldOffset(24)]
 			public byte __Result;
 
-			// Token: 0x04030F48 RID: 200520
+			// Token: 0x0402C81F RID: 182303
 			[FieldOffset(216)]
 			public bool bFound;
 		}
 
-		// Token: 0x02009A2F RID: 39471
+		// Token: 0x02008CE3 RID: 36067
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 944)]
 		protected ref struct __LoadUiCameraAnimationSettings_FunctionParams
 		{
-			// Token: 0x04030F49 RID: 200521
+			// Token: 0x0402C820 RID: 182304
 			[FieldOffset(0)]
 			public FString RowName;
 
-			// Token: 0x04030F4A RID: 200522
+			// Token: 0x0402C821 RID: 182305
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F4B RID: 200523
+			// Token: 0x0402C822 RID: 182306
 			[FieldOffset(24)]
 			public byte __Result;
 
-			// Token: 0x04030F4C RID: 200524
+			// Token: 0x0402C823 RID: 182307
 			[FieldOffset(472)]
 			public bool bFound;
 		}
 
-		// Token: 0x02009A30 RID: 39472
+		// Token: 0x02008CE4 RID: 36068
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 464)]
 		protected ref struct __LoadInteractionConfig_FunctionParams
 		{
-			// Token: 0x04030F4D RID: 200525
+			// Token: 0x0402C824 RID: 182308
 			[FieldOffset(0)]
 			public FString inRow;
 
-			// Token: 0x04030F4E RID: 200526
+			// Token: 0x0402C825 RID: 182309
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F4F RID: 200527
+			// Token: 0x0402C826 RID: 182310
 			[FieldOffset(24)]
 			public byte ouConfig;
 
-			// Token: 0x04030F50 RID: 200528
+			// Token: 0x0402C827 RID: 182311
 			[FieldOffset(232)]
 			public bool outFound;
 		}
 
-		// Token: 0x02009A31 RID: 39473
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 224)]
-		protected ref struct __LoadCipherInfo_FunctionParams
-		{
-			// Token: 0x04030F51 RID: 200529
-			[FieldOffset(0)]
-			public FString inRow;
-
-			// Token: 0x04030F52 RID: 200530
-			[FieldOffset(16)]
-			public IntPtr __WorldContext;
-
-			// Token: 0x04030F53 RID: 200531
-			[FieldOffset(24)]
-			public byte outConfig;
-
-			// Token: 0x04030F54 RID: 200532
-			[FieldOffset(112)]
-			public bool outFound;
-		}
-
-		// Token: 0x02009A32 RID: 39474
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 208)]
-		protected ref struct __LoadConditionGroupInfo_FunctionParams
-		{
-			// Token: 0x04030F55 RID: 200533
-			[FieldOffset(0)]
-			public FString inRow;
-
-			// Token: 0x04030F56 RID: 200534
-			[FieldOffset(16)]
-			public IntPtr __WorldContext;
-
-			// Token: 0x04030F57 RID: 200535
-			[FieldOffset(24)]
-			public byte outConfig;
-
-			// Token: 0x04030F58 RID: 200536
-			[FieldOffset(104)]
-			public bool outFound;
-		}
-
-		// Token: 0x02009A33 RID: 39475
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 40)]
-		protected ref struct __LoadGmOrderInfo_FunctionParams
-		{
-			// Token: 0x04030F59 RID: 200537
-			[FieldOffset(0)]
-			public IntPtr __WorldContext;
-
-			// Token: 0x04030F5A RID: 200538
-			[FieldOffset(8)]
-			public byte gmInfoList1;
-		}
-
-		// Token: 0x02009A34 RID: 39476
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 312)]
-		protected ref struct __LoadSeqNetworksInfo_FunctionParams
-		{
-			// Token: 0x04030F5B RID: 200539
-			[FieldOffset(0)]
-			public IntPtr inSeqNetwork;
-
-			// Token: 0x04030F5C RID: 200540
-			[FieldOffset(8)]
-			public FString inRow;
-
-			// Token: 0x04030F5D RID: 200541
-			[FieldOffset(24)]
-			public IntPtr __WorldContext;
-
-			// Token: 0x04030F5E RID: 200542
-			[FieldOffset(32)]
-			public byte outInfo;
-
-			// Token: 0x04030F5F RID: 200543
-			[FieldOffset(160)]
-			public bool outIsFound;
-		}
-
-		// Token: 0x02009A35 RID: 39477
+		// Token: 0x02008CE5 RID: 36069
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 352)]
 		protected ref struct __LoadVisionInfo_FunctionParams
 		{
-			// Token: 0x04030F60 RID: 200544
+			// Token: 0x0402C828 RID: 182312
 			[FieldOffset(0)]
 			public FString phantomId;
 
-			// Token: 0x04030F61 RID: 200545
+			// Token: 0x0402C829 RID: 182313
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F62 RID: 200546
+			// Token: 0x0402C82A RID: 182314
 			[FieldOffset(24)]
 			public byte visionConfig;
 
-			// Token: 0x04030F63 RID: 200547
+			// Token: 0x0402C82B RID: 182315
 			[FieldOffset(176)]
 			public bool found;
 		}
 
-		// Token: 0x02009A36 RID: 39478
+		// Token: 0x02008CE6 RID: 36070
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 176)]
 		protected ref struct __LoadServerInfo_FunctionParams
 		{
-			// Token: 0x04030F64 RID: 200548
+			// Token: 0x0402C82C RID: 182316
 			[FieldOffset(0)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F65 RID: 200549
+			// Token: 0x0402C82D RID: 182317
 			[FieldOffset(8)]
 			public byte NewParam;
 		}
 
-		// Token: 0x02009A37 RID: 39479
+		// Token: 0x02008CE7 RID: 36071
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 2376)]
 		protected ref struct __LoadModelConfig_FunctionParams
 		{
-			// Token: 0x04030F66 RID: 200550
+			// Token: 0x0402C82E RID: 182318
 			[FieldOffset(0)]
 			public FString Row;
 
-			// Token: 0x04030F67 RID: 200551
+			// Token: 0x0402C82F RID: 182319
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04030F68 RID: 200552
+			// Token: 0x0402C830 RID: 182320
 			[FieldOffset(24)]
 			public bool bSucc;
 
-			// Token: 0x04030F69 RID: 200553
-			[FieldOffset(32)]
-			public byte result;
-		}
-
-		// Token: 0x02009A38 RID: 39480
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 312)]
-		protected ref struct __LoadRoleQualityInfo_FunctionParams
-		{
-			// Token: 0x04030F6A RID: 200554
-			[FieldOffset(0)]
-			public FString Row;
-
-			// Token: 0x04030F6B RID: 200555
-			[FieldOffset(16)]
-			public IntPtr __WorldContext;
-
-			// Token: 0x04030F6C RID: 200556
-			[FieldOffset(24)]
-			public bool bSucc;
-
-			// Token: 0x04030F6D RID: 200557
+			// Token: 0x0402C831 RID: 182321
 			[FieldOffset(32)]
 			public byte result;
 		}

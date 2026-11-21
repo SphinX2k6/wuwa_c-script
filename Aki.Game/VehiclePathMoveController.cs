@@ -6,13 +6,13 @@ using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.LevelGamePlay.Common;
 using UnrealEngine;
 
-// Token: 0x020032E3 RID: 13027
+// Token: 0x02002855 RID: 10325
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class VehiclePathMoveController : ControllerBase
 {
-	// Token: 0x0601C566 RID: 116070 RVA: 0x007EC458 File Offset: 0x007EA658
+	// Token: 0x0601A20C RID: 107020 RVA: 0x00812BE0 File Offset: 0x00810DE0
 	public void TickPriority1(float delta)
 	{
 		float num = delta * 0.001f;
@@ -58,7 +58,7 @@ public class VehiclePathMoveController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C567 RID: 116071 RVA: 0x007EC59C File Offset: 0x007EA79C
+	// Token: 0x0601A20D RID: 107021 RVA: 0x00812D24 File Offset: 0x00810F24
 	public void AddSplineMoveTask(VehiclePathMoveTask task)
 	{
 		Entity vehicleEntity = task.VehicleEntity;
@@ -83,7 +83,7 @@ public class VehiclePathMoveController : ControllerBase
 		this.SplineMoveTaskMap[task.VehicleEntity] = task;
 	}
 
-	// Token: 0x0601C568 RID: 116072 RVA: 0x007EC618 File Offset: 0x007EA818
+	// Token: 0x0601A20E RID: 107022 RVA: 0x00812DA0 File Offset: 0x00810FA0
 	public void RemoveSplineMoveTask(Entity entity)
 	{
 		if (entity.GetComponent<BaseActorComponent>() == null)
@@ -104,7 +104,7 @@ public class VehiclePathMoveController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C569 RID: 116073 RVA: 0x007EC680 File Offset: 0x007EA880
+	// Token: 0x0601A20F RID: 107023 RVA: 0x00812E08 File Offset: 0x00811008
 	protected void PreAddMoveTask(VehiclePathMoveTask task)
 	{
 		Entity vehicleEntity = task.VehicleEntity;
@@ -133,7 +133,7 @@ public class VehiclePathMoveController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C56A RID: 116074 RVA: 0x007EC760 File Offset: 0x007EA960
+	// Token: 0x0601A210 RID: 107024 RVA: 0x00812EE8 File Offset: 0x008110E8
 	protected void PostRemoveMoveTask(VehiclePathMoveTask task)
 	{
 		Entity vehicleEntity = task.VehicleEntity;
@@ -170,7 +170,7 @@ public class VehiclePathMoveController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C56B RID: 116075 RVA: 0x007EC83C File Offset: 0x007EAA3C
+	// Token: 0x0601A211 RID: 107025 RVA: 0x00812FC4 File Offset: 0x008111C4
 	protected void PreUpdateTask(double deltaSeconds, VehiclePathMoveTask task)
 	{
 		BaseActorComponent actorComp = task.ActorComp;
@@ -186,7 +186,7 @@ public class VehiclePathMoveController : ControllerBase
 		actorComp2.LastActorRotation.DeepCopy(task.ActorComp.ActorRotationProxy);
 	}
 
-	// Token: 0x0601C56C RID: 116076 RVA: 0x007EC88C File Offset: 0x007EAA8C
+	// Token: 0x0601A212 RID: 107026 RVA: 0x00813014 File Offset: 0x00811214
 	protected void PostUpdateTask(double deltaSeconds, VehiclePathMoveTask task)
 	{
 		if (task.ActorComp == null)
@@ -198,7 +198,7 @@ public class VehiclePathMoveController : ControllerBase
 		this.UpdatePassengersLocation(task);
 	}
 
-	// Token: 0x0601C56D RID: 116077 RVA: 0x007EC8EC File Offset: 0x007EAAEC
+	// Token: 0x0601A213 RID: 107027 RVA: 0x00813074 File Offset: 0x00811274
 	protected void UpdatePassengersLocation(VehiclePathMoveTask task)
 	{
 		if (task.PerformComp == null)
@@ -222,7 +222,7 @@ public class VehiclePathMoveController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C56E RID: 116078 RVA: 0x007EC990 File Offset: 0x007EAB90
+	// Token: 0x0601A214 RID: 107028 RVA: 0x00813118 File Offset: 0x00811318
 	[return: TupleElementNames(new string[]
 	{
 		"SplineId",
@@ -243,7 +243,7 @@ public class VehiclePathMoveController : ControllerBase
 		return new ValueTuple<int, MoveStateInfo>?(new ValueTuple<int, MoveStateInfo>(valueOrDefault.CurveInfo.SplineId, valueOrDefault.StateInfo.DeepCopy()));
 	}
 
-	// Token: 0x0601C56F RID: 116079 RVA: 0x007EC9E8 File Offset: 0x007EABE8
+	// Token: 0x0601A215 RID: 107029 RVA: 0x00813170 File Offset: 0x00811370
 	public unsafe void SyncEntityPathRatio(Entity entity, int splineId, double pathRatio)
 	{
 		VehiclePathMoveTask valueOrDefault = this.SplineMoveTaskMap.GetValueOrDefault(entity);
@@ -298,7 +298,7 @@ public class VehiclePathMoveController : ControllerBase
 		this.SyncEntityPathRatio(entity, splineId, pathRatio);
 	}
 
-	// Token: 0x0601C570 RID: 116080 RVA: 0x007ECC94 File Offset: 0x007EAE94
+	// Token: 0x0601A216 RID: 107030 RVA: 0x0081341C File Offset: 0x0081161C
 	protected void AddLoopTask(VehiclePathMoveTask task)
 	{
 		Entity vehicleEntity = task.VehicleEntity;
@@ -313,7 +313,7 @@ public class VehiclePathMoveController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C571 RID: 116081 RVA: 0x007ECCE8 File Offset: 0x007EAEE8
+	// Token: 0x0601A217 RID: 107031 RVA: 0x00813470 File Offset: 0x00811670
 	[return: Nullable(2)]
 	public VehiclePathMoveTask CreateMoveTaskFromSplineId(Entity entity, int splineId)
 	{
@@ -327,7 +327,7 @@ public class VehiclePathMoveController : ControllerBase
 		return vehiclePathMoveTask;
 	}
 
-	// Token: 0x0601C572 RID: 116082 RVA: 0x007ECD1C File Offset: 0x007EAF1C
+	// Token: 0x0601A218 RID: 107032 RVA: 0x008134A4 File Offset: 0x008116A4
 	[return: Nullable(2)]
 	public MotorcyclePathMoveTask CreateMotorcycleMoveTaskFromSplineId(Entity entity, int splineId)
 	{
@@ -342,7 +342,7 @@ public class VehiclePathMoveController : ControllerBase
 		return motorcyclePathMoveTask;
 	}
 
-	// Token: 0x0601C573 RID: 116083 RVA: 0x007ECD60 File Offset: 0x007EAF60
+	// Token: 0x0601A219 RID: 107033 RVA: 0x008134E8 File Offset: 0x008116E8
 	protected void MoveToTaskPositionAdjusted(Entity entity, Vector curPosition, Vector tarPosition)
 	{
 		BaseActorComponent actorComp = entity.GetComponent<BaseActorComponent>();
@@ -369,7 +369,7 @@ public class VehiclePathMoveController : ControllerBase
 		});
 	}
 
-	// Token: 0x0601C574 RID: 116084 RVA: 0x007ECE38 File Offset: 0x007EB038
+	// Token: 0x0601A21A RID: 107034 RVA: 0x008135C0 File Offset: 0x008117C0
 	[return: Nullable(2)]
 	public VehiclePathMoveTask CreateMoveToTask(Entity entity, Transform targetTrans, double speed)
 	{
@@ -433,7 +433,7 @@ public class VehiclePathMoveController : ControllerBase
 		return vehiclePathMoveTask;
 	}
 
-	// Token: 0x0601C575 RID: 116085 RVA: 0x007ECFE4 File Offset: 0x007EB1E4
+	// Token: 0x0601A21B RID: 107035 RVA: 0x0081376C File Offset: 0x0081196C
 	[return: Nullable(2)]
 	public VehiclePathMoveTask CreateMotorcycleMoveToTask(Entity entity, Transform targetTrans, double speed)
 	{
@@ -508,7 +508,7 @@ public class VehiclePathMoveController : ControllerBase
 		return new MotorcyclePathMoveTask(entity, pathCurveInfo, stateInfo);
 	}
 
-	// Token: 0x0601C576 RID: 116086 RVA: 0x007ED22C File Offset: 0x007EB42C
+	// Token: 0x0601A21C RID: 107036 RVA: 0x008139B4 File Offset: 0x00811BB4
 	public int GetMovingSplineId(Entity entity)
 	{
 		VehiclePathMoveTask valueOrDefault = this.SplineMoveTaskMap.GetValueOrDefault(entity);
@@ -519,7 +519,7 @@ public class VehiclePathMoveController : ControllerBase
 		return Math.Abs(valueOrDefault.CurveInfo.SplineId);
 	}
 
-	// Token: 0x0601C577 RID: 116087 RVA: 0x007ED25B File Offset: 0x007EB45B
+	// Token: 0x0601A21D RID: 107037 RVA: 0x008139E3 File Offset: 0x00811BE3
 	public VectorInfo ToVectorInfo(Vector inVector)
 	{
 		return new VectorInfo
@@ -530,7 +530,7 @@ public class VehiclePathMoveController : ControllerBase
 		};
 	}
 
-	// Token: 0x0601C578 RID: 116088 RVA: 0x007ED298 File Offset: 0x007EB498
+	// Token: 0x0601A21E RID: 107038 RVA: 0x00813A20 File Offset: 0x00811C20
 	public int FindNearestNextPoint(Entity entity, SplineCurve curve)
 	{
 		BaseActorComponent component = entity.GetComponent<BaseActorComponent>();
@@ -593,8 +593,8 @@ public class VehiclePathMoveController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x1700273E RID: 10046
-	// (get) Token: 0x0601C579 RID: 116089 RVA: 0x007ED493 File Offset: 0x007EB693
+	// Token: 0x17002A8F RID: 10895
+	// (get) Token: 0x0601A21F RID: 107039 RVA: 0x00813C1B File Offset: 0x00811E1B
 	public static VehiclePathMoveController Instance
 	{
 		get
@@ -603,7 +603,7 @@ public class VehiclePathMoveController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C57A RID: 116090 RVA: 0x007ED49A File Offset: 0x007EB69A
+	// Token: 0x0601A220 RID: 107040 RVA: 0x00813C22 File Offset: 0x00811E22
 	public static VehiclePathMoveController GetOrCreateInstance()
 	{
 		if (VehiclePathMoveController._Instance == null)
@@ -613,7 +613,7 @@ public class VehiclePathMoveController : ControllerBase
 		return VehiclePathMoveController._Instance;
 	}
 
-	// Token: 0x0601C57B RID: 116091 RVA: 0x007ED4AE File Offset: 0x007EB6AE
+	// Token: 0x0601A221 RID: 107041 RVA: 0x00813C36 File Offset: 0x00811E36
 	public static bool CreateInstance()
 	{
 		if (VehiclePathMoveController._Instance != null)
@@ -624,54 +624,54 @@ public class VehiclePathMoveController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601C57C RID: 116092 RVA: 0x007ED4C4 File Offset: 0x007EB6C4
+	// Token: 0x0601A222 RID: 107042 RVA: 0x00813C4C File Offset: 0x00811E4C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601C57D RID: 116093 RVA: 0x007ED4C6 File Offset: 0x007EB6C6
+	// Token: 0x0601A223 RID: 107043 RVA: 0x00813C4E File Offset: 0x00811E4E
 	public static void ResetStaticDefaultValue()
 	{
 		VehiclePathMoveController._Instance = null;
 	}
 
-	// Token: 0x0601C57E RID: 116094 RVA: 0x007ED4CE File Offset: 0x007EB6CE
+	// Token: 0x0601A224 RID: 107044 RVA: 0x00813C56 File Offset: 0x00811E56
 	static VehiclePathMoveController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(VehiclePathMoveController.CreateStaticDefaultValue), new Action(VehiclePathMoveController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E095 RID: 57493
+	// Token: 0x0400E540 RID: 58688
 	private const int TEMPRORY_SPLINE_CURVE_ID = -1;
 
-	// Token: 0x0400E096 RID: 57494
+	// Token: 0x0400E541 RID: 58689
 	private const long MOVE_TO_TASK_POSITION_ADJUSTED_TIME = 2000L;
 
-	// Token: 0x0400E097 RID: 57495
+	// Token: 0x0400E542 RID: 58690
 	private const float MOVE_TO_TASK_POSITION_ADJUSTED_DIST = 150f;
 
-	// Token: 0x0400E098 RID: 57496
+	// Token: 0x0400E543 RID: 58691
 	protected Dictionary<Entity, VehiclePathMoveTask> SplineMoveTaskMap = new Dictionary<Entity, VehiclePathMoveTask>();
 
-	// Token: 0x0400E099 RID: 57497
+	// Token: 0x0400E544 RID: 58692
 	protected HashSet<VehiclePathMoveTask> PendingEndTaskSet = new HashSet<VehiclePathMoveTask>();
 
-	// Token: 0x0400E09A RID: 57498
+	// Token: 0x0400E545 RID: 58693
 	protected Dictionary<Entity, int> VehicleMoveDisableHandleMap = new Dictionary<Entity, int>();
 
-	// Token: 0x0400E09B RID: 57499
+	// Token: 0x0400E546 RID: 58694
 	[StaticVariableRuleIgnore]
 	protected Vector TmpVector1 = Vector.Create();
 
-	// Token: 0x0400E09C RID: 57500
+	// Token: 0x0400E547 RID: 58695
 	[StaticVariableRuleIgnore]
 	protected Vector TmpVector2 = Vector.Create();
 
-	// Token: 0x0400E09D RID: 57501
+	// Token: 0x0400E548 RID: 58696
 	[StaticVariableRuleIgnore]
 	protected Transform TmpTrans = Transform.Create();
 
-	// Token: 0x0400E09E RID: 57502
+	// Token: 0x0400E549 RID: 58697
 	[Nullable(2)]
 	private static VehiclePathMoveController _Instance;
 }

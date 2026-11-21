@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020021D8 RID: 8664
+// Token: 0x020016BC RID: 5820
 [NullableContext(1)]
 [Nullable(0)]
 public class MailDynamicScrollItemNew : UiPanelBase, IDynamicScrollBaseItem<MailData>
 {
-	// Token: 0x06010DDB RID: 69083 RVA: 0x0041A614 File Offset: 0x00418814
+	// Token: 0x0600E26C RID: 57964 RVA: 0x00426EF4 File Offset: 0x004250F4
 	public UniTask Init(UUIItem actor)
 	{
 		MailDynamicScrollItemNew.<Init>d__1 <Init>d__;
@@ -23,7 +23,7 @@ public class MailDynamicScrollItemNew : UiPanelBase, IDynamicScrollBaseItem<Mail
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010DDC RID: 69084 RVA: 0x0041A660 File Offset: 0x00418860
+	// Token: 0x0600E26D RID: 57965 RVA: 0x00426F40 File Offset: 0x00425140
 	public FVector2D GetItemSize(MailData data)
 	{
 		if (this.ItemSizeVector == null)
@@ -35,12 +35,12 @@ public class MailDynamicScrollItemNew : UiPanelBase, IDynamicScrollBaseItem<Mail
 		return this.ItemSizeVector.ToUeVector2D(false);
 	}
 
-	// Token: 0x06010DDD RID: 69085 RVA: 0x0041A6AC File Offset: 0x004188AC
+	// Token: 0x0600E26E RID: 57966 RVA: 0x00426F8C File Offset: 0x0042518C
 	public void ClearItem()
 	{
 	}
 
-	// Token: 0x0400801D RID: 32797
+	// Token: 0x04008164 RID: 33124
 	[Nullable(2)]
 	private Vector2D ItemSizeVector;
 }

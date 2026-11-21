@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E9E RID: 20126
+	// Token: 0x02003E67 RID: 15975
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleShopButton : UiPanelBase
 	{
-		// Token: 0x06033B9A RID: 211866 RVA: 0x00C1E02C File Offset: 0x00C1C22C
+		// Token: 0x06028A05 RID: 166405 RVA: 0x00B67548 File Offset: 0x00B65748
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,13 +28,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B9B RID: 211867 RVA: 0x00C1E0D5 File Offset: 0x00C1C2D5
+		// Token: 0x06028A06 RID: 166406 RVA: 0x00B675F1 File Offset: 0x00B657F1
 		protected override void OnBeforeDestroy()
 		{
 			this.ButtonFunction = null;
 		}
 
-		// Token: 0x06033B9C RID: 211868 RVA: 0x00C1E0DE File Offset: 0x00C1C2DE
+		// Token: 0x06028A07 RID: 166407 RVA: 0x00B675FA File Offset: 0x00B657FA
 		private void OnBtnClick()
 		{
 			Action buttonFunction = this.ButtonFunction;
@@ -45,19 +45,19 @@ namespace CSharpScript.Game.Module.RogueBattle
 			buttonFunction();
 		}
 
-		// Token: 0x06033B9D RID: 211869 RVA: 0x00C1E0F0 File Offset: 0x00C1C2F0
+		// Token: 0x06028A08 RID: 166408 RVA: 0x00B6760C File Offset: 0x00B6580C
 		public void SetFunction(Action buttonFunction)
 		{
 			this.ButtonFunction = buttonFunction;
 		}
 
-		// Token: 0x06033B9E RID: 211870 RVA: 0x00C1E0F9 File Offset: 0x00C1C2F9
+		// Token: 0x06028A09 RID: 166409 RVA: 0x00B67615 File Offset: 0x00B65815
 		public void SetText(string textId, params object[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, args);
 		}
 
-		// Token: 0x06033B9F RID: 211871 RVA: 0x00C1E110 File Offset: 0x00C1C310
+		// Token: 0x06028A0A RID: 166410 RVA: 0x00B6762C File Offset: 0x00B6582C
 		public void SetCostText(string text, bool? useChangeColor = null)
 		{
 			UUIText text2 = base.GetText(4);
@@ -71,19 +71,19 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033BA0 RID: 211872 RVA: 0x00C1E154 File Offset: 0x00C1C354
+		// Token: 0x06028A0B RID: 166411 RVA: 0x00B67670 File Offset: 0x00B65870
 		public void SetCostItem(int itemId)
 		{
 			base.SetItemIcon(base.GetTexture(3), itemId, null, null);
 		}
 
-		// Token: 0x06033BA1 RID: 211873 RVA: 0x00C1E179 File Offset: 0x00C1C379
+		// Token: 0x06028A0C RID: 166412 RVA: 0x00B67695 File Offset: 0x00B65895
 		public void SetInteractive(bool bActive)
 		{
 			base.GetButton(0).SetSelfInteractive(bActive);
 		}
 
-		// Token: 0x0401B79B RID: 112539
+		// Token: 0x0401616E RID: 90478
 		[Nullable(2)]
 		private Action ButtonFunction;
 	}

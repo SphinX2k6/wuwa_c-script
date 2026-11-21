@@ -6,26 +6,26 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x0200125A RID: 4698
+// Token: 0x0200070E RID: 1806
 [NullableContext(2)]
 [Nullable(0)]
 public class RollDice
 {
-	// Token: 0x06007FA4 RID: 32676 RVA: 0x001B0374 File Offset: 0x001AE574
+	// Token: 0x0600533B RID: 21307 RVA: 0x001B9024 File Offset: 0x001B7224
 	[NullableContext(1)]
 	private RollDice(IRollDiceParam param)
 	{
 		this.Param = param;
 	}
 
-	// Token: 0x06007FA5 RID: 32677 RVA: 0x001B0396 File Offset: 0x001AE596
+	// Token: 0x0600533C RID: 21308 RVA: 0x001B9046 File Offset: 0x001B7246
 	[NullableContext(1)]
 	public static RollDice Create(IRollDiceParam param)
 	{
 		return new RollDice(param);
 	}
 
-	// Token: 0x06007FA6 RID: 32678 RVA: 0x001B03A0 File Offset: 0x001AE5A0
+	// Token: 0x0600533D RID: 21309 RVA: 0x001B9050 File Offset: 0x001B7250
 	public UniTask Run()
 	{
 		RollDice.<Run>d__14 <Run>d__;
@@ -36,7 +36,7 @@ public class RollDice
 		return <Run>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007FA7 RID: 32679 RVA: 0x001B03E4 File Offset: 0x001AE5E4
+	// Token: 0x0600533E RID: 21310 RVA: 0x001B9094 File Offset: 0x001B7294
 	private void UpdateDiceParameter()
 	{
 		IRollDiceParam param = this.Param;
@@ -61,7 +61,7 @@ public class RollDice
 		}
 	}
 
-	// Token: 0x06007FA8 RID: 32680 RVA: 0x001B0524 File Offset: 0x001AE724
+	// Token: 0x0600533F RID: 21311 RVA: 0x001B91D4 File Offset: 0x001B73D4
 	public void UpdateSceneBind()
 	{
 		IRollDiceParam param = this.Param;
@@ -76,7 +76,7 @@ public class RollDice
 		}
 	}
 
-	// Token: 0x06007FA9 RID: 32681 RVA: 0x001B05AC File Offset: 0x001AE7AC
+	// Token: 0x06005340 RID: 21312 RVA: 0x001B925C File Offset: 0x001B745C
 	public void UpdateDicePoint(int num, int index = 0)
 	{
 		UObject world = GlobalData.GameInstance.GetWorld();
@@ -87,13 +87,13 @@ public class RollDice
 		UKismetMaterialLibrary.SetScalarParameterValue(world, diceMaterialParameterCollection, FNameUtil.GetDynamicFName(defaultInterpolatedStringHandler.ToStringAndClear()).Value, (float)num);
 	}
 
-	// Token: 0x06007FAA RID: 32682 RVA: 0x001B0604 File Offset: 0x001AE804
+	// Token: 0x06005341 RID: 21313 RVA: 0x001B92B4 File Offset: 0x001B74B4
 	private void UpdateProgress(float process)
 	{
 		UKismetMaterialLibrary.SetScalarParameterValue(GlobalData.GameInstance.GetWorld(), this.DiceMaterialParameterCollection, this.ProcessName, process);
 	}
 
-	// Token: 0x06007FAB RID: 32683 RVA: 0x001B0624 File Offset: 0x001AE824
+	// Token: 0x06005342 RID: 21314 RVA: 0x001B92D4 File Offset: 0x001B74D4
 	private void OnTick(float deltaTime)
 	{
 		this.TickTime += deltaTime;
@@ -106,13 +106,13 @@ public class RollDice
 		this.UpdateProgress(process);
 	}
 
-	// Token: 0x06007FAC RID: 32684 RVA: 0x001B0669 File Offset: 0x001AE869
+	// Token: 0x06005343 RID: 21315 RVA: 0x001B9319 File Offset: 0x001B7519
 	public void TimerSystemCreate()
 	{
 		this.TimerHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnTick), 20f, 1f, null, null, true);
 	}
 
-	// Token: 0x06007FAD RID: 32685 RVA: 0x001B0694 File Offset: 0x001AE894
+	// Token: 0x06005344 RID: 21316 RVA: 0x001B9344 File Offset: 0x001B7544
 	public void TimerSystemRemove()
 	{
 		if (this.TimerHandle != null)
@@ -122,13 +122,13 @@ public class RollDice
 		}
 	}
 
-	// Token: 0x06007FAE RID: 32686 RVA: 0x001B06B6 File Offset: 0x001AE8B6
+	// Token: 0x06005345 RID: 21317 RVA: 0x001B9366 File Offset: 0x001B7566
 	public void FlowSystemCreate()
 	{
 		this.TimerHandle = TimerSystem.FlowTimeInstance.Forever(new TTimerAction(this.OnTick), 20f, 1f, null, null, true);
 	}
 
-	// Token: 0x06007FAF RID: 32687 RVA: 0x001B06E1 File Offset: 0x001AE8E1
+	// Token: 0x06005346 RID: 21318 RVA: 0x001B9391 File Offset: 0x001B7591
 	public void FlowSystemRemove()
 	{
 		if (this.TimerHandle != null)
@@ -138,7 +138,7 @@ public class RollDice
 		}
 	}
 
-	// Token: 0x06007FB0 RID: 32688 RVA: 0x001B0703 File Offset: 0x001AE903
+	// Token: 0x06005347 RID: 21319 RVA: 0x001B93B3 File Offset: 0x001B75B3
 	private void TickEnd()
 	{
 		Action timerRemove = this.TimerRemove;
@@ -154,7 +154,7 @@ public class RollDice
 		this.Promise = null;
 	}
 
-	// Token: 0x06007FB1 RID: 32689 RVA: 0x001B072E File Offset: 0x001AE92E
+	// Token: 0x06005348 RID: 21320 RVA: 0x001B93DE File Offset: 0x001B75DE
 	public void TickStart()
 	{
 		this.TickTime = 0f;
@@ -166,40 +166,40 @@ public class RollDice
 		timerCreate();
 	}
 
-	// Token: 0x04003A0E RID: 14862
+	// Token: 0x04003AA6 RID: 15014
 	[Nullable(1)]
 	private UMaterialParameterCollection DiceMaterialParameterCollection;
 
-	// Token: 0x04003A0F RID: 14863
+	// Token: 0x04003AA7 RID: 15015
 	public CustomPromise Promise;
 
-	// Token: 0x04003A10 RID: 14864
+	// Token: 0x04003AA8 RID: 15016
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04003A11 RID: 14865
+	// Token: 0x04003AA9 RID: 15017
 	private readonly float TickMaxTime = 5000f;
 
-	// Token: 0x04003A12 RID: 14866
+	// Token: 0x04003AAA RID: 15018
 	private readonly int AniCount = 10;
 
-	// Token: 0x04003A13 RID: 14867
+	// Token: 0x04003AAB RID: 15019
 	private float TickTime;
 
-	// Token: 0x04003A14 RID: 14868
+	// Token: 0x04003AAC RID: 15020
 	private FName ProcessName;
 
-	// Token: 0x04003A15 RID: 14869
+	// Token: 0x04003AAD RID: 15021
 	public Action TimerCreate;
 
-	// Token: 0x04003A16 RID: 14870
+	// Token: 0x04003AAE RID: 15022
 	public Action TimerRemove;
 
-	// Token: 0x04003A17 RID: 14871
+	// Token: 0x04003AAF RID: 15023
 	public IRollDiceParam Param;
 
-	// Token: 0x04003A18 RID: 14872
+	// Token: 0x04003AB0 RID: 15024
 	public BP_DiceOL_C DiceOutlineBp;
 
-	// Token: 0x04003A19 RID: 14873
+	// Token: 0x04003AB1 RID: 15025
 	public ACineCameraActor DiceCamera;
 }

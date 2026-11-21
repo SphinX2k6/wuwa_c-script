@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052D0 RID: 21200
+	// Token: 0x0200583B RID: 22587
 	public struct IFoxJumpShapeAndPointsParams : IFlatbufferObject
 	{
-		// Token: 0x17009B8A RID: 39818
-		// (get) Token: 0x06022969 RID: 141673 RVA: 0x004CB655 File Offset: 0x004C9855
+		// Token: 0x1700A393 RID: 41875
+		// (get) Token: 0x0602492D RID: 149805 RVA: 0x00506751 File Offset: 0x00504951
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602296A RID: 141674 RVA: 0x004CB662 File Offset: 0x004C9862
+		// Token: 0x0602492E RID: 149806 RVA: 0x0050675E File Offset: 0x0050495E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602296B RID: 141675 RVA: 0x004CB66C File Offset: 0x004C986C
+		// Token: 0x0602492F RID: 149807 RVA: 0x00506768 File Offset: 0x00504968
 		public static IFoxJumpShapeAndPointsParams GetRootAsIFoxJumpShapeAndPointsParams(ByteBuffer _bb)
 		{
 			return IFoxJumpShapeAndPointsParams.GetRootAsIFoxJumpShapeAndPointsParams(_bb, default(IFoxJumpShapeAndPointsParams));
 		}
 
-		// Token: 0x0602296C RID: 141676 RVA: 0x004CB688 File Offset: 0x004C9888
+		// Token: 0x06024930 RID: 149808 RVA: 0x00506784 File Offset: 0x00504984
 		public static IFoxJumpShapeAndPointsParams GetRootAsIFoxJumpShapeAndPointsParams(ByteBuffer _bb, IFoxJumpShapeAndPointsParams obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602296D RID: 141677 RVA: 0x004CB6A5 File Offset: 0x004C98A5
+		// Token: 0x06024931 RID: 149809 RVA: 0x005067A1 File Offset: 0x005049A1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602296E RID: 141678 RVA: 0x004CB6B4 File Offset: 0x004C98B4
+		// Token: 0x06024932 RID: 149810 RVA: 0x005067B0 File Offset: 0x005049B0
 		public IFoxJumpShapeAndPointsParams __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009B8B RID: 39819
-		// (get) Token: 0x0602296F RID: 141679 RVA: 0x004CB6C4 File Offset: 0x004C98C4
+		// Token: 0x1700A394 RID: 41876
+		// (get) Token: 0x06024933 RID: 149811 RVA: 0x005067C0 File Offset: 0x005049C0
 		public IBoxTriggerShape? BoxShape
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022970 RID: 141680 RVA: 0x004CB724 File Offset: 0x004C9924
+		// Token: 0x06024934 RID: 149812 RVA: 0x00506820 File Offset: 0x00504A20
 		public IVectorInfo? PointOffsets(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IVectorInfo?(default(IVectorInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009B8C RID: 39820
-		// (get) Token: 0x06022971 RID: 141681 RVA: 0x004CB784 File Offset: 0x004C9984
+		// Token: 0x1700A395 RID: 41877
+		// (get) Token: 0x06024935 RID: 149813 RVA: 0x00506880 File Offset: 0x00504A80
 		public int PointOffsetsLength
 		{
 			get
@@ -91,7 +91,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022972 RID: 141682 RVA: 0x004CB7AF File Offset: 0x004C99AF
+		// Token: 0x06024936 RID: 149814 RVA: 0x005068AB File Offset: 0x00504AAB
 		public static Offset<IFoxJumpShapeAndPointsParams> CreateIFoxJumpShapeAndPointsParams(FlatBufferBuilder builder, Offset<IBoxTriggerShape> BoxShapeOffset = default(Offset<IBoxTriggerShape>), VectorOffset PointOffsetsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -100,25 +100,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFoxJumpShapeAndPointsParams.EndIFoxJumpShapeAndPointsParams(builder);
 		}
 
-		// Token: 0x06022973 RID: 141683 RVA: 0x004CB7CC File Offset: 0x004C99CC
+		// Token: 0x06024937 RID: 149815 RVA: 0x005068C8 File Offset: 0x00504AC8
 		public static void StartIFoxJumpShapeAndPointsParams(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06022974 RID: 141684 RVA: 0x004CB7D5 File Offset: 0x004C99D5
+		// Token: 0x06024938 RID: 149816 RVA: 0x005068D1 File Offset: 0x00504AD1
 		public static void AddBoxShape(FlatBufferBuilder builder, Offset<IBoxTriggerShape> boxShapeOffset)
 		{
 			builder.AddOffset(0, boxShapeOffset.Value, 0);
 		}
 
-		// Token: 0x06022975 RID: 141685 RVA: 0x004CB7E5 File Offset: 0x004C99E5
+		// Token: 0x06024939 RID: 149817 RVA: 0x005068E1 File Offset: 0x00504AE1
 		public static void AddPointOffsets(FlatBufferBuilder builder, VectorOffset pointOffsetsOffset)
 		{
 			builder.AddOffset(1, pointOffsetsOffset.Value, 0);
 		}
 
-		// Token: 0x06022976 RID: 141686 RVA: 0x004CB7F8 File Offset: 0x004C99F8
+		// Token: 0x0602493A RID: 149818 RVA: 0x005068F4 File Offset: 0x00504AF4
 		public static VectorOffset CreatePointOffsetsVector(FlatBufferBuilder builder, Offset<IVectorInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -129,7 +129,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022977 RID: 141687 RVA: 0x004CB838 File Offset: 0x004C9A38
+		// Token: 0x0602493B RID: 149819 RVA: 0x00506934 File Offset: 0x00504B34
 		public static VectorOffset CreatePointOffsetsVectorBlock(FlatBufferBuilder builder, Offset<IVectorInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022978 RID: 141688 RVA: 0x004CB852 File Offset: 0x004C9A52
+		// Token: 0x0602493C RID: 149820 RVA: 0x0050694E File Offset: 0x00504B4E
 		public static VectorOffset CreatePointOffsetsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IVectorInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -145,7 +145,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022979 RID: 141689 RVA: 0x004CB870 File Offset: 0x004C9A70
+		// Token: 0x0602493D RID: 149821 RVA: 0x0050696C File Offset: 0x00504B6C
 		public static VectorOffset CreatePointOffsetsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -153,19 +153,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602297A RID: 141690 RVA: 0x004CB889 File Offset: 0x004C9A89
+		// Token: 0x0602493E RID: 149822 RVA: 0x00506985 File Offset: 0x00504B85
 		public static void StartPointOffsetsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602297B RID: 141691 RVA: 0x004CB894 File Offset: 0x004C9A94
+		// Token: 0x0602493F RID: 149823 RVA: 0x00506990 File Offset: 0x00504B90
 		public static Offset<IFoxJumpShapeAndPointsParams> EndIFoxJumpShapeAndPointsParams(FlatBufferBuilder builder)
 		{
 			return new Offset<IFoxJumpShapeAndPointsParams>(builder.EndTable());
 		}
 
-		// Token: 0x0602297C RID: 141692 RVA: 0x004CB8A4 File Offset: 0x004C9AA4
+		// Token: 0x06024940 RID: 149824 RVA: 0x005069A0 File Offset: 0x00504BA0
 		public IFoxJumpShapeAndPointsParamsT UnPack()
 		{
 			IFoxJumpShapeAndPointsParamsT foxJumpShapeAndPointsParamsT = new IFoxJumpShapeAndPointsParamsT();
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return foxJumpShapeAndPointsParamsT;
 		}
 
-		// Token: 0x0602297D RID: 141693 RVA: 0x004CB8C0 File Offset: 0x004C9AC0
+		// Token: 0x06024941 RID: 149825 RVA: 0x005069BC File Offset: 0x00504BBC
 		public void UnPackTo(IFoxJumpShapeAndPointsParamsT _o)
 		{
 			_o.BoxShape = ((this.BoxShape != null) ? this.BoxShape.Value.UnPack() : null);
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602297E RID: 141694 RVA: 0x004CB950 File Offset: 0x004C9B50
+		// Token: 0x06024942 RID: 149826 RVA: 0x00506A4C File Offset: 0x00504C4C
 		public static Offset<IFoxJumpShapeAndPointsParams> Pack(FlatBufferBuilder builder, IFoxJumpShapeAndPointsParamsT _o)
 		{
 			if (_o == null)
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFoxJumpShapeAndPointsParams.CreateIFoxJumpShapeAndPointsParams(builder, boxShapeOffset, pointOffsetsOffset);
 		}
 
-		// Token: 0x0400E464 RID: 58468
+		// Token: 0x0400F071 RID: 61553
 		private Table __p;
 	}
 }

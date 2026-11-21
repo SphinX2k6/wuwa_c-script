@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002D18 RID: 11544
+// Token: 0x02002272 RID: 8818
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -10,13 +10,13 @@ using System.Runtime.CompilerServices;
 })]
 public class WeaponItemSmallItemGrid : LoopScrollSmallItemGrid<WeaponDataBase>
 {
-	// Token: 0x06018430 RID: 99376 RVA: 0x0062C46E File Offset: 0x0062A66E
+	// Token: 0x06015CD1 RID: 89297 RVA: 0x00652462 File Offset: 0x00650662
 	protected override void OnRefresh(WeaponDataBase data, bool isSelected, int gridIndex)
 	{
 		this.Refresh(data);
 	}
 
-	// Token: 0x06018431 RID: 99377 RVA: 0x0062C478 File Offset: 0x0062A678
+	// Token: 0x06015CD2 RID: 89298 RVA: 0x0065246C File Offset: 0x0065066C
 	public void Refresh(WeaponDataBase data)
 	{
 		PropSmallItemGrid parameters = new PropSmallItemGrid
@@ -27,7 +27,7 @@ public class WeaponItemSmallItemGrid : LoopScrollSmallItemGrid<WeaponDataBase>
 		base.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x06018432 RID: 99378 RVA: 0x0062C4AA File Offset: 0x0062A6AA
+	// Token: 0x06015CD3 RID: 89299 RVA: 0x0065249E File Offset: 0x0065069E
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, false);

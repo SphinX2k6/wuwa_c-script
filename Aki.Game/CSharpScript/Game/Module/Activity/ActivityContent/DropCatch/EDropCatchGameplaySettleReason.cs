@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066B8 RID: 26296
+	// Token: 0x02005608 RID: 22024
 	public enum EDropCatchGameplaySettleReason
 	{
-		// Token: 0x04022418 RID: 140312
+		// Token: 0x0401CC71 RID: 117873
 		Exit,
-		// Token: 0x04022419 RID: 140313
+		// Token: 0x0401CC72 RID: 117874
 		TimeUp,
-		// Token: 0x0402241A RID: 140314
+		// Token: 0x0401CC73 RID: 117875
 		Restart
 	}
 }

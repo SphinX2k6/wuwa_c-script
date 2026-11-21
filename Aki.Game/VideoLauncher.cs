@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.Module.Plot.Flow;
@@ -8,34 +7,36 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02002CED RID: 11501
+// Token: 0x02002247 RID: 8775
 [NullableContext(2)]
 [Nullable(0)]
 public class VideoLauncher : IStaticVariableResetter
 {
-	// Token: 0x0601824F RID: 98895 RVA: 0x00622A89 File Offset: 0x00620C89
+	// Token: 0x06015ADE RID: 88798 RVA: 0x00648741 File Offset: 0x00646941
 	static VideoLauncher()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(VideoLauncher.CreateStaticDefaultValue), new Action(VideoLauncher.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06018250 RID: 98896 RVA: 0x00622AA8 File Offset: 0x00620CA8
+	// Token: 0x06015ADF RID: 88799 RVA: 0x00648760 File Offset: 0x00646960
 	public static void CreateStaticDefaultValue()
 	{
 		VideoLauncher.CloseCallback = null;
 		VideoLauncher.Param = null;
 		VideoLauncher.FrameEvents = null;
+		VideoLauncher.FrameEventExecutor = null;
 	}
 
-	// Token: 0x06018251 RID: 98897 RVA: 0x00622ABC File Offset: 0x00620CBC
+	// Token: 0x06015AE0 RID: 88800 RVA: 0x0064877A File Offset: 0x0064697A
 	public static void ResetStaticDefaultValue()
 	{
 		VideoLauncher.CloseCallback = null;
 		VideoLauncher.Param = null;
 		VideoLauncher.FrameEvents = null;
+		VideoLauncher.FrameEventExecutor = null;
 	}
 
-	// Token: 0x06018252 RID: 98898 RVA: 0x00622AD0 File Offset: 0x00620CD0
+	// Token: 0x06015AE1 RID: 88801 RVA: 0x00648794 File Offset: 0x00646994
 	private static void DoCallback()
 	{
 		if (VideoLauncher.CloseCallback != null)
@@ -46,7 +47,7 @@ public class VideoLauncher : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018253 RID: 98899 RVA: 0x00622AE9 File Offset: 0x00620CE9
+	// Token: 0x06015AE2 RID: 88802 RVA: 0x006487AD File Offset: 0x006469AD
 	public static void ShowVideoCg(string videoName, Action videoCloseCb = null, IShowVideoCgConfig config = null)
 	{
 		if (string.IsNullOrEmpty(videoName))
@@ -60,33 +61,39 @@ public class VideoLauncher : IStaticVariableResetter
 		VideoLauncher.ShowVideoCgAsync(videoName, videoCloseCb, config).Forget();
 	}
 
-	// Token: 0x06018254 RID: 98900 RVA: 0x00622B0C File Offset: 0x00620D0C
+	// Token: 0x06015AE3 RID: 88803 RVA: 0x006487D0 File Offset: 0x006469D0
 	public static UniTask ShowVideoCgAsync([Nullable(1)] string videoName, Action videoCloseCb = null, IShowVideoCgConfig config = null)
 	{
-		VideoLauncher.<ShowVideoCgAsync>d__8 <ShowVideoCgAsync>d__;
+		VideoLauncher.<ShowVideoCgAsync>d__9 <ShowVideoCgAsync>d__;
 		<ShowVideoCgAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<ShowVideoCgAsync>d__.videoName = videoName;
 		<ShowVideoCgAsync>d__.videoCloseCb = videoCloseCb;
 		<ShowVideoCgAsync>d__.config = config;
 		<ShowVideoCgAsync>d__.<>1__state = -1;
-		<ShowVideoCgAsync>d__.<>t__builder.Start<VideoLauncher.<ShowVideoCgAsync>d__8>(ref <ShowVideoCgAsync>d__);
+		<ShowVideoCgAsync>d__.<>t__builder.Start<VideoLauncher.<ShowVideoCgAsync>d__9>(ref <ShowVideoCgAsync>d__);
 		return <ShowVideoCgAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018255 RID: 98901 RVA: 0x00622B5F File Offset: 0x00620D5F
+	// Token: 0x06015AE4 RID: 88804 RVA: 0x00648823 File Offset: 0x00646A23
 	public static void CloseVideoCg(Action<bool> callback = null)
 	{
 		VideoLauncher.CloseCallback = null;
 		UiManager.Instance.CloseView(EUiViewName.VideoView, callback);
 	}
 
-	// Token: 0x06018256 RID: 98902 RVA: 0x00622B78 File Offset: 0x00620D78
+	// Token: 0x06015AE5 RID: 88805 RVA: 0x0064883C File Offset: 0x00646A3C
 	public static void SetupFrameEvent([Nullable(new byte[]
 	{
 		2,
 		1
-	})] List<IMp4FrameEvent> frameEvents)
+	})] List<IMp4FrameEvent> frameEvents, [Nullable(new byte[]
 	{
+		2,
+		1,
+		1
+	})] Action<List<ActionInfo>> executor = null)
+	{
+		VideoLauncher.FrameEventExecutor = executor;
 		if (frameEvents == null)
 		{
 			VideoLauncher.FrameEvents = null;
@@ -100,7 +107,7 @@ public class VideoLauncher : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018257 RID: 98903 RVA: 0x00622BDC File Offset: 0x00620DDC
+	// Token: 0x06015AE6 RID: 88806 RVA: 0x006488A4 File Offset: 0x00646AA4
 	public static void OnCheckFrameEvent(int playTime)
 	{
 		if (VideoLauncher.FrameEvents == null)
@@ -116,18 +123,25 @@ public class VideoLauncher : IStaticVariableResetter
 				break;
 			}
 			IMp4FrameEvent mp4FrameEvent2 = mp4FrameEvent;
-			VideoLauncher.FrameEvents = VideoLauncher.FrameEvents.Take(num).ToList<IMp4FrameEvent>();
-			FlowController.Instance.ExecuteSubActions(mp4FrameEvent2.EventActions, null, true);
+			VideoLauncher.FrameEvents = VideoLauncher.FrameEvents.GetRange(0, num);
+			if (VideoLauncher.FrameEventExecutor != null)
+			{
+				VideoLauncher.FrameEventExecutor(mp4FrameEvent2.EventActions);
+			}
+			else
+			{
+				FlowController.Instance.ExecuteSubActions(mp4FrameEvent2.EventActions, null, true);
+			}
 		}
 	}
 
-	// Token: 0x0400B37E RID: 45950
+	// Token: 0x0400B6F1 RID: 46833
 	private static Action CloseCallback;
 
-	// Token: 0x0400B37F RID: 45951
+	// Token: 0x0400B6F2 RID: 46834
 	private static IVideoParamHub Param;
 
-	// Token: 0x0400B380 RID: 45952
+	// Token: 0x0400B6F3 RID: 46835
 	[Nullable(new byte[]
 	{
 		2,
@@ -135,11 +149,20 @@ public class VideoLauncher : IStaticVariableResetter
 	})]
 	public static List<IMp4FrameEvent> FrameEvents;
 
-	// Token: 0x02009274 RID: 37492
+	// Token: 0x0400B6F4 RID: 46836
+	[Nullable(new byte[]
+	{
+		2,
+		1,
+		1
+	})]
+	private static Action<List<ActionInfo>> FrameEventExecutor;
+
+	// Token: 0x0200849B RID: 33947
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402F5CC RID: 193996
+		// Token: 0x0402AC50 RID: 175184
 		[Nullable(0)]
 		public static Action <0>__DoCallback;
 	}

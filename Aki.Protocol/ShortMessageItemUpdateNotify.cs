@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001204 RID: 4612
+	// Token: 0x02001240 RID: 4672
 	[NetMessage(EMessageId.ShortMessageItemUpdateNotify)]
 	public sealed class ShortMessageItemUpdateNotify : IMessage<ShortMessageItemUpdateNotify>, IMessage, IEquatable<ShortMessageItemUpdateNotify>, IDeepCloneable<ShortMessageItemUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x06018965 RID: 100709 RVA: 0x00393812 File Offset: 0x00391A12
+		// Token: 0x06018F3F RID: 102207 RVA: 0x003A36B2 File Offset: 0x003A18B2
 		[NullableContext(1)]
 		public static ShortMessageItemUpdateNotify Create()
 		{
 			return new ShortMessageItemUpdateNotify();
 		}
 
-		// Token: 0x170052D8 RID: 21208
-		// (get) Token: 0x06018966 RID: 100710 RVA: 0x00393819 File Offset: 0x00391A19
+		// Token: 0x17005455 RID: 21589
+		// (get) Token: 0x06018F40 RID: 102208 RVA: 0x003A36B9 File Offset: 0x003A18B9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170052D9 RID: 21209
-		// (get) Token: 0x06018967 RID: 100711 RVA: 0x0039381C File Offset: 0x00391A1C
+		// Token: 0x17005456 RID: 21590
+		// (get) Token: 0x06018F41 RID: 102209 RVA: 0x003A36BC File Offset: 0x003A18BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018968 RID: 100712 RVA: 0x00393823 File Offset: 0x00391A23
+		// Token: 0x06018F42 RID: 102210 RVA: 0x003A36C3 File Offset: 0x003A18C3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ShortMessageItemUpdateNotify()
 		{
 		}
 
-		// Token: 0x06018969 RID: 100713 RVA: 0x00393858 File Offset: 0x00391A58
+		// Token: 0x06018F43 RID: 102211 RVA: 0x003A36F8 File Offset: 0x003A18F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ShortMessageItemUpdateNotify(ShortMessageItemUpdateNotify other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601896A RID: 100714 RVA: 0x003938C0 File Offset: 0x00391AC0
+		// Token: 0x06018F44 RID: 102212 RVA: 0x003A3760 File Offset: 0x003A1960
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ShortMessageItemUpdateNotify Clone()
@@ -70,8 +70,8 @@ namespace Aki.Protocol
 			return new ShortMessageItemUpdateNotify(this);
 		}
 
-		// Token: 0x170052DA RID: 21210
-		// (get) Token: 0x0601896B RID: 100715 RVA: 0x003938C8 File Offset: 0x00391AC8
+		// Token: 0x17005457 RID: 21591
+		// (get) Token: 0x06018F45 RID: 102213 RVA: 0x003A3768 File Offset: 0x003A1968
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> BubbleIds
@@ -82,8 +82,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170052DB RID: 21211
-		// (get) Token: 0x0601896C RID: 100716 RVA: 0x003938D0 File Offset: 0x00391AD0
+		// Token: 0x17005458 RID: 21592
+		// (get) Token: 0x06018F46 RID: 102214 RVA: 0x003A3770 File Offset: 0x003A1970
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> ChatBgIds
@@ -94,8 +94,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170052DC RID: 21212
-		// (get) Token: 0x0601896D RID: 100717 RVA: 0x003938D8 File Offset: 0x00391AD8
+		// Token: 0x17005459 RID: 21593
+		// (get) Token: 0x06018F47 RID: 102215 RVA: 0x003A3778 File Offset: 0x003A1978
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> ChatThemeIds
@@ -106,8 +106,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170052DD RID: 21213
-		// (get) Token: 0x0601896E RID: 100718 RVA: 0x003938E0 File Offset: 0x00391AE0
+		// Token: 0x1700545A RID: 21594
+		// (get) Token: 0x06018F48 RID: 102216 RVA: 0x003A3780 File Offset: 0x003A1980
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> ChatCharmIds
@@ -118,7 +118,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601896F RID: 100719 RVA: 0x003938E8 File Offset: 0x00391AE8
+		// Token: 0x06018F49 RID: 102217 RVA: 0x003A3788 File Offset: 0x003A1988
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ShortMessageItemUpdateNotify);
 		}
 
-		// Token: 0x06018970 RID: 100720 RVA: 0x003938F8 File Offset: 0x00391AF8
+		// Token: 0x06018F4A RID: 102218 RVA: 0x003A3798 File Offset: 0x003A1998
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ShortMessageItemUpdateNotify other)
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.bubbleIds_.Equals(other.bubbleIds_) && this.chatBgIds_.Equals(other.chatBgIds_) && this.chatThemeIds_.Equals(other.chatThemeIds_) && this.chatCharmIds_.Equals(other.chatCharmIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06018971 RID: 100721 RVA: 0x00393978 File Offset: 0x00391B78
+		// Token: 0x06018F4B RID: 102219 RVA: 0x003A3818 File Offset: 0x003A1A18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018972 RID: 100722 RVA: 0x003939D6 File Offset: 0x00391BD6
+		// Token: 0x06018F4C RID: 102220 RVA: 0x003A3876 File Offset: 0x003A1A76
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -159,7 +159,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06018973 RID: 100723 RVA: 0x003939E3 File Offset: 0x00391BE3
+		// Token: 0x06018F4D RID: 102221 RVA: 0x003A3883 File Offset: 0x003A1A83
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -167,22 +167,22 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06018974 RID: 100724 RVA: 0x003939EC File Offset: 0x00391BEC
+		// Token: 0x06018F4E RID: 102222 RVA: 0x003A388C File Offset: 0x003A1A8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.chatThemeIds_.WriteTo(ref output, ShortMessageItemUpdateNotify._repeated_chatThemeIds_codec);
 			this.chatCharmIds_.WriteTo(ref output, ShortMessageItemUpdateNotify._repeated_chatCharmIds_codec);
-			this.chatBgIds_.WriteTo(ref output, ShortMessageItemUpdateNotify._repeated_chatBgIds_codec);
+			this.chatThemeIds_.WriteTo(ref output, ShortMessageItemUpdateNotify._repeated_chatThemeIds_codec);
 			this.bubbleIds_.WriteTo(ref output, ShortMessageItemUpdateNotify._repeated_bubbleIds_codec);
+			this.chatBgIds_.WriteTo(ref output, ShortMessageItemUpdateNotify._repeated_chatBgIds_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06018975 RID: 100725 RVA: 0x00393A54 File Offset: 0x00391C54
+		// Token: 0x06018F4F RID: 102223 RVA: 0x003A38F4 File Offset: 0x003A1AF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018976 RID: 100726 RVA: 0x00393AC8 File Offset: 0x00391CC8
+		// Token: 0x06018F50 RID: 102224 RVA: 0x003A3968 File Offset: 0x003A1B68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ShortMessageItemUpdateNotify other)
@@ -215,7 +215,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06018977 RID: 100727 RVA: 0x00393B34 File Offset: 0x00391D34
+		// Token: 0x06018F51 RID: 102225 RVA: 0x003A39D4 File Offset: 0x003A1BD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -223,7 +223,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06018978 RID: 100728 RVA: 0x00393B40 File Offset: 0x00391D40
+		// Token: 0x06018F52 RID: 102226 RVA: 0x003A39E0 File Offset: 0x003A1BE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -235,76 +235,76 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 98U)
+				if (num <= 26U)
 				{
 					if (num <= 10U)
 					{
 						if (num == 8U || num == 10U)
 						{
-							this.chatThemeIds_.AddEntriesFrom(ref input, ShortMessageItemUpdateNotify._repeated_chatThemeIds_codec);
+							this.chatCharmIds_.AddEntriesFrom(ref input, ShortMessageItemUpdateNotify._repeated_chatCharmIds_codec);
 							continue;
 						}
 					}
-					else if (num == 96U || num == 98U)
+					else if (num == 24U || num == 26U)
 					{
-						this.chatCharmIds_.AddEntriesFrom(ref input, ShortMessageItemUpdateNotify._repeated_chatCharmIds_codec);
+						this.chatThemeIds_.AddEntriesFrom(ref input, ShortMessageItemUpdateNotify._repeated_chatThemeIds_codec);
 						continue;
 					}
 				}
-				else if (num <= 106U)
+				else if (num <= 90U)
 				{
-					if (num == 104U || num == 106U)
+					if (num == 88U || num == 90U)
 					{
-						this.chatBgIds_.AddEntriesFrom(ref input, ShortMessageItemUpdateNotify._repeated_chatBgIds_codec);
+						this.bubbleIds_.AddEntriesFrom(ref input, ShortMessageItemUpdateNotify._repeated_bubbleIds_codec);
 						continue;
 					}
 				}
 				else if (num == 120U || num == 122U)
 				{
-					this.bubbleIds_.AddEntriesFrom(ref input, ShortMessageItemUpdateNotify._repeated_bubbleIds_codec);
+					this.chatBgIds_.AddEntriesFrom(ref input, ShortMessageItemUpdateNotify._repeated_chatBgIds_codec);
 					continue;
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x04009155 RID: 37205
+		// Token: 0x04009406 RID: 37894
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009156 RID: 37206
-		public const int BubbleIdsFieldNumber = 15;
+		// Token: 0x04009407 RID: 37895
+		public const int BubbleIdsFieldNumber = 11;
 
-		// Token: 0x04009157 RID: 37207
-		private static readonly FieldCodec<int> _repeated_bubbleIds_codec = FieldCodec.ForInt32(122U);
+		// Token: 0x04009408 RID: 37896
+		private static readonly FieldCodec<int> _repeated_bubbleIds_codec = FieldCodec.ForInt32(90U);
 
-		// Token: 0x04009158 RID: 37208
+		// Token: 0x04009409 RID: 37897
 		private readonly RepeatedField<int> bubbleIds_ = new RepeatedField<int>();
 
-		// Token: 0x04009159 RID: 37209
-		public const int ChatBgIdsFieldNumber = 13;
+		// Token: 0x0400940A RID: 37898
+		public const int ChatBgIdsFieldNumber = 15;
 
-		// Token: 0x0400915A RID: 37210
-		private static readonly FieldCodec<int> _repeated_chatBgIds_codec = FieldCodec.ForInt32(106U);
+		// Token: 0x0400940B RID: 37899
+		private static readonly FieldCodec<int> _repeated_chatBgIds_codec = FieldCodec.ForInt32(122U);
 
-		// Token: 0x0400915B RID: 37211
+		// Token: 0x0400940C RID: 37900
 		private readonly RepeatedField<int> chatBgIds_ = new RepeatedField<int>();
 
-		// Token: 0x0400915C RID: 37212
-		public const int ChatThemeIdsFieldNumber = 1;
+		// Token: 0x0400940D RID: 37901
+		public const int ChatThemeIdsFieldNumber = 3;
 
-		// Token: 0x0400915D RID: 37213
-		private static readonly FieldCodec<int> _repeated_chatThemeIds_codec = FieldCodec.ForInt32(10U);
+		// Token: 0x0400940E RID: 37902
+		private static readonly FieldCodec<int> _repeated_chatThemeIds_codec = FieldCodec.ForInt32(26U);
 
-		// Token: 0x0400915E RID: 37214
+		// Token: 0x0400940F RID: 37903
 		private readonly RepeatedField<int> chatThemeIds_ = new RepeatedField<int>();
 
-		// Token: 0x0400915F RID: 37215
-		public const int ChatCharmIdsFieldNumber = 12;
+		// Token: 0x04009410 RID: 37904
+		public const int ChatCharmIdsFieldNumber = 1;
 
-		// Token: 0x04009160 RID: 37216
-		private static readonly FieldCodec<int> _repeated_chatCharmIds_codec = FieldCodec.ForInt32(98U);
+		// Token: 0x04009411 RID: 37905
+		private static readonly FieldCodec<int> _repeated_chatCharmIds_codec = FieldCodec.ForInt32(10U);
 
-		// Token: 0x04009161 RID: 37217
+		// Token: 0x04009412 RID: 37906
 		private readonly RepeatedField<int> chatCharmIds_ = new RepeatedField<int>();
 	}
 }

@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001740 RID: 5952
+// Token: 0x02000BF9 RID: 3065
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class CalabashCollectGridItem : GridProxyAbstract<CalabashDevelopRewardData>
 {
-	// Token: 0x0600AC35 RID: 44085 RVA: 0x002698E8 File Offset: 0x00267AE8
+	// Token: 0x0600801C RID: 32796 RVA: 0x00273D24 File Offset: 0x00271F24
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ public class CalabashCollectGridItem : GridProxyAbstract<CalabashDevelopRewardDa
 		};
 	}
 
-	// Token: 0x0600AC36 RID: 44086 RVA: 0x00269994 File Offset: 0x00267B94
+	// Token: 0x0600801D RID: 32797 RVA: 0x00273DD0 File Offset: 0x00271FD0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CalabashCollectGridItem.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -52,14 +52,14 @@ public class CalabashCollectGridItem : GridProxyAbstract<CalabashDevelopRewardDa
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AC37 RID: 44087 RVA: 0x002699D7 File Offset: 0x00267BD7
+	// Token: 0x0600801E RID: 32798 RVA: 0x00273E13 File Offset: 0x00272013
 	[NullableContext(1)]
 	private CalabashCollectStarItem CreateStarItem()
 	{
 		return new CalabashCollectStarItem();
 	}
 
-	// Token: 0x0600AC38 RID: 44088 RVA: 0x002699E0 File Offset: 0x00267BE0
+	// Token: 0x0600801F RID: 32799 RVA: 0x00273E1C File Offset: 0x0027201C
 	[NullableContext(1)]
 	public override void Refresh(CalabashDevelopRewardData data, bool isSelected, int gridIndex)
 	{
@@ -114,7 +114,7 @@ public class CalabashCollectGridItem : GridProxyAbstract<CalabashDevelopRewardDa
 		this.RefreshNewItem();
 	}
 
-	// Token: 0x0600AC39 RID: 44089 RVA: 0x00269B1C File Offset: 0x00267D1C
+	// Token: 0x06008020 RID: 32800 RVA: 0x00273F58 File Offset: 0x00272158
 	public override void OnSelected(bool fireEvent)
 	{
 		int monsterId = this.Data.DevelopRewardData.MonsterId;
@@ -130,7 +130,7 @@ public class CalabashCollectGridItem : GridProxyAbstract<CalabashDevelopRewardDa
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x0600AC3A RID: 44090 RVA: 0x00269B6E File Offset: 0x00267D6E
+	// Token: 0x06008021 RID: 32801 RVA: 0x00273FAA File Offset: 0x002721AA
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -141,20 +141,20 @@ public class CalabashCollectGridItem : GridProxyAbstract<CalabashDevelopRewardDa
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600AC3B RID: 44091 RVA: 0x00269B88 File Offset: 0x00267D88
+	// Token: 0x06008022 RID: 32802 RVA: 0x00273FC4 File Offset: 0x002721C4
 	public void RefreshNewItem()
 	{
 		this.NewState = (this.Data.UnlockData && !CalabashModel.Instance.CheckMonsterIdInRecord(this.Data.DevelopRewardData.MonsterId));
 		base.GetItem(3).SetUIActive(this.NewState);
 	}
 
-	// Token: 0x04004E1D RID: 19997
+	// Token: 0x04004EC6 RID: 20166
 	private CalabashDevelopRewardData Data;
 
-	// Token: 0x04004E1E RID: 19998
+	// Token: 0x04004EC7 RID: 20167
 	private VisionDetailMonsterItem MonsterItem;
 
-	// Token: 0x04004E1F RID: 19999
+	// Token: 0x04004EC8 RID: 20168
 	[Nullable(new byte[]
 	{
 		2,
@@ -162,28 +162,28 @@ public class CalabashCollectGridItem : GridProxyAbstract<CalabashDevelopRewardDa
 	})]
 	private GenericLayout<CalabashCollectStarItem, bool> StarLayout;
 
-	// Token: 0x04004E20 RID: 20000
+	// Token: 0x04004EC9 RID: 20169
 	private bool NewState;
 
-	// Token: 0x04004E21 RID: 20001
+	// Token: 0x04004ECA RID: 20170
 	public Func<int, bool> CanToggleChange;
 
-	// Token: 0x04004E22 RID: 20002
+	// Token: 0x04004ECB RID: 20171
 	public Action<int> OnToggleClick;
 
-	// Token: 0x02007D28 RID: 32040
+	// Token: 0x02006EAE RID: 28334
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04028FD0 RID: 167888
+		// Token: 0x040242FA RID: 148218
 		Toggle,
-		// Token: 0x04028FD1 RID: 167889
+		// Token: 0x040242FB RID: 148219
 		MonsterItem,
-		// Token: 0x04028FD2 RID: 167890
+		// Token: 0x040242FC RID: 148220
 		NameText,
-		// Token: 0x04028FD3 RID: 167891
+		// Token: 0x040242FD RID: 148221
 		NewItem,
-		// Token: 0x04028FD4 RID: 167892
+		// Token: 0x040242FE RID: 148222
 		StarLayout
 	}
 }

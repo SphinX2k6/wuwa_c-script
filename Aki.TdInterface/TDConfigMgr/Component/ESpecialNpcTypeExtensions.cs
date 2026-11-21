@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A1A RID: 2586
+	// Token: 0x02000ADF RID: 2783
 	public static class ESpecialNpcTypeExtensions
 	{
-		// Token: 0x06003926 RID: 14630 RVA: 0x000938D4 File Offset: 0x00091AD4
+		// Token: 0x06003CFE RID: 15614 RVA: 0x0009C208 File Offset: 0x0009A408
 		public static string ToEnumString(this ESpecialNpcType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003927 RID: 14631 RVA: 0x000938FC File Offset: 0x00091AFC
+		// Token: 0x06003CFF RID: 15615 RVA: 0x0009C230 File Offset: 0x0009A430
 		public static ESpecialNpcType FromString(string name)
 		{
 			ESpecialNpcType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003928 RID: 14632 RVA: 0x00093925 File Offset: 0x00091B25
+		// Token: 0x06003D00 RID: 15616 RVA: 0x0009C259 File Offset: 0x0009A459
 		public static bool TryFromString(string name, out ESpecialNpcType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003929 RID: 14633 RVA: 0x0009394A File Offset: 0x00091B4A
+		// Token: 0x06003D01 RID: 15617 RVA: 0x0009C27E File Offset: 0x0009A47E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600392A RID: 14634 RVA: 0x0009395A File Offset: 0x00091B5A
+		// Token: 0x06003D02 RID: 15618 RVA: 0x0009C28E File Offset: 0x0009A48E
 		public static ESpecialNpcType[] GetValues()
 		{
 			return new ESpecialNpcType[1];
 		}
 
-		// Token: 0x0600392B RID: 14635 RVA: 0x00093962 File Offset: 0x00091B62
+		// Token: 0x06003D03 RID: 15619 RVA: 0x0009C296 File Offset: 0x0009A496
 		public static string[] GetNames()
 		{
 			return new string[]

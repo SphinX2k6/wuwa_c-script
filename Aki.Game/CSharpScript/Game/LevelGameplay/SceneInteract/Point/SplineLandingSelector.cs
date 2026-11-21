@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 {
-	// Token: 0x02006A88 RID: 27272
+	// Token: 0x02005BE5 RID: 23525
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SplineLandingSelector : IStaticVariableResetter
 	{
-		// Token: 0x06043C5D RID: 277597 RVA: 0x010969B4 File Offset: 0x01094BB4
+		// Token: 0x06039CAB RID: 236715 RVA: 0x0103B1F4 File Offset: 0x010393F4
 		static SplineLandingSelector()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SplineLandingSelector.CreateStaticDefaultValue), new Action(SplineLandingSelector.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06043C5E RID: 277598 RVA: 0x01096A38 File Offset: 0x01094C38
+		// Token: 0x06039CAC RID: 236716 RVA: 0x0103B278 File Offset: 0x01039478
 		public static bool SelectLandingLocation(USplineComponent spline, Vector jumpPointLocation, ISceneInteractSearchParams @params, Vector outLocation, [Nullable(2)] Vector refLocation = null, [Nullable(2)] Quat refRotation = null)
 		{
 			if (spline == null || !spline.IsValid())
@@ -43,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return SplineLandingSelector.PickBest(jumpPointLocation, outLocation);
 		}
 
-		// Token: 0x06043C5F RID: 277599 RVA: 0x01096AE8 File Offset: 0x01094CE8
+		// Token: 0x06039CAD RID: 236717 RVA: 0x0103B328 File Offset: 0x01039528
 		private static void CollectCandidates(USplineComponent spline, double length, bool hasPlane, ISceneInteractSearchParams @params, [Nullable(2)] Vector refLocation = null, [Nullable(2)] Quat refRotation = null)
 		{
 			bool flag = refLocation != null && refRotation != null;
@@ -98,7 +97,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			}
 		}
 
-		// Token: 0x06043C60 RID: 277600 RVA: 0x01096C58 File Offset: 0x01094E58
+		// Token: 0x06039CAE RID: 236718 RVA: 0x0103B498 File Offset: 0x01039698
 		private static void AddPlaneHitCandidate(double prevSigned, double signed, ISceneInteractSearchParams @params)
 		{
 			SplineLandingSelector.LandingCandidate landingCandidate = SplineLandingSelector.AcquireCandidate();
@@ -114,7 +113,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			landingCandidate.DistToPlayer = Vector.Dist(landingCandidate.Location, @params.CurrentRoleLocation);
 		}
 
-		// Token: 0x06043C61 RID: 277601 RVA: 0x01096CD0 File Offset: 0x01094ED0
+		// Token: 0x06039CAF RID: 236719 RVA: 0x0103B510 File Offset: 0x01039710
 		private static bool PickBest(Vector jumpPointLocation, Vector outLocation)
 		{
 			bool enabled = SceneInteractDebugDraw.Enabled;
@@ -152,13 +151,13 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return true;
 		}
 
-		// Token: 0x06043C62 RID: 277602 RVA: 0x01096DA0 File Offset: 0x01094FA0
+		// Token: 0x06039CB0 RID: 236720 RVA: 0x0103B5E0 File Offset: 0x010397E0
 		private static bool IsBetter(SplineLandingSelector.LandingCandidate a, SplineLandingSelector.LandingCandidate b)
 		{
 			return a.DistToPlayer < b.DistToPlayer - 100.0 || (b.DistToPlayer >= a.DistToPlayer - 100.0 && SplineLandingSelector.GetScreenCenterDistSq(a) < SplineLandingSelector.GetScreenCenterDistSq(b));
 		}
 
-		// Token: 0x06043C63 RID: 277603 RVA: 0x01096DEF File Offset: 0x01094FEF
+		// Token: 0x06039CB1 RID: 236721 RVA: 0x0103B62F File Offset: 0x0103982F
 		private static double GetScreenCenterDistSq(SplineLandingSelector.LandingCandidate candidate)
 		{
 			if (candidate.ScreenCenterDistSq == null)
@@ -168,7 +167,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return candidate.ScreenCenterDistSq.Value;
 		}
 
-		// Token: 0x06043C64 RID: 277604 RVA: 0x01096E20 File Offset: 0x01095020
+		// Token: 0x06039CB2 RID: 236722 RVA: 0x0103B660 File Offset: 0x01039860
 		private static double CalcScreenCenterDistSq(Vector location)
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -189,7 +188,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return num * num + num2 * num2;
 		}
 
-		// Token: 0x06043C65 RID: 277605 RVA: 0x01096EB0 File Offset: 0x010950B0
+		// Token: 0x06039CB3 RID: 236723 RVA: 0x0103B6F0 File Offset: 0x010398F0
 		[NullableContext(2)]
 		private static SplineLandingSelector.LandingCandidate AcquireCandidate()
 		{
@@ -197,7 +196,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			{
 				return null;
 			}
-			SplineLandingSelector.LandingCandidate landingCandidate = SplineLandingSelector.Candidates.ElementAtOrDefault(SplineLandingSelector.CandidateCount);
+			SplineLandingSelector.LandingCandidate landingCandidate = (SplineLandingSelector.CandidateCount < SplineLandingSelector.Candidates.Count) ? SplineLandingSelector.Candidates[SplineLandingSelector.CandidateCount] : null;
 			if (landingCandidate == null)
 			{
 				landingCandidate = new SplineLandingSelector.LandingCandidate();
@@ -210,7 +209,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return landingCandidate;
 		}
 
-		// Token: 0x06043C66 RID: 277606 RVA: 0x01096F20 File Offset: 0x01095120
+		// Token: 0x06039CB4 RID: 236724 RVA: 0x0103B774 File Offset: 0x01039974
 		private static Vector GetPlayerGravityDir(ISceneInteractSearchParams @params)
 		{
 			EntityHandle currentRoleEntityHandle = @params.CurrentRoleEntityHandle;
@@ -228,88 +227,88 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return GravityUtils.Instance.GetGravityDirectForActor(actorComp);
 		}
 
-		// Token: 0x06043C67 RID: 277607 RVA: 0x01096F57 File Offset: 0x01095157
+		// Token: 0x06039CB5 RID: 236725 RVA: 0x0103B7AB File Offset: 0x010399AB
 		public static void CreateStaticDefaultValue()
 		{
 			SplineLandingSelector.CandidateCount = 0;
 			SplineLandingSelector.Candidates = new List<SplineLandingSelector.LandingCandidate>();
 		}
 
-		// Token: 0x06043C68 RID: 277608 RVA: 0x01096F69 File Offset: 0x01095169
+		// Token: 0x06039CB6 RID: 236726 RVA: 0x0103B7BD File Offset: 0x010399BD
 		public static void ResetStaticDefaultValue()
 		{
 			SplineLandingSelector.CandidateCount = 0;
 			SplineLandingSelector.Candidates = null;
 		}
 
-		// Token: 0x04023685 RID: 145029
+		// Token: 0x0401E877 RID: 125047
 		private const int MIN_SAMPLE_STEP = 50;
 
-		// Token: 0x04023686 RID: 145030
+		// Token: 0x0401E878 RID: 125048
 		private const int MAX_SAMPLE_COUNT = 128;
 
-		// Token: 0x04023687 RID: 145031
+		// Token: 0x0401E879 RID: 125049
 		private const int PLANE_HIT_EPSILON = 1;
 
-		// Token: 0x04023688 RID: 145032
+		// Token: 0x0401E87A RID: 125050
 		private const int PLAYER_DIST_TOLERANCE = 100;
 
-		// Token: 0x04023689 RID: 145033
+		// Token: 0x0401E87B RID: 125051
 		private const int MAX_CANDIDATE_COUNT = 258;
 
-		// Token: 0x0402368A RID: 145034
+		// Token: 0x0401E87C RID: 125052
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TmpCamToRole = Vector.Create();
 
-		// Token: 0x0402368B RID: 145035
+		// Token: 0x0401E87D RID: 125053
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TmpPlaneNormal = Vector.Create();
 
-		// Token: 0x0402368C RID: 145036
+		// Token: 0x0401E87E RID: 125054
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TmpSample = Vector.Create();
 
-		// Token: 0x0402368D RID: 145037
+		// Token: 0x0401E87F RID: 125055
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TmpLocalSample = Vector.Create();
 
-		// Token: 0x0402368E RID: 145038
+		// Token: 0x0401E880 RID: 125056
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TmpPrevSample = Vector.Create();
 
-		// Token: 0x0402368F RID: 145039
+		// Token: 0x0401E881 RID: 125057
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TmpToSample = Vector.Create();
 
-		// Token: 0x04023690 RID: 145040
+		// Token: 0x0401E882 RID: 125058
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TmpDelta = Vector.Create();
 
-		// Token: 0x04023691 RID: 145041
+		// Token: 0x0401E883 RID: 125059
 		[StaticVariableRuleIgnore]
 		private static FVector2D RefScreenPos = new FVector2D(0f, 0f);
 
-		// Token: 0x04023692 RID: 145042
+		// Token: 0x0401E884 RID: 125060
 		private static List<SplineLandingSelector.LandingCandidate> Candidates;
 
-		// Token: 0x04023693 RID: 145043
+		// Token: 0x0401E885 RID: 125061
 		private static int CandidateCount;
 
-		// Token: 0x0200CB8F RID: 52111
+		// Token: 0x0200B76E RID: 46958
 		[NullableContext(0)]
 		private class LandingCandidate
 		{
-			// Token: 0x0403D73A RID: 251706
+			// Token: 0x04038B1C RID: 232220
 			[Nullable(1)]
 			public readonly Vector Location = Vector.Create();
 
-			// Token: 0x0403D73B RID: 251707
+			// Token: 0x04038B1D RID: 232221
 			public bool IsPlaneHit;
 
-			// Token: 0x0403D73C RID: 251708
+			// Token: 0x04038B1E RID: 232222
 			public double DistToPlayer;
 
-			// Token: 0x0403D73D RID: 251709
+			// Token: 0x04038B1F RID: 232223
 			public double? ScreenCenterDistSq;
 		}
 	}

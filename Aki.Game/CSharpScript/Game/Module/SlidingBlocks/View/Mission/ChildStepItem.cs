@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 {
-	// Token: 0x02004B98 RID: 19352
+	// Token: 0x02003B42 RID: 15170
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ChildStepItem : UiPanelBase
 	{
-		// Token: 0x06032255 RID: 205397 RVA: 0x00BA68A0 File Offset: 0x00BA4AA0
+		// Token: 0x06026FE5 RID: 159717 RVA: 0x00AEA9EC File Offset: 0x00AE8BEC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032256 RID: 205398 RVA: 0x00BA69D0 File Offset: 0x00BA4BD0
+		// Token: 0x06026FE6 RID: 159718 RVA: 0x00AEAB1C File Offset: 0x00AE8D1C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ChildStepItem.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032257 RID: 205399 RVA: 0x00BA6A14 File Offset: 0x00BA4C14
+		// Token: 0x06026FE7 RID: 159719 RVA: 0x00AEAB60 File Offset: 0x00AE8D60
 		protected override void OnBeforeShow()
 		{
 			UUIText text = base.GetText(0);
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			text.ShowTextNew(this.TextKey);
 		}
 
-		// Token: 0x06032258 RID: 205400 RVA: 0x00BA6A60 File Offset: 0x00BA4C60
+		// Token: 0x06026FE8 RID: 159720 RVA: 0x00AEABAC File Offset: 0x00AE8DAC
 		protected override void OnAfterShow()
 		{
 			SlidingBlocksGameData gameData = SlidingBlocksModel.Instance.GameData;
@@ -79,13 +79,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			}
 		}
 
-		// Token: 0x06032259 RID: 205401 RVA: 0x00BA6AA6 File Offset: 0x00BA4CA6
+		// Token: 0x06026FE9 RID: 159721 RVA: 0x00AEABF2 File Offset: 0x00AE8DF2
 		public void OnTick(float delta)
 		{
 			this.CheckScoreAndPlaySuccessAnim();
 		}
 
-		// Token: 0x0603225A RID: 205402 RVA: 0x00BA6AAE File Offset: 0x00BA4CAE
+		// Token: 0x06026FEA RID: 159722 RVA: 0x00AEABFA File Offset: 0x00AE8DFA
 		public void InitByOpenParam(ITargetDescribeAndScore target)
 		{
 			if (target == null)
@@ -97,14 +97,14 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			this.RewardId = target.RewardId;
 		}
 
-		// Token: 0x0603225B RID: 205403 RVA: 0x00BA6AD8 File Offset: 0x00BA4CD8
+		// Token: 0x06026FEB RID: 159723 RVA: 0x00AEAC24 File Offset: 0x00AE8E24
 		[NullableContext(1)]
 		public void SetTextKey(string textKey)
 		{
 			this.TextKey = textKey;
 		}
 
-		// Token: 0x0603225C RID: 205404 RVA: 0x00BA6AE4 File Offset: 0x00BA4CE4
+		// Token: 0x06026FEC RID: 159724 RVA: 0x00AEAC30 File Offset: 0x00AE8E30
 		private UniTask PlaySuccessAnim()
 		{
 			ChildStepItem.<PlaySuccessAnim>d__17 <PlaySuccessAnim>d__;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			return <PlaySuccessAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603225D RID: 205405 RVA: 0x00BA6B28 File Offset: 0x00BA4D28
+		// Token: 0x06026FED RID: 159725 RVA: 0x00AEAC74 File Offset: 0x00AE8E74
 		private void CheckScoreAndPlaySuccessAnim()
 		{
 			CustomPromise<bool> currentStopPromise = this.LevelSequencePlayer.GetCurrentStopPromise("Success");
@@ -145,52 +145,52 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			}
 		}
 
-		// Token: 0x0401AB61 RID: 109409
+		// Token: 0x040154B5 RID: 87221
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401AB62 RID: 109410
+		// Token: 0x040154B6 RID: 87222
 		private string TextKey;
 
-		// Token: 0x0401AB63 RID: 109411
+		// Token: 0x040154B7 RID: 87223
 		private int RewardId;
 
-		// Token: 0x0401AB64 RID: 109412
+		// Token: 0x040154B8 RID: 87224
 		private readonly FColor WhiteColor = FColor.FromHex("ECE5D8FF");
 
-		// Token: 0x0401AB65 RID: 109413
+		// Token: 0x040154B9 RID: 87225
 		private readonly FColor GreenColor = FColor.FromHex("C9F797FF");
 
-		// Token: 0x0401AB66 RID: 109414
+		// Token: 0x040154BA RID: 87226
 		private bool IsPlaySuccessAnim;
 
-		// Token: 0x0401AB67 RID: 109415
+		// Token: 0x040154BB RID: 87227
 		private bool IsComplete;
 
-		// Token: 0x0401AB68 RID: 109416
+		// Token: 0x040154BC RID: 87228
 		private int TargetScore;
 
-		// Token: 0x0401AB69 RID: 109417
+		// Token: 0x040154BD RID: 87229
 		private double LastScore;
 
-		// Token: 0x0200ADB5 RID: 44469
+		// Token: 0x020097D4 RID: 38868
 		[NullableContext(0)]
 		private enum EChildComponent
 		{
-			// Token: 0x04034C23 RID: 216099
+			// Token: 0x0402F5CA RID: 193994
 			StepDescribeText,
-			// Token: 0x04034C24 RID: 216100
+			// Token: 0x0402F5CB RID: 193995
 			StepDistanceText,
-			// Token: 0x04034C25 RID: 216101
+			// Token: 0x0402F5CC RID: 193996
 			StepSuccess,
-			// Token: 0x04034C26 RID: 216102
+			// Token: 0x0402F5CD RID: 193997
 			StepLose,
-			// Token: 0x04034C27 RID: 216103
+			// Token: 0x0402F5CE RID: 193998
 			StepStatusNode,
-			// Token: 0x04034C28 RID: 216104
+			// Token: 0x0402F5CF RID: 193999
 			Root,
-			// Token: 0x04034C29 RID: 216105
+			// Token: 0x0402F5D0 RID: 194000
 			LockIcon,
-			// Token: 0x04034C2A RID: 216106
+			// Token: 0x0402F5D1 RID: 194001
 			ProgressBar
 		}
 	}

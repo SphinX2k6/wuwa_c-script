@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B21 RID: 23329
+	// Token: 0x02006137 RID: 24887
 	public class IVehicleGenerationType_UnionUnion
 	{
-		// Token: 0x1700B018 RID: 45080
-		// (get) Token: 0x06027DE4 RID: 163300 RVA: 0x0057BBD4 File Offset: 0x00579DD4
-		// (set) Token: 0x06027DE5 RID: 163301 RVA: 0x0057BBDC File Offset: 0x00579DDC
+		// Token: 0x1700B960 RID: 47456
+		// (get) Token: 0x0602A3A8 RID: 172968 RVA: 0x005C3628 File Offset: 0x005C1828
+		// (set) Token: 0x0602A3A9 RID: 172969 RVA: 0x005C3630 File Offset: 0x005C1830
 		public IVehicleGenerationType_Union Type { get; set; }
 
-		// Token: 0x1700B019 RID: 45081
-		// (get) Token: 0x06027DE6 RID: 163302 RVA: 0x0057BBE5 File Offset: 0x00579DE5
-		// (set) Token: 0x06027DE7 RID: 163303 RVA: 0x0057BBED File Offset: 0x00579DED
+		// Token: 0x1700B961 RID: 47457
+		// (get) Token: 0x0602A3AA RID: 172970 RVA: 0x005C3639 File Offset: 0x005C1839
+		// (set) Token: 0x0602A3AB RID: 172971 RVA: 0x005C3641 File Offset: 0x005C1841
 		public object Value { get; set; }
 
-		// Token: 0x06027DE8 RID: 163304 RVA: 0x0057BBF6 File Offset: 0x00579DF6
+		// Token: 0x0602A3AC RID: 172972 RVA: 0x005C364A File Offset: 0x005C184A
 		public IVehicleGenerationType_UnionUnion()
 		{
 			this.Type = IVehicleGenerationType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06027DE9 RID: 163305 RVA: 0x0057BC0C File Offset: 0x00579E0C
+		// Token: 0x0602A3AD RID: 172973 RVA: 0x005C3660 File Offset: 0x005C1860
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06027DEA RID: 163306 RVA: 0x0057BC1E File Offset: 0x00579E1E
+		// Token: 0x0602A3AE RID: 172974 RVA: 0x005C3672 File Offset: 0x005C1872
 		public IVehicleGenerationTypeT AsIVehicleGenerationType()
 		{
 			return this.As<IVehicleGenerationTypeT>();
 		}
 
-		// Token: 0x06027DEB RID: 163307 RVA: 0x0057BC26 File Offset: 0x00579E26
+		// Token: 0x0602A3AF RID: 172975 RVA: 0x005C367A File Offset: 0x005C187A
 		public static IVehicleGenerationType_UnionUnion FromIVehicleGenerationType(IVehicleGenerationTypeT _ivehiclegenerationtype)
 		{
 			return new IVehicleGenerationType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06027DEC RID: 163308 RVA: 0x0057BC3B File Offset: 0x00579E3B
+		// Token: 0x0602A3B0 RID: 172976 RVA: 0x005C368F File Offset: 0x005C188F
 		public IVehicleGenerateByVehicleEntityTemplateT AsIVehicleGenerateByVehicleEntityTemplate()
 		{
 			return this.As<IVehicleGenerateByVehicleEntityTemplateT>();
 		}
 
-		// Token: 0x06027DED RID: 163309 RVA: 0x0057BC43 File Offset: 0x00579E43
+		// Token: 0x0602A3B1 RID: 172977 RVA: 0x005C3697 File Offset: 0x005C1897
 		public static IVehicleGenerationType_UnionUnion FromIVehicleGenerateByVehicleEntityTemplate(IVehicleGenerateByVehicleEntityTemplateT _ivehiclegeneratebyvehicleentitytemplate)
 		{
 			return new IVehicleGenerationType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06027DEE RID: 163310 RVA: 0x0057BC58 File Offset: 0x00579E58
+		// Token: 0x0602A3B2 RID: 172978 RVA: 0x005C36AC File Offset: 0x005C18AC
 		public IVehicleGenerateByVehicleTeamTemplateT AsIVehicleGenerateByVehicleTeamTemplate()
 		{
 			return this.As<IVehicleGenerateByVehicleTeamTemplateT>();
 		}
 
-		// Token: 0x06027DEF RID: 163311 RVA: 0x0057BC60 File Offset: 0x00579E60
+		// Token: 0x0602A3B3 RID: 172979 RVA: 0x005C36B4 File Offset: 0x005C18B4
 		public static IVehicleGenerationType_UnionUnion FromIVehicleGenerateByVehicleTeamTemplate(IVehicleGenerateByVehicleTeamTemplateT _ivehiclegeneratebyvehicleteamtemplate)
 		{
 			return new IVehicleGenerationType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06027DF0 RID: 163312 RVA: 0x0057BC78 File Offset: 0x00579E78
+		// Token: 0x0602A3B4 RID: 172980 RVA: 0x005C36CC File Offset: 0x005C18CC
 		public static int Pack(FlatBufferBuilder builder, IVehicleGenerationType_UnionUnion _o)
 		{
 			switch (_o.Type)

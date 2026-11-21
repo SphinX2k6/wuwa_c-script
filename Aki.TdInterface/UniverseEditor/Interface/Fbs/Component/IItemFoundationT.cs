@@ -2,50 +2,50 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005492 RID: 21650
+	// Token: 0x02005A18 RID: 23064
 	public class IItemFoundationT
 	{
-		// Token: 0x17009F6A RID: 40810
-		// (get) Token: 0x06023A14 RID: 145940 RVA: 0x004ED34D File Offset: 0x004EB54D
-		// (set) Token: 0x06023A15 RID: 145941 RVA: 0x004ED355 File Offset: 0x004EB555
+		// Token: 0x1700A7A4 RID: 42916
+		// (get) Token: 0x06025ACC RID: 154316 RVA: 0x0052A3C1 File Offset: 0x005285C1
+		// (set) Token: 0x06025ACD RID: 154317 RVA: 0x0052A3C9 File Offset: 0x005285C9
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009F6B RID: 40811
-		// (get) Token: 0x06023A16 RID: 145942 RVA: 0x004ED35E File Offset: 0x004EB55E
-		// (set) Token: 0x06023A17 RID: 145943 RVA: 0x004ED366 File Offset: 0x004EB566
+		// Token: 0x1700A7A5 RID: 42917
+		// (get) Token: 0x06025ACE RID: 154318 RVA: 0x0052A3D2 File Offset: 0x005285D2
+		// (set) Token: 0x06025ACF RID: 154319 RVA: 0x0052A3DA File Offset: 0x005285DA
 		public IAdsortTransformT AdsorptionPoint { get; set; }
 
-		// Token: 0x17009F6C RID: 40812
-		// (get) Token: 0x06023A18 RID: 145944 RVA: 0x004ED36F File Offset: 0x004EB56F
-		// (set) Token: 0x06023A19 RID: 145945 RVA: 0x004ED377 File Offset: 0x004EB577
+		// Token: 0x1700A7A6 RID: 42918
+		// (get) Token: 0x06025AD0 RID: 154320 RVA: 0x0052A3E3 File Offset: 0x005285E3
+		// (set) Token: 0x06025AD1 RID: 154321 RVA: 0x0052A3EB File Offset: 0x005285EB
 		public IEntityMatchT AdsorptionMatch { get; set; }
 
-		// Token: 0x17009F6D RID: 40813
-		// (get) Token: 0x06023A1A RID: 145946 RVA: 0x004ED380 File Offset: 0x004EB580
-		// (set) Token: 0x06023A1B RID: 145947 RVA: 0x004ED388 File Offset: 0x004EB588
+		// Token: 0x1700A7A7 RID: 42919
+		// (get) Token: 0x06025AD2 RID: 154322 RVA: 0x0052A3F4 File Offset: 0x005285F4
+		// (set) Token: 0x06025AD3 RID: 154323 RVA: 0x0052A3FC File Offset: 0x005285FC
 		public IEntityMatchT ActiveMatch { get; set; }
 
-		// Token: 0x17009F6E RID: 40814
-		// (get) Token: 0x06023A1C RID: 145948 RVA: 0x004ED391 File Offset: 0x004EB591
-		// (set) Token: 0x06023A1D RID: 145949 RVA: 0x004ED399 File Offset: 0x004EB599
+		// Token: 0x1700A7A8 RID: 42920
+		// (get) Token: 0x06025AD4 RID: 154324 RVA: 0x0052A405 File Offset: 0x00528605
+		// (set) Token: 0x06025AD5 RID: 154325 RVA: 0x0052A40D File Offset: 0x0052860D
 		public bool IsSilent { get; set; }
 
-		// Token: 0x17009F6F RID: 40815
-		// (get) Token: 0x06023A1E RID: 145950 RVA: 0x004ED3A2 File Offset: 0x004EB5A2
-		// (set) Token: 0x06023A1F RID: 145951 RVA: 0x004ED3AA File Offset: 0x004EB5AA
+		// Token: 0x1700A7A9 RID: 42921
+		// (get) Token: 0x06025AD6 RID: 154326 RVA: 0x0052A416 File Offset: 0x00528616
+		// (set) Token: 0x06025AD7 RID: 154327 RVA: 0x0052A41E File Offset: 0x0052861E
 		public bool IsDestroy { get; set; }
 
-		// Token: 0x17009F70 RID: 40816
-		// (get) Token: 0x06023A20 RID: 145952 RVA: 0x004ED3B3 File Offset: 0x004EB5B3
-		// (set) Token: 0x06023A21 RID: 145953 RVA: 0x004ED3BB File Offset: 0x004EB5BB
+		// Token: 0x1700A7AA RID: 42922
+		// (get) Token: 0x06025AD8 RID: 154328 RVA: 0x0052A427 File Offset: 0x00528627
+		// (set) Token: 0x06025AD9 RID: 154329 RVA: 0x0052A42F File Offset: 0x0052862F
 		public IItemChangeAdsorbateStateT ChangeAdsorbateState { get; set; }
 
-		// Token: 0x17009F71 RID: 40817
-		// (get) Token: 0x06023A22 RID: 145954 RVA: 0x004ED3C4 File Offset: 0x004EB5C4
-		// (set) Token: 0x06023A23 RID: 145955 RVA: 0x004ED3CC File Offset: 0x004EB5CC
+		// Token: 0x1700A7AB RID: 42923
+		// (get) Token: 0x06025ADA RID: 154330 RVA: 0x0052A438 File Offset: 0x00528638
+		// (set) Token: 0x06025ADB RID: 154331 RVA: 0x0052A440 File Offset: 0x00528640
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023A24 RID: 145956 RVA: 0x004ED3D5 File Offset: 0x004EB5D5
+		// Token: 0x06025ADC RID: 154332 RVA: 0x0052A449 File Offset: 0x00528649
 		public IItemFoundationT()
 		{
 			this.Disabled = false;

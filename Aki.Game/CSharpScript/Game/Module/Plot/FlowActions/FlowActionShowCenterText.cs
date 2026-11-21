@@ -5,10 +5,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050D8 RID: 20696
+	// Token: 0x020040A8 RID: 16552
 	public class FlowActionShowCenterText : FlowActionBase
 	{
-		// Token: 0x06034F57 RID: 216919 RVA: 0x00C8B8C4 File Offset: 0x00C89AC4
+		// Token: 0x06029E50 RID: 171600 RVA: 0x00BD8BAC File Offset: 0x00BD6DAC
 		protected unsafe override void OnExecute()
 		{
 			global::Log instance = global::Log.Instance;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			PlotModel.Instance.ShowCenterText(inShowCenterText, new Action(this.OnShowCenterTextFinished));
 		}
 
-		// Token: 0x06034F58 RID: 216920 RVA: 0x00C8B965 File Offset: 0x00C89B65
+		// Token: 0x06029E51 RID: 171601 RVA: 0x00BD8C4D File Offset: 0x00BD6E4D
 		private void OnShowCenterTextFinished()
 		{
 			this.Runner.FinishShowCenterTextAction(delegate
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			});
 		}
 
-		// Token: 0x06034F59 RID: 216921 RVA: 0x00C8B97E File Offset: 0x00C89B7E
+		// Token: 0x06029E52 RID: 171602 RVA: 0x00BD8C66 File Offset: 0x00BD6E66
 		protected override void OnInterruptExecute()
 		{
 			EventSystem.Instance.Emit(EEventName.OnPlotTransitionRemoveCallback);

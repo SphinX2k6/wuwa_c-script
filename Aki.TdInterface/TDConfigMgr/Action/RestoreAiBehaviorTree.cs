@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002166 RID: 8550
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023C7 RID: 9159
 	public class RestoreAiBehaviorTree : ActionParams
 	{
-		// Token: 0x0600BC1C RID: 48156 RVA: 0x001B1ECC File Offset: 0x001B00CC
+		// Token: 0x0600C7AA RID: 51114 RVA: 0x001C9080 File Offset: 0x001C7280
 		private RestoreAiBehaviorTree_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BC1D RID: 48157 RVA: 0x001B1F04 File Offset: 0x001B0104
+		// Token: 0x0600C7AB RID: 51115 RVA: 0x001C90B8 File Offset: 0x001C72B8
 		public static RestoreAiBehaviorTree Create([Nullable(2)] RestoreAiBehaviorTree instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC1E RID: 48158 RVA: 0x001B1F17 File Offset: 0x001B0117
+		// Token: 0x0600C7AC RID: 51116 RVA: 0x001C90CB File Offset: 0x001C72CB
 		public static RestoreAiBehaviorTree CreateFromSetValue([Nullable(2)] RestoreAiBehaviorTree_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC1F RID: 48159 RVA: 0x001B1F2A File Offset: 0x001B012A
+		// Token: 0x0600C7AD RID: 51117 RVA: 0x001C90DE File Offset: 0x001C72DE
 		public RestoreAiBehaviorTree_SetValue ToSetValue()
 		{
 			return new RestoreAiBehaviorTree_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003952 RID: 14674
-		// (get) Token: 0x0600BC20 RID: 48160 RVA: 0x001B1F3D File Offset: 0x001B013D
-		// (set) Token: 0x0600BC21 RID: 48161 RVA: 0x001B1F68 File Offset: 0x001B0168
+		// Token: 0x17003C3F RID: 15423
+		// (get) Token: 0x0600C7AE RID: 51118 RVA: 0x001C90F1 File Offset: 0x001C72F1
+		// (set) Token: 0x0600C7AF RID: 51119 RVA: 0x001C911C File Offset: 0x001C731C
 		public virtual string Key
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007062 RID: 28770
+		// Token: 0x04007697 RID: 30359
 		[Nullable(2)]
 		protected new RestoreAiBehaviorTree FbInstance;
 
-		// Token: 0x04007063 RID: 28771
+		// Token: 0x04007698 RID: 30360
 		[Nullable(2)]
 		protected RestoreAiBehaviorTree_SetValue PocoInterface;
 	}

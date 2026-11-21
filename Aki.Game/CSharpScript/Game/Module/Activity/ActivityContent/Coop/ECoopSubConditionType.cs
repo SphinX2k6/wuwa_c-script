@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068CF RID: 26831
+	// Token: 0x0200581F RID: 22559
 	public enum ECoopSubConditionType
 	{
-		// Token: 0x04022D52 RID: 142674
+		// Token: 0x0401D5AE RID: 120238
 		None,
-		// Token: 0x04022D53 RID: 142675
+		// Token: 0x0401D5AF RID: 120239
 		ECoopPreTaskSubConditionData,
-		// Token: 0x04022D54 RID: 142676
+		// Token: 0x0401D5B0 RID: 120240
 		ECoopProgressSubConditionData,
-		// Token: 0x04022D55 RID: 142677
+		// Token: 0x0401D5B1 RID: 120241
 		ECoopMapTaskSubConditionData1,
-		// Token: 0x04022D56 RID: 142678
+		// Token: 0x0401D5B2 RID: 120242
 		ECoopMapTaskSubConditionData2,
-		// Token: 0x04022D57 RID: 142679
+		// Token: 0x0401D5B3 RID: 120243
 		ECoopTimeMapTaskSubConditionData
 	}
 }

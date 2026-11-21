@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C95 RID: 3221
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D77 RID: 3447
 	public class IJigsawItemMatchedConfig
 	{
-		// Token: 0x060049A4 RID: 18852 RVA: 0x000B8822 File Offset: 0x000B6A22
+		// Token: 0x06004E52 RID: 20050 RVA: 0x000C3232 File Offset: 0x000C1432
 		public static IJigsawItemMatchedConfig Create(IJigsawItemMatchedConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001637 RID: 5687
-		// (get) Token: 0x060049A5 RID: 18853 RVA: 0x000B8841 File Offset: 0x000B6A41
+		// Token: 0x1700175F RID: 5983
+		// (get) Token: 0x06004E53 RID: 20051 RVA: 0x000C3251 File Offset: 0x000C1451
 		public virtual IPieceIndex TargetIndex
 		{
 			get
@@ -40,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001638 RID: 5688
-		// (get) Token: 0x060049A6 RID: 18854 RVA: 0x000B8878 File Offset: 0x000B6A78
+		// Token: 0x17001760 RID: 5984
+		// (get) Token: 0x06004E54 RID: 20052 RVA: 0x000C3288 File Offset: 0x000C1488
 		public virtual List<int> JigsawItemIds
 		{
 			get
@@ -61,19 +59,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001639 RID: 5689
-		// (get) Token: 0x060049A7 RID: 18855 RVA: 0x000B88DC File Offset: 0x000B6ADC
+		// Token: 0x17001761 RID: 5985
+		// (get) Token: 0x06004E55 RID: 20053 RVA: 0x000C32EC File Offset: 0x000C14EC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -96,19 +94,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700163A RID: 5690
-		// (get) Token: 0x060049A8 RID: 18856 RVA: 0x000B8958 File Offset: 0x000B6B58
+		// Token: 0x17001762 RID: 5986
+		// (get) Token: 0x06004E56 RID: 20054 RVA: 0x000C3368 File Offset: 0x000C1568
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IConditionAction> ConditionActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -131,19 +129,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700163B RID: 5691
-		// (get) Token: 0x060049A9 RID: 18857 RVA: 0x000B89D4 File Offset: 0x000B6BD4
+		// Token: 0x17001763 RID: 5987
+		// (get) Token: 0x06004E57 RID: 20055 RVA: 0x000C33E4 File Offset: 0x000C15E4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> UnmatchedActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -166,53 +164,53 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A02 RID: 10754
+		// Token: 0x04002C7C RID: 11388
 		private IJigsawItemMatchedConfig Instance;
 
-		// Token: 0x04002A03 RID: 10755
+		// Token: 0x04002C7D RID: 11389
 		[Nullable(2)]
 		private IPieceIndex _TargetIndexCache;
 
-		// Token: 0x04002A04 RID: 10756
+		// Token: 0x04002C7E RID: 11390
 		private bool _TargetIndexInited;
 
-		// Token: 0x04002A05 RID: 10757
+		// Token: 0x04002C7F RID: 11391
 		private List<int> _JigsawItemIdsCache;
 
-		// Token: 0x04002A06 RID: 10758
+		// Token: 0x04002C80 RID: 11392
 		private bool _JigsawItemIdsInited;
 
-		// Token: 0x04002A07 RID: 10759
+		// Token: 0x04002C81 RID: 11393
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002A08 RID: 10760
+		// Token: 0x04002C82 RID: 11394
 		private bool _ActionsInited;
 
-		// Token: 0x04002A09 RID: 10761
+		// Token: 0x04002C83 RID: 11395
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IConditionAction> _ConditionActionsCache;
 
-		// Token: 0x04002A0A RID: 10762
+		// Token: 0x04002C84 RID: 11396
 		private bool _ConditionActionsInited;
 
-		// Token: 0x04002A0B RID: 10763
+		// Token: 0x04002C85 RID: 11397
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _UnmatchedActionsCache;
 
-		// Token: 0x04002A0C RID: 10764
+		// Token: 0x04002C86 RID: 11398
 		private bool _UnmatchedActionsInited;
 	}
 }

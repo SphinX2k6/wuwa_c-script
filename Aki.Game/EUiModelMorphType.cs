@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002C6C RID: 11372
+// Token: 0x020021C5 RID: 8645
 public enum EUiModelMorphType
 {
-	// Token: 0x0400B0F9 RID: 45305
+	// Token: 0x0400B464 RID: 46180
 	默认形态,
-	// Token: 0x0400B0FA RID: 45306
+	// Token: 0x0400B465 RID: 46181
 	特殊形态
 }

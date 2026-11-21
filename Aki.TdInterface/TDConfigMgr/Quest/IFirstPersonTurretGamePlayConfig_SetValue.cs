@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F8C RID: 3980
+	// Token: 0x020010B6 RID: 4278
 	public class IFirstPersonTurretGamePlayConfig_SetValue
 	{
-		// Token: 0x0400359B RID: 13723
+		// Token: 0x040038CB RID: 14539
 		public ESpecialGamePlayConfigType Type;
 	}
 }

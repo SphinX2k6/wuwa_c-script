@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200062A RID: 1578
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006C7 RID: 1735
 	public class IProceduralVisualLookAt : IProceduralVisualBase
 	{
-		// Token: 0x060021A6 RID: 8614 RVA: 0x0005CF50 File Offset: 0x0005B150
+		// Token: 0x060024AC RID: 9388 RVA: 0x00063C64 File Offset: 0x00061E64
 		private IProceduralVisualLookAt_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060021A7 RID: 8615 RVA: 0x0005CF88 File Offset: 0x0005B188
+		// Token: 0x060024AD RID: 9389 RVA: 0x00063C9C File Offset: 0x00061E9C
 		public static IProceduralVisualLookAt Create([Nullable(2)] IProceduralVisualLookAt instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060021A8 RID: 8616 RVA: 0x0005CF9B File Offset: 0x0005B19B
+		// Token: 0x060024AE RID: 9390 RVA: 0x00063CAF File Offset: 0x00061EAF
 		public static IProceduralVisualLookAt CreateFromSetValue([Nullable(2)] IProceduralVisualLookAt_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060021A9 RID: 8617 RVA: 0x0005CFB0 File Offset: 0x0005B1B0
+		// Token: 0x060024AF RID: 9391 RVA: 0x00063CC4 File Offset: 0x00061EC4
 		public new IProceduralVisualLookAt_SetValue ToSetValue()
 		{
 			return new IProceduralVisualLookAt_SetValue
@@ -68,9 +66,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008F3 RID: 2291
-		// (get) Token: 0x060021AA RID: 8618 RVA: 0x0005D022 File Offset: 0x0005B222
-		// (set) Token: 0x060021AB RID: 8619 RVA: 0x0005D04D File Offset: 0x0005B24D
+		// Token: 0x170009AA RID: 2474
+		// (get) Token: 0x060024B0 RID: 9392 RVA: 0x00063D36 File Offset: 0x00061F36
+		// (set) Token: 0x060024B1 RID: 9393 RVA: 0x00063D61 File Offset: 0x00061F61
 		public override EProceduralVisualType Type
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008F4 RID: 2292
-		// (get) Token: 0x060021AC RID: 8620 RVA: 0x0005D05C File Offset: 0x0005B25C
-		// (set) Token: 0x060021AD RID: 8621 RVA: 0x0005D0BD File Offset: 0x0005B2BD
+		// Token: 0x170009AB RID: 2475
+		// (get) Token: 0x060024B2 RID: 9394 RVA: 0x00063D70 File Offset: 0x00061F70
+		// (set) Token: 0x060024B3 RID: 9395 RVA: 0x00063DD1 File Offset: 0x00061FD1
 		[Nullable(2)]
 		public override IConditionGroup Condition
 		{
@@ -124,9 +122,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008F5 RID: 2293
-		// (get) Token: 0x060021AE RID: 8622 RVA: 0x0005D0D2 File Offset: 0x0005B2D2
-		// (set) Token: 0x060021AF RID: 8623 RVA: 0x0005D0F9 File Offset: 0x0005B2F9
+		// Token: 0x170009AC RID: 2476
+		// (get) Token: 0x060024B4 RID: 9396 RVA: 0x00063DE6 File Offset: 0x00061FE6
+		// (set) Token: 0x060024B5 RID: 9397 RVA: 0x00063E0D File Offset: 0x0006200D
 		public virtual ILookAtTargetBase Target
 		{
 			get
@@ -148,9 +146,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008F6 RID: 2294
-		// (get) Token: 0x060021B0 RID: 8624 RVA: 0x0005D107 File Offset: 0x0005B307
-		// (set) Token: 0x060021B1 RID: 8625 RVA: 0x0005D12E File Offset: 0x0005B32E
+		// Token: 0x170009AD RID: 2477
+		// (get) Token: 0x060024B6 RID: 9398 RVA: 0x00063E1B File Offset: 0x0006201B
+		// (set) Token: 0x060024B7 RID: 9399 RVA: 0x00063E42 File Offset: 0x00062042
 		[Nullable(2)]
 		public virtual string RotateNode
 		{
@@ -175,9 +173,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008F7 RID: 2295
-		// (get) Token: 0x060021B2 RID: 8626 RVA: 0x0005D13C File Offset: 0x0005B33C
-		// (set) Token: 0x060021B3 RID: 8627 RVA: 0x0005D176 File Offset: 0x0005B376
+		// Token: 0x170009AE RID: 2478
+		// (get) Token: 0x060024B8 RID: 9400 RVA: 0x00063E50 File Offset: 0x00062050
+		// (set) Token: 0x060024B9 RID: 9401 RVA: 0x00063E8A File Offset: 0x0006208A
 		public virtual float? MaxAngleSpeed
 		{
 			get
@@ -199,9 +197,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008F8 RID: 2296
-		// (get) Token: 0x060021B4 RID: 8628 RVA: 0x0005D184 File Offset: 0x0005B384
-		// (set) Token: 0x060021B5 RID: 8629 RVA: 0x0005D1BE File Offset: 0x0005B3BE
+		// Token: 0x170009AF RID: 2479
+		// (get) Token: 0x060024BA RID: 9402 RVA: 0x00063E98 File Offset: 0x00062098
+		// (set) Token: 0x060024BB RID: 9403 RVA: 0x00063ED2 File Offset: 0x000620D2
 		public virtual ELookAtRotateMode? RotateMode
 		{
 			get
@@ -223,9 +221,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008F9 RID: 2297
-		// (get) Token: 0x060021B6 RID: 8630 RVA: 0x0005D1CC File Offset: 0x0005B3CC
-		// (set) Token: 0x060021B7 RID: 8631 RVA: 0x0005D206 File Offset: 0x0005B406
+		// Token: 0x170009B0 RID: 2480
+		// (get) Token: 0x060024BC RID: 9404 RVA: 0x00063EE0 File Offset: 0x000620E0
+		// (set) Token: 0x060024BD RID: 9405 RVA: 0x00063F1A File Offset: 0x0006211A
 		public virtual EWorldAxisType? ForwardDirection
 		{
 			get
@@ -247,9 +245,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008FA RID: 2298
-		// (get) Token: 0x060021B8 RID: 8632 RVA: 0x0005D214 File Offset: 0x0005B414
-		// (set) Token: 0x060021B9 RID: 8633 RVA: 0x0005D24E File Offset: 0x0005B44E
+		// Token: 0x170009B1 RID: 2481
+		// (get) Token: 0x060024BE RID: 9406 RVA: 0x00063F28 File Offset: 0x00062128
+		// (set) Token: 0x060024BF RID: 9407 RVA: 0x00063F62 File Offset: 0x00062162
 		public virtual ELookAtInvalidProcess? InvalidProcess
 		{
 			get
@@ -271,18 +269,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001779 RID: 6009
+		// Token: 0x0400196B RID: 6507
 		[Nullable(2)]
 		protected new IProceduralVisualLookAt FbInstance;
 
-		// Token: 0x0400177A RID: 6010
+		// Token: 0x0400196C RID: 6508
 		[Nullable(2)]
 		protected new IProceduralVisualLookAt_SetValue PocoInterface;
 
-		// Token: 0x0400177B RID: 6011
+		// Token: 0x0400196D RID: 6509
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x0400177C RID: 6012
+		// Token: 0x0400196E RID: 6510
 		private bool _ConditionInited;
 	}
 }

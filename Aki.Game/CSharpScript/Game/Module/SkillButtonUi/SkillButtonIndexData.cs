@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C09 RID: 19465
+	// Token: 0x02003BBA RID: 15290
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SkillButtonIndexData
 	{
-		// Token: 0x0603260A RID: 206346 RVA: 0x00BB9CB0 File Offset: 0x00BB7EB0
+		// Token: 0x060273BA RID: 160698 RVA: 0x00AFE834 File Offset: 0x00AFCA34
 		[NullableContext(2)]
 		public void RefreshSkillButtonIndex(EntityHandle entityHandle)
 		{
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.IsNormalButtonTypeList = true;
 		}
 
-		// Token: 0x0603260B RID: 206347 RVA: 0x00BB9DD0 File Offset: 0x00BB7FD0
+		// Token: 0x060273BB RID: 160699 RVA: 0x00AFE954 File Offset: 0x00AFCB54
 		[NullableContext(2)]
 		public void RefreshSkillButtonIndexByTag(EntityHandle entityHandle, int tagId)
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.IsNormalButtonTypeList = true;
 		}
 
-		// Token: 0x0603260C RID: 206348 RVA: 0x00BB9E38 File Offset: 0x00BB8038
+		// Token: 0x060273BC RID: 160700 RVA: 0x00AFE9BC File Offset: 0x00AFCBBC
 		public void UpdateSkillButtonIndexConfigList(IReadOnlyList<SkillButtonIndex> skillButtonIndexConfigList, bool isDesktop)
 		{
 			this.ButtonIndexIsDesktop = isDesktop;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.UpdateConfigInner();
 		}
 
-		// Token: 0x0603260D RID: 206349 RVA: 0x00BB9E93 File Offset: 0x00BB8093
+		// Token: 0x060273BD RID: 160701 RVA: 0x00AFEA17 File Offset: 0x00AFCC17
 		public void UpdateSkillButtonIndexConfig(SkillButtonIndex? skillButtonIndexConfig, bool isDesktop)
 		{
 			this.ButtonIndexIsDesktop = isDesktop;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.UpdateConfigInner();
 		}
 
-		// Token: 0x0603260E RID: 206350 RVA: 0x00BB9EC8 File Offset: 0x00BB80C8
+		// Token: 0x060273BE RID: 160702 RVA: 0x00AFEA4C File Offset: 0x00AFCC4C
 		public void UpdateIsDesktop(bool isDesktop)
 		{
 			if (this.ButtonIndexIsDesktop == isDesktop)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.UpdateConfigInner();
 		}
 
-		// Token: 0x0603260F RID: 206351 RVA: 0x00BB9EE4 File Offset: 0x00BB80E4
+		// Token: 0x060273BF RID: 160703 RVA: 0x00AFEA68 File Offset: 0x00AFCC68
 		private unsafe void UpdateConfigInner()
 		{
 			this.ButtonIndexTagIdList.Clear();
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x06032610 RID: 206352 RVA: 0x00BBA4F8 File Offset: 0x00BB86F8
+		// Token: 0x060273C0 RID: 160704 RVA: 0x00AFF07C File Offset: 0x00AFD27C
 		public void RefreshMotorPadSkillButtonIndex(EntityHandle entityHandle, bool isRoundJoystick)
 		{
 			this.IsRoundJoystick = isRoundJoystick;
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x06032611 RID: 206353 RVA: 0x00BBA58C File Offset: 0x00BB878C
+		// Token: 0x060273C1 RID: 160705 RVA: 0x00AFF110 File Offset: 0x00AFD310
 		public void InitMotorPadSkillButtonIndexConfig()
 		{
 			this.MotorPadButtonTypeTagMap.Clear();
@@ -313,43 +313,43 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x0401ACE3 RID: 109795
+		// Token: 0x0401563F RID: 87615
 		public bool IsNormalButtonTypeList;
 
-		// Token: 0x0401ACE4 RID: 109796
+		// Token: 0x04015640 RID: 87616
 		public IList<int> ButtonTypeList = new List<int>();
 
-		// Token: 0x0401ACE5 RID: 109797
+		// Token: 0x04015641 RID: 87617
 		public List<SkillButtonIndex> ButtonIndexConfigList = new List<SkillButtonIndex>();
 
-		// Token: 0x0401ACE6 RID: 109798
+		// Token: 0x04015642 RID: 87618
 		public bool ButtonIndexIsDesktop;
 
-		// Token: 0x0401ACE7 RID: 109799
+		// Token: 0x04015643 RID: 87619
 		public List<int> DefaultButtonTypeList = new List<int>();
 
-		// Token: 0x0401ACE8 RID: 109800
+		// Token: 0x04015644 RID: 87620
 		public readonly List<int[]> ButtonIndexTagIdList = new List<int[]>();
 
-		// Token: 0x0401ACE9 RID: 109801
+		// Token: 0x04015645 RID: 87621
 		public readonly HashSet<int> ButtonIndexTagIdSet = new HashSet<int>();
 
-		// Token: 0x0401ACEA RID: 109802
+		// Token: 0x04015646 RID: 87622
 		public readonly List<List<int>> ButtonIndexTypeList = new List<List<int>>();
 
-		// Token: 0x0401ACEB RID: 109803
+		// Token: 0x04015647 RID: 87623
 		public readonly Dictionary<int, List<int>> ButtonTypeTagMap = new Dictionary<int, List<int>>();
 
-		// Token: 0x0401ACEC RID: 109804
+		// Token: 0x04015648 RID: 87624
 		public int[] MotorPadButtonTypeList = Array.Empty<int>();
 
-		// Token: 0x0401ACED RID: 109805
+		// Token: 0x04015649 RID: 87625
 		public bool IsRoundJoystick;
 
-		// Token: 0x0401ACEE RID: 109806
+		// Token: 0x0401564A RID: 87626
 		public readonly Dictionary<int, int[]> MotorPadButtonTypeTagMap = new Dictionary<int, int[]>();
 
-		// Token: 0x0401ACEF RID: 109807
+		// Token: 0x0401564B RID: 87627
 		public readonly Dictionary<int, int[]> MotorJoystickPadButtonTypeTagMap = new Dictionary<int, int[]>();
 	}
 }

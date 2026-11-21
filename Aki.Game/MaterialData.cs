@@ -1,39 +1,39 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002D05 RID: 11525
+// Token: 0x0200225F RID: 8799
 [NullableContext(1)]
 [Nullable(0)]
 public class MaterialData
 {
-	// Token: 0x060183CC RID: 99276 RVA: 0x0062B62B File Offset: 0x0062982B
+	// Token: 0x06015C6D RID: 89197 RVA: 0x00651623 File Offset: 0x0064F823
 	public MaterialData(ItemDataBase itemData, int useCount = 1)
 	{
 		this.ItemData = itemData;
 		this.UseCount = useCount;
 	}
 
-	// Token: 0x060183CD RID: 99277 RVA: 0x0062B641 File Offset: 0x00629841
+	// Token: 0x06015C6E RID: 89198 RVA: 0x00651639 File Offset: 0x0064F839
 	public void AddCount()
 	{
 		this.UseCount++;
 	}
 
-	// Token: 0x060183CE RID: 99278 RVA: 0x0062B651 File Offset: 0x00629851
+	// Token: 0x06015C6F RID: 89199 RVA: 0x00651649 File Offset: 0x0064F849
 	public void ReduceCount()
 	{
 		this.UseCount--;
 	}
 
-	// Token: 0x060183CF RID: 99279 RVA: 0x0062B661 File Offset: 0x00629861
+	// Token: 0x06015C70 RID: 89200 RVA: 0x00651659 File Offset: 0x0064F859
 	public bool CheckEmpty()
 	{
 		return this.UseCount == 0;
 	}
 
-	// Token: 0x0400B411 RID: 46097
+	// Token: 0x0400B786 RID: 46982
 	public ItemDataBase ItemData;
 
-	// Token: 0x0400B412 RID: 46098
+	// Token: 0x0400B787 RID: 46983
 	public int UseCount;
 }

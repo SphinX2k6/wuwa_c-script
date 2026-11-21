@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019DC RID: 6620
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B69 RID: 7017
 	public class IEnableAlertUi : IAlertSystemOption
 	{
-		// Token: 0x06008DC9 RID: 36297 RVA: 0x0014BFE8 File Offset: 0x0014A1E8
+		// Token: 0x0600950B RID: 38155 RVA: 0x0015BAF4 File Offset: 0x00159CF4
 		private IEnableAlertUi_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008DCA RID: 36298 RVA: 0x0014C020 File Offset: 0x0014A220
+		// Token: 0x0600950C RID: 38156 RVA: 0x0015BB2C File Offset: 0x00159D2C
 		public static IEnableAlertUi Create([Nullable(2)] IEnableAlertUi instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008DCB RID: 36299 RVA: 0x0014C033 File Offset: 0x0014A233
+		// Token: 0x0600950D RID: 38157 RVA: 0x0015BB3F File Offset: 0x00159D3F
 		public static IEnableAlertUi CreateFromSetValue([Nullable(2)] IEnableAlertUi_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008DCC RID: 36300 RVA: 0x0014C046 File Offset: 0x0014A246
+		// Token: 0x0600950E RID: 38158 RVA: 0x0015BB52 File Offset: 0x00159D52
 		public new IEnableAlertUi_SetValue ToSetValue()
 		{
 			return new IEnableAlertUi_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D6F RID: 11631
-		// (get) Token: 0x06008DCD RID: 36301 RVA: 0x0014C071 File Offset: 0x0014A271
-		// (set) Token: 0x06008DCE RID: 36302 RVA: 0x0014C09C File Offset: 0x0014A29C
+		// Token: 0x17002F74 RID: 12148
+		// (get) Token: 0x0600950F RID: 38159 RVA: 0x0015BB7D File Offset: 0x00159D7D
+		// (set) Token: 0x06009510 RID: 38160 RVA: 0x0015BBA8 File Offset: 0x00159DA8
 		public override EAlertSystemOption Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D70 RID: 11632
-		// (get) Token: 0x06008DCF RID: 36303 RVA: 0x0014C0AA File Offset: 0x0014A2AA
-		// (set) Token: 0x06008DD0 RID: 36304 RVA: 0x0014C0D5 File Offset: 0x0014A2D5
+		// Token: 0x17002F75 RID: 12149
+		// (get) Token: 0x06009511 RID: 38161 RVA: 0x0015BBB6 File Offset: 0x00159DB6
+		// (set) Token: 0x06009512 RID: 38162 RVA: 0x0015BBE1 File Offset: 0x00159DE1
 		public override int AreaId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D71 RID: 11633
-		// (get) Token: 0x06008DD1 RID: 36305 RVA: 0x0014C0E3 File Offset: 0x0014A2E3
-		// (set) Token: 0x06008DD2 RID: 36306 RVA: 0x0014C10E File Offset: 0x0014A30E
+		// Token: 0x17002F76 RID: 12150
+		// (get) Token: 0x06009513 RID: 38163 RVA: 0x0015BBEF File Offset: 0x00159DEF
+		// (set) Token: 0x06009514 RID: 38164 RVA: 0x0015BC1A File Offset: 0x00159E1A
 		public virtual bool IsEnable
 		{
 			get
@@ -126,11 +124,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005806 RID: 22534
+		// Token: 0x04005C5B RID: 23643
 		[Nullable(2)]
 		protected new IEnableAlertUi FbInstance;
 
-		// Token: 0x04005807 RID: 22535
+		// Token: 0x04005C5C RID: 23644
 		[Nullable(2)]
 		protected new IEnableAlertUi_SetValue PocoInterface;
 	}

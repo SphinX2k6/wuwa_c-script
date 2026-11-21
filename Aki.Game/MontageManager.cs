@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02003014 RID: 12308
+// Token: 0x0200256A RID: 9578
 [NullableContext(2)]
 [Nullable(0)]
 public class MontageManager : IClear
 {
-	// Token: 0x170023E0 RID: 9184
-	// (get) Token: 0x0601A125 RID: 106789 RVA: 0x006D5046 File Offset: 0x006D3246
+	// Token: 0x170024AE RID: 9390
+	// (get) Token: 0x06017A6D RID: 96877 RVA: 0x006FCF4E File Offset: 0x006FB14E
 	[Nullable(1)]
 	private UAnimInstance AnimInst
 	{
@@ -21,13 +21,13 @@ public class MontageManager : IClear
 		}
 	}
 
-	// Token: 0x0601A126 RID: 106790 RVA: 0x006D5053 File Offset: 0x006D3253
+	// Token: 0x06017A6E RID: 96878 RVA: 0x006FCF5B File Offset: 0x006FB15B
 	public UAnimMontage GetPlayingMontage()
 	{
 		return this.CurrentMontage;
 	}
 
-	// Token: 0x0601A127 RID: 106791 RVA: 0x006D505B File Offset: 0x006D325B
+	// Token: 0x06017A6F RID: 96879 RVA: 0x006FCF63 File Offset: 0x006FB163
 	[NullableContext(1)]
 	public void Init(BaseAnimationComponent animComp, EPerformGroup group = EPerformGroup.DefaultGroup)
 	{
@@ -36,14 +36,14 @@ public class MontageManager : IClear
 		this.EntityHandle = CreatureModel.Instance.GetEntityById(animComp.Entity.Id);
 	}
 
-	// Token: 0x0601A128 RID: 106792 RVA: 0x006D5086 File Offset: 0x006D3286
+	// Token: 0x06017A70 RID: 96880 RVA: 0x006FCF8E File Offset: 0x006FB18E
 	public bool ClearObject()
 	{
 		this.Clear();
 		return true;
 	}
 
-	// Token: 0x0601A129 RID: 106793 RVA: 0x006D5090 File Offset: 0x006D3290
+	// Token: 0x06017A71 RID: 96881 RVA: 0x006FCF98 File Offset: 0x006FB198
 	public void Clear()
 	{
 		if (this.NeedQueue)
@@ -80,7 +80,7 @@ public class MontageManager : IClear
 		this.CallbackQueue.Clear();
 	}
 
-	// Token: 0x0601A12A RID: 106794 RVA: 0x006D5188 File Offset: 0x006D3388
+	// Token: 0x06017A72 RID: 96882 RVA: 0x006FD090 File Offset: 0x006FB290
 	public bool IsMontagePlaying(int? handleId = null)
 	{
 		if (handleId != null)
@@ -92,7 +92,7 @@ public class MontageManager : IClear
 		return this.LoadHandleId != -1 || ObjectUtils.IsValid(this.CurrentMontage);
 	}
 
-	// Token: 0x0601A12B RID: 106795 RVA: 0x006D51D0 File Offset: 0x006D33D0
+	// Token: 0x06017A73 RID: 96883 RVA: 0x006FD0D8 File Offset: 0x006FB2D8
 	[NullableContext(1)]
 	public unsafe int PlayMontage(IPlayMontageParam param)
 	{
@@ -252,7 +252,7 @@ public class MontageManager : IClear
 		return handleId;
 	}
 
-	// Token: 0x0601A12C RID: 106796 RVA: 0x006D55E8 File Offset: 0x006D37E8
+	// Token: 0x06017A74 RID: 96884 RVA: 0x006FD4F0 File Offset: 0x006FB6F0
 	[NullableContext(1)]
 	public void StopMontage(IStopMontageParam param)
 	{
@@ -401,7 +401,7 @@ public class MontageManager : IClear
 		}
 	}
 
-	// Token: 0x0601A12D RID: 106797 RVA: 0x006D5A38 File Offset: 0x006D3C38
+	// Token: 0x06017A75 RID: 96885 RVA: 0x006FD940 File Offset: 0x006FBB40
 	public void ClearCallback(int? handleId = null)
 	{
 		if (handleId != null)
@@ -418,7 +418,7 @@ public class MontageManager : IClear
 		this.OnBlendOut = null;
 	}
 
-	// Token: 0x0601A12E RID: 106798 RVA: 0x006D5A7F File Offset: 0x006D3C7F
+	// Token: 0x06017A76 RID: 96886 RVA: 0x006FD987 File Offset: 0x006FBB87
 	public void DetachWithoutStop(bool bInterrupted = false)
 	{
 		if (this.CurrentMontage == null && string.IsNullOrEmpty(this.CurrentMontagePath))
@@ -429,7 +429,7 @@ public class MontageManager : IClear
 		this.ClearAndDoCallback(bInterrupted);
 	}
 
-	// Token: 0x0601A12F RID: 106799 RVA: 0x006D5AA4 File Offset: 0x006D3CA4
+	// Token: 0x06017A77 RID: 96887 RVA: 0x006FD9AC File Offset: 0x006FBBAC
 	private void UpdateDelayEndTimer(float? duration = 0f, EStopMethod? method = 1, float? blendOutTime = null)
 	{
 		this.DelayStopParam = new IStopMontageParam
@@ -440,7 +440,7 @@ public class MontageManager : IClear
 		this.Duration = duration.GetValueOrDefault();
 	}
 
-	// Token: 0x0601A130 RID: 106800 RVA: 0x006D5ACC File Offset: 0x006D3CCC
+	// Token: 0x06017A78 RID: 96888 RVA: 0x006FD9D4 File Offset: 0x006FBBD4
 	private unsafe void UpdateLoopState(bool? isLoop = null)
 	{
 		if (isLoop == null)
@@ -504,7 +504,7 @@ public class MontageManager : IClear
 		}
 	}
 
-	// Token: 0x0601A131 RID: 106801 RVA: 0x006D5CB8 File Offset: 0x006D3EB8
+	// Token: 0x06017A79 RID: 96889 RVA: 0x006FDBC0 File Offset: 0x006FBDC0
 	private void SubscribeMontageEvents()
 	{
 		if (this.bSubscribed)
@@ -516,7 +516,7 @@ public class MontageManager : IClear
 		this.bSubscribed = true;
 	}
 
-	// Token: 0x0601A132 RID: 106802 RVA: 0x006D5D10 File Offset: 0x006D3F10
+	// Token: 0x06017A7A RID: 96890 RVA: 0x006FDC18 File Offset: 0x006FBE18
 	private void UnsubscribeMontageEvents()
 	{
 		if (!this.bSubscribed)
@@ -531,7 +531,7 @@ public class MontageManager : IClear
 		this.bSubscribed = false;
 	}
 
-	// Token: 0x0601A133 RID: 106803 RVA: 0x006D5D7A File Offset: 0x006D3F7A
+	// Token: 0x06017A7B RID: 96891 RVA: 0x006FDC82 File Offset: 0x006FBE82
 	private void OnMontageStop(UAnimMontage montage, bool bInterrupted)
 	{
 		if (this.AnimInst.Montage_IsActive(montage))
@@ -546,7 +546,7 @@ public class MontageManager : IClear
 		this.ClearAndDoCallback(bInterrupted);
 	}
 
-	// Token: 0x0601A134 RID: 106804 RVA: 0x006D5DA4 File Offset: 0x006D3FA4
+	// Token: 0x06017A7C RID: 96892 RVA: 0x006FDCAC File Offset: 0x006FBEAC
 	private void OnMontageBlendingOut(UAnimMontage montage, bool bInterrupted)
 	{
 		if (montage != this.CurrentMontage)
@@ -575,7 +575,7 @@ public class MontageManager : IClear
 		onBlendOutCallback3(montage, bInterrupted);
 	}
 
-	// Token: 0x0601A135 RID: 106805 RVA: 0x006D5E1C File Offset: 0x006D401C
+	// Token: 0x06017A7D RID: 96893 RVA: 0x006FDD24 File Offset: 0x006FBF24
 	private void ClearAndDoCallback(bool bInterrupted = true)
 	{
 		int handleId = this.HandleId;
@@ -645,7 +645,7 @@ public class MontageManager : IClear
 		EventSystem.Instance.EmitWithTarget<int>(this.EntityHandle, EEventName.PerformMontageStop, handleId);
 	}
 
-	// Token: 0x0601A136 RID: 106806 RVA: 0x006D5F82 File Offset: 0x006D4182
+	// Token: 0x06017A7E RID: 96894 RVA: 0x006FDE8A File Offset: 0x006FC08A
 	private void SetBlinkCurveState(int handleId, bool disable)
 	{
 		if (disable)
@@ -658,7 +658,7 @@ public class MontageManager : IClear
 		this.AnimComp.IgnoreMontageBlinkCurve = false;
 	}
 
-	// Token: 0x0601A137 RID: 106807 RVA: 0x006D5FB8 File Offset: 0x006D41B8
+	// Token: 0x06017A7F RID: 96895 RVA: 0x006FDEC0 File Offset: 0x006FC0C0
 	private void TryResetBlinkCurveState(int handleId)
 	{
 		int? blinkCurveOwnerHandleId = this.BlinkCurveOwnerHandleId;
@@ -670,7 +670,7 @@ public class MontageManager : IClear
 		this.AnimComp.IgnoreMontageBlinkCurve = false;
 	}
 
-	// Token: 0x0601A138 RID: 106808 RVA: 0x006D5FFC File Offset: 0x006D41FC
+	// Token: 0x06017A80 RID: 96896 RVA: 0x006FDF04 File Offset: 0x006FC104
 	[NullableContext(1)]
 	private unsafe bool CheckMontage(UAnimMontage montage)
 	{
@@ -736,7 +736,7 @@ public class MontageManager : IClear
 		return true;
 	}
 
-	// Token: 0x0601A139 RID: 106809 RVA: 0x006D6250 File Offset: 0x006D4450
+	// Token: 0x06017A81 RID: 96897 RVA: 0x006FE158 File Offset: 0x006FC358
 	public void OnTick(float delta)
 	{
 		if (this.Duration <= 0f)
@@ -752,7 +752,7 @@ public class MontageManager : IClear
 		}
 	}
 
-	// Token: 0x0601A13A RID: 106810 RVA: 0x006D62A4 File Offset: 0x006D44A4
+	// Token: 0x06017A82 RID: 96898 RVA: 0x006FE1AC File Offset: 0x006FC3AC
 	public float GetRemainDuration(int id)
 	{
 		if (this.HandleId != id)
@@ -762,7 +762,7 @@ public class MontageManager : IClear
 		return this.Duration;
 	}
 
-	// Token: 0x0601A13B RID: 106811 RVA: 0x006D62BB File Offset: 0x006D44BB
+	// Token: 0x06017A83 RID: 96899 RVA: 0x006FE1C3 File Offset: 0x006FC3C3
 	public UAnimMontage GetCurrentMontage()
 	{
 		if (!ObjectUtils.IsValid(this.CurrentMontage))
@@ -772,7 +772,7 @@ public class MontageManager : IClear
 		return this.CurrentMontage;
 	}
 
-	// Token: 0x0601A13C RID: 106812 RVA: 0x006D62D2 File Offset: 0x006D44D2
+	// Token: 0x06017A84 RID: 96900 RVA: 0x006FE1DA File Offset: 0x006FC3DA
 	public string GetCurrentMontagePath()
 	{
 		if (!string.IsNullOrEmpty(this.CurrentMontagePath))
@@ -786,61 +786,61 @@ public class MontageManager : IClear
 		return null;
 	}
 
-	// Token: 0x0400C5A0 RID: 50592
+	// Token: 0x0400C96D RID: 51565
 	private const float MONTAGE_BLEND_TIME = 0.5f;
 
-	// Token: 0x0400C5A1 RID: 50593
+	// Token: 0x0400C96E RID: 51566
 	private const int LOADING_ID = -2;
 
-	// Token: 0x0400C5A2 RID: 50594
+	// Token: 0x0400C96F RID: 51567
 	private int HandleId = 1;
 
-	// Token: 0x0400C5A3 RID: 50595
+	// Token: 0x0400C970 RID: 51568
 	private bool bSubscribed;
 
-	// Token: 0x0400C5A4 RID: 50596
+	// Token: 0x0400C971 RID: 51569
 	private BaseAnimationComponent AnimComp;
 
-	// Token: 0x0400C5A5 RID: 50597
+	// Token: 0x0400C972 RID: 51570
 	private EntityHandle EntityHandle;
 
-	// Token: 0x0400C5A6 RID: 50598
+	// Token: 0x0400C973 RID: 51571
 	private EPerformGroup Group;
 
-	// Token: 0x0400C5A7 RID: 50599
+	// Token: 0x0400C974 RID: 51572
 	private int LoadHandleId = -1;
 
-	// Token: 0x0400C5A8 RID: 50600
+	// Token: 0x0400C975 RID: 51573
 	private float Duration;
 
-	// Token: 0x0400C5A9 RID: 50601
+	// Token: 0x0400C976 RID: 51574
 	private IStopMontageParam DelayStopParam;
 
-	// Token: 0x0400C5AA RID: 50602
+	// Token: 0x0400C977 RID: 51575
 	private Action<UAnimMontage> OnPlay;
 
-	// Token: 0x0400C5AB RID: 50603
+	// Token: 0x0400C978 RID: 51576
 	private Action<UAnimMontage, bool> OnEnd;
 
-	// Token: 0x0400C5AC RID: 50604
+	// Token: 0x0400C979 RID: 51577
 	private Action<UAnimMontage, bool> OnBlendOut;
 
-	// Token: 0x0400C5AD RID: 50605
+	// Token: 0x0400C97A RID: 51578
 	private UAnimMontage CurrentMontage;
 
-	// Token: 0x0400C5AE RID: 50606
+	// Token: 0x0400C97B RID: 51579
 	private string CurrentMontagePath;
 
-	// Token: 0x0400C5AF RID: 50607
+	// Token: 0x0400C97C RID: 51580
 	private bool NeedQueue;
 
-	// Token: 0x0400C5B0 RID: 50608
+	// Token: 0x0400C97D RID: 51581
 	private UAnimMontage LastMontage;
 
-	// Token: 0x0400C5B1 RID: 50609
+	// Token: 0x0400C97E RID: 51582
 	private int? BlinkCurveOwnerHandleId;
 
-	// Token: 0x0400C5B2 RID: 50610
+	// Token: 0x0400C97F RID: 51583
 	[Nullable(1)]
 	private readonly Queue<Action> CallbackQueue = new Queue<Action>(4);
 }

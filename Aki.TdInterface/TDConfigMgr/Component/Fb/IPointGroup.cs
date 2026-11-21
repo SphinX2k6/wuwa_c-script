@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C3D RID: 3133
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D10 RID: 3344
 	public class IPointGroup
 	{
-		// Token: 0x060047B5 RID: 18357 RVA: 0x000B4829 File Offset: 0x000B2A29
+		// Token: 0x06004C25 RID: 19493 RVA: 0x000BEBD9 File Offset: 0x000BCDD9
 		public static IPointGroup Create(IPointGroup? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014F8 RID: 5368
-		// (get) Token: 0x060047B6 RID: 18358 RVA: 0x000B4848 File Offset: 0x000B2A48
+		// Token: 0x17001600 RID: 5632
+		// (get) Token: 0x06004C26 RID: 19494 RVA: 0x000BEBF8 File Offset: 0x000BCDF8
 		public virtual IPointGroupByLayer GroupConfig
 		{
 			get
@@ -40,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014F9 RID: 5369
-		// (get) Token: 0x060047B7 RID: 18359 RVA: 0x000B487C File Offset: 0x000B2A7C
+		// Token: 0x17001601 RID: 5633
+		// (get) Token: 0x06004C27 RID: 19495 RVA: 0x000BEC2C File Offset: 0x000BCE2C
 		public virtual List<VectorInfo> Points
 		{
 			get
@@ -61,20 +59,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028C8 RID: 10440
+		// Token: 0x04002B1D RID: 11037
 		private IPointGroup Instance;
 
-		// Token: 0x040028C9 RID: 10441
+		// Token: 0x04002B1E RID: 11038
 		[Nullable(2)]
 		private IPointGroupByLayer _GroupConfigCache;
 
-		// Token: 0x040028CA RID: 10442
+		// Token: 0x04002B1F RID: 11039
 		private bool _GroupConfigInited;
 
-		// Token: 0x040028CB RID: 10443
+		// Token: 0x04002B20 RID: 11040
 		private List<VectorInfo> _PointsCache;
 
-		// Token: 0x040028CC RID: 10444
+		// Token: 0x04002B21 RID: 11041
 		private bool _PointsInited;
 	}
 }

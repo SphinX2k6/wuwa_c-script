@@ -7,42 +7,42 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B85 RID: 19333
+	// Token: 0x02003B2F RID: 15151
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TetrisGridRow
 	{
-		// Token: 0x060321AD RID: 205229 RVA: 0x00BA2C9D File Offset: 0x00BA0E9D
+		// Token: 0x06026F3D RID: 159549 RVA: 0x00AE6E00 File Offset: 0x00AE5000
 		public TetrisGridRow(SlidingBlocksGameData gameData, double rowIndex, double rowSize)
 		{
 		}
 
-		// Token: 0x060321AE RID: 205230 RVA: 0x00BA2CD0 File Offset: 0x00BA0ED0
+		// Token: 0x06026F3E RID: 159550 RVA: 0x00AE6E33 File Offset: 0x00AE5033
 		public void Clear()
 		{
 			this.MinoDataMap.Clear();
 		}
 
-		// Token: 0x060321AF RID: 205231 RVA: 0x00BA2CDD File Offset: 0x00BA0EDD
+		// Token: 0x06026F3F RID: 159551 RVA: 0x00AE6E40 File Offset: 0x00AE5040
 		public bool AddData(double x, Mino minoData)
 		{
 			this.MinoDataMap[x] = minoData;
 			return true;
 		}
 
-		// Token: 0x060321B0 RID: 205232 RVA: 0x00BA2CED File Offset: 0x00BA0EED
+		// Token: 0x06026F40 RID: 159552 RVA: 0x00AE6E50 File Offset: 0x00AE5050
 		public bool RemoveData(double x)
 		{
 			return this.MinoDataMap.Remove(x);
 		}
 
-		// Token: 0x060321B1 RID: 205233 RVA: 0x00BA2CFB File Offset: 0x00BA0EFB
+		// Token: 0x06026F41 RID: 159553 RVA: 0x00AE6E5E File Offset: 0x00AE505E
 		public bool CheckCanLineClear()
 		{
 			return (double)this.MinoDataMap.Count >= this.RowSize;
 		}
 
-		// Token: 0x060321B2 RID: 205234 RVA: 0x00BA2D14 File Offset: 0x00BA0F14
+		// Token: 0x06026F42 RID: 159554 RVA: 0x00AE6E78 File Offset: 0x00AE5078
 		public UniTask TryExecuteLineClear(SlidingBlocksGameData gameData)
 		{
 			TetrisGridRow.<TryExecuteLineClear>d__10 <TryExecuteLineClear>d__;
@@ -54,13 +54,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <TryExecuteLineClear>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060321B3 RID: 205235 RVA: 0x00BA2D5F File Offset: 0x00BA0F5F
+		// Token: 0x06026F43 RID: 159555 RVA: 0x00AE6EC3 File Offset: 0x00AE50C3
 		public bool CheckEmpty()
 		{
 			return this.MinoDataMap.Count == 0;
 		}
 
-		// Token: 0x060321B4 RID: 205236 RVA: 0x00BA2D70 File Offset: 0x00BA0F70
+		// Token: 0x06026F44 RID: 159556 RVA: 0x00AE6ED4 File Offset: 0x00AE50D4
 		[NullableContext(0)]
 		private UniTask<int> SpawnLineClearEffect()
 		{
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <SpawnLineClearEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060321B5 RID: 205237 RVA: 0x00BA2DB4 File Offset: 0x00BA0FB4
+		// Token: 0x06026F45 RID: 159557 RVA: 0x00AE6F18 File Offset: 0x00AE5118
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <LoadCubeDestroyEffectAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060321B6 RID: 205238 RVA: 0x00BA2E00 File Offset: 0x00BA1000
+		// Token: 0x06026F46 RID: 159558 RVA: 0x00AE6F64 File Offset: 0x00AE5164
 		public void DrawDebug(FLinearColor color)
 		{
 			foreach (KeyValuePair<double, Mino> keyValuePair in this.MinoDataMap)
@@ -104,19 +104,19 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x0401AB20 RID: 109344
+		// Token: 0x04015474 RID: 87156
 		private readonly Dictionary<double, Mino> MinoDataMap = new Dictionary<double, Mino>();
 
-		// Token: 0x0401AB21 RID: 109345
+		// Token: 0x04015475 RID: 87157
 		private readonly Dictionary<double, int> MinoMaterialDataMap = new Dictionary<double, int>();
 
-		// Token: 0x0401AB22 RID: 109346
+		// Token: 0x04015476 RID: 87158
 		public readonly SlidingBlocksGameData GameData = gameData;
 
-		// Token: 0x0401AB23 RID: 109347
+		// Token: 0x04015477 RID: 87159
 		public readonly double RowIndex = rowIndex;
 
-		// Token: 0x0401AB24 RID: 109348
+		// Token: 0x04015478 RID: 87160
 		public readonly double RowSize = rowSize;
 	}
 }

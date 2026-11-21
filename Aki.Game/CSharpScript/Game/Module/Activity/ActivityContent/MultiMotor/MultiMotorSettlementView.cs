@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x0200639E RID: 25502
+	// Token: 0x0200531C RID: 21276
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MultiMotorSettlementView : UiTickViewBase
 	{
-		// Token: 0x0604023A RID: 262714 RVA: 0x00F87071 File Offset: 0x00F85271
+		// Token: 0x06034EFB RID: 216827 RVA: 0x00ECDFA9 File Offset: 0x00ECC1A9
 		[NullableContext(1)]
 		public MultiMotorSettlementView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0604023B RID: 262715 RVA: 0x00F8707C File Offset: 0x00F8527C
+		// Token: 0x06034EFC RID: 216828 RVA: 0x00ECDFB4 File Offset: 0x00ECC1B4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604023C RID: 262716 RVA: 0x00F8720C File Offset: 0x00F8540C
+		// Token: 0x06034EFD RID: 216829 RVA: 0x00ECE144 File Offset: 0x00ECC344
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MultiMotorSettlementView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604023D RID: 262717 RVA: 0x00F87250 File Offset: 0x00F85450
+		// Token: 0x06034EFE RID: 216830 RVA: 0x00ECE188 File Offset: 0x00ECC388
 		protected override void OnStart()
 		{
 			string textStringId = CreatureModel.Instance.IsMyWorld() ? "Text_ContinueChallenge_Text" : "Text_SuggestContinueChallenge_Text";
@@ -77,13 +77,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.InitAutoLeaveTimer();
 		}
 
-		// Token: 0x0604023E RID: 262718 RVA: 0x00F87293 File Offset: 0x00F85493
+		// Token: 0x06034EFF RID: 216831 RVA: 0x00ECE1CB File Offset: 0x00ECC3CB
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearAutoLeaveTimer();
 		}
 
-		// Token: 0x0604023F RID: 262719 RVA: 0x00F8729C File Offset: 0x00F8549C
+		// Token: 0x06034F00 RID: 216832 RVA: 0x00ECE1D4 File Offset: 0x00ECC3D4
 		private void InitAutoLeaveTimer()
 		{
 			int leftSecondToAutoLeave = 300;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}, 1000f, 1f, null, null, true);
 		}
 
-		// Token: 0x06040240 RID: 262720 RVA: 0x00F872EA File Offset: 0x00F854EA
+		// Token: 0x06034F01 RID: 216833 RVA: 0x00ECE222 File Offset: 0x00ECC422
 		private void ClearAutoLeaveTimer()
 		{
 			if (this.AutoLeaveTimerId != null && TimerSystem.GameplayTimeInstance.Has(this.AutoLeaveTimerId))
@@ -115,19 +115,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.AutoLeaveTimerId = null;
 		}
 
-		// Token: 0x06040241 RID: 262721 RVA: 0x00F87320 File Offset: 0x00F85520
+		// Token: 0x06034F02 RID: 216834 RVA: 0x00ECE258 File Offset: 0x00ECC458
 		private void OnClickLeftBtn()
 		{
 			OnlineController.Instance.LeaveWorldTeamRequest(PlayerInfoModel.Instance.GetId().GetValueOrDefault(), null);
 		}
 
-		// Token: 0x06040242 RID: 262722 RVA: 0x00F87352 File Offset: 0x00F85552
+		// Token: 0x06034F03 RID: 216835 RVA: 0x00ECE28A File Offset: 0x00ECC48A
 		private void OnClickRightBtn()
 		{
 			InstanceDungeonEntranceController.Instance.SettleViewButtonSuccessOnMultiCallBack(0);
 		}
 
-		// Token: 0x06040243 RID: 262723 RVA: 0x00F87360 File Offset: 0x00F85560
+		// Token: 0x06034F04 RID: 216836 RVA: 0x00ECE298 File Offset: 0x00ECC498
 		[CompilerGenerated]
 		internal static OnlineMotorSettleInfo <OnBeforeStartAsync>g__FindByRank|12_0(int rank, ref MultiMotorSettlementView.<>c__DisplayClass12_0 A_1)
 		{
@@ -141,18 +141,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return null;
 		}
 
-		// Token: 0x040216AF RID: 136879
+		// Token: 0x0401BFDE RID: 114654
 		[Nullable(1)]
 		public const string ABSOLUTE_RULE_CONST = "MultiMotor_Rank_1_AbsoluteRule_Tag";
 
-		// Token: 0x040216B0 RID: 136880
+		// Token: 0x0401BFDF RID: 114655
 		[Nullable(1)]
 		public const string DESTROYER_CONST = "MultiMotor_Rank_1_Destroyer_Tag";
 
-		// Token: 0x040216B1 RID: 136881
+		// Token: 0x0401BFE0 RID: 114656
 		private const int AUTO_LEAVE_TIME = 300;
 
-		// Token: 0x040216B2 RID: 136882
+		// Token: 0x0401BFE1 RID: 114657
 		[Nullable(new byte[]
 		{
 			2,
@@ -160,47 +160,47 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 		})]
 		private Dictionary<int, OnlineMotorSettleInfo> SettlementDataMap;
 
-		// Token: 0x040216B3 RID: 136883
+		// Token: 0x0401BFE2 RID: 114658
 		private MultiMotorSettlementPlayerItem ChampionItem;
 
-		// Token: 0x040216B4 RID: 136884
+		// Token: 0x0401BFE3 RID: 114659
 		private MultiMotorSettlementPlayerItem SecondItem;
 
-		// Token: 0x040216B5 RID: 136885
+		// Token: 0x0401BFE4 RID: 114660
 		private MultiMotorSettlementPlayerItem ThirdItem;
 
-		// Token: 0x040216B6 RID: 136886
+		// Token: 0x0401BFE5 RID: 114661
 		private RewardExploreOnlineChallengePlayer RewardExploreOnlineChallengePlayerInst;
 
-		// Token: 0x040216B7 RID: 136887
+		// Token: 0x0401BFE6 RID: 114662
 		private TimerHandle AutoLeaveTimerId;
 
-		// Token: 0x0200C5B8 RID: 50616
+		// Token: 0x0200AF9F RID: 44959
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BB20 RID: 244512
+			// Token: 0x0403647F RID: 222335
 			public const int ChampionItem = 0;
 
-			// Token: 0x0403BB21 RID: 244513
+			// Token: 0x04036480 RID: 222336
 			public const int SecondItem = 1;
 
-			// Token: 0x0403BB22 RID: 244514
+			// Token: 0x04036481 RID: 222337
 			public const int ThirdItem = 2;
 
-			// Token: 0x0403BB23 RID: 244515
+			// Token: 0x04036482 RID: 222338
 			public const int LeftBtn = 3;
 
-			// Token: 0x0403BB24 RID: 244516
+			// Token: 0x04036483 RID: 222339
 			public const int LeftBtnText = 4;
 
-			// Token: 0x0403BB25 RID: 244517
+			// Token: 0x04036484 RID: 222340
 			public const int RightBtn = 5;
 
-			// Token: 0x0403BB26 RID: 244518
+			// Token: 0x04036485 RID: 222341
 			public const int RightBtnText = 6;
 
-			// Token: 0x0403BB27 RID: 244519
+			// Token: 0x04036486 RID: 222342
 			public const int ItemTeam = 7;
 		}
 	}

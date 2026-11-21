@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C04 RID: 23556
+	// Token: 0x02006223 RID: 25123
 	public class TEffectSplineCreateOptionUnion
 	{
-		// Token: 0x1700B1E0 RID: 45536
-		// (get) Token: 0x06028695 RID: 165525 RVA: 0x005901E6 File Offset: 0x0058E3E6
-		// (set) Token: 0x06028696 RID: 165526 RVA: 0x005901EE File Offset: 0x0058E3EE
+		// Token: 0x1700BB2E RID: 47918
+		// (get) Token: 0x0602AC85 RID: 175237 RVA: 0x005D812E File Offset: 0x005D632E
+		// (set) Token: 0x0602AC86 RID: 175238 RVA: 0x005D8136 File Offset: 0x005D6336
 		public TEffectSplineCreateOption Type { get; set; }
 
-		// Token: 0x1700B1E1 RID: 45537
-		// (get) Token: 0x06028697 RID: 165527 RVA: 0x005901F7 File Offset: 0x0058E3F7
-		// (set) Token: 0x06028698 RID: 165528 RVA: 0x005901FF File Offset: 0x0058E3FF
+		// Token: 0x1700BB2F RID: 47919
+		// (get) Token: 0x0602AC87 RID: 175239 RVA: 0x005D813F File Offset: 0x005D633F
+		// (set) Token: 0x0602AC88 RID: 175240 RVA: 0x005D8147 File Offset: 0x005D6347
 		public object Value { get; set; }
 
-		// Token: 0x06028699 RID: 165529 RVA: 0x00590208 File Offset: 0x0058E408
+		// Token: 0x0602AC89 RID: 175241 RVA: 0x005D8150 File Offset: 0x005D6350
 		public TEffectSplineCreateOptionUnion()
 		{
 			this.Type = TEffectSplineCreateOption.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602869A RID: 165530 RVA: 0x0059021E File Offset: 0x0058E41E
+		// Token: 0x0602AC8A RID: 175242 RVA: 0x005D8166 File Offset: 0x005D6366
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602869B RID: 165531 RVA: 0x00590230 File Offset: 0x0058E430
+		// Token: 0x0602AC8B RID: 175243 RVA: 0x005D8178 File Offset: 0x005D6378
 		public IEffectSplineEquidistantPointModeT AsIEffectSplineEquidistantPointMode()
 		{
 			return this.As<IEffectSplineEquidistantPointModeT>();
 		}
 
-		// Token: 0x0602869C RID: 165532 RVA: 0x00590238 File Offset: 0x0058E438
+		// Token: 0x0602AC8C RID: 175244 RVA: 0x005D8180 File Offset: 0x005D6380
 		public static TEffectSplineCreateOptionUnion FromIEffectSplineEquidistantPointMode(IEffectSplineEquidistantPointModeT _ieffectsplineequidistantpointmode)
 		{
 			return new TEffectSplineCreateOptionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602869D RID: 165533 RVA: 0x0059024D File Offset: 0x0058E44D
+		// Token: 0x0602AC8D RID: 175245 RVA: 0x005D8195 File Offset: 0x005D6395
 		public IEffectSplineWholeLineModeT AsIEffectSplineWholeLineMode()
 		{
 			return this.As<IEffectSplineWholeLineModeT>();
 		}
 
-		// Token: 0x0602869E RID: 165534 RVA: 0x00590255 File Offset: 0x0058E455
+		// Token: 0x0602AC8E RID: 175246 RVA: 0x005D819D File Offset: 0x005D639D
 		public static TEffectSplineCreateOptionUnion FromIEffectSplineWholeLineMode(IEffectSplineWholeLineModeT _ieffectsplinewholelinemode)
 		{
 			return new TEffectSplineCreateOptionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602869F RID: 165535 RVA: 0x0059026C File Offset: 0x0058E46C
+		// Token: 0x0602AC8F RID: 175247 RVA: 0x005D81B4 File Offset: 0x005D63B4
 		public static int Pack(FlatBufferBuilder builder, TEffectSplineCreateOptionUnion _o)
 		{
 			TEffectSplineCreateOption type = _o.Type;

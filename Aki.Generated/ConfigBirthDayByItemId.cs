@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000EF RID: 239
+	// Token: 0x020000FE RID: 254
 	public class ConfigBirthDayByItemId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600059B RID: 1435 RVA: 0x000795B0 File Offset: 0x000777B0
+		// Token: 0x060005F5 RID: 1525 RVA: 0x0007EF14 File Offset: 0x0007D114
 		static ConfigBirthDayByItemId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBirthDayByItemId.CreateStaticDefaultValue), new Action(ConfigBirthDayByItemId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600059C RID: 1436 RVA: 0x000795D0 File Offset: 0x000777D0
+		// Token: 0x060005F6 RID: 1526 RVA: 0x0007EF34 File Offset: 0x0007D134
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBirthDayByItemId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600059D RID: 1437 RVA: 0x0007964F File Offset: 0x0007784F
+		// Token: 0x060005F7 RID: 1527 RVA: 0x0007EFB3 File Offset: 0x0007D1B3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBirthDayByItemId.LogPair = null;
 			ConfigBirthDayByItemId.HandleId = 0;
 		}
 
-		// Token: 0x0600059E RID: 1438 RVA: 0x0007965D File Offset: 0x0007785D
+		// Token: 0x060005F8 RID: 1528 RVA: 0x0007EFC1 File Offset: 0x0007D1C1
 		public static void Init()
 		{
 			ConfigBirthDayByItemId.HandleId = ConfigCommon.InitDataStatement(ConfigBirthDayByItemId.HandleId, "db_birthday.db", "select BinData from `BirthDay` where BirthDayCardItemId=?");
 		}
 
-		// Token: 0x0600059F RID: 1439 RVA: 0x00079678 File Offset: 0x00077878
+		// Token: 0x060005F9 RID: 1529 RVA: 0x0007EFDC File Offset: 0x0007D1DC
 		public static BirthDay? GetConfig(int p0BirthDayCardItemId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBirthDayByItemId.HandleId, ConfigBirthDayByItemId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BirthDay?(rootAsBirthDay);
 		}
 
-		// Token: 0x0400066D RID: 1645
+		// Token: 0x040006D6 RID: 1750
 		private const string DB = "db_birthday.db";
 
-		// Token: 0x0400066E RID: 1646
+		// Token: 0x040006D7 RID: 1751
 		private const string FILE = "s.生日.xlsx";
 
-		// Token: 0x0400066F RID: 1647
+		// Token: 0x040006D8 RID: 1752
 		private const string TABLE = "BirthDay";
 
-		// Token: 0x04000670 RID: 1648
+		// Token: 0x040006D9 RID: 1753
 		private const string COMMAND = "select BinData from `BirthDay` where BirthDayCardItemId=?";
 
-		// Token: 0x04000671 RID: 1649
+		// Token: 0x040006DA RID: 1754
 		private const string KEY_PREFIX = "BirthDayByItemId";
 
-		// Token: 0x04000672 RID: 1650
+		// Token: 0x040006DB RID: 1755
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000673 RID: 1651
+		// Token: 0x040006DC RID: 1756
 		private static int HandleId;
 	}
 }

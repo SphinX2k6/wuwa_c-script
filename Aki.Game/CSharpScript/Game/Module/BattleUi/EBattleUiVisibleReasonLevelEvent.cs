@@ -2,16 +2,18 @@
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C6A RID: 23658
+	// Token: 0x02004C4A RID: 19530
 	public enum EBattleUiVisibleReasonLevelEvent
 	{
-		// Token: 0x0401F27B RID: 127611
+		// Token: 0x04019D2C RID: 105772
 		Default,
-		// Token: 0x0401F27C RID: 127612
+		// Token: 0x04019D2D RID: 105773
 		OperationRestrictUtils,
-		// Token: 0x0401F27D RID: 127613
+		// Token: 0x04019D2E RID: 105774
 		PlayDynamicSettlement,
-		// Token: 0x0401F27E RID: 127614
-		CameraLookAtPosition
+		// Token: 0x04019D2F RID: 105775
+		CameraLookAtPosition,
+		// Token: 0x04019D30 RID: 105776
+		GeneralLogicTree
 	}
 }

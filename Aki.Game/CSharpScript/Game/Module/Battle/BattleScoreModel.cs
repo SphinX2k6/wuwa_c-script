@@ -8,19 +8,19 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C5A RID: 23642
+	// Token: 0x02004C3A RID: 19514
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class BattleScoreModel : ModelBase
 	{
-		// Token: 0x0603BC2F RID: 244783 RVA: 0x00E46181 File Offset: 0x00E44381
+		// Token: 0x06030B7A RID: 199546 RVA: 0x00D96561 File Offset: 0x00D94761
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x0603BC30 RID: 244784 RVA: 0x00E46184 File Offset: 0x00E44384
+		// Token: 0x06030B7B RID: 199547 RVA: 0x00D96564 File Offset: 0x00D94764
 		protected override bool OnLeaveLevel()
 		{
 			this.ScoreMap.Clear();
@@ -30,19 +30,19 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BC31 RID: 244785 RVA: 0x00E461B4 File Offset: 0x00E443B4
+		// Token: 0x06030B7C RID: 199548 RVA: 0x00D96594 File Offset: 0x00D94794
 		public void HandleBattleScoreNotify(BattleScoreNotify notify)
 		{
 			this.UpdateScore(notify.BattleScoreConfId, notify.ScoreTotal);
 		}
 
-		// Token: 0x0603BC32 RID: 244786 RVA: 0x00E461C8 File Offset: 0x00E443C8
+		// Token: 0x06030B7D RID: 199549 RVA: 0x00D965A8 File Offset: 0x00D947A8
 		public void HandleBattleScoreEnableNotify(BattleScoreEnableNotify notify)
 		{
 			this.UpdateScoreEnable(notify.BattleScoreConfId, notify.Enable);
 		}
 
-		// Token: 0x0603BC33 RID: 244787 RVA: 0x00E461DC File Offset: 0x00E443DC
+		// Token: 0x06030B7E RID: 199550 RVA: 0x00D965BC File Offset: 0x00D947BC
 		public void CacheScoreConfig(int scoreId)
 		{
 			if (!this.ScoreConfigMap.ContainsKey(scoreId))
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC34 RID: 244788 RVA: 0x00E4621F File Offset: 0x00E4441F
+		// Token: 0x06030B7F RID: 199551 RVA: 0x00D965FF File Offset: 0x00D947FF
 		public void UpdateScore(int scoreId, int score)
 		{
 			this.ScoreMap[scoreId] = score;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Battle
 			EventSystem.Instance.Emit<int, int>(EEventName.BattleScoreChanged, scoreId, score);
 		}
 
-		// Token: 0x0603BC35 RID: 244789 RVA: 0x00E46257 File Offset: 0x00E44457
+		// Token: 0x06030B80 RID: 199552 RVA: 0x00D96637 File Offset: 0x00D94837
 		public void UpdateScoreEnable(int scoreId, bool enable)
 		{
 			this.ScoreEnableMap[scoreId] = enable;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Battle
 			EventSystem.Instance.Emit<int, bool>(EEventName.BattleScoreEnableChanged, scoreId, enable);
 		}
 
-		// Token: 0x0603BC36 RID: 244790 RVA: 0x00E46290 File Offset: 0x00E44490
+		// Token: 0x06030B81 RID: 199553 RVA: 0x00D96670 File Offset: 0x00D94870
 		public BattleScoreConf? GetScoreConfig(int scoreId, bool cache = false)
 		{
 			BattleScoreConf? valueOrNull = this.ScoreConfigMap.GetValueOrNull(scoreId);
@@ -91,38 +91,38 @@ namespace CSharpScript.Game.Module.Battle
 			return valueOrNull;
 		}
 
-		// Token: 0x0603BC37 RID: 244791 RVA: 0x00E462CD File Offset: 0x00E444CD
+		// Token: 0x06030B82 RID: 199554 RVA: 0x00D966AD File Offset: 0x00D948AD
 		public int GetScore(int scoreId)
 		{
 			return this.ScoreMap.GetValueOrDefault(scoreId, 0);
 		}
 
-		// Token: 0x0603BC38 RID: 244792 RVA: 0x00E462DC File Offset: 0x00E444DC
+		// Token: 0x06030B83 RID: 199555 RVA: 0x00D966BC File Offset: 0x00D948BC
 		public IReadOnlyDictionary<int, int> GetScoreMap()
 		{
 			return this.ScoreMap;
 		}
 
-		// Token: 0x0603BC39 RID: 244793 RVA: 0x00E462E4 File Offset: 0x00E444E4
+		// Token: 0x06030B84 RID: 199556 RVA: 0x00D966C4 File Offset: 0x00D948C4
 		public IReadOnlyDictionary<int, bool> GetScoreEnableMap()
 		{
 			return this.ScoreEnableMap;
 		}
 
-		// Token: 0x0603BC3A RID: 244794 RVA: 0x00E462EC File Offset: 0x00E444EC
+		// Token: 0x06030B85 RID: 199557 RVA: 0x00D966CC File Offset: 0x00D948CC
 		public int GetCurScoreId()
 		{
 			return this.CurScoreId;
 		}
 
-		// Token: 0x0603BC3B RID: 244795 RVA: 0x00E462F4 File Offset: 0x00E444F4
+		// Token: 0x06030B86 RID: 199558 RVA: 0x00D966D4 File Offset: 0x00D948D4
 		public int GetCurScore()
 		{
 			return this.GetScore(this.CurScoreId);
 		}
 
-		// Token: 0x17008DBE RID: 36286
-		// (get) Token: 0x0603BC3C RID: 244796 RVA: 0x00E46302 File Offset: 0x00E44502
+		// Token: 0x17006190 RID: 24976
+		// (get) Token: 0x06030B87 RID: 199559 RVA: 0x00D966E2 File Offset: 0x00D948E2
 		public static BattleScoreModel Instance
 		{
 			get
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC3D RID: 244797 RVA: 0x00E46309 File Offset: 0x00E44509
+		// Token: 0x06030B88 RID: 199560 RVA: 0x00D966E9 File Offset: 0x00D948E9
 		public static BattleScoreModel GetOrCreateInstance()
 		{
 			if (BattleScoreModel._Instance == null)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Battle
 			return BattleScoreModel._Instance;
 		}
 
-		// Token: 0x0603BC3E RID: 244798 RVA: 0x00E4631D File Offset: 0x00E4451D
+		// Token: 0x06030B89 RID: 199561 RVA: 0x00D966FD File Offset: 0x00D948FD
 		public static bool CreateInstance()
 		{
 			if (BattleScoreModel._Instance != null)
@@ -152,39 +152,39 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BC3F RID: 244799 RVA: 0x00E46333 File Offset: 0x00E44533
+		// Token: 0x06030B8A RID: 199562 RVA: 0x00D96713 File Offset: 0x00D94913
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603BC40 RID: 244800 RVA: 0x00E46335 File Offset: 0x00E44535
+		// Token: 0x06030B8B RID: 199563 RVA: 0x00D96715 File Offset: 0x00D94915
 		public static void ResetStaticDefaultValue()
 		{
 			BattleScoreModel._Instance = null;
 		}
 
-		// Token: 0x0603BC41 RID: 244801 RVA: 0x00E4633D File Offset: 0x00E4453D
+		// Token: 0x06030B8C RID: 199564 RVA: 0x00D9671D File Offset: 0x00D9491D
 		static BattleScoreModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BattleScoreModel.CreateStaticDefaultValue), new Action(BattleScoreModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401F1E6 RID: 127462
+		// Token: 0x04019C97 RID: 105623
 		private readonly Dictionary<int, int> ScoreMap = new Dictionary<int, int>();
 
-		// Token: 0x0401F1E7 RID: 127463
+		// Token: 0x04019C98 RID: 105624
 		private readonly Dictionary<int, bool> ScoreEnableMap = new Dictionary<int, bool>();
 
-		// Token: 0x0401F1E8 RID: 127464
+		// Token: 0x04019C99 RID: 105625
 		private readonly Dictionary<int, BattleScoreConf> ScoreConfigMap = new Dictionary<int, BattleScoreConf>();
 
-		// Token: 0x0401F1E9 RID: 127465
+		// Token: 0x04019C9A RID: 105626
 		private int CurScoreId;
 
-		// Token: 0x0401F1EA RID: 127466
+		// Token: 0x04019C9B RID: 105627
 		public StateRef RougeScoreMusicState = new StateRef("game_rogue_combat_combo_rank", "none");
 
-		// Token: 0x0401F1EB RID: 127467
+		// Token: 0x04019C9C RID: 105628
 		[Nullable(2)]
 		private static BattleScoreModel _Instance;
 	}

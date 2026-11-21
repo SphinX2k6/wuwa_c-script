@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001FF9 RID: 8185
+// Token: 0x020014CC RID: 5324
 public class ItemRewardData
 {
-	// Token: 0x040076B2 RID: 30386
+	// Token: 0x0400779B RID: 30619
 	[Nullable(2)]
 	public ItemRewardNotify ItemReward;
 }

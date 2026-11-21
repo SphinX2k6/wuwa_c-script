@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053F5 RID: 21493
+	// Token: 0x0200597B RID: 22907
 	public enum IIndependentSystemRewardType_Union : byte
 	{
-		// Token: 0x0400E636 RID: 58934
+		// Token: 0x0400F267 RID: 62055
 		NONE,
-		// Token: 0x0400E637 RID: 58935
+		// Token: 0x0400F268 RID: 62056
 		IIndependentSystemRewardType,
-		// Token: 0x0400E638 RID: 58936
+		// Token: 0x0400F269 RID: 62057
 		IDarkTideIndependentSystemReward
 	}
 }

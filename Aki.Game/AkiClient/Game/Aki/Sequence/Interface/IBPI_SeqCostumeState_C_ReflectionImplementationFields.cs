@@ -2,13 +2,13 @@
 
 namespace AkiClient.Game.Aki.Sequence.Interface
 {
-	// Token: 0x02003A3F RID: 14911
+	// Token: 0x0200307F RID: 12415
 	internal static class IBPI_SeqCostumeState_C_ReflectionImplementationFields
 	{
-		// Token: 0x0400F136 RID: 61750
+		// Token: 0x0400F97C RID: 63868
 		public static IntPtr __ClearSeqCostumeState_NativeFunctionPtr;
 
-		// Token: 0x0400F137 RID: 61751
+		// Token: 0x0400F97D RID: 63869
 		public static IntPtr __ApplySeqCostumeState_NativeFunctionPtr;
 	}
 }

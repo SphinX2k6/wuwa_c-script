@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020028B3 RID: 10419
+	// Token: 0x02000842 RID: 2114
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/SpinePlugin.SpineSkeletonRendererComponent")]
 	[UnrealStructLayout(2496, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2496)]
 	public class USpineSkeletonRendererComponent : UProceduralMeshComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06026A68 RID: 158312 RVA: 0x003AF9DB File Offset: 0x003ADBDB
+		// Token: 0x0600B854 RID: 47188 RVA: 0x001276EF File Offset: 0x001258EF
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return USpineSkeletonRendererComponent._ClassPtr;
 		}
 
-		// Token: 0x06026A69 RID: 158313 RVA: 0x003AF9E8 File Offset: 0x003ADBE8
+		// Token: 0x0600B855 RID: 47189 RVA: 0x001276FC File Offset: 0x001258FC
 		public USpineSkeletonRendererComponent() : this(BuiltinUtils.AllocNativeUObject(USpineSkeletonRendererComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06026A6A RID: 158314 RVA: 0x003AFA10 File Offset: 0x003ADC10
+		// Token: 0x0600B856 RID: 47190 RVA: 0x00127724 File Offset: 0x00125924
 		public USpineSkeletonRendererComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(USpineSkeletonRendererComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170094F7 RID: 38135
-		// (get) Token: 0x06026A6B RID: 158315 RVA: 0x003AFA43 File Offset: 0x003ADC43
-		// (set) Token: 0x06026A6C RID: 158316 RVA: 0x003AFA57 File Offset: 0x003ADC57
+		// Token: 0x17002261 RID: 8801
+		// (get) Token: 0x0600B857 RID: 47191 RVA: 0x00127757 File Offset: 0x00125957
+		// (set) Token: 0x0600B858 RID: 47192 RVA: 0x0012776B File Offset: 0x0012596B
 		[Nullable(2)]
 		public unsafe UMaterialInterface NormalBlendMaterial
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094F8 RID: 38136
-		// (get) Token: 0x06026A6D RID: 158317 RVA: 0x003AFA6C File Offset: 0x003ADC6C
-		// (set) Token: 0x06026A6E RID: 158318 RVA: 0x003AFA80 File Offset: 0x003ADC80
+		// Token: 0x17002262 RID: 8802
+		// (get) Token: 0x0600B859 RID: 47193 RVA: 0x00127780 File Offset: 0x00125980
+		// (set) Token: 0x0600B85A RID: 47194 RVA: 0x00127794 File Offset: 0x00125994
 		[Nullable(2)]
 		public unsafe UMaterialInterface AdditiveBlendMaterial
 		{
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094F9 RID: 38137
-		// (get) Token: 0x06026A6F RID: 158319 RVA: 0x003AFA95 File Offset: 0x003ADC95
-		// (set) Token: 0x06026A70 RID: 158320 RVA: 0x003AFAA9 File Offset: 0x003ADCA9
+		// Token: 0x17002263 RID: 8803
+		// (get) Token: 0x0600B85B RID: 47195 RVA: 0x001277A9 File Offset: 0x001259A9
+		// (set) Token: 0x0600B85C RID: 47196 RVA: 0x001277BD File Offset: 0x001259BD
 		[Nullable(2)]
 		public unsafe UMaterialInterface MultiplyBlendMaterial
 		{
@@ -83,9 +83,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094FA RID: 38138
-		// (get) Token: 0x06026A71 RID: 158321 RVA: 0x003AFABE File Offset: 0x003ADCBE
-		// (set) Token: 0x06026A72 RID: 158322 RVA: 0x003AFAD2 File Offset: 0x003ADCD2
+		// Token: 0x17002264 RID: 8804
+		// (get) Token: 0x0600B85D RID: 47197 RVA: 0x001277D2 File Offset: 0x001259D2
+		// (set) Token: 0x0600B85E RID: 47198 RVA: 0x001277E6 File Offset: 0x001259E6
 		[Nullable(2)]
 		public unsafe UMaterialInterface ScreenBlendMaterial
 		{
@@ -101,9 +101,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094FB RID: 38139
-		// (get) Token: 0x06026A73 RID: 158323 RVA: 0x003AFAE8 File Offset: 0x003ADCE8
-		// (set) Token: 0x06026A74 RID: 158324 RVA: 0x003AFB21 File Offset: 0x003ADD21
+		// Token: 0x17002265 RID: 8805
+		// (get) Token: 0x0600B85F RID: 47199 RVA: 0x001277FC File Offset: 0x001259FC
+		// (set) Token: 0x0600B860 RID: 47200 RVA: 0x00127835 File Offset: 0x00125A35
 		public TArray<UMaterialInstanceDynamic> atlasNormalBlendMaterials
 		{
 			get
@@ -122,9 +122,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094FC RID: 38140
-		// (get) Token: 0x06026A75 RID: 158325 RVA: 0x003AFB30 File Offset: 0x003ADD30
-		// (set) Token: 0x06026A76 RID: 158326 RVA: 0x003AFB69 File Offset: 0x003ADD69
+		// Token: 0x17002266 RID: 8806
+		// (get) Token: 0x0600B861 RID: 47201 RVA: 0x00127844 File Offset: 0x00125A44
+		// (set) Token: 0x0600B862 RID: 47202 RVA: 0x0012787D File Offset: 0x00125A7D
 		public TArray<UMaterialInstanceDynamic> atlasAdditiveBlendMaterials
 		{
 			get
@@ -143,9 +143,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094FD RID: 38141
-		// (get) Token: 0x06026A77 RID: 158327 RVA: 0x003AFB78 File Offset: 0x003ADD78
-		// (set) Token: 0x06026A78 RID: 158328 RVA: 0x003AFBB1 File Offset: 0x003ADDB1
+		// Token: 0x17002267 RID: 8807
+		// (get) Token: 0x0600B863 RID: 47203 RVA: 0x0012788C File Offset: 0x00125A8C
+		// (set) Token: 0x0600B864 RID: 47204 RVA: 0x001278C5 File Offset: 0x00125AC5
 		public TArray<UMaterialInstanceDynamic> atlasMultiplyBlendMaterials
 		{
 			get
@@ -164,9 +164,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094FE RID: 38142
-		// (get) Token: 0x06026A79 RID: 158329 RVA: 0x003AFBC0 File Offset: 0x003ADDC0
-		// (set) Token: 0x06026A7A RID: 158330 RVA: 0x003AFBF9 File Offset: 0x003ADDF9
+		// Token: 0x17002268 RID: 8808
+		// (get) Token: 0x0600B865 RID: 47205 RVA: 0x001278D4 File Offset: 0x00125AD4
+		// (set) Token: 0x0600B866 RID: 47206 RVA: 0x0012790D File Offset: 0x00125B0D
 		public TArray<UMaterialInstanceDynamic> atlasScreenBlendMaterials
 		{
 			get
@@ -185,9 +185,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094FF RID: 38143
-		// (get) Token: 0x06026A7B RID: 158331 RVA: 0x003AFC07 File Offset: 0x003ADE07
-		// (set) Token: 0x06026A7C RID: 158332 RVA: 0x003AFC17 File Offset: 0x003ADE17
+		// Token: 0x17002269 RID: 8809
+		// (get) Token: 0x0600B867 RID: 47207 RVA: 0x0012791B File Offset: 0x00125B1B
+		// (set) Token: 0x0600B868 RID: 47208 RVA: 0x0012792B File Offset: 0x00125B2B
 		public unsafe float DepthOffset
 		{
 			get
@@ -200,9 +200,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009500 RID: 38144
-		// (get) Token: 0x06026A7D RID: 158333 RVA: 0x003AFC28 File Offset: 0x003ADE28
-		// (set) Token: 0x06026A7E RID: 158334 RVA: 0x003AFC3C File Offset: 0x003ADE3C
+		// Token: 0x1700226A RID: 8810
+		// (get) Token: 0x0600B869 RID: 47209 RVA: 0x0012793C File Offset: 0x00125B3C
+		// (set) Token: 0x0600B86A RID: 47210 RVA: 0x00127950 File Offset: 0x00125B50
 		public unsafe FName TextureParameterName
 		{
 			get
@@ -215,9 +215,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009501 RID: 38145
-		// (get) Token: 0x06026A7F RID: 158335 RVA: 0x003AFC51 File Offset: 0x003ADE51
-		// (set) Token: 0x06026A80 RID: 158336 RVA: 0x003AFC65 File Offset: 0x003ADE65
+		// Token: 0x1700226B RID: 8811
+		// (get) Token: 0x0600B86B RID: 47211 RVA: 0x00127965 File Offset: 0x00125B65
+		// (set) Token: 0x0600B86C RID: 47212 RVA: 0x00127979 File Offset: 0x00125B79
 		public unsafe FLinearColor Color
 		{
 			get
@@ -230,9 +230,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009502 RID: 38146
-		// (get) Token: 0x06026A81 RID: 158337 RVA: 0x003AFC7A File Offset: 0x003ADE7A
-		// (set) Token: 0x06026A82 RID: 158338 RVA: 0x003AFC8A File Offset: 0x003ADE8A
+		// Token: 0x1700226C RID: 8812
+		// (get) Token: 0x0600B86D RID: 47213 RVA: 0x0012798E File Offset: 0x00125B8E
+		// (set) Token: 0x0600B86E RID: 47214 RVA: 0x0012799E File Offset: 0x00125B9E
 		public unsafe bool bCreateCollision
 		{
 			get
@@ -245,9 +245,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009503 RID: 38147
-		// (get) Token: 0x06026A83 RID: 158339 RVA: 0x003AFC9C File Offset: 0x003ADE9C
-		// (set) Token: 0x06026A84 RID: 158340 RVA: 0x003AFCD5 File Offset: 0x003ADED5
+		// Token: 0x1700226D RID: 8813
+		// (get) Token: 0x0600B86F RID: 47215 RVA: 0x001279B0 File Offset: 0x00125BB0
+		// (set) Token: 0x0600B870 RID: 47216 RVA: 0x001279E9 File Offset: 0x00125BE9
 		public TArray<FVector> vertices
 		{
 			get
@@ -266,9 +266,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009504 RID: 38148
-		// (get) Token: 0x06026A85 RID: 158341 RVA: 0x003AFCE4 File Offset: 0x003ADEE4
-		// (set) Token: 0x06026A86 RID: 158342 RVA: 0x003AFD1D File Offset: 0x003ADF1D
+		// Token: 0x1700226E RID: 8814
+		// (get) Token: 0x0600B871 RID: 47217 RVA: 0x001279F8 File Offset: 0x00125BF8
+		// (set) Token: 0x0600B872 RID: 47218 RVA: 0x00127A31 File Offset: 0x00125C31
 		public TArray<int> indices
 		{
 			get
@@ -287,9 +287,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009505 RID: 38149
-		// (get) Token: 0x06026A87 RID: 158343 RVA: 0x003AFD2C File Offset: 0x003ADF2C
-		// (set) Token: 0x06026A88 RID: 158344 RVA: 0x003AFD65 File Offset: 0x003ADF65
+		// Token: 0x1700226F RID: 8815
+		// (get) Token: 0x0600B873 RID: 47219 RVA: 0x00127A40 File Offset: 0x00125C40
+		// (set) Token: 0x0600B874 RID: 47220 RVA: 0x00127A79 File Offset: 0x00125C79
 		public TArray<FVector> normals
 		{
 			get
@@ -308,9 +308,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009506 RID: 38150
-		// (get) Token: 0x06026A89 RID: 158345 RVA: 0x003AFD74 File Offset: 0x003ADF74
-		// (set) Token: 0x06026A8A RID: 158346 RVA: 0x003AFDAD File Offset: 0x003ADFAD
+		// Token: 0x17002270 RID: 8816
+		// (get) Token: 0x0600B875 RID: 47221 RVA: 0x00127A88 File Offset: 0x00125C88
+		// (set) Token: 0x0600B876 RID: 47222 RVA: 0x00127AC1 File Offset: 0x00125CC1
 		public TArray<FVector2D> uvs
 		{
 			get
@@ -329,9 +329,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009507 RID: 38151
-		// (get) Token: 0x06026A8B RID: 158347 RVA: 0x003AFDBC File Offset: 0x003ADFBC
-		// (set) Token: 0x06026A8C RID: 158348 RVA: 0x003AFDF5 File Offset: 0x003ADFF5
+		// Token: 0x17002271 RID: 8817
+		// (get) Token: 0x0600B877 RID: 47223 RVA: 0x00127AD0 File Offset: 0x00125CD0
+		// (set) Token: 0x0600B878 RID: 47224 RVA: 0x00127B09 File Offset: 0x00125D09
 		public TArray<FColor> colors
 		{
 			get
@@ -350,9 +350,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009508 RID: 38152
-		// (get) Token: 0x06026A8D RID: 158349 RVA: 0x003AFE03 File Offset: 0x003AE003
-		// (set) Token: 0x06026A8E RID: 158350 RVA: 0x003AFE13 File Offset: 0x003AE013
+		// Token: 0x17002272 RID: 8818
+		// (get) Token: 0x0600B879 RID: 47225 RVA: 0x00127B17 File Offset: 0x00125D17
+		// (set) Token: 0x0600B87A RID: 47226 RVA: 0x00127B27 File Offset: 0x00125D27
 		public unsafe bool bNeedParallelUpdate
 		{
 			get
@@ -365,42 +365,42 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06026A8F RID: 158351 RVA: 0x003AFE24 File Offset: 0x003AE024
+		// Token: 0x0600B87B RID: 47227 RVA: 0x00127B38 File Offset: 0x00125D38
 		static USpineSkeletonRendererComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SpinePlugin.SpineSkeletonRendererComponent");
 		}
 
-		// Token: 0x06026A90 RID: 158352 RVA: 0x003AFE32 File Offset: 0x003AE032
+		// Token: 0x0600B87C RID: 47228 RVA: 0x00127B46 File Offset: 0x00125D46
 		protected USpineSkeletonRendererComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401538B RID: 86923
+		// Token: 0x040053B3 RID: 21427
 		public new const string __ObjectPath = "/Script/SpinePlugin.SpineSkeletonRendererComponent";
 
-		// Token: 0x0401538C RID: 86924
+		// Token: 0x040053B4 RID: 21428
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401538D RID: 86925
+		// Token: 0x040053B5 RID: 21429
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401538E RID: 86926
+		// Token: 0x040053B6 RID: 21430
 		internal static int __PropertyOffset_NormalBlendMaterial;
 
-		// Token: 0x0401538F RID: 86927
+		// Token: 0x040053B7 RID: 21431
 		internal static int __PropertyOffset_AdditiveBlendMaterial;
 
-		// Token: 0x04015390 RID: 86928
+		// Token: 0x040053B8 RID: 21432
 		internal static int __PropertyOffset_MultiplyBlendMaterial;
 
-		// Token: 0x04015391 RID: 86929
+		// Token: 0x040053B9 RID: 21433
 		internal static int __PropertyOffset_ScreenBlendMaterial;
 
-		// Token: 0x04015392 RID: 86930
+		// Token: 0x040053BA RID: 21434
 		internal static int __PropertyOffset_atlasNormalBlendMaterials;
 
-		// Token: 0x04015393 RID: 86931
+		// Token: 0x040053BB RID: 21435
 		[Nullable(new byte[]
 		{
 			2,
@@ -408,10 +408,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UMaterialInstanceDynamic> _atlasNormalBlendMaterials;
 
-		// Token: 0x04015394 RID: 86932
+		// Token: 0x040053BC RID: 21436
 		internal static int __PropertyOffset_atlasAdditiveBlendMaterials;
 
-		// Token: 0x04015395 RID: 86933
+		// Token: 0x040053BD RID: 21437
 		[Nullable(new byte[]
 		{
 			2,
@@ -419,10 +419,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UMaterialInstanceDynamic> _atlasAdditiveBlendMaterials;
 
-		// Token: 0x04015396 RID: 86934
+		// Token: 0x040053BE RID: 21438
 		internal static int __PropertyOffset_atlasMultiplyBlendMaterials;
 
-		// Token: 0x04015397 RID: 86935
+		// Token: 0x040053BF RID: 21439
 		[Nullable(new byte[]
 		{
 			2,
@@ -430,10 +430,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UMaterialInstanceDynamic> _atlasMultiplyBlendMaterials;
 
-		// Token: 0x04015398 RID: 86936
+		// Token: 0x040053C0 RID: 21440
 		internal static int __PropertyOffset_atlasScreenBlendMaterials;
 
-		// Token: 0x04015399 RID: 86937
+		// Token: 0x040053C1 RID: 21441
 		[Nullable(new byte[]
 		{
 			2,
@@ -441,54 +441,54 @@ namespace UnrealEngine
 		})]
 		private TArray<UMaterialInstanceDynamic> _atlasScreenBlendMaterials;
 
-		// Token: 0x0401539A RID: 86938
+		// Token: 0x040053C2 RID: 21442
 		internal static int __PropertyOffset_DepthOffset;
 
-		// Token: 0x0401539B RID: 86939
+		// Token: 0x040053C3 RID: 21443
 		internal static int __PropertyOffset_TextureParameterName;
 
-		// Token: 0x0401539C RID: 86940
+		// Token: 0x040053C4 RID: 21444
 		internal static int __PropertyOffset_Color;
 
-		// Token: 0x0401539D RID: 86941
+		// Token: 0x040053C5 RID: 21445
 		internal static int __PropertyOffset_bCreateCollision;
 
-		// Token: 0x0401539E RID: 86942
+		// Token: 0x040053C6 RID: 21446
 		internal static int __PropertyOffset_vertices;
 
-		// Token: 0x0401539F RID: 86943
+		// Token: 0x040053C7 RID: 21447
 		[Nullable(2)]
 		private TArray<FVector> _vertices;
 
-		// Token: 0x040153A0 RID: 86944
+		// Token: 0x040053C8 RID: 21448
 		internal static int __PropertyOffset_indices;
 
-		// Token: 0x040153A1 RID: 86945
+		// Token: 0x040053C9 RID: 21449
 		[Nullable(2)]
 		private TArray<int> _indices;
 
-		// Token: 0x040153A2 RID: 86946
+		// Token: 0x040053CA RID: 21450
 		internal static int __PropertyOffset_normals;
 
-		// Token: 0x040153A3 RID: 86947
+		// Token: 0x040053CB RID: 21451
 		[Nullable(2)]
 		private TArray<FVector> _normals;
 
-		// Token: 0x040153A4 RID: 86948
+		// Token: 0x040053CC RID: 21452
 		internal static int __PropertyOffset_uvs;
 
-		// Token: 0x040153A5 RID: 86949
+		// Token: 0x040053CD RID: 21453
 		[Nullable(2)]
 		private TArray<FVector2D> _uvs;
 
-		// Token: 0x040153A6 RID: 86950
+		// Token: 0x040053CE RID: 21454
 		internal static int __PropertyOffset_colors;
 
-		// Token: 0x040153A7 RID: 86951
+		// Token: 0x040053CF RID: 21455
 		[Nullable(2)]
 		private TArray<FColor> _colors;
 
-		// Token: 0x040153A8 RID: 86952
+		// Token: 0x040053D0 RID: 21456
 		internal static int __PropertyOffset_bNeedParallelUpdate;
 	}
 }

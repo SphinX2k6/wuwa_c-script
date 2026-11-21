@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000051 RID: 81
+	// Token: 0x02000059 RID: 89
 	public class ConfigActivitySignGrandRewardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060001E6 RID: 486 RVA: 0x00064758 File Offset: 0x00062958
+		// Token: 0x06000216 RID: 534 RVA: 0x0006900C File Offset: 0x0006720C
 		static ConfigActivitySignGrandRewardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigActivitySignGrandRewardById.CreateStaticDefaultValue), new Action(ConfigActivitySignGrandRewardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060001E7 RID: 487 RVA: 0x00064778 File Offset: 0x00062978
+		// Token: 0x06000217 RID: 535 RVA: 0x0006902C File Offset: 0x0006722C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigActivitySignGrandRewardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060001E8 RID: 488 RVA: 0x000647F7 File Offset: 0x000629F7
+		// Token: 0x06000218 RID: 536 RVA: 0x000690AB File Offset: 0x000672AB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigActivitySignGrandRewardById.LogPair = null;
 			ConfigActivitySignGrandRewardById.HandleId = 0;
 		}
 
-		// Token: 0x060001E9 RID: 489 RVA: 0x00064805 File Offset: 0x00062A05
+		// Token: 0x06000219 RID: 537 RVA: 0x000690B9 File Offset: 0x000672B9
 		public static void Init()
 		{
 			ConfigActivitySignGrandRewardById.HandleId = ConfigCommon.InitDataStatement(ConfigActivitySignGrandRewardById.HandleId, "db_sevendaysign.db", "select BinData from `ActivitySignGrandReward` where Id=?");
 		}
 
-		// Token: 0x060001EA RID: 490 RVA: 0x00064820 File Offset: 0x00062A20
+		// Token: 0x0600021A RID: 538 RVA: 0x000690D4 File Offset: 0x000672D4
 		public static ActivitySignGrandReward? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigActivitySignGrandRewardById.HandleId, ConfigActivitySignGrandRewardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ActivitySignGrandReward?(rootAsActivitySignGrandReward);
 		}
 
-		// Token: 0x0400021B RID: 539
+		// Token: 0x04000253 RID: 595
 		private const string DB = "db_sevendaysign.db";
 
-		// Token: 0x0400021C RID: 540
+		// Token: 0x04000254 RID: 596
 		private const string FILE = "q.七天签到.xlsx";
 
-		// Token: 0x0400021D RID: 541
+		// Token: 0x04000255 RID: 597
 		private const string TABLE = "ActivitySignGrandReward";
 
-		// Token: 0x0400021E RID: 542
+		// Token: 0x04000256 RID: 598
 		private const string COMMAND = "select BinData from `ActivitySignGrandReward` where Id=?";
 
-		// Token: 0x0400021F RID: 543
+		// Token: 0x04000257 RID: 599
 		private const string KEY_PREFIX = "ActivitySignGrandRewardById";
 
-		// Token: 0x04000220 RID: 544
+		// Token: 0x04000258 RID: 600
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000221 RID: 545
+		// Token: 0x04000259 RID: 601
 		private static int HandleId;
 	}
 }

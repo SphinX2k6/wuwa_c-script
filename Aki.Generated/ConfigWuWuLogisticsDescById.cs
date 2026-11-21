@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AA2 RID: 2722
+	// Token: 0x02000B77 RID: 2935
 	public class ConfigWuWuLogisticsDescById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003FE1 RID: 16353 RVA: 0x001C38F3 File Offset: 0x001C1AF3
+		// Token: 0x060044DF RID: 17631 RVA: 0x001E2C87 File Offset: 0x001E0E87
 		static ConfigWuWuLogisticsDescById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWuWuLogisticsDescById.CreateStaticDefaultValue), new Action(ConfigWuWuLogisticsDescById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003FE2 RID: 16354 RVA: 0x001C3914 File Offset: 0x001C1B14
+		// Token: 0x060044E0 RID: 17632 RVA: 0x001E2CA8 File Offset: 0x001E0EA8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWuWuLogisticsDescById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003FE3 RID: 16355 RVA: 0x001C3993 File Offset: 0x001C1B93
+		// Token: 0x060044E1 RID: 17633 RVA: 0x001E2D27 File Offset: 0x001E0F27
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWuWuLogisticsDescById.LogPair = null;
 			ConfigWuWuLogisticsDescById.HandleId = 0;
 		}
 
-		// Token: 0x06003FE4 RID: 16356 RVA: 0x001C39A1 File Offset: 0x001C1BA1
+		// Token: 0x060044E2 RID: 17634 RVA: 0x001E2D35 File Offset: 0x001E0F35
 		public static void Init()
 		{
 			ConfigWuWuLogisticsDescById.HandleId = ConfigCommon.InitDataStatement(ConfigWuWuLogisticsDescById.HandleId, "db_wuwutask.db", "select BinData from `WuWuLogisticsDesc` where Id=?");
 		}
 
-		// Token: 0x06003FE5 RID: 16357 RVA: 0x001C39BC File Offset: 0x001C1BBC
+		// Token: 0x060044E3 RID: 17635 RVA: 0x001E2D50 File Offset: 0x001E0F50
 		public static WuWuLogisticsDesc? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWuWuLogisticsDescById.HandleId, ConfigWuWuLogisticsDescById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new WuWuLogisticsDesc?(rootAsWuWuLogisticsDesc);
 		}
 
-		// Token: 0x04004A54 RID: 19028
+		// Token: 0x04005027 RID: 20519
 		private const string DB = "db_wuwutask.db";
 
-		// Token: 0x04004A55 RID: 19029
+		// Token: 0x04005028 RID: 20520
 		private const string FILE = "w.呜呜签到.xlsx";
 
-		// Token: 0x04004A56 RID: 19030
+		// Token: 0x04005029 RID: 20521
 		private const string TABLE = "WuWuLogisticsDesc";
 
-		// Token: 0x04004A57 RID: 19031
+		// Token: 0x0400502A RID: 20522
 		private const string COMMAND = "select BinData from `WuWuLogisticsDesc` where Id=?";
 
-		// Token: 0x04004A58 RID: 19032
+		// Token: 0x0400502B RID: 20523
 		private const string KEY_PREFIX = "WuWuLogisticsDescById";
 
-		// Token: 0x04004A59 RID: 19033
+		// Token: 0x0400502C RID: 20524
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004A5A RID: 19034
+		// Token: 0x0400502D RID: 20525
 		private static int HandleId;
 	}
 }

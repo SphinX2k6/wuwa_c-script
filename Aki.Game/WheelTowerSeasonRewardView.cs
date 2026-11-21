@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001646 RID: 5702
+// Token: 0x02000AFE RID: 2814
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerSeasonRewardView : UiTickViewBase
 {
-	// Token: 0x0600A01F RID: 40991 RVA: 0x00233AAC File Offset: 0x00231CAC
+	// Token: 0x060073FD RID: 29693 RVA: 0x0023D8F0 File Offset: 0x0023BAF0
 	[NullableContext(1)]
 	public WheelTowerSeasonRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600A020 RID: 40992 RVA: 0x00233AB8 File Offset: 0x00231CB8
+	// Token: 0x060073FE RID: 29694 RVA: 0x0023D8FC File Offset: 0x0023BAFC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -58,7 +57,7 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A021 RID: 40993 RVA: 0x00233C94 File Offset: 0x00231E94
+	// Token: 0x060073FF RID: 29695 RVA: 0x0023DAD8 File Offset: 0x0023BCD8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerSeasonRewardView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -69,7 +68,7 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A022 RID: 40994 RVA: 0x00233CD8 File Offset: 0x00231ED8
+	// Token: 0x06007400 RID: 29696 RVA: 0x0023DB1C File Offset: 0x0023BD1C
 	protected override void OnTick(float delta)
 	{
 		if (this.TaskGridCount <= 0 || this.TaskLoopScroll == null)
@@ -95,7 +94,7 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600A023 RID: 40995 RVA: 0x00233D3C File Offset: 0x00231F3C
+	// Token: 0x06007401 RID: 29697 RVA: 0x0023DB80 File Offset: 0x0023BD80
 	[NullableContext(1)]
 	private List<IWheelTowerSeasonScoreData> GetSeasonScoreDataList()
 	{
@@ -124,7 +123,7 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		return list;
 	}
 
-	// Token: 0x0600A024 RID: 40996 RVA: 0x00233E74 File Offset: 0x00232074
+	// Token: 0x06007402 RID: 29698 RVA: 0x0023DCB8 File Offset: 0x0023BEB8
 	private void RefreshInfo()
 	{
 		this.RefreshTitle();
@@ -135,7 +134,7 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		this.RefreshMedalEntry();
 	}
 
-	// Token: 0x0600A025 RID: 40997 RVA: 0x00233E9C File Offset: 0x0023209C
+	// Token: 0x06007403 RID: 29699 RVA: 0x0023DCE0 File Offset: 0x0023BEE0
 	private void RefreshTitle()
 	{
 		NewTowerSeason? seasonConfig = WheelTowerConfig.Instance.GetSeasonConfig(this.SeasonId);
@@ -149,7 +148,7 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		base.SetTextureByPath(seasonConfig.Value.VersionIconMain, base.GetTexture(7), null, null);
 	}
 
-	// Token: 0x0600A026 RID: 40998 RVA: 0x00233F5F File Offset: 0x0023215F
+	// Token: 0x06007404 RID: 29700 RVA: 0x0023DDA3 File Offset: 0x0023BFA3
 	private void RefreshDesc()
 	{
 		UUIItem item = base.GetItem(11);
@@ -160,7 +159,7 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0600A027 RID: 40999 RVA: 0x00233F74 File Offset: 0x00232174
+	// Token: 0x06007405 RID: 29701 RVA: 0x0023DDB8 File Offset: 0x0023BFB8
 	private void RefreshRewardInfo()
 	{
 		WheelTowerSeasonRewardInfoPanel rewardInfoPanel = this.RewardInfoPanel;
@@ -171,13 +170,11 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		rewardInfoPanel.RefreshDataList(this.GetSeasonScoreDataList());
 	}
 
-	// Token: 0x0600A028 RID: 41000 RVA: 0x00233F8C File Offset: 0x0023218C
+	// Token: 0x06007406 RID: 29702 RVA: 0x0023DDD0 File Offset: 0x0023BFD0
 	private void RefreshTaskScroll()
 	{
 		WheelTowerData activityData = this.ActivityData;
-		List<ActivityTaskData> list = (from task in ((activityData != null) ? activityData.GetSeasonTaskList() : null) ?? new List<ActivityTaskData>()
-		orderby task.Status
-		select task).ThenBy(delegate(ActivityTaskData task)
+		List<ActivityTaskData> list = NoLinq.OrderByThenByToList<ActivityTaskData, EActivityTaskState, int>(((activityData != null) ? activityData.GetSeasonTaskList() : null) ?? new List<ActivityTaskData>(), (ActivityTaskData task) => task.Status, delegate(ActivityTaskData task)
 		{
 			NewTowerSeasonAward? seasonTaskRewardConfig2 = WheelTowerConfig.Instance.GetSeasonTaskRewardConfig(task.Id);
 			if (seasonTaskRewardConfig2 == null)
@@ -185,7 +182,7 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 				return task.Id;
 			}
 			return seasonTaskRewardConfig2.Value.Index;
-		}).ToList<ActivityTaskData>();
+		});
 		List<ActivityTaskData> list2 = new List<ActivityTaskData>();
 		List<ActivityTaskData> list3 = new List<ActivityTaskData>();
 		foreach (ActivityTaskData activityTaskData in list)
@@ -228,7 +225,7 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		this.TaskGridCount = list4.Count;
 	}
 
-	// Token: 0x0600A029 RID: 41001 RVA: 0x0023417C File Offset: 0x0023237C
+	// Token: 0x06007407 RID: 29703 RVA: 0x0023DFB8 File Offset: 0x0023C1B8
 	private void RefreshProgressItem()
 	{
 		int seasonScoreItemId = WheelTowerConfig.Instance.GetSeasonScoreItemId(this.SeasonId);
@@ -241,7 +238,7 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		scoreProgressItem.Refresh(itemCountByConfigId, this.GetSeasonScoreDataList());
 	}
 
-	// Token: 0x0600A02A RID: 41002 RVA: 0x002341BE File Offset: 0x002323BE
+	// Token: 0x06007408 RID: 29704 RVA: 0x0023DFFA File Offset: 0x0023C1FA
 	private void RefreshMedalEntry()
 	{
 		WheelTowerSeasonMedalEntryItem medalEntryItem = this.MedalEntryItem;
@@ -252,7 +249,7 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		medalEntryItem.Refresh(this.SeasonId);
 	}
 
-	// Token: 0x0600A02B RID: 41003 RVA: 0x002341D8 File Offset: 0x002323D8
+	// Token: 0x06007409 RID: 29705 RVA: 0x0023E014 File Offset: 0x0023C214
 	private void PlaySwitchTween()
 	{
 		UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -268,7 +265,7 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		uiViewSequence2.PlaySequence("Switch", false, null);
 	}
 
-	// Token: 0x0600A02C RID: 41004 RVA: 0x0023421C File Offset: 0x0023241C
+	// Token: 0x0600740A RID: 29706 RVA: 0x0023E058 File Offset: 0x0023C258
 	private void OnClickGetTaskReward()
 	{
 		WheelTowerController.Instance.RequestSeasonTaskReceive().ContinueWith(delegate()
@@ -278,7 +275,7 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x0600A02D RID: 41005 RVA: 0x0023423A File Offset: 0x0023243A
+	// Token: 0x0600740B RID: 29707 RVA: 0x0023E076 File Offset: 0x0023C276
 	private void OnClickGetProgressReward()
 	{
 		WheelTowerController.Instance.RequestSeasonScoreReceive().ContinueWith(delegate()
@@ -288,33 +285,33 @@ public class WheelTowerSeasonRewardView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x0600A02E RID: 41006 RVA: 0x00234258 File Offset: 0x00232458
+	// Token: 0x0600740C RID: 29708 RVA: 0x0023E094 File Offset: 0x0023C294
 	private void OnClickClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x040048F1 RID: 18673
+	// Token: 0x04004997 RID: 18839
 	private WheelTowerData ActivityData;
 
-	// Token: 0x040048F2 RID: 18674
+	// Token: 0x04004998 RID: 18840
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040048F3 RID: 18675
+	// Token: 0x04004999 RID: 18841
 	private WheelTowerSeasonRewardInfoPanel RewardInfoPanel;
 
-	// Token: 0x040048F4 RID: 18676
+	// Token: 0x0400499A RID: 18842
 	private MultiTemplateScrollView TaskLoopScroll;
 
-	// Token: 0x040048F5 RID: 18677
+	// Token: 0x0400499B RID: 18843
 	private WheelTowerSeasonScoreProgressItem ScoreProgressItem;
 
-	// Token: 0x040048F6 RID: 18678
+	// Token: 0x0400499C RID: 18844
 	private WheelTowerSeasonMedalEntryItem MedalEntryItem;
 
-	// Token: 0x040048F7 RID: 18679
+	// Token: 0x0400499D RID: 18845
 	private int SeasonId;
 
-	// Token: 0x040048F8 RID: 18680
+	// Token: 0x0400499E RID: 18846
 	private int TaskGridCount;
 }

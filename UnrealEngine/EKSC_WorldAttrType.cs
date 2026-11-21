@@ -4,32 +4,32 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001CEE RID: 7406
+	// Token: 0x02000558 RID: 1368
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.EKSC_WorldAttrType")]
 	public enum EKSC_WorldAttrType : byte
 	{
-		// Token: 0x0400F72D RID: 63277
+		// Token: 0x0400367F RID: 13951
 		EAttributeType_None,
-		// Token: 0x0400F72E RID: 63278
+		// Token: 0x04003680 RID: 13952
 		WorldKillZ,
-		// Token: 0x0400F72F RID: 63279
+		// Token: 0x04003681 RID: 13953
 		Gold,
-		// Token: 0x0400F730 RID: 63280
+		// Token: 0x04003682 RID: 13954
 		Wave,
-		// Token: 0x0400F731 RID: 63281
+		// Token: 0x04003683 RID: 13955
 		WorldSpeed,
-		// Token: 0x0400F732 RID: 63282
+		// Token: 0x04003684 RID: 13956
 		WorldSpeedChange,
-		// Token: 0x0400F733 RID: 63283
+		// Token: 0x04003685 RID: 13957
 		BattleStage,
-		// Token: 0x0400F734 RID: 63284
+		// Token: 0x04003686 RID: 13958
 		Combo,
-		// Token: 0x0400F735 RID: 63285
+		// Token: 0x04003687 RID: 13959
 		DotBuff,
-		// Token: 0x0400F736 RID: 63286
+		// Token: 0x04003688 RID: 13960
 		GoldGrowth,
-		// Token: 0x0400F737 RID: 63287
+		// Token: 0x04003689 RID: 13961
 		EKSC_MAX
 	}
 }

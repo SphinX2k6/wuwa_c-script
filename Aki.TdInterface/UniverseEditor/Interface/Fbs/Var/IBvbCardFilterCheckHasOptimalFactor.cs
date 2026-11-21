@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A30 RID: 14896
+	// Token: 0x02003E0B RID: 15883
 	public struct IBvbCardFilterCheckHasOptimalFactor : IFlatbufferObject
 	{
-		// Token: 0x17006613 RID: 26131
-		// (get) Token: 0x0601426B RID: 82539 RVA: 0x002F25FB File Offset: 0x002F07FB
+		// Token: 0x17006B43 RID: 27459
+		// (get) Token: 0x06015587 RID: 87431 RVA: 0x003157E7 File Offset: 0x003139E7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x0601426C RID: 82540 RVA: 0x002F2608 File Offset: 0x002F0808
+		// Token: 0x06015588 RID: 87432 RVA: 0x003157F4 File Offset: 0x003139F4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601426D RID: 82541 RVA: 0x002F2610 File Offset: 0x002F0810
+		// Token: 0x06015589 RID: 87433 RVA: 0x003157FC File Offset: 0x003139FC
 		public static IBvbCardFilterCheckHasOptimalFactor GetRootAsIBvbCardFilterCheckHasOptimalFactor(ByteBuffer _bb)
 		{
 			return IBvbCardFilterCheckHasOptimalFactor.GetRootAsIBvbCardFilterCheckHasOptimalFactor(_bb, default(IBvbCardFilterCheckHasOptimalFactor));
 		}
 
-		// Token: 0x0601426E RID: 82542 RVA: 0x002F262C File Offset: 0x002F082C
+		// Token: 0x0601558A RID: 87434 RVA: 0x00315818 File Offset: 0x00313A18
 		public static IBvbCardFilterCheckHasOptimalFactor GetRootAsIBvbCardFilterCheckHasOptimalFactor(ByteBuffer _bb, IBvbCardFilterCheckHasOptimalFactor obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601426F RID: 82543 RVA: 0x002F2649 File Offset: 0x002F0849
+		// Token: 0x0601558B RID: 87435 RVA: 0x00315835 File Offset: 0x00313A35
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014270 RID: 82544 RVA: 0x002F2658 File Offset: 0x002F0858
+		// Token: 0x0601558C RID: 87436 RVA: 0x00315844 File Offset: 0x00313A44
 		public IBvbCardFilterCheckHasOptimalFactor __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006614 RID: 26132
-		// (get) Token: 0x06014271 RID: 82545 RVA: 0x002F2668 File Offset: 0x002F0868
+		// Token: 0x17006B44 RID: 27460
+		// (get) Token: 0x0601558D RID: 87437 RVA: 0x00315854 File Offset: 0x00313A54
 		public EBvbCardFilterType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x17006615 RID: 26133
-		// (get) Token: 0x06014272 RID: 82546 RVA: 0x002F26A4 File Offset: 0x002F08A4
+		// Token: 0x17006B45 RID: 27461
+		// (get) Token: 0x0601558E RID: 87438 RVA: 0x00315890 File Offset: 0x00313A90
 		public TVarRef HandCardType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014273 RID: 82547 RVA: 0x002F26E0 File Offset: 0x002F08E0
+		// Token: 0x0601558F RID: 87439 RVA: 0x003158CC File Offset: 0x00313ACC
 		public TTable? HandCard<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,37 +88,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06014274 RID: 82548 RVA: 0x002F2724 File Offset: 0x002F0924
+		// Token: 0x06015590 RID: 87440 RVA: 0x00315910 File Offset: 0x00313B10
 		public IConstVarRef HandCardAsIConstVarRef()
 		{
 			return this.HandCard<IConstVarRef>().Value;
 		}
 
-		// Token: 0x06014275 RID: 82549 RVA: 0x002F2740 File Offset: 0x002F0940
+		// Token: 0x06015591 RID: 87441 RVA: 0x0031592C File Offset: 0x00313B2C
 		public IGlobalVarRef HandCardAsIGlobalVarRef()
 		{
 			return this.HandCard<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x06014276 RID: 82550 RVA: 0x002F275C File Offset: 0x002F095C
+		// Token: 0x06015592 RID: 87442 RVA: 0x00315948 File Offset: 0x00313B48
 		public IOtherVarRef HandCardAsIOtherVarRef()
 		{
 			return this.HandCard<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06014277 RID: 82551 RVA: 0x002F2778 File Offset: 0x002F0978
+		// Token: 0x06015593 RID: 87443 RVA: 0x00315964 File Offset: 0x00313B64
 		public ISelfVarRef HandCardAsISelfVarRef()
 		{
 			return this.HandCard<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x06014278 RID: 82552 RVA: 0x002F2794 File Offset: 0x002F0994
+		// Token: 0x06015594 RID: 87444 RVA: 0x00315980 File Offset: 0x00313B80
 		public ISystemVarRef HandCardAsISystemVarRef()
 		{
 			return this.HandCard<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x06014279 RID: 82553 RVA: 0x002F27AF File Offset: 0x002F09AF
+		// Token: 0x06015595 RID: 87445 RVA: 0x0031599B File Offset: 0x00313B9B
 		public static Offset<IBvbCardFilterCheckHasOptimalFactor> CreateIBvbCardFilterCheckHasOptimalFactor(FlatBufferBuilder builder, EBvbCardFilterType Type = EBvbCardFilterType.CompareCost, TVarRef HandCard_type = TVarRef.NONE, int HandCardOffset = 0)
 		{
 			builder.StartTable(3);
@@ -128,37 +128,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbCardFilterCheckHasOptimalFactor.EndIBvbCardFilterCheckHasOptimalFactor(builder);
 		}
 
-		// Token: 0x0601427A RID: 82554 RVA: 0x002F27D3 File Offset: 0x002F09D3
+		// Token: 0x06015596 RID: 87446 RVA: 0x003159BF File Offset: 0x00313BBF
 		public static void StartIBvbCardFilterCheckHasOptimalFactor(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601427B RID: 82555 RVA: 0x002F27DC File Offset: 0x002F09DC
+		// Token: 0x06015597 RID: 87447 RVA: 0x003159C8 File Offset: 0x00313BC8
 		public static void AddType(FlatBufferBuilder builder, EBvbCardFilterType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601427C RID: 82556 RVA: 0x002F27E7 File Offset: 0x002F09E7
+		// Token: 0x06015598 RID: 87448 RVA: 0x003159D3 File Offset: 0x00313BD3
 		public static void AddHandCardType(FlatBufferBuilder builder, TVarRef handCardType)
 		{
 			builder.AddByte(1, (byte)handCardType, 0);
 		}
 
-		// Token: 0x0601427D RID: 82557 RVA: 0x002F27F2 File Offset: 0x002F09F2
+		// Token: 0x06015599 RID: 87449 RVA: 0x003159DE File Offset: 0x00313BDE
 		public static void AddHandCard(FlatBufferBuilder builder, int handCardOffset)
 		{
 			builder.AddOffset(2, handCardOffset, 0);
 		}
 
-		// Token: 0x0601427E RID: 82558 RVA: 0x002F27FD File Offset: 0x002F09FD
+		// Token: 0x0601559A RID: 87450 RVA: 0x003159E9 File Offset: 0x00313BE9
 		public static Offset<IBvbCardFilterCheckHasOptimalFactor> EndIBvbCardFilterCheckHasOptimalFactor(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbCardFilterCheckHasOptimalFactor>(builder.EndTable());
 		}
 
-		// Token: 0x0601427F RID: 82559 RVA: 0x002F280C File Offset: 0x002F0A0C
+		// Token: 0x0601559B RID: 87451 RVA: 0x003159F8 File Offset: 0x00313BF8
 		public IBvbCardFilterCheckHasOptimalFactorT UnPack()
 		{
 			IBvbCardFilterCheckHasOptimalFactorT bvbCardFilterCheckHasOptimalFactorT = new IBvbCardFilterCheckHasOptimalFactorT();
@@ -166,7 +166,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return bvbCardFilterCheckHasOptimalFactorT;
 		}
 
-		// Token: 0x06014280 RID: 82560 RVA: 0x002F2828 File Offset: 0x002F0A28
+		// Token: 0x0601559C RID: 87452 RVA: 0x00315A14 File Offset: 0x00313C14
 		public void UnPackTo(IBvbCardFilterCheckHasOptimalFactorT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014281 RID: 82561 RVA: 0x002F2994 File Offset: 0x002F0B94
+		// Token: 0x0601559D RID: 87453 RVA: 0x00315B80 File Offset: 0x00313D80
 		public static Offset<IBvbCardFilterCheckHasOptimalFactor> Pack(FlatBufferBuilder builder, IBvbCardFilterCheckHasOptimalFactorT _o)
 		{
 			if (_o == null)
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbCardFilterCheckHasOptimalFactor.CreateIBvbCardFilterCheckHasOptimalFactor(builder, _o.Type, handCard_type, handCardOffset);
 		}
 
-		// Token: 0x0400AEAF RID: 44719
+		// Token: 0x0400B7D1 RID: 47057
 		private Table __p;
 	}
 }

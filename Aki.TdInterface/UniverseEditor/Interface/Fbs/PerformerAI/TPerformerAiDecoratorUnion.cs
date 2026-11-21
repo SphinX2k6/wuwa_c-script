@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x02004382 RID: 17282
+	// Token: 0x020047E4 RID: 18404
 	public class TPerformerAiDecoratorUnion
 	{
-		// Token: 0x17007A2F RID: 31279
-		// (get) Token: 0x06019B4F RID: 105295 RVA: 0x003AEA28 File Offset: 0x003ACC28
-		// (set) Token: 0x06019B50 RID: 105296 RVA: 0x003AEA30 File Offset: 0x003ACC30
+		// Token: 0x17008064 RID: 32868
+		// (get) Token: 0x0601B2DD RID: 111325 RVA: 0x003DA450 File Offset: 0x003D8650
+		// (set) Token: 0x0601B2DE RID: 111326 RVA: 0x003DA458 File Offset: 0x003D8658
 		public TPerformerAiDecorator Type { get; set; }
 
-		// Token: 0x17007A30 RID: 31280
-		// (get) Token: 0x06019B51 RID: 105297 RVA: 0x003AEA39 File Offset: 0x003ACC39
-		// (set) Token: 0x06019B52 RID: 105298 RVA: 0x003AEA41 File Offset: 0x003ACC41
+		// Token: 0x17008065 RID: 32869
+		// (get) Token: 0x0601B2DF RID: 111327 RVA: 0x003DA461 File Offset: 0x003D8661
+		// (set) Token: 0x0601B2E0 RID: 111328 RVA: 0x003DA469 File Offset: 0x003D8669
 		public object Value { get; set; }
 
-		// Token: 0x06019B53 RID: 105299 RVA: 0x003AEA4A File Offset: 0x003ACC4A
+		// Token: 0x0601B2E1 RID: 111329 RVA: 0x003DA472 File Offset: 0x003D8672
 		public TPerformerAiDecoratorUnion()
 		{
 			this.Type = TPerformerAiDecorator.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06019B54 RID: 105300 RVA: 0x003AEA60 File Offset: 0x003ACC60
+		// Token: 0x0601B2E2 RID: 111330 RVA: 0x003DA488 File Offset: 0x003D8688
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06019B55 RID: 105301 RVA: 0x003AEA72 File Offset: 0x003ACC72
+		// Token: 0x0601B2E3 RID: 111331 RVA: 0x003DA49A File Offset: 0x003D869A
 		public IPerformerAiAlwaysFalseDecoratorT AsIPerformerAiAlwaysFalseDecorator()
 		{
 			return this.As<IPerformerAiAlwaysFalseDecoratorT>();
 		}
 
-		// Token: 0x06019B56 RID: 105302 RVA: 0x003AEA7A File Offset: 0x003ACC7A
+		// Token: 0x0601B2E4 RID: 111332 RVA: 0x003DA4A2 File Offset: 0x003D86A2
 		public static TPerformerAiDecoratorUnion FromIPerformerAiAlwaysFalseDecorator(IPerformerAiAlwaysFalseDecoratorT _iperformeraialwaysfalsedecorator)
 		{
 			return new TPerformerAiDecoratorUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			};
 		}
 
-		// Token: 0x06019B57 RID: 105303 RVA: 0x003AEA8F File Offset: 0x003ACC8F
+		// Token: 0x0601B2E5 RID: 111333 RVA: 0x003DA4B7 File Offset: 0x003D86B7
 		public IPerformerAiAlwaysTrueDecoratorT AsIPerformerAiAlwaysTrueDecorator()
 		{
 			return this.As<IPerformerAiAlwaysTrueDecoratorT>();
 		}
 
-		// Token: 0x06019B58 RID: 105304 RVA: 0x003AEA97 File Offset: 0x003ACC97
+		// Token: 0x0601B2E6 RID: 111334 RVA: 0x003DA4BF File Offset: 0x003D86BF
 		public static TPerformerAiDecoratorUnion FromIPerformerAiAlwaysTrueDecorator(IPerformerAiAlwaysTrueDecoratorT _iperformeraialwaystruedecorator)
 		{
 			return new TPerformerAiDecoratorUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			};
 		}
 
-		// Token: 0x06019B59 RID: 105305 RVA: 0x003AEAAC File Offset: 0x003ACCAC
+		// Token: 0x0601B2E7 RID: 111335 RVA: 0x003DA4D4 File Offset: 0x003D86D4
 		public IPerformerAiConditionDecoratorT AsIPerformerAiConditionDecorator()
 		{
 			return this.As<IPerformerAiConditionDecoratorT>();
 		}
 
-		// Token: 0x06019B5A RID: 105306 RVA: 0x003AEAB4 File Offset: 0x003ACCB4
+		// Token: 0x0601B2E8 RID: 111336 RVA: 0x003DA4DC File Offset: 0x003D86DC
 		public static TPerformerAiDecoratorUnion FromIPerformerAiConditionDecorator(IPerformerAiConditionDecoratorT _iperformeraiconditiondecorator)
 		{
 			return new TPerformerAiDecoratorUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			};
 		}
 
-		// Token: 0x06019B5B RID: 105307 RVA: 0x003AEAC9 File Offset: 0x003ACCC9
+		// Token: 0x0601B2E9 RID: 111337 RVA: 0x003DA4F1 File Offset: 0x003D86F1
 		public IPerformerAiCoolDownDecoratorT AsIPerformerAiCoolDownDecorator()
 		{
 			return this.As<IPerformerAiCoolDownDecoratorT>();
 		}
 
-		// Token: 0x06019B5C RID: 105308 RVA: 0x003AEAD1 File Offset: 0x003ACCD1
+		// Token: 0x0601B2EA RID: 111338 RVA: 0x003DA4F9 File Offset: 0x003D86F9
 		public static TPerformerAiDecoratorUnion FromIPerformerAiCoolDownDecorator(IPerformerAiCoolDownDecoratorT _iperformeraicooldowndecorator)
 		{
 			return new TPerformerAiDecoratorUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			};
 		}
 
-		// Token: 0x06019B5D RID: 105309 RVA: 0x003AEAE6 File Offset: 0x003ACCE6
+		// Token: 0x0601B2EB RID: 111339 RVA: 0x003DA50E File Offset: 0x003D870E
 		public IPerformerAiDoOnceDecoratorT AsIPerformerAiDoOnceDecorator()
 		{
 			return this.As<IPerformerAiDoOnceDecoratorT>();
 		}
 
-		// Token: 0x06019B5E RID: 105310 RVA: 0x003AEAEE File Offset: 0x003ACCEE
+		// Token: 0x0601B2EC RID: 111340 RVA: 0x003DA516 File Offset: 0x003D8716
 		public static TPerformerAiDecoratorUnion FromIPerformerAiDoOnceDecorator(IPerformerAiDoOnceDecoratorT _iperformeraidooncedecorator)
 		{
 			return new TPerformerAiDecoratorUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			};
 		}
 
-		// Token: 0x06019B5F RID: 105311 RVA: 0x003AEB04 File Offset: 0x003ACD04
+		// Token: 0x0601B2ED RID: 111341 RVA: 0x003DA52C File Offset: 0x003D872C
 		public static int Pack(FlatBufferBuilder builder, TPerformerAiDecoratorUnion _o)
 		{
 			switch (_o.Type)

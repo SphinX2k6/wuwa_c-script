@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DD7 RID: 19927
+	// Token: 0x020052DC RID: 21212
 	public enum EMoveCircleMode : byte
 	{
-		// Token: 0x0400DA55 RID: 55893
+		// Token: 0x0400E5A8 RID: 58792
 		CloseLoop,
-		// Token: 0x0400DA56 RID: 55894
+		// Token: 0x0400E5A9 RID: 58793
 		ReturnLoop
 	}
 }

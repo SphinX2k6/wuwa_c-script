@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004D4 RID: 1236
+	// Token: 0x020004EA RID: 1258
 	public class ConfigLifePointChallengeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001D03 RID: 7427 RVA: 0x000FD1E0 File Offset: 0x000FB3E0
+		// Token: 0x06001D87 RID: 7559 RVA: 0x00103934 File Offset: 0x00101B34
 		static ConfigLifePointChallengeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLifePointChallengeById.CreateStaticDefaultValue), new Action(ConfigLifePointChallengeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001D04 RID: 7428 RVA: 0x000FD200 File Offset: 0x000FB400
+		// Token: 0x06001D88 RID: 7560 RVA: 0x00103954 File Offset: 0x00101B54
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLifePointChallengeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001D05 RID: 7429 RVA: 0x000FD27F File Offset: 0x000FB47F
+		// Token: 0x06001D89 RID: 7561 RVA: 0x001039D3 File Offset: 0x00101BD3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLifePointChallengeById.LogPair = null;
 			ConfigLifePointChallengeById.HandleId = 0;
 		}
 
-		// Token: 0x06001D06 RID: 7430 RVA: 0x000FD28D File Offset: 0x000FB48D
+		// Token: 0x06001D8A RID: 7562 RVA: 0x001039E1 File Offset: 0x00101BE1
 		public static void Init()
 		{
 			ConfigLifePointChallengeById.HandleId = ConfigCommon.InitDataStatement(ConfigLifePointChallengeById.HandleId, "db_lifepoint.db", "select BinData from `LifePointChallenge` where Id=?");
 		}
 
-		// Token: 0x06001D07 RID: 7431 RVA: 0x000FD2A8 File Offset: 0x000FB4A8
+		// Token: 0x06001D8B RID: 7563 RVA: 0x001039FC File Offset: 0x00101BFC
 		public static LifePointChallenge? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLifePointChallengeById.HandleId, ConfigLifePointChallengeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new LifePointChallenge?(rootAsLifePointChallenge);
 		}
 
-		// Token: 0x040021B0 RID: 8624
+		// Token: 0x0400224A RID: 8778
 		private const string DB = "db_lifepoint.db";
 
-		// Token: 0x040021B1 RID: 8625
+		// Token: 0x0400224B RID: 8779
 		private const string FILE = "y.溢彩画.xlsx";
 
-		// Token: 0x040021B2 RID: 8626
+		// Token: 0x0400224C RID: 8780
 		private const string TABLE = "LifePointChallenge";
 
-		// Token: 0x040021B3 RID: 8627
+		// Token: 0x0400224D RID: 8781
 		private const string COMMAND = "select BinData from `LifePointChallenge` where Id=?";
 
-		// Token: 0x040021B4 RID: 8628
+		// Token: 0x0400224E RID: 8782
 		private const string KEY_PREFIX = "LifePointChallengeById";
 
-		// Token: 0x040021B5 RID: 8629
+		// Token: 0x0400224F RID: 8783
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040021B6 RID: 8630
+		// Token: 0x04002250 RID: 8784
 		private static int HandleId;
 	}
 }

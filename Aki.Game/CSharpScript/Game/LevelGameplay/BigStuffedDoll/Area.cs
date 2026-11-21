@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 {
-	// Token: 0x02006F4E RID: 28494
+	// Token: 0x020060CF RID: 24783
 	public class Area
 	{
-		// Token: 0x06045517 RID: 283927 RVA: 0x0112643C File Offset: 0x0112463C
+		// Token: 0x0603B6C5 RID: 243397 RVA: 0x010D03E8 File Offset: 0x010CE5E8
 		public Area(int StartCellIndex, int EndCellIndex, EArrowDirection ArrowDirection)
 		{
 			this.StartCellIndex = StartCellIndex;
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			this.ArrowDirection = ArrowDirection;
 		}
 
-		// Token: 0x06045518 RID: 283928 RVA: 0x0112645C File Offset: 0x0112465C
+		// Token: 0x0603B6C6 RID: 243398 RVA: 0x010D0408 File Offset: 0x010CE608
 		public void OnArrowDirectionReverse()
 		{
 			EArrowDirection arrowDirection = this.ArrowDirection;
@@ -29,13 +29,13 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			this.ArrowDirection = EArrowDirection.Clockwise;
 		}
 
-		// Token: 0x0402426C RID: 148076
+		// Token: 0x0401F521 RID: 128289
 		public int StartCellIndex;
 
-		// Token: 0x0402426D RID: 148077
+		// Token: 0x0401F522 RID: 128290
 		public int EndCellIndex;
 
-		// Token: 0x0402426E RID: 148078
+		// Token: 0x0401F523 RID: 128291
 		public EArrowDirection ArrowDirection;
 	}
 }

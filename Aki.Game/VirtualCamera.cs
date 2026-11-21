@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 
-// Token: 0x02000226 RID: 550
-[GeneratePropertyAccessMethod(true)]
+// Token: 0x0200022A RID: 554
+[GeneratePropertyAccessMethod(true, true, null)]
 public class VirtualCamera : IClear
 {
-	// Token: 0x06002180 RID: 8576 RVA: 0x000C1B2B File Offset: 0x000BFD2B
+	// Token: 0x0600222E RID: 8750 RVA: 0x000C8E4B File Offset: 0x000C704B
 	public bool ClearObject()
 	{
 		return true;
 	}
 
-	// Token: 0x06002181 RID: 8577 RVA: 0x000C1B30 File Offset: 0x000BFD30
+	// Token: 0x0600222F RID: 8751 RVA: 0x000C8E50 File Offset: 0x000C7050
 	public virtual bool TryGetMember(string key, out object value)
 	{
 		if (key != null)
@@ -297,7 +297,7 @@ public class VirtualCamera : IClear
 		return false;
 	}
 
-	// Token: 0x06002182 RID: 8578 RVA: 0x000C20C0 File Offset: 0x000C02C0
+	// Token: 0x06002230 RID: 8752 RVA: 0x000C93E0 File Offset: 0x000C75E0
 	public virtual void SetMember(string key, object value)
 	{
 		if (key != null)
@@ -1205,7 +1205,7 @@ public class VirtualCamera : IClear
 		throw new KeyNotFoundException("设置VirtualCamera成员属性失败" + key + ")");
 	}
 
-	// Token: 0x06002183 RID: 8579 RVA: 0x000C305B File Offset: 0x000C125B
+	// Token: 0x06002231 RID: 8753 RVA: 0x000CA37B File Offset: 0x000C857B
 	public virtual IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
 		VirtualCamera.<MemberIter>d__33 <MemberIter>d__ = new VirtualCamera.<MemberIter>d__33(-2);
@@ -1213,97 +1213,97 @@ public class VirtualCamera : IClear
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x04001632 RID: 5682
+	// Token: 0x04001674 RID: 5748
 	[Nullable(1)]
 	public Vector ArmOffset = Vector.Create();
 
-	// Token: 0x04001633 RID: 5683
+	// Token: 0x04001675 RID: 5749
 	public float ArmLength;
 
-	// Token: 0x04001634 RID: 5684
+	// Token: 0x04001676 RID: 5750
 	public float MinArmLength;
 
-	// Token: 0x04001635 RID: 5685
+	// Token: 0x04001677 RID: 5751
 	public float MaxArmLength;
 
-	// Token: 0x04001636 RID: 5686
+	// Token: 0x04001678 RID: 5752
 	public float YawLimitMin;
 
-	// Token: 0x04001637 RID: 5687
+	// Token: 0x04001679 RID: 5753
 	public float YawLimitMax;
 
-	// Token: 0x04001638 RID: 5688
+	// Token: 0x0400167A RID: 5754
 	public float PitchLimitMin;
 
-	// Token: 0x04001639 RID: 5689
+	// Token: 0x0400167B RID: 5755
 	public float PitchLimitMax;
 
-	// Token: 0x0400163A RID: 5690
+	// Token: 0x0400167C RID: 5756
 	public float LookDownOffsetZ;
 
-	// Token: 0x0400163B RID: 5691
+	// Token: 0x0400167D RID: 5757
 	public float LookUpOffsetZ;
 
-	// Token: 0x0400163C RID: 5692
+	// Token: 0x0400167E RID: 5758
 	[Nullable(1)]
 	public Vector CameraOffset = Vector.Create();
 
-	// Token: 0x0400163D RID: 5693
+	// Token: 0x0400167F RID: 5759
 	public float Fov;
 
-	// Token: 0x0400163E RID: 5694
+	// Token: 0x04001680 RID: 5760
 	public bool EnableDynamicFov;
 
-	// Token: 0x0400163F RID: 5695
+	// Token: 0x04001681 RID: 5761
 	public float DynamicFov;
 
-	// Token: 0x04001640 RID: 5696
+	// Token: 0x04001682 RID: 5762
 	public float DynamicFovMin;
 
-	// Token: 0x04001641 RID: 5697
+	// Token: 0x04001683 RID: 5763
 	public float DynamicFovMax;
 
-	// Token: 0x04001642 RID: 5698
+	// Token: 0x04001684 RID: 5764
 	public float DynamicFovParamMin;
 
-	// Token: 0x04001643 RID: 5699
+	// Token: 0x04001685 RID: 5765
 	public float DynamicFovParamMax;
 
-	// Token: 0x04001644 RID: 5700
+	// Token: 0x04001686 RID: 5766
 	public float DynamicFovLerpSpeed;
 
-	// Token: 0x04001645 RID: 5701
+	// Token: 0x04001687 RID: 5767
 	[Nullable(1)]
 	public Vector ArmLocation = Vector.Create();
 
-	// Token: 0x04001646 RID: 5702
+	// Token: 0x04001688 RID: 5768
 	[Nullable(1)]
 	public Rotator ArmRotation = Rotator.Create();
 
-	// Token: 0x04001647 RID: 5703
+	// Token: 0x04001689 RID: 5769
 	public float ZoomModifier = 1f;
 
-	// Token: 0x04001648 RID: 5704
+	// Token: 0x0400168A RID: 5770
 	public float WorldYawMin;
 
-	// Token: 0x04001649 RID: 5705
+	// Token: 0x0400168B RID: 5771
 	public float WorldYawMax;
 
-	// Token: 0x0400164A RID: 5706
+	// Token: 0x0400168C RID: 5772
 	public float WorldRollMin;
 
-	// Token: 0x0400164B RID: 5707
+	// Token: 0x0400168D RID: 5773
 	public float WorldRollMax;
 
-	// Token: 0x0400164C RID: 5708
+	// Token: 0x0400168E RID: 5774
 	public float CameraOffsetFloatUpMin;
 
-	// Token: 0x0400164D RID: 5709
+	// Token: 0x0400168F RID: 5775
 	public float CameraOffsetFloatUpMax;
 
-	// Token: 0x0400164E RID: 5710
+	// Token: 0x04001690 RID: 5776
 	public float CharAddArmLength;
 
-	// Token: 0x0400164F RID: 5711
+	// Token: 0x04001691 RID: 5777
 	public float CharAddZ;
 }

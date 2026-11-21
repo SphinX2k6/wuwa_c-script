@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004677 RID: 18039
+	// Token: 0x020035A8 RID: 13736
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputDistributeDelay
 	{
-		// Token: 0x0602E8F1 RID: 190705 RVA: 0x00AC72D2 File Offset: 0x00AC54D2
+		// Token: 0x0602303B RID: 143419 RVA: 0x009F4E32 File Offset: 0x009F3032
 		public InputDistributeDelay()
 		{
 			this.InputPressTimeStampQueue = new Queue<double>(4);
 			this.InputReleaseTimeStampQueue = new Queue<double>(4);
 		}
 
-		// Token: 0x0602E8F2 RID: 190706 RVA: 0x00AC72F2 File Offset: 0x00AC54F2
+		// Token: 0x0602303C RID: 143420 RVA: 0x009F4E52 File Offset: 0x009F3052
 		public void StartDelay(float delayTime, bool bPress)
 		{
 			if (bPress)
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Ui
 			this.InputReleaseTimeStampQueue.Push(Time.Instance.Now + (double)delayTime);
 		}
 
-		// Token: 0x0602E8F3 RID: 190707 RVA: 0x00AC7328 File Offset: 0x00AC5528
+		// Token: 0x0602303D RID: 143421 RVA: 0x009F4E88 File Offset: 0x009F3088
 		public bool IsInputActive(bool bPress)
 		{
 			Queue<double> queue;
@@ -51,23 +51,23 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602E8F4 RID: 190708 RVA: 0x00AC737A File Offset: 0x00AC557A
+		// Token: 0x0602303E RID: 143422 RVA: 0x009F4EDA File Offset: 0x009F30DA
 		public bool CheckCondition(string actionName, bool bPress)
 		{
 			return actionName == "通用交互" && !UiManager.Instance.IsViewCreating(EUiViewName.InteractionHintView) && !UiManager.Instance.IsViewDestroying(EUiViewName.InteractionHintView);
 		}
 
-		// Token: 0x0401951F RID: 103711
+		// Token: 0x04013BC6 RID: 80838
 		[StaticVariableRuleIgnore]
 		public static readonly string[] delayInput = new string[]
 		{
 			"通用交互"
 		};
 
-		// Token: 0x04019520 RID: 103712
+		// Token: 0x04013BC7 RID: 80839
 		private readonly Queue<double> InputPressTimeStampQueue;
 
-		// Token: 0x04019521 RID: 103713
+		// Token: 0x04013BC8 RID: 80840
 		private readonly Queue<double> InputReleaseTimeStampQueue;
 	}
 }

@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000EAC RID: 3756
+// Token: 0x02000361 RID: 865
 public class PinballBattlePlayerHpHandle
 {
-	// Token: 0x06005CC0 RID: 23744 RVA: 0x00111416 File Offset: 0x0010F616
+	// Token: 0x06003057 RID: 12375 RVA: 0x001190B2 File Offset: 0x001172B2
 	public void Init()
 	{
 		this.IsInit = true;
 	}
 
-	// Token: 0x06005CC1 RID: 23745 RVA: 0x0011141F File Offset: 0x0010F61F
+	// Token: 0x06003058 RID: 12376 RVA: 0x001190BB File Offset: 0x001172BB
 	[NullableContext(1)]
 	public void OnPlayerHpChange(KscHeadStateData kscPlayerHeadStateData)
 	{
 		bool isInit = this.IsInit;
 	}
 
-	// Token: 0x06005CC2 RID: 23746 RVA: 0x00111428 File Offset: 0x0010F628
+	// Token: 0x06003059 RID: 12377 RVA: 0x001190C4 File Offset: 0x001172C4
 	public void Clear()
 	{
 		this.IsInit = false;
 	}
 
-	// Token: 0x04002A53 RID: 10835
+	// Token: 0x04002AEE RID: 10990
 	private bool IsInit;
 }

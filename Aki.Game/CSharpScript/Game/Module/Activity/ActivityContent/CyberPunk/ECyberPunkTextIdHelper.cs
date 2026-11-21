@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068BA RID: 26810
+	// Token: 0x0200580A RID: 22538
 	public static class ECyberPunkTextIdHelper
 	{
-		// Token: 0x06042E57 RID: 274007 RVA: 0x010492E0 File Offset: 0x010474E0
+		// Token: 0x060379AF RID: 227759 RVA: 0x00F8A908 File Offset: 0x00F88B08
 		[NullableContext(1)]
 		public static string ToTextId(ECyberPunkTextId textId)
 		{

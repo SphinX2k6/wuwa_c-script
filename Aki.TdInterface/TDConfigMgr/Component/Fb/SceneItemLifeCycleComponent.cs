@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BE9 RID: 3049
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CB8 RID: 3256
 	public class SceneItemLifeCycleComponent : IComponentBase
 	{
-		// Token: 0x06004601 RID: 17921 RVA: 0x000B0FC2 File Offset: 0x000AF1C2
+		// Token: 0x06004A5F RID: 19039 RVA: 0x000BB13E File Offset: 0x000B933E
 		public static SceneItemLifeCycleComponent Create(ISceneItemLifeCycleComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013EC RID: 5100
-		// (get) Token: 0x06004602 RID: 17922 RVA: 0x000B0FE4 File Offset: 0x000AF1E4
+		// Token: 0x170014EA RID: 5354
+		// (get) Token: 0x06004A60 RID: 19040 RVA: 0x000BB160 File Offset: 0x000B9360
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013ED RID: 5101
-		// (get) Token: 0x06004603 RID: 17923 RVA: 0x000B101C File Offset: 0x000AF21C
+		// Token: 0x170014EB RID: 5355
+		// (get) Token: 0x06004A61 RID: 19041 RVA: 0x000BB198 File Offset: 0x000B9398
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013EE RID: 5102
-		// (get) Token: 0x06004604 RID: 17924 RVA: 0x000B1032 File Offset: 0x000AF232
+		// Token: 0x170014EC RID: 5356
+		// (get) Token: 0x06004A62 RID: 19042 RVA: 0x000BB1AE File Offset: 0x000B93AE
 		public virtual ICreateStageConfig CreateStageConfig
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013EF RID: 5103
-		// (get) Token: 0x06004605 RID: 17925 RVA: 0x000B1066 File Offset: 0x000AF266
+		// Token: 0x170014ED RID: 5357
+		// (get) Token: 0x06004A63 RID: 19043 RVA: 0x000BB1E2 File Offset: 0x000B93E2
 		public virtual IDestroyStageConfig DestroyStageConfig
 		{
 			get
@@ -78,21 +76,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027DA RID: 10202
+		// Token: 0x04002A25 RID: 10789
 		private ISceneItemLifeCycleComponent Instance;
 
-		// Token: 0x040027DB RID: 10203
+		// Token: 0x04002A26 RID: 10790
 		[Nullable(2)]
 		private ICreateStageConfig _CreateStageConfigCache;
 
-		// Token: 0x040027DC RID: 10204
+		// Token: 0x04002A27 RID: 10791
 		private bool _CreateStageConfigInited;
 
-		// Token: 0x040027DD RID: 10205
+		// Token: 0x04002A28 RID: 10792
 		[Nullable(2)]
 		private IDestroyStageConfig _DestroyStageConfigCache;
 
-		// Token: 0x040027DE RID: 10206
+		// Token: 0x04002A29 RID: 10793
 		private bool _DestroyStageConfigInited;
 	}
 }

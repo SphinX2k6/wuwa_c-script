@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013F0 RID: 5104
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001547 RID: 5447
 	public class IFinishKurotatoCondition : IQuestCondition
 	{
-		// Token: 0x06007438 RID: 29752 RVA: 0x00116368 File Offset: 0x00114568
+		// Token: 0x06007AF9 RID: 31481 RVA: 0x00124D4C File Offset: 0x00122F4C
 		public static IFinishKurotatoCondition Create(IFinishKurotatoCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700262B RID: 9771
-		// (get) Token: 0x06007439 RID: 29753 RVA: 0x00116387 File Offset: 0x00114587
+		// Token: 0x1700280D RID: 10253
+		// (get) Token: 0x06007AFA RID: 31482 RVA: 0x00124D6B File Offset: 0x00122F6B
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700262C RID: 9772
-		// (get) Token: 0x0600743A RID: 29754 RVA: 0x00116394 File Offset: 0x00114594
+		// Token: 0x1700280E RID: 10254
+		// (get) Token: 0x06007AFB RID: 31483 RVA: 0x00124D78 File Offset: 0x00122F78
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700262D RID: 9773
-		// (get) Token: 0x0600743B RID: 29755 RVA: 0x001163C8 File Offset: 0x001145C8
+		// Token: 0x1700280F RID: 10255
+		// (get) Token: 0x06007AFC RID: 31484 RVA: 0x00124DAC File Offset: 0x00122FAC
 		public virtual IKurotatoConditionStepBase Step
 		{
 			get
@@ -68,8 +66,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700262E RID: 9774
-		// (get) Token: 0x0600743C RID: 29756 RVA: 0x001163F7 File Offset: 0x001145F7
+		// Token: 0x17002810 RID: 10256
+		// (get) Token: 0x06007AFD RID: 31485 RVA: 0x00124DDB File Offset: 0x00122FDB
 		public virtual VarRef Batch
 		{
 			get
@@ -84,26 +82,26 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400433E RID: 17214
+		// Token: 0x040046CF RID: 18127
 		private IFinishKurotatoCondition Instance;
 
-		// Token: 0x0400433F RID: 17215
+		// Token: 0x040046D0 RID: 18128
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004340 RID: 17216
+		// Token: 0x040046D1 RID: 18129
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004341 RID: 17217
+		// Token: 0x040046D2 RID: 18130
 		private IKurotatoConditionStepBase _StepCache;
 
-		// Token: 0x04004342 RID: 17218
+		// Token: 0x040046D3 RID: 18131
 		private bool _StepInited;
 
-		// Token: 0x04004343 RID: 17219
+		// Token: 0x040046D4 RID: 18132
 		private VarRef _BatchCache;
 
-		// Token: 0x04004344 RID: 17220
+		// Token: 0x040046D5 RID: 18133
 		private bool _BatchInited;
 	}
 }

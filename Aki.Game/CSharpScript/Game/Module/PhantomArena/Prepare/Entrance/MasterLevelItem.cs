@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x0200517A RID: 20858
+	// Token: 0x0200414A RID: 16714
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -15,27 +15,27 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 	})]
 	public class MasterLevelItem : AutoAttachItem<MasterLevelData>, IStaticVariableResetter
 	{
-		// Token: 0x06035564 RID: 218468 RVA: 0x00CA2698 File Offset: 0x00CA0898
+		// Token: 0x0602A45F RID: 173151 RVA: 0x00BEFC50 File Offset: 0x00BEDE50
 		static MasterLevelItem()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MasterLevelItem.CreateStaticDefaultValue), new Action(MasterLevelItem.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06035565 RID: 218469 RVA: 0x00CA26B7 File Offset: 0x00CA08B7
+		// Token: 0x0602A460 RID: 173152 RVA: 0x00BEFC6F File Offset: 0x00BEDE6F
 		public static void CreateStaticDefaultValue()
 		{
 			MasterLevelItem.ScaleCurve = null;
 			MasterLevelItem.AlphaCurve = null;
 		}
 
-		// Token: 0x06035566 RID: 218470 RVA: 0x00CA26C5 File Offset: 0x00CA08C5
+		// Token: 0x0602A461 RID: 173153 RVA: 0x00BEFC7D File Offset: 0x00BEDE7D
 		public static void ResetStaticDefaultValue()
 		{
 			MasterLevelItem.ScaleCurve = null;
 			MasterLevelItem.AlphaCurve = null;
 		}
 
-		// Token: 0x06035567 RID: 218471 RVA: 0x00CA26D4 File Offset: 0x00CA08D4
+		// Token: 0x0602A462 RID: 173154 RVA: 0x00BEFC8C File Offset: 0x00BEDE8C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035568 RID: 218472 RVA: 0x00CA288D File Offset: 0x00CA0A8D
+		// Token: 0x0602A463 RID: 173155 RVA: 0x00BEFE45 File Offset: 0x00BEE045
 		protected override void OnRefreshItem(MasterLevelData data)
 		{
 			if (data == null)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.Refresh(data);
 		}
 
-		// Token: 0x06035569 RID: 218473 RVA: 0x00CA28BC File Offset: 0x00CA0ABC
+		// Token: 0x0602A464 RID: 173156 RVA: 0x00BEFE74 File Offset: 0x00BEE074
 		[NullableContext(1)]
 		private void Refresh(MasterLevelData data)
 		{
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x0603556A RID: 218474 RVA: 0x00CA2A4D File Offset: 0x00CA0C4D
+		// Token: 0x0602A465 RID: 173157 RVA: 0x00BF0005 File Offset: 0x00BEE205
 		private void SelectItem()
 		{
 			if (this.CallbackOnSelect != null && this.Data != null)
@@ -117,18 +117,18 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x0603556B RID: 218475 RVA: 0x00CA2A76 File Offset: 0x00CA0C76
+		// Token: 0x0602A466 RID: 173158 RVA: 0x00BF002E File Offset: 0x00BEE22E
 		public override void OnSelect()
 		{
 			this.SelectItem();
 		}
 
-		// Token: 0x0603556C RID: 218476 RVA: 0x00CA2A7E File Offset: 0x00CA0C7E
+		// Token: 0x0602A467 RID: 173159 RVA: 0x00BF0036 File Offset: 0x00BEE236
 		protected override void OnUnSelect()
 		{
 		}
 
-		// Token: 0x0603556D RID: 218477 RVA: 0x00CA2A80 File Offset: 0x00CA0C80
+		// Token: 0x0602A468 RID: 173160 RVA: 0x00BF0038 File Offset: 0x00BEE238
 		protected override void OnMoveItem()
 		{
 			float currentMovePercentage = base.GetCurrentMovePercentage();
@@ -143,18 +143,18 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			base.GetItem(14).SetAlpha(floatValue2);
 		}
 
-		// Token: 0x0603556E RID: 218478 RVA: 0x00CA2AFD File Offset: 0x00CA0CFD
+		// Token: 0x0602A469 RID: 173161 RVA: 0x00BF00B5 File Offset: 0x00BEE2B5
 		public MasterLevelItem() : base(null)
 		{
 		}
 
-		// Token: 0x0401C5B0 RID: 116144
+		// Token: 0x04016FE5 RID: 94181
 		private MasterLevelData Data;
 
-		// Token: 0x0401C5B1 RID: 116145
+		// Token: 0x04016FE6 RID: 94182
 		public int ActivityId;
 
-		// Token: 0x0401C5B2 RID: 116146
+		// Token: 0x04016FE7 RID: 94183
 		[Nullable(new byte[]
 		{
 			2,
@@ -162,68 +162,68 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 		})]
 		public Action<int, MasterLevelItem> CallbackOnSelect;
 
-		// Token: 0x0401C5B3 RID: 116147
+		// Token: 0x04016FE8 RID: 94184
 		public static UCurveFloat ScaleCurve;
 
-		// Token: 0x0401C5B4 RID: 116148
+		// Token: 0x04016FE9 RID: 94185
 		public static UCurveFloat AlphaCurve;
 
-		// Token: 0x0401C5B5 RID: 116149
+		// Token: 0x04016FEA RID: 94186
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200B2EC RID: 45804
+		// Token: 0x02009D25 RID: 40229
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04036375 RID: 222069
+			// Token: 0x04030DCA RID: 200138
 			public const int PanelAnchor = 0;
 
-			// Token: 0x04036376 RID: 222070
+			// Token: 0x04030DCB RID: 200139
 			public const int SpriteBarBg = 1;
 
-			// Token: 0x04036377 RID: 222071
+			// Token: 0x04030DCC RID: 200140
 			public const int SpriteBar = 2;
 
-			// Token: 0x04036378 RID: 222072
+			// Token: 0x04030DCD RID: 200141
 			public const int SpriteStar = 3;
 
-			// Token: 0x04036379 RID: 222073
+			// Token: 0x04030DCE RID: 200142
 			public const int SpriteStarBg = 4;
 
-			// Token: 0x0403637A RID: 222074
+			// Token: 0x04030DCF RID: 200143
 			public const int BtnMain = 5;
 
-			// Token: 0x0403637B RID: 222075
+			// Token: 0x04030DD0 RID: 200144
 			public const int IconBg1 = 6;
 
-			// Token: 0x0403637C RID: 222076
+			// Token: 0x04030DD1 RID: 200145
 			public const int IconBg2 = 7;
 
-			// Token: 0x0403637D RID: 222077
+			// Token: 0x04030DD2 RID: 200146
 			public const int IconBg4 = 8;
 
-			// Token: 0x0403637E RID: 222078
+			// Token: 0x04030DD3 RID: 200147
 			public const int TextLv = 9;
 
-			// Token: 0x0403637F RID: 222079
+			// Token: 0x04030DD4 RID: 200148
 			public const int TextLevel = 10;
 
-			// Token: 0x04036380 RID: 222080
+			// Token: 0x04030DD5 RID: 200149
 			public const int TextLevelGray = 11;
 
-			// Token: 0x04036381 RID: 222081
+			// Token: 0x04030DD6 RID: 200150
 			public const int IconNormal = 12;
 
-			// Token: 0x04036382 RID: 222082
+			// Token: 0x04030DD7 RID: 200151
 			public const int IconSelect = 13;
 
-			// Token: 0x04036383 RID: 222083
+			// Token: 0x04030DD8 RID: 200152
 			public const int PanelSelect = 14;
 
-			// Token: 0x04036384 RID: 222084
+			// Token: 0x04030DD9 RID: 200153
 			public const int IconBg3 = 15;
 
-			// Token: 0x04036385 RID: 222085
+			// Token: 0x04030DDA RID: 200154
 			public const int ItemRedDot = 16;
 		}
 	}

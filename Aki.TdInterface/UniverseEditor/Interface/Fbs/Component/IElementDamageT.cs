@@ -2,55 +2,55 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005142 RID: 20802
+	// Token: 0x020056A7 RID: 22183
 	public class IElementDamageT
 	{
-		// Token: 0x170097AC RID: 38828
-		// (get) Token: 0x06021902 RID: 137474 RVA: 0x004A8D72 File Offset: 0x004A6F72
-		// (set) Token: 0x06021903 RID: 137475 RVA: 0x004A8D7A File Offset: 0x004A6F7A
+		// Token: 0x17009F99 RID: 40857
+		// (get) Token: 0x06023856 RID: 145494 RVA: 0x004E2CFE File Offset: 0x004E0EFE
+		// (set) Token: 0x06023857 RID: 145495 RVA: 0x004E2D06 File Offset: 0x004E0F06
 		public int DefaultValue { get; set; }
 
-		// Token: 0x170097AD RID: 38829
-		// (get) Token: 0x06021904 RID: 137476 RVA: 0x004A8D83 File Offset: 0x004A6F83
-		// (set) Token: 0x06021905 RID: 137477 RVA: 0x004A8D8B File Offset: 0x004A6F8B
+		// Token: 0x17009F9A RID: 40858
+		// (get) Token: 0x06023858 RID: 145496 RVA: 0x004E2D0F File Offset: 0x004E0F0F
+		// (set) Token: 0x06023859 RID: 145497 RVA: 0x004E2D17 File Offset: 0x004E0F17
 		public int Physics { get; set; }
 
-		// Token: 0x170097AE RID: 38830
-		// (get) Token: 0x06021906 RID: 137478 RVA: 0x004A8D94 File Offset: 0x004A6F94
-		// (set) Token: 0x06021907 RID: 137479 RVA: 0x004A8D9C File Offset: 0x004A6F9C
+		// Token: 0x17009F9B RID: 40859
+		// (get) Token: 0x0602385A RID: 145498 RVA: 0x004E2D20 File Offset: 0x004E0F20
+		// (set) Token: 0x0602385B RID: 145499 RVA: 0x004E2D28 File Offset: 0x004E0F28
 		public int Ice { get; set; }
 
-		// Token: 0x170097AF RID: 38831
-		// (get) Token: 0x06021908 RID: 137480 RVA: 0x004A8DA5 File Offset: 0x004A6FA5
-		// (set) Token: 0x06021909 RID: 137481 RVA: 0x004A8DAD File Offset: 0x004A6FAD
+		// Token: 0x17009F9C RID: 40860
+		// (get) Token: 0x0602385C RID: 145500 RVA: 0x004E2D31 File Offset: 0x004E0F31
+		// (set) Token: 0x0602385D RID: 145501 RVA: 0x004E2D39 File Offset: 0x004E0F39
 		public int Fire { get; set; }
 
-		// Token: 0x170097B0 RID: 38832
-		// (get) Token: 0x0602190A RID: 137482 RVA: 0x004A8DB6 File Offset: 0x004A6FB6
-		// (set) Token: 0x0602190B RID: 137483 RVA: 0x004A8DBE File Offset: 0x004A6FBE
+		// Token: 0x17009F9D RID: 40861
+		// (get) Token: 0x0602385E RID: 145502 RVA: 0x004E2D42 File Offset: 0x004E0F42
+		// (set) Token: 0x0602385F RID: 145503 RVA: 0x004E2D4A File Offset: 0x004E0F4A
 		public int Thunder { get; set; }
 
-		// Token: 0x170097B1 RID: 38833
-		// (get) Token: 0x0602190C RID: 137484 RVA: 0x004A8DC7 File Offset: 0x004A6FC7
-		// (set) Token: 0x0602190D RID: 137485 RVA: 0x004A8DCF File Offset: 0x004A6FCF
+		// Token: 0x17009F9E RID: 40862
+		// (get) Token: 0x06023860 RID: 145504 RVA: 0x004E2D53 File Offset: 0x004E0F53
+		// (set) Token: 0x06023861 RID: 145505 RVA: 0x004E2D5B File Offset: 0x004E0F5B
 		public int Wind { get; set; }
 
-		// Token: 0x170097B2 RID: 38834
-		// (get) Token: 0x0602190E RID: 137486 RVA: 0x004A8DD8 File Offset: 0x004A6FD8
-		// (set) Token: 0x0602190F RID: 137487 RVA: 0x004A8DE0 File Offset: 0x004A6FE0
+		// Token: 0x17009F9F RID: 40863
+		// (get) Token: 0x06023862 RID: 145506 RVA: 0x004E2D64 File Offset: 0x004E0F64
+		// (set) Token: 0x06023863 RID: 145507 RVA: 0x004E2D6C File Offset: 0x004E0F6C
 		public int Light { get; set; }
 
-		// Token: 0x170097B3 RID: 38835
-		// (get) Token: 0x06021910 RID: 137488 RVA: 0x004A8DE9 File Offset: 0x004A6FE9
-		// (set) Token: 0x06021911 RID: 137489 RVA: 0x004A8DF1 File Offset: 0x004A6FF1
+		// Token: 0x17009FA0 RID: 40864
+		// (get) Token: 0x06023864 RID: 145508 RVA: 0x004E2D75 File Offset: 0x004E0F75
+		// (set) Token: 0x06023865 RID: 145509 RVA: 0x004E2D7D File Offset: 0x004E0F7D
 		public int Dark { get; set; }
 
-		// Token: 0x170097B4 RID: 38836
-		// (get) Token: 0x06021912 RID: 137490 RVA: 0x004A8DFA File Offset: 0x004A6FFA
-		// (set) Token: 0x06021913 RID: 137491 RVA: 0x004A8E02 File Offset: 0x004A7002
+		// Token: 0x17009FA1 RID: 40865
+		// (get) Token: 0x06023866 RID: 145510 RVA: 0x004E2D86 File Offset: 0x004E0F86
+		// (set) Token: 0x06023867 RID: 145511 RVA: 0x004E2D8E File Offset: 0x004E0F8E
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021914 RID: 137492 RVA: 0x004A8E0C File Offset: 0x004A700C
+		// Token: 0x06023868 RID: 145512 RVA: 0x004E2D98 File Offset: 0x004E0F98
 		public IElementDamageT()
 		{
 			this.DefaultValue = 0;

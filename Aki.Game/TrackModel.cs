@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Map.MapDefine;
 
-// Token: 0x02002C15 RID: 11285
+// Token: 0x02002190 RID: 8592
 [NullableContext(1)]
 [Nullable(0)]
 public class TrackModel : ModelBase
 {
-	// Token: 0x17001F92 RID: 8082
-	// (get) Token: 0x06017721 RID: 96033 RVA: 0x005F7B8D File Offset: 0x005F5D8D
-	// (set) Token: 0x06017722 RID: 96034 RVA: 0x005F7B95 File Offset: 0x005F5D95
+	// Token: 0x17001FEA RID: 8170
+	// (get) Token: 0x06015153 RID: 86355 RVA: 0x006246B1 File Offset: 0x006228B1
+	// (set) Token: 0x06015154 RID: 86356 RVA: 0x006246B9 File Offset: 0x006228B9
 	public int DefaultTrackHideDis { get; private set; }
 
-	// Token: 0x06017723 RID: 96035 RVA: 0x005F7B9E File Offset: 0x005F5D9E
+	// Token: 0x06015155 RID: 86357 RVA: 0x006246C2 File Offset: 0x006228C2
 	protected override bool OnInit()
 	{
 		this.TrackInfos = new Dictionary<int, Dictionary<int, ITrackData>>();
@@ -24,7 +24,7 @@ public class TrackModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06017724 RID: 96036 RVA: 0x005F7BDC File Offset: 0x005F5DDC
+	// Token: 0x06015156 RID: 86358 RVA: 0x00624700 File Offset: 0x00622900
 	protected override bool OnClear()
 	{
 		if (this.TrackInfos != null)
@@ -45,13 +45,13 @@ public class TrackModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06017725 RID: 96037 RVA: 0x005F7C38 File Offset: 0x005F5E38
+	// Token: 0x06015157 RID: 86359 RVA: 0x0062475C File Offset: 0x0062295C
 	protected override bool OnLeaveLevel()
 	{
 		return true;
 	}
 
-	// Token: 0x06017726 RID: 96038 RVA: 0x005F7C3C File Offset: 0x005F5E3C
+	// Token: 0x06015158 RID: 86360 RVA: 0x00624760 File Offset: 0x00622960
 	public void AddTrackData(ITrackData data)
 	{
 		Dictionary<int, ITrackData> dictionary = this.GetTracksByType(data.TrackSource);
@@ -70,7 +70,7 @@ public class TrackModel : ModelBase
 		this.AddTrackToGroup(data);
 	}
 
-	// Token: 0x06017727 RID: 96039 RVA: 0x005F7CB8 File Offset: 0x005F5EB8
+	// Token: 0x06015159 RID: 86361 RVA: 0x006247DC File Offset: 0x006229DC
 	public void RemoveTrackData(ETrackSource type, int id)
 	{
 		Dictionary<int, ITrackData> tracksByType = this.GetTracksByType(type);
@@ -86,7 +86,7 @@ public class TrackModel : ModelBase
 		}
 	}
 
-	// Token: 0x06017728 RID: 96040 RVA: 0x005F7CEB File Offset: 0x005F5EEB
+	// Token: 0x0601515A RID: 86362 RVA: 0x0062480F File Offset: 0x00622A0F
 	public void ClearTrackData()
 	{
 		this.TrackInfos.Clear();
@@ -94,7 +94,7 @@ public class TrackModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.ClearTrackMark);
 	}
 
-	// Token: 0x06017729 RID: 96041 RVA: 0x005F7D14 File Offset: 0x005F5F14
+	// Token: 0x0601515B RID: 86363 RVA: 0x00624838 File Offset: 0x00622A38
 	private void AddTrackToGroup(ITrackData data)
 	{
 		int? showGroupId = data.ShowGroupId;
@@ -112,7 +112,7 @@ public class TrackModel : ModelBase
 		dictionary[data.Id] = data;
 	}
 
-	// Token: 0x0601772A RID: 96042 RVA: 0x005F7D8C File Offset: 0x005F5F8C
+	// Token: 0x0601515C RID: 86364 RVA: 0x006248B0 File Offset: 0x00622AB0
 	private void RemoveTrackFromGroup(ITrackData data)
 	{
 		int? showGroupId = data.ShowGroupId;
@@ -128,7 +128,7 @@ public class TrackModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601772B RID: 96043 RVA: 0x005F7DE4 File Offset: 0x005F5FE4
+	// Token: 0x0601515D RID: 86365 RVA: 0x00624908 File Offset: 0x00622B08
 	[return: Nullable(2)]
 	public ITrackData IsTargetTracking(TTrackTarget target)
 	{
@@ -157,7 +157,7 @@ public class TrackModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0601772C RID: 96044 RVA: 0x005F7ED4 File Offset: 0x005F60D4
+	// Token: 0x0601515E RID: 86366 RVA: 0x006249F8 File Offset: 0x00622BF8
 	[NullableContext(2)]
 	public ITrackData GetTrackData(ETrackSource type, int id)
 	{
@@ -169,7 +169,7 @@ public class TrackModel : ModelBase
 		return tracksByType.GetValueOrDefault(id);
 	}
 
-	// Token: 0x0601772D RID: 96045 RVA: 0x005F7EF8 File Offset: 0x005F60F8
+	// Token: 0x0601515F RID: 86367 RVA: 0x00624A1C File Offset: 0x00622C1C
 	public void UpdateTrackData(ETrackSource type, int id, TTrackTarget newTrackTarget)
 	{
 		ITrackData trackData = this.GetTrackData(type, id);
@@ -181,7 +181,7 @@ public class TrackModel : ModelBase
 		EventSystem.Instance.Emit<ETrackSource, int, TTrackTarget>(EEventName.UpdateTrackTarget, type, id, newTrackTarget);
 	}
 
-	// Token: 0x0601772E RID: 96046 RVA: 0x005F7F2C File Offset: 0x005F612C
+	// Token: 0x06015160 RID: 86368 RVA: 0x00624A50 File Offset: 0x00622C50
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -197,7 +197,7 @@ public class TrackModel : ModelBase
 		return trackInfos.GetValueOrDefault((int)type);
 	}
 
-	// Token: 0x0601772F RID: 96047 RVA: 0x005F7F40 File Offset: 0x005F6140
+	// Token: 0x06015161 RID: 86369 RVA: 0x00624A64 File Offset: 0x00622C64
 	public bool IsTracking(ETrackSource type, int id)
 	{
 		if (type == ETrackSource.None || id == 0)
@@ -208,7 +208,7 @@ public class TrackModel : ModelBase
 		return tracksByType != null && tracksByType.ContainsKey(id);
 	}
 
-	// Token: 0x06017730 RID: 96048 RVA: 0x005F7F6C File Offset: 0x005F616C
+	// Token: 0x06015162 RID: 86370 RVA: 0x00624A90 File Offset: 0x00622C90
 	public void UpdateGroupMinDistance(int groupId, double trackDistance)
 	{
 		if (this.GroupMinDistance == null || groupId == 0)
@@ -230,14 +230,14 @@ public class TrackModel : ModelBase
 		}
 	}
 
-	// Token: 0x06017731 RID: 96049 RVA: 0x005F7FB4 File Offset: 0x005F61B4
+	// Token: 0x06015163 RID: 86371 RVA: 0x00624AD8 File Offset: 0x00622CD8
 	public bool CanShowInGroup(int groupId, double trackDistance)
 	{
 		double num;
 		return this.GroupMinDistance == null || groupId == 0 || !this.GroupMinDistance.TryGetValue(groupId, out num) || trackDistance <= num;
 	}
 
-	// Token: 0x06017732 RID: 96050 RVA: 0x005F7FE7 File Offset: 0x005F61E7
+	// Token: 0x06015164 RID: 86372 RVA: 0x00624B0B File Offset: 0x00622D0B
 	public void ClearGroupMinDistance()
 	{
 		Dictionary<int, double> groupMinDistance = this.GroupMinDistance;
@@ -248,20 +248,20 @@ public class TrackModel : ModelBase
 		groupMinDistance.Clear();
 	}
 
-	// Token: 0x06017733 RID: 96051 RVA: 0x005F7FF9 File Offset: 0x005F61F9
+	// Token: 0x06015165 RID: 86373 RVA: 0x00624B1D File Offset: 0x00622D1D
 	public bool IsForceCloseTracked()
 	{
 		return this.ForceCloseTracked;
 	}
 
-	// Token: 0x06017734 RID: 96052 RVA: 0x005F8001 File Offset: 0x005F6201
+	// Token: 0x06015166 RID: 86374 RVA: 0x00624B25 File Offset: 0x00622D25
 	public void SetForceCloseTracked(bool close)
 	{
 		this.ForceCloseTracked = close;
 	}
 
-	// Token: 0x17001F93 RID: 8083
-	// (get) Token: 0x06017735 RID: 96053 RVA: 0x005F800A File Offset: 0x005F620A
+	// Token: 0x17001FEB RID: 8171
+	// (get) Token: 0x06015167 RID: 86375 RVA: 0x00624B2E File Offset: 0x00622D2E
 	public static TrackModel Instance
 	{
 		get
@@ -270,7 +270,7 @@ public class TrackModel : ModelBase
 		}
 	}
 
-	// Token: 0x06017736 RID: 96054 RVA: 0x005F8011 File Offset: 0x005F6211
+	// Token: 0x06015168 RID: 86376 RVA: 0x00624B35 File Offset: 0x00622D35
 	public static TrackModel GetOrCreateInstance()
 	{
 		if (TrackModel._Instance == null)
@@ -280,7 +280,7 @@ public class TrackModel : ModelBase
 		return TrackModel._Instance;
 	}
 
-	// Token: 0x06017737 RID: 96055 RVA: 0x005F8025 File Offset: 0x005F6225
+	// Token: 0x06015169 RID: 86377 RVA: 0x00624B49 File Offset: 0x00622D49
 	public static bool CreateInstance()
 	{
 		if (TrackModel._Instance != null)
@@ -291,24 +291,24 @@ public class TrackModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06017738 RID: 96056 RVA: 0x005F803B File Offset: 0x005F623B
+	// Token: 0x0601516A RID: 86378 RVA: 0x00624B5F File Offset: 0x00622D5F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06017739 RID: 96057 RVA: 0x005F803D File Offset: 0x005F623D
+	// Token: 0x0601516B RID: 86379 RVA: 0x00624B61 File Offset: 0x00622D61
 	public static void ResetStaticDefaultValue()
 	{
 		TrackModel._Instance = null;
 	}
 
-	// Token: 0x0601773A RID: 96058 RVA: 0x005F8045 File Offset: 0x005F6245
+	// Token: 0x0601516C RID: 86380 RVA: 0x00624B69 File Offset: 0x00622D69
 	static TrackModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TrackModel.CreateStaticDefaultValue), new Action(TrackModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400AF49 RID: 44873
+	// Token: 0x0400B34E RID: 45902
 	[Nullable(new byte[]
 	{
 		2,
@@ -317,7 +317,7 @@ public class TrackModel : ModelBase
 	})]
 	private Dictionary<int, Dictionary<int, ITrackData>> TrackInfos;
 
-	// Token: 0x0400AF4A RID: 44874
+	// Token: 0x0400B34F RID: 45903
 	[Nullable(new byte[]
 	{
 		2,
@@ -326,14 +326,14 @@ public class TrackModel : ModelBase
 	})]
 	private Dictionary<int, Dictionary<int, ITrackData>> ShowGroup;
 
-	// Token: 0x0400AF4B RID: 44875
+	// Token: 0x0400B350 RID: 45904
 	[Nullable(2)]
 	private Dictionary<int, double> GroupMinDistance;
 
-	// Token: 0x0400AF4D RID: 44877
+	// Token: 0x0400B352 RID: 45906
 	private bool ForceCloseTracked;
 
-	// Token: 0x0400AF4E RID: 44878
+	// Token: 0x0400B353 RID: 45907
 	[Nullable(2)]
 	private static TrackModel _Instance;
 }

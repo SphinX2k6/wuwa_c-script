@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072B9 RID: 29369
+	// Token: 0x0200643B RID: 25659
 	public enum ECameraNearClipPriority
 	{
-		// Token: 0x0402604E RID: 155726
+		// Token: 0x0402132E RID: 135982
 		PhotoCamera = 250,
-		// Token: 0x0402604F RID: 155727
+		// Token: 0x0402132F RID: 135983
 		PhotoSelfie = 300,
-		// Token: 0x04026050 RID: 155728
+		// Token: 0x04021330 RID: 135984
 		TsAnimNotifyStateSetNearClip = 500,
-		// Token: 0x04026051 RID: 155729
+		// Token: 0x04021331 RID: 135985
 		LevelEventAdjustPlayerCamera = 1000,
-		// Token: 0x04026052 RID: 155730
+		// Token: 0x04021332 RID: 135986
 		SequenceCamera = 2000
 	}
 }

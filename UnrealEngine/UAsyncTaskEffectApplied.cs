@@ -7,32 +7,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001950 RID: 6480
+	// Token: 0x0200042A RID: 1066
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGAS.AsyncTaskEffectApplied")]
 	[UnrealStructLayout(104, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 104)]
 	public class UAsyncTaskEffectApplied : UBlueprintAsyncActionBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06018030 RID: 98352 RVA: 0x00233BB7 File Offset: 0x00231DB7
+		// Token: 0x06006673 RID: 26227 RVA: 0x000937DF File Offset: 0x000919DF
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UAsyncTaskEffectApplied._ClassPtr;
 		}
 
-		// Token: 0x06018031 RID: 98353 RVA: 0x00233BC4 File Offset: 0x00231DC4
+		// Token: 0x06006674 RID: 26228 RVA: 0x000937EC File Offset: 0x000919EC
 		public UAsyncTaskEffectApplied() : this(BuiltinUtils.AllocNativeUObject(UAsyncTaskEffectApplied.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06018032 RID: 98354 RVA: 0x00233BEC File Offset: 0x00231DEC
+		// Token: 0x06006675 RID: 26229 RVA: 0x00093814 File Offset: 0x00091A14
 		public UAsyncTaskEffectApplied(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UAsyncTaskEffectApplied.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006025 RID: 24613
-		// (get) Token: 0x06018033 RID: 98355 RVA: 0x00233C20 File Offset: 0x00231E20
-		// (set) Token: 0x06018034 RID: 98356 RVA: 0x00233C59 File Offset: 0x00231E59
+		// Token: 0x1700144C RID: 5196
+		// (get) Token: 0x06006676 RID: 26230 RVA: 0x00093848 File Offset: 0x00091A48
+		// (set) Token: 0x06006677 RID: 26231 RVA: 0x00093881 File Offset: 0x00091A81
 		public FOnEffectApplied OnEffectApplied
 		{
 			get
@@ -51,9 +51,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006026 RID: 24614
-		// (get) Token: 0x06018035 RID: 98357 RVA: 0x00233C7A File Offset: 0x00231E7A
-		// (set) Token: 0x06018036 RID: 98358 RVA: 0x00233C8E File Offset: 0x00231E8E
+		// Token: 0x1700144D RID: 5197
+		// (get) Token: 0x06006678 RID: 26232 RVA: 0x000938A2 File Offset: 0x00091AA2
+		// (set) Token: 0x06006679 RID: 26233 RVA: 0x000938B6 File Offset: 0x00091AB6
 		[Nullable(2)]
 		public unsafe UAbilitySystemComponent ASC
 		{
@@ -69,10 +69,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06018037 RID: 98359 RVA: 0x00233CA4 File Offset: 0x00231EA4
+		// Token: 0x0600667A RID: 26234 RVA: 0x000938CC File Offset: 0x00091ACC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static UAsyncTaskEffectApplied ListenForEffectApplied(UAbilitySystemComponent AbilitySystemComponent, FGameplayTag EffectGameplayTag, FGameplayTag IgnoreGameplayTag)
 		{
 			UAsyncTaskEffectApplied.__ListenForEffectApplied_FunctionParams* ptr = stackalloc UAsyncTaskEffectApplied.__ListenForEffectApplied_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(UAsyncTaskEffectApplied.__ListenForEffectApplied_FunctionParams) & -16L;
@@ -80,73 +79,72 @@ namespace UnrealEngine
 			ptr->AbilitySystemComponent = ((AbilitySystemComponent != null) ? AbilitySystemComponent.NativePtr : IntPtr.Zero);
 			ptr->EffectGameplayTag = EffectGameplayTag;
 			ptr->IgnoreGameplayTag = IgnoreGameplayTag;
-			UnrealReflectionUtils.CallUFunction(UAsyncTaskEffectApplied._ClassDefaultObjectPtr, UAsyncTaskEffectApplied.__ListenForEffectApplied_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UAsyncTaskEffectApplied._ClassDefaultObjectPtr, UAsyncTaskEffectApplied.__ListenForEffectApplied_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UAsyncTaskEffectApplied>(ptr->__Result);
 		}
 
-		// Token: 0x06018038 RID: 98360 RVA: 0x00233D12 File Offset: 0x00231F12
+		// Token: 0x0600667B RID: 26235 RVA: 0x00093939 File Offset: 0x00091B39
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void EndTask()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UAsyncTaskEffectApplied.__EndTask_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UAsyncTaskEffectApplied.__EndTask_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06018039 RID: 98361 RVA: 0x00233D27 File Offset: 0x00231F27
+		// Token: 0x0600667C RID: 26236 RVA: 0x0009394D File Offset: 0x00091B4D
 		static UAsyncTaskEffectApplied()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGAS.AsyncTaskEffectApplied");
 		}
 
-		// Token: 0x0601803A RID: 98362 RVA: 0x00233D35 File Offset: 0x00231F35
+		// Token: 0x0600667D RID: 26237 RVA: 0x0009395B File Offset: 0x00091B5B
 		protected UAsyncTaskEffectApplied(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CFCD RID: 53197
+		// Token: 0x04002B12 RID: 11026
 		public new const string __ObjectPath = "/Script/KuroGAS.AsyncTaskEffectApplied";
 
-		// Token: 0x0400CFCE RID: 53198
+		// Token: 0x04002B13 RID: 11027
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CFCF RID: 53199
+		// Token: 0x04002B14 RID: 11028
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400CFD0 RID: 53200
+		// Token: 0x04002B15 RID: 11029
 		internal static int __PropertyOffset_OnEffectApplied;
 
-		// Token: 0x0400CFD1 RID: 53201
+		// Token: 0x04002B16 RID: 11030
 		[Nullable(2)]
 		private FOnEffectApplied _OnEffectApplied;
 
-		// Token: 0x0400CFD2 RID: 53202
+		// Token: 0x04002B17 RID: 11031
 		internal static int __PropertyOffset_ASC;
 
-		// Token: 0x0400CFD3 RID: 53203
+		// Token: 0x04002B18 RID: 11032
 		private static IntPtr __ListenForEffectApplied_NativeFunctionPtr;
 
-		// Token: 0x0400CFD4 RID: 53204
+		// Token: 0x04002B19 RID: 11033
 		private static IntPtr __EndTask_NativeFunctionPtr;
 
-		// Token: 0x02003021 RID: 12321
+		// Token: 0x02000B33 RID: 2867
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __ListenForEffectApplied_FunctionParams
 		{
-			// Token: 0x04016C59 RID: 93273
+			// Token: 0x04005BFE RID: 23550
 			[FieldOffset(0)]
 			public IntPtr AbilitySystemComponent;
 
-			// Token: 0x04016C5A RID: 93274
+			// Token: 0x04005BFF RID: 23551
 			[FieldOffset(8)]
 			public FGameplayTag EffectGameplayTag;
 
-			// Token: 0x04016C5B RID: 93275
+			// Token: 0x04005C00 RID: 23552
 			[FieldOffset(20)]
 			public FGameplayTag IgnoreGameplayTag;
 
-			// Token: 0x04016C5C RID: 93276
+			// Token: 0x04005C01 RID: 23553
 			[FieldOffset(32)]
 			public IntPtr __Result;
 		}

@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 {
-	// Token: 0x020071C2 RID: 29122
+	// Token: 0x02006277 RID: 25207
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PathDrivenActorRuntimeController
 	{
-		// Token: 0x0604742B RID: 291883 RVA: 0x0121F21C File Offset: 0x0121D41C
+		// Token: 0x0603CD26 RID: 249126 RVA: 0x01179128 File Offset: 0x01177328
 		public PathDrivenActorRuntimeController(Entity ownerEntity, int? ownerPbDataId, UClass actorClass, IIntervalSplineSpawn spawnRule, IReadOnlyList<IPathDrivenSplineRuntimeData> trackList, bool usePreMoveTick, bool isChainMode)
 		{
 			this.OwnerEntity = ownerEntity;
@@ -33,8 +33,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x17009DC1 RID: 40385
-		// (get) Token: 0x0604742C RID: 291884 RVA: 0x0121F2D8 File Offset: 0x0121D4D8
+		// Token: 0x17007311 RID: 29457
+		// (get) Token: 0x0603CD27 RID: 249127 RVA: 0x011791E4 File Offset: 0x011773E4
 		private bool IsLoopMode
 		{
 			get
@@ -44,8 +44,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x17009DC2 RID: 40386
-		// (get) Token: 0x0604742D RID: 291885 RVA: 0x0121F303 File Offset: 0x0121D503
+		// Token: 0x17007312 RID: 29458
+		// (get) Token: 0x0603CD28 RID: 249128 RVA: 0x0117920F File Offset: 0x0117740F
 		public bool IsBatchSpawned
 		{
 			get
@@ -54,8 +54,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x17009DC3 RID: 40387
-		// (get) Token: 0x0604742E RID: 291886 RVA: 0x0121F30B File Offset: 0x0121D50B
+		// Token: 0x17007313 RID: 29459
+		// (get) Token: 0x0603CD29 RID: 249129 RVA: 0x01179217 File Offset: 0x01177417
 		public bool IsRunning
 		{
 			get
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x0604742F RID: 291887 RVA: 0x0121F334 File Offset: 0x0121D534
+		// Token: 0x0603CD2A RID: 249130 RVA: 0x01179240 File Offset: 0x01177440
 		public void Tick(float deltaSeconds)
 		{
 			this.RecyclePendingActors();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.UpdateSpawn(deltaSeconds);
 		}
 
-		// Token: 0x06047430 RID: 291888 RVA: 0x0121F390 File Offset: 0x0121D590
+		// Token: 0x0603CD2B RID: 249131 RVA: 0x0117929C File Offset: 0x0117749C
 		public void TickMoveComponents(float deltaSeconds)
 		{
 			if (!this.IsRunning || deltaSeconds <= 0f)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047431 RID: 291889 RVA: 0x0121F3E8 File Offset: 0x0121D5E8
+		// Token: 0x0603CD2C RID: 249132 RVA: 0x011792F4 File Offset: 0x011774F4
 		private bool ShouldTickMoveComponent(IPathDrivenActorRuntimeData runtimeData)
 		{
 			if (this.UsePreMoveTick && runtimeData.HasStartedMove.GetValueOrDefault() && !runtimeData.Finished && !runtimeData.PendingRecycle)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return false;
 		}
 
-		// Token: 0x06047432 RID: 291890 RVA: 0x0121F430 File Offset: 0x0121D630
+		// Token: 0x0603CD2D RID: 249133 RVA: 0x0117933C File Offset: 0x0117753C
 		public void ClearAllActors(string reason)
 		{
 			PathDrivenActorAudio audio = this.Audio;
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047433 RID: 291891 RVA: 0x0121F50C File Offset: 0x0121D70C
+		// Token: 0x0603CD2E RID: 249134 RVA: 0x01179418 File Offset: 0x01177618
 		public List<AActor> GetActiveActors()
 		{
 			List<AActor> list = new List<AActor>();
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return list;
 		}
 
-		// Token: 0x06047434 RID: 291892 RVA: 0x0121F588 File Offset: 0x0121D788
+		// Token: 0x0603CD2F RID: 249135 RVA: 0x01179494 File Offset: 0x01177694
 		private void UpdateActiveActors()
 		{
 			for (int i = this.ActiveRuntimeDataList.Count - 1; i >= 0; i--)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047435 RID: 291893 RVA: 0x0121F5E0 File Offset: 0x0121D7E0
+		// Token: 0x0603CD30 RID: 249136 RVA: 0x011794EC File Offset: 0x011776EC
 		private void TickActiveBehaviors(float deltaSeconds)
 		{
 			if (!this.IsRunning)
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047436 RID: 291894 RVA: 0x0121F66C File Offset: 0x0121D86C
+		// Token: 0x0603CD31 RID: 249137 RVA: 0x01179578 File Offset: 0x01177778
 		private void UpdateSpawn(float deltaSeconds)
 		{
 			if (!this.IsRunning || this.IsLoopMode)
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.NextSpawnDelaySec = this.GetNextSpawnDelaySec();
 		}
 
-		// Token: 0x06047437 RID: 291895 RVA: 0x0121F6B8 File Offset: 0x0121D8B8
+		// Token: 0x0603CD32 RID: 249138 RVA: 0x011795C4 File Offset: 0x011777C4
 		private void TrySpawnActor()
 		{
 			int valueOrDefault = this.SpawnRule.MaxActiveCount.GetValueOrDefault();
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047438 RID: 291896 RVA: 0x0121F7A0 File Offset: 0x0121D9A0
+		// Token: 0x0603CD33 RID: 249139 RVA: 0x011796AC File Offset: 0x011778AC
 		private void ApplySpawnRotationByFollowDir(ref FTransformDouble transform)
 		{
 			IPathDrivenActorSplineMove moveMode = this.SpawnRule.MoveMode;
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			transform.SetRotation(FQuat.Identity);
 		}
 
-		// Token: 0x06047439 RID: 291897 RVA: 0x0121F7E4 File Offset: 0x0121D9E4
+		// Token: 0x0603CD34 RID: 249140 RVA: 0x011796F0 File Offset: 0x011778F0
 		[NullableContext(2)]
 		private unsafe IPathDrivenActorRuntimeData CreateAndRegisterActor(FTransformDouble startTransform, int trackIndex)
 		{
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return CS$<>8__locals1.runtimeData;
 		}
 
-		// Token: 0x0604743A RID: 291898 RVA: 0x0121FA94 File Offset: 0x0121DC94
+		// Token: 0x0603CD35 RID: 249141 RVA: 0x011799A0 File Offset: 0x01177BA0
 		private unsafe void StartActorMove(IPathDrivenActorRuntimeData runtimeData, SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam moveParam, int splineEntityId)
 		{
 			if (!runtimeData.MoveComponent.StartMoveWithSplineAtConstantTime(moveParam.Spline, moveParam.IsRepeat, moveParam.IsCycle, moveParam.IsKeepLookAt, moveParam.TimeSec, moveParam.TimeDisCurve, moveParam.StartTimeOffset, moveParam.StartDis, moveParam.EndDis))
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			runtimeData.HasStartedMove = new bool?(true);
 		}
 
-		// Token: 0x0604743B RID: 291899 RVA: 0x0121FB64 File Offset: 0x0121DD64
+		// Token: 0x0603CD36 RID: 249142 RVA: 0x01179A70 File Offset: 0x01177C70
 		private void MarkPendingTrackSwitch(IPathDrivenActorRuntimeData runtimeData)
 		{
 			if (runtimeData.PendingTrackSwitch.GetValueOrDefault() || runtimeData.Finished)
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.PendingTrackSwitchList.Add(runtimeData);
 		}
 
-		// Token: 0x0604743C RID: 291900 RVA: 0x0121FBA4 File Offset: 0x0121DDA4
+		// Token: 0x0603CD37 RID: 249143 RVA: 0x01179AB0 File Offset: 0x01177CB0
 		private void ProcessPendingTrackSwitches()
 		{
 			if (this.PendingTrackSwitchList.Count <= 0 || !this.IsRunning)
@@ -402,7 +402,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.PendingTrackSwitchList.Clear();
 		}
 
-		// Token: 0x0604743D RID: 291901 RVA: 0x0121FC20 File Offset: 0x0121DE20
+		// Token: 0x0603CD38 RID: 249144 RVA: 0x01179B2C File Offset: 0x01177D2C
 		private bool BeginTrackSwitchWait(IPathDrivenActorRuntimeData runtimeData)
 		{
 			if (!this.TrackSwitchWaitingRuntimeDataSet.Add(runtimeData))
@@ -413,7 +413,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return true;
 		}
 
-		// Token: 0x0604743E RID: 291902 RVA: 0x0121FC39 File Offset: 0x0121DE39
+		// Token: 0x0603CD39 RID: 249145 RVA: 0x01179B45 File Offset: 0x01177D45
 		private void EndTrackSwitchWait(IPathDrivenActorRuntimeData runtimeData)
 		{
 			if (!this.TrackSwitchWaitingRuntimeDataSet.Remove(runtimeData))
@@ -423,7 +423,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.ApplyRunStateTransition();
 		}
 
-		// Token: 0x0604743F RID: 291903 RVA: 0x0121FC50 File Offset: 0x0121DE50
+		// Token: 0x0603CD3A RID: 249146 RVA: 0x01179B5C File Offset: 0x01177D5C
 		private UniTask SwitchToNextTrack(IPathDrivenActorRuntimeData runtimeData)
 		{
 			PathDrivenActorRuntimeController.<SwitchToNextTrack>d__47 <SwitchToNextTrack>d__;
@@ -435,7 +435,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return <SwitchToNextTrack>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06047440 RID: 291904 RVA: 0x0121FC9C File Offset: 0x0121DE9C
+		// Token: 0x0603CD3B RID: 249147 RVA: 0x01179BA8 File Offset: 0x01177DA8
 		public void SpawnBatch()
 		{
 			if (this.BatchSpawned)
@@ -472,7 +472,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.NotifyBatchSpawnedChanged(true);
 		}
 
-		// Token: 0x06047441 RID: 291905 RVA: 0x0121FD80 File Offset: 0x0121DF80
+		// Token: 0x0603CD3C RID: 249148 RVA: 0x01179C8C File Offset: 0x01177E8C
 		private unsafe void SpawnInitialBatch(IReadOnlyList<IPathDrivenActorInitialSpawnHandle> handles)
 		{
 			if (!this.IsChainMode && this.TrackList.Count > 1)
@@ -588,7 +588,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047442 RID: 291906 RVA: 0x01220168 File Offset: 0x0121E368
+		// Token: 0x0603CD3D RID: 249149 RVA: 0x0117A074 File Offset: 0x01178274
 		public bool MarkActorStagnated(AActor actor, EStagnationSource source)
 		{
 			IPathDrivenActorRuntimeData pathDrivenActorRuntimeData = this.FindRuntimeDataByActor(actor);
@@ -601,7 +601,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return true;
 		}
 
-		// Token: 0x06047443 RID: 291907 RVA: 0x0122019C File Offset: 0x0121E39C
+		// Token: 0x0603CD3E RID: 249150 RVA: 0x0117A0A8 File Offset: 0x011782A8
 		public bool UnmarkActorStagnated(AActor actor, int sources)
 		{
 			IPathDrivenActorRuntimeData pathDrivenActorRuntimeData = this.FindRuntimeDataByActor(actor);
@@ -614,7 +614,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return true;
 		}
 
-		// Token: 0x06047444 RID: 291908 RVA: 0x012201D0 File Offset: 0x0121E3D0
+		// Token: 0x0603CD3F RID: 249151 RVA: 0x0117A0DC File Offset: 0x011782DC
 		private void SyncStagnationFromContext()
 		{
 			if (this.LastSyncedContextVersion != this.RuntimeContext.Version)
@@ -657,7 +657,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.ApplyRunStateTransition();
 		}
 
-		// Token: 0x06047445 RID: 291909 RVA: 0x0122031C File Offset: 0x0121E51C
+		// Token: 0x0603CD40 RID: 249152 RVA: 0x0117A228 File Offset: 0x01178428
 		private void ApplyRunStateTransition()
 		{
 			bool isRunning = this.IsRunning;
@@ -694,7 +694,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047446 RID: 291910 RVA: 0x012203A9 File Offset: 0x0121E5A9
+		// Token: 0x0603CD41 RID: 249153 RVA: 0x0117A2B5 File Offset: 0x011784B5
 		private void NotifyBatchSpawnedChanged(bool isBatchSpawned)
 		{
 			Entity ownerEntity = this.OwnerEntity;
@@ -704,7 +704,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047447 RID: 291911 RVA: 0x012203D8 File Offset: 0x0121E5D8
+		// Token: 0x0603CD42 RID: 249154 RVA: 0x0117A2E4 File Offset: 0x011784E4
 		private void RunAll()
 		{
 			for (int i = this.ActiveRuntimeDataList.Count - 1; i >= 0; i--)
@@ -713,7 +713,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047448 RID: 291912 RVA: 0x01220410 File Offset: 0x0121E610
+		// Token: 0x0603CD43 RID: 249155 RVA: 0x0117A31C File Offset: 0x0117851C
 		private void FreezeAll()
 		{
 			foreach (IPathDrivenActorRuntimeData pathDrivenActorRuntimeData in this.ActiveRuntimeDataList)
@@ -726,7 +726,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047449 RID: 291913 RVA: 0x0122048C File Offset: 0x0121E68C
+		// Token: 0x0603CD44 RID: 249156 RVA: 0x0117A398 File Offset: 0x01178598
 		private void RunActor(IPathDrivenActorRuntimeData runtimeData)
 		{
 			if (!this.RuntimeContext.IsStagnated(runtimeData.Actor))
@@ -758,7 +758,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x0604744A RID: 291914 RVA: 0x0122053C File Offset: 0x0121E73C
+		// Token: 0x0603CD45 RID: 249157 RVA: 0x0117A448 File Offset: 0x01178648
 		[NullableContext(2)]
 		private IPathDrivenActorRuntimeData FindRuntimeDataByActor(AActor actor)
 		{
@@ -776,7 +776,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return null;
 		}
 
-		// Token: 0x0604744B RID: 291915 RVA: 0x012205AC File Offset: 0x0121E7AC
+		// Token: 0x0603CD46 RID: 249158 RVA: 0x0117A4B8 File Offset: 0x011786B8
 		private bool HasStagnationHandle(IReadOnlyList<IPathDrivenActorInitialSpawnHandle> handles, int index)
 		{
 			foreach (IPathDrivenActorInitialSpawnHandle pathDrivenActorInitialSpawnHandle in handles)
@@ -789,7 +789,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return false;
 		}
 
-		// Token: 0x0604744C RID: 291916 RVA: 0x01220608 File Offset: 0x0121E808
+		// Token: 0x0603CD47 RID: 249159 RVA: 0x0117A514 File Offset: 0x01178714
 		private float CalcDistanceByTimeOffset(SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam template, float timeOffset, float timeSec, float splineLength)
 		{
 			float num = MathUtils.Instance.Clamp(timeOffset / timeSec, 0f, 1f);
@@ -798,7 +798,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return MathUtils.Instance.Clamp(currentValue, 0f, 1f) * splineLength;
 		}
 
-		// Token: 0x0604744D RID: 291917 RVA: 0x01220669 File Offset: 0x0121E869
+		// Token: 0x0603CD48 RID: 249160 RVA: 0x0117A575 File Offset: 0x01178775
 		private void ApplyLoopMoveParam(SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam moveParam)
 		{
 			if (!this.IsLoopMode)
@@ -809,7 +809,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			moveParam.IsCycle = true;
 		}
 
-		// Token: 0x0604744E RID: 291918 RVA: 0x01220684 File Offset: 0x0121E884
+		// Token: 0x0603CD49 RID: 249161 RVA: 0x0117A590 File Offset: 0x01178790
 		private int GetActiveRuntimeCount()
 		{
 			int num = 0;
@@ -823,7 +823,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return num;
 		}
 
-		// Token: 0x0604744F RID: 291919 RVA: 0x012206C4 File Offset: 0x0121E8C4
+		// Token: 0x0603CD4A RID: 249162 RVA: 0x0117A5D0 File Offset: 0x011787D0
 		private int SelectTrackIndex()
 		{
 			if (this.TrackList.Count <= 0)
@@ -849,7 +849,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return result;
 		}
 
-		// Token: 0x06047450 RID: 291920 RVA: 0x01220770 File Offset: 0x0121E970
+		// Token: 0x0603CD4B RID: 249163 RVA: 0x0117A67C File Offset: 0x0117887C
 		private float GetNextSpawnDelaySec()
 		{
 			float num = Math.Max(this.SpawnRule.SpawnInterval, 0.01f);
@@ -866,7 +866,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return num;
 		}
 
-		// Token: 0x06047451 RID: 291921 RVA: 0x012207E8 File Offset: 0x0121E9E8
+		// Token: 0x0603CD4C RID: 249164 RVA: 0x0117A6F4 File Offset: 0x011788F4
 		private SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam CloneMoveParam(SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam template)
 		{
 			return new SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam(template.Spline)
@@ -882,7 +882,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			};
 		}
 
-		// Token: 0x06047452 RID: 291922 RVA: 0x01220860 File Offset: 0x0121EA60
+		// Token: 0x0603CD4D RID: 249165 RVA: 0x0117A76C File Offset: 0x0117896C
 		[return: Nullable(2)]
 		private UKuroSceneItemMoveComponent GetOrAddMoveComponent(AActor actor)
 		{
@@ -901,7 +901,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return ukuroSceneItemMoveComponent;
 		}
 
-		// Token: 0x06047453 RID: 291923 RVA: 0x012208CB File Offset: 0x0121EACB
+		// Token: 0x0603CD4E RID: 249166 RVA: 0x0117A7D7 File Offset: 0x011789D7
 		private void ApplyMoveTickControl(IPathDrivenActorRuntimeData runtimeData)
 		{
 			UKuroSceneItemMoveComponent moveComponent = runtimeData.MoveComponent;
@@ -911,7 +911,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047454 RID: 291924 RVA: 0x012208F2 File Offset: 0x0121EAF2
+		// Token: 0x0603CD4F RID: 249167 RVA: 0x0117A7FE File Offset: 0x011789FE
 		private void PrepareBehaviorCollisionBeforeSpawn(IPathDrivenActorRuntimeData runtimeData)
 		{
 			IPathDrivenActorBehavior behavior = runtimeData.Behavior;
@@ -922,7 +922,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			behavior.PrepareCollisionBeforeSpawn(runtimeData);
 		}
 
-		// Token: 0x06047455 RID: 291925 RVA: 0x01220905 File Offset: 0x0121EB05
+		// Token: 0x0603CD50 RID: 249168 RVA: 0x0117A811 File Offset: 0x01178A11
 		private void RestoreBehaviorCollisionAfterSpawn(IPathDrivenActorRuntimeData runtimeData)
 		{
 			if (!runtimeData.Finished)
@@ -941,7 +941,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047456 RID: 291926 RVA: 0x01220938 File Offset: 0x0121EB38
+		// Token: 0x0603CD51 RID: 249169 RVA: 0x0117A844 File Offset: 0x01178A44
 		private void ClearBehaviorCollisionBeforeRecycle(IPathDrivenActorRuntimeData runtimeData)
 		{
 			IPathDrivenActorBehavior behavior = runtimeData.Behavior;
@@ -952,7 +952,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			behavior.ClearCollisionBeforeRecycle(runtimeData);
 		}
 
-		// Token: 0x06047457 RID: 291927 RVA: 0x0122094C File Offset: 0x0121EB4C
+		// Token: 0x0603CD52 RID: 249170 RVA: 0x0117A858 File Offset: 0x01178A58
 		private void RegisterActiveRuntimeData(IPathDrivenActorRuntimeData runtimeData)
 		{
 			runtimeData.MoveComponent.OnMoveStopCallback.Add(runtimeData.OnMoveStoppedHandler);
@@ -964,7 +964,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.NotifyActorListChanged();
 		}
 
-		// Token: 0x06047458 RID: 291928 RVA: 0x0122099A File Offset: 0x0121EB9A
+		// Token: 0x0603CD53 RID: 249171 RVA: 0x0117A8A6 File Offset: 0x01178AA6
 		private void CleanupMoveCallback(IPathDrivenActorRuntimeData runtimeData)
 		{
 			UKuroSceneItemMoveComponent moveComponent = runtimeData.MoveComponent;
@@ -974,7 +974,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047459 RID: 291929 RVA: 0x012209C8 File Offset: 0x0121EBC8
+		// Token: 0x0603CD54 RID: 249172 RVA: 0x0117A8D4 File Offset: 0x01178AD4
 		private void RemoveRuntimeData(IPathDrivenActorRuntimeData runtimeData)
 		{
 			this.TickableRuntimeDataList.Remove(runtimeData);
@@ -985,7 +985,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x0604745A RID: 291930 RVA: 0x012209FF File Offset: 0x0121EBFF
+		// Token: 0x0603CD55 RID: 249173 RVA: 0x0117A90B File Offset: 0x01178B0B
 		private bool TryStartFinishing(IPathDrivenActorRuntimeData runtimeData)
 		{
 			if (runtimeData.Finished)
@@ -997,7 +997,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return true;
 		}
 
-		// Token: 0x0604745B RID: 291931 RVA: 0x01220A1A File Offset: 0x0121EC1A
+		// Token: 0x0603CD56 RID: 249174 RVA: 0x0117A926 File Offset: 0x01178B26
 		private void RequestFinish(IPathDrivenActorRuntimeData runtimeData, EPathDrivenActorFinishReason reason)
 		{
 			if (!this.TryStartFinishing(runtimeData))
@@ -1009,7 +1009,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.MarkPendingRecycle(runtimeData);
 		}
 
-		// Token: 0x0604745C RID: 291932 RVA: 0x01220A3D File Offset: 0x0121EC3D
+		// Token: 0x0603CD57 RID: 249175 RVA: 0x0117A949 File Offset: 0x01178B49
 		private void ApplyFinishPresentation(IPathDrivenActorRuntimeData runtimeData, EPathDrivenActorFinishReason reason)
 		{
 			if (reason == EPathDrivenActorFinishReason.Overlap)
@@ -1024,7 +1024,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x0604745D RID: 291933 RVA: 0x01220A72 File Offset: 0x0121EC72
+		// Token: 0x0603CD58 RID: 249176 RVA: 0x0117A97E File Offset: 0x01178B7E
 		private void NotifyBehaviorFinishing(IPathDrivenActorRuntimeData runtimeData, EPathDrivenActorFinishReason reason)
 		{
 			if (runtimeData.Behavior == null)
@@ -1035,7 +1035,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			runtimeData.Behavior.OnFinishing(runtimeData, reason);
 		}
 
-		// Token: 0x0604745E RID: 291934 RVA: 0x01220A94 File Offset: 0x0121EC94
+		// Token: 0x0603CD59 RID: 249177 RVA: 0x0117A9A0 File Offset: 0x01178BA0
 		private void CleanupActiveRuntimeData(IPathDrivenActorRuntimeData runtimeData, string reason)
 		{
 			UKuroSceneItemMoveComponent moveComponent = runtimeData.MoveComponent;
@@ -1062,7 +1062,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.NotifyActorListChanged();
 		}
 
-		// Token: 0x0604745F RID: 291935 RVA: 0x01220B4F File Offset: 0x0121ED4F
+		// Token: 0x0603CD5A RID: 249178 RVA: 0x0117AA5B File Offset: 0x01178C5B
 		private void NotifyActorListChanged()
 		{
 			if (this.SuppressActorListNotify)
@@ -1076,7 +1076,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			EventSystem.Instance.EmitWithTarget(this.OwnerEntity, EEventName.OnDynamicDetectableActorsChanged);
 		}
 
-		// Token: 0x06047460 RID: 291936 RVA: 0x01220B7E File Offset: 0x0121ED7E
+		// Token: 0x0603CD5B RID: 249179 RVA: 0x0117AA8A File Offset: 0x01178C8A
 		private void CleanupBehavior(IPathDrivenActorRuntimeData runtimeData)
 		{
 			if (runtimeData.Behavior == null)
@@ -1087,7 +1087,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			runtimeData.Behavior = null;
 		}
 
-		// Token: 0x06047461 RID: 291937 RVA: 0x01220B9C File Offset: 0x0121ED9C
+		// Token: 0x0603CD5C RID: 249180 RVA: 0x0117AAA8 File Offset: 0x01178CA8
 		private void MarkPendingRecycle(IPathDrivenActorRuntimeData runtimeData)
 		{
 			if (runtimeData.PendingRecycle)
@@ -1098,7 +1098,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.PendingRecycleList.Add(runtimeData);
 		}
 
-		// Token: 0x06047462 RID: 291938 RVA: 0x01220BBC File Offset: 0x0121EDBC
+		// Token: 0x0603CD5D RID: 249181 RVA: 0x0117AAC8 File Offset: 0x01178CC8
 		private void RecyclePendingActors()
 		{
 			int count = this.PendingRecycleList.Count;
@@ -1113,76 +1113,76 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.PendingRecycleList.Clear();
 		}
 
-		// Token: 0x040257A9 RID: 153513
+		// Token: 0x04020418 RID: 132120
 		private const float MIN_SPAWN_INTERVAL = 0.01f;
 
-		// Token: 0x040257AA RID: 153514
+		// Token: 0x04020419 RID: 132121
 		private const int MAX_ACTIVE_ACTOR_COUNT = 50;
 
-		// Token: 0x040257AB RID: 153515
+		// Token: 0x0402041A RID: 132122
 		private readonly Entity OwnerEntity;
 
-		// Token: 0x040257AC RID: 153516
+		// Token: 0x0402041B RID: 132123
 		private readonly int? OwnerPbDataId;
 
-		// Token: 0x040257AD RID: 153517
+		// Token: 0x0402041C RID: 132124
 		private readonly UClass ActorClass;
 
-		// Token: 0x040257AE RID: 153518
+		// Token: 0x0402041D RID: 132125
 		private readonly IIntervalSplineSpawn SpawnRule;
 
-		// Token: 0x040257AF RID: 153519
+		// Token: 0x0402041E RID: 132126
 		private readonly IReadOnlyList<IPathDrivenSplineRuntimeData> TrackList;
 
-		// Token: 0x040257B0 RID: 153520
+		// Token: 0x0402041F RID: 132127
 		private readonly bool UsePreMoveTick;
 
-		// Token: 0x040257B1 RID: 153521
+		// Token: 0x04020420 RID: 132128
 		private readonly bool IsChainMode;
 
-		// Token: 0x040257B2 RID: 153522
+		// Token: 0x04020421 RID: 132129
 		private float NextSpawnDelaySec;
 
-		// Token: 0x040257B3 RID: 153523
+		// Token: 0x04020422 RID: 132130
 		private int NextSplineIndex;
 
-		// Token: 0x040257B4 RID: 153524
+		// Token: 0x04020423 RID: 132131
 		private bool BatchSpawned;
 
-		// Token: 0x040257B5 RID: 153525
+		// Token: 0x04020424 RID: 132132
 		private readonly PathDrivenActorRuntimeContext RuntimeContext = new PathDrivenActorRuntimeContext();
 
-		// Token: 0x040257B6 RID: 153526
+		// Token: 0x04020425 RID: 132133
 		private int LastSyncedContextVersion;
 
-		// Token: 0x040257B7 RID: 153527
+		// Token: 0x04020426 RID: 132134
 		private bool AppliedRunning;
 
-		// Token: 0x040257B8 RID: 153528
+		// Token: 0x04020427 RID: 132135
 		private bool AppliedSpawnerStagnated;
 
-		// Token: 0x040257B9 RID: 153529
+		// Token: 0x04020428 RID: 132136
 		private readonly HashSet<AActor> AppliedStagnatedActors = new HashSet<AActor>();
 
-		// Token: 0x040257BA RID: 153530
+		// Token: 0x04020429 RID: 132137
 		private bool SuppressActorListNotify;
 
-		// Token: 0x040257BB RID: 153531
+		// Token: 0x0402042A RID: 132138
 		private readonly List<IPathDrivenActorRuntimeData> ActiveRuntimeDataList = new List<IPathDrivenActorRuntimeData>();
 
-		// Token: 0x040257BC RID: 153532
+		// Token: 0x0402042B RID: 132139
 		private readonly List<IPathDrivenActorRuntimeData> TickableRuntimeDataList = new List<IPathDrivenActorRuntimeData>();
 
-		// Token: 0x040257BD RID: 153533
+		// Token: 0x0402042C RID: 132140
 		private readonly List<IPathDrivenActorRuntimeData> PendingRecycleList = new List<IPathDrivenActorRuntimeData>();
 
-		// Token: 0x040257BE RID: 153534
+		// Token: 0x0402042D RID: 132141
 		private readonly List<IPathDrivenActorRuntimeData> PendingTrackSwitchList = new List<IPathDrivenActorRuntimeData>();
 
-		// Token: 0x040257BF RID: 153535
+		// Token: 0x0402042E RID: 132142
 		private readonly HashSet<IPathDrivenActorRuntimeData> TrackSwitchWaitingRuntimeDataSet = new HashSet<IPathDrivenActorRuntimeData>();
 
-		// Token: 0x040257C0 RID: 153536
+		// Token: 0x0402042F RID: 132143
 		[Nullable(2)]
 		private readonly PathDrivenActorAudio Audio;
 	}

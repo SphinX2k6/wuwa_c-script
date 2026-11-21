@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200025D RID: 605
+// Token: 0x02000261 RID: 609
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Define/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Define/CounterAttackEffectData.CounterAttackEffectData_C")]
 public class CounterAttackEffectData : UKuroBpDataAsset, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170005A0 RID: 1440
-	// (get) Token: 0x06002539 RID: 9529 RVA: 0x000E0DD4 File Offset: 0x000DEFD4
-	// (set) Token: 0x0600253A RID: 9530 RVA: 0x000E0DE4 File Offset: 0x000DEFE4
+	// Token: 0x170005C7 RID: 1479
+	// (get) Token: 0x060025F0 RID: 9712 RVA: 0x000E7170 File Offset: 0x000E5370
+	// (set) Token: 0x060025F1 RID: 9713 RVA: 0x000E7180 File Offset: 0x000E5380
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Pos
 	{
@@ -29,9 +29,9 @@ public class CounterAttackEffectData : UKuroBpDataAsset, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170005A1 RID: 1441
-	// (get) Token: 0x0600253B RID: 9531 RVA: 0x000E0DF5 File Offset: 0x000DEFF5
-	// (set) Token: 0x0600253C RID: 9532 RVA: 0x000E0E09 File Offset: 0x000DF009
+	// Token: 0x170005C8 RID: 1480
+	// (get) Token: 0x060025F2 RID: 9714 RVA: 0x000E7191 File Offset: 0x000E5391
+	// (set) Token: 0x060025F3 RID: 9715 RVA: 0x000E71A5 File Offset: 0x000E53A5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector Offset
 	{
@@ -45,9 +45,9 @@ public class CounterAttackEffectData : UKuroBpDataAsset, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170005A2 RID: 1442
-	// (get) Token: 0x0600253D RID: 9533 RVA: 0x000E0E1E File Offset: 0x000DF01E
-	// (set) Token: 0x0600253E RID: 9534 RVA: 0x000E0E32 File Offset: 0x000DF032
+	// Token: 0x170005C9 RID: 1481
+	// (get) Token: 0x060025F4 RID: 9716 RVA: 0x000E71BA File Offset: 0x000E53BA
+	// (set) Token: 0x060025F5 RID: 9717 RVA: 0x000E71CE File Offset: 0x000E53CE
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector Scale
 	{
@@ -61,9 +61,9 @@ public class CounterAttackEffectData : UKuroBpDataAsset, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x170005A3 RID: 1443
-	// (get) Token: 0x0600253F RID: 9535 RVA: 0x000E0E48 File Offset: 0x000DF048
-	// (set) Token: 0x06002540 RID: 9536 RVA: 0x000E0E81 File Offset: 0x000DF081
+	// Token: 0x170005CA RID: 1482
+	// (get) Token: 0x060025F6 RID: 9718 RVA: 0x000E71E4 File Offset: 0x000E53E4
+	// (set) Token: 0x060025F7 RID: 9719 RVA: 0x000E721D File Offset: 0x000E541D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FSoftObjectPath EffectDA
 	{
@@ -83,7 +83,7 @@ public class CounterAttackEffectData : UKuroBpDataAsset, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x06002541 RID: 9537 RVA: 0x000E0EA9 File Offset: 0x000DF0A9
+	// Token: 0x060025F8 RID: 9720 RVA: 0x000E7245 File Offset: 0x000E5445
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (CounterAttackEffectData._ClassPtr == IntPtr.Zero)
@@ -93,43 +93,43 @@ public class CounterAttackEffectData : UKuroBpDataAsset, IUnrealUObject, IUnreal
 		return CounterAttackEffectData._ClassPtr;
 	}
 
-	// Token: 0x06002542 RID: 9538 RVA: 0x000E0ED0 File Offset: 0x000DF0D0
+	// Token: 0x060025F9 RID: 9721 RVA: 0x000E726C File Offset: 0x000E546C
 	public CounterAttackEffectData() : this(BuiltinUtils.AllocNativeUObject(CounterAttackEffectData.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06002543 RID: 9539 RVA: 0x000E0EF8 File Offset: 0x000DF0F8
+	// Token: 0x060025FA RID: 9722 RVA: 0x000E7294 File Offset: 0x000E5494
 	public CounterAttackEffectData(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(CounterAttackEffectData.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06002544 RID: 9540 RVA: 0x000E0F2B File Offset: 0x000DF12B
+	// Token: 0x060025FB RID: 9723 RVA: 0x000E72C7 File Offset: 0x000E54C7
 	protected CounterAttackEffectData(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x04002423 RID: 9251
+	// Token: 0x040024A1 RID: 9377
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Define/CounterAttackEffectData.CounterAttackEffectData_C";
 
-	// Token: 0x04002424 RID: 9252
+	// Token: 0x040024A2 RID: 9378
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04002425 RID: 9253
+	// Token: 0x040024A3 RID: 9379
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04002426 RID: 9254
+	// Token: 0x040024A4 RID: 9380
 	private static int __PropertyOffset_Pos;
 
-	// Token: 0x04002427 RID: 9255
+	// Token: 0x040024A5 RID: 9381
 	private static int __PropertyOffset_Offset;
 
-	// Token: 0x04002428 RID: 9256
+	// Token: 0x040024A6 RID: 9382
 	private static int __PropertyOffset_Scale;
 
-	// Token: 0x04002429 RID: 9257
+	// Token: 0x040024A7 RID: 9383
 	private static int __PropertyOffset_EffectDA;
 
-	// Token: 0x0400242A RID: 9258
+	// Token: 0x040024A8 RID: 9384
 	[Nullable(2)]
 	private FSoftObjectPath _EffectDA;
 }

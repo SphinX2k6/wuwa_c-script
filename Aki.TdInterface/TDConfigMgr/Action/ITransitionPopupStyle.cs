@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FEA RID: 8170
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002231 RID: 8753
 	public class ITransitionPopupStyle
 	{
-		// Token: 0x0600B3BC RID: 46012 RVA: 0x001A24D0 File Offset: 0x001A06D0
+		// Token: 0x0600BED2 RID: 48850 RVA: 0x001B8A3C File Offset: 0x001B6C3C
 		private ITransitionPopupStyle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B3BD RID: 46013 RVA: 0x001A2508 File Offset: 0x001A0708
+		// Token: 0x0600BED3 RID: 48851 RVA: 0x001B8A74 File Offset: 0x001B6C74
 		public static ITransitionPopupStyle Create([Nullable(2)] ITransitionPopupStyle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B3BE RID: 46014 RVA: 0x001A251B File Offset: 0x001A071B
+		// Token: 0x0600BED4 RID: 48852 RVA: 0x001B8A87 File Offset: 0x001B6C87
 		public static ITransitionPopupStyle CreateFromSetValue([Nullable(2)] ITransitionPopupStyle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B3BF RID: 46015 RVA: 0x001A252E File Offset: 0x001A072E
+		// Token: 0x0600BED5 RID: 48853 RVA: 0x001B8A9A File Offset: 0x001B6C9A
 		public ITransitionPopupStyle_SetValue ToSetValue()
 		{
 			return new ITransitionPopupStyle_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003757 RID: 14167
-		// (get) Token: 0x0600B3C0 RID: 46016 RVA: 0x001A2541 File Offset: 0x001A0741
-		// (set) Token: 0x0600B3C1 RID: 46017 RVA: 0x001A256C File Offset: 0x001A076C
+		// Token: 0x17003A2F RID: 14895
+		// (get) Token: 0x0600BED6 RID: 48854 RVA: 0x001B8AAD File Offset: 0x001B6CAD
+		// (set) Token: 0x0600BED7 RID: 48855 RVA: 0x001B8AD8 File Offset: 0x001B6CD8
 		public virtual ETransitionPopupStyleType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C68 RID: 27752
+		// Token: 0x0400726A RID: 29290
 		[Nullable(2)]
 		protected ITransitionPopupStyle FbInstance;
 
-		// Token: 0x04006C69 RID: 27753
+		// Token: 0x0400726B RID: 29291
 		[Nullable(2)]
 		protected ITransitionPopupStyle_SetValue PocoInterface;
 	}

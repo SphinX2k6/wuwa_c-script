@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020016E0 RID: 5856
+// Token: 0x02000B98 RID: 2968
 public enum EChangeWordType
 {
-	// Token: 0x04004BA1 RID: 19361
+	// Token: 0x04004C48 RID: 19528
 	Sentence,
-	// Token: 0x04004BA2 RID: 19362
+	// Token: 0x04004C49 RID: 19529
 	Conjunction
 }

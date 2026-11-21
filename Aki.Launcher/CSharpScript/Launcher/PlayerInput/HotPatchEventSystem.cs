@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.PlayerInput
 {
-	// Token: 0x02000118 RID: 280
+	// Token: 0x0200011C RID: 284
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class HotPatchEventSystem : Singleton
 	{
-		// Token: 0x0600090C RID: 2316 RVA: 0x000416A8 File Offset: 0x0003F8A8
+		// Token: 0x06000940 RID: 2368 RVA: 0x00043A70 File Offset: 0x00041C70
 		private void InitStandaloneInputModule()
 		{
 			this.StandaloneInputModule = (this.EventSystem.GetComponentByClass(ULGUI_StandaloneInputModule.StaticClass()) as ULGUI_StandaloneInputModule);
@@ -21,7 +21,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			this.HandleWrapper = this.StandaloneInputModule.RegisterInputChangeEvent(flguipointerInputChange_DynamicDelegate);
 		}
 
-		// Token: 0x0600090D RID: 2317 RVA: 0x000416FA File Offset: 0x0003F8FA
+		// Token: 0x06000941 RID: 2369 RVA: 0x00043AC2 File Offset: 0x00041CC2
 		private void DestroyStandaloneInputModule()
 		{
 			this.StandaloneInputModule.UnregisterInputChangeEvent(this.HandleWrapper);
@@ -29,7 +29,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			this.HandleWrapper = null;
 		}
 
-		// Token: 0x0600090E RID: 2318 RVA: 0x00041725 File Offset: 0x0003F925
+		// Token: 0x06000942 RID: 2370 RVA: 0x00043AED File Offset: 0x00041CED
 		private void InitCurrentInputModule()
 		{
 			if (InputDevice.Instance.IsInTouch())
@@ -44,7 +44,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			this.CurrentInputModule.Activate(false);
 		}
 
-		// Token: 0x0600090F RID: 2319 RVA: 0x00041760 File Offset: 0x0003F960
+		// Token: 0x06000943 RID: 2371 RVA: 0x00043B28 File Offset: 0x00041D28
 		private void SetWindowCursorStyle()
 		{
 			FVector2D hotSpot = new FVector2D(0f, 0f);
@@ -69,7 +69,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			UWidgetBlueprintLibrary.SetHardwareCursor(worldContext, EMouseCursor.CursorPress, cursorName3, hotSpot);
 		}
 
-		// Token: 0x06000910 RID: 2320 RVA: 0x000417F8 File Offset: 0x0003F9F8
+		// Token: 0x06000944 RID: 2372 RVA: 0x00043BC0 File Offset: 0x00041DC0
 		private void RegisterInput()
 		{
 			HotPatchInputManager.Instance.RegisterInputAction("UI左键点击", new TInputAction(this.OnPressActionCallback));
@@ -77,7 +77,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			HotPatchInputManager.Instance.RegisterOnTouchMovedAction(new TTouchMovedAction(this.OnTouchMovedActionCallback));
 		}
 
-		// Token: 0x06000911 RID: 2321 RVA: 0x0004184C File Offset: 0x0003FA4C
+		// Token: 0x06000945 RID: 2373 RVA: 0x00043C14 File Offset: 0x00041E14
 		private void UnRegisterInput()
 		{
 			HotPatchInputManager.Instance.UnRegisterInputAction("UI左键点击", new TInputAction(this.OnPressActionCallback));
@@ -85,26 +85,26 @@ namespace CSharpScript.Launcher.PlayerInput
 			HotPatchInputManager.Instance.UnRegisterOnTouchMovedAction();
 		}
 
-		// Token: 0x06000912 RID: 2322 RVA: 0x0004187D File Offset: 0x0003FA7D
+		// Token: 0x06000946 RID: 2374 RVA: 0x00043C45 File Offset: 0x00041E45
 		[NullableContext(1)]
 		private void OnPressActionCallback(bool bPress, string type)
 		{
 			this.StandaloneInputModule.InputTrigger(bPress, EMouseButtonType.Left);
 		}
 
-		// Token: 0x06000913 RID: 2323 RVA: 0x0004188C File Offset: 0x0003FA8C
+		// Token: 0x06000947 RID: 2375 RVA: 0x00043C54 File Offset: 0x00041E54
 		private void OnTouchActionCallback(bool inTouchPress, int inTouchId, FVector inTouchPointPosition)
 		{
 			this.TouchInputModule.InputTouchTrigger(inTouchPress, inTouchId, inTouchPointPosition);
 		}
 
-		// Token: 0x06000914 RID: 2324 RVA: 0x0004189D File Offset: 0x0003FA9D
+		// Token: 0x06000948 RID: 2376 RVA: 0x00043C65 File Offset: 0x00041E65
 		private void OnTouchMovedActionCallback(int inTouchId, FVector inTouchPointPosition)
 		{
 			this.TouchInputModule.InputTouchMoved(inTouchId, inTouchPointPosition);
 		}
 
-		// Token: 0x06000915 RID: 2325 RVA: 0x000418AD File Offset: 0x0003FAAD
+		// Token: 0x06000949 RID: 2377 RVA: 0x00043C75 File Offset: 0x00041E75
 		private void InputChangeDelegate(EInputControllerType _, EInputControllerType __)
 		{
 			if (InputDevice.Instance.IsInTouch())
@@ -118,7 +118,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			this.CurrentInputModule.Activate(false);
 		}
 
-		// Token: 0x06000916 RID: 2326 RVA: 0x000418E1 File Offset: 0x0003FAE1
+		// Token: 0x0600094A RID: 2378 RVA: 0x00043CA9 File Offset: 0x00041EA9
 		private void ChangeController(ELGUIPointerInputType type)
 		{
 			if (type == ELGUIPointerInputType.Pointer)
@@ -128,7 +128,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			}
 		}
 
-		// Token: 0x06000917 RID: 2327 RVA: 0x000418F8 File Offset: 0x0003FAF8
+		// Token: 0x0600094B RID: 2379 RVA: 0x00043CC0 File Offset: 0x00041EC0
 		[NullableContext(1)]
 		public UniTask InitRuntimeEventSystemActor(UObject worldContext)
 		{
@@ -141,7 +141,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			return <InitRuntimeEventSystemActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000918 RID: 2328 RVA: 0x00041944 File Offset: 0x0003FB44
+		// Token: 0x0600094C RID: 2380 RVA: 0x00043D0C File Offset: 0x00041F0C
 		[NullableContext(1)]
 		public bool SimulationPointerDownUp(UUIItem uiItem, bool isPress)
 		{
@@ -159,7 +159,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			return false;
 		}
 
-		// Token: 0x06000919 RID: 2329 RVA: 0x0004198A File Offset: 0x0003FB8A
+		// Token: 0x0600094D RID: 2381 RVA: 0x00043D52 File Offset: 0x00041F52
 		public void SwitchToNavigationInputType()
 		{
 			if (this.CurrentInputModule == null)
@@ -174,7 +174,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			this.CurrentInputModule.SwitchToNavigationInputType();
 		}
 
-		// Token: 0x0600091A RID: 2330 RVA: 0x000419B4 File Offset: 0x0003FBB4
+		// Token: 0x0600094E RID: 2382 RVA: 0x00043D7C File Offset: 0x00041F7C
 		public void Destroy()
 		{
 			InputDevice.Instance.UnRegisterInputChangeDelegate(new Action<EInputControllerType, EInputControllerType>(this.InputChangeDelegate));
@@ -192,8 +192,8 @@ namespace CSharpScript.Launcher.PlayerInput
 			this.WorldContext = null;
 		}
 
-		// Token: 0x170000F0 RID: 240
-		// (get) Token: 0x0600091B RID: 2331 RVA: 0x00041A23 File Offset: 0x0003FC23
+		// Token: 0x170000F6 RID: 246
+		// (get) Token: 0x0600094F RID: 2383 RVA: 0x00043DEB File Offset: 0x00041FEB
 		[Nullable(1)]
 		public static HotPatchEventSystem Instance
 		{
@@ -209,12 +209,12 @@ namespace CSharpScript.Launcher.PlayerInput
 			}
 		}
 
-		// Token: 0x0600091C RID: 2332 RVA: 0x00041A46 File Offset: 0x0003FC46
+		// Token: 0x06000950 RID: 2384 RVA: 0x00043E0E File Offset: 0x0004200E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0600091D RID: 2333 RVA: 0x00041A48 File Offset: 0x0003FC48
+		// Token: 0x06000951 RID: 2385 RVA: 0x00043E10 File Offset: 0x00042010
 		public static void ResetStaticDefaultValue()
 		{
 			HotPatchEventSystem instance = HotPatchEventSystem._instance;
@@ -225,37 +225,37 @@ namespace CSharpScript.Launcher.PlayerInput
 			HotPatchEventSystem._instance = null;
 		}
 
-		// Token: 0x0600091E RID: 2334 RVA: 0x00041A61 File Offset: 0x0003FC61
+		// Token: 0x06000952 RID: 2386 RVA: 0x00043E29 File Offset: 0x00042029
 		static HotPatchEventSystem()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(HotPatchEventSystem.CreateStaticDefaultValue), new Action(HotPatchEventSystem.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04000526 RID: 1318
+		// Token: 0x04000561 RID: 1377
 		private const int GAMEPAD_ID = 999;
 
-		// Token: 0x04000527 RID: 1319
+		// Token: 0x04000562 RID: 1378
 		private ALGUIEventSystemActor EventSystem;
 
-		// Token: 0x04000528 RID: 1320
+		// Token: 0x04000563 RID: 1379
 		private UObject WorldContext;
 
-		// Token: 0x04000529 RID: 1321
+		// Token: 0x04000564 RID: 1380
 		private ULGUI_PointerInputModule CurrentInputModule;
 
-		// Token: 0x0400052A RID: 1322
+		// Token: 0x04000565 RID: 1381
 		private ULGUI_StandaloneInputModule StandaloneInputModule;
 
-		// Token: 0x0400052B RID: 1323
+		// Token: 0x04000566 RID: 1382
 		private ULGUI_TouchInputModule TouchInputModule;
 
-		// Token: 0x0400052C RID: 1324
+		// Token: 0x04000567 RID: 1383
 		private FLGUIDelegateHandleWrapper HandleWrapper;
 
-		// Token: 0x0400052D RID: 1325
+		// Token: 0x04000568 RID: 1384
 		private ELGUIPointerInputType InputType = ELGUIPointerInputType.None;
 
-		// Token: 0x0400052E RID: 1326
+		// Token: 0x04000569 RID: 1385
 		private static HotPatchEventSystem _instance;
 	}
 }

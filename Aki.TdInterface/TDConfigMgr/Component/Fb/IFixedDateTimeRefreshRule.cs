@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AB6 RID: 2742
+	// Token: 0x02000B80 RID: 2944
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFixedDateTimeRefreshRule : IRefreshRule
 	{
-		// Token: 0x06003F31 RID: 16177 RVA: 0x000A18F7 File Offset: 0x0009FAF7
-		[NullableContext(1)]
+		// Token: 0x0600435B RID: 17243 RVA: 0x000AAEEB File Offset: 0x000A90EB
+		[NullableContext(0)]
 		public static IFixedDateTimeRefreshRule Create(IFixedDateTimeRefreshRule? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F82 RID: 3970
-		// (get) Token: 0x06003F32 RID: 16178 RVA: 0x000A1916 File Offset: 0x0009FB16
+		// Token: 0x17001056 RID: 4182
+		// (get) Token: 0x0600435C RID: 17244 RVA: 0x000AAF0A File Offset: 0x000A910A
 		public override ERefreshRule Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F83 RID: 3971
-		// (get) Token: 0x06003F33 RID: 16179 RVA: 0x000A1923 File Offset: 0x0009FB23
+		// Token: 0x17001057 RID: 4183
+		// (get) Token: 0x0600435D RID: 17245 RVA: 0x000AAF17 File Offset: 0x000A9117
 		public virtual int Hours
 		{
 			get
@@ -44,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F84 RID: 3972
-		// (get) Token: 0x06003F34 RID: 16180 RVA: 0x000A1930 File Offset: 0x0009FB30
+		// Token: 0x17001058 RID: 4184
+		// (get) Token: 0x0600435E RID: 17246 RVA: 0x000AAF24 File Offset: 0x000A9124
 		public virtual int Minutes
 		{
 			get
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F85 RID: 3973
-		// (get) Token: 0x06003F35 RID: 16181 RVA: 0x000A193D File Offset: 0x0009FB3D
+		// Token: 0x17001059 RID: 4185
+		// (get) Token: 0x0600435F RID: 17247 RVA: 0x000AAF31 File Offset: 0x000A9131
 		public virtual int Seconds
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F86 RID: 3974
-		// (get) Token: 0x06003F36 RID: 16182 RVA: 0x000A194C File Offset: 0x0009FB4C
+		// Token: 0x1700105A RID: 4186
+		// (get) Token: 0x06004360 RID: 17248 RVA: 0x000AAF40 File Offset: 0x000A9140
 		public virtual int? RefreshRate
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F87 RID: 3975
-		// (get) Token: 0x06003F37 RID: 16183 RVA: 0x000A1982 File Offset: 0x0009FB82
+		// Token: 0x1700105B RID: 4187
+		// (get) Token: 0x06004361 RID: 17249 RVA: 0x000AAF76 File Offset: 0x000A9176
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -94,13 +94,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002319 RID: 8985
+		// Token: 0x04002535 RID: 9525
 		private IFixedDateTimeRefreshRule Instance;
 
-		// Token: 0x0400231A RID: 8986
+		// Token: 0x04002536 RID: 9526
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x0400231B RID: 8987
+		// Token: 0x04002537 RID: 9527
 		private bool _ConditionInited;
 	}
 }

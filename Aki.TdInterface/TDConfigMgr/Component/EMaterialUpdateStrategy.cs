@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000DD RID: 221
+	// Token: 0x020000E5 RID: 229
 	public enum EMaterialUpdateStrategy
 	{
-		// Token: 0x040004C5 RID: 1221
+		// Token: 0x040004E9 RID: 1257
 		Custom,
-		// Token: 0x040004C6 RID: 1222
+		// Token: 0x040004EA RID: 1258
 		High
 	}
 }

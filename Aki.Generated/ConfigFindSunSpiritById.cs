@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002CE RID: 718
+	// Token: 0x020002E3 RID: 739
 	public class ConfigFindSunSpiritById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060010D9 RID: 4313 RVA: 0x000B8AB4 File Offset: 0x000B6CB4
+		// Token: 0x06001157 RID: 4439 RVA: 0x000BEFC0 File Offset: 0x000BD1C0
 		static ConfigFindSunSpiritById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFindSunSpiritById.CreateStaticDefaultValue), new Action(ConfigFindSunSpiritById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060010DA RID: 4314 RVA: 0x000B8AD4 File Offset: 0x000B6CD4
+		// Token: 0x06001158 RID: 4440 RVA: 0x000BEFE0 File Offset: 0x000BD1E0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFindSunSpiritById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060010DB RID: 4315 RVA: 0x000B8B53 File Offset: 0x000B6D53
+		// Token: 0x06001159 RID: 4441 RVA: 0x000BF05F File Offset: 0x000BD25F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFindSunSpiritById.LogPair = null;
 			ConfigFindSunSpiritById.HandleId = 0;
 		}
 
-		// Token: 0x060010DC RID: 4316 RVA: 0x000B8B61 File Offset: 0x000B6D61
+		// Token: 0x0600115A RID: 4442 RVA: 0x000BF06D File Offset: 0x000BD26D
 		public static void Init()
 		{
 			ConfigFindSunSpiritById.HandleId = ConfigCommon.InitDataStatement(ConfigFindSunSpiritById.HandleId, "db_findsunspirit.db", "select BinData from `FindSunSpirit` where Id=?");
 		}
 
-		// Token: 0x060010DD RID: 4317 RVA: 0x000B8B7C File Offset: 0x000B6D7C
+		// Token: 0x0600115B RID: 4443 RVA: 0x000BF088 File Offset: 0x000BD288
 		public static FindSunSpirit? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFindSunSpiritById.HandleId, ConfigFindSunSpiritById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FindSunSpirit?(rootAsFindSunSpirit);
 		}
 
-		// Token: 0x04001386 RID: 4998
+		// Token: 0x04001419 RID: 5145
 		private const string DB = "db_findsunspirit.db";
 
-		// Token: 0x04001387 RID: 4999
+		// Token: 0x0400141A RID: 5146
 		private const string FILE = "k.可视化编辑/c.Csv/z.找日灵配置/*.csv*";
 
-		// Token: 0x04001388 RID: 5000
+		// Token: 0x0400141B RID: 5147
 		private const string TABLE = "FindSunSpirit";
 
-		// Token: 0x04001389 RID: 5001
+		// Token: 0x0400141C RID: 5148
 		private const string COMMAND = "select BinData from `FindSunSpirit` where Id=?";
 
-		// Token: 0x0400138A RID: 5002
+		// Token: 0x0400141D RID: 5149
 		private const string KEY_PREFIX = "FindSunSpiritById";
 
-		// Token: 0x0400138B RID: 5003
+		// Token: 0x0400141E RID: 5150
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400138C RID: 5004
+		// Token: 0x0400141F RID: 5151
 		private static int HandleId;
 	}
 }

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020013DF RID: 5087
+	// Token: 0x02001452 RID: 5202
 	[NetMessage(EMessageId.TrackMoonBuildingDataRequest)]
 	public sealed class TrackMoonBuildingDataRequest : IMessage<TrackMoonBuildingDataRequest>, IMessage, IEquatable<TrackMoonBuildingDataRequest>, IDeepCloneable<TrackMoonBuildingDataRequest>, IBufferMessage
 	{
-		// Token: 0x0601AF81 RID: 110465 RVA: 0x003E845D File Offset: 0x003E665D
+		// Token: 0x0601BA0C RID: 113164 RVA: 0x00403729 File Offset: 0x00401929
 		[NullableContext(1)]
 		public static TrackMoonBuildingDataRequest Create()
 		{
 			return new TrackMoonBuildingDataRequest();
 		}
 
-		// Token: 0x17005AEB RID: 23275
-		// (get) Token: 0x0601AF82 RID: 110466 RVA: 0x003E8464 File Offset: 0x003E6664
+		// Token: 0x17005D80 RID: 23936
+		// (get) Token: 0x0601BA0D RID: 113165 RVA: 0x00403730 File Offset: 0x00401930
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005AEC RID: 23276
-		// (get) Token: 0x0601AF83 RID: 110467 RVA: 0x003E8467 File Offset: 0x003E6667
+		// Token: 0x17005D81 RID: 23937
+		// (get) Token: 0x0601BA0E RID: 113166 RVA: 0x00403733 File Offset: 0x00401933
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601AF84 RID: 110468 RVA: 0x003E846E File Offset: 0x003E666E
+		// Token: 0x0601BA0F RID: 113167 RVA: 0x0040373A File Offset: 0x0040193A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonBuildingDataRequest()
 		{
 		}
 
-		// Token: 0x0601AF85 RID: 110469 RVA: 0x003E8476 File Offset: 0x003E6676
+		// Token: 0x0601BA10 RID: 113168 RVA: 0x00403742 File Offset: 0x00401942
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonBuildingDataRequest(TrackMoonBuildingDataRequest other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601AF86 RID: 110470 RVA: 0x003E848F File Offset: 0x003E668F
+		// Token: 0x0601BA11 RID: 113169 RVA: 0x0040375B File Offset: 0x0040195B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonBuildingDataRequest Clone()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			return new TrackMoonBuildingDataRequest(this);
 		}
 
-		// Token: 0x0601AF87 RID: 110471 RVA: 0x003E8497 File Offset: 0x003E6697
+		// Token: 0x0601BA12 RID: 113170 RVA: 0x00403763 File Offset: 0x00401963
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TrackMoonBuildingDataRequest);
 		}
 
-		// Token: 0x0601AF88 RID: 110472 RVA: 0x003E84A5 File Offset: 0x003E66A5
+		// Token: 0x0601BA13 RID: 113171 RVA: 0x00403771 File Offset: 0x00401971
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TrackMoonBuildingDataRequest other)
@@ -81,7 +81,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x0601AF89 RID: 110473 RVA: 0x003E84C4 File Offset: 0x003E66C4
+		// Token: 0x0601BA14 RID: 113172 RVA: 0x00403790 File Offset: 0x00401990
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601AF8A RID: 110474 RVA: 0x003E84EA File Offset: 0x003E66EA
+		// Token: 0x0601BA15 RID: 113173 RVA: 0x004037B6 File Offset: 0x004019B6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -102,7 +102,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601AF8B RID: 110475 RVA: 0x003E84F7 File Offset: 0x003E66F7
+		// Token: 0x0601BA16 RID: 113174 RVA: 0x004037C3 File Offset: 0x004019C3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601AF8C RID: 110476 RVA: 0x003E8500 File Offset: 0x003E6700
+		// Token: 0x0601BA17 RID: 113175 RVA: 0x004037CC File Offset: 0x004019CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -121,7 +121,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601AF8D RID: 110477 RVA: 0x003E8518 File Offset: 0x003E6718
+		// Token: 0x0601BA18 RID: 113176 RVA: 0x004037E4 File Offset: 0x004019E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601AF8E RID: 110478 RVA: 0x003E853E File Offset: 0x003E673E
+		// Token: 0x0601BA19 RID: 113177 RVA: 0x0040380A File Offset: 0x00401A0A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TrackMoonBuildingDataRequest other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601AF8F RID: 110479 RVA: 0x003E855B File Offset: 0x003E675B
+		// Token: 0x0601BA1A RID: 113178 RVA: 0x00403827 File Offset: 0x00401A27
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601AF90 RID: 110480 RVA: 0x003E8564 File Offset: 0x003E6764
+		// Token: 0x0601BA1B RID: 113179 RVA: 0x00403830 File Offset: 0x00401A30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -170,7 +170,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009C3E RID: 39998
+		// Token: 0x0400A085 RID: 41093
 		private UnknownFieldSet _unknownFields;
 	}
 }

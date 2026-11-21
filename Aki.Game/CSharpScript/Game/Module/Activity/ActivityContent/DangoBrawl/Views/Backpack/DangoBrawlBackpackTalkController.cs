@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Backpack
 {
-	// Token: 0x0200684D RID: 26701
+	// Token: 0x0200579D RID: 22429
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBackpackTalkController
 	{
-		// Token: 0x1700975B RID: 38747
-		// (get) Token: 0x06042A6E RID: 273006 RVA: 0x01035188 File Offset: 0x01033388
+		// Token: 0x17006A9C RID: 27292
+		// (get) Token: 0x060375C3 RID: 226755 RVA: 0x00F766B0 File Offset: 0x00F748B0
 		private static long NowWallMs
 		{
 			get
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			}
 		}
 
-		// Token: 0x06042A6F RID: 273007 RVA: 0x010351A4 File Offset: 0x010333A4
+		// Token: 0x060375C4 RID: 226756 RVA: 0x00F766CC File Offset: 0x00F748CC
 		public void Init(ActivityDangoBrawlData actData, UUIItem pnlChat, UUIText txtChat, int roleId, [Nullable(2)] UiSequencePlayer sequencePlayer, [Nullable(2)] USpineSkeletonAnimationComponent roleSpine)
 		{
 			if (roleId <= 0)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			InputDistributeController.Instance.BindActionIgnoreLimit("UI左键点击", new TInputHandle<InputDistributeDefine.EActionType>(this.OnAnyInput));
 		}
 
-		// Token: 0x06042A70 RID: 273008 RVA: 0x0103531C File Offset: 0x0103351C
+		// Token: 0x060375C5 RID: 226757 RVA: 0x00F76844 File Offset: 0x00F74A44
 		public void Destroy()
 		{
 			TickSystem.Instance.Remove(this.IdleTickId);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			this.TalkEntry = null;
 		}
 
-		// Token: 0x06042A71 RID: 273009 RVA: 0x010353F0 File Offset: 0x010335F0
+		// Token: 0x060375C6 RID: 226758 RVA: 0x00F76918 File Offset: 0x00F74B18
 		private void OnIdleTick(float deltaMs)
 		{
 			long nowWallMs = DangoBrawlBackpackTalkController.NowWallMs;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			this.TryShowTalk((this.RoleConfig != null) ? this.RoleConfig.GetValueOrDefault().GetShopTipsTalkIdListArray() : null, DangoBrawlBackpackTalkController.EBubblePriority.Tips, ((this.RoleConfig != null) ? this.RoleConfig.GetValueOrDefault().ShopTipsTalkSpineAnim : null) ?? string.Empty, ((this.RoleConfig != null) ? this.RoleConfig.GetValueOrDefault().ShopIdleSpineAnim : null) ?? string.Empty);
 		}
 
-		// Token: 0x06042A72 RID: 273010 RVA: 0x010354CE File Offset: 0x010336CE
+		// Token: 0x060375C7 RID: 226759 RVA: 0x00F769F6 File Offset: 0x00F74BF6
 		private void OnAnyInput(string _, InputDistributeDefine.EActionType type, InputIdentification __)
 		{
 			if (type == InputDistributeDefine.EActionType.Press)
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			}
 		}
 
-		// Token: 0x06042A73 RID: 273011 RVA: 0x010354E0 File Offset: 0x010336E0
+		// Token: 0x060375C8 RID: 226760 RVA: 0x00F76A08 File Offset: 0x00F74C08
 		private void OnStartFightStateModify(EDangoBrawlFightState state, EDangoBrawlFightState preState)
 		{
 			if (state != EDangoBrawlFightState.Matching)
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			this.TryShowTalk((this.RoleConfig != null) ? this.RoleConfig.GetValueOrDefault().GetShopTrashTalkIdListArray() : null, DangoBrawlBackpackTalkController.EBubblePriority.Trash, ((this.RoleConfig != null) ? this.RoleConfig.GetValueOrDefault().ShopTrashTalkSpineAnim : null) ?? string.Empty, ((this.RoleConfig != null) ? this.RoleConfig.GetValueOrDefault().ShopIdleSpineAnim : null) ?? string.Empty);
 		}
 
-		// Token: 0x06042A74 RID: 273012 RVA: 0x01035568 File Offset: 0x01033768
+		// Token: 0x060375C9 RID: 226761 RVA: 0x00F76A90 File Offset: 0x00F74C90
 		private void OnRoundStartEffectsReady()
 		{
 			if (this.ActData.FightersServerData.GetCostDelta() > 0)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			}
 		}
 
-		// Token: 0x06042A75 RID: 273013 RVA: 0x01035600 File Offset: 0x01033800
+		// Token: 0x060375CA RID: 226762 RVA: 0x00F76B28 File Offset: 0x00F74D28
 		private void OnItemAcquired(int configId)
 		{
 			DangoBrawlItem? config = ConfigDangoBrawlItemById.GetConfig(configId, true);
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			this.TryShowTalk((this.RoleConfig != null) ? this.RoleConfig.GetValueOrDefault().GetShopWeaponTalkIdListArray() : null, DangoBrawlBackpackTalkController.EBubblePriority.Trash, ((this.RoleConfig != null) ? this.RoleConfig.GetValueOrDefault().ShopWeaponTalkSpineAnim : null) ?? string.Empty, ((this.RoleConfig != null) ? this.RoleConfig.GetValueOrDefault().ShopIdleSpineAnim : null) ?? string.Empty);
 		}
 
-		// Token: 0x06042A76 RID: 273014 RVA: 0x010356C7 File Offset: 0x010338C7
+		// Token: 0x060375CB RID: 226763 RVA: 0x00F76BEF File Offset: 0x00F74DEF
 		private void TryShowTalk([Nullable(2)] int[] talkIdListStr, DangoBrawlBackpackTalkController.EBubblePriority priority, string animName = "", string nextLoopAnimName = "")
 		{
 			if (priority >= this.CurrentPriority)
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			}
 		}
 
-		// Token: 0x06042A77 RID: 273015 RVA: 0x010356F4 File Offset: 0x010338F4
+		// Token: 0x060375CC RID: 226764 RVA: 0x00F76C1C File Offset: 0x00F74E1C
 		private void OnBubbleHidden()
 		{
 			this.CurrentPriority = DangoBrawlBackpackTalkController.EBubblePriority.None;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			this.ShowRandomTalk((this.RoleConfig != null) ? this.RoleConfig.GetValueOrDefault().GetShopTipsTalkIdListArray() : null, DangoBrawlBackpackTalkController.EBubblePriority.Tips, ((this.RoleConfig != null) ? this.RoleConfig.GetValueOrDefault().ShopTipsTalkSpineAnim : null) ?? string.Empty, ((this.RoleConfig != null) ? this.RoleConfig.GetValueOrDefault().ShopIdleSpineAnim : null) ?? string.Empty);
 		}
 
-		// Token: 0x06042A78 RID: 273016 RVA: 0x01035790 File Offset: 0x01033990
+		// Token: 0x060375CD RID: 226765 RVA: 0x00F76CB8 File Offset: 0x00F74EB8
 		private unsafe void ShowRandomTalk([Nullable(2)] int[] talkIdListStr, DangoBrawlBackpackTalkController.EBubblePriority priority, string animName = "", string nextLoopAnimName = "")
 		{
 			if (talkIdListStr == null || talkIdListStr.Length == 0)
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			this.PlayTalkSpineAnim(animName, nextLoopAnimName);
 		}
 
-		// Token: 0x06042A79 RID: 273017 RVA: 0x01035874 File Offset: 0x01033A74
+		// Token: 0x060375CE RID: 226766 RVA: 0x00F76D9C File Offset: 0x00F74F9C
 		private void ShowBubble(string textkey, DangoBrawlBackpackTalkController.EBubblePriority priority)
 		{
 			this.CurrentPriority = priority;
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			});
 		}
 
-		// Token: 0x06042A7A RID: 273018 RVA: 0x010358EC File Offset: 0x01033AEC
+		// Token: 0x060375CF RID: 226767 RVA: 0x00F76E14 File Offset: 0x00F75014
 		private void PlayTalkSpineAnim(string animName, string nextLoopName)
 		{
 			if (this.RoleSpine == null || !this.RoleSpine.IsValid() || string.IsNullOrEmpty(animName))
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			});
 		}
 
-		// Token: 0x06042A7B RID: 273019 RVA: 0x01035978 File Offset: 0x01033B78
+		// Token: 0x060375D0 RID: 226768 RVA: 0x00F76EA0 File Offset: 0x00F750A0
 		private void HideBubble()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -262,73 +262,73 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			});
 		}
 
-		// Token: 0x06042A7C RID: 273020 RVA: 0x010359BC File Offset: 0x01033BBC
+		// Token: 0x060375D1 RID: 226769 RVA: 0x00F76EE4 File Offset: 0x00F750E4
 		private void OnShopBought(int slotIndex, int uid, int configId, bool toBench)
 		{
 			this.OnItemAcquired(configId);
 		}
 
-		// Token: 0x06042A7D RID: 273021 RVA: 0x010359C5 File Offset: 0x01033BC5
+		// Token: 0x060375D2 RID: 226770 RVA: 0x00F76EED File Offset: 0x00F750ED
 		private void OnShopComposed(int mainUid, int uid, int configId, bool toBench, int[] sourceUids, EDragSourceKind[] sourceKinds)
 		{
 			this.OnItemAcquired(configId);
 		}
 
-		// Token: 0x04022B5B RID: 142171
+		// Token: 0x0401D3B8 RID: 119736
 		private ActivityDangoBrawlData ActData;
 
-		// Token: 0x04022B5C RID: 142172
+		// Token: 0x0401D3B9 RID: 119737
 		private UUIItem PnlChat;
 
-		// Token: 0x04022B5D RID: 142173
+		// Token: 0x0401D3BA RID: 119738
 		private UUIText TxtChat;
 
-		// Token: 0x04022B5E RID: 142174
+		// Token: 0x0401D3BB RID: 119739
 		private DangoBrawlRole? RoleConfig;
 
-		// Token: 0x04022B5F RID: 142175
+		// Token: 0x0401D3BC RID: 119740
 		private DangoBrawlActivity? ActivityConfig;
 
-		// Token: 0x04022B60 RID: 142176
+		// Token: 0x0401D3BD RID: 119741
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04022B61 RID: 142177
+		// Token: 0x0401D3BE RID: 119742
 		private int IdleTickId = -1;
 
-		// Token: 0x04022B62 RID: 142178
+		// Token: 0x0401D3BF RID: 119743
 		private bool PendingIdleTalk;
 
-		// Token: 0x04022B63 RID: 142179
+		// Token: 0x0401D3C0 RID: 119744
 		private long LastActiveWallMs;
 
-		// Token: 0x04022B64 RID: 142180
+		// Token: 0x0401D3C1 RID: 119745
 		private long BubbleHideAtWallMs;
 
-		// Token: 0x04022B65 RID: 142181
+		// Token: 0x0401D3C2 RID: 119746
 		private DangoBrawlBackpackTalkController.EBubblePriority CurrentPriority;
 
-		// Token: 0x04022B66 RID: 142182
+		// Token: 0x0401D3C3 RID: 119747
 		[Nullable(2)]
 		private USpineSkeletonAnimationComponent RoleSpine;
 
-		// Token: 0x04022B67 RID: 142183
+		// Token: 0x0401D3C4 RID: 119748
 		[Nullable(2)]
 		private UTrackEntry TalkEntry;
 
-		// Token: 0x0200CA14 RID: 51732
+		// Token: 0x0200B3DF RID: 46047
 		[NullableContext(0)]
 		private enum EBubblePriority
 		{
-			// Token: 0x0403D115 RID: 250133
+			// Token: 0x040379FC RID: 227836
 			None,
-			// Token: 0x0403D116 RID: 250134
+			// Token: 0x040379FD RID: 227837
 			Tips,
-			// Token: 0x0403D117 RID: 250135
+			// Token: 0x040379FE RID: 227838
 			Trash,
-			// Token: 0x0403D118 RID: 250136
+			// Token: 0x040379FF RID: 227839
 			Weapon = 2,
-			// Token: 0x0403D119 RID: 250137
+			// Token: 0x04037A00 RID: 227840
 			CostUp
 		}
 	}

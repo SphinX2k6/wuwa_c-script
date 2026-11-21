@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 {
-	// Token: 0x020071BB RID: 29115
+	// Token: 0x02006270 RID: 25200
 	public class SequenceDriveHelper
 	{
-		// Token: 0x060473FD RID: 291837 RVA: 0x0121E190 File Offset: 0x0121C390
+		// Token: 0x0603CCF8 RID: 249080 RVA: 0x0117809C File Offset: 0x0117629C
 		public static float GetNominalFrameSeconds()
 		{
 			float frameSeconds = GameSettingsDeviceRender.Instance.FrameSeconds;
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return frameSeconds;
 		}
 
-		// Token: 0x060473FE RID: 291838 RVA: 0x0121E1C0 File Offset: 0x0121C3C0
+		// Token: 0x0603CCF9 RID: 249081 RVA: 0x011780CC File Offset: 0x011762CC
 		public static ClampStepResult ClampStep(float advance, float accumulated, float remaining)
 		{
 			float nominalFrameSeconds = SequenceDriveHelper.GetNominalFrameSeconds();
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return new ClampStepResult(new float?((num3 > num2) ? num2 : num3), 0f);
 		}
 
-		// Token: 0x060473FF RID: 291839 RVA: 0x0121E21C File Offset: 0x0121C41C
+		// Token: 0x0603CCFA RID: 249082 RVA: 0x01178128 File Offset: 0x01176328
 		[NullableContext(1)]
 		public static float? GetMarkTimeInSeconds(ULevelSequence levelSequence, string mark)
 		{
@@ -57,19 +57,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return null;
 		}
 
-		// Token: 0x04025783 RID: 153475
+		// Token: 0x040203F2 RID: 132082
 		public const float SEQUENCE_TIME_EPSILON = 0.001f;
 
-		// Token: 0x04025784 RID: 153476
+		// Token: 0x040203F3 RID: 132083
 		public const float MIN_STEP_FRAME_RATIO = 0.5f;
 
-		// Token: 0x04025785 RID: 153477
+		// Token: 0x040203F4 RID: 132084
 		public const float MAX_STEP_FRAME_RATIO = 3f;
 
-		// Token: 0x04025786 RID: 153478
+		// Token: 0x040203F5 RID: 132085
 		public const int DEFAULT_NOMINAL_FRAME_RATE = 60;
 
-		// Token: 0x04025787 RID: 153479
+		// Token: 0x040203F6 RID: 132086
 		public const float DEFAULT_NOMINAL_FRAME_SECONDS = 0.016666668f;
 	}
 }

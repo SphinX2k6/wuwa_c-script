@@ -10,8 +10,8 @@ using CSharpScript.Core.Framework;
 [TickController(0)]
 public class AiModelController : ControllerBase
 {
-	// Token: 0x17000254 RID: 596
-	// (get) Token: 0x06000CC9 RID: 3273 RVA: 0x00043BB8 File Offset: 0x00041DB8
+	// Token: 0x17000257 RID: 599
+	// (get) Token: 0x06000CCF RID: 3279 RVA: 0x0004474C File Offset: 0x0004294C
 	[Nullable(2)]
 	public AiModel Model
 	{
@@ -22,14 +22,14 @@ public class AiModelController : ControllerBase
 		}
 	}
 
-	// Token: 0x06000CCA RID: 3274 RVA: 0x00043BBF File Offset: 0x00041DBF
+	// Token: 0x06000CD0 RID: 3280 RVA: 0x00044753 File Offset: 0x00042953
 	public void AddAiToTeam(AiController ai, int teamLevelId)
 	{
 		ai.AiTeam = this.Model.GetAiTeam(teamLevelId);
 		ai.AiTeam.AddMember(ai);
 	}
 
-	// Token: 0x06000CCB RID: 3275 RVA: 0x00043BE0 File Offset: 0x00041DE0
+	// Token: 0x06000CD1 RID: 3281 RVA: 0x00044774 File Offset: 0x00042974
 	public void RemoveAiFromTeam(AiController ai)
 	{
 		AiTeam aiTeam = ai.AiTeam;
@@ -41,7 +41,7 @@ public class AiModelController : ControllerBase
 		ai.AiTeam = null;
 	}
 
-	// Token: 0x06000CCC RID: 3276 RVA: 0x00043C08 File Offset: 0x00041E08
+	// Token: 0x06000CD2 RID: 3282 RVA: 0x0004479C File Offset: 0x0004299C
 	protected override void OnTick(float delta)
 	{
 		this.Model.AiScoreManager.Update();
@@ -57,7 +57,7 @@ public class AiModelController : ControllerBase
 		this.Model.UpdateEntityLookAt();
 	}
 
-	// Token: 0x06000CCD RID: 3277 RVA: 0x00043C98 File Offset: 0x00041E98
+	// Token: 0x06000CD3 RID: 3283 RVA: 0x0004482C File Offset: 0x00042A2C
 	private void ShareHatredTarget()
 	{
 		foreach (KeyValuePair<int, Dictionary<long, HashSet<AiController>>> keyValuePair in this.Model.HatredGroups)
@@ -103,8 +103,8 @@ public class AiModelController : ControllerBase
 		}
 	}
 
-	// Token: 0x17000255 RID: 597
-	// (get) Token: 0x06000CCE RID: 3278 RVA: 0x00043F2C File Offset: 0x0004212C
+	// Token: 0x17000258 RID: 600
+	// (get) Token: 0x06000CD4 RID: 3284 RVA: 0x00044AC0 File Offset: 0x00042CC0
 	public static AiModelController Instance
 	{
 		get
@@ -113,7 +113,7 @@ public class AiModelController : ControllerBase
 		}
 	}
 
-	// Token: 0x06000CCF RID: 3279 RVA: 0x00043F33 File Offset: 0x00042133
+	// Token: 0x06000CD5 RID: 3285 RVA: 0x00044AC7 File Offset: 0x00042CC7
 	public static AiModelController GetOrCreateInstance()
 	{
 		if (AiModelController._Instance == null)
@@ -123,7 +123,7 @@ public class AiModelController : ControllerBase
 		return AiModelController._Instance;
 	}
 
-	// Token: 0x06000CD0 RID: 3280 RVA: 0x00043F47 File Offset: 0x00042147
+	// Token: 0x06000CD6 RID: 3286 RVA: 0x00044ADB File Offset: 0x00042CDB
 	public static bool CreateInstance()
 	{
 		if (AiModelController._Instance != null)
@@ -134,24 +134,24 @@ public class AiModelController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06000CD1 RID: 3281 RVA: 0x00043F5D File Offset: 0x0004215D
+	// Token: 0x06000CD7 RID: 3287 RVA: 0x00044AF1 File Offset: 0x00042CF1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06000CD2 RID: 3282 RVA: 0x00043F5F File Offset: 0x0004215F
+	// Token: 0x06000CD8 RID: 3288 RVA: 0x00044AF3 File Offset: 0x00042CF3
 	public static void ResetStaticDefaultValue()
 	{
 		AiModelController._Instance = null;
 	}
 
-	// Token: 0x06000CD3 RID: 3283 RVA: 0x00043F67 File Offset: 0x00042167
+	// Token: 0x06000CD9 RID: 3289 RVA: 0x00044AFB File Offset: 0x00042CFB
 	static AiModelController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AiModelController.CreateStaticDefaultValue), new Action(AiModelController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04000A26 RID: 2598
+	// Token: 0x04000A2E RID: 2606
 	[Nullable(2)]
 	private static AiModelController _Instance;
 }

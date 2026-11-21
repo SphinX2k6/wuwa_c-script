@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006F08 RID: 28424
+	// Token: 0x02006089 RID: 24713
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DollGrabDeliveryView : UiViewBase
 	{
-		// Token: 0x060452FB RID: 283387 RVA: 0x0111D30D File Offset: 0x0111B50D
+		// Token: 0x0603B4A9 RID: 242857 RVA: 0x010C72AD File Offset: 0x010C54AD
 		public DollGrabDeliveryView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060452FC RID: 283388 RVA: 0x0111D318 File Offset: 0x0111B518
+		// Token: 0x0603B4AA RID: 242858 RVA: 0x010C72B8 File Offset: 0x010C54B8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			};
 		}
 
-		// Token: 0x060452FD RID: 283389 RVA: 0x0111D4A8 File Offset: 0x0111B6A8
+		// Token: 0x0603B4AB RID: 242859 RVA: 0x010C7448 File Offset: 0x010C5648
 		protected override void OnStart()
 		{
 			UUILayoutBase layout = base.GetItem(3).GetOwner().GetComponentByClass(UUILayoutBase.StaticClass()) as UUILayoutBase;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.Refresh();
 		}
 
-		// Token: 0x060452FE RID: 283390 RVA: 0x0111D504 File Offset: 0x0111B704
+		// Token: 0x0603B4AC RID: 242860 RVA: 0x010C74A4 File Offset: 0x010C56A4
 		private void Refresh()
 		{
 			this.RefreshProgressBar();
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.RefreshConfirmButton();
 		}
 
-		// Token: 0x060452FF RID: 283391 RVA: 0x0111D518 File Offset: 0x0111B718
+		// Token: 0x0603B4AD RID: 242861 RVA: 0x010C74B8 File Offset: 0x010C56B8
 		private void RefreshReward()
 		{
 			Dictionary<int, IDollRewardItemData> dictionary = new Dictionary<int, IDollRewardItemData>();
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			}
 		}
 
-		// Token: 0x06045300 RID: 283392 RVA: 0x0111D714 File Offset: 0x0111B914
+		// Token: 0x0603B4AE RID: 242862 RVA: 0x010C76B4 File Offset: 0x010C58B4
 		private DollCollectSmallItemGrid OnCreateRewardItem()
 		{
 			DollCollectSmallItemGrid dollCollectSmallItemGrid = new DollCollectSmallItemGrid();
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			return dollCollectSmallItemGrid;
 		}
 
-		// Token: 0x06045301 RID: 283393 RVA: 0x0111D754 File Offset: 0x0111B954
+		// Token: 0x0603B4AF RID: 242863 RVA: 0x010C76F4 File Offset: 0x010C58F4
 		private void OnExtendToggleRelease(MediumItemGridExtendCallback callback)
 		{
 			if (!callback.MediumItemGrid.IsHover)
@@ -151,10 +151,10 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			{
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(dollRewardItemData.ItemInfo.Id, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(dollRewardItemData.ItemInfo.Id, true, null, false);
 		}
 
-		// Token: 0x06045302 RID: 283394 RVA: 0x0111D798 File Offset: 0x0111B998
+		// Token: 0x0603B4B0 RID: 242864 RVA: 0x010C7738 File Offset: 0x010C5938
 		private void RefreshProgressBar()
 		{
 			IDollCollectData collectData = DollGrabShowcaseController.Instance.GetCollectData();
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			item.SetUIActive(currentCollectItemCount >= totalCollectItemCount);
 		}
 
-		// Token: 0x06045303 RID: 283395 RVA: 0x0111D83C File Offset: 0x0111BA3C
+		// Token: 0x0603B4B1 RID: 242865 RVA: 0x010C77DC File Offset: 0x010C59DC
 		private void RefreshConfirmButton()
 		{
 			IDollCollectData collectData = DollGrabShowcaseController.Instance.GetCollectData();
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			}
 		}
 
-		// Token: 0x06045304 RID: 283396 RVA: 0x0111D938 File Offset: 0x0111BB38
+		// Token: 0x0603B4B2 RID: 242866 RVA: 0x010C78D8 File Offset: 0x010C5AD8
 		private int GetDeliveryItemCount()
 		{
 			int num = 0;
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			return num;
 		}
 
-		// Token: 0x06045305 RID: 283397 RVA: 0x0111D9A0 File Offset: 0x0111BBA0
+		// Token: 0x0603B4B3 RID: 242867 RVA: 0x010C7940 File Offset: 0x010C5B40
 		private void RefreshCountText(int count)
 		{
 			UUIText text = base.GetText(7);
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			text.SetText(count.ToString(), true);
 		}
 
-		// Token: 0x06045306 RID: 283398 RVA: 0x0111D9BC File Offset: 0x0111BBBC
+		// Token: 0x0603B4B4 RID: 242868 RVA: 0x010C795C File Offset: 0x010C5B5C
 		private void OnClickedConfirmButton()
 		{
 			if (this.IsRequesting)
@@ -306,14 +306,14 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			DollGrabShowcaseController.Instance.OnClickDelivery();
 		}
 
-		// Token: 0x06045307 RID: 283399 RVA: 0x0111DA42 File Offset: 0x0111BC42
+		// Token: 0x0603B4B5 RID: 242869 RVA: 0x010C79E2 File Offset: 0x010C5BE2
 		private void OnDollGrabMachineDelivery(bool isAlreadyFirst, bool isComplete)
 		{
 			this.IsRequesting = false;
 			this.Refresh();
 		}
 
-		// Token: 0x06045308 RID: 283400 RVA: 0x0111DA51 File Offset: 0x0111BC51
+		// Token: 0x0603B4B6 RID: 242870 RVA: 0x010C79F1 File Offset: 0x010C5BF1
 		private void OnDollGrabMachineDeliveryFinish(bool isSuccess)
 		{
 			if (isSuccess)
@@ -325,13 +325,13 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			base.GetButton(9).SetSelfInteractive(true);
 		}
 
-		// Token: 0x06045309 RID: 283401 RVA: 0x0111DA7C File Offset: 0x0111BC7C
+		// Token: 0x0603B4B7 RID: 242871 RVA: 0x010C7A1C File Offset: 0x010C5C1C
 		private void OnClickedBackButton()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x040240EE RID: 147694
+		// Token: 0x0401F3A3 RID: 127907
 		[Nullable(new byte[]
 		{
 			2,
@@ -340,11 +340,11 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 		})]
 		private GenericLayout<DollCollectSmallItemGrid, IDollRewardItemData> RewardItemScrollView;
 
-		// Token: 0x040240EF RID: 147695
+		// Token: 0x0401F3A4 RID: 127908
 		[Nullable(2)]
 		private UUISprite ProgressBarSprite;
 
-		// Token: 0x040240F0 RID: 147696
+		// Token: 0x0401F3A5 RID: 127909
 		private bool IsRequesting;
 	}
 }

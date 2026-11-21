@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001578 RID: 5496
+	// Token: 0x020015EE RID: 5614
 	public enum SubChatChannelType
 	{
-		// Token: 0x0400A6AA RID: 42666
+		// Token: 0x0400AB37 RID: 43831
 		[OriginalName("WorldTeam")]
 		WorldTeam,
-		// Token: 0x0400A6AB RID: 42667
+		// Token: 0x0400AB38 RID: 43832
 		[OriginalName("MatchTeam")]
 		MatchTeam
 	}

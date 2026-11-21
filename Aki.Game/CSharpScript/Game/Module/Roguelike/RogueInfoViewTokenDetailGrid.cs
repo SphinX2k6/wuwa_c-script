@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E00 RID: 19968
+	// Token: 0x02003DC9 RID: 15817
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,14 +16,14 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RogueInfoViewTokenDetailGrid : LoopScrollMediumItemGrid<RogueGainEntry>
 	{
-		// Token: 0x06033857 RID: 211031 RVA: 0x00C0A01A File Offset: 0x00C0821A
+		// Token: 0x060286C2 RID: 165570 RVA: 0x00B5352A File Offset: 0x00B5172A
 		protected override void OnStart()
 		{
 			base.SetUseFixedAsync(true);
 			base.BindOnExtendToggleStateChanged(new Action<MediumItemGridExtendCallback>(this.OnStageChanged));
 		}
 
-		// Token: 0x06033858 RID: 211032 RVA: 0x00C0A038 File Offset: 0x00C08238
+		// Token: 0x060286C3 RID: 165571 RVA: 0x00B53548 File Offset: 0x00B51748
 		protected override void OnRefresh(RogueGainEntry data, bool isSelected, int gridIndex)
 		{
 			this.GridData = data;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.SetComponentVisible(component3, data.IsDiscounted());
 		}
 
-		// Token: 0x06033859 RID: 211033 RVA: 0x00C0A1BE File Offset: 0x00C083BE
+		// Token: 0x060286C4 RID: 165572 RVA: 0x00B536CE File Offset: 0x00B518CE
 		public void OnStageChanged(MediumItemGridExtendCallback callbackParameter)
 		{
 			if (callbackParameter.State == EToggleState.ETT_Checked)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0603385A RID: 211034 RVA: 0x00C0A1D0 File Offset: 0x00C083D0
+		// Token: 0x060286C5 RID: 165573 RVA: 0x00B536E0 File Offset: 0x00B518E0
 		public override void OnSelected(bool fireEvent)
 		{
 			if (this.IsSelected)
@@ -87,13 +87,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0603385B RID: 211035 RVA: 0x00C0A202 File Offset: 0x00C08402
+		// Token: 0x060286C6 RID: 165574 RVA: 0x00B53712 File Offset: 0x00B51912
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x0401B55C RID: 111964
+		// Token: 0x04015F2F RID: 89903
 		[Nullable(2)]
 		public RogueGainEntry GridData;
 	}

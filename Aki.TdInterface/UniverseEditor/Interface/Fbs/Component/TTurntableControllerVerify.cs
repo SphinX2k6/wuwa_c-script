@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CCE RID: 23758
+	// Token: 0x02006302 RID: 25346
 	public static class TTurntableControllerVerify
 	{
-		// Token: 0x06028A92 RID: 166546 RVA: 0x00596090 File Offset: 0x00594290
+		// Token: 0x0602B0E6 RID: 176358 RVA: 0x005DE900 File Offset: 0x005DCB00
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

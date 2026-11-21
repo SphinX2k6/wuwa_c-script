@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D38 RID: 7480
+// Token: 0x020011FA RID: 4602
 public class TrapDefenseMachineTipsPanel : BattleChildViewPanel
 {
-	// Token: 0x0600E2A3 RID: 58019 RVA: 0x00353F97 File Offset: 0x00352197
+	// Token: 0x0600B6C0 RID: 46784 RVA: 0x0035F9C7 File Offset: 0x0035DBC7
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,25 +21,25 @@ public class TrapDefenseMachineTipsPanel : BattleChildViewPanel
 		};
 	}
 
-	// Token: 0x0600E2A4 RID: 58020 RVA: 0x00353FD0 File Offset: 0x003521D0
+	// Token: 0x0600B6C1 RID: 46785 RVA: 0x0035FA00 File Offset: 0x0035DC00
 	public override void InitializeTemp()
 	{
 		this.Sequence = new UiSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x0600E2A5 RID: 58021 RVA: 0x00353FE3 File Offset: 0x003521E3
+	// Token: 0x0600B6C2 RID: 46786 RVA: 0x0035FA13 File Offset: 0x0035DC13
 	protected override void OnBeforeDestroy()
 	{
 		this.Sequence.Clear();
 	}
 
-	// Token: 0x0600E2A6 RID: 58022 RVA: 0x00353FF0 File Offset: 0x003521F0
+	// Token: 0x0600B6C3 RID: 46787 RVA: 0x0035FA20 File Offset: 0x0035DC20
 	protected override void OnBeforeShow()
 	{
 		this.Sequence.PlaySequencePurely("Start", false, false);
 	}
 
-	// Token: 0x0600E2A7 RID: 58023 RVA: 0x00354004 File Offset: 0x00352204
+	// Token: 0x0600B6C4 RID: 46788 RVA: 0x0035FA34 File Offset: 0x0035DC34
 	protected override UniTask OnBeforeHideAsync()
 	{
 		TrapDefenseMachineTipsPanel.<OnBeforeHideAsync>d__8 <OnBeforeHideAsync>d__;
@@ -50,13 +50,13 @@ public class TrapDefenseMachineTipsPanel : BattleChildViewPanel
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E2A8 RID: 58024 RVA: 0x00354047 File Offset: 0x00352247
+	// Token: 0x0600B6C5 RID: 46789 RVA: 0x0035FA77 File Offset: 0x0035DC77
 	protected override bool OnCheckBattleChildViewPanelShowCondition()
 	{
 		return this.IsCanShow;
 	}
 
-	// Token: 0x0600E2A9 RID: 58025 RVA: 0x0035404F File Offset: 0x0035224F
+	// Token: 0x0600B6C6 RID: 46790 RVA: 0x0035FA7F File Offset: 0x0035DC7F
 	private void RefreshMachineTips()
 	{
 		if (this.IsCanShow)
@@ -67,7 +67,7 @@ public class TrapDefenseMachineTipsPanel : BattleChildViewPanel
 		base.HideBattleChildViewPanel();
 	}
 
-	// Token: 0x0600E2AA RID: 58026 RVA: 0x00354068 File Offset: 0x00352268
+	// Token: 0x0600B6C7 RID: 46791 RVA: 0x0035FA98 File Offset: 0x0035DC98
 	[NullableContext(2)]
 	public void SetMachineItem(TrapDefenseBuildingDevelopItemData data)
 	{
@@ -92,15 +92,15 @@ public class TrapDefenseMachineTipsPanel : BattleChildViewPanel
 		this.RefreshMachineTips();
 	}
 
-	// Token: 0x0600E2AB RID: 58027 RVA: 0x003540FF File Offset: 0x003522FF
+	// Token: 0x0600B6C8 RID: 46792 RVA: 0x0035FB2F File Offset: 0x0035DD2F
 	public void RefreshMachineStateByRoulette(bool isVisible)
 	{
 		this.IsMobileRouletteVisible = isVisible;
 		this.RefreshMachineTips();
 	}
 
-	// Token: 0x17001223 RID: 4643
-	// (get) Token: 0x0600E2AC RID: 58028 RVA: 0x0035410E File Offset: 0x0035230E
+	// Token: 0x1700124D RID: 4685
+	// (get) Token: 0x0600B6C9 RID: 46793 RVA: 0x0035FB3E File Offset: 0x0035DD3E
 	private bool IsCanShow
 	{
 		get
@@ -114,24 +114,24 @@ public class TrapDefenseMachineTipsPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x040068C8 RID: 26824
+	// Token: 0x040069A7 RID: 27047
 	[Nullable(1)]
 	protected UiSequencePlayer Sequence;
 
-	// Token: 0x040068C9 RID: 26825
+	// Token: 0x040069A8 RID: 27048
 	[Nullable(2)]
 	protected TrapDefenseBuildingDevelopItemData Data;
 
-	// Token: 0x040068CA RID: 26826
+	// Token: 0x040069A9 RID: 27049
 	protected bool IsMobileRouletteVisible;
 
-	// Token: 0x02008344 RID: 33604
+	// Token: 0x020074CD RID: 29901
 	private static class EComponentDefine
 	{
-		// Token: 0x0402ACD3 RID: 175315
+		// Token: 0x04025FFB RID: 155643
 		public const int Name = 0;
 
-		// Token: 0x0402ACD4 RID: 175316
+		// Token: 0x04025FFC RID: 155644
 		public const int Desc = 1;
 	}
 }

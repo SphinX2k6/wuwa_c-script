@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02003497 RID: 13463
+// Token: 0x02002A0B RID: 10763
 [NullableContext(1)]
 [Nullable(0)]
 public class BezierCurveNthOrder
 {
-	// Token: 0x0601D4DE RID: 120030 RVA: 0x0082B0A4 File Offset: 0x008292A4
+	// Token: 0x0601B1DA RID: 111066 RVA: 0x00852308 File Offset: 0x00850508
 	public BezierCurveNthOrder(IntVector2D[] points)
 	{
 		if (points == null || points.Length < 1)
@@ -24,7 +24,7 @@ public class BezierCurveNthOrder
 		this.Order = points.Length - 1;
 	}
 
-	// Token: 0x0601D4DF RID: 120031 RVA: 0x0082B120 File Offset: 0x00829320
+	// Token: 0x0601B1DB RID: 111067 RVA: 0x00852384 File Offset: 0x00850584
 	public BezierCurveNthOrder(IReadOnlyList<global::Vector> points)
 	{
 		if (points == null || points.Count < 1)
@@ -40,19 +40,19 @@ public class BezierCurveNthOrder
 		this.Order = points.Count - 1;
 	}
 
-	// Token: 0x0601D4E0 RID: 120032 RVA: 0x0082B1A4 File Offset: 0x008293A4
+	// Token: 0x0601B1DC RID: 111068 RVA: 0x00852408 File Offset: 0x00850608
 	public int GetPointCount()
 	{
 		return this.ControlPoints.Length;
 	}
 
-	// Token: 0x0601D4E1 RID: 120033 RVA: 0x0082B1AE File Offset: 0x008293AE
+	// Token: 0x0601B1DD RID: 111069 RVA: 0x00852412 File Offset: 0x00850612
 	public int GetOrder()
 	{
 		return this.Order;
 	}
 
-	// Token: 0x0601D4E2 RID: 120034 RVA: 0x0082B1B8 File Offset: 0x008293B8
+	// Token: 0x0601B1DE RID: 111070 RVA: 0x0085241C File Offset: 0x0085061C
 	public global::Vector GetPoint(double t)
 	{
 		if (t < 0.0 || t > 1.0)
@@ -75,7 +75,7 @@ public class BezierCurveNthOrder
 		return array[0];
 	}
 
-	// Token: 0x0601D4E3 RID: 120035 RVA: 0x0082B2AC File Offset: 0x008294AC
+	// Token: 0x0601B1DF RID: 111071 RVA: 0x00852510 File Offset: 0x00850710
 	public global::Vector GetDerivative(double t)
 	{
 		if (this.Order == 0)
@@ -90,7 +90,7 @@ public class BezierCurveNthOrder
 		return new BezierCurveNthOrder(list).GetPoint(t);
 	}
 
-	// Token: 0x0601D4E4 RID: 120036 RVA: 0x0082B36C File Offset: 0x0082956C
+	// Token: 0x0601B1E0 RID: 111072 RVA: 0x008525D0 File Offset: 0x008507D0
 	public List<global::Vector> GetPoints(int segments = 100)
 	{
 		List<global::Vector> list = new List<global::Vector>(segments + 1);
@@ -102,7 +102,7 @@ public class BezierCurveNthOrder
 		return list;
 	}
 
-	// Token: 0x0601D4E5 RID: 120037 RVA: 0x0082B3A4 File Offset: 0x008295A4
+	// Token: 0x0601B1E1 RID: 111073 RVA: 0x00852608 File Offset: 0x00850808
 	public static IBezierArcLengthLookup CreateArcLengthLookup(BezierCurveNthOrder curve, int segmentCount)
 	{
 		int num = Math.Max(1, (int)Math.Floor((double)segmentCount));
@@ -129,7 +129,7 @@ public class BezierCurveNthOrder
 		return new BezierArcLengthLookup(array, array2, num2);
 	}
 
-	// Token: 0x0601D4E6 RID: 120038 RVA: 0x0082B480 File Offset: 0x00829680
+	// Token: 0x0601B1E2 RID: 111074 RVA: 0x008526E4 File Offset: 0x008508E4
 	public static double GetParameterByArcLength(IBezierArcLengthLookup lookup, double arcLength)
 	{
 		if (lookup.TotalLength <= 1E-10 || lookup.ParamSamples.Count < 2)
@@ -170,15 +170,15 @@ public class BezierCurveNthOrder
 		return lookup.ParamSamples[num4] + num7 * (lookup.ParamSamples[num4 + 1] - lookup.ParamSamples[num4]);
 	}
 
-	// Token: 0x0400E6EC RID: 59116
+	// Token: 0x0400EBA1 RID: 60321
 	private readonly global::Vector[] ControlPoints;
 
-	// Token: 0x0400E6ED RID: 59117
+	// Token: 0x0400EBA2 RID: 60322
 	private readonly int Order;
 
-	// Token: 0x0400E6EE RID: 59118
+	// Token: 0x0400EBA3 RID: 60323
 	private const int ARC_LENGTH_LUT_MIN_SEGMENTS = 1;
 
-	// Token: 0x0400E6EF RID: 59119
+	// Token: 0x0400EBA4 RID: 60324
 	private const double ARC_LENGTH_SEGMENT_LENGTH_EPSILON = 1E-10;
 }

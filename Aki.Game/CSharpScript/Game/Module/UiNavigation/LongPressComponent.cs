@@ -3,21 +3,21 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004982 RID: 18818
+	// Token: 0x020038FB RID: 14587
 	public class LongPressComponent : HotKeyComponent
 	{
-		// Token: 0x060310E0 RID: 200928 RVA: 0x00B62DBF File Offset: 0x00B60FBF
+		// Token: 0x06025C14 RID: 154644 RVA: 0x00A9DCB3 File Offset: 0x00A9BEB3
 		public LongPressComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060310E1 RID: 200929 RVA: 0x00B62DC8 File Offset: 0x00B60FC8
+		// Token: 0x06025C15 RID: 154645 RVA: 0x00A9DCBC File Offset: 0x00A9BEBC
 		protected override void OnRelease(HotKeyMap config)
 		{
 			UiNavigationNewController.Instance.SimulationPointUp(config.BindButtonTag, config.Id, null);
 		}
 
-		// Token: 0x060310E2 RID: 200930 RVA: 0x00B62DE3 File Offset: 0x00B60FE3
+		// Token: 0x06025C16 RID: 154646 RVA: 0x00A9DCD7 File Offset: 0x00A9BED7
 		protected override void OnPress(HotKeyMap config)
 		{
 			UiNavigationNewController.Instance.SimulationPointDown(config.BindButtonTag, config.Id, null);

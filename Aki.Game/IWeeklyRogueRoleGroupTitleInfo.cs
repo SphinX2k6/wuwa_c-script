@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002D61 RID: 11617
+// Token: 0x020022BB RID: 8891
 [NullableContext(1)]
 public interface IWeeklyRogueRoleGroupTitleInfo
 {
-	// Token: 0x170020EE RID: 8430
-	// (get) Token: 0x060186D8 RID: 100056
-	// (set) Token: 0x060186D9 RID: 100057
+	// Token: 0x17002149 RID: 8521
+	// (get) Token: 0x06015F7A RID: 89978
+	// (set) Token: 0x06015F7B RID: 89979
 	string TitleId { get; set; }
 
-	// Token: 0x170020EF RID: 8431
-	// (get) Token: 0x060186DA RID: 100058
-	// (set) Token: 0x060186DB RID: 100059
+	// Token: 0x1700214A RID: 8522
+	// (get) Token: 0x06015F7C RID: 89980
+	// (set) Token: 0x06015F7D RID: 89981
 	bool IsUp { get; set; }
 
-	// Token: 0x170020F0 RID: 8432
-	// (get) Token: 0x060186DC RID: 100060
-	// (set) Token: 0x060186DD RID: 100061
+	// Token: 0x1700214B RID: 8523
+	// (get) Token: 0x06015F7E RID: 89982
+	// (set) Token: 0x06015F7F RID: 89983
 	int? ScoreRate { get; set; }
 
-	// Token: 0x170020F1 RID: 8433
-	// (get) Token: 0x060186DE RID: 100062
-	// (set) Token: 0x060186DF RID: 100063
+	// Token: 0x1700214C RID: 8524
+	// (get) Token: 0x06015F80 RID: 89984
+	// (set) Token: 0x06015F81 RID: 89985
 	bool IsEmpty { get; set; }
 }

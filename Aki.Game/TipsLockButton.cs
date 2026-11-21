@@ -6,17 +6,17 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020018F1 RID: 6385
+// Token: 0x02000DAA RID: 3498
 public class TipsLockButton : UiPanelBase
 {
-	// Token: 0x0600BB18 RID: 47896 RVA: 0x002A5DA9 File Offset: 0x002A3FA9
+	// Token: 0x06008F02 RID: 36610 RVA: 0x002B0509 File Offset: 0x002AE709
 	[NullableContext(1)]
 	public TipsLockButton(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600BB19 RID: 47897 RVA: 0x002A5DC0 File Offset: 0x002A3FC0
+	// Token: 0x06008F03 RID: 36611 RVA: 0x002B0520 File Offset: 0x002AE720
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -39,7 +39,7 @@ public class TipsLockButton : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600BB1A RID: 47898 RVA: 0x002A5E89 File Offset: 0x002A4089
+	// Token: 0x06008F04 RID: 36612 RVA: 0x002B05E9 File Offset: 0x002AE7E9
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -47,25 +47,25 @@ public class TipsLockButton : UiPanelBase
 		extendToggle.CanExecuteChange.Bind(new Func<bool>(this.OnCanExecuteChange));
 	}
 
-	// Token: 0x0600BB1B RID: 47899 RVA: 0x002A5EB3 File Offset: 0x002A40B3
+	// Token: 0x06008F05 RID: 36613 RVA: 0x002B0613 File Offset: 0x002AE813
 	private bool OnCanExecuteChange()
 	{
 		return this.CanClickLockButton == null || this.CanClickLockButton(this.IncId);
 	}
 
-	// Token: 0x0600BB1C RID: 47900 RVA: 0x002A5ED0 File Offset: 0x002A40D0
+	// Token: 0x06008F06 RID: 36614 RVA: 0x002B0630 File Offset: 0x002AE830
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add(EEventName.OnItemFuncValueChange, new Action<int>(this.RefreshFuncState));
 	}
 
-	// Token: 0x0600BB1D RID: 47901 RVA: 0x002A5EEE File Offset: 0x002A40EE
+	// Token: 0x06008F07 RID: 36615 RVA: 0x002B064E File Offset: 0x002AE84E
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.OnItemFuncValueChange, new Action<int>(this.RefreshFuncState));
 	}
 
-	// Token: 0x0600BB1E RID: 47902 RVA: 0x002A5F0C File Offset: 0x002A410C
+	// Token: 0x06008F08 RID: 36616 RVA: 0x002B066C File Offset: 0x002AE86C
 	[NullableContext(2)]
 	public void Refresh(int incId, Func<int, bool> canClickFunction = null)
 	{
@@ -79,7 +79,7 @@ public class TipsLockButton : UiPanelBase
 		this.CanClickLockButton = null;
 	}
 
-	// Token: 0x0600BB1F RID: 47903 RVA: 0x002A5F30 File Offset: 0x002A4130
+	// Token: 0x06008F09 RID: 36617 RVA: 0x002B0690 File Offset: 0x002AE890
 	private void RefreshUi(int incId)
 	{
 		AttributeItemData attributeItemData = InventoryModel.Instance.GetAttributeItemData(incId);
@@ -95,13 +95,13 @@ public class TipsLockButton : UiPanelBase
 		base.GetExtendToggle(1).SetToggleStateForce(state2, false, false, false);
 	}
 
-	// Token: 0x0600BB20 RID: 47904 RVA: 0x002A5FC8 File Offset: 0x002A41C8
+	// Token: 0x06008F0A RID: 36618 RVA: 0x002B0728 File Offset: 0x002AE928
 	public void SetDeprecateToggleVisible(bool state)
 	{
 		base.GetExtendToggle(1).RootUIComp.Get().SetUIActive(state);
 	}
 
-	// Token: 0x0600BB21 RID: 47905 RVA: 0x002A5FEF File Offset: 0x002A41EF
+	// Token: 0x06008F0B RID: 36619 RVA: 0x002B074F File Offset: 0x002AE94F
 	private void RefreshFuncState(int incId)
 	{
 		if (incId != this.IncId)
@@ -111,7 +111,7 @@ public class TipsLockButton : UiPanelBase
 		this.RefreshUi(incId);
 	}
 
-	// Token: 0x0600BB22 RID: 47906 RVA: 0x002A6004 File Offset: 0x002A4204
+	// Token: 0x06008F0C RID: 36620 RVA: 0x002B0764 File Offset: 0x002AE964
 	private void LockButtonClick(EToggleState toggleState)
 	{
 		AttributeItemData attributeItemData = InventoryModel.Instance.GetAttributeItemData(this.IncId);
@@ -122,7 +122,7 @@ public class TipsLockButton : UiPanelBase
 		InventoryController.Instance.ItemLockRequest(this.IncId, !attributeItemData.GetIsLock());
 	}
 
-	// Token: 0x0600BB23 RID: 47907 RVA: 0x002A6040 File Offset: 0x002A4240
+	// Token: 0x06008F0D RID: 36621 RVA: 0x002B07A0 File Offset: 0x002AE9A0
 	private void OnDeprecateToggleClick(EToggleState toggleState)
 	{
 		AttributeItemData attributeItemData = InventoryModel.Instance.GetAttributeItemData(this.IncId);
@@ -133,20 +133,20 @@ public class TipsLockButton : UiPanelBase
 		InventoryController.Instance.ItemDeprecateRequest(this.IncId, !attributeItemData.GetIsDeprecated());
 	}
 
-	// Token: 0x040054F8 RID: 21752
+	// Token: 0x040055A3 RID: 21923
 	private int IncId;
 
-	// Token: 0x040054F9 RID: 21753
+	// Token: 0x040055A4 RID: 21924
 	[Nullable(2)]
 	private Func<int, bool> CanClickLockButton;
 
-	// Token: 0x02007E67 RID: 32359
+	// Token: 0x02006FEE RID: 28654
 	private class ETipsLockButtonNode
 	{
-		// Token: 0x040295BE RID: 169406
+		// Token: 0x040248EA RID: 149738
 		public const int LockToggle = 0;
 
-		// Token: 0x040295BF RID: 169407
+		// Token: 0x040248EB RID: 149739
 		public const int DeprecateToggle = 1;
 	}
 }

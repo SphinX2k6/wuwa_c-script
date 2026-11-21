@@ -11,12 +11,12 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D06 RID: 23814
+	// Token: 0x02004CE8 RID: 19688
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class BossStateViewBase : BattleEntityChildView
 	{
-		// Token: 0x0603C51C RID: 247068 RVA: 0x00E73094 File Offset: 0x00E71294
+		// Token: 0x06031475 RID: 201845 RVA: 0x00DC36FC File Offset: 0x00DC18FC
 		public override void Initialize(object param = null)
 		{
 			base.Initialize(param);
@@ -27,14 +27,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshHidden();
 		}
 
-		// Token: 0x0603C51D RID: 247069 RVA: 0x00E730D2 File Offset: 0x00E712D2
+		// Token: 0x06031476 RID: 201846 RVA: 0x00DC373A File Offset: 0x00DC193A
 		[NullableContext(1)]
 		public void SetCheckValidCallback(Action<BossStateViewBase> cb)
 		{
 			this.CheckValidCallback = cb;
 		}
 
-		// Token: 0x0603C51E RID: 247070 RVA: 0x00E730DC File Offset: 0x00E712DC
+		// Token: 0x06031477 RID: 201847 RVA: 0x00DC3744 File Offset: 0x00DC1944
 		protected bool CheckEntityValid()
 		{
 			Entity entity = base.GetEntity();
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603C51F RID: 247071 RVA: 0x00E73134 File Offset: 0x00E71334
+		// Token: 0x06031478 RID: 201848 RVA: 0x00DC379C File Offset: 0x00DC199C
 		protected override void OnActivate()
 		{
 			this.BossStateViewConfig = this.GetMonsterConfig();
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshHardnessAttributeId();
 		}
 
-		// Token: 0x0603C520 RID: 247072 RVA: 0x00E73187 File Offset: 0x00E71387
+		// Token: 0x06031479 RID: 201849 RVA: 0x00DC37EF File Offset: 0x00DC19EF
 		protected override void OnDeactivate()
 		{
 			this.BossStateViewConfig = null;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HardnessPercentStageList = null;
 		}
 
-		// Token: 0x0603C521 RID: 247073 RVA: 0x00E731A3 File Offset: 0x00E713A3
+		// Token: 0x0603147A RID: 201850 RVA: 0x00DC380B File Offset: 0x00DC1A0B
 		protected override bool DestroyOverride()
 		{
 			base.DestroyOverride();
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603C522 RID: 247074 RVA: 0x00E731D8 File Offset: 0x00E713D8
+		// Token: 0x0603147B RID: 201851 RVA: 0x00DC3840 File Offset: 0x00DC1A40
 		[NullableContext(1)]
 		protected override void AddEntityEvents(Entity entity)
 		{
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.ListenForAttributeChanged(entity, EAttributeType.LifeMax, new Action<EAttributeType, float, float>(this.OnBossMaxHealthChanged));
 		}
 
-		// Token: 0x0603C523 RID: 247075 RVA: 0x00E73391 File Offset: 0x00E71591
+		// Token: 0x0603147C RID: 201852 RVA: 0x00DC39F9 File Offset: 0x00DC1BF9
 		[NullableContext(1)]
 		protected override void RemoveEntityEvents(Entity entity)
 		{
@@ -112,32 +112,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.RemoveWithTarget(entity, EEventName.CharBeHitTimeScale, new Action<float, ETimeScaleSourceType>(this.OnTimeScale));
 		}
 
-		// Token: 0x0603C524 RID: 247076 RVA: 0x00E733CE File Offset: 0x00E715CE
+		// Token: 0x0603147D RID: 201853 RVA: 0x00DC3A36 File Offset: 0x00DC1C36
 		public virtual void UpdateStyle(IDoubleViewBossStateViewStyle bossStateViewStyle = null)
 		{
 		}
 
-		// Token: 0x0603C525 RID: 247077 RVA: 0x00E733D0 File Offset: 0x00E715D0
+		// Token: 0x0603147E RID: 201854 RVA: 0x00DC3A38 File Offset: 0x00DC1C38
 		public virtual void Tick(float delta)
 		{
 		}
 
-		// Token: 0x0603C526 RID: 247078 RVA: 0x00E733D2 File Offset: 0x00E715D2
+		// Token: 0x0603147F RID: 201855 RVA: 0x00DC3A3A File Offset: 0x00DC1C3A
 		public virtual void ChangeBuff(in GameplayCue cue, bool isAdd, int handleId, int entityId = 0)
 		{
 		}
 
-		// Token: 0x0603C527 RID: 247079 RVA: 0x00E733D4 File Offset: 0x00E715D4
+		// Token: 0x06031480 RID: 201856 RVA: 0x00DC3A3C File Offset: 0x00DC1C3C
 		public virtual void HideBossName(bool bVisible)
 		{
 		}
 
-		// Token: 0x0603C528 RID: 247080 RVA: 0x00E733D6 File Offset: 0x00E715D6
+		// Token: 0x06031481 RID: 201857 RVA: 0x00DC3A3E File Offset: 0x00DC1C3E
 		protected virtual void OnBossHeathChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 		}
 
-		// Token: 0x0603C529 RID: 247081 RVA: 0x00E733D8 File Offset: 0x00E715D8
+		// Token: 0x06031482 RID: 201858 RVA: 0x00DC3A40 File Offset: 0x00DC1C40
 		private void OnShieldChanged(float shield)
 		{
 			if (!this.IsValid())
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnBossShieldChanged(shield);
 		}
 
-		// Token: 0x0603C52A RID: 247082 RVA: 0x00E733EA File Offset: 0x00E715EA
+		// Token: 0x06031483 RID: 201859 RVA: 0x00DC3A52 File Offset: 0x00DC1C52
 		private void OnTimeScale(float timeScale, ETimeScaleSourceType sourceType)
 		{
 			if (!this.IsValid())
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnBossTimeScaleChange(timeScale);
 		}
 
-		// Token: 0x0603C52B RID: 247083 RVA: 0x00E733FC File Offset: 0x00E715FC
+		// Token: 0x06031484 RID: 201860 RVA: 0x00DC3A64 File Offset: 0x00DC1C64
 		public virtual void OnLanguageChange()
 		{
 			if (!this.IsValid())
@@ -167,53 +167,53 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnBossLanguageChange();
 		}
 
-		// Token: 0x0603C52C RID: 247084 RVA: 0x00E7340D File Offset: 0x00E7160D
+		// Token: 0x06031485 RID: 201861 RVA: 0x00DC3A75 File Offset: 0x00DC1C75
 		private void OnHardnessHideChanged(int tagId, bool bTagExists)
 		{
 			this.OnBossHardnessActivated(bTagExists);
 		}
 
-		// Token: 0x0603C52D RID: 247085 RVA: 0x00E73416 File Offset: 0x00E71616
+		// Token: 0x06031486 RID: 201862 RVA: 0x00DC3A7E File Offset: 0x00DC1C7E
 		private void OnHiddenTagChanged(int tagId, bool bTagExists)
 		{
 			this.HasHiddenTag = bTagExists;
 			this.RefreshHidden();
 		}
 
-		// Token: 0x0603C52E RID: 247086 RVA: 0x00E73425 File Offset: 0x00E71625
+		// Token: 0x06031487 RID: 201863 RVA: 0x00DC3A8D File Offset: 0x00DC1C8D
 		private void OnFallDownTagChanged(int tagId, bool bTagExists)
 		{
 			this.HasFallDownTag = bTagExists;
 			this.OnFallDownVisibleChanged(bTagExists);
 		}
 
-		// Token: 0x0603C52F RID: 247087 RVA: 0x00E73435 File Offset: 0x00E71635
+		// Token: 0x06031488 RID: 201864 RVA: 0x00DC3A9D File Offset: 0x00DC1C9D
 		private void OnHardnessActivated(int tagId, bool bTagExists)
 		{
 			this.OnHardnessAttributeChanged();
 		}
 
-		// Token: 0x0603C530 RID: 247088 RVA: 0x00E7343D File Offset: 0x00E7163D
+		// Token: 0x06031489 RID: 201865 RVA: 0x00DC3AA5 File Offset: 0x00DC1CA5
 		private void OnRageActivated(int tagId, bool bTagExists)
 		{
 			this.OnHardnessAttributeChanged();
 		}
 
-		// Token: 0x0603C531 RID: 247089 RVA: 0x00E73445 File Offset: 0x00E71645
+		// Token: 0x0603148A RID: 201866 RVA: 0x00DC3AAD File Offset: 0x00DC1CAD
 		private void OnFightTagChanged(int tagId, bool bTagExists)
 		{
 			this.HasFightTag = bTagExists;
 			this.RefreshHidden();
 		}
 
-		// Token: 0x0603C532 RID: 247090 RVA: 0x00E73454 File Offset: 0x00E71654
+		// Token: 0x0603148B RID: 201867 RVA: 0x00DC3ABC File Offset: 0x00DC1CBC
 		protected void OnHardnessAttributeChanged()
 		{
 			this.RefreshHardnessAttributeId();
 			this.OnBossStateChange();
 		}
 
-		// Token: 0x0603C533 RID: 247091 RVA: 0x00E73464 File Offset: 0x00E71664
+		// Token: 0x0603148C RID: 201868 RVA: 0x00DC3ACC File Offset: 0x00DC1CCC
 		protected void RefreshHardnessAttributeId()
 		{
 			if (base.GetEntity().GetComponent<BaseTagComponent>().HasTag(GameplayTagDefine.EGameplayTagId["功能.功能制作.狂暴生效"]))
@@ -226,63 +226,63 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.MaxHardnessAttributeId = EAttributeType.HardnessMax;
 		}
 
-		// Token: 0x0603C534 RID: 247092 RVA: 0x00E734B6 File Offset: 0x00E716B6
+		// Token: 0x0603148D RID: 201869 RVA: 0x00DC3B1E File Offset: 0x00DC1D1E
 		protected virtual void OnBossStateChange()
 		{
 		}
 
-		// Token: 0x0603C535 RID: 247093 RVA: 0x00E734B8 File Offset: 0x00E716B8
+		// Token: 0x0603148E RID: 201870 RVA: 0x00DC3B20 File Offset: 0x00DC1D20
 		private void OnHardnessChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.OnBossHardnessChanged(newValue);
 		}
 
-		// Token: 0x0603C536 RID: 247094 RVA: 0x00E734C1 File Offset: 0x00E716C1
+		// Token: 0x0603148F RID: 201871 RVA: 0x00DC3B29 File Offset: 0x00DC1D29
 		public virtual void OnBossMaxHealthChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 		}
 
-		// Token: 0x0603C537 RID: 247095 RVA: 0x00E734C3 File Offset: 0x00E716C3
+		// Token: 0x06031490 RID: 201872 RVA: 0x00DC3B2B File Offset: 0x00DC1D2B
 		protected virtual void OnVulnerabilityActivated(int tagId, bool bTagExists)
 		{
 		}
 
-		// Token: 0x0603C538 RID: 247096 RVA: 0x00E734C5 File Offset: 0x00E716C5
+		// Token: 0x06031491 RID: 201873 RVA: 0x00DC3B2D File Offset: 0x00DC1D2D
 		protected virtual void OnLevelChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 		}
 
-		// Token: 0x0603C539 RID: 247097 RVA: 0x00E734C7 File Offset: 0x00E716C7
+		// Token: 0x06031492 RID: 201874 RVA: 0x00DC3B2F File Offset: 0x00DC1D2F
 		public virtual void OnBossShieldChanged(float shield)
 		{
 		}
 
-		// Token: 0x0603C53A RID: 247098 RVA: 0x00E734C9 File Offset: 0x00E716C9
+		// Token: 0x06031493 RID: 201875 RVA: 0x00DC3B31 File Offset: 0x00DC1D31
 		public virtual void OnFallDownVisibleChanged(bool showFallDown)
 		{
 		}
 
-		// Token: 0x0603C53B RID: 247099 RVA: 0x00E734CB File Offset: 0x00E716CB
+		// Token: 0x06031494 RID: 201876 RVA: 0x00DC3B33 File Offset: 0x00DC1D33
 		public virtual void OnBossTimeScaleChange(float timeScale)
 		{
 		}
 
-		// Token: 0x0603C53C RID: 247100 RVA: 0x00E734CD File Offset: 0x00E716CD
+		// Token: 0x06031495 RID: 201877 RVA: 0x00DC3B35 File Offset: 0x00DC1D35
 		protected virtual void OnBossHardnessActivated(bool bIsAdd)
 		{
 		}
 
-		// Token: 0x0603C53D RID: 247101 RVA: 0x00E734CF File Offset: 0x00E716CF
+		// Token: 0x06031496 RID: 201878 RVA: 0x00DC3B37 File Offset: 0x00DC1D37
 		protected virtual void OnBossHardnessChanged(float hardness)
 		{
 		}
 
-		// Token: 0x0603C53E RID: 247102 RVA: 0x00E734D1 File Offset: 0x00E716D1
+		// Token: 0x06031497 RID: 201879 RVA: 0x00DC3B39 File Offset: 0x00DC1D39
 		protected virtual void OnBossLanguageChange()
 		{
 		}
 
-		// Token: 0x0603C53F RID: 247103 RVA: 0x00E734D4 File Offset: 0x00E716D4
+		// Token: 0x06031498 RID: 201880 RVA: 0x00DC3B3C File Offset: 0x00DC1D3C
 		protected void RefreshHiddenTagState()
 		{
 			Entity entity = base.GetEntity();
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HasFightTag = (baseTagComponent != null && baseTagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.进入战斗"]));
 		}
 
-		// Token: 0x0603C540 RID: 247104 RVA: 0x00E73557 File Offset: 0x00E71757
+		// Token: 0x06031499 RID: 201881 RVA: 0x00DC3BBF File Offset: 0x00DC1DBF
 		public void RefreshHidden()
 		{
 			if (!this.IsValid())
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Show(null);
 		}
 
-		// Token: 0x0603C541 RID: 247105 RVA: 0x00E73590 File Offset: 0x00E71790
+		// Token: 0x0603149A RID: 201882 RVA: 0x00DC3BF8 File Offset: 0x00DC1DF8
 		public AkiClient.Game.Aki.Data.Entity.Enum.EBossStateViewType? GetBossStateViewState()
 		{
 			if (!this.IsValid())
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new AkiClient.Game.Aki.Data.Entity.Enum.EBossStateViewType?(((ebossStateViewType2 != null) ? new AkiClient.Game.Aki.Data.Entity.Enum.EBossStateViewType?((AkiClient.Game.Aki.Data.Entity.Enum.EBossStateViewType)ebossStateViewType2.GetValueOrDefault()) : null).GetValueOrDefault());
 		}
 
-		// Token: 0x0603C542 RID: 247106 RVA: 0x00E7362C File Offset: 0x00E7182C
+		// Token: 0x0603149B RID: 201883 RVA: 0x00DC3C94 File Offset: 0x00DC1E94
 		protected int GetHardnessStrength(float percent)
 		{
 			float num = percent * 100f;
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return 0;
 		}
 
-		// Token: 0x0603C543 RID: 247107 RVA: 0x00E73698 File Offset: 0x00E71898
+		// Token: 0x0603149C RID: 201884 RVA: 0x00DC3D00 File Offset: 0x00DC1F00
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -375,20 +375,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new ValueTuple<float, float>(item, item2);
 		}
 
-		// Token: 0x0603C544 RID: 247108 RVA: 0x00E736E9 File Offset: 0x00E718E9
+		// Token: 0x0603149D RID: 201885 RVA: 0x00DC3D51 File Offset: 0x00DC1F51
 		[NullableContext(1)]
 		protected BaseAttributeComponent GetAttributeComponent()
 		{
 			return base.GetEntity().CheckGetComponent<BaseAttributeComponent>();
 		}
 
-		// Token: 0x0603C545 RID: 247109 RVA: 0x00E736F6 File Offset: 0x00E718F6
+		// Token: 0x0603149E RID: 201886 RVA: 0x00DC3D5E File Offset: 0x00DC1F5E
 		protected float GetCurrentAttributeValueById(EAttributeType attributeId)
 		{
 			return this.GetAttributeComponent().GetCurrentValue(attributeId);
 		}
 
-		// Token: 0x0603C546 RID: 247110 RVA: 0x00E73704 File Offset: 0x00E71904
+		// Token: 0x0603149F RID: 201887 RVA: 0x00DC3D6C File Offset: 0x00DC1F6C
 		protected float GetBossShield()
 		{
 			if (!this.IsValid())
@@ -398,7 +398,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return base.GetEntity().CheckGetComponent<CharacterShieldComponent>().ShieldTotal;
 		}
 
-		// Token: 0x0603C547 RID: 247111 RVA: 0x00E73724 File Offset: 0x00E71924
+		// Token: 0x060314A0 RID: 201888 RVA: 0x00DC3D8C File Offset: 0x00DC1F8C
 		protected IBossStateViewConfig GetMonsterConfig()
 		{
 			if (!this.IsValid())
@@ -418,7 +418,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return monsterComponent.BossViewConfig;
 		}
 
-		// Token: 0x0603C548 RID: 247112 RVA: 0x00E73751 File Offset: 0x00E71951
+		// Token: 0x060314A1 RID: 201889 RVA: 0x00DC3DB9 File Offset: 0x00DC1FB9
 		protected BaseInfoComponent GetBaseInfo()
 		{
 			if (!this.IsValid())
@@ -433,7 +433,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return component.GetBaseInfo();
 		}
 
-		// Token: 0x0603C549 RID: 247113 RVA: 0x00E73773 File Offset: 0x00E71973
+		// Token: 0x060314A2 RID: 201890 RVA: 0x00DC3DDB File Offset: 0x00DC1FDB
 		protected CreatureDataComponent GetCreatureDataComp()
 		{
 			if (!this.IsValid())
@@ -443,7 +443,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return base.GetEntity().GetComponent<CreatureDataComponent>();
 		}
 
-		// Token: 0x0603C54A RID: 247114 RVA: 0x00E7378A File Offset: 0x00E7198A
+		// Token: 0x060314A3 RID: 201891 RVA: 0x00DC3DF2 File Offset: 0x00DC1FF2
 		protected AttributeComponent GetAttributeInfo()
 		{
 			if (!this.IsValid())
@@ -458,8 +458,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return component.GetAttributeComponent();
 		}
 
-		// Token: 0x17008E18 RID: 36376
-		// (get) Token: 0x0603C54B RID: 247115 RVA: 0x00E737AC File Offset: 0x00E719AC
+		// Token: 0x170061EA RID: 25066
+		// (get) Token: 0x060314A4 RID: 201892 RVA: 0x00DC3E14 File Offset: 0x00DC2014
 		protected int? BarBufferAnimLength
 		{
 			get
@@ -468,26 +468,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C54C RID: 247116 RVA: 0x00E737B4 File Offset: 0x00E719B4
+		// Token: 0x060314A5 RID: 201893 RVA: 0x00DC3E1C File Offset: 0x00DC201C
 		[NullableContext(1)]
 		protected virtual string GetResourceId()
 		{
 			return "UiItem_BossState_Prefab";
 		}
 
-		// Token: 0x0603C54D RID: 247117 RVA: 0x00E737BB File Offset: 0x00E719BB
+		// Token: 0x060314A6 RID: 201894 RVA: 0x00DC3E23 File Offset: 0x00DC2023
 		public virtual void HideWithAnim()
 		{
 			base.Hide(null);
 		}
 
-		// Token: 0x0401F6D0 RID: 128720
+		// Token: 0x0401A189 RID: 106889
 		private const float PERCENT_RATE = 100f;
 
-		// Token: 0x0401F6D1 RID: 128721
+		// Token: 0x0401A18A RID: 106890
 		private int? BufferAnimLengthInternal;
 
-		// Token: 0x0401F6D2 RID: 128722
+		// Token: 0x0401A18B RID: 106891
 		[Nullable(new byte[]
 		{
 			2,
@@ -495,28 +495,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private IReadOnlyList<IReadOnlyList<int>> HardnessPercentStageList;
 
-		// Token: 0x0401F6D3 RID: 128723
+		// Token: 0x0401A18C RID: 106892
 		protected EAttributeType HardnessAttributeId;
 
-		// Token: 0x0401F6D4 RID: 128724
+		// Token: 0x0401A18D RID: 106893
 		protected EAttributeType MaxHardnessAttributeId;
 
-		// Token: 0x0401F6D5 RID: 128725
+		// Token: 0x0401A18E RID: 106894
 		protected IBossStateViewConfig BossStateViewConfig;
 
-		// Token: 0x0401F6D6 RID: 128726
+		// Token: 0x0401A18F RID: 106895
 		protected bool HasHiddenTag;
 
-		// Token: 0x0401F6D7 RID: 128727
+		// Token: 0x0401A190 RID: 106896
 		protected bool HasFallDownTag;
 
-		// Token: 0x0401F6D8 RID: 128728
+		// Token: 0x0401A191 RID: 106897
 		protected bool HasFightTag;
 
-		// Token: 0x0401F6D9 RID: 128729
+		// Token: 0x0401A192 RID: 106898
 		protected bool OnlyShowInBattleState;
 
-		// Token: 0x0401F6DA RID: 128730
+		// Token: 0x0401A193 RID: 106899
 		[Nullable(new byte[]
 		{
 			2,

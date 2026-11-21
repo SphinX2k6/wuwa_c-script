@@ -2,43 +2,43 @@
 
 namespace GuideLineProcess
 {
-	// Token: 0x020044C7 RID: 17607
+	// Token: 0x02002F54 RID: 12116
 	public class PendingProcess : IStaticVariableResetter
 	{
-		// Token: 0x0602D62B RID: 185899 RVA: 0x00A3DCB6 File Offset: 0x00A3BEB6
+		// Token: 0x0601CB69 RID: 117609 RVA: 0x008C3916 File Offset: 0x008C1B16
 		public PendingProcess(EProcessType processType)
 		{
 			this.ProcessType = processType;
 			this.ProcessId = ++PendingProcess.Id;
 		}
 
-		// Token: 0x0602D62C RID: 185900 RVA: 0x00A3DCD8 File Offset: 0x00A3BED8
+		// Token: 0x0601CB6A RID: 117610 RVA: 0x008C3938 File Offset: 0x008C1B38
 		static PendingProcess()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PendingProcess.CreateStaticDefaultValue), new Action(PendingProcess.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602D62D RID: 185901 RVA: 0x00A3DCF7 File Offset: 0x00A3BEF7
+		// Token: 0x0601CB6B RID: 117611 RVA: 0x008C3957 File Offset: 0x008C1B57
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602D62E RID: 185902 RVA: 0x00A3DCF9 File Offset: 0x00A3BEF9
+		// Token: 0x0601CB6C RID: 117612 RVA: 0x008C3959 File Offset: 0x008C1B59
 		public static void ResetStaticDefaultValue()
 		{
 			PendingProcess.Id = 0;
 		}
 
-		// Token: 0x0401841D RID: 99357
+		// Token: 0x0400F1C5 RID: 61893
 		public static int Id;
 
-		// Token: 0x0401841E RID: 99358
+		// Token: 0x0400F1C6 RID: 61894
 		public int ProcessId;
 
-		// Token: 0x0401841F RID: 99359
+		// Token: 0x0400F1C7 RID: 61895
 		public bool Finished;
 
-		// Token: 0x04018420 RID: 99360
+		// Token: 0x0400F1C8 RID: 61896
 		public readonly EProcessType ProcessType;
 	}
 }

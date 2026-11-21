@@ -7,17 +7,17 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C95 RID: 23701
+	// Token: 0x02004C77 RID: 19575
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiMergeHeadStateData
 	{
-		// Token: 0x0603BDB4 RID: 245172 RVA: 0x00E4BDE4 File Offset: 0x00E49FE4
+		// Token: 0x06030D07 RID: 199943 RVA: 0x00D9C3D8 File Offset: 0x00D9A5D8
 		public void Init()
 		{
 		}
 
-		// Token: 0x0603BDB5 RID: 245173 RVA: 0x00E4BDE8 File Offset: 0x00E49FE8
+		// Token: 0x06030D08 RID: 199944 RVA: 0x00D9C3DC File Offset: 0x00D9A5DC
 		public void OnLeaveLevel()
 		{
 			if (this.ListenMonsterRemoveMap.Count <= 0)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.ListenMonsterRemoveMap.Clear();
 		}
 
-		// Token: 0x0603BDB6 RID: 245174 RVA: 0x00E4BEC0 File Offset: 0x00E4A0C0
+		// Token: 0x06030D09 RID: 199945 RVA: 0x00D9C4B4 File Offset: 0x00D9A6B4
 		public void Clear()
 		{
 			foreach (MergeHeadStateInfo info in this.InfoMap.Values)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.ListenMonsterRemoveMap.Clear();
 		}
 
-		// Token: 0x0603BDB7 RID: 245175 RVA: 0x00E4BF3C File Offset: 0x00E4A13C
+		// Token: 0x06030D0A RID: 199946 RVA: 0x00D9C530 File Offset: 0x00D9A730
 		[NullableContext(2)]
 		public void UpdateProgress(long treeId, int nodeId, MonsterCreatorProgress monsterCreator, string monsterGroupName, IMonsterMergedHpBarSettings monsterMergedHpBarSettings = null)
 		{
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.CreateMergeHeadStateInfo(treeId, nodeId, monsterCreator, monsterGroupName, monsterMergedHpBarSettings);
 		}
 
-		// Token: 0x0603BDB8 RID: 245176 RVA: 0x00E4BFD0 File Offset: 0x00E4A1D0
+		// Token: 0x06030D0B RID: 199947 RVA: 0x00D9C5C4 File Offset: 0x00D9A7C4
 		public void RemoveTree(long treeId)
 		{
 			foreach (MergeHeadStateInfo mergeHeadStateInfo in this.InfoMap.Values)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDB9 RID: 245177 RVA: 0x00E4C048 File Offset: 0x00E4A248
+		// Token: 0x06030D0C RID: 199948 RVA: 0x00D9C63C File Offset: 0x00D9A83C
 		public void RemoveNode(long treeId, int nodeId)
 		{
 			foreach (MergeHeadStateInfo mergeHeadStateInfo in this.InfoMap.Values)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDBA RID: 245178 RVA: 0x00E4C0C8 File Offset: 0x00E4A2C8
+		// Token: 0x06030D0D RID: 199949 RVA: 0x00D9C6BC File Offset: 0x00D9A8BC
 		public void OnAddEntity(EntityHandle handle)
 		{
 			if (this.ListenMonsterAddMap.Count <= 0)
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDBB RID: 245179 RVA: 0x00E4C230 File Offset: 0x00E4A430
+		// Token: 0x06030D0E RID: 199950 RVA: 0x00D9C824 File Offset: 0x00D9AA24
 		public void OnRemoveEntity(EntityHandle handle)
 		{
 			if (this.ListenMonsterRemoveMap.Count <= 0)
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDBC RID: 245180 RVA: 0x00E4C2E0 File Offset: 0x00E4A4E0
+		// Token: 0x06030D0F RID: 199951 RVA: 0x00D9C8D4 File Offset: 0x00D9AAD4
 		[NullableContext(2)]
 		private void CreateMergeHeadStateInfo(long treeId, int nodeId, [Nullable(1)] MonsterCreatorProgress monsterCreator, string monsterGroupName, IMonsterMergedHpBarSettings monsterMergedHpBarSettings)
 		{
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDBD RID: 245181 RVA: 0x00E4C590 File Offset: 0x00E4A790
+		// Token: 0x06030D10 RID: 199952 RVA: 0x00D9CB84 File Offset: 0x00D9AD84
 		private void UpdateMergeHeadStateInfo(MergeHeadStateInfo info, MonsterCreatorProgress monsterCreator)
 		{
 			foreach (MonsterCreatorProgressSlot monsterCreatorProgressSlot in monsterCreator.Slots)
@@ -302,7 +302,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDBE RID: 245182 RVA: 0x00E4C6FC File Offset: 0x00E4A8FC
+		// Token: 0x06030D11 RID: 199953 RVA: 0x00D9CCF0 File Offset: 0x00D9AEF0
 		private void DeleteMergeHeadStateInfo(MergeHeadStateInfo info)
 		{
 			foreach (MergeHeadStateMonsterInfo mergeHeadStateMonsterInfo in info.MonsterInfos.Values)
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.InfoMap.Remove(info.Id);
 		}
 
-		// Token: 0x0603BDBF RID: 245183 RVA: 0x00E4C7B0 File Offset: 0x00E4A9B0
+		// Token: 0x06030D12 RID: 199954 RVA: 0x00D9CDA4 File Offset: 0x00D9AFA4
 		private void AddMonsterListener(MergeHeadStateMonsterInfo monsterInfo)
 		{
 			if (!monsterInfo.AddListener())
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.ListenMonsterRemoveMap[monsterInfo.EntityHandle.Id] = monsterInfo;
 		}
 
-		// Token: 0x0603BDC0 RID: 245184 RVA: 0x00E4C7D2 File Offset: 0x00E4A9D2
+		// Token: 0x06030D13 RID: 199955 RVA: 0x00D9CDC6 File Offset: 0x00D9AFC6
 		private void RemoveMonsterListener(MergeHeadStateMonsterInfo monsterInfo)
 		{
 			monsterInfo.RemoveListener();
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDC1 RID: 245185 RVA: 0x00E4C7F4 File Offset: 0x00E4A9F4
+		// Token: 0x06030D14 RID: 199956 RVA: 0x00D9CDE8 File Offset: 0x00D9AFE8
 		public void OnMonsterFightTagChange(int id, bool hasFightTag)
 		{
 			MergeHeadStateInfo valueOrDefault = this.InfoMap.GetValueOrDefault(id);
@@ -372,7 +372,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.UpdateVisible(valueOrDefault, true);
 		}
 
-		// Token: 0x0603BDC2 RID: 245186 RVA: 0x00E4C864 File Offset: 0x00E4AA64
+		// Token: 0x06030D15 RID: 199957 RVA: 0x00D9CE58 File Offset: 0x00D9B058
 		public void UpdateVisible(MergeHeadStateInfo info, bool dispatchEvent)
 		{
 			bool flag = false;
@@ -397,13 +397,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDC3 RID: 245187 RVA: 0x00E4C8DC File Offset: 0x00E4AADC
+		// Token: 0x06030D16 RID: 199958 RVA: 0x00D9CED0 File Offset: 0x00D9B0D0
 		private void DispatchVisibleChangeEvent(MergeHeadStateInfo info)
 		{
 			EventSystem.Instance.Emit<MergeHeadStateInfo>(EEventName.BattleUiMergeHeadStateVisibleChanged, info);
 		}
 
-		// Token: 0x0603BDC4 RID: 245188 RVA: 0x00E4C8F0 File Offset: 0x00E4AAF0
+		// Token: 0x06030D17 RID: 199959 RVA: 0x00D9CEE4 File Offset: 0x00D9B0E4
 		public void OnMonsterHealthChange(int id, float hpChange)
 		{
 			MergeHeadStateInfo valueOrDefault = this.InfoMap.GetValueOrDefault(id);
@@ -421,22 +421,22 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.DispatchHealthChangeEvent(valueOrDefault);
 		}
 
-		// Token: 0x0603BDC5 RID: 245189 RVA: 0x00E4C94F File Offset: 0x00E4AB4F
+		// Token: 0x06030D18 RID: 199960 RVA: 0x00D9CF43 File Offset: 0x00D9B143
 		private void DispatchHealthChangeEvent(MergeHeadStateInfo info)
 		{
 			EventSystem.Instance.Emit<MergeHeadStateInfo>(EEventName.BattleUiMergeHeadStateHealthChanged, info);
 		}
 
-		// Token: 0x0401F364 RID: 127844
+		// Token: 0x04019E1D RID: 106013
 		private int IncId;
 
-		// Token: 0x0401F365 RID: 127845
+		// Token: 0x04019E1E RID: 106014
 		public Dictionary<int, MergeHeadStateInfo> InfoMap = new Dictionary<int, MergeHeadStateInfo>();
 
-		// Token: 0x0401F366 RID: 127846
+		// Token: 0x04019E1F RID: 106015
 		public Dictionary<int, MergeHeadStateMonsterInfo> ListenMonsterAddMap = new Dictionary<int, MergeHeadStateMonsterInfo>();
 
-		// Token: 0x0401F367 RID: 127847
+		// Token: 0x04019E20 RID: 106016
 		public Dictionary<int, MergeHeadStateMonsterInfo> ListenMonsterRemoveMap = new Dictionary<int, MergeHeadStateMonsterInfo>();
 	}
 }

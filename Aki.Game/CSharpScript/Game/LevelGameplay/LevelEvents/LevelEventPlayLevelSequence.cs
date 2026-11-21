@@ -5,15 +5,15 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B51 RID: 27473
+	// Token: 0x02005CC9 RID: 23753
 	public class LevelEventPlayLevelSequence : LevelEventBase
 	{
-		// Token: 0x060441BB RID: 278971 RVA: 0x010C274D File Offset: 0x010C094D
+		// Token: 0x0603A30D RID: 238349 RVA: 0x0106C301 File Offset: 0x0106A501
 		public LevelEventPlayLevelSequence(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441BC RID: 278972 RVA: 0x010C2758 File Offset: 0x010C0958
+		// Token: 0x0603A30E RID: 238350 RVA: 0x0106C30C File Offset: 0x0106A50C
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

@@ -1,34 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049D0 RID: 18896
+	// Token: 0x0200394A RID: 14666
 	public class ShipTowerAutoLeftTeamComponent : HotKeyComponent
 	{
-		// Token: 0x060311F7 RID: 201207 RVA: 0x00B651B0 File Offset: 0x00B633B0
+		// Token: 0x06025D2D RID: 154925 RVA: 0x00AA0100 File Offset: 0x00A9E300
 		public ShipTowerAutoLeftTeamComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060311F8 RID: 201208 RVA: 0x00B651C0 File Offset: 0x00B633C0
+		// Token: 0x06025D2E RID: 154926 RVA: 0x00AA0110 File Offset: 0x00A9E310
 		protected override void OnPress(HotKeyMap config)
 		{
 			UiNavigationNewController.Instance.ClickButtonInside(config.BindButtonTag);
 			this.AddTickHandle();
 		}
 
-		// Token: 0x060311F9 RID: 201209 RVA: 0x00B651D9 File Offset: 0x00B633D9
+		// Token: 0x06025D2F RID: 154927 RVA: 0x00AA0129 File Offset: 0x00A9E329
 		protected override void OnUnRegisterMe()
 		{
 			this.RemoveTickHandle();
 		}
 
-		// Token: 0x060311FA RID: 201210 RVA: 0x00B651E1 File Offset: 0x00B633E1
+		// Token: 0x06025D30 RID: 154928 RVA: 0x00AA0131 File Offset: 0x00A9E331
 		private void AddTickHandle()
 		{
 			if (this.TickHandle == -1)
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x060311FB RID: 201211 RVA: 0x00B65216 File Offset: 0x00B63416
+		// Token: 0x06025D31 RID: 154929 RVA: 0x00AA0166 File Offset: 0x00A9E366
 		private void RemoveTickHandle()
 		{
 			if (this.TickHandle != -1)
@@ -47,7 +46,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x060311FC RID: 201212 RVA: 0x00B6523C File Offset: 0x00B6343C
+		// Token: 0x06025D32 RID: 154930 RVA: 0x00AA018C File Offset: 0x00A9E38C
 		private void OnTick(float deltaTime)
 		{
 			TsUiNavigationBehaviorListener currentNavigationFocusListener = UiNavigationNewController.Instance.GetCurrentNavigationFocusListener();
@@ -59,32 +58,15 @@ namespace CSharpScript.Game.Module.UiNavigation
 			string nextGroupName = navigationGroup.NextGroupName;
 			UiNavigationViewHandle currentViewHandle = UiNavigationViewManager.Instance.GetCurrentViewHandle();
 			NavigationGroup navigationGroup2 = (currentViewHandle != null) ? currentViewHandle.GetActiveNavigationGroupByNameCheckAll(nextGroupName) : null;
-			bool flag;
-			if (navigationGroup2 == null)
-			{
-				flag = (null != null);
-			}
-			else
-			{
-				List<TsUiNavigationBehaviorListener> activeListenerList = navigationGroup2.ActiveListenerList;
-				if (activeListenerList == null)
-				{
-					flag = (null != null);
-				}
-				else
-				{
-					TsUiNavigationBehaviorListener tsUiNavigationBehaviorListener = activeListenerList.ElementAtOrDefault(0);
-					flag = (((tsUiNavigationBehaviorListener != null) ? tsUiNavigationBehaviorListener.PanelConfig : null) != null);
-				}
-			}
-			if (flag)
+			List<TsUiNavigationBehaviorListener> list = (navigationGroup2 != null) ? navigationGroup2.ActiveListenerList : null;
+			if (list != null && list.Count > 0 && list[0].PanelConfig != null)
 			{
 				UiNavigationNewController.Instance.JumpNavigationGroupByName(navigationGroup.GroupName, nextGroupName);
 				this.RemoveTickHandle();
 			}
 		}
 
-		// Token: 0x060311FD RID: 201213 RVA: 0x00B652BC File Offset: 0x00B634BC
+		// Token: 0x06025D33 RID: 154931 RVA: 0x00AA020C File Offset: 0x00A9E40C
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
@@ -112,7 +94,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, tsUiNavigationBehaviorListener != null && tsUiNavigationBehaviorListener.IsListenerActive(), false);
 		}
 
-		// Token: 0x0401A4CA RID: 107722
+		// Token: 0x04014D3C RID: 85308
 		private int TickHandle = -1;
 	}
 }

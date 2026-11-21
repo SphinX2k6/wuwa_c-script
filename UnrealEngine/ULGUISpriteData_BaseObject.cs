@@ -6,73 +6,62 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020C9 RID: 8393
+	// Token: 0x020006C0 RID: 1728
 	[UnrealObjectPath("/Script/LGUI.LGUISpriteData_BaseObject")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public abstract class ULGUISpriteData_BaseObject : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601F9D0 RID: 129488 RVA: 0x002F01D6 File Offset: 0x002EE3D6
+		// Token: 0x060093E6 RID: 37862 RVA: 0x000DEEDD File Offset: 0x000DD0DD
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULGUISpriteData_BaseObject._ClassPtr;
 		}
 
-		// Token: 0x0601F9D1 RID: 129489 RVA: 0x002F01E2 File Offset: 0x002EE3E2
+		// Token: 0x060093E7 RID: 37863 RVA: 0x000DEEE9 File Offset: 0x000DD0E9
 		public bool IsIndividual()
 		{
 			return ULGUISpriteData_BaseObject.__IsIndividual_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F9D2 RID: 129490 RVA: 0x002F01EF File Offset: 0x002EE3EF
-		[NullableContext(1)]
-		public FLGUISpriteInfo GetSpriteInfo()
-		{
-			return new FLGUISpriteInfo(ULGUISpriteData_BaseObject.__GetSpriteInfo_Internal(base.NativePtr), null);
-		}
-
-		// Token: 0x0601F9D3 RID: 129491 RVA: 0x002F0202 File Offset: 0x002EE402
+		// Token: 0x060093E8 RID: 37864 RVA: 0x000DEEF6 File Offset: 0x000DD0F6
 		[NullableContext(2)]
 		public UTexture2D GetAtlasTexture()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UTexture2D>(ULGUISpriteData_BaseObject.__GetAtlasTexture_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601F9D4 RID: 129492
+		// Token: 0x060093E9 RID: 37865
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsIndividual_Internal(IntPtr @this);
 
-		// Token: 0x0601F9D5 RID: 129493
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetSpriteInfo_Internal(IntPtr @this);
-
-		// Token: 0x0601F9D6 RID: 129494
+		// Token: 0x060093EA RID: 37866
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetAtlasTexture_Internal(IntPtr @this);
 
-		// Token: 0x0601F9D7 RID: 129495 RVA: 0x002F0214 File Offset: 0x002EE414
+		// Token: 0x060093EB RID: 37867 RVA: 0x000DEF08 File Offset: 0x000DD108
 		static ULGUISpriteData_BaseObject()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.LGUISpriteData_BaseObject");
 		}
 
-		// Token: 0x0601F9D8 RID: 129496 RVA: 0x002F0224 File Offset: 0x002EE424
+		// Token: 0x060093EC RID: 37868 RVA: 0x000DEF18 File Offset: 0x000DD118
 		protected ULGUISpriteData_BaseObject() : this(BuiltinUtils.AllocNativeUObject(ULGUISpriteData_BaseObject.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601F9D9 RID: 129497 RVA: 0x002F024C File Offset: 0x002EE44C
+		// Token: 0x060093ED RID: 37869 RVA: 0x000DEF40 File Offset: 0x000DD140
 		protected ULGUISpriteData_BaseObject(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040110FB RID: 69883
+		// Token: 0x04004075 RID: 16501
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.LGUISpriteData_BaseObject";
 
-		// Token: 0x040110FC RID: 69884
+		// Token: 0x04004076 RID: 16502
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040110FD RID: 69885
+		// Token: 0x04004077 RID: 16503
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

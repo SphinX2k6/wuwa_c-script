@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200034E RID: 846
+	// Token: 0x02000363 RID: 867
 	public class ConfigFormationMotionByRoleId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060013D9 RID: 5081 RVA: 0x000C9B5C File Offset: 0x000C7D5C
+		// Token: 0x06001457 RID: 5207 RVA: 0x000D0068 File Offset: 0x000CE268
 		static ConfigFormationMotionByRoleId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFormationMotionByRoleId.CreateStaticDefaultValue), new Action(ConfigFormationMotionByRoleId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060013DA RID: 5082 RVA: 0x000C9B7C File Offset: 0x000C7D7C
+		// Token: 0x06001458 RID: 5208 RVA: 0x000D0088 File Offset: 0x000CE288
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFormationMotionByRoleId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060013DB RID: 5083 RVA: 0x000C9BFB File Offset: 0x000C7DFB
+		// Token: 0x06001459 RID: 5209 RVA: 0x000D0107 File Offset: 0x000CE307
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFormationMotionByRoleId.LogPair = null;
 			ConfigFormationMotionByRoleId.HandleId = 0;
 		}
 
-		// Token: 0x060013DC RID: 5084 RVA: 0x000C9C09 File Offset: 0x000C7E09
+		// Token: 0x0600145A RID: 5210 RVA: 0x000D0115 File Offset: 0x000CE315
 		public static void Init()
 		{
 			ConfigFormationMotionByRoleId.HandleId = ConfigCommon.InitDataStatement(ConfigFormationMotionByRoleId.HandleId, "db_formation.db", "select BinData from `FormationMotion` where RoleId=?");
 		}
 
-		// Token: 0x060013DD RID: 5085 RVA: 0x000C9C24 File Offset: 0x000C7E24
+		// Token: 0x0600145B RID: 5211 RVA: 0x000D0130 File Offset: 0x000CE330
 		[NullableContext(2)]
 		public static IReadOnlyList<FormationMotion> GetConfigList(int p0RoleId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001706 RID: 5894
+		// Token: 0x04001799 RID: 6041
 		private const string DB = "db_formation.db";
 
-		// Token: 0x04001707 RID: 5895
+		// Token: 0x0400179A RID: 6042
 		private const string FILE = "b.编队.xlsx";
 
-		// Token: 0x04001708 RID: 5896
+		// Token: 0x0400179B RID: 6043
 		private const string TABLE = "FormationMotion";
 
-		// Token: 0x04001709 RID: 5897
+		// Token: 0x0400179C RID: 6044
 		private const string COMMAND = "select BinData from `FormationMotion` where RoleId=?";
 
-		// Token: 0x0400170A RID: 5898
+		// Token: 0x0400179D RID: 6045
 		private const string KEY_PREFIX = "FormationMotionByRoleId";
 
-		// Token: 0x0400170B RID: 5899
+		// Token: 0x0400179E RID: 6046
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400170C RID: 5900
+		// Token: 0x0400179F RID: 6047
 		private static int HandleId;
 	}
 }

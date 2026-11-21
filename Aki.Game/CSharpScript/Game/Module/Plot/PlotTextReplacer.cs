@@ -4,12 +4,12 @@ using System.Text.RegularExpressions;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02005006 RID: 20486
+	// Token: 0x02003FD0 RID: 16336
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotTextReplacer
 	{
-		// Token: 0x060346DC RID: 214748 RVA: 0x00C58708 File Offset: 0x00C56908
+		// Token: 0x0602957F RID: 169343 RVA: 0x00BA3C08 File Offset: 0x00BA1E08
 		public void Init()
 		{
 			if (this.IsInit)
@@ -22,13 +22,13 @@ namespace CSharpScript.Game.Module.Plot
 			this.IsInit = true;
 		}
 
-		// Token: 0x060346DD RID: 214749 RVA: 0x00C58776 File Offset: 0x00C56976
+		// Token: 0x06029580 RID: 169344 RVA: 0x00BA3C76 File Offset: 0x00BA1E76
 		public void Clear()
 		{
 			this.IsInit = false;
 		}
 
-		// Token: 0x060346DE RID: 214750 RVA: 0x00C5877F File Offset: 0x00C5697F
+		// Token: 0x06029581 RID: 169345 RVA: 0x00BA3C7F File Offset: 0x00BA1E7F
 		[NullableContext(2)]
 		public string Replace(string text, bool needClear = false)
 		{
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Plot
 			return this.Pattern.Replace(text, new MatchEvaluator(this.Replacer));
 		}
 
-		// Token: 0x060346DF RID: 214751 RVA: 0x00C587B0 File Offset: 0x00C569B0
+		// Token: 0x06029582 RID: 169346 RVA: 0x00BA3CB0 File Offset: 0x00BA1EB0
 		private string Replacer(Match match)
 		{
 			string value = match.Value;
@@ -71,25 +71,25 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0401BED0 RID: 114384
+		// Token: 0x040168B9 RID: 92345
 		private const string TA = "{TA}";
 
-		// Token: 0x0401BED1 RID: 114385
+		// Token: 0x040168BA RID: 92346
 		private const string PLAYER_NAME = "{PlayerName}";
 
-		// Token: 0x0401BED2 RID: 114386
+		// Token: 0x040168BB RID: 92347
 		private bool IsInit;
 
-		// Token: 0x0401BED3 RID: 114387
+		// Token: 0x040168BC RID: 92348
 		private bool IsMale;
 
-		// Token: 0x0401BED4 RID: 114388
+		// Token: 0x040168BD RID: 92349
 		private string PlayerName = "";
 
-		// Token: 0x0401BED5 RID: 114389
+		// Token: 0x040168BE RID: 92350
 		private string ThirdPerson = "";
 
-		// Token: 0x0401BED6 RID: 114390
+		// Token: 0x040168BF RID: 92351
 		private readonly Regex Pattern = new Regex("\\{(?:Male=(.*?);Female=(.*?)|TA|PlayerName)\\}");
 	}
 }

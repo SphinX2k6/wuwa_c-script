@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005886 RID: 22662
+	// Token: 0x0200485E RID: 18526
 	public class DropDownTitle : TitleItemBase<TakeWeedsDifficulty>
 	{
-		// Token: 0x06039AC4 RID: 236228 RVA: 0x00DB52A7 File Offset: 0x00DB34A7
+		// Token: 0x0602E9E7 RID: 190951 RVA: 0x00D041BF File Offset: 0x00D023BF
 		[NullableContext(1)]
 		public DropDownTitle(UUIItem uiItem) : base(uiItem)
 		{
 		}
 
-		// Token: 0x06039AC5 RID: 236229 RVA: 0x00DB52B0 File Offset: 0x00DB34B0
+		// Token: 0x0602E9E8 RID: 190952 RVA: 0x00D041C8 File Offset: 0x00D023C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039AC6 RID: 236230 RVA: 0x00DB52F8 File Offset: 0x00DB34F8
+		// Token: 0x0602E9E9 RID: 190953 RVA: 0x00D04210 File Offset: 0x00D02410
 		[NullableContext(1)]
 		public override void ShowTemp(TakeWeedsDifficulty data, DropDownItemBase<TakeWeedsDifficulty> selectedItemObj)
 		{
@@ -40,10 +40,10 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			base.GetText(0).SetText(str + "•" + str2, true);
 		}
 
-		// Token: 0x0200BAE1 RID: 47841
+		// Token: 0x0200A4FA RID: 42234
 		private static class EDropDownTitleComponents
 		{
-			// Token: 0x04038786 RID: 231302
+			// Token: 0x04033187 RID: 209287
 			public const int TxtContent = 0;
 		}
 	}

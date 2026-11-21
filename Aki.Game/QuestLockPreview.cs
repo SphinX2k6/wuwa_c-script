@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002660 RID: 9824
+// Token: 0x02001B4B RID: 6987
 public class QuestLockPreview : UiViewBase
 {
-	// Token: 0x060141B0 RID: 82352 RVA: 0x0051233F File Offset: 0x0051053F
+	// Token: 0x06011692 RID: 71314 RVA: 0x00520FF7 File Offset: 0x0051F1F7
 	[NullableContext(1)]
 	public QuestLockPreview(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060141B1 RID: 82353 RVA: 0x00512348 File Offset: 0x00510548
+	// Token: 0x06011693 RID: 71315 RVA: 0x00521000 File Offset: 0x0051F200
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -30,20 +30,20 @@ public class QuestLockPreview : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060141B2 RID: 82354 RVA: 0x005123D2 File Offset: 0x005105D2
+	// Token: 0x06011694 RID: 71316 RVA: 0x0052108A File Offset: 0x0051F28A
 	protected override void OnBeforeCreate()
 	{
 		this.OccupationInfo = (this.OpenParam as List<IOccupationInfo>);
 	}
 
-	// Token: 0x060141B3 RID: 82355 RVA: 0x005123E5 File Offset: 0x005105E5
+	// Token: 0x06011695 RID: 71317 RVA: 0x0052109D File Offset: 0x0051F29D
 	protected override void OnStart()
 	{
 		base.OnStart();
 		this.InitLockReasonItems();
 	}
 
-	// Token: 0x060141B4 RID: 82356 RVA: 0x005123F4 File Offset: 0x005105F4
+	// Token: 0x06011696 RID: 71318 RVA: 0x005210AC File Offset: 0x0051F2AC
 	private void InitLockReasonItems()
 	{
 		if (this.OccupationInfo == null || this.OccupationInfo.Count == 0)
@@ -63,7 +63,7 @@ public class QuestLockPreview : UiViewBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0400978B RID: 38795
+	// Token: 0x040098E3 RID: 39139
 	[Nullable(new byte[]
 	{
 		2,
@@ -71,7 +71,7 @@ public class QuestLockPreview : UiViewBase
 	})]
 	private List<IOccupationInfo> OccupationInfo;
 
-	// Token: 0x0400978C RID: 38796
+	// Token: 0x040098E4 RID: 39140
 	[Nullable(new byte[]
 	{
 		2,
@@ -79,16 +79,16 @@ public class QuestLockPreview : UiViewBase
 	})]
 	private List<LockReasonItem> LockReasonItems;
 
-	// Token: 0x02008C9C RID: 35996
+	// Token: 0x02007E25 RID: 32293
 	private class EChildComponent
 	{
-		// Token: 0x0402DA38 RID: 186936
+		// Token: 0x04028D4F RID: 167247
 		public const int SubTitleText = 0;
 
-		// Token: 0x0402DA39 RID: 186937
+		// Token: 0x04028D50 RID: 167248
 		public const int Content = 1;
 
-		// Token: 0x0402DA3A RID: 186938
+		// Token: 0x04028D51 RID: 167249
 		public const int LockReasonItem = 2;
 	}
 }

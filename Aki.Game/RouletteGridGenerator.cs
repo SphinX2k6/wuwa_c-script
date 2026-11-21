@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200292B RID: 10539
+// Token: 0x02001EA6 RID: 7846
 public static class RouletteGridGenerator
 {
-	// Token: 0x06015C09 RID: 89097 RVA: 0x0057C994 File Offset: 0x0057AB94
+	// Token: 0x0601360E RID: 79374 RVA: 0x005A79D4 File Offset: 0x005A5BD4
 	[NullableContext(1)]
 	public static RouletteGridBase GetGenerator(ERouletteGridType gridType)
 	{

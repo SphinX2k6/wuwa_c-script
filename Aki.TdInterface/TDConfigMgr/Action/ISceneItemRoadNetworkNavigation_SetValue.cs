@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DE7 RID: 7655
+	// Token: 0x02002000 RID: 8192
 	public class ISceneItemRoadNetworkNavigation_SetValue
 	{
-		// Token: 0x04006232 RID: 25138
+		// Token: 0x040067BF RID: 26559
 		public ERoadNetworkNavigationTarget Type;
 
-		// Token: 0x04006233 RID: 25139
+		// Token: 0x040067C0 RID: 26560
 		public int TargetId;
 	}
 }

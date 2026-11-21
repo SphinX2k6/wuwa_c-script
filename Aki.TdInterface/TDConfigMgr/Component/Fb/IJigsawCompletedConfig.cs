@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C94 RID: 3220
+	// Token: 0x02000D76 RID: 3446
 	public class IJigsawCompletedConfig
 	{
-		// Token: 0x060049A0 RID: 18848 RVA: 0x000B878D File Offset: 0x000B698D
-		[NullableContext(1)]
+		// Token: 0x06004E4E RID: 20046 RVA: 0x000C319D File Offset: 0x000C139D
 		public static IJigsawCompletedConfig Create(IJigsawCompletedConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001635 RID: 5685
-		// (get) Token: 0x060049A1 RID: 18849 RVA: 0x000B87AC File Offset: 0x000B69AC
+		// Token: 0x1700175D RID: 5981
+		// (get) Token: 0x06004E4F RID: 20047 RVA: 0x000C31BC File Offset: 0x000C13BC
 		public virtual bool? IsSilentPiece
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001636 RID: 5686
-		// (get) Token: 0x060049A2 RID: 18850 RVA: 0x000B87E4 File Offset: 0x000B69E4
+		// Token: 0x1700175E RID: 5982
+		// (get) Token: 0x06004E50 RID: 20048 RVA: 0x000C31F4 File Offset: 0x000C13F4
 		public virtual bool? IsSilentFoundation
 		{
 			get
@@ -49,7 +47,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A01 RID: 10753
+		// Token: 0x04002C7B RID: 11387
 		private IJigsawCompletedConfig Instance;
 	}
 }

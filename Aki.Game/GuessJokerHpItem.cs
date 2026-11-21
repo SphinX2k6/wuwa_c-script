@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001074 RID: 4212
+// Token: 0x02000528 RID: 1320
 public class GuessJokerHpItem : GridProxyAbstract<bool>
 {
-	// Token: 0x06006CD0 RID: 27856 RVA: 0x00160536 File Offset: 0x0015E736
+	// Token: 0x06004065 RID: 16485 RVA: 0x00168E6A File Offset: 0x0016706A
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class GuessJokerHpItem : GridProxyAbstract<bool>
 		};
 	}
 
-	// Token: 0x06006CD1 RID: 27857 RVA: 0x0016056F File Offset: 0x0015E76F
+	// Token: 0x06004066 RID: 16486 RVA: 0x00168EA3 File Offset: 0x001670A3
 	protected override void OnStart()
 	{
 		base.GetSprite(0).SetUIActive(false);
@@ -25,7 +25,7 @@ public class GuessJokerHpItem : GridProxyAbstract<bool>
 		this.LastIsShow = true;
 	}
 
-	// Token: 0x06006CD2 RID: 27858 RVA: 0x00160592 File Offset: 0x0015E792
+	// Token: 0x06004067 RID: 16487 RVA: 0x00168EC6 File Offset: 0x001670C6
 	public override void Refresh(bool isShow, bool isSelected, int gridIndex)
 	{
 		if (this.LastIsShow && !isShow)
@@ -37,7 +37,7 @@ public class GuessJokerHpItem : GridProxyAbstract<bool>
 		this.LastIsShow = isShow;
 	}
 
-	// Token: 0x06006CD3 RID: 27859 RVA: 0x001605CC File Offset: 0x0015E7CC
+	// Token: 0x06004068 RID: 16488 RVA: 0x00168F00 File Offset: 0x00167100
 	public void ShowBrokenAnim()
 	{
 		if (this.LevelSequencePlayer == null)
@@ -47,20 +47,20 @@ public class GuessJokerHpItem : GridProxyAbstract<bool>
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Damage", false, null, false);
 	}
 
-	// Token: 0x04003266 RID: 12902
+	// Token: 0x040032FF RID: 13055
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04003267 RID: 12903
+	// Token: 0x04003300 RID: 13056
 	private bool LastIsShow = true;
 
-	// Token: 0x0200766A RID: 30314
+	// Token: 0x020067FE RID: 26622
 	private static class EComponentDefine
 	{
-		// Token: 0x04027163 RID: 160099
+		// Token: 0x040224AE RID: 140462
 		public const int LightSprite = 0;
 
-		// Token: 0x04027164 RID: 160100
+		// Token: 0x040224AF RID: 140463
 		public const int BrokenItem = 1;
 	}
 }

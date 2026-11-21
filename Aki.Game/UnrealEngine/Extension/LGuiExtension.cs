@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 
 namespace UnrealEngine.Extension
 {
-	// Token: 0x020044B6 RID: 17590
+	// Token: 0x02002F4F RID: 12111
 	public static class LGuiExtension
 	{
-		// Token: 0x0602D547 RID: 185671 RVA: 0x00A3923C File Offset: 0x00A3743C
+		// Token: 0x0601CB60 RID: 117600 RVA: 0x008C3564 File Offset: 0x008C1764
 		public static FVector2D GetUiViewportSize()
 		{
 			if (!ObjectUtils.IsValid(UiLayer.Instance.UiRootItem))
@@ -19,7 +19,7 @@ namespace UnrealEngine.Extension
 			return new FVector2D(width, height);
 		}
 
-		// Token: 0x0602D548 RID: 185672 RVA: 0x00A39288 File Offset: 0x00A37488
+		// Token: 0x0601CB61 RID: 117601 RVA: 0x008C35B0 File Offset: 0x008C17B0
 		[NullableContext(1)]
 		public static Vector2D GetViewportSize()
 		{

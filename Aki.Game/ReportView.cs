@@ -6,16 +6,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200275B RID: 10075
+// Token: 0x02001C46 RID: 7238
 public class ReportView : UiViewBase
 {
-	// Token: 0x06014A9F RID: 84639 RVA: 0x0053A0F7 File Offset: 0x005382F7
+	// Token: 0x06011F82 RID: 73602 RVA: 0x00548F8B File Offset: 0x0054718B
 	[NullableContext(1)]
 	public ReportView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014AA0 RID: 84640 RVA: 0x0053A108 File Offset: 0x00538308
+	// Token: 0x06011F83 RID: 73603 RVA: 0x00548F9C File Offset: 0x0054719C
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -34,7 +34,7 @@ public class ReportView : UiViewBase
 		};
 	}
 
-	// Token: 0x06014AA1 RID: 84641 RVA: 0x0053A1D0 File Offset: 0x005383D0
+	// Token: 0x06011F84 RID: 73604 RVA: 0x00549064 File Offset: 0x00547264
 	protected override void OnStart()
 	{
 		this.TargetPlayerInfo = (this.OpenParam as ReportPersonInfo);
@@ -51,7 +51,7 @@ public class ReportView : UiViewBase
 		this.ReportLayout.ReloadData(this.ReportInfoList, false);
 	}
 
-	// Token: 0x06014AA2 RID: 84642 RVA: 0x0053A27B File Offset: 0x0053847B
+	// Token: 0x06011F85 RID: 73605 RVA: 0x0054910F File Offset: 0x0054730F
 	protected override void OnBeforeDestroy()
 	{
 		if (this.ReportLayout != null)
@@ -60,7 +60,7 @@ public class ReportView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014AA3 RID: 84643 RVA: 0x0053A290 File Offset: 0x00538490
+	// Token: 0x06011F86 RID: 73606 RVA: 0x00549124 File Offset: 0x00547324
 	[NullableContext(1)]
 	public ReportRowView CreateGrid()
 	{
@@ -69,13 +69,13 @@ public class ReportView : UiViewBase
 		return reportRowView;
 	}
 
-	// Token: 0x06014AA4 RID: 84644 RVA: 0x0053A2A9 File Offset: 0x005384A9
+	// Token: 0x06011F87 RID: 73607 RVA: 0x0054913D File Offset: 0x0054733D
 	private void OnClickCancelBtn()
 	{
 		UiManager.Instance.CloseView(EUiViewName.ReportView, null);
 	}
 
-	// Token: 0x06014AA5 RID: 84645 RVA: 0x0053A2BC File Offset: 0x005384BC
+	// Token: 0x06011F88 RID: 73608 RVA: 0x00549150 File Offset: 0x00547350
 	private void OnClickConfirmBtn()
 	{
 		UUITextInputComponent inputText = base.GetInputText(2);
@@ -87,20 +87,20 @@ public class ReportView : UiViewBase
 		ReportController.ReportPlayerRequest(this.TargetPlayerInfo, this.ReasonId, inputText.GetText(), null);
 	}
 
-	// Token: 0x06014AA6 RID: 84646 RVA: 0x0053A307 File Offset: 0x00538507
+	// Token: 0x06011F89 RID: 73609 RVA: 0x0054919B File Offset: 0x0054739B
 	private void OnToggleClick(int id)
 	{
 		this.ReasonId = id;
 	}
 
-	// Token: 0x04009B53 RID: 39763
+	// Token: 0x04009CAC RID: 40108
 	[Nullable(2)]
 	private ReportPersonInfo TargetPlayerInfo;
 
-	// Token: 0x04009B54 RID: 39764
+	// Token: 0x04009CAD RID: 40109
 	private int ReasonId = -1;
 
-	// Token: 0x04009B55 RID: 39765
+	// Token: 0x04009CAE RID: 40110
 	[Nullable(new byte[]
 	{
 		2,
@@ -108,26 +108,26 @@ public class ReportView : UiViewBase
 	})]
 	private LoopScrollView<ReportRowView, ReportPlayerInfo> ReportLayout;
 
-	// Token: 0x04009B56 RID: 39766
+	// Token: 0x04009CAF RID: 40111
 	[Nullable(2)]
 	private IReadOnlyList<ReportPlayerInfo> ReportInfoList;
 
-	// Token: 0x02008DC1 RID: 36289
+	// Token: 0x02007F4A RID: 32586
 	private static class EChildComponentType
 	{
-		// Token: 0x0402E016 RID: 188438
+		// Token: 0x0402932D RID: 168749
 		public const int CancelBtn = 0;
 
-		// Token: 0x0402E017 RID: 188439
+		// Token: 0x0402932E RID: 168750
 		public const int ConfirmBtn = 1;
 
-		// Token: 0x0402E018 RID: 188440
+		// Token: 0x0402932F RID: 168751
 		public const int ReportInputBox = 2;
 
-		// Token: 0x0402E019 RID: 188441
+		// Token: 0x04029330 RID: 168752
 		public const int ReportContainer = 3;
 
-		// Token: 0x0402E01A RID: 188442
+		// Token: 0x04029331 RID: 168753
 		public const int ReportRowTemplate = 4;
 	}
 }

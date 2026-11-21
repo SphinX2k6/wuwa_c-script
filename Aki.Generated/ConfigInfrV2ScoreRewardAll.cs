@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200043C RID: 1084
+	// Token: 0x02000452 RID: 1106
 	public class ConfigInfrV2ScoreRewardAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001972 RID: 6514 RVA: 0x000E9670 File Offset: 0x000E7870
+		// Token: 0x060019F6 RID: 6646 RVA: 0x000EFDC4 File Offset: 0x000EDFC4
 		static ConfigInfrV2ScoreRewardAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfrV2ScoreRewardAll.CreateStaticDefaultValue), new Action(ConfigInfrV2ScoreRewardAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001973 RID: 6515 RVA: 0x000E9690 File Offset: 0x000E7890
+		// Token: 0x060019F7 RID: 6647 RVA: 0x000EFDE4 File Offset: 0x000EDFE4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfrV2ScoreRewardAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001974 RID: 6516 RVA: 0x000E970F File Offset: 0x000E790F
+		// Token: 0x060019F8 RID: 6648 RVA: 0x000EFE63 File Offset: 0x000EE063
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfrV2ScoreRewardAll.LogPair = null;
 			ConfigInfrV2ScoreRewardAll.HandleId = 0;
 		}
 
-		// Token: 0x06001975 RID: 6517 RVA: 0x000E971D File Offset: 0x000E791D
+		// Token: 0x060019F9 RID: 6649 RVA: 0x000EFE71 File Offset: 0x000EE071
 		public static void Init()
 		{
 			ConfigInfrV2ScoreRewardAll.HandleId = ConfigCommon.InitDataStatement(ConfigInfrV2ScoreRewardAll.HandleId, "db_villageinfr.db", "select BinData from `InfrV2ScoreReward`");
 		}
 
-		// Token: 0x06001976 RID: 6518 RVA: 0x000E9738 File Offset: 0x000E7938
+		// Token: 0x060019FA RID: 6650 RVA: 0x000EFE8C File Offset: 0x000EE08C
 		[NullableContext(2)]
 		public static IReadOnlyList<InfrV2ScoreReward> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001D88 RID: 7560
+		// Token: 0x04001E22 RID: 7714
 		private const string DB = "db_villageinfr.db";
 
-		// Token: 0x04001D89 RID: 7561
+		// Token: 0x04001E23 RID: 7715
 		private const string FILE = "j.基建V2.xlsx";
 
-		// Token: 0x04001D8A RID: 7562
+		// Token: 0x04001E24 RID: 7716
 		private const string TABLE = "InfrV2ScoreReward";
 
-		// Token: 0x04001D8B RID: 7563
+		// Token: 0x04001E25 RID: 7717
 		private const string COMMAND = "select BinData from `InfrV2ScoreReward`";
 
-		// Token: 0x04001D8C RID: 7564
+		// Token: 0x04001E26 RID: 7718
 		private const string KEY_PREFIX = "InfrV2ScoreRewardAll";
 
-		// Token: 0x04001D8D RID: 7565
+		// Token: 0x04001E27 RID: 7719
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001D8E RID: 7566
+		// Token: 0x04001E28 RID: 7720
 		private static int HandleId;
 	}
 }

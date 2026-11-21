@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001F0 RID: 496
+	// Token: 0x02000219 RID: 537
 	public class IBattleVehicleFeature_SetValue
 	{
-		// Token: 0x040008FA RID: 2298
+		// Token: 0x0400098B RID: 2443
 		public EVehicleFeatureFlag Type;
 	}
 }

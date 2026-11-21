@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001128 RID: 4392
+// Token: 0x020005DC RID: 1500
 public enum EBabelTowerDifficulty
 {
-	// Token: 0x04003532 RID: 13618
+	// Token: 0x040035CB RID: 13771
 	Normal,
-	// Token: 0x04003533 RID: 13619
+	// Token: 0x040035CC RID: 13772
 	Hard
 }

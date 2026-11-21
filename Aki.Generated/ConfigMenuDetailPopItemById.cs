@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200053F RID: 1343
+	// Token: 0x02000555 RID: 1365
 	public class ConfigMenuDetailPopItemById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001F87 RID: 8071 RVA: 0x0010B998 File Offset: 0x00109B98
+		// Token: 0x0600200B RID: 8203 RVA: 0x001120EC File Offset: 0x001102EC
 		static ConfigMenuDetailPopItemById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMenuDetailPopItemById.CreateStaticDefaultValue), new Action(ConfigMenuDetailPopItemById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001F88 RID: 8072 RVA: 0x0010B9B8 File Offset: 0x00109BB8
+		// Token: 0x0600200C RID: 8204 RVA: 0x0011210C File Offset: 0x0011030C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMenuDetailPopItemById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001F89 RID: 8073 RVA: 0x0010BA37 File Offset: 0x00109C37
+		// Token: 0x0600200D RID: 8205 RVA: 0x0011218B File Offset: 0x0011038B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMenuDetailPopItemById.LogPair = null;
 			ConfigMenuDetailPopItemById.HandleId = 0;
 		}
 
-		// Token: 0x06001F8A RID: 8074 RVA: 0x0010BA45 File Offset: 0x00109C45
+		// Token: 0x0600200E RID: 8206 RVA: 0x00112199 File Offset: 0x00110399
 		public static void Init()
 		{
 			ConfigMenuDetailPopItemById.HandleId = ConfigCommon.InitDataStatement(ConfigMenuDetailPopItemById.HandleId, "db_menu.db", "select BinData from `MenuDetailPopItem` where Id=?");
 		}
 
-		// Token: 0x06001F8B RID: 8075 RVA: 0x0010BA60 File Offset: 0x00109C60
+		// Token: 0x0600200F RID: 8207 RVA: 0x001121B4 File Offset: 0x001103B4
 		public static MenuDetailPopItem? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMenuDetailPopItemById.HandleId, ConfigMenuDetailPopItemById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MenuDetailPopItem?(rootAsMenuDetailPopItem);
 		}
 
-		// Token: 0x0400249D RID: 9373
+		// Token: 0x04002537 RID: 9527
 		private const string DB = "db_menu.db";
 
-		// Token: 0x0400249E RID: 9374
+		// Token: 0x04002538 RID: 9528
 		private const string FILE = "s.设置系统.xlsx";
 
-		// Token: 0x0400249F RID: 9375
+		// Token: 0x04002539 RID: 9529
 		private const string TABLE = "MenuDetailPopItem";
 
-		// Token: 0x040024A0 RID: 9376
+		// Token: 0x0400253A RID: 9530
 		private const string COMMAND = "select BinData from `MenuDetailPopItem` where Id=?";
 
-		// Token: 0x040024A1 RID: 9377
+		// Token: 0x0400253B RID: 9531
 		private const string KEY_PREFIX = "MenuDetailPopItemById";
 
-		// Token: 0x040024A2 RID: 9378
+		// Token: 0x0400253C RID: 9532
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040024A3 RID: 9379
+		// Token: 0x0400253D RID: 9533
 		private static int HandleId;
 	}
 }

@@ -5,12 +5,12 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x02002FBF RID: 12223
+// Token: 0x02002513 RID: 9491
 [NullableContext(1)]
 [Nullable(0)]
 public class GameplayCueFollow : GameplayCueEffect
 {
-	// Token: 0x06019EA5 RID: 106149 RVA: 0x006C6D54 File Offset: 0x006C4F54
+	// Token: 0x060177B7 RID: 96183 RVA: 0x006ED620 File Offset: 0x006EB820
 	protected override void OnInit()
 	{
 		base.OnInit();
@@ -28,20 +28,20 @@ public class GameplayCueFollow : GameplayCueEffect
 		this.MoveComp = ((entity != null) ? entity.GetComponent<BaseMoveComponent>() : null);
 	}
 
-	// Token: 0x06019EA6 RID: 106150 RVA: 0x006C6E5D File Offset: 0x006C505D
+	// Token: 0x060177B8 RID: 96184 RVA: 0x006ED729 File Offset: 0x006EB929
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
 		this.RefreshEffectLocationAndRotation(new float?(delta));
 	}
 
-	// Token: 0x06019EA7 RID: 106151 RVA: 0x006C6E74 File Offset: 0x006C5074
+	// Token: 0x060177B9 RID: 96185 RVA: 0x006ED740 File Offset: 0x006EB940
 	protected override void AttachEffect(bool _ = false)
 	{
 		this.RefreshEffectLocationAndRotation(null);
 	}
 
-	// Token: 0x06019EA8 RID: 106152 RVA: 0x006C6E90 File Offset: 0x006C5090
+	// Token: 0x060177BA RID: 96186 RVA: 0x006ED75C File Offset: 0x006EB95C
 	protected override void SetTargetMeshAndSocket()
 	{
 		base.SetTargetMeshAndSocket();
@@ -55,7 +55,7 @@ public class GameplayCueFollow : GameplayCueEffect
 		this.ClosestDistance = global::Vector.Dist2D(this.TargetTransform.GetLocation(), this.ActorLocation);
 	}
 
-	// Token: 0x06019EA9 RID: 106153 RVA: 0x006C6F10 File Offset: 0x006C5110
+	// Token: 0x060177BB RID: 96187 RVA: 0x006ED7DC File Offset: 0x006EB9DC
 	private void RefreshEffectLocationAndRotation(float? delta = null)
 	{
 		if (!EffectSystem.Instance.IsValid(this.EffectViewHandle))
@@ -190,7 +190,7 @@ public class GameplayCueFollow : GameplayCueEffect
 		self.D_K2_SetActorLocationAndRotation(fvectorDouble, frotator, false, ref WorldGlobal.SweepHitResult, true);
 	}
 
-	// Token: 0x06019EAA RID: 106154 RVA: 0x006C73B4 File Offset: 0x006C55B4
+	// Token: 0x060177BC RID: 96188 RVA: 0x006EDC80 File Offset: 0x006EBE80
 	private void CorrectTargetByTolerance(global::Vector currentLocation, global::Vector targetLocation)
 	{
 		if (!this.IsMoving)
@@ -208,7 +208,7 @@ public class GameplayCueFollow : GameplayCueEffect
 		}
 	}
 
-	// Token: 0x06019EAB RID: 106155 RVA: 0x006C74BC File Offset: 0x006C56BC
+	// Token: 0x060177BD RID: 96189 RVA: 0x006EDD88 File Offset: 0x006EBF88
 	private void CorrectTargetByFarthestDistance(global::Vector currentLocation, global::Vector targetLocation, Rotator currentRotation, Rotator targetRotation, double distance)
 	{
 		double num = (double)this.FarthestDistance / Math.Max(distance, 0.10000000149011612);
@@ -221,13 +221,13 @@ public class GameplayCueFollow : GameplayCueEffect
 		}
 	}
 
-	// Token: 0x06019EAC RID: 106156 RVA: 0x006C7524 File Offset: 0x006C5724
+	// Token: 0x060177BE RID: 96190 RVA: 0x006EDDF0 File Offset: 0x006EBFF0
 	private bool IsStandardGravity()
 	{
 		return this.MoveComp == null || this.MoveComp.IsStandardGravity;
 	}
 
-	// Token: 0x06019EAD RID: 106157 RVA: 0x006C753C File Offset: 0x006C573C
+	// Token: 0x060177BF RID: 96191 RVA: 0x006EDE08 File Offset: 0x006EC008
 	private Rotator GetLockRotation()
 	{
 		if (this.IsStandardGravity())
@@ -259,77 +259,77 @@ public class GameplayCueFollow : GameplayCueEffect
 		return this.LockRotation;
 	}
 
-	// Token: 0x0400C407 RID: 50183
+	// Token: 0x0400C7B0 RID: 51120
 	private const float MAGIC_NUMBER = 0.1f;
 
-	// Token: 0x0400C408 RID: 50184
+	// Token: 0x0400C7B1 RID: 51121
 	private readonly global::Vector ActorLocation = global::Vector.Create();
 
-	// Token: 0x0400C409 RID: 50185
+	// Token: 0x0400C7B2 RID: 51122
 	private readonly global::Vector Direction = global::Vector.Create();
 
-	// Token: 0x0400C40A RID: 50186
+	// Token: 0x0400C7B3 RID: 51123
 	private readonly global::Vector BorderLocation = global::Vector.Create();
 
-	// Token: 0x0400C40B RID: 50187
+	// Token: 0x0400C7B4 RID: 51124
 	private readonly Rotator BorderRotation = Rotator.Create();
 
-	// Token: 0x0400C40C RID: 50188
+	// Token: 0x0400C7B5 RID: 51125
 	private readonly global::Vector CurrentLocation = global::Vector.Create();
 
-	// Token: 0x0400C40D RID: 50189
+	// Token: 0x0400C7B6 RID: 51126
 	private readonly Rotator CurrentRotation = Rotator.Create();
 
-	// Token: 0x0400C40E RID: 50190
+	// Token: 0x0400C7B7 RID: 51127
 	private global::Vector TargetLocation = global::Vector.Create();
 
-	// Token: 0x0400C40F RID: 50191
+	// Token: 0x0400C7B8 RID: 51128
 	private Rotator TargetRotation = Rotator.Create();
 
-	// Token: 0x0400C410 RID: 50192
+	// Token: 0x0400C7B9 RID: 51129
 	private bool IsLockRevolution;
 
-	// Token: 0x0400C411 RID: 50193
+	// Token: 0x0400C7BA RID: 51130
 	private bool IsLockRotation;
 
-	// Token: 0x0400C412 RID: 50194
+	// Token: 0x0400C7BB RID: 51131
 	private bool IsLockCamera;
 
-	// Token: 0x0400C413 RID: 50195
+	// Token: 0x0400C7BC RID: 51132
 	private readonly Rotator LockRotation = Rotator.Create();
 
-	// Token: 0x0400C414 RID: 50196
+	// Token: 0x0400C7BD RID: 51133
 	private readonly Rotator CameraRotation = Rotator.Create();
 
-	// Token: 0x0400C415 RID: 50197
+	// Token: 0x0400C7BE RID: 51134
 	private float InterpSpeed;
 
-	// Token: 0x0400C416 RID: 50198
+	// Token: 0x0400C7BF RID: 51135
 	[Nullable(2)]
 	private global::Vector FaultTolerance;
 
-	// Token: 0x0400C417 RID: 50199
+	// Token: 0x0400C7C0 RID: 51136
 	private float FarthestDistance;
 
-	// Token: 0x0400C418 RID: 50200
+	// Token: 0x0400C7C1 RID: 51137
 	private double ClosestDistance;
 
-	// Token: 0x0400C419 RID: 50201
+	// Token: 0x0400C7C2 RID: 51138
 	private bool IsMoving;
 
-	// Token: 0x0400C41A RID: 50202
+	// Token: 0x0400C7C3 RID: 51139
 	[Nullable(2)]
 	private BaseMoveComponent MoveComp;
 
-	// Token: 0x0400C41B RID: 50203
+	// Token: 0x0400C7C4 RID: 51140
 	[Nullable(2)]
 	private global::Vector TempLocationInGravity;
 
-	// Token: 0x0400C41C RID: 50204
+	// Token: 0x0400C7C5 RID: 51141
 	[Nullable(2)]
 	private Rotator TempRotationInGravity;
 
-	// Token: 0x0400C41D RID: 50205
+	// Token: 0x0400C7C6 RID: 51142
 	[Nullable(2)]
 	private Rotator LockRotationInGravity;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002254 RID: 8788
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024C1 RID: 9409
 	public class TrapDefensePlayerOperationConstraint : ActionParams
 	{
-		// Token: 0x0600C0C6 RID: 49350 RVA: 0x001BAA08 File Offset: 0x001B8C08
+		// Token: 0x0600CC8C RID: 52364 RVA: 0x001D218C File Offset: 0x001D038C
 		private TrapDefensePlayerOperationConstraint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C0C7 RID: 49351 RVA: 0x001BAA40 File Offset: 0x001B8C40
+		// Token: 0x0600CC8D RID: 52365 RVA: 0x001D21C4 File Offset: 0x001D03C4
 		public static TrapDefensePlayerOperationConstraint Create([Nullable(2)] TrapDefensePlayerOperationConstraint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0C8 RID: 49352 RVA: 0x001BAA53 File Offset: 0x001B8C53
+		// Token: 0x0600CC8E RID: 52366 RVA: 0x001D21D7 File Offset: 0x001D03D7
 		public static TrapDefensePlayerOperationConstraint CreateFromSetValue([Nullable(2)] TrapDefensePlayerOperationConstraint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0C9 RID: 49353 RVA: 0x001BAA66 File Offset: 0x001B8C66
+		// Token: 0x0600CC8F RID: 52367 RVA: 0x001D21EA File Offset: 0x001D03EA
 		public TrapDefensePlayerOperationConstraint_SetValue ToSetValue()
 		{
 			return new TrapDefensePlayerOperationConstraint_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A52 RID: 14930
-		// (get) Token: 0x0600C0CA RID: 49354 RVA: 0x001BAA9D File Offset: 0x001B8C9D
-		// (set) Token: 0x0600C0CB RID: 49355 RVA: 0x001BAAC4 File Offset: 0x001B8CC4
+		// Token: 0x17003D49 RID: 15689
+		// (get) Token: 0x0600CC90 RID: 52368 RVA: 0x001D2221 File Offset: 0x001D0421
+		// (set) Token: 0x0600CC91 RID: 52369 RVA: 0x001D2248 File Offset: 0x001D0448
 		public virtual ITrapDefensePlayerOperationType DisableOperation
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A53 RID: 14931
-		// (get) Token: 0x0600C0CC RID: 49356 RVA: 0x001BAAD2 File Offset: 0x001B8CD2
-		// (set) Token: 0x0600C0CD RID: 49357 RVA: 0x001BAAFD File Offset: 0x001B8CFD
+		// Token: 0x17003D4A RID: 15690
+		// (get) Token: 0x0600CC92 RID: 52370 RVA: 0x001D2256 File Offset: 0x001D0456
+		// (set) Token: 0x0600CC93 RID: 52371 RVA: 0x001D2281 File Offset: 0x001D0481
 		public virtual bool IsConstrained
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A54 RID: 14932
-		// (get) Token: 0x0600C0CE RID: 49358 RVA: 0x001BAB0B File Offset: 0x001B8D0B
-		// (set) Token: 0x0600C0CF RID: 49359 RVA: 0x001BAB36 File Offset: 0x001B8D36
+		// Token: 0x17003D4B RID: 15691
+		// (get) Token: 0x0600CC94 RID: 52372 RVA: 0x001D228F File Offset: 0x001D048F
+		// (set) Token: 0x0600CC95 RID: 52373 RVA: 0x001D22BA File Offset: 0x001D04BA
 		public virtual string TidPromptTxt
 		{
 			get
@@ -128,9 +126,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A55 RID: 14933
-		// (get) Token: 0x0600C0D0 RID: 49360 RVA: 0x001BAB44 File Offset: 0x001B8D44
-		// (set) Token: 0x0600C0D1 RID: 49361 RVA: 0x001BAB5B File Offset: 0x001B8D5B
+		// Token: 0x17003D4C RID: 15692
+		// (get) Token: 0x0600CC96 RID: 52374 RVA: 0x001D22C8 File Offset: 0x001D04C8
+		// (set) Token: 0x0600CC97 RID: 52375 RVA: 0x001D22DF File Offset: 0x001D04DF
 		[Nullable(2)]
 		public virtual string EdTidPromptTxt
 		{
@@ -150,11 +148,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040072E6 RID: 29414
+		// Token: 0x04007933 RID: 31027
 		[Nullable(2)]
 		protected new TrapDefensePlayerOperationConstraint FbInstance;
 
-		// Token: 0x040072E7 RID: 29415
+		// Token: 0x04007934 RID: 31028
 		[Nullable(2)]
 		protected TrapDefensePlayerOperationConstraint_SetValue PocoInterface;
 	}

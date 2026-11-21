@@ -9,7 +9,7 @@ using Aki.Config;
 [Nullable(0)]
 public class DeserializeConfig : Singleton, IDeserializeConfigProxy
 {
-	// Token: 0x060001DA RID: 474 RVA: 0x0000B1A4 File Offset: 0x000093A4
+	// Token: 0x060001DB RID: 475 RVA: 0x0000AE88 File Offset: 0x00009088
 	[NullableContext(0)]
 	public DeserializeConfigResult<int> ParseInt([Nullable(1)] byte[] buffer, int startIndex = 0, [ParamCollection] [Nullable(new byte[]
 	{
@@ -38,7 +38,7 @@ public class DeserializeConfig : Singleton, IDeserializeConfigProxy
 		return result;
 	}
 
-	// Token: 0x060001DB RID: 475 RVA: 0x0000B214 File Offset: 0x00009414
+	// Token: 0x060001DC RID: 476 RVA: 0x0000AEF8 File Offset: 0x000090F8
 	[NullableContext(0)]
 	public DeserializeConfigResult<long> ParseBigInt([Nullable(1)] byte[] buffer, int startIndex = 0, [ParamCollection] [Nullable(new byte[]
 	{
@@ -67,7 +67,7 @@ public class DeserializeConfig : Singleton, IDeserializeConfigProxy
 		return result;
 	}
 
-	// Token: 0x060001DC RID: 476 RVA: 0x0000B284 File Offset: 0x00009484
+	// Token: 0x060001DD RID: 477 RVA: 0x0000AF68 File Offset: 0x00009168
 	[NullableContext(0)]
 	public DeserializeConfigResult<float> ParseFloat([Nullable(1)] byte[] buffer, int startIndex = 0, [ParamCollection] [Nullable(new byte[]
 	{
@@ -97,7 +97,7 @@ public class DeserializeConfig : Singleton, IDeserializeConfigProxy
 		return result;
 	}
 
-	// Token: 0x060001DD RID: 477 RVA: 0x0000B304 File Offset: 0x00009504
+	// Token: 0x060001DE RID: 478 RVA: 0x0000AFE8 File Offset: 0x000091E8
 	[NullableContext(0)]
 	public DeserializeConfigResult<double> ParseFloat64([Nullable(1)] byte[] buffer, int startIndex = 0, [ParamCollection] [Nullable(new byte[]
 	{
@@ -126,7 +126,7 @@ public class DeserializeConfig : Singleton, IDeserializeConfigProxy
 		return result;
 	}
 
-	// Token: 0x060001DE RID: 478 RVA: 0x0000B37C File Offset: 0x0000957C
+	// Token: 0x060001DF RID: 479 RVA: 0x0000B060 File Offset: 0x00009260
 	[NullableContext(0)]
 	public DeserializeConfigResult<bool> ParseBoolean([Nullable(1)] byte[] buffer, int startIndex = 0, [ParamCollection] [Nullable(new byte[]
 	{
@@ -155,7 +155,7 @@ public class DeserializeConfig : Singleton, IDeserializeConfigProxy
 		return result;
 	}
 
-	// Token: 0x060001DF RID: 479 RVA: 0x0000B3E8 File Offset: 0x000095E8
+	// Token: 0x060001E0 RID: 480 RVA: 0x0000B0CC File Offset: 0x000092CC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -275,7 +275,7 @@ public class DeserializeConfig : Singleton, IDeserializeConfigProxy
 		return result;
 	}
 
-	// Token: 0x060001E0 RID: 480 RVA: 0x0000B758 File Offset: 0x00009958
+	// Token: 0x060001E1 RID: 481 RVA: 0x0000B43C File Offset: 0x0000963C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -316,8 +316,8 @@ public class DeserializeConfig : Singleton, IDeserializeConfigProxy
 		return result;
 	}
 
-	// Token: 0x1700003B RID: 59
-	// (get) Token: 0x060001E1 RID: 481 RVA: 0x0000B7E8 File Offset: 0x000099E8
+	// Token: 0x1700003A RID: 58
+	// (get) Token: 0x060001E2 RID: 482 RVA: 0x0000B4CC File Offset: 0x000096CC
 	public static global::DeserializeConfig Instance
 	{
 		get
@@ -331,12 +331,12 @@ public class DeserializeConfig : Singleton, IDeserializeConfigProxy
 		}
 	}
 
-	// Token: 0x060001E2 RID: 482 RVA: 0x0000B80B File Offset: 0x00009A0B
+	// Token: 0x060001E3 RID: 483 RVA: 0x0000B4EF File Offset: 0x000096EF
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060001E3 RID: 483 RVA: 0x0000B80D File Offset: 0x00009A0D
+	// Token: 0x060001E4 RID: 484 RVA: 0x0000B4F1 File Offset: 0x000096F1
 	public static void ResetStaticDefaultValue()
 	{
 		global::DeserializeConfig instance = global::DeserializeConfig._instance;
@@ -347,50 +347,50 @@ public class DeserializeConfig : Singleton, IDeserializeConfigProxy
 		global::DeserializeConfig._instance = null;
 	}
 
-	// Token: 0x060001E4 RID: 484 RVA: 0x0000B826 File Offset: 0x00009A26
+	// Token: 0x060001E5 RID: 485 RVA: 0x0000B50A File Offset: 0x0000970A
 	static DeserializeConfig()
 	{
 		global::StaticVariableRegister.RegisterAndExecute(new Action(global::DeserializeConfig.CreateStaticDefaultValue), new Action(global::DeserializeConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040001A0 RID: 416
+	// Token: 0x040001A2 RID: 418
 	private const double RATE_10000 = 0.0001;
 
-	// Token: 0x040001A1 RID: 417
+	// Token: 0x040001A3 RID: 419
 	private const int MAX_CODES = 65535;
 
-	// Token: 0x040001A2 RID: 418
-	private readonly List<int> TempCodes = new List<int>();
-
-	// Token: 0x040001A3 RID: 419
-	[StaticVariableRuleIgnore]
-	private readonly global::Stat ParseIntStat = global::Stat.Create("DeserializeConfig.Instance.ParseInt", "", "");
-
 	// Token: 0x040001A4 RID: 420
-	[StaticVariableRuleIgnore]
-	private readonly global::Stat ParseBigIntStat = global::Stat.Create("DeserializeConfig.ParseBigInt", "", "");
+	private readonly List<int> TempCodes = new List<int>();
 
 	// Token: 0x040001A5 RID: 421
 	[StaticVariableRuleIgnore]
-	private readonly global::Stat ParseFloatStat = global::Stat.Create("DeserializeConfig.Instance.ParseFloat", "", "");
+	private readonly global::Stat ParseIntStat = global::Stat.Create("DeserializeConfig.Instance.ParseInt", "", "");
 
 	// Token: 0x040001A6 RID: 422
 	[StaticVariableRuleIgnore]
-	private readonly global::Stat ParseFloat64Stat = global::Stat.Create("DeserializeConfig.ParseFloat64", "", "");
+	private readonly global::Stat ParseBigIntStat = global::Stat.Create("DeserializeConfig.ParseBigInt", "", "");
 
 	// Token: 0x040001A7 RID: 423
 	[StaticVariableRuleIgnore]
-	private readonly global::Stat ParseBooleanStat = global::Stat.Create("DeserializeConfig.ParseBoolean", "", "");
+	private readonly global::Stat ParseFloatStat = global::Stat.Create("DeserializeConfig.Instance.ParseFloat", "", "");
 
 	// Token: 0x040001A8 RID: 424
 	[StaticVariableRuleIgnore]
-	private readonly global::Stat ParseStringRangeStat = global::Stat.Create("DeserializeConfig.Instance.ParseStringRange", "", "");
+	private readonly global::Stat ParseFloat64Stat = global::Stat.Create("DeserializeConfig.ParseFloat64", "", "");
 
 	// Token: 0x040001A9 RID: 425
 	[StaticVariableRuleIgnore]
-	private readonly global::Stat ParseStringStat = global::Stat.Create("DeserializeConfig.ParseString", "", "");
+	private readonly global::Stat ParseBooleanStat = global::Stat.Create("DeserializeConfig.ParseBoolean", "", "");
 
 	// Token: 0x040001AA RID: 426
+	[StaticVariableRuleIgnore]
+	private readonly global::Stat ParseStringRangeStat = global::Stat.Create("DeserializeConfig.Instance.ParseStringRange", "", "");
+
+	// Token: 0x040001AB RID: 427
+	[StaticVariableRuleIgnore]
+	private readonly global::Stat ParseStringStat = global::Stat.Create("DeserializeConfig.ParseString", "", "");
+
+	// Token: 0x040001AC RID: 428
 	[Nullable(2)]
 	private static global::DeserializeConfig _instance;
 }

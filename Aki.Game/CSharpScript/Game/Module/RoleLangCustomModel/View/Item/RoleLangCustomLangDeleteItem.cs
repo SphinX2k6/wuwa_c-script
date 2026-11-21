@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 {
-	// Token: 0x02004D7F RID: 19839
+	// Token: 0x02003D48 RID: 15688
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 	})]
 	public class RoleLangCustomLangDeleteItem : GridProxyAbstract<IRoleLangCustomLangSelectInfo>
 	{
-		// Token: 0x0603349A RID: 210074 RVA: 0x00BF7AA0 File Offset: 0x00BF5CA0
+		// Token: 0x06028307 RID: 164615 RVA: 0x00B4109C File Offset: 0x00B3F29C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 18;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603349B RID: 210075 RVA: 0x00BF7D24 File Offset: 0x00BF5F24
+		// Token: 0x06028308 RID: 164616 RVA: 0x00B41320 File Offset: 0x00B3F520
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.ToggleCanChangeState));
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			base.GetExtendToggle(0).OnUndeterminedClicked.Add(new Action(this.OnUndeterminedClicked));
 		}
 
-		// Token: 0x0603349C RID: 210076 RVA: 0x00BF7D88 File Offset: 0x00BF5F88
+		// Token: 0x06028309 RID: 164617 RVA: 0x00B41384 File Offset: 0x00B3F584
 		public override void Refresh(IRoleLangCustomLangSelectInfo data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			}
 		}
 
-		// Token: 0x0603349D RID: 210077 RVA: 0x00BF7EF4 File Offset: 0x00BF60F4
+		// Token: 0x0602830A RID: 164618 RVA: 0x00B414F0 File Offset: 0x00B3F6F0
 		public void RefreshStateTag()
 		{
 			bool flag = RoleLangCustomModel.Instance.GetRoleLangType(this.ItemData.RoleId) == this.ItemData.LangIndex;
@@ -189,14 +189,14 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			}
 		}
 
-		// Token: 0x0603349E RID: 210078 RVA: 0x00BF807C File Offset: 0x00BF627C
+		// Token: 0x0602830B RID: 164619 RVA: 0x00B41678 File Offset: 0x00B3F878
 		protected bool IsSameAsGlobalLang()
 		{
 			int languageTypeByAudioCode = LanguageSystem.Instance.GetLanguageTypeByAudioCode(LanguageSystem.Instance.PackageAudio);
 			return this.ItemData.LangIndex == languageTypeByAudioCode;
 		}
 
-		// Token: 0x0603349F RID: 210079 RVA: 0x00BF80AC File Offset: 0x00BF62AC
+		// Token: 0x0602830C RID: 164620 RVA: 0x00B416A8 File Offset: 0x00B3F8A8
 		protected bool ToggleIsEnable()
 		{
 			return UKuroLauncherLibrary.NeedHotPatch() && !this.IsSameAsGlobalLang() && RoleLangCustomModel.Instance.GetRoleLangType(this.ItemData.RoleId) != this.ItemData.LangIndex && RoleLangCustomModel.Instance.GetDownloadStatus(new RoleLangCustomLangPackageInfo
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			}) == ELanguageDownloadStatus.Done;
 		}
 
-		// Token: 0x060334A0 RID: 210080 RVA: 0x00BF8127 File Offset: 0x00BF6327
+		// Token: 0x0602830D RID: 164621 RVA: 0x00B41723 File Offset: 0x00B3F923
 		public void SetSelected(bool isSelected, bool fireEvent = false)
 		{
 			if (!this.ToggleIsEnable())
@@ -216,13 +216,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			base.GetExtendToggle(0).SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x060334A1 RID: 210081 RVA: 0x00BF8149 File Offset: 0x00BF6349
+		// Token: 0x0602830E RID: 164622 RVA: 0x00B41745 File Offset: 0x00B3F945
 		private bool ToggleCanChangeState()
 		{
 			return true;
 		}
 
-		// Token: 0x060334A2 RID: 210082 RVA: 0x00BF814C File Offset: 0x00BF634C
+		// Token: 0x0602830F RID: 164623 RVA: 0x00B41748 File Offset: 0x00B3F948
 		private void OnToggleStateChanged(EToggleState state)
 		{
 			Action<IRoleLangCustomLangSelectInfo, bool> onToggleStateChangedCallback = this.OnToggleStateChangedCallback;
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			onToggleStateChangedCallback(this.ItemData, state == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x060334A3 RID: 210083 RVA: 0x00BF8168 File Offset: 0x00BF6368
+		// Token: 0x06028310 RID: 164624 RVA: 0x00B41764 File Offset: 0x00B3F964
 		private void OnUndeterminedClicked()
 		{
 			bool flag = RoleLangCustomModel.Instance.GetRoleLangType(this.ItemData.RoleId) == this.ItemData.LangIndex;
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			ScrollingTipsController.Instance.ShowTipsByTextId(textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0401B37D RID: 111485
+		// Token: 0x04015D50 RID: 89424
 		[Nullable(new byte[]
 		{
 			2,
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 		})]
 		public Action<IRoleLangCustomLangSelectInfo, bool> OnToggleStateChangedCallback;
 
-		// Token: 0x0401B37E RID: 111486
+		// Token: 0x04015D51 RID: 89425
 		[Nullable(new byte[]
 		{
 			2,
@@ -276,60 +276,60 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 		})]
 		public Func<IRoleLangCustomLangSelectInfo, bool> OnToggleSelectedCheck;
 
-		// Token: 0x0401B37F RID: 111487
+		// Token: 0x04015D52 RID: 89426
 		public IRoleLangCustomLangSelectInfo ItemData;
 
-		// Token: 0x0401B380 RID: 111488
+		// Token: 0x04015D53 RID: 89427
 		[StaticVariableRuleIgnore]
 		private static readonly FColor NoResourceColor = FColor.FromHex("#99a4ad");
 
-		// Token: 0x0401B381 RID: 111489
+		// Token: 0x04015D54 RID: 89428
 		[StaticVariableRuleIgnore]
 		private static readonly FColor DownloadingColor = FColor.FromHex("#dae4e5");
 
-		// Token: 0x0401B382 RID: 111490
+		// Token: 0x04015D55 RID: 89429
 		[StaticVariableRuleIgnore]
 		private static readonly FColor IsCurrentUsingColor = FColor.FromHex("#79e4b5");
 
-		// Token: 0x0200AEF5 RID: 44789
+		// Token: 0x02009929 RID: 39209
 		[NullableContext(0)]
 		private enum EDefine
 		{
-			// Token: 0x04035239 RID: 217657
+			// Token: 0x0402FC6D RID: 195693
 			TogItem,
-			// Token: 0x0403523A RID: 217658
+			// Token: 0x0402FC6E RID: 195694
 			TxtLanguageName,
-			// Token: 0x0403523B RID: 217659
+			// Token: 0x0402FC6F RID: 195695
 			TxtCvName,
-			// Token: 0x0403523C RID: 217660
+			// Token: 0x0402FC70 RID: 195696
 			PanelStateTag,
-			// Token: 0x0403523D RID: 217661
+			// Token: 0x0402FC71 RID: 195697
 			SpriteBg,
-			// Token: 0x0403523E RID: 217662
+			// Token: 0x0402FC72 RID: 195698
 			TxtStateTitle,
-			// Token: 0x0403523F RID: 217663
+			// Token: 0x0402FC73 RID: 195699
 			BtnPlay,
-			// Token: 0x04035240 RID: 217664
+			// Token: 0x0402FC74 RID: 195700
 			SpritePlayIcon,
-			// Token: 0x04035241 RID: 217665
+			// Token: 0x0402FC75 RID: 195701
 			SpritePauseIcon,
-			// Token: 0x04035242 RID: 217666
+			// Token: 0x0402FC76 RID: 195702
 			BtnDownload,
-			// Token: 0x04035243 RID: 217667
+			// Token: 0x0402FC77 RID: 195703
 			BtnDownloadProgress,
-			// Token: 0x04035244 RID: 217668
+			// Token: 0x0402FC78 RID: 195704
 			SpriteDownloadFill,
-			// Token: 0x04035245 RID: 217669
+			// Token: 0x0402FC79 RID: 195705
 			SpriteStarDownloadIcon,
-			// Token: 0x04035246 RID: 217670
+			// Token: 0x0402FC7A RID: 195706
 			SpritePauseDownloadIcon,
-			// Token: 0x04035247 RID: 217671
+			// Token: 0x0402FC7B RID: 195707
 			TagSpriteNoLoad,
-			// Token: 0x04035248 RID: 217672
+			// Token: 0x0402FC7C RID: 195708
 			TagSpriteDownloading,
-			// Token: 0x04035249 RID: 217673
+			// Token: 0x0402FC7D RID: 195709
 			TagSpritePause,
-			// Token: 0x0403524A RID: 217674
+			// Token: 0x0402FC7E RID: 195710
 			TagSpriteUsing
 		}
 	}

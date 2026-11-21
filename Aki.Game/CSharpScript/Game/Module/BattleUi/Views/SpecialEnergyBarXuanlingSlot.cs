@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E12 RID: 24082
+	// Token: 0x02004DF7 RID: 19959
 	public class SpecialEnergyBarXuanlingSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D3DD RID: 250845 RVA: 0x00EC1CD2 File Offset: 0x00EBFED2
+		// Token: 0x0603236C RID: 205676 RVA: 0x00E13232 File Offset: 0x00E11432
 		protected override void OnStart()
 		{
 			this.OverrideColor = true;
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnStart();
 		}
 
-		// Token: 0x0603D3DE RID: 250846 RVA: 0x00EC1CE8 File Offset: 0x00EBFEE8
+		// Token: 0x0603236D RID: 205677 RVA: 0x00E13248 File Offset: 0x00E11448
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(this.GetKeyEnable(), isStart);
 		}
 
-		// Token: 0x0603D3DF RID: 250847 RVA: 0x00EC1D60 File Offset: 0x00EBFF60
+		// Token: 0x0603236E RID: 205678 RVA: 0x00E132C0 File Offset: 0x00E114C0
 		private float GetDiscreteEffectPercent(float percent)
 		{
 			return (float)Math.Ceiling((double)(Math.Max(0f, Math.Min(1f, percent)) * 41f)) / 41f;
 		}
 
-		// Token: 0x0603D3E0 RID: 250848 RVA: 0x00EC1D8A File Offset: 0x00EBFF8A
+		// Token: 0x0603236F RID: 205679 RVA: 0x00E132EA File Offset: 0x00E114EA
 		protected override bool GetKeyEnable()
 		{
 			if (this.IsSpEnergyFull)
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return ((attributeComponent != null) ? attributeComponent.GetCurrentValue(this.AttributeId) : 0f) > 0f && base.GetKeyEnable();
 		}
 
-		// Token: 0x0603D3E1 RID: 250849 RVA: 0x00EC1DC8 File Offset: 0x00EBFFC8
+		// Token: 0x06032370 RID: 205680 RVA: 0x00E13328 File Offset: 0x00E11528
 		public void SetKeyActionBySpEnergy(bool isFull, bool isStart = false)
 		{
 			if (this.IsSpEnergyFull == isFull && !isStart)
@@ -81,16 +81,16 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem2.RefreshKeyEnable(this.GetKeyEnable(), isStart);
 		}
 
-		// Token: 0x0401FEF7 RID: 130807
+		// Token: 0x0401A9BE RID: 108990
 		private const int KEY_ACTION_SP_ENERGY_NOT_FULL = 0;
 
-		// Token: 0x0401FEF8 RID: 130808
+		// Token: 0x0401A9BF RID: 108991
 		private const int KEY_ACTION_SP_ENERGY_FULL = 1;
 
-		// Token: 0x0401FEF9 RID: 130809
+		// Token: 0x0401A9C0 RID: 108992
 		private const int TOTAL_EFFECT_POINT_NUM = 41;
 
-		// Token: 0x0401FEFA RID: 130810
+		// Token: 0x0401A9C1 RID: 108993
 		private bool IsSpEnergyFull;
 	}
 }

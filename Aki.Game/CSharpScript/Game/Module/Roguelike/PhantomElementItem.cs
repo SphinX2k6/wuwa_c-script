@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DE9 RID: 19945
+	// Token: 0x02003DB2 RID: 15794
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class PhantomElementItem : GridProxyAbstract<ElementInfo>
 	{
-		// Token: 0x0603378C RID: 210828 RVA: 0x00C06A5C File Offset: 0x00C04C5C
+		// Token: 0x060285F7 RID: 165367 RVA: 0x00B4FF6C File Offset: 0x00B4E16C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603378D RID: 210829 RVA: 0x00C06AE8 File Offset: 0x00C04CE8
+		// Token: 0x060285F8 RID: 165368 RVA: 0x00B4FFF8 File Offset: 0x00B4E1F8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomElementItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603378E RID: 210830 RVA: 0x00C06B2B File Offset: 0x00C04D2B
+		// Token: 0x060285F9 RID: 165369 RVA: 0x00B5003B File Offset: 0x00B4E23B
 		public override void Refresh(ElementInfo data, bool isSelected, int gridIndex)
 		{
 			this.Update(data);
 		}
 
-		// Token: 0x0603378F RID: 210831 RVA: 0x00C06B34 File Offset: 0x00C04D34
+		// Token: 0x060285FA RID: 165370 RVA: 0x00B50044 File Offset: 0x00B4E244
 		public void Update(ElementInfo elementInfo)
 		{
 			this.ElementInfo = elementInfo;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshPanel(null);
 		}
 
-		// Token: 0x06033790 RID: 210832 RVA: 0x00C06B58 File Offset: 0x00C04D58
+		// Token: 0x060285FB RID: 165371 RVA: 0x00B50068 File Offset: 0x00B4E268
 		[NullableContext(2)]
 		public bool RefreshPanel(Dictionary<int, int> elementDict = null)
 		{
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return item;
 		}
 
-		// Token: 0x06033791 RID: 210833 RVA: 0x00C06C1C File Offset: 0x00C04E1C
+		// Token: 0x060285FC RID: 165372 RVA: 0x00B5012C File Offset: 0x00B4E32C
 		[NullableContext(0)]
 		private ValueTuple<bool, bool, int, int, int> GetFinishInfo([Nullable(2)] Dictionary<int, int> elementDict = null)
 		{
@@ -126,23 +126,23 @@ namespace CSharpScript.Game.Module.Roguelike
 			return new ValueTuple<bool, bool, int, int, int>(num + num4 >= count, item, num, count, num4);
 		}
 
-		// Token: 0x0401B521 RID: 111905
+		// Token: 0x04015EF4 RID: 89844
 		private ElementInfo ElementInfo;
 
-		// Token: 0x0401B522 RID: 111906
+		// Token: 0x04015EF5 RID: 89845
 		private ElementItem ElementItem;
 
-		// Token: 0x0200AF6E RID: 44910
+		// Token: 0x020099A3 RID: 39331
 		[NullableContext(0)]
 		private class EPhantomElementItemCom
 		{
-			// Token: 0x0403544A RID: 218186
+			// Token: 0x0402FE7D RID: 196221
 			public const int ElementItem = 0;
 
-			// Token: 0x0403544B RID: 218187
+			// Token: 0x0402FE7E RID: 196222
 			public const int NumText = 1;
 
-			// Token: 0x0403544C RID: 218188
+			// Token: 0x0402FE7F RID: 196223
 			public const int FinishSprite = 2;
 		}
 	}

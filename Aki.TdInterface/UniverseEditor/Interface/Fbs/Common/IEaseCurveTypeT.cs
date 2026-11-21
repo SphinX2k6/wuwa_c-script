@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D9B RID: 23963
+	// Token: 0x020063D8 RID: 25560
 	public class IEaseCurveTypeT
 	{
-		// Token: 0x1700B378 RID: 45944
-		// (get) Token: 0x06029030 RID: 167984 RVA: 0x005A1E5E File Offset: 0x005A005E
-		// (set) Token: 0x06029031 RID: 167985 RVA: 0x005A1E66 File Offset: 0x005A0066
+		// Token: 0x1700BCDE RID: 48350
+		// (get) Token: 0x0602B6BA RID: 177850 RVA: 0x005EAB8E File Offset: 0x005E8D8E
+		// (set) Token: 0x0602B6BB RID: 177851 RVA: 0x005EAB96 File Offset: 0x005E8D96
 		public EEaseCurveType Type { get; set; }
 
-		// Token: 0x06029032 RID: 167986 RVA: 0x005A1E6F File Offset: 0x005A006F
+		// Token: 0x0602B6BC RID: 177852 RVA: 0x005EAB9F File Offset: 0x005E8D9F
 		public IEaseCurveTypeT()
 		{
 			this.Type = EEaseCurveType.Preset;

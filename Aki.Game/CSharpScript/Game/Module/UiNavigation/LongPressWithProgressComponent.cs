@@ -4,15 +4,15 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004984 RID: 18820
+	// Token: 0x020038FD RID: 14589
 	public class LongPressWithProgressComponent : HotKeyComponent
 	{
-		// Token: 0x060310E7 RID: 200935 RVA: 0x00B62EAD File Offset: 0x00B610AD
+		// Token: 0x06025C1B RID: 154651 RVA: 0x00A9DDA1 File Offset: 0x00A9BFA1
 		public LongPressWithProgressComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060310E8 RID: 200936 RVA: 0x00B62EB6 File Offset: 0x00B610B6
+		// Token: 0x06025C1C RID: 154652 RVA: 0x00A9DDAA File Offset: 0x00A9BFAA
 		private void TryActivateRefreshTimer()
 		{
 			if (this.RefreshTimerId != null)
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.RefreshTimerId = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnRefreshCallback), 20f, 1f, null, null, true);
 		}
 
-		// Token: 0x060310E9 RID: 200937 RVA: 0x00B62EEC File Offset: 0x00B610EC
+		// Token: 0x06025C1D RID: 154653 RVA: 0x00A9DDE0 File Offset: 0x00A9BFE0
 		private void OnRefreshCallback(float deltaTime)
 		{
 			float num = this.OnGetProgress();
@@ -58,20 +58,20 @@ namespace CSharpScript.Game.Module.UiNavigation
 			curComponent3.SetLongPressState(num);
 		}
 
-		// Token: 0x060310EA RID: 200938 RVA: 0x00B62F69 File Offset: 0x00B61169
+		// Token: 0x06025C1E RID: 154654 RVA: 0x00A9DE5D File Offset: 0x00A9C05D
 		protected override void OnPress(HotKeyMap config)
 		{
 			UiNavigationNewController.Instance.SimulationPointDown(config.BindButtonTag, config.Id, null);
 			this.TryActivateRefreshTimer();
 		}
 
-		// Token: 0x060310EB RID: 200939 RVA: 0x00B62F8A File Offset: 0x00B6118A
+		// Token: 0x06025C1F RID: 154655 RVA: 0x00A9DE7E File Offset: 0x00A9C07E
 		protected override void OnRelease(HotKeyMap config)
 		{
 			UiNavigationNewController.Instance.SimulationPointUp(config.BindButtonTag, config.Id, null);
 		}
 
-		// Token: 0x060310EC RID: 200940 RVA: 0x00B62FA5 File Offset: 0x00B611A5
+		// Token: 0x06025C20 RID: 154656 RVA: 0x00A9DE99 File Offset: 0x00A9C099
 		private void DeactivateRefreshTimer()
 		{
 			if (this.RefreshTimerId != null)
@@ -81,25 +81,25 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x060310ED RID: 200941 RVA: 0x00B62FC7 File Offset: 0x00B611C7
+		// Token: 0x06025C21 RID: 154657 RVA: 0x00A9DEBB File Offset: 0x00A9C0BB
 		protected override void OnClear()
 		{
 			this.DeactivateRefreshTimer();
 		}
 
-		// Token: 0x060310EE RID: 200942 RVA: 0x00B62FCF File Offset: 0x00B611CF
+		// Token: 0x06025C22 RID: 154658 RVA: 0x00A9DEC3 File Offset: 0x00A9C0C3
 		protected virtual float OnGetProgress()
 		{
 			return 0f;
 		}
 
-		// Token: 0x060310EF RID: 200943 RVA: 0x00B62FD6 File Offset: 0x00B611D6
+		// Token: 0x06025C23 RID: 154659 RVA: 0x00A9DECA File Offset: 0x00A9C0CA
 		protected override bool GetIsLongPress()
 		{
 			return true;
 		}
 
-		// Token: 0x0401A4A9 RID: 107689
+		// Token: 0x04014D1B RID: 85275
 		[Nullable(2)]
 		private TimerHandle RefreshTimerId;
 	}

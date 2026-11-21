@@ -5,18 +5,18 @@ using CSharpScript.Launcher.Define;
 
 namespace CSharpScript.Launcher.DiffPatch.Data
 {
-	// Token: 0x02000234 RID: 564
+	// Token: 0x02000239 RID: 569
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TierLanguageVersionInfo : LanguageVersionInfo
 	{
-		// Token: 0x06000E5C RID: 3676 RVA: 0x00055754 File Offset: 0x00053954
+		// Token: 0x06000E9D RID: 3741 RVA: 0x0005825C File Offset: 0x0005645C
 		public TierLanguageVersionInfo(string packageVersion, string remoteVersion, Dictionary<string, string> remoteManifestHash, string languageCode, string tierLabel) : base(packageVersion, remoteVersion, remoteManifestHash, languageCode)
 		{
 			this.TierLabel = tierLabel;
 		}
 
-		// Token: 0x06000E5D RID: 3677 RVA: 0x0005576C File Offset: 0x0005396C
+		// Token: 0x06000E9E RID: 3742 RVA: 0x00058274 File Offset: 0x00056474
 		public override string GetResType()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(2, 3);
@@ -28,13 +28,13 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06000E5E RID: 3678 RVA: 0x000557C8 File Offset: 0x000539C8
+		// Token: 0x06000E9F RID: 3743 RVA: 0x000582D0 File Offset: 0x000564D0
 		protected override bool ClearUseRecord()
 		{
 			return true;
 		}
 
-		// Token: 0x040008F9 RID: 2297
+		// Token: 0x0400093B RID: 2363
 		private readonly string TierLabel;
 	}
 }

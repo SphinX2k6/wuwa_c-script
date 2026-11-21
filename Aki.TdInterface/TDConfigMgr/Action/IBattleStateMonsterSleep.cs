@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001804 RID: 6148
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200198D RID: 6541
 	public class IBattleStateMonsterSleep : ISetBattleTagType
 	{
-		// Token: 0x06008401 RID: 33793 RVA: 0x0013ACA4 File Offset: 0x00138EA4
+		// Token: 0x06008B1D RID: 35613 RVA: 0x0014A38C File Offset: 0x0014858C
 		private IBattleStateMonsterSleep_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008402 RID: 33794 RVA: 0x0013ACDC File Offset: 0x00138EDC
+		// Token: 0x06008B1E RID: 35614 RVA: 0x0014A3C4 File Offset: 0x001485C4
 		public static IBattleStateMonsterSleep Create([Nullable(2)] IBattleStateMonsterSleep instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008403 RID: 33795 RVA: 0x0013ACEF File Offset: 0x00138EEF
+		// Token: 0x06008B1F RID: 35615 RVA: 0x0014A3D7 File Offset: 0x001485D7
 		public static IBattleStateMonsterSleep CreateFromSetValue([Nullable(2)] IBattleStateMonsterSleep_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008404 RID: 33796 RVA: 0x0013AD02 File Offset: 0x00138F02
+		// Token: 0x06008B20 RID: 35616 RVA: 0x0014A3EA File Offset: 0x001485EA
 		public new IBattleStateMonsterSleep_SetValue ToSetValue()
 		{
 			return new IBattleStateMonsterSleep_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B4F RID: 11087
-		// (get) Token: 0x06008405 RID: 33797 RVA: 0x0013AD15 File Offset: 0x00138F15
-		// (set) Token: 0x06008406 RID: 33798 RVA: 0x0013AD40 File Offset: 0x00138F40
+		// Token: 0x17002D47 RID: 11591
+		// (get) Token: 0x06008B21 RID: 35617 RVA: 0x0014A3FD File Offset: 0x001485FD
+		// (set) Token: 0x06008B22 RID: 35618 RVA: 0x0014A428 File Offset: 0x00148628
 		public override ESetBattleTagType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040053A2 RID: 21410
+		// Token: 0x040057EA RID: 22506
 		[Nullable(2)]
 		protected new IBattleStateMonsterSleep FbInstance;
 
-		// Token: 0x040053A3 RID: 21411
+		// Token: 0x040057EB RID: 22507
 		[Nullable(2)]
 		protected new IBattleStateMonsterSleep_SetValue PocoInterface;
 	}

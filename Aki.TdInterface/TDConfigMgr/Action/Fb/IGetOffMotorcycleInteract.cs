@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002801 RID: 10241
+	// Token: 0x02002AD4 RID: 10964
 	public class IGetOffMotorcycleInteract : ILeisureInteractType
 	{
-		// Token: 0x0600E34E RID: 58190 RVA: 0x0021838F File Offset: 0x0021658F
-		[NullableContext(1)]
+		// Token: 0x0600F173 RID: 61811 RVA: 0x002351F3 File Offset: 0x002333F3
 		public static IGetOffMotorcycleInteract Create(IGetOffMotorcycleInteract? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700450E RID: 17678
-		// (get) Token: 0x0600E34F RID: 58191 RVA: 0x002183AE File Offset: 0x002165AE
+		// Token: 0x17004879 RID: 18553
+		// (get) Token: 0x0600F174 RID: 61812 RVA: 0x00235212 File Offset: 0x00233412
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DE5 RID: 32229
+		// Token: 0x040084A2 RID: 33954
 		private IGetOffMotorcycleInteract Instance;
 	}
 }

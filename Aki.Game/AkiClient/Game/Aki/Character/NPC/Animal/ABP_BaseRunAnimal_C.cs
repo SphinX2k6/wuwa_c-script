@@ -9,12 +9,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.NPC.Animal
 {
-	// Token: 0x020041A4 RID: 16804
+	// Token: 0x020032BF RID: 12991
+	[NullableContext(1)]
+	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/NPC/Animal/ABP_BaseRunAnimal.ABP_BaseRunAnimal_C")]
-	[UnrealStructLayout(19248, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 19234)]
+	[UnrealStructLayout(19264, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 19250)]
 	public class ABP_BaseRunAnimal_C : UKuroAnimInstance, IUnrealUObject, IUnrealObject, IBPI_AnimalEcological_C, IUnrealBlueprintInterface, IUnrealInterface
 	{
-		// Token: 0x0602BB8B RID: 179083 RVA: 0x00A0889B File Offset: 0x00A06A9B
+		// Token: 0x06020E20 RID: 134688 RVA: 0x00951973 File Offset: 0x0094FB73
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (ABP_BaseRunAnimal_C._ClassPtr == IntPtr.Zero)
@@ -24,512 +26,498 @@ namespace AkiClient.Game.Aki.Character.NPC.Animal
 			return ABP_BaseRunAnimal_C._ClassPtr;
 		}
 
-		// Token: 0x0602BB8C RID: 179084 RVA: 0x00A088C0 File Offset: 0x00A06AC0
+		// Token: 0x06020E21 RID: 134689 RVA: 0x00951998 File Offset: 0x0094FB98
 		public ABP_BaseRunAnimal_C() : this(BuiltinUtils.AllocNativeUObject(ABP_BaseRunAnimal_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602BB8D RID: 179085 RVA: 0x00A088E8 File Offset: 0x00A06AE8
-		[NullableContext(1)]
+		// Token: 0x06020E22 RID: 134690 RVA: 0x009519C0 File Offset: 0x0094FBC0
 		public ABP_BaseRunAnimal_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ABP_BaseRunAnimal_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006CAD RID: 27821
-		// (get) Token: 0x0602BB8E RID: 179086 RVA: 0x00A0891C File Offset: 0x00A06B1C
-		// (set) Token: 0x0602BB8F RID: 179087 RVA: 0x00A08955 File Offset: 0x00A06B55
-		[Nullable(1)]
+		// Token: 0x1700419D RID: 16797
+		// (get) Token: 0x06020E23 RID: 134691 RVA: 0x009519F4 File Offset: 0x0094FBF4
+		// (set) Token: 0x06020E24 RID: 134692 RVA: 0x00951A2D File Offset: 0x0094FC2D
 		public TArray<UAnimSequence> 待机表演配置
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
 				TArray<UAnimSequence> result;
 				if ((result = this._待机表演配置) == null)
 				{
-					result = (this._待机表演配置 = new TArray<UAnimSequence>(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_140, this));
+					result = (this._待机表演配置 = new TArray<UAnimSequence>(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_待机表演配置, this));
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.待机表演配置.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x17006CAE RID: 27822
-		// (get) Token: 0x0602BB90 RID: 179088 RVA: 0x00A08963 File Offset: 0x00A06B63
-		// (set) Token: 0x0602BB91 RID: 179089 RVA: 0x00A08977 File Offset: 0x00A06B77
+		// Token: 0x1700419E RID: 16798
+		// (get) Token: 0x06020E25 RID: 134693 RVA: 0x00951A3B File Offset: 0x0094FC3B
+		// (set) Token: 0x06020E26 RID: 134694 RVA: 0x00951A4F File Offset: 0x0094FC4F
 		[Nullable(2)]
 		public unsafe TsBaseCharacter 角色蓝图
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<TsBaseCharacter>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_141);
+				return BuiltinUtils.ObjectPropertyGetter<TsBaseCharacter>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_角色蓝图);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_141, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_角色蓝图, value);
 			}
 		}
 
-		// Token: 0x17006CAF RID: 27823
-		// (get) Token: 0x0602BB92 RID: 179090 RVA: 0x00A0898C File Offset: 0x00A06B8C
-		// (set) Token: 0x0602BB93 RID: 179091 RVA: 0x00A089A0 File Offset: 0x00A06BA0
+		// Token: 0x1700419F RID: 16799
+		// (get) Token: 0x06020E27 RID: 134695 RVA: 0x00951A64 File Offset: 0x0094FC64
+		// (set) Token: 0x06020E28 RID: 134696 RVA: 0x00951A78 File Offset: 0x0094FC78
 		[Nullable(2)]
 		public unsafe USkeletalMeshComponent 角色网格体
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_142);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_角色网格体);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_142, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_角色网格体, value);
 			}
 		}
 
-		// Token: 0x17006CB0 RID: 27824
-		// (get) Token: 0x0602BB94 RID: 179092 RVA: 0x00A089B5 File Offset: 0x00A06BB5
-		// (set) Token: 0x0602BB95 RID: 179093 RVA: 0x00A089C9 File Offset: 0x00A06BC9
+		// Token: 0x170041A0 RID: 16800
+		// (get) Token: 0x06020E29 RID: 134697 RVA: 0x00951A8D File Offset: 0x0094FC8D
+		// (set) Token: 0x06020E2A RID: 134698 RVA: 0x00951AA1 File Offset: 0x0094FCA1
+		[Nullable(0)]
 		public unsafe TEnumAsByte<EAnimalEcologicalState> 生态表现状态
 		{
+			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_143);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_生态表现状态);
 			}
+			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_143) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_生态表现状态) = value;
 			}
 		}
 
-		// Token: 0x17006CB1 RID: 27825
-		// (get) Token: 0x0602BB96 RID: 179094 RVA: 0x00A089DE File Offset: 0x00A06BDE
-		// (set) Token: 0x0602BB97 RID: 179095 RVA: 0x00A089EE File Offset: 0x00A06BEE
+		// Token: 0x170041A1 RID: 16801
+		// (get) Token: 0x06020E2B RID: 134699 RVA: 0x00951AB6 File Offset: 0x0094FCB6
+		// (set) Token: 0x06020E2C RID: 134700 RVA: 0x00951AC6 File Offset: 0x0094FCC6
 		public unsafe bool 状态机初始化
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_144) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_状态机初始化) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_144) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_状态机初始化) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006CB2 RID: 27826
-		// (get) Token: 0x0602BB98 RID: 179096 RVA: 0x00A089FF File Offset: 0x00A06BFF
-		// (set) Token: 0x0602BB99 RID: 179097 RVA: 0x00A08A0F File Offset: 0x00A06C0F
+		// Token: 0x170041A2 RID: 16802
+		// (get) Token: 0x06020E2D RID: 134701 RVA: 0x00951AD7 File Offset: 0x0094FCD7
+		// (set) Token: 0x06020E2E RID: 134702 RVA: 0x00951AE7 File Offset: 0x0094FCE7
 		public unsafe int IdleActionIndex
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_145);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_IdleActionIndex);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_145) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_IdleActionIndex) = value;
 			}
 		}
 
-		// Token: 0x17006CB3 RID: 27827
-		// (get) Token: 0x0602BB9A RID: 179098 RVA: 0x00A08A20 File Offset: 0x00A06C20
-		// (set) Token: 0x0602BB9B RID: 179099 RVA: 0x00A08A34 File Offset: 0x00A06C34
+		// Token: 0x170041A3 RID: 16803
+		// (get) Token: 0x06020E2F RID: 134703 RVA: 0x00951AF8 File Offset: 0x0094FCF8
+		// (set) Token: 0x06020E30 RID: 134704 RVA: 0x00951B0C File Offset: 0x0094FD0C
 		[Nullable(2)]
 		public unsafe UAnimSequence IdleAnim
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAnimSequence>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_146);
+				return BuiltinUtils.ObjectPropertyGetter<UAnimSequence>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_IdleAnim);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_146, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_IdleAnim, value);
 			}
 		}
 
-		// Token: 0x17006CB4 RID: 27828
-		// (get) Token: 0x0602BB9C RID: 179100 RVA: 0x00A08A4C File Offset: 0x00A06C4C
-		// (set) Token: 0x0602BB9D RID: 179101 RVA: 0x00A08A85 File Offset: 0x00A06C85
-		[Nullable(1)]
+		// Token: 0x170041A4 RID: 16804
+		// (get) Token: 0x06020E31 RID: 134705 RVA: 0x00951B24 File Offset: 0x0094FD24
+		// (set) Token: 0x06020E32 RID: 134706 RVA: 0x00951B5D File Offset: 0x0094FD5D
 		public TArray<UAnimSequence> 交互表演配置
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
 				TArray<UAnimSequence> result;
 				if ((result = this._交互表演配置) == null)
 				{
-					result = (this._交互表演配置 = new TArray<UAnimSequence>(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_147, this));
+					result = (this._交互表演配置 = new TArray<UAnimSequence>(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_交互表演配置, this));
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.交互表演配置.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x17006CB5 RID: 27829
-		// (get) Token: 0x0602BB9E RID: 179102 RVA: 0x00A08A93 File Offset: 0x00A06C93
-		// (set) Token: 0x0602BB9F RID: 179103 RVA: 0x00A08AA3 File Offset: 0x00A06CA3
+		// Token: 0x170041A5 RID: 16805
+		// (get) Token: 0x06020E33 RID: 134707 RVA: 0x00951B6B File Offset: 0x0094FD6B
+		// (set) Token: 0x06020E34 RID: 134708 RVA: 0x00951B7B File Offset: 0x0094FD7B
 		public unsafe int InteractActionIndex
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_148);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_InteractActionIndex);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_148) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_InteractActionIndex) = value;
 			}
 		}
 
-		// Token: 0x17006CB6 RID: 27830
-		// (get) Token: 0x0602BBA0 RID: 179104 RVA: 0x00A08AB4 File Offset: 0x00A06CB4
-		// (set) Token: 0x0602BBA1 RID: 179105 RVA: 0x00A08AC8 File Offset: 0x00A06CC8
+		// Token: 0x170041A6 RID: 16806
+		// (get) Token: 0x06020E35 RID: 134709 RVA: 0x00951B8C File Offset: 0x0094FD8C
+		// (set) Token: 0x06020E36 RID: 134710 RVA: 0x00951BA0 File Offset: 0x0094FDA0
 		[Nullable(2)]
 		public unsafe UAnimSequence InteractAnim
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAnimSequence>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_149);
+				return BuiltinUtils.ObjectPropertyGetter<UAnimSequence>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_InteractAnim);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_149, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRunAnimal_C.__PropertyOffset_InteractAnim, value);
 			}
 		}
 
-		// Token: 0x17006CB7 RID: 27831
-		// (get) Token: 0x0602BBA2 RID: 179106 RVA: 0x00A08ADD File Offset: 0x00A06CDD
-		// (set) Token: 0x0602BBA3 RID: 179107 RVA: 0x00A08AF1 File Offset: 0x00A06CF1
+		// Token: 0x170041A7 RID: 16807
+		// (get) Token: 0x06020E37 RID: 134711 RVA: 0x00951BB5 File Offset: 0x0094FDB5
+		// (set) Token: 0x06020E38 RID: 134712 RVA: 0x00951BC9 File Offset: 0x0094FDC9
 		public unsafe FVector SightDirect
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_150);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_SightDirect);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_150) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_SightDirect) = value;
 			}
 		}
 
-		// Token: 0x17006CB8 RID: 27832
-		// (get) Token: 0x0602BBA4 RID: 179108 RVA: 0x00A08B06 File Offset: 0x00A06D06
-		// (set) Token: 0x0602BBA5 RID: 179109 RVA: 0x00A08B16 File Offset: 0x00A06D16
+		// Token: 0x170041A8 RID: 16808
+		// (get) Token: 0x06020E39 RID: 134713 RVA: 0x00951BDE File Offset: 0x0094FDDE
+		// (set) Token: 0x06020E3A RID: 134714 RVA: 0x00951BEE File Offset: 0x0094FDEE
 		public unsafe SightLockMode SightLockMode
 		{
 			get
 			{
-				return (SightLockMode)(*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_151));
+				return (SightLockMode)(*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_SightLockMode));
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_151) = (byte)value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_SightLockMode) = (byte)value;
 			}
 		}
 
-		// Token: 0x17006CB9 RID: 27833
-		// (get) Token: 0x0602BBA6 RID: 179110 RVA: 0x00A08B27 File Offset: 0x00A06D27
-		// (set) Token: 0x0602BBA7 RID: 179111 RVA: 0x00A08B37 File Offset: 0x00A06D37
+		// Token: 0x170041A9 RID: 16809
+		// (get) Token: 0x06020E3B RID: 134715 RVA: 0x00951BFF File Offset: 0x0094FDFF
+		// (set) Token: 0x06020E3C RID: 134716 RVA: 0x00951C0F File Offset: 0x0094FE0F
 		public unsafe int WalkRunParam
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_152);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_WalkRunParam);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_152) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_WalkRunParam) = value;
 			}
 		}
 
-		// Token: 0x17006CBA RID: 27834
-		// (get) Token: 0x0602BBA8 RID: 179112 RVA: 0x00A08B48 File Offset: 0x00A06D48
-		// (set) Token: 0x0602BBA9 RID: 179113 RVA: 0x00A08B58 File Offset: 0x00A06D58
+		// Token: 0x170041AA RID: 16810
+		// (get) Token: 0x06020E3D RID: 134717 RVA: 0x00951C20 File Offset: 0x0094FE20
+		// (set) Token: 0x06020E3E RID: 134718 RVA: 0x00951C30 File Offset: 0x0094FE30
 		public unsafe float 左右跑参数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_153);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_左右跑参数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_153) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_左右跑参数) = value;
 			}
 		}
 
-		// Token: 0x17006CBB RID: 27835
-		// (get) Token: 0x0602BBAA RID: 179114 RVA: 0x00A08B69 File Offset: 0x00A06D69
-		// (set) Token: 0x0602BBAB RID: 179115 RVA: 0x00A08B79 File Offset: 0x00A06D79
+		// Token: 0x170041AB RID: 16811
+		// (get) Token: 0x06020E3F RID: 134719 RVA: 0x00951C41 File Offset: 0x0094FE41
+		// (set) Token: 0x06020E40 RID: 134720 RVA: 0x00951C51 File Offset: 0x0094FE51
 		public unsafe bool bHaveInput
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_154) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_bHaveInput) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_154) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_bHaveInput) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006CBC RID: 27836
-		// (get) Token: 0x0602BBAC RID: 179116 RVA: 0x00A08B8A File Offset: 0x00A06D8A
-		// (set) Token: 0x0602BBAD RID: 179117 RVA: 0x00A08B9A File Offset: 0x00A06D9A
+		// Token: 0x170041AC RID: 16812
+		// (get) Token: 0x06020E41 RID: 134721 RVA: 0x00951C62 File Offset: 0x0094FE62
+		// (set) Token: 0x06020E42 RID: 134722 RVA: 0x00951C72 File Offset: 0x0094FE72
 		public unsafe bool bIdleAction
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_155) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_bIdleAction) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_155) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_bIdleAction) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006CBD RID: 27837
-		// (get) Token: 0x0602BBAE RID: 179118 RVA: 0x00A08BAB File Offset: 0x00A06DAB
-		// (set) Token: 0x0602BBAF RID: 179119 RVA: 0x00A08BBB File Offset: 0x00A06DBB
+		// Token: 0x170041AD RID: 16813
+		// (get) Token: 0x06020E43 RID: 134723 RVA: 0x00951C83 File Offset: 0x0094FE83
+		// (set) Token: 0x06020E44 RID: 134724 RVA: 0x00951C93 File Offset: 0x0094FE93
 		public unsafe bool 是否警觉
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_156) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_是否警觉) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_156) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_是否警觉) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006CBE RID: 27838
-		// (get) Token: 0x0602BBB0 RID: 179120 RVA: 0x00A08BCC File Offset: 0x00A06DCC
-		// (set) Token: 0x0602BBB1 RID: 179121 RVA: 0x00A08BDC File Offset: 0x00A06DDC
+		// Token: 0x170041AE RID: 16814
+		// (get) Token: 0x06020E45 RID: 134725 RVA: 0x00951CA4 File Offset: 0x0094FEA4
+		// (set) Token: 0x06020E46 RID: 134726 RVA: 0x00951CB4 File Offset: 0x0094FEB4
 		public unsafe bool 是否起跑转身
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_157) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_是否起跑转身) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_157) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_是否起跑转身) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006CBF RID: 27839
-		// (get) Token: 0x0602BBB2 RID: 179122 RVA: 0x00A08BED File Offset: 0x00A06DED
-		// (set) Token: 0x0602BBB3 RID: 179123 RVA: 0x00A08BFD File Offset: 0x00A06DFD
+		// Token: 0x170041AF RID: 16815
+		// (get) Token: 0x06020E47 RID: 134727 RVA: 0x00951CC5 File Offset: 0x0094FEC5
+		// (set) Token: 0x06020E48 RID: 134728 RVA: 0x00951CD5 File Offset: 0x0094FED5
 		public unsafe bool 起跑左转
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_158) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_起跑左转) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_158) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_起跑左转) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006CC0 RID: 27840
-		// (get) Token: 0x0602BBB4 RID: 179124 RVA: 0x00A08C0E File Offset: 0x00A06E0E
-		// (set) Token: 0x0602BBB5 RID: 179125 RVA: 0x00A08C1E File Offset: 0x00A06E1E
+		// Token: 0x170041B0 RID: 16816
+		// (get) Token: 0x06020E49 RID: 134729 RVA: 0x00951CE6 File Offset: 0x0094FEE6
+		// (set) Token: 0x06020E4A RID: 134730 RVA: 0x00951CF6 File Offset: 0x0094FEF6
 		public unsafe bool bInteractAction
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_159) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_bInteractAction) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_159) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_bInteractAction) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006CC1 RID: 27841
-		// (get) Token: 0x0602BBB6 RID: 179126 RVA: 0x00A08C2F File Offset: 0x00A06E2F
-		// (set) Token: 0x0602BBB7 RID: 179127 RVA: 0x00A08C3F File Offset: 0x00A06E3F
+		// Token: 0x170041B1 RID: 16817
+		// (get) Token: 0x06020E4B RID: 134731 RVA: 0x00951D07 File Offset: 0x0094FF07
+		// (set) Token: 0x06020E4C RID: 134732 RVA: 0x00951D17 File Offset: 0x0094FF17
 		public unsafe bool 受到攻击
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_160) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_受到攻击) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_160) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_受到攻击) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006CC2 RID: 27842
-		// (get) Token: 0x0602BBB8 RID: 179128 RVA: 0x00A08C50 File Offset: 0x00A06E50
-		// (set) Token: 0x0602BBB9 RID: 179129 RVA: 0x00A08C60 File Offset: 0x00A06E60
+		// Token: 0x170041B2 RID: 16818
+		// (get) Token: 0x06020E4D RID: 134733 RVA: 0x00951D28 File Offset: 0x0094FF28
+		// (set) Token: 0x06020E4E RID: 134734 RVA: 0x00951D38 File Offset: 0x0094FF38
 		public unsafe bool 起飞
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_161) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_起飞) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_161) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_起飞) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006CC3 RID: 27843
-		// (get) Token: 0x0602BBBA RID: 179130 RVA: 0x00A08C71 File Offset: 0x00A06E71
-		// (set) Token: 0x0602BBBB RID: 179131 RVA: 0x00A08C81 File Offset: 0x00A06E81
+		// Token: 0x170041B3 RID: 16819
+		// (get) Token: 0x06020E4F RID: 134735 RVA: 0x00951D49 File Offset: 0x0094FF49
+		// (set) Token: 0x06020E50 RID: 134736 RVA: 0x00951D59 File Offset: 0x0094FF59
 		public unsafe bool bSitDown
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_162) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_bSitDown) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_162) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_bSitDown) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006CC4 RID: 27844
-		// (get) Token: 0x0602BBBC RID: 179132 RVA: 0x00A08C94 File Offset: 0x00A06E94
-		// (set) Token: 0x0602BBBD RID: 179133 RVA: 0x00A08CCD File Offset: 0x00A06ECD
-		[Nullable(1)]
+		// Token: 0x170041B4 RID: 16820
+		// (get) Token: 0x06020E51 RID: 134737 RVA: 0x00951D6C File Offset: 0x0094FF6C
+		// (set) Token: 0x06020E52 RID: 134738 RVA: 0x00951DA5 File Offset: 0x0094FFA5
 		public TMap<FGameplayTag, UAnimSequence> 其他动作配置
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
 				TMap<FGameplayTag, UAnimSequence> result;
 				if ((result = this._其他动作配置) == null)
 				{
-					result = (this._其他动作配置 = new TMap<FGameplayTag, UAnimSequence>(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_163, this));
+					result = (this._其他动作配置 = new TMap<FGameplayTag, UAnimSequence>(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_其他动作配置, this));
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.其他动作配置.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x17006CC5 RID: 27845
-		// (get) Token: 0x0602BBBE RID: 179134 RVA: 0x00A08CDB File Offset: 0x00A06EDB
-		// (set) Token: 0x0602BBBF RID: 179135 RVA: 0x00A08CEB File Offset: 0x00A06EEB
+		// Token: 0x170041B5 RID: 16821
+		// (get) Token: 0x06020E53 RID: 134739 RVA: 0x00951DB3 File Offset: 0x0094FFB3
+		// (set) Token: 0x06020E54 RID: 134740 RVA: 0x00951DC3 File Offset: 0x0094FFC3
 		public unsafe float ActionTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_164);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_ActionTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_164) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_ActionTime) = value;
 			}
 		}
 
-		// Token: 0x17006CC6 RID: 27846
-		// (get) Token: 0x0602BBC0 RID: 179136 RVA: 0x00A08CFC File Offset: 0x00A06EFC
-		// (set) Token: 0x0602BBC1 RID: 179137 RVA: 0x00A08D35 File Offset: 0x00A06F35
-		[Nullable(1)]
+		// Token: 0x170041B6 RID: 16822
+		// (get) Token: 0x06020E55 RID: 134741 RVA: 0x00951DD4 File Offset: 0x0094FFD4
+		// (set) Token: 0x06020E56 RID: 134742 RVA: 0x00951E0D File Offset: 0x0095000D
 		public TMap<FGameplayTag, TSoftObjectPtr<PD_CharacterControllerData_C>> 材质配置
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
 				TMap<FGameplayTag, TSoftObjectPtr<PD_CharacterControllerData_C>> result;
 				if ((result = this._材质配置) == null)
 				{
-					result = (this._材质配置 = new TMap<FGameplayTag, TSoftObjectPtr<PD_CharacterControllerData_C>>(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_165, this));
+					result = (this._材质配置 = new TMap<FGameplayTag, TSoftObjectPtr<PD_CharacterControllerData_C>>(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_材质配置, this));
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.材质配置.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x17006CC7 RID: 27847
-		// (get) Token: 0x0602BBC2 RID: 179138 RVA: 0x00A08D44 File Offset: 0x00A06F44
-		// (set) Token: 0x0602BBC3 RID: 179139 RVA: 0x00A08D7D File Offset: 0x00A06F7D
-		[Nullable(1)]
+		// Token: 0x170041B7 RID: 16823
+		// (get) Token: 0x06020E57 RID: 134743 RVA: 0x00951E1C File Offset: 0x0095001C
+		// (set) Token: 0x06020E58 RID: 134744 RVA: 0x00951E55 File Offset: 0x00950055
 		public TMap<FGameplayTag, UAnimMontage> 蒙太奇表演配置
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
 				TMap<FGameplayTag, UAnimMontage> result;
 				if ((result = this._蒙太奇表演配置) == null)
 				{
-					result = (this._蒙太奇表演配置 = new TMap<FGameplayTag, UAnimMontage>(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_166, this));
+					result = (this._蒙太奇表演配置 = new TMap<FGameplayTag, UAnimMontage>(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_蒙太奇表演配置, this));
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.蒙太奇表演配置.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x17006CC8 RID: 27848
-		// (get) Token: 0x0602BBC4 RID: 179140 RVA: 0x00A08D8B File Offset: 0x00A06F8B
-		// (set) Token: 0x0602BBC5 RID: 179141 RVA: 0x00A08D9B File Offset: 0x00A06F9B
+		// Token: 0x170041B8 RID: 16824
+		// (get) Token: 0x06020E59 RID: 134745 RVA: 0x00951E63 File Offset: 0x00950063
+		// (set) Token: 0x06020E5A RID: 134746 RVA: 0x00951E73 File Offset: 0x00950073
 		public unsafe bool 系统UI
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_167) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_系统UI) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_167) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_系统UI) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006CC9 RID: 27849
-		// (get) Token: 0x0602BBC6 RID: 179142 RVA: 0x00A08DAC File Offset: 0x00A06FAC
-		// (set) Token: 0x0602BBC7 RID: 179143 RVA: 0x00A08DBC File Offset: 0x00A06FBC
+		// Token: 0x170041B9 RID: 16825
+		// (get) Token: 0x06020E5B RID: 134747 RVA: 0x00951E84 File Offset: 0x00950084
+		// (set) Token: 0x06020E5C RID: 134748 RVA: 0x00951E94 File Offset: 0x00950094
 		public unsafe bool bGetDown
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_168) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_bGetDown) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_168) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRunAnimal_C.__PropertyOffset_bGetDown) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602BBC8 RID: 179144 RVA: 0x00A08DD0 File Offset: 0x00A06FD0
+		// Token: 0x06020E5D RID: 134749 RVA: 0x00951EA8 File Offset: 0x009500A8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetCurrentActionTime(ref float ActionTime)
 		{
 			ABP_BaseRunAnimal_C.__GetCurrentActionTime_FunctionParams* ptr = stackalloc ABP_BaseRunAnimal_C.__GetCurrentActionTime_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_BaseRunAnimal_C.__GetCurrentActionTime_FunctionParams) & -16L;
@@ -539,101 +527,15 @@ namespace AkiClient.Game.Aki.Character.NPC.Animal
 			ActionTime = ptr->ActionTime;
 		}
 
-		// Token: 0x0602BBC9 RID: 179145 RVA: 0x00A08E20 File Offset: 0x00A07020
-		[NullableContext(2)]
+		// Token: 0x06020E5E RID: 134750 RVA: 0x00951EF7 File Offset: 0x009500F7
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void 演出层(FPoseLink 状态机输入, ref FPoseLink 演出层)
-		{
-			ABP_BaseRunAnimal_C.__演出层_FunctionParams* ptr = stackalloc ABP_BaseRunAnimal_C.__演出层_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(ABP_BaseRunAnimal_C.__演出层_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_BaseRunAnimal_C.__演出层_NativeFunctionPtr, (void*)ptr, 1);
-			if (状态机输入 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->状态机输入, 状态机输入.NativePtr, 1, false);
-			}
-			if (演出层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->演出层, 演出层.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__演出层_NativeFunctionPtr, (void*)ptr);
-			if (演出层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), 演出层.NativePtr, &ptr->演出层, 1, false);
-			}
-		}
-
-		// Token: 0x0602BBCA RID: 179146 RVA: 0x00A08ECC File Offset: 0x00A070CC
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void 后处理层(FPoseLink 基础输入, ref FPoseLink 后处理层)
-		{
-			ABP_BaseRunAnimal_C.__后处理层_FunctionParams* ptr = stackalloc ABP_BaseRunAnimal_C.__后处理层_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(ABP_BaseRunAnimal_C.__后处理层_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_BaseRunAnimal_C.__后处理层_NativeFunctionPtr, (void*)ptr, 1);
-			if (基础输入 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->基础输入, 基础输入.NativePtr, 1, false);
-			}
-			if (后处理层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->后处理层, 后处理层.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__后处理层_NativeFunctionPtr, (void*)ptr);
-			if (后处理层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), 后处理层.NativePtr, &ptr->后处理层, 1, false);
-			}
-		}
-
-		// Token: 0x0602BBCB RID: 179147 RVA: 0x00A08F78 File Offset: 0x00A07178
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void 基础层(ref FPoseLink 基础层)
-		{
-			ABP_BaseRunAnimal_C.__基础层_FunctionParams* ptr = stackalloc ABP_BaseRunAnimal_C.__基础层_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(ABP_BaseRunAnimal_C.__基础层_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_BaseRunAnimal_C.__基础层_NativeFunctionPtr, (void*)ptr, 1);
-			if (基础层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->基础层, 基础层.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__基础层_NativeFunctionPtr, (void*)ptr);
-			if (基础层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), 基础层.NativePtr, &ptr->基础层, 1, false);
-			}
-		}
-
-		// Token: 0x0602BBCC RID: 179148 RVA: 0x00A09000 File Offset: 0x00A07200
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void AnimGraph(ref FPoseLink AnimGraph)
-		{
-			ABP_BaseRunAnimal_C.__AnimGraph_FunctionParams* ptr = stackalloc ABP_BaseRunAnimal_C.__AnimGraph_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(ABP_BaseRunAnimal_C.__AnimGraph_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_BaseRunAnimal_C.__AnimGraph_NativeFunctionPtr, (void*)ptr, 1);
-			if (AnimGraph != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->AnimGraph, AnimGraph.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__AnimGraph_NativeFunctionPtr, (void*)ptr);
-			if (AnimGraph != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), AnimGraph.NativePtr, &ptr->AnimGraph, 1, false);
-			}
-		}
-
-		// Token: 0x0602BBCD RID: 179149 RVA: 0x00A09087 File Offset: 0x00A07287
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnSystemUIStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__OnSystemUIStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBCE RID: 179150 RVA: 0x00A0909C File Offset: 0x00A0729C
+		// Token: 0x06020E5F RID: 134751 RVA: 0x00951F0C File Offset: 0x0095010C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnFeedStart(FGameplayTag GameplayTag)
 		{
 			ABP_BaseRunAnimal_C.__OnFeedStart_FunctionParams* ptr = stackalloc ABP_BaseRunAnimal_C.__OnFeedStart_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(ABP_BaseRunAnimal_C.__OnFeedStart_FunctionParams) & -16L;
@@ -642,161 +544,141 @@ namespace AkiClient.Game.Aki.Character.NPC.Animal
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__OnFeedStart_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602BBCF RID: 179151 RVA: 0x00A090E2 File Offset: 0x00A072E2
+		// Token: 0x06020E60 RID: 134752 RVA: 0x00951F52 File Offset: 0x00950152
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新移动信息()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__更新移动信息_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBD0 RID: 179152 RVA: 0x00A090F6 File Offset: 0x00A072F6
+		// Token: 0x06020E61 RID: 134753 RVA: 0x00951F66 File Offset: 0x00950166
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 处理动作优先级()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__处理动作优先级_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBD1 RID: 179153 RVA: 0x00A0910A File Offset: 0x00A0730A
+		// Token: 0x06020E62 RID: 134754 RVA: 0x00951F7A File Offset: 0x0095017A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnUnderAttackStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__OnUnderAttackStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBD2 RID: 179154 RVA: 0x00A0911E File Offset: 0x00A0731E
+		// Token: 0x06020E63 RID: 134755 RVA: 0x00951F8E File Offset: 0x0095018E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnTakeOffStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__OnTakeOffStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBD3 RID: 179155 RVA: 0x00A09132 File Offset: 0x00A07332
+		// Token: 0x06020E64 RID: 134756 RVA: 0x00951FA2 File Offset: 0x009501A2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnAlertStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__OnAlertStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBD4 RID: 179156 RVA: 0x00A09146 File Offset: 0x00A07346
+		// Token: 0x06020E65 RID: 134757 RVA: 0x00951FB6 File Offset: 0x009501B6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新视线()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__更新视线_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBD5 RID: 179157 RVA: 0x00A0915A File Offset: 0x00A0735A
+		// Token: 0x06020E66 RID: 134758 RVA: 0x00951FCA File Offset: 0x009501CA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnInteractStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__OnInteractStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBD6 RID: 179158 RVA: 0x00A0916E File Offset: 0x00A0736E
+		// Token: 0x06020E67 RID: 134759 RVA: 0x00951FDE File Offset: 0x009501DE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新特殊交互表演()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__更新特殊交互表演_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBD7 RID: 179159 RVA: 0x00A09182 File Offset: 0x00A07382
+		// Token: 0x06020E68 RID: 134760 RVA: 0x00951FF2 File Offset: 0x009501F2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新交互表演()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__更新交互表演_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBD8 RID: 179160 RVA: 0x00A09196 File Offset: 0x00A07396
+		// Token: 0x06020E69 RID: 134761 RVA: 0x00952006 File Offset: 0x00950206
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnIdleStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__OnIdleStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBD9 RID: 179161 RVA: 0x00A091AA File Offset: 0x00A073AA
+		// Token: 0x06020E6A RID: 134762 RVA: 0x0095201A File Offset: 0x0095021A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新待机表演()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__更新待机表演_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBDA RID: 179162 RVA: 0x00A091BE File Offset: 0x00A073BE
+		// Token: 0x06020E6B RID: 134763 RVA: 0x0095202E File Offset: 0x0095022E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void TakeOffEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__TakeOffEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBDB RID: 179163 RVA: 0x00A091D2 File Offset: 0x00A073D2
+		// Token: 0x06020E6C RID: 134764 RVA: 0x00952042 File Offset: 0x00950242
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void AlertEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__AlertEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBDC RID: 179164 RVA: 0x00A091E6 File Offset: 0x00A073E6
+		// Token: 0x06020E6D RID: 134765 RVA: 0x00952056 File Offset: 0x00950256
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void UnderAttackEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__UnderAttackEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBDD RID: 179165 RVA: 0x00A091FA File Offset: 0x00A073FA
+		// Token: 0x06020E6E RID: 134766 RVA: 0x0095206A File Offset: 0x0095026A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void IdleEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__IdleEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBDE RID: 179166 RVA: 0x00A0920E File Offset: 0x00A0740E
+		// Token: 0x06020E6F RID: 134767 RVA: 0x0095207E File Offset: 0x0095027E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void InteractEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__InteractEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBDF RID: 179167 RVA: 0x00A09222 File Offset: 0x00A07422
+		// Token: 0x06020E70 RID: 134768 RVA: 0x00952092 File Offset: 0x00950292
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void NoneStateEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__NoneStateEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBE0 RID: 179168 RVA: 0x00A09236 File Offset: 0x00A07436
+		// Token: 0x06020E71 RID: 134769 RVA: 0x009520A6 File Offset: 0x009502A6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void BlueprintInitializeAnimation()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__BlueprintInitializeAnimation_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBE1 RID: 179169 RVA: 0x00A0924A File Offset: 0x00A0744A
+		// Token: 0x06020E72 RID: 134770 RVA: 0x009520BA File Offset: 0x009502BA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void BlueprintInitializeAnimation_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__BlueprintInitializeAnimation_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__BlueprintInitializeAnimation_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBE2 RID: 179170 RVA: 0x00A09260 File Offset: 0x00A07460
+		// Token: 0x06020E73 RID: 134771 RVA: 0x009520D0 File Offset: 0x009502D0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void BlueprintUpdateAnimation(float DeltaTimeX)
 		{
 			ABP_BaseRunAnimal_C.__BlueprintUpdateAnimation_FunctionParams* ptr = stackalloc ABP_BaseRunAnimal_C.__BlueprintUpdateAnimation_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_BaseRunAnimal_C.__BlueprintUpdateAnimation_FunctionParams) & -16L;
@@ -805,76 +687,67 @@ namespace AkiClient.Game.Aki.Character.NPC.Animal
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602BBE3 RID: 179171 RVA: 0x00A092A8 File Offset: 0x00A074A8
+		// Token: 0x06020E74 RID: 134772 RVA: 0x00952118 File Offset: 0x00950318
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void BlueprintUpdateAnimation_Implementation(float DeltaTimeX)
 		{
 			ABP_BaseRunAnimal_C.__BlueprintUpdateAnimation_FunctionParams* ptr = stackalloc ABP_BaseRunAnimal_C.__BlueprintUpdateAnimation_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_BaseRunAnimal_C.__BlueprintUpdateAnimation_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ABP_BaseRunAnimal_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaTimeX = DeltaTimeX;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602BBE4 RID: 179172 RVA: 0x00A092EF File Offset: 0x00A074EF
+		// Token: 0x06020E75 RID: 134773 RVA: 0x0095215E File Offset: 0x0095035E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void StateMachineInitializationComplete()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__StateMachineInitializationComplete_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBE5 RID: 179173 RVA: 0x00A09303 File Offset: 0x00A07503
+		// Token: 0x06020E76 RID: 134774 RVA: 0x00952172 File Offset: 0x00950372
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void NoneStateStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__NoneStateStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBE6 RID: 179174 RVA: 0x00A09317 File Offset: 0x00A07517
+		// Token: 0x06020E77 RID: 134775 RVA: 0x00952186 File Offset: 0x00950386
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void InteractStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__InteractStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBE7 RID: 179175 RVA: 0x00A0932B File Offset: 0x00A0752B
+		// Token: 0x06020E78 RID: 134776 RVA: 0x0095219A File Offset: 0x0095039A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void IdleStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__IdleStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBE8 RID: 179176 RVA: 0x00A0933F File Offset: 0x00A0753F
+		// Token: 0x06020E79 RID: 134777 RVA: 0x009521AE File Offset: 0x009503AE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void UnderAttackStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__UnderAttackStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBE9 RID: 179177 RVA: 0x00A09353 File Offset: 0x00A07553
+		// Token: 0x06020E7A RID: 134778 RVA: 0x009521C2 File Offset: 0x009503C2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void AlertStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__AlertStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBEA RID: 179178 RVA: 0x00A09367 File Offset: 0x00A07567
+		// Token: 0x06020E7B RID: 134779 RVA: 0x009521D6 File Offset: 0x009503D6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void TakeOffStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__TakeOffStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBEB RID: 179179 RVA: 0x00A0937C File Offset: 0x00A0757C
+		// Token: 0x06020E7C RID: 134780 RVA: 0x009521EC File Offset: 0x009503EC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void FeedStart(FGameplayTag GameplayTag)
 		{
 			ABP_BaseRunAnimal_C.__FeedStart_FunctionParams* ptr = stackalloc ABP_BaseRunAnimal_C.__FeedStart_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(ABP_BaseRunAnimal_C.__FeedStart_FunctionParams) & -16L;
@@ -883,41 +756,38 @@ namespace AkiClient.Game.Aki.Character.NPC.Animal
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__FeedStart_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602BBEC RID: 179180 RVA: 0x00A093C2 File Offset: 0x00A075C2
+		// Token: 0x06020E7D RID: 134781 RVA: 0x00952232 File Offset: 0x00950432
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void SystemUiStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__SystemUiStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBED RID: 179181 RVA: 0x00A093D6 File Offset: 0x00A075D6
+		// Token: 0x06020E7E RID: 134782 RVA: 0x00952246 File Offset: 0x00950446
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void SystemUiEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRunAnimal_C.__SystemUiEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBEE RID: 179182 RVA: 0x00A093EA File Offset: 0x00A075EA
+		// Token: 0x06020E7F RID: 134783 RVA: 0x0095225A File Offset: 0x0095045A
 		protected ABP_BaseRunAnimal_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04016C7D RID: 93309
-		[Nullable(1)]
+		// Token: 0x04011CCF RID: 72911
 		public new const string __ObjectPath = "/Game/Aki/Character/NPC/Animal/ABP_BaseRunAnimal.ABP_BaseRunAnimal_C";
 
-		// Token: 0x04016C7E RID: 93310
+		// Token: 0x04011CD0 RID: 72912
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04016C7F RID: 93311
+		// Token: 0x04011CD1 RID: 72913
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04016C80 RID: 93312
-		internal static int __PropertyOffset_140;
+		// Token: 0x04011CD2 RID: 72914
+		internal static int __PropertyOffset_待机表演配置;
 
-		// Token: 0x04016C81 RID: 93313
+		// Token: 0x04011CD3 RID: 72915
 		[Nullable(new byte[]
 		{
 			2,
@@ -925,28 +795,28 @@ namespace AkiClient.Game.Aki.Character.NPC.Animal
 		})]
 		private TArray<UAnimSequence> _待机表演配置;
 
-		// Token: 0x04016C82 RID: 93314
-		internal static int __PropertyOffset_141;
+		// Token: 0x04011CD4 RID: 72916
+		internal static int __PropertyOffset_角色蓝图;
 
-		// Token: 0x04016C83 RID: 93315
-		internal static int __PropertyOffset_142;
+		// Token: 0x04011CD5 RID: 72917
+		internal static int __PropertyOffset_角色网格体;
 
-		// Token: 0x04016C84 RID: 93316
-		internal static int __PropertyOffset_143;
+		// Token: 0x04011CD6 RID: 72918
+		internal static int __PropertyOffset_生态表现状态;
 
-		// Token: 0x04016C85 RID: 93317
-		internal static int __PropertyOffset_144;
+		// Token: 0x04011CD7 RID: 72919
+		internal static int __PropertyOffset_状态机初始化;
 
-		// Token: 0x04016C86 RID: 93318
-		internal static int __PropertyOffset_145;
+		// Token: 0x04011CD8 RID: 72920
+		internal static int __PropertyOffset_IdleActionIndex;
 
-		// Token: 0x04016C87 RID: 93319
-		internal static int __PropertyOffset_146;
+		// Token: 0x04011CD9 RID: 72921
+		internal static int __PropertyOffset_IdleAnim;
 
-		// Token: 0x04016C88 RID: 93320
-		internal static int __PropertyOffset_147;
+		// Token: 0x04011CDA RID: 72922
+		internal static int __PropertyOffset_交互表演配置;
 
-		// Token: 0x04016C89 RID: 93321
+		// Token: 0x04011CDB RID: 72923
 		[Nullable(new byte[]
 		{
 			2,
@@ -954,55 +824,55 @@ namespace AkiClient.Game.Aki.Character.NPC.Animal
 		})]
 		private TArray<UAnimSequence> _交互表演配置;
 
-		// Token: 0x04016C8A RID: 93322
-		internal static int __PropertyOffset_148;
+		// Token: 0x04011CDC RID: 72924
+		internal static int __PropertyOffset_InteractActionIndex;
 
-		// Token: 0x04016C8B RID: 93323
-		internal static int __PropertyOffset_149;
+		// Token: 0x04011CDD RID: 72925
+		internal static int __PropertyOffset_InteractAnim;
 
-		// Token: 0x04016C8C RID: 93324
-		internal static int __PropertyOffset_150;
+		// Token: 0x04011CDE RID: 72926
+		internal static int __PropertyOffset_SightDirect;
 
-		// Token: 0x04016C8D RID: 93325
-		internal static int __PropertyOffset_151;
+		// Token: 0x04011CDF RID: 72927
+		internal static int __PropertyOffset_SightLockMode;
 
-		// Token: 0x04016C8E RID: 93326
-		internal static int __PropertyOffset_152;
+		// Token: 0x04011CE0 RID: 72928
+		internal static int __PropertyOffset_WalkRunParam;
 
-		// Token: 0x04016C8F RID: 93327
-		internal static int __PropertyOffset_153;
+		// Token: 0x04011CE1 RID: 72929
+		internal static int __PropertyOffset_左右跑参数;
 
-		// Token: 0x04016C90 RID: 93328
-		internal static int __PropertyOffset_154;
+		// Token: 0x04011CE2 RID: 72930
+		internal static int __PropertyOffset_bHaveInput;
 
-		// Token: 0x04016C91 RID: 93329
-		internal static int __PropertyOffset_155;
+		// Token: 0x04011CE3 RID: 72931
+		internal static int __PropertyOffset_bIdleAction;
 
-		// Token: 0x04016C92 RID: 93330
-		internal static int __PropertyOffset_156;
+		// Token: 0x04011CE4 RID: 72932
+		internal static int __PropertyOffset_是否警觉;
 
-		// Token: 0x04016C93 RID: 93331
-		internal static int __PropertyOffset_157;
+		// Token: 0x04011CE5 RID: 72933
+		internal static int __PropertyOffset_是否起跑转身;
 
-		// Token: 0x04016C94 RID: 93332
-		internal static int __PropertyOffset_158;
+		// Token: 0x04011CE6 RID: 72934
+		internal static int __PropertyOffset_起跑左转;
 
-		// Token: 0x04016C95 RID: 93333
-		internal static int __PropertyOffset_159;
+		// Token: 0x04011CE7 RID: 72935
+		internal static int __PropertyOffset_bInteractAction;
 
-		// Token: 0x04016C96 RID: 93334
-		internal static int __PropertyOffset_160;
+		// Token: 0x04011CE8 RID: 72936
+		internal static int __PropertyOffset_受到攻击;
 
-		// Token: 0x04016C97 RID: 93335
-		internal static int __PropertyOffset_161;
+		// Token: 0x04011CE9 RID: 72937
+		internal static int __PropertyOffset_起飞;
 
-		// Token: 0x04016C98 RID: 93336
-		internal static int __PropertyOffset_162;
+		// Token: 0x04011CEA RID: 72938
+		internal static int __PropertyOffset_bSitDown;
 
-		// Token: 0x04016C99 RID: 93337
-		internal static int __PropertyOffset_163;
+		// Token: 0x04011CEB RID: 72939
+		internal static int __PropertyOffset_其他动作配置;
 
-		// Token: 0x04016C9A RID: 93338
+		// Token: 0x04011CEC RID: 72940
 		[Nullable(new byte[]
 		{
 			2,
@@ -1010,13 +880,13 @@ namespace AkiClient.Game.Aki.Character.NPC.Animal
 		})]
 		private TMap<FGameplayTag, UAnimSequence> _其他动作配置;
 
-		// Token: 0x04016C9B RID: 93339
-		internal static int __PropertyOffset_164;
+		// Token: 0x04011CED RID: 72941
+		internal static int __PropertyOffset_ActionTime;
 
-		// Token: 0x04016C9C RID: 93340
-		internal static int __PropertyOffset_165;
+		// Token: 0x04011CEE RID: 72942
+		internal static int __PropertyOffset_材质配置;
 
-		// Token: 0x04016C9D RID: 93341
+		// Token: 0x04011CEF RID: 72943
 		[Nullable(new byte[]
 		{
 			2,
@@ -1025,10 +895,10 @@ namespace AkiClient.Game.Aki.Character.NPC.Animal
 		})]
 		private TMap<FGameplayTag, TSoftObjectPtr<PD_CharacterControllerData_C>> _材质配置;
 
-		// Token: 0x04016C9E RID: 93342
-		internal static int __PropertyOffset_166;
+		// Token: 0x04011CF0 RID: 72944
+		internal static int __PropertyOffset_蒙太奇表演配置;
 
-		// Token: 0x04016C9F RID: 93343
+		// Token: 0x04011CF1 RID: 72945
 		[Nullable(new byte[]
 		{
 			2,
@@ -1036,204 +906,148 @@ namespace AkiClient.Game.Aki.Character.NPC.Animal
 		})]
 		private TMap<FGameplayTag, UAnimMontage> _蒙太奇表演配置;
 
-		// Token: 0x04016CA0 RID: 93344
-		internal static int __PropertyOffset_167;
+		// Token: 0x04011CF2 RID: 72946
+		internal static int __PropertyOffset_系统UI;
 
-		// Token: 0x04016CA1 RID: 93345
-		internal static int __PropertyOffset_168;
+		// Token: 0x04011CF3 RID: 72947
+		internal static int __PropertyOffset_bGetDown;
 
-		// Token: 0x04016CA2 RID: 93346
+		// Token: 0x04011CF4 RID: 72948
 		private static IntPtr __GetCurrentActionTime_NativeFunctionPtr;
 
-		// Token: 0x04016CA3 RID: 93347
-		private static IntPtr __演出层_NativeFunctionPtr;
-
-		// Token: 0x04016CA4 RID: 93348
-		private static IntPtr __后处理层_NativeFunctionPtr;
-
-		// Token: 0x04016CA5 RID: 93349
-		private static IntPtr __基础层_NativeFunctionPtr;
-
-		// Token: 0x04016CA6 RID: 93350
-		private static IntPtr __AnimGraph_NativeFunctionPtr;
-
-		// Token: 0x04016CA7 RID: 93351
+		// Token: 0x04011CF5 RID: 72949
 		private static IntPtr __OnSystemUIStart_NativeFunctionPtr;
 
-		// Token: 0x04016CA8 RID: 93352
+		// Token: 0x04011CF6 RID: 72950
 		private static IntPtr __OnFeedStart_NativeFunctionPtr;
 
-		// Token: 0x04016CA9 RID: 93353
+		// Token: 0x04011CF7 RID: 72951
 		private static IntPtr __更新移动信息_NativeFunctionPtr;
 
-		// Token: 0x04016CAA RID: 93354
+		// Token: 0x04011CF8 RID: 72952
 		private static IntPtr __处理动作优先级_NativeFunctionPtr;
 
-		// Token: 0x04016CAB RID: 93355
+		// Token: 0x04011CF9 RID: 72953
 		private static IntPtr __OnUnderAttackStart_NativeFunctionPtr;
 
-		// Token: 0x04016CAC RID: 93356
+		// Token: 0x04011CFA RID: 72954
 		private static IntPtr __OnTakeOffStart_NativeFunctionPtr;
 
-		// Token: 0x04016CAD RID: 93357
+		// Token: 0x04011CFB RID: 72955
 		private static IntPtr __OnAlertStart_NativeFunctionPtr;
 
-		// Token: 0x04016CAE RID: 93358
+		// Token: 0x04011CFC RID: 72956
 		private static IntPtr __更新视线_NativeFunctionPtr;
 
-		// Token: 0x04016CAF RID: 93359
+		// Token: 0x04011CFD RID: 72957
 		private static IntPtr __OnInteractStart_NativeFunctionPtr;
 
-		// Token: 0x04016CB0 RID: 93360
+		// Token: 0x04011CFE RID: 72958
 		private static IntPtr __更新特殊交互表演_NativeFunctionPtr;
 
-		// Token: 0x04016CB1 RID: 93361
+		// Token: 0x04011CFF RID: 72959
 		private static IntPtr __更新交互表演_NativeFunctionPtr;
 
-		// Token: 0x04016CB2 RID: 93362
+		// Token: 0x04011D00 RID: 72960
 		private static IntPtr __OnIdleStart_NativeFunctionPtr;
 
-		// Token: 0x04016CB3 RID: 93363
+		// Token: 0x04011D01 RID: 72961
 		private static IntPtr __更新待机表演_NativeFunctionPtr;
 
-		// Token: 0x04016CB4 RID: 93364
+		// Token: 0x04011D02 RID: 72962
 		private static IntPtr __TakeOffEnd_NativeFunctionPtr;
 
-		// Token: 0x04016CB5 RID: 93365
+		// Token: 0x04011D03 RID: 72963
 		private static IntPtr __AlertEnd_NativeFunctionPtr;
 
-		// Token: 0x04016CB6 RID: 93366
+		// Token: 0x04011D04 RID: 72964
 		private static IntPtr __UnderAttackEnd_NativeFunctionPtr;
 
-		// Token: 0x04016CB7 RID: 93367
+		// Token: 0x04011D05 RID: 72965
 		private static IntPtr __IdleEnd_NativeFunctionPtr;
 
-		// Token: 0x04016CB8 RID: 93368
+		// Token: 0x04011D06 RID: 72966
 		private static IntPtr __InteractEnd_NativeFunctionPtr;
 
-		// Token: 0x04016CB9 RID: 93369
+		// Token: 0x04011D07 RID: 72967
 		private static IntPtr __NoneStateEnd_NativeFunctionPtr;
 
-		// Token: 0x04016CBA RID: 93370
+		// Token: 0x04011D08 RID: 72968
 		private static IntPtr __BlueprintInitializeAnimation_NativeFunctionPtr;
 
-		// Token: 0x04016CBB RID: 93371
+		// Token: 0x04011D09 RID: 72969
 		private static IntPtr __BlueprintUpdateAnimation_NativeFunctionPtr;
 
-		// Token: 0x04016CBC RID: 93372
+		// Token: 0x04011D0A RID: 72970
 		private static IntPtr __StateMachineInitializationComplete_NativeFunctionPtr;
 
-		// Token: 0x04016CBD RID: 93373
+		// Token: 0x04011D0B RID: 72971
 		private static IntPtr __NoneStateStart_NativeFunctionPtr;
 
-		// Token: 0x04016CBE RID: 93374
+		// Token: 0x04011D0C RID: 72972
 		private static IntPtr __InteractStart_NativeFunctionPtr;
 
-		// Token: 0x04016CBF RID: 93375
+		// Token: 0x04011D0D RID: 72973
 		private static IntPtr __IdleStart_NativeFunctionPtr;
 
-		// Token: 0x04016CC0 RID: 93376
+		// Token: 0x04011D0E RID: 72974
 		private static IntPtr __UnderAttackStart_NativeFunctionPtr;
 
-		// Token: 0x04016CC1 RID: 93377
+		// Token: 0x04011D0F RID: 72975
 		private static IntPtr __AlertStart_NativeFunctionPtr;
 
-		// Token: 0x04016CC2 RID: 93378
+		// Token: 0x04011D10 RID: 72976
 		private static IntPtr __TakeOffStart_NativeFunctionPtr;
 
-		// Token: 0x04016CC3 RID: 93379
+		// Token: 0x04011D11 RID: 72977
 		private static IntPtr __FeedStart_NativeFunctionPtr;
 
-		// Token: 0x04016CC4 RID: 93380
+		// Token: 0x04011D12 RID: 72978
 		private static IntPtr __SystemUiStart_NativeFunctionPtr;
 
-		// Token: 0x04016CC5 RID: 93381
+		// Token: 0x04011D13 RID: 72979
 		private static IntPtr __SystemUiEnd_NativeFunctionPtr;
 
-		// Token: 0x0200A58B RID: 42379
+		// Token: 0x02008FE3 RID: 36835
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetCurrentActionTime_FunctionParams
 		{
-			// Token: 0x04032415 RID: 205845
+			// Token: 0x0402CD92 RID: 183698
 			[FieldOffset(0)]
 			public float ActionTime;
 		}
 
-		// Token: 0x0200A58C RID: 42380
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 48)]
-		protected ref struct __演出层_FunctionParams
-		{
-			// Token: 0x04032416 RID: 205846
-			[FieldOffset(0)]
-			public byte 状态机输入;
-
-			// Token: 0x04032417 RID: 205847
-			[FieldOffset(24)]
-			public byte 演出层;
-		}
-
-		// Token: 0x0200A58D RID: 42381
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 48)]
-		protected ref struct __后处理层_FunctionParams
-		{
-			// Token: 0x04032418 RID: 205848
-			[FieldOffset(0)]
-			public byte 基础输入;
-
-			// Token: 0x04032419 RID: 205849
-			[FieldOffset(24)]
-			public byte 后处理层;
-		}
-
-		// Token: 0x0200A58E RID: 42382
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __基础层_FunctionParams
-		{
-			// Token: 0x0403241A RID: 205850
-			[FieldOffset(0)]
-			public byte 基础层;
-		}
-
-		// Token: 0x0200A58F RID: 42383
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __AnimGraph_FunctionParams
-		{
-			// Token: 0x0403241B RID: 205851
-			[FieldOffset(0)]
-			public byte AnimGraph;
-		}
-
-		// Token: 0x0200A590 RID: 42384
+		// Token: 0x02008FE4 RID: 36836
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __OnFeedStart_FunctionParams
 		{
-			// Token: 0x0403241C RID: 205852
+			// Token: 0x0402CD93 RID: 183699
 			[FieldOffset(0)]
 			public FGameplayTag GameplayTag;
 		}
 
-		// Token: 0x0200A591 RID: 42385
+		// Token: 0x02008FE5 RID: 36837
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __BlueprintUpdateAnimation_FunctionParams
 		{
-			// Token: 0x0403241D RID: 205853
+			// Token: 0x0402CD94 RID: 183700
 			[FieldOffset(0)]
 			public float DeltaTimeX;
 		}
 
-		// Token: 0x0200A592 RID: 42386
+		// Token: 0x02008FE6 RID: 36838
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __FeedStart_FunctionParams
 		{
-			// Token: 0x0403241E RID: 205854
+			// Token: 0x0402CD95 RID: 183701
 			[FieldOffset(0)]
 			public FGameplayTag GameplayTag;
 		}

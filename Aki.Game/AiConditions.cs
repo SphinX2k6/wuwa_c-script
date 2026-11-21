@@ -12,7 +12,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class AiConditions
 {
-	// Token: 0x06000CE9 RID: 3305 RVA: 0x00044BDC File Offset: 0x00042DDC
+	// Token: 0x06000CEF RID: 3311 RVA: 0x00045770 File Offset: 0x00043970
 	public AiConditions(SAiConditions aiConditions)
 	{
 		this.Logic = (SConditionGroupType)aiConditions.Logic;
@@ -56,21 +56,21 @@ public class AiConditions
 		}
 	}
 
-	// Token: 0x04000A43 RID: 2627
+	// Token: 0x04000A4B RID: 2635
 	public Dictionary<int, TsFloatRange> Tags = new Dictionary<int, TsFloatRange>();
 
-	// Token: 0x04000A44 RID: 2628
+	// Token: 0x04000A4C RID: 2636
 	public Dictionary<Aki.Protocol.EAttributeType, TsFloatRange> Attributes = new Dictionary<Aki.Protocol.EAttributeType, TsFloatRange>();
 
-	// Token: 0x04000A45 RID: 2629
+	// Token: 0x04000A4D RID: 2637
 	public List<AiAttributeRate> AttributeRates = new List<AiAttributeRate>();
 
-	// Token: 0x04000A46 RID: 2630
+	// Token: 0x04000A4E RID: 2638
 	public Dictionary<Aki.Protocol.EAttributeType, List<int>> AttributeRateDenominatorMap = new Dictionary<Aki.Protocol.EAttributeType, List<int>>();
 
-	// Token: 0x04000A47 RID: 2631
+	// Token: 0x04000A4F RID: 2639
 	public Dictionary<Aki.Protocol.EAttributeType, List<int>> AttributeRateNumeratorMap = new Dictionary<Aki.Protocol.EAttributeType, List<int>>();
 
-	// Token: 0x04000A48 RID: 2632
+	// Token: 0x04000A50 RID: 2640
 	public SConditionGroupType Logic;
 }

@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001140 RID: 4416
+	// Token: 0x0200117A RID: 4474
 	[NetMessage(EMessageId.RunTurntableActivityResponse)]
 	public sealed class RunTurntableActivityResponse : IMessage<RunTurntableActivityResponse>, IMessage, IEquatable<RunTurntableActivityResponse>, IDeepCloneable<RunTurntableActivityResponse>, IBufferMessage
 	{
-		// Token: 0x060178BE RID: 96446 RVA: 0x0036B331 File Offset: 0x00369531
+		// Token: 0x06017E5F RID: 97887 RVA: 0x0037A67C File Offset: 0x0037887C
 		[NullableContext(1)]
 		public static RunTurntableActivityResponse Create()
 		{
 			return new RunTurntableActivityResponse();
 		}
 
-		// Token: 0x17004F04 RID: 20228
-		// (get) Token: 0x060178BF RID: 96447 RVA: 0x0036B338 File Offset: 0x00369538
+		// Token: 0x17005070 RID: 20592
+		// (get) Token: 0x06017E60 RID: 97888 RVA: 0x0037A683 File Offset: 0x00378883
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F05 RID: 20229
-		// (get) Token: 0x060178C0 RID: 96448 RVA: 0x0036B33B File Offset: 0x0036953B
+		// Token: 0x17005071 RID: 20593
+		// (get) Token: 0x06017E61 RID: 97889 RVA: 0x0037A686 File Offset: 0x00378886
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060178C1 RID: 96449 RVA: 0x0036B342 File Offset: 0x00369542
+		// Token: 0x06017E62 RID: 97890 RVA: 0x0037A68D File Offset: 0x0037888D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RunTurntableActivityResponse()
 		{
 		}
 
-		// Token: 0x060178C2 RID: 96450 RVA: 0x0036B358 File Offset: 0x00369558
+		// Token: 0x06017E63 RID: 97891 RVA: 0x0037A6A0 File Offset: 0x003788A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RunTurntableActivityResponse(RunTurntableActivityResponse other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060178C3 RID: 96451 RVA: 0x0036B3B1 File Offset: 0x003695B1
+		// Token: 0x06017E64 RID: 97892 RVA: 0x0037A6F9 File Offset: 0x003788F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RunTurntableActivityResponse Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new RunTurntableActivityResponse(this);
 		}
 
-		// Token: 0x17004F06 RID: 20230
-		// (get) Token: 0x060178C4 RID: 96452 RVA: 0x0036B3B9 File Offset: 0x003695B9
-		// (set) Token: 0x060178C5 RID: 96453 RVA: 0x0036B3C1 File Offset: 0x003695C1
+		// Token: 0x17005072 RID: 20594
+		// (get) Token: 0x06017E65 RID: 97893 RVA: 0x0037A701 File Offset: 0x00378901
+		// (set) Token: 0x06017E66 RID: 97894 RVA: 0x0037A709 File Offset: 0x00378909
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -87,9 +87,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F07 RID: 20231
-		// (get) Token: 0x060178C6 RID: 96454 RVA: 0x0036B3CA File Offset: 0x003695CA
-		// (set) Token: 0x060178C7 RID: 96455 RVA: 0x0036B3D2 File Offset: 0x003695D2
+		// Token: 0x17005073 RID: 20595
+		// (get) Token: 0x06017E67 RID: 97895 RVA: 0x0037A712 File Offset: 0x00378912
+		// (set) Token: 0x06017E68 RID: 97896 RVA: 0x0037A71A File Offset: 0x0037891A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RewardId
@@ -104,9 +104,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F08 RID: 20232
-		// (get) Token: 0x060178C8 RID: 96456 RVA: 0x0036B3DB File Offset: 0x003695DB
-		// (set) Token: 0x060178C9 RID: 96457 RVA: 0x0036B3E3 File Offset: 0x003695E3
+		// Token: 0x17005074 RID: 20596
+		// (get) Token: 0x06017E69 RID: 97897 RVA: 0x0037A723 File Offset: 0x00378923
+		// (set) Token: 0x06017E6A RID: 97898 RVA: 0x0037A72B File Offset: 0x0037892B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsFinishCurRound
@@ -121,8 +121,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F09 RID: 20233
-		// (get) Token: 0x060178CA RID: 96458 RVA: 0x0036B3EC File Offset: 0x003695EC
+		// Token: 0x17005075 RID: 20597
+		// (get) Token: 0x06017E6B RID: 97899 RVA: 0x0037A734 File Offset: 0x00378934
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, int> ItemMap
@@ -133,7 +133,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060178CB RID: 96459 RVA: 0x0036B3F4 File Offset: 0x003695F4
+		// Token: 0x06017E6C RID: 97900 RVA: 0x0037A73C File Offset: 0x0037893C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -141,7 +141,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RunTurntableActivityResponse);
 		}
 
-		// Token: 0x060178CC RID: 96460 RVA: 0x0036B404 File Offset: 0x00369604
+		// Token: 0x06017E6D RID: 97901 RVA: 0x0037A74C File Offset: 0x0037894C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RunTurntableActivityResponse other)
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.RewardId == other.RewardId && this.IsFinishCurRound == other.IsFinishCurRound && this.ItemMap.Equals(other.ItemMap) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060178CD RID: 96461 RVA: 0x0036B474 File Offset: 0x00369674
+		// Token: 0x06017E6E RID: 97902 RVA: 0x0037A7BC File Offset: 0x003789BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060178CE RID: 96462 RVA: 0x0036B4F9 File Offset: 0x003696F9
+		// Token: 0x06017E6F RID: 97903 RVA: 0x0037A841 File Offset: 0x00378A41
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -183,7 +183,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060178CF RID: 96463 RVA: 0x0036B506 File Offset: 0x00369706
+		// Token: 0x06017E70 RID: 97904 RVA: 0x0037A84E File Offset: 0x00378A4E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -191,34 +191,34 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060178D0 RID: 96464 RVA: 0x0036B510 File Offset: 0x00369710
+		// Token: 0x06017E71 RID: 97905 RVA: 0x0037A858 File Offset: 0x00378A58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.RewardId != 0)
+			if (this.ErrorCode != ErrorCode.Success)
 			{
 				output.WriteRawTag(32);
+				output.WriteEnum((int)this.ErrorCode);
+			}
+			if (this.IsFinishCurRound)
+			{
+				output.WriteRawTag(72);
+				output.WriteBool(this.IsFinishCurRound);
+			}
+			if (this.RewardId != 0)
+			{
+				output.WriteRawTag(104);
 				output.WriteInt32(this.RewardId);
 			}
 			this.itemMap_.WriteTo(ref output, RunTurntableActivityResponse._map_itemMap_codec);
-			if (this.IsFinishCurRound)
-			{
-				output.WriteRawTag(64);
-				output.WriteBool(this.IsFinishCurRound);
-			}
-			if (this.ErrorCode != ErrorCode.Success)
-			{
-				output.WriteRawTag(88);
-				output.WriteEnum((int)this.ErrorCode);
-			}
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x060178D1 RID: 96465 RVA: 0x0036B598 File Offset: 0x00369798
+		// Token: 0x06017E72 RID: 97906 RVA: 0x0037A8E0 File Offset: 0x00378AE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -244,7 +244,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060178D2 RID: 96466 RVA: 0x0036B610 File Offset: 0x00369810
+		// Token: 0x06017E73 RID: 97907 RVA: 0x0037A958 File Offset: 0x00378B58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RunTurntableActivityResponse other)
@@ -269,7 +269,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060178D3 RID: 96467 RVA: 0x0036B685 File Offset: 0x00369885
+		// Token: 0x06017E74 RID: 97908 RVA: 0x0037A9CD File Offset: 0x00378BCD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -277,7 +277,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060178D4 RID: 96468 RVA: 0x0036B690 File Offset: 0x00369890
+		// Token: 0x06017E75 RID: 97909 RVA: 0x0037A9D8 File Offset: 0x00378BD8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -289,29 +289,29 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 50U)
+				if (num <= 72U)
 				{
 					if (num == 32U)
 					{
-						this.RewardId = input.ReadInt32();
+						this.ErrorCode = (ErrorCode)input.ReadEnum();
 						continue;
 					}
-					if (num == 50U)
+					if (num == 72U)
 					{
-						this.itemMap_.AddEntriesFrom(ref input, RunTurntableActivityResponse._map_itemMap_codec);
+						this.IsFinishCurRound = input.ReadBool();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 64U)
+					if (num == 104U)
 					{
-						this.IsFinishCurRound = input.ReadBool();
+						this.RewardId = input.ReadInt32();
 						continue;
 					}
-					if (num == 88U)
+					if (num == 114U)
 					{
-						this.ErrorCode = (ErrorCode)input.ReadEnum();
+						this.itemMap_.AddEntriesFrom(ref input, RunTurntableActivityResponse._map_itemMap_codec);
 						continue;
 					}
 				}
@@ -319,34 +319,34 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008BD8 RID: 35800
+		// Token: 0x04008E6B RID: 36459
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008BD9 RID: 35801
-		public const int ErrorCodeFieldNumber = 11;
+		// Token: 0x04008E6C RID: 36460
+		public const int ErrorCodeFieldNumber = 4;
 
-		// Token: 0x04008BDA RID: 35802
+		// Token: 0x04008E6D RID: 36461
 		private ErrorCode errorCode_;
 
-		// Token: 0x04008BDB RID: 35803
-		public const int RewardIdFieldNumber = 4;
+		// Token: 0x04008E6E RID: 36462
+		public const int RewardIdFieldNumber = 13;
 
-		// Token: 0x04008BDC RID: 35804
+		// Token: 0x04008E6F RID: 36463
 		private int rewardId_;
 
-		// Token: 0x04008BDD RID: 35805
-		public const int IsFinishCurRoundFieldNumber = 8;
+		// Token: 0x04008E70 RID: 36464
+		public const int IsFinishCurRoundFieldNumber = 9;
 
-		// Token: 0x04008BDE RID: 35806
+		// Token: 0x04008E71 RID: 36465
 		private bool isFinishCurRound_;
 
-		// Token: 0x04008BDF RID: 35807
-		public const int ItemMapFieldNumber = 6;
+		// Token: 0x04008E72 RID: 36466
+		public const int ItemMapFieldNumber = 14;
 
-		// Token: 0x04008BE0 RID: 35808
-		private static readonly MapField<int, int>.Codec _map_itemMap_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 50U);
+		// Token: 0x04008E73 RID: 36467
+		private static readonly MapField<int, int>.Codec _map_itemMap_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 114U);
 
-		// Token: 0x04008BE1 RID: 35809
+		// Token: 0x04008E74 RID: 36468
 		private readonly MapField<int, int> itemMap_ = new MapField<int, int>();
 	}
 }

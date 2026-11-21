@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E26 RID: 28198
+	// Token: 0x02005FA6 RID: 24486
 	public enum EFishingQteStage
 	{
-		// Token: 0x04023C23 RID: 146467
+		// Token: 0x0401EEC6 RID: 126662
 		None,
-		// Token: 0x04023C24 RID: 146468
+		// Token: 0x0401EEC7 RID: 126663
 		Ready,
-		// Token: 0x04023C25 RID: 146469
+		// Token: 0x0401EEC8 RID: 126664
 		OnGoing,
-		// Token: 0x04023C26 RID: 146470
+		// Token: 0x0401EEC9 RID: 126665
 		Pause,
-		// Token: 0x04023C27 RID: 146471
+		// Token: 0x0401EECA RID: 126666
 		End,
-		// Token: 0x04023C28 RID: 146472
+		// Token: 0x0401EECB RID: 126667
 		AnimEnd,
-		// Token: 0x04023C29 RID: 146473
+		// Token: 0x0401EECC RID: 126668
 		Success,
-		// Token: 0x04023C2A RID: 146474
+		// Token: 0x0401EECD RID: 126669
 		Destroy
 	}
 }

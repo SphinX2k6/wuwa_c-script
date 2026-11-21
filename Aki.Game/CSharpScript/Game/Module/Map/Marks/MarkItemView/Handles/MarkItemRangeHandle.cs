@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using CSharpScript.Game.Module.Map.Mark;
-using CSharpScript.Game.Module.Map.Mark.Component;
 using CSharpScript.Game.Module.Map.Marks.MarkItemView.Components;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
@@ -9,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 {
-	// Token: 0x02005537 RID: 21815
+	// Token: 0x02004509 RID: 17673
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,12 +16,12 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 	})]
 	public class MarkItemRangeHandle<[Nullable(0)] T> : MarkItemComponentHandle<T> where T : MarkPanelBase, new()
 	{
-		// Token: 0x06037B05 RID: 228101 RVA: 0x00D37284 File Offset: 0x00D35484
+		// Token: 0x0602C9D7 RID: 182743 RVA: 0x00C84E3D File Offset: 0x00C8303D
 		public MarkItemRangeHandle(IMarkItemComponentContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06037B06 RID: 228102 RVA: 0x00D37290 File Offset: 0x00D35490
+		// Token: 0x0602C9D8 RID: 182744 RVA: 0x00C84E48 File Offset: 0x00C83048
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -39,7 +37,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			return <LoadComponentAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037B07 RID: 228103 RVA: 0x00D372D3 File Offset: 0x00D354D3
+		// Token: 0x0602C9D9 RID: 182745 RVA: 0x00C84E8B File Offset: 0x00C8308B
 		protected override T GetOrCreateComponent()
 		{
 			if (this.ComponentInternal == null)
@@ -52,34 +50,28 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			return this.ComponentInternal;
 		}
 
-		// Token: 0x06037B08 RID: 228104 RVA: 0x00D37300 File Offset: 0x00D35500
-		protected override void OnSetVisible(bool active)
-		{
-			this.Context.MarkItemEntity.ViewLifeCircle.SetChildViewVisibility(EMarkViewComponentType.Range, active);
-		}
-
-		// Token: 0x06037B09 RID: 228105 RVA: 0x00D3731C File Offset: 0x00D3551C
+		// Token: 0x0602C9DA RID: 182746 RVA: 0x00C84EB8 File Offset: 0x00C830B8
 		protected override void OnApplyModified()
 		{
-			MarkViewLifeCircleComponent viewLifeCircle = this.Context.MarkItemEntity.ViewLifeCircle;
-			if (viewLifeCircle.IsChildViewStateDirty(EMarkViewComponentType.Range))
+			if (!base.VisibleDirty)
 			{
-				MarkRangeImageComponent markRangeImageComponent = this.GetOrCreateComponent() as MarkRangeImageComponent;
-				if (!this.IsComponentValid(markRangeImageComponent as T))
-				{
-					return;
-				}
-				bool active = viewLifeCircle.IsChildViewVisible(EMarkViewComponentType.Range, false);
-				viewLifeCircle.SetChildViewVisibleClean(EMarkViewComponentType.Range);
-				this.ResetRangeComponent(markRangeImageComponent);
-				MarkItemComponentHandle<T>.SetComponentActive(markRangeImageComponent, active);
+				return;
 			}
+			MarkRangeImageComponent markRangeImageComponent = this.GetOrCreateComponent() as MarkRangeImageComponent;
+			if (!this.IsComponentValid(markRangeImageComponent as T))
+			{
+				return;
+			}
+			bool visible = base.Visible;
+			base.CleanVisibleDirty();
+			this.ResetRangeComponent(markRangeImageComponent);
+			MarkItemComponentHandle<T>.SetComponentActive(markRangeImageComponent, visible);
 		}
 
-		// Token: 0x06037B0A RID: 228106 RVA: 0x00D37388 File Offset: 0x00D35588
-		protected void ResetRangeComponent(MarkRangeImageComponent rangeComponent)
+		// Token: 0x0602C9DB RID: 182747 RVA: 0x00C84F10 File Offset: 0x00C83110
+		private void ResetRangeComponent(MarkRangeImageComponent rangeComponent)
 		{
-			float num = this.Context.MarkItemEntity.GetComponent<MarkResourceComponent>(EMapComponent.MarkResource).RangeSize * 2f;
+			float num = this.Context.MarkItem.RangeSize * 2f;
 			UUIItem rangeArea = rangeComponent.RangeArea;
 			if (rangeArea != null)
 			{
@@ -103,7 +95,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			this.OnResetRangeComponent(rangeComponent);
 		}
 
-		// Token: 0x06037B0B RID: 228107 RVA: 0x00D37402 File Offset: 0x00D35602
+		// Token: 0x0602C9DC RID: 182748 RVA: 0x00C84F83 File Offset: 0x00C83183
 		protected virtual void OnResetRangeComponent(MarkRangeImageComponent rangeComponent)
 		{
 		}

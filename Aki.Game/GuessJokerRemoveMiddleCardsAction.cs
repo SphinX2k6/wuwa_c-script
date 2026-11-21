@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02001024 RID: 4132
+// Token: 0x020004D8 RID: 1240
 public class GuessJokerRemoveMiddleCardsAction : GuessJokerActionBase
 {
-	// Token: 0x06006A28 RID: 27176 RVA: 0x00154C1F File Offset: 0x00152E1F
+	// Token: 0x06003DBD RID: 15805 RVA: 0x0015D547 File Offset: 0x0015B747
 	public GuessJokerRemoveMiddleCardsAction(float duration = 0f)
 	{
 		if (duration != 0f)
@@ -14,7 +14,7 @@ public class GuessJokerRemoveMiddleCardsAction : GuessJokerActionBase
 		this.Duration = (float)GuessJokerUtils.GetJokerParamConfig(EGuessJokerParamKey.GuessJokerCardRemoveTime.ToString());
 	}
 
-	// Token: 0x06006A29 RID: 27177 RVA: 0x00154C54 File Offset: 0x00152E54
+	// Token: 0x06003DBE RID: 15806 RVA: 0x0015D57C File Offset: 0x0015B77C
 	protected override void OnStart()
 	{
 		GuessJokerGamePlayView gamePlayView = GuessJokerGamePlayModel.Instance.GetGamePlayView();

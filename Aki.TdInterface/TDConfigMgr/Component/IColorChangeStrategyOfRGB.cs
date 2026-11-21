@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200024D RID: 589
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200028E RID: 654
 	public class IColorChangeStrategyOfRGB : IColorStrategyOfSplineEffectType
 	{
-		// Token: 0x06000A9A RID: 2714 RVA: 0x0002BD64 File Offset: 0x00029F64
+		// Token: 0x06000BA8 RID: 2984 RVA: 0x0002E914 File Offset: 0x0002CB14
 		private IColorChangeStrategyOfRGB_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000A9B RID: 2715 RVA: 0x0002BD9C File Offset: 0x00029F9C
+		// Token: 0x06000BA9 RID: 2985 RVA: 0x0002E94C File Offset: 0x0002CB4C
 		public static IColorChangeStrategyOfRGB Create([Nullable(2)] IColorChangeStrategyOfRGB instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A9C RID: 2716 RVA: 0x0002BDAF File Offset: 0x00029FAF
+		// Token: 0x06000BAA RID: 2986 RVA: 0x0002E95F File Offset: 0x0002CB5F
 		public static IColorChangeStrategyOfRGB CreateFromSetValue([Nullable(2)] IColorChangeStrategyOfRGB_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A9D RID: 2717 RVA: 0x0002BDC2 File Offset: 0x00029FC2
+		// Token: 0x06000BAB RID: 2987 RVA: 0x0002E972 File Offset: 0x0002CB72
 		public new IColorChangeStrategyOfRGB_SetValue ToSetValue()
 		{
 			return new IColorChangeStrategyOfRGB_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000337 RID: 823
-		// (get) Token: 0x06000A9E RID: 2718 RVA: 0x0002BDF9 File Offset: 0x00029FF9
-		// (set) Token: 0x06000A9F RID: 2719 RVA: 0x0002BE24 File Offset: 0x0002A024
+		// Token: 0x1700037C RID: 892
+		// (get) Token: 0x06000BAC RID: 2988 RVA: 0x0002E9A9 File Offset: 0x0002CBA9
+		// (set) Token: 0x06000BAD RID: 2989 RVA: 0x0002E9D4 File Offset: 0x0002CBD4
 		public override EColorChangeStrategyOfSplineEffect Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000338 RID: 824
-		// (get) Token: 0x06000AA0 RID: 2720 RVA: 0x0002BE32 File Offset: 0x0002A032
-		// (set) Token: 0x06000AA1 RID: 2721 RVA: 0x0002BE5D File Offset: 0x0002A05D
+		// Token: 0x1700037D RID: 893
+		// (get) Token: 0x06000BAE RID: 2990 RVA: 0x0002E9E2 File Offset: 0x0002CBE2
+		// (set) Token: 0x06000BAF RID: 2991 RVA: 0x0002EA0D File Offset: 0x0002CC0D
 		public virtual string BlueState
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000339 RID: 825
-		// (get) Token: 0x06000AA2 RID: 2722 RVA: 0x0002BE6B File Offset: 0x0002A06B
-		// (set) Token: 0x06000AA3 RID: 2723 RVA: 0x0002BE96 File Offset: 0x0002A096
+		// Token: 0x1700037E RID: 894
+		// (get) Token: 0x06000BB0 RID: 2992 RVA: 0x0002EA1B File Offset: 0x0002CC1B
+		// (set) Token: 0x06000BB1 RID: 2993 RVA: 0x0002EA46 File Offset: 0x0002CC46
 		public virtual string YellowState
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700033A RID: 826
-		// (get) Token: 0x06000AA4 RID: 2724 RVA: 0x0002BEA4 File Offset: 0x0002A0A4
-		// (set) Token: 0x06000AA5 RID: 2725 RVA: 0x0002BECF File Offset: 0x0002A0CF
+		// Token: 0x1700037F RID: 895
+		// (get) Token: 0x06000BB2 RID: 2994 RVA: 0x0002EA54 File Offset: 0x0002CC54
+		// (set) Token: 0x06000BB3 RID: 2995 RVA: 0x0002EA7F File Offset: 0x0002CC7F
 		public virtual string RedState
 		{
 			get
@@ -154,11 +152,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000A83 RID: 2691
+		// Token: 0x04000B5F RID: 2911
 		[Nullable(2)]
 		protected new IColorChangeStrategyOfRGB FbInstance;
 
-		// Token: 0x04000A84 RID: 2692
+		// Token: 0x04000B60 RID: 2912
 		[Nullable(2)]
 		protected new IColorChangeStrategyOfRGB_SetValue PocoInterface;
 	}

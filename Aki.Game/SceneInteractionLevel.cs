@@ -5,12 +5,12 @@ using Aki.Config;
 using AkiClient.Game.Aki.Render.RuntimeBP.Effect.Enum;
 using UnrealEngine;
 
-// Token: 0x02003493 RID: 13459
+// Token: 0x02002A07 RID: 10759
 [NullableContext(1)]
 [Nullable(0)]
 public class SceneInteractionLevel
 {
-	// Token: 0x0601D499 RID: 119961 RVA: 0x00829C54 File Offset: 0x00827E54
+	// Token: 0x0601B195 RID: 110997 RVA: 0x00850D10 File Offset: 0x0084EF10
 	public void Init(ULevelStreamingDynamic levelStreamingDynamic, string inLevelName, FVectorDouble location, FRotator rotation, int handleId, EKuroSceneInteractionState? initState, [Nullable(2)] Action onLevelStreamingCompleteCallback, bool afterLoadVisible, bool isInitShow = false, int pbDataId = 0, int entityId = 0, [Nullable(2)] Action onLevelStreamingLoadedCompleteCallback = null)
 	{
 		this.LevelStreamingDynamic = levelStreamingDynamic;
@@ -42,7 +42,7 @@ public class SceneInteractionLevel
 		});
 	}
 
-	// Token: 0x0601D49A RID: 119962 RVA: 0x00829D44 File Offset: 0x00827F44
+	// Token: 0x0601B196 RID: 110998 RVA: 0x00850E00 File Offset: 0x0084F000
 	public void ToggleLevelVisible(bool visible, bool needHidden, [Nullable(2)] Action onLevelStreamingShowOrHideCallback = null, string reason = "")
 	{
 		ULevelStreamingDynamic levelStreamingDynamic = this.LevelStreamingDynamic;
@@ -94,8 +94,8 @@ public class SceneInteractionLevel
 		});
 	}
 
-	// Token: 0x170028A5 RID: 10405
-	// (get) Token: 0x0601D49B RID: 119963 RVA: 0x00829E53 File Offset: 0x00828053
+	// Token: 0x17002C3D RID: 11325
+	// (get) Token: 0x0601B197 RID: 110999 RVA: 0x00850F0F File Offset: 0x0084F10F
 	[Nullable(2)]
 	public AActor MainActor
 	{
@@ -106,7 +106,7 @@ public class SceneInteractionLevel
 		}
 	}
 
-	// Token: 0x0601D49C RID: 119964 RVA: 0x00829E5B File Offset: 0x0082805B
+	// Token: 0x0601B198 RID: 111000 RVA: 0x00850F17 File Offset: 0x0084F117
 	public void SetStreamingPriority(int priority)
 	{
 		ULevelStreamingDynamic levelStreamingDynamic = this.LevelStreamingDynamic;
@@ -116,7 +116,7 @@ public class SceneInteractionLevel
 		}
 	}
 
-	// Token: 0x0601D49D RID: 119965 RVA: 0x00829E80 File Offset: 0x00828080
+	// Token: 0x0601B199 RID: 111001 RVA: 0x00850F3C File Offset: 0x0084F13C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -137,19 +137,19 @@ public class SceneInteractionLevel
 		return null;
 	}
 
-	// Token: 0x0601D49E RID: 119966 RVA: 0x00829ECA File Offset: 0x008280CA
+	// Token: 0x0601B19A RID: 111002 RVA: 0x00850F86 File Offset: 0x0084F186
 	public bool IsStreamingComplete()
 	{
 		return this.LoadingLevelComplete;
 	}
 
-	// Token: 0x0601D49F RID: 119967 RVA: 0x00829ED2 File Offset: 0x008280D2
+	// Token: 0x0601B19B RID: 111003 RVA: 0x00850F8E File Offset: 0x0084F18E
 	public bool IsInfoDestroyed()
 	{
 		return this.IsDestroyed;
 	}
 
-	// Token: 0x0601D4A0 RID: 119968 RVA: 0x00829EDC File Offset: 0x008280DC
+	// Token: 0x0601B19C RID: 111004 RVA: 0x00850F98 File Offset: 0x0084F198
 	public void Destroy()
 	{
 		this.IsDestroyed = true;
@@ -170,7 +170,7 @@ public class SceneInteractionLevel
 		this.OnLevelStreamingHideCallback = null;
 	}
 
-	// Token: 0x0601D4A1 RID: 119969 RVA: 0x00829F5C File Offset: 0x0082815C
+	// Token: 0x0601B19D RID: 111005 RVA: 0x00851018 File Offset: 0x0084F218
 	public void Update(float deltaSeconds)
 	{
 		if (!this.Active)
@@ -193,7 +193,7 @@ public class SceneInteractionLevel
 		this.InteractionActor.Update(deltaSeconds);
 	}
 
-	// Token: 0x0601D4A2 RID: 119970 RVA: 0x00829FA8 File Offset: 0x008281A8
+	// Token: 0x0601B19E RID: 111006 RVA: 0x00851064 File Offset: 0x0084F264
 	public bool SwitchToState(EKuroSceneInteractionState targetState, bool needTransition, bool force, bool jumpToEnd)
 	{
 		if (!this.Active)
@@ -212,7 +212,7 @@ public class SceneInteractionLevel
 		return true;
 	}
 
-	// Token: 0x0601D4A3 RID: 119971 RVA: 0x0082A001 File Offset: 0x00828201
+	// Token: 0x0601B19F RID: 111007 RVA: 0x008510BD File Offset: 0x0084F2BD
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -233,7 +233,7 @@ public class SceneInteractionLevel
 		return this.InteractionActor.GetAllActor();
 	}
 
-	// Token: 0x0601D4A4 RID: 119972 RVA: 0x0082A034 File Offset: 0x00828234
+	// Token: 0x0601B1A0 RID: 111008 RVA: 0x008510F0 File Offset: 0x0084F2F0
 	[return: Nullable(2)]
 	public AActor GetActorByKey(string key)
 	{
@@ -261,7 +261,7 @@ public class SceneInteractionLevel
 		return actorByKey;
 	}
 
-	// Token: 0x0601D4A5 RID: 119973 RVA: 0x0082A0C0 File Offset: 0x008282C0
+	// Token: 0x0601B1A1 RID: 111009 RVA: 0x0085117C File Offset: 0x0084F37C
 	public FTransformDouble? GetActorOriginalRelTransform(AActor actor)
 	{
 		if (!this.LoadingLevelComplete)
@@ -276,7 +276,7 @@ public class SceneInteractionLevel
 		return this.InteractionActor.GetActorOriginalRelTransform(actor);
 	}
 
-	// Token: 0x0601D4A6 RID: 119974 RVA: 0x0082A10C File Offset: 0x0082830C
+	// Token: 0x0601B1A2 RID: 111010 RVA: 0x008511C8 File Offset: 0x0084F3C8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -296,7 +296,7 @@ public class SceneInteractionLevel
 		return this.InteractionActor.GetRefActorsByTag(tag);
 	}
 
-	// Token: 0x0601D4A7 RID: 119975 RVA: 0x0082A140 File Offset: 0x00828340
+	// Token: 0x0601B1A3 RID: 111011 RVA: 0x008511FC File Offset: 0x0084F3FC
 	private bool DoSwitchToState(EKuroSceneInteractionState targetState, bool needTransition, bool force, bool jumpToEnd)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -323,7 +323,7 @@ public class SceneInteractionLevel
 		return true;
 	}
 
-	// Token: 0x0601D4A8 RID: 119976 RVA: 0x0082A1D0 File Offset: 0x008283D0
+	// Token: 0x0601B1A4 RID: 111012 RVA: 0x0085128C File Offset: 0x0084F48C
 	public EKuroSceneInteractionState GetCurrentState()
 	{
 		if (this.InteractionActor != null)
@@ -333,7 +333,7 @@ public class SceneInteractionLevel
 		return EKuroSceneInteractionState.Error;
 	}
 
-	// Token: 0x0601D4A9 RID: 119977 RVA: 0x0082A1E8 File Offset: 0x008283E8
+	// Token: 0x0601B1A5 RID: 111013 RVA: 0x008512A4 File Offset: 0x0084F4A4
 	public void ChangePlayDirection(bool bPlayBack)
 	{
 		if (this.InteractionActor != null)
@@ -342,7 +342,7 @@ public class SceneInteractionLevel
 		}
 	}
 
-	// Token: 0x0601D4AA RID: 119978 RVA: 0x0082A1FE File Offset: 0x008283FE
+	// Token: 0x0601B1A6 RID: 111014 RVA: 0x008512BA File Offset: 0x0084F4BA
 	public void PlaySceneEffect(ESceneInteractionEffect effectKey)
 	{
 		if (this.InteractionActor != null)
@@ -351,7 +351,7 @@ public class SceneInteractionLevel
 		}
 	}
 
-	// Token: 0x0601D4AB RID: 119979 RVA: 0x0082A214 File Offset: 0x00828414
+	// Token: 0x0601B1A7 RID: 111015 RVA: 0x008512D0 File Offset: 0x0084F4D0
 	public void EndSceneEffect(ESceneInteractionEffect effectKey)
 	{
 		if (this.InteractionActor != null)
@@ -360,7 +360,7 @@ public class SceneInteractionLevel
 		}
 	}
 
-	// Token: 0x0601D4AC RID: 119980 RVA: 0x0082A22A File Offset: 0x0082842A
+	// Token: 0x0601B1A8 RID: 111016 RVA: 0x008512E6 File Offset: 0x0084F4E6
 	public void PlaySceneEndEffect(ESceneInteractionEffect effectKey)
 	{
 		if (this.InteractionActor != null)
@@ -369,7 +369,7 @@ public class SceneInteractionLevel
 		}
 	}
 
-	// Token: 0x0601D4AD RID: 119981 RVA: 0x0082A240 File Offset: 0x00828440
+	// Token: 0x0601B1A9 RID: 111017 RVA: 0x008512FC File Offset: 0x0084F4FC
 	[NullableContext(2)]
 	private void ApplyCustomPrimitiveData(ULevel level)
 	{
@@ -443,7 +443,7 @@ public class SceneInteractionLevel
 		}
 	}
 
-	// Token: 0x0601D4AE RID: 119982 RVA: 0x0082A480 File Offset: 0x00828680
+	// Token: 0x0601B1AA RID: 111018 RVA: 0x0085153C File Offset: 0x0084F73C
 	private void OnLevelLoaded(string reason)
 	{
 		bool enableSceneInteractionLog = SceneInteractionLevel.EnableSceneInteractionLog;
@@ -455,7 +455,7 @@ public class SceneInteractionLevel
 		this.OnLevelStreamingLoadedCallback = null;
 	}
 
-	// Token: 0x0601D4AF RID: 119983 RVA: 0x0082A4A0 File Offset: 0x008286A0
+	// Token: 0x0601B1AB RID: 111019 RVA: 0x0085155C File Offset: 0x0084F75C
 	private void OnLevelShow(string reason)
 	{
 		if (this.LevelStreamingDynamic == null)
@@ -508,7 +508,7 @@ public class SceneInteractionLevel
 		bool enableSceneInteractionLog = SceneInteractionLevel.EnableSceneInteractionLog;
 	}
 
-	// Token: 0x0601D4B0 RID: 119984 RVA: 0x0082A598 File Offset: 0x00828798
+	// Token: 0x0601B1AC RID: 111020 RVA: 0x00851654 File Offset: 0x0084F854
 	private void OnLevelHide(string reason)
 	{
 		if (this.OnLevelStreamingHideCallback != null)
@@ -524,7 +524,7 @@ public class SceneInteractionLevel
 		bool enableSceneInteractionLog = SceneInteractionLevel.EnableSceneInteractionLog;
 	}
 
-	// Token: 0x0601D4B1 RID: 119985 RVA: 0x0082A5D0 File Offset: 0x008287D0
+	// Token: 0x0601B1AD RID: 111021 RVA: 0x0085168C File Offset: 0x0084F88C
 	[NullableContext(2)]
 	public AActor GetAttachActor()
 	{
@@ -536,7 +536,7 @@ public class SceneInteractionLevel
 		return this.InteractionActor.GetAttachParentActor();
 	}
 
-	// Token: 0x0601D4B2 RID: 119986 RVA: 0x0082A5F8 File Offset: 0x008287F8
+	// Token: 0x0601B1AE RID: 111022 RVA: 0x008516B4 File Offset: 0x0084F8B4
 	public void AttachToActor(AActor parentActor)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -563,7 +563,7 @@ public class SceneInteractionLevel
 		}
 	}
 
-	// Token: 0x0601D4B3 RID: 119987 RVA: 0x0082A6EC File Offset: 0x008288EC
+	// Token: 0x0601B1AF RID: 111023 RVA: 0x008517A8 File Offset: 0x0084F9A8
 	[NullableContext(2)]
 	public void SetCollisionActorsOwner(AActor owner)
 	{
@@ -598,7 +598,7 @@ public class SceneInteractionLevel
 		}
 	}
 
-	// Token: 0x0601D4B4 RID: 119988 RVA: 0x0082A7B0 File Offset: 0x008289B0
+	// Token: 0x0601B1B0 RID: 111024 RVA: 0x0085186C File Offset: 0x0084FA6C
 	[NullableContext(2)]
 	public AActor GetMainCollisionActor()
 	{
@@ -618,7 +618,7 @@ public class SceneInteractionLevel
 		return null;
 	}
 
-	// Token: 0x0601D4B5 RID: 119989 RVA: 0x0082A814 File Offset: 0x00828A14
+	// Token: 0x0601B1B1 RID: 111025 RVA: 0x008518D0 File Offset: 0x0084FAD0
 	[NullableContext(2)]
 	public ASkeletalMeshActor GetSkeletalMeshActor()
 	{
@@ -638,8 +638,8 @@ public class SceneInteractionLevel
 		return null;
 	}
 
-	// Token: 0x0601D4B6 RID: 119990 RVA: 0x0082A878 File Offset: 0x00828A78
-	public FGameplayTag? GetPartCollisionActorTag(AActor actor)
+	// Token: 0x0601B1B2 RID: 111026 RVA: 0x00851934 File Offset: 0x0084FB34
+	public unsafe FGameplayTag? GetPartCollisionActorTag(AActor actor)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
 		if (interactionActor == null || !interactionActor.IsValid())
@@ -647,14 +647,41 @@ public class SceneInteractionLevel
 			return null;
 		}
 		TMap<AActor, FGameplayTag> partCollisionActorsAndCorrespondingTags = this.InteractionActor.PartCollisionActorsAndCorrespondingTags;
-		if (partCollisionActorsAndCorrespondingTags == null)
+		if (partCollisionActorsAndCorrespondingTags == null || !ObjectUtils.IsValid(actor))
 		{
 			return null;
 		}
-		return new FGameplayTag?(partCollisionActorsAndCorrespondingTags.Get(actor));
+		FGameplayTag value;
+		if (!partCollisionActorsAndCorrespondingTags.TryGetValue(actor, out value))
+		{
+			List<string> list = new List<string>();
+			int num = partCollisionActorsAndCorrespondingTags.Num();
+			for (int i = 0; i < num; i++)
+			{
+				AActor key = partCollisionActorsAndCorrespondingTags.GetKey(i);
+				list.Add(ObjectUtils.IsValid(key) ? key.GetName() : "Invalid");
+			}
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.Interaction;
+			ELogAuthor author = ELogAuthor.XDW;
+			string message = "[SceneInteractionLevel.GetPartCollisionActorTag] 受击Actor未配置在PartCollisionActorsAndCorrespondingTags中，请检查场景交互物蓝图配置";
+			<>y__InlineArray9<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray9<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("LevelName", this.LevelName);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("PbDataId", this.PbDataId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("EntityId", this.EntityId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("HandleId", this.HandleId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("InteractionActor", this.InteractionActor.GetName());
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 5) = new ValueTuple<string, object>("HitActor", actor.GetName());
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 6) = new ValueTuple<string, object>("HitActorPath", actor.GetPathName());
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 7) = new ValueTuple<string, object>("ConfiguredActorNum", num);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 8) = new ValueTuple<string, object>("ConfiguredActors", string.Join(",", list));
+			instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 9));
+			return null;
+		}
+		return new FGameplayTag?(value);
 	}
 
-	// Token: 0x0601D4B7 RID: 119991 RVA: 0x0082A8CC File Offset: 0x00828ACC
+	// Token: 0x0601B1B3 RID: 111027 RVA: 0x00851B30 File Offset: 0x0084FD30
 	public int? GetPartCollisionActorsNum()
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -670,7 +697,7 @@ public class SceneInteractionLevel
 		return new int?(partCollisionActorsAndCorrespondingTags.Num());
 	}
 
-	// Token: 0x0601D4B8 RID: 119992 RVA: 0x0082A920 File Offset: 0x00828B20
+	// Token: 0x0601B1B4 RID: 111028 RVA: 0x00851B84 File Offset: 0x0084FD84
 	[NullableContext(2)]
 	public AActor GetPartCollisionActor(int index)
 	{
@@ -696,7 +723,7 @@ public class SceneInteractionLevel
 		return partCollisionActorsAndCorrespondingTags.GetKey(index);
 	}
 
-	// Token: 0x0601D4B9 RID: 119993 RVA: 0x0082A983 File Offset: 0x00828B83
+	// Token: 0x0601B1B5 RID: 111029 RVA: 0x00851BE7 File Offset: 0x0084FDE7
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -711,7 +738,7 @@ public class SceneInteractionLevel
 		return null;
 	}
 
-	// Token: 0x0601D4BA RID: 119994 RVA: 0x0082A99F File Offset: 0x00828B9F
+	// Token: 0x0601B1B6 RID: 111030 RVA: 0x00851C03 File Offset: 0x0084FE03
 	public void PlayExtraEffect(FGameplayTag tag, bool jumpToEnd)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -722,7 +749,7 @@ public class SceneInteractionLevel
 		this.InteractionActor.PlayExtraEffectOnTagsChange(tag, jumpToEnd);
 	}
 
-	// Token: 0x0601D4BB RID: 119995 RVA: 0x0082A9C6 File Offset: 0x00828BC6
+	// Token: 0x0601B1B7 RID: 111031 RVA: 0x00851C2A File Offset: 0x0084FE2A
 	public void PlayKuroSkeletalMeshDestruction(AActor actor, bool jumpToEnd)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -733,7 +760,7 @@ public class SceneInteractionLevel
 		this.InteractionActor.PlayKuroSkeletalMeshDestruction(actor, jumpToEnd);
 	}
 
-	// Token: 0x0601D4BC RID: 119996 RVA: 0x0082A9ED File Offset: 0x00828BED
+	// Token: 0x0601B1B8 RID: 111032 RVA: 0x00851C51 File Offset: 0x0084FE51
 	public void StopExtraEffect(FGameplayTag tag)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -744,7 +771,7 @@ public class SceneInteractionLevel
 		this.InteractionActor.StopExtraEffectOnTagsChange(tag);
 	}
 
-	// Token: 0x0601D4BD RID: 119997 RVA: 0x0082AA13 File Offset: 0x00828C13
+	// Token: 0x0601B1B9 RID: 111033 RVA: 0x00851C77 File Offset: 0x0084FE77
 	public void UpdateHitInfo(global::Vector pos, FVector dir)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -755,7 +782,7 @@ public class SceneInteractionLevel
 		this.InteractionActor.UpdateHitInfo(pos.ToUeVector(false), dir);
 	}
 
-	// Token: 0x0601D4BE RID: 119998 RVA: 0x0082AA40 File Offset: 0x00828C40
+	// Token: 0x0601B1BA RID: 111034 RVA: 0x00851CA4 File Offset: 0x0084FEA4
 	public void UpdateRangeOverlapInfo(bool isEnter, AActor otherActor)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -766,7 +793,7 @@ public class SceneInteractionLevel
 		this.InteractionActor.UpdateRangeOverlapInfo(isEnter, otherActor);
 	}
 
-	// Token: 0x0601D4BF RID: 119999 RVA: 0x0082AA68 File Offset: 0x00828C68
+	// Token: 0x0601B1BB RID: 111035 RVA: 0x00851CCC File Offset: 0x0084FECC
 	public float? GetActiveTagSequencePlaybackProgress(FGameplayTag tag)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -777,7 +804,7 @@ public class SceneInteractionLevel
 		return this.InteractionActor.GetActiveTagSequencePlaybackProgress(tag);
 	}
 
-	// Token: 0x0601D4C0 RID: 120000 RVA: 0x0082AAA2 File Offset: 0x00828CA2
+	// Token: 0x0601B1BC RID: 111036 RVA: 0x00851D06 File Offset: 0x0084FF06
 	public void SetActiveTagSequencePlaybackProgress(FGameplayTag tag, float progress)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -788,7 +815,7 @@ public class SceneInteractionLevel
 		this.InteractionActor.SetActiveTagSequencePlaybackProgress(tag, progress);
 	}
 
-	// Token: 0x0601D4C1 RID: 120001 RVA: 0x0082AACC File Offset: 0x00828CCC
+	// Token: 0x0601B1BD RID: 111037 RVA: 0x00851D30 File Offset: 0x0084FF30
 	public double? GetActiveTagSequenceDurationTime(FGameplayTag tag)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -804,7 +831,7 @@ public class SceneInteractionLevel
 		return new double?((double)activeTagSequenceDurationTime.GetValueOrDefault());
 	}
 
-	// Token: 0x0601D4C2 RID: 120002 RVA: 0x0082AB27 File Offset: 0x00828D27
+	// Token: 0x0601B1BE RID: 111038 RVA: 0x00851D8B File Offset: 0x0084FF8B
 	public void SetActiveTagSequenceDurationTime(FGameplayTag tag, float durationSecond)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -815,7 +842,7 @@ public class SceneInteractionLevel
 		this.InteractionActor.SetActiveTagSequenceDurationTime(tag, durationSecond);
 	}
 
-	// Token: 0x0601D4C3 RID: 120003 RVA: 0x0082AB4E File Offset: 0x00828D4E
+	// Token: 0x0601B1BF RID: 111039 RVA: 0x00851DB2 File Offset: 0x0084FFB2
 	public void PauseActiveTagSequence(FGameplayTag tag)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -826,7 +853,7 @@ public class SceneInteractionLevel
 		this.InteractionActor.PauseActiveTagSequence(tag);
 	}
 
-	// Token: 0x0601D4C4 RID: 120004 RVA: 0x0082AB74 File Offset: 0x00828D74
+	// Token: 0x0601B1C0 RID: 111040 RVA: 0x00851DD8 File Offset: 0x0084FFD8
 	public void ResumeActiveTagSequence(FGameplayTag tag, bool bReverseFromConfig = false)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -837,7 +864,7 @@ public class SceneInteractionLevel
 		this.InteractionActor.ResumeActiveTagSequence(tag, bReverseFromConfig);
 	}
 
-	// Token: 0x0601D4C5 RID: 120005 RVA: 0x0082AB9C File Offset: 0x00828D9C
+	// Token: 0x0601B1C1 RID: 111041 RVA: 0x00851E00 File Offset: 0x00850000
 	public bool? GetIsActiveTagSequencePlayReverseFromConfig(FGameplayTag tag)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -848,7 +875,7 @@ public class SceneInteractionLevel
 		return this.InteractionActor.GetIsActiveTagSequencePlayReverseFromConfig(tag);
 	}
 
-	// Token: 0x0601D4C6 RID: 120006 RVA: 0x0082ABD6 File Offset: 0x00828DD6
+	// Token: 0x0601B1C2 RID: 111042 RVA: 0x00851E3A File Offset: 0x0085003A
 	public void PlayActiveTagSequenceTo(FGameplayTag tag, float progress, bool bReverseFromConfig = false)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -859,7 +886,7 @@ public class SceneInteractionLevel
 		this.InteractionActor.PlayActiveTagSequenceTo(tag, progress, bReverseFromConfig);
 	}
 
-	// Token: 0x0601D4C7 RID: 120007 RVA: 0x0082ABFE File Offset: 0x00828DFE
+	// Token: 0x0601B1C3 RID: 111043 RVA: 0x00851E62 File Offset: 0x00850062
 	public void SetOverrideSeqBindActor(AActor actorToBind, [Nullable(2)] string bindingName = null)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -870,7 +897,7 @@ public class SceneInteractionLevel
 		this.InteractionActor.SetOverrideSeqBindActor(actorToBind, bindingName);
 	}
 
-	// Token: 0x0601D4C8 RID: 120008 RVA: 0x0082AC25 File Offset: 0x00828E25
+	// Token: 0x0601B1C4 RID: 111044 RVA: 0x00851E89 File Offset: 0x00850089
 	public void UnsetOverrideSeqBindActor(AActor actorToUnBind, [Nullable(2)] string bindingName = null)
 	{
 		SceneInteractionActor interactionActor = this.InteractionActor;
@@ -881,7 +908,7 @@ public class SceneInteractionLevel
 		this.InteractionActor.UnsetOverrideSeqBindActor(actorToUnBind, bindingName);
 	}
 
-	// Token: 0x0601D4C9 RID: 120009 RVA: 0x0082AC4C File Offset: 0x00828E4C
+	// Token: 0x0601B1C5 RID: 111045 RVA: 0x00851EB0 File Offset: 0x008500B0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -897,7 +924,7 @@ public class SceneInteractionLevel
 		return this.InteractionActor.ReceivingDecalsActors;
 	}
 
-	// Token: 0x0601D4CA RID: 120010 RVA: 0x0082AC72 File Offset: 0x00828E72
+	// Token: 0x0601B1C6 RID: 111046 RVA: 0x00851ED6 File Offset: 0x008500D6
 	public void Disable()
 	{
 		this.Active = false;
@@ -907,7 +934,7 @@ public class SceneInteractionLevel
 		}
 	}
 
-	// Token: 0x0601D4CB RID: 120011 RVA: 0x0082AC8F File Offset: 0x00828E8F
+	// Token: 0x0601B1C7 RID: 111047 RVA: 0x00851EF3 File Offset: 0x008500F3
 	public void Enable()
 	{
 		this.Active = true;
@@ -917,71 +944,71 @@ public class SceneInteractionLevel
 		}
 	}
 
-	// Token: 0x0400E6CE RID: 59086
+	// Token: 0x0400EB83 RID: 60291
 	[Nullable(2)]
 	protected ULevelStreamingDynamic LevelStreamingDynamic;
 
-	// Token: 0x0400E6CF RID: 59087
+	// Token: 0x0400EB84 RID: 60292
 	public string LevelName = "";
 
-	// Token: 0x0400E6D0 RID: 59088
+	// Token: 0x0400EB85 RID: 60293
 	protected FVectorDouble? Location;
 
-	// Token: 0x0400E6D1 RID: 59089
+	// Token: 0x0400EB86 RID: 60294
 	protected FRotator? Rotation;
 
-	// Token: 0x0400E6D2 RID: 59090
+	// Token: 0x0400EB87 RID: 60295
 	protected int PbDataId;
 
-	// Token: 0x0400E6D3 RID: 59091
+	// Token: 0x0400EB88 RID: 60296
 	protected int HandleId;
 
-	// Token: 0x0400E6D4 RID: 59092
+	// Token: 0x0400EB89 RID: 60297
 	protected int EntityId;
 
-	// Token: 0x0400E6D5 RID: 59093
+	// Token: 0x0400EB8A RID: 60298
 	protected EKuroSceneInteractionState? CurrentState;
 
-	// Token: 0x0400E6D6 RID: 59094
+	// Token: 0x0400EB8B RID: 60299
 	protected bool LoadingLevelComplete;
 
-	// Token: 0x0400E6D7 RID: 59095
+	// Token: 0x0400EB8C RID: 60300
 	[Nullable(2)]
 	protected SceneInteractionActor InteractionActor;
 
-	// Token: 0x0400E6D8 RID: 59096
+	// Token: 0x0400EB8D RID: 60301
 	protected bool HasTempState;
 
-	// Token: 0x0400E6D9 RID: 59097
+	// Token: 0x0400EB8E RID: 60302
 	protected EKuroSceneInteractionState? TempTargetState;
 
-	// Token: 0x0400E6DA RID: 59098
+	// Token: 0x0400EB8F RID: 60303
 	protected bool TempNeedTransition;
 
-	// Token: 0x0400E6DB RID: 59099
+	// Token: 0x0400EB90 RID: 60304
 	protected bool IsDestroyed;
 
-	// Token: 0x0400E6DC RID: 59100
+	// Token: 0x0400EB91 RID: 60305
 	protected bool Active = true;
 
-	// Token: 0x0400E6DD RID: 59101
+	// Token: 0x0400EB92 RID: 60306
 	protected bool TempForce;
 
-	// Token: 0x0400E6DE RID: 59102
+	// Token: 0x0400EB93 RID: 60307
 	[Nullable(2)]
 	protected Action OnLevelStreamingShowCallback;
 
-	// Token: 0x0400E6DF RID: 59103
+	// Token: 0x0400EB94 RID: 60308
 	[Nullable(2)]
 	protected Action OnLevelStreamingLoadedCallback;
 
-	// Token: 0x0400E6E0 RID: 59104
+	// Token: 0x0400EB95 RID: 60309
 	[Nullable(2)]
 	protected Action OnLevelStreamingHideCallback;
 
-	// Token: 0x0400E6E1 RID: 59105
+	// Token: 0x0400EB96 RID: 60310
 	private bool IsInitShow;
 
-	// Token: 0x0400E6E2 RID: 59106
+	// Token: 0x0400EB97 RID: 60311
 	private static readonly bool EnableSceneInteractionLog;
 }

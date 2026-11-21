@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera.MovieCamera
 {
-	// Token: 0x020043D7 RID: 17367
+	// Token: 0x020033ED RID: 13293
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/MovieCamera/EMovieCameraSequenceSettingBindTargetType.EMovieCameraSequenceSettingBindTargetType")]
 	public enum EMovieCameraSequenceSettingBindTargetType : byte
 	{
-		// Token: 0x04017DFC RID: 97788
+		// Token: 0x0401293A RID: 76090
 		绑定到目标身上,
-		// Token: 0x04017DFD RID: 97789
+		// Token: 0x0401293B RID: 76091
 		根据目标位置放置到世界,
-		// Token: 0x04017DFE RID: 97790
+		// Token: 0x0401293C RID: 76092
 		放置到世界,
-		// Token: 0x04017DFF RID: 97791
+		// Token: 0x0401293D RID: 76093
 		EMovieCameraSequenceSettingBindTargetType_MAX
 	}
 }

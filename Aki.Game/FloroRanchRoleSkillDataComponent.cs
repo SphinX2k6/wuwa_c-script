@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001B18 RID: 6936
+// Token: 0x02000FD7 RID: 4055
 [NullableContext(1)]
 [Nullable(0)]
 [FloroRanchEntityComponent(EFloroRanchEntityComponent.FloroRanchRoleSkillDataComponent)]
 public class FloroRanchRoleSkillDataComponent : FloroRanchEntityDataBaseComponent
 {
-	// Token: 0x0600CDC7 RID: 52679 RVA: 0x002EDDB4 File Offset: 0x002EBFB4
+	// Token: 0x0600A1D8 RID: 41432 RVA: 0x002F8E94 File Offset: 0x002F7094
 	public override void RefreshEntityData(FloroRanchPlayUnit entityData)
 	{
 		if (entityData.SKillData == null)
@@ -21,13 +21,13 @@ public class FloroRanchRoleSkillDataComponent : FloroRanchEntityDataBaseComponen
 		this.CurDayCanUseNum = entityData.SKillData.CurDayCanUseNum;
 	}
 
-	// Token: 0x0600CDC8 RID: 52680 RVA: 0x002EDE36 File Offset: 0x002EC036
+	// Token: 0x0600A1D9 RID: 41433 RVA: 0x002F8F16 File Offset: 0x002F7116
 	public bool CanUseSkill()
 	{
 		return this.CanUseCount > 0 && this.CurDayCanUseNum > 0;
 	}
 
-	// Token: 0x0600CDC9 RID: 52681 RVA: 0x002EDE4C File Offset: 0x002EC04C
+	// Token: 0x0600A1DA RID: 41434 RVA: 0x002F8F2C File Offset: 0x002F712C
 	public override string Info()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(22, 2);
@@ -38,19 +38,19 @@ public class FloroRanchRoleSkillDataComponent : FloroRanchEntityDataBaseComponen
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600CDCA RID: 52682 RVA: 0x002EDEA6 File Offset: 0x002EC0A6
+	// Token: 0x0600A1DB RID: 41435 RVA: 0x002F8F86 File Offset: 0x002F7186
 	public override string DebugInfo()
 	{
 		return this.SkillData.GetRealName();
 	}
 
-	// Token: 0x04005E62 RID: 24162
+	// Token: 0x04005F31 RID: 24369
 	[Nullable(2)]
 	public FloroRanchSkillData SkillData;
 
-	// Token: 0x04005E63 RID: 24163
+	// Token: 0x04005F32 RID: 24370
 	public int CanUseCount;
 
-	// Token: 0x04005E64 RID: 24164
+	// Token: 0x04005F33 RID: 24371
 	public int CurDayCanUseNum;
 }

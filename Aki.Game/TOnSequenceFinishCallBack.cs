@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x02002860 RID: 10336
-// (Invoke) Token: 0x0601549C RID: 87196
+// Token: 0x02001DDB RID: 7643
+// (Invoke) Token: 0x06012E9A RID: 77466
 public delegate void TOnSequenceFinishCallBack();

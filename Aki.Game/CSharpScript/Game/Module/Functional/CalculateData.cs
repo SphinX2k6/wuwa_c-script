@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Functional
 {
-	// Token: 0x02005A20 RID: 23072
+	// Token: 0x020049FC RID: 18940
 	public class CalculateData : ICalculateData
 	{
-		// Token: 0x17008BD2 RID: 35794
-		// (get) Token: 0x0603A841 RID: 239681 RVA: 0x00DECAE0 File Offset: 0x00DEACE0
-		// (set) Token: 0x0603A842 RID: 239682 RVA: 0x00DECAE8 File Offset: 0x00DEACE8
+		// Token: 0x17005FA0 RID: 24480
+		// (get) Token: 0x0602F78A RID: 194442 RVA: 0x00D3D070 File Offset: 0x00D3B270
+		// (set) Token: 0x0602F78B RID: 194443 RVA: 0x00D3D078 File Offset: 0x00D3B278
 		public int TotalGridNumber { get; set; }
 
-		// Token: 0x17008BD3 RID: 35795
-		// (get) Token: 0x0603A843 RID: 239683 RVA: 0x00DECAF1 File Offset: 0x00DEACF1
-		// (set) Token: 0x0603A844 RID: 239684 RVA: 0x00DECAF9 File Offset: 0x00DEACF9
+		// Token: 0x17005FA1 RID: 24481
+		// (get) Token: 0x0602F78C RID: 194444 RVA: 0x00D3D081 File Offset: 0x00D3B281
+		// (set) Token: 0x0602F78D RID: 194445 RVA: 0x00D3D089 File Offset: 0x00D3B289
 		public float OffsetWidth { get; set; }
 
-		// Token: 0x17008BD4 RID: 35796
-		// (get) Token: 0x0603A845 RID: 239685 RVA: 0x00DECB02 File Offset: 0x00DEAD02
-		// (set) Token: 0x0603A846 RID: 239686 RVA: 0x00DECB0A File Offset: 0x00DEAD0A
+		// Token: 0x17005FA2 RID: 24482
+		// (get) Token: 0x0602F78E RID: 194446 RVA: 0x00D3D092 File Offset: 0x00D3B292
+		// (set) Token: 0x0602F78F RID: 194447 RVA: 0x00D3D09A File Offset: 0x00D3B29A
 		public int HorizontalGridNum { get; set; }
 
-		// Token: 0x17008BD5 RID: 35797
-		// (get) Token: 0x0603A847 RID: 239687 RVA: 0x00DECB13 File Offset: 0x00DEAD13
-		// (set) Token: 0x0603A848 RID: 239688 RVA: 0x00DECB1B File Offset: 0x00DEAD1B
+		// Token: 0x17005FA3 RID: 24483
+		// (get) Token: 0x0602F790 RID: 194448 RVA: 0x00D3D0A3 File Offset: 0x00D3B2A3
+		// (set) Token: 0x0602F791 RID: 194449 RVA: 0x00D3D0AB File Offset: 0x00D3B2AB
 		public int VerticalGridNum { get; set; }
 	}
 }

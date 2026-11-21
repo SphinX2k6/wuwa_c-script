@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001C02 RID: 7170
+// Token: 0x020010C1 RID: 4289
 [NullableContext(2)]
 [Nullable(0)]
 public class FormationEditItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600D62F RID: 54831 RVA: 0x0031835C File Offset: 0x0031655C
+	// Token: 0x0600AA42 RID: 43586 RVA: 0x0032364C File Offset: 0x0032184C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -51,7 +51,7 @@ public class FormationEditItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D630 RID: 54832 RVA: 0x00318550 File Offset: 0x00316750
+	// Token: 0x0600AA43 RID: 43587 RVA: 0x00323840 File Offset: 0x00321A40
 	protected override void OnStart()
 	{
 		UUILayoutBase horizontalLayout = base.GetHorizontalLayout(7);
@@ -89,7 +89,7 @@ public class FormationEditItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600D631 RID: 54833 RVA: 0x003186A4 File Offset: 0x003168A4
+	// Token: 0x0600AA44 RID: 43588 RVA: 0x00323994 File Offset: 0x00321B94
 	protected override void OnBeforeDestroy()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -110,7 +110,7 @@ public class FormationEditItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600D632 RID: 54834 RVA: 0x00318730 File Offset: 0x00316930
+	// Token: 0x0600AA45 RID: 43589 RVA: 0x00323A20 File Offset: 0x00321C20
 	public override void Refresh(int formationId, bool isSelected, int gridIndex)
 	{
 		base.GridIndex = gridIndex;
@@ -148,26 +148,26 @@ public class FormationEditItem : GridProxyAbstract<int>
 		this.SetToggleChecked(isSelected);
 	}
 
-	// Token: 0x0600D633 RID: 54835 RVA: 0x00318813 File Offset: 0x00316A13
+	// Token: 0x0600AA46 RID: 43590 RVA: 0x00323B03 File Offset: 0x00321D03
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleChecked(true);
 	}
 
-	// Token: 0x0600D634 RID: 54836 RVA: 0x0031881C File Offset: 0x00316A1C
+	// Token: 0x0600AA47 RID: 43591 RVA: 0x00323B0C File Offset: 0x00321D0C
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleChecked(false);
 	}
 
-	// Token: 0x0600D635 RID: 54837 RVA: 0x00318825 File Offset: 0x00316A25
+	// Token: 0x0600AA48 RID: 43592 RVA: 0x00323B15 File Offset: 0x00321D15
 	[NullableContext(1)]
 	public override object GetKey(int data, int displayIndex)
 	{
 		return data;
 	}
 
-	// Token: 0x0600D636 RID: 54838 RVA: 0x0031882D File Offset: 0x00316A2D
+	// Token: 0x0600AA49 RID: 43593 RVA: 0x00323B1D File Offset: 0x00321D1D
 	public void SetArrowVisible(bool canMoveUp, bool canMoveDown)
 	{
 		UUIItem item = base.GetItem(11);
@@ -183,14 +183,14 @@ public class FormationEditItem : GridProxyAbstract<int>
 		item2.SetUIActive(canMoveDown);
 	}
 
-	// Token: 0x0600D637 RID: 54839 RVA: 0x00318856 File Offset: 0x00316A56
+	// Token: 0x0600AA4A RID: 43594 RVA: 0x00323B46 File Offset: 0x00321D46
 	[NullableContext(1)]
 	private static FormationEditHeadItem CreateHeadItem()
 	{
 		return new FormationEditHeadItem();
 	}
 
-	// Token: 0x0600D638 RID: 54840 RVA: 0x00318860 File Offset: 0x00316A60
+	// Token: 0x0600AA4B RID: 43595 RVA: 0x00323B50 File Offset: 0x00321D50
 	private void RefreshFormationName()
 	{
 		FormationData formationData = FormationModel.Instance.GetFormationData(this.FormationId);
@@ -208,7 +208,7 @@ public class FormationEditItem : GridProxyAbstract<int>
 		text2.SetText(text, true);
 	}
 
-	// Token: 0x0600D639 RID: 54841 RVA: 0x003188C4 File Offset: 0x00316AC4
+	// Token: 0x0600AA4C RID: 43596 RVA: 0x00323BB4 File Offset: 0x00321DB4
 	private void OnClickEditName()
 	{
 		int formationId = this.FormationId;
@@ -227,13 +227,13 @@ public class FormationEditItem : GridProxyAbstract<int>
 		});
 	}
 
-	// Token: 0x0600D63A RID: 54842 RVA: 0x00318906 File Offset: 0x00316B06
+	// Token: 0x0600AA4D RID: 43597 RVA: 0x00323BF6 File Offset: 0x00321DF6
 	private bool OnDragNeedInterrupt(ULGUIBaseEventData eventData)
 	{
 		return false;
 	}
 
-	// Token: 0x0600D63B RID: 54843 RVA: 0x0031890C File Offset: 0x00316B0C
+	// Token: 0x0600AA4E RID: 43598 RVA: 0x00323BFC File Offset: 0x00321DFC
 	private void OnHandlePointerDown(ULGUIPointerEventData eventData)
 	{
 		int maxFormationId = FormationConfig.Instance.GetMaxFormationId();
@@ -246,7 +246,7 @@ public class FormationEditItem : GridProxyAbstract<int>
 		item.SetUIActive(true);
 	}
 
-	// Token: 0x0600D63C RID: 54844 RVA: 0x00318950 File Offset: 0x00316B50
+	// Token: 0x0600AA4F RID: 43599 RVA: 0x00323C40 File Offset: 0x00321E40
 	private void OnHandlePointerUp(ULGUIPointerEventData eventData)
 	{
 		UUIItem item = base.GetItem(5);
@@ -257,7 +257,7 @@ public class FormationEditItem : GridProxyAbstract<int>
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0600D63D RID: 54845 RVA: 0x00318964 File Offset: 0x00316B64
+	// Token: 0x0600AA50 RID: 43600 RVA: 0x00323C54 File Offset: 0x00321E54
 	private void OnHandleBeginDrag(ULGUIPointerEventData eventData)
 	{
 		Action<FormationEditItem, ULGUIPointerEventData> onDragHandleBegin = this.OnDragHandleBegin;
@@ -268,7 +268,7 @@ public class FormationEditItem : GridProxyAbstract<int>
 		onDragHandleBegin(this, eventData);
 	}
 
-	// Token: 0x0600D63E RID: 54846 RVA: 0x00318978 File Offset: 0x00316B78
+	// Token: 0x0600AA51 RID: 43601 RVA: 0x00323C68 File Offset: 0x00321E68
 	private void OnHandleDrag(ULGUIPointerEventData eventData)
 	{
 		Action<ULGUIPointerEventData> onDragHandleMove = this.OnDragHandleMove;
@@ -279,7 +279,7 @@ public class FormationEditItem : GridProxyAbstract<int>
 		onDragHandleMove(eventData);
 	}
 
-	// Token: 0x0600D63F RID: 54847 RVA: 0x0031898B File Offset: 0x00316B8B
+	// Token: 0x0600AA52 RID: 43602 RVA: 0x00323C7B File Offset: 0x00321E7B
 	private void OnHandleDragFinish(ULGUIPointerEventData eventData)
 	{
 		UUIItem item = base.GetItem(5);
@@ -295,7 +295,7 @@ public class FormationEditItem : GridProxyAbstract<int>
 		onDragHandleEnd();
 	}
 
-	// Token: 0x0600D640 RID: 54848 RVA: 0x003189B0 File Offset: 0x00316BB0
+	// Token: 0x0600AA53 RID: 43603 RVA: 0x00323CA0 File Offset: 0x00321EA0
 	private void SetToggleChecked(bool isChecked)
 	{
 		this.IsSelectedItem = isChecked;
@@ -316,7 +316,7 @@ public class FormationEditItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600D641 RID: 54849 RVA: 0x00318A00 File Offset: 0x00316C00
+	// Token: 0x0600AA54 RID: 43604 RVA: 0x00323CF0 File Offset: 0x00321EF0
 	private void OnToggleStateChange(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -337,16 +337,16 @@ public class FormationEditItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x04006206 RID: 25094
+	// Token: 0x040062D8 RID: 25304
 	public bool IsDragOverlay;
 
-	// Token: 0x04006207 RID: 25095
+	// Token: 0x040062D9 RID: 25305
 	public Func<int, int, bool> OnToggleSelect;
 
-	// Token: 0x04006208 RID: 25096
+	// Token: 0x040062DA RID: 25306
 	public Action<int> OnRenameSuccess;
 
-	// Token: 0x04006209 RID: 25097
+	// Token: 0x040062DB RID: 25307
 	[Nullable(new byte[]
 	{
 		2,
@@ -355,13 +355,13 @@ public class FormationEditItem : GridProxyAbstract<int>
 	})]
 	public Action<FormationEditItem, ULGUIPointerEventData> OnDragHandleBegin;
 
-	// Token: 0x0400620A RID: 25098
+	// Token: 0x040062DC RID: 25308
 	public Action<ULGUIPointerEventData> OnDragHandleMove;
 
-	// Token: 0x0400620B RID: 25099
+	// Token: 0x040062DD RID: 25309
 	public Action OnDragHandleEnd;
 
-	// Token: 0x0400620C RID: 25100
+	// Token: 0x040062DE RID: 25310
 	[Nullable(new byte[]
 	{
 		2,
@@ -369,47 +369,47 @@ public class FormationEditItem : GridProxyAbstract<int>
 	})]
 	private GenericLayout<FormationEditHeadItem, int> HeadLayout;
 
-	// Token: 0x0400620D RID: 25101
+	// Token: 0x040062DF RID: 25311
 	private int FormationId;
 
-	// Token: 0x0400620E RID: 25102
+	// Token: 0x040062E0 RID: 25312
 	private bool IsSelectedItem;
 
-	// Token: 0x020081AB RID: 33195
+	// Token: 0x02007335 RID: 29493
 	[NullableContext(0)]
 	private enum EItemChildType
 	{
-		// Token: 0x0402A501 RID: 173313
+		// Token: 0x0402582B RID: 153643
 		TogItem,
-		// Token: 0x0402A502 RID: 173314
+		// Token: 0x0402582C RID: 153644
 		TxtName,
-		// Token: 0x0402A503 RID: 173315
+		// Token: 0x0402582D RID: 153645
 		BtnEditName,
-		// Token: 0x0402A504 RID: 173316
+		// Token: 0x0402582E RID: 153646
 		SpriteNum,
-		// Token: 0x0402A505 RID: 173317
+		// Token: 0x0402582F RID: 153647
 		BtnState,
-		// Token: 0x0402A506 RID: 173318
+		// Token: 0x04025830 RID: 153648
 		PanelArrowState,
-		// Token: 0x0402A507 RID: 173319
+		// Token: 0x04025831 RID: 153649
 		SpriteTeam,
-		// Token: 0x0402A508 RID: 173320
+		// Token: 0x04025832 RID: 153650
 		PanelHead,
-		// Token: 0x0402A509 RID: 173321
+		// Token: 0x04025833 RID: 153651
 		PanelHeadItem,
-		// Token: 0x0402A50A RID: 173322
+		// Token: 0x04025834 RID: 153652
 		DragItem,
-		// Token: 0x0402A50B RID: 173323
+		// Token: 0x04025835 RID: 153653
 		SpriteArrowDown,
-		// Token: 0x0402A50C RID: 173324
+		// Token: 0x04025836 RID: 153654
 		SpriteArrowUp
 	}
 
-	// Token: 0x020081AC RID: 33196
+	// Token: 0x02007336 RID: 29494
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402A50D RID: 173325
+		// Token: 0x04025837 RID: 153655
 		[Nullable(new byte[]
 		{
 			0,

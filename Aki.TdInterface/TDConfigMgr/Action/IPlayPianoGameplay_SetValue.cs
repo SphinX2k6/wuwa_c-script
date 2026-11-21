@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D1B RID: 7451
+	// Token: 0x02001F2C RID: 7980
 	public class IPlayPianoGameplay_SetValue
 	{
-		// Token: 0x04006069 RID: 24681
+		// Token: 0x040065E5 RID: 26085
 		public ESimpleGameplayType Type;
 
-		// Token: 0x0400606A RID: 24682
+		// Token: 0x040065E6 RID: 26086
 		public int SplineEntityId;
 
-		// Token: 0x0400606B RID: 24683
+		// Token: 0x040065E7 RID: 26087
 		public int RangeEntityId;
 	}
 }

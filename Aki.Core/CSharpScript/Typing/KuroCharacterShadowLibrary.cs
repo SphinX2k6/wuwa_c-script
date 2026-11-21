@@ -4,24 +4,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Typing
 {
-	// Token: 0x02000125 RID: 293
+	// Token: 0x02000126 RID: 294
 	public class KuroCharacterShadowLibrary
 	{
-		// Token: 0x06000A9E RID: 2718
+		// Token: 0x06000AF5 RID: 2805
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Set_Internal(in FGuid a);
 
-		// Token: 0x06000A9F RID: 2719 RVA: 0x00033FCF File Offset: 0x000321CF
+		// Token: 0x06000AF6 RID: 2806 RVA: 0x00034A43 File Offset: 0x00032C43
 		public static void Set(in FGuid a)
 		{
 			KuroCharacterShadowLibrary.Set_Internal(a);
 		}
 
-		// Token: 0x06000AA0 RID: 2720
+		// Token: 0x06000AF7 RID: 2807
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void SetR_Internal(in FArrayBuffer view);
 
-		// Token: 0x06000AA1 RID: 2721 RVA: 0x00033FD7 File Offset: 0x000321D7
+		// Token: 0x06000AF8 RID: 2808 RVA: 0x00034A4B File Offset: 0x00032C4B
 		public static void SetR(in FArrayBuffer view)
 		{
 			KuroCharacterShadowLibrary.SetR_Internal(view);

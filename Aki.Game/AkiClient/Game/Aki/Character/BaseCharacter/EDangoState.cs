@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042B3 RID: 17075
+	// Token: 0x0200330C RID: 13068
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/EDangoState.EDangoState")]
 	public enum EDangoState : byte
 	{
-		// Token: 0x04017396 RID: 95126
+		// Token: 0x04012087 RID: 73863
 		Stand,
-		// Token: 0x04017397 RID: 95127
+		// Token: 0x04012088 RID: 73864
 		ActionPerform,
-		// Token: 0x04017398 RID: 95128
+		// Token: 0x04012089 RID: 73865
 		MoveJump,
-		// Token: 0x04017399 RID: 95129
+		// Token: 0x0401208A RID: 73866
 		EDangoState_MAX
 	}
 }

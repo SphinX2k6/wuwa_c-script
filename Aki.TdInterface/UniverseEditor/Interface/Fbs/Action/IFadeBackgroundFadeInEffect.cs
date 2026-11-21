@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200675C RID: 26460
+	// Token: 0x02006DDC RID: 28124
 	public struct IFadeBackgroundFadeInEffect : IFlatbufferObject
 	{
-		// Token: 0x1700C46C RID: 50284
-		// (get) Token: 0x0602E073 RID: 188531 RVA: 0x0064A337 File Offset: 0x00648537
+		// Token: 0x1700CE22 RID: 52770
+		// (get) Token: 0x060308B9 RID: 198841 RVA: 0x00697A7B File Offset: 0x00695C7B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E074 RID: 188532 RVA: 0x0064A344 File Offset: 0x00648544
+		// Token: 0x060308BA RID: 198842 RVA: 0x00697A88 File Offset: 0x00695C88
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E075 RID: 188533 RVA: 0x0064A34C File Offset: 0x0064854C
+		// Token: 0x060308BB RID: 198843 RVA: 0x00697A90 File Offset: 0x00695C90
 		public static IFadeBackgroundFadeInEffect GetRootAsIFadeBackgroundFadeInEffect(ByteBuffer _bb)
 		{
 			return IFadeBackgroundFadeInEffect.GetRootAsIFadeBackgroundFadeInEffect(_bb, default(IFadeBackgroundFadeInEffect));
 		}
 
-		// Token: 0x0602E076 RID: 188534 RVA: 0x0064A368 File Offset: 0x00648568
+		// Token: 0x060308BC RID: 198844 RVA: 0x00697AAC File Offset: 0x00695CAC
 		public static IFadeBackgroundFadeInEffect GetRootAsIFadeBackgroundFadeInEffect(ByteBuffer _bb, IFadeBackgroundFadeInEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E077 RID: 188535 RVA: 0x0064A385 File Offset: 0x00648585
+		// Token: 0x060308BD RID: 198845 RVA: 0x00697AC9 File Offset: 0x00695CC9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E078 RID: 188536 RVA: 0x0064A394 File Offset: 0x00648594
+		// Token: 0x060308BE RID: 198846 RVA: 0x00697AD8 File Offset: 0x00695CD8
 		public IFadeBackgroundFadeInEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C46D RID: 50285
-		// (get) Token: 0x0602E079 RID: 188537 RVA: 0x0064A3A4 File Offset: 0x006485A4
+		// Token: 0x1700CE23 RID: 52771
+		// (get) Token: 0x060308BF RID: 198847 RVA: 0x00697AE8 File Offset: 0x00695CE8
 		public TFadeBackgroundFadeInEffect FadeInEffectType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E07A RID: 188538 RVA: 0x0064A3E0 File Offset: 0x006485E0
+		// Token: 0x060308C0 RID: 198848 RVA: 0x00697B24 File Offset: 0x00695D24
 		public TTable? FadeInEffect<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,19 +73,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602E07B RID: 188539 RVA: 0x0064A424 File Offset: 0x00648624
+		// Token: 0x060308C1 RID: 198849 RVA: 0x00697B68 File Offset: 0x00695D68
 		public IFadeBackgroundFadeInEffectBlack FadeInEffectAsIFadeBackgroundFadeInEffectBlack()
 		{
 			return this.FadeInEffect<IFadeBackgroundFadeInEffectBlack>().Value;
 		}
 
-		// Token: 0x0602E07C RID: 188540 RVA: 0x0064A440 File Offset: 0x00648640
+		// Token: 0x060308C2 RID: 198850 RVA: 0x00697B84 File Offset: 0x00695D84
 		public IFadeBackgroundFadeInEffectScreenEffect FadeInEffectAsIFadeBackgroundFadeInEffectScreenEffect()
 		{
 			return this.FadeInEffect<IFadeBackgroundFadeInEffectScreenEffect>().Value;
 		}
 
-		// Token: 0x0602E07D RID: 188541 RVA: 0x0064A45B File Offset: 0x0064865B
+		// Token: 0x060308C3 RID: 198851 RVA: 0x00697B9F File Offset: 0x00695D9F
 		public static Offset<IFadeBackgroundFadeInEffect> CreateIFadeBackgroundFadeInEffect(FlatBufferBuilder builder, TFadeBackgroundFadeInEffect FadeInEffect_type = TFadeBackgroundFadeInEffect.NONE, int FadeInEffectOffset = 0)
 		{
 			builder.StartTable(2);
@@ -94,31 +94,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFadeBackgroundFadeInEffect.EndIFadeBackgroundFadeInEffect(builder);
 		}
 
-		// Token: 0x0602E07E RID: 188542 RVA: 0x0064A478 File Offset: 0x00648678
+		// Token: 0x060308C4 RID: 198852 RVA: 0x00697BBC File Offset: 0x00695DBC
 		public static void StartIFadeBackgroundFadeInEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602E07F RID: 188543 RVA: 0x0064A481 File Offset: 0x00648681
+		// Token: 0x060308C5 RID: 198853 RVA: 0x00697BC5 File Offset: 0x00695DC5
 		public static void AddFadeInEffectType(FlatBufferBuilder builder, TFadeBackgroundFadeInEffect fadeInEffectType)
 		{
 			builder.AddByte(0, (byte)fadeInEffectType, 0);
 		}
 
-		// Token: 0x0602E080 RID: 188544 RVA: 0x0064A48C File Offset: 0x0064868C
+		// Token: 0x060308C6 RID: 198854 RVA: 0x00697BD0 File Offset: 0x00695DD0
 		public static void AddFadeInEffect(FlatBufferBuilder builder, int fadeInEffectOffset)
 		{
 			builder.AddOffset(1, fadeInEffectOffset, 0);
 		}
 
-		// Token: 0x0602E081 RID: 188545 RVA: 0x0064A497 File Offset: 0x00648697
+		// Token: 0x060308C7 RID: 198855 RVA: 0x00697BDB File Offset: 0x00695DDB
 		public static Offset<IFadeBackgroundFadeInEffect> EndIFadeBackgroundFadeInEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<IFadeBackgroundFadeInEffect>(builder.EndTable());
 		}
 
-		// Token: 0x0602E082 RID: 188546 RVA: 0x0064A4A4 File Offset: 0x006486A4
+		// Token: 0x060308C8 RID: 198856 RVA: 0x00697BE8 File Offset: 0x00695DE8
 		public IFadeBackgroundFadeInEffectT UnPack()
 		{
 			IFadeBackgroundFadeInEffectT fadeBackgroundFadeInEffectT = new IFadeBackgroundFadeInEffectT();
@@ -126,7 +126,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return fadeBackgroundFadeInEffectT;
 		}
 
-		// Token: 0x0602E083 RID: 188547 RVA: 0x0064A4C0 File Offset: 0x006486C0
+		// Token: 0x060308C9 RID: 198857 RVA: 0x00697C04 File Offset: 0x00695E04
 		public void UnPackTo(IFadeBackgroundFadeInEffectT _o)
 		{
 			_o.FadeInEffect = new TFadeBackgroundFadeInEffectUnion();
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.FadeInEffect.Value = ((this.FadeInEffect<IFadeBackgroundFadeInEffectScreenEffect>() != null) ? this.FadeInEffect<IFadeBackgroundFadeInEffectScreenEffect>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0602E084 RID: 188548 RVA: 0x0064A564 File Offset: 0x00648764
+		// Token: 0x060308CA RID: 198858 RVA: 0x00697CA8 File Offset: 0x00695EA8
 		public static Offset<IFadeBackgroundFadeInEffect> Pack(FlatBufferBuilder builder, IFadeBackgroundFadeInEffectT _o)
 		{
 			if (_o == null)
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFadeBackgroundFadeInEffect.CreateIFadeBackgroundFadeInEffect(builder, fadeInEffect_type, fadeInEffectOffset);
 		}
 
-		// Token: 0x04010E4E RID: 69198
+		// Token: 0x04011C80 RID: 72832
 		private Table __p;
 	}
 }

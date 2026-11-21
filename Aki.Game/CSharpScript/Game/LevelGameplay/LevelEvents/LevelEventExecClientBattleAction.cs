@@ -15,23 +15,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B24 RID: 27428
+	// Token: 0x02005C9C RID: 23708
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelEventExecClientBattleAction : LevelEventBase, IStaticVariableResetter
 	{
-		// Token: 0x060440D5 RID: 278741 RVA: 0x010BB120 File Offset: 0x010B9320
+		// Token: 0x0603A227 RID: 238119 RVA: 0x010649AC File Offset: 0x01062BAC
 		static LevelEventExecClientBattleAction()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelEventExecClientBattleAction.CreateStaticDefaultValue), new Action(LevelEventExecClientBattleAction.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060440D6 RID: 278742 RVA: 0x010BB13F File Offset: 0x010B933F
+		// Token: 0x0603A228 RID: 238120 RVA: 0x010649CB File Offset: 0x01062BCB
 		public LevelEventExecClientBattleAction(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060440D7 RID: 278743 RVA: 0x010BB148 File Offset: 0x010B9348
+		// Token: 0x0603A229 RID: 238121 RVA: 0x010649D4 File Offset: 0x01062BD4
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060440D8 RID: 278744 RVA: 0x010BB340 File Offset: 0x010B9540
+		// Token: 0x0603A22A RID: 238122 RVA: 0x01064BCC File Offset: 0x01062DCC
 		public static void HandleChangeAnimalEmotionBubble([Nullable(1)] IChangeAnimalEmotionBubble param, Action onSuccess = null, Action onFailure = null)
 		{
 			if (param.Type == EExecClientBattleActionType.ChangeAnimalEmotionBubble && param.AnimalEntityIds != null)
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060440D9 RID: 278745 RVA: 0x010BB3E0 File Offset: 0x010B95E0
+		// Token: 0x0603A22B RID: 238123 RVA: 0x01064C6C File Offset: 0x01062E6C
 		public static void HandleMonsterNpcInteract([Nullable(1)] IMonsterNpcInteract param, Action onSuccess = null, Action onFailure = null)
 		{
 			if (param.Type == EExecClientBattleActionType.MonsterNpcInteract && param.Config.Type == EMonsterNpcInteractType.TriggerHook)
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060440DA RID: 278746 RVA: 0x010BB540 File Offset: 0x010B9740
+		// Token: 0x0603A22C RID: 238124 RVA: 0x01064DCC File Offset: 0x01062FCC
 		public static void HandleGroupAiCommunicate([Nullable(1)] IClientGroupAiCommunicate param, Action onSuccess = null, Action onFailure = null)
 		{
 			if (param.Option.Type == EGroupAiCommunicateType.AddTag)
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060440DB RID: 278747 RVA: 0x010BB660 File Offset: 0x010B9860
+		// Token: 0x0603A22D RID: 238125 RVA: 0x01064EEC File Offset: 0x010630EC
 		public static void HandleSendTagEvent([Nullable(1)] IClientSendTagEventToControlCharacter param, Action onSuccess = null, Action onFailure = null)
 		{
 			List<string> eventTags = param.EventTags;
@@ -439,7 +439,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060440DC RID: 278748 RVA: 0x010BB788 File Offset: 0x010B9988
+		// Token: 0x0603A22E RID: 238126 RVA: 0x01065014 File Offset: 0x01063214
 		public static void HandleHookPointSkill([Nullable(1)] ITriggerHookPointSkill param, Action onSuccess = null, Action onFailure = null)
 		{
 			int hookEntityId = param.HookEntityId;
@@ -528,7 +528,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060440DD RID: 278749 RVA: 0x010BB930 File Offset: 0x010B9B30
+		// Token: 0x0603A22F RID: 238127 RVA: 0x010651BC File Offset: 0x010633BC
 		public static void HandleRobotSpecialHookSkill([Nullable(1)] IRoboSoldierSpecialTriggerHookSkill param, Action onSuccess = null, Action onFailure = null)
 		{
 			int hookEntityId = param.HookEntityId;
@@ -605,7 +605,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060440DE RID: 278750 RVA: 0x010BBA58 File Offset: 0x010B9C58
+		// Token: 0x0603A230 RID: 238128 RVA: 0x010652E4 File Offset: 0x010634E4
 		public static void HandleMotorSkill([Nullable(1)] ITriggerMotorSkill param, Action onSuccess = null, Action onFailure = null, GeneralContext context = null)
 		{
 			if (LevelEventExecClientBattleAction.DoUseMotorSkill(param.MotorSkillId))
@@ -630,7 +630,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060440DF RID: 278751 RVA: 0x010BBABC File Offset: 0x010B9CBC
+		// Token: 0x0603A231 RID: 238129 RVA: 0x01065348 File Offset: 0x01063548
 		private static void UseHookSkill(Action onSuccess = null, Action onFailure = null)
 		{
 			if (LevelEventExecClientBattleAction.OnChangeSelectedExploreId != null && EventSystem.Instance.Has(EEventName.OnChangeSelectedExploreId, LevelEventExecClientBattleAction.OnChangeSelectedExploreId))
@@ -720,7 +720,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			characterExploreComponent.CancelLockTarget("LevelEventExecClientBattleAction.UseHookSkill", false);
 		}
 
-		// Token: 0x060440E0 RID: 278752 RVA: 0x010BBB94 File Offset: 0x010B9D94
+		// Token: 0x0603A232 RID: 238130 RVA: 0x01065420 File Offset: 0x01063620
 		private static void UseMotorHookSkill(Action onSuccess = null, Action onFailure = null)
 		{
 			if (LevelEventExecClientBattleAction.OnChangeSelectedExploreId != null && EventSystem.Instance.Has(EEventName.OnChangeSelectedExploreId, LevelEventExecClientBattleAction.OnChangeSelectedExploreId))
@@ -757,7 +757,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060440E1 RID: 278753 RVA: 0x010BBC20 File Offset: 0x010B9E20
+		// Token: 0x0603A233 RID: 238131 RVA: 0x010654AC File Offset: 0x010636AC
 		private static bool DoUseMotorSkill(int skillId)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -824,7 +824,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return false;
 		}
 
-		// Token: 0x060440E2 RID: 278754 RVA: 0x010BBDBC File Offset: 0x010B9FBC
+		// Token: 0x0603A234 RID: 238132 RVA: 0x01065648 File Offset: 0x01063848
 		public static void HandleFollowShooterSkill([Nullable(1)] IFollowShooterSkillSkill param, Action onSuccess = null, Action onFailure = null)
 		{
 			int skillId = param.SkillId;
@@ -874,24 +874,24 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060440E3 RID: 278755 RVA: 0x010BBE75 File Offset: 0x010BA075
+		// Token: 0x0603A235 RID: 238133 RVA: 0x01065701 File Offset: 0x01063901
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060440E4 RID: 278756 RVA: 0x010BBE77 File Offset: 0x010BA077
+		// Token: 0x0603A236 RID: 238134 RVA: 0x01065703 File Offset: 0x01063903
 		public static void ResetStaticDefaultValue()
 		{
 			LevelEventExecClientBattleAction.OnChangeSelectedExploreId = null;
 		}
 
-		// Token: 0x040238F7 RID: 145655
+		// Token: 0x0401EB99 RID: 125849
 		private const int HOOK_VISION_ID = 1001;
 
-		// Token: 0x040238F8 RID: 145656
+		// Token: 0x0401EB9A RID: 125850
 		private const int MOTORCYCLE_LOG_REPORT_SKILL_ID = 10001002;
 
-		// Token: 0x040238F9 RID: 145657
+		// Token: 0x0401EB9B RID: 125851
 		private static Action OnChangeSelectedExploreId;
 	}
 }

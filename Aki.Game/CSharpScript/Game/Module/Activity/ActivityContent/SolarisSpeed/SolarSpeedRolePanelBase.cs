@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060D3 RID: 24787
+	// Token: 0x02005051 RID: 20561
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 	})]
 	public abstract class SolarSpeedRolePanelBase : GridProxyAbstract<ISolarSpeedRolePanelData>
 	{
-		// Token: 0x0603EA95 RID: 256661 RVA: 0x00F223D2 File Offset: 0x00F205D2
+		// Token: 0x06033759 RID: 210777 RVA: 0x00E6919A File Offset: 0x00E6739A
 		protected void HandleOnClickFunction()
 		{
 			ISolarSpeedRolePanelData dataCache = this.DataCache;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x0603EA96 RID: 256662 RVA: 0x00F22400 File Offset: 0x00F20600
+		// Token: 0x0603375A RID: 210778 RVA: 0x00E691C8 File Offset: 0x00E673C8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			};
 		}
 
-		// Token: 0x0603EA97 RID: 256663 RVA: 0x00F225E8 File Offset: 0x00F207E8
+		// Token: 0x0603375B RID: 210779 RVA: 0x00E693B0 File Offset: 0x00E675B0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SolarSpeedRolePanelBase.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EA98 RID: 256664 RVA: 0x00F2262C File Offset: 0x00F2082C
+		// Token: 0x0603375C RID: 210780 RVA: 0x00E693F4 File Offset: 0x00E675F4
 		[NullableContext(2)]
 		private void SetMedalTexture(string path)
 		{
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			texture.SetUIActive(false);
 		}
 
-		// Token: 0x0603EA99 RID: 256665 RVA: 0x00F22670 File Offset: 0x00F20870
+		// Token: 0x0603375D RID: 210781 RVA: 0x00E69438 File Offset: 0x00E67638
 		public override void Refresh(ISolarSpeedRolePanelData data, bool isSelected, int gridIndex)
 		{
 			this.DataCache = data;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.OnRefresh(data);
 		}
 
-		// Token: 0x0603EA9A RID: 256666 RVA: 0x00F22774 File Offset: 0x00F20974
+		// Token: 0x0603375E RID: 210782 RVA: 0x00E6953C File Offset: 0x00E6773C
 		public void RefreshAddFriendByPlayerIdExternal(int playerId)
 		{
 			ISolarSpeedRolePanelData dataCache = this.DataCache;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x0603EA9B RID: 256667 RVA: 0x00F227D0 File Offset: 0x00F209D0
+		// Token: 0x0603375F RID: 210783 RVA: 0x00E69598 File Offset: 0x00E67798
 		protected void SetFriendItemState(bool isShow)
 		{
 			UUIItem item = base.GetItem(17);
@@ -166,18 +166,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			item.SetUIActive(isShow);
 		}
 
-		// Token: 0x0603EA9C RID: 256668 RVA: 0x00F227E5 File Offset: 0x00F209E5
+		// Token: 0x06033760 RID: 210784 RVA: 0x00E695AD File Offset: 0x00E677AD
 		protected virtual void OnRefresh(ISolarSpeedRolePanelData data)
 		{
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(5), data.DescTextId, Array.Empty<object>());
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(4), data.TitleTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x04020C2E RID: 134190
+		// Token: 0x0401B55B RID: 111963
 		[Nullable(2)]
 		protected ISolarSpeedRolePanelData DataCache;
 
-		// Token: 0x04020C2F RID: 134191
+		// Token: 0x0401B55C RID: 111964
 		protected SolarSpeedRoleIconPanel RoleItem;
 	}
 }

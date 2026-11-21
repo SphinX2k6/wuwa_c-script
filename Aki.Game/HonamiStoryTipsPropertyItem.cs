@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001EB4 RID: 7860
+// Token: 0x02001376 RID: 4982
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class HonamiStoryTipsPropertyItem : GridProxyAbstract<IHonamiStoryTipsPropertyData>
 {
-	// Token: 0x0600F1C1 RID: 61889 RVA: 0x003A3028 File Offset: 0x003A1228
+	// Token: 0x0600C5E0 RID: 50656 RVA: 0x003AEB28 File Offset: 0x003ACD28
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class HonamiStoryTipsPropertyItem : GridProxyAbstract<IHonamiStoryTipsPro
 		};
 	}
 
-	// Token: 0x0600F1C2 RID: 61890 RVA: 0x003A3098 File Offset: 0x003A1298
+	// Token: 0x0600C5E1 RID: 50657 RVA: 0x003AEB98 File Offset: 0x003ACD98
 	[NullableContext(1)]
 	public override void Refresh(IHonamiStoryTipsPropertyData data, bool isSelected, int gridIndex)
 	{
@@ -59,16 +59,16 @@ public class HonamiStoryTipsPropertyItem : GridProxyAbstract<IHonamiStoryTipsPro
 		text3.SetText(newText, true);
 	}
 
-	// Token: 0x02008490 RID: 33936
+	// Token: 0x02007615 RID: 30229
 	private enum EDefine
 	{
-		// Token: 0x0402B26C RID: 176748
+		// Token: 0x04026590 RID: 157072
 		SpriteBg,
-		// Token: 0x0402B26D RID: 176749
+		// Token: 0x04026591 RID: 157073
 		TexIcon,
-		// Token: 0x0402B26E RID: 176750
+		// Token: 0x04026592 RID: 157074
 		TxtName,
-		// Token: 0x0402B26F RID: 176751
+		// Token: 0x04026593 RID: 157075
 		TxtNum
 	}
 }

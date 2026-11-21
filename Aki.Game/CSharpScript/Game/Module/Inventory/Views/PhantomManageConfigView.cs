@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -14,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Inventory.Views
 {
-	// Token: 0x02005838 RID: 22584
+	// Token: 0x0200480F RID: 18447
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomManageConfigView : UiTabViewBase
 	{
-		// Token: 0x06039646 RID: 235078 RVA: 0x00D9E50C File Offset: 0x00D9C70C
+		// Token: 0x0602E559 RID: 189785 RVA: 0x00CED3A8 File Offset: 0x00CEB5A8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -49,7 +48,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			};
 		}
 
-		// Token: 0x06039647 RID: 235079 RVA: 0x00D9E6E4 File Offset: 0x00D9C8E4
+		// Token: 0x0602E55A RID: 189786 RVA: 0x00CED580 File Offset: 0x00CEB780
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomManageConfigView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -60,7 +59,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039648 RID: 235080 RVA: 0x00D9E728 File Offset: 0x00D9C928
+		// Token: 0x0602E55B RID: 189787 RVA: 0x00CED5C4 File Offset: 0x00CEB7C4
 		protected override void OnStart()
 		{
 			this.ViewModel = new PhantomManageConfigViewModel();
@@ -94,7 +93,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}, false);
 		}
 
-		// Token: 0x06039649 RID: 235081 RVA: 0x00D9E884 File Offset: 0x00D9CA84
+		// Token: 0x0602E55C RID: 189788 RVA: 0x00CED720 File Offset: 0x00CEB920
 		protected void OnPlayingStartSequenceAsync(string _)
 		{
 			UUIInturnAnimController inturnAniConfig = this.InturnAniConfig;
@@ -110,13 +109,13 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			inturnAniSetting.Play("", -1, false);
 		}
 
-		// Token: 0x0603964A RID: 235082 RVA: 0x00D9E8B5 File Offset: 0x00D9CAB5
+		// Token: 0x0602E55D RID: 189789 RVA: 0x00CED751 File Offset: 0x00CEB951
 		protected override void OnBeforeDestroy()
 		{
 			this.ViewModel.UnBind(new Action<EPhantomManageConfigViewData>(this.OnViewModelUpdate));
 		}
 
-		// Token: 0x0603964B RID: 235083 RVA: 0x00D9E8D0 File Offset: 0x00D9CAD0
+		// Token: 0x0602E55E RID: 189790 RVA: 0x00CED76C File Offset: 0x00CEB96C
 		private void OnViewModelUpdate(EPhantomManageConfigViewData data)
 		{
 			if (data == EPhantomManageConfigViewData.SelectType)
@@ -155,7 +154,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}
 		}
 
-		// Token: 0x0603964C RID: 235084 RVA: 0x00D9E974 File Offset: 0x00D9CB74
+		// Token: 0x0602E55F RID: 189791 RVA: 0x00CED810 File Offset: 0x00CEBA10
 		private void RefreshType()
 		{
 			List<InventoryDefine.IManageConfigTypeItemData> list = new List<InventoryDefine.IManageConfigTypeItemData>();
@@ -171,10 +170,10 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			};
 			list.Add(item);
 			list.Add(item2);
-			this.LayoutType.RefreshByData(list.ToList<InventoryDefine.IManageConfigTypeItemData>(), null, false);
+			this.LayoutType.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603964D RID: 235085 RVA: 0x00D9E9D8 File Offset: 0x00D9CBD8
+		// Token: 0x0602E560 RID: 189792 RVA: 0x00CED870 File Offset: 0x00CEBA70
 		private UniTask RefreshConfig()
 		{
 			PhantomManageConfigView.<RefreshConfig>d__19 <RefreshConfig>d__;
@@ -185,7 +184,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			return <RefreshConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603964E RID: 235086 RVA: 0x00D9EA1C File Offset: 0x00D9CC1C
+		// Token: 0x0602E561 RID: 189793 RVA: 0x00CED8B4 File Offset: 0x00CEBAB4
 		private void RefreshTitle()
 		{
 			PhantomSettingType selectType = this.ViewModel.GetSelectType();
@@ -201,21 +200,21 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			base.GetText(4).SetText(selectConfig.GetName(), true);
 		}
 
-		// Token: 0x0603964F RID: 235087 RVA: 0x00D9EAAC File Offset: 0x00D9CCAC
+		// Token: 0x0602E562 RID: 189794 RVA: 0x00CED944 File Offset: 0x00CEBB44
 		private void RefreshSetting()
 		{
 			List<InventoryDefine.IManageConfigTitleItemData> settingTitleItemDataList = InventoryModel.Instance.GetSettingTitleItemDataList();
-			this.ScrollSetting.RefreshByDataAsync(settingTitleItemDataList.ToList<InventoryDefine.IManageConfigTitleItemData>(), false);
+			this.ScrollSetting.RefreshByDataAsync(settingTitleItemDataList, false);
 		}
 
-		// Token: 0x06039650 RID: 235088 RVA: 0x00D9EAD8 File Offset: 0x00D9CCD8
+		// Token: 0x0602E563 RID: 189795 RVA: 0x00CED96C File Offset: 0x00CEBB6C
 		private void RefreshButtons()
 		{
 			string textId = this.ViewModel.GetEditState() ? "PhantomProject_SaveButton02" : "PhantomProject_EditButton";
 			this.BtnEdit.SetLocalTextNew(textId, Array.Empty<object>());
 		}
 
-		// Token: 0x06039651 RID: 235089 RVA: 0x00D9EB10 File Offset: 0x00D9CD10
+		// Token: 0x0602E564 RID: 189796 RVA: 0x00CED9A4 File Offset: 0x00CEBBA4
 		private void RefreshMask()
 		{
 			bool editState = this.ViewModel.GetEditState();
@@ -233,14 +232,14 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			uiViewSequence.PlaySequence(sequenceName, false, null);
 		}
 
-		// Token: 0x06039652 RID: 235090 RVA: 0x00D9EB70 File Offset: 0x00D9CD70
+		// Token: 0x0602E565 RID: 189797 RVA: 0x00CEDA04 File Offset: 0x00CEBC04
 		private void RefreshRecommendBtnState()
 		{
 			bool editState = this.ViewModel.GetEditState();
 			base.SetButtonUiActive(14, !editState);
 		}
 
-		// Token: 0x06039653 RID: 235091 RVA: 0x00D9EB98 File Offset: 0x00D9CD98
+		// Token: 0x0602E566 RID: 189798 RVA: 0x00CEDA2C File Offset: 0x00CEBC2C
 		private void RefreshEditData()
 		{
 			PhantomManageConfigData selectConfig = this.ViewModel.GetSelectConfig();
@@ -250,7 +249,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}
 		}
 
-		// Token: 0x06039654 RID: 235092 RVA: 0x00D9EBCC File Offset: 0x00D9CDCC
+		// Token: 0x0602E567 RID: 189799 RVA: 0x00CEDA60 File Offset: 0x00CEBC60
 		[NullableContext(2)]
 		private void SelectConfig(bool enableScroll, PhantomManageConfigData data = null)
 		{
@@ -269,7 +268,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.EnableConfigScroll = enableScroll;
 		}
 
-		// Token: 0x06039655 RID: 235093 RVA: 0x00D9EC40 File Offset: 0x00D9CE40
+		// Token: 0x0602E568 RID: 189800 RVA: 0x00CEDAD4 File Offset: 0x00CEBCD4
 		private void OnClickedBtnConfig(PhantomManageConfigData data)
 		{
 			PhantomManageConfigData selectConfig = this.ViewModel.GetSelectConfig();
@@ -281,14 +280,14 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.SelectConfig(false, data);
 		}
 
-		// Token: 0x06039656 RID: 235094 RVA: 0x00D9EC88 File Offset: 0x00D9CE88
+		// Token: 0x0602E569 RID: 189801 RVA: 0x00CEDB1C File Offset: 0x00CEBD1C
 		private void OnClickedBtnRename()
 		{
 			PhantomManageConfigData selectConfig = this.ViewModel.GetSelectConfig();
 			CommonInputViewController.Instance.OpenSetPhantomManageConfigName(selectConfig.GetName(), new Func<string, UniTask<Aki.Protocol.ErrorCode>>(this.OnConfirmRename), "");
 		}
 
-		// Token: 0x06039657 RID: 235095 RVA: 0x00D9ECC2 File Offset: 0x00D9CEC2
+		// Token: 0x0602E56A RID: 189802 RVA: 0x00CEDB56 File Offset: 0x00CEBD56
 		private void OnClickedBtnDelete()
 		{
 			if (this.ViewModel.GetEditState())
@@ -299,7 +298,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.OnDelete();
 		}
 
-		// Token: 0x06039658 RID: 235096 RVA: 0x00D9ECE0 File Offset: 0x00D9CEE0
+		// Token: 0x0602E56B RID: 189803 RVA: 0x00CEDB74 File Offset: 0x00CEBD74
 		private void OnEditDelete()
 		{
 			PhantomManageConfigData config = this.ViewModel.GetSelectConfig();
@@ -312,7 +311,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06039659 RID: 235097 RVA: 0x00D9ED3C File Offset: 0x00D9CF3C
+		// Token: 0x0602E56C RID: 189804 RVA: 0x00CEDBD0 File Offset: 0x00CEBDD0
 		private void OnDelete()
 		{
 			PhantomSettingType type = this.ViewModel.GetSelectType();
@@ -340,7 +339,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603965A RID: 235098 RVA: 0x00D9EDA8 File Offset: 0x00D9CFA8
+		// Token: 0x0602E56D RID: 189805 RVA: 0x00CEDC3C File Offset: 0x00CEBE3C
 		private bool OnCheckToggleCanChange(EToggleState state)
 		{
 			bool editState = this.ViewModel.GetEditState();
@@ -358,7 +357,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			return true;
 		}
 
-		// Token: 0x0603965B RID: 235099 RVA: 0x00D9EE08 File Offset: 0x00D9D008
+		// Token: 0x0602E56E RID: 189806 RVA: 0x00CEDC9C File Offset: 0x00CEBE9C
 		private void OnClickedToggleSwitch(EToggleState state)
 		{
 			if (this.ViewModel.GetEditState())
@@ -386,7 +385,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}
 		}
 
-		// Token: 0x0603965C RID: 235100 RVA: 0x00D9EE7C File Offset: 0x00D9D07C
+		// Token: 0x0602E56F RID: 189807 RVA: 0x00CEDD10 File Offset: 0x00CEBF10
 		private void SetToggleSwitchEmpty()
 		{
 			this.BtnSwitch.SetConfigState(false);
@@ -398,7 +397,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			ScrollingTipsController.Instance.ShowTipsByTextId("PhantomProject_Tips02", Array.Empty<object>());
 		}
 
-		// Token: 0x0603965D RID: 235101 RVA: 0x00D9EEC7 File Offset: 0x00D9D0C7
+		// Token: 0x0602E570 RID: 189808 RVA: 0x00CEDD5B File Offset: 0x00CEBF5B
 		private void OnClickedBtnEdit(int _)
 		{
 			if (this.ViewModel.GetEditState())
@@ -409,7 +408,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.ViewModel.SetEditState(true, false);
 		}
 
-		// Token: 0x0603965E RID: 235102 RVA: 0x00D9EEEC File Offset: 0x00D9D0EC
+		// Token: 0x0602E571 RID: 189809 RVA: 0x00CEDD80 File Offset: 0x00CEBF80
 		private void TrySaveEditData()
 		{
 			bool editIsOn = this.ViewModel.GetEditSwitch();
@@ -477,7 +476,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}
 		}
 
-		// Token: 0x0603965F RID: 235103 RVA: 0x00D9F030 File Offset: 0x00D9D230
+		// Token: 0x0602E572 RID: 189810 RVA: 0x00CEDEC4 File Offset: 0x00CEC0C4
 		private UniTask RequestSaveDataAsync(PhantomSettingType type, PhantomManageConfigData config, bool? forceOn = null, [Nullable(2)] Action<bool> callback = null)
 		{
 			PhantomManageConfigView.<RequestSaveDataAsync>d__37 <RequestSaveDataAsync>d__;
@@ -491,7 +490,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			return <RequestSaveDataAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039660 RID: 235104 RVA: 0x00D9F08C File Offset: 0x00D9D28C
+		// Token: 0x0602E573 RID: 189811 RVA: 0x00CEDF20 File Offset: 0x00CEC120
 		private void OnSaveSuccess(bool success, bool? goCheck = null)
 		{
 			if (success)
@@ -505,7 +504,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}
 		}
 
-		// Token: 0x06039661 RID: 235105 RVA: 0x00D9F0C4 File Offset: 0x00D9D2C4
+		// Token: 0x0602E574 RID: 189812 RVA: 0x00CEDF58 File Offset: 0x00CEC158
 		private bool CheckIsEmptyData(Dictionary<int, int[]> dataList)
 		{
 			using (Dictionary<int, int[]>.ValueCollection.Enumerator enumerator = dataList.Values.GetEnumerator())
@@ -521,7 +520,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			return true;
 		}
 
-		// Token: 0x06039662 RID: 235106 RVA: 0x00D9F11C File Offset: 0x00D9D31C
+		// Token: 0x0602E575 RID: 189813 RVA: 0x00CEDFB0 File Offset: 0x00CEC1B0
 		private Dictionary<FilterDefine.EFilterType, List<int>> ConvertFilterConfigForSave()
 		{
 			bool editState = this.ViewModel.GetEditState();
@@ -534,12 +533,12 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			foreach (KeyValuePair<int, int[]> keyValuePair in dictionary2)
 			{
 				int filterType = FilterConfig.Instance.GetFilterRuleConfig(keyValuePair.Key).Value.FilterType;
-				dictionary.Add((FilterDefine.EFilterType)filterType, keyValuePair.Value.ToList<int>());
+				dictionary.Add((FilterDefine.EFilterType)filterType, new List<int>(keyValuePair.Value));
 			}
 			return dictionary;
 		}
 
-		// Token: 0x06039663 RID: 235107 RVA: 0x00D9F1D0 File Offset: 0x00D9D3D0
+		// Token: 0x0602E576 RID: 189814 RVA: 0x00CEE064 File Offset: 0x00CEC264
 		private void OnClickedBtnPreview(int _)
 		{
 			if (this.ViewModel.GetEditState())
@@ -550,7 +549,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.OnPreview();
 		}
 
-		// Token: 0x06039664 RID: 235108 RVA: 0x00D9F1EC File Offset: 0x00D9D3EC
+		// Token: 0x0602E577 RID: 189815 RVA: 0x00CEE080 File Offset: 0x00CEC280
 		private void OnEditPreview()
 		{
 			Dictionary<int, int[]> editData = this.ViewModel.GetEditData();
@@ -563,7 +562,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.OpenManageView();
 		}
 
-		// Token: 0x06039665 RID: 235109 RVA: 0x00D9F230 File Offset: 0x00D9D430
+		// Token: 0x0602E578 RID: 189816 RVA: 0x00CEE0C4 File Offset: 0x00CEC2C4
 		private void OnPreview()
 		{
 			PhantomManageConfigData selectConfig = this.ViewModel.GetSelectConfig();
@@ -576,7 +575,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.OpenManageView();
 		}
 
-		// Token: 0x06039666 RID: 235110 RVA: 0x00D9F278 File Offset: 0x00D9D478
+		// Token: 0x0602E579 RID: 189817 RVA: 0x00CEE10C File Offset: 0x00CEC30C
 		private void SaveFilterConfigData()
 		{
 			int filterIdConst = InventoryModel.Instance.GetFilterIdConst();
@@ -588,7 +587,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			FilterModel.Instance.SetFilterConfigData(EFilterSortConfigId.PhantomManage, 43, data, "");
 		}
 
-		// Token: 0x06039667 RID: 235111 RVA: 0x00D9F2BC File Offset: 0x00D9D4BC
+		// Token: 0x0602E57A RID: 189818 RVA: 0x00CEE150 File Offset: 0x00CEC350
 		private void QuitEditState()
 		{
 			PhantomManageConfigData selectConfig = this.ViewModel.GetSelectConfig();
@@ -596,7 +595,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.ViewModel.SetEditState(false, false);
 		}
 
-		// Token: 0x06039668 RID: 235112 RVA: 0x00D9F2F0 File Offset: 0x00D9D4F0
+		// Token: 0x0602E57B RID: 189819 RVA: 0x00CEE184 File Offset: 0x00CEC384
 		private void OpenManageView()
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.PhantomManageView) || UiManager.Instance.IsViewHide(EUiViewName.PhantomManageView))
@@ -607,7 +606,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.OnCloseManageView(true);
 		}
 
-		// Token: 0x06039669 RID: 235113 RVA: 0x00D9F342 File Offset: 0x00D9D542
+		// Token: 0x0602E57C RID: 189820 RVA: 0x00CEE1D6 File Offset: 0x00CEC3D6
 		private void OnCloseManageView(bool success)
 		{
 			if (success)
@@ -616,7 +615,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}
 		}
 
-		// Token: 0x0603966A RID: 235114 RVA: 0x00D9F358 File Offset: 0x00D9D558
+		// Token: 0x0602E57D RID: 189821 RVA: 0x00CEE1EC File Offset: 0x00CEC3EC
 		private void OnClickedBtnQuitEdit()
 		{
 			PhantomManageConfigData selectConfig = this.ViewModel.GetSelectConfig();
@@ -633,7 +632,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603966B RID: 235115 RVA: 0x00D9F3D0 File Offset: 0x00D9D5D0
+		// Token: 0x0602E57E RID: 189822 RVA: 0x00CEE264 File Offset: 0x00CEC464
 		private void OnClickedBtnRecommend()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.UsePhantomManagePlanConfirm);
@@ -676,7 +675,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603966C RID: 235116 RVA: 0x00D9F40C File Offset: 0x00D9D60C
+		// Token: 0x0602E57F RID: 189823 RVA: 0x00CEE2A0 File Offset: 0x00CEC4A0
 		[NullableContext(0)]
 		private UniTask<Aki.Protocol.ErrorCode> OnConfirmRename([Nullable(1)] string input)
 		{
@@ -689,7 +688,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			return <OnConfirmRename>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603966D RID: 235117 RVA: 0x00D9F458 File Offset: 0x00D9D658
+		// Token: 0x0602E580 RID: 189824 RVA: 0x00CEE2EC File Offset: 0x00CEC4EC
 		private UniTask OnConfirmSwitch(EToggleState state)
 		{
 			PhantomManageConfigView.<OnConfirmSwitch>d__51 <OnConfirmSwitch>d__;
@@ -701,29 +700,29 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			return <OnConfirmSwitch>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603966E RID: 235118 RVA: 0x00D9F4A3 File Offset: 0x00D9D6A3
+		// Token: 0x0602E581 RID: 189825 RVA: 0x00CEE337 File Offset: 0x00CEC537
 		private PhantomManageConfigTypeItem CreateTypeItem()
 		{
 			return new PhantomManageConfigTypeItem();
 		}
 
-		// Token: 0x0603966F RID: 235119 RVA: 0x00D9F4AA File Offset: 0x00D9D6AA
+		// Token: 0x0602E582 RID: 189826 RVA: 0x00CEE33E File Offset: 0x00CEC53E
 		private PhantomManageConfigItem CreateConfigItem()
 		{
 			return new PhantomManageConfigItem();
 		}
 
-		// Token: 0x06039670 RID: 235120 RVA: 0x00D9F4B1 File Offset: 0x00D9D6B1
+		// Token: 0x0602E583 RID: 189827 RVA: 0x00CEE345 File Offset: 0x00CEC545
 		private PhantomManageSettingTitleItem CreateSettingTitleItem()
 		{
 			return new PhantomManageSettingTitleItem();
 		}
 
-		// Token: 0x0401E041 RID: 122945
+		// Token: 0x04018ADA RID: 101082
 		[Nullable(2)]
 		private PhantomManageConfigViewModel ViewModel;
 
-		// Token: 0x0401E042 RID: 122946
+		// Token: 0x04018ADB RID: 101083
 		[Nullable(new byte[]
 		{
 			2,
@@ -732,7 +731,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 		})]
 		private GenericLayout<PhantomManageConfigTypeItem, InventoryDefine.IManageConfigTypeItemData> LayoutType;
 
-		// Token: 0x0401E043 RID: 122947
+		// Token: 0x04018ADC RID: 101084
 		[Nullable(new byte[]
 		{
 			2,
@@ -741,7 +740,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 		})]
 		private LoopScrollView<PhantomManageConfigItem, PhantomManageConfigData> ScrollConfig;
 
-		// Token: 0x0401E044 RID: 122948
+		// Token: 0x04018ADD RID: 101085
 		[Nullable(new byte[]
 		{
 			2,
@@ -750,79 +749,79 @@ namespace CSharpScript.Game.Module.Inventory.Views
 		})]
 		private GenericScrollViewNew<PhantomManageSettingTitleItem, InventoryDefine.IManageConfigTitleItemData> ScrollSetting;
 
-		// Token: 0x0401E045 RID: 122949
+		// Token: 0x04018ADE RID: 101086
 		[Nullable(2)]
 		private UUIInturnAnimController InturnAniConfig;
 
-		// Token: 0x0401E046 RID: 122950
+		// Token: 0x04018ADF RID: 101087
 		[Nullable(2)]
 		private UUIInturnAnimController InturnAniSetting;
 
-		// Token: 0x0401E047 RID: 122951
+		// Token: 0x04018AE0 RID: 101088
 		[Nullable(2)]
 		private ButtonItem BtnEdit;
 
-		// Token: 0x0401E048 RID: 122952
+		// Token: 0x04018AE1 RID: 101089
 		[Nullable(2)]
 		private ButtonItem BtnPreview;
 
-		// Token: 0x0401E049 RID: 122953
+		// Token: 0x04018AE2 RID: 101090
 		[Nullable(2)]
 		private ToggleSwitch BtnSwitch;
 
-		// Token: 0x0401E04A RID: 122954
+		// Token: 0x04018AE3 RID: 101091
 		private bool IsChangeByClick;
 
-		// Token: 0x0401E04B RID: 122955
+		// Token: 0x04018AE4 RID: 101092
 		private bool EnableConfigScroll = true;
 
-		// Token: 0x0200BA4E RID: 47694
+		// Token: 0x0200A464 RID: 42084
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403853B RID: 230715
+			// Token: 0x04032F28 RID: 208680
 			public const int LayoutType = 0;
 
-			// Token: 0x0403853C RID: 230716
+			// Token: 0x04032F29 RID: 208681
 			public const int ScrollConfig = 1;
 
-			// Token: 0x0403853D RID: 230717
+			// Token: 0x04032F2A RID: 208682
 			public const int ItemConfig = 2;
 
-			// Token: 0x0403853E RID: 230718
+			// Token: 0x04032F2B RID: 208683
 			public const int PanelMask = 3;
 
-			// Token: 0x0403853F RID: 230719
+			// Token: 0x04032F2C RID: 208684
 			public const int TextName = 4;
 
-			// Token: 0x04038540 RID: 230720
+			// Token: 0x04032F2D RID: 208685
 			public const int BtnRename = 5;
 
-			// Token: 0x04038541 RID: 230721
+			// Token: 0x04032F2E RID: 208686
 			public const int ItemSwitch = 6;
 
-			// Token: 0x04038542 RID: 230722
+			// Token: 0x04032F2F RID: 208687
 			public const int ScrollSetting = 7;
 
-			// Token: 0x04038543 RID: 230723
+			// Token: 0x04032F30 RID: 208688
 			public const int ItemSetting = 8;
 
-			// Token: 0x04038544 RID: 230724
+			// Token: 0x04032F31 RID: 208689
 			public const int BtnDelete = 9;
 
-			// Token: 0x04038545 RID: 230725
+			// Token: 0x04032F32 RID: 208690
 			public const int BtnPreview = 10;
 
-			// Token: 0x04038546 RID: 230726
+			// Token: 0x04032F33 RID: 208691
 			public const int BtnEdit = 11;
 
-			// Token: 0x04038547 RID: 230727
+			// Token: 0x04032F34 RID: 208692
 			public const int TextureSwitch = 12;
 
-			// Token: 0x04038548 RID: 230728
+			// Token: 0x04032F35 RID: 208693
 			public const int BtnQuitEdit = 13;
 
-			// Token: 0x04038549 RID: 230729
+			// Token: 0x04032F36 RID: 208694
 			public const int BtnRecommend = 14;
 		}
 	}

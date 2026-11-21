@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 {
-	// Token: 0x02003BB1 RID: 15281
+	// Token: 0x02003FB9 RID: 16313
 	public class IShowTimelineCastSkillT
 	{
-		// Token: 0x170068BC RID: 26812
-		// (get) Token: 0x06014F3D RID: 85821 RVA: 0x00309C70 File Offset: 0x00307E70
-		// (set) Token: 0x06014F3E RID: 85822 RVA: 0x00309C78 File Offset: 0x00307E78
+		// Token: 0x17006E5F RID: 28255
+		// (get) Token: 0x06016415 RID: 91157 RVA: 0x003304CC File Offset: 0x0032E6CC
+		// (set) Token: 0x06016416 RID: 91158 RVA: 0x003304D4 File Offset: 0x0032E6D4
 		public EShowTimelineActionType Type { get; set; }
 
-		// Token: 0x170068BD RID: 26813
-		// (get) Token: 0x06014F3F RID: 85823 RVA: 0x00309C81 File Offset: 0x00307E81
-		// (set) Token: 0x06014F40 RID: 85824 RVA: 0x00309C89 File Offset: 0x00307E89
+		// Token: 0x17006E60 RID: 28256
+		// (get) Token: 0x06016417 RID: 91159 RVA: 0x003304DD File Offset: 0x0032E6DD
+		// (set) Token: 0x06016418 RID: 91160 RVA: 0x003304E5 File Offset: 0x0032E6E5
 		public int SkillId { get; set; }
 
-		// Token: 0x06014F41 RID: 85825 RVA: 0x00309C92 File Offset: 0x00307E92
+		// Token: 0x06016419 RID: 91161 RVA: 0x003304EE File Offset: 0x0032E6EE
 		public IShowTimelineCastSkillT()
 		{
 			this.Type = EShowTimelineActionType.Skill;

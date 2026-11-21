@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x0200468D RID: 18061
+	// Token: 0x02004AF5 RID: 19189
 	public struct ISetEquippedWeaponToGraduate : IFlatbufferObject
 	{
-		// Token: 0x17008036 RID: 32822
-		// (get) Token: 0x0601B6B5 RID: 112309 RVA: 0x003E5405 File Offset: 0x003E3605
+		// Token: 0x17008677 RID: 34423
+		// (get) Token: 0x0601CE8A RID: 118410 RVA: 0x004116A1 File Offset: 0x0040F8A1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B6B6 RID: 112310 RVA: 0x003E5412 File Offset: 0x003E3612
+		// Token: 0x0601CE8B RID: 118411 RVA: 0x004116AE File Offset: 0x0040F8AE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B6B7 RID: 112311 RVA: 0x003E541C File Offset: 0x003E361C
+		// Token: 0x0601CE8C RID: 118412 RVA: 0x004116B8 File Offset: 0x0040F8B8
 		public static ISetEquippedWeaponToGraduate GetRootAsISetEquippedWeaponToGraduate(ByteBuffer _bb)
 		{
 			return ISetEquippedWeaponToGraduate.GetRootAsISetEquippedWeaponToGraduate(_bb, default(ISetEquippedWeaponToGraduate));
 		}
 
-		// Token: 0x0601B6B8 RID: 112312 RVA: 0x003E5438 File Offset: 0x003E3638
+		// Token: 0x0601CE8D RID: 118413 RVA: 0x004116D4 File Offset: 0x0040F8D4
 		public static ISetEquippedWeaponToGraduate GetRootAsISetEquippedWeaponToGraduate(ByteBuffer _bb, ISetEquippedWeaponToGraduate obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B6B9 RID: 112313 RVA: 0x003E5455 File Offset: 0x003E3655
+		// Token: 0x0601CE8E RID: 118414 RVA: 0x004116F1 File Offset: 0x0040F8F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B6BA RID: 112314 RVA: 0x003E5464 File Offset: 0x003E3664
+		// Token: 0x0601CE8F RID: 118415 RVA: 0x00411700 File Offset: 0x0040F900
 		public ISetEquippedWeaponToGraduate __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008037 RID: 32823
-		// (get) Token: 0x0601B6BB RID: 112315 RVA: 0x003E5474 File Offset: 0x003E3674
+		// Token: 0x17008678 RID: 34424
+		// (get) Token: 0x0601CE90 RID: 118416 RVA: 0x00411710 File Offset: 0x0040F910
 		public EGmCommand Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B6BC RID: 112316 RVA: 0x003E54B0 File Offset: 0x003E36B0
+		// Token: 0x0601CE91 RID: 118417 RVA: 0x0041174C File Offset: 0x0040F94C
 		public static Offset<ISetEquippedWeaponToGraduate> CreateISetEquippedWeaponToGraduate(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return ISetEquippedWeaponToGraduate.EndISetEquippedWeaponToGraduate(builder);
 		}
 
-		// Token: 0x0601B6BD RID: 112317 RVA: 0x003E54C6 File Offset: 0x003E36C6
+		// Token: 0x0601CE92 RID: 118418 RVA: 0x00411762 File Offset: 0x0040F962
 		public static void StartISetEquippedWeaponToGraduate(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601B6BE RID: 112318 RVA: 0x003E54CF File Offset: 0x003E36CF
+		// Token: 0x0601CE93 RID: 118419 RVA: 0x0041176B File Offset: 0x0040F96B
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B6BF RID: 112319 RVA: 0x003E54DA File Offset: 0x003E36DA
+		// Token: 0x0601CE94 RID: 118420 RVA: 0x00411776 File Offset: 0x0040F976
 		public static Offset<ISetEquippedWeaponToGraduate> EndISetEquippedWeaponToGraduate(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetEquippedWeaponToGraduate>(builder.EndTable());
 		}
 
-		// Token: 0x0601B6C0 RID: 112320 RVA: 0x003E54E8 File Offset: 0x003E36E8
+		// Token: 0x0601CE95 RID: 118421 RVA: 0x00411784 File Offset: 0x0040F984
 		public ISetEquippedWeaponToGraduateT UnPack()
 		{
 			ISetEquippedWeaponToGraduateT setEquippedWeaponToGraduateT = new ISetEquippedWeaponToGraduateT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return setEquippedWeaponToGraduateT;
 		}
 
-		// Token: 0x0601B6C1 RID: 112321 RVA: 0x003E5503 File Offset: 0x003E3703
+		// Token: 0x0601CE96 RID: 118422 RVA: 0x0041179F File Offset: 0x0040F99F
 		public void UnPackTo(ISetEquippedWeaponToGraduateT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601B6C2 RID: 112322 RVA: 0x003E5514 File Offset: 0x003E3714
+		// Token: 0x0601CE97 RID: 118423 RVA: 0x004117B0 File Offset: 0x0040F9B0
 		public static Offset<ISetEquippedWeaponToGraduate> Pack(FlatBufferBuilder builder, ISetEquippedWeaponToGraduateT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return ISetEquippedWeaponToGraduate.CreateISetEquippedWeaponToGraduate(builder, _o.Type);
 		}
 
-		// Token: 0x0400C84C RID: 51276
+		// Token: 0x0400D27B RID: 53883
 		private Table __p;
 	}
 }

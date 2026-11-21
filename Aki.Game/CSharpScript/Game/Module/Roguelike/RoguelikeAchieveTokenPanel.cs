@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DB8 RID: 19896
+	// Token: 0x02003D81 RID: 15745
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeAchieveTokenPanel : UiPanelBase
 	{
-		// Token: 0x060335D5 RID: 210389 RVA: 0x00BFE170 File Offset: 0x00BFC370
+		// Token: 0x06028442 RID: 164930 RVA: 0x00B476B0 File Offset: 0x00B458B0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060335D6 RID: 210390 RVA: 0x00BFE29C File Offset: 0x00BFC49C
+		// Token: 0x06028443 RID: 164931 RVA: 0x00B477DC File Offset: 0x00B459DC
 		protected override void OnStart()
 		{
 			this.TokenDetailLayout = new GenericLayout<RoguelikeAchieveSmallTokenGrid, RogueGainEntry>(base.GetHorizontalLayout(3), new Func<RoguelikeAchieveSmallTokenGrid>(this.CreateTokenDetailGrid), base.GetItem(4).GetOwner() as AUIBaseActor, false, true);
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshTokenDetailLayout(new List<RogueGainEntry>());
 		}
 
-		// Token: 0x060335D7 RID: 210391 RVA: 0x00BFE2FF File Offset: 0x00BFC4FF
+		// Token: 0x06028444 RID: 164932 RVA: 0x00B4783F File Offset: 0x00B45A3F
 		protected override void OnBeforeDestroy()
 		{
 			this.TokenDetailLayout = null;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.Vm = null;
 		}
 
-		// Token: 0x060335D8 RID: 210392 RVA: 0x00BFE316 File Offset: 0x00BFC516
+		// Token: 0x06028445 RID: 164933 RVA: 0x00B47856 File Offset: 0x00B45A56
 		public void SetViewModel(RoguelikeAchieveViewModel vm)
 		{
 			this.Vm = vm;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			button.SetSelfInteractive(this.CurrentArchiveInfoData != null);
 		}
 
-		// Token: 0x060335D9 RID: 210393 RVA: 0x00BFE33C File Offset: 0x00BFC53C
+		// Token: 0x06028446 RID: 164934 RVA: 0x00B4787C File Offset: 0x00B45A7C
 		[NullableContext(2)]
 		public void Refresh(RogueArchiveInfoData archiveInfoData)
 		{
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.SetUiActive(true);
 		}
 
-		// Token: 0x060335DA RID: 210394 RVA: 0x00BFE3D6 File Offset: 0x00BFC5D6
+		// Token: 0x06028447 RID: 164935 RVA: 0x00B47916 File Offset: 0x00B45B16
 		private void OnBtnDetailClick()
 		{
 			RogueArchiveInfoData currentArchiveInfoData = this.CurrentArchiveInfoData;
@@ -110,13 +110,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			RoguelikeController.Instance.OpenRogueInfoView(this.CurrentArchiveInfoData.RoguelikeInfo, false, false, ERogueInfoViewPage.Token);
 		}
 
-		// Token: 0x060335DB RID: 210395 RVA: 0x00BFE405 File Offset: 0x00BFC605
+		// Token: 0x06028448 RID: 164936 RVA: 0x00B47945 File Offset: 0x00B45B45
 		private RoguelikeAchieveSmallTokenGrid CreateTokenDetailGrid()
 		{
 			return new RoguelikeAchieveSmallTokenGrid();
 		}
 
-		// Token: 0x060335DC RID: 210396 RVA: 0x00BFE40C File Offset: 0x00BFC60C
+		// Token: 0x06028449 RID: 164937 RVA: 0x00B4794C File Offset: 0x00B45B4C
 		private void RefreshTokenDetailLayout(List<RogueGainEntry> dataList)
 		{
 			GenericLayout<RoguelikeAchieveSmallTokenGrid, RogueGainEntry> tokenDetailLayout = this.TokenDetailLayout;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			tokenDetailLayout.RefreshByData(dataList, null, false);
 		}
 
-		// Token: 0x060335DD RID: 210397 RVA: 0x00BFE421 File Offset: 0x00BFC621
+		// Token: 0x0602844A RID: 164938 RVA: 0x00B47961 File Offset: 0x00B45B61
 		private List<RogueGainEntry> GetSortedBuffEntryList(List<RogueGainEntry> dataList)
 		{
 			List<RogueGainEntry> list = new List<RogueGainEntry>(dataList);
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x060335DE RID: 210398 RVA: 0x00BFE43C File Offset: 0x00BFC63C
+		// Token: 0x0602844B RID: 164939 RVA: 0x00B4797C File Offset: 0x00B45B7C
 		private int SortBuffEntry(RogueGainEntry a, RogueGainEntry b)
 		{
 			RoguelikeConfig instance = RoguelikeConfig.Instance;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return num4.Value - num2.Value;
 		}
 
-		// Token: 0x0401B475 RID: 111733
+		// Token: 0x04015E48 RID: 89672
 		[Nullable(new byte[]
 		{
 			2,
@@ -178,34 +178,34 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<RoguelikeAchieveSmallTokenGrid, RogueGainEntry> TokenDetailLayout;
 
-		// Token: 0x0401B476 RID: 111734
+		// Token: 0x04015E49 RID: 89673
 		[Nullable(2)]
 		private RogueArchiveInfoData CurrentArchiveInfoData;
 
-		// Token: 0x0401B477 RID: 111735
+		// Token: 0x04015E4A RID: 89674
 		[Nullable(2)]
 		private RoguelikeAchieveViewModel Vm;
 
-		// Token: 0x0200AF2E RID: 44846
+		// Token: 0x02009963 RID: 39267
 		[NullableContext(0)]
 		private class ERoguelikeAchieveTokenPanelComponents
 		{
-			// Token: 0x04035323 RID: 217891
+			// Token: 0x0402FD58 RID: 195928
 			public const int TokenPanel = 0;
 
-			// Token: 0x04035324 RID: 217892
+			// Token: 0x0402FD59 RID: 195929
 			public const int BtnDetail = 1;
 
-			// Token: 0x04035325 RID: 217893
+			// Token: 0x0402FD5A RID: 195930
 			public const int TxtValue = 2;
 
-			// Token: 0x04035326 RID: 217894
+			// Token: 0x0402FD5B RID: 195931
 			public const int BuffLayout = 3;
 
-			// Token: 0x04035327 RID: 217895
+			// Token: 0x0402FD5C RID: 195932
 			public const int TokenDetailGridItem = 4;
 
-			// Token: 0x04035328 RID: 217896
+			// Token: 0x0402FD5D RID: 195933
 			public const int PnlMore = 5;
 		}
 	}

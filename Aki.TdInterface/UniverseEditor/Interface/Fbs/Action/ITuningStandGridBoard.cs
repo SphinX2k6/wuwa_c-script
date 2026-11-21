@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007499 RID: 29849
+	// Token: 0x02007C8C RID: 31884
 	public struct ITuningStandGridBoard : IFlatbufferObject
 	{
-		// Token: 0x1700E2A6 RID: 58022
-		// (get) Token: 0x0603641C RID: 222236 RVA: 0x0076034C File Offset: 0x0075E54C
+		// Token: 0x1700EEC5 RID: 61125
+		// (get) Token: 0x06039809 RID: 235529 RVA: 0x007C3108 File Offset: 0x007C1308
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603641D RID: 222237 RVA: 0x00760359 File Offset: 0x0075E559
+		// Token: 0x0603980A RID: 235530 RVA: 0x007C3115 File Offset: 0x007C1315
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603641E RID: 222238 RVA: 0x00760360 File Offset: 0x0075E560
+		// Token: 0x0603980B RID: 235531 RVA: 0x007C311C File Offset: 0x007C131C
 		public static ITuningStandGridBoard GetRootAsITuningStandGridBoard(ByteBuffer _bb)
 		{
 			return ITuningStandGridBoard.GetRootAsITuningStandGridBoard(_bb, default(ITuningStandGridBoard));
 		}
 
-		// Token: 0x0603641F RID: 222239 RVA: 0x0076037C File Offset: 0x0075E57C
+		// Token: 0x0603980C RID: 235532 RVA: 0x007C3138 File Offset: 0x007C1338
 		public static ITuningStandGridBoard GetRootAsITuningStandGridBoard(ByteBuffer _bb, ITuningStandGridBoard obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036420 RID: 222240 RVA: 0x00760399 File Offset: 0x0075E599
+		// Token: 0x0603980D RID: 235533 RVA: 0x007C3155 File Offset: 0x007C1355
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036421 RID: 222241 RVA: 0x007603A8 File Offset: 0x0075E5A8
+		// Token: 0x0603980E RID: 235534 RVA: 0x007C3164 File Offset: 0x007C1364
 		public ITuningStandGridBoard __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06036422 RID: 222242 RVA: 0x007603B8 File Offset: 0x0075E5B8
+		// Token: 0x0603980F RID: 235535 RVA: 0x007C3174 File Offset: 0x007C1374
 		public ETuningStandGridType Grids(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return (ETuningStandGridType)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700E2A7 RID: 58023
-		// (get) Token: 0x06036423 RID: 222243 RVA: 0x007603F8 File Offset: 0x0075E5F8
+		// Token: 0x1700EEC6 RID: 61126
+		// (get) Token: 0x06039810 RID: 235536 RVA: 0x007C31B4 File Offset: 0x007C13B4
 		public int GridsLength
 		{
 			get
@@ -74,13 +74,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036424 RID: 222244 RVA: 0x00760423 File Offset: 0x0075E623
+		// Token: 0x06039811 RID: 235537 RVA: 0x007C31DF File Offset: 0x007C13DF
 		public Span<ETuningStandGridType> GetGridsBytes()
 		{
 			return this.__p.__vector_as_span<ETuningStandGridType>(4, 1);
 		}
 
-		// Token: 0x06036425 RID: 222245 RVA: 0x00760434 File Offset: 0x0075E634
+		// Token: 0x06039812 RID: 235538 RVA: 0x007C31F0 File Offset: 0x007C13F0
 		public ETuningStandGridType[] GetGridsArray()
 		{
 			int num = this.__p.__offset(4);
@@ -98,7 +98,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return array;
 		}
 
-		// Token: 0x06036426 RID: 222246 RVA: 0x0076049D File Offset: 0x0075E69D
+		// Token: 0x06039813 RID: 235539 RVA: 0x007C3259 File Offset: 0x007C1459
 		public static Offset<ITuningStandGridBoard> CreateITuningStandGridBoard(FlatBufferBuilder builder, VectorOffset GridsOffset = default(VectorOffset))
 		{
 			builder.StartTable(1);
@@ -106,19 +106,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITuningStandGridBoard.EndITuningStandGridBoard(builder);
 		}
 
-		// Token: 0x06036427 RID: 222247 RVA: 0x007604B3 File Offset: 0x0075E6B3
+		// Token: 0x06039814 RID: 235540 RVA: 0x007C326F File Offset: 0x007C146F
 		public static void StartITuningStandGridBoard(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06036428 RID: 222248 RVA: 0x007604BC File Offset: 0x0075E6BC
+		// Token: 0x06039815 RID: 235541 RVA: 0x007C3278 File Offset: 0x007C1478
 		public static void AddGrids(FlatBufferBuilder builder, VectorOffset gridsOffset)
 		{
 			builder.AddOffset(0, gridsOffset.Value, 0);
 		}
 
-		// Token: 0x06036429 RID: 222249 RVA: 0x007604CC File Offset: 0x0075E6CC
+		// Token: 0x06039816 RID: 235542 RVA: 0x007C3288 File Offset: 0x007C1488
 		public static VectorOffset CreateGridsVector(FlatBufferBuilder builder, ETuningStandGridType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -129,7 +129,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603642A RID: 222250 RVA: 0x00760503 File Offset: 0x0075E703
+		// Token: 0x06039817 RID: 235543 RVA: 0x007C32BF File Offset: 0x007C14BF
 		public static VectorOffset CreateGridsVectorBlock(FlatBufferBuilder builder, ETuningStandGridType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603642B RID: 222251 RVA: 0x0076051D File Offset: 0x0075E71D
+		// Token: 0x06039818 RID: 235544 RVA: 0x007C32D9 File Offset: 0x007C14D9
 		public static VectorOffset CreateGridsVectorBlock(FlatBufferBuilder builder, ArraySegment<ETuningStandGridType> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -145,7 +145,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603642C RID: 222252 RVA: 0x0076053B File Offset: 0x0075E73B
+		// Token: 0x06039819 RID: 235545 RVA: 0x007C32F7 File Offset: 0x007C14F7
 		public static VectorOffset CreateGridsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -153,19 +153,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603642D RID: 222253 RVA: 0x00760554 File Offset: 0x0075E754
+		// Token: 0x0603981A RID: 235546 RVA: 0x007C3310 File Offset: 0x007C1510
 		public static void StartGridsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0603642E RID: 222254 RVA: 0x0076055F File Offset: 0x0075E75F
+		// Token: 0x0603981B RID: 235547 RVA: 0x007C331B File Offset: 0x007C151B
 		public static Offset<ITuningStandGridBoard> EndITuningStandGridBoard(FlatBufferBuilder builder)
 		{
 			return new Offset<ITuningStandGridBoard>(builder.EndTable());
 		}
 
-		// Token: 0x0603642F RID: 222255 RVA: 0x0076056C File Offset: 0x0075E76C
+		// Token: 0x0603981C RID: 235548 RVA: 0x007C3328 File Offset: 0x007C1528
 		public ITuningStandGridBoardT UnPack()
 		{
 			ITuningStandGridBoardT tuningStandGridBoardT = new ITuningStandGridBoardT();
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return tuningStandGridBoardT;
 		}
 
-		// Token: 0x06036430 RID: 222256 RVA: 0x00760588 File Offset: 0x0075E788
+		// Token: 0x0603981D RID: 235549 RVA: 0x007C3344 File Offset: 0x007C1544
 		public void UnPackTo(ITuningStandGridBoardT _o)
 		{
 			_o.Grids = new List<ETuningStandGridType>();
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036431 RID: 222257 RVA: 0x007605C4 File Offset: 0x0075E7C4
+		// Token: 0x0603981E RID: 235550 RVA: 0x007C3380 File Offset: 0x007C1580
 		public static Offset<ITuningStandGridBoard> Pack(FlatBufferBuilder builder, ITuningStandGridBoardT _o)
 		{
 			if (_o == null)
@@ -199,7 +199,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITuningStandGridBoard.CreateITuningStandGridBoard(builder, gridsOffset);
 		}
 
-		// Token: 0x04012338 RID: 74552
+		// Token: 0x04013360 RID: 78688
 		private Table __p;
 	}
 }

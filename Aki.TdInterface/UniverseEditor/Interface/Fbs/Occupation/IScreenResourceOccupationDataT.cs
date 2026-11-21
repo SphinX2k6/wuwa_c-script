@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043C6 RID: 17350
+	// Token: 0x02004828 RID: 18472
 	public class IScreenResourceOccupationDataT
 	{
-		// Token: 0x17007AAF RID: 31407
-		// (get) Token: 0x06019DEE RID: 105966 RVA: 0x003B3E8A File Offset: 0x003B208A
-		// (set) Token: 0x06019DEF RID: 105967 RVA: 0x003B3E92 File Offset: 0x003B2092
+		// Token: 0x170080E6 RID: 32998
+		// (get) Token: 0x0601B589 RID: 112009 RVA: 0x003DFB22 File Offset: 0x003DDD22
+		// (set) Token: 0x0601B58A RID: 112010 RVA: 0x003DFB2A File Offset: 0x003DDD2A
 		public EOccupationType Type { get; set; }
 
-		// Token: 0x06019DF0 RID: 105968 RVA: 0x003B3E9B File Offset: 0x003B209B
+		// Token: 0x0601B58B RID: 112011 RVA: 0x003DFB33 File Offset: 0x003DDD33
 		public IScreenResourceOccupationDataT()
 		{
 			this.Type = EOccupationType.Npc;

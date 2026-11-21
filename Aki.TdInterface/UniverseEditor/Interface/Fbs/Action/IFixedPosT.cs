@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067CF RID: 26575
+	// Token: 0x02006E4F RID: 28239
 	public class IFixedPosT
 	{
-		// Token: 0x1700C54C RID: 50508
-		// (get) Token: 0x0602E441 RID: 189505 RVA: 0x006516EF File Offset: 0x0064F8EF
-		// (set) Token: 0x0602E442 RID: 189506 RVA: 0x006516F7 File Offset: 0x0064F8F7
+		// Token: 0x1700CF02 RID: 52994
+		// (get) Token: 0x06030C87 RID: 199815 RVA: 0x0069EE33 File Offset: 0x0069D033
+		// (set) Token: 0x06030C88 RID: 199816 RVA: 0x0069EE3B File Offset: 0x0069D03B
 		public ETeleportType Type { get; set; }
 
-		// Token: 0x1700C54D RID: 50509
-		// (get) Token: 0x0602E443 RID: 189507 RVA: 0x00651700 File Offset: 0x0064F900
-		// (set) Token: 0x0602E444 RID: 189508 RVA: 0x00651708 File Offset: 0x0064F908
+		// Token: 0x1700CF03 RID: 52995
+		// (get) Token: 0x06030C89 RID: 199817 RVA: 0x0069EE44 File Offset: 0x0069D044
+		// (set) Token: 0x06030C8A RID: 199818 RVA: 0x0069EE4C File Offset: 0x0069D04C
 		public IPosAT TargetPos { get; set; }
 
-		// Token: 0x0602E445 RID: 189509 RVA: 0x00651711 File Offset: 0x0064F911
+		// Token: 0x06030C8B RID: 199819 RVA: 0x0069EE55 File Offset: 0x0069D055
 		public IFixedPosT()
 		{
 			this.Type = ETeleportType.FixedPos;

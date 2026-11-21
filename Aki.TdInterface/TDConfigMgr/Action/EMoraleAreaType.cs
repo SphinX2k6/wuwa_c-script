@@ -3,19 +3,19 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001619 RID: 5657
+	// Token: 0x02001785 RID: 6021
 	[EnumExtensions]
 	public enum EMoraleAreaType
 	{
-		// Token: 0x04004BEB RID: 19435
+		// Token: 0x04004FD9 RID: 20441
 		MoraleArea1,
-		// Token: 0x04004BEC RID: 19436
+		// Token: 0x04004FDA RID: 20442
 		MoraleArea2,
-		// Token: 0x04004BED RID: 19437
+		// Token: 0x04004FDB RID: 20443
 		MoraleArea3,
-		// Token: 0x04004BEE RID: 19438
+		// Token: 0x04004FDC RID: 20444
 		MoraleArea4,
-		// Token: 0x04004BEF RID: 19439
+		// Token: 0x04004FDD RID: 20445
 		MoraleArea5
 	}
 }

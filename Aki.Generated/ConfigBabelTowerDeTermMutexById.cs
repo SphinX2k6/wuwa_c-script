@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000D2 RID: 210
+	// Token: 0x020000E1 RID: 225
 	public class ConfigBabelTowerDeTermMutexById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060004ED RID: 1261 RVA: 0x0007580C File Offset: 0x00073A0C
+		// Token: 0x06000547 RID: 1351 RVA: 0x0007B170 File Offset: 0x00079370
 		static ConfigBabelTowerDeTermMutexById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBabelTowerDeTermMutexById.CreateStaticDefaultValue), new Action(ConfigBabelTowerDeTermMutexById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060004EE RID: 1262 RVA: 0x0007582C File Offset: 0x00073A2C
+		// Token: 0x06000548 RID: 1352 RVA: 0x0007B190 File Offset: 0x00079390
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBabelTowerDeTermMutexById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060004EF RID: 1263 RVA: 0x000758AB File Offset: 0x00073AAB
+		// Token: 0x06000549 RID: 1353 RVA: 0x0007B20F File Offset: 0x0007940F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBabelTowerDeTermMutexById.LogPair = null;
 			ConfigBabelTowerDeTermMutexById.HandleId = 0;
 		}
 
-		// Token: 0x060004F0 RID: 1264 RVA: 0x000758B9 File Offset: 0x00073AB9
+		// Token: 0x0600054A RID: 1354 RVA: 0x0007B21D File Offset: 0x0007941D
 		public static void Init()
 		{
 			ConfigBabelTowerDeTermMutexById.HandleId = ConfigCommon.InitDataStatement(ConfigBabelTowerDeTermMutexById.HandleId, "db_babeltower.db", "select BinData from `BabelTowerDeTermMutex` where Id=?");
 		}
 
-		// Token: 0x060004F1 RID: 1265 RVA: 0x000758D4 File Offset: 0x00073AD4
+		// Token: 0x0600054B RID: 1355 RVA: 0x0007B238 File Offset: 0x00079438
 		public static BabelTowerDeTermMutex? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBabelTowerDeTermMutexById.HandleId, ConfigBabelTowerDeTermMutexById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BabelTowerDeTermMutex?(rootAsBabelTowerDeTermMutex);
 		}
 
-		// Token: 0x040005A2 RID: 1442
+		// Token: 0x0400060B RID: 1547
 		private const string DB = "db_babeltower.db";
 
-		// Token: 0x040005A3 RID: 1443
+		// Token: 0x0400060C RID: 1548
 		private const string FILE = "b.巴别塔活动.xlsx";
 
-		// Token: 0x040005A4 RID: 1444
+		// Token: 0x0400060D RID: 1549
 		private const string TABLE = "BabelTowerDeTermMutex";
 
-		// Token: 0x040005A5 RID: 1445
+		// Token: 0x0400060E RID: 1550
 		private const string COMMAND = "select BinData from `BabelTowerDeTermMutex` where Id=?";
 
-		// Token: 0x040005A6 RID: 1446
+		// Token: 0x0400060F RID: 1551
 		private const string KEY_PREFIX = "BabelTowerDeTermMutexById";
 
-		// Token: 0x040005A7 RID: 1447
+		// Token: 0x04000610 RID: 1552
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040005A8 RID: 1448
+		// Token: 0x04000611 RID: 1553
 		private static int HandleId;
 	}
 }

@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006985 RID: 27013
+	// Token: 0x02005AE1 RID: 23265
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelGamePlayModel : ModelBase
 	{
-		// Token: 0x060433AD RID: 275373 RVA: 0x01063432 File Offset: 0x01061632
+		// Token: 0x060393E5 RID: 234469 RVA: 0x0100769A File Offset: 0x0100589A
 		private void HandleWorldDone()
 		{
 			this.SetWorldLoad(true);
 		}
 
-		// Token: 0x060433AE RID: 275374 RVA: 0x0106343B File Offset: 0x0106163B
+		// Token: 0x060393E6 RID: 234470 RVA: 0x010076A3 File Offset: 0x010058A3
 		private void OnDisActiveBattleView()
 		{
 			if (this.LevelRestrictOperationBlockAll)
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060433AF RID: 275375 RVA: 0x01063450 File Offset: 0x01061650
+		// Token: 0x060393E7 RID: 234471 RVA: 0x010076B8 File Offset: 0x010058B8
 		private void OnActiveBattleView()
 		{
 			if (this.LevelRestrictOperationBlockAll)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060433B0 RID: 275376 RVA: 0x01063468 File Offset: 0x01061668
+		// Token: 0x060393E8 RID: 234472 RVA: 0x010076D0 File Offset: 0x010058D0
 		protected override bool OnInit()
 		{
 			this.WorldLoad = false;
@@ -55,28 +55,28 @@ namespace CSharpScript.Game.LevelGamePlay
 			return true;
 		}
 
-		// Token: 0x060433B1 RID: 275377 RVA: 0x01063510 File Offset: 0x01061710
+		// Token: 0x060393E9 RID: 234473 RVA: 0x01007778 File Offset: 0x01005978
 		public void AddLoadNotify(Action handle)
 		{
 			this.LoadHandle.Push(handle);
 			this.UpdateLoadNotify();
 		}
 
-		// Token: 0x060433B2 RID: 275378 RVA: 0x01063524 File Offset: 0x01061724
+		// Token: 0x060393EA RID: 234474 RVA: 0x0100778C File Offset: 0x0100598C
 		public void SetWorldLoad(bool value)
 		{
 			this.WorldLoad = value;
 			this.UpdateLoadNotify();
 		}
 
-		// Token: 0x060433B3 RID: 275379 RVA: 0x01063533 File Offset: 0x01061733
+		// Token: 0x060393EB RID: 234475 RVA: 0x0100779B File Offset: 0x0100599B
 		public void SetWorldTeleport(bool worldTeleport)
 		{
 			this.WorldTeleport = worldTeleport;
 			this.UpdateLoadNotify();
 		}
 
-		// Token: 0x060433B4 RID: 275380 RVA: 0x01063544 File Offset: 0x01061744
+		// Token: 0x060393EC RID: 234476 RVA: 0x010077AC File Offset: 0x010059AC
 		public void UpdateLoadNotify()
 		{
 			if (!this.WorldTeleport || !this.WorldLoad)
@@ -93,13 +93,13 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060433B5 RID: 275381 RVA: 0x01063585 File Offset: 0x01061785
+		// Token: 0x060393ED RID: 234477 RVA: 0x010077ED File Offset: 0x010059ED
 		public void ExecuteActionsNew(List<ActionInfo> actions, GeneralContext context, [Nullable(2)] Action<ELevelEventState> finishCallback = null)
 		{
 			LevelGeneralController.Instance.ExecuteActionsNew(actions, context, finishCallback);
 		}
 
-		// Token: 0x060433B6 RID: 275382 RVA: 0x01063594 File Offset: 0x01061794
+		// Token: 0x060393EE RID: 234478 RVA: 0x010077FC File Offset: 0x010059FC
 		public void RegisterGuidePathHost(int pbDataId, int entityId)
 		{
 			if (pbDataId <= 0 || entityId <= 0)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060433B7 RID: 275383 RVA: 0x01063640 File Offset: 0x01061840
+		// Token: 0x060393EF RID: 234479 RVA: 0x010078A8 File Offset: 0x01005AA8
 		public void UnregisterGuidePathHost(int pbDataId, int entityId)
 		{
 			if (pbDataId <= 0 || entityId <= 0)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060433B8 RID: 275384 RVA: 0x01063680 File Offset: 0x01061880
+		// Token: 0x060393F0 RID: 234480 RVA: 0x010078E8 File Offset: 0x01005AE8
 		[NullableContext(2)]
 		public IGuidePathVisibilityHost GetGuidePathHost(int pbDataId)
 		{
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return EntitySystem.Instance.GetComponent<SceneItemGuidePathComponent>(num);
 		}
 
-		// Token: 0x060433B9 RID: 275385 RVA: 0x010636BC File Offset: 0x010618BC
+		// Token: 0x060393F1 RID: 234481 RVA: 0x01007924 File Offset: 0x01005B24
 		[return: Nullable(2)]
 		public Action RegisterPendingGuidePathHandler(int pbDataId, Action<IGuidePathVisibilityHost> handler)
 		{
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			};
 		}
 
-		// Token: 0x060433BA RID: 275386 RVA: 0x01063764 File Offset: 0x01061964
+		// Token: 0x060393F2 RID: 234482 RVA: 0x010079CC File Offset: 0x01005BCC
 		protected override bool OnClear()
 		{
 			this.WorldLoad = false;
@@ -238,8 +238,8 @@ namespace CSharpScript.Game.LevelGamePlay
 			return true;
 		}
 
-		// Token: 0x1700983A RID: 38970
-		// (get) Token: 0x060433BB RID: 275387 RVA: 0x0106381E File Offset: 0x01061A1E
+		// Token: 0x17006D1A RID: 27930
+		// (get) Token: 0x060393F3 RID: 234483 RVA: 0x01007A86 File Offset: 0x01005C86
 		public static LevelGamePlayModel Instance
 		{
 			get
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060433BC RID: 275388 RVA: 0x01063825 File Offset: 0x01061A25
+		// Token: 0x060393F4 RID: 234484 RVA: 0x01007A8D File Offset: 0x01005C8D
 		public static LevelGamePlayModel GetOrCreateInstance()
 		{
 			if (LevelGamePlayModel._Instance == null)
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return LevelGamePlayModel._Instance;
 		}
 
-		// Token: 0x060433BD RID: 275389 RVA: 0x01063839 File Offset: 0x01061A39
+		// Token: 0x060393F5 RID: 234485 RVA: 0x01007AA1 File Offset: 0x01005CA1
 		public static bool CreateInstance()
 		{
 			if (LevelGamePlayModel._Instance != null)
@@ -269,30 +269,30 @@ namespace CSharpScript.Game.LevelGamePlay
 			return true;
 		}
 
-		// Token: 0x060433BE RID: 275390 RVA: 0x0106384F File Offset: 0x01061A4F
+		// Token: 0x060393F6 RID: 234486 RVA: 0x01007AB7 File Offset: 0x01005CB7
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060433BF RID: 275391 RVA: 0x01063851 File Offset: 0x01061A51
+		// Token: 0x060393F7 RID: 234487 RVA: 0x01007AB9 File Offset: 0x01005CB9
 		public static void ResetStaticDefaultValue()
 		{
 			LevelGamePlayModel._Instance = null;
 		}
 
-		// Token: 0x060433C0 RID: 275392 RVA: 0x01063859 File Offset: 0x01061A59
+		// Token: 0x060393F8 RID: 234488 RVA: 0x01007AC1 File Offset: 0x01005CC1
 		static LevelGamePlayModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelGamePlayModel.CreateStaticDefaultValue), new Action(LevelGamePlayModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023052 RID: 143442
+		// Token: 0x0401E23C RID: 123452
 		private bool WorldLoad;
 
-		// Token: 0x04023053 RID: 143443
+		// Token: 0x0401E23D RID: 123453
 		private bool WorldTeleport;
 
-		// Token: 0x04023054 RID: 143444
+		// Token: 0x0401E23E RID: 123454
 		[Nullable(new byte[]
 		{
 			2,
@@ -300,14 +300,14 @@ namespace CSharpScript.Game.LevelGamePlay
 		})]
 		private Queue<Action> LoadHandle;
 
-		// Token: 0x04023055 RID: 143445
+		// Token: 0x0401E23F RID: 123455
 		public bool LevelRestrictOperationBlockAll;
 
-		// Token: 0x04023056 RID: 143446
+		// Token: 0x0401E240 RID: 123456
 		[Nullable(2)]
 		public IFlowerPollutionManager FlowerPollutionManager;
 
-		// Token: 0x04023057 RID: 143447
+		// Token: 0x0401E241 RID: 123457
 		[Nullable(new byte[]
 		{
 			2,
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.LevelGamePlay
 		})]
 		public WeakMap<UPrimitiveComponent, string> PreservedCollisionProfileMap;
 
-		// Token: 0x04023058 RID: 143448
+		// Token: 0x0401E242 RID: 123458
 		[Nullable(new byte[]
 		{
 			2,
@@ -324,11 +324,11 @@ namespace CSharpScript.Game.LevelGamePlay
 		})]
 		public WeakSet<AActor> EndPlayHookedActors;
 
-		// Token: 0x04023059 RID: 143449
+		// Token: 0x0401E243 RID: 123459
 		[Nullable(2)]
 		private Dictionary<int, int> GuidePathRegistered;
 
-		// Token: 0x0402305A RID: 143450
+		// Token: 0x0401E244 RID: 123460
 		[Nullable(new byte[]
 		{
 			2,
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.LevelGamePlay
 		})]
 		private Dictionary<int, List<Action<IGuidePathVisibilityHost>>> GuidePathPending;
 
-		// Token: 0x0402305B RID: 143451
+		// Token: 0x0401E245 RID: 123461
 		[Nullable(2)]
 		private static LevelGamePlayModel _Instance;
 	}

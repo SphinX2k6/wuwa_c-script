@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200191C RID: 6428
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AA5 RID: 6821
 	public class ICommonTipId : ICommonTipType
 	{
-		// Token: 0x060089CB RID: 35275 RVA: 0x00145074 File Offset: 0x00143274
+		// Token: 0x060090F7 RID: 37111 RVA: 0x001549B4 File Offset: 0x00152BB4
 		private ICommonTipId_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060089CC RID: 35276 RVA: 0x001450AC File Offset: 0x001432AC
+		// Token: 0x060090F8 RID: 37112 RVA: 0x001549EC File Offset: 0x00152BEC
 		public static ICommonTipId Create([Nullable(2)] ICommonTipId instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060089CD RID: 35277 RVA: 0x001450BF File Offset: 0x001432BF
+		// Token: 0x060090F9 RID: 37113 RVA: 0x001549FF File Offset: 0x00152BFF
 		public static ICommonTipId CreateFromSetValue([Nullable(2)] ICommonTipId_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060089CE RID: 35278 RVA: 0x001450D2 File Offset: 0x001432D2
+		// Token: 0x060090FA RID: 37114 RVA: 0x00154A12 File Offset: 0x00152C12
 		public new ICommonTipId_SetValue ToSetValue()
 		{
 			return new ICommonTipId_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C90 RID: 11408
-		// (get) Token: 0x060089CF RID: 35279 RVA: 0x001450F1 File Offset: 0x001432F1
-		// (set) Token: 0x060089D0 RID: 35280 RVA: 0x0014511C File Offset: 0x0014331C
+		// Token: 0x17002E90 RID: 11920
+		// (get) Token: 0x060090FB RID: 37115 RVA: 0x00154A31 File Offset: 0x00152C31
+		// (set) Token: 0x060090FC RID: 37116 RVA: 0x00154A5C File Offset: 0x00152C5C
 		public override ECommonTipType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C91 RID: 11409
-		// (get) Token: 0x060089D1 RID: 35281 RVA: 0x0014512A File Offset: 0x0014332A
-		// (set) Token: 0x060089D2 RID: 35282 RVA: 0x00145155 File Offset: 0x00143355
+		// Token: 0x17002E91 RID: 11921
+		// (get) Token: 0x060090FD RID: 37117 RVA: 0x00154A6A File Offset: 0x00152C6A
+		// (set) Token: 0x060090FE RID: 37118 RVA: 0x00154A95 File Offset: 0x00152C95
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005643 RID: 22083
+		// Token: 0x04005A93 RID: 23187
 		[Nullable(2)]
 		protected new ICommonTipId FbInstance;
 
-		// Token: 0x04005644 RID: 22084
+		// Token: 0x04005A94 RID: 23188
 		[Nullable(2)]
 		protected new ICommonTipId_SetValue PocoInterface;
 	}

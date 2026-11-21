@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E66 RID: 7782
+	// Token: 0x02000599 RID: 1433
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnKSCBuffChange : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601DA7C RID: 121468 RVA: 0x002BC987 File Offset: 0x002BAB87
+		// Token: 0x060081E6 RID: 33254 RVA: 0x000BFC63 File Offset: 0x000BDE63
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnKSCBuffChange.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601DA7D RID: 121469 RVA: 0x002BC993 File Offset: 0x002BAB93
+		// Token: 0x060081E7 RID: 33255 RVA: 0x000BFC6F File Offset: 0x000BDE6F
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnKSCBuffChange._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FOnKSCBuffChange._FunctionPtr;
 		}
 
-		// Token: 0x0601DA7E RID: 121470 RVA: 0x002BC9B6 File Offset: 0x002BABB6
+		// Token: 0x060081E8 RID: 33256 RVA: 0x000BFC92 File Offset: 0x000BDE92
 		public FOnKSCBuffChange()
 		{
 		}
 
-		// Token: 0x0601DA7F RID: 121471 RVA: 0x002BC9BE File Offset: 0x002BABBE
+		// Token: 0x060081E9 RID: 33257 RVA: 0x000BFC9A File Offset: 0x000BDE9A
 		[NullableContext(2)]
 		public FOnKSCBuffChange(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DA80 RID: 121472 RVA: 0x002BC9C8 File Offset: 0x002BABC8
+		// Token: 0x060081EA RID: 33258 RVA: 0x000BFCA4 File Offset: 0x000BDEA4
 		public FOnKSCBuffChange(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DA81 RID: 121473 RVA: 0x002BC9D3 File Offset: 0x002BABD3
+		// Token: 0x060081EB RID: 33259 RVA: 0x000BFCAF File Offset: 0x000BDEAF
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<UKSC_DA_Buff, int>) ?? ((Action<UKSC_DA_Buff, int>)Delegate.CreateDelegate(typeof(Action<UKSC_DA_Buff, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601DA82 RID: 121474 RVA: 0x002BCA05 File Offset: 0x002BAC05
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060081EC RID: 33260 RVA: 0x000BFCE1 File Offset: 0x000BDEE1
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -70,8 +69,7 @@ namespace UnrealEngine
 			base.Add(Callback, FOnKSCBuffChange.RegisterId);
 		}
 
-		// Token: 0x0601DA83 RID: 121475 RVA: 0x002BCA3F File Offset: 0x002BAC3F
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060081ED RID: 33261 RVA: 0x000BFD1B File Offset: 0x000BDF1B
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601DA84 RID: 121476 RVA: 0x002BCA48 File Offset: 0x002BAC48
+		// Token: 0x060081EE RID: 33262 RVA: 0x000BFD24 File Offset: 0x000BDF24
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(UKSC_DA_Buff BuffDa, int Count)
 		{
 			FOnKSCBuffChange.__FOnKSCBuffChange_DelegateParams* ptr = stackalloc FOnKSCBuffChange.__FOnKSCBuffChange_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FOnKSCBuffChange.__FOnKSCBuffChange_DelegateParams) & -16L;
@@ -94,10 +91,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601DA85 RID: 121477 RVA: 0x002BCA9C File Offset: 0x002BAC9C
+		// Token: 0x060081EF RID: 33263 RVA: 0x000BFD78 File Offset: 0x000BDF78
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UKSC_DA_Buff, int> action = target as Action<UKSC_DA_Buff, int>;
@@ -109,35 +105,35 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, ((FOnKSCBuffChange.__FOnKSCBuffChange_DelegateParams*)__Parameters)->Count);
 		}
 
-		// Token: 0x04010115 RID: 65813
+		// Token: 0x040038AA RID: 14506
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010116 RID: 65814
+		// Token: 0x040038AB RID: 14507
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSimpleCombat.OnKSCBuffChange__DelegateSignature";
 
-		// Token: 0x04010117 RID: 65815
+		// Token: 0x040038AC RID: 14508
 		private static int RegisterId;
 
-		// Token: 0x020032B3 RID: 12979
+		// Token: 0x02000D12 RID: 3346
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FOnKSCBuffChange_DelegateParams
+		private ref struct __FOnKSCBuffChange_DelegateParams
 		{
-			// Token: 0x04017156 RID: 94550
+			// Token: 0x04005FA2 RID: 24482
 			[FieldOffset(0)]
 			public IntPtr BuffDa;
 
-			// Token: 0x04017157 RID: 94551
+			// Token: 0x04005FA3 RID: 24483
 			[FieldOffset(8)]
 			public int Count;
 		}
 
-		// Token: 0x020032B4 RID: 12980
+		// Token: 0x02000D13 RID: 3347
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017158 RID: 94552
+			// Token: 0x04005FA4 RID: 24484
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020010EC RID: 4332
+// Token: 0x020005A0 RID: 1440
 [NullableContext(2)]
 [Nullable(0)]
 public class ArtemisChatLeftItem : UiPanelBase
 {
-	// Token: 0x060070EC RID: 28908 RVA: 0x00170B4C File Offset: 0x0016ED4C
+	// Token: 0x06004482 RID: 17538 RVA: 0x00179508 File Offset: 0x00177708
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class ArtemisChatLeftItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060070ED RID: 28909 RVA: 0x00170C7C File Offset: 0x0016EE7C
+	// Token: 0x06004483 RID: 17539 RVA: 0x00179638 File Offset: 0x00177838
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -67,7 +67,7 @@ public class ArtemisChatLeftItem : UiPanelBase
 		sprite2.SetUIActive(false);
 	}
 
-	// Token: 0x060070EE RID: 28910 RVA: 0x00170D07 File Offset: 0x0016EF07
+	// Token: 0x06004484 RID: 17540 RVA: 0x001796C3 File Offset: 0x001778C3
 	protected override void OnBeforeDestroy()
 	{
 		AUIBaseActor rootActor = this.RootActor;
@@ -83,7 +83,7 @@ public class ArtemisChatLeftItem : UiPanelBase
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x060070EF RID: 28911 RVA: 0x00170D37 File Offset: 0x0016EF37
+	// Token: 0x06004485 RID: 17541 RVA: 0x001796F3 File Offset: 0x001778F3
 	[NullableContext(1)]
 	private void OnPlaySequenceEvent(string sequenceName, string eventName)
 	{
@@ -94,7 +94,7 @@ public class ArtemisChatLeftItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060070F0 RID: 28912 RVA: 0x00170D60 File Offset: 0x0016EF60
+	// Token: 0x06004486 RID: 17542 RVA: 0x0017971C File Offset: 0x0017791C
 	[NullableContext(1)]
 	public void SetContent(IArtemisChatItemData data)
 	{
@@ -138,7 +138,7 @@ public class ArtemisChatLeftItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060070F1 RID: 28913 RVA: 0x00170E88 File Offset: 0x0016F088
+	// Token: 0x06004487 RID: 17543 RVA: 0x00179844 File Offset: 0x00177A44
 	[NullableContext(1)]
 	private void SetChatContent(string content)
 	{
@@ -158,14 +158,14 @@ public class ArtemisChatLeftItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060070F2 RID: 28914 RVA: 0x00170EC0 File Offset: 0x0016F0C0
+	// Token: 0x06004488 RID: 17544 RVA: 0x0017987C File Offset: 0x00177A7C
 	private void CheckPathSetTexture(string path, int componentIndex)
 	{
 		string path2 = (path != null && path.Length > 0) ? path : null;
 		base.TrySetTextureByPath(path2, base.GetTexture(componentIndex), null, null);
 	}
 
-	// Token: 0x060070F3 RID: 28915 RVA: 0x00170EF6 File Offset: 0x0016F0F6
+	// Token: 0x06004489 RID: 17545 RVA: 0x001798B2 File Offset: 0x00177AB2
 	private void OnClickPictureButton()
 	{
 		if (!string.IsNullOrEmpty(this.TexturePath))
@@ -175,7 +175,7 @@ public class ArtemisChatLeftItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060070F4 RID: 28916 RVA: 0x00170F20 File Offset: 0x0016F120
+	// Token: 0x0600448A RID: 17546 RVA: 0x001798DC File Offset: 0x00177ADC
 	private UniTask RefreshPlayerTextureCustomMaterial(string picturePath, bool isLock)
 	{
 		ArtemisChatLeftItem.<RefreshPlayerTextureCustomMaterial>d__11 <RefreshPlayerTextureCustomMaterial>d__;
@@ -188,7 +188,7 @@ public class ArtemisChatLeftItem : UiPanelBase
 		return <RefreshPlayerTextureCustomMaterial>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060070F5 RID: 28917 RVA: 0x00170F74 File Offset: 0x0016F174
+	// Token: 0x0600448B RID: 17547 RVA: 0x00179930 File Offset: 0x00177B30
 	private void LoadTextMaterial(bool loadMaterial)
 	{
 		if (loadMaterial)
@@ -222,7 +222,7 @@ public class ArtemisChatLeftItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060070F6 RID: 28918 RVA: 0x00170FD8 File Offset: 0x0016F1D8
+	// Token: 0x0600448C RID: 17548 RVA: 0x00179994 File Offset: 0x00177B94
 	public void PlayFixDoneLevelSequence()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -233,47 +233,47 @@ public class ArtemisChatLeftItem : UiPanelBase
 		levelSequencePlayer.PlayLevelSequenceByName("Fix_Done", false, null, false);
 	}
 
-	// Token: 0x04003452 RID: 13394
+	// Token: 0x040034EB RID: 13547
 	private string TexturePath;
 
-	// Token: 0x04003453 RID: 13395
+	// Token: 0x040034EC RID: 13548
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x020076AF RID: 30383
+	// Token: 0x02006843 RID: 26691
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040272B2 RID: 160434
+		// Token: 0x040225FB RID: 140795
 		public const int TxtTime = 0;
 
-		// Token: 0x040272B3 RID: 160435
+		// Token: 0x040225FC RID: 140796
 		public const int TextureHead = 1;
 
-		// Token: 0x040272B4 RID: 160436
+		// Token: 0x040225FD RID: 140797
 		public const int TxtPlayerName = 2;
 
-		// Token: 0x040272B5 RID: 160437
+		// Token: 0x040225FE RID: 140798
 		public const int PnlChatContent = 3;
 
-		// Token: 0x040272B6 RID: 160438
+		// Token: 0x040225FF RID: 140799
 		public const int TxtChat = 4;
 
-		// Token: 0x040272B7 RID: 160439
+		// Token: 0x04022600 RID: 140800
 		public const int SpriteIconState = 5;
 
-		// Token: 0x040272B8 RID: 160440
+		// Token: 0x04022601 RID: 140801
 		public const int TextureChatEmote = 6;
 
-		// Token: 0x040272B9 RID: 160441
+		// Token: 0x04022602 RID: 140802
 		public const int PnlInput = 7;
 
-		// Token: 0x040272BA RID: 160442
+		// Token: 0x04022603 RID: 140803
 		public const int BtnPic = 8;
 
-		// Token: 0x040272BB RID: 160443
+		// Token: 0x04022604 RID: 140804
 		public const int TextPic = 9;
 
-		// Token: 0x040272BC RID: 160444
+		// Token: 0x04022605 RID: 140805
 		public const int TextMosaicSprite = 10;
 	}
 }

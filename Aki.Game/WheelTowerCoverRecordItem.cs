@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200157B RID: 5499
+// Token: 0x02000A33 RID: 2611
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerCoverRecordItem : UiPanelBase
 {
-	// Token: 0x06009D36 RID: 40246 RVA: 0x00220DE4 File Offset: 0x0021EFE4
+	// Token: 0x06007114 RID: 28948 RVA: 0x0022AB94 File Offset: 0x00228D94
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -35,19 +35,19 @@ public class WheelTowerCoverRecordItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D37 RID: 40247 RVA: 0x00220ED1 File Offset: 0x0021F0D1
+	// Token: 0x06007115 RID: 28949 RVA: 0x0022AC81 File Offset: 0x00228E81
 	protected override void OnStart()
 	{
 		this.RoleLayout = new GenericLayout<WheelTowerCoverRecordRoleGridItem, int>(base.GetHorizontalLayout(0), new Func<WheelTowerCoverRecordRoleGridItem>(this.CreateRoleItem), base.GetItem(1).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x06009D38 RID: 40248 RVA: 0x00220F04 File Offset: 0x0021F104
+	// Token: 0x06007116 RID: 28950 RVA: 0x0022ACB4 File Offset: 0x00228EB4
 	private WheelTowerCoverRecordRoleGridItem CreateRoleItem()
 	{
 		return new WheelTowerCoverRecordRoleGridItem();
 	}
 
-	// Token: 0x06009D39 RID: 40249 RVA: 0x00220F0C File Offset: 0x0021F10C
+	// Token: 0x06007117 RID: 28951 RVA: 0x0022ACBC File Offset: 0x00228EBC
 	public void Refresh(IWheelTowerCoverRecordData data)
 	{
 		GenericLayout<WheelTowerCoverRecordRoleGridItem, int> roleLayout = this.RoleLayout;
@@ -88,7 +88,7 @@ public class WheelTowerCoverRecordItem : UiPanelBase
 		text3.SetText(text2, true);
 	}
 
-	// Token: 0x040044FF RID: 17663
+	// Token: 0x040045A5 RID: 17829
 	[Nullable(new byte[]
 	{
 		2,

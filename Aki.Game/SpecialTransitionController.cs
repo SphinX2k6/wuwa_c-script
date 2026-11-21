@@ -7,13 +7,13 @@ using CSharpScript.Game.Render.Effect.ScreenEffectSystem;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02002A7D RID: 10877
+// Token: 0x02001FF9 RID: 8185
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class SpecialTransitionController : ControllerBase
 {
-	// Token: 0x06016A5D RID: 92765 RVA: 0x005BCE89 File Offset: 0x005BB089
+	// Token: 0x06014482 RID: 83074 RVA: 0x005E90B9 File Offset: 0x005E72B9
 	[NullableContext(2)]
 	public static bool IsTeleportPbLoadingMode(TransitionWithSpineLoadingPb pb)
 	{
@@ -30,7 +30,7 @@ public class SpecialTransitionController : ControllerBase
 		return obj != null;
 	}
 
-	// Token: 0x06016A5E RID: 92766 RVA: 0x005BCEA6 File Offset: 0x005BB0A6
+	// Token: 0x06014483 RID: 83075 RVA: 0x005E90D6 File Offset: 0x005E72D6
 	[NullableContext(2)]
 	public bool HasScreenEffectFadeIn(TransitionWithSpineLoadingPb pb)
 	{
@@ -47,7 +47,7 @@ public class SpecialTransitionController : ControllerBase
 		return obj != null;
 	}
 
-	// Token: 0x06016A5F RID: 92767 RVA: 0x005BCEC4 File Offset: 0x005BB0C4
+	// Token: 0x06014484 RID: 83076 RVA: 0x005E90F4 File Offset: 0x005E72F4
 	public UniTask OpenSpecialTransitionLoadingByTeleportPb(TransitionWithSpineLoadingPb spineLoadingPb, [Nullable(2)] Action finishCallback = null)
 	{
 		SpecialTransitionController.<OpenSpecialTransitionLoadingByTeleportPb>d__2 <OpenSpecialTransitionLoadingByTeleportPb>d__;
@@ -60,7 +60,7 @@ public class SpecialTransitionController : ControllerBase
 		return <OpenSpecialTransitionLoadingByTeleportPb>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016A60 RID: 92768 RVA: 0x005BCF18 File Offset: 0x005BB118
+	// Token: 0x06014485 RID: 83077 RVA: 0x005E9148 File Offset: 0x005E7348
 	public UniTask OpenSpecialTransitionLoadingByConfig(ITeleportTransitionWithCustomScreen option, [Nullable(2)] Action finishCallback = null)
 	{
 		SpecialTransitionController.<OpenSpecialTransitionLoadingByConfig>d__3 <OpenSpecialTransitionLoadingByConfig>d__;
@@ -73,7 +73,7 @@ public class SpecialTransitionController : ControllerBase
 		return <OpenSpecialTransitionLoadingByConfig>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016A61 RID: 92769 RVA: 0x005BCF6C File Offset: 0x005BB16C
+	// Token: 0x06014486 RID: 83078 RVA: 0x005E919C File Offset: 0x005E739C
 	public UniTask OpenSpecialTransitionLoading(ISpecialTransitionParams @params, bool? closeBySelf = null)
 	{
 		SpecialTransitionController.<OpenSpecialTransitionLoading>d__4 <OpenSpecialTransitionLoading>d__;
@@ -86,7 +86,7 @@ public class SpecialTransitionController : ControllerBase
 		return <OpenSpecialTransitionLoading>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016A62 RID: 92770 RVA: 0x005BCFC0 File Offset: 0x005BB1C0
+	// Token: 0x06014487 RID: 83079 RVA: 0x005E91F0 File Offset: 0x005E73F0
 	private UniTask OpenSpecialTransitionLoadingForLoadingMode(ISpecialTransitionParams @params, bool? closeBySelf)
 	{
 		SpecialTransitionController.<OpenSpecialTransitionLoadingForLoadingMode>d__5 <OpenSpecialTransitionLoadingForLoadingMode>d__;
@@ -99,7 +99,7 @@ public class SpecialTransitionController : ControllerBase
 		return <OpenSpecialTransitionLoadingForLoadingMode>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016A63 RID: 92771 RVA: 0x005BD014 File Offset: 0x005BB214
+	// Token: 0x06014488 RID: 83080 RVA: 0x005E9244 File Offset: 0x005E7444
 	[NullableContext(2)]
 	private void PlayFadeInEffect(IFadeEffect fadeInEffect)
 	{
@@ -129,7 +129,7 @@ public class SpecialTransitionController : ControllerBase
 		}
 	}
 
-	// Token: 0x06016A64 RID: 92772 RVA: 0x005BD0CC File Offset: 0x005BB2CC
+	// Token: 0x06014489 RID: 83081 RVA: 0x005E92FC File Offset: 0x005E74FC
 	[NullableContext(2)]
 	private void PlayFadeInOutPhase(IFadeEffect fadeInEffect, float? fadeOutTime)
 	{
@@ -146,7 +146,7 @@ public class SpecialTransitionController : ControllerBase
 		}
 	}
 
-	// Token: 0x06016A65 RID: 92773 RVA: 0x005BD124 File Offset: 0x005BB324
+	// Token: 0x0601448A RID: 83082 RVA: 0x005E9354 File Offset: 0x005E7554
 	private void KeepSpecialTransitionLoading(ISpecialTransitionParams @params)
 	{
 		if (@params.FlowParams.KeepTime == null)
@@ -163,7 +163,7 @@ public class SpecialTransitionController : ControllerBase
 		LevelLoadingController.Instance.CloseLoading(ELoadingReason.SpecialTransitionKeep, null, null, null);
 	}
 
-	// Token: 0x06016A66 RID: 92774 RVA: 0x005BD198 File Offset: 0x005BB398
+	// Token: 0x0601448B RID: 83083 RVA: 0x005E93C8 File Offset: 0x005E75C8
 	public UniTask CloseSpecialTransitionLoading()
 	{
 		SpecialTransitionController.<CloseSpecialTransitionLoading>d__9 <CloseSpecialTransitionLoading>d__;
@@ -174,7 +174,7 @@ public class SpecialTransitionController : ControllerBase
 		return <CloseSpecialTransitionLoading>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016A67 RID: 92775 RVA: 0x005BD1DC File Offset: 0x005BB3DC
+	// Token: 0x0601448C RID: 83084 RVA: 0x005E940C File Offset: 0x005E760C
 	private UniTask CloseSpecialTransitionLoadingForLoadingMode(ISpecialTransitionParams @params)
 	{
 		SpecialTransitionController.<CloseSpecialTransitionLoadingForLoadingMode>d__10 <CloseSpecialTransitionLoadingForLoadingMode>d__;
@@ -186,7 +186,7 @@ public class SpecialTransitionController : ControllerBase
 		return <CloseSpecialTransitionLoadingForLoadingMode>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016A68 RID: 92776 RVA: 0x005BD228 File Offset: 0x005BB428
+	// Token: 0x0601448D RID: 83085 RVA: 0x005E9458 File Offset: 0x005E7658
 	[NullableContext(2)]
 	private UniTask PlayFadeOutEffectIn(IFadeEffect fadeOutEffect)
 	{
@@ -198,7 +198,7 @@ public class SpecialTransitionController : ControllerBase
 		return <PlayFadeOutEffectIn>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016A69 RID: 92777 RVA: 0x005BD26C File Offset: 0x005BB46C
+	// Token: 0x0601448E RID: 83086 RVA: 0x005E949C File Offset: 0x005E769C
 	[NullableContext(2)]
 	private UniTask WaitFadeOutEffectEnd(IFadeEffect fadeOutEffect)
 	{
@@ -210,7 +210,7 @@ public class SpecialTransitionController : ControllerBase
 		return <WaitFadeOutEffectEnd>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016A6A RID: 92778 RVA: 0x005BD2B0 File Offset: 0x005BB4B0
+	// Token: 0x0601448F RID: 83087 RVA: 0x005E94E0 File Offset: 0x005E76E0
 	public UniTask PlayFadeInEffectBeforeLeavingLevel(TransitionWithSpineLoadingPb spineLoadingPb)
 	{
 		SpecialTransitionController.<PlayFadeInEffectBeforeLeavingLevel>d__13 <PlayFadeInEffectBeforeLeavingLevel>d__;
@@ -222,7 +222,7 @@ public class SpecialTransitionController : ControllerBase
 		return <PlayFadeInEffectBeforeLeavingLevel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016A6B RID: 92779 RVA: 0x005BD2FC File Offset: 0x005BB4FC
+	// Token: 0x06014490 RID: 83088 RVA: 0x005E952C File Offset: 0x005E772C
 	public void CloseFadeInEffectAfterOpeningLoading(TransitionWithSpineLoadingPb spineLoadingPb)
 	{
 		IFadeEffect fadeInEffect = this.ParsePbIntoSpecialTransitionParams(spineLoadingPb).FlowParams.FadeInEffect;
@@ -234,7 +234,7 @@ public class SpecialTransitionController : ControllerBase
 		ScreenEffectModel.Instance.EndScreenEffectByPath(screenEffect);
 	}
 
-	// Token: 0x06016A6C RID: 92780 RVA: 0x005BD340 File Offset: 0x005BB540
+	// Token: 0x06014491 RID: 83089 RVA: 0x005E9570 File Offset: 0x005E7770
 	private ISpecialTransitionParams ParsePbIntoSpecialTransitionParams(TransitionWithSpineLoadingPb spineLoadingPb)
 	{
 		IFadeEffect fadeInEffect = null;
@@ -342,7 +342,7 @@ public class SpecialTransitionController : ControllerBase
 		return specialTransitionParams;
 	}
 
-	// Token: 0x06016A6D RID: 92781 RVA: 0x005BD664 File Offset: 0x005BB864
+	// Token: 0x06014492 RID: 83090 RVA: 0x005E9894 File Offset: 0x005E7A94
 	private ISpecialTransitionParams ParseConfigIntoSpecialTransitionParams(ITeleportTransitionWithCustomScreen option)
 	{
 		IFadeEffect fadeInEffect = null;
@@ -431,8 +431,8 @@ public class SpecialTransitionController : ControllerBase
 		};
 	}
 
-	// Token: 0x17001E17 RID: 7703
-	// (get) Token: 0x06016A6E RID: 92782 RVA: 0x005BD85A File Offset: 0x005BBA5A
+	// Token: 0x17001E6F RID: 7791
+	// (get) Token: 0x06014493 RID: 83091 RVA: 0x005E9A8A File Offset: 0x005E7C8A
 	public static SpecialTransitionController Instance
 	{
 		get
@@ -441,7 +441,7 @@ public class SpecialTransitionController : ControllerBase
 		}
 	}
 
-	// Token: 0x06016A6F RID: 92783 RVA: 0x005BD861 File Offset: 0x005BBA61
+	// Token: 0x06014494 RID: 83092 RVA: 0x005E9A91 File Offset: 0x005E7C91
 	public static SpecialTransitionController GetOrCreateInstance()
 	{
 		if (SpecialTransitionController._Instance == null)
@@ -451,7 +451,7 @@ public class SpecialTransitionController : ControllerBase
 		return SpecialTransitionController._Instance;
 	}
 
-	// Token: 0x06016A70 RID: 92784 RVA: 0x005BD875 File Offset: 0x005BBA75
+	// Token: 0x06014495 RID: 83093 RVA: 0x005E9AA5 File Offset: 0x005E7CA5
 	public static bool CreateInstance()
 	{
 		if (SpecialTransitionController._Instance != null)
@@ -462,24 +462,24 @@ public class SpecialTransitionController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06016A71 RID: 92785 RVA: 0x005BD88B File Offset: 0x005BBA8B
+	// Token: 0x06014496 RID: 83094 RVA: 0x005E9ABB File Offset: 0x005E7CBB
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016A72 RID: 92786 RVA: 0x005BD88D File Offset: 0x005BBA8D
+	// Token: 0x06014497 RID: 83095 RVA: 0x005E9ABD File Offset: 0x005E7CBD
 	public static void ResetStaticDefaultValue()
 	{
 		SpecialTransitionController._Instance = null;
 	}
 
-	// Token: 0x06016A73 RID: 92787 RVA: 0x005BD895 File Offset: 0x005BBA95
+	// Token: 0x06014498 RID: 83096 RVA: 0x005E9AC5 File Offset: 0x005E7CC5
 	static SpecialTransitionController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SpecialTransitionController.CreateStaticDefaultValue), new Action(SpecialTransitionController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A81A RID: 43034
+	// Token: 0x0400AC1F RID: 44063
 	[Nullable(2)]
 	private static SpecialTransitionController _Instance;
 }

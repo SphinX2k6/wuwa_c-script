@@ -6,25 +6,24 @@ using Aki.TDConfigMgr.Component;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010C0 RID: 4288
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020011EE RID: 4590
 	public class IQuestStatisticsCollect_SetValue
 	{
-		// Token: 0x04003A4A RID: 14922
+		// Token: 0x04003D97 RID: 15767
 		public EStatisticsEventType Type;
 
-		// Token: 0x04003A4B RID: 14923
-		[Nullable(1)]
+		// Token: 0x04003D98 RID: 15768
 		public VarRef Var;
 
-		// Token: 0x04003A4C RID: 14924
+		// Token: 0x04003D99 RID: 15769
+		[Nullable(2)]
 		public IStaticEntitiyMatch EntitiyMatch;
 
-		// Token: 0x04003A4D RID: 14925
+		// Token: 0x04003D9A RID: 15770
 		public bool? IsGlobal;
 
-		// Token: 0x04003A4E RID: 14926
+		// Token: 0x04003D9B RID: 15771
+		[Nullable(2)]
 		public IOnlinePlayerConditionTarget OnlinePlayerConditionTargetOption;
 	}
 }

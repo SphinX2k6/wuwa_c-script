@@ -4,46 +4,46 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 {
-	// Token: 0x0200655F RID: 25951
+	// Token: 0x020054DD RID: 21725
 	public class LineCrossChallengeData
 	{
-		// Token: 0x0604107D RID: 266365 RVA: 0x00FC2D51 File Offset: 0x00FC0F51
+		// Token: 0x06035D42 RID: 220482 RVA: 0x00F09D39 File Offset: 0x00F07F39
 		public int GetId()
 		{
 			return this.Id;
 		}
 
-		// Token: 0x0604107E RID: 266366 RVA: 0x00FC2D59 File Offset: 0x00FC0F59
+		// Token: 0x06035D43 RID: 220483 RVA: 0x00F09D41 File Offset: 0x00F07F41
 		public bool GetHasGetReward()
 		{
 			return this.HasGetReward;
 		}
 
-		// Token: 0x0604107F RID: 266367 RVA: 0x00FC2D61 File Offset: 0x00FC0F61
+		// Token: 0x06035D44 RID: 220484 RVA: 0x00F09D49 File Offset: 0x00F07F49
 		public long GetOpenTime()
 		{
 			return this.OpenTime / 1000L;
 		}
 
-		// Token: 0x06041080 RID: 266368 RVA: 0x00FC2D70 File Offset: 0x00FC0F70
+		// Token: 0x06035D45 RID: 220485 RVA: 0x00F09D58 File Offset: 0x00F07F58
 		public int GetRewardId()
 		{
 			return this.RewardId;
 		}
 
-		// Token: 0x06041081 RID: 266369 RVA: 0x00FC2D78 File Offset: 0x00FC0F78
+		// Token: 0x06035D46 RID: 220486 RVA: 0x00F09D60 File Offset: 0x00F07F60
 		public int GetEntityConfigId()
 		{
 			return this.EntityConfigId;
 		}
 
-		// Token: 0x06041082 RID: 266370 RVA: 0x00FC2D80 File Offset: 0x00FC0F80
+		// Token: 0x06035D47 RID: 220487 RVA: 0x00F09D68 File Offset: 0x00F07F68
 		public bool GetPreChallengeState()
 		{
 			return this.PreChallengeState;
 		}
 
-		// Token: 0x06041083 RID: 266371 RVA: 0x00FC2D88 File Offset: 0x00FC0F88
+		// Token: 0x06035D48 RID: 220488 RVA: 0x00F09D70 File Offset: 0x00F07F70
 		[NullableContext(1)]
 		public void Phrase(LineCrossChallengeData data)
 		{
@@ -55,22 +55,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			this.PreChallengeState = data.PreChallenged;
 		}
 
-		// Token: 0x04021E68 RID: 138856
+		// Token: 0x0401C799 RID: 116633
 		private int Id;
 
-		// Token: 0x04021E69 RID: 138857
+		// Token: 0x0401C79A RID: 116634
 		private bool HasGetReward;
 
-		// Token: 0x04021E6A RID: 138858
+		// Token: 0x0401C79B RID: 116635
 		private long OpenTime;
 
-		// Token: 0x04021E6B RID: 138859
+		// Token: 0x0401C79C RID: 116636
 		private int RewardId;
 
-		// Token: 0x04021E6C RID: 138860
+		// Token: 0x0401C79D RID: 116637
 		private int EntityConfigId;
 
-		// Token: 0x04021E6D RID: 138861
+		// Token: 0x0401C79E RID: 116638
 		private bool PreChallengeState;
 	}
 }

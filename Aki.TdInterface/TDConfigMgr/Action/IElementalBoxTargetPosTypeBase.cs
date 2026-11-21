@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019D4 RID: 6612
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B61 RID: 7009
 	public class IElementalBoxTargetPosTypeBase
 	{
-		// Token: 0x06008D9F RID: 36255 RVA: 0x0014BB64 File Offset: 0x00149D64
+		// Token: 0x060094E1 RID: 38113 RVA: 0x0015B670 File Offset: 0x00159870
 		private IElementalBoxTargetPosTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008DA0 RID: 36256 RVA: 0x0014BB9C File Offset: 0x00149D9C
+		// Token: 0x060094E2 RID: 38114 RVA: 0x0015B6A8 File Offset: 0x001598A8
 		public static IElementalBoxTargetPosTypeBase Create([Nullable(2)] IElementalBoxTargetPosTypeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008DA1 RID: 36257 RVA: 0x0014BBAF File Offset: 0x00149DAF
+		// Token: 0x060094E3 RID: 38115 RVA: 0x0015B6BB File Offset: 0x001598BB
 		public static IElementalBoxTargetPosTypeBase CreateFromSetValue([Nullable(2)] IElementalBoxTargetPosTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008DA2 RID: 36258 RVA: 0x0014BBC2 File Offset: 0x00149DC2
+		// Token: 0x060094E4 RID: 38116 RVA: 0x0015B6CE File Offset: 0x001598CE
 		public IElementalBoxTargetPosTypeBase_SetValue ToSetValue()
 		{
 			return new IElementalBoxTargetPosTypeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D66 RID: 11622
-		// (get) Token: 0x06008DA3 RID: 36259 RVA: 0x0014BBD5 File Offset: 0x00149DD5
-		// (set) Token: 0x06008DA4 RID: 36260 RVA: 0x0014BC00 File Offset: 0x00149E00
+		// Token: 0x17002F6B RID: 12139
+		// (get) Token: 0x060094E5 RID: 38117 RVA: 0x0015B6E1 File Offset: 0x001598E1
+		// (set) Token: 0x060094E6 RID: 38118 RVA: 0x0015B70C File Offset: 0x0015990C
 		public virtual EElementalBoxTargetPosType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040057F3 RID: 22515
+		// Token: 0x04005C48 RID: 23624
 		[Nullable(2)]
 		protected IElementalBoxTargetPosTypeBase FbInstance;
 
-		// Token: 0x040057F4 RID: 22516
+		// Token: 0x04005C49 RID: 23625
 		[Nullable(2)]
 		protected IElementalBoxTargetPosTypeBase_SetValue PocoInterface;
 	}

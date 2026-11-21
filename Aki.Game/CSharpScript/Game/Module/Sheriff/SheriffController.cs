@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -15,37 +14,37 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C2D RID: 19501
+	// Token: 0x02003BDE RID: 15326
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class SheriffController : ActivityControllerBase
 	{
-		// Token: 0x06032762 RID: 206690 RVA: 0x00BC2413 File Offset: 0x00BC0613
+		// Token: 0x06027515 RID: 161045 RVA: 0x00B07043 File Offset: 0x00B05243
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x06032763 RID: 206691 RVA: 0x00BC2415 File Offset: 0x00BC0615
+		// Token: 0x06027516 RID: 161046 RVA: 0x00B07045 File Offset: 0x00B05245
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiView_ActivitySkyEye";
 		}
 
-		// Token: 0x06032764 RID: 206692 RVA: 0x00BC241C File Offset: 0x00BC061C
+		// Token: 0x06027517 RID: 161047 RVA: 0x00B0704C File Offset: 0x00B0524C
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new SheriffSubView();
 		}
 
-		// Token: 0x06032765 RID: 206693 RVA: 0x00BC2423 File Offset: 0x00BC0623
+		// Token: 0x06027518 RID: 161048 RVA: 0x00B07053 File Offset: 0x00B05253
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			this.ActivityId = data.Id;
 			return new SheriffActivityData();
 		}
 
-		// Token: 0x06032766 RID: 206694 RVA: 0x00BC2438 File Offset: 0x00BC0638
+		// Token: 0x06027519 RID: 161049 RVA: 0x00B07068 File Offset: 0x00B05268
 		[NullableContext(2)]
 		public SheriffActivityData GetActivityData()
 		{
@@ -57,13 +56,13 @@ namespace CSharpScript.Game.Module.Sheriff
 			return sheriffActivityData;
 		}
 
-		// Token: 0x06032767 RID: 206695 RVA: 0x00BC2461 File Offset: 0x00BC0661
+		// Token: 0x0602751A RID: 161050 RVA: 0x00B07091 File Offset: 0x00B05291
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x06032768 RID: 206696 RVA: 0x00BC2464 File Offset: 0x00BC0664
+		// Token: 0x0602751B RID: 161051 RVA: 0x00B07094 File Offset: 0x00B05294
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<EFunctionType, bool>(EEventName.OnFunctionOpenSet, new Action<EFunctionType, bool>(this.RequestSheriffZoneInfo));
@@ -71,7 +70,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			EventSystem.Instance.Add<IProto_NormalItem, int, int>(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.OnCurrencyChange));
 		}
 
-		// Token: 0x06032769 RID: 206697 RVA: 0x00BC24C8 File Offset: 0x00BC06C8
+		// Token: 0x0602751C RID: 161052 RVA: 0x00B070F8 File Offset: 0x00B052F8
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove<EFunctionType, bool>(EEventName.OnFunctionOpenSet, new Action<EFunctionType, bool>(this.RequestSheriffZoneInfo));
@@ -79,7 +78,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			EventSystem.Instance.Remove(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.OnCurrencyChange));
 		}
 
-		// Token: 0x0603276A RID: 206698 RVA: 0x00BC2529 File Offset: 0x00BC0729
+		// Token: 0x0602751D RID: 161053 RVA: 0x00B07159 File Offset: 0x00B05359
 		private void OnCurrencyChange(IProto_NormalItem item, int count, int lastCount)
 		{
 			if (item.Id != SheriffModel.Instance.GetShopCurrencyId())
@@ -93,7 +92,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			SheriffModel.Instance.ReArmShopRedDot();
 		}
 
-		// Token: 0x0603276B RID: 206699 RVA: 0x00BC2550 File Offset: 0x00BC0750
+		// Token: 0x0602751E RID: 161054 RVA: 0x00B07180 File Offset: 0x00B05380
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.SheriffAnomalyInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSheriffAnomalyInfoUpdateNotify));
@@ -101,7 +100,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			Net.Instance.Register(ENotifyMessageId.SheriffZoneItemUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSheriffZoneItemUpdateNotify));
 		}
 
-		// Token: 0x0603276C RID: 206700 RVA: 0x00BC25B1 File Offset: 0x00BC07B1
+		// Token: 0x0602751F RID: 161055 RVA: 0x00B071E1 File Offset: 0x00B053E1
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.SheriffAnomalyInfoUpdateNotify);
@@ -109,13 +108,13 @@ namespace CSharpScript.Game.Module.Sheriff
 			Net.Instance.UnRegister(ENotifyMessageId.SheriffZoneItemUpdateNotify);
 		}
 
-		// Token: 0x0603276D RID: 206701 RVA: 0x00BC25E3 File Offset: 0x00BC07E3
+		// Token: 0x06027520 RID: 161056 RVA: 0x00B07213 File Offset: 0x00B05413
 		public void OpenAnalysisClueView(int questionId)
 		{
 			UiManager.Instance.OpenView(EUiViewName.SheriffMainView, questionId, null);
 		}
 
-		// Token: 0x0603276E RID: 206702 RVA: 0x00BC25FC File Offset: 0x00BC07FC
+		// Token: 0x06027521 RID: 161057 RVA: 0x00B0722C File Offset: 0x00B0542C
 		[NullableContext(0)]
 		public UniTask<bool> OnUiGameplayFinish(int gameplayId, int progressId, int endingId)
 		{
@@ -129,24 +128,24 @@ namespace CSharpScript.Game.Module.Sheriff
 			return <OnUiGameplayFinish>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603276F RID: 206703 RVA: 0x00BC2650 File Offset: 0x00BC0850
+		// Token: 0x06027522 RID: 161058 RVA: 0x00B07280 File Offset: 0x00B05480
 		[NullableContext(2)]
 		private void OnSheriffAnomalyInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			SheriffAnomalyInfoUpdateNotify sheriffAnomalyInfoUpdateNotify = (SheriffAnomalyInfoUpdateNotify)msg;
-			SheriffModel.Instance.UpdateAnomalyInfo(sheriffAnomalyInfoUpdateNotify.AnomalyInfos.ToList<SheriffAnomalyInfo>(), null);
+			SheriffModel.Instance.UpdateAnomalyInfo(sheriffAnomalyInfoUpdateNotify.AnomalyInfos, null);
 			SheriffModel.Instance.CheckNeedOpenReportPop();
 		}
 
-		// Token: 0x06032770 RID: 206704 RVA: 0x00BC268C File Offset: 0x00BC088C
+		// Token: 0x06027523 RID: 161059 RVA: 0x00B072B8 File Offset: 0x00B054B8
 		[NullableContext(2)]
 		private void OnSheriffCriminalUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			SheriffCriminalUpdateNotify sheriffCriminalUpdateNotify = (SheriffCriminalUpdateNotify)msg;
-			SheriffModel.Instance.UpdateCriminalInfo(sheriffCriminalUpdateNotify.CriminalInfos.ToList<SheriffCriminalInfo>(), null);
+			SheriffModel.Instance.UpdateCriminalInfo(sheriffCriminalUpdateNotify.CriminalInfos, null);
 		}
 
-		// Token: 0x06032771 RID: 206705 RVA: 0x00BC26C0 File Offset: 0x00BC08C0
+		// Token: 0x06027524 RID: 161060 RVA: 0x00B072E8 File Offset: 0x00B054E8
 		[NullableContext(2)]
 		private void OnSheriffZoneItemUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -155,7 +154,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			EventSystem.Instance.Emit<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, 0, SheriffModel.Instance.ShopId, 0);
 		}
 
-		// Token: 0x06032772 RID: 206706 RVA: 0x00BC2708 File Offset: 0x00BC0908
+		// Token: 0x06027525 RID: 161061 RVA: 0x00B07330 File Offset: 0x00B05530
 		private void RequestSheriffZoneInfo(EFunctionType id, bool isOpen)
 		{
 			if (this.ZoneConfigMap.Count == 0)
@@ -183,11 +182,11 @@ namespace CSharpScript.Game.Module.Sheriff
 				{
 					return;
 				}
-				SheriffModel.Instance.UpdateZoneInfo(sheriffZoneInfoResponse.ZoneInfos.ToList<SheriffZoneInfo>());
+				SheriffModel.Instance.UpdateZoneInfo(sheriffZoneInfoResponse.ZoneInfos);
 			}, 0);
 		}
 
-		// Token: 0x06032773 RID: 206707 RVA: 0x00BC27DC File Offset: 0x00BC09DC
+		// Token: 0x06027526 RID: 161062 RVA: 0x00B07404 File Offset: 0x00B05604
 		public void ReadTerminalFirstOpenRedDot()
 		{
 			SheriffActivityData activityData = this.GetActivityData();
@@ -198,7 +197,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			activityData.ReadTerminalFirstOpenRedDot();
 		}
 
-		// Token: 0x06032774 RID: 206708 RVA: 0x00BC27F0 File Offset: 0x00BC09F0
+		// Token: 0x06027527 RID: 161063 RVA: 0x00B07418 File Offset: 0x00B05618
 		[NullableContext(2)]
 		public void OpenSheriffMap(SheriffMapPanelParam panelParams = null)
 		{
@@ -251,7 +250,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			WorldMapController.Instance.OpenExtraUi(EWorldMapExtraUiPanelName.SheriffMapPanel, mapOpenParam, sheriffMapPanelParam);
 		}
 
-		// Token: 0x06032775 RID: 206709 RVA: 0x00BC2950 File Offset: 0x00BC0B50
+		// Token: 0x06027528 RID: 161064 RVA: 0x00B07578 File Offset: 0x00B05778
 		public void OpenDetailClueFromQuestPanel()
 		{
 			SheriffShowClueViewPopInfo param = new SheriffShowClueViewPopInfo
@@ -262,7 +261,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			UiManager.Instance.OpenView(EUiViewName.SheriffShowClueViewPop, param, null);
 		}
 
-		// Token: 0x06032776 RID: 206710 RVA: 0x00BC299C File Offset: 0x00BC0B9C
+		// Token: 0x06027529 RID: 161065 RVA: 0x00B075C4 File Offset: 0x00B057C4
 		public void OpenAnomalyConditionView(int anomalyId)
 		{
 			SheriffAnomaly? anomalyConfigById = SheriffConfig.Instance.GetAnomalyConfigById(anomalyId);
@@ -305,7 +304,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			UiManager.Instance.OpenView(EUiViewName.CommonConditionView, param, null);
 		}
 
-		// Token: 0x06032777 RID: 206711 RVA: 0x00BC2B0C File Offset: 0x00BC0D0C
+		// Token: 0x0602752A RID: 161066 RVA: 0x00B07734 File Offset: 0x00B05934
 		public void OpenSheriffReportPop(int criminalId, bool bothPage)
 		{
 			SheriffReportPopViewParam param = new SheriffReportPopViewParam
@@ -316,8 +315,8 @@ namespace CSharpScript.Game.Module.Sheriff
 			UiManager.Instance.OpenView(EUiViewName.SheriffReportPop, param, null);
 		}
 
-		// Token: 0x17007C8F RID: 31887
-		// (get) Token: 0x06032778 RID: 206712 RVA: 0x00BC2B3E File Offset: 0x00BC0D3E
+		// Token: 0x17005039 RID: 20537
+		// (get) Token: 0x0602752B RID: 161067 RVA: 0x00B07766 File Offset: 0x00B05966
 		public static SheriffController Instance
 		{
 			get
@@ -326,7 +325,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			}
 		}
 
-		// Token: 0x06032779 RID: 206713 RVA: 0x00BC2B45 File Offset: 0x00BC0D45
+		// Token: 0x0602752C RID: 161068 RVA: 0x00B0776D File Offset: 0x00B0596D
 		public static SheriffController GetOrCreateInstance()
 		{
 			if (SheriffController._Instance == null)
@@ -336,7 +335,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return SheriffController._Instance;
 		}
 
-		// Token: 0x0603277A RID: 206714 RVA: 0x00BC2B59 File Offset: 0x00BC0D59
+		// Token: 0x0602752D RID: 161069 RVA: 0x00B07781 File Offset: 0x00B05981
 		public static bool CreateInstance()
 		{
 			if (SheriffController._Instance != null)
@@ -347,30 +346,30 @@ namespace CSharpScript.Game.Module.Sheriff
 			return true;
 		}
 
-		// Token: 0x0603277B RID: 206715 RVA: 0x00BC2B6F File Offset: 0x00BC0D6F
+		// Token: 0x0602752E RID: 161070 RVA: 0x00B07797 File Offset: 0x00B05997
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603277C RID: 206716 RVA: 0x00BC2B71 File Offset: 0x00BC0D71
+		// Token: 0x0602752F RID: 161071 RVA: 0x00B07799 File Offset: 0x00B05999
 		public static void ResetStaticDefaultValue()
 		{
 			SheriffController._Instance = null;
 		}
 
-		// Token: 0x0603277D RID: 206717 RVA: 0x00BC2B79 File Offset: 0x00BC0D79
+		// Token: 0x06027530 RID: 161072 RVA: 0x00B077A1 File Offset: 0x00B059A1
 		static SheriffController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SheriffController.CreateStaticDefaultValue), new Action(SheriffController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401ADBD RID: 110013
+		// Token: 0x0401571A RID: 87834
 		public int ActivityId;
 
-		// Token: 0x0401ADBE RID: 110014
+		// Token: 0x0401571B RID: 87835
 		public Dictionary<EFunctionType, int> ZoneConfigMap = new Dictionary<EFunctionType, int>();
 
-		// Token: 0x0401ADBF RID: 110015
+		// Token: 0x0401571C RID: 87836
 		[Nullable(2)]
 		private static SheriffController _Instance;
 	}

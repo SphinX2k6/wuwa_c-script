@@ -8,12 +8,12 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Module.Area;
 using UnrealEngine;
 
-// Token: 0x02003095 RID: 12437
+// Token: 0x020025EC RID: 9708
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterTrailEffectComponent : EntityComponent
 {
-	// Token: 0x0601A943 RID: 108867 RVA: 0x00721BA0 File Offset: 0x0071FDA0
+	// Token: 0x06018336 RID: 99126 RVA: 0x00747BE0 File Offset: 0x00745DE0
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<BaseCharacterComponent>();
@@ -30,7 +30,7 @@ public class CharacterTrailEffectComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A944 RID: 108868 RVA: 0x00721BF2 File Offset: 0x0071FDF2
+	// Token: 0x06018337 RID: 99127 RVA: 0x00747C32 File Offset: 0x00745E32
 	protected override void OnTick(float delta)
 	{
 		if (this.TrailComp == null || !this.TrailComp.IsValid())
@@ -40,7 +40,7 @@ public class CharacterTrailEffectComponent : EntityComponent
 		this.TrailComp.KuroTickComponentOutside(delta * 0.001f);
 	}
 
-	// Token: 0x0601A945 RID: 108869 RVA: 0x00721C1C File Offset: 0x0071FE1C
+	// Token: 0x06018338 RID: 99128 RVA: 0x00747C5C File Offset: 0x00745E5C
 	protected bool ShouldUseTrailEffect()
 	{
 		if (Info.Instance.IsMobilePlatform())
@@ -68,7 +68,7 @@ public class CharacterTrailEffectComponent : EntityComponent
 		return npcPb != null && this.CheckIsAreaEnableTrailEffectByPbDataId(npcPb.SpawnEntityId);
 	}
 
-	// Token: 0x0601A946 RID: 108870 RVA: 0x00721CC4 File Offset: 0x0071FEC4
+	// Token: 0x06018339 RID: 99129 RVA: 0x00747D04 File Offset: 0x00745F04
 	protected bool CheckIsAreaEnableTrailEffectByPbDataId(int pbDataId)
 	{
 		IEntityData entityData = CreatureModel.Instance.GetEntityData(new int?(pbDataId), null);
@@ -85,7 +85,7 @@ public class CharacterTrailEffectComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x0601A947 RID: 108871 RVA: 0x00721D44 File Offset: 0x0071FF44
+	// Token: 0x0601833A RID: 99130 RVA: 0x00747D84 File Offset: 0x00745F84
 	[NullableContext(1)]
 	public void EnableTrailEffect(bool enable, string reason)
 	{
@@ -146,7 +146,7 @@ public class CharacterTrailEffectComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A948 RID: 108872 RVA: 0x00721E40 File Offset: 0x00720040
+	// Token: 0x0601833B RID: 99131 RVA: 0x00747E80 File Offset: 0x00746080
 	protected void TryInitTrailComponent()
 	{
 		if (this.TrailComp != null && this.TrailComp.IsValid())
@@ -162,7 +162,7 @@ public class CharacterTrailEffectComponent : EntityComponent
 		trailComp.SetComponentTickEnabled(false);
 	}
 
-	// Token: 0x0601A949 RID: 108873 RVA: 0x00721E78 File Offset: 0x00720078
+	// Token: 0x0601833C RID: 99132 RVA: 0x00747EB8 File Offset: 0x007460B8
 	protected BP_SnowTrailComponent_C FindOrAddTrailComponent()
 	{
 		BaseCharacterComponent actorComp = this.ActorComp;
@@ -185,7 +185,7 @@ public class CharacterTrailEffectComponent : EntityComponent
 		return bp_SnowTrailComponent_C;
 	}
 
-	// Token: 0x0601A94A RID: 108874 RVA: 0x00721F54 File Offset: 0x00720154
+	// Token: 0x0601833D RID: 99133 RVA: 0x00747F94 File Offset: 0x00746194
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -194,41 +194,52 @@ public class CharacterTrailEffectComponent : EntityComponent
 			return false;
 		}
 		CharacterTrailEffectComponent characterTrailEffectComponent = (CharacterTrailEffectComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterTrailEffectComponent.ActorComp == null)
 		{
-			if (characterTrailEffectComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseCharacterComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("TrailComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (characterTrailEffectComponent.TrailComp == null)
-			{
-				this.TrailComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_SnowTrailComponent_C>(this.TrailComp), "TrailComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("DisableKey"))
+		if (characterTrailEffectComponent.TrailComp == null)
 		{
-			this.DisableKey = characterTrailEffectComponent.DisableKey;
+			this.TrailComp = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TrailComp), "TrailComp"))
+		{
+			return false;
+		}
+		this.DisableKey = characterTrailEffectComponent.DisableKey;
 		return true;
 	}
 
-	// Token: 0x0400CC7F RID: 52351
+	// Token: 0x170025F6 RID: 9718
+	// (get) Token: 0x0601833E RID: 99134 RVA: 0x00748016 File Offset: 0x00746216
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025F7 RID: 9719
+	// (get) Token: 0x0601833F RID: 99135 RVA: 0x00748019 File Offset: 0x00746219
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D062 RID: 53346
 	protected BaseCharacterComponent ActorComp;
 
-	// Token: 0x0400CC80 RID: 52352
+	// Token: 0x0400D063 RID: 53347
 	protected BP_SnowTrailComponent_C TrailComp;
 
-	// Token: 0x0400CC81 RID: 52353
+	// Token: 0x0400D064 RID: 53348
 	protected int? DisableKey;
 }

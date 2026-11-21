@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E33 RID: 7731
+	// Token: 0x02002066 RID: 8294
 	public class ISetNpcHandInHandPerform_SetValue
 	{
-		// Token: 0x040062E2 RID: 25314
+		// Token: 0x040068B9 RID: 26809
 		public ENpcGroupPerformType Type;
 
-		// Token: 0x040062E3 RID: 25315
-		[Nullable(1)]
+		// Token: 0x040068BA RID: 26810
 		public IHandInHandInitiator Initiator;
 
-		// Token: 0x040062E4 RID: 25316
+		// Token: 0x040068BB RID: 26811
 		public int Follower;
 	}
 }

@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A2A RID: 18986
+	// Token: 0x020039D2 RID: 14802
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseLevelModeData : TrapDefenseLevelModeDataBase, ITrapDefenseLevelModeData<TrapDefenseLevelModeData>
 	{
-		// Token: 0x060314C3 RID: 201923 RVA: 0x00B6F5B4 File Offset: 0x00B6D7B4
+		// Token: 0x06026253 RID: 156243 RVA: 0x00AB3558 File Offset: 0x00AB1758
 		protected override void Init()
 		{
 		}
 
-		// Token: 0x060314C4 RID: 201924 RVA: 0x00B6F5B6 File Offset: 0x00B6D7B6
+		// Token: 0x06026254 RID: 156244 RVA: 0x00AB355A File Offset: 0x00AB175A
 		public List<ITrapDefenseDifficultyLevelInfo> GetDifficultyTypeList()
 		{
 			return new List<ITrapDefenseDifficultyLevelInfo>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x060314C5 RID: 201925 RVA: 0x00B6F5F0 File Offset: 0x00B6D7F0
+		// Token: 0x06026255 RID: 156245 RVA: 0x00AB3594 File Offset: 0x00AB1794
 		public List<TrapDefenseLevelData> GetLevelDataListByDifficulty(ETrapDefenseDifficultyLevel difficulty)
 		{
 			List<TrapDefenseLevelData> list = new List<TrapDefenseLevelData>();

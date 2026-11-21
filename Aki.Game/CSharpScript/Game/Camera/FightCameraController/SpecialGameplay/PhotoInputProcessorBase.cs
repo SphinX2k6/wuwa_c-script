@@ -3,22 +3,22 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072EF RID: 29423
+	// Token: 0x02006472 RID: 25714
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhotoInputProcessorBase
 	{
-		// Token: 0x06048349 RID: 295753 RVA: 0x0128C875 File Offset: 0x0128AA75
+		// Token: 0x0603E795 RID: 255893 RVA: 0x0122F229 File Offset: 0x0122D429
 		public virtual void OnEnter(IPhotoInputContext context)
 		{
 		}
 
-		// Token: 0x0604834A RID: 295754 RVA: 0x0128C877 File Offset: 0x0128AA77
+		// Token: 0x0603E796 RID: 255894 RVA: 0x0122F22B File Offset: 0x0122D42B
 		public virtual void OnExit(IPhotoInputContext context)
 		{
 		}
 
-		// Token: 0x0604834B RID: 295755 RVA: 0x0128C87C File Offset: 0x0128AA7C
+		// Token: 0x0603E797 RID: 255895 RVA: 0x0122F230 File Offset: 0x0122D430
 		public virtual void Process(IPhotoInputSnapshot raw, IPhotoInputContext context, IPhotoInputSnapshot @out)
 		{
 			@out.MoveForward = raw.MoveForward;

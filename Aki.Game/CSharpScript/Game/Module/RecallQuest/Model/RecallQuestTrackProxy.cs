@@ -5,24 +5,24 @@ using CSharpScript.Game.Module.QuestNew.Model;
 
 namespace CSharpScript.Game.Module.RecallQuest.Model
 {
-	// Token: 0x02004F22 RID: 20258
+	// Token: 0x02003EEB RID: 16107
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RecallQuestTrackProxy : IQuestTrackSlot
 	{
-		// Token: 0x06033F28 RID: 212776 RVA: 0x00C2D0A0 File Offset: 0x00C2B2A0
+		// Token: 0x06028D96 RID: 167318 RVA: 0x00B7685C File Offset: 0x00B74A5C
 		public global::Quest GetTrack()
 		{
 			return this.RecallTrackQuest;
 		}
 
-		// Token: 0x06033F29 RID: 212777 RVA: 0x00C2D0A8 File Offset: 0x00C2B2A8
+		// Token: 0x06028D97 RID: 167319 RVA: 0x00B76864 File Offset: 0x00B74A64
 		public void SetTrack(global::Quest quest)
 		{
 			this.RecallTrackQuest = quest;
 		}
 
-		// Token: 0x06033F2A RID: 212778 RVA: 0x00C2D0B4 File Offset: 0x00C2B2B4
+		// Token: 0x06028D98 RID: 167320 RVA: 0x00B76870 File Offset: 0x00B74A70
 		[NullableContext(1)]
 		public unsafe bool Accept(global::Quest quest)
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return true;
 		}
 
-		// Token: 0x0401B997 RID: 113047
+		// Token: 0x0401636C RID: 90988
 		private global::Quest RecallTrackQuest;
 	}
 }

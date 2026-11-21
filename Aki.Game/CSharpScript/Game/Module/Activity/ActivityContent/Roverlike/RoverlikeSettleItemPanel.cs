@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006140 RID: 24896
+	// Token: 0x020050BE RID: 20670
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeSettleItemPanel : UiPanelBase, IRoverlikeSettleSelectablePanel
 	{
-		// Token: 0x0603EEEC RID: 257772 RVA: 0x00F33982 File Offset: 0x00F31B82
+		// Token: 0x06033BAC RID: 211884 RVA: 0x00E7A862 File Offset: 0x00E78A62
 		public void BindOnItemClick(Action<int, int> callback)
 		{
 			this.OnItemClick = callback;
 		}
 
-		// Token: 0x0603EEED RID: 257773 RVA: 0x00F3398C File Offset: 0x00F31B8C
+		// Token: 0x06033BAD RID: 211885 RVA: 0x00E7A86C File Offset: 0x00E78A6C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EEEE RID: 257774 RVA: 0x00F33A37 File Offset: 0x00F31C37
+		// Token: 0x06033BAE RID: 211886 RVA: 0x00E7A917 File Offset: 0x00E78B17
 		protected override void OnStart()
 		{
 			this.ItemLayout = new GenericLayout<RoverlikeEntrySmallGridItem, IRoverlikeEntrySmallGridData>(base.GetGridLayout(1), new Func<RoverlikeEntrySmallGridItem>(this.CreateItemGrid), null, false, true);
 		}
 
-		// Token: 0x0603EEEF RID: 257775 RVA: 0x00F33A5C File Offset: 0x00F31C5C
+		// Token: 0x06033BAF RID: 211887 RVA: 0x00E7A93C File Offset: 0x00E78B3C
 		public void Refresh(List<int> configIdList)
 		{
 			base.GetText(0).SetText(configIdList.Count.ToString(), true);
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EEF0 RID: 257776 RVA: 0x00F33B28 File Offset: 0x00F31D28
+		// Token: 0x06033BB0 RID: 211888 RVA: 0x00E7AA08 File Offset: 0x00E78C08
 		public void SelectByKey(int key)
 		{
 			GenericLayout<RoverlikeEntrySmallGridItem, IRoverlikeEntrySmallGridData> itemLayout = this.ItemLayout;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			itemLayout.SelectGridProxyByKey(key, false);
 		}
 
-		// Token: 0x0603EEF1 RID: 257777 RVA: 0x00F33B41 File Offset: 0x00F31D41
+		// Token: 0x06033BB1 RID: 211889 RVA: 0x00E7AA21 File Offset: 0x00E78C21
 		public void ClearSelect()
 		{
 			GenericLayout<RoverlikeEntrySmallGridItem, IRoverlikeEntrySmallGridData> itemLayout = this.ItemLayout;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			itemLayout.DeselectCurrentGridProxy();
 		}
 
-		// Token: 0x0603EEF2 RID: 257778 RVA: 0x00F33B53 File Offset: 0x00F31D53
+		// Token: 0x06033BB2 RID: 211890 RVA: 0x00E7AA33 File Offset: 0x00E78C33
 		private RoverlikeEntrySmallGridItem CreateItemGrid()
 		{
 			RoverlikeEntrySmallGridItem roverlikeEntrySmallGridItem = new RoverlikeEntrySmallGridItem();
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return roverlikeEntrySmallGridItem;
 		}
 
-		// Token: 0x0603EEF3 RID: 257779 RVA: 0x00F33B6C File Offset: 0x00F31D6C
+		// Token: 0x06033BB3 RID: 211891 RVA: 0x00E7AA4C File Offset: 0x00E78C4C
 		private void OnGridItemClick(IRoverlikeEntrySmallGridData data, int key)
 		{
 			Action<int, int> onItemClick = this.OnItemClick;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			onItemClick(data.ConfigId, key);
 		}
 
-		// Token: 0x04020D98 RID: 134552
+		// Token: 0x0401B6C5 RID: 112325
 		[Nullable(new byte[]
 		{
 			2,
@@ -125,24 +125,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeEntrySmallGridItem, IRoverlikeEntrySmallGridData> ItemLayout;
 
-		// Token: 0x04020D99 RID: 134553
+		// Token: 0x0401B6C6 RID: 112326
 		[Nullable(2)]
 		private Action<int, int> OnItemClick;
 
-		// Token: 0x0200C39C RID: 50076
+		// Token: 0x0200AD83 RID: 44419
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B074 RID: 241780
+			// Token: 0x040359D5 RID: 219605
 			public const int TxtNum = 0;
 
-			// Token: 0x0403B075 RID: 241781
+			// Token: 0x040359D6 RID: 219606
 			public const int LayoutItem = 1;
 
-			// Token: 0x0403B076 RID: 241782
+			// Token: 0x040359D7 RID: 219607
 			public const int SpoilsItem = 2;
 
-			// Token: 0x0403B077 RID: 241783
+			// Token: 0x040359D8 RID: 219608
 			public const int ItemEmpty = 3;
 		}
 	}

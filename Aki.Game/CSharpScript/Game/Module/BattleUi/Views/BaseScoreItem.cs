@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Battle;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DB5 RID: 23989
+	// Token: 0x02004D99 RID: 19865
 	public class BaseScoreItem : BattleChildView
 	{
-		// Token: 0x0603CF08 RID: 249608 RVA: 0x00EA46D4 File Offset: 0x00EA28D4
+		// Token: 0x06031E7F RID: 204415 RVA: 0x00DF55B0 File Offset: 0x00DF37B0
 		protected override void OnStart()
 		{
 			foreach (KeyValuePair<int, bool> keyValuePair in BattleScoreModel.Instance.GetScoreEnableMap())
@@ -27,14 +27,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<int, bool>(EEventName.BattleScoreEnableChanged, new Action<int, bool>(this.BattleScoreEnableChanged));
 		}
 
-		// Token: 0x0603CF09 RID: 249609 RVA: 0x00EA477C File Offset: 0x00EA297C
+		// Token: 0x06031E80 RID: 204416 RVA: 0x00DF5658 File Offset: 0x00DF3858
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleScoreChanged, new Action<int, int>(this.BattleScoreChanged));
 			EventSystem.Instance.Remove(EEventName.BattleScoreEnableChanged, new Action<int, bool>(this.BattleScoreEnableChanged));
 		}
 
-		// Token: 0x0603CF0A RID: 249610 RVA: 0x00EA47B6 File Offset: 0x00EA29B6
+		// Token: 0x06031E81 RID: 204417 RVA: 0x00DF5692 File Offset: 0x00DF3892
 		public virtual void OnShowFirstTime()
 		{
 			if (this.IsScoreEnable)
@@ -43,18 +43,18 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF0B RID: 249611 RVA: 0x00EA47C6 File Offset: 0x00EA29C6
+		// Token: 0x06031E82 RID: 204418 RVA: 0x00DF56A2 File Offset: 0x00DF38A2
 		public virtual void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x0603CF0C RID: 249612 RVA: 0x00EA47C8 File Offset: 0x00EA29C8
+		// Token: 0x06031E83 RID: 204419 RVA: 0x00DF56A4 File Offset: 0x00DF38A4
 		public virtual bool IsValidScore(int scoreId)
 		{
 			return false;
 		}
 
-		// Token: 0x0603CF0D RID: 249613 RVA: 0x00EA47CB File Offset: 0x00EA29CB
+		// Token: 0x06031E84 RID: 204420 RVA: 0x00DF56A7 File Offset: 0x00DF38A7
 		private void BattleScoreChanged(int scoreId, int score)
 		{
 			if (!this.IsValidScore(scoreId))
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnBattleScoreChanged(scoreId, score);
 		}
 
-		// Token: 0x0603CF0E RID: 249614 RVA: 0x00EA47DF File Offset: 0x00EA29DF
+		// Token: 0x06031E85 RID: 204421 RVA: 0x00DF56BB File Offset: 0x00DF38BB
 		private void BattleScoreEnableChanged(int scoreId, bool enable)
 		{
 			if (!this.IsValidScore(scoreId))
@@ -74,12 +74,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnBattleScoreEnableChanged(scoreId, enable);
 		}
 
-		// Token: 0x0603CF0F RID: 249615 RVA: 0x00EA47F3 File Offset: 0x00EA29F3
+		// Token: 0x06031E86 RID: 204422 RVA: 0x00DF56CF File Offset: 0x00DF38CF
 		protected virtual void OnBattleScoreChanged(int scoreId, int score)
 		{
 		}
 
-		// Token: 0x0603CF10 RID: 249616 RVA: 0x00EA47F5 File Offset: 0x00EA29F5
+		// Token: 0x06031E87 RID: 204423 RVA: 0x00DF56D1 File Offset: 0x00DF38D1
 		protected virtual void OnBattleScoreEnableChanged(int scoreId, bool enable)
 		{
 			if (this.IsScoreEnable == enable)
@@ -95,19 +95,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HideScore();
 		}
 
-		// Token: 0x0603CF11 RID: 249617 RVA: 0x00EA4818 File Offset: 0x00EA2A18
+		// Token: 0x06031E88 RID: 204424 RVA: 0x00DF56F4 File Offset: 0x00DF38F4
 		public virtual void ShowScore()
 		{
 			this.IsScoreEnable = true;
 		}
 
-		// Token: 0x0603CF12 RID: 249618 RVA: 0x00EA4821 File Offset: 0x00EA2A21
+		// Token: 0x06031E89 RID: 204425 RVA: 0x00DF56FD File Offset: 0x00DF38FD
 		public virtual void HideScore()
 		{
 			this.IsScoreEnable = false;
 		}
 
-		// Token: 0x0401FBCD RID: 129997
+		// Token: 0x0401A68A RID: 108170
 		public bool IsScoreEnable;
 	}
 }

@@ -14,14 +14,14 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x0200268B RID: 9867
+// Token: 0x02001B76 RID: 7030
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class QuestTreeController : ControllerBase
 {
-	// Token: 0x17001A17 RID: 6679
-	// (get) Token: 0x060143B3 RID: 82867 RVA: 0x0051D694 File Offset: 0x0051B894
+	// Token: 0x17001A4F RID: 6735
+	// (get) Token: 0x06011895 RID: 71829 RVA: 0x0052C3CC File Offset: 0x0052A5CC
 	public bool IsGmSetAllNodeFinish
 	{
 		get
@@ -32,13 +32,13 @@ public class QuestTreeController : ControllerBase
 		}
 	}
 
-	// Token: 0x060143B4 RID: 82868 RVA: 0x0051D6B1 File Offset: 0x0051B8B1
+	// Token: 0x06011896 RID: 71830 RVA: 0x0052C3E9 File Offset: 0x0052A5E9
 	public void OpenMainView()
 	{
 		UiManager.Instance.OpenView(EUiViewName.QuestTreeMainView, null, null);
 	}
 
-	// Token: 0x060143B5 RID: 82869 RVA: 0x0051D6C4 File Offset: 0x0051B8C4
+	// Token: 0x06011897 RID: 71831 RVA: 0x0052C3FC File Offset: 0x0052A5FC
 	public void OpenChapterView(int chapterId, int? id)
 	{
 		QuestTreeChapterViewParam param = new QuestTreeChapterViewParam
@@ -49,7 +49,7 @@ public class QuestTreeController : ControllerBase
 		UiManager.Instance.OpenView(EUiViewName.QuestTreeChapterView, param, null);
 	}
 
-	// Token: 0x060143B6 RID: 82870 RVA: 0x0051D6F8 File Offset: 0x0051B8F8
+	// Token: 0x06011898 RID: 71832 RVA: 0x0052C430 File Offset: 0x0052A630
 	public void OpenNodeDetailView(QuestTreeNodeData node)
 	{
 		QuestTreeNodeDetailView questTreeNodeDetailView = UiManager.Instance.GetViewByName(EUiViewName.QuestTreeNodeDetailView) as QuestTreeNodeDetailView;
@@ -60,19 +60,19 @@ public class QuestTreeController : ControllerBase
 		UiManager.Instance.OpenView(EUiViewName.QuestTreeNodeDetailView, node, null);
 	}
 
-	// Token: 0x060143B7 RID: 82871 RVA: 0x0051D735 File Offset: 0x0051B935
+	// Token: 0x06011899 RID: 71833 RVA: 0x0052C46D File Offset: 0x0052A66D
 	public void CloseNodeDetailView()
 	{
 		UiManager.Instance.CloseView(EUiViewName.QuestTreeNodeDetailView, null);
 	}
 
-	// Token: 0x060143B8 RID: 82872 RVA: 0x0051D747 File Offset: 0x0051B947
+	// Token: 0x0601189A RID: 71834 RVA: 0x0052C47F File Offset: 0x0052A67F
 	public void OpenAvailableListView(List<QuestTreeNodeData> data)
 	{
 		UiManager.Instance.OpenView(EUiViewName.QuestTreeAvailableListView, data, null);
 	}
 
-	// Token: 0x060143B9 RID: 82873 RVA: 0x0051D75C File Offset: 0x0051B95C
+	// Token: 0x0601189B RID: 71835 RVA: 0x0052C494 File Offset: 0x0052A694
 	public void TrackNode(QuestTreeNodeData node, bool gotoAfterTrack = true)
 	{
 		int questId = node.QuestId;
@@ -99,19 +99,19 @@ public class QuestTreeController : ControllerBase
 		}
 	}
 
-	// Token: 0x060143BA RID: 82874 RVA: 0x0051D7E2 File Offset: 0x0051B9E2
+	// Token: 0x0601189C RID: 71836 RVA: 0x0052C51A File Offset: 0x0052A71A
 	public bool GotoNode(QuestTreeNodeData node)
 	{
 		return this.GotoNodeByQuestId(node.QuestId);
 	}
 
-	// Token: 0x060143BB RID: 82875 RVA: 0x0051D7F0 File Offset: 0x0051B9F0
+	// Token: 0x0601189D RID: 71837 RVA: 0x0052C528 File Offset: 0x0052A728
 	public bool GotoNodeNyQuestId(int questId)
 	{
 		return this.GotoNodeByQuestId(questId);
 	}
 
-	// Token: 0x060143BC RID: 82876 RVA: 0x0051D7FC File Offset: 0x0051B9FC
+	// Token: 0x0601189E RID: 71838 RVA: 0x0052C534 File Offset: 0x0052A734
 	public bool GotoNodeByQuestId(int questId)
 	{
 		global::Quest quest = QuestNewModel.Instance.GetQuest(questId);
@@ -176,7 +176,7 @@ public class QuestTreeController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x060143BD RID: 82877 RVA: 0x0051DA10 File Offset: 0x0051BC10
+	// Token: 0x0601189F RID: 71839 RVA: 0x0052C748 File Offset: 0x0052A948
 	public void CancelTrackNode(QuestTreeNodeData node)
 	{
 		QuestNewController.Instance.RequestTrackQuest(node.QuestId, false, ERequestTrackOperate.Manual, ESetTrackReason.None, delegate
@@ -185,7 +185,7 @@ public class QuestTreeController : ControllerBase
 		});
 	}
 
-	// Token: 0x060143BE RID: 82878 RVA: 0x0051DA50 File Offset: 0x0051BC50
+	// Token: 0x060118A0 RID: 71840 RVA: 0x0052C788 File Offset: 0x0052A988
 	public void TrackOrGotoNode(QuestTreeNodeData node)
 	{
 		QuestNewModel instance = QuestNewModel.Instance;
@@ -331,13 +331,13 @@ public class QuestTreeController : ControllerBase
 		this.TrackNode(node, true);
 	}
 
-	// Token: 0x060143BF RID: 82879 RVA: 0x0051DC4C File Offset: 0x0051BE4C
+	// Token: 0x060118A1 RID: 71841 RVA: 0x0052C984 File Offset: 0x0052AB84
 	public int? TryAddMapMarkForNode(QuestTreeNodeData node)
 	{
 		return this.TryAddMapMarkForQuestId(node.QuestId);
 	}
 
-	// Token: 0x060143C0 RID: 82880 RVA: 0x0051DC5C File Offset: 0x0051BE5C
+	// Token: 0x060118A2 RID: 71842 RVA: 0x0052C994 File Offset: 0x0052AB94
 	public int? TryAddMapMarkForQuestId(int questId)
 	{
 		IQuest questConfig = QuestNewModel.Instance.GetQuestConfig(questId);
@@ -381,7 +381,7 @@ public class QuestTreeController : ControllerBase
 		return new int?(value);
 	}
 
-	// Token: 0x060143C1 RID: 82881 RVA: 0x0051DDC0 File Offset: 0x0051BFC0
+	// Token: 0x060118A3 RID: 71843 RVA: 0x0052CAF8 File Offset: 0x0052ACF8
 	public void JumpToQuest(int questId)
 	{
 		QuestTreeNodeData nodeDataFromQuestId = QuestTreeModel.Instance.GetNodeDataFromQuestId(questId);
@@ -444,7 +444,7 @@ public class QuestTreeController : ControllerBase
 		this.JumpToQuestOutOfThisChapter(nodeDataFromQuestId).Forget();
 	}
 
-	// Token: 0x060143C2 RID: 82882 RVA: 0x0051DF44 File Offset: 0x0051C144
+	// Token: 0x060118A4 RID: 71844 RVA: 0x0052CC7C File Offset: 0x0052AE7C
 	private UniTask JumpToQuestOutOfThisChapter(QuestTreeNodeData node)
 	{
 		QuestTreeController.<JumpToQuestOutOfThisChapter>d__16 <JumpToQuestOutOfThisChapter>d__;
@@ -456,21 +456,21 @@ public class QuestTreeController : ControllerBase
 		return <JumpToQuestOutOfThisChapter>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060143C3 RID: 82883 RVA: 0x0051DF8F File Offset: 0x0051C18F
+	// Token: 0x060118A5 RID: 71845 RVA: 0x0052CCC7 File Offset: 0x0052AEC7
 	public void GmSetAllNodeFinish()
 	{
 		UKuroVariableFunctionLibrary.RemoveBoolValue("Gm_QuestTreeNode_Finish");
 		UKuroVariableFunctionLibrary.SetBoolValue("Gm_QuestTreeNode_Finish", true);
 	}
 
-	// Token: 0x060143C4 RID: 82884 RVA: 0x0051DFA8 File Offset: 0x0051C1A8
+	// Token: 0x060118A6 RID: 71846 RVA: 0x0052CCE0 File Offset: 0x0052AEE0
 	public void GmResetAllNodeFinish()
 	{
 		UKuroVariableFunctionLibrary.RemoveBoolValue("Gm_QuestTreeNode_Finish");
 		UKuroVariableFunctionLibrary.SetBoolValue("Gm_QuestTreeNode_Finish", false);
 	}
 
-	// Token: 0x060143C5 RID: 82885 RVA: 0x0051DFC1 File Offset: 0x0051C1C1
+	// Token: 0x060118A7 RID: 71847 RVA: 0x0052CCF9 File Offset: 0x0052AEF9
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.TsHandleQuestTreeNodeResponse, new Action<int, int>(this.OnTsHandleQuestTreeNodeResponse));
@@ -478,7 +478,7 @@ public class QuestTreeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060143C6 RID: 82886 RVA: 0x0051DFFC File Offset: 0x0051C1FC
+	// Token: 0x060118A8 RID: 71848 RVA: 0x0052CD34 File Offset: 0x0052AF34
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove(EEventName.TsHandleQuestTreeNodeResponse, new Action<int, int>(this.OnTsHandleQuestTreeNodeResponse));
@@ -486,7 +486,7 @@ public class QuestTreeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060143C7 RID: 82887 RVA: 0x0051E02C File Offset: 0x0051C22C
+	// Token: 0x060118A9 RID: 71849 RVA: 0x0052CD64 File Offset: 0x0052AF64
 	[NullableContext(2)]
 	private void OnQuestTreeInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -502,7 +502,7 @@ public class QuestTreeController : ControllerBase
 		}
 	}
 
-	// Token: 0x060143C8 RID: 82888 RVA: 0x0051E0B0 File Offset: 0x0051C2B0
+	// Token: 0x060118AA RID: 71850 RVA: 0x0052CDE8 File Offset: 0x0052AFE8
 	private void OnTsHandleQuestTreeNodeResponse(int type, int nodeId)
 	{
 		QuestTreeNodeData nodeDataFromNodeId = QuestTreeModel.Instance.GetNodeDataFromNodeId(nodeId);
@@ -537,7 +537,7 @@ public class QuestTreeController : ControllerBase
 		}
 	}
 
-	// Token: 0x060143C9 RID: 82889 RVA: 0x0051E160 File Offset: 0x0051C360
+	// Token: 0x060118AB RID: 71851 RVA: 0x0052CE98 File Offset: 0x0052B098
 	public void ReportClickNode(QuestTreeNodeData node)
 	{
 		QuestTreeClickLogEvent questTreeClickLogEvent = new QuestTreeClickLogEvent();
@@ -548,7 +548,7 @@ public class QuestTreeController : ControllerBase
 		LogReportController.Instance.LogReport(questTreeClickLogEvent);
 	}
 
-	// Token: 0x060143CA RID: 82890 RVA: 0x0051E1B8 File Offset: 0x0051C3B8
+	// Token: 0x060118AC RID: 71852 RVA: 0x0052CEF0 File Offset: 0x0052B0F0
 	public void ReportJump(QuestTreeNodeData node, EQuestTreeLogReportJumpMotion motion)
 	{
 		QuestTreeJumpLogEvent questTreeJumpLogEvent = new QuestTreeJumpLogEvent();
@@ -560,8 +560,8 @@ public class QuestTreeController : ControllerBase
 		LogReportController.Instance.LogReport(questTreeJumpLogEvent);
 	}
 
-	// Token: 0x17001A18 RID: 6680
-	// (get) Token: 0x060143CB RID: 82891 RVA: 0x0051E215 File Offset: 0x0051C415
+	// Token: 0x17001A50 RID: 6736
+	// (get) Token: 0x060118AD RID: 71853 RVA: 0x0052CF4D File Offset: 0x0052B14D
 	public static QuestTreeController Instance
 	{
 		get
@@ -570,7 +570,7 @@ public class QuestTreeController : ControllerBase
 		}
 	}
 
-	// Token: 0x060143CC RID: 82892 RVA: 0x0051E21C File Offset: 0x0051C41C
+	// Token: 0x060118AE RID: 71854 RVA: 0x0052CF54 File Offset: 0x0052B154
 	public static QuestTreeController GetOrCreateInstance()
 	{
 		if (QuestTreeController._Instance == null)
@@ -580,7 +580,7 @@ public class QuestTreeController : ControllerBase
 		return QuestTreeController._Instance;
 	}
 
-	// Token: 0x060143CD RID: 82893 RVA: 0x0051E230 File Offset: 0x0051C430
+	// Token: 0x060118AF RID: 71855 RVA: 0x0052CF68 File Offset: 0x0052B168
 	public static bool CreateInstance()
 	{
 		if (QuestTreeController._Instance != null)
@@ -591,24 +591,24 @@ public class QuestTreeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060143CE RID: 82894 RVA: 0x0051E246 File Offset: 0x0051C446
+	// Token: 0x060118B0 RID: 71856 RVA: 0x0052CF7E File Offset: 0x0052B17E
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060143CF RID: 82895 RVA: 0x0051E248 File Offset: 0x0051C448
+	// Token: 0x060118B1 RID: 71857 RVA: 0x0052CF80 File Offset: 0x0052B180
 	public static void ResetStaticDefaultValue()
 	{
 		QuestTreeController._Instance = null;
 	}
 
-	// Token: 0x060143D0 RID: 82896 RVA: 0x0051E250 File Offset: 0x0051C450
+	// Token: 0x060118B2 RID: 71858 RVA: 0x0052CF88 File Offset: 0x0052B188
 	static QuestTreeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(QuestTreeController.CreateStaticDefaultValue), new Action(QuestTreeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009827 RID: 38951
+	// Token: 0x0400997F RID: 39295
 	[Nullable(2)]
 	private static QuestTreeController _Instance;
 }

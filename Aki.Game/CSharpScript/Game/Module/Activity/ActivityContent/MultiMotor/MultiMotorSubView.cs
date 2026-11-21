@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x020063A1 RID: 25505
+	// Token: 0x0200531F RID: 21279
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MultiMotorSubView : ActivitySubViewBase
 	{
-		// Token: 0x06040256 RID: 262742 RVA: 0x00F87C10 File Offset: 0x00F85E10
+		// Token: 0x06034F17 RID: 216855 RVA: 0x00ECEB48 File Offset: 0x00ECCD48
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040257 RID: 262743 RVA: 0x00F87E04 File Offset: 0x00F86004
+		// Token: 0x06034F18 RID: 216856 RVA: 0x00ECED3C File Offset: 0x00ECCF3C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MultiMotorSubView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -67,12 +67,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040258 RID: 262744 RVA: 0x00F87E47 File Offset: 0x00F86047
+		// Token: 0x06034F19 RID: 216857 RVA: 0x00ECED7F File Offset: 0x00ECCF7F
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06040259 RID: 262745 RVA: 0x00F87E4C File Offset: 0x00F8604C
+		// Token: 0x06034F1A RID: 216858 RVA: 0x00ECED84 File Offset: 0x00ECCF84
 		protected override void OnRefreshView()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.RefreshRewardText();
 		}
 
-		// Token: 0x0604025A RID: 262746 RVA: 0x00F87EA8 File Offset: 0x00F860A8
+		// Token: 0x06034F1B RID: 216859 RVA: 0x00ECEDE0 File Offset: 0x00ECCFE0
 		private void RefreshRecommendQuestTips()
 		{
 			bool flag = this.IsShowPreOpenTips();
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x0604025B RID: 262747 RVA: 0x00F87EE8 File Offset: 0x00F860E8
+		// Token: 0x06034F1C RID: 216860 RVA: 0x00ECEE20 File Offset: 0x00ECD020
 		private bool IsShowPreOpenTips()
 		{
 			int num = this.ActivityBaseData.IsUnLock() ? 1 : 0;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return num == 0 && flag;
 		}
 
-		// Token: 0x0604025C RID: 262748 RVA: 0x00F87F14 File Offset: 0x00F86114
+		// Token: 0x06034F1D RID: 216861 RVA: 0x00ECEE4C File Offset: 0x00ECD04C
 		private void RefreshLevelCount()
 		{
 			MultiMotorData multiMotorData = this.ActivityBaseData as MultiMotorData;
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			text2.SetText("/" + multiMotorData.TotalLevelCount.ToString(), true);
 		}
 
-		// Token: 0x0604025D RID: 262749 RVA: 0x00F87F78 File Offset: 0x00F86178
+		// Token: 0x06034F1E RID: 216862 RVA: 0x00ECEEB0 File Offset: 0x00ECD0B0
 		private void RefreshRewardRedDot()
 		{
 			MultiMotorData multiMotorData = this.ActivityBaseData as MultiMotorData;
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			item.SetUIActive(multiMotorData != null && multiMotorData.HasAnyRewardRedDot);
 		}
 
-		// Token: 0x0604025E RID: 262750 RVA: 0x00F87FB0 File Offset: 0x00F861B0
+		// Token: 0x06034F1F RID: 216863 RVA: 0x00ECEEE8 File Offset: 0x00ECD0E8
 		private void RefreshRewardText()
 		{
 			MultiMotorData multiMotorData = this.ActivityBaseData as MultiMotorData;
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(10), "MultRacing_RewardTotalAmount", new <>z__ReadOnlySingleElementList<object>(num.ToString()));
 		}
 
-		// Token: 0x0604025F RID: 262751 RVA: 0x00F88074 File Offset: 0x00F86274
+		// Token: 0x06034F20 RID: 216864 RVA: 0x00ECEFAC File Offset: 0x00ECD1AC
 		private void RefreshDesc()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.DescriptionComponent.SetContentByTextId(desc, Array.Empty<string>());
 		}
 
-		// Token: 0x06040260 RID: 262752 RVA: 0x00F880EC File Offset: 0x00F862EC
+		// Token: 0x06034F21 RID: 216865 RVA: 0x00ECF024 File Offset: 0x00ECD224
 		private void RefreshTitle()
 		{
 			this.TitleComponent.SetActivityBaseData(this.ActivityBaseData);
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x06040261 RID: 262753 RVA: 0x00F88150 File Offset: 0x00F86350
+		// Token: 0x06034F22 RID: 216866 RVA: 0x00ECF088 File Offset: 0x00ECD288
 		private void RefreshReward()
 		{
 			List<TItem> previewReward = this.ActivityBaseData.GetPreviewReward(null);
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.RewardListComponent.RefreshItemLayout(previewReward, null);
 		}
 
-		// Token: 0x06040262 RID: 262754 RVA: 0x00F88190 File Offset: 0x00F86390
+		// Token: 0x06034F23 RID: 216867 RVA: 0x00ECF0C8 File Offset: 0x00ECD2C8
 		private void RefreshFunctionalComponent()
 		{
 			string localTextNew = ConfigMultiTextLang.GetLocalTextNew("BossRushEnterText", null);
@@ -211,14 +211,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.FunctionalComponent.SetFunctionRedDotVisible(flag && (multiMotorData.HasAnyLevelRedDot || multiMotorData.HasAnyRewardRedDot));
 		}
 
-		// Token: 0x06040263 RID: 262755 RVA: 0x00F881FB File Offset: 0x00F863FB
+		// Token: 0x06034F24 RID: 216868 RVA: 0x00ECF133 File Offset: 0x00ECD333
 		protected override void OnTimer(float gap)
 		{
 			base.OnTimer(gap);
 			this.RefreshTitle();
 		}
 
-		// Token: 0x06040264 RID: 262756 RVA: 0x00F8820A File Offset: 0x00F8640A
+		// Token: 0x06034F25 RID: 216869 RVA: 0x00ECF142 File Offset: 0x00ECD342
 		private void FunctionExecute()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			});
 		}
 
-		// Token: 0x06040265 RID: 262757 RVA: 0x00F88228 File Offset: 0x00F86428
+		// Token: 0x06034F26 RID: 216870 RVA: 0x00ECF160 File Offset: 0x00ECD360
 		private void OnClickBtnReward()
 		{
 			MultiMotorData multiMotorData = this.ActivityBaseData as MultiMotorData;
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x06040266 RID: 262758 RVA: 0x00F8827C File Offset: 0x00F8647C
+		// Token: 0x06034F27 RID: 216871 RVA: 0x00ECF1B4 File Offset: 0x00ECD3B4
 		private void RefreshState()
 		{
 			UUIItem item = base.GetItem(3);
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			text.SetUIActive(flag);
 		}
 
-		// Token: 0x06040267 RID: 262759 RVA: 0x00F8832C File Offset: 0x00F8652C
+		// Token: 0x06034F28 RID: 216872 RVA: 0x00ECF264 File Offset: 0x00ECD464
 		private void OnRecommendBtnClick()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("MultiMotorPreQuestId");
@@ -295,13 +295,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			UiManager.Instance.OpenView(EUiViewName.QuestView, intConfig, null);
 		}
 
-		// Token: 0x040216B9 RID: 136889
+		// Token: 0x0401BFE8 RID: 114664
 		private ActivityTitleTypeA TitleComponent;
 
-		// Token: 0x040216BA RID: 136890
+		// Token: 0x0401BFE9 RID: 114665
 		private ActivityDescriptionTypeA DescriptionComponent;
 
-		// Token: 0x040216BB RID: 136891
+		// Token: 0x0401BFEA RID: 114666
 		[Nullable(new byte[]
 		{
 			2,
@@ -309,50 +309,50 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 		})]
 		private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-		// Token: 0x040216BC RID: 136892
+		// Token: 0x0401BFEB RID: 114667
 		private ActivityFunctionalTypeA FunctionalComponent;
 
-		// Token: 0x040216BD RID: 136893
+		// Token: 0x0401BFEC RID: 114668
 		private RecommendQuestTipsSubPanel RecommendQuestTipsSubPanelInst;
 
-		// Token: 0x0200C5BE RID: 50622
+		// Token: 0x0200AFA5 RID: 44965
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BB47 RID: 244551
+			// Token: 0x040364A6 RID: 222374
 			public const int TitleItem = 0;
 
-			// Token: 0x0403BB48 RID: 244552
+			// Token: 0x040364A7 RID: 222375
 			public const int DescItem = 1;
 
-			// Token: 0x0403BB49 RID: 244553
+			// Token: 0x040364A8 RID: 222376
 			public const int RewardItem = 2;
 
-			// Token: 0x0403BB4A RID: 244554
+			// Token: 0x040364A9 RID: 222377
 			public const int FunctionalAreaItem = 3;
 
-			// Token: 0x0403BB4B RID: 244555
+			// Token: 0x040364AA RID: 222378
 			public const int RewardBtn = 4;
 
-			// Token: 0x0403BB4C RID: 244556
+			// Token: 0x040364AB RID: 222379
 			public const int FinishLevelText = 5;
 
-			// Token: 0x0403BB4D RID: 244557
+			// Token: 0x040364AC RID: 222380
 			public const int MaxLevelText = 6;
 
-			// Token: 0x0403BB4E RID: 244558
+			// Token: 0x040364AD RID: 222381
 			public const int RewardRedDotItem = 7;
 
-			// Token: 0x0403BB4F RID: 244559
+			// Token: 0x040364AE RID: 222382
 			public const int PreOpenTipsItem = 8;
 
-			// Token: 0x0403BB50 RID: 244560
+			// Token: 0x040364AF RID: 222383
 			public const int RewardBtnText1 = 9;
 
-			// Token: 0x0403BB51 RID: 244561
+			// Token: 0x040364B0 RID: 222384
 			public const int RewardBtnText2 = 10;
 
-			// Token: 0x0403BB52 RID: 244562
+			// Token: 0x040364B1 RID: 222385
 			public const int FinishLevelItem = 11;
 		}
 	}

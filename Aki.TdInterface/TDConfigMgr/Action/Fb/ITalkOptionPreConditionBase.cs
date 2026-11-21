@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002509 RID: 9481
+	// Token: 0x020027AF RID: 10159
 	public class ITalkOptionPreConditionBase
 	{
-		// Token: 0x0600D389 RID: 54153 RVA: 0x001F59CA File Offset: 0x001F3BCA
-		[NullableContext(1)]
+		// Token: 0x0600E0E5 RID: 57573 RVA: 0x002113C2 File Offset: 0x0020F5C2
 		public static ITalkOptionPreConditionBase Create(ITalkOptionPreConditionBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B39 RID: 15161
-		// (get) Token: 0x0600D38A RID: 54154 RVA: 0x001F59E9 File Offset: 0x001F3BE9
+		// Token: 0x17003E35 RID: 15925
+		// (get) Token: 0x0600E0E6 RID: 57574 RVA: 0x002113E1 File Offset: 0x0020F5E1
 		public virtual ETalkOptionPreConditionType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073F5 RID: 29685
+		// Token: 0x04007A47 RID: 31303
 		private ITalkOptionPreConditionBase Instance;
 	}
 }

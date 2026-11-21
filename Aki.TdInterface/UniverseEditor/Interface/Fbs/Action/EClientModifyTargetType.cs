@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F3D RID: 24381
+	// Token: 0x02006582 RID: 25986
 	public enum EClientModifyTargetType : byte
 	{
-		// Token: 0x0400FC9A RID: 64666
+		// Token: 0x04010A13 RID: 68115
 		Self,
-		// Token: 0x0400FC9B RID: 64667
+		// Token: 0x04010A14 RID: 68116
 		Player
 	}
 }

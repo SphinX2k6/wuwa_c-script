@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002A72 RID: 10866
+// Token: 0x02001FED RID: 8173
 public class QuestStateConditionImpl : ISkipQuestStateCondition, ISkipCondition<ESkipConditionType>
 {
-	// Token: 0x17001E0F RID: 7695
-	// (get) Token: 0x06016A17 RID: 92695 RVA: 0x005BC1F0 File Offset: 0x005BA3F0
-	// (set) Token: 0x06016A18 RID: 92696 RVA: 0x005BC1F8 File Offset: 0x005BA3F8
+	// Token: 0x17001E67 RID: 7783
+	// (get) Token: 0x06014438 RID: 83000 RVA: 0x005E8378 File Offset: 0x005E6578
+	// (set) Token: 0x06014439 RID: 83001 RVA: 0x005E8380 File Offset: 0x005E6580
 	public ESkipConditionType ConditionType { get; set; }
 
-	// Token: 0x17001E10 RID: 7696
-	// (get) Token: 0x06016A19 RID: 92697 RVA: 0x005BC201 File Offset: 0x005BA401
-	// (set) Token: 0x06016A1A RID: 92698 RVA: 0x005BC209 File Offset: 0x005BA409
+	// Token: 0x17001E68 RID: 7784
+	// (get) Token: 0x0601443A RID: 83002 RVA: 0x005E8389 File Offset: 0x005E6589
+	// (set) Token: 0x0601443B RID: 83003 RVA: 0x005E8391 File Offset: 0x005E6591
 	public int QuestId { get; set; }
 
-	// Token: 0x17001E11 RID: 7697
-	// (get) Token: 0x06016A1B RID: 92699 RVA: 0x005BC212 File Offset: 0x005BA412
-	// (set) Token: 0x06016A1C RID: 92700 RVA: 0x005BC21A File Offset: 0x005BA41A
+	// Token: 0x17001E69 RID: 7785
+	// (get) Token: 0x0601443C RID: 83004 RVA: 0x005E839A File Offset: 0x005E659A
+	// (set) Token: 0x0601443D RID: 83005 RVA: 0x005E83A2 File Offset: 0x005E65A2
 	public ESkipQuestState CheckQuestState { get; set; }
 }

@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002546 RID: 9542
+// Token: 0x02001A31 RID: 6705
 [NullableContext(2)]
 [Nullable(0)]
 public class PhoneSystemTopic : UiPanelBase
 {
-	// Token: 0x06013375 RID: 78709 RVA: 0x004C6CB4 File Offset: 0x004C4EB4
+	// Token: 0x06010854 RID: 67668 RVA: 0x004D581C File Offset: 0x004D3A1C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -47,7 +47,7 @@ public class PhoneSystemTopic : UiPanelBase
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x06013376 RID: 78710 RVA: 0x004C6F10 File Offset: 0x004C5110
+	// Token: 0x06010855 RID: 67669 RVA: 0x004D5A78 File Offset: 0x004D3C78
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhoneSystemTopic.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -58,7 +58,7 @@ public class PhoneSystemTopic : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013377 RID: 78711 RVA: 0x004C6F54 File Offset: 0x004C5154
+	// Token: 0x06010856 RID: 67670 RVA: 0x004D5ABC File Offset: 0x004D3CBC
 	[NullableContext(1)]
 	public void SetChatBg(string chatBgPath)
 	{
@@ -66,7 +66,7 @@ public class PhoneSystemTopic : UiPanelBase
 		base.SetTextureByPath(chatBgPath, texture, null, null);
 	}
 
-	// Token: 0x06013378 RID: 78712 RVA: 0x004C6F7C File Offset: 0x004C517C
+	// Token: 0x06010857 RID: 67671 RVA: 0x004D5AE4 File Offset: 0x004D3CE4
 	public void SetSpineByCharmId(int charmId)
 	{
 		ChatCharm? chatCharmConfig = PhoneMsgConfig.Instance.GetChatCharmConfig(charmId);
@@ -127,7 +127,7 @@ public class PhoneSystemTopic : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013379 RID: 78713 RVA: 0x004C7050 File Offset: 0x004C5250
+	// Token: 0x06010858 RID: 67672 RVA: 0x004D5BB8 File Offset: 0x004D3DB8
 	[NullableContext(1)]
 	private UniTask CreateCharmAndPlayAsync(string spinepre, UUIItem petItem, int charmId)
 	{
@@ -142,7 +142,7 @@ public class PhoneSystemTopic : UiPanelBase
 		return <CreateCharmAndPlayAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601337A RID: 78714 RVA: 0x004C70AB File Offset: 0x004C52AB
+	// Token: 0x06010859 RID: 67673 RVA: 0x004D5C13 File Offset: 0x004D3E13
 	public void TriggerCharmInteract()
 	{
 		PhoneSystemCharm charmPanel = this.CharmPanel;
@@ -153,7 +153,7 @@ public class PhoneSystemTopic : UiPanelBase
 		charmPanel.TriggerInteract();
 	}
 
-	// Token: 0x0601337B RID: 78715 RVA: 0x004C70C0 File Offset: 0x004C52C0
+	// Token: 0x0601085A RID: 67674 RVA: 0x004D5C28 File Offset: 0x004D3E28
 	protected override void OnBeforeDestroy()
 	{
 		PhoneSystemCharm charmPanel = this.CharmPanel;
@@ -176,7 +176,7 @@ public class PhoneSystemTopic : UiPanelBase
 		this.title2SeqPlayer = null;
 	}
 
-	// Token: 0x0601337C RID: 78716 RVA: 0x004C7118 File Offset: 0x004C5318
+	// Token: 0x0601085B RID: 67675 RVA: 0x004D5C80 File Offset: 0x004D3E80
 	public void RefreshThemeId(int themeId)
 	{
 		ChatTheme? chatThemeConfig = PhoneMsgConfig.Instance.GetChatThemeConfig(themeId);
@@ -351,7 +351,7 @@ public class PhoneSystemTopic : UiPanelBase
 		texture5.SetUIActive(!flag);
 	}
 
-	// Token: 0x0601337D RID: 78717 RVA: 0x004C7604 File Offset: 0x004C5804
+	// Token: 0x0601085C RID: 67676 RVA: 0x004D616C File Offset: 0x004D436C
 	[NullableContext(1)]
 	private UniTask CreateTitle1AndPlayAsync(string prefabPath, UUIItem parentItem)
 	{
@@ -365,7 +365,7 @@ public class PhoneSystemTopic : UiPanelBase
 		return <CreateTitle1AndPlayAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601337E RID: 78718 RVA: 0x004C7658 File Offset: 0x004C5858
+	// Token: 0x0601085D RID: 67677 RVA: 0x004D61C0 File Offset: 0x004D43C0
 	[NullableContext(1)]
 	private UniTask CreateTitle2AndPlayAsync(string prefabPath, UUIItem parentItem)
 	{
@@ -379,7 +379,7 @@ public class PhoneSystemTopic : UiPanelBase
 		return <CreateTitle2AndPlayAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601337F RID: 78719 RVA: 0x004C76AC File Offset: 0x004C58AC
+	// Token: 0x0601085E RID: 67678 RVA: 0x004D6214 File Offset: 0x004D4414
 	private void SetTopicTexture(int themeId)
 	{
 		ChatTheme? chatThemeConfig = PhoneMsgConfig.Instance.GetChatThemeConfig(themeId);
@@ -425,106 +425,106 @@ public class PhoneSystemTopic : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400911B RID: 37147
+	// Token: 0x04009274 RID: 37492
 	public SettingPanelChatItem LeftChatItem;
 
-	// Token: 0x0400911C RID: 37148
+	// Token: 0x04009275 RID: 37493
 	public SettingPanelChatRightItem RightChatItem;
 
-	// Token: 0x0400911D RID: 37149
+	// Token: 0x04009276 RID: 37494
 	private PhoneSystemCharm CharmPanel;
 
-	// Token: 0x0400911E RID: 37150
+	// Token: 0x04009277 RID: 37495
 	private string charmPrepath = "";
 
-	// Token: 0x0400911F RID: 37151
+	// Token: 0x04009278 RID: 37496
 	private UiPanelBase title1pre;
 
-	// Token: 0x04009120 RID: 37152
+	// Token: 0x04009279 RID: 37497
 	private UiPanelBase title2pre;
 
-	// Token: 0x04009121 RID: 37153
+	// Token: 0x0400927A RID: 37498
 	private UiPanelBase leftchatpre;
 
-	// Token: 0x04009122 RID: 37154
+	// Token: 0x0400927B RID: 37499
 	private UiPanelBase rightchatpre;
 
-	// Token: 0x04009123 RID: 37155
+	// Token: 0x0400927C RID: 37500
 	[Nullable(1)]
 	private string title1prepath = "";
 
-	// Token: 0x04009124 RID: 37156
+	// Token: 0x0400927D RID: 37501
 	private string title2prepath = "";
 
-	// Token: 0x04009125 RID: 37157
+	// Token: 0x0400927E RID: 37502
 	private string leftchatprepath = "";
 
-	// Token: 0x04009126 RID: 37158
+	// Token: 0x0400927F RID: 37503
 	private string rightchatprepath = "";
 
-	// Token: 0x04009127 RID: 37159
+	// Token: 0x04009280 RID: 37504
 	private LevelSequencePlayer title1SeqPlayer;
 
-	// Token: 0x04009128 RID: 37160
+	// Token: 0x04009281 RID: 37505
 	private LevelSequencePlayer title2SeqPlayer;
 
-	// Token: 0x04009129 RID: 37161
+	// Token: 0x04009282 RID: 37506
 	[Nullable(1)]
 	private string currenttitlepre = "";
 
-	// Token: 0x02008B00 RID: 35584
+	// Token: 0x02007C86 RID: 31878
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402D210 RID: 184848
+		// Token: 0x0402851F RID: 165151
 		TexChatBg,
-		// Token: 0x0402D211 RID: 184849
+		// Token: 0x04028520 RID: 165152
 		LeftChatItem,
-		// Token: 0x0402D212 RID: 184850
+		// Token: 0x04028521 RID: 165153
 		RightChatItem,
-		// Token: 0x0402D213 RID: 184851
+		// Token: 0x04028522 RID: 165154
 		TexTitle,
-		// Token: 0x0402D214 RID: 184852
+		// Token: 0x04028523 RID: 165155
 		TogATxt,
-		// Token: 0x0402D215 RID: 184853
+		// Token: 0x04028524 RID: 165156
 		TogATxt1,
-		// Token: 0x0402D216 RID: 184854
+		// Token: 0x04028525 RID: 165157
 		TogATxt2,
-		// Token: 0x0402D217 RID: 184855
+		// Token: 0x04028526 RID: 165158
 		TogBTxt,
-		// Token: 0x0402D218 RID: 184856
+		// Token: 0x04028527 RID: 165159
 		TexTitleR,
-		// Token: 0x0402D219 RID: 184857
+		// Token: 0x04028528 RID: 165160
 		TexModelT,
-		// Token: 0x0402D21A RID: 184858
+		// Token: 0x04028529 RID: 165161
 		TexModelTPrefab,
-		// Token: 0x0402D21B RID: 184859
+		// Token: 0x0402852A RID: 165162
 		TexSkinL,
-		// Token: 0x0402D21C RID: 184860
+		// Token: 0x0402852B RID: 165163
 		TexSkinLPrefab,
-		// Token: 0x0402D21D RID: 184861
+		// Token: 0x0402852C RID: 165164
 		TexSkinRT,
-		// Token: 0x0402D21E RID: 184862
+		// Token: 0x0402852D RID: 165165
 		TexSkinRTPrefab,
-		// Token: 0x0402D21F RID: 184863
+		// Token: 0x0402852E RID: 165166
 		TexFitter,
-		// Token: 0x0402D220 RID: 184864
+		// Token: 0x0402852F RID: 165167
 		Item1,
-		// Token: 0x0402D221 RID: 184865
+		// Token: 0x04028530 RID: 165168
 		TexSelected,
-		// Token: 0x0402D222 RID: 184866
+		// Token: 0x04028531 RID: 165169
 		Item2,
-		// Token: 0x0402D223 RID: 184867
+		// Token: 0x04028532 RID: 165170
 		Item3,
-		// Token: 0x0402D224 RID: 184868
+		// Token: 0x04028533 RID: 165171
 		Item4,
-		// Token: 0x0402D225 RID: 184869
+		// Token: 0x04028534 RID: 165172
 		TexSkinR,
-		// Token: 0x0402D226 RID: 184870
+		// Token: 0x04028535 RID: 165173
 		TexSkinRTopicShow,
-		// Token: 0x0402D227 RID: 184871
+		// Token: 0x04028536 RID: 165174
 		PnlPetContent,
-		// Token: 0x0402D228 RID: 184872
+		// Token: 0x04028537 RID: 165175
 		SprTxtNameRBg
 	}
 }

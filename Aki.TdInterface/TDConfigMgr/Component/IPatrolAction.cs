@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005E2 RID: 1506
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000673 RID: 1651
 	public class IPatrolAction
 	{
-		// Token: 0x06001FEA RID: 8170 RVA: 0x0005928C File Offset: 0x0005748C
+		// Token: 0x060022B6 RID: 8886 RVA: 0x0005F918 File Offset: 0x0005DB18
 		private IPatrolAction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001FEB RID: 8171 RVA: 0x000592C4 File Offset: 0x000574C4
+		// Token: 0x060022B7 RID: 8887 RVA: 0x0005F950 File Offset: 0x0005DB50
 		public static IPatrolAction Create([Nullable(2)] IPatrolAction instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001FEC RID: 8172 RVA: 0x000592D7 File Offset: 0x000574D7
+		// Token: 0x060022B8 RID: 8888 RVA: 0x0005F963 File Offset: 0x0005DB63
 		public static IPatrolAction CreateFromSetValue([Nullable(2)] IPatrolAction_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001FED RID: 8173 RVA: 0x000592EA File Offset: 0x000574EA
+		// Token: 0x060022B9 RID: 8889 RVA: 0x0005F976 File Offset: 0x0005DB76
 		public IPatrolAction_SetValue ToSetValue()
 		{
 			return new IPatrolAction_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000881 RID: 2177
-		// (get) Token: 0x06001FEE RID: 8174 RVA: 0x00059309 File Offset: 0x00057509
-		// (set) Token: 0x06001FEF RID: 8175 RVA: 0x00059334 File Offset: 0x00057534
+		// Token: 0x1700092D RID: 2349
+		// (get) Token: 0x060022BA RID: 8890 RVA: 0x0005F995 File Offset: 0x0005DB95
+		// (set) Token: 0x060022BB RID: 8891 RVA: 0x0005F9C0 File Offset: 0x0005DBC0
 		public virtual int Point
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000882 RID: 2178
-		// (get) Token: 0x06001FF0 RID: 8176 RVA: 0x00059344 File Offset: 0x00057544
-		// (set) Token: 0x06001FF1 RID: 8177 RVA: 0x000593D7 File Offset: 0x000575D7
+		// Token: 0x1700092E RID: 2350
+		// (get) Token: 0x060022BC RID: 8892 RVA: 0x0005F9D0 File Offset: 0x0005DBD0
+		// (set) Token: 0x060022BD RID: 8893 RVA: 0x0005FA63 File Offset: 0x0005DC63
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			get
@@ -124,18 +122,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001673 RID: 5747
+		// Token: 0x0400184A RID: 6218
 		[Nullable(2)]
 		protected IPatrolAction FbInstance;
 
-		// Token: 0x04001674 RID: 5748
+		// Token: 0x0400184B RID: 6219
 		[Nullable(2)]
 		protected IPatrolAction_SetValue PocoInterface;
 
-		// Token: 0x04001675 RID: 5749
+		// Token: 0x0400184C RID: 6220
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x04001676 RID: 5750
+		// Token: 0x0400184D RID: 6221
 		private bool _ActionsInited;
 	}
 }

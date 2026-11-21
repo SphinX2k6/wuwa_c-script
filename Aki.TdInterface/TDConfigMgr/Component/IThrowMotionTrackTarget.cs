@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000770 RID: 1904
+	// Token: 0x02000811 RID: 2065
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IThrowMotionTrackTarget : IThrowMotion
 	{
-		// Token: 0x0600292D RID: 10541 RVA: 0x0006CC6C File Offset: 0x0006AE6C
-		[NullableContext(1)]
+		// Token: 0x06002C51 RID: 11345 RVA: 0x00073E14 File Offset: 0x00072014
+		[NullableContext(0)]
 		private IThrowMotionTrackTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600292E RID: 10542 RVA: 0x0006CCA4 File Offset: 0x0006AEA4
-		[NullableContext(1)]
+		// Token: 0x06002C52 RID: 11346 RVA: 0x00073E4C File Offset: 0x0007204C
+		[NullableContext(0)]
 		public static IThrowMotionTrackTarget Create([Nullable(2)] IThrowMotionTrackTarget instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600292F RID: 10543 RVA: 0x0006CCB7 File Offset: 0x0006AEB7
-		[NullableContext(1)]
+		// Token: 0x06002C53 RID: 11347 RVA: 0x00073E5F File Offset: 0x0007205F
+		[NullableContext(0)]
 		public static IThrowMotionTrackTarget CreateFromSetValue([Nullable(2)] IThrowMotionTrackTarget_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002930 RID: 10544 RVA: 0x0006CCCC File Offset: 0x0006AECC
-		[NullableContext(1)]
+		// Token: 0x06002C54 RID: 11348 RVA: 0x00073E74 File Offset: 0x00072074
+		[NullableContext(0)]
 		public new IThrowMotionTrackTarget_SetValue ToSetValue()
 		{
 			return new IThrowMotionTrackTarget_SetValue
@@ -69,9 +69,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000ACF RID: 2767
-		// (get) Token: 0x06002931 RID: 10545 RVA: 0x0006CD26 File Offset: 0x0006AF26
-		// (set) Token: 0x06002932 RID: 10546 RVA: 0x0006CD51 File Offset: 0x0006AF51
+		// Token: 0x17000B8F RID: 2959
+		// (get) Token: 0x06002C55 RID: 11349 RVA: 0x00073ECE File Offset: 0x000720CE
+		// (set) Token: 0x06002C56 RID: 11350 RVA: 0x00073EF9 File Offset: 0x000720F9
 		public override EThrowMotion Type
 		{
 			get
@@ -92,9 +92,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AD0 RID: 2768
-		// (get) Token: 0x06002933 RID: 10547 RVA: 0x0006CD5F File Offset: 0x0006AF5F
-		// (set) Token: 0x06002934 RID: 10548 RVA: 0x0006CD8E File Offset: 0x0006AF8E
+		// Token: 0x17000B90 RID: 2960
+		// (get) Token: 0x06002C57 RID: 11351 RVA: 0x00073F07 File Offset: 0x00072107
+		// (set) Token: 0x06002C58 RID: 11352 RVA: 0x00073F36 File Offset: 0x00072136
 		public virtual float Velocity
 		{
 			get
@@ -115,9 +115,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AD1 RID: 2769
-		// (get) Token: 0x06002935 RID: 10549 RVA: 0x0006CD9C File Offset: 0x0006AF9C
-		// (set) Token: 0x06002936 RID: 10550 RVA: 0x0006CDC3 File Offset: 0x0006AFC3
+		// Token: 0x17000B91 RID: 2961
+		// (get) Token: 0x06002C59 RID: 11353 RVA: 0x00073F44 File Offset: 0x00072144
+		// (set) Token: 0x06002C5A RID: 11354 RVA: 0x00073F6B File Offset: 0x0007216B
 		public virtual string VelocityCurve
 		{
 			get
@@ -139,9 +139,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AD2 RID: 2770
-		// (get) Token: 0x06002937 RID: 10551 RVA: 0x0006CDD4 File Offset: 0x0006AFD4
-		// (set) Token: 0x06002938 RID: 10552 RVA: 0x0006CE35 File Offset: 0x0006B035
+		// Token: 0x17000B92 RID: 2962
+		// (get) Token: 0x06002C5B RID: 11355 RVA: 0x00073F7C File Offset: 0x0007217C
+		// (set) Token: 0x06002C5C RID: 11356 RVA: 0x00073FDD File Offset: 0x000721DD
 		public virtual VectorInfo VelocityOffset
 		{
 			get
@@ -169,9 +169,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AD3 RID: 2771
-		// (get) Token: 0x06002939 RID: 10553 RVA: 0x0006CE4A File Offset: 0x0006B04A
-		// (set) Token: 0x0600293A RID: 10554 RVA: 0x0006CE79 File Offset: 0x0006B079
+		// Token: 0x17000B93 RID: 2963
+		// (get) Token: 0x06002C5D RID: 11357 RVA: 0x00073FF2 File Offset: 0x000721F2
+		// (set) Token: 0x06002C5E RID: 11358 RVA: 0x00074021 File Offset: 0x00072221
 		public virtual float AngularVelocity
 		{
 			get
@@ -192,9 +192,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AD4 RID: 2772
-		// (get) Token: 0x0600293B RID: 10555 RVA: 0x0006CE87 File Offset: 0x0006B087
-		// (set) Token: 0x0600293C RID: 10556 RVA: 0x0006CEAE File Offset: 0x0006B0AE
+		// Token: 0x17000B94 RID: 2964
+		// (get) Token: 0x06002C5F RID: 11359 RVA: 0x0007402F File Offset: 0x0007222F
+		// (set) Token: 0x06002C60 RID: 11360 RVA: 0x00074056 File Offset: 0x00072256
 		public virtual string AngularVelocityCurve
 		{
 			get
@@ -216,17 +216,17 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001BA8 RID: 7080
+		// Token: 0x04001DAD RID: 7597
 		protected new IThrowMotionTrackTarget FbInstance;
 
-		// Token: 0x04001BA9 RID: 7081
+		// Token: 0x04001DAE RID: 7598
 		protected new IThrowMotionTrackTarget_SetValue PocoInterface;
 
-		// Token: 0x04001BAA RID: 7082
-		[Nullable(1)]
+		// Token: 0x04001DAF RID: 7599
+		[Nullable(0)]
 		private VectorInfo _VelocityOffsetCache;
 
-		// Token: 0x04001BAB RID: 7083
+		// Token: 0x04001DB0 RID: 7600
 		private bool _VelocityOffsetInited;
 	}
 }

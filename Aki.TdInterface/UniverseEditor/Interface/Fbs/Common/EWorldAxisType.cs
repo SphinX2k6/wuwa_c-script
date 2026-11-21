@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D0C RID: 23820
+	// Token: 0x02006340 RID: 25408
 	public enum EWorldAxisType : byte
 	{
-		// Token: 0x0400F6A8 RID: 63144
+		// Token: 0x040103F7 RID: 66551
 		PositiveX,
-		// Token: 0x0400F6A9 RID: 63145
+		// Token: 0x040103F8 RID: 66552
 		PositiveY,
-		// Token: 0x0400F6AA RID: 63146
+		// Token: 0x040103F9 RID: 66553
 		PositiveZ,
-		// Token: 0x0400F6AB RID: 63147
+		// Token: 0x040103FA RID: 66554
 		NegativeX,
-		// Token: 0x0400F6AC RID: 63148
+		// Token: 0x040103FB RID: 66555
 		NegativeY,
-		// Token: 0x0400F6AD RID: 63149
+		// Token: 0x040103FC RID: 66556
 		NegativeZ
 	}
 }

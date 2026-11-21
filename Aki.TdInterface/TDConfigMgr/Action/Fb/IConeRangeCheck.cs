@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002853 RID: 10323
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B26 RID: 11046
 	public class IConeRangeCheck : IRangeCheck
 	{
-		// Token: 0x0600E4CE RID: 58574 RVA: 0x0021AB25 File Offset: 0x00218D25
+		// Token: 0x0600F2F3 RID: 62195 RVA: 0x00237989 File Offset: 0x00235B89
 		public static IConeRangeCheck Create(IConeRangeCheck? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045EA RID: 17898
-		// (get) Token: 0x0600E4CF RID: 58575 RVA: 0x0021AB44 File Offset: 0x00218D44
+		// Token: 0x17004955 RID: 18773
+		// (get) Token: 0x0600F2F4 RID: 62196 RVA: 0x002379A8 File Offset: 0x00235BA8
 		public override ERangeCheckType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045EB RID: 17899
-		// (get) Token: 0x0600E4D0 RID: 58576 RVA: 0x0021AB51 File Offset: 0x00218D51
+		// Token: 0x17004956 RID: 18774
+		// (get) Token: 0x0600F2F5 RID: 62197 RVA: 0x002379B5 File Offset: 0x00235BB5
 		public virtual VectorInfo CenterOffset
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045EC RID: 17900
-		// (get) Token: 0x0600E4D1 RID: 58577 RVA: 0x0021AB85 File Offset: 0x00218D85
+		// Token: 0x17004957 RID: 18775
+		// (get) Token: 0x0600F2F6 RID: 62198 RVA: 0x002379E9 File Offset: 0x00235BE9
 		public virtual float Radius
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045ED RID: 17901
-		// (get) Token: 0x0600E4D2 RID: 58578 RVA: 0x0021AB92 File Offset: 0x00218D92
+		// Token: 0x17004958 RID: 18776
+		// (get) Token: 0x0600F2F7 RID: 62199 RVA: 0x002379F6 File Offset: 0x00235BF6
 		public virtual float Height
 		{
 			get
@@ -69,14 +67,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E97 RID: 32407
+		// Token: 0x04008554 RID: 34132
 		private IConeRangeCheck Instance;
 
-		// Token: 0x04007E98 RID: 32408
+		// Token: 0x04008555 RID: 34133
 		[Nullable(2)]
 		private VectorInfo _CenterOffsetCache;
 
-		// Token: 0x04007E99 RID: 32409
+		// Token: 0x04008556 RID: 34134
 		private bool _CenterOffsetInited;
 	}
 }

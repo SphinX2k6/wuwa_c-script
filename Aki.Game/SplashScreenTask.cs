@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002A8F RID: 10895
+// Token: 0x0200200B RID: 8203
 [NullableContext(1)]
 [Nullable(0)]
 public class SplashScreenTask
 {
-	// Token: 0x17001E36 RID: 7734
-	// (get) Token: 0x06016AE2 RID: 92898 RVA: 0x005BE887 File Offset: 0x005BCA87
+	// Token: 0x17001E8E RID: 7822
+	// (get) Token: 0x06014507 RID: 83207 RVA: 0x005EAA6F File Offset: 0x005E8C6F
 	public ESplashScreenTaskStatus Status
 	{
 		get
@@ -17,7 +17,7 @@ public class SplashScreenTask
 		}
 	}
 
-	// Token: 0x06016AE3 RID: 92899 RVA: 0x005BE890 File Offset: 0x005BCA90
+	// Token: 0x06014508 RID: 83208 RVA: 0x005EAA78 File Offset: 0x005E8C78
 	public SplashScreenTask(ESplashScreenSourceModuleType sourceModule, ESplashScreenType type, Action runHandle)
 	{
 		this.SourceModule = sourceModule;
@@ -31,7 +31,7 @@ public class SplashScreenTask
 		}
 	}
 
-	// Token: 0x06016AE4 RID: 92900 RVA: 0x005BE8FC File Offset: 0x005BCAFC
+	// Token: 0x06014509 RID: 83209 RVA: 0x005EAAE4 File Offset: 0x005E8CE4
 	public unsafe void Run()
 	{
 		if (this.StatusInternal != ESplashScreenTaskStatus.Pending)
@@ -74,7 +74,7 @@ public class SplashScreenTask
 		}
 	}
 
-	// Token: 0x06016AE5 RID: 92901 RVA: 0x005BEA64 File Offset: 0x005BCC64
+	// Token: 0x0601450A RID: 83210 RVA: 0x005EAC4C File Offset: 0x005E8E4C
 	public void FinishTask()
 	{
 		this.StatusInternal = ESplashScreenTaskStatus.Completed;
@@ -86,7 +86,7 @@ public class SplashScreenTask
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06016AE6 RID: 92902 RVA: 0x005BEAAC File Offset: 0x005BCCAC
+	// Token: 0x0601450B RID: 83211 RVA: 0x005EAC94 File Offset: 0x005E8E94
 	public void CancelTask()
 	{
 		this.StatusInternal = ESplashScreenTaskStatus.Canceled;
@@ -98,7 +98,7 @@ public class SplashScreenTask
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06016AE7 RID: 92903 RVA: 0x005BEAF4 File Offset: 0x005BCCF4
+	// Token: 0x0601450C RID: 83212 RVA: 0x005EACDC File Offset: 0x005E8EDC
 	public void FailTask()
 	{
 		this.StatusInternal = ESplashScreenTaskStatus.Failed;
@@ -110,21 +110,21 @@ public class SplashScreenTask
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0400A84F RID: 43087
+	// Token: 0x0400AC54 RID: 44116
 	private ESplashScreenTaskStatus StatusInternal;
 
-	// Token: 0x0400A850 RID: 43088
+	// Token: 0x0400AC55 RID: 44117
 	public ESplashScreenTimeType SplashScreenTimeType;
 
-	// Token: 0x0400A851 RID: 43089
+	// Token: 0x0400AC56 RID: 44118
 	public bool NeedInLongQueue;
 
-	// Token: 0x0400A852 RID: 43090
+	// Token: 0x0400AC57 RID: 44119
 	private readonly Action RunHandle;
 
-	// Token: 0x0400A853 RID: 43091
+	// Token: 0x0400AC58 RID: 44120
 	public readonly ESplashScreenSourceModuleType SourceModule;
 
-	// Token: 0x0400A854 RID: 43092
+	// Token: 0x0400AC59 RID: 44121
 	public readonly ESplashScreenType Type;
 }

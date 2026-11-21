@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200195E RID: 6494
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AE9 RID: 6889
 	public class ICutCameraTimeParams
 	{
-		// Token: 0x06008B1D RID: 35613 RVA: 0x00147458 File Offset: 0x00145658
+		// Token: 0x06009253 RID: 37459 RVA: 0x00156E94 File Offset: 0x00155094
 		private ICutCameraTimeParams_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008B1E RID: 35614 RVA: 0x00147490 File Offset: 0x00145690
+		// Token: 0x06009254 RID: 37460 RVA: 0x00156ECC File Offset: 0x001550CC
 		public static ICutCameraTimeParams Create([Nullable(2)] ICutCameraTimeParams instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B1F RID: 35615 RVA: 0x001474A3 File Offset: 0x001456A3
+		// Token: 0x06009255 RID: 37461 RVA: 0x00156EDF File Offset: 0x001550DF
 		public static ICutCameraTimeParams CreateFromSetValue([Nullable(2)] ICutCameraTimeParams_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B20 RID: 35616 RVA: 0x001474B6 File Offset: 0x001456B6
+		// Token: 0x06009256 RID: 37462 RVA: 0x00156EF2 File Offset: 0x001550F2
 		public ICutCameraTimeParams_SetValue ToSetValue()
 		{
 			return new ICutCameraTimeParams_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CD6 RID: 11478
-		// (get) Token: 0x06008B21 RID: 35617 RVA: 0x001474C9 File Offset: 0x001456C9
-		// (set) Token: 0x06008B22 RID: 35618 RVA: 0x001474F8 File Offset: 0x001456F8
+		// Token: 0x17002ED8 RID: 11992
+		// (get) Token: 0x06009257 RID: 37463 RVA: 0x00156F05 File Offset: 0x00155105
+		// (set) Token: 0x06009258 RID: 37464 RVA: 0x00156F34 File Offset: 0x00155134
 		public virtual float CutStayTime
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040056D9 RID: 22233
+		// Token: 0x04005B2D RID: 23341
 		[Nullable(2)]
 		protected ICutCameraTimeParams FbInstance;
 
-		// Token: 0x040056DA RID: 22234
+		// Token: 0x04005B2E RID: 23342
 		[Nullable(2)]
 		protected ICutCameraTimeParams_SetValue PocoInterface;
 	}

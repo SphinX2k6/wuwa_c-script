@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200120F RID: 4623
+	// Token: 0x0200134B RID: 4939
 	public class IWarningPreformType_SetValue
 	{
-		// Token: 0x04003EC0 RID: 16064
+		// Token: 0x0400422E RID: 16942
 		public EWarningPreformType Type;
 	}
 }

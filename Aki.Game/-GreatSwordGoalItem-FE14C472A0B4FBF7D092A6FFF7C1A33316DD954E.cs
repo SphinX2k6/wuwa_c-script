@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001DB2 RID: 7602
+// Token: 0x02001274 RID: 4724
 internal enum <GreatSwordGoalItem>FE14C472A0B4FBF7D092A6FFF7C1A33316DD954E54FBB6BB729999A1F88FA97C0__EComponent
 {
-	// Token: 0x04006AC1 RID: 27329
+	// Token: 0x04006BA2 RID: 27554
 	TxtDescript,
-	// Token: 0x04006AC2 RID: 27330
+	// Token: 0x04006BA3 RID: 27555
 	SprRing,
-	// Token: 0x04006AC3 RID: 27331
+	// Token: 0x04006BA4 RID: 27556
 	SprFinish
 }

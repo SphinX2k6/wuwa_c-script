@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200085D RID: 2141
+	// Token: 0x02000879 RID: 2169
 	public class ConfigRogueResTaskThemeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003240 RID: 12864 RVA: 0x001759A8 File Offset: 0x00173BA8
+		// Token: 0x060032E8 RID: 13032 RVA: 0x0017CC90 File Offset: 0x0017AE90
 		static ConfigRogueResTaskThemeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueResTaskThemeById.CreateStaticDefaultValue), new Action(ConfigRogueResTaskThemeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003241 RID: 12865 RVA: 0x001759C8 File Offset: 0x00173BC8
+		// Token: 0x060032E9 RID: 13033 RVA: 0x0017CCB0 File Offset: 0x0017AEB0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueResTaskThemeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003242 RID: 12866 RVA: 0x00175A47 File Offset: 0x00173C47
+		// Token: 0x060032EA RID: 13034 RVA: 0x0017CD2F File Offset: 0x0017AF2F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueResTaskThemeById.LogPair = null;
 			ConfigRogueResTaskThemeById.HandleId = 0;
 		}
 
-		// Token: 0x06003243 RID: 12867 RVA: 0x00175A55 File Offset: 0x00173C55
+		// Token: 0x060032EB RID: 13035 RVA: 0x0017CD3D File Offset: 0x0017AF3D
 		public static void Init()
 		{
 			ConfigRogueResTaskThemeById.HandleId = ConfigCommon.InitDataStatement(ConfigRogueResTaskThemeById.HandleId, "db_permanentrogue.db", "select BinData from `RogueResTaskTheme` where Id=?");
 		}
 
-		// Token: 0x06003244 RID: 12868 RVA: 0x00175A70 File Offset: 0x00173C70
+		// Token: 0x060032EC RID: 13036 RVA: 0x0017CD58 File Offset: 0x0017AF58
 		public static RogueResTaskTheme? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRogueResTaskThemeById.HandleId, ConfigRogueResTaskThemeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RogueResTaskTheme?(rootAsRogueResTaskTheme);
 		}
 
-		// Token: 0x04003A71 RID: 14961
+		// Token: 0x04003B35 RID: 15157
 		private const string DB = "db_permanentrogue.db";
 
-		// Token: 0x04003A72 RID: 14962
+		// Token: 0x04003B36 RID: 15158
 		private const string FILE = "c.常驻肉鸽.xlsx";
 
-		// Token: 0x04003A73 RID: 14963
+		// Token: 0x04003B37 RID: 15159
 		private const string TABLE = "RogueResTaskTheme";
 
-		// Token: 0x04003A74 RID: 14964
+		// Token: 0x04003B38 RID: 15160
 		private const string COMMAND = "select BinData from `RogueResTaskTheme` where Id=?";
 
-		// Token: 0x04003A75 RID: 14965
+		// Token: 0x04003B39 RID: 15161
 		private const string KEY_PREFIX = "RogueResTaskThemeById";
 
-		// Token: 0x04003A76 RID: 14966
+		// Token: 0x04003B3A RID: 15162
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003A77 RID: 14967
+		// Token: 0x04003B3B RID: 15163
 		private static int HandleId;
 	}
 }

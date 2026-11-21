@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000082 RID: 130
+// Token: 0x02000084 RID: 132
 [NullableContext(1)]
 [Nullable(0)]
 public class EntitySystemHelper : Singleton
 {
-	// Token: 0x17000093 RID: 147
-	// (get) Token: 0x060003FD RID: 1021 RVA: 0x00017DE5 File Offset: 0x00015FE5
+	// Token: 0x170000A5 RID: 165
+	// (get) Token: 0x0600043D RID: 1085 RVA: 0x000186CE File Offset: 0x000168CE
 	public static EntitySystemHelper Instance
 	{
 		get
@@ -21,12 +21,12 @@ public class EntitySystemHelper : Singleton
 		}
 	}
 
-	// Token: 0x060003FE RID: 1022 RVA: 0x00017E08 File Offset: 0x00016008
+	// Token: 0x0600043E RID: 1086 RVA: 0x000186F1 File Offset: 0x000168F1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060003FF RID: 1023 RVA: 0x00017E0A File Offset: 0x0001600A
+	// Token: 0x0600043F RID: 1087 RVA: 0x000186F3 File Offset: 0x000168F3
 	public static void ResetStaticDefaultValue()
 	{
 		EntitySystemHelper instance = EntitySystemHelper._instance;
@@ -37,22 +37,22 @@ public class EntitySystemHelper : Singleton
 		EntitySystemHelper._instance = null;
 	}
 
-	// Token: 0x06000400 RID: 1024 RVA: 0x00017E23 File Offset: 0x00016023
+	// Token: 0x06000440 RID: 1088 RVA: 0x0001870C File Offset: 0x0001690C
 	static EntitySystemHelper()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(EntitySystemHelper.CreateStaticDefaultValue), new Action(EntitySystemHelper.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040003B8 RID: 952
+	// Token: 0x040003C6 RID: 966
 	public bool IsSortDirty;
 
-	// Token: 0x040003B9 RID: 953
+	// Token: 0x040003C7 RID: 967
 	public bool IsFilterDirty;
 
-	// Token: 0x040003BA RID: 954
+	// Token: 0x040003C8 RID: 968
 	public int SortedFrame = -1;
 
-	// Token: 0x040003BB RID: 955
+	// Token: 0x040003C9 RID: 969
 	[Nullable(2)]
 	private static EntitySystemHelper _instance;
 }

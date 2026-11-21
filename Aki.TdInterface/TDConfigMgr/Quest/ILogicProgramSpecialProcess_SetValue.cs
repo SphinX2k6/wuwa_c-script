@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001002 RID: 4098
+	// Token: 0x0200112E RID: 4398
 	public class ILogicProgramSpecialProcess_SetValue
 	{
-		// Token: 0x04003725 RID: 14117
-		[Nullable(1)]
+		// Token: 0x04003A5D RID: 14941
 		public List<IDisableUro> SpecialProcessList;
 	}
 }

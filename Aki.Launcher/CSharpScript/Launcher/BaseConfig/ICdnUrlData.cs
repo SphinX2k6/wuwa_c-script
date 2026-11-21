@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x0200025D RID: 605
+	// Token: 0x02000262 RID: 610
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ICdnUrlData
 	{
-		// Token: 0x040009DA RID: 2522
+		// Token: 0x04000A26 RID: 2598
 		public string url;
 
-		// Token: 0x040009DB RID: 2523
+		// Token: 0x04000A27 RID: 2599
 		public string weight;
 	}
 }

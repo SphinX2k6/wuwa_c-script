@@ -3,46 +3,46 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020E2 RID: 8418
+	// Token: 0x02002343 RID: 9027
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MoveWithSpline_SetValue
 	{
-		// Token: 0x04006ECA RID: 28362
-		[Nullable(1)]
+		// Token: 0x040074FB RID: 29947
+		[Nullable(0)]
 		public ISplineMoveTargetType MoveTarget;
 
-		// Token: 0x04006ECB RID: 28363
+		// Token: 0x040074FC RID: 29948
 		public int SplineEntityId;
 
-		// Token: 0x04006ECC RID: 28364
+		// Token: 0x040074FD RID: 29949
 		public ICheckClimb CheckClimb;
 
-		// Token: 0x04006ECD RID: 28365
+		// Token: 0x040074FE RID: 29950
 		public IMoveOnWallConfig MoveOnWallConfig;
 
-		// Token: 0x04006ECE RID: 28366
+		// Token: 0x040074FF RID: 29951
 		public EMoveSpeed? MoveState;
 
-		// Token: 0x04006ECF RID: 28367
+		// Token: 0x04007500 RID: 29952
 		public int? StartPointIndex;
 
-		// Token: 0x04006ED0 RID: 28368
+		// Token: 0x04007501 RID: 29953
 		public int? EndPointIndex;
 
-		// Token: 0x04006ED1 RID: 28369
+		// Token: 0x04007502 RID: 29954
 		public bool? IsFollowStrictly;
 
-		// Token: 0x04006ED2 RID: 28370
+		// Token: 0x04007503 RID: 29955
 		public bool? IsForceToFirstPoint;
 
-		// Token: 0x04006ED3 RID: 28371
+		// Token: 0x04007504 RID: 29956
 		public bool? IsLookDir;
 
-		// Token: 0x04006ED4 RID: 28372
+		// Token: 0x04007505 RID: 29957
 		public INpcFollowConfig NpcFollow;
 
-		// Token: 0x04006ED5 RID: 28373
+		// Token: 0x04007506 RID: 29958
 		public bool? NpcCollisionEnabled;
 	}
 }

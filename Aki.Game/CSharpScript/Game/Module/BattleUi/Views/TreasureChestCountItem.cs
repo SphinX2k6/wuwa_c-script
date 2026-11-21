@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DAE RID: 23982
+	// Token: 0x02004D92 RID: 19858
 	[Nullable(new byte[]
 	{
 		0,
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 	})]
 	public class TreasureChestCountItem : GridProxyAbstract<TreasureChestRowData>
 	{
-		// Token: 0x0603CE8B RID: 249483 RVA: 0x00EA19E0 File Offset: 0x00E9FBE0
+		// Token: 0x06031E02 RID: 204290 RVA: 0x00DF28B4 File Offset: 0x00DF0AB4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CE8C RID: 249484 RVA: 0x00EA1A8C File Offset: 0x00E9FC8C
+		// Token: 0x06031E03 RID: 204291 RVA: 0x00DF2960 File Offset: 0x00DF0B60
 		[NullableContext(1)]
 		public override void Refresh(TreasureChestRowData data, bool isSelected, int gridIndex)
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshNumChangeEffect(data.Gained);
 		}
 
-		// Token: 0x0603CE8D RID: 249485 RVA: 0x00EA1B24 File Offset: 0x00E9FD24
+		// Token: 0x06031E04 RID: 204292 RVA: 0x00DF29F8 File Offset: 0x00DF0BF8
 		private void RefreshIcon(TreasureChestStatType statType)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetSpriteByPath(UiResourceConfig.Instance.GetResourcePath(resourceId), sprite, false, null, null);
 		}
 
-		// Token: 0x0603CE8E RID: 249486 RVA: 0x00EA1B6C File Offset: 0x00E9FD6C
+		// Token: 0x06031E05 RID: 204293 RVA: 0x00DF2A40 File Offset: 0x00DF0C40
 		private void RefreshNumChangeEffect(bool gained)
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(3);
@@ -84,16 +84,16 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0200C08E RID: 49294
+		// Token: 0x0200AA97 RID: 43671
 		private enum EChildComponent
 		{
-			// Token: 0x0403A1B1 RID: 238001
+			// Token: 0x04034B83 RID: 215939
 			SprIcon,
-			// Token: 0x0403A1B2 RID: 238002
+			// Token: 0x04034B84 RID: 215940
 			TxtProgress,
-			// Token: 0x0403A1B3 RID: 238003
+			// Token: 0x04034B85 RID: 215941
 			SprCutLine,
-			// Token: 0x0403A1B4 RID: 238004
+			// Token: 0x04034B86 RID: 215942
 			NiaChange
 		}
 	}

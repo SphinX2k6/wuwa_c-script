@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000707 RID: 1799
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007A8 RID: 1960
 	public class IStateAlert
 	{
-		// Token: 0x060026B3 RID: 9907 RVA: 0x00067608 File Offset: 0x00065808
+		// Token: 0x060029D3 RID: 10707 RVA: 0x0006E678 File Offset: 0x0006C878
 		private IStateAlert_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060026B4 RID: 9908 RVA: 0x00067640 File Offset: 0x00065840
+		// Token: 0x060029D4 RID: 10708 RVA: 0x0006E6B0 File Offset: 0x0006C8B0
 		public static IStateAlert Create([Nullable(2)] IStateAlert instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060026B5 RID: 9909 RVA: 0x00067653 File Offset: 0x00065853
+		// Token: 0x060029D5 RID: 10709 RVA: 0x0006E6C3 File Offset: 0x0006C8C3
 		public static IStateAlert CreateFromSetValue([Nullable(2)] IStateAlert_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060026B6 RID: 9910 RVA: 0x00067666 File Offset: 0x00065866
+		// Token: 0x060029D6 RID: 10710 RVA: 0x0006E6D6 File Offset: 0x0006C8D6
 		public IStateAlert_SetValue ToSetValue()
 		{
 			return new IStateAlert_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A2F RID: 2607
-		// (get) Token: 0x060026B7 RID: 9911 RVA: 0x00067685 File Offset: 0x00065885
-		// (set) Token: 0x060026B8 RID: 9912 RVA: 0x000676B0 File Offset: 0x000658B0
+		// Token: 0x17000AED RID: 2797
+		// (get) Token: 0x060029D7 RID: 10711 RVA: 0x0006E6F5 File Offset: 0x0006C8F5
+		// (set) Token: 0x060029D8 RID: 10712 RVA: 0x0006E720 File Offset: 0x0006C920
 		public virtual string State
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A30 RID: 2608
-		// (get) Token: 0x060026B9 RID: 9913 RVA: 0x000676BE File Offset: 0x000658BE
-		// (set) Token: 0x060026BA RID: 9914 RVA: 0x000676E9 File Offset: 0x000658E9
+		// Token: 0x17000AEE RID: 2798
+		// (get) Token: 0x060029D9 RID: 10713 RVA: 0x0006E72E File Offset: 0x0006C92E
+		// (set) Token: 0x060029DA RID: 10714 RVA: 0x0006E759 File Offset: 0x0006C959
 		public virtual int Alert
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001A33 RID: 6707
+		// Token: 0x04001C32 RID: 7218
 		[Nullable(2)]
 		protected IStateAlert FbInstance;
 
-		// Token: 0x04001A34 RID: 6708
+		// Token: 0x04001C33 RID: 7219
 		[Nullable(2)]
 		protected IStateAlert_SetValue PocoInterface;
 	}

@@ -5,41 +5,41 @@ using CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Jobs
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Mechanics
 {
-	// Token: 0x020064ED RID: 25837
+	// Token: 0x0200546B RID: 21611
 	[NullableContext(1)]
 	[Nullable(0)]
 	public sealed class GenerateSpecialPieceMechanic : LevelMechanic
 	{
-		// Token: 0x06040D9E RID: 265630 RVA: 0x00FB57C8 File Offset: 0x00FB39C8
+		// Token: 0x06035A62 RID: 219746 RVA: 0x00EFC7F8 File Offset: 0x00EFA9F8
 		public GenerateSpecialPieceMechanic(int envId, int triggerRound, int delayRounds, int count, EPieceType targetType, IReadOnlyList<CellZone> zones, [Nullable(2)] string tip)
 		{
 		}
 
-		// Token: 0x170094E0 RID: 38112
-		// (get) Token: 0x06040D9F RID: 265631 RVA: 0x00FB581F File Offset: 0x00FB3A1F
+		// Token: 0x17006842 RID: 26690
+		// (get) Token: 0x06035A63 RID: 219747 RVA: 0x00EFC84F File Offset: 0x00EFAA4F
 		public int EnvId { get; } = envId;
 
-		// Token: 0x170094E1 RID: 38113
-		// (get) Token: 0x06040DA0 RID: 265632 RVA: 0x00FB5827 File Offset: 0x00FB3A27
+		// Token: 0x17006843 RID: 26691
+		// (get) Token: 0x06035A64 RID: 219748 RVA: 0x00EFC857 File Offset: 0x00EFAA57
 		public int MountRound { get; } = triggerRound;
 
-		// Token: 0x170094E2 RID: 38114
-		// (get) Token: 0x06040DA1 RID: 265633 RVA: 0x00FB582F File Offset: 0x00FB3A2F
+		// Token: 0x17006844 RID: 26692
+		// (get) Token: 0x06035A65 RID: 219749 RVA: 0x00EFC85F File Offset: 0x00EFAA5F
 		public int FireRound { get; } = triggerRound + delayRounds;
 
-		// Token: 0x170094E3 RID: 38115
-		// (get) Token: 0x06040DA2 RID: 265634 RVA: 0x00FB5837 File Offset: 0x00FB3A37
+		// Token: 0x17006845 RID: 26693
+		// (get) Token: 0x06035A66 RID: 219750 RVA: 0x00EFC867 File Offset: 0x00EFAA67
 		public EPieceType TargetType { get; } = targetType;
 
-		// Token: 0x170094E4 RID: 38116
-		// (get) Token: 0x06040DA3 RID: 265635 RVA: 0x00FB583F File Offset: 0x00FB3A3F
+		// Token: 0x17006846 RID: 26694
+		// (get) Token: 0x06035A67 RID: 219751 RVA: 0x00EFC86F File Offset: 0x00EFAA6F
 		public int GenerateCount { get; } = count;
 
-		// Token: 0x170094E5 RID: 38117
-		// (get) Token: 0x06040DA4 RID: 265636 RVA: 0x00FB5847 File Offset: 0x00FB3A47
+		// Token: 0x17006847 RID: 26695
+		// (get) Token: 0x06035A68 RID: 219752 RVA: 0x00EFC877 File Offset: 0x00EFAA77
 		public int Period { get; } = Math.Max(1, delayRounds);
 
-		// Token: 0x06040DA5 RID: 265637 RVA: 0x00FB5850 File Offset: 0x00FB3A50
+		// Token: 0x06035A69 RID: 219753 RVA: 0x00EFC880 File Offset: 0x00EFAA80
 		public override MechanicTipEvent? CreateMountTip(int round)
 		{
 			if (round != this.MountRound || string.IsNullOrEmpty(this.<tip>P))
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return new MechanicTipEvent?(new MechanicTipEvent(this.<tip>P, this.FireRound - round, this.GenerateCount));
 		}
 
-		// Token: 0x06040DA6 RID: 265638 RVA: 0x00FB589B File Offset: 0x00FB3A9B
+		// Token: 0x06035A6A RID: 219754 RVA: 0x00EFC8CB File Offset: 0x00EFAACB
 		public int RoundsUntilFire(int round)
 		{
 			if (round >= this.FireRound)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.FireRound - round;
 		}
 
-		// Token: 0x06040DA7 RID: 265639 RVA: 0x00FB58C8 File Offset: 0x00FB3AC8
+		// Token: 0x06035A6B RID: 219755 RVA: 0x00EFC8F8 File Offset: 0x00EFAAF8
 		public override void OnRound(int round, IMechanicContext ctx)
 		{
 			MechanicTipEvent? mechanicTipEvent = this.CreateMountTip(round);
@@ -79,11 +79,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x04021C96 RID: 138390
+		// Token: 0x0401C5C7 RID: 116167
 		[CompilerGenerated]
 		private IReadOnlyList<CellZone> <zones>P = zones;
 
-		// Token: 0x04021C97 RID: 138391
+		// Token: 0x0401C5C8 RID: 116168
 		[Nullable(2)]
 		[CompilerGenerated]
 		private string <tip>P = tip;

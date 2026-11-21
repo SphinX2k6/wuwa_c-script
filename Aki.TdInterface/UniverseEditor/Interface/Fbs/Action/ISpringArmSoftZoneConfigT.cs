@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071A6 RID: 29094
+	// Token: 0x0200797B RID: 31099
 	public class ISpringArmSoftZoneConfigT
 	{
-		// Token: 0x1700D813 RID: 55315
-		// (get) Token: 0x0603395E RID: 211294 RVA: 0x006F275A File Offset: 0x006F095A
-		// (set) Token: 0x0603395F RID: 211295 RVA: 0x006F2762 File Offset: 0x006F0962
+		// Token: 0x1700E40A RID: 58378
+		// (get) Token: 0x06036C5C RID: 224348 RVA: 0x00753A26 File Offset: 0x00751C26
+		// (set) Token: 0x06036C5D RID: 224349 RVA: 0x00753A2E File Offset: 0x00751C2E
 		public ISingleAxisSpringArmSoftZoneConfigT LeftRightConfig { get; set; }
 
-		// Token: 0x1700D814 RID: 55316
-		// (get) Token: 0x06033960 RID: 211296 RVA: 0x006F276B File Offset: 0x006F096B
-		// (set) Token: 0x06033961 RID: 211297 RVA: 0x006F2773 File Offset: 0x006F0973
+		// Token: 0x1700E40B RID: 58379
+		// (get) Token: 0x06036C5E RID: 224350 RVA: 0x00753A37 File Offset: 0x00751C37
+		// (set) Token: 0x06036C5F RID: 224351 RVA: 0x00753A3F File Offset: 0x00751C3F
 		public ISingleAxisSpringArmSoftZoneConfigT ForwardBackConfig { get; set; }
 
-		// Token: 0x1700D815 RID: 55317
-		// (get) Token: 0x06033962 RID: 211298 RVA: 0x006F277C File Offset: 0x006F097C
-		// (set) Token: 0x06033963 RID: 211299 RVA: 0x006F2784 File Offset: 0x006F0984
+		// Token: 0x1700E40C RID: 58380
+		// (get) Token: 0x06036C60 RID: 224352 RVA: 0x00753A48 File Offset: 0x00751C48
+		// (set) Token: 0x06036C61 RID: 224353 RVA: 0x00753A50 File Offset: 0x00751C50
 		public ISingleAxisSpringArmSoftZoneConfigT UpDownConfig { get; set; }
 
-		// Token: 0x06033964 RID: 211300 RVA: 0x006F278D File Offset: 0x006F098D
+		// Token: 0x06036C62 RID: 224354 RVA: 0x00753A59 File Offset: 0x00751C59
 		public ISpringArmSoftZoneConfigT()
 		{
 			this.LeftRightConfig = null;

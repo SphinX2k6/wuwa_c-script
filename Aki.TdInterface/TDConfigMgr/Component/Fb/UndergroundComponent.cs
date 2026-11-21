@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A6E RID: 2670
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B38 RID: 2872
 	public class UndergroundComponent : IComponentBase
 	{
-		// Token: 0x06003D8A RID: 15754 RVA: 0x0009DF61 File Offset: 0x0009C161
+		// Token: 0x060041B3 RID: 16819 RVA: 0x000A7519 File Offset: 0x000A5719
 		public static UndergroundComponent Create(IUndergroundComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E6B RID: 3691
-		// (get) Token: 0x06003D8B RID: 15755 RVA: 0x0009DF80 File Offset: 0x0009C180
+		// Token: 0x17000F3E RID: 3902
+		// (get) Token: 0x060041B4 RID: 16820 RVA: 0x000A7538 File Offset: 0x000A5738
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E6C RID: 3692
-		// (get) Token: 0x06003D8C RID: 15756 RVA: 0x0009DFB8 File Offset: 0x0009C1B8
+		// Token: 0x17000F3F RID: 3903
+		// (get) Token: 0x060041B5 RID: 16821 RVA: 0x000A7570 File Offset: 0x000A5770
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E6D RID: 3693
-		// (get) Token: 0x06003D8D RID: 15757 RVA: 0x0009DFCE File Offset: 0x0009C1CE
+		// Token: 0x17000F40 RID: 3904
+		// (get) Token: 0x060041B6 RID: 16822 RVA: 0x000A7586 File Offset: 0x000A5786
 		public virtual int TestState
 		{
 			get
@@ -57,8 +54,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E6E RID: 3694
-		// (get) Token: 0x06003D8E RID: 15758 RVA: 0x0009DFDB File Offset: 0x0009C1DB
+		// Token: 0x17000F41 RID: 3905
+		// (get) Token: 0x060041B7 RID: 16823 RVA: 0x000A7593 File Offset: 0x000A5793
 		public virtual bool IsRestartPlayer
 		{
 			get
@@ -67,8 +64,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E6F RID: 3695
-		// (get) Token: 0x06003D8F RID: 15759 RVA: 0x0009DFE8 File Offset: 0x0009C1E8
+		// Token: 0x17000F42 RID: 3906
+		// (get) Token: 0x060041B8 RID: 16824 RVA: 0x000A75A0 File Offset: 0x000A57A0
 		public virtual List<string> DestroyTag
 		{
 			get
@@ -88,8 +85,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E70 RID: 3696
-		// (get) Token: 0x06003D90 RID: 15760 RVA: 0x0009E04C File Offset: 0x0009C24C
+		// Token: 0x17000F43 RID: 3907
+		// (get) Token: 0x060041B9 RID: 16825 RVA: 0x000A7604 File Offset: 0x000A5804
 		public virtual List<IUndergroundStateInfo> StateInfo
 		{
 			get
@@ -109,19 +106,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002249 RID: 8777
+		// Token: 0x04002465 RID: 9317
 		private IUndergroundComponent Instance;
 
-		// Token: 0x0400224A RID: 8778
+		// Token: 0x04002466 RID: 9318
 		private List<string> _DestroyTagCache;
 
-		// Token: 0x0400224B RID: 8779
+		// Token: 0x04002467 RID: 9319
 		private bool _DestroyTagInited;
 
-		// Token: 0x0400224C RID: 8780
+		// Token: 0x04002468 RID: 9320
 		private List<IUndergroundStateInfo> _StateInfoCache;
 
-		// Token: 0x0400224D RID: 8781
+		// Token: 0x04002469 RID: 9321
 		private bool _StateInfoInited;
 	}
 }

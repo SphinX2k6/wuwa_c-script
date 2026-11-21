@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02003295 RID: 12949
+// Token: 0x02002806 RID: 10246
 public enum ESquadCalcPolicy
 {
-	// Token: 0x0400DD98 RID: 56728
+	// Token: 0x0400E23F RID: 57919
 	AddValue,
-	// Token: 0x0400DD99 RID: 56729
+	// Token: 0x0400E240 RID: 57920
 	AddRate,
-	// Token: 0x0400DD9A RID: 56730
+	// Token: 0x0400E241 RID: 57921
 	AdvancedMul,
-	// Token: 0x0400DD9B RID: 56731
+	// Token: 0x0400E242 RID: 57922
 	Override
 }

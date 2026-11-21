@@ -7,19 +7,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006160 RID: 24928
+	// Token: 0x020050DE RID: 20702
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeLevelInfoList
 	{
-		// Token: 0x0603F00E RID: 258062 RVA: 0x00F387EC File Offset: 0x00F369EC
+		// Token: 0x06033CCE RID: 212174 RVA: 0x00E7F6C0 File Offset: 0x00E7D8C0
 		public RoverlikeLevelInfoList(UUIScrollViewWithScrollbarComponent scrollView)
 		{
 			UUILayoutBase layout = scrollView.GetContent().GetComponentByClass(UUILayoutBase.StaticClass()) as UUILayoutBase;
 			this.InfoLayout = new GenericLayout<RoverlikeLevelInfoItem, RoverlikeLevelInfoItemData>(layout, () => new RoverlikeLevelInfoItem(), null, false, true);
 		}
 
-		// Token: 0x0603F00F RID: 258063 RVA: 0x00F38854 File Offset: 0x00F36A54
+		// Token: 0x06033CCF RID: 212175 RVA: 0x00E7F728 File Offset: 0x00E7D928
 		public void RefreshByConfig(RoverRogueIns? cfg)
 		{
 			List<RoverlikeLevelInfoItemData> list = this.BuildInfoDataList(cfg);
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}, false);
 		}
 
-		// Token: 0x0603F010 RID: 258064 RVA: 0x00F388AC File Offset: 0x00F36AAC
+		// Token: 0x06033CD0 RID: 212176 RVA: 0x00E7F780 File Offset: 0x00E7D980
 		private List<RoverlikeLevelInfoItemData> BuildInfoDataList(RoverRogueIns? cfg)
 		{
 			List<RoverlikeLevelInfoItemData> list = new List<RoverlikeLevelInfoItemData>();
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list;
 		}
 
-		// Token: 0x0603F011 RID: 258065 RVA: 0x00F389BC File Offset: 0x00F36BBC
+		// Token: 0x06033CD1 RID: 212177 RVA: 0x00E7F890 File Offset: 0x00E7DA90
 		private List<int> DiffInfoDataList(IReadOnlyList<RoverlikeLevelInfoItemData> oldList, IReadOnlyList<RoverlikeLevelInfoItemData> newList)
 		{
 			List<int> list = new List<int>();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list;
 		}
 
-		// Token: 0x0603F012 RID: 258066 RVA: 0x00F38A38 File Offset: 0x00F36C38
+		// Token: 0x06033CD2 RID: 212178 RVA: 0x00E7F90C File Offset: 0x00E7DB0C
 		private bool IsNumberArrayEqual(IReadOnlyList<int> a, IReadOnlyList<int> b)
 		{
 			if (a.Count != b.Count)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return true;
 		}
 
-		// Token: 0x0603F013 RID: 258067 RVA: 0x00F38A7C File Offset: 0x00F36C7C
+		// Token: 0x06033CD3 RID: 212179 RVA: 0x00E7F950 File Offset: 0x00E7DB50
 		private void PlayInfoItemRefreshAnim(IReadOnlyList<int> changedIndexList)
 		{
 			foreach (int index in changedIndexList)
@@ -117,10 +117,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x04020DF4 RID: 134644
+		// Token: 0x0401B721 RID: 112417
 		private readonly GenericLayout<RoverlikeLevelInfoItem, RoverlikeLevelInfoItemData> InfoLayout;
 
-		// Token: 0x04020DF5 RID: 134645
+		// Token: 0x0401B722 RID: 112418
 		private List<RoverlikeLevelInfoItemData> LastInfoDataList = new List<RoverlikeLevelInfoItemData>();
 	}
 }

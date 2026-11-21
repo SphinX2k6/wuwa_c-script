@@ -6,17 +6,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A87 RID: 10887
+// Token: 0x02002003 RID: 8195
 [NullableContext(1)]
 [Nullable(0)]
 public class SpecialTransitionView : UiViewBase
 {
-	// Token: 0x06016ABD RID: 92861 RVA: 0x005BDAAA File Offset: 0x005BBCAA
+	// Token: 0x060144E2 RID: 83170 RVA: 0x005E9CDA File Offset: 0x005E7EDA
 	public SpecialTransitionView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016ABE RID: 92862 RVA: 0x005BDABC File Offset: 0x005BBCBC
+	// Token: 0x060144E3 RID: 83171 RVA: 0x005E9CEC File Offset: 0x005E7EEC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class SpecialTransitionView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016ABF RID: 92863 RVA: 0x005BDB18 File Offset: 0x005BBD18
+	// Token: 0x060144E4 RID: 83172 RVA: 0x005E9D48 File Offset: 0x005E7F48
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SpecialTransitionView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ public class SpecialTransitionView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016AC0 RID: 92864 RVA: 0x005BDB5C File Offset: 0x005BBD5C
+	// Token: 0x060144E5 RID: 83173 RVA: 0x005E9D8C File Offset: 0x005E7F8C
 	protected override void OnBeforeHide()
 	{
 		if (this.AudioHandle != -1)
@@ -48,7 +48,7 @@ public class SpecialTransitionView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016AC1 RID: 92865 RVA: 0x005BDB94 File Offset: 0x005BBD94
+	// Token: 0x060144E6 RID: 83174 RVA: 0x005E9DC4 File Offset: 0x005E7FC4
 	private UniTask InitContent()
 	{
 		SpecialTransitionView.<InitContent>d__8 <InitContent>d__;
@@ -59,7 +59,7 @@ public class SpecialTransitionView : UiViewBase
 		return <InitContent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016AC2 RID: 92866 RVA: 0x005BDBD8 File Offset: 0x005BBDD8
+	// Token: 0x060144E7 RID: 83175 RVA: 0x005E9E08 File Offset: 0x005E8008
 	private void PlayAkEvent(string akEvent)
 	{
 		if (StringUtils.IsEmpty(akEvent))
@@ -73,7 +73,7 @@ public class SpecialTransitionView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016AC3 RID: 92867 RVA: 0x005BDC10 File Offset: 0x005BBE10
+	// Token: 0x060144E8 RID: 83176 RVA: 0x005E9E40 File Offset: 0x005E8040
 	public UniTask LoadSpine(int id, bool isLoop)
 	{
 		SpecialTransitionView.<LoadSpine>d__10 <LoadSpine>d__;
@@ -86,42 +86,42 @@ public class SpecialTransitionView : UiViewBase
 		return <LoadSpine>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016AC4 RID: 92868 RVA: 0x005BDC64 File Offset: 0x005BBE64
+	// Token: 0x060144E9 RID: 83177 RVA: 0x005E9E94 File Offset: 0x005E8094
 	public void LoadTextureBg(string path)
 	{
 		base.TrySetTextureByPath(path, base.GetTexture(2), null, null);
 	}
 
-	// Token: 0x0400A82B RID: 43051
+	// Token: 0x0400AC30 RID: 44080
 	[Nullable(2)]
 	private ISpecialTransitionViewParams Param;
 
-	// Token: 0x0400A82C RID: 43052
+	// Token: 0x0400AC31 RID: 44081
 	[Nullable(2)]
 	private ChildSpineView ChildSpineView;
 
-	// Token: 0x0400A82D RID: 43053
+	// Token: 0x0400AC32 RID: 44082
 	private int AudioHandle = -1;
 
-	// Token: 0x020090B3 RID: 37043
+	// Token: 0x020082FA RID: 33530
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402EE35 RID: 192053
+		// Token: 0x0402A52F RID: 173359
 		PanelFull,
-		// Token: 0x0402EE36 RID: 192054
+		// Token: 0x0402A530 RID: 173360
 		SpineNode,
-		// Token: 0x0402EE37 RID: 192055
+		// Token: 0x0402A531 RID: 173361
 		TexBg,
-		// Token: 0x0402EE38 RID: 192056
+		// Token: 0x0402A532 RID: 173362
 		LoadingItem,
-		// Token: 0x0402EE39 RID: 192057
+		// Token: 0x0402A533 RID: 173363
 		NextButton,
-		// Token: 0x0402EE3A RID: 192058
+		// Token: 0x0402A534 RID: 173364
 		TxtInfo,
-		// Token: 0x0402EE3B RID: 192059
+		// Token: 0x0402A535 RID: 173365
 		DynamicNode1,
-		// Token: 0x0402EE3C RID: 192060
+		// Token: 0x0402A536 RID: 173366
 		DynamicNode2
 	}
 }

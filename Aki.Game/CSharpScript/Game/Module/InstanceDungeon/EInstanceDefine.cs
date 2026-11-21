@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005863 RID: 22627
+	// Token: 0x0200483B RID: 18491
 	public static class EInstanceDefine
 	{
-		// Token: 0x0401E13B RID: 123195
+		// Token: 0x04018BD8 RID: 101336
 		public const int InstanceSeriesItem = 0;
 
-		// Token: 0x0401E13C RID: 123196
+		// Token: 0x04018BD9 RID: 101337
 		public const int InstanceItem = 1;
 
-		// Token: 0x0401E13D RID: 123197
+		// Token: 0x04018BDA RID: 101338
 		public const int LockInstanceSeriesItem = 2;
 
-		// Token: 0x0401E13E RID: 123198
+		// Token: 0x04018BDB RID: 101339
 		public const int LockInstanceItem = 3;
 
-		// Token: 0x0401E13F RID: 123199
+		// Token: 0x04018BDC RID: 101340
 		public const int InstanceTextItem = 4;
 	}
 }

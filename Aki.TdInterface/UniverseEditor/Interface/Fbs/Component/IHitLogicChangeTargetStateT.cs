@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200539F RID: 21407
+	// Token: 0x02005925 RID: 22821
 	public class IHitLogicChangeTargetStateT
 	{
-		// Token: 0x17009D4A RID: 40266
-		// (get) Token: 0x06023102 RID: 143618 RVA: 0x004DAC70 File Offset: 0x004D8E70
-		// (set) Token: 0x06023103 RID: 143619 RVA: 0x004DAC78 File Offset: 0x004D8E78
+		// Token: 0x1700A582 RID: 42370
+		// (get) Token: 0x060251B6 RID: 151990 RVA: 0x00517B44 File Offset: 0x00515D44
+		// (set) Token: 0x060251B7 RID: 151991 RVA: 0x00517B4C File Offset: 0x00515D4C
 		public EHitLogicType Type { get; set; }
 
-		// Token: 0x17009D4B RID: 40267
-		// (get) Token: 0x06023104 RID: 143620 RVA: 0x004DAC81 File Offset: 0x004D8E81
-		// (set) Token: 0x06023105 RID: 143621 RVA: 0x004DAC89 File Offset: 0x004D8E89
+		// Token: 0x1700A583 RID: 42371
+		// (get) Token: 0x060251B8 RID: 151992 RVA: 0x00517B55 File Offset: 0x00515D55
+		// (set) Token: 0x060251B9 RID: 151993 RVA: 0x00517B5D File Offset: 0x00515D5D
 		public List<IConditionHitConfigWithBulletT> TargetBulletHitConfigs { get; set; }
 
-		// Token: 0x17009D4C RID: 40268
-		// (get) Token: 0x06023106 RID: 143622 RVA: 0x004DAC92 File Offset: 0x004D8E92
-		// (set) Token: 0x06023107 RID: 143623 RVA: 0x004DAC9A File Offset: 0x004D8E9A
+		// Token: 0x1700A584 RID: 42372
+		// (get) Token: 0x060251BA RID: 151994 RVA: 0x00517B66 File Offset: 0x00515D66
+		// (set) Token: 0x060251BB RID: 151995 RVA: 0x00517B6E File Offset: 0x00515D6E
 		public List<IConditionHitConfigT> OtherBulletsHitConfig { get; set; }
 
-		// Token: 0x06023108 RID: 143624 RVA: 0x004DACA3 File Offset: 0x004D8EA3
+		// Token: 0x060251BC RID: 151996 RVA: 0x00517B77 File Offset: 0x00515D77
 		public IHitLogicChangeTargetStateT()
 		{
 			this.Type = EHitLogicType.ChangeNextState;

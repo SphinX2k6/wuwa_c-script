@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common;
+using CSharpScript.Game.ServerStorage;
+using CSharpScript.Game.ServerStorage.Container;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
@@ -13,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005920 RID: 22816
+	// Token: 0x020048F9 RID: 18681
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrRoadNetworkMapPanel : UiPanelBase
 	{
-		// Token: 0x06039F2D RID: 237357 RVA: 0x00DC5BDC File Offset: 0x00DC3DDC
+		// Token: 0x0602EE50 RID: 192080 RVA: 0x00D14ED8 File Offset: 0x00D130D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 54;
@@ -136,7 +137,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039F2E RID: 237358 RVA: 0x00DC6328 File Offset: 0x00DC4528
+		// Token: 0x0602EE51 RID: 192081 RVA: 0x00D15624 File Offset: 0x00D13824
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InfrRoadNetworkMapPanel.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -147,16 +148,20 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039F2F RID: 237359 RVA: 0x00DC636C File Offset: 0x00DC456C
+		// Token: 0x0602EE52 RID: 192082 RVA: 0x00D15668 File Offset: 0x00D13868
 		private List<int> GetRoadIdList()
 		{
-			return (from config in InfrastructureConfig.Instance.GetRoadConfigList()
-			select config.Id into id
-			orderby id
-			select id).ToList<int>();
+			IReadOnlyList<InfrRoadBuild> roadConfigList = InfrastructureConfig.Instance.GetRoadConfigList();
+			List<int> list = new List<int>(roadConfigList.Count);
+			for (int i = 0; i < roadConfigList.Count; i++)
+			{
+				list.Add(roadConfigList[i].Id);
+			}
+			list.Sort();
+			return list;
 		}
 
-		// Token: 0x06039F30 RID: 237360 RVA: 0x00DC63D0 File Offset: 0x00DC45D0
+		// Token: 0x0602EE53 RID: 192083 RVA: 0x00D156BC File Offset: 0x00D138BC
 		private UniTask CreateMarkPanels()
 		{
 			InfrRoadNetworkMapPanel.<CreateMarkPanels>d__19 <CreateMarkPanels>d__;
@@ -167,7 +172,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateMarkPanels>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039F31 RID: 237361 RVA: 0x00DC6414 File Offset: 0x00DC4614
+		// Token: 0x0602EE54 RID: 192084 RVA: 0x00D15700 File Offset: 0x00D13900
 		private UniTask CreateObservatoryMark()
 		{
 			InfrRoadNetworkMapPanel.<CreateObservatoryMark>d__20 <CreateObservatoryMark>d__;
@@ -178,7 +183,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateObservatoryMark>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039F32 RID: 237362 RVA: 0x00DC6458 File Offset: 0x00DC4658
+		// Token: 0x0602EE55 RID: 192085 RVA: 0x00D15744 File Offset: 0x00D13944
 		protected override void OnStart()
 		{
 			float value = ConfigCommonParamById.GetFloatConfig("InfrRoadNetworkMarkBaseScale").Value;
@@ -192,7 +197,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.RefreshAllRoad();
 		}
 
-		// Token: 0x06039F33 RID: 237363 RVA: 0x00DC64C4 File Offset: 0x00DC46C4
+		// Token: 0x0602EE56 RID: 192086 RVA: 0x00D157B0 File Offset: 0x00D139B0
 		public void RefreshAllMarks()
 		{
 			foreach (KeyValuePair<int, InfrRoadNetworkMarkItem> keyValuePair in this.MarkItemMap)
@@ -205,7 +210,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.ObservatoryMarkItem.SetNeedPlayFinishSeq(this.NeedPlayFinishSeq && this.FinishDeliveryType == ActionInfrastructureItemDeliveryType.Observatory);
 		}
 
-		// Token: 0x06039F34 RID: 237364 RVA: 0x00DC6564 File Offset: 0x00DC4764
+		// Token: 0x0602EE57 RID: 192087 RVA: 0x00D15850 File Offset: 0x00D13A50
 		private void RefreshAllRoad()
 		{
 			List<int> roadIdList = this.GetRoadIdList();
@@ -281,7 +286,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F35 RID: 237365 RVA: 0x00DC6704 File Offset: 0x00DC4904
+		// Token: 0x0602EE58 RID: 192088 RVA: 0x00D159F0 File Offset: 0x00D13BF0
 		private void OnClickMark(int roadId)
 		{
 			if (this.SelectedType == InfrRoadNetworkMapPanel.ESelectedType.Road)
@@ -353,7 +358,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			});
 		}
 
-		// Token: 0x06039F36 RID: 237366 RVA: 0x00DC685C File Offset: 0x00DC4A5C
+		// Token: 0x0602EE59 RID: 192089 RVA: 0x00D15B48 File Offset: 0x00D13D48
 		private void OnClickObservatoryMark()
 		{
 			if (this.SelectedType == InfrRoadNetworkMapPanel.ESelectedType.Observatory)
@@ -380,13 +385,13 @@ namespace CSharpScript.Game.Module.Infrastructure
 			});
 		}
 
-		// Token: 0x06039F37 RID: 237367 RVA: 0x00DC68D9 File Offset: 0x00DC4AD9
+		// Token: 0x0602EE5A RID: 192090 RVA: 0x00D15BC5 File Offset: 0x00D13DC5
 		public void SetOnClickMarkCb(Action<InfrastructureDefine.IInfrMaterialsDeliveryOpenParam> cb)
 		{
 			this.OnClickMarkCb = cb;
 		}
 
-		// Token: 0x06039F38 RID: 237368 RVA: 0x00DC68E2 File Offset: 0x00DC4AE2
+		// Token: 0x0602EE5B RID: 192091 RVA: 0x00D15BCE File Offset: 0x00D13DCE
 		public void SetNeedPlayFinishSeq(bool needPlayFinishSeq, int roadId, ActionInfrastructureItemDeliveryType deliveryType)
 		{
 			this.NeedPlayFinishSeq = needPlayFinishSeq;
@@ -394,7 +399,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.FinishDeliveryType = deliveryType;
 		}
 
-		// Token: 0x06039F39 RID: 237369 RVA: 0x00DC68FC File Offset: 0x00DC4AFC
+		// Token: 0x0602EE5C RID: 192092 RVA: 0x00D15BE8 File Offset: 0x00D13DE8
 		public void SelectMark(ActionInfrastructureItemDeliveryType deliveryType, int roadId)
 		{
 			if (deliveryType == ActionInfrastructureItemDeliveryType.Road)
@@ -436,7 +441,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F3A RID: 237370 RVA: 0x00DC69A0 File Offset: 0x00DC4BA0
+		// Token: 0x0602EE5D RID: 192093 RVA: 0x00D15C8C File Offset: 0x00D13E8C
 		public void DeselectMark()
 		{
 			if (this.SelectedType == InfrRoadNetworkMapPanel.ESelectedType.Road)
@@ -469,7 +474,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.SelectedRoadId = -1;
 		}
 
-		// Token: 0x06039F3B RID: 237371 RVA: 0x00DC6A4C File Offset: 0x00DC4C4C
+		// Token: 0x0602EE5E RID: 192094 RVA: 0x00D15D38 File Offset: 0x00D13F38
 		public Tuple<float, float> GetMarkUiPosition(int roadId)
 		{
 			InfrRoadNetworkMarkItem infrRoadNetworkMarkItem;
@@ -482,7 +487,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return new Tuple<float, float>(0f, 0f);
 		}
 
-		// Token: 0x06039F3C RID: 237372 RVA: 0x00DC6AB8 File Offset: 0x00DC4CB8
+		// Token: 0x0602EE5F RID: 192095 RVA: 0x00D15DA4 File Offset: 0x00D13FA4
 		public Tuple<float, float> GetObservatoryMarkUiPosition()
 		{
 			UUIItem rootItem = this.ObservatoryMarkItem.GetRootItem();
@@ -490,7 +495,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return new Tuple<float, float>(fvector2D.Value.X, fvector2D.Value.Y);
 		}
 
-		// Token: 0x06039F3D RID: 237373 RVA: 0x00DC6B08 File Offset: 0x00DC4D08
+		// Token: 0x0602EE60 RID: 192096 RVA: 0x00D15DF4 File Offset: 0x00D13FF4
 		public void RefreshMarkScale(float mapScale)
 		{
 			float value = ConfigCommonParamById.GetFloatConfig("InfrRoadNetworkMarkBaseScale").Value;
@@ -502,7 +507,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.ObservatoryMarkItem.GetRootItem().SetUIItemScale(vector.ToUeVectorOld());
 		}
 
-		// Token: 0x06039F3E RID: 237374 RVA: 0x00DC6BA4 File Offset: 0x00DC4DA4
+		// Token: 0x0602EE61 RID: 192097 RVA: 0x00D15E90 File Offset: 0x00D14090
 		public void ShowMarkFinishSeq(ActionInfrastructureItemDeliveryType deliveryType, int roadId, Action onFinishPlayEnd)
 		{
 			if (deliveryType == ActionInfrastructureItemDeliveryType.Road)
@@ -545,7 +550,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F3F RID: 237375 RVA: 0x00DC6C14 File Offset: 0x00DC4E14
+		// Token: 0x0602EE62 RID: 192098 RVA: 0x00D15F00 File Offset: 0x00D14100
 		public void RefreshFinishTextureLine(int roadId)
 		{
 			int num = this.GetRoadIdList().IndexOf(roadId);
@@ -560,7 +565,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F40 RID: 237376 RVA: 0x00DC6C50 File Offset: 0x00DC4E50
+		// Token: 0x0602EE63 RID: 192099 RVA: 0x00D15F3C File Offset: 0x00D1413C
 		public void ShowMarkUnlock(bool needPlayFinishSeq, Action cb)
 		{
 			List<int> hasUnlockRoadAndNotPlaySeqMark = InfrastructureModel.Instance.GetHasUnlockRoadAndNotPlaySeqMark();
@@ -577,15 +582,22 @@ namespace CSharpScript.Game.Module.Infrastructure
 				cb();
 			}
 			int fireLevel = InfrastructureModel.Instance.FireLevel;
-			int player = LocalStorage.GetPlayer<int>(ELocalStoragePlayerKey.InfrObservatoryLevelUpSeq, 0);
-			if (fireLevel > player && !needPlayFinishSeq)
+			ServerStorageUtil.OverrideLocalNumberToServerNumber(ELocalStoragePlayerKey.InfrObservatoryLevelUpSeq, EClientStorageSystemIdType.InfrObservatoryLevelUpSeq, true);
+			ServerStorageNumber serverStorageNumber = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.InfrObservatoryLevelUpSeq) as ServerStorageNumber;
+			int? num = serverStorageNumber.Get();
+			if (num != null)
 			{
-				this.ObservatoryMarkItem.ShowLevelUpSeq();
+				int num2 = fireLevel;
+				int? num3 = num;
+				if ((num2 > num3.GetValueOrDefault() & num3 != null) && !needPlayFinishSeq)
+				{
+					this.ObservatoryMarkItem.ShowLevelUpSeq();
+				}
 			}
-			LocalStorage.SetPlayer<int>(ELocalStoragePlayerKey.InfrObservatoryLevelUpSeq, InfrastructureModel.Instance.FireLevel);
+			serverStorageNumber.Set(new int?(InfrastructureModel.Instance.FireLevel));
 		}
 
-		// Token: 0x06039F41 RID: 237377 RVA: 0x00DC6D04 File Offset: 0x00DC4F04
+		// Token: 0x0602EE64 RID: 192100 RVA: 0x00D1602C File Offset: 0x00D1422C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -609,34 +621,34 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return null;
 		}
 
-		// Token: 0x0401E360 RID: 123744
+		// Token: 0x04018DFD RID: 101885
 		private readonly Dictionary<int, InfrRoadNetworkMarkItem> MarkItemMap = new Dictionary<int, InfrRoadNetworkMarkItem>();
 
-		// Token: 0x0401E361 RID: 123745
+		// Token: 0x04018DFE RID: 101886
 		private readonly InfrRoadNetworkObservatoryMarkItem ObservatoryMarkItem = new InfrRoadNetworkObservatoryMarkItem();
 
-		// Token: 0x0401E362 RID: 123746
+		// Token: 0x04018DFF RID: 101887
 		private int SelectedRoadId;
 
-		// Token: 0x0401E363 RID: 123747
+		// Token: 0x04018E00 RID: 101888
 		private InfrRoadNetworkMapPanel.ESelectedType SelectedType;
 
-		// Token: 0x0401E364 RID: 123748
+		// Token: 0x04018E01 RID: 101889
 		private Action<InfrastructureDefine.IInfrMaterialsDeliveryOpenParam> OnClickMarkCb;
 
-		// Token: 0x0401E365 RID: 123749
+		// Token: 0x04018E02 RID: 101890
 		private readonly global::Vector TempVector = global::Vector.Create();
 
-		// Token: 0x0401E366 RID: 123750
+		// Token: 0x04018E03 RID: 101891
 		private bool NeedPlayFinishSeq;
 
-		// Token: 0x0401E367 RID: 123751
+		// Token: 0x04018E04 RID: 101892
 		private int FinishRoadId;
 
-		// Token: 0x0401E368 RID: 123752
+		// Token: 0x04018E05 RID: 101893
 		private ActionInfrastructureItemDeliveryType FinishDeliveryType = ActionInfrastructureItemDeliveryType.Road;
 
-		// Token: 0x0401E369 RID: 123753
+		// Token: 0x04018E06 RID: 101894
 		private readonly List<int> MarkItemList = new List<int>
 		{
 			0,
@@ -652,7 +664,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			19
 		};
 
-		// Token: 0x0401E36A RID: 123754
+		// Token: 0x04018E07 RID: 101895
 		private readonly List<int> TextureLineList = new List<int>
 		{
 			10,
@@ -668,7 +680,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			22
 		};
 
-		// Token: 0x0401E36B RID: 123755
+		// Token: 0x04018E08 RID: 101896
 		public readonly List<int> TextureStaticLineList = new List<int>
 		{
 			53,
@@ -683,7 +695,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			62
 		};
 
-		// Token: 0x0401E36C RID: 123756
+		// Token: 0x04018E09 RID: 101897
 		private readonly List<int> TextureLineDashedSweepList = new List<int>
 		{
 			23,
@@ -698,7 +710,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			32
 		};
 
-		// Token: 0x0401E36D RID: 123757
+		// Token: 0x04018E0A RID: 101898
 		public readonly List<int> TextureLineSweepList = new List<int>
 		{
 			33,
@@ -713,182 +725,182 @@ namespace CSharpScript.Game.Module.Infrastructure
 			42
 		};
 
-		// Token: 0x0200BBB8 RID: 48056
+		// Token: 0x0200A5C8 RID: 42440
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038ABD RID: 232125
+			// Token: 0x040334A2 RID: 210082
 			public const int MarkItem1 = 0;
 
-			// Token: 0x04038ABE RID: 232126
+			// Token: 0x040334A3 RID: 210083
 			public const int MarkItem2 = 1;
 
-			// Token: 0x04038ABF RID: 232127
+			// Token: 0x040334A4 RID: 210084
 			public const int MarkItem3 = 2;
 
-			// Token: 0x04038AC0 RID: 232128
+			// Token: 0x040334A5 RID: 210085
 			public const int MarkItem4 = 3;
 
-			// Token: 0x04038AC1 RID: 232129
+			// Token: 0x040334A6 RID: 210086
 			public const int MarkItem5 = 4;
 
-			// Token: 0x04038AC2 RID: 232130
+			// Token: 0x040334A7 RID: 210087
 			public const int MarkItem6 = 5;
 
-			// Token: 0x04038AC3 RID: 232131
+			// Token: 0x040334A8 RID: 210088
 			public const int MarkItem7 = 6;
 
-			// Token: 0x04038AC4 RID: 232132
+			// Token: 0x040334A9 RID: 210089
 			public const int MarkItem8 = 7;
 
-			// Token: 0x04038AC5 RID: 232133
+			// Token: 0x040334AA RID: 210090
 			public const int MarkItem9 = 8;
 
-			// Token: 0x04038AC6 RID: 232134
+			// Token: 0x040334AB RID: 210091
 			public const int ObservatoryMarkItem = 9;
 
-			// Token: 0x04038AC7 RID: 232135
+			// Token: 0x040334AC RID: 210092
 			public const int TextureLine1 = 10;
 
-			// Token: 0x04038AC8 RID: 232136
+			// Token: 0x040334AD RID: 210093
 			public const int TextureLine2 = 11;
 
-			// Token: 0x04038AC9 RID: 232137
+			// Token: 0x040334AE RID: 210094
 			public const int TextureLine3 = 12;
 
-			// Token: 0x04038ACA RID: 232138
+			// Token: 0x040334AF RID: 210095
 			public const int TextureLine4 = 13;
 
-			// Token: 0x04038ACB RID: 232139
+			// Token: 0x040334B0 RID: 210096
 			public const int TextureLine5 = 14;
 
-			// Token: 0x04038ACC RID: 232140
+			// Token: 0x040334B1 RID: 210097
 			public const int TextureLine6 = 15;
 
-			// Token: 0x04038ACD RID: 232141
+			// Token: 0x040334B2 RID: 210098
 			public const int TextureLine7 = 16;
 
-			// Token: 0x04038ACE RID: 232142
+			// Token: 0x040334B3 RID: 210099
 			public const int TextureLine8 = 17;
 
-			// Token: 0x04038ACF RID: 232143
+			// Token: 0x040334B4 RID: 210100
 			public const int MarkItem10 = 18;
 
-			// Token: 0x04038AD0 RID: 232144
+			// Token: 0x040334B5 RID: 210101
 			public const int MarkItem11 = 19;
 
-			// Token: 0x04038AD1 RID: 232145
+			// Token: 0x040334B6 RID: 210102
 			public const int TextureLine9 = 20;
 
-			// Token: 0x04038AD2 RID: 232146
+			// Token: 0x040334B7 RID: 210103
 			public const int TextureLine10 = 21;
 
-			// Token: 0x04038AD3 RID: 232147
+			// Token: 0x040334B8 RID: 210104
 			public const int TextureLine11 = 22;
 
-			// Token: 0x04038AD4 RID: 232148
+			// Token: 0x040334B9 RID: 210105
 			public const int TextureLineDashedSweep1 = 23;
 
-			// Token: 0x04038AD5 RID: 232149
+			// Token: 0x040334BA RID: 210106
 			public const int TextureLineDashedSweep2 = 24;
 
-			// Token: 0x04038AD6 RID: 232150
+			// Token: 0x040334BB RID: 210107
 			public const int TextureLineDashedSweep3 = 25;
 
-			// Token: 0x04038AD7 RID: 232151
+			// Token: 0x040334BC RID: 210108
 			public const int TextureLineDashedSweep4 = 26;
 
-			// Token: 0x04038AD8 RID: 232152
+			// Token: 0x040334BD RID: 210109
 			public const int TextureLineDashedSweep5 = 27;
 
-			// Token: 0x04038AD9 RID: 232153
+			// Token: 0x040334BE RID: 210110
 			public const int TextureLineDashedSweep6 = 28;
 
-			// Token: 0x04038ADA RID: 232154
+			// Token: 0x040334BF RID: 210111
 			public const int TextureLineDashedSweep7 = 29;
 
-			// Token: 0x04038ADB RID: 232155
+			// Token: 0x040334C0 RID: 210112
 			public const int TextureLineDashedSweep8 = 30;
 
-			// Token: 0x04038ADC RID: 232156
+			// Token: 0x040334C1 RID: 210113
 			public const int TextureLineDashedSweep9 = 31;
 
-			// Token: 0x04038ADD RID: 232157
+			// Token: 0x040334C2 RID: 210114
 			public const int TextureLineDashedSweep10 = 32;
 
-			// Token: 0x04038ADE RID: 232158
+			// Token: 0x040334C3 RID: 210115
 			public const int TextureLineSweep1 = 33;
 
-			// Token: 0x04038ADF RID: 232159
+			// Token: 0x040334C4 RID: 210116
 			public const int TextureLineSweep2 = 34;
 
-			// Token: 0x04038AE0 RID: 232160
+			// Token: 0x040334C5 RID: 210117
 			public const int TextureLineSweep3 = 35;
 
-			// Token: 0x04038AE1 RID: 232161
+			// Token: 0x040334C6 RID: 210118
 			public const int TextureLineSweep4 = 36;
 
-			// Token: 0x04038AE2 RID: 232162
+			// Token: 0x040334C7 RID: 210119
 			public const int TextureLineSweep5 = 37;
 
-			// Token: 0x04038AE3 RID: 232163
+			// Token: 0x040334C8 RID: 210120
 			public const int TextureLineSweep6 = 38;
 
-			// Token: 0x04038AE4 RID: 232164
+			// Token: 0x040334C9 RID: 210121
 			public const int TextureLineSweep7 = 39;
 
-			// Token: 0x04038AE5 RID: 232165
+			// Token: 0x040334CA RID: 210122
 			public const int TextureLineSweep8 = 40;
 
-			// Token: 0x04038AE6 RID: 232166
+			// Token: 0x040334CB RID: 210123
 			public const int TextureLineSweep9 = 41;
 
-			// Token: 0x04038AE7 RID: 232167
+			// Token: 0x040334CC RID: 210124
 			public const int TextureLineSweep10 = 42;
 
-			// Token: 0x04038AE8 RID: 232168
+			// Token: 0x040334CD RID: 210125
 			public const int TextureLineDotted10 = 52;
 
-			// Token: 0x04038AE9 RID: 232169
+			// Token: 0x040334CE RID: 210126
 			public const int TextureStaticLine1 = 53;
 
-			// Token: 0x04038AEA RID: 232170
+			// Token: 0x040334CF RID: 210127
 			public const int TextureStaticLine2 = 54;
 
-			// Token: 0x04038AEB RID: 232171
+			// Token: 0x040334D0 RID: 210128
 			public const int TextureStaticLine3 = 55;
 
-			// Token: 0x04038AEC RID: 232172
+			// Token: 0x040334D1 RID: 210129
 			public const int TextureStaticLine4 = 56;
 
-			// Token: 0x04038AED RID: 232173
+			// Token: 0x040334D2 RID: 210130
 			public const int TextureStaticLine5 = 57;
 
-			// Token: 0x04038AEE RID: 232174
+			// Token: 0x040334D3 RID: 210131
 			public const int TextureStaticLine6 = 58;
 
-			// Token: 0x04038AEF RID: 232175
+			// Token: 0x040334D4 RID: 210132
 			public const int TextureStaticLine7 = 59;
 
-			// Token: 0x04038AF0 RID: 232176
+			// Token: 0x040334D5 RID: 210133
 			public const int TextureStaticLine8 = 60;
 
-			// Token: 0x04038AF1 RID: 232177
+			// Token: 0x040334D6 RID: 210134
 			public const int TextureStaticLine9 = 61;
 
-			// Token: 0x04038AF2 RID: 232178
+			// Token: 0x040334D7 RID: 210135
 			public const int TextureStaticLine10 = 62;
 		}
 
-		// Token: 0x0200BBB9 RID: 48057
+		// Token: 0x0200A5C9 RID: 42441
 		[NullableContext(0)]
 		private enum ESelectedType
 		{
-			// Token: 0x04038AF4 RID: 232180
+			// Token: 0x040334D9 RID: 210137
 			None,
-			// Token: 0x04038AF5 RID: 232181
+			// Token: 0x040334DA RID: 210138
 			Road,
-			// Token: 0x04038AF6 RID: 232182
+			// Token: 0x040334DB RID: 210139
 			Observatory
 		}
 	}

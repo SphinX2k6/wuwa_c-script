@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Util;
@@ -11,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005418 RID: 21528
+	// Token: 0x020043FB RID: 17403
 	public class DeviceInfoView : UiViewBase
 	{
-		// Token: 0x0603704A RID: 225354 RVA: 0x00D097C0 File Offset: 0x00D079C0
+		// Token: 0x0602BF93 RID: 180115 RVA: 0x00C58BE8 File Offset: 0x00C56DE8
 		[NullableContext(1)]
 		public DeviceInfoView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603704B RID: 225355 RVA: 0x00D097CC File Offset: 0x00D079CC
+		// Token: 0x0602BF94 RID: 180116 RVA: 0x00C58BF4 File Offset: 0x00C56DF4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +30,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			};
 		}
 
-		// Token: 0x0603704C RID: 225356 RVA: 0x00D09828 File Offset: 0x00D07A28
+		// Token: 0x0602BF95 RID: 180117 RVA: 0x00C58C50 File Offset: 0x00C56E50
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DeviceInfoView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -42,7 +41,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603704D RID: 225357 RVA: 0x00D0986C File Offset: 0x00D07A6C
+		// Token: 0x0602BF96 RID: 180118 RVA: 0x00C58C94 File Offset: 0x00C56E94
 		private UniTask InitCaptionItem()
 		{
 			DeviceInfoView.<InitCaptionItem>d__6 <InitCaptionItem>d__;
@@ -53,26 +52,26 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return <InitCaptionItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603704E RID: 225358 RVA: 0x00D098AF File Offset: 0x00D07AAF
+		// Token: 0x0602BF97 RID: 180119 RVA: 0x00C58CD7 File Offset: 0x00C56ED7
 		private void InitScrollView()
 		{
 			this.ScrollView = new GenericScrollViewNew<DeviceInfoItem, DeviceInfoItemData>(base.GetScrollViewWithScrollbar(1), new Func<DeviceInfoItem>(this.CreateDeviceInfoItem), null, false, null);
 		}
 
-		// Token: 0x0603704F RID: 225359 RVA: 0x00D098D2 File Offset: 0x00D07AD2
+		// Token: 0x0602BF98 RID: 180120 RVA: 0x00C58CFA File Offset: 0x00C56EFA
 		[NullableContext(1)]
 		private DeviceInfoItem CreateDeviceInfoItem()
 		{
 			return new DeviceInfoItem();
 		}
 
-		// Token: 0x06037050 RID: 225360 RVA: 0x00D098D9 File Offset: 0x00D07AD9
+		// Token: 0x0602BF99 RID: 180121 RVA: 0x00C58D01 File Offset: 0x00C56F01
 		protected override void OnStart()
 		{
 			this.RefreshDeviceInfo();
 		}
 
-		// Token: 0x06037051 RID: 225361 RVA: 0x00D098E4 File Offset: 0x00D07AE4
+		// Token: 0x0602BF9A RID: 180122 RVA: 0x00C58D0C File Offset: 0x00C56F0C
 		private void RefreshDeviceInfo()
 		{
 			IReadOnlyList<DeviceInfo> configList = ConfigDeviceInfoAll.GetConfigList(true);
@@ -96,10 +95,10 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			{
 				return;
 			}
-			scrollView.RefreshByData(list.ToList<DeviceInfoItemData>(), null, true);
+			scrollView.RefreshByData(list, null, true);
 		}
 
-		// Token: 0x06037052 RID: 225362 RVA: 0x00D09990 File Offset: 0x00D07B90
+		// Token: 0x0602BF9B RID: 180123 RVA: 0x00C58DB0 File Offset: 0x00C56FB0
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -121,7 +120,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return dictionary;
 		}
 
-		// Token: 0x0401D05F RID: 118879
+		// Token: 0x04017AF8 RID: 97016
 		[Nullable(new byte[]
 		{
 			2,
@@ -130,20 +129,20 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 		})]
 		private GenericScrollViewNew<DeviceInfoItem, DeviceInfoItemData> ScrollView;
 
-		// Token: 0x0401D060 RID: 118880
+		// Token: 0x04017AF9 RID: 97017
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0200B6AB RID: 46763
+		// Token: 0x0200A0E3 RID: 41187
 		public class EComponent
 		{
-			// Token: 0x0403757A RID: 226682
+			// Token: 0x04031FCF RID: 204751
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403757B RID: 226683
+			// Token: 0x04031FD0 RID: 204752
 			public const int ScrollView = 1;
 
-			// Token: 0x0403757C RID: 226684
+			// Token: 0x04031FD1 RID: 204753
 			public const int InfoItem = 2;
 		}
 	}

@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roulette.View.Components
 {
-	// Token: 0x02004CA6 RID: 19622
+	// Token: 0x02003C57 RID: 15447
 	public class RouletteAssemblyTab : GridProxyAbstract<int>
 	{
-		// Token: 0x06032B4C RID: 207692 RVA: 0x00BD4E20 File Offset: 0x00BD3020
+		// Token: 0x06027900 RID: 162048 RVA: 0x00B19BB8 File Offset: 0x00B17DB8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Roulette.View.Components
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032B4D RID: 207693 RVA: 0x00BD4EE7 File Offset: 0x00BD30E7
+		// Token: 0x06027901 RID: 162049 RVA: 0x00B19C7F File Offset: 0x00B17E7F
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			Action<int, bool> toggleCallBack = this.ToggleCallBack;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Roulette.View.Components
 			toggleCallBack(this.TypeId, toggleState == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x06032B4E RID: 207694 RVA: 0x00BD4F04 File Offset: 0x00BD3104
+		// Token: 0x06027902 RID: 162050 RVA: 0x00B19C9C File Offset: 0x00B17E9C
 		public override void Refresh(int typeId, bool isSelected, int gridIndex)
 		{
 			this.TypeId = typeId;
@@ -55,24 +55,24 @@ namespace CSharpScript.Game.Module.Roulette.View.Components
 			this.SetToggleState(isSelected, false);
 		}
 
-		// Token: 0x06032B4F RID: 207695 RVA: 0x00BD4F68 File Offset: 0x00BD3168
+		// Token: 0x06027903 RID: 162051 RVA: 0x00B19D00 File Offset: 0x00B17F00
 		public void SetToggleState(bool isSelected, bool bFireEvent)
 		{
 			EToggleState state = isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleState(state, bFireEvent, false, false);
 		}
 
-		// Token: 0x06032B50 RID: 207696 RVA: 0x00BD4F8E File Offset: 0x00BD318E
+		// Token: 0x06027904 RID: 162052 RVA: 0x00B19D26 File Offset: 0x00B17F26
 		[NullableContext(1)]
 		public override object GetKey(int data, int displayIndex)
 		{
 			return data;
 		}
 
-		// Token: 0x0401AFEA RID: 110570
+		// Token: 0x0401594B RID: 88395
 		private int TypeId;
 
-		// Token: 0x0401AFEB RID: 110571
+		// Token: 0x0401594C RID: 88396
 		[Nullable(2)]
 		public Action<int, bool> ToggleCallBack;
 	}

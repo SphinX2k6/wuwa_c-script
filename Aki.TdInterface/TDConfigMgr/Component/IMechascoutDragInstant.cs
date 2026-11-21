@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004E0 RID: 1248
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000539 RID: 1337
 	public class IMechascoutDragInstant : IMechascoutDragTypeBase
 	{
-		// Token: 0x06001962 RID: 6498 RVA: 0x0004B0EC File Offset: 0x000492EC
+		// Token: 0x06001AFC RID: 6908 RVA: 0x0004EE34 File Offset: 0x0004D034
 		private IMechascoutDragInstant_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001963 RID: 6499 RVA: 0x0004B124 File Offset: 0x00049324
+		// Token: 0x06001AFD RID: 6909 RVA: 0x0004EE6C File Offset: 0x0004D06C
 		public static IMechascoutDragInstant Create([Nullable(2)] IMechascoutDragInstant instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001964 RID: 6500 RVA: 0x0004B137 File Offset: 0x00049337
+		// Token: 0x06001AFE RID: 6910 RVA: 0x0004EE7F File Offset: 0x0004D07F
 		public static IMechascoutDragInstant CreateFromSetValue([Nullable(2)] IMechascoutDragInstant_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001965 RID: 6501 RVA: 0x0004B14A File Offset: 0x0004934A
+		// Token: 0x06001AFF RID: 6911 RVA: 0x0004EE92 File Offset: 0x0004D092
 		public new IMechascoutDragInstant_SetValue ToSetValue()
 		{
 			return new IMechascoutDragInstant_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006C0 RID: 1728
-		// (get) Token: 0x06001966 RID: 6502 RVA: 0x0004B15D File Offset: 0x0004935D
-		// (set) Token: 0x06001967 RID: 6503 RVA: 0x0004B188 File Offset: 0x00049388
+		// Token: 0x17000727 RID: 1831
+		// (get) Token: 0x06001B00 RID: 6912 RVA: 0x0004EEA5 File Offset: 0x0004D0A5
+		// (set) Token: 0x06001B01 RID: 6913 RVA: 0x0004EED0 File Offset: 0x0004D0D0
 		public override EMechascoutDragType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040012A2 RID: 4770
+		// Token: 0x040013C4 RID: 5060
 		[Nullable(2)]
 		protected new IMechascoutDragInstant FbInstance;
 
-		// Token: 0x040012A3 RID: 4771
+		// Token: 0x040013C5 RID: 5061
 		[Nullable(2)]
 		protected new IMechascoutDragInstant_SetValue PocoInterface;
 	}

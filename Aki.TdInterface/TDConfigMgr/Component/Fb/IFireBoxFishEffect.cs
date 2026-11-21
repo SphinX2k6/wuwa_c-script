@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E45 RID: 3653
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F41 RID: 3905
 	public class IFireBoxFishEffect : IGraph3dEffectBase
 	{
-		// Token: 0x06005284 RID: 21124 RVA: 0x000CB206 File Offset: 0x000C9406
+		// Token: 0x060057AB RID: 22443 RVA: 0x000D6ACE File Offset: 0x000D4CCE
 		public static IFireBoxFishEffect Create(IFireBoxFishEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001BB7 RID: 7095
-		// (get) Token: 0x06005285 RID: 21125 RVA: 0x000CB225 File Offset: 0x000C9425
+		// Token: 0x17001D24 RID: 7460
+		// (get) Token: 0x060057AC RID: 22444 RVA: 0x000D6AED File Offset: 0x000D4CED
 		public override EGraph3dEffectType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BB8 RID: 7096
-		// (get) Token: 0x06005286 RID: 21126 RVA: 0x000CB232 File Offset: 0x000C9432
+		// Token: 0x17001D25 RID: 7461
+		// (get) Token: 0x060057AD RID: 22445 RVA: 0x000D6AFA File Offset: 0x000D4CFA
 		public virtual string Effect
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F90 RID: 12176
+		// Token: 0x04003258 RID: 12888
 		private IFireBoxFishEffect Instance;
 	}
 }

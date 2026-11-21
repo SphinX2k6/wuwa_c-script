@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020010A5 RID: 4261
+	// Token: 0x02001095 RID: 4245
 	[NetMessage(EMessageId.RoleQuestStateNotify)]
 	public sealed class RoleQuestStateNotify : IMessage<RoleQuestStateNotify>, IMessage, IEquatable<RoleQuestStateNotify>, IDeepCloneable<RoleQuestStateNotify>, IBufferMessage
 	{
-		// Token: 0x06016C10 RID: 93200 RVA: 0x0034E6DB File Offset: 0x0034C8DB
+		// Token: 0x06016B2B RID: 92971 RVA: 0x0034CFFF File Offset: 0x0034B1FF
 		[NullableContext(1)]
 		public static RoleQuestStateNotify Create()
 		{
 			return new RoleQuestStateNotify();
 		}
 
-		// Token: 0x17004C3B RID: 19515
-		// (get) Token: 0x06016C11 RID: 93201 RVA: 0x0034E6E2 File Offset: 0x0034C8E2
+		// Token: 0x17004C11 RID: 19473
+		// (get) Token: 0x06016B2C RID: 92972 RVA: 0x0034D006 File Offset: 0x0034B206
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004C3C RID: 19516
-		// (get) Token: 0x06016C12 RID: 93202 RVA: 0x0034E6E5 File Offset: 0x0034C8E5
+		// Token: 0x17004C12 RID: 19474
+		// (get) Token: 0x06016B2D RID: 92973 RVA: 0x0034D009 File Offset: 0x0034B209
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016C13 RID: 93203 RVA: 0x0034E6EC File Offset: 0x0034C8EC
+		// Token: 0x06016B2E RID: 92974 RVA: 0x0034D010 File Offset: 0x0034B210
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleQuestStateNotify()
 		{
 		}
 
-		// Token: 0x06016C14 RID: 93204 RVA: 0x0034E718 File Offset: 0x0034C918
+		// Token: 0x06016B2F RID: 92975 RVA: 0x0034D03C File Offset: 0x0034B23C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleQuestStateNotify(RoleQuestStateNotify other) : this()
@@ -64,7 +64,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06016C15 RID: 93205 RVA: 0x0034E793 File Offset: 0x0034C993
+		// Token: 0x06016B30 RID: 92976 RVA: 0x0034D0B7 File Offset: 0x0034B2B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleQuestStateNotify Clone()
@@ -72,9 +72,9 @@ namespace Aki.Protocol
 			return new RoleQuestStateNotify(this);
 		}
 
-		// Token: 0x17004C3D RID: 19517
-		// (get) Token: 0x06016C16 RID: 93206 RVA: 0x0034E79B File Offset: 0x0034C99B
-		// (set) Token: 0x06016C17 RID: 93207 RVA: 0x0034E7A3 File Offset: 0x0034C9A3
+		// Token: 0x17004C13 RID: 19475
+		// (get) Token: 0x06016B31 RID: 92977 RVA: 0x0034D0BF File Offset: 0x0034B2BF
+		// (set) Token: 0x06016B32 RID: 92978 RVA: 0x0034D0C7 File Offset: 0x0034B2C7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int UnlockPoint
@@ -89,9 +89,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004C3E RID: 19518
-		// (get) Token: 0x06016C18 RID: 93208 RVA: 0x0034E7AC File Offset: 0x0034C9AC
-		// (set) Token: 0x06016C19 RID: 93209 RVA: 0x0034E7B4 File Offset: 0x0034C9B4
+		// Token: 0x17004C14 RID: 19476
+		// (get) Token: 0x06016B33 RID: 92979 RVA: 0x0034D0D0 File Offset: 0x0034B2D0
+		// (set) Token: 0x06016B34 RID: 92980 RVA: 0x0034D0D8 File Offset: 0x0034B2D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MaxUnlockPoint
@@ -106,8 +106,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004C3F RID: 19519
-		// (get) Token: 0x06016C1A RID: 93210 RVA: 0x0034E7BD File Offset: 0x0034C9BD
+		// Token: 0x17004C15 RID: 19477
+		// (get) Token: 0x06016B35 RID: 92981 RVA: 0x0034D0E1 File Offset: 0x0034B2E1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> InProgress
@@ -118,8 +118,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004C40 RID: 19520
-		// (get) Token: 0x06016C1B RID: 93211 RVA: 0x0034E7C5 File Offset: 0x0034C9C5
+		// Token: 0x17004C16 RID: 19478
+		// (get) Token: 0x06016B36 RID: 92982 RVA: 0x0034D0E9 File Offset: 0x0034B2E9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> Unlock
@@ -130,8 +130,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004C41 RID: 19521
-		// (get) Token: 0x06016C1C RID: 93212 RVA: 0x0034E7CD File Offset: 0x0034C9CD
+		// Token: 0x17004C17 RID: 19479
+		// (get) Token: 0x06016B37 RID: 92983 RVA: 0x0034D0F1 File Offset: 0x0034B2F1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> Over
@@ -142,9 +142,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004C42 RID: 19522
-		// (get) Token: 0x06016C1D RID: 93213 RVA: 0x0034E7D5 File Offset: 0x0034C9D5
-		// (set) Token: 0x06016C1E RID: 93214 RVA: 0x0034E7DD File Offset: 0x0034C9DD
+		// Token: 0x17004C18 RID: 19480
+		// (get) Token: 0x06016B38 RID: 92984 RVA: 0x0034D0F9 File Offset: 0x0034B2F9
+		// (set) Token: 0x06016B39 RID: 92985 RVA: 0x0034D101 File Offset: 0x0034B301
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long LastAddPointTime
@@ -159,7 +159,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016C1F RID: 93215 RVA: 0x0034E7E6 File Offset: 0x0034C9E6
+		// Token: 0x06016B3A RID: 92986 RVA: 0x0034D10A File Offset: 0x0034B30A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RoleQuestStateNotify);
 		}
 
-		// Token: 0x06016C20 RID: 93216 RVA: 0x0034E7F4 File Offset: 0x0034C9F4
+		// Token: 0x06016B3B RID: 92987 RVA: 0x0034D118 File Offset: 0x0034B318
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RoleQuestStateNotify other)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.UnlockPoint == other.UnlockPoint && this.MaxUnlockPoint == other.MaxUnlockPoint && this.inProgress_.Equals(other.inProgress_) && this.unlock_.Equals(other.unlock_) && this.over_.Equals(other.over_) && this.LastAddPointTime == other.LastAddPointTime && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06016C21 RID: 93217 RVA: 0x0034E88C File Offset: 0x0034CA8C
+		// Token: 0x06016B3C RID: 92988 RVA: 0x0034D1B0 File Offset: 0x0034B3B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -203,7 +203,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016C22 RID: 93218 RVA: 0x0034E927 File Offset: 0x0034CB27
+		// Token: 0x06016B3D RID: 92989 RVA: 0x0034D24B File Offset: 0x0034B44B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -211,7 +211,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06016C23 RID: 93219 RVA: 0x0034E934 File Offset: 0x0034CB34
+		// Token: 0x06016B3E RID: 92990 RVA: 0x0034D258 File Offset: 0x0034B458
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -219,36 +219,36 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06016C24 RID: 93220 RVA: 0x0034E940 File Offset: 0x0034CB40
+		// Token: 0x06016B3F RID: 92991 RVA: 0x0034D264 File Offset: 0x0034B464
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.MaxUnlockPoint != 0)
-			{
-				output.WriteRawTag(24);
-				output.WriteInt32(this.MaxUnlockPoint);
-			}
+			this.unlock_.WriteTo(ref output, RoleQuestStateNotify._repeated_unlock_codec);
+			this.inProgress_.WriteTo(ref output, RoleQuestStateNotify._repeated_inProgress_codec);
 			if (this.UnlockPoint != 0)
 			{
 				output.WriteRawTag(32);
 				output.WriteInt32(this.UnlockPoint);
 			}
-			if (this.LastAddPointTime != 0L)
+			if (this.MaxUnlockPoint != 0)
 			{
 				output.WriteRawTag(48);
+				output.WriteInt32(this.MaxUnlockPoint);
+			}
+			if (this.LastAddPointTime != 0L)
+			{
+				output.WriteRawTag(80);
 				output.WriteInt64(this.LastAddPointTime);
 			}
 			this.over_.WriteTo(ref output, RoleQuestStateNotify._repeated_over_codec);
-			this.unlock_.WriteTo(ref output, RoleQuestStateNotify._repeated_unlock_codec);
-			this.inProgress_.WriteTo(ref output, RoleQuestStateNotify._repeated_inProgress_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06016C25 RID: 93221 RVA: 0x0034E9E8 File Offset: 0x0034CBE8
+		// Token: 0x06016B40 RID: 92992 RVA: 0x0034D30C File Offset: 0x0034B50C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -276,7 +276,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016C26 RID: 93222 RVA: 0x0034EA90 File Offset: 0x0034CC90
+		// Token: 0x06016B41 RID: 92993 RVA: 0x0034D3B4 File Offset: 0x0034B5B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RoleQuestStateNotify other)
@@ -303,7 +303,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06016C27 RID: 93223 RVA: 0x0034EB27 File Offset: 0x0034CD27
+		// Token: 0x06016B42 RID: 92994 RVA: 0x0034D44B File Offset: 0x0034B64B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -311,7 +311,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06016C28 RID: 93224 RVA: 0x0034EB30 File Offset: 0x0034CD30
+		// Token: 0x06016B43 RID: 92995 RVA: 0x0034D454 File Offset: 0x0034B654
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -323,110 +323,98 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num > 56U)
+				if (num <= 26U)
 				{
-					if (num <= 96U)
+					if (num <= 10U)
 					{
-						if (num == 58U)
+						if (num == 8U || num == 10U)
 						{
-							goto IL_8C;
-						}
-						if (num != 96U)
-						{
-							goto IL_4E;
+							this.unlock_.AddEntriesFrom(ref input, RoleQuestStateNotify._repeated_unlock_codec);
+							continue;
 						}
 					}
-					else if (num != 98U)
+					else if (num == 24U || num == 26U)
 					{
-						if (num != 104U && num != 106U)
-						{
-							goto IL_4E;
-						}
 						this.inProgress_.AddEntriesFrom(ref input, RoleQuestStateNotify._repeated_inProgress_codec);
 						continue;
 					}
-					this.unlock_.AddEntriesFrom(ref input, RoleQuestStateNotify._repeated_unlock_codec);
-					continue;
 				}
-				if (num <= 32U)
+				else if (num <= 48U)
 				{
-					if (num == 24U)
-					{
-						this.MaxUnlockPoint = input.ReadInt32();
-						continue;
-					}
 					if (num == 32U)
 					{
 						this.UnlockPoint = input.ReadInt32();
 						continue;
 					}
+					if (num == 48U)
+					{
+						this.MaxUnlockPoint = input.ReadInt32();
+						continue;
+					}
 				}
 				else
 				{
-					if (num == 48U)
+					if (num == 80U)
 					{
 						this.LastAddPointTime = input.ReadInt64();
 						continue;
 					}
-					if (num == 56U)
+					if (num == 112U || num == 114U)
 					{
-						goto IL_8C;
+						this.over_.AddEntriesFrom(ref input, RoleQuestStateNotify._repeated_over_codec);
+						continue;
 					}
 				}
-				IL_4E:
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
-				continue;
-				IL_8C:
-				this.over_.AddEntriesFrom(ref input, RoleQuestStateNotify._repeated_over_codec);
 			}
 		}
 
-		// Token: 0x040087DC RID: 34780
+		// Token: 0x04008806 RID: 34822
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040087DD RID: 34781
+		// Token: 0x04008807 RID: 34823
 		public const int UnlockPointFieldNumber = 4;
 
-		// Token: 0x040087DE RID: 34782
+		// Token: 0x04008808 RID: 34824
 		private int unlockPoint_;
 
-		// Token: 0x040087DF RID: 34783
-		public const int MaxUnlockPointFieldNumber = 3;
+		// Token: 0x04008809 RID: 34825
+		public const int MaxUnlockPointFieldNumber = 6;
 
-		// Token: 0x040087E0 RID: 34784
+		// Token: 0x0400880A RID: 34826
 		private int maxUnlockPoint_;
 
-		// Token: 0x040087E1 RID: 34785
-		public const int InProgressFieldNumber = 13;
+		// Token: 0x0400880B RID: 34827
+		public const int InProgressFieldNumber = 3;
 
-		// Token: 0x040087E2 RID: 34786
-		private static readonly FieldCodec<int> _repeated_inProgress_codec = FieldCodec.ForInt32(106U);
+		// Token: 0x0400880C RID: 34828
+		private static readonly FieldCodec<int> _repeated_inProgress_codec = FieldCodec.ForInt32(26U);
 
-		// Token: 0x040087E3 RID: 34787
+		// Token: 0x0400880D RID: 34829
 		private readonly RepeatedField<int> inProgress_ = new RepeatedField<int>();
 
-		// Token: 0x040087E4 RID: 34788
-		public const int UnlockFieldNumber = 12;
+		// Token: 0x0400880E RID: 34830
+		public const int UnlockFieldNumber = 1;
 
-		// Token: 0x040087E5 RID: 34789
-		private static readonly FieldCodec<int> _repeated_unlock_codec = FieldCodec.ForInt32(98U);
+		// Token: 0x0400880F RID: 34831
+		private static readonly FieldCodec<int> _repeated_unlock_codec = FieldCodec.ForInt32(10U);
 
-		// Token: 0x040087E6 RID: 34790
+		// Token: 0x04008810 RID: 34832
 		private readonly RepeatedField<int> unlock_ = new RepeatedField<int>();
 
-		// Token: 0x040087E7 RID: 34791
-		public const int OverFieldNumber = 7;
+		// Token: 0x04008811 RID: 34833
+		public const int OverFieldNumber = 14;
 
-		// Token: 0x040087E8 RID: 34792
-		private static readonly FieldCodec<int> _repeated_over_codec = FieldCodec.ForInt32(58U);
+		// Token: 0x04008812 RID: 34834
+		private static readonly FieldCodec<int> _repeated_over_codec = FieldCodec.ForInt32(114U);
 
-		// Token: 0x040087E9 RID: 34793
+		// Token: 0x04008813 RID: 34835
 		private readonly RepeatedField<int> over_ = new RepeatedField<int>();
 
-		// Token: 0x040087EA RID: 34794
-		public const int LastAddPointTimeFieldNumber = 6;
+		// Token: 0x04008814 RID: 34836
+		public const int LastAddPointTimeFieldNumber = 10;
 
-		// Token: 0x040087EB RID: 34795
+		// Token: 0x04008815 RID: 34837
 		private long lastAddPointTime_;
 	}
 }

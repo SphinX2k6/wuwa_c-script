@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004682 RID: 18050
+	// Token: 0x020035B3 RID: 13747
 	public class ExploreInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E988 RID: 190856 RVA: 0x00AC9B5C File Offset: 0x00AC7D5C
+		// Token: 0x060230D2 RID: 143570 RVA: 0x009F7890 File Offset: 0x009F5A90
 		public unsafe override bool OnRefresh()
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.PhantomExploreView))

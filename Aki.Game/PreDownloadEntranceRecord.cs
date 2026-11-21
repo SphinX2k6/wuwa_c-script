@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002100 RID: 8448
+// Token: 0x020015D8 RID: 5592
 [NullableContext(1)]
 [Nullable(0)]
 public class PreDownloadEntranceRecord : PlayerCommonLogData
 {
-	// Token: 0x170014A6 RID: 5286
-	// (get) Token: 0x0601093C RID: 67900 RVA: 0x0040B1F9 File Offset: 0x004093F9
-	// (set) Token: 0x0601093D RID: 67901 RVA: 0x0040B201 File Offset: 0x00409401
+	// Token: 0x170014D4 RID: 5332
+	// (get) Token: 0x0600DDAF RID: 56751 RVA: 0x0041792D File Offset: 0x00415B2D
+	// (set) Token: 0x0600DDB0 RID: 56752 RVA: 0x00417935 File Offset: 0x00415B35
 	public override string event_id { get; set; } = "1054";
 
-	// Token: 0x0601093E RID: 67902 RVA: 0x0040B20A File Offset: 0x0040940A
+	// Token: 0x0600DDB1 RID: 56753 RVA: 0x0041793E File Offset: 0x00415B3E
 	public PreDownloadEntranceRecord(int entranceId)
 	{
 		this.i_entrance_id = entranceId;
 	}
 
-	// Token: 0x04007C69 RID: 31849
+	// Token: 0x04007D6B RID: 32107
 	public int i_entrance_id;
 }

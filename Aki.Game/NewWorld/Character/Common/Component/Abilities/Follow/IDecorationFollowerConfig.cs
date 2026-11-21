@@ -4,22 +4,22 @@ using Aki.TDConfigMgr.Component;
 
 namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x020044C3 RID: 17603
+	// Token: 0x02002F95 RID: 12181
 	[NullableContext(1)]
 	public interface IDecorationFollowerConfig
 	{
-		// Token: 0x1700739F RID: 29599
-		// (get) Token: 0x0602D620 RID: 185888
+		// Token: 0x17002DC0 RID: 11712
+		// (get) Token: 0x0601CE49 RID: 118345
 		bool IsLoaded { get; }
 
-		// Token: 0x170073A0 RID: 29600
-		// (get) Token: 0x0602D621 RID: 185889
+		// Token: 0x17002DC1 RID: 11713
+		// (get) Token: 0x0601CE4A RID: 118346
 		bool NeedExternalPerformanceControl { get; }
 
-		// Token: 0x0602D622 RID: 185890
+		// Token: 0x0601CE4B RID: 118347
 		void ApplyRawConfig(IFollowDecorationChairConfig config);
 
-		// Token: 0x0602D623 RID: 185891
+		// Token: 0x0601CE4C RID: 118348
 		void Load(Action onLoaded);
 	}
 }

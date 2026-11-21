@@ -16,18 +16,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View
 {
-	// Token: 0x02004B97 RID: 19351
+	// Token: 0x02003B41 RID: 15169
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SlidingBlocksView : UiTickViewBase, IUiProhibitRefreshData
 	{
-		// Token: 0x0603223D RID: 205373 RVA: 0x00BA5FBE File Offset: 0x00BA41BE
+		// Token: 0x06026FCD RID: 159693 RVA: 0x00AEA10B File Offset: 0x00AE830B
 		[NullableContext(1)]
 		public SlidingBlocksView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603223E RID: 205374 RVA: 0x00BA5FC8 File Offset: 0x00BA41C8
+		// Token: 0x06026FCE RID: 159694 RVA: 0x00AEA114 File Offset: 0x00AE8314
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603223F RID: 205375 RVA: 0x00BA61A4 File Offset: 0x00BA43A4
+		// Token: 0x06026FCF RID: 159695 RVA: 0x00AEA2F0 File Offset: 0x00AE84F0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SlidingBlocksView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032240 RID: 205376 RVA: 0x00BA61E8 File Offset: 0x00BA43E8
+		// Token: 0x06026FD0 RID: 159696 RVA: 0x00AEA334 File Offset: 0x00AE8534
 		private UniTask InitControlItem()
 		{
 			SlidingBlocksView.<InitControlItem>d__13 <InitControlItem>d__;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <InitControlItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032241 RID: 205377 RVA: 0x00BA622C File Offset: 0x00BA442C
+		// Token: 0x06026FD1 RID: 159697 RVA: 0x00AEA378 File Offset: 0x00AE8578
 		private UniTask InitPrepareCountDownItem()
 		{
 			SlidingBlocksView.<InitPrepareCountDownItem>d__14 <InitPrepareCountDownItem>d__;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <InitPrepareCountDownItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032242 RID: 205378 RVA: 0x00BA6270 File Offset: 0x00BA4470
+		// Token: 0x06026FD2 RID: 159698 RVA: 0x00AEA3BC File Offset: 0x00AE85BC
 		private UniTask InitMissionItem()
 		{
 			SlidingBlocksView.<InitMissionItem>d__15 <InitMissionItem>d__;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <InitMissionItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032243 RID: 205379 RVA: 0x00BA62B4 File Offset: 0x00BA44B4
+		// Token: 0x06026FD3 RID: 159699 RVA: 0x00AEA400 File Offset: 0x00AE8600
 		private UniTask InitNextTetrominoItem()
 		{
 			SlidingBlocksView.<InitNextTetrominoItem>d__16 <InitNextTetrominoItem>d__;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <InitNextTetrominoItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032244 RID: 205380 RVA: 0x00BA62F8 File Offset: 0x00BA44F8
+		// Token: 0x06026FD4 RID: 159700 RVA: 0x00AEA444 File Offset: 0x00AE8644
 		private UniTask InitCaptionItem()
 		{
 			SlidingBlocksView.<InitCaptionItem>d__17 <InitCaptionItem>d__;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <InitCaptionItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032245 RID: 205381 RVA: 0x00BA633C File Offset: 0x00BA453C
+		// Token: 0x06026FD5 RID: 159701 RVA: 0x00AEA488 File Offset: 0x00AE8688
 		private UniTask InitEndlessSpeedUpTips()
 		{
 			SlidingBlocksView.<InitEndlessSpeedUpTips>d__18 <InitEndlessSpeedUpTips>d__;
@@ -140,14 +140,14 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <InitEndlessSpeedUpTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032246 RID: 205382 RVA: 0x00BA637F File Offset: 0x00BA457F
+		// Token: 0x06026FD6 RID: 159702 RVA: 0x00AEA4CB File Offset: 0x00AE86CB
 		protected override void OnStart()
 		{
 			this.RegisterExtraUiProhibitRefresh();
 			this.EnableInput(false);
 		}
 
-		// Token: 0x06032247 RID: 205383 RVA: 0x00BA6390 File Offset: 0x00BA4590
+		// Token: 0x06026FD7 RID: 159703 RVA: 0x00AEA4DC File Offset: 0x00AE86DC
 		protected override void OnAfterShow()
 		{
 			ControlItem controlItem = this.ControlItem;
@@ -184,19 +184,19 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			}
 		}
 
-		// Token: 0x06032248 RID: 205384 RVA: 0x00BA6464 File Offset: 0x00BA4664
+		// Token: 0x06026FD8 RID: 159704 RVA: 0x00AEA5B0 File Offset: 0x00AE87B0
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.SlidingBlockEndlessSpeedLevel, new Action(this.OnEndlessSpeedUp));
 		}
 
-		// Token: 0x06032249 RID: 205385 RVA: 0x00BA6482 File Offset: 0x00BA4682
+		// Token: 0x06026FD9 RID: 159705 RVA: 0x00AEA5CE File Offset: 0x00AE87CE
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.SlidingBlockEndlessSpeedLevel, new Action(this.OnEndlessSpeedUp));
 		}
 
-		// Token: 0x0603224A RID: 205386 RVA: 0x00BA64A0 File Offset: 0x00BA46A0
+		// Token: 0x06026FDA RID: 159706 RVA: 0x00AEA5EC File Offset: 0x00AE87EC
 		protected override void OnAfterHide()
 		{
 			if (SlidingBlocksModel.Instance.GameData.PlayMode != ETetrisPlayMode.MainLine)
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			}
 		}
 
-		// Token: 0x0603224B RID: 205387 RVA: 0x00BA651C File Offset: 0x00BA471C
+		// Token: 0x06026FDB RID: 159707 RVA: 0x00AEA668 File Offset: 0x00AE8868
 		protected override void OnBeforeDestroy()
 		{
 			this.EnableInput(true);
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			}
 		}
 
-		// Token: 0x0603224C RID: 205388 RVA: 0x00BA65DC File Offset: 0x00BA47DC
+		// Token: 0x06026FDC RID: 159708 RVA: 0x00AEA728 File Offset: 0x00AE8928
 		protected override void OnTick(float delta)
 		{
 			this.UpdateGameTime();
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			base.GetText(7).SetText(gameData.Score.ToString(), true);
 		}
 
-		// Token: 0x0603224D RID: 205389 RVA: 0x00BA66C0 File Offset: 0x00BA48C0
+		// Token: 0x06026FDD RID: 159709 RVA: 0x00AEA80C File Offset: 0x00AE8A0C
 		private void UpdateGameTime()
 		{
 			UUIText text = base.GetText(5);
@@ -309,13 +309,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			text.SetText(str + ":" + str2, true);
 		}
 
-		// Token: 0x0603224E RID: 205390 RVA: 0x00BA6794 File Offset: 0x00BA4994
+		// Token: 0x06026FDE RID: 159710 RVA: 0x00AEA8E0 File Offset: 0x00AE8AE0
 		public bool CheckCondition()
 		{
 			return true;
 		}
 
-		// Token: 0x0603224F RID: 205391 RVA: 0x00BA6797 File Offset: 0x00BA4997
+		// Token: 0x06026FDF RID: 159711 RVA: 0x00AEA8E3 File Offset: 0x00AE8AE3
 		[NullableContext(1)]
 		public string[] GetDistributeTags()
 		{
@@ -327,19 +327,19 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			};
 		}
 
-		// Token: 0x06032250 RID: 205392 RVA: 0x00BA67B7 File Offset: 0x00BA49B7
+		// Token: 0x06026FE0 RID: 159712 RVA: 0x00AEA903 File Offset: 0x00AE8B03
 		private void RegisterExtraUiProhibitRefresh()
 		{
 			UiProhibitFightInputCenter.Instance.RegisterExtraRefreshData(this.ViewInfo.Name, this);
 		}
 
-		// Token: 0x06032251 RID: 205393 RVA: 0x00BA67D4 File Offset: 0x00BA49D4
+		// Token: 0x06026FE1 RID: 159713 RVA: 0x00AEA920 File Offset: 0x00AE8B20
 		private void UnRegisterExtraUiProhibitRefresh()
 		{
 			UiProhibitFightInputCenter.Instance.UnRegisterExtraRefreshData(this.ViewInfo.Name);
 		}
 
-		// Token: 0x06032252 RID: 205394 RVA: 0x00BA67F0 File Offset: 0x00BA49F0
+		// Token: 0x06026FE2 RID: 159714 RVA: 0x00AEA93C File Offset: 0x00AE8B3C
 		private void EnableInput(bool enable)
 		{
 			int num = (int)EInputAction.MaxCount;
@@ -352,13 +352,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			}
 		}
 
-		// Token: 0x06032253 RID: 205395 RVA: 0x00BA684E File Offset: 0x00BA4A4E
+		// Token: 0x06026FE3 RID: 159715 RVA: 0x00AEA99A File Offset: 0x00AE8B9A
 		private void OnEndlessSpeedUp()
 		{
 			this.ShowSpeedUpAnim().Forget();
 		}
 
-		// Token: 0x06032254 RID: 205396 RVA: 0x00BA685C File Offset: 0x00BA4A5C
+		// Token: 0x06026FE4 RID: 159716 RVA: 0x00AEA9A8 File Offset: 0x00AE8BA8
 		private UniTask ShowSpeedUpAnim()
 		{
 			SlidingBlocksView.<ShowSpeedUpAnim>d__33 <ShowSpeedUpAnim>d__;
@@ -369,22 +369,22 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <ShowSpeedUpAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401AB58 RID: 109400
+		// Token: 0x040154AC RID: 87212
 		private ControlItem ControlItem;
 
-		// Token: 0x0401AB59 RID: 109401
+		// Token: 0x040154AD RID: 87213
 		private PrepareCountDownItem PrepareCountDownItem;
 
-		// Token: 0x0401AB5A RID: 109402
+		// Token: 0x040154AE RID: 87214
 		private NextTetrominoItem NextTetrominoItem;
 
-		// Token: 0x0401AB5B RID: 109403
+		// Token: 0x040154AF RID: 87215
 		private CaptionItem CaptionItem;
 
-		// Token: 0x0401AB5C RID: 109404
+		// Token: 0x040154B0 RID: 87216
 		private MissionItem MissionItem;
 
-		// Token: 0x0401AB5D RID: 109405
+		// Token: 0x040154B1 RID: 87217
 		[Nullable(new byte[]
 		{
 			2,
@@ -392,57 +392,57 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 		})]
 		private List<MissionViewItem> MissionViewItems;
 
-		// Token: 0x0401AB5E RID: 109406
+		// Token: 0x040154B2 RID: 87218
 		private EndlessSpeedUpTips EndlessSpeedUpTips;
 
-		// Token: 0x0401AB5F RID: 109407
+		// Token: 0x040154B3 RID: 87219
 		private bool IsMobile;
 
-		// Token: 0x0401AB60 RID: 109408
+		// Token: 0x040154B4 RID: 87220
 		[Nullable(1)]
 		private CustomPromise<UniTaskVoid> WaitLevelPlayTrackPromise;
 
-		// Token: 0x0200ADAB RID: 44459
+		// Token: 0x020097CA RID: 38858
 		[NullableContext(0)]
 		private class EViewComponent
 		{
-			// Token: 0x04034BEF RID: 216047
+			// Token: 0x0402F596 RID: 193942
 			public const int CaptionItem = 0;
 
-			// Token: 0x04034BF0 RID: 216048
+			// Token: 0x0402F597 RID: 193943
 			public const int ContentItem = 1;
 
-			// Token: 0x04034BF1 RID: 216049
+			// Token: 0x0402F598 RID: 193944
 			public const int MissionItem = 2;
 
-			// Token: 0x04034BF2 RID: 216050
+			// Token: 0x0402F599 RID: 193945
 			public const int NextTetrominoItem = 3;
 
-			// Token: 0x04034BF3 RID: 216051
+			// Token: 0x0402F59A RID: 193946
 			public const int TimeRootItem = 4;
 
-			// Token: 0x04034BF4 RID: 216052
+			// Token: 0x0402F59B RID: 193947
 			public const int TimeText = 5;
 
-			// Token: 0x04034BF5 RID: 216053
+			// Token: 0x0402F59C RID: 193948
 			public const int ScoreRootItem = 6;
 
-			// Token: 0x04034BF6 RID: 216054
+			// Token: 0x0402F59D RID: 193949
 			public const int ScoreText = 7;
 
-			// Token: 0x04034BF7 RID: 216055
+			// Token: 0x0402F59E RID: 193950
 			public const int SpeedRootItem = 8;
 
-			// Token: 0x04034BF8 RID: 216056
+			// Token: 0x0402F59F RID: 193951
 			public const int SpeedText = 9;
 
-			// Token: 0x04034BF9 RID: 216057
+			// Token: 0x0402F5A0 RID: 193952
 			public const int SpriteUp = 10;
 
-			// Token: 0x04034BFA RID: 216058
+			// Token: 0x0402F5A1 RID: 193953
 			public const int PanelTips = 11;
 
-			// Token: 0x04034BFB RID: 216059
+			// Token: 0x0402F5A2 RID: 193954
 			public const int BgTexture = 12;
 		}
 	}

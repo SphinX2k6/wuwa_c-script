@@ -2,10 +2,10 @@
 
 namespace UnrealEngine
 {
-	// Token: 0x0200004E RID: 78
+	// Token: 0x02000033 RID: 51
 	public interface IScriptStructProcessor
 	{
-		// Token: 0x060008C6 RID: 2246
+		// Token: 0x0600084B RID: 2123
 		UScriptStructStackOnlyPtr GetNativeScriptStructPtr();
 	}
 }

@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058E6 RID: 22758
+	// Token: 0x02005EF3 RID: 24307
 	public class ISceneTextGuideUiScaleConfigT
 	{
-		// Token: 0x1700AA7B RID: 43643
-		// (get) Token: 0x060266F0 RID: 157424 RVA: 0x0054BE02 File Offset: 0x0054A002
-		// (set) Token: 0x060266F1 RID: 157425 RVA: 0x0054BE0A File Offset: 0x0054A00A
+		// Token: 0x1700B3AB RID: 45995
+		// (get) Token: 0x06028C52 RID: 166994 RVA: 0x0059294E File Offset: 0x00590B4E
+		// (set) Token: 0x06028C53 RID: 166995 RVA: 0x00592956 File Offset: 0x00590B56
 		public int MinDist { get; set; }
 
-		// Token: 0x1700AA7C RID: 43644
-		// (get) Token: 0x060266F2 RID: 157426 RVA: 0x0054BE13 File Offset: 0x0054A013
-		// (set) Token: 0x060266F3 RID: 157427 RVA: 0x0054BE1B File Offset: 0x0054A01B
+		// Token: 0x1700B3AC RID: 45996
+		// (get) Token: 0x06028C54 RID: 166996 RVA: 0x0059295F File Offset: 0x00590B5F
+		// (set) Token: 0x06028C55 RID: 166997 RVA: 0x00592967 File Offset: 0x00590B67
 		public int MaxDist { get; set; }
 
-		// Token: 0x1700AA7D RID: 43645
-		// (get) Token: 0x060266F4 RID: 157428 RVA: 0x0054BE24 File Offset: 0x0054A024
-		// (set) Token: 0x060266F5 RID: 157429 RVA: 0x0054BE2C File Offset: 0x0054A02C
+		// Token: 0x1700B3AD RID: 45997
+		// (get) Token: 0x06028C56 RID: 166998 RVA: 0x00592970 File Offset: 0x00590B70
+		// (set) Token: 0x06028C57 RID: 166999 RVA: 0x00592978 File Offset: 0x00590B78
 		public float MinScale { get; set; }
 
-		// Token: 0x1700AA7E RID: 43646
-		// (get) Token: 0x060266F6 RID: 157430 RVA: 0x0054BE35 File Offset: 0x0054A035
-		// (set) Token: 0x060266F7 RID: 157431 RVA: 0x0054BE3D File Offset: 0x0054A03D
+		// Token: 0x1700B3AE RID: 45998
+		// (get) Token: 0x06028C58 RID: 167000 RVA: 0x00592981 File Offset: 0x00590B81
+		// (set) Token: 0x06028C59 RID: 167001 RVA: 0x00592989 File Offset: 0x00590B89
 		public float MaxScale { get; set; }
 
-		// Token: 0x1700AA7F RID: 43647
-		// (get) Token: 0x060266F8 RID: 157432 RVA: 0x0054BE46 File Offset: 0x0054A046
-		// (set) Token: 0x060266F9 RID: 157433 RVA: 0x0054BE4E File Offset: 0x0054A04E
+		// Token: 0x1700B3AF RID: 45999
+		// (get) Token: 0x06028C5A RID: 167002 RVA: 0x00592992 File Offset: 0x00590B92
+		// (set) Token: 0x06028C5B RID: 167003 RVA: 0x0059299A File Offset: 0x00590B9A
 		public ESceneTextGuideUiScaleType ScaleType { get; set; }
 
-		// Token: 0x060266FA RID: 157434 RVA: 0x0054BE57 File Offset: 0x0054A057
+		// Token: 0x06028C5C RID: 167004 RVA: 0x005929A3 File Offset: 0x00590BA3
 		public ISceneTextGuideUiScaleConfigT()
 		{
 			this.MinDist = 0;

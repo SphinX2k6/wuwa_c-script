@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025AF RID: 9647
+// Token: 0x02001A9A RID: 6810
 public class FightPhotographView : PhotographView
 {
-	// Token: 0x060138DD RID: 80093 RVA: 0x004E2E80 File Offset: 0x004E1080
+	// Token: 0x06010DBD RID: 69053 RVA: 0x004F1A80 File Offset: 0x004EFC80
 	[NullableContext(1)]
 	public FightPhotographView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060138DE RID: 80094 RVA: 0x004E2E8C File Offset: 0x004E108C
+	// Token: 0x06010DBE RID: 69054 RVA: 0x004F1A8C File Offset: 0x004EFC8C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FightPhotographView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -27,7 +27,7 @@ public class FightPhotographView : PhotographView
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060138DF RID: 80095 RVA: 0x004E2ECF File Offset: 0x004E10CF
+	// Token: 0x06010DBF RID: 69055 RVA: 0x004F1ACF File Offset: 0x004EFCCF
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
@@ -35,7 +35,7 @@ public class FightPhotographView : PhotographView
 		base.RefreshFightPhotoOptionTab();
 	}
 
-	// Token: 0x060138E0 RID: 80096 RVA: 0x004E2EE8 File Offset: 0x004E10E8
+	// Token: 0x06010DC0 RID: 69056 RVA: 0x004F1AE8 File Offset: 0x004EFCE8
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
@@ -49,14 +49,14 @@ public class FightPhotographView : PhotographView
 		this.TryAddTag();
 	}
 
-	// Token: 0x060138E1 RID: 80097 RVA: 0x004E2F3E File Offset: 0x004E113E
+	// Token: 0x06010DC1 RID: 69057 RVA: 0x004F1B3E File Offset: 0x004EFD3E
 	protected override void OnAfterHide()
 	{
 		base.OnAfterHide();
 		this.AccumulateColorAdjustDuration();
 	}
 
-	// Token: 0x060138E2 RID: 80098 RVA: 0x004E2F4C File Offset: 0x004E114C
+	// Token: 0x06010DC2 RID: 69058 RVA: 0x004F1B4C File Offset: 0x004EFD4C
 	private void AccumulateColorAdjustDuration()
 	{
 		if (this.ColorAdjustOpenMs > 0L)
@@ -70,14 +70,14 @@ public class FightPhotographView : PhotographView
 		}
 	}
 
-	// Token: 0x060138E3 RID: 80099 RVA: 0x004E2F8F File Offset: 0x004E118F
+	// Token: 0x06010DC3 RID: 69059 RVA: 0x004F1B8F File Offset: 0x004EFD8F
 	protected override void OnAddEventListener()
 	{
 		base.OnAddEventListener();
 		EventSystem.Instance.Add(EEventName.NotifyBtFightPhotoTaskFinish, new Action(this.OnFightPhotoTaskFinish));
 	}
 
-	// Token: 0x060138E4 RID: 80100 RVA: 0x004E2FB4 File Offset: 0x004E11B4
+	// Token: 0x06010DC4 RID: 69060 RVA: 0x004F1BB4 File Offset: 0x004EFDB4
 	protected override void OnAfterTick(float delta)
 	{
 		base.RefreshFightPhotoMissionState();
@@ -105,14 +105,14 @@ public class FightPhotographView : PhotographView
 		this.UiViewSequence.StopSequenceByKey("Loop", false, true);
 	}
 
-	// Token: 0x060138E5 RID: 80101 RVA: 0x004E306D File Offset: 0x004E126D
+	// Token: 0x06010DC5 RID: 69061 RVA: 0x004F1C6D File Offset: 0x004EFE6D
 	protected override void OnRemoveEventListener()
 	{
 		base.OnRemoveEventListener();
 		EventSystem.Instance.Remove(EEventName.NotifyBtFightPhotoTaskFinish, new Action(this.OnFightPhotoTaskFinish));
 	}
 
-	// Token: 0x060138E6 RID: 80102 RVA: 0x004E3094 File Offset: 0x004E1294
+	// Token: 0x06010DC6 RID: 69062 RVA: 0x004F1C94 File Offset: 0x004EFE94
 	protected override void OnBeforeDestroy()
 	{
 		this.AccumulateColorAdjustDuration();
@@ -128,7 +128,7 @@ public class FightPhotographView : PhotographView
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x060138E7 RID: 80103 RVA: 0x004E30F8 File Offset: 0x004E12F8
+	// Token: 0x06010DC7 RID: 69063 RVA: 0x004F1CF8 File Offset: 0x004EFEF8
 	private void TryAddTag()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -143,7 +143,7 @@ public class FightPhotographView : PhotographView
 		}
 	}
 
-	// Token: 0x060138E8 RID: 80104 RVA: 0x004E3174 File Offset: 0x004E1374
+	// Token: 0x06010DC8 RID: 69064 RVA: 0x004F1D74 File Offset: 0x004EFF74
 	private void TryRemoveTag()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -158,13 +158,13 @@ public class FightPhotographView : PhotographView
 		}
 	}
 
-	// Token: 0x060138E9 RID: 80105 RVA: 0x004E31EE File Offset: 0x004E13EE
+	// Token: 0x06010DC9 RID: 69065 RVA: 0x004F1DEE File Offset: 0x004EFFEE
 	private void OnFightPhotoTaskFinish()
 	{
 		this.IsFinishTask = true;
 	}
 
-	// Token: 0x060138EA RID: 80106 RVA: 0x004E31F7 File Offset: 0x004E13F7
+	// Token: 0x06010DCA RID: 69066 RVA: 0x004F1DF7 File Offset: 0x004EFFF7
 	protected override void OnBackButtonClicked()
 	{
 		if (PhotographController.Instance.IsFightPhotoCanSettle())
@@ -176,12 +176,12 @@ public class FightPhotographView : PhotographView
 		FilterSettingController.Instance.ApplyFilterSetting();
 	}
 
-	// Token: 0x040093B3 RID: 37811
+	// Token: 0x04009509 RID: 38153
 	private bool IsFinishTask;
 
-	// Token: 0x040093B4 RID: 37812
+	// Token: 0x0400950A RID: 38154
 	private bool LastStatus;
 
-	// Token: 0x040093B5 RID: 37813
+	// Token: 0x0400950B RID: 38155
 	private long ColorAdjustOpenMs;
 }

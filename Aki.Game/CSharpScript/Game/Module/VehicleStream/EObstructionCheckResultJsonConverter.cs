@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Module.VehicleStream
 {
-	// Token: 0x020048B3 RID: 18611
+	// Token: 0x0200382A RID: 14378
 	public class EObstructionCheckResultJsonConverter : JsonConverter<EObstructionCheckResult>
 	{
-		// Token: 0x06030A4E RID: 199246 RVA: 0x00B4ADD0 File Offset: 0x00B48FD0
+		// Token: 0x0602557A RID: 152954 RVA: 0x00A85BD8 File Offset: 0x00A83DD8
 		public override EObstructionCheckResult Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return EObstructionCheckResultExtensions.FromString(@string);
 		}
 
-		// Token: 0x06030A4F RID: 199247 RVA: 0x00B4ADF4 File Offset: 0x00B48FF4
+		// Token: 0x0602557B RID: 152955 RVA: 0x00A85BFC File Offset: 0x00A83DFC
 		public override void Write(Utf8JsonWriter writer, EObstructionCheckResult value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

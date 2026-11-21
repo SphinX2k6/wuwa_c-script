@@ -7,13 +7,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CF3 RID: 3315
+	// Token: 0x02000DEB RID: 3563
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BeamReceiveComponent : IComponentBase
 	{
-		// Token: 0x06004BBA RID: 19386 RVA: 0x000BCFCB File Offset: 0x000BB1CB
-		[NullableContext(1)]
+		// Token: 0x060050C8 RID: 20680 RVA: 0x000C84FB File Offset: 0x000C66FB
+		[NullableContext(0)]
 		public static BeamReceiveComponent Create(IBeamReceiveComponent? instance)
 		{
 			if (instance == null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001791 RID: 6033
-		// (get) Token: 0x06004BBB RID: 19387 RVA: 0x000BCFEC File Offset: 0x000BB1EC
+		// Token: 0x170018ED RID: 6381
+		// (get) Token: 0x060050C9 RID: 20681 RVA: 0x000C851C File Offset: 0x000C671C
 		public override bool? Disabled
 		{
 			get
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001792 RID: 6034
-		// (get) Token: 0x06004BBC RID: 19388 RVA: 0x000BD024 File Offset: 0x000BB224
+		// Token: 0x170018EE RID: 6382
+		// (get) Token: 0x060050CA RID: 20682 RVA: 0x000C8554 File Offset: 0x000C6754
 		public override bool? EdIsLocked
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001793 RID: 6035
-		// (get) Token: 0x06004BBD RID: 19389 RVA: 0x000BD03A File Offset: 0x000BB23A
+		// Token: 0x170018EF RID: 6383
+		// (get) Token: 0x060050CB RID: 20683 RVA: 0x000C856A File Offset: 0x000C676A
 		public virtual string ReceiveTarget
 		{
 			get
@@ -60,8 +60,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001794 RID: 6036
-		// (get) Token: 0x06004BBE RID: 19390 RVA: 0x000BD047 File Offset: 0x000BB247
+		// Token: 0x170018F0 RID: 6384
+		// (get) Token: 0x060050CC RID: 20684 RVA: 0x000C8577 File Offset: 0x000C6777
 		public virtual float Duration
 		{
 			get
@@ -70,8 +70,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001795 RID: 6037
-		// (get) Token: 0x06004BBF RID: 19391 RVA: 0x000BD054 File Offset: 0x000BB254
+		// Token: 0x170018F1 RID: 6385
+		// (get) Token: 0x060050CD RID: 20685 RVA: 0x000C8584 File Offset: 0x000C6784
 		public virtual IConditionGroup ReceiveCondition
 		{
 			get
@@ -86,19 +86,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001796 RID: 6038
-		// (get) Token: 0x06004BC0 RID: 19392 RVA: 0x000BD088 File Offset: 0x000BB288
+		// Token: 0x170018F2 RID: 6386
+		// (get) Token: 0x060050CE RID: 20686 RVA: 0x000C85B8 File Offset: 0x000C67B8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> BeginActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -121,19 +121,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001797 RID: 6039
-		// (get) Token: 0x06004BC1 RID: 19393 RVA: 0x000BD104 File Offset: 0x000BB304
+		// Token: 0x170018F3 RID: 6387
+		// (get) Token: 0x060050CF RID: 20687 RVA: 0x000C8634 File Offset: 0x000C6834
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> CompleteActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -156,19 +156,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001798 RID: 6040
-		// (get) Token: 0x06004BC2 RID: 19394 RVA: 0x000BD180 File Offset: 0x000BB380
+		// Token: 0x170018F4 RID: 6388
+		// (get) Token: 0x060050D0 RID: 20688 RVA: 0x000C86B0 File Offset: 0x000C68B0
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> StopActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -191,46 +191,46 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B48 RID: 11080
+		// Token: 0x04002E02 RID: 11778
 		private IBeamReceiveComponent Instance;
 
-		// Token: 0x04002B49 RID: 11081
+		// Token: 0x04002E03 RID: 11779
 		private IConditionGroup _ReceiveConditionCache;
 
-		// Token: 0x04002B4A RID: 11082
+		// Token: 0x04002E04 RID: 11780
 		private bool _ReceiveConditionInited;
 
-		// Token: 0x04002B4B RID: 11083
+		// Token: 0x04002E05 RID: 11781
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _BeginActionsCache;
 
-		// Token: 0x04002B4C RID: 11084
+		// Token: 0x04002E06 RID: 11782
 		private bool _BeginActionsInited;
 
-		// Token: 0x04002B4D RID: 11085
+		// Token: 0x04002E07 RID: 11783
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _CompleteActionsCache;
 
-		// Token: 0x04002B4E RID: 11086
+		// Token: 0x04002E08 RID: 11784
 		private bool _CompleteActionsInited;
 
-		// Token: 0x04002B4F RID: 11087
+		// Token: 0x04002E09 RID: 11785
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _StopActionsCache;
 
-		// Token: 0x04002B50 RID: 11088
+		// Token: 0x04002E0A RID: 11786
 		private bool _StopActionsInited;
 	}
 }

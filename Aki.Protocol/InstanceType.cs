@@ -3,28 +3,28 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001647 RID: 5703
+	// Token: 0x020016BE RID: 5822
 	public enum InstanceType
 	{
-		// Token: 0x0400C0E3 RID: 49379
+		// Token: 0x0400C5EE RID: 50670
 		[OriginalName("NoneInstance")]
 		NoneInstance,
-		// Token: 0x0400C0E4 RID: 49380
+		// Token: 0x0400C5EF RID: 50671
 		[OriginalName("BigWorldInstance")]
 		BigWorldInstance,
-		// Token: 0x0400C0E5 RID: 49381
+		// Token: 0x0400C5F0 RID: 50672
 		[OriginalName("NormalInstance")]
 		NormalInstance,
-		// Token: 0x0400C0E6 RID: 49382
+		// Token: 0x0400C5F1 RID: 50673
 		[OriginalName("MirrorInstance")]
 		MirrorInstance,
-		// Token: 0x0400C0E7 RID: 49383
+		// Token: 0x0400C5F2 RID: 50674
 		[OriginalName("TowerChallengeInstance")]
 		TowerChallengeInstance,
-		// Token: 0x0400C0E8 RID: 49384
+		// Token: 0x0400C5F3 RID: 50675
 		[OriginalName("CycleTowerChallenge")]
 		CycleTowerChallenge,
-		// Token: 0x0400C0E9 RID: 49385
+		// Token: 0x0400C5F4 RID: 50676
 		[OriginalName("QuestRecall")]
 		QuestRecall
 	}

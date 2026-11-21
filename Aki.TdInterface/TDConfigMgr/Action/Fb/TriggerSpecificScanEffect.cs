@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A3D RID: 10813
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D2A RID: 11562
 	public class TriggerSpecificScanEffect : ActionParams
 	{
-		// Token: 0x0600EE1E RID: 60958 RVA: 0x0022AED7 File Offset: 0x002290D7
+		// Token: 0x0600FCB6 RID: 64694 RVA: 0x0024888B File Offset: 0x00246A8B
 		public static TriggerSpecificScanEffect Create(ITriggerSpecificScanEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B66 RID: 19302
-		// (get) Token: 0x0600EE1F RID: 60959 RVA: 0x0022AEF6 File Offset: 0x002290F6
+		// Token: 0x17004F10 RID: 20240
+		// (get) Token: 0x0600FCB7 RID: 64695 RVA: 0x002488AA File Offset: 0x00246AAA
 		public virtual ISpecificScanEffect ScanEffect
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008309 RID: 33545
+		// Token: 0x040089FC RID: 35324
 		private ITriggerSpecificScanEffect Instance;
 
-		// Token: 0x0400830A RID: 33546
+		// Token: 0x040089FD RID: 35325
 		private ISpecificScanEffect _ScanEffectCache;
 
-		// Token: 0x0400830B RID: 33547
+		// Token: 0x040089FE RID: 35326
 		private bool _ScanEffectInited;
 	}
 }

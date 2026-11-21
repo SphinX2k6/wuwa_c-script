@@ -4,25 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003CD RID: 973
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000424 RID: 1060
 	public class IFurnitureSlot_SetValue
 	{
-		// Token: 0x04000F92 RID: 3986
+		// Token: 0x040010AB RID: 4267
+		[Nullable(2)]
 		public IFurnitureCamera SlotCamera;
 
-		// Token: 0x04000F93 RID: 3987
-		[Nullable(1)]
+		// Token: 0x040010AC RID: 4268
 		public ISlotShape SlotShape;
 
-		// Token: 0x04000F94 RID: 3988
+		// Token: 0x040010AD RID: 4269
 		public int FurnitureTag;
 
-		// Token: 0x04000F95 RID: 3989
+		// Token: 0x040010AE RID: 4270
+		[Nullable(2)]
 		public List<int> ExcludedFurnitureIds;
 
-		// Token: 0x04000F96 RID: 3990
+		// Token: 0x040010AF RID: 4271
 		public int? EdPreviewFurnitureId;
 	}
 }

@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001DA9 RID: 7593
+// Token: 0x0200126B RID: 4715
 [NullableContext(1)]
 public interface ITrialChallenge
 {
-	// Token: 0x17001267 RID: 4711
-	// (get) Token: 0x0600E67C RID: 59004
-	// (set) Token: 0x0600E67D RID: 59005
+	// Token: 0x17001291 RID: 4753
+	// (get) Token: 0x0600BA9A RID: 47770
+	// (set) Token: 0x0600BA9B RID: 47771
 	int BoardId { get; set; }
 
-	// Token: 0x17001268 RID: 4712
-	// (get) Token: 0x0600E67E RID: 59006
-	// (set) Token: 0x0600E67F RID: 59007
+	// Token: 0x17001292 RID: 4754
+	// (get) Token: 0x0600BA9C RID: 47772
+	// (set) Token: 0x0600BA9D RID: 47773
 	IReadOnlyList<ITrialSubChallenge> SubChallenges { get; set; }
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F2E RID: 3886
+	// Token: 0x02001013 RID: 4115
 	public struct PinballLevelTarget : IFlatbufferObject
 	{
-		// Token: 0x17002965 RID: 10597
-		// (get) Token: 0x0600AF33 RID: 44851 RVA: 0x002C2620 File Offset: 0x002C0820
+		// Token: 0x170029CB RID: 10699
+		// (get) Token: 0x0600B554 RID: 46420 RVA: 0x002DF06C File Offset: 0x002DD26C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AF34 RID: 44852 RVA: 0x002C262D File Offset: 0x002C082D
+		// Token: 0x0600B555 RID: 46421 RVA: 0x002DF079 File Offset: 0x002DD279
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600AF35 RID: 44853 RVA: 0x002C2634 File Offset: 0x002C0834
+		// Token: 0x0600B556 RID: 46422 RVA: 0x002DF080 File Offset: 0x002DD280
 		public static PinballLevelTarget GetRootAsPinballLevelTarget(ByteBuffer _bb)
 		{
 			return PinballLevelTarget.GetRootAsPinballLevelTarget(_bb, default(PinballLevelTarget));
 		}
 
-		// Token: 0x0600AF36 RID: 44854 RVA: 0x002C2650 File Offset: 0x002C0850
+		// Token: 0x0600B557 RID: 46423 RVA: 0x002DF09C File Offset: 0x002DD29C
 		public static PinballLevelTarget GetRootAsPinballLevelTarget(ByteBuffer _bb, PinballLevelTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600AF37 RID: 44855 RVA: 0x002C266D File Offset: 0x002C086D
+		// Token: 0x0600B558 RID: 46424 RVA: 0x002DF0B9 File Offset: 0x002DD2B9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600AF38 RID: 44856 RVA: 0x002C267C File Offset: 0x002C087C
+		// Token: 0x0600B559 RID: 46425 RVA: 0x002DF0C8 File Offset: 0x002DD2C8
 		public PinballLevelTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002966 RID: 10598
-		// (get) Token: 0x0600AF39 RID: 44857 RVA: 0x002C268C File Offset: 0x002C088C
+		// Token: 0x170029CC RID: 10700
+		// (get) Token: 0x0600B55A RID: 46426 RVA: 0x002DF0D8 File Offset: 0x002DD2D8
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002967 RID: 10599
-		// (get) Token: 0x0600AF3A RID: 44858 RVA: 0x002C26C8 File Offset: 0x002C08C8
+		// Token: 0x170029CD RID: 10701
+		// (get) Token: 0x0600B55B RID: 46427 RVA: 0x002DF114 File Offset: 0x002DD314
 		public int CondType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002968 RID: 10600
-		// (get) Token: 0x0600AF3B RID: 44859 RVA: 0x002C2704 File Offset: 0x002C0904
+		// Token: 0x170029CE RID: 10702
+		// (get) Token: 0x0600B55C RID: 46428 RVA: 0x002DF150 File Offset: 0x002DD350
 		public string CondDesc
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AF3C RID: 44860 RVA: 0x002C273B File Offset: 0x002C093B
+		// Token: 0x0600B55D RID: 46429 RVA: 0x002DF187 File Offset: 0x002DD387
 		public Span<byte> GetCondDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600AF3D RID: 44861 RVA: 0x002C274A File Offset: 0x002C094A
+		// Token: 0x0600B55E RID: 46430 RVA: 0x002DF196 File Offset: 0x002DD396
 		public byte[] GetCondDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002969 RID: 10601
-		// (get) Token: 0x0600AF3E RID: 44862 RVA: 0x002C2764 File Offset: 0x002C0964
+		// Token: 0x170029CF RID: 10703
+		// (get) Token: 0x0600B55F RID: 46431 RVA: 0x002DF1B0 File Offset: 0x002DD3B0
 		public int NeedNum
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004FF8 RID: 20472
+		// Token: 0x040055DD RID: 21981
 		private Table __p;
 	}
 }

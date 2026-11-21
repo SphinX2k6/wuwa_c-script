@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A06 RID: 6662
+	// Token: 0x02000489 RID: 1161
 	public sealed class FOnReceivedExceptionDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018B11 RID: 101137 RVA: 0x00246A9E File Offset: 0x00244C9E
+		// Token: 0x06006D5B RID: 27995 RVA: 0x0009FD9E File Offset: 0x0009DF9E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnReceivedExceptionDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018B12 RID: 101138 RVA: 0x00246AAA File Offset: 0x00244CAA
+		// Token: 0x06006D5C RID: 27996 RVA: 0x0009FDAA File Offset: 0x0009DFAA
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnReceivedExceptionDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnReceivedExceptionDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06018B13 RID: 101139 RVA: 0x00246ACD File Offset: 0x00244CCD
+		// Token: 0x06006D5D RID: 27997 RVA: 0x0009FDCD File Offset: 0x0009DFCD
 		public FOnReceivedExceptionDelegate()
 		{
 		}
 
-		// Token: 0x06018B14 RID: 101140 RVA: 0x00246AD5 File Offset: 0x00244CD5
+		// Token: 0x06006D5E RID: 27998 RVA: 0x0009FDD5 File Offset: 0x0009DFD5
 		[NullableContext(2)]
 		public FOnReceivedExceptionDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018B15 RID: 101141 RVA: 0x00246ADF File Offset: 0x00244CDF
+		// Token: 0x06006D5F RID: 27999 RVA: 0x0009FDDF File Offset: 0x0009DFDF
 		public FOnReceivedExceptionDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018B16 RID: 101142 RVA: 0x00246AEA File Offset: 0x00244CEA
+		// Token: 0x06006D60 RID: 28000 RVA: 0x0009FDEA File Offset: 0x0009DFEA
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int, short, uint, FArrayBuffer>) ?? ((Action<int, short, uint, FArrayBuffer>)Delegate.CreateDelegate(typeof(Action<int, short, uint, FArrayBuffer>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018B17 RID: 101143 RVA: 0x00246B1C File Offset: 0x00244D1C
+		// Token: 0x06006D61 RID: 28001 RVA: 0x0009FE1C File Offset: 0x0009E01C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int, short, uint, FArrayBuffer> Callback)
 		{
 			if (FOnReceivedExceptionDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnReceivedExceptionDelegate.RegisterId);
 		}
 
-		// Token: 0x06018B18 RID: 101144 RVA: 0x00246B58 File Offset: 0x00244D58
+		// Token: 0x06006D62 RID: 28002 RVA: 0x0009FE58 File Offset: 0x0009E058
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int SeqNo, short RpdId, uint ErrorCode, FArrayBuffer StringBuffer)
 		{
 			FOnReceivedExceptionDelegate.__FOnReceivedExceptionDelegate_DelegateParams* ptr = stackalloc FOnReceivedExceptionDelegate.__FOnReceivedExceptionDelegate_DelegateParams[(UIntPtr)47] + 15L / (long)sizeof(FOnReceivedExceptionDelegate.__FOnReceivedExceptionDelegate_DelegateParams) & -16L;
@@ -79,10 +77,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06018B19 RID: 101145 RVA: 0x00246BAC File Offset: 0x00244DAC
+		// Token: 0x06006D63 RID: 28003 RVA: 0x0009FEAC File Offset: 0x0009E0AC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, short, uint, FArrayBuffer> action = target as Action<int, short, uint, FArrayBuffer>;
@@ -93,43 +90,43 @@ namespace UnrealEngine
 			action(((FOnReceivedExceptionDelegate.__FOnReceivedExceptionDelegate_DelegateParams*)__Parameters)->SeqNo, ((FOnReceivedExceptionDelegate.__FOnReceivedExceptionDelegate_DelegateParams*)__Parameters)->RpdId, ((FOnReceivedExceptionDelegate.__FOnReceivedExceptionDelegate_DelegateParams*)__Parameters)->ErrorCode, ((FOnReceivedExceptionDelegate.__FOnReceivedExceptionDelegate_DelegateParams*)__Parameters)->StringBuffer);
 		}
 
-		// Token: 0x0400D562 RID: 54626
+		// Token: 0x04002EAC RID: 11948
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D563 RID: 54627
+		// Token: 0x04002EAD RID: 11949
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroNetwork.OnReceivedExceptionDelegate__DelegateSignature";
 
-		// Token: 0x0400D564 RID: 54628
+		// Token: 0x04002EAE RID: 11950
 		private static int RegisterId;
 
-		// Token: 0x020030B7 RID: 12471
+		// Token: 0x02000B94 RID: 2964
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __FOnReceivedExceptionDelegate_DelegateParams
+		private ref struct __FOnReceivedExceptionDelegate_DelegateParams
 		{
-			// Token: 0x04016E07 RID: 93703
+			// Token: 0x04005D0D RID: 23821
 			[FieldOffset(0)]
 			public int SeqNo;
 
-			// Token: 0x04016E08 RID: 93704
+			// Token: 0x04005D0E RID: 23822
 			[FieldOffset(4)]
 			public short RpdId;
 
-			// Token: 0x04016E09 RID: 93705
+			// Token: 0x04005D0F RID: 23823
 			[FieldOffset(8)]
 			public uint ErrorCode;
 
-			// Token: 0x04016E0A RID: 93706
+			// Token: 0x04005D10 RID: 23824
 			[FieldOffset(16)]
 			public FArrayBuffer StringBuffer;
 		}
 
-		// Token: 0x020030B8 RID: 12472
+		// Token: 0x02000B95 RID: 2965
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016E0B RID: 93707
+			// Token: 0x04005D11 RID: 23825
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

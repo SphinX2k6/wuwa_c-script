@@ -2,28 +2,27 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Core.Fight;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002D90 RID: 11664
+// Token: 0x020022EA RID: 8938
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletActionInitCollision : BulletActionBase
 {
-	// Token: 0x060187FE RID: 100350 RVA: 0x0063CF19 File Offset: 0x0063B119
+	// Token: 0x060160A0 RID: 90272 RVA: 0x00662C51 File Offset: 0x00660E51
 	public BulletActionInitCollision(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x060187FF RID: 100351 RVA: 0x0063CF22 File Offset: 0x0063B122
+	// Token: 0x060160A1 RID: 90273 RVA: 0x00662C5A File Offset: 0x00660E5A
 	public override void Clear()
 	{
 		base.Clear();
 		this.CollisionInfo = null;
 	}
 
-	// Token: 0x06018800 RID: 100352 RVA: 0x0063CF34 File Offset: 0x0063B134
+	// Token: 0x060160A2 RID: 90274 RVA: 0x00662C6C File Offset: 0x00660E6C
 	protected unsafe override void OnExecute()
 	{
 		this.CollisionInfo = this.BulletInfo.CollisionInfo;
@@ -61,15 +60,6 @@ public class BulletActionInitCollision : BulletActionBase
 		needHitObstacles = true;
 		IL_1E8:
 		collisionInfo.NeedHitObstacles = needHitObstacles;
-		if (Info.Instance.IsPlayInEditor && this.CollisionInfo.NeedHitObstacles && bulletDataMain.Base.IsOversizeForTrace)
-		{
-			CombatLog instance = CombatLog.Instance;
-			CombatLog.EDebugModule flag = CombatLog.EDebugModule.Bullet;
-			Entity entity = null;
-			string message = "子弹尺寸过大，不会开启射线检测, 请用子弹检测工具查看具体原因";
-			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("BulletId", this.BulletInfo.BulletRowName);
-			instance.Error(flag, entity, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-		}
 		this.InitCollisionByShape(bulletDataMain.Base.Shape, this.BulletInfo.BaseSize);
 		if (!this.BulletInfo.CloseCollision && bulletDataMain.Base.Shape != EBulletShape.Ray)
 		{
@@ -96,17 +86,17 @@ public class BulletActionInitCollision : BulletActionBase
 		this.CollisionInfo.LastFramePosition.FromUeVector(this.BulletInfo.GetCollisionLocation(false));
 		if (BulletConstant.Instance.OpenMoveLog)
 		{
-			Log instance2 = Log.Instance;
+			Log instance = Log.Instance;
 			ELogModule module = ELogModule.Bullet;
 			ELogAuthor author = ELogAuthor.HCW;
-			string message2 = "BulletActionInitCollision";
+			string message = "BulletActionInitCollision";
 			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
 			ref ValueTuple<string, object> ptr = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0);
 			string item = "Bullet";
 			BulletInfo bulletInfo = this.BulletInfo;
 			ptr = new ValueTuple<string, object>(item, (bulletInfo != null) ? bulletInfo.BulletRowName : null);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Location", this.CollisionInfo.LastFramePosition);
-			instance2.Info(module, author, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
+			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 		if (this.CollisionInfo.ActiveDelayMs <= 0f)
 		{
@@ -114,7 +104,7 @@ public class BulletActionInitCollision : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018801 RID: 100353 RVA: 0x0063D324 File Offset: 0x0063B524
+	// Token: 0x060160A3 RID: 90275 RVA: 0x00663008 File Offset: 0x00661208
 	[NullableContext(2)]
 	private void InitPreResolvedDamageIds(long damageId, long[] multiDamageId)
 	{
@@ -130,7 +120,7 @@ public class BulletActionInitCollision : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018802 RID: 100354 RVA: 0x0063D368 File Offset: 0x0063B568
+	// Token: 0x060160A4 RID: 90276 RVA: 0x0066304C File Offset: 0x0066124C
 	private void TryRecordPreResolvedDamageId(long damageId, Entity attacker)
 	{
 		if (damageId <= 0L || !ExpressionTreeController.Instance.ShouldPreResolveDamageIdByExecutionTiming(damageId))
@@ -141,7 +131,7 @@ public class BulletActionInitCollision : BulletActionBase
 		this.CollisionInfo.RecordPreResolvedDamageId(damageId, effectDamageId);
 	}
 
-	// Token: 0x06018803 RID: 100355 RVA: 0x0063D3A4 File Offset: 0x0063B5A4
+	// Token: 0x060160A5 RID: 90277 RVA: 0x00663088 File Offset: 0x00661288
 	private void InitCollisionByShape(EBulletShape shape, Vector size)
 	{
 		switch (shape)
@@ -183,7 +173,7 @@ public class BulletActionInitCollision : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018804 RID: 100356 RVA: 0x0063D4F0 File Offset: 0x0063B6F0
+	// Token: 0x060160A6 RID: 90278 RVA: 0x006631D4 File Offset: 0x006613D4
 	private void InitCollisionCube()
 	{
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -215,7 +205,7 @@ public class BulletActionInitCollision : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018805 RID: 100357 RVA: 0x0063D638 File Offset: 0x0063B838
+	// Token: 0x060160A7 RID: 90279 RVA: 0x0066331C File Offset: 0x0066151C
 	private void InitCollisionSphere()
 	{
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -242,7 +232,7 @@ public class BulletActionInitCollision : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018806 RID: 100358 RVA: 0x0063D728 File Offset: 0x0063B928
+	// Token: 0x060160A8 RID: 90280 RVA: 0x0066340C File Offset: 0x0066160C
 	private void InitCollisionSector()
 	{
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -274,7 +264,7 @@ public class BulletActionInitCollision : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018807 RID: 100359 RVA: 0x0063D85C File Offset: 0x0063BA5C
+	// Token: 0x060160A9 RID: 90281 RVA: 0x00663540 File Offset: 0x00661740
 	private void InitCollisionCylinder()
 	{
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -306,7 +296,7 @@ public class BulletActionInitCollision : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018808 RID: 100360 RVA: 0x0063D990 File Offset: 0x0063BB90
+	// Token: 0x060160AA RID: 90282 RVA: 0x00663674 File Offset: 0x00661874
 	private void InitCollisionRay()
 	{
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -315,7 +305,7 @@ public class BulletActionInitCollision : BulletActionBase
 		rayInfo.BlockByCharacter = (bulletDataMain.Base.SpecialParams.GetValueOrDefault(EBulletBaseSpecificParam.角色阻挡激光) != "f");
 	}
 
-	// Token: 0x06018809 RID: 100361 RVA: 0x0063D9F8 File Offset: 0x0063BBF8
+	// Token: 0x060160AB RID: 90283 RVA: 0x006636DC File Offset: 0x006618DC
 	private void InitCollisionBigShape(UClassStackOnlyPtr regionShapeComponentClass)
 	{
 		AActor actor = this.BulletInfo.Actor;
@@ -352,7 +342,7 @@ public class BulletActionInitCollision : BulletActionBase
 		}
 	}
 
-	// Token: 0x0601880A RID: 100362 RVA: 0x0063DB20 File Offset: 0x0063BD20
+	// Token: 0x060160AC RID: 90284 RVA: 0x00663804 File Offset: 0x00661A04
 	private void UpdateCollisionLocationAndExtend()
 	{
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -421,7 +411,7 @@ public class BulletActionInitCollision : BulletActionBase
 		}
 	}
 
-	// Token: 0x0601880B RID: 100363 RVA: 0x0063DD08 File Offset: 0x0063BF08
+	// Token: 0x060160AD RID: 90285 RVA: 0x006639EC File Offset: 0x00661BEC
 	private void EnableCollision()
 	{
 		this.BulletInfo.Actor.SetActorHiddenInGame(false);
@@ -457,7 +447,7 @@ public class BulletActionInitCollision : BulletActionBase
 		this.CheckNeedKuroFastCollision();
 	}
 
-	// Token: 0x0601880C RID: 100364 RVA: 0x0063DE14 File Offset: 0x0063C014
+	// Token: 0x060160AE RID: 90286 RVA: 0x00663AF8 File Offset: 0x00661CF8
 	private void CheckNeedKuroFastCollision()
 	{
 		UKuroFastCollisionAlgorithm kuroFastCollisionAlgorithm = BulletPatternComponent.GetKuroFastCollisionAlgorithm();
@@ -491,7 +481,7 @@ public class BulletActionInitCollision : BulletActionBase
 		}
 	}
 
-	// Token: 0x0601880D RID: 100365 RVA: 0x0063DEEC File Offset: 0x0063C0EC
+	// Token: 0x060160AF RID: 90287 RVA: 0x00663BD0 File Offset: 0x00661DD0
 	protected void SetCollisionIgnoreChannels(UPrimitiveComponent primitiveComponent)
 	{
 		foreach (ECollisionChannel channel in this.CollisionInfo.IgnoreChannels)
@@ -500,7 +490,7 @@ public class BulletActionInitCollision : BulletActionBase
 		}
 	}
 
-	// Token: 0x0400B5BD RID: 46525
+	// Token: 0x0400B932 RID: 47410
 	[Nullable(2)]
 	protected BulletCollisionInfo CollisionInfo;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002381 RID: 9089
+	// Token: 0x0200260A RID: 9738
 	public static class EMechStuntTypeExtensions
 	{
-		// Token: 0x0600C643 RID: 50755 RVA: 0x001D0AB8 File Offset: 0x001CECB8
+		// Token: 0x0600D287 RID: 53895 RVA: 0x001E9A8C File Offset: 0x001E7C8C
 		public static string ToEnumString(this EMechStuntType value)
 		{
 			string result;
@@ -36,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C644 RID: 50756 RVA: 0x001D0B24 File Offset: 0x001CED24
+		// Token: 0x0600D288 RID: 53896 RVA: 0x001E9AF8 File Offset: 0x001E7CF8
 		public static EMechStuntType FromString(string name)
 		{
 			EMechStuntType result;
@@ -47,7 +47,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C645 RID: 50757 RVA: 0x001D0B50 File Offset: 0x001CED50
+		// Token: 0x0600D289 RID: 53897 RVA: 0x001E9B24 File Offset: 0x001E7D24
 		public static bool TryFromString(string name, out EMechStuntType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -89,7 +89,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C646 RID: 50758 RVA: 0x001D0BDC File Offset: 0x001CEDDC
+		// Token: 0x0600D28A RID: 53898 RVA: 0x001E9BB0 File Offset: 0x001E7DB0
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -103,7 +103,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C647 RID: 50759 RVA: 0x001D0C14 File Offset: 0x001CEE14
+		// Token: 0x0600D28B RID: 53899 RVA: 0x001E9BE8 File Offset: 0x001E7DE8
 		public static EMechStuntType[] GetValues()
 		{
 			return new EMechStuntType[]
@@ -117,7 +117,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C648 RID: 50760 RVA: 0x001D0C27 File Offset: 0x001CEE27
+		// Token: 0x0600D28C RID: 53900 RVA: 0x001E9BFB File Offset: 0x001E7DFB
 		public static string[] GetNames()
 		{
 			return new string[]

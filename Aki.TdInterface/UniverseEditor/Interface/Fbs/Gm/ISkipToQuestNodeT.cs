@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046A6 RID: 18086
+	// Token: 0x02004B0E RID: 19214
 	public class ISkipToQuestNodeT
 	{
-		// Token: 0x17008077 RID: 32887
-		// (get) Token: 0x0601B7A5 RID: 112549 RVA: 0x003E6CE3 File Offset: 0x003E4EE3
-		// (set) Token: 0x0601B7A6 RID: 112550 RVA: 0x003E6CEB File Offset: 0x003E4EEB
+		// Token: 0x170086B8 RID: 34488
+		// (get) Token: 0x0601CF7A RID: 118650 RVA: 0x00412F7F File Offset: 0x0041117F
+		// (set) Token: 0x0601CF7B RID: 118651 RVA: 0x00412F87 File Offset: 0x00411187
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x17008078 RID: 32888
-		// (get) Token: 0x0601B7A7 RID: 112551 RVA: 0x003E6CF4 File Offset: 0x003E4EF4
-		// (set) Token: 0x0601B7A8 RID: 112552 RVA: 0x003E6CFC File Offset: 0x003E4EFC
+		// Token: 0x170086B9 RID: 34489
+		// (get) Token: 0x0601CF7C RID: 118652 RVA: 0x00412F90 File Offset: 0x00411190
+		// (set) Token: 0x0601CF7D RID: 118653 RVA: 0x00412F98 File Offset: 0x00411198
 		public IChildQuestConditionT Quest { get; set; }
 
-		// Token: 0x17008079 RID: 32889
-		// (get) Token: 0x0601B7A9 RID: 112553 RVA: 0x003E6D05 File Offset: 0x003E4F05
-		// (set) Token: 0x0601B7AA RID: 112554 RVA: 0x003E6D0D File Offset: 0x003E4F0D
+		// Token: 0x170086BA RID: 34490
+		// (get) Token: 0x0601CF7E RID: 118654 RVA: 0x00412FA1 File Offset: 0x004111A1
+		// (set) Token: 0x0601CF7F RID: 118655 RVA: 0x00412FA9 File Offset: 0x004111A9
 		public bool IsTeleport { get; set; }
 
-		// Token: 0x1700807A RID: 32890
-		// (get) Token: 0x0601B7AB RID: 112555 RVA: 0x003E6D16 File Offset: 0x003E4F16
-		// (set) Token: 0x0601B7AC RID: 112556 RVA: 0x003E6D1E File Offset: 0x003E4F1E
+		// Token: 0x170086BB RID: 34491
+		// (get) Token: 0x0601CF80 RID: 118656 RVA: 0x00412FB2 File Offset: 0x004111B2
+		// (set) Token: 0x0601CF81 RID: 118657 RVA: 0x00412FBA File Offset: 0x004111BA
 		public bool IsFastMode { get; set; }
 
-		// Token: 0x0601B7AD RID: 112557 RVA: 0x003E6D27 File Offset: 0x003E4F27
+		// Token: 0x0601CF82 RID: 118658 RVA: 0x00412FC3 File Offset: 0x004111C3
 		public ISkipToQuestNodeT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

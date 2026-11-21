@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025BB RID: 9659
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200286A RID: 10346
 	public class ChangeRandomState : ActionParams
 	{
-		// Token: 0x0600D946 RID: 55622 RVA: 0x00206A0A File Offset: 0x00204C0A
+		// Token: 0x0600E6C0 RID: 59072 RVA: 0x002226DE File Offset: 0x002208DE
 		public static ChangeRandomState Create(IChangeRandomState? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F92 RID: 16274
-		// (get) Token: 0x0600D947 RID: 55623 RVA: 0x00206A2C File Offset: 0x00204C2C
+		// Token: 0x1700429A RID: 17050
+		// (get) Token: 0x0600E6C1 RID: 59073 RVA: 0x00222700 File Offset: 0x00220900
 		public virtual List<int> StateIds
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078AF RID: 30895
+		// Token: 0x04007F16 RID: 32534
 		private IChangeRandomState Instance;
 
-		// Token: 0x040078B0 RID: 30896
+		// Token: 0x04007F17 RID: 32535
 		private List<int> _StateIdsCache;
 
-		// Token: 0x040078B1 RID: 30897
+		// Token: 0x04007F18 RID: 32536
 		private bool _StateIdsInited;
 	}
 }

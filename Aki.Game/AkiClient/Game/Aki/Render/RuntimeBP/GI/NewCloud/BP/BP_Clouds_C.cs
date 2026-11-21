@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.GI.NewCloud.BP
 {
-	// Token: 0x02003D5A RID: 15706
+	// Token: 0x020030FA RID: 12538
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/GI/NewCloud/BP/BP_Clouds.BP_Clouds_C")]
 	[UnrealStructLayout(1624, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1622)]
 	public class BP_Clouds_C : AKuroCloudsActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060265BB RID: 157115 RVA: 0x00973090 File Offset: 0x00971290
+		// Token: 0x0601E940 RID: 125248 RVA: 0x00917913 File Offset: 0x00915B13
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_Clouds_C._ClassPtr == IntPtr.Zero)
@@ -25,149 +25,80 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.GI.NewCloud.BP
 			return BP_Clouds_C._ClassPtr;
 		}
 
-		// Token: 0x060265BC RID: 157116 RVA: 0x009730B4 File Offset: 0x009712B4
+		// Token: 0x0601E941 RID: 125249 RVA: 0x00917938 File Offset: 0x00915B38
 		public BP_Clouds_C() : this(BuiltinUtils.AllocNativeUObject(BP_Clouds_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060265BD RID: 157117 RVA: 0x009730DC File Offset: 0x009712DC
+		// Token: 0x0601E942 RID: 125250 RVA: 0x00917960 File Offset: 0x00915B60
 		[NullableContext(1)]
 		public BP_Clouds_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_Clouds_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170051EA RID: 20970
-		// (get) Token: 0x060265BE RID: 157118 RVA: 0x0097310F File Offset: 0x0097130F
-		// (set) Token: 0x060265BF RID: 157119 RVA: 0x00973123 File Offset: 0x00971323
+		// Token: 0x1700349C RID: 13468
+		// (get) Token: 0x0601E943 RID: 125251 RVA: 0x00917993 File Offset: 0x00915B93
+		// (set) Token: 0x0601E944 RID: 125252 RVA: 0x009179A7 File Offset: 0x00915BA7
 		public unsafe UChildActorComponent Cloud02
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UChildActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UChildActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_Cloud02);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_Cloud02, value);
 			}
 		}
 
-		// Token: 0x170051EB RID: 20971
-		// (get) Token: 0x060265C0 RID: 157120 RVA: 0x00973138 File Offset: 0x00971338
-		// (set) Token: 0x060265C1 RID: 157121 RVA: 0x0097314C File Offset: 0x0097134C
+		// Token: 0x1700349D RID: 13469
+		// (get) Token: 0x0601E945 RID: 125253 RVA: 0x009179BC File Offset: 0x00915BBC
+		// (set) Token: 0x0601E946 RID: 125254 RVA: 0x009179D0 File Offset: 0x00915BD0
 		public unsafe UChildActorComponent Cloud01
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UChildActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UChildActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_Cloud01);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_Cloud01, value);
 			}
 		}
 
-		// Token: 0x170051EC RID: 20972
-		// (get) Token: 0x060265C2 RID: 157122 RVA: 0x00973161 File Offset: 0x00971361
-		// (set) Token: 0x060265C3 RID: 157123 RVA: 0x00973175 File Offset: 0x00971375
+		// Token: 0x1700349E RID: 13470
+		// (get) Token: 0x0601E947 RID: 125255 RVA: 0x009179E5 File Offset: 0x00915BE5
+		// (set) Token: 0x0601E948 RID: 125256 RVA: 0x009179F9 File Offset: 0x00915BF9
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x170051ED RID: 20973
-		// (get) Token: 0x060265C4 RID: 157124 RVA: 0x0097318A File Offset: 0x0097138A
-		// (set) Token: 0x060265C5 RID: 157125 RVA: 0x0097319E File Offset: 0x0097139E
-		[Nullable(0)]
-		public unsafe TEnumAsByte<E_Cloud_Presents> 当前云预设_不要改_
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_4);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_4) = value;
-			}
-		}
-
-		// Token: 0x170051EE RID: 20974
-		// (get) Token: 0x060265C6 RID: 157126 RVA: 0x009731B3 File Offset: 0x009713B3
-		// (set) Token: 0x060265C7 RID: 157127 RVA: 0x009731C7 File Offset: 0x009713C7
-		public unsafe PD_CloudPreset_C CloudData
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<PD_CloudPreset_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_5);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_5, value);
-			}
-		}
-
-		// Token: 0x170051EF RID: 20975
-		// (get) Token: 0x060265C8 RID: 157128 RVA: 0x009731DC File Offset: 0x009713DC
-		// (set) Token: 0x060265C9 RID: 157129 RVA: 0x009731EC File Offset: 0x009713EC
+		// Token: 0x1700349F RID: 13471
+		// (get) Token: 0x0601E949 RID: 125257 RVA: 0x00917A0E File Offset: 0x00915C0E
+		// (set) Token: 0x0601E94A RID: 125258 RVA: 0x00917A1E File Offset: 0x00915C1E
 		public unsafe bool Counting
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_6) != 0;
+				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_Counting) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_6) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_Counting) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170051F0 RID: 20976
-		// (get) Token: 0x060265CA RID: 157130 RVA: 0x009731FD File Offset: 0x009713FD
-		// (set) Token: 0x060265CB RID: 157131 RVA: 0x00973211 File Offset: 0x00971411
-		[Nullable(0)]
-		public unsafe TEnumAsByte<E_Cloud_Presents> 默认进入云预设
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_7);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_7) = value;
-			}
-		}
-
-		// Token: 0x170051F1 RID: 20977
-		// (get) Token: 0x060265CC RID: 157132 RVA: 0x00973226 File Offset: 0x00971426
-		// (set) Token: 0x060265CD RID: 157133 RVA: 0x0097323B File Offset: 0x0097143B
-		[Nullable(1)]
-		public TSoftObjectPtr<PD_CloudPrefab_C> CloudAsset
-		{
-			[NullableContext(1)]
-			get
-			{
-				return new TSoftObjectPtr<PD_CloudPrefab_C>(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_8, this);
-			}
-			[NullableContext(1)]
-			set
-			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_8, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
-			}
-		}
-
-		// Token: 0x170051F2 RID: 20978
-		// (get) Token: 0x060265CE RID: 157134 RVA: 0x00973260 File Offset: 0x00971460
-		// (set) Token: 0x060265CF RID: 157135 RVA: 0x00973299 File Offset: 0x00971499
+		// Token: 0x170034A0 RID: 13472
+		// (get) Token: 0x0601E94B RID: 125259 RVA: 0x00917A30 File Offset: 0x00915C30
+		// (set) Token: 0x0601E94C RID: 125260 RVA: 0x00917A69 File Offset: 0x00915C69
 		[Nullable(1)]
 		public TArray<int> SortNumber
 		{
@@ -178,7 +109,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.GI.NewCloud.BP
 				TArray<int> result;
 				if ((result = this._SortNumber) == null)
 				{
-					result = (this._SortNumber = new TArray<int>(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_9, this));
+					result = (this._SortNumber = new TArray<int>(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_SortNumber, this));
 				}
 				return result;
 			}
@@ -189,1003 +120,977 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.GI.NewCloud.BP
 			}
 		}
 
-		// Token: 0x170051F3 RID: 20979
-		// (get) Token: 0x060265D0 RID: 157136 RVA: 0x009732A7 File Offset: 0x009714A7
-		// (set) Token: 0x060265D1 RID: 157137 RVA: 0x009732BB File Offset: 0x009714BB
-		public unsafe PD_CloudPrefab_C As_PD_Cloud_Prefab
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<PD_CloudPrefab_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_10);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_10, value);
-			}
-		}
-
-		// Token: 0x170051F4 RID: 20980
-		// (get) Token: 0x060265D2 RID: 157138 RVA: 0x009732D0 File Offset: 0x009714D0
-		// (set) Token: 0x060265D3 RID: 157139 RVA: 0x009732E4 File Offset: 0x009714E4
+		// Token: 0x170034A1 RID: 13473
+		// (get) Token: 0x0601E94D RID: 125261 RVA: 0x00917A77 File Offset: 0x00915C77
+		// (set) Token: 0x0601E94E RID: 125262 RVA: 0x00917A8B File Offset: 0x00915C8B
 		public unsafe UAkAudioEvent CachedAudioEvent2D
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_11);
+				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_CachedAudioEvent2D);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_11, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_CachedAudioEvent2D, value);
 			}
 		}
 
-		// Token: 0x170051F5 RID: 20981
-		// (get) Token: 0x060265D4 RID: 157140 RVA: 0x009732F9 File Offset: 0x009714F9
-		// (set) Token: 0x060265D5 RID: 157141 RVA: 0x00973309 File Offset: 0x00971509
+		// Token: 0x170034A2 RID: 13474
+		// (get) Token: 0x0601E94F RID: 125263 RVA: 0x00917AA0 File Offset: 0x00915CA0
+		// (set) Token: 0x0601E950 RID: 125264 RVA: 0x00917AB0 File Offset: 0x00915CB0
 		public unsafe bool IsSkyOcean
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_12) != 0;
+				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_IsSkyOcean) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_12) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_IsSkyOcean) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170051F6 RID: 20982
-		// (get) Token: 0x060265D6 RID: 157142 RVA: 0x0097331A File Offset: 0x0097151A
-		// (set) Token: 0x060265D7 RID: 157143 RVA: 0x0097332E File Offset: 0x0097152E
+		// Token: 0x170034A3 RID: 13475
+		// (get) Token: 0x0601E951 RID: 125265 RVA: 0x00917AC1 File Offset: 0x00915CC1
+		// (set) Token: 0x0601E952 RID: 125266 RVA: 0x00917AD5 File Offset: 0x00915CD5
 		public unsafe UAkAudioEvent SkyOceanAudio
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_13);
+				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_SkyOceanAudio);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_13, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Clouds_C.__PropertyOffset_SkyOceanAudio, value);
 			}
 		}
 
-		// Token: 0x170051F7 RID: 20983
-		// (get) Token: 0x060265D8 RID: 157144 RVA: 0x00973343 File Offset: 0x00971543
-		// (set) Token: 0x060265D9 RID: 157145 RVA: 0x00973353 File Offset: 0x00971553
+		// Token: 0x170034A4 RID: 13476
+		// (get) Token: 0x0601E953 RID: 125267 RVA: 0x00917AEA File Offset: 0x00915CEA
+		// (set) Token: 0x0601E954 RID: 125268 RVA: 0x00917AFA File Offset: 0x00915CFA
 		public unsafe bool Override_Cloud_Rotation
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_14) != 0;
+				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_Override_Cloud_Rotation) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_14) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_Override_Cloud_Rotation) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170051F8 RID: 20984
-		// (get) Token: 0x060265DA RID: 157146 RVA: 0x00973364 File Offset: 0x00971564
-		// (set) Token: 0x060265DB RID: 157147 RVA: 0x00973374 File Offset: 0x00971574
+		// Token: 0x170034A5 RID: 13477
+		// (get) Token: 0x0601E955 RID: 125269 RVA: 0x00917B0B File Offset: 0x00915D0B
+		// (set) Token: 0x0601E956 RID: 125270 RVA: 0x00917B1B File Offset: 0x00915D1B
 		public unsafe float Cloud_Speed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_Cloud_Speed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_Cloud_Speed) = value;
 			}
 		}
 
-		// Token: 0x170051F9 RID: 20985
-		// (get) Token: 0x060265DC RID: 157148 RVA: 0x00973385 File Offset: 0x00971585
-		// (set) Token: 0x060265DD RID: 157149 RVA: 0x00973395 File Offset: 0x00971595
+		// Token: 0x170034A6 RID: 13478
+		// (get) Token: 0x0601E957 RID: 125271 RVA: 0x00917B2C File Offset: 0x00915D2C
+		// (set) Token: 0x0601E958 RID: 125272 RVA: 0x00917B3C File Offset: 0x00915D3C
 		public unsafe float Cloud_Offset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_Cloud_Offset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_Cloud_Offset) = value;
 			}
 		}
 
-		// Token: 0x170051FA RID: 20986
-		// (get) Token: 0x060265DE RID: 157150 RVA: 0x009733A6 File Offset: 0x009715A6
-		// (set) Token: 0x060265DF RID: 157151 RVA: 0x009733B6 File Offset: 0x009715B6
+		// Token: 0x170034A7 RID: 13479
+		// (get) Token: 0x0601E959 RID: 125273 RVA: 0x00917B4D File Offset: 0x00915D4D
+		// (set) Token: 0x0601E95A RID: 125274 RVA: 0x00917B5D File Offset: 0x00915D5D
 		public unsafe bool IsReversed_
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_17) != 0;
+				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_IsReversed_) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_17) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_IsReversed_) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170051FB RID: 20987
-		// (get) Token: 0x060265E0 RID: 157152 RVA: 0x009733C7 File Offset: 0x009715C7
-		// (set) Token: 0x060265E1 RID: 157153 RVA: 0x009733D7 File Offset: 0x009715D7
+		// Token: 0x170034A8 RID: 13480
+		// (get) Token: 0x0601E95B RID: 125275 RVA: 0x00917B6E File Offset: 0x00915D6E
+		// (set) Token: 0x0601E95C RID: 125276 RVA: 0x00917B7E File Offset: 0x00915D7E
 		public unsafe float ReversedZHeightBias
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_ReversedZHeightBias);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_ReversedZHeightBias) = value;
 			}
 		}
 
-		// Token: 0x170051FC RID: 20988
-		// (get) Token: 0x060265E2 RID: 157154 RVA: 0x009733E8 File Offset: 0x009715E8
-		// (set) Token: 0x060265E3 RID: 157155 RVA: 0x009733F8 File Offset: 0x009715F8
+		// Token: 0x170034A9 RID: 13481
+		// (get) Token: 0x0601E95D RID: 125277 RVA: 0x00917B8F File Offset: 0x00915D8F
+		// (set) Token: 0x0601E95E RID: 125278 RVA: 0x00917B9F File Offset: 0x00915D9F
 		public unsafe KuroFeatureLevel FeatureLevel
 		{
 			get
 			{
-				return (KuroFeatureLevel)(*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_19));
+				return (KuroFeatureLevel)(*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_FeatureLevel));
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_19) = (byte)value;
+				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_FeatureLevel) = (byte)value;
 			}
 		}
 
-		// Token: 0x170051FD RID: 20989
-		// (get) Token: 0x060265E4 RID: 157156 RVA: 0x00973409 File Offset: 0x00971609
-		// (set) Token: 0x060265E5 RID: 157157 RVA: 0x00973419 File Offset: 0x00971619
+		// Token: 0x170034AA RID: 13482
+		// (get) Token: 0x0601E95F RID: 125279 RVA: 0x00917BB0 File Offset: 0x00915DB0
+		// (set) Token: 0x0601E960 RID: 125280 RVA: 0x00917BC0 File Offset: 0x00915DC0
 		public unsafe bool IsHiddenClouds
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_20) != 0;
+				return *(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_IsHiddenClouds) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_20) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_Clouds_C.__PropertyOffset_IsHiddenClouds) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x060265E6 RID: 157158 RVA: 0x0097342A File Offset: 0x0097162A
+		// Token: 0x0601E961 RID: 125281 RVA: 0x00917BD1 File Offset: 0x00915DD1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		public virtual void _11_水母天空()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___11_水母天空_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E962 RID: 125282 RVA: 0x00917BE5 File Offset: 0x00915DE5
+		[SkipLocalsInit]
+		public virtual void _10_裂缝天空()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___10_裂缝天空_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E963 RID: 125283 RVA: 0x00917BF9 File Offset: 0x00915DF9
+		[SkipLocalsInit]
+		public virtual void _09_新联邦阴天()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___09_新联邦阴天_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E964 RID: 125284 RVA: 0x00917C0D File Offset: 0x00915E0D
+		[SkipLocalsInit]
+		public virtual void _08_龙卷风()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___08_龙卷风_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E965 RID: 125285 RVA: 0x00917C21 File Offset: 0x00915E21
+		[SkipLocalsInit]
+		public virtual void _07_局部暴流()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___07_局部暴流_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E966 RID: 125286 RVA: 0x00917C35 File Offset: 0x00915E35
+		[SkipLocalsInit]
+		public virtual void _06_暴雨季夜晚()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___06_暴雨季夜晚_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E967 RID: 125287 RVA: 0x00917C49 File Offset: 0x00915E49
+		[SkipLocalsInit]
+		public virtual void _05_暴雨季白天()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___05_暴雨季白天_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E968 RID: 125288 RVA: 0x00917C5D File Offset: 0x00915E5D
+		[SkipLocalsInit]
+		public virtual void _04_丰水季夜晚()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___04_丰水季夜晚_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E969 RID: 125289 RVA: 0x00917C71 File Offset: 0x00915E71
+		[SkipLocalsInit]
+		public virtual void _03_丰水季白天()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___03_丰水季白天_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E96A RID: 125290 RVA: 0x00917C85 File Offset: 0x00915E85
+		[SkipLocalsInit]
+		public virtual void _02_枯水季夜晚()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___02_枯水季夜晚_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E96B RID: 125291 RVA: 0x00917C99 File Offset: 0x00915E99
+		[SkipLocalsInit]
+		public virtual void _01_枯水季白天()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___01_枯水季白天_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E96C RID: 125292 RVA: 0x00917CAD File Offset: 0x00915EAD
+		[SkipLocalsInit]
+		public virtual void _45_梦境列车星空云()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___45_梦境列车星空云_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E96D RID: 125293 RVA: 0x00917CC1 File Offset: 0x00915EC1
+		[SkipLocalsInit]
+		public virtual void _44_梦境列车星空()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___44_梦境列车星空_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E96E RID: 125294 RVA: 0x00917CD5 File Offset: 0x00915ED5
+		[SkipLocalsInit]
+		public virtual void _43_梦境列车阴天()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___43_梦境列车阴天_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E96F RID: 125295 RVA: 0x00917CE9 File Offset: 0x00915EE9
+		[SkipLocalsInit]
+		public virtual void _42_梦境列车晴天()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___42_梦境列车晴天_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601E970 RID: 125296 RVA: 0x00917CFD File Offset: 0x00915EFD
+		[SkipLocalsInit]
 		public virtual void _41_金匣冷调()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___41_金匣冷调_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265E7 RID: 157159 RVA: 0x0097343E File Offset: 0x0097163E
+		// Token: 0x0601E971 RID: 125297 RVA: 0x00917D11 File Offset: 0x00915F11
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _40_天演幻心二阶段()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___40_天演幻心二阶段_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265E8 RID: 157160 RVA: 0x00973452 File Offset: 0x00971652
+		// Token: 0x0601E972 RID: 125298 RVA: 0x00917D25 File Offset: 0x00915F25
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _39_天演幻心()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___39_天演幻心_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265E9 RID: 157161 RVA: 0x00973466 File Offset: 0x00971666
+		// Token: 0x0601E973 RID: 125299 RVA: 0x00917D39 File Offset: 0x00915F39
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _38_金匣()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___38_金匣_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265EA RID: 157162 RVA: 0x0097347A File Offset: 0x0097167A
+		// Token: 0x0601E974 RID: 125300 RVA: 0x00917D4D File Offset: 0x00915F4D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _37_水匣()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___37_水匣_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265EB RID: 157163 RVA: 0x0097348E File Offset: 0x0097168E
+		// Token: 0x0601E975 RID: 125301 RVA: 0x00917D61 File Offset: 0x00915F61
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _36_火匣()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___36_火匣_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265EC RID: 157164 RVA: 0x009734A4 File Offset: 0x009716A4
+		// Token: 0x0601E976 RID: 125302 RVA: 0x00917D75 File Offset: 0x00915F75
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void SwitchCloudsSub(PD_CloudPrefab_C CloudPresents, float ChangeSpeed, bool InstantHide)
-		{
-			BP_Clouds_C.__SwitchCloudsSub_FunctionParams* ptr = stackalloc BP_Clouds_C.__SwitchCloudsSub_FunctionParams[(UIntPtr)79] + 15L / (long)sizeof(BP_Clouds_C.__SwitchCloudsSub_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_Clouds_C.__SwitchCloudsSub_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->CloudPresents = ((CloudPresents != null) ? CloudPresents.NativePtr : IntPtr.Zero);
-			ptr->ChangeSpeed = ChangeSpeed;
-			ptr->InstantHide = InstantHide;
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__SwitchCloudsSub_NativeFunctionPtr, (void*)ptr);
-		}
-
-		// Token: 0x060265ED RID: 157165 RVA: 0x00973507 File Offset: 0x00971707
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _35_心湖()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___35_心湖_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265EE RID: 157166 RVA: 0x0097351B File Offset: 0x0097171B
+		// Token: 0x0601E977 RID: 125303 RVA: 0x00917D89 File Offset: 0x00915F89
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _34_天境()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___34_天境_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265EF RID: 157167 RVA: 0x0097352F File Offset: 0x0097172F
+		// Token: 0x0601E978 RID: 125304 RVA: 0x00917D9D File Offset: 0x00915F9D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _33_地境()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___33_地境_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265F0 RID: 157168 RVA: 0x00973543 File Offset: 0x00971743
+		// Token: 0x0601E979 RID: 125305 RVA: 0x00917DB1 File Offset: 0x00915FB1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _32_人境()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___32_人境_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265F1 RID: 157169 RVA: 0x00973557 File Offset: 0x00971757
+		// Token: 0x0601E97A RID: 125306 RVA: 0x00917DC5 File Offset: 0x00915FC5
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _31_梦州特殊2()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___31_梦州特殊2_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265F2 RID: 157170 RVA: 0x0097356B File Offset: 0x0097176B
+		// Token: 0x0601E97B RID: 125307 RVA: 0x00917DD9 File Offset: 0x00915FD9
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _30_梦州特殊1()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___30_梦州特殊1_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265F3 RID: 157171 RVA: 0x0097357F File Offset: 0x0097177F
+		// Token: 0x0601E97C RID: 125308 RVA: 0x00917DED File Offset: 0x00915FED
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _29_宅邸解谜后()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___29_宅邸解谜后_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265F4 RID: 157172 RVA: 0x00973593 File Offset: 0x00971793
+		// Token: 0x0601E97D RID: 125309 RVA: 0x00917E01 File Offset: 0x00916001
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _28_宅邸解谜前()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___28_宅邸解谜前_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265F5 RID: 157173 RVA: 0x009735A7 File Offset: 0x009717A7
+		// Token: 0x0601E97E RID: 125310 RVA: 0x00917E15 File Offset: 0x00916015
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _27_梦州初见()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___27_梦州初见_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265F6 RID: 157174 RVA: 0x009735BB File Offset: 0x009717BB
+		// Token: 0x0601E97F RID: 125311 RVA: 0x00917E29 File Offset: 0x00916029
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _26_梦州阴天()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___26_梦州阴天_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265F7 RID: 157175 RVA: 0x009735CF File Offset: 0x009717CF
+		// Token: 0x0601E980 RID: 125312 RVA: 0x00917E3D File Offset: 0x0091603D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _25_梦州夜晚()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___25_梦州夜晚_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265F8 RID: 157176 RVA: 0x009735E3 File Offset: 0x009717E3
+		// Token: 0x0601E981 RID: 125313 RVA: 0x00917E51 File Offset: 0x00916051
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _24_梦州白天()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___24_梦州白天_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265F9 RID: 157177 RVA: 0x009735F7 File Offset: 0x009717F7
+		// Token: 0x0601E982 RID: 125314 RVA: 0x00917E65 File Offset: 0x00916065
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _23_高达Boss三阶()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___23_高达Boss三阶_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265FA RID: 157178 RVA: 0x0097360B File Offset: 0x0097180B
+		// Token: 0x0601E983 RID: 125315 RVA: 0x00917E79 File Offset: 0x00916079
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _22_高达Boss一阶()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___22_高达Boss一阶_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265FB RID: 157179 RVA: 0x0097361F File Offset: 0x0097181F
+		// Token: 0x0601E984 RID: 125316 RVA: 0x00917E8D File Offset: 0x0091608D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _21_日灵棺解密后()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___21_日灵棺解密后_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265FC RID: 157180 RVA: 0x00973633 File Offset: 0x00971833
+		// Token: 0x0601E985 RID: 125317 RVA: 0x00917EA1 File Offset: 0x009160A1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _20_日灵棺解密前()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___20_日灵棺解密前_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265FD RID: 157181 RVA: 0x00973647 File Offset: 0x00971847
+		// Token: 0x0601E986 RID: 125318 RVA: 0x00917EB5 File Offset: 0x009160B5
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _19_拉海洛初见()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___19_拉海洛初见_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265FE RID: 157182 RVA: 0x0097365B File Offset: 0x0097185B
+		// Token: 0x0601E987 RID: 125319 RVA: 0x00917EC9 File Offset: 0x009160C9
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _18_星海BOSS三阶()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___18_星海BOSS三阶_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060265FF RID: 157183 RVA: 0x0097366F File Offset: 0x0097186F
+		// Token: 0x0601E988 RID: 125320 RVA: 0x00917EDD File Offset: 0x009160DD
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _17_星海BOSS一阶()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___17_星海BOSS一阶_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026600 RID: 157184 RVA: 0x00973683 File Offset: 0x00971883
+		// Token: 0x0601E989 RID: 125321 RVA: 0x00917EF1 File Offset: 0x009160F1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _16_罗伊初见()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___16_罗伊初见_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026601 RID: 157185 RVA: 0x00973697 File Offset: 0x00971897
+		// Token: 0x0601E98A RID: 125322 RVA: 0x00917F05 File Offset: 0x00916105
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _15_罗伊极光()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___15_罗伊极光_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026602 RID: 157186 RVA: 0x009736AB File Offset: 0x009718AB
+		// Token: 0x0601E98B RID: 125323 RVA: 0x00917F19 File Offset: 0x00916119
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _14_罗伊夜晚()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___14_罗伊夜晚_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026603 RID: 157187 RVA: 0x009736BF File Offset: 0x009718BF
+		// Token: 0x0601E98C RID: 125324 RVA: 0x00917F2D File Offset: 0x0091612D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _13_罗伊白天()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___13_罗伊白天_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026604 RID: 157188 RVA: 0x009736D3 File Offset: 0x009718D3
+		// Token: 0x0601E98D RID: 125325 RVA: 0x00917F41 File Offset: 0x00916141
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _24_不渲染BP_Cloud控制的云()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___24_不渲染BP_Cloud控制的云_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026605 RID: 157189 RVA: 0x009736E7 File Offset: 0x009718E7
+		// Token: 0x0601E98E RID: 125326 RVA: 0x00917F55 File Offset: 0x00916155
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _12_梵高()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___12_梵高_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026606 RID: 157190 RVA: 0x009736FB File Offset: 0x009718FB
+		// Token: 0x0601E98F RID: 125327 RVA: 0x00917F69 File Offset: 0x00916169
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _11_拉海洛阴天()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___11_拉海洛阴天_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026607 RID: 157191 RVA: 0x0097370F File Offset: 0x0097190F
+		// Token: 0x0601E990 RID: 125328 RVA: 0x00917F7D File Offset: 0x0091617D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _10_浮光林夜晚()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___10_浮光林夜晚_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026608 RID: 157192 RVA: 0x00973723 File Offset: 0x00971923
+		// Token: 0x0601E991 RID: 125329 RVA: 0x00917F91 File Offset: 0x00916191
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _09_浮光林白天()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___09_浮光林白天_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026609 RID: 157193 RVA: 0x00973737 File Offset: 0x00971937
+		// Token: 0x0601E992 RID: 125330 RVA: 0x00917FA5 File Offset: 0x009161A5
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _08_炉芯领主()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___08_炉芯领主_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602660A RID: 157194 RVA: 0x0097374B File Offset: 0x0097194B
+		// Token: 0x0601E993 RID: 125331 RVA: 0x00917FB9 File Offset: 0x009161B9
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _07_炉芯内部()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___07_炉芯内部_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602660B RID: 157195 RVA: 0x0097375F File Offset: 0x0097195F
+		// Token: 0x0601E994 RID: 125332 RVA: 0x00917FCD File Offset: 0x009161CD
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _06_坠落炉芯()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___06_坠落炉芯_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602660C RID: 157196 RVA: 0x00973773 File Offset: 0x00971973
+		// Token: 0x0601E995 RID: 125333 RVA: 0x00917FE1 File Offset: 0x009161E1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _05_星门Boss()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___05_星门Boss_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602660D RID: 157197 RVA: 0x00973787 File Offset: 0x00971987
+		// Token: 0x0601E996 RID: 125334 RVA: 0x00917FF5 File Offset: 0x009161F5
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _04_磁暴后置()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___04_磁暴后置_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602660E RID: 157198 RVA: 0x0097379B File Offset: 0x0097199B
+		// Token: 0x0601E997 RID: 125335 RVA: 0x00918009 File Offset: 0x00916209
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _03_磁暴前置()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___03_磁暴前置_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602660F RID: 157199 RVA: 0x009737AF File Offset: 0x009719AF
+		// Token: 0x0601E998 RID: 125336 RVA: 0x0091801D File Offset: 0x0091621D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _02_拉海洛夜晚()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___02_拉海洛夜晚_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026610 RID: 157200 RVA: 0x009737C3 File Offset: 0x009719C3
+		// Token: 0x0601E999 RID: 125337 RVA: 0x00918031 File Offset: 0x00916231
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _01_拉海落白天()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___01_拉海落白天_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026611 RID: 157201 RVA: 0x009737D7 File Offset: 0x009719D7
+		// Token: 0x0601E99A RID: 125338 RVA: 0x00918045 File Offset: 0x00916245
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _23_安全点夜晚()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___23_安全点夜晚_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026612 RID: 157202 RVA: 0x009737EB File Offset: 0x009719EB
+		// Token: 0x0601E99B RID: 125339 RVA: 0x00918059 File Offset: 0x00916259
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _22_安全点白天()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___22_安全点白天_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026613 RID: 157203 RVA: 0x009737FF File Offset: 0x009719FF
+		// Token: 0x0601E99C RID: 125340 RVA: 0x0091806D File Offset: 0x0091626D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _23_穗波阴天()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___23_穗波阴天_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026614 RID: 157204 RVA: 0x00973813 File Offset: 0x00971A13
+		// Token: 0x0601E99D RID: 125341 RVA: 0x00918081 File Offset: 0x00916281
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _22_穗波枯山水()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___22_穗波枯山水_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026615 RID: 157205 RVA: 0x00973827 File Offset: 0x00971A27
+		// Token: 0x0601E99E RID: 125342 RVA: 0x00918095 File Offset: 0x00916295
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _21_穗波夜晚()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___21_穗波夜晚_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026616 RID: 157206 RVA: 0x0097383B File Offset: 0x00971A3B
+		// Token: 0x0601E99F RID: 125343 RVA: 0x009180A9 File Offset: 0x009162A9
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _20_穗波白天()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___20_穗波白天_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026617 RID: 157207 RVA: 0x0097384F File Offset: 0x00971A4F
+		// Token: 0x0601E9A0 RID: 125344 RVA: 0x009180BD File Offset: 0x009162BD
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _21_总督日月同辉()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___21_总督日月同辉_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026618 RID: 157208 RVA: 0x00973863 File Offset: 0x00971A63
+		// Token: 0x0601E9A1 RID: 125345 RVA: 0x009180D1 File Offset: 0x009162D1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _21_烈阳天气()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___21_烈阳天气_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026619 RID: 157209 RVA: 0x00973877 File Offset: 0x00971A77
+		// Token: 0x0601E9A2 RID: 125346 RVA: 0x009180E5 File Offset: 0x009162E5
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _20_黑潮风暴加强()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___20_黑潮风暴加强_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602661A RID: 157210 RVA: 0x0097388B File Offset: 0x00971A8B
+		// Token: 0x0601E9A3 RID: 125347 RVA: 0x009180F9 File Offset: 0x009162F9
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _19_黑潮风暴()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___19_黑潮风暴_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602661B RID: 157211 RVA: 0x0097389F File Offset: 0x00971A9F
+		// Token: 0x0601E9A4 RID: 125348 RVA: 0x0091810D File Offset: 0x0091630D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _18_失亡彼岸()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___18_失亡彼岸_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602661C RID: 157212 RVA: 0x009738B3 File Offset: 0x00971AB3
+		// Token: 0x0601E9A5 RID: 125349 RVA: 0x00918121 File Offset: 0x00916321
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _17_隐海试验场()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___17_隐海试验场_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602661D RID: 157213 RVA: 0x009738C7 File Offset: 0x00971AC7
+		// Token: 0x0601E9A6 RID: 125350 RVA: 0x00918135 File Offset: 0x00916335
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _16_巡游天国()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___16_巡游天国_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602661E RID: 157214 RVA: 0x009738DB File Offset: 0x00971ADB
+		// Token: 0x0601E9A7 RID: 125351 RVA: 0x00918149 File Offset: 0x00916349
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _15_光路幻境()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___15_光路幻境_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602661F RID: 157215 RVA: 0x009738EF File Offset: 0x00971AEF
+		// Token: 0x0601E9A8 RID: 125352 RVA: 0x0091815D File Offset: 0x0091635D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _14_黑潮内里世界()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___14_黑潮内里世界_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026620 RID: 157216 RVA: 0x00973903 File Offset: 0x00971B03
+		// Token: 0x0601E9A9 RID: 125353 RVA: 0x00918171 File Offset: 0x00916371
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _13_黑潮内表世界()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___13_黑潮内表世界_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026621 RID: 157217 RVA: 0x00973917 File Offset: 0x00971B17
+		// Token: 0x0601E9AA RID: 125354 RVA: 0x00918185 File Offset: 0x00916385
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _12_黑潮侵蚀()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___12_黑潮侵蚀_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026622 RID: 157218 RVA: 0x0097392B File Offset: 0x00971B2B
+		// Token: 0x0601E9AB RID: 125355 RVA: 0x00918199 File Offset: 0x00916399
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _19_狄斯台地月相()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___19_狄斯台地月相_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026623 RID: 157219 RVA: 0x0097393F File Offset: 0x00971B3F
+		// Token: 0x0601E9AC RID: 125356 RVA: 0x009181AD File Offset: 0x009163AD
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _18_狄斯台地受蚀地()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___18_狄斯台地受蚀地_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026624 RID: 157220 RVA: 0x00973953 File Offset: 0x00971B53
+		// Token: 0x0601E9AD RID: 125357 RVA: 0x009181C1 File Offset: 0x009163C1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _17_狄斯台地烈日天空()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___17_狄斯台地烈日天空_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026625 RID: 157221 RVA: 0x00973967 File Offset: 0x00971B67
+		// Token: 0x0601E9AE RID: 125358 RVA: 0x009181D5 File Offset: 0x009163D5
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _16_狄斯台地日月同辉()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___16_狄斯台地日月同辉_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026626 RID: 157222 RVA: 0x0097397B File Offset: 0x00971B7B
+		// Token: 0x0601E9AF RID: 125359 RVA: 0x009181E9 File Offset: 0x009163E9
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _15_狄斯台地夜晚()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___15_狄斯台地夜晚_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026627 RID: 157223 RVA: 0x0097398F File Offset: 0x00971B8F
+		// Token: 0x0601E9B0 RID: 125360 RVA: 0x009181FD File Offset: 0x009163FD
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _14_狄斯台地白天()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___14_狄斯台地白天_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026628 RID: 157224 RVA: 0x009739A3 File Offset: 0x00971BA3
+		// Token: 0x0601E9B1 RID: 125361 RVA: 0x00918211 File Offset: 0x00916411
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _13_七丘夜晚()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___13_七丘夜晚_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026629 RID: 157225 RVA: 0x009739B7 File Offset: 0x00971BB7
+		// Token: 0x0601E9B2 RID: 125362 RVA: 0x00918225 File Offset: 0x00916425
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _12_观测塔()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___12_观测塔_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602662A RID: 157226 RVA: 0x009739CB File Offset: 0x00971BCB
+		// Token: 0x0601E9B3 RID: 125363 RVA: 0x00918239 File Offset: 0x00916439
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _11_尖刺山()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___11_尖刺山_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602662B RID: 157227 RVA: 0x009739DF File Offset: 0x00971BDF
+		// Token: 0x0601E9B4 RID: 125364 RVA: 0x0091824D File Offset: 0x0091644D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _10_残破竞技场()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___10_残破竞技场_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602662C RID: 157228 RVA: 0x009739F3 File Offset: 0x00971BF3
+		// Token: 0x0601E9B5 RID: 125365 RVA: 0x00918261 File Offset: 0x00916461
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _09_七丘阴天()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___09_七丘阴天_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602662D RID: 157229 RVA: 0x00973A07 File Offset: 0x00971C07
+		// Token: 0x0601E9B6 RID: 125366 RVA: 0x00918275 File Offset: 0x00916475
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _08_初见七丘()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___08_初见七丘_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602662E RID: 157230 RVA: 0x00973A1B File Offset: 0x00971C1B
+		// Token: 0x0601E9B7 RID: 125367 RVA: 0x00918289 File Offset: 0x00916489
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _07_七丘()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___07_七丘_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602662F RID: 157231 RVA: 0x00973A2F File Offset: 0x00971C2F
+		// Token: 0x0601E9B8 RID: 125368 RVA: 0x0091829D File Offset: 0x0091649D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _11_颠倒塔流星()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___11_颠倒塔流星_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026630 RID: 157232 RVA: 0x00973A43 File Offset: 0x00971C43
+		// Token: 0x0601E9B9 RID: 125369 RVA: 0x009182B1 File Offset: 0x009164B1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _10_颠倒塔夜晚()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___10_颠倒塔夜晚_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026631 RID: 157233 RVA: 0x00973A57 File Offset: 0x00971C57
+		// Token: 0x0601E9BA RID: 125370 RVA: 0x009182C5 File Offset: 0x009164C5
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _09_颠倒塔白天()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___09_颠倒塔白天_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026632 RID: 157234 RVA: 0x00973A6B File Offset: 0x00971C6B
+		// Token: 0x0601E9BB RID: 125371 RVA: 0x009182D9 File Offset: 0x009164D9
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _08_彩虹天气()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___08_彩虹天气_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026633 RID: 157235 RVA: 0x00973A7F File Offset: 0x00971C7F
+		// Token: 0x0601E9BC RID: 125372 RVA: 0x009182ED File Offset: 0x009164ED
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void CloudMainParamsUpdate()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__CloudMainParamsUpdate_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026634 RID: 157236 RVA: 0x00973A93 File Offset: 0x00971C93
+		// Token: 0x0601E9BD RID: 125373 RVA: 0x00918301 File Offset: 0x00916501
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _07_费洛洛出场()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___07_费洛洛出场_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026635 RID: 157237 RVA: 0x00973AA7 File Offset: 0x00971CA7
+		// Token: 0x0601E9BE RID: 125374 RVA: 0x00918315 File Offset: 0x00916515
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _06_金库上解密后()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___06_金库上解密后_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026636 RID: 157238 RVA: 0x00973ABB File Offset: 0x00971CBB
+		// Token: 0x0601E9BF RID: 125375 RVA: 0x00918329 File Offset: 0x00916529
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _05_罗墓岛夜晚()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___05_罗墓岛夜晚_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026637 RID: 157239 RVA: 0x00973ACF File Offset: 0x00971CCF
+		// Token: 0x0601E9C0 RID: 125376 RVA: 0x0091833D File Offset: 0x0091653D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _06_黎娜夕塔阴()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___06_黎娜夕塔阴_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026638 RID: 157240 RVA: 0x00973AE3 File Offset: 0x00971CE3
+		// Token: 0x0601E9C1 RID: 125377 RVA: 0x00918351 File Offset: 0x00916551
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _04_云海区()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___04_云海区_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026639 RID: 157241 RVA: 0x00973AF7 File Offset: 0x00971CF7
+		// Token: 0x0601E9C2 RID: 125378 RVA: 0x00918365 File Offset: 0x00916565
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _03_槲生半岛解密后()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___03_槲生半岛解密后_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602663A RID: 157242 RVA: 0x00973B0B File Offset: 0x00971D0B
+		// Token: 0x0601E9C3 RID: 125379 RVA: 0x00918379 File Offset: 0x00916579
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _05_狂欢节()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___05_狂欢节_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602663B RID: 157243 RVA: 0x00973B1F File Offset: 0x00971D1F
+		// Token: 0x0601E9C4 RID: 125380 RVA: 0x0091838D File Offset: 0x0091658D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 显示云移动范围()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__显示云移动范围_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602663C RID: 157244 RVA: 0x00973B33 File Offset: 0x00971D33
+		// Token: 0x0601E9C5 RID: 125381 RVA: 0x009183A1 File Offset: 0x009165A1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 关闭云跟随摄像机移动()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__关闭云跟随摄像机移动_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602663D RID: 157245 RVA: 0x00973B47 File Offset: 0x00971D47
+		// Token: 0x0601E9C6 RID: 125382 RVA: 0x009183B5 File Offset: 0x009165B5
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 开启云跟随摄像机移动()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__开启云跟随摄像机移动_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602663E RID: 157246 RVA: 0x00973B5B File Offset: 0x00971D5B
+		// Token: 0x0601E9C7 RID: 125383 RVA: 0x009183C9 File Offset: 0x009165C9
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _04_金库上层()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___04_金库上层_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602663F RID: 157247 RVA: 0x00973B6F File Offset: 0x00971D6F
+		// Token: 0x0601E9C8 RID: 125384 RVA: 0x009183DD File Offset: 0x009165DD
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _03_狄萨莱海脊永夜解密后()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___03_狄萨莱海脊永夜解密后_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026640 RID: 157248 RVA: 0x00973B83 File Offset: 0x00971D83
+		// Token: 0x0601E9C9 RID: 125385 RVA: 0x009183F1 File Offset: 0x009165F1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _02_狄萨莱海脊永夜解密前()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___02_狄萨莱海脊永夜解密前_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026641 RID: 157249 RVA: 0x00973B97 File Offset: 0x00971D97
+		// Token: 0x0601E9CA RID: 125386 RVA: 0x00918405 File Offset: 0x00916605
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _01_槲生半岛()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___01_槲生半岛_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026642 RID: 157250 RVA: 0x00973BAB File Offset: 0x00971DAB
+		// Token: 0x0601E9CB RID: 125387 RVA: 0x00918419 File Offset: 0x00916619
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _02_帕尔米罗墓地()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___02_帕尔米罗墓地_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026643 RID: 157251 RVA: 0x00973BBF File Offset: 0x00971DBF
+		// Token: 0x0601E9CC RID: 125388 RVA: 0x0091842D File Offset: 0x0091662D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _01_黎娜汐塔()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___01_黎娜汐塔_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026644 RID: 157252 RVA: 0x00973BD3 File Offset: 0x00971DD3
+		// Token: 0x0601E9CD RID: 125389 RVA: 0x00918441 File Offset: 0x00916641
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _020黑海岸天气_阴()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___020黑海岸天气_阴_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026645 RID: 157253 RVA: 0x00973BE7 File Offset: 0x00971DE7
+		// Token: 0x0601E9CE RID: 125390 RVA: 0x00918455 File Offset: 0x00916655
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _019肉鸽月亮05()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___019肉鸽月亮05_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026646 RID: 157254 RVA: 0x00973BFB File Offset: 0x00971DFB
+		// Token: 0x0601E9CF RID: 125391 RVA: 0x00918469 File Offset: 0x00916669
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _018肉鸽月亮04()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___018肉鸽月亮04_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026647 RID: 157255 RVA: 0x00973C0F File Offset: 0x00971E0F
+		// Token: 0x0601E9D0 RID: 125392 RVA: 0x0091847D File Offset: 0x0091667D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _017肉鸽月亮03()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___017肉鸽月亮03_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026648 RID: 157256 RVA: 0x00973C23 File Offset: 0x00971E23
+		// Token: 0x0601E9D1 RID: 125393 RVA: 0x00918491 File Offset: 0x00916691
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _016肉鸽月亮02()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___016肉鸽月亮02_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026649 RID: 157257 RVA: 0x00973C37 File Offset: 0x00971E37
+		// Token: 0x0601E9D2 RID: 125394 RVA: 0x009184A5 File Offset: 0x009166A5
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _015肉鸽月亮01()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___015肉鸽月亮01_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602664A RID: 157258 RVA: 0x00973C4B File Offset: 0x00971E4B
+		// Token: 0x0601E9D3 RID: 125395 RVA: 0x009184B9 File Offset: 0x009166B9
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _014黑海岸夜晚()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___014黑海岸夜晚_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602664B RID: 157259 RVA: 0x00973C5F File Offset: 0x00971E5F
+		// Token: 0x0601E9D4 RID: 125396 RVA: 0x009184CD File Offset: 0x009166CD
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _08黑海岸下层()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___08黑海岸下层_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602664C RID: 157260 RVA: 0x00973C73 File Offset: 0x00971E73
+		// Token: 0x0601E9D5 RID: 125397 RVA: 0x009184E1 File Offset: 0x009166E1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _07黑海岸上层()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___07黑海岸上层_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602664D RID: 157261 RVA: 0x00973C88 File Offset: 0x00971E88
+		// Token: 0x0601E9D6 RID: 125398 RVA: 0x009184F8 File Offset: 0x009166F8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Get_GIParams(float CurTime)
 		{
 			BP_Clouds_C.__Get_GIParams_FunctionParams* ptr = stackalloc BP_Clouds_C.__Get_GIParams_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Clouds_C.__Get_GIParams_FunctionParams) & -16L;
@@ -1194,208 +1099,169 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.GI.NewCloud.BP
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__Get_GIParams_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602664E RID: 157262 RVA: 0x00973CCE File Offset: 0x00971ECE
+		// Token: 0x0601E9D7 RID: 125399 RVA: 0x0091853E File Offset: 0x0091673E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _06乘宵山()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___06乘宵山_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602664F RID: 157263 RVA: 0x00973CE2 File Offset: 0x00971EE2
+		// Token: 0x0601E9D8 RID: 125400 RVA: 0x00918552 File Offset: 0x00916752
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _05怨鸟泽()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___05怨鸟泽_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026650 RID: 157264 RVA: 0x00973CF6 File Offset: 0x00971EF6
+		// Token: 0x0601E9D9 RID: 125401 RVA: 0x00918566 File Offset: 0x00916766
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _013乘宵山异象()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___013乘宵山异象_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026651 RID: 157265 RVA: 0x00973D0A File Offset: 0x00971F0A
+		// Token: 0x0601E9DA RID: 125402 RVA: 0x0091857A File Offset: 0x0091677A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _012夜晚异象()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___012夜晚异象_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026652 RID: 157266 RVA: 0x00973D1E File Offset: 0x00971F1E
+		// Token: 0x0601E9DB RID: 125403 RVA: 0x0091858E File Offset: 0x0091678E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _011黄昏异象()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___011黄昏异象_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026653 RID: 157267 RVA: 0x00973D32 File Offset: 0x00971F32
+		// Token: 0x0601E9DC RID: 125404 RVA: 0x009185A2 File Offset: 0x009167A2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _010阴天异象()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___010阴天异象_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026654 RID: 157268 RVA: 0x00973D46 File Offset: 0x00971F46
+		// Token: 0x0601E9DD RID: 125405 RVA: 0x009185B6 File Offset: 0x009167B6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _09鸣潮天气()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___09鸣潮天气_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026655 RID: 157269 RVA: 0x00973D5A File Offset: 0x00971F5A
+		// Token: 0x0601E9DE RID: 125406 RVA: 0x009185CA File Offset: 0x009167CA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _08漩涡云01()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___08漩涡云01_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026656 RID: 157270 RVA: 0x00973D6E File Offset: 0x00971F6E
+		// Token: 0x0601E9DF RID: 125407 RVA: 0x009185DE File Offset: 0x009167DE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _07无音区05()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___07无音区05_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026657 RID: 157271 RVA: 0x00973D82 File Offset: 0x00971F82
+		// Token: 0x0601E9E0 RID: 125408 RVA: 0x009185F2 File Offset: 0x009167F2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _06无音区04()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___06无音区04_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026658 RID: 157272 RVA: 0x00973D96 File Offset: 0x00971F96
+		// Token: 0x0601E9E1 RID: 125409 RVA: 0x00918606 File Offset: 0x00916806
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _05无音区03()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___05无音区03_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026659 RID: 157273 RVA: 0x00973DAA File Offset: 0x00971FAA
+		// Token: 0x0601E9E2 RID: 125410 RVA: 0x0091861A File Offset: 0x0091681A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _04无音区02()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___04无音区02_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602665A RID: 157274 RVA: 0x00973DBE File Offset: 0x00971FBE
+		// Token: 0x0601E9E3 RID: 125411 RVA: 0x0091862E File Offset: 0x0091682E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 原画测试用云()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__原画测试用云_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602665B RID: 157275 RVA: 0x00973DD4 File Offset: 0x00971FD4
+		// Token: 0x0601E9E4 RID: 125412 RVA: 0x00918642 File Offset: 0x00916842
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void SetCloudParameters(PD_CloudPrefab_C CloudPrefeb, UChildActorComponent CloudActorComponent, float ChangeSpeed, int TransSortNumber, bool bInstantHide)
-		{
-			BP_Clouds_C.__SetCloudParameters_FunctionParams* ptr = stackalloc BP_Clouds_C.__SetCloudParameters_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(BP_Clouds_C.__SetCloudParameters_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_Clouds_C.__SetCloudParameters_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->CloudPrefeb = ((CloudPrefeb != null) ? CloudPrefeb.NativePtr : IntPtr.Zero);
-			ptr->CloudActorComponent = ((CloudActorComponent != null) ? CloudActorComponent.NativePtr : IntPtr.Zero);
-			ptr->ChangeSpeed = ChangeSpeed;
-			ptr->TransSortNumber = TransSortNumber;
-			ptr->bInstantHide = bInstantHide;
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__SetCloudParameters_NativeFunctionPtr, (void*)ptr);
-		}
-
-		// Token: 0x0602665C RID: 157276 RVA: 0x00973E56 File Offset: 0x00972056
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _04中曲台地()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___04中曲台地_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602665D RID: 157277 RVA: 0x00973E6A File Offset: 0x0097206A
+		// Token: 0x0601E9E5 RID: 125413 RVA: 0x00918656 File Offset: 0x00916856
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void Hidden_Old()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__Hidden_Old_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602665E RID: 157278 RVA: 0x00973E7E File Offset: 0x0097207E
+		// Token: 0x0601E9E6 RID: 125414 RVA: 0x0091866A File Offset: 0x0091686A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _03无音区01()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___03无音区01_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602665F RID: 157279 RVA: 0x00973E92 File Offset: 0x00972092
+		// Token: 0x0601E9E7 RID: 125415 RVA: 0x0091867E File Offset: 0x0091687E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _02无音区沉寂态()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___02无音区沉寂态_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026660 RID: 157280 RVA: 0x00973EA6 File Offset: 0x009720A6
+		// Token: 0x0601E9E8 RID: 125416 RVA: 0x00918692 File Offset: 0x00916892
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _01登录界面()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___01登录界面_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026661 RID: 157281 RVA: 0x00973EBA File Offset: 0x009720BA
+		// Token: 0x0601E9E9 RID: 125417 RVA: 0x009186A6 File Offset: 0x009168A6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _03无光之森()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___03无光之森_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026662 RID: 157282 RVA: 0x00973ECE File Offset: 0x009720CE
+		// Token: 0x0601E9EA RID: 125418 RVA: 0x009186BA File Offset: 0x009168BA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _02遗落原乡()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___02遗落原乡_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026663 RID: 157283 RVA: 0x00973EE2 File Offset: 0x009720E2
+		// Token: 0x0601E9EB RID: 125419 RVA: 0x009186CE File Offset: 0x009168CE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _01天城()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.___01天城_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026664 RID: 157284 RVA: 0x00973EF6 File Offset: 0x009720F6
+		// Token: 0x0601E9EC RID: 125420 RVA: 0x009186E2 File Offset: 0x009168E2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026665 RID: 157285 RVA: 0x00973F0A File Offset: 0x0097210A
+		// Token: 0x0601E9ED RID: 125421 RVA: 0x009186F6 File Offset: 0x009168F6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Clouds_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Clouds_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026666 RID: 157286 RVA: 0x00973F20 File Offset: 0x00972120
+		// Token: 0x0601E9EE RID: 125422 RVA: 0x0091870C File Offset: 0x0091690C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnLoaded_63FE5E2B437AFAD504FBCAB26242EB8A(UObject Loaded)
 		{
 			BP_Clouds_C.__OnLoaded_63FE5E2B437AFAD504FBCAB26242EB8A_FunctionParams* ptr = stackalloc BP_Clouds_C.__OnLoaded_63FE5E2B437AFAD504FBCAB26242EB8A_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_Clouds_C.__OnLoaded_63FE5E2B437AFAD504FBCAB26242EB8A_FunctionParams) & -16L;
@@ -1404,25 +1270,22 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.GI.NewCloud.BP
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__OnLoaded_63FE5E2B437AFAD504FBCAB26242EB8A_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06026667 RID: 157287 RVA: 0x00973F75 File Offset: 0x00972175
+		// Token: 0x0601E9EF RID: 125423 RVA: 0x00918761 File Offset: 0x00916961
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026668 RID: 157288 RVA: 0x00973F89 File Offset: 0x00972189
+		// Token: 0x0601E9F0 RID: 125424 RVA: 0x00918775 File Offset: 0x00916975
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Clouds_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Clouds_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026669 RID: 157289 RVA: 0x00973FA0 File Offset: 0x009721A0
+		// Token: 0x0601E9F1 RID: 125425 RVA: 0x0091878C File Offset: 0x0091698C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_Clouds_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_Clouds_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Clouds_C.__ReceiveTick_FunctionParams) & -16L;
@@ -1431,20 +1294,18 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.GI.NewCloud.BP
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602666A RID: 157290 RVA: 0x00973FE8 File Offset: 0x009721E8
+		// Token: 0x0601E9F2 RID: 125426 RVA: 0x009187D4 File Offset: 0x009169D4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_Clouds_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_Clouds_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Clouds_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_Clouds_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Clouds_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Clouds_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602666B RID: 157291 RVA: 0x00974030 File Offset: 0x00972230
+		// Token: 0x0601E9F3 RID: 125427 RVA: 0x0091881C File Offset: 0x00916A1C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void EditorTick(float DeltaSeconds)
 		{
 			BP_Clouds_C.__EditorTick_FunctionParams* ptr = stackalloc BP_Clouds_C.__EditorTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Clouds_C.__EditorTick_FunctionParams) & -16L;
@@ -1453,47 +1314,26 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.GI.NewCloud.BP
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__EditorTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602666C RID: 157292 RVA: 0x00974078 File Offset: 0x00972278
+		// Token: 0x0601E9F4 RID: 125428 RVA: 0x00918864 File Offset: 0x00916A64
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void EditorTick_Implementation(float DeltaSeconds)
 		{
 			BP_Clouds_C.__EditorTick_FunctionParams* ptr = stackalloc BP_Clouds_C.__EditorTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Clouds_C.__EditorTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_Clouds_C.__EditorTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Clouds_C.__EditorTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Clouds_C.__EditorTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602666D RID: 157293 RVA: 0x009740BF File Offset: 0x009722BF
+		// Token: 0x0601E9F5 RID: 125429 RVA: 0x009188AA File Offset: 0x00916AAA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void ChangeCloud()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__ChangeCloud_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602666E RID: 157294 RVA: 0x009740D4 File Offset: 0x009722D4
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void Switch_Clouds(E_Cloud_Presents CloudPresents, float ChangeSpeed, bool IsInEditor, bool bOverrideCloudRotation, float CloudSpeed, float CloudOffset, bool ControlSeqCloud, bool InstantHide)
-		{
-			BP_Clouds_C.__Switch_Clouds_FunctionParams* ptr = stackalloc BP_Clouds_C.__Switch_Clouds_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_Clouds_C.__Switch_Clouds_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_Clouds_C.__Switch_Clouds_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->CloudPresents = CloudPresents;
-			ptr->ChangeSpeed = ChangeSpeed;
-			ptr->IsInEditor = IsInEditor;
-			ptr->bOverrideCloudRotation = bOverrideCloudRotation;
-			ptr->CloudSpeed = CloudSpeed;
-			ptr->CloudOffset = CloudOffset;
-			ptr->ControlSeqCloud = ControlSeqCloud;
-			ptr->InstantHide = InstantHide;
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Clouds_C.__Switch_Clouds_NativeFunctionPtr, (void*)ptr);
-		}
-
-		// Token: 0x0602666F RID: 157295 RVA: 0x00974158 File Offset: 0x00972358
+		// Token: 0x0601E9F6 RID: 125430 RVA: 0x009188C0 File Offset: 0x00916AC0
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void LoadAndSwitch(TSoftObjectPtr<UObject> Asset, float ChangeSpeed, bool IsInEditor, bool IsAudio, bool InstantHide)
 		{
 			BP_Clouds_C.__LoadAndSwitch_FunctionParams* ptr = stackalloc BP_Clouds_C.__LoadAndSwitch_FunctionParams[(UIntPtr)71] + 15L / (long)sizeof(BP_Clouds_C.__LoadAndSwitch_FunctionParams) & -16L;
@@ -1510,638 +1350,574 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.GI.NewCloud.BP
 			UnrealReflectionUtils.DestroyStruct(BP_Clouds_C.__LoadAndSwitch_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06026670 RID: 157296 RVA: 0x009741E2 File Offset: 0x009723E2
+		// Token: 0x0601E9F7 RID: 125431 RVA: 0x0091894A File Offset: 0x00916B4A
 		protected BP_Clouds_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04013388 RID: 78728
+		// Token: 0x0401034B RID: 66379
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/GI/NewCloud/BP/BP_Clouds.BP_Clouds_C";
 
-		// Token: 0x04013389 RID: 78729
+		// Token: 0x0401034C RID: 66380
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401338A RID: 78730
+		// Token: 0x0401034D RID: 66381
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401338B RID: 78731
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401034E RID: 66382
+		internal static int __PropertyOffset_Cloud02;
 
-		// Token: 0x0401338C RID: 78732
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401034F RID: 66383
+		internal static int __PropertyOffset_Cloud01;
 
-		// Token: 0x0401338D RID: 78733
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010350 RID: 66384
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x0401338E RID: 78734
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010351 RID: 66385
+		internal static int __PropertyOffset_Counting;
 
-		// Token: 0x0401338F RID: 78735
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010352 RID: 66386
+		internal static int __PropertyOffset_SortNumber;
 
-		// Token: 0x04013390 RID: 78736
-		internal static int __PropertyOffset_6;
-
-		// Token: 0x04013391 RID: 78737
-		internal static int __PropertyOffset_7;
-
-		// Token: 0x04013392 RID: 78738
-		internal static int __PropertyOffset_8;
-
-		// Token: 0x04013393 RID: 78739
-		internal static int __PropertyOffset_9;
-
-		// Token: 0x04013394 RID: 78740
+		// Token: 0x04010353 RID: 66387
 		private TArray<int> _SortNumber;
 
-		// Token: 0x04013395 RID: 78741
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010354 RID: 66388
+		internal static int __PropertyOffset_CachedAudioEvent2D;
 
-		// Token: 0x04013396 RID: 78742
-		internal static int __PropertyOffset_11;
+		// Token: 0x04010355 RID: 66389
+		internal static int __PropertyOffset_IsSkyOcean;
 
-		// Token: 0x04013397 RID: 78743
-		internal static int __PropertyOffset_12;
+		// Token: 0x04010356 RID: 66390
+		internal static int __PropertyOffset_SkyOceanAudio;
 
-		// Token: 0x04013398 RID: 78744
-		internal static int __PropertyOffset_13;
+		// Token: 0x04010357 RID: 66391
+		internal static int __PropertyOffset_Override_Cloud_Rotation;
 
-		// Token: 0x04013399 RID: 78745
-		internal static int __PropertyOffset_14;
+		// Token: 0x04010358 RID: 66392
+		internal static int __PropertyOffset_Cloud_Speed;
 
-		// Token: 0x0401339A RID: 78746
-		internal static int __PropertyOffset_15;
+		// Token: 0x04010359 RID: 66393
+		internal static int __PropertyOffset_Cloud_Offset;
 
-		// Token: 0x0401339B RID: 78747
-		internal static int __PropertyOffset_16;
+		// Token: 0x0401035A RID: 66394
+		internal static int __PropertyOffset_IsReversed_;
 
-		// Token: 0x0401339C RID: 78748
-		internal static int __PropertyOffset_17;
+		// Token: 0x0401035B RID: 66395
+		internal static int __PropertyOffset_ReversedZHeightBias;
 
-		// Token: 0x0401339D RID: 78749
-		internal static int __PropertyOffset_18;
+		// Token: 0x0401035C RID: 66396
+		internal static int __PropertyOffset_FeatureLevel;
 
-		// Token: 0x0401339E RID: 78750
-		internal static int __PropertyOffset_19;
+		// Token: 0x0401035D RID: 66397
+		internal static int __PropertyOffset_IsHiddenClouds;
 
-		// Token: 0x0401339F RID: 78751
-		internal static int __PropertyOffset_20;
+		// Token: 0x0401035E RID: 66398
+		private static IntPtr ___11_水母天空_NativeFunctionPtr;
 
-		// Token: 0x040133A0 RID: 78752
+		// Token: 0x0401035F RID: 66399
+		private static IntPtr ___10_裂缝天空_NativeFunctionPtr;
+
+		// Token: 0x04010360 RID: 66400
+		private static IntPtr ___09_新联邦阴天_NativeFunctionPtr;
+
+		// Token: 0x04010361 RID: 66401
+		private static IntPtr ___08_龙卷风_NativeFunctionPtr;
+
+		// Token: 0x04010362 RID: 66402
+		private static IntPtr ___07_局部暴流_NativeFunctionPtr;
+
+		// Token: 0x04010363 RID: 66403
+		private static IntPtr ___06_暴雨季夜晚_NativeFunctionPtr;
+
+		// Token: 0x04010364 RID: 66404
+		private static IntPtr ___05_暴雨季白天_NativeFunctionPtr;
+
+		// Token: 0x04010365 RID: 66405
+		private static IntPtr ___04_丰水季夜晚_NativeFunctionPtr;
+
+		// Token: 0x04010366 RID: 66406
+		private static IntPtr ___03_丰水季白天_NativeFunctionPtr;
+
+		// Token: 0x04010367 RID: 66407
+		private static IntPtr ___02_枯水季夜晚_NativeFunctionPtr;
+
+		// Token: 0x04010368 RID: 66408
+		private static IntPtr ___01_枯水季白天_NativeFunctionPtr;
+
+		// Token: 0x04010369 RID: 66409
+		private static IntPtr ___45_梦境列车星空云_NativeFunctionPtr;
+
+		// Token: 0x0401036A RID: 66410
+		private static IntPtr ___44_梦境列车星空_NativeFunctionPtr;
+
+		// Token: 0x0401036B RID: 66411
+		private static IntPtr ___43_梦境列车阴天_NativeFunctionPtr;
+
+		// Token: 0x0401036C RID: 66412
+		private static IntPtr ___42_梦境列车晴天_NativeFunctionPtr;
+
+		// Token: 0x0401036D RID: 66413
 		private static IntPtr ___41_金匣冷调_NativeFunctionPtr;
 
-		// Token: 0x040133A1 RID: 78753
+		// Token: 0x0401036E RID: 66414
 		private static IntPtr ___40_天演幻心二阶段_NativeFunctionPtr;
 
-		// Token: 0x040133A2 RID: 78754
+		// Token: 0x0401036F RID: 66415
 		private static IntPtr ___39_天演幻心_NativeFunctionPtr;
 
-		// Token: 0x040133A3 RID: 78755
+		// Token: 0x04010370 RID: 66416
 		private static IntPtr ___38_金匣_NativeFunctionPtr;
 
-		// Token: 0x040133A4 RID: 78756
+		// Token: 0x04010371 RID: 66417
 		private static IntPtr ___37_水匣_NativeFunctionPtr;
 
-		// Token: 0x040133A5 RID: 78757
+		// Token: 0x04010372 RID: 66418
 		private static IntPtr ___36_火匣_NativeFunctionPtr;
 
-		// Token: 0x040133A6 RID: 78758
-		private static IntPtr __SwitchCloudsSub_NativeFunctionPtr;
-
-		// Token: 0x040133A7 RID: 78759
+		// Token: 0x04010373 RID: 66419
 		private static IntPtr ___35_心湖_NativeFunctionPtr;
 
-		// Token: 0x040133A8 RID: 78760
+		// Token: 0x04010374 RID: 66420
 		private static IntPtr ___34_天境_NativeFunctionPtr;
 
-		// Token: 0x040133A9 RID: 78761
+		// Token: 0x04010375 RID: 66421
 		private static IntPtr ___33_地境_NativeFunctionPtr;
 
-		// Token: 0x040133AA RID: 78762
+		// Token: 0x04010376 RID: 66422
 		private static IntPtr ___32_人境_NativeFunctionPtr;
 
-		// Token: 0x040133AB RID: 78763
+		// Token: 0x04010377 RID: 66423
 		private static IntPtr ___31_梦州特殊2_NativeFunctionPtr;
 
-		// Token: 0x040133AC RID: 78764
+		// Token: 0x04010378 RID: 66424
 		private static IntPtr ___30_梦州特殊1_NativeFunctionPtr;
 
-		// Token: 0x040133AD RID: 78765
+		// Token: 0x04010379 RID: 66425
 		private static IntPtr ___29_宅邸解谜后_NativeFunctionPtr;
 
-		// Token: 0x040133AE RID: 78766
+		// Token: 0x0401037A RID: 66426
 		private static IntPtr ___28_宅邸解谜前_NativeFunctionPtr;
 
-		// Token: 0x040133AF RID: 78767
+		// Token: 0x0401037B RID: 66427
 		private static IntPtr ___27_梦州初见_NativeFunctionPtr;
 
-		// Token: 0x040133B0 RID: 78768
+		// Token: 0x0401037C RID: 66428
 		private static IntPtr ___26_梦州阴天_NativeFunctionPtr;
 
-		// Token: 0x040133B1 RID: 78769
+		// Token: 0x0401037D RID: 66429
 		private static IntPtr ___25_梦州夜晚_NativeFunctionPtr;
 
-		// Token: 0x040133B2 RID: 78770
+		// Token: 0x0401037E RID: 66430
 		private static IntPtr ___24_梦州白天_NativeFunctionPtr;
 
-		// Token: 0x040133B3 RID: 78771
+		// Token: 0x0401037F RID: 66431
 		private static IntPtr ___23_高达Boss三阶_NativeFunctionPtr;
 
-		// Token: 0x040133B4 RID: 78772
+		// Token: 0x04010380 RID: 66432
 		private static IntPtr ___22_高达Boss一阶_NativeFunctionPtr;
 
-		// Token: 0x040133B5 RID: 78773
+		// Token: 0x04010381 RID: 66433
 		private static IntPtr ___21_日灵棺解密后_NativeFunctionPtr;
 
-		// Token: 0x040133B6 RID: 78774
+		// Token: 0x04010382 RID: 66434
 		private static IntPtr ___20_日灵棺解密前_NativeFunctionPtr;
 
-		// Token: 0x040133B7 RID: 78775
+		// Token: 0x04010383 RID: 66435
 		private static IntPtr ___19_拉海洛初见_NativeFunctionPtr;
 
-		// Token: 0x040133B8 RID: 78776
+		// Token: 0x04010384 RID: 66436
 		private static IntPtr ___18_星海BOSS三阶_NativeFunctionPtr;
 
-		// Token: 0x040133B9 RID: 78777
+		// Token: 0x04010385 RID: 66437
 		private static IntPtr ___17_星海BOSS一阶_NativeFunctionPtr;
 
-		// Token: 0x040133BA RID: 78778
+		// Token: 0x04010386 RID: 66438
 		private static IntPtr ___16_罗伊初见_NativeFunctionPtr;
 
-		// Token: 0x040133BB RID: 78779
+		// Token: 0x04010387 RID: 66439
 		private static IntPtr ___15_罗伊极光_NativeFunctionPtr;
 
-		// Token: 0x040133BC RID: 78780
+		// Token: 0x04010388 RID: 66440
 		private static IntPtr ___14_罗伊夜晚_NativeFunctionPtr;
 
-		// Token: 0x040133BD RID: 78781
+		// Token: 0x04010389 RID: 66441
 		private static IntPtr ___13_罗伊白天_NativeFunctionPtr;
 
-		// Token: 0x040133BE RID: 78782
+		// Token: 0x0401038A RID: 66442
 		private static IntPtr ___24_不渲染BP_Cloud控制的云_NativeFunctionPtr;
 
-		// Token: 0x040133BF RID: 78783
+		// Token: 0x0401038B RID: 66443
 		private static IntPtr ___12_梵高_NativeFunctionPtr;
 
-		// Token: 0x040133C0 RID: 78784
+		// Token: 0x0401038C RID: 66444
 		private static IntPtr ___11_拉海洛阴天_NativeFunctionPtr;
 
-		// Token: 0x040133C1 RID: 78785
+		// Token: 0x0401038D RID: 66445
 		private static IntPtr ___10_浮光林夜晚_NativeFunctionPtr;
 
-		// Token: 0x040133C2 RID: 78786
+		// Token: 0x0401038E RID: 66446
 		private static IntPtr ___09_浮光林白天_NativeFunctionPtr;
 
-		// Token: 0x040133C3 RID: 78787
+		// Token: 0x0401038F RID: 66447
 		private static IntPtr ___08_炉芯领主_NativeFunctionPtr;
 
-		// Token: 0x040133C4 RID: 78788
+		// Token: 0x04010390 RID: 66448
 		private static IntPtr ___07_炉芯内部_NativeFunctionPtr;
 
-		// Token: 0x040133C5 RID: 78789
+		// Token: 0x04010391 RID: 66449
 		private static IntPtr ___06_坠落炉芯_NativeFunctionPtr;
 
-		// Token: 0x040133C6 RID: 78790
+		// Token: 0x04010392 RID: 66450
 		private static IntPtr ___05_星门Boss_NativeFunctionPtr;
 
-		// Token: 0x040133C7 RID: 78791
+		// Token: 0x04010393 RID: 66451
 		private static IntPtr ___04_磁暴后置_NativeFunctionPtr;
 
-		// Token: 0x040133C8 RID: 78792
+		// Token: 0x04010394 RID: 66452
 		private static IntPtr ___03_磁暴前置_NativeFunctionPtr;
 
-		// Token: 0x040133C9 RID: 78793
+		// Token: 0x04010395 RID: 66453
 		private static IntPtr ___02_拉海洛夜晚_NativeFunctionPtr;
 
-		// Token: 0x040133CA RID: 78794
+		// Token: 0x04010396 RID: 66454
 		private static IntPtr ___01_拉海落白天_NativeFunctionPtr;
 
-		// Token: 0x040133CB RID: 78795
+		// Token: 0x04010397 RID: 66455
 		private static IntPtr ___23_安全点夜晚_NativeFunctionPtr;
 
-		// Token: 0x040133CC RID: 78796
+		// Token: 0x04010398 RID: 66456
 		private static IntPtr ___22_安全点白天_NativeFunctionPtr;
 
-		// Token: 0x040133CD RID: 78797
+		// Token: 0x04010399 RID: 66457
 		private static IntPtr ___23_穗波阴天_NativeFunctionPtr;
 
-		// Token: 0x040133CE RID: 78798
+		// Token: 0x0401039A RID: 66458
 		private static IntPtr ___22_穗波枯山水_NativeFunctionPtr;
 
-		// Token: 0x040133CF RID: 78799
+		// Token: 0x0401039B RID: 66459
 		private static IntPtr ___21_穗波夜晚_NativeFunctionPtr;
 
-		// Token: 0x040133D0 RID: 78800
+		// Token: 0x0401039C RID: 66460
 		private static IntPtr ___20_穗波白天_NativeFunctionPtr;
 
-		// Token: 0x040133D1 RID: 78801
+		// Token: 0x0401039D RID: 66461
 		private static IntPtr ___21_总督日月同辉_NativeFunctionPtr;
 
-		// Token: 0x040133D2 RID: 78802
+		// Token: 0x0401039E RID: 66462
 		private static IntPtr ___21_烈阳天气_NativeFunctionPtr;
 
-		// Token: 0x040133D3 RID: 78803
+		// Token: 0x0401039F RID: 66463
 		private static IntPtr ___20_黑潮风暴加强_NativeFunctionPtr;
 
-		// Token: 0x040133D4 RID: 78804
+		// Token: 0x040103A0 RID: 66464
 		private static IntPtr ___19_黑潮风暴_NativeFunctionPtr;
 
-		// Token: 0x040133D5 RID: 78805
+		// Token: 0x040103A1 RID: 66465
 		private static IntPtr ___18_失亡彼岸_NativeFunctionPtr;
 
-		// Token: 0x040133D6 RID: 78806
+		// Token: 0x040103A2 RID: 66466
 		private static IntPtr ___17_隐海试验场_NativeFunctionPtr;
 
-		// Token: 0x040133D7 RID: 78807
+		// Token: 0x040103A3 RID: 66467
 		private static IntPtr ___16_巡游天国_NativeFunctionPtr;
 
-		// Token: 0x040133D8 RID: 78808
+		// Token: 0x040103A4 RID: 66468
 		private static IntPtr ___15_光路幻境_NativeFunctionPtr;
 
-		// Token: 0x040133D9 RID: 78809
+		// Token: 0x040103A5 RID: 66469
 		private static IntPtr ___14_黑潮内里世界_NativeFunctionPtr;
 
-		// Token: 0x040133DA RID: 78810
+		// Token: 0x040103A6 RID: 66470
 		private static IntPtr ___13_黑潮内表世界_NativeFunctionPtr;
 
-		// Token: 0x040133DB RID: 78811
+		// Token: 0x040103A7 RID: 66471
 		private static IntPtr ___12_黑潮侵蚀_NativeFunctionPtr;
 
-		// Token: 0x040133DC RID: 78812
+		// Token: 0x040103A8 RID: 66472
 		private static IntPtr ___19_狄斯台地月相_NativeFunctionPtr;
 
-		// Token: 0x040133DD RID: 78813
+		// Token: 0x040103A9 RID: 66473
 		private static IntPtr ___18_狄斯台地受蚀地_NativeFunctionPtr;
 
-		// Token: 0x040133DE RID: 78814
+		// Token: 0x040103AA RID: 66474
 		private static IntPtr ___17_狄斯台地烈日天空_NativeFunctionPtr;
 
-		// Token: 0x040133DF RID: 78815
+		// Token: 0x040103AB RID: 66475
 		private static IntPtr ___16_狄斯台地日月同辉_NativeFunctionPtr;
 
-		// Token: 0x040133E0 RID: 78816
+		// Token: 0x040103AC RID: 66476
 		private static IntPtr ___15_狄斯台地夜晚_NativeFunctionPtr;
 
-		// Token: 0x040133E1 RID: 78817
+		// Token: 0x040103AD RID: 66477
 		private static IntPtr ___14_狄斯台地白天_NativeFunctionPtr;
 
-		// Token: 0x040133E2 RID: 78818
+		// Token: 0x040103AE RID: 66478
 		private static IntPtr ___13_七丘夜晚_NativeFunctionPtr;
 
-		// Token: 0x040133E3 RID: 78819
+		// Token: 0x040103AF RID: 66479
 		private static IntPtr ___12_观测塔_NativeFunctionPtr;
 
-		// Token: 0x040133E4 RID: 78820
+		// Token: 0x040103B0 RID: 66480
 		private static IntPtr ___11_尖刺山_NativeFunctionPtr;
 
-		// Token: 0x040133E5 RID: 78821
+		// Token: 0x040103B1 RID: 66481
 		private static IntPtr ___10_残破竞技场_NativeFunctionPtr;
 
-		// Token: 0x040133E6 RID: 78822
+		// Token: 0x040103B2 RID: 66482
 		private static IntPtr ___09_七丘阴天_NativeFunctionPtr;
 
-		// Token: 0x040133E7 RID: 78823
+		// Token: 0x040103B3 RID: 66483
 		private static IntPtr ___08_初见七丘_NativeFunctionPtr;
 
-		// Token: 0x040133E8 RID: 78824
+		// Token: 0x040103B4 RID: 66484
 		private static IntPtr ___07_七丘_NativeFunctionPtr;
 
-		// Token: 0x040133E9 RID: 78825
+		// Token: 0x040103B5 RID: 66485
 		private static IntPtr ___11_颠倒塔流星_NativeFunctionPtr;
 
-		// Token: 0x040133EA RID: 78826
+		// Token: 0x040103B6 RID: 66486
 		private static IntPtr ___10_颠倒塔夜晚_NativeFunctionPtr;
 
-		// Token: 0x040133EB RID: 78827
+		// Token: 0x040103B7 RID: 66487
 		private static IntPtr ___09_颠倒塔白天_NativeFunctionPtr;
 
-		// Token: 0x040133EC RID: 78828
+		// Token: 0x040103B8 RID: 66488
 		private static IntPtr ___08_彩虹天气_NativeFunctionPtr;
 
-		// Token: 0x040133ED RID: 78829
+		// Token: 0x040103B9 RID: 66489
 		private static IntPtr __CloudMainParamsUpdate_NativeFunctionPtr;
 
-		// Token: 0x040133EE RID: 78830
+		// Token: 0x040103BA RID: 66490
 		private static IntPtr ___07_费洛洛出场_NativeFunctionPtr;
 
-		// Token: 0x040133EF RID: 78831
+		// Token: 0x040103BB RID: 66491
 		private static IntPtr ___06_金库上解密后_NativeFunctionPtr;
 
-		// Token: 0x040133F0 RID: 78832
+		// Token: 0x040103BC RID: 66492
 		private static IntPtr ___05_罗墓岛夜晚_NativeFunctionPtr;
 
-		// Token: 0x040133F1 RID: 78833
+		// Token: 0x040103BD RID: 66493
 		private static IntPtr ___06_黎娜夕塔阴_NativeFunctionPtr;
 
-		// Token: 0x040133F2 RID: 78834
+		// Token: 0x040103BE RID: 66494
 		private static IntPtr ___04_云海区_NativeFunctionPtr;
 
-		// Token: 0x040133F3 RID: 78835
+		// Token: 0x040103BF RID: 66495
 		private static IntPtr ___03_槲生半岛解密后_NativeFunctionPtr;
 
-		// Token: 0x040133F4 RID: 78836
+		// Token: 0x040103C0 RID: 66496
 		private static IntPtr ___05_狂欢节_NativeFunctionPtr;
 
-		// Token: 0x040133F5 RID: 78837
+		// Token: 0x040103C1 RID: 66497
 		private static IntPtr __显示云移动范围_NativeFunctionPtr;
 
-		// Token: 0x040133F6 RID: 78838
+		// Token: 0x040103C2 RID: 66498
 		private static IntPtr __关闭云跟随摄像机移动_NativeFunctionPtr;
 
-		// Token: 0x040133F7 RID: 78839
+		// Token: 0x040103C3 RID: 66499
 		private static IntPtr __开启云跟随摄像机移动_NativeFunctionPtr;
 
-		// Token: 0x040133F8 RID: 78840
+		// Token: 0x040103C4 RID: 66500
 		private static IntPtr ___04_金库上层_NativeFunctionPtr;
 
-		// Token: 0x040133F9 RID: 78841
+		// Token: 0x040103C5 RID: 66501
 		private static IntPtr ___03_狄萨莱海脊永夜解密后_NativeFunctionPtr;
 
-		// Token: 0x040133FA RID: 78842
+		// Token: 0x040103C6 RID: 66502
 		private static IntPtr ___02_狄萨莱海脊永夜解密前_NativeFunctionPtr;
 
-		// Token: 0x040133FB RID: 78843
+		// Token: 0x040103C7 RID: 66503
 		private static IntPtr ___01_槲生半岛_NativeFunctionPtr;
 
-		// Token: 0x040133FC RID: 78844
+		// Token: 0x040103C8 RID: 66504
 		private static IntPtr ___02_帕尔米罗墓地_NativeFunctionPtr;
 
-		// Token: 0x040133FD RID: 78845
+		// Token: 0x040103C9 RID: 66505
 		private static IntPtr ___01_黎娜汐塔_NativeFunctionPtr;
 
-		// Token: 0x040133FE RID: 78846
+		// Token: 0x040103CA RID: 66506
 		private static IntPtr ___020黑海岸天气_阴_NativeFunctionPtr;
 
-		// Token: 0x040133FF RID: 78847
+		// Token: 0x040103CB RID: 66507
 		private static IntPtr ___019肉鸽月亮05_NativeFunctionPtr;
 
-		// Token: 0x04013400 RID: 78848
+		// Token: 0x040103CC RID: 66508
 		private static IntPtr ___018肉鸽月亮04_NativeFunctionPtr;
 
-		// Token: 0x04013401 RID: 78849
+		// Token: 0x040103CD RID: 66509
 		private static IntPtr ___017肉鸽月亮03_NativeFunctionPtr;
 
-		// Token: 0x04013402 RID: 78850
+		// Token: 0x040103CE RID: 66510
 		private static IntPtr ___016肉鸽月亮02_NativeFunctionPtr;
 
-		// Token: 0x04013403 RID: 78851
+		// Token: 0x040103CF RID: 66511
 		private static IntPtr ___015肉鸽月亮01_NativeFunctionPtr;
 
-		// Token: 0x04013404 RID: 78852
+		// Token: 0x040103D0 RID: 66512
 		private static IntPtr ___014黑海岸夜晚_NativeFunctionPtr;
 
-		// Token: 0x04013405 RID: 78853
+		// Token: 0x040103D1 RID: 66513
 		private static IntPtr ___08黑海岸下层_NativeFunctionPtr;
 
-		// Token: 0x04013406 RID: 78854
+		// Token: 0x040103D2 RID: 66514
 		private static IntPtr ___07黑海岸上层_NativeFunctionPtr;
 
-		// Token: 0x04013407 RID: 78855
+		// Token: 0x040103D3 RID: 66515
 		private static IntPtr __Get_GIParams_NativeFunctionPtr;
 
-		// Token: 0x04013408 RID: 78856
+		// Token: 0x040103D4 RID: 66516
 		private static IntPtr ___06乘宵山_NativeFunctionPtr;
 
-		// Token: 0x04013409 RID: 78857
+		// Token: 0x040103D5 RID: 66517
 		private static IntPtr ___05怨鸟泽_NativeFunctionPtr;
 
-		// Token: 0x0401340A RID: 78858
+		// Token: 0x040103D6 RID: 66518
 		private static IntPtr ___013乘宵山异象_NativeFunctionPtr;
 
-		// Token: 0x0401340B RID: 78859
+		// Token: 0x040103D7 RID: 66519
 		private static IntPtr ___012夜晚异象_NativeFunctionPtr;
 
-		// Token: 0x0401340C RID: 78860
+		// Token: 0x040103D8 RID: 66520
 		private static IntPtr ___011黄昏异象_NativeFunctionPtr;
 
-		// Token: 0x0401340D RID: 78861
+		// Token: 0x040103D9 RID: 66521
 		private static IntPtr ___010阴天异象_NativeFunctionPtr;
 
-		// Token: 0x0401340E RID: 78862
+		// Token: 0x040103DA RID: 66522
 		private static IntPtr ___09鸣潮天气_NativeFunctionPtr;
 
-		// Token: 0x0401340F RID: 78863
+		// Token: 0x040103DB RID: 66523
 		private static IntPtr ___08漩涡云01_NativeFunctionPtr;
 
-		// Token: 0x04013410 RID: 78864
+		// Token: 0x040103DC RID: 66524
 		private static IntPtr ___07无音区05_NativeFunctionPtr;
 
-		// Token: 0x04013411 RID: 78865
+		// Token: 0x040103DD RID: 66525
 		private static IntPtr ___06无音区04_NativeFunctionPtr;
 
-		// Token: 0x04013412 RID: 78866
+		// Token: 0x040103DE RID: 66526
 		private static IntPtr ___05无音区03_NativeFunctionPtr;
 
-		// Token: 0x04013413 RID: 78867
+		// Token: 0x040103DF RID: 66527
 		private static IntPtr ___04无音区02_NativeFunctionPtr;
 
-		// Token: 0x04013414 RID: 78868
+		// Token: 0x040103E0 RID: 66528
 		private static IntPtr __原画测试用云_NativeFunctionPtr;
 
-		// Token: 0x04013415 RID: 78869
-		private static IntPtr __SetCloudParameters_NativeFunctionPtr;
-
-		// Token: 0x04013416 RID: 78870
+		// Token: 0x040103E1 RID: 66529
 		private static IntPtr ___04中曲台地_NativeFunctionPtr;
 
-		// Token: 0x04013417 RID: 78871
+		// Token: 0x040103E2 RID: 66530
 		private static IntPtr __Hidden_Old_NativeFunctionPtr;
 
-		// Token: 0x04013418 RID: 78872
+		// Token: 0x040103E3 RID: 66531
 		private static IntPtr ___03无音区01_NativeFunctionPtr;
 
-		// Token: 0x04013419 RID: 78873
+		// Token: 0x040103E4 RID: 66532
 		private static IntPtr ___02无音区沉寂态_NativeFunctionPtr;
 
-		// Token: 0x0401341A RID: 78874
+		// Token: 0x040103E5 RID: 66533
 		private static IntPtr ___01登录界面_NativeFunctionPtr;
 
-		// Token: 0x0401341B RID: 78875
+		// Token: 0x040103E6 RID: 66534
 		private static IntPtr ___03无光之森_NativeFunctionPtr;
 
-		// Token: 0x0401341C RID: 78876
+		// Token: 0x040103E7 RID: 66535
 		private static IntPtr ___02遗落原乡_NativeFunctionPtr;
 
-		// Token: 0x0401341D RID: 78877
+		// Token: 0x040103E8 RID: 66536
 		private static IntPtr ___01天城_NativeFunctionPtr;
 
-		// Token: 0x0401341E RID: 78878
+		// Token: 0x040103E9 RID: 66537
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x0401341F RID: 78879
+		// Token: 0x040103EA RID: 66538
 		private static IntPtr __OnLoaded_63FE5E2B437AFAD504FBCAB26242EB8A_NativeFunctionPtr;
 
-		// Token: 0x04013420 RID: 78880
+		// Token: 0x040103EB RID: 66539
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x04013421 RID: 78881
+		// Token: 0x040103EC RID: 66540
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x04013422 RID: 78882
+		// Token: 0x040103ED RID: 66541
 		private static IntPtr __EditorTick_NativeFunctionPtr;
 
-		// Token: 0x04013423 RID: 78883
+		// Token: 0x040103EE RID: 66542
 		private static IntPtr __ChangeCloud_NativeFunctionPtr;
 
-		// Token: 0x04013424 RID: 78884
-		private static IntPtr __Switch_Clouds_NativeFunctionPtr;
-
-		// Token: 0x04013425 RID: 78885
+		// Token: 0x040103EF RID: 66543
 		private static IntPtr __LoadAndSwitch_NativeFunctionPtr;
 
-		// Token: 0x0200A0FE RID: 41214
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 64)]
-		protected ref struct __SwitchCloudsSub_FunctionParams
-		{
-			// Token: 0x04031C57 RID: 203863
-			[FieldOffset(0)]
-			public IntPtr CloudPresents;
-
-			// Token: 0x04031C58 RID: 203864
-			[FieldOffset(8)]
-			public float ChangeSpeed;
-
-			// Token: 0x04031C59 RID: 203865
-			[FieldOffset(12)]
-			public bool InstantHide;
-		}
-
-		// Token: 0x0200A0FF RID: 41215
+		// Token: 0x02008EA0 RID: 36512
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __Get_GIParams_FunctionParams
 		{
-			// Token: 0x04031C5A RID: 203866
+			// Token: 0x0402CB2C RID: 183084
 			[FieldOffset(0)]
 			public float CurTime;
 		}
 
-		// Token: 0x0200A100 RID: 41216
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 48)]
-		protected ref struct __SetCloudParameters_FunctionParams
-		{
-			// Token: 0x04031C5B RID: 203867
-			[FieldOffset(0)]
-			public IntPtr CloudPrefeb;
-
-			// Token: 0x04031C5C RID: 203868
-			[FieldOffset(8)]
-			public IntPtr CloudActorComponent;
-
-			// Token: 0x04031C5D RID: 203869
-			[FieldOffset(16)]
-			public float ChangeSpeed;
-
-			// Token: 0x04031C5E RID: 203870
-			[FieldOffset(20)]
-			public int TransSortNumber;
-
-			// Token: 0x04031C5F RID: 203871
-			[FieldOffset(24)]
-			public bool bInstantHide;
-		}
-
-		// Token: 0x0200A101 RID: 41217
+		// Token: 0x02008EA1 RID: 36513
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __OnLoaded_63FE5E2B437AFAD504FBCAB26242EB8A_FunctionParams
 		{
-			// Token: 0x04031C60 RID: 203872
+			// Token: 0x0402CB2D RID: 183085
 			[FieldOffset(0)]
 			public IntPtr Loaded;
 		}
 
-		// Token: 0x0200A102 RID: 41218
+		// Token: 0x02008EA2 RID: 36514
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x04031C61 RID: 203873
+			// Token: 0x0402CB2E RID: 183086
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x0200A103 RID: 41219
+		// Token: 0x02008EA3 RID: 36515
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __EditorTick_FunctionParams
 		{
-			// Token: 0x04031C62 RID: 203874
+			// Token: 0x0402CB2F RID: 183087
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x0200A104 RID: 41220
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __Switch_Clouds_FunctionParams
-		{
-			// Token: 0x04031C63 RID: 203875
-			[FieldOffset(0)]
-			public TEnumAsByte<E_Cloud_Presents> CloudPresents;
-
-			// Token: 0x04031C64 RID: 203876
-			[FieldOffset(4)]
-			public float ChangeSpeed;
-
-			// Token: 0x04031C65 RID: 203877
-			[FieldOffset(8)]
-			public bool IsInEditor;
-
-			// Token: 0x04031C66 RID: 203878
-			[FieldOffset(9)]
-			public bool bOverrideCloudRotation;
-
-			// Token: 0x04031C67 RID: 203879
-			[FieldOffset(12)]
-			public float CloudSpeed;
-
-			// Token: 0x04031C68 RID: 203880
-			[FieldOffset(16)]
-			public float CloudOffset;
-
-			// Token: 0x04031C69 RID: 203881
-			[FieldOffset(20)]
-			public bool ControlSeqCloud;
-
-			// Token: 0x04031C6A RID: 203882
-			[FieldOffset(21)]
-			public bool InstantHide;
-		}
-
-		// Token: 0x0200A105 RID: 41221
+		// Token: 0x02008EA4 RID: 36516
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 56)]
 		protected ref struct __LoadAndSwitch_FunctionParams
 		{
-			// Token: 0x04031C6B RID: 203883
+			// Token: 0x0402CB30 RID: 183088
 			[FieldOffset(0)]
 			public byte Asset;
 
-			// Token: 0x04031C6C RID: 203884
+			// Token: 0x0402CB31 RID: 183089
 			[FieldOffset(48)]
 			public float ChangeSpeed;
 
-			// Token: 0x04031C6D RID: 203885
+			// Token: 0x0402CB32 RID: 183090
 			[FieldOffset(52)]
 			public bool IsInEditor;
 
-			// Token: 0x04031C6E RID: 203886
+			// Token: 0x0402CB33 RID: 183091
 			[FieldOffset(53)]
 			public bool IsAudio;
 
-			// Token: 0x04031C6F RID: 203887
+			// Token: 0x0402CB34 RID: 183092
 			[FieldOffset(54)]
 			public bool InstantHide;
 		}

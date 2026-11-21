@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001457 RID: 5207
+	// Token: 0x020014CA RID: 5322
 	[NetMessage(EMessageId.TrapDefenseTechPointUpdateNotify)]
 	public sealed class TrapDefenseTechPointUpdateNotify : IMessage<TrapDefenseTechPointUpdateNotify>, IMessage, IEquatable<TrapDefenseTechPointUpdateNotify>, IDeepCloneable<TrapDefenseTechPointUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x0601B92C RID: 112940 RVA: 0x003FDDAB File Offset: 0x003FBFAB
+		// Token: 0x0601C3B7 RID: 115639 RVA: 0x0041907F File Offset: 0x0041727F
 		[NullableContext(1)]
 		public static TrapDefenseTechPointUpdateNotify Create()
 		{
 			return new TrapDefenseTechPointUpdateNotify();
 		}
 
-		// Token: 0x17005CFA RID: 23802
-		// (get) Token: 0x0601B92D RID: 112941 RVA: 0x003FDDB2 File Offset: 0x003FBFB2
+		// Token: 0x17005F8F RID: 24463
+		// (get) Token: 0x0601C3B8 RID: 115640 RVA: 0x00419086 File Offset: 0x00417286
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CFB RID: 23803
-		// (get) Token: 0x0601B92E RID: 112942 RVA: 0x003FDDB5 File Offset: 0x003FBFB5
+		// Token: 0x17005F90 RID: 24464
+		// (get) Token: 0x0601C3B9 RID: 115641 RVA: 0x00419089 File Offset: 0x00417289
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B92F RID: 112943 RVA: 0x003FDDBC File Offset: 0x003FBFBC
+		// Token: 0x0601C3BA RID: 115642 RVA: 0x00419090 File Offset: 0x00417290
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseTechPointUpdateNotify()
 		{
 		}
 
-		// Token: 0x0601B930 RID: 112944 RVA: 0x003FDDC4 File Offset: 0x003FBFC4
+		// Token: 0x0601C3BB RID: 115643 RVA: 0x00419098 File Offset: 0x00417298
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseTechPointUpdateNotify(TrapDefenseTechPointUpdateNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B931 RID: 112945 RVA: 0x003FDE18 File Offset: 0x003FC018
+		// Token: 0x0601C3BC RID: 115644 RVA: 0x004190EC File Offset: 0x004172EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseTechPointUpdateNotify Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new TrapDefenseTechPointUpdateNotify(this);
 		}
 
-		// Token: 0x17005CFC RID: 23804
-		// (get) Token: 0x0601B932 RID: 112946 RVA: 0x003FDE20 File Offset: 0x003FC020
-		// (set) Token: 0x0601B933 RID: 112947 RVA: 0x003FDE28 File Offset: 0x003FC028
+		// Token: 0x17005F91 RID: 24465
+		// (get) Token: 0x0601C3BD RID: 115645 RVA: 0x004190F4 File Offset: 0x004172F4
+		// (set) Token: 0x0601C3BE RID: 115646 RVA: 0x004190FC File Offset: 0x004172FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TotalTechPoint
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CFD RID: 23805
-		// (get) Token: 0x0601B934 RID: 112948 RVA: 0x003FDE31 File Offset: 0x003FC031
-		// (set) Token: 0x0601B935 RID: 112949 RVA: 0x003FDE39 File Offset: 0x003FC039
+		// Token: 0x17005F92 RID: 24466
+		// (get) Token: 0x0601C3BF RID: 115647 RVA: 0x00419105 File Offset: 0x00417305
+		// (set) Token: 0x0601C3C0 RID: 115648 RVA: 0x0041910D File Offset: 0x0041730D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LeftTechPoint
@@ -103,9 +103,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CFE RID: 23806
-		// (get) Token: 0x0601B936 RID: 112950 RVA: 0x003FDE42 File Offset: 0x003FC042
-		// (set) Token: 0x0601B937 RID: 112951 RVA: 0x003FDE4A File Offset: 0x003FC04A
+		// Token: 0x17005F93 RID: 24467
+		// (get) Token: 0x0601C3C1 RID: 115649 RVA: 0x00419116 File Offset: 0x00417316
+		// (set) Token: 0x0601C3C2 RID: 115650 RVA: 0x0041911E File Offset: 0x0041731E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LeftLevelUpPoint
@@ -120,9 +120,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CFF RID: 23807
-		// (get) Token: 0x0601B938 RID: 112952 RVA: 0x003FDE53 File Offset: 0x003FC053
-		// (set) Token: 0x0601B939 RID: 112953 RVA: 0x003FDE5B File Offset: 0x003FC05B
+		// Token: 0x17005F94 RID: 24468
+		// (get) Token: 0x0601C3C3 RID: 115651 RVA: 0x00419127 File Offset: 0x00417327
+		// (set) Token: 0x0601C3C4 RID: 115652 RVA: 0x0041912F File Offset: 0x0041732F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TotalLevelUpPoint
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B93A RID: 112954 RVA: 0x003FDE64 File Offset: 0x003FC064
+		// Token: 0x0601C3C5 RID: 115653 RVA: 0x00419138 File Offset: 0x00417338
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TrapDefenseTechPointUpdateNotify);
 		}
 
-		// Token: 0x0601B93B RID: 112955 RVA: 0x003FDE74 File Offset: 0x003FC074
+		// Token: 0x0601C3C6 RID: 115654 RVA: 0x00419148 File Offset: 0x00417348
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TrapDefenseTechPointUpdateNotify other)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.TotalTechPoint == other.TotalTechPoint && this.LeftTechPoint == other.LeftTechPoint && this.LeftLevelUpPoint == other.LeftLevelUpPoint && this.TotalLevelUpPoint == other.TotalLevelUpPoint && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601B93C RID: 112956 RVA: 0x003FDEE0 File Offset: 0x003FC0E0
+		// Token: 0x0601C3C7 RID: 115655 RVA: 0x004191B4 File Offset: 0x004173B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B93D RID: 112957 RVA: 0x003FDF6A File Offset: 0x003FC16A
+		// Token: 0x0601C3C8 RID: 115656 RVA: 0x0041923E File Offset: 0x0041743E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B93E RID: 112958 RVA: 0x003FDF77 File Offset: 0x003FC177
+		// Token: 0x0601C3C9 RID: 115657 RVA: 0x0041924B File Offset: 0x0041744B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -198,30 +198,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B93F RID: 112959 RVA: 0x003FDF80 File Offset: 0x003FC180
+		// Token: 0x0601C3CA RID: 115658 RVA: 0x00419254 File Offset: 0x00417454
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.LeftLevelUpPoint != 0)
-			{
-				output.WriteRawTag(8);
-				output.WriteInt32(this.LeftLevelUpPoint);
-			}
-			if (this.LeftTechPoint != 0)
-			{
-				output.WriteRawTag(40);
-				output.WriteInt32(this.LeftTechPoint);
-			}
 			if (this.TotalLevelUpPoint != 0)
 			{
-				output.WriteRawTag(48);
+				output.WriteRawTag(8);
 				output.WriteInt32(this.TotalLevelUpPoint);
 			}
 			if (this.TotalTechPoint != 0)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(48);
 				output.WriteInt32(this.TotalTechPoint);
+			}
+			if (this.LeftLevelUpPoint != 0)
+			{
+				output.WriteRawTag(72);
+				output.WriteInt32(this.LeftLevelUpPoint);
+			}
+			if (this.LeftTechPoint != 0)
+			{
+				output.WriteRawTag(112);
+				output.WriteInt32(this.LeftTechPoint);
 			}
 			if (this._unknownFields != null)
 			{
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B940 RID: 112960 RVA: 0x003FE010 File Offset: 0x003FC210
+		// Token: 0x0601C3CB RID: 115659 RVA: 0x004192E4 File Offset: 0x004174E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B941 RID: 112961 RVA: 0x003FE098 File Offset: 0x003FC298
+		// Token: 0x0601C3CC RID: 115660 RVA: 0x0041936C File Offset: 0x0041756C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TrapDefenseTechPointUpdateNotify other)
@@ -286,7 +286,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B942 RID: 112962 RVA: 0x003FE110 File Offset: 0x003FC310
+		// Token: 0x0601C3CD RID: 115661 RVA: 0x004193E4 File Offset: 0x004175E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B943 RID: 112963 RVA: 0x003FE11C File Offset: 0x003FC31C
+		// Token: 0x0601C3CE RID: 115662 RVA: 0x004193F0 File Offset: 0x004175F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -306,29 +306,29 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 40U)
+				if (num <= 48U)
 				{
 					if (num == 8U)
 					{
-						this.LeftLevelUpPoint = input.ReadInt32();
+						this.TotalLevelUpPoint = input.ReadInt32();
 						continue;
 					}
-					if (num == 40U)
+					if (num == 48U)
 					{
-						this.LeftTechPoint = input.ReadInt32();
+						this.TotalTechPoint = input.ReadInt32();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 48U)
+					if (num == 72U)
 					{
-						this.TotalLevelUpPoint = input.ReadInt32();
+						this.LeftLevelUpPoint = input.ReadInt32();
 						continue;
 					}
-					if (num == 88U)
+					if (num == 112U)
 					{
-						this.TotalTechPoint = input.ReadInt32();
+						this.LeftTechPoint = input.ReadInt32();
 						continue;
 					}
 				}
@@ -336,31 +336,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009EF6 RID: 40694
+		// Token: 0x0400A33D RID: 41789
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009EF7 RID: 40695
-		public const int TotalTechPointFieldNumber = 11;
+		// Token: 0x0400A33E RID: 41790
+		public const int TotalTechPointFieldNumber = 6;
 
-		// Token: 0x04009EF8 RID: 40696
+		// Token: 0x0400A33F RID: 41791
 		private int totalTechPoint_;
 
-		// Token: 0x04009EF9 RID: 40697
-		public const int LeftTechPointFieldNumber = 5;
+		// Token: 0x0400A340 RID: 41792
+		public const int LeftTechPointFieldNumber = 14;
 
-		// Token: 0x04009EFA RID: 40698
+		// Token: 0x0400A341 RID: 41793
 		private int leftTechPoint_;
 
-		// Token: 0x04009EFB RID: 40699
-		public const int LeftLevelUpPointFieldNumber = 1;
+		// Token: 0x0400A342 RID: 41794
+		public const int LeftLevelUpPointFieldNumber = 9;
 
-		// Token: 0x04009EFC RID: 40700
+		// Token: 0x0400A343 RID: 41795
 		private int leftLevelUpPoint_;
 
-		// Token: 0x04009EFD RID: 40701
-		public const int TotalLevelUpPointFieldNumber = 6;
+		// Token: 0x0400A344 RID: 41796
+		public const int TotalLevelUpPointFieldNumber = 1;
 
-		// Token: 0x04009EFE RID: 40702
+		// Token: 0x0400A345 RID: 41797
 		private int totalLevelUpPoint_;
 	}
 }

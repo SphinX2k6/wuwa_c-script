@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol.CombatMessage
 {
-	// Token: 0x02001680 RID: 5760
+	// Token: 0x020016FC RID: 5884
 	public sealed class CombatDataMaxResponse : IMessage<CombatDataMaxResponse>, IMessage, IEquatable<CombatDataMaxResponse>, IDeepCloneable<CombatDataMaxResponse>, IBufferMessage
 	{
-		// Token: 0x0601CB9F RID: 117663 RVA: 0x004258E6 File Offset: 0x00423AE6
+		// Token: 0x0601D66C RID: 120428 RVA: 0x004415A6 File Offset: 0x0043F7A6
 		[NullableContext(1)]
 		public static CombatDataMaxResponse Create()
 		{
 			return new CombatDataMaxResponse();
 		}
 
-		// Token: 0x170060D2 RID: 24786
-		// (get) Token: 0x0601CBA0 RID: 117664 RVA: 0x004258ED File Offset: 0x00423AED
+		// Token: 0x17006376 RID: 25462
+		// (get) Token: 0x0601D66D RID: 120429 RVA: 0x004415AD File Offset: 0x0043F7AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060D3 RID: 24787
-		// (get) Token: 0x0601CBA1 RID: 117665 RVA: 0x004258F0 File Offset: 0x00423AF0
+		// Token: 0x17006377 RID: 25463
+		// (get) Token: 0x0601D66E RID: 120430 RVA: 0x004415B0 File Offset: 0x0043F7B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CBA2 RID: 117666 RVA: 0x004258F7 File Offset: 0x00423AF7
+		// Token: 0x0601D66F RID: 120431 RVA: 0x004415B7 File Offset: 0x0043F7B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatDataMaxResponse()
 		{
 		}
 
-		// Token: 0x0601CBA3 RID: 117667 RVA: 0x004258FF File Offset: 0x00423AFF
+		// Token: 0x0601D670 RID: 120432 RVA: 0x004415BF File Offset: 0x0043F7BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatDataMaxResponse(CombatDataMaxResponse other) : this()
@@ -56,7 +56,7 @@ namespace Aki.Protocol.CombatMessage
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601CBA4 RID: 117668 RVA: 0x00425918 File Offset: 0x00423B18
+		// Token: 0x0601D671 RID: 120433 RVA: 0x004415D8 File Offset: 0x0043F7D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatDataMaxResponse Clone()
@@ -64,7 +64,7 @@ namespace Aki.Protocol.CombatMessage
 			return new CombatDataMaxResponse(this);
 		}
 
-		// Token: 0x0601CBA5 RID: 117669 RVA: 0x00425920 File Offset: 0x00423B20
+		// Token: 0x0601D672 RID: 120434 RVA: 0x004415E0 File Offset: 0x0043F7E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -72,7 +72,7 @@ namespace Aki.Protocol.CombatMessage
 			return this.Equals(other as CombatDataMaxResponse);
 		}
 
-		// Token: 0x0601CBA6 RID: 117670 RVA: 0x0042592E File Offset: 0x00423B2E
+		// Token: 0x0601D673 RID: 120435 RVA: 0x004415EE File Offset: 0x0043F7EE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CombatDataMaxResponse other)
@@ -80,7 +80,7 @@ namespace Aki.Protocol.CombatMessage
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x0601CBA7 RID: 117671 RVA: 0x0042594C File Offset: 0x00423B4C
+		// Token: 0x0601D674 RID: 120436 RVA: 0x0044160C File Offset: 0x0043F80C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -93,7 +93,7 @@ namespace Aki.Protocol.CombatMessage
 			return num;
 		}
 
-		// Token: 0x0601CBA8 RID: 117672 RVA: 0x00425972 File Offset: 0x00423B72
+		// Token: 0x0601D675 RID: 120437 RVA: 0x00441632 File Offset: 0x0043F832
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -101,7 +101,7 @@ namespace Aki.Protocol.CombatMessage
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601CBA9 RID: 117673 RVA: 0x0042597F File Offset: 0x00423B7F
+		// Token: 0x0601D676 RID: 120438 RVA: 0x0044163F File Offset: 0x0043F83F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -109,7 +109,7 @@ namespace Aki.Protocol.CombatMessage
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601CBAA RID: 117674 RVA: 0x00425988 File Offset: 0x00423B88
+		// Token: 0x0601D677 RID: 120439 RVA: 0x00441648 File Offset: 0x0043F848
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -120,7 +120,7 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CBAB RID: 117675 RVA: 0x004259A0 File Offset: 0x00423BA0
+		// Token: 0x0601D678 RID: 120440 RVA: 0x00441660 File Offset: 0x0043F860
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -133,7 +133,7 @@ namespace Aki.Protocol.CombatMessage
 			return num;
 		}
 
-		// Token: 0x0601CBAC RID: 117676 RVA: 0x004259C6 File Offset: 0x00423BC6
+		// Token: 0x0601D679 RID: 120441 RVA: 0x00441686 File Offset: 0x0043F886
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CombatDataMaxResponse other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol.CombatMessage
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601CBAD RID: 117677 RVA: 0x004259E3 File Offset: 0x00423BE3
+		// Token: 0x0601D67A RID: 120442 RVA: 0x004416A3 File Offset: 0x0043F8A3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -153,7 +153,7 @@ namespace Aki.Protocol.CombatMessage
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601CBAE RID: 117678 RVA: 0x004259EC File Offset: 0x00423BEC
+		// Token: 0x0601D67B RID: 120443 RVA: 0x004416AC File Offset: 0x0043F8AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -169,7 +169,7 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0400C208 RID: 49672
+		// Token: 0x0400C734 RID: 50996
 		private UnknownFieldSet _unknownFields;
 	}
 }

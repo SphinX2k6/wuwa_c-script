@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DD5 RID: 3541
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000ED1 RID: 3793
 	public class IExhibitEffect
 	{
-		// Token: 0x06005056 RID: 20566 RVA: 0x000C683A File Offset: 0x000C4A3A
+		// Token: 0x0600557B RID: 21883 RVA: 0x000D208A File Offset: 0x000D028A
 		public static IExhibitEffect Create(IExhibitEffect? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A69 RID: 6761
-		// (get) Token: 0x06005057 RID: 20567 RVA: 0x000C6859 File Offset: 0x000C4A59
+		// Token: 0x17001BD4 RID: 7124
+		// (get) Token: 0x0600557C RID: 21884 RVA: 0x000D20A9 File Offset: 0x000D02A9
 		public virtual string Path
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A6A RID: 6762
-		// (get) Token: 0x06005058 RID: 20568 RVA: 0x000C6866 File Offset: 0x000C4A66
+		// Token: 0x17001BD5 RID: 7125
+		// (get) Token: 0x0600557D RID: 21885 RVA: 0x000D20B6 File Offset: 0x000D02B6
 		public virtual float Scale
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A6B RID: 6763
-		// (get) Token: 0x06005059 RID: 20569 RVA: 0x000C6873 File Offset: 0x000C4A73
+		// Token: 0x17001BD6 RID: 7126
+		// (get) Token: 0x0600557E RID: 21886 RVA: 0x000D20C3 File Offset: 0x000D02C3
 		public virtual VectorInfo Offset
 		{
 			get
@@ -59,14 +57,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E1A RID: 11802
+		// Token: 0x040030E0 RID: 12512
 		private IExhibitEffect Instance;
 
-		// Token: 0x04002E1B RID: 11803
+		// Token: 0x040030E1 RID: 12513
 		[Nullable(2)]
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04002E1C RID: 11804
+		// Token: 0x040030E2 RID: 12514
 		private bool _OffsetInited;
 	}
 }

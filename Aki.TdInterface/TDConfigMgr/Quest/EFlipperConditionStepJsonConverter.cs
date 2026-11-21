@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001243 RID: 4675
+	// Token: 0x02001383 RID: 4995
 	public class EFlipperConditionStepJsonConverter : JsonConverter<EFlipperConditionStep>
 	{
-		// Token: 0x060069D6 RID: 27094 RVA: 0x000FD8EC File Offset: 0x000FBAEC
+		// Token: 0x06007029 RID: 28713 RVA: 0x0010B518 File Offset: 0x00109718
 		public override EFlipperConditionStep Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return EFlipperConditionStepExtensions.FromString(@string);
 		}
 
-		// Token: 0x060069D7 RID: 27095 RVA: 0x000FD910 File Offset: 0x000FBB10
+		// Token: 0x0600702A RID: 28714 RVA: 0x0010B53C File Offset: 0x0010973C
 		public override void Write(Utf8JsonWriter writer, EFlipperConditionStep value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

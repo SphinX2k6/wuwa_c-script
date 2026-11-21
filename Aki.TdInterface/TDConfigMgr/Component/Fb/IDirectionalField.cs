@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BDA RID: 3034
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CA9 RID: 3241
 	public class IDirectionalField : IConveyorBeltField
 	{
-		// Token: 0x060045C2 RID: 17858 RVA: 0x000B0897 File Offset: 0x000AEA97
+		// Token: 0x06004A20 RID: 18976 RVA: 0x000BAA13 File Offset: 0x000B8C13
 		public static IDirectionalField Create(IDirectionalField? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013CB RID: 5067
-		// (get) Token: 0x060045C3 RID: 17859 RVA: 0x000B08B6 File Offset: 0x000AEAB6
+		// Token: 0x170014C9 RID: 5321
+		// (get) Token: 0x06004A21 RID: 18977 RVA: 0x000BAA32 File Offset: 0x000B8C32
 		public override EConveyorBeltFieldType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013CC RID: 5068
-		// (get) Token: 0x060045C4 RID: 17860 RVA: 0x000B08C3 File Offset: 0x000AEAC3
+		// Token: 0x170014CA RID: 5322
+		// (get) Token: 0x06004A22 RID: 18978 RVA: 0x000BAA3F File Offset: 0x000B8C3F
 		public virtual VectorInfo Direction
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027B9 RID: 10169
+		// Token: 0x04002A04 RID: 10756
 		private IDirectionalField Instance;
 
-		// Token: 0x040027BA RID: 10170
+		// Token: 0x04002A05 RID: 10757
 		[Nullable(2)]
 		private VectorInfo _DirectionCache;
 
-		// Token: 0x040027BB RID: 10171
+		// Token: 0x04002A06 RID: 10758
 		private bool _DirectionInited;
 	}
 }

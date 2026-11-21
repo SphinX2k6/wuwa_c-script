@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001003 RID: 4099
+// Token: 0x020004B7 RID: 1207
 public class GolemHackingActivitySubView : ActivitySubViewBase
 {
-	// Token: 0x06006921 RID: 26913 RVA: 0x0014EBB4 File Offset: 0x0014CDB4
+	// Token: 0x06003CB6 RID: 15542 RVA: 0x001574DC File Offset: 0x001556DC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -29,7 +29,7 @@ public class GolemHackingActivitySubView : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06006922 RID: 26914 RVA: 0x0014EC60 File Offset: 0x0014CE60
+	// Token: 0x06003CB7 RID: 15543 RVA: 0x00157588 File Offset: 0x00155788
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GolemHackingActivitySubView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -40,7 +40,7 @@ public class GolemHackingActivitySubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006923 RID: 26915 RVA: 0x0014ECA4 File Offset: 0x0014CEA4
+	// Token: 0x06003CB8 RID: 15544 RVA: 0x001575CC File Offset: 0x001557CC
 	protected override void OnRefreshView()
 	{
 		GolemHackingActivityData activityData = GolemHackingController.Instance.GetActivityData();
@@ -70,7 +70,7 @@ public class GolemHackingActivitySubView : ActivitySubViewBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityBaseData.Id);
 	}
 
-	// Token: 0x06006924 RID: 26916 RVA: 0x0014ED67 File Offset: 0x0014CF67
+	// Token: 0x06003CB9 RID: 15545 RVA: 0x0015768F File Offset: 0x0015588F
 	[NullableContext(2)]
 	private void OnClickedConfirm(ActivityBaseData _)
 	{
@@ -85,20 +85,20 @@ public class GolemHackingActivitySubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0400305F RID: 12383
+	// Token: 0x040030F8 RID: 12536
 	[Nullable(1)]
 	protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x020075FA RID: 30202
+	// Token: 0x0200678E RID: 26510
 	private enum EDefine
 	{
-		// Token: 0x04026FAD RID: 159661
+		// Token: 0x040222F8 RID: 140024
 		CommonActivityInfoItem,
-		// Token: 0x04026FAE RID: 159662
+		// Token: 0x040222F9 RID: 140025
 		ArtTxtCur,
-		// Token: 0x04026FAF RID: 159663
+		// Token: 0x040222FA RID: 140026
 		TxtTarget,
-		// Token: 0x04026FB0 RID: 159664
+		// Token: 0x040222FB RID: 140027
 		TexFill
 	}
 }

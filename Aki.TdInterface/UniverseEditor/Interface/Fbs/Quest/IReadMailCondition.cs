@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200406D RID: 16493
+	// Token: 0x020044AE RID: 17582
 	public struct IReadMailCondition : IFlatbufferObject
 	{
-		// Token: 0x1700745B RID: 29787
-		// (get) Token: 0x06017F7F RID: 98175 RVA: 0x0037591B File Offset: 0x00373B1B
+		// Token: 0x17007A5D RID: 31325
+		// (get) Token: 0x06019618 RID: 103960 RVA: 0x0039F753 File Offset: 0x0039D953
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017F80 RID: 98176 RVA: 0x00375928 File Offset: 0x00373B28
+		// Token: 0x06019619 RID: 103961 RVA: 0x0039F760 File Offset: 0x0039D960
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017F81 RID: 98177 RVA: 0x00375930 File Offset: 0x00373B30
+		// Token: 0x0601961A RID: 103962 RVA: 0x0039F768 File Offset: 0x0039D968
 		public static IReadMailCondition GetRootAsIReadMailCondition(ByteBuffer _bb)
 		{
 			return IReadMailCondition.GetRootAsIReadMailCondition(_bb, default(IReadMailCondition));
 		}
 
-		// Token: 0x06017F82 RID: 98178 RVA: 0x0037594C File Offset: 0x00373B4C
+		// Token: 0x0601961B RID: 103963 RVA: 0x0039F784 File Offset: 0x0039D984
 		public static IReadMailCondition GetRootAsIReadMailCondition(ByteBuffer _bb, IReadMailCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017F83 RID: 98179 RVA: 0x00375969 File Offset: 0x00373B69
+		// Token: 0x0601961C RID: 103964 RVA: 0x0039F7A1 File Offset: 0x0039D9A1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017F84 RID: 98180 RVA: 0x00375978 File Offset: 0x00373B78
+		// Token: 0x0601961D RID: 103965 RVA: 0x0039F7B0 File Offset: 0x0039D9B0
 		public IReadMailCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700745C RID: 29788
-		// (get) Token: 0x06017F85 RID: 98181 RVA: 0x00375988 File Offset: 0x00373B88
+		// Token: 0x17007A5E RID: 31326
+		// (get) Token: 0x0601961E RID: 103966 RVA: 0x0039F7C0 File Offset: 0x0039D9C0
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700745D RID: 29789
-		// (get) Token: 0x06017F86 RID: 98182 RVA: 0x003759C4 File Offset: 0x00373BC4
+		// Token: 0x17007A5F RID: 31327
+		// (get) Token: 0x0601961F RID: 103967 RVA: 0x0039F7FC File Offset: 0x0039D9FC
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700745E RID: 29790
-		// (get) Token: 0x06017F87 RID: 98183 RVA: 0x00375A24 File Offset: 0x00373C24
+		// Token: 0x17007A60 RID: 31328
+		// (get) Token: 0x06019620 RID: 103968 RVA: 0x0039F85C File Offset: 0x0039DA5C
 		public int MailId
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017F88 RID: 98184 RVA: 0x00375A60 File Offset: 0x00373C60
+		// Token: 0x06019621 RID: 103969 RVA: 0x0039F898 File Offset: 0x0039DA98
 		public static Offset<IReadMailCondition> CreateIReadMailCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), int MailId = 0)
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IReadMailCondition.EndIReadMailCondition(builder);
 		}
 
-		// Token: 0x06017F89 RID: 98185 RVA: 0x00375A84 File Offset: 0x00373C84
+		// Token: 0x06019622 RID: 103970 RVA: 0x0039F8BC File Offset: 0x0039DABC
 		public static void StartIReadMailCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06017F8A RID: 98186 RVA: 0x00375A8D File Offset: 0x00373C8D
+		// Token: 0x06019623 RID: 103971 RVA: 0x0039F8C5 File Offset: 0x0039DAC5
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017F8B RID: 98187 RVA: 0x00375A98 File Offset: 0x00373C98
+		// Token: 0x06019624 RID: 103972 RVA: 0x0039F8D0 File Offset: 0x0039DAD0
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06017F8C RID: 98188 RVA: 0x00375AA8 File Offset: 0x00373CA8
+		// Token: 0x06019625 RID: 103973 RVA: 0x0039F8E0 File Offset: 0x0039DAE0
 		public static void AddMailId(FlatBufferBuilder builder, int mailId)
 		{
 			builder.AddInt(2, mailId, 0);
 		}
 
-		// Token: 0x06017F8D RID: 98189 RVA: 0x00375AB3 File Offset: 0x00373CB3
+		// Token: 0x06019626 RID: 103974 RVA: 0x0039F8EB File Offset: 0x0039DAEB
 		public static Offset<IReadMailCondition> EndIReadMailCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IReadMailCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06017F8E RID: 98190 RVA: 0x00375AC0 File Offset: 0x00373CC0
+		// Token: 0x06019627 RID: 103975 RVA: 0x0039F8F8 File Offset: 0x0039DAF8
 		public IReadMailConditionT UnPack()
 		{
 			IReadMailConditionT readMailConditionT = new IReadMailConditionT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return readMailConditionT;
 		}
 
-		// Token: 0x06017F8F RID: 98191 RVA: 0x00375ADC File Offset: 0x00373CDC
+		// Token: 0x06019628 RID: 103976 RVA: 0x0039F914 File Offset: 0x0039DB14
 		public void UnPackTo(IReadMailConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.MailId = this.MailId;
 		}
 
-		// Token: 0x06017F90 RID: 98192 RVA: 0x00375B30 File Offset: 0x00373D30
+		// Token: 0x06019629 RID: 103977 RVA: 0x0039F968 File Offset: 0x0039DB68
 		public static Offset<IReadMailCondition> Pack(FlatBufferBuilder builder, IReadMailConditionT _o)
 		{
 			if (_o == null)
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IReadMailCondition.CreateIReadMailCondition(builder, _o.Type, preConditionsOffset, _o.MailId);
 		}
 
-		// Token: 0x0400BBE5 RID: 48101
+		// Token: 0x0400C5CC RID: 50636
 		private Table __p;
 	}
 }

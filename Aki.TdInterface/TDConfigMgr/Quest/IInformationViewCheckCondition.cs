@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FBF RID: 4031
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010EB RID: 4331
 	public class IInformationViewCheckCondition : IQuestCondition
 	{
-		// Token: 0x060059DC RID: 23004 RVA: 0x000DAB64 File Offset: 0x000D8D64
+		// Token: 0x06005FBA RID: 24506 RVA: 0x000E76F0 File Offset: 0x000E58F0
 		private IInformationViewCheckCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060059DD RID: 23005 RVA: 0x000DAB9C File Offset: 0x000D8D9C
+		// Token: 0x06005FBB RID: 24507 RVA: 0x000E7728 File Offset: 0x000E5928
 		public static IInformationViewCheckCondition Create([Nullable(2)] IInformationViewCheckCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060059DE RID: 23006 RVA: 0x000DABAF File Offset: 0x000D8DAF
+		// Token: 0x06005FBC RID: 24508 RVA: 0x000E773B File Offset: 0x000E593B
 		public static IInformationViewCheckCondition CreateFromSetValue([Nullable(2)] IInformationViewCheckCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060059DF RID: 23007 RVA: 0x000DABC2 File Offset: 0x000D8DC2
+		// Token: 0x06005FBD RID: 24509 RVA: 0x000E774E File Offset: 0x000E594E
 		public new IInformationViewCheckCondition_SetValue ToSetValue()
 		{
 			return new IInformationViewCheckCondition_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DD1 RID: 7633
-		// (get) Token: 0x060059E0 RID: 23008 RVA: 0x000DABED File Offset: 0x000D8DED
-		// (set) Token: 0x060059E1 RID: 23009 RVA: 0x000DAC18 File Offset: 0x000D8E18
+		// Token: 0x17001F79 RID: 8057
+		// (get) Token: 0x06005FBE RID: 24510 RVA: 0x000E7779 File Offset: 0x000E5979
+		// (set) Token: 0x06005FBF RID: 24511 RVA: 0x000E77A4 File Offset: 0x000E59A4
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DD2 RID: 7634
-		// (get) Token: 0x060059E2 RID: 23010 RVA: 0x000DAC28 File Offset: 0x000D8E28
-		// (set) Token: 0x060059E3 RID: 23011 RVA: 0x000DAC89 File Offset: 0x000D8E89
+		// Token: 0x17001F7A RID: 8058
+		// (get) Token: 0x06005FC0 RID: 24512 RVA: 0x000E77B4 File Offset: 0x000E59B4
+		// (set) Token: 0x06005FC1 RID: 24513 RVA: 0x000E7815 File Offset: 0x000E5A15
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DD3 RID: 7635
-		// (get) Token: 0x060059E4 RID: 23012 RVA: 0x000DAC9E File Offset: 0x000D8E9E
-		// (set) Token: 0x060059E5 RID: 23013 RVA: 0x000DACC9 File Offset: 0x000D8EC9
+		// Token: 0x17001F7B RID: 8059
+		// (get) Token: 0x06005FC2 RID: 24514 RVA: 0x000E782A File Offset: 0x000E5A2A
+		// (set) Token: 0x06005FC3 RID: 24515 RVA: 0x000E7855 File Offset: 0x000E5A55
 		public virtual int InformationViewId
 		{
 			get
@@ -141,18 +139,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003634 RID: 13876
+		// Token: 0x04003969 RID: 14697
 		[Nullable(2)]
 		protected new IInformationViewCheckCondition FbInstance;
 
-		// Token: 0x04003635 RID: 13877
+		// Token: 0x0400396A RID: 14698
 		[Nullable(2)]
 		protected new IInformationViewCheckCondition_SetValue PocoInterface;
 
-		// Token: 0x04003636 RID: 13878
+		// Token: 0x0400396B RID: 14699
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003637 RID: 13879
+		// Token: 0x0400396C RID: 14700
 		private bool _PreConditionsInited;
 	}
 }

@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 {
-	// Token: 0x020069F4 RID: 27124
+	// Token: 0x02005B51 RID: 23377
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SunSpiritHintView : UiPanelBase
 	{
-		// Token: 0x060437AD RID: 276397 RVA: 0x0107F8F0 File Offset: 0x0107DAF0
+		// Token: 0x060397F6 RID: 235510 RVA: 0x01023F38 File Offset: 0x01022138
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060437AE RID: 276398 RVA: 0x0107F9E0 File Offset: 0x0107DBE0
+		// Token: 0x060397F7 RID: 235511 RVA: 0x01024028 File Offset: 0x01022228
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -79,13 +79,13 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			this.AddEvents();
 		}
 
-		// Token: 0x060437AF RID: 276399 RVA: 0x0107FA94 File Offset: 0x0107DC94
+		// Token: 0x060397F8 RID: 235512 RVA: 0x010240DC File Offset: 0x010222DC
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEvents();
 		}
 
-		// Token: 0x060437B0 RID: 276400 RVA: 0x0107FA9C File Offset: 0x0107DC9C
+		// Token: 0x060397F9 RID: 235513 RVA: 0x010240E4 File Offset: 0x010222E4
 		private void AddEvents()
 		{
 			if (!EventSystem.Instance.Has(EEventName.OnSunSpiritOccupiedByPlayerChanged, new Action(this.OnSunSpiritOccupiedByPlayerChanged)))
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437B1 RID: 276401 RVA: 0x0107FB1C File Offset: 0x0107DD1C
+		// Token: 0x060397FA RID: 235514 RVA: 0x01024164 File Offset: 0x01022364
 		private void RemoveEvents()
 		{
 			if (EventSystem.Instance.Has(EEventName.OnSunSpiritOccupiedByPlayerChanged, new Action(this.OnSunSpiritOccupiedByPlayerChanged)))
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437B2 RID: 276402 RVA: 0x0107FB9B File Offset: 0x0107DD9B
+		// Token: 0x060397FB RID: 235515 RVA: 0x010241E3 File Offset: 0x010223E3
 		public void Tick(float delta)
 		{
 			this.RemainKeepVisibleTime -= (double)delta;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			this.UpdateLocation(delta);
 		}
 
-		// Token: 0x060437B3 RID: 276403 RVA: 0x0107FBBC File Offset: 0x0107DDBC
+		// Token: 0x060397FC RID: 235516 RVA: 0x01024204 File Offset: 0x01022404
 		[NullableContext(2)]
 		private SceneItemSunSpiritLauncherComponent GetWatchSelectedLauncherComp()
 		{
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			return component.GetSunSpiritLauncherUiTarget();
 		}
 
-		// Token: 0x060437B4 RID: 276404 RVA: 0x0107FC04 File Offset: 0x0107DE04
+		// Token: 0x060397FD RID: 235517 RVA: 0x0102424C File Offset: 0x0102244C
 		private void CheckAndUpdateVisible()
 		{
 			if (this.RemainKeepVisibleTime <= 0.0)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437B5 RID: 276405 RVA: 0x0107FC88 File Offset: 0x0107DE88
+		// Token: 0x060397FE RID: 235518 RVA: 0x010242D0 File Offset: 0x010224D0
 		private void ShowHintView()
 		{
 			base.SetUiActive(true);
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437B6 RID: 276406 RVA: 0x0107FCDC File Offset: 0x0107DEDC
+		// Token: 0x060397FF RID: 235519 RVA: 0x01024324 File Offset: 0x01022524
 		private void HideHintView()
 		{
 			if (this.SequencePlayer == null)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437B7 RID: 276407 RVA: 0x0107FD30 File Offset: 0x0107DF30
+		// Token: 0x06039800 RID: 235520 RVA: 0x01024378 File Offset: 0x01022578
 		private void ToggleLoopSequence(bool bEnable)
 		{
 			if (this.SequencePlayer == null)
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437B8 RID: 276408 RVA: 0x0107FD8B File Offset: 0x0107DF8B
+		// Token: 0x06039801 RID: 235521 RVA: 0x010243D3 File Offset: 0x010225D3
 		private void OnEndSequenceEvent(string seqName)
 		{
 			if (seqName == "Start")
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437B9 RID: 276409 RVA: 0x0107FDB8 File Offset: 0x0107DFB8
+		// Token: 0x06039802 RID: 235522 RVA: 0x01024400 File Offset: 0x01022600
 		private void OnSunSpiritOccupiedByPlayerChanged()
 		{
 			SunSpiritModel instance = SunSpiritModel.Instance;
@@ -246,14 +246,14 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			this.UpdateHint();
 		}
 
-		// Token: 0x060437BA RID: 276410 RVA: 0x0107FE31 File Offset: 0x0107E031
+		// Token: 0x06039803 RID: 235523 RVA: 0x01024479 File Offset: 0x01022679
 		[NullableContext(2)]
 		private void OnSunSpiritLauncherWatchSelectedChanged(SceneItemSunSpiritLauncherComponent oldSunSpiritLauncher, SceneItemSunSpiritLauncherComponent newSunSpiritLauncher)
 		{
 			this.CheckAndUpdateVisible();
 		}
 
-		// Token: 0x060437BB RID: 276411 RVA: 0x0107FE39 File Offset: 0x0107E039
+		// Token: 0x06039804 RID: 235524 RVA: 0x01024481 File Offset: 0x01022681
 		private void SetVisibleForDuration(double duration)
 		{
 			if (duration <= 0.0)
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			this.RemainKeepVisibleTime = duration;
 		}
 
-		// Token: 0x060437BC RID: 276412 RVA: 0x0107FE6C File Offset: 0x0107E06C
+		// Token: 0x06039805 RID: 235525 RVA: 0x010244B4 File Offset: 0x010226B4
 		private void UpdateHint()
 		{
 			SunSpiritModel instance = SunSpiritModel.Instance;
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			this.UpdateLocation(0f);
 		}
 
-		// Token: 0x060437BD RID: 276413 RVA: 0x0107FEE8 File Offset: 0x0107E0E8
+		// Token: 0x06039806 RID: 235526 RVA: 0x01024530 File Offset: 0x01022730
 		private void UpdateTxtNum(int num)
 		{
 			UUIText text = base.GetText(0);
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			text.SetText(num.ToString(), true);
 		}
 
-		// Token: 0x060437BE RID: 276414 RVA: 0x0107FF04 File Offset: 0x0107E104
+		// Token: 0x06039807 RID: 235527 RVA: 0x0102454C File Offset: 0x0102274C
 		private void UpdateLocation(float delta)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -378,7 +378,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			}
 		}
 
-		// Token: 0x060437BF RID: 276415 RVA: 0x01080174 File Offset: 0x0107E374
+		// Token: 0x06039808 RID: 235528 RVA: 0x010247BC File Offset: 0x010229BC
 		private double GetSpeed(double delta, double target, double cur, double lastSpeed)
 		{
 			double num = target - cur;
@@ -408,46 +408,46 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.View
 			return MathUtils.Instance.Lerp(lastSpeed, num2, 0.5);
 		}
 
-		// Token: 0x0402338F RID: 144271
+		// Token: 0x0401E581 RID: 124289
 		public const int MAX_DELTA_TIME = 200;
 
-		// Token: 0x04023390 RID: 144272
+		// Token: 0x0401E582 RID: 124290
 		public const float MIN_DELTA_OFFSET = 0.5f;
 
-		// Token: 0x04023391 RID: 144273
+		// Token: 0x0401E583 RID: 124291
 		public const int MAX_POS_OFFSET = 500;
 
-		// Token: 0x04023392 RID: 144274
+		// Token: 0x0401E584 RID: 124292
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04023393 RID: 144275
+		// Token: 0x0401E585 RID: 124293
 		private double RemainKeepVisibleTime;
 
-		// Token: 0x04023394 RID: 144276
+		// Token: 0x0401E586 RID: 124294
 		private readonly Vector2D TargetAnchorOffset = Vector2D.Create();
 
-		// Token: 0x04023395 RID: 144277
+		// Token: 0x0401E587 RID: 124295
 		private readonly Vector2D CurrentAnchorOffset = Vector2D.Create();
 
-		// Token: 0x04023396 RID: 144278
+		// Token: 0x0401E588 RID: 124296
 		private readonly Vector2D CurrentSpeed = Vector2D.Create();
 
-		// Token: 0x0200CB5F RID: 52063
+		// Token: 0x0200B73E RID: 46910
 		[NullableContext(0)]
 		public enum EChildType
 		{
-			// Token: 0x0403D677 RID: 251511
+			// Token: 0x04038A59 RID: 232025
 			NormalTxtNum,
-			// Token: 0x0403D678 RID: 251512
+			// Token: 0x04038A5A RID: 232026
 			DefaultBg,
-			// Token: 0x0403D679 RID: 251513
+			// Token: 0x04038A5B RID: 232027
 			NotEnoughBgOverlay,
-			// Token: 0x0403D67A RID: 251514
+			// Token: 0x04038A5C RID: 232028
 			NotEnoughTxtNum,
-			// Token: 0x0403D67B RID: 251515
+			// Token: 0x04038A5D RID: 232029
 			EnoughBgOverlay,
-			// Token: 0x0403D67C RID: 251516
+			// Token: 0x04038A5E RID: 232030
 			EnoughTxtNum
 		}
 	}

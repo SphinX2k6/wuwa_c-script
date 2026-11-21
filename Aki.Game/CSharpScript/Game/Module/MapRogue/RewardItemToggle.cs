@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x0200560D RID: 22029
+	// Token: 0x020045E3 RID: 17891
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.MapRogue
 	})]
 	public class RewardItemToggle : GridProxyAbstract<MapRogueRewardItemData>
 	{
-		// Token: 0x06038100 RID: 229632 RVA: 0x00D46DBC File Offset: 0x00D44FBC
+		// Token: 0x0602CFFE RID: 184318 RVA: 0x00C94B04 File Offset: 0x00C92D04
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x06038101 RID: 229633 RVA: 0x00D46EA7 File Offset: 0x00D450A7
+		// Token: 0x0602CFFF RID: 184319 RVA: 0x00C94BEF File Offset: 0x00C92DEF
 		protected override void OnStart()
 		{
 			this.Toggle = base.GetExtendToggle(0);
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.Toggle.CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 		}
 
-		// Token: 0x06038102 RID: 229634 RVA: 0x00D46EE6 File Offset: 0x00D450E6
+		// Token: 0x0602D000 RID: 184320 RVA: 0x00C94C2E File Offset: 0x00C92E2E
 		protected override void OnBeforeDestroy()
 		{
 			UUIExtendToggle toggle = this.Toggle;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.Toggle = null;
 		}
 
-		// Token: 0x06038103 RID: 229635 RVA: 0x00D46F08 File Offset: 0x00D45108
+		// Token: 0x0602D001 RID: 184321 RVA: 0x00C94C50 File Offset: 0x00C92E50
 		public override void Refresh(MapRogueRewardItemData rewardData, bool isSelected, int gridIndex)
 		{
 			this.Data = rewardData;
@@ -105,21 +105,21 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.SetItemDone(rewardData.IsSelect);
 		}
 
-		// Token: 0x06038104 RID: 229636 RVA: 0x00D470D8 File Offset: 0x00D452D8
+		// Token: 0x0602D002 RID: 184322 RVA: 0x00C94E20 File Offset: 0x00C93020
 		public void SetToggleState(bool bSelectOn, bool bFireEvent = false)
 		{
 			EToggleState state = bSelectOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleStateForce(state, bFireEvent, false, false);
 		}
 
-		// Token: 0x06038105 RID: 229637 RVA: 0x00D470FD File Offset: 0x00D452FD
+		// Token: 0x0602D003 RID: 184323 RVA: 0x00C94E45 File Offset: 0x00C93045
 		public void SetItemDone(bool bDone)
 		{
 			base.GetText(6).SetUIActive(!bDone);
 			base.GetItem(3).SetUIActive(bDone);
 		}
 
-		// Token: 0x06038106 RID: 229638 RVA: 0x00D4711C File Offset: 0x00D4531C
+		// Token: 0x0602D004 RID: 184324 RVA: 0x00C94E64 File Offset: 0x00C93064
 		private bool CanExecuteChange()
 		{
 			if (this.OnCanExecuteChangeFunc != null)
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return true;
 		}
 
-		// Token: 0x06038107 RID: 229639 RVA: 0x00D4714E File Offset: 0x00D4534E
+		// Token: 0x0602D005 RID: 184325 RVA: 0x00C94E96 File Offset: 0x00C93096
 		private void OnToggleClick(EToggleState state)
 		{
 			Action<bool, MapRogueRewardItemData> onExtendToggleClicked = this.OnExtendToggleClicked;
@@ -142,23 +142,23 @@ namespace CSharpScript.Game.Module.MapRogue
 			onExtendToggleClicked(state == EToggleState.ETT_Checked, this.Data);
 		}
 
-		// Token: 0x06038108 RID: 229640 RVA: 0x00D4716A File Offset: 0x00D4536A
+		// Token: 0x0602D006 RID: 184326 RVA: 0x00C94EB2 File Offset: 0x00C930B2
 		public override object GetKey(MapRogueRewardItemData data, int displayIndex)
 		{
 			return this.Data.Index;
 		}
 
-		// Token: 0x0401D782 RID: 120706
+		// Token: 0x0401820D RID: 98829
 		protected MapRogueRewardItemData Data;
 
-		// Token: 0x0401D783 RID: 120707
+		// Token: 0x0401820E RID: 98830
 		[Nullable(2)]
 		protected UUIExtendToggle Toggle;
 
-		// Token: 0x0401D784 RID: 120708
+		// Token: 0x0401820F RID: 98831
 		public bool IsAllSelect;
 
-		// Token: 0x0401D785 RID: 120709
+		// Token: 0x04018210 RID: 98832
 		[Nullable(new byte[]
 		{
 			2,
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.MapRogue
 		})]
 		public Action<bool, MapRogueRewardItemData> OnExtendToggleClicked;
 
-		// Token: 0x0401D786 RID: 120710
+		// Token: 0x04018211 RID: 98833
 		[Nullable(new byte[]
 		{
 			2,

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002ED5 RID: 11989
+// Token: 0x02002428 RID: 9256
 public enum EDamageType
 {
-	// Token: 0x0400BFCD RID: 49101
+	// Token: 0x0400C368 RID: 50024
 	Common,
-	// Token: 0x0400BFCE RID: 49102
+	// Token: 0x0400C369 RID: 50025
 	Sound,
-	// Token: 0x0400BFCF RID: 49103
+	// Token: 0x0400C36A RID: 50026
 	StrongSound,
-	// Token: 0x0400BFD0 RID: 49104
+	// Token: 0x0400C36B RID: 50027
 	InBorn,
-	// Token: 0x0400BFD1 RID: 49105
+	// Token: 0x0400C36C RID: 50028
 	Involved,
-	// Token: 0x0400BFD2 RID: 49106
+	// Token: 0x0400C36D RID: 50029
 	Special,
-	// Token: 0x0400BFD3 RID: 49107
+	// Token: 0x0400C36E RID: 50030
 	Vision
 }

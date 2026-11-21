@@ -2,14 +2,14 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E53 RID: 3667
+	// Token: 0x02000F64 RID: 3940
 	public enum EActivityState
 	{
-		// Token: 0x04002FB7 RID: 12215
+		// Token: 0x040032AE RID: 12974
 		BeforeOpen,
-		// Token: 0x04002FB8 RID: 12216
+		// Token: 0x040032AF RID: 12975
 		Open,
-		// Token: 0x04002FB9 RID: 12217
+		// Token: 0x040032B0 RID: 12976
 		Close
 	}
 }

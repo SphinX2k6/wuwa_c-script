@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002B5C RID: 11100
+// Token: 0x020020D8 RID: 8408
 public class SurvivorsWeaponUnlockView : UiViewBase
 {
-	// Token: 0x0601703E RID: 94270 RVA: 0x005D805B File Offset: 0x005D625B
+	// Token: 0x06014A6F RID: 84591 RVA: 0x00604BC7 File Offset: 0x00602DC7
 	[NullableContext(1)]
 	public SurvivorsWeaponUnlockView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601703F RID: 94271 RVA: 0x005D8064 File Offset: 0x005D6264
+	// Token: 0x06014A70 RID: 84592 RVA: 0x00604BD0 File Offset: 0x00602DD0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +32,7 @@ public class SurvivorsWeaponUnlockView : UiViewBase
 		};
 	}
 
-	// Token: 0x06017040 RID: 94272 RVA: 0x005D8124 File Offset: 0x005D6324
+	// Token: 0x06014A71 RID: 84593 RVA: 0x00604C90 File Offset: 0x00602E90
 	protected override void OnStart()
 	{
 		if (SurvivorsRogueModel.Instance.ActivityData == null)
@@ -45,17 +44,17 @@ public class SurvivorsWeaponUnlockView : UiViewBase
 		this.ScrollView = new GenericScrollViewNew<CardScrollItem, int>(base.GetScrollViewWithScrollbar(5), () => new CardScrollItem(), null, true, null);
 		if (array != null)
 		{
-			this.ScrollView.RefreshByData(array.ToList<int>(), null, false);
+			this.ScrollView.RefreshByData(array, null, false);
 		}
 	}
 
-	// Token: 0x06017041 RID: 94273 RVA: 0x005D819B File Offset: 0x005D639B
+	// Token: 0x06014A72 RID: 84594 RVA: 0x00604D02 File Offset: 0x00602F02
 	private void OnClickClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400ABFC RID: 44028
+	// Token: 0x0400B002 RID: 45058
 	[Nullable(new byte[]
 	{
 		2,

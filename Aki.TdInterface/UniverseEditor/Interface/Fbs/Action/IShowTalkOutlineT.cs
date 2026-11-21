@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007101 RID: 28929
+	// Token: 0x020078CD RID: 30925
 	public class IShowTalkOutlineT
 	{
-		// Token: 0x1700D70F RID: 55055
-		// (get) Token: 0x06033485 RID: 210053 RVA: 0x006EA0A0 File Offset: 0x006E82A0
-		// (set) Token: 0x06033486 RID: 210054 RVA: 0x006EA0A8 File Offset: 0x006E82A8
+		// Token: 0x1700E2F2 RID: 58098
+		// (get) Token: 0x06036727 RID: 223015 RVA: 0x0074A6AC File Offset: 0x007488AC
+		// (set) Token: 0x06036728 RID: 223016 RVA: 0x0074A6B4 File Offset: 0x007488B4
 		public int TextId { get; set; }
 
-		// Token: 0x1700D710 RID: 55056
-		// (get) Token: 0x06033487 RID: 210055 RVA: 0x006EA0B1 File Offset: 0x006E82B1
-		// (set) Token: 0x06033488 RID: 210056 RVA: 0x006EA0B9 File Offset: 0x006E82B9
+		// Token: 0x1700E2F3 RID: 58099
+		// (get) Token: 0x06036729 RID: 223017 RVA: 0x0074A6BD File Offset: 0x007488BD
+		// (set) Token: 0x0603672A RID: 223018 RVA: 0x0074A6C5 File Offset: 0x007488C5
 		public string TidOutline { get; set; }
 
-		// Token: 0x1700D711 RID: 55057
-		// (get) Token: 0x06033489 RID: 210057 RVA: 0x006EA0C2 File Offset: 0x006E82C2
-		// (set) Token: 0x0603348A RID: 210058 RVA: 0x006EA0CA File Offset: 0x006E82CA
+		// Token: 0x1700E2F4 RID: 58100
+		// (get) Token: 0x0603672B RID: 223019 RVA: 0x0074A6CE File Offset: 0x007488CE
+		// (set) Token: 0x0603672C RID: 223020 RVA: 0x0074A6D6 File Offset: 0x007488D6
 		public string PlotLineKey { get; set; }
 
-		// Token: 0x0603348B RID: 210059 RVA: 0x006EA0D3 File Offset: 0x006E82D3
+		// Token: 0x0603672D RID: 223021 RVA: 0x0074A6DF File Offset: 0x007488DF
 		public IShowTalkOutlineT()
 		{
 			this.TextId = 0;

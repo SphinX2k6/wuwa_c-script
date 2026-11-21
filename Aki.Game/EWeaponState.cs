@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002CB9 RID: 11449
+// Token: 0x02002212 RID: 8722
 internal enum EWeaponState
 {
-	// Token: 0x0400B263 RID: 45667
+	// Token: 0x0400B5CE RID: 46542
 	None,
-	// Token: 0x0400B264 RID: 45668
+	// Token: 0x0400B5CF RID: 46543
 	Hidden,
-	// Token: 0x0400B265 RID: 45669
+	// Token: 0x0400B5D0 RID: 46544
 	Showing
 }

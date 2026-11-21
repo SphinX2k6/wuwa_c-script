@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D94 RID: 23956
+	// Token: 0x02004D76 RID: 19830
 	public class BattleUiInfoItem : UiPanelBase
 	{
-		// Token: 0x0603CCC3 RID: 249027 RVA: 0x00E9937C File Offset: 0x00E9757C
+		// Token: 0x06031C20 RID: 203808 RVA: 0x00DE9C34 File Offset: 0x00DE7E34
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CCC4 RID: 249028 RVA: 0x00E99408 File Offset: 0x00E97608
+		// Token: 0x06031C21 RID: 203809 RVA: 0x00DE9CC0 File Offset: 0x00DE7EC0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleUiInfoItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CCC5 RID: 249029 RVA: 0x00E9944B File Offset: 0x00E9764B
+		// Token: 0x06031C22 RID: 203810 RVA: 0x00DE9D03 File Offset: 0x00DE7F03
 		[NullableContext(1)]
 		private static BattleUiDescInfoItem CreateItem()
 		{
 			return new BattleUiDescInfoItem();
 		}
 
-		// Token: 0x0603CCC6 RID: 249030 RVA: 0x00E99454 File Offset: 0x00E97654
+		// Token: 0x06031C23 RID: 203811 RVA: 0x00DE9D0C File Offset: 0x00DE7F0C
 		[NullableContext(1)]
 		public void Refresh(IBattleUiHoverTipsC info)
 		{
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FAC1 RID: 129729
+		// Token: 0x0401A579 RID: 107897
 		[Nullable(new byte[]
 		{
 			2,
@@ -72,22 +72,22 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private GenericLayout<BattleUiDescInfoItem, IBattleUiHoverTipsDescInfoC> ContentLayout;
 
-		// Token: 0x0200C051 RID: 49233
+		// Token: 0x0200AA57 RID: 43607
 		private enum EItemChildType
 		{
-			// Token: 0x0403A098 RID: 237720
+			// Token: 0x04034A5B RID: 215643
 			TxtTitle,
-			// Token: 0x0403A099 RID: 237721
+			// Token: 0x04034A5C RID: 215644
 			ItemDescInfo,
-			// Token: 0x0403A09A RID: 237722
+			// Token: 0x04034A5D RID: 215645
 			LayoutContent
 		}
 
-		// Token: 0x0200C052 RID: 49234
+		// Token: 0x0200AA58 RID: 43608
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403A09B RID: 237723
+			// Token: 0x04034A5E RID: 215646
 			[Nullable(new byte[]
 			{
 				0,

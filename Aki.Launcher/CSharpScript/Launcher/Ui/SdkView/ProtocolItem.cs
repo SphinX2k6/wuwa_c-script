@@ -5,28 +5,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Ui.SdkView
 {
-	// Token: 0x020000C7 RID: 199
+	// Token: 0x020000CA RID: 202
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class ProtocolItem : LaunchComponentsAction
 	{
-		// Token: 0x170000D2 RID: 210
-		// (get) Token: 0x06000699 RID: 1689 RVA: 0x000380C8 File Offset: 0x000362C8
+		// Token: 0x170000D4 RID: 212
+		// (get) Token: 0x060006B5 RID: 1717 RVA: 0x00039BF8 File Offset: 0x00037DF8
 		public SdkProtocolView Owner { get; }
 
-		// Token: 0x0600069A RID: 1690 RVA: 0x000380D0 File Offset: 0x000362D0
+		// Token: 0x060006B6 RID: 1718 RVA: 0x00039C00 File Offset: 0x00037E00
 		public ProtocolItem(SdkProtocolView owner)
 		{
 			this.Owner = owner;
 		}
 
-		// Token: 0x0600069B RID: 1691 RVA: 0x000380DF File Offset: 0x000362DF
+		// Token: 0x060006B7 RID: 1719 RVA: 0x00039C0F File Offset: 0x00037E0F
 		public void SetActor(AActor actor)
 		{
 			base.SetRootActorLaunchComponentsAction(actor);
 		}
 
-		// Token: 0x0600069C RID: 1692 RVA: 0x000380E8 File Offset: 0x000362E8
+		// Token: 0x060006B8 RID: 1720 RVA: 0x00039C18 File Offset: 0x00037E18
 		protected override void OnStart()
 		{
 			this.ClickButton = base.GetButton(0);
@@ -38,7 +38,7 @@ namespace CSharpScript.Launcher.Ui.SdkView
 			this.DescText = base.GetText(1);
 		}
 
-		// Token: 0x0600069D RID: 1693 RVA: 0x00038126 File Offset: 0x00036326
+		// Token: 0x060006B9 RID: 1721 RVA: 0x00039C56 File Offset: 0x00037E56
 		private void OnClickButton()
 		{
 			SdkProtocolViewLayoutData data = this.Data;
@@ -54,33 +54,33 @@ namespace CSharpScript.Launcher.Ui.SdkView
 			clickCallBack(this.Owner);
 		}
 
-		// Token: 0x0600069E RID: 1694 RVA: 0x00038148 File Offset: 0x00036348
+		// Token: 0x060006BA RID: 1722 RVA: 0x00039C78 File Offset: 0x00037E78
 		public void Refresh(SdkProtocolViewLayoutData data)
 		{
 			this.Data = data;
 			HotFixManager.SetLocalText(this.DescText, data.TextId, Array.Empty<string>());
 		}
 
-		// Token: 0x040003FC RID: 1020
+		// Token: 0x0400042B RID: 1067
 		[Nullable(2)]
 		public SdkProtocolViewLayoutData Data;
 
-		// Token: 0x040003FD RID: 1021
+		// Token: 0x0400042C RID: 1068
 		[Nullable(2)]
 		private UUIButtonComponent ClickButton;
 
-		// Token: 0x040003FE RID: 1022
+		// Token: 0x0400042D RID: 1069
 		[Nullable(2)]
 		private UUIText DescText;
 
-		// Token: 0x0200035E RID: 862
+		// Token: 0x02000369 RID: 873
 		[NullableContext(0)]
 		private static class EProtocolItemComponents
 		{
-			// Token: 0x0400115A RID: 4442
+			// Token: 0x040011BC RID: 4540
 			public const int ClickButton = 0;
 
-			// Token: 0x0400115B RID: 4443
+			// Token: 0x040011BD RID: 4541
 			public const int DescText = 1;
 		}
 	}

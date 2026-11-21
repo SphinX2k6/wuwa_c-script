@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x0200571C RID: 22300
+	// Token: 0x020046F3 RID: 18163
 	public class EKurotatoSystemVarTypeJsonConverter : JsonConverter<EKurotatoSystemVarType>
 	{
-		// Token: 0x06038B26 RID: 232230 RVA: 0x00D7394C File Offset: 0x00D71B4C
+		// Token: 0x0602DA35 RID: 186933 RVA: 0x00CC1F2C File Offset: 0x00CC012C
 		public override EKurotatoSystemVarType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return EKurotatoSystemVarTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06038B27 RID: 232231 RVA: 0x00D73970 File Offset: 0x00D71B70
+		// Token: 0x0602DA36 RID: 186934 RVA: 0x00CC1F50 File Offset: 0x00CC0150
 		public override void Write(Utf8JsonWriter writer, EKurotatoSystemVarType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

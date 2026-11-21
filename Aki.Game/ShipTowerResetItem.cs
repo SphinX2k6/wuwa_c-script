@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029C2 RID: 10690
+// Token: 0x02001F3D RID: 7997
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerResetItem : UiPanelBase
 {
-	// Token: 0x0601628A RID: 90762 RVA: 0x0059AB04 File Offset: 0x00598D04
+	// Token: 0x06013C90 RID: 81040 RVA: 0x005C5ABC File Offset: 0x005C3CBC
 	public UniTask Init(UUIItem item)
 	{
 		ShipTowerResetItem.<Init>d__3 <Init>d__;
@@ -25,7 +25,7 @@ public class ShipTowerResetItem : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601628B RID: 90763 RVA: 0x0059AB50 File Offset: 0x00598D50
+	// Token: 0x06013C91 RID: 81041 RVA: 0x005C5B08 File Offset: 0x005C3D08
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class ShipTowerResetItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601628C RID: 90764 RVA: 0x0059AC04 File Offset: 0x00598E04
+	// Token: 0x06013C92 RID: 81042 RVA: 0x005C5BBC File Offset: 0x005C3DBC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerResetItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ public class ShipTowerResetItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601628D RID: 90765 RVA: 0x0059AC48 File Offset: 0x00598E48
+	// Token: 0x06013C93 RID: 81043 RVA: 0x005C5C00 File Offset: 0x005C3E00
 	private void OnClickBuff(MediumItemGridExtendCallback param)
 	{
 		ShipTowerTeamData panelData = this.PanelData;
@@ -67,10 +67,10 @@ public class ShipTowerResetItem : UiPanelBase
 		}
 		int? num2 = num;
 		int valueOrDefault = num2.GetValueOrDefault(1);
-		ItemController.Instance.OpenItemTipsByItemId(valueOrDefault, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(valueOrDefault, true, null, false);
 	}
 
-	// Token: 0x0601628E RID: 90766 RVA: 0x0059ACA0 File Offset: 0x00598EA0
+	// Token: 0x06013C94 RID: 81044 RVA: 0x005C5C58 File Offset: 0x005C3E58
 	public void UpdateData(ShipTowerTeamData data)
 	{
 		this.PanelData = data;
@@ -103,36 +103,36 @@ public class ShipTowerResetItem : UiPanelBase
 		base.GetText(3).SetText(num2.ToString(), true);
 	}
 
-	// Token: 0x0400A50C RID: 42252
+	// Token: 0x0400A8F6 RID: 43254
 	private SmallItemGrid BuffItem;
 
-	// Token: 0x0400A50D RID: 42253
+	// Token: 0x0400A8F7 RID: 43255
 	[Nullable(2)]
 	private ShipTowerTeamData PanelData;
 
-	// Token: 0x02008FDF RID: 36831
+	// Token: 0x02008226 RID: 33318
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E977 RID: 190839
+		// Token: 0x0402A06F RID: 172143
 		public const int ItemBuff = 0;
 
-		// Token: 0x0402E978 RID: 190840
+		// Token: 0x0402A070 RID: 172144
 		public const int TxtName = 1;
 
-		// Token: 0x0402E979 RID: 190841
+		// Token: 0x0402A071 RID: 172145
 		public const int TxtCount = 2;
 
-		// Token: 0x0402E97A RID: 190842
+		// Token: 0x0402A072 RID: 172146
 		public const int TxtResetCount = 3;
 
-		// Token: 0x0402E97B RID: 190843
+		// Token: 0x0402A073 RID: 172147
 		public const int ItemCountRoot = 4;
 
-		// Token: 0x0402E97C RID: 190844
+		// Token: 0x0402A074 RID: 172148
 		public const int TxtEndless = 5;
 
-		// Token: 0x0402E97D RID: 190845
+		// Token: 0x0402A075 RID: 172149
 		public const int TxtUseCount = 6;
 	}
 }

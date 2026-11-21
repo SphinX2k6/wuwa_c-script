@@ -11,16 +11,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews
 {
-	// Token: 0x020047BB RID: 18363
+	// Token: 0x020036EC RID: 14060
 	public class ExploreProgressView : UiViewBase
 	{
-		// Token: 0x060301C1 RID: 197057 RVA: 0x00B26ADD File Offset: 0x00B24CDD
+		// Token: 0x06024991 RID: 149905 RVA: 0x00A568E8 File Offset: 0x00A54AE8
 		[NullableContext(1)]
 		public ExploreProgressView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060301C2 RID: 197058 RVA: 0x00B26AE8 File Offset: 0x00B24CE8
+		// Token: 0x06024992 RID: 149906 RVA: 0x00A568F4 File Offset: 0x00A54AF4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060301C3 RID: 197059 RVA: 0x00B26BD0 File Offset: 0x00B24DD0
+		// Token: 0x06024993 RID: 149907 RVA: 0x00A569DC File Offset: 0x00A54BDC
 		protected override void OnStart()
 		{
 			this.ExploreProgressItemScrollView = new GenericScrollView<ExploreProgressView.ExploreProgressItem>(base.GetScrollViewWithScrollbar(3), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<ExploreProgressView.ExploreProgressItem>(this.InitExploreProgressItem), null);
 		}
 
-		// Token: 0x060301C4 RID: 197060 RVA: 0x00B26BF4 File Offset: 0x00B24DF4
+		// Token: 0x06024994 RID: 149908 RVA: 0x00A56A00 File Offset: 0x00A54C00
 		[NullableContext(1)]
 		private ILayoutItem<ExploreProgressView.ExploreProgressItem> InitExploreProgressItem(object rawData, UUIItem item, int index)
 		{
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			};
 		}
 
-		// Token: 0x060301C5 RID: 197061 RVA: 0x00B26C37 File Offset: 0x00B24E37
+		// Token: 0x06024995 RID: 149909 RVA: 0x00A56A43 File Offset: 0x00A54C43
 		protected override void OnBeforeDestroy()
 		{
 			GenericScrollView<ExploreProgressView.ExploreProgressItem> exploreProgressItemScrollView = this.ExploreProgressItemScrollView;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			this.ExploreProgressItemScrollView = null;
 		}
 
-		// Token: 0x060301C6 RID: 197062 RVA: 0x00B26C54 File Offset: 0x00B24E54
+		// Token: 0x06024996 RID: 149910 RVA: 0x00A56A60 File Offset: 0x00A54C60
 		protected override void OnAfterShow()
 		{
 			IAreaExploreInfoData areaExploreInfo = WorldMapModel.Instance.GetAreaExploreInfo();
@@ -111,13 +111,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			}
 		}
 
-		// Token: 0x060301C7 RID: 197063 RVA: 0x00B26D19 File Offset: 0x00B24F19
+		// Token: 0x06024997 RID: 149911 RVA: 0x00A56B25 File Offset: 0x00A54D25
 		private void OnClose()
 		{
 			UiManager.Instance.CloseView(EUiViewName.ExploreProgressView, null);
 		}
 
-		// Token: 0x04019ECE RID: 106190
+		// Token: 0x0401457F RID: 83327
 		[Nullable(new byte[]
 		{
 			2,
@@ -125,33 +125,33 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 		})]
 		private GenericScrollView<ExploreProgressView.ExploreProgressItem> ExploreProgressItemScrollView;
 
-		// Token: 0x0200AA7D RID: 43645
+		// Token: 0x02009430 RID: 37936
 		public static class EExploreProgressDefine
 		{
-			// Token: 0x04033E00 RID: 212480
+			// Token: 0x0402E589 RID: 189833
 			public const int ConfirmButton = 0;
 
-			// Token: 0x04033E01 RID: 212481
+			// Token: 0x0402E58A RID: 189834
 			public const int AreaText = 1;
 
-			// Token: 0x04033E02 RID: 212482
+			// Token: 0x0402E58B RID: 189835
 			public const int ProgressText = 2;
 
-			// Token: 0x04033E03 RID: 212483
+			// Token: 0x0402E58C RID: 189836
 			public const int ExploreProgressScrollView = 3;
 		}
 
-		// Token: 0x0200AA7E RID: 43646
+		// Token: 0x02009431 RID: 37937
 		public class ExploreProgressItem : UiPanelBase
 		{
-			// Token: 0x0604D931 RID: 317745 RVA: 0x014727F2 File Offset: 0x014709F2
+			// Token: 0x06043E3C RID: 278076 RVA: 0x01420D26 File Offset: 0x0141EF26
 			[NullableContext(1)]
 			public ExploreProgressItem(UUIItem uiItem)
 			{
 				base.CreateThenShowByActor(uiItem.GetOwner(), null);
 			}
 
-			// Token: 0x0604D932 RID: 317746 RVA: 0x01472808 File Offset: 0x01470A08
+			// Token: 0x06043E3D RID: 278077 RVA: 0x01420D3C File Offset: 0x0141EF3C
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 3;
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 				this.ComponentRegisterInfos = list;
 			}
 
-			// Token: 0x0604D933 RID: 317747 RVA: 0x01472894 File Offset: 0x01470A94
+			// Token: 0x06043E3E RID: 278078 RVA: 0x01420DC8 File Offset: 0x0141EFC8
 			[NullableContext(1)]
 			public void Update(params object[] param)
 			{
@@ -204,19 +204,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 				}
 			}
 
-			// Token: 0x04033E04 RID: 212484
+			// Token: 0x0402E58D RID: 189837
 			private const int ONEHUNDRED = 100;
 
-			// Token: 0x0200D103 RID: 53507
+			// Token: 0x0200BCE1 RID: 48353
 			public static class EExploreProgressItemDefine
 			{
-				// Token: 0x0403EBE5 RID: 256997
+				// Token: 0x0403A02D RID: 237613
 				public const int NameText = 0;
 
-				// Token: 0x0403EBE6 RID: 256998
+				// Token: 0x0403A02E RID: 237614
 				public const int PercentText = 1;
 
-				// Token: 0x0403EBE7 RID: 256999
+				// Token: 0x0403A02F RID: 237615
 				public const int ExpSprite = 2;
 			}
 		}

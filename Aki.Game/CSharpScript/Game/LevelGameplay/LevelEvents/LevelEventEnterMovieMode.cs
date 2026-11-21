@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B1D RID: 27421
+	// Token: 0x02005C95 RID: 23701
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventEnterMovieMode : LevelEventBase
 	{
-		// Token: 0x060440B7 RID: 278711 RVA: 0x010BA0D4 File Offset: 0x010B82D4
+		// Token: 0x0603A209 RID: 238089 RVA: 0x01063960 File Offset: 0x01061B60
 		public LevelEventEnterMovieMode(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060440B8 RID: 278712 RVA: 0x010BA0E0 File Offset: 0x010B82E0
+		// Token: 0x0603A20A RID: 238090 RVA: 0x0106396C File Offset: 0x01061B6C
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			EnterMovieMode enterMovieMode = inParams as EnterMovieMode;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.ExecuteEnterMovieMode(@params, enterMovieMode.DurationType);
 		}
 
-		// Token: 0x060440B9 RID: 278713 RVA: 0x010BA1F4 File Offset: 0x010B83F4
+		// Token: 0x0603A20B RID: 238091 RVA: 0x01063A80 File Offset: 0x01061C80
 		private UniTask ExecuteEnterMovieMode(EnterMovieModeParams @params, [Nullable(2)] IEnterMovieModeDurationType durationType)
 		{
 			LevelEventEnterMovieMode.<ExecuteEnterMovieMode>d__2 <ExecuteEnterMovieMode>d__;
@@ -54,13 +54,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <ExecuteEnterMovieMode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060440BA RID: 278714 RVA: 0x010BA247 File Offset: 0x010B8447
+		// Token: 0x0603A20C RID: 238092 RVA: 0x01063AD3 File Offset: 0x01061CD3
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060440BB RID: 278715 RVA: 0x010BA254 File Offset: 0x010B8454
+		// Token: 0x0603A20D RID: 238093 RVA: 0x01063AE0 File Offset: 0x01061CE0
 		protected override void OnUpdateGuarantee()
 		{
 			GuaranteeActionInfo p = new GuaranteeActionInfo

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005923 RID: 22819
+	// Token: 0x020048FC RID: 18684
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,8 +17,8 @@ namespace CSharpScript.Game.Module.Infrastructure
 	})]
 	public class InfrastructureShopItem : GridProxyAbstract<PayShopGoods>
 	{
-		// Token: 0x17008AE1 RID: 35553
-		// (get) Token: 0x06039F62 RID: 237410 RVA: 0x00DC78BD File Offset: 0x00DC5ABD
+		// Token: 0x17005EAD RID: 24237
+		// (get) Token: 0x0602EE85 RID: 192133 RVA: 0x00D16BE5 File Offset: 0x00D14DE5
 		private PayShopItemBaseSt ItemBaseSt
 		{
 			get
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F63 RID: 237411 RVA: 0x00DC78D0 File Offset: 0x00DC5AD0
+		// Token: 0x0602EE86 RID: 192134 RVA: 0x00D16BF8 File Offset: 0x00D14DF8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039F64 RID: 237412 RVA: 0x00DC7AC4 File Offset: 0x00DC5CC4
+		// Token: 0x0602EE87 RID: 192135 RVA: 0x00D16DEC File Offset: 0x00D14FEC
 		public override void Refresh(PayShopGoods data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.RefreshWarnState();
 		}
 
-		// Token: 0x06039F65 RID: 237413 RVA: 0x00DC7AEC File Offset: 0x00DC5CEC
+		// Token: 0x0602EE88 RID: 192136 RVA: 0x00D16E14 File Offset: 0x00D15014
 		private void RefreshTexture()
 		{
 			PayShopItemBaseSt payShopItemBaseSt = this.Data.ConvertToPayShopBaseSt();
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			base.SetItemIcon(texture, payShopItemBaseSt.ItemId, null, null);
 		}
 
-		// Token: 0x06039F66 RID: 237414 RVA: 0x00DC7B6C File Offset: 0x00DC5D6C
+		// Token: 0x0602EE89 RID: 192137 RVA: 0x00D16E94 File Offset: 0x00D15094
 		private void RefreshQualityTexture()
 		{
 			string itemQualityColor = InfrastructureConfig.Instance.GetItemQualityColor(this.ItemBaseSt.Quality);
@@ -114,13 +114,13 @@ namespace CSharpScript.Game.Module.Infrastructure
 			sprite.SetColor(FColor.FromHex(itemQualityColor));
 		}
 
-		// Token: 0x06039F67 RID: 237415 RVA: 0x00DC7BA6 File Offset: 0x00DC5DA6
+		// Token: 0x0602EE8A RID: 192138 RVA: 0x00D16ECE File Offset: 0x00D150CE
 		private void RefreshShopItemName()
 		{
 			base.GetText(4).SetText(this.ItemBaseSt.ItemName, true);
 		}
 
-		// Token: 0x06039F68 RID: 237416 RVA: 0x00DC7BC0 File Offset: 0x00DC5DC0
+		// Token: 0x0602EE8B RID: 192139 RVA: 0x00D16EE8 File Offset: 0x00D150E8
 		private void RefreshPrice()
 		{
 			UUITexture texture = base.GetTexture(5);
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x06039F69 RID: 237417 RVA: 0x00DC7C74 File Offset: 0x00DC5E74
+		// Token: 0x0602EE8C RID: 192140 RVA: 0x00D16F9C File Offset: 0x00D1519C
 		private void RefreshWarnState()
 		{
 			bool flag = !this.Data.IfCanBuy();
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			text2.SetText(this.Data.GetBuyLimitText(), true);
 		}
 
-		// Token: 0x06039F6A RID: 237418 RVA: 0x00DC7D19 File Offset: 0x00DC5F19
+		// Token: 0x0602EE8D RID: 192141 RVA: 0x00D17041 File Offset: 0x00D15241
 		private void OnClickShopItem()
 		{
 			if (!this.Data.IfCanBuy())
@@ -195,47 +195,47 @@ namespace CSharpScript.Game.Module.Infrastructure
 			PayShopController.Instance.OpenBuyViewByGoodsId(this.Data, null);
 		}
 
-		// Token: 0x0401E379 RID: 123769
+		// Token: 0x04018E16 RID: 101910
 		private PayShopGoods Data;
 
-		// Token: 0x0200BBC1 RID: 48065
+		// Token: 0x0200A5D0 RID: 42448
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038B17 RID: 232215
+			// Token: 0x040334F9 RID: 210169
 			public const int ShopItem = 0;
 
-			// Token: 0x04038B18 RID: 232216
+			// Token: 0x040334FA RID: 210170
 			public const int TextureBigIcon = 1;
 
-			// Token: 0x04038B19 RID: 232217
+			// Token: 0x040334FB RID: 210171
 			public const int SpriteQualityLight = 2;
 
-			// Token: 0x04038B1A RID: 232218
+			// Token: 0x040334FC RID: 210172
 			public const int PanelItemDescription = 3;
 
-			// Token: 0x04038B1B RID: 232219
+			// Token: 0x040334FD RID: 210173
 			public const int TextItemName = 4;
 
-			// Token: 0x04038B1C RID: 232220
+			// Token: 0x040334FE RID: 210174
 			public const int TextureCostIcon = 5;
 
-			// Token: 0x04038B1D RID: 232221
+			// Token: 0x040334FF RID: 210175
 			public const int TextCostNum = 6;
 
-			// Token: 0x04038B1E RID: 232222
+			// Token: 0x04033500 RID: 210176
 			public const int PanelWarning = 7;
 
-			// Token: 0x04038B1F RID: 232223
+			// Token: 0x04033501 RID: 210177
 			public const int TextWarning = 8;
 
-			// Token: 0x04038B20 RID: 232224
+			// Token: 0x04033502 RID: 210178
 			public const int PanelOut = 9;
 
-			// Token: 0x04038B21 RID: 232225
+			// Token: 0x04033503 RID: 210179
 			public const int TextOut = 10;
 
-			// Token: 0x04038B22 RID: 232226
+			// Token: 0x04033504 RID: 210180
 			public const int TextTime = 11;
 		}
 	}

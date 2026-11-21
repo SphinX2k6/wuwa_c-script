@@ -9,19 +9,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Player.Ability
 {
-	// Token: 0x0200705C RID: 28764
+	// Token: 0x020061DD RID: 25053
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerSearchSceneInteractPointAbility : LevelEntityAbilityBase
 	{
-		// Token: 0x0604601F RID: 286751 RVA: 0x011739AD File Offset: 0x01171BAD
+		// Token: 0x0603C217 RID: 246295 RVA: 0x0111D5AC File Offset: 0x0111B7AC
 		private bool IsInteractingPoint(ISceneInteractPoint point)
 		{
 			PlayerSceneInteractComponent currentRoleInteractComp = this.CurrentRoleInteractComp;
 			return currentRoleInteractComp != null && currentRoleInteractComp.IsInteractingPoint(point);
 		}
 
-		// Token: 0x06046020 RID: 286752 RVA: 0x011739C4 File Offset: 0x01171BC4
+		// Token: 0x0603C218 RID: 246296 RVA: 0x0111D5C0 File Offset: 0x0111B7C0
 		public PlayerSearchSceneInteractPointAbility(ELevelEntityAbilityType type, EAbilityTickPhase tickPhase, int tickOrder, bool needTickActivate) : base(type, tickPhase, tickOrder, needTickActivate)
 		{
 			this.SearchParams = new <PlayerSearchSceneInteractPointAbility>F1A288CD6718D19573611C8AFEB07CD8B0525D222D3381BA0ED014CAAA637126E__SceneInteractSearchParams
@@ -34,19 +34,19 @@ namespace CSharpScript.Game.NewWorld.Player.Ability
 			};
 		}
 
-		// Token: 0x06046021 RID: 286753 RVA: 0x01173A50 File Offset: 0x01171C50
+		// Token: 0x0603C219 RID: 246297 RVA: 0x0111D64C File Offset: 0x0111B84C
 		public override bool ShouldActivate(Entity entity)
 		{
 			return SceneInteractPointManager.Instance.PointSize > 0;
 		}
 
-		// Token: 0x06046022 RID: 286754 RVA: 0x01173A5F File Offset: 0x01171C5F
+		// Token: 0x0603C21A RID: 246298 RVA: 0x0111D65B File Offset: 0x0111B85B
 		public override bool ShouldDeactivate(Entity entity)
 		{
 			return SceneInteractPointManager.Instance.PointSize == 0;
 		}
 
-		// Token: 0x06046023 RID: 286755 RVA: 0x01173A6E File Offset: 0x01171C6E
+		// Token: 0x0603C21B RID: 246299 RVA: 0x0111D66A File Offset: 0x0111B86A
 		public override void OnActivated(Entity entity)
 		{
 			PlayerSceneInteractComponent component = entity.GetComponent<PlayerSceneInteractComponent>();
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.Player.Ability
 			component.SetBestInteractPoint(null);
 		}
 
-		// Token: 0x06046024 RID: 286756 RVA: 0x01173A84 File Offset: 0x01171C84
+		// Token: 0x0603C21C RID: 246300 RVA: 0x0111D680 File Offset: 0x0111B880
 		public override void OnTick(Entity entity, float deltaMilliseconds)
 		{
 			PlayerSceneInteractComponent component = entity.GetComponent<PlayerSceneInteractComponent>();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.NewWorld.Player.Ability
 			}
 		}
 
-		// Token: 0x06046025 RID: 286757 RVA: 0x01173ABB File Offset: 0x01171CBB
+		// Token: 0x0603C21D RID: 246301 RVA: 0x0111D6B7 File Offset: 0x0111B8B7
 		public override void OnDeactivated(Entity entity)
 		{
 			PlayerSceneInteractComponent component = entity.GetComponent<PlayerSceneInteractComponent>();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.NewWorld.Player.Ability
 			this.PointBuckets.Clear();
 		}
 
-		// Token: 0x06046026 RID: 286758 RVA: 0x01173AE0 File Offset: 0x01171CE0
+		// Token: 0x0603C21E RID: 246302 RVA: 0x0111D6DC File Offset: 0x0111B8DC
 		[return: Nullable(2)]
 		private ISceneInteractPoint FindBestInteractPoint(Entity entity)
 		{
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.NewWorld.Player.Ability
 			return result;
 		}
 
-		// Token: 0x06046027 RID: 286759 RVA: 0x01173C48 File Offset: 0x01171E48
+		// Token: 0x0603C21F RID: 246303 RVA: 0x0111D844 File Offset: 0x0111BA44
 		private void RefreshPointBuckets()
 		{
 			foreach (List<ISceneInteractPoint> list in this.PointBuckets.Values)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.NewWorld.Player.Ability
 			}
 		}
 
-		// Token: 0x06046028 RID: 286760 RVA: 0x01173D58 File Offset: 0x01171F58
+		// Token: 0x0603C220 RID: 246304 RVA: 0x0111D954 File Offset: 0x0111BB54
 		private bool TryRefreshCurrentRoleContext()
 		{
 			SceneTeamModel instance = SceneTeamModel.Instance;
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.NewWorld.Player.Ability
 			return true;
 		}
 
-		// Token: 0x06046029 RID: 286761 RVA: 0x01173E0A File Offset: 0x0117200A
+		// Token: 0x0603C221 RID: 246305 RVA: 0x0111DA06 File Offset: 0x0111BC06
 		private void ClearCurrentRoleContext()
 		{
 			this.CurrentRoleEntityId = 0;
@@ -198,38 +198,48 @@ namespace CSharpScript.Game.NewWorld.Player.Ability
 			this.CurrentRoleInteractComp = null;
 		}
 
-		// Token: 0x04024A69 RID: 150121
+		// Token: 0x17007175 RID: 29045
+		// (get) Token: 0x0603C222 RID: 246306 RVA: 0x0111DA2B File Offset: 0x0111BC2B
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FD1F RID: 130335
 		[Nullable(2)]
 		private UCapsuleComponent PlayerCapsule;
 
-		// Token: 0x04024A6A RID: 150122
+		// Token: 0x0401FD20 RID: 130336
 		private int CurrentRoleEntityId;
 
-		// Token: 0x04024A6B RID: 150123
+		// Token: 0x0401FD21 RID: 130337
 		[Nullable(2)]
 		private CharacterActorComponent CurrentRoleActorComponent;
 
-		// Token: 0x04024A6C RID: 150124
+		// Token: 0x0401FD22 RID: 130338
 		[Nullable(2)]
 		private EntityHandle CurrentRoleEntityHandle;
 
-		// Token: 0x04024A6D RID: 150125
+		// Token: 0x0401FD23 RID: 130339
 		private readonly Vector CameraLocation = Vector.Create();
 
-		// Token: 0x04024A6E RID: 150126
+		// Token: 0x0401FD24 RID: 130340
 		private readonly Vector CameraForward = Vector.Create();
 
-		// Token: 0x04024A6F RID: 150127
+		// Token: 0x0401FD25 RID: 130341
 		private readonly Vector CurrentRoleLocation = Vector.Create();
 
-		// Token: 0x04024A70 RID: 150128
+		// Token: 0x0401FD26 RID: 130342
 		private readonly Dictionary<ESceneInteractSearchStrategyType, List<ISceneInteractPoint>> PointBuckets = new Dictionary<ESceneInteractSearchStrategyType, List<ISceneInteractPoint>>();
 
-		// Token: 0x04024A71 RID: 150129
+		// Token: 0x0401FD27 RID: 130343
 		[Nullable(2)]
 		private PlayerSceneInteractComponent CurrentRoleInteractComp;
 
-		// Token: 0x04024A72 RID: 150130
+		// Token: 0x0401FD28 RID: 130344
 		private readonly ISceneInteractSearchParams SearchParams;
 	}
 }

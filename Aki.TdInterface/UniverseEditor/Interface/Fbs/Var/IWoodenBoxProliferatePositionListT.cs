@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B30 RID: 15152
+	// Token: 0x02003F32 RID: 16178
 	public class IWoodenBoxProliferatePositionListT
 	{
-		// Token: 0x170067FC RID: 26620
-		// (get) Token: 0x06014B53 RID: 84819 RVA: 0x00303103 File Offset: 0x00301303
-		// (set) Token: 0x06014B54 RID: 84820 RVA: 0x0030310B File Offset: 0x0030130B
+		// Token: 0x17006D97 RID: 28055
+		// (get) Token: 0x06015FFD RID: 90109 RVA: 0x00329393 File Offset: 0x00327593
+		// (set) Token: 0x06015FFE RID: 90110 RVA: 0x0032939B File Offset: 0x0032759B
 		public EWoodenBoxProliferateSpawnType Type { get; set; }
 
-		// Token: 0x170067FD RID: 26621
-		// (get) Token: 0x06014B55 RID: 84821 RVA: 0x00303114 File Offset: 0x00301314
-		// (set) Token: 0x06014B56 RID: 84822 RVA: 0x0030311C File Offset: 0x0030131C
+		// Token: 0x17006D98 RID: 28056
+		// (get) Token: 0x06015FFF RID: 90111 RVA: 0x003293A4 File Offset: 0x003275A4
+		// (set) Token: 0x06016000 RID: 90112 RVA: 0x003293AC File Offset: 0x003275AC
 		public List<IVectorInfoT> Positions { get; set; }
 
-		// Token: 0x06014B57 RID: 84823 RVA: 0x00303125 File Offset: 0x00301325
+		// Token: 0x06016001 RID: 90113 RVA: 0x003293B5 File Offset: 0x003275B5
 		public IWoodenBoxProliferatePositionListT()
 		{
 			this.Type = EWoodenBoxProliferateSpawnType.RandomInRange;

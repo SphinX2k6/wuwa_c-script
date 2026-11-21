@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x020047DF RID: 18399
+	// Token: 0x02004C47 RID: 19527
 	public class IEntityVoxelInfoT
 	{
-		// Token: 0x1700843E RID: 33854
-		// (get) Token: 0x0601C728 RID: 116520 RVA: 0x0040663B File Offset: 0x0040483B
-		// (set) Token: 0x0601C729 RID: 116521 RVA: 0x00406643 File Offset: 0x00404843
+		// Token: 0x17008A89 RID: 35465
+		// (get) Token: 0x0601DF25 RID: 122661 RVA: 0x00432F8B File Offset: 0x0043118B
+		// (set) Token: 0x0601DF26 RID: 122662 RVA: 0x00432F93 File Offset: 0x00431193
 		public int EntityId { get; set; }
 
-		// Token: 0x1700843F RID: 33855
-		// (get) Token: 0x0601C72A RID: 116522 RVA: 0x0040664C File Offset: 0x0040484C
-		// (set) Token: 0x0601C72B RID: 116523 RVA: 0x00406654 File Offset: 0x00404854
+		// Token: 0x17008A8A RID: 35466
+		// (get) Token: 0x0601DF27 RID: 122663 RVA: 0x00432F9C File Offset: 0x0043119C
+		// (set) Token: 0x0601DF28 RID: 122664 RVA: 0x00432FA4 File Offset: 0x004311A4
 		public IVoxelInfoT VoxelInfo { get; set; }
 
-		// Token: 0x0601C72C RID: 116524 RVA: 0x0040665D File Offset: 0x0040485D
+		// Token: 0x0601DF29 RID: 122665 RVA: 0x00432FAD File Offset: 0x004311AD
 		public IEntityVoxelInfoT()
 		{
 			this.EntityId = 0;

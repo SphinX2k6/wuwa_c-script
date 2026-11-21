@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200652F RID: 25903
+	// Token: 0x02006B9D RID: 27549
 	public class IDangoAbyssGotoNextFloorT
 	{
 	}

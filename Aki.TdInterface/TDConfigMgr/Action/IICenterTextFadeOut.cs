@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B21 RID: 6945
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CD0 RID: 7376
 	public class IICenterTextFadeOut : ICenterTextShowType
 	{
-		// Token: 0x060094B0 RID: 38064 RVA: 0x00158258 File Offset: 0x00156458
+		// Token: 0x06009C9A RID: 40090 RVA: 0x00168F34 File Offset: 0x00167134
 		private IICenterTextFadeOut_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060094B1 RID: 38065 RVA: 0x00158290 File Offset: 0x00156490
+		// Token: 0x06009C9B RID: 40091 RVA: 0x00168F6C File Offset: 0x0016716C
 		public static IICenterTextFadeOut Create([Nullable(2)] IICenterTextFadeOut instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060094B2 RID: 38066 RVA: 0x001582A3 File Offset: 0x001564A3
+		// Token: 0x06009C9C RID: 40092 RVA: 0x00168F7F File Offset: 0x0016717F
 		public static IICenterTextFadeOut CreateFromSetValue([Nullable(2)] IICenterTextFadeOut_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060094B3 RID: 38067 RVA: 0x001582B6 File Offset: 0x001564B6
+		// Token: 0x06009C9D RID: 40093 RVA: 0x00168F92 File Offset: 0x00167192
 		public new IICenterTextFadeOut_SetValue ToSetValue()
 		{
 			return new IICenterTextFadeOut_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EFC RID: 12028
-		// (get) Token: 0x060094B4 RID: 38068 RVA: 0x001582E1 File Offset: 0x001564E1
-		// (set) Token: 0x060094B5 RID: 38069 RVA: 0x0015830C File Offset: 0x0015650C
+		// Token: 0x17003122 RID: 12578
+		// (get) Token: 0x06009C9E RID: 40094 RVA: 0x00168FBD File Offset: 0x001671BD
+		// (set) Token: 0x06009C9F RID: 40095 RVA: 0x00168FE8 File Offset: 0x001671E8
 		public override ECenterTextShowAnim Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EFD RID: 12029
-		// (get) Token: 0x060094B6 RID: 38070 RVA: 0x0015831A File Offset: 0x0015651A
-		// (set) Token: 0x060094B7 RID: 38071 RVA: 0x00158349 File Offset: 0x00156549
+		// Token: 0x17003123 RID: 12579
+		// (get) Token: 0x06009CA0 RID: 40096 RVA: 0x00168FF6 File Offset: 0x001671F6
+		// (set) Token: 0x06009CA1 RID: 40097 RVA: 0x00169025 File Offset: 0x00167225
 		public virtual float FadeInTime
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EFE RID: 12030
-		// (get) Token: 0x060094B8 RID: 38072 RVA: 0x00158357 File Offset: 0x00156557
-		// (set) Token: 0x060094B9 RID: 38073 RVA: 0x00158386 File Offset: 0x00156586
+		// Token: 0x17003124 RID: 12580
+		// (get) Token: 0x06009CA2 RID: 40098 RVA: 0x00169033 File Offset: 0x00167233
+		// (set) Token: 0x06009CA3 RID: 40099 RVA: 0x00169062 File Offset: 0x00167262
 		public virtual float FadeOutTime
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B1B RID: 23323
+		// Token: 0x04005FB9 RID: 24505
 		[Nullable(2)]
 		protected new IICenterTextFadeOut FbInstance;
 
-		// Token: 0x04005B1C RID: 23324
+		// Token: 0x04005FBA RID: 24506
 		[Nullable(2)]
 		protected new IICenterTextFadeOut_SetValue PocoInterface;
 	}

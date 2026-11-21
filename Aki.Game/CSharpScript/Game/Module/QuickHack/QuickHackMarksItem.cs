@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F88 RID: 20360
+	// Token: 0x02003F51 RID: 16209
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackMarksItem : UiPanelBase
 	{
-		// Token: 0x06034218 RID: 213528 RVA: 0x00C3BC8C File Offset: 0x00C39E8C
+		// Token: 0x06029086 RID: 168070 RVA: 0x00B85438 File Offset: 0x00B83638
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034219 RID: 213529 RVA: 0x00C3BCF5 File Offset: 0x00C39EF5
+		// Token: 0x06029087 RID: 168071 RVA: 0x00B854A1 File Offset: 0x00B836A1
 		protected override void OnStart()
 		{
 			base.GetItem(1).SetUIActive(false);
 		}
 
-		// Token: 0x0603421A RID: 213530 RVA: 0x00C3BD04 File Offset: 0x00C39F04
+		// Token: 0x06029088 RID: 168072 RVA: 0x00B854B0 File Offset: 0x00B836B0
 		protected override void OnBeforeDestroy()
 		{
 			this.Owner = null;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.WorldLocationOffset = null;
 		}
 
-		// Token: 0x0603421B RID: 213531 RVA: 0x00C3BD28 File Offset: 0x00C39F28
+		// Token: 0x06029089 RID: 168073 RVA: 0x00B854D4 File Offset: 0x00B836D4
 		public void RegisterMarkOwner(EntityHandle owner, Action<EntityHandle> onMarksFinish)
 		{
 			this.Owner = owner;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603421C RID: 213532 RVA: 0x00C3BE38 File Offset: 0x00C3A038
+		// Token: 0x0602908A RID: 168074 RVA: 0x00B855E4 File Offset: 0x00B837E4
 		public bool GetWorldLocation(Vector outVector)
 		{
 			if (this.Owner == null || !this.Owner.Valid)
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return true;
 		}
 
-		// Token: 0x0603421D RID: 213533 RVA: 0x00C3BEE8 File Offset: 0x00C3A0E8
+		// Token: 0x0602908B RID: 168075 RVA: 0x00B85694 File Offset: 0x00B83894
 		public UniTask StartMarkAsync(QuickHackMarkInstance mark)
 		{
 			QuickHackMarksItem.<StartMarkAsync>d__15 <StartMarkAsync>d__;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return <StartMarkAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603421E RID: 213534 RVA: 0x00C3BF34 File Offset: 0x00C3A134
+		// Token: 0x0602908C RID: 168076 RVA: 0x00B856E0 File Offset: 0x00B838E0
 		private void OnFinishMark(int markId)
 		{
 			int count = this.ShowingIconIndices.Count;
@@ -156,14 +156,14 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0401BB78 RID: 113528
+		// Token: 0x0401654D RID: 91469
 		private const int HEAD_DEFAULT_OFFSET = 30;
 
-		// Token: 0x0401BB79 RID: 113529
+		// Token: 0x0401654E RID: 91470
 		[Nullable(2)]
 		private EntityHandle Owner;
 
-		// Token: 0x0401BB7A RID: 113530
+		// Token: 0x0401654F RID: 91471
 		[Nullable(new byte[]
 		{
 			2,
@@ -171,33 +171,33 @@ namespace CSharpScript.Game.Module.QuickHack
 		})]
 		private Action<EntityHandle> OnMarksFinish;
 
-		// Token: 0x0401BB7B RID: 113531
+		// Token: 0x04016550 RID: 91472
 		private readonly List<QuickHackMarksIconItem> IconList = new List<QuickHackMarksIconItem>();
 
-		// Token: 0x0401BB7C RID: 113532
+		// Token: 0x04016551 RID: 91473
 		private readonly List<int> ShowingIconIndices = new List<int>();
 
-		// Token: 0x0401BB7D RID: 113533
+		// Token: 0x04016552 RID: 91474
 		private readonly HashSet<int> ShowingMarkIdSet = new HashSet<int>();
 
-		// Token: 0x0401BB7E RID: 113534
+		// Token: 0x04016553 RID: 91475
 		private readonly Queue<int> IdleIndexQueue = new Queue<int>(4);
 
-		// Token: 0x0401BB7F RID: 113535
+		// Token: 0x04016554 RID: 91476
 		private FName? SocketName;
 
-		// Token: 0x0401BB80 RID: 113536
+		// Token: 0x04016555 RID: 91477
 		[Nullable(2)]
 		private Vector WorldLocationOffset;
 
-		// Token: 0x0200B09B RID: 45211
+		// Token: 0x02009ACB RID: 39627
 		[NullableContext(0)]
 		private class EComponentType
 		{
-			// Token: 0x0403597F RID: 219519
+			// Token: 0x040303AA RID: 197546
 			public const int IconLayout = 0;
 
-			// Token: 0x04035980 RID: 219520
+			// Token: 0x040303AB RID: 197547
 			public const int IconItem = 1;
 		}
 	}

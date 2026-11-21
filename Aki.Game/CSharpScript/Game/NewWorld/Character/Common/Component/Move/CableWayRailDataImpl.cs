@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070F1 RID: 28913
+	// Token: 0x020063A1 RID: 25505
 	public class CableWayRailDataImpl : ICableWayRailData, IRailParam
 	{
-		// Token: 0x17009CCE RID: 40142
-		// (get) Token: 0x06046954 RID: 289108 RVA: 0x011C2939 File Offset: 0x011C0B39
-		// (set) Token: 0x06046955 RID: 289109 RVA: 0x011C2941 File Offset: 0x011C0B41
+		// Token: 0x17007557 RID: 30039
+		// (get) Token: 0x0603DD4D RID: 253261 RVA: 0x011F1AED File Offset: 0x011EFCED
+		// (set) Token: 0x0603DD4E RID: 253262 RVA: 0x011F1AF5 File Offset: 0x011EFCF5
 		public ERailMoveType RailType { get; set; }
 
-		// Token: 0x17009CCF RID: 40143
-		// (get) Token: 0x06046956 RID: 289110 RVA: 0x011C294A File Offset: 0x011C0B4A
-		// (set) Token: 0x06046957 RID: 289111 RVA: 0x011C2952 File Offset: 0x011C0B52
+		// Token: 0x17007558 RID: 30040
+		// (get) Token: 0x0603DD4F RID: 253263 RVA: 0x011F1AFE File Offset: 0x011EFCFE
+		// (set) Token: 0x0603DD50 RID: 253264 RVA: 0x011F1B06 File Offset: 0x011EFD06
 		public ERailJumpType JumpType { get; set; }
 	}
 }

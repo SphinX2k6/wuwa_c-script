@@ -6,22 +6,22 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Sequence.Manager
 {
-	// Token: 0x02003A30 RID: 14896
+	// Token: 0x02003077 RID: 12407
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Sequence/Manager/SSequencesKeyFrames.SSequencesKeyFrames")]
 	[UnrealStructLayout(160, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 160)]
 	public class SSequencesKeyFrames : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601F5CC RID: 128460 RVA: 0x008B66C7 File Offset: 0x008B48C7
+		// Token: 0x0601D94A RID: 121162 RVA: 0x008FBE42 File Offset: 0x008FA042
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SSequencesKeyFrames._ScriptStructPtr != 0) ? SSequencesKeyFrames._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Sequence/Manager/SSequencesKeyFrames.SSequencesKeyFrames", ref SSequencesKeyFrames._ScriptStructPtr);
 		}
 
-		// Token: 0x17002AFE RID: 11006
-		// (get) Token: 0x0601F5CD RID: 128461 RVA: 0x008B66EC File Offset: 0x008B48EC
-		// (set) Token: 0x0601F5CE RID: 128462 RVA: 0x008B672F File Offset: 0x008B492F
+		// Token: 0x17002F87 RID: 12167
+		// (get) Token: 0x0601D94B RID: 121163 RVA: 0x008FBE68 File Offset: 0x008FA068
+		// (set) Token: 0x0601D94C RID: 121164 RVA: 0x008FBEAB File Offset: 0x008FA0AB
 		public TArray<int> SubtitleStartFrames
 		{
 			get
@@ -30,7 +30,7 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 				TArray<int> result;
 				if ((result = this._SubtitleStartFrames) == null)
 				{
-					result = (this._SubtitleStartFrames = new TArray<int>(base.NativePtr + (IntPtr)SSequencesKeyFrames.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._SubtitleStartFrames = new TArray<int>(base.NativePtr + (IntPtr)SSequencesKeyFrames.__PropertyOffset_SubtitleStartFrames, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -40,9 +40,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			}
 		}
 
-		// Token: 0x17002AFF RID: 11007
-		// (get) Token: 0x0601F5CF RID: 128463 RVA: 0x008B6740 File Offset: 0x008B4940
-		// (set) Token: 0x0601F5D0 RID: 128464 RVA: 0x008B6783 File Offset: 0x008B4983
+		// Token: 0x17002F88 RID: 12168
+		// (get) Token: 0x0601D94D RID: 121165 RVA: 0x008FBEBC File Offset: 0x008FA0BC
+		// (set) Token: 0x0601D94E RID: 121166 RVA: 0x008FBEFF File Offset: 0x008FA0FF
 		public TArray<int> SubtitleEndFrames
 		{
 			get
@@ -51,7 +51,7 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 				TArray<int> result;
 				if ((result = this._SubtitleEndFrames) == null)
 				{
-					result = (this._SubtitleEndFrames = new TArray<int>(base.NativePtr + (IntPtr)SSequencesKeyFrames.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._SubtitleEndFrames = new TArray<int>(base.NativePtr + (IntPtr)SSequencesKeyFrames.__PropertyOffset_SubtitleEndFrames, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -61,9 +61,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			}
 		}
 
-		// Token: 0x17002B00 RID: 11008
-		// (get) Token: 0x0601F5D1 RID: 128465 RVA: 0x008B6794 File Offset: 0x008B4994
-		// (set) Token: 0x0601F5D2 RID: 128466 RVA: 0x008B67D7 File Offset: 0x008B49D7
+		// Token: 0x17002F89 RID: 12169
+		// (get) Token: 0x0601D94F RID: 121167 RVA: 0x008FBF10 File Offset: 0x008FA110
+		// (set) Token: 0x0601D950 RID: 121168 RVA: 0x008FBF53 File Offset: 0x008FA153
 		public TArray<int> ShotStartFrames
 		{
 			get
@@ -72,7 +72,7 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 				TArray<int> result;
 				if ((result = this._ShotStartFrames) == null)
 				{
-					result = (this._ShotStartFrames = new TArray<int>(base.NativePtr + (IntPtr)SSequencesKeyFrames.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._ShotStartFrames = new TArray<int>(base.NativePtr + (IntPtr)SSequencesKeyFrames.__PropertyOffset_ShotStartFrames, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -82,9 +82,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			}
 		}
 
-		// Token: 0x17002B01 RID: 11009
-		// (get) Token: 0x0601F5D3 RID: 128467 RVA: 0x008B67E8 File Offset: 0x008B49E8
-		// (set) Token: 0x0601F5D4 RID: 128468 RVA: 0x008B682B File Offset: 0x008B4A2B
+		// Token: 0x17002F8A RID: 12170
+		// (get) Token: 0x0601D951 RID: 121169 RVA: 0x008FBF64 File Offset: 0x008FA164
+		// (set) Token: 0x0601D952 RID: 121170 RVA: 0x008FBFA7 File Offset: 0x008FA1A7
 		public TArray<int> ShotEndFrames
 		{
 			get
@@ -93,7 +93,7 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 				TArray<int> result;
 				if ((result = this._ShotEndFrames) == null)
 				{
-					result = (this._ShotEndFrames = new TArray<int>(base.NativePtr + (IntPtr)SSequencesKeyFrames.__PropertyOffset_3, base.MemoryOwner ?? this));
+					result = (this._ShotEndFrames = new TArray<int>(base.NativePtr + (IntPtr)SSequencesKeyFrames.__PropertyOffset_ShotEndFrames, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -103,9 +103,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			}
 		}
 
-		// Token: 0x17002B02 RID: 11010
-		// (get) Token: 0x0601F5D5 RID: 128469 RVA: 0x008B683C File Offset: 0x008B4A3C
-		// (set) Token: 0x0601F5D6 RID: 128470 RVA: 0x008B687F File Offset: 0x008B4A7F
+		// Token: 0x17002F8B RID: 12171
+		// (get) Token: 0x0601D953 RID: 121171 RVA: 0x008FBFB8 File Offset: 0x008FA1B8
+		// (set) Token: 0x0601D954 RID: 121172 RVA: 0x008FBFFB File Offset: 0x008FA1FB
 		public TMap<string, int> FrameEventFrames
 		{
 			get
@@ -114,7 +114,7 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 				TMap<string, int> result;
 				if ((result = this._FrameEventFrames) == null)
 				{
-					result = (this._FrameEventFrames = new TMap<string, int>(base.NativePtr + (IntPtr)SSequencesKeyFrames.__PropertyOffset_4, base.MemoryOwner ?? this));
+					result = (this._FrameEventFrames = new TMap<string, int>(base.NativePtr + (IntPtr)SSequencesKeyFrames.__PropertyOffset_FrameEventFrames, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -124,9 +124,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			}
 		}
 
-		// Token: 0x17002B03 RID: 11011
-		// (get) Token: 0x0601F5D7 RID: 128471 RVA: 0x008B6890 File Offset: 0x008B4A90
-		// (set) Token: 0x0601F5D8 RID: 128472 RVA: 0x008B68D3 File Offset: 0x008B4AD3
+		// Token: 0x17002F8C RID: 12172
+		// (get) Token: 0x0601D955 RID: 121173 RVA: 0x008FC00C File Offset: 0x008FA20C
+		// (set) Token: 0x0601D956 RID: 121174 RVA: 0x008FC04F File Offset: 0x008FA24F
 		public TArray<int> KeyFrames
 		{
 			get
@@ -135,7 +135,7 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 				TArray<int> result;
 				if ((result = this._KeyFrames) == null)
 				{
-					result = (this._KeyFrames = new TArray<int>(base.NativePtr + (IntPtr)SSequencesKeyFrames.__PropertyOffset_5, base.MemoryOwner ?? this));
+					result = (this._KeyFrames = new TArray<int>(base.NativePtr + (IntPtr)SSequencesKeyFrames.__PropertyOffset_KeyFrames, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -145,89 +145,78 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			}
 		}
 
-		// Token: 0x0601F5D9 RID: 128473 RVA: 0x008B68E1 File Offset: 0x008B4AE1
+		// Token: 0x0601D957 RID: 121175 RVA: 0x008FC05D File Offset: 0x008FA25D
 		public SSequencesKeyFrames()
 		{
 		}
 
-		// Token: 0x0601F5DA RID: 128474 RVA: 0x008B68E9 File Offset: 0x008B4AE9
-		public SSequencesKeyFrames(TArray<int> SubtitleStartFrames, TArray<int> SubtitleEndFrames, TArray<int> ShotStartFrames, TArray<int> ShotEndFrames, TMap<string, int> FrameEventFrames, TArray<int> KeyFrames)
-		{
-			this.SubtitleStartFrames = SubtitleStartFrames;
-			this.SubtitleEndFrames = SubtitleEndFrames;
-			this.ShotStartFrames = ShotStartFrames;
-			this.ShotEndFrames = ShotEndFrames;
-			this.FrameEventFrames = FrameEventFrames;
-			this.KeyFrames = KeyFrames;
-		}
-
-		// Token: 0x0601F5DB RID: 128475 RVA: 0x008B691E File Offset: 0x008B4B1E
+		// Token: 0x0601D958 RID: 121176 RVA: 0x008FC065 File Offset: 0x008FA265
 		protected override IntPtr GetUStructPtr()
 		{
 			return SSequencesKeyFrames.StaticStruct();
 		}
 
-		// Token: 0x0601F5DC RID: 128476 RVA: 0x008B692A File Offset: 0x008B4B2A
+		// Token: 0x0601D959 RID: 121177 RVA: 0x008FC071 File Offset: 0x008FA271
 		[NullableContext(2)]
 		public SSequencesKeyFrames(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F5DD RID: 128477 RVA: 0x008B6934 File Offset: 0x008B4B34
+		// Token: 0x0601D95A RID: 121178 RVA: 0x008FC07B File Offset: 0x008FA27B
 		public SSequencesKeyFrames(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F5DE RID: 128478 RVA: 0x008B693F File Offset: 0x008B4B3F
+		// Token: 0x0601D95B RID: 121179 RVA: 0x008FC086 File Offset: 0x008FA286
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SSequencesKeyFrames(Pointer, false, true);
 		}
 
-		// Token: 0x0601F5DF RID: 128479 RVA: 0x008B6949 File Offset: 0x008B4B49
+		// Token: 0x0601D95C RID: 121180 RVA: 0x008FC090 File Offset: 0x008FA290
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SSequencesKeyFrames(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400F0ED RID: 61677
+		// Token: 0x0400F965 RID: 63845
 		public const string __ObjectPath = "/Game/Aki/Sequence/Manager/SSequencesKeyFrames.SSequencesKeyFrames";
 
-		// Token: 0x0400F0EE RID: 61678
+		// Token: 0x0400F966 RID: 63846
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400F0EF RID: 61679
-		internal static int __PropertyOffset_0;
+		// Token: 0x0400F967 RID: 63847
+		internal static int __PropertyOffset_SubtitleStartFrames;
 
-		// Token: 0x0400F0F0 RID: 61680
+		// Token: 0x0400F968 RID: 63848
 		[Nullable(2)]
 		private TArray<int> _SubtitleStartFrames;
 
-		// Token: 0x0400F0F1 RID: 61681
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400F969 RID: 63849
+		internal static int __PropertyOffset_SubtitleEndFrames;
 
-		// Token: 0x0400F0F2 RID: 61682
+		// Token: 0x0400F96A RID: 63850
 		[Nullable(2)]
 		private TArray<int> _SubtitleEndFrames;
 
-		// Token: 0x0400F0F3 RID: 61683
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400F96B RID: 63851
+		internal static int __PropertyOffset_ShotStartFrames;
 
-		// Token: 0x0400F0F4 RID: 61684
+		// Token: 0x0400F96C RID: 63852
 		[Nullable(2)]
 		private TArray<int> _ShotStartFrames;
 
-		// Token: 0x0400F0F5 RID: 61685
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400F96D RID: 63853
+		internal static int __PropertyOffset_ShotEndFrames;
 
-		// Token: 0x0400F0F6 RID: 61686
+		// Token: 0x0400F96E RID: 63854
 		[Nullable(2)]
 		private TArray<int> _ShotEndFrames;
 
-		// Token: 0x0400F0F7 RID: 61687
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400F96F RID: 63855
+		internal static int __PropertyOffset_FrameEventFrames;
 
-		// Token: 0x0400F0F8 RID: 61688
+		// Token: 0x0400F970 RID: 63856
 		[Nullable(new byte[]
 		{
 			2,
@@ -235,10 +224,10 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 		})]
 		private TMap<string, int> _FrameEventFrames;
 
-		// Token: 0x0400F0F9 RID: 61689
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400F971 RID: 63857
+		internal static int __PropertyOffset_KeyFrames;
 
-		// Token: 0x0400F0FA RID: 61690
+		// Token: 0x0400F972 RID: 63858
 		[Nullable(2)]
 		private TArray<int> _KeyFrames;
 	}

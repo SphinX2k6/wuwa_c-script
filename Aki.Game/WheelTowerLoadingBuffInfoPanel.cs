@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001593 RID: 5523
+// Token: 0x02000A4B RID: 2635
 public class WheelTowerLoadingBuffInfoPanel : UiPanelBase
 {
-	// Token: 0x06009D74 RID: 40308 RVA: 0x002222E8 File Offset: 0x002204E8
+	// Token: 0x06007152 RID: 29010 RVA: 0x0022C098 File Offset: 0x0022A298
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -26,7 +26,7 @@ public class WheelTowerLoadingBuffInfoPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D75 RID: 40309 RVA: 0x00222394 File Offset: 0x00220594
+	// Token: 0x06007153 RID: 29011 RVA: 0x0022C144 File Offset: 0x0022A344
 	public void Refresh(int buffId, int round)
 	{
 		if (buffId <= 0)

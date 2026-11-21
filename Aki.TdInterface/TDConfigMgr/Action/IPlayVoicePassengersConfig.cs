@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D22 RID: 7458
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F33 RID: 7987
 	public class IPlayVoicePassengersConfig
 	{
-		// Token: 0x0600A00D RID: 40973 RVA: 0x0016D550 File Offset: 0x0016B750
+		// Token: 0x0600A9F9 RID: 43513 RVA: 0x00181974 File Offset: 0x0017FB74
 		private IPlayVoicePassengersConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A00E RID: 40974 RVA: 0x0016D588 File Offset: 0x0016B788
+		// Token: 0x0600A9FA RID: 43514 RVA: 0x001819AC File Offset: 0x0017FBAC
 		public static IPlayVoicePassengersConfig Create([Nullable(2)] IPlayVoicePassengersConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A00F RID: 40975 RVA: 0x0016D59B File Offset: 0x0016B79B
+		// Token: 0x0600A9FB RID: 43515 RVA: 0x001819BF File Offset: 0x0017FBBF
 		public static IPlayVoicePassengersConfig CreateFromSetValue([Nullable(2)] IPlayVoicePassengersConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A010 RID: 40976 RVA: 0x0016D5AE File Offset: 0x0016B7AE
+		// Token: 0x0600A9FC RID: 43516 RVA: 0x001819D2 File Offset: 0x0017FBD2
 		public IPlayVoicePassengersConfig_SetValue ToSetValue()
 		{
 			return new IPlayVoicePassengersConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031AA RID: 12714
-		// (get) Token: 0x0600A011 RID: 40977 RVA: 0x0016D5CD File Offset: 0x0016B7CD
-		// (set) Token: 0x0600A012 RID: 40978 RVA: 0x0016D5F4 File Offset: 0x0016B7F4
+		// Token: 0x1700343E RID: 13374
+		// (get) Token: 0x0600A9FD RID: 43517 RVA: 0x001819F1 File Offset: 0x0017FBF1
+		// (set) Token: 0x0600A9FE RID: 43518 RVA: 0x00181A18 File Offset: 0x0017FC18
 		public virtual List<int> Passengers
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031AB RID: 12715
-		// (get) Token: 0x0600A013 RID: 40979 RVA: 0x0016D604 File Offset: 0x0016B804
-		// (set) Token: 0x0600A014 RID: 40980 RVA: 0x0016D63E File Offset: 0x0016B83E
+		// Token: 0x1700343F RID: 13375
+		// (get) Token: 0x0600A9FF RID: 43519 RVA: 0x00181A28 File Offset: 0x0017FC28
+		// (set) Token: 0x0600AA00 RID: 43520 RVA: 0x00181A62 File Offset: 0x0017FC62
 		public virtual bool? MatchNone
 		{
 			get
@@ -109,11 +107,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006083 RID: 24707
+		// Token: 0x040065FF RID: 26111
 		[Nullable(2)]
 		protected IPlayVoicePassengersConfig FbInstance;
 
-		// Token: 0x04006084 RID: 24708
+		// Token: 0x04006600 RID: 26112
 		[Nullable(2)]
 		protected IPlayVoicePassengersConfig_SetValue PocoInterface;
 	}

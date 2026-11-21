@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200230B RID: 8971
+// Token: 0x020017EF RID: 6127
 public enum EPanoramicType
 {
-	// Token: 0x04008669 RID: 34409
+	// Token: 0x040087A9 RID: 34729
 	Default,
-	// Token: 0x0400866A RID: 34410
+	// Token: 0x040087AA RID: 34730
 	Active,
-	// Token: 0x0400866B RID: 34411
+	// Token: 0x040087AB RID: 34731
 	Ban
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074D3 RID: 29907
+	// Token: 0x02007CC9 RID: 31945
 	public class IUnLockDangoCollectSystemItemT
 	{
-		// Token: 0x1700E2F6 RID: 58102
-		// (get) Token: 0x060365EF RID: 222703 RVA: 0x0076343C File Offset: 0x0076163C
-		// (set) Token: 0x060365F0 RID: 222704 RVA: 0x00763444 File Offset: 0x00761644
+		// Token: 0x1700EF20 RID: 61216
+		// (get) Token: 0x06039A04 RID: 236036 RVA: 0x007C668C File Offset: 0x007C488C
+		// (set) Token: 0x06039A05 RID: 236037 RVA: 0x007C6694 File Offset: 0x007C4894
 		public EUnlockSystemItemType Type { get; set; }
 
-		// Token: 0x1700E2F7 RID: 58103
-		// (get) Token: 0x060365F1 RID: 222705 RVA: 0x0076344D File Offset: 0x0076164D
-		// (set) Token: 0x060365F2 RID: 222706 RVA: 0x00763455 File Offset: 0x00761655
+		// Token: 0x1700EF21 RID: 61217
+		// (get) Token: 0x06039A06 RID: 236038 RVA: 0x007C669D File Offset: 0x007C489D
+		// (set) Token: 0x06039A07 RID: 236039 RVA: 0x007C66A5 File Offset: 0x007C48A5
 		public int Id { get; set; }
 
-		// Token: 0x060365F3 RID: 222707 RVA: 0x0076345E File Offset: 0x0076165E
+		// Token: 0x06039A08 RID: 236040 RVA: 0x007C66AE File Offset: 0x007C48AE
 		public IUnLockDangoCollectSystemItemT()
 		{
 			this.Type = EUnlockSystemItemType.CookSystem;

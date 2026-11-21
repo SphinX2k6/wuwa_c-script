@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001DDE RID: 7646
+// Token: 0x020012A0 RID: 4768
 [NullableContext(1)]
 [Nullable(0)]
 public class GeographyHandBookItemData : IGeographyHandBookItemData
 {
-	// Token: 0x1700127B RID: 4731
-	// (get) Token: 0x0600E8BD RID: 59581 RVA: 0x00371A91 File Offset: 0x0036FC91
-	// (set) Token: 0x0600E8BE RID: 59582 RVA: 0x00371A99 File Offset: 0x0036FC99
+	// Token: 0x170012A5 RID: 4773
+	// (get) Token: 0x0600BCDC RID: 48348 RVA: 0x0037D77D File Offset: 0x0037B97D
+	// (set) Token: 0x0600BCDD RID: 48349 RVA: 0x0037D785 File Offset: 0x0037B985
 	public GeographyTabType TabType { get; set; }
 
-	// Token: 0x1700127C RID: 4732
-	// (get) Token: 0x0600E8BF RID: 59583 RVA: 0x00371AA2 File Offset: 0x0036FCA2
-	// (set) Token: 0x0600E8C0 RID: 59584 RVA: 0x00371AAA File Offset: 0x0036FCAA
+	// Token: 0x170012A6 RID: 4774
+	// (get) Token: 0x0600BCDE RID: 48350 RVA: 0x0037D78E File Offset: 0x0037B98E
+	// (set) Token: 0x0600BCDF RID: 48351 RVA: 0x0037D796 File Offset: 0x0037B996
 	public GeographyType Type { get; set; }
 
-	// Token: 0x1700127D RID: 4733
-	// (get) Token: 0x0600E8C1 RID: 59585 RVA: 0x00371AB3 File Offset: 0x0036FCB3
-	// (set) Token: 0x0600E8C2 RID: 59586 RVA: 0x00371ABB File Offset: 0x0036FCBB
+	// Token: 0x170012A7 RID: 4775
+	// (get) Token: 0x0600BCE0 RID: 48352 RVA: 0x0037D79F File Offset: 0x0037B99F
+	// (set) Token: 0x0600BCE1 RID: 48353 RVA: 0x0037D7A7 File Offset: 0x0037B9A7
 	public List<GeographyHandBook> HandBookList { get; set; }
 }

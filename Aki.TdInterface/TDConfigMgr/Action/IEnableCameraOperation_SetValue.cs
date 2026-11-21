@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019E3 RID: 6627
+	// Token: 0x02001B70 RID: 7024
 	public class IEnableCameraOperation_SetValue
 	{
-		// Token: 0x04005814 RID: 22548
+		// Token: 0x04005C69 RID: 23657
 		public ECameraOperationType Type;
 	}
 }

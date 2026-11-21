@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072F9 RID: 29433
+	// Token: 0x0200647C RID: 25724
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RegisterPhotoCameraComponent(EPhotoCameraComponent.Collision)]
 	public class PhotoCameraCollisionComponent : PhotoCameraComponentBase
 	{
-		// Token: 0x06048399 RID: 295833 RVA: 0x0128DD00 File Offset: 0x0128BF00
+		// Token: 0x0603E7E5 RID: 255973 RVA: 0x012306B4 File Offset: 0x0122E8B4
 		protected override void OnInit()
 		{
 			TsBaseCharacter character = this.Host.Character;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x0604839A RID: 295834 RVA: 0x0128DD7C File Offset: 0x0128BF7C
+		// Token: 0x0603E7E6 RID: 255974 RVA: 0x01230730 File Offset: 0x0122E930
 		protected override void OnModeChangeFinish(PhotoCameraType? prev, PhotoCameraType next)
 		{
 			VirtualPhotoCamera virtualCamera = this.Host.VirtualCamera;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.IsArmRecovering = false;
 		}
 
-		// Token: 0x0604839B RID: 295835 RVA: 0x0128DDDC File Offset: 0x0128BFDC
+		// Token: 0x0603E7E7 RID: 255975 RVA: 0x01230790 File Offset: 0x0122E990
 		protected override void OnTick(float deltaTime)
 		{
 			BP_PhotoCameraConfig_C currentConfig = this.Host.CurrentConfig;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			virtualCamera.WorldLocation.AdditionEqual(this.ArmVector);
 		}
 
-		// Token: 0x0604839C RID: 295836 RVA: 0x0128DF9C File Offset: 0x0128C19C
+		// Token: 0x0603E7E8 RID: 255976 RVA: 0x01230950 File Offset: 0x0122EB50
 		protected override void OnDestroy()
 		{
 			if (this.SphereTrace != null)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x0604839D RID: 295837 RVA: 0x0128DFB8 File Offset: 0x0128C1B8
+		// Token: 0x0603E7E9 RID: 255977 RVA: 0x0123096C File Offset: 0x0122EB6C
 		private bool Sweep(Vector start, Vector end, Vector @out)
 		{
 			UTraceSphereElement sphereTrace = this.SphereTrace;
@@ -122,32 +122,32 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return false;
 		}
 
-		// Token: 0x04026284 RID: 156292
+		// Token: 0x0402156F RID: 136559
 		private const float PROBE_RADIUS = 5f;
 
-		// Token: 0x04026285 RID: 156293
+		// Token: 0x04021570 RID: 136560
 		private const string COLLISION_PROFILE_KEY = "PhotoCameraCollisionComponent_Sweep";
 
-		// Token: 0x04026286 RID: 156294
+		// Token: 0x04021571 RID: 136561
 		private const double ARM_RECOVER_TOLERANCE = 1.0;
 
-		// Token: 0x04026287 RID: 156295
+		// Token: 0x04021572 RID: 136562
 		[Nullable(2)]
 		private UTraceSphereElement SphereTrace;
 
-		// Token: 0x04026288 RID: 156296
+		// Token: 0x04021573 RID: 136563
 		private readonly Vector SafeLocation = Vector.Create();
 
-		// Token: 0x04026289 RID: 156297
+		// Token: 0x04021574 RID: 136564
 		private readonly Vector ArmVector = Vector.Create();
 
-		// Token: 0x0402628A RID: 156298
+		// Token: 0x04021575 RID: 136565
 		private readonly Vector ArmDirection = Vector.Create();
 
-		// Token: 0x0402628B RID: 156299
+		// Token: 0x04021576 RID: 136566
 		private double CurrentArmLength;
 
-		// Token: 0x0402628C RID: 156300
+		// Token: 0x04021577 RID: 136567
 		private bool IsArmRecovering;
 	}
 }

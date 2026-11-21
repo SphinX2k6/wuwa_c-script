@@ -13,12 +13,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D39 RID: 7481
+// Token: 0x020011FB RID: 4603
 [NullableContext(1)]
 [Nullable(0)]
 public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 {
-	// Token: 0x0600E2AE RID: 58030 RVA: 0x00354134 File Offset: 0x00352334
+	// Token: 0x0600B6CB RID: 46795 RVA: 0x0035FB64 File Offset: 0x0035DD64
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,14 +38,14 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		};
 	}
 
-	// Token: 0x0600E2AF RID: 58031 RVA: 0x00354220 File Offset: 0x00352420
+	// Token: 0x0600B6CC RID: 46796 RVA: 0x0035FC50 File Offset: 0x0035DE50
 	public override void InitializeTemp()
 	{
 		this.MapType = (((this.OpenParam as EBattleUiChild?).GetValueOrDefault() != EBattleUiChild.MiniMap) ? 1 : 0);
 		this.SetUp();
 	}
 
-	// Token: 0x0600E2B0 RID: 58032 RVA: 0x00354258 File Offset: 0x00352458
+	// Token: 0x0600B6CD RID: 46797 RVA: 0x0035FC88 File Offset: 0x0035DE88
 	public void OnTowerDefenseStepUpdate(ETowerDefenseEventProcessStatus status)
 	{
 		foreach (KeyValuePair<int, TrapDefenseMarkView> keyValuePair in this.MarkViewMap)
@@ -62,7 +62,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		this.StopShowPhantomPreviewRoute();
 	}
 
-	// Token: 0x0600E2B1 RID: 58033 RVA: 0x003542D8 File Offset: 0x003524D8
+	// Token: 0x0600B6CE RID: 46798 RVA: 0x0035FD08 File Offset: 0x0035DF08
 	private void ProcessPhantomPointVisible()
 	{
 		List<TrapDefensePhantomPointMarkItem> dynamicMarksByMarkType = TrapDefenseModel.Instance.MapData.GetDynamicMarksByMarkType<TrapDefensePhantomPointMarkItem>(TrapDefenseDefine.ETrapDefenseMarkType.PhantomPoint);
@@ -104,7 +104,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2B2 RID: 58034 RVA: 0x003543F4 File Offset: 0x003525F4
+	// Token: 0x0600B6CF RID: 46799 RVA: 0x0035FE24 File Offset: 0x0035E024
 	private void RefreshMap(int mapId)
 	{
 		TrapDefenseMap? trapDefenseMapConfigById = TrapDefenseConfig.Instance.GetTrapDefenseMapConfigById(mapId);
@@ -143,13 +143,13 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		base.SetTextureByPath(trapDefenseMapConfigById.Value.MiniMapLightResourcePath, base.GetTexture(6), null, null);
 	}
 
-	// Token: 0x0600E2B3 RID: 58035 RVA: 0x003545C9 File Offset: 0x003527C9
+	// Token: 0x0600B6D0 RID: 46800 RVA: 0x0035FFF9 File Offset: 0x0035E1F9
 	protected override void OnStart()
 	{
 		this.TimerId = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.Update), 50f, 1f, null, null, true);
 	}
 
-	// Token: 0x0600E2B4 RID: 58036 RVA: 0x003545F4 File Offset: 0x003527F4
+	// Token: 0x0600B6D1 RID: 46801 RVA: 0x00360024 File Offset: 0x0035E224
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TimerId != null)
@@ -170,7 +170,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		this.MarkViewMap.Clear();
 	}
 
-	// Token: 0x0600E2B5 RID: 58037 RVA: 0x003546A4 File Offset: 0x003528A4
+	// Token: 0x0600B6D2 RID: 46802 RVA: 0x003600D4 File Offset: 0x0035E2D4
 	protected override void AddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.TrapDefenseActivityDataUpdate, new Action(this.SetUp));
@@ -178,7 +178,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		EventSystem.Instance.Add(EEventName.TrapDefenseMapChanged, new Action<int>(this.OnChangeMap));
 	}
 
-	// Token: 0x0600E2B6 RID: 58038 RVA: 0x00354708 File Offset: 0x00352908
+	// Token: 0x0600B6D3 RID: 46803 RVA: 0x00360138 File Offset: 0x0035E338
 	protected override void RemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.TrapDefenseActivityDataUpdate, new Action(this.SetUp));
@@ -186,7 +186,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		EventSystem.Instance.Remove(EEventName.TrapDefenseMapChanged, new Action<int>(this.OnChangeMap));
 	}
 
-	// Token: 0x0600E2B7 RID: 58039 RVA: 0x0035476C File Offset: 0x0035296C
+	// Token: 0x0600B6D4 RID: 46804 RVA: 0x0036019C File Offset: 0x0035E39C
 	private void SetUp()
 	{
 		if (TrapDefenseModel.Instance.MapData.MapId != 0)
@@ -199,7 +199,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2B8 RID: 58040 RVA: 0x003547C4 File Offset: 0x003529C4
+	// Token: 0x0600B6D5 RID: 46805 RVA: 0x003601F4 File Offset: 0x0035E3F4
 	public override void Reset()
 	{
 		if (this.TimerId != null)
@@ -210,7 +210,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		base.Reset();
 	}
 
-	// Token: 0x0600E2B9 RID: 58041 RVA: 0x003547EC File Offset: 0x003529EC
+	// Token: 0x0600B6D6 RID: 46806 RVA: 0x0036021C File Offset: 0x0035E41C
 	private UniTask CreateAllMarks()
 	{
 		TrapDefenseMiniMapPanel.<CreateAllMarks>d__22 <CreateAllMarks>d__;
@@ -221,7 +221,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		return <CreateAllMarks>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E2BA RID: 58042 RVA: 0x00354830 File Offset: 0x00352A30
+	// Token: 0x0600B6D7 RID: 46807 RVA: 0x00360260 File Offset: 0x0035E460
 	private UniTask CreateMark(int markId)
 	{
 		TrapDefenseMiniMapPanel.<CreateMark>d__23 <CreateMark>d__;
@@ -233,7 +233,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		return <CreateMark>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E2BB RID: 58043 RVA: 0x0035487B File Offset: 0x00352A7B
+	// Token: 0x0600B6D8 RID: 46808 RVA: 0x003602AB File Offset: 0x0035E4AB
 	private void Update(float deltaTime)
 	{
 		this.UpdateEnemyPosition();
@@ -241,7 +241,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		this.UpdatePointPositions();
 	}
 
-	// Token: 0x0600E2BC RID: 58044 RVA: 0x00354890 File Offset: 0x00352A90
+	// Token: 0x0600B6D9 RID: 46809 RVA: 0x003602C0 File Offset: 0x0035E4C0
 	private void UpdateAllMarkItems(bool force = false)
 	{
 		foreach (KeyValuePair<int, TrapDefenseMarkView> keyValuePair in this.MarkViewMap)
@@ -254,7 +254,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2BD RID: 58045 RVA: 0x00354910 File Offset: 0x00352B10
+	// Token: 0x0600B6DA RID: 46810 RVA: 0x00360340 File Offset: 0x0035E540
 	private void UpdateEnemyPosition()
 	{
 		TrapDefenseController.Instance.UpdateEnemyPositions();
@@ -275,7 +275,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2BE RID: 58046 RVA: 0x003549C0 File Offset: 0x00352BC0
+	// Token: 0x0600B6DB RID: 46811 RVA: 0x003603F0 File Offset: 0x0035E5F0
 	private void RemoveMark(int markId)
 	{
 		TrapDefenseMarkView trapDefenseMarkView;
@@ -286,13 +286,13 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2BF RID: 58047 RVA: 0x003549F1 File Offset: 0x00352BF1
+	// Token: 0x0600B6DC RID: 46812 RVA: 0x00360421 File Offset: 0x0035E621
 	private void OnChangeMap(int mapId)
 	{
 		this.RefreshMap(mapId);
 	}
 
-	// Token: 0x0600E2C0 RID: 58048 RVA: 0x003549FA File Offset: 0x00352BFA
+	// Token: 0x0600B6DD RID: 46813 RVA: 0x0036042A File Offset: 0x0035E62A
 	private void ShowPhantomPreviewRoute()
 	{
 		if (this.PreviewRouteTimerId != null)
@@ -302,7 +302,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		this.PreviewRouteTimerId = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.GenerateRoutePreviewGroup), (float)TrapDefenseConfig.Instance.GetTrapDefenseRoutePreviewInterval(), 1f, null, null, true);
 	}
 
-	// Token: 0x0600E2C1 RID: 58049 RVA: 0x00354A34 File Offset: 0x00352C34
+	// Token: 0x0600B6DE RID: 46814 RVA: 0x00360464 File Offset: 0x0035E664
 	private void GenerateRoutePreviewGroup(float deltaTime)
 	{
 		List<TrapDefensePhantomPointMarkItem> dynamicMarksByMarkType = TrapDefenseModel.Instance.MapData.GetDynamicMarksByMarkType<TrapDefensePhantomPointMarkItem>(TrapDefenseDefine.ETrapDefenseMarkType.PhantomPoint);
@@ -335,7 +335,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2C2 RID: 58050 RVA: 0x00354BA0 File Offset: 0x00352DA0
+	// Token: 0x0600B6DF RID: 46815 RVA: 0x003605D0 File Offset: 0x0035E7D0
 	private void UpdatePointPositions()
 	{
 		int trapDefenseRoutePreviewTime = TrapDefenseConfig.Instance.GetTrapDefenseRoutePreviewTime();
@@ -370,7 +370,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2C3 RID: 58051 RVA: 0x00354CF8 File Offset: 0x00352EF8
+	// Token: 0x0600B6E0 RID: 46816 RVA: 0x00360728 File Offset: 0x0035E928
 	private void StopShowPhantomPreviewRoute()
 	{
 		this.StopSplineTimers();
@@ -381,7 +381,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2C4 RID: 58052 RVA: 0x00354D1D File Offset: 0x00352F1D
+	// Token: 0x0600B6E1 RID: 46817 RVA: 0x0036074D File Offset: 0x0035E94D
 	private void StopSplineTimers()
 	{
 		if (this.PreviewRouteTimerId != null)
@@ -391,7 +391,7 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E2C5 RID: 58053 RVA: 0x00354D40 File Offset: 0x00352F40
+	// Token: 0x0600B6E2 RID: 46818 RVA: 0x00360770 File Offset: 0x0035E970
 	private void ClearPreviewRoute()
 	{
 		foreach (List<List<TrapDefenseRoutePointView>> list in this.SplinePointView.Values)
@@ -407,13 +407,13 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		this.SplinePointView.Clear();
 	}
 
-	// Token: 0x0600E2C6 RID: 58054 RVA: 0x00354E0C File Offset: 0x0035300C
+	// Token: 0x0600B6E3 RID: 46819 RVA: 0x0036083C File Offset: 0x0035EA3C
 	private void OpenMap()
 	{
 		UiManager.Instance.OpenView(EUiViewName.TrapDefenseMapView, null, null);
 	}
 
-	// Token: 0x0600E2C7 RID: 58055 RVA: 0x00354E20 File Offset: 0x00353020
+	// Token: 0x0600B6E4 RID: 46820 RVA: 0x00360850 File Offset: 0x0035EA50
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -447,72 +447,72 @@ public class TrapDefenseMiniMapPanel : BattleChildViewPanel
 		};
 	}
 
-	// Token: 0x040068CB RID: 26827
+	// Token: 0x040069AA RID: 27050
 	private const int UPDATE_INTERVAL = 50;
 
-	// Token: 0x040068CC RID: 26828
+	// Token: 0x040069AB RID: 27051
 	private int MapType;
 
-	// Token: 0x040068CD RID: 26829
+	// Token: 0x040069AC RID: 27052
 	private readonly Dictionary<int, TrapDefenseMarkView> MarkViewMap = new Dictionary<int, TrapDefenseMarkView>();
 
-	// Token: 0x040068CE RID: 26830
+	// Token: 0x040069AD RID: 27053
 	[Nullable(2)]
 	private TimerHandle TimerId;
 
-	// Token: 0x040068CF RID: 26831
+	// Token: 0x040069AE RID: 27054
 	private readonly Vector2D UiOffset = Vector2D.Create();
 
-	// Token: 0x040068D0 RID: 26832
+	// Token: 0x040069AF RID: 27055
 	private readonly Vector2D CenterOffset = Vector2D.Create();
 
-	// Token: 0x040068D1 RID: 26833
+	// Token: 0x040069B0 RID: 27056
 	private float Scale = 1f;
 
-	// Token: 0x040068D2 RID: 26834
+	// Token: 0x040069B1 RID: 27057
 	[Nullable(2)]
 	private TimerHandle PreviewRouteTimerId;
 
-	// Token: 0x040068D3 RID: 26835
+	// Token: 0x040069B2 RID: 27058
 	private readonly Dictionary<int, List<List<TrapDefenseRoutePointView>>> SplinePointView = new Dictionary<int, List<List<TrapDefenseRoutePointView>>>();
 
-	// Token: 0x02008346 RID: 33606
+	// Token: 0x020074CF RID: 29903
 	[NullableContext(0)]
 	private static class EChildComponentType
 	{
-		// Token: 0x0402ACD9 RID: 175321
+		// Token: 0x04026001 RID: 155649
 		public const int TextureMap = 0;
 
-		// Token: 0x0402ACDA RID: 175322
+		// Token: 0x04026002 RID: 155650
 		public const int PanelAnim = 1;
 
-		// Token: 0x0402ACDB RID: 175323
+		// Token: 0x04026003 RID: 155651
 		public const int Arrow = 2;
 
-		// Token: 0x0402ACDC RID: 175324
+		// Token: 0x04026004 RID: 155652
 		public const int MiniMapRoot = 3;
 
-		// Token: 0x0402ACDD RID: 175325
+		// Token: 0x04026005 RID: 155653
 		public const int PlayerItem = 4;
 
-		// Token: 0x0402ACDE RID: 175326
+		// Token: 0x04026006 RID: 155654
 		public const int PlayerSight = 5;
 
-		// Token: 0x0402ACDF RID: 175327
+		// Token: 0x04026007 RID: 155655
 		public const int TextureLight = 6;
 
-		// Token: 0x0402ACE0 RID: 175328
+		// Token: 0x04026008 RID: 155656
 		public const int PanelPos = 7;
 	}
 
-	// Token: 0x02008347 RID: 33607
+	// Token: 0x020074D0 RID: 29904
 	[NullableContext(0)]
 	private static class EMapShowType
 	{
-		// Token: 0x0402ACE1 RID: 175329
+		// Token: 0x04026009 RID: 155657
 		public const int MiniMap = 0;
 
-		// Token: 0x0402ACE2 RID: 175330
+		// Token: 0x0402600A RID: 155658
 		public const int BigMap = 1;
 	}
 }

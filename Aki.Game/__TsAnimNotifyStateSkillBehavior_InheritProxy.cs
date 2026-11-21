@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020037A2 RID: 14242
+// Token: 0x02002D1B RID: 11547
 public class __TsAnimNotifyStateSkillBehavior_InheritProxy : TsAnimNotifyStateSkillBehavior
 {
-	// Token: 0x0601E6FC RID: 124668 RVA: 0x0088E150 File Offset: 0x0088C350
+	// Token: 0x0601C3F5 RID: 115701 RVA: 0x008B454C File Offset: 0x008B274C
 	[NullableContext(1)]
 	public __TsAnimNotifyStateSkillBehavior_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateSkillBehavior.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E6FD RID: 124669 RVA: 0x0088E183 File Offset: 0x0088C383
+	// Token: 0x0601C3F6 RID: 115702 RVA: 0x008B457F File Offset: 0x008B277F
 	protected __TsAnimNotifyStateSkillBehavior_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E6FE RID: 124670 RVA: 0x0088E18C File Offset: 0x0088C38C
+	// Token: 0x0601C3F7 RID: 115703 RVA: 0x008B4588 File Offset: 0x008B2788
 	protected unsafe override void __CPPCALL_K2_NotifyTick_Implementation(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -25,7 +25,7 @@ public class __TsAnimNotifyStateSkillBehavior_InheritProxy : TsAnimNotifyStateSk
 		__Params->__Result = base.K2_NotifyTick_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->FrameDeltaTime);
 	}
 
-	// Token: 0x0601E6FF RID: 124671 RVA: 0x0088E1C8 File Offset: 0x0088C3C8
+	// Token: 0x0601C3F8 RID: 115704 RVA: 0x008B45C4 File Offset: 0x008B27C4
 	protected unsafe override void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -33,7 +33,7 @@ public class __TsAnimNotifyStateSkillBehavior_InheritProxy : TsAnimNotifyStateSk
 		__Params->__Result = base.K2_NotifyEnd_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601E700 RID: 124672 RVA: 0x0088E1FB File Offset: 0x0088C3FB
+	// Token: 0x0601C3F9 RID: 115705 RVA: 0x008B45F7 File Offset: 0x008B27F7
 	protected unsafe override void __CPPCALL_GetNotifyName_Implementation(UAnimNotifyState.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), base.GetNotifyName_Implementation());

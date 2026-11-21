@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200597A RID: 22906
+	// Token: 0x02005F87 RID: 24455
 	public struct ISpeedEffectConfig : IFlatbufferObject
 	{
-		// Token: 0x1700ABDC RID: 43996
-		// (get) Token: 0x06026C53 RID: 158803 RVA: 0x005563E0 File Offset: 0x005545E0
+		// Token: 0x1700B510 RID: 46352
+		// (get) Token: 0x060291BD RID: 168381 RVA: 0x0059D04C File Offset: 0x0059B24C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026C54 RID: 158804 RVA: 0x005563ED File Offset: 0x005545ED
+		// Token: 0x060291BE RID: 168382 RVA: 0x0059D059 File Offset: 0x0059B259
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026C55 RID: 158805 RVA: 0x005563F4 File Offset: 0x005545F4
+		// Token: 0x060291BF RID: 168383 RVA: 0x0059D060 File Offset: 0x0059B260
 		public static ISpeedEffectConfig GetRootAsISpeedEffectConfig(ByteBuffer _bb)
 		{
 			return ISpeedEffectConfig.GetRootAsISpeedEffectConfig(_bb, default(ISpeedEffectConfig));
 		}
 
-		// Token: 0x06026C56 RID: 158806 RVA: 0x00556410 File Offset: 0x00554610
+		// Token: 0x060291C0 RID: 168384 RVA: 0x0059D07C File Offset: 0x0059B27C
 		public static ISpeedEffectConfig GetRootAsISpeedEffectConfig(ByteBuffer _bb, ISpeedEffectConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026C57 RID: 158807 RVA: 0x0055642D File Offset: 0x0055462D
+		// Token: 0x060291C1 RID: 168385 RVA: 0x0059D099 File Offset: 0x0059B299
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026C58 RID: 158808 RVA: 0x0055643C File Offset: 0x0055463C
+		// Token: 0x060291C2 RID: 168386 RVA: 0x0059D0A8 File Offset: 0x0059B2A8
 		public ISpeedEffectConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700ABDD RID: 43997
-		// (get) Token: 0x06026C59 RID: 158809 RVA: 0x0055644C File Offset: 0x0055464C
+		// Token: 0x1700B511 RID: 46353
+		// (get) Token: 0x060291C3 RID: 168387 RVA: 0x0059D0B8 File Offset: 0x0059B2B8
 		public float MinVehicleSpeed
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ABDE RID: 43998
-		// (get) Token: 0x06026C5A RID: 158810 RVA: 0x0055648C File Offset: 0x0055468C
+		// Token: 0x1700B512 RID: 46354
+		// (get) Token: 0x060291C4 RID: 168388 RVA: 0x0059D0F8 File Offset: 0x0059B2F8
 		public float MaxVehicleSpeed
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026C5B RID: 158811 RVA: 0x005564CC File Offset: 0x005546CC
+		// Token: 0x060291C5 RID: 168389 RVA: 0x0059D138 File Offset: 0x0059B338
 		public long GameplayCueIds(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetLong(this.__p.__vector(num) + j * 8);
 		}
 
-		// Token: 0x1700ABDF RID: 43999
-		// (get) Token: 0x06026C5C RID: 158812 RVA: 0x0055650C File Offset: 0x0055470C
+		// Token: 0x1700B513 RID: 46355
+		// (get) Token: 0x060291C6 RID: 168390 RVA: 0x0059D178 File Offset: 0x0059B378
 		public int GameplayCueIdsLength
 		{
 			get
@@ -104,19 +104,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026C5D RID: 158813 RVA: 0x00556537 File Offset: 0x00554737
+		// Token: 0x060291C7 RID: 168391 RVA: 0x0059D1A3 File Offset: 0x0059B3A3
 		public Span<long> GetGameplayCueIdsBytes()
 		{
 			return this.__p.__vector_as_span<long>(8, 8);
 		}
 
-		// Token: 0x06026C5E RID: 158814 RVA: 0x00556546 File Offset: 0x00554746
+		// Token: 0x060291C8 RID: 168392 RVA: 0x0059D1B2 File Offset: 0x0059B3B2
 		public long[] GetGameplayCueIdsArray()
 		{
 			return this.__p.__vector_as_array<long>(8);
 		}
 
-		// Token: 0x06026C5F RID: 158815 RVA: 0x00556554 File Offset: 0x00554754
+		// Token: 0x060291C9 RID: 168393 RVA: 0x0059D1C0 File Offset: 0x0059B3C0
 		public static Offset<ISpeedEffectConfig> CreateISpeedEffectConfig(FlatBufferBuilder builder, float MinVehicleSpeed = 0f, float MaxVehicleSpeed = 0f, VectorOffset GameplayCueIdsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -126,31 +126,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISpeedEffectConfig.EndISpeedEffectConfig(builder);
 		}
 
-		// Token: 0x06026C60 RID: 158816 RVA: 0x00556578 File Offset: 0x00554778
+		// Token: 0x060291CA RID: 168394 RVA: 0x0059D1E4 File Offset: 0x0059B3E4
 		public static void StartISpeedEffectConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06026C61 RID: 158817 RVA: 0x00556581 File Offset: 0x00554781
+		// Token: 0x060291CB RID: 168395 RVA: 0x0059D1ED File Offset: 0x0059B3ED
 		public static void AddMinVehicleSpeed(FlatBufferBuilder builder, float minVehicleSpeed)
 		{
 			builder.AddFloat(0, minVehicleSpeed, 0.0);
 		}
 
-		// Token: 0x06026C62 RID: 158818 RVA: 0x00556594 File Offset: 0x00554794
+		// Token: 0x060291CC RID: 168396 RVA: 0x0059D200 File Offset: 0x0059B400
 		public static void AddMaxVehicleSpeed(FlatBufferBuilder builder, float maxVehicleSpeed)
 		{
 			builder.AddFloat(1, maxVehicleSpeed, 0.0);
 		}
 
-		// Token: 0x06026C63 RID: 158819 RVA: 0x005565A7 File Offset: 0x005547A7
+		// Token: 0x060291CD RID: 168397 RVA: 0x0059D213 File Offset: 0x0059B413
 		public static void AddGameplayCueIds(FlatBufferBuilder builder, VectorOffset gameplayCueIdsOffset)
 		{
 			builder.AddOffset(2, gameplayCueIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06026C64 RID: 158820 RVA: 0x005565B8 File Offset: 0x005547B8
+		// Token: 0x060291CE RID: 168398 RVA: 0x0059D224 File Offset: 0x0059B424
 		public static VectorOffset CreateGameplayCueIdsVector(FlatBufferBuilder builder, long[] data)
 		{
 			builder.StartVector(8, data.Length, 8);
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026C65 RID: 158821 RVA: 0x005565EF File Offset: 0x005547EF
+		// Token: 0x060291CF RID: 168399 RVA: 0x0059D25B File Offset: 0x0059B45B
 		public static VectorOffset CreateGameplayCueIdsVectorBlock(FlatBufferBuilder builder, long[] data)
 		{
 			builder.StartVector(8, data.Length, 8);
@@ -169,7 +169,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026C66 RID: 158822 RVA: 0x00556609 File Offset: 0x00554809
+		// Token: 0x060291D0 RID: 168400 RVA: 0x0059D275 File Offset: 0x0059B475
 		public static VectorOffset CreateGameplayCueIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<long> data)
 		{
 			builder.StartVector(8, data.Count, 8);
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026C67 RID: 158823 RVA: 0x00556627 File Offset: 0x00554827
+		// Token: 0x060291D1 RID: 168401 RVA: 0x0059D293 File Offset: 0x0059B493
 		public static VectorOffset CreateGameplayCueIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -185,19 +185,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026C68 RID: 158824 RVA: 0x00556640 File Offset: 0x00554840
+		// Token: 0x060291D2 RID: 168402 RVA: 0x0059D2AC File Offset: 0x0059B4AC
 		public static void StartGameplayCueIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(8, numElems, 8);
 		}
 
-		// Token: 0x06026C69 RID: 158825 RVA: 0x0055664B File Offset: 0x0055484B
+		// Token: 0x060291D3 RID: 168403 RVA: 0x0059D2B7 File Offset: 0x0059B4B7
 		public static Offset<ISpeedEffectConfig> EndISpeedEffectConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISpeedEffectConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06026C6A RID: 158826 RVA: 0x00556658 File Offset: 0x00554858
+		// Token: 0x060291D4 RID: 168404 RVA: 0x0059D2C4 File Offset: 0x0059B4C4
 		public ISpeedEffectConfigT UnPack()
 		{
 			ISpeedEffectConfigT speedEffectConfigT = new ISpeedEffectConfigT();
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return speedEffectConfigT;
 		}
 
-		// Token: 0x06026C6B RID: 158827 RVA: 0x00556674 File Offset: 0x00554874
+		// Token: 0x060291D5 RID: 168405 RVA: 0x0059D2E0 File Offset: 0x0059B4E0
 		public void UnPackTo(ISpeedEffectConfigT _o)
 		{
 			_o.MinVehicleSpeed = this.MinVehicleSpeed;
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026C6C RID: 158828 RVA: 0x005566C8 File Offset: 0x005548C8
+		// Token: 0x060291D6 RID: 168406 RVA: 0x0059D334 File Offset: 0x0059B534
 		public static Offset<ISpeedEffectConfig> Pack(FlatBufferBuilder builder, ISpeedEffectConfigT _o)
 		{
 			if (_o == null)
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISpeedEffectConfig.CreateISpeedEffectConfig(builder, _o.MinVehicleSpeed, _o.MaxVehicleSpeed, gameplayCueIdsOffset);
 		}
 
-		// Token: 0x0400EF67 RID: 61287
+		// Token: 0x0400FC5C RID: 64604
 		private Table __p;
 	}
 }

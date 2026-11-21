@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F12 RID: 24338
+	// Token: 0x02004EF9 RID: 20217
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,12 +15,12 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 	})]
 	public class DropDownTitle : TitleItemBase<ActivityEntranceDropDownContentData>
 	{
-		// Token: 0x0603DD63 RID: 253283 RVA: 0x00EF1F7D File Offset: 0x00EF017D
+		// Token: 0x06032CFE RID: 208126 RVA: 0x00E43C85 File Offset: 0x00E41E85
 		public DropDownTitle(UUIItem uiItem) : base(uiItem)
 		{
 		}
 
-		// Token: 0x0603DD64 RID: 253284 RVA: 0x00EF1F88 File Offset: 0x00EF0188
+		// Token: 0x06032CFF RID: 208127 RVA: 0x00E43C90 File Offset: 0x00E41E90
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DD65 RID: 253285 RVA: 0x00EF1FD0 File Offset: 0x00EF01D0
+		// Token: 0x06032D00 RID: 208128 RVA: 0x00E43CD8 File Offset: 0x00E41ED8
 		public override void ShowTemp(ActivityEntranceDropDownContentData data, DropDownItemBase<ActivityEntranceDropDownContentData> selectedItemObj)
 		{
 			string dropDownText = data.GetDropDownText();
@@ -44,11 +44,11 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			text.SetText(dropDownText, true);
 		}
 
-		// Token: 0x0200C241 RID: 49729
+		// Token: 0x0200AC4E RID: 44110
 		[NullableContext(0)]
 		private class EDropDownTitleComponent
 		{
-			// Token: 0x0403AAFA RID: 240378
+			// Token: 0x040354EC RID: 218348
 			public const int TxtContent = 0;
 		}
 	}

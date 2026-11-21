@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001145 RID: 4421
+	// Token: 0x02001273 RID: 4723
 	public class ISpecialGamePlayConfig_SetValue
 	{
-		// Token: 0x04003C4F RID: 15439
+		// Token: 0x04003F9D RID: 16285
 		public ESpecialGamePlayConfigType Type;
 	}
 }

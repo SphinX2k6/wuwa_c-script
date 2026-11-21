@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020013C2 RID: 5058
+// Token: 0x02000876 RID: 2166
 public class ActivityNewPlayerSupportStartupView : UiViewBase
 {
-	// Token: 0x06008EA6 RID: 36518 RVA: 0x001EC6EE File Offset: 0x001EA8EE
+	// Token: 0x0600623B RID: 25147 RVA: 0x001F520E File Offset: 0x001F340E
 	[NullableContext(1)]
 	public ActivityNewPlayerSupportStartupView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06008EA7 RID: 36519 RVA: 0x001EC6F8 File Offset: 0x001EA8F8
+	// Token: 0x0600623C RID: 25148 RVA: 0x001F5218 File Offset: 0x001F3418
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class ActivityNewPlayerSupportStartupView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008EA8 RID: 36520 RVA: 0x001EC749 File Offset: 0x001EA949
+	// Token: 0x0600623D RID: 25149 RVA: 0x001F5269 File Offset: 0x001F3469
 	protected override void OnBeforeShow()
 	{
 		ActivityNewPlayerSupportData activityData = ActivityNewPlayerSupportController.Instance.ActivityData;
@@ -35,13 +35,13 @@ public class ActivityNewPlayerSupportStartupView : UiViewBase
 		activityData.AlreadyStartView = true;
 	}
 
-	// Token: 0x06008EA9 RID: 36521 RVA: 0x001EC76C File Offset: 0x001EA96C
+	// Token: 0x0600623E RID: 25150 RVA: 0x001F528C File Offset: 0x001F348C
 	private void OnCloseBtnClick()
 	{
 		this.GotoActivityViewAndCloseSelf();
 	}
 
-	// Token: 0x06008EAA RID: 36522 RVA: 0x001EC774 File Offset: 0x001EA974
+	// Token: 0x0600623F RID: 25151 RVA: 0x001F5294 File Offset: 0x001F3494
 	private void GotoActivityViewAndCloseSelf()
 	{
 		base.CloseMe(null);
@@ -52,10 +52,10 @@ public class ActivityNewPlayerSupportStartupView : UiViewBase
 		}
 	}
 
-	// Token: 0x02007A36 RID: 31286
+	// Token: 0x02006BBC RID: 27580
 	private static class EComponentType
 	{
-		// Token: 0x040283A6 RID: 164774
+		// Token: 0x040236C3 RID: 145091
 		public const int CloseBtn = 0;
 	}
 }

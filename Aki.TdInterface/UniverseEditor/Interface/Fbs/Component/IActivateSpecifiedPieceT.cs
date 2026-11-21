@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E4B RID: 20043
+	// Token: 0x0200535C RID: 21340
 	public class IActivateSpecifiedPieceT
 	{
-		// Token: 0x17008F71 RID: 36721
-		// (get) Token: 0x0601F754 RID: 128852 RVA: 0x00461F3B File Offset: 0x0046013B
-		// (set) Token: 0x0601F755 RID: 128853 RVA: 0x00461F43 File Offset: 0x00460143
+		// Token: 0x170096AA RID: 38570
+		// (get) Token: 0x0602139F RID: 136095 RVA: 0x00495F53 File Offset: 0x00494153
+		// (set) Token: 0x060213A0 RID: 136096 RVA: 0x00495F5B File Offset: 0x0049415B
 		public EJigsawCompleteCondition Type { get; set; }
 
-		// Token: 0x17008F72 RID: 36722
-		// (get) Token: 0x0601F756 RID: 128854 RVA: 0x00461F4C File Offset: 0x0046014C
-		// (set) Token: 0x0601F757 RID: 128855 RVA: 0x00461F54 File Offset: 0x00460154
+		// Token: 0x170096AB RID: 38571
+		// (get) Token: 0x060213A1 RID: 136097 RVA: 0x00495F64 File Offset: 0x00494164
+		// (set) Token: 0x060213A2 RID: 136098 RVA: 0x00495F6C File Offset: 0x0049416C
 		public List<IActivateSpecifiedPieceConfigT> Config { get; set; }
 
-		// Token: 0x0601F758 RID: 128856 RVA: 0x00461F5D File Offset: 0x0046015D
+		// Token: 0x060213A3 RID: 136099 RVA: 0x00495F75 File Offset: 0x00494175
 		public IActivateSpecifiedPieceT()
 		{
 			this.Type = EJigsawCompleteCondition.ActivateAllCorrectPiece;

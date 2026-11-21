@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000187 RID: 391
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200019E RID: 414
 	public class Graph3dEffectComponent : IComponentBase
 	{
-		// Token: 0x0600057C RID: 1404 RVA: 0x00020934 File Offset: 0x0001EB34
+		// Token: 0x06000590 RID: 1424 RVA: 0x00021510 File Offset: 0x0001F710
 		private Graph3dEffectComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600057D RID: 1405 RVA: 0x0002096C File Offset: 0x0001EB6C
+		// Token: 0x06000591 RID: 1425 RVA: 0x00021548 File Offset: 0x0001F748
 		public static Graph3dEffectComponent Create([Nullable(2)] Graph3dEffectComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600057E RID: 1406 RVA: 0x0002097F File Offset: 0x0001EB7F
+		// Token: 0x06000592 RID: 1426 RVA: 0x0002155B File Offset: 0x0001F75B
 		public static Graph3dEffectComponent CreateFromSetValue([Nullable(2)] Graph3dEffectComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600057F RID: 1407 RVA: 0x00020992 File Offset: 0x0001EB92
+		// Token: 0x06000593 RID: 1427 RVA: 0x0002156E File Offset: 0x0001F76E
 		public new Graph3dEffectComponent_SetValue ToSetValue()
 		{
 			return new Graph3dEffectComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170001D1 RID: 465
-		// (get) Token: 0x06000580 RID: 1408 RVA: 0x000209CC File Offset: 0x0001EBCC
-		// (set) Token: 0x06000581 RID: 1409 RVA: 0x00020A06 File Offset: 0x0001EC06
+		// Token: 0x170001D8 RID: 472
+		// (get) Token: 0x06000594 RID: 1428 RVA: 0x000215A8 File Offset: 0x0001F7A8
+		// (set) Token: 0x06000595 RID: 1429 RVA: 0x000215E2 File Offset: 0x0001F7E2
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001D2 RID: 466
-		// (get) Token: 0x06000582 RID: 1410 RVA: 0x00020A14 File Offset: 0x0001EC14
-		// (set) Token: 0x06000583 RID: 1411 RVA: 0x00020A3E File Offset: 0x0001EC3E
+		// Token: 0x170001D9 RID: 473
+		// (get) Token: 0x06000596 RID: 1430 RVA: 0x000215F0 File Offset: 0x0001F7F0
+		// (set) Token: 0x06000597 RID: 1431 RVA: 0x0002161A File Offset: 0x0001F81A
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001D3 RID: 467
-		// (get) Token: 0x06000584 RID: 1412 RVA: 0x00020A4C File Offset: 0x0001EC4C
-		// (set) Token: 0x06000585 RID: 1413 RVA: 0x00020A77 File Offset: 0x0001EC77
+		// Token: 0x170001DA RID: 474
+		// (get) Token: 0x06000598 RID: 1432 RVA: 0x00021628 File Offset: 0x0001F828
+		// (set) Token: 0x06000599 RID: 1433 RVA: 0x00021653 File Offset: 0x0001F853
 		public virtual int Graph3dEntityId
 		{
 			get
@@ -128,9 +126,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001D4 RID: 468
-		// (get) Token: 0x06000586 RID: 1414 RVA: 0x00020A88 File Offset: 0x0001EC88
-		// (set) Token: 0x06000587 RID: 1415 RVA: 0x00020AE9 File Offset: 0x0001ECE9
+		// Token: 0x170001DB RID: 475
+		// (get) Token: 0x0600059A RID: 1434 RVA: 0x00021664 File Offset: 0x0001F864
+		// (set) Token: 0x0600059B RID: 1435 RVA: 0x000216C5 File Offset: 0x0001F8C5
 		public virtual IFireBoxFishEffect EffectType
 		{
 			get
@@ -158,18 +156,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000771 RID: 1905
+		// Token: 0x040007C7 RID: 1991
 		[Nullable(2)]
 		protected new Graph3dEffectComponent FbInstance;
 
-		// Token: 0x04000772 RID: 1906
+		// Token: 0x040007C8 RID: 1992
 		[Nullable(2)]
 		protected new Graph3dEffectComponent_SetValue PocoInterface;
 
-		// Token: 0x04000773 RID: 1907
+		// Token: 0x040007C9 RID: 1993
 		private IFireBoxFishEffect _EffectTypeCache;
 
-		// Token: 0x04000774 RID: 1908
+		// Token: 0x040007CA RID: 1994
 		private bool _EffectTypeInited;
 	}
 }

@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005A9D RID: 23197
+	// Token: 0x02004A79 RID: 19065
 	[NullableContext(1)]
 	[Nullable(0)]
 	public readonly struct EDreamLinkSpineDefine : IEquatable<EDreamLinkSpineDefine>
 	{
-		// Token: 0x0603AC28 RID: 240680 RVA: 0x00DFF0A0 File Offset: 0x00DFD2A0
+		// Token: 0x0602FB71 RID: 195441 RVA: 0x00D4F608 File Offset: 0x00D4D808
 		private EDreamLinkSpineDefine(string value)
 		{
 			this._Value = value;
 		}
 
-		// Token: 0x0603AC29 RID: 240681 RVA: 0x00DFF0A9 File Offset: 0x00DFD2A9
+		// Token: 0x0602FB72 RID: 195442 RVA: 0x00D4F611 File Offset: 0x00D4D811
 		public override string ToString()
 		{
 			return this._Value;
 		}
 
-		// Token: 0x0603AC2A RID: 240682 RVA: 0x00DFF0B1 File Offset: 0x00DFD2B1
+		// Token: 0x0602FB73 RID: 195443 RVA: 0x00D4F619 File Offset: 0x00D4D819
 		public bool Equals(EDreamLinkSpineDefine other)
 		{
 			return this._Value == other._Value;
 		}
 
-		// Token: 0x0603AC2B RID: 240683 RVA: 0x00DFF0C4 File Offset: 0x00DFD2C4
+		// Token: 0x0602FB74 RID: 195444 RVA: 0x00D4F62C File Offset: 0x00D4D82C
 		public override bool Equals(object obj)
 		{
 			if (obj is EDreamLinkSpineDefine)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return false;
 		}
 
-		// Token: 0x0603AC2C RID: 240684 RVA: 0x00DFF0E9 File Offset: 0x00DFD2E9
+		// Token: 0x0602FB75 RID: 195445 RVA: 0x00D4F651 File Offset: 0x00D4D851
 		public override int GetHashCode()
 		{
 			string value = this._Value;
@@ -48,31 +48,31 @@ namespace CSharpScript.Game.Module.DreamLink
 			return value.GetHashCode();
 		}
 
-		// Token: 0x0603AC2D RID: 240685 RVA: 0x00DFF0FC File Offset: 0x00DFD2FC
+		// Token: 0x0602FB76 RID: 195446 RVA: 0x00D4F664 File Offset: 0x00D4D864
 		public static bool operator ==(EDreamLinkSpineDefine left, EDreamLinkSpineDefine right)
 		{
 			return left.Equals(right);
 		}
 
-		// Token: 0x0603AC2E RID: 240686 RVA: 0x00DFF106 File Offset: 0x00DFD306
+		// Token: 0x0602FB77 RID: 195447 RVA: 0x00D4F66E File Offset: 0x00D4D86E
 		public static bool operator !=(EDreamLinkSpineDefine left, EDreamLinkSpineDefine right)
 		{
 			return !left.Equals(right);
 		}
 
-		// Token: 0x0401EA9F RID: 125599
+		// Token: 0x04019546 RID: 103750
 		private readonly string _Value;
 
-		// Token: 0x0401EAA0 RID: 125600
+		// Token: 0x04019547 RID: 103751
 		public static readonly EDreamLinkSpineDefine MainFemale = new EDreamLinkSpineDefine("nvzhu");
 
-		// Token: 0x0401EAA1 RID: 125601
+		// Token: 0x04019548 RID: 103752
 		public static readonly EDreamLinkSpineDefine MainMale = new EDreamLinkSpineDefine("nanzhu");
 
-		// Token: 0x0401EAA2 RID: 125602
+		// Token: 0x04019549 RID: 103753
 		public static readonly EDreamLinkSpineDefine Idle = new EDreamLinkSpineDefine("idle");
 
-		// Token: 0x0401EAA3 RID: 125603
+		// Token: 0x0401954A RID: 103754
 		public static readonly EDreamLinkSpineDefine Start = new EDreamLinkSpineDefine("start");
 	}
 }

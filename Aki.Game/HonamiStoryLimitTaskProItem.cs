@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001ECF RID: 7887
+// Token: 0x02001391 RID: 5009
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryLimitTaskProItem : UiPanelBase
 {
-	// Token: 0x0600F27C RID: 62076 RVA: 0x003A73F0 File Offset: 0x003A55F0
+	// Token: 0x0600C69B RID: 50843 RVA: 0x003B2EF0 File Offset: 0x003B10F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -31,13 +31,13 @@ public class HonamiStoryLimitTaskProItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F27D RID: 62077 RVA: 0x003A749B File Offset: 0x003A569B
+	// Token: 0x0600C69C RID: 50844 RVA: 0x003B2F9B File Offset: 0x003B119B
 	protected override void OnStart()
 	{
 		this.ProgressLayout = new GenericLayout<HonamiStoryLimitTaskScoreItem, HonamiStoryScoreRewardData>(base.GetHorizontalLayout(2), new Func<HonamiStoryLimitTaskScoreItem>(this.InitScoreItem), (AUIBaseActor)base.GetItem(3).GetOwner(), false, true);
 	}
 
-	// Token: 0x0600F27E RID: 62078 RVA: 0x003A74CE File Offset: 0x003A56CE
+	// Token: 0x0600C69D RID: 50845 RVA: 0x003B2FCE File Offset: 0x003B11CE
 	private HonamiStoryLimitTaskScoreItem InitScoreItem()
 	{
 		return new HonamiStoryLimitTaskScoreItem
@@ -46,7 +46,7 @@ public class HonamiStoryLimitTaskProItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F27F RID: 62079 RVA: 0x003A74E4 File Offset: 0x003A56E4
+	// Token: 0x0600C69E RID: 50846 RVA: 0x003B2FE4 File Offset: 0x003B11E4
 	public UniTask RefreshAsync(int currentProgress, List<HonamiStoryScoreRewardData> dataList)
 	{
 		HonamiStoryLimitTaskProItem.<RefreshAsync>d__7 <RefreshAsync>d__;
@@ -59,27 +59,27 @@ public class HonamiStoryLimitTaskProItem : UiPanelBase
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04007054 RID: 28756
+	// Token: 0x04007135 RID: 28981
 	private const float FIRST_OFFSET = 410f;
 
-	// Token: 0x04007055 RID: 28757
+	// Token: 0x04007136 RID: 28982
 	private GenericLayout<HonamiStoryLimitTaskScoreItem, HonamiStoryScoreRewardData> ProgressLayout;
 
-	// Token: 0x04007056 RID: 28758
+	// Token: 0x04007137 RID: 28983
 	[Nullable(2)]
 	public Action OnClickToGet;
 
-	// Token: 0x020084AE RID: 33966
+	// Token: 0x02007633 RID: 30259
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B2F9 RID: 176889
+		// Token: 0x0402661D RID: 157213
 		TxtScore,
-		// Token: 0x0402B2FA RID: 176890
+		// Token: 0x0402661E RID: 157214
 		SprBarFill,
-		// Token: 0x0402B2FB RID: 176891
+		// Token: 0x0402661F RID: 157215
 		PnlPointRewardLayout,
-		// Token: 0x0402B2FC RID: 176892
+		// Token: 0x04026620 RID: 157216
 		PnlPointReward
 	}
 }

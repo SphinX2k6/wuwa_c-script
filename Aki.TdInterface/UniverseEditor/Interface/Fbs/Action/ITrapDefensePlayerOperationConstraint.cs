@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200745A RID: 29786
+	// Token: 0x02007C4D RID: 31821
 	public struct ITrapDefensePlayerOperationConstraint : IFlatbufferObject
 	{
-		// Token: 0x1700E21E RID: 57886
-		// (get) Token: 0x060361D1 RID: 221649 RVA: 0x0075BC45 File Offset: 0x00759E45
+		// Token: 0x1700EE3B RID: 60987
+		// (get) Token: 0x060395BA RID: 234938 RVA: 0x007BE971 File Offset: 0x007BCB71
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060361D2 RID: 221650 RVA: 0x0075BC52 File Offset: 0x00759E52
+		// Token: 0x060395BB RID: 234939 RVA: 0x007BE97E File Offset: 0x007BCB7E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060361D3 RID: 221651 RVA: 0x0075BC5C File Offset: 0x00759E5C
+		// Token: 0x060395BC RID: 234940 RVA: 0x007BE988 File Offset: 0x007BCB88
 		public static ITrapDefensePlayerOperationConstraint GetRootAsITrapDefensePlayerOperationConstraint(ByteBuffer _bb)
 		{
 			return ITrapDefensePlayerOperationConstraint.GetRootAsITrapDefensePlayerOperationConstraint(_bb, default(ITrapDefensePlayerOperationConstraint));
 		}
 
-		// Token: 0x060361D4 RID: 221652 RVA: 0x0075BC78 File Offset: 0x00759E78
+		// Token: 0x060395BD RID: 234941 RVA: 0x007BE9A4 File Offset: 0x007BCBA4
 		public static ITrapDefensePlayerOperationConstraint GetRootAsITrapDefensePlayerOperationConstraint(ByteBuffer _bb, ITrapDefensePlayerOperationConstraint obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060361D5 RID: 221653 RVA: 0x0075BC95 File Offset: 0x00759E95
+		// Token: 0x060395BE RID: 234942 RVA: 0x007BE9C1 File Offset: 0x007BCBC1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060361D6 RID: 221654 RVA: 0x0075BCA4 File Offset: 0x00759EA4
+		// Token: 0x060395BF RID: 234943 RVA: 0x007BE9D0 File Offset: 0x007BCBD0
 		public ITrapDefensePlayerOperationConstraint __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E21F RID: 57887
-		// (get) Token: 0x060361D7 RID: 221655 RVA: 0x0075BCB4 File Offset: 0x00759EB4
+		// Token: 0x1700EE3C RID: 60988
+		// (get) Token: 0x060395C0 RID: 234944 RVA: 0x007BE9E0 File Offset: 0x007BCBE0
 		public TTrapDefensePlayerOperationType DisableOperationType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060361D8 RID: 221656 RVA: 0x0075BCF0 File Offset: 0x00759EF0
+		// Token: 0x060395C1 RID: 234945 RVA: 0x007BEA1C File Offset: 0x007BCC1C
 		public TTable? DisableOperation<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,26 +73,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060361D9 RID: 221657 RVA: 0x0075BD34 File Offset: 0x00759F34
+		// Token: 0x060395C2 RID: 234946 RVA: 0x007BEA60 File Offset: 0x007BCC60
 		public ITrapDefensePlayerOperationConstructTrap DisableOperationAsITrapDefensePlayerOperationConstructTrap()
 		{
 			return this.DisableOperation<ITrapDefensePlayerOperationConstructTrap>().Value;
 		}
 
-		// Token: 0x060361DA RID: 221658 RVA: 0x0075BD50 File Offset: 0x00759F50
+		// Token: 0x060395C3 RID: 234947 RVA: 0x007BEA7C File Offset: 0x007BCC7C
 		public ITrapDefensePlayerOperationRecycleTrap DisableOperationAsITrapDefensePlayerOperationRecycleTrap()
 		{
 			return this.DisableOperation<ITrapDefensePlayerOperationRecycleTrap>().Value;
 		}
 
-		// Token: 0x060361DB RID: 221659 RVA: 0x0075BD6C File Offset: 0x00759F6C
+		// Token: 0x060395C4 RID: 234948 RVA: 0x007BEA98 File Offset: 0x007BCC98
 		public ITrapDefensePlayerOperationSpawnMonster DisableOperationAsITrapDefensePlayerOperationSpawnMonster()
 		{
 			return this.DisableOperation<ITrapDefensePlayerOperationSpawnMonster>().Value;
 		}
 
-		// Token: 0x1700E220 RID: 57888
-		// (get) Token: 0x060361DC RID: 221660 RVA: 0x0075BD88 File Offset: 0x00759F88
+		// Token: 0x1700EE3D RID: 60989
+		// (get) Token: 0x060395C5 RID: 234949 RVA: 0x007BEAB4 File Offset: 0x007BCCB4
 		public bool IsConstrained
 		{
 			get
@@ -102,8 +102,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E221 RID: 57889
-		// (get) Token: 0x060361DD RID: 221661 RVA: 0x0075BDC8 File Offset: 0x00759FC8
+		// Token: 0x1700EE3E RID: 60990
+		// (get) Token: 0x060395C6 RID: 234950 RVA: 0x007BEAF4 File Offset: 0x007BCCF4
 		public string TidPromptTxt
 		{
 			get
@@ -117,19 +117,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060361DE RID: 221662 RVA: 0x0075BE00 File Offset: 0x0075A000
+		// Token: 0x060395C7 RID: 234951 RVA: 0x007BEB2C File Offset: 0x007BCD2C
 		public Span<byte> GetTidPromptTxtBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x060361DF RID: 221663 RVA: 0x0075BE10 File Offset: 0x0075A010
+		// Token: 0x060395C8 RID: 234952 RVA: 0x007BEB3C File Offset: 0x007BCD3C
 		public byte[] GetTidPromptTxtArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x060361E0 RID: 221664 RVA: 0x0075BE1F File Offset: 0x0075A01F
+		// Token: 0x060395C9 RID: 234953 RVA: 0x007BEB4B File Offset: 0x007BCD4B
 		public static Offset<ITrapDefensePlayerOperationConstraint> CreateITrapDefensePlayerOperationConstraint(FlatBufferBuilder builder, TTrapDefensePlayerOperationType DisableOperation_type = TTrapDefensePlayerOperationType.NONE, int DisableOperationOffset = 0, bool IsConstrained = false, StringOffset TidPromptTxtOffset = default(StringOffset))
 		{
 			builder.StartTable(4);
@@ -140,43 +140,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITrapDefensePlayerOperationConstraint.EndITrapDefensePlayerOperationConstraint(builder);
 		}
 
-		// Token: 0x060361E1 RID: 221665 RVA: 0x0075BE4B File Offset: 0x0075A04B
+		// Token: 0x060395CA RID: 234954 RVA: 0x007BEB77 File Offset: 0x007BCD77
 		public static void StartITrapDefensePlayerOperationConstraint(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060361E2 RID: 221666 RVA: 0x0075BE54 File Offset: 0x0075A054
+		// Token: 0x060395CB RID: 234955 RVA: 0x007BEB80 File Offset: 0x007BCD80
 		public static void AddDisableOperationType(FlatBufferBuilder builder, TTrapDefensePlayerOperationType disableOperationType)
 		{
 			builder.AddByte(0, (byte)disableOperationType, 0);
 		}
 
-		// Token: 0x060361E3 RID: 221667 RVA: 0x0075BE5F File Offset: 0x0075A05F
+		// Token: 0x060395CC RID: 234956 RVA: 0x007BEB8B File Offset: 0x007BCD8B
 		public static void AddDisableOperation(FlatBufferBuilder builder, int disableOperationOffset)
 		{
 			builder.AddOffset(1, disableOperationOffset, 0);
 		}
 
-		// Token: 0x060361E4 RID: 221668 RVA: 0x0075BE6A File Offset: 0x0075A06A
+		// Token: 0x060395CD RID: 234957 RVA: 0x007BEB96 File Offset: 0x007BCD96
 		public static void AddIsConstrained(FlatBufferBuilder builder, bool isConstrained)
 		{
 			builder.AddBool(2, isConstrained, false);
 		}
 
-		// Token: 0x060361E5 RID: 221669 RVA: 0x0075BE75 File Offset: 0x0075A075
+		// Token: 0x060395CE RID: 234958 RVA: 0x007BEBA1 File Offset: 0x007BCDA1
 		public static void AddTidPromptTxt(FlatBufferBuilder builder, StringOffset tidPromptTxtOffset)
 		{
 			builder.AddOffset(3, tidPromptTxtOffset.Value, 0);
 		}
 
-		// Token: 0x060361E6 RID: 221670 RVA: 0x0075BE85 File Offset: 0x0075A085
+		// Token: 0x060395CF RID: 234959 RVA: 0x007BEBB1 File Offset: 0x007BCDB1
 		public static Offset<ITrapDefensePlayerOperationConstraint> EndITrapDefensePlayerOperationConstraint(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrapDefensePlayerOperationConstraint>(builder.EndTable());
 		}
 
-		// Token: 0x060361E7 RID: 221671 RVA: 0x0075BE94 File Offset: 0x0075A094
+		// Token: 0x060395D0 RID: 234960 RVA: 0x007BEBC0 File Offset: 0x007BCDC0
 		public ITrapDefensePlayerOperationConstraintT UnPack()
 		{
 			ITrapDefensePlayerOperationConstraintT trapDefensePlayerOperationConstraintT = new ITrapDefensePlayerOperationConstraintT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return trapDefensePlayerOperationConstraintT;
 		}
 
-		// Token: 0x060361E8 RID: 221672 RVA: 0x0075BEB0 File Offset: 0x0075A0B0
+		// Token: 0x060395D1 RID: 234961 RVA: 0x007BEBDC File Offset: 0x007BCDDC
 		public void UnPackTo(ITrapDefensePlayerOperationConstraintT _o)
 		{
 			_o.DisableOperation = new TTrapDefensePlayerOperationTypeUnion();
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.TidPromptTxt = this.TidPromptTxt;
 		}
 
-		// Token: 0x060361E9 RID: 221673 RVA: 0x0075BFB8 File Offset: 0x0075A1B8
+		// Token: 0x060395D2 RID: 234962 RVA: 0x007BECE4 File Offset: 0x007BCEE4
 		public static Offset<ITrapDefensePlayerOperationConstraint> Pack(FlatBufferBuilder builder, ITrapDefensePlayerOperationConstraintT _o)
 		{
 			if (_o == null)
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITrapDefensePlayerOperationConstraint.CreateITrapDefensePlayerOperationConstraint(builder, disableOperation_type, disableOperationOffset, _o.IsConstrained, tidPromptTxtOffset);
 		}
 
-		// Token: 0x040122E3 RID: 74467
+		// Token: 0x0401330A RID: 78602
 		private Table __p;
 	}
 }

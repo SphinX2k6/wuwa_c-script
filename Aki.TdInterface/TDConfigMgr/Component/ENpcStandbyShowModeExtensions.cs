@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009B8 RID: 2488
+	// Token: 0x02000A6D RID: 2669
 	public static class ENpcStandbyShowModeExtensions
 	{
-		// Token: 0x0600376D RID: 14189 RVA: 0x000901AC File Offset: 0x0008E3AC
+		// Token: 0x06003AFD RID: 15101 RVA: 0x000982E4 File Offset: 0x000964E4
 		public static string ToEnumString(this ENpcStandbyShowMode value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600376E RID: 14190 RVA: 0x000901F4 File Offset: 0x0008E3F4
+		// Token: 0x06003AFE RID: 15102 RVA: 0x0009832C File Offset: 0x0009652C
 		public static ENpcStandbyShowMode FromString(string name)
 		{
 			ENpcStandbyShowMode result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600376F RID: 14191 RVA: 0x00090220 File Offset: 0x0008E420
+		// Token: 0x06003AFF RID: 15103 RVA: 0x00098358 File Offset: 0x00096558
 		public static bool TryFromString(string name, out ENpcStandbyShowMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003770 RID: 14192 RVA: 0x00090276 File Offset: 0x0008E476
+		// Token: 0x06003B00 RID: 15104 RVA: 0x000983AE File Offset: 0x000965AE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003771 RID: 14193 RVA: 0x00090296 File Offset: 0x0008E496
+		// Token: 0x06003B01 RID: 15105 RVA: 0x000983CE File Offset: 0x000965CE
 		public static ENpcStandbyShowMode[] GetValues()
 		{
 			return new ENpcStandbyShowMode[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003772 RID: 14194 RVA: 0x000902A6 File Offset: 0x0008E4A6
+		// Token: 0x06003B02 RID: 15106 RVA: 0x000983DE File Offset: 0x000965DE
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 {
-	// Token: 0x0200577F RID: 22399
+	// Token: 0x02004756 RID: 18262
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoCommonPopupPanel : UiPanelBase
 	{
-		// Token: 0x06038E64 RID: 233060 RVA: 0x00D85D5C File Offset: 0x00D83F5C
+		// Token: 0x0602DD74 RID: 187764 RVA: 0x00CD4A1C File Offset: 0x00CD2C1C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038E65 RID: 233061 RVA: 0x00D85E44 File Offset: 0x00D84044
+		// Token: 0x0602DD75 RID: 187765 RVA: 0x00CD4B04 File Offset: 0x00CD2D04
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoCommonPopupPanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038E66 RID: 233062 RVA: 0x00D85E88 File Offset: 0x00D84088
+		// Token: 0x0602DD76 RID: 187766 RVA: 0x00CD4B48 File Offset: 0x00CD2D48
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add<int, bool>(EEventName.KurotatoOnItemUpdate, new Action<int, bool>(this.OnItemUpdate));
@@ -62,14 +62,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.SetCloseBtnVisible(true);
 		}
 
-		// Token: 0x06038E67 RID: 233063 RVA: 0x00D85EE0 File Offset: 0x00D840E0
+		// Token: 0x0602DD77 RID: 187767 RVA: 0x00CD4BA0 File Offset: 0x00CD2DA0
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<int, bool>(EEventName.KurotatoOnItemUpdate, new Action<int, bool>(this.OnItemUpdate));
 			EventSystem.Instance.Remove(EEventName.KurotatoOnWeaponUpdate, new Action(this.OnWeaponUpdate));
 		}
 
-		// Token: 0x06038E68 RID: 233064 RVA: 0x00D85F1C File Offset: 0x00D8411C
+		// Token: 0x0602DD78 RID: 187768 RVA: 0x00CD4BDC File Offset: 0x00CD2DDC
 		private UniTask CreateCaption()
 		{
 			KurotatoCommonPopupPanel.<CreateCaption>d__10 <CreateCaption>d__;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			return <CreateCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038E69 RID: 233065 RVA: 0x00D85F60 File Offset: 0x00D84160
+		// Token: 0x0602DD79 RID: 187769 RVA: 0x00CD4C20 File Offset: 0x00CD2E20
 		private UniTask CreateCostInfoItem()
 		{
 			KurotatoCommonPopupPanel.<CreateCostInfoItem>d__11 <CreateCostInfoItem>d__;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			return <CreateCostInfoItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038E6A RID: 233066 RVA: 0x00D85FA4 File Offset: 0x00D841A4
+		// Token: 0x0602DD7A RID: 187770 RVA: 0x00CD4C64 File Offset: 0x00CD2E64
 		private UniTask CreateRoleAttributePanel()
 		{
 			KurotatoCommonPopupPanel.<CreateRoleAttributePanel>d__12 <CreateRoleAttributePanel>d__;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			return <CreateRoleAttributePanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038E6B RID: 233067 RVA: 0x00D85FE8 File Offset: 0x00D841E8
+		// Token: 0x0602DD7B RID: 187771 RVA: 0x00CD4CA8 File Offset: 0x00CD2EA8
 		private UniTask CreateCurrencyAsync()
 		{
 			KurotatoCommonPopupPanel.<CreateCurrencyAsync>d__13 <CreateCurrencyAsync>d__;
@@ -113,13 +113,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			return <CreateCurrencyAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038E6C RID: 233068 RVA: 0x00D8602B File Offset: 0x00D8422B
+		// Token: 0x0602DD7C RID: 187772 RVA: 0x00CD4CEB File Offset: 0x00CD2EEB
 		public void SetCloseCb(Action cb)
 		{
 			this.CloseCb = cb;
 		}
 
-		// Token: 0x06038E6D RID: 233069 RVA: 0x00D86034 File Offset: 0x00D84234
+		// Token: 0x0602DD7D RID: 187773 RVA: 0x00CD4CF4 File Offset: 0x00CD2EF4
 		public void SetCloseBtnVisible(bool isVisible)
 		{
 			UUIItem uuiitem = base.GetButton(1).RootUIComp.Get();
@@ -130,55 +130,55 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			uuiitem.SetUIActive(isVisible);
 		}
 
-		// Token: 0x06038E6E RID: 233070 RVA: 0x00D86060 File Offset: 0x00D84260
+		// Token: 0x0602DD7E RID: 187774 RVA: 0x00CD4D20 File Offset: 0x00CD2F20
 		public void SetHelpButtonCallBack(Action cb)
 		{
 			this.CaptionItem.SetHelpCallBack(cb);
 		}
 
-		// Token: 0x06038E6F RID: 233071 RVA: 0x00D8606E File Offset: 0x00D8426E
+		// Token: 0x0602DD7F RID: 187775 RVA: 0x00CD4D2E File Offset: 0x00CD2F2E
 		public void SetTitleLocalText(string textId)
 		{
 			this.CaptionItem.SetTitleLocalText(textId);
 		}
 
-		// Token: 0x06038E70 RID: 233072 RVA: 0x00D8607C File Offset: 0x00D8427C
+		// Token: 0x0602DD80 RID: 187776 RVA: 0x00CD4D3C File Offset: 0x00CD2F3C
 		public void SetCostInfoVisible(bool isVisible)
 		{
 			this.CostInfoItem.SetUiActive(isVisible);
 		}
 
-		// Token: 0x06038E71 RID: 233073 RVA: 0x00D8608A File Offset: 0x00D8428A
+		// Token: 0x0602DD81 RID: 187777 RVA: 0x00CD4D4A File Offset: 0x00CD2F4A
 		public void ShowAttrPreview(IReadOnlyList<IKurotatoAttrPreviewDelta> deltas)
 		{
 			this.RoleAttributePanel.ShowPreview(deltas);
 		}
 
-		// Token: 0x06038E72 RID: 233074 RVA: 0x00D86098 File Offset: 0x00D84298
+		// Token: 0x0602DD82 RID: 187778 RVA: 0x00CD4D58 File Offset: 0x00CD2F58
 		public void ClearAttrPreview()
 		{
 			this.RoleAttributePanel.ClearPreview();
 		}
 
-		// Token: 0x06038E73 RID: 233075 RVA: 0x00D860A5 File Offset: 0x00D842A5
+		// Token: 0x0602DD83 RID: 187779 RVA: 0x00CD4D65 File Offset: 0x00CD2F65
 		public void HideAttrChangeFx()
 		{
 			this.RoleAttributePanel.HideAllChangeFx();
 		}
 
-		// Token: 0x06038E74 RID: 233076 RVA: 0x00D860B2 File Offset: 0x00D842B2
+		// Token: 0x0602DD84 RID: 187780 RVA: 0x00CD4D72 File Offset: 0x00CD2F72
 		private void OnItemUpdate(int itemId, bool bIsAdd)
 		{
 			this.RoleAttributePanel.RefreshAttributeList();
 		}
 
-		// Token: 0x06038E75 RID: 233077 RVA: 0x00D860BF File Offset: 0x00D842BF
+		// Token: 0x0602DD85 RID: 187781 RVA: 0x00CD4D7F File Offset: 0x00CD2F7F
 		private void OnWeaponUpdate()
 		{
 			this.RoleAttributePanel.RefreshAttributeList();
 		}
 
-		// Token: 0x06038E76 RID: 233078 RVA: 0x00D860CC File Offset: 0x00D842CC
+		// Token: 0x0602DD86 RID: 187782 RVA: 0x00CD4D8C File Offset: 0x00CD2F8C
 		private void OnClickClose()
 		{
 			Action closeCb = this.CloseCb;
@@ -189,36 +189,36 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			closeCb();
 		}
 
-		// Token: 0x0401DD53 RID: 122195
+		// Token: 0x040187E9 RID: 100329
 		private readonly PopupCaptionItem CaptionItem = new PopupCaptionItem(null);
 
-		// Token: 0x0401DD54 RID: 122196
+		// Token: 0x040187EA RID: 100330
 		private readonly CostInfoItem CostInfoItem = new CostInfoItem();
 
-		// Token: 0x0401DD55 RID: 122197
+		// Token: 0x040187EB RID: 100331
 		private readonly KurotatoCurrencyItem CurrencyItem = new KurotatoCurrencyItem();
 
-		// Token: 0x0401DD56 RID: 122198
+		// Token: 0x040187EC RID: 100332
 		private readonly KurotatoAttributePanel RoleAttributePanel = new KurotatoAttributePanel();
 
-		// Token: 0x0401DD57 RID: 122199
+		// Token: 0x040187ED RID: 100333
 		[Nullable(2)]
 		private Action CloseCb;
 
-		// Token: 0x0200B999 RID: 47513
+		// Token: 0x0200A3B1 RID: 41905
 		[NullableContext(0)]
 		private class EChildComp
 		{
-			// Token: 0x040381EE RID: 229870
+			// Token: 0x04032BE3 RID: 207843
 			public const int Caption = 0;
 
-			// Token: 0x040381EF RID: 229871
+			// Token: 0x04032BE4 RID: 207844
 			public const int BtnBack = 1;
 
-			// Token: 0x040381F0 RID: 229872
+			// Token: 0x04032BE5 RID: 207845
 			public const int CostInfo = 2;
 
-			// Token: 0x040381F1 RID: 229873
+			// Token: 0x04032BE6 RID: 207846
 			public const int RoleAttr = 3;
 		}
 	}

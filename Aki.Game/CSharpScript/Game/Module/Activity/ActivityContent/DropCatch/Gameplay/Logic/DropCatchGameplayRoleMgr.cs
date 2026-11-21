@@ -4,18 +4,18 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006739 RID: 26425
+	// Token: 0x02005689 RID: 22153
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DropCatchGameplayRoleMgr : DropCatchGameplayBaseMgr
 	{
-		// Token: 0x06041F55 RID: 270165 RVA: 0x010002F3 File Offset: 0x00FFE4F3
+		// Token: 0x06036AA1 RID: 223905 RVA: 0x00F416A3 File Offset: 0x00F3F8A3
 		[NullableContext(1)]
 		public DropCatchGameplayRoleMgr(IGameplayLogicContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06041F56 RID: 270166 RVA: 0x010002FC File Offset: 0x00FFE4FC
+		// Token: 0x06036AA2 RID: 223906 RVA: 0x00F416AC File Offset: 0x00F3F8AC
 		public override void Init()
 		{
 			DropCatchGameplay? gameplayConfig = this.Context.GetProxy().GetGameplayConfig();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			});
 		}
 
-		// Token: 0x06041F57 RID: 270167 RVA: 0x01000387 File Offset: 0x00FFE587
+		// Token: 0x06036AA3 RID: 223907 RVA: 0x00F41737 File Offset: 0x00F3F937
 		public override void OnReadyTick(float deltaTime)
 		{
 			IRoleInstance role = this.Role;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			role.OnReadyTick(deltaTime);
 		}
 
-		// Token: 0x06041F58 RID: 270168 RVA: 0x0100039A File Offset: 0x00FFE59A
+		// Token: 0x06036AA4 RID: 223908 RVA: 0x00F4174A File Offset: 0x00F3F94A
 		public override void OnTick(float deltaTime)
 		{
 			IRoleInstance role = this.Role;
@@ -57,19 +57,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			role.OnTick(deltaTime);
 		}
 
-		// Token: 0x06041F59 RID: 270169 RVA: 0x010003AD File Offset: 0x00FFE5AD
+		// Token: 0x06036AA5 RID: 223909 RVA: 0x00F4175D File Offset: 0x00F3F95D
 		public IRoleInstance GetRole()
 		{
 			return this.Role;
 		}
 
-		// Token: 0x06041F5A RID: 270170 RVA: 0x010003B5 File Offset: 0x00FFE5B5
+		// Token: 0x06036AA6 RID: 223910 RVA: 0x00F41765 File Offset: 0x00F3F965
 		public override void Destroy()
 		{
 			this.Role = null;
 		}
 
-		// Token: 0x040225DD RID: 140765
+		// Token: 0x0401CE36 RID: 118326
 		private IRoleInstance Role;
 	}
 }

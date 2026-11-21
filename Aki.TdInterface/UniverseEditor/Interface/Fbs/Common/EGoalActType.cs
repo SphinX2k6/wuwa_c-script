@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005CFA RID: 23802
+	// Token: 0x0200632E RID: 25390
 	public enum EGoalActType : byte
 	{
-		// Token: 0x0400F64C RID: 63052
+		// Token: 0x0401039B RID: 66459
 		Deploy,
-		// Token: 0x0400F64D RID: 63053
+		// Token: 0x0401039C RID: 66460
 		Evolution
 	}
 }

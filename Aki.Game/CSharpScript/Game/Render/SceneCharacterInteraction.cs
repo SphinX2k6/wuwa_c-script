@@ -7,25 +7,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045DB RID: 17883
+	// Token: 0x02003504 RID: 13572
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneCharacterInteraction : IStaticVariableResetter
 	{
-		// Token: 0x0602E1C2 RID: 188866 RVA: 0x00AA2CDB File Offset: 0x00AA0EDB
+		// Token: 0x060228B6 RID: 141494 RVA: 0x009CF3B7 File Offset: 0x009CD5B7
 		static SceneCharacterInteraction()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneCharacterInteraction.CreateStaticDefaultValue), new Action(SceneCharacterInteraction.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602E1C3 RID: 188867 RVA: 0x00AA2D0F File Offset: 0x00AA0F0F
+		// Token: 0x060228B7 RID: 141495 RVA: 0x009CF3EB File Offset: 0x009CD5EB
 		public void SetInWater()
 		{
 			this.IsInWaterOrOnMaterial = true;
 			this.PhysicalMaterial = null;
 		}
 
-		// Token: 0x0602E1C4 RID: 188868 RVA: 0x00AA2D1F File Offset: 0x00AA0F1F
+		// Token: 0x060228B8 RID: 141496 RVA: 0x009CF3FB File Offset: 0x009CD5FB
 		[NullableContext(1)]
 		public void SetOnMaterial(UPhysicalMaterial physicalMaterial)
 		{
@@ -33,25 +33,25 @@ namespace CSharpScript.Game.Render
 			this.PhysicalMaterial = physicalMaterial;
 		}
 
-		// Token: 0x0602E1C5 RID: 188869 RVA: 0x00AA2D2F File Offset: 0x00AA0F2F
+		// Token: 0x060228B9 RID: 141497 RVA: 0x009CF40B File Offset: 0x009CD60B
 		public bool GetInWater()
 		{
 			return this.IsInWaterOrOnMaterial && this.PhysicalMaterial == null;
 		}
 
-		// Token: 0x0602E1C6 RID: 188870 RVA: 0x00AA2D44 File Offset: 0x00AA0F44
+		// Token: 0x060228BA RID: 141498 RVA: 0x009CF420 File Offset: 0x009CD620
 		public bool GetInAudioShr()
 		{
 			return this.IsInAudioShr;
 		}
 
-		// Token: 0x0602E1C7 RID: 188871 RVA: 0x00AA2D4C File Offset: 0x00AA0F4C
+		// Token: 0x060228BB RID: 141499 RVA: 0x009CF428 File Offset: 0x009CD628
 		public FName GetAudioShrTag()
 		{
 			return this.AudioShrTag.Value;
 		}
 
-		// Token: 0x0602E1C8 RID: 188872 RVA: 0x00AA2D59 File Offset: 0x00AA0F59
+		// Token: 0x060228BC RID: 141500 RVA: 0x009CF435 File Offset: 0x009CD635
 		public double GetWaterHitLocationZ()
 		{
 			if (!(this.EnviInteractionData != null))
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Render
 			return (double)this.EnviInteractionData.HitWaterLocation.Z;
 		}
 
-		// Token: 0x0602E1C9 RID: 188873 RVA: 0x00AA2D84 File Offset: 0x00AA0F84
+		// Token: 0x060228BD RID: 141501 RVA: 0x009CF460 File Offset: 0x009CD660
 		public double GetWaterHeight()
 		{
 			return this.WaterHeight;
 		}
 
-		// Token: 0x0602E1CA RID: 188874 RVA: 0x00AA2D8C File Offset: 0x00AA0F8C
+		// Token: 0x060228BE RID: 141502 RVA: 0x009CF468 File Offset: 0x009CD668
 		public double GetWaterDepth()
 		{
 			if (this.UseCppCheck)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Render
 			return this.WaterHeight - (this.TsActorLocation.Z - this.CapsuleHalfHeight);
 		}
 
-		// Token: 0x0602E1CB RID: 188875 RVA: 0x00AA2DDC File Offset: 0x00AA0FDC
+		// Token: 0x060228BF RID: 141503 RVA: 0x009CF4B8 File Offset: 0x009CD6B8
 		[NullableContext(1)]
 		public void Start(TsBaseCharacter owner, PDA_InteractionPlayerConfig_C config, float updateInternalScale = 1f)
 		{
@@ -98,12 +98,12 @@ namespace CSharpScript.Game.Render
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x170075AD RID: 30125
-		// (get) Token: 0x0602E1CC RID: 188876 RVA: 0x00AA2E3C File Offset: 0x00AA103C
-		// (set) Token: 0x0602E1CD RID: 188877 RVA: 0x00AA2E44 File Offset: 0x00AA1044
+		// Token: 0x17004865 RID: 18533
+		// (get) Token: 0x060228C0 RID: 141504 RVA: 0x009CF518 File Offset: 0x009CD718
+		// (set) Token: 0x060228C1 RID: 141505 RVA: 0x009CF520 File Offset: 0x009CD720
 		private protected Vector TempVector { protected get; private set; }
 
-		// Token: 0x0602E1CE RID: 188878 RVA: 0x00AA2E50 File Offset: 0x00AA1050
+		// Token: 0x060228C2 RID: 141506 RVA: 0x009CF52C File Offset: 0x009CD72C
 		[NullableContext(1)]
 		private FName FindAudioShrubTagFromComp(UStaticMesh staticMesh)
 		{
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Render
 			return FNameUtil.NONE;
 		}
 
-		// Token: 0x0602E1CF RID: 188879 RVA: 0x00AA2EB8 File Offset: 0x00AA10B8
+		// Token: 0x060228C3 RID: 141507 RVA: 0x009CF594 File Offset: 0x009CD794
 		public void Update(float deltaSeconds)
 		{
 			if (!this.IsEnable)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E1D0 RID: 188880 RVA: 0x00AA31F4 File Offset: 0x00AA13F4
+		// Token: 0x060228C4 RID: 141508 RVA: 0x009CF8D0 File Offset: 0x009CDAD0
 		public void Init()
 		{
 			TsBaseCharacter ownerCharacter = this.OwnerCharacter;
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateWaterStateInternal *= this.UpdateWaterStateInternalScale;
 		}
 
-		// Token: 0x0602E1D1 RID: 188881 RVA: 0x00AA335C File Offset: 0x00AA155C
+		// Token: 0x060228C5 RID: 141509 RVA: 0x009CFA38 File Offset: 0x009CDC38
 		public void Enable()
 		{
 			Log instance = Log.Instance;
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E1D2 RID: 188882 RVA: 0x00AA3408 File Offset: 0x00AA1608
+		// Token: 0x060228C6 RID: 141510 RVA: 0x009CFAE4 File Offset: 0x009CDCE4
 		public void Disable()
 		{
 			Log instance = Log.Instance;
@@ -326,26 +326,26 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E1D3 RID: 188883 RVA: 0x00AA34A1 File Offset: 0x00AA16A1
+		// Token: 0x060228C7 RID: 141511 RVA: 0x009CFB7D File Offset: 0x009CDD7D
 		public bool GetEnabled()
 		{
 			return this.IsEnable;
 		}
 
-		// Token: 0x0602E1D4 RID: 188884 RVA: 0x00AA34A9 File Offset: 0x00AA16A9
+		// Token: 0x060228C8 RID: 141512 RVA: 0x009CFB85 File Offset: 0x009CDD85
 		public void Destroy()
 		{
 			this.Disable();
 		}
 
-		// Token: 0x0602E1D5 RID: 188885 RVA: 0x00AA34B1 File Offset: 0x00AA16B1
+		// Token: 0x060228C9 RID: 141513 RVA: 0x009CFB8D File Offset: 0x009CDD8D
 		public void ClearInWaterOrOnMaterialState()
 		{
 			this.IsInWaterOrOnMaterial = false;
 			this.PhysicalMaterial = null;
 		}
 
-		// Token: 0x0602E1D6 RID: 188886 RVA: 0x00AA34C4 File Offset: 0x00AA16C4
+		// Token: 0x060228CA RID: 141514 RVA: 0x009CFBA0 File Offset: 0x009CDDA0
 		private static void InitTraceInfo()
 		{
 			UTraceSphereElement utraceSphereElement = new UTraceSphereElement();
@@ -364,7 +364,7 @@ namespace CSharpScript.Game.Render
 			SceneCharacterInteraction.SphereTrace = utraceSphereElement;
 		}
 
-		// Token: 0x0602E1D7 RID: 188887 RVA: 0x00AA3561 File Offset: 0x00AA1761
+		// Token: 0x060228CB RID: 141515 RVA: 0x009CFC3D File Offset: 0x009CDE3D
 		public static void SetTraceDebug(bool enable)
 		{
 			if (SceneCharacterInteraction.SphereTrace != null)
@@ -373,7 +373,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E1D8 RID: 188888 RVA: 0x00AA357C File Offset: 0x00AA177C
+		// Token: 0x060228CC RID: 141516 RVA: 0x009CFC58 File Offset: 0x009CDE58
 		protected void CheckInWater(float delta)
 		{
 			if (this.UseCppCheck)
@@ -484,104 +484,104 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E1D9 RID: 188889 RVA: 0x00AA3AAC File Offset: 0x00AA1CAC
+		// Token: 0x060228CD RID: 141517 RVA: 0x009D0188 File Offset: 0x009CE388
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E1DA RID: 188890 RVA: 0x00AA3AAE File Offset: 0x00AA1CAE
+		// Token: 0x060228CE RID: 141518 RVA: 0x009D018A File Offset: 0x009CE38A
 		public static void ResetStaticDefaultValue()
 		{
 			SceneCharacterInteraction.SphereTrace = null;
 		}
 
-		// Token: 0x04018B74 RID: 101236
+		// Token: 0x040131B2 RID: 78258
 		public TsBaseCharacter OwnerCharacter;
 
-		// Token: 0x04018B75 RID: 101237
+		// Token: 0x040131B3 RID: 78259
 		public UKuroEnviInteractionComponent EnviInteractionComponent;
 
-		// Token: 0x04018B76 RID: 101238
+		// Token: 0x040131B4 RID: 78260
 		public FVectorDouble? ActorLocation;
 
-		// Token: 0x04018B77 RID: 101239
+		// Token: 0x040131B5 RID: 78261
 		public Vector TsActorLocation;
 
-		// Token: 0x04018B78 RID: 101240
+		// Token: 0x040131B6 RID: 78262
 		public Vector TsPreviousActorLocation;
 
-		// Token: 0x04018B79 RID: 101241
+		// Token: 0x040131B7 RID: 78263
 		public Vector ActorSpeed;
 
-		// Token: 0x04018B7A RID: 101242
+		// Token: 0x040131B8 RID: 78264
 		protected PDA_InteractionPlayerConfig_C Config;
 
-		// Token: 0x04018B7B RID: 101243
+		// Token: 0x040131B9 RID: 78265
 		protected SceneCharacterWaterEffect WaterEffect;
 
-		// Token: 0x04018B7C RID: 101244
+		// Token: 0x040131BA RID: 78266
 		protected SceneCharacterTriggerEffect TriggerEffect;
 
-		// Token: 0x04018B7D RID: 101245
+		// Token: 0x040131BB RID: 78267
 		protected SceneCharacterFoliageEffect FoliageEffect;
 
-		// Token: 0x04018B7E RID: 101246
+		// Token: 0x040131BC RID: 78268
 		protected double CapsuleHalfHeight;
 
-		// Token: 0x04018B7F RID: 101247
+		// Token: 0x040131BD RID: 78269
 		protected bool IsEnable;
 
-		// Token: 0x04018B80 RID: 101248
+		// Token: 0x040131BE RID: 78270
 		protected bool IsInWaterOrOnMaterial;
 
-		// Token: 0x04018B81 RID: 101249
+		// Token: 0x040131BF RID: 78271
 		protected bool IsInAudioShr;
 
-		// Token: 0x04018B82 RID: 101250
+		// Token: 0x040131C0 RID: 78272
 		protected FName? AudioShrTag;
 
-		// Token: 0x04018B83 RID: 101251
+		// Token: 0x040131C1 RID: 78273
 		protected UPhysicalMaterial PhysicalMaterial;
 
-		// Token: 0x04018B84 RID: 101252
+		// Token: 0x040131C2 RID: 78274
 		protected double WaterHeight;
 
-		// Token: 0x04018B85 RID: 101253
+		// Token: 0x040131C3 RID: 78275
 		protected Vector WaterNormal;
 
-		// Token: 0x04018B86 RID: 101254
+		// Token: 0x040131C4 RID: 78276
 		protected float UpdateWaterStateInternal = 0.3f;
 
-		// Token: 0x04018B87 RID: 101255
+		// Token: 0x040131C5 RID: 78277
 		protected float UpdateWaterStateInternalPc = 0.15f;
 
-		// Token: 0x04018B88 RID: 101256
+		// Token: 0x040131C6 RID: 78278
 		protected float UpdateWaterStateInternalScale = 1f;
 
-		// Token: 0x04018B89 RID: 101257
+		// Token: 0x040131C7 RID: 78279
 		protected float UpdateWaterStateCounter;
 
-		// Token: 0x04018B8A RID: 101258
+		// Token: 0x040131C8 RID: 78280
 		protected bool UseCppCheck;
 
-		// Token: 0x04018B8B RID: 101259
+		// Token: 0x040131C9 RID: 78281
 		protected FKuroEnviInteractionData EnviInteractionData;
 
-		// Token: 0x04018B8C RID: 101260
+		// Token: 0x040131CA RID: 78282
 		private static readonly FName NoCollisionProfileName = new FName("NoCollision");
 
-		// Token: 0x04018B8D RID: 101261
+		// Token: 0x040131CB RID: 78283
 		[Nullable(1)]
 		private const string PROFILE_KEY = "SceneCharacterInteraction_CheckInWater";
 
-		// Token: 0x04018B8E RID: 101262
+		// Token: 0x040131CC RID: 78284
 		[Nullable(1)]
 		private const string AUDIO_TAG_PREFIX = "Audio_";
 
-		// Token: 0x04018B90 RID: 101264
+		// Token: 0x040131CE RID: 78286
 		private static UTraceSphereElement SphereTrace = null;
 
-		// Token: 0x04018B91 RID: 101265
+		// Token: 0x040131CF RID: 78287
 		private const bool DebugWaterTrace = false;
 	}
 }

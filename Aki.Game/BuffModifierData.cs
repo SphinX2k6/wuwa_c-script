@@ -2,28 +2,28 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002E8F RID: 11919
+// Token: 0x020023E1 RID: 9185
 [NullableContext(1)]
 [Nullable(0)]
 public class BuffModifierData : IBuffModifierData
 {
-	// Token: 0x17002325 RID: 8997
-	// (get) Token: 0x060197B4 RID: 104372 RVA: 0x00694155 File Offset: 0x00692355
-	// (set) Token: 0x060197B5 RID: 104373 RVA: 0x0069415D File Offset: 0x0069235D
+	// Token: 0x170023B0 RID: 9136
+	// (get) Token: 0x0601708A RID: 94346 RVA: 0x006BA511 File Offset: 0x006B8711
+	// (set) Token: 0x0601708B RID: 94347 RVA: 0x006BA519 File Offset: 0x006B8719
 	public EAttributeType AttributeId { get; set; }
 
-	// Token: 0x17002326 RID: 8998
-	// (get) Token: 0x060197B6 RID: 104374 RVA: 0x00694166 File Offset: 0x00692366
-	// (set) Token: 0x060197B7 RID: 104375 RVA: 0x0069416E File Offset: 0x0069236E
+	// Token: 0x170023B1 RID: 9137
+	// (get) Token: 0x0601708C RID: 94348 RVA: 0x006BA522 File Offset: 0x006B8722
+	// (set) Token: 0x0601708D RID: 94349 RVA: 0x006BA52A File Offset: 0x006B872A
 	public float[] Value1 { get; set; } = Array.Empty<float>();
 
-	// Token: 0x17002327 RID: 8999
-	// (get) Token: 0x060197B8 RID: 104376 RVA: 0x00694177 File Offset: 0x00692377
-	// (set) Token: 0x060197B9 RID: 104377 RVA: 0x0069417F File Offset: 0x0069237F
+	// Token: 0x170023B2 RID: 9138
+	// (get) Token: 0x0601708E RID: 94350 RVA: 0x006BA533 File Offset: 0x006B8733
+	// (set) Token: 0x0601708F RID: 94351 RVA: 0x006BA53B File Offset: 0x006B873B
 	public float[] Value2 { get; set; } = Array.Empty<float>();
 
-	// Token: 0x17002328 RID: 9000
-	// (get) Token: 0x060197BA RID: 104378 RVA: 0x00694188 File Offset: 0x00692388
-	// (set) Token: 0x060197BB RID: 104379 RVA: 0x00694190 File Offset: 0x00692390
+	// Token: 0x170023B3 RID: 9139
+	// (get) Token: 0x06017090 RID: 94352 RVA: 0x006BA544 File Offset: 0x006B8744
+	// (set) Token: 0x06017091 RID: 94353 RVA: 0x006BA54C File Offset: 0x006B874C
 	public int[] CalculationPolicy { get; set; } = Array.Empty<int>();
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000630 RID: 1584
+	// Token: 0x02000648 RID: 1608
 	public class ConfigOrnamentAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002530 RID: 9520 RVA: 0x0012BEFF File Offset: 0x0012A0FF
+		// Token: 0x060025C0 RID: 9664 RVA: 0x0013297B File Offset: 0x00130B7B
 		static ConfigOrnamentAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigOrnamentAll.CreateStaticDefaultValue), new Action(ConfigOrnamentAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002531 RID: 9521 RVA: 0x0012BF20 File Offset: 0x0012A120
+		// Token: 0x060025C1 RID: 9665 RVA: 0x0013299C File Offset: 0x00130B9C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigOrnamentAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002532 RID: 9522 RVA: 0x0012BF9F File Offset: 0x0012A19F
+		// Token: 0x060025C2 RID: 9666 RVA: 0x00132A1B File Offset: 0x00130C1B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigOrnamentAll.LogPair = null;
 			ConfigOrnamentAll.HandleId = 0;
 		}
 
-		// Token: 0x06002533 RID: 9523 RVA: 0x0012BFAD File Offset: 0x0012A1AD
+		// Token: 0x060025C3 RID: 9667 RVA: 0x00132A29 File Offset: 0x00130C29
 		public static void Init()
 		{
 			ConfigOrnamentAll.HandleId = ConfigCommon.InitDataStatement(ConfigOrnamentAll.HandleId, "db_ornament.db", "select BinData from `Ornament`");
 		}
 
-		// Token: 0x06002534 RID: 9524 RVA: 0x0012BFC8 File Offset: 0x0012A1C8
+		// Token: 0x060025C4 RID: 9668 RVA: 0x00132A44 File Offset: 0x00130C44
 		[NullableContext(2)]
 		public static IReadOnlyList<Ornament> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002B36 RID: 11062
+		// Token: 0x04002BDE RID: 11230
 		private const string DB = "db_ornament.db";
 
-		// Token: 0x04002B37 RID: 11063
+		// Token: 0x04002BDF RID: 11231
 		private const string FILE = "s.饰品.xlsx";
 
-		// Token: 0x04002B38 RID: 11064
+		// Token: 0x04002BE0 RID: 11232
 		private const string TABLE = "Ornament";
 
-		// Token: 0x04002B39 RID: 11065
+		// Token: 0x04002BE1 RID: 11233
 		private const string COMMAND = "select BinData from `Ornament`";
 
-		// Token: 0x04002B3A RID: 11066
+		// Token: 0x04002BE2 RID: 11234
 		private const string KEY_PREFIX = "OrnamentAll";
 
-		// Token: 0x04002B3B RID: 11067
+		// Token: 0x04002BE3 RID: 11235
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002B3C RID: 11068
+		// Token: 0x04002BE4 RID: 11236
 		private static int HandleId;
 	}
 }

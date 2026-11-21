@@ -2,54 +2,54 @@
 
 namespace CSharpScript.Game.NewWorld.Pawn.Component
 {
-	// Token: 0x0200706F RID: 28783
+	// Token: 0x020061F0 RID: 25072
 	public enum ETimeScaleSourceType
 	{
-		// Token: 0x04024B34 RID: 150324
+		// Token: 0x0401FDEF RID: 130543
 		DefaultTimeScale,
-		// Token: 0x04024B35 RID: 150325
+		// Token: 0x0401FDF0 RID: 130544
 		MyBullet,
-		// Token: 0x04024B36 RID: 150326
+		// Token: 0x0401FDF1 RID: 130545
 		OthersBullet,
-		// Token: 0x04024B37 RID: 150327
+		// Token: 0x0401FDF2 RID: 130546
 		Counter,
-		// Token: 0x04024B38 RID: 150328
+		// Token: 0x0401FDF3 RID: 130547
 		BeCountered,
-		// Token: 0x04024B39 RID: 150329
+		// Token: 0x0401FDF4 RID: 130548
 		BattleSettlement,
-		// Token: 0x04024B3A RID: 150330
+		// Token: 0x0401FDF5 RID: 130549
 		Buff,
-		// Token: 0x04024B3B RID: 150331
+		// Token: 0x0401FDF6 RID: 130550
 		PanelQte,
-		// Token: 0x04024B3C RID: 150332
+		// Token: 0x0401FDF7 RID: 130551
 		TimeStopMachine,
-		// Token: 0x04024B3D RID: 150333
+		// Token: 0x0401FDF8 RID: 130552
 		InnerPauseLock,
-		// Token: 0x04024B3E RID: 150334
+		// Token: 0x0401FDF9 RID: 130553
 		InnerNormalizeTimeScaleLock,
-		// Token: 0x04024B3F RID: 150335
+		// Token: 0x0401FDFA RID: 130554
 		InnerDelayLock = 10,
-		// Token: 0x04024B40 RID: 150336
+		// Token: 0x0401FDFB RID: 130555
 		InnerForceTimeScale,
-		// Token: 0x04024B41 RID: 150337
+		// Token: 0x0401FDFC RID: 130556
 		Portal,
-		// Token: 0x04024B42 RID: 150338
+		// Token: 0x0401FDFD RID: 130557
 		DeathEffect,
-		// Token: 0x04024B43 RID: 150339
+		// Token: 0x0401FDFE RID: 130558
 		PhantomArenaBattle,
-		// Token: 0x04024B44 RID: 150340
+		// Token: 0x0401FDFF RID: 130559
 		SelfCentered,
-		// Token: 0x04024B45 RID: 150341
+		// Token: 0x0401FE00 RID: 130560
 		SelfBeHit,
-		// Token: 0x04024B46 RID: 150342
+		// Token: 0x0401FE01 RID: 130561
 		DeadEyeMode,
-		// Token: 0x04024B47 RID: 150343
+		// Token: 0x0401FE02 RID: 130562
 		ElementalField,
-		// Token: 0x04024B48 RID: 150344
+		// Token: 0x0401FE03 RID: 130563
 		WithKscEntityUpdate,
-		// Token: 0x04024B49 RID: 150345
+		// Token: 0x0401FE04 RID: 130564
 		MAX,
-		// Token: 0x04024B4A RID: 150346
+		// Token: 0x0401FE05 RID: 130565
 		UiModel
 	}
 }

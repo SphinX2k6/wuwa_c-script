@@ -6,10 +6,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Flow
 {
-	// Token: 0x02004747 RID: 18247
+	// Token: 0x02004BAF RID: 19375
 	public static class IPlotPosFlowStateVerify
 	{
-		// Token: 0x0601C14E RID: 115022 RVA: 0x003FA8B8 File Offset: 0x003F8AB8
+		// Token: 0x0601D923 RID: 121123 RVA: 0x00426B54 File Offset: 0x00424D54
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos))
@@ -37,14 +37,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return false;
 		}
 
-		// Token: 0x020079E6 RID: 31206
+		// Token: 0x0200822F RID: 33327
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401338F RID: 78735
+			// Token: 0x040143F6 RID: 82934
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x04013390 RID: 78736
+			// Token: 0x040143F7 RID: 82935
 			public static VerifyTableAction <1>__Verify;
 		}
 	}

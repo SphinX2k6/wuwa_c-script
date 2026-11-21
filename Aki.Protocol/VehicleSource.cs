@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015AA RID: 5546
+	// Token: 0x0200161C RID: 5660
 	public enum VehicleSource
 	{
-		// Token: 0x0400A841 RID: 43073
+		// Token: 0x0400ACC0 RID: 44224
 		[OriginalName("VehicleSourceNone")]
 		None,
-		// Token: 0x0400A842 RID: 43074
+		// Token: 0x0400ACC1 RID: 44225
 		[OriginalName("VehicleSourceFishingShip")]
 		FishingShip,
-		// Token: 0x0400A843 RID: 43075
+		// Token: 0x0400ACC2 RID: 44226
 		[OriginalName("VehicleSourceGongduolaSummon")]
 		GongduolaSummon
 	}

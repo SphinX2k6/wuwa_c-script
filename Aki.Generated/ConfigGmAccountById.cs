@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003A2 RID: 930
+	// Token: 0x020003B8 RID: 952
 	public class ConfigGmAccountById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060015D3 RID: 5587 RVA: 0x000D4ECB File Offset: 0x000D30CB
+		// Token: 0x06001657 RID: 5719 RVA: 0x000DB61F File Offset: 0x000D981F
 		static ConfigGmAccountById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGmAccountById.CreateStaticDefaultValue), new Action(ConfigGmAccountById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060015D4 RID: 5588 RVA: 0x000D4EEC File Offset: 0x000D30EC
+		// Token: 0x06001658 RID: 5720 RVA: 0x000DB640 File Offset: 0x000D9840
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGmAccountById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060015D5 RID: 5589 RVA: 0x000D4F6B File Offset: 0x000D316B
+		// Token: 0x06001659 RID: 5721 RVA: 0x000DB6BF File Offset: 0x000D98BF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGmAccountById.LogPair = null;
 			ConfigGmAccountById.HandleId = 0;
 		}
 
-		// Token: 0x060015D6 RID: 5590 RVA: 0x000D4F79 File Offset: 0x000D3179
+		// Token: 0x0600165A RID: 5722 RVA: 0x000DB6CD File Offset: 0x000D98CD
 		public static void Init()
 		{
 			ConfigGmAccountById.HandleId = ConfigCommon.InitDataStatement(ConfigGmAccountById.HandleId, "db_gm.db", "select BinData from `GmAccount` where Id=?");
 		}
 
-		// Token: 0x060015D7 RID: 5591 RVA: 0x000D4F94 File Offset: 0x000D3194
+		// Token: 0x0600165B RID: 5723 RVA: 0x000DB6E8 File Offset: 0x000D98E8
 		public static GmAccount? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGmAccountById.HandleId, ConfigGmAccountById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GmAccount?(rootAsGmAccount);
 		}
 
-		// Token: 0x04001952 RID: 6482
+		// Token: 0x040019EC RID: 6636
 		private const string DB = "db_gm.db";
 
-		// Token: 0x04001953 RID: 6483
+		// Token: 0x040019ED RID: 6637
 		private const string FILE = "g.GM.xlsx";
 
-		// Token: 0x04001954 RID: 6484
+		// Token: 0x040019EE RID: 6638
 		private const string TABLE = "GmAccount";
 
-		// Token: 0x04001955 RID: 6485
+		// Token: 0x040019EF RID: 6639
 		private const string COMMAND = "select BinData from `GmAccount` where Id=?";
 
-		// Token: 0x04001956 RID: 6486
+		// Token: 0x040019F0 RID: 6640
 		private const string KEY_PREFIX = "GmAccountById";
 
-		// Token: 0x04001957 RID: 6487
+		// Token: 0x040019F1 RID: 6641
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001958 RID: 6488
+		// Token: 0x040019F2 RID: 6642
 		private static int HandleId;
 	}
 }

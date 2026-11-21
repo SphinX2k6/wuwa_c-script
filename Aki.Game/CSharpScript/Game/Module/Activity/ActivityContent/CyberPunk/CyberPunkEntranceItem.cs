@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068C0 RID: 26816
+	// Token: 0x02005810 RID: 22544
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CyberPunkEntranceItem : UiPanelBase
 	{
-		// Token: 0x06042EC2 RID: 274114 RVA: 0x0104BAB4 File Offset: 0x01049CB4
+		// Token: 0x06037A1A RID: 227866 RVA: 0x00F8D0DC File Offset: 0x00F8B2DC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042EC3 RID: 274115 RVA: 0x0104BBE0 File Offset: 0x01049DE0
+		// Token: 0x06037A1B RID: 227867 RVA: 0x00F8D208 File Offset: 0x00F8B408
 		protected override void OnBeforeDestroy()
 		{
 			foreach (ERedDotName name in this.RedDotNames)
@@ -53,31 +53,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RedDotStates.Clear();
 		}
 
-		// Token: 0x06042EC4 RID: 274116 RVA: 0x0104BC58 File Offset: 0x01049E58
+		// Token: 0x06037A1C RID: 227868 RVA: 0x00F8D280 File Offset: 0x00F8B480
 		public void SetOnClick(Action callback)
 		{
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x06042EC5 RID: 274117 RVA: 0x0104BC61 File Offset: 0x01049E61
+		// Token: 0x06037A1D RID: 227869 RVA: 0x00F8D289 File Offset: 0x00F8B489
 		public void SetOnLockClick(Action callback)
 		{
 			this.LockClickCallback = callback;
 		}
 
-		// Token: 0x06042EC6 RID: 274118 RVA: 0x0104BC6A File Offset: 0x01049E6A
+		// Token: 0x06037A1E RID: 227870 RVA: 0x00F8D292 File Offset: 0x00F8B492
 		public void SetConfig(EdgeRunnerUnlock config)
 		{
 			this.ConfigId = config.Id;
 		}
 
-		// Token: 0x06042EC7 RID: 274119 RVA: 0x0104BC79 File Offset: 0x01049E79
+		// Token: 0x06037A1F RID: 227871 RVA: 0x00F8D2A1 File Offset: 0x00F8B4A1
 		public int GetConfigId()
 		{
 			return this.ConfigId;
 		}
 
-		// Token: 0x06042EC8 RID: 274120 RVA: 0x0104BC81 File Offset: 0x01049E81
+		// Token: 0x06037A20 RID: 227872 RVA: 0x00F8D2A9 File Offset: 0x00F8B4A9
 		public void SetLocked(bool locked)
 		{
 			this.IsLocked = locked;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.UpdateIconVisibility();
 		}
 
-		// Token: 0x06042EC9 RID: 274121 RVA: 0x0104BCA4 File Offset: 0x01049EA4
+		// Token: 0x06037A21 RID: 227873 RVA: 0x00F8D2CC File Offset: 0x00F8B4CC
 		public void SetNumText(string text)
 		{
 			UUIText text2 = base.GetText(4);
@@ -128,21 +128,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			text2.SetText(newText, true);
 		}
 
-		// Token: 0x06042ECA RID: 274122 RVA: 0x0104BD72 File Offset: 0x01049F72
+		// Token: 0x06037A22 RID: 227874 RVA: 0x00F8D39A File Offset: 0x00F8B59A
 		public void SetFinished(bool finished)
 		{
 			this.IsFinished = finished;
 			this.UpdateIconVisibility();
 		}
 
-		// Token: 0x06042ECB RID: 274123 RVA: 0x0104BD81 File Offset: 0x01049F81
+		// Token: 0x06037A23 RID: 227875 RVA: 0x00F8D3A9 File Offset: 0x00F8B5A9
 		public void Refresh(bool locked, string numText)
 		{
 			this.SetLocked(locked);
 			this.SetNumText(numText);
 		}
 
-		// Token: 0x06042ECC RID: 274124 RVA: 0x0104BD94 File Offset: 0x01049F94
+		// Token: 0x06037A24 RID: 227876 RVA: 0x00F8D3BC File Offset: 0x00F8B5BC
 		public void BindRedDot(ERedDotName redDotName)
 		{
 			if (this.RedDotNames.Contains(redDotName))
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}, 0);
 		}
 
-		// Token: 0x06042ECD RID: 274125 RVA: 0x0104BE10 File Offset: 0x0104A010
+		// Token: 0x06037A25 RID: 227877 RVA: 0x00F8D438 File Offset: 0x00F8B638
 		private void UpdateRedDotVisibility()
 		{
 			bool uiactive = false;
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x06042ECE RID: 274126 RVA: 0x0104BE7C File Offset: 0x0104A07C
+		// Token: 0x06037A26 RID: 227878 RVA: 0x00F8D4A4 File Offset: 0x00F8B6A4
 		private void UpdateIconVisibility()
 		{
 			if (this.IsLocked)
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042ECF RID: 274127 RVA: 0x0104BF43 File Offset: 0x0104A143
+		// Token: 0x06037A27 RID: 227879 RVA: 0x00F8D56B File Offset: 0x00F8B76B
 		private void OnClickButton()
 		{
 			if (this.IsLocked)
@@ -271,49 +271,49 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x04022D09 RID: 142601
+		// Token: 0x0401D565 RID: 120165
 		[Nullable(2)]
 		private Action ClickCallback;
 
-		// Token: 0x04022D0A RID: 142602
+		// Token: 0x0401D566 RID: 120166
 		[Nullable(2)]
 		private Action LockClickCallback;
 
-		// Token: 0x04022D0B RID: 142603
+		// Token: 0x0401D567 RID: 120167
 		private readonly List<ERedDotName> RedDotNames = new List<ERedDotName>();
 
-		// Token: 0x04022D0C RID: 142604
+		// Token: 0x0401D568 RID: 120168
 		private readonly Dictionary<ERedDotName, bool> RedDotStates = new Dictionary<ERedDotName, bool>();
 
-		// Token: 0x04022D0D RID: 142605
+		// Token: 0x0401D569 RID: 120169
 		private bool IsLocked;
 
-		// Token: 0x04022D0E RID: 142606
+		// Token: 0x0401D56A RID: 120170
 		private bool IsFinished;
 
-		// Token: 0x04022D0F RID: 142607
+		// Token: 0x0401D56B RID: 120171
 		private int ConfigId;
 
-		// Token: 0x0200CA98 RID: 51864
+		// Token: 0x0200B460 RID: 46176
 		[NullableContext(0)]
 		private static class EEntranceComponent
 		{
-			// Token: 0x0403D3C3 RID: 250819
+			// Token: 0x04037C9D RID: 228509
 			public const int Button = 0;
 
-			// Token: 0x0403D3C4 RID: 250820
+			// Token: 0x04037C9E RID: 228510
 			public const int LockIcon = 1;
 
-			// Token: 0x0403D3C5 RID: 250821
+			// Token: 0x04037C9F RID: 228511
 			public const int UnLockIcon = 2;
 
-			// Token: 0x0403D3C6 RID: 250822
+			// Token: 0x04037CA0 RID: 228512
 			public const int FinishedIcon = 3;
 
-			// Token: 0x0403D3C7 RID: 250823
+			// Token: 0x04037CA1 RID: 228513
 			public const int TxtNum = 4;
 
-			// Token: 0x0403D3C8 RID: 250824
+			// Token: 0x04037CA2 RID: 228514
 			public const int RedDot = 5;
 		}
 	}

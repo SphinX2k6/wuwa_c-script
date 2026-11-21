@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BBC RID: 19388
+	// Token: 0x020050A6 RID: 20646
 	public struct IComparePlayerMotionState : IFlatbufferObject
 	{
-		// Token: 0x17008CC5 RID: 36037
-		// (get) Token: 0x0601E958 RID: 125272 RVA: 0x00446FFC File Offset: 0x004451FC
+		// Token: 0x170093DE RID: 37854
+		// (get) Token: 0x06020504 RID: 132356 RVA: 0x00479B60 File Offset: 0x00477D60
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E959 RID: 125273 RVA: 0x00447009 File Offset: 0x00445209
+		// Token: 0x06020505 RID: 132357 RVA: 0x00479B6D File Offset: 0x00477D6D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E95A RID: 125274 RVA: 0x00447010 File Offset: 0x00445210
+		// Token: 0x06020506 RID: 132358 RVA: 0x00479B74 File Offset: 0x00477D74
 		public static IComparePlayerMotionState GetRootAsIComparePlayerMotionState(ByteBuffer _bb)
 		{
 			return IComparePlayerMotionState.GetRootAsIComparePlayerMotionState(_bb, default(IComparePlayerMotionState));
 		}
 
-		// Token: 0x0601E95B RID: 125275 RVA: 0x0044702C File Offset: 0x0044522C
+		// Token: 0x06020507 RID: 132359 RVA: 0x00479B90 File Offset: 0x00477D90
 		public static IComparePlayerMotionState GetRootAsIComparePlayerMotionState(ByteBuffer _bb, IComparePlayerMotionState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E95C RID: 125276 RVA: 0x00447049 File Offset: 0x00445249
+		// Token: 0x06020508 RID: 132360 RVA: 0x00479BAD File Offset: 0x00477DAD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E95D RID: 125277 RVA: 0x00447058 File Offset: 0x00445258
+		// Token: 0x06020509 RID: 132361 RVA: 0x00479BBC File Offset: 0x00477DBC
 		public IComparePlayerMotionState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008CC6 RID: 36038
-		// (get) Token: 0x0601E95E RID: 125278 RVA: 0x00447068 File Offset: 0x00445268
+		// Token: 0x170093DF RID: 37855
+		// (get) Token: 0x0602050A RID: 132362 RVA: 0x00479BCC File Offset: 0x00477DCC
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008CC7 RID: 36039
-		// (get) Token: 0x0601E95F RID: 125279 RVA: 0x004470A4 File Offset: 0x004452A4
+		// Token: 0x170093E0 RID: 37856
+		// (get) Token: 0x0602050B RID: 132363 RVA: 0x00479C08 File Offset: 0x00477E08
 		public EPlayerMotionState MotionState
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008CC8 RID: 36040
-		// (get) Token: 0x0601E960 RID: 125280 RVA: 0x004470E0 File Offset: 0x004452E0
+		// Token: 0x170093E1 RID: 37857
+		// (get) Token: 0x0602050C RID: 132364 RVA: 0x00479C44 File Offset: 0x00477E44
 		public ECompare Compare
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008CC9 RID: 36041
-		// (get) Token: 0x0601E961 RID: 125281 RVA: 0x0044711C File Offset: 0x0044531C
+		// Token: 0x170093E2 RID: 37858
+		// (get) Token: 0x0602050D RID: 132365 RVA: 0x00479C80 File Offset: 0x00477E80
 		public TOnlinePlayerConditionTarget OnlinePlayerConditionTargetOptionType
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E962 RID: 125282 RVA: 0x0044715C File Offset: 0x0044535C
+		// Token: 0x0602050E RID: 132366 RVA: 0x00479CC0 File Offset: 0x00477EC0
 		public TTable? OnlinePlayerConditionTargetOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -118,19 +118,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601E963 RID: 125283 RVA: 0x004471A4 File Offset: 0x004453A4
+		// Token: 0x0602050F RID: 132367 RVA: 0x00479D08 File Offset: 0x00477F08
 		public IOnlinePlayerConditionTargetHost OnlinePlayerConditionTargetOptionAsIOnlinePlayerConditionTargetHost()
 		{
 			return this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetHost>().Value;
 		}
 
-		// Token: 0x0601E964 RID: 125284 RVA: 0x004471C0 File Offset: 0x004453C0
+		// Token: 0x06020510 RID: 132368 RVA: 0x00479D24 File Offset: 0x00477F24
 		public IOnlinePlayerConditionTargetParticipator OnlinePlayerConditionTargetOptionAsIOnlinePlayerConditionTargetParticipator()
 		{
 			return this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>().Value;
 		}
 
-		// Token: 0x0601E965 RID: 125285 RVA: 0x004471DB File Offset: 0x004453DB
+		// Token: 0x06020511 RID: 132369 RVA: 0x00479D3F File Offset: 0x00477F3F
 		public static Offset<IComparePlayerMotionState> CreateIComparePlayerMotionState(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, EPlayerMotionState MotionState = EPlayerMotionState.Ground, ECompare Compare = ECompare.Eq, TOnlinePlayerConditionTarget OnlinePlayerConditionTargetOption_type = TOnlinePlayerConditionTarget.NONE, int OnlinePlayerConditionTargetOptionOffset = 0)
 		{
 			builder.StartTable(5);
@@ -142,49 +142,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IComparePlayerMotionState.EndIComparePlayerMotionState(builder);
 		}
 
-		// Token: 0x0601E966 RID: 125286 RVA: 0x0044720F File Offset: 0x0044540F
+		// Token: 0x06020512 RID: 132370 RVA: 0x00479D73 File Offset: 0x00477F73
 		public static void StartIComparePlayerMotionState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601E967 RID: 125287 RVA: 0x00447218 File Offset: 0x00445418
+		// Token: 0x06020513 RID: 132371 RVA: 0x00479D7C File Offset: 0x00477F7C
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E968 RID: 125288 RVA: 0x00447223 File Offset: 0x00445423
+		// Token: 0x06020514 RID: 132372 RVA: 0x00479D87 File Offset: 0x00477F87
 		public static void AddMotionState(FlatBufferBuilder builder, EPlayerMotionState motionState)
 		{
 			builder.AddByte(1, (byte)motionState, 0);
 		}
 
-		// Token: 0x0601E969 RID: 125289 RVA: 0x0044722E File Offset: 0x0044542E
+		// Token: 0x06020515 RID: 132373 RVA: 0x00479D92 File Offset: 0x00477F92
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(2, (byte)compare, 0);
 		}
 
-		// Token: 0x0601E96A RID: 125290 RVA: 0x00447239 File Offset: 0x00445439
+		// Token: 0x06020516 RID: 132374 RVA: 0x00479D9D File Offset: 0x00477F9D
 		public static void AddOnlinePlayerConditionTargetOptionType(FlatBufferBuilder builder, TOnlinePlayerConditionTarget onlinePlayerConditionTargetOptionType)
 		{
 			builder.AddByte(3, (byte)onlinePlayerConditionTargetOptionType, 0);
 		}
 
-		// Token: 0x0601E96B RID: 125291 RVA: 0x00447244 File Offset: 0x00445444
+		// Token: 0x06020517 RID: 132375 RVA: 0x00479DA8 File Offset: 0x00477FA8
 		public static void AddOnlinePlayerConditionTargetOption(FlatBufferBuilder builder, int onlinePlayerConditionTargetOptionOffset)
 		{
 			builder.AddOffset(4, onlinePlayerConditionTargetOptionOffset, 0);
 		}
 
-		// Token: 0x0601E96C RID: 125292 RVA: 0x0044724F File Offset: 0x0044544F
+		// Token: 0x06020518 RID: 132376 RVA: 0x00479DB3 File Offset: 0x00477FB3
 		public static Offset<IComparePlayerMotionState> EndIComparePlayerMotionState(FlatBufferBuilder builder)
 		{
 			return new Offset<IComparePlayerMotionState>(builder.EndTable());
 		}
 
-		// Token: 0x0601E96D RID: 125293 RVA: 0x0044725C File Offset: 0x0044545C
+		// Token: 0x06020519 RID: 132377 RVA: 0x00479DC0 File Offset: 0x00477FC0
 		public IComparePlayerMotionStateT UnPack()
 		{
 			IComparePlayerMotionStateT comparePlayerMotionStateT = new IComparePlayerMotionStateT();
@@ -192,7 +192,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return comparePlayerMotionStateT;
 		}
 
-		// Token: 0x0601E96E RID: 125294 RVA: 0x00447278 File Offset: 0x00445478
+		// Token: 0x0602051A RID: 132378 RVA: 0x00479DDC File Offset: 0x00477FDC
 		public void UnPackTo(IComparePlayerMotionStateT _o)
 		{
 			_o.Type = this.Type;
@@ -213,7 +213,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.OnlinePlayerConditionTargetOption.Value = ((this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>() != null) ? this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0601E96F RID: 125295 RVA: 0x00447340 File Offset: 0x00445540
+		// Token: 0x0602051B RID: 132379 RVA: 0x00479EA4 File Offset: 0x004780A4
 		public static Offset<IComparePlayerMotionState> Pack(FlatBufferBuilder builder, IComparePlayerMotionStateT _o)
 		{
 			if (_o == null)
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IComparePlayerMotionState.CreateIComparePlayerMotionState(builder, _o.Type, _o.MotionState, _o.Compare, onlinePlayerConditionTargetOption_type, onlinePlayerConditionTargetOptionOffset);
 		}
 
-		// Token: 0x0400D4A2 RID: 54434
+		// Token: 0x0400DFA7 RID: 57255
 		private Table __p;
 	}
 }

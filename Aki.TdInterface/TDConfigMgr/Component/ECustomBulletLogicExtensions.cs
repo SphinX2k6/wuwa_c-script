@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200091C RID: 2332
+	// Token: 0x020009C9 RID: 2505
 	public static class ECustomBulletLogicExtensions
 	{
-		// Token: 0x060034AF RID: 13487 RVA: 0x00089DD4 File Offset: 0x00087FD4
+		// Token: 0x0600381B RID: 14363 RVA: 0x00091954 File Offset: 0x0008FB54
 		public static string ToEnumString(this ECustomBulletLogic value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034B0 RID: 13488 RVA: 0x00089DFC File Offset: 0x00087FFC
+		// Token: 0x0600381C RID: 14364 RVA: 0x0009197C File Offset: 0x0008FB7C
 		public static ECustomBulletLogic FromString(string name)
 		{
 			ECustomBulletLogic result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034B1 RID: 13489 RVA: 0x00089E25 File Offset: 0x00088025
+		// Token: 0x0600381D RID: 14365 RVA: 0x000919A5 File Offset: 0x0008FBA5
 		public static bool TryFromString(string name, out ECustomBulletLogic value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060034B2 RID: 13490 RVA: 0x00089E4A File Offset: 0x0008804A
+		// Token: 0x0600381E RID: 14366 RVA: 0x000919CA File Offset: 0x0008FBCA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060034B3 RID: 13491 RVA: 0x00089E5A File Offset: 0x0008805A
+		// Token: 0x0600381F RID: 14367 RVA: 0x000919DA File Offset: 0x0008FBDA
 		public static ECustomBulletLogic[] GetValues()
 		{
 			return new ECustomBulletLogic[1];
 		}
 
-		// Token: 0x060034B4 RID: 13492 RVA: 0x00089E62 File Offset: 0x00088062
+		// Token: 0x06003820 RID: 14368 RVA: 0x000919E2 File Offset: 0x0008FBE2
 		public static string[] GetNames()
 		{
 			return new string[]

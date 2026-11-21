@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042A1 RID: 17057
+	// Token: 0x020046FD RID: 18173
 	public struct IWordArtDefaultResourceType : IFlatbufferObject
 	{
-		// Token: 0x17007915 RID: 30997
-		// (get) Token: 0x0601945D RID: 103517 RVA: 0x003A129F File Offset: 0x0039F49F
+		// Token: 0x17007F46 RID: 32582
+		// (get) Token: 0x0601ABC9 RID: 109513 RVA: 0x003CC977 File Offset: 0x003CAB77
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601945E RID: 103518 RVA: 0x003A12AC File Offset: 0x0039F4AC
+		// Token: 0x0601ABCA RID: 109514 RVA: 0x003CC984 File Offset: 0x003CAB84
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601945F RID: 103519 RVA: 0x003A12B4 File Offset: 0x0039F4B4
+		// Token: 0x0601ABCB RID: 109515 RVA: 0x003CC98C File Offset: 0x003CAB8C
 		public static IWordArtDefaultResourceType GetRootAsIWordArtDefaultResourceType(ByteBuffer _bb)
 		{
 			return IWordArtDefaultResourceType.GetRootAsIWordArtDefaultResourceType(_bb, default(IWordArtDefaultResourceType));
 		}
 
-		// Token: 0x06019460 RID: 103520 RVA: 0x003A12D0 File Offset: 0x0039F4D0
+		// Token: 0x0601ABCC RID: 109516 RVA: 0x003CC9A8 File Offset: 0x003CABA8
 		public static IWordArtDefaultResourceType GetRootAsIWordArtDefaultResourceType(ByteBuffer _bb, IWordArtDefaultResourceType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019461 RID: 103521 RVA: 0x003A12ED File Offset: 0x0039F4ED
+		// Token: 0x0601ABCD RID: 109517 RVA: 0x003CC9C5 File Offset: 0x003CABC5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019462 RID: 103522 RVA: 0x003A12FC File Offset: 0x0039F4FC
+		// Token: 0x0601ABCE RID: 109518 RVA: 0x003CC9D4 File Offset: 0x003CABD4
 		public IWordArtDefaultResourceType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007916 RID: 30998
-		// (get) Token: 0x06019463 RID: 103523 RVA: 0x003A130C File Offset: 0x0039F50C
+		// Token: 0x17007F47 RID: 32583
+		// (get) Token: 0x0601ABCF RID: 109519 RVA: 0x003CC9E4 File Offset: 0x003CABE4
 		public EWordArtResourceType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007917 RID: 30999
-		// (get) Token: 0x06019464 RID: 103524 RVA: 0x003A1348 File Offset: 0x0039F548
+		// Token: 0x17007F48 RID: 32584
+		// (get) Token: 0x0601ABD0 RID: 109520 RVA: 0x003CCA20 File Offset: 0x003CAC20
 		public float Scale
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007918 RID: 31000
-		// (get) Token: 0x06019465 RID: 103525 RVA: 0x003A1388 File Offset: 0x0039F588
+		// Token: 0x17007F49 RID: 32585
+		// (get) Token: 0x0601ABD1 RID: 109521 RVA: 0x003CCA60 File Offset: 0x003CAC60
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06019466 RID: 103526 RVA: 0x003A13C4 File Offset: 0x0039F5C4
+		// Token: 0x0601ABD2 RID: 109522 RVA: 0x003CCA9C File Offset: 0x003CAC9C
 		public static Offset<IWordArtDefaultResourceType> CreateIWordArtDefaultResourceType(FlatBufferBuilder builder, EWordArtResourceType Type = EWordArtResourceType.Default, float Scale = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IWordArtDefaultResourceType.EndIWordArtDefaultResourceType(builder);
 		}
 
-		// Token: 0x06019467 RID: 103527 RVA: 0x003A13E8 File Offset: 0x0039F5E8
+		// Token: 0x0601ABD3 RID: 109523 RVA: 0x003CCAC0 File Offset: 0x003CACC0
 		public static void StartIWordArtDefaultResourceType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06019468 RID: 103528 RVA: 0x003A13F1 File Offset: 0x0039F5F1
+		// Token: 0x0601ABD4 RID: 109524 RVA: 0x003CCAC9 File Offset: 0x003CACC9
 		public static void AddType(FlatBufferBuilder builder, EWordArtResourceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06019469 RID: 103529 RVA: 0x003A13FC File Offset: 0x0039F5FC
+		// Token: 0x0601ABD5 RID: 109525 RVA: 0x003CCAD4 File Offset: 0x003CACD4
 		public static void AddScale(FlatBufferBuilder builder, float scale)
 		{
 			builder.AddFloat(1, scale, 0.0);
 		}
 
-		// Token: 0x0601946A RID: 103530 RVA: 0x003A140F File Offset: 0x0039F60F
+		// Token: 0x0601ABD6 RID: 109526 RVA: 0x003CCAE7 File Offset: 0x003CACE7
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0601946B RID: 103531 RVA: 0x003A141A File Offset: 0x0039F61A
+		// Token: 0x0601ABD7 RID: 109527 RVA: 0x003CCAF2 File Offset: 0x003CACF2
 		public static Offset<IWordArtDefaultResourceType> EndIWordArtDefaultResourceType(FlatBufferBuilder builder)
 		{
 			return new Offset<IWordArtDefaultResourceType>(builder.EndTable());
 		}
 
-		// Token: 0x0601946C RID: 103532 RVA: 0x003A1428 File Offset: 0x0039F628
+		// Token: 0x0601ABD8 RID: 109528 RVA: 0x003CCB00 File Offset: 0x003CAD00
 		public IWordArtDefaultResourceTypeT UnPack()
 		{
 			IWordArtDefaultResourceTypeT wordArtDefaultResourceTypeT = new IWordArtDefaultResourceTypeT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return wordArtDefaultResourceTypeT;
 		}
 
-		// Token: 0x0601946D RID: 103533 RVA: 0x003A1443 File Offset: 0x0039F643
+		// Token: 0x0601ABD9 RID: 109529 RVA: 0x003CCB1B File Offset: 0x003CAD1B
 		public void UnPackTo(IWordArtDefaultResourceTypeT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601946E RID: 103534 RVA: 0x003A146C File Offset: 0x0039F66C
+		// Token: 0x0601ABDA RID: 109530 RVA: 0x003CCB44 File Offset: 0x003CAD44
 		public static Offset<IWordArtDefaultResourceType> Pack(FlatBufferBuilder builder, IWordArtDefaultResourceTypeT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IWordArtDefaultResourceType.CreateIWordArtDefaultResourceType(builder, _o.Type, _o.Scale, _o.NullMask);
 		}
 
-		// Token: 0x0400BF42 RID: 48962
+		// Token: 0x0400C94F RID: 51535
 		private Table __p;
 	}
 }

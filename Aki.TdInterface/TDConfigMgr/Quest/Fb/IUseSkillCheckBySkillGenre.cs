@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001364 RID: 4964
+	// Token: 0x020014B4 RID: 5300
 	public class IUseSkillCheckBySkillGenre : IUseSkillCheckBase
 	{
-		// Token: 0x0600719B RID: 29083 RVA: 0x00111B3E File Offset: 0x0010FD3E
-		[NullableContext(1)]
+		// Token: 0x0600783B RID: 30779 RVA: 0x001200AA File Offset: 0x0011E2AA
 		public static IUseSkillCheckBySkillGenre Create(IUseSkillCheckBySkillGenre? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170024A6 RID: 9382
-		// (get) Token: 0x0600719C RID: 29084 RVA: 0x00111B5D File Offset: 0x0010FD5D
+		// Token: 0x17002675 RID: 9845
+		// (get) Token: 0x0600783C RID: 30780 RVA: 0x001200C9 File Offset: 0x0011E2C9
 		public override EUseSkillCheckType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024A7 RID: 9383
-		// (get) Token: 0x0600719D RID: 29085 RVA: 0x00111B6A File Offset: 0x0010FD6A
+		// Token: 0x17002676 RID: 9846
+		// (get) Token: 0x0600783D RID: 30781 RVA: 0x001200D6 File Offset: 0x0011E2D6
 		public virtual ESkillCategory SkillGenre
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040041A4 RID: 16804
+		// Token: 0x04004520 RID: 17696
 		private IUseSkillCheckBySkillGenre Instance;
 	}
 }

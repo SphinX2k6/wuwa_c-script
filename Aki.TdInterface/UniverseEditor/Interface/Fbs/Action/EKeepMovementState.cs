@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F94 RID: 24468
+	// Token: 0x020065DB RID: 26075
 	public enum EKeepMovementState : byte
 	{
-		// Token: 0x0400FE29 RID: 65065
+		// Token: 0x04010BB3 RID: 68531
 		Kite,
-		// Token: 0x0400FE2A RID: 65066
+		// Token: 0x04010BB4 RID: 68532
 		Soar
 	}
 }

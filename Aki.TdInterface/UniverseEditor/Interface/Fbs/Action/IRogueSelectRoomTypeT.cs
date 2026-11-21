@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EF2 RID: 28402
+	// Token: 0x02007676 RID: 30326
 	public class IRogueSelectRoomTypeT
 	{
-		// Token: 0x1700D349 RID: 54089
-		// (get) Token: 0x0603230D RID: 205581 RVA: 0x006C8516 File Offset: 0x006C6716
-		// (set) Token: 0x0603230E RID: 205582 RVA: 0x006C851E File Offset: 0x006C671E
+		// Token: 0x1700DEA0 RID: 56992
+		// (get) Token: 0x0603534D RID: 217933 RVA: 0x0072424A File Offset: 0x0072244A
+		// (set) Token: 0x0603534E RID: 217934 RVA: 0x00724252 File Offset: 0x00722452
 		public ERogueSelectRoomType Type { get; set; }
 
-		// Token: 0x0603230F RID: 205583 RVA: 0x006C8527 File Offset: 0x006C6727
+		// Token: 0x0603534F RID: 217935 RVA: 0x0072425B File Offset: 0x0072245B
 		public IRogueSelectRoomTypeT()
 		{
 			this.Type = ERogueSelectRoomType.Role;

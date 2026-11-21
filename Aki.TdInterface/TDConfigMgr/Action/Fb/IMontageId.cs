@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002884 RID: 10372
+	// Token: 0x02002B59 RID: 11097
 	public class IMontageId
 	{
-		// Token: 0x0600E5BB RID: 58811 RVA: 0x0021C3D2 File Offset: 0x0021A5D2
-		[NullableContext(1)]
+		// Token: 0x0600F3EA RID: 62442 RVA: 0x00239354 File Offset: 0x00237554
 		public static IMontageId Create(IMontageId? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004675 RID: 18037
-		// (get) Token: 0x0600E5BC RID: 58812 RVA: 0x0021C3F1 File Offset: 0x0021A5F1
+		// Token: 0x170049E6 RID: 18918
+		// (get) Token: 0x0600F3EB RID: 62443 RVA: 0x00239373 File Offset: 0x00237573
 		public virtual int MontageId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004676 RID: 18038
-		// (get) Token: 0x0600E5BD RID: 58813 RVA: 0x0021C400 File Offset: 0x0021A600
+		// Token: 0x170049E7 RID: 18919
+		// (get) Token: 0x0600F3EC RID: 62444 RVA: 0x00239380 File Offset: 0x00237580
 		public virtual bool? IsAbp
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F08 RID: 32520
+		// Token: 0x040085C7 RID: 34247
 		private IMontageId Instance;
 	}
 }

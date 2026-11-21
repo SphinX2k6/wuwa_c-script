@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001320 RID: 4896
+	// Token: 0x02001470 RID: 5232
 	public class IRoleTowerChallengeTitleTypeBase
 	{
-		// Token: 0x06007060 RID: 28768 RVA: 0x0010F714 File Offset: 0x0010D914
-		[NullableContext(1)]
+		// Token: 0x06007700 RID: 30464 RVA: 0x0011DC80 File Offset: 0x0011BE80
 		public static IRoleTowerChallengeTitleTypeBase Create(IRoleTowerChallengeTitleTypeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023F3 RID: 9203
-		// (get) Token: 0x06007061 RID: 28769 RVA: 0x0010F733 File Offset: 0x0010D933
+		// Token: 0x170025C2 RID: 9666
+		// (get) Token: 0x06007701 RID: 30465 RVA: 0x0011DC9F File Offset: 0x0011BE9F
 		public virtual ERoleTowerChallengeTitleType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040D2 RID: 16594
+		// Token: 0x0400444E RID: 17486
 		private IRoleTowerChallengeTitleTypeBase Instance;
 	}
 }

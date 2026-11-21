@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DBF RID: 15807
+	// Token: 0x020041D6 RID: 16854
 	public class ICrossSceneSyncKillMonsterT
 	{
-		// Token: 0x17006D1F RID: 27935
-		// (get) Token: 0x060160E7 RID: 90343 RVA: 0x0033096B File Offset: 0x0032EB6B
-		// (set) Token: 0x060160E8 RID: 90344 RVA: 0x00330973 File Offset: 0x0032EB73
+		// Token: 0x170072D9 RID: 29401
+		// (get) Token: 0x06017620 RID: 95776 RVA: 0x00357CF3 File Offset: 0x00355EF3
+		// (set) Token: 0x06017621 RID: 95777 RVA: 0x00357CFB File Offset: 0x00355EFB
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x17006D20 RID: 27936
-		// (get) Token: 0x060160E9 RID: 90345 RVA: 0x0033097C File Offset: 0x0032EB7C
-		// (set) Token: 0x060160EA RID: 90346 RVA: 0x00330984 File Offset: 0x0032EB84
+		// Token: 0x170072DA RID: 29402
+		// (get) Token: 0x06017622 RID: 95778 RVA: 0x00357D04 File Offset: 0x00355F04
+		// (set) Token: 0x06017623 RID: 95779 RVA: 0x00357D0C File Offset: 0x00355F0C
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x17006D21 RID: 27937
-		// (get) Token: 0x060160EB RID: 90347 RVA: 0x0033098D File Offset: 0x0032EB8D
-		// (set) Token: 0x060160EC RID: 90348 RVA: 0x00330995 File Offset: 0x0032EB95
+		// Token: 0x170072DB RID: 29403
+		// (get) Token: 0x06017624 RID: 95780 RVA: 0x00357D15 File Offset: 0x00355F15
+		// (set) Token: 0x06017625 RID: 95781 RVA: 0x00357D1D File Offset: 0x00355F1D
 		public int EntityBundleId { get; set; }
 
-		// Token: 0x17006D22 RID: 27938
-		// (get) Token: 0x060160ED RID: 90349 RVA: 0x0033099E File Offset: 0x0032EB9E
-		// (set) Token: 0x060160EE RID: 90350 RVA: 0x003309A6 File Offset: 0x0032EBA6
+		// Token: 0x170072DC RID: 29404
+		// (get) Token: 0x06017626 RID: 95782 RVA: 0x00357D26 File Offset: 0x00355F26
+		// (set) Token: 0x06017627 RID: 95783 RVA: 0x00357D2E File Offset: 0x00355F2E
 		public int PosEntityId { get; set; }
 
-		// Token: 0x060160EF RID: 90351 RVA: 0x003309AF File Offset: 0x0032EBAF
+		// Token: 0x06017628 RID: 95784 RVA: 0x00357D37 File Offset: 0x00355F37
 		public ICrossSceneSyncKillMonsterT()
 		{
 			this.Type = EChildQuest.DoInteract;

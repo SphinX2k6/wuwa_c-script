@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 {
-	// Token: 0x02007046 RID: 28742
+	// Token: 0x020061C7 RID: 25031
 	public enum EMotorcycleSide
 	{
-		// Token: 0x040249C6 RID: 149958
+		// Token: 0x0401FC7C RID: 130172
 		Left,
-		// Token: 0x040249C7 RID: 149959
+		// Token: 0x0401FC7D RID: 130173
 		Middle,
-		// Token: 0x040249C8 RID: 149960
+		// Token: 0x0401FC7E RID: 130174
 		Right
 	}
 }

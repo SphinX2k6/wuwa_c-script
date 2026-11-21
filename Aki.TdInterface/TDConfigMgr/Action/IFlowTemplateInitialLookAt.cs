@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A9D RID: 6813
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C36 RID: 7222
 	public class IFlowTemplateInitialLookAt
 	{
-		// Token: 0x06009222 RID: 37410 RVA: 0x00153E50 File Offset: 0x00152050
+		// Token: 0x060099A2 RID: 39330 RVA: 0x0016403C File Offset: 0x0016223C
 		private IFlowTemplateInitialLookAt_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009223 RID: 37411 RVA: 0x00153E88 File Offset: 0x00152088
+		// Token: 0x060099A3 RID: 39331 RVA: 0x00164074 File Offset: 0x00162274
 		public static IFlowTemplateInitialLookAt Create([Nullable(2)] IFlowTemplateInitialLookAt instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009224 RID: 37412 RVA: 0x00153E9B File Offset: 0x0015209B
+		// Token: 0x060099A4 RID: 39332 RVA: 0x00164087 File Offset: 0x00162287
 		public static IFlowTemplateInitialLookAt CreateFromSetValue([Nullable(2)] IFlowTemplateInitialLookAt_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009225 RID: 37413 RVA: 0x00153EAE File Offset: 0x001520AE
+		// Token: 0x060099A5 RID: 39333 RVA: 0x0016409A File Offset: 0x0016229A
 		public IFlowTemplateInitialLookAt_SetValue ToSetValue()
 		{
 			return new IFlowTemplateInitialLookAt_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E7B RID: 11899
-		// (get) Token: 0x06009226 RID: 37414 RVA: 0x00153ECD File Offset: 0x001520CD
-		// (set) Token: 0x06009227 RID: 37415 RVA: 0x00153EF8 File Offset: 0x001520F8
+		// Token: 0x1700308D RID: 12429
+		// (get) Token: 0x060099A6 RID: 39334 RVA: 0x001640B9 File Offset: 0x001622B9
+		// (set) Token: 0x060099A7 RID: 39335 RVA: 0x001640E4 File Offset: 0x001622E4
 		public virtual int ActorIndex
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E7C RID: 11900
-		// (get) Token: 0x06009228 RID: 37416 RVA: 0x00153F06 File Offset: 0x00152106
-		// (set) Token: 0x06009229 RID: 37417 RVA: 0x00153F2D File Offset: 0x0015212D
+		// Token: 0x1700308E RID: 12430
+		// (get) Token: 0x060099A8 RID: 39336 RVA: 0x001640F2 File Offset: 0x001622F2
+		// (set) Token: 0x060099A9 RID: 39337 RVA: 0x00164119 File Offset: 0x00162319
 		public virtual IActorLookAtData Target
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A06 RID: 23046
+		// Token: 0x04005E76 RID: 24182
 		[Nullable(2)]
 		protected IFlowTemplateInitialLookAt FbInstance;
 
-		// Token: 0x04005A07 RID: 23047
+		// Token: 0x04005E77 RID: 24183
 		[Nullable(2)]
 		protected IFlowTemplateInitialLookAt_SetValue PocoInterface;
 	}

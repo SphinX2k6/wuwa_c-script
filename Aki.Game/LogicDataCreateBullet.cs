@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002DF5 RID: 11765
+// Token: 0x02002350 RID: 9040
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataCreateBullet.LogicDataCreateBullet_C")]
 public class LogicDataCreateBullet : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170021DA RID: 8666
-	// (get) Token: 0x06018B61 RID: 101217 RVA: 0x00658214 File Offset: 0x00656414
-	// (set) Token: 0x06018B62 RID: 101218 RVA: 0x00658224 File Offset: 0x00656424
+	// Token: 0x1700223E RID: 8766
+	// (get) Token: 0x06016416 RID: 91158 RVA: 0x0067E298 File Offset: 0x0067C498
+	// (set) Token: 0x06016417 RID: 91159 RVA: 0x0067E2A8 File Offset: 0x0067C4A8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EBulletObject BulletOwner
 	{
@@ -30,9 +30,9 @@ public class LogicDataCreateBullet : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021DB RID: 8667
-	// (get) Token: 0x06018B63 RID: 101219 RVA: 0x00658235 File Offset: 0x00656435
-	// (set) Token: 0x06018B64 RID: 101220 RVA: 0x00658249 File Offset: 0x00656449
+	// Token: 0x1700223F RID: 8767
+	// (get) Token: 0x06016418 RID: 91160 RVA: 0x0067E2B9 File Offset: 0x0067C4B9
+	// (set) Token: 0x06016419 RID: 91161 RVA: 0x0067E2CD File Offset: 0x0067C4CD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string CreateBulletRowName
 	{
@@ -46,9 +46,9 @@ public class LogicDataCreateBullet : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021DC RID: 8668
-	// (get) Token: 0x06018B65 RID: 101221 RVA: 0x0065825E File Offset: 0x0065645E
-	// (set) Token: 0x06018B66 RID: 101222 RVA: 0x0065826E File Offset: 0x0065646E
+	// Token: 0x17002240 RID: 8768
+	// (get) Token: 0x0601641A RID: 91162 RVA: 0x0067E2E2 File Offset: 0x0067C4E2
+	// (set) Token: 0x0601641B RID: 91163 RVA: 0x0067E2F2 File Offset: 0x0067C4F2
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EBulletObject BulletTransform
 	{
@@ -62,9 +62,9 @@ public class LogicDataCreateBullet : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021DD RID: 8669
-	// (get) Token: 0x06018B67 RID: 101223 RVA: 0x0065827F File Offset: 0x0065647F
-	// (set) Token: 0x06018B68 RID: 101224 RVA: 0x0065828F File Offset: 0x0065648F
+	// Token: 0x17002241 RID: 8769
+	// (get) Token: 0x0601641C RID: 91164 RVA: 0x0067E303 File Offset: 0x0067C503
+	// (set) Token: 0x0601641D RID: 91165 RVA: 0x0067E313 File Offset: 0x0067C513
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EBulletObject AttachToActor
 	{
@@ -78,9 +78,9 @@ public class LogicDataCreateBullet : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021DE RID: 8670
-	// (get) Token: 0x06018B69 RID: 101225 RVA: 0x006582A0 File Offset: 0x006564A0
-	// (set) Token: 0x06018B6A RID: 101226 RVA: 0x006582B4 File Offset: 0x006564B4
+	// Token: 0x17002242 RID: 8770
+	// (get) Token: 0x0601641E RID: 91166 RVA: 0x0067E324 File Offset: 0x0067C524
+	// (set) Token: 0x0601641F RID: 91167 RVA: 0x0067E338 File Offset: 0x0067C538
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string AttachToBoneName
 	{
@@ -94,9 +94,9 @@ public class LogicDataCreateBullet : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170021DF RID: 8671
-	// (get) Token: 0x06018B6B RID: 101227 RVA: 0x006582C9 File Offset: 0x006564C9
-	// (set) Token: 0x06018B6C RID: 101228 RVA: 0x006582DD File Offset: 0x006564DD
+	// Token: 0x17002243 RID: 8771
+	// (get) Token: 0x06016420 RID: 91168 RVA: 0x0067E34D File Offset: 0x0067C54D
+	// (set) Token: 0x06016421 RID: 91169 RVA: 0x0067E361 File Offset: 0x0067C561
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string FlashBulletRowName
 	{
@@ -110,7 +110,7 @@ public class LogicDataCreateBullet : LogicDataBase, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x06018B6D RID: 101229 RVA: 0x006582F2 File Offset: 0x006564F2
+	// Token: 0x06016422 RID: 91170 RVA: 0x0067E376 File Offset: 0x0067C576
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataCreateBullet._ClassPtr == IntPtr.Zero)
@@ -120,45 +120,45 @@ public class LogicDataCreateBullet : LogicDataBase, IUnrealUObject, IUnrealObjec
 		return LogicDataCreateBullet._ClassPtr;
 	}
 
-	// Token: 0x06018B6E RID: 101230 RVA: 0x00658318 File Offset: 0x00656518
+	// Token: 0x06016423 RID: 91171 RVA: 0x0067E39C File Offset: 0x0067C59C
 	public LogicDataCreateBullet() : this(BuiltinUtils.AllocNativeUObject(LogicDataCreateBullet.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018B6F RID: 101231 RVA: 0x00658340 File Offset: 0x00656540
+	// Token: 0x06016424 RID: 91172 RVA: 0x0067E3C4 File Offset: 0x0067C5C4
 	public LogicDataCreateBullet(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataCreateBullet.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018B70 RID: 101232 RVA: 0x00658373 File Offset: 0x00656573
+	// Token: 0x06016425 RID: 91173 RVA: 0x0067E3F7 File Offset: 0x0067C5F7
 	protected LogicDataCreateBullet(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B850 RID: 47184
+	// Token: 0x0400BBD6 RID: 48086
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataCreateBullet.LogicDataCreateBullet_C";
 
-	// Token: 0x0400B851 RID: 47185
+	// Token: 0x0400BBD7 RID: 48087
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B852 RID: 47186
+	// Token: 0x0400BBD8 RID: 48088
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B853 RID: 47187
+	// Token: 0x0400BBD9 RID: 48089
 	private static int __PropertyOffset_BulletOwner;
 
-	// Token: 0x0400B854 RID: 47188
+	// Token: 0x0400BBDA RID: 48090
 	private static int __PropertyOffset_CreateBulletRowName;
 
-	// Token: 0x0400B855 RID: 47189
+	// Token: 0x0400BBDB RID: 48091
 	private static int __PropertyOffset_BulletTransform;
 
-	// Token: 0x0400B856 RID: 47190
+	// Token: 0x0400BBDC RID: 48092
 	private static int __PropertyOffset_AttachToActor;
 
-	// Token: 0x0400B857 RID: 47191
+	// Token: 0x0400BBDD RID: 48093
 	private static int __PropertyOffset_AttachToBoneName;
 
-	// Token: 0x0400B858 RID: 47192
+	// Token: 0x0400BBDE RID: 48094
 	private static int __PropertyOffset_FlashBulletRowName;
 }

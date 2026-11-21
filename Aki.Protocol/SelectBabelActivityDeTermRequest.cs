@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020011BC RID: 4540
+	// Token: 0x020011F6 RID: 4598
 	[NetMessage(EMessageId.SelectBabelActivityDeTermRequest)]
 	public sealed class SelectBabelActivityDeTermRequest : IMessage<SelectBabelActivityDeTermRequest>, IMessage, IEquatable<SelectBabelActivityDeTermRequest>, IDeepCloneable<SelectBabelActivityDeTermRequest>, IBufferMessage
 	{
-		// Token: 0x060183A0 RID: 99232 RVA: 0x00386E67 File Offset: 0x00385067
+		// Token: 0x06018941 RID: 100673 RVA: 0x00396197 File Offset: 0x00394397
 		[NullableContext(1)]
 		public static SelectBabelActivityDeTermRequest Create()
 		{
 			return new SelectBabelActivityDeTermRequest();
 		}
 
-		// Token: 0x1700519F RID: 20895
-		// (get) Token: 0x060183A1 RID: 99233 RVA: 0x00386E6E File Offset: 0x0038506E
+		// Token: 0x1700530B RID: 21259
+		// (get) Token: 0x06018942 RID: 100674 RVA: 0x0039619E File Offset: 0x0039439E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170051A0 RID: 20896
-		// (get) Token: 0x060183A2 RID: 99234 RVA: 0x00386E71 File Offset: 0x00385071
+		// Token: 0x1700530C RID: 21260
+		// (get) Token: 0x06018943 RID: 100675 RVA: 0x003961A1 File Offset: 0x003943A1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060183A3 RID: 99235 RVA: 0x00386E78 File Offset: 0x00385078
+		// Token: 0x06018944 RID: 100676 RVA: 0x003961A8 File Offset: 0x003943A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SelectBabelActivityDeTermRequest()
 		{
 		}
 
-		// Token: 0x060183A4 RID: 99236 RVA: 0x00386E8B File Offset: 0x0038508B
+		// Token: 0x06018945 RID: 100677 RVA: 0x003961BB File Offset: 0x003943BB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SelectBabelActivityDeTermRequest(SelectBabelActivityDeTermRequest other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060183A5 RID: 99237 RVA: 0x00386EC1 File Offset: 0x003850C1
+		// Token: 0x06018946 RID: 100678 RVA: 0x003961F1 File Offset: 0x003943F1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SelectBabelActivityDeTermRequest Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new SelectBabelActivityDeTermRequest(this);
 		}
 
-		// Token: 0x170051A1 RID: 20897
-		// (get) Token: 0x060183A6 RID: 99238 RVA: 0x00386EC9 File Offset: 0x003850C9
-		// (set) Token: 0x060183A7 RID: 99239 RVA: 0x00386ED1 File Offset: 0x003850D1
+		// Token: 0x1700530D RID: 21261
+		// (get) Token: 0x06018947 RID: 100679 RVA: 0x003961F9 File Offset: 0x003943F9
+		// (set) Token: 0x06018948 RID: 100680 RVA: 0x00396201 File Offset: 0x00394401
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int BabelTowerLevelId
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170051A2 RID: 20898
-		// (get) Token: 0x060183A8 RID: 99240 RVA: 0x00386EDA File Offset: 0x003850DA
+		// Token: 0x1700530E RID: 21262
+		// (get) Token: 0x06018949 RID: 100681 RVA: 0x0039620A File Offset: 0x0039440A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> BabelDeTermId
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060183A9 RID: 99241 RVA: 0x00386EE2 File Offset: 0x003850E2
+		// Token: 0x0601894A RID: 100682 RVA: 0x00396212 File Offset: 0x00394412
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SelectBabelActivityDeTermRequest);
 		}
 
-		// Token: 0x060183AA RID: 99242 RVA: 0x00386EF0 File Offset: 0x003850F0
+		// Token: 0x0601894B RID: 100683 RVA: 0x00396220 File Offset: 0x00394420
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SelectBabelActivityDeTermRequest other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.BabelTowerLevelId == other.BabelTowerLevelId && this.babelDeTermId_.Equals(other.babelDeTermId_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060183AB RID: 99243 RVA: 0x00386F40 File Offset: 0x00385140
+		// Token: 0x0601894C RID: 100684 RVA: 0x00396270 File Offset: 0x00394470
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060183AC RID: 99244 RVA: 0x00386F8D File Offset: 0x0038518D
+		// Token: 0x0601894D RID: 100685 RVA: 0x003962BD File Offset: 0x003944BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060183AD RID: 99245 RVA: 0x00386F9A File Offset: 0x0038519A
+		// Token: 0x0601894E RID: 100686 RVA: 0x003962CA File Offset: 0x003944CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,24 +147,24 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060183AE RID: 99246 RVA: 0x00386FA4 File Offset: 0x003851A4
+		// Token: 0x0601894F RID: 100687 RVA: 0x003962D4 File Offset: 0x003944D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.babelDeTermId_.WriteTo(ref output, SelectBabelActivityDeTermRequest._repeated_babelDeTermId_codec);
 			if (this.BabelTowerLevelId != 0)
 			{
-				output.WriteRawTag(112);
+				output.WriteRawTag(56);
 				output.WriteInt32(this.BabelTowerLevelId);
 			}
+			this.babelDeTermId_.WriteTo(ref output, SelectBabelActivityDeTermRequest._repeated_babelDeTermId_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x060183AF RID: 99247 RVA: 0x00386FF4 File Offset: 0x003851F4
+		// Token: 0x06018950 RID: 100688 RVA: 0x00396324 File Offset: 0x00394524
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060183B0 RID: 99248 RVA: 0x00387048 File Offset: 0x00385248
+		// Token: 0x06018951 RID: 100689 RVA: 0x00396378 File Offset: 0x00394578
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SelectBabelActivityDeTermRequest other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060183B1 RID: 99249 RVA: 0x00387095 File Offset: 0x00385295
+		// Token: 0x06018952 RID: 100690 RVA: 0x003963C5 File Offset: 0x003945C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060183B2 RID: 99250 RVA: 0x003870A0 File Offset: 0x003852A0
+		// Token: 0x06018953 RID: 100691 RVA: 0x003963D0 File Offset: 0x003945D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,40 +219,40 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 40U && num != 42U)
+				if (num != 56U)
 				{
-					if (num != 112U)
+					if (num != 96U && num != 98U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.BabelTowerLevelId = input.ReadInt32();
+						this.babelDeTermId_.AddEntriesFrom(ref input, SelectBabelActivityDeTermRequest._repeated_babelDeTermId_codec);
 					}
 				}
 				else
 				{
-					this.babelDeTermId_.AddEntriesFrom(ref input, SelectBabelActivityDeTermRequest._repeated_babelDeTermId_codec);
+					this.BabelTowerLevelId = input.ReadInt32();
 				}
 			}
 		}
 
-		// Token: 0x04008FAB RID: 36779
+		// Token: 0x0400923E RID: 37438
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008FAC RID: 36780
-		public const int BabelTowerLevelIdFieldNumber = 14;
+		// Token: 0x0400923F RID: 37439
+		public const int BabelTowerLevelIdFieldNumber = 7;
 
-		// Token: 0x04008FAD RID: 36781
+		// Token: 0x04009240 RID: 37440
 		private int babelTowerLevelId_;
 
-		// Token: 0x04008FAE RID: 36782
-		public const int BabelDeTermIdFieldNumber = 5;
+		// Token: 0x04009241 RID: 37441
+		public const int BabelDeTermIdFieldNumber = 12;
 
-		// Token: 0x04008FAF RID: 36783
-		private static readonly FieldCodec<int> _repeated_babelDeTermId_codec = FieldCodec.ForInt32(42U);
+		// Token: 0x04009242 RID: 37442
+		private static readonly FieldCodec<int> _repeated_babelDeTermId_codec = FieldCodec.ForInt32(98U);
 
-		// Token: 0x04008FB0 RID: 36784
+		// Token: 0x04009243 RID: 37443
 		private readonly RepeatedField<int> babelDeTermId_ = new RepeatedField<int>();
 	}
 }

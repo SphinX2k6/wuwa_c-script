@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E0F RID: 24079
+	// Token: 0x02004DF4 RID: 19956
 	public class SpecialEnergyBarXinYueHuSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D3C0 RID: 250816 RVA: 0x00EC1318 File Offset: 0x00EBF518
+		// Token: 0x0603234F RID: 205647 RVA: 0x00E12878 File Offset: 0x00E10A78
 		protected override void OnStart()
 		{
 			this.OverrideColor = true;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D3C1 RID: 250817 RVA: 0x00EC13D0 File Offset: 0x00EBF5D0
+		// Token: 0x06032350 RID: 205648 RVA: 0x00E12930 File Offset: 0x00E10B30
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			base.RefreshBarPercent(isStart);
@@ -41,11 +41,11 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			percentCallback(this.Index, curPercent);
 		}
 
-		// Token: 0x0401FEE5 RID: 130789
+		// Token: 0x0401A9AC RID: 108972
 		[Nullable(2)]
 		public Action<int, float> PercentCallback;
 
-		// Token: 0x0401FEE6 RID: 130790
+		// Token: 0x0401A9AD RID: 108973
 		public int Index;
 	}
 }

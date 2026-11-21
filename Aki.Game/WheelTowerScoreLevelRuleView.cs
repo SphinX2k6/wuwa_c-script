@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001642 RID: 5698
+// Token: 0x02000AFA RID: 2810
 public class WheelTowerScoreLevelRuleView : UiViewBase
 {
-	// Token: 0x0600A01B RID: 40987 RVA: 0x002339AB File Offset: 0x00231BAB
+	// Token: 0x060073F9 RID: 29689 RVA: 0x0023D7EF File Offset: 0x0023B9EF
 	[NullableContext(1)]
 	public WheelTowerScoreLevelRuleView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600A01C RID: 40988 RVA: 0x002339B4 File Offset: 0x00231BB4
+	// Token: 0x060073FA RID: 29690 RVA: 0x0023D7F8 File Offset: 0x0023B9F8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -36,7 +36,7 @@ public class WheelTowerScoreLevelRuleView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A01D RID: 40989 RVA: 0x00233A60 File Offset: 0x00231C60
+	// Token: 0x060073FB RID: 29691 RVA: 0x0023D8A4 File Offset: 0x0023BAA4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerScoreLevelRuleView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -47,17 +47,17 @@ public class WheelTowerScoreLevelRuleView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A01E RID: 40990 RVA: 0x00233AA3 File Offset: 0x00231CA3
+	// Token: 0x060073FC RID: 29692 RVA: 0x0023D8E7 File Offset: 0x0023BAE7
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x040048DC RID: 18652
+	// Token: 0x04004982 RID: 18818
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040048DD RID: 18653
+	// Token: 0x04004983 RID: 18819
 	[Nullable(new byte[]
 	{
 		2,

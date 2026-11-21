@@ -2,23 +2,23 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002E8E RID: 11918
+// Token: 0x020023E0 RID: 9184
 [NullableContext(1)]
 public interface IBuffModifierData
 {
-	// Token: 0x17002321 RID: 8993
-	// (get) Token: 0x060197B0 RID: 104368
+	// Token: 0x170023AC RID: 9132
+	// (get) Token: 0x06017086 RID: 94342
 	EAttributeType AttributeId { get; }
 
-	// Token: 0x17002322 RID: 8994
-	// (get) Token: 0x060197B1 RID: 104369
+	// Token: 0x170023AD RID: 9133
+	// (get) Token: 0x06017087 RID: 94343
 	float[] Value1 { get; }
 
-	// Token: 0x17002323 RID: 8995
-	// (get) Token: 0x060197B2 RID: 104370
+	// Token: 0x170023AE RID: 9134
+	// (get) Token: 0x06017088 RID: 94344
 	float[] Value2 { get; }
 
-	// Token: 0x17002324 RID: 8996
-	// (get) Token: 0x060197B3 RID: 104371
+	// Token: 0x170023AF RID: 9135
+	// (get) Token: 0x06017089 RID: 94345
 	int[] CalculationPolicy { get; }
 }

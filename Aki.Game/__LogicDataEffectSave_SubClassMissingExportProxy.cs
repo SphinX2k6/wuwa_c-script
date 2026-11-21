@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020038FD RID: 14589
+// Token: 0x02002E76 RID: 11894
 public class __LogicDataEffectSave_SubClassMissingExportProxy : __LogicDataEffectSave_InheritProxy
 {
-	// Token: 0x0601EB72 RID: 125810 RVA: 0x00898244 File Offset: 0x00896444
+	// Token: 0x0601C82A RID: 116778 RVA: 0x008BC6E8 File Offset: 0x008BA8E8
 	[NullableContext(1)]
 	protected __LogicDataEffectSave_SubClassMissingExportProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataEffectSave.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601EB73 RID: 125811 RVA: 0x00898277 File Offset: 0x00896477
+	// Token: 0x0601C82B RID: 116779 RVA: 0x008BC71B File Offset: 0x008BA91B
 	protected __LogicDataEffectSave_SubClassMissingExportProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}

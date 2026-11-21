@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CF2 RID: 15602
+	// Token: 0x02004109 RID: 16649
 	public struct IAddInteractOption : IFlatbufferObject
 	{
-		// Token: 0x17006AEE RID: 27374
-		// (get) Token: 0x060157C5 RID: 88005 RVA: 0x0031A996 File Offset: 0x00318B96
+		// Token: 0x170070A8 RID: 28840
+		// (get) Token: 0x06016CFD RID: 93437 RVA: 0x00341C0E File Offset: 0x0033FE0E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060157C6 RID: 88006 RVA: 0x0031A9A3 File Offset: 0x00318BA3
+		// Token: 0x06016CFE RID: 93438 RVA: 0x00341C1B File Offset: 0x0033FE1B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060157C7 RID: 88007 RVA: 0x0031A9AC File Offset: 0x00318BAC
+		// Token: 0x06016CFF RID: 93439 RVA: 0x00341C24 File Offset: 0x0033FE24
 		public static IAddInteractOption GetRootAsIAddInteractOption(ByteBuffer _bb)
 		{
 			return IAddInteractOption.GetRootAsIAddInteractOption(_bb, default(IAddInteractOption));
 		}
 
-		// Token: 0x060157C8 RID: 88008 RVA: 0x0031A9C8 File Offset: 0x00318BC8
+		// Token: 0x06016D00 RID: 93440 RVA: 0x00341C40 File Offset: 0x0033FE40
 		public static IAddInteractOption GetRootAsIAddInteractOption(ByteBuffer _bb, IAddInteractOption obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060157C9 RID: 88009 RVA: 0x0031A9E5 File Offset: 0x00318BE5
+		// Token: 0x06016D01 RID: 93441 RVA: 0x00341C5D File Offset: 0x0033FE5D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060157CA RID: 88010 RVA: 0x0031A9F4 File Offset: 0x00318BF4
+		// Token: 0x06016D02 RID: 93442 RVA: 0x00341C6C File Offset: 0x0033FE6C
 		public IAddInteractOption __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006AEF RID: 27375
-		// (get) Token: 0x060157CB RID: 88011 RVA: 0x0031AA04 File Offset: 0x00318C04
+		// Token: 0x170070A9 RID: 28841
+		// (get) Token: 0x06016D03 RID: 93443 RVA: 0x00341C7C File Offset: 0x0033FE7C
 		public IInteractOption? Option
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006AF0 RID: 27376
-		// (get) Token: 0x060157CC RID: 88012 RVA: 0x0031AA64 File Offset: 0x00318C64
+		// Token: 0x170070AA RID: 28842
+		// (get) Token: 0x06016D04 RID: 93444 RVA: 0x00341CDC File Offset: 0x0033FEDC
 		public int EntityId
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006AF1 RID: 27377
-		// (get) Token: 0x060157CD RID: 88013 RVA: 0x0031AAA0 File Offset: 0x00318CA0
+		// Token: 0x170070AB RID: 28843
+		// (get) Token: 0x06016D05 RID: 93445 RVA: 0x00341D18 File Offset: 0x0033FF18
 		public bool IsManualFinish
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006AF2 RID: 27378
-		// (get) Token: 0x060157CE RID: 88014 RVA: 0x0031AAE0 File Offset: 0x00318CE0
+		// Token: 0x170070AC RID: 28844
+		// (get) Token: 0x06016D06 RID: 93446 RVA: 0x00341D58 File Offset: 0x0033FF58
 		public bool IsManualDelete
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006AF3 RID: 27379
-		// (get) Token: 0x060157CF RID: 88015 RVA: 0x0031AB20 File Offset: 0x00318D20
+		// Token: 0x170070AD RID: 28845
+		// (get) Token: 0x06016D07 RID: 93447 RVA: 0x00341D98 File Offset: 0x0033FF98
 		public string InteractToken
 		{
 			get
@@ -115,20 +115,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060157D0 RID: 88016 RVA: 0x0031AB58 File Offset: 0x00318D58
+		// Token: 0x06016D08 RID: 93448 RVA: 0x00341DD0 File Offset: 0x0033FFD0
 		public Span<byte> GetInteractTokenBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x060157D1 RID: 88017 RVA: 0x0031AB68 File Offset: 0x00318D68
+		// Token: 0x06016D09 RID: 93449 RVA: 0x00341DE0 File Offset: 0x0033FFE0
 		public byte[] GetInteractTokenArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x17006AF4 RID: 27380
-		// (get) Token: 0x060157D2 RID: 88018 RVA: 0x0031AB78 File Offset: 0x00318D78
+		// Token: 0x170070AE RID: 28846
+		// (get) Token: 0x06016D0A RID: 93450 RVA: 0x00341DF0 File Offset: 0x0033FFF0
 		public byte NullMask
 		{
 			get
@@ -142,7 +142,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060157D3 RID: 88019 RVA: 0x0031ABB5 File Offset: 0x00318DB5
+		// Token: 0x06016D0B RID: 93451 RVA: 0x00341E2D File Offset: 0x0034002D
 		public static Offset<IAddInteractOption> CreateIAddInteractOption(FlatBufferBuilder builder, Offset<IInteractOption> OptionOffset = default(Offset<IInteractOption>), int EntityId = 0, bool IsManualFinish = false, bool IsManualDelete = false, StringOffset InteractTokenOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -155,55 +155,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IAddInteractOption.EndIAddInteractOption(builder);
 		}
 
-		// Token: 0x060157D4 RID: 88020 RVA: 0x0031ABF1 File Offset: 0x00318DF1
+		// Token: 0x06016D0C RID: 93452 RVA: 0x00341E69 File Offset: 0x00340069
 		public static void StartIAddInteractOption(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x060157D5 RID: 88021 RVA: 0x0031ABFA File Offset: 0x00318DFA
+		// Token: 0x06016D0D RID: 93453 RVA: 0x00341E72 File Offset: 0x00340072
 		public static void AddOption(FlatBufferBuilder builder, Offset<IInteractOption> optionOffset)
 		{
 			builder.AddOffset(0, optionOffset.Value, 0);
 		}
 
-		// Token: 0x060157D6 RID: 88022 RVA: 0x0031AC0A File Offset: 0x00318E0A
+		// Token: 0x06016D0E RID: 93454 RVA: 0x00341E82 File Offset: 0x00340082
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x060157D7 RID: 88023 RVA: 0x0031AC15 File Offset: 0x00318E15
+		// Token: 0x06016D0F RID: 93455 RVA: 0x00341E8D File Offset: 0x0034008D
 		public static void AddIsManualFinish(FlatBufferBuilder builder, bool isManualFinish)
 		{
 			builder.AddBool(2, isManualFinish, false);
 		}
 
-		// Token: 0x060157D8 RID: 88024 RVA: 0x0031AC20 File Offset: 0x00318E20
+		// Token: 0x06016D10 RID: 93456 RVA: 0x00341E98 File Offset: 0x00340098
 		public static void AddIsManualDelete(FlatBufferBuilder builder, bool isManualDelete)
 		{
 			builder.AddBool(3, isManualDelete, false);
 		}
 
-		// Token: 0x060157D9 RID: 88025 RVA: 0x0031AC2B File Offset: 0x00318E2B
+		// Token: 0x06016D11 RID: 93457 RVA: 0x00341EA3 File Offset: 0x003400A3
 		public static void AddInteractToken(FlatBufferBuilder builder, StringOffset interactTokenOffset)
 		{
 			builder.AddOffset(4, interactTokenOffset.Value, 0);
 		}
 
-		// Token: 0x060157DA RID: 88026 RVA: 0x0031AC3B File Offset: 0x00318E3B
+		// Token: 0x06016D12 RID: 93458 RVA: 0x00341EB3 File Offset: 0x003400B3
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x060157DB RID: 88027 RVA: 0x0031AC46 File Offset: 0x00318E46
+		// Token: 0x06016D13 RID: 93459 RVA: 0x00341EBE File Offset: 0x003400BE
 		public static Offset<IAddInteractOption> EndIAddInteractOption(FlatBufferBuilder builder)
 		{
 			return new Offset<IAddInteractOption>(builder.EndTable());
 		}
 
-		// Token: 0x060157DC RID: 88028 RVA: 0x0031AC54 File Offset: 0x00318E54
+		// Token: 0x06016D14 RID: 93460 RVA: 0x00341ECC File Offset: 0x003400CC
 		public IAddInteractOptionT UnPack()
 		{
 			IAddInteractOptionT addInteractOptionT = new IAddInteractOptionT();
@@ -211,7 +211,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return addInteractOptionT;
 		}
 
-		// Token: 0x060157DD RID: 88029 RVA: 0x0031AC70 File Offset: 0x00318E70
+		// Token: 0x06016D15 RID: 93461 RVA: 0x00341EE8 File Offset: 0x003400E8
 		public void UnPackTo(IAddInteractOptionT _o)
 		{
 			_o.Option = ((this.Option != null) ? this.Option.Value.UnPack() : null);
@@ -222,7 +222,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060157DE RID: 88030 RVA: 0x0031ACE8 File Offset: 0x00318EE8
+		// Token: 0x06016D16 RID: 93462 RVA: 0x00341F60 File Offset: 0x00340160
 		public static Offset<IAddInteractOption> Pack(FlatBufferBuilder builder, IAddInteractOptionT _o)
 		{
 			if (_o == null)
@@ -234,7 +234,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IAddInteractOption.CreateIAddInteractOption(builder, optionOffset, _o.EntityId, _o.IsManualFinish, _o.IsManualDelete, interactTokenOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400B592 RID: 46482
+		// Token: 0x0400BF3F RID: 48959
 		private Table __p;
 	}
 }

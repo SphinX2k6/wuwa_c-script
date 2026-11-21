@@ -2,60 +2,60 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070D7 RID: 28887
+	// Token: 0x020078A3 RID: 30883
 	public class IShowCenterTextT
 	{
-		// Token: 0x1700D692 RID: 54930
-		// (get) Token: 0x060332A9 RID: 209577 RVA: 0x006E6029 File Offset: 0x006E4229
-		// (set) Token: 0x060332AA RID: 209578 RVA: 0x006E6031 File Offset: 0x006E4231
+		// Token: 0x1700E275 RID: 57973
+		// (get) Token: 0x0603654B RID: 222539 RVA: 0x00746635 File Offset: 0x00744835
+		// (set) Token: 0x0603654C RID: 222540 RVA: 0x0074663D File Offset: 0x0074483D
 		public int TextId { get; set; }
 
-		// Token: 0x1700D693 RID: 54931
-		// (get) Token: 0x060332AB RID: 209579 RVA: 0x006E603A File Offset: 0x006E423A
-		// (set) Token: 0x060332AC RID: 209580 RVA: 0x006E6042 File Offset: 0x006E4242
+		// Token: 0x1700E276 RID: 57974
+		// (get) Token: 0x0603654D RID: 222541 RVA: 0x00746646 File Offset: 0x00744846
+		// (set) Token: 0x0603654E RID: 222542 RVA: 0x0074664E File Offset: 0x0074484E
 		public string TidCenterText { get; set; }
 
-		// Token: 0x1700D694 RID: 54932
-		// (get) Token: 0x060332AD RID: 209581 RVA: 0x006E604B File Offset: 0x006E424B
-		// (set) Token: 0x060332AE RID: 209582 RVA: 0x006E6053 File Offset: 0x006E4253
+		// Token: 0x1700E277 RID: 57975
+		// (get) Token: 0x0603654F RID: 222543 RVA: 0x00746657 File Offset: 0x00744857
+		// (set) Token: 0x06036550 RID: 222544 RVA: 0x0074665F File Offset: 0x0074485F
 		public string PlotLineKey { get; set; }
 
-		// Token: 0x1700D695 RID: 54933
-		// (get) Token: 0x060332AF RID: 209583 RVA: 0x006E605C File Offset: 0x006E425C
-		// (set) Token: 0x060332B0 RID: 209584 RVA: 0x006E6064 File Offset: 0x006E4264
+		// Token: 0x1700E278 RID: 57976
+		// (get) Token: 0x06036551 RID: 222545 RVA: 0x00746668 File Offset: 0x00744868
+		// (set) Token: 0x06036552 RID: 222546 RVA: 0x00746670 File Offset: 0x00744870
 		public float TotalTime { get; set; }
 
-		// Token: 0x1700D696 RID: 54934
-		// (get) Token: 0x060332B1 RID: 209585 RVA: 0x006E606D File Offset: 0x006E426D
-		// (set) Token: 0x060332B2 RID: 209586 RVA: 0x006E6075 File Offset: 0x006E4275
+		// Token: 0x1700E279 RID: 57977
+		// (get) Token: 0x06036553 RID: 222547 RVA: 0x00746679 File Offset: 0x00744879
+		// (set) Token: 0x06036554 RID: 222548 RVA: 0x00746681 File Offset: 0x00744881
 		public ITextStyleT TextStyle { get; set; }
 
-		// Token: 0x1700D697 RID: 54935
-		// (get) Token: 0x060332B3 RID: 209587 RVA: 0x006E607E File Offset: 0x006E427E
-		// (set) Token: 0x060332B4 RID: 209588 RVA: 0x006E6086 File Offset: 0x006E4286
+		// Token: 0x1700E27A RID: 57978
+		// (get) Token: 0x06036555 RID: 222549 RVA: 0x0074668A File Offset: 0x0074488A
+		// (set) Token: 0x06036556 RID: 222550 RVA: 0x00746692 File Offset: 0x00744892
 		public string BgImageId { get; set; }
 
-		// Token: 0x1700D698 RID: 54936
-		// (get) Token: 0x060332B5 RID: 209589 RVA: 0x006E608F File Offset: 0x006E428F
-		// (set) Token: 0x060332B6 RID: 209590 RVA: 0x006E6097 File Offset: 0x006E4297
+		// Token: 0x1700E27B RID: 57979
+		// (get) Token: 0x06036557 RID: 222551 RVA: 0x0074669B File Offset: 0x0074489B
+		// (set) Token: 0x06036558 RID: 222552 RVA: 0x007466A3 File Offset: 0x007448A3
 		public bool IsMulLine { get; set; }
 
-		// Token: 0x1700D699 RID: 54937
-		// (get) Token: 0x060332B7 RID: 209591 RVA: 0x006E60A0 File Offset: 0x006E42A0
-		// (set) Token: 0x060332B8 RID: 209592 RVA: 0x006E60A8 File Offset: 0x006E42A8
+		// Token: 0x1700E27C RID: 57980
+		// (get) Token: 0x06036559 RID: 222553 RVA: 0x007466AC File Offset: 0x007448AC
+		// (set) Token: 0x0603655A RID: 222554 RVA: 0x007466B4 File Offset: 0x007448B4
 		public bool IsManualNext { get; set; }
 
-		// Token: 0x1700D69A RID: 54938
-		// (get) Token: 0x060332B9 RID: 209593 RVA: 0x006E60B1 File Offset: 0x006E42B1
-		// (set) Token: 0x060332BA RID: 209594 RVA: 0x006E60B9 File Offset: 0x006E42B9
+		// Token: 0x1700E27D RID: 57981
+		// (get) Token: 0x0603655B RID: 222555 RVA: 0x007466BD File Offset: 0x007448BD
+		// (set) Token: 0x0603655C RID: 222556 RVA: 0x007466C5 File Offset: 0x007448C5
 		public bool IsCancelAutoLine { get; set; }
 
-		// Token: 0x1700D69B RID: 54939
-		// (get) Token: 0x060332BB RID: 209595 RVA: 0x006E60C2 File Offset: 0x006E42C2
-		// (set) Token: 0x060332BC RID: 209596 RVA: 0x006E60CA File Offset: 0x006E42CA
+		// Token: 0x1700E27E RID: 57982
+		// (get) Token: 0x0603655D RID: 222557 RVA: 0x007466CE File Offset: 0x007448CE
+		// (set) Token: 0x0603655E RID: 222558 RVA: 0x007466D6 File Offset: 0x007448D6
 		public byte NullMask { get; set; }
 
-		// Token: 0x060332BD RID: 209597 RVA: 0x006E60D4 File Offset: 0x006E42D4
+		// Token: 0x0603655F RID: 222559 RVA: 0x007466E0 File Offset: 0x007448E0
 		public IShowCenterTextT()
 		{
 			this.TextId = 0;

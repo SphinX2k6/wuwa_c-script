@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D7B RID: 3451
+	// Token: 0x02000E60 RID: 3680
 	public struct ItemAccessedPath : IFlatbufferObject
 	{
-		// Token: 0x170019F1 RID: 6641
-		// (get) Token: 0x06008630 RID: 34352 RVA: 0x00265820 File Offset: 0x00263A20
+		// Token: 0x17001A55 RID: 6741
+		// (get) Token: 0x06008C4B RID: 35915 RVA: 0x00283AD0 File Offset: 0x00281CD0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008631 RID: 34353 RVA: 0x0026582D File Offset: 0x00263A2D
+		// Token: 0x06008C4C RID: 35916 RVA: 0x00283ADD File Offset: 0x00281CDD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008632 RID: 34354 RVA: 0x00265834 File Offset: 0x00263A34
+		// Token: 0x06008C4D RID: 35917 RVA: 0x00283AE4 File Offset: 0x00281CE4
 		public static ItemAccessedPath GetRootAsItemAccessedPath(ByteBuffer _bb)
 		{
 			return ItemAccessedPath.GetRootAsItemAccessedPath(_bb, default(ItemAccessedPath));
 		}
 
-		// Token: 0x06008633 RID: 34355 RVA: 0x00265850 File Offset: 0x00263A50
+		// Token: 0x06008C4E RID: 35918 RVA: 0x00283B00 File Offset: 0x00281D00
 		public static ItemAccessedPath GetRootAsItemAccessedPath(ByteBuffer _bb, ItemAccessedPath obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008634 RID: 34356 RVA: 0x0026586D File Offset: 0x00263A6D
+		// Token: 0x06008C4F RID: 35919 RVA: 0x00283B1D File Offset: 0x00281D1D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008635 RID: 34357 RVA: 0x0026587C File Offset: 0x00263A7C
+		// Token: 0x06008C50 RID: 35920 RVA: 0x00283B2C File Offset: 0x00281D2C
 		public ItemAccessedPath __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170019F2 RID: 6642
-		// (get) Token: 0x06008636 RID: 34358 RVA: 0x0026588C File Offset: 0x00263A8C
+		// Token: 0x17001A56 RID: 6742
+		// (get) Token: 0x06008C51 RID: 35921 RVA: 0x00283B3C File Offset: 0x00281D3C
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008637 RID: 34359 RVA: 0x002658C8 File Offset: 0x00263AC8
+		// Token: 0x06008C52 RID: 35922 RVA: 0x00283B78 File Offset: 0x00281D78
 		public int GiftItemGroup(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170019F3 RID: 6643
-		// (get) Token: 0x06008638 RID: 34360 RVA: 0x00265908 File Offset: 0x00263B08
+		// Token: 0x17001A57 RID: 6743
+		// (get) Token: 0x06008C53 RID: 35923 RVA: 0x00283BB8 File Offset: 0x00281DB8
 		public int GiftItemGroupLength
 		{
 			get
@@ -90,37 +90,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008639 RID: 34361 RVA: 0x00265933 File Offset: 0x00263B33
+		// Token: 0x06008C54 RID: 35924 RVA: 0x00283BE3 File Offset: 0x00281DE3
 		public Span<int> GetGiftItemGroupBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600863A RID: 34362 RVA: 0x00265942 File Offset: 0x00263B42
+		// Token: 0x06008C55 RID: 35925 RVA: 0x00283BF2 File Offset: 0x00281DF2
 		public int[] GetGiftItemGroupArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600863B RID: 34363 RVA: 0x0026595C File Offset: 0x00263B5C
+		// Token: 0x06008C56 RID: 35926 RVA: 0x00283C09 File Offset: 0x00281E09
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用GiftItemGroupIter()或GetGiftItemGroupBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] GiftItemGroup()
+		public int[] GiftItemGroup()
 		{
-			ItemAccessedPath itemAccessedPath = this;
-			return itemAccessedPath.GetGiftItemGroupArray() ?? Array.Empty<int>();
+			return this.GetGiftItemGroupArray();
 		}
 
-		// Token: 0x0600863C RID: 34364 RVA: 0x00265980 File Offset: 0x00263B80
+		// Token: 0x06008C57 RID: 35927 RVA: 0x00283C11 File Offset: 0x00281E11
 		[NullableContext(1)]
-		public readonly IEnumerable<int> GiftItemGroupIter()
+		public IEnumerable<int> GiftItemGroupIter()
 		{
 			ItemAccessedPath.<GiftItemGroupIter>d__16 <GiftItemGroupIter>d__ = new ItemAccessedPath.<GiftItemGroupIter>d__16(-2);
 			<GiftItemGroupIter>d__.<>3__<>4__this = this;
 			return <GiftItemGroupIter>d__;
 		}
 
-		// Token: 0x04004E03 RID: 19971
+		// Token: 0x040053E8 RID: 21480
 		private Table __p;
 	}
 }

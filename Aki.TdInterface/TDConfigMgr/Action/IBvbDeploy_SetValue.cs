@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001829 RID: 6185
+	// Token: 0x020019B4 RID: 6580
 	public class IBvbDeploy_SetValue
 	{
-		// Token: 0x040053F4 RID: 21492
+		// Token: 0x04005840 RID: 22592
 		public EBvbPlayerOperationType Type;
 
-		// Token: 0x040053F5 RID: 21493
+		// Token: 0x04005841 RID: 22593
 		public int? HandCardIndex;
 
-		// Token: 0x040053F6 RID: 21494
+		// Token: 0x04005842 RID: 22594
 		public int? BoardPosIndex;
 
-		// Token: 0x040053F7 RID: 21495
+		// Token: 0x04005843 RID: 22595
 		[Nullable(2)]
 		public List<int> BoardPosIndexList;
 	}

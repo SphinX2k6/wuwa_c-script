@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005DF RID: 1503
+	// Token: 0x020005F7 RID: 1527
 	public class ConfigMusicGameDataById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002349 RID: 9033 RVA: 0x001210C1 File Offset: 0x0011F2C1
+		// Token: 0x060023D9 RID: 9177 RVA: 0x00127B3D File Offset: 0x00125D3D
 		static ConfigMusicGameDataById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMusicGameDataById.CreateStaticDefaultValue), new Action(ConfigMusicGameDataById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600234A RID: 9034 RVA: 0x001210E0 File Offset: 0x0011F2E0
+		// Token: 0x060023DA RID: 9178 RVA: 0x00127B5C File Offset: 0x00125D5C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMusicGameDataById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600234B RID: 9035 RVA: 0x0012115F File Offset: 0x0011F35F
+		// Token: 0x060023DB RID: 9179 RVA: 0x00127BDB File Offset: 0x00125DDB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMusicGameDataById.LogPair = null;
 			ConfigMusicGameDataById.HandleId = 0;
 		}
 
-		// Token: 0x0600234C RID: 9036 RVA: 0x0012116D File Offset: 0x0011F36D
+		// Token: 0x060023DC RID: 9180 RVA: 0x00127BE9 File Offset: 0x00125DE9
 		public static void Init()
 		{
 			ConfigMusicGameDataById.HandleId = ConfigCommon.InitDataStatement(ConfigMusicGameDataById.HandleId, "db_musicgameconfig.db", "select BinData from `MusicGameData` where Id=?");
 		}
 
-		// Token: 0x0600234D RID: 9037 RVA: 0x00121188 File Offset: 0x0011F388
+		// Token: 0x060023DD RID: 9181 RVA: 0x00127C04 File Offset: 0x00125E04
 		public static MusicGameData? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMusicGameDataById.HandleId, ConfigMusicGameDataById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MusicGameData?(rootAsMusicGameData);
 		}
 
-		// Token: 0x040028FF RID: 10495
+		// Token: 0x040029A7 RID: 10663
 		private const string DB = "db_musicgameconfig.db";
 
-		// Token: 0x04002900 RID: 10496
+		// Token: 0x040029A8 RID: 10664
 		private const string FILE = "UniverseEditor/MusicGameConfig.csv";
 
-		// Token: 0x04002901 RID: 10497
+		// Token: 0x040029A9 RID: 10665
 		private const string TABLE = "MusicGameData";
 
-		// Token: 0x04002902 RID: 10498
+		// Token: 0x040029AA RID: 10666
 		private const string COMMAND = "select BinData from `MusicGameData` where Id=?";
 
-		// Token: 0x04002903 RID: 10499
+		// Token: 0x040029AB RID: 10667
 		private const string KEY_PREFIX = "MusicGameDataById";
 
-		// Token: 0x04002904 RID: 10500
+		// Token: 0x040029AC RID: 10668
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002905 RID: 10501
+		// Token: 0x040029AD RID: 10669
 		private static int HandleId;
 	}
 }

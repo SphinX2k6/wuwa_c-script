@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D8B RID: 7563
+	// Token: 0x02001F9C RID: 8092
 	public class IRecordTimeStampType_SetValue
 	{
-		// Token: 0x0400616A RID: 24938
+		// Token: 0x040066E6 RID: 26342
 		public EDungeonEventType Type;
 
-		// Token: 0x0400616B RID: 24939
+		// Token: 0x040066E7 RID: 26343
 		public ETimeStampType TimeStampType;
 	}
 }

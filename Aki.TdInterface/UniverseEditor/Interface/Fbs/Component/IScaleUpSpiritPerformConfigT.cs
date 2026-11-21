@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005898 RID: 22680
+	// Token: 0x02005EA5 RID: 24229
 	public class IScaleUpSpiritPerformConfigT
 	{
-		// Token: 0x1700A9BF RID: 43455
-		// (get) Token: 0x060263D8 RID: 156632 RVA: 0x00545628 File Offset: 0x00543828
-		// (set) Token: 0x060263D9 RID: 156633 RVA: 0x00545630 File Offset: 0x00543830
+		// Token: 0x1700B2EF RID: 45807
+		// (get) Token: 0x0602893A RID: 166202 RVA: 0x0058C174 File Offset: 0x0058A374
+		// (set) Token: 0x0602893B RID: 166203 RVA: 0x0058C17C File Offset: 0x0058A37C
 		public bool IsInitHide { get; set; }
 
-		// Token: 0x1700A9C0 RID: 43456
-		// (get) Token: 0x060263DA RID: 156634 RVA: 0x00545639 File Offset: 0x00543839
-		// (set) Token: 0x060263DB RID: 156635 RVA: 0x00545641 File Offset: 0x00543841
+		// Token: 0x1700B2F0 RID: 45808
+		// (get) Token: 0x0602893C RID: 166204 RVA: 0x0058C185 File Offset: 0x0058A385
+		// (set) Token: 0x0602893D RID: 166205 RVA: 0x0058C18D File Offset: 0x0058A38D
 		public string AppearEffectDa { get; set; }
 
-		// Token: 0x1700A9C1 RID: 43457
-		// (get) Token: 0x060263DC RID: 156636 RVA: 0x0054564A File Offset: 0x0054384A
-		// (set) Token: 0x060263DD RID: 156637 RVA: 0x00545652 File Offset: 0x00543852
+		// Token: 0x1700B2F1 RID: 45809
+		// (get) Token: 0x0602893E RID: 166206 RVA: 0x0058C196 File Offset: 0x0058A396
+		// (set) Token: 0x0602893F RID: 166207 RVA: 0x0058C19E File Offset: 0x0058A39E
 		public string ScaleUpEffectDa { get; set; }
 
-		// Token: 0x1700A9C2 RID: 43458
-		// (get) Token: 0x060263DE RID: 156638 RVA: 0x0054565B File Offset: 0x0054385B
-		// (set) Token: 0x060263DF RID: 156639 RVA: 0x00545663 File Offset: 0x00543863
+		// Token: 0x1700B2F2 RID: 45810
+		// (get) Token: 0x06028940 RID: 166208 RVA: 0x0058C1A7 File Offset: 0x0058A3A7
+		// (set) Token: 0x06028941 RID: 166209 RVA: 0x0058C1AF File Offset: 0x0058A3AF
 		public int ScaleUpPerformTag { get; set; }
 
-		// Token: 0x1700A9C3 RID: 43459
-		// (get) Token: 0x060263E0 RID: 156640 RVA: 0x0054566C File Offset: 0x0054386C
-		// (set) Token: 0x060263E1 RID: 156641 RVA: 0x00545674 File Offset: 0x00543874
+		// Token: 0x1700B2F3 RID: 45811
+		// (get) Token: 0x06028942 RID: 166210 RVA: 0x0058C1B8 File Offset: 0x0058A3B8
+		// (set) Token: 0x06028943 RID: 166211 RVA: 0x0058C1C0 File Offset: 0x0058A3C0
 		public byte NullMask { get; set; }
 
-		// Token: 0x060263E2 RID: 156642 RVA: 0x0054567D File Offset: 0x0054387D
+		// Token: 0x06028944 RID: 166212 RVA: 0x0058C1C9 File Offset: 0x0058A3C9
 		public IScaleUpSpiritPerformConfigT()
 		{
 			this.IsInitHide = false;

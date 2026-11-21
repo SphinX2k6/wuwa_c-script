@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D7B RID: 28027
+	// Token: 0x020074F6 RID: 29942
 	public class IPostAkEventTargetedT
 	{
-		// Token: 0x1700D122 RID: 53538
-		// (get) Token: 0x0603182E RID: 202798 RVA: 0x006B6419 File Offset: 0x006B4619
-		// (set) Token: 0x0603182F RID: 202799 RVA: 0x006B6421 File Offset: 0x006B4621
+		// Token: 0x1700DC6A RID: 56426
+		// (get) Token: 0x0603482A RID: 215082 RVA: 0x00711B01 File Offset: 0x0070FD01
+		// (set) Token: 0x0603482B RID: 215083 RVA: 0x00711B09 File Offset: 0x0070FD09
 		public EPostAkEvent Type { get; set; }
 
-		// Token: 0x1700D123 RID: 53539
-		// (get) Token: 0x06031830 RID: 202800 RVA: 0x006B642A File Offset: 0x006B462A
-		// (set) Token: 0x06031831 RID: 202801 RVA: 0x006B6432 File Offset: 0x006B4632
+		// Token: 0x1700DC6B RID: 56427
+		// (get) Token: 0x0603482C RID: 215084 RVA: 0x00711B12 File Offset: 0x0070FD12
+		// (set) Token: 0x0603482D RID: 215085 RVA: 0x00711B1A File Offset: 0x0070FD1A
 		public int EntityId { get; set; }
 
-		// Token: 0x1700D124 RID: 53540
-		// (get) Token: 0x06031832 RID: 202802 RVA: 0x006B643B File Offset: 0x006B463B
-		// (set) Token: 0x06031833 RID: 202803 RVA: 0x006B6443 File Offset: 0x006B4643
+		// Token: 0x1700DC6C RID: 56428
+		// (get) Token: 0x0603482E RID: 215086 RVA: 0x00711B23 File Offset: 0x0070FD23
+		// (set) Token: 0x0603482F RID: 215087 RVA: 0x00711B2B File Offset: 0x0070FD2B
 		public string AkEvent { get; set; }
 
-		// Token: 0x06031834 RID: 202804 RVA: 0x006B644C File Offset: 0x006B464C
+		// Token: 0x06034830 RID: 215088 RVA: 0x00711B34 File Offset: 0x0070FD34
 		public IPostAkEventTargetedT()
 		{
 			this.Type = EPostAkEvent.Global;

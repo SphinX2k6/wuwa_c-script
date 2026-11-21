@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.ThinkDataReport
 {
-	// Token: 0x020000FD RID: 253
+	// Token: 0x02000101 RID: 257
 	public class RealThinkDataLaunchReporter
 	{
-		// Token: 0x06000862 RID: 2146 RVA: 0x0003E334 File Offset: 0x0003C534
+		// Token: 0x06000896 RID: 2198 RVA: 0x000406D4 File Offset: 0x0003E8D4
 		public unsafe static void InitializeInstance()
 		{
 			if (BaseConfigController.Instance.GetIosAuditFirstDownloadTipWithSkip())
@@ -34,7 +34,7 @@ namespace CSharpScript.Launcher.ThinkDataReport
 			LauncherLog.Instance.Error("[数数] CDN下发数据未配置数数上报相关配置，创建上报实例失败！", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06000863 RID: 2147 RVA: 0x0003E428 File Offset: 0x0003C628
+		// Token: 0x06000897 RID: 2199 RVA: 0x000407C8 File Offset: 0x0003E9C8
 		[NullableContext(2)]
 		private unsafe static void InitializeDefaultInstanceWithUrlAppId(string serverUrl = null, string appId = null)
 		{
@@ -85,7 +85,7 @@ namespace CSharpScript.Launcher.ThinkDataReport
 			UThinkingAnalytics.Logout(0);
 		}
 
-		// Token: 0x06000864 RID: 2148 RVA: 0x0003E55C File Offset: 0x0003C75C
+		// Token: 0x06000898 RID: 2200 RVA: 0x000408FC File Offset: 0x0003EAFC
 		private static void OnTimeCalibrateEnd(int index)
 		{
 			if (!UThinkingAnalytics.HasInstanceTimeCalibrated(index))
@@ -94,7 +94,7 @@ namespace CSharpScript.Launcher.ThinkDataReport
 			}
 		}
 
-		// Token: 0x06000865 RID: 2149 RVA: 0x0003E58C File Offset: 0x0003C78C
+		// Token: 0x06000899 RID: 2201 RVA: 0x0004092C File Offset: 0x0003EB2C
 		public static void CalibrateInstanceTime()
 		{
 			Action<int> callback;
@@ -106,18 +106,18 @@ namespace CSharpScript.Launcher.ThinkDataReport
 			UThinkingAnalytics.CalibrateTime(fonTimeCalibrated, 0);
 		}
 
-		// Token: 0x06000866 RID: 2150 RVA: 0x0003E5C2 File Offset: 0x0003C7C2
+		// Token: 0x0600089A RID: 2202 RVA: 0x00040962 File Offset: 0x0003EB62
 		[NullableContext(1)]
 		public static void Report(string key, string jsonLog)
 		{
 			FThinkingAnalyticsForCSharp.Track(key, jsonLog, 0);
 		}
 
-		// Token: 0x02000397 RID: 919
+		// Token: 0x020003A4 RID: 932
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04001286 RID: 4742
+			// Token: 0x040012FC RID: 4860
 			public static Action<int> <0>__OnTimeCalibrateEnd;
 		}
 	}

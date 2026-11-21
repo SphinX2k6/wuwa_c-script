@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200056E RID: 1390
+	// Token: 0x02000584 RID: 1412
 	public class ConfigMotionById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060020A1 RID: 8353 RVA: 0x00111D4C File Offset: 0x0010FF4C
+		// Token: 0x06002125 RID: 8485 RVA: 0x001184A0 File Offset: 0x001166A0
 		static ConfigMotionById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMotionById.CreateStaticDefaultValue), new Action(ConfigMotionById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060020A2 RID: 8354 RVA: 0x00111D6C File Offset: 0x0010FF6C
+		// Token: 0x06002126 RID: 8486 RVA: 0x001184C0 File Offset: 0x001166C0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMotionById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060020A3 RID: 8355 RVA: 0x00111DEB File Offset: 0x0010FFEB
+		// Token: 0x06002127 RID: 8487 RVA: 0x0011853F File Offset: 0x0011673F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMotionById.LogPair = null;
 			ConfigMotionById.HandleId = 0;
 		}
 
-		// Token: 0x060020A4 RID: 8356 RVA: 0x00111DF9 File Offset: 0x0010FFF9
+		// Token: 0x06002128 RID: 8488 RVA: 0x0011854D File Offset: 0x0011674D
 		public static void Init()
 		{
 			ConfigMotionById.HandleId = ConfigCommon.InitDataStatement(ConfigMotionById.HandleId, "db_motion.db", "select BinData from `Motion` where Id=?");
 		}
 
-		// Token: 0x060020A5 RID: 8357 RVA: 0x00111E14 File Offset: 0x00110014
+		// Token: 0x06002129 RID: 8489 RVA: 0x00118568 File Offset: 0x00116768
 		public static Motion? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMotionById.HandleId, ConfigMotionById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Motion?(rootAsMotion);
 		}
 
-		// Token: 0x040025E6 RID: 9702
+		// Token: 0x04002680 RID: 9856
 		private const string DB = "db_motion.db";
 
-		// Token: 0x040025E7 RID: 9703
+		// Token: 0x04002681 RID: 9857
 		private const string FILE = "d.动作.xlsx";
 
-		// Token: 0x040025E8 RID: 9704
+		// Token: 0x04002682 RID: 9858
 		private const string TABLE = "Motion";
 
-		// Token: 0x040025E9 RID: 9705
+		// Token: 0x04002683 RID: 9859
 		private const string COMMAND = "select BinData from `Motion` where Id=?";
 
-		// Token: 0x040025EA RID: 9706
+		// Token: 0x04002684 RID: 9860
 		private const string KEY_PREFIX = "MotionById";
 
-		// Token: 0x040025EB RID: 9707
+		// Token: 0x04002685 RID: 9861
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040025EC RID: 9708
+		// Token: 0x04002686 RID: 9862
 		private static int HandleId;
 	}
 }

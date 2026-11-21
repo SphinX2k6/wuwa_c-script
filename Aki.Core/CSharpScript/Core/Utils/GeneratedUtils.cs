@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace CSharpScript.Core.Utils
 {
-	// Token: 0x02000129 RID: 297
+	// Token: 0x0200012A RID: 298
 	public class GeneratedUtils
 	{
-		// Token: 0x06000AB0 RID: 2736 RVA: 0x000340B4 File Offset: 0x000322B4
+		// Token: 0x06000B07 RID: 2823 RVA: 0x00034B28 File Offset: 0x00032D28
 		public static void Init()
 		{
 			Aki.Common.Proxy.Log.SetInstance(global::Log.Instance);
@@ -119,7 +119,7 @@ namespace CSharpScript.Core.Utils
 			Aki.Common.Proxy.LanguageSystem.SetInstance(global::LanguageSystem.Instance);
 		}
 
-		// Token: 0x06000AB1 RID: 2737 RVA: 0x0003430C File Offset: 0x0003250C
+		// Token: 0x06000B08 RID: 2824 RVA: 0x00034D80 File Offset: 0x00032F80
 		public static void Clear()
 		{
 			Aki.Common.Proxy.ConfigCommon.InitDataStatementFunc = null;
@@ -145,11 +145,11 @@ namespace CSharpScript.Core.Utils
 			Aki.Common.Proxy.Log.SetInstance(null);
 		}
 
-		// Token: 0x020001D5 RID: 469
+		// Token: 0x020001DA RID: 474
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0400088D RID: 2189
+			// Token: 0x040008AF RID: 2223
 			[Nullable(new byte[]
 			{
 				0,
@@ -158,7 +158,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<int, string, string, int> <0>__InitDataStatement;
 
-			// Token: 0x0400088E RID: 2190
+			// Token: 0x040008B0 RID: 2224
 			[Nullable(new byte[]
 			{
 				0,
@@ -169,7 +169,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<int, LogList<ValueTuple<string, object>>, bool> <1>__CheckStatement;
 
-			// Token: 0x0400088F RID: 2191
+			// Token: 0x040008B1 RID: 2225
 			[Nullable(new byte[]
 			{
 				0,
@@ -180,7 +180,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<int, int, int, LogList<ValueTuple<string, object>>, bool> <2>__BindInt;
 
-			// Token: 0x04000890 RID: 2192
+			// Token: 0x040008B2 RID: 2226
 			[Nullable(new byte[]
 			{
 				0,
@@ -191,7 +191,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<int, bool, LogList<ValueTuple<string, object>>, int> <3>__Step;
 
-			// Token: 0x04000891 RID: 2193
+			// Token: 0x040008B3 RID: 2227
 			[Nullable(new byte[]
 			{
 				0,
@@ -204,7 +204,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<int, int, LogList<ValueTuple<string, object>>, ValueTuple<bool, byte[]>> <4>__GetValue;
 
-			// Token: 0x04000892 RID: 2194
+			// Token: 0x040008B4 RID: 2228
 			[Nullable(new byte[]
 			{
 				0,
@@ -216,7 +216,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<int, int, LogList<ValueTuple<string, object>>, ValueTuple<bool, int?>> <5>__GetValueInt;
 
-			// Token: 0x04000893 RID: 2195
+			// Token: 0x040008B5 RID: 2229
 			[Nullable(new byte[]
 			{
 				0,
@@ -227,7 +227,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<int, LogList<ValueTuple<string, object>>, bool> <6>__Reset;
 
-			// Token: 0x04000894 RID: 2196
+			// Token: 0x040008B6 RID: 2230
 			[Nullable(new byte[]
 			{
 				0,
@@ -239,7 +239,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<int, int, string, LogList<ValueTuple<string, object>>, bool> <7>__BindString;
 
-			// Token: 0x04000895 RID: 2197
+			// Token: 0x040008B7 RID: 2231
 			[Nullable(new byte[]
 			{
 				0,
@@ -250,7 +250,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<string, string, string, string, int> <8>__GetLangStatementId;
 
-			// Token: 0x04000896 RID: 2198
+			// Token: 0x040008B8 RID: 2232
 			[Nullable(new byte[]
 			{
 				0,
@@ -259,7 +259,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Action<string, string> <9>__ClearLangAllStatementId;
 
-			// Token: 0x04000897 RID: 2199
+			// Token: 0x040008B9 RID: 2233
 			[Nullable(new byte[]
 			{
 				0,
@@ -270,7 +270,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<int, int, bool, LogList<ValueTuple<string, object>>, bool> <10>__BindBool;
 
-			// Token: 0x04000898 RID: 2200
+			// Token: 0x040008BA RID: 2234
 			[Nullable(new byte[]
 			{
 				0,
@@ -281,7 +281,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<int, int, double, LogList<ValueTuple<string, object>>, bool> <11>__BindFloat64;
 
-			// Token: 0x04000899 RID: 2201
+			// Token: 0x040008BB RID: 2235
 			[Nullable(new byte[]
 			{
 				0,
@@ -292,7 +292,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<int, int, long, LogList<ValueTuple<string, object>>, bool> <12>__BindBigInt;
 
-			// Token: 0x0400089A RID: 2202
+			// Token: 0x040008BC RID: 2236
 			[Nullable(new byte[]
 			{
 				0,
@@ -301,7 +301,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<string, object> <13>__GetConfig;
 
-			// Token: 0x0400089B RID: 2203
+			// Token: 0x040008BD RID: 2237
 			[Nullable(new byte[]
 			{
 				0,
@@ -310,7 +310,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Action<string, object, int> <14>__SaveConfig;
 
-			// Token: 0x0400089C RID: 2204
+			// Token: 0x040008BE RID: 2238
 			[Nullable(new byte[]
 			{
 				0,
@@ -319,7 +319,7 @@ namespace CSharpScript.Core.Utils
 			})]
 			public static Func<string, ByteBuffer> <15>__GetConfigBuffer;
 
-			// Token: 0x0400089D RID: 2205
+			// Token: 0x040008BF RID: 2239
 			[Nullable(new byte[]
 			{
 				0,

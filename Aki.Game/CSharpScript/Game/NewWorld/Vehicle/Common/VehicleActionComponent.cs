@@ -7,14 +7,14 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Common
 {
-	// Token: 0x02007053 RID: 28755
+	// Token: 0x020061D4 RID: 25044
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VehicleActionComponent : EntityComponent
 	{
-		// Token: 0x17009BEF RID: 39919
-		// (get) Token: 0x06045FB8 RID: 286648 RVA: 0x011718A2 File Offset: 0x0116FAA2
-		public new static Type[] Dependencies
+		// Token: 0x17007164 RID: 29028
+		// (get) Token: 0x0603C1A2 RID: 246178 RVA: 0x0111B5D5 File Offset: 0x011197D5
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			}
 		}
 
-		// Token: 0x06045FB9 RID: 286649 RVA: 0x011718D1 File Offset: 0x0116FAD1
+		// Token: 0x0603C1A3 RID: 246179 RVA: 0x0111B604 File Offset: 0x01119804
 		protected override bool OnStart()
 		{
 			this.VehicleCatapultComponent = base.Entity.GetComponent<VehicleCatapultComponent>();
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			return true;
 		}
 
-		// Token: 0x06045FBA RID: 286650 RVA: 0x01171908 File Offset: 0x0116FB08
+		// Token: 0x0603C1A4 RID: 246180 RVA: 0x0111B63C File Offset: 0x0111983C
 		[NullableContext(0)]
 		public UniTask<bool> StartBounce([Nullable(1)] BounceParam param)
 		{
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			return <StartBounce>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045FBB RID: 286651 RVA: 0x01171954 File Offset: 0x0116FB54
+		// Token: 0x0603C1A5 RID: 246181 RVA: 0x0111B688 File Offset: 0x01119888
 		[return: Nullable(0)]
 		public UniTask<bool> StartCatapultToTarget(Vector targetLocation, Vector locationOffset, float heightOffset, float gravityMagnitude = 1960f, bool preciseMode = true, int skillId = 0)
 		{
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			return <StartCatapultToTarget>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045FBC RID: 286652 RVA: 0x011719CC File Offset: 0x0116FBCC
+		// Token: 0x0603C1A6 RID: 246182 RVA: 0x0111B700 File Offset: 0x01119900
 		[return: Nullable(0)]
 		public UniTask<bool> StartCatapult(Entity catapultEntity, IMotorCatapultParam config, int skillId = 0)
 		{
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			return <StartCatapult>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045FBD RID: 286653 RVA: 0x01171A28 File Offset: 0x0116FC28
+		// Token: 0x0603C1A7 RID: 246183 RVA: 0x0111B75C File Offset: 0x0111995C
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -90,81 +90,82 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 				return false;
 			}
 			VehicleActionComponent vehicleActionComponent = (VehicleActionComponent)componentTemplate;
-			if (base.CanResetComponentProperty("VehicleCatapultComponent"))
+			if (vehicleActionComponent.VehicleCatapultComponent == null)
 			{
-				if (vehicleActionComponent.VehicleCatapultComponent == null)
-				{
-					this.VehicleCatapultComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleCatapultComponent>(this.VehicleCatapultComponent), "VehicleCatapultComponent"))
-				{
-					return false;
-				}
+				this.VehicleCatapultComponent = null;
 			}
-			if (base.CanResetComponentProperty("VehicleSkillComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleCatapultComponent), "VehicleCatapultComponent"))
 			{
-				if (vehicleActionComponent.VehicleSkillComponent == null)
-				{
-					this.VehicleSkillComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleSkillComponent>(this.VehicleSkillComponent), "VehicleSkillComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("VehicleActorComponent"))
+			if (vehicleActionComponent.VehicleSkillComponent == null)
 			{
-				if (vehicleActionComponent.VehicleActorComponent == null)
-				{
-					this.VehicleActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleActorComponent>(this.VehicleActorComponent), "VehicleActorComponent"))
-				{
-					return false;
-				}
+				this.VehicleSkillComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleSkillComponent), "VehicleSkillComponent"))
+			{
+				return false;
+			}
+			if (vehicleActionComponent.VehicleActorComponent == null)
+			{
+				this.VehicleActorComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleActorComponent), "VehicleActorComponent"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024A1D RID: 150045
+		// Token: 0x17007165 RID: 29029
+		// (get) Token: 0x0603C1A8 RID: 246184 RVA: 0x0111B7FD File Offset: 0x011199FD
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FCD3 RID: 130259
 		[Nullable(2)]
 		private VehicleCatapultComponent VehicleCatapultComponent;
 
-		// Token: 0x04024A1E RID: 150046
+		// Token: 0x0401FCD4 RID: 130260
 		[Nullable(2)]
 		private VehicleSkillComponent VehicleSkillComponent;
 
-		// Token: 0x04024A1F RID: 150047
+		// Token: 0x0401FCD5 RID: 130261
 		[Nullable(2)]
 		private VehicleActorComponent VehicleActorComponent;
 
-		// Token: 0x04024A20 RID: 150048
+		// Token: 0x0401FCD6 RID: 130262
 		private const float DEFAULT_CATAPULT_TIME = 0.6f;
 
-		// Token: 0x04024A21 RID: 150049
+		// Token: 0x0401FCD7 RID: 130263
 		private const float DEFAULT_CATAPULT_GRAVITY = 1960f;
 
-		// Token: 0x04024A22 RID: 150050
+		// Token: 0x0401FCD8 RID: 130264
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TmpVector = Vector.Create();
 
-		// Token: 0x04024A23 RID: 150051
+		// Token: 0x0401FCD9 RID: 130265
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TmpVector2 = Vector.Create();
 
-		// Token: 0x04024A24 RID: 150052
+		// Token: 0x0401FCDA RID: 130266
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TmpVector3 = Vector.Create();
 
-		// Token: 0x04024A25 RID: 150053
+		// Token: 0x0401FCDB RID: 130267
 		[StaticVariableRuleIgnore]
 		private static readonly Rotator TmpRotator = Rotator.Create();
 
-		// Token: 0x04024A26 RID: 150054
+		// Token: 0x0401FCDC RID: 130268
 		[StaticVariableRuleIgnore]
 		private static readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04024A27 RID: 150055
+		// Token: 0x0401FCDD RID: 130269
 		[StaticVariableRuleIgnore]
 		private static readonly CatapultToTargetResult CatapultResult = new CatapultToTargetResult();
 	}

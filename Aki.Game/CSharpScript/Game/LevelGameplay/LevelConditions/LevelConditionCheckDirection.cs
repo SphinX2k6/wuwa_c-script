@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C6B RID: 27755
+	// Token: 0x02005DE5 RID: 24037
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckDirection : LevelConditionBase
 	{
-		// Token: 0x0604455E RID: 279902 RVA: 0x010D894C File Offset: 0x010D6B4C
+		// Token: 0x0603A6B8 RID: 239288 RVA: 0x010828E4 File Offset: 0x01080AE4
 		public override bool Check(Condition inConditionInfo, AActor inTrigger, params object[] eventArgs)
 		{
 			if (inConditionInfo.LimitParamsLength == 0 || inTrigger == null)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return (double)float.Parse(limitParams) <= angleByVectorDot;
 		}
 
-		// Token: 0x0604455F RID: 279903 RVA: 0x010D8A50 File Offset: 0x010D6C50
+		// Token: 0x0603A6B9 RID: 239289 RVA: 0x010829E8 File Offset: 0x01080BE8
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			ICheckDirectionCondition checkDirectionCondition = inConditionInfo as ICheckDirectionCondition;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return MathUtils.Instance.GetAngleByVectorDot(vector2, vector) < (double)checkDirectionCondition.AngleInterval;
 		}
 
-		// Token: 0x040239B8 RID: 145848
+		// Token: 0x0401EC5A RID: 126042
 		private readonly global::Vector TempDiff = global::Vector.Create();
 	}
 }

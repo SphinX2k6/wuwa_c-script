@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DA5 RID: 3493
+	// Token: 0x02000E8A RID: 3722
 	public struct KurotatoLevelGrowth : IFlatbufferObject
 	{
-		// Token: 0x17001BBC RID: 7100
-		// (get) Token: 0x06008A6F RID: 35439 RVA: 0x0026FE55 File Offset: 0x0026E055
+		// Token: 0x17001C20 RID: 7200
+		// (get) Token: 0x0600908B RID: 37003 RVA: 0x0028E82A File Offset: 0x0028CA2A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008A70 RID: 35440 RVA: 0x0026FE62 File Offset: 0x0026E062
+		// Token: 0x0600908C RID: 37004 RVA: 0x0028E837 File Offset: 0x0028CA37
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008A71 RID: 35441 RVA: 0x0026FE6C File Offset: 0x0026E06C
+		// Token: 0x0600908D RID: 37005 RVA: 0x0028E840 File Offset: 0x0028CA40
 		public static KurotatoLevelGrowth GetRootAsKurotatoLevelGrowth(ByteBuffer _bb)
 		{
 			return KurotatoLevelGrowth.GetRootAsKurotatoLevelGrowth(_bb, default(KurotatoLevelGrowth));
 		}
 
-		// Token: 0x06008A72 RID: 35442 RVA: 0x0026FE88 File Offset: 0x0026E088
+		// Token: 0x0600908E RID: 37006 RVA: 0x0028E85C File Offset: 0x0028CA5C
 		public static KurotatoLevelGrowth GetRootAsKurotatoLevelGrowth(ByteBuffer _bb, KurotatoLevelGrowth obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008A73 RID: 35443 RVA: 0x0026FEA5 File Offset: 0x0026E0A5
+		// Token: 0x0600908F RID: 37007 RVA: 0x0028E879 File Offset: 0x0028CA79
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008A74 RID: 35444 RVA: 0x0026FEB4 File Offset: 0x0026E0B4
+		// Token: 0x06009090 RID: 37008 RVA: 0x0028E888 File Offset: 0x0028CA88
 		public KurotatoLevelGrowth __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001BBD RID: 7101
-		// (get) Token: 0x06008A75 RID: 35445 RVA: 0x0026FEC4 File Offset: 0x0026E0C4
+		// Token: 0x17001C21 RID: 7201
+		// (get) Token: 0x06009091 RID: 37009 RVA: 0x0028E898 File Offset: 0x0028CA98
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001BBE RID: 7102
-		// (get) Token: 0x06008A76 RID: 35446 RVA: 0x0026FF00 File Offset: 0x0026E100
+		// Token: 0x17001C22 RID: 7202
+		// (get) Token: 0x06009092 RID: 37010 RVA: 0x0028E8D4 File Offset: 0x0028CAD4
 		public int GroupId
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001BBF RID: 7103
-		// (get) Token: 0x06008A77 RID: 35447 RVA: 0x0026FF3C File Offset: 0x0026E13C
+		// Token: 0x17001C23 RID: 7203
+		// (get) Token: 0x06009093 RID: 37011 RVA: 0x0028E910 File Offset: 0x0028CB10
 		public int ActiveLeveld
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001BC0 RID: 7104
-		// (get) Token: 0x06008A78 RID: 35448 RVA: 0x0026FF78 File Offset: 0x0026E178
+		// Token: 0x17001C24 RID: 7204
+		// (get) Token: 0x06009094 RID: 37012 RVA: 0x0028E94C File Offset: 0x0028CB4C
 		public int ActiveWaveId
 		{
 			get
@@ -111,7 +111,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008A79 RID: 35449 RVA: 0x0026FFB8 File Offset: 0x0026E1B8
+		// Token: 0x06009095 RID: 37013 RVA: 0x0028E98C File Offset: 0x0028CB8C
 		public DicStringFloat? PropertyGrowth(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -122,8 +122,8 @@ namespace Aki.Config
 			return new DicStringFloat?(default(DicStringFloat).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17001BC1 RID: 7105
-		// (get) Token: 0x06008A7A RID: 35450 RVA: 0x0027001C File Offset: 0x0026E21C
+		// Token: 0x17001C25 RID: 7205
+		// (get) Token: 0x06009096 RID: 37014 RVA: 0x0028E9F0 File Offset: 0x0028CBF0
 		public int PropertyGrowthLength
 		{
 			get
@@ -137,24 +137,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008A7B RID: 35451 RVA: 0x00270048 File Offset: 0x0026E248
+		// Token: 0x06009097 RID: 37015 RVA: 0x0028EA1C File Offset: 0x0028CC1C
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用PropertyGrowthFrozenDict()缓存字典，遍历请使用PropertyGrowthIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<string, float> PropertyGrowth()
+		public Dictionary<string, float> PropertyGrowth()
 		{
 			return this.PropertyGrowthIter().ToDictionary((DicStringFloat element) => element.Key, (DicStringFloat element) => element.Value);
 		}
 
-		// Token: 0x06008A7C RID: 35452 RVA: 0x0027009E File Offset: 0x0026E29E
+		// Token: 0x06009098 RID: 37016 RVA: 0x0028EA72 File Offset: 0x0028CC72
 		[NullableContext(1)]
-		public readonly IEnumerable<DicStringFloat> PropertyGrowthIter()
+		public IEnumerable<DicStringFloat> PropertyGrowthIter()
 		{
 			KurotatoLevelGrowth.<PropertyGrowthIter>d__20 <PropertyGrowthIter>d__ = new KurotatoLevelGrowth.<PropertyGrowthIter>d__20(-2);
 			<PropertyGrowthIter>d__.<>3__<>4__this = this;
 			return <PropertyGrowthIter>d__;
 		}
 
-		// Token: 0x06008A7D RID: 35453 RVA: 0x002700B4 File Offset: 0x0026E2B4
+		// Token: 0x06009099 RID: 37017 RVA: 0x0028EA88 File Offset: 0x0028CC88
 		[NullableContext(1)]
 		public float? GetPropertyGrowth(string key)
 		{
@@ -167,7 +166,7 @@ namespace Aki.Config
 			return new float?(value);
 		}
 
-		// Token: 0x06008A7E RID: 35454 RVA: 0x002700E8 File Offset: 0x0026E2E8
+		// Token: 0x0600909A RID: 37018 RVA: 0x0028EABC File Offset: 0x0028CCBC
 		private void EnsurePropertyGrowthCacheIfNeeded()
 		{
 			if (this.PropertyGrowthCache != null)
@@ -177,23 +176,18 @@ namespace Aki.Config
 			this.PropertyGrowthCache = this.PropertyGrowthIter().ToFrozenDictionary((DicStringFloat kvp) => kvp.Key, (DicStringFloat kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06008A7F RID: 35455 RVA: 0x0027014E File Offset: 0x0026E34E
+		// Token: 0x0600909B RID: 37019 RVA: 0x0028EB22 File Offset: 0x0028CD22
 		[NullableContext(1)]
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		public FrozenDictionary<string, float> GetPropertyGrowthFrozenDict(string key)
+		public FrozenDictionary<string, float> GetPropertyGrowthFrozenDict()
 		{
 			this.EnsurePropertyGrowthCacheIfNeeded();
 			return this.PropertyGrowthCache;
 		}
 
-		// Token: 0x04004E36 RID: 20022
+		// Token: 0x0400541B RID: 21531
 		private Table __p;
 
-		// Token: 0x04004E37 RID: 20023
+		// Token: 0x0400541C RID: 21532
 		[Nullable(new byte[]
 		{
 			2,

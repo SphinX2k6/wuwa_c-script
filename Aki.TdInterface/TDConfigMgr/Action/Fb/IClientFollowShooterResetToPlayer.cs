@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002995 RID: 10645
+	// Token: 0x02002C80 RID: 11392
 	public class IClientFollowShooterResetToPlayer : IClientFollowShooterLeisureInteractType
 	{
-		// Token: 0x0600EBA7 RID: 60327 RVA: 0x00227567 File Offset: 0x00225767
-		[NullableContext(1)]
+		// Token: 0x0600FA32 RID: 64050 RVA: 0x00244DF2 File Offset: 0x00242FF2
 		public static IClientFollowShooterResetToPlayer Create(IClientFollowShooterResetToPlayer? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A3F RID: 19007
-		// (get) Token: 0x0600EBA8 RID: 60328 RVA: 0x00227586 File Offset: 0x00225786
+		// Token: 0x17004DE0 RID: 19936
+		// (get) Token: 0x0600FA33 RID: 64051 RVA: 0x00244E11 File Offset: 0x00243011
 		public override EClientFollowShooterLeisureInteractType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081C7 RID: 33223
+		// Token: 0x040088B2 RID: 34994
 		private IClientFollowShooterResetToPlayer Instance;
 	}
 }

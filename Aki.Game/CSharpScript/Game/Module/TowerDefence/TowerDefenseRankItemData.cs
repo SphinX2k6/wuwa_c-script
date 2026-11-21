@@ -5,13 +5,13 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B20 RID: 19232
+	// Token: 0x02003AC8 RID: 15048
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseRankItemData
 	{
-		// Token: 0x17007B54 RID: 31572
-		// (get) Token: 0x06031D03 RID: 204035 RVA: 0x00B90401 File Offset: 0x00B8E601
+		// Token: 0x17004F01 RID: 20225
+		// (get) Token: 0x06026A93 RID: 158355 RVA: 0x00AD4465 File Offset: 0x00AD2665
 		public bool IsEmpty
 		{
 			get
@@ -20,8 +20,8 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x17007B55 RID: 31573
-		// (get) Token: 0x06031D04 RID: 204036 RVA: 0x00B90416 File Offset: 0x00B8E616
+		// Token: 0x17004F02 RID: 20226
+		// (get) Token: 0x06026A94 RID: 158356 RVA: 0x00AD447A File Offset: 0x00AD267A
 		public int PassScore
 		{
 			get
@@ -34,8 +34,8 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x17007B56 RID: 31574
-		// (get) Token: 0x06031D05 RID: 204037 RVA: 0x00B90437 File Offset: 0x00B8E637
+		// Token: 0x17004F03 RID: 20227
+		// (get) Token: 0x06026A95 RID: 158357 RVA: 0x00AD449B File Offset: 0x00AD269B
 		public int PassTime
 		{
 			get
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031D06 RID: 204038 RVA: 0x00B90444 File Offset: 0x00B8E644
+		// Token: 0x06026A96 RID: 158358 RVA: 0x00AD44A8 File Offset: 0x00AD26A8
 		public TowerDefenseRankItemData(bool isOnline, bool isDifficult, TowerDefencePassInfo data)
 		{
 			this.IsOnline = isOnline;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.IsSelfInData = this.GetIsInSelfData();
 		}
 
-		// Token: 0x06031D07 RID: 204039 RVA: 0x00B904A4 File Offset: 0x00B8E6A4
+		// Token: 0x06026A97 RID: 158359 RVA: 0x00AD4508 File Offset: 0x00AD2708
 		private void InitRoleDataList()
 		{
 			if (this.IsOnline)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031D08 RID: 204040 RVA: 0x00B90684 File Offset: 0x00B8E884
+		// Token: 0x06026A98 RID: 158360 RVA: 0x00AD46E8 File Offset: 0x00AD28E8
 		private void InitPlayerNameList()
 		{
 			foreach (TowerDefencePassPlayerInfo towerDefencePassPlayerInfo in this.ServerData.PlayerPassInfo)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031D09 RID: 204041 RVA: 0x00B906E8 File Offset: 0x00B8E8E8
+		// Token: 0x06026A99 RID: 158361 RVA: 0x00AD474C File Offset: 0x00AD294C
 		private bool GetIsInSelfData()
 		{
 			int? id = PlayerInfoModel.Instance.GetId();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return false;
 		}
 
-		// Token: 0x06031D0A RID: 204042 RVA: 0x00B90760 File Offset: 0x00B8E960
+		// Token: 0x06026A9A RID: 158362 RVA: 0x00AD47C4 File Offset: 0x00AD29C4
 		public List<ITowerDefenseRankPlayerName> GetPlayerNameList()
 		{
 			List<ITowerDefenseRankPlayerName> list = new List<ITowerDefenseRankPlayerName>();
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return list;
 		}
 
-		// Token: 0x06031D0B RID: 204043 RVA: 0x00B907E4 File Offset: 0x00B8E9E4
+		// Token: 0x06026A9B RID: 158363 RVA: 0x00AD4848 File Offset: 0x00AD2A48
 		public void RefreshPlayerName(bool isIsOpenAnonymousName)
 		{
 			int value = PlayerInfoModel.Instance.GetId().Value;
@@ -156,8 +156,8 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x17007B57 RID: 31575
-		// (get) Token: 0x06031D0C RID: 204044 RVA: 0x00B90835 File Offset: 0x00B8EA35
+		// Token: 0x17004F04 RID: 20228
+		// (get) Token: 0x06026A9C RID: 158364 RVA: 0x00AD4899 File Offset: 0x00AD2A99
 		public string TopThreeNumColor
 		{
 			get
@@ -178,8 +178,8 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x17007B58 RID: 31576
-		// (get) Token: 0x06031D0D RID: 204045 RVA: 0x00B90866 File Offset: 0x00B8EA66
+		// Token: 0x17004F05 RID: 20229
+		// (get) Token: 0x06026A9D RID: 158365 RVA: 0x00AD48CA File Offset: 0x00AD2ACA
 		public string RankBg
 		{
 			get
@@ -200,8 +200,8 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x17007B59 RID: 31577
-		// (get) Token: 0x06031D0E RID: 204046 RVA: 0x00B90897 File Offset: 0x00B8EA97
+		// Token: 0x17004F06 RID: 20230
+		// (get) Token: 0x06026A9E RID: 158366 RVA: 0x00AD48FB File Offset: 0x00AD2AFB
 		public bool IsFirst
 		{
 			get
@@ -210,8 +210,8 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x17007B5A RID: 31578
-		// (get) Token: 0x06031D0F RID: 204047 RVA: 0x00B908AA File Offset: 0x00B8EAAA
+		// Token: 0x17004F07 RID: 20231
+		// (get) Token: 0x06026A9F RID: 158367 RVA: 0x00AD490E File Offset: 0x00AD2B0E
 		public bool IsSecond
 		{
 			get
@@ -220,8 +220,8 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x17007B5B RID: 31579
-		// (get) Token: 0x06031D10 RID: 204048 RVA: 0x00B908BD File Offset: 0x00B8EABD
+		// Token: 0x17004F08 RID: 20232
+		// (get) Token: 0x06026AA0 RID: 158368 RVA: 0x00AD4921 File Offset: 0x00AD2B21
 		public bool IsThird
 		{
 			get
@@ -230,8 +230,8 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x17007B5C RID: 31580
-		// (get) Token: 0x06031D11 RID: 204049 RVA: 0x00B908D0 File Offset: 0x00B8EAD0
+		// Token: 0x17004F09 RID: 20233
+		// (get) Token: 0x06026AA1 RID: 158369 RVA: 0x00AD4934 File Offset: 0x00AD2B34
 		public bool IsTopThree
 		{
 			get
@@ -240,55 +240,55 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x0401A954 RID: 108884
+		// Token: 0x040152A6 RID: 86694
 		public const string FIRSTPLAYER_COLOR = "CB9C38FF";
 
-		// Token: 0x0401A955 RID: 108885
+		// Token: 0x040152A7 RID: 86695
 		public const string SECONDPLAYER_COLOR = "6A7E9DFF";
 
-		// Token: 0x0401A956 RID: 108886
+		// Token: 0x040152A8 RID: 86696
 		public const string THIRDPLAYER_COLOR = "997E76FF";
 
-		// Token: 0x0401A957 RID: 108887
+		// Token: 0x040152A9 RID: 86697
 		public const string FIRST_RANKBG = "T_TipItemBgGold";
 
-		// Token: 0x0401A958 RID: 108888
+		// Token: 0x040152AA RID: 86698
 		public const string SECOND_RANKBG = "T_TipItemBgSilver";
 
-		// Token: 0x0401A959 RID: 108889
+		// Token: 0x040152AB RID: 86699
 		public const string THIRD_RANKBG = "T_TipItemBgCopper";
 
-		// Token: 0x0401A95A RID: 108890
+		// Token: 0x040152AC RID: 86700
 		public const string OTHER_RANKBG = "T_TipItemBgMask";
 
-		// Token: 0x0401A95B RID: 108891
+		// Token: 0x040152AD RID: 86701
 		public const int MAX_COUNT = 3;
 
-		// Token: 0x0401A95C RID: 108892
+		// Token: 0x040152AE RID: 86702
 		public readonly bool IsSelfInData;
 
-		// Token: 0x0401A95D RID: 108893
+		// Token: 0x040152AF RID: 86703
 		public TowerDefencePassInfo ServerData;
 
-		// Token: 0x0401A95E RID: 108894
+		// Token: 0x040152B0 RID: 86704
 		public bool IsOnline;
 
-		// Token: 0x0401A95F RID: 108895
+		// Token: 0x040152B1 RID: 86705
 		public bool IsDifficult;
 
-		// Token: 0x0401A960 RID: 108896
+		// Token: 0x040152B2 RID: 86706
 		public bool IsInRank = true;
 
-		// Token: 0x0401A961 RID: 108897
+		// Token: 0x040152B3 RID: 86707
 		public bool IsSelf;
 
-		// Token: 0x0401A962 RID: 108898
+		// Token: 0x040152B4 RID: 86708
 		public int Rank;
 
-		// Token: 0x0401A963 RID: 108899
+		// Token: 0x040152B5 RID: 86709
 		public readonly List<TowerDefenseRankRoleData> RoleDataList = new List<TowerDefenseRankRoleData>();
 
-		// Token: 0x0401A964 RID: 108900
+		// Token: 0x040152B6 RID: 86710
 		private readonly Dictionary<int, string> PlayerNameMap = new Dictionary<int, string>();
 	}
 }

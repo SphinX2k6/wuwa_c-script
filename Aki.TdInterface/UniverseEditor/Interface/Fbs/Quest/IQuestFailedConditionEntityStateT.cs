@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FE1 RID: 16353
+	// Token: 0x02004422 RID: 17442
 	public class IQuestFailedConditionEntityStateT
 	{
-		// Token: 0x170072C3 RID: 29379
-		// (get) Token: 0x06017899 RID: 96409 RVA: 0x003651D5 File Offset: 0x003633D5
-		// (set) Token: 0x0601789A RID: 96410 RVA: 0x003651DD File Offset: 0x003633DD
+		// Token: 0x170078C5 RID: 30917
+		// (get) Token: 0x06018F32 RID: 102194 RVA: 0x0038EFC9 File Offset: 0x0038D1C9
+		// (set) Token: 0x06018F33 RID: 102195 RVA: 0x0038EFD1 File Offset: 0x0038D1D1
 		public List<IEntityStateConditionT> Conditions { get; set; }
 
-		// Token: 0x0601789B RID: 96411 RVA: 0x003651E6 File Offset: 0x003633E6
+		// Token: 0x06018F34 RID: 102196 RVA: 0x0038EFDA File Offset: 0x0038D1DA
 		public IQuestFailedConditionEntityStateT()
 		{
 			this.Conditions = null;

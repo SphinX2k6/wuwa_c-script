@@ -6,33 +6,33 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.World.StepSequence
 {
-	// Token: 0x02004528 RID: 17704
+	// Token: 0x0200344D RID: 13389
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class StepSequence
 	{
-		// Token: 0x0602DBAC RID: 187308 RVA: 0x00A82159 File Offset: 0x00A80359
+		// Token: 0x06022273 RID: 139891 RVA: 0x009AD3C1 File Offset: 0x009AB5C1
 		public StepSequence AddStep(SequenceStep step)
 		{
 			this.Steps.Add(step);
 			return this;
 		}
 
-		// Token: 0x0602DBAD RID: 187309 RVA: 0x00A82168 File Offset: 0x00A80368
+		// Token: 0x06022274 RID: 139892 RVA: 0x009AD3D0 File Offset: 0x009AB5D0
 		public StepSequence SetOnAbort(Action handler)
 		{
 			this.OnAbortHandler = handler;
 			return this;
 		}
 
-		// Token: 0x0602DBAE RID: 187310 RVA: 0x00A82172 File Offset: 0x00A80372
+		// Token: 0x06022275 RID: 139893 RVA: 0x009AD3DA File Offset: 0x009AB5DA
 		public StepSequence SetFinally(Action handler)
 		{
 			this.FinallyHandler = handler;
 			return this;
 		}
 
-		// Token: 0x0602DBAF RID: 187311 RVA: 0x00A8217C File Offset: 0x00A8037C
+		// Token: 0x06022276 RID: 139894 RVA: 0x009AD3E4 File Offset: 0x009AB5E4
 		[NullableContext(0)]
 		private static UniTask<bool> RaceStep(UniTask stepResult, [Nullable(1)] ISequenceAbortSignal abortSignal)
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.World.StepSequence
 			return <RaceStep>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DBB0 RID: 187312 RVA: 0x00A821C8 File Offset: 0x00A803C8
+		// Token: 0x06022277 RID: 139895 RVA: 0x009AD430 File Offset: 0x009AB630
 		public UniTask Run(ISequenceAbortSignal abortSignal)
 		{
 			StepSequence.<Run>d__7 <Run>d__;
@@ -57,14 +57,14 @@ namespace CSharpScript.Game.World.StepSequence
 			return <Run>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401869B RID: 99995
+		// Token: 0x04012CBF RID: 76991
 		private readonly List<SequenceStep> Steps = new List<SequenceStep>();
 
-		// Token: 0x0401869C RID: 99996
+		// Token: 0x04012CC0 RID: 76992
 		[Nullable(2)]
 		private Action OnAbortHandler;
 
-		// Token: 0x0401869D RID: 99997
+		// Token: 0x04012CC1 RID: 76993
 		[Nullable(2)]
 		private Action FinallyHandler;
 	}

@@ -9,19 +9,21 @@ using CSharpScript.Game.Module.MapRogue;
 using CSharpScript.Game.Module.PermanentRogue;
 using CSharpScript.Game.Module.Roguelike;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.ServerStorage;
+using CSharpScript.Game.ServerStorage.Container;
 using CSharpScript.Module.InstanceDungeon;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EDE RID: 20190
+	// Token: 0x02003EA7 RID: 16039
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class RogueBattleModel : ModelBase
 	{
-		// Token: 0x17007F31 RID: 32561
-		// (get) Token: 0x06033D03 RID: 212227 RVA: 0x00C212B4 File Offset: 0x00C1F4B4
-		// (set) Token: 0x06033D04 RID: 212228 RVA: 0x00C212C1 File Offset: 0x00C1F4C1
+		// Token: 0x170052E1 RID: 21217
+		// (get) Token: 0x06028B6E RID: 166766 RVA: 0x00B6A7CC File Offset: 0x00B689CC
+		// (set) Token: 0x06028B6F RID: 166767 RVA: 0x00B6A7D9 File Offset: 0x00B689D9
 		public string CurrentRoomMusicState
 		{
 			get
@@ -34,14 +36,14 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D05 RID: 212229 RVA: 0x00C212D8 File Offset: 0x00C1F4D8
+		// Token: 0x06028B70 RID: 166768 RVA: 0x00B6A7F0 File Offset: 0x00B689F0
 		public void ChangeDescMode()
 		{
 			this.DescMode = ((this.DescMode == EDescModel.SIMPLE) ? EDescModel.DETAIL : EDescModel.SIMPLE);
 			EventSystem.Instance.Emit(EEventName.RogueBattleDescModeChange);
 		}
 
-		// Token: 0x06033D06 RID: 212230 RVA: 0x00C212FC File Offset: 0x00C1F4FC
+		// Token: 0x06028B71 RID: 166769 RVA: 0x00B6A814 File Offset: 0x00B68A14
 		[NullableContext(2)]
 		public RogueResOption GetOptionDataById(int index)
 		{
@@ -53,13 +55,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return result;
 		}
 
-		// Token: 0x06033D07 RID: 212231 RVA: 0x00C2131C File Offset: 0x00C1F51C
+		// Token: 0x06028B72 RID: 166770 RVA: 0x00B6A834 File Offset: 0x00B68A34
 		public void SetOptionData(int bindId, RogueResOption data)
 		{
 			this.OptionMap[bindId] = data;
 		}
 
-		// Token: 0x06033D08 RID: 212232 RVA: 0x00C2132B File Offset: 0x00C1F52B
+		// Token: 0x06028B73 RID: 166771 RVA: 0x00B6A843 File Offset: 0x00B68A43
 		[NullableContext(2)]
 		public RogueResFormation GetFormationDataByIndex(int index)
 		{
@@ -70,7 +72,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return this.FormationData[index];
 		}
 
-		// Token: 0x06033D09 RID: 212233 RVA: 0x00C21350 File Offset: 0x00C1F550
+		// Token: 0x06028B74 RID: 166772 RVA: 0x00B6A868 File Offset: 0x00B68A68
 		public void UpdateFormationData(int index, RogueResFormation data)
 		{
 			if (index < 0)
@@ -89,7 +91,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.FormationData.Add(data);
 		}
 
-		// Token: 0x06033D0A RID: 212234 RVA: 0x00C213A8 File Offset: 0x00C1F5A8
+		// Token: 0x06028B75 RID: 166773 RVA: 0x00B6A8C0 File Offset: 0x00B68AC0
 		[NullableContext(2)]
 		public RogueResGainData GetPhantomData()
 		{
@@ -107,7 +109,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return null;
 		}
 
-		// Token: 0x06033D0B RID: 212235 RVA: 0x00C21414 File Offset: 0x00C1F614
+		// Token: 0x06028B76 RID: 166774 RVA: 0x00B6A92C File Offset: 0x00B68B2C
 		public List<RogueResGainData> GetTokenData()
 		{
 			List<RogueResGainData> list = new List<RogueResGainData>();
@@ -122,7 +124,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return list;
 		}
 
-		// Token: 0x06033D0C RID: 212236 RVA: 0x00C2148C File Offset: 0x00C1F68C
+		// Token: 0x06028B77 RID: 166775 RVA: 0x00B6A9A4 File Offset: 0x00B68BA4
 		[NullableContext(2)]
 		public RogueResRole GetRoleInfoById(int id)
 		{
@@ -140,7 +142,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return null;
 		}
 
-		// Token: 0x06033D0D RID: 212237 RVA: 0x00C214E0 File Offset: 0x00C1F6E0
+		// Token: 0x06028B78 RID: 166776 RVA: 0x00B6A9F8 File Offset: 0x00B68BF8
 		public int GetIncIdByRoleId(int roleId)
 		{
 			Dictionary<int, RogueResGainData> dictionary;
@@ -159,7 +161,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return 0;
 		}
 
-		// Token: 0x06033D0E RID: 212238 RVA: 0x00C21564 File Offset: 0x00C1F764
+		// Token: 0x06028B79 RID: 166777 RVA: 0x00B6AA7C File Offset: 0x00B68C7C
 		public List<RoleDataBase> GetRoleList()
 		{
 			Dictionary<int, RogueResGainData> dictionary;
@@ -187,7 +189,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return list;
 		}
 
-		// Token: 0x06033D0F RID: 212239 RVA: 0x00C21634 File Offset: 0x00C1F834
+		// Token: 0x06028B7A RID: 166778 RVA: 0x00B6AB4C File Offset: 0x00B68D4C
 		public bool IsRoleGot(int roleId)
 		{
 			Dictionary<int, RogueResGainData> dictionary;
@@ -209,7 +211,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return false;
 		}
 
-		// Token: 0x06033D10 RID: 212240 RVA: 0x00C216C4 File Offset: 0x00C1F8C4
+		// Token: 0x06028B7B RID: 166779 RVA: 0x00B6ABDC File Offset: 0x00B68DDC
 		public RoleBondInfo GetRoleBondDataById(int id)
 		{
 			if (!this.RoleFetterMap.ContainsKey(id))
@@ -227,7 +229,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return this.RoleFetterMap[id];
 		}
 
-		// Token: 0x06033D11 RID: 212241 RVA: 0x00C21748 File Offset: 0x00C1F948
+		// Token: 0x06028B7C RID: 166780 RVA: 0x00B6AC60 File Offset: 0x00B68E60
 		public RoleBondInfo GetRoleBondPreviewDataById(int bondId, int upStar = 0, int? designatedLv = null, int? designatedStar = null)
 		{
 			RogueResBond? rogueResBond = RogueBattleConfig.Instance.GetRogueResBond(bondId);
@@ -284,7 +286,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033D12 RID: 212242 RVA: 0x00C21894 File Offset: 0x00C1FA94
+		// Token: 0x06028B7D RID: 166781 RVA: 0x00B6ADAC File Offset: 0x00B68FAC
 		public int GetBondRoleCount(int bondId)
 		{
 			IReadOnlyList<RogueResBondRole> allRogueResBondRole = RogueBattleConfig.Instance.GetAllRogueResBondRole();
@@ -312,7 +314,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return num;
 		}
 
-		// Token: 0x06033D13 RID: 212243 RVA: 0x00C21938 File Offset: 0x00C1FB38
+		// Token: 0x06028B7E RID: 166782 RVA: 0x00B6AE50 File Offset: 0x00B69050
 		public int GetLinkIdByRoleList(List<RoleDataBase> roleDataList)
 		{
 			List<int> list = new List<int>();
@@ -323,7 +325,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return this.GetLinkIdByRoleIdList(list);
 		}
 
-		// Token: 0x06033D14 RID: 212244 RVA: 0x00C21998 File Offset: 0x00C1FB98
+		// Token: 0x06028B7F RID: 166783 RVA: 0x00B6AEB0 File Offset: 0x00B690B0
 		public int GetLinkIdByRoleIdList(List<int> roleIdList)
 		{
 			Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -367,7 +369,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return 0;
 		}
 
-		// Token: 0x06033D15 RID: 212245 RVA: 0x00C21AFC File Offset: 0x00C1FCFC
+		// Token: 0x06028B80 RID: 166784 RVA: 0x00B6B014 File Offset: 0x00B69214
 		public bool IsBondLinkCanActivate(int bondId)
 		{
 			RoleBondInfo roleBondDataById = this.GetRoleBondDataById(bondId);
@@ -384,7 +386,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return roleBondDataById.Level >= num;
 		}
 
-		// Token: 0x06033D16 RID: 212246 RVA: 0x00C21B60 File Offset: 0x00C1FD60
+		// Token: 0x06028B81 RID: 166785 RVA: 0x00B6B078 File Offset: 0x00B69278
 		public bool IsAnyBondLinkCanActivate()
 		{
 			foreach (RoleBondInfo roleBondInfo in this.GetAllOwnedRoleBondData())
@@ -397,7 +399,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return false;
 		}
 
-		// Token: 0x06033D17 RID: 212247 RVA: 0x00C21BC4 File Offset: 0x00C1FDC4
+		// Token: 0x06028B82 RID: 166786 RVA: 0x00B6B0DC File Offset: 0x00B692DC
 		public List<RoleBondInfo> GetAllOwnedRoleBondData()
 		{
 			List<RoleBondInfo> list = new List<RoleBondInfo>();
@@ -408,7 +410,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return list;
 		}
 
-		// Token: 0x06033D18 RID: 212248 RVA: 0x00C21C24 File Offset: 0x00C1FE24
+		// Token: 0x06028B83 RID: 166787 RVA: 0x00B6B13C File Offset: 0x00B6933C
 		public void UpdateOptionData(RogueResInstOptionsUpdateNotify data)
 		{
 			foreach (KeyValuePair<int, RogueResOption> keyValuePair in data.Adds)
@@ -429,7 +431,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D19 RID: 212249 RVA: 0x00C21D20 File Offset: 0x00C1FF20
+		// Token: 0x06028B84 RID: 166788 RVA: 0x00B6B238 File Offset: 0x00B69438
 		public void UpdateGainData(RogueResGainDataUpdateNotify data)
 		{
 			foreach (RogueResGainData rogueResGainData in data.Adds)
@@ -484,7 +486,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D1A RID: 212250 RVA: 0x00C21F28 File Offset: 0x00C20128
+		// Token: 0x06028B85 RID: 166789 RVA: 0x00B6B440 File Offset: 0x00B69640
 		public void UpdateElementData(RogueResElementUpdateNotify notify)
 		{
 			foreach (ElementUnit elementUnit in notify.ElementUnits)
@@ -493,7 +495,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D1B RID: 212251 RVA: 0x00C21F80 File Offset: 0x00C20180
+		// Token: 0x06028B86 RID: 166790 RVA: 0x00B6B498 File Offset: 0x00B69698
 		public void UpdateFetterData(RogueResRoleBondUpdateNotify notify)
 		{
 			foreach (RoleBondInfo roleBondInfo in notify.RoleBondInfos)
@@ -502,7 +504,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D1C RID: 212252 RVA: 0x00C21FD8 File Offset: 0x00C201D8
+		// Token: 0x06028B87 RID: 166791 RVA: 0x00B6B4F0 File Offset: 0x00B696F0
 		public void InitOptionData(RogueResInstOptionsNotify data)
 		{
 			foreach (KeyValuePair<int, RogueResOption> keyValuePair in data.RogueResOptionDict)
@@ -513,7 +515,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D1D RID: 212253 RVA: 0x00C22038 File Offset: 0x00C20238
+		// Token: 0x06028B88 RID: 166792 RVA: 0x00B6B550 File Offset: 0x00B69750
 		public void InitGainData(RogueResGainDataTotalNotify data)
 		{
 			this.RoleFetterMap.Clear();
@@ -567,13 +569,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D1E RID: 212254 RVA: 0x00C22254 File Offset: 0x00C20454
+		// Token: 0x06028B89 RID: 166793 RVA: 0x00B6B76C File Offset: 0x00B6996C
 		public void InitFormationData(List<RogueResFormation> data)
 		{
 			this.FormationData = data;
 		}
 
-		// Token: 0x06033D1F RID: 212255 RVA: 0x00C22260 File Offset: 0x00C20460
+		// Token: 0x06028B8A RID: 166794 RVA: 0x00B6B778 File Offset: 0x00B69978
 		protected override bool OnClear()
 		{
 			this.OptionMap.Clear();
@@ -588,7 +590,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return true;
 		}
 
-		// Token: 0x06033D20 RID: 212256 RVA: 0x00C222C8 File Offset: 0x00C204C8
+		// Token: 0x06028B8B RID: 166795 RVA: 0x00B6B7E0 File Offset: 0x00B699E0
 		public List<IRogueBattleElementInfo> GetTotalElementInfo([Nullable(new byte[]
 		{
 			2,
@@ -646,7 +648,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return list;
 		}
 
-		// Token: 0x06033D21 RID: 212257 RVA: 0x00C224B4 File Offset: 0x00C206B4
+		// Token: 0x06028B8C RID: 166796 RVA: 0x00B6B9CC File Offset: 0x00B69BCC
 		public int GetTotalElementCount()
 		{
 			int num = 0;
@@ -657,7 +659,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return num;
 		}
 
-		// Token: 0x06033D22 RID: 212258 RVA: 0x00C22514 File Offset: 0x00C20714
+		// Token: 0x06028B8D RID: 166797 RVA: 0x00B6BA2C File Offset: 0x00B69C2C
 		[NullableContext(2)]
 		public IRogueBattleElementInfo GetElementInfoById(int id)
 		{
@@ -674,7 +676,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return null;
 		}
 
-		// Token: 0x06033D23 RID: 212259 RVA: 0x00C22558 File Offset: 0x00C20758
+		// Token: 0x06028B8E RID: 166798 RVA: 0x00B6BA70 File Offset: 0x00B69C70
 		public bool CheckPhantomAffixCanUnlock(PhantomAffixInfo data)
 		{
 			bool result = true;
@@ -690,7 +692,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return result;
 		}
 
-		// Token: 0x06033D24 RID: 212260 RVA: 0x00C225C8 File Offset: 0x00C207C8
+		// Token: 0x06028B8F RID: 166799 RVA: 0x00B6BAE0 File Offset: 0x00B69CE0
 		public int GetCurrentSeasonId()
 		{
 			int instanceId = InstanceDungeonEntranceModel.Instance.InstanceId;
@@ -706,7 +708,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return config.Value.SeasonId;
 		}
 
-		// Token: 0x06033D25 RID: 212261 RVA: 0x00C22610 File Offset: 0x00C20810
+		// Token: 0x06028B90 RID: 166800 RVA: 0x00B6BB28 File Offset: 0x00B69D28
 		public List<IRogueBattleMapRoleGridInfo> GetRoleListByBond(int bondId)
 		{
 			if (this.BondAllRoleMap.Count == 0)
@@ -853,21 +855,21 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return list4;
 		}
 
-		// Token: 0x06033D26 RID: 212262 RVA: 0x00C22A80 File Offset: 0x00C20C80
+		// Token: 0x06028B91 RID: 166801 RVA: 0x00B6BF98 File Offset: 0x00B6A198
 		public bool GetRoleCantGet(int roleRogueId)
 		{
 			RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(roleRogueId);
 			return !RoleConfig.Instance.IsTrialRole(roleRogueId) && RoleModel.Instance.GetRoleInstanceById(roleConfig.Value.Id) == null;
 		}
 
-		// Token: 0x06033D27 RID: 212263 RVA: 0x00C22AC4 File Offset: 0x00C20CC4
+		// Token: 0x06028B92 RID: 166802 RVA: 0x00B6BFDC File Offset: 0x00B6A1DC
 		public bool GetRoleIsRogueTrial(int roleRogueId)
 		{
 			RoleInfo value = RoleConfig.Instance.GetRoleConfig(roleRogueId).Value;
 			return RoleConfig.Instance.IsTrialRole(roleRogueId) && RoleModel.Instance.GetRoleInstanceById(value.Id) == null;
 		}
 
-		// Token: 0x06033D28 RID: 212264 RVA: 0x00C22B08 File Offset: 0x00C20D08
+		// Token: 0x06028B93 RID: 166803 RVA: 0x00B6C020 File Offset: 0x00B6A220
 		public List<IRogueBattleMapGridEffectInfo> GetEffectList()
 		{
 			Dictionary<string, IRogueBattleMapGridEffectInfo> dictionary = new Dictionary<string, IRogueBattleMapGridEffectInfo>();
@@ -882,7 +884,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return list;
 		}
 
-		// Token: 0x06033D29 RID: 212265 RVA: 0x00C22B80 File Offset: 0x00C20D80
+		// Token: 0x06028B94 RID: 166804 RVA: 0x00B6C098 File Offset: 0x00B6A298
 		private void GetTeamEffectList(Dictionary<string, IRogueBattleMapGridEffectInfo> infoMap)
 		{
 			int teamLv = MapRogueModel.Instance.GameInfo.TeamLv;
@@ -957,7 +959,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D2A RID: 212266 RVA: 0x00C22ECC File Offset: 0x00C210CC
+		// Token: 0x06028B95 RID: 166805 RVA: 0x00B6C3E4 File Offset: 0x00B6A5E4
 		private void GetTeamStaticEffect(Dictionary<string, IRogueBattleMapGridEffectInfo> infoMap)
 		{
 			int teamLv = MapRogueModel.Instance.GameInfo.TeamLv;
@@ -1034,7 +1036,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			infoMap[value3.Text] = rogueBattleMapGridEffectInfo3;
 		}
 
-		// Token: 0x06033D2B RID: 212267 RVA: 0x00C23198 File Offset: 0x00C21398
+		// Token: 0x06028B96 RID: 166806 RVA: 0x00B6C6B0 File Offset: 0x00B6A8B0
 		private void GetBondExploreEffect(Dictionary<string, IRogueBattleMapGridEffectInfo> infoMap)
 		{
 			foreach (RoleBondInfo roleBondInfo in this.GetAllOwnedRoleBondData())
@@ -1081,24 +1083,27 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D2C RID: 212268 RVA: 0x00C233A0 File Offset: 0x00C215A0
+		// Token: 0x06028B97 RID: 166807 RVA: 0x00B6C8B8 File Offset: 0x00B6AAB8
 		public bool GetRogueResNewRoleFlag()
 		{
-			return LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.RogueResNewRoleFlag, false);
+			ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.RogueResNewRoleFlag, EClientStorageSystemIdType.RogueResNewRoleFlag, true);
+			return (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.RogueResNewRoleFlag) as ServerStorageBoolean).Get().GetValueOrDefault();
 		}
 
-		// Token: 0x06033D2D RID: 212269 RVA: 0x00C233AD File Offset: 0x00C215AD
+		// Token: 0x06028B98 RID: 166808 RVA: 0x00B6C8F4 File Offset: 0x00B6AAF4
 		public void SetRogueResNewRoleFlag(bool bNew)
 		{
-			if (LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.RogueResNewRoleFlag, false) == bNew)
+			ServerStorageBoolean serverStorageBoolean = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.RogueResNewRoleFlag) as ServerStorageBoolean;
+			bool? flag = serverStorageBoolean.Get();
+			if (flag.GetValueOrDefault() == bNew & flag != null)
 			{
 				return;
 			}
-			LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.RogueResNewRoleFlag, bNew);
+			serverStorageBoolean.Set(new bool?(bNew));
 			EventSystem.Instance.Emit(EEventName.RogueResNewRoleFlagChange);
 		}
 
-		// Token: 0x06033D2E RID: 212270 RVA: 0x00C233DC File Offset: 0x00C215DC
+		// Token: 0x06028B99 RID: 166809 RVA: 0x00B6C950 File Offset: 0x00B6AB50
 		public void ClearData()
 		{
 			this.TotalGainDataMap.Clear();
@@ -1109,8 +1114,8 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.FormationData = new List<RogueResFormation>();
 		}
 
-		// Token: 0x17007F32 RID: 32562
-		// (get) Token: 0x06033D2F RID: 212271 RVA: 0x00C2342B File Offset: 0x00C2162B
+		// Token: 0x170052E2 RID: 21218
+		// (get) Token: 0x06028B9A RID: 166810 RVA: 0x00B6C99F File Offset: 0x00B6AB9F
 		public static RogueBattleModel Instance
 		{
 			get
@@ -1119,7 +1124,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D30 RID: 212272 RVA: 0x00C23432 File Offset: 0x00C21632
+		// Token: 0x06028B9B RID: 166811 RVA: 0x00B6C9A6 File Offset: 0x00B6ABA6
 		public static RogueBattleModel GetOrCreateInstance()
 		{
 			if (RogueBattleModel._Instance == null)
@@ -1129,7 +1134,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return RogueBattleModel._Instance;
 		}
 
-		// Token: 0x06033D31 RID: 212273 RVA: 0x00C23446 File Offset: 0x00C21646
+		// Token: 0x06028B9C RID: 166812 RVA: 0x00B6C9BA File Offset: 0x00B6ABBA
 		public static bool CreateInstance()
 		{
 			if (RogueBattleModel._Instance != null)
@@ -1140,76 +1145,76 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return true;
 		}
 
-		// Token: 0x06033D32 RID: 212274 RVA: 0x00C2345C File Offset: 0x00C2165C
+		// Token: 0x06028B9D RID: 166813 RVA: 0x00B6C9D0 File Offset: 0x00B6ABD0
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06033D33 RID: 212275 RVA: 0x00C2345E File Offset: 0x00C2165E
+		// Token: 0x06028B9E RID: 166814 RVA: 0x00B6C9D2 File Offset: 0x00B6ABD2
 		public static void ResetStaticDefaultValue()
 		{
 			RogueBattleModel._Instance = null;
 		}
 
-		// Token: 0x06033D34 RID: 212276 RVA: 0x00C23466 File Offset: 0x00C21666
+		// Token: 0x06028B9F RID: 166815 RVA: 0x00B6C9DA File Offset: 0x00B6ABDA
 		static RogueBattleModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RogueBattleModel.CreateStaticDefaultValue), new Action(RogueBattleModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401B859 RID: 112729
+		// Token: 0x0401622C RID: 90668
 		public Dictionary<RogueResDataType, Dictionary<int, RogueResGainData>> TotalGainDataMap = new Dictionary<RogueResDataType, Dictionary<int, RogueResGainData>>();
 
-		// Token: 0x0401B85A RID: 112730
+		// Token: 0x0401622D RID: 90669
 		public Dictionary<int, RogueResGainData> GainDataMap = new Dictionary<int, RogueResGainData>();
 
-		// Token: 0x0401B85B RID: 112731
+		// Token: 0x0401622E RID: 90670
 		public Dictionary<int, ElementUnit> ElementMap = new Dictionary<int, ElementUnit>();
 
-		// Token: 0x0401B85C RID: 112732
+		// Token: 0x0401622F RID: 90671
 		public Dictionary<int, RoleBondInfo> RoleFetterMap = new Dictionary<int, RoleBondInfo>();
 
-		// Token: 0x0401B85D RID: 112733
+		// Token: 0x04016230 RID: 90672
 		public Dictionary<int, List<int>> BondAllRoleMap = new Dictionary<int, List<int>>();
 
-		// Token: 0x0401B85E RID: 112734
+		// Token: 0x04016231 RID: 90673
 		public List<RogueResFormation> FormationData = new List<RogueResFormation>();
 
-		// Token: 0x0401B85F RID: 112735
+		// Token: 0x04016232 RID: 90674
 		public EDescModel DescMode;
 
-		// Token: 0x0401B860 RID: 112736
+		// Token: 0x04016233 RID: 90675
 		[Nullable(2)]
 		public RogueResGainData SelectGainData;
 
-		// Token: 0x0401B861 RID: 112737
+		// Token: 0x04016234 RID: 90676
 		public int CurrentBindId;
 
-		// Token: 0x0401B862 RID: 112738
+		// Token: 0x04016235 RID: 90677
 		public string CurrentRoomTypeId = string.Empty;
 
-		// Token: 0x0401B863 RID: 112739
+		// Token: 0x04016236 RID: 90678
 		public int CurrentRoomId;
 
-		// Token: 0x0401B864 RID: 112740
+		// Token: 0x04016237 RID: 90679
 		public int CurrentMapSummaryBond;
 
-		// Token: 0x0401B865 RID: 112741
+		// Token: 0x04016238 RID: 90680
 		public bool IsMapSummaryBondJumping;
 
-		// Token: 0x0401B866 RID: 112742
+		// Token: 0x04016239 RID: 90681
 		public int MaxRoleStar;
 
-		// Token: 0x0401B867 RID: 112743
+		// Token: 0x0401623A RID: 90682
 		public List<int> SummaryRoleList = new List<int>();
 
-		// Token: 0x0401B868 RID: 112744
+		// Token: 0x0401623B RID: 90683
 		private readonly StateRef CurrentRoomMusicStateInternal = new StateRef("game_rogue_room_type", "none");
 
-		// Token: 0x0401B869 RID: 112745
+		// Token: 0x0401623C RID: 90684
 		private readonly Dictionary<int, RogueResOption> OptionMap = new Dictionary<int, RogueResOption>();
 
-		// Token: 0x0401B86A RID: 112746
+		// Token: 0x0401623D RID: 90685
 		[Nullable(2)]
 		private static RogueBattleModel _Instance;
 	}

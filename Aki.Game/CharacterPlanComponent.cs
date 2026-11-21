@@ -11,13 +11,13 @@ using CSharpScript.Game.LevelGamePlay.LevelAi;
 using CSharpScript.Game.LevelGamePlay.LevelAi.BehaviorTree;
 using CSharpScript.Game.LevelGamePlay.LevelAi.Nodes;
 
-// Token: 0x02003081 RID: 12417
+// Token: 0x020025D8 RID: 9688
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterPlanComponent : EntityComponent
 {
-	// Token: 0x17002483 RID: 9347
-	// (get) Token: 0x0601A86A RID: 108650 RVA: 0x007199E6 File Offset: 0x00717BE6
+	// Token: 0x170025D4 RID: 9684
+	// (get) Token: 0x06018247 RID: 98887 RVA: 0x0073FF3A File Offset: 0x0073E13A
 	public LevelAiPlanInstance PlanInstance
 	{
 		get
@@ -26,8 +26,8 @@ public class CharacterPlanComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002484 RID: 9348
-	// (get) Token: 0x0601A86B RID: 108651 RVA: 0x007199EE File Offset: 0x00717BEE
+	// Token: 0x170025D5 RID: 9685
+	// (get) Token: 0x06018248 RID: 98888 RVA: 0x0073FF42 File Offset: 0x0073E142
 	public LevelAiWorldState WorldState
 	{
 		get
@@ -36,9 +36,9 @@ public class CharacterPlanComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002485 RID: 9349
-	// (get) Token: 0x0601A86C RID: 108652 RVA: 0x007199F6 File Offset: 0x00717BF6
-	// (set) Token: 0x0601A86D RID: 108653 RVA: 0x007199FE File Offset: 0x00717BFE
+	// Token: 0x170025D6 RID: 9686
+	// (get) Token: 0x06018249 RID: 98889 RVA: 0x0073FF4A File Offset: 0x0073E14A
+	// (set) Token: 0x0601824A RID: 98890 RVA: 0x0073FF52 File Offset: 0x0073E152
 	public LevelAiWorldState WorldStateProxy
 	{
 		get
@@ -51,8 +51,8 @@ public class CharacterPlanComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002486 RID: 9350
-	// (get) Token: 0x0601A86E RID: 108654 RVA: 0x00719A07 File Offset: 0x00717C07
+	// Token: 0x170025D7 RID: 9687
+	// (get) Token: 0x0601824B RID: 98891 RVA: 0x0073FF5B File Offset: 0x0073E15B
 	public bool IsNeedPlan
 	{
 		get
@@ -61,8 +61,8 @@ public class CharacterPlanComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002487 RID: 9351
-	// (get) Token: 0x0601A86F RID: 108655 RVA: 0x00719A0F File Offset: 0x00717C0F
+	// Token: 0x170025D8 RID: 9688
+	// (get) Token: 0x0601824C RID: 98892 RVA: 0x0073FF63 File Offset: 0x0073E163
 	public bool Paused
 	{
 		get
@@ -71,7 +71,7 @@ public class CharacterPlanComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A870 RID: 108656 RVA: 0x00719A18 File Offset: 0x00717C18
+	// Token: 0x0601824D RID: 98893 RVA: 0x0073FF6C File Offset: 0x0073E16C
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
 		this.CreatureDataComponent = base.Entity.GetComponent<CreatureDataComponent>();
@@ -119,7 +119,7 @@ public class CharacterPlanComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A871 RID: 108657 RVA: 0x00719BA4 File Offset: 0x00717DA4
+	// Token: 0x0601824E RID: 98894 RVA: 0x007400F8 File Offset: 0x0073E2F8
 	protected override bool OnStart()
 	{
 		if (!this.PlanAble)
@@ -154,7 +154,7 @@ public class CharacterPlanComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A872 RID: 108658 RVA: 0x00719C64 File Offset: 0x00717E64
+	// Token: 0x0601824F RID: 98895 RVA: 0x007401B8 File Offset: 0x0073E3B8
 	protected override void OnActivate()
 	{
 		if (!this.PlanAble)
@@ -168,7 +168,7 @@ public class CharacterPlanComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A873 RID: 108659 RVA: 0x00719C8E File Offset: 0x00717E8E
+	// Token: 0x06018250 RID: 98896 RVA: 0x007401E2 File Offset: 0x0073E3E2
 	protected override void OnTick(float delta)
 	{
 		if (!this.PlanAble || !this.TickAble)
@@ -178,7 +178,7 @@ public class CharacterPlanComponent : EntityComponent
 		this.RootPlanInstance.Tick(delta);
 	}
 
-	// Token: 0x0601A874 RID: 108660 RVA: 0x00719CB0 File Offset: 0x00717EB0
+	// Token: 0x06018251 RID: 98897 RVA: 0x00740204 File Offset: 0x0073E404
 	protected override bool OnEnd()
 	{
 		if (!this.PlanAble)
@@ -193,7 +193,7 @@ public class CharacterPlanComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A875 RID: 108661 RVA: 0x00719D18 File Offset: 0x00717F18
+	// Token: 0x06018252 RID: 98898 RVA: 0x0074026C File Offset: 0x0073E46C
 	public void StartLevelAi()
 	{
 		if (!this.PlanAble)
@@ -204,7 +204,7 @@ public class CharacterPlanComponent : EntityComponent
 		this.TickAble = true;
 	}
 
-	// Token: 0x0601A876 RID: 108662 RVA: 0x00719D35 File Offset: 0x00717F35
+	// Token: 0x06018253 RID: 98899 RVA: 0x00740289 File Offset: 0x0073E489
 	public void StopLevelAi()
 	{
 		if (!this.PlanAble)
@@ -215,7 +215,7 @@ public class CharacterPlanComponent : EntityComponent
 		this.TickAble = false;
 	}
 
-	// Token: 0x0601A877 RID: 108663 RVA: 0x00719D54 File Offset: 0x00717F54
+	// Token: 0x06018254 RID: 98900 RVA: 0x007402A8 File Offset: 0x0073E4A8
 	[NullableContext(1)]
 	public unsafe bool Pause(string key)
 	{
@@ -249,7 +249,7 @@ public class CharacterPlanComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A878 RID: 108664 RVA: 0x00719E64 File Offset: 0x00718064
+	// Token: 0x06018255 RID: 98901 RVA: 0x007403B8 File Offset: 0x0073E5B8
 	[NullableContext(1)]
 	public bool Resume(string key)
 	{
@@ -278,20 +278,20 @@ public class CharacterPlanComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A879 RID: 108665 RVA: 0x00719F28 File Offset: 0x00718128
+	// Token: 0x06018256 RID: 98902 RVA: 0x0074047C File Offset: 0x0073E67C
 	[NullableContext(1)]
 	public CreatureDataComponent GetCreatureDataComponent()
 	{
 		return this.CreatureDataComponent;
 	}
 
-	// Token: 0x0601A87A RID: 108666 RVA: 0x00719F30 File Offset: 0x00718130
+	// Token: 0x06018257 RID: 98903 RVA: 0x00740484 File Offset: 0x0073E684
 	public LevelAi GetCurrentLevelAiAsset()
 	{
 		return this.CurrentLevelAiAsset;
 	}
 
-	// Token: 0x0601A87B RID: 108667 RVA: 0x00719F38 File Offset: 0x00718138
+	// Token: 0x06018258 RID: 98904 RVA: 0x0074048C File Offset: 0x0073E68C
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public LevelAiPlanInstance FindPlanInstanceBy(Func<LevelAiPlanInstance, bool> predicate)
@@ -303,7 +303,7 @@ public class CharacterPlanComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601A87C RID: 108668 RVA: 0x00719F58 File Offset: 0x00718158
+	// Token: 0x06018259 RID: 98905 RVA: 0x007404AC File Offset: 0x0073E6AC
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public ActiveTaskInfo FindActiveTaskInfo(LevelAiTask task)
@@ -321,7 +321,7 @@ public class CharacterPlanComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601A87D RID: 108669 RVA: 0x00719FA8 File Offset: 0x007181A8
+	// Token: 0x0601825A RID: 98906 RVA: 0x007404FC File Offset: 0x0073E6FC
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public ActiveTaskInfo FindActiveDecoratorInfo(LevelAiDecorator decorator)
@@ -339,7 +339,7 @@ public class CharacterPlanComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601A87E RID: 108670 RVA: 0x00719FF8 File Offset: 0x007181F8
+	// Token: 0x0601825B RID: 98907 RVA: 0x0074054C File Offset: 0x0073E74C
 	[NullableContext(1)]
 	private void InitActionsState(ILevelAIState state, int stateIndex)
 	{
@@ -361,7 +361,7 @@ public class CharacterPlanComponent : EntityComponent
 		this.CurrentLevelAiAsset.StartNodes.Add(levelAiNodeBehaviourActions);
 	}
 
-	// Token: 0x0601A87F RID: 108671 RVA: 0x0071A0F4 File Offset: 0x007182F4
+	// Token: 0x0601825C RID: 98908 RVA: 0x00740648 File Offset: 0x0073E848
 	[NullableContext(1)]
 	private void InitSplineState(ILevelAIState state, int stateIndex)
 	{
@@ -383,7 +383,7 @@ public class CharacterPlanComponent : EntityComponent
 		this.CurrentLevelAiAsset.StartNodes.Add(levelAiNodeBehaviourSpline);
 	}
 
-	// Token: 0x0601A880 RID: 108672 RVA: 0x0071A20C File Offset: 0x0071840C
+	// Token: 0x0601825D RID: 98909 RVA: 0x00740760 File Offset: 0x0073E960
 	[NullableContext(1)]
 	private void OnClientVarUpdated(string key, VarDefinePb value)
 	{
@@ -418,7 +418,7 @@ public class CharacterPlanComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A881 RID: 108673 RVA: 0x0071A26C File Offset: 0x0071846C
+	// Token: 0x0601825E RID: 98910 RVA: 0x007407C0 File Offset: 0x0073E9C0
 	[NullableContext(1)]
 	private bool IsValidClientVar(string key, VarDefinePb value)
 	{
@@ -449,7 +449,7 @@ public class CharacterPlanComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x0601A882 RID: 108674 RVA: 0x0071A350 File Offset: 0x00718550
+	// Token: 0x0601825F RID: 98911 RVA: 0x007408A4 File Offset: 0x0073EAA4
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -458,143 +458,147 @@ public class CharacterPlanComponent : EntityComponent
 			return false;
 		}
 		CharacterPlanComponent characterPlanComponent = (CharacterPlanComponent)componentTemplate;
-		if (base.CanResetComponentProperty("CreatureDataComponent"))
+		if (characterPlanComponent.CreatureDataComponent == null)
 		{
-			if (characterPlanComponent.CreatureDataComponent == null)
-			{
-				this.CreatureDataComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-			{
-				return false;
-			}
+			this.CreatureDataComponent = null;
 		}
-		if (base.CanResetComponentProperty("ConfigId"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
 		{
-			this.ConfigId = characterPlanComponent.ConfigId;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CurrentLevelAiAsset"))
+		this.ConfigId = characterPlanComponent.ConfigId;
+		if (characterPlanComponent.CurrentLevelAiAsset == null)
 		{
-			if (characterPlanComponent.CurrentLevelAiAsset == null)
-			{
-				this.CurrentLevelAiAsset = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelAi>(this.CurrentLevelAiAsset), "CurrentLevelAiAsset"))
-			{
-				return false;
-			}
+			this.CurrentLevelAiAsset = null;
 		}
-		if (base.CanResetComponentProperty("RootPlanInstance"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentLevelAiAsset), "CurrentLevelAiAsset"))
 		{
-			if (characterPlanComponent.RootPlanInstance == null)
-			{
-				this.RootPlanInstance = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelAiPlanInstance>(this.RootPlanInstance), "RootPlanInstance"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("WorldStateInternal"))
+		if (characterPlanComponent.RootPlanInstance == null)
 		{
-			if (characterPlanComponent.WorldStateInternal == null)
-			{
-				this.WorldStateInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelAiWorldState>(this.WorldStateInternal), "WorldStateInternal"))
-			{
-				return false;
-			}
+			this.RootPlanInstance = null;
 		}
-		if (base.CanResetComponentProperty("WorldStateProxyInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RootPlanInstance), "RootPlanInstance"))
 		{
-			if (characterPlanComponent.WorldStateProxyInternal == null)
-			{
-				this.WorldStateProxyInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelAiWorldState>(this.WorldStateProxyInternal), "WorldStateProxyInternal"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("Params"))
+		if (characterPlanComponent.WorldStateInternal == null)
 		{
-			if (characterPlanComponent.Params == null)
-			{
-				this.Params = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelAIComponent>(this.Params), "Params"))
-			{
-				return false;
-			}
+			this.WorldStateInternal = null;
 		}
-		if (base.CanResetComponentProperty("PlanAble"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WorldStateInternal), "WorldStateInternal"))
 		{
-			this.PlanAble = characterPlanComponent.PlanAble;
+			return false;
 		}
-		if (base.CanResetComponentProperty("TickAble"))
+		if (characterPlanComponent.WorldStateProxyInternal == null)
 		{
-			this.TickAble = characterPlanComponent.TickAble;
+			this.WorldStateProxyInternal = null;
 		}
-		if (base.CanResetComponentProperty("IsPaused"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WorldStateProxyInternal), "WorldStateProxyInternal"))
 		{
-			this.IsPaused = characterPlanComponent.IsPaused;
+			return false;
 		}
-		if (base.CanResetComponentProperty("DisableKey"))
+		if (characterPlanComponent.Params == null)
 		{
-			this.DisableKey = characterPlanComponent.DisableKey;
+			this.Params = null;
 		}
-		if (base.CanResetComponentProperty("DisableAiHandle"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Params), "Params"))
 		{
-			if (characterPlanComponent.DisableAiHandle == null)
-			{
-				this.DisableAiHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DisableEntityHandle>(this.DisableAiHandle), "DisableAiHandle"))
-			{
-				return false;
-			}
+			return false;
 		}
-		return !base.CanResetComponentProperty("DisableKeyMap") || characterPlanComponent.DisableKeyMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, int>>(this.DisableKeyMap), "DisableKeyMap");
+		this.PlanAble = characterPlanComponent.PlanAble;
+		this.TickAble = characterPlanComponent.TickAble;
+		this.IsPaused = characterPlanComponent.IsPaused;
+		this.DisableKey = characterPlanComponent.DisableKey;
+		if (characterPlanComponent.DisableAiHandle == null)
+		{
+			this.DisableAiHandle = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisableAiHandle), "DisableAiHandle"))
+		{
+			return false;
+		}
+		return characterPlanComponent.DisableKeyMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisableKeyMap), "DisableKeyMap");
 	}
 
-	// Token: 0x0400CBB4 RID: 52148
+	// Token: 0x170025D9 RID: 9689
+	// (get) Token: 0x06018260 RID: 98912 RVA: 0x00740A4F File Offset: 0x0073EC4F
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025DA RID: 9690
+	// (get) Token: 0x06018261 RID: 98913 RVA: 0x00740A52 File Offset: 0x0073EC52
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025DB RID: 9691
+	// (get) Token: 0x06018262 RID: 98914 RVA: 0x00740A55 File Offset: 0x0073EC55
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025DC RID: 9692
+	// (get) Token: 0x06018263 RID: 98915 RVA: 0x00740A58 File Offset: 0x0073EC58
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CF97 RID: 53143
 	private CreatureDataComponent CreatureDataComponent;
 
-	// Token: 0x0400CBB5 RID: 52149
+	// Token: 0x0400CF98 RID: 53144
 	protected int ConfigId;
 
-	// Token: 0x0400CBB6 RID: 52150
+	// Token: 0x0400CF99 RID: 53145
 	private LevelAi CurrentLevelAiAsset;
 
-	// Token: 0x0400CBB7 RID: 52151
+	// Token: 0x0400CF9A RID: 53146
 	private LevelAiPlanInstance RootPlanInstance;
 
-	// Token: 0x0400CBB8 RID: 52152
+	// Token: 0x0400CF9B RID: 53147
 	private LevelAiWorldState WorldStateInternal;
 
-	// Token: 0x0400CBB9 RID: 52153
+	// Token: 0x0400CF9C RID: 53148
 	private LevelAiWorldState WorldStateProxyInternal;
 
-	// Token: 0x0400CBBA RID: 52154
+	// Token: 0x0400CF9D RID: 53149
 	private LevelAIComponent Params;
 
-	// Token: 0x0400CBBB RID: 52155
+	// Token: 0x0400CF9E RID: 53150
 	private bool PlanAble = true;
 
-	// Token: 0x0400CBBC RID: 52156
+	// Token: 0x0400CF9F RID: 53151
 	private bool TickAble = true;
 
-	// Token: 0x0400CBBD RID: 52157
+	// Token: 0x0400CFA0 RID: 53152
 	private bool IsPaused;
 
-	// Token: 0x0400CBBE RID: 52158
+	// Token: 0x0400CFA1 RID: 53153
 	private int? DisableKey;
 
-	// Token: 0x0400CBBF RID: 52159
+	// Token: 0x0400CFA2 RID: 53154
 	public DisableEntityHandle DisableAiHandle;
 
-	// Token: 0x0400CBC0 RID: 52160
+	// Token: 0x0400CFA3 RID: 53155
 	[Nullable(new byte[]
 	{
 		2,

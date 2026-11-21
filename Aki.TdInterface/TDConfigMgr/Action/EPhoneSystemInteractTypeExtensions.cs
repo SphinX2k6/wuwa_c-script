@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023C7 RID: 9159
+	// Token: 0x0200265C RID: 9820
 	public static class EPhoneSystemInteractTypeExtensions
 	{
-		// Token: 0x0600C77E RID: 51070 RVA: 0x001D33F8 File Offset: 0x001D15F8
+		// Token: 0x0600D3F8 RID: 54264 RVA: 0x001ECA90 File Offset: 0x001EAC90
 		public static string ToEnumString(this EPhoneSystemInteractType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C77F RID: 51071 RVA: 0x001D344C File Offset: 0x001D164C
+		// Token: 0x0600D3F9 RID: 54265 RVA: 0x001ECAE4 File Offset: 0x001EACE4
 		public static EPhoneSystemInteractType FromString(string name)
 		{
 			EPhoneSystemInteractType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C780 RID: 51072 RVA: 0x001D3478 File Offset: 0x001D1678
+		// Token: 0x0600D3FA RID: 54266 RVA: 0x001ECB10 File Offset: 0x001EAD10
 		public static bool TryFromString(string name, out EPhoneSystemInteractType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C781 RID: 51073 RVA: 0x001D34E0 File Offset: 0x001D16E0
+		// Token: 0x0600D3FB RID: 54267 RVA: 0x001ECB78 File Offset: 0x001EAD78
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C782 RID: 51074 RVA: 0x001D3508 File Offset: 0x001D1708
+		// Token: 0x0600D3FC RID: 54268 RVA: 0x001ECBA0 File Offset: 0x001EADA0
 		public static EPhoneSystemInteractType[] GetValues()
 		{
 			return new EPhoneSystemInteractType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C783 RID: 51075 RVA: 0x001D351B File Offset: 0x001D171B
+		// Token: 0x0600D3FD RID: 54269 RVA: 0x001ECBB3 File Offset: 0x001EADB3
 		public static string[] GetNames()
 		{
 			return new string[]

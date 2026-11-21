@@ -4,12 +4,12 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020000A5 RID: 165
+	// Token: 0x0200008A RID: 138
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class UObjectGlobals
 	{
-		// Token: 0x060010BD RID: 4285 RVA: 0x000191DC File Offset: 0x000173DC
+		// Token: 0x06000C50 RID: 3152 RVA: 0x00013F00 File Offset: 0x00012100
 		[NullableContext(2)]
 		public unsafe static UnrealUObject StaticLoadObject(UClassStackOnlyPtr ObjectClass, UnrealUObject InOuter, [Nullable(1)] string InName)
 		{
@@ -33,7 +33,7 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer(UObjectGlobals.Internal_StaticLoadObject(ObjectClass, (InOuter != null) ? InOuter._NativePtr : ((IntPtr)0), inName));
 		}
 
-		// Token: 0x060010BE RID: 4286 RVA: 0x00019220 File Offset: 0x00017420
+		// Token: 0x06000C51 RID: 3153 RVA: 0x00013F44 File Offset: 0x00012144
 		public unsafe static IntPtr StaticLoadClass([Nullable(2)] UnrealUObject InOuter, string InName)
 		{
 			if (string.IsNullOrEmpty(InName))
@@ -56,7 +56,7 @@ namespace UnrealEngine
 			return UObjectGlobals.Internal_StaticLoadClass((InOuter != null) ? InOuter._NativePtr : ((IntPtr)0), inName);
 		}
 
-		// Token: 0x060010BF RID: 4287 RVA: 0x0001925C File Offset: 0x0001745C
+		// Token: 0x06000C52 RID: 3154 RVA: 0x00013F80 File Offset: 0x00012180
 		public unsafe static IntPtr StaticLoadScriptStruct([Nullable(2)] UnrealUObject InOuter, string InName)
 		{
 			if (string.IsNullOrEmpty(InName))
@@ -79,7 +79,7 @@ namespace UnrealEngine
 			return UObjectGlobals.Internal_StaticLoadScriptStruct((InOuter != null) ? InOuter._NativePtr : ((IntPtr)0), inName);
 		}
 
-		// Token: 0x060010C0 RID: 4288 RVA: 0x00019298 File Offset: 0x00017498
+		// Token: 0x06000C53 RID: 3155 RVA: 0x00013FBC File Offset: 0x000121BC
 		public unsafe static IntPtr StaticLoadDelegateFunction([Nullable(2)] UnrealUObject InOuter, string InName)
 		{
 			if (string.IsNullOrEmpty(InName))
@@ -102,7 +102,7 @@ namespace UnrealEngine
 			return UObjectGlobals.Internal_StaticLoadDelegateFunction((InOuter != null) ? InOuter._NativePtr : ((IntPtr)0), inName);
 		}
 
-		// Token: 0x060010C1 RID: 4289 RVA: 0x000192D4 File Offset: 0x000174D4
+		// Token: 0x06000C54 RID: 3156 RVA: 0x00013FF8 File Offset: 0x000121F8
 		public unsafe static IntPtr StaticLoadDelegateFunctionChecked([Nullable(2)] UnrealUObject InOuter, string InName)
 		{
 			if (string.IsNullOrEmpty(InName))
@@ -134,39 +134,39 @@ namespace UnrealEngine
 			return intPtr;
 		}
 
-		// Token: 0x060010C2 RID: 4290
+		// Token: 0x06000C55 RID: 3157
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal unsafe static extern IntPtr Internal_StaticLoadObject(UClassStackOnlyPtr ObjectClass, IntPtr InOuter, char* InName);
 
-		// Token: 0x060010C3 RID: 4291
+		// Token: 0x06000C56 RID: 3158
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal unsafe static extern IntPtr Internal_StaticLoadClass(IntPtr InOuter, char* InName);
 
-		// Token: 0x060010C4 RID: 4292
+		// Token: 0x06000C57 RID: 3159
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal unsafe static extern IntPtr Internal_StaticLoadScriptStruct(IntPtr InOuter, char* InName);
 
-		// Token: 0x060010C5 RID: 4293
+		// Token: 0x06000C58 RID: 3160
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal unsafe static extern IntPtr Internal_StaticLoadDelegateFunction(IntPtr InOuter, char* InName);
 
-		// Token: 0x060010C6 RID: 4294
+		// Token: 0x06000C59 RID: 3161
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern string GetName(IntPtr ObjectPtr);
 
-		// Token: 0x060010C7 RID: 4295
+		// Token: 0x06000C5A RID: 3162
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern FName GetFName(IntPtr ObjectPtr);
 
-		// Token: 0x060010C8 RID: 4296
+		// Token: 0x06000C5B RID: 3163
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern bool IsValid(IntPtr ObjectPtr);
 
-		// Token: 0x060010C9 RID: 4297 RVA: 0x0001933C File Offset: 0x0001753C
+		// Token: 0x06000C5C RID: 3164 RVA: 0x00014060 File Offset: 0x00012260
 		public static IntPtr StaticLoadScriptStruct(string InObjectPath, ref IntPtr ScriptStructPtr)
 		{
 			ScriptStructPtr = UObjectGlobals.StaticLoadScriptStruct(null, InObjectPath);

@@ -5,18 +5,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract.View
 {
-	// Token: 0x02006A82 RID: 27266
+	// Token: 0x02005BDF RID: 23519
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class SceneInteractPointViewBase : UiPanelBase
 	{
-		// Token: 0x06043C3E RID: 277566 RVA: 0x01096151 File Offset: 0x01094351
+		// Token: 0x06039C8C RID: 236684 RVA: 0x0103A991 File Offset: 0x01038B91
 		public void UpdateTargetLocation(Vector targetLocation)
 		{
 			this.TargetLocation = targetLocation;
 		}
 
-		// Token: 0x06043C3F RID: 277567 RVA: 0x0109615C File Offset: 0x0109435C
+		// Token: 0x06039C8D RID: 236685 RVA: 0x0103A99C File Offset: 0x01038B9C
 		public void RefreshPosition()
 		{
 			LguiUtil.Instance.ConvertWorldPositionToLguiPosition(this.TargetLocation.ToUeVector(false), this.TempVector);
@@ -29,10 +29,10 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.View
 			rootItem.SetUIWorldLocation(fvector);
 		}
 
-		// Token: 0x04023675 RID: 145013
+		// Token: 0x0401E867 RID: 125031
 		protected Vector TargetLocation = Vector.Create();
 
-		// Token: 0x04023676 RID: 145014
+		// Token: 0x0401E868 RID: 125032
 		protected Vector TempVector = Vector.Create();
 	}
 }

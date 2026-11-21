@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002575 RID: 9589
+	// Token: 0x0200281E RID: 10270
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IVisualNovelPerformanceExit : IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600D72F RID: 55087 RVA: 0x00200E7A File Offset: 0x001FF07A
-		[NullableContext(1)]
+		// Token: 0x0600E49B RID: 58523 RVA: 0x0021CABE File Offset: 0x0021ACBE
+		[NullableContext(0)]
 		public static IVisualNovelPerformanceExit Create(IVisualNovelPerformanceExit? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E07 RID: 15879
-		// (get) Token: 0x0600D730 RID: 55088 RVA: 0x00200E99 File Offset: 0x001FF099
+		// Token: 0x1700410D RID: 16653
+		// (get) Token: 0x0600E49C RID: 58524 RVA: 0x0021CADD File Offset: 0x0021ACDD
 		public override EVisualNovelPerformanceType Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E08 RID: 15880
-		// (get) Token: 0x0600D731 RID: 55089 RVA: 0x00200EA8 File Offset: 0x001FF0A8
+		// Token: 0x1700410E RID: 16654
+		// (get) Token: 0x0600E49D RID: 58525 RVA: 0x0021CAEC File Offset: 0x0021ACEC
 		public override float? StartTime
 		{
 			get
@@ -47,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E09 RID: 15881
-		// (get) Token: 0x0600D732 RID: 55090 RVA: 0x00200EDE File Offset: 0x001FF0DE
+		// Token: 0x1700410F RID: 16655
+		// (get) Token: 0x0600E49E RID: 58526 RVA: 0x0021CB22 File Offset: 0x0021AD22
 		public virtual int WhoId
 		{
 			get
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E0A RID: 15882
-		// (get) Token: 0x0600D733 RID: 55091 RVA: 0x00200EEC File Offset: 0x001FF0EC
+		// Token: 0x17004110 RID: 16656
+		// (get) Token: 0x0600E49F RID: 58527 RVA: 0x0021CB30 File Offset: 0x0021AD30
 		public virtual bool? AllExit
 		{
 			get
@@ -71,8 +71,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E0B RID: 15883
-		// (get) Token: 0x0600D734 RID: 55092 RVA: 0x00200F24 File Offset: 0x001FF124
+		// Token: 0x17004111 RID: 16657
+		// (get) Token: 0x0600E4A0 RID: 58528 RVA: 0x0021CB68 File Offset: 0x0021AD68
 		public virtual float? FadeOutTime
 		{
 			get
@@ -85,8 +85,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E0C RID: 15884
-		// (get) Token: 0x0600D735 RID: 55093 RVA: 0x00200F5A File Offset: 0x001FF15A
+		// Token: 0x17004112 RID: 16658
+		// (get) Token: 0x0600E4A1 RID: 58529 RVA: 0x0021CB9E File Offset: 0x0021AD9E
 		public virtual IVisualNovelRoleConfig RoleConfig
 		{
 			get
@@ -101,13 +101,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400771B RID: 30491
+		// Token: 0x04007D78 RID: 32120
 		private IVisualNovelPerformanceExit Instance;
 
-		// Token: 0x0400771C RID: 30492
+		// Token: 0x04007D79 RID: 32121
 		private IVisualNovelRoleConfig _RoleConfigCache;
 
-		// Token: 0x0400771D RID: 30493
+		// Token: 0x04007D7A RID: 32122
 		private bool _RoleConfigInited;
 	}
 }

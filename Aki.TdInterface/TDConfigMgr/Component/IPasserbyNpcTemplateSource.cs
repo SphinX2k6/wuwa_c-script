@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005D4 RID: 1492
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000665 RID: 1637
 	public class IPasserbyNpcTemplateSource : IPasserbyNpcSource
 	{
-		// Token: 0x06001F98 RID: 8088 RVA: 0x000588B4 File Offset: 0x00056AB4
+		// Token: 0x06002264 RID: 8804 RVA: 0x0005EF40 File Offset: 0x0005D140
 		private IPasserbyNpcTemplateSource_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001F99 RID: 8089 RVA: 0x000588EC File Offset: 0x00056AEC
+		// Token: 0x06002265 RID: 8805 RVA: 0x0005EF78 File Offset: 0x0005D178
 		public static IPasserbyNpcTemplateSource Create([Nullable(2)] IPasserbyNpcTemplateSource instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F9A RID: 8090 RVA: 0x000588FF File Offset: 0x00056AFF
+		// Token: 0x06002266 RID: 8806 RVA: 0x0005EF8B File Offset: 0x0005D18B
 		public static IPasserbyNpcTemplateSource CreateFromSetValue([Nullable(2)] IPasserbyNpcTemplateSource_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F9B RID: 8091 RVA: 0x00058912 File Offset: 0x00056B12
+		// Token: 0x06002267 RID: 8807 RVA: 0x0005EF9E File Offset: 0x0005D19E
 		public new IPasserbyNpcTemplateSource_SetValue ToSetValue()
 		{
 			return new IPasserbyNpcTemplateSource_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700086D RID: 2157
-		// (get) Token: 0x06001F9C RID: 8092 RVA: 0x00058931 File Offset: 0x00056B31
-		// (set) Token: 0x06001F9D RID: 8093 RVA: 0x0005895C File Offset: 0x00056B5C
+		// Token: 0x17000919 RID: 2329
+		// (get) Token: 0x06002268 RID: 8808 RVA: 0x0005EFBD File Offset: 0x0005D1BD
+		// (set) Token: 0x06002269 RID: 8809 RVA: 0x0005EFE8 File Offset: 0x0005D1E8
 		public override EPasserbyNpcSource Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700086E RID: 2158
-		// (get) Token: 0x06001F9E RID: 8094 RVA: 0x0005896A File Offset: 0x00056B6A
-		// (set) Token: 0x06001F9F RID: 8095 RVA: 0x00058991 File Offset: 0x00056B91
+		// Token: 0x1700091A RID: 2330
+		// (get) Token: 0x0600226A RID: 8810 RVA: 0x0005EFF6 File Offset: 0x0005D1F6
+		// (set) Token: 0x0600226B RID: 8811 RVA: 0x0005F01D File Offset: 0x0005D21D
 		public virtual List<string> TemplateIds
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400164D RID: 5709
+		// Token: 0x04001824 RID: 6180
 		[Nullable(2)]
 		protected new IPasserbyNpcTemplateSource FbInstance;
 
-		// Token: 0x0400164E RID: 5710
+		// Token: 0x04001825 RID: 6181
 		[Nullable(2)]
 		protected new IPasserbyNpcTemplateSource_SetValue PocoInterface;
 	}

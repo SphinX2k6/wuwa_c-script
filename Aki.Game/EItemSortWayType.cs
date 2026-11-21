@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x02001889 RID: 6281
+// Token: 0x02000D42 RID: 3394
 public enum EItemSortWayType
 {
-	// Token: 0x04005308 RID: 21256
+	// Token: 0x040053B3 RID: 21427
 	ConfigId = 1,
-	// Token: 0x04005309 RID: 21257
+	// Token: 0x040053B4 RID: 21428
 	Level,
-	// Token: 0x0400530A RID: 21258
+	// Token: 0x040053B5 RID: 21429
 	Quality,
-	// Token: 0x0400530B RID: 21259
+	// Token: 0x040053B6 RID: 21430
 	Count,
-	// Token: 0x0400530C RID: 21260
+	// Token: 0x040053B7 RID: 21431
 	SortIndex,
-	// Token: 0x0400530D RID: 21261
+	// Token: 0x040053B8 RID: 21432
 	UniqueId,
-	// Token: 0x0400530E RID: 21262
+	// Token: 0x040053B9 RID: 21433
 	ConfigIdAscending,
-	// Token: 0x0400530F RID: 21263
+	// Token: 0x040053BA RID: 21434
 	IsTimeLimit,
-	// Token: 0x04005310 RID: 21264
+	// Token: 0x040053BB RID: 21435
 	ItemShowTypeSort
 }

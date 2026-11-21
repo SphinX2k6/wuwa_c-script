@@ -8,13 +8,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200136E RID: 4974
+// Token: 0x02000822 RID: 2082
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewMorale : ActivitySubViewBase
 {
-	// Token: 0x17000BC3 RID: 3011
-	// (get) Token: 0x06008AB8 RID: 35512 RVA: 0x001DA221 File Offset: 0x001D8421
+	// Token: 0x17000BE3 RID: 3043
+	// (get) Token: 0x06005E53 RID: 24147 RVA: 0x001E307D File Offset: 0x001E127D
 	protected new ActivityMoraleData ActivityBaseData
 	{
 		get
@@ -23,7 +23,7 @@ public class ActivitySubViewMorale : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008ABA RID: 35514 RVA: 0x001DA238 File Offset: 0x001D8438
+	// Token: 0x06005E55 RID: 24149 RVA: 0x001E3094 File Offset: 0x001E1294
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class ActivitySubViewMorale : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06008ABB RID: 35515 RVA: 0x001DA2D4 File Offset: 0x001D84D4
+	// Token: 0x06005E56 RID: 24150 RVA: 0x001E3130 File Offset: 0x001E1330
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewMorale.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -48,12 +48,12 @@ public class ActivitySubViewMorale : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008ABC RID: 35516 RVA: 0x001DA317 File Offset: 0x001D8517
+	// Token: 0x06005E57 RID: 24151 RVA: 0x001E3173 File Offset: 0x001E1373
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06008ABD RID: 35517 RVA: 0x001DA31C File Offset: 0x001D851C
+	// Token: 0x06005E58 RID: 24152 RVA: 0x001E3178 File Offset: 0x001E1378
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.EventCloseView));
@@ -75,7 +75,7 @@ public class ActivitySubViewMorale : ActivitySubViewBase
 		functionButton.BindRedDot(ERedDotName.Morale, 0);
 	}
 
-	// Token: 0x06008ABE RID: 35518 RVA: 0x001DA36C File Offset: 0x001D856C
+	// Token: 0x06005E59 RID: 24153 RVA: 0x001E31C8 File Offset: 0x001E13C8
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.EventCloseView));
@@ -97,7 +97,7 @@ public class ActivitySubViewMorale : ActivitySubViewBase
 		functionButton.UnBindGivenUid(0);
 	}
 
-	// Token: 0x06008ABF RID: 35519 RVA: 0x001DA3AC File Offset: 0x001D85AC
+	// Token: 0x06005E5A RID: 24154 RVA: 0x001E3208 File Offset: 0x001E1408
 	protected override void OnRefreshView()
 	{
 		UUIText text = base.GetText(2);
@@ -110,7 +110,7 @@ public class ActivitySubViewMorale : ActivitySubViewBase
 		this.UpdateGuideQuestState();
 	}
 
-	// Token: 0x06008AC0 RID: 35520 RVA: 0x001DA3DC File Offset: 0x001D85DC
+	// Token: 0x06005E5B RID: 24155 RVA: 0x001E3238 File Offset: 0x001E1438
 	private void ClickCommonInfo(ActivityBaseData _)
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -119,26 +119,26 @@ public class ActivitySubViewMorale : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06008AC1 RID: 35521 RVA: 0x001DA3FC File Offset: 0x001D85FC
+	// Token: 0x06005E5C RID: 24156 RVA: 0x001E3258 File Offset: 0x001E1458
 	public void UpdateTipsFinishNeedGetReward()
 	{
 		bool uiActive = this.IsShowFinishTips();
 		this.FinishTipsSubPanel.SetUiActive(uiActive);
 	}
 
-	// Token: 0x06008AC2 RID: 35522 RVA: 0x001DA41C File Offset: 0x001D861C
+	// Token: 0x06005E5D RID: 24157 RVA: 0x001E3278 File Offset: 0x001E1478
 	private bool IsShowFinishTips()
 	{
 		return this.ActivityBaseData != null && this.ActivityBaseData.IsUnLock() && this.ActivityBaseData.GetPreGuideQuestFinishState() && MoraleModel.Instance.IsProgressScoreReachTarget();
 	}
 
-	// Token: 0x06008AC3 RID: 35523 RVA: 0x001DA44E File Offset: 0x001D864E
+	// Token: 0x06005E5E RID: 24158 RVA: 0x001E32AA File Offset: 0x001E14AA
 	private void OnTipsFinishNeedGetRewardHelpCallback()
 	{
 		HelpController.Instance.OpenHelpById(322);
 	}
 
-	// Token: 0x06008AC4 RID: 35524 RVA: 0x001DA45F File Offset: 0x001D865F
+	// Token: 0x06005E5F RID: 24159 RVA: 0x001E32BB File Offset: 0x001E14BB
 	private void EventCloseView(EUiViewName viewName, int _)
 	{
 		if (viewName == EUiViewName.MoraleAreaSumView)
@@ -147,7 +147,7 @@ public class ActivitySubViewMorale : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008AC5 RID: 35525 RVA: 0x001DA474 File Offset: 0x001D8674
+	// Token: 0x06005E60 RID: 24160 RVA: 0x001E32D0 File Offset: 0x001E14D0
 	public void UpdateGuideQuestState()
 	{
 		if (this.ActivityBaseData == null || !this.ActivityBaseData.IsUnLock())
@@ -194,37 +194,37 @@ public class ActivitySubViewMorale : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x04003DC1 RID: 15809
+	// Token: 0x04003E59 RID: 15961
 	protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x04003DC2 RID: 15810
+	// Token: 0x04003E5A RID: 15962
 	[Nullable(1)]
 	public MoraleScoreProgressActivityPanel ScoreProgressPanel;
 
-	// Token: 0x04003DC3 RID: 15811
+	// Token: 0x04003E5B RID: 15963
 	[Nullable(1)]
 	public RecommendQuestTipsSubPanel FinishTipsSubPanel;
 
-	// Token: 0x020079E4 RID: 31204
+	// Token: 0x02006B6E RID: 27502
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x040281EB RID: 164331
+		// Token: 0x04023518 RID: 144664
 		public const int ItemCommonPanel = 0;
 
-		// Token: 0x040281EC RID: 164332
+		// Token: 0x04023519 RID: 144665
 		public const int ItemTipsRoot = 1;
 
-		// Token: 0x040281ED RID: 164333
+		// Token: 0x0402351A RID: 144666
 		public const int TxtTips = 2;
 
-		// Token: 0x040281EE RID: 164334
+		// Token: 0x0402351B RID: 144667
 		public const int ItemProgressRoot = 3;
 
-		// Token: 0x040281EF RID: 164335
+		// Token: 0x0402351C RID: 144668
 		public const int ItemProgressPanel = 4;
 
-		// Token: 0x040281F0 RID: 164336
+		// Token: 0x0402351D RID: 144669
 		public const int ItemFinishTipsPanel = 5;
 	}
 }

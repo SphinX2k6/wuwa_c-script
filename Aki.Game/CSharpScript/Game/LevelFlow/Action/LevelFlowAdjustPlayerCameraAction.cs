@@ -11,19 +11,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F7C RID: 28540
+	// Token: 0x020060FD RID: 24829
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowAdjustPlayerCameraAction : LevelFlowActionBase
 	{
-		// Token: 0x060456C2 RID: 284354 RVA: 0x011356BB File Offset: 0x011338BB
+		// Token: 0x0603B870 RID: 243824 RVA: 0x010DF4BF File Offset: 0x010DD6BF
 		public LevelFlowAdjustPlayerCameraAction Init(AdjustPlayerCamera param)
 		{
 			this.Param = param;
 			return this;
 		}
 
-		// Token: 0x060456C3 RID: 284355 RVA: 0x011356C8 File Offset: 0x011338C8
+		// Token: 0x0603B871 RID: 243825 RVA: 0x010DF4CC File Offset: 0x010DD6CC
 		protected override void OnExecute()
 		{
 			if (this.Param == null)
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x060456C4 RID: 284356 RVA: 0x01135F1C File Offset: 0x0113411C
+		// Token: 0x0603B872 RID: 243826 RVA: 0x010DFD20 File Offset: 0x010DDF20
 		private bool UpdateCameraHookConfig(AdjustPlayerCamera @params)
 		{
 			CameraConfigController cameraConfigController = CameraController.Instance.MainModel.FightCamera.LogicComponent.CameraConfigController;
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return true;
 		}
 
-		// Token: 0x060456C5 RID: 284357 RVA: 0x011364C4 File Offset: 0x011346C4
+		// Token: 0x0603B873 RID: 243827 RVA: 0x010E02C8 File Offset: 0x010DE4C8
 		private void EnableHookConfig(AdjustPlayerCamera @params, int? extraTagId = null)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -432,7 +432,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x060456C6 RID: 284358 RVA: 0x01136544 File Offset: 0x01134744
+		// Token: 0x0603B874 RID: 243828 RVA: 0x010E0348 File Offset: 0x010DE548
 		private void CameraMoveFinished(string cameraName)
 		{
 			if (cameraName != "MainCamera")
@@ -446,18 +446,18 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x0402439E RID: 148382
+		// Token: 0x0401F653 RID: 128595
 		[Nullable(2)]
 		private CameraConfig HookConfig;
 
-		// Token: 0x0402439F RID: 148383
+		// Token: 0x0401F654 RID: 128596
 		[Nullable(2)]
 		private AdjustPlayerCamera Param;
 
-		// Token: 0x040243A0 RID: 148384
+		// Token: 0x0401F655 RID: 128597
 		private const float IMMEDIATELY_FADE_CAMERA_TIME = 0.1f;
 
-		// Token: 0x040243A1 RID: 148385
+		// Token: 0x0401F656 RID: 128598
 		private static readonly int noAimGameplayTag = GameplayTagDefine.EGameplayTagId["角色.Common.BUFF通用标识.禁止瞄准模式"];
 	}
 }

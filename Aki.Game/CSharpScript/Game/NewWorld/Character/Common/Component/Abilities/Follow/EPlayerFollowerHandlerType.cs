@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x02007139 RID: 28985
+	// Token: 0x02006367 RID: 25447
 	public enum EPlayerFollowerHandlerType
 	{
-		// Token: 0x04025279 RID: 152185
+		// Token: 0x04020B59 RID: 133977
 		FollowShooter,
-		// Token: 0x0402527A RID: 152186
+		// Token: 0x04020B5A RID: 133978
 		Vehicle,
-		// Token: 0x0402527B RID: 152187
+		// Token: 0x04020B5B RID: 133979
 		Chair
 	}
 }

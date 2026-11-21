@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005516 RID: 21782
+	// Token: 0x02005A9C RID: 23196
 	public class ILookAtTargetEntityT
 	{
-		// Token: 0x1700A0CF RID: 41167
-		// (get) Token: 0x06023FA5 RID: 147365 RVA: 0x004F8F8C File Offset: 0x004F718C
-		// (set) Token: 0x06023FA6 RID: 147366 RVA: 0x004F8F94 File Offset: 0x004F7194
+		// Token: 0x1700A909 RID: 43273
+		// (get) Token: 0x0602605F RID: 155743 RVA: 0x005360B0 File Offset: 0x005342B0
+		// (set) Token: 0x06026060 RID: 155744 RVA: 0x005360B8 File Offset: 0x005342B8
 		public ELookAtTargetType Type { get; set; }
 
-		// Token: 0x1700A0D0 RID: 41168
-		// (get) Token: 0x06023FA7 RID: 147367 RVA: 0x004F8F9D File Offset: 0x004F719D
-		// (set) Token: 0x06023FA8 RID: 147368 RVA: 0x004F8FA5 File Offset: 0x004F71A5
+		// Token: 0x1700A90A RID: 43274
+		// (get) Token: 0x06026061 RID: 155745 RVA: 0x005360C1 File Offset: 0x005342C1
+		// (set) Token: 0x06026062 RID: 155746 RVA: 0x005360C9 File Offset: 0x005342C9
 		public int EntityId { get; set; }
 
-		// Token: 0x06023FA9 RID: 147369 RVA: 0x004F8FAE File Offset: 0x004F71AE
+		// Token: 0x06026063 RID: 155747 RVA: 0x005360D2 File Offset: 0x005342D2
 		public ILookAtTargetEntityT()
 		{
 			this.Type = ELookAtTargetType.Entity;

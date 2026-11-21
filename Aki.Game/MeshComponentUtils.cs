@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020030E1 RID: 12513
+// Token: 0x02002639 RID: 9785
 [NullableContext(1)]
 [Nullable(0)]
 public class MeshComponentUtils
 {
-	// Token: 0x0601ACC1 RID: 109761 RVA: 0x0073AE7C File Offset: 0x0073907C
+	// Token: 0x060186DD RID: 100061 RVA: 0x007608B8 File Offset: 0x0075EAB8
 	public static void RelativeAttachComponent(USceneComponent child, USceneComponent parent, string socketName = "")
 	{
 		child.K2_AttachToComponent(parent, new FName(socketName), EAttachmentRule.KeepRelative, EAttachmentRule.KeepRelative, EAttachmentRule.KeepRelative, true, true);
 	}
 
-	// Token: 0x0601ACC2 RID: 109762 RVA: 0x0073AE91 File Offset: 0x00739091
+	// Token: 0x060186DE RID: 100062 RVA: 0x007608CD File Offset: 0x0075EACD
 	public static bool RelativeAttachComponentOnSafe(USceneComponent child, USceneComponent parent, string socketName = "")
 	{
 		if (parent == child.GetAttachParent())
@@ -24,7 +24,7 @@ public class MeshComponentUtils
 		return true;
 	}
 
-	// Token: 0x0601ACC3 RID: 109763 RVA: 0x0073AEA8 File Offset: 0x007390A8
+	// Token: 0x060186DF RID: 100063 RVA: 0x007608E4 File Offset: 0x0075EAE4
 	public static void HideBone(USkeletalMeshComponent meshComp, string boneName, bool hide)
 	{
 		FName? dynamicFName = FNameUtil.GetDynamicFName(boneName);

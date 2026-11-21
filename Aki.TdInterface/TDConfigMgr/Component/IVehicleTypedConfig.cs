@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007C1 RID: 1985
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000864 RID: 2148
 	public class IVehicleTypedConfig
 	{
-		// Token: 0x06002B0F RID: 11023 RVA: 0x0007083C File Offset: 0x0006EA3C
+		// Token: 0x06002E3F RID: 11839 RVA: 0x00077BA0 File Offset: 0x00075DA0
 		private IVehicleTypedConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002B10 RID: 11024 RVA: 0x00070874 File Offset: 0x0006EA74
+		// Token: 0x06002E40 RID: 11840 RVA: 0x00077BD8 File Offset: 0x00075DD8
 		public static IVehicleTypedConfig Create([Nullable(2)] IVehicleTypedConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002B11 RID: 11025 RVA: 0x00070887 File Offset: 0x0006EA87
+		// Token: 0x06002E41 RID: 11841 RVA: 0x00077BEB File Offset: 0x00075DEB
 		public static IVehicleTypedConfig CreateFromSetValue([Nullable(2)] IVehicleTypedConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002B12 RID: 11026 RVA: 0x0007089A File Offset: 0x0006EA9A
+		// Token: 0x06002E42 RID: 11842 RVA: 0x00077BFE File Offset: 0x00075DFE
 		public IVehicleTypedConfig_SetValue ToSetValue()
 		{
 			return new IVehicleTypedConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B49 RID: 2889
-		// (get) Token: 0x06002B13 RID: 11027 RVA: 0x000708AD File Offset: 0x0006EAAD
-		// (set) Token: 0x06002B14 RID: 11028 RVA: 0x000708D8 File Offset: 0x0006EAD8
+		// Token: 0x17000C0C RID: 3084
+		// (get) Token: 0x06002E43 RID: 11843 RVA: 0x00077C11 File Offset: 0x00075E11
+		// (set) Token: 0x06002E44 RID: 11844 RVA: 0x00077C3C File Offset: 0x00075E3C
 		public virtual EVehicleType Type
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001CA1 RID: 7329
+		// Token: 0x04001EAD RID: 7853
 		[Nullable(2)]
 		protected IVehicleTypedConfig FbInstance;
 
-		// Token: 0x04001CA2 RID: 7330
+		// Token: 0x04001EAE RID: 7854
 		[Nullable(2)]
 		protected IVehicleTypedConfig_SetValue PocoInterface;
 	}

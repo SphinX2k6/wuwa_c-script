@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004880 RID: 18560
+	// Token: 0x02004CE5 RID: 19685
 	public struct ILaunchSettingShowInMainEditor : IFlatbufferObject
 	{
-		// Token: 0x1700865E RID: 34398
-		// (get) Token: 0x0601CEB2 RID: 118450 RVA: 0x004163A8 File Offset: 0x004145A8
+		// Token: 0x17008CA6 RID: 36006
+		// (get) Token: 0x0601E69F RID: 124575 RVA: 0x00442B44 File Offset: 0x00440D44
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CEB3 RID: 118451 RVA: 0x004163B5 File Offset: 0x004145B5
+		// Token: 0x0601E6A0 RID: 124576 RVA: 0x00442B51 File Offset: 0x00440D51
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601CEB4 RID: 118452 RVA: 0x004163BC File Offset: 0x004145BC
+		// Token: 0x0601E6A1 RID: 124577 RVA: 0x00442B58 File Offset: 0x00440D58
 		public static ILaunchSettingShowInMainEditor GetRootAsILaunchSettingShowInMainEditor(ByteBuffer _bb)
 		{
 			return ILaunchSettingShowInMainEditor.GetRootAsILaunchSettingShowInMainEditor(_bb, default(ILaunchSettingShowInMainEditor));
 		}
 
-		// Token: 0x0601CEB5 RID: 118453 RVA: 0x004163D8 File Offset: 0x004145D8
+		// Token: 0x0601E6A2 RID: 124578 RVA: 0x00442B74 File Offset: 0x00440D74
 		public static ILaunchSettingShowInMainEditor GetRootAsILaunchSettingShowInMainEditor(ByteBuffer _bb, ILaunchSettingShowInMainEditor obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601CEB6 RID: 118454 RVA: 0x004163F5 File Offset: 0x004145F5
+		// Token: 0x0601E6A3 RID: 124579 RVA: 0x00442B91 File Offset: 0x00440D91
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601CEB7 RID: 118455 RVA: 0x00416404 File Offset: 0x00414604
+		// Token: 0x0601E6A4 RID: 124580 RVA: 0x00442BA0 File Offset: 0x00440DA0
 		public ILaunchSettingShowInMainEditor __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700865F RID: 34399
-		// (get) Token: 0x0601CEB8 RID: 118456 RVA: 0x00416414 File Offset: 0x00414614
+		// Token: 0x17008CA7 RID: 36007
+		// (get) Token: 0x0601E6A5 RID: 124581 RVA: 0x00442BB0 File Offset: 0x00440DB0
 		public bool DisableAutoStartServer
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008660 RID: 34400
-		// (get) Token: 0x0601CEB9 RID: 118457 RVA: 0x00416454 File Offset: 0x00414654
+		// Token: 0x17008CA8 RID: 36008
+		// (get) Token: 0x0601E6A6 RID: 124582 RVA: 0x00442BF0 File Offset: 0x00440DF0
 		public bool IsNetMode
 		{
 			get
@@ -69,8 +69,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008661 RID: 34401
-		// (get) Token: 0x0601CEBA RID: 118458 RVA: 0x00416494 File Offset: 0x00414694
+		// Token: 0x17008CA9 RID: 36009
+		// (get) Token: 0x0601E6A7 RID: 124583 RVA: 0x00442C30 File Offset: 0x00440E30
 		public bool UseTemp
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008662 RID: 34402
-		// (get) Token: 0x0601CEBB RID: 118459 RVA: 0x004164D4 File Offset: 0x004146D4
+		// Token: 0x17008CAA RID: 36010
+		// (get) Token: 0x0601E6A8 RID: 124584 RVA: 0x00442C70 File Offset: 0x00440E70
 		public bool EnableDeltaReload
 		{
 			get
@@ -91,8 +91,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008663 RID: 34403
-		// (get) Token: 0x0601CEBC RID: 118460 RVA: 0x00416514 File Offset: 0x00414714
+		// Token: 0x17008CAB RID: 36011
+		// (get) Token: 0x0601E6A9 RID: 124585 RVA: 0x00442CB0 File Offset: 0x00440EB0
 		public bool ReloadEditorConfig
 		{
 			get
@@ -102,8 +102,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008664 RID: 34404
-		// (get) Token: 0x0601CEBD RID: 118461 RVA: 0x00416554 File Offset: 0x00414754
+		// Token: 0x17008CAC RID: 36012
+		// (get) Token: 0x0601E6AA RID: 124586 RVA: 0x00442CF0 File Offset: 0x00440EF0
 		public bool ReloadConfigTable
 		{
 			get
@@ -113,8 +113,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008665 RID: 34405
-		// (get) Token: 0x0601CEBE RID: 118462 RVA: 0x00416594 File Offset: 0x00414794
+		// Token: 0x17008CAD RID: 36013
+		// (get) Token: 0x0601E6AB RID: 124587 RVA: 0x00442D30 File Offset: 0x00440F30
 		public bool Account
 		{
 			get
@@ -124,8 +124,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008666 RID: 34406
-		// (get) Token: 0x0601CEBF RID: 118463 RVA: 0x004165D4 File Offset: 0x004147D4
+		// Token: 0x17008CAE RID: 36014
+		// (get) Token: 0x0601E6AC RID: 124588 RVA: 0x00442D70 File Offset: 0x00440F70
 		public bool IsBornAtCamera
 		{
 			get
@@ -135,8 +135,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008667 RID: 34407
-		// (get) Token: 0x0601CEC0 RID: 118464 RVA: 0x00416614 File Offset: 0x00414814
+		// Token: 0x17008CAF RID: 36015
+		// (get) Token: 0x0601E6AD RID: 124589 RVA: 0x00442DB0 File Offset: 0x00440FB0
 		public bool IsOpenDebugService
 		{
 			get
@@ -146,8 +146,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008668 RID: 34408
-		// (get) Token: 0x0601CEC1 RID: 118465 RVA: 0x00416654 File Offset: 0x00414854
+		// Token: 0x17008CB0 RID: 36016
+		// (get) Token: 0x0601E6AE RID: 124590 RVA: 0x00442DF0 File Offset: 0x00440FF0
 		public bool IsMale
 		{
 			get
@@ -157,8 +157,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008669 RID: 34409
-		// (get) Token: 0x0601CEC2 RID: 118466 RVA: 0x00416694 File Offset: 0x00414894
+		// Token: 0x17008CB1 RID: 36017
+		// (get) Token: 0x0601E6AF RID: 124591 RVA: 0x00442E30 File Offset: 0x00441030
 		public bool WaitDebug
 		{
 			get
@@ -168,8 +168,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700866A RID: 34410
-		// (get) Token: 0x0601CEC3 RID: 118467 RVA: 0x004166D4 File Offset: 0x004148D4
+		// Token: 0x17008CB2 RID: 36018
+		// (get) Token: 0x0601E6B0 RID: 124592 RVA: 0x00442E70 File Offset: 0x00441070
 		public bool EnableAllSystemWithoutPopWin
 		{
 			get
@@ -179,8 +179,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700866B RID: 34411
-		// (get) Token: 0x0601CEC4 RID: 118468 RVA: 0x00416714 File Offset: 0x00414914
+		// Token: 0x17008CB3 RID: 36019
+		// (get) Token: 0x0601E6B1 RID: 124593 RVA: 0x00442EB0 File Offset: 0x004410B0
 		public bool IsUnlockExplore
 		{
 			get
@@ -190,8 +190,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700866C RID: 34412
-		// (get) Token: 0x0601CEC5 RID: 118469 RVA: 0x00416754 File Offset: 0x00414954
+		// Token: 0x17008CB4 RID: 36020
+		// (get) Token: 0x0601E6B2 RID: 124594 RVA: 0x00442EF0 File Offset: 0x004410F0
 		public bool IsUnlockSpecial
 		{
 			get
@@ -201,8 +201,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700866D RID: 34413
-		// (get) Token: 0x0601CEC6 RID: 118470 RVA: 0x00416794 File Offset: 0x00414994
+		// Token: 0x17008CB5 RID: 36021
+		// (get) Token: 0x0601E6B3 RID: 124595 RVA: 0x00442F30 File Offset: 0x00441130
 		public bool EnableAllTeleportPoints
 		{
 			get
@@ -212,8 +212,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700866E RID: 34414
-		// (get) Token: 0x0601CEC7 RID: 118471 RVA: 0x004167D4 File Offset: 0x004149D4
+		// Token: 0x17008CB6 RID: 36022
+		// (get) Token: 0x0601E6B4 RID: 124596 RVA: 0x00442F70 File Offset: 0x00441170
 		public bool IsUnlockAllFog
 		{
 			get
@@ -223,8 +223,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700866F RID: 34415
-		// (get) Token: 0x0601CEC8 RID: 118472 RVA: 0x00416814 File Offset: 0x00414A14
+		// Token: 0x17008CB7 RID: 36023
+		// (get) Token: 0x0601E6B5 RID: 124597 RVA: 0x00442FB0 File Offset: 0x004411B0
 		public bool IsDisableTeleportDungeon
 		{
 			get
@@ -234,8 +234,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008670 RID: 34416
-		// (get) Token: 0x0601CEC9 RID: 118473 RVA: 0x00416854 File Offset: 0x00414A54
+		// Token: 0x17008CB8 RID: 36024
+		// (get) Token: 0x0601E6B6 RID: 124598 RVA: 0x00442FF0 File Offset: 0x004411F0
 		public bool IsSkipQuests
 		{
 			get
@@ -245,8 +245,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008671 RID: 34417
-		// (get) Token: 0x0601CECA RID: 118474 RVA: 0x00416894 File Offset: 0x00414A94
+		// Token: 0x17008CB9 RID: 36025
+		// (get) Token: 0x0601E6B7 RID: 124599 RVA: 0x00443030 File Offset: 0x00441230
 		public bool LevelSetting
 		{
 			get
@@ -256,8 +256,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008672 RID: 34418
-		// (get) Token: 0x0601CECB RID: 118475 RVA: 0x004168D4 File Offset: 0x00414AD4
+		// Token: 0x17008CBA RID: 36026
+		// (get) Token: 0x0601E6B8 RID: 124600 RVA: 0x00443070 File Offset: 0x00441270
 		public bool NewLevelSetting
 		{
 			get
@@ -267,8 +267,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008673 RID: 34419
-		// (get) Token: 0x0601CECC RID: 118476 RVA: 0x00416914 File Offset: 0x00414B14
+		// Token: 0x17008CBB RID: 36027
+		// (get) Token: 0x0601E6B9 RID: 124601 RVA: 0x004430B0 File Offset: 0x004412B0
 		public bool DataLayerSetting
 		{
 			get
@@ -278,8 +278,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008674 RID: 34420
-		// (get) Token: 0x0601CECD RID: 118477 RVA: 0x00416954 File Offset: 0x00414B54
+		// Token: 0x17008CBC RID: 36028
+		// (get) Token: 0x0601E6BA RID: 124602 RVA: 0x004430F0 File Offset: 0x004412F0
 		public bool DisableEntitySetting
 		{
 			get
@@ -289,8 +289,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008675 RID: 34421
-		// (get) Token: 0x0601CECE RID: 118478 RVA: 0x00416994 File Offset: 0x00414B94
+		// Token: 0x17008CBD RID: 36029
+		// (get) Token: 0x0601E6BB RID: 124603 RVA: 0x00443130 File Offset: 0x00441330
 		public bool GmPathOnLogin
 		{
 			get
@@ -300,8 +300,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008676 RID: 34422
-		// (get) Token: 0x0601CECF RID: 118479 RVA: 0x004169D4 File Offset: 0x00414BD4
+		// Token: 0x17008CBE RID: 36030
+		// (get) Token: 0x0601E6BC RID: 124604 RVA: 0x00443170 File Offset: 0x00441370
 		public bool IsUseMobileStreamingParamsInPie
 		{
 			get
@@ -311,8 +311,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008677 RID: 34423
-		// (get) Token: 0x0601CED0 RID: 118480 RVA: 0x00416A14 File Offset: 0x00414C14
+		// Token: 0x17008CBF RID: 36031
+		// (get) Token: 0x0601E6BD RID: 124605 RVA: 0x004431B0 File Offset: 0x004413B0
 		public bool IsUseHighAoi
 		{
 			get
@@ -322,8 +322,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008678 RID: 34424
-		// (get) Token: 0x0601CED1 RID: 118481 RVA: 0x00416A54 File Offset: 0x00414C54
+		// Token: 0x17008CC0 RID: 36032
+		// (get) Token: 0x0601E6BE RID: 124606 RVA: 0x004431F0 File Offset: 0x004413F0
 		public bool IsOpenUseWorldPartitionLoadedZone
 		{
 			get
@@ -333,8 +333,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008679 RID: 34425
-		// (get) Token: 0x0601CED2 RID: 118482 RVA: 0x00416A94 File Offset: 0x00414C94
+		// Token: 0x17008CC1 RID: 36033
+		// (get) Token: 0x0601E6BF RID: 124607 RVA: 0x00443230 File Offset: 0x00441430
 		public bool IsCloseSkinnedMeshAlwaysTick
 		{
 			get
@@ -344,8 +344,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700867A RID: 34426
-		// (get) Token: 0x0601CED3 RID: 118483 RVA: 0x00416AD4 File Offset: 0x00414CD4
+		// Token: 0x17008CC2 RID: 36034
+		// (get) Token: 0x0601E6C0 RID: 124608 RVA: 0x00443270 File Offset: 0x00441470
 		public bool IsOpenReloadSpeed
 		{
 			get
@@ -355,8 +355,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700867B RID: 34427
-		// (get) Token: 0x0601CED4 RID: 118484 RVA: 0x00416B14 File Offset: 0x00414D14
+		// Token: 0x17008CC3 RID: 36035
+		// (get) Token: 0x0601E6C1 RID: 124609 RVA: 0x004432B0 File Offset: 0x004414B0
 		public bool IsStayInSubWp
 		{
 			get
@@ -366,8 +366,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700867C RID: 34428
-		// (get) Token: 0x0601CED5 RID: 118485 RVA: 0x00416B54 File Offset: 0x00414D54
+		// Token: 0x17008CC4 RID: 36036
+		// (get) Token: 0x0601E6C2 RID: 124610 RVA: 0x004432F0 File Offset: 0x004414F0
 		public bool CustomPlayerName
 		{
 			get
@@ -377,8 +377,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700867D RID: 34429
-		// (get) Token: 0x0601CED6 RID: 118486 RVA: 0x00416B94 File Offset: 0x00414D94
+		// Token: 0x17008CC5 RID: 36037
+		// (get) Token: 0x0601E6C3 RID: 124611 RVA: 0x00443330 File Offset: 0x00441530
 		public uint NullMask
 		{
 			get
@@ -392,7 +392,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CED7 RID: 118487 RVA: 0x00416BD4 File Offset: 0x00414DD4
+		// Token: 0x0601E6C4 RID: 124612 RVA: 0x00443370 File Offset: 0x00441570
 		public static Offset<ILaunchSettingShowInMainEditor> CreateILaunchSettingShowInMainEditor(FlatBufferBuilder builder, bool DisableAutoStartServer = false, bool IsNetMode = false, bool UseTemp = false, bool EnableDeltaReload = false, bool ReloadEditorConfig = false, bool ReloadConfigTable = false, bool Account = false, bool IsBornAtCamera = false, bool IsOpenDebugService = false, bool IsMale = false, bool WaitDebug = false, bool EnableAllSystemWithoutPopWin = false, bool IsUnlockExplore = false, bool IsUnlockSpecial = false, bool EnableAllTeleportPoints = false, bool IsUnlockAllFog = false, bool IsDisableTeleportDungeon = false, bool IsSkipQuests = false, bool LevelSetting = false, bool NewLevelSetting = false, bool DataLayerSetting = false, bool DisableEntitySetting = false, bool GmPathOnLogin = false, bool IsUseMobileStreamingParamsInPie = false, bool IsUseHighAoi = false, bool IsOpenUseWorldPartitionLoadedZone = false, bool IsCloseSkinnedMeshAlwaysTick = false, bool IsOpenReloadSpeed = false, bool IsStayInSubWp = false, bool CustomPlayerName = false, uint NullMask = 0U)
 		{
 			builder.StartTable(31);
@@ -430,205 +430,205 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return ILaunchSettingShowInMainEditor.EndILaunchSettingShowInMainEditor(builder);
 		}
 
-		// Token: 0x0601CED8 RID: 118488 RVA: 0x00416CE4 File Offset: 0x00414EE4
+		// Token: 0x0601E6C5 RID: 124613 RVA: 0x00443480 File Offset: 0x00441680
 		public static void StartILaunchSettingShowInMainEditor(FlatBufferBuilder builder)
 		{
 			builder.StartTable(31);
 		}
 
-		// Token: 0x0601CED9 RID: 118489 RVA: 0x00416CEE File Offset: 0x00414EEE
+		// Token: 0x0601E6C6 RID: 124614 RVA: 0x0044348A File Offset: 0x0044168A
 		public static void AddDisableAutoStartServer(FlatBufferBuilder builder, bool disableAutoStartServer)
 		{
 			builder.AddBool(0, disableAutoStartServer, false);
 		}
 
-		// Token: 0x0601CEDA RID: 118490 RVA: 0x00416CF9 File Offset: 0x00414EF9
+		// Token: 0x0601E6C7 RID: 124615 RVA: 0x00443495 File Offset: 0x00441695
 		public static void AddIsNetMode(FlatBufferBuilder builder, bool isNetMode)
 		{
 			builder.AddBool(1, isNetMode, false);
 		}
 
-		// Token: 0x0601CEDB RID: 118491 RVA: 0x00416D04 File Offset: 0x00414F04
+		// Token: 0x0601E6C8 RID: 124616 RVA: 0x004434A0 File Offset: 0x004416A0
 		public static void AddUseTemp(FlatBufferBuilder builder, bool useTemp)
 		{
 			builder.AddBool(2, useTemp, false);
 		}
 
-		// Token: 0x0601CEDC RID: 118492 RVA: 0x00416D0F File Offset: 0x00414F0F
+		// Token: 0x0601E6C9 RID: 124617 RVA: 0x004434AB File Offset: 0x004416AB
 		public static void AddEnableDeltaReload(FlatBufferBuilder builder, bool enableDeltaReload)
 		{
 			builder.AddBool(3, enableDeltaReload, false);
 		}
 
-		// Token: 0x0601CEDD RID: 118493 RVA: 0x00416D1A File Offset: 0x00414F1A
+		// Token: 0x0601E6CA RID: 124618 RVA: 0x004434B6 File Offset: 0x004416B6
 		public static void AddReloadEditorConfig(FlatBufferBuilder builder, bool reloadEditorConfig)
 		{
 			builder.AddBool(4, reloadEditorConfig, false);
 		}
 
-		// Token: 0x0601CEDE RID: 118494 RVA: 0x00416D25 File Offset: 0x00414F25
+		// Token: 0x0601E6CB RID: 124619 RVA: 0x004434C1 File Offset: 0x004416C1
 		public static void AddReloadConfigTable(FlatBufferBuilder builder, bool reloadConfigTable)
 		{
 			builder.AddBool(5, reloadConfigTable, false);
 		}
 
-		// Token: 0x0601CEDF RID: 118495 RVA: 0x00416D30 File Offset: 0x00414F30
+		// Token: 0x0601E6CC RID: 124620 RVA: 0x004434CC File Offset: 0x004416CC
 		public static void AddAccount(FlatBufferBuilder builder, bool account)
 		{
 			builder.AddBool(6, account, false);
 		}
 
-		// Token: 0x0601CEE0 RID: 118496 RVA: 0x00416D3B File Offset: 0x00414F3B
+		// Token: 0x0601E6CD RID: 124621 RVA: 0x004434D7 File Offset: 0x004416D7
 		public static void AddIsBornAtCamera(FlatBufferBuilder builder, bool isBornAtCamera)
 		{
 			builder.AddBool(7, isBornAtCamera, false);
 		}
 
-		// Token: 0x0601CEE1 RID: 118497 RVA: 0x00416D46 File Offset: 0x00414F46
+		// Token: 0x0601E6CE RID: 124622 RVA: 0x004434E2 File Offset: 0x004416E2
 		public static void AddIsOpenDebugService(FlatBufferBuilder builder, bool isOpenDebugService)
 		{
 			builder.AddBool(8, isOpenDebugService, false);
 		}
 
-		// Token: 0x0601CEE2 RID: 118498 RVA: 0x00416D51 File Offset: 0x00414F51
+		// Token: 0x0601E6CF RID: 124623 RVA: 0x004434ED File Offset: 0x004416ED
 		public static void AddIsMale(FlatBufferBuilder builder, bool isMale)
 		{
 			builder.AddBool(9, isMale, false);
 		}
 
-		// Token: 0x0601CEE3 RID: 118499 RVA: 0x00416D5D File Offset: 0x00414F5D
+		// Token: 0x0601E6D0 RID: 124624 RVA: 0x004434F9 File Offset: 0x004416F9
 		public static void AddWaitDebug(FlatBufferBuilder builder, bool waitDebug)
 		{
 			builder.AddBool(10, waitDebug, false);
 		}
 
-		// Token: 0x0601CEE4 RID: 118500 RVA: 0x00416D69 File Offset: 0x00414F69
+		// Token: 0x0601E6D1 RID: 124625 RVA: 0x00443505 File Offset: 0x00441705
 		public static void AddEnableAllSystemWithoutPopWin(FlatBufferBuilder builder, bool enableAllSystemWithoutPopWin)
 		{
 			builder.AddBool(11, enableAllSystemWithoutPopWin, false);
 		}
 
-		// Token: 0x0601CEE5 RID: 118501 RVA: 0x00416D75 File Offset: 0x00414F75
+		// Token: 0x0601E6D2 RID: 124626 RVA: 0x00443511 File Offset: 0x00441711
 		public static void AddIsUnlockExplore(FlatBufferBuilder builder, bool isUnlockExplore)
 		{
 			builder.AddBool(12, isUnlockExplore, false);
 		}
 
-		// Token: 0x0601CEE6 RID: 118502 RVA: 0x00416D81 File Offset: 0x00414F81
+		// Token: 0x0601E6D3 RID: 124627 RVA: 0x0044351D File Offset: 0x0044171D
 		public static void AddIsUnlockSpecial(FlatBufferBuilder builder, bool isUnlockSpecial)
 		{
 			builder.AddBool(13, isUnlockSpecial, false);
 		}
 
-		// Token: 0x0601CEE7 RID: 118503 RVA: 0x00416D8D File Offset: 0x00414F8D
+		// Token: 0x0601E6D4 RID: 124628 RVA: 0x00443529 File Offset: 0x00441729
 		public static void AddEnableAllTeleportPoints(FlatBufferBuilder builder, bool enableAllTeleportPoints)
 		{
 			builder.AddBool(14, enableAllTeleportPoints, false);
 		}
 
-		// Token: 0x0601CEE8 RID: 118504 RVA: 0x00416D99 File Offset: 0x00414F99
+		// Token: 0x0601E6D5 RID: 124629 RVA: 0x00443535 File Offset: 0x00441735
 		public static void AddIsUnlockAllFog(FlatBufferBuilder builder, bool isUnlockAllFog)
 		{
 			builder.AddBool(15, isUnlockAllFog, false);
 		}
 
-		// Token: 0x0601CEE9 RID: 118505 RVA: 0x00416DA5 File Offset: 0x00414FA5
+		// Token: 0x0601E6D6 RID: 124630 RVA: 0x00443541 File Offset: 0x00441741
 		public static void AddIsDisableTeleportDungeon(FlatBufferBuilder builder, bool isDisableTeleportDungeon)
 		{
 			builder.AddBool(16, isDisableTeleportDungeon, false);
 		}
 
-		// Token: 0x0601CEEA RID: 118506 RVA: 0x00416DB1 File Offset: 0x00414FB1
+		// Token: 0x0601E6D7 RID: 124631 RVA: 0x0044354D File Offset: 0x0044174D
 		public static void AddIsSkipQuests(FlatBufferBuilder builder, bool isSkipQuests)
 		{
 			builder.AddBool(17, isSkipQuests, false);
 		}
 
-		// Token: 0x0601CEEB RID: 118507 RVA: 0x00416DBD File Offset: 0x00414FBD
+		// Token: 0x0601E6D8 RID: 124632 RVA: 0x00443559 File Offset: 0x00441759
 		public static void AddLevelSetting(FlatBufferBuilder builder, bool levelSetting)
 		{
 			builder.AddBool(18, levelSetting, false);
 		}
 
-		// Token: 0x0601CEEC RID: 118508 RVA: 0x00416DC9 File Offset: 0x00414FC9
+		// Token: 0x0601E6D9 RID: 124633 RVA: 0x00443565 File Offset: 0x00441765
 		public static void AddNewLevelSetting(FlatBufferBuilder builder, bool newLevelSetting)
 		{
 			builder.AddBool(19, newLevelSetting, false);
 		}
 
-		// Token: 0x0601CEED RID: 118509 RVA: 0x00416DD5 File Offset: 0x00414FD5
+		// Token: 0x0601E6DA RID: 124634 RVA: 0x00443571 File Offset: 0x00441771
 		public static void AddDataLayerSetting(FlatBufferBuilder builder, bool dataLayerSetting)
 		{
 			builder.AddBool(20, dataLayerSetting, false);
 		}
 
-		// Token: 0x0601CEEE RID: 118510 RVA: 0x00416DE1 File Offset: 0x00414FE1
+		// Token: 0x0601E6DB RID: 124635 RVA: 0x0044357D File Offset: 0x0044177D
 		public static void AddDisableEntitySetting(FlatBufferBuilder builder, bool disableEntitySetting)
 		{
 			builder.AddBool(21, disableEntitySetting, false);
 		}
 
-		// Token: 0x0601CEEF RID: 118511 RVA: 0x00416DED File Offset: 0x00414FED
+		// Token: 0x0601E6DC RID: 124636 RVA: 0x00443589 File Offset: 0x00441789
 		public static void AddGmPathOnLogin(FlatBufferBuilder builder, bool gmPathOnLogin)
 		{
 			builder.AddBool(22, gmPathOnLogin, false);
 		}
 
-		// Token: 0x0601CEF0 RID: 118512 RVA: 0x00416DF9 File Offset: 0x00414FF9
+		// Token: 0x0601E6DD RID: 124637 RVA: 0x00443595 File Offset: 0x00441795
 		public static void AddIsUseMobileStreamingParamsInPie(FlatBufferBuilder builder, bool isUseMobileStreamingParamsInPie)
 		{
 			builder.AddBool(23, isUseMobileStreamingParamsInPie, false);
 		}
 
-		// Token: 0x0601CEF1 RID: 118513 RVA: 0x00416E05 File Offset: 0x00415005
+		// Token: 0x0601E6DE RID: 124638 RVA: 0x004435A1 File Offset: 0x004417A1
 		public static void AddIsUseHighAoi(FlatBufferBuilder builder, bool isUseHighAoi)
 		{
 			builder.AddBool(24, isUseHighAoi, false);
 		}
 
-		// Token: 0x0601CEF2 RID: 118514 RVA: 0x00416E11 File Offset: 0x00415011
+		// Token: 0x0601E6DF RID: 124639 RVA: 0x004435AD File Offset: 0x004417AD
 		public static void AddIsOpenUseWorldPartitionLoadedZone(FlatBufferBuilder builder, bool isOpenUseWorldPartitionLoadedZone)
 		{
 			builder.AddBool(25, isOpenUseWorldPartitionLoadedZone, false);
 		}
 
-		// Token: 0x0601CEF3 RID: 118515 RVA: 0x00416E1D File Offset: 0x0041501D
+		// Token: 0x0601E6E0 RID: 124640 RVA: 0x004435B9 File Offset: 0x004417B9
 		public static void AddIsCloseSkinnedMeshAlwaysTick(FlatBufferBuilder builder, bool isCloseSkinnedMeshAlwaysTick)
 		{
 			builder.AddBool(26, isCloseSkinnedMeshAlwaysTick, false);
 		}
 
-		// Token: 0x0601CEF4 RID: 118516 RVA: 0x00416E29 File Offset: 0x00415029
+		// Token: 0x0601E6E1 RID: 124641 RVA: 0x004435C5 File Offset: 0x004417C5
 		public static void AddIsOpenReloadSpeed(FlatBufferBuilder builder, bool isOpenReloadSpeed)
 		{
 			builder.AddBool(27, isOpenReloadSpeed, false);
 		}
 
-		// Token: 0x0601CEF5 RID: 118517 RVA: 0x00416E35 File Offset: 0x00415035
+		// Token: 0x0601E6E2 RID: 124642 RVA: 0x004435D1 File Offset: 0x004417D1
 		public static void AddIsStayInSubWp(FlatBufferBuilder builder, bool isStayInSubWp)
 		{
 			builder.AddBool(28, isStayInSubWp, false);
 		}
 
-		// Token: 0x0601CEF6 RID: 118518 RVA: 0x00416E41 File Offset: 0x00415041
+		// Token: 0x0601E6E3 RID: 124643 RVA: 0x004435DD File Offset: 0x004417DD
 		public static void AddCustomPlayerName(FlatBufferBuilder builder, bool customPlayerName)
 		{
 			builder.AddBool(29, customPlayerName, false);
 		}
 
-		// Token: 0x0601CEF7 RID: 118519 RVA: 0x00416E4D File Offset: 0x0041504D
+		// Token: 0x0601E6E4 RID: 124644 RVA: 0x004435E9 File Offset: 0x004417E9
 		public static void AddNullMask(FlatBufferBuilder builder, uint nullMask)
 		{
 			builder.AddUint(30, nullMask, 0U);
 		}
 
-		// Token: 0x0601CEF8 RID: 118520 RVA: 0x00416E59 File Offset: 0x00415059
+		// Token: 0x0601E6E5 RID: 124645 RVA: 0x004435F5 File Offset: 0x004417F5
 		public static Offset<ILaunchSettingShowInMainEditor> EndILaunchSettingShowInMainEditor(FlatBufferBuilder builder)
 		{
 			return new Offset<ILaunchSettingShowInMainEditor>(builder.EndTable());
 		}
 
-		// Token: 0x0601CEF9 RID: 118521 RVA: 0x00416E68 File Offset: 0x00415068
+		// Token: 0x0601E6E6 RID: 124646 RVA: 0x00443604 File Offset: 0x00441804
 		public ILaunchSettingShowInMainEditorT UnPack()
 		{
 			ILaunchSettingShowInMainEditorT launchSettingShowInMainEditorT = new ILaunchSettingShowInMainEditorT();
@@ -636,7 +636,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return launchSettingShowInMainEditorT;
 		}
 
-		// Token: 0x0601CEFA RID: 118522 RVA: 0x00416E84 File Offset: 0x00415084
+		// Token: 0x0601E6E7 RID: 124647 RVA: 0x00443620 File Offset: 0x00441820
 		public void UnPackTo(ILaunchSettingShowInMainEditorT _o)
 		{
 			_o.DisableAutoStartServer = this.DisableAutoStartServer;
@@ -672,7 +672,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601CEFB RID: 118523 RVA: 0x00417008 File Offset: 0x00415208
+		// Token: 0x0601E6E8 RID: 124648 RVA: 0x004437A4 File Offset: 0x004419A4
 		public static Offset<ILaunchSettingShowInMainEditor> Pack(FlatBufferBuilder builder, ILaunchSettingShowInMainEditorT _o)
 		{
 			if (_o == null)
@@ -682,7 +682,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return ILaunchSettingShowInMainEditor.CreateILaunchSettingShowInMainEditor(builder, _o.DisableAutoStartServer, _o.IsNetMode, _o.UseTemp, _o.EnableDeltaReload, _o.ReloadEditorConfig, _o.ReloadConfigTable, _o.Account, _o.IsBornAtCamera, _o.IsOpenDebugService, _o.IsMale, _o.WaitDebug, _o.EnableAllSystemWithoutPopWin, _o.IsUnlockExplore, _o.IsUnlockSpecial, _o.EnableAllTeleportPoints, _o.IsUnlockAllFog, _o.IsDisableTeleportDungeon, _o.IsSkipQuests, _o.LevelSetting, _o.NewLevelSetting, _o.DataLayerSetting, _o.DisableEntitySetting, _o.GmPathOnLogin, _o.IsUseMobileStreamingParamsInPie, _o.IsUseHighAoi, _o.IsOpenUseWorldPartitionLoadedZone, _o.IsCloseSkinnedMeshAlwaysTick, _o.IsOpenReloadSpeed, _o.IsStayInSubWp, _o.CustomPlayerName, _o.NullMask);
 		}
 
-		// Token: 0x0400CE48 RID: 52808
+		// Token: 0x0400D881 RID: 55425
 		private Table __p;
 	}
 }

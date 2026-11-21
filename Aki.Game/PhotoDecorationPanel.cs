@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200255F RID: 9567
+// Token: 0x02001A4A RID: 6730
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoDecorationPanel : PhotoDetailPanelBase
 {
-	// Token: 0x060134C2 RID: 79042 RVA: 0x004CCE34 File Offset: 0x004CB034
+	// Token: 0x060109A4 RID: 68004 RVA: 0x004DBA6C File Offset: 0x004D9C6C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,8 +33,8 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		};
 	}
 
-	// Token: 0x170018EE RID: 6382
-	// (get) Token: 0x060134C3 RID: 79043 RVA: 0x004CCF35 File Offset: 0x004CB135
+	// Token: 0x17001928 RID: 6440
+	// (get) Token: 0x060109A5 RID: 68005 RVA: 0x004DBB6D File Offset: 0x004D9D6D
 	protected override int TabLockPanelIndex
 	{
 		get
@@ -43,8 +43,8 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x170018EF RID: 6383
-	// (get) Token: 0x060134C4 RID: 79044 RVA: 0x004CCF38 File Offset: 0x004CB138
+	// Token: 0x17001929 RID: 6441
+	// (get) Token: 0x060109A6 RID: 68006 RVA: 0x004DBB70 File Offset: 0x004D9D70
 	protected override int SubTabLockPanelIndex
 	{
 		get
@@ -53,7 +53,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x060134C5 RID: 79045 RVA: 0x004CCF3C File Offset: 0x004CB13C
+	// Token: 0x060109A7 RID: 68007 RVA: 0x004DBB74 File Offset: 0x004D9D74
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhotoDecorationPanel.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -64,7 +64,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060134C6 RID: 79046 RVA: 0x004CCF7F File Offset: 0x004CB17F
+	// Token: 0x060109A8 RID: 68008 RVA: 0x004DBBB7 File Offset: 0x004D9DB7
 	protected override void OnBeforeDestroy()
 	{
 		PhotoMainViewModel viewModel = this.ViewModel;
@@ -72,7 +72,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x060134C7 RID: 79047 RVA: 0x004CCFAE File Offset: 0x004CB1AE
+	// Token: 0x060109A9 RID: 68009 RVA: 0x004DBBE6 File Offset: 0x004D9DE6
 	private void OnStickerRemoved()
 	{
 		if (!this.IsStickerSubTab)
@@ -82,7 +82,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		this.SelectDefaultSticker();
 	}
 
-	// Token: 0x060134C8 RID: 79048 RVA: 0x004CCFC0 File Offset: 0x004CB1C0
+	// Token: 0x060109AA RID: 68010 RVA: 0x004DBBF8 File Offset: 0x004D9DF8
 	private UniTask RefreshSubTabList()
 	{
 		PhotoDecorationPanel.<RefreshSubTabList>d__15 <RefreshSubTabList>d__;
@@ -93,7 +93,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		return <RefreshSubTabList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060134C9 RID: 79049 RVA: 0x004CD004 File Offset: 0x004CB204
+	// Token: 0x060109AB RID: 68011 RVA: 0x004DBC3C File Offset: 0x004D9E3C
 	private void OnSubTabClick(PhotoSubTab data, bool playSwitchAnim = true)
 	{
 		PhotoSubTabPanel tabMenuPanel = this.TabMenuPanel;
@@ -112,7 +112,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		this.RefreshDecoList(type).Forget();
 	}
 
-	// Token: 0x060134CA RID: 79050 RVA: 0x004CD074 File Offset: 0x004CB274
+	// Token: 0x060109AC RID: 68012 RVA: 0x004DBCAC File Offset: 0x004D9EAC
 	private UniTask RefreshDecoList(EPhotoDecorationSubTabType subTabType)
 	{
 		PhotoDecorationPanel.<RefreshDecoList>d__17 <RefreshDecoList>d__;
@@ -124,7 +124,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		return <RefreshDecoList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060134CB RID: 79051 RVA: 0x004CD0C0 File Offset: 0x004CB2C0
+	// Token: 0x060109AD RID: 68013 RVA: 0x004DBCF8 File Offset: 0x004D9EF8
 	private void SelectCurrentFrame()
 	{
 		int currentFrameId = this.ViewModel.CurrentFrameId;
@@ -148,7 +148,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x060134CC RID: 79052 RVA: 0x004CD118 File Offset: 0x004CB318
+	// Token: 0x060109AE RID: 68014 RVA: 0x004DBD50 File Offset: 0x004D9F50
 	private void SelectCurrentSticker()
 	{
 		int currentStickerId = this.ViewModel.CurrentStickerId;
@@ -176,7 +176,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		this.SelectDefaultSticker();
 	}
 
-	// Token: 0x060134CD RID: 79053 RVA: 0x004CD178 File Offset: 0x004CB378
+	// Token: 0x060109AF RID: 68015 RVA: 0x004DBDB0 File Offset: 0x004D9FB0
 	private void SelectDefaultSticker()
 	{
 		int i = 0;
@@ -199,7 +199,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x060134CE RID: 79054 RVA: 0x004CD1C4 File Offset: 0x004CB3C4
+	// Token: 0x060109B0 RID: 68016 RVA: 0x004DBDFC File Offset: 0x004D9FFC
 	private List<PhotoDecoData> GetFrameDataList()
 	{
 		if (this.FrameDataCache != null)
@@ -218,7 +218,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		return this.FrameDataCache;
 	}
 
-	// Token: 0x060134CF RID: 79055 RVA: 0x004CD240 File Offset: 0x004CB440
+	// Token: 0x060109B1 RID: 68017 RVA: 0x004DBE78 File Offset: 0x004DA078
 	private List<PhotoDecoData> GetStickerDataList()
 	{
 		if (this.StickerDataCache != null)
@@ -237,7 +237,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		return this.StickerDataCache;
 	}
 
-	// Token: 0x060134D0 RID: 79056 RVA: 0x004CD2BC File Offset: 0x004CB4BC
+	// Token: 0x060109B2 RID: 68018 RVA: 0x004DBEF4 File Offset: 0x004DA0F4
 	private void OnDecoClick(int gridIndex)
 	{
 		if (gridIndex < 0 || gridIndex >= this.DecoDataList.Count)
@@ -279,7 +279,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x060134D1 RID: 79057 RVA: 0x004CD36B File Offset: 0x004CB56B
+	// Token: 0x060109B3 RID: 68019 RVA: 0x004DBFA3 File Offset: 0x004DA1A3
 	private void OnImmersiveModeChanged(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -298,7 +298,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x060134D2 RID: 79058 RVA: 0x004CD39C File Offset: 0x004CB59C
+	// Token: 0x060109B4 RID: 68020 RVA: 0x004DBFD4 File Offset: 0x004DA1D4
 	private PhotoDecoItem CreateDecoItem()
 	{
 		return new PhotoDecoItem
@@ -307,11 +307,11 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 		};
 	}
 
-	// Token: 0x04009197 RID: 37271
+	// Token: 0x040092F0 RID: 37616
 	[Nullable(2)]
 	private PhotoSubTabPanel TabMenuPanel;
 
-	// Token: 0x04009198 RID: 37272
+	// Token: 0x040092F1 RID: 37617
 	[Nullable(new byte[]
 	{
 		2,
@@ -320,10 +320,10 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 	})]
 	private LoopScrollView<PhotoDecoItem, PhotoDecoData> DecoScroll;
 
-	// Token: 0x04009199 RID: 37273
+	// Token: 0x040092F2 RID: 37618
 	private List<PhotoDecoData> DecoDataList = new List<PhotoDecoData>();
 
-	// Token: 0x0400919A RID: 37274
+	// Token: 0x040092F3 RID: 37619
 	[Nullable(new byte[]
 	{
 		2,
@@ -331,7 +331,7 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 	})]
 	private List<PhotoDecoData> FrameDataCache;
 
-	// Token: 0x0400919B RID: 37275
+	// Token: 0x040092F4 RID: 37620
 	[Nullable(new byte[]
 	{
 		2,
@@ -339,30 +339,30 @@ public class PhotoDecorationPanel : PhotoDetailPanelBase
 	})]
 	private List<PhotoDecoData> StickerDataCache;
 
-	// Token: 0x0400919C RID: 37276
+	// Token: 0x040092F5 RID: 37621
 	private bool IsStickerSubTab;
 
-	// Token: 0x02008B2D RID: 35629
+	// Token: 0x02007CB3 RID: 31923
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D2F8 RID: 185080
+		// Token: 0x04028605 RID: 165381
 		ItemTabMenu,
-		// Token: 0x0402D2F9 RID: 185081
+		// Token: 0x04028606 RID: 165382
 		LoopScrollDeco,
-		// Token: 0x0402D2FA RID: 185082
+		// Token: 0x04028607 RID: 165383
 		ItemDecoTemplate,
-		// Token: 0x0402D2FB RID: 185083
+		// Token: 0x04028608 RID: 165384
 		ItemImmersiveModePanel,
-		// Token: 0x0402D2FC RID: 185084
+		// Token: 0x04028609 RID: 165385
 		ToggleImmersiveMode,
-		// Token: 0x0402D2FD RID: 185085
+		// Token: 0x0402860A RID: 165386
 		ItemTabLockPanel,
-		// Token: 0x0402D2FE RID: 185086
+		// Token: 0x0402860B RID: 165387
 		TextTabLockTips,
-		// Token: 0x0402D2FF RID: 185087
+		// Token: 0x0402860C RID: 165388
 		ItemSubTabLockPanel,
-		// Token: 0x0402D300 RID: 185088
+		// Token: 0x0402860D RID: 165389
 		TextSubTabLockTips
 	}
 }

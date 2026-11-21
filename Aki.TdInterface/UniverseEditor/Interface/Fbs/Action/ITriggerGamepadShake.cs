@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007481 RID: 29825
+	// Token: 0x02007C74 RID: 31860
 	public struct ITriggerGamepadShake : IFlatbufferObject
 	{
-		// Token: 0x1700E26A RID: 57962
-		// (get) Token: 0x0603632A RID: 221994 RVA: 0x0075E589 File Offset: 0x0075C789
+		// Token: 0x1700EE87 RID: 61063
+		// (get) Token: 0x06039713 RID: 235283 RVA: 0x007C12B5 File Offset: 0x007BF4B5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603632B RID: 221995 RVA: 0x0075E596 File Offset: 0x0075C796
+		// Token: 0x06039714 RID: 235284 RVA: 0x007C12C2 File Offset: 0x007BF4C2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603632C RID: 221996 RVA: 0x0075E5A0 File Offset: 0x0075C7A0
+		// Token: 0x06039715 RID: 235285 RVA: 0x007C12CC File Offset: 0x007BF4CC
 		public static ITriggerGamepadShake GetRootAsITriggerGamepadShake(ByteBuffer _bb)
 		{
 			return ITriggerGamepadShake.GetRootAsITriggerGamepadShake(_bb, default(ITriggerGamepadShake));
 		}
 
-		// Token: 0x0603632D RID: 221997 RVA: 0x0075E5BC File Offset: 0x0075C7BC
+		// Token: 0x06039716 RID: 235286 RVA: 0x007C12E8 File Offset: 0x007BF4E8
 		public static ITriggerGamepadShake GetRootAsITriggerGamepadShake(ByteBuffer _bb, ITriggerGamepadShake obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603632E RID: 221998 RVA: 0x0075E5D9 File Offset: 0x0075C7D9
+		// Token: 0x06039717 RID: 235287 RVA: 0x007C1305 File Offset: 0x007BF505
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603632F RID: 221999 RVA: 0x0075E5E8 File Offset: 0x0075C7E8
+		// Token: 0x06039718 RID: 235288 RVA: 0x007C1314 File Offset: 0x007BF514
 		public ITriggerGamepadShake __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E26B RID: 57963
-		// (get) Token: 0x06036330 RID: 222000 RVA: 0x0075E5F8 File Offset: 0x0075C7F8
+		// Token: 0x1700EE88 RID: 61064
+		// (get) Token: 0x06039719 RID: 235289 RVA: 0x007C1324 File Offset: 0x007BF524
 		public string KuroForceFeedbackEffect
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036331 RID: 222001 RVA: 0x0075E62F File Offset: 0x0075C82F
+		// Token: 0x0603971A RID: 235290 RVA: 0x007C135B File Offset: 0x007BF55B
 		public Span<byte> GetKuroForceFeedbackEffectBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06036332 RID: 222002 RVA: 0x0075E63E File Offset: 0x0075C83E
+		// Token: 0x0603971B RID: 235291 RVA: 0x007C136A File Offset: 0x007BF56A
 		public byte[] GetKuroForceFeedbackEffectArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700E26C RID: 57964
-		// (get) Token: 0x06036333 RID: 222003 RVA: 0x0075E64C File Offset: 0x0075C84C
+		// Token: 0x1700EE89 RID: 61065
+		// (get) Token: 0x0603971C RID: 235292 RVA: 0x007C1378 File Offset: 0x007BF578
 		public TGamepadShakeConfig GamepadShakeConfigType
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036334 RID: 222004 RVA: 0x0075E688 File Offset: 0x0075C888
+		// Token: 0x0603971D RID: 235293 RVA: 0x007C13B4 File Offset: 0x007BF5B4
 		public TTable? GamepadShakeConfig<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -100,31 +100,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06036335 RID: 222005 RVA: 0x0075E6CC File Offset: 0x0075C8CC
+		// Token: 0x0603971E RID: 235294 RVA: 0x007C13F8 File Offset: 0x007BF5F8
 		public IAttenuatedGamepadShake GamepadShakeConfigAsIAttenuatedGamepadShake()
 		{
 			return this.GamepadShakeConfig<IAttenuatedGamepadShake>().Value;
 		}
 
-		// Token: 0x06036336 RID: 222006 RVA: 0x0075E6E8 File Offset: 0x0075C8E8
+		// Token: 0x0603971F RID: 235295 RVA: 0x007C1414 File Offset: 0x007BF614
 		public IContinualGamepadShake GamepadShakeConfigAsIContinualGamepadShake()
 		{
 			return this.GamepadShakeConfig<IContinualGamepadShake>().Value;
 		}
 
-		// Token: 0x06036337 RID: 222007 RVA: 0x0075E704 File Offset: 0x0075C904
+		// Token: 0x06039720 RID: 235296 RVA: 0x007C1430 File Offset: 0x007BF630
 		public IMp4GamepadShake GamepadShakeConfigAsIMp4GamepadShake()
 		{
 			return this.GamepadShakeConfig<IMp4GamepadShake>().Value;
 		}
 
-		// Token: 0x06036338 RID: 222008 RVA: 0x0075E720 File Offset: 0x0075C920
+		// Token: 0x06039721 RID: 235297 RVA: 0x007C144C File Offset: 0x007BF64C
 		public IOnetimeGamepadShake GamepadShakeConfigAsIOnetimeGamepadShake()
 		{
 			return this.GamepadShakeConfig<IOnetimeGamepadShake>().Value;
 		}
 
-		// Token: 0x06036339 RID: 222009 RVA: 0x0075E73B File Offset: 0x0075C93B
+		// Token: 0x06039722 RID: 235298 RVA: 0x007C1467 File Offset: 0x007BF667
 		public static Offset<ITriggerGamepadShake> CreateITriggerGamepadShake(FlatBufferBuilder builder, StringOffset KuroForceFeedbackEffectOffset = default(StringOffset), TGamepadShakeConfig GamepadShakeConfig_type = TGamepadShakeConfig.NONE, int GamepadShakeConfigOffset = 0)
 		{
 			builder.StartTable(3);
@@ -134,37 +134,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITriggerGamepadShake.EndITriggerGamepadShake(builder);
 		}
 
-		// Token: 0x0603633A RID: 222010 RVA: 0x0075E75F File Offset: 0x0075C95F
+		// Token: 0x06039723 RID: 235299 RVA: 0x007C148B File Offset: 0x007BF68B
 		public static void StartITriggerGamepadShake(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0603633B RID: 222011 RVA: 0x0075E768 File Offset: 0x0075C968
+		// Token: 0x06039724 RID: 235300 RVA: 0x007C1494 File Offset: 0x007BF694
 		public static void AddKuroForceFeedbackEffect(FlatBufferBuilder builder, StringOffset kuroForceFeedbackEffectOffset)
 		{
 			builder.AddOffset(0, kuroForceFeedbackEffectOffset.Value, 0);
 		}
 
-		// Token: 0x0603633C RID: 222012 RVA: 0x0075E778 File Offset: 0x0075C978
+		// Token: 0x06039725 RID: 235301 RVA: 0x007C14A4 File Offset: 0x007BF6A4
 		public static void AddGamepadShakeConfigType(FlatBufferBuilder builder, TGamepadShakeConfig gamepadShakeConfigType)
 		{
 			builder.AddByte(1, (byte)gamepadShakeConfigType, 0);
 		}
 
-		// Token: 0x0603633D RID: 222013 RVA: 0x0075E783 File Offset: 0x0075C983
+		// Token: 0x06039726 RID: 235302 RVA: 0x007C14AF File Offset: 0x007BF6AF
 		public static void AddGamepadShakeConfig(FlatBufferBuilder builder, int gamepadShakeConfigOffset)
 		{
 			builder.AddOffset(2, gamepadShakeConfigOffset, 0);
 		}
 
-		// Token: 0x0603633E RID: 222014 RVA: 0x0075E78E File Offset: 0x0075C98E
+		// Token: 0x06039727 RID: 235303 RVA: 0x007C14BA File Offset: 0x007BF6BA
 		public static Offset<ITriggerGamepadShake> EndITriggerGamepadShake(FlatBufferBuilder builder)
 		{
 			return new Offset<ITriggerGamepadShake>(builder.EndTable());
 		}
 
-		// Token: 0x0603633F RID: 222015 RVA: 0x0075E79C File Offset: 0x0075C99C
+		// Token: 0x06039728 RID: 235304 RVA: 0x007C14C8 File Offset: 0x007BF6C8
 		public ITriggerGamepadShakeT UnPack()
 		{
 			ITriggerGamepadShakeT triggerGamepadShakeT = new ITriggerGamepadShakeT();
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return triggerGamepadShakeT;
 		}
 
-		// Token: 0x06036340 RID: 222016 RVA: 0x0075E7B8 File Offset: 0x0075C9B8
+		// Token: 0x06039729 RID: 235305 RVA: 0x007C14E4 File Offset: 0x007BF6E4
 		public void UnPackTo(ITriggerGamepadShakeT _o)
 		{
 			_o.KuroForceFeedbackEffect = this.KuroForceFeedbackEffect;
@@ -197,7 +197,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036341 RID: 222017 RVA: 0x0075E8E8 File Offset: 0x0075CAE8
+		// Token: 0x0603972A RID: 235306 RVA: 0x007C1614 File Offset: 0x007BF814
 		public static Offset<ITriggerGamepadShake> Pack(FlatBufferBuilder builder, ITriggerGamepadShakeT _o)
 		{
 			if (_o == null)
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITriggerGamepadShake.CreateITriggerGamepadShake(builder, kuroForceFeedbackEffectOffset, gamepadShakeConfig_type, gamepadShakeConfigOffset);
 		}
 
-		// Token: 0x04012316 RID: 74518
+		// Token: 0x0401333D RID: 78653
 		private Table __p;
 	}
 }

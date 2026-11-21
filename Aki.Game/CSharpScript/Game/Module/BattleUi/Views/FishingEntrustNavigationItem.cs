@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D68 RID: 23912
+	// Token: 0x02004D4A RID: 19786
 	public class FishingEntrustNavigationItem : UiPanelBase
 	{
-		// Token: 0x0603CB68 RID: 248680 RVA: 0x00E93FB0 File Offset: 0x00E921B0
+		// Token: 0x06031AC4 RID: 203460 RVA: 0x00DE47F8 File Offset: 0x00DE29F8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -36,24 +36,24 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603CB69 RID: 248681 RVA: 0x00E94044 File Offset: 0x00E92244
+		// Token: 0x06031AC5 RID: 203461 RVA: 0x00DE488C File Offset: 0x00DE2A8C
 		private static void OnViewButtonClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.FishingQuestView, null, null);
 		}
 
-		// Token: 0x0200C01A RID: 49178
+		// Token: 0x0200AA20 RID: 43552
 		private enum EViewComponent
 		{
-			// Token: 0x04039F7F RID: 237439
+			// Token: 0x04034942 RID: 215362
 			ViewButton
 		}
 
-		// Token: 0x0200C01B RID: 49179
+		// Token: 0x0200AA21 RID: 43553
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04039F80 RID: 237440
+			// Token: 0x04034943 RID: 215363
 			public static Action <0>__OnViewButtonClick;
 		}
 	}

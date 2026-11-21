@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A62 RID: 2658
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B2B RID: 2859
 	public class RotatorComponent : InteractiveComponent
 	{
-		// Token: 0x06003D35 RID: 15669 RVA: 0x0009D4D1 File Offset: 0x0009B6D1
+		// Token: 0x06004155 RID: 16725 RVA: 0x000A6949 File Offset: 0x000A4B49
 		public static RotatorComponent Create(IRotatorComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E2E RID: 3630
-		// (get) Token: 0x06003D36 RID: 15670 RVA: 0x0009D4F0 File Offset: 0x0009B6F0
+		// Token: 0x17000EFA RID: 3834
+		// (get) Token: 0x06004156 RID: 16726 RVA: 0x000A6968 File Offset: 0x000A4B68
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E2F RID: 3631
-		// (get) Token: 0x06003D37 RID: 15671 RVA: 0x0009D526 File Offset: 0x0009B726
+		// Token: 0x17000EFB RID: 3835
+		// (get) Token: 0x06004157 RID: 16727 RVA: 0x000A699E File Offset: 0x000A4B9E
 		public override string Content
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E30 RID: 3632
-		// (get) Token: 0x06003D38 RID: 15672 RVA: 0x0009D533 File Offset: 0x0009B733
+		// Token: 0x17000EFC RID: 3836
+		// (get) Token: 0x06004158 RID: 16728 RVA: 0x000A69AB File Offset: 0x000A4BAB
 		public override string Icon
 		{
 			get
@@ -57,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E31 RID: 3633
-		// (get) Token: 0x06003D39 RID: 15673 RVA: 0x0009D540 File Offset: 0x0009B740
+		// Token: 0x17000EFD RID: 3837
+		// (get) Token: 0x06004159 RID: 16729 RVA: 0x000A69B8 File Offset: 0x000A4BB8
 		public override bool? EdIsLocked
 		{
 			get
@@ -67,8 +65,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E32 RID: 3634
-		// (get) Token: 0x06003D3A RID: 15674 RVA: 0x0009D556 File Offset: 0x0009B756
+		// Token: 0x17000EFE RID: 3838
+		// (get) Token: 0x0600415A RID: 16730 RVA: 0x000A69CE File Offset: 0x000A4BCE
 		public virtual VectorInfo RotatorSpeed
 		{
 			get
@@ -83,8 +81,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E33 RID: 3635
-		// (get) Token: 0x06003D3B RID: 15675 RVA: 0x0009D58A File Offset: 0x0009B78A
+		// Token: 0x17000EFF RID: 3839
+		// (get) Token: 0x0600415B RID: 16731 RVA: 0x000A6A02 File Offset: 0x000A4C02
 		public virtual VectorInfo LocationOffset
 		{
 			get
@@ -99,8 +97,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E34 RID: 3636
-		// (get) Token: 0x06003D3C RID: 15676 RVA: 0x0009D5BE File Offset: 0x0009B7BE
+		// Token: 0x17000F00 RID: 3840
+		// (get) Token: 0x0600415C RID: 16732 RVA: 0x000A6A36 File Offset: 0x000A4C36
 		public virtual VectorInfo RotationOffset
 		{
 			get
@@ -115,8 +113,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E35 RID: 3637
-		// (get) Token: 0x06003D3D RID: 15677 RVA: 0x0009D5F2 File Offset: 0x0009B7F2
+		// Token: 0x17000F01 RID: 3841
+		// (get) Token: 0x0600415D RID: 16733 RVA: 0x000A6A6A File Offset: 0x000A4C6A
 		public virtual VectorInfo RotationMapping
 		{
 			get
@@ -131,8 +129,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E36 RID: 3638
-		// (get) Token: 0x06003D3E RID: 15678 RVA: 0x0009D626 File Offset: 0x0009B826
+		// Token: 0x17000F02 RID: 3842
+		// (get) Token: 0x0600415E RID: 16734 RVA: 0x000A6A9E File Offset: 0x000A4C9E
 		public virtual bool IsLocalSpace
 		{
 			get
@@ -141,8 +139,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E37 RID: 3639
-		// (get) Token: 0x06003D3F RID: 15679 RVA: 0x0009D633 File Offset: 0x0009B833
+		// Token: 0x17000F03 RID: 3843
+		// (get) Token: 0x0600415F RID: 16735 RVA: 0x000A6AAB File Offset: 0x000A4CAB
 		public virtual int EntityId
 		{
 			get
@@ -151,8 +149,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E38 RID: 3640
-		// (get) Token: 0x06003D40 RID: 15680 RVA: 0x0009D640 File Offset: 0x0009B840
+		// Token: 0x17000F04 RID: 3844
+		// (get) Token: 0x06004160 RID: 16736 RVA: 0x000A6AB8 File Offset: 0x000A4CB8
 		public virtual bool IsRotatorSelf
 		{
 			get
@@ -161,8 +159,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E39 RID: 3641
-		// (get) Token: 0x06003D41 RID: 15681 RVA: 0x0009D64D File Offset: 0x0009B84D
+		// Token: 0x17000F05 RID: 3845
+		// (get) Token: 0x06004161 RID: 16737 RVA: 0x000A6AC5 File Offset: 0x000A4CC5
 		public virtual IEventRotator InteractAction
 		{
 			get
@@ -177,8 +175,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E3A RID: 3642
-		// (get) Token: 0x06003D42 RID: 15682 RVA: 0x0009D681 File Offset: 0x0009B881
+		// Token: 0x17000F06 RID: 3846
+		// (get) Token: 0x06004162 RID: 16738 RVA: 0x000A6AF9 File Offset: 0x000A4CF9
 		public virtual bool IsLockZ
 		{
 			get
@@ -187,8 +185,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E3B RID: 3643
-		// (get) Token: 0x06003D43 RID: 15683 RVA: 0x0009D68E File Offset: 0x0009B88E
+		// Token: 0x17000F07 RID: 3847
+		// (get) Token: 0x06004163 RID: 16739 RVA: 0x000A6B06 File Offset: 0x000A4D06
 		public virtual bool IsRecovery
 		{
 			get
@@ -197,42 +195,42 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002219 RID: 8729
+		// Token: 0x04002430 RID: 9264
 		private IRotatorComponent Instance;
 
-		// Token: 0x0400221A RID: 8730
+		// Token: 0x04002431 RID: 9265
 		[Nullable(2)]
 		private VectorInfo _RotatorSpeedCache;
 
-		// Token: 0x0400221B RID: 8731
+		// Token: 0x04002432 RID: 9266
 		private bool _RotatorSpeedInited;
 
-		// Token: 0x0400221C RID: 8732
+		// Token: 0x04002433 RID: 9267
 		[Nullable(2)]
 		private VectorInfo _LocationOffsetCache;
 
-		// Token: 0x0400221D RID: 8733
+		// Token: 0x04002434 RID: 9268
 		private bool _LocationOffsetInited;
 
-		// Token: 0x0400221E RID: 8734
+		// Token: 0x04002435 RID: 9269
 		[Nullable(2)]
 		private VectorInfo _RotationOffsetCache;
 
-		// Token: 0x0400221F RID: 8735
+		// Token: 0x04002436 RID: 9270
 		private bool _RotationOffsetInited;
 
-		// Token: 0x04002220 RID: 8736
+		// Token: 0x04002437 RID: 9271
 		[Nullable(2)]
 		private VectorInfo _RotationMappingCache;
 
-		// Token: 0x04002221 RID: 8737
+		// Token: 0x04002438 RID: 9272
 		private bool _RotationMappingInited;
 
-		// Token: 0x04002222 RID: 8738
+		// Token: 0x04002439 RID: 9273
 		[Nullable(2)]
 		private IEventRotator _InteractActionCache;
 
-		// Token: 0x04002223 RID: 8739
+		// Token: 0x0400243A RID: 9274
 		private bool _InteractActionInited;
 	}
 }

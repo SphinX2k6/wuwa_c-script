@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000991 RID: 2449
+	// Token: 0x02000A44 RID: 2628
 	public class ELockTypeJsonConverter : JsonConverter<ELockType>
 	{
-		// Token: 0x060036BF RID: 14015 RVA: 0x0008E8E0 File Offset: 0x0008CAE0
+		// Token: 0x06003A46 RID: 14918 RVA: 0x0009684C File Offset: 0x00094A4C
 		public override ELockType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ELockTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060036C0 RID: 14016 RVA: 0x0008E904 File Offset: 0x0008CB04
+		// Token: 0x06003A47 RID: 14919 RVA: 0x00096870 File Offset: 0x00094A70
 		public override void Write(Utf8JsonWriter writer, ELockType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

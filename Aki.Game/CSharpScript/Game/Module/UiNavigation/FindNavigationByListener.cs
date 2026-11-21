@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048F3 RID: 18675
+	// Token: 0x0200386A RID: 14442
 	public class FindNavigationByListener : FindActionBase
 	{
-		// Token: 0x06030D60 RID: 200032 RVA: 0x00B577B4 File Offset: 0x00B559B4
+		// Token: 0x0602588D RID: 153741 RVA: 0x00A92624 File Offset: 0x00A90824
 		[NullableContext(1)]
 		public override void FindNavigation(FindNavigationResult result)
 		{

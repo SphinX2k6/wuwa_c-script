@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001C93 RID: 7315
+// Token: 0x02001152 RID: 4434
 [NullableContext(1)]
 [Nullable(0)]
 public class GachaContentInfo
 {
-	// Token: 0x04006549 RID: 25929
+	// Token: 0x0400661B RID: 26139
 	public string title = "";
 
-	// Token: 0x0400654A RID: 25930
+	// Token: 0x0400661C RID: 26140
 	public string explain = "";
 
-	// Token: 0x0400654B RID: 25931
+	// Token: 0x0400661D RID: 26141
 	public string detail = "";
 }

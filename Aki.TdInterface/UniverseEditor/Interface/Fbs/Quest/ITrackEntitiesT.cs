@@ -4,35 +4,35 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041FD RID: 16893
+	// Token: 0x02004656 RID: 18006
 	public class ITrackEntitiesT
 	{
-		// Token: 0x170077E6 RID: 30694
-		// (get) Token: 0x06018EDE RID: 102110 RVA: 0x003964BD File Offset: 0x003946BD
-		// (set) Token: 0x06018EDF RID: 102111 RVA: 0x003964C5 File Offset: 0x003946C5
+		// Token: 0x17007E14 RID: 32276
+		// (get) Token: 0x0601A638 RID: 108088 RVA: 0x003C1A1D File Offset: 0x003BFC1D
+		// (set) Token: 0x0601A639 RID: 108089 RVA: 0x003C1A25 File Offset: 0x003BFC25
 		public ETrackType Type { get; set; }
 
-		// Token: 0x170077E7 RID: 30695
-		// (get) Token: 0x06018EE0 RID: 102112 RVA: 0x003964CE File Offset: 0x003946CE
-		// (set) Token: 0x06018EE1 RID: 102113 RVA: 0x003964D6 File Offset: 0x003946D6
+		// Token: 0x17007E15 RID: 32277
+		// (get) Token: 0x0601A63A RID: 108090 RVA: 0x003C1A2E File Offset: 0x003BFC2E
+		// (set) Token: 0x0601A63B RID: 108091 RVA: 0x003C1A36 File Offset: 0x003BFC36
 		public TGravityDirectionUnion GravityDirection { get; set; }
 
-		// Token: 0x170077E8 RID: 30696
-		// (get) Token: 0x06018EE2 RID: 102114 RVA: 0x003964DF File Offset: 0x003946DF
-		// (set) Token: 0x06018EE3 RID: 102115 RVA: 0x003964E7 File Offset: 0x003946E7
+		// Token: 0x17007E16 RID: 32278
+		// (get) Token: 0x0601A63C RID: 108092 RVA: 0x003C1A3F File Offset: 0x003BFC3F
+		// (set) Token: 0x0601A63D RID: 108093 RVA: 0x003C1A47 File Offset: 0x003BFC47
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x170077E9 RID: 30697
-		// (get) Token: 0x06018EE4 RID: 102116 RVA: 0x003964F0 File Offset: 0x003946F0
-		// (set) Token: 0x06018EE5 RID: 102117 RVA: 0x003964F8 File Offset: 0x003946F8
+		// Token: 0x17007E17 RID: 32279
+		// (get) Token: 0x0601A63E RID: 108094 RVA: 0x003C1A50 File Offset: 0x003BFC50
+		// (set) Token: 0x0601A63F RID: 108095 RVA: 0x003C1A58 File Offset: 0x003BFC58
 		public IOutOfRangeTrackTargetT OutOfRangeTrackTargetLocation { get; set; }
 
-		// Token: 0x170077EA RID: 30698
-		// (get) Token: 0x06018EE6 RID: 102118 RVA: 0x00396501 File Offset: 0x00394701
-		// (set) Token: 0x06018EE7 RID: 102119 RVA: 0x00396509 File Offset: 0x00394709
+		// Token: 0x17007E18 RID: 32280
+		// (get) Token: 0x0601A640 RID: 108096 RVA: 0x003C1A61 File Offset: 0x003BFC61
+		// (set) Token: 0x0601A641 RID: 108097 RVA: 0x003C1A69 File Offset: 0x003BFC69
 		public IOutOfRangeTrackEntityT OutOfRangeTrackTarget { get; set; }
 
-		// Token: 0x06018EE8 RID: 102120 RVA: 0x00396512 File Offset: 0x00394712
+		// Token: 0x0601A642 RID: 108098 RVA: 0x003C1A72 File Offset: 0x003BFC72
 		public ITrackEntitiesT()
 		{
 			this.Type = ETrackType.Locations;

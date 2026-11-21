@@ -3,27 +3,25 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E63 RID: 7779
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002098 RID: 8344
 	public class IShowTalkCameraMotionTween_SetValue
 	{
-		// Token: 0x04006372 RID: 25458
+		// Token: 0x04006956 RID: 26966
 		public EShowTalkCameraMotionType Type;
 
-		// Token: 0x04006373 RID: 25459
+		// Token: 0x04006957 RID: 26967
 		public ICameraParams Start;
 
-		// Token: 0x04006374 RID: 25460
+		// Token: 0x04006958 RID: 26968
 		public ICameraParams End;
 
-		// Token: 0x04006375 RID: 25461
+		// Token: 0x04006959 RID: 26969
 		public float Duration;
 
-		// Token: 0x04006376 RID: 25462
+		// Token: 0x0400695A RID: 26970
 		public EEaseType? EaseType;
 
-		// Token: 0x04006377 RID: 25463
+		// Token: 0x0400695B RID: 26971
 		[Nullable(2)]
 		public IFlowCameraShake CamShake;
 	}

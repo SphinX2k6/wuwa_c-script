@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E52 RID: 3666
+	// Token: 0x02000F63 RID: 3939
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Quest
 	{
-		// Token: 0x060052D3 RID: 21203 RVA: 0x000CBD90 File Offset: 0x000C9F90
+		// Token: 0x0600584F RID: 22607 RVA: 0x000D7F38 File Offset: 0x000D6138
 		public static Dictionary<int, IBtNode> FlatBehaviorTree(IBehaviorTree bt)
 		{
 			Dictionary<int, IBtNode> dictionary = new Dictionary<int, IBtNode>();
@@ -17,7 +17,7 @@ namespace Aki.TDConfigMgr.Quest
 			return dictionary;
 		}
 
-		// Token: 0x060052D4 RID: 21204 RVA: 0x000CBDB4 File Offset: 0x000C9FB4
+		// Token: 0x06005850 RID: 22608 RVA: 0x000D7F5C File Offset: 0x000D615C
 		private static void FlatNode(IBtNode node, Dictionary<int, IBtNode> idMap, [Nullable(2)] IBtNode parent = null)
 		{
 			node.ParentNodeId = ((parent != null) ? new int?(parent.Id) : null);

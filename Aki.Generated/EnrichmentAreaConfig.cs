@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C31 RID: 3121
+	// Token: 0x02000D14 RID: 3348
 	public struct EnrichmentAreaConfig : IFlatbufferObject
 	{
-		// Token: 0x17000F0B RID: 3851
-		// (get) Token: 0x06006935 RID: 26933 RVA: 0x00223500 File Offset: 0x00221700
+		// Token: 0x17000F64 RID: 3940
+		// (get) Token: 0x06006F37 RID: 28471 RVA: 0x00242880 File Offset: 0x00240A80
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006936 RID: 26934 RVA: 0x0022350D File Offset: 0x0022170D
+		// Token: 0x06006F38 RID: 28472 RVA: 0x0024288D File Offset: 0x00240A8D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006937 RID: 26935 RVA: 0x00223514 File Offset: 0x00221714
+		// Token: 0x06006F39 RID: 28473 RVA: 0x00242894 File Offset: 0x00240A94
 		public static EnrichmentAreaConfig GetRootAsEnrichmentAreaConfig(ByteBuffer _bb)
 		{
 			return EnrichmentAreaConfig.GetRootAsEnrichmentAreaConfig(_bb, default(EnrichmentAreaConfig));
 		}
 
-		// Token: 0x06006938 RID: 26936 RVA: 0x00223530 File Offset: 0x00221730
+		// Token: 0x06006F3A RID: 28474 RVA: 0x002428B0 File Offset: 0x00240AB0
 		public static EnrichmentAreaConfig GetRootAsEnrichmentAreaConfig(ByteBuffer _bb, EnrichmentAreaConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006939 RID: 26937 RVA: 0x0022354D File Offset: 0x0022174D
+		// Token: 0x06006F3B RID: 28475 RVA: 0x002428CD File Offset: 0x00240ACD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600693A RID: 26938 RVA: 0x0022355C File Offset: 0x0022175C
+		// Token: 0x06006F3C RID: 28476 RVA: 0x002428DC File Offset: 0x00240ADC
 		public EnrichmentAreaConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000F0C RID: 3852
-		// (get) Token: 0x0600693B RID: 26939 RVA: 0x0022356C File Offset: 0x0022176C
+		// Token: 0x17000F65 RID: 3941
+		// (get) Token: 0x06006F3D RID: 28477 RVA: 0x002428EC File Offset: 0x00240AEC
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F0D RID: 3853
-		// (get) Token: 0x0600693C RID: 26940 RVA: 0x002235A8 File Offset: 0x002217A8
+		// Token: 0x17000F66 RID: 3942
+		// (get) Token: 0x06006F3E RID: 28478 RVA: 0x00242928 File Offset: 0x00240B28
 		public int EnrichmentId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F0E RID: 3854
-		// (get) Token: 0x0600693D RID: 26941 RVA: 0x002235E4 File Offset: 0x002217E4
+		// Token: 0x17000F67 RID: 3943
+		// (get) Token: 0x06006F3F RID: 28479 RVA: 0x00242964 File Offset: 0x00240B64
 		public int ItemId
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F0F RID: 3855
-		// (get) Token: 0x0600693E RID: 26942 RVA: 0x00223620 File Offset: 0x00221820
+		// Token: 0x17000F68 RID: 3944
+		// (get) Token: 0x06006F40 RID: 28480 RVA: 0x002429A0 File Offset: 0x00240BA0
 		public int LevelId
 		{
 			get
@@ -109,7 +109,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600693F RID: 26943 RVA: 0x00223660 File Offset: 0x00221860
+		// Token: 0x06006F41 RID: 28481 RVA: 0x002429E0 File Offset: 0x00240BE0
 		public int EntityIds(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -120,8 +120,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000F10 RID: 3856
-		// (get) Token: 0x06006940 RID: 26944 RVA: 0x002236A0 File Offset: 0x002218A0
+		// Token: 0x17000F69 RID: 3945
+		// (get) Token: 0x06006F42 RID: 28482 RVA: 0x00242A20 File Offset: 0x00240C20
 		public int EntityIdsLength
 		{
 			get
@@ -135,37 +135,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006941 RID: 26945 RVA: 0x002236CC File Offset: 0x002218CC
+		// Token: 0x06006F43 RID: 28483 RVA: 0x00242A4C File Offset: 0x00240C4C
 		public Span<int> GetEntityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x06006942 RID: 26946 RVA: 0x002236DC File Offset: 0x002218DC
+		// Token: 0x06006F44 RID: 28484 RVA: 0x00242A5C File Offset: 0x00240C5C
 		public int[] GetEntityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06006943 RID: 26947 RVA: 0x002236F4 File Offset: 0x002218F4
+		// Token: 0x06006F45 RID: 28485 RVA: 0x00242A74 File Offset: 0x00240C74
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用EntityIdsIter()或GetEntityIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] EntityIds()
+		public int[] EntityIds()
 		{
-			EnrichmentAreaConfig enrichmentAreaConfig = this;
-			return enrichmentAreaConfig.GetEntityIdsArray() ?? Array.Empty<int>();
+			return this.GetEntityIdsArray();
 		}
 
-		// Token: 0x06006944 RID: 26948 RVA: 0x00223718 File Offset: 0x00221918
+		// Token: 0x06006F46 RID: 28486 RVA: 0x00242A7C File Offset: 0x00240C7C
 		[NullableContext(1)]
-		public readonly IEnumerable<int> EntityIdsIter()
+		public IEnumerable<int> EntityIdsIter()
 		{
 			EnrichmentAreaConfig.<EntityIdsIter>d__22 <EntityIdsIter>d__ = new EnrichmentAreaConfig.<EntityIdsIter>d__22(-2);
 			<EntityIdsIter>d__.<>3__<>4__this = this;
 			return <EntityIdsIter>d__;
 		}
 
-		// Token: 0x04004C71 RID: 19569
+		// Token: 0x04005254 RID: 21076
 		private Table __p;
 	}
 }

@@ -4,19 +4,19 @@ using AkiClient.Game.Aki.Character.Input.Enum;
 
 namespace CSharpScript.Game.LevelGamePlay.OperationRestrict
 {
-	// Token: 0x02006ABF RID: 27327
+	// Token: 0x02005C37 RID: 23607
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ISkillOptionToInputAction
 	{
-		// Token: 0x17009967 RID: 39271
-		// (get) Token: 0x06043E61 RID: 278113 RVA: 0x010A54E1 File Offset: 0x010A36E1
-		// (set) Token: 0x06043E62 RID: 278114 RVA: 0x010A54E9 File Offset: 0x010A36E9
+		// Token: 0x17006E6A RID: 28266
+		// (get) Token: 0x06039FA8 RID: 237480 RVA: 0x0104EB11 File Offset: 0x0104CD11
+		// (set) Token: 0x06039FA9 RID: 237481 RVA: 0x0104EB19 File Offset: 0x0104CD19
 		public string OptionKey { get; set; }
 
-		// Token: 0x17009968 RID: 39272
-		// (get) Token: 0x06043E63 RID: 278115 RVA: 0x010A54F2 File Offset: 0x010A36F2
-		// (set) Token: 0x06043E64 RID: 278116 RVA: 0x010A54FA File Offset: 0x010A36FA
+		// Token: 0x17006E6B RID: 28267
+		// (get) Token: 0x06039FAA RID: 237482 RVA: 0x0104EB22 File Offset: 0x0104CD22
+		// (set) Token: 0x06039FAB RID: 237483 RVA: 0x0104EB2A File Offset: 0x0104CD2A
 		public EInputAction InputAction { get; set; }
 	}
 }

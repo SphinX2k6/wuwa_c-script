@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B10 RID: 27408
+	// Token: 0x02007247 RID: 29255
 	public class IMotorCatapultT
 	{
-		// Token: 0x1700CB8D RID: 52109
-		// (get) Token: 0x0603014C RID: 196940 RVA: 0x006893AF File Offset: 0x006875AF
-		// (set) Token: 0x0603014D RID: 196941 RVA: 0x006893B7 File Offset: 0x006875B7
+		// Token: 0x1700D65C RID: 54876
+		// (get) Token: 0x06032F20 RID: 208672 RVA: 0x006E0A67 File Offset: 0x006DEC67
+		// (set) Token: 0x06032F21 RID: 208673 RVA: 0x006E0A6F File Offset: 0x006DEC6F
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x1700CB8E RID: 52110
-		// (get) Token: 0x0603014E RID: 196942 RVA: 0x006893C0 File Offset: 0x006875C0
-		// (set) Token: 0x0603014F RID: 196943 RVA: 0x006893C8 File Offset: 0x006875C8
+		// Token: 0x1700D65D RID: 54877
+		// (get) Token: 0x06032F22 RID: 208674 RVA: 0x006E0A78 File Offset: 0x006DEC78
+		// (set) Token: 0x06032F23 RID: 208675 RVA: 0x006E0A80 File Offset: 0x006DEC80
 		public IMotorCatapultParamT Param { get; set; }
 
-		// Token: 0x1700CB8F RID: 52111
-		// (get) Token: 0x06030150 RID: 196944 RVA: 0x006893D1 File Offset: 0x006875D1
-		// (set) Token: 0x06030151 RID: 196945 RVA: 0x006893D9 File Offset: 0x006875D9
+		// Token: 0x1700D65E RID: 54878
+		// (get) Token: 0x06032F24 RID: 208676 RVA: 0x006E0A89 File Offset: 0x006DEC89
+		// (set) Token: 0x06032F25 RID: 208677 RVA: 0x006E0A91 File Offset: 0x006DEC91
 		public EMotorCatapultSkillType SkillType { get; set; }
 
-		// Token: 0x1700CB90 RID: 52112
-		// (get) Token: 0x06030152 RID: 196946 RVA: 0x006893E2 File Offset: 0x006875E2
-		// (set) Token: 0x06030153 RID: 196947 RVA: 0x006893EA File Offset: 0x006875EA
+		// Token: 0x1700D65F RID: 54879
+		// (get) Token: 0x06032F26 RID: 208678 RVA: 0x006E0A9A File Offset: 0x006DEC9A
+		// (set) Token: 0x06032F27 RID: 208679 RVA: 0x006E0AA2 File Offset: 0x006DECA2
 		public byte NullMask { get; set; }
 
-		// Token: 0x06030154 RID: 196948 RVA: 0x006893F3 File Offset: 0x006875F3
+		// Token: 0x06032F28 RID: 208680 RVA: 0x006E0AAB File Offset: 0x006DECAB
 		public IMotorCatapultT()
 		{
 			this.Type = ELeisureInteract.CustomSkill;

@@ -8,10 +8,10 @@ using CSharpScript.Game.Module.Reward;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015D0 RID: 5584
+// Token: 0x02000A88 RID: 2696
 public class WheelTowerLimitRewardItem : GridProxyAbstract<int>
 {
-	// Token: 0x06009E21 RID: 40481 RVA: 0x00226C98 File Offset: 0x00224E98
+	// Token: 0x060071FF RID: 29183 RVA: 0x00230A48 File Offset: 0x0022EC48
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -42,13 +42,13 @@ public class WheelTowerLimitRewardItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009E22 RID: 40482 RVA: 0x00226DE3 File Offset: 0x00224FE3
+	// Token: 0x06007200 RID: 29184 RVA: 0x00230B93 File Offset: 0x0022ED93
 	protected override void OnStart()
 	{
 		this.RewardLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(2), () => new CommonItemSmallItemGrid(), null, false, true);
 	}
 
-	// Token: 0x06009E23 RID: 40483 RVA: 0x00226E1C File Offset: 0x0022501C
+	// Token: 0x06007201 RID: 29185 RVA: 0x00230BCC File Offset: 0x0022EDCC
 	public override void Refresh(int rewardId, bool isSelected, int gridIndex)
 	{
 		NewTowerScoreReward? rewardConfigById = WheelTowerConfig.Instance.GetRewardConfigById(rewardId);
@@ -101,14 +101,14 @@ public class WheelTowerLimitRewardItem : GridProxyAbstract<int>
 		text2.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x06009E24 RID: 40484 RVA: 0x00226F4D File Offset: 0x0022514D
+	// Token: 0x06007202 RID: 29186 RVA: 0x00230CFD File Offset: 0x0022EEFD
 	[NullableContext(1)]
 	public void SetOnClickReceiveCallback(Action callback)
 	{
 		this.OnClickReceiveCallback = callback;
 	}
 
-	// Token: 0x06009E25 RID: 40485 RVA: 0x00226F56 File Offset: 0x00225156
+	// Token: 0x06007203 RID: 29187 RVA: 0x00230D06 File Offset: 0x0022EF06
 	private void OnClickReceive()
 	{
 		Action onClickReceiveCallback = this.OnClickReceiveCallback;
@@ -119,7 +119,7 @@ public class WheelTowerLimitRewardItem : GridProxyAbstract<int>
 		onClickReceiveCallback();
 	}
 
-	// Token: 0x04004648 RID: 17992
+	// Token: 0x040046EE RID: 18158
 	[Nullable(new byte[]
 	{
 		2,
@@ -127,7 +127,7 @@ public class WheelTowerLimitRewardItem : GridProxyAbstract<int>
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x04004649 RID: 17993
+	// Token: 0x040046EF RID: 18159
 	[Nullable(2)]
 	private Action OnClickReceiveCallback;
 }

@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002389 RID: 9097
+// Token: 0x0200186E RID: 6254
 [NullableContext(1)]
 [Nullable(0)]
 public class PayShopItemBase : UiPanelBase
 {
-	// Token: 0x060122E7 RID: 74471 RVA: 0x00479788 File Offset: 0x00477988
+	// Token: 0x0600F799 RID: 63385 RVA: 0x00486AD8 File Offset: 0x00484CD8
 	public PayShopItemBase(UUIItem uiItem)
 	{
 		this.SourceItem = uiItem;
@@ -27,13 +27,13 @@ public class PayShopItemBase : UiPanelBase
 		this.RefreshRedDotState = true;
 	}
 
-	// Token: 0x060122E8 RID: 74472 RVA: 0x004797DE File Offset: 0x004779DE
+	// Token: 0x0600F79A RID: 63386 RVA: 0x00486B2E File Offset: 0x00484D2E
 	public void Init()
 	{
 		base.SetRootActor(this.SourceItem.GetOwner(), true);
 	}
 
-	// Token: 0x060122E9 RID: 74473 RVA: 0x004797F4 File Offset: 0x004779F4
+	// Token: 0x0600F79B RID: 63387 RVA: 0x00486B44 File Offset: 0x00484D44
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -78,13 +78,13 @@ public class PayShopItemBase : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060122EA RID: 74474 RVA: 0x00479A2C File Offset: 0x00477C2C
+	// Token: 0x0600F79C RID: 63388 RVA: 0x00486D7C File Offset: 0x00484F7C
 	private void TipsClick()
 	{
 		HelpController.Instance.OpenHelpById(9);
 	}
 
-	// Token: 0x060122EB RID: 74475 RVA: 0x00479A3A File Offset: 0x00477C3A
+	// Token: 0x0600F79D RID: 63389 RVA: 0x00486D8A File Offset: 0x00484F8A
 	public void SetDownPriceShowState(bool state)
 	{
 		base.GetSprite(1).SetUIActive(state);
@@ -92,7 +92,7 @@ public class PayShopItemBase : UiPanelBase
 		base.GetText(10).SetUIActive(state);
 	}
 
-	// Token: 0x060122EC RID: 74476 RVA: 0x00479A64 File Offset: 0x00477C64
+	// Token: 0x0600F79E RID: 63390 RVA: 0x00486DB4 File Offset: 0x00484FB4
 	public void SetDownPriceOnlyShow(bool state)
 	{
 		base.GetSprite(1).SetUIActive(state);
@@ -100,7 +100,7 @@ public class PayShopItemBase : UiPanelBase
 		base.GetText(10).SetUIActive(!state);
 	}
 
-	// Token: 0x060122ED RID: 74477 RVA: 0x00479A91 File Offset: 0x00477C91
+	// Token: 0x0600F79F RID: 63391 RVA: 0x00486DE1 File Offset: 0x00484FE1
 	public void OnTimerRefresh(PayShopItemBaseSt data, bool isSelected, int gridIndex)
 	{
 		if (this.Data == null || this.Data.Id != data.Id)
@@ -111,7 +111,7 @@ public class PayShopItemBase : UiPanelBase
 		this.RefreshTimeConnectInfo();
 	}
 
-	// Token: 0x060122EE RID: 74478 RVA: 0x00479AC4 File Offset: 0x00477CC4
+	// Token: 0x0600F7A0 RID: 63392 RVA: 0x00486E14 File Offset: 0x00485014
 	public void Refresh(PayShopItemBaseSt data, bool isSelected, int gridIndex)
 	{
 		if (this.Data == null || this.Data.Id != data.Id)
@@ -129,7 +129,7 @@ public class PayShopItemBase : UiPanelBase
 		this.RefreshTimeConnectInfo();
 	}
 
-	// Token: 0x060122EF RID: 74479 RVA: 0x00479B2B File Offset: 0x00477D2B
+	// Token: 0x0600F7A1 RID: 63393 RVA: 0x00486E7B File Offset: 0x0048507B
 	private void RefreshTimeConnectInfo()
 	{
 		this.OriginalPriceText();
@@ -139,13 +139,13 @@ public class PayShopItemBase : UiPanelBase
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x060122F0 RID: 74480 RVA: 0x00479B4B File Offset: 0x00477D4B
+	// Token: 0x0600F7A2 RID: 63394 RVA: 0x00486E9B File Offset: 0x0048509B
 	protected override void OnBeforeDestroy()
 	{
 		this.CancelLoad();
 	}
 
-	// Token: 0x060122F1 RID: 74481 RVA: 0x00479B54 File Offset: 0x00477D54
+	// Token: 0x0600F7A3 RID: 63395 RVA: 0x00486EA4 File Offset: 0x004850A4
 	private void RefreshDownTextTipsColor()
 	{
 		if (this.Data.GetTextTipsColor == null)
@@ -156,21 +156,21 @@ public class PayShopItemBase : UiPanelBase
 		base.GetText(10).SetColor(FColor.FromHex(hexStr));
 	}
 
-	// Token: 0x060122F2 RID: 74482 RVA: 0x00479B94 File Offset: 0x00477D94
+	// Token: 0x0600F7A4 RID: 63396 RVA: 0x00486EE4 File Offset: 0x004850E4
 	private void RefreshTipsButton()
 	{
 		int monthCardShopId = PayShopConfig.Instance.GetMonthCardShopId();
 		base.GetButton(3).RootUIComp.Get().SetUIActive(this.Data.Id == monthCardShopId);
 	}
 
-	// Token: 0x060122F3 RID: 74483 RVA: 0x00479BD4 File Offset: 0x00477DD4
+	// Token: 0x0600F7A5 RID: 63397 RVA: 0x00486F24 File Offset: 0x00485124
 	private void RefreshQualityTexture()
 	{
 		string payShopItemQualitySpriteByItemIdAndQuality = PayShopModel.Instance.GetPayShopItemQualitySpriteByItemIdAndQuality(this.Data.ItemId, this.Data.Quality);
 		this.SetSpriteByPath(payShopItemQualitySpriteByItemIdAndQuality, base.GetSprite(0), false, null, null);
 	}
 
-	// Token: 0x060122F4 RID: 74484 RVA: 0x00479C1C File Offset: 0x00477E1C
+	// Token: 0x0600F7A6 RID: 63398 RVA: 0x00486F6C File Offset: 0x0048516C
 	private void RefreshTexture()
 	{
 		UUITexture texture = base.GetTexture(2);
@@ -202,7 +202,7 @@ public class PayShopItemBase : UiPanelBase
 		this.StartLoad();
 	}
 
-	// Token: 0x060122F5 RID: 74485 RVA: 0x00479D38 File Offset: 0x00477F38
+	// Token: 0x0600F7A7 RID: 63399 RVA: 0x00487088 File Offset: 0x00485288
 	private void CancelLoad()
 	{
 		if (this.HandleId != -1)
@@ -212,7 +212,7 @@ public class PayShopItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x060122F6 RID: 74486 RVA: 0x00479D5C File Offset: 0x00477F5C
+	// Token: 0x0600F7A8 RID: 63400 RVA: 0x004870AC File Offset: 0x004852AC
 	private void StartLoad()
 	{
 		int itemDataTypeByConfigId = (int)InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(this.Data.ItemId));
@@ -230,7 +230,7 @@ public class PayShopItemBase : UiPanelBase
 		giftIcon.SetCustomUIMaterial(null);
 	}
 
-	// Token: 0x060122F7 RID: 74487 RVA: 0x00479DE1 File Offset: 0x00477FE1
+	// Token: 0x0600F7A9 RID: 63401 RVA: 0x00487131 File Offset: 0x00485331
 	private void RefreshShopItemName()
 	{
 		if (!this.SetNameState)
@@ -240,7 +240,7 @@ public class PayShopItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x060122F8 RID: 74488 RVA: 0x00479E0C File Offset: 0x0047800C
+	// Token: 0x0600F7AA RID: 63402 RVA: 0x0048715C File Offset: 0x0048535C
 	private void RefreshPriceIcon()
 	{
 		UUITexture texture = base.GetTexture(7);
@@ -259,7 +259,7 @@ public class PayShopItemBase : UiPanelBase
 		base.SetItemIcon(texture, priceData.CurrencyId, null, null);
 	}
 
-	// Token: 0x060122F9 RID: 74489 RVA: 0x00479E70 File Offset: 0x00478070
+	// Token: 0x0600F7AB RID: 63403 RVA: 0x004871C0 File Offset: 0x004853C0
 	private void OriginalPriceText()
 	{
 		UUIText text = base.GetText(9);
@@ -278,7 +278,7 @@ public class PayShopItemBase : UiPanelBase
 		text.SetText("<s>" + priceData.OriginalPrice.ToString() + "</s>", true);
 	}
 
-	// Token: 0x060122FA RID: 74490 RVA: 0x00479EF8 File Offset: 0x004780F8
+	// Token: 0x0600F7AC RID: 63404 RVA: 0x00487248 File Offset: 0x00485448
 	private void RefreshPrice()
 	{
 		string text = "F9FFFFFF";
@@ -319,7 +319,7 @@ public class PayShopItemBase : UiPanelBase
 		text2.SetColor(FColor.FromHex(hexStr));
 	}
 
-	// Token: 0x060122FB RID: 74491 RVA: 0x0047A020 File Offset: 0x00478220
+	// Token: 0x0600F7AD RID: 63405 RVA: 0x00487370 File Offset: 0x00485570
 	private void RefreshLeftTimeText()
 	{
 		Func<string> getShopTipsText = this.Data.GetShopTipsText;
@@ -340,7 +340,7 @@ public class PayShopItemBase : UiPanelBase
 		text2.SetUIActive(false);
 	}
 
-	// Token: 0x060122FC RID: 74492 RVA: 0x0047A0B8 File Offset: 0x004782B8
+	// Token: 0x0600F7AE RID: 63406 RVA: 0x00487408 File Offset: 0x00485608
 	public void SetLeftTimeTextShowOnceBuy(bool state)
 	{
 		this.LeftTimeTextShowOnceBuy = state;
@@ -356,7 +356,7 @@ public class PayShopItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x060122FD RID: 74493 RVA: 0x0047A11C File Offset: 0x0047831C
+	// Token: 0x0600F7AF RID: 63407 RVA: 0x0048746C File Offset: 0x0048566C
 	public void SetLeftTimeTextShowState(bool state)
 	{
 		this.LeftTimeTextShowState = state;
@@ -373,19 +373,19 @@ public class PayShopItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x060122FE RID: 74494 RVA: 0x0047A17D File Offset: 0x0047837D
+	// Token: 0x0600F7B0 RID: 63408 RVA: 0x004874CD File Offset: 0x004856CD
 	public void SetNameTextShowState(bool state)
 	{
 		base.GetText(5).SetUIActive(state);
 	}
 
-	// Token: 0x060122FF RID: 74495 RVA: 0x0047A18C File Offset: 0x0047838C
+	// Token: 0x0600F7B1 RID: 63409 RVA: 0x004874DC File Offset: 0x004856DC
 	public void SetRedDotVisible(bool state)
 	{
 		base.GetItem(11).SetUIActive(state);
 	}
 
-	// Token: 0x06012300 RID: 74496 RVA: 0x0047A19C File Offset: 0x0047839C
+	// Token: 0x0600F7B2 RID: 63410 RVA: 0x004874EC File Offset: 0x004856EC
 	public void RefreshRedDot()
 	{
 		if (this.RefreshRedDotState && this.Data.RedDotExistFunc != null)
@@ -394,7 +394,7 @@ public class PayShopItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012301 RID: 74497 RVA: 0x0047A1C9 File Offset: 0x004783C9
+	// Token: 0x0600F7B3 RID: 63411 RVA: 0x00487519 File Offset: 0x00485719
 	private void RefreshNormalItemBg()
 	{
 		UUIItem item = base.GetItem(13);
@@ -405,80 +405,80 @@ public class PayShopItemBase : UiPanelBase
 		item.SetUIActive(!this.Data.IfRechargeItem);
 	}
 
-	// Token: 0x0400897E RID: 35198
+	// Token: 0x04008AC5 RID: 35525
 	[Nullable(2)]
 	private PayShopItemBaseSt Data;
 
-	// Token: 0x0400897F RID: 35199
+	// Token: 0x04008AC6 RID: 35526
 	[Nullable(2)]
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x04008980 RID: 35200
+	// Token: 0x04008AC7 RID: 35527
 	private bool SetNameState;
 
-	// Token: 0x04008981 RID: 35201
+	// Token: 0x04008AC8 RID: 35528
 	private int HandleId;
 
-	// Token: 0x04008982 RID: 35202
+	// Token: 0x04008AC9 RID: 35529
 	[Nullable(2)]
 	private IPriceData CachePriceData;
 
-	// Token: 0x04008983 RID: 35203
+	// Token: 0x04008ACA RID: 35530
 	private string CurrentPriceColor;
 
-	// Token: 0x04008984 RID: 35204
+	// Token: 0x04008ACB RID: 35531
 	private bool LeftTimeTextShowState;
 
-	// Token: 0x04008985 RID: 35205
+	// Token: 0x04008ACC RID: 35532
 	private bool LeftTimeTextShowOnceBuy;
 
-	// Token: 0x04008986 RID: 35206
+	// Token: 0x04008ACD RID: 35533
 	public bool RefreshRedDotState;
 
-	// Token: 0x0200892A RID: 35114
+	// Token: 0x02007AB5 RID: 31413
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402C963 RID: 182627
+		// Token: 0x04027C81 RID: 162945
 		public const int QualitySprite = 0;
 
-		// Token: 0x0402C964 RID: 182628
+		// Token: 0x04027C82 RID: 162946
 		public const int DownBgSprite = 1;
 
-		// Token: 0x0402C965 RID: 182629
+		// Token: 0x04027C83 RID: 162947
 		public const int Texture = 2;
 
-		// Token: 0x0402C966 RID: 182630
+		// Token: 0x04027C84 RID: 162948
 		public const int TipsButton = 3;
 
-		// Token: 0x0402C967 RID: 182631
+		// Token: 0x04027C85 RID: 162949
 		public const int LeftTimeText = 4;
 
-		// Token: 0x0402C968 RID: 182632
+		// Token: 0x04027C86 RID: 162950
 		public const int NameText = 5;
 
-		// Token: 0x0402C969 RID: 182633
+		// Token: 0x04027C87 RID: 162951
 		public const int PriceItem = 6;
 
-		// Token: 0x0402C96A RID: 182634
+		// Token: 0x04027C88 RID: 162952
 		public const int PriceIcon = 7;
 
-		// Token: 0x0402C96B RID: 182635
+		// Token: 0x04027C89 RID: 162953
 		public const int PriceText = 8;
 
-		// Token: 0x0402C96C RID: 182636
+		// Token: 0x04027C8A RID: 162954
 		public const int SourcePriceText = 9;
 
-		// Token: 0x0402C96D RID: 182637
+		// Token: 0x04027C8B RID: 162955
 		public const int PriceTipsText = 10;
 
-		// Token: 0x0402C96E RID: 182638
+		// Token: 0x04027C8C RID: 162956
 		public const int RedDot = 11;
 
-		// Token: 0x0402C96F RID: 182639
+		// Token: 0x04027C8D RID: 162957
 		public const int RechargeTexture = 12;
 
-		// Token: 0x0402C970 RID: 182640
+		// Token: 0x04027C8E RID: 162958
 		public const int NormalItemBg = 13;
 	}
 }

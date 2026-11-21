@@ -1,32 +1,32 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200315C RID: 12636
+// Token: 0x020026C9 RID: 9929
 [NullableContext(1)]
 [Nullable(0)]
 public class ConditionArray
 {
-	// Token: 0x0601B30C RID: 111372 RVA: 0x007684F4 File Offset: 0x007666F4
+	// Token: 0x06018E11 RID: 101905 RVA: 0x0078FEC0 File Offset: 0x0078E0C0
 	public ConditionArray(bool[] conditions, ILogicalStructure structure)
 	{
 		this.Conditions = conditions;
 		this.Structure = structure;
 	}
 
-	// Token: 0x0601B30D RID: 111373 RVA: 0x0076850A File Offset: 0x0076670A
+	// Token: 0x06018E12 RID: 101906 RVA: 0x0078FED6 File Offset: 0x0078E0D6
 	public bool EvaluateByConditions(bool[] conditions)
 	{
 		this.Conditions = conditions;
 		return this.Evaluate();
 	}
 
-	// Token: 0x0601B30E RID: 111374 RVA: 0x00768519 File Offset: 0x00766719
+	// Token: 0x06018E13 RID: 101907 RVA: 0x0078FEE5 File Offset: 0x0078E0E5
 	public bool Evaluate()
 	{
 		return this.EvaluateStructure(this.Structure);
 	}
 
-	// Token: 0x0601B30F RID: 111375 RVA: 0x00768528 File Offset: 0x00766728
+	// Token: 0x06018E14 RID: 101908 RVA: 0x0078FEF4 File Offset: 0x0078E0F4
 	private bool EvaluateStructure(ILogicalStructure structure)
 	{
 		if (structure.Index != null)
@@ -58,9 +58,9 @@ public class ConditionArray
 		return structure.Not != null && !this.EvaluateStructure(structure.Not);
 	}
 
-	// Token: 0x0400D3A2 RID: 54178
+	// Token: 0x0400D805 RID: 55301
 	private bool[] Conditions;
 
-	// Token: 0x0400D3A3 RID: 54179
+	// Token: 0x0400D806 RID: 55302
 	private readonly ILogicalStructure Structure;
 }

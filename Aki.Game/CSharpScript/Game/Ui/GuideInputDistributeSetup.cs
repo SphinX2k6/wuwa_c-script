@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004684 RID: 18052
+	// Token: 0x020035B5 RID: 13749
 	public class GuideInputDistributeSetup : InputDistributeSetup
 	{
-		// Token: 0x0602E98D RID: 190861 RVA: 0x00AC9DDC File Offset: 0x00AC7FDC
+		// Token: 0x060230D7 RID: 143575 RVA: 0x009F7B10 File Offset: 0x009F5D10
 		public override bool OnRefresh()
 		{
 			if (GuideModel.Instance.IsGuideLockingInput)

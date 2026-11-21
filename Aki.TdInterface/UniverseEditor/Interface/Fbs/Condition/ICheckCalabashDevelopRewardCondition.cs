@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004991 RID: 18833
+	// Token: 0x02004E48 RID: 20040
 	public struct ICheckCalabashDevelopRewardCondition : IFlatbufferObject
 	{
-		// Token: 0x1700880B RID: 34827
-		// (get) Token: 0x0601D5E0 RID: 120288 RVA: 0x00423DE0 File Offset: 0x00421FE0
+		// Token: 0x17008EC6 RID: 36550
+		// (get) Token: 0x0601F005 RID: 126981 RVA: 0x00454294 File Offset: 0x00452494
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D5E1 RID: 120289 RVA: 0x00423DED File Offset: 0x00421FED
+		// Token: 0x0601F006 RID: 126982 RVA: 0x004542A1 File Offset: 0x004524A1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D5E2 RID: 120290 RVA: 0x00423DF4 File Offset: 0x00421FF4
+		// Token: 0x0601F007 RID: 126983 RVA: 0x004542A8 File Offset: 0x004524A8
 		public static ICheckCalabashDevelopRewardCondition GetRootAsICheckCalabashDevelopRewardCondition(ByteBuffer _bb)
 		{
 			return ICheckCalabashDevelopRewardCondition.GetRootAsICheckCalabashDevelopRewardCondition(_bb, default(ICheckCalabashDevelopRewardCondition));
 		}
 
-		// Token: 0x0601D5E3 RID: 120291 RVA: 0x00423E10 File Offset: 0x00422010
+		// Token: 0x0601F008 RID: 126984 RVA: 0x004542C4 File Offset: 0x004524C4
 		public static ICheckCalabashDevelopRewardCondition GetRootAsICheckCalabashDevelopRewardCondition(ByteBuffer _bb, ICheckCalabashDevelopRewardCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D5E4 RID: 120292 RVA: 0x00423E2D File Offset: 0x0042202D
+		// Token: 0x0601F009 RID: 126985 RVA: 0x004542E1 File Offset: 0x004524E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D5E5 RID: 120293 RVA: 0x00423E3C File Offset: 0x0042203C
+		// Token: 0x0601F00A RID: 126986 RVA: 0x004542F0 File Offset: 0x004524F0
 		public ICheckCalabashDevelopRewardCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700880C RID: 34828
-		// (get) Token: 0x0601D5E6 RID: 120294 RVA: 0x00423E4C File Offset: 0x0042204C
+		// Token: 0x17008EC7 RID: 36551
+		// (get) Token: 0x0601F00B RID: 126987 RVA: 0x00454300 File Offset: 0x00452500
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700880D RID: 34829
-		// (get) Token: 0x0601D5E7 RID: 120295 RVA: 0x00423E88 File Offset: 0x00422088
+		// Token: 0x17008EC8 RID: 36552
+		// (get) Token: 0x0601F00C RID: 126988 RVA: 0x0045433C File Offset: 0x0045253C
 		public int MonsterId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700880E RID: 34830
-		// (get) Token: 0x0601D5E8 RID: 120296 RVA: 0x00423EC4 File Offset: 0x004220C4
+		// Token: 0x17008EC9 RID: 36553
+		// (get) Token: 0x0601F00D RID: 126989 RVA: 0x00454378 File Offset: 0x00452578
 		public ECalabashDevelop Develop
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D5E9 RID: 120297 RVA: 0x00423F00 File Offset: 0x00422100
+		// Token: 0x0601F00E RID: 126990 RVA: 0x004543B4 File Offset: 0x004525B4
 		public static Offset<ICheckCalabashDevelopRewardCondition> CreateICheckCalabashDevelopRewardCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int MonsterId = 0, ECalabashDevelop Develop = ECalabashDevelop.None)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckCalabashDevelopRewardCondition.EndICheckCalabashDevelopRewardCondition(builder);
 		}
 
-		// Token: 0x0601D5EA RID: 120298 RVA: 0x00423F24 File Offset: 0x00422124
+		// Token: 0x0601F00F RID: 126991 RVA: 0x004543D8 File Offset: 0x004525D8
 		public static void StartICheckCalabashDevelopRewardCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601D5EB RID: 120299 RVA: 0x00423F2D File Offset: 0x0042212D
+		// Token: 0x0601F010 RID: 126992 RVA: 0x004543E1 File Offset: 0x004525E1
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601D5EC RID: 120300 RVA: 0x00423F38 File Offset: 0x00422138
+		// Token: 0x0601F011 RID: 126993 RVA: 0x004543EC File Offset: 0x004525EC
 		public static void AddMonsterId(FlatBufferBuilder builder, int monsterId)
 		{
 			builder.AddInt(1, monsterId, 0);
 		}
 
-		// Token: 0x0601D5ED RID: 120301 RVA: 0x00423F43 File Offset: 0x00422143
+		// Token: 0x0601F012 RID: 126994 RVA: 0x004543F7 File Offset: 0x004525F7
 		public static void AddDevelop(FlatBufferBuilder builder, ECalabashDevelop develop)
 		{
 			builder.AddByte(2, (byte)develop, 0);
 		}
 
-		// Token: 0x0601D5EE RID: 120302 RVA: 0x00423F4E File Offset: 0x0042214E
+		// Token: 0x0601F013 RID: 126995 RVA: 0x00454402 File Offset: 0x00452602
 		public static Offset<ICheckCalabashDevelopRewardCondition> EndICheckCalabashDevelopRewardCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckCalabashDevelopRewardCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601D5EF RID: 120303 RVA: 0x00423F5C File Offset: 0x0042215C
+		// Token: 0x0601F014 RID: 126996 RVA: 0x00454410 File Offset: 0x00452610
 		public ICheckCalabashDevelopRewardConditionT UnPack()
 		{
 			ICheckCalabashDevelopRewardConditionT checkCalabashDevelopRewardConditionT = new ICheckCalabashDevelopRewardConditionT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkCalabashDevelopRewardConditionT;
 		}
 
-		// Token: 0x0601D5F0 RID: 120304 RVA: 0x00423F77 File Offset: 0x00422177
+		// Token: 0x0601F015 RID: 126997 RVA: 0x0045442B File Offset: 0x0045262B
 		public void UnPackTo(ICheckCalabashDevelopRewardConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.Develop = this.Develop;
 		}
 
-		// Token: 0x0601D5F1 RID: 120305 RVA: 0x00423FA0 File Offset: 0x004221A0
+		// Token: 0x0601F016 RID: 126998 RVA: 0x00454454 File Offset: 0x00452654
 		public static Offset<ICheckCalabashDevelopRewardCondition> Pack(FlatBufferBuilder builder, ICheckCalabashDevelopRewardConditionT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckCalabashDevelopRewardCondition.CreateICheckCalabashDevelopRewardCondition(builder, _o.Type, _o.MonsterId, _o.Develop);
 		}
 
-		// Token: 0x0400D1A1 RID: 53665
+		// Token: 0x0400DC69 RID: 56425
 		private Table __p;
 	}
 }

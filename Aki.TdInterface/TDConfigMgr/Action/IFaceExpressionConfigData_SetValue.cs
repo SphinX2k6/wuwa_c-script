@@ -3,21 +3,20 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A38 RID: 6712
+	// Token: 0x02001BCD RID: 7117
 	public class IFaceExpressionConfigData_SetValue
 	{
-		// Token: 0x040058DA RID: 22746
+		// Token: 0x04005D3F RID: 23871
 		public int Id;
 
-		// Token: 0x040058DB RID: 22747
-		[Nullable(1)]
+		// Token: 0x04005D40 RID: 23872
 		public IFaceExpressionConfig FaceExpression;
 
-		// Token: 0x040058DC RID: 22748
+		// Token: 0x04005D41 RID: 23873
 		[Nullable(2)]
 		public IFaceExpressionConfig MaleVariant;
 
-		// Token: 0x040058DD RID: 22749
+		// Token: 0x04005D42 RID: 23874
 		public bool? CloseAutoBlink;
 	}
 }

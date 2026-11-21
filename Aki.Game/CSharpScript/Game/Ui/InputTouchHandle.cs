@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004696 RID: 18070
+	// Token: 0x020035C7 RID: 13767
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,24 +12,24 @@ namespace CSharpScript.Game.Ui
 	})]
 	public class InputTouchHandle : InputDistributeHandle<InputDistributeDefine.ITouchData>
 	{
-		// Token: 0x0602E9BA RID: 190906 RVA: 0x00ACAAD1 File Offset: 0x00AC8CD1
+		// Token: 0x06023106 RID: 143622 RVA: 0x009F93A7 File Offset: 0x009F75A7
 		public InputTouchHandle(string inputDistributeTag, string name) : base(inputDistributeTag, name)
 		{
 		}
 
-		// Token: 0x0602E9BB RID: 190907 RVA: 0x00ACAADB File Offset: 0x00AC8CDB
+		// Token: 0x06023107 RID: 143623 RVA: 0x009F93B1 File Offset: 0x009F75B1
 		public void BindTouch(TInputHandle<InputDistributeDefine.ITouchData> touchBeginCallback)
 		{
 			base.Bind(touchBeginCallback);
 		}
 
-		// Token: 0x0602E9BC RID: 190908 RVA: 0x00ACAAE4 File Offset: 0x00AC8CE4
+		// Token: 0x06023108 RID: 143624 RVA: 0x009F93BA File Offset: 0x009F75BA
 		public void UnBindTouch(TInputHandle<InputDistributeDefine.ITouchData> touchBeginCallback)
 		{
 			base.UnBind(touchBeginCallback);
 		}
 
-		// Token: 0x0602E9BD RID: 190909 RVA: 0x00ACAAED File Offset: 0x00AC8CED
+		// Token: 0x06023109 RID: 143625 RVA: 0x009F93C3 File Offset: 0x009F75C3
 		public void InputTouch(InputDistributeDefine.ITouchData touchData)
 		{
 			base.Call(touchData);

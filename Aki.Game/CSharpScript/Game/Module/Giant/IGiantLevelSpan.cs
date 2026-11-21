@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x02005962 RID: 22882
+	// Token: 0x0200493B RID: 18747
 	public interface IGiantLevelSpan
 	{
-		// Token: 0x17008B24 RID: 35620
-		// (get) Token: 0x0603A10D RID: 237837
-		// (set) Token: 0x0603A10E RID: 237838
+		// Token: 0x17005EF1 RID: 24305
+		// (get) Token: 0x0602F031 RID: 192561
+		// (set) Token: 0x0602F032 RID: 192562
 		double Start { get; set; }
 
-		// Token: 0x17008B25 RID: 35621
-		// (get) Token: 0x0603A10F RID: 237839
-		// (set) Token: 0x0603A110 RID: 237840
+		// Token: 0x17005EF2 RID: 24306
+		// (get) Token: 0x0602F033 RID: 192563
+		// (set) Token: 0x0602F034 RID: 192564
 		double Span { get; set; }
 	}
 }

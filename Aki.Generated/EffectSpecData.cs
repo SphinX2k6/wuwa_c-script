@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C23 RID: 3107
+	// Token: 0x02000D06 RID: 3334
 	public struct EffectSpecData : IFlatbufferObject
 	{
-		// Token: 0x17000E96 RID: 3734
-		// (get) Token: 0x060067AC RID: 26540 RVA: 0x002203D5 File Offset: 0x0021E5D5
+		// Token: 0x17000EEA RID: 3818
+		// (get) Token: 0x06006D9F RID: 28063 RVA: 0x0023F795 File Offset: 0x0023D995
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060067AD RID: 26541 RVA: 0x002203E2 File Offset: 0x0021E5E2
+		// Token: 0x06006DA0 RID: 28064 RVA: 0x0023F7A2 File Offset: 0x0023D9A2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060067AE RID: 26542 RVA: 0x002203EC File Offset: 0x0021E5EC
+		// Token: 0x06006DA1 RID: 28065 RVA: 0x0023F7AC File Offset: 0x0023D9AC
 		public static EffectSpecData GetRootAsEffectSpecData(ByteBuffer _bb)
 		{
 			return EffectSpecData.GetRootAsEffectSpecData(_bb, default(EffectSpecData));
 		}
 
-		// Token: 0x060067AF RID: 26543 RVA: 0x00220408 File Offset: 0x0021E608
+		// Token: 0x06006DA2 RID: 28066 RVA: 0x0023F7C8 File Offset: 0x0023D9C8
 		public static EffectSpecData GetRootAsEffectSpecData(ByteBuffer _bb, EffectSpecData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060067B0 RID: 26544 RVA: 0x00220425 File Offset: 0x0021E625
+		// Token: 0x06006DA3 RID: 28067 RVA: 0x0023F7E5 File Offset: 0x0023D9E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060067B1 RID: 26545 RVA: 0x00220434 File Offset: 0x0021E634
+		// Token: 0x06006DA4 RID: 28068 RVA: 0x0023F7F4 File Offset: 0x0023D9F4
 		public EffectSpecData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000E97 RID: 3735
-		// (get) Token: 0x060067B2 RID: 26546 RVA: 0x00220444 File Offset: 0x0021E644
+		// Token: 0x17000EEB RID: 3819
+		// (get) Token: 0x06006DA5 RID: 28069 RVA: 0x0023F804 File Offset: 0x0023DA04
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000E98 RID: 3736
-		// (get) Token: 0x060067B3 RID: 26547 RVA: 0x00220480 File Offset: 0x0021E680
+		// Token: 0x17000EEC RID: 3820
+		// (get) Token: 0x06006DA6 RID: 28070 RVA: 0x0023F840 File Offset: 0x0023DA40
 		public int SpecType
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000E99 RID: 3737
-		// (get) Token: 0x060067B4 RID: 26548 RVA: 0x002204BC File Offset: 0x0021E6BC
+		// Token: 0x17000EED RID: 3821
+		// (get) Token: 0x06006DA7 RID: 28071 RVA: 0x0023F87C File Offset: 0x0023DA7C
 		public int EffectRegularType
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000E9A RID: 3738
-		// (get) Token: 0x060067B5 RID: 26549 RVA: 0x002204F8 File Offset: 0x0021E6F8
+		// Token: 0x17000EEE RID: 3822
+		// (get) Token: 0x06006DA8 RID: 28072 RVA: 0x0023F8B8 File Offset: 0x0023DAB8
 		public int LifeTime
 		{
 			get
@@ -109,7 +109,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060067B6 RID: 26550 RVA: 0x00220538 File Offset: 0x0021E738
+		// Token: 0x06006DA9 RID: 28073 RVA: 0x0023F8F8 File Offset: 0x0023DAF8
 		public int Children(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -120,8 +120,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000E9B RID: 3739
-		// (get) Token: 0x060067B7 RID: 26551 RVA: 0x00220578 File Offset: 0x0021E778
+		// Token: 0x17000EEF RID: 3823
+		// (get) Token: 0x06006DAA RID: 28074 RVA: 0x0023F938 File Offset: 0x0023DB38
 		public int ChildrenLength
 		{
 			get
@@ -135,37 +135,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060067B8 RID: 26552 RVA: 0x002205A4 File Offset: 0x0021E7A4
+		// Token: 0x06006DAB RID: 28075 RVA: 0x0023F964 File Offset: 0x0023DB64
 		public Span<int> GetChildrenBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x060067B9 RID: 26553 RVA: 0x002205B4 File Offset: 0x0021E7B4
+		// Token: 0x06006DAC RID: 28076 RVA: 0x0023F974 File Offset: 0x0023DB74
 		public int[] GetChildrenArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060067BA RID: 26554 RVA: 0x002205CC File Offset: 0x0021E7CC
+		// Token: 0x06006DAD RID: 28077 RVA: 0x0023F98C File Offset: 0x0023DB8C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ChildrenIter()或GetChildrenBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Children()
+		public int[] Children()
 		{
-			EffectSpecData effectSpecData = this;
-			return effectSpecData.GetChildrenArray() ?? Array.Empty<int>();
+			return this.GetChildrenArray();
 		}
 
-		// Token: 0x060067BB RID: 26555 RVA: 0x002205F0 File Offset: 0x0021E7F0
+		// Token: 0x06006DAE RID: 28078 RVA: 0x0023F994 File Offset: 0x0023DB94
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ChildrenIter()
+		public IEnumerable<int> ChildrenIter()
 		{
 			EffectSpecData.<ChildrenIter>d__22 <ChildrenIter>d__ = new EffectSpecData.<ChildrenIter>d__22(-2);
 			<ChildrenIter>d__.<>3__<>4__this = this;
 			return <ChildrenIter>d__;
 		}
 
-		// Token: 0x04004C63 RID: 19555
+		// Token: 0x04005246 RID: 21062
 		private Table __p;
 	}
 }

@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053A8 RID: 21416
+	// Token: 0x0200438B RID: 17291
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Morale
 	})]
 	public class MoraleBuffAddItem : GridProxyAbstract<IMoraleBuffAddItemData>
 	{
-		// Token: 0x06036B9B RID: 224155 RVA: 0x00CF39A4 File Offset: 0x00CF1BA4
+		// Token: 0x0602BAE1 RID: 178913 RVA: 0x00C42A4C File Offset: 0x00C40C4C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,13 +26,13 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036B9C RID: 224156 RVA: 0x00CF39FE File Offset: 0x00CF1BFE
+		// Token: 0x0602BAE2 RID: 178914 RVA: 0x00C42AA6 File Offset: 0x00C40CA6
 		public override void Refresh(IMoraleBuffAddItemData data, bool isSelected, int gridIndex)
 		{
 			this.Refresh(data);
 		}
 
-		// Token: 0x06036B9D RID: 224157 RVA: 0x00CF3A08 File Offset: 0x00CF1C08
+		// Token: 0x0602BAE3 RID: 178915 RVA: 0x00C42AB0 File Offset: 0x00C40CB0
 		public void Refresh(IMoraleBuffAddItemData data)
 		{
 			this.ItemData = data;
@@ -51,20 +51,20 @@ namespace CSharpScript.Game.Module.Morale
 			text2.SetText(data.Value, true);
 		}
 
-		// Token: 0x0401CE56 RID: 118358
+		// Token: 0x040178EE RID: 96494
 		public IMoraleBuffAddItemData ItemData;
 
-		// Token: 0x0200B638 RID: 46648
+		// Token: 0x0200A070 RID: 41072
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x0403732D RID: 226093
+			// Token: 0x04031D82 RID: 204162
 			public const int TextureIcon = 0;
 
-			// Token: 0x0403732E RID: 226094
+			// Token: 0x04031D83 RID: 204163
 			public const int TxtName = 1;
 
-			// Token: 0x0403732F RID: 226095
+			// Token: 0x04031D84 RID: 204164
 			public const int TxtValue = 2;
 		}
 	}

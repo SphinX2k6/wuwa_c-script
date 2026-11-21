@@ -3,10 +3,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067C6 RID: 26566
+	// Token: 0x02005716 RID: 22294
 	public class DangoBrawlViewManager
 	{
-		// Token: 0x0604228E RID: 270990 RVA: 0x0100B0CC File Offset: 0x010092CC
+		// Token: 0x06036DE4 RID: 224740 RVA: 0x00F4C4B0 File Offset: 0x00F4A6B0
 		public static bool TryBlockIfHolding(int? uid = null)
 		{
 			DangoBrawlTouchController touchController = DangoBrawlModel.Instance.GetTouchController();
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return true;
 		}
 
-		// Token: 0x0604228F RID: 270991 RVA: 0x0100B139 File Offset: 0x01009339
+		// Token: 0x06036DE5 RID: 224741 RVA: 0x00F4C51D File Offset: 0x00F4A71D
 		public static bool TryBlockIfThreeChoose(bool showTips = true)
 		{
 			if (!ActivityDangoBrawlController.Instance.IsThreeChooseBlocking())
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return true;
 		}
 
-		// Token: 0x06042290 RID: 270992 RVA: 0x0100B164 File Offset: 0x01009364
+		// Token: 0x06036DE6 RID: 224742 RVA: 0x00F4C548 File Offset: 0x00F4A748
 		public static bool TryBlockIfLayerMode(bool showTips = true)
 		{
 			DangoBrawlTouchController touchController = DangoBrawlModel.Instance.GetTouchController();
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return true;
 		}
 
-		// Token: 0x06042291 RID: 270993 RVA: 0x0100B1A4 File Offset: 0x010093A4
+		// Token: 0x06036DE7 RID: 224743 RVA: 0x00F4C588 File Offset: 0x00F4A788
 		public static bool TryBlockIfCombineUniqueWeapon(DangoBrawlCombineRowData data, bool showTips = true)
 		{
 			ActivityDangoBrawlData myActivityData = ActivityDangoBrawlController.Instance.MyActivityData;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return flag;
 		}
 
-		// Token: 0x06042292 RID: 270994 RVA: 0x0100B1E4 File Offset: 0x010093E4
+		// Token: 0x06036DE8 RID: 224744 RVA: 0x00F4C5C8 File Offset: 0x00F4A7C8
 		public static bool TryBlockIfOverWeight(bool showTips = true)
 		{
 			ActivityDangoBrawlData myActivityData = ActivityDangoBrawlController.Instance.MyActivityData;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return flag;
 		}
 
-		// Token: 0x06042293 RID: 270995 RVA: 0x0100B24C File Offset: 0x0100944C
+		// Token: 0x06036DE9 RID: 224745 RVA: 0x00F4C630 File Offset: 0x00F4A830
 		public static bool TryBlockIfNoEnoughtCoin(int price, bool showTips = true)
 		{
 			ActivityDangoBrawlData myActivityData = ActivityDangoBrawlController.Instance.MyActivityData;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return flag;
 		}
 
-		// Token: 0x06042294 RID: 270996 RVA: 0x0100B28F File Offset: 0x0100948F
+		// Token: 0x06036DEA RID: 224746 RVA: 0x00F4C673 File Offset: 0x00F4A873
 		public static bool TryBlockHoverEffect()
 		{
 			DangoBrawlTouchController touchController = DangoBrawlModel.Instance.GetTouchController();

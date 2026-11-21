@@ -6,7 +6,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Sequence.Struct
 {
-	// Token: 0x02003E98 RID: 16024
+	// Token: 0x02003172 RID: 12658
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -14,93 +14,86 @@ namespace AkiClient.Game.Aki.Data.Sequence.Struct
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 17)]
 	public class SpineThingsInfo : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06028833 RID: 165939 RVA: 0x009AE217 File Offset: 0x009AC417
+		// Token: 0x0601F3A1 RID: 127905 RVA: 0x009290CA File Offset: 0x009272CA
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SpineThingsInfo._ScriptStructPtr != 0) ? SpineThingsInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Sequence/Struct/SpineThingsInfo.SpineThingsInfo", ref SpineThingsInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17005E42 RID: 24130
-		// (get) Token: 0x06028834 RID: 165940 RVA: 0x009AE23B File Offset: 0x009AC43B
-		// (set) Token: 0x06028835 RID: 165941 RVA: 0x009AE24F File Offset: 0x009AC44F
+		// Token: 0x1700382E RID: 14382
+		// (get) Token: 0x0601F3A2 RID: 127906 RVA: 0x009290EE File Offset: 0x009272EE
+		// (set) Token: 0x0601F3A3 RID: 127907 RVA: 0x00929102 File Offset: 0x00927302
 		public unsafe string Name
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SpineThingsInfo.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SpineThingsInfo.__PropertyOffset_Name)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SpineThingsInfo.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SpineThingsInfo.__PropertyOffset_Name)), value);
 			}
 		}
 
-		// Token: 0x17005E43 RID: 24131
-		// (get) Token: 0x06028836 RID: 165942 RVA: 0x009AE264 File Offset: 0x009AC464
-		// (set) Token: 0x06028837 RID: 165943 RVA: 0x009AE274 File Offset: 0x009AC474
+		// Token: 0x1700382F RID: 14383
+		// (get) Token: 0x0601F3A4 RID: 127908 RVA: 0x00929117 File Offset: 0x00927317
+		// (set) Token: 0x0601F3A5 RID: 127909 RVA: 0x00929127 File Offset: 0x00927327
 		public unsafe bool NeedLoop
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SpineThingsInfo.__PropertyOffset_1) != 0;
+				return *(base.NativePtr + (IntPtr)SpineThingsInfo.__PropertyOffset_NeedLoop) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SpineThingsInfo.__PropertyOffset_1) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SpineThingsInfo.__PropertyOffset_NeedLoop) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x06028838 RID: 165944 RVA: 0x009AE285 File Offset: 0x009AC485
+		// Token: 0x0601F3A6 RID: 127910 RVA: 0x00929138 File Offset: 0x00927338
 		public SpineThingsInfo()
 		{
 		}
 
-		// Token: 0x06028839 RID: 165945 RVA: 0x009AE28D File Offset: 0x009AC48D
-		public SpineThingsInfo(string Name, bool NeedLoop)
-		{
-			this.Name = Name;
-			this.NeedLoop = NeedLoop;
-		}
-
-		// Token: 0x0602883A RID: 165946 RVA: 0x009AE2A3 File Offset: 0x009AC4A3
+		// Token: 0x0601F3A7 RID: 127911 RVA: 0x00929140 File Offset: 0x00927340
 		protected override IntPtr GetUStructPtr()
 		{
 			return SpineThingsInfo.StaticStruct();
 		}
 
-		// Token: 0x0602883B RID: 165947 RVA: 0x009AE2AF File Offset: 0x009AC4AF
+		// Token: 0x0601F3A8 RID: 127912 RVA: 0x0092914C File Offset: 0x0092734C
 		[NullableContext(2)]
 		public SpineThingsInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602883C RID: 165948 RVA: 0x009AE2B9 File Offset: 0x009AC4B9
+		// Token: 0x0601F3A9 RID: 127913 RVA: 0x00929156 File Offset: 0x00927356
 		public SpineThingsInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602883D RID: 165949 RVA: 0x009AE2C4 File Offset: 0x009AC4C4
+		// Token: 0x0601F3AA RID: 127914 RVA: 0x00929161 File Offset: 0x00927361
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SpineThingsInfo(Pointer, false, true);
 		}
 
-		// Token: 0x0602883E RID: 165950 RVA: 0x009AE2CE File Offset: 0x009AC4CE
+		// Token: 0x0601F3AB RID: 127915 RVA: 0x0092916B File Offset: 0x0092736B
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SpineThingsInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014AA3 RID: 84643
+		// Token: 0x04010B33 RID: 68403
 		public const string __ObjectPath = "/Game/Aki/Data/Sequence/Struct/SpineThingsInfo.SpineThingsInfo";
 
-		// Token: 0x04014AA4 RID: 84644
+		// Token: 0x04010B34 RID: 68404
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014AA5 RID: 84645
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010B35 RID: 68405
+		internal static int __PropertyOffset_Name;
 
-		// Token: 0x04014AA6 RID: 84646
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010B36 RID: 68406
+		internal static int __PropertyOffset_NeedLoop;
 	}
 }

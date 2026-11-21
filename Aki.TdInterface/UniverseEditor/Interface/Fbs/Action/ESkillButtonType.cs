@@ -2,34 +2,34 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006003 RID: 24579
+	// Token: 0x02006661 RID: 26209
 	public enum ESkillButtonType : ushort
 	{
-		// Token: 0x0401000E RID: 65550
+		// Token: 0x04010DEE RID: 69102
 		None,
-		// Token: 0x0401000F RID: 65551
+		// Token: 0x04010DEF RID: 69103
 		Member_0,
-		// Token: 0x04010010 RID: 65552
+		// Token: 0x04010DF0 RID: 69104
 		Member_1,
-		// Token: 0x04010011 RID: 65553
+		// Token: 0x04010DF1 RID: 69105
 		Member_2 = 4,
-		// Token: 0x04010012 RID: 65554
+		// Token: 0x04010DF2 RID: 69106
 		Member_3,
-		// Token: 0x04010013 RID: 65555
+		// Token: 0x04010DF3 RID: 69107
 		Member_4,
-		// Token: 0x04010014 RID: 65556
+		// Token: 0x04010DF4 RID: 69108
 		Member_5,
-		// Token: 0x04010015 RID: 65557
+		// Token: 0x04010DF5 RID: 69109
 		Member_6,
-		// Token: 0x04010016 RID: 65558
+		// Token: 0x04010DF6 RID: 69110
 		Member_7,
-		// Token: 0x04010017 RID: 65559
+		// Token: 0x04010DF7 RID: 69111
 		Member_8,
-		// Token: 0x04010018 RID: 65560
+		// Token: 0x04010DF8 RID: 69112
 		Member_9,
-		// Token: 0x04010019 RID: 65561
+		// Token: 0x04010DF9 RID: 69113
 		Member_10,
-		// Token: 0x0401001A RID: 65562
+		// Token: 0x04010DFA RID: 69114
 		Member_11 = 1001
 	}
 }

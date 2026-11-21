@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Item
 {
-	// Token: 0x02005823 RID: 22563
+	// Token: 0x020047FA RID: 18426
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoleDescribeComponent : UiPanelBase
 	{
-		// Token: 0x06039536 RID: 234806 RVA: 0x00D98AB0 File Offset: 0x00D96CB0
+		// Token: 0x0602E44A RID: 189514 RVA: 0x00CE793C File Offset: 0x00CE5B3C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039537 RID: 234807 RVA: 0x00D98BA0 File Offset: 0x00D96DA0
+		// Token: 0x0602E44B RID: 189515 RVA: 0x00CE7A2C File Offset: 0x00CE5C2C
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayerInstance = new LevelSequencePlayer(this.RootItem);
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Item
 			base.GetItem(1).SetUIActive(false);
 		}
 
-		// Token: 0x06039538 RID: 234808 RVA: 0x00D98C20 File Offset: 0x00D96E20
+		// Token: 0x0602E44C RID: 189516 RVA: 0x00CE7AAC File Offset: 0x00CE5CAC
 		public void Update(int roleId)
 		{
 			this.RoleId = roleId;
@@ -72,19 +72,19 @@ namespace CSharpScript.Game.Module.Item
 			this.UpdateQuality(roleInfoById.Value.QualityId);
 		}
 
-		// Token: 0x06039539 RID: 234809 RVA: 0x00D98CF1 File Offset: 0x00D96EF1
+		// Token: 0x0602E44D RID: 189517 RVA: 0x00CE7B7D File Offset: 0x00CE5D7D
 		private void UpdateQuality(int quality)
 		{
 			this.StarLayout.RebuildLayout(quality);
 		}
 
-		// Token: 0x0401DFB8 RID: 122808
+		// Token: 0x04018A4F RID: 100943
 		private int RoleId;
 
-		// Token: 0x0401DFB9 RID: 122809
+		// Token: 0x04018A50 RID: 100944
 		private LevelSequencePlayer LevelSequencePlayerInstance;
 
-		// Token: 0x0401DFBA RID: 122810
+		// Token: 0x04018A51 RID: 100945
 		private SimpleGenericLayout StarLayout;
 	}
 }

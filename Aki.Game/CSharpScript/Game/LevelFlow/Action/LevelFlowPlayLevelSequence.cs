@@ -4,10 +4,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F92 RID: 28562
+	// Token: 0x02006113 RID: 24851
 	public class LevelFlowPlayLevelSequence : LevelFlowActionBase
 	{
-		// Token: 0x0604573D RID: 284477 RVA: 0x01139D6A File Offset: 0x01137F6A
+		// Token: 0x0603B8EB RID: 243947 RVA: 0x010E3B6E File Offset: 0x010E1D6E
 		[NullableContext(1)]
 		public LevelFlowPlayLevelSequence Init(PlayLevelSequence params_)
 		{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x0604573E RID: 284478 RVA: 0x01139D74 File Offset: 0x01137F74
+		// Token: 0x0603B8EC RID: 243948 RVA: 0x010E3B78 File Offset: 0x010E1D78
 		protected override void OnExecute()
 		{
 			if (this.Params == null)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x0604573F RID: 284479 RVA: 0x01139E08 File Offset: 0x01138008
+		// Token: 0x0603B8ED RID: 243949 RVA: 0x010E3C0C File Offset: 0x010E1E0C
 		protected unsafe override void LogExecuteInfo()
 		{
 			global::Log instance = global::Log.Instance;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x040243CF RID: 148431
+		// Token: 0x0401F684 RID: 128644
 		[Nullable(2)]
 		private PlayLevelSequence Params;
 	}

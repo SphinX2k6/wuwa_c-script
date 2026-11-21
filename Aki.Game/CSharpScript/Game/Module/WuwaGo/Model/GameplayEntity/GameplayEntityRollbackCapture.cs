@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 {
-	// Token: 0x02004745 RID: 18245
+	// Token: 0x02003676 RID: 13942
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,13 +12,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 	})]
 	public class GameplayEntityRollbackCapture<[Nullable(0)] TEntity> : ActorWorldRollbackCapture<TEntity> where TEntity : WuWaGoGameplayEntityBase
 	{
-		// Token: 0x0602FAE8 RID: 195304 RVA: 0x00B0CC74 File Offset: 0x00B0AE74
+		// Token: 0x060242B2 RID: 148146 RVA: 0x00A3CC40 File Offset: 0x00A3AE40
 		public GameplayEntityRollbackCapture(TEntity entity) : base(entity)
 		{
 		}
 
-		// Token: 0x17007728 RID: 30504
-		// (get) Token: 0x0602FAE9 RID: 195305 RVA: 0x00B0CC9F File Offset: 0x00B0AE9F
+		// Token: 0x170049E4 RID: 18916
+		// (get) Token: 0x060242B3 RID: 148147 RVA: 0x00A3CC6B File Offset: 0x00A3AE6B
 		protected TEntity Entity
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 			}
 		}
 
-		// Token: 0x0602FAEA RID: 195306 RVA: 0x00B0CCA7 File Offset: 0x00B0AEA7
+		// Token: 0x060242B4 RID: 148148 RVA: 0x00A3CC73 File Offset: 0x00A3AE73
 		public override void Restore()
 		{
 			this.Entity.SetStateSilently(this.State);
@@ -35,10 +35,10 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 			base.RestoreActorWorldTransform();
 		}
 
-		// Token: 0x04019BE2 RID: 105442
+		// Token: 0x04014292 RID: 82578
 		private readonly EGameplayEntityState State = entity.State;
 
-		// Token: 0x04019BE3 RID: 105443
+		// Token: 0x04014293 RID: 82579
 		private readonly int StandGridId = entity.StandGridId;
 	}
 }

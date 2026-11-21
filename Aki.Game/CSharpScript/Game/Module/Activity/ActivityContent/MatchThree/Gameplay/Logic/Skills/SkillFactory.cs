@@ -4,10 +4,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic.Skills
 {
-	// Token: 0x02006505 RID: 25861
+	// Token: 0x02005483 RID: 21635
 	public static class SkillFactory
 	{
-		// Token: 0x06040E9A RID: 265882 RVA: 0x00FBB4AC File Offset: 0x00FB96AC
+		// Token: 0x06035B5E RID: 219998 RVA: 0x00F024DC File Offset: 0x00F006DC
 		[NullableContext(2)]
 		public static ISkill Create(in MatchThreeSkill cfg)
 		{

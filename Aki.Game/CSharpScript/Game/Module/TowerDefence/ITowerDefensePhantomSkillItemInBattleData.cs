@@ -4,23 +4,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B2F RID: 19247
+	// Token: 0x02003AD7 RID: 15063
 	[NullableContext(1)]
 	public interface ITowerDefensePhantomSkillItemInBattleData
 	{
-		// Token: 0x17007B65 RID: 31589
-		// (get) Token: 0x06031D85 RID: 204165
-		// (set) Token: 0x06031D86 RID: 204166
+		// Token: 0x17004F12 RID: 20242
+		// (get) Token: 0x06026B15 RID: 158485
+		// (set) Token: 0x06026B16 RID: 158486
 		string Skill { get; set; }
 
-		// Token: 0x17007B66 RID: 31590
-		// (get) Token: 0x06031D87 RID: 204167
-		// (set) Token: 0x06031D88 RID: 204168
+		// Token: 0x17004F13 RID: 20243
+		// (get) Token: 0x06026B17 RID: 158487
+		// (set) Token: 0x06026B18 RID: 158488
 		string Description { get; set; }
 
-		// Token: 0x17007B67 RID: 31591
-		// (get) Token: 0x06031D89 RID: 204169
-		// (set) Token: 0x06031D8A RID: 204170
+		// Token: 0x17004F14 RID: 20244
+		// (get) Token: 0x06026B19 RID: 158489
+		// (set) Token: 0x06026B1A RID: 158490
 		[Nullable(new byte[]
 		{
 			2,
@@ -36,14 +36,14 @@ namespace CSharpScript.Game.Module.TowerDefence
 			1
 		})] set; }
 
-		// Token: 0x17007B68 RID: 31592
-		// (get) Token: 0x06031D8B RID: 204171
-		// (set) Token: 0x06031D8C RID: 204172
+		// Token: 0x17004F15 RID: 20245
+		// (get) Token: 0x06026B1B RID: 158491
+		// (set) Token: 0x06026B1C RID: 158492
 		bool IsUnlock { get; set; }
 
-		// Token: 0x17007B69 RID: 31593
-		// (get) Token: 0x06031D8D RID: 204173
-		// (set) Token: 0x06031D8E RID: 204174
+		// Token: 0x17004F16 RID: 20246
+		// (get) Token: 0x06026B1D RID: 158493
+		// (set) Token: 0x06026B1E RID: 158494
 		bool IsCurrent { get; set; }
 	}
 }

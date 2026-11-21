@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063F5 RID: 25589
+	// Token: 0x02006A75 RID: 27253
 	public class IClientSetSeasonStateConfig_UnionUnion
 	{
-		// Token: 0x1700BE91 RID: 48785
-		// (get) Token: 0x0602C447 RID: 181319 RVA: 0x0061369D File Offset: 0x0061189D
-		// (set) Token: 0x0602C448 RID: 181320 RVA: 0x006136A5 File Offset: 0x006118A5
+		// Token: 0x1700C82B RID: 51243
+		// (get) Token: 0x0602EC1D RID: 191517 RVA: 0x0065F529 File Offset: 0x0065D729
+		// (set) Token: 0x0602EC1E RID: 191518 RVA: 0x0065F531 File Offset: 0x0065D731
 		public IClientSetSeasonStateConfig_Union Type { get; set; }
 
-		// Token: 0x1700BE92 RID: 48786
-		// (get) Token: 0x0602C449 RID: 181321 RVA: 0x006136AE File Offset: 0x006118AE
-		// (set) Token: 0x0602C44A RID: 181322 RVA: 0x006136B6 File Offset: 0x006118B6
+		// Token: 0x1700C82C RID: 51244
+		// (get) Token: 0x0602EC1F RID: 191519 RVA: 0x0065F53A File Offset: 0x0065D73A
+		// (set) Token: 0x0602EC20 RID: 191520 RVA: 0x0065F542 File Offset: 0x0065D742
 		public object Value { get; set; }
 
-		// Token: 0x0602C44B RID: 181323 RVA: 0x006136BF File Offset: 0x006118BF
+		// Token: 0x0602EC21 RID: 191521 RVA: 0x0065F54B File Offset: 0x0065D74B
 		public IClientSetSeasonStateConfig_UnionUnion()
 		{
 			this.Type = IClientSetSeasonStateConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602C44C RID: 181324 RVA: 0x006136D5 File Offset: 0x006118D5
+		// Token: 0x0602EC22 RID: 191522 RVA: 0x0065F561 File Offset: 0x0065D761
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602C44D RID: 181325 RVA: 0x006136E7 File Offset: 0x006118E7
+		// Token: 0x0602EC23 RID: 191523 RVA: 0x0065F573 File Offset: 0x0065D773
 		public IClientSetSeasonStateConfigT AsIClientSetSeasonStateConfig()
 		{
 			return this.As<IClientSetSeasonStateConfigT>();
 		}
 
-		// Token: 0x0602C44E RID: 181326 RVA: 0x006136EF File Offset: 0x006118EF
+		// Token: 0x0602EC24 RID: 191524 RVA: 0x0065F57B File Offset: 0x0065D77B
 		public static IClientSetSeasonStateConfig_UnionUnion FromIClientSetSeasonStateConfig(IClientSetSeasonStateConfigT _iclientsetseasonstateconfig)
 		{
 			return new IClientSetSeasonStateConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C44F RID: 181327 RVA: 0x00613704 File Offset: 0x00611904
+		// Token: 0x0602EC25 RID: 191525 RVA: 0x0065F590 File Offset: 0x0065D790
 		public ISwitchSeasonT AsISwitchSeason()
 		{
 			return this.As<ISwitchSeasonT>();
 		}
 
-		// Token: 0x0602C450 RID: 181328 RVA: 0x0061370C File Offset: 0x0061190C
+		// Token: 0x0602EC26 RID: 191526 RVA: 0x0065F598 File Offset: 0x0065D798
 		public static IClientSetSeasonStateConfig_UnionUnion FromISwitchSeason(ISwitchSeasonT _iswitchseason)
 		{
 			return new IClientSetSeasonStateConfig_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C451 RID: 181329 RVA: 0x00613721 File Offset: 0x00611921
+		// Token: 0x0602EC27 RID: 191527 RVA: 0x0065F5AD File Offset: 0x0065D7AD
 		public ILoopSeasonChangeT AsILoopSeasonChange()
 		{
 			return this.As<ILoopSeasonChangeT>();
 		}
 
-		// Token: 0x0602C452 RID: 181330 RVA: 0x00613729 File Offset: 0x00611929
+		// Token: 0x0602EC28 RID: 191528 RVA: 0x0065F5B5 File Offset: 0x0065D7B5
 		public static IClientSetSeasonStateConfig_UnionUnion FromILoopSeasonChange(ILoopSeasonChangeT _iloopseasonchange)
 		{
 			return new IClientSetSeasonStateConfig_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C453 RID: 181331 RVA: 0x00613740 File Offset: 0x00611940
+		// Token: 0x0602EC29 RID: 191529 RVA: 0x0065F5CC File Offset: 0x0065D7CC
 		public static int Pack(FlatBufferBuilder builder, IClientSetSeasonStateConfig_UnionUnion _o)
 		{
 			switch (_o.Type)

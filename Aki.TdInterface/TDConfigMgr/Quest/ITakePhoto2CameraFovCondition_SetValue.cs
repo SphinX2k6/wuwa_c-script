@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001169 RID: 4457
+	// Token: 0x0200129B RID: 4763
 	public class ITakePhoto2CameraFovCondition_SetValue
 	{
-		// Token: 0x04003CA9 RID: 15529
+		// Token: 0x04004000 RID: 16384
 		public int MinFov;
 
-		// Token: 0x04003CAA RID: 15530
+		// Token: 0x04004001 RID: 16385
 		public int MaxFov;
 	}
 }

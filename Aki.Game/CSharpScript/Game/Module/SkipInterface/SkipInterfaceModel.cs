@@ -6,20 +6,20 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.SkipInterface
 {
-	// Token: 0x02004BA2 RID: 19362
+	// Token: 0x02003B4C RID: 15180
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class SkipInterfaceModel : ModelBase
 	{
-		// Token: 0x060322AD RID: 205485 RVA: 0x00BA7DFC File Offset: 0x00BA5FFC
+		// Token: 0x0602703D RID: 159805 RVA: 0x00AEBF48 File Offset: 0x00AEA148
 		protected override bool OnInit()
 		{
 			this.ResetToBattleViewCount = ConfigCommonParamById.GetIntConfig("ResetToBattleViewCount").GetValueOrDefault();
 			return true;
 		}
 
-		// Token: 0x060322AE RID: 205486 RVA: 0x00BA7E24 File Offset: 0x00BA6024
+		// Token: 0x0602703E RID: 159806 RVA: 0x00AEBF70 File Offset: 0x00AEA170
 		public bool CheckAccessPathCondition(int id)
 		{
 			bool flag = true;
@@ -38,8 +38,8 @@ namespace CSharpScript.Game.Module.SkipInterface
 			return flag && this.IsAccessPathInOpenTime(id);
 		}
 
-		// Token: 0x060322AF RID: 205487 RVA: 0x00BA7EA0 File Offset: 0x00BA60A0
-		public void FullUpdateAccessPathTimeServerConfig(AccessPathConfig[] configs)
+		// Token: 0x0602703F RID: 159807 RVA: 0x00AEBFEC File Offset: 0x00AEA1EC
+		public void FullUpdateAccessPathTimeServerConfig(IReadOnlyList<AccessPathConfig> configs)
 		{
 			this.AccessPathTimeServerConfigMap.Clear();
 			foreach (AccessPathConfig accessPathConfig in configs)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.SkipInterface
 			}
 		}
 
-		// Token: 0x060322B0 RID: 205488 RVA: 0x00BA7EE0 File Offset: 0x00BA60E0
+		// Token: 0x06027040 RID: 159808 RVA: 0x00AEC04C File Offset: 0x00AEA24C
 		public bool IsAccessPathInOpenTime(int id)
 		{
 			AccessPathConfig accessPathConfig;
@@ -62,8 +62,8 @@ namespace CSharpScript.Game.Module.SkipInterface
 			return true;
 		}
 
-		// Token: 0x17007C4D RID: 31821
-		// (get) Token: 0x060322B1 RID: 205489 RVA: 0x00BA7F25 File Offset: 0x00BA6125
+		// Token: 0x17004FF7 RID: 20471
+		// (get) Token: 0x06027041 RID: 159809 RVA: 0x00AEC091 File Offset: 0x00AEA291
 		public static SkipInterfaceModel Instance
 		{
 			get
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.SkipInterface
 			}
 		}
 
-		// Token: 0x060322B2 RID: 205490 RVA: 0x00BA7F2C File Offset: 0x00BA612C
+		// Token: 0x06027042 RID: 159810 RVA: 0x00AEC098 File Offset: 0x00AEA298
 		public static SkipInterfaceModel GetOrCreateInstance()
 		{
 			if (SkipInterfaceModel._Instance == null)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.SkipInterface
 			return SkipInterfaceModel._Instance;
 		}
 
-		// Token: 0x060322B3 RID: 205491 RVA: 0x00BA7F40 File Offset: 0x00BA6140
+		// Token: 0x06027043 RID: 159811 RVA: 0x00AEC0AC File Offset: 0x00AEA2AC
 		public static bool CreateInstance()
 		{
 			if (SkipInterfaceModel._Instance != null)
@@ -93,36 +93,36 @@ namespace CSharpScript.Game.Module.SkipInterface
 			return true;
 		}
 
-		// Token: 0x060322B4 RID: 205492 RVA: 0x00BA7F56 File Offset: 0x00BA6156
+		// Token: 0x06027044 RID: 159812 RVA: 0x00AEC0C2 File Offset: 0x00AEA2C2
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060322B5 RID: 205493 RVA: 0x00BA7F58 File Offset: 0x00BA6158
+		// Token: 0x06027045 RID: 159813 RVA: 0x00AEC0C4 File Offset: 0x00AEA2C4
 		public static void ResetStaticDefaultValue()
 		{
 			SkipInterfaceModel._Instance = null;
 		}
 
-		// Token: 0x060322B6 RID: 205494 RVA: 0x00BA7F60 File Offset: 0x00BA6160
+		// Token: 0x06027046 RID: 159814 RVA: 0x00AEC0CC File Offset: 0x00AEA2CC
 		static SkipInterfaceModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SkipInterfaceModel.CreateStaticDefaultValue), new Action(SkipInterfaceModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AB7C RID: 109436
+		// Token: 0x040154D0 RID: 87248
 		public int ResetToBattleViewCount;
 
-		// Token: 0x0401AB7D RID: 109437
+		// Token: 0x040154D1 RID: 87249
 		public int ContainerLimitCount = 3;
 
-		// Token: 0x0401AB7E RID: 109438
+		// Token: 0x040154D2 RID: 87250
 		private readonly SkipConditionContext SkipConditionContext = new SkipConditionContext();
 
-		// Token: 0x0401AB7F RID: 109439
+		// Token: 0x040154D3 RID: 87251
 		private readonly Dictionary<int, AccessPathConfig> AccessPathTimeServerConfigMap = new Dictionary<int, AccessPathConfig>();
 
-		// Token: 0x0401AB80 RID: 109440
+		// Token: 0x040154D4 RID: 87252
 		[Nullable(2)]
 		private static SkipInterfaceModel _Instance;
 	}

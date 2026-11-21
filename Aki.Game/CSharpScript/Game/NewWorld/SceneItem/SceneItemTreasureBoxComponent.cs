@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007160 RID: 29024
+	// Token: 0x02006214 RID: 25108
 	public class SceneItemTreasureBoxComponent : EntityComponent
 	{
-		// Token: 0x06046D9C RID: 290204 RVA: 0x011DDC68 File Offset: 0x011DBE68
+		// Token: 0x0603C5E2 RID: 247266 RVA: 0x0113987C File Offset: 0x01137A7C
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046D9D RID: 290205 RVA: 0x011DDCC8 File Offset: 0x011DBEC8
+		// Token: 0x0603C5E3 RID: 247267 RVA: 0x011398DC File Offset: 0x01137ADC
 		protected unsafe override bool OnStart()
 		{
 			CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046D9E RID: 290206 RVA: 0x011DDD98 File Offset: 0x011DBF98
+		// Token: 0x0603C5E4 RID: 247268 RVA: 0x011399AC File Offset: 0x01137BAC
 		protected override void OnActivate()
 		{
 			if (EventSystem.Instance.HasWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange)))
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046D9F RID: 290207 RVA: 0x011DDEB4 File Offset: 0x011DC0B4
+		// Token: 0x0603C5E5 RID: 247269 RVA: 0x01139AC8 File Offset: 0x01137CC8
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange));
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046DA0 RID: 290208 RVA: 0x011DDF38 File Offset: 0x011DC138
+		// Token: 0x0603C5E6 RID: 247270 RVA: 0x01139B4C File Offset: 0x01137D4C
 		private void UpdatePhantomBoxPerform()
 		{
 			SceneItemStateComponent sceneItemStateComponent = base.Entity.CheckGetComponent<SceneItemStateComponent>();
@@ -140,13 +140,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DA1 RID: 290209 RVA: 0x011DE0C7 File Offset: 0x011DC2C7
+		// Token: 0x0603C5E7 RID: 247271 RVA: 0x01139CDB File Offset: 0x01137EDB
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			this.HandleUpdateState();
 		}
 
-		// Token: 0x06046DA2 RID: 290210 RVA: 0x011DE0CF File Offset: 0x011DC2CF
+		// Token: 0x0603C5E8 RID: 247272 RVA: 0x01139CE3 File Offset: 0x01137EE3
 		private void HandleUpdateState()
 		{
 			this.UpdatePhantomBoxPerform();
@@ -156,19 +156,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DA3 RID: 290211 RVA: 0x011DE0F0 File Offset: 0x011DC2F0
+		// Token: 0x0603C5E9 RID: 247273 RVA: 0x01139D04 File Offset: 0x01137F04
 		private void HandlePreUpdateState(int stateId)
 		{
 			this.UpdatePhantomBoxPerform();
 		}
 
-		// Token: 0x06046DA4 RID: 290212 RVA: 0x011DE0F8 File Offset: 0x011DC2F8
+		// Token: 0x0603C5EA RID: 247274 RVA: 0x01139D0C File Offset: 0x01137F0C
 		private void HandleLockPropChange(bool lockValue)
 		{
 			this.UpdatePhantomBoxPerform();
 		}
 
-		// Token: 0x06046DA5 RID: 290213 RVA: 0x011DE100 File Offset: 0x011DC300
+		// Token: 0x0603C5EB RID: 247275 RVA: 0x01139D14 File Offset: 0x01137F14
 		private void DeathProcess()
 		{
 			int? id = PlayerInfoModel.Instance.GetId();
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			LevelGamePlayController.Instance.GetRewardTreasureBoxRequest(base.Entity.Id);
 		}
 
-		// Token: 0x06046DA6 RID: 290214 RVA: 0x011DE168 File Offset: 0x011DC368
+		// Token: 0x0603C5EC RID: 247276 RVA: 0x01139D7C File Offset: 0x01137F7C
 		public void CloseAllCollisions()
 		{
 			SceneItemActorComponent component = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DA7 RID: 290215 RVA: 0x011DE1C0 File Offset: 0x011DC3C0
+		// Token: 0x0603C5ED RID: 247277 RVA: 0x01139DD4 File Offset: 0x01137FD4
 		[NullableContext(1)]
 		private static void CloseCollisionsByParentActor(AActor parentActor)
 		{
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DA8 RID: 290216 RVA: 0x011DE238 File Offset: 0x011DC438
+		// Token: 0x0603C5EE RID: 247278 RVA: 0x01139E4C File Offset: 0x0113804C
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -233,38 +233,59 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemTreasureBoxComponent sceneItemTreasureBoxComponent = (SceneItemTreasureBoxComponent)componentTemplate;
-			if (base.CanResetComponentProperty("EntityOnlineType"))
-			{
-				this.EntityOnlineType = sceneItemTreasureBoxComponent.EntityOnlineType;
-			}
-			if (base.CanResetComponentProperty("TreasureBoxType"))
-			{
-				this.TreasureBoxType = sceneItemTreasureBoxComponent.TreasureBoxType;
-			}
-			if (base.CanResetComponentProperty("CurPhantomPerformTag"))
-			{
-				this.CurPhantomPerformTag = sceneItemTreasureBoxComponent.CurPhantomPerformTag;
-			}
+			this.EntityOnlineType = sceneItemTreasureBoxComponent.EntityOnlineType;
+			this.TreasureBoxType = sceneItemTreasureBoxComponent.TreasureBoxType;
+			this.CurPhantomPerformTag = sceneItemTreasureBoxComponent.CurPhantomPerformTag;
 			return true;
 		}
 
-		// Token: 0x040252FE RID: 152318
+		// Token: 0x170071F8 RID: 29176
+		// (get) Token: 0x0603C5EF RID: 247279 RVA: 0x01139E90 File Offset: 0x01138090
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071F9 RID: 29177
+		// (get) Token: 0x0603C5F0 RID: 247280 RVA: 0x01139E93 File Offset: 0x01138093
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071FA RID: 29178
+		// (get) Token: 0x0603C5F1 RID: 247281 RVA: 0x01139E96 File Offset: 0x01138096
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FF65 RID: 130917
 		private EOnlineInteractType? EntityOnlineType;
 
-		// Token: 0x040252FF RID: 152319
+		// Token: 0x0401FF66 RID: 130918
 		private SceneItemTreasureBoxComponent.ETreasureBoxType? TreasureBoxType;
 
-		// Token: 0x04025300 RID: 152320
+		// Token: 0x0401FF67 RID: 130919
 		private int? CurPhantomPerformTag;
 
-		// Token: 0x0200CEA5 RID: 52901
+		// Token: 0x0200BA3B RID: 47675
 		private enum ETreasureBoxType
 		{
-			// Token: 0x0403E2F3 RID: 254707
+			// Token: 0x04039619 RID: 235033
 			Common = 1,
-			// Token: 0x0403E2F4 RID: 254708
+			// Token: 0x0403961A RID: 235034
 			Phantom,
-			// Token: 0x0403E2F5 RID: 254709
+			// Token: 0x0403961B RID: 235035
 			LevelPlayRefresh
 		}
 	}

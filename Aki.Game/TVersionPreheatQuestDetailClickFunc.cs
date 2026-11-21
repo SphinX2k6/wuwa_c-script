@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x02001559 RID: 5465
-// (Invoke) Token: 0x06009CD3 RID: 40147
+// Token: 0x02000A11 RID: 2577
+// (Invoke) Token: 0x060070B1 RID: 28849
 public delegate void TVersionPreheatQuestDetailClickFunc(int passData);

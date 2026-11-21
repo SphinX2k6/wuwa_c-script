@@ -5,13 +5,13 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002AF7 RID: 10999
+// Token: 0x02002073 RID: 8307
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueGainData
 {
-	// Token: 0x17001E8D RID: 7821
-	// (get) Token: 0x06016E0F RID: 93711 RVA: 0x005CDA30 File Offset: 0x005CBC30
+	// Token: 0x17001EE5 RID: 7909
+	// (get) Token: 0x06014840 RID: 84032 RVA: 0x005FA5B0 File Offset: 0x005F87B0
 	public int WeaponUiMaxShowCount
 	{
 		get
@@ -20,13 +20,13 @@ public class SurvivorsRogueGainData
 		}
 	}
 
-	// Token: 0x06016E10 RID: 93712 RVA: 0x005CDA4F File Offset: 0x005CBC4F
+	// Token: 0x06014841 RID: 84033 RVA: 0x005FA5CF File Offset: 0x005F87CF
 	public static SurvivorsRogueGainData Create()
 	{
 		return new SurvivorsRogueGainData();
 	}
 
-	// Token: 0x06016E11 RID: 93713 RVA: 0x005CDA58 File Offset: 0x005CBC58
+	// Token: 0x06014842 RID: 84034 RVA: 0x005FA5D8 File Offset: 0x005F87D8
 	public void InitGain(IList<Aki.Protocol.SurvivorsGainData> dataList, int weaponMaxCount, IList<int> weaponUnlockWaves)
 	{
 		this.Clear();
@@ -42,7 +42,7 @@ public class SurvivorsRogueGainData
 		}
 	}
 
-	// Token: 0x06016E12 RID: 93714 RVA: 0x005CDABE File Offset: 0x005CBCBE
+	// Token: 0x06014843 RID: 84035 RVA: 0x005FA63E File Offset: 0x005F883E
 	public void Clear()
 	{
 		this.RoleGainMap.Clear();
@@ -53,7 +53,7 @@ public class SurvivorsRogueGainData
 		this.WeaponUnlockWaves.Clear();
 	}
 
-	// Token: 0x06016E13 RID: 93715 RVA: 0x005CDB00 File Offset: 0x005CBD00
+	// Token: 0x06014844 RID: 84036 RVA: 0x005FA680 File Offset: 0x005F8880
 	public unsafe void AddGain(Aki.Protocol.SurvivorsGainData data)
 	{
 		switch (data.DataCase)
@@ -121,7 +121,7 @@ public class SurvivorsRogueGainData
 		}
 	}
 
-	// Token: 0x06016E14 RID: 93716 RVA: 0x005CDE0C File Offset: 0x005CC00C
+	// Token: 0x06014845 RID: 84037 RVA: 0x005FA98C File Offset: 0x005F8B8C
 	public void UpdateGain(Aki.Protocol.SurvivorsGainData data)
 	{
 		global::SurvivorsGainData survivorsGainData;
@@ -159,7 +159,7 @@ public class SurvivorsRogueGainData
 		}
 	}
 
-	// Token: 0x06016E15 RID: 93717 RVA: 0x005CDF2C File Offset: 0x005CC12C
+	// Token: 0x06014846 RID: 84038 RVA: 0x005FAAAC File Offset: 0x005F8CAC
 	public void RemoveGain(int incId)
 	{
 		if (!this.GainMap.ContainsKey(incId))
@@ -178,7 +178,7 @@ public class SurvivorsRogueGainData
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06016E16 RID: 93718 RVA: 0x005CDFAC File Offset: 0x005CC1AC
+	// Token: 0x06014847 RID: 84039 RVA: 0x005FAB2C File Offset: 0x005F8D2C
 	[NullableContext(2)]
 	public SurvivorsRoleGainData GetRoleGainData()
 	{
@@ -192,7 +192,7 @@ public class SurvivorsRogueGainData
 		return null;
 	}
 
-	// Token: 0x06016E17 RID: 93719 RVA: 0x005CE004 File Offset: 0x005CC204
+	// Token: 0x06014848 RID: 84040 RVA: 0x005FAB84 File Offset: 0x005F8D84
 	public List<SurvivorsItemGainData> GetItemGainList()
 	{
 		List<SurvivorsItemGainData> list = new List<SurvivorsItemGainData>();
@@ -203,7 +203,7 @@ public class SurvivorsRogueGainData
 		return list;
 	}
 
-	// Token: 0x06016E18 RID: 93720 RVA: 0x005CE064 File Offset: 0x005CC264
+	// Token: 0x06014849 RID: 84041 RVA: 0x005FABE4 File Offset: 0x005F8DE4
 	public List<SurvivorsWeaponGainData> GetWeaponGainList()
 	{
 		List<SurvivorsWeaponGainData> list = new List<SurvivorsWeaponGainData>();
@@ -214,7 +214,7 @@ public class SurvivorsRogueGainData
 		return list;
 	}
 
-	// Token: 0x06016E19 RID: 93721 RVA: 0x005CE0C4 File Offset: 0x005CC2C4
+	// Token: 0x0601484A RID: 84042 RVA: 0x005FAC44 File Offset: 0x005F8E44
 	[NullableContext(2)]
 	public SurvivorsWeaponGainData GetWeaponDataByWeaponId(int weaponId)
 	{
@@ -228,7 +228,7 @@ public class SurvivorsRogueGainData
 		return null;
 	}
 
-	// Token: 0x06016E1A RID: 93722 RVA: 0x005CE128 File Offset: 0x005CC328
+	// Token: 0x0601484B RID: 84043 RVA: 0x005FACA8 File Offset: 0x005F8EA8
 	public int GetWeaponBondOwnedWeaponId(int previewWeaponId)
 	{
 		Aki.Config.SurvivorsWeapon? survivorsWeapon = SurvivorsRogueConfig.Instance.GetSurvivorsWeapon(previewWeaponId);
@@ -254,7 +254,7 @@ public class SurvivorsRogueGainData
 		return 0;
 	}
 
-	// Token: 0x06016E1B RID: 93723 RVA: 0x005CE1F4 File Offset: 0x005CC3F4
+	// Token: 0x0601484C RID: 84044 RVA: 0x005FAD74 File Offset: 0x005F8F74
 	private static bool ContainsBindWeaponId(Aki.Config.SurvivorsWeapon config, int weaponId)
 	{
 		for (int i = 0; i < config.BindWeaponsIdLength; i++)
@@ -267,7 +267,7 @@ public class SurvivorsRogueGainData
 		return false;
 	}
 
-	// Token: 0x06016E1C RID: 93724 RVA: 0x005CE224 File Offset: 0x005CC424
+	// Token: 0x0601484D RID: 84045 RVA: 0x005FADA4 File Offset: 0x005F8FA4
 	public List<ISurvivorsWeaponWithBondInfo> GetWeaponGainListWithBondInfo([Nullable(new byte[]
 	{
 		2,
@@ -314,7 +314,7 @@ public class SurvivorsRogueGainData
 		return list;
 	}
 
-	// Token: 0x06016E1D RID: 93725 RVA: 0x005CE34C File Offset: 0x005CC54C
+	// Token: 0x0601484E RID: 84046 RVA: 0x005FAECC File Offset: 0x005F90CC
 	public List<ISurvivorsWeaponGridData> GetWeaponGridDataList([Nullable(new byte[]
 	{
 		2,
@@ -369,7 +369,7 @@ public class SurvivorsRogueGainData
 		return list;
 	}
 
-	// Token: 0x06016E1E RID: 93726 RVA: 0x005CE474 File Offset: 0x005CC674
+	// Token: 0x0601484F RID: 84047 RVA: 0x005FAFF4 File Offset: 0x005F91F4
 	public float GetRoleSpecialPropertyValue(int propertyId)
 	{
 		SurvivorsRoleGainData roleGainData = this.GetRoleGainData();
@@ -390,24 +390,24 @@ public class SurvivorsRogueGainData
 		return num;
 	}
 
-	// Token: 0x0400A9D7 RID: 43479
+	// Token: 0x0400ADDD RID: 44509
 	private const int PERMYRIAD_RATIO = 10000;
 
-	// Token: 0x0400A9D8 RID: 43480
+	// Token: 0x0400ADDE RID: 44510
 	private readonly Dictionary<int, global::SurvivorsGainData> GainMap = new Dictionary<int, global::SurvivorsGainData>();
 
-	// Token: 0x0400A9D9 RID: 43481
+	// Token: 0x0400ADDF RID: 44511
 	private readonly Dictionary<int, SurvivorsRoleGainData> RoleGainMap = new Dictionary<int, SurvivorsRoleGainData>();
 
-	// Token: 0x0400A9DA RID: 43482
+	// Token: 0x0400ADE0 RID: 44512
 	public readonly Dictionary<int, SurvivorsWeaponGainData> WeaponGainMap = new Dictionary<int, SurvivorsWeaponGainData>();
 
-	// Token: 0x0400A9DB RID: 43483
+	// Token: 0x0400ADE1 RID: 44513
 	private readonly Dictionary<int, SurvivorsItemGainData> ItemGainMap = new Dictionary<int, SurvivorsItemGainData>();
 
-	// Token: 0x0400A9DC RID: 43484
+	// Token: 0x0400ADE2 RID: 44514
 	public int WeaponMaxCount;
 
-	// Token: 0x0400A9DD RID: 43485
+	// Token: 0x0400ADE3 RID: 44515
 	public List<int> WeaponUnlockWaves = new List<int>();
 }

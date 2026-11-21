@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001107 RID: 4359
+// Token: 0x020005BB RID: 1467
 [NullableContext(1)]
 [Nullable(0)]
 public class ArtemisQteView : UiTickViewBase
 {
-	// Token: 0x060071AF RID: 29103 RVA: 0x001741CE File Offset: 0x001723CE
+	// Token: 0x06004545 RID: 17733 RVA: 0x0017CB8A File Offset: 0x0017AD8A
 	public ArtemisQteView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060071B0 RID: 29104 RVA: 0x001741D8 File Offset: 0x001723D8
+	// Token: 0x06004546 RID: 17734 RVA: 0x0017CB94 File Offset: 0x0017AD94
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class ArtemisQteView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x060071B1 RID: 29105 RVA: 0x00174258 File Offset: 0x00172458
+	// Token: 0x06004547 RID: 17735 RVA: 0x0017CC14 File Offset: 0x0017AE14
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ArtemisQteView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ public class ArtemisQteView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060071B2 RID: 29106 RVA: 0x0017429B File Offset: 0x0017249B
+	// Token: 0x06004548 RID: 17736 RVA: 0x0017CC57 File Offset: 0x0017AE57
 	protected override void OnBeforeShow()
 	{
 		this.PlayAnim(this.ViewSequencePlayer, "Start");
@@ -56,7 +56,7 @@ public class ArtemisQteView : UiTickViewBase
 		progressItem.PlayAnim("Start");
 	}
 
-	// Token: 0x060071B3 RID: 29107 RVA: 0x001742C4 File Offset: 0x001724C4
+	// Token: 0x06004549 RID: 17737 RVA: 0x0017CC80 File Offset: 0x0017AE80
 	protected override UniTask OnPlayingCloseSequenceAsync()
 	{
 		ArtemisQteView.<OnPlayingCloseSequenceAsync>d__14 <OnPlayingCloseSequenceAsync>d__;
@@ -67,19 +67,19 @@ public class ArtemisQteView : UiTickViewBase
 		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060071B4 RID: 29108 RVA: 0x00174307 File Offset: 0x00172507
+	// Token: 0x0600454A RID: 17738 RVA: 0x0017CCC3 File Offset: 0x0017AEC3
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnArtemisQteAreaChange, new Action<int>(this.OnFishingQteAreaChange));
 	}
 
-	// Token: 0x060071B5 RID: 29109 RVA: 0x00174325 File Offset: 0x00172525
+	// Token: 0x0600454B RID: 17739 RVA: 0x0017CCE1 File Offset: 0x0017AEE1
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnArtemisQteAreaChange, new Action<int>(this.OnFishingQteAreaChange));
 	}
 
-	// Token: 0x060071B6 RID: 29110 RVA: 0x00174343 File Offset: 0x00172543
+	// Token: 0x0600454C RID: 17740 RVA: 0x0017CCFF File Offset: 0x0017AEFF
 	protected override void OnStart()
 	{
 		this.Init();
@@ -96,7 +96,7 @@ public class ArtemisQteView : UiTickViewBase
 		tipsItem.SetActive(false);
 	}
 
-	// Token: 0x060071B7 RID: 29111 RVA: 0x0017436D File Offset: 0x0017256D
+	// Token: 0x0600454D RID: 17741 RVA: 0x0017CD29 File Offset: 0x0017AF29
 	private void Init()
 	{
 		this.GameInfo.SetGameStage(EArtemisQteStage.Ready);
@@ -104,7 +104,7 @@ public class ArtemisQteView : UiTickViewBase
 		this.SetGameStart();
 	}
 
-	// Token: 0x060071B8 RID: 29112 RVA: 0x00174391 File Offset: 0x00172591
+	// Token: 0x0600454E RID: 17742 RVA: 0x0017CD4D File Offset: 0x0017AF4D
 	protected override void OnBeforeDestroy()
 	{
 		Action finishCallback = this.FinishCallback;
@@ -120,7 +120,7 @@ public class ArtemisQteView : UiTickViewBase
 		this.ViewSequencePlayer = null;
 	}
 
-	// Token: 0x060071B9 RID: 29113 RVA: 0x001743BC File Offset: 0x001725BC
+	// Token: 0x0600454F RID: 17743 RVA: 0x0017CD78 File Offset: 0x0017AF78
 	protected override void OnTick(float delta)
 	{
 		ArtemisQteProgressItem progressItem = this.ProgressItem;
@@ -142,7 +142,7 @@ public class ArtemisQteView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060071BA RID: 29114 RVA: 0x00174444 File Offset: 0x00172644
+	// Token: 0x06004550 RID: 17744 RVA: 0x0017CE00 File Offset: 0x0017B000
 	private void EnterNextRound()
 	{
 		this.GameInfo.CurrentRound = Math.Min(this.GameInfo.CurrentRound + 1, this.GameInfo.MaxRound);
@@ -165,13 +165,13 @@ public class ArtemisQteView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060071BB RID: 29115 RVA: 0x0017450E File Offset: 0x0017270E
+	// Token: 0x06004551 RID: 17745 RVA: 0x0017CECA File Offset: 0x0017B0CA
 	private void OnFishingQteAreaChange(int areaRelativeIndex)
 	{
 		this.ProgressItem.OnArrowStayAreaUpdate(areaRelativeIndex);
 	}
 
-	// Token: 0x060071BC RID: 29116 RVA: 0x0017451C File Offset: 0x0017271C
+	// Token: 0x06004552 RID: 17746 RVA: 0x0017CED8 File Offset: 0x0017B0D8
 	private void OnClickFishButton()
 	{
 		if (this.GameInfo.IsGamePause())
@@ -195,13 +195,13 @@ public class ArtemisQteView : UiTickViewBase
 		this.OnAreaClick(EArtemisAreaType.BlankArea, null);
 	}
 
-	// Token: 0x060071BD RID: 29117 RVA: 0x00174586 File Offset: 0x00172786
+	// Token: 0x06004553 RID: 17747 RVA: 0x0017CF42 File Offset: 0x0017B142
 	private void SetGameStart()
 	{
 		this.GameInfo.SetGameStage(EArtemisQteStage.OnGoing);
 	}
 
-	// Token: 0x060071BE RID: 29118 RVA: 0x00174594 File Offset: 0x00172794
+	// Token: 0x06004554 RID: 17748 RVA: 0x0017CF50 File Offset: 0x0017B150
 	private void SetGameEnd()
 	{
 		base.CloseMe(null);
@@ -213,7 +213,7 @@ public class ArtemisQteView : UiTickViewBase
 		artemisQteViewParams.CallBack();
 	}
 
-	// Token: 0x060071BF RID: 29119 RVA: 0x001745B8 File Offset: 0x001727B8
+	// Token: 0x06004555 RID: 17749 RVA: 0x0017CF74 File Offset: 0x0017B174
 	[NullableContext(2)]
 	private void OnAreaClick(EArtemisAreaType areaType, ContinuousRingArea area)
 	{
@@ -283,7 +283,7 @@ public class ArtemisQteView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060071C0 RID: 29120 RVA: 0x00174718 File Offset: 0x00172918
+	// Token: 0x06004556 RID: 17750 RVA: 0x0017D0D4 File Offset: 0x0017B2D4
 	private void PlayAnim([Nullable(2)] LevelSequencePlayer player, string sequenceName)
 	{
 		if (player == null)
@@ -299,8 +299,8 @@ public class ArtemisQteView : UiTickViewBase
 		player.PlayLevelSequenceByName(sequenceName, false, null, false);
 	}
 
-	// Token: 0x17000996 RID: 2454
-	// (get) Token: 0x060071C1 RID: 29121 RVA: 0x00174759 File Offset: 0x00172959
+	// Token: 0x170009B6 RID: 2486
+	// (get) Token: 0x06004557 RID: 17751 RVA: 0x0017D115 File Offset: 0x0017B315
 	public int GetCurrentGameplayId
 	{
 		get
@@ -309,20 +309,20 @@ public class ArtemisQteView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060071C2 RID: 29122 RVA: 0x00174761 File Offset: 0x00172961
+	// Token: 0x06004558 RID: 17752 RVA: 0x0017D11D File Offset: 0x0017B31D
 	public bool GameplayStart(int configId, int maxRound)
 	{
 		this.CurrentGameplayId = configId;
 		return this.InitialGameInfo(maxRound);
 	}
 
-	// Token: 0x060071C3 RID: 29123 RVA: 0x00174771 File Offset: 0x00172971
+	// Token: 0x06004559 RID: 17753 RVA: 0x0017D12D File Offset: 0x0017B32D
 	public ArtemisQte? GetCurrentPlayConfig()
 	{
 		return ArtemisActivityConfig.Instance.GetArtemisQteConfigById(this.CurrentGameplayId);
 	}
 
-	// Token: 0x060071C4 RID: 29124 RVA: 0x00174784 File Offset: 0x00172984
+	// Token: 0x0600455A RID: 17754 RVA: 0x0017D140 File Offset: 0x0017B340
 	private bool InitialGameInfo(int maxRound)
 	{
 		if (this.GameInfo == null)
@@ -340,8 +340,8 @@ public class ArtemisQteView : UiTickViewBase
 		return true;
 	}
 
-	// Token: 0x17000997 RID: 2455
-	// (get) Token: 0x060071C5 RID: 29125 RVA: 0x00174828 File Offset: 0x00172A28
+	// Token: 0x170009B7 RID: 2487
+	// (get) Token: 0x0600455B RID: 17755 RVA: 0x0017D1E4 File Offset: 0x0017B3E4
 	public int ScoreUp
 	{
 		get
@@ -355,8 +355,8 @@ public class ArtemisQteView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x17000998 RID: 2456
-	// (get) Token: 0x060071C6 RID: 29126 RVA: 0x00174858 File Offset: 0x00172A58
+	// Token: 0x170009B8 RID: 2488
+	// (get) Token: 0x0600455C RID: 17756 RVA: 0x0017D214 File Offset: 0x0017B414
 	public int HitAreaScore
 	{
 		get
@@ -370,8 +370,8 @@ public class ArtemisQteView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x17000999 RID: 2457
-	// (get) Token: 0x060071C7 RID: 29127 RVA: 0x00174888 File Offset: 0x00172A88
+	// Token: 0x170009B9 RID: 2489
+	// (get) Token: 0x0600455D RID: 17757 RVA: 0x0017D244 File Offset: 0x0017B444
 	public int PerfectScore
 	{
 		get
@@ -385,9 +385,9 @@ public class ArtemisQteView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x1700099A RID: 2458
-	// (get) Token: 0x060071C8 RID: 29128 RVA: 0x001748B6 File Offset: 0x00172AB6
-	// (set) Token: 0x060071C9 RID: 29129 RVA: 0x001748BE File Offset: 0x00172ABE
+	// Token: 0x170009BA RID: 2490
+	// (get) Token: 0x0600455E RID: 17758 RVA: 0x0017D272 File Offset: 0x0017B472
+	// (set) Token: 0x0600455F RID: 17759 RVA: 0x0017D27A File Offset: 0x0017B47A
 	protected int AccumulatePerfectCombo
 	{
 		get
@@ -401,7 +401,7 @@ public class ArtemisQteView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060071CA RID: 29130 RVA: 0x001748D0 File Offset: 0x00172AD0
+	// Token: 0x06004560 RID: 17760 RVA: 0x0017D28C File Offset: 0x0017B48C
 	public void OnQteOn()
 	{
 		this.GameInfo.CurrentScore += this.HitAreaScore;
@@ -409,7 +409,7 @@ public class ArtemisQteView : UiTickViewBase
 		this.AccumulatePerfectCombo = accumulatePerfectCombo + 1;
 	}
 
-	// Token: 0x060071CB RID: 29131 RVA: 0x00174908 File Offset: 0x00172B08
+	// Token: 0x06004561 RID: 17761 RVA: 0x0017D2C4 File Offset: 0x0017B4C4
 	public void OnPerfectOn()
 	{
 		this.GameInfo.CurrentScore += this.PerfectScore;
@@ -417,7 +417,7 @@ public class ArtemisQteView : UiTickViewBase
 		this.AccumulatePerfectCombo = accumulatePerfectCombo + 1;
 	}
 
-	// Token: 0x060071CC RID: 29132 RVA: 0x00174940 File Offset: 0x00172B40
+	// Token: 0x06004562 RID: 17762 RVA: 0x0017D2FC File Offset: 0x0017B4FC
 	public void OnMissOn()
 	{
 		ArtemisQte? currentPlayConfig = this.GetCurrentPlayConfig();
@@ -425,7 +425,7 @@ public class ArtemisQteView : UiTickViewBase
 		this.AccumulatePerfectCombo = 0;
 	}
 
-	// Token: 0x060071CD RID: 29133 RVA: 0x00174988 File Offset: 0x00172B88
+	// Token: 0x06004563 RID: 17763 RVA: 0x0017D344 File Offset: 0x0017B544
 	private void RefreshAccumulatePerfectCombo()
 	{
 		int accumulatePerfectCombo = this.AccumulatePerfectCombo;
@@ -443,7 +443,7 @@ public class ArtemisQteView : UiTickViewBase
 		this.GameInfo.PerfectAppearRate = (float)ArtemisQteView.RefreshInfoByKey(accumulatePerfectCombo, keyValueMap3);
 	}
 
-	// Token: 0x060071CE RID: 29134 RVA: 0x00174A54 File Offset: 0x00172C54
+	// Token: 0x06004564 RID: 17764 RVA: 0x0017D410 File Offset: 0x0017B610
 	private static Dictionary<int, int> BuildDictFromConfigArray(int length, Func<int, DicIntInt?> getItem)
 	{
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -459,7 +459,7 @@ public class ArtemisQteView : UiTickViewBase
 		return dictionary;
 	}
 
-	// Token: 0x060071CF RID: 29135 RVA: 0x00174AA4 File Offset: 0x00172CA4
+	// Token: 0x06004565 RID: 17765 RVA: 0x0017D460 File Offset: 0x0017B660
 	private static int RefreshInfoByKey(int currentKey, Dictionary<int, int> keyValueMap)
 	{
 		List<ValueTuple<int, int>> list = new List<ValueTuple<int, int>>();
@@ -484,48 +484,48 @@ public class ArtemisQteView : UiTickViewBase
 		return 0;
 	}
 
-	// Token: 0x040034CC RID: 13516
+	// Token: 0x04003565 RID: 13669
 	private const int MAX_QTE_ROUNG = 1;
 
-	// Token: 0x040034CD RID: 13517
+	// Token: 0x04003566 RID: 13670
 	private const int GAME_END_TIME = 800;
 
-	// Token: 0x040034CE RID: 13518
+	// Token: 0x04003567 RID: 13671
 	protected ArtemisQteGameInfo GameInfo;
 
-	// Token: 0x040034CF RID: 13519
+	// Token: 0x04003568 RID: 13672
 	[Nullable(2)]
 	private ArtemisQteProgressItem ProgressItem;
 
-	// Token: 0x040034D0 RID: 13520
+	// Token: 0x04003569 RID: 13673
 	[Nullable(2)]
 	private readonly Action FinishCallback;
 
-	// Token: 0x040034D1 RID: 13521
+	// Token: 0x0400356A RID: 13674
 	[Nullable(2)]
 	private ArtemisQteClickTipsItem TipsItem;
 
-	// Token: 0x040034D2 RID: 13522
+	// Token: 0x0400356B RID: 13675
 	[Nullable(2)]
 	private LevelSequencePlayer ViewSequencePlayer;
 
-	// Token: 0x040034D3 RID: 13523
+	// Token: 0x0400356C RID: 13676
 	public int CurrentGameplayId;
 
-	// Token: 0x040034D4 RID: 13524
+	// Token: 0x0400356D RID: 13677
 	private int AccumulatePerfectComboInternal;
 
-	// Token: 0x020076C9 RID: 30409
+	// Token: 0x0200685D RID: 26717
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402733F RID: 160575
+		// Token: 0x04022688 RID: 140936
 		public const int CenterPanel = 0;
 
-		// Token: 0x04027340 RID: 160576
+		// Token: 0x04022689 RID: 140937
 		public const int BtnControl = 1;
 
-		// Token: 0x04027341 RID: 160577
+		// Token: 0x0402268A RID: 140938
 		public const int QteTipUiItem = 2;
 	}
 }

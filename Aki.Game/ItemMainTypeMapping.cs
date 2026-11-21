@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02001FFB RID: 8187
+// Token: 0x020014CE RID: 5326
 [NullableContext(1)]
 [Nullable(0)]
 public class ItemMainTypeMapping
 {
-	// Token: 0x060100AE RID: 65710 RVA: 0x003E9495 File Offset: 0x003E7695
+	// Token: 0x0600D516 RID: 54550 RVA: 0x003F5A8D File Offset: 0x003F3C8D
 	public ItemMainTypeMapping(InventoryDefine.EItemMainTypeId itemMainType)
 	{
 		this.MainType = itemMainType;
 	}
 
-	// Token: 0x060100AF RID: 65711 RVA: 0x003E94AF File Offset: 0x003E76AF
+	// Token: 0x0600D517 RID: 54551 RVA: 0x003F5AA7 File Offset: 0x003F3CA7
 	public void Add(ItemDataBase itemData)
 	{
 		this.ItemDataSet.Add(itemData);
 	}
 
-	// Token: 0x060100B0 RID: 65712 RVA: 0x003E94BE File Offset: 0x003E76BE
+	// Token: 0x0600D518 RID: 54552 RVA: 0x003F5AB6 File Offset: 0x003F3CB6
 	public void Remove(ItemDataBase itemData)
 	{
 		this.ItemDataSet.Remove(itemData);
 	}
 
-	// Token: 0x060100B1 RID: 65713 RVA: 0x003E94CD File Offset: 0x003E76CD
+	// Token: 0x0600D519 RID: 54553 RVA: 0x003F5AC5 File Offset: 0x003F3CC5
 	public HashSet<ItemDataBase> GetSet()
 	{
 		return this.ItemDataSet;
 	}
 
-	// Token: 0x060100B2 RID: 65714 RVA: 0x003E94D8 File Offset: 0x003E76D8
+	// Token: 0x0600D51A RID: 54554 RVA: 0x003F5AD0 File Offset: 0x003F3CD0
 	public bool HasRedDot()
 	{
 		using (HashSet<ItemDataBase>.Enumerator enumerator = this.ItemDataSet.GetEnumerator())
@@ -48,9 +48,9 @@ public class ItemMainTypeMapping
 		return false;
 	}
 
-	// Token: 0x040076BA RID: 30394
+	// Token: 0x040077A3 RID: 30627
 	public readonly InventoryDefine.EItemMainTypeId MainType;
 
-	// Token: 0x040076BB RID: 30395
+	// Token: 0x040077A4 RID: 30628
 	private readonly HashSet<ItemDataBase> ItemDataSet = new HashSet<ItemDataBase>();
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006985 RID: 27013
+	// Token: 0x02007038 RID: 28728
 	public class IInteractEffect_UnionUnion
 	{
-		// Token: 0x1700C856 RID: 51286
-		// (get) Token: 0x0602F2CE RID: 193230 RVA: 0x0066D1C0 File Offset: 0x0066B3C0
-		// (set) Token: 0x0602F2CF RID: 193231 RVA: 0x0066D1C8 File Offset: 0x0066B3C8
+		// Token: 0x1700D259 RID: 53849
+		// (get) Token: 0x06031C9E RID: 203934 RVA: 0x006BD6A8 File Offset: 0x006BB8A8
+		// (set) Token: 0x06031C9F RID: 203935 RVA: 0x006BD6B0 File Offset: 0x006BB8B0
 		public IInteractEffect_Union Type { get; set; }
 
-		// Token: 0x1700C857 RID: 51287
-		// (get) Token: 0x0602F2D0 RID: 193232 RVA: 0x0066D1D1 File Offset: 0x0066B3D1
-		// (set) Token: 0x0602F2D1 RID: 193233 RVA: 0x0066D1D9 File Offset: 0x0066B3D9
+		// Token: 0x1700D25A RID: 53850
+		// (get) Token: 0x06031CA0 RID: 203936 RVA: 0x006BD6B9 File Offset: 0x006BB8B9
+		// (set) Token: 0x06031CA1 RID: 203937 RVA: 0x006BD6C1 File Offset: 0x006BB8C1
 		public object Value { get; set; }
 
-		// Token: 0x0602F2D2 RID: 193234 RVA: 0x0066D1E2 File Offset: 0x0066B3E2
+		// Token: 0x06031CA2 RID: 203938 RVA: 0x006BD6CA File Offset: 0x006BB8CA
 		public IInteractEffect_UnionUnion()
 		{
 			this.Type = IInteractEffect_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602F2D3 RID: 193235 RVA: 0x0066D1F8 File Offset: 0x0066B3F8
+		// Token: 0x06031CA3 RID: 203939 RVA: 0x006BD6E0 File Offset: 0x006BB8E0
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602F2D4 RID: 193236 RVA: 0x0066D20A File Offset: 0x0066B40A
+		// Token: 0x06031CA4 RID: 203940 RVA: 0x006BD6F2 File Offset: 0x006BB8F2
 		public IInteractEffectT AsIInteractEffect()
 		{
 			return this.As<IInteractEffectT>();
 		}
 
-		// Token: 0x0602F2D5 RID: 193237 RVA: 0x0066D212 File Offset: 0x0066B412
+		// Token: 0x06031CA5 RID: 203941 RVA: 0x006BD6FA File Offset: 0x006BB8FA
 		public static IInteractEffect_UnionUnion FromIInteractEffect(IInteractEffectT _iinteracteffect)
 		{
 			return new IInteractEffect_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602F2D6 RID: 193238 RVA: 0x0066D227 File Offset: 0x0066B427
+		// Token: 0x06031CA6 RID: 203942 RVA: 0x006BD70F File Offset: 0x006BB90F
 		public IModifyTipTextT AsIModifyTipText()
 		{
 			return this.As<IModifyTipTextT>();
 		}
 
-		// Token: 0x0602F2D7 RID: 193239 RVA: 0x0066D22F File Offset: 0x0066B42F
+		// Token: 0x06031CA7 RID: 203943 RVA: 0x006BD717 File Offset: 0x006BB917
 		public static IInteractEffect_UnionUnion FromIModifyTipText(IModifyTipTextT _imodifytiptext)
 		{
 			return new IInteractEffect_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602F2D8 RID: 193240 RVA: 0x0066D244 File Offset: 0x0066B444
+		// Token: 0x06031CA8 RID: 203944 RVA: 0x006BD72C File Offset: 0x006BB92C
 		public IExecuteTagT AsIExecuteTag()
 		{
 			return this.As<IExecuteTagT>();
 		}
 
-		// Token: 0x0602F2D9 RID: 193241 RVA: 0x0066D24C File Offset: 0x0066B44C
+		// Token: 0x06031CA9 RID: 203945 RVA: 0x006BD734 File Offset: 0x006BB934
 		public static IInteractEffect_UnionUnion FromIExecuteTag(IExecuteTagT _iexecutetag)
 		{
 			return new IInteractEffect_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602F2DA RID: 193242 RVA: 0x0066D261 File Offset: 0x0066B461
+		// Token: 0x06031CAA RID: 203946 RVA: 0x006BD749 File Offset: 0x006BB949
 		public ITriggerDialoguesT AsITriggerDialogues()
 		{
 			return this.As<ITriggerDialoguesT>();
 		}
 
-		// Token: 0x0602F2DB RID: 193243 RVA: 0x0066D269 File Offset: 0x0066B469
+		// Token: 0x06031CAB RID: 203947 RVA: 0x006BD751 File Offset: 0x006BB951
 		public static IInteractEffect_UnionUnion FromITriggerDialogues(ITriggerDialoguesT _itriggerdialogues)
 		{
 			return new IInteractEffect_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602F2DC RID: 193244 RVA: 0x0066D27E File Offset: 0x0066B47E
+		// Token: 0x06031CAC RID: 203948 RVA: 0x006BD766 File Offset: 0x006BB966
 		public ITriggerVoiceDialoguesT AsITriggerVoiceDialogues()
 		{
 			return this.As<ITriggerVoiceDialoguesT>();
 		}
 
-		// Token: 0x0602F2DD RID: 193245 RVA: 0x0066D286 File Offset: 0x0066B486
+		// Token: 0x06031CAD RID: 203949 RVA: 0x006BD76E File Offset: 0x006BB96E
 		public static IInteractEffect_UnionUnion FromITriggerVoiceDialogues(ITriggerVoiceDialoguesT _itriggervoicedialogues)
 		{
 			return new IInteractEffect_UnionUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602F2DE RID: 193246 RVA: 0x0066D29C File Offset: 0x0066B49C
+		// Token: 0x06031CAE RID: 203950 RVA: 0x006BD784 File Offset: 0x006BB984
 		public static int Pack(FlatBufferBuilder builder, IInteractEffect_UnionUnion _o)
 		{
 			switch (_o.Type)

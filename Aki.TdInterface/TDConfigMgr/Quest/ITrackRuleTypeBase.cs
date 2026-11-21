@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011C8 RID: 4552
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001304 RID: 4868
 	public class ITrackRuleTypeBase
 	{
-		// Token: 0x06006778 RID: 26488 RVA: 0x000F7B48 File Offset: 0x000F5D48
+		// Token: 0x06006DB9 RID: 28089 RVA: 0x00105454 File Offset: 0x00103654
 		private ITrackRuleTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006779 RID: 26489 RVA: 0x000F7B80 File Offset: 0x000F5D80
+		// Token: 0x06006DBA RID: 28090 RVA: 0x0010548C File Offset: 0x0010368C
 		public static ITrackRuleTypeBase Create([Nullable(2)] ITrackRuleTypeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600677A RID: 26490 RVA: 0x000F7B93 File Offset: 0x000F5D93
+		// Token: 0x06006DBB RID: 28091 RVA: 0x0010549F File Offset: 0x0010369F
 		public static ITrackRuleTypeBase CreateFromSetValue([Nullable(2)] ITrackRuleTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600677B RID: 26491 RVA: 0x000F7BA6 File Offset: 0x000F5DA6
+		// Token: 0x06006DBC RID: 28092 RVA: 0x001054B2 File Offset: 0x001036B2
 		public ITrackRuleTypeBase_SetValue ToSetValue()
 		{
 			return new ITrackRuleTypeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002195 RID: 8597
-		// (get) Token: 0x0600677C RID: 26492 RVA: 0x000F7BB9 File Offset: 0x000F5DB9
-		// (set) Token: 0x0600677D RID: 26493 RVA: 0x000F7BE4 File Offset: 0x000F5DE4
+		// Token: 0x17002356 RID: 9046
+		// (get) Token: 0x06006DBD RID: 28093 RVA: 0x001054C5 File Offset: 0x001036C5
+		// (set) Token: 0x06006DBE RID: 28094 RVA: 0x001054F0 File Offset: 0x001036F0
 		public virtual ETrackRuleType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E1A RID: 15898
+		// Token: 0x04004188 RID: 16776
 		[Nullable(2)]
 		protected ITrackRuleTypeBase FbInstance;
 
-		// Token: 0x04003E1B RID: 15899
+		// Token: 0x04004189 RID: 16777
 		[Nullable(2)]
 		protected ITrackRuleTypeBase_SetValue PocoInterface;
 	}

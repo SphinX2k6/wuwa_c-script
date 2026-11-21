@@ -4,10 +4,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BC6 RID: 19398
+	// Token: 0x02003B70 RID: 15216
 	public class SkipToDetectionMaterial : SkipTask
 	{
-		// Token: 0x0603231B RID: 205595 RVA: 0x00BAA02C File Offset: 0x00BA822C
+		// Token: 0x060270AC RID: 159916 RVA: 0x00AEE2E4 File Offset: 0x00AEC4E4
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

@@ -13,18 +13,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.View
 {
-	// Token: 0x02005675 RID: 22133
+	// Token: 0x0200464B RID: 17995
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ComposeTipsView : UiPanelBase
 	{
-		// Token: 0x0603852F RID: 230703 RVA: 0x00D5D0D3 File Offset: 0x00D5B2D3
+		// Token: 0x0602D42C RID: 185388 RVA: 0x00CAB1D3 File Offset: 0x00CA93D3
 		public ComposeTipsView(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x06038530 RID: 230704 RVA: 0x00D5D0E8 File Offset: 0x00D5B2E8
+		// Token: 0x0602D42D RID: 185389 RVA: 0x00CAB1E8 File Offset: 0x00CA93E8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038531 RID: 230705 RVA: 0x00D5D38C File Offset: 0x00D5B58C
+		// Token: 0x0602D42E RID: 185390 RVA: 0x00CAB48C File Offset: 0x00CA968C
 		protected override void OnStart()
 		{
 			this.ConfirmButtonCompose = new ConfirmButtonCompose(base.GetItem(8));
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.MaterialHorizontal = new GenericLayoutNew<MaterialItem>(base.GetHorizontalLayout(18), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<MaterialItem>(this.InitMaterial), null);
 		}
 
-		// Token: 0x06038532 RID: 230706 RVA: 0x00D5D3E4 File Offset: 0x00D5B5E4
+		// Token: 0x0602D42F RID: 185391 RVA: 0x00CAB4E4 File Offset: 0x00CA96E4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -106,17 +106,17 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			};
 		}
 
-		// Token: 0x06038533 RID: 230707 RVA: 0x00D5D435 File Offset: 0x00D5B635
+		// Token: 0x0602D430 RID: 185392 RVA: 0x00CAB535 File Offset: 0x00CA9735
 		private void OnClicked(ISingleItemInfo itemData)
 		{
 			if (!itemData.Proto_IsUnlock)
 			{
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(itemData.Proto_ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(itemData.Proto_ItemId, true, null, false);
 		}
 
-		// Token: 0x06038534 RID: 230708 RVA: 0x00D5D452 File Offset: 0x00D5B652
+		// Token: 0x0602D431 RID: 185393 RVA: 0x00CAB553 File Offset: 0x00CA9753
 		protected override void OnBeforeDestroy()
 		{
 			if (this.MaterialHorizontal != null)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.OnDisableCallback = null;
 		}
 
-		// Token: 0x06038535 RID: 230709 RVA: 0x00D5D478 File Offset: 0x00D5B678
+		// Token: 0x0602D432 RID: 185394 RVA: 0x00CAB578 File Offset: 0x00CA9778
 		public void RefreshTips(IBaseItemData itemData)
 		{
 			this.ItemData = itemData;
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038536 RID: 230710 RVA: 0x00D5D4BC File Offset: 0x00D5B6BC
+		// Token: 0x0602D433 RID: 185395 RVA: 0x00CAB5BC File Offset: 0x00CA97BC
 		private void RefreshReagentProductionData()
 		{
 			IReagentProductionData reagentProductionData = (IReagentProductionData)this.ItemData;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038537 RID: 230711 RVA: 0x00D5D500 File Offset: 0x00D5B700
+		// Token: 0x0602D434 RID: 185396 RVA: 0x00CAB600 File Offset: 0x00CA9800
 		private void RefreshReagentProductionMenu(IReagentProductionData data)
 		{
 			SynthesisFormula value = ComposeConfig.Instance.GetSynthesisFormulaByFormulaItemId(data.ConfigId).Value;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.RefreshConfirmButton(textById2, true);
 		}
 
-		// Token: 0x06038538 RID: 230712 RVA: 0x00D5D5DC File Offset: 0x00D5B7DC
+		// Token: 0x0602D435 RID: 185397 RVA: 0x00CAB6DC File Offset: 0x00CA98DC
 		private void RefreshReagentProduction(IReagentProductionData data)
 		{
 			SynthesisFormula value = ComposeConfig.Instance.GetSynthesisFormulaById(data.ConfigId).Value;
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.SetMaterialList(data.ConfigId);
 		}
 
-		// Token: 0x06038539 RID: 230713 RVA: 0x00D5D710 File Offset: 0x00D5B910
+		// Token: 0x0602D436 RID: 185398 RVA: 0x00CAB810 File Offset: 0x00CA9A10
 		private void SetRefreshReagentProductionMenuHide()
 		{
 			base.GetText(3).SetUIActive(true);
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			base.GetText(16).SetUIActive(false);
 		}
 
-		// Token: 0x0603853A RID: 230714 RVA: 0x00D5D780 File Offset: 0x00D5B980
+		// Token: 0x0602D437 RID: 185399 RVA: 0x00CAB880 File Offset: 0x00CA9A80
 		private void SetRefreshReagentProductionHide()
 		{
 			base.GetText(3).SetUIActive(true);
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			base.GetText(16).SetUIActive(true);
 		}
 
-		// Token: 0x0603853B RID: 230715 RVA: 0x00D5D7F0 File Offset: 0x00D5B9F0
+		// Token: 0x0602D438 RID: 185400 RVA: 0x00CAB8F0 File Offset: 0x00CA9AF0
 		public void RefreshStructureData()
 		{
 			IStructureData structureData = (IStructureData)this.ItemData;
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x0603853C RID: 230716 RVA: 0x00D5D834 File Offset: 0x00D5BA34
+		// Token: 0x0602D439 RID: 185401 RVA: 0x00CAB934 File Offset: 0x00CA9B34
 		public void RefreshStructure(IStructureData data)
 		{
 			SynthesisFormula value = ComposeConfig.Instance.GetSynthesisFormulaById(data.ConfigId).Value;
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.SetMaterialList(data.ConfigId);
 		}
 
-		// Token: 0x0603853D RID: 230717 RVA: 0x00D5D948 File Offset: 0x00D5BB48
+		// Token: 0x0602D43A RID: 185402 RVA: 0x00CABA48 File Offset: 0x00CA9C48
 		public void RefreshStructureMenu(IStructureData data)
 		{
 			SynthesisFormula value = ComposeConfig.Instance.GetSynthesisFormulaByFormulaItemId(data.ConfigId).Value;
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.RefreshConfirmButton(textById2, true);
 		}
 
-		// Token: 0x0603853E RID: 230718 RVA: 0x00D5DA24 File Offset: 0x00D5BC24
+		// Token: 0x0602D43B RID: 185403 RVA: 0x00CABB24 File Offset: 0x00CA9D24
 		private void SetStructureHide()
 		{
 			base.GetText(3).SetUIActive(true);
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			base.GetText(16).SetUIActive(false);
 		}
 
-		// Token: 0x0603853F RID: 230719 RVA: 0x00D5DA94 File Offset: 0x00D5BC94
+		// Token: 0x0602D43C RID: 185404 RVA: 0x00CABB94 File Offset: 0x00CA9D94
 		private void SetStructureMenuHide()
 		{
 			base.GetText(3).SetUIActive(true);
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			base.GetText(16).SetUIActive(false);
 		}
 
-		// Token: 0x06038540 RID: 230720 RVA: 0x00D5DB04 File Offset: 0x00D5BD04
+		// Token: 0x0602D43D RID: 185405 RVA: 0x00CABC04 File Offset: 0x00CA9E04
 		public void RefreshPurificationData()
 		{
 			IPurificationData data = (IPurificationData)this.ItemData;
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.RefreshPurification(data);
 		}
 
-		// Token: 0x06038541 RID: 230721 RVA: 0x00D5DB2C File Offset: 0x00D5BD2C
+		// Token: 0x0602D43E RID: 185406 RVA: 0x00CABC2C File Offset: 0x00CA9E2C
 		public void RefreshPurification(IPurificationData data)
 		{
 			SynthesisFormula value = ComposeConfig.Instance.GetSynthesisFormulaById(data.ConfigId).Value;
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.SetMaterialList(data.ConfigId);
 		}
 
-		// Token: 0x06038542 RID: 230722 RVA: 0x00D5DC8C File Offset: 0x00D5BE8C
+		// Token: 0x0602D43F RID: 185407 RVA: 0x00CABD8C File Offset: 0x00CA9F8C
 		public void SetPurificationHide()
 		{
 			base.GetText(3).SetUIActive(true);
@@ -379,43 +379,43 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			base.GetText(16).SetUIActive(false);
 		}
 
-		// Token: 0x06038543 RID: 230723 RVA: 0x00D5DCF9 File Offset: 0x00D5BEF9
+		// Token: 0x0602D440 RID: 185408 RVA: 0x00CABDF9 File Offset: 0x00CA9FF9
 		private void SetNameText(string name)
 		{
 			base.GetText(0).SetText(name, true);
 		}
 
-		// Token: 0x06038544 RID: 230724 RVA: 0x00D5DD0C File Offset: 0x00D5BF0C
+		// Token: 0x0602D441 RID: 185409 RVA: 0x00CABE0C File Offset: 0x00CAA00C
 		private void SetIconTexture(string icon)
 		{
 			base.SetTextureByPath(icon, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x06038545 RID: 230725 RVA: 0x00D5DD31 File Offset: 0x00D5BF31
+		// Token: 0x0602D442 RID: 185410 RVA: 0x00CABE31 File Offset: 0x00CAA031
 		private void SetContentText(string text)
 		{
 			base.GetText(3).SetText(text, true);
 		}
 
-		// Token: 0x06038546 RID: 230726 RVA: 0x00D5DD41 File Offset: 0x00D5BF41
+		// Token: 0x0602D443 RID: 185411 RVA: 0x00CABE41 File Offset: 0x00CAA041
 		private void SetAttributeText(string text)
 		{
 			base.GetText(12).SetText(text, true);
 		}
 
-		// Token: 0x06038547 RID: 230727 RVA: 0x00D5DD52 File Offset: 0x00D5BF52
+		// Token: 0x0602D444 RID: 185412 RVA: 0x00CABE52 File Offset: 0x00CAA052
 		private void SetTypeNameText(string text)
 		{
 			base.GetText(15).SetText(text, true);
 		}
 
-		// Token: 0x06038548 RID: 230728 RVA: 0x00D5DD63 File Offset: 0x00D5BF63
+		// Token: 0x0602D445 RID: 185413 RVA: 0x00CABE63 File Offset: 0x00CAA063
 		private void SetHaveText(int have)
 		{
 			LguiUtil.Instance.SetLocalText(base.GetText(14), "Have", new <>z__ReadOnlySingleElementList<object>(have));
 		}
 
-		// Token: 0x06038549 RID: 230729 RVA: 0x00D5DD88 File Offset: 0x00D5BF88
+		// Token: 0x0602D446 RID: 185414 RVA: 0x00CABE88 File Offset: 0x00CAA088
 		private void SetProficiencyText(int composeCount, int single, int sum)
 		{
 			int num = single * sum;
@@ -441,26 +441,26 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}));
 		}
 
-		// Token: 0x0603854A RID: 230730 RVA: 0x00D5DE31 File Offset: 0x00D5C031
+		// Token: 0x0602D447 RID: 185415 RVA: 0x00CABF31 File Offset: 0x00CAA131
 		private void RefreshConfirmButton(string text, bool isEnable)
 		{
 			this.ConfirmButtonCompose.UpdateText(text);
 			this.ConfirmButtonCompose.RefreshButton(isEnable);
 		}
 
-		// Token: 0x0603854B RID: 230731 RVA: 0x00D5DE4B File Offset: 0x00D5C04B
+		// Token: 0x0602D448 RID: 185416 RVA: 0x00CABF4B File Offset: 0x00CAA14B
 		private void RefreshDisableButton(bool isEnable)
 		{
 			((AUIBaseActor)base.GetButton(23).GetOwner()).GetUIItem().SetUIActive(!isEnable);
 		}
 
-		// Token: 0x0603854C RID: 230732 RVA: 0x00D5DE70 File Offset: 0x00D5C070
+		// Token: 0x0602D449 RID: 185417 RVA: 0x00CABF70 File Offset: 0x00CAA170
 		private void SetMaterialList(int itemId)
 		{
 			this.MaterialHorizontal.RebuildLayoutByDataNew<ISingleItemInfo>(ComposeModel.Instance.GetComposeMaterialList(itemId), null);
 		}
 
-		// Token: 0x0603854D RID: 230733 RVA: 0x00D5DE9C File Offset: 0x00D5C09C
+		// Token: 0x0602D44A RID: 185418 RVA: 0x00CABF9C File Offset: 0x00CAA19C
 		private void OnClickConfirmButton()
 		{
 			switch (ComposeModel.Instance.CurrentComposeListType)
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x0603854E RID: 230734 RVA: 0x00D5DF99 File Offset: 0x00D5C199
+		// Token: 0x0602D44B RID: 185419 RVA: 0x00CAC099 File Offset: 0x00CAA299
 		private void OnDisable()
 		{
 			if (this.OnDisableCallback != null)
@@ -506,21 +506,21 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x0603854F RID: 230735 RVA: 0x00D5DFAE File Offset: 0x00D5C1AE
+		// Token: 0x0602D44C RID: 185420 RVA: 0x00CAC0AE File Offset: 0x00CAA2AE
 		public void BindOnDisable(Action onDisable)
 		{
 			this.OnDisableCallback = onDisable;
 		}
 
-		// Token: 0x0401D9AE RID: 121262
+		// Token: 0x04018439 RID: 99385
 		[Nullable(2)]
 		private IBaseItemData ItemData;
 
-		// Token: 0x0401D9AF RID: 121263
+		// Token: 0x0401843A RID: 99386
 		[Nullable(2)]
 		private ConfirmButtonCompose ConfirmButtonCompose;
 
-		// Token: 0x0401D9B0 RID: 121264
+		// Token: 0x0401843B RID: 99387
 		[Nullable(new byte[]
 		{
 			2,
@@ -528,63 +528,63 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		private GenericLayoutNew<MaterialItem> MaterialHorizontal;
 
-		// Token: 0x0401D9B1 RID: 121265
+		// Token: 0x0401843C RID: 99388
 		[Nullable(2)]
 		private Action OnDisableCallback;
 
-		// Token: 0x0200B83F RID: 47167
+		// Token: 0x0200A267 RID: 41575
 		[NullableContext(0)]
 		private class EComposeTipsDefine
 		{
-			// Token: 0x04037C41 RID: 228417
+			// Token: 0x0403265F RID: 206431
 			public const int NameText = 0;
 
-			// Token: 0x04037C42 RID: 228418
+			// Token: 0x04032660 RID: 206432
 			public const int IconTexture = 1;
 
-			// Token: 0x04037C43 RID: 228419
+			// Token: 0x04032661 RID: 206433
 			public const int ComposeCountText = 2;
 
-			// Token: 0x04037C44 RID: 228420
+			// Token: 0x04032662 RID: 206434
 			public const int ConTentText = 3;
 
-			// Token: 0x04037C45 RID: 228421
+			// Token: 0x04032663 RID: 206435
 			public const int TipsBtnItem = 6;
 
-			// Token: 0x04037C46 RID: 228422
+			// Token: 0x04032664 RID: 206436
 			public const int TipsConfirmButton = 8;
 
-			// Token: 0x04037C47 RID: 228423
+			// Token: 0x04032665 RID: 206437
 			public const int AttributeText = 12;
 
-			// Token: 0x04037C48 RID: 228424
+			// Token: 0x04032666 RID: 206438
 			public const int HaveText = 14;
 
-			// Token: 0x04037C49 RID: 228425
+			// Token: 0x04032667 RID: 206439
 			public const int TypeNameText = 15;
 
-			// Token: 0x04037C4A RID: 228426
+			// Token: 0x04032668 RID: 206440
 			public const int SumText = 16;
 
-			// Token: 0x04037C4B RID: 228427
+			// Token: 0x04032669 RID: 206441
 			public const int MaterialLayoutItem = 17;
 
-			// Token: 0x04037C4C RID: 228428
+			// Token: 0x0403266A RID: 206442
 			public const int MaterialHorizontalLayout = 18;
 
-			// Token: 0x04037C4D RID: 228429
+			// Token: 0x0403266B RID: 206443
 			public const int ComposeIntroduceItem = 19;
 
-			// Token: 0x04037C4E RID: 228430
+			// Token: 0x0403266C RID: 206444
 			public const int MachiningConditionItem = 20;
 
-			// Token: 0x04037C4F RID: 228431
+			// Token: 0x0403266D RID: 206445
 			public const int MachiningVerticalLayout = 21;
 
-			// Token: 0x04037C50 RID: 228432
+			// Token: 0x0403266E RID: 206446
 			public const int MachiningAttributeText = 22;
 
-			// Token: 0x04037C51 RID: 228433
+			// Token: 0x0403266F RID: 206447
 			public const int DisableButton = 23;
 		}
 	}

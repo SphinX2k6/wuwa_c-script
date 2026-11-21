@@ -5,34 +5,34 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004905 RID: 18693
+	// Token: 0x0200387C RID: 14460
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VisionAssemblePanelHandle : SpecialPanelHandleBase
 	{
-		// Token: 0x06030DF4 RID: 200180 RVA: 0x00B596A6 File Offset: 0x00B578A6
+		// Token: 0x06025921 RID: 153889 RVA: 0x00A94516 File Offset: 0x00A92716
 		public VisionAssemblePanelHandle(string type) : base(type)
 		{
 		}
 
-		// Token: 0x170079C4 RID: 31172
-		// (get) Token: 0x06030DF5 RID: 200181 RVA: 0x00B596AF File Offset: 0x00B578AF
-		// (set) Token: 0x06030DF6 RID: 200182 RVA: 0x00B596B7 File Offset: 0x00B578B7
+		// Token: 0x17004D2C RID: 19756
+		// (get) Token: 0x06025922 RID: 153890 RVA: 0x00A9451F File Offset: 0x00A9271F
+		// (set) Token: 0x06025923 RID: 153891 RVA: 0x00A94527 File Offset: 0x00A92727
 		public bool IsInCompare { get; set; }
 
-		// Token: 0x06030DF7 RID: 200183 RVA: 0x00B596C0 File Offset: 0x00B578C0
+		// Token: 0x06025924 RID: 153892 RVA: 0x00A94530 File Offset: 0x00A92730
 		protected override void OnInit()
 		{
 			EventSystem.Instance.Add(EEventName.OnVisionAssembleNavigationRefresh, new Action<bool>(this.RefreshNavigation));
 		}
 
-		// Token: 0x06030DF8 RID: 200184 RVA: 0x00B596DE File Offset: 0x00B578DE
+		// Token: 0x06025925 RID: 153893 RVA: 0x00A9454E File Offset: 0x00A9274E
 		protected override void OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.OnVisionAssembleNavigationRefresh, new Action<bool>(this.RefreshNavigation));
 		}
 
-		// Token: 0x06030DF9 RID: 200185 RVA: 0x00B596FC File Offset: 0x00B578FC
+		// Token: 0x06025926 RID: 153894 RVA: 0x00A9456C File Offset: 0x00A9276C
 		protected override List<TsUiNavigationBehaviorListener> OnGetSuitableNavigationListenerList(bool isDefault)
 		{
 			if (isDefault)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return this.TempListenerList;
 		}
 
-		// Token: 0x06030DFA RID: 200186 RVA: 0x00B59780 File Offset: 0x00B57980
+		// Token: 0x06025927 RID: 153895 RVA: 0x00A945F0 File Offset: 0x00A927F0
 		private void RefreshNavigation(bool isCompareTrigger)
 		{
 			UiNavigationNewController.Instance.MarkViewHandleRefreshNavigationDirty();
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0401A3CA RID: 107466
+		// Token: 0x04014C3D RID: 85053
 		[Nullable(new byte[]
 		{
 			2,

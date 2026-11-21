@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DC1 RID: 7617
+	// Token: 0x02001FD8 RID: 8152
 	public class IRoadNetworkNavigationTarget_SetValue
 	{
-		// Token: 0x040061DE RID: 25054
+		// Token: 0x04006766 RID: 26470
 		public ERoadNetworkNavigationTarget Type;
 	}
 }

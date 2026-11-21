@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.PayShop;
 
-// Token: 0x020013E1 RID: 5089
+// Token: 0x02000895 RID: 2197
 public class PinballExchangeShopItemProxy : CommonGameplayShopItemProxy
 {
-	// Token: 0x06008FB2 RID: 36786 RVA: 0x001F131C File Offset: 0x001EF51C
+	// Token: 0x06006347 RID: 25415 RVA: 0x001F9E58 File Offset: 0x001F8058
 	[NullableContext(1)]
 	public override void UpdateFromPayShopGoods(PayShopGoods data)
 	{
@@ -24,31 +24,31 @@ public class PinballExchangeShopItemProxy : CommonGameplayShopItemProxy
 		base.UpdateDiscountData();
 	}
 
-	// Token: 0x06008FB3 RID: 36787 RVA: 0x001F136C File Offset: 0x001EF56C
+	// Token: 0x06006348 RID: 25416 RVA: 0x001F9EA8 File Offset: 0x001F80A8
 	public override void UpdateBottomBgVisible()
 	{
 		base.BottomBgVisible = false;
 	}
 
-	// Token: 0x06008FB4 RID: 36788 RVA: 0x001F1375 File Offset: 0x001EF575
+	// Token: 0x06006349 RID: 25417 RVA: 0x001F9EB1 File Offset: 0x001F80B1
 	public new void UpdateRaycastTarget()
 	{
 		base.RaycastTarget = false;
 	}
 
-	// Token: 0x06008FB5 RID: 36789 RVA: 0x001F137E File Offset: 0x001EF57E
+	// Token: 0x0600634A RID: 25418 RVA: 0x001F9EBA File Offset: 0x001F80BA
 	public new void UpdateRedDot()
 	{
 		base.RedDotVisible = false;
 	}
 
-	// Token: 0x06008FB6 RID: 36790 RVA: 0x001F1387 File Offset: 0x001EF587
+	// Token: 0x0600634B RID: 25419 RVA: 0x001F9EC3 File Offset: 0x001F80C3
 	public override void UpdatePriceData()
 	{
 		base.PriceItemVisible = false;
 	}
 
-	// Token: 0x06008FB7 RID: 36791 RVA: 0x001F1390 File Offset: 0x001EF590
+	// Token: 0x0600634C RID: 25420 RVA: 0x001F9ECC File Offset: 0x001F80CC
 	public override void UpdateQualityData()
 	{
 		if (this.GoodsData == null)
@@ -64,7 +64,7 @@ public class PinballExchangeShopItemProxy : CommonGameplayShopItemProxy
 		base.QualitySpritePath = payShopItemQualitySpriteByItemIdAndQuality;
 	}
 
-	// Token: 0x06008FB8 RID: 36792 RVA: 0x001F13D4 File Offset: 0x001EF5D4
+	// Token: 0x0600634D RID: 25421 RVA: 0x001F9F10 File Offset: 0x001F8110
 	public override void UpdateItemIconData()
 	{
 		if (this.GoodsData == null)
@@ -74,7 +74,7 @@ public class PinballExchangeShopItemProxy : CommonGameplayShopItemProxy
 		base.ItemId = this.GoodsData.GetGoodsData().ItemId;
 	}
 
-	// Token: 0x06008FB9 RID: 36793 RVA: 0x001F13F8 File Offset: 0x001EF5F8
+	// Token: 0x0600634E RID: 25422 RVA: 0x001F9F34 File Offset: 0x001F8134
 	public override void UpdateItemName()
 	{
 		if (this.GoodsData == null)

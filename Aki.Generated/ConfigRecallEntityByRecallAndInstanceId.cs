@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007BD RID: 1981
+	// Token: 0x020007D7 RID: 2007
 	public class ConfigRecallEntityByRecallAndInstanceId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002E80 RID: 11904 RVA: 0x0016033B File Offset: 0x0015E53B
+		// Token: 0x06002F1C RID: 12060 RVA: 0x00167247 File Offset: 0x00165447
 		static ConfigRecallEntityByRecallAndInstanceId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRecallEntityByRecallAndInstanceId.CreateStaticDefaultValue), new Action(ConfigRecallEntityByRecallAndInstanceId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002E81 RID: 11905 RVA: 0x0016035C File Offset: 0x0015E55C
+		// Token: 0x06002F1D RID: 12061 RVA: 0x00167268 File Offset: 0x00165468
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRecallEntityByRecallAndInstanceId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002E82 RID: 11906 RVA: 0x001603DB File Offset: 0x0015E5DB
+		// Token: 0x06002F1E RID: 12062 RVA: 0x001672E7 File Offset: 0x001654E7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRecallEntityByRecallAndInstanceId.LogPair = null;
 			ConfigRecallEntityByRecallAndInstanceId.HandleId = 0;
 		}
 
-		// Token: 0x06002E83 RID: 11907 RVA: 0x001603E9 File Offset: 0x0015E5E9
+		// Token: 0x06002F1F RID: 12063 RVA: 0x001672F5 File Offset: 0x001654F5
 		public static void Init()
 		{
 			ConfigRecallEntityByRecallAndInstanceId.HandleId = ConfigCommon.InitDataStatement(ConfigRecallEntityByRecallAndInstanceId.HandleId, "db_questrecall.db", "select BinData from `RecallEntity` where RecallId=? AND InstanceId=?");
 		}
 
-		// Token: 0x06002E84 RID: 11908 RVA: 0x00160404 File Offset: 0x0015E604
+		// Token: 0x06002F20 RID: 12064 RVA: 0x00167310 File Offset: 0x00165510
 		public static RecallEntity? GetConfig(int p0RecallId, int p1InstanceId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRecallEntityByRecallAndInstanceId.HandleId, ConfigRecallEntityByRecallAndInstanceId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new RecallEntity?(rootAsRecallEntity);
 		}
 
-		// Token: 0x04003611 RID: 13841
+		// Token: 0x040036C7 RID: 14023
 		private const string DB = "db_questrecall.db";
 
-		// Token: 0x04003612 RID: 13842
+		// Token: 0x040036C8 RID: 14024
 		private const string FILE = "r.任务回顾.xlsx";
 
-		// Token: 0x04003613 RID: 13843
+		// Token: 0x040036C9 RID: 14025
 		private const string TABLE = "RecallEntity";
 
-		// Token: 0x04003614 RID: 13844
+		// Token: 0x040036CA RID: 14026
 		private const string COMMAND = "select BinData from `RecallEntity` where RecallId=? AND InstanceId=?";
 
-		// Token: 0x04003615 RID: 13845
+		// Token: 0x040036CB RID: 14027
 		private const string KEY_PREFIX = "RecallEntityByRecallAndInstanceId";
 
-		// Token: 0x04003616 RID: 13846
+		// Token: 0x040036CC RID: 14028
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003617 RID: 13847
+		// Token: 0x040036CD RID: 14029
 		private static int HandleId;
 	}
 }

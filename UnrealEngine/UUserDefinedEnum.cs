@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001219 RID: 4633
+	// Token: 0x020002AA RID: 682
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.UserDefinedEnum")]
 	[UnrealStructLayout(216, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 216)]
 	public class UUserDefinedEnum : UEnum, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060110DE RID: 69854 RVA: 0x00190600 File Offset: 0x0018E800
+		// Token: 0x06004A19 RID: 18969 RVA: 0x00067C83 File Offset: 0x00065E83
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUserDefinedEnum._ClassPtr;
 		}
 
-		// Token: 0x060110DF RID: 69855 RVA: 0x0019060C File Offset: 0x0018E80C
+		// Token: 0x06004A1A RID: 18970 RVA: 0x00067C90 File Offset: 0x00065E90
 		public UUserDefinedEnum() : this(BuiltinUtils.AllocNativeUObject(UUserDefinedEnum.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060110E0 RID: 69856 RVA: 0x00190634 File Offset: 0x0018E834
+		// Token: 0x06004A1B RID: 18971 RVA: 0x00067CB8 File Offset: 0x00065EB8
 		public UUserDefinedEnum(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUserDefinedEnum.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17004292 RID: 17042
-		// (get) Token: 0x060110E1 RID: 69857 RVA: 0x00190668 File Offset: 0x0018E868
-		// (set) Token: 0x060110E2 RID: 69858 RVA: 0x001906A1 File Offset: 0x0018E8A1
+		// Token: 0x17000DE0 RID: 3552
+		// (get) Token: 0x06004A1C RID: 18972 RVA: 0x00067CEC File Offset: 0x00065EEC
+		// (set) Token: 0x06004A1D RID: 18973 RVA: 0x00067D25 File Offset: 0x00065F25
 		public TMap<FName, FText> DisplayNameMap
 		{
 			get
@@ -50,30 +50,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060110E3 RID: 69859 RVA: 0x001906AF File Offset: 0x0018E8AF
+		// Token: 0x06004A1E RID: 18974 RVA: 0x00067D33 File Offset: 0x00065F33
 		static UUserDefinedEnum()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.UserDefinedEnum");
 		}
 
-		// Token: 0x060110E4 RID: 69860 RVA: 0x001906BD File Offset: 0x0018E8BD
+		// Token: 0x06004A1F RID: 18975 RVA: 0x00067D41 File Offset: 0x00065F41
 		protected UUserDefinedEnum(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400920E RID: 37390
+		// Token: 0x04001D30 RID: 7472
 		public new const string __ObjectPath = "/Script/Engine.UserDefinedEnum";
 
-		// Token: 0x0400920F RID: 37391
+		// Token: 0x04001D31 RID: 7473
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04009210 RID: 37392
+		// Token: 0x04001D32 RID: 7474
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04009211 RID: 37393
+		// Token: 0x04001D33 RID: 7475
 		internal static int __PropertyOffset_DisplayNameMap;
 
-		// Token: 0x04009212 RID: 37394
+		// Token: 0x04001D34 RID: 7476
 		[Nullable(new byte[]
 		{
 			2,

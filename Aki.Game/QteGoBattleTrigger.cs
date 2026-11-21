@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Utils;
 
-// Token: 0x02002FEF RID: 12271
+// Token: 0x02002544 RID: 9540
 [NullableContext(1)]
 [Nullable(0)]
 public class QteGoBattleTrigger : Trigger
 {
-	// Token: 0x0601A017 RID: 106519 RVA: 0x006CEE36 File Offset: 0x006CD036
+	// Token: 0x0601794B RID: 96587 RVA: 0x006F6CD2 File Offset: 0x006F4ED2
 	[NullableContext(2)]
 	public QteGoBattleTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A018 RID: 106520 RVA: 0x006CEE47 File Offset: 0x006CD047
+	// Token: 0x0601794C RID: 96588 RVA: 0x006F6CE3 File Offset: 0x006F4EE3
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TargetType = (ETriggerTargetType)Convert.ToInt32((triggerParams.Length != 0) ? triggerParams[0] : "0");
 	}
 
-	// Token: 0x0601A019 RID: 106521 RVA: 0x006CEE64 File Offset: 0x006CD064
+	// Token: 0x0601794D RID: 96589 RVA: 0x006F6D00 File Offset: 0x006F4F00
 	protected override void OnActive()
 	{
 		if (!EventSystem.Instance.Has<int, int, int>(EEventName.CharExecuteQte, new Action<int, int, int>(this.OnEvent)))
@@ -34,7 +34,7 @@ public class QteGoBattleTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A01A RID: 106522 RVA: 0x006CEED8 File Offset: 0x006CD0D8
+	// Token: 0x0601794E RID: 96590 RVA: 0x006F6D74 File Offset: 0x006F4F74
 	protected override void OnInactive()
 	{
 		if (EventSystem.Instance.Has<int, int, int>(EEventName.CharExecuteQte, new Action<int, int, int>(this.OnEvent)))
@@ -47,7 +47,7 @@ public class QteGoBattleTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A01B RID: 106523 RVA: 0x006CEF4C File Offset: 0x006CD14C
+	// Token: 0x0601794F RID: 96591 RVA: 0x006F6DE8 File Offset: 0x006F4FE8
 	private void OnEvent(int goBattleEntityId, int goDownEntityId, int roleQteType)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -95,12 +95,12 @@ public class QteGoBattleTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x0601A01C RID: 106524 RVA: 0x006CF044 File Offset: 0x006CD244
+	// Token: 0x06017950 RID: 96592 RVA: 0x006F6EE0 File Offset: 0x006F50E0
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4D1 RID: 50385
+	// Token: 0x0400C899 RID: 51353
 	protected ETriggerTargetType TargetType;
 }

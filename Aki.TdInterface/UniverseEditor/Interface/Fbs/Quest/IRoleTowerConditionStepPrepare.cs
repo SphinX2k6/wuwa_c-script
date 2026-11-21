@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040D9 RID: 16601
+	// Token: 0x0200451A RID: 17690
 	public struct IRoleTowerConditionStepPrepare : IFlatbufferObject
 	{
-		// Token: 0x1700750D RID: 29965
-		// (get) Token: 0x060182FE RID: 99070 RVA: 0x0037BE09 File Offset: 0x0037A009
+		// Token: 0x17007B13 RID: 31507
+		// (get) Token: 0x0601999F RID: 104863 RVA: 0x003A5D59 File Offset: 0x003A3F59
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060182FF RID: 99071 RVA: 0x0037BE16 File Offset: 0x0037A016
+		// Token: 0x060199A0 RID: 104864 RVA: 0x003A5D66 File Offset: 0x003A3F66
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018300 RID: 99072 RVA: 0x0037BE20 File Offset: 0x0037A020
+		// Token: 0x060199A1 RID: 104865 RVA: 0x003A5D70 File Offset: 0x003A3F70
 		public static IRoleTowerConditionStepPrepare GetRootAsIRoleTowerConditionStepPrepare(ByteBuffer _bb)
 		{
 			return IRoleTowerConditionStepPrepare.GetRootAsIRoleTowerConditionStepPrepare(_bb, default(IRoleTowerConditionStepPrepare));
 		}
 
-		// Token: 0x06018301 RID: 99073 RVA: 0x0037BE3C File Offset: 0x0037A03C
+		// Token: 0x060199A2 RID: 104866 RVA: 0x003A5D8C File Offset: 0x003A3F8C
 		public static IRoleTowerConditionStepPrepare GetRootAsIRoleTowerConditionStepPrepare(ByteBuffer _bb, IRoleTowerConditionStepPrepare obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018302 RID: 99074 RVA: 0x0037BE59 File Offset: 0x0037A059
+		// Token: 0x060199A3 RID: 104867 RVA: 0x003A5DA9 File Offset: 0x003A3FA9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018303 RID: 99075 RVA: 0x0037BE68 File Offset: 0x0037A068
+		// Token: 0x060199A4 RID: 104868 RVA: 0x003A5DB8 File Offset: 0x003A3FB8
 		public IRoleTowerConditionStepPrepare __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700750E RID: 29966
-		// (get) Token: 0x06018304 RID: 99076 RVA: 0x0037BE78 File Offset: 0x0037A078
+		// Token: 0x17007B14 RID: 31508
+		// (get) Token: 0x060199A5 RID: 104869 RVA: 0x003A5DC8 File Offset: 0x003A3FC8
 		public ERoleTowerConditionStep Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018305 RID: 99077 RVA: 0x0037BEB4 File Offset: 0x0037A0B4
+		// Token: 0x060199A6 RID: 104870 RVA: 0x003A5E04 File Offset: 0x003A4004
 		public static Offset<IRoleTowerConditionStepPrepare> CreateIRoleTowerConditionStepPrepare(FlatBufferBuilder builder, ERoleTowerConditionStep Type = ERoleTowerConditionStep.Prepare)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRoleTowerConditionStepPrepare.EndIRoleTowerConditionStepPrepare(builder);
 		}
 
-		// Token: 0x06018306 RID: 99078 RVA: 0x0037BECA File Offset: 0x0037A0CA
+		// Token: 0x060199A7 RID: 104871 RVA: 0x003A5E1A File Offset: 0x003A401A
 		public static void StartIRoleTowerConditionStepPrepare(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06018307 RID: 99079 RVA: 0x0037BED3 File Offset: 0x0037A0D3
+		// Token: 0x060199A8 RID: 104872 RVA: 0x003A5E23 File Offset: 0x003A4023
 		public static void AddType(FlatBufferBuilder builder, ERoleTowerConditionStep type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06018308 RID: 99080 RVA: 0x0037BEDE File Offset: 0x0037A0DE
+		// Token: 0x060199A9 RID: 104873 RVA: 0x003A5E2E File Offset: 0x003A402E
 		public static Offset<IRoleTowerConditionStepPrepare> EndIRoleTowerConditionStepPrepare(FlatBufferBuilder builder)
 		{
 			return new Offset<IRoleTowerConditionStepPrepare>(builder.EndTable());
 		}
 
-		// Token: 0x06018309 RID: 99081 RVA: 0x0037BEEC File Offset: 0x0037A0EC
+		// Token: 0x060199AA RID: 104874 RVA: 0x003A5E3C File Offset: 0x003A403C
 		public IRoleTowerConditionStepPrepareT UnPack()
 		{
 			IRoleTowerConditionStepPrepareT roleTowerConditionStepPrepareT = new IRoleTowerConditionStepPrepareT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return roleTowerConditionStepPrepareT;
 		}
 
-		// Token: 0x0601830A RID: 99082 RVA: 0x0037BF07 File Offset: 0x0037A107
+		// Token: 0x060199AB RID: 104875 RVA: 0x003A5E57 File Offset: 0x003A4057
 		public void UnPackTo(IRoleTowerConditionStepPrepareT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601830B RID: 99083 RVA: 0x0037BF18 File Offset: 0x0037A118
+		// Token: 0x060199AC RID: 104876 RVA: 0x003A5E68 File Offset: 0x003A4068
 		public static Offset<IRoleTowerConditionStepPrepare> Pack(FlatBufferBuilder builder, IRoleTowerConditionStepPrepareT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRoleTowerConditionStepPrepare.CreateIRoleTowerConditionStepPrepare(builder, _o.Type);
 		}
 
-		// Token: 0x0400BC74 RID: 48244
+		// Token: 0x0400C65D RID: 50781
 		private Table __p;
 	}
 }

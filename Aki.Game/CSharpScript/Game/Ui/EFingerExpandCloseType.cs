@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046C2 RID: 18114
+	// Token: 0x020035F3 RID: 13811
 	public enum EFingerExpandCloseType
 	{
-		// Token: 0x040196F0 RID: 104176
+		// Token: 0x04013D97 RID: 81303
 		None,
-		// Token: 0x040196F1 RID: 104177
+		// Token: 0x04013D98 RID: 81304
 		Expand,
-		// Token: 0x040196F2 RID: 104178
+		// Token: 0x04013D99 RID: 81305
 		Close
 	}
 }

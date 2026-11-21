@@ -2,37 +2,37 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 
-// Token: 0x020030D0 RID: 12496
+// Token: 0x02002628 RID: 9768
 [NullableContext(2)]
 public interface ISkillTarget
 {
-	// Token: 0x170024BD RID: 9405
-	// (get) Token: 0x0601AC1C RID: 109596
-	// (set) Token: 0x0601AC1D RID: 109597
+	// Token: 0x17002640 RID: 9792
+	// (get) Token: 0x06018631 RID: 99889
+	// (set) Token: 0x06018632 RID: 99890
 	int? LockOnConfigId { get; set; }
 
-	// Token: 0x170024BE RID: 9406
-	// (get) Token: 0x0601AC1E RID: 109598
-	// (set) Token: 0x0601AC1F RID: 109599
+	// Token: 0x17002641 RID: 9793
+	// (get) Token: 0x06018633 RID: 99891
+	// (set) Token: 0x06018634 RID: 99892
 	ESkillTargetPriority? SkillTargetPriority { get; set; }
 
-	// Token: 0x170024BF RID: 9407
-	// (get) Token: 0x0601AC20 RID: 109600
-	// (set) Token: 0x0601AC21 RID: 109601
+	// Token: 0x17002642 RID: 9794
+	// (get) Token: 0x06018635 RID: 99893
+	// (set) Token: 0x06018636 RID: 99894
 	bool? ShowTarget { get; set; }
 
-	// Token: 0x170024C0 RID: 9408
-	// (get) Token: 0x0601AC22 RID: 109602
-	// (set) Token: 0x0601AC23 RID: 109603
+	// Token: 0x17002643 RID: 9795
+	// (get) Token: 0x06018637 RID: 99895
+	// (set) Token: 0x06018638 RID: 99896
 	bool? GlobalTarget { get; set; }
 
-	// Token: 0x170024C1 RID: 9409
-	// (get) Token: 0x0601AC24 RID: 109604
-	// (set) Token: 0x0601AC25 RID: 109605
+	// Token: 0x17002644 RID: 9796
+	// (get) Token: 0x06018639 RID: 99897
+	// (set) Token: 0x0601863A RID: 99898
 	string BlackboardKey { get; set; }
 
-	// Token: 0x170024C2 RID: 9410
-	// (get) Token: 0x0601AC26 RID: 109606
-	// (set) Token: 0x0601AC27 RID: 109607
+	// Token: 0x17002645 RID: 9797
+	// (get) Token: 0x0601863B RID: 99899
+	// (set) Token: 0x0601863C RID: 99900
 	double? SkillTargetRemainTime { get; set; }
 }

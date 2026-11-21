@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EFC RID: 28412
+	// Token: 0x0200607C RID: 24700
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DollGrabMachineMissionPanel : UiPanelBase
 	{
-		// Token: 0x060452BF RID: 283327 RVA: 0x0111C0C4 File Offset: 0x0111A2C4
+		// Token: 0x0603B468 RID: 242792 RVA: 0x010C5E54 File Offset: 0x010C4054
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060452C0 RID: 283328 RVA: 0x0111C150 File Offset: 0x0111A350
+		// Token: 0x0603B469 RID: 242793 RVA: 0x010C5EE0 File Offset: 0x010C40E0
 		protected override void OnBeforeCreate()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			EventSystem.Instance.Add<int, List<IGrabItemData>>(EEventName.OnDollGrabMachineGrabDoll, new Action<int, List<IGrabItemData>>(this.OnDollGrabMachineGrabDoll));
 		}
 
-		// Token: 0x060452C1 RID: 283329 RVA: 0x0111C238 File Offset: 0x0111A438
+		// Token: 0x0603B46A RID: 242794 RVA: 0x010C5FC8 File Offset: 0x010C41C8
 		protected override void OnBeforeDestroy()
 		{
 			if (EventSystem.Instance.Has<int, List<IGrabItemData>>(EEventName.OnDollGrabMachineGrabDoll, new Action<int, List<IGrabItemData>>(this.OnDollGrabMachineGrabDoll)))
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			}
 		}
 
-		// Token: 0x060452C2 RID: 283330 RVA: 0x0111C2F0 File Offset: 0x0111A4F0
+		// Token: 0x0603B46B RID: 242795 RVA: 0x010C6080 File Offset: 0x010C4280
 		public void RefreshPanel()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -86,14 +86,14 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.OnDollGrabMachineEndlessScoreChanged((endlessRewardData != null) ? endlessRewardData.CurrentAccumulatedScore : 0, (endlessRewardData != null) ? endlessRewardData.TargetAccumulatedScore : 0);
 		}
 
-		// Token: 0x060452C3 RID: 283331 RVA: 0x0111C35A File Offset: 0x0111A55A
+		// Token: 0x0603B46C RID: 242796 RVA: 0x010C60EA File Offset: 0x010C42EA
 		[NullableContext(1)]
 		private void OnDollGrabMachineGrabDoll(int count, List<IGrabItemData> grabItemDataList)
 		{
 			LguiUtil.Instance.SetLocalTextNew(this.MissionInfo, "KClaw_Remaining_Prize_Count", new <>z__ReadOnlySingleElementList<object>(count));
 		}
 
-		// Token: 0x060452C4 RID: 283332 RVA: 0x0111C37C File Offset: 0x0111A57C
+		// Token: 0x0603B46D RID: 242797 RVA: 0x010C610C File Offset: 0x010C430C
 		private void OnDollGrabMachineEndlessScoreChanged(int newScore, int addScore)
 		{
 			IDollGrabInfiniteRewardData endlessRewardData = DollGrabMachineController.Instance.EndlessRewardData;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			}));
 		}
 
-		// Token: 0x060452C5 RID: 283333 RVA: 0x0111C3F4 File Offset: 0x0111A5F4
+		// Token: 0x0603B46E RID: 242798 RVA: 0x010C6184 File Offset: 0x010C4384
 		private void OnDollGrabMachineRestart()
 		{
 			IDollGrabInfiniteRewardData endlessRewardData = DollGrabMachineController.Instance.EndlessRewardData;
@@ -115,10 +115,10 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			}));
 		}
 
-		// Token: 0x0402409B RID: 147611
+		// Token: 0x0401F34E RID: 127822
 		private UUIText MissionTitle;
 
-		// Token: 0x0402409C RID: 147612
+		// Token: 0x0401F34F RID: 127823
 		private UUIText MissionInfo;
 	}
 }

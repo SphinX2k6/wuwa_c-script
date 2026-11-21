@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FC3 RID: 24515
+	// Token: 0x02006618 RID: 26136
 	public enum EOnlineParticipateRule : byte
 	{
-		// Token: 0x0400FF10 RID: 65296
+		// Token: 0x04010CCF RID: 68815
 		AnyPlayer,
-		// Token: 0x0400FF11 RID: 65297
+		// Token: 0x04010CD0 RID: 68816
 		AllPlayers
 	}
 }

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002E7B RID: 11899
+// Token: 0x020023CD RID: 9165
 [NullableContext(2)]
 [Nullable(0)]
 internal class MontageTask
 {
-	// Token: 0x170022F4 RID: 8948
-	// (get) Token: 0x060196E8 RID: 104168 RVA: 0x00691313 File Offset: 0x0068F513
+	// Token: 0x1700237D RID: 9085
+	// (get) Token: 0x06016FBC RID: 94140 RVA: 0x006B7741 File Offset: 0x006B5941
 	public bool Invalid
 	{
 		get
@@ -18,7 +18,7 @@ internal class MontageTask
 		}
 	}
 
-	// Token: 0x060196E9 RID: 104169 RVA: 0x0069131B File Offset: 0x0068F51B
+	// Token: 0x06016FBD RID: 94141 RVA: 0x006B7749 File Offset: 0x006B5949
 	public MontageTask(BaseMontageComponent montageComponent, int handle, Action playCallback = null, Action<bool> endCallback = null)
 	{
 		this.MontageComponent = montageComponent;
@@ -28,7 +28,7 @@ internal class MontageTask
 		this.ReadyToPlay = false;
 	}
 
-	// Token: 0x060196EA RID: 104170 RVA: 0x00691354 File Offset: 0x0068F554
+	// Token: 0x06016FBE RID: 94142 RVA: 0x006B7780 File Offset: 0x006B5980
 	[NullableContext(1)]
 	public void InitWithPath(string montageName, float blendInTime = -1f)
 	{
@@ -46,7 +46,7 @@ internal class MontageTask
 		this.InitInternal(uanimMontage, montageName, text, blendInTime);
 	}
 
-	// Token: 0x060196EB RID: 104171 RVA: 0x006913C0 File Offset: 0x0068F5C0
+	// Token: 0x06016FBF RID: 94143 RVA: 0x006B77EC File Offset: 0x006B59EC
 	[NullableContext(1)]
 	public void InitWithMontage(UAnimMontage montage, float blendInTime = -1f)
 	{
@@ -62,7 +62,7 @@ internal class MontageTask
 		this.InitInternal(montage, text, text2, blendInTime);
 	}
 
-	// Token: 0x060196EC RID: 104172 RVA: 0x00691424 File Offset: 0x0068F624
+	// Token: 0x06016FC0 RID: 94144 RVA: 0x006B7850 File Offset: 0x006B5A50
 	[NullableContext(1)]
 	private void InitInternal(UAnimMontage montage, string montageName, string path, float blendInTime)
 	{
@@ -87,7 +87,7 @@ internal class MontageTask
 		}
 	}
 
-	// Token: 0x060196ED RID: 104173 RVA: 0x006914A0 File Offset: 0x0068F6A0
+	// Token: 0x06016FC1 RID: 94145 RVA: 0x006B78CC File Offset: 0x006B5ACC
 	public void Play(float startPosition = 0f, float remainedTrigger = -1f)
 	{
 		if (this.InvalidInternal)
@@ -150,7 +150,7 @@ internal class MontageTask
 		this.ReadyToPlay = true;
 	}
 
-	// Token: 0x060196EE RID: 104174 RVA: 0x00691618 File Offset: 0x0068F818
+	// Token: 0x06016FC2 RID: 94146 RVA: 0x006B7A44 File Offset: 0x006B5C44
 	public void EndTask()
 	{
 		UAsyncTaskPlayMontageAndWait ueMontageTask = this.UeMontageTask;
@@ -176,46 +176,46 @@ internal class MontageTask
 		this.InvalidInternal = true;
 	}
 
-	// Token: 0x0400BD2D RID: 48429
+	// Token: 0x0400C0C4 RID: 49348
 	public UAnimMontage Montage;
 
-	// Token: 0x0400BD2E RID: 48430
+	// Token: 0x0400C0C5 RID: 49349
 	public float BlendInTime;
 
-	// Token: 0x0400BD2F RID: 48431
+	// Token: 0x0400C0C6 RID: 49350
 	public int MontagePathHash;
 
-	// Token: 0x0400BD30 RID: 48432
+	// Token: 0x0400C0C7 RID: 49351
 	[Nullable(1)]
 	public string MontageName = "";
 
-	// Token: 0x0400BD31 RID: 48433
+	// Token: 0x0400C0C8 RID: 49352
 	public bool MontageNeedPush2Server;
 
-	// Token: 0x0400BD32 RID: 48434
+	// Token: 0x0400C0C9 RID: 49353
 	public Action<float> RemainCallback;
 
-	// Token: 0x0400BD33 RID: 48435
+	// Token: 0x0400C0CA RID: 49354
 	private UAsyncTaskPlayMontageAndWait UeMontageTask;
 
-	// Token: 0x0400BD34 RID: 48436
+	// Token: 0x0400C0CB RID: 49355
 	private bool ReadyToPlay;
 
-	// Token: 0x0400BD35 RID: 48437
+	// Token: 0x0400C0CC RID: 49356
 	private bool Playing;
 
-	// Token: 0x0400BD36 RID: 48438
+	// Token: 0x0400C0CD RID: 49357
 	private bool InvalidInternal;
 
-	// Token: 0x0400BD37 RID: 48439
+	// Token: 0x0400C0CE RID: 49358
 	public BaseMontageComponent MontageComponent;
 
-	// Token: 0x0400BD38 RID: 48440
+	// Token: 0x0400C0CF RID: 49359
 	public int Handle;
 
-	// Token: 0x0400BD39 RID: 48441
+	// Token: 0x0400C0D0 RID: 49360
 	public Action PlayCallback;
 
-	// Token: 0x0400BD3A RID: 48442
+	// Token: 0x0400C0D1 RID: 49361
 	public Action<bool> EndCallback;
 }

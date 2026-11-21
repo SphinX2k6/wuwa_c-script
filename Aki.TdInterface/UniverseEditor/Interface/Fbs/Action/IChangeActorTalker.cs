@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062C9 RID: 25289
+	// Token: 0x0200693A RID: 26938
 	public struct IChangeActorTalker : IFlatbufferObject
 	{
-		// Token: 0x1700BCC5 RID: 48325
-		// (get) Token: 0x0602BB4D RID: 179021 RVA: 0x00603CE0 File Offset: 0x00601EE0
+		// Token: 0x1700C64F RID: 50767
+		// (get) Token: 0x0602E2B6 RID: 189110 RVA: 0x0064ECEC File Offset: 0x0064CEEC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BB4E RID: 179022 RVA: 0x00603CED File Offset: 0x00601EED
+		// Token: 0x0602E2B7 RID: 189111 RVA: 0x0064ECF9 File Offset: 0x0064CEF9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BB4F RID: 179023 RVA: 0x00603CF4 File Offset: 0x00601EF4
+		// Token: 0x0602E2B8 RID: 189112 RVA: 0x0064ED00 File Offset: 0x0064CF00
 		public static IChangeActorTalker GetRootAsIChangeActorTalker(ByteBuffer _bb)
 		{
 			return IChangeActorTalker.GetRootAsIChangeActorTalker(_bb, default(IChangeActorTalker));
 		}
 
-		// Token: 0x0602BB50 RID: 179024 RVA: 0x00603D10 File Offset: 0x00601F10
+		// Token: 0x0602E2B9 RID: 189113 RVA: 0x0064ED1C File Offset: 0x0064CF1C
 		public static IChangeActorTalker GetRootAsIChangeActorTalker(ByteBuffer _bb, IChangeActorTalker obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BB51 RID: 179025 RVA: 0x00603D2D File Offset: 0x00601F2D
+		// Token: 0x0602E2BA RID: 189114 RVA: 0x0064ED39 File Offset: 0x0064CF39
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BB52 RID: 179026 RVA: 0x00603D3C File Offset: 0x00601F3C
+		// Token: 0x0602E2BB RID: 189115 RVA: 0x0064ED48 File Offset: 0x0064CF48
 		public IChangeActorTalker __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BCC6 RID: 48326
-		// (get) Token: 0x0602BB53 RID: 179027 RVA: 0x00603D4C File Offset: 0x00601F4C
+		// Token: 0x1700C650 RID: 50768
+		// (get) Token: 0x0602E2BC RID: 189116 RVA: 0x0064ED58 File Offset: 0x0064CF58
 		public int ActorIndex
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BCC7 RID: 48327
-		// (get) Token: 0x0602BB54 RID: 179028 RVA: 0x00603D88 File Offset: 0x00601F88
+		// Token: 0x1700C651 RID: 50769
+		// (get) Token: 0x0602E2BD RID: 189117 RVA: 0x0064ED94 File Offset: 0x0064CF94
 		public int Talker
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BB55 RID: 179029 RVA: 0x00603DC4 File Offset: 0x00601FC4
+		// Token: 0x0602E2BE RID: 189118 RVA: 0x0064EDD0 File Offset: 0x0064CFD0
 		public static Offset<IChangeActorTalker> CreateIChangeActorTalker(FlatBufferBuilder builder, int ActorIndex = 0, int Talker = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeActorTalker.EndIChangeActorTalker(builder);
 		}
 
-		// Token: 0x0602BB56 RID: 179030 RVA: 0x00603DE1 File Offset: 0x00601FE1
+		// Token: 0x0602E2BF RID: 189119 RVA: 0x0064EDED File Offset: 0x0064CFED
 		public static void StartIChangeActorTalker(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602BB57 RID: 179031 RVA: 0x00603DEA File Offset: 0x00601FEA
+		// Token: 0x0602E2C0 RID: 189120 RVA: 0x0064EDF6 File Offset: 0x0064CFF6
 		public static void AddActorIndex(FlatBufferBuilder builder, int actorIndex)
 		{
 			builder.AddInt(0, actorIndex, 0);
 		}
 
-		// Token: 0x0602BB58 RID: 179032 RVA: 0x00603DF5 File Offset: 0x00601FF5
+		// Token: 0x0602E2C1 RID: 189121 RVA: 0x0064EE01 File Offset: 0x0064D001
 		public static void AddTalker(FlatBufferBuilder builder, int talker)
 		{
 			builder.AddInt(1, talker, 0);
 		}
 
-		// Token: 0x0602BB59 RID: 179033 RVA: 0x00603E00 File Offset: 0x00602000
+		// Token: 0x0602E2C2 RID: 189122 RVA: 0x0064EE0C File Offset: 0x0064D00C
 		public static Offset<IChangeActorTalker> EndIChangeActorTalker(FlatBufferBuilder builder)
 		{
 			return new Offset<IChangeActorTalker>(builder.EndTable());
 		}
 
-		// Token: 0x0602BB5A RID: 179034 RVA: 0x00603E10 File Offset: 0x00602010
+		// Token: 0x0602E2C3 RID: 189123 RVA: 0x0064EE1C File Offset: 0x0064D01C
 		public IChangeActorTalkerT UnPack()
 		{
 			IChangeActorTalkerT changeActorTalkerT = new IChangeActorTalkerT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return changeActorTalkerT;
 		}
 
-		// Token: 0x0602BB5B RID: 179035 RVA: 0x00603E2B File Offset: 0x0060202B
+		// Token: 0x0602E2C4 RID: 189124 RVA: 0x0064EE37 File Offset: 0x0064D037
 		public void UnPackTo(IChangeActorTalkerT _o)
 		{
 			_o.ActorIndex = this.ActorIndex;
 			_o.Talker = this.Talker;
 		}
 
-		// Token: 0x0602BB5C RID: 179036 RVA: 0x00603E48 File Offset: 0x00602048
+		// Token: 0x0602E2C5 RID: 189125 RVA: 0x0064EE54 File Offset: 0x0064D054
 		public static Offset<IChangeActorTalker> Pack(FlatBufferBuilder builder, IChangeActorTalkerT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeActorTalker.CreateIChangeActorTalker(builder, _o.ActorIndex, _o.Talker);
 		}
 
-		// Token: 0x0401086F RID: 67695
+		// Token: 0x04011685 RID: 71301
 		private Table __p;
 	}
 }

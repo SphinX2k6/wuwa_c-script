@@ -1,34 +1,34 @@
 ﻿using System;
 
-// Token: 0x02001B27 RID: 6951
+// Token: 0x02000FE6 RID: 4070
 public enum EFloroRanchEntityComponent
 {
-	// Token: 0x04005E80 RID: 24192
+	// Token: 0x04005F4F RID: 24399
 	FloroRanchEntityDataComponent,
-	// Token: 0x04005E81 RID: 24193
+	// Token: 0x04005F50 RID: 24400
 	FloroRanchCardDataComponent,
-	// Token: 0x04005E82 RID: 24194
+	// Token: 0x04005F51 RID: 24401
 	FloroRanchTerrainDataComponent,
-	// Token: 0x04005E83 RID: 24195
+	// Token: 0x04005F52 RID: 24402
 	FloroRanchToyDataComponent,
-	// Token: 0x04005E84 RID: 24196
+	// Token: 0x04005F53 RID: 24403
 	FloroRanchRoleSkillDataComponent,
-	// Token: 0x04005E85 RID: 24197
+	// Token: 0x04005F54 RID: 24404
 	FloroRanchMoveComponent,
-	// Token: 0x04005E86 RID: 24198
+	// Token: 0x04005F55 RID: 24405
 	FloroRanchUiPopupRewardComponent,
-	// Token: 0x04005E87 RID: 24199
+	// Token: 0x04005F56 RID: 24406
 	FloroRanchUiTerrainComponent,
-	// Token: 0x04005E88 RID: 24200
+	// Token: 0x04005F57 RID: 24407
 	FloroRanchUiToyComponent,
-	// Token: 0x04005E89 RID: 24201
+	// Token: 0x04005F58 RID: 24408
 	FloroRanchUiCardComponent,
-	// Token: 0x04005E8A RID: 24202
+	// Token: 0x04005F59 RID: 24409
 	FloroRanchUiRoleSkillComponent,
-	// Token: 0x04005E8B RID: 24203
+	// Token: 0x04005F5A RID: 24410
 	FloroRanchEmptyUiComponent,
-	// Token: 0x04005E8C RID: 24204
+	// Token: 0x04005F5B RID: 24411
 	FloroRanchWageSettleComponent,
-	// Token: 0x04005E8D RID: 24205
+	// Token: 0x04005F5C RID: 24412
 	FloroRanchBuffComponent
 }

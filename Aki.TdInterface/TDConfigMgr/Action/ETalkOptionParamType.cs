@@ -3,23 +3,23 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016C9 RID: 5833
+	// Token: 0x02001843 RID: 6211
 	[EnumExtensions]
 	public enum ETalkOptionParamType
 	{
-		// Token: 0x04004ECC RID: 20172
+		// Token: 0x040052F2 RID: 21234
 		QteSucceed,
-		// Token: 0x04004ECD RID: 20173
+		// Token: 0x040052F3 RID: 21235
 		QteFailed,
-		// Token: 0x04004ECE RID: 20174
+		// Token: 0x040052F4 RID: 21236
 		QteSucceedDelayExec,
-		// Token: 0x04004ECF RID: 20175
+		// Token: 0x040052F5 RID: 21237
 		QteFailedDelayExec,
-		// Token: 0x04004ED0 RID: 20176
+		// Token: 0x040052F6 RID: 21238
 		RogueRandomEvent,
-		// Token: 0x04004ED1 RID: 20177
+		// Token: 0x040052F7 RID: 21239
 		PhoneMessageEmoji,
-		// Token: 0x04004ED2 RID: 20178
+		// Token: 0x040052F8 RID: 21240
 		VisualNovel
 	}
 }

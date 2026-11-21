@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200746A RID: 29802
+	// Token: 0x02007C5D RID: 31837
 	public class ITrapDefensePlayerOperationType_UnionUnion
 	{
-		// Token: 0x1700E231 RID: 57905
-		// (get) Token: 0x0603623A RID: 221754 RVA: 0x0075C6D1 File Offset: 0x0075A8D1
-		// (set) Token: 0x0603623B RID: 221755 RVA: 0x0075C6D9 File Offset: 0x0075A8D9
+		// Token: 0x1700EE4E RID: 61006
+		// (get) Token: 0x06039623 RID: 235043 RVA: 0x007BF3FD File Offset: 0x007BD5FD
+		// (set) Token: 0x06039624 RID: 235044 RVA: 0x007BF405 File Offset: 0x007BD605
 		public ITrapDefensePlayerOperationType_Union Type { get; set; }
 
-		// Token: 0x1700E232 RID: 57906
-		// (get) Token: 0x0603623C RID: 221756 RVA: 0x0075C6E2 File Offset: 0x0075A8E2
-		// (set) Token: 0x0603623D RID: 221757 RVA: 0x0075C6EA File Offset: 0x0075A8EA
+		// Token: 0x1700EE4F RID: 61007
+		// (get) Token: 0x06039625 RID: 235045 RVA: 0x007BF40E File Offset: 0x007BD60E
+		// (set) Token: 0x06039626 RID: 235046 RVA: 0x007BF416 File Offset: 0x007BD616
 		public object Value { get; set; }
 
-		// Token: 0x0603623E RID: 221758 RVA: 0x0075C6F3 File Offset: 0x0075A8F3
+		// Token: 0x06039627 RID: 235047 RVA: 0x007BF41F File Offset: 0x007BD61F
 		public ITrapDefensePlayerOperationType_UnionUnion()
 		{
 			this.Type = ITrapDefensePlayerOperationType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603623F RID: 221759 RVA: 0x0075C709 File Offset: 0x0075A909
+		// Token: 0x06039628 RID: 235048 RVA: 0x007BF435 File Offset: 0x007BD635
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06036240 RID: 221760 RVA: 0x0075C71B File Offset: 0x0075A91B
+		// Token: 0x06039629 RID: 235049 RVA: 0x007BF447 File Offset: 0x007BD647
 		public ITrapDefensePlayerOperationTypeT AsITrapDefensePlayerOperationType()
 		{
 			return this.As<ITrapDefensePlayerOperationTypeT>();
 		}
 
-		// Token: 0x06036241 RID: 221761 RVA: 0x0075C723 File Offset: 0x0075A923
+		// Token: 0x0603962A RID: 235050 RVA: 0x007BF44F File Offset: 0x007BD64F
 		public static ITrapDefensePlayerOperationType_UnionUnion FromITrapDefensePlayerOperationType(ITrapDefensePlayerOperationTypeT _itrapdefenseplayeroperationtype)
 		{
 			return new ITrapDefensePlayerOperationType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06036242 RID: 221762 RVA: 0x0075C738 File Offset: 0x0075A938
+		// Token: 0x0603962B RID: 235051 RVA: 0x007BF464 File Offset: 0x007BD664
 		public ITrapDefensePlayerOperationRecycleTrapT AsITrapDefensePlayerOperationRecycleTrap()
 		{
 			return this.As<ITrapDefensePlayerOperationRecycleTrapT>();
 		}
 
-		// Token: 0x06036243 RID: 221763 RVA: 0x0075C740 File Offset: 0x0075A940
+		// Token: 0x0603962C RID: 235052 RVA: 0x007BF46C File Offset: 0x007BD66C
 		public static ITrapDefensePlayerOperationType_UnionUnion FromITrapDefensePlayerOperationRecycleTrap(ITrapDefensePlayerOperationRecycleTrapT _itrapdefenseplayeroperationrecycletrap)
 		{
 			return new ITrapDefensePlayerOperationType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06036244 RID: 221764 RVA: 0x0075C755 File Offset: 0x0075A955
+		// Token: 0x0603962D RID: 235053 RVA: 0x007BF481 File Offset: 0x007BD681
 		public ITrapDefensePlayerOperationConstructTrapT AsITrapDefensePlayerOperationConstructTrap()
 		{
 			return this.As<ITrapDefensePlayerOperationConstructTrapT>();
 		}
 
-		// Token: 0x06036245 RID: 221765 RVA: 0x0075C75D File Offset: 0x0075A95D
+		// Token: 0x0603962E RID: 235054 RVA: 0x007BF489 File Offset: 0x007BD689
 		public static ITrapDefensePlayerOperationType_UnionUnion FromITrapDefensePlayerOperationConstructTrap(ITrapDefensePlayerOperationConstructTrapT _itrapdefenseplayeroperationconstructtrap)
 		{
 			return new ITrapDefensePlayerOperationType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06036246 RID: 221766 RVA: 0x0075C772 File Offset: 0x0075A972
+		// Token: 0x0603962F RID: 235055 RVA: 0x007BF49E File Offset: 0x007BD69E
 		public ITrapDefensePlayerOperationSpawnMonsterT AsITrapDefensePlayerOperationSpawnMonster()
 		{
 			return this.As<ITrapDefensePlayerOperationSpawnMonsterT>();
 		}
 
-		// Token: 0x06036247 RID: 221767 RVA: 0x0075C77A File Offset: 0x0075A97A
+		// Token: 0x06039630 RID: 235056 RVA: 0x007BF4A6 File Offset: 0x007BD6A6
 		public static ITrapDefensePlayerOperationType_UnionUnion FromITrapDefensePlayerOperationSpawnMonster(ITrapDefensePlayerOperationSpawnMonsterT _itrapdefenseplayeroperationspawnmonster)
 		{
 			return new ITrapDefensePlayerOperationType_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06036248 RID: 221768 RVA: 0x0075C790 File Offset: 0x0075A990
+		// Token: 0x06039631 RID: 235057 RVA: 0x007BF4BC File Offset: 0x007BD6BC
 		public static int Pack(FlatBufferBuilder builder, ITrapDefensePlayerOperationType_UnionUnion _o)
 		{
 			switch (_o.Type)

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045C9 RID: 17865
+	// Token: 0x02004A31 RID: 18993
 	public struct ITrapDefenseSpawnMonsterConditionGroup : IFlatbufferObject
 	{
-		// Token: 0x17007EF9 RID: 32505
-		// (get) Token: 0x0601B057 RID: 110679 RVA: 0x003DA032 File Offset: 0x003D8232
+		// Token: 0x1700853A RID: 34106
+		// (get) Token: 0x0601C82C RID: 116780 RVA: 0x004062CE File Offset: 0x004044CE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B058 RID: 110680 RVA: 0x003DA03F File Offset: 0x003D823F
+		// Token: 0x0601C82D RID: 116781 RVA: 0x004062DB File Offset: 0x004044DB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B059 RID: 110681 RVA: 0x003DA048 File Offset: 0x003D8248
+		// Token: 0x0601C82E RID: 116782 RVA: 0x004062E4 File Offset: 0x004044E4
 		public static ITrapDefenseSpawnMonsterConditionGroup GetRootAsITrapDefenseSpawnMonsterConditionGroup(ByteBuffer _bb)
 		{
 			return ITrapDefenseSpawnMonsterConditionGroup.GetRootAsITrapDefenseSpawnMonsterConditionGroup(_bb, default(ITrapDefenseSpawnMonsterConditionGroup));
 		}
 
-		// Token: 0x0601B05A RID: 110682 RVA: 0x003DA064 File Offset: 0x003D8264
+		// Token: 0x0601C82F RID: 116783 RVA: 0x00406300 File Offset: 0x00404500
 		public static ITrapDefenseSpawnMonsterConditionGroup GetRootAsITrapDefenseSpawnMonsterConditionGroup(ByteBuffer _bb, ITrapDefenseSpawnMonsterConditionGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B05B RID: 110683 RVA: 0x003DA081 File Offset: 0x003D8281
+		// Token: 0x0601C830 RID: 116784 RVA: 0x0040631D File Offset: 0x0040451D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B05C RID: 110684 RVA: 0x003DA090 File Offset: 0x003D8290
+		// Token: 0x0601C831 RID: 116785 RVA: 0x0040632C File Offset: 0x0040452C
 		public ITrapDefenseSpawnMonsterConditionGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007EFA RID: 32506
-		// (get) Token: 0x0601B05D RID: 110685 RVA: 0x003DA0A0 File Offset: 0x003D82A0
+		// Token: 0x1700853B RID: 34107
+		// (get) Token: 0x0601C832 RID: 116786 RVA: 0x0040633C File Offset: 0x0040453C
 		public EConditionCount Type
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B05E RID: 110686 RVA: 0x003DA0DC File Offset: 0x003D82DC
+		// Token: 0x0601C833 RID: 116787 RVA: 0x00406378 File Offset: 0x00404578
 		public TTrapDefenseSpawnMonsterCondition ConditionsType(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return (TTrapDefenseSpawnMonsterCondition)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x17007EFB RID: 32507
-		// (get) Token: 0x0601B05F RID: 110687 RVA: 0x003DA11C File Offset: 0x003D831C
+		// Token: 0x1700853C RID: 34108
+		// (get) Token: 0x0601C834 RID: 116788 RVA: 0x004063B8 File Offset: 0x004045B8
 		public int ConditionsTypeLength
 		{
 			get
@@ -90,13 +90,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B060 RID: 110688 RVA: 0x003DA147 File Offset: 0x003D8347
+		// Token: 0x0601C835 RID: 116789 RVA: 0x004063E3 File Offset: 0x004045E3
 		public Span<TTrapDefenseSpawnMonsterCondition> GetConditionsTypeBytes()
 		{
 			return this.__p.__vector_as_span<TTrapDefenseSpawnMonsterCondition>(6, 1);
 		}
 
-		// Token: 0x0601B061 RID: 110689 RVA: 0x003DA158 File Offset: 0x003D8358
+		// Token: 0x0601C836 RID: 116790 RVA: 0x004063F4 File Offset: 0x004045F4
 		public TTrapDefenseSpawnMonsterCondition[] GetConditionsTypeArray()
 		{
 			int num = this.__p.__offset(6);
@@ -114,7 +114,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return array;
 		}
 
-		// Token: 0x0601B062 RID: 110690 RVA: 0x003DA1C4 File Offset: 0x003D83C4
+		// Token: 0x0601C837 RID: 116791 RVA: 0x00406460 File Offset: 0x00404660
 		public TTable? Conditions<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -125,8 +125,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x17007EFC RID: 32508
-		// (get) Token: 0x0601B063 RID: 110691 RVA: 0x003DA20C File Offset: 0x003D840C
+		// Token: 0x1700853D RID: 34109
+		// (get) Token: 0x0601C838 RID: 116792 RVA: 0x004064A8 File Offset: 0x004046A8
 		public int ConditionsLength
 		{
 			get
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B064 RID: 110692 RVA: 0x003DA237 File Offset: 0x003D8437
+		// Token: 0x0601C839 RID: 116793 RVA: 0x004064D3 File Offset: 0x004046D3
 		public static Offset<ITrapDefenseSpawnMonsterConditionGroup> CreateITrapDefenseSpawnMonsterConditionGroup(FlatBufferBuilder builder, EConditionCount Type = EConditionCount.All, VectorOffset Conditions_typeOffset = default(VectorOffset), VectorOffset ConditionsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -150,25 +150,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITrapDefenseSpawnMonsterConditionGroup.EndITrapDefenseSpawnMonsterConditionGroup(builder);
 		}
 
-		// Token: 0x0601B065 RID: 110693 RVA: 0x003DA25B File Offset: 0x003D845B
+		// Token: 0x0601C83A RID: 116794 RVA: 0x004064F7 File Offset: 0x004046F7
 		public static void StartITrapDefenseSpawnMonsterConditionGroup(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601B066 RID: 110694 RVA: 0x003DA264 File Offset: 0x003D8464
+		// Token: 0x0601C83B RID: 116795 RVA: 0x00406500 File Offset: 0x00404700
 		public static void AddType(FlatBufferBuilder builder, EConditionCount type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B067 RID: 110695 RVA: 0x003DA26F File Offset: 0x003D846F
+		// Token: 0x0601C83C RID: 116796 RVA: 0x0040650B File Offset: 0x0040470B
 		public static void AddConditionsType(FlatBufferBuilder builder, VectorOffset conditionsTypeOffset)
 		{
 			builder.AddOffset(1, conditionsTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601B068 RID: 110696 RVA: 0x003DA280 File Offset: 0x003D8480
+		// Token: 0x0601C83D RID: 116797 RVA: 0x0040651C File Offset: 0x0040471C
 		public static VectorOffset CreateConditionsTypeVector(FlatBufferBuilder builder, TTrapDefenseSpawnMonsterCondition[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B069 RID: 110697 RVA: 0x003DA2B7 File Offset: 0x003D84B7
+		// Token: 0x0601C83E RID: 116798 RVA: 0x00406553 File Offset: 0x00404753
 		public static VectorOffset CreateConditionsTypeVectorBlock(FlatBufferBuilder builder, TTrapDefenseSpawnMonsterCondition[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B06A RID: 110698 RVA: 0x003DA2D1 File Offset: 0x003D84D1
+		// Token: 0x0601C83F RID: 116799 RVA: 0x0040656D File Offset: 0x0040476D
 		public static VectorOffset CreateConditionsTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TTrapDefenseSpawnMonsterCondition> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B06B RID: 110699 RVA: 0x003DA2EF File Offset: 0x003D84EF
+		// Token: 0x0601C840 RID: 116800 RVA: 0x0040658B File Offset: 0x0040478B
 		public static VectorOffset CreateConditionsTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -203,19 +203,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B06C RID: 110700 RVA: 0x003DA308 File Offset: 0x003D8508
+		// Token: 0x0601C841 RID: 116801 RVA: 0x004065A4 File Offset: 0x004047A4
 		public static void StartConditionsTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601B06D RID: 110701 RVA: 0x003DA313 File Offset: 0x003D8513
+		// Token: 0x0601C842 RID: 116802 RVA: 0x004065AF File Offset: 0x004047AF
 		public static void AddConditions(FlatBufferBuilder builder, VectorOffset conditionsOffset)
 		{
 			builder.AddOffset(2, conditionsOffset.Value, 0);
 		}
 
-		// Token: 0x0601B06E RID: 110702 RVA: 0x003DA324 File Offset: 0x003D8524
+		// Token: 0x0601C843 RID: 116803 RVA: 0x004065C0 File Offset: 0x004047C0
 		public static VectorOffset CreateConditionsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -226,7 +226,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B06F RID: 110703 RVA: 0x003DA35B File Offset: 0x003D855B
+		// Token: 0x0601C844 RID: 116804 RVA: 0x004065F7 File Offset: 0x004047F7
 		public static VectorOffset CreateConditionsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -234,7 +234,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B070 RID: 110704 RVA: 0x003DA375 File Offset: 0x003D8575
+		// Token: 0x0601C845 RID: 116805 RVA: 0x00406611 File Offset: 0x00404811
 		public static VectorOffset CreateConditionsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -242,7 +242,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B071 RID: 110705 RVA: 0x003DA393 File Offset: 0x003D8593
+		// Token: 0x0601C846 RID: 116806 RVA: 0x0040662F File Offset: 0x0040482F
 		public static VectorOffset CreateConditionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -250,19 +250,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B072 RID: 110706 RVA: 0x003DA3AC File Offset: 0x003D85AC
+		// Token: 0x0601C847 RID: 116807 RVA: 0x00406648 File Offset: 0x00404848
 		public static void StartConditionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601B073 RID: 110707 RVA: 0x003DA3B7 File Offset: 0x003D85B7
+		// Token: 0x0601C848 RID: 116808 RVA: 0x00406653 File Offset: 0x00404853
 		public static Offset<ITrapDefenseSpawnMonsterConditionGroup> EndITrapDefenseSpawnMonsterConditionGroup(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrapDefenseSpawnMonsterConditionGroup>(builder.EndTable());
 		}
 
-		// Token: 0x0601B074 RID: 110708 RVA: 0x003DA3C4 File Offset: 0x003D85C4
+		// Token: 0x0601C849 RID: 116809 RVA: 0x00406660 File Offset: 0x00404860
 		public ITrapDefenseSpawnMonsterConditionGroupT UnPack()
 		{
 			ITrapDefenseSpawnMonsterConditionGroupT trapDefenseSpawnMonsterConditionGroupT = new ITrapDefenseSpawnMonsterConditionGroupT();
@@ -270,7 +270,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return trapDefenseSpawnMonsterConditionGroupT;
 		}
 
-		// Token: 0x0601B075 RID: 110709 RVA: 0x003DA3E0 File Offset: 0x003D85E0
+		// Token: 0x0601C84A RID: 116810 RVA: 0x0040667C File Offset: 0x0040487C
 		public void UnPackTo(ITrapDefenseSpawnMonsterConditionGroupT _o)
 		{
 			_o.Type = this.Type;
@@ -295,7 +295,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B076 RID: 110710 RVA: 0x003DA4FC File Offset: 0x003D86FC
+		// Token: 0x0601C84B RID: 116811 RVA: 0x00406798 File Offset: 0x00404998
 		public static Offset<ITrapDefenseSpawnMonsterConditionGroup> Pack(FlatBufferBuilder builder, ITrapDefenseSpawnMonsterConditionGroupT _o)
 		{
 			if (_o == null)
@@ -325,7 +325,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITrapDefenseSpawnMonsterConditionGroup.CreateITrapDefenseSpawnMonsterConditionGroup(builder, _o.Type, conditions_typeOffset, conditionsOffset);
 		}
 
-		// Token: 0x0400C69A RID: 50842
+		// Token: 0x0400D0C9 RID: 53449
 		private Table __p;
 	}
 }

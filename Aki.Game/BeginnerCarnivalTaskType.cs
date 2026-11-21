@@ -4,10 +4,10 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200119C RID: 4508
+// Token: 0x02000650 RID: 1616
 public class BeginnerCarnivalTaskType : UiPanelBase
 {
-	// Token: 0x06007767 RID: 30567 RVA: 0x0018EC90 File Offset: 0x0018CE90
+	// Token: 0x06004AFE RID: 19198 RVA: 0x00197874 File Offset: 0x00195A74
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class BeginnerCarnivalTaskType : UiPanelBase
 		};
 	}
 
-	// Token: 0x06007768 RID: 30568 RVA: 0x0018ED24 File Offset: 0x0018CF24
+	// Token: 0x06004AFF RID: 19199 RVA: 0x00197908 File Offset: 0x00195B08
 	public void RefreshItem(int typeId)
 	{
 		this.TypeId = typeId;
@@ -39,18 +39,18 @@ public class BeginnerCarnivalTaskType : UiPanelBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshBeginnerCarnivalTask, this.TypeId);
 	}
 
-	// Token: 0x06007769 RID: 30569 RVA: 0x0018EDE4 File Offset: 0x0018CFE4
+	// Token: 0x06004B00 RID: 19200 RVA: 0x001979C8 File Offset: 0x00195BC8
 	private void OnClickBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.BeginnerCarnivalTaskView, this.TypeId, null);
 	}
 
-	// Token: 0x0600776A RID: 30570 RVA: 0x0018EE01 File Offset: 0x0018D001
+	// Token: 0x06004B01 RID: 19201 RVA: 0x001979E5 File Offset: 0x00195BE5
 	protected override void OnBeforeDestroy()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.BeginnerCarnivalTaskTabRedDot, base.GetItem(3), this.TypeId);
 	}
 
-	// Token: 0x040036CF RID: 14031
+	// Token: 0x04003768 RID: 14184
 	private int TypeId;
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004C4 RID: 1220
+	// Token: 0x020004DA RID: 1242
 	public class ConfigKurotatoWeaponGroupAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001CA3 RID: 7331 RVA: 0x000FB0DC File Offset: 0x000F92DC
+		// Token: 0x06001D27 RID: 7463 RVA: 0x00101830 File Offset: 0x000FFA30
 		static ConfigKurotatoWeaponGroupAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKurotatoWeaponGroupAll.CreateStaticDefaultValue), new Action(ConfigKurotatoWeaponGroupAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001CA4 RID: 7332 RVA: 0x000FB0FC File Offset: 0x000F92FC
+		// Token: 0x06001D28 RID: 7464 RVA: 0x00101850 File Offset: 0x000FFA50
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKurotatoWeaponGroupAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001CA5 RID: 7333 RVA: 0x000FB17B File Offset: 0x000F937B
+		// Token: 0x06001D29 RID: 7465 RVA: 0x001018CF File Offset: 0x000FFACF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKurotatoWeaponGroupAll.LogPair = null;
 			ConfigKurotatoWeaponGroupAll.HandleId = 0;
 		}
 
-		// Token: 0x06001CA6 RID: 7334 RVA: 0x000FB189 File Offset: 0x000F9389
+		// Token: 0x06001D2A RID: 7466 RVA: 0x001018DD File Offset: 0x000FFADD
 		public static void Init()
 		{
 			ConfigKurotatoWeaponGroupAll.HandleId = ConfigCommon.InitDataStatement(ConfigKurotatoWeaponGroupAll.HandleId, "db_kurotato.db", "select BinData from `KurotatoWeaponGroup`");
 		}
 
-		// Token: 0x06001CA7 RID: 7335 RVA: 0x000FB1A4 File Offset: 0x000F93A4
+		// Token: 0x06001D2B RID: 7467 RVA: 0x001018F8 File Offset: 0x000FFAF8
 		[NullableContext(2)]
 		public static IReadOnlyList<KurotatoWeaponGroup> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002140 RID: 8512
+		// Token: 0x040021DA RID: 8666
 		private const string DB = "db_kurotato.db";
 
-		// Token: 0x04002141 RID: 8513
+		// Token: 0x040021DB RID: 8667
 		private const string FILE = "t.土豆兄弟_武器.xlsx";
 
-		// Token: 0x04002142 RID: 8514
+		// Token: 0x040021DC RID: 8668
 		private const string TABLE = "KurotatoWeaponGroup";
 
-		// Token: 0x04002143 RID: 8515
+		// Token: 0x040021DD RID: 8669
 		private const string COMMAND = "select BinData from `KurotatoWeaponGroup`";
 
-		// Token: 0x04002144 RID: 8516
+		// Token: 0x040021DE RID: 8670
 		private const string KEY_PREFIX = "KurotatoWeaponGroupAll";
 
-		// Token: 0x04002145 RID: 8517
+		// Token: 0x040021DF RID: 8671
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002146 RID: 8518
+		// Token: 0x040021E0 RID: 8672
 		private static int HandleId;
 	}
 }

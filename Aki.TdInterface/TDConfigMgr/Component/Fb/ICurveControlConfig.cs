@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D9C RID: 3484
+	// Token: 0x02000E98 RID: 3736
 	public class ICurveControlConfig
 	{
-		// Token: 0x06004F36 RID: 20278 RVA: 0x000C463E File Offset: 0x000C283E
-		[NullableContext(1)]
+		// Token: 0x0600545B RID: 21595 RVA: 0x000CFE8E File Offset: 0x000CE08E
 		public static ICurveControlConfig Create(ICurveControlConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019BB RID: 6587
-		// (get) Token: 0x06004F37 RID: 20279 RVA: 0x000C465D File Offset: 0x000C285D
+		// Token: 0x17001B26 RID: 6950
+		// (get) Token: 0x0600545C RID: 21596 RVA: 0x000CFEAD File Offset: 0x000CE0AD
 		public virtual ECurveControlType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D7D RID: 11645
+		// Token: 0x04003043 RID: 12355
 		private ICurveControlConfig Instance;
 	}
 }

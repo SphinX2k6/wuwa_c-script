@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001F16 RID: 7958
+// Token: 0x020013D8 RID: 5080
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStorySettleItemParams : IHonamiStorySettleItemParams
 {
-	// Token: 0x1700132F RID: 4911
-	// (get) Token: 0x0600F533 RID: 62771 RVA: 0x003B2A93 File Offset: 0x003B0C93
-	// (set) Token: 0x0600F534 RID: 62772 RVA: 0x003B2A9B File Offset: 0x003B0C9B
+	// Token: 0x17001359 RID: 4953
+	// (get) Token: 0x0600C952 RID: 51538 RVA: 0x003BE57F File Offset: 0x003BC77F
+	// (set) Token: 0x0600C953 RID: 51539 RVA: 0x003BE587 File Offset: 0x003BC787
 	public string Name { get; set; } = string.Empty;
 
-	// Token: 0x17001330 RID: 4912
-	// (get) Token: 0x0600F535 RID: 62773 RVA: 0x003B2AA4 File Offset: 0x003B0CA4
-	// (set) Token: 0x0600F536 RID: 62774 RVA: 0x003B2AAC File Offset: 0x003B0CAC
+	// Token: 0x1700135A RID: 4954
+	// (get) Token: 0x0600C954 RID: 51540 RVA: 0x003BE590 File Offset: 0x003BC790
+	// (set) Token: 0x0600C955 RID: 51541 RVA: 0x003BE598 File Offset: 0x003BC798
 	public string Value { get; set; } = string.Empty;
 }

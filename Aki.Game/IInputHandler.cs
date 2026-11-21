@@ -2,37 +2,37 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Input;
 
-// Token: 0x02000DDF RID: 3551
+// Token: 0x02000291 RID: 657
 [NullableContext(1)]
 public interface IInputHandler
 {
-	// Token: 0x06005537 RID: 21815
+	// Token: 0x060028C1 RID: 10433
 	int GetPriority();
 
-	// Token: 0x06005538 RID: 21816
+	// Token: 0x060028C2 RID: 10434
 	InputFilter GetInputFilter();
 
-	// Token: 0x06005539 RID: 21817
+	// Token: 0x060028C3 RID: 10435
 	void HandlePressEvent(EInputAction action, float time);
 
-	// Token: 0x0600553A RID: 21818
+	// Token: 0x060028C4 RID: 10436
 	void HandleReleaseEvent(EInputAction action, float time);
 
-	// Token: 0x0600553B RID: 21819
+	// Token: 0x060028C5 RID: 10437
 	void HandleHoldEvent(EInputAction action, float time);
 
-	// Token: 0x0600553C RID: 21820
+	// Token: 0x060028C6 RID: 10438
 	void HandleInputAxis(EInputAxis axis, float value);
 
-	// Token: 0x0600553D RID: 21821
+	// Token: 0x060028C7 RID: 10439
 	void ClearInputAxis(bool nextFrame);
 
-	// Token: 0x0600553E RID: 21822
+	// Token: 0x060028C8 RID: 10440
 	void ClearSingleAxisInput(EInputAxis axis, bool nextFrame);
 
-	// Token: 0x0600553F RID: 21823
+	// Token: 0x060028C9 RID: 10441
 	void PreProcessInput(float deltaTime, bool gamePaused);
 
-	// Token: 0x06005540 RID: 21824
+	// Token: 0x060028CA RID: 10442
 	void PostProcessInput(float deltaTime, bool gamePaused);
 }

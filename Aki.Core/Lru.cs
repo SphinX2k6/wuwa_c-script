@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public class Lru<TK, TV> where TV : class
 {
-	// Token: 0x06000252 RID: 594 RVA: 0x0000CFA4 File Offset: 0x0000B1A4
+	// Token: 0x06000253 RID: 595 RVA: 0x0000CC88 File Offset: 0x0000AE88
 	public Lru(int capacity, [Nullable(new byte[]
 	{
 		2,
@@ -40,9 +40,9 @@ public class Lru<TK, TV> where TV : class
 		this.DecayRate = 1f - 1f / (float)capacity;
 	}
 
-	// Token: 0x1700004B RID: 75
-	// (get) Token: 0x06000253 RID: 595 RVA: 0x0000D04F File Offset: 0x0000B24F
-	// (set) Token: 0x06000254 RID: 596 RVA: 0x0000D057 File Offset: 0x0000B257
+	// Token: 0x1700004A RID: 74
+	// (get) Token: 0x06000254 RID: 596 RVA: 0x0000CD33 File Offset: 0x0000AF33
+	// (set) Token: 0x06000255 RID: 597 RVA: 0x0000CD3B File Offset: 0x0000AF3B
 	public bool Enable
 	{
 		get
@@ -59,8 +59,8 @@ public class Lru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700004C RID: 76
-	// (get) Token: 0x06000255 RID: 597 RVA: 0x0000D06F File Offset: 0x0000B26F
+	// Token: 0x1700004B RID: 75
+	// (get) Token: 0x06000256 RID: 598 RVA: 0x0000CD53 File Offset: 0x0000AF53
 	public int Size
 	{
 		get
@@ -69,9 +69,9 @@ public class Lru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700004D RID: 77
-	// (get) Token: 0x06000256 RID: 598 RVA: 0x0000D077 File Offset: 0x0000B277
-	// (set) Token: 0x06000257 RID: 599 RVA: 0x0000D080 File Offset: 0x0000B280
+	// Token: 0x1700004C RID: 76
+	// (get) Token: 0x06000257 RID: 599 RVA: 0x0000CD5B File Offset: 0x0000AF5B
+	// (set) Token: 0x06000258 RID: 600 RVA: 0x0000CD64 File Offset: 0x0000AF64
 	public int Capacity
 	{
 		get
@@ -101,8 +101,8 @@ public class Lru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700004E RID: 78
-	// (get) Token: 0x06000258 RID: 600 RVA: 0x0000D116 File Offset: 0x0000B316
+	// Token: 0x1700004D RID: 77
+	// (get) Token: 0x06000259 RID: 601 RVA: 0x0000CDFA File Offset: 0x0000AFFA
 	public float HitRate
 	{
 		get
@@ -115,8 +115,8 @@ public class Lru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700004F RID: 79
-	// (get) Token: 0x06000259 RID: 601 RVA: 0x0000D13F File Offset: 0x0000B33F
+	// Token: 0x1700004E RID: 78
+	// (get) Token: 0x0600025A RID: 602 RVA: 0x0000CE23 File Offset: 0x0000B023
 	public float UsedAvg
 	{
 		get
@@ -129,8 +129,8 @@ public class Lru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x17000050 RID: 80
-	// (get) Token: 0x0600025A RID: 602 RVA: 0x0000D15F File Offset: 0x0000B35F
+	// Token: 0x1700004F RID: 79
+	// (get) Token: 0x0600025B RID: 603 RVA: 0x0000CE43 File Offset: 0x0000B043
 	public float ThresholdUsedRate
 	{
 		get
@@ -143,7 +143,7 @@ public class Lru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x0600025B RID: 603 RVA: 0x0000D180 File Offset: 0x0000B380
+	// Token: 0x0600025C RID: 604 RVA: 0x0000CE64 File Offset: 0x0000B064
 	[return: Nullable(2)]
 	public TV Create(TK key)
 	{
@@ -173,7 +173,7 @@ public class Lru<TK, TV> where TV : class
 		return tv;
 	}
 
-	// Token: 0x0600025C RID: 604 RVA: 0x0000D22C File Offset: 0x0000B42C
+	// Token: 0x0600025D RID: 605 RVA: 0x0000CF10 File Offset: 0x0000B110
 	[return: Nullable(2)]
 	public TV Get(TK key)
 	{
@@ -217,7 +217,7 @@ public class Lru<TK, TV> where TV : class
 		return lruNode.Value;
 	}
 
-	// Token: 0x0600025D RID: 605 RVA: 0x0000D374 File Offset: 0x0000B574
+	// Token: 0x0600025E RID: 606 RVA: 0x0000D058 File Offset: 0x0000B258
 	public int GetCount(TK key)
 	{
 		if (!this.EnableInternal || !LruConstants.IsLruEnabledGlobal)
@@ -232,7 +232,7 @@ public class Lru<TK, TV> where TV : class
 		return hashSet.Count;
 	}
 
-	// Token: 0x0600025E RID: 606 RVA: 0x0000D3AC File Offset: 0x0000B5AC
+	// Token: 0x0600025F RID: 607 RVA: 0x0000D090 File Offset: 0x0000B290
 	public bool Put(TV value)
 	{
 		if (value == null)
@@ -276,7 +276,7 @@ public class Lru<TK, TV> where TV : class
 		return true;
 	}
 
-	// Token: 0x0600025F RID: 607 RVA: 0x0000D498 File Offset: 0x0000B698
+	// Token: 0x06000260 RID: 608 RVA: 0x0000D17C File Offset: 0x0000B37C
 	public bool RemoveExternal(TV value)
 	{
 		if (value == null)
@@ -293,7 +293,7 @@ public class Lru<TK, TV> where TV : class
 		return true;
 	}
 
-	// Token: 0x06000260 RID: 608 RVA: 0x0000D4E8 File Offset: 0x0000B6E8
+	// Token: 0x06000261 RID: 609 RVA: 0x0000D1CC File Offset: 0x0000B3CC
 	public void Clear()
 	{
 		while (this.SizeInternal > 0)
@@ -307,7 +307,7 @@ public class Lru<TK, TV> where TV : class
 		this.MissCount = 0f;
 	}
 
-	// Token: 0x06000261 RID: 609 RVA: 0x0000D538 File Offset: 0x0000B738
+	// Token: 0x06000262 RID: 610 RVA: 0x0000D21C File Offset: 0x0000B41C
 	private void AddToFront(LruNode<TK, TV> node)
 	{
 		node.Prev = null;
@@ -329,7 +329,7 @@ public class Lru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x06000262 RID: 610 RVA: 0x0000D5B4 File Offset: 0x0000B7B4
+	// Token: 0x06000263 RID: 611 RVA: 0x0000D298 File Offset: 0x0000B498
 	private void RemoveNode(LruNode<TK, TV> node)
 	{
 		if (node.Prev != null)
@@ -358,7 +358,7 @@ public class Lru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x06000263 RID: 611 RVA: 0x0000D658 File Offset: 0x0000B858
+	// Token: 0x06000264 RID: 612 RVA: 0x0000D33C File Offset: 0x0000B53C
 	private void RemoveTail()
 	{
 		if (this.Tail == null)
@@ -381,25 +381,25 @@ public class Lru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x040001CB RID: 459
+	// Token: 0x040001CD RID: 461
 	private const int USED_THRESHOLD = 3;
 
-	// Token: 0x040001CC RID: 460
+	// Token: 0x040001CE RID: 462
 	private bool EnableInternal = true;
 
-	// Token: 0x040001CD RID: 461
+	// Token: 0x040001CF RID: 463
 	private int CapacityInternal;
 
-	// Token: 0x040001CE RID: 462
+	// Token: 0x040001D0 RID: 464
 	private float DecayRate;
 
-	// Token: 0x040001CF RID: 463
+	// Token: 0x040001D1 RID: 465
 	private readonly Dictionary<TK, HashSet<LruNode<TK, TV>>> Table = new Dictionary<TK, HashSet<LruNode<TK, TV>>>();
 
-	// Token: 0x040001D0 RID: 464
+	// Token: 0x040001D2 RID: 466
 	private readonly WeakMap<TV, LruNode<TK, TV>> Cache = new WeakMap<TV, LruNode<TK, TV>>();
 
-	// Token: 0x040001D1 RID: 465
+	// Token: 0x040001D3 RID: 467
 	[Nullable(new byte[]
 	{
 		2,
@@ -408,7 +408,7 @@ public class Lru<TK, TV> where TV : class
 	})]
 	private LruNode<TK, TV> Head;
 
-	// Token: 0x040001D2 RID: 466
+	// Token: 0x040001D4 RID: 468
 	[Nullable(new byte[]
 	{
 		2,
@@ -417,22 +417,22 @@ public class Lru<TK, TV> where TV : class
 	})]
 	private LruNode<TK, TV> Tail;
 
-	// Token: 0x040001D3 RID: 467
+	// Token: 0x040001D5 RID: 469
 	private int SizeInternal;
 
-	// Token: 0x040001D4 RID: 468
+	// Token: 0x040001D6 RID: 470
 	private float HitCount;
 
-	// Token: 0x040001D5 RID: 469
+	// Token: 0x040001D7 RID: 471
 	private float MissCount;
 
-	// Token: 0x040001D6 RID: 470
+	// Token: 0x040001D8 RID: 472
 	private int UsedCount;
 
-	// Token: 0x040001D7 RID: 471
+	// Token: 0x040001D9 RID: 473
 	private int ThresholdUsedCount;
 
-	// Token: 0x040001D8 RID: 472
+	// Token: 0x040001DA RID: 474
 	[Nullable(new byte[]
 	{
 		2,
@@ -441,7 +441,7 @@ public class Lru<TK, TV> where TV : class
 	})]
 	private readonly Func<TK, TV> Creator;
 
-	// Token: 0x040001D9 RID: 473
+	// Token: 0x040001DB RID: 475
 	[Nullable(new byte[]
 	{
 		2,

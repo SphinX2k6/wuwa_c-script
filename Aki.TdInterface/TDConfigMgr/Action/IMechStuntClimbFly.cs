@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BD0 RID: 7120
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DB9 RID: 7609
 	public class IMechStuntClimbFly : IMechStuntConfigType
 	{
-		// Token: 0x06009891 RID: 39057 RVA: 0x0015F9E8 File Offset: 0x0015DBE8
+		// Token: 0x0600A19F RID: 41375 RVA: 0x001725A8 File Offset: 0x001707A8
 		private IMechStuntClimbFly_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009892 RID: 39058 RVA: 0x0015FA20 File Offset: 0x0015DC20
+		// Token: 0x0600A1A0 RID: 41376 RVA: 0x001725E0 File Offset: 0x001707E0
 		public static IMechStuntClimbFly Create([Nullable(2)] IMechStuntClimbFly instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009893 RID: 39059 RVA: 0x0015FA33 File Offset: 0x0015DC33
+		// Token: 0x0600A1A1 RID: 41377 RVA: 0x001725F3 File Offset: 0x001707F3
 		public static IMechStuntClimbFly CreateFromSetValue([Nullable(2)] IMechStuntClimbFly_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009894 RID: 39060 RVA: 0x0015FA46 File Offset: 0x0015DC46
+		// Token: 0x0600A1A2 RID: 41378 RVA: 0x00172606 File Offset: 0x00170806
 		public new IMechStuntClimbFly_SetValue ToSetValue()
 		{
 			return new IMechStuntClimbFly_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FE7 RID: 12263
-		// (get) Token: 0x06009895 RID: 39061 RVA: 0x0015FA59 File Offset: 0x0015DC59
-		// (set) Token: 0x06009896 RID: 39062 RVA: 0x0015FA84 File Offset: 0x0015DC84
+		// Token: 0x17003248 RID: 12872
+		// (get) Token: 0x0600A1A3 RID: 41379 RVA: 0x00172619 File Offset: 0x00170819
+		// (set) Token: 0x0600A1A4 RID: 41380 RVA: 0x00172644 File Offset: 0x00170844
 		public override EMechStuntType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D0A RID: 23818
+		// Token: 0x04006223 RID: 25123
 		[Nullable(2)]
 		protected new IMechStuntClimbFly FbInstance;
 
-		// Token: 0x04005D0B RID: 23819
+		// Token: 0x04006224 RID: 25124
 		[Nullable(2)]
 		protected new IMechStuntClimbFly_SetValue PocoInterface;
 	}

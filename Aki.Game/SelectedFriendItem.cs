@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020017AE RID: 6062
+// Token: 0x02000C67 RID: 3175
 [NullableContext(2)]
 [Nullable(0)]
 public class SelectedFriendItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600B0EA RID: 45290 RVA: 0x0028101C File Offset: 0x0027F21C
+	// Token: 0x060084D2 RID: 34002 RVA: 0x0028B5B4 File Offset: 0x002897B4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -46,14 +46,14 @@ public class SelectedFriendItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B0EB RID: 45291 RVA: 0x00281188 File Offset: 0x0027F388
+	// Token: 0x060084D3 RID: 34003 RVA: 0x0028B720 File Offset: 0x00289920
 	[NullableContext(1)]
 	public void BindOnClicked(Action<int> onClickedCallback)
 	{
 		this.OnClickedCallback = onClickedCallback;
 	}
 
-	// Token: 0x0600B0EC RID: 45292 RVA: 0x00281194 File Offset: 0x0027F394
+	// Token: 0x060084D4 RID: 34004 RVA: 0x0028B72C File Offset: 0x0028992C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SelectedFriendItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -64,7 +64,7 @@ public class SelectedFriendItem : GridProxyAbstract<int>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B0ED RID: 45293 RVA: 0x002811D7 File Offset: 0x0027F3D7
+	// Token: 0x060084D5 RID: 34005 RVA: 0x0028B76F File Offset: 0x0028996F
 	protected override void OnBeforeDestroy()
 	{
 		this.OnClickedCallback = null;
@@ -76,7 +76,7 @@ public class SelectedFriendItem : GridProxyAbstract<int>
 		titleItem.Destroy(null);
 	}
 
-	// Token: 0x0600B0EE RID: 45294 RVA: 0x002811F1 File Offset: 0x0027F3F1
+	// Token: 0x060084D6 RID: 34006 RVA: 0x0028B789 File Offset: 0x00289989
 	public override void Refresh(int playerId, bool isSelected, int gridIndex)
 	{
 		this.FriendData = FriendModel.Instance.GetFriendById(playerId);
@@ -92,7 +92,7 @@ public class SelectedFriendItem : GridProxyAbstract<int>
 		this.RefreshPlayerTitle();
 	}
 
-	// Token: 0x0600B0EF RID: 45295 RVA: 0x00281234 File Offset: 0x0027F434
+	// Token: 0x060084D7 RID: 34007 RVA: 0x0028B7CC File Offset: 0x002899CC
 	private void RefreshRoleTexture()
 	{
 		int playerHeadPhoto = this.FriendData.PlayerHeadPhoto;
@@ -104,7 +104,7 @@ public class SelectedFriendItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600B0F0 RID: 45296 RVA: 0x00281274 File Offset: 0x0027F474
+	// Token: 0x060084D8 RID: 34008 RVA: 0x0028B80C File Offset: 0x00289A0C
 	private void RefreshName()
 	{
 		UUIText text = base.GetText(2);
@@ -132,7 +132,7 @@ public class SelectedFriendItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600B0F1 RID: 45297 RVA: 0x002812F0 File Offset: 0x0027F4F0
+	// Token: 0x060084D9 RID: 34009 RVA: 0x0028B888 File Offset: 0x00289A88
 	private void RefreshLevel()
 	{
 		int playerLevel = this.FriendData.PlayerLevel;
@@ -140,7 +140,7 @@ public class SelectedFriendItem : GridProxyAbstract<int>
 		LguiUtil.Instance.SetLocalText(text, "LevelShow", new <>z__ReadOnlySingleElementList<object>(playerLevel));
 	}
 
-	// Token: 0x0600B0F2 RID: 45298 RVA: 0x0028132C File Offset: 0x0027F52C
+	// Token: 0x060084DA RID: 34010 RVA: 0x0028B8C4 File Offset: 0x00289AC4
 	private void RefreshOnlineState()
 	{
 		bool playerIsOnline = this.FriendData.PlayerIsOnline;
@@ -162,13 +162,13 @@ public class SelectedFriendItem : GridProxyAbstract<int>
 		LguiUtil.Instance.SetLocalText(text, offlineTimeString, new <>z__ReadOnlySingleElementList<object>(offlineDay));
 	}
 
-	// Token: 0x0600B0F3 RID: 45299 RVA: 0x002813C9 File Offset: 0x0027F5C9
+	// Token: 0x060084DB RID: 34011 RVA: 0x0028B961 File Offset: 0x00289B61
 	private void RefreshShieldState()
 	{
 		base.GetItem(6).SetUIActive(false);
 	}
 
-	// Token: 0x0600B0F4 RID: 45300 RVA: 0x002813D8 File Offset: 0x0027F5D8
+	// Token: 0x060084DC RID: 34012 RVA: 0x0028B970 File Offset: 0x00289B70
 	private void RefreshPlayerTitle()
 	{
 		PlayerTitleItem titleItem = this.TitleItem;
@@ -179,7 +179,7 @@ public class SelectedFriendItem : GridProxyAbstract<int>
 		titleItem.Refresh(new int?(this.FriendData.PlayerTitleId), new int?(this.FriendData.PlayerTitleStarLevel), new int?(this.FriendData.PlayerSex));
 	}
 
-	// Token: 0x0600B0F5 RID: 45301 RVA: 0x00281425 File Offset: 0x0027F625
+	// Token: 0x060084DD RID: 34013 RVA: 0x0028B9BD File Offset: 0x00289BBD
 	private void OnClickSelectedButton()
 	{
 		Action<int> onClickedCallback = this.OnClickedCallback;
@@ -190,41 +190,41 @@ public class SelectedFriendItem : GridProxyAbstract<int>
 		onClickedCallback(this.FriendData.PlayerId);
 	}
 
-	// Token: 0x0400503D RID: 20541
+	// Token: 0x040050E7 RID: 20711
 	private FriendData FriendData;
 
-	// Token: 0x0400503E RID: 20542
+	// Token: 0x040050E8 RID: 20712
 	private PlayerTitleItem TitleItem;
 
-	// Token: 0x0400503F RID: 20543
+	// Token: 0x040050E9 RID: 20713
 	private Action<int> OnClickedCallback;
 
-	// Token: 0x02007DC6 RID: 32198
+	// Token: 0x02006F4C RID: 28492
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x040292D0 RID: 168656
+		// Token: 0x040245FB RID: 148987
 		public const int SelectedButton = 0;
 
-		// Token: 0x040292D1 RID: 168657
+		// Token: 0x040245FC RID: 148988
 		public const int RoleTexture = 1;
 
-		// Token: 0x040292D2 RID: 168658
+		// Token: 0x040245FD RID: 148989
 		public const int NameText = 2;
 
-		// Token: 0x040292D3 RID: 168659
+		// Token: 0x040245FE RID: 148990
 		public const int RemarkText = 3;
 
-		// Token: 0x040292D4 RID: 168660
+		// Token: 0x040245FF RID: 148991
 		public const int OnlineText = 4;
 
-		// Token: 0x040292D5 RID: 168661
+		// Token: 0x04024600 RID: 148992
 		public const int LevelText = 5;
 
-		// Token: 0x040292D6 RID: 168662
+		// Token: 0x04024601 RID: 148993
 		public const int ShieldItem = 6;
 
-		// Token: 0x040292D7 RID: 168663
+		// Token: 0x04024602 RID: 148994
 		public const int PlayerTitleItem = 7;
 	}
 }

@@ -4,14 +4,14 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200168A RID: 5770
+	// Token: 0x020017FF RID: 6143
 	[JsonConverter(typeof(EResetPosTypeJsonConverter))]
 	[EnumExtensions]
 	public enum EResetPosType
 	{
-		// Token: 0x04004D55 RID: 19797
+		// Token: 0x04005160 RID: 20832
 		PosEntity,
-		// Token: 0x04004D56 RID: 19798
+		// Token: 0x04005161 RID: 20833
 		ResetPoint
 	}
 }

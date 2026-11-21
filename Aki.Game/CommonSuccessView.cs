@@ -4,23 +4,23 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020019AE RID: 6574
+// Token: 0x02000E6C RID: 3692
 public class CommonSuccessView : UiViewBase
 {
-	// Token: 0x0600BFBE RID: 49086 RVA: 0x002B4457 File Offset: 0x002B2657
+	// Token: 0x060093C8 RID: 37832 RVA: 0x002BF3E7 File Offset: 0x002BD5E7
 	[NullableContext(1)]
 	public CommonSuccessView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600BFBF RID: 49087 RVA: 0x002B4460 File Offset: 0x002B2660
+	// Token: 0x060093C9 RID: 37833 RVA: 0x002BF3F0 File Offset: 0x002BD5F0
 	protected override void OnBeforeCreate()
 	{
 		this.Data = ((this.OpenParam as CommonSuccessData) ?? new CommonSuccessData());
 		this.SetAudio();
 	}
 
-	// Token: 0x0600BFC0 RID: 49088 RVA: 0x002B4484 File Offset: 0x002B2684
+	// Token: 0x060093CA RID: 37834 RVA: 0x002BF414 File Offset: 0x002BD614
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class CommonSuccessView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600BFC1 RID: 49089 RVA: 0x002B452D File Offset: 0x002B272D
+	// Token: 0x060093CB RID: 37835 RVA: 0x002BF4BD File Offset: 0x002BD6BD
 	private void CloseClick()
 	{
 		if (this.Data.GetNeedDelay())
@@ -47,14 +47,14 @@ public class CommonSuccessView : UiViewBase
 		this.CloseView();
 	}
 
-	// Token: 0x0600BFC2 RID: 49090 RVA: 0x002B4543 File Offset: 0x002B2743
+	// Token: 0x060093CC RID: 37836 RVA: 0x002BF4D3 File Offset: 0x002BD6D3
 	protected override void OnAfterPlayStartSequence()
 	{
 		this.UiViewSequence.PlaySequencePurely("Xunhuan", false, false);
 		this.DelayClose();
 	}
 
-	// Token: 0x0600BFC3 RID: 49091 RVA: 0x002B455D File Offset: 0x002B275D
+	// Token: 0x060093CD RID: 37837 RVA: 0x002BF4ED File Offset: 0x002BD6ED
 	protected override void OnAfterShow()
 	{
 		this.SetTitleText();
@@ -62,7 +62,7 @@ public class CommonSuccessView : UiViewBase
 		this.SetClickText();
 	}
 
-	// Token: 0x0600BFC4 RID: 49092 RVA: 0x002B4574 File Offset: 0x002B2774
+	// Token: 0x060093CE RID: 37838 RVA: 0x002BF504 File Offset: 0x002BD704
 	private void SetAudio()
 	{
 		string audioPath = this.Data.GetAudioPath();
@@ -72,7 +72,7 @@ public class CommonSuccessView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600BFC5 RID: 49093 RVA: 0x002B459C File Offset: 0x002B279C
+	// Token: 0x060093CF RID: 37839 RVA: 0x002BF52C File Offset: 0x002BD72C
 	private void SetTitleText()
 	{
 		string titleText = this.Data.GetTitleText();
@@ -83,7 +83,7 @@ public class CommonSuccessView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600BFC6 RID: 49094 RVA: 0x002B45D8 File Offset: 0x002B27D8
+	// Token: 0x060093D0 RID: 37840 RVA: 0x002BF568 File Offset: 0x002BD768
 	private void SetSubTitleText()
 	{
 		string subTitleText = this.Data.GetSubTitleText();
@@ -97,7 +97,7 @@ public class CommonSuccessView : UiViewBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x0600BFC7 RID: 49095 RVA: 0x002B4624 File Offset: 0x002B2824
+	// Token: 0x060093D1 RID: 37841 RVA: 0x002BF5B4 File Offset: 0x002BD7B4
 	private void SetClickText()
 	{
 		string clickText = this.Data.GetClickText();
@@ -109,7 +109,7 @@ public class CommonSuccessView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600BFC8 RID: 49096 RVA: 0x002B466B File Offset: 0x002B286B
+	// Token: 0x060093D2 RID: 37842 RVA: 0x002BF5FB File Offset: 0x002BD7FB
 	private void DelayClose()
 	{
 		if (this.Data.GetNeedDelay())
@@ -121,7 +121,7 @@ public class CommonSuccessView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600BFC9 RID: 49097 RVA: 0x002B46A4 File Offset: 0x002B28A4
+	// Token: 0x060093D3 RID: 37843 RVA: 0x002BF634 File Offset: 0x002BD834
 	private void CloseView()
 	{
 		Action clickFunction = this.Data.GetClickFunction();
@@ -133,7 +133,7 @@ public class CommonSuccessView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600BFCA RID: 49098 RVA: 0x002B46D4 File Offset: 0x002B28D4
+	// Token: 0x060093D4 RID: 37844 RVA: 0x002BF664 File Offset: 0x002BD864
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TimerId != null)
@@ -143,29 +143,29 @@ public class CommonSuccessView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400563C RID: 22076
+	// Token: 0x040056EE RID: 22254
 	[Nullable(2)]
 	private CommonSuccessData Data;
 
-	// Token: 0x0400563D RID: 22077
+	// Token: 0x040056EF RID: 22255
 	private static readonly int DelayTime = 1500;
 
-	// Token: 0x0400563E RID: 22078
+	// Token: 0x040056F0 RID: 22256
 	[Nullable(2)]
 	protected TimerHandle TimerId;
 
-	// Token: 0x02007ED5 RID: 32469
+	// Token: 0x02007064 RID: 28772
 	private enum ECommonSuccessViewDefine
 	{
-		// Token: 0x04029728 RID: 169768
+		// Token: 0x04024A65 RID: 150117
 		TitleText,
-		// Token: 0x04029729 RID: 169769
+		// Token: 0x04024A66 RID: 150118
 		SubTitleText,
-		// Token: 0x0402972A RID: 169770
+		// Token: 0x04024A67 RID: 150119
 		ClickText,
-		// Token: 0x0402972B RID: 169771
+		// Token: 0x04024A68 RID: 150120
 		CloseButton,
-		// Token: 0x0402972C RID: 169772
+		// Token: 0x04024A69 RID: 150121
 		ClickItem
 	}
 }

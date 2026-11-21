@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001046 RID: 4166
+// Token: 0x020004FA RID: 1274
 public class GuessJokerSettleStage : GuessJokerStageBase
 {
-	// Token: 0x06006AE0 RID: 27360 RVA: 0x0015824F File Offset: 0x0015644F
+	// Token: 0x06003E75 RID: 15989 RVA: 0x00160B77 File Offset: 0x0015ED77
 	[NullableContext(1)]
 	public GuessJokerSettleStage(GuessJokerStageFsm stageFsm) : base(stageFsm)
 	{
 	}
 
-	// Token: 0x06006AE1 RID: 27361 RVA: 0x00158258 File Offset: 0x00156458
+	// Token: 0x06003E76 RID: 15990 RVA: 0x00160B80 File Offset: 0x0015ED80
 	protected override void OnEnter()
 	{
 		bool flag = GuessJokerGamePlayModel.Instance.GetWinner() == EGuessJokerPlayerType.Ai;

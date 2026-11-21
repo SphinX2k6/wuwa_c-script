@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -9,14 +8,14 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using Google.Protobuf;
 
-// Token: 0x020013B0 RID: 5040
+// Token: 0x02000864 RID: 2148
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBase
 {
-	// Token: 0x17000BE6 RID: 3046
-	// (get) Token: 0x06008D9B RID: 36251 RVA: 0x001E8605 File Offset: 0x001E6805
+	// Token: 0x17000C06 RID: 3078
+	// (get) Token: 0x06006131 RID: 24881 RVA: 0x001F1259 File Offset: 0x001EF459
 	[Nullable(2)]
 	public ActivityNewPlayerSupportActivityV2Data ActivityData
 	{
@@ -27,7 +26,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		}
 	}
 
-	// Token: 0x06008D9C RID: 36252 RVA: 0x001E8610 File Offset: 0x001E6810
+	// Token: 0x06006132 RID: 24882 RVA: 0x001F1264 File Offset: 0x001EF464
 	public static void ReportEntranceClick(ENewPlayerSupportEntrance entrance)
 	{
 		NewPlayerSupportEntranceClickLogEvent newPlayerSupportEntranceClickLogEvent = new NewPlayerSupportEntranceClickLogEvent();
@@ -35,7 +34,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		LogReportController.Instance.LogReport(newPlayerSupportEntranceClickLogEvent);
 	}
 
-	// Token: 0x06008D9D RID: 36253 RVA: 0x001E8638 File Offset: 0x001E6838
+	// Token: 0x06006133 RID: 24883 RVA: 0x001F128C File Offset: 0x001EF48C
 	public static PayShopJumpParam ResolveWeekCardShopJumpParam()
 	{
 		List<int> payShopTabIdList = PayShopModel.Instance.GetPayShopTabIdList(PayShopDefine.EPayShopTabType.NewPlayerShop, true);
@@ -54,51 +53,51 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		};
 	}
 
-	// Token: 0x06008D9E RID: 36254 RVA: 0x001E8693 File Offset: 0x001E6893
+	// Token: 0x06006134 RID: 24884 RVA: 0x001F12E7 File Offset: 0x001EF4E7
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.NewPlayerSupportActivityTrialRoleUpdateV2Notify, new Action<IMessage, Net.CallbackStatus>(this.OnTrialRoleUpdateNotify));
 		Net.Instance.Register(ENotifyMessageId.NewPlayerSupportV2GachaRoleUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnGachaRoleUpdateNotify));
 	}
 
-	// Token: 0x06008D9F RID: 36255 RVA: 0x001E86CD File Offset: 0x001E68CD
+	// Token: 0x06006135 RID: 24885 RVA: 0x001F1321 File Offset: 0x001EF521
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.NewPlayerSupportActivityTrialRoleUpdateV2Notify);
 		Net.Instance.UnRegister(ENotifyMessageId.NewPlayerSupportV2GachaRoleUpdateNotify);
 	}
 
-	// Token: 0x06008DA0 RID: 36256 RVA: 0x001E86EF File Offset: 0x001E68EF
+	// Token: 0x06006136 RID: 24886 RVA: 0x001F1343 File Offset: 0x001EF543
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06008DA1 RID: 36257 RVA: 0x001E86F1 File Offset: 0x001E68F1
+	// Token: 0x06006137 RID: 24887 RVA: 0x001F1345 File Offset: 0x001EF545
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_NewcomerPrivilege";
 	}
 
-	// Token: 0x06008DA2 RID: 36258 RVA: 0x001E86F8 File Offset: 0x001E68F8
+	// Token: 0x06006138 RID: 24888 RVA: 0x001F134C File Offset: 0x001EF54C
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewNewPlayerSupportActivityV2();
 	}
 
-	// Token: 0x06008DA3 RID: 36259 RVA: 0x001E86FF File Offset: 0x001E68FF
+	// Token: 0x06006139 RID: 24889 RVA: 0x001F1353 File Offset: 0x001EF553
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.ActivityDataInternal = new ActivityNewPlayerSupportActivityV2Data();
 		return this.ActivityDataInternal;
 	}
 
-	// Token: 0x06008DA4 RID: 36260 RVA: 0x001E8712 File Offset: 0x001E6912
+	// Token: 0x0600613A RID: 24890 RVA: 0x001F1366 File Offset: 0x001EF566
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return UiManager.Instance.IsViewOpen(EUiViewName.ActivityNewPlayerSupportTrialRoleView);
 	}
 
-	// Token: 0x06008DA5 RID: 36261 RVA: 0x001E8724 File Offset: 0x001E6924
+	// Token: 0x0600613B RID: 24891 RVA: 0x001F1378 File Offset: 0x001EF578
 	public void RequestTrialRoleLvUp(int trialRoleId)
 	{
 		NewPlayerSupportTrialRoleLvUpV2Request newPlayerSupportTrialRoleLvUpV2Request = NewPlayerSupportTrialRoleLvUpV2Request.Create();
@@ -112,7 +111,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 			}
 			if (newPlayerSupportTrialRoleLvUpV2Response.Code != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(newPlayerSupportTrialRoleLvUpV2Response.Code, 18194, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(newPlayerSupportTrialRoleLvUpV2Response.Code, 25380, null, true, true);
 				return;
 			}
 			ActivityNewPlayerSupportActivityV2Data activityData = this.ActivityData;
@@ -124,7 +123,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		}, 0);
 	}
 
-	// Token: 0x06008DA6 RID: 36262 RVA: 0x001E875C File Offset: 0x001E695C
+	// Token: 0x0600613C RID: 24892 RVA: 0x001F13B0 File Offset: 0x001EF5B0
 	public void RequestSetCurUseTrialRole(int trialRoleId, Action<int> callback)
 	{
 		NewPlayerSupportSetCurUseTrialRoleV2Request newPlayerSupportSetCurUseTrialRoleV2Request = NewPlayerSupportSetCurUseTrialRoleV2Request.Create();
@@ -138,7 +137,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 			}
 			if (newPlayerSupportSetCurUseTrialRoleV2Response.Code != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(newPlayerSupportSetCurUseTrialRoleV2Response.Code, 28224, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(newPlayerSupportSetCurUseTrialRoleV2Response.Code, 19230, null, true, true);
 				return;
 			}
 			ActivityNewPlayerSupportActivityV2Data activityData = this.ActivityData;
@@ -150,7 +149,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		}, 0);
 	}
 
-	// Token: 0x06008DA7 RID: 36263 RVA: 0x001E87A8 File Offset: 0x001E69A8
+	// Token: 0x0600613D RID: 24893 RVA: 0x001F13FC File Offset: 0x001EF5FC
 	public void OpenTrialRoleView(int? selectedGroupId = null)
 	{
 		NewPlayerSupportTrialRoleViewModel newPlayerSupportTrialRoleViewModel = new NewPlayerSupportTrialRoleViewModel(ETrialRoleType.NewbieSupportTrialV2, ConfigCommonParamById.GetStringConfig("NewPlayerSupportTrialRoleIcon") ?? "", ConfigCommonParamById.GetStringConfig("NewPlayerSupportTrialRoleTitle") ?? "", 465, selectedGroupId);
@@ -160,7 +159,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		UiManager.Instance.OpenView(EUiViewName.ActivityNewPlayerSupportTrialRoleView, newPlayerSupportTrialRoleViewModel, null);
 	}
 
-	// Token: 0x06008DA8 RID: 36264 RVA: 0x001E882C File Offset: 0x001E6A2C
+	// Token: 0x0600613E RID: 24894 RVA: 0x001F1480 File Offset: 0x001EF680
 	public void OpenAdventureV2View()
 	{
 		INewPlayerAdventureV2ViewOpenData param = new INewPlayerAdventureV2ViewOpenData
@@ -170,13 +169,13 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		UiManager.Instance.OpenView(EUiViewName.NewPlayerAdventureV2View, param, null);
 	}
 
-	// Token: 0x06008DA9 RID: 36265 RVA: 0x001E885C File Offset: 0x001E6A5C
+	// Token: 0x0600613F RID: 24895 RVA: 0x001F14B0 File Offset: 0x001EF6B0
 	public List<int> GetGachaPoolUpRoleForPanel()
 	{
 		return this.GetGachaPoolUpRole();
 	}
 
-	// Token: 0x06008DAA RID: 36266 RVA: 0x001E8864 File Offset: 0x001E6A64
+	// Token: 0x06006140 RID: 24896 RVA: 0x001F14B8 File Offset: 0x001EF6B8
 	public List<int> CollectAdventureV2RoleIds()
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -216,7 +215,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		return list5;
 	}
 
-	// Token: 0x06008DAB RID: 36267 RVA: 0x001E8958 File Offset: 0x001E6B58
+	// Token: 0x06006141 RID: 24897 RVA: 0x001F15AC File Offset: 0x001EF7AC
 	private void AppendUniqueAdventureRoleIds(IEnumerable<int> sourceRoleIds, List<int> targetBucket, HashSet<int> seenRoleIds)
 	{
 		foreach (int num in sourceRoleIds)
@@ -229,7 +228,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		}
 	}
 
-	// Token: 0x06008DAC RID: 36268 RVA: 0x001E89BC File Offset: 0x001E6BBC
+	// Token: 0x06006142 RID: 24898 RVA: 0x001F1610 File Offset: 0x001EF810
 	private bool IsInvalidAdventureRoleId(int roleId)
 	{
 		if (roleId <= 0)
@@ -240,7 +239,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		return (instance != null && instance.IsMainRole(roleId)) || RoleUtils.IsTrialRole(roleId);
 	}
 
-	// Token: 0x06008DAD RID: 36269 RVA: 0x001E89E0 File Offset: 0x001E6BE0
+	// Token: 0x06006143 RID: 24899 RVA: 0x001F1634 File Offset: 0x001EF834
 	private int SortByLevelQualityId(int roleIdA, int roleIdB)
 	{
 		int adventureRoleLevel = this.GetAdventureRoleLevel(roleIdA);
@@ -258,7 +257,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		return roleIdA - roleIdB;
 	}
 
-	// Token: 0x06008DAE RID: 36270 RVA: 0x001E8A20 File Offset: 0x001E6C20
+	// Token: 0x06006144 RID: 24900 RVA: 0x001F1674 File Offset: 0x001EF874
 	private int GetAdventureRoleLevel(int roleId)
 	{
 		RoleModel instance = RoleModel.Instance;
@@ -270,7 +269,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		return roleDataBase.GetLevelData().GetLevel();
 	}
 
-	// Token: 0x06008DAF RID: 36271 RVA: 0x001E8A54 File Offset: 0x001E6C54
+	// Token: 0x06006145 RID: 24901 RVA: 0x001F16A8 File Offset: 0x001EF8A8
 	private int GetAdventureRoleQualityId(int roleId)
 	{
 		RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(roleId);
@@ -281,7 +280,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		return roleConfig.Value.QualityId;
 	}
 
-	// Token: 0x06008DB0 RID: 36272 RVA: 0x001E8A88 File Offset: 0x001E6C88
+	// Token: 0x06006146 RID: 24902 RVA: 0x001F16DC File Offset: 0x001EF8DC
 	private List<int> GetGachaPoolUpRole()
 	{
 		Dictionary<GachaDefine.EGachaViewType, List<int>> dictionary = this.CreateGachaPoolUpRoleBucketMap();
@@ -308,7 +307,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		return this.GetSortedGachaPoolUpRoleList(dictionary);
 	}
 
-	// Token: 0x06008DB1 RID: 36273 RVA: 0x001E8B38 File Offset: 0x001E6D38
+	// Token: 0x06006147 RID: 24903 RVA: 0x001F178C File Offset: 0x001EF98C
 	private Dictionary<GachaDefine.EGachaViewType, List<int>> CreateGachaPoolUpRoleBucketMap()
 	{
 		Dictionary<GachaDefine.EGachaViewType, List<int>> dictionary = new Dictionary<GachaDefine.EGachaViewType, List<int>>();
@@ -319,7 +318,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		return dictionary;
 	}
 
-	// Token: 0x06008DB2 RID: 36274 RVA: 0x001E8B70 File Offset: 0x001E6D70
+	// Token: 0x06006148 RID: 24904 RVA: 0x001F17C4 File Offset: 0x001EF9C4
 	private void TryCollectGachaPoolUpRole(int poolId, Dictionary<GachaDefine.EGachaViewType, List<int>> roleBucketMap)
 	{
 		GachaViewInfo? gachaViewInfo = GachaConfig.Instance.GetGachaViewInfo(poolId);
@@ -347,7 +346,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		list.Add(num);
 	}
 
-	// Token: 0x06008DB3 RID: 36275 RVA: 0x001E8C14 File Offset: 0x001E6E14
+	// Token: 0x06006149 RID: 24905 RVA: 0x001F1868 File Offset: 0x001EFA68
 	private List<int> GetSortedGachaPoolUpRoleList(Dictionary<GachaDefine.EGachaViewType, List<int>> roleBucketMap)
 	{
 		List<int> list = new List<int>();
@@ -364,7 +363,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		return list;
 	}
 
-	// Token: 0x06008DB4 RID: 36276 RVA: 0x001E8C7C File Offset: 0x001E6E7C
+	// Token: 0x0600614A RID: 24906 RVA: 0x001F18D0 File Offset: 0x001EFAD0
 	private Dictionary<int, string> GetTrialRoleUnlockDesc()
 	{
 		Dictionary<int, string> dictionary = new Dictionary<int, string>();
@@ -389,7 +388,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		return dictionary;
 	}
 
-	// Token: 0x06008DB5 RID: 36277 RVA: 0x001E8D48 File Offset: 0x001E6F48
+	// Token: 0x0600614B RID: 24907 RVA: 0x001F199C File Offset: 0x001EFB9C
 	[NullableContext(2)]
 	private void OnTrialRoleUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -426,7 +425,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		instance.Emit<int>(name, (activityData4 != null) ? activityData4.Id : 0);
 	}
 
-	// Token: 0x06008DB6 RID: 36278 RVA: 0x001E8E38 File Offset: 0x001E7038
+	// Token: 0x0600614C RID: 24908 RVA: 0x001F1A8C File Offset: 0x001EFC8C
 	[NullableContext(2)]
 	private void OnGachaRoleUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -443,11 +442,11 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		{
 			return;
 		}
-		activityData2.UpdateDeduplicateGachaRoleIds(newPlayerSupportV2GachaRoleUpdateNotify.DeduplicateGachaRoleIds.ToArray<int>());
+		activityData2.UpdateDeduplicateGachaRoleIds(newPlayerSupportV2GachaRoleUpdateNotify.DeduplicateGachaRoleIds);
 	}
 
-	// Token: 0x17000BE7 RID: 3047
-	// (get) Token: 0x06008DB7 RID: 36279 RVA: 0x001E8EA1 File Offset: 0x001E70A1
+	// Token: 0x17000C07 RID: 3079
+	// (get) Token: 0x0600614D RID: 24909 RVA: 0x001F1AF0 File Offset: 0x001EFCF0
 	public static ActivityNewPlayerSupportActivityV2Controller Instance
 	{
 		get
@@ -456,7 +455,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		}
 	}
 
-	// Token: 0x06008DB8 RID: 36280 RVA: 0x001E8EA8 File Offset: 0x001E70A8
+	// Token: 0x0600614E RID: 24910 RVA: 0x001F1AF7 File Offset: 0x001EFCF7
 	public static ActivityNewPlayerSupportActivityV2Controller GetOrCreateInstance()
 	{
 		if (ActivityNewPlayerSupportActivityV2Controller._Instance == null)
@@ -466,7 +465,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		return ActivityNewPlayerSupportActivityV2Controller._Instance;
 	}
 
-	// Token: 0x06008DB9 RID: 36281 RVA: 0x001E8EBC File Offset: 0x001E70BC
+	// Token: 0x0600614F RID: 24911 RVA: 0x001F1B0B File Offset: 0x001EFD0B
 	public static bool CreateInstance()
 	{
 		if (ActivityNewPlayerSupportActivityV2Controller._Instance != null)
@@ -477,31 +476,31 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		return true;
 	}
 
-	// Token: 0x06008DBA RID: 36282 RVA: 0x001E8ED2 File Offset: 0x001E70D2
+	// Token: 0x06006150 RID: 24912 RVA: 0x001F1B21 File Offset: 0x001EFD21
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008DBB RID: 36283 RVA: 0x001E8ED4 File Offset: 0x001E70D4
+	// Token: 0x06006151 RID: 24913 RVA: 0x001F1B23 File Offset: 0x001EFD23
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityNewPlayerSupportActivityV2Controller._Instance = null;
 	}
 
-	// Token: 0x06008DBC RID: 36284 RVA: 0x001E8EDC File Offset: 0x001E70DC
+	// Token: 0x06006152 RID: 24914 RVA: 0x001F1B2B File Offset: 0x001EFD2B
 	static ActivityNewPlayerSupportActivityV2Controller()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityNewPlayerSupportActivityV2Controller.CreateStaticDefaultValue), new Action(ActivityNewPlayerSupportActivityV2Controller.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003EE4 RID: 16100
+	// Token: 0x04003F7C RID: 16252
 	private const int TrialRoleHelpId = 465;
 
-	// Token: 0x04003EE5 RID: 16101
+	// Token: 0x04003F7D RID: 16253
 	[Nullable(2)]
 	private ActivityNewPlayerSupportActivityV2Data ActivityDataInternal;
 
-	// Token: 0x04003EE6 RID: 16102
+	// Token: 0x04003F7E RID: 16254
 	[StaticVariableRuleIgnore]
 	private static readonly GachaDefine.EGachaViewType[] GachaPoolUpRoleCollectViewTypeList = new GachaDefine.EGachaViewType[]
 	{
@@ -511,7 +510,7 @@ public class ActivityNewPlayerSupportActivityV2Controller : ActivityControllerBa
 		GachaDefine.EGachaViewType.OldCarnivalRole
 	};
 
-	// Token: 0x04003EE7 RID: 16103
+	// Token: 0x04003F7F RID: 16255
 	[Nullable(2)]
 	private static ActivityNewPlayerSupportActivityV2Controller _Instance;
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020025F3 RID: 9715
+// Token: 0x02001ADE RID: 6878
 public class OverPowerData : PowerData
 {
-	// Token: 0x06013C52 RID: 80978 RVA: 0x004F4E6C File Offset: 0x004F306C
+	// Token: 0x06011134 RID: 69940 RVA: 0x00503BF8 File Offset: 0x00501DF8
 	protected override bool GetIfCanRequestNewPower()
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -12,7 +12,7 @@ public class OverPowerData : PowerData
 		return this.NextRecoverTime > 0.0 && serverTime >= this.NextRecoverTime && PowerController.Instance.GetIfCanRequestNewPower() && serverTime - this.CurrentRequestNewPowerTime > 1.0 && FunctionModel.Instance.IsOpen(10066) && powerDataById.CheckPowerIfMax();
 	}
 
-	// Token: 0x06013C53 RID: 80979 RVA: 0x004F4EE2 File Offset: 0x004F30E2
+	// Token: 0x06011135 RID: 69941 RVA: 0x00503C6E File Offset: 0x00501E6E
 	public override EPowerRecoveryMode GetPowerRecoveryMode()
 	{
 		if (base.CheckPowerIfMax())
@@ -26,26 +26,26 @@ public class OverPowerData : PowerData
 		return EPowerRecoveryMode.Update;
 	}
 
-	// Token: 0x06013C54 RID: 80980 RVA: 0x004F4F03 File Offset: 0x004F3103
+	// Token: 0x06011136 RID: 69942 RVA: 0x00503C8F File Offset: 0x00501E8F
 	[NullableContext(1)]
 	public override string GetPowerCurrencyShowTextId()
 	{
 		return "PowerNumTips";
 	}
 
-	// Token: 0x06013C55 RID: 80981 RVA: 0x004F4F0A File Offset: 0x004F310A
+	// Token: 0x06011137 RID: 69943 RVA: 0x00503C96 File Offset: 0x00501E96
 	public override int GetPowerLimit()
 	{
 		return PowerConfig.Instance.GetOverPowerLimit();
 	}
 
-	// Token: 0x06013C56 RID: 80982 RVA: 0x004F4F16 File Offset: 0x004F3116
+	// Token: 0x06011138 RID: 69944 RVA: 0x00503CA2 File Offset: 0x00501EA2
 	public override int GetPowerIncreaseTimeSpan()
 	{
 		return PowerConfig.Instance.GetOverPowerRecoverTimeSpan();
 	}
 
-	// Token: 0x06013C57 RID: 80983 RVA: 0x004F4F22 File Offset: 0x004F3122
+	// Token: 0x06011139 RID: 69945 RVA: 0x00503CAE File Offset: 0x00501EAE
 	public override bool IfNeedShowMax()
 	{
 		return true;

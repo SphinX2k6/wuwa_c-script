@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200112C RID: 4396
+// Token: 0x020005E0 RID: 1504
 public interface IBabelTowerSelectInfo
 {
-	// Token: 0x170009C3 RID: 2499
-	// (get) Token: 0x06007357 RID: 29527
-	// (set) Token: 0x06007358 RID: 29528
+	// Token: 0x170009E3 RID: 2531
+	// (get) Token: 0x060046EE RID: 18158
+	// (set) Token: 0x060046EF RID: 18159
 	EBabelTowerDeTermState State { get; set; }
 
-	// Token: 0x170009C4 RID: 2500
-	// (get) Token: 0x06007359 RID: 29529
-	// (set) Token: 0x0600735A RID: 29530
+	// Token: 0x170009E4 RID: 2532
+	// (get) Token: 0x060046F0 RID: 18160
+	// (set) Token: 0x060046F1 RID: 18161
 	int SelectIndex { get; set; }
 }

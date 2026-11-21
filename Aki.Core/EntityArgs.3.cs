@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000079 RID: 121
+// Token: 0x0200007A RID: 122
 [NullableContext(1)]
 [Nullable(0)]
 public readonly struct EntityArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEntityArgs
 {
-	// Token: 0x06000390 RID: 912 RVA: 0x00015F39 File Offset: 0x00014139
+	// Token: 0x060003C9 RID: 969 RVA: 0x00016915 File Offset: 0x00014B15
 	public EntityArgs(T1 p1, T2 p2, T3 p3)
 	{
 		this.<p1>P = p1;
@@ -14,7 +14,7 @@ public readonly struct EntityArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(
 		this.<p3>P = p3;
 	}
 
-	// Token: 0x06000391 RID: 913 RVA: 0x00015F50 File Offset: 0x00014150
+	// Token: 0x060003CA RID: 970 RVA: 0x0001692C File Offset: 0x00014B2C
 	public T GetP1<[Nullable(2)] T>()
 	{
 		T1 t = this.<p1>P;
@@ -31,7 +31,7 @@ public readonly struct EntityArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(
 		throw new InvalidCastException(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x06000392 RID: 914 RVA: 0x00015FF4 File Offset: 0x000141F4
+	// Token: 0x060003CB RID: 971 RVA: 0x000169D0 File Offset: 0x00014BD0
 	public T GetP2<[Nullable(2)] T>()
 	{
 		T2 t = this.<p2>P;
@@ -48,7 +48,7 @@ public readonly struct EntityArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(
 		throw new InvalidCastException(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x06000393 RID: 915 RVA: 0x00016098 File Offset: 0x00014298
+	// Token: 0x060003CC RID: 972 RVA: 0x00016A74 File Offset: 0x00014C74
 	public T GetP3<[Nullable(2)] T>()
 	{
 		T3 t = this.<p3>P;
@@ -65,27 +65,27 @@ public readonly struct EntityArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(
 		throw new InvalidCastException(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x06000394 RID: 916 RVA: 0x00016139 File Offset: 0x00014339
+	// Token: 0x060003CD RID: 973 RVA: 0x00016B15 File Offset: 0x00014D15
 	public T GetP4<[Nullable(2)] T>()
 	{
 		throw new InvalidCastException("无法获取参数");
 	}
 
-	// Token: 0x06000395 RID: 917 RVA: 0x00016145 File Offset: 0x00014345
+	// Token: 0x060003CE RID: 974 RVA: 0x00016B21 File Offset: 0x00014D21
 	public T GetP5<[Nullable(2)] T>()
 	{
 		throw new InvalidCastException("无法获取参数");
 	}
 
-	// Token: 0x04000382 RID: 898
+	// Token: 0x0400039A RID: 922
 	[CompilerGenerated]
 	private readonly T1 <p1>P;
 
-	// Token: 0x04000383 RID: 899
+	// Token: 0x0400039B RID: 923
 	[CompilerGenerated]
 	private readonly T2 <p2>P;
 
-	// Token: 0x04000384 RID: 900
+	// Token: 0x0400039C RID: 924
 	[CompilerGenerated]
 	private readonly T3 <p3>P;
 }

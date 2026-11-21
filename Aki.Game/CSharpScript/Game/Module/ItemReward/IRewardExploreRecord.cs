@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057D0 RID: 22480
+	// Token: 0x020047A7 RID: 18343
 	[NullableContext(1)]
 	public interface IRewardExploreRecord
 	{
-		// Token: 0x170089B2 RID: 35250
-		// (get) Token: 0x06039270 RID: 234096
-		// (set) Token: 0x06039271 RID: 234097
+		// Token: 0x17005D7C RID: 23932
+		// (get) Token: 0x0602E184 RID: 188804
+		// (set) Token: 0x0602E185 RID: 188805
 		string TitleTextId { get; set; }
 
-		// Token: 0x170089B3 RID: 35251
-		// (get) Token: 0x06039272 RID: 234098
-		// (set) Token: 0x06039273 RID: 234099
+		// Token: 0x17005D7D RID: 23933
+		// (get) Token: 0x0602E186 RID: 188806
+		// (set) Token: 0x0602E187 RID: 188807
 		string Record { get; set; }
 
-		// Token: 0x170089B4 RID: 35252
-		// (get) Token: 0x06039274 RID: 234100
-		// (set) Token: 0x06039275 RID: 234101
+		// Token: 0x17005D7E RID: 23934
+		// (get) Token: 0x0602E188 RID: 188808
+		// (set) Token: 0x0602E189 RID: 188809
 		int? RecordRollingTo { get; set; }
 
-		// Token: 0x170089B5 RID: 35253
-		// (get) Token: 0x06039276 RID: 234102
-		// (set) Token: 0x06039277 RID: 234103
+		// Token: 0x17005D7F RID: 23935
+		// (get) Token: 0x0602E18A RID: 188810
+		// (set) Token: 0x0602E18B RID: 188811
 		bool IsNewRecord { get; set; }
 	}
 }

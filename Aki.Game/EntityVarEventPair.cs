@@ -10,7 +10,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class EntityVarEventPair : LevelVarEventPair
 {
-	// Token: 0x06000D84 RID: 3460 RVA: 0x0004A8E0 File Offset: 0x00048AE0
+	// Token: 0x06000D8A RID: 3466 RVA: 0x0004B47C File Offset: 0x0004967C
 	public unsafe override bool Init(SAiLevelVar levelVar, UKuroBooleanEventBinder boolEventBinder)
 	{
 		base.Init(levelVar, boolEventBinder);
@@ -60,7 +60,7 @@ public class EntityVarEventPair : LevelVarEventPair
 		return true;
 	}
 
-	// Token: 0x06000D85 RID: 3461 RVA: 0x0004AAA0 File Offset: 0x00048CA0
+	// Token: 0x06000D8B RID: 3467 RVA: 0x0004B63C File Offset: 0x0004983C
 	public unsafe override bool Init(SAiLevelVar levelVar, UKuroIntEventBinder intEventBinder)
 	{
 		base.Init(levelVar, intEventBinder);
@@ -110,7 +110,7 @@ public class EntityVarEventPair : LevelVarEventPair
 		return true;
 	}
 
-	// Token: 0x06000D86 RID: 3462 RVA: 0x0004AC60 File Offset: 0x00048E60
+	// Token: 0x06000D8C RID: 3468 RVA: 0x0004B7FC File Offset: 0x000499FC
 	public override void Clear()
 	{
 		base.Clear();
@@ -120,7 +120,7 @@ public class EntityVarEventPair : LevelVarEventPair
 		}
 	}
 
-	// Token: 0x06000D87 RID: 3463 RVA: 0x0004ACC0 File Offset: 0x00048EC0
+	// Token: 0x06000D8D RID: 3469 RVA: 0x0004B85C File Offset: 0x00049A5C
 	private void OnReceiveEntityVar(string name, VarDefinePb variable)
 	{
 		if (name != this.LevelVar.VarName)
@@ -130,7 +130,7 @@ public class EntityVarEventPair : LevelVarEventPair
 		base.ParseValue(variable, false);
 	}
 
-	// Token: 0x04000AE7 RID: 2791
+	// Token: 0x04000AEF RID: 2799
 	[Nullable(2)]
 	private Entity Entity;
 }

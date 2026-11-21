@@ -5,17 +5,17 @@ using CSharpScript.Game.NewWorld.Common.Component;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B46 RID: 27462
+	// Token: 0x02005CBE RID: 23742
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventOpenQte : LevelEventBase
 	{
-		// Token: 0x06044179 RID: 278905 RVA: 0x010BFDCE File Offset: 0x010BDFCE
+		// Token: 0x0603A2CB RID: 238283 RVA: 0x0106984A File Offset: 0x01067A4A
 		public LevelEventOpenQte(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604417A RID: 278906 RVA: 0x010BFDD8 File Offset: 0x010BDFD8
+		// Token: 0x0603A2CC RID: 238284 RVA: 0x01069854 File Offset: 0x01067A54
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			OpenQteAction openQteAction = inParams as OpenQteAction;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(value, false, true);
 		}
 
-		// Token: 0x0604417B RID: 278907 RVA: 0x010BFE34 File Offset: 0x010BE034
+		// Token: 0x0603A2CD RID: 238285 RVA: 0x010698B0 File Offset: 0x01067AB0
 		private bool ExecutePanelQte(OpenQteAction param, GeneralContext context)
 		{
 			IOpenPanelQteQte openPanelQteQte = param.Config as IOpenPanelQteQte;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x0604417C RID: 278908 RVA: 0x010BFE6C File Offset: 0x010BE06C
+		// Token: 0x0603A2CE RID: 238286 RVA: 0x010698E8 File Offset: 0x01067AE8
 		private bool ExecuteLevelQte(OpenQteAction param, GeneralContext context)
 		{
 			IOpenLevelQte openLevelQte = param.Config as IOpenLevelQte;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return component.StartQte(false);
 		}
 
-		// Token: 0x0604417D RID: 278909 RVA: 0x010BFF00 File Offset: 0x010BE100
+		// Token: 0x0603A2CF RID: 238287 RVA: 0x0106997C File Offset: 0x01067B7C
 		[return: Nullable(2)]
 		private Entity GetTargetEntityByContext(ITargetEntityType targetEntityConfig, GeneralContext context)
 		{

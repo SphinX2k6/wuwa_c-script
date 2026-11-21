@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A2D RID: 2605
+	// Token: 0x020001D6 RID: 470
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.ECollisionEnabled")]
 	public enum ECollisionEnabled
 	{
-		// Token: 0x040045BB RID: 17851
+		// Token: 0x04000B8D RID: 2957
 		NoCollision,
-		// Token: 0x040045BC RID: 17852
+		// Token: 0x04000B8E RID: 2958
 		QueryOnly,
-		// Token: 0x040045BD RID: 17853
+		// Token: 0x04000B8F RID: 2959
 		PhysicsOnly,
-		// Token: 0x040045BE RID: 17854
+		// Token: 0x04000B90 RID: 2960
 		QueryAndPhysics,
-		// Token: 0x040045BF RID: 17855
+		// Token: 0x04000B91 RID: 2961
 		ECollisionEnabled_MAX
 	}
 }

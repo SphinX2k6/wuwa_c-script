@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Render.RuntimeBP.Scene.KuroProjectilePathTracer;
 using UnrealEngine;
 
-// Token: 0x02003093 RID: 12435
+// Token: 0x020025EA RID: 9706
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterThrowComponent : EntityComponent
 {
-	// Token: 0x1700248E RID: 9358
-	// (get) Token: 0x0601A936 RID: 108854 RVA: 0x007216D4 File Offset: 0x0071F8D4
+	// Token: 0x170025F2 RID: 9714
+	// (get) Token: 0x06018326 RID: 99110 RVA: 0x00747766 File Offset: 0x00745966
 	public BP_KuroProjectilePathTracer_C ProjectilePathTracer
 	{
 		get
@@ -22,7 +22,7 @@ public class CharacterThrowComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A937 RID: 108855 RVA: 0x0072170A File Offset: 0x0071F90A
+	// Token: 0x06018327 RID: 99111 RVA: 0x0074779C File Offset: 0x0074599C
 	[NullableContext(1)]
 	public void SetPredictProjectileInfo(bool returnValue, ref TArray<FVector> outPathPosition, FVector outLastTraceDestination, FHitResult outHit)
 	{
@@ -34,7 +34,7 @@ public class CharacterThrowComponent : EntityComponent
 		projectilePathTracer.SetPredictProjectileInfo(returnValue, ref outPathPosition, outLastTraceDestination, outHit);
 	}
 
-	// Token: 0x0601A938 RID: 108856 RVA: 0x00721721 File Offset: 0x0071F921
+	// Token: 0x06018328 RID: 99112 RVA: 0x007477B3 File Offset: 0x007459B3
 	public void SetVisible(bool isShow)
 	{
 		BP_KuroProjectilePathTracer_C projectilePathTracer = this.ProjectilePathTracer;
@@ -45,7 +45,7 @@ public class CharacterThrowComponent : EntityComponent
 		projectilePathTracer.SetVisible(isShow);
 	}
 
-	// Token: 0x0601A939 RID: 108857 RVA: 0x00721734 File Offset: 0x0071F934
+	// Token: 0x06018329 RID: 99113 RVA: 0x007477C6 File Offset: 0x007459C6
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -53,21 +53,17 @@ public class CharacterThrowComponent : EntityComponent
 		{
 			return false;
 		}
-		CharacterThrowComponent characterThrowComponent = (CharacterThrowComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ProjectilePathTracerInternal"))
+		if (((CharacterThrowComponent)componentTemplate).ProjectilePathTracerInternal == null)
 		{
-			if (characterThrowComponent.ProjectilePathTracerInternal == null)
-			{
-				this.ProjectilePathTracerInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_KuroProjectilePathTracer_C>(this.ProjectilePathTracerInternal), "ProjectilePathTracerInternal"))
-			{
-				return false;
-			}
+			this.ProjectilePathTracerInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ProjectilePathTracerInternal), "ProjectilePathTracerInternal"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400CC77 RID: 52343
+	// Token: 0x0400D05A RID: 53338
 	private BP_KuroProjectilePathTracer_C ProjectilePathTracerInternal;
 }

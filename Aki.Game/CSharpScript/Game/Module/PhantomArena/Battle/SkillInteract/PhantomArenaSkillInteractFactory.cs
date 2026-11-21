@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 {
-	// Token: 0x0200528A RID: 21130
+	// Token: 0x0200425A RID: 16986
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaSkillInteractFactory
 	{
-		// Token: 0x0603605F RID: 221279 RVA: 0x00CC8FEC File Offset: 0x00CC71EC
+		// Token: 0x0602AF5A RID: 175962 RVA: 0x00C166F0 File Offset: 0x00C148F0
 		public static PhantomArenaSkillInteractBase GetSkillInteract(int buffType)
 		{
 			Func<PhantomArenaSkillInteractBase> func;
@@ -20,13 +20,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			return new PhantomArenaNormalSkillInteract();
 		}
 
-		// Token: 0x06036060 RID: 221280 RVA: 0x00CC9014 File Offset: 0x00CC7214
+		// Token: 0x0602AF5B RID: 175963 RVA: 0x00C16718 File Offset: 0x00C14918
 		public static bool HasSkillInteract(int buffType)
 		{
 			return PhantomArenaSkillInteractFactory.SkillInteractMap.ContainsKey(buffType);
 		}
 
-		// Token: 0x0401C9BD RID: 117181
+		// Token: 0x040173F2 RID: 95218
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, Func<PhantomArenaSkillInteractBase>> SkillInteractMap = new Dictionary<int, Func<PhantomArenaSkillInteractBase>>
 		{

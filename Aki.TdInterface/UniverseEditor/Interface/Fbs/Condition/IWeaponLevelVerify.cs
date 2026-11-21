@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D1D RID: 19741
+	// Token: 0x02005219 RID: 21017
 	public static class IWeaponLevelVerify
 	{
-		// Token: 0x0601F55D RID: 128349 RVA: 0x0045E870 File Offset: 0x0045CA70
+		// Token: 0x060211A4 RID: 135588 RVA: 0x00492800 File Offset: 0x00490A00
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false))
@@ -26,11 +26,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return false;
 		}
 
-		// Token: 0x02007A6A RID: 31338
+		// Token: 0x020082BC RID: 33468
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013433 RID: 78899
+			// Token: 0x040144A3 RID: 83107
 			public static VerifyTableAction <0>__Verify;
 		}
 	}

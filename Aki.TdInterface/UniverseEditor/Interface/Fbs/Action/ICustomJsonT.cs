@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064F9 RID: 25849
+	// Token: 0x02006B67 RID: 27495
 	public class ICustomJsonT
 	{
-		// Token: 0x1700C043 RID: 49219
-		// (get) Token: 0x0602CD7D RID: 183677 RVA: 0x0062926E File Offset: 0x0062746E
-		// (set) Token: 0x0602CD7E RID: 183678 RVA: 0x00629276 File Offset: 0x00627476
+		// Token: 0x1700C9D3 RID: 51667
+		// (get) Token: 0x0602F513 RID: 193811 RVA: 0x0067550E File Offset: 0x0067370E
+		// (set) Token: 0x0602F514 RID: 193812 RVA: 0x00675516 File Offset: 0x00673716
 		public string Name { get; set; }
 
-		// Token: 0x1700C044 RID: 49220
-		// (get) Token: 0x0602CD7F RID: 183679 RVA: 0x0062927F File Offset: 0x0062747F
-		// (set) Token: 0x0602CD80 RID: 183680 RVA: 0x00629287 File Offset: 0x00627487
+		// Token: 0x1700C9D4 RID: 51668
+		// (get) Token: 0x0602F515 RID: 193813 RVA: 0x0067551F File Offset: 0x0067371F
+		// (set) Token: 0x0602F516 RID: 193814 RVA: 0x00675527 File Offset: 0x00673727
 		public string JsonString { get; set; }
 
-		// Token: 0x0602CD81 RID: 183681 RVA: 0x00629290 File Offset: 0x00627490
+		// Token: 0x0602F517 RID: 193815 RVA: 0x00675530 File Offset: 0x00673730
 		public ICustomJsonT()
 		{
 			this.Name = null;

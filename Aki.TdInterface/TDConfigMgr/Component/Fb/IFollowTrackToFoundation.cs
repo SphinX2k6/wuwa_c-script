@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BE2 RID: 3042
+	// Token: 0x02000CB1 RID: 3249
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFollowTrackToFoundation : IFollowTrackEndType
 	{
-		// Token: 0x060045E0 RID: 17888 RVA: 0x000B0B89 File Offset: 0x000AED89
-		[NullableContext(1)]
+		// Token: 0x06004A3E RID: 19006 RVA: 0x000BAD05 File Offset: 0x000B8F05
+		[NullableContext(0)]
 		public static IFollowTrackToFoundation Create(IFollowTrackToFoundation? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013D9 RID: 5081
-		// (get) Token: 0x060045E1 RID: 17889 RVA: 0x000B0BA8 File Offset: 0x000AEDA8
+		// Token: 0x170014D7 RID: 5335
+		// (get) Token: 0x06004A3F RID: 19007 RVA: 0x000BAD24 File Offset: 0x000B8F24
 		public override EFollowTrackEndType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013DA RID: 5082
-		// (get) Token: 0x060045E2 RID: 17890 RVA: 0x000B0BB5 File Offset: 0x000AEDB5
+		// Token: 0x170014D8 RID: 5336
+		// (get) Token: 0x06004A40 RID: 19008 RVA: 0x000BAD31 File Offset: 0x000B8F31
 		public virtual int FoundationId
 		{
 			get
@@ -44,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013DB RID: 5083
-		// (get) Token: 0x060045E3 RID: 17891 RVA: 0x000B0BC2 File Offset: 0x000AEDC2
+		// Token: 0x170014D9 RID: 5337
+		// (get) Token: 0x06004A41 RID: 19009 RVA: 0x000BAD3E File Offset: 0x000B8F3E
 		public virtual VectorInfo FinalOffset
 		{
 			get
@@ -60,13 +60,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027C9 RID: 10185
+		// Token: 0x04002A14 RID: 10772
 		private IFollowTrackToFoundation Instance;
 
-		// Token: 0x040027CA RID: 10186
+		// Token: 0x04002A15 RID: 10773
 		private VectorInfo _FinalOffsetCache;
 
-		// Token: 0x040027CB RID: 10187
+		// Token: 0x04002A16 RID: 10774
 		private bool _FinalOffsetInited;
 	}
 }

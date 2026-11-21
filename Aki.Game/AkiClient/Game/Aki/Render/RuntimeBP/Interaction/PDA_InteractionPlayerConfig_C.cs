@@ -8,14 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 {
-	// Token: 0x02003D21 RID: 15649
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020030F4 RID: 12532
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Interaction/PDA_InteractionPlayerConfig.PDA_InteractionPlayerConfig_C")]
 	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 136)]
 	public class PDA_InteractionPlayerConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06025961 RID: 153953 RVA: 0x0095DDB9 File Offset: 0x0095BFB9
+		// Token: 0x0601E70E RID: 124686 RVA: 0x00914175 File Offset: 0x00912375
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (PDA_InteractionPlayerConfig_C._ClassPtr == IntPtr.Zero)
@@ -25,192 +23,177 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			return PDA_InteractionPlayerConfig_C._ClassPtr;
 		}
 
-		// Token: 0x06025962 RID: 153954 RVA: 0x0095DDE0 File Offset: 0x0095BFE0
+		// Token: 0x0601E70F RID: 124687 RVA: 0x0091419C File Offset: 0x0091239C
 		public PDA_InteractionPlayerConfig_C() : this(BuiltinUtils.AllocNativeUObject(PDA_InteractionPlayerConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06025963 RID: 153955 RVA: 0x0095DE08 File Offset: 0x0095C008
+		// Token: 0x0601E710 RID: 124688 RVA: 0x009141C4 File Offset: 0x009123C4
 		[NullableContext(1)]
 		public PDA_InteractionPlayerConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(PDA_InteractionPlayerConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17004D74 RID: 19828
-		// (get) Token: 0x06025964 RID: 153956 RVA: 0x0095DE3B File Offset: 0x0095C03B
-		// (set) Token: 0x06025965 RID: 153957 RVA: 0x0095DE4B File Offset: 0x0095C04B
+		// Token: 0x170033C5 RID: 13253
+		// (get) Token: 0x0601E711 RID: 124689 RVA: 0x009141F7 File Offset: 0x009123F7
+		// (set) Token: 0x0601E712 RID: 124690 RVA: 0x00914207 File Offset: 0x00912407
 		public unsafe bool 启用植被交互
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_0) != 0;
+				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_启用植被交互) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_0) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_启用植被交互) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17004D75 RID: 19829
-		// (get) Token: 0x06025966 RID: 153958 RVA: 0x0095DE5C File Offset: 0x0095C05C
-		// (set) Token: 0x06025967 RID: 153959 RVA: 0x0095DE6C File Offset: 0x0095C06C
+		// Token: 0x170033C6 RID: 13254
+		// (get) Token: 0x0601E713 RID: 124691 RVA: 0x00914218 File Offset: 0x00912418
+		// (set) Token: 0x0601E714 RID: 124692 RVA: 0x00914228 File Offset: 0x00912428
 		public unsafe float 植被交互半径
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_植被交互半径);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_植被交互半径) = value;
 			}
 		}
 
-		// Token: 0x17004D76 RID: 19830
-		// (get) Token: 0x06025968 RID: 153960 RVA: 0x0095DE7D File Offset: 0x0095C07D
-		// (set) Token: 0x06025969 RID: 153961 RVA: 0x0095DE8D File Offset: 0x0095C08D
+		// Token: 0x170033C7 RID: 13255
+		// (get) Token: 0x0601E715 RID: 124693 RVA: 0x00914239 File Offset: 0x00912439
+		// (set) Token: 0x0601E716 RID: 124694 RVA: 0x00914249 File Offset: 0x00912449
 		public unsafe bool 启用水面交互
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_启用水面交互) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_启用水面交互) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17004D77 RID: 19831
-		// (get) Token: 0x0602596A RID: 153962 RVA: 0x0095DE9E File Offset: 0x0095C09E
-		// (set) Token: 0x0602596B RID: 153963 RVA: 0x0095DEB2 File Offset: 0x0095C0B2
+		// Token: 0x170033C8 RID: 13256
+		// (get) Token: 0x0601E717 RID: 124695 RVA: 0x0091425A File Offset: 0x0091245A
+		// (set) Token: 0x0601E718 RID: 124696 RVA: 0x0091426E File Offset: 0x0091246E
+		[Nullable(2)]
 		public unsafe PDA_WaterEffectConfigs_C 水特效
 		{
+			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<PDA_WaterEffectConfigs_C>(base.NativePtr / (IntPtr)sizeof(void*) + PDA_InteractionPlayerConfig_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<PDA_WaterEffectConfigs_C>(base.NativePtr / (IntPtr)sizeof(void*) + PDA_InteractionPlayerConfig_C.__PropertyOffset_水特效);
 			}
+			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PDA_InteractionPlayerConfig_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PDA_InteractionPlayerConfig_C.__PropertyOffset_水特效, value);
 			}
 		}
 
-		// Token: 0x17004D78 RID: 19832
-		// (get) Token: 0x0602596C RID: 153964 RVA: 0x0095DEC7 File Offset: 0x0095C0C7
-		// (set) Token: 0x0602596D RID: 153965 RVA: 0x0095DED7 File Offset: 0x0095C0D7
+		// Token: 0x170033C9 RID: 13257
+		// (get) Token: 0x0601E719 RID: 124697 RVA: 0x00914283 File Offset: 0x00912483
+		// (set) Token: 0x0601E71A RID: 124698 RVA: 0x00914293 File Offset: 0x00912493
 		public unsafe float 射线向下延长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_射线向下延长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_射线向下延长) = value;
 			}
 		}
 
-		// Token: 0x17004D79 RID: 19833
-		// (get) Token: 0x0602596E RID: 153966 RVA: 0x0095DEE8 File Offset: 0x0095C0E8
-		// (set) Token: 0x0602596F RID: 153967 RVA: 0x0095DEF8 File Offset: 0x0095C0F8
+		// Token: 0x170033CA RID: 13258
+		// (get) Token: 0x0601E71B RID: 124699 RVA: 0x009142A4 File Offset: 0x009124A4
+		// (set) Token: 0x0601E71C RID: 124700 RVA: 0x009142B4 File Offset: 0x009124B4
 		public unsafe bool 自动草集群
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_5) != 0;
+				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_自动草集群) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_5) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_自动草集群) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17004D7A RID: 19834
-		// (get) Token: 0x06025970 RID: 153968 RVA: 0x0095DF09 File Offset: 0x0095C109
-		// (set) Token: 0x06025971 RID: 153969 RVA: 0x0095DF1D File Offset: 0x0095C11D
-		public unsafe UClusteredStuffDataAsset 草集群特效
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UClusteredStuffDataAsset>(base.NativePtr / (IntPtr)sizeof(void*) + PDA_InteractionPlayerConfig_C.__PropertyOffset_6);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PDA_InteractionPlayerConfig_C.__PropertyOffset_6, value);
-			}
-		}
-
-		// Token: 0x17004D7B RID: 19835
-		// (get) Token: 0x06025972 RID: 153970 RVA: 0x0095DF32 File Offset: 0x0095C132
-		// (set) Token: 0x06025973 RID: 153971 RVA: 0x0095DF42 File Offset: 0x0095C142
+		// Token: 0x170033CB RID: 13259
+		// (get) Token: 0x0601E71D RID: 124701 RVA: 0x009142C5 File Offset: 0x009124C5
+		// (set) Token: 0x0601E71E RID: 124702 RVA: 0x009142D5 File Offset: 0x009124D5
 		public unsafe bool 启用简易水面交互
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_7) != 0;
+				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_启用简易水面交互) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_7) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_启用简易水面交互) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17004D7C RID: 19836
-		// (get) Token: 0x06025974 RID: 153972 RVA: 0x0095DF53 File Offset: 0x0095C153
-		// (set) Token: 0x06025975 RID: 153973 RVA: 0x0095DF67 File Offset: 0x0095C167
+		// Token: 0x170033CC RID: 13260
+		// (get) Token: 0x0601E71F RID: 124703 RVA: 0x009142E6 File Offset: 0x009124E6
+		// (set) Token: 0x0601E720 RID: 124704 RVA: 0x009142FA File Offset: 0x009124FA
 		public unsafe FVector 植被交互相对位置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_植被交互相对位置);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)PDA_InteractionPlayerConfig_C.__PropertyOffset_植被交互相对位置) = value;
 			}
 		}
 
-		// Token: 0x06025976 RID: 153974 RVA: 0x0095DF7C File Offset: 0x0095C17C
+		// Token: 0x0601E721 RID: 124705 RVA: 0x0091430F File Offset: 0x0091250F
 		protected PDA_InteractionPlayerConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04012C4B RID: 76875
+		// Token: 0x04010201 RID: 66049
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Interaction/PDA_InteractionPlayerConfig.PDA_InteractionPlayerConfig_C";
 
-		// Token: 0x04012C4C RID: 76876
+		// Token: 0x04010202 RID: 66050
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04012C4D RID: 76877
+		// Token: 0x04010203 RID: 66051
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04012C4E RID: 76878
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010204 RID: 66052
+		internal static int __PropertyOffset_启用植被交互;
 
-		// Token: 0x04012C4F RID: 76879
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010205 RID: 66053
+		internal static int __PropertyOffset_植被交互半径;
 
-		// Token: 0x04012C50 RID: 76880
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010206 RID: 66054
+		internal static int __PropertyOffset_启用水面交互;
 
-		// Token: 0x04012C51 RID: 76881
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010207 RID: 66055
+		internal static int __PropertyOffset_水特效;
 
-		// Token: 0x04012C52 RID: 76882
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010208 RID: 66056
+		internal static int __PropertyOffset_射线向下延长;
 
-		// Token: 0x04012C53 RID: 76883
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010209 RID: 66057
+		internal static int __PropertyOffset_自动草集群;
 
-		// Token: 0x04012C54 RID: 76884
-		internal static int __PropertyOffset_6;
+		// Token: 0x0401020A RID: 66058
+		internal static int __PropertyOffset_启用简易水面交互;
 
-		// Token: 0x04012C55 RID: 76885
-		internal static int __PropertyOffset_7;
-
-		// Token: 0x04012C56 RID: 76886
-		internal static int __PropertyOffset_8;
+		// Token: 0x0401020B RID: 66059
+		internal static int __PropertyOffset_植被交互相对位置;
 	}
 }

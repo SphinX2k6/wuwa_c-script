@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001822 RID: 6178
+// Token: 0x02000CDB RID: 3291
 [NullableContext(1)]
 [Nullable(0)]
 public class ExpComponent : UiPanelBase
 {
-	// Token: 0x0600B543 RID: 46403 RVA: 0x0028EE3B File Offset: 0x0028D03B
+	// Token: 0x0600892E RID: 35118 RVA: 0x0029955B File Offset: 0x0029775B
 	public ExpComponent(UUIItem uiItem, bool IsAddUp = false)
 	{
 		this.IsAddUp = IsAddUp;
 		this.SourceItem = uiItem;
 	}
 
-	// Token: 0x0600B544 RID: 46404 RVA: 0x0028EE5C File Offset: 0x0028D05C
+	// Token: 0x0600892F RID: 35119 RVA: 0x0029957C File Offset: 0x0029777C
 	public void Init()
 	{
 		base.CreateThenShowByActor(this.SourceItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600B545 RID: 46405 RVA: 0x0028EE70 File Offset: 0x0028D070
+	// Token: 0x06008930 RID: 35120 RVA: 0x00299590 File Offset: 0x00297790
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class ExpComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600B546 RID: 46406 RVA: 0x0028EF68 File Offset: 0x0028D168
+	// Token: 0x06008931 RID: 35121 RVA: 0x00299688 File Offset: 0x00297888
 	protected override void OnStart()
 	{
 		base.GetSprite(6).SetFillAmount(0f);
@@ -49,13 +49,13 @@ public class ExpComponent : UiPanelBase
 		this.ExpTweenComponent = new ExpTweenComponent(base.GetSprite(6), base.GetSprite(5), base.GetSprite(7), null, this.ExpTweenFinish);
 	}
 
-	// Token: 0x0600B547 RID: 46407 RVA: 0x0028EFCF File Offset: 0x0028D1CF
+	// Token: 0x06008932 RID: 35122 RVA: 0x002996EF File Offset: 0x002978EF
 	public void SetLevelFormatText(string levelText)
 	{
 		this.LevelFormatText = levelText;
 	}
 
-	// Token: 0x0600B548 RID: 46408 RVA: 0x0028EFD8 File Offset: 0x0028D1D8
+	// Token: 0x06008933 RID: 35123 RVA: 0x002996F8 File Offset: 0x002978F8
 	public void PlayExpTween(SelectableExpData expData)
 	{
 		int num = 1;
@@ -76,7 +76,7 @@ public class ExpComponent : UiPanelBase
 		this.ExpTweenComponent.PlayExpTween(num, arrivedFillAmount, 0f, LTweenEase.Linear);
 	}
 
-	// Token: 0x0600B549 RID: 46409 RVA: 0x0028F02C File Offset: 0x0028D22C
+	// Token: 0x06008934 RID: 35124 RVA: 0x0029974C File Offset: 0x0029794C
 	public void UpdateInitState(SelectableExpData expData)
 	{
 		if (!StringUtils.IsEmpty(this.LevelFormatText))
@@ -120,7 +120,7 @@ public class ExpComponent : UiPanelBase
 		this.LastTimePreviewLevel = expData.GetArrivedLevel();
 	}
 
-	// Token: 0x0600B54A RID: 46410 RVA: 0x0028F1E8 File Offset: 0x0028D3E8
+	// Token: 0x06008935 RID: 35125 RVA: 0x00299908 File Offset: 0x00297B08
 	public void Update(SelectableExpData expData, bool needPreviewTween = true)
 	{
 		base.GetText(2).SetText("+" + Math.Floor((double)expData.GetCurrentAddExp()).ToString(), true);
@@ -133,7 +133,7 @@ public class ExpComponent : UiPanelBase
 		this.UpdateCurrentExp(expData, needPreviewTween);
 	}
 
-	// Token: 0x0600B54B RID: 46411 RVA: 0x0028F252 File Offset: 0x0028D452
+	// Token: 0x06008936 RID: 35126 RVA: 0x00299972 File Offset: 0x00297B72
 	private void UpdateExpWithLevelUp(SelectableExpData expData, bool needPreviewTween = true)
 	{
 		this.SetNextLevel(expData.GetArrivedLevel());
@@ -146,7 +146,7 @@ public class ExpComponent : UiPanelBase
 		this.UpdateNextExpState(expData.GetArrivedFillAmount());
 	}
 
-	// Token: 0x0600B54C RID: 46412 RVA: 0x0028F28B File Offset: 0x0028D48B
+	// Token: 0x06008937 RID: 35127 RVA: 0x002999AB File Offset: 0x00297BAB
 	private void UpdateCurrentExp(SelectableExpData expData, bool needPreviewTween = true)
 	{
 		this.SetNextLevelActive(false);
@@ -159,7 +159,7 @@ public class ExpComponent : UiPanelBase
 		this.UpdateCurrentExpState(expData.GetArrivedFillAmount());
 	}
 
-	// Token: 0x0600B54D RID: 46413 RVA: 0x0028F2BF File Offset: 0x0028D4BF
+	// Token: 0x06008938 RID: 35128 RVA: 0x002999DF File Offset: 0x00297BDF
 	protected void UpdateNextExpState(float fillAmount)
 	{
 		this.ExpTweenComponent.SetCurrentSpriteActive(false);
@@ -168,26 +168,26 @@ public class ExpComponent : UiPanelBase
 		this.ExpTweenComponent.SetNextFillAmount(fillAmount);
 	}
 
-	// Token: 0x0600B54E RID: 46414 RVA: 0x0028F2F5 File Offset: 0x0028D4F5
+	// Token: 0x06008939 RID: 35129 RVA: 0x00299A15 File Offset: 0x00297C15
 	protected void SetMaxItemActive(bool bActive)
 	{
 		base.GetItem(8).SetUIActive(bActive);
 	}
 
-	// Token: 0x0600B54F RID: 46415 RVA: 0x0028F304 File Offset: 0x0028D504
+	// Token: 0x0600893A RID: 35130 RVA: 0x00299A24 File Offset: 0x00297C24
 	private void PlayPreviewExp(SelectableExpData expData)
 	{
 		this.ExpTweenComponent.PlayPreviewExpTween(expData.GetCurrentLevel(), this.LastTimePreviewLevel, expData.GetArrivedLevel(), expData.GetCurrentMaxLevel(), expData.GetArrivedFillAmount());
 		this.LastTimePreviewLevel = expData.GetArrivedLevel();
 	}
 
-	// Token: 0x0600B550 RID: 46416 RVA: 0x0028F33B File Offset: 0x0028D53B
+	// Token: 0x0600893B RID: 35131 RVA: 0x00299A5B File Offset: 0x00297C5B
 	public void BindPlayCompleteCallBack(Action<bool> callback)
 	{
 		this.ExpTweenComponent.BindPlayCompleteCallBack(callback);
 	}
 
-	// Token: 0x0600B551 RID: 46417 RVA: 0x0028F349 File Offset: 0x0028D549
+	// Token: 0x0600893C RID: 35132 RVA: 0x00299A69 File Offset: 0x00297C69
 	protected void UpdateCurrentExpState(float fillAmount)
 	{
 		this.ExpTweenComponent.SetCurrentSpriteActive(true);
@@ -195,7 +195,7 @@ public class ExpComponent : UiPanelBase
 		this.ExpTweenComponent.SetNextSpriteActive(false);
 	}
 
-	// Token: 0x0600B552 RID: 46418 RVA: 0x0028F36F File Offset: 0x0028D56F
+	// Token: 0x0600893D RID: 35133 RVA: 0x00299A8F File Offset: 0x00297C8F
 	private void SetNextLevelActive(bool bActive)
 	{
 		if (!bActive)
@@ -205,7 +205,7 @@ public class ExpComponent : UiPanelBase
 		base.GetItem(4).SetUIActive(bActive);
 	}
 
-	// Token: 0x0600B553 RID: 46419 RVA: 0x0028F394 File Offset: 0x0028D594
+	// Token: 0x0600893E RID: 35134 RVA: 0x00299AB4 File Offset: 0x00297CB4
 	private void SetNextLevel(int nextLevel)
 	{
 		this.SetNextLevelActive(true);
@@ -217,81 +217,81 @@ public class ExpComponent : UiPanelBase
 		base.GetText(1).SetText(nextLevel.ToString(), true);
 	}
 
-	// Token: 0x0600B554 RID: 46420 RVA: 0x0028F3ED File Offset: 0x0028D5ED
+	// Token: 0x0600893F RID: 35135 RVA: 0x00299B0D File Offset: 0x00297D0D
 	public void SetLevelItemShowState(bool state)
 	{
 		this.SetArrowShowState(state);
 		this.SetAfterTextShowState(state);
 	}
 
-	// Token: 0x0600B555 RID: 46421 RVA: 0x0028F3FD File Offset: 0x0028D5FD
+	// Token: 0x06008940 RID: 35136 RVA: 0x00299B1D File Offset: 0x00297D1D
 	public void SetArrowShowState(bool state)
 	{
 		base.GetItem(4).SetUIActive(state);
 	}
 
-	// Token: 0x0600B556 RID: 46422 RVA: 0x0028F40C File Offset: 0x0028D60C
+	// Token: 0x06008941 RID: 35137 RVA: 0x00299B2C File Offset: 0x00297D2C
 	public void SetAfterTextShowState(bool state)
 	{
 		base.GetText(1).SetUIActive(state);
 	}
 
-	// Token: 0x0600B557 RID: 46423 RVA: 0x0028F41B File Offset: 0x0028D61B
+	// Token: 0x06008942 RID: 35138 RVA: 0x00299B3B File Offset: 0x00297D3B
 	public void RefreshSingleText(string text)
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(0), text, Array.Empty<object>());
 	}
 
-	// Token: 0x0600B558 RID: 46424 RVA: 0x0028F434 File Offset: 0x0028D634
+	// Token: 0x06008943 RID: 35139 RVA: 0x00299B54 File Offset: 0x00297D54
 	protected override void OnBeforeDestroy()
 	{
 		this.ExpTweenComponent.Destroy();
 	}
 
-	// Token: 0x040051D7 RID: 20951
+	// Token: 0x04005282 RID: 21122
 	[Nullable(2)]
 	protected ExpTweenComponent ExpTweenComponent;
 
-	// Token: 0x040051D8 RID: 20952
+	// Token: 0x04005283 RID: 21123
 	private string LevelFormatText = "";
 
-	// Token: 0x040051D9 RID: 20953
+	// Token: 0x04005284 RID: 21124
 	[Nullable(2)]
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x040051DA RID: 20954
+	// Token: 0x04005285 RID: 21125
 	protected bool IsAddUp;
 
-	// Token: 0x040051DB RID: 20955
+	// Token: 0x04005286 RID: 21126
 	[Nullable(2)]
 	private readonly Action ExpTweenFinish;
 
-	// Token: 0x040051DC RID: 20956
+	// Token: 0x04005287 RID: 21127
 	private int LastTimePreviewLevel;
 
-	// Token: 0x02007E10 RID: 32272
+	// Token: 0x02006F96 RID: 28566
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029410 RID: 168976
+		// Token: 0x0402473B RID: 149307
 		CurrentLevelText,
-		// Token: 0x04029411 RID: 168977
+		// Token: 0x0402473C RID: 149308
 		NextLevelText,
-		// Token: 0x04029412 RID: 168978
+		// Token: 0x0402473D RID: 149309
 		AddExpText,
-		// Token: 0x04029413 RID: 168979
+		// Token: 0x0402473E RID: 149310
 		IncreaseExpText,
-		// Token: 0x04029414 RID: 168980
+		// Token: 0x0402473F RID: 149311
 		ArrowItem,
-		// Token: 0x04029415 RID: 168981
+		// Token: 0x04024740 RID: 149312
 		AddExpSprite,
-		// Token: 0x04029416 RID: 168982
+		// Token: 0x04024741 RID: 149313
 		CurrentExpSprite,
-		// Token: 0x04029417 RID: 168983
+		// Token: 0x04024742 RID: 149314
 		AniSprite,
-		// Token: 0x04029418 RID: 168984
+		// Token: 0x04024743 RID: 149315
 		MaxSprite,
-		// Token: 0x04029419 RID: 168985
+		// Token: 0x04024744 RID: 149316
 		LevelItem
 	}
 }

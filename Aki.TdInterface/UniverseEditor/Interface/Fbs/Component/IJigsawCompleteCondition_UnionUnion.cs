@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054A4 RID: 21668
+	// Token: 0x02005A2A RID: 23082
 	public class IJigsawCompleteCondition_UnionUnion
 	{
-		// Token: 0x17009F88 RID: 40840
-		// (get) Token: 0x06023A98 RID: 146072 RVA: 0x004EE159 File Offset: 0x004EC359
-		// (set) Token: 0x06023A99 RID: 146073 RVA: 0x004EE161 File Offset: 0x004EC361
+		// Token: 0x1700A7C2 RID: 42946
+		// (get) Token: 0x06025B50 RID: 154448 RVA: 0x0052B1CD File Offset: 0x005293CD
+		// (set) Token: 0x06025B51 RID: 154449 RVA: 0x0052B1D5 File Offset: 0x005293D5
 		public IJigsawCompleteCondition_Union Type { get; set; }
 
-		// Token: 0x17009F89 RID: 40841
-		// (get) Token: 0x06023A9A RID: 146074 RVA: 0x004EE16A File Offset: 0x004EC36A
-		// (set) Token: 0x06023A9B RID: 146075 RVA: 0x004EE172 File Offset: 0x004EC372
+		// Token: 0x1700A7C3 RID: 42947
+		// (get) Token: 0x06025B52 RID: 154450 RVA: 0x0052B1DE File Offset: 0x005293DE
+		// (set) Token: 0x06025B53 RID: 154451 RVA: 0x0052B1E6 File Offset: 0x005293E6
 		public object Value { get; set; }
 
-		// Token: 0x06023A9C RID: 146076 RVA: 0x004EE17B File Offset: 0x004EC37B
+		// Token: 0x06025B54 RID: 154452 RVA: 0x0052B1EF File Offset: 0x005293EF
 		public IJigsawCompleteCondition_UnionUnion()
 		{
 			this.Type = IJigsawCompleteCondition_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06023A9D RID: 146077 RVA: 0x004EE191 File Offset: 0x004EC391
+		// Token: 0x06025B55 RID: 154453 RVA: 0x0052B205 File Offset: 0x00529405
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06023A9E RID: 146078 RVA: 0x004EE1A3 File Offset: 0x004EC3A3
+		// Token: 0x06025B56 RID: 154454 RVA: 0x0052B217 File Offset: 0x00529417
 		public IJigsawCompleteConditionT AsIJigsawCompleteCondition()
 		{
 			return this.As<IJigsawCompleteConditionT>();
 		}
 
-		// Token: 0x06023A9F RID: 146079 RVA: 0x004EE1AB File Offset: 0x004EC3AB
+		// Token: 0x06025B57 RID: 154455 RVA: 0x0052B21F File Offset: 0x0052941F
 		public static IJigsawCompleteCondition_UnionUnion FromIJigsawCompleteCondition(IJigsawCompleteConditionT _ijigsawcompletecondition)
 		{
 			return new IJigsawCompleteCondition_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06023AA0 RID: 146080 RVA: 0x004EE1C0 File Offset: 0x004EC3C0
+		// Token: 0x06025B58 RID: 154456 RVA: 0x0052B234 File Offset: 0x00529434
 		public IActivateAllCorrectPieceT AsIActivateAllCorrectPiece()
 		{
 			return this.As<IActivateAllCorrectPieceT>();
 		}
 
-		// Token: 0x06023AA1 RID: 146081 RVA: 0x004EE1C8 File Offset: 0x004EC3C8
+		// Token: 0x06025B59 RID: 154457 RVA: 0x0052B23C File Offset: 0x0052943C
 		public static IJigsawCompleteCondition_UnionUnion FromIActivateAllCorrectPiece(IActivateAllCorrectPieceT _iactivateallcorrectpiece)
 		{
 			return new IJigsawCompleteCondition_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06023AA2 RID: 146082 RVA: 0x004EE1DD File Offset: 0x004EC3DD
+		// Token: 0x06025B5A RID: 154458 RVA: 0x0052B251 File Offset: 0x00529451
 		public IPutInTheSpecifiedPieceT AsIPutInTheSpecifiedPiece()
 		{
 			return this.As<IPutInTheSpecifiedPieceT>();
 		}
 
-		// Token: 0x06023AA3 RID: 146083 RVA: 0x004EE1E5 File Offset: 0x004EC3E5
+		// Token: 0x06025B5B RID: 154459 RVA: 0x0052B259 File Offset: 0x00529459
 		public static IJigsawCompleteCondition_UnionUnion FromIPutInTheSpecifiedPiece(IPutInTheSpecifiedPieceT _iputinthespecifiedpiece)
 		{
 			return new IJigsawCompleteCondition_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06023AA4 RID: 146084 RVA: 0x004EE1FA File Offset: 0x004EC3FA
+		// Token: 0x06025B5C RID: 154460 RVA: 0x0052B26E File Offset: 0x0052946E
 		public IActiveRenjuPieceT AsIActiveRenjuPiece()
 		{
 			return this.As<IActiveRenjuPieceT>();
 		}
 
-		// Token: 0x06023AA5 RID: 146085 RVA: 0x004EE202 File Offset: 0x004EC402
+		// Token: 0x06025B5D RID: 154461 RVA: 0x0052B276 File Offset: 0x00529476
 		public static IJigsawCompleteCondition_UnionUnion FromIActiveRenjuPiece(IActiveRenjuPieceT _iactiverenjupiece)
 		{
 			return new IJigsawCompleteCondition_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06023AA6 RID: 146086 RVA: 0x004EE217 File Offset: 0x004EC417
+		// Token: 0x06025B5E RID: 154462 RVA: 0x0052B28B File Offset: 0x0052948B
 		public IActivateSpecifiedPieceT AsIActivateSpecifiedPiece()
 		{
 			return this.As<IActivateSpecifiedPieceT>();
 		}
 
-		// Token: 0x06023AA7 RID: 146087 RVA: 0x004EE21F File Offset: 0x004EC41F
+		// Token: 0x06025B5F RID: 154463 RVA: 0x0052B293 File Offset: 0x00529493
 		public static IJigsawCompleteCondition_UnionUnion FromIActivateSpecifiedPiece(IActivateSpecifiedPieceT _iactivatespecifiedpiece)
 		{
 			return new IJigsawCompleteCondition_UnionUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06023AA8 RID: 146088 RVA: 0x004EE234 File Offset: 0x004EC434
+		// Token: 0x06025B60 RID: 154464 RVA: 0x0052B2A8 File Offset: 0x005294A8
 		public static int Pack(FlatBufferBuilder builder, IJigsawCompleteCondition_UnionUnion _o)
 		{
 			switch (_o.Type)

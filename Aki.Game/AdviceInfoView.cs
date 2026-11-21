@@ -10,17 +10,17 @@ using CSharpScript.Game.Module.Interaction;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016D4 RID: 5844
+// Token: 0x02000B8C RID: 2956
 [NullableContext(1)]
 [Nullable(0)]
 public class AdviceInfoView : UiViewBase
 {
-	// Token: 0x0600A72B RID: 42795 RVA: 0x00257AA8 File Offset: 0x00255CA8
+	// Token: 0x06007B0B RID: 31499 RVA: 0x00261EB4 File Offset: 0x002600B4
 	public AdviceInfoView(UiViewInfo uiViewInfo) : base(uiViewInfo)
 	{
 	}
 
-	// Token: 0x0600A72C RID: 42796 RVA: 0x00257AB4 File Offset: 0x00255CB4
+	// Token: 0x06007B0C RID: 31500 RVA: 0x00261EC0 File Offset: 0x002600C0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +42,7 @@ public class AdviceInfoView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600A72D RID: 42797 RVA: 0x00257BD0 File Offset: 0x00255DD0
+	// Token: 0x06007B0D RID: 31501 RVA: 0x00261FDC File Offset: 0x002601DC
 	protected override void OnStart()
 	{
 		this.TimerId = null;
@@ -66,7 +66,7 @@ public class AdviceInfoView : UiViewBase
 		this.ListCurrentEntityBattleTag();
 	}
 
-	// Token: 0x0600A72E RID: 42798 RVA: 0x00257C44 File Offset: 0x00255E44
+	// Token: 0x06007B0E RID: 31502 RVA: 0x00262050 File Offset: 0x00260250
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnAdviceEntityNotify, new Action(this.OnReceiveEntityRefresh));
@@ -77,7 +77,7 @@ public class AdviceInfoView : UiViewBase
 		EventSystem.Instance.Add(EEventName.RefreshAdviceInfoView, new Action(this.RefreshAdviceInfoView));
 	}
 
-	// Token: 0x0600A72F RID: 42799 RVA: 0x00257CF4 File Offset: 0x00255EF4
+	// Token: 0x06007B0F RID: 31503 RVA: 0x00262100 File Offset: 0x00260300
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRoleCompleted));
@@ -88,13 +88,13 @@ public class AdviceInfoView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.RefreshAdviceInfoView, new Action(this.RefreshAdviceInfoView));
 	}
 
-	// Token: 0x0600A730 RID: 42800 RVA: 0x00257DA2 File Offset: 0x00255FA2
+	// Token: 0x06007B10 RID: 31504 RVA: 0x002621AE File Offset: 0x002603AE
 	private void OnChangeRoleCompleted(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		this.ListCurrentEntityBattleTag();
 	}
 
-	// Token: 0x0600A731 RID: 42801 RVA: 0x00257DAC File Offset: 0x00255FAC
+	// Token: 0x06007B11 RID: 31505 RVA: 0x002621B8 File Offset: 0x002603B8
 	private void ListCurrentEntityBattleTag()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -116,7 +116,7 @@ public class AdviceInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A732 RID: 42802 RVA: 0x00257E20 File Offset: 0x00256020
+	// Token: 0x06007B12 RID: 31506 RVA: 0x0026222C File Offset: 0x0026042C
 	private void ListenPlayerEnterFight(EntityHandle playerEntityHandle)
 	{
 		WorldEntity entity = playerEntityHandle.Entity;
@@ -127,7 +127,7 @@ public class AdviceInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A733 RID: 42803 RVA: 0x00257E70 File Offset: 0x00256070
+	// Token: 0x06007B13 RID: 31507 RVA: 0x0026227C File Offset: 0x0026047C
 	private void RemoveEnterFightTask()
 	{
 		if (this.EnterFightTask != null)
@@ -137,7 +137,7 @@ public class AdviceInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A734 RID: 42804 RVA: 0x00257E91 File Offset: 0x00256091
+	// Token: 0x06007B14 RID: 31508 RVA: 0x0026229D File Offset: 0x0026049D
 	private void OnPlayerEnterFight(int tagId, bool tagExists)
 	{
 		this.IsPlayerEnterFight = tagExists;
@@ -147,13 +147,13 @@ public class AdviceInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A735 RID: 42805 RVA: 0x00257EA4 File Offset: 0x002560A4
+	// Token: 0x06007B15 RID: 31509 RVA: 0x002622B0 File Offset: 0x002604B0
 	private bool CanClickLikeToggle()
 	{
 		return true;
 	}
 
-	// Token: 0x0600A736 RID: 42806 RVA: 0x00257EA8 File Offset: 0x002560A8
+	// Token: 0x06007B16 RID: 31510 RVA: 0x002622B4 File Offset: 0x002604B4
 	private void OnClickDisLikeBtn(EToggleState state)
 	{
 		int currentEntityId = AdviceModel.Instance.GetCurrentEntityId();
@@ -210,7 +210,7 @@ public class AdviceInfoView : UiViewBase
 		AdviceController.Instance.RequestVote(entityId, value, PbAdviceVoteType.Cancel);
 	}
 
-	// Token: 0x0600A737 RID: 42807 RVA: 0x00257FB0 File Offset: 0x002561B0
+	// Token: 0x06007B17 RID: 31511 RVA: 0x002623BC File Offset: 0x002605BC
 	private void OnClickLikeBtn(EToggleState state)
 	{
 		int currentEntityId = AdviceModel.Instance.GetCurrentEntityId();
@@ -268,20 +268,20 @@ public class AdviceInfoView : UiViewBase
 		AdviceController.Instance.RequestVote(entityId, value, PbAdviceVoteType.Up);
 	}
 
-	// Token: 0x0600A738 RID: 42808 RVA: 0x002580C6 File Offset: 0x002562C6
+	// Token: 0x06007B18 RID: 31512 RVA: 0x002624D2 File Offset: 0x002606D2
 	private void RefreshAdviceInfoView()
 	{
 		this.InitView();
 	}
 
-	// Token: 0x0600A739 RID: 42809 RVA: 0x002580CE File Offset: 0x002562CE
+	// Token: 0x06007B19 RID: 31513 RVA: 0x002624DA File Offset: 0x002606DA
 	private void OnReceiveEntityRefresh()
 	{
 		this.RefreshLikeToggle();
 		this.RefreshLikeNum();
 	}
 
-	// Token: 0x0600A73A RID: 42810 RVA: 0x002580DC File Offset: 0x002562DC
+	// Token: 0x06007B1A RID: 31514 RVA: 0x002624E8 File Offset: 0x002606E8
 	private void RefreshLikeToggle()
 	{
 		long[] upVoteIds = AdviceModel.Instance.GetUpVoteIds();
@@ -333,13 +333,13 @@ public class AdviceInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A73B RID: 42811 RVA: 0x0025818D File Offset: 0x0025638D
+	// Token: 0x06007B1B RID: 31515 RVA: 0x00262599 File Offset: 0x00260799
 	protected override void OnAfterShow()
 	{
 		this.InitView();
 	}
 
-	// Token: 0x0600A73C RID: 42812 RVA: 0x00258198 File Offset: 0x00256398
+	// Token: 0x06007B1C RID: 31516 RVA: 0x002625A4 File Offset: 0x002607A4
 	private void InitView()
 	{
 		this.InitTimer();
@@ -353,7 +353,7 @@ public class AdviceInfoView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600A73D RID: 42813 RVA: 0x002581DD File Offset: 0x002563DD
+	// Token: 0x06007B1D RID: 31517 RVA: 0x002625E9 File Offset: 0x002607E9
 	private void InitTimer()
 	{
 		this.RemoveTimer();
@@ -363,7 +363,7 @@ public class AdviceInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A73E RID: 42814 RVA: 0x00258216 File Offset: 0x00256416
+	// Token: 0x06007B1E RID: 31518 RVA: 0x00262622 File Offset: 0x00260822
 	private void RemoveTimer()
 	{
 		if (this.TimerId != null)
@@ -373,7 +373,7 @@ public class AdviceInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A73F RID: 42815 RVA: 0x00258238 File Offset: 0x00256438
+	// Token: 0x06007B1F RID: 31519 RVA: 0x00262644 File Offset: 0x00260844
 	private void CachePlayerCurrentPosition()
 	{
 		if (this.ActorStartPosition != null)
@@ -389,7 +389,7 @@ public class AdviceInfoView : UiViewBase
 		this.ActorStartPosition = vector;
 	}
 
-	// Token: 0x0600A740 RID: 42816 RVA: 0x00258280 File Offset: 0x00256480
+	// Token: 0x06007B20 RID: 31520 RVA: 0x0026268C File Offset: 0x0026088C
 	private void RefreshView()
 	{
 		this.RefreshLikeNum();
@@ -399,7 +399,7 @@ public class AdviceInfoView : UiViewBase
 		this.RefreshPlayerName();
 	}
 
-	// Token: 0x0600A741 RID: 42817 RVA: 0x002582A0 File Offset: 0x002564A0
+	// Token: 0x06007B21 RID: 31521 RVA: 0x002626AC File Offset: 0x002608AC
 	private void RefreshLikeNum()
 	{
 		if (this.AdviceDataInstance == null)
@@ -421,7 +421,7 @@ public class AdviceInfoView : UiViewBase
 		text2.SetColor(color);
 	}
 
-	// Token: 0x0600A742 RID: 42818 RVA: 0x0025830E File Offset: 0x0025650E
+	// Token: 0x06007B22 RID: 31522 RVA: 0x0026271A File Offset: 0x0026091A
 	private void RefreshText()
 	{
 		UUIText text = base.GetText(4);
@@ -432,7 +432,7 @@ public class AdviceInfoView : UiViewBase
 		text.SetText(this.AdviceDataInstance.GetAdviceShowText(), true);
 	}
 
-	// Token: 0x0600A743 RID: 42819 RVA: 0x00258330 File Offset: 0x00256530
+	// Token: 0x06007B23 RID: 31523 RVA: 0x0026273C File Offset: 0x0026093C
 	private void RefreshPlayerName()
 	{
 		AdviceEntityData currentEntityAdviceData = AdviceModel.Instance.GetCurrentEntityAdviceData();
@@ -445,7 +445,7 @@ public class AdviceInfoView : UiViewBase
 		text.SetText(newText, true);
 	}
 
-	// Token: 0x0600A744 RID: 42820 RVA: 0x00258370 File Offset: 0x00256570
+	// Token: 0x06007B24 RID: 31524 RVA: 0x0026277C File Offset: 0x0026097C
 	private void RefreshEmojiTexture()
 	{
 		if (this.AdviceDataInstance == null)
@@ -477,7 +477,7 @@ public class AdviceInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A745 RID: 42821 RVA: 0x002583FF File Offset: 0x002565FF
+	// Token: 0x06007B25 RID: 31525 RVA: 0x0026280B File Offset: 0x00260A0B
 	private void TimerCheck(float deltaTime)
 	{
 		this.CachePlayerCurrentPosition();
@@ -485,7 +485,7 @@ public class AdviceInfoView : UiViewBase
 		this.CheckPlayerIfMoveAndSetInteractState();
 	}
 
-	// Token: 0x0600A746 RID: 42822 RVA: 0x00258414 File Offset: 0x00256614
+	// Token: 0x06007B26 RID: 31526 RVA: 0x00262820 File Offset: 0x00260A20
 	private void CheckPlayerIfMoveAndSetInteractState()
 	{
 		if (InteractionModel.Instance.IsHideInteractHint && this.ActorStartPosition != null)
@@ -502,14 +502,14 @@ public class AdviceInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A747 RID: 42823 RVA: 0x002584B4 File Offset: 0x002566B4
+	// Token: 0x06007B27 RID: 31527 RVA: 0x002628C0 File Offset: 0x00260AC0
 	private bool CheckPositionInRange(double current, double target, int off)
 	{
 		int num = (int)Math.Ceiling(current) - (int)Math.Ceiling(target);
 		return num < off && num > -1 * off;
 	}
 
-	// Token: 0x0600A748 RID: 42824 RVA: 0x002584E0 File Offset: 0x002566E0
+	// Token: 0x06007B28 RID: 31528 RVA: 0x002628EC File Offset: 0x00260AEC
 	private void CheckEntityDistanceIfNeedClose()
 	{
 		int currentEntityId = AdviceModel.Instance.GetCurrentEntityId();
@@ -535,7 +535,7 @@ public class AdviceInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A749 RID: 42825 RVA: 0x0025855B File Offset: 0x0025675B
+	// Token: 0x06007B29 RID: 31529 RVA: 0x00262967 File Offset: 0x00260B67
 	private void OnCreateViewInstance(UiViewBase view)
 	{
 		UiViewInfo uiViewInfo = UiConfig.Instance.TryGetViewInfo(view.ViewInfo.Name);
@@ -545,13 +545,13 @@ public class AdviceInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A74A RID: 42826 RVA: 0x0025858A File Offset: 0x0025678A
+	// Token: 0x06007B2A RID: 31530 RVA: 0x00262996 File Offset: 0x00260B96
 	private void OnShowUiScene()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600A74B RID: 42827 RVA: 0x00258593 File Offset: 0x00256793
+	// Token: 0x06007B2B RID: 31531 RVA: 0x0026299F File Offset: 0x00260B9F
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveTimer();
@@ -559,60 +559,60 @@ public class AdviceInfoView : UiViewBase
 		InteractionModel.Instance.SetInteractionHintDisable(false);
 	}
 
-	// Token: 0x04004B7C RID: 19324
+	// Token: 0x04004C23 RID: 19491
 	private const int CHECKTIMEGAP = 500;
 
-	// Token: 0x04004B7D RID: 19325
+	// Token: 0x04004C24 RID: 19492
 	private const int ROLEMOVERAGE = 3;
 
-	// Token: 0x04004B7E RID: 19326
+	// Token: 0x04004C25 RID: 19493
 	[Nullable(2)]
 	private TimerHandle TimerId;
 
-	// Token: 0x04004B7F RID: 19327
+	// Token: 0x04004C26 RID: 19494
 	[Nullable(2)]
 	private AdviceData AdviceDataInstance;
 
-	// Token: 0x04004B80 RID: 19328
+	// Token: 0x04004C27 RID: 19495
 	[Nullable(2)]
 	private object EnterFightTask;
 
-	// Token: 0x04004B81 RID: 19329
+	// Token: 0x04004C28 RID: 19496
 	private bool IsPlayerEnterFight;
 
-	// Token: 0x04004B82 RID: 19330
+	// Token: 0x04004C29 RID: 19497
 	[Nullable(2)]
 	private global::Vector ActorStartPosition;
 
-	// Token: 0x02007CA8 RID: 31912
+	// Token: 0x02006E2D RID: 28205
 	[NullableContext(0)]
 	private static class EComponents
 	{
-		// Token: 0x04028E37 RID: 167479
+		// Token: 0x04024160 RID: 147808
 		public const int ContentItem = 0;
 
-		// Token: 0x04028E38 RID: 167480
+		// Token: 0x04024161 RID: 147809
 		public const int EmojiTexture = 1;
 
-		// Token: 0x04028E39 RID: 167481
+		// Token: 0x04024162 RID: 147810
 		public const int NameText = 2;
 
-		// Token: 0x04028E3A RID: 167482
+		// Token: 0x04024163 RID: 147811
 		public const int TextLayout = 3;
 
-		// Token: 0x04028E3B RID: 167483
+		// Token: 0x04024164 RID: 147812
 		public const int ContentText = 4;
 
-		// Token: 0x04028E3C RID: 167484
+		// Token: 0x04024165 RID: 147813
 		public const int LikeNumText = 5;
 
-		// Token: 0x04028E3D RID: 167485
+		// Token: 0x04024166 RID: 147814
 		public const int DislikeToggle = 6;
 
-		// Token: 0x04028E3E RID: 167486
+		// Token: 0x04024167 RID: 147815
 		public const int LikeToggle = 7;
 
-		// Token: 0x04028E3F RID: 167487
+		// Token: 0x04024168 RID: 147816
 		public const int ContentText2 = 8;
 	}
 }

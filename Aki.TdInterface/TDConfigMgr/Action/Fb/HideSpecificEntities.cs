@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200278F RID: 10127
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A61 RID: 10849
 	public class HideSpecificEntities : ActionParams
 	{
-		// Token: 0x0600E173 RID: 57715 RVA: 0x00215045 File Offset: 0x00213245
+		// Token: 0x0600EF91 RID: 61329 RVA: 0x00231DD9 File Offset: 0x0022FFD9
 		public static HideSpecificEntities Create(IHideSpecificEntities? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004417 RID: 17431
-		// (get) Token: 0x0600E174 RID: 57716 RVA: 0x00215064 File Offset: 0x00213264
+		// Token: 0x1700477D RID: 18301
+		// (get) Token: 0x0600EF92 RID: 61330 RVA: 0x00231DF8 File Offset: 0x0022FFF8
 		public virtual List<int> EntityIds
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CFB RID: 31995
+		// Token: 0x040083B1 RID: 33713
 		private IHideSpecificEntities Instance;
 
-		// Token: 0x04007CFC RID: 31996
+		// Token: 0x040083B2 RID: 33714
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007CFD RID: 31997
+		// Token: 0x040083B3 RID: 33715
 		private bool _EntityIdsInited;
 	}
 }

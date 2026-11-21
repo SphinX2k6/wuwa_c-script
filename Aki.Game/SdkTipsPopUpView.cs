@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002971 RID: 10609
+// Token: 0x02001EEC RID: 7916
 public class SdkTipsPopUpView : UiTickViewBase
 {
-	// Token: 0x06015EB5 RID: 89781 RVA: 0x00587951 File Offset: 0x00585B51
+	// Token: 0x060138B9 RID: 80057 RVA: 0x005B2955 File Offset: 0x005B0B55
 	[NullableContext(1)]
 	public SdkTipsPopUpView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06015EB6 RID: 89782 RVA: 0x0058795C File Offset: 0x00585B5C
+	// Token: 0x060138BA RID: 80058 RVA: 0x005B2960 File Offset: 0x005B0B60
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class SdkTipsPopUpView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06015EB7 RID: 89783 RVA: 0x005879B8 File Offset: 0x00585BB8
+	// Token: 0x060138BB RID: 80059 RVA: 0x005B29BC File Offset: 0x005B0BBC
 	protected override void OnStart()
 	{
 		SdkPopUpViewData sdkPopUpViewData = this.OpenParam as SdkPopUpViewData;
@@ -68,7 +68,7 @@ public class SdkTipsPopUpView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06015EB8 RID: 89784 RVA: 0x00587A87 File Offset: 0x00585C87
+	// Token: 0x060138BC RID: 80060 RVA: 0x005B2A8B File Offset: 0x005B0C8B
 	protected override void OnBeforeShow()
 	{
 		SdkPopUpViewData data = this.Data;
@@ -78,7 +78,7 @@ public class SdkTipsPopUpView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06015EB9 RID: 89785 RVA: 0x00587AAD File Offset: 0x00585CAD
+	// Token: 0x060138BD RID: 80061 RVA: 0x005B2AB1 File Offset: 0x005B0CB1
 	protected override void OnBeforeHide()
 	{
 		SdkPopUpViewData data = this.Data;
@@ -88,7 +88,7 @@ public class SdkTipsPopUpView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06015EBA RID: 89786 RVA: 0x00587AD4 File Offset: 0x00585CD4
+	// Token: 0x060138BE RID: 80062 RVA: 0x005B2AD8 File Offset: 0x005B0CD8
 	protected override void OnTick(float delta)
 	{
 		if (this.IsCanClose && base.IsShow)
@@ -107,7 +107,7 @@ public class SdkTipsPopUpView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06015EBB RID: 89787 RVA: 0x00587B68 File Offset: 0x00585D68
+	// Token: 0x060138BF RID: 80063 RVA: 0x005B2B6C File Offset: 0x005B0D6C
 	[NullableContext(1)]
 	private void RefreshText(SdkPopUpViewData data)
 	{
@@ -119,30 +119,30 @@ public class SdkTipsPopUpView : UiTickViewBase
 		text.SetText(data.Text, true);
 	}
 
-	// Token: 0x0400A322 RID: 41762
+	// Token: 0x0400A70C RID: 42764
 	private const int AUTOCLOSETIME = 10;
 
-	// Token: 0x0400A323 RID: 41763
+	// Token: 0x0400A70D RID: 42765
 	private const int LOGINCLOSETIME = 2000;
 
-	// Token: 0x0400A324 RID: 41764
+	// Token: 0x0400A70E RID: 42766
 	private bool IsCanClose;
 
-	// Token: 0x0400A325 RID: 41765
+	// Token: 0x0400A70F RID: 42767
 	[Nullable(2)]
 	private SdkPopUpViewData Data;
 
-	// Token: 0x0400A326 RID: 41766
+	// Token: 0x0400A710 RID: 42768
 	private float CurrentRunningTime;
 
-	// Token: 0x02008F35 RID: 36661
+	// Token: 0x0200817D RID: 33149
 	private enum EComponents
 	{
-		// Token: 0x0402E6B5 RID: 190133
+		// Token: 0x04029DB2 RID: 171442
 		CircleImg,
-		// Token: 0x0402E6B6 RID: 190134
+		// Token: 0x04029DB3 RID: 171443
 		TipsText,
-		// Token: 0x0402E6B7 RID: 190135
+		// Token: 0x04029DB4 RID: 171444
 		PlayStationItem
 	}
 }

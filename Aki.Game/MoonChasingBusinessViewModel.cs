@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02001325 RID: 4901
+// Token: 0x020007D9 RID: 2009
 public class MoonChasingBusinessViewModel
 {
-	// Token: 0x04003CB0 RID: 15536
+	// Token: 0x04003D48 RID: 15688
 	public EBusinessSkipDefine SkipTarget;
 }

@@ -5,16 +5,16 @@ using CSharpScript.Game.LevelGamePlay.Guarantee;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200699F RID: 27039
+	// Token: 0x02005AFB RID: 23291
 	public class GuaranteeContext : GeneralContext
 	{
-		// Token: 0x0604344A RID: 275530 RVA: 0x01065F26 File Offset: 0x01064126
+		// Token: 0x06039482 RID: 234626 RVA: 0x0100A18E File Offset: 0x0100838E
 		public GuaranteeContext()
 		{
 			this.Type = new EGeneralContextType?(EGeneralContextType.Guarantee);
 		}
 
-		// Token: 0x0604344B RID: 275531 RVA: 0x01065F3A File Offset: 0x0106413A
+		// Token: 0x06039483 RID: 234627 RVA: 0x0100A1A2 File Offset: 0x010083A2
 		[NullableContext(1)]
 		public static GuaranteeContext Create(GameCtxType? subType = null, EGuaranteeReason guaranteeReason = EGuaranteeReason.Unknown)
 		{
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return guaranteeContext;
 		}
 
-		// Token: 0x040230AE RID: 143534
+		// Token: 0x0401E298 RID: 123544
 		public EGuaranteeReason GuaranteeReason;
 	}
 }

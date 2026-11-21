@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -8,25 +7,25 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x020029EB RID: 10731
+// Token: 0x02001F66 RID: 8038
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ShopController : UiControllerBase
 {
-	// Token: 0x0601641D RID: 91165 RVA: 0x005A136F File Offset: 0x0059F56F
+	// Token: 0x06013E24 RID: 81444 RVA: 0x005CC363 File Offset: 0x005CA563
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.CrossDay, new Action(this.OnCrossDay));
 	}
 
-	// Token: 0x0601641E RID: 91166 RVA: 0x005A138D File Offset: 0x0059F58D
+	// Token: 0x06013E25 RID: 81445 RVA: 0x005CC381 File Offset: 0x005CA581
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.CrossDay, new Action(this.OnCrossDay));
 	}
 
-	// Token: 0x0601641F RID: 91167 RVA: 0x005A13AB File Offset: 0x0059F5AB
+	// Token: 0x06013E26 RID: 81446 RVA: 0x005CC39F File Offset: 0x005CA59F
 	private void OnCrossDay()
 	{
 		this.SendShopInfoRequest(ShopModel.Instance.VersionId).ContinueWith(delegate(bool success)
@@ -41,7 +40,7 @@ public class ShopController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06016420 RID: 91168 RVA: 0x005A13E4 File Offset: 0x0059F5E4
+	// Token: 0x06013E27 RID: 81447 RVA: 0x005CC3D8 File Offset: 0x005CA5D8
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.ShopInfoNotify, delegate(IMessage msg, Net.CallbackStatus _)
@@ -49,7 +48,7 @@ public class ShopController : UiControllerBase
 			ShopInfoNotify shopInfoNotify = (ShopInfoNotify)msg;
 			Log.Instance.Info(ELogModule.Shop, ELogAuthor.YSQ, "Receive ShopInfoNotify", default(ReadOnlySpan<ValueTuple<string, object>>));
 			ShopModel.Instance.VersionId = shopInfoNotify.VersionStr;
-			ShopModel.Instance.UpdateShopListData(shopInfoNotify.ShopList.ToList<ShopInfo>());
+			ShopModel.Instance.UpdateShopListData(shopInfoNotify.ShopList);
 		});
 		Net.Instance.Register(ENotifyMessageId.ShopUnlockNotify, delegate(IMessage msg, Net.CallbackStatus _)
 		{
@@ -65,7 +64,7 @@ public class ShopController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.ShopInfoUpdateNotify, this.OnShopInfoUpdateNotify);
 	}
 
-	// Token: 0x06016421 RID: 91169 RVA: 0x005A1452 File Offset: 0x0059F652
+	// Token: 0x06013E28 RID: 81448 RVA: 0x005CC446 File Offset: 0x005CA646
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.ShopInfoNotify);
@@ -73,7 +72,7 @@ public class ShopController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.ShopInfoUpdateNotify);
 	}
 
-	// Token: 0x06016422 RID: 91170 RVA: 0x005A1484 File Offset: 0x0059F684
+	// Token: 0x06013E29 RID: 81449 RVA: 0x005CC478 File Offset: 0x005CA678
 	[NullableContext(2)]
 	public bool OpenShop(int shopId, string uiCameraName = null, Action<bool, int> finishCallback = null)
 	{
@@ -112,7 +111,7 @@ public class ShopController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x06016423 RID: 91171 RVA: 0x005A153C File Offset: 0x0059F73C
+	// Token: 0x06013E2A RID: 81450 RVA: 0x005CC530 File Offset: 0x005CA730
 	[NullableContext(2)]
 	public unsafe void SendShopBuyRequest(int shopId, int itemId, int moneyId, int count, Action callback = null)
 	{
@@ -158,7 +157,7 @@ public class ShopController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06016424 RID: 91172 RVA: 0x005A15D4 File Offset: 0x0059F7D4
+	// Token: 0x06013E2B RID: 81451 RVA: 0x005CC5C8 File Offset: 0x005CA7C8
 	[NullableContext(0)]
 	public UniTask<bool> SendShopInfoRequest([Nullable(1)] string version)
 	{
@@ -170,7 +169,7 @@ public class ShopController : UiControllerBase
 		return <SendShopInfoRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016425 RID: 91173 RVA: 0x005A1618 File Offset: 0x0059F818
+	// Token: 0x06013E2C RID: 81452 RVA: 0x005CC60C File Offset: 0x005CA80C
 	public UniTask SendShopUpdateRequestAsync(int shopId)
 	{
 		ShopController.<SendShopUpdateRequestAsync>d__8 <SendShopUpdateRequestAsync>d__;
@@ -181,7 +180,7 @@ public class ShopController : UiControllerBase
 		return <SendShopUpdateRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016426 RID: 91174 RVA: 0x005A165C File Offset: 0x0059F85C
+	// Token: 0x06013E2D RID: 81453 RVA: 0x005CC650 File Offset: 0x005CA850
 	public void SendShopUpdateRequest(int shopId)
 	{
 		ShopUpdateRequest shopUpdateRequest = ShopUpdateRequest.Create();
@@ -198,11 +197,11 @@ public class ShopController : UiControllerBase
 				ShopModel.Instance.UpdateShopData(shopUpdateResponse.Info);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(shopUpdateResponse.ErrorCode, 28984, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(shopUpdateResponse.ErrorCode, 27292, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x06016427 RID: 91175 RVA: 0x005A16A8 File Offset: 0x0059F8A8
+	// Token: 0x06013E2E RID: 81454 RVA: 0x005CC69C File Offset: 0x005CA89C
 	public unsafe void OnShopUnlockNotify(ShopUnlockNotify notify)
 	{
 		foreach (UnlockInfo unlockInfo in notify.UnlockList)
@@ -228,8 +227,8 @@ public class ShopController : UiControllerBase
 		}
 	}
 
-	// Token: 0x17001DB7 RID: 7607
-	// (get) Token: 0x06016428 RID: 91176 RVA: 0x005A17C0 File Offset: 0x0059F9C0
+	// Token: 0x17001E10 RID: 7696
+	// (get) Token: 0x06013E2F RID: 81455 RVA: 0x005CC7B4 File Offset: 0x005CA9B4
 	public static ShopController Instance
 	{
 		get
@@ -238,7 +237,7 @@ public class ShopController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06016429 RID: 91177 RVA: 0x005A17C7 File Offset: 0x0059F9C7
+	// Token: 0x06013E30 RID: 81456 RVA: 0x005CC7BB File Offset: 0x005CA9BB
 	public static ShopController GetOrCreateInstance()
 	{
 		if (ShopController._Instance == null)
@@ -248,7 +247,7 @@ public class ShopController : UiControllerBase
 		return ShopController._Instance;
 	}
 
-	// Token: 0x0601642A RID: 91178 RVA: 0x005A17DB File Offset: 0x0059F9DB
+	// Token: 0x06013E31 RID: 81457 RVA: 0x005CC7CF File Offset: 0x005CA9CF
 	public static bool CreateInstance()
 	{
 		if (ShopController._Instance != null)
@@ -259,24 +258,24 @@ public class ShopController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0601642B RID: 91179 RVA: 0x005A17F1 File Offset: 0x0059F9F1
+	// Token: 0x06013E32 RID: 81458 RVA: 0x005CC7E5 File Offset: 0x005CA9E5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601642C RID: 91180 RVA: 0x005A17F3 File Offset: 0x0059F9F3
+	// Token: 0x06013E33 RID: 81459 RVA: 0x005CC7E7 File Offset: 0x005CA9E7
 	public static void ResetStaticDefaultValue()
 	{
 		ShopController._Instance = null;
 	}
 
-	// Token: 0x0601642D RID: 91181 RVA: 0x005A17FB File Offset: 0x0059F9FB
+	// Token: 0x06013E34 RID: 81460 RVA: 0x005CC7EF File Offset: 0x005CA9EF
 	static ShopController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ShopController.CreateStaticDefaultValue), new Action(ShopController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A593 RID: 42387
+	// Token: 0x0400A97D RID: 43389
 	[Nullable(new byte[]
 	{
 		1,
@@ -289,7 +288,7 @@ public class ShopController : UiControllerBase
 		ShopModel.Instance.UpdateShopData(shopInfoUpdateNotify.ShopInfo);
 	};
 
-	// Token: 0x0400A594 RID: 42388
+	// Token: 0x0400A97E RID: 43390
 	[Nullable(2)]
 	private static ShopController _Instance;
 }

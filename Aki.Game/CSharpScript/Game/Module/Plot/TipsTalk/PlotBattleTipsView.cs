@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.TipsTalk
 {
-	// Token: 0x0200500C RID: 20492
+	// Token: 0x02003FD6 RID: 16342
 	public class PlotBattleTipsView : PlotTipsViewBase
 	{
-		// Token: 0x06034706 RID: 214790 RVA: 0x00C59692 File Offset: 0x00C57892
+		// Token: 0x060295A9 RID: 169385 RVA: 0x00BA4B92 File Offset: 0x00BA2D92
 		public PlotBattleTipsView()
 		{
 			this.ResourceId = "UiView_BattleTips_Prefab";
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			this.OverrideAudioSrcName = "external_plot_voice_assist";
 		}
 
-		// Token: 0x06034707 RID: 214791 RVA: 0x00C596BC File Offset: 0x00C578BC
+		// Token: 0x060295AA RID: 169386 RVA: 0x00BA4BBC File Offset: 0x00BA2DBC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034708 RID: 214792 RVA: 0x00C59767 File Offset: 0x00C57967
+		// Token: 0x060295AB RID: 169387 RVA: 0x00BA4C67 File Offset: 0x00BA2E67
 		protected override void OnInit()
 		{
 			this.IconItem = base.GetTexture(1);
@@ -44,26 +44,26 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			this.NameItem = base.GetText(2);
 		}
 
-		// Token: 0x06034709 RID: 214793 RVA: 0x00C59790 File Offset: 0x00C57990
+		// Token: 0x060295AC RID: 169388 RVA: 0x00BA4C90 File Offset: 0x00BA2E90
 		[NullableContext(2)]
 		protected override UUIItem GetParentItem()
 		{
 			return UiLayer.Instance.GetBattleViewUnit(3);
 		}
 
-		// Token: 0x0200B13F RID: 45375
+		// Token: 0x02009B77 RID: 39799
 		private static class EChildCom
 		{
-			// Token: 0x04035C96 RID: 220310
+			// Token: 0x040306DE RID: 198366
 			public const int Prefab = 0;
 
-			// Token: 0x04035C97 RID: 220311
+			// Token: 0x040306DF RID: 198367
 			public const int Icon = 1;
 
-			// Token: 0x04035C98 RID: 220312
+			// Token: 0x040306E0 RID: 198368
 			public const int Name = 2;
 
-			// Token: 0x04035C99 RID: 220313
+			// Token: 0x040306E1 RID: 198369
 			public const int Text = 3;
 		}
 	}

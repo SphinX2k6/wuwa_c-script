@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006889 RID: 26761
+	// Token: 0x02006F2A RID: 28458
 	public class IGetRewardByInteractT
 	{
 	}

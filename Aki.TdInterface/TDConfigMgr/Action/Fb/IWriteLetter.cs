@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200286B RID: 10347
+	// Token: 0x02002B41 RID: 11073
 	public class IWriteLetter : IUiGame
 	{
-		// Token: 0x0600E54A RID: 58698 RVA: 0x0021B7D8 File Offset: 0x002199D8
-		[NullableContext(1)]
+		// Token: 0x0600F37A RID: 62330 RVA: 0x002386F2 File Offset: 0x002368F2
 		public static IWriteLetter Create(IWriteLetter? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004636 RID: 17974
-		// (get) Token: 0x0600E54B RID: 58699 RVA: 0x0021B7F7 File Offset: 0x002199F7
+		// Token: 0x170049A6 RID: 18854
+		// (get) Token: 0x0600F37B RID: 62331 RVA: 0x00238711 File Offset: 0x00236911
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004637 RID: 17975
-		// (get) Token: 0x0600E54C RID: 58700 RVA: 0x0021B804 File Offset: 0x00219A04
+		// Token: 0x170049A7 RID: 18855
+		// (get) Token: 0x0600F37C RID: 62332 RVA: 0x0023871E File Offset: 0x0023691E
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ECD RID: 32461
+		// Token: 0x0400858D RID: 34189
 		private IWriteLetter Instance;
 	}
 }

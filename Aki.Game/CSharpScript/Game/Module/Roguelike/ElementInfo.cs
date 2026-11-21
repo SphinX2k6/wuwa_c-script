@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D93 RID: 19859
+	// Token: 0x02003D5C RID: 15708
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ElementInfo
 	{
-		// Token: 0x06033500 RID: 210176 RVA: 0x00BFA0A8 File Offset: 0x00BF82A8
+		// Token: 0x0602836D RID: 164717 RVA: 0x00B436A4 File Offset: 0x00B418A4
 		public ElementInfo(int elementId, int count, string name = null)
 		{
 			this.ElementId = elementId;
@@ -17,16 +17,16 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.IsPreview = false;
 		}
 
-		// Token: 0x0401B3E0 RID: 111584
+		// Token: 0x04015DB3 RID: 89523
 		public int ElementId;
 
-		// Token: 0x0401B3E1 RID: 111585
+		// Token: 0x04015DB4 RID: 89524
 		public int Count;
 
-		// Token: 0x0401B3E2 RID: 111586
+		// Token: 0x04015DB5 RID: 89525
 		public string Name;
 
-		// Token: 0x0401B3E3 RID: 111587
+		// Token: 0x04015DB6 RID: 89526
 		public bool IsPreview;
 	}
 }

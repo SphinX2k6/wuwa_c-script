@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007269 RID: 29289
+	// Token: 0x02007A3E RID: 31294
 	public class ISwitchSeasonT
 	{
-		// Token: 0x1700D950 RID: 55632
-		// (get) Token: 0x06033F5E RID: 212830 RVA: 0x006FCE7E File Offset: 0x006FB07E
-		// (set) Token: 0x06033F5F RID: 212831 RVA: 0x006FCE86 File Offset: 0x006FB086
+		// Token: 0x1700E549 RID: 58697
+		// (get) Token: 0x06037260 RID: 225888 RVA: 0x0075E1DE File Offset: 0x0075C3DE
+		// (set) Token: 0x06037261 RID: 225889 RVA: 0x0075E1E6 File Offset: 0x0075C3E6
 		public EClientSetSeasonStateType Type { get; set; }
 
-		// Token: 0x1700D951 RID: 55633
-		// (get) Token: 0x06033F60 RID: 212832 RVA: 0x006FCE8F File Offset: 0x006FB08F
-		// (set) Token: 0x06033F61 RID: 212833 RVA: 0x006FCE97 File Offset: 0x006FB097
+		// Token: 0x1700E54A RID: 58698
+		// (get) Token: 0x06037262 RID: 225890 RVA: 0x0075E1EF File Offset: 0x0075C3EF
+		// (set) Token: 0x06037263 RID: 225891 RVA: 0x0075E1F7 File Offset: 0x0075C3F7
 		public ESeason Season { get; set; }
 
-		// Token: 0x1700D952 RID: 55634
-		// (get) Token: 0x06033F62 RID: 212834 RVA: 0x006FCEA0 File Offset: 0x006FB0A0
-		// (set) Token: 0x06033F63 RID: 212835 RVA: 0x006FCEA8 File Offset: 0x006FB0A8
+		// Token: 0x1700E54B RID: 58699
+		// (get) Token: 0x06037264 RID: 225892 RVA: 0x0075E200 File Offset: 0x0075C400
+		// (set) Token: 0x06037265 RID: 225893 RVA: 0x0075E208 File Offset: 0x0075C408
 		public float TransitionSpeed { get; set; }
 
-		// Token: 0x06033F64 RID: 212836 RVA: 0x006FCEB1 File Offset: 0x006FB0B1
+		// Token: 0x06037266 RID: 225894 RVA: 0x0075E211 File Offset: 0x0075C411
 		public ISwitchSeasonT()
 		{
 			this.Type = EClientSetSeasonStateType.SwitchSeason;

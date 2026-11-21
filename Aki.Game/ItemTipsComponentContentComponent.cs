@@ -9,12 +9,12 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020018D0 RID: 6352
+// Token: 0x02000D89 RID: 3465
 [NullableContext(1)]
 [Nullable(0)]
 public class ItemTipsComponentContentComponent : UiPanelBase
 {
-	// Token: 0x0600BA56 RID: 47702 RVA: 0x002A3340 File Offset: 0x002A1540
+	// Token: 0x06008E3F RID: 36415 RVA: 0x002ADA98 File Offset: 0x002ABC98
 	[NullableContext(2)]
 	public TipsBaseSubComponent GetComponentByType(EItemTipsType type)
 	{
@@ -46,14 +46,14 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x0600BA57 RID: 47703 RVA: 0x002A33D9 File Offset: 0x002A15D9
+	// Token: 0x06008E40 RID: 36416 RVA: 0x002ADB31 File Offset: 0x002ABD31
 	public void RefreshTipsComponentByType(ItemTipsData data)
 	{
 		this.GetComponentByType(data.ItemType).Refresh(data);
 		this.GetComponentByType(data.ItemType).SetVisible(true);
 	}
 
-	// Token: 0x0600BA58 RID: 47704 RVA: 0x002A3400 File Offset: 0x002A1600
+	// Token: 0x06008E41 RID: 36417 RVA: 0x002ADB58 File Offset: 0x002ABD58
 	public void SetTipsComponentVisibleByType(EItemTipsType type, bool isShow)
 	{
 		TipsBaseSubComponent tipsBaseSubComponent;
@@ -63,7 +63,7 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BA59 RID: 47705 RVA: 0x002A3424 File Offset: 0x002A1624
+	// Token: 0x06008E42 RID: 36418 RVA: 0x002ADB7C File Offset: 0x002ABD7C
 	public void SetTipsComponentLockButton(bool isShow)
 	{
 		if (this.ItemType == null)
@@ -73,7 +73,7 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		this.GetComponentByType(this.ItemType.Value).SetLockButtonShow(isShow);
 	}
 
-	// Token: 0x0600BA5A RID: 47706 RVA: 0x002A344B File Offset: 0x002A164B
+	// Token: 0x06008E43 RID: 36419 RVA: 0x002ADBA3 File Offset: 0x002ABDA3
 	public void SetTipsNumShow(bool isShow)
 	{
 		if (this.ItemType == null)
@@ -83,19 +83,19 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		this.GetComponentByType(this.ItemType.Value).SetPanelNumVisible(isShow);
 	}
 
-	// Token: 0x0600BA5B RID: 47707 RVA: 0x002A3472 File Offset: 0x002A1672
+	// Token: 0x06008E44 RID: 36420 RVA: 0x002ADBCA File Offset: 0x002ABDCA
 	public ESkipName GetTipsPreviewType()
 	{
 		return this.PreviewType;
 	}
 
-	// Token: 0x0600BA5C RID: 47708 RVA: 0x002A347A File Offset: 0x002A167A
+	// Token: 0x06008E45 RID: 36421 RVA: 0x002ADBD2 File Offset: 0x002ABDD2
 	public int GetTipsItemConfigId()
 	{
 		return this.ItemConfigId;
 	}
 
-	// Token: 0x0600BA5D RID: 47709 RVA: 0x002A3484 File Offset: 0x002A1684
+	// Token: 0x06008E46 RID: 36422 RVA: 0x002ADBDC File Offset: 0x002ABDDC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -130,14 +130,14 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600BA5E RID: 47710 RVA: 0x002A3614 File Offset: 0x002A1814
+	// Token: 0x06008E47 RID: 36423 RVA: 0x002ADD6C File Offset: 0x002ABF6C
 	protected override void OnStart()
 	{
 		base.GetTexture(1).SetUIActive(false);
 		base.GetButton(8).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x0600BA5F RID: 47711 RVA: 0x002A3648 File Offset: 0x002A1848
+	// Token: 0x06008E48 RID: 36424 RVA: 0x002ADDA0 File Offset: 0x002ABFA0
 	protected override void OnBeforeDestroy()
 	{
 		foreach (KeyValuePair<EItemTipsType, TipsBaseSubComponent> keyValuePair in this.TipsSubComponentMap)
@@ -151,7 +151,7 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BA60 RID: 47712 RVA: 0x002A36BC File Offset: 0x002A18BC
+	// Token: 0x06008E49 RID: 36425 RVA: 0x002ADE14 File Offset: 0x002AC014
 	public void Refresh(ItemTipsData data)
 	{
 		if (this.ItemType != null)
@@ -166,7 +166,7 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		this.SetActive(true);
 	}
 
-	// Token: 0x0600BA61 RID: 47713 RVA: 0x002A3726 File Offset: 0x002A1926
+	// Token: 0x06008E4A RID: 36426 RVA: 0x002ADE7E File Offset: 0x002AC07E
 	private void RefreshBase(ItemTipsData data)
 	{
 		this.RefreshBaseName(data);
@@ -176,7 +176,7 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		this.SetDebugText(data.ConfigId);
 	}
 
-	// Token: 0x0600BA62 RID: 47714 RVA: 0x002A3750 File Offset: 0x002A1950
+	// Token: 0x06008E4B RID: 36427 RVA: 0x002ADEA8 File Offset: 0x002AC0A8
 	private void RefreshBaseName(ItemTipsData data)
 	{
 		UUIText text = base.GetText(0);
@@ -194,7 +194,7 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BA63 RID: 47715 RVA: 0x002A37C8 File Offset: 0x002A19C8
+	// Token: 0x06008E4C RID: 36428 RVA: 0x002ADF20 File Offset: 0x002AC120
 	private void RefreshBaseQuality(ItemTipsData data)
 	{
 		UUIItem item = base.GetItem(7);
@@ -208,7 +208,7 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		item.SetUIActive(true);
 	}
 
-	// Token: 0x0600BA64 RID: 47716 RVA: 0x002A3824 File Offset: 0x002A1A24
+	// Token: 0x06008E4D RID: 36429 RVA: 0x002ADF7C File Offset: 0x002AC17C
 	private void RefreshBaseIcon(ItemTipsData data)
 	{
 		base.GetTexture(2).SetUIActive(false);
@@ -227,13 +227,13 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		base.SetItemIcon(texture, data.ConfigId, null, null);
 	}
 
-	// Token: 0x0600BA65 RID: 47717 RVA: 0x002A3894 File Offset: 0x002A1A94
+	// Token: 0x06008E4E RID: 36430 RVA: 0x002ADFEC File Offset: 0x002AC1EC
 	private void RefreshPreviewButton(ItemTipsData data)
 	{
 		base.GetButton(8).RootUIComp.Get().SetUIActive(data.PreviewType != ESkipName.NoSkip && data.ShowPreview);
 	}
 
-	// Token: 0x0600BA66 RID: 47718 RVA: 0x002A38CC File Offset: 0x002A1ACC
+	// Token: 0x06008E4F RID: 36431 RVA: 0x002AE024 File Offset: 0x002AC224
 	private void SetDebugText(int debugId)
 	{
 		UUIText text = base.GetText(5);
@@ -246,7 +246,7 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		text.SetUIActive(true);
 	}
 
-	// Token: 0x0600BA67 RID: 47719 RVA: 0x002A3912 File Offset: 0x002A1B12
+	// Token: 0x06008E50 RID: 36432 RVA: 0x002AE06A File Offset: 0x002AC26A
 	private void OnClickPreviewBtn()
 	{
 		SkipTaskManager.Run(this.PreviewType, new object[]
@@ -255,7 +255,7 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600BA68 RID: 47720 RVA: 0x002A3934 File Offset: 0x002A1B34
+	// Token: 0x06008E51 RID: 36433 RVA: 0x002AE08C File Offset: 0x002AC28C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -275,14 +275,14 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x04005470 RID: 21616
+	// Token: 0x0400551B RID: 21787
 	public EItemTipsType? ItemType;
 
-	// Token: 0x04005471 RID: 21617
+	// Token: 0x0400551C RID: 21788
 	[Nullable(2)]
 	private Action ButtonQuestFunction;
 
-	// Token: 0x04005472 RID: 21618
+	// Token: 0x0400551D RID: 21789
 	[Nullable(new byte[]
 	{
 		2,
@@ -290,13 +290,13 @@ public class ItemTipsComponentContentComponent : UiPanelBase
 	})]
 	private readonly Dictionary<EItemTipsType, TipsBaseSubComponent> TipsSubComponentMap = new Dictionary<EItemTipsType, TipsBaseSubComponent>();
 
-	// Token: 0x04005473 RID: 21619
+	// Token: 0x0400551E RID: 21790
 	private ESkipName PreviewType = ESkipName.NoSkip;
 
-	// Token: 0x04005474 RID: 21620
+	// Token: 0x0400551F RID: 21791
 	private int ItemConfigId;
 
-	// Token: 0x04005475 RID: 21621
+	// Token: 0x04005520 RID: 21792
 	private readonly Dictionary<EItemTipsType, Type> TypeComponentRelationMap = new Dictionary<EItemTipsType, Type>
 	{
 		{

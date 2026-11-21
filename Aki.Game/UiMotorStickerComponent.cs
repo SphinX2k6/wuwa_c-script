@@ -6,19 +6,19 @@ using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02002CA7 RID: 11431
+// Token: 0x02002200 RID: 8704
 [NullableContext(2)]
 [Nullable(0)]
 public class UiMotorStickerComponent : UiModelComponentBase
 {
-	// Token: 0x06017E3D RID: 97853 RVA: 0x00612B85 File Offset: 0x00610D85
+	// Token: 0x060156B1 RID: 87729 RVA: 0x00638709 File Offset: 0x00636909
 	protected override void OnInit()
 	{
 		this.LoadComponent = base.Owner.CheckGetComponent<UiModelLoadComponent>();
 		this.RenderingMaterialComponent = base.Owner.CheckGetComponent<UiModelRenderingMaterialComponent>();
 	}
 
-	// Token: 0x06017E3E RID: 97854 RVA: 0x00612BAC File Offset: 0x00610DAC
+	// Token: 0x060156B2 RID: 87730 RVA: 0x00638730 File Offset: 0x00636930
 	public void RemoveStickerMaterial(int stickerPart)
 	{
 		int materialId;
@@ -34,7 +34,7 @@ public class UiMotorStickerComponent : UiModelComponentBase
 		this.MotorStickerMaterialIdMap.Remove(stickerPart);
 	}
 
-	// Token: 0x06017E3F RID: 97855 RVA: 0x00612BEC File Offset: 0x00610DEC
+	// Token: 0x060156B3 RID: 87731 RVA: 0x00638770 File Offset: 0x00636970
 	public void AddStickerMaterial(int stickerId)
 	{
 		MotorSticker? motorStickerConfig = MotorDiyConfig.Instance.GetMotorStickerConfig(stickerId);
@@ -53,7 +53,7 @@ public class UiMotorStickerComponent : UiModelComponentBase
 		this.MotorStickerMaterialIdMap[motorStickerConfig.Value.PartId] = value;
 	}
 
-	// Token: 0x06017E40 RID: 97856 RVA: 0x00612C78 File Offset: 0x00610E78
+	// Token: 0x060156B4 RID: 87732 RVA: 0x006387FC File Offset: 0x006369FC
 	public UniTask AddStickerMaterialAsync(int stickerId)
 	{
 		UiMotorStickerComponent.<AddStickerMaterialAsync>d__6 <AddStickerMaterialAsync>d__;
@@ -65,13 +65,13 @@ public class UiMotorStickerComponent : UiModelComponentBase
 		return <AddStickerMaterialAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400B21F RID: 45599
+	// Token: 0x0400B58A RID: 46474
 	[Nullable(1)]
 	private readonly Dictionary<int, int> MotorStickerMaterialIdMap = new Dictionary<int, int>();
 
-	// Token: 0x0400B220 RID: 45600
+	// Token: 0x0400B58B RID: 46475
 	private UiModelLoadComponent LoadComponent;
 
-	// Token: 0x0400B221 RID: 45601
+	// Token: 0x0400B58C RID: 46476
 	private UiModelRenderingMaterialComponent RenderingMaterialComponent;
 }

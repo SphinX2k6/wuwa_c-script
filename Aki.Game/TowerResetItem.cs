@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002C00 RID: 11264
+// Token: 0x0200217B RID: 8571
 public class TowerResetItem : GridProxyAbstract<int>
 {
-	// Token: 0x0601765B RID: 95835 RVA: 0x005F4EF4 File Offset: 0x005F30F4
+	// Token: 0x0601508C RID: 86156 RVA: 0x00621A1C File Offset: 0x0061FC1C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -25,7 +25,7 @@ public class TowerResetItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601765C RID: 95836 RVA: 0x005F4F80 File Offset: 0x005F3180
+	// Token: 0x0601508D RID: 86157 RVA: 0x00621AA8 File Offset: 0x0061FCA8
 	protected override void OnStart()
 	{
 		this.CurrentCostItem = new TowerCostItem();
@@ -34,7 +34,7 @@ public class TowerResetItem : GridProxyAbstract<int>
 		this.ChangeToCostItem.CreateThenShowByActorAsync(base.GetItem(2).GetOwner(), null, false);
 	}
 
-	// Token: 0x0601765D RID: 95837 RVA: 0x005F4FD8 File Offset: 0x005F31D8
+	// Token: 0x0601508E RID: 86158 RVA: 0x00621B00 File Offset: 0x0061FD00
 	public override void Refresh(int roleId, bool isSelected, int gridIndex)
 	{
 		base.SetRoleIcon(RoleConfig.Instance.GetRoleConfig(roleId).Value.RoleHeadIcon, base.GetTexture(0), roleId, null, null);
@@ -44,22 +44,22 @@ public class TowerResetItem : GridProxyAbstract<int>
 		this.ChangeToCostItem.Update(roleRemainCost + floorData.Cost);
 	}
 
-	// Token: 0x0400AF08 RID: 44808
+	// Token: 0x0400B30D RID: 45837
 	[Nullable(2)]
 	private TowerCostItem CurrentCostItem;
 
-	// Token: 0x0400AF09 RID: 44809
+	// Token: 0x0400B30E RID: 45838
 	[Nullable(2)]
 	private TowerCostItem ChangeToCostItem;
 
-	// Token: 0x020091C7 RID: 37319
+	// Token: 0x0200840A RID: 33802
 	private enum EChildType
 	{
-		// Token: 0x0402F2B3 RID: 193203
+		// Token: 0x0402A9B4 RID: 174516
 		RoleTexture,
-		// Token: 0x0402F2B4 RID: 193204
+		// Token: 0x0402A9B5 RID: 174517
 		CurrentCostItem,
-		// Token: 0x0402F2B5 RID: 193205
+		// Token: 0x0402A9B6 RID: 174518
 		ChangeToCostItem
 	}
 }

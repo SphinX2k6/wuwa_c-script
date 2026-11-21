@@ -2,42 +2,44 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200442A RID: 17450
+	// Token: 0x02004892 RID: 18578
 	public enum ELevelPlayType : byte
 	{
-		// Token: 0x0400C3C9 RID: 50121
+		// Token: 0x0400CDF6 RID: 52726
 		SilentArea,
-		// Token: 0x0400C3CA RID: 50122
+		// Token: 0x0400CDF7 RID: 52727
 		Challenge,
-		// Token: 0x0400C3CB RID: 50123
+		// Token: 0x0400CDF8 RID: 52728
 		Riddle,
-		// Token: 0x0400C3CC RID: 50124
+		// Token: 0x0400CDF9 RID: 52729
 		MonsterTreasure,
-		// Token: 0x0400C3CD RID: 50125
+		// Token: 0x0400CDFA RID: 52730
 		MonsterKill,
-		// Token: 0x0400C3CE RID: 50126
+		// Token: 0x0400CDFB RID: 52731
 		Quest,
-		// Token: 0x0400C3CF RID: 50127
+		// Token: 0x0400CDFC RID: 52732
 		Dungeon,
-		// Token: 0x0400C3D0 RID: 50128
+		// Token: 0x0400CDFD RID: 52733
 		RebornBoss,
-		// Token: 0x0400C3D1 RID: 50129
+		// Token: 0x0400CDFE RID: 52734
 		LordGym,
-		// Token: 0x0400C3D2 RID: 50130
+		// Token: 0x0400CDFF RID: 52735
 		SpecialElite,
-		// Token: 0x0400C3D3 RID: 50131
+		// Token: 0x0400CE00 RID: 52736
 		HighSpeedMovement,
-		// Token: 0x0400C3D4 RID: 50132
+		// Token: 0x0400CE01 RID: 52737
 		DecisionBt,
-		// Token: 0x0400C3D5 RID: 50133
+		// Token: 0x0400CE02 RID: 52738
 		NightmareSpawnPoint,
-		// Token: 0x0400C3D6 RID: 50134
+		// Token: 0x0400CE03 RID: 52739
 		MonsterSettlement,
-		// Token: 0x0400C3D7 RID: 50135
+		// Token: 0x0400CE04 RID: 52740
 		BlackSwordChallenge,
-		// Token: 0x0400C3D8 RID: 50136
+		// Token: 0x0400CE05 RID: 52741
 		EntityManage,
-		// Token: 0x0400C3D9 RID: 50137
-		LogicControl
+		// Token: 0x0400CE06 RID: 52742
+		LogicControl,
+		// Token: 0x0400CE07 RID: 52743
+		DynamicLevelPlay
 	}
 }

@@ -3,10 +3,10 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050BA RID: 20666
+	// Token: 0x0200408A RID: 16522
 	public class FlowActionFinishTalk : FlowActionBase
 	{
-		// Token: 0x06034ED9 RID: 216793 RVA: 0x00C8972F File Offset: 0x00C8792F
+		// Token: 0x06029DD2 RID: 171474 RVA: 0x00BD6A17 File Offset: 0x00BD4C17
 		protected override void OnExecute()
 		{
 			FlowActionRunner runner = this.Runner;
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			runner.FinishTalk();
 		}
 
-		// Token: 0x06034EDA RID: 216794 RVA: 0x00C89744 File Offset: 0x00C87944
+		// Token: 0x06029DD3 RID: 171475 RVA: 0x00BD6A2C File Offset: 0x00BD4C2C
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();

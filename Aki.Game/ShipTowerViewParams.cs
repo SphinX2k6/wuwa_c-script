@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x020029DE RID: 10718
+// Token: 0x02001F59 RID: 8025
 public class ShipTowerViewParams
 {
-	// Token: 0x17001DA4 RID: 7588
-	// (get) Token: 0x0601635C RID: 90972 RVA: 0x0059DF32 File Offset: 0x0059C132
-	// (set) Token: 0x0601635D RID: 90973 RVA: 0x0059DF3A File Offset: 0x0059C13A
+	// Token: 0x17001DFD RID: 7677
+	// (get) Token: 0x06013D62 RID: 81250 RVA: 0x005C8EEA File Offset: 0x005C70EA
+	// (set) Token: 0x06013D63 RID: 81251 RVA: 0x005C8EF2 File Offset: 0x005C70F2
 	public int ApplyTeamEditStageId { get; set; }
 
-	// Token: 0x17001DA5 RID: 7589
-	// (get) Token: 0x0601635E RID: 90974 RVA: 0x0059DF43 File Offset: 0x0059C143
-	// (set) Token: 0x0601635F RID: 90975 RVA: 0x0059DF4B File Offset: 0x0059C14B
+	// Token: 0x17001DFE RID: 7678
+	// (get) Token: 0x06013D64 RID: 81252 RVA: 0x005C8EFB File Offset: 0x005C70FB
+	// (set) Token: 0x06013D65 RID: 81253 RVA: 0x005C8F03 File Offset: 0x005C7103
 	public int? StageId { get; set; }
 
-	// Token: 0x17001DA6 RID: 7590
-	// (get) Token: 0x06016360 RID: 90976 RVA: 0x0059DF54 File Offset: 0x0059C154
-	// (set) Token: 0x06016361 RID: 90977 RVA: 0x0059DF5C File Offset: 0x0059C15C
+	// Token: 0x17001DFF RID: 7679
+	// (get) Token: 0x06013D66 RID: 81254 RVA: 0x005C8F0C File Offset: 0x005C710C
+	// (set) Token: 0x06013D67 RID: 81255 RVA: 0x005C8F14 File Offset: 0x005C7114
 	public bool? IsOpenStageDesc { get; set; }
 
-	// Token: 0x17001DA7 RID: 7591
-	// (get) Token: 0x06016362 RID: 90978 RVA: 0x0059DF65 File Offset: 0x0059C165
-	// (set) Token: 0x06016363 RID: 90979 RVA: 0x0059DF6D File Offset: 0x0059C16D
+	// Token: 0x17001E00 RID: 7680
+	// (get) Token: 0x06013D68 RID: 81256 RVA: 0x005C8F1D File Offset: 0x005C711D
+	// (set) Token: 0x06013D69 RID: 81257 RVA: 0x005C8F25 File Offset: 0x005C7125
 	public bool? IsFromInstanceDungeon { get; set; }
 
-	// Token: 0x0400A54C RID: 42316
+	// Token: 0x0400A936 RID: 43318
 	public bool? IsOpenCover;
 }

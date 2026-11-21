@@ -9,12 +9,12 @@ using CSharpScript.Game.Common.Event;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001F3A RID: 7994
+// Token: 0x020013FC RID: 5116
 [NullableContext(1)]
 [Nullable(0)]
 public class RoverlikeMonsterCursorHandle : MonsterCursorHandle
 {
-	// Token: 0x0600F6D6 RID: 63190 RVA: 0x003BA364 File Offset: 0x003B8564
+	// Token: 0x0600CAF5 RID: 51957 RVA: 0x003C5E50 File Offset: 0x003C4050
 	protected override void InitializeMonsterCursor()
 	{
 		this.MonsterCursorMaxCount = 6;
@@ -25,13 +25,13 @@ public class RoverlikeMonsterCursorHandle : MonsterCursorHandle
 		}
 	}
 
-	// Token: 0x0600F6D7 RID: 63191 RVA: 0x003BA390 File Offset: 0x003B8590
+	// Token: 0x0600CAF6 RID: 51958 RVA: 0x003C5E7C File Offset: 0x003C407C
 	private void NewBossCursor()
 	{
 		this.LoadBossCursorUnit().Forget();
 	}
 
-	// Token: 0x0600F6D8 RID: 63192 RVA: 0x003BA3A0 File Offset: 0x003B85A0
+	// Token: 0x0600CAF7 RID: 51959 RVA: 0x003C5E8C File Offset: 0x003C408C
 	private UniTask LoadBossCursorUnit()
 	{
 		RoverlikeMonsterCursorHandle.<LoadBossCursorUnit>d__5 <LoadBossCursorUnit>d__;
@@ -42,7 +42,7 @@ public class RoverlikeMonsterCursorHandle : MonsterCursorHandle
 		return <LoadBossCursorUnit>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F6D9 RID: 63193 RVA: 0x003BA3E4 File Offset: 0x003B85E4
+	// Token: 0x0600CAF8 RID: 51960 RVA: 0x003C5ED0 File Offset: 0x003C40D0
 	protected override void RefreshPlayerEntityTag(EntityHandle playerEntity)
 	{
 		BaseTagComponent component = playerEntity.Entity.GetComponent<BaseTagComponent>();
@@ -50,7 +50,7 @@ public class RoverlikeMonsterCursorHandle : MonsterCursorHandle
 		this.HasHideCursorTag = false;
 	}
 
-	// Token: 0x0600F6DA RID: 63194 RVA: 0x003BA420 File Offset: 0x003B8620
+	// Token: 0x0600CAF9 RID: 51961 RVA: 0x003C5F0C File Offset: 0x003C410C
 	protected override void ListenPlayerEntityTag(EntityHandle playerEntity)
 	{
 		base.RemoveTagTask();
@@ -58,7 +58,7 @@ public class RoverlikeMonsterCursorHandle : MonsterCursorHandle
 		this.EnterFightTask = component.ListenForTagAddOrRemove(new int?(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.进入战斗"]), new BaseTagComponent.TTagSwitchedCallback(base.OnPlayerEnterFight), MonsterCursorHandle.ListenTagStat);
 	}
 
-	// Token: 0x0600F6DB RID: 63195 RVA: 0x003BA470 File Offset: 0x003B8670
+	// Token: 0x0600CAFA RID: 51962 RVA: 0x003C5F5C File Offset: 0x003C415C
 	protected override void TryAddEntity(EntityHandle handle)
 	{
 		base.TryAddEntity(handle);
@@ -96,7 +96,7 @@ public class RoverlikeMonsterCursorHandle : MonsterCursorHandle
 		}
 	}
 
-	// Token: 0x0600F6DC RID: 63196 RVA: 0x003BA58C File Offset: 0x003B878C
+	// Token: 0x0600CAFB RID: 51963 RVA: 0x003C6078 File Offset: 0x003C4278
 	private UniTask LoadAndActivateBossCursor(EntityHandle handle)
 	{
 		RoverlikeMonsterCursorHandle.<LoadAndActivateBossCursor>d__9 <LoadAndActivateBossCursor>d__;
@@ -108,7 +108,7 @@ public class RoverlikeMonsterCursorHandle : MonsterCursorHandle
 		return <LoadAndActivateBossCursor>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F6DD RID: 63197 RVA: 0x003BA5D8 File Offset: 0x003B87D8
+	// Token: 0x0600CAFC RID: 51964 RVA: 0x003C60C4 File Offset: 0x003C42C4
 	private EMonsterMatchType? GetMonsterMatchType(Entity entity)
 	{
 		if (!ObjectSystem.Instance.IsValid(entity))
@@ -142,7 +142,7 @@ public class RoverlikeMonsterCursorHandle : MonsterCursorHandle
 		return component.GetMonsterMatchType();
 	}
 
-	// Token: 0x0600F6DE RID: 63198 RVA: 0x003BA670 File Offset: 0x003B8870
+	// Token: 0x0600CAFD RID: 51965 RVA: 0x003C615C File Offset: 0x003C435C
 	protected override void TryRemoveEntity(EntityHandle handle)
 	{
 		base.TryRemoveEntity(handle);
@@ -161,7 +161,7 @@ public class RoverlikeMonsterCursorHandle : MonsterCursorHandle
 		}
 	}
 
-	// Token: 0x0600F6DF RID: 63199 RVA: 0x003BA6F8 File Offset: 0x003B88F8
+	// Token: 0x0600CAFE RID: 51966 RVA: 0x003C61E4 File Offset: 0x003C43E4
 	protected override bool CanAdd(Entity entity)
 	{
 		EMonsterMatchType? monsterMatchType = this.GetMonsterMatchType(entity);
@@ -180,12 +180,12 @@ public class RoverlikeMonsterCursorHandle : MonsterCursorHandle
 		return false;
 	}
 
-	// Token: 0x0400724D RID: 29261
+	// Token: 0x0400732E RID: 29486
 	private readonly List<RoverlikeBossCursorUnit> BossCursorList = new List<RoverlikeBossCursorUnit>();
 
-	// Token: 0x0400724E RID: 29262
+	// Token: 0x0400732F RID: 29487
 	private readonly HashSet<EntityHandle> BossEntityHandleSet = new HashSet<EntityHandle>();
 
-	// Token: 0x0400724F RID: 29263
+	// Token: 0x04007330 RID: 29488
 	private readonly Dictionary<int, RoverlikeBossCursorUnit> BossCursorMap = new Dictionary<int, RoverlikeBossCursorUnit>();
 }

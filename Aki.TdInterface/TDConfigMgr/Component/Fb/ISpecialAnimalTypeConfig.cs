@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C23 RID: 3107
+	// Token: 0x02000CF6 RID: 3318
 	public class ISpecialAnimalTypeConfig
 	{
-		// Token: 0x06004731 RID: 18225 RVA: 0x000B3506 File Offset: 0x000B1706
-		[NullableContext(1)]
+		// Token: 0x06004BA0 RID: 19360 RVA: 0x000BD83E File Offset: 0x000BBA3E
 		public static ISpecialAnimalTypeConfig Create(ISpecialAnimalTypeConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014A8 RID: 5288
-		// (get) Token: 0x06004732 RID: 18226 RVA: 0x000B3525 File Offset: 0x000B1725
+		// Token: 0x170015AF RID: 5551
+		// (get) Token: 0x06004BA1 RID: 19361 RVA: 0x000BD85D File Offset: 0x000BBA5D
 		public virtual ESpecialAnimalType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400286C RID: 10348
+		// Token: 0x04002ABF RID: 10943
 		private ISpecialAnimalTypeConfig Instance;
 	}
 }

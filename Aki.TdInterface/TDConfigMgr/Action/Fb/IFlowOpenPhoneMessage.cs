@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AC9 RID: 10953
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DBD RID: 11709
 	public class IFlowOpenPhoneMessage : IPhoneSystemInteractBase
 	{
-		// Token: 0x0600F04C RID: 61516 RVA: 0x0022E57A File Offset: 0x0022C77A
+		// Token: 0x0600FF02 RID: 65282 RVA: 0x0024C286 File Offset: 0x0024A486
 		public static IFlowOpenPhoneMessage Create(IFlowOpenPhoneMessage? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C7C RID: 19580
-		// (get) Token: 0x0600F04D RID: 61517 RVA: 0x0022E599 File Offset: 0x0022C799
+		// Token: 0x17005036 RID: 20534
+		// (get) Token: 0x0600FF03 RID: 65283 RVA: 0x0024C2A5 File Offset: 0x0024A4A5
 		public override EPhoneSystemInteractType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C7D RID: 19581
-		// (get) Token: 0x0600F04E RID: 61518 RVA: 0x0022E5A6 File Offset: 0x0022C7A6
+		// Token: 0x17005037 RID: 20535
+		// (get) Token: 0x0600FF04 RID: 65284 RVA: 0x0024C2B2 File Offset: 0x0024A4B2
 		public virtual IMessageBoard PhoneBoardType
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400842B RID: 33835
+		// Token: 0x04008B2F RID: 35631
 		private IFlowOpenPhoneMessage Instance;
 
-		// Token: 0x0400842C RID: 33836
+		// Token: 0x04008B30 RID: 35632
 		[Nullable(2)]
 		private IMessageBoard _PhoneBoardTypeCache;
 
-		// Token: 0x0400842D RID: 33837
+		// Token: 0x04008B31 RID: 35633
 		private bool _PhoneBoardTypeInited;
 	}
 }

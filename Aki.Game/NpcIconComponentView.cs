@@ -7,14 +7,14 @@ using CSharpScript.Game.Module.BattleUi.Views;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020022D8 RID: 8920
+// Token: 0x020017BC RID: 6076
 [NullableContext(2)]
 [Nullable(0)]
 public class NpcIconComponentView : UiPanelBase
 {
-	// Token: 0x17001650 RID: 5712
-	// (get) Token: 0x06011865 RID: 71781 RVA: 0x0044B7FA File Offset: 0x004499FA
-	// (set) Token: 0x06011866 RID: 71782 RVA: 0x0044B802 File Offset: 0x00449A02
+	// Token: 0x17001687 RID: 5767
+	// (get) Token: 0x0600ECFC RID: 60668 RVA: 0x00458502 File Offset: 0x00456702
+	// (set) Token: 0x0600ECFD RID: 60669 RVA: 0x0045850A File Offset: 0x0045670A
 	public bool ForceHideRootItem
 	{
 		get
@@ -32,9 +32,9 @@ public class NpcIconComponentView : UiPanelBase
 		}
 	}
 
-	// Token: 0x17001651 RID: 5713
-	// (get) Token: 0x06011867 RID: 71783 RVA: 0x0044B826 File Offset: 0x00449A26
-	// (set) Token: 0x06011868 RID: 71784 RVA: 0x0044B82E File Offset: 0x00449A2E
+	// Token: 0x17001688 RID: 5768
+	// (get) Token: 0x0600ECFE RID: 60670 RVA: 0x0045852E File Offset: 0x0045672E
+	// (set) Token: 0x0600ECFF RID: 60671 RVA: 0x00458536 File Offset: 0x00456736
 	public bool ForceHideDialog
 	{
 		get
@@ -52,7 +52,7 @@ public class NpcIconComponentView : UiPanelBase
 		}
 	}
 
-	// Token: 0x06011869 RID: 71785 RVA: 0x0044B858 File Offset: 0x00449A58
+	// Token: 0x0600ED00 RID: 60672 RVA: 0x00458560 File Offset: 0x00456760
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 17;
@@ -96,7 +96,7 @@ public class NpcIconComponentView : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601186A RID: 71786 RVA: 0x0044BABC File Offset: 0x00449CBC
+	// Token: 0x0600ED01 RID: 60673 RVA: 0x004587C4 File Offset: 0x004569C4
 	protected override void OnStart()
 	{
 		this.InitTweenAnim();
@@ -123,7 +123,7 @@ public class NpcIconComponentView : UiPanelBase
 		this.SetPlayerInfoItemState(false);
 	}
 
-	// Token: 0x0601186B RID: 71787 RVA: 0x0044BC10 File Offset: 0x00449E10
+	// Token: 0x0600ED02 RID: 60674 RVA: 0x00458918 File Offset: 0x00456B18
 	private void InitTweenAnim()
 	{
 		this.TweenAnimPlayer = new BattleUiTweenAnimPlayer();
@@ -154,7 +154,7 @@ public class NpcIconComponentView : UiPanelBase
 		});
 	}
 
-	// Token: 0x0601186C RID: 71788 RVA: 0x0044BCF4 File Offset: 0x00449EF4
+	// Token: 0x0600ED03 RID: 60675 RVA: 0x004589FC File Offset: 0x00456BFC
 	public void SetNpcName(string name)
 	{
 		UUIText text = base.GetText(0);
@@ -167,7 +167,7 @@ public class NpcIconComponentView : UiPanelBase
 		text.SetText(name, true);
 	}
 
-	// Token: 0x0601186D RID: 71789 RVA: 0x0044BD28 File Offset: 0x00449F28
+	// Token: 0x0600ED04 RID: 60676 RVA: 0x00458A30 File Offset: 0x00456C30
 	public void InitItemLocation(FVectorDouble location, double offsetZ)
 	{
 		this.RootActorLocationOffset = location;
@@ -176,7 +176,7 @@ public class NpcIconComponentView : UiPanelBase
 		this.RootActor.D_K2_SetActorLocation(rootActorLocationOffset, false, ref WorldGlobal.SweepHitResult, false);
 	}
 
-	// Token: 0x0601186E RID: 71790 RVA: 0x0044BD68 File Offset: 0x00449F68
+	// Token: 0x0600ED05 RID: 60677 RVA: 0x00458A70 File Offset: 0x00456C70
 	public void UpdateRotation(float yaw, float pitch)
 	{
 		float roll = pitch - 90f;
@@ -187,7 +187,7 @@ public class NpcIconComponentView : UiPanelBase
 		this.RootItem.SetUIWorldRotation(this.RootActorRotation);
 	}
 
-	// Token: 0x0601186F RID: 71791 RVA: 0x0044BDC0 File Offset: 0x00449FC0
+	// Token: 0x0600ED06 RID: 60678 RVA: 0x00458AC8 File Offset: 0x00456CC8
 	public void SetDialogueActive(bool bActive, bool redDot = false, bool force = false)
 	{
 		if (this.ForceHideDialog)
@@ -217,20 +217,20 @@ public class NpcIconComponentView : UiPanelBase
 		this.TweenAnimPlayer.PlayTweenAnim(14);
 	}
 
-	// Token: 0x06011870 RID: 71792 RVA: 0x0044BE61 File Offset: 0x0044A061
+	// Token: 0x0600ED07 RID: 60679 RVA: 0x00458B69 File Offset: 0x00456D69
 	public bool GetDialogueActive()
 	{
 		return this.IsDialogActive;
 	}
 
-	// Token: 0x06011871 RID: 71793 RVA: 0x0044BE69 File Offset: 0x0044A069
+	// Token: 0x0600ED08 RID: 60680 RVA: 0x00458B71 File Offset: 0x00456D71
 	[NullableContext(1)]
 	public void SetDialogueText(string text)
 	{
 		base.GetText(3).SetText(text, true);
 	}
 
-	// Token: 0x06011872 RID: 71794 RVA: 0x0044BE7C File Offset: 0x0044A07C
+	// Token: 0x0600ED09 RID: 60681 RVA: 0x00458B84 File Offset: 0x00456D84
 	public void SetHeadItemState(bool bState)
 	{
 		if (this.IsHeadItemActive == bState)
@@ -271,19 +271,19 @@ public class NpcIconComponentView : UiPanelBase
 		}
 	}
 
-	// Token: 0x06011873 RID: 71795 RVA: 0x0044BF43 File Offset: 0x0044A143
+	// Token: 0x0600ED0A RID: 60682 RVA: 0x00458C4B File Offset: 0x00456E4B
 	public bool GetHeadItemState()
 	{
 		return this.IsHeadItemActive;
 	}
 
-	// Token: 0x06011874 RID: 71796 RVA: 0x0044BF4B File Offset: 0x0044A14B
+	// Token: 0x0600ED0B RID: 60683 RVA: 0x00458C53 File Offset: 0x00456E53
 	public bool GetHeadIconActive()
 	{
 		return this.IsHeadIconActive;
 	}
 
-	// Token: 0x06011875 RID: 71797 RVA: 0x0044BF54 File Offset: 0x0044A154
+	// Token: 0x0600ED0C RID: 60684 RVA: 0x00458C5C File Offset: 0x00456E5C
 	public void SetQuestTrackCellState(bool bState)
 	{
 		if (this.IsQuestTrackCellActive == bState)
@@ -299,19 +299,19 @@ public class NpcIconComponentView : UiPanelBase
 		this.QuestTrackCellItem.SetUIActive(bState);
 	}
 
-	// Token: 0x06011876 RID: 71798 RVA: 0x0044BFA2 File Offset: 0x0044A1A2
+	// Token: 0x0600ED0D RID: 60685 RVA: 0x00458CAA File Offset: 0x00456EAA
 	public void SetPlayerInfoItemState(bool bState)
 	{
 		this.PlayerInfoItem.SetUIActive(bState);
 	}
 
-	// Token: 0x06011877 RID: 71799 RVA: 0x0044BFB0 File Offset: 0x0044A1B0
+	// Token: 0x0600ED0E RID: 60686 RVA: 0x00458CB8 File Offset: 0x00456EB8
 	public void SetNameTextItemState(bool bState)
 	{
 		this.NameText.SetUIActive(bState);
 	}
 
-	// Token: 0x06011878 RID: 71800 RVA: 0x0044BFC0 File Offset: 0x0044A1C0
+	// Token: 0x0600ED0F RID: 60687 RVA: 0x00458CC8 File Offset: 0x00456EC8
 	public void SetRootItemState(bool bState, bool force = false)
 	{
 		if (this.ForceHideRootItem)
@@ -331,13 +331,13 @@ public class NpcIconComponentView : UiPanelBase
 		this.SetActive(bState && !UiLayer.Instance.IsForceHideUi());
 	}
 
-	// Token: 0x06011879 RID: 71801 RVA: 0x0044C01E File Offset: 0x0044A21E
+	// Token: 0x0600ED10 RID: 60688 RVA: 0x00458D26 File Offset: 0x00456F26
 	public bool GetRootItemState()
 	{
 		return this.IsRootItemActive;
 	}
 
-	// Token: 0x0601187A RID: 71802 RVA: 0x0044C026 File Offset: 0x0044A226
+	// Token: 0x0600ED11 RID: 60689 RVA: 0x00458D2E File Offset: 0x00456F2E
 	public void SetTrackEffectState(bool bState)
 	{
 		if (this.IsTrackEffectActive == bState)
@@ -348,7 +348,7 @@ public class NpcIconComponentView : UiPanelBase
 		EffectSystem.Instance.SetEffectHidden(this.TrackedEffect, bState, "NpcIconComponentView", false);
 	}
 
-	// Token: 0x0601187B RID: 71803 RVA: 0x0044C050 File Offset: 0x0044A250
+	// Token: 0x0600ED12 RID: 60690 RVA: 0x00458D58 File Offset: 0x00456F58
 	public void SetHeadInfoNameState(bool bState)
 	{
 		if (this.IsHeadInfoNameActive == bState)
@@ -360,19 +360,19 @@ public class NpcIconComponentView : UiPanelBase
 		this.DialogItem.SetUIActive(bState && this.IsDialogActive);
 	}
 
-	// Token: 0x0601187C RID: 71804 RVA: 0x0044C086 File Offset: 0x0044A286
+	// Token: 0x0600ED13 RID: 60691 RVA: 0x00458D8E File Offset: 0x00456F8E
 	public bool GetHeadInfoNameState()
 	{
 		return this.IsHeadInfoNameActive;
 	}
 
-	// Token: 0x0601187D RID: 71805 RVA: 0x0044C08E File Offset: 0x0044A28E
+	// Token: 0x0600ED14 RID: 60692 RVA: 0x00458D96 File Offset: 0x00456F96
 	public void SetNpcQuestIconState(bool bState)
 	{
 		this.SetHeadIconState(bState);
 	}
 
-	// Token: 0x0601187E RID: 71806 RVA: 0x0044C098 File Offset: 0x0044A298
+	// Token: 0x0600ED15 RID: 60693 RVA: 0x00458DA0 File Offset: 0x00456FA0
 	public void SetNpcSecondName(string name)
 	{
 		UUIText text = base.GetText(1);
@@ -385,7 +385,7 @@ public class NpcIconComponentView : UiPanelBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x0601187F RID: 71807 RVA: 0x0044C0CC File Offset: 0x0044A2CC
+	// Token: 0x0600ED16 RID: 60694 RVA: 0x00458DD4 File Offset: 0x00456FD4
 	public void SetFunctionIcon(string path, Action<bool> doneCallback = null)
 	{
 		if (!string.IsNullOrEmpty(path))
@@ -398,7 +398,7 @@ public class NpcIconComponentView : UiPanelBase
 		this.SetHeadIconState(false);
 	}
 
-	// Token: 0x06011880 RID: 71808 RVA: 0x0044C114 File Offset: 0x0044A314
+	// Token: 0x0600ED17 RID: 60695 RVA: 0x00458E1C File Offset: 0x0045701C
 	public void SetNpcQuestIcon(string path)
 	{
 		if (!string.IsNullOrEmpty(path))
@@ -411,7 +411,7 @@ public class NpcIconComponentView : UiPanelBase
 		this.SetHeadIconState(false);
 	}
 
-	// Token: 0x06011881 RID: 71809 RVA: 0x0044C15C File Offset: 0x0044A35C
+	// Token: 0x0600ED18 RID: 60696 RVA: 0x00458E64 File Offset: 0x00457064
 	public void SetPlayerInfoIcon(string path, Action<bool> callback)
 	{
 		if (string.IsNullOrEmpty(path) || this.PlayerInfoItem == null)
@@ -421,7 +421,7 @@ public class NpcIconComponentView : UiPanelBase
 		this.SetSpriteByPath(path, this.PlayerInfoItem, true, null, callback);
 	}
 
-	// Token: 0x06011882 RID: 71810 RVA: 0x0044C192 File Offset: 0x0044A392
+	// Token: 0x0600ED19 RID: 60697 RVA: 0x00458E9A File Offset: 0x0045709A
 	public void SnapSizeFromTexture()
 	{
 		UUITexture headIcon = this.HeadIcon;
@@ -432,7 +432,7 @@ public class NpcIconComponentView : UiPanelBase
 		headIcon.SetSizeFromTexture();
 	}
 
-	// Token: 0x06011883 RID: 71811 RVA: 0x0044C1A4 File Offset: 0x0044A3A4
+	// Token: 0x0600ED1A RID: 60698 RVA: 0x00458EAC File Offset: 0x004570AC
 	public void SetHeadWorldScale3D(float scale)
 	{
 		if (!this.IsHeadItemActive)
@@ -450,7 +450,7 @@ public class NpcIconComponentView : UiPanelBase
 		this.HeadItem.D_SetWorldScale3D(this.CurrentHeadScale);
 	}
 
-	// Token: 0x06011884 RID: 71812 RVA: 0x0044C220 File Offset: 0x0044A420
+	// Token: 0x0600ED1B RID: 60699 RVA: 0x00458F28 File Offset: 0x00457128
 	public void SetDialogWorldScale3D(float scale)
 	{
 		if (this.CacheDialogScale == (double)scale)
@@ -464,7 +464,7 @@ public class NpcIconComponentView : UiPanelBase
 		this.DialogItem.D_SetWorldScale3D(this.CurrentDialogScale);
 	}
 
-	// Token: 0x06011885 RID: 71813 RVA: 0x0044C278 File Offset: 0x0044A478
+	// Token: 0x0600ED1C RID: 60700 RVA: 0x00458F80 File Offset: 0x00457180
 	private void SetHeadIconState(bool state)
 	{
 		if (state == this.IsHeadIconActive)
@@ -475,7 +475,7 @@ public class NpcIconComponentView : UiPanelBase
 		this.HeadIcon.SetUIActive(state);
 	}
 
-	// Token: 0x06011886 RID: 71814 RVA: 0x0044C298 File Offset: 0x0044A498
+	// Token: 0x0600ED1D RID: 60701 RVA: 0x00458FA0 File Offset: 0x004571A0
 	protected override void OnBeforeDestroy()
 	{
 		if (EffectSystem.Instance.IsValid(this.TrackedEffect))
@@ -491,90 +491,90 @@ public class NpcIconComponentView : UiPanelBase
 		tweenAnimPlayer.Clear(false);
 	}
 
-	// Token: 0x04008511 RID: 34065
+	// Token: 0x0400864F RID: 34383
 	protected FRotator RootActorRotation;
 
-	// Token: 0x04008512 RID: 34066
+	// Token: 0x04008650 RID: 34384
 	private FVectorDouble RootActorLocationOffset;
 
-	// Token: 0x04008513 RID: 34067
+	// Token: 0x04008651 RID: 34385
 	private bool IsHeadInfoNameActive;
 
-	// Token: 0x04008514 RID: 34068
+	// Token: 0x04008652 RID: 34386
 	private bool IsRootItemActive;
 
-	// Token: 0x04008515 RID: 34069
+	// Token: 0x04008653 RID: 34387
 	private bool ForceHideRootItemInner;
 
-	// Token: 0x04008516 RID: 34070
+	// Token: 0x04008654 RID: 34388
 	private bool IsHeadItemActive;
 
-	// Token: 0x04008517 RID: 34071
+	// Token: 0x04008655 RID: 34389
 	private bool IsTrackEffectActive;
 
-	// Token: 0x04008518 RID: 34072
+	// Token: 0x04008656 RID: 34390
 	private bool IsHeadIconActive;
 
-	// Token: 0x04008519 RID: 34073
+	// Token: 0x04008657 RID: 34391
 	private bool IsDialogActive;
 
-	// Token: 0x0400851A RID: 34074
+	// Token: 0x04008658 RID: 34392
 	private bool IsDialogRedDotActive;
 
-	// Token: 0x0400851B RID: 34075
+	// Token: 0x04008659 RID: 34393
 	private bool ForceHideDialogInner;
 
-	// Token: 0x0400851C RID: 34076
+	// Token: 0x0400865A RID: 34394
 	private bool? PendingQuestTrackCellActive;
 
-	// Token: 0x0400851D RID: 34077
+	// Token: 0x0400865B RID: 34395
 	private UUIText NameText;
 
-	// Token: 0x0400851E RID: 34078
+	// Token: 0x0400865C RID: 34396
 	private UUIItem NameMessageItem;
 
-	// Token: 0x0400851F RID: 34079
+	// Token: 0x0400865D RID: 34397
 	private UUITexture HeadIcon;
 
-	// Token: 0x04008520 RID: 34080
+	// Token: 0x0400865E RID: 34398
 	private FVectorDouble CurrentHeadScale = new FVectorDouble(1.0, 1.0, 1.0);
 
-	// Token: 0x04008521 RID: 34081
+	// Token: 0x0400865F RID: 34399
 	private double CacheHeadScale;
 
-	// Token: 0x04008522 RID: 34082
+	// Token: 0x04008660 RID: 34400
 	private UUIItem HeadItem;
 
-	// Token: 0x04008523 RID: 34083
+	// Token: 0x04008661 RID: 34401
 	private UUIItem QuestTrackCellItem;
 
-	// Token: 0x04008524 RID: 34084
+	// Token: 0x04008662 RID: 34402
 	private UUISprite PlayerInfoItem;
 
-	// Token: 0x04008525 RID: 34085
+	// Token: 0x04008663 RID: 34403
 	private UUIItem RedDotItem;
 
-	// Token: 0x04008526 RID: 34086
+	// Token: 0x04008664 RID: 34404
 	private FVectorDouble CurrentDialogScale = new FVectorDouble(1.0, 1.0, 1.0);
 
-	// Token: 0x04008527 RID: 34087
+	// Token: 0x04008665 RID: 34405
 	private double CacheDialogScale;
 
-	// Token: 0x04008528 RID: 34088
+	// Token: 0x04008666 RID: 34406
 	private UUIItem DialogItem;
 
-	// Token: 0x04008529 RID: 34089
+	// Token: 0x04008667 RID: 34407
 	private int TrackedEffect;
 
-	// Token: 0x0400852A RID: 34090
+	// Token: 0x04008668 RID: 34408
 	private EHeadIconType? HeadIconType;
 
-	// Token: 0x0400852B RID: 34091
+	// Token: 0x04008669 RID: 34409
 	private bool IsQuestTrackCellActive;
 
-	// Token: 0x0400852C RID: 34092
+	// Token: 0x0400866A RID: 34410
 	private bool IsPlayingHiddenSequence;
 
-	// Token: 0x0400852D RID: 34093
+	// Token: 0x0400866B RID: 34411
 	private BattleUiTweenAnimPlayer TweenAnimPlayer;
 }

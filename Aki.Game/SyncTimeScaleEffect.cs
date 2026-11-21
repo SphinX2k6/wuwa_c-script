@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x02002F53 RID: 12115
+// Token: 0x020024A6 RID: 9382
 [NullableContext(1)]
 [Nullable(0)]
 public class SyncTimeScaleEffect : BuffEffect, IStaticVariableResetter
 {
-	// Token: 0x06019C8A RID: 105610 RVA: 0x006B938A File Offset: 0x006B758A
+	// Token: 0x06017595 RID: 95637 RVA: 0x006DF6A6 File Offset: 0x006DD8A6
 	static SyncTimeScaleEffect()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SyncTimeScaleEffect.CreateStaticDefaultValue), new Action(SyncTimeScaleEffect.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170023AF RID: 9135
-	// (get) Token: 0x06019C8B RID: 105611 RVA: 0x006B93A9 File Offset: 0x006B75A9
+	// Token: 0x17002471 RID: 9329
+	// (get) Token: 0x06017596 RID: 95638 RVA: 0x006DF6C5 File Offset: 0x006DD8C5
 	private static Dictionary<int, SyncTimescaleGroup> AllGroups
 	{
 		get
@@ -25,30 +25,30 @@ public class SyncTimeScaleEffect : BuffEffect, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019C8C RID: 105612 RVA: 0x006B93B0 File Offset: 0x006B75B0
+	// Token: 0x06017597 RID: 95639 RVA: 0x006DF6CC File Offset: 0x006DD8CC
 	public static void CreateStaticDefaultValue()
 	{
 		SyncTimeScaleEffect._allGroups = new Dictionary<int, SyncTimescaleGroup>();
 	}
 
-	// Token: 0x06019C8D RID: 105613 RVA: 0x006B93BC File Offset: 0x006B75BC
+	// Token: 0x06017598 RID: 95640 RVA: 0x006DF6D8 File Offset: 0x006DD8D8
 	public static void ResetStaticDefaultValue()
 	{
 		SyncTimeScaleEffect._allGroups = null;
 	}
 
-	// Token: 0x06019C8E RID: 105614 RVA: 0x006B93C4 File Offset: 0x006B75C4
+	// Token: 0x06017599 RID: 95641 RVA: 0x006DF6E0 File Offset: 0x006DD8E0
 	public SyncTimeScaleEffect(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C8F RID: 105615 RVA: 0x006B93DE File Offset: 0x006B75DE
+	// Token: 0x0601759A RID: 95642 RVA: 0x006DF6FA File Offset: 0x006DD8FA
 	private bool CheckConflict()
 	{
 		return false;
 	}
 
-	// Token: 0x06019C90 RID: 105616 RVA: 0x006B93E4 File Offset: 0x006B75E4
+	// Token: 0x0601759B RID: 95643 RVA: 0x006DF700 File Offset: 0x006DD900
 	public unsafe override void OnCreated()
 	{
 		if (this.InstigatorEntityId != base.OwnerEntity.Id)
@@ -84,14 +84,14 @@ public class SyncTimeScaleEffect : BuffEffect, IStaticVariableResetter
 		this.SameEntityError = true;
 	}
 
-	// Token: 0x06019C91 RID: 105617 RVA: 0x006B9557 File Offset: 0x006B7757
+	// Token: 0x0601759C RID: 95644 RVA: 0x006DF873 File Offset: 0x006DDA73
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C92 RID: 105618 RVA: 0x006B955C File Offset: 0x006B775C
+	// Token: 0x0601759D RID: 95645 RVA: 0x006DF878 File Offset: 0x006DDA78
 	public override void OnRemoved(bool bPremature)
 	{
 		if (this.Group == null || this.SameEntityError)
@@ -112,7 +112,7 @@ public class SyncTimeScaleEffect : BuffEffect, IStaticVariableResetter
 		this.Group = null;
 	}
 
-	// Token: 0x06019C93 RID: 105619 RVA: 0x006B9610 File Offset: 0x006B7810
+	// Token: 0x0601759E RID: 95646 RVA: 0x006DF92C File Offset: 0x006DDB2C
 	[NullableContext(2)]
 	public int SetTimeScale(int priority, float timeDilation, UCurveFloat curve, float duration, ETimeScaleSourceType sourceType, bool needAddSceneItemTag = false, bool immuneSelfCenter = false)
 	{
@@ -136,7 +136,7 @@ public class SyncTimeScaleEffect : BuffEffect, IStaticVariableResetter
 		return 0;
 	}
 
-	// Token: 0x06019C94 RID: 105620 RVA: 0x006B967E File Offset: 0x006B787E
+	// Token: 0x0601759F RID: 95647 RVA: 0x006DF99A File Offset: 0x006DDB9A
 	public void RemoveTimeScale(int id, bool deleteTimeScaleId = true)
 	{
 		if (deleteTimeScaleId)
@@ -156,14 +156,14 @@ public class SyncTimeScaleEffect : BuffEffect, IStaticVariableResetter
 		instigatorTimeScaleComp.RemoveTimeScale(id);
 	}
 
-	// Token: 0x0400C261 RID: 49761
+	// Token: 0x0400C603 RID: 50691
 	[Nullable(2)]
 	public SyncTimescaleGroup Group;
 
-	// Token: 0x0400C262 RID: 49762
+	// Token: 0x0400C604 RID: 50692
 	private int OwnerId;
 
-	// Token: 0x0400C263 RID: 49763
+	// Token: 0x0400C605 RID: 50693
 	[Nullable(new byte[]
 	{
 		2,
@@ -171,9 +171,9 @@ public class SyncTimeScaleEffect : BuffEffect, IStaticVariableResetter
 	})]
 	private static Dictionary<int, SyncTimescaleGroup> _allGroups;
 
-	// Token: 0x0400C264 RID: 49764
+	// Token: 0x0400C606 RID: 50694
 	private bool SameEntityError;
 
-	// Token: 0x0400C265 RID: 49765
+	// Token: 0x0400C607 RID: 50695
 	private readonly HashSet<int> TimeScaleIdSet = new HashSet<int>();
 }

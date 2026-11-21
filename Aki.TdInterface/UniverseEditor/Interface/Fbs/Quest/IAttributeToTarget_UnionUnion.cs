@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D26 RID: 15654
+	// Token: 0x0200413D RID: 16701
 	public class IAttributeToTarget_UnionUnion
 	{
-		// Token: 0x17006B5B RID: 27483
-		// (get) Token: 0x060159A3 RID: 88483 RVA: 0x0031E685 File Offset: 0x0031C885
-		// (set) Token: 0x060159A4 RID: 88484 RVA: 0x0031E68D File Offset: 0x0031C88D
+		// Token: 0x17007115 RID: 28949
+		// (get) Token: 0x06016EDB RID: 93915 RVA: 0x003458FD File Offset: 0x00343AFD
+		// (set) Token: 0x06016EDC RID: 93916 RVA: 0x00345905 File Offset: 0x00343B05
 		public IAttributeToTarget_Union Type { get; set; }
 
-		// Token: 0x17006B5C RID: 27484
-		// (get) Token: 0x060159A5 RID: 88485 RVA: 0x0031E696 File Offset: 0x0031C896
-		// (set) Token: 0x060159A6 RID: 88486 RVA: 0x0031E69E File Offset: 0x0031C89E
+		// Token: 0x17007116 RID: 28950
+		// (get) Token: 0x06016EDD RID: 93917 RVA: 0x0034590E File Offset: 0x00343B0E
+		// (set) Token: 0x06016EDE RID: 93918 RVA: 0x00345916 File Offset: 0x00343B16
 		public object Value { get; set; }
 
-		// Token: 0x060159A7 RID: 88487 RVA: 0x0031E6A7 File Offset: 0x0031C8A7
+		// Token: 0x06016EDF RID: 93919 RVA: 0x0034591F File Offset: 0x00343B1F
 		public IAttributeToTarget_UnionUnion()
 		{
 			this.Type = IAttributeToTarget_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060159A8 RID: 88488 RVA: 0x0031E6BD File Offset: 0x0031C8BD
+		// Token: 0x06016EE0 RID: 93920 RVA: 0x00345935 File Offset: 0x00343B35
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060159A9 RID: 88489 RVA: 0x0031E6CF File Offset: 0x0031C8CF
+		// Token: 0x06016EE1 RID: 93921 RVA: 0x00345947 File Offset: 0x00343B47
 		public IAttributeToTargetT AsIAttributeToTarget()
 		{
 			return this.As<IAttributeToTargetT>();
 		}
 
-		// Token: 0x060159AA RID: 88490 RVA: 0x0031E6D7 File Offset: 0x0031C8D7
+		// Token: 0x06016EE2 RID: 93922 RVA: 0x0034594F File Offset: 0x00343B4F
 		public static IAttributeToTarget_UnionUnion FromIAttributeToTarget(IAttributeToTargetT _iattributetotarget)
 		{
 			return new IAttributeToTarget_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060159AB RID: 88491 RVA: 0x0031E6EC File Offset: 0x0031C8EC
+		// Token: 0x06016EE3 RID: 93923 RVA: 0x00345964 File Offset: 0x00343B64
 		public IHealthAttributeToTargetT AsIHealthAttributeToTarget()
 		{
 			return this.As<IHealthAttributeToTargetT>();
 		}
 
-		// Token: 0x060159AC RID: 88492 RVA: 0x0031E6F4 File Offset: 0x0031C8F4
+		// Token: 0x06016EE4 RID: 93924 RVA: 0x0034596C File Offset: 0x00343B6C
 		public static IAttributeToTarget_UnionUnion FromIHealthAttributeToTarget(IHealthAttributeToTargetT _ihealthattributetotarget)
 		{
 			return new IAttributeToTarget_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060159AD RID: 88493 RVA: 0x0031E70C File Offset: 0x0031C90C
+		// Token: 0x06016EE5 RID: 93925 RVA: 0x00345984 File Offset: 0x00343B84
 		public static int Pack(FlatBufferBuilder builder, IAttributeToTarget_UnionUnion _o)
 		{
 			IAttributeToTarget_Union type = _o.Type;

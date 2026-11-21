@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001DF3 RID: 7667
+// Token: 0x020012B5 RID: 4789
 [NullableContext(1)]
 [Nullable(0)]
 public class HandBookCommonItemData
 {
-	// Token: 0x04006C34 RID: 27700
+	// Token: 0x04006D15 RID: 27925
 	public string Icon = "";
 
-	// Token: 0x04006C35 RID: 27701
+	// Token: 0x04006D16 RID: 27926
 	public int QualityId;
 
-	// Token: 0x04006C36 RID: 27702
+	// Token: 0x04006D17 RID: 27927
 	public string Title = "";
 
-	// Token: 0x04006C37 RID: 27703
+	// Token: 0x04006D18 RID: 27928
 	public bool IsLock;
 
-	// Token: 0x04006C38 RID: 27704
+	// Token: 0x04006D19 RID: 27929
 	public bool IsNew;
 
-	// Token: 0x04006C39 RID: 27705
+	// Token: 0x04006D1A RID: 27930
 	public int ConfigId;
 
-	// Token: 0x04006C3A RID: 27706
+	// Token: 0x04006D1B RID: 27931
 	public object Config;
 }

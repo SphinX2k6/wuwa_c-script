@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200264B RID: 9803
+	// Token: 0x0200290F RID: 10511
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AddBuffToEntity : ActionParams
 	{
-		// Token: 0x0600DBDC RID: 56284 RVA: 0x0020B83B File Offset: 0x00209A3B
-		[NullableContext(1)]
+		// Token: 0x0600E9B8 RID: 59832 RVA: 0x00228113 File Offset: 0x00226313
+		[NullableContext(0)]
 		public static AddBuffToEntity Create(IAddBuffToEntity? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004108 RID: 16648
-		// (get) Token: 0x0600DBDD RID: 56285 RVA: 0x0020B85C File Offset: 0x00209A5C
+		// Token: 0x17004448 RID: 17480
+		// (get) Token: 0x0600E9B9 RID: 59833 RVA: 0x00228134 File Offset: 0x00226334
 		public virtual int? EntityId
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004109 RID: 16649
-		// (get) Token: 0x0600DBDE RID: 56286 RVA: 0x0020B894 File Offset: 0x00209A94
+		// Token: 0x17004449 RID: 17481
+		// (get) Token: 0x0600E9BA RID: 59834 RVA: 0x0022816C File Offset: 0x0022636C
 		public virtual List<int> EntityIds
 		{
 			get
@@ -63,12 +63,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700410A RID: 16650
-		// (get) Token: 0x0600DBDF RID: 56287 RVA: 0x0020B90C File Offset: 0x00209B0C
-		[Nullable(1)]
+		// Token: 0x1700444A RID: 17482
+		// (get) Token: 0x0600E9BB RID: 59835 RVA: 0x002281E4 File Offset: 0x002263E4
+		[Nullable(0)]
 		public virtual List<long> BuffIds
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._BuffIdsInited)
@@ -86,8 +86,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700410B RID: 16651
-		// (get) Token: 0x0600DBE0 RID: 56288 RVA: 0x0020B970 File Offset: 0x00209B70
+		// Token: 0x1700444B RID: 17483
+		// (get) Token: 0x0600E9BC RID: 59836 RVA: 0x00228248 File Offset: 0x00226448
 		public virtual List<long> PersistOnOfflineBuffIds
 		{
 			get
@@ -111,26 +111,26 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A2F RID: 31279
+		// Token: 0x040080D1 RID: 32977
 		private IAddBuffToEntity Instance;
 
-		// Token: 0x04007A30 RID: 31280
+		// Token: 0x040080D2 RID: 32978
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007A31 RID: 31281
+		// Token: 0x040080D3 RID: 32979
 		private bool _EntityIdsInited;
 
-		// Token: 0x04007A32 RID: 31282
-		[Nullable(1)]
+		// Token: 0x040080D4 RID: 32980
+		[Nullable(0)]
 		private List<long> _BuffIdsCache;
 
-		// Token: 0x04007A33 RID: 31283
+		// Token: 0x040080D5 RID: 32981
 		private bool _BuffIdsInited;
 
-		// Token: 0x04007A34 RID: 31284
+		// Token: 0x040080D6 RID: 32982
 		private List<long> _PersistOnOfflineBuffIdsCache;
 
-		// Token: 0x04007A35 RID: 31285
+		// Token: 0x040080D7 RID: 32983
 		private bool _PersistOnOfflineBuffIdsInited;
 	}
 }

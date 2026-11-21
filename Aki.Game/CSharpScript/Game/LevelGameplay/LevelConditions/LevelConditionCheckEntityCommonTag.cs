@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C7D RID: 27773
+	// Token: 0x02005DF7 RID: 24055
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckEntityCommonTag : LevelConditionBase
 	{
-		// Token: 0x06044588 RID: 279944 RVA: 0x010D9BC0 File Offset: 0x010D7DC0
+		// Token: 0x0603A6E2 RID: 239330 RVA: 0x01083B64 File Offset: 0x01081D64
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			long ownerId = UKismetStringLibrary.Conv_StringToInt64(inConditionInfo.GetLimitParams("CreatureGen"));
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return true;
 		}
 
-		// Token: 0x06044589 RID: 279945 RVA: 0x010D9C88 File Offset: 0x010D7E88
+		// Token: 0x0603A6E3 RID: 239331 RVA: 0x01083C2C File Offset: 0x01081E2C
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			LevelConditionCheckEntityTagInfo levelConditionCheckEntityTagInfo = inConditionInfo as LevelConditionCheckEntityTagInfo;

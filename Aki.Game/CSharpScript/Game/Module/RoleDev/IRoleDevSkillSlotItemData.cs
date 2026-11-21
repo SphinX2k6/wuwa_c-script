@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CD2 RID: 19666
+	// Token: 0x02003C83 RID: 15491
 	public interface IRoleDevSkillSlotItemData
 	{
-		// Token: 0x17007D7D RID: 32125
-		// (get) Token: 0x06032C47 RID: 207943
-		// (set) Token: 0x06032C48 RID: 207944
+		// Token: 0x17005127 RID: 20775
+		// (get) Token: 0x060279FB RID: 162299
+		// (set) Token: 0x060279FC RID: 162300
 		int RoleId { get; set; }
 
-		// Token: 0x17007D7E RID: 32126
-		// (get) Token: 0x06032C49 RID: 207945
-		// (set) Token: 0x06032C4A RID: 207946
+		// Token: 0x17005128 RID: 20776
+		// (get) Token: 0x060279FD RID: 162301
+		// (set) Token: 0x060279FE RID: 162302
 		int SkillNodeId { get; set; }
 
-		// Token: 0x17007D7F RID: 32127
-		// (get) Token: 0x06032C4B RID: 207947
-		// (set) Token: 0x06032C4C RID: 207948
+		// Token: 0x17005129 RID: 20777
+		// (get) Token: 0x060279FF RID: 162303
+		// (set) Token: 0x06027A00 RID: 162304
 		int CurrentLevel { get; set; }
 
-		// Token: 0x17007D80 RID: 32128
-		// (get) Token: 0x06032C4D RID: 207949
-		// (set) Token: 0x06032C4E RID: 207950
+		// Token: 0x1700512A RID: 20778
+		// (get) Token: 0x06027A01 RID: 162305
+		// (set) Token: 0x06027A02 RID: 162306
 		int NormalTargetLevel { get; set; }
 
-		// Token: 0x17007D81 RID: 32129
-		// (get) Token: 0x06032C4F RID: 207951
-		// (set) Token: 0x06032C50 RID: 207952
+		// Token: 0x1700512B RID: 20779
+		// (get) Token: 0x06027A03 RID: 162307
+		// (set) Token: 0x06027A04 RID: 162308
 		int PerfectTargetLevel { get; set; }
 	}
 }

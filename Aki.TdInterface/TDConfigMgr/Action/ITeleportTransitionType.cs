@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FA6 RID: 8102
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021E9 RID: 8681
 	public class ITeleportTransitionType
 	{
-		// Token: 0x0600B22E RID: 45614 RVA: 0x0019F57C File Offset: 0x0019D77C
+		// Token: 0x0600BD32 RID: 48434 RVA: 0x001B592C File Offset: 0x001B3B2C
 		private ITeleportTransitionType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B22F RID: 45615 RVA: 0x0019F5B4 File Offset: 0x0019D7B4
+		// Token: 0x0600BD33 RID: 48435 RVA: 0x001B5964 File Offset: 0x001B3B64
 		public static ITeleportTransitionType Create([Nullable(2)] ITeleportTransitionType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B230 RID: 45616 RVA: 0x0019F5C7 File Offset: 0x0019D7C7
+		// Token: 0x0600BD34 RID: 48436 RVA: 0x001B5977 File Offset: 0x001B3B77
 		public static ITeleportTransitionType CreateFromSetValue([Nullable(2)] ITeleportTransitionType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B231 RID: 45617 RVA: 0x0019F5DA File Offset: 0x0019D7DA
+		// Token: 0x0600BD35 RID: 48437 RVA: 0x001B598A File Offset: 0x001B3B8A
 		public ITeleportTransitionType_SetValue ToSetValue()
 		{
 			return new ITeleportTransitionType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036F6 RID: 14070
-		// (get) Token: 0x0600B232 RID: 45618 RVA: 0x0019F5ED File Offset: 0x0019D7ED
-		// (set) Token: 0x0600B233 RID: 45619 RVA: 0x0019F618 File Offset: 0x0019D818
+		// Token: 0x170039CB RID: 14795
+		// (get) Token: 0x0600BD36 RID: 48438 RVA: 0x001B599D File Offset: 0x001B3B9D
+		// (set) Token: 0x0600BD37 RID: 48439 RVA: 0x001B59C8 File Offset: 0x001B3BC8
 		public virtual ETeleportTransitionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B9F RID: 27551
+		// Token: 0x0400719A RID: 29082
 		[Nullable(2)]
 		protected ITeleportTransitionType FbInstance;
 
-		// Token: 0x04006BA0 RID: 27552
+		// Token: 0x0400719B RID: 29083
 		[Nullable(2)]
 		protected ITeleportTransitionType_SetValue PocoInterface;
 	}

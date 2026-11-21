@@ -3,40 +3,40 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A71 RID: 23153
+	// Token: 0x0200607E RID: 24702
 	public class IThrowMotionTrackTargetT
 	{
-		// Token: 0x1700AE49 RID: 44617
-		// (get) Token: 0x06027697 RID: 161431 RVA: 0x0056C674 File Offset: 0x0056A874
-		// (set) Token: 0x06027698 RID: 161432 RVA: 0x0056C67C File Offset: 0x0056A87C
+		// Token: 0x1700B781 RID: 46977
+		// (get) Token: 0x06029C0F RID: 171023 RVA: 0x005B3680 File Offset: 0x005B1880
+		// (set) Token: 0x06029C10 RID: 171024 RVA: 0x005B3688 File Offset: 0x005B1888
 		public EThrowMotion Type { get; set; }
 
-		// Token: 0x1700AE4A RID: 44618
-		// (get) Token: 0x06027699 RID: 161433 RVA: 0x0056C685 File Offset: 0x0056A885
-		// (set) Token: 0x0602769A RID: 161434 RVA: 0x0056C68D File Offset: 0x0056A88D
+		// Token: 0x1700B782 RID: 46978
+		// (get) Token: 0x06029C11 RID: 171025 RVA: 0x005B3691 File Offset: 0x005B1891
+		// (set) Token: 0x06029C12 RID: 171026 RVA: 0x005B3699 File Offset: 0x005B1899
 		public float Velocity { get; set; }
 
-		// Token: 0x1700AE4B RID: 44619
-		// (get) Token: 0x0602769B RID: 161435 RVA: 0x0056C696 File Offset: 0x0056A896
-		// (set) Token: 0x0602769C RID: 161436 RVA: 0x0056C69E File Offset: 0x0056A89E
+		// Token: 0x1700B783 RID: 46979
+		// (get) Token: 0x06029C13 RID: 171027 RVA: 0x005B36A2 File Offset: 0x005B18A2
+		// (set) Token: 0x06029C14 RID: 171028 RVA: 0x005B36AA File Offset: 0x005B18AA
 		public string VelocityCurve { get; set; }
 
-		// Token: 0x1700AE4C RID: 44620
-		// (get) Token: 0x0602769D RID: 161437 RVA: 0x0056C6A7 File Offset: 0x0056A8A7
-		// (set) Token: 0x0602769E RID: 161438 RVA: 0x0056C6AF File Offset: 0x0056A8AF
+		// Token: 0x1700B784 RID: 46980
+		// (get) Token: 0x06029C15 RID: 171029 RVA: 0x005B36B3 File Offset: 0x005B18B3
+		// (set) Token: 0x06029C16 RID: 171030 RVA: 0x005B36BB File Offset: 0x005B18BB
 		public IVectorInfoT VelocityOffset { get; set; }
 
-		// Token: 0x1700AE4D RID: 44621
-		// (get) Token: 0x0602769F RID: 161439 RVA: 0x0056C6B8 File Offset: 0x0056A8B8
-		// (set) Token: 0x060276A0 RID: 161440 RVA: 0x0056C6C0 File Offset: 0x0056A8C0
+		// Token: 0x1700B785 RID: 46981
+		// (get) Token: 0x06029C17 RID: 171031 RVA: 0x005B36C4 File Offset: 0x005B18C4
+		// (set) Token: 0x06029C18 RID: 171032 RVA: 0x005B36CC File Offset: 0x005B18CC
 		public float AngularVelocity { get; set; }
 
-		// Token: 0x1700AE4E RID: 44622
-		// (get) Token: 0x060276A1 RID: 161441 RVA: 0x0056C6C9 File Offset: 0x0056A8C9
-		// (set) Token: 0x060276A2 RID: 161442 RVA: 0x0056C6D1 File Offset: 0x0056A8D1
+		// Token: 0x1700B786 RID: 46982
+		// (get) Token: 0x06029C19 RID: 171033 RVA: 0x005B36D5 File Offset: 0x005B18D5
+		// (set) Token: 0x06029C1A RID: 171034 RVA: 0x005B36DD File Offset: 0x005B18DD
 		public string AngularVelocityCurve { get; set; }
 
-		// Token: 0x060276A3 RID: 161443 RVA: 0x0056C6DA File Offset: 0x0056A8DA
+		// Token: 0x06029C1B RID: 171035 RVA: 0x005B36E6 File Offset: 0x005B18E6
 		public IThrowMotionTrackTargetT()
 		{
 			this.Type = EThrowMotion.Projectile;

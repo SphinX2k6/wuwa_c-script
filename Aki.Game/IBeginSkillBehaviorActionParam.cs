@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003155 RID: 12629
+// Token: 0x020026C2 RID: 9922
 [NullableContext(1)]
 public interface IBeginSkillBehaviorActionParam
 {
-	// Token: 0x170025A7 RID: 9639
-	// (get) Token: 0x0601B2ED RID: 111341
-	// (set) Token: 0x0601B2EE RID: 111342
+	// Token: 0x17002798 RID: 10136
+	// (get) Token: 0x06018DF2 RID: 101874
+	// (set) Token: 0x06018DF3 RID: 101875
 	Entity Entity { get; set; }
 
-	// Token: 0x170025A8 RID: 9640
-	// (get) Token: 0x0601B2EF RID: 111343
-	// (set) Token: 0x0601B2F0 RID: 111344
+	// Token: 0x17002799 RID: 10137
+	// (get) Token: 0x06018DF4 RID: 101876
+	// (set) Token: 0x06018DF5 RID: 101877
 	BaseSkillComponent SkillComponent { get; set; }
 
-	// Token: 0x170025A9 RID: 9641
-	// (get) Token: 0x0601B2F1 RID: 111345
-	// (set) Token: 0x0601B2F2 RID: 111346
+	// Token: 0x1700279A RID: 10138
+	// (get) Token: 0x06018DF6 RID: 101878
+	// (set) Token: 0x06018DF7 RID: 101879
 	Skill Skill { get; set; }
 }

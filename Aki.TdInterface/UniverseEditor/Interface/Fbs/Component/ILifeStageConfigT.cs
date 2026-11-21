@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054FB RID: 21755
+	// Token: 0x02005A81 RID: 23169
 	public class ILifeStageConfigT
 	{
-		// Token: 0x1700A08B RID: 41099
-		// (get) Token: 0x06023EA1 RID: 147105 RVA: 0x004F7128 File Offset: 0x004F5328
-		// (set) Token: 0x06023EA2 RID: 147106 RVA: 0x004F7130 File Offset: 0x004F5330
+		// Token: 0x1700A8C5 RID: 43205
+		// (get) Token: 0x06025F5B RID: 155483 RVA: 0x0053424C File Offset: 0x0053244C
+		// (set) Token: 0x06025F5C RID: 155484 RVA: 0x00534254 File Offset: 0x00532454
 		public float PerformDuration { get; set; }
 
-		// Token: 0x1700A08C RID: 41100
-		// (get) Token: 0x06023EA3 RID: 147107 RVA: 0x004F7139 File Offset: 0x004F5339
-		// (set) Token: 0x06023EA4 RID: 147108 RVA: 0x004F7141 File Offset: 0x004F5341
+		// Token: 0x1700A8C6 RID: 43206
+		// (get) Token: 0x06025F5D RID: 155485 RVA: 0x0053425D File Offset: 0x0053245D
+		// (set) Token: 0x06025F5E RID: 155486 RVA: 0x00534265 File Offset: 0x00532465
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023EA5 RID: 147109 RVA: 0x004F714A File Offset: 0x004F534A
+		// Token: 0x06025F5F RID: 155487 RVA: 0x0053426E File Offset: 0x0053246E
 		public ILifeStageConfigT()
 		{
 			this.PerformDuration = 0f;

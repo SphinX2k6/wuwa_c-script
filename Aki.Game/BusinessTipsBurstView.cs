@@ -6,16 +6,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001328 RID: 4904
+// Token: 0x020007DC RID: 2012
 public class BusinessTipsBurstView : UiViewBase
 {
-	// Token: 0x06008828 RID: 34856 RVA: 0x001D0CC7 File Offset: 0x001CEEC7
+	// Token: 0x06005BC3 RID: 23491 RVA: 0x001D9B33 File Offset: 0x001D7D33
 	[NullableContext(1)]
 	public BusinessTipsBurstView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06008829 RID: 34857 RVA: 0x001D0CD0 File Offset: 0x001CEED0
+	// Token: 0x06005BC4 RID: 23492 RVA: 0x001D9B3C File Offset: 0x001D7D3C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class BusinessTipsBurstView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600882A RID: 34858 RVA: 0x001D0CF4 File Offset: 0x001CEEF4
+	// Token: 0x06005BC5 RID: 23493 RVA: 0x001D9B60 File Offset: 0x001D7D60
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BusinessTipsBurstView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -35,7 +35,7 @@ public class BusinessTipsBurstView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600882B RID: 34859 RVA: 0x001D0D37 File Offset: 0x001CEF37
+	// Token: 0x06005BC6 RID: 23494 RVA: 0x001D9BA3 File Offset: 0x001D7DA3
 	protected override void OnBeforeShow()
 	{
 		TimerSystem.GameplayTimeInstance.Delay(delegate(float _)
@@ -44,10 +44,10 @@ public class BusinessTipsBurstView : UiViewBase
 		}, 2000f, null, null, true, 1f);
 	}
 
-	// Token: 0x02007977 RID: 31095
+	// Token: 0x02006B01 RID: 27393
 	private static class EComponentDefine
 	{
-		// Token: 0x04027FFF RID: 163839
+		// Token: 0x0402332C RID: 144172
 		public const int RoleTexture = 0;
 	}
 }

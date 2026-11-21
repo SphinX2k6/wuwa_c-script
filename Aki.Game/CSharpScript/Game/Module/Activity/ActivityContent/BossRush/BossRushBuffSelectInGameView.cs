@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x020068FA RID: 26874
+	// Token: 0x0200584A RID: 22602
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BossRushBuffSelectInGameView : UiViewBase
 	{
-		// Token: 0x06043061 RID: 274529 RVA: 0x01053622 File Offset: 0x01051822
+		// Token: 0x06037BB9 RID: 228281 RVA: 0x00F94C4A File Offset: 0x00F92E4A
 		[NullableContext(1)]
 		public BossRushBuffSelectInGameView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06043062 RID: 274530 RVA: 0x01053638 File Offset: 0x01051838
+		// Token: 0x06037BBA RID: 228282 RVA: 0x00F94C60 File Offset: 0x00F92E60
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06043063 RID: 274531 RVA: 0x01053700 File Offset: 0x01051900
+		// Token: 0x06037BBB RID: 228283 RVA: 0x00F94D28 File Offset: 0x00F92F28
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BossRushBuffSelectInGameView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043064 RID: 274532 RVA: 0x01053744 File Offset: 0x01051944
+		// Token: 0x06037BBC RID: 228284 RVA: 0x00F94D6C File Offset: 0x00F92F6C
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(2);
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.RefreshConfirmButton();
 		}
 
-		// Token: 0x06043065 RID: 274533 RVA: 0x010537C4 File Offset: 0x010519C4
+		// Token: 0x06037BBD RID: 228285 RVA: 0x00F94DEC File Offset: 0x00F92FEC
 		private void OnClickConfirmButton()
 		{
 			if (this.CurrentSelectBuff == null)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.CloseMeAsync();
 		}
 
-		// Token: 0x06043066 RID: 274534 RVA: 0x010537FF File Offset: 0x010519FF
+		// Token: 0x06037BBE RID: 228286 RVA: 0x00F94E27 File Offset: 0x00F93027
 		private void OnClickBuffItem(BossRushBuffSelectInGameItem selectItem)
 		{
 			BossRushBuffSelectInGameItem currentSelectBuff = this.CurrentSelectBuff;
@@ -101,33 +101,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.RefreshConfirmButton();
 		}
 
-		// Token: 0x06043067 RID: 274535 RVA: 0x0105381F File Offset: 0x01051A1F
+		// Token: 0x06037BBF RID: 228287 RVA: 0x00F94E47 File Offset: 0x00F93047
 		private void RefreshConfirmButton()
 		{
 			base.GetButton(1).SetSelfInteractive(this.CurrentSelectBuff != null);
 		}
 
-		// Token: 0x04022E3C RID: 142908
+		// Token: 0x0401D698 RID: 120472
 		[Nullable(1)]
 		private readonly List<BossRushBuffSelectInGameItem> BuffItemList = new List<BossRushBuffSelectInGameItem>();
 
-		// Token: 0x04022E3D RID: 142909
+		// Token: 0x0401D699 RID: 120473
 		private BossRushBuffSelectInGameItem CurrentSelectBuff;
 
-		// Token: 0x04022E3E RID: 142910
+		// Token: 0x0401D69A RID: 120474
 		private UUIInturnAnimController AnimationController;
 
-		// Token: 0x0200CAAD RID: 51885
+		// Token: 0x0200B475 RID: 46197
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403D418 RID: 250904
+			// Token: 0x04037CF2 RID: 228594
 			public const int BuffRootItem = 0;
 
-			// Token: 0x0403D419 RID: 250905
+			// Token: 0x04037CF3 RID: 228595
 			public const int ConfirmButton = 1;
 
-			// Token: 0x0403D41A RID: 250906
+			// Token: 0x04037CF4 RID: 228596
 			public const int ToggleItem = 2;
 		}
 	}

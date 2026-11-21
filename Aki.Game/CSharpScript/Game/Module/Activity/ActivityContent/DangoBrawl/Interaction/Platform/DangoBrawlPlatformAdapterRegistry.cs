@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction.Platform
 {
-	// Token: 0x0200686E RID: 26734
+	// Token: 0x020057BE RID: 22462
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlPlatformAdapterRegistry
 	{
-		// Token: 0x06042C26 RID: 273446 RVA: 0x0103FAEC File Offset: 0x0103DCEC
+		// Token: 0x0603777D RID: 227197 RVA: 0x00F80FCC File Offset: 0x00F7F1CC
 		public DangoBrawlPlatformAdapterRegistry(InteractionStateMachine fsm, DangoBrawlPlatformState platformState, DangoBrawlDragCtrl dragCtrl, DangoBrawlStickyCtrl sticky)
 		{
 			this.PlatformState = platformState;
@@ -21,8 +21,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			this.Adapters[EInputPlatform.Gamepad] = new DangoBrawlGamepadAdapter(dragCtrl, sticky, fsm);
 		}
 
-		// Token: 0x17009795 RID: 38805
-		// (get) Token: 0x06042C27 RID: 273447 RVA: 0x0103FB50 File Offset: 0x0103DD50
+		// Token: 0x17006AD6 RID: 27350
+		// (get) Token: 0x0603777E RID: 227198 RVA: 0x00F81030 File Offset: 0x00F7F230
 		public IDangobrawlInputAdapter Current
 		{
 			get
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x06042C28 RID: 273448 RVA: 0x0103FB85 File Offset: 0x0103DD85
+		// Token: 0x0603777F RID: 227199 RVA: 0x00F81065 File Offset: 0x00F7F265
 		public void Start()
 		{
 			this.SwitchTo(this.Current);
 		}
 
-		// Token: 0x06042C29 RID: 273449 RVA: 0x0103FB93 File Offset: 0x0103DD93
+		// Token: 0x06037780 RID: 227200 RVA: 0x00F81073 File Offset: 0x00F7F273
 		public void Stop()
 		{
 			IDangobrawlInputAdapter startedAdapter = this.StartedAdapter;
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			this.StartedAdapter = null;
 		}
 
-		// Token: 0x06042C2A RID: 273450 RVA: 0x0103FBAD File Offset: 0x0103DDAD
+		// Token: 0x06037781 RID: 227201 RVA: 0x00F8108D File Offset: 0x00F7F28D
 		public void UpdatePlatform()
 		{
 			this.SwitchTo(this.Current);
 		}
 
-		// Token: 0x06042C2B RID: 273451 RVA: 0x0103FBBB File Offset: 0x0103DDBB
+		// Token: 0x06037782 RID: 227202 RVA: 0x00F8109B File Offset: 0x00F7F29B
 		private void SwitchTo(IDangobrawlInputAdapter target)
 		{
 			if (this.StartedAdapter == target)
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			target.Start();
 		}
 
-		// Token: 0x04022C0C RID: 142348
+		// Token: 0x0401D469 RID: 119913
 		private readonly DangoBrawlPlatformState PlatformState;
 
-		// Token: 0x04022C0D RID: 142349
+		// Token: 0x0401D46A RID: 119914
 		private readonly Dictionary<EInputPlatform, IDangobrawlInputAdapter> Adapters = new Dictionary<EInputPlatform, IDangobrawlInputAdapter>();
 
-		// Token: 0x04022C0E RID: 142350
+		// Token: 0x0401D46B RID: 119915
 		[Nullable(2)]
 		private IDangobrawlInputAdapter StartedAdapter;
 	}

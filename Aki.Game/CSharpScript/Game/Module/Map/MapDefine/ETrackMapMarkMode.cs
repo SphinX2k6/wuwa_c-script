@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005562 RID: 21858
+	// Token: 0x02004534 RID: 17716
 	public enum ETrackMapMarkMode
 	{
-		// Token: 0x0401D4D7 RID: 120023
+		// Token: 0x04017F60 RID: 98144
 		Local,
-		// Token: 0x0401D4D8 RID: 120024
+		// Token: 0x04017F61 RID: 98145
 		Remote
 	}
 }

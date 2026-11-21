@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FAB RID: 4011
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010D5 RID: 4309
 	public class IHandInGroup : IHandInItem
 	{
-		// Token: 0x0600595C RID: 22876 RVA: 0x000D9BD8 File Offset: 0x000D7DD8
+		// Token: 0x06005F32 RID: 24370 RVA: 0x000E6698 File Offset: 0x000E4898
 		private IHandInGroup_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600595D RID: 22877 RVA: 0x000D9C10 File Offset: 0x000D7E10
+		// Token: 0x06005F33 RID: 24371 RVA: 0x000E66D0 File Offset: 0x000E48D0
 		public static IHandInGroup Create([Nullable(2)] IHandInGroup instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600595E RID: 22878 RVA: 0x000D9C23 File Offset: 0x000D7E23
+		// Token: 0x06005F34 RID: 24372 RVA: 0x000E66E3 File Offset: 0x000E48E3
 		public static IHandInGroup CreateFromSetValue([Nullable(2)] IHandInGroup_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600595F RID: 22879 RVA: 0x000D9C38 File Offset: 0x000D7E38
+		// Token: 0x06005F35 RID: 24373 RVA: 0x000E66F8 File Offset: 0x000E48F8
 		public new IHandInGroup_SetValue ToSetValue()
 		{
 			return new IHandInGroup_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DAF RID: 7599
-		// (get) Token: 0x06005960 RID: 22880 RVA: 0x000D9C86 File Offset: 0x000D7E86
-		// (set) Token: 0x06005961 RID: 22881 RVA: 0x000D9CB1 File Offset: 0x000D7EB1
+		// Token: 0x17001F56 RID: 8022
+		// (get) Token: 0x06005F36 RID: 24374 RVA: 0x000E6746 File Offset: 0x000E4946
+		// (set) Token: 0x06005F37 RID: 24375 RVA: 0x000E6771 File Offset: 0x000E4971
 		public override EHandInItemType HandInType
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DB0 RID: 7600
-		// (get) Token: 0x06005962 RID: 22882 RVA: 0x000D9CBF File Offset: 0x000D7EBF
-		// (set) Token: 0x06005963 RID: 22883 RVA: 0x000D9CE6 File Offset: 0x000D7EE6
+		// Token: 0x17001F57 RID: 8023
+		// (get) Token: 0x06005F38 RID: 24376 RVA: 0x000E677F File Offset: 0x000E497F
+		// (set) Token: 0x06005F39 RID: 24377 RVA: 0x000E67A6 File Offset: 0x000E49A6
 		public override List<int> ItemIds
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DB1 RID: 7601
-		// (get) Token: 0x06005964 RID: 22884 RVA: 0x000D9CF4 File Offset: 0x000D7EF4
-		// (set) Token: 0x06005965 RID: 22885 RVA: 0x000D9D1F File Offset: 0x000D7F1F
+		// Token: 0x17001F58 RID: 8024
+		// (get) Token: 0x06005F3A RID: 24378 RVA: 0x000E67B4 File Offset: 0x000E49B4
+		// (set) Token: 0x06005F3B RID: 24379 RVA: 0x000E67DF File Offset: 0x000E49DF
 		public override int Count
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DB2 RID: 7602
-		// (get) Token: 0x06005966 RID: 22886 RVA: 0x000D9D2D File Offset: 0x000D7F2D
-		// (set) Token: 0x06005967 RID: 22887 RVA: 0x000D9D58 File Offset: 0x000D7F58
+		// Token: 0x17001F59 RID: 8025
+		// (get) Token: 0x06005F3C RID: 24380 RVA: 0x000E67ED File Offset: 0x000E49ED
+		// (set) Token: 0x06005F3D RID: 24381 RVA: 0x000E6818 File Offset: 0x000E4A18
 		public virtual int Slot
 		{
 			get
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DB3 RID: 7603
-		// (get) Token: 0x06005968 RID: 22888 RVA: 0x000D9D68 File Offset: 0x000D7F68
-		// (set) Token: 0x06005969 RID: 22889 RVA: 0x000D9DC9 File Offset: 0x000D7FC9
+		// Token: 0x17001F5A RID: 8026
+		// (get) Token: 0x06005F3E RID: 24382 RVA: 0x000E6828 File Offset: 0x000E4A28
+		// (set) Token: 0x06005F3F RID: 24383 RVA: 0x000E6889 File Offset: 0x000E4A89
 		[Nullable(2)]
 		public virtual IHandInItemRange ChoiceRange
 		{
@@ -190,18 +188,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040035F0 RID: 13808
+		// Token: 0x04003922 RID: 14626
 		[Nullable(2)]
 		protected new IHandInGroup FbInstance;
 
-		// Token: 0x040035F1 RID: 13809
+		// Token: 0x04003923 RID: 14627
 		[Nullable(2)]
 		protected new IHandInGroup_SetValue PocoInterface;
 
-		// Token: 0x040035F2 RID: 13810
+		// Token: 0x04003924 RID: 14628
 		private IHandInItemRange _ChoiceRangeCache;
 
-		// Token: 0x040035F3 RID: 13811
+		// Token: 0x04003925 RID: 14629
 		private bool _ChoiceRangeInited;
 	}
 }

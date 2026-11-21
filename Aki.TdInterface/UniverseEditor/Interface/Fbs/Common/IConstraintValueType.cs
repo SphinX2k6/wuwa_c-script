@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D7F RID: 23935
+	// Token: 0x020063BC RID: 25532
 	public struct IConstraintValueType : IFlatbufferObject
 	{
-		// Token: 0x1700B344 RID: 45892
-		// (get) Token: 0x06028F26 RID: 167718 RVA: 0x0059FA62 File Offset: 0x0059DC62
+		// Token: 0x1700BCAA RID: 48298
+		// (get) Token: 0x0602B5B0 RID: 177584 RVA: 0x005E8792 File Offset: 0x005E6992
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028F27 RID: 167719 RVA: 0x0059FA6F File Offset: 0x0059DC6F
+		// Token: 0x0602B5B1 RID: 177585 RVA: 0x005E879F File Offset: 0x005E699F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028F28 RID: 167720 RVA: 0x0059FA78 File Offset: 0x0059DC78
+		// Token: 0x0602B5B2 RID: 177586 RVA: 0x005E87A8 File Offset: 0x005E69A8
 		public static IConstraintValueType GetRootAsIConstraintValueType(ByteBuffer _bb)
 		{
 			return IConstraintValueType.GetRootAsIConstraintValueType(_bb, default(IConstraintValueType));
 		}
 
-		// Token: 0x06028F29 RID: 167721 RVA: 0x0059FA94 File Offset: 0x0059DC94
+		// Token: 0x0602B5B3 RID: 177587 RVA: 0x005E87C4 File Offset: 0x005E69C4
 		public static IConstraintValueType GetRootAsIConstraintValueType(ByteBuffer _bb, IConstraintValueType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028F2A RID: 167722 RVA: 0x0059FAB1 File Offset: 0x0059DCB1
+		// Token: 0x0602B5B4 RID: 177588 RVA: 0x005E87E1 File Offset: 0x005E69E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028F2B RID: 167723 RVA: 0x0059FAC0 File Offset: 0x0059DCC0
+		// Token: 0x0602B5B5 RID: 177589 RVA: 0x005E87F0 File Offset: 0x005E69F0
 		public IConstraintValueType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B345 RID: 45893
-		// (get) Token: 0x06028F2C RID: 167724 RVA: 0x0059FAD0 File Offset: 0x0059DCD0
+		// Token: 0x1700BCAB RID: 48299
+		// (get) Token: 0x0602B5B6 RID: 177590 RVA: 0x005E8800 File Offset: 0x005E6A00
 		public EConstraintValueType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028F2D RID: 167725 RVA: 0x0059FB0C File Offset: 0x0059DD0C
+		// Token: 0x0602B5B7 RID: 177591 RVA: 0x005E883C File Offset: 0x005E6A3C
 		public static Offset<IConstraintValueType> CreateIConstraintValueType(FlatBufferBuilder builder, EConstraintValueType Type = EConstraintValueType.Max)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IConstraintValueType.EndIConstraintValueType(builder);
 		}
 
-		// Token: 0x06028F2E RID: 167726 RVA: 0x0059FB22 File Offset: 0x0059DD22
+		// Token: 0x0602B5B8 RID: 177592 RVA: 0x005E8852 File Offset: 0x005E6A52
 		public static void StartIConstraintValueType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06028F2F RID: 167727 RVA: 0x0059FB2B File Offset: 0x0059DD2B
+		// Token: 0x0602B5B9 RID: 177593 RVA: 0x005E885B File Offset: 0x005E6A5B
 		public static void AddType(FlatBufferBuilder builder, EConstraintValueType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06028F30 RID: 167728 RVA: 0x0059FB36 File Offset: 0x0059DD36
+		// Token: 0x0602B5BA RID: 177594 RVA: 0x005E8866 File Offset: 0x005E6A66
 		public static Offset<IConstraintValueType> EndIConstraintValueType(FlatBufferBuilder builder)
 		{
 			return new Offset<IConstraintValueType>(builder.EndTable());
 		}
 
-		// Token: 0x06028F31 RID: 167729 RVA: 0x0059FB44 File Offset: 0x0059DD44
+		// Token: 0x0602B5BB RID: 177595 RVA: 0x005E8874 File Offset: 0x005E6A74
 		public IConstraintValueTypeT UnPack()
 		{
 			IConstraintValueTypeT constraintValueTypeT = new IConstraintValueTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return constraintValueTypeT;
 		}
 
-		// Token: 0x06028F32 RID: 167730 RVA: 0x0059FB5F File Offset: 0x0059DD5F
+		// Token: 0x0602B5BC RID: 177596 RVA: 0x005E888F File Offset: 0x005E6A8F
 		public void UnPackTo(IConstraintValueTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06028F33 RID: 167731 RVA: 0x0059FB70 File Offset: 0x0059DD70
+		// Token: 0x0602B5BD RID: 177597 RVA: 0x005E88A0 File Offset: 0x005E6AA0
 		public static Offset<IConstraintValueType> Pack(FlatBufferBuilder builder, IConstraintValueTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IConstraintValueType.CreateIConstraintValueType(builder, _o.Type);
 		}
 
-		// Token: 0x0400F74A RID: 63306
+		// Token: 0x040104A5 RID: 66725
 		private Table __p;
 	}
 }

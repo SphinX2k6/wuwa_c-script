@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020029A1 RID: 10657
+// Token: 0x02001F1C RID: 7964
 [Nullable(new byte[]
 {
 	0,
@@ -12,7 +12,7 @@ using UnrealEngine;
 })]
 public class ShipTowerBuffWayItem : GridProxyAbstract<IGetWayItemData>
 {
-	// Token: 0x06016180 RID: 90496 RVA: 0x005961F8 File Offset: 0x005943F8
+	// Token: 0x06013B86 RID: 80774 RVA: 0x005C11B8 File Offset: 0x005BF3B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class ShipTowerBuffWayItem : GridProxyAbstract<IGetWayItemData>
 		};
 	}
 
-	// Token: 0x06016181 RID: 90497 RVA: 0x0059625F File Offset: 0x0059445F
+	// Token: 0x06013B87 RID: 80775 RVA: 0x005C121F File Offset: 0x005BF41F
 	[NullableContext(1)]
 	public override void Refresh(IGetWayItemData data, bool isSelected, int gridIndex)
 	{
@@ -34,7 +34,7 @@ public class ShipTowerBuffWayItem : GridProxyAbstract<IGetWayItemData>
 		base.GetText(1).SetText(this.ItemData.Text, true);
 	}
 
-	// Token: 0x06016182 RID: 90498 RVA: 0x00596280 File Offset: 0x00594480
+	// Token: 0x06013B88 RID: 80776 RVA: 0x005C1240 File Offset: 0x005BF440
 	private void OnBtnWayClick()
 	{
 		IGetWayItemData itemData = this.ItemData;
@@ -50,17 +50,17 @@ public class ShipTowerBuffWayItem : GridProxyAbstract<IGetWayItemData>
 		function();
 	}
 
-	// Token: 0x0400A4B1 RID: 42161
+	// Token: 0x0400A89B RID: 43163
 	[Nullable(2)]
 	private IGetWayItemData ItemData;
 
-	// Token: 0x02008FAA RID: 36778
+	// Token: 0x020081F3 RID: 33267
 	private static class EChildType
 	{
-		// Token: 0x0402E882 RID: 190594
+		// Token: 0x04029F81 RID: 171905
 		public const int BtnWay = 0;
 
-		// Token: 0x0402E883 RID: 190595
+		// Token: 0x04029F82 RID: 171906
 		public const int TxtWay = 1;
 	}
 }

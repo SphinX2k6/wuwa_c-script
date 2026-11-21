@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017BE RID: 6078
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001941 RID: 6465
 	public class IAdjustFixedLookAtTargetBase
 	{
-		// Token: 0x060081C5 RID: 33221 RVA: 0x00136130 File Offset: 0x00134330
+		// Token: 0x060088BF RID: 35007 RVA: 0x00145490 File Offset: 0x00143690
 		private IAdjustFixedLookAtTargetBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060081C6 RID: 33222 RVA: 0x00136168 File Offset: 0x00134368
+		// Token: 0x060088C0 RID: 35008 RVA: 0x001454C8 File Offset: 0x001436C8
 		public static IAdjustFixedLookAtTargetBase Create([Nullable(2)] IAdjustFixedLookAtTargetBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060081C7 RID: 33223 RVA: 0x0013617B File Offset: 0x0013437B
+		// Token: 0x060088C1 RID: 35009 RVA: 0x001454DB File Offset: 0x001436DB
 		public static IAdjustFixedLookAtTargetBase CreateFromSetValue([Nullable(2)] IAdjustFixedLookAtTargetBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060081C8 RID: 33224 RVA: 0x0013618E File Offset: 0x0013438E
+		// Token: 0x060088C2 RID: 35010 RVA: 0x001454EE File Offset: 0x001436EE
 		public IAdjustFixedLookAtTargetBase_SetValue ToSetValue()
 		{
 			return new IAdjustFixedLookAtTargetBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002A9A RID: 10906
-		// (get) Token: 0x060081C9 RID: 33225 RVA: 0x001361A1 File Offset: 0x001343A1
-		// (set) Token: 0x060081CA RID: 33226 RVA: 0x001361CC File Offset: 0x001343CC
+		// Token: 0x17002C8A RID: 11402
+		// (get) Token: 0x060088C3 RID: 35011 RVA: 0x00145501 File Offset: 0x00143701
+		// (set) Token: 0x060088C4 RID: 35012 RVA: 0x0014552C File Offset: 0x0014372C
 		public virtual EFixedLookAtTargetType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400526D RID: 21101
+		// Token: 0x040056A7 RID: 22183
 		[Nullable(2)]
 		protected IAdjustFixedLookAtTargetBase FbInstance;
 
-		// Token: 0x0400526E RID: 21102
+		// Token: 0x040056A8 RID: 22184
 		[Nullable(2)]
 		protected IAdjustFixedLookAtTargetBase_SetValue PocoInterface;
 	}

@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 {
-	// Token: 0x020000AD RID: 173
+	// Token: 0x020000B0 RID: 176
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VideoResourceModule : BaseResourceModule
 	{
-		// Token: 0x060005F2 RID: 1522 RVA: 0x000351B4 File Offset: 0x000333B4
+		// Token: 0x0600060C RID: 1548 RVA: 0x00036A1C File Offset: 0x00034C1C
 		private void Init()
 		{
 			if (this.Inited)
@@ -53,7 +53,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			this.Inited = true;
 		}
 
-		// Token: 0x060005F3 RID: 1523 RVA: 0x00035328 File Offset: 0x00033528
+		// Token: 0x0600060D RID: 1549 RVA: 0x00036B90 File Offset: 0x00034D90
 		[NullableContext(0)]
 		public override UniTask<bool> PrepareManifests()
 		{
@@ -65,12 +65,13 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return <PrepareManifests>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060005F4 RID: 1524 RVA: 0x0003536C File Offset: 0x0003356C
+		// Token: 0x0600060E RID: 1550 RVA: 0x00036BD4 File Offset: 0x00034DD4
 		public override PackClassification ClassifyPacks(ResourceSelectionContext context, ETier tier = ETier.None, bool forceMax = false)
 		{
 			LauncherStorageLib.Instance.DeleteGlobal(ELauncherStorageGlobalKey.UserFinishedVideoList);
 			if (!VideoResUpdate.Instance.GetIsSeparateVideo())
 			{
+				VideoResourceModule.LogClassification(tier, context.Gender, "未拆包", 0, 0, 0, 0, 0L, 0L);
 				return new PackClassification
 				{
 					MinPacks = new List<ResPackageInfo>(),
@@ -84,15 +85,6 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			long num = (videoResPackageInfo != null) ? videoResPackageInfo.AnalyzeRequireFiles(false, tier).Item3 : 0L;
 			if (forceMax)
 			{
-				if (videoResPackageInfo != null)
-				{
-					LauncherLog instance = LauncherLog.Instance;
-					DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(33, 1);
-					defaultInterpolatedStringHandler.AppendLiteral("Optional package 视频资源大小: Max: ");
-					defaultInterpolatedStringHandler.AppendFormatted<double>((double)num / 1048576.0);
-					defaultInterpolatedStringHandler.AppendLiteral(" MB");
-					instance.Info(defaultInterpolatedStringHandler.ToStringAndClear(), default(ReadOnlySpan<ValueTuple<string, object>>));
-				}
 				List<ResPackageInfo> list;
 				if (videoResPackageInfo == null)
 				{
@@ -103,6 +95,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 					(list = new List<ResPackageInfo>()).Add(videoResPackageInfo);
 				}
 				List<ResPackageInfo> list2 = list;
+				VideoResourceModule.LogClassification(tier, -1, "强制全量", unFinishedVideos.Count, unFinishedVideos.Count, list2.Count, list2.Count, num, num);
 				return new PackClassification
 				{
 					MinPacks = list2,
@@ -111,32 +104,25 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 					MaxSize = num
 				};
 			}
+			string reason;
 			HashSet<int> hashSet;
 			int gender;
 			if (VideoResUpdate.Instance.IsVideoClearGrayBoxHit())
 			{
+				reason = "核心视频";
 				hashSet = this.GetCoreVideoIds(context);
 				LauncherStorageLib.Instance.SetGlobal<HashSet<int>>(ELauncherStorageGlobalKey.UserFinishedVideoList, hashSet);
 				gender = context.Gender;
 			}
 			else
 			{
+				reason = "灰度未命中，采用全部未完成任务视频";
 				hashSet = unFinishedVideos;
 				gender = -1;
 			}
 			VideoResPackageInfo videoResPackageInfo2 = this.BuildVideoPackInfo(hashSet, gender, tier);
-			long num2 = (videoResPackageInfo2 != null) ? videoResPackageInfo2.AnalyzeRequireFiles(false, tier).Item3 : 0L;
-			if (videoResPackageInfo2 != null || videoResPackageInfo != null)
-			{
-				LauncherLog instance2 = LauncherLog.Instance;
-				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(43, 2);
-				defaultInterpolatedStringHandler.AppendLiteral("Optional package 视频资源大小: Max: ");
-				defaultInterpolatedStringHandler.AppendFormatted<double>((double)num / 1048576.0);
-				defaultInterpolatedStringHandler.AppendLiteral(" MB, Min: ");
-				defaultInterpolatedStringHandler.AppendFormatted<double>((double)num2 / 1048576.0);
-				defaultInterpolatedStringHandler.AppendLiteral(" MB");
-				instance2.Info(defaultInterpolatedStringHandler.ToStringAndClear(), default(ReadOnlySpan<ValueTuple<string, object>>));
-			}
+			long minSize = (videoResPackageInfo2 != null) ? videoResPackageInfo2.AnalyzeRequireFiles(false, tier).Item3 : 0L;
+			VideoResourceModule.LogClassification(tier, gender, reason, hashSet.Count, unFinishedVideos.Count, (videoResPackageInfo2 != null) ? 1 : 0, (videoResPackageInfo != null) ? 1 : 0, minSize, num);
 			PackClassification packClassification = new PackClassification();
 			List<ResPackageInfo> minPacks;
 			if (videoResPackageInfo2 == null)
@@ -158,12 +144,40 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 				(maxPacks = new List<ResPackageInfo>()).Add(videoResPackageInfo);
 			}
 			packClassification.MaxPacks = maxPacks;
-			packClassification.MinSize = num2;
+			packClassification.MinSize = minSize;
 			packClassification.MaxSize = num;
 			return packClassification;
 		}
 
-		// Token: 0x060005F5 RID: 1525 RVA: 0x0003559C File Offset: 0x0003379C
+		// Token: 0x0600060F RID: 1551 RVA: 0x00036DA8 File Offset: 0x00034FA8
+		private unsafe static void LogClassification(ETier tier, int gender, string reason, int minVideoCount, int maxVideoCount, int minPackCount, int maxPackCount, long minSize, long maxSize)
+		{
+			LauncherLog instance = LauncherLog.Instance;
+			string message = "Optional package 视频资源大小";
+			<>y__InlineArray9<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray9<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("tier", tier);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("gender", gender);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("reason", reason);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("minVideoIds.count", minVideoCount);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("maxVideoIds.count", maxVideoCount);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 5) = new ValueTuple<string, object>("minPacks.count", minPackCount);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 6) = new ValueTuple<string, object>("maxPacks.count", maxPackCount);
+			ref ValueTuple<string, object> ptr = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 7);
+			string item = "minSize";
+			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(3, 1);
+			defaultInterpolatedStringHandler.AppendFormatted<double>((double)minSize / 1048576.0, "F2");
+			defaultInterpolatedStringHandler.AppendLiteral(" MB");
+			ptr = new ValueTuple<string, object>(item, defaultInterpolatedStringHandler.ToStringAndClear());
+			ref ValueTuple<string, object> ptr2 = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 8);
+			string item2 = "maxSize";
+			defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(3, 1);
+			defaultInterpolatedStringHandler.AppendFormatted<double>((double)maxSize / 1048576.0, "F2");
+			defaultInterpolatedStringHandler.AppendLiteral(" MB");
+			ptr2 = new ValueTuple<string, object>(item2, defaultInterpolatedStringHandler.ToStringAndClear());
+			instance.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray9<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 9));
+		}
+
+		// Token: 0x06000610 RID: 1552 RVA: 0x00036F38 File Offset: 0x00035138
 		private List<VideoResourceInfo> GetVideoResourceInfos(HashSet<int> videoIds, int gender, ETier tier = ETier.None)
 		{
 			if (videoIds.Count == 0)
@@ -186,7 +200,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return list2;
 		}
 
-		// Token: 0x060005F6 RID: 1526 RVA: 0x00035644 File Offset: 0x00033844
+		// Token: 0x06000611 RID: 1553 RVA: 0x00036FE0 File Offset: 0x000351E0
 		[return: Nullable(2)]
 		private VideoResPackageInfo BuildVideoPackInfo(HashSet<int> videoIds, int gender, ETier tier = ETier.None)
 		{
@@ -198,7 +212,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return new VideoResPackageInfo(videoResourceInfos);
 		}
 
-		// Token: 0x060005F7 RID: 1527 RVA: 0x0003566C File Offset: 0x0003386C
+		// Token: 0x06000612 RID: 1554 RVA: 0x00037008 File Offset: 0x00035208
 		public HashSet<int> GetCoreVideoIds(ResourceSelectionContext context)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -220,11 +234,12 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 					instance.Info(defaultInterpolatedStringHandler.ToStringAndClear(), default(ReadOnlySpan<ValueTuple<string, object>>));
 				}
 			}
-			List<int> list = this.EvaluateRecommendVideoQuestIds(context.FinishedQuests);
-			if (list.Count > 0)
-			{
-				LauncherLog.Instance.Info("依据关键任务完成度推荐视频任务列表: " + string.Join<int>(",", list), default(ReadOnlySpan<ValueTuple<string, object>>));
-			}
+			List<string> values;
+			List<int> list = this.EvaluateRecommendVideoQuestIds(context.FinishedQuests, out values);
+			LauncherLog instance2 = LauncherLog.Instance;
+			string message = "依据关键任务完成度推荐视频任务列表: " + ResourceUpdateUtils.FormatLogList<int>(list);
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("matchedConfigs", ResourceUpdateUtils.FormatLogList<string>(values));
+			instance2.Info(message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			foreach (int num2 in list)
 			{
 				if (!context.FinishedQuests.Contains(num2))
@@ -239,10 +254,11 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return hashSet;
 		}
 
-		// Token: 0x060005F8 RID: 1528 RVA: 0x00035874 File Offset: 0x00033A74
-		private List<int> EvaluateRecommendVideoQuestIds(HashSet<int> finishedQuests)
+		// Token: 0x06000613 RID: 1555 RVA: 0x00037218 File Offset: 0x00035418
+		private List<int> EvaluateRecommendVideoQuestIds(HashSet<int> finishedQuests, out List<string> matchedConfigs)
 		{
 			List<int> list = new List<int>();
+			matchedConfigs = new List<string>();
 			foreach (RecommendPackRow recommendPackRow in PackSelectionTables.RecommendPackTableInstance.GetAll())
 			{
 				bool flag = true;
@@ -267,6 +283,22 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 					}
 					if (flag2)
 					{
+						if (recommendPackRow.VideoQuestId.Count > 0)
+						{
+							List<string> list2 = matchedConfigs;
+							DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(47, 4);
+							defaultInterpolatedStringHandler.AppendLiteral("(Id=");
+							defaultInterpolatedStringHandler.AppendFormatted<int>(recommendPackRow.Id);
+							defaultInterpolatedStringHandler.AppendLiteral(",FinishQuest=");
+							defaultInterpolatedStringHandler.AppendFormatted(ResourceUpdateUtils.FormatLogList<int>(recommendPackRow.FinishQuest));
+							defaultInterpolatedStringHandler.AppendLiteral(",");
+							defaultInterpolatedStringHandler.AppendLiteral("UnfinishQuest=");
+							defaultInterpolatedStringHandler.AppendFormatted(ResourceUpdateUtils.FormatLogList<int>(recommendPackRow.UnfinishQuest));
+							defaultInterpolatedStringHandler.AppendLiteral(",VideoQuestId=");
+							defaultInterpolatedStringHandler.AppendFormatted(ResourceUpdateUtils.FormatLogList<int>(recommendPackRow.VideoQuestId));
+							defaultInterpolatedStringHandler.AppendLiteral(")");
+							list2.Add(defaultInterpolatedStringHandler.ToStringAndClear());
+						}
 						foreach (int item3 in recommendPackRow.VideoQuestId)
 						{
 							list.Add(item3);
@@ -277,7 +309,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return list;
 		}
 
-		// Token: 0x060005F9 RID: 1529 RVA: 0x000359BC File Offset: 0x00033BBC
+		// Token: 0x06000614 RID: 1556 RVA: 0x00037450 File Offset: 0x00035650
 		private HashSet<int> GetQuestRefVideo(int questId, int gender)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -308,10 +340,9 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return hashSet;
 		}
 
-		// Token: 0x060005FA RID: 1530 RVA: 0x00035AD8 File Offset: 0x00033CD8
+		// Token: 0x06000615 RID: 1557 RVA: 0x0003756C File Offset: 0x0003576C
 		public override void Delete(IReadOnlyList<string> pakNames)
 		{
-			base.DegradeToMinPack();
 			foreach (string text in pakNames)
 			{
 				VideoResourceInfo videoResourceInfo2;
@@ -327,7 +358,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			}
 		}
 
-		// Token: 0x060005FB RID: 1531 RVA: 0x00035B68 File Offset: 0x00033D68
+		// Token: 0x06000616 RID: 1558 RVA: 0x000375F8 File Offset: 0x000357F8
 		public override long GetLocalSize(IReadOnlyList<string> pakNames)
 		{
 			long num = 0L;
@@ -348,7 +379,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return num;
 		}
 
-		// Token: 0x060005FC RID: 1532 RVA: 0x00035C04 File Offset: 0x00033E04
+		// Token: 0x06000617 RID: 1559 RVA: 0x00037694 File Offset: 0x00035894
 		public void DeleteByVideoIds(HashSet<int> videoIds)
 		{
 			LauncherLog.Instance.Info("Optional package 按视频ID卸载, videoIds: " + string.Join<int>(",", videoIds), default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -357,7 +388,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			this.Delete(videoResPakByVideoIds);
 		}
 
-		// Token: 0x060005FD RID: 1533 RVA: 0x00035C5C File Offset: 0x00033E5C
+		// Token: 0x06000618 RID: 1560 RVA: 0x000376EC File Offset: 0x000358EC
 		public long GetLocalSizeByVideoIds(HashSet<int> videoIds)
 		{
 			List<int> videoIds2 = new List<int>(videoIds);
@@ -374,7 +405,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return localSize;
 		}
 
-		// Token: 0x060005FE RID: 1534 RVA: 0x00035CF8 File Offset: 0x00033EF8
+		// Token: 0x06000619 RID: 1561 RVA: 0x00037788 File Offset: 0x00035988
 		public List<string> FilterVideoPacksByGender(List<string> packs, int gender)
 		{
 			if (gender == 1)
@@ -388,7 +419,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return packs;
 		}
 
-		// Token: 0x060005FF RID: 1535 RVA: 0x00035D5C File Offset: 0x00033F5C
+		// Token: 0x0600061A RID: 1562 RVA: 0x000377EC File Offset: 0x000359EC
 		public HashSet<int> GetUnusedVideos(HashSet<int> finishedQuests)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -432,8 +463,8 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return hashSet2;
 		}
 
-		// Token: 0x06000600 RID: 1536 RVA: 0x00035F2C File Offset: 0x0003412C
-		public List<int> FilterVideoByFinishedQuest(List<int> videoIds, HashSet<int> finishedQuests)
+		// Token: 0x0600061B RID: 1563 RVA: 0x000379BC File Offset: 0x00035BBC
+		public List<int> FilterVideoByFinishedQuest(IReadOnlyList<int> videoIds, HashSet<int> finishedQuests)
 		{
 			HashSet<int> unFinishedVideos = this.GetUnFinishedVideos(finishedQuests);
 			List<int> list = new List<int>();
@@ -447,7 +478,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return list;
 		}
 
-		// Token: 0x06000601 RID: 1537 RVA: 0x00035F94 File Offset: 0x00034194
+		// Token: 0x0600061C RID: 1564 RVA: 0x00037A1C File Offset: 0x00035C1C
 		private HashSet<int> GetUnFinishedVideos([Nullable(2)] HashSet<int> finishedQuests = null)
 		{
 			HashSet<int> hashSet = finishedQuests ?? new HashSet<int>();
@@ -486,19 +517,19 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return hashSet2;
 		}
 
-		// Token: 0x040003A8 RID: 936
+		// Token: 0x040003D6 RID: 982
 		private const long MB_SIZE = 1048576L;
 
-		// Token: 0x040003A9 RID: 937
+		// Token: 0x040003D7 RID: 983
 		private readonly Dictionary<int, List<int>> QuestRefMaleVideos = new Dictionary<int, List<int>>();
 
-		// Token: 0x040003AA RID: 938
+		// Token: 0x040003D8 RID: 984
 		private readonly Dictionary<int, List<int>> QuestRefFemaleVideos = new Dictionary<int, List<int>>();
 
-		// Token: 0x040003AB RID: 939
+		// Token: 0x040003D9 RID: 985
 		private readonly Dictionary<int, List<int>> QuestRefCommonVideos = new Dictionary<int, List<int>>();
 
-		// Token: 0x040003AC RID: 940
+		// Token: 0x040003DA RID: 986
 		private bool Inited;
 	}
 }

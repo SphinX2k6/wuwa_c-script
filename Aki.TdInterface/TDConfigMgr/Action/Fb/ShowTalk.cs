@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025B3 RID: 9651
+	// Token: 0x02002862 RID: 10338
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ShowTalk : ActionParams
 	{
-		// Token: 0x0600D916 RID: 55574 RVA: 0x002062DA File Offset: 0x002044DA
-		[NullableContext(1)]
+		// Token: 0x0600E690 RID: 59024 RVA: 0x00221FAE File Offset: 0x002201AE
+		[NullableContext(0)]
 		public static ShowTalk Create(IShowTalk? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F72 RID: 16242
-		// (get) Token: 0x0600D917 RID: 55575 RVA: 0x002062FC File Offset: 0x002044FC
+		// Token: 0x1700427A RID: 17018
+		// (get) Token: 0x0600E691 RID: 59025 RVA: 0x00221FD0 File Offset: 0x002201D0
 		public virtual bool? ResetCamera
 		{
 			get
@@ -38,12 +38,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F73 RID: 16243
-		// (get) Token: 0x0600D918 RID: 55576 RVA: 0x00206332 File Offset: 0x00204532
-		[Nullable(1)]
+		// Token: 0x1700427B RID: 17019
+		// (get) Token: 0x0600E692 RID: 59026 RVA: 0x00222006 File Offset: 0x00220206
+		[Nullable(0)]
 		public virtual List<ITalkItem> TalkItems
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._TalkItemsInited)
@@ -56,8 +56,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F74 RID: 16244
-		// (get) Token: 0x0600D919 RID: 55577 RVA: 0x00206361 File Offset: 0x00204561
+		// Token: 0x1700427C RID: 17020
+		// (get) Token: 0x0600E693 RID: 59027 RVA: 0x00222035 File Offset: 0x00220235
 		public virtual IShowTalkOutline TalkOutline
 		{
 			get
@@ -72,8 +72,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F75 RID: 16245
-		// (get) Token: 0x0600D91A RID: 55578 RVA: 0x00206395 File Offset: 0x00204595
+		// Token: 0x1700427D RID: 17021
+		// (get) Token: 0x0600E694 RID: 59028 RVA: 0x00222069 File Offset: 0x00220269
 		public virtual string SequenceDataAsset
 		{
 			get
@@ -82,19 +82,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F76 RID: 16246
-		// (get) Token: 0x0600D91B RID: 55579 RVA: 0x002063A4 File Offset: 0x002045A4
+		// Token: 0x1700427E RID: 17022
+		// (get) Token: 0x0600E695 RID: 59029 RVA: 0x00222078 File Offset: 0x00220278
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IShowTalkFrameEvent> TalkFrameEvents
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -117,19 +117,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F77 RID: 16247
-		// (get) Token: 0x0600D91C RID: 55580 RVA: 0x00206420 File Offset: 0x00204620
+		// Token: 0x1700427F RID: 17023
+		// (get) Token: 0x0600E696 RID: 59030 RVA: 0x002220F4 File Offset: 0x002202F4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IShowTalk_TalkSequenceRow> TalkSequence
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -152,19 +152,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F78 RID: 16248
-		// (get) Token: 0x0600D91D RID: 55581 RVA: 0x0020649C File Offset: 0x0020469C
+		// Token: 0x17004280 RID: 17024
+		// (get) Token: 0x0600E697 RID: 59031 RVA: 0x00222170 File Offset: 0x00220370
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> SequenceNames
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -187,21 +187,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F79 RID: 16249
-		// (get) Token: 0x0600D91E RID: 55582 RVA: 0x00206514 File Offset: 0x00204714
+		// Token: 0x17004281 RID: 17025
+		// (get) Token: 0x0600E698 RID: 59032 RVA: 0x002221E8 File Offset: 0x002203E8
 		[Nullable(new byte[]
 		{
 			2,
-			1,
-			1
+			0,
+			0
 		})]
 		public virtual Dictionary<int, List<ITalkSequenceTransition>> SequenceTransitions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1,
-				1
+				0,
+				0
 			})]
 			get
 			{
@@ -235,8 +235,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F7A RID: 16250
-		// (get) Token: 0x0600D91F RID: 55583 RVA: 0x002065E4 File Offset: 0x002047E4
+		// Token: 0x17004282 RID: 17026
+		// (get) Token: 0x0600E699 RID: 59033 RVA: 0x002222B8 File Offset: 0x002204B8
 		public virtual bool? SaveFinalPos
 		{
 			get
@@ -249,8 +249,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F7B RID: 16251
-		// (get) Token: 0x0600D920 RID: 55584 RVA: 0x0020661B File Offset: 0x0020481B
+		// Token: 0x17004283 RID: 17027
+		// (get) Token: 0x0600E69A RID: 59034 RVA: 0x002222EF File Offset: 0x002204EF
 		public virtual SetBlendAnim SeqBlendAnim
 		{
 			get
@@ -265,8 +265,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F7C RID: 16252
-		// (get) Token: 0x0600D921 RID: 55585 RVA: 0x0020664F File Offset: 0x0020484F
+		// Token: 0x17004284 RID: 17028
+		// (get) Token: 0x0600E69B RID: 59035 RVA: 0x00222323 File Offset: 0x00220523
 		public virtual string EdSequencePath
 		{
 			get
@@ -275,8 +275,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F7D RID: 16253
-		// (get) Token: 0x0600D922 RID: 55586 RVA: 0x00206652 File Offset: 0x00204852
+		// Token: 0x17004285 RID: 17029
+		// (get) Token: 0x0600E69C RID: 59036 RVA: 0x00222326 File Offset: 0x00220526
 		public virtual IPlotConfig EdPlotConfig
 		{
 			get
@@ -285,8 +285,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F7E RID: 16254
-		// (get) Token: 0x0600D923 RID: 55587 RVA: 0x00206655 File Offset: 0x00204855
+		// Token: 0x17004286 RID: 17030
+		// (get) Token: 0x0600E69D RID: 59037 RVA: 0x00222329 File Offset: 0x00220529
 		public virtual string EdPreSeqSavePath
 		{
 			get
@@ -295,71 +295,71 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007895 RID: 30869
+		// Token: 0x04007EFC RID: 32508
 		private IShowTalk Instance;
 
-		// Token: 0x04007896 RID: 30870
-		[Nullable(1)]
+		// Token: 0x04007EFD RID: 32509
+		[Nullable(0)]
 		private List<ITalkItem> _TalkItemsCache;
 
-		// Token: 0x04007897 RID: 30871
+		// Token: 0x04007EFE RID: 32510
 		private bool _TalkItemsInited;
 
-		// Token: 0x04007898 RID: 30872
+		// Token: 0x04007EFF RID: 32511
 		private IShowTalkOutline _TalkOutlineCache;
 
-		// Token: 0x04007899 RID: 30873
+		// Token: 0x04007F00 RID: 32512
 		private bool _TalkOutlineInited;
 
-		// Token: 0x0400789A RID: 30874
+		// Token: 0x04007F01 RID: 32513
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IShowTalkFrameEvent> _TalkFrameEventsCache;
 
-		// Token: 0x0400789B RID: 30875
+		// Token: 0x04007F02 RID: 32514
 		private bool _TalkFrameEventsInited;
 
-		// Token: 0x0400789C RID: 30876
+		// Token: 0x04007F03 RID: 32515
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IShowTalk_TalkSequenceRow> _TalkSequenceCache;
 
-		// Token: 0x0400789D RID: 30877
+		// Token: 0x04007F04 RID: 32516
 		private bool _TalkSequenceInited;
 
-		// Token: 0x0400789E RID: 30878
+		// Token: 0x04007F05 RID: 32517
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _SequenceNamesCache;
 
-		// Token: 0x0400789F RID: 30879
+		// Token: 0x04007F06 RID: 32518
 		private bool _SequenceNamesInited;
 
-		// Token: 0x040078A0 RID: 30880
+		// Token: 0x04007F07 RID: 32519
 		[Nullable(new byte[]
 		{
 			2,
-			1,
-			1
+			0,
+			0
 		})]
 		private Dictionary<int, List<ITalkSequenceTransition>> _SequenceTransitionsCache;
 
-		// Token: 0x040078A1 RID: 30881
+		// Token: 0x04007F08 RID: 32520
 		private bool _SequenceTransitionsInited;
 
-		// Token: 0x040078A2 RID: 30882
+		// Token: 0x04007F09 RID: 32521
 		private SetBlendAnim _SeqBlendAnimCache;
 
-		// Token: 0x040078A3 RID: 30883
+		// Token: 0x04007F0A RID: 32522
 		private bool _SeqBlendAnimInited;
 	}
 }

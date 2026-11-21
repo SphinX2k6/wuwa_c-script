@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B22 RID: 11042
+// Token: 0x0200209E RID: 8350
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsScoreProgressPanel : UiPanelBase
 {
-	// Token: 0x06016EE8 RID: 93928 RVA: 0x005D1FC4 File Offset: 0x005D01C4
+	// Token: 0x06014919 RID: 84249 RVA: 0x005FEB40 File Offset: 0x005FCD40
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,14 +25,14 @@ public class SurvivorsScoreProgressPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016EE9 RID: 93929 RVA: 0x005D204A File Offset: 0x005D024A
+	// Token: 0x0601491A RID: 84250 RVA: 0x005FEBC6 File Offset: 0x005FCDC6
 	protected override void OnStart()
 	{
 		this.ProgressLayout = new GenericLayout<SurvivorsScoreProgressItem, SurvivorsMilestoneData>(base.GetHorizontalLayout(1), new Func<SurvivorsScoreProgressItem>(this.ProgressItemProxyCreate), null, false, true);
 		this.ProgressBarWidth = base.GetSprite(4).GetWidth();
 	}
 
-	// Token: 0x06016EEA RID: 93930 RVA: 0x005D207F File Offset: 0x005D027F
+	// Token: 0x0601491B RID: 84251 RVA: 0x005FEBFB File Offset: 0x005FCDFB
 	private SurvivorsScoreProgressItem ProgressItemProxyCreate()
 	{
 		return new SurvivorsScoreProgressItem
@@ -41,7 +41,7 @@ public class SurvivorsScoreProgressPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016EEB RID: 93931 RVA: 0x005D2094 File Offset: 0x005D0294
+	// Token: 0x0601491C RID: 84252 RVA: 0x005FEC10 File Offset: 0x005FCE10
 	public UniTask RefreshProgressItem(int currentProgress, IReadOnlyList<SurvivorsMilestoneData> dataList)
 	{
 		SurvivorsScoreProgressPanel.<RefreshProgressItem>d__7 <RefreshProgressItem>d__;
@@ -54,16 +54,16 @@ public class SurvivorsScoreProgressPanel : UiPanelBase
 		return <RefreshProgressItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400AAA7 RID: 43687
+	// Token: 0x0400AEAD RID: 44717
 	protected GenericLayout<SurvivorsScoreProgressItem, SurvivorsMilestoneData> ProgressLayout;
 
-	// Token: 0x0400AAA8 RID: 43688
+	// Token: 0x0400AEAE RID: 44718
 	protected float ProgressBarWidth;
 
-	// Token: 0x0400AAA9 RID: 43689
+	// Token: 0x0400AEAF RID: 44719
 	[Nullable(2)]
 	public Action OnClickToGet;
 
-	// Token: 0x0400AAAA RID: 43690
+	// Token: 0x0400AEB0 RID: 44720
 	private const float REWARD_ITEM_WIDTH = 108f;
 }

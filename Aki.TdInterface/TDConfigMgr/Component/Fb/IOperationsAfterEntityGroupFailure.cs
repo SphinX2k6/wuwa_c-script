@@ -6,11 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AED RID: 2797
+	// Token: 0x02000BB8 RID: 3000
 	public class IOperationsAfterEntityGroupFailure
 	{
-		// Token: 0x06004062 RID: 16482 RVA: 0x000A455F File Offset: 0x000A275F
-		[NullableContext(1)]
+		// Token: 0x06004491 RID: 17553 RVA: 0x000ADB93 File Offset: 0x000ABD93
 		public static IOperationsAfterEntityGroupFailure Create(IOperationsAfterEntityGroupFailure? instance)
 		{
 			if (instance == null)
@@ -23,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001045 RID: 4165
-		// (get) Token: 0x06004063 RID: 16483 RVA: 0x000A4580 File Offset: 0x000A2780
+		// Token: 0x1700111C RID: 4380
+		// (get) Token: 0x06004492 RID: 17554 RVA: 0x000ADBB4 File Offset: 0x000ABDB4
 		public virtual bool? IsResetState
 		{
 			get
@@ -37,19 +36,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001046 RID: 4166
-		// (get) Token: 0x06004064 RID: 16484 RVA: 0x000A45B8 File Offset: 0x000A27B8
+		// Token: 0x1700111D RID: 4381
+		// (get) Token: 0x06004493 RID: 17555 RVA: 0x000ADBEC File Offset: 0x000ABDEC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -72,18 +71,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040023DC RID: 9180
+		// Token: 0x040025F9 RID: 9721
 		private IOperationsAfterEntityGroupFailure Instance;
 
-		// Token: 0x040023DD RID: 9181
+		// Token: 0x040025FA RID: 9722
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x040023DE RID: 9182
+		// Token: 0x040025FB RID: 9723
 		private bool _ActionsInited;
 	}
 }

@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070C3 RID: 28867
+	// Token: 0x02006327 RID: 25383
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CharacterBirthTagComponent : EntityComponent
 	{
-		// Token: 0x06046668 RID: 288360 RVA: 0x011A7A80 File Offset: 0x011A5C80
+		// Token: 0x0603D74A RID: 251722 RVA: 0x011C7140 File Offset: 0x011C5340
 		protected override bool OnEnd()
 		{
 			if (this.AddConditionListener)
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046669 RID: 288361 RVA: 0x011A7ADC File Offset: 0x011A5CDC
+		// Token: 0x0603D74B RID: 251723 RVA: 0x011C719C File Offset: 0x011C539C
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604666A RID: 288362 RVA: 0x011A7C88 File Offset: 0x011A5E88
+		// Token: 0x0603D74C RID: 251724 RVA: 0x011C7348 File Offset: 0x011C5548
 		[NullableContext(1)]
 		private unsafe void AddStateRepPerfTags(AiComponent aiConfig)
 		{
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604666B RID: 288363 RVA: 0x011A7E28 File Offset: 0x011A6028
+		// Token: 0x0603D74D RID: 251725 RVA: 0x011C74E8 File Offset: 0x011C56E8
 		private void AddConditionBirthTag(IInitStateStandby info)
 		{
 			if (this.TagComp == null || info == null)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.CheckTagCondition();
 		}
 
-		// Token: 0x0604666C RID: 288364 RVA: 0x011A7F84 File Offset: 0x011A6184
+		// Token: 0x0603D74E RID: 251726 RVA: 0x011C7644 File Offset: 0x011C5844
 		private void CheckTagCondition()
 		{
 			if (this.TagComp == null || this.BirthTagConditionList == null || this.BirthTagConditionList.Count == 0)
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604666D RID: 288365 RVA: 0x011A805C File Offset: 0x011A625C
+		// Token: 0x0603D74F RID: 251727 RVA: 0x011C771C File Offset: 0x011C591C
 		private void OnWeatherChange()
 		{
 			if (this.BirthTagConditionList == null || this.BirthTagConditionList.Count == 0)
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.CheckTagCondition();
 		}
 
-		// Token: 0x0604666E RID: 288366 RVA: 0x011A807A File Offset: 0x011A627A
+		// Token: 0x0603D750 RID: 251728 RVA: 0x011C773A File Offset: 0x011C593A
 		private void OnGameTimeHourChange()
 		{
 			if (this.BirthTagConditionList == null || this.BirthTagConditionList.Count == 0)
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.CheckTagCondition();
 		}
 
-		// Token: 0x0604666F RID: 288367 RVA: 0x011A8098 File Offset: 0x011A6298
+		// Token: 0x0603D751 RID: 251729 RVA: 0x011C7758 File Offset: 0x011C5958
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -211,59 +211,67 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				return false;
 			}
 			CharacterBirthTagComponent characterBirthTagComponent = (CharacterBirthTagComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (characterBirthTagComponent.ActorComp == null)
 			{
-				if (characterBirthTagComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (characterBirthTagComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("AiConfig"))
+			if (characterBirthTagComponent.TagComp == null)
 			{
-				if (characterBirthTagComponent.AiConfig == null)
-				{
-					this.AiConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AiComponent>(this.AiConfig), "AiConfig"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("AddConditionListener"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				this.AddConditionListener = characterBirthTagComponent.AddConditionListener;
+				return false;
 			}
-			return !base.CanResetComponentProperty("BirthTagConditionList") || characterBirthTagComponent.BirthTagConditionList == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<ValueTuple<FGameplayTag, IConditionGroup>>>(this.BirthTagConditionList), "BirthTagConditionList");
+			if (characterBirthTagComponent.AiConfig == null)
+			{
+				this.AiConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AiConfig), "AiConfig"))
+			{
+				return false;
+			}
+			this.AddConditionListener = characterBirthTagComponent.AddConditionListener;
+			return characterBirthTagComponent.BirthTagConditionList == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.BirthTagConditionList), "BirthTagConditionList");
 		}
 
-		// Token: 0x04024E41 RID: 151105
+		// Token: 0x1700748F RID: 29839
+		// (get) Token: 0x0603D752 RID: 251730 RVA: 0x011C7827 File Offset: 0x011C5A27
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007490 RID: 29840
+		// (get) Token: 0x0603D753 RID: 251731 RVA: 0x011C782A File Offset: 0x011C5A2A
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402097F RID: 133503
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x04024E42 RID: 151106
+		// Token: 0x04020980 RID: 133504
 		private BaseTagComponent TagComp;
 
-		// Token: 0x04024E43 RID: 151107
+		// Token: 0x04020981 RID: 133505
 		private AiComponent AiConfig;
 
-		// Token: 0x04024E44 RID: 151108
+		// Token: 0x04020982 RID: 133506
 		private bool AddConditionListener;
 
-		// Token: 0x04024E45 RID: 151109
+		// Token: 0x04020983 RID: 133507
 		[TupleElementNames(new string[]
 		{
 			"Tag",

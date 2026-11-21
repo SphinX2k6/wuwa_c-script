@@ -7,114 +7,109 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Teleport
 {
-	// Token: 0x02004B6F RID: 19311
+	// Token: 0x02003B19 RID: 15129
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TeleportContext : ITeleportContext, IStaticVariableResetter
 	{
-		// Token: 0x17007C03 RID: 31747
-		// (get) Token: 0x06032032 RID: 204850 RVA: 0x00B9C087 File Offset: 0x00B9A287
-		// (set) Token: 0x06032033 RID: 204851 RVA: 0x00B9C08F File Offset: 0x00B9A28F
+		// Token: 0x17004FAE RID: 20398
+		// (get) Token: 0x06026DC5 RID: 159173 RVA: 0x00AE03CA File Offset: 0x00ADE5CA
+		// (set) Token: 0x06026DC6 RID: 159174 RVA: 0x00AE03D2 File Offset: 0x00ADE5D2
 		[Nullable(1)]
 		public string ClientReason { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x17007C04 RID: 31748
-		// (get) Token: 0x06032034 RID: 204852 RVA: 0x00B9C098 File Offset: 0x00B9A298
-		// (set) Token: 0x06032035 RID: 204853 RVA: 0x00B9C0A0 File Offset: 0x00B9A2A0
+		// Token: 0x17004FAF RID: 20399
+		// (get) Token: 0x06026DC7 RID: 159175 RVA: 0x00AE03DB File Offset: 0x00ADE5DB
+		// (set) Token: 0x06026DC8 RID: 159176 RVA: 0x00AE03E3 File Offset: 0x00ADE5E3
 		public FVectorDouble TargetPosition { get; set; }
 
-		// Token: 0x17007C05 RID: 31749
-		// (get) Token: 0x06032036 RID: 204854 RVA: 0x00B9C0A9 File Offset: 0x00B9A2A9
-		// (set) Token: 0x06032037 RID: 204855 RVA: 0x00B9C0B1 File Offset: 0x00B9A2B1
+		// Token: 0x17004FB0 RID: 20400
+		// (get) Token: 0x06026DC9 RID: 159177 RVA: 0x00AE03EC File Offset: 0x00ADE5EC
+		// (set) Token: 0x06026DCA RID: 159178 RVA: 0x00AE03F4 File Offset: 0x00ADE5F4
 		public ETeleportMode? TeleportMode { get; set; }
 
-		// Token: 0x17007C06 RID: 31750
-		// (get) Token: 0x06032038 RID: 204856 RVA: 0x00B9C0BA File Offset: 0x00B9A2BA
-		// (set) Token: 0x06032039 RID: 204857 RVA: 0x00B9C0C2 File Offset: 0x00B9A2C2
+		// Token: 0x17004FB1 RID: 20401
+		// (get) Token: 0x06026DCB RID: 159179 RVA: 0x00AE03FD File Offset: 0x00ADE5FD
+		// (set) Token: 0x06026DCC RID: 159180 RVA: 0x00AE0405 File Offset: 0x00ADE605
 		public IRotator TargetRotation { get; set; }
 
-		// Token: 0x17007C07 RID: 31751
-		// (get) Token: 0x0603203A RID: 204858 RVA: 0x00B9C0CB File Offset: 0x00B9A2CB
-		// (set) Token: 0x0603203B RID: 204859 RVA: 0x00B9C0D3 File Offset: 0x00B9A2D3
+		// Token: 0x17004FB2 RID: 20402
+		// (get) Token: 0x06026DCD RID: 159181 RVA: 0x00AE040E File Offset: 0x00ADE60E
+		// (set) Token: 0x06026DCE RID: 159182 RVA: 0x00AE0416 File Offset: 0x00ADE616
 		public IVector TargetGravityDirect { get; set; }
 
-		// Token: 0x17007C08 RID: 31752
-		// (get) Token: 0x0603203C RID: 204860 RVA: 0x00B9C0DC File Offset: 0x00B9A2DC
-		// (set) Token: 0x0603203D RID: 204861 RVA: 0x00B9C0E4 File Offset: 0x00B9A2E4
+		// Token: 0x17004FB3 RID: 20403
+		// (get) Token: 0x06026DCF RID: 159183 RVA: 0x00AE041F File Offset: 0x00ADE61F
+		// (set) Token: 0x06026DD0 RID: 159184 RVA: 0x00AE0427 File Offset: 0x00ADE627
 		public IVector TargetSpeed { get; set; }
 
-		// Token: 0x17007C09 RID: 31753
-		// (get) Token: 0x0603203E RID: 204862 RVA: 0x00B9C0ED File Offset: 0x00B9A2ED
-		// (set) Token: 0x0603203F RID: 204863 RVA: 0x00B9C0F5 File Offset: 0x00B9A2F5
+		// Token: 0x17004FB4 RID: 20404
+		// (get) Token: 0x06026DD1 RID: 159185 RVA: 0x00AE0430 File Offset: 0x00ADE630
+		// (set) Token: 0x06026DD2 RID: 159186 RVA: 0x00AE0438 File Offset: 0x00ADE638
 		public TeleportReason? ServerReason { get; set; }
 
-		// Token: 0x17007C0A RID: 31754
-		// (get) Token: 0x06032040 RID: 204864 RVA: 0x00B9C0FE File Offset: 0x00B9A2FE
-		// (set) Token: 0x06032041 RID: 204865 RVA: 0x00B9C106 File Offset: 0x00B9A306
+		// Token: 0x17004FB5 RID: 20405
+		// (get) Token: 0x06026DD3 RID: 159187 RVA: 0x00AE0441 File Offset: 0x00ADE641
+		// (set) Token: 0x06026DD4 RID: 159188 RVA: 0x00AE0449 File Offset: 0x00ADE649
 		public TransitionOptionPb Option { get; set; }
 
-		// Token: 0x17007C0B RID: 31755
-		// (get) Token: 0x06032042 RID: 204866 RVA: 0x00B9C10F File Offset: 0x00B9A30F
-		// (set) Token: 0x06032043 RID: 204867 RVA: 0x00B9C117 File Offset: 0x00B9A317
+		// Token: 0x17004FB6 RID: 20406
+		// (get) Token: 0x06026DD5 RID: 159189 RVA: 0x00AE0452 File Offset: 0x00ADE652
+		// (set) Token: 0x06026DD6 RID: 159190 RVA: 0x00AE045A File Offset: 0x00ADE65A
 		public int? TransitionConfigId { get; set; }
 
-		// Token: 0x17007C0C RID: 31756
-		// (get) Token: 0x06032044 RID: 204868 RVA: 0x00B9C120 File Offset: 0x00B9A320
-		// (set) Token: 0x06032045 RID: 204869 RVA: 0x00B9C128 File Offset: 0x00B9A328
+		// Token: 0x17004FB7 RID: 20407
+		// (get) Token: 0x06026DD7 RID: 159191 RVA: 0x00AE0463 File Offset: 0x00ADE663
+		// (set) Token: 0x06026DD8 RID: 159192 RVA: 0x00AE046B File Offset: 0x00ADE66B
 		public ITeleportTransitionType TransitionConfig { get; set; }
 
-		// Token: 0x17007C0D RID: 31757
-		// (get) Token: 0x06032046 RID: 204870 RVA: 0x00B9C131 File Offset: 0x00B9A331
-		// (set) Token: 0x06032047 RID: 204871 RVA: 0x00B9C139 File Offset: 0x00B9A339
+		// Token: 0x17004FB8 RID: 20408
+		// (get) Token: 0x06026DD9 RID: 159193 RVA: 0x00AE0474 File Offset: 0x00ADE674
+		// (set) Token: 0x06026DDA RID: 159194 RVA: 0x00AE047C File Offset: 0x00ADE67C
 		public bool? NeedRestoreCamera { get; set; } = new bool?(true);
 
-		// Token: 0x17007C0E RID: 31758
-		// (get) Token: 0x06032048 RID: 204872 RVA: 0x00B9C142 File Offset: 0x00B9A342
-		// (set) Token: 0x06032049 RID: 204873 RVA: 0x00B9C14A File Offset: 0x00B9A34A
+		// Token: 0x17004FB9 RID: 20409
+		// (get) Token: 0x06026DDB RID: 159195 RVA: 0x00AE0485 File Offset: 0x00ADE685
+		// (set) Token: 0x06026DDC RID: 159196 RVA: 0x00AE048D File Offset: 0x00ADE68D
 		public GameCtxPb GameCtx { get; set; }
 
-		// Token: 0x17007C0F RID: 31759
-		// (get) Token: 0x0603204A RID: 204874 RVA: 0x00B9C153 File Offset: 0x00B9A353
-		// (set) Token: 0x0603204B RID: 204875 RVA: 0x00B9C15B File Offset: 0x00B9A35B
+		// Token: 0x17004FBA RID: 20410
+		// (get) Token: 0x06026DDD RID: 159197 RVA: 0x00AE0496 File Offset: 0x00ADE696
+		// (set) Token: 0x06026DDE RID: 159198 RVA: 0x00AE049E File Offset: 0x00ADE69E
 		public Entity ElevatorEntity { get; set; }
 
-		// Token: 0x17007C10 RID: 31760
-		// (get) Token: 0x0603204C RID: 204876 RVA: 0x00B9C164 File Offset: 0x00B9A364
-		// (set) Token: 0x0603204D RID: 204877 RVA: 0x00B9C16C File Offset: 0x00B9A36C
+		// Token: 0x17004FBB RID: 20411
+		// (get) Token: 0x06026DDF RID: 159199 RVA: 0x00AE04A7 File Offset: 0x00ADE6A7
+		// (set) Token: 0x06026DE0 RID: 159200 RVA: 0x00AE04AF File Offset: 0x00ADE6AF
 		public bool? DisableAutoFade { get; set; } = new bool?(false);
 
-		// Token: 0x17007C11 RID: 31761
-		// (get) Token: 0x0603204E RID: 204878 RVA: 0x00B9C175 File Offset: 0x00B9A375
-		// (set) Token: 0x0603204F RID: 204879 RVA: 0x00B9C17D File Offset: 0x00B9A37D
+		// Token: 0x17004FBC RID: 20412
+		// (get) Token: 0x06026DE1 RID: 159201 RVA: 0x00AE04B8 File Offset: 0x00ADE6B8
+		// (set) Token: 0x06026DE2 RID: 159202 RVA: 0x00AE04C0 File Offset: 0x00ADE6C0
 		public int? TeleportCfgId { get; set; }
 
-		// Token: 0x17007C12 RID: 31762
-		// (get) Token: 0x06032050 RID: 204880 RVA: 0x00B9C186 File Offset: 0x00B9A386
-		// (set) Token: 0x06032051 RID: 204881 RVA: 0x00B9C18E File Offset: 0x00B9A38E
+		// Token: 0x17004FBD RID: 20413
+		// (get) Token: 0x06026DE3 RID: 159203 RVA: 0x00AE04C9 File Offset: 0x00ADE6C9
+		// (set) Token: 0x06026DE4 RID: 159204 RVA: 0x00AE04D1 File Offset: 0x00ADE6D1
 		public bool? NeedRequestToServer { get; set; } = new bool?(true);
 
-		// Token: 0x17007C13 RID: 31763
-		// (get) Token: 0x06032052 RID: 204882 RVA: 0x00B9C197 File Offset: 0x00B9A397
-		// (set) Token: 0x06032053 RID: 204883 RVA: 0x00B9C19F File Offset: 0x00B9A39F
+		// Token: 0x17004FBE RID: 20414
+		// (get) Token: 0x06026DE5 RID: 159205 RVA: 0x00AE04DA File Offset: 0x00ADE6DA
+		// (set) Token: 0x06026DE6 RID: 159206 RVA: 0x00AE04E2 File Offset: 0x00ADE6E2
 		public bool? NeedWaitStreaming { get; set; } = new bool?(true);
 
-		// Token: 0x17007C14 RID: 31764
-		// (get) Token: 0x06032054 RID: 204884 RVA: 0x00B9C1A8 File Offset: 0x00B9A3A8
-		// (set) Token: 0x06032055 RID: 204885 RVA: 0x00B9C1B0 File Offset: 0x00B9A3B0
+		// Token: 0x17004FBF RID: 20415
+		// (get) Token: 0x06026DE7 RID: 159207 RVA: 0x00AE04EB File Offset: 0x00ADE6EB
+		// (set) Token: 0x06026DE8 RID: 159208 RVA: 0x00AE04F3 File Offset: 0x00ADE6F3
 		public bool? KeepCameraRelativeRotation { get; set; } = new bool?(false);
 
-		// Token: 0x17007C15 RID: 31765
-		// (get) Token: 0x06032056 RID: 204886 RVA: 0x00B9C1B9 File Offset: 0x00B9A3B9
-		// (set) Token: 0x06032057 RID: 204887 RVA: 0x00B9C1C1 File Offset: 0x00B9A3C1
+		// Token: 0x17004FC0 RID: 20416
+		// (get) Token: 0x06026DE9 RID: 159209 RVA: 0x00AE04FC File Offset: 0x00ADE6FC
+		// (set) Token: 0x06026DEA RID: 159210 RVA: 0x00AE0504 File Offset: 0x00ADE704
 		public bool? KeepSpeedRelativeRotation { get; set; } = new bool?(false);
 
-		// Token: 0x17007C16 RID: 31766
-		// (get) Token: 0x06032058 RID: 204888 RVA: 0x00B9C1CA File Offset: 0x00B9A3CA
-		// (set) Token: 0x06032059 RID: 204889 RVA: 0x00B9C1D2 File Offset: 0x00B9A3D2
-		public bool? UseCameraCutForMotionBlur { get; set; } = new bool?(false);
-
-		// Token: 0x17007C17 RID: 31767
-		// (get) Token: 0x0603205A RID: 204890 RVA: 0x00B9C1DB File Offset: 0x00B9A3DB
+		// Token: 0x17004FC1 RID: 20417
+		// (get) Token: 0x06026DEB RID: 159211 RVA: 0x00AE050D File Offset: 0x00ADE70D
 		public GameModePromise StreamingCompleted
 		{
 			get
@@ -123,8 +118,8 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x17007C18 RID: 31768
-		// (get) Token: 0x0603205B RID: 204891 RVA: 0x00B9C1E3 File Offset: 0x00B9A3E3
+		// Token: 0x17004FC2 RID: 20418
+		// (get) Token: 0x06026DEC RID: 159212 RVA: 0x00AE0515 File Offset: 0x00ADE715
 		public GameModePromise VoxelStreamingCompleted
 		{
 			get
@@ -133,8 +128,8 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x17007C19 RID: 31769
-		// (get) Token: 0x0603205C RID: 204892 RVA: 0x00B9C1EB File Offset: 0x00B9A3EB
+		// Token: 0x17004FC3 RID: 20419
+		// (get) Token: 0x06026DED RID: 159213 RVA: 0x00AE051D File Offset: 0x00ADE71D
 		public GameModePromise TeleportFinishRequest
 		{
 			get
@@ -143,8 +138,8 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x17007C1A RID: 31770
-		// (get) Token: 0x0603205D RID: 204893 RVA: 0x00B9C1F3 File Offset: 0x00B9A3F3
+		// Token: 0x17004FC4 RID: 20420
+		// (get) Token: 0x06026DEE RID: 159214 RVA: 0x00AE0525 File Offset: 0x00ADE725
 		public GameModePromise CgTeleportCompleted
 		{
 			get
@@ -153,8 +148,8 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x17007C1B RID: 31771
-		// (get) Token: 0x0603205E RID: 204894 RVA: 0x00B9C1FB File Offset: 0x00B9A3FB
+		// Token: 0x17004FC5 RID: 20421
+		// (get) Token: 0x06026DEF RID: 159215 RVA: 0x00AE052D File Offset: 0x00ADE72D
 		public GameModePromise TeleportWaitRequest
 		{
 			get
@@ -163,7 +158,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x0603205F RID: 204895 RVA: 0x00B9C204 File Offset: 0x00B9A404
+		// Token: 0x06026DF0 RID: 159216 RVA: 0x00AE0538 File Offset: 0x00ADE738
 		[NullableContext(1)]
 		public TeleportContext(ITeleportContext contextParams)
 		{
@@ -184,11 +179,11 @@ namespace CSharpScript.Game.Module.Teleport
 				if (transitionConfigId.GetValueOrDefault() > num & transitionConfigId != null)
 				{
 					transitionConfig = TeleportModel.Instance.ParseTransitionConfig(this.TransitionConfigId.Value);
-					goto IL_129;
+					goto IL_11D;
 				}
 			}
 			transitionConfig = null;
-			IL_129:
+			IL_11D:
 			this.TransitionConfig = transitionConfig;
 			this.TeleportCfgId = contextParams.TeleportCfgId;
 			this.GameCtx = contextParams.GameCtx;
@@ -235,10 +230,6 @@ namespace CSharpScript.Game.Module.Teleport
 			{
 				this.KeepSpeedRelativeRotation = contextParams.KeepSpeedRelativeRotation;
 			}
-			if (contextParams.UseCameraCutForMotionBlur != null)
-			{
-				this.UseCameraCutForMotionBlur = contextParams.UseCameraCutForMotionBlur;
-			}
 			if (contextParams.ElevatorEntity != null)
 			{
 				this.ElevatorEntity = contextParams.ElevatorEntity;
@@ -261,7 +252,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06032060 RID: 204896 RVA: 0x00B9C57A File Offset: 0x00B9A77A
+		// Token: 0x06026DF1 RID: 159217 RVA: 0x00AE0886 File Offset: 0x00ADEA86
 		[NullableContext(1)]
 		public static TeleportContext CreateContext(ITeleportContext contextParams)
 		{
@@ -271,7 +262,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return teleportContext;
 		}
 
-		// Token: 0x06032061 RID: 204897 RVA: 0x00B9C59C File Offset: 0x00B9A79C
+		// Token: 0x06026DF2 RID: 159218 RVA: 0x00AE08A8 File Offset: 0x00ADEAA8
 		public void InitSeamlessContext()
 		{
 			this.ScreenEffectStarted = new GameModePromise();
@@ -287,139 +278,139 @@ namespace CSharpScript.Game.Module.Teleport
 			this.KiteAppeared = new GameModePromise();
 		}
 
-		// Token: 0x06032062 RID: 204898 RVA: 0x00B9C622 File Offset: 0x00B9A822
+		// Token: 0x06026DF3 RID: 159219 RVA: 0x00AE092E File Offset: 0x00ADEB2E
 		static TeleportContext()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TeleportContext.CreateStaticDefaultValue), new Action(TeleportContext.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06032063 RID: 204899 RVA: 0x00B9C641 File Offset: 0x00B9A841
+		// Token: 0x06026DF4 RID: 159220 RVA: 0x00AE094D File Offset: 0x00ADEB4D
 		public static void CreateStaticDefaultValue()
 		{
 			TeleportContext.TeleportContextIdHandler = 0;
 		}
 
-		// Token: 0x06032064 RID: 204900 RVA: 0x00B9C649 File Offset: 0x00B9A849
+		// Token: 0x06026DF5 RID: 159221 RVA: 0x00AE0955 File Offset: 0x00ADEB55
 		public static void ResetStaticDefaultValue()
 		{
 			TeleportContext.TeleportContextIdHandler = 0;
 		}
 
-		// Token: 0x0401AA79 RID: 109177
+		// Token: 0x040153CD RID: 86989
 		[Nullable(1)]
 		public TeleportCore TeleportCore;
 
-		// Token: 0x0401AA7A RID: 109178
+		// Token: 0x040153CE RID: 86990
 		[Nullable(1)]
 		public TeleportTransitionHelper TeleportTransitionHelper;
 
-		// Token: 0x0401AA7B RID: 109179
+		// Token: 0x040153CF RID: 86991
 		[Nullable(1)]
 		public TeleportStreamingHelper TeleportStreamingHelper;
 
-		// Token: 0x0401AA7C RID: 109180
+		// Token: 0x040153D0 RID: 86992
 		public TeleportSeamlessHelper TeleportSeamlessHelper;
 
-		// Token: 0x0401AA7D RID: 109181
+		// Token: 0x040153D1 RID: 86993
 		private static int TeleportContextIdHandler;
 
-		// Token: 0x0401AA7E RID: 109182
+		// Token: 0x040153D2 RID: 86994
 		public int TeleportContextId;
 
-		// Token: 0x0401AA7F RID: 109183
+		// Token: 0x040153D3 RID: 86995
 		public Entity TeleportEntity;
 
-		// Token: 0x0401AA80 RID: 109184
+		// Token: 0x040153D4 RID: 86996
 		public TimerHandle CheckStreamingCompletedTimerId;
 
-		// Token: 0x0401AA81 RID: 109185
+		// Token: 0x040153D5 RID: 86997
 		private readonly GameModePromise StreamingCompletedInternal;
 
-		// Token: 0x0401AA82 RID: 109186
+		// Token: 0x040153D6 RID: 86998
 		private readonly GameModePromise VoxelStreamingCompletedInternal;
 
-		// Token: 0x0401AA83 RID: 109187
+		// Token: 0x040153D7 RID: 86999
 		private readonly GameModePromise TeleportFinishRequestInternal;
 
-		// Token: 0x0401AA84 RID: 109188
+		// Token: 0x040153D8 RID: 87000
 		private readonly GameModePromise CgTeleportCompletedInternal;
 
-		// Token: 0x0401AA85 RID: 109189
+		// Token: 0x040153D9 RID: 87001
 		private readonly GameModePromise TeleportWaitRequestInternal;
 
-		// Token: 0x0401AA86 RID: 109190
+		// Token: 0x040153DA RID: 87002
 		public bool? Seamless = new bool?(false);
 
-		// Token: 0x0401AA87 RID: 109191
+		// Token: 0x040153DB RID: 87003
 		public bool ForceInGameLoadMode;
 
-		// Token: 0x0401AA88 RID: 109192
+		// Token: 0x040153DC RID: 87004
 		public bool IsInSeamlessTeleport;
 
-		// Token: 0x0401AA89 RID: 109193
+		// Token: 0x040153DD RID: 87005
 		public SeamlessTravelContext SeamlessConfig;
 
-		// Token: 0x0401AA8A RID: 109194
+		// Token: 0x040153DE RID: 87006
 		public bool UseTreadmill;
 
-		// Token: 0x0401AA8B RID: 109195
+		// Token: 0x040153DF RID: 87007
 		public SeamlessTravelTreadmill Treadmill;
 
-		// Token: 0x0401AA8C RID: 109196
+		// Token: 0x040153E0 RID: 87008
 		public bool UseKeepKite;
 
-		// Token: 0x0401AA8D RID: 109197
+		// Token: 0x040153E1 RID: 87009
 		public SeamlessTravelKeepKite KeepKite;
 
-		// Token: 0x0401AA8E RID: 109198
+		// Token: 0x040153E2 RID: 87010
 		public bool UseKeepMovementMode;
 
-		// Token: 0x0401AA8F RID: 109199
+		// Token: 0x040153E3 RID: 87011
 		public SeamlessTravelKeepMovementMode KeepMovementMode;
 
-		// Token: 0x0401AA90 RID: 109200
+		// Token: 0x040153E4 RID: 87012
 		public SeamlessTravelPostProcess PostProcess;
 
-		// Token: 0x0401AA91 RID: 109201
+		// Token: 0x040153E5 RID: 87013
 		public SeamlessTravelScreenEffect ScreenEffect;
 
-		// Token: 0x0401AA92 RID: 109202
+		// Token: 0x040153E6 RID: 87014
 		public SeamlessTravelSceneEffect SceneEffect;
 
-		// Token: 0x0401AA93 RID: 109203
+		// Token: 0x040153E7 RID: 87015
 		public TimerHandle SeamlessEndHandle;
 
-		// Token: 0x0401AA94 RID: 109204
+		// Token: 0x040153E8 RID: 87016
 		public GameModePromise ScreenEffectStarted;
 
-		// Token: 0x0401AA95 RID: 109205
+		// Token: 0x040153E9 RID: 87017
 		public GameModePromise ScreenEffectEnded;
 
-		// Token: 0x0401AA96 RID: 109206
+		// Token: 0x040153EA RID: 87018
 		public GameModePromise SceneEffectStarted;
 
-		// Token: 0x0401AA97 RID: 109207
+		// Token: 0x040153EB RID: 87019
 		public GameModePromise SceneEffectEnded;
 
-		// Token: 0x0401AA98 RID: 109208
+		// Token: 0x040153EC RID: 87020
 		public GameModePromise LeastTimeFinished;
 
-		// Token: 0x0401AA99 RID: 109209
+		// Token: 0x040153ED RID: 87021
 		public GameModePromise TreadmillLoaded;
 
-		// Token: 0x0401AA9A RID: 109210
+		// Token: 0x040153EE RID: 87022
 		public GameModePromise TreadmillAppeared;
 
-		// Token: 0x0401AA9B RID: 109211
+		// Token: 0x040153EF RID: 87023
 		public GameModePromise TreadmillDisappeared;
 
-		// Token: 0x0401AA9C RID: 109212
+		// Token: 0x040153F0 RID: 87024
 		public GameModePromise PostProcessBlendedIn;
 
-		// Token: 0x0401AA9D RID: 109213
+		// Token: 0x040153F1 RID: 87025
 		public GameModePromise PostProcessBlendedOut;
 
-		// Token: 0x0401AA9E RID: 109214
+		// Token: 0x040153F2 RID: 87026
 		public GameModePromise KiteAppeared;
 	}
 }

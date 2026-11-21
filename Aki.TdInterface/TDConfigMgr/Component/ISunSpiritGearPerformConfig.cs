@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200073B RID: 1851
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007DC RID: 2012
 	public class ISunSpiritGearPerformConfig
 	{
-		// Token: 0x060027F1 RID: 10225 RVA: 0x0006A068 File Offset: 0x00068268
+		// Token: 0x06002B15 RID: 11029 RVA: 0x00071210 File Offset: 0x0006F410
 		private ISunSpiritGearPerformConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060027F2 RID: 10226 RVA: 0x0006A0A0 File Offset: 0x000682A0
+		// Token: 0x06002B16 RID: 11030 RVA: 0x00071248 File Offset: 0x0006F448
 		public static ISunSpiritGearPerformConfig Create([Nullable(2)] ISunSpiritGearPerformConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027F3 RID: 10227 RVA: 0x0006A0B3 File Offset: 0x000682B3
+		// Token: 0x06002B17 RID: 11031 RVA: 0x0007125B File Offset: 0x0006F45B
 		public static ISunSpiritGearPerformConfig CreateFromSetValue([Nullable(2)] ISunSpiritGearPerformConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027F4 RID: 10228 RVA: 0x0006A0C6 File Offset: 0x000682C6
+		// Token: 0x06002B18 RID: 11032 RVA: 0x0007126E File Offset: 0x0006F46E
 		public ISunSpiritGearPerformConfig_SetValue ToSetValue()
 		{
 			return new ISunSpiritGearPerformConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A80 RID: 2688
-		// (get) Token: 0x060027F5 RID: 10229 RVA: 0x0006A0D9 File Offset: 0x000682D9
-		// (set) Token: 0x060027F6 RID: 10230 RVA: 0x0006A104 File Offset: 0x00068304
+		// Token: 0x17000B40 RID: 2880
+		// (get) Token: 0x06002B19 RID: 11033 RVA: 0x00071281 File Offset: 0x0006F481
+		// (set) Token: 0x06002B1A RID: 11034 RVA: 0x000712AC File Offset: 0x0006F4AC
 		public virtual ESunSpiritGearPerformType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001AE8 RID: 6888
+		// Token: 0x04001CED RID: 7405
 		[Nullable(2)]
 		protected ISunSpiritGearPerformConfig FbInstance;
 
-		// Token: 0x04001AE9 RID: 6889
+		// Token: 0x04001CEE RID: 7406
 		[Nullable(2)]
 		protected ISunSpiritGearPerformConfig_SetValue PocoInterface;
 	}

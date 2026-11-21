@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000BB9 RID: 3001
+	// Token: 0x02000BA9 RID: 2985
 	[NetMessage(EMessageId.ParkourChallengeEndNotify)]
 	public sealed class ParkourChallengeEndNotify : IMessage<ParkourChallengeEndNotify>, IMessage, IEquatable<ParkourChallengeEndNotify>, IDeepCloneable<ParkourChallengeEndNotify>, IBufferMessage
 	{
-		// Token: 0x06010446 RID: 66630 RVA: 0x0025FCBE File Offset: 0x0025DEBE
+		// Token: 0x06010342 RID: 66370 RVA: 0x0025DE0A File Offset: 0x0025C00A
 		[NullableContext(1)]
 		public static ParkourChallengeEndNotify Create()
 		{
 			return new ParkourChallengeEndNotify();
 		}
 
-		// Token: 0x1700355B RID: 13659
-		// (get) Token: 0x06010447 RID: 66631 RVA: 0x0025FCC5 File Offset: 0x0025DEC5
+		// Token: 0x17003522 RID: 13602
+		// (get) Token: 0x06010343 RID: 66371 RVA: 0x0025DE11 File Offset: 0x0025C011
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700355C RID: 13660
-		// (get) Token: 0x06010448 RID: 66632 RVA: 0x0025FCC8 File Offset: 0x0025DEC8
+		// Token: 0x17003523 RID: 13603
+		// (get) Token: 0x06010344 RID: 66372 RVA: 0x0025DE14 File Offset: 0x0025C014
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010449 RID: 66633 RVA: 0x0025FCCF File Offset: 0x0025DECF
+		// Token: 0x06010345 RID: 66373 RVA: 0x0025DE1B File Offset: 0x0025C01B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ParkourChallengeEndNotify()
 		{
 		}
 
-		// Token: 0x0601044A RID: 66634 RVA: 0x0025FCD8 File Offset: 0x0025DED8
+		// Token: 0x06010346 RID: 66374 RVA: 0x0025DE24 File Offset: 0x0025C024
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ParkourChallengeEndNotify(ParkourChallengeEndNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601044B RID: 66635 RVA: 0x0025FD2C File Offset: 0x0025DF2C
+		// Token: 0x06010347 RID: 66375 RVA: 0x0025DE78 File Offset: 0x0025C078
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ParkourChallengeEndNotify Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new ParkourChallengeEndNotify(this);
 		}
 
-		// Token: 0x1700355D RID: 13661
-		// (get) Token: 0x0601044C RID: 66636 RVA: 0x0025FD34 File Offset: 0x0025DF34
-		// (set) Token: 0x0601044D RID: 66637 RVA: 0x0025FD3C File Offset: 0x0025DF3C
+		// Token: 0x17003524 RID: 13604
+		// (get) Token: 0x06010348 RID: 66376 RVA: 0x0025DE80 File Offset: 0x0025C080
+		// (set) Token: 0x06010349 RID: 66377 RVA: 0x0025DE88 File Offset: 0x0025C088
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ChallengeId
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700355E RID: 13662
-		// (get) Token: 0x0601044E RID: 66638 RVA: 0x0025FD45 File Offset: 0x0025DF45
-		// (set) Token: 0x0601044F RID: 66639 RVA: 0x0025FD4D File Offset: 0x0025DF4D
+		// Token: 0x17003525 RID: 13605
+		// (get) Token: 0x0601034A RID: 66378 RVA: 0x0025DE91 File Offset: 0x0025C091
+		// (set) Token: 0x0601034B RID: 66379 RVA: 0x0025DE99 File Offset: 0x0025C099
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Score
@@ -103,9 +103,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700355F RID: 13663
-		// (get) Token: 0x06010450 RID: 66640 RVA: 0x0025FD56 File Offset: 0x0025DF56
-		// (set) Token: 0x06010451 RID: 66641 RVA: 0x0025FD5E File Offset: 0x0025DF5E
+		// Token: 0x17003526 RID: 13606
+		// (get) Token: 0x0601034C RID: 66380 RVA: 0x0025DEA2 File Offset: 0x0025C0A2
+		// (set) Token: 0x0601034D RID: 66381 RVA: 0x0025DEAA File Offset: 0x0025C0AA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Duration
@@ -120,9 +120,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003560 RID: 13664
-		// (get) Token: 0x06010452 RID: 66642 RVA: 0x0025FD67 File Offset: 0x0025DF67
-		// (set) Token: 0x06010453 RID: 66643 RVA: 0x0025FD6F File Offset: 0x0025DF6F
+		// Token: 0x17003527 RID: 13607
+		// (get) Token: 0x0601034E RID: 66382 RVA: 0x0025DEB3 File Offset: 0x0025C0B3
+		// (set) Token: 0x0601034F RID: 66383 RVA: 0x0025DEBB File Offset: 0x0025C0BB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsComplete
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010454 RID: 66644 RVA: 0x0025FD78 File Offset: 0x0025DF78
+		// Token: 0x06010350 RID: 66384 RVA: 0x0025DEC4 File Offset: 0x0025C0C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ParkourChallengeEndNotify);
 		}
 
-		// Token: 0x06010455 RID: 66645 RVA: 0x0025FD88 File Offset: 0x0025DF88
+		// Token: 0x06010351 RID: 66385 RVA: 0x0025DED4 File Offset: 0x0025C0D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ParkourChallengeEndNotify other)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ChallengeId == other.ChallengeId && this.Score == other.Score && this.Duration == other.Duration && this.IsComplete == other.IsComplete && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06010456 RID: 66646 RVA: 0x0025FDF4 File Offset: 0x0025DFF4
+		// Token: 0x06010352 RID: 66386 RVA: 0x0025DF40 File Offset: 0x0025C140
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010457 RID: 66647 RVA: 0x0025FE7E File Offset: 0x0025E07E
+		// Token: 0x06010353 RID: 66387 RVA: 0x0025DFCA File Offset: 0x0025C1CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06010458 RID: 66648 RVA: 0x0025FE8B File Offset: 0x0025E08B
+		// Token: 0x06010354 RID: 66388 RVA: 0x0025DFD7 File Offset: 0x0025C1D7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -198,30 +198,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06010459 RID: 66649 RVA: 0x0025FE94 File Offset: 0x0025E094
+		// Token: 0x06010355 RID: 66389 RVA: 0x0025DFE0 File Offset: 0x0025C1E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			if (this.Duration != 0)
+			{
+				output.WriteRawTag(16);
+				output.WriteInt32(this.Duration);
+			}
 			if (this.IsComplete)
 			{
 				output.WriteRawTag(32);
 				output.WriteBool(this.IsComplete);
 			}
-			if (this.ChallengeId != 0)
-			{
-				output.WriteRawTag(40);
-				output.WriteInt32(this.ChallengeId);
-			}
 			if (this.Score != 0)
 			{
-				output.WriteRawTag(64);
+				output.WriteRawTag(40);
 				output.WriteInt32(this.Score);
 			}
-			if (this.Duration != 0)
+			if (this.ChallengeId != 0)
 			{
-				output.WriteRawTag(72);
-				output.WriteInt32(this.Duration);
+				output.WriteRawTag(88);
+				output.WriteInt32(this.ChallengeId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601045A RID: 66650 RVA: 0x0025FF28 File Offset: 0x0025E128
+		// Token: 0x06010356 RID: 66390 RVA: 0x0025E074 File Offset: 0x0025C274
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601045B RID: 66651 RVA: 0x0025FFA4 File Offset: 0x0025E1A4
+		// Token: 0x06010357 RID: 66391 RVA: 0x0025E0F0 File Offset: 0x0025C2F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ParkourChallengeEndNotify other)
@@ -286,7 +286,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601045C RID: 66652 RVA: 0x0026001C File Offset: 0x0025E21C
+		// Token: 0x06010358 RID: 66392 RVA: 0x0025E168 File Offset: 0x0025C368
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601045D RID: 66653 RVA: 0x00260028 File Offset: 0x0025E228
+		// Token: 0x06010359 RID: 66393 RVA: 0x0025E174 File Offset: 0x0025C374
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -306,29 +306,29 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 40U)
+				if (num <= 32U)
 				{
+					if (num == 16U)
+					{
+						this.Duration = input.ReadInt32();
+						continue;
+					}
 					if (num == 32U)
 					{
 						this.IsComplete = input.ReadBool();
 						continue;
 					}
-					if (num == 40U)
-					{
-						this.ChallengeId = input.ReadInt32();
-						continue;
-					}
 				}
 				else
 				{
-					if (num == 64U)
+					if (num == 40U)
 					{
 						this.Score = input.ReadInt32();
 						continue;
 					}
-					if (num == 72U)
+					if (num == 88U)
 					{
-						this.Duration = input.ReadInt32();
+						this.ChallengeId = input.ReadInt32();
 						continue;
 					}
 				}
@@ -336,31 +336,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400677F RID: 26495
+		// Token: 0x0400678F RID: 26511
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006780 RID: 26496
-		public const int ChallengeIdFieldNumber = 5;
+		// Token: 0x04006790 RID: 26512
+		public const int ChallengeIdFieldNumber = 11;
 
-		// Token: 0x04006781 RID: 26497
+		// Token: 0x04006791 RID: 26513
 		private int challengeId_;
 
-		// Token: 0x04006782 RID: 26498
-		public const int ScoreFieldNumber = 8;
+		// Token: 0x04006792 RID: 26514
+		public const int ScoreFieldNumber = 5;
 
-		// Token: 0x04006783 RID: 26499
+		// Token: 0x04006793 RID: 26515
 		private int score_;
 
-		// Token: 0x04006784 RID: 26500
-		public const int DurationFieldNumber = 9;
+		// Token: 0x04006794 RID: 26516
+		public const int DurationFieldNumber = 2;
 
-		// Token: 0x04006785 RID: 26501
+		// Token: 0x04006795 RID: 26517
 		private int duration_;
 
-		// Token: 0x04006786 RID: 26502
+		// Token: 0x04006796 RID: 26518
 		public const int IsCompleteFieldNumber = 4;
 
-		// Token: 0x04006787 RID: 26503
+		// Token: 0x04006797 RID: 26519
 		private bool isComplete_;
 	}
 }

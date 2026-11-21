@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006278 RID: 25208
+	// Token: 0x020068E9 RID: 26857
 	public struct ICameraDepthOfField : IFlatbufferObject
 	{
-		// Token: 0x1700BBDA RID: 48090
-		// (get) Token: 0x0602B823 RID: 178211 RVA: 0x005FD9CF File Offset: 0x005FBBCF
+		// Token: 0x1700C562 RID: 50530
+		// (get) Token: 0x0602DF84 RID: 188292 RVA: 0x006487D7 File Offset: 0x006469D7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B824 RID: 178212 RVA: 0x005FD9DC File Offset: 0x005FBBDC
+		// Token: 0x0602DF85 RID: 188293 RVA: 0x006487E4 File Offset: 0x006469E4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B825 RID: 178213 RVA: 0x005FD9E4 File Offset: 0x005FBBE4
+		// Token: 0x0602DF86 RID: 188294 RVA: 0x006487EC File Offset: 0x006469EC
 		public static ICameraDepthOfField GetRootAsICameraDepthOfField(ByteBuffer _bb)
 		{
 			return ICameraDepthOfField.GetRootAsICameraDepthOfField(_bb, default(ICameraDepthOfField));
 		}
 
-		// Token: 0x0602B826 RID: 178214 RVA: 0x005FDA00 File Offset: 0x005FBC00
+		// Token: 0x0602DF87 RID: 188295 RVA: 0x00648808 File Offset: 0x00646A08
 		public static ICameraDepthOfField GetRootAsICameraDepthOfField(ByteBuffer _bb, ICameraDepthOfField obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B827 RID: 178215 RVA: 0x005FDA1D File Offset: 0x005FBC1D
+		// Token: 0x0602DF88 RID: 188296 RVA: 0x00648825 File Offset: 0x00646A25
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B828 RID: 178216 RVA: 0x005FDA2C File Offset: 0x005FBC2C
+		// Token: 0x0602DF89 RID: 188297 RVA: 0x00648834 File Offset: 0x00646A34
 		public ICameraDepthOfField __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BBDB RID: 48091
-		// (get) Token: 0x0602B829 RID: 178217 RVA: 0x005FDA3C File Offset: 0x005FBC3C
+		// Token: 0x1700C563 RID: 50531
+		// (get) Token: 0x0602DF8A RID: 188298 RVA: 0x00648844 File Offset: 0x00646A44
 		public float Fstop
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BBDC RID: 48092
-		// (get) Token: 0x0602B82A RID: 178218 RVA: 0x005FDA7C File Offset: 0x005FBC7C
+		// Token: 0x1700C564 RID: 50532
+		// (get) Token: 0x0602DF8B RID: 188299 RVA: 0x00648884 File Offset: 0x00646A84
 		public float Distance
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BBDD RID: 48093
-		// (get) Token: 0x0602B82B RID: 178219 RVA: 0x005FDABC File Offset: 0x005FBCBC
+		// Token: 0x1700C565 RID: 50533
+		// (get) Token: 0x0602DF8C RID: 188300 RVA: 0x006488C4 File Offset: 0x00646AC4
 		public float BlurAmount
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BBDE RID: 48094
-		// (get) Token: 0x0602B82C RID: 178220 RVA: 0x005FDAFC File Offset: 0x005FBCFC
+		// Token: 0x1700C566 RID: 50534
+		// (get) Token: 0x0602DF8D RID: 188301 RVA: 0x00648904 File Offset: 0x00646B04
 		public float BlurRadius
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BBDF RID: 48095
-		// (get) Token: 0x0602B82D RID: 178221 RVA: 0x005FDB40 File Offset: 0x005FBD40
+		// Token: 0x1700C567 RID: 50535
+		// (get) Token: 0x0602DF8E RID: 188302 RVA: 0x00648948 File Offset: 0x00646B48
 		public byte NullMask
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B82E RID: 178222 RVA: 0x005FDB7D File Offset: 0x005FBD7D
+		// Token: 0x0602DF8F RID: 188303 RVA: 0x00648985 File Offset: 0x00646B85
 		public static Offset<ICameraDepthOfField> CreateICameraDepthOfField(FlatBufferBuilder builder, float Fstop = 0f, float Distance = 0f, float BlurAmount = 0f, float BlurRadius = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -134,49 +134,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICameraDepthOfField.EndICameraDepthOfField(builder);
 		}
 
-		// Token: 0x0602B82F RID: 178223 RVA: 0x005FDBB1 File Offset: 0x005FBDB1
+		// Token: 0x0602DF90 RID: 188304 RVA: 0x006489B9 File Offset: 0x00646BB9
 		public static void StartICameraDepthOfField(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602B830 RID: 178224 RVA: 0x005FDBBA File Offset: 0x005FBDBA
+		// Token: 0x0602DF91 RID: 188305 RVA: 0x006489C2 File Offset: 0x00646BC2
 		public static void AddFstop(FlatBufferBuilder builder, float fstop)
 		{
 			builder.AddFloat(0, fstop, 0.0);
 		}
 
-		// Token: 0x0602B831 RID: 178225 RVA: 0x005FDBCD File Offset: 0x005FBDCD
+		// Token: 0x0602DF92 RID: 188306 RVA: 0x006489D5 File Offset: 0x00646BD5
 		public static void AddDistance(FlatBufferBuilder builder, float distance)
 		{
 			builder.AddFloat(1, distance, 0.0);
 		}
 
-		// Token: 0x0602B832 RID: 178226 RVA: 0x005FDBE0 File Offset: 0x005FBDE0
+		// Token: 0x0602DF93 RID: 188307 RVA: 0x006489E8 File Offset: 0x00646BE8
 		public static void AddBlurAmount(FlatBufferBuilder builder, float blurAmount)
 		{
 			builder.AddFloat(2, blurAmount, 0.0);
 		}
 
-		// Token: 0x0602B833 RID: 178227 RVA: 0x005FDBF3 File Offset: 0x005FBDF3
+		// Token: 0x0602DF94 RID: 188308 RVA: 0x006489FB File Offset: 0x00646BFB
 		public static void AddBlurRadius(FlatBufferBuilder builder, float blurRadius)
 		{
 			builder.AddFloat(3, blurRadius, 0.0);
 		}
 
-		// Token: 0x0602B834 RID: 178228 RVA: 0x005FDC06 File Offset: 0x005FBE06
+		// Token: 0x0602DF95 RID: 188309 RVA: 0x00648A0E File Offset: 0x00646C0E
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0602B835 RID: 178229 RVA: 0x005FDC11 File Offset: 0x005FBE11
+		// Token: 0x0602DF96 RID: 188310 RVA: 0x00648A19 File Offset: 0x00646C19
 		public static Offset<ICameraDepthOfField> EndICameraDepthOfField(FlatBufferBuilder builder)
 		{
 			return new Offset<ICameraDepthOfField>(builder.EndTable());
 		}
 
-		// Token: 0x0602B836 RID: 178230 RVA: 0x005FDC20 File Offset: 0x005FBE20
+		// Token: 0x0602DF97 RID: 188311 RVA: 0x00648A28 File Offset: 0x00646C28
 		public ICameraDepthOfFieldT UnPack()
 		{
 			ICameraDepthOfFieldT cameraDepthOfFieldT = new ICameraDepthOfFieldT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return cameraDepthOfFieldT;
 		}
 
-		// Token: 0x0602B837 RID: 178231 RVA: 0x005FDC3B File Offset: 0x005FBE3B
+		// Token: 0x0602DF98 RID: 188312 RVA: 0x00648A43 File Offset: 0x00646C43
 		public void UnPackTo(ICameraDepthOfFieldT _o)
 		{
 			_o.Fstop = this.Fstop;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602B838 RID: 178232 RVA: 0x005FDC7C File Offset: 0x005FBE7C
+		// Token: 0x0602DF99 RID: 188313 RVA: 0x00648A84 File Offset: 0x00646C84
 		public static Offset<ICameraDepthOfField> Pack(FlatBufferBuilder builder, ICameraDepthOfFieldT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICameraDepthOfField.CreateICameraDepthOfField(builder, _o.Fstop, _o.Distance, _o.BlurAmount, _o.BlurRadius, _o.NullMask);
 		}
 
-		// Token: 0x040107D5 RID: 67541
+		// Token: 0x040115EA RID: 71146
 		private Table __p;
 	}
 }

@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.RoleSelect
 {
-	// Token: 0x02005733 RID: 22323
+	// Token: 0x0200470A RID: 18186
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoRoleGridItem : LoopScrollMediumItemGrid<int>
 	{
-		// Token: 0x06038BFD RID: 232445 RVA: 0x00D785D7 File Offset: 0x00D767D7
+		// Token: 0x0602DB0D RID: 187149 RVA: 0x00CC6C83 File Offset: 0x00CC4E83
 		protected override void OnStart()
 		{
 			this.GetItemGridExtendToggle().bLockStateOnSelect = true;
 		}
 
-		// Token: 0x06038BFE RID: 232446 RVA: 0x00D785E8 File Offset: 0x00D767E8
+		// Token: 0x0602DB0E RID: 187150 RVA: 0x00CC6C94 File Offset: 0x00CC4E94
 		protected override void OnRefresh(int data, bool isSelected, int gridIndex)
 		{
 			this.RoleId = data;
@@ -59,13 +59,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.RoleSelect
 			base.SetIsProhibit(new bool?(false));
 		}
 
-		// Token: 0x06038BFF RID: 232447 RVA: 0x00D7876E File Offset: 0x00D7696E
+		// Token: 0x0602DB0F RID: 187151 RVA: 0x00CC6E1A File Offset: 0x00CC501A
 		public void SetToggleClickCallback(Action<int> callback)
 		{
 			this.ToggleClickCallback = callback;
 		}
 
-		// Token: 0x06038C00 RID: 232448 RVA: 0x00D78777 File Offset: 0x00D76977
+		// Token: 0x0602DB10 RID: 187152 RVA: 0x00CC6E23 File Offset: 0x00CC5023
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.RoleSelect
 			}
 		}
 
-		// Token: 0x06038C01 RID: 232449 RVA: 0x00D78793 File Offset: 0x00D76993
+		// Token: 0x0602DB11 RID: 187153 RVA: 0x00CC6E3F File Offset: 0x00CC503F
 		protected override void OnExtendToggleClicked()
 		{
 			this.ReadRedDot();
@@ -95,20 +95,20 @@ namespace CSharpScript.Game.Module.Kurotato.View.RoleSelect
 			toggleClickCallback(this.RoleId);
 		}
 
-		// Token: 0x06038C02 RID: 232450 RVA: 0x00D787BA File Offset: 0x00D769BA
+		// Token: 0x0602DB12 RID: 187154 RVA: 0x00CC6E66 File Offset: 0x00CC5066
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, true);
 			this.ReadRedDot();
 		}
 
-		// Token: 0x06038C03 RID: 232451 RVA: 0x00D787CA File Offset: 0x00D769CA
+		// Token: 0x0602DB13 RID: 187155 RVA: 0x00CC6E76 File Offset: 0x00CC5076
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, true);
 		}
 
-		// Token: 0x06038C04 RID: 232452 RVA: 0x00D787D4 File Offset: 0x00D769D4
+		// Token: 0x0602DB14 RID: 187156 RVA: 0x00CC6E80 File Offset: 0x00CC5080
 		private void ReadRedDot()
 		{
 			if (this.IsDisableInternal)
@@ -129,25 +129,25 @@ namespace CSharpScript.Game.Module.Kurotato.View.RoleSelect
 			}
 		}
 
-		// Token: 0x0401DC5A RID: 121946
+		// Token: 0x040186F0 RID: 100080
 		private int RoleId;
 
-		// Token: 0x0401DC5B RID: 121947
+		// Token: 0x040186F1 RID: 100081
 		public List<int> LimitRoleList = new List<int>();
 
-		// Token: 0x0401DC5C RID: 121948
+		// Token: 0x040186F2 RID: 100082
 		public List<int> RecommendRoleList = new List<int>();
 
-		// Token: 0x0401DC5D RID: 121949
+		// Token: 0x040186F3 RID: 100083
 		public bool IsEndlessLevel;
 
-		// Token: 0x0401DC5E RID: 121950
+		// Token: 0x040186F4 RID: 100084
 		public bool IsHandBookContext;
 
-		// Token: 0x0401DC5F RID: 121951
+		// Token: 0x040186F5 RID: 100085
 		private bool IsDisableInternal;
 
-		// Token: 0x0401DC60 RID: 121952
+		// Token: 0x040186F6 RID: 100086
 		[Nullable(2)]
 		private Action<int> ToggleClickCallback;
 	}

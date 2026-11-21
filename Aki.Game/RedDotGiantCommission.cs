@@ -2,22 +2,22 @@
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020033A5 RID: 13221
+// Token: 0x02002917 RID: 10519
 public class RedDotGiantCommission : RedDotBase
 {
-	// Token: 0x0601CB30 RID: 117552 RVA: 0x00807A06 File Offset: 0x00805C06
+	// Token: 0x0601A828 RID: 108584 RVA: 0x0082DFCA File Offset: 0x0082C1CA
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnGiantCommissionRead, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CB31 RID: 117553 RVA: 0x00807A24 File Offset: 0x00805C24
+	// Token: 0x0601A829 RID: 108585 RVA: 0x0082DFE8 File Offset: 0x0082C1E8
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnGiantCommissionRead, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CB32 RID: 117554 RVA: 0x00807A42 File Offset: 0x00805C42
+	// Token: 0x0601A82A RID: 108586 RVA: 0x0082E006 File Offset: 0x0082C206
 	protected override bool OnCheck(int uId = 0)
 	{
 		return !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.GiantCommissionRedDotClicked, false);

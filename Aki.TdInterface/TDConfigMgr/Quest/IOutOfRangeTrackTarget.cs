@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001033 RID: 4147
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200115F RID: 4447
 	public class IOutOfRangeTrackTarget
 	{
-		// Token: 0x06005C7E RID: 23678 RVA: 0x000DFF54 File Offset: 0x000DE154
+		// Token: 0x06006260 RID: 25184 RVA: 0x000ECC4C File Offset: 0x000EAE4C
 		private IOutOfRangeTrackTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005C7F RID: 23679 RVA: 0x000DFF8C File Offset: 0x000DE18C
+		// Token: 0x06006261 RID: 25185 RVA: 0x000ECC84 File Offset: 0x000EAE84
 		public static IOutOfRangeTrackTarget Create([Nullable(2)] IOutOfRangeTrackTarget instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C80 RID: 23680 RVA: 0x000DFF9F File Offset: 0x000DE19F
+		// Token: 0x06006262 RID: 25186 RVA: 0x000ECC97 File Offset: 0x000EAE97
 		public static IOutOfRangeTrackTarget CreateFromSetValue([Nullable(2)] IOutOfRangeTrackTarget_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C81 RID: 23681 RVA: 0x000DFFB2 File Offset: 0x000DE1B2
+		// Token: 0x06006263 RID: 25187 RVA: 0x000ECCAA File Offset: 0x000EAEAA
 		public IOutOfRangeTrackTarget_SetValue ToSetValue()
 		{
 			return new IOutOfRangeTrackTarget_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E74 RID: 7796
-		// (get) Token: 0x06005C82 RID: 23682 RVA: 0x000DFFEC File Offset: 0x000DE1EC
-		// (set) Token: 0x06005C83 RID: 23683 RVA: 0x000E004D File Offset: 0x000DE24D
+		// Token: 0x1700201E RID: 8222
+		// (get) Token: 0x06006264 RID: 25188 RVA: 0x000ECCE4 File Offset: 0x000EAEE4
+		// (set) Token: 0x06006265 RID: 25189 RVA: 0x000ECD45 File Offset: 0x000EAF45
 		public virtual VectorInfo TrackPos
 		{
 			get
@@ -93,9 +91,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E75 RID: 7797
-		// (get) Token: 0x06005C84 RID: 23684 RVA: 0x000E0064 File Offset: 0x000DE264
-		// (set) Token: 0x06005C85 RID: 23685 RVA: 0x000E00C5 File Offset: 0x000DE2C5
+		// Token: 0x1700201F RID: 8223
+		// (get) Token: 0x06006266 RID: 25190 RVA: 0x000ECD5C File Offset: 0x000EAF5C
+		// (set) Token: 0x06006267 RID: 25191 RVA: 0x000ECDBD File Offset: 0x000EAFBD
 		public virtual VectorInfo Center
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E76 RID: 7798
-		// (get) Token: 0x06005C86 RID: 23686 RVA: 0x000E00DA File Offset: 0x000DE2DA
-		// (set) Token: 0x06005C87 RID: 23687 RVA: 0x000E0105 File Offset: 0x000DE305
+		// Token: 0x17002020 RID: 8224
+		// (get) Token: 0x06006268 RID: 25192 RVA: 0x000ECDD2 File Offset: 0x000EAFD2
+		// (set) Token: 0x06006269 RID: 25193 RVA: 0x000ECDFD File Offset: 0x000EAFFD
 		public virtual int Radius
 		{
 			get
@@ -146,9 +144,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E77 RID: 7799
-		// (get) Token: 0x06005C88 RID: 23688 RVA: 0x000E0114 File Offset: 0x000DE314
-		// (set) Token: 0x06005C89 RID: 23689 RVA: 0x000E014E File Offset: 0x000DE34E
+		// Token: 0x17002021 RID: 8225
+		// (get) Token: 0x0600626A RID: 25194 RVA: 0x000ECE0C File Offset: 0x000EB00C
+		// (set) Token: 0x0600626B RID: 25195 RVA: 0x000ECE46 File Offset: 0x000EB046
 		public virtual bool? OverrideChildNodeTrackTarget
 		{
 			get
@@ -170,24 +168,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400379F RID: 14239
+		// Token: 0x04003ADA RID: 15066
 		[Nullable(2)]
 		protected IOutOfRangeTrackTarget FbInstance;
 
-		// Token: 0x040037A0 RID: 14240
+		// Token: 0x04003ADB RID: 15067
 		[Nullable(2)]
 		protected IOutOfRangeTrackTarget_SetValue PocoInterface;
 
-		// Token: 0x040037A1 RID: 14241
+		// Token: 0x04003ADC RID: 15068
 		private VectorInfo _TrackPosCache;
 
-		// Token: 0x040037A2 RID: 14242
+		// Token: 0x04003ADD RID: 15069
 		private bool _TrackPosInited;
 
-		// Token: 0x040037A3 RID: 14243
+		// Token: 0x04003ADE RID: 15070
 		private VectorInfo _CenterCache;
 
-		// Token: 0x040037A4 RID: 14244
+		// Token: 0x04003ADF RID: 15071
 		private bool _CenterInited;
 	}
 }

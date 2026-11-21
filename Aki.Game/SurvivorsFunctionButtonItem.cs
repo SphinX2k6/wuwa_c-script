@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002B15 RID: 11029
+// Token: 0x02002091 RID: 8337
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsFunctionButtonItem : UiPanelBase
 {
-	// Token: 0x06016EB4 RID: 93876 RVA: 0x005D1090 File Offset: 0x005CF290
+	// Token: 0x060148E5 RID: 84197 RVA: 0x005FDC0C File Offset: 0x005FBE0C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class SurvivorsFunctionButtonItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016EB5 RID: 93877 RVA: 0x005D1123 File Offset: 0x005CF323
+	// Token: 0x060148E6 RID: 84198 RVA: 0x005FDC9F File Offset: 0x005FBE9F
 	private void OnBtnClicked()
 	{
 		Action onBtnClickedCallback = this.OnBtnClickedCallback;
@@ -36,38 +36,38 @@ public class SurvivorsFunctionButtonItem : UiPanelBase
 		onBtnClickedCallback();
 	}
 
-	// Token: 0x06016EB6 RID: 93878 RVA: 0x005D1135 File Offset: 0x005CF335
+	// Token: 0x060148E7 RID: 84199 RVA: 0x005FDCB1 File Offset: 0x005FBEB1
 	protected override void OnStart()
 	{
 		this.SetNewItemVisible(false);
 		this.SetRedDotVisible(false);
 	}
 
-	// Token: 0x06016EB7 RID: 93879 RVA: 0x005D1145 File Offset: 0x005CF345
+	// Token: 0x060148E8 RID: 84200 RVA: 0x005FDCC1 File Offset: 0x005FBEC1
 	public void SetRedDotVisible(bool bVisible)
 	{
 		base.GetItem(1).SetUIActive(bVisible);
 	}
 
-	// Token: 0x06016EB8 RID: 93880 RVA: 0x005D1154 File Offset: 0x005CF354
+	// Token: 0x060148E9 RID: 84201 RVA: 0x005FDCD0 File Offset: 0x005FBED0
 	public void SetNewItemVisible(bool bVisible)
 	{
 		base.GetItem(2).SetUIActive(bVisible);
 	}
 
-	// Token: 0x06016EB9 RID: 93881 RVA: 0x005D1163 File Offset: 0x005CF363
+	// Token: 0x060148EA RID: 84202 RVA: 0x005FDCDF File Offset: 0x005FBEDF
 	public void SetDescText(string textId, params string[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), textId, args);
 	}
 
-	// Token: 0x06016EBA RID: 93882 RVA: 0x005D1178 File Offset: 0x005CF378
+	// Token: 0x060148EB RID: 84203 RVA: 0x005FDCF4 File Offset: 0x005FBEF4
 	public void SetFunction(Action callback)
 	{
 		this.OnBtnClickedCallback = callback;
 	}
 
-	// Token: 0x0400AA63 RID: 43619
+	// Token: 0x0400AE69 RID: 44649
 	[Nullable(2)]
 	protected Action OnBtnClickedCallback;
 }

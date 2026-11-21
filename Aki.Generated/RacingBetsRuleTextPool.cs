@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F91 RID: 3985
+	// Token: 0x02001078 RID: 4216
 	public struct RacingBetsRuleTextPool : IFlatbufferObject
 	{
-		// Token: 0x17002CD4 RID: 11476
-		// (get) Token: 0x0600B8B3 RID: 47283 RVA: 0x002D6954 File Offset: 0x002D4B54
+		// Token: 0x17002D4C RID: 11596
+		// (get) Token: 0x0600BEF0 RID: 48880 RVA: 0x002F3204 File Offset: 0x002F1404
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B8B4 RID: 47284 RVA: 0x002D6961 File Offset: 0x002D4B61
+		// Token: 0x0600BEF1 RID: 48881 RVA: 0x002F3211 File Offset: 0x002F1411
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B8B5 RID: 47285 RVA: 0x002D6968 File Offset: 0x002D4B68
+		// Token: 0x0600BEF2 RID: 48882 RVA: 0x002F3218 File Offset: 0x002F1418
 		public static RacingBetsRuleTextPool GetRootAsRacingBetsRuleTextPool(ByteBuffer _bb)
 		{
 			return RacingBetsRuleTextPool.GetRootAsRacingBetsRuleTextPool(_bb, default(RacingBetsRuleTextPool));
 		}
 
-		// Token: 0x0600B8B6 RID: 47286 RVA: 0x002D6984 File Offset: 0x002D4B84
+		// Token: 0x0600BEF3 RID: 48883 RVA: 0x002F3234 File Offset: 0x002F1434
 		public static RacingBetsRuleTextPool GetRootAsRacingBetsRuleTextPool(ByteBuffer _bb, RacingBetsRuleTextPool obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B8B7 RID: 47287 RVA: 0x002D69A1 File Offset: 0x002D4BA1
+		// Token: 0x0600BEF4 RID: 48884 RVA: 0x002F3251 File Offset: 0x002F1451
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B8B8 RID: 47288 RVA: 0x002D69B0 File Offset: 0x002D4BB0
+		// Token: 0x0600BEF5 RID: 48885 RVA: 0x002F3260 File Offset: 0x002F1460
 		public RacingBetsRuleTextPool __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002CD5 RID: 11477
-		// (get) Token: 0x0600B8B9 RID: 47289 RVA: 0x002D69C0 File Offset: 0x002D4BC0
+		// Token: 0x17002D4D RID: 11597
+		// (get) Token: 0x0600BEF6 RID: 48886 RVA: 0x002F3270 File Offset: 0x002F1470
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CD6 RID: 11478
-		// (get) Token: 0x0600B8BA RID: 47290 RVA: 0x002D69FC File Offset: 0x002D4BFC
+		// Token: 0x17002D4E RID: 11598
+		// (get) Token: 0x0600BEF7 RID: 48887 RVA: 0x002F32AC File Offset: 0x002F14AC
 		public int SeasonId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CD7 RID: 11479
-		// (get) Token: 0x0600B8BB RID: 47291 RVA: 0x002D6A38 File Offset: 0x002D4C38
+		// Token: 0x17002D4F RID: 11599
+		// (get) Token: 0x0600BEF8 RID: 48888 RVA: 0x002F32E8 File Offset: 0x002F14E8
 		public int LegMatchId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CD8 RID: 11480
-		// (get) Token: 0x0600B8BC RID: 47292 RVA: 0x002D6A74 File Offset: 0x002D4C74
+		// Token: 0x17002D50 RID: 11600
+		// (get) Token: 0x0600BEF9 RID: 48889 RVA: 0x002F3324 File Offset: 0x002F1524
 		public int MatchState
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CD9 RID: 11481
-		// (get) Token: 0x0600B8BD RID: 47293 RVA: 0x002D6AB4 File Offset: 0x002D4CB4
+		// Token: 0x17002D51 RID: 11601
+		// (get) Token: 0x0600BEFA RID: 48890 RVA: 0x002F3364 File Offset: 0x002F1564
 		public int Type
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CDA RID: 11482
-		// (get) Token: 0x0600B8BE RID: 47294 RVA: 0x002D6AF4 File Offset: 0x002D4CF4
+		// Token: 0x17002D52 RID: 11602
+		// (get) Token: 0x0600BEFB RID: 48891 RVA: 0x002F33A4 File Offset: 0x002F15A4
 		public string RuleText
 		{
 			get
@@ -137,19 +137,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B8BF RID: 47295 RVA: 0x002D6B2C File Offset: 0x002D4D2C
+		// Token: 0x0600BEFC RID: 48892 RVA: 0x002F33DC File Offset: 0x002F15DC
 		public Span<byte> GetRuleTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600B8C0 RID: 47296 RVA: 0x002D6B3C File Offset: 0x002D4D3C
+		// Token: 0x0600BEFD RID: 48893 RVA: 0x002F33EC File Offset: 0x002F15EC
 		public byte[] GetRuleTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04005061 RID: 20577
+		// Token: 0x04005648 RID: 22088
 		private Table __p;
 	}
 }

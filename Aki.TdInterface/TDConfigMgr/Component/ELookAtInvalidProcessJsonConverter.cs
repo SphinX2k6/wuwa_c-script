@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000993 RID: 2451
+	// Token: 0x02000A46 RID: 2630
 	public class ELookAtInvalidProcessJsonConverter : JsonConverter<ELookAtInvalidProcess>
 	{
-		// Token: 0x060036C8 RID: 14024 RVA: 0x0008E9F4 File Offset: 0x0008CBF4
+		// Token: 0x06003A4F RID: 14927 RVA: 0x00096960 File Offset: 0x00094B60
 		public override ELookAtInvalidProcess Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ELookAtInvalidProcessExtensions.FromString(@string);
 		}
 
-		// Token: 0x060036C9 RID: 14025 RVA: 0x0008EA18 File Offset: 0x0008CC18
+		// Token: 0x06003A50 RID: 14928 RVA: 0x00096984 File Offset: 0x00094B84
 		public override void Write(Utf8JsonWriter writer, ELookAtInvalidProcess value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

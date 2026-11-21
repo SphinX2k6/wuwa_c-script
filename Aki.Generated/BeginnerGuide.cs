@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B30 RID: 2864
+	// Token: 0x02000C10 RID: 3088
 	public struct BeginnerGuide : IFlatbufferObject
 	{
-		// Token: 0x1700050B RID: 1291
-		// (get) Token: 0x06004CF4 RID: 19700 RVA: 0x001E2D18 File Offset: 0x001E0F18
+		// Token: 0x1700054B RID: 1355
+		// (get) Token: 0x060052B6 RID: 21174 RVA: 0x002030F8 File Offset: 0x002012F8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004CF5 RID: 19701 RVA: 0x001E2D25 File Offset: 0x001E0F25
+		// Token: 0x060052B7 RID: 21175 RVA: 0x00203105 File Offset: 0x00201305
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004CF6 RID: 19702 RVA: 0x001E2D2C File Offset: 0x001E0F2C
+		// Token: 0x060052B8 RID: 21176 RVA: 0x0020310C File Offset: 0x0020130C
 		public static BeginnerGuide GetRootAsBeginnerGuide(ByteBuffer _bb)
 		{
 			return BeginnerGuide.GetRootAsBeginnerGuide(_bb, default(BeginnerGuide));
 		}
 
-		// Token: 0x06004CF7 RID: 19703 RVA: 0x001E2D48 File Offset: 0x001E0F48
+		// Token: 0x060052B9 RID: 21177 RVA: 0x00203128 File Offset: 0x00201328
 		public static BeginnerGuide GetRootAsBeginnerGuide(ByteBuffer _bb, BeginnerGuide obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004CF8 RID: 19704 RVA: 0x001E2D65 File Offset: 0x001E0F65
+		// Token: 0x060052BA RID: 21178 RVA: 0x00203145 File Offset: 0x00201345
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004CF9 RID: 19705 RVA: 0x001E2D74 File Offset: 0x001E0F74
+		// Token: 0x060052BB RID: 21179 RVA: 0x00203154 File Offset: 0x00201354
 		public BeginnerGuide __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700050C RID: 1292
-		// (get) Token: 0x06004CFA RID: 19706 RVA: 0x001E2D84 File Offset: 0x001E0F84
+		// Token: 0x1700054C RID: 1356
+		// (get) Token: 0x060052BC RID: 21180 RVA: 0x00203164 File Offset: 0x00201364
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700050D RID: 1293
-		// (get) Token: 0x06004CFB RID: 19707 RVA: 0x001E2DC0 File Offset: 0x001E0FC0
+		// Token: 0x1700054D RID: 1357
+		// (get) Token: 0x060052BD RID: 21181 RVA: 0x002031A0 File Offset: 0x002013A0
 		public int PlayerId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700050E RID: 1294
-		// (get) Token: 0x06004CFC RID: 19708 RVA: 0x001E2DFC File Offset: 0x001E0FFC
+		// Token: 0x1700054E RID: 1358
+		// (get) Token: 0x060052BE RID: 21182 RVA: 0x002031DC File Offset: 0x002013DC
 		public int WorldLevel
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700050F RID: 1295
-		// (get) Token: 0x06004CFD RID: 19709 RVA: 0x001E2E38 File Offset: 0x001E1038
+		// Token: 0x1700054F RID: 1359
+		// (get) Token: 0x060052BF RID: 21183 RVA: 0x00203218 File Offset: 0x00201418
 		public int PlayerLevel
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000510 RID: 1296
-		// (get) Token: 0x06004CFE RID: 19710 RVA: 0x001E2E78 File Offset: 0x001E1078
+		// Token: 0x17000550 RID: 1360
+		// (get) Token: 0x060052C0 RID: 21184 RVA: 0x00203258 File Offset: 0x00201458
 		public int Region
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000511 RID: 1297
-		// (get) Token: 0x06004CFF RID: 19711 RVA: 0x001E2EB8 File Offset: 0x001E10B8
+		// Token: 0x17000551 RID: 1361
+		// (get) Token: 0x060052C1 RID: 21185 RVA: 0x00203298 File Offset: 0x00201498
 		public int ClientPlatform
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000512 RID: 1298
-		// (get) Token: 0x06004D00 RID: 19712 RVA: 0x001E2EF8 File Offset: 0x001E10F8
+		// Token: 0x17000552 RID: 1362
+		// (get) Token: 0x060052C2 RID: 21186 RVA: 0x002032D8 File Offset: 0x002014D8
 		public int NetStatus
 		{
 			get
@@ -152,8 +152,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000513 RID: 1299
-		// (get) Token: 0x06004D01 RID: 19713 RVA: 0x001E2F38 File Offset: 0x001E1138
+		// Token: 0x17000553 RID: 1363
+		// (get) Token: 0x060052C3 RID: 21187 RVA: 0x00203318 File Offset: 0x00201518
 		public int DeviceId
 		{
 			get
@@ -167,8 +167,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000514 RID: 1300
-		// (get) Token: 0x06004D02 RID: 19714 RVA: 0x001E2F78 File Offset: 0x001E1178
+		// Token: 0x17000554 RID: 1364
+		// (get) Token: 0x060052C4 RID: 21188 RVA: 0x00203358 File Offset: 0x00201558
 		public int GuideId
 		{
 			get
@@ -182,8 +182,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000515 RID: 1301
-		// (get) Token: 0x06004D03 RID: 19715 RVA: 0x001E2FB8 File Offset: 0x001E11B8
+		// Token: 0x17000555 RID: 1365
+		// (get) Token: 0x060052C5 RID: 21189 RVA: 0x00203398 File Offset: 0x00201598
 		public int GameDuration
 		{
 			get
@@ -197,7 +197,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004B28 RID: 19240
+		// Token: 0x04005108 RID: 20744
 		private Table __p;
 	}
 }

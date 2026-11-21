@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008B9 RID: 2233
+	// Token: 0x020008D5 RID: 2261
 	public class ConfigRoleMorphById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003469 RID: 13417 RVA: 0x001816AC File Offset: 0x0017F8AC
+		// Token: 0x06003511 RID: 13585 RVA: 0x00188994 File Offset: 0x00186B94
 		static ConfigRoleMorphById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleMorphById.CreateStaticDefaultValue), new Action(ConfigRoleMorphById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600346A RID: 13418 RVA: 0x001816CC File Offset: 0x0017F8CC
+		// Token: 0x06003512 RID: 13586 RVA: 0x001889B4 File Offset: 0x00186BB4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleMorphById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600346B RID: 13419 RVA: 0x0018174B File Offset: 0x0017F94B
+		// Token: 0x06003513 RID: 13587 RVA: 0x00188A33 File Offset: 0x00186C33
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleMorphById.LogPair = null;
 			ConfigRoleMorphById.HandleId = 0;
 		}
 
-		// Token: 0x0600346C RID: 13420 RVA: 0x00181759 File Offset: 0x0017F959
+		// Token: 0x06003514 RID: 13588 RVA: 0x00188A41 File Offset: 0x00186C41
 		public static void Init()
 		{
 			ConfigRoleMorphById.HandleId = ConfigCommon.InitDataStatement(ConfigRoleMorphById.HandleId, "db_role.db", "select BinData from `RoleMorph` where Id =?");
 		}
 
-		// Token: 0x0600346D RID: 13421 RVA: 0x00181774 File Offset: 0x0017F974
+		// Token: 0x06003515 RID: 13589 RVA: 0x00188A5C File Offset: 0x00186C5C
 		public static RoleMorph? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleMorphById.HandleId, ConfigRoleMorphById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleMorph?(rootAsRoleMorph);
 		}
 
-		// Token: 0x04003CF5 RID: 15605
+		// Token: 0x04003DB9 RID: 15801
 		private const string DB = "db_role.db";
 
-		// Token: 0x04003CF6 RID: 15606
+		// Token: 0x04003DBA RID: 15802
 		private const string FILE = "j.角色.xlsx";
 
-		// Token: 0x04003CF7 RID: 15607
+		// Token: 0x04003DBB RID: 15803
 		private const string TABLE = "RoleMorph";
 
-		// Token: 0x04003CF8 RID: 15608
+		// Token: 0x04003DBC RID: 15804
 		private const string COMMAND = "select BinData from `RoleMorph` where Id =?";
 
-		// Token: 0x04003CF9 RID: 15609
+		// Token: 0x04003DBD RID: 15805
 		private const string KEY_PREFIX = "RoleMorphById";
 
-		// Token: 0x04003CFA RID: 15610
+		// Token: 0x04003DBE RID: 15806
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003CFB RID: 15611
+		// Token: 0x04003DBF RID: 15807
 		private static int HandleId;
 	}
 }

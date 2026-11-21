@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using CSharpScript.Core.Common;
 using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Game.Module.InstanceDungeon.Define;
 
-// Token: 0x02001BF4 RID: 7156
+// Token: 0x020010B3 RID: 4275
 public class FormationDataProvider : IFormationProvider
 {
-	// Token: 0x0600D53E RID: 54590 RVA: 0x00311980 File Offset: 0x0030FB80
+	// Token: 0x0600A951 RID: 43345 RVA: 0x0031CBC4 File Offset: 0x0031ADC4
 	[NullableContext(1)]
 	public unsafe IRoleSlotDisplayData BuildSlotDisplayData(int formationId, int position)
 	{
@@ -97,7 +98,7 @@ public class FormationDataProvider : IFormationProvider
 		return roleSlotDisplayData;
 	}
 
-	// Token: 0x0600D53F RID: 54591 RVA: 0x00311BF0 File Offset: 0x0030FDF0
+	// Token: 0x0600A952 RID: 43346 RVA: 0x0031CE34 File Offset: 0x0031B034
 	[NullableContext(1)]
 	private IRoleSlotDisplayData BuildTeammateSlotDto(int formationId, int position, int selfPlayerId)
 	{
@@ -119,12 +120,21 @@ public class FormationDataProvider : IFormationProvider
 		WorldTeamPlayerFightInfo worldTeamPlayerFightInfo = (instance2 != null) ? instance2.GetWorldTeamPlayerFightInfo(playerId) : null;
 		OnlineModel instance3 = OnlineModel.Instance;
 		OnlineTeamData onlineTeamData = (instance3 != null) ? instance3.GetCurrentTeamListById(playerId) : null;
-		int onlineIndex = (onlineTeamData != null) ? onlineTeamData.PlayerNumber : 1;
-		string text = ((worldTeamPlayerFightInfo != null) ? worldTeamPlayerFightInfo.Name : null) ?? "";
-		if (text != "")
+		if (onlineTeamData != null)
 		{
-			text = (((onlineTeamData != null) ? onlineTeamData.GetRawName() : null) ?? text);
+			formationRoleData.OnlineIndex = new int?(onlineTeamData.PlayerNumber);
 		}
+		if (worldTeamPlayerFightInfo != null)
+		{
+			string text = worldTeamPlayerFightInfo.Name ?? "";
+			if (text != "")
+			{
+				text = (((onlineTeamData != null) ? onlineTeamData.GetRawName() : null) ?? text);
+			}
+			formationRoleData.PlayerName = text;
+		}
+		string value = Info.Instance.IsPs5Platform() ? ((onlineTeamData != null) ? onlineTeamData.PlayerDetails.PsnUserId : null) : ((onlineTeamData != null) ? onlineTeamData.PlayerDetails.XboxUserId : null);
+		formationRoleData.ThirdPartyOnlineId = (string.IsNullOrEmpty(value) ? "" : onlineTeamData.GetOnlineName());
 		GameModeModel instance4 = GameModeModel.Instance;
 		bool flag2 = instance4 != null && instance4.IsMulti;
 		return new IRoleSlotDisplayData
@@ -132,10 +142,10 @@ public class FormationDataProvider : IFormationProvider
 			ConfigId = formationRoleData.ConfigId,
 			SkinId = formationRoleData.RoleSkinId,
 			Level = formationRoleData.Level,
-			Name = text,
-			OnlineIndex = onlineIndex,
+			Name = (formationRoleData.PlayerName ?? ""),
+			OnlineIndex = formationRoleData.OnlineIndex.GetValueOrDefault(1),
 			PlayerId = playerId,
-			ThirdPartyOnlineId = (((worldTeamPlayerFightInfo != null) ? worldTeamPlayerFightInfo.ThirdPartyOnlineName : null) ?? ""),
+			ThirdPartyOnlineId = (formationRoleData.ThirdPartyOnlineId ?? ""),
 			CanUseSpecialTrialRole = false,
 			IsDead = false,
 			IsTrialRole = false,
@@ -147,7 +157,7 @@ public class FormationDataProvider : IFormationProvider
 		};
 	}
 
-	// Token: 0x0600D540 RID: 54592 RVA: 0x00311D8C File Offset: 0x0030FF8C
+	// Token: 0x0600A953 RID: 43347 RVA: 0x0031D040 File Offset: 0x0031B240
 	[NullableContext(1)]
 	private IRoleSlotDisplayData BuildEmptySlotDto()
 	{
@@ -169,7 +179,7 @@ public class FormationDataProvider : IFormationProvider
 		};
 	}
 
-	// Token: 0x0600D541 RID: 54593 RVA: 0x00311E04 File Offset: 0x00310004
+	// Token: 0x0600A954 RID: 43348 RVA: 0x0031D0B8 File Offset: 0x0031B2B8
 	[NullableContext(2)]
 	private IRoleSlotDisplayData.SkillBranchData BuildSkillBranchDto(int configId, int position, int playerId)
 	{
@@ -193,7 +203,7 @@ public class FormationDataProvider : IFormationProvider
 		};
 	}
 
-	// Token: 0x0600D542 RID: 54594 RVA: 0x00311E94 File Offset: 0x00310094
+	// Token: 0x0600A955 RID: 43349 RVA: 0x0031D148 File Offset: 0x0031B348
 	[return: TupleElementNames(new string[]
 	{
 		"IsMulti",
@@ -222,7 +232,7 @@ public class FormationDataProvider : IFormationProvider
 		return new ValueTuple<bool, int>(false, 0);
 	}
 
-	// Token: 0x0600D543 RID: 54595 RVA: 0x00311F38 File Offset: 0x00310138
+	// Token: 0x0600A956 RID: 43350 RVA: 0x0031D1EC File Offset: 0x0031B3EC
 	[NullableContext(2)]
 	public Vector GetRoleSkinOffset(int skinId)
 	{
@@ -235,7 +245,7 @@ public class FormationDataProvider : IFormationProvider
 		return Vector.Create(roleSkinData.GetRoleSkinConfig().FormationOffset);
 	}
 
-	// Token: 0x0600D544 RID: 54596 RVA: 0x00311F70 File Offset: 0x00310170
+	// Token: 0x0600A957 RID: 43351 RVA: 0x0031D224 File Offset: 0x0031B424
 	public int ResolveSafePlayerId(int? slotPlayerId)
 	{
 		int value = PlayerInfoModel.Instance.GetId().Value;
@@ -251,19 +261,19 @@ public class FormationDataProvider : IFormationProvider
 		return value;
 	}
 
-	// Token: 0x0600D545 RID: 54597 RVA: 0x00311FBD File Offset: 0x003101BD
+	// Token: 0x0600A958 RID: 43352 RVA: 0x0031D271 File Offset: 0x0031B471
 	public bool IsCurrentDungeonDangoAbyss()
 	{
 		return false;
 	}
 
-	// Token: 0x0600D546 RID: 54598 RVA: 0x00311FC0 File Offset: 0x003101C0
+	// Token: 0x0600A959 RID: 43353 RVA: 0x0031D274 File Offset: 0x0031B474
 	public bool IsDangoInMatch()
 	{
 		return false;
 	}
 
-	// Token: 0x0600D547 RID: 54599 RVA: 0x00311FC4 File Offset: 0x003101C4
+	// Token: 0x0600A95A RID: 43354 RVA: 0x0031D278 File Offset: 0x0031B478
 	public bool ResolveSpecialTrialDeadState(int roleId)
 	{
 		SceneTeamItem teamItem = SceneTeamModel.Instance.GetTeamItem((long)roleId, new GetTeamItemOptions
@@ -280,6 +290,6 @@ public class FormationDataProvider : IFormationProvider
 		return ((roleAttributeData != null) ? roleAttributeData.GetAttrValueById(3) : 0) <= 0;
 	}
 
-	// Token: 0x040061B0 RID: 25008
+	// Token: 0x04006282 RID: 25218
 	private const int HEALTH_ID_FOR_TRIAL = 3;
 }

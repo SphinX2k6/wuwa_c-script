@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B1C RID: 19228
+	// Token: 0x02003AC4 RID: 15044
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,13 +18,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 	})]
 	public class TowerDefenseRankItem : GridProxyAbstract<TowerDefenseRankItemData>
 	{
-		// Token: 0x06031CEA RID: 204010 RVA: 0x00B8FE89 File Offset: 0x00B8E089
+		// Token: 0x06026A7A RID: 158330 RVA: 0x00AD3EED File Offset: 0x00AD20ED
 		public TowerDefenseRankItem(bool isShowInBottom)
 		{
 			this.IsShowInBottom = isShowInBottom;
 		}
 
-		// Token: 0x06031CEB RID: 204011 RVA: 0x00B8FE98 File Offset: 0x00B8E098
+		// Token: 0x06026A7B RID: 158331 RVA: 0x00AD3EFC File Offset: 0x00AD20FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.ParentModel = (this.OpenParam as TowerDefenseRankViewModel);
@@ -57,38 +57,38 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031CEC RID: 204012 RVA: 0x00B9003E File Offset: 0x00B8E23E
+		// Token: 0x06026A7C RID: 158332 RVA: 0x00AD40A2 File Offset: 0x00AD22A2
 		protected override void OnStart()
 		{
 			this.InitOnlineNameLayout();
 			this.InitRankGridLayout();
 		}
 
-		// Token: 0x06031CED RID: 204013 RVA: 0x00B9004C File Offset: 0x00B8E24C
+		// Token: 0x06026A7D RID: 158333 RVA: 0x00AD40B0 File Offset: 0x00AD22B0
 		private void InitOnlineNameLayout()
 		{
 			this.OnlineNameLayout = new GenericLayout<OnlineItem, ITowerDefenseRankPlayerName>(base.GetLayoutBase(5), new Func<OnlineItem>(this.InitOnlineItem), base.GetItem(6).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x06031CEE RID: 204014 RVA: 0x00B9007F File Offset: 0x00B8E27F
+		// Token: 0x06026A7E RID: 158334 RVA: 0x00AD40E3 File Offset: 0x00AD22E3
 		private void InitRankGridLayout()
 		{
 			this.RankGridLayout = new GenericLayout<RankGridItem, TowerDefenseRankRoleData>(base.GetLayoutBase(8), new Func<RankGridItem>(this.InitRankGridItem), base.GetItem(9).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x06031CEF RID: 204015 RVA: 0x00B900B3 File Offset: 0x00B8E2B3
+		// Token: 0x06026A7F RID: 158335 RVA: 0x00AD4117 File Offset: 0x00AD2317
 		private OnlineItem InitOnlineItem()
 		{
 			return new OnlineItem(this.IsShowInBottom);
 		}
 
-		// Token: 0x06031CF0 RID: 204016 RVA: 0x00B900C0 File Offset: 0x00B8E2C0
+		// Token: 0x06026A80 RID: 158336 RVA: 0x00AD4124 File Offset: 0x00AD2324
 		private RankGridItem InitRankGridItem()
 		{
 			return new RankGridItem();
 		}
 
-		// Token: 0x06031CF1 RID: 204017 RVA: 0x00B900C8 File Offset: 0x00B8E2C8
+		// Token: 0x06026A81 RID: 158337 RVA: 0x00AD412C File Offset: 0x00AD232C
 		private void RefreshEmpty()
 		{
 			base.GetText(1).SetUIActive(false);
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshRankBg();
 		}
 
-		// Token: 0x06031CF2 RID: 204018 RVA: 0x00B9017C File Offset: 0x00B8E37C
+		// Token: 0x06026A82 RID: 158338 RVA: 0x00AD41E0 File Offset: 0x00AD23E0
 		private void RefreshRankBg()
 		{
 			bool flag = !this.IsShowInBottom || this.RankItemData.IsTopThree;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031CF3 RID: 204019 RVA: 0x00B901E0 File Offset: 0x00B8E3E0
+		// Token: 0x06026A83 RID: 158339 RVA: 0x00AD4244 File Offset: 0x00AD2444
 		private void RefreshRankNum()
 		{
 			bool isTopThree = this.RankItemData.IsTopThree;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031CF4 RID: 204020 RVA: 0x00B90298 File Offset: 0x00B8E498
+		// Token: 0x06026A84 RID: 158340 RVA: 0x00AD42FC File Offset: 0x00AD24FC
 		public UniTask RefreshPlayerName()
 		{
 			TowerDefenseRankItem.<RefreshPlayerName>d__16 <RefreshPlayerName>d__;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <RefreshPlayerName>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031CF5 RID: 204021 RVA: 0x00B902DC File Offset: 0x00B8E4DC
+		// Token: 0x06026A85 RID: 158341 RVA: 0x00AD4340 File Offset: 0x00AD2540
 		private void RefreshTimeScore()
 		{
 			base.GetText(7).SetUIActive(true);
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			base.GetText(7).SetText(newText, true);
 		}
 
-		// Token: 0x06031CF6 RID: 204022 RVA: 0x00B90340 File Offset: 0x00B8E540
+		// Token: 0x06026A86 RID: 158342 RVA: 0x00AD43A4 File Offset: 0x00AD25A4
 		private UniTask RefreshRankGrid()
 		{
 			TowerDefenseRankItem.<RefreshRankGrid>d__18 <RefreshRankGrid>d__;
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <RefreshRankGrid>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031CF7 RID: 204023 RVA: 0x00B90383 File Offset: 0x00B8E583
+		// Token: 0x06026A87 RID: 158343 RVA: 0x00AD43E7 File Offset: 0x00AD25E7
 		public override void Refresh(TowerDefenseRankItemData data, bool isSelected, int gridIndex)
 		{
 			this.RankItemData = data;
@@ -192,62 +192,62 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshRankGrid();
 		}
 
-		// Token: 0x06031CF8 RID: 204024 RVA: 0x00B903BB File Offset: 0x00B8E5BB
+		// Token: 0x06026A88 RID: 158344 RVA: 0x00AD441F File Offset: 0x00AD261F
 		public bool IsSelfItem()
 		{
 			return this.RankItemData.IsSelfInData;
 		}
 
-		// Token: 0x0401A947 RID: 108871
+		// Token: 0x04015299 RID: 86681
 		protected TowerDefenseRankViewModel ParentModel;
 
-		// Token: 0x0401A948 RID: 108872
+		// Token: 0x0401529A RID: 86682
 		private readonly bool IsShowInBottom;
 
-		// Token: 0x0401A949 RID: 108873
+		// Token: 0x0401529B RID: 86683
 		private GenericLayout<OnlineItem, ITowerDefenseRankPlayerName> OnlineNameLayout;
 
-		// Token: 0x0401A94A RID: 108874
+		// Token: 0x0401529C RID: 86684
 		private GenericLayout<RankGridItem, TowerDefenseRankRoleData> RankGridLayout;
 
-		// Token: 0x0401A94B RID: 108875
+		// Token: 0x0401529D RID: 86685
 		private TowerDefenseRankItemData RankItemData;
 
-		// Token: 0x0200ACA0 RID: 44192
+		// Token: 0x020096C0 RID: 38592
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04034735 RID: 214837
+			// Token: 0x0402F0E6 RID: 192742
 			public const int RankBg = 0;
 
-			// Token: 0x04034736 RID: 214838
+			// Token: 0x0402F0E7 RID: 192743
 			public const int RankTopThreeNum = 1;
 
-			// Token: 0x04034737 RID: 214839
+			// Token: 0x0402F0E8 RID: 192744
 			public const int RankOtherNum = 2;
 
-			// Token: 0x04034738 RID: 214840
+			// Token: 0x0402F0E9 RID: 192745
 			public const int RankNoneItem = 3;
 
-			// Token: 0x04034739 RID: 214841
+			// Token: 0x0402F0EA RID: 192746
 			public const int Name = 4;
 
-			// Token: 0x0403473A RID: 214842
+			// Token: 0x0402F0EB RID: 192747
 			public const int OnlineNameLayout = 5;
 
-			// Token: 0x0403473B RID: 214843
+			// Token: 0x0402F0EC RID: 192748
 			public const int OnlineNameItem = 6;
 
-			// Token: 0x0403473C RID: 214844
+			// Token: 0x0402F0ED RID: 192749
 			public const int TimeScore = 7;
 
-			// Token: 0x0403473D RID: 214845
+			// Token: 0x0402F0EE RID: 192750
 			public const int RankGridLayout = 8;
 
-			// Token: 0x0403473E RID: 214846
+			// Token: 0x0402F0EF RID: 192751
 			public const int RankGridItem = 9;
 
-			// Token: 0x0403473F RID: 214847
+			// Token: 0x0402F0F0 RID: 192752
 			public const int RankGridEmptyItem = 10;
 		}
 	}

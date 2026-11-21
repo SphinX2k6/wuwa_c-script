@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CC7 RID: 27847
+	// Token: 0x0200743D RID: 29757
 	public class IPhotographPlayerPerformT
 	{
-		// Token: 0x1700CF51 RID: 53073
-		// (get) Token: 0x06031141 RID: 201025 RVA: 0x006A909A File Offset: 0x006A729A
-		// (set) Token: 0x06031142 RID: 201026 RVA: 0x006A90A2 File Offset: 0x006A72A2
+		// Token: 0x1700DA8E RID: 55950
+		// (get) Token: 0x06034118 RID: 213272 RVA: 0x007042CE File Offset: 0x007024CE
+		// (set) Token: 0x06034119 RID: 213273 RVA: 0x007042D6 File Offset: 0x007024D6
 		public int MontageId { get; set; }
 
-		// Token: 0x1700CF52 RID: 53074
-		// (get) Token: 0x06031143 RID: 201027 RVA: 0x006A90AB File Offset: 0x006A72AB
-		// (set) Token: 0x06031144 RID: 201028 RVA: 0x006A90B3 File Offset: 0x006A72B3
+		// Token: 0x1700DA8F RID: 55951
+		// (get) Token: 0x0603411A RID: 213274 RVA: 0x007042DF File Offset: 0x007024DF
+		// (set) Token: 0x0603411B RID: 213275 RVA: 0x007042E7 File Offset: 0x007024E7
 		public int FaceId { get; set; }
 
-		// Token: 0x1700CF53 RID: 53075
-		// (get) Token: 0x06031145 RID: 201029 RVA: 0x006A90BC File Offset: 0x006A72BC
-		// (set) Token: 0x06031146 RID: 201030 RVA: 0x006A90C4 File Offset: 0x006A72C4
+		// Token: 0x1700DA90 RID: 55952
+		// (get) Token: 0x0603411C RID: 213276 RVA: 0x007042F0 File Offset: 0x007024F0
+		// (set) Token: 0x0603411D RID: 213277 RVA: 0x007042F8 File Offset: 0x007024F8
 		public byte NullMask { get; set; }
 
-		// Token: 0x06031147 RID: 201031 RVA: 0x006A90CD File Offset: 0x006A72CD
+		// Token: 0x0603411E RID: 213278 RVA: 0x00704301 File Offset: 0x00702501
 		public IPhotographPlayerPerformT()
 		{
 			this.MontageId = 0;

@@ -6,12 +6,12 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001554 RID: 5460
+// Token: 0x02000A0C RID: 2572
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityTitleTypeA : UiPanelBase
 {
-	// Token: 0x06009C53 RID: 40019 RVA: 0x0021D0B4 File Offset: 0x0021B2B4
+	// Token: 0x06007031 RID: 28721 RVA: 0x00226E64 File Offset: 0x00225064
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -54,7 +54,7 @@ public class ActivityTitleTypeA : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009C54 RID: 40020 RVA: 0x0021D2CC File Offset: 0x0021B4CC
+	// Token: 0x06007032 RID: 28722 RVA: 0x0022707C File Offset: 0x0022527C
 	protected override void OnStart()
 	{
 		this.SetSubTitleVisible(false);
@@ -71,7 +71,7 @@ public class ActivityTitleTypeA : UiPanelBase
 		uuiitem.SetUIActive(false);
 	}
 
-	// Token: 0x06009C55 RID: 40021 RVA: 0x0021D304 File Offset: 0x0021B504
+	// Token: 0x06007033 RID: 28723 RVA: 0x002270B4 File Offset: 0x002252B4
 	[NullableContext(2)]
 	public void SetActivityBaseData(ActivityBaseData data)
 	{
@@ -83,7 +83,7 @@ public class ActivityTitleTypeA : UiPanelBase
 		this.SetPnlActTypeByConfig();
 	}
 
-	// Token: 0x06009C56 RID: 40022 RVA: 0x0021D318 File Offset: 0x0021B518
+	// Token: 0x06007034 RID: 28724 RVA: 0x002270C8 File Offset: 0x002252C8
 	private void SetPnlActTypeByConfig()
 	{
 		if (this.ActivityData == null)
@@ -158,7 +158,7 @@ public class ActivityTitleTypeA : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009C57 RID: 40023 RVA: 0x0021D488 File Offset: 0x0021B688
+	// Token: 0x06007035 RID: 28725 RVA: 0x00227238 File Offset: 0x00225438
 	private void SetActTypeTogByConfig(int id)
 	{
 		ActivityTitleTags? activityTitleTags = ActivityConfig.Instance.GetActivityTitleTags(id);
@@ -171,7 +171,7 @@ public class ActivityTitleTypeA : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(8), activityTitleTags.Value.TagName, Array.Empty<object>());
 	}
 
-	// Token: 0x06009C58 RID: 40024 RVA: 0x0021D4FC File Offset: 0x0021B6FC
+	// Token: 0x06007036 RID: 28726 RVA: 0x002272AC File Offset: 0x002254AC
 	private void SetPlayTypeTogBtnByConfig(int id)
 	{
 		ActivityTitleTags? activityTitleTags = ActivityConfig.Instance.GetActivityTitleTags(id);
@@ -184,7 +184,7 @@ public class ActivityTitleTypeA : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(11), activityTitleTags.Value.TagName, Array.Empty<object>());
 	}
 
-	// Token: 0x06009C59 RID: 40025 RVA: 0x0021D56F File Offset: 0x0021B76F
+	// Token: 0x06007037 RID: 28727 RVA: 0x0022731F File Offset: 0x0022551F
 	private void OnClickToggle(EToggleState _)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ActivityTagInfoHelpView, new int[]
@@ -194,13 +194,13 @@ public class ActivityTitleTypeA : UiPanelBase
 		}, null);
 	}
 
-	// Token: 0x06009C5A RID: 40026 RVA: 0x0021D599 File Offset: 0x0021B799
+	// Token: 0x06007038 RID: 28728 RVA: 0x00227349 File Offset: 0x00225549
 	public void SetTitleByTextId(string textId, params string[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 	}
 
-	// Token: 0x06009C5B RID: 40027 RVA: 0x0021D5AE File Offset: 0x0021B7AE
+	// Token: 0x06007039 RID: 28729 RVA: 0x0022735E File Offset: 0x0022555E
 	public void SetTitleByText(string text)
 	{
 		UUIText text2 = base.GetText(0);
@@ -211,7 +211,7 @@ public class ActivityTitleTypeA : UiPanelBase
 		text2.SetText(text, true);
 	}
 
-	// Token: 0x06009C5C RID: 40028 RVA: 0x0021D5C4 File Offset: 0x0021B7C4
+	// Token: 0x0600703A RID: 28730 RVA: 0x00227374 File Offset: 0x00225574
 	public void SetTimeTextByText(string text)
 	{
 		UUIText text2 = base.GetText(1);
@@ -223,7 +223,7 @@ public class ActivityTitleTypeA : UiPanelBase
 		text2.SetText(text, true);
 	}
 
-	// Token: 0x06009C5D RID: 40029 RVA: 0x0021D604 File Offset: 0x0021B804
+	// Token: 0x0600703B RID: 28731 RVA: 0x002273B4 File Offset: 0x002255B4
 	public void SetTimeTextVisible(bool bVisible)
 	{
 		if (base.GetText(1) == null)
@@ -239,19 +239,19 @@ public class ActivityTitleTypeA : UiPanelBase
 		item.SetUIActive(bVisible);
 	}
 
-	// Token: 0x06009C5E RID: 40030 RVA: 0x0021D64D File Offset: 0x0021B84D
+	// Token: 0x0600703C RID: 28732 RVA: 0x002273FD File Offset: 0x002255FD
 	public void SetTimeTextByTextId(string textId, params string[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, args);
 	}
 
-	// Token: 0x06009C5F RID: 40031 RVA: 0x0021D664 File Offset: 0x0021B864
+	// Token: 0x0600703D RID: 28733 RVA: 0x00227414 File Offset: 0x00225614
 	public void SetBgTextureByPath(string path, [Nullable(2)] Action<bool> callback = null)
 	{
 		base.SetTextureByPath(path, base.GetTexture(2), null, callback);
 	}
 
-	// Token: 0x06009C60 RID: 40032 RVA: 0x0021D689 File Offset: 0x0021B889
+	// Token: 0x0600703E RID: 28734 RVA: 0x00227439 File Offset: 0x00225639
 	public void SetBgTextureVisible(bool bVisible)
 	{
 		UUITexture texture = base.GetTexture(2);
@@ -262,7 +262,7 @@ public class ActivityTitleTypeA : UiPanelBase
 		texture.SetUIActive(bVisible);
 	}
 
-	// Token: 0x06009C61 RID: 40033 RVA: 0x0021D69D File Offset: 0x0021B89D
+	// Token: 0x0600703F RID: 28735 RVA: 0x0022744D File Offset: 0x0022564D
 	public void SetSubTitleVisible(bool bVisible)
 	{
 		UUIText text = base.GetText(3);
@@ -273,13 +273,13 @@ public class ActivityTitleTypeA : UiPanelBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x06009C62 RID: 40034 RVA: 0x0021D6B1 File Offset: 0x0021B8B1
+	// Token: 0x06007040 RID: 28736 RVA: 0x00227461 File Offset: 0x00225661
 	public void SetSubTitleByTextId(string textId, params string[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), textId, args);
 	}
 
-	// Token: 0x06009C63 RID: 40035 RVA: 0x0021D6C6 File Offset: 0x0021B8C6
+	// Token: 0x06007041 RID: 28737 RVA: 0x00227476 File Offset: 0x00225676
 	public void SetSubTitleByText(string text)
 	{
 		UUIText text2 = base.GetText(3);
@@ -290,7 +290,7 @@ public class ActivityTitleTypeA : UiPanelBase
 		text2.SetText(text, true);
 	}
 
-	// Token: 0x06009C64 RID: 40036 RVA: 0x0021D6DB File Offset: 0x0021B8DB
+	// Token: 0x06007042 RID: 28738 RVA: 0x0022748B File Offset: 0x0022568B
 	public void SetSubTitleIconVisible(bool bVisible)
 	{
 		UUISprite sprite = base.GetSprite(4);
@@ -301,13 +301,13 @@ public class ActivityTitleTypeA : UiPanelBase
 		sprite.SetUIActive(bVisible);
 	}
 
-	// Token: 0x06009C65 RID: 40037 RVA: 0x0021D6F0 File Offset: 0x0021B8F0
+	// Token: 0x06007043 RID: 28739 RVA: 0x002274A0 File Offset: 0x002256A0
 	public void SetSubTitleIconByPath(string path, [Nullable(2)] Action<bool> callback = null)
 	{
 		this.SetSpriteByPath(path, base.GetSprite(4), true, null, callback);
 	}
 
-	// Token: 0x06009C66 RID: 40038 RVA: 0x0021D718 File Offset: 0x0021B918
+	// Token: 0x06007044 RID: 28740 RVA: 0x002274C8 File Offset: 0x002256C8
 	public void SetTogActPlayTypeVisible(bool bVisible)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(5);
@@ -323,7 +323,7 @@ public class ActivityTitleTypeA : UiPanelBase
 		uuiitem.SetUIActive(bVisible);
 	}
 
-	// Token: 0x06009C67 RID: 40039 RVA: 0x0021D74C File Offset: 0x0021B94C
+	// Token: 0x06007045 RID: 28741 RVA: 0x002274FC File Offset: 0x002256FC
 	public void SetTogActPlayTypeInteractive(bool bInteractive)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(5);
@@ -335,57 +335,57 @@ public class ActivityTitleTypeA : UiPanelBase
 		extendToggle.SetToggleState(bInteractive ? EToggleState.ETT_UnChecked : EToggleState.ETT_UnDetermined, false, false, false);
 	}
 
-	// Token: 0x0400447D RID: 17533
+	// Token: 0x04004523 RID: 17699
 	[Nullable(2)]
 	private ActivityBaseData ActivityData;
 
-	// Token: 0x0400447E RID: 17534
+	// Token: 0x04004524 RID: 17700
 	private int TagId_1;
 
-	// Token: 0x0400447F RID: 17535
+	// Token: 0x04004525 RID: 17701
 	private int TagId_2;
 
-	// Token: 0x02007B94 RID: 31636
+	// Token: 0x02006D1F RID: 27935
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040289E8 RID: 166376
+		// Token: 0x04023D23 RID: 146723
 		public const int Title = 0;
 
-		// Token: 0x040289E9 RID: 166377
+		// Token: 0x04023D24 RID: 146724
 		public const int TextTime = 1;
 
-		// Token: 0x040289EA RID: 166378
+		// Token: 0x04023D25 RID: 146725
 		public const int BgTexture = 2;
 
-		// Token: 0x040289EB RID: 166379
+		// Token: 0x04023D26 RID: 146726
 		public const int SubTitle = 3;
 
-		// Token: 0x040289EC RID: 166380
+		// Token: 0x04023D27 RID: 146727
 		public const int SubTitleIcon = 4;
 
-		// Token: 0x040289ED RID: 166381
+		// Token: 0x04023D28 RID: 146728
 		public const int TogActPlayType = 5;
 
-		// Token: 0x040289EE RID: 166382
+		// Token: 0x04023D29 RID: 146729
 		public const int ItemActType = 6;
 
-		// Token: 0x040289EF RID: 166383
+		// Token: 0x04023D2A RID: 146730
 		public const int SprActType = 7;
 
-		// Token: 0x040289F0 RID: 166384
+		// Token: 0x04023D2B RID: 146731
 		public const int TxtActType = 8;
 
-		// Token: 0x040289F1 RID: 166385
+		// Token: 0x04023D2C RID: 146732
 		public const int ItemPlayType = 9;
 
-		// Token: 0x040289F2 RID: 166386
+		// Token: 0x04023D2D RID: 146733
 		public const int SprPlayType = 10;
 
-		// Token: 0x040289F3 RID: 166387
+		// Token: 0x04023D2E RID: 146734
 		public const int TxtPlayType = 11;
 
-		// Token: 0x040289F4 RID: 166388
+		// Token: 0x04023D2F RID: 146735
 		public const int PnlLimitedTime = 12;
 	}
 }

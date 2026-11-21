@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020FD RID: 8445
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200235E RID: 9054
 	public class PerformerAiSplineMove : ActionParams
 	{
-		// Token: 0x0600B9CC RID: 47564 RVA: 0x001AD88C File Offset: 0x001ABA8C
+		// Token: 0x0600C558 RID: 50520 RVA: 0x001C49EC File Offset: 0x001C2BEC
 		private PerformerAiSplineMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B9CD RID: 47565 RVA: 0x001AD8C4 File Offset: 0x001ABAC4
+		// Token: 0x0600C559 RID: 50521 RVA: 0x001C4A24 File Offset: 0x001C2C24
 		public static PerformerAiSplineMove Create([Nullable(2)] PerformerAiSplineMove instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9CE RID: 47566 RVA: 0x001AD8D7 File Offset: 0x001ABAD7
+		// Token: 0x0600C55A RID: 50522 RVA: 0x001C4A37 File Offset: 0x001C2C37
 		public static PerformerAiSplineMove CreateFromSetValue([Nullable(2)] PerformerAiSplineMove_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9CF RID: 47567 RVA: 0x001AD8EA File Offset: 0x001ABAEA
+		// Token: 0x0600C55B RID: 50523 RVA: 0x001C4A4A File Offset: 0x001C2C4A
 		public PerformerAiSplineMove_SetValue ToSetValue()
 		{
 			return new PerformerAiSplineMove_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170038C4 RID: 14532
-		// (get) Token: 0x0600B9D0 RID: 47568 RVA: 0x001AD900 File Offset: 0x001ABB00
-		// (set) Token: 0x0600B9D1 RID: 47569 RVA: 0x001AD93A File Offset: 0x001ABB3A
+		// Token: 0x17003BB0 RID: 15280
+		// (get) Token: 0x0600C55C RID: 50524 RVA: 0x001C4A60 File Offset: 0x001C2C60
+		// (set) Token: 0x0600C55D RID: 50525 RVA: 0x001C4A9A File Offset: 0x001C2C9A
 		public virtual int? SplineEntityId
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006F45 RID: 28485
+		// Token: 0x04007579 RID: 30073
 		[Nullable(2)]
 		protected new PerformerAiSplineMove FbInstance;
 
-		// Token: 0x04006F46 RID: 28486
+		// Token: 0x0400757A RID: 30074
 		[Nullable(2)]
 		protected PerformerAiSplineMove_SetValue PocoInterface;
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D9C RID: 7580
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FB1 RID: 8113
 	public class IRemovePreloadResourcePhantomCharacter : IRemovePreloadResourceCharacterType
 	{
-		// Token: 0x0600A273 RID: 41587 RVA: 0x0017176C File Offset: 0x0016F96C
+		// Token: 0x0600AC73 RID: 44147 RVA: 0x00185D94 File Offset: 0x00183F94
 		private IRemovePreloadResourcePhantomCharacter_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A274 RID: 41588 RVA: 0x001717A4 File Offset: 0x0016F9A4
+		// Token: 0x0600AC74 RID: 44148 RVA: 0x00185DCC File Offset: 0x00183FCC
 		public static IRemovePreloadResourcePhantomCharacter Create([Nullable(2)] IRemovePreloadResourcePhantomCharacter instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A275 RID: 41589 RVA: 0x001717B7 File Offset: 0x0016F9B7
+		// Token: 0x0600AC75 RID: 44149 RVA: 0x00185DDF File Offset: 0x00183FDF
 		public static IRemovePreloadResourcePhantomCharacter CreateFromSetValue([Nullable(2)] IRemovePreloadResourcePhantomCharacter_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A276 RID: 41590 RVA: 0x001717CA File Offset: 0x0016F9CA
+		// Token: 0x0600AC76 RID: 44150 RVA: 0x00185DF2 File Offset: 0x00183FF2
 		public new IRemovePreloadResourcePhantomCharacter_SetValue ToSetValue()
 		{
 			return new IRemovePreloadResourcePhantomCharacter_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003226 RID: 12838
-		// (get) Token: 0x0600A277 RID: 41591 RVA: 0x001717F5 File Offset: 0x0016F9F5
-		// (set) Token: 0x0600A278 RID: 41592 RVA: 0x00171820 File Offset: 0x0016FA20
+		// Token: 0x170034BE RID: 13502
+		// (get) Token: 0x0600AC77 RID: 44151 RVA: 0x00185E1D File Offset: 0x0018401D
+		// (set) Token: 0x0600AC78 RID: 44152 RVA: 0x00185E48 File Offset: 0x00184048
 		public override ERemovePreloadResourceObjectType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003227 RID: 12839
-		// (get) Token: 0x0600A279 RID: 41593 RVA: 0x0017182E File Offset: 0x0016FA2E
-		// (set) Token: 0x0600A27A RID: 41594 RVA: 0x00171859 File Offset: 0x0016FA59
+		// Token: 0x170034BF RID: 13503
+		// (get) Token: 0x0600AC79 RID: 44153 RVA: 0x00185E56 File Offset: 0x00184056
+		// (set) Token: 0x0600AC7A RID: 44154 RVA: 0x00185E81 File Offset: 0x00184081
 		public virtual int Id
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003228 RID: 12840
-		// (get) Token: 0x0600A27B RID: 41595 RVA: 0x00171868 File Offset: 0x0016FA68
-		// (set) Token: 0x0600A27C RID: 41596 RVA: 0x001718C9 File Offset: 0x0016FAC9
+		// Token: 0x170034C0 RID: 13504
+		// (get) Token: 0x0600AC7B RID: 44155 RVA: 0x00185E90 File Offset: 0x00184090
+		// (set) Token: 0x0600AC7C RID: 44156 RVA: 0x00185EF1 File Offset: 0x001840F1
 		[Nullable(2)]
 		public virtual IDelayRemoveAfterSkillFinish DelayReMove
 		{
@@ -140,18 +138,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006191 RID: 24977
+		// Token: 0x04006715 RID: 26389
 		[Nullable(2)]
 		protected new IRemovePreloadResourcePhantomCharacter FbInstance;
 
-		// Token: 0x04006192 RID: 24978
+		// Token: 0x04006716 RID: 26390
 		[Nullable(2)]
 		protected new IRemovePreloadResourcePhantomCharacter_SetValue PocoInterface;
 
-		// Token: 0x04006193 RID: 24979
+		// Token: 0x04006717 RID: 26391
 		private IDelayRemoveAfterSkillFinish _DelayReMoveCache;
 
-		// Token: 0x04006194 RID: 24980
+		// Token: 0x04006718 RID: 26392
 		private bool _DelayReMoveInited;
 	}
 }

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Season
 {
-	// Token: 0x02005F68 RID: 24424
+	// Token: 0x02004F4F RID: 20303
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WheelTowerSeasonBgItem : UiPanelBase
 	{
-		// Token: 0x0603E03D RID: 254013 RVA: 0x00EF87C0 File Offset: 0x00EF69C0
+		// Token: 0x06032FD7 RID: 208855 RVA: 0x00E4A4A8 File Offset: 0x00E486A8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E03E RID: 254014 RVA: 0x00EF882C File Offset: 0x00EF6A2C
+		// Token: 0x06032FD8 RID: 208856 RVA: 0x00E4A514 File Offset: 0x00E48714
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -34,39 +34,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			this.TweenComponent.Play();
 		}
 
-		// Token: 0x0603E03F RID: 254015 RVA: 0x00EF887B File Offset: 0x00EF6A7B
+		// Token: 0x06032FD9 RID: 208857 RVA: 0x00E4A563 File Offset: 0x00E48763
 		public UiSequencePlayer GetSequencePlayer()
 		{
 			return this.SequencePlayer;
 		}
 
-		// Token: 0x0603E040 RID: 254016 RVA: 0x00EF8883 File Offset: 0x00EF6A83
+		// Token: 0x06032FDA RID: 208858 RVA: 0x00E4A56B File Offset: 0x00E4876B
 		public ULGUIPlayTweenComponent GetTweenComponent()
 		{
 			return this.TweenComponent;
 		}
 
-		// Token: 0x0603E041 RID: 254017 RVA: 0x00EF888B File Offset: 0x00EF6A8B
+		// Token: 0x06032FDB RID: 208859 RVA: 0x00E4A573 File Offset: 0x00E48773
 		public void StopAllTweenAndSpine()
 		{
 			this.TweenComponent.Stop();
 			base.GetSpine(1).SetTimeScale(0f);
 		}
 
-		// Token: 0x04020604 RID: 132612
+		// Token: 0x0401B0D6 RID: 110806
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04020605 RID: 132613
+		// Token: 0x0401B0D7 RID: 110807
 		[Nullable(2)]
 		private ULGUIPlayTweenComponent TweenComponent;
 
-		// Token: 0x0200C269 RID: 49769
+		// Token: 0x0200AC74 RID: 44148
 		[NullableContext(0)]
 		private enum ESeasonBgItemComponent
 		{
-			// Token: 0x0403ABB9 RID: 240569
+			// Token: 0x04035595 RID: 218517
 			TweenRoot,
-			// Token: 0x0403ABBA RID: 240570
+			// Token: 0x04035596 RID: 218518
 			SpineActor
 		}
 	}

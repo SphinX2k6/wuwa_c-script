@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B50 RID: 6992
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CFF RID: 7423
 	public class IInteractOptionConfirmBox
 	{
-		// Token: 0x060095B7 RID: 38327 RVA: 0x0015A1D0 File Offset: 0x001583D0
+		// Token: 0x06009DA3 RID: 40355 RVA: 0x0016AEEC File Offset: 0x001690EC
 		private IInteractOptionConfirmBox_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060095B8 RID: 38328 RVA: 0x0015A208 File Offset: 0x00158408
+		// Token: 0x06009DA4 RID: 40356 RVA: 0x0016AF24 File Offset: 0x00169124
 		public static IInteractOptionConfirmBox Create([Nullable(2)] IInteractOptionConfirmBox instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060095B9 RID: 38329 RVA: 0x0015A21B File Offset: 0x0015841B
+		// Token: 0x06009DA5 RID: 40357 RVA: 0x0016AF37 File Offset: 0x00169137
 		public static IInteractOptionConfirmBox CreateFromSetValue([Nullable(2)] IInteractOptionConfirmBox_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060095BA RID: 38330 RVA: 0x0015A22E File Offset: 0x0015842E
+		// Token: 0x06009DA6 RID: 40358 RVA: 0x0016AF4A File Offset: 0x0016914A
 		public IInteractOptionConfirmBox_SetValue ToSetValue()
 		{
 			return new IInteractOptionConfirmBox_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F3A RID: 12090
-		// (get) Token: 0x060095BB RID: 38331 RVA: 0x0015A241 File Offset: 0x00158441
-		// (set) Token: 0x060095BC RID: 38332 RVA: 0x0015A268 File Offset: 0x00158468
+		// Token: 0x17003161 RID: 12641
+		// (get) Token: 0x06009DA7 RID: 40359 RVA: 0x0016AF5D File Offset: 0x0016915D
+		// (set) Token: 0x06009DA8 RID: 40360 RVA: 0x0016AF84 File Offset: 0x00169184
 		public virtual IInteractionConfirmBoxType Type
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B9F RID: 23455
+		// Token: 0x0400603E RID: 24638
 		[Nullable(2)]
 		protected IInteractOptionConfirmBox FbInstance;
 
-		// Token: 0x04005BA0 RID: 23456
+		// Token: 0x0400603F RID: 24639
 		[Nullable(2)]
 		protected IInteractOptionConfirmBox_SetValue PocoInterface;
 	}

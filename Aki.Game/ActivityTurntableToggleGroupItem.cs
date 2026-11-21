@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001541 RID: 5441
+// Token: 0x020009F9 RID: 2553
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivityTurntableToggleGroupItem : GridProxyAbstract<int>
 {
-	// Token: 0x06009B8C RID: 39820 RVA: 0x0021AC34 File Offset: 0x00218E34
+	// Token: 0x06006F6A RID: 28522 RVA: 0x002249E4 File Offset: 0x00222BE4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -26,7 +26,7 @@ public class ActivityTurntableToggleGroupItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009B8D RID: 39821 RVA: 0x0021ACA0 File Offset: 0x00218EA0
+	// Token: 0x06006F6B RID: 28523 RVA: 0x00224A50 File Offset: 0x00222C50
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityTurntableToggleGroupItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -37,13 +37,13 @@ public class ActivityTurntableToggleGroupItem : GridProxyAbstract<int>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009B8E RID: 39822 RVA: 0x0021ACE3 File Offset: 0x00218EE3
+	// Token: 0x06006F6C RID: 28524 RVA: 0x00224A93 File Offset: 0x00222C93
 	protected override void OnStart()
 	{
 		this.SetToggleDisable(false);
 	}
 
-	// Token: 0x06009B8F RID: 39823 RVA: 0x0021ACEC File Offset: 0x00218EEC
+	// Token: 0x06006F6D RID: 28525 RVA: 0x00224A9C File Offset: 0x00222C9C
 	public void SetToggleDisable(bool isDisable)
 	{
 		EToggleState? toggleState = this.GetToggleState();
@@ -65,14 +65,14 @@ public class ActivityTurntableToggleGroupItem : GridProxyAbstract<int>
 		item2.SetUIActive(isDisable);
 	}
 
-	// Token: 0x06009B90 RID: 39824 RVA: 0x0021AD5E File Offset: 0x00218F5E
+	// Token: 0x06006F6E RID: 28526 RVA: 0x00224B0E File Offset: 0x00222D0E
 	public override void Refresh(int roundId, bool isSelected, int gridIndex)
 	{
 		this.ToggleNormal.Refresh(roundId);
 		this.ToggleDisable.Refresh(roundId);
 	}
 
-	// Token: 0x06009B91 RID: 39825 RVA: 0x0021AD78 File Offset: 0x00218F78
+	// Token: 0x06006F6F RID: 28527 RVA: 0x00224B28 File Offset: 0x00222D28
 	public EToggleState? GetToggleState()
 	{
 		ActivityTurntableToggleItem currentToggle = this.CurrentToggle;
@@ -83,7 +83,7 @@ public class ActivityTurntableToggleGroupItem : GridProxyAbstract<int>
 		return new EToggleState?(currentToggle.GetToggleState());
 	}
 
-	// Token: 0x06009B92 RID: 39826 RVA: 0x0021ADA3 File Offset: 0x00218FA3
+	// Token: 0x06006F70 RID: 28528 RVA: 0x00224B53 File Offset: 0x00222D53
 	public void SetToggleState(bool bSelectOn, bool bFireEvent = false)
 	{
 		ActivityTurntableToggleItem currentToggle = this.CurrentToggle;
@@ -94,29 +94,29 @@ public class ActivityTurntableToggleGroupItem : GridProxyAbstract<int>
 		currentToggle.SetToggleState(bSelectOn, bFireEvent);
 	}
 
-	// Token: 0x04004457 RID: 17495
+	// Token: 0x040044FD RID: 17661
 	private ActivityTurntableToggleItem ToggleNormal;
 
-	// Token: 0x04004458 RID: 17496
+	// Token: 0x040044FE RID: 17662
 	private ActivityTurntableToggleItem ToggleDisable;
 
-	// Token: 0x04004459 RID: 17497
+	// Token: 0x040044FF RID: 17663
 	private ActivityTurntableToggleItem CurrentToggle;
 
-	// Token: 0x0400445A RID: 17498
+	// Token: 0x04004500 RID: 17664
 	public Func<int, bool> CanToggleExecuteChange;
 
-	// Token: 0x0400445B RID: 17499
+	// Token: 0x04004501 RID: 17665
 	public Action<int, bool> ToggleCallBack;
 
-	// Token: 0x02007B76 RID: 31606
+	// Token: 0x02006D01 RID: 27905
 	[NullableContext(0)]
 	private class EToggleGroupComponents
 	{
-		// Token: 0x04028987 RID: 166279
+		// Token: 0x04023CC2 RID: 146626
 		public const int ToggleNormal = 0;
 
-		// Token: 0x04028988 RID: 166280
+		// Token: 0x04023CC3 RID: 146627
 		public const int ToggleDisable = 1;
 	}
 }

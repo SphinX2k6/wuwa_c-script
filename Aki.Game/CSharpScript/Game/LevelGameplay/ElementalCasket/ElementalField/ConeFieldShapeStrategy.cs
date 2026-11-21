@@ -5,13 +5,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006EAF RID: 28335
+	// Token: 0x0200602F RID: 24623
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ConeFieldShapeStrategy : BaseFieldShapeStrategy
 	{
-		// Token: 0x17009A8F RID: 39567
-		// (get) Token: 0x06045068 RID: 282728 RVA: 0x0110E34D File Offset: 0x0110C54D
+		// Token: 0x17006FC6 RID: 28614
+		// (get) Token: 0x0603B209 RID: 242185 RVA: 0x010B8429 File Offset: 0x010B6629
 		public override ESceneItemElementalFieldShapeType ShapeType
 		{
 			get
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x06045069 RID: 282729 RVA: 0x0110E350 File Offset: 0x0110C550
+		// Token: 0x0603B20A RID: 242186 RVA: 0x010B842C File Offset: 0x010B662C
 		public ConeFieldShapeStrategy(ISceneItemElementalFieldShapeContext context, ISpotlightTriggerShape coneShapeConfig) : base(context, coneShapeConfig.Center)
 		{
 			this.HalfAngleDeg = coneShapeConfig.HalfAngle;
@@ -32,8 +32,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			Rotator.Create((float)valueOrDefault2, (float)valueOrDefault, 0f).Vector(this.LocalConeAxis);
 		}
 
-		// Token: 0x17009A90 RID: 39568
-		// (get) Token: 0x0604506A RID: 282730 RVA: 0x0110E42B File Offset: 0x0110C62B
+		// Token: 0x17006FC7 RID: 28615
+		// (get) Token: 0x0603B20B RID: 242187 RVA: 0x010B8507 File Offset: 0x010B6707
 		public override Action<UKuroFastCollisionShapeComponent> ApplyStaticConfig
 		{
 			get
@@ -51,8 +51,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x17009A91 RID: 39569
-		// (get) Token: 0x0604506B RID: 282731 RVA: 0x0110E439 File Offset: 0x0110C639
+		// Token: 0x17006FC8 RID: 28616
+		// (get) Token: 0x0603B20C RID: 242188 RVA: 0x010B8515 File Offset: 0x010B6715
 		[Nullable(2)]
 		public override Action<UKuroFastCollisionShapeComponent> SyncRuntime
 		{
@@ -71,8 +71,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x17009A92 RID: 39570
-		// (get) Token: 0x0604506C RID: 282732 RVA: 0x0110E447 File Offset: 0x0110C647
+		// Token: 0x17006FC9 RID: 28617
+		// (get) Token: 0x0603B20D RID: 242189 RVA: 0x010B8523 File Offset: 0x010B6723
 		public override Func<ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType>, ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType>> FillSnapshot
 		{
 			get
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x0604506D RID: 282733 RVA: 0x0110E458 File Offset: 0x0110C658
+		// Token: 0x0603B20E RID: 242190 RVA: 0x010B8534 File Offset: 0x010B6734
 		private FVector GetConeAxis()
 		{
 			BaseActorComponent baseActorComponent = this.Context.GetBaseActorComponent();
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return this.WorldConeAxis.ToUeVectorOld();
 		}
 
-		// Token: 0x0604506E RID: 282734 RVA: 0x0110E4A8 File Offset: 0x0110C6A8
+		// Token: 0x0603B20F RID: 242191 RVA: 0x010B8584 File Offset: 0x010B6784
 		private Number ComputeSafeConeHeight(FVector axis)
 		{
 			BaseActorComponent baseActorComponent = this.Context.GetBaseActorComponent();
@@ -155,22 +155,22 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return Math.Max(1f, Math.Min(this.ConfigConeHeight, val));
 		}
 
-		// Token: 0x04023EF0 RID: 147184
+		// Token: 0x0401F1A3 RID: 127395
 		private readonly Rotator RelativeRotation = Rotator.Create();
 
-		// Token: 0x04023EF1 RID: 147185
+		// Token: 0x0401F1A4 RID: 127396
 		private readonly Vector LocalConeAxis = Vector.Create();
 
-		// Token: 0x04023EF2 RID: 147186
+		// Token: 0x0401F1A5 RID: 127397
 		private readonly Vector WorldConeAxis = Vector.Create();
 
-		// Token: 0x04023EF3 RID: 147187
+		// Token: 0x0401F1A6 RID: 127398
 		private readonly Number HalfAngleDeg = 0;
 
-		// Token: 0x04023EF4 RID: 147188
+		// Token: 0x0401F1A7 RID: 127399
 		private readonly Number ConfigConeHeight = 1;
 
-		// Token: 0x04023EF5 RID: 147189
+		// Token: 0x0401F1A8 RID: 127400
 		private Number RuntimeConeHeight = 1;
 	}
 }

@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A36 RID: 23094
+	// Token: 0x02004A12 RID: 18962
 	[NullableContext(1)]
 	public interface IFlagChallengeBuffAddItemData
 	{
-		// Token: 0x17008BE4 RID: 35812
-		// (get) Token: 0x0603A95F RID: 239967
-		// (set) Token: 0x0603A960 RID: 239968
+		// Token: 0x17005FB2 RID: 24498
+		// (get) Token: 0x0602F8A8 RID: 194728
+		// (set) Token: 0x0602F8A9 RID: 194729
 		string IconPath { get; set; }
 
-		// Token: 0x17008BE5 RID: 35813
-		// (get) Token: 0x0603A961 RID: 239969
-		// (set) Token: 0x0603A962 RID: 239970
+		// Token: 0x17005FB3 RID: 24499
+		// (get) Token: 0x0602F8AA RID: 194730
+		// (set) Token: 0x0602F8AB RID: 194731
 		string NameKey { get; set; }
 
-		// Token: 0x17008BE6 RID: 35814
-		// (get) Token: 0x0603A963 RID: 239971
-		// (set) Token: 0x0603A964 RID: 239972
+		// Token: 0x17005FB4 RID: 24500
+		// (get) Token: 0x0602F8AC RID: 194732
+		// (set) Token: 0x0602F8AD RID: 194733
 		string Value { get; set; }
 	}
 }

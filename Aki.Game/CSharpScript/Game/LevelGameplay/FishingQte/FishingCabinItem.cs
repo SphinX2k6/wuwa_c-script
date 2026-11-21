@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E3C RID: 28220
+	// Token: 0x02005FBD RID: 24509
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingCabinItem : UiPanelBase
 	{
-		// Token: 0x06044CCE RID: 281806 RVA: 0x010FA370 File Offset: 0x010F8570
+		// Token: 0x0603AE5B RID: 241243 RVA: 0x010A48F0 File Offset: 0x010A2AF0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -37,25 +37,25 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06044CCF RID: 281807 RVA: 0x010FA437 File Offset: 0x010F8637
+		// Token: 0x0603AE5C RID: 241244 RVA: 0x010A49B7 File Offset: 0x010A2BB7
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayout<GridItem, int>(base.GetGridLayout(1), new Func<GridItem>(this.CreateItem), null, false, true);
 		}
 
-		// Token: 0x06044CD0 RID: 281808 RVA: 0x010FA45A File Offset: 0x010F865A
+		// Token: 0x0603AE5D RID: 241245 RVA: 0x010A49DA File Offset: 0x010A2BDA
 		private GridItem CreateItem()
 		{
 			return new GridItem();
 		}
 
-		// Token: 0x06044CD1 RID: 281809 RVA: 0x010FA461 File Offset: 0x010F8661
+		// Token: 0x0603AE5E RID: 241246 RVA: 0x010A49E1 File Offset: 0x010A2BE1
 		protected override void OnBeforeDestroy()
 		{
 			this.ButtonFunction = null;
 		}
 
-		// Token: 0x06044CD2 RID: 281810 RVA: 0x010FA46A File Offset: 0x010F866A
+		// Token: 0x0603AE5F RID: 241247 RVA: 0x010A49EA File Offset: 0x010A2BEA
 		private void ButtonClick()
 		{
 			Action buttonFunction = this.ButtonFunction;
@@ -66,13 +66,13 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			buttonFunction();
 		}
 
-		// Token: 0x06044CD3 RID: 281811 RVA: 0x010FA47C File Offset: 0x010F867C
+		// Token: 0x0603AE60 RID: 241248 RVA: 0x010A49FC File Offset: 0x010A2BFC
 		public void SetFunction(Action buttonFunction)
 		{
 			this.ButtonFunction = buttonFunction;
 		}
 
-		// Token: 0x06044CD4 RID: 281812 RVA: 0x010FA488 File Offset: 0x010F8688
+		// Token: 0x0603AE61 RID: 241249 RVA: 0x010A4A08 File Offset: 0x010A2C08
 		public void RefreshCabin()
 		{
 			List<List<int>> backpackPosDataDoublyList = DockyardModel.Instance.BackpackPosDataDoublyList;
@@ -84,24 +84,24 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.Layout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x04023CB6 RID: 146614
+		// Token: 0x0401EF6B RID: 126827
 		protected GenericLayout<GridItem, int> Layout;
 
-		// Token: 0x04023CB7 RID: 146615
+		// Token: 0x0401EF6C RID: 126828
 		[Nullable(2)]
 		private Action ButtonFunction;
 
-		// Token: 0x0200CCEE RID: 52462
+		// Token: 0x0200B8DE RID: 47326
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403DCCD RID: 253133
+			// Token: 0x040390EF RID: 233711
 			public const int Button = 0;
 
-			// Token: 0x0403DCCE RID: 253134
+			// Token: 0x040390F0 RID: 233712
 			public const int LayoutGridList = 1;
 
-			// Token: 0x0403DCCF RID: 253135
+			// Token: 0x040390F1 RID: 233713
 			public const int GridItem = 2;
 		}
 	}

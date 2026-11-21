@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Cysharp.Threading.Tasks;
@@ -9,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DFE RID: 24062
+	// Token: 0x02004DE3 RID: 19939
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarRuibeika : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D2C4 RID: 250564 RVA: 0x00EBBD10 File Offset: 0x00EB9F10
+		// Token: 0x06032253 RID: 205395 RVA: 0x00E0D25C File Offset: 0x00E0B45C
 		protected override void OnRegisterComponent()
 		{
 			Dictionary<int, Type> dictionary = new Dictionary<int, Type>();
@@ -30,7 +29,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D2C5 RID: 250565 RVA: 0x00EBBDA8 File Offset: 0x00EB9FA8
+		// Token: 0x06032254 RID: 205396 RVA: 0x00E0D2F4 File Offset: 0x00E0B4F4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarRuibeika.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -41,7 +40,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D2C6 RID: 250566 RVA: 0x00EBBDEC File Offset: 0x00EB9FEC
+		// Token: 0x06032255 RID: 205397 RVA: 0x00E0D338 File Offset: 0x00E0B538
 		private void InitDotItems(List<SpecialEnergyBarRuibeikaDot> arr, SpecialEnergyBarRuibeika.EChildType org, SpecialEnergyBarRuibeika.EChildType parent, int mode)
 		{
 			UUIItem item = base.GetItem((int)org);
@@ -57,7 +56,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D2C7 RID: 250567 RVA: 0x00EBBE60 File Offset: 0x00EBA060
+		// Token: 0x06032256 RID: 205398 RVA: 0x00E0D3AC File Offset: 0x00E0B5AC
 		protected override void AddEvents()
 		{
 			base.AddEvents();
@@ -105,7 +104,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			});
 		}
 
-		// Token: 0x0603D2C8 RID: 250568 RVA: 0x00EBBFFC File Offset: 0x00EBA1FC
+		// Token: 0x06032257 RID: 205399 RVA: 0x00E0D548 File Offset: 0x00E0B748
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -129,14 +128,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnBarPercentChanged();
 		}
 
-		// Token: 0x0603D2C9 RID: 250569 RVA: 0x00EBC0F2 File Offset: 0x00EBA2F2
+		// Token: 0x06032258 RID: 205400 RVA: 0x00E0D63E File Offset: 0x00E0B83E
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveTimer();
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603D2CA RID: 250570 RVA: 0x00EBC100 File Offset: 0x00EBA300
+		// Token: 0x06032259 RID: 205401 RVA: 0x00E0D64C File Offset: 0x00E0B84C
 		private void SetState(SpecialEnergyBarRuibeika.EState state, bool force = false)
 		{
 			if (this.CurState == state && !force)
@@ -196,7 +195,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateNorDot(this.AttributeComponent.GetCurrentValue(EAttributeType.SpecialEnergy2), true);
 		}
 
-		// Token: 0x0603D2CB RID: 250571 RVA: 0x00EBC242 File Offset: 0x00EBA442
+		// Token: 0x0603225A RID: 205402 RVA: 0x00E0D78E File Offset: 0x00E0B98E
 		[NullableContext(2)]
 		private void SwitchKeyItem(SpecialEnergyBarInfo cfg)
 		{
@@ -217,7 +216,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D2CC RID: 250572 RVA: 0x00EBC27B File Offset: 0x00EBA47B
+		// Token: 0x0603225B RID: 205403 RVA: 0x00E0D7C7 File Offset: 0x00E0B9C7
 		private void RemoveTimer()
 		{
 			if (this.TimerHandle != null)
@@ -227,15 +226,24 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D2CD RID: 250573 RVA: 0x00EBC2A0 File Offset: 0x00EBA4A0
+		// Token: 0x0603225C RID: 205404 RVA: 0x00E0D7EC File Offset: 0x00E0B9EC
 		private void UpdateNorDotMode(bool doubleColor)
 		{
 			this.DelayedDoubleColorMode = doubleColor;
 			this.PendingDoubleColorModeSwitch = true;
 			if (this.DurationAniUse == 0f)
 			{
-				SpecialEnergyBarRuibeikaDot specialEnergyBarRuibeikaDot = this.C2DotItems.ElementAtOrDefault(0);
-				this.DurationAniUse = Math.Max((specialEnergyBarRuibeikaDot != null) ? specialEnergyBarRuibeikaDot.GetAniUseDuration() : 0.2f, 0.2f);
+				float val;
+				if (this.C2DotItems.Count <= 0)
+				{
+					val = 0.2f;
+				}
+				else
+				{
+					SpecialEnergyBarRuibeikaDot specialEnergyBarRuibeikaDot = this.C2DotItems[0];
+					val = ((specialEnergyBarRuibeikaDot != null) ? specialEnergyBarRuibeikaDot.GetAniUseDuration() : 0.2f);
+				}
+				this.DurationAniUse = Math.Max(val, 0.2f);
 			}
 			this.TimerHandle = TimerSystem.Instance.Delay(delegate(float _)
 			{
@@ -247,7 +255,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, this.DurationAniUse * 1000f, null, null, true, CharacterModel.Instance.InverseSelfCenteredTimeDilation);
 		}
 
-		// Token: 0x0603D2CE RID: 250574 RVA: 0x00EBC32C File Offset: 0x00EBA52C
+		// Token: 0x0603225D RID: 205405 RVA: 0x00E0D88C File Offset: 0x00E0BA8C
 		private void UpdateNorDotModeInner()
 		{
 			this.PendingDoubleColorModeSwitch = false;
@@ -266,7 +274,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateNorDot(this.AttributeComponent.GetCurrentValue(EAttributeType.SpecialEnergy2), true);
 		}
 
-		// Token: 0x0603D2CF RID: 250575 RVA: 0x00EBC39C File Offset: 0x00EBA59C
+		// Token: 0x0603225E RID: 205406 RVA: 0x00E0D8FC File Offset: 0x00E0BAFC
 		private void UpdateNorDot(float attrValue, bool force = false)
 		{
 			float num = attrValue / this.EnergyMaxB;
@@ -282,7 +290,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D2D0 RID: 250576 RVA: 0x00EBC424 File Offset: 0x00EBA624
+		// Token: 0x0603225F RID: 205407 RVA: 0x00E0D984 File Offset: 0x00E0BB84
 		protected override void OnBarPercentChanged()
 		{
 			SpecialEnergyBarSlotItem slotItem = this.SlotItem;
@@ -301,7 +309,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D2D1 RID: 250577 RVA: 0x00EBC474 File Offset: 0x00EBA674
+		// Token: 0x06032260 RID: 205408 RVA: 0x00E0D9D4 File Offset: 0x00E0BBD4
 		private void UpdateUltBarPercent(float attrValue)
 		{
 			float num = attrValue / this.EnergyMaxC;
@@ -326,7 +334,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item2.SetAnchorOffsetX(this.BarTipsWidth * (num - 0.5f));
 		}
 
-		// Token: 0x0603D2D2 RID: 250578 RVA: 0x00EBC4DC File Offset: 0x00EBA6DC
+		// Token: 0x06032261 RID: 205409 RVA: 0x00E0DA3C File Offset: 0x00E0BC3C
 		private void UpdateUltLevel(int lv)
 		{
 			if (this.UltLevel == lv)
@@ -393,7 +401,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D2D3 RID: 250579 RVA: 0x00EBC618 File Offset: 0x00EBA818
+		// Token: 0x06032262 RID: 205410 RVA: 0x00E0DB78 File Offset: 0x00E0BD78
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -428,7 +436,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D2D6 RID: 250582 RVA: 0x00EBC728 File Offset: 0x00EBA928
+		// Token: 0x06032265 RID: 205413 RVA: 0x00E0DC88 File Offset: 0x00E0BE88
 		[CompilerGenerated]
 		private BaseTagComponent.TTagSwitchedCallback <AddEvents>g__onStateChanged|18_0(SpecialEnergyBarRuibeika.EState state)
 		{
@@ -441,7 +449,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			};
 		}
 
-		// Token: 0x0603D2D8 RID: 250584 RVA: 0x00EBC751 File Offset: 0x00EBA951
+		// Token: 0x06032267 RID: 205415 RVA: 0x00E0DCB1 File Offset: 0x00E0BEB1
 		[CompilerGenerated]
 		private BaseTagComponent.TTagSwitchedCallback <AddEvents>g__onUltLevelChanged|18_2(int lv)
 		{
@@ -454,149 +462,149 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			};
 		}
 
-		// Token: 0x0401FE50 RID: 130640
+		// Token: 0x0401A917 RID: 108823
 		private const int BTN_ULTCONFIG = 130801;
 
-		// Token: 0x0401FE51 RID: 130641
+		// Token: 0x0401A918 RID: 108824
 		private const EAttributeType ENERGY_ATTR_DOT = EAttributeType.SpecialEnergy2;
 
-		// Token: 0x0401FE52 RID: 130642
+		// Token: 0x0401A919 RID: 108825
 		private const EAttributeType ENERGY_MAX_ATTR_DOT = EAttributeType.SpecialEnergy2Max;
 
-		// Token: 0x0401FE53 RID: 130643
+		// Token: 0x0401A91A RID: 108826
 		private const EAttributeType ENERGY_ATTR_ULT = EAttributeType.SpecialEnergy3;
 
-		// Token: 0x0401FE54 RID: 130644
+		// Token: 0x0401A91B RID: 108827
 		private const EAttributeType ENERGY_MAX_ATTR_ULT = EAttributeType.SpecialEnergy3Max;
 
-		// Token: 0x0401FE55 RID: 130645
+		// Token: 0x0401A91C RID: 108828
 		[Nullable(2)]
 		private SpecialEnergyBarSlotItem SlotItem;
 
-		// Token: 0x0401FE56 RID: 130646
+		// Token: 0x0401A91D RID: 108829
 		private readonly List<SpecialEnergyBarInfo> ConfigList = new List<SpecialEnergyBarInfo>();
 
-		// Token: 0x0401FE57 RID: 130647
+		// Token: 0x0401A91E RID: 108830
 		private readonly List<SpecialEnergyBarRuibeikaDot> C1DotItems = new List<SpecialEnergyBarRuibeikaDot>();
 
-		// Token: 0x0401FE58 RID: 130648
+		// Token: 0x0401A91F RID: 108831
 		private readonly List<SpecialEnergyBarRuibeikaDot> C2DotItems = new List<SpecialEnergyBarRuibeikaDot>();
 
-		// Token: 0x0401FE59 RID: 130649
+		// Token: 0x0401A920 RID: 108832
 		private readonly MotorcyclePercentMachine UltCdMachine = new MotorcyclePercentMachine();
 
-		// Token: 0x0401FE5A RID: 130650
+		// Token: 0x0401A921 RID: 108833
 		private float EnergyMaxB = 1f;
 
-		// Token: 0x0401FE5B RID: 130651
+		// Token: 0x0401A922 RID: 108834
 		private float EnergyMaxC = 1f;
 
-		// Token: 0x0401FE5C RID: 130652
+		// Token: 0x0401A923 RID: 108835
 		private SpecialEnergyBarRuibeika.EState CurState;
 
-		// Token: 0x0401FE5D RID: 130653
+		// Token: 0x0401A924 RID: 108836
 		private float BarTipsWidth = 1f;
 
-		// Token: 0x0401FE5E RID: 130654
+		// Token: 0x0401A925 RID: 108837
 		private bool IsDoubleColorMode;
 
-		// Token: 0x0401FE5F RID: 130655
+		// Token: 0x0401A926 RID: 108838
 		private bool DelayedDoubleColorMode;
 
-		// Token: 0x0401FE60 RID: 130656
+		// Token: 0x0401A927 RID: 108839
 		private bool PendingDoubleColorModeSwitch;
 
-		// Token: 0x0401FE61 RID: 130657
+		// Token: 0x0401A928 RID: 108840
 		private float DurationAniUse;
 
-		// Token: 0x0401FE62 RID: 130658
+		// Token: 0x0401A929 RID: 108841
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0401FE63 RID: 130659
+		// Token: 0x0401A92A RID: 108842
 		[Nullable(2)]
 		private UUISprite UltCdBar;
 
-		// Token: 0x0401FE64 RID: 130660
+		// Token: 0x0401A92B RID: 108843
 		private int UltCdDoneAnim;
 
-		// Token: 0x0401FE65 RID: 130661
+		// Token: 0x0401A92C RID: 108844
 		private int UltLevel;
 
-		// Token: 0x0401FE66 RID: 130662
+		// Token: 0x0401A92D RID: 108845
 		private bool IsUltFinalDone;
 
-		// Token: 0x0200C14A RID: 49482
+		// Token: 0x0200AB59 RID: 43865
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A627 RID: 239143
+			// Token: 0x04035019 RID: 217113
 			PnlNor,
-			// Token: 0x0403A628 RID: 239144
+			// Token: 0x0403501A RID: 217114
 			PnlBarC1,
-			// Token: 0x0403A629 RID: 239145
+			// Token: 0x0403501B RID: 217115
 			PnlItemC1,
-			// Token: 0x0403A62A RID: 239146
+			// Token: 0x0403501C RID: 217116
 			PnlBarC2,
-			// Token: 0x0403A62B RID: 239147
+			// Token: 0x0403501D RID: 217117
 			PnlItemC2,
-			// Token: 0x0403A62C RID: 239148
+			// Token: 0x0403501E RID: 217118
 			SlotNor,
-			// Token: 0x0403A62D RID: 239149
+			// Token: 0x0403501F RID: 217119
 			PnlIconGun,
-			// Token: 0x0403A62E RID: 239150
+			// Token: 0x04035020 RID: 217120
 			PnlIconRifle,
-			// Token: 0x0403A62F RID: 239151
+			// Token: 0x04035021 RID: 217121
 			PnlUlt,
-			// Token: 0x0403A630 RID: 239152
+			// Token: 0x04035022 RID: 217122
 			SprUltIcon,
-			// Token: 0x0403A631 RID: 239153
+			// Token: 0x04035023 RID: 217123
 			SprUltBar0,
-			// Token: 0x0403A632 RID: 239154
+			// Token: 0x04035024 RID: 217124
 			SprUltBar1,
-			// Token: 0x0403A633 RID: 239155
+			// Token: 0x04035025 RID: 217125
 			SprUltBar2,
-			// Token: 0x0403A634 RID: 239156
+			// Token: 0x04035026 RID: 217126
 			PnlHotKey,
-			// Token: 0x0403A635 RID: 239157
+			// Token: 0x04035027 RID: 217127
 			AniRedGun,
-			// Token: 0x0403A636 RID: 239158
+			// Token: 0x04035028 RID: 217128
 			AniGreenGun,
-			// Token: 0x0403A637 RID: 239159
+			// Token: 0x04035029 RID: 217129
 			AniNorToUlt,
-			// Token: 0x0403A638 RID: 239160
+			// Token: 0x0403502A RID: 217130
 			AniUltToNor,
-			// Token: 0x0403A639 RID: 239161
+			// Token: 0x0403502B RID: 217131
 			AniState1Done,
-			// Token: 0x0403A63A RID: 239162
+			// Token: 0x0403502C RID: 217132
 			AniState1To2,
-			// Token: 0x0403A63B RID: 239163
+			// Token: 0x0403502D RID: 217133
 			AniState2Done,
-			// Token: 0x0403A63C RID: 239164
+			// Token: 0x0403502E RID: 217134
 			AniState2To3,
-			// Token: 0x0403A63D RID: 239165
+			// Token: 0x0403502F RID: 217135
 			AniState3Done,
-			// Token: 0x0403A63E RID: 239166
+			// Token: 0x04035030 RID: 217136
 			AniState3Use,
-			// Token: 0x0403A63F RID: 239167
+			// Token: 0x04035031 RID: 217137
 			NiaUltGun,
-			// Token: 0x0403A640 RID: 239168
+			// Token: 0x04035032 RID: 217138
 			PnlUltBar,
-			// Token: 0x0403A641 RID: 239169
+			// Token: 0x04035033 RID: 217139
 			PnlUltCdDone,
-			// Token: 0x0403A642 RID: 239170
+			// Token: 0x04035034 RID: 217140
 			MaxCount
 		}
 
-		// Token: 0x0200C14B RID: 49483
+		// Token: 0x0200AB5A RID: 43866
 		[NullableContext(0)]
 		private enum EState
 		{
-			// Token: 0x0403A644 RID: 239172
+			// Token: 0x04035036 RID: 217142
 			StateGun,
-			// Token: 0x0403A645 RID: 239173
+			// Token: 0x04035037 RID: 217143
 			StateRifle,
-			// Token: 0x0403A646 RID: 239174
+			// Token: 0x04035038 RID: 217144
 			StateUlt
 		}
 	}

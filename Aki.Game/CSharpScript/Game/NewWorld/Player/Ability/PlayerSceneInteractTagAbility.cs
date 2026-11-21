@@ -6,53 +6,53 @@ using CSharpScript.Game.NewWorld.Player.Component;
 
 namespace CSharpScript.Game.NewWorld.Player.Ability
 {
-	// Token: 0x0200705B RID: 28763
+	// Token: 0x020061DC RID: 25052
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerSceneInteractTagAbility : LevelEntityAbilityBase
 	{
-		// Token: 0x06046015 RID: 286741 RVA: 0x0117383B File Offset: 0x01171A3B
+		// Token: 0x0603C20C RID: 246284 RVA: 0x0111D436 File Offset: 0x0111B636
 		public PlayerSceneInteractTagAbility(ELevelEntityAbilityType Type, EAbilityTickPhase TickPhase, int TickOrder, bool NeedTickActivate) : base(Type, TickPhase, TickOrder, NeedTickActivate)
 		{
 		}
 
-		// Token: 0x06046016 RID: 286742 RVA: 0x01173848 File Offset: 0x01171A48
+		// Token: 0x0603C20D RID: 246285 RVA: 0x0111D444 File Offset: 0x0111B644
 		public override bool ShouldActivate(Entity entity)
 		{
 			return this.GetBestInteractTagId(entity) != null;
 		}
 
-		// Token: 0x06046017 RID: 286743 RVA: 0x01173864 File Offset: 0x01171A64
+		// Token: 0x0603C20E RID: 246286 RVA: 0x0111D460 File Offset: 0x0111B660
 		public override bool ShouldDeactivate(Entity entity)
 		{
 			return this.GetBestInteractTagId(entity) == null;
 		}
 
-		// Token: 0x06046018 RID: 286744 RVA: 0x01173883 File Offset: 0x01171A83
+		// Token: 0x0603C20F RID: 246287 RVA: 0x0111D47F File Offset: 0x0111B67F
 		public override void OnActivated(Entity entity)
 		{
 			this.SyncTag(entity, this.GetBestInteractTagId(entity));
 		}
 
-		// Token: 0x06046019 RID: 286745 RVA: 0x01173893 File Offset: 0x01171A93
+		// Token: 0x0603C210 RID: 246288 RVA: 0x0111D48F File Offset: 0x0111B68F
 		public override void OnTick(Entity entity, float deltaMilliseconds)
 		{
 			this.SyncTag(entity, this.GetBestInteractTagId(entity));
 		}
 
-		// Token: 0x0604601A RID: 286746 RVA: 0x011738A4 File Offset: 0x01171AA4
+		// Token: 0x0603C211 RID: 246289 RVA: 0x0111D4A0 File Offset: 0x0111B6A0
 		public override void OnDeactivated(Entity entity)
 		{
 			this.SyncTag(entity, null);
 		}
 
-		// Token: 0x0604601B RID: 286747 RVA: 0x011738C4 File Offset: 0x01171AC4
+		// Token: 0x0603C212 RID: 246290 RVA: 0x0111D4C0 File Offset: 0x0111B6C0
 		public override void OnDestroy(Entity entity)
 		{
 			this.SyncTag(entity, null);
 		}
 
-		// Token: 0x0604601C RID: 286748 RVA: 0x011738E4 File Offset: 0x01171AE4
+		// Token: 0x0603C213 RID: 246291 RVA: 0x0111D4E0 File Offset: 0x0111B6E0
 		private int? GetBestInteractTagId(Entity entity)
 		{
 			PlayerSceneInteractComponent component = entity.GetComponent<PlayerSceneInteractComponent>();
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.NewWorld.Player.Ability
 			return new int?((sceneInteractPoint as ISceneInteractTag).GetInteractTagId());
 		}
 
-		// Token: 0x0604601D RID: 286749 RVA: 0x0117392C File Offset: 0x01171B2C
+		// Token: 0x0603C214 RID: 246292 RVA: 0x0111D528 File Offset: 0x0111B728
 		private void SyncTag(Entity entity, int? desiredTagId)
 		{
 			int? appliedTagId = this.AppliedTagId;
@@ -89,13 +89,23 @@ namespace CSharpScript.Game.NewWorld.Player.Ability
 			this.AppliedTagId = desiredTagId;
 		}
 
-		// Token: 0x0604601E RID: 286750 RVA: 0x011739A2 File Offset: 0x01171BA2
+		// Token: 0x0603C215 RID: 246293 RVA: 0x0111D59E File Offset: 0x0111B79E
 		private static bool ImplementsSceneInteractTag(ISceneInteractPoint point)
 		{
 			return point is ISceneInteractTag;
 		}
 
-		// Token: 0x04024A68 RID: 150120
+		// Token: 0x17007174 RID: 29044
+		// (get) Token: 0x0603C216 RID: 246294 RVA: 0x0111D5A9 File Offset: 0x0111B7A9
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FD1E RID: 130334
 		private int? AppliedTagId;
 	}
 }

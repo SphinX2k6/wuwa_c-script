@@ -5,17 +5,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004900 RID: 18688
+	// Token: 0x02003877 RID: 14455
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomManageConfigPanelHandle : SpecialPanelHandleBase
 	{
-		// Token: 0x06030DBD RID: 200125 RVA: 0x00B58BF8 File Offset: 0x00B56DF8
+		// Token: 0x060258EA RID: 153834 RVA: 0x00A93A68 File Offset: 0x00A91C68
 		public PhantomManageConfigPanelHandle(string type) : base(type)
 		{
 		}
 
-		// Token: 0x06030DBE RID: 200126 RVA: 0x00B58C0C File Offset: 0x00B56E0C
+		// Token: 0x060258EB RID: 153835 RVA: 0x00A93A7C File Offset: 0x00A91C7C
 		public void AddNavigationListener(AActor layout, TsUiNavigationBehaviorListener listener, UUIItem item)
 		{
 			List<TsUiNavigationBehaviorListener> list;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030DBF RID: 200127 RVA: 0x00B58C60 File Offset: 0x00B56E60
+		// Token: 0x060258EC RID: 153836 RVA: 0x00A93AD0 File Offset: 0x00A91CD0
 		public void FindNextFocusListener(AActor layout, TsUiNavigationBehaviorListener listener)
 		{
 			List<TsUiNavigationBehaviorListener> list;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationNewController.Instance.SetNavigationFocusForView(tsUiNavigationBehaviorListener.RootUIComp, true, false, false);
 		}
 
-		// Token: 0x06030DC0 RID: 200128 RVA: 0x00B58CC8 File Offset: 0x00B56EC8
+		// Token: 0x060258ED RID: 153837 RVA: 0x00A93B38 File Offset: 0x00A91D38
 		[return: Nullable(2)]
 		private TsUiNavigationBehaviorListener FindActiveListener(List<TsUiNavigationBehaviorListener> list, int start, int end, int step)
 		{
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return null;
 		}
 
-		// Token: 0x06030DC1 RID: 200129 RVA: 0x00B58CF8 File Offset: 0x00B56EF8
+		// Token: 0x060258EE RID: 153838 RVA: 0x00A93B68 File Offset: 0x00A91D68
 		private int ListenerListSortFunction(TsUiNavigationBehaviorListener aListener, TsUiNavigationBehaviorListener bListener)
 		{
 			int num = aListener.IsValid() ? aListener.RootUIComp.Get().hierarchyIndex : 0;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return -1;
 		}
 
-		// Token: 0x0401A3BB RID: 107451
+		// Token: 0x04014C2E RID: 85038
 		private readonly Dictionary<AActor, List<TsUiNavigationBehaviorListener>> LayoutListenerListMap = new Dictionary<AActor, List<TsUiNavigationBehaviorListener>>();
 	}
 }

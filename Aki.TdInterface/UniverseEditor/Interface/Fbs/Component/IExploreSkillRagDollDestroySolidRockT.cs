@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005205 RID: 20997
+	// Token: 0x0200576D RID: 22381
 	public class IExploreSkillRagDollDestroySolidRockT
 	{
-		// Token: 0x170099D0 RID: 39376
-		// (get) Token: 0x060221E2 RID: 139746 RVA: 0x004BC0D2 File Offset: 0x004BA2D2
-		// (set) Token: 0x060221E3 RID: 139747 RVA: 0x004BC0DA File Offset: 0x004BA2DA
+		// Token: 0x1700A1CC RID: 41420
+		// (get) Token: 0x06024178 RID: 147832 RVA: 0x004F6B96 File Offset: 0x004F4D96
+		// (set) Token: 0x06024179 RID: 147833 RVA: 0x004F6B9E File Offset: 0x004F4D9E
 		public EExploreSkillInteractType Type { get; set; }
 
-		// Token: 0x060221E4 RID: 139748 RVA: 0x004BC0E3 File Offset: 0x004BA2E3
+		// Token: 0x0602417A RID: 147834 RVA: 0x004F6BA7 File Offset: 0x004F4DA7
 		public IExploreSkillRagDollDestroySolidRockT()
 		{
 			this.Type = EExploreSkillInteractType.PullGiant;

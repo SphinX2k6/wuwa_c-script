@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 {
-	// Token: 0x02006499 RID: 25753
+	// Token: 0x02005417 RID: 21527
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,13 +14,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 	})]
 	public class MatchThreeLevelItemTemplateData : MultiTemplateGridDataBase<MatchThreeChapterSelectData, MatchThreeLevelItem>
 	{
-		// Token: 0x06040ADB RID: 264923 RVA: 0x00FA8282 File Offset: 0x00FA6482
+		// Token: 0x0603579F RID: 219039 RVA: 0x00EEF2CA File Offset: 0x00EED4CA
 		public override int GetTemplateIndex()
 		{
 			return (base.Data.IsEndless > false) ? 1 : 0;
 		}
 
-		// Token: 0x06040ADC RID: 264924 RVA: 0x00FA8292 File Offset: 0x00FA6492
+		// Token: 0x060357A0 RID: 219040 RVA: 0x00EEF2DA File Offset: 0x00EED4DA
 		public override MatchThreeLevelItem CreateProxy()
 		{
 			return new MatchThreeLevelItem
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			};
 		}
 
-		// Token: 0x04021A71 RID: 137841
+		// Token: 0x0401C3A2 RID: 115618
 		[Nullable(new byte[]
 		{
 			2,

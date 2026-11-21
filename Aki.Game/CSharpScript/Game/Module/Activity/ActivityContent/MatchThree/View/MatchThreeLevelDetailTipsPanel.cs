@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 {
-	// Token: 0x02006494 RID: 25748
+	// Token: 0x02005412 RID: 21522
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MatchThreeLevelDetailTipsPanel : UiPanelBase
 	{
-		// Token: 0x06040A90 RID: 264848 RVA: 0x00FA6514 File Offset: 0x00FA4714
+		// Token: 0x06035754 RID: 218964 RVA: 0x00EED55C File Offset: 0x00EEB75C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040A91 RID: 264849 RVA: 0x00FA672C File Offset: 0x00FA492C
+		// Token: 0x06035755 RID: 218965 RVA: 0x00EED774 File Offset: 0x00EEB974
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MatchThreeLevelDetailTipsPanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -73,19 +73,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040A92 RID: 264850 RVA: 0x00FA676F File Offset: 0x00FA496F
+		// Token: 0x06035756 RID: 218966 RVA: 0x00EED7B7 File Offset: 0x00EEB9B7
 		public void SetConfirmCallback(Action callback)
 		{
 			this.ConfirmCallback = callback;
 		}
 
-		// Token: 0x06040A93 RID: 264851 RVA: 0x00FA6778 File Offset: 0x00FA4978
+		// Token: 0x06035757 RID: 218967 RVA: 0x00EED7C0 File Offset: 0x00EEB9C0
 		public void SetLevelDetailCallback(Action callback)
 		{
 			this.LevelDetailCallback = callback;
 		}
 
-		// Token: 0x06040A94 RID: 264852 RVA: 0x00FA6784 File Offset: 0x00FA4984
+		// Token: 0x06035758 RID: 218968 RVA: 0x00EED7CC File Offset: 0x00EEB9CC
 		public void Refresh(MatchThreeLevelDetailViewModel viewModel, ActivityMatchThreeData activityData)
 		{
 			this.ActivityData = activityData;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.RefreshChallengeButton(viewModel, activityData, isEndless);
 		}
 
-		// Token: 0x06040A95 RID: 264853 RVA: 0x00FA67E4 File Offset: 0x00FA49E4
+		// Token: 0x06035759 RID: 218969 RVA: 0x00EED82C File Offset: 0x00EEBA2C
 		private void RefreshLevelInfo(MatchThreeLevel? levelConfig, int levelId)
 		{
 			ActivityMatchThreeConfig instance = ActivityMatchThreeConfig.Instance;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			uuiitem.SetUIActive(ActivityMatchThreeConfig.Instance.HasLevelEnvironments(levelId));
 		}
 
-		// Token: 0x06040A96 RID: 264854 RVA: 0x00FA6868 File Offset: 0x00FA4A68
+		// Token: 0x0603575A RID: 218970 RVA: 0x00EED8B0 File Offset: 0x00EEBAB0
 		private void RefreshLevelDesc(MatchThreeLevel? levelConfig)
 		{
 			UUIText text = base.GetText(11);
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			LguiUtil.Instance.TrySetLocalTextNew(text, text2, Array.Empty<object>());
 		}
 
-		// Token: 0x06040A97 RID: 264855 RVA: 0x00FA68C0 File Offset: 0x00FA4AC0
+		// Token: 0x0603575B RID: 218971 RVA: 0x00EED908 File Offset: 0x00EEBB08
 		private void RefreshTargetText(MatchThreeLevel? levelConfig, int levelId)
 		{
 			UUIText text = base.GetText(4);
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			LguiUtil.Instance.TrySetLocalTextNew(text, condDesc, new <>z__ReadOnlySingleElementList<object>(value.Params(0)));
 		}
 
-		// Token: 0x06040A98 RID: 264856 RVA: 0x00FA6A14 File Offset: 0x00FA4C14
+		// Token: 0x0603575C RID: 218972 RVA: 0x00EEDA5C File Offset: 0x00EEBC5C
 		private void RefreshEnvironmentText(int levelId)
 		{
 			UUIText text = base.GetText(5);
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			LguiUtil.Instance.TrySetLocalTextNew(text, levelEnvironmentDescTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x06040A99 RID: 264857 RVA: 0x00FA6A68 File Offset: 0x00FA4C68
+		// Token: 0x0603575D RID: 218973 RVA: 0x00EEDAB0 File Offset: 0x00EEBCB0
 		private static void SetInfoText([Nullable(2)] UUIText text, string content)
 		{
 			if (text == null)
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040A9A RID: 264858 RVA: 0x00FA6A98 File Offset: 0x00FA4C98
+		// Token: 0x0603575E RID: 218974 RVA: 0x00EEDAE0 File Offset: 0x00EEBCE0
 		private void RefreshReward(MatchThreeLevel? levelConfig)
 		{
 			int num = (levelConfig != null) ? levelConfig.GetValueOrDefault().RewardDrop : 0;
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			uuiitem.SetUIActive(list.Count > 0);
 		}
 
-		// Token: 0x06040A9B RID: 264859 RVA: 0x00FA6B18 File Offset: 0x00FA4D18
+		// Token: 0x0603575F RID: 218975 RVA: 0x00EEDB60 File Offset: 0x00EEBD60
 		private void RefreshChallengeButton(MatchThreeLevelDetailViewModel viewModel, ActivityMatchThreeData activityData, bool isEndless)
 		{
 			bool flag = !isEndless && viewModel.DifficultyIndex > 0 && !activityData.CheckChallengeComplete(viewModel.ChapterData.NormalLevelId);
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040A9C RID: 264860 RVA: 0x00FA6B90 File Offset: 0x00FA4D90
+		// Token: 0x06035760 RID: 218976 RVA: 0x00EEDBD8 File Offset: 0x00EEBDD8
 		[NullableContext(2)]
 		private static void RefreshHardLockTipText(UUIItem lockPanel)
 		{
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040A9D RID: 264861 RVA: 0x00FA6BF4 File Offset: 0x00FA4DF4
+		// Token: 0x06035761 RID: 218977 RVA: 0x00EEDC3C File Offset: 0x00EEBE3C
 		private void RefreshTitleBg(bool isEndless)
 		{
 			string path = isEndless ? "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity37/Match3Game/LevelDetail/SP_InfoTitleBg2.SP_InfoTitleBg2" : "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity37/Match3Game/LevelDetail/SP_InfoTitleBg1.SP_InfoTitleBg1";
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040A9E RID: 264862 RVA: 0x00FA6C4D File Offset: 0x00FA4E4D
+		// Token: 0x06035762 RID: 218978 RVA: 0x00EEDC95 File Offset: 0x00EEBE95
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
 			return new CommonItemSmallItemGrid
@@ -313,13 +313,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			};
 		}
 
-		// Token: 0x06040A9F RID: 264863 RVA: 0x00FA6C66 File Offset: 0x00FA4E66
+		// Token: 0x06035763 RID: 218979 RVA: 0x00EEDCAE File Offset: 0x00EEBEAE
 		private bool OnShowRewardReceived(TItem _)
 		{
 			return this.ActivityData != null && this.CurrentLevelId > 0 && this.ActivityData.CheckChallengeComplete(this.CurrentLevelId);
 		}
 
-		// Token: 0x06040AA0 RID: 264864 RVA: 0x00FA6C8C File Offset: 0x00FA4E8C
+		// Token: 0x06035764 RID: 218980 RVA: 0x00EEDCD4 File Offset: 0x00EEBED4
 		private void OnClickConfirm()
 		{
 			Action confirmCallback = this.ConfirmCallback;
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			confirmCallback();
 		}
 
-		// Token: 0x06040AA1 RID: 264865 RVA: 0x00FA6C9E File Offset: 0x00FA4E9E
+		// Token: 0x06035765 RID: 218981 RVA: 0x00EEDCE6 File Offset: 0x00EEBEE6
 		private void OnClickLevelDetail()
 		{
 			Action levelDetailCallback = this.LevelDetailCallback;
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			levelDetailCallback();
 		}
 
-		// Token: 0x04021A39 RID: 137785
+		// Token: 0x0401C36A RID: 115562
 		[Nullable(new byte[]
 		{
 			2,
@@ -349,19 +349,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-		// Token: 0x04021A3A RID: 137786
+		// Token: 0x0401C36B RID: 115563
 		[Nullable(2)]
 		private Action ConfirmCallback;
 
-		// Token: 0x04021A3B RID: 137787
+		// Token: 0x0401C36C RID: 115564
 		[Nullable(2)]
 		private Action LevelDetailCallback;
 
-		// Token: 0x04021A3C RID: 137788
+		// Token: 0x0401C36D RID: 115565
 		[Nullable(2)]
 		private ActivityMatchThreeData ActivityData;
 
-		// Token: 0x04021A3D RID: 137789
+		// Token: 0x0401C36E RID: 115566
 		private int CurrentLevelId;
 	}
 }

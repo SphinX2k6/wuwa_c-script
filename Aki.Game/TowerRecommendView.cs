@@ -6,16 +6,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BFF RID: 11263
+// Token: 0x0200217A RID: 8570
 public class TowerRecommendView : UiViewBase
 {
-	// Token: 0x06017655 RID: 95829 RVA: 0x005F4DC4 File Offset: 0x005F2FC4
+	// Token: 0x06015086 RID: 86150 RVA: 0x006218EC File Offset: 0x0061FAEC
 	[NullableContext(1)]
 	public TowerRecommendView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06017656 RID: 95830 RVA: 0x005F4DCD File Offset: 0x005F2FCD
+	// Token: 0x06015087 RID: 86151 RVA: 0x006218F5 File Offset: 0x0061FAF5
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,20 +25,20 @@ public class TowerRecommendView : UiViewBase
 		};
 	}
 
-	// Token: 0x06017657 RID: 95831 RVA: 0x005F4E06 File Offset: 0x005F3006
+	// Token: 0x06015088 RID: 86152 RVA: 0x0062192E File Offset: 0x0061FB2E
 	protected override void OnStart()
 	{
 		this.FormationScroll = new GenericScrollViewNew<TowerRecommendItem, TowerRecommendFormation>(base.GetScrollViewWithScrollbar(0), new Func<TowerRecommendItem>(this.RefreshItem), null, false, null);
 		this.RefreshView();
 	}
 
-	// Token: 0x06017658 RID: 95832 RVA: 0x005F4E2F File Offset: 0x005F302F
+	// Token: 0x06015089 RID: 86153 RVA: 0x00621957 File Offset: 0x0061FB57
 	protected override void OnBeforeDestroy()
 	{
 		this.FormationScroll = null;
 	}
 
-	// Token: 0x06017659 RID: 95833 RVA: 0x005F4E38 File Offset: 0x005F3038
+	// Token: 0x0601508A RID: 86154 RVA: 0x00621960 File Offset: 0x0061FB60
 	private void RefreshView()
 	{
 		if (TowerModel.Instance.RecommendFormation != null && TowerModel.Instance.RecommendFormation.Length != 0)
@@ -58,14 +58,14 @@ public class TowerRecommendView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "Text_DataCollation_Text", Array.Empty<object>());
 	}
 
-	// Token: 0x0601765A RID: 95834 RVA: 0x005F4EEC File Offset: 0x005F30EC
+	// Token: 0x0601508B RID: 86155 RVA: 0x00621A14 File Offset: 0x0061FC14
 	[NullableContext(1)]
 	private TowerRecommendItem RefreshItem()
 	{
 		return new TowerRecommendItem();
 	}
 
-	// Token: 0x0400AF07 RID: 44807
+	// Token: 0x0400B30C RID: 45836
 	[Nullable(new byte[]
 	{
 		2,
@@ -74,12 +74,12 @@ public class TowerRecommendView : UiViewBase
 	})]
 	private GenericScrollViewNew<TowerRecommendItem, TowerRecommendFormation> FormationScroll;
 
-	// Token: 0x020091C6 RID: 37318
+	// Token: 0x02008409 RID: 33801
 	private enum EChildType
 	{
-		// Token: 0x0402F2B0 RID: 193200
+		// Token: 0x0402A9B1 RID: 174513
 		ScrollView,
-		// Token: 0x0402F2B1 RID: 193201
+		// Token: 0x0402A9B2 RID: 174514
 		TipText
 	}
 }

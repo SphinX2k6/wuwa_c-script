@@ -2,32 +2,32 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016A5 RID: 5797
+	// Token: 0x0200181E RID: 6174
 	public enum ESkillButtonType
 	{
-		// Token: 0x04004DC5 RID: 19909
+		// Token: 0x040051DF RID: 20959
 		跳跃 = 1,
-		// Token: 0x04004DC6 RID: 19910
+		// Token: 0x040051E0 RID: 20960
 		攀爬,
-		// Token: 0x04004DC7 RID: 19911
+		// Token: 0x040051E1 RID: 20961
 		攻击 = 4,
-		// Token: 0x04004DC8 RID: 19912
+		// Token: 0x040051E2 RID: 20962
 		闪避,
-		// Token: 0x04004DC9 RID: 19913
+		// Token: 0x040051E3 RID: 20963
 		技能1,
-		// Token: 0x04004DCA RID: 19914
+		// Token: 0x040051E4 RID: 20964
 		幻象1,
-		// Token: 0x04004DCB RID: 19915
+		// Token: 0x040051E5 RID: 20965
 		大招,
-		// Token: 0x04004DCC RID: 19916
+		// Token: 0x040051E6 RID: 20966
 		幻象2,
-		// Token: 0x04004DCD RID: 19917
+		// Token: 0x040051E7 RID: 20967
 		副闪避,
-		// Token: 0x04004DCE RID: 19918
+		// Token: 0x040051E8 RID: 20968
 		副开火,
-		// Token: 0x04004DCF RID: 19919
+		// Token: 0x040051E9 RID: 20969
 		瞄准,
-		// Token: 0x04004DD0 RID: 19920
+		// Token: 0x040051EA RID: 20970
 		协奏 = 1001
 	}
 }

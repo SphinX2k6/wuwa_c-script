@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071EF RID: 29167
+	// Token: 0x020062A4 RID: 25252
 	[NullableContext(2)]
 	[Nullable(0)]
 	internal class SceneItemManipulableTrackTargetCastToTargetState : SceneItemManipulableCastState
 	{
-		// Token: 0x06047631 RID: 292401 RVA: 0x012295FA File Offset: 0x012277FA
+		// Token: 0x0603CF33 RID: 249651 RVA: 0x0118344E File Offset: 0x0118164E
 		[NullableContext(1)]
 		public SceneItemManipulableTrackTargetCastToTargetState(SceneItemManipulatableComponent sceneItem, [Nullable(new byte[]
 		{
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 		{
 		}
 
-		// Token: 0x06047632 RID: 292402 RVA: 0x01229608 File Offset: 0x01227808
+		// Token: 0x0603CF34 RID: 249652 RVA: 0x0118345C File Offset: 0x0118165C
 		[NullableContext(1)]
 		public void SetTargetActorWithPart(BaseActorComponent targetActor, [Nullable(2)] CharacterPart targetPart)
 		{
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x06047633 RID: 292403 RVA: 0x0122964C File Offset: 0x0122784C
+		// Token: 0x0603CF35 RID: 249653 RVA: 0x011834A0 File Offset: 0x011816A0
 		protected override void OnEnter()
 		{
 			base.OnEnter();
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x06047634 RID: 292404 RVA: 0x012297DC File Offset: 0x012279DC
+		// Token: 0x0603CF36 RID: 249654 RVA: 0x01183630 File Offset: 0x01181830
 		protected override void OnTick(float delta)
 		{
 			base.OnTick(delta);
@@ -134,28 +134,28 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x040258AC RID: 153772
+		// Token: 0x0402051B RID: 132379
 		private BaseActorComponent TargetActor;
 
-		// Token: 0x040258AD RID: 153773
+		// Token: 0x0402051C RID: 132380
 		private USkeletalMeshComponent TargetSkeletalMesh;
 
-		// Token: 0x040258AE RID: 153774
+		// Token: 0x0402051D RID: 132381
 		private FName? TargetSocketName;
 
-		// Token: 0x040258AF RID: 153775
+		// Token: 0x0402051E RID: 132382
 		private float? Speed;
 
-		// Token: 0x040258B0 RID: 153776
+		// Token: 0x0402051F RID: 132383
 		private UCurveFloat SpeedCurve;
 
-		// Token: 0x040258B1 RID: 153777
+		// Token: 0x04020520 RID: 132384
 		private float? AngularSpeed;
 
-		// Token: 0x040258B2 RID: 153778
+		// Token: 0x04020521 RID: 132385
 		private UCurveFloat AngularSpeedCurve;
 
-		// Token: 0x040258B3 RID: 153779
+		// Token: 0x04020522 RID: 132386
 		private global::Vector CurrentDirection;
 	}
 }

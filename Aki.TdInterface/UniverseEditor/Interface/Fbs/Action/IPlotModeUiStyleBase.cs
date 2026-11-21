@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D56 RID: 27990
+	// Token: 0x020074D1 RID: 29905
 	public struct IPlotModeUiStyleBase : IFlatbufferObject
 	{
-		// Token: 0x1700D0BF RID: 53439
-		// (get) Token: 0x060316BE RID: 202430 RVA: 0x006B391E File Offset: 0x006B1B1E
+		// Token: 0x1700DC07 RID: 56327
+		// (get) Token: 0x060346BA RID: 214714 RVA: 0x0070F006 File Offset: 0x0070D206
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060316BF RID: 202431 RVA: 0x006B392B File Offset: 0x006B1B2B
+		// Token: 0x060346BB RID: 214715 RVA: 0x0070F013 File Offset: 0x0070D213
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060316C0 RID: 202432 RVA: 0x006B3934 File Offset: 0x006B1B34
+		// Token: 0x060346BC RID: 214716 RVA: 0x0070F01C File Offset: 0x0070D21C
 		public static IPlotModeUiStyleBase GetRootAsIPlotModeUiStyleBase(ByteBuffer _bb)
 		{
 			return IPlotModeUiStyleBase.GetRootAsIPlotModeUiStyleBase(_bb, default(IPlotModeUiStyleBase));
 		}
 
-		// Token: 0x060316C1 RID: 202433 RVA: 0x006B3950 File Offset: 0x006B1B50
+		// Token: 0x060346BD RID: 214717 RVA: 0x0070F038 File Offset: 0x0070D238
 		public static IPlotModeUiStyleBase GetRootAsIPlotModeUiStyleBase(ByteBuffer _bb, IPlotModeUiStyleBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060316C2 RID: 202434 RVA: 0x006B396D File Offset: 0x006B1B6D
+		// Token: 0x060346BE RID: 214718 RVA: 0x0070F055 File Offset: 0x0070D255
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060316C3 RID: 202435 RVA: 0x006B397C File Offset: 0x006B1B7C
+		// Token: 0x060346BF RID: 214719 RVA: 0x0070F064 File Offset: 0x0070D264
 		public IPlotModeUiStyleBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D0C0 RID: 53440
-		// (get) Token: 0x060316C4 RID: 202436 RVA: 0x006B398C File Offset: 0x006B1B8C
+		// Token: 0x1700DC08 RID: 56328
+		// (get) Token: 0x060346C0 RID: 214720 RVA: 0x0070F074 File Offset: 0x0070D274
 		public EPlotModeUiStyleType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060316C5 RID: 202437 RVA: 0x006B39C8 File Offset: 0x006B1BC8
+		// Token: 0x060346C1 RID: 214721 RVA: 0x0070F0B0 File Offset: 0x0070D2B0
 		public static Offset<IPlotModeUiStyleBase> CreateIPlotModeUiStyleBase(FlatBufferBuilder builder, EPlotModeUiStyleType Type = EPlotModeUiStyleType.LevelD)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlotModeUiStyleBase.EndIPlotModeUiStyleBase(builder);
 		}
 
-		// Token: 0x060316C6 RID: 202438 RVA: 0x006B39DE File Offset: 0x006B1BDE
+		// Token: 0x060346C2 RID: 214722 RVA: 0x0070F0C6 File Offset: 0x0070D2C6
 		public static void StartIPlotModeUiStyleBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060316C7 RID: 202439 RVA: 0x006B39E7 File Offset: 0x006B1BE7
+		// Token: 0x060346C3 RID: 214723 RVA: 0x0070F0CF File Offset: 0x0070D2CF
 		public static void AddType(FlatBufferBuilder builder, EPlotModeUiStyleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060316C8 RID: 202440 RVA: 0x006B39F2 File Offset: 0x006B1BF2
+		// Token: 0x060346C4 RID: 214724 RVA: 0x0070F0DA File Offset: 0x0070D2DA
 		public static Offset<IPlotModeUiStyleBase> EndIPlotModeUiStyleBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlotModeUiStyleBase>(builder.EndTable());
 		}
 
-		// Token: 0x060316C9 RID: 202441 RVA: 0x006B3A00 File Offset: 0x006B1C00
+		// Token: 0x060346C5 RID: 214725 RVA: 0x0070F0E8 File Offset: 0x0070D2E8
 		public IPlotModeUiStyleBaseT UnPack()
 		{
 			IPlotModeUiStyleBaseT plotModeUiStyleBaseT = new IPlotModeUiStyleBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return plotModeUiStyleBaseT;
 		}
 
-		// Token: 0x060316CA RID: 202442 RVA: 0x006B3A1B File Offset: 0x006B1C1B
+		// Token: 0x060346C6 RID: 214726 RVA: 0x0070F103 File Offset: 0x0070D303
 		public void UnPackTo(IPlotModeUiStyleBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060316CB RID: 202443 RVA: 0x006B3A2C File Offset: 0x006B1C2C
+		// Token: 0x060346C7 RID: 214727 RVA: 0x0070F114 File Offset: 0x0070D314
 		public static Offset<IPlotModeUiStyleBase> Pack(FlatBufferBuilder builder, IPlotModeUiStyleBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlotModeUiStyleBase.CreateIPlotModeUiStyleBase(builder, _o.Type);
 		}
 
-		// Token: 0x04011708 RID: 71432
+		// Token: 0x04012684 RID: 75396
 		private Table __p;
 	}
 }

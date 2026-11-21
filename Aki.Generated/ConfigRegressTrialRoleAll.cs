@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007DD RID: 2013
+	// Token: 0x020007F9 RID: 2041
 	public class ConfigRegressTrialRoleAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F40 RID: 12096 RVA: 0x001644AF File Offset: 0x001626AF
+		// Token: 0x06002FE8 RID: 12264 RVA: 0x0016B797 File Offset: 0x00169997
 		static ConfigRegressTrialRoleAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRegressTrialRoleAll.CreateStaticDefaultValue), new Action(ConfigRegressTrialRoleAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F41 RID: 12097 RVA: 0x001644D0 File Offset: 0x001626D0
+		// Token: 0x06002FE9 RID: 12265 RVA: 0x0016B7B8 File Offset: 0x001699B8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRegressTrialRoleAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F42 RID: 12098 RVA: 0x0016454F File Offset: 0x0016274F
+		// Token: 0x06002FEA RID: 12266 RVA: 0x0016B837 File Offset: 0x00169A37
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRegressTrialRoleAll.LogPair = null;
 			ConfigRegressTrialRoleAll.HandleId = 0;
 		}
 
-		// Token: 0x06002F43 RID: 12099 RVA: 0x0016455D File Offset: 0x0016275D
+		// Token: 0x06002FEB RID: 12267 RVA: 0x0016B845 File Offset: 0x00169A45
 		public static void Init()
 		{
 			ConfigRegressTrialRoleAll.HandleId = ConfigCommon.InitDataStatement(ConfigRegressTrialRoleAll.HandleId, "db_regressactivity.db", "select BinData from `RegressTrialRole`");
 		}
 
-		// Token: 0x06002F44 RID: 12100 RVA: 0x00164578 File Offset: 0x00162778
+		// Token: 0x06002FEC RID: 12268 RVA: 0x0016B860 File Offset: 0x00169A60
 		[NullableContext(2)]
 		public static IReadOnlyList<RegressTrialRole> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040036F1 RID: 14065
+		// Token: 0x040037B5 RID: 14261
 		private const string DB = "db_regressactivity.db";
 
-		// Token: 0x040036F2 RID: 14066
+		// Token: 0x040037B6 RID: 14262
 		private const string FILE = "h.回流活动(新).xlsx";
 
-		// Token: 0x040036F3 RID: 14067
+		// Token: 0x040037B7 RID: 14263
 		private const string TABLE = "RegressTrialRole";
 
-		// Token: 0x040036F4 RID: 14068
+		// Token: 0x040037B8 RID: 14264
 		private const string COMMAND = "select BinData from `RegressTrialRole`";
 
-		// Token: 0x040036F5 RID: 14069
+		// Token: 0x040037B9 RID: 14265
 		private const string KEY_PREFIX = "RegressTrialRoleAll";
 
-		// Token: 0x040036F6 RID: 14070
+		// Token: 0x040037BA RID: 14266
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040036F7 RID: 14071
+		// Token: 0x040037BB RID: 14267
 		private static int HandleId;
 	}
 }

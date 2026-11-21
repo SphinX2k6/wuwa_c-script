@@ -18,13 +18,13 @@ using CSharpScript.Game.Module.WorldMap;
 using CSharpScript.Game.NewWorld.SceneItem.Model;
 using UnrealEngine;
 
-// Token: 0x02001D62 RID: 7522
+// Token: 0x02001224 RID: 4644
 [NullableContext(1)]
 [Nullable(0)]
 public class NodeTrackMark
 {
-	// Token: 0x1700123B RID: 4667
-	// (get) Token: 0x0600E4A7 RID: 58535 RVA: 0x0035BD16 File Offset: 0x00359F16
+	// Token: 0x17001265 RID: 4709
+	// (get) Token: 0x0600B8C4 RID: 47300 RVA: 0x003678C6 File Offset: 0x00365AC6
 	public EMarkType MarkType
 	{
 		get
@@ -33,8 +33,8 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x1700123C RID: 4668
-	// (get) Token: 0x0600E4A8 RID: 58536 RVA: 0x0035BD23 File Offset: 0x00359F23
+	// Token: 0x17001266 RID: 4710
+	// (get) Token: 0x0600B8C5 RID: 47301 RVA: 0x003678D3 File Offset: 0x00365AD3
 	public ETrackSource TrackSource
 	{
 		get
@@ -43,8 +43,8 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x1700123D RID: 4669
-	// (get) Token: 0x0600E4A9 RID: 58537 RVA: 0x0035BD30 File Offset: 0x00359F30
+	// Token: 0x17001267 RID: 4711
+	// (get) Token: 0x0600B8C6 RID: 47302 RVA: 0x003678E0 File Offset: 0x00365AE0
 	public int DungeonId
 	{
 		get
@@ -53,8 +53,8 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x1700123E RID: 4670
-	// (get) Token: 0x0600E4AA RID: 58538 RVA: 0x0035BD3D File Offset: 0x00359F3D
+	// Token: 0x17001268 RID: 4712
+	// (get) Token: 0x0600B8C7 RID: 47303 RVA: 0x003678ED File Offset: 0x00365AED
 	public int? DefaultMapMarkId
 	{
 		get
@@ -63,7 +63,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4AB RID: 58539 RVA: 0x0035BD4C File Offset: 0x00359F4C
+	// Token: 0x0600B8C8 RID: 47304 RVA: 0x003678FC File Offset: 0x00365AFC
 	public NodeTrackMark(TrackMarkExpressController owner, Blackboard blackBoard, long treeIncId, int treeConfigId, int nodeId, int customIconId, ITrackTarget config)
 	{
 		this.Owner = owner;
@@ -169,26 +169,26 @@ public class NodeTrackMark
 		EventSystem.Instance.Add<ETrackSource, long, int, int, bool>(EEventName.TaskRangeTrackStateChange, new Action<ETrackSource, long, int, int, bool>(this.OnTaskRangeTrackStateChange));
 	}
 
-	// Token: 0x0600E4AC RID: 58540 RVA: 0x0035C274 File Offset: 0x0035A474
+	// Token: 0x0600B8C9 RID: 47305 RVA: 0x00367E24 File Offset: 0x00366024
 	public bool HasOutOfRangeConfig()
 	{
 		return this.OutOfRangeRuntime != null;
 	}
 
-	// Token: 0x0600E4AD RID: 58541 RVA: 0x0035C27F File Offset: 0x0035A47F
+	// Token: 0x0600B8CA RID: 47306 RVA: 0x00367E2F File Offset: 0x0036602F
 	public bool HasOverrideChildNode()
 	{
 		IOutOfRangeRuntime outOfRangeRuntime = this.OutOfRangeRuntime;
 		return outOfRangeRuntime != null && outOfRangeRuntime.OverrideChildNodeTrackTarget;
 	}
 
-	// Token: 0x0600E4AE RID: 58542 RVA: 0x0035C292 File Offset: 0x0035A492
+	// Token: 0x0600B8CB RID: 47307 RVA: 0x00367E42 File Offset: 0x00366042
 	public bool IsCurrentlyOutOfRange()
 	{
 		return this.IsOutOfRange;
 	}
 
-	// Token: 0x0600E4AF RID: 58543 RVA: 0x0035C29A File Offset: 0x0035A49A
+	// Token: 0x0600B8CC RID: 47308 RVA: 0x00367E4A File Offset: 0x0036604A
 	private void StartRangeTrackTickerIfNeeded()
 	{
 		if (this.OutOfRangeRuntime == null)
@@ -202,7 +202,7 @@ public class NodeTrackMark
 		this.RangeTrackTicker = TickSystem.Instance.Add(new Action<float>(this.OnRangeTrackTick), "NodeTrackMarkRangeTrack", ETickingGroup.TG_PrePhysics, false, 0, false);
 	}
 
-	// Token: 0x0600E4B0 RID: 58544 RVA: 0x0035C2D3 File Offset: 0x0035A4D3
+	// Token: 0x0600B8CD RID: 47309 RVA: 0x00367E83 File Offset: 0x00366083
 	private void StopRangeTrackTicker()
 	{
 		if (this.RangeTrackTicker == null)
@@ -213,7 +213,7 @@ public class NodeTrackMark
 		this.RangeTrackTicker = null;
 	}
 
-	// Token: 0x0600E4B1 RID: 58545 RVA: 0x0035C2FC File Offset: 0x0035A4FC
+	// Token: 0x0600B8CE RID: 47310 RVA: 0x00367EAC File Offset: 0x003660AC
 	private void OnRangeTrackTick(float delta)
 	{
 		global::Vector playerLocation = GeneralLogicTreeUtil.Instance.GetPlayerLocation();
@@ -226,7 +226,7 @@ public class NodeTrackMark
 		this.ApplyRangeState(suppressedByAncestor);
 	}
 
-	// Token: 0x0600E4B2 RID: 58546 RVA: 0x0035C338 File Offset: 0x0035A538
+	// Token: 0x0600B8CF RID: 47311 RVA: 0x00367EE8 File Offset: 0x003660E8
 	public void ComputeRangeState(global::Vector playerPos)
 	{
 		if (this.OutOfRangeRuntime == null)
@@ -246,7 +246,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4B3 RID: 58547 RVA: 0x0035C3A0 File Offset: 0x0035A5A0
+	// Token: 0x0600B8D0 RID: 47312 RVA: 0x00367F50 File Offset: 0x00366150
 	public void ApplyRangeState(bool suppressedByAncestor)
 	{
 		bool suppressedByAncestor2 = this.SuppressedByAncestor;
@@ -273,7 +273,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4B4 RID: 58548 RVA: 0x0035C3F8 File Offset: 0x0035A5F8
+	// Token: 0x0600B8D1 RID: 47313 RVA: 0x00367FA8 File Offset: 0x003661A8
 	private void RebuildTargets()
 	{
 		List<TEntityIdOrPos> list;
@@ -333,7 +333,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4B5 RID: 58549 RVA: 0x0035C534 File Offset: 0x0035A734
+	// Token: 0x0600B8D2 RID: 47314 RVA: 0x003680E4 File Offset: 0x003662E4
 	public void Destroy()
 	{
 		this.StopRangeTrackTicker();
@@ -359,13 +359,14 @@ public class NodeTrackMark
 		this.DisableTrackTargetList.Clear();
 	}
 
-	// Token: 0x0600E4B6 RID: 58550 RVA: 0x0035C641 File Offset: 0x0035A841
+	// Token: 0x0600B8D3 RID: 47315 RVA: 0x003681F1 File Offset: 0x003663F1
 	public void OnNodeStart(bool bOccupied)
 	{
 		if (bOccupied)
 		{
 			return;
 		}
+		this.SyncRangeStateOnStart();
 		this.IsStarted = true;
 		if (this.BlackBoard.MapMarkResident)
 		{
@@ -378,7 +379,21 @@ public class NodeTrackMark
 		this.StartRangeTrackTickerIfNeeded();
 	}
 
-	// Token: 0x0600E4B7 RID: 58551 RVA: 0x0035C67B File Offset: 0x0035A87B
+	// Token: 0x0600B8D4 RID: 47316 RVA: 0x00368234 File Offset: 0x00366434
+	private void SyncRangeStateOnStart()
+	{
+		if (this.OutOfRangeRuntime != null)
+		{
+			global::Vector playerLocation = GeneralLogicTreeUtil.Instance.GetPlayerLocation();
+			if (playerLocation != null)
+			{
+				this.ComputeRangeState(playerLocation);
+			}
+		}
+		this.ApplyRangeState(this.Owner.IsSuppressedByAncestor(this.NodeId));
+	}
+
+	// Token: 0x0600B8D5 RID: 47317 RVA: 0x00368275 File Offset: 0x00366475
 	public void OnNodeEnd()
 	{
 		this.StopRangeTrackTicker();
@@ -387,17 +402,21 @@ public class NodeTrackMark
 		this.IsStarted = false;
 	}
 
-	// Token: 0x0600E4B8 RID: 58552 RVA: 0x0035C6AC File Offset: 0x0035A8AC
+	// Token: 0x0600B8D6 RID: 47318 RVA: 0x003682A8 File Offset: 0x003664A8
 	[NullableContext(2)]
 	public void OnNodeProgressChanged(IReadOnlyList<int> finishedEntityDataIds)
 	{
-		if (this.TrackTargetConfig.Count == 0 || finishedEntityDataIds == null)
+		if (finishedEntityDataIds == null)
 		{
 			return;
 		}
 		foreach (int item in finishedEntityDataIds)
 		{
 			this.FinishedEntityDataIds.Add(item);
+		}
+		if (this.TrackTargetConfig.Count == 0)
+		{
+			return;
 		}
 		for (int i = 0; i < this.TrackTargetConfig.Count; i++)
 		{
@@ -432,7 +451,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4B9 RID: 58553 RVA: 0x0035C7D0 File Offset: 0x0035A9D0
+	// Token: 0x0600B8D7 RID: 47319 RVA: 0x003683CC File Offset: 0x003665CC
 	private void RecomputeDisableListFromFinishedSet()
 	{
 		this.DisableTrackTargetList.Clear();
@@ -450,7 +469,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4BA RID: 58554 RVA: 0x0035C844 File Offset: 0x0035AA44
+	// Token: 0x0600B8D8 RID: 47320 RVA: 0x00368440 File Offset: 0x00366640
 	public void CreateMapMarks()
 	{
 		for (int i = 0; i < this.TrackTargetConfig.Count; i++)
@@ -460,7 +479,7 @@ public class NodeTrackMark
 		this.MapMarkEnabled = true;
 	}
 
-	// Token: 0x0600E4BB RID: 58555 RVA: 0x0035C884 File Offset: 0x0035AA84
+	// Token: 0x0600B8D9 RID: 47321 RVA: 0x00368480 File Offset: 0x00366680
 	public void EnableTrack(bool value)
 	{
 		if (!this.IsStarted)
@@ -489,7 +508,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4BC RID: 58556 RVA: 0x0035C8E0 File Offset: 0x0035AAE0
+	// Token: 0x0600B8DA RID: 47322 RVA: 0x003684DC File Offset: 0x003666DC
 	public void ForceSetAllMarksVisible(bool visible)
 	{
 		foreach (int markId in this.CurrentMapMarkIds.Values)
@@ -498,7 +517,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4BD RID: 58557 RVA: 0x0035C944 File Offset: 0x0035AB44
+	// Token: 0x0600B8DB RID: 47323 RVA: 0x00368540 File Offset: 0x00366740
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -526,7 +545,7 @@ public class NodeTrackMark
 		return dictionary;
 	}
 
-	// Token: 0x0600E4BE RID: 58558 RVA: 0x0035C9EC File Offset: 0x0035ABEC
+	// Token: 0x0600B8DC RID: 47324 RVA: 0x003685E8 File Offset: 0x003667E8
 	[NullableContext(2)]
 	public global::Vector GetDefaultTrackPosition()
 	{
@@ -541,7 +560,7 @@ public class NodeTrackMark
 		return null;
 	}
 
-	// Token: 0x0600E4BF RID: 58559 RVA: 0x0035CA2C File Offset: 0x0035AC2C
+	// Token: 0x0600B8DD RID: 47325 RVA: 0x00368628 File Offset: 0x00366828
 	public int? GetTrackAreaInfo()
 	{
 		if (this.DefaultMapMarkId != null)
@@ -585,7 +604,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4C0 RID: 58560 RVA: 0x0035CB1C File Offset: 0x0035AD1C
+	// Token: 0x0600B8DE RID: 47326 RVA: 0x00368718 File Offset: 0x00366918
 	private int GetAreaId(Aki.TDConfigMgr.Quest.ETrackType trackType, int targetDungeonId, int configIndex, TEntityIdOrPos target)
 	{
 		int result = 0;
@@ -632,7 +651,7 @@ public class NodeTrackMark
 		return result;
 	}
 
-	// Token: 0x0600E4C1 RID: 58561 RVA: 0x0035CC9C File Offset: 0x0035AE9C
+	// Token: 0x0600B8DF RID: 47327 RVA: 0x00368898 File Offset: 0x00366A98
 	public void UpdateLevelPlayConditionalMark()
 	{
 		ITrackLevelPlay trackLevelPlay = this.Config.TrackType as ITrackLevelPlay;
@@ -663,7 +682,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4C2 RID: 58562 RVA: 0x0035CE1C File Offset: 0x0035B01C
+	// Token: 0x0600B8E0 RID: 47328 RVA: 0x00368A18 File Offset: 0x00366C18
 	public void OnExpressOccupied()
 	{
 		if (this.CurrentMapMarkIds.Count == 0)
@@ -677,7 +696,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4C3 RID: 58563 RVA: 0x0035CEA0 File Offset: 0x0035B0A0
+	// Token: 0x0600B8E1 RID: 47329 RVA: 0x00368A9C File Offset: 0x00366C9C
 	public void OnExpressOccupationRelease()
 	{
 		if (!this.IsStarted)
@@ -699,7 +718,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4C4 RID: 58564 RVA: 0x0035CF48 File Offset: 0x0035B148
+	// Token: 0x0600B8E2 RID: 47330 RVA: 0x00368B44 File Offset: 0x00366D44
 	private unsafe int? CreateSingleMapMark(TEntityIdOrPos trackTargetConfig, int trackTargetConfigIndex)
 	{
 		bool flag;
@@ -770,7 +789,7 @@ public class NodeTrackMark
 				instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 				return null;
 			}
-			if (WorldMapModel.Instance.GetEntityPosition((TEntityIdOrPos_Int)item2, config.Value.MapConfigId).IsZero())
+			if (WorldMapModel.Instance.GetEntityPosition((TEntityIdOrPos_Int)item2, config.Value.MapConfigId, true).IsZero())
 			{
 				Log instance2 = Log.Instance;
 				ELogModule module2 = ELogModule.GeneralLogicTree;
@@ -788,7 +807,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4C5 RID: 58565 RVA: 0x0035D2CC File Offset: 0x0035B4CC
+	// Token: 0x0600B8E3 RID: 47331 RVA: 0x00368EC8 File Offset: 0x003670C8
 	private void HandleVisionCaptureTrack(int ownerId, int entityId)
 	{
 		if (this.VisionTrackCache.Count == 0)
@@ -816,7 +835,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4C6 RID: 58566 RVA: 0x0035D384 File Offset: 0x0035B584
+	// Token: 0x0600B8E4 RID: 47332 RVA: 0x00368F80 File Offset: 0x00367180
 	private void HandleVisionCaptureRemove(int ownerId, int entityId)
 	{
 		if (this.VisionTrackCache.Count == 0)
@@ -846,7 +865,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4C7 RID: 58567 RVA: 0x0035D468 File Offset: 0x0035B668
+	// Token: 0x0600B8E5 RID: 47333 RVA: 0x00369064 File Offset: 0x00367264
 	[NullableContext(2)]
 	private unsafe int CreateMapMarkImp(int targetDungeonId, TEntityIdOrPos target, Aki.TDConfigMgr.Quest.ETrackType type, int configIndex)
 	{
@@ -918,7 +937,7 @@ public class NodeTrackMark
 		return num3;
 	}
 
-	// Token: 0x0600E4C8 RID: 58568 RVA: 0x0035D724 File Offset: 0x0035B924
+	// Token: 0x0600B8E6 RID: 47334 RVA: 0x00369320 File Offset: 0x00367520
 	private TTrackTarget ParseTrackTarget(TEntityIdOrPos target)
 	{
 		TEntityIdOrPos_TrackVision tentityIdOrPos_TrackVision = target as TEntityIdOrPos_TrackVision;
@@ -939,7 +958,7 @@ public class NodeTrackMark
 		return null;
 	}
 
-	// Token: 0x0600E4C9 RID: 58569 RVA: 0x0035D77C File Offset: 0x0035B97C
+	// Token: 0x0600B8E7 RID: 47335 RVA: 0x00369378 File Offset: 0x00367578
 	private EMapGravityDirection? ParseMapGravity(int targetDungeonId)
 	{
 		IGravityDirectionType trackTargetGravityInfo = this.TrackTargetGravityInfo;
@@ -961,7 +980,7 @@ public class NodeTrackMark
 		return null;
 	}
 
-	// Token: 0x0600E4CA RID: 58570 RVA: 0x0035D850 File Offset: 0x0035BA50
+	// Token: 0x0600B8E8 RID: 47336 RVA: 0x0036944C File Offset: 0x0036764C
 	private void ClearMark()
 	{
 		this.SetAllMarkTrack(false);
@@ -976,7 +995,7 @@ public class NodeTrackMark
 		EventSystem.Instance.Emit<long>(EEventName.RangeTrackStateChanged, this.TreeIncId);
 	}
 
-	// Token: 0x0600E4CB RID: 58571 RVA: 0x0035D908 File Offset: 0x0035BB08
+	// Token: 0x0600B8E9 RID: 47337 RVA: 0x00369504 File Offset: 0x00367704
 	private unsafe void RemoveMarkAndTrack(int markId, int configIndex)
 	{
 		MapModel.Instance.RemoveMapMark(new EMarkType?(this.MarkType), new int?(markId));
@@ -993,7 +1012,7 @@ public class NodeTrackMark
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0600E4CC RID: 58572 RVA: 0x0035D9D4 File Offset: 0x0035BBD4
+	// Token: 0x0600B8EA RID: 47338 RVA: 0x003695D0 File Offset: 0x003677D0
 	private unsafe void SetAllMarkTrack(bool value)
 	{
 		if (this.BlackBoard.IsTrackBoundToParent)
@@ -1083,7 +1102,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4CD RID: 58573 RVA: 0x0035DCEC File Offset: 0x0035BEEC
+	// Token: 0x0600B8EB RID: 47339 RVA: 0x003698E8 File Offset: 0x00367AE8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1197,7 +1216,7 @@ public class NodeTrackMark
 		return null;
 	}
 
-	// Token: 0x0600E4CE RID: 58574 RVA: 0x0035DFE4 File Offset: 0x0035C1E4
+	// Token: 0x0600B8EC RID: 47340 RVA: 0x00369BE0 File Offset: 0x00367DE0
 	[NullableContext(2)]
 	private unsafe global::Vector GetTrackPosition(int dungeonId, TEntityIdOrPos target)
 	{
@@ -1254,7 +1273,7 @@ public class NodeTrackMark
 		return null;
 	}
 
-	// Token: 0x0600E4CF RID: 58575 RVA: 0x0035E12C File Offset: 0x0035C32C
+	// Token: 0x0600B8ED RID: 47341 RVA: 0x00369D28 File Offset: 0x00367F28
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1291,7 +1310,7 @@ public class NodeTrackMark
 		return this.ConvertMarkTarget(EConvertMarkType.TrackMark, tentityIdOrPos2);
 	}
 
-	// Token: 0x0600E4D0 RID: 58576 RVA: 0x0035E20C File Offset: 0x0035C40C
+	// Token: 0x0600B8EE RID: 47342 RVA: 0x00369E08 File Offset: 0x00368008
 	private bool TrackTargetEqual(QuestMarkCreateInfo t1, int t2DungeonId, TEntityIdOrPos t2)
 	{
 		if (t1.MapId != t2DungeonId)
@@ -1319,7 +1338,7 @@ public class NodeTrackMark
 		return false;
 	}
 
-	// Token: 0x0600E4D1 RID: 58577 RVA: 0x0035E278 File Offset: 0x0035C478
+	// Token: 0x0600B8EF RID: 47343 RVA: 0x00369E74 File Offset: 0x00368074
 	private void OnTaskRangeTrackStateChange(ETrackSource trackSource, long treeIncId, int behaviorId, int markId, bool rangeImageActive)
 	{
 		if (treeIncId != this.TreeIncId || behaviorId != this.NodeId)
@@ -1353,7 +1372,7 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0600E4D2 RID: 58578 RVA: 0x0035E348 File Offset: 0x0035C548
+	// Token: 0x0600B8F0 RID: 47344 RVA: 0x00369F44 File Offset: 0x00368144
 	private void AddMapTrackDataToParentTree(ITrackData data)
 	{
 		if (!this.BlackBoard.IsTrackBoundToParent)
@@ -1384,7 +1403,7 @@ public class NodeTrackMark
 		list.Add(data);
 	}
 
-	// Token: 0x0600E4D3 RID: 58579 RVA: 0x0035E408 File Offset: 0x0035C608
+	// Token: 0x0600B8F1 RID: 47345 RVA: 0x0036A004 File Offset: 0x00368204
 	private void ClearMapTrackDataFromParentTree()
 	{
 		if (!this.BlackBoard.IsTrackBoundToParent)
@@ -1409,87 +1428,87 @@ public class NodeTrackMark
 		}
 	}
 
-	// Token: 0x0400696B RID: 26987
+	// Token: 0x04006A4B RID: 27211
 	public const int INVALID_MARKID = 0;
 
-	// Token: 0x0400696C RID: 26988
+	// Token: 0x04006A4C RID: 27212
 	public float MarkRange;
 
-	// Token: 0x0400696D RID: 26989
+	// Token: 0x04006A4D RID: 27213
 	public float RangeMarkShowDis;
 
-	// Token: 0x0400696E RID: 26990
+	// Token: 0x04006A4E RID: 27214
 	private readonly TrackMarkExpressController Owner;
 
-	// Token: 0x0400696F RID: 26991
+	// Token: 0x04006A4F RID: 27215
 	private readonly Blackboard BlackBoard;
 
-	// Token: 0x04006970 RID: 26992
+	// Token: 0x04006A50 RID: 27216
 	private readonly long TreeIncId;
 
-	// Token: 0x04006971 RID: 26993
+	// Token: 0x04006A51 RID: 27217
 	private readonly int TreeConfigId;
 
-	// Token: 0x04006972 RID: 26994
+	// Token: 0x04006A52 RID: 27218
 	private readonly int NodeId;
 
-	// Token: 0x04006973 RID: 26995
+	// Token: 0x04006A53 RID: 27219
 	private readonly int CustomIconId;
 
-	// Token: 0x04006974 RID: 26996
+	// Token: 0x04006A54 RID: 27220
 	private readonly ITrackTarget Config;
 
-	// Token: 0x04006975 RID: 26997
+	// Token: 0x04006A55 RID: 27221
 	private readonly List<TEntityIdOrPos> TrackTargetConfig = new List<TEntityIdOrPos>();
 
-	// Token: 0x04006976 RID: 26998
+	// Token: 0x04006A56 RID: 27222
 	private readonly List<TEntityIdOrPos> InRangeTargets = new List<TEntityIdOrPos>();
 
-	// Token: 0x04006977 RID: 26999
+	// Token: 0x04006A57 RID: 27223
 	private List<TEntityIdOrPos> OutOfRangeTargets = new List<TEntityIdOrPos>();
 
-	// Token: 0x04006978 RID: 27000
+	// Token: 0x04006A58 RID: 27224
 	[Nullable(2)]
 	private IOutOfRangeRuntime OutOfRangeRuntime;
 
-	// Token: 0x04006979 RID: 27001
+	// Token: 0x04006A59 RID: 27225
 	private bool IsOutOfRange;
 
-	// Token: 0x0400697A RID: 27002
+	// Token: 0x04006A5A RID: 27226
 	private bool AppliedIsOutOfRange;
 
-	// Token: 0x0400697B RID: 27003
+	// Token: 0x04006A5B RID: 27227
 	private bool SuppressedByAncestor;
 
-	// Token: 0x0400697C RID: 27004
+	// Token: 0x04006A5C RID: 27228
 	[Nullable(2)]
 	private Ticker RangeTrackTicker;
 
-	// Token: 0x0400697D RID: 27005
+	// Token: 0x04006A5D RID: 27229
 	[Nullable(2)]
 	private readonly IGravityDirectionType TrackTargetGravityInfo;
 
-	// Token: 0x0400697E RID: 27006
+	// Token: 0x04006A5E RID: 27230
 	private readonly Dictionary<int, TrackVision> VisionTrackCache = new Dictionary<int, TrackVision>();
 
-	// Token: 0x0400697F RID: 27007
+	// Token: 0x04006A5F RID: 27231
 	private readonly Dictionary<int, bool> RangeTrackMarkRecord = new Dictionary<int, bool>();
 
-	// Token: 0x04006980 RID: 27008
+	// Token: 0x04006A60 RID: 27232
 	private readonly Dictionary<int, bool> DisableTrackTargetList = new Dictionary<int, bool>();
 
-	// Token: 0x04006981 RID: 27009
+	// Token: 0x04006A61 RID: 27233
 	private readonly HashSet<int> FinishedEntityDataIds = new HashSet<int>();
 
-	// Token: 0x04006982 RID: 27010
+	// Token: 0x04006A62 RID: 27234
 	private readonly Dictionary<int, int> CurrentMapMarkIds = new Dictionary<int, int>();
 
-	// Token: 0x04006983 RID: 27011
+	// Token: 0x04006A63 RID: 27235
 	private bool IsStarted;
 
-	// Token: 0x04006984 RID: 27012
+	// Token: 0x04006A64 RID: 27236
 	private bool MapMarkEnabled;
 
-	// Token: 0x04006985 RID: 27013
+	// Token: 0x04006A65 RID: 27237
 	private bool TrackEnabled;
 }

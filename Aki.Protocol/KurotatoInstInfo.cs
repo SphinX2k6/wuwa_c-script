@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000899 RID: 2201
+	// Token: 0x02000888 RID: 2184
 	public sealed class KurotatoInstInfo : IMessage<KurotatoInstInfo>, IMessage, IEquatable<KurotatoInstInfo>, IDeepCloneable<KurotatoInstInfo>, IBufferMessage
 	{
-		// Token: 0x0600C38F RID: 50063 RVA: 0x001CFB94 File Offset: 0x001CDD94
+		// Token: 0x0600C273 RID: 49779 RVA: 0x001CD8B1 File Offset: 0x001CBAB1
 		[NullableContext(1)]
 		public static KurotatoInstInfo Create()
 		{
 			return new KurotatoInstInfo();
 		}
 
-		// Token: 0x17002782 RID: 10114
-		// (get) Token: 0x0600C390 RID: 50064 RVA: 0x001CFB9B File Offset: 0x001CDD9B
+		// Token: 0x17002743 RID: 10051
+		// (get) Token: 0x0600C274 RID: 49780 RVA: 0x001CD8B8 File Offset: 0x001CBAB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<KurotatoInstInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002783 RID: 10115
-		// (get) Token: 0x0600C391 RID: 50065 RVA: 0x001CFBA2 File Offset: 0x001CDDA2
+		// Token: 0x17002744 RID: 10052
+		// (get) Token: 0x0600C275 RID: 49781 RVA: 0x001CD8BF File Offset: 0x001CBABF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002784 RID: 10116
-		// (get) Token: 0x0600C392 RID: 50066 RVA: 0x001CFBA5 File Offset: 0x001CDDA5
+		// Token: 0x17002745 RID: 10053
+		// (get) Token: 0x0600C276 RID: 49782 RVA: 0x001CD8C2 File Offset: 0x001CBAC2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C393 RID: 50067 RVA: 0x001CFBAC File Offset: 0x001CDDAC
+		// Token: 0x0600C277 RID: 49783 RVA: 0x001CD8C9 File Offset: 0x001CBAC9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoInstInfo()
 		{
 		}
 
-		// Token: 0x0600C394 RID: 50068 RVA: 0x001CFBC0 File Offset: 0x001CDDC0
+		// Token: 0x0600C278 RID: 49784 RVA: 0x001CD8DC File Offset: 0x001CBADC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoInstInfo(KurotatoInstInfo other) : this()
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600C395 RID: 50069 RVA: 0x001CFC81 File Offset: 0x001CDE81
+		// Token: 0x0600C279 RID: 49785 RVA: 0x001CD99D File Offset: 0x001CBB9D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoInstInfo Clone()
@@ -87,9 +87,9 @@ namespace Aki.Protocol
 			return new KurotatoInstInfo(this);
 		}
 
-		// Token: 0x17002785 RID: 10117
-		// (get) Token: 0x0600C396 RID: 50070 RVA: 0x001CFC89 File Offset: 0x001CDE89
-		// (set) Token: 0x0600C397 RID: 50071 RVA: 0x001CFC91 File Offset: 0x001CDE91
+		// Token: 0x17002746 RID: 10054
+		// (get) Token: 0x0600C27A RID: 49786 RVA: 0x001CD9A5 File Offset: 0x001CBBA5
+		// (set) Token: 0x0600C27B RID: 49787 RVA: 0x001CD9AD File Offset: 0x001CBBAD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LevelId
@@ -104,9 +104,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002786 RID: 10118
-		// (get) Token: 0x0600C398 RID: 50072 RVA: 0x001CFC9A File Offset: 0x001CDE9A
-		// (set) Token: 0x0600C399 RID: 50073 RVA: 0x001CFCA2 File Offset: 0x001CDEA2
+		// Token: 0x17002747 RID: 10055
+		// (get) Token: 0x0600C27C RID: 49788 RVA: 0x001CD9B6 File Offset: 0x001CBBB6
+		// (set) Token: 0x0600C27D RID: 49789 RVA: 0x001CD9BE File Offset: 0x001CBBBE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurWave
@@ -121,9 +121,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002787 RID: 10119
-		// (get) Token: 0x0600C39A RID: 50074 RVA: 0x001CFCAB File Offset: 0x001CDEAB
-		// (set) Token: 0x0600C39B RID: 50075 RVA: 0x001CFCB3 File Offset: 0x001CDEB3
+		// Token: 0x17002748 RID: 10056
+		// (get) Token: 0x0600C27E RID: 49790 RVA: 0x001CD9C7 File Offset: 0x001CBBC7
+		// (set) Token: 0x0600C27F RID: 49791 RVA: 0x001CD9CF File Offset: 0x001CBBCF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleId
@@ -138,9 +138,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002788 RID: 10120
-		// (get) Token: 0x0600C39C RID: 50076 RVA: 0x001CFCBC File Offset: 0x001CDEBC
-		// (set) Token: 0x0600C39D RID: 50077 RVA: 0x001CFCC4 File Offset: 0x001CDEC4
+		// Token: 0x17002749 RID: 10057
+		// (get) Token: 0x0600C280 RID: 49792 RVA: 0x001CD9D8 File Offset: 0x001CBBD8
+		// (set) Token: 0x0600C281 RID: 49793 RVA: 0x001CD9E0 File Offset: 0x001CBBE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleLevel
@@ -155,9 +155,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002789 RID: 10121
-		// (get) Token: 0x0600C39E RID: 50078 RVA: 0x001CFCCD File Offset: 0x001CDECD
-		// (set) Token: 0x0600C39F RID: 50079 RVA: 0x001CFCD5 File Offset: 0x001CDED5
+		// Token: 0x1700274A RID: 10058
+		// (get) Token: 0x0600C282 RID: 49794 RVA: 0x001CD9E9 File Offset: 0x001CBBE9
+		// (set) Token: 0x0600C283 RID: 49795 RVA: 0x001CD9F1 File Offset: 0x001CBBF1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleExp
@@ -172,9 +172,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700278A RID: 10122
-		// (get) Token: 0x0600C3A0 RID: 50080 RVA: 0x001CFCDE File Offset: 0x001CDEDE
-		// (set) Token: 0x0600C3A1 RID: 50081 RVA: 0x001CFCE6 File Offset: 0x001CDEE6
+		// Token: 0x1700274B RID: 10059
+		// (get) Token: 0x0600C284 RID: 49796 RVA: 0x001CD9FA File Offset: 0x001CBBFA
+		// (set) Token: 0x0600C285 RID: 49797 RVA: 0x001CDA02 File Offset: 0x001CBC02
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoItemPanelPbData ItemPanelPbData
@@ -189,9 +189,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700278B RID: 10123
-		// (get) Token: 0x0600C3A2 RID: 50082 RVA: 0x001CFCEF File Offset: 0x001CDEEF
-		// (set) Token: 0x0600C3A3 RID: 50083 RVA: 0x001CFCF7 File Offset: 0x001CDEF7
+		// Token: 0x1700274C RID: 10060
+		// (get) Token: 0x0600C286 RID: 49798 RVA: 0x001CDA0B File Offset: 0x001CBC0B
+		// (set) Token: 0x0600C287 RID: 49799 RVA: 0x001CDA13 File Offset: 0x001CBC13
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoWeaponPanelPbData WeaponPanelPbData
@@ -206,8 +206,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700278C RID: 10124
-		// (get) Token: 0x0600C3A4 RID: 50084 RVA: 0x001CFD00 File Offset: 0x001CDF00
+		// Token: 0x1700274D RID: 10061
+		// (get) Token: 0x0600C288 RID: 49800 RVA: 0x001CDA1C File Offset: 0x001CBC1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, int> PropertyMap
@@ -218,9 +218,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700278D RID: 10125
-		// (get) Token: 0x0600C3A5 RID: 50085 RVA: 0x001CFD08 File Offset: 0x001CDF08
-		// (set) Token: 0x0600C3A6 RID: 50086 RVA: 0x001CFD10 File Offset: 0x001CDF10
+		// Token: 0x1700274E RID: 10062
+		// (get) Token: 0x0600C289 RID: 49801 RVA: 0x001CDA24 File Offset: 0x001CBC24
+		// (set) Token: 0x0600C28A RID: 49802 RVA: 0x001CDA2C File Offset: 0x001CBC2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long SaveTimestamp
@@ -235,9 +235,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700278E RID: 10126
-		// (get) Token: 0x0600C3A7 RID: 50087 RVA: 0x001CFD19 File Offset: 0x001CDF19
-		// (set) Token: 0x0600C3A8 RID: 50088 RVA: 0x001CFD21 File Offset: 0x001CDF21
+		// Token: 0x1700274F RID: 10063
+		// (get) Token: 0x0600C28B RID: 49803 RVA: 0x001CDA35 File Offset: 0x001CBC35
+		// (set) Token: 0x0600C28C RID: 49804 RVA: 0x001CDA3D File Offset: 0x001CBC3D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int WaveType
@@ -252,7 +252,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C3A9 RID: 50089 RVA: 0x001CFD2A File Offset: 0x001CDF2A
+		// Token: 0x0600C28D RID: 49805 RVA: 0x001CDA46 File Offset: 0x001CBC46
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -260,7 +260,7 @@ namespace Aki.Protocol
 			return this.Equals(other as KurotatoInstInfo);
 		}
 
-		// Token: 0x0600C3AA RID: 50090 RVA: 0x001CFD38 File Offset: 0x001CDF38
+		// Token: 0x0600C28E RID: 49806 RVA: 0x001CDA54 File Offset: 0x001CBC54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(KurotatoInstInfo other)
@@ -268,7 +268,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LevelId == other.LevelId && this.CurWave == other.CurWave && this.RoleId == other.RoleId && this.RoleLevel == other.RoleLevel && this.RoleExp == other.RoleExp && object.Equals(this.ItemPanelPbData, other.ItemPanelPbData) && object.Equals(this.WeaponPanelPbData, other.WeaponPanelPbData) && this.PropertyMap.Equals(other.PropertyMap) && this.SaveTimestamp == other.SaveTimestamp && this.WaveType == other.WaveType && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600C3AB RID: 50091 RVA: 0x001CFE10 File Offset: 0x001CE010
+		// Token: 0x0600C28F RID: 49807 RVA: 0x001CDB2C File Offset: 0x001CBD2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -318,7 +318,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C3AC RID: 50092 RVA: 0x001CFF1F File Offset: 0x001CE11F
+		// Token: 0x0600C290 RID: 49808 RVA: 0x001CDC3B File Offset: 0x001CBE3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -326,7 +326,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600C3AD RID: 50093 RVA: 0x001CFF2C File Offset: 0x001CE12C
+		// Token: 0x0600C291 RID: 49809 RVA: 0x001CDC48 File Offset: 0x001CBE48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -334,7 +334,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600C3AE RID: 50094 RVA: 0x001CFF38 File Offset: 0x001CE138
+		// Token: 0x0600C292 RID: 49810 RVA: 0x001CDC54 File Offset: 0x001CBE54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -391,7 +391,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C3AF RID: 50095 RVA: 0x001D0068 File Offset: 0x001CE268
+		// Token: 0x0600C293 RID: 49811 RVA: 0x001CDD84 File Offset: 0x001CBF84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -441,7 +441,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C3B0 RID: 50096 RVA: 0x001D017C File Offset: 0x001CE37C
+		// Token: 0x0600C294 RID: 49812 RVA: 0x001CDE98 File Offset: 0x001CC098
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(KurotatoInstInfo other)
@@ -498,7 +498,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600C3B1 RID: 50097 RVA: 0x001D0299 File Offset: 0x001CE499
+		// Token: 0x0600C295 RID: 49813 RVA: 0x001CDFB5 File Offset: 0x001CC1B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -506,7 +506,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600C3B2 RID: 50098 RVA: 0x001D02A4 File Offset: 0x001CE4A4
+		// Token: 0x0600C296 RID: 49814 RVA: 0x001CDFC0 File Offset: 0x001CC1C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -595,73 +595,73 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400546D RID: 21613
+		// Token: 0x04005474 RID: 21620
 		private static readonly MessageParser<KurotatoInstInfo> _parser = new MessageParser<KurotatoInstInfo>(() => new KurotatoInstInfo());
 
-		// Token: 0x0400546E RID: 21614
+		// Token: 0x04005475 RID: 21621
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400546F RID: 21615
+		// Token: 0x04005476 RID: 21622
 		public const int LevelIdFieldNumber = 1;
 
-		// Token: 0x04005470 RID: 21616
+		// Token: 0x04005477 RID: 21623
 		private int levelId_;
 
-		// Token: 0x04005471 RID: 21617
+		// Token: 0x04005478 RID: 21624
 		public const int CurWaveFieldNumber = 2;
 
-		// Token: 0x04005472 RID: 21618
+		// Token: 0x04005479 RID: 21625
 		private int curWave_;
 
-		// Token: 0x04005473 RID: 21619
+		// Token: 0x0400547A RID: 21626
 		public const int RoleIdFieldNumber = 3;
 
-		// Token: 0x04005474 RID: 21620
+		// Token: 0x0400547B RID: 21627
 		private int roleId_;
 
-		// Token: 0x04005475 RID: 21621
+		// Token: 0x0400547C RID: 21628
 		public const int RoleLevelFieldNumber = 4;
 
-		// Token: 0x04005476 RID: 21622
+		// Token: 0x0400547D RID: 21629
 		private int roleLevel_;
 
-		// Token: 0x04005477 RID: 21623
+		// Token: 0x0400547E RID: 21630
 		public const int RoleExpFieldNumber = 5;
 
-		// Token: 0x04005478 RID: 21624
+		// Token: 0x0400547F RID: 21631
 		private int roleExp_;
 
-		// Token: 0x04005479 RID: 21625
+		// Token: 0x04005480 RID: 21632
 		public const int ItemPanelPbDataFieldNumber = 6;
 
-		// Token: 0x0400547A RID: 21626
+		// Token: 0x04005481 RID: 21633
 		private KurotatoItemPanelPbData itemPanelPbData_;
 
-		// Token: 0x0400547B RID: 21627
+		// Token: 0x04005482 RID: 21634
 		public const int WeaponPanelPbDataFieldNumber = 7;
 
-		// Token: 0x0400547C RID: 21628
+		// Token: 0x04005483 RID: 21635
 		private KurotatoWeaponPanelPbData weaponPanelPbData_;
 
-		// Token: 0x0400547D RID: 21629
+		// Token: 0x04005484 RID: 21636
 		public const int PropertyMapFieldNumber = 8;
 
-		// Token: 0x0400547E RID: 21630
+		// Token: 0x04005485 RID: 21637
 		private static readonly MapField<int, int>.Codec _map_propertyMap_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 66U);
 
-		// Token: 0x0400547F RID: 21631
+		// Token: 0x04005486 RID: 21638
 		private readonly MapField<int, int> propertyMap_ = new MapField<int, int>();
 
-		// Token: 0x04005480 RID: 21632
+		// Token: 0x04005487 RID: 21639
 		public const int SaveTimestampFieldNumber = 9;
 
-		// Token: 0x04005481 RID: 21633
+		// Token: 0x04005488 RID: 21640
 		private long saveTimestamp_;
 
-		// Token: 0x04005482 RID: 21634
+		// Token: 0x04005489 RID: 21641
 		public const int WaveTypeFieldNumber = 10;
 
-		// Token: 0x04005483 RID: 21635
+		// Token: 0x0400548A RID: 21642
 		private int waveType_;
 	}
 }

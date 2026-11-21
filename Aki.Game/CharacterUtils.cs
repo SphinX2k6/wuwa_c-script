@@ -6,12 +6,12 @@ using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.Module.RoleUi;
 using UnrealEngine;
 
-// Token: 0x02002E35 RID: 11829
+// Token: 0x02002391 RID: 9105
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterUtils
 {
-	// Token: 0x06018EE5 RID: 102117 RVA: 0x0066D5E4 File Offset: 0x0066B7E4
+	// Token: 0x060167B2 RID: 92082 RVA: 0x006934DC File Offset: 0x006916DC
 	[NullableContext(2)]
 	public static bool IsCharacterMonsterOrSummoned(EntityHandle entityHandle)
 	{
@@ -23,7 +23,7 @@ public class CharacterUtils
 		return component != null && component.Valid && (component.IsCharacterMonster() || component.IsSummonByCharacterMonster());
 	}
 
-	// Token: 0x06018EE6 RID: 102118 RVA: 0x0066D638 File Offset: 0x0066B838
+	// Token: 0x060167B3 RID: 92083 RVA: 0x00693530 File Offset: 0x00691730
 	[NullableContext(2)]
 	public static bool CanCharacterMonsterOrSummonedDisplayEffect(EntityHandle entityHandle)
 	{
@@ -43,7 +43,7 @@ public class CharacterUtils
 		return !component.IsSummonByCharacterMonster() || CharacterUtils.HasPerformanceAuthority(CreatureModel.Instance.GetEntity(component.GetSummonerId()));
 	}
 
-	// Token: 0x06018EE7 RID: 102119 RVA: 0x0066D6A8 File Offset: 0x0066B8A8
+	// Token: 0x060167B4 RID: 92084 RVA: 0x006935A0 File Offset: 0x006917A0
 	[NullableContext(2)]
 	private static bool HasPerformanceAuthority(EntityHandle entityHandle)
 	{
@@ -97,7 +97,7 @@ public class CharacterUtils
 		return false;
 	}
 
-	// Token: 0x06018EE8 RID: 102120 RVA: 0x0066D818 File Offset: 0x0066BA18
+	// Token: 0x060167B5 RID: 92085 RVA: 0x00693710 File Offset: 0x00691910
 	public static int GetHuluModelId(int partyId)
 	{
 		CalabashMesh? config = ConfigCalabashMeshById.GetConfig(partyId, true);
@@ -114,7 +114,7 @@ public class CharacterUtils
 		return config.Value.MeshId;
 	}
 
-	// Token: 0x06018EE9 RID: 102121 RVA: 0x0066D874 File Offset: 0x0066BA74
+	// Token: 0x060167B6 RID: 92086 RVA: 0x0069376C File Offset: 0x0069196C
 	public static string GetMovementModeName(EMovementMode movementMode)
 	{
 		switch (movementMode)
@@ -140,7 +140,7 @@ public class CharacterUtils
 		}
 	}
 
-	// Token: 0x06018EEA RID: 102122 RVA: 0x0066D8E0 File Offset: 0x0066BAE0
+	// Token: 0x060167B7 RID: 92087 RVA: 0x006937D8 File Offset: 0x006919D8
 	public static string GetCustomMovementModeName(int customMovementMode)
 	{
 		switch (customMovementMode)
@@ -182,7 +182,7 @@ public class CharacterUtils
 		}
 	}
 
-	// Token: 0x06018EEB RID: 102123 RVA: 0x0066D99C File Offset: 0x0066BB9C
+	// Token: 0x060167B8 RID: 92088 RVA: 0x00693894 File Offset: 0x00691A94
 	public static string GetVehicleMovementModeName(EKuroVehicleMovementMode customMovementMode)
 	{
 		switch (customMovementMode)

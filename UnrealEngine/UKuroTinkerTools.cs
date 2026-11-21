@@ -6,30 +6,30 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E78 RID: 7800
+	// Token: 0x020005AB RID: 1451
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSoHotPatch.KuroTinkerTools")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroTinkerTools : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601DB29 RID: 121641 RVA: 0x002BDF2E File Offset: 0x002BC12E
+		// Token: 0x06008293 RID: 33427 RVA: 0x000C120A File Offset: 0x000BF40A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroTinkerTools._ClassPtr;
 		}
 
-		// Token: 0x0601DB2A RID: 121642 RVA: 0x002BDF3C File Offset: 0x002BC13C
+		// Token: 0x06008294 RID: 33428 RVA: 0x000C1218 File Offset: 0x000BF418
 		public UKuroTinkerTools() : this(BuiltinUtils.AllocNativeUObject(UKuroTinkerTools.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601DB2B RID: 121643 RVA: 0x002BDF64 File Offset: 0x002BC164
+		// Token: 0x06008295 RID: 33429 RVA: 0x000C1240 File Offset: 0x000BF440
 		public UKuroTinkerTools(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroTinkerTools.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0601DB2C RID: 121644 RVA: 0x002BDF98 File Offset: 0x002BC198
+		// Token: 0x06008296 RID: 33430 RVA: 0x000C1274 File Offset: 0x000BF474
 		public unsafe static void SetCurLoadingVersion(string Version)
 		{
 			FString fstring = FString.AllocTemp(Version);
@@ -37,7 +37,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x0601DB2D RID: 121645 RVA: 0x002BDFBC File Offset: 0x002BC1BC
+		// Token: 0x06008297 RID: 33431 RVA: 0x000C1298 File Offset: 0x000BF498
 		public unsafe static void LoadPatch(string PatchPath)
 		{
 			FString fstring = FString.AllocTemp(PatchPath);
@@ -45,33 +45,33 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x0601DB2E RID: 121646
+		// Token: 0x06008298 RID: 33432
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsTinkerPackaged();
 
-		// Token: 0x0601DB2F RID: 121647 RVA: 0x002BDFE0 File Offset: 0x002BC1E0
+		// Token: 0x06008299 RID: 33433 RVA: 0x000C12BC File Offset: 0x000BF4BC
 		public static string GetCurUsingVersion()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroTinkerTools.__GetCurUsingVersion_Internal());
 		}
 
-		// Token: 0x0601DB30 RID: 121648 RVA: 0x002BDFEC File Offset: 0x002BC1EC
+		// Token: 0x0600829A RID: 33434 RVA: 0x000C12C8 File Offset: 0x000BF4C8
 		public static string GetCurLoadingVersion()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroTinkerTools.__GetCurLoadingVersion_Internal());
 		}
 
-		// Token: 0x0601DB31 RID: 121649 RVA: 0x002BDFF8 File Offset: 0x002BC1F8
+		// Token: 0x0600829B RID: 33435 RVA: 0x000C12D4 File Offset: 0x000BF4D4
 		public static string GetCurApplyingVersion()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroTinkerTools.__GetCurApplyingVersion_Internal());
 		}
 
-		// Token: 0x0601DB32 RID: 121650
+		// Token: 0x0600829C RID: 33436
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void CleanPatch();
 
-		// Token: 0x0601DB33 RID: 121651 RVA: 0x002BE004 File Offset: 0x002BC204
+		// Token: 0x0600829D RID: 33437 RVA: 0x000C12E0 File Offset: 0x000BF4E0
 		public unsafe static void CheckLib(int ObjId, string Hash)
 		{
 			FString fstring = FString.AllocTemp(Hash);
@@ -79,51 +79,51 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x0601DB34 RID: 121652
+		// Token: 0x0600829E RID: 33438
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCurLoadingVersion_Internal(in FString Version);
 
-		// Token: 0x0601DB35 RID: 121653
+		// Token: 0x0600829F RID: 33439
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __LoadPatch_Internal(in FString PatchPath);
 
-		// Token: 0x0601DB36 RID: 121654
+		// Token: 0x060082A0 RID: 33440
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetCurUsingVersion_Internal();
 
-		// Token: 0x0601DB37 RID: 121655
+		// Token: 0x060082A1 RID: 33441
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetCurLoadingVersion_Internal();
 
-		// Token: 0x0601DB38 RID: 121656
+		// Token: 0x060082A2 RID: 33442
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetCurApplyingVersion_Internal();
 
-		// Token: 0x0601DB39 RID: 121657
+		// Token: 0x060082A3 RID: 33443
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CheckLib_Internal(int ObjId, in FString Hash);
 
-		// Token: 0x0601DB3A RID: 121658 RVA: 0x002BE029 File Offset: 0x002BC229
+		// Token: 0x060082A4 RID: 33444 RVA: 0x000C1305 File Offset: 0x000BF505
 		static UKuroTinkerTools()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSoHotPatch.KuroTinkerTools");
 		}
 
-		// Token: 0x0601DB3B RID: 121659 RVA: 0x002BE037 File Offset: 0x002BC237
+		// Token: 0x060082A5 RID: 33445 RVA: 0x000C1313 File Offset: 0x000BF513
 		protected UKuroTinkerTools(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010149 RID: 65865
+		// Token: 0x040038DE RID: 14558
 		public new const string __ObjectPath = "/Script/KuroSoHotPatch.KuroTinkerTools";
 
-		// Token: 0x0401014A RID: 65866
+		// Token: 0x040038DF RID: 14559
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401014B RID: 65867
+		// Token: 0x040038E0 RID: 14560
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

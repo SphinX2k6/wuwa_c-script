@@ -6,7 +6,7 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002741 RID: 10049
+	// Token: 0x020007F5 RID: 2037
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -14,15 +14,15 @@ namespace UnrealEngine
 	[UnrealStructLayout(720, 16, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 720)]
 	public class FSharpherealTestStruct_FStruct : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060253B6 RID: 152502 RVA: 0x00373417 File Offset: 0x00371617
+		// Token: 0x0600AE98 RID: 44696 RVA: 0x001030C6 File Offset: 0x001012C6
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSharpherealTestStruct_FStruct._ScriptStructPtr != 0) ? FSharpherealTestStruct_FStruct._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/SharpherealTest.SharpherealTestStruct_FStruct", ref FSharpherealTestStruct_FStruct._ScriptStructPtr);
 		}
 
-		// Token: 0x17008FC0 RID: 36800
-		// (get) Token: 0x060253B7 RID: 152503 RVA: 0x0037343B File Offset: 0x0037163B
-		// (set) Token: 0x060253B8 RID: 152504 RVA: 0x0037344F File Offset: 0x0037164F
+		// Token: 0x170020A8 RID: 8360
+		// (get) Token: 0x0600AE99 RID: 44697 RVA: 0x001030EA File Offset: 0x001012EA
+		// (set) Token: 0x0600AE9A RID: 44698 RVA: 0x001030FE File Offset: 0x001012FE
 		public unsafe FVector Vector
 		{
 			get
@@ -35,9 +35,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FC1 RID: 36801
-		// (get) Token: 0x060253B9 RID: 152505 RVA: 0x00373464 File Offset: 0x00371664
-		// (set) Token: 0x060253BA RID: 152506 RVA: 0x00373478 File Offset: 0x00371678
+		// Token: 0x170020A9 RID: 8361
+		// (get) Token: 0x0600AE9B RID: 44699 RVA: 0x00103113 File Offset: 0x00101313
+		// (set) Token: 0x0600AE9C RID: 44700 RVA: 0x00103127 File Offset: 0x00101327
 		public unsafe FVector4 Vector4
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FC2 RID: 36802
-		// (get) Token: 0x060253BB RID: 152507 RVA: 0x00373490 File Offset: 0x00371690
-		// (set) Token: 0x060253BC RID: 152508 RVA: 0x003734D3 File Offset: 0x003716D3
+		// Token: 0x170020AA RID: 8362
+		// (get) Token: 0x0600AE9D RID: 44701 RVA: 0x0010313C File Offset: 0x0010133C
+		// (set) Token: 0x0600AE9E RID: 44702 RVA: 0x0010317F File Offset: 0x0010137F
 		public FSharpherealTestSimpleStruct SimpleStruct
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FC3 RID: 36803
-		// (get) Token: 0x060253BD RID: 152509 RVA: 0x003734F4 File Offset: 0x003716F4
-		// (set) Token: 0x060253BE RID: 152510 RVA: 0x00373537 File Offset: 0x00371737
+		// Token: 0x170020AB RID: 8363
+		// (get) Token: 0x0600AE9F RID: 44703 RVA: 0x001031A0 File Offset: 0x001013A0
+		// (set) Token: 0x0600AEA0 RID: 44704 RVA: 0x001031E3 File Offset: 0x001013E3
 		public TArray<FVector> VectorArray
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FC4 RID: 36804
-		// (get) Token: 0x060253BF RID: 152511 RVA: 0x00373548 File Offset: 0x00371748
-		// (set) Token: 0x060253C0 RID: 152512 RVA: 0x0037358B File Offset: 0x0037178B
+		// Token: 0x170020AC RID: 8364
+		// (get) Token: 0x0600AEA1 RID: 44705 RVA: 0x001031F4 File Offset: 0x001013F4
+		// (set) Token: 0x0600AEA2 RID: 44706 RVA: 0x00103237 File Offset: 0x00101437
 		public TArray<FVector4> Vector4Array
 		{
 			get
@@ -113,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FC5 RID: 36805
-		// (get) Token: 0x060253C1 RID: 152513 RVA: 0x0037359C File Offset: 0x0037179C
-		// (set) Token: 0x060253C2 RID: 152514 RVA: 0x003735DF File Offset: 0x003717DF
+		// Token: 0x170020AD RID: 8365
+		// (get) Token: 0x0600AEA3 RID: 44707 RVA: 0x00103248 File Offset: 0x00101448
+		// (set) Token: 0x0600AEA4 RID: 44708 RVA: 0x0010328B File Offset: 0x0010148B
 		public TArray<FSharpherealTestSimpleStruct> SimpleStructArray
 		{
 			get
@@ -134,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FC6 RID: 36806
-		// (get) Token: 0x060253C3 RID: 152515 RVA: 0x003735F0 File Offset: 0x003717F0
-		// (set) Token: 0x060253C4 RID: 152516 RVA: 0x00373634 File Offset: 0x00371834
+		// Token: 0x170020AE RID: 8366
+		// (get) Token: 0x0600AEA5 RID: 44709 RVA: 0x0010329C File Offset: 0x0010149C
+		// (set) Token: 0x0600AEA6 RID: 44710 RVA: 0x001032E0 File Offset: 0x001014E0
 		public TFixedArray<FVector> VectorFixedArray
 		{
 			get
@@ -155,9 +155,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FC7 RID: 36807
-		// (get) Token: 0x060253C5 RID: 152517 RVA: 0x00373644 File Offset: 0x00371844
-		// (set) Token: 0x060253C6 RID: 152518 RVA: 0x00373688 File Offset: 0x00371888
+		// Token: 0x170020AF RID: 8367
+		// (get) Token: 0x0600AEA7 RID: 44711 RVA: 0x001032F0 File Offset: 0x001014F0
+		// (set) Token: 0x0600AEA8 RID: 44712 RVA: 0x00103334 File Offset: 0x00101534
 		public TFixedArray<FVector4> Vector4FixedArray
 		{
 			get
@@ -176,9 +176,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FC8 RID: 36808
-		// (get) Token: 0x060253C7 RID: 152519 RVA: 0x00373698 File Offset: 0x00371898
-		// (set) Token: 0x060253C8 RID: 152520 RVA: 0x003736DC File Offset: 0x003718DC
+		// Token: 0x170020B0 RID: 8368
+		// (get) Token: 0x0600AEA9 RID: 44713 RVA: 0x00103344 File Offset: 0x00101544
+		// (set) Token: 0x0600AEAA RID: 44714 RVA: 0x00103388 File Offset: 0x00101588
 		public TFixedArray<FSharpherealTestSimpleStruct> SimpleStructFixedArray
 		{
 			get
@@ -197,9 +197,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FC9 RID: 36809
-		// (get) Token: 0x060253C9 RID: 152521 RVA: 0x003736EC File Offset: 0x003718EC
-		// (set) Token: 0x060253CA RID: 152522 RVA: 0x0037372F File Offset: 0x0037192F
+		// Token: 0x170020B1 RID: 8369
+		// (get) Token: 0x0600AEAB RID: 44715 RVA: 0x00103398 File Offset: 0x00101598
+		// (set) Token: 0x0600AEAC RID: 44716 RVA: 0x001033DB File Offset: 0x001015DB
 		public TSet<FVector> VectorSet
 		{
 			get
@@ -218,9 +218,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FCA RID: 36810
-		// (get) Token: 0x060253CB RID: 152523 RVA: 0x00373740 File Offset: 0x00371940
-		// (set) Token: 0x060253CC RID: 152524 RVA: 0x00373783 File Offset: 0x00371983
+		// Token: 0x170020B2 RID: 8370
+		// (get) Token: 0x0600AEAD RID: 44717 RVA: 0x001033EC File Offset: 0x001015EC
+		// (set) Token: 0x0600AEAE RID: 44718 RVA: 0x0010342F File Offset: 0x0010162F
 		public TSet<FVector4> Vector4Set
 		{
 			get
@@ -239,9 +239,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FCB RID: 36811
-		// (get) Token: 0x060253CD RID: 152525 RVA: 0x00373794 File Offset: 0x00371994
-		// (set) Token: 0x060253CE RID: 152526 RVA: 0x003737D7 File Offset: 0x003719D7
+		// Token: 0x170020B3 RID: 8371
+		// (get) Token: 0x0600AEAF RID: 44719 RVA: 0x00103440 File Offset: 0x00101640
+		// (set) Token: 0x0600AEB0 RID: 44720 RVA: 0x00103483 File Offset: 0x00101683
 		public TSet<FSharpherealTestSimpleStruct> SimpleStructSet
 		{
 			get
@@ -260,9 +260,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FCC RID: 36812
-		// (get) Token: 0x060253CF RID: 152527 RVA: 0x003737E8 File Offset: 0x003719E8
-		// (set) Token: 0x060253D0 RID: 152528 RVA: 0x0037382B File Offset: 0x00371A2B
+		// Token: 0x170020B4 RID: 8372
+		// (get) Token: 0x0600AEB1 RID: 44721 RVA: 0x00103494 File Offset: 0x00101694
+		// (set) Token: 0x0600AEB2 RID: 44722 RVA: 0x001034D7 File Offset: 0x001016D7
 		public TMap<FVector, int> VectorMap
 		{
 			get
@@ -281,9 +281,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FCD RID: 36813
-		// (get) Token: 0x060253D1 RID: 152529 RVA: 0x0037383C File Offset: 0x00371A3C
-		// (set) Token: 0x060253D2 RID: 152530 RVA: 0x0037387F File Offset: 0x00371A7F
+		// Token: 0x170020B5 RID: 8373
+		// (get) Token: 0x0600AEB3 RID: 44723 RVA: 0x001034E8 File Offset: 0x001016E8
+		// (set) Token: 0x0600AEB4 RID: 44724 RVA: 0x0010352B File Offset: 0x0010172B
 		public TMap<FVector4, int> Vector4Map
 		{
 			get
@@ -302,9 +302,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FCE RID: 36814
-		// (get) Token: 0x060253D3 RID: 152531 RVA: 0x00373890 File Offset: 0x00371A90
-		// (set) Token: 0x060253D4 RID: 152532 RVA: 0x003738D3 File Offset: 0x00371AD3
+		// Token: 0x170020B6 RID: 8374
+		// (get) Token: 0x0600AEB5 RID: 44725 RVA: 0x0010353C File Offset: 0x0010173C
+		// (set) Token: 0x0600AEB6 RID: 44726 RVA: 0x0010357F File Offset: 0x0010177F
 		public TMap<FSharpherealTestSimpleStruct, int> SimpleStructMap
 		{
 			get
@@ -323,97 +323,77 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060253D5 RID: 152533 RVA: 0x003738E1 File Offset: 0x00371AE1
+		// Token: 0x0600AEB7 RID: 44727 RVA: 0x0010358D File Offset: 0x0010178D
 		public FSharpherealTestStruct_FStruct()
 		{
 		}
 
-		// Token: 0x060253D6 RID: 152534 RVA: 0x003738EC File Offset: 0x00371AEC
-		public FSharpherealTestStruct_FStruct(FVector Vector, FVector4 Vector4, FSharpherealTestSimpleStruct SimpleStruct, TArray<FVector> VectorArray, TArray<FVector4> Vector4Array, TArray<FSharpherealTestSimpleStruct> SimpleStructArray, TFixedArray<FVector> VectorFixedArray, TFixedArray<FVector4> Vector4FixedArray, TFixedArray<FSharpherealTestSimpleStruct> SimpleStructFixedArray, TSet<FVector> VectorSet, TSet<FVector4> Vector4Set, TSet<FSharpherealTestSimpleStruct> SimpleStructSet, TMap<FVector, int> VectorMap, TMap<FVector4, int> Vector4Map, TMap<FSharpherealTestSimpleStruct, int> SimpleStructMap)
-		{
-			this.Vector = Vector;
-			this.Vector4 = Vector4;
-			this.SimpleStruct = SimpleStruct;
-			this.VectorArray = VectorArray;
-			this.Vector4Array = Vector4Array;
-			this.SimpleStructArray = SimpleStructArray;
-			this.VectorFixedArray = VectorFixedArray;
-			this.Vector4FixedArray = Vector4FixedArray;
-			this.SimpleStructFixedArray = SimpleStructFixedArray;
-			this.VectorSet = VectorSet;
-			this.Vector4Set = Vector4Set;
-			this.SimpleStructSet = SimpleStructSet;
-			this.VectorMap = VectorMap;
-			this.Vector4Map = Vector4Map;
-			this.SimpleStructMap = SimpleStructMap;
-		}
-
-		// Token: 0x060253D7 RID: 152535 RVA: 0x00373974 File Offset: 0x00371B74
+		// Token: 0x0600AEB8 RID: 44728 RVA: 0x00103595 File Offset: 0x00101795
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSharpherealTestStruct_FStruct.StaticStruct();
 		}
 
-		// Token: 0x060253D8 RID: 152536 RVA: 0x00373980 File Offset: 0x00371B80
+		// Token: 0x0600AEB9 RID: 44729 RVA: 0x001035A1 File Offset: 0x001017A1
 		[NullableContext(2)]
 		public FSharpherealTestStruct_FStruct(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060253D9 RID: 152537 RVA: 0x0037398A File Offset: 0x00371B8A
+		// Token: 0x0600AEBA RID: 44730 RVA: 0x001035AB File Offset: 0x001017AB
 		public FSharpherealTestStruct_FStruct(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060253DA RID: 152538 RVA: 0x00373995 File Offset: 0x00371B95
+		// Token: 0x0600AEBB RID: 44731 RVA: 0x001035B6 File Offset: 0x001017B6
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSharpherealTestStruct_FStruct(Pointer, false, true);
 		}
 
-		// Token: 0x060253DB RID: 152539 RVA: 0x0037399F File Offset: 0x00371B9F
+		// Token: 0x0600AEBC RID: 44732 RVA: 0x001035C0 File Offset: 0x001017C0
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSharpherealTestStruct_FStruct(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014147 RID: 82247
+		// Token: 0x04004BA6 RID: 19366
 		public const string __ObjectPath = "/Script/SharpherealTest.SharpherealTestStruct_FStruct";
 
-		// Token: 0x04014148 RID: 82248
+		// Token: 0x04004BA7 RID: 19367
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014149 RID: 82249
+		// Token: 0x04004BA8 RID: 19368
 		internal static int __PropertyOffset_Vector;
 
-		// Token: 0x0401414A RID: 82250
+		// Token: 0x04004BA9 RID: 19369
 		internal static int __PropertyOffset_Vector4;
 
-		// Token: 0x0401414B RID: 82251
+		// Token: 0x04004BAA RID: 19370
 		internal static int __PropertyOffset_SimpleStruct;
 
-		// Token: 0x0401414C RID: 82252
+		// Token: 0x04004BAB RID: 19371
 		[Nullable(2)]
 		private FSharpherealTestSimpleStruct _SimpleStruct;
 
-		// Token: 0x0401414D RID: 82253
+		// Token: 0x04004BAC RID: 19372
 		internal static int __PropertyOffset_VectorArray;
 
-		// Token: 0x0401414E RID: 82254
+		// Token: 0x04004BAD RID: 19373
 		[Nullable(2)]
 		private TArray<FVector> _VectorArray;
 
-		// Token: 0x0401414F RID: 82255
+		// Token: 0x04004BAE RID: 19374
 		internal static int __PropertyOffset_Vector4Array;
 
-		// Token: 0x04014150 RID: 82256
+		// Token: 0x04004BAF RID: 19375
 		[Nullable(2)]
 		private TArray<FVector4> _Vector4Array;
 
-		// Token: 0x04014151 RID: 82257
+		// Token: 0x04004BB0 RID: 19376
 		internal static int __PropertyOffset_SimpleStructArray;
 
-		// Token: 0x04014152 RID: 82258
+		// Token: 0x04004BB1 RID: 19377
 		[Nullable(new byte[]
 		{
 			2,
@@ -421,24 +401,24 @@ namespace UnrealEngine
 		})]
 		private TArray<FSharpherealTestSimpleStruct> _SimpleStructArray;
 
-		// Token: 0x04014153 RID: 82259
+		// Token: 0x04004BB2 RID: 19378
 		internal static int __PropertyOffset_VectorFixedArray;
 
-		// Token: 0x04014154 RID: 82260
+		// Token: 0x04004BB3 RID: 19379
 		[Nullable(2)]
 		private TFixedArray<FVector> _VectorFixedArray;
 
-		// Token: 0x04014155 RID: 82261
+		// Token: 0x04004BB4 RID: 19380
 		internal static int __PropertyOffset_Vector4FixedArray;
 
-		// Token: 0x04014156 RID: 82262
+		// Token: 0x04004BB5 RID: 19381
 		[Nullable(2)]
 		private TFixedArray<FVector4> _Vector4FixedArray;
 
-		// Token: 0x04014157 RID: 82263
+		// Token: 0x04004BB6 RID: 19382
 		internal static int __PropertyOffset_SimpleStructFixedArray;
 
-		// Token: 0x04014158 RID: 82264
+		// Token: 0x04004BB7 RID: 19383
 		[Nullable(new byte[]
 		{
 			2,
@@ -446,24 +426,24 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<FSharpherealTestSimpleStruct> _SimpleStructFixedArray;
 
-		// Token: 0x04014159 RID: 82265
+		// Token: 0x04004BB8 RID: 19384
 		internal static int __PropertyOffset_VectorSet;
 
-		// Token: 0x0401415A RID: 82266
+		// Token: 0x04004BB9 RID: 19385
 		[Nullable(2)]
 		private TSet<FVector> _VectorSet;
 
-		// Token: 0x0401415B RID: 82267
+		// Token: 0x04004BBA RID: 19386
 		internal static int __PropertyOffset_Vector4Set;
 
-		// Token: 0x0401415C RID: 82268
+		// Token: 0x04004BBB RID: 19387
 		[Nullable(2)]
 		private TSet<FVector4> _Vector4Set;
 
-		// Token: 0x0401415D RID: 82269
+		// Token: 0x04004BBC RID: 19388
 		internal static int __PropertyOffset_SimpleStructSet;
 
-		// Token: 0x0401415E RID: 82270
+		// Token: 0x04004BBD RID: 19389
 		[Nullable(new byte[]
 		{
 			2,
@@ -471,24 +451,24 @@ namespace UnrealEngine
 		})]
 		private TSet<FSharpherealTestSimpleStruct> _SimpleStructSet;
 
-		// Token: 0x0401415F RID: 82271
+		// Token: 0x04004BBE RID: 19390
 		internal static int __PropertyOffset_VectorMap;
 
-		// Token: 0x04014160 RID: 82272
+		// Token: 0x04004BBF RID: 19391
 		[Nullable(2)]
 		private TMap<FVector, int> _VectorMap;
 
-		// Token: 0x04014161 RID: 82273
+		// Token: 0x04004BC0 RID: 19392
 		internal static int __PropertyOffset_Vector4Map;
 
-		// Token: 0x04014162 RID: 82274
+		// Token: 0x04004BC1 RID: 19393
 		[Nullable(2)]
 		private TMap<FVector4, int> _Vector4Map;
 
-		// Token: 0x04014163 RID: 82275
+		// Token: 0x04004BC2 RID: 19394
 		internal static int __PropertyOffset_SimpleStructMap;
 
-		// Token: 0x04014164 RID: 82276
+		// Token: 0x04004BC3 RID: 19395
 		[Nullable(new byte[]
 		{
 			2,

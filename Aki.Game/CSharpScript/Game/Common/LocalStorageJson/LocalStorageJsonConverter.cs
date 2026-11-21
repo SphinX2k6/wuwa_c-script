@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Common.LocalStorageJson
 {
-	// Token: 0x0200728D RID: 29325
+	// Token: 0x0200640C RID: 25612
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,8 +14,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 	})]
 	public class LocalStorageJsonConverter<[Nullable(2)] T> : JsonConverter<T>
 	{
-		// Token: 0x17009E95 RID: 40597
-		// (get) Token: 0x06047DEE RID: 294382 RVA: 0x012640F3 File Offset: 0x012622F3
+		// Token: 0x170075EE RID: 30190
+		// (get) Token: 0x0603E1AE RID: 254382 RVA: 0x01204B03 File Offset: 0x01202D03
 		public override bool HandleNull
 		{
 			get
@@ -24,14 +24,14 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			}
 		}
 
-		// Token: 0x06047DEF RID: 294383 RVA: 0x012640F6 File Offset: 0x012622F6
+		// Token: 0x0603E1AF RID: 254383 RVA: 0x01204B06 File Offset: 0x01202D06
 		[return: Nullable(2)]
 		public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			return LocalStorageJsonDecoder.Decode<T>(ref reader, options);
 		}
 
-		// Token: 0x06047DF0 RID: 294384 RVA: 0x012640FF File Offset: 0x012622FF
+		// Token: 0x0603E1B0 RID: 254384 RVA: 0x01204B0F File Offset: 0x01202D0F
 		public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
 		{
 			LocalStorageJsonEncoder.Encode<T>(writer, value, options);

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054BC RID: 21692
+	// Token: 0x02005A42 RID: 23106
 	public class ILetGoDestroyConditionT
 	{
-		// Token: 0x17009FDD RID: 40925
-		// (get) Token: 0x06023BF4 RID: 146420 RVA: 0x004F15CE File Offset: 0x004EF7CE
-		// (set) Token: 0x06023BF5 RID: 146421 RVA: 0x004F15D6 File Offset: 0x004EF7D6
+		// Token: 0x1700A817 RID: 43031
+		// (get) Token: 0x06025CAC RID: 154796 RVA: 0x0052E642 File Offset: 0x0052C842
+		// (set) Token: 0x06025CAD RID: 154797 RVA: 0x0052E64A File Offset: 0x0052C84A
 		public ETeleControlDestroyCondition Type { get; set; }
 
-		// Token: 0x06023BF6 RID: 146422 RVA: 0x004F15DF File Offset: 0x004EF7DF
+		// Token: 0x06025CAE RID: 154798 RVA: 0x0052E653 File Offset: 0x0052C853
 		public ILetGoDestroyConditionT()
 		{
 			this.Type = ETeleControlDestroyCondition.LetGo;

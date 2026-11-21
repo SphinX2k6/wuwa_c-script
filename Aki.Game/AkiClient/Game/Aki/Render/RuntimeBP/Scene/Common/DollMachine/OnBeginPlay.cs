@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Common.DollMachine
 {
-	// Token: 0x02003B9F RID: 15263
+	// Token: 0x020030D0 RID: 12496
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class OnBeginPlay : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06021F89 RID: 139145 RVA: 0x008FAFC4 File Offset: 0x008F91C4
+		// Token: 0x0601E155 RID: 123221 RVA: 0x0090A86A File Offset: 0x00908A6A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return OnBeginPlay.StaticFunctionPtr();
 		}
 
-		// Token: 0x06021F8A RID: 139146 RVA: 0x008FAFD0 File Offset: 0x008F91D0
+		// Token: 0x0601E156 RID: 123222 RVA: 0x0090A876 File Offset: 0x00908A76
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_DollActor_C.__OnBeginPlay__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,31 +28,30 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Common.DollMachine
 			return BP_DollActor_C.__OnBeginPlay__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x06021F8B RID: 139147 RVA: 0x008FAFF3 File Offset: 0x008F91F3
+		// Token: 0x0601E157 RID: 123223 RVA: 0x0090A899 File Offset: 0x00908A99
 		public OnBeginPlay()
 		{
 		}
 
-		// Token: 0x06021F8C RID: 139148 RVA: 0x008FAFFB File Offset: 0x008F91FB
+		// Token: 0x0601E158 RID: 123224 RVA: 0x0090A8A1 File Offset: 0x00908AA1
 		[NullableContext(2)]
 		public OnBeginPlay(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06021F8D RID: 139149 RVA: 0x008FB005 File Offset: 0x008F9205
+		// Token: 0x0601E159 RID: 123225 RVA: 0x0090A8AB File Offset: 0x00908AAB
 		public OnBeginPlay(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06021F8E RID: 139150 RVA: 0x008FB010 File Offset: 0x008F9210
+		// Token: 0x0601E15A RID: 123226 RVA: 0x0090A8B6 File Offset: 0x00908AB6
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<BP_DollActor_C>) ?? ((Action<BP_DollActor_C>)Delegate.CreateDelegate(typeof(Action<BP_DollActor_C>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06021F8F RID: 139151 RVA: 0x008FB042 File Offset: 0x008F9242
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601E15B RID: 123227 RVA: 0x0090A8E8 File Offset: 0x00908AE8
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Common.DollMachine
 			base.Add(Callback, OnBeginPlay.RegisterId);
 		}
 
-		// Token: 0x06021F90 RID: 139152 RVA: 0x008FB07C File Offset: 0x008F927C
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601E15C RID: 123228 RVA: 0x0090A922 File Offset: 0x00908B22
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -82,10 +80,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Common.DollMachine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06021F91 RID: 139153 RVA: 0x008FB088 File Offset: 0x008F9288
+		// Token: 0x0601E15D RID: 123229 RVA: 0x0090A92C File Offset: 0x00908B2C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(BP_DollActor_C Actor)
 		{
 			OnBeginPlay.__OnBeginPlay_DelegateParams* ptr = stackalloc OnBeginPlay.__OnBeginPlay_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(OnBeginPlay.__OnBeginPlay_DelegateParams) & -16L;
@@ -94,10 +91,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Common.DollMachine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x06021F92 RID: 139154 RVA: 0x008FB0D4 File Offset: 0x008F92D4
+		// Token: 0x0601E15E RID: 123230 RVA: 0x0090A978 File Offset: 0x00908B78
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<BP_DollActor_C> action = target as Action<BP_DollActor_C>;
@@ -109,28 +105,28 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Common.DollMachine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x040109D1 RID: 68049
+		// Token: 0x0400FE75 RID: 65141
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Scene/Common/DollMachine/BP_DollActor.BP_DollActor_C:OnBeginPlay__DelegateSignature";
 
-		// Token: 0x040109D2 RID: 68050
+		// Token: 0x0400FE76 RID: 65142
 		private static int RegisterId;
 
-		// Token: 0x02009CF7 RID: 40183
+		// Token: 0x02008E17 RID: 36375
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __OnBeginPlay_DelegateParams
+		private ref struct __OnBeginPlay_DelegateParams
 		{
-			// Token: 0x040313F9 RID: 201721
+			// Token: 0x0402CA56 RID: 182870
 			[FieldOffset(0)]
 			public IntPtr Actor;
 		}
 
-		// Token: 0x02009CF8 RID: 40184
+		// Token: 0x02008E18 RID: 36376
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040313FA RID: 201722
+			// Token: 0x0402CA57 RID: 182871
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

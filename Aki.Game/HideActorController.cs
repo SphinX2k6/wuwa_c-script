@@ -6,13 +6,13 @@ using CSharpScript.Core.Framework;
 using CSharpScript.Game;
 using UnrealEngine;
 
-// Token: 0x02001E5C RID: 7772
+// Token: 0x0200131E RID: 4894
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class HideActorController : ControllerBase
 {
-	// Token: 0x0600EC38 RID: 60472 RVA: 0x00381678 File Offset: 0x0037F878
+	// Token: 0x0600C057 RID: 49239 RVA: 0x0038D324 File Offset: 0x0038B524
 	protected override bool OnInit()
 	{
 		this.IsHideMesh = false;
@@ -29,7 +29,7 @@ public class HideActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600EC39 RID: 60473 RVA: 0x003816E4 File Offset: 0x0037F8E4
+	// Token: 0x0600C058 RID: 49240 RVA: 0x0038D390 File Offset: 0x0038B590
 	protected override void OnTick(float delta)
 	{
 		if (this.IsHideMesh || this.IsHideEffect || this.IsHideNpcMesh || this.IsHideNpcEffect)
@@ -63,7 +63,7 @@ public class HideActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600EC3A RID: 60474 RVA: 0x00381806 File Offset: 0x0037FA06
+	// Token: 0x0600C059 RID: 49241 RVA: 0x0038D4B2 File Offset: 0x0038B6B2
 	public void HideMesh()
 	{
 		if (this.IsHideMesh)
@@ -75,7 +75,7 @@ public class HideActorController : ControllerBase
 		base.ResumeTick();
 	}
 
-	// Token: 0x0600EC3B RID: 60475 RVA: 0x00381827 File Offset: 0x0037FA27
+	// Token: 0x0600C05A RID: 49242 RVA: 0x0038D4D3 File Offset: 0x0038B6D3
 	public void HideEffect()
 	{
 		if (this.IsHideEffect)
@@ -87,7 +87,7 @@ public class HideActorController : ControllerBase
 		base.ResumeTick();
 	}
 
-	// Token: 0x0600EC3C RID: 60476 RVA: 0x00381848 File Offset: 0x0037FA48
+	// Token: 0x0600C05B RID: 49243 RVA: 0x0038D4F4 File Offset: 0x0038B6F4
 	public void HideNpcMesh()
 	{
 		if (this.IsHideNpcMesh)
@@ -99,7 +99,7 @@ public class HideActorController : ControllerBase
 		base.ResumeTick();
 	}
 
-	// Token: 0x0600EC3D RID: 60477 RVA: 0x00381869 File Offset: 0x0037FA69
+	// Token: 0x0600C05C RID: 49244 RVA: 0x0038D515 File Offset: 0x0038B715
 	public void HideNpcEffect()
 	{
 		if (this.IsHideNpcEffect)
@@ -111,7 +111,7 @@ public class HideActorController : ControllerBase
 		base.ResumeTick();
 	}
 
-	// Token: 0x0600EC3E RID: 60478 RVA: 0x0038188A File Offset: 0x0037FA8A
+	// Token: 0x0600C05D RID: 49245 RVA: 0x0038D536 File Offset: 0x0038B736
 	public void ShowMesh()
 	{
 		if (!this.IsHideMesh)
@@ -122,7 +122,7 @@ public class HideActorController : ControllerBase
 		this.ShowActorInternal(true, false);
 	}
 
-	// Token: 0x0600EC3F RID: 60479 RVA: 0x003818A4 File Offset: 0x0037FAA4
+	// Token: 0x0600C05E RID: 49246 RVA: 0x0038D550 File Offset: 0x0038B750
 	public void ShowEffect()
 	{
 		if (!this.IsHideEffect)
@@ -133,7 +133,7 @@ public class HideActorController : ControllerBase
 		this.ShowActorInternal(false, true);
 	}
 
-	// Token: 0x0600EC40 RID: 60480 RVA: 0x003818BE File Offset: 0x0037FABE
+	// Token: 0x0600C05F RID: 49247 RVA: 0x0038D56A File Offset: 0x0038B76A
 	public void ShowNpcMesh()
 	{
 		if (!this.IsHideNpcMesh)
@@ -144,7 +144,7 @@ public class HideActorController : ControllerBase
 		this.ShowNpcActorInternal(true, false);
 	}
 
-	// Token: 0x0600EC41 RID: 60481 RVA: 0x003818D8 File Offset: 0x0037FAD8
+	// Token: 0x0600C060 RID: 49248 RVA: 0x0038D584 File Offset: 0x0038B784
 	public void ShowNpcEffect()
 	{
 		if (!this.IsHideNpcEffect)
@@ -155,7 +155,7 @@ public class HideActorController : ControllerBase
 		this.ShowNpcActorInternal(false, true);
 	}
 
-	// Token: 0x0600EC42 RID: 60482 RVA: 0x003818F2 File Offset: 0x0037FAF2
+	// Token: 0x0600C061 RID: 49249 RVA: 0x0038D59E File Offset: 0x0038B79E
 	public void SetHideParameter(float distance, FName boneName)
 	{
 		if (this.HideDistance == distance && this.HideBasisBoneName == boneName)
@@ -169,7 +169,7 @@ public class HideActorController : ControllerBase
 		base.ResumeTick();
 	}
 
-	// Token: 0x0600EC43 RID: 60483 RVA: 0x0038192E File Offset: 0x0037FB2E
+	// Token: 0x0600C062 RID: 49250 RVA: 0x0038D5DA File Offset: 0x0038B7DA
 	public void ResetHideParameter()
 	{
 		this.HideDistance = 0f;
@@ -179,7 +179,7 @@ public class HideActorController : ControllerBase
 		base.PauseTick();
 	}
 
-	// Token: 0x0600EC44 RID: 60484 RVA: 0x0038195C File Offset: 0x0037FB5C
+	// Token: 0x0600C063 RID: 49251 RVA: 0x0038D608 File Offset: 0x0038B808
 	private void HideActorInternal(bool hideMesh, bool hideEffect, bool forceUpdateEntity = false)
 	{
 		if (Global.BaseCharacter == null)
@@ -250,7 +250,7 @@ public class HideActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600EC45 RID: 60485 RVA: 0x00381C20 File Offset: 0x0037FE20
+	// Token: 0x0600C064 RID: 49252 RVA: 0x0038D8CC File Offset: 0x0038BACC
 	private void HideNpcActorInternal(bool hideMesh, bool hideEffect, bool forceUpdateEntity = false)
 	{
 		if (Global.BaseCharacter == null)
@@ -327,7 +327,7 @@ public class HideActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600EC46 RID: 60486 RVA: 0x00381F48 File Offset: 0x00380148
+	// Token: 0x0600C065 RID: 49253 RVA: 0x0038DBF4 File Offset: 0x0038BDF4
 	private void ShowActorInternal(bool showMesh, bool showEffect)
 	{
 		if (showMesh)
@@ -356,7 +356,7 @@ public class HideActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600EC47 RID: 60487 RVA: 0x0038202C File Offset: 0x0038022C
+	// Token: 0x0600C066 RID: 49254 RVA: 0x0038DCD8 File Offset: 0x0038BED8
 	private void ShowNpcActorInternal(bool showMesh, bool showEffect)
 	{
 		if (showMesh)
@@ -386,7 +386,7 @@ public class HideActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600EC48 RID: 60488 RVA: 0x00382118 File Offset: 0x00380318
+	// Token: 0x0600C067 RID: 49255 RVA: 0x0038DDC4 File Offset: 0x0038BFC4
 	private unsafe HashSet<EntityHandle> GetCharacterValidHandles(bool forceUpdateEntity)
 	{
 		if (this.LastFrameUpdateActor == (long)Time.Instance.Frame && !this.HideActorParameterDirty && !forceUpdateEntity)
@@ -443,7 +443,7 @@ public class HideActorController : ControllerBase
 		return this.CharacterHandles;
 	}
 
-	// Token: 0x0600EC49 RID: 60489 RVA: 0x00382348 File Offset: 0x00380548
+	// Token: 0x0600C068 RID: 49256 RVA: 0x0038DFF4 File Offset: 0x0038C1F4
 	private unsafe HashSet<EntityHandle> GetNpcValidHandles(bool forceUpdateEntity)
 	{
 		if (this.LastFrameUpdateNpc == (long)Time.Instance.Frame && !this.HideNpcParameterDirty && !forceUpdateEntity)
@@ -500,7 +500,7 @@ public class HideActorController : ControllerBase
 		return this.NpcHandles;
 	}
 
-	// Token: 0x0600EC4A RID: 60490 RVA: 0x00382578 File Offset: 0x00380778
+	// Token: 0x0600C069 RID: 49257 RVA: 0x0038E224 File Offset: 0x0038C424
 	private void HideEffectInternal(EntityHandle handle, bool hidden)
 	{
 		CharacterSkillComponent component = handle.Entity.GetComponent<CharacterSkillComponent>();
@@ -520,7 +520,7 @@ public class HideActorController : ControllerBase
 		component2.SetHidden(hidden);
 	}
 
-	// Token: 0x0600EC4B RID: 60491 RVA: 0x003825B2 File Offset: 0x003807B2
+	// Token: 0x0600C06A RID: 49258 RVA: 0x0038E25E File Offset: 0x0038C45E
 	private void HideHeadInfoInternal(EntityHandle handle, bool hidden)
 	{
 		PawnHeadInfoComponent component = handle.Entity.GetComponent<PawnHeadInfoComponent>();
@@ -531,7 +531,7 @@ public class HideActorController : ControllerBase
 		component.EnableHeadInfo(!hidden);
 	}
 
-	// Token: 0x0600EC4C RID: 60492 RVA: 0x003825CD File Offset: 0x003807CD
+	// Token: 0x0600C06B RID: 49259 RVA: 0x0038E279 File Offset: 0x0038C479
 	protected override bool OnClear()
 	{
 		this.IsHideMesh = false;
@@ -544,8 +544,8 @@ public class HideActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x17001289 RID: 4745
-	// (get) Token: 0x0600EC4D RID: 60493 RVA: 0x00382602 File Offset: 0x00380802
+	// Token: 0x170012B3 RID: 4787
+	// (get) Token: 0x0600C06C RID: 49260 RVA: 0x0038E2AE File Offset: 0x0038C4AE
 	public static HideActorController Instance
 	{
 		get
@@ -554,7 +554,7 @@ public class HideActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600EC4E RID: 60494 RVA: 0x00382609 File Offset: 0x00380809
+	// Token: 0x0600C06D RID: 49261 RVA: 0x0038E2B5 File Offset: 0x0038C4B5
 	public static HideActorController GetOrCreateInstance()
 	{
 		if (HideActorController._Instance == null)
@@ -564,7 +564,7 @@ public class HideActorController : ControllerBase
 		return HideActorController._Instance;
 	}
 
-	// Token: 0x0600EC4F RID: 60495 RVA: 0x0038261D File Offset: 0x0038081D
+	// Token: 0x0600C06E RID: 49262 RVA: 0x0038E2C9 File Offset: 0x0038C4C9
 	public static bool CreateInstance()
 	{
 		if (HideActorController._Instance != null)
@@ -575,87 +575,87 @@ public class HideActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600EC50 RID: 60496 RVA: 0x00382633 File Offset: 0x00380833
+	// Token: 0x0600C06F RID: 49263 RVA: 0x0038E2DF File Offset: 0x0038C4DF
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600EC51 RID: 60497 RVA: 0x00382635 File Offset: 0x00380835
+	// Token: 0x0600C070 RID: 49264 RVA: 0x0038E2E1 File Offset: 0x0038C4E1
 	public static void ResetStaticDefaultValue()
 	{
 		HideActorController._Instance = null;
 	}
 
-	// Token: 0x0600EC52 RID: 60498 RVA: 0x0038263D File Offset: 0x0038083D
+	// Token: 0x0600C071 RID: 49265 RVA: 0x0038E2E9 File Offset: 0x0038C4E9
 	static HideActorController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(HideActorController.CreateStaticDefaultValue), new Action(HideActorController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006D87 RID: 28039
+	// Token: 0x04006E68 RID: 28264
 	private static readonly EEntityTypeQuery CHARACTER = EEntityTypeQuery.PasserbyNPC | EEntityTypeQuery.Boss | EEntityTypeQuery.Team;
 
-	// Token: 0x04006D88 RID: 28040
+	// Token: 0x04006E69 RID: 28265
 	private static readonly EEntityTypeQuery NPC = EEntityTypeQuery.SimpleNPC | EEntityTypeQuery.NormalNPC | EEntityTypeQuery.PasserbyNPC;
 
-	// Token: 0x04006D89 RID: 28041
+	// Token: 0x04006E6A RID: 28266
 	private bool IsHideMesh;
 
-	// Token: 0x04006D8A RID: 28042
+	// Token: 0x04006E6B RID: 28267
 	private bool IsHideEffect;
 
-	// Token: 0x04006D8B RID: 28043
+	// Token: 0x04006E6C RID: 28268
 	private readonly HashSet<EntityHandle> HiddenEffectSet = new HashSet<EntityHandle>();
 
-	// Token: 0x04006D8C RID: 28044
+	// Token: 0x04006E6D RID: 28269
 	private readonly Dictionary<EntityHandle, int> HiddenMeshMap = new Dictionary<EntityHandle, int>();
 
-	// Token: 0x04006D8D RID: 28045
+	// Token: 0x04006E6E RID: 28270
 	private bool IsHideNpcMesh;
 
-	// Token: 0x04006D8E RID: 28046
+	// Token: 0x04006E6F RID: 28271
 	private bool IsHideNpcEffect;
 
-	// Token: 0x04006D8F RID: 28047
+	// Token: 0x04006E70 RID: 28272
 	private readonly HashSet<EntityHandle> HiddenNpcEffectSet = new HashSet<EntityHandle>();
 
-	// Token: 0x04006D90 RID: 28048
+	// Token: 0x04006E71 RID: 28273
 	private readonly Dictionary<EntityHandle, int> HiddenNpcMeshMap = new Dictionary<EntityHandle, int>();
 
-	// Token: 0x04006D91 RID: 28049
+	// Token: 0x04006E72 RID: 28274
 	private float HideDistance;
 
-	// Token: 0x04006D92 RID: 28050
+	// Token: 0x04006E73 RID: 28275
 	private FName HideBasisBoneName = FNameUtil.NONE;
 
-	// Token: 0x04006D93 RID: 28051
+	// Token: 0x04006E74 RID: 28276
 	private long LastFrameUpdateActor;
 
-	// Token: 0x04006D94 RID: 28052
+	// Token: 0x04006E75 RID: 28277
 	private long LastFrameUpdateNpc;
 
-	// Token: 0x04006D95 RID: 28053
+	// Token: 0x04006E76 RID: 28278
 	private bool HideActorParameterDirty;
 
-	// Token: 0x04006D96 RID: 28054
+	// Token: 0x04006E77 RID: 28279
 	private bool HideNpcParameterDirty;
 
-	// Token: 0x04006D97 RID: 28055
+	// Token: 0x04006E78 RID: 28280
 	private readonly HashSet<EntityHandle> CharacterHandles = new HashSet<EntityHandle>();
 
-	// Token: 0x04006D98 RID: 28056
+	// Token: 0x04006E79 RID: 28281
 	private readonly HashSet<EntityHandle> NpcHandles = new HashSet<EntityHandle>();
 
-	// Token: 0x04006D99 RID: 28057
+	// Token: 0x04006E7A RID: 28282
 	private readonly Vector HideLocation = Vector.Create();
 
-	// Token: 0x04006D9A RID: 28058
+	// Token: 0x04006E7B RID: 28283
 	private readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x04006D9B RID: 28059
+	// Token: 0x04006E7C RID: 28284
 	private const bool Debug = false;
 
-	// Token: 0x04006D9C RID: 28060
+	// Token: 0x04006E7D RID: 28285
 	[Nullable(2)]
 	private static HideActorController _Instance;
 }

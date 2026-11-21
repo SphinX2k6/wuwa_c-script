@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007245 RID: 29253
+	// Token: 0x02007A1A RID: 31258
 	public class ISuperCatapultT
 	{
-		// Token: 0x1700D90F RID: 55567
-		// (get) Token: 0x06033E2A RID: 212522 RVA: 0x006FADEB File Offset: 0x006F8FEB
-		// (set) Token: 0x06033E2B RID: 212523 RVA: 0x006FADF3 File Offset: 0x006F8FF3
+		// Token: 0x1700E508 RID: 58632
+		// (get) Token: 0x0603712C RID: 225580 RVA: 0x0075C14B File Offset: 0x0075A34B
+		// (set) Token: 0x0603712D RID: 225581 RVA: 0x0075C153 File Offset: 0x0075A353
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x1700D910 RID: 55568
-		// (get) Token: 0x06033E2C RID: 212524 RVA: 0x006FADFC File Offset: 0x006F8FFC
-		// (set) Token: 0x06033E2D RID: 212525 RVA: 0x006FAE04 File Offset: 0x006F9004
+		// Token: 0x1700E509 RID: 58633
+		// (get) Token: 0x0603712E RID: 225582 RVA: 0x0075C15C File Offset: 0x0075A35C
+		// (set) Token: 0x0603712F RID: 225583 RVA: 0x0075C164 File Offset: 0x0075A364
 		public ICatapultParamT Param { get; set; }
 
-		// Token: 0x06033E2E RID: 212526 RVA: 0x006FAE0D File Offset: 0x006F900D
+		// Token: 0x06037130 RID: 225584 RVA: 0x0075C16D File Offset: 0x0075A36D
 		public ISuperCatapultT()
 		{
 			this.Type = ELeisureInteract.CustomSkill;

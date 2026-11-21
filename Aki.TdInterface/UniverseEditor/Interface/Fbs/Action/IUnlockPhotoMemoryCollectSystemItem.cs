@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074DB RID: 29915
+	// Token: 0x02007CD1 RID: 31953
 	public struct IUnlockPhotoMemoryCollectSystemItem : IFlatbufferObject
 	{
-		// Token: 0x1700E2FE RID: 58110
-		// (get) Token: 0x06036621 RID: 222753 RVA: 0x007638C2 File Offset: 0x00761AC2
+		// Token: 0x1700EF28 RID: 61224
+		// (get) Token: 0x06039A36 RID: 236086 RVA: 0x007C6B12 File Offset: 0x007C4D12
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036622 RID: 222754 RVA: 0x007638CF File Offset: 0x00761ACF
+		// Token: 0x06039A37 RID: 236087 RVA: 0x007C6B1F File Offset: 0x007C4D1F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036623 RID: 222755 RVA: 0x007638D8 File Offset: 0x00761AD8
+		// Token: 0x06039A38 RID: 236088 RVA: 0x007C6B28 File Offset: 0x007C4D28
 		public static IUnlockPhotoMemoryCollectSystemItem GetRootAsIUnlockPhotoMemoryCollectSystemItem(ByteBuffer _bb)
 		{
 			return IUnlockPhotoMemoryCollectSystemItem.GetRootAsIUnlockPhotoMemoryCollectSystemItem(_bb, default(IUnlockPhotoMemoryCollectSystemItem));
 		}
 
-		// Token: 0x06036624 RID: 222756 RVA: 0x007638F4 File Offset: 0x00761AF4
+		// Token: 0x06039A39 RID: 236089 RVA: 0x007C6B44 File Offset: 0x007C4D44
 		public static IUnlockPhotoMemoryCollectSystemItem GetRootAsIUnlockPhotoMemoryCollectSystemItem(ByteBuffer _bb, IUnlockPhotoMemoryCollectSystemItem obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036625 RID: 222757 RVA: 0x00763911 File Offset: 0x00761B11
+		// Token: 0x06039A3A RID: 236090 RVA: 0x007C6B61 File Offset: 0x007C4D61
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036626 RID: 222758 RVA: 0x00763920 File Offset: 0x00761B20
+		// Token: 0x06039A3B RID: 236091 RVA: 0x007C6B70 File Offset: 0x007C4D70
 		public IUnlockPhotoMemoryCollectSystemItem __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E2FF RID: 58111
-		// (get) Token: 0x06036627 RID: 222759 RVA: 0x00763930 File Offset: 0x00761B30
+		// Token: 0x1700EF29 RID: 61225
+		// (get) Token: 0x06039A3C RID: 236092 RVA: 0x007C6B80 File Offset: 0x007C4D80
 		public EUnlockSystemItemType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E300 RID: 58112
-		// (get) Token: 0x06036628 RID: 222760 RVA: 0x0076396C File Offset: 0x00761B6C
+		// Token: 0x1700EF2A RID: 61226
+		// (get) Token: 0x06039A3D RID: 236093 RVA: 0x007C6BBC File Offset: 0x007C4DBC
 		public int Id
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036629 RID: 222761 RVA: 0x007639A8 File Offset: 0x00761BA8
+		// Token: 0x06039A3E RID: 236094 RVA: 0x007C6BF8 File Offset: 0x007C4DF8
 		public static Offset<IUnlockPhotoMemoryCollectSystemItem> CreateIUnlockPhotoMemoryCollectSystemItem(FlatBufferBuilder builder, EUnlockSystemItemType Type = EUnlockSystemItemType.CookSystem, int Id = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IUnlockPhotoMemoryCollectSystemItem.EndIUnlockPhotoMemoryCollectSystemItem(builder);
 		}
 
-		// Token: 0x0603662A RID: 222762 RVA: 0x007639C5 File Offset: 0x00761BC5
+		// Token: 0x06039A3F RID: 236095 RVA: 0x007C6C15 File Offset: 0x007C4E15
 		public static void StartIUnlockPhotoMemoryCollectSystemItem(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0603662B RID: 222763 RVA: 0x007639CE File Offset: 0x00761BCE
+		// Token: 0x06039A40 RID: 236096 RVA: 0x007C6C1E File Offset: 0x007C4E1E
 		public static void AddType(FlatBufferBuilder builder, EUnlockSystemItemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603662C RID: 222764 RVA: 0x007639D9 File Offset: 0x00761BD9
+		// Token: 0x06039A41 RID: 236097 RVA: 0x007C6C29 File Offset: 0x007C4E29
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x0603662D RID: 222765 RVA: 0x007639E4 File Offset: 0x00761BE4
+		// Token: 0x06039A42 RID: 236098 RVA: 0x007C6C34 File Offset: 0x007C4E34
 		public static Offset<IUnlockPhotoMemoryCollectSystemItem> EndIUnlockPhotoMemoryCollectSystemItem(FlatBufferBuilder builder)
 		{
 			return new Offset<IUnlockPhotoMemoryCollectSystemItem>(builder.EndTable());
 		}
 
-		// Token: 0x0603662E RID: 222766 RVA: 0x007639F4 File Offset: 0x00761BF4
+		// Token: 0x06039A43 RID: 236099 RVA: 0x007C6C44 File Offset: 0x007C4E44
 		public IUnlockPhotoMemoryCollectSystemItemT UnPack()
 		{
 			IUnlockPhotoMemoryCollectSystemItemT unlockPhotoMemoryCollectSystemItemT = new IUnlockPhotoMemoryCollectSystemItemT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return unlockPhotoMemoryCollectSystemItemT;
 		}
 
-		// Token: 0x0603662F RID: 222767 RVA: 0x00763A0F File Offset: 0x00761C0F
+		// Token: 0x06039A44 RID: 236100 RVA: 0x007C6C5F File Offset: 0x007C4E5F
 		public void UnPackTo(IUnlockPhotoMemoryCollectSystemItemT _o)
 		{
 			_o.Type = this.Type;
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x06036630 RID: 222768 RVA: 0x00763A2C File Offset: 0x00761C2C
+		// Token: 0x06039A45 RID: 236101 RVA: 0x007C6C7C File Offset: 0x007C4E7C
 		public static Offset<IUnlockPhotoMemoryCollectSystemItem> Pack(FlatBufferBuilder builder, IUnlockPhotoMemoryCollectSystemItemT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IUnlockPhotoMemoryCollectSystemItem.CreateIUnlockPhotoMemoryCollectSystemItem(builder, _o.Type, _o.Id);
 		}
 
-		// Token: 0x040123A3 RID: 74659
+		// Token: 0x040133D4 RID: 78804
 		private Table __p;
 	}
 }

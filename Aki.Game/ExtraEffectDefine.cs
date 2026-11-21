@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.ExtraEffect;
 
-// Token: 0x02002F33 RID: 12083
+// Token: 0x02002486 RID: 9350
 [NullableContext(2)]
 [Nullable(0)]
 public static class ExtraEffectDefine
 {
-	// Token: 0x06019BCA RID: 105418 RVA: 0x006B4160 File Offset: 0x006B2360
+	// Token: 0x060174D5 RID: 95445 RVA: 0x006DA478 File Offset: 0x006D8678
 	public static Type GetBuffEffectClass(EExtraEffectId effectId)
 	{
 		if (effectId <= EExtraEffectId.BindBuffStackToProp)
@@ -195,6 +195,8 @@ public static class ExtraEffectDefine
 					return typeof(ReplaceAbnormalCueEffect);
 				case EExtraEffectId.ModifyPassiveSkillProbability:
 					return typeof(ModifyPassiveSkillProbability);
+				case EExtraEffectId.RecordAndRestoreState:
+					return typeof(RecordAndRestoreStateEffect);
 				case EExtraEffectId.BindBuffStackToProp:
 					return typeof(BindBuffStackToProp);
 				}
@@ -224,7 +226,7 @@ public static class ExtraEffectDefine
 		return null;
 	}
 
-	// Token: 0x06019BCB RID: 105419 RVA: 0x006B47D8 File Offset: 0x006B29D8
+	// Token: 0x060174D6 RID: 95446 RVA: 0x006DAB00 File Offset: 0x006D8D00
 	public static Type GetBuffExecutionClass(EExtraEffectId effectId)
 	{
 		if (effectId <= EExtraEffectId.AddBulletInstantByTagStackCount)

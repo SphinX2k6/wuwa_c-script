@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CAC RID: 15532
+	// Token: 0x020040C0 RID: 16576
 	public enum EOnCameraCheckType : byte
 	{
-		// Token: 0x0400B40E RID: 46094
+		// Token: 0x0400BDB0 RID: 48560
 		All,
-		// Token: 0x0400B40F RID: 46095
+		// Token: 0x0400BDB1 RID: 48561
 		Any
 	}
 }

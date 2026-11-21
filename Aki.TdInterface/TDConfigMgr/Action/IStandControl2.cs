@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EB3 RID: 7859
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020EC RID: 8428
 	public class IStandControl2 : ILeisureInteractType
 	{
-		// Token: 0x0600A81A RID: 43034 RVA: 0x0017BA68 File Offset: 0x00179C68
+		// Token: 0x0600B2EA RID: 45802 RVA: 0x00191A08 File Offset: 0x0018FC08
 		private IStandControl2_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A81B RID: 43035 RVA: 0x0017BAA0 File Offset: 0x00179CA0
+		// Token: 0x0600B2EB RID: 45803 RVA: 0x00191A40 File Offset: 0x0018FC40
 		public static IStandControl2 Create([Nullable(2)] IStandControl2 instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A81C RID: 43036 RVA: 0x0017BAB3 File Offset: 0x00179CB3
+		// Token: 0x0600B2EC RID: 45804 RVA: 0x00191A53 File Offset: 0x0018FC53
 		public static IStandControl2 CreateFromSetValue([Nullable(2)] IStandControl2_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A81D RID: 43037 RVA: 0x0017BAC6 File Offset: 0x00179CC6
+		// Token: 0x0600B2ED RID: 45805 RVA: 0x00191A66 File Offset: 0x0018FC66
 		public new IStandControl2_SetValue ToSetValue()
 		{
 			return new IStandControl2_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003358 RID: 13144
-		// (get) Token: 0x0600A81E RID: 43038 RVA: 0x0017BAD9 File Offset: 0x00179CD9
-		// (set) Token: 0x0600A81F RID: 43039 RVA: 0x0017BB04 File Offset: 0x00179D04
+		// Token: 0x17003622 RID: 13858
+		// (get) Token: 0x0600B2EE RID: 45806 RVA: 0x00191A79 File Offset: 0x0018FC79
+		// (set) Token: 0x0600B2EF RID: 45807 RVA: 0x00191AA4 File Offset: 0x0018FCA4
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400642F RID: 25647
+		// Token: 0x04006A1D RID: 27165
 		[Nullable(2)]
 		protected new IStandControl2 FbInstance;
 
-		// Token: 0x04006430 RID: 25648
+		// Token: 0x04006A1E RID: 27166
 		[Nullable(2)]
 		protected new IStandControl2_SetValue PocoInterface;
 	}

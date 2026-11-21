@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001956 RID: 6486
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AE1 RID: 6881
 	public class ICustomScreenTypeBase
 	{
-		// Token: 0x06008AF5 RID: 35573 RVA: 0x00146F48 File Offset: 0x00145148
+		// Token: 0x06009229 RID: 37417 RVA: 0x00156944 File Offset: 0x00154B44
 		private ICustomScreenTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008AF6 RID: 35574 RVA: 0x00146F80 File Offset: 0x00145180
+		// Token: 0x0600922A RID: 37418 RVA: 0x0015697C File Offset: 0x00154B7C
 		public static ICustomScreenTypeBase Create([Nullable(2)] ICustomScreenTypeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008AF7 RID: 35575 RVA: 0x00146F93 File Offset: 0x00145193
+		// Token: 0x0600922B RID: 37419 RVA: 0x0015698F File Offset: 0x00154B8F
 		public static ICustomScreenTypeBase CreateFromSetValue([Nullable(2)] ICustomScreenTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008AF8 RID: 35576 RVA: 0x00146FA6 File Offset: 0x001451A6
+		// Token: 0x0600922C RID: 37420 RVA: 0x001569A2 File Offset: 0x00154BA2
 		public ICustomScreenTypeBase_SetValue ToSetValue()
 		{
 			return new ICustomScreenTypeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CCE RID: 11470
-		// (get) Token: 0x06008AF9 RID: 35577 RVA: 0x00146FB9 File Offset: 0x001451B9
-		// (set) Token: 0x06008AFA RID: 35578 RVA: 0x00146FE4 File Offset: 0x001451E4
+		// Token: 0x17002ECF RID: 11983
+		// (get) Token: 0x0600922D RID: 37421 RVA: 0x001569B5 File Offset: 0x00154BB5
+		// (set) Token: 0x0600922E RID: 37422 RVA: 0x001569E0 File Offset: 0x00154BE0
 		public virtual ECustomScreenType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040056C1 RID: 22209
+		// Token: 0x04005B14 RID: 23316
 		[Nullable(2)]
 		protected ICustomScreenTypeBase FbInstance;
 
-		// Token: 0x040056C2 RID: 22210
+		// Token: 0x04005B15 RID: 23317
 		[Nullable(2)]
 		protected ICustomScreenTypeBase_SetValue PocoInterface;
 	}

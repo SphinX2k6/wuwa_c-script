@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.KeySettingsView
 {
-	// Token: 0x02005465 RID: 21605
+	// Token: 0x02004448 RID: 17480
 	public class KeySettingRowBaseItem : UiPanelBase, IDynamicScrollBaseItem<KeySettingRowData>
 	{
-		// Token: 0x06037244 RID: 225860 RVA: 0x00D11F50 File Offset: 0x00D10150
+		// Token: 0x0602C18D RID: 180621 RVA: 0x00C61368 File Offset: 0x00C5F568
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			};
 		}
 
-		// Token: 0x06037245 RID: 225861 RVA: 0x00D11FAC File Offset: 0x00D101AC
+		// Token: 0x0602C18E RID: 180622 RVA: 0x00C613C4 File Offset: 0x00C5F5C4
 		[NullableContext(1)]
 		public UniTask Init(UUIItem actor)
 		{
@@ -36,12 +36,12 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037246 RID: 225862 RVA: 0x00D11FF7 File Offset: 0x00D101F7
+		// Token: 0x0602C18F RID: 180623 RVA: 0x00C6140F File Offset: 0x00C5F60F
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x06037247 RID: 225863 RVA: 0x00D11FFC File Offset: 0x00D101FC
+		// Token: 0x0602C190 RID: 180624 RVA: 0x00C61414 File Offset: 0x00C5F614
 		[NullableContext(1)]
 		public FVector2D GetItemSize(KeySettingRowData data)
 		{
@@ -68,16 +68,16 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			return vector2D.ToUeVector2D(false);
 		}
 
-		// Token: 0x0200B6DB RID: 46811
+		// Token: 0x0200A113 RID: 41235
 		public class EChidType
 		{
-			// Token: 0x04037651 RID: 226897
+			// Token: 0x040320A6 RID: 204966
 			public const int Toggle = 0;
 
-			// Token: 0x04037652 RID: 226898
+			// Token: 0x040320A7 RID: 204967
 			public const int TitleItem = 1;
 
-			// Token: 0x04037653 RID: 226899
+			// Token: 0x040320A8 RID: 204968
 			public const int KeySettingItem = 2;
 		}
 	}

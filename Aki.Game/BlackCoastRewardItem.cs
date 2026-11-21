@@ -6,7 +6,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020011B1 RID: 4529
+// Token: 0x02000665 RID: 1637
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class BlackCoastRewardItem : GridProxyAbstract<BlackCoastProgressRewardData>
 {
-	// Token: 0x0600782F RID: 30767 RVA: 0x001928A4 File Offset: 0x00190AA4
+	// Token: 0x06004BC6 RID: 19398 RVA: 0x0019B47C File Offset: 0x0019967C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -50,7 +50,7 @@ public class BlackCoastRewardItem : GridProxyAbstract<BlackCoastProgressRewardDa
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007830 RID: 30768 RVA: 0x00192A32 File Offset: 0x00190C32
+	// Token: 0x06004BC7 RID: 19399 RVA: 0x0019B60A File Offset: 0x0019980A
 	protected override void OnStart()
 	{
 		UUINiagara uiNiagara = base.GetUiNiagara(6);
@@ -71,7 +71,7 @@ public class BlackCoastRewardItem : GridProxyAbstract<BlackCoastProgressRewardDa
 		uiNiagara3.SetUIActive(false);
 	}
 
-	// Token: 0x06007831 RID: 30769 RVA: 0x00192A70 File Offset: 0x00190C70
+	// Token: 0x06004BC8 RID: 19400 RVA: 0x0019B648 File Offset: 0x00199848
 	public override void Refresh(BlackCoastProgressRewardData rewardData, bool isSelected, int gridIndex)
 	{
 		this.Data = rewardData;
@@ -80,7 +80,7 @@ public class BlackCoastRewardItem : GridProxyAbstract<BlackCoastProgressRewardDa
 		this.RefreshRewardState(state, this.RewardState == null);
 	}
 
-	// Token: 0x06007832 RID: 30770 RVA: 0x00192AAC File Offset: 0x00190CAC
+	// Token: 0x06004BC9 RID: 19401 RVA: 0x0019B684 File Offset: 0x00199884
 	public void SetRewardGoalValue(int value)
 	{
 		UUIText text = base.GetText(0);
@@ -91,7 +91,7 @@ public class BlackCoastRewardItem : GridProxyAbstract<BlackCoastProgressRewardDa
 		text.SetText(value.ToString(), true);
 	}
 
-	// Token: 0x06007833 RID: 30771 RVA: 0x00192AC8 File Offset: 0x00190CC8
+	// Token: 0x06004BCA RID: 19402 RVA: 0x0019B6A0 File Offset: 0x001998A0
 	public void RefreshRewardState(EActivityTaskState state, bool isInit)
 	{
 		UUINiagara uiNiagara = base.GetUiNiagara(7);
@@ -145,7 +145,7 @@ public class BlackCoastRewardItem : GridProxyAbstract<BlackCoastProgressRewardDa
 		this.RewardState = new EActivityTaskState?(state);
 	}
 
-	// Token: 0x06007834 RID: 30772 RVA: 0x00192BAC File Offset: 0x00190DAC
+	// Token: 0x06004BCB RID: 19403 RVA: 0x0019B784 File Offset: 0x00199984
 	private void ClickRewardButton()
 	{
 		EActivityTaskState? rewardState = this.RewardState;
@@ -175,7 +175,7 @@ public class BlackCoastRewardItem : GridProxyAbstract<BlackCoastProgressRewardDa
 		}
 	}
 
-	// Token: 0x06007835 RID: 30773 RVA: 0x00192C04 File Offset: 0x00190E04
+	// Token: 0x06004BCC RID: 19404 RVA: 0x0019B7DC File Offset: 0x001999DC
 	private void RefreshRewardPopup(bool isClaimed)
 	{
 		List<DailyActivityDefine.RewardTuple> list = new List<DailyActivityDefine.RewardTuple>();
@@ -198,48 +198,48 @@ public class BlackCoastRewardItem : GridProxyAbstract<BlackCoastProgressRewardDa
 		EventSystem.Instance.Emit<RewardPopupData>(EEventName.RefreshRewardPopUp, p);
 	}
 
-	// Token: 0x0400374E RID: 14158
+	// Token: 0x040037E7 RID: 14311
 	private const int Y_BIAS = 30;
 
-	// Token: 0x0400374F RID: 14159
+	// Token: 0x040037E8 RID: 14312
 	private EActivityTaskState? RewardState;
 
-	// Token: 0x04003750 RID: 14160
+	// Token: 0x040037E9 RID: 14313
 	private BlackCoastProgressRewardData Data;
 
-	// Token: 0x04003751 RID: 14161
+	// Token: 0x040037EA RID: 14314
 	[Nullable(2)]
 	public Action RequestGetAllAvailableReward;
 
-	// Token: 0x02007798 RID: 30616
+	// Token: 0x02006924 RID: 26916
 	[NullableContext(0)]
 	private class ERewardItemNode
 	{
-		// Token: 0x040276F5 RID: 161525
+		// Token: 0x04022A2B RID: 141867
 		public const int TxtGoal = 0;
 
-		// Token: 0x040276F6 RID: 161526
+		// Token: 0x04022A2C RID: 141868
 		public const int BtnReward = 1;
 
-		// Token: 0x040276F7 RID: 161527
+		// Token: 0x04022A2D RID: 141869
 		public const int SpriteUnfinished = 2;
 
-		// Token: 0x040276F8 RID: 161528
+		// Token: 0x04022A2E RID: 141870
 		public const int SpriteClaimed = 3;
 
-		// Token: 0x040276F9 RID: 161529
+		// Token: 0x04022A2F RID: 141871
 		public const int SpriteFinished = 4;
 
-		// Token: 0x040276FA RID: 161530
+		// Token: 0x04022A30 RID: 141872
 		public const int SpriteBackground = 5;
 
-		// Token: 0x040276FB RID: 161531
+		// Token: 0x04022A31 RID: 141873
 		public const int NiagaraWait = 6;
 
-		// Token: 0x040276FC RID: 161532
+		// Token: 0x04022A32 RID: 141874
 		public const int NiagaraGet = 7;
 
-		// Token: 0x040276FD RID: 161533
+		// Token: 0x04022A33 RID: 141875
 		public const int RedDot = 8;
 	}
 }

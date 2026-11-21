@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000ACC RID: 2764
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B96 RID: 2966
 	public class ITriggerExitConfig
 	{
-		// Token: 0x06003FA6 RID: 16294 RVA: 0x000A2B15 File Offset: 0x000A0D15
+		// Token: 0x060043D0 RID: 17360 RVA: 0x000AC109 File Offset: 0x000AA309
 		public static ITriggerExitConfig Create(ITriggerExitConfig? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FCB RID: 4043
-		// (get) Token: 0x06003FA7 RID: 16295 RVA: 0x000A2B34 File Offset: 0x000A0D34
+		// Token: 0x1700109F RID: 4255
+		// (get) Token: 0x060043D1 RID: 17361 RVA: 0x000AC128 File Offset: 0x000AA328
 		public virtual int? ExtraRange
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FCC RID: 4044
-		// (get) Token: 0x06003FA8 RID: 16296 RVA: 0x000A2B6C File Offset: 0x000A0D6C
+		// Token: 0x170010A0 RID: 4256
+		// (get) Token: 0x060043D2 RID: 17362 RVA: 0x000AC160 File Offset: 0x000AA360
 		public virtual int? MaxTriggerTimes
 		{
 			get
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FCD RID: 4045
-		// (get) Token: 0x06003FA9 RID: 16297 RVA: 0x000A2BA2 File Offset: 0x000A0DA2
+		// Token: 0x170010A1 RID: 4257
+		// (get) Token: 0x060043D3 RID: 17363 RVA: 0x000AC196 File Offset: 0x000AA396
 		[Nullable(2)]
 		public virtual IConditionGroup Condition
 		{
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FCE RID: 4046
-		// (get) Token: 0x06003FAA RID: 16298 RVA: 0x000A2BD8 File Offset: 0x000A0DD8
+		// Token: 0x170010A2 RID: 4258
+		// (get) Token: 0x060043D4 RID: 17364 RVA: 0x000AC1CC File Offset: 0x000AA3CC
 		public virtual int? MatchTypeCount
 		{
 			get
@@ -85,8 +83,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FCF RID: 4047
-		// (get) Token: 0x06003FAB RID: 16299 RVA: 0x000A2C10 File Offset: 0x000A0E10
+		// Token: 0x170010A3 RID: 4259
+		// (get) Token: 0x060043D5 RID: 17365 RVA: 0x000AC204 File Offset: 0x000AA404
 		public virtual bool? ExitByNotEnterCondition
 		{
 			get
@@ -99,8 +97,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FD0 RID: 4048
-		// (get) Token: 0x06003FAC RID: 16300 RVA: 0x000A2C48 File Offset: 0x000A0E48
+		// Token: 0x170010A4 RID: 4260
+		// (get) Token: 0x060043D6 RID: 17366 RVA: 0x000AC23C File Offset: 0x000AA43C
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -120,8 +118,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FD1 RID: 4049
-		// (get) Token: 0x06003FAD RID: 16301 RVA: 0x000A2CB4 File Offset: 0x000A0EB4
+		// Token: 0x170010A5 RID: 4261
+		// (get) Token: 0x060043D7 RID: 17367 RVA: 0x000AC2A8 File Offset: 0x000AA4A8
 		public virtual bool? DisableExecuteActionsWhenDestroy
 		{
 			get
@@ -134,20 +132,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400236B RID: 9067
+		// Token: 0x04002587 RID: 9607
 		private ITriggerExitConfig Instance;
 
-		// Token: 0x0400236C RID: 9068
+		// Token: 0x04002588 RID: 9608
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x0400236D RID: 9069
+		// Token: 0x04002589 RID: 9609
 		private bool _ConditionInited;
 
-		// Token: 0x0400236E RID: 9070
+		// Token: 0x0400258A RID: 9610
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x0400236F RID: 9071
+		// Token: 0x0400258B RID: 9611
 		private bool _ActionsInited;
 	}
 }

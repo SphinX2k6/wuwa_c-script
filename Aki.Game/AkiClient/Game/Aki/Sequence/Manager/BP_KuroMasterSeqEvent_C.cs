@@ -9,12 +9,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Sequence.Manager
 {
-	// Token: 0x02003A28 RID: 14888
+	// Token: 0x02003071 RID: 12401
 	[UnrealObjectPath("/Game/Aki/Sequence/Manager/BP_KuroMasterSeqEvent.BP_KuroMasterSeqEvent_C")]
 	[UnrealStructLayout(1104, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1104)]
 	public class BP_KuroMasterSeqEvent_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601F51B RID: 128283 RVA: 0x008B4F42 File Offset: 0x008B3142
+		// Token: 0x0601D89D RID: 120989 RVA: 0x008FA6AB File Offset: 0x008F88AB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_KuroMasterSeqEvent_C._ClassPtr == IntPtr.Zero)
@@ -24,53 +24,53 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			return BP_KuroMasterSeqEvent_C._ClassPtr;
 		}
 
-		// Token: 0x0601F51C RID: 128284 RVA: 0x008B4F68 File Offset: 0x008B3168
+		// Token: 0x0601D89E RID: 120990 RVA: 0x008FA6D0 File Offset: 0x008F88D0
 		public BP_KuroMasterSeqEvent_C() : this(BuiltinUtils.AllocNativeUObject(BP_KuroMasterSeqEvent_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601F51D RID: 128285 RVA: 0x008B4F90 File Offset: 0x008B3190
+		// Token: 0x0601D89F RID: 120991 RVA: 0x008FA6F8 File Offset: 0x008F88F8
 		[NullableContext(1)]
 		public BP_KuroMasterSeqEvent_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_KuroMasterSeqEvent_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17002AC5 RID: 10949
-		// (get) Token: 0x0601F51E RID: 128286 RVA: 0x008B4FC3 File Offset: 0x008B31C3
-		// (set) Token: 0x0601F51F RID: 128287 RVA: 0x008B4FD7 File Offset: 0x008B31D7
+		// Token: 0x17002F4D RID: 12109
+		// (get) Token: 0x0601D8A0 RID: 120992 RVA: 0x008FA72B File Offset: 0x008F892B
+		// (set) Token: 0x0601D8A1 RID: 120993 RVA: 0x008FA73F File Offset: 0x008F893F
 		[Nullable(2)]
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroMasterSeqEvent_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroMasterSeqEvent_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroMasterSeqEvent_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroMasterSeqEvent_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17002AC6 RID: 10950
-		// (get) Token: 0x0601F520 RID: 128288 RVA: 0x008B4FEC File Offset: 0x008B31EC
-		// (set) Token: 0x0601F521 RID: 128289 RVA: 0x008B4FFC File Offset: 0x008B31FC
+		// Token: 0x17002F4E RID: 12110
+		// (get) Token: 0x0601D8A2 RID: 120994 RVA: 0x008FA754 File Offset: 0x008F8954
+		// (set) Token: 0x0601D8A3 RID: 120995 RVA: 0x008FA764 File Offset: 0x008F8964
 		public unsafe bool ModifiedNearClipPlane
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_ModifiedNearClipPlane) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_ModifiedNearClipPlane) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17002AC7 RID: 10951
-		// (get) Token: 0x0601F522 RID: 128290 RVA: 0x008B5010 File Offset: 0x008B3210
-		// (set) Token: 0x0601F523 RID: 128291 RVA: 0x008B5049 File Offset: 0x008B3249
+		// Token: 0x17002F4F RID: 12111
+		// (get) Token: 0x0601D8A4 RID: 120996 RVA: 0x008FA778 File Offset: 0x008F8978
+		// (set) Token: 0x0601D8A5 RID: 120997 RVA: 0x008FA7B1 File Offset: 0x008F89B1
 		[Nullable(1)]
 		public OnScreenShotFade OnScreenShotFade
 		{
@@ -81,81 +81,94 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 				OnScreenShotFade result;
 				if ((result = this._OnScreenShotFade) == null)
 				{
-					result = (this._OnScreenShotFade = new OnScreenShotFade(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_3, this));
+					result = (this._OnScreenShotFade = new OnScreenShotFade(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_OnScreenShotFade, this));
 				}
 				return result;
 			}
 			[NullableContext(1)]
 			set
 			{
-				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_3, (value != null) ? value.NativePtr : ((IntPtr)0));
+				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_OnScreenShotFade, (value != null) ? value.NativePtr : ((IntPtr)0));
 			}
 		}
 
-		// Token: 0x17002AC8 RID: 10952
-		// (get) Token: 0x0601F524 RID: 128292 RVA: 0x008B506A File Offset: 0x008B326A
-		// (set) Token: 0x0601F525 RID: 128293 RVA: 0x008B507A File Offset: 0x008B327A
+		// Token: 0x17002F50 RID: 12112
+		// (get) Token: 0x0601D8A6 RID: 120998 RVA: 0x008FA7D2 File Offset: 0x008F89D2
+		// (set) Token: 0x0601D8A7 RID: 120999 RVA: 0x008FA7E2 File Offset: 0x008F89E2
 		public unsafe int DelayMerge
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_DelayMerge);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_DelayMerge) = value;
 			}
 		}
 
-		// Token: 0x17002AC9 RID: 10953
-		// (get) Token: 0x0601F526 RID: 128294 RVA: 0x008B508B File Offset: 0x008B328B
-		// (set) Token: 0x0601F527 RID: 128295 RVA: 0x008B509B File Offset: 0x008B329B
+		// Token: 0x17002F51 RID: 12113
+		// (get) Token: 0x0601D8A8 RID: 121000 RVA: 0x008FA7F3 File Offset: 0x008F89F3
+		// (set) Token: 0x0601D8A9 RID: 121001 RVA: 0x008FA803 File Offset: 0x008F8A03
 		public unsafe float Icon透明度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_Icon透明度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_Icon透明度) = value;
 			}
 		}
 
-		// Token: 0x17002ACA RID: 10954
-		// (get) Token: 0x0601F528 RID: 128296 RVA: 0x008B50AC File Offset: 0x008B32AC
-		// (set) Token: 0x0601F529 RID: 128297 RVA: 0x008B50BC File Offset: 0x008B32BC
+		// Token: 0x17002F52 RID: 12114
+		// (get) Token: 0x0601D8AA RID: 121002 RVA: 0x008FA814 File Offset: 0x008F8A14
+		// (set) Token: 0x0601D8AB RID: 121003 RVA: 0x008FA824 File Offset: 0x008F8A24
 		public unsafe float Icon遮罩透明度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_Icon遮罩透明度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_Icon遮罩透明度) = value;
 			}
 		}
 
-		// Token: 0x17002ACB RID: 10955
-		// (get) Token: 0x0601F52A RID: 128298 RVA: 0x008B50CD File Offset: 0x008B32CD
-		// (set) Token: 0x0601F52B RID: 128299 RVA: 0x008B50DD File Offset: 0x008B32DD
+		// Token: 0x17002F53 RID: 12115
+		// (get) Token: 0x0601D8AC RID: 121004 RVA: 0x008FA835 File Offset: 0x008F8A35
+		// (set) Token: 0x0601D8AD RID: 121005 RVA: 0x008FA845 File Offset: 0x008F8A45
 		public unsafe int counter
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_counter);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroMasterSeqEvent_C.__PropertyOffset_counter) = value;
 			}
 		}
 
-		// Token: 0x0601F52C RID: 128300 RVA: 0x008B50F0 File Offset: 0x008B32F0
+		// Token: 0x0601D8AE RID: 121006 RVA: 0x008FA856 File Offset: 0x008F8A56
+		[SkipLocalsInit]
+		public virtual void Seq结束()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__Seq结束_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601D8AF RID: 121007 RVA: 0x008FA86A File Offset: 0x008F8A6A
+		[SkipLocalsInit]
+		public virtual void 显示按键()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__显示按键_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0601D8B0 RID: 121008 RVA: 0x008FA880 File Offset: 0x008F8A80
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 相机振动(bool 启用, TSoftClassPtr<UMatineeCameraShake> 资产)
 		{
 			BP_KuroMasterSeqEvent_C.__相机振动_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__相机振动_FunctionParams[(UIntPtr)71] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__相机振动_FunctionParams) & -16L;
@@ -169,10 +182,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_KuroMasterSeqEvent_C.__相机振动_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F52D RID: 128301 RVA: 0x008B5164 File Offset: 0x008B3364
+		// Token: 0x0601D8B1 RID: 121009 RVA: 0x008FA8F4 File Offset: 0x008F8AF4
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 打开报幕界面(string uiPrefabId, float duration, string uiStartAnimName, string uiEndAnimName)
 		{
 			BP_KuroMasterSeqEvent_C.__打开报幕界面_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__打开报幕界面_FunctionParams[(UIntPtr)71] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__打开报幕界面_FunctionParams) & -16L;
@@ -185,9 +197,8 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_KuroMasterSeqEvent_C.__打开报幕界面_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F52E RID: 128302 RVA: 0x008B51E4 File Offset: 0x008B33E4
+		// Token: 0x0601D8B2 RID: 121010 RVA: 0x008FA974 File Offset: 0x008F8B74
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 启用剧情交互按钮(bool bEnable)
 		{
 			BP_KuroMasterSeqEvent_C.__启用剧情交互按钮_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__启用剧情交互按钮_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__启用剧情交互按钮_FunctionParams) & -16L;
@@ -196,10 +207,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__启用剧情交互按钮_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F52F RID: 128303 RVA: 0x008B522C File Offset: 0x008B342C
+		// Token: 0x0601D8B3 RID: 121011 RVA: 0x008FA9BC File Offset: 0x008F8BBC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 绑定物品检视Actor(FMovieSceneObjectBindingID binding)
 		{
 			BP_KuroMasterSeqEvent_C.__绑定物品检视Actor_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__绑定物品检视Actor_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__绑定物品检视Actor_FunctionParams) & -16L;
@@ -211,18 +221,16 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__绑定物品检视Actor_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F530 RID: 128304 RVA: 0x008B528D File Offset: 0x008B348D
+		// Token: 0x0601D8B4 RID: 121012 RVA: 0x008FAA1D File Offset: 0x008F8C1D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 额外Seq停止()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__额外Seq停止_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F531 RID: 128305 RVA: 0x008B52A4 File Offset: 0x008B34A4
+		// Token: 0x0601D8B5 RID: 121013 RVA: 0x008FAA34 File Offset: 0x008F8C34
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 额外Seq播放(ULevelSequence Seq, FName componentName, FName boneName, float frame)
 		{
 			BP_KuroMasterSeqEvent_C.__额外Seq播放_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__额外Seq播放_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__额外Seq播放_FunctionParams) & -16L;
@@ -234,10 +242,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__额外Seq播放_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F532 RID: 128306 RVA: 0x008B5310 File Offset: 0x008B3510
+		// Token: 0x0601D8B6 RID: 121014 RVA: 0x008FAAA0 File Offset: 0x008F8CA0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 背景Icon(bool 显示, UTexture2D Icon)
 		{
 			BP_KuroMasterSeqEvent_C.__背景Icon_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__背景Icon_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__背景Icon_FunctionParams) & -16L;
@@ -247,9 +254,8 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__背景Icon_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F533 RID: 128307 RVA: 0x008B536C File Offset: 0x008B356C
+		// Token: 0x0601D8B7 RID: 121015 RVA: 0x008FAAFC File Offset: 0x008F8CFC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 关闭Spine动画_数组_([Nullable(new byte[]
 		{
 			2,
@@ -272,10 +278,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_KuroMasterSeqEvent_C.__关闭Spine动画_数组__NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F534 RID: 128308 RVA: 0x008B53E4 File Offset: 0x008B35E4
+		// Token: 0x0601D8B8 RID: 121016 RVA: 0x008FAB74 File Offset: 0x008F8D74
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 关闭Spine动画(string spineName)
 		{
 			BP_KuroMasterSeqEvent_C.__关闭Spine动画_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__关闭Spine动画_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__关闭Spine动画_FunctionParams) & -16L;
@@ -285,9 +290,8 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_KuroMasterSeqEvent_C.__关闭Spine动画_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F535 RID: 128309 RVA: 0x008B5444 File Offset: 0x008B3644
+		// Token: 0x0601D8B9 RID: 121017 RVA: 0x008FABD4 File Offset: 0x008F8DD4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 播放Spine动画_数组_([Nullable(new byte[]
 		{
 			2,
@@ -324,10 +328,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_KuroMasterSeqEvent_C.__播放Spine动画_数组__NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F536 RID: 128310 RVA: 0x008B54E4 File Offset: 0x008B36E4
+		// Token: 0x0601D8BA RID: 121018 RVA: 0x008FAC74 File Offset: 0x008F8E74
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 播放Spine动画_性别_(string maleSpineName1, string femaleSpineName1, bool needLoop)
 		{
 			BP_KuroMasterSeqEvent_C.__播放Spine动画_性别__FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__播放Spine动画_性别__FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__播放Spine动画_性别__FunctionParams) & -16L;
@@ -339,10 +342,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_KuroMasterSeqEvent_C.__播放Spine动画_性别__NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F537 RID: 128311 RVA: 0x008B5558 File Offset: 0x008B3758
+		// Token: 0x0601D8BB RID: 121019 RVA: 0x008FACE8 File Offset: 0x008F8EE8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 播放Spine动画(string SpineName, bool needLoop)
 		{
 			BP_KuroMasterSeqEvent_C.__播放Spine动画_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__播放Spine动画_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__播放Spine动画_FunctionParams) & -16L;
@@ -353,10 +355,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_KuroMasterSeqEvent_C.__播放Spine动画_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F538 RID: 128312 RVA: 0x008B55BC File Offset: 0x008B37BC
+		// Token: 0x0601D8BC RID: 121020 RVA: 0x008FAD4C File Offset: 0x008F8F4C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 执行实体帧事件(string Key, int EntityId)
 		{
 			BP_KuroMasterSeqEvent_C.__执行实体帧事件_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__执行实体帧事件_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__执行实体帧事件_FunctionParams) & -16L;
@@ -367,10 +368,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_KuroMasterSeqEvent_C.__执行实体帧事件_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F539 RID: 128313 RVA: 0x008B5620 File Offset: 0x008B3820
+		// Token: 0x0601D8BD RID: 121021 RVA: 0x008FADB0 File Offset: 0x008F8FB0
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 播放预览图动画(string seqName)
 		{
 			BP_KuroMasterSeqEvent_C.__播放预览图动画_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__播放预览图动画_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__播放预览图动画_FunctionParams) & -16L;
@@ -380,18 +380,16 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_KuroMasterSeqEvent_C.__播放预览图动画_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F53A RID: 128314 RVA: 0x008B567D File Offset: 0x008B387D
+		// Token: 0x0601D8BE RID: 121022 RVA: 0x008FAE0D File Offset: 0x008F900D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 关闭预览图()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__关闭预览图_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F53B RID: 128315 RVA: 0x008B5694 File Offset: 0x008B3894
+		// Token: 0x0601D8BF RID: 121023 RVA: 0x008FAE24 File Offset: 0x008F9024
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 显示预览图_数组_(string MaleAssetPath, string FemaleAssetPath, [Nullable(new byte[]
 		{
 			2,
@@ -431,10 +429,9 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_KuroMasterSeqEvent_C.__显示预览图_数组__NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F53C RID: 128316 RVA: 0x008B5758 File Offset: 0x008B3958
+		// Token: 0x0601D8C0 RID: 121024 RVA: 0x008FAEE8 File Offset: 0x008F90E8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 显示预览图(string MaleAssetPath, string FemaleAssetPath, string maleSpineName, string femaleSpineName, bool needLoop, bool useFullscreenAdaptAnchor)
 		{
 			BP_KuroMasterSeqEvent_C.__显示预览图_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__显示预览图_FunctionParams[(UIntPtr)87] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__显示预览图_FunctionParams) & -16L;
@@ -449,9 +446,8 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_KuroMasterSeqEvent_C.__显示预览图_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F53D RID: 128317 RVA: 0x008B57F0 File Offset: 0x008B39F0
+		// Token: 0x0601D8C1 RID: 121025 RVA: 0x008FAF80 File Offset: 0x008F9180
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 展示游戏Logo(float time)
 		{
 			BP_KuroMasterSeqEvent_C.__展示游戏Logo_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__展示游戏Logo_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__展示游戏Logo_FunctionParams) & -16L;
@@ -460,9 +456,8 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__展示游戏Logo_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F53E RID: 128318 RVA: 0x008B5838 File Offset: 0x008B3A38
+		// Token: 0x0601D8C2 RID: 121026 RVA: 0x008FAFC8 File Offset: 0x008F91C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 打开章节提示(int ChapterState, int ChapterId)
 		{
 			BP_KuroMasterSeqEvent_C.__打开章节提示_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__打开章节提示_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__打开章节提示_FunctionParams) & -16L;
@@ -472,26 +467,23 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__打开章节提示_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F53F RID: 128319 RVA: 0x008B5885 File Offset: 0x008B3A85
+		// Token: 0x0601D8C3 RID: 121027 RVA: 0x008FB015 File Offset: 0x008F9215
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 触发切镜()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__触发切镜_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F540 RID: 128320 RVA: 0x008B5899 File Offset: 0x008B3A99
+		// Token: 0x0601D8C4 RID: 121028 RVA: 0x008FB029 File Offset: 0x008F9229
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 开始叠化()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__开始叠化_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F541 RID: 128321 RVA: 0x008B58B0 File Offset: 0x008B3AB0
+		// Token: 0x0601D8C5 RID: 121029 RVA: 0x008FB040 File Offset: 0x008F9240
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 执行流程行为(string key)
 		{
 			BP_KuroMasterSeqEvent_C.__执行流程行为_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__执行流程行为_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__执行流程行为_FunctionParams) & -16L;
@@ -501,9 +493,8 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_KuroMasterSeqEvent_C.__执行流程行为_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F542 RID: 128322 RVA: 0x008B5910 File Offset: 0x008B3B10
+		// Token: 0x0601D8C6 RID: 121030 RVA: 0x008FB0A0 File Offset: 0x008F92A0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 开关人物飘带(bool enable)
 		{
 			BP_KuroMasterSeqEvent_C.__开关人物飘带_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__开关人物飘带_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__开关人物飘带_FunctionParams) & -16L;
@@ -512,17 +503,15 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__开关人物飘带_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F543 RID: 128323 RVA: 0x008B5956 File Offset: 0x008B3B56
+		// Token: 0x0601D8C7 RID: 121031 RVA: 0x008FB0E6 File Offset: 0x008F92E6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 恢复镜头裁剪距离()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__恢复镜头裁剪距离_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F544 RID: 128324 RVA: 0x008B596C File Offset: 0x008B3B6C
+		// Token: 0x0601D8C8 RID: 121032 RVA: 0x008FB0FC File Offset: 0x008F92FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 调整镜头裁剪距离(int NearClip)
 		{
 			BP_KuroMasterSeqEvent_C.__调整镜头裁剪距离_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__调整镜头裁剪距离_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__调整镜头裁剪距离_FunctionParams) & -16L;
@@ -531,17 +520,15 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__调整镜头裁剪距离_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F545 RID: 128325 RVA: 0x008B59B2 File Offset: 0x008B3BB2
+		// Token: 0x0601D8C9 RID: 121033 RVA: 0x008FB142 File Offset: 0x008F9342
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 副触发切镜()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__副触发切镜_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F546 RID: 128326 RVA: 0x008B59C8 File Offset: 0x008B3BC8
+		// Token: 0x0601D8CA RID: 121034 RVA: 0x008FB158 File Offset: 0x008F9358
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 主触发切镜(bool shouldBlend, float blendTime, EViewTargetBlendFunction blendFunction, float blendExp)
 		{
 			BP_KuroMasterSeqEvent_C.__主触发切镜_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__主触发切镜_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__主触发切镜_FunctionParams) & -16L;
@@ -553,25 +540,22 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__主触发切镜_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F547 RID: 128327 RVA: 0x008B5A29 File Offset: 0x008B3C29
+		// Token: 0x0601D8CB RID: 121035 RVA: 0x008FB1B9 File Offset: 0x008F93B9
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 启用动态模糊()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__启用动态模糊_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F548 RID: 128328 RVA: 0x008B5A3D File Offset: 0x008B3C3D
+		// Token: 0x0601D8CC RID: 121036 RVA: 0x008FB1CD File Offset: 0x008F93CD
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 禁用动态模糊()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__禁用动态模糊_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F549 RID: 128329 RVA: 0x008B5A54 File Offset: 0x008B3C54
+		// Token: 0x0601D8CD RID: 121037 RVA: 0x008FB1E4 File Offset: 0x008F93E4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_KuroMasterSeqEvent_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__ReceiveTick_FunctionParams) & -16L;
@@ -580,489 +564,492 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F54A RID: 128330 RVA: 0x008B5A9C File Offset: 0x008B3C9C
+		// Token: 0x0601D8CE RID: 121038 RVA: 0x008FB22C File Offset: 0x008F942C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_KuroMasterSeqEvent_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_KuroMasterSeqEvent_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_KuroMasterSeqEvent_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_KuroMasterSeqEvent_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F54B RID: 128331 RVA: 0x008B5AE3 File Offset: 0x008B3CE3
+		// Token: 0x0601D8CF RID: 121039 RVA: 0x008FB272 File Offset: 0x008F9472
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveDestroyed()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__ReceiveDestroyed_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F54C RID: 128332 RVA: 0x008B5AF7 File Offset: 0x008B3CF7
+		// Token: 0x0601D8D0 RID: 121040 RVA: 0x008FB286 File Offset: 0x008F9486
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveDestroyed_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__ReceiveDestroyed_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroMasterSeqEvent_C.__ReceiveDestroyed_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F54D RID: 128333 RVA: 0x008B5B0C File Offset: 0x008B3D0C
+		// Token: 0x0601D8D1 RID: 121041 RVA: 0x008FB29A File Offset: 0x008F949A
 		protected BP_KuroMasterSeqEvent_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400F06B RID: 61547
+		// Token: 0x0400F8E5 RID: 63717
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Sequence/Manager/BP_KuroMasterSeqEvent.BP_KuroMasterSeqEvent_C";
 
-		// Token: 0x0400F06C RID: 61548
+		// Token: 0x0400F8E6 RID: 63718
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400F06D RID: 61549
+		// Token: 0x0400F8E7 RID: 63719
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400F06E RID: 61550
+		// Token: 0x0400F8E8 RID: 63720
 		public static IntPtr __OnScreenShotFade__DelegateSignature_NativeFunctionPtr;
 
-		// Token: 0x0400F06F RID: 61551
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400F8E9 RID: 63721
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x0400F070 RID: 61552
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400F8EA RID: 63722
+		internal static int __PropertyOffset_ModifiedNearClipPlane;
 
-		// Token: 0x0400F071 RID: 61553
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400F8EB RID: 63723
+		internal static int __PropertyOffset_OnScreenShotFade;
 
-		// Token: 0x0400F072 RID: 61554
+		// Token: 0x0400F8EC RID: 63724
 		[Nullable(2)]
 		private OnScreenShotFade _OnScreenShotFade;
 
-		// Token: 0x0400F073 RID: 61555
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400F8ED RID: 63725
+		internal static int __PropertyOffset_DelayMerge;
 
-		// Token: 0x0400F074 RID: 61556
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400F8EE RID: 63726
+		internal static int __PropertyOffset_Icon透明度;
 
-		// Token: 0x0400F075 RID: 61557
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400F8EF RID: 63727
+		internal static int __PropertyOffset_Icon遮罩透明度;
 
-		// Token: 0x0400F076 RID: 61558
-		internal static int __PropertyOffset_7;
+		// Token: 0x0400F8F0 RID: 63728
+		internal static int __PropertyOffset_counter;
 
-		// Token: 0x0400F077 RID: 61559
+		// Token: 0x0400F8F1 RID: 63729
+		private static IntPtr __Seq结束_NativeFunctionPtr;
+
+		// Token: 0x0400F8F2 RID: 63730
+		private static IntPtr __显示按键_NativeFunctionPtr;
+
+		// Token: 0x0400F8F3 RID: 63731
 		private static IntPtr __相机振动_NativeFunctionPtr;
 
-		// Token: 0x0400F078 RID: 61560
+		// Token: 0x0400F8F4 RID: 63732
 		private static IntPtr __打开报幕界面_NativeFunctionPtr;
 
-		// Token: 0x0400F079 RID: 61561
+		// Token: 0x0400F8F5 RID: 63733
 		private static IntPtr __启用剧情交互按钮_NativeFunctionPtr;
 
-		// Token: 0x0400F07A RID: 61562
+		// Token: 0x0400F8F6 RID: 63734
 		private static IntPtr __绑定物品检视Actor_NativeFunctionPtr;
 
-		// Token: 0x0400F07B RID: 61563
+		// Token: 0x0400F8F7 RID: 63735
 		private static IntPtr __额外Seq停止_NativeFunctionPtr;
 
-		// Token: 0x0400F07C RID: 61564
+		// Token: 0x0400F8F8 RID: 63736
 		private static IntPtr __额外Seq播放_NativeFunctionPtr;
 
-		// Token: 0x0400F07D RID: 61565
+		// Token: 0x0400F8F9 RID: 63737
 		private static IntPtr __背景Icon_NativeFunctionPtr;
 
-		// Token: 0x0400F07E RID: 61566
+		// Token: 0x0400F8FA RID: 63738
 		private static IntPtr __关闭Spine动画_数组__NativeFunctionPtr;
 
-		// Token: 0x0400F07F RID: 61567
+		// Token: 0x0400F8FB RID: 63739
 		private static IntPtr __关闭Spine动画_NativeFunctionPtr;
 
-		// Token: 0x0400F080 RID: 61568
+		// Token: 0x0400F8FC RID: 63740
 		private static IntPtr __播放Spine动画_数组__NativeFunctionPtr;
 
-		// Token: 0x0400F081 RID: 61569
+		// Token: 0x0400F8FD RID: 63741
 		private static IntPtr __播放Spine动画_性别__NativeFunctionPtr;
 
-		// Token: 0x0400F082 RID: 61570
+		// Token: 0x0400F8FE RID: 63742
 		private static IntPtr __播放Spine动画_NativeFunctionPtr;
 
-		// Token: 0x0400F083 RID: 61571
+		// Token: 0x0400F8FF RID: 63743
 		private static IntPtr __执行实体帧事件_NativeFunctionPtr;
 
-		// Token: 0x0400F084 RID: 61572
+		// Token: 0x0400F900 RID: 63744
 		private static IntPtr __播放预览图动画_NativeFunctionPtr;
 
-		// Token: 0x0400F085 RID: 61573
+		// Token: 0x0400F901 RID: 63745
 		private static IntPtr __关闭预览图_NativeFunctionPtr;
 
-		// Token: 0x0400F086 RID: 61574
+		// Token: 0x0400F902 RID: 63746
 		private static IntPtr __显示预览图_数组__NativeFunctionPtr;
 
-		// Token: 0x0400F087 RID: 61575
+		// Token: 0x0400F903 RID: 63747
 		private static IntPtr __显示预览图_NativeFunctionPtr;
 
-		// Token: 0x0400F088 RID: 61576
+		// Token: 0x0400F904 RID: 63748
 		private static IntPtr __展示游戏Logo_NativeFunctionPtr;
 
-		// Token: 0x0400F089 RID: 61577
+		// Token: 0x0400F905 RID: 63749
 		private static IntPtr __打开章节提示_NativeFunctionPtr;
 
-		// Token: 0x0400F08A RID: 61578
+		// Token: 0x0400F906 RID: 63750
 		private static IntPtr __触发切镜_NativeFunctionPtr;
 
-		// Token: 0x0400F08B RID: 61579
+		// Token: 0x0400F907 RID: 63751
 		private static IntPtr __开始叠化_NativeFunctionPtr;
 
-		// Token: 0x0400F08C RID: 61580
+		// Token: 0x0400F908 RID: 63752
 		private static IntPtr __执行流程行为_NativeFunctionPtr;
 
-		// Token: 0x0400F08D RID: 61581
+		// Token: 0x0400F909 RID: 63753
 		private static IntPtr __开关人物飘带_NativeFunctionPtr;
 
-		// Token: 0x0400F08E RID: 61582
+		// Token: 0x0400F90A RID: 63754
 		private static IntPtr __恢复镜头裁剪距离_NativeFunctionPtr;
 
-		// Token: 0x0400F08F RID: 61583
+		// Token: 0x0400F90B RID: 63755
 		private static IntPtr __调整镜头裁剪距离_NativeFunctionPtr;
 
-		// Token: 0x0400F090 RID: 61584
+		// Token: 0x0400F90C RID: 63756
 		private static IntPtr __副触发切镜_NativeFunctionPtr;
 
-		// Token: 0x0400F091 RID: 61585
+		// Token: 0x0400F90D RID: 63757
 		private static IntPtr __主触发切镜_NativeFunctionPtr;
 
-		// Token: 0x0400F092 RID: 61586
+		// Token: 0x0400F90E RID: 63758
 		private static IntPtr __启用动态模糊_NativeFunctionPtr;
 
-		// Token: 0x0400F093 RID: 61587
+		// Token: 0x0400F90F RID: 63759
 		private static IntPtr __禁用动态模糊_NativeFunctionPtr;
 
-		// Token: 0x0400F094 RID: 61588
+		// Token: 0x0400F910 RID: 63760
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x0400F095 RID: 61589
+		// Token: 0x0400F911 RID: 63761
 		private static IntPtr __ReceiveDestroyed_NativeFunctionPtr;
 
-		// Token: 0x02009AB9 RID: 39609
+		// Token: 0x02008D48 RID: 36168
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 56)]
 		protected ref struct __相机振动_FunctionParams
 		{
-			// Token: 0x04031045 RID: 200773
+			// Token: 0x0402C8B8 RID: 182456
 			[FieldOffset(0)]
 			public bool 启用;
 
-			// Token: 0x04031046 RID: 200774
+			// Token: 0x0402C8B9 RID: 182457
 			[FieldOffset(8)]
 			public byte 资产;
 		}
 
-		// Token: 0x02009ABA RID: 39610
+		// Token: 0x02008D49 RID: 36169
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 56)]
 		protected ref struct __打开报幕界面_FunctionParams
 		{
-			// Token: 0x04031047 RID: 200775
+			// Token: 0x0402C8BA RID: 182458
 			[FieldOffset(0)]
 			public FString uiPrefabId;
 
-			// Token: 0x04031048 RID: 200776
+			// Token: 0x0402C8BB RID: 182459
 			[FieldOffset(16)]
 			public float duration;
 
-			// Token: 0x04031049 RID: 200777
+			// Token: 0x0402C8BC RID: 182460
 			[FieldOffset(24)]
 			public FString uiStartAnimName;
 
-			// Token: 0x0403104A RID: 200778
+			// Token: 0x0402C8BD RID: 182461
 			[FieldOffset(40)]
 			public FString uiEndAnimName;
 		}
 
-		// Token: 0x02009ABB RID: 39611
+		// Token: 0x02008D4A RID: 36170
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __启用剧情交互按钮_FunctionParams
 		{
-			// Token: 0x0403104B RID: 200779
+			// Token: 0x0402C8BE RID: 182462
 			[FieldOffset(0)]
 			public bool bEnable;
 		}
 
-		// Token: 0x02009ABC RID: 39612
+		// Token: 0x02008D4B RID: 36171
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __绑定物品检视Actor_FunctionParams
 		{
-			// Token: 0x0403104C RID: 200780
+			// Token: 0x0402C8BF RID: 182463
 			[FieldOffset(0)]
 			public byte binding;
 		}
 
-		// Token: 0x02009ABD RID: 39613
+		// Token: 0x02008D4C RID: 36172
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __额外Seq播放_FunctionParams
 		{
-			// Token: 0x0403104D RID: 200781
+			// Token: 0x0402C8C0 RID: 182464
 			[FieldOffset(0)]
 			public IntPtr Seq;
 
-			// Token: 0x0403104E RID: 200782
+			// Token: 0x0402C8C1 RID: 182465
 			[FieldOffset(8)]
 			public FName componentName;
 
-			// Token: 0x0403104F RID: 200783
+			// Token: 0x0402C8C2 RID: 182466
 			[FieldOffset(20)]
 			public FName boneName;
 
-			// Token: 0x04031050 RID: 200784
+			// Token: 0x0402C8C3 RID: 182467
 			[FieldOffset(32)]
 			public float frame;
 		}
 
-		// Token: 0x02009ABE RID: 39614
+		// Token: 0x02008D4D RID: 36173
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __背景Icon_FunctionParams
 		{
-			// Token: 0x04031051 RID: 200785
+			// Token: 0x0402C8C4 RID: 182468
 			[FieldOffset(0)]
 			public bool 显示;
 
-			// Token: 0x04031052 RID: 200786
+			// Token: 0x0402C8C5 RID: 182469
 			[FieldOffset(8)]
 			public IntPtr Icon;
 		}
 
-		// Token: 0x02009ABF RID: 39615
+		// Token: 0x02008D4E RID: 36174
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __关闭Spine动画_数组__FunctionParams
 		{
-			// Token: 0x04031053 RID: 200787
+			// Token: 0x0402C8C6 RID: 182470
 			[FieldOffset(0)]
 			public byte spineArray;
 		}
 
-		// Token: 0x02009AC0 RID: 39616
+		// Token: 0x02008D4F RID: 36175
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __关闭Spine动画_FunctionParams
 		{
-			// Token: 0x04031054 RID: 200788
+			// Token: 0x0402C8C7 RID: 182471
 			[FieldOffset(0)]
 			public FString spineName;
 		}
 
-		// Token: 0x02009AC1 RID: 39617
+		// Token: 0x02008D50 RID: 36176
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __播放Spine动画_数组__FunctionParams
 		{
-			// Token: 0x04031055 RID: 200789
+			// Token: 0x0402C8C8 RID: 182472
 			[FieldOffset(0)]
 			public byte maleSpineArray;
 
-			// Token: 0x04031056 RID: 200790
+			// Token: 0x0402C8C9 RID: 182473
 			[FieldOffset(16)]
 			public byte femaleSpineArray;
 		}
 
-		// Token: 0x02009AC2 RID: 39618
+		// Token: 0x02008D51 RID: 36177
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __播放Spine动画_性别__FunctionParams
 		{
-			// Token: 0x04031057 RID: 200791
+			// Token: 0x0402C8CA RID: 182474
 			[FieldOffset(0)]
 			public FString maleSpineName1;
 
-			// Token: 0x04031058 RID: 200792
+			// Token: 0x0402C8CB RID: 182475
 			[FieldOffset(16)]
 			public FString femaleSpineName1;
 
-			// Token: 0x04031059 RID: 200793
+			// Token: 0x0402C8CC RID: 182476
 			[FieldOffset(32)]
 			public bool needLoop;
 		}
 
-		// Token: 0x02009AC3 RID: 39619
+		// Token: 0x02008D52 RID: 36178
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __播放Spine动画_FunctionParams
 		{
-			// Token: 0x0403105A RID: 200794
+			// Token: 0x0402C8CD RID: 182477
 			[FieldOffset(0)]
 			public FString SpineName;
 
-			// Token: 0x0403105B RID: 200795
+			// Token: 0x0402C8CE RID: 182478
 			[FieldOffset(16)]
 			public bool needLoop;
 		}
 
-		// Token: 0x02009AC4 RID: 39620
+		// Token: 0x02008D53 RID: 36179
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __执行实体帧事件_FunctionParams
 		{
-			// Token: 0x0403105C RID: 200796
+			// Token: 0x0402C8CF RID: 182479
 			[FieldOffset(0)]
 			public FString Key;
 
-			// Token: 0x0403105D RID: 200797
+			// Token: 0x0402C8D0 RID: 182480
 			[FieldOffset(16)]
 			public int EntityId;
 		}
 
-		// Token: 0x02009AC5 RID: 39621
+		// Token: 0x02008D54 RID: 36180
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __播放预览图动画_FunctionParams
 		{
-			// Token: 0x0403105E RID: 200798
+			// Token: 0x0402C8D1 RID: 182481
 			[FieldOffset(0)]
 			public FString seqName;
 		}
 
-		// Token: 0x02009AC6 RID: 39622
+		// Token: 0x02008D55 RID: 36181
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 72)]
 		protected ref struct __显示预览图_数组__FunctionParams
 		{
-			// Token: 0x0403105F RID: 200799
+			// Token: 0x0402C8D2 RID: 182482
 			[FieldOffset(0)]
 			public FString MaleAssetPath;
 
-			// Token: 0x04031060 RID: 200800
+			// Token: 0x0402C8D3 RID: 182483
 			[FieldOffset(16)]
 			public FString FemaleAssetPath;
 
-			// Token: 0x04031061 RID: 200801
+			// Token: 0x0402C8D4 RID: 182484
 			[FieldOffset(32)]
 			public byte maleSpineArray;
 
-			// Token: 0x04031062 RID: 200802
+			// Token: 0x0402C8D5 RID: 182485
 			[FieldOffset(48)]
 			public byte femaleSpineArray;
 
-			// Token: 0x04031063 RID: 200803
+			// Token: 0x0402C8D6 RID: 182486
 			[FieldOffset(64)]
 			public bool useFullscreenAdaptAnchor;
 		}
 
-		// Token: 0x02009AC7 RID: 39623
+		// Token: 0x02008D56 RID: 36182
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 72)]
 		protected ref struct __显示预览图_FunctionParams
 		{
-			// Token: 0x04031064 RID: 200804
+			// Token: 0x0402C8D7 RID: 182487
 			[FieldOffset(0)]
 			public FString MaleAssetPath;
 
-			// Token: 0x04031065 RID: 200805
+			// Token: 0x0402C8D8 RID: 182488
 			[FieldOffset(16)]
 			public FString FemaleAssetPath;
 
-			// Token: 0x04031066 RID: 200806
+			// Token: 0x0402C8D9 RID: 182489
 			[FieldOffset(32)]
 			public FString maleSpineName;
 
-			// Token: 0x04031067 RID: 200807
+			// Token: 0x0402C8DA RID: 182490
 			[FieldOffset(48)]
 			public FString femaleSpineName;
 
-			// Token: 0x04031068 RID: 200808
+			// Token: 0x0402C8DB RID: 182491
 			[FieldOffset(64)]
 			public bool needLoop;
 
-			// Token: 0x04031069 RID: 200809
+			// Token: 0x0402C8DC RID: 182492
 			[FieldOffset(65)]
 			public bool useFullscreenAdaptAnchor;
 		}
 
-		// Token: 0x02009AC8 RID: 39624
+		// Token: 0x02008D57 RID: 36183
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __展示游戏Logo_FunctionParams
 		{
-			// Token: 0x0403106A RID: 200810
+			// Token: 0x0402C8DD RID: 182493
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x02009AC9 RID: 39625
+		// Token: 0x02008D58 RID: 36184
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __打开章节提示_FunctionParams
 		{
-			// Token: 0x0403106B RID: 200811
+			// Token: 0x0402C8DE RID: 182494
 			[FieldOffset(0)]
 			public int ChapterState;
 
-			// Token: 0x0403106C RID: 200812
+			// Token: 0x0402C8DF RID: 182495
 			[FieldOffset(4)]
 			public int ChapterId;
 		}
 
-		// Token: 0x02009ACA RID: 39626
+		// Token: 0x02008D59 RID: 36185
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __执行流程行为_FunctionParams
 		{
-			// Token: 0x0403106D RID: 200813
+			// Token: 0x0402C8E0 RID: 182496
 			[FieldOffset(0)]
 			public FString key;
 		}
 
-		// Token: 0x02009ACB RID: 39627
+		// Token: 0x02008D5A RID: 36186
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __开关人物飘带_FunctionParams
 		{
-			// Token: 0x0403106E RID: 200814
+			// Token: 0x0402C8E1 RID: 182497
 			[FieldOffset(0)]
 			public bool enable;
 		}
 
-		// Token: 0x02009ACC RID: 39628
+		// Token: 0x02008D5B RID: 36187
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __调整镜头裁剪距离_FunctionParams
 		{
-			// Token: 0x0403106F RID: 200815
+			// Token: 0x0402C8E2 RID: 182498
 			[FieldOffset(0)]
 			public int NearClip;
 		}
 
-		// Token: 0x02009ACD RID: 39629
+		// Token: 0x02008D5C RID: 36188
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __主触发切镜_FunctionParams
 		{
-			// Token: 0x04031070 RID: 200816
+			// Token: 0x0402C8E3 RID: 182499
 			[FieldOffset(0)]
 			public bool shouldBlend;
 
-			// Token: 0x04031071 RID: 200817
+			// Token: 0x0402C8E4 RID: 182500
 			[FieldOffset(4)]
 			public float blendTime;
 
-			// Token: 0x04031072 RID: 200818
+			// Token: 0x0402C8E5 RID: 182501
 			[FieldOffset(8)]
 			public TEnumAsByte<EViewTargetBlendFunction> blendFunction;
 
-			// Token: 0x04031073 RID: 200819
+			// Token: 0x0402C8E6 RID: 182502
 			[FieldOffset(12)]
 			public float blendExp;
 		}
 
-		// Token: 0x02009ACE RID: 39630
+		// Token: 0x02008D5D RID: 36189
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x04031074 RID: 200820
+			// Token: 0x0402C8E7 RID: 182503
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

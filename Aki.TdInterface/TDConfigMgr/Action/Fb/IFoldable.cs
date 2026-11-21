@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024D3 RID: 9427
+	// Token: 0x02002778 RID: 10104
 	public class IFoldable
 	{
-		// Token: 0x0600D293 RID: 53907 RVA: 0x001F3DF4 File Offset: 0x001F1FF4
-		[NullableContext(1)]
+		// Token: 0x0600DFE8 RID: 57320 RVA: 0x0020F650 File Offset: 0x0020D850
 		public static IFoldable Create(IFoldable? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003AAF RID: 15023
-		// (get) Token: 0x0600D294 RID: 53908 RVA: 0x001F3E14 File Offset: 0x001F2014
+		// Token: 0x17003DA6 RID: 15782
+		// (get) Token: 0x0600DFE9 RID: 57321 RVA: 0x0020F670 File Offset: 0x0020D870
 		public virtual bool? _Folded
 		{
 			get
@@ -35,7 +33,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400737F RID: 29567
+		// Token: 0x040079CC RID: 31180
 		private IFoldable Instance;
 	}
 }

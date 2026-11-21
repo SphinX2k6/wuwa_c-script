@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020019BF RID: 6591
+// Token: 0x02000E7D RID: 3709
 public class VisionTabItem : CommonTabItem, ITabViewRegister
 {
-	// Token: 0x0600C091 RID: 49297 RVA: 0x002B6363 File Offset: 0x002B4563
+	// Token: 0x0600949B RID: 38043 RVA: 0x002C12F3 File Offset: 0x002BF4F3
 	[NullableContext(1)]
 	public void RegisterViewModule(UiTabViewBase tabView)
 	{

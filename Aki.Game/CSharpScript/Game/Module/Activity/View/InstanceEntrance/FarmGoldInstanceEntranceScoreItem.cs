@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F04 RID: 24324
+	// Token: 0x02004EEB RID: 20203
 	public class FarmGoldInstanceEntranceScoreItem : UiPanelBase
 	{
-		// Token: 0x0603DCF2 RID: 253170 RVA: 0x00EF0FF4 File Offset: 0x00EEF1F4
+		// Token: 0x06032C8D RID: 208013 RVA: 0x00E42CFC File Offset: 0x00E40EFC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -34,26 +34,26 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DCF3 RID: 253171 RVA: 0x00EF10BB File Offset: 0x00EEF2BB
+		// Token: 0x06032C8E RID: 208014 RVA: 0x00E42DC3 File Offset: 0x00E40FC3
 		protected override void OnBeforeShow()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.FarmGoldReward, base.GetItem(2), null, this.ActivityData.Id);
 		}
 
-		// Token: 0x0603DCF4 RID: 253172 RVA: 0x00EF10DF File Offset: 0x00EEF2DF
+		// Token: 0x06032C8F RID: 208015 RVA: 0x00E42DE7 File Offset: 0x00E40FE7
 		protected override void OnBeforeDestroy()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.FarmGoldReward, base.GetItem(2), 0);
 		}
 
-		// Token: 0x0603DCF5 RID: 253173 RVA: 0x00EF10F8 File Offset: 0x00EEF2F8
+		// Token: 0x06032C90 RID: 208016 RVA: 0x00E42E00 File Offset: 0x00E41000
 		[NullableContext(1)]
 		public void SetActivityData(FarmGoldData data)
 		{
 			this.ActivityData = data;
 		}
 
-		// Token: 0x0603DCF6 RID: 253174 RVA: 0x00EF1104 File Offset: 0x00EEF304
+		// Token: 0x06032C91 RID: 208017 RVA: 0x00E42E0C File Offset: 0x00E4100C
 		public void RefreshView()
 		{
 			IActivityRewardViewData rewardViewData = this.ActivityData.GetRewardViewData();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.RefreshScore();
 		}
 
-		// Token: 0x0603DCF7 RID: 253175 RVA: 0x00EF1148 File Offset: 0x00EEF348
+		// Token: 0x06032C92 RID: 208018 RVA: 0x00E42E50 File Offset: 0x00E41050
 		private void RefreshScore()
 		{
 			string scoreDesc = this.ActivityData.GetScoreDesc();
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			text.SetText(scoreDesc, true);
 		}
 
-		// Token: 0x0603DCF8 RID: 253176 RVA: 0x00EF1174 File Offset: 0x00EEF374
+		// Token: 0x06032C93 RID: 208019 RVA: 0x00E42E7C File Offset: 0x00E4107C
 		private void OnClickBtnScoreReward()
 		{
 			if (this.ActivityData == null)
@@ -95,18 +95,18 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			});
 		}
 
-		// Token: 0x04020492 RID: 132242
+		// Token: 0x0401AF64 RID: 110436
 		[Nullable(2)]
 		private FarmGoldData ActivityData;
 
-		// Token: 0x0200C23A RID: 49722
+		// Token: 0x0200AC47 RID: 44103
 		private enum EComponent
 		{
-			// Token: 0x0403AAE9 RID: 240361
+			// Token: 0x040354DB RID: 218331
 			BtnScoreReward,
-			// Token: 0x0403AAEA RID: 240362
+			// Token: 0x040354DC RID: 218332
 			TxtScore,
-			// Token: 0x0403AAEB RID: 240363
+			// Token: 0x040354DD RID: 218333
 			ScoreRedDot
 		}
 	}

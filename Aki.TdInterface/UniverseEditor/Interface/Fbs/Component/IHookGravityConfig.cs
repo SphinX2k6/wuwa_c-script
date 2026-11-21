@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053BF RID: 21439
+	// Token: 0x02005945 RID: 22853
 	public struct IHookGravityConfig : IFlatbufferObject
 	{
-		// Token: 0x17009D91 RID: 40337
-		// (get) Token: 0x06023220 RID: 143904 RVA: 0x004DCF6A File Offset: 0x004DB16A
+		// Token: 0x1700A5C9 RID: 42441
+		// (get) Token: 0x060252D4 RID: 152276 RVA: 0x00519E3E File Offset: 0x0051803E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023221 RID: 143905 RVA: 0x004DCF77 File Offset: 0x004DB177
+		// Token: 0x060252D5 RID: 152277 RVA: 0x00519E4B File Offset: 0x0051804B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023222 RID: 143906 RVA: 0x004DCF80 File Offset: 0x004DB180
+		// Token: 0x060252D6 RID: 152278 RVA: 0x00519E54 File Offset: 0x00518054
 		public static IHookGravityConfig GetRootAsIHookGravityConfig(ByteBuffer _bb)
 		{
 			return IHookGravityConfig.GetRootAsIHookGravityConfig(_bb, default(IHookGravityConfig));
 		}
 
-		// Token: 0x06023223 RID: 143907 RVA: 0x004DCF9C File Offset: 0x004DB19C
+		// Token: 0x060252D7 RID: 152279 RVA: 0x00519E70 File Offset: 0x00518070
 		public static IHookGravityConfig GetRootAsIHookGravityConfig(ByteBuffer _bb, IHookGravityConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023224 RID: 143908 RVA: 0x004DCFB9 File Offset: 0x004DB1B9
+		// Token: 0x060252D8 RID: 152280 RVA: 0x00519E8D File Offset: 0x0051808D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023225 RID: 143909 RVA: 0x004DCFC8 File Offset: 0x004DB1C8
+		// Token: 0x060252D9 RID: 152281 RVA: 0x00519E9C File Offset: 0x0051809C
 		public IHookGravityConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009D92 RID: 40338
-		// (get) Token: 0x06023226 RID: 143910 RVA: 0x004DCFD8 File Offset: 0x004DB1D8
+		// Token: 0x1700A5CA RID: 42442
+		// (get) Token: 0x060252DA RID: 152282 RVA: 0x00519EAC File Offset: 0x005180AC
 		public TGravityDirection GravityDirectionType
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023227 RID: 143911 RVA: 0x004DD014 File Offset: 0x004DB214
+		// Token: 0x060252DB RID: 152283 RVA: 0x00519EE8 File Offset: 0x005180E8
 		public TTable? GravityDirection<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -74,32 +74,32 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06023228 RID: 143912 RVA: 0x004DD058 File Offset: 0x004DB258
+		// Token: 0x060252DC RID: 152284 RVA: 0x00519F2C File Offset: 0x0051812C
 		public IGravityDirectionByEntityGravity GravityDirectionAsIGravityDirectionByEntityGravity()
 		{
 			return this.GravityDirection<IGravityDirectionByEntityGravity>().Value;
 		}
 
-		// Token: 0x06023229 RID: 143913 RVA: 0x004DD074 File Offset: 0x004DB274
+		// Token: 0x060252DD RID: 152285 RVA: 0x00519F48 File Offset: 0x00518148
 		public IGravityDirectionSelfRotation GravityDirectionAsIGravityDirectionSelfRotation()
 		{
 			return this.GravityDirection<IGravityDirectionSelfRotation>().Value;
 		}
 
-		// Token: 0x0602322A RID: 143914 RVA: 0x004DD090 File Offset: 0x004DB290
+		// Token: 0x060252DE RID: 152286 RVA: 0x00519F64 File Offset: 0x00518164
 		public IGravityDirectionVectorInfo GravityDirectionAsIGravityDirectionVectorInfo()
 		{
 			return this.GravityDirection<IGravityDirectionVectorInfo>().Value;
 		}
 
-		// Token: 0x0602322B RID: 143915 RVA: 0x004DD0AC File Offset: 0x004DB2AC
+		// Token: 0x060252DF RID: 152287 RVA: 0x00519F80 File Offset: 0x00518180
 		public IGravityDirectionWorldAxis GravityDirectionAsIGravityDirectionWorldAxis()
 		{
 			return this.GravityDirection<IGravityDirectionWorldAxis>().Value;
 		}
 
-		// Token: 0x17009D93 RID: 40339
-		// (get) Token: 0x0602322C RID: 143916 RVA: 0x004DD0C8 File Offset: 0x004DB2C8
+		// Token: 0x1700A5CB RID: 42443
+		// (get) Token: 0x060252E0 RID: 152288 RVA: 0x00519F9C File Offset: 0x0051819C
 		public int SafePointId
 		{
 			get
@@ -113,8 +113,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D94 RID: 40340
-		// (get) Token: 0x0602322D RID: 143917 RVA: 0x004DD104 File Offset: 0x004DB304
+		// Token: 0x1700A5CC RID: 42444
+		// (get) Token: 0x060252E1 RID: 152289 RVA: 0x00519FD8 File Offset: 0x005181D8
 		public int CameraLookAtPointId
 		{
 			get
@@ -128,8 +128,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D95 RID: 40341
-		// (get) Token: 0x0602322E RID: 143918 RVA: 0x004DD144 File Offset: 0x004DB344
+		// Token: 0x1700A5CD RID: 42445
+		// (get) Token: 0x060252E2 RID: 152290 RVA: 0x0051A018 File Offset: 0x00518218
 		public byte NullMask
 		{
 			get
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602322F RID: 143919 RVA: 0x004DD181 File Offset: 0x004DB381
+		// Token: 0x060252E3 RID: 152291 RVA: 0x0051A055 File Offset: 0x00518255
 		public static Offset<IHookGravityConfig> CreateIHookGravityConfig(FlatBufferBuilder builder, TGravityDirection GravityDirection_type = TGravityDirection.NONE, int GravityDirectionOffset = 0, int SafePointId = 0, int CameraLookAtPointId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -155,49 +155,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHookGravityConfig.EndIHookGravityConfig(builder);
 		}
 
-		// Token: 0x06023230 RID: 143920 RVA: 0x004DD1B5 File Offset: 0x004DB3B5
+		// Token: 0x060252E4 RID: 152292 RVA: 0x0051A089 File Offset: 0x00518289
 		public static void StartIHookGravityConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06023231 RID: 143921 RVA: 0x004DD1BE File Offset: 0x004DB3BE
+		// Token: 0x060252E5 RID: 152293 RVA: 0x0051A092 File Offset: 0x00518292
 		public static void AddGravityDirectionType(FlatBufferBuilder builder, TGravityDirection gravityDirectionType)
 		{
 			builder.AddByte(0, (byte)gravityDirectionType, 0);
 		}
 
-		// Token: 0x06023232 RID: 143922 RVA: 0x004DD1C9 File Offset: 0x004DB3C9
+		// Token: 0x060252E6 RID: 152294 RVA: 0x0051A09D File Offset: 0x0051829D
 		public static void AddGravityDirection(FlatBufferBuilder builder, int gravityDirectionOffset)
 		{
 			builder.AddOffset(1, gravityDirectionOffset, 0);
 		}
 
-		// Token: 0x06023233 RID: 143923 RVA: 0x004DD1D4 File Offset: 0x004DB3D4
+		// Token: 0x060252E7 RID: 152295 RVA: 0x0051A0A8 File Offset: 0x005182A8
 		public static void AddSafePointId(FlatBufferBuilder builder, int safePointId)
 		{
 			builder.AddInt(2, safePointId, 0);
 		}
 
-		// Token: 0x06023234 RID: 143924 RVA: 0x004DD1DF File Offset: 0x004DB3DF
+		// Token: 0x060252E8 RID: 152296 RVA: 0x0051A0B3 File Offset: 0x005182B3
 		public static void AddCameraLookAtPointId(FlatBufferBuilder builder, int cameraLookAtPointId)
 		{
 			builder.AddInt(3, cameraLookAtPointId, 0);
 		}
 
-		// Token: 0x06023235 RID: 143925 RVA: 0x004DD1EA File Offset: 0x004DB3EA
+		// Token: 0x060252E9 RID: 152297 RVA: 0x0051A0BE File Offset: 0x005182BE
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06023236 RID: 143926 RVA: 0x004DD1F5 File Offset: 0x004DB3F5
+		// Token: 0x060252EA RID: 152298 RVA: 0x0051A0C9 File Offset: 0x005182C9
 		public static Offset<IHookGravityConfig> EndIHookGravityConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IHookGravityConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06023237 RID: 143927 RVA: 0x004DD204 File Offset: 0x004DB404
+		// Token: 0x060252EB RID: 152299 RVA: 0x0051A0D8 File Offset: 0x005182D8
 		public IHookGravityConfigT UnPack()
 		{
 			IHookGravityConfigT hookGravityConfigT = new IHookGravityConfigT();
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return hookGravityConfigT;
 		}
 
-		// Token: 0x06023238 RID: 143928 RVA: 0x004DD220 File Offset: 0x004DB420
+		// Token: 0x060252EC RID: 152300 RVA: 0x0051A0F4 File Offset: 0x005182F4
 		public void UnPackTo(IHookGravityConfigT _o)
 		{
 			_o.GravityDirection = new TGravityDirectionUnion();
@@ -230,7 +230,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06023239 RID: 143929 RVA: 0x004DD374 File Offset: 0x004DB574
+		// Token: 0x060252ED RID: 152301 RVA: 0x0051A248 File Offset: 0x00518448
 		public static Offset<IHookGravityConfig> Pack(FlatBufferBuilder builder, IHookGravityConfigT _o)
 		{
 			if (_o == null)
@@ -242,7 +242,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHookGravityConfig.CreateIHookGravityConfig(builder, gravityDirection_type, gravityDirectionOffset, _o.SafePointId, _o.CameraLookAtPointId, _o.NullMask);
 		}
 
-		// Token: 0x0400E5C1 RID: 58817
+		// Token: 0x0400F1F1 RID: 61937
 		private Table __p;
 	}
 }

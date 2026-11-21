@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000319 RID: 793
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000360 RID: 864
 	public class IEntityGravityConfig
 	{
-		// Token: 0x06000F94 RID: 3988 RVA: 0x00037150 File Offset: 0x00035350
+		// Token: 0x060010C6 RID: 4294 RVA: 0x0003A11C File Offset: 0x0003831C
 		private IEntityGravityConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000F95 RID: 3989 RVA: 0x00037188 File Offset: 0x00035388
+		// Token: 0x060010C7 RID: 4295 RVA: 0x0003A154 File Offset: 0x00038354
 		public static IEntityGravityConfig Create([Nullable(2)] IEntityGravityConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000F96 RID: 3990 RVA: 0x0003719B File Offset: 0x0003539B
+		// Token: 0x060010C8 RID: 4296 RVA: 0x0003A167 File Offset: 0x00038367
 		public static IEntityGravityConfig CreateFromSetValue([Nullable(2)] IEntityGravityConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000F97 RID: 3991 RVA: 0x000371AE File Offset: 0x000353AE
+		// Token: 0x060010C9 RID: 4297 RVA: 0x0003A17A File Offset: 0x0003837A
 		public IEntityGravityConfig_SetValue ToSetValue()
 		{
 			return new IEntityGravityConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000481 RID: 1153
-		// (get) Token: 0x06000F98 RID: 3992 RVA: 0x000371D9 File Offset: 0x000353D9
-		// (set) Token: 0x06000F99 RID: 3993 RVA: 0x00037200 File Offset: 0x00035400
+		// Token: 0x170004CF RID: 1231
+		// (get) Token: 0x060010CA RID: 4298 RVA: 0x0003A1A5 File Offset: 0x000383A5
+		// (set) Token: 0x060010CB RID: 4299 RVA: 0x0003A1CC File Offset: 0x000383CC
 		public virtual IGravityDirectionType GravityDirection
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000482 RID: 1154
-		// (get) Token: 0x06000F9A RID: 3994 RVA: 0x00037210 File Offset: 0x00035410
-		// (set) Token: 0x06000F9B RID: 3995 RVA: 0x0003724A File Offset: 0x0003544A
+		// Token: 0x170004D0 RID: 1232
+		// (get) Token: 0x060010CC RID: 4300 RVA: 0x0003A1DC File Offset: 0x000383DC
+		// (set) Token: 0x060010CD RID: 4301 RVA: 0x0003A216 File Offset: 0x00038416
 		public virtual bool? SpecifyGravityLoad
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000483 RID: 1155
-		// (get) Token: 0x06000F9C RID: 3996 RVA: 0x00037258 File Offset: 0x00035458
-		// (set) Token: 0x06000F9D RID: 3997 RVA: 0x00037292 File Offset: 0x00035492
+		// Token: 0x170004D1 RID: 1233
+		// (get) Token: 0x060010CE RID: 4302 RVA: 0x0003A224 File Offset: 0x00038424
+		// (set) Token: 0x060010CF RID: 4303 RVA: 0x0003A25E File Offset: 0x0003845E
 		public virtual bool? SpecifyGravityLock
 		{
 			get
@@ -134,11 +132,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D56 RID: 3414
+		// Token: 0x04000E41 RID: 3649
 		[Nullable(2)]
 		protected IEntityGravityConfig FbInstance;
 
-		// Token: 0x04000D57 RID: 3415
+		// Token: 0x04000E42 RID: 3650
 		[Nullable(2)]
 		protected IEntityGravityConfig_SetValue PocoInterface;
 	}

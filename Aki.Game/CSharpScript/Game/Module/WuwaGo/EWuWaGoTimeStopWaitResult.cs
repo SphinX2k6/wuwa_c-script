@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x0200470D RID: 18189
+	// Token: 0x0200363D RID: 13885
 	public enum EWuWaGoTimeStopWaitResult
 	{
-		// Token: 0x04019AED RID: 105197
+		// Token: 0x0401419C RID: 82332
 		Completed,
-		// Token: 0x04019AEE RID: 105198
+		// Token: 0x0401419D RID: 82333
 		Canceled
 	}
 }

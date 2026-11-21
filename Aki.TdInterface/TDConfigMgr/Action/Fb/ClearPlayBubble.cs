@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002719 RID: 10009
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029E0 RID: 10720
 	public class ClearPlayBubble : ActionParams
 	{
-		// Token: 0x0600DF47 RID: 57159 RVA: 0x0021175A File Offset: 0x0020F95A
+		// Token: 0x0600ED33 RID: 60723 RVA: 0x0022E102 File Offset: 0x0022C302
 		public static ClearPlayBubble Create(IClearPlayBubble? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042D7 RID: 17111
-		// (get) Token: 0x0600DF48 RID: 57160 RVA: 0x0021177C File Offset: 0x0020F97C
+		// Token: 0x17004621 RID: 17953
+		// (get) Token: 0x0600ED34 RID: 60724 RVA: 0x0022E124 File Offset: 0x0022C324
 		public virtual List<int> EntityIds
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042D8 RID: 17112
-		// (get) Token: 0x0600DF49 RID: 57161 RVA: 0x002117E0 File Offset: 0x0020F9E0
+		// Token: 0x17004622 RID: 17954
+		// (get) Token: 0x0600ED35 RID: 60725 RVA: 0x0022E188 File Offset: 0x0022C388
 		public virtual bool? OnlyClearRedDot
 		{
 			get
@@ -58,13 +55,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BE9 RID: 31721
+		// Token: 0x0400828E RID: 33422
 		private IClearPlayBubble Instance;
 
-		// Token: 0x04007BEA RID: 31722
+		// Token: 0x0400828F RID: 33423
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007BEB RID: 31723
+		// Token: 0x04008290 RID: 33424
 		private bool _EntityIdsInited;
 	}
 }

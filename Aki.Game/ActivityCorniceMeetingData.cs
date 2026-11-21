@@ -7,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x020011F4 RID: 4596
+// Token: 0x020006A8 RID: 1704
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityCorniceMeetingData : ActivityBaseData
 {
-	// Token: 0x06007ABC RID: 31420 RVA: 0x0019D5C4 File Offset: 0x0019B7C4
+	// Token: 0x06004E53 RID: 20051 RVA: 0x001A626C File Offset: 0x001A446C
 	protected override void PhraseEx(ActivityData data)
 	{
 		this.UnlockTime = data.CorniceMeetingData.QuestUnlockTime;
@@ -36,7 +36,7 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		this.RefreshAllLevelEntryDataRedDot();
 	}
 
-	// Token: 0x06007ABD RID: 31421 RVA: 0x0019D67C File Offset: 0x0019B87C
+	// Token: 0x06004E54 RID: 20052 RVA: 0x001A6324 File Offset: 0x001A4524
 	public List<int> GetLevelPlayIdList(bool isSort = true)
 	{
 		List<int> list = new List<int>(this.LevelEntryMap.Keys);
@@ -56,7 +56,7 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06007ABE RID: 31422 RVA: 0x0019D6C4 File Offset: 0x0019B8C4
+	// Token: 0x06004E55 RID: 20053 RVA: 0x001A636C File Offset: 0x001A456C
 	public void UpdateRewarded(int levelPlayId, int score)
 	{
 		ActivityCorniceMeetingLevelEntryData activityCorniceMeetingLevelEntryData;
@@ -66,7 +66,7 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007ABF RID: 31423 RVA: 0x0019D6E8 File Offset: 0x0019B8E8
+	// Token: 0x06004E56 RID: 20054 RVA: 0x001A6390 File Offset: 0x001A4590
 	[NullableContext(2)]
 	public ActivityCorniceMeetingLevelEntryData GetLevelEntryData(int levelPlayId)
 	{
@@ -75,7 +75,7 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06007AC0 RID: 31424 RVA: 0x0019D708 File Offset: 0x0019B908
+	// Token: 0x06004E57 RID: 20055 RVA: 0x001A63B0 File Offset: 0x001A45B0
 	public int GetDefaultSelectLevelPlayId()
 	{
 		List<int> levelPlayIdList = this.GetLevelPlayIdList(true);
@@ -92,13 +92,13 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		return this.CurrentSelectLevelPlayId;
 	}
 
-	// Token: 0x06007AC1 RID: 31425 RVA: 0x0019D79C File Offset: 0x0019B99C
+	// Token: 0x06004E58 RID: 20056 RVA: 0x001A6444 File Offset: 0x001A4644
 	public int GetSelectLevelPlayIdIndex()
 	{
 		return this.GetLevelPlayIdList(true).IndexOf(this.CurrentSelectLevelPlayId);
 	}
 
-	// Token: 0x06007AC2 RID: 31426 RVA: 0x0019D7B0 File Offset: 0x0019B9B0
+	// Token: 0x06004E59 RID: 20057 RVA: 0x001A6458 File Offset: 0x001A4658
 	public List<TItem> GetScoreIndexPreviewItem(int levelPlayId, int score)
 	{
 		CorniceChallenge? corniceMeetingChallengeConfig = ActivityCorniceMeetingConfig.Instance.GetCorniceMeetingChallengeConfig(levelPlayId);
@@ -142,7 +142,7 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06007AC3 RID: 31427 RVA: 0x0019D8E8 File Offset: 0x0019BAE8
+	// Token: 0x06004E5A RID: 20058 RVA: 0x001A6590 File Offset: 0x001A4790
 	public ECorniceMeetingRewardState GetRewardState(int levelPlayId, int index)
 	{
 		ActivityCorniceMeetingLevelEntryData levelEntryData = this.GetLevelEntryData(levelPlayId);
@@ -162,7 +162,7 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		return ECorniceMeetingRewardState.Finished;
 	}
 
-	// Token: 0x06007AC4 RID: 31428 RVA: 0x0019D928 File Offset: 0x0019BB28
+	// Token: 0x06004E5B RID: 20059 RVA: 0x001A65D0 File Offset: 0x001A47D0
 	public bool IsUnlockTailQuest()
 	{
 		if (base.Id != 102400001)
@@ -186,14 +186,14 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		return TimeUtil.Instance.GetServerTimeStamp() >= (double)this.UnlockTime && flag;
 	}
 
-	// Token: 0x06007AC5 RID: 31429 RVA: 0x0019D9C0 File Offset: 0x0019BBC0
+	// Token: 0x06004E5C RID: 20060 RVA: 0x001A6668 File Offset: 0x001A4868
 	public bool GetIsShow(int levelPlayId)
 	{
 		ActivityCorniceMeetingLevelEntryData levelEntryData = this.GetLevelEntryData(levelPlayId);
 		return levelEntryData != null && levelEntryData.IsUnlock() && this.CheckIfInShowTime() && base.GetPreGuideQuestFinishState();
 	}
 
-	// Token: 0x06007AC6 RID: 31430 RVA: 0x0019D9F4 File Offset: 0x0019BBF4
+	// Token: 0x06004E5D RID: 20061 RVA: 0x001A669C File Offset: 0x001A489C
 	public override bool CheckIfInShowTime()
 	{
 		if (base.BeginOpenTime == 0L && base.EndOpenTime == 0L)
@@ -204,7 +204,7 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		return serverTime >= (double)base.BeginOpenTime && serverTime <= (double)base.EndOpenTime;
 	}
 
-	// Token: 0x06007AC7 RID: 31431 RVA: 0x0019DA38 File Offset: 0x0019BC38
+	// Token: 0x06004E5E RID: 20062 RVA: 0x001A66E0 File Offset: 0x001A48E0
 	public override bool GetExDataRedPointShowState()
 	{
 		if (base.GetPreGuideQuestFinishState())
@@ -226,14 +226,14 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, base.GetUnFinishPreGuideQuestId(), 0, 0) == 0;
 	}
 
-	// Token: 0x06007AC8 RID: 31432 RVA: 0x0019DAC8 File Offset: 0x0019BCC8
+	// Token: 0x06004E5F RID: 20063 RVA: 0x001A6770 File Offset: 0x001A4970
 	public void SavePreQuestRedDot(int preQuestId)
 	{
 		ActivityModel.Instance.SaveActivityData(base.Id, preQuestId, 0, 0, 1);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06007AC9 RID: 31433 RVA: 0x0019DAF4 File Offset: 0x0019BCF4
+	// Token: 0x06004E60 RID: 20064 RVA: 0x001A679C File Offset: 0x001A499C
 	public void RefreshAllLevelEntryDataRedDot()
 	{
 		foreach (int p in this.GetLevelPlayIdList(true))
@@ -242,8 +242,8 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000A7D RID: 2685
-	// (get) Token: 0x06007ACA RID: 31434 RVA: 0x0019DB54 File Offset: 0x0019BD54
+	// Token: 0x17000A9D RID: 2717
+	// (get) Token: 0x06004E61 RID: 20065 RVA: 0x001A67FC File Offset: 0x001A49FC
 	public bool NeedTailQuest
 	{
 		get
@@ -252,8 +252,8 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000A7E RID: 2686
-	// (get) Token: 0x06007ACB RID: 31435 RVA: 0x0019DB63 File Offset: 0x0019BD63
+	// Token: 0x17000A9E RID: 2718
+	// (get) Token: 0x06004E62 RID: 20066 RVA: 0x001A680B File Offset: 0x001A4A0B
 	public string TaskTitleTextId
 	{
 		get
@@ -266,7 +266,7 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007ACC RID: 31436 RVA: 0x0019DB80 File Offset: 0x0019BD80
+	// Token: 0x06004E63 RID: 20067 RVA: 0x001A6828 File Offset: 0x001A4A28
 	protected override bool GetExDataFinishShowState()
 	{
 		foreach (int levelPlayId in this.GetLevelPlayIdList(true))
@@ -288,15 +288,15 @@ public class ActivityCorniceMeetingData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x0400383D RID: 14397
+	// Token: 0x040038D6 RID: 14550
 	private const int FIRST_VERSION_ACTIVITY_ID = 102400001;
 
-	// Token: 0x0400383E RID: 14398
+	// Token: 0x040038D7 RID: 14551
 	public Dictionary<int, ActivityCorniceMeetingLevelEntryData> LevelEntryMap = new Dictionary<int, ActivityCorniceMeetingLevelEntryData>();
 
-	// Token: 0x0400383F RID: 14399
+	// Token: 0x040038D8 RID: 14552
 	public int CurrentSelectLevelPlayId;
 
-	// Token: 0x04003840 RID: 14400
+	// Token: 0x040038D9 RID: 14553
 	public long UnlockTime;
 }

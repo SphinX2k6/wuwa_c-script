@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007421 RID: 29729
+	// Token: 0x02007C14 RID: 31764
 	public struct ITowerDungeonPrefabConfig : IFlatbufferObject
 	{
-		// Token: 0x1700E1B8 RID: 57784
-		// (get) Token: 0x06036007 RID: 221191 RVA: 0x007589B0 File Offset: 0x00756BB0
+		// Token: 0x1700EDD5 RID: 60885
+		// (get) Token: 0x060393F0 RID: 234480 RVA: 0x007BB6DC File Offset: 0x007B98DC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036008 RID: 221192 RVA: 0x007589BD File Offset: 0x00756BBD
+		// Token: 0x060393F1 RID: 234481 RVA: 0x007BB6E9 File Offset: 0x007B98E9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036009 RID: 221193 RVA: 0x007589C4 File Offset: 0x00756BC4
+		// Token: 0x060393F2 RID: 234482 RVA: 0x007BB6F0 File Offset: 0x007B98F0
 		public static ITowerDungeonPrefabConfig GetRootAsITowerDungeonPrefabConfig(ByteBuffer _bb)
 		{
 			return ITowerDungeonPrefabConfig.GetRootAsITowerDungeonPrefabConfig(_bb, default(ITowerDungeonPrefabConfig));
 		}
 
-		// Token: 0x0603600A RID: 221194 RVA: 0x007589E0 File Offset: 0x00756BE0
+		// Token: 0x060393F3 RID: 234483 RVA: 0x007BB70C File Offset: 0x007B990C
 		public static ITowerDungeonPrefabConfig GetRootAsITowerDungeonPrefabConfig(ByteBuffer _bb, ITowerDungeonPrefabConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603600B RID: 221195 RVA: 0x007589FD File Offset: 0x00756BFD
+		// Token: 0x060393F4 RID: 234484 RVA: 0x007BB729 File Offset: 0x007B9929
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603600C RID: 221196 RVA: 0x00758A0C File Offset: 0x00756C0C
+		// Token: 0x060393F5 RID: 234485 RVA: 0x007BB738 File Offset: 0x007B9938
 		public ITowerDungeonPrefabConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E1B9 RID: 57785
-		// (get) Token: 0x0603600D RID: 221197 RVA: 0x00758A1C File Offset: 0x00756C1C
+		// Token: 0x1700EDD6 RID: 60886
+		// (get) Token: 0x060393F6 RID: 234486 RVA: 0x007BB748 File Offset: 0x007B9948
 		public ECreatePrefabType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E1BA RID: 57786
-		// (get) Token: 0x0603600E RID: 221198 RVA: 0x00758A58 File Offset: 0x00756C58
+		// Token: 0x1700EDD7 RID: 60887
+		// (get) Token: 0x060393F7 RID: 234487 RVA: 0x007BB784 File Offset: 0x007B9984
 		public int Index
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603600F RID: 221199 RVA: 0x00758A94 File Offset: 0x00756C94
+		// Token: 0x060393F8 RID: 234488 RVA: 0x007BB7C0 File Offset: 0x007B99C0
 		public static Offset<ITowerDungeonPrefabConfig> CreateITowerDungeonPrefabConfig(FlatBufferBuilder builder, ECreatePrefabType Type = ECreatePrefabType.PrefabId, int Index = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITowerDungeonPrefabConfig.EndITowerDungeonPrefabConfig(builder);
 		}
 
-		// Token: 0x06036010 RID: 221200 RVA: 0x00758AB1 File Offset: 0x00756CB1
+		// Token: 0x060393F9 RID: 234489 RVA: 0x007BB7DD File Offset: 0x007B99DD
 		public static void StartITowerDungeonPrefabConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06036011 RID: 221201 RVA: 0x00758ABA File Offset: 0x00756CBA
+		// Token: 0x060393FA RID: 234490 RVA: 0x007BB7E6 File Offset: 0x007B99E6
 		public static void AddType(FlatBufferBuilder builder, ECreatePrefabType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036012 RID: 221202 RVA: 0x00758AC5 File Offset: 0x00756CC5
+		// Token: 0x060393FB RID: 234491 RVA: 0x007BB7F1 File Offset: 0x007B99F1
 		public static void AddIndex(FlatBufferBuilder builder, int index)
 		{
 			builder.AddInt(1, index, 0);
 		}
 
-		// Token: 0x06036013 RID: 221203 RVA: 0x00758AD0 File Offset: 0x00756CD0
+		// Token: 0x060393FC RID: 234492 RVA: 0x007BB7FC File Offset: 0x007B99FC
 		public static Offset<ITowerDungeonPrefabConfig> EndITowerDungeonPrefabConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ITowerDungeonPrefabConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06036014 RID: 221204 RVA: 0x00758AE0 File Offset: 0x00756CE0
+		// Token: 0x060393FD RID: 234493 RVA: 0x007BB80C File Offset: 0x007B9A0C
 		public ITowerDungeonPrefabConfigT UnPack()
 		{
 			ITowerDungeonPrefabConfigT towerDungeonPrefabConfigT = new ITowerDungeonPrefabConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return towerDungeonPrefabConfigT;
 		}
 
-		// Token: 0x06036015 RID: 221205 RVA: 0x00758AFB File Offset: 0x00756CFB
+		// Token: 0x060393FE RID: 234494 RVA: 0x007BB827 File Offset: 0x007B9A27
 		public void UnPackTo(ITowerDungeonPrefabConfigT _o)
 		{
 			_o.Type = this.Type;
 			_o.Index = this.Index;
 		}
 
-		// Token: 0x06036016 RID: 221206 RVA: 0x00758B18 File Offset: 0x00756D18
+		// Token: 0x060393FF RID: 234495 RVA: 0x007BB844 File Offset: 0x007B9A44
 		public static Offset<ITowerDungeonPrefabConfig> Pack(FlatBufferBuilder builder, ITowerDungeonPrefabConfigT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITowerDungeonPrefabConfig.CreateITowerDungeonPrefabConfig(builder, _o.Type, _o.Index);
 		}
 
-		// Token: 0x04012296 RID: 74390
+		// Token: 0x040132BD RID: 78525
 		private Table __p;
 	}
 }

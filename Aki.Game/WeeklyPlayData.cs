@@ -1,21 +1,21 @@
 ﻿using System;
 using Aki.Protocol;
 
-// Token: 0x02002D2E RID: 11566
+// Token: 0x02002288 RID: 8840
 public class WeeklyPlayData
 {
-	// Token: 0x170020C6 RID: 8390
-	// (get) Token: 0x060184FE RID: 99582 RVA: 0x006304CE File Offset: 0x0062E6CE
-	// (set) Token: 0x060184FF RID: 99583 RVA: 0x006304D6 File Offset: 0x0062E6D6
+	// Token: 0x17002121 RID: 8481
+	// (get) Token: 0x06015DA0 RID: 89504 RVA: 0x006564E2 File Offset: 0x006546E2
+	// (set) Token: 0x06015DA1 RID: 89505 RVA: 0x006564EA File Offset: 0x006546EA
 	public int PlayId { get; set; }
 
-	// Token: 0x170020C7 RID: 8391
-	// (get) Token: 0x06018500 RID: 99584 RVA: 0x006304DF File Offset: 0x0062E6DF
-	// (set) Token: 0x06018501 RID: 99585 RVA: 0x006304E7 File Offset: 0x0062E6E7
+	// Token: 0x17002122 RID: 8482
+	// (get) Token: 0x06015DA2 RID: 89506 RVA: 0x006564F3 File Offset: 0x006546F3
+	// (set) Token: 0x06015DA3 RID: 89507 RVA: 0x006564FB File Offset: 0x006546FB
 	public ActivityType Type { get; set; }
 
-	// Token: 0x170020C8 RID: 8392
-	// (get) Token: 0x06018502 RID: 99586 RVA: 0x006304F0 File Offset: 0x0062E6F0
-	// (set) Token: 0x06018503 RID: 99587 RVA: 0x006304F8 File Offset: 0x0062E6F8
+	// Token: 0x17002123 RID: 8483
+	// (get) Token: 0x06015DA4 RID: 89508 RVA: 0x00656504 File Offset: 0x00654704
+	// (set) Token: 0x06015DA5 RID: 89509 RVA: 0x0065650C File Offset: 0x0065470C
 	public bool HasRecord { get; set; }
 }

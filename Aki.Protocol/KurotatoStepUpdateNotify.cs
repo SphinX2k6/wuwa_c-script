@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020008D1 RID: 2257
+	// Token: 0x020008C0 RID: 2240
 	[NetMessage(EMessageId.KurotatoStepUpdateNotify)]
 	public sealed class KurotatoStepUpdateNotify : IMessage<KurotatoStepUpdateNotify>, IMessage, IEquatable<KurotatoStepUpdateNotify>, IDeepCloneable<KurotatoStepUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x0600C7F2 RID: 51186 RVA: 0x001D8EF5 File Offset: 0x001D70F5
+		// Token: 0x0600C6D6 RID: 50902 RVA: 0x001D6C11 File Offset: 0x001D4E11
 		[NullableContext(1)]
 		public static KurotatoStepUpdateNotify Create()
 		{
 			return new KurotatoStepUpdateNotify();
 		}
 
-		// Token: 0x17002866 RID: 10342
-		// (get) Token: 0x0600C7F3 RID: 51187 RVA: 0x001D8EFC File Offset: 0x001D70FC
+		// Token: 0x17002827 RID: 10279
+		// (get) Token: 0x0600C6D7 RID: 50903 RVA: 0x001D6C18 File Offset: 0x001D4E18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002867 RID: 10343
-		// (get) Token: 0x0600C7F4 RID: 51188 RVA: 0x001D8EFF File Offset: 0x001D70FF
+		// Token: 0x17002828 RID: 10280
+		// (get) Token: 0x0600C6D8 RID: 50904 RVA: 0x001D6C1B File Offset: 0x001D4E1B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,47 +42,52 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C7F5 RID: 51189 RVA: 0x001D8F06 File Offset: 0x001D7106
+		// Token: 0x0600C6D9 RID: 50905 RVA: 0x001D6C22 File Offset: 0x001D4E22
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoStepUpdateNotify()
 		{
 		}
 
-		// Token: 0x0600C7F6 RID: 51190 RVA: 0x001D8F10 File Offset: 0x001D7110
+		// Token: 0x0600C6DA RID: 50906 RVA: 0x001D6C2C File Offset: 0x001D4E2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoStepUpdateNotify(KurotatoStepUpdateNotify other) : this()
 		{
 			this.isStart_ = other.isStart_;
-			switch (other.StepPbDataCase)
+			KurotatoStepUpdateNotify.StepPbDataOneofCase stepPbDataCase = other.StepPbDataCase;
+			if (stepPbDataCase != KurotatoStepUpdateNotify.StepPbDataOneofCase.ChestRewardStepPbData)
 			{
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.UpdateWavePbData:
-				this.UpdateWavePbData = other.UpdateWavePbData.Clone();
-				break;
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.ShopStepPbData:
-				this.ShopStepPbData = other.ShopStepPbData.Clone();
-				break;
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.ChestRewardStepPbData:
+				switch (stepPbDataCase)
+				{
+				case KurotatoStepUpdateNotify.StepPbDataOneofCase.ShopStepPbData:
+					this.ShopStepPbData = other.ShopStepPbData.Clone();
+					break;
+				case KurotatoStepUpdateNotify.StepPbDataOneofCase.UpdateWavePbData:
+					this.UpdateWavePbData = other.UpdateWavePbData.Clone();
+					break;
+				case KurotatoStepUpdateNotify.StepPbDataOneofCase.EndStepPbData:
+					this.EndStepPbData = other.EndStepPbData.Clone();
+					break;
+				case KurotatoStepUpdateNotify.StepPbDataOneofCase.PrepareStepPbData:
+					this.PrepareStepPbData = other.PrepareStepPbData.Clone();
+					break;
+				case KurotatoStepUpdateNotify.StepPbDataOneofCase.UpgradeRewardStepPbData:
+					this.UpgradeRewardStepPbData = other.UpgradeRewardStepPbData.Clone();
+					break;
+				case KurotatoStepUpdateNotify.StepPbDataOneofCase.CombatStepPbData:
+					this.CombatStepPbData = other.CombatStepPbData.Clone();
+					break;
+				}
+			}
+			else
+			{
 				this.ChestRewardStepPbData = other.ChestRewardStepPbData.Clone();
-				break;
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.CombatStepPbData:
-				this.CombatStepPbData = other.CombatStepPbData.Clone();
-				break;
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.EndStepPbData:
-				this.EndStepPbData = other.EndStepPbData.Clone();
-				break;
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.UpgradeRewardStepPbData:
-				this.UpgradeRewardStepPbData = other.UpgradeRewardStepPbData.Clone();
-				break;
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.PrepareStepPbData:
-				this.PrepareStepPbData = other.PrepareStepPbData.Clone();
-				break;
 			}
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600C7F7 RID: 51191 RVA: 0x001D900B File Offset: 0x001D720B
+		// Token: 0x0600C6DB RID: 50907 RVA: 0x001D6D23 File Offset: 0x001D4F23
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoStepUpdateNotify Clone()
@@ -90,9 +95,9 @@ namespace Aki.Protocol
 			return new KurotatoStepUpdateNotify(this);
 		}
 
-		// Token: 0x17002868 RID: 10344
-		// (get) Token: 0x0600C7F8 RID: 51192 RVA: 0x001D9013 File Offset: 0x001D7213
-		// (set) Token: 0x0600C7F9 RID: 51193 RVA: 0x001D901B File Offset: 0x001D721B
+		// Token: 0x17002829 RID: 10281
+		// (get) Token: 0x0600C6DC RID: 50908 RVA: 0x001D6D2B File Offset: 0x001D4F2B
+		// (set) Token: 0x0600C6DD RID: 50909 RVA: 0x001D6D33 File Offset: 0x001D4F33
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsStart
@@ -107,9 +112,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002869 RID: 10345
-		// (get) Token: 0x0600C7FA RID: 51194 RVA: 0x001D9024 File Offset: 0x001D7224
-		// (set) Token: 0x0600C7FB RID: 51195 RVA: 0x001D903C File Offset: 0x001D723C
+		// Token: 0x1700282A RID: 10282
+		// (get) Token: 0x0600C6DE RID: 50910 RVA: 0x001D6D3C File Offset: 0x001D4F3C
+		// (set) Token: 0x0600C6DF RID: 50911 RVA: 0x001D6D55 File Offset: 0x001D4F55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoCombatStepPbData CombatStepPbData
@@ -129,9 +134,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700286A RID: 10346
-		// (get) Token: 0x0600C7FC RID: 51196 RVA: 0x001D9052 File Offset: 0x001D7252
-		// (set) Token: 0x0600C7FD RID: 51197 RVA: 0x001D906A File Offset: 0x001D726A
+		// Token: 0x1700282B RID: 10283
+		// (get) Token: 0x0600C6E0 RID: 50912 RVA: 0x001D6D6C File Offset: 0x001D4F6C
+		// (set) Token: 0x0600C6E1 RID: 50913 RVA: 0x001D6D84 File Offset: 0x001D4F84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoChestRewardStepPbData ChestRewardStepPbData
@@ -151,9 +156,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700286B RID: 10347
-		// (get) Token: 0x0600C7FE RID: 51198 RVA: 0x001D9080 File Offset: 0x001D7280
-		// (set) Token: 0x0600C7FF RID: 51199 RVA: 0x001D9098 File Offset: 0x001D7298
+		// Token: 0x1700282C RID: 10284
+		// (get) Token: 0x0600C6E2 RID: 50914 RVA: 0x001D6D9A File Offset: 0x001D4F9A
+		// (set) Token: 0x0600C6E3 RID: 50915 RVA: 0x001D6DB2 File Offset: 0x001D4FB2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoShopStepPbData ShopStepPbData
@@ -173,9 +178,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700286C RID: 10348
-		// (get) Token: 0x0600C800 RID: 51200 RVA: 0x001D90AE File Offset: 0x001D72AE
-		// (set) Token: 0x0600C801 RID: 51201 RVA: 0x001D90C6 File Offset: 0x001D72C6
+		// Token: 0x1700282D RID: 10285
+		// (get) Token: 0x0600C6E4 RID: 50916 RVA: 0x001D6DC8 File Offset: 0x001D4FC8
+		// (set) Token: 0x0600C6E5 RID: 50917 RVA: 0x001D6DE0 File Offset: 0x001D4FE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoUpdateWavePbData UpdateWavePbData
@@ -195,9 +200,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700286D RID: 10349
-		// (get) Token: 0x0600C802 RID: 51202 RVA: 0x001D90DC File Offset: 0x001D72DC
-		// (set) Token: 0x0600C803 RID: 51203 RVA: 0x001D90F5 File Offset: 0x001D72F5
+		// Token: 0x1700282E RID: 10286
+		// (get) Token: 0x0600C6E6 RID: 50918 RVA: 0x001D6DF6 File Offset: 0x001D4FF6
+		// (set) Token: 0x0600C6E7 RID: 50919 RVA: 0x001D6E0F File Offset: 0x001D500F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoUpgradeRewardStepPbData UpgradeRewardStepPbData
@@ -217,9 +222,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700286E RID: 10350
-		// (get) Token: 0x0600C804 RID: 51204 RVA: 0x001D910C File Offset: 0x001D730C
-		// (set) Token: 0x0600C805 RID: 51205 RVA: 0x001D9125 File Offset: 0x001D7325
+		// Token: 0x1700282F RID: 10287
+		// (get) Token: 0x0600C6E8 RID: 50920 RVA: 0x001D6E26 File Offset: 0x001D5026
+		// (set) Token: 0x0600C6E9 RID: 50921 RVA: 0x001D6E3F File Offset: 0x001D503F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoPrepareStepPbData PrepareStepPbData
@@ -239,9 +244,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700286F RID: 10351
-		// (get) Token: 0x0600C806 RID: 51206 RVA: 0x001D913C File Offset: 0x001D733C
-		// (set) Token: 0x0600C807 RID: 51207 RVA: 0x001D9155 File Offset: 0x001D7355
+		// Token: 0x17002830 RID: 10288
+		// (get) Token: 0x0600C6EA RID: 50922 RVA: 0x001D6E56 File Offset: 0x001D5056
+		// (set) Token: 0x0600C6EB RID: 50923 RVA: 0x001D6E6F File Offset: 0x001D506F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoEndStepPbData EndStepPbData
@@ -261,8 +266,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002870 RID: 10352
-		// (get) Token: 0x0600C808 RID: 51208 RVA: 0x001D916C File Offset: 0x001D736C
+		// Token: 0x17002831 RID: 10289
+		// (get) Token: 0x0600C6EC RID: 50924 RVA: 0x001D6E86 File Offset: 0x001D5086
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoStepUpdateNotify.StepPbDataOneofCase StepPbDataCase
@@ -273,7 +278,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C809 RID: 51209 RVA: 0x001D9174 File Offset: 0x001D7374
+		// Token: 0x0600C6ED RID: 50925 RVA: 0x001D6E8E File Offset: 0x001D508E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearStepPbData()
@@ -282,7 +287,7 @@ namespace Aki.Protocol
 			this.stepPbData_ = null;
 		}
 
-		// Token: 0x0600C80A RID: 51210 RVA: 0x001D9184 File Offset: 0x001D7384
+		// Token: 0x0600C6EE RID: 50926 RVA: 0x001D6E9E File Offset: 0x001D509E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -290,7 +295,7 @@ namespace Aki.Protocol
 			return this.Equals(other as KurotatoStepUpdateNotify);
 		}
 
-		// Token: 0x0600C80B RID: 51211 RVA: 0x001D9194 File Offset: 0x001D7394
+		// Token: 0x0600C6EF RID: 50927 RVA: 0x001D6EAC File Offset: 0x001D50AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(KurotatoStepUpdateNotify other)
@@ -298,7 +303,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.IsStart == other.IsStart && object.Equals(this.CombatStepPbData, other.CombatStepPbData) && object.Equals(this.ChestRewardStepPbData, other.ChestRewardStepPbData) && object.Equals(this.ShopStepPbData, other.ShopStepPbData) && object.Equals(this.UpdateWavePbData, other.UpdateWavePbData) && object.Equals(this.UpgradeRewardStepPbData, other.UpgradeRewardStepPbData) && object.Equals(this.PrepareStepPbData, other.PrepareStepPbData) && object.Equals(this.EndStepPbData, other.EndStepPbData) && this.StepPbDataCase == other.StepPbDataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600C80C RID: 51212 RVA: 0x001D9270 File Offset: 0x001D7470
+		// Token: 0x0600C6F0 RID: 50928 RVA: 0x001D6F88 File Offset: 0x001D5188
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -344,7 +349,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C80D RID: 51213 RVA: 0x001D935C File Offset: 0x001D755C
+		// Token: 0x0600C6F1 RID: 50929 RVA: 0x001D7075 File Offset: 0x001D5275
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -352,7 +357,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600C80E RID: 51214 RVA: 0x001D9369 File Offset: 0x001D7569
+		// Token: 0x0600C6F2 RID: 50930 RVA: 0x001D7082 File Offset: 0x001D5282
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -360,50 +365,50 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600C80F RID: 51215 RVA: 0x001D9374 File Offset: 0x001D7574
+		// Token: 0x0600C6F3 RID: 50931 RVA: 0x001D708C File Offset: 0x001D528C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.UpdateWavePbData)
+			if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.ChestRewardStepPbData)
 			{
 				output.WriteRawTag(10);
-				output.WriteMessage(this.UpdateWavePbData);
+				output.WriteMessage(this.ChestRewardStepPbData);
 			}
 			if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.ShopStepPbData)
 			{
-				output.WriteRawTag(26);
+				output.WriteRawTag(42);
 				output.WriteMessage(this.ShopStepPbData);
 			}
-			if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.ChestRewardStepPbData)
-			{
-				output.WriteRawTag(34);
-				output.WriteMessage(this.ChestRewardStepPbData);
-			}
-			if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.CombatStepPbData)
+			if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.UpdateWavePbData)
 			{
 				output.WriteRawTag(58);
-				output.WriteMessage(this.CombatStepPbData);
+				output.WriteMessage(this.UpdateWavePbData);
 			}
 			if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.EndStepPbData)
 			{
-				output.WriteRawTag(82);
+				output.WriteRawTag(74);
 				output.WriteMessage(this.EndStepPbData);
-			}
-			if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.UpgradeRewardStepPbData)
-			{
-				output.WriteRawTag(90);
-				output.WriteMessage(this.UpgradeRewardStepPbData);
-			}
-			if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.PrepareStepPbData)
-			{
-				output.WriteRawTag(106);
-				output.WriteMessage(this.PrepareStepPbData);
 			}
 			if (this.IsStart)
 			{
-				output.WriteRawTag(112);
+				output.WriteRawTag(80);
 				output.WriteBool(this.IsStart);
+			}
+			if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.PrepareStepPbData)
+			{
+				output.WriteRawTag(90);
+				output.WriteMessage(this.PrepareStepPbData);
+			}
+			if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.UpgradeRewardStepPbData)
+			{
+				output.WriteRawTag(114);
+				output.WriteMessage(this.UpgradeRewardStepPbData);
+			}
+			if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.CombatStepPbData)
+			{
+				output.WriteRawTag(122);
+				output.WriteMessage(this.CombatStepPbData);
 			}
 			if (this._unknownFields != null)
 			{
@@ -411,7 +416,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C810 RID: 51216 RVA: 0x001D9480 File Offset: 0x001D7680
+		// Token: 0x0600C6F4 RID: 50932 RVA: 0x001D7198 File Offset: 0x001D5398
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -456,7 +461,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C811 RID: 51217 RVA: 0x001D9564 File Offset: 0x001D7764
+		// Token: 0x0600C6F5 RID: 50933 RVA: 0x001D7280 File Offset: 0x001D5480
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(KurotatoStepUpdateNotify other)
@@ -469,62 +474,67 @@ namespace Aki.Protocol
 			{
 				this.IsStart = other.IsStart;
 			}
-			switch (other.StepPbDataCase)
+			KurotatoStepUpdateNotify.StepPbDataOneofCase stepPbDataCase = other.StepPbDataCase;
+			if (stepPbDataCase != KurotatoStepUpdateNotify.StepPbDataOneofCase.ChestRewardStepPbData)
 			{
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.UpdateWavePbData:
-				if (this.UpdateWavePbData == null)
+				switch (stepPbDataCase)
 				{
-					this.UpdateWavePbData = new KurotatoUpdateWavePbData();
+				case KurotatoStepUpdateNotify.StepPbDataOneofCase.ShopStepPbData:
+					if (this.ShopStepPbData == null)
+					{
+						this.ShopStepPbData = new KurotatoShopStepPbData();
+					}
+					this.ShopStepPbData.MergeFrom(other.ShopStepPbData);
+					break;
+				case KurotatoStepUpdateNotify.StepPbDataOneofCase.UpdateWavePbData:
+					if (this.UpdateWavePbData == null)
+					{
+						this.UpdateWavePbData = new KurotatoUpdateWavePbData();
+					}
+					this.UpdateWavePbData.MergeFrom(other.UpdateWavePbData);
+					break;
+				case KurotatoStepUpdateNotify.StepPbDataOneofCase.EndStepPbData:
+					if (this.EndStepPbData == null)
+					{
+						this.EndStepPbData = new KurotatoEndStepPbData();
+					}
+					this.EndStepPbData.MergeFrom(other.EndStepPbData);
+					break;
+				case KurotatoStepUpdateNotify.StepPbDataOneofCase.PrepareStepPbData:
+					if (this.PrepareStepPbData == null)
+					{
+						this.PrepareStepPbData = new KurotatoPrepareStepPbData();
+					}
+					this.PrepareStepPbData.MergeFrom(other.PrepareStepPbData);
+					break;
+				case KurotatoStepUpdateNotify.StepPbDataOneofCase.UpgradeRewardStepPbData:
+					if (this.UpgradeRewardStepPbData == null)
+					{
+						this.UpgradeRewardStepPbData = new KurotatoUpgradeRewardStepPbData();
+					}
+					this.UpgradeRewardStepPbData.MergeFrom(other.UpgradeRewardStepPbData);
+					break;
+				case KurotatoStepUpdateNotify.StepPbDataOneofCase.CombatStepPbData:
+					if (this.CombatStepPbData == null)
+					{
+						this.CombatStepPbData = new KurotatoCombatStepPbData();
+					}
+					this.CombatStepPbData.MergeFrom(other.CombatStepPbData);
+					break;
 				}
-				this.UpdateWavePbData.MergeFrom(other.UpdateWavePbData);
-				break;
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.ShopStepPbData:
-				if (this.ShopStepPbData == null)
-				{
-					this.ShopStepPbData = new KurotatoShopStepPbData();
-				}
-				this.ShopStepPbData.MergeFrom(other.ShopStepPbData);
-				break;
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.ChestRewardStepPbData:
+			}
+			else
+			{
 				if (this.ChestRewardStepPbData == null)
 				{
 					this.ChestRewardStepPbData = new KurotatoChestRewardStepPbData();
 				}
 				this.ChestRewardStepPbData.MergeFrom(other.ChestRewardStepPbData);
-				break;
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.CombatStepPbData:
-				if (this.CombatStepPbData == null)
-				{
-					this.CombatStepPbData = new KurotatoCombatStepPbData();
-				}
-				this.CombatStepPbData.MergeFrom(other.CombatStepPbData);
-				break;
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.EndStepPbData:
-				if (this.EndStepPbData == null)
-				{
-					this.EndStepPbData = new KurotatoEndStepPbData();
-				}
-				this.EndStepPbData.MergeFrom(other.EndStepPbData);
-				break;
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.UpgradeRewardStepPbData:
-				if (this.UpgradeRewardStepPbData == null)
-				{
-					this.UpgradeRewardStepPbData = new KurotatoUpgradeRewardStepPbData();
-				}
-				this.UpgradeRewardStepPbData.MergeFrom(other.UpgradeRewardStepPbData);
-				break;
-			case KurotatoStepUpdateNotify.StepPbDataOneofCase.PrepareStepPbData:
-				if (this.PrepareStepPbData == null)
-				{
-					this.PrepareStepPbData = new KurotatoPrepareStepPbData();
-				}
-				this.PrepareStepPbData.MergeFrom(other.PrepareStepPbData);
-				break;
 			}
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600C812 RID: 51218 RVA: 0x001D96F9 File Offset: 0x001D78F9
+		// Token: 0x0600C6F6 RID: 50934 RVA: 0x001D7411 File Offset: 0x001D5611
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -532,7 +542,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600C813 RID: 51219 RVA: 0x001D9704 File Offset: 0x001D7904
+		// Token: 0x0600C6F7 RID: 50935 RVA: 0x001D741C File Offset: 0x001D561C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -544,22 +554,22 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 58U)
+				if (num <= 74U)
 				{
-					if (num <= 26U)
+					if (num <= 42U)
 					{
 						if (num == 10U)
 						{
-							KurotatoUpdateWavePbData kurotatoUpdateWavePbData = new KurotatoUpdateWavePbData();
-							if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.UpdateWavePbData)
+							KurotatoChestRewardStepPbData kurotatoChestRewardStepPbData = new KurotatoChestRewardStepPbData();
+							if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.ChestRewardStepPbData)
 							{
-								kurotatoUpdateWavePbData.MergeFrom(this.UpdateWavePbData);
+								kurotatoChestRewardStepPbData.MergeFrom(this.ChestRewardStepPbData);
 							}
-							input.ReadMessage(kurotatoUpdateWavePbData);
-							this.UpdateWavePbData = kurotatoUpdateWavePbData;
+							input.ReadMessage(kurotatoChestRewardStepPbData);
+							this.ChestRewardStepPbData = kurotatoChestRewardStepPbData;
 							continue;
 						}
-						if (num == 26U)
+						if (num == 42U)
 						{
 							KurotatoShopStepPbData kurotatoShopStepPbData = new KurotatoShopStepPbData();
 							if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.ShopStepPbData)
@@ -573,58 +583,38 @@ namespace Aki.Protocol
 					}
 					else
 					{
-						if (num == 34U)
-						{
-							KurotatoChestRewardStepPbData kurotatoChestRewardStepPbData = new KurotatoChestRewardStepPbData();
-							if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.ChestRewardStepPbData)
-							{
-								kurotatoChestRewardStepPbData.MergeFrom(this.ChestRewardStepPbData);
-							}
-							input.ReadMessage(kurotatoChestRewardStepPbData);
-							this.ChestRewardStepPbData = kurotatoChestRewardStepPbData;
-							continue;
-						}
 						if (num == 58U)
 						{
-							KurotatoCombatStepPbData kurotatoCombatStepPbData = new KurotatoCombatStepPbData();
-							if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.CombatStepPbData)
+							KurotatoUpdateWavePbData kurotatoUpdateWavePbData = new KurotatoUpdateWavePbData();
+							if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.UpdateWavePbData)
 							{
-								kurotatoCombatStepPbData.MergeFrom(this.CombatStepPbData);
+								kurotatoUpdateWavePbData.MergeFrom(this.UpdateWavePbData);
 							}
-							input.ReadMessage(kurotatoCombatStepPbData);
-							this.CombatStepPbData = kurotatoCombatStepPbData;
+							input.ReadMessage(kurotatoUpdateWavePbData);
+							this.UpdateWavePbData = kurotatoUpdateWavePbData;
+							continue;
+						}
+						if (num == 74U)
+						{
+							KurotatoEndStepPbData kurotatoEndStepPbData = new KurotatoEndStepPbData();
+							if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.EndStepPbData)
+							{
+								kurotatoEndStepPbData.MergeFrom(this.EndStepPbData);
+							}
+							input.ReadMessage(kurotatoEndStepPbData);
+							this.EndStepPbData = kurotatoEndStepPbData;
 							continue;
 						}
 					}
 				}
 				else if (num <= 90U)
 				{
-					if (num == 82U)
+					if (num == 80U)
 					{
-						KurotatoEndStepPbData kurotatoEndStepPbData = new KurotatoEndStepPbData();
-						if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.EndStepPbData)
-						{
-							kurotatoEndStepPbData.MergeFrom(this.EndStepPbData);
-						}
-						input.ReadMessage(kurotatoEndStepPbData);
-						this.EndStepPbData = kurotatoEndStepPbData;
+						this.IsStart = input.ReadBool();
 						continue;
 					}
 					if (num == 90U)
-					{
-						KurotatoUpgradeRewardStepPbData kurotatoUpgradeRewardStepPbData = new KurotatoUpgradeRewardStepPbData();
-						if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.UpgradeRewardStepPbData)
-						{
-							kurotatoUpgradeRewardStepPbData.MergeFrom(this.UpgradeRewardStepPbData);
-						}
-						input.ReadMessage(kurotatoUpgradeRewardStepPbData);
-						this.UpgradeRewardStepPbData = kurotatoUpgradeRewardStepPbData;
-						continue;
-					}
-				}
-				else
-				{
-					if (num == 106U)
 					{
 						KurotatoPrepareStepPbData kurotatoPrepareStepPbData = new KurotatoPrepareStepPbData();
 						if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.PrepareStepPbData)
@@ -635,9 +625,29 @@ namespace Aki.Protocol
 						this.PrepareStepPbData = kurotatoPrepareStepPbData;
 						continue;
 					}
-					if (num == 112U)
+				}
+				else
+				{
+					if (num == 114U)
 					{
-						this.IsStart = input.ReadBool();
+						KurotatoUpgradeRewardStepPbData kurotatoUpgradeRewardStepPbData = new KurotatoUpgradeRewardStepPbData();
+						if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.UpgradeRewardStepPbData)
+						{
+							kurotatoUpgradeRewardStepPbData.MergeFrom(this.UpgradeRewardStepPbData);
+						}
+						input.ReadMessage(kurotatoUpgradeRewardStepPbData);
+						this.UpgradeRewardStepPbData = kurotatoUpgradeRewardStepPbData;
+						continue;
+					}
+					if (num == 122U)
+					{
+						KurotatoCombatStepPbData kurotatoCombatStepPbData = new KurotatoCombatStepPbData();
+						if (this.stepPbDataCase_ == KurotatoStepUpdateNotify.StepPbDataOneofCase.CombatStepPbData)
+						{
+							kurotatoCombatStepPbData.MergeFrom(this.CombatStepPbData);
+						}
+						input.ReadMessage(kurotatoCombatStepPbData);
+						this.CombatStepPbData = kurotatoCombatStepPbData;
 						continue;
 					}
 				}
@@ -645,61 +655,61 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005597 RID: 21911
+		// Token: 0x0400559E RID: 21918
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005598 RID: 21912
-		public const int IsStartFieldNumber = 14;
-
-		// Token: 0x04005599 RID: 21913
-		private bool isStart_;
-
-		// Token: 0x0400559A RID: 21914
-		public const int CombatStepPbDataFieldNumber = 7;
-
-		// Token: 0x0400559B RID: 21915
-		public const int ChestRewardStepPbDataFieldNumber = 4;
-
-		// Token: 0x0400559C RID: 21916
-		public const int ShopStepPbDataFieldNumber = 3;
-
-		// Token: 0x0400559D RID: 21917
-		public const int UpdateWavePbDataFieldNumber = 1;
-
-		// Token: 0x0400559E RID: 21918
-		public const int UpgradeRewardStepPbDataFieldNumber = 11;
-
 		// Token: 0x0400559F RID: 21919
-		public const int PrepareStepPbDataFieldNumber = 13;
+		public const int IsStartFieldNumber = 10;
 
 		// Token: 0x040055A0 RID: 21920
-		public const int EndStepPbDataFieldNumber = 10;
+		private bool isStart_;
 
 		// Token: 0x040055A1 RID: 21921
-		private object stepPbData_;
+		public const int CombatStepPbDataFieldNumber = 15;
 
 		// Token: 0x040055A2 RID: 21922
+		public const int ChestRewardStepPbDataFieldNumber = 1;
+
+		// Token: 0x040055A3 RID: 21923
+		public const int ShopStepPbDataFieldNumber = 5;
+
+		// Token: 0x040055A4 RID: 21924
+		public const int UpdateWavePbDataFieldNumber = 7;
+
+		// Token: 0x040055A5 RID: 21925
+		public const int UpgradeRewardStepPbDataFieldNumber = 14;
+
+		// Token: 0x040055A6 RID: 21926
+		public const int PrepareStepPbDataFieldNumber = 11;
+
+		// Token: 0x040055A7 RID: 21927
+		public const int EndStepPbDataFieldNumber = 9;
+
+		// Token: 0x040055A8 RID: 21928
+		private object stepPbData_;
+
+		// Token: 0x040055A9 RID: 21929
 		private KurotatoStepUpdateNotify.StepPbDataOneofCase stepPbDataCase_;
 
-		// Token: 0x02001815 RID: 6165
+		// Token: 0x0200188D RID: 6285
 		public enum StepPbDataOneofCase
 		{
-			// Token: 0x0400C7CB RID: 51147
+			// Token: 0x0400CCF6 RID: 52470
 			None,
-			// Token: 0x0400C7CC RID: 51148
-			CombatStepPbData = 7,
-			// Token: 0x0400C7CD RID: 51149
-			ChestRewardStepPbData = 4,
-			// Token: 0x0400C7CE RID: 51150
-			ShopStepPbData = 3,
-			// Token: 0x0400C7CF RID: 51151
-			UpdateWavePbData = 1,
-			// Token: 0x0400C7D0 RID: 51152
-			UpgradeRewardStepPbData = 11,
-			// Token: 0x0400C7D1 RID: 51153
-			PrepareStepPbData = 13,
-			// Token: 0x0400C7D2 RID: 51154
-			EndStepPbData = 10
+			// Token: 0x0400CCF7 RID: 52471
+			CombatStepPbData = 15,
+			// Token: 0x0400CCF8 RID: 52472
+			ChestRewardStepPbData = 1,
+			// Token: 0x0400CCF9 RID: 52473
+			ShopStepPbData = 5,
+			// Token: 0x0400CCFA RID: 52474
+			UpdateWavePbData = 7,
+			// Token: 0x0400CCFB RID: 52475
+			UpgradeRewardStepPbData = 14,
+			// Token: 0x0400CCFC RID: 52476
+			PrepareStepPbData = 11,
+			// Token: 0x0400CCFD RID: 52477
+			EndStepPbData = 9
 		}
 	}
 }

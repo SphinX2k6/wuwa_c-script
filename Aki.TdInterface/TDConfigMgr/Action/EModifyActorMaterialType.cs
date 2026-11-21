@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001615 RID: 5653
+	// Token: 0x02001781 RID: 6017
 	[EnumExtensions]
 	public enum EModifyActorMaterialType
 	{
-		// Token: 0x04004BE1 RID: 19425
+		// Token: 0x04004FCF RID: 20431
 		ChangeMaterialData,
-		// Token: 0x04004BE2 RID: 19426
+		// Token: 0x04004FD0 RID: 20432
 		ChangeMPC
 	}
 }

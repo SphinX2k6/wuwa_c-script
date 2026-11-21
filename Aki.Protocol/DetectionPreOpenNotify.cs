@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020003CD RID: 973
+	// Token: 0x020003B6 RID: 950
 	[NetMessage(EMessageId.DetectionPreOpenNotify)]
 	public sealed class DetectionPreOpenNotify : IMessage<DetectionPreOpenNotify>, IMessage, IEquatable<DetectionPreOpenNotify>, IDeepCloneable<DetectionPreOpenNotify>, IBufferMessage
 	{
-		// Token: 0x06005EE9 RID: 24297 RVA: 0x000E5B18 File Offset: 0x000E3D18
+		// Token: 0x06005D59 RID: 23897 RVA: 0x000E2994 File Offset: 0x000E0B94
 		[NullableContext(1)]
 		public static DetectionPreOpenNotify Create()
 		{
 			return new DetectionPreOpenNotify();
 		}
 
-		// Token: 0x170011A1 RID: 4513
-		// (get) Token: 0x06005EEA RID: 24298 RVA: 0x000E5B1F File Offset: 0x000E3D1F
+		// Token: 0x1700114C RID: 4428
+		// (get) Token: 0x06005D5A RID: 23898 RVA: 0x000E299B File Offset: 0x000E0B9B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170011A2 RID: 4514
-		// (get) Token: 0x06005EEB RID: 24299 RVA: 0x000E5B22 File Offset: 0x000E3D22
+		// Token: 0x1700114D RID: 4429
+		// (get) Token: 0x06005D5B RID: 23899 RVA: 0x000E299E File Offset: 0x000E0B9E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005EEC RID: 24300 RVA: 0x000E5B29 File Offset: 0x000E3D29
+		// Token: 0x06005D5C RID: 23900 RVA: 0x000E29A5 File Offset: 0x000E0BA5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DetectionPreOpenNotify()
 		{
 		}
 
-		// Token: 0x06005EED RID: 24301 RVA: 0x000E5B47 File Offset: 0x000E3D47
+		// Token: 0x06005D5D RID: 23901 RVA: 0x000E29C3 File Offset: 0x000E0BC3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DetectionPreOpenNotify(DetectionPreOpenNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06005EEE RID: 24302 RVA: 0x000E5B82 File Offset: 0x000E3D82
+		// Token: 0x06005D5E RID: 23902 RVA: 0x000E29FE File Offset: 0x000E0BFE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DetectionPreOpenNotify Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 			return new DetectionPreOpenNotify(this);
 		}
 
-		// Token: 0x170011A3 RID: 4515
-		// (get) Token: 0x06005EEF RID: 24303 RVA: 0x000E5B8A File Offset: 0x000E3D8A
+		// Token: 0x1700114E RID: 4430
+		// (get) Token: 0x06005D5F RID: 23903 RVA: 0x000E2A06 File Offset: 0x000E0C06
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PreOpenDetections> PreOpenDungeonDetections
@@ -80,8 +80,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170011A4 RID: 4516
-		// (get) Token: 0x06005EF0 RID: 24304 RVA: 0x000E5B92 File Offset: 0x000E3D92
+		// Token: 0x1700114F RID: 4431
+		// (get) Token: 0x06005D60 RID: 23904 RVA: 0x000E2A0E File Offset: 0x000E0C0E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PreOpenDetections> PreOpenSilenceAreaDetections
@@ -92,7 +92,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005EF1 RID: 24305 RVA: 0x000E5B9A File Offset: 0x000E3D9A
+		// Token: 0x06005D61 RID: 23905 RVA: 0x000E2A16 File Offset: 0x000E0C16
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -100,7 +100,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DetectionPreOpenNotify);
 		}
 
-		// Token: 0x06005EF2 RID: 24306 RVA: 0x000E5BA8 File Offset: 0x000E3DA8
+		// Token: 0x06005D62 RID: 23906 RVA: 0x000E2A24 File Offset: 0x000E0C24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DetectionPreOpenNotify other)
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.preOpenDungeonDetections_.Equals(other.preOpenDungeonDetections_) && this.preOpenSilenceAreaDetections_.Equals(other.preOpenSilenceAreaDetections_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06005EF3 RID: 24307 RVA: 0x000E5BFC File Offset: 0x000E3DFC
+		// Token: 0x06005D63 RID: 23907 RVA: 0x000E2A78 File Offset: 0x000E0C78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005EF4 RID: 24308 RVA: 0x000E5C3E File Offset: 0x000E3E3E
+		// Token: 0x06005D64 RID: 23908 RVA: 0x000E2ABA File Offset: 0x000E0CBA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06005EF5 RID: 24309 RVA: 0x000E5C4B File Offset: 0x000E3E4B
+		// Token: 0x06005D65 RID: 23909 RVA: 0x000E2AC7 File Offset: 0x000E0CC7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -139,20 +139,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06005EF6 RID: 24310 RVA: 0x000E5C54 File Offset: 0x000E3E54
+		// Token: 0x06005D66 RID: 23910 RVA: 0x000E2AD0 File Offset: 0x000E0CD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.preOpenDungeonDetections_.WriteTo(ref output, DetectionPreOpenNotify._repeated_preOpenDungeonDetections_codec);
 			this.preOpenSilenceAreaDetections_.WriteTo(ref output, DetectionPreOpenNotify._repeated_preOpenSilenceAreaDetections_codec);
+			this.preOpenDungeonDetections_.WriteTo(ref output, DetectionPreOpenNotify._repeated_preOpenDungeonDetections_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06005EF7 RID: 24311 RVA: 0x000E5C8C File Offset: 0x000E3E8C
+		// Token: 0x06005D67 RID: 23911 RVA: 0x000E2B08 File Offset: 0x000E0D08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005EF8 RID: 24312 RVA: 0x000E5CD8 File Offset: 0x000E3ED8
+		// Token: 0x06005D68 RID: 23912 RVA: 0x000E2B54 File Offset: 0x000E0D54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DetectionPreOpenNotify other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06005EF9 RID: 24313 RVA: 0x000E5D17 File Offset: 0x000E3F17
+		// Token: 0x06005D69 RID: 23913 RVA: 0x000E2B93 File Offset: 0x000E0D93
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06005EFA RID: 24314 RVA: 0x000E5D20 File Offset: 0x000E3F20
+		// Token: 0x06005D6A RID: 23914 RVA: 0x000E2B9C File Offset: 0x000E0D9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -203,41 +203,41 @@ namespace Aki.Protocol
 				}
 				if (num != 74U)
 				{
-					if (num != 114U)
+					if (num != 122U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.preOpenSilenceAreaDetections_.AddEntriesFrom(ref input, DetectionPreOpenNotify._repeated_preOpenSilenceAreaDetections_codec);
+						this.preOpenDungeonDetections_.AddEntriesFrom(ref input, DetectionPreOpenNotify._repeated_preOpenDungeonDetections_codec);
 					}
 				}
 				else
 				{
-					this.preOpenDungeonDetections_.AddEntriesFrom(ref input, DetectionPreOpenNotify._repeated_preOpenDungeonDetections_codec);
+					this.preOpenSilenceAreaDetections_.AddEntriesFrom(ref input, DetectionPreOpenNotify._repeated_preOpenSilenceAreaDetections_codec);
 				}
 			}
 		}
 
-		// Token: 0x040036E6 RID: 14054
+		// Token: 0x040036D3 RID: 14035
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040036E7 RID: 14055
-		public const int PreOpenDungeonDetectionsFieldNumber = 9;
+		// Token: 0x040036D4 RID: 14036
+		public const int PreOpenDungeonDetectionsFieldNumber = 15;
 
-		// Token: 0x040036E8 RID: 14056
-		private static readonly FieldCodec<PreOpenDetections> _repeated_preOpenDungeonDetections_codec = FieldCodec.ForMessage<PreOpenDetections>(74U, PreOpenDetections.Parser);
+		// Token: 0x040036D5 RID: 14037
+		private static readonly FieldCodec<PreOpenDetections> _repeated_preOpenDungeonDetections_codec = FieldCodec.ForMessage<PreOpenDetections>(122U, PreOpenDetections.Parser);
 
-		// Token: 0x040036E9 RID: 14057
+		// Token: 0x040036D6 RID: 14038
 		private readonly RepeatedField<PreOpenDetections> preOpenDungeonDetections_ = new RepeatedField<PreOpenDetections>();
 
-		// Token: 0x040036EA RID: 14058
-		public const int PreOpenSilenceAreaDetectionsFieldNumber = 14;
+		// Token: 0x040036D7 RID: 14039
+		public const int PreOpenSilenceAreaDetectionsFieldNumber = 9;
 
-		// Token: 0x040036EB RID: 14059
-		private static readonly FieldCodec<PreOpenDetections> _repeated_preOpenSilenceAreaDetections_codec = FieldCodec.ForMessage<PreOpenDetections>(114U, PreOpenDetections.Parser);
+		// Token: 0x040036D8 RID: 14040
+		private static readonly FieldCodec<PreOpenDetections> _repeated_preOpenSilenceAreaDetections_codec = FieldCodec.ForMessage<PreOpenDetections>(74U, PreOpenDetections.Parser);
 
-		// Token: 0x040036EC RID: 14060
+		// Token: 0x040036D9 RID: 14041
 		private readonly RepeatedField<PreOpenDetections> preOpenSilenceAreaDetections_ = new RepeatedField<PreOpenDetections>();
 	}
 }

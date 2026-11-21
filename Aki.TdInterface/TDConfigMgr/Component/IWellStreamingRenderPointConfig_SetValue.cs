@@ -3,25 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007E2 RID: 2018
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000885 RID: 2181
 	public class IWellStreamingRenderPointConfig_SetValue
 	{
-		// Token: 0x04001D17 RID: 7447
+		// Token: 0x04001F23 RID: 7971
 		public IPortalRenderConfig TargetConfig;
 
-		// Token: 0x04001D18 RID: 7448
+		// Token: 0x04001F24 RID: 7972
 		public IRtSize RtSize;
 
-		// Token: 0x04001D19 RID: 7449
+		// Token: 0x04001F25 RID: 7973
 		public bool? IsRenderStreamingPointEntity;
 
-		// Token: 0x04001D1A RID: 7450
+		// Token: 0x04001F26 RID: 7974
 		[Nullable(2)]
 		public string RtRenderRefPosActorKey;
 
-		// Token: 0x04001D1B RID: 7451
+		// Token: 0x04001F27 RID: 7975
 		public string FallbackCubeMapTexturePath;
 	}
 }

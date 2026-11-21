@@ -7,27 +7,27 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.World.Controller
 {
-	// Token: 0x0200453C RID: 17724
+	// Token: 0x02003464 RID: 13412
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ServerGmController : ControllerBase
 	{
-		// Token: 0x0602DCE1 RID: 187617 RVA: 0x00A86A5A File Offset: 0x00A84C5A
+		// Token: 0x060223C3 RID: 140227 RVA: 0x009B2282 File Offset: 0x009B0482
 		protected override bool OnInit()
 		{
 			Net.Instance.Register(ENotifyMessageId.ServerCommandNotify, new Action<IMessage, Net.CallbackStatus>(this.OnServerCommandNotify));
 			return true;
 		}
 
-		// Token: 0x0602DCE2 RID: 187618 RVA: 0x00A86A79 File Offset: 0x00A84C79
+		// Token: 0x060223C4 RID: 140228 RVA: 0x009B22A1 File Offset: 0x009B04A1
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.ServerCommandNotify);
 			return true;
 		}
 
-		// Token: 0x0602DCE3 RID: 187619 RVA: 0x00A86A8C File Offset: 0x00A84C8C
+		// Token: 0x060223C5 RID: 140229 RVA: 0x009B22B4 File Offset: 0x009B04B4
 		[NullableContext(2)]
 		protected void OnServerCommandNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -63,8 +63,8 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x17007546 RID: 30022
-		// (get) Token: 0x0602DCE4 RID: 187620 RVA: 0x00A86BAB File Offset: 0x00A84DAB
+		// Token: 0x170047FD RID: 18429
+		// (get) Token: 0x060223C6 RID: 140230 RVA: 0x009B23D3 File Offset: 0x009B05D3
 		public static ServerGmController Instance
 		{
 			get
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DCE5 RID: 187621 RVA: 0x00A86BB2 File Offset: 0x00A84DB2
+		// Token: 0x060223C7 RID: 140231 RVA: 0x009B23DA File Offset: 0x009B05DA
 		public static ServerGmController GetOrCreateInstance()
 		{
 			if (ServerGmController._Instance == null)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.World.Controller
 			return ServerGmController._Instance;
 		}
 
-		// Token: 0x0602DCE6 RID: 187622 RVA: 0x00A86BC6 File Offset: 0x00A84DC6
+		// Token: 0x060223C8 RID: 140232 RVA: 0x009B23EE File Offset: 0x009B05EE
 		public static bool CreateInstance()
 		{
 			if (ServerGmController._Instance != null)
@@ -94,33 +94,33 @@ namespace CSharpScript.Game.World.Controller
 			return true;
 		}
 
-		// Token: 0x0602DCE7 RID: 187623 RVA: 0x00A86BDC File Offset: 0x00A84DDC
+		// Token: 0x060223C9 RID: 140233 RVA: 0x009B2404 File Offset: 0x009B0604
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DCE8 RID: 187624 RVA: 0x00A86BDE File Offset: 0x00A84DDE
+		// Token: 0x060223CA RID: 140234 RVA: 0x009B2406 File Offset: 0x009B0606
 		public static void ResetStaticDefaultValue()
 		{
 			ServerGmController._Instance = null;
 		}
 
-		// Token: 0x0602DCE9 RID: 187625 RVA: 0x00A86BE6 File Offset: 0x00A84DE6
+		// Token: 0x060223CB RID: 140235 RVA: 0x009B240E File Offset: 0x009B060E
 		static ServerGmController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ServerGmController.CreateStaticDefaultValue), new Action(ServerGmController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018761 RID: 100193
+		// Token: 0x04012D9B RID: 77211
 		public bool AnimalDebug;
 
-		// Token: 0x04018762 RID: 100194
+		// Token: 0x04012D9C RID: 77212
 		public bool MingzhongzhiguiDebug;
 
-		// Token: 0x04018763 RID: 100195
+		// Token: 0x04012D9D RID: 77213
 		public bool ShowConfigVersion = true;
 
-		// Token: 0x04018764 RID: 100196
+		// Token: 0x04012D9E RID: 77214
 		[Nullable(2)]
 		private static ServerGmController _Instance;
 	}

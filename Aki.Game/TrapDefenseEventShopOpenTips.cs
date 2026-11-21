@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.GameMainView.TrapDefense;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001D46 RID: 7494
+// Token: 0x02001208 RID: 4616
 public class TrapDefenseEventShopOpenTips : UiViewBase
 {
-	// Token: 0x0600E341 RID: 58177 RVA: 0x00356589 File Offset: 0x00354789
+	// Token: 0x0600B75E RID: 46942 RVA: 0x00361FB9 File Offset: 0x003601B9
 	[NullableContext(1)]
 	public TrapDefenseEventShopOpenTips(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E342 RID: 58178 RVA: 0x00356592 File Offset: 0x00354792
+	// Token: 0x0600B75F RID: 46943 RVA: 0x00361FC2 File Offset: 0x003601C2
 	protected override void OnStart()
 	{
 		this.Data = (this.OpenParam as ITrapDefenseShopTipsData);
 	}
 
-	// Token: 0x0600E343 RID: 58179 RVA: 0x003565A5 File Offset: 0x003547A5
+	// Token: 0x0600B760 RID: 46944 RVA: 0x00361FD5 File Offset: 0x003601D5
 	protected override void OnFinishShow()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600E344 RID: 58180 RVA: 0x003565B0 File Offset: 0x003547B0
+	// Token: 0x0600B761 RID: 46945 RVA: 0x00361FE0 File Offset: 0x003601E0
 	protected override void OnBeforeDestroy()
 	{
 		ITrapDefenseShopTipsData data = this.Data;
@@ -35,7 +35,7 @@ public class TrapDefenseEventShopOpenTips : UiViewBase
 		}
 	}
 
-	// Token: 0x040068F1 RID: 26865
+	// Token: 0x040069D0 RID: 27088
 	[Nullable(2)]
 	protected ITrapDefenseShopTipsData Data;
 }

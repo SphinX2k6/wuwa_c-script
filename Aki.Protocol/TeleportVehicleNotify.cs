@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001344 RID: 4932
+	// Token: 0x020013B7 RID: 5047
 	[NetMessage(EMessageId.TeleportVehicleNotify)]
 	public sealed class TeleportVehicleNotify : IMessage<TeleportVehicleNotify>, IMessage, IEquatable<TeleportVehicleNotify>, IDeepCloneable<TeleportVehicleNotify>, IBufferMessage
 	{
-		// Token: 0x0601A333 RID: 107315 RVA: 0x003CE25D File Offset: 0x003CC45D
+		// Token: 0x0601ADBA RID: 110010 RVA: 0x003E9389 File Offset: 0x003E7589
 		[NullableContext(1)]
 		public static TeleportVehicleNotify Create()
 		{
 			return new TeleportVehicleNotify();
 		}
 
-		// Token: 0x1700585D RID: 22621
-		// (get) Token: 0x0601A334 RID: 107316 RVA: 0x003CE264 File Offset: 0x003CC464
+		// Token: 0x17005AF0 RID: 23280
+		// (get) Token: 0x0601ADBB RID: 110011 RVA: 0x003E9390 File Offset: 0x003E7590
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700585E RID: 22622
-		// (get) Token: 0x0601A335 RID: 107317 RVA: 0x003CE267 File Offset: 0x003CC467
+		// Token: 0x17005AF1 RID: 23281
+		// (get) Token: 0x0601ADBC RID: 110012 RVA: 0x003E9393 File Offset: 0x003E7593
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A336 RID: 107318 RVA: 0x003CE26E File Offset: 0x003CC46E
+		// Token: 0x0601ADBD RID: 110013 RVA: 0x003E939A File Offset: 0x003E759A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TeleportVehicleNotify()
 		{
 		}
 
-		// Token: 0x0601A337 RID: 107319 RVA: 0x003CE28C File Offset: 0x003CC48C
+		// Token: 0x0601ADBE RID: 110014 RVA: 0x003E93B8 File Offset: 0x003E75B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TeleportVehicleNotify(TeleportVehicleNotify other) : this()
@@ -66,7 +66,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601A338 RID: 107320 RVA: 0x003CE34A File Offset: 0x003CC54A
+		// Token: 0x0601ADBF RID: 110015 RVA: 0x003E9476 File Offset: 0x003E7676
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TeleportVehicleNotify Clone()
@@ -74,9 +74,9 @@ namespace Aki.Protocol
 			return new TeleportVehicleNotify(this);
 		}
 
-		// Token: 0x1700585F RID: 22623
-		// (get) Token: 0x0601A339 RID: 107321 RVA: 0x003CE352 File Offset: 0x003CC552
-		// (set) Token: 0x0601A33A RID: 107322 RVA: 0x003CE35A File Offset: 0x003CC55A
+		// Token: 0x17005AF2 RID: 23282
+		// (get) Token: 0x0601ADC0 RID: 110016 RVA: 0x003E947E File Offset: 0x003E767E
+		// (set) Token: 0x0601ADC1 RID: 110017 RVA: 0x003E9486 File Offset: 0x003E7686
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Vector Location
@@ -91,9 +91,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005860 RID: 22624
-		// (get) Token: 0x0601A33B RID: 107323 RVA: 0x003CE363 File Offset: 0x003CC563
-		// (set) Token: 0x0601A33C RID: 107324 RVA: 0x003CE36B File Offset: 0x003CC56B
+		// Token: 0x17005AF3 RID: 23283
+		// (get) Token: 0x0601ADC2 RID: 110018 RVA: 0x003E948F File Offset: 0x003E768F
+		// (set) Token: 0x0601ADC3 RID: 110019 RVA: 0x003E9497 File Offset: 0x003E7697
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Rotator Rotation
@@ -108,9 +108,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005861 RID: 22625
-		// (get) Token: 0x0601A33D RID: 107325 RVA: 0x003CE374 File Offset: 0x003CC574
-		// (set) Token: 0x0601A33E RID: 107326 RVA: 0x003CE37C File Offset: 0x003CC57C
+		// Token: 0x17005AF4 RID: 23284
+		// (get) Token: 0x0601ADC4 RID: 110020 RVA: 0x003E94A0 File Offset: 0x003E76A0
+		// (set) Token: 0x0601ADC5 RID: 110021 RVA: 0x003E94A8 File Offset: 0x003E76A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TeleportReason Reason
@@ -125,8 +125,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005862 RID: 22626
-		// (get) Token: 0x0601A33F RID: 107327 RVA: 0x003CE385 File Offset: 0x003CC585
+		// Token: 0x17005AF5 RID: 23285
+		// (get) Token: 0x0601ADC6 RID: 110022 RVA: 0x003E94B1 File Offset: 0x003E76B1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> PsgPlayerIds
@@ -137,8 +137,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005863 RID: 22627
-		// (get) Token: 0x0601A340 RID: 107328 RVA: 0x003CE38D File Offset: 0x003CC58D
+		// Token: 0x17005AF6 RID: 23286
+		// (get) Token: 0x0601ADC7 RID: 110023 RVA: 0x003E94B9 File Offset: 0x003E76B9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<long> PsgEntityIds
@@ -149,9 +149,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005864 RID: 22628
-		// (get) Token: 0x0601A341 RID: 107329 RVA: 0x003CE395 File Offset: 0x003CC595
-		// (set) Token: 0x0601A342 RID: 107330 RVA: 0x003CE39D File Offset: 0x003CC59D
+		// Token: 0x17005AF7 RID: 23287
+		// (get) Token: 0x0601ADC8 RID: 110024 RVA: 0x003E94C1 File Offset: 0x003E76C1
+		// (set) Token: 0x0601ADC9 RID: 110025 RVA: 0x003E94C9 File Offset: 0x003E76C9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long Vehicle
@@ -166,9 +166,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005865 RID: 22629
-		// (get) Token: 0x0601A343 RID: 107331 RVA: 0x003CE3A6 File Offset: 0x003CC5A6
-		// (set) Token: 0x0601A344 RID: 107332 RVA: 0x003CE3AE File Offset: 0x003CC5AE
+		// Token: 0x17005AF8 RID: 23288
+		// (get) Token: 0x0601ADCA RID: 110026 RVA: 0x003E94D2 File Offset: 0x003E76D2
+		// (set) Token: 0x0601ADCB RID: 110027 RVA: 0x003E94DA File Offset: 0x003E76DA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool NoLoading
@@ -183,9 +183,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005866 RID: 22630
-		// (get) Token: 0x0601A345 RID: 107333 RVA: 0x003CE3B7 File Offset: 0x003CC5B7
-		// (set) Token: 0x0601A346 RID: 107334 RVA: 0x003CE3BF File Offset: 0x003CC5BF
+		// Token: 0x17005AF9 RID: 23289
+		// (get) Token: 0x0601ADCC RID: 110028 RVA: 0x003E94E3 File Offset: 0x003E76E3
+		// (set) Token: 0x0601ADCD RID: 110029 RVA: 0x003E94EB File Offset: 0x003E76EB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionOptionPb TransitionOption
@@ -200,7 +200,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A347 RID: 107335 RVA: 0x003CE3C8 File Offset: 0x003CC5C8
+		// Token: 0x0601ADCE RID: 110030 RVA: 0x003E94F4 File Offset: 0x003E76F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -208,7 +208,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TeleportVehicleNotify);
 		}
 
-		// Token: 0x0601A348 RID: 107336 RVA: 0x003CE3D8 File Offset: 0x003CC5D8
+		// Token: 0x0601ADCF RID: 110031 RVA: 0x003E9504 File Offset: 0x003E7704
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TeleportVehicleNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.Location, other.Location) && object.Equals(this.Rotation, other.Rotation) && this.Reason == other.Reason && this.psgPlayerIds_.Equals(other.psgPlayerIds_) && this.psgEntityIds_.Equals(other.psgEntityIds_) && this.Vehicle == other.Vehicle && this.NoLoading == other.NoLoading && object.Equals(this.TransitionOption, other.TransitionOption) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601A349 RID: 107337 RVA: 0x003CE49C File Offset: 0x003CC69C
+		// Token: 0x0601ADD0 RID: 110032 RVA: 0x003E95C8 File Offset: 0x003E77C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -255,7 +255,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601A34A RID: 107338 RVA: 0x003CE571 File Offset: 0x003CC771
+		// Token: 0x0601ADD1 RID: 110033 RVA: 0x003E969D File Offset: 0x003E789D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -263,7 +263,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601A34B RID: 107339 RVA: 0x003CE57E File Offset: 0x003CC77E
+		// Token: 0x0601ADD2 RID: 110034 RVA: 0x003E96AA File Offset: 0x003E78AA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -271,50 +271,50 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601A34C RID: 107340 RVA: 0x003CE588 File Offset: 0x003CC788
+		// Token: 0x0601ADD3 RID: 110035 RVA: 0x003E96B4 File Offset: 0x003E78B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.psgEntityIds_.WriteTo(ref output, TeleportVehicleNotify._repeated_psgEntityIds_codec);
-			if (this.rotation_ != null)
+			if (this.Reason != TeleportReason.Transfer)
 			{
-				output.WriteRawTag(26);
-				output.WriteMessage(this.Rotation);
+				output.WriteRawTag(24);
+				output.WriteEnum((int)this.Reason);
+			}
+			if (this.Vehicle != 0L)
+			{
+				output.WriteRawTag(32);
+				output.WriteInt64(this.Vehicle);
 			}
 			if (this.transitionOption_ != null)
 			{
 				output.WriteRawTag(42);
 				output.WriteMessage(this.TransitionOption);
 			}
-			if (this.location_ != null)
-			{
-				output.WriteRawTag(50);
-				output.WriteMessage(this.Location);
-			}
-			if (this.Vehicle != 0L)
-			{
-				output.WriteRawTag(72);
-				output.WriteInt64(this.Vehicle);
-			}
-			this.psgPlayerIds_.WriteTo(ref output, TeleportVehicleNotify._repeated_psgPlayerIds_codec);
-			if (this.Reason != TeleportReason.Transfer)
-			{
-				output.WriteRawTag(104);
-				output.WriteEnum((int)this.Reason);
-			}
 			if (this.NoLoading)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(56);
 				output.WriteBool(this.NoLoading);
 			}
+			if (this.rotation_ != null)
+			{
+				output.WriteRawTag(66);
+				output.WriteMessage(this.Rotation);
+			}
+			this.psgEntityIds_.WriteTo(ref output, TeleportVehicleNotify._repeated_psgEntityIds_codec);
+			if (this.location_ != null)
+			{
+				output.WriteRawTag(106);
+				output.WriteMessage(this.Location);
+			}
+			this.psgPlayerIds_.WriteTo(ref output, TeleportVehicleNotify._repeated_psgPlayerIds_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0601A34D RID: 107341 RVA: 0x003CE674 File Offset: 0x003CC874
+		// Token: 0x0601ADD4 RID: 110036 RVA: 0x003E97A0 File Offset: 0x003E79A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -353,7 +353,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601A34E RID: 107342 RVA: 0x003CE744 File Offset: 0x003CC944
+		// Token: 0x0601ADD5 RID: 110037 RVA: 0x003E9870 File Offset: 0x003E7A70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TeleportVehicleNotify other)
@@ -403,7 +403,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601A34F RID: 107343 RVA: 0x003CE84E File Offset: 0x003CCA4E
+		// Token: 0x0601ADD6 RID: 110038 RVA: 0x003E997A File Offset: 0x003E7B7A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -411,7 +411,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601A350 RID: 107344 RVA: 0x003CE858 File Offset: 0x003CCA58
+		// Token: 0x0601ADD7 RID: 110039 RVA: 0x003E9984 File Offset: 0x003E7B84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -423,40 +423,51 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num > 50U)
+				if (num <= 66U)
 				{
-					if (num <= 88U)
+					if (num <= 32U)
 					{
-						if (num == 72U)
-						{
-							this.Vehicle = input.ReadInt64();
-							continue;
-						}
-						if (num != 88U)
-						{
-							goto IL_67;
-						}
-					}
-					else if (num != 90U)
-					{
-						if (num == 104U)
+						if (num == 24U)
 						{
 							this.Reason = (TeleportReason)input.ReadEnum();
 							continue;
 						}
-						if (num != 120U)
+						if (num == 32U)
 						{
-							goto IL_67;
+							this.Vehicle = input.ReadInt64();
+							continue;
 						}
-						this.NoLoading = input.ReadBool();
-						continue;
 					}
-					this.psgPlayerIds_.AddEntriesFrom(ref input, TeleportVehicleNotify._repeated_psgPlayerIds_codec);
-					continue;
+					else
+					{
+						if (num == 42U)
+						{
+							if (this.transitionOption_ == null)
+							{
+								this.TransitionOption = new TransitionOptionPb();
+							}
+							input.ReadMessage(this.TransitionOption);
+							continue;
+						}
+						if (num == 56U)
+						{
+							this.NoLoading = input.ReadBool();
+							continue;
+						}
+						if (num == 66U)
+						{
+							if (this.rotation_ == null)
+							{
+								this.Rotation = new Rotator();
+							}
+							input.ReadMessage(this.Rotation);
+							continue;
+						}
+					}
 				}
-				if (num <= 10U)
+				else if (num <= 82U)
 				{
-					if (num == 8U || num == 10U)
+					if (num == 80U || num == 82U)
 					{
 						this.psgEntityIds_.AddEntriesFrom(ref input, TeleportVehicleNotify._repeated_psgEntityIds_codec);
 						continue;
@@ -464,25 +475,7 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 26U)
-					{
-						if (this.rotation_ == null)
-						{
-							this.Rotation = new Rotator();
-						}
-						input.ReadMessage(this.Rotation);
-						continue;
-					}
-					if (num == 42U)
-					{
-						if (this.transitionOption_ == null)
-						{
-							this.TransitionOption = new TransitionOptionPb();
-						}
-						input.ReadMessage(this.TransitionOption);
-						continue;
-					}
-					if (num == 50U)
+					if (num == 106U)
 					{
 						if (this.location_ == null)
 						{
@@ -491,67 +484,71 @@ namespace Aki.Protocol
 						input.ReadMessage(this.Location);
 						continue;
 					}
+					if (num == 112U || num == 114U)
+					{
+						this.psgPlayerIds_.AddEntriesFrom(ref input, TeleportVehicleNotify._repeated_psgPlayerIds_codec);
+						continue;
+					}
 				}
-				IL_67:
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x040098D2 RID: 39122
+		// Token: 0x04009D14 RID: 40212
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040098D3 RID: 39123
-		public const int LocationFieldNumber = 6;
+		// Token: 0x04009D15 RID: 40213
+		public const int LocationFieldNumber = 13;
 
-		// Token: 0x040098D4 RID: 39124
+		// Token: 0x04009D16 RID: 40214
 		private Vector location_;
 
-		// Token: 0x040098D5 RID: 39125
-		public const int RotationFieldNumber = 3;
+		// Token: 0x04009D17 RID: 40215
+		public const int RotationFieldNumber = 8;
 
-		// Token: 0x040098D6 RID: 39126
+		// Token: 0x04009D18 RID: 40216
 		private Rotator rotation_;
 
-		// Token: 0x040098D7 RID: 39127
-		public const int ReasonFieldNumber = 13;
+		// Token: 0x04009D19 RID: 40217
+		public const int ReasonFieldNumber = 3;
 
-		// Token: 0x040098D8 RID: 39128
+		// Token: 0x04009D1A RID: 40218
 		private TeleportReason reason_;
 
-		// Token: 0x040098D9 RID: 39129
-		public const int PsgPlayerIdsFieldNumber = 11;
+		// Token: 0x04009D1B RID: 40219
+		public const int PsgPlayerIdsFieldNumber = 14;
 
-		// Token: 0x040098DA RID: 39130
-		private static readonly FieldCodec<int> _repeated_psgPlayerIds_codec = FieldCodec.ForInt32(90U);
+		// Token: 0x04009D1C RID: 40220
+		private static readonly FieldCodec<int> _repeated_psgPlayerIds_codec = FieldCodec.ForInt32(114U);
 
-		// Token: 0x040098DB RID: 39131
+		// Token: 0x04009D1D RID: 40221
 		private readonly RepeatedField<int> psgPlayerIds_ = new RepeatedField<int>();
 
-		// Token: 0x040098DC RID: 39132
-		public const int PsgEntityIdsFieldNumber = 1;
+		// Token: 0x04009D1E RID: 40222
+		public const int PsgEntityIdsFieldNumber = 10;
 
-		// Token: 0x040098DD RID: 39133
-		private static readonly FieldCodec<long> _repeated_psgEntityIds_codec = FieldCodec.ForInt64(10U);
+		// Token: 0x04009D1F RID: 40223
+		private static readonly FieldCodec<long> _repeated_psgEntityIds_codec = FieldCodec.ForInt64(82U);
 
-		// Token: 0x040098DE RID: 39134
+		// Token: 0x04009D20 RID: 40224
 		private readonly RepeatedField<long> psgEntityIds_ = new RepeatedField<long>();
 
-		// Token: 0x040098DF RID: 39135
-		public const int VehicleFieldNumber = 9;
+		// Token: 0x04009D21 RID: 40225
+		public const int VehicleFieldNumber = 4;
 
-		// Token: 0x040098E0 RID: 39136
+		// Token: 0x04009D22 RID: 40226
 		private long vehicle_;
 
-		// Token: 0x040098E1 RID: 39137
-		public const int NoLoadingFieldNumber = 15;
+		// Token: 0x04009D23 RID: 40227
+		public const int NoLoadingFieldNumber = 7;
 
-		// Token: 0x040098E2 RID: 39138
+		// Token: 0x04009D24 RID: 40228
 		private bool noLoading_;
 
-		// Token: 0x040098E3 RID: 39139
+		// Token: 0x04009D25 RID: 40229
 		public const int TransitionOptionFieldNumber = 5;
 
-		// Token: 0x040098E4 RID: 39140
+		// Token: 0x04009D26 RID: 40230
 		private TransitionOptionPb transitionOption_;
 	}
 }

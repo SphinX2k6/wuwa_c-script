@@ -2,28 +2,28 @@
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 {
-	// Token: 0x020069D9 RID: 27097
+	// Token: 0x02005B35 RID: 23349
 	public enum EStartDefine
 	{
-		// Token: 0x040232E2 RID: 144098
+		// Token: 0x0401E4D2 RID: 124114
 		PanelStartBlue,
-		// Token: 0x040232E3 RID: 144099
+		// Token: 0x0401E4D3 RID: 124115
 		PanelStartRed,
-		// Token: 0x040232E4 RID: 144100
+		// Token: 0x0401E4D4 RID: 124116
 		SpriteHighlightBlue,
-		// Token: 0x040232E5 RID: 144101
+		// Token: 0x0401E4D5 RID: 124117
 		SpriteHighlightRed,
-		// Token: 0x040232E6 RID: 144102
+		// Token: 0x0401E4D6 RID: 124118
 		PanelError,
-		// Token: 0x040232E7 RID: 144103
+		// Token: 0x0401E4D7 RID: 124119
 		ExtendToggle,
-		// Token: 0x040232E8 RID: 144104
+		// Token: 0x0401E4D8 RID: 124120
 		GuideLeft,
-		// Token: 0x040232E9 RID: 144105
+		// Token: 0x0401E4D9 RID: 124121
 		GuideRight,
-		// Token: 0x040232EA RID: 144106
+		// Token: 0x0401E4DA RID: 124122
 		GuideTop,
-		// Token: 0x040232EB RID: 144107
+		// Token: 0x0401E4DB RID: 124123
 		GuideBottom
 	}
 }

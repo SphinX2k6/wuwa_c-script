@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200242D RID: 9261
+// Token: 0x02001912 RID: 6418
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class PhantomManagerConfigNewSettingItem : GridProxyAbstract<IPhantomManagerConfigNewSettingInfo>
 {
-	// Token: 0x0601292B RID: 76075 RVA: 0x00493FF4 File Offset: 0x004921F4
+	// Token: 0x0600FDE1 RID: 64993 RVA: 0x004A15C0 File Offset: 0x0049F7C0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -33,13 +33,13 @@ public class PhantomManagerConfigNewSettingItem : GridProxyAbstract<IPhantomMana
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601292C RID: 76076 RVA: 0x0049409F File Offset: 0x0049229F
+	// Token: 0x0600FDE2 RID: 64994 RVA: 0x004A166B File Offset: 0x0049F86B
 	protected override void OnStart()
 	{
 		this.InfoLayout = new GenericLayout<PhantomManagerConfigNewPropItem, IPhantomManagerConfigNewSettingDetailInfo>(base.GetGridLayout(2), new Func<PhantomManagerConfigNewPropItem>(this.CreateItem), null, false, true);
 	}
 
-	// Token: 0x0601292D RID: 76077 RVA: 0x004940C4 File Offset: 0x004922C4
+	// Token: 0x0600FDE3 RID: 64995 RVA: 0x004A1690 File Offset: 0x0049F890
 	public override void Refresh(IPhantomManagerConfigNewSettingInfo data, bool isSelected, int gridIndex)
 	{
 		this.CurData = data;
@@ -74,7 +74,7 @@ public class PhantomManagerConfigNewSettingItem : GridProxyAbstract<IPhantomMana
 		this.InfoLayout.RefreshByData(list, null, true);
 	}
 
-	// Token: 0x0601292E RID: 76078 RVA: 0x004941C8 File Offset: 0x004923C8
+	// Token: 0x0600FDE4 RID: 64996 RVA: 0x004A1794 File Offset: 0x0049F994
 	public void RefreshState(bool isEdit, bool needAnim = false)
 	{
 		foreach (PhantomManagerConfigNewPropItem phantomManagerConfigNewPropItem in this.InfoLayout.GetLayoutItemList())
@@ -83,17 +83,17 @@ public class PhantomManagerConfigNewSettingItem : GridProxyAbstract<IPhantomMana
 		}
 	}
 
-	// Token: 0x0601292F RID: 76079 RVA: 0x00494220 File Offset: 0x00492420
+	// Token: 0x0600FDE5 RID: 64997 RVA: 0x004A17EC File Offset: 0x0049F9EC
 	private PhantomManagerConfigNewPropItem CreateItem()
 	{
 		return new PhantomManagerConfigNewPropItem();
 	}
 
-	// Token: 0x04008BFA RID: 35834
+	// Token: 0x04008D41 RID: 36161
 	[Nullable(2)]
 	private IPhantomManagerConfigNewSettingInfo CurData;
 
-	// Token: 0x04008BFB RID: 35835
+	// Token: 0x04008D42 RID: 36162
 	[Nullable(new byte[]
 	{
 		2,
@@ -102,17 +102,17 @@ public class PhantomManagerConfigNewSettingItem : GridProxyAbstract<IPhantomMana
 	})]
 	private GenericLayout<PhantomManagerConfigNewPropItem, IPhantomManagerConfigNewSettingDetailInfo> InfoLayout;
 
-	// Token: 0x020089AF RID: 35247
+	// Token: 0x02007B36 RID: 31542
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x0402CBCA RID: 183242
+		// Token: 0x04027EE0 RID: 163552
 		TxtCostTitle,
-		// Token: 0x0402CBCB RID: 183243
+		// Token: 0x04027EE1 RID: 163553
 		TxtCount,
-		// Token: 0x0402CBCC RID: 183244
+		// Token: 0x04027EE2 RID: 163554
 		PanelGrid,
-		// Token: 0x0402CBCD RID: 183245
+		// Token: 0x04027EE3 RID: 163555
 		BtnSetProperty
 	}
 }

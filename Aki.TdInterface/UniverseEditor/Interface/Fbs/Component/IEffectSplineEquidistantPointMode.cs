@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200511D RID: 20765
+	// Token: 0x02005682 RID: 22146
 	public struct IEffectSplineEquidistantPointMode : IFlatbufferObject
 	{
-		// Token: 0x17009746 RID: 38726
-		// (get) Token: 0x0602175E RID: 137054 RVA: 0x004A525C File Offset: 0x004A345C
+		// Token: 0x17009F33 RID: 40755
+		// (get) Token: 0x060236B2 RID: 145074 RVA: 0x004DF1E8 File Offset: 0x004DD3E8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602175F RID: 137055 RVA: 0x004A5269 File Offset: 0x004A3469
+		// Token: 0x060236B3 RID: 145075 RVA: 0x004DF1F5 File Offset: 0x004DD3F5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021760 RID: 137056 RVA: 0x004A5270 File Offset: 0x004A3470
+		// Token: 0x060236B4 RID: 145076 RVA: 0x004DF1FC File Offset: 0x004DD3FC
 		public static IEffectSplineEquidistantPointMode GetRootAsIEffectSplineEquidistantPointMode(ByteBuffer _bb)
 		{
 			return IEffectSplineEquidistantPointMode.GetRootAsIEffectSplineEquidistantPointMode(_bb, default(IEffectSplineEquidistantPointMode));
 		}
 
-		// Token: 0x06021761 RID: 137057 RVA: 0x004A528C File Offset: 0x004A348C
+		// Token: 0x060236B5 RID: 145077 RVA: 0x004DF218 File Offset: 0x004DD418
 		public static IEffectSplineEquidistantPointMode GetRootAsIEffectSplineEquidistantPointMode(ByteBuffer _bb, IEffectSplineEquidistantPointMode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021762 RID: 137058 RVA: 0x004A52A9 File Offset: 0x004A34A9
+		// Token: 0x060236B6 RID: 145078 RVA: 0x004DF235 File Offset: 0x004DD435
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021763 RID: 137059 RVA: 0x004A52B8 File Offset: 0x004A34B8
+		// Token: 0x060236B7 RID: 145079 RVA: 0x004DF244 File Offset: 0x004DD444
 		public IEffectSplineEquidistantPointMode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009747 RID: 38727
-		// (get) Token: 0x06021764 RID: 137060 RVA: 0x004A52C8 File Offset: 0x004A34C8
+		// Token: 0x17009F34 RID: 40756
+		// (get) Token: 0x060236B8 RID: 145080 RVA: 0x004DF254 File Offset: 0x004DD454
 		public EEffectSplineCreateMode Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009748 RID: 38728
-		// (get) Token: 0x06021765 RID: 137061 RVA: 0x004A5304 File Offset: 0x004A3504
+		// Token: 0x17009F35 RID: 40757
+		// (get) Token: 0x060236B9 RID: 145081 RVA: 0x004DF290 File Offset: 0x004DD490
 		public int Space
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021766 RID: 137062 RVA: 0x004A5340 File Offset: 0x004A3540
+		// Token: 0x060236BA RID: 145082 RVA: 0x004DF2CC File Offset: 0x004DD4CC
 		public static Offset<IEffectSplineEquidistantPointMode> CreateIEffectSplineEquidistantPointMode(FlatBufferBuilder builder, EEffectSplineCreateMode Type = EEffectSplineCreateMode.WholeLine, int Space = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEffectSplineEquidistantPointMode.EndIEffectSplineEquidistantPointMode(builder);
 		}
 
-		// Token: 0x06021767 RID: 137063 RVA: 0x004A535D File Offset: 0x004A355D
+		// Token: 0x060236BB RID: 145083 RVA: 0x004DF2E9 File Offset: 0x004DD4E9
 		public static void StartIEffectSplineEquidistantPointMode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06021768 RID: 137064 RVA: 0x004A5366 File Offset: 0x004A3566
+		// Token: 0x060236BC RID: 145084 RVA: 0x004DF2F2 File Offset: 0x004DD4F2
 		public static void AddType(FlatBufferBuilder builder, EEffectSplineCreateMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06021769 RID: 137065 RVA: 0x004A5371 File Offset: 0x004A3571
+		// Token: 0x060236BD RID: 145085 RVA: 0x004DF2FD File Offset: 0x004DD4FD
 		public static void AddSpace(FlatBufferBuilder builder, int space)
 		{
 			builder.AddInt(1, space, 0);
 		}
 
-		// Token: 0x0602176A RID: 137066 RVA: 0x004A537C File Offset: 0x004A357C
+		// Token: 0x060236BE RID: 145086 RVA: 0x004DF308 File Offset: 0x004DD508
 		public static Offset<IEffectSplineEquidistantPointMode> EndIEffectSplineEquidistantPointMode(FlatBufferBuilder builder)
 		{
 			return new Offset<IEffectSplineEquidistantPointMode>(builder.EndTable());
 		}
 
-		// Token: 0x0602176B RID: 137067 RVA: 0x004A538C File Offset: 0x004A358C
+		// Token: 0x060236BF RID: 145087 RVA: 0x004DF318 File Offset: 0x004DD518
 		public IEffectSplineEquidistantPointModeT UnPack()
 		{
 			IEffectSplineEquidistantPointModeT effectSplineEquidistantPointModeT = new IEffectSplineEquidistantPointModeT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return effectSplineEquidistantPointModeT;
 		}
 
-		// Token: 0x0602176C RID: 137068 RVA: 0x004A53A7 File Offset: 0x004A35A7
+		// Token: 0x060236C0 RID: 145088 RVA: 0x004DF333 File Offset: 0x004DD533
 		public void UnPackTo(IEffectSplineEquidistantPointModeT _o)
 		{
 			_o.Type = this.Type;
 			_o.Space = this.Space;
 		}
 
-		// Token: 0x0602176D RID: 137069 RVA: 0x004A53C4 File Offset: 0x004A35C4
+		// Token: 0x060236C1 RID: 145089 RVA: 0x004DF350 File Offset: 0x004DD550
 		public static Offset<IEffectSplineEquidistantPointMode> Pack(FlatBufferBuilder builder, IEffectSplineEquidistantPointModeT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEffectSplineEquidistantPointMode.CreateIEffectSplineEquidistantPointMode(builder, _o.Type, _o.Space);
 		}
 
-		// Token: 0x0400E192 RID: 57746
+		// Token: 0x0400ED8F RID: 60815
 		private Table __p;
 	}
 }

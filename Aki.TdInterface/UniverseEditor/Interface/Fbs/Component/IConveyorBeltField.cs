@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200502D RID: 20525
+	// Token: 0x0200558C RID: 21900
 	public struct IConveyorBeltField : IFlatbufferObject
 	{
-		// Token: 0x170094FB RID: 38139
-		// (get) Token: 0x06020E2D RID: 134701 RVA: 0x00492C5B File Offset: 0x00490E5B
+		// Token: 0x17009CDC RID: 40156
+		// (get) Token: 0x06022D4D RID: 142669 RVA: 0x004CC6AB File Offset: 0x004CA8AB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020E2E RID: 134702 RVA: 0x00492C68 File Offset: 0x00490E68
+		// Token: 0x06022D4E RID: 142670 RVA: 0x004CC6B8 File Offset: 0x004CA8B8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020E2F RID: 134703 RVA: 0x00492C70 File Offset: 0x00490E70
+		// Token: 0x06022D4F RID: 142671 RVA: 0x004CC6C0 File Offset: 0x004CA8C0
 		public static IConveyorBeltField GetRootAsIConveyorBeltField(ByteBuffer _bb)
 		{
 			return IConveyorBeltField.GetRootAsIConveyorBeltField(_bb, default(IConveyorBeltField));
 		}
 
-		// Token: 0x06020E30 RID: 134704 RVA: 0x00492C8C File Offset: 0x00490E8C
+		// Token: 0x06022D50 RID: 142672 RVA: 0x004CC6DC File Offset: 0x004CA8DC
 		public static IConveyorBeltField GetRootAsIConveyorBeltField(ByteBuffer _bb, IConveyorBeltField obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020E31 RID: 134705 RVA: 0x00492CA9 File Offset: 0x00490EA9
+		// Token: 0x06022D51 RID: 142673 RVA: 0x004CC6F9 File Offset: 0x004CA8F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06020E32 RID: 134706 RVA: 0x00492CB8 File Offset: 0x00490EB8
+		// Token: 0x06022D52 RID: 142674 RVA: 0x004CC708 File Offset: 0x004CA908
 		public IConveyorBeltField __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170094FC RID: 38140
-		// (get) Token: 0x06020E33 RID: 134707 RVA: 0x00492CC8 File Offset: 0x00490EC8
+		// Token: 0x17009CDD RID: 40157
+		// (get) Token: 0x06022D53 RID: 142675 RVA: 0x004CC718 File Offset: 0x004CA918
 		public EConveyorBeltFieldType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020E34 RID: 134708 RVA: 0x00492D04 File Offset: 0x00490F04
+		// Token: 0x06022D54 RID: 142676 RVA: 0x004CC754 File Offset: 0x004CA954
 		public static Offset<IConveyorBeltField> CreateIConveyorBeltField(FlatBufferBuilder builder, EConveyorBeltFieldType Type = EConveyorBeltFieldType.DirectionalField)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IConveyorBeltField.EndIConveyorBeltField(builder);
 		}
 
-		// Token: 0x06020E35 RID: 134709 RVA: 0x00492D1A File Offset: 0x00490F1A
+		// Token: 0x06022D55 RID: 142677 RVA: 0x004CC76A File Offset: 0x004CA96A
 		public static void StartIConveyorBeltField(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06020E36 RID: 134710 RVA: 0x00492D23 File Offset: 0x00490F23
+		// Token: 0x06022D56 RID: 142678 RVA: 0x004CC773 File Offset: 0x004CA973
 		public static void AddType(FlatBufferBuilder builder, EConveyorBeltFieldType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06020E37 RID: 134711 RVA: 0x00492D2E File Offset: 0x00490F2E
+		// Token: 0x06022D57 RID: 142679 RVA: 0x004CC77E File Offset: 0x004CA97E
 		public static Offset<IConveyorBeltField> EndIConveyorBeltField(FlatBufferBuilder builder)
 		{
 			return new Offset<IConveyorBeltField>(builder.EndTable());
 		}
 
-		// Token: 0x06020E38 RID: 134712 RVA: 0x00492D3C File Offset: 0x00490F3C
+		// Token: 0x06022D58 RID: 142680 RVA: 0x004CC78C File Offset: 0x004CA98C
 		public IConveyorBeltFieldT UnPack()
 		{
 			IConveyorBeltFieldT conveyorBeltFieldT = new IConveyorBeltFieldT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return conveyorBeltFieldT;
 		}
 
-		// Token: 0x06020E39 RID: 134713 RVA: 0x00492D57 File Offset: 0x00490F57
+		// Token: 0x06022D59 RID: 142681 RVA: 0x004CC7A7 File Offset: 0x004CA9A7
 		public void UnPackTo(IConveyorBeltFieldT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06020E3A RID: 134714 RVA: 0x00492D68 File Offset: 0x00490F68
+		// Token: 0x06022D5A RID: 142682 RVA: 0x004CC7B8 File Offset: 0x004CA9B8
 		public static Offset<IConveyorBeltField> Pack(FlatBufferBuilder builder, IConveyorBeltFieldT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IConveyorBeltField.CreateIConveyorBeltField(builder, _o.Type);
 		}
 
-		// Token: 0x0400E01A RID: 57370
+		// Token: 0x0400EC10 RID: 60432
 		private Table __p;
 	}
 }

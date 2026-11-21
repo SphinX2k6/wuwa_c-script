@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004819 RID: 18457
+	// Token: 0x02004C81 RID: 19585
 	public enum EZoomType : byte
 	{
-		// Token: 0x0400CD2D RID: 52525
+		// Token: 0x0400D768 RID: 55144
 		Default,
-		// Token: 0x0400CD2E RID: 52526
+		// Token: 0x0400D769 RID: 55145
 		Detail,
-		// Token: 0x0400CD2F RID: 52527
+		// Token: 0x0400D76A RID: 55146
 		Normal,
-		// Token: 0x0400CD30 RID: 52528
+		// Token: 0x0400D76B RID: 55147
 		Overlook,
-		// Token: 0x0400CD31 RID: 52529
+		// Token: 0x0400D76C RID: 55148
 		All
 	}
 }

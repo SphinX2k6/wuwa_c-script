@@ -1,33 +1,29 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Data.Level.AssistedWalk;
 using AkiClient.Game.Aki.Data.Level.AttachMove;
 using AkiClient.Game.Aki.Data.Level.KeepFollowing;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWalk;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove;
-using CSharpScript.Game.Utils;
 using CSharpScript.Typing;
 using UnrealEngine.Extension;
 
-// Token: 0x02003100 RID: 12544
+// Token: 0x02002658 RID: 9816
 [NullableContext(1)]
 [Nullable(0)]
 public class MoveToLocationController : IStaticVariableResetter
 {
-	// Token: 0x0601AE8A RID: 110218 RVA: 0x0074BDB6 File Offset: 0x00749FB6
+	// Token: 0x060188BD RID: 100541 RVA: 0x00771CFA File Offset: 0x0076FEFA
 	static MoveToLocationController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MoveToLocationController.CreateStaticDefaultValue), new Action(MoveToLocationController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601AE8B RID: 110219 RVA: 0x0074BDD8 File Offset: 0x00749FD8
+	// Token: 0x060188BE RID: 100542 RVA: 0x00771D1C File Offset: 0x0076FF1C
 	public MoveToLocationController(Entity entity)
 	{
 		this.Entity = entity;
@@ -35,8 +31,8 @@ public class MoveToLocationController : IStaticVariableResetter
 		this.StateComp = entity.GetComponent<BaseUnifiedStateComponent>();
 	}
 
-	// Token: 0x17002518 RID: 9496
-	// (get) Token: 0x0601AE8C RID: 110220 RVA: 0x0074BE33 File Offset: 0x0074A033
+	// Token: 0x170026AD RID: 9901
+	// (get) Token: 0x060188BF RID: 100543 RVA: 0x00771D77 File Offset: 0x0076FF77
 	private BaseMoveCharacter MoveAlongPathLogic
 	{
 		get
@@ -50,8 +46,8 @@ public class MoveToLocationController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002519 RID: 9497
-	// (get) Token: 0x0601AE8D RID: 110221 RVA: 0x0074BE64 File Offset: 0x0074A064
+	// Token: 0x170026AE RID: 9902
+	// (get) Token: 0x060188C0 RID: 100544 RVA: 0x00771DA8 File Offset: 0x0076FFA8
 	private MoveToLocation MoveToLocationLogic
 	{
 		get
@@ -65,8 +61,8 @@ public class MoveToLocationController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700251A RID: 9498
-	// (get) Token: 0x0601AE8E RID: 110222 RVA: 0x0074BE95 File Offset: 0x0074A095
+	// Token: 0x170026AF RID: 9903
+	// (get) Token: 0x060188C1 RID: 100545 RVA: 0x00771DD9 File Offset: 0x0076FFD9
 	private KeepFollowingMoveLogic KeepFollowingMoveLogic
 	{
 		get
@@ -80,7 +76,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AE8F RID: 110223 RVA: 0x0074BEC8 File Offset: 0x0074A0C8
+	// Token: 0x060188C2 RID: 100546 RVA: 0x00771E0C File Offset: 0x0077000C
 	public void UpdateMove(float deltaSeconds)
 	{
 		BaseMoveCharacter moveAlongPathLogic = this.MoveAlongPathLogic;
@@ -119,7 +115,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		this.UpdateAutoSync(deltaSeconds);
 	}
 
-	// Token: 0x0601AE90 RID: 110224 RVA: 0x0074BF68 File Offset: 0x0074A168
+	// Token: 0x060188C3 RID: 100547 RVA: 0x00771EAC File Offset: 0x007700AC
 	public bool IsMoving()
 	{
 		if (!this.KeepFollowingMoveLogic.IsMoving())
@@ -138,7 +134,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601AE91 RID: 110225 RVA: 0x0074BFC4 File Offset: 0x0074A1C4
+	// Token: 0x060188C4 RID: 100548 RVA: 0x00771F08 File Offset: 0x00770108
 	[NullableContext(2)]
 	public void StopMoveWithCallback(ELevelEventState result, string context = null)
 	{
@@ -164,7 +160,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		this.ClearCurrentMoveHandle(context);
 	}
 
-	// Token: 0x0601AE92 RID: 110226 RVA: 0x0074C054 File Offset: 0x0074A254
+	// Token: 0x060188C5 RID: 100549 RVA: 0x00771F98 File Offset: 0x00770198
 	[NullableContext(2)]
 	public void StopMove(string context = null)
 	{
@@ -190,7 +186,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		this.ClearCurrentMoveHandle(context);
 	}
 
-	// Token: 0x0601AE93 RID: 110227 RVA: 0x0074C0E0 File Offset: 0x0074A2E0
+	// Token: 0x060188C6 RID: 100550 RVA: 0x00772024 File Offset: 0x00770224
 	public void Dispose()
 	{
 		BaseMoveCharacter moveAlongPathLogicInternal = this.MoveAlongPathLogicInternal;
@@ -217,7 +213,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		this.ClearCurrentMoveHandle("Dispose");
 	}
 
-	// Token: 0x0601AE94 RID: 110228 RVA: 0x0074C144 File Offset: 0x0074A344
+	// Token: 0x060188C7 RID: 100551 RVA: 0x00772088 File Offset: 0x00770288
 	[NullableContext(2)]
 	public global::Vector GetCurrentToLocation()
 	{
@@ -234,7 +230,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0601AE95 RID: 110229 RVA: 0x0074C192 File Offset: 0x0074A392
+	// Token: 0x060188C8 RID: 100552 RVA: 0x007720D6 File Offset: 0x007702D6
 	public void EnableAutoSync(int interval = 5, float ratio = 0.01f)
 	{
 		this.AutoSyncEnabled = true;
@@ -244,7 +240,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		this.AutoSyncLastLocationValid = false;
 	}
 
-	// Token: 0x0601AE96 RID: 110230 RVA: 0x0074C1B8 File Offset: 0x0074A3B8
+	// Token: 0x060188C9 RID: 100553 RVA: 0x007720FC File Offset: 0x007702FC
 	public void DisableAutoSync()
 	{
 		this.AutoSyncEnabled = false;
@@ -252,7 +248,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		this.AutoSyncLastLocationValid = false;
 	}
 
-	// Token: 0x0601AE97 RID: 110231 RVA: 0x0074C1D4 File Offset: 0x0074A3D4
+	// Token: 0x060188CA RID: 100554 RVA: 0x00772118 File Offset: 0x00770318
 	private void UpdateAutoSync(float deltaSeconds)
 	{
 		if (!this.AutoSyncEnabled)
@@ -279,7 +275,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		this.AutoSyncTimer -= deltaSeconds * num2;
 	}
 
-	// Token: 0x0601AE98 RID: 110232 RVA: 0x0074C2A1 File Offset: 0x0074A4A1
+	// Token: 0x060188CB RID: 100555 RVA: 0x007721E5 File Offset: 0x007703E5
 	public void PushMoveInfo()
 	{
 		int entityTypeByEntity = WorldFunctionLibrary.GetEntityTypeByEntity(this.ActorComp.Entity.Id);
@@ -293,7 +289,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AE99 RID: 110233 RVA: 0x0074C2CC File Offset: 0x0074A4CC
+	// Token: 0x060188CC RID: 100556 RVA: 0x00772210 File Offset: 0x00770410
 	private void PushNpcMoveInfoWithPointPos()
 	{
 		EntitySimplyMoveInfo entitySimplyMoveInfo = EntitySimplyMoveInfo.Create();
@@ -311,7 +307,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		Net.Instance.Send(EPushMessageId.EntitySimplyMoveInfoPackagePush, entitySimplyMoveInfoPackagePush);
 	}
 
-	// Token: 0x0601AE9A RID: 110234 RVA: 0x0074C3E0 File Offset: 0x0074A5E0
+	// Token: 0x060188CD RID: 100557 RVA: 0x00772324 File Offset: 0x00770524
 	private void PushMonsterMoveInfoWithPointPos()
 	{
 		CharacterMovementSyncComponent component = this.ActorComp.Entity.GetComponent<CharacterMovementSyncComponent>();
@@ -325,48 +321,9 @@ public class MoveToLocationController : IStaticVariableResetter
 		movePackagePush.SceneOwnerId = (GameModeModel.Instance.IsMulti ? OnlineModel.Instance.OwnerId : CreatureModel.Instance.GetPlayerId());
 		movePackagePush.MovingEntities.Add(component.CollectPendingMoveInfos());
 		Net.Instance.Send(EPushMessageId.MovePackagePush, movePackagePush);
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			string data = Json.Encode(new Dictionary<string, object>
-			{
-				{
-					"scene_id",
-					CreatureModel.Instance.GetSceneId()
-				},
-				{
-					"instance_id",
-					CreatureModel.Instance.GetInstanceId()
-				},
-				{
-					"msg_id",
-					24756
-				},
-				{
-					"immediately",
-					true
-				},
-				{
-					"sub_count",
-					movePackagePush.MovingEntities.Count
-				},
-				{
-					"is_multi",
-					GameModeModel.Instance.IsMulti
-				},
-				{
-					"ed",
-					MoveToLocationController.IS_WITH_EDITOR
-				},
-				{
-					"br",
-					LogAnalyzer.Instance.GetBranch()
-				}
-			}, null);
-			CombatDebugController.Instance.DataReport("COMBAT_MESSAGE_COUNT", data);
-		}
 	}
 
-	// Token: 0x0601AE9B RID: 110235 RVA: 0x0074C59E File Offset: 0x0074A79E
+	// Token: 0x060188CE RID: 100558 RVA: 0x00772403 File Offset: 0x00770603
 	public void GetFollowingPosition(global::Vector out_, CharacterActorComponent leader)
 	{
 		KeepFollowingMoveLogic keepFollowingMoveLogic = this.KeepFollowingMoveLogic;
@@ -377,7 +334,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		keepFollowingMoveLogic.GetTargetFollowingPosition(out_, leader);
 	}
 
-	// Token: 0x0601AE9C RID: 110236 RVA: 0x0074C5B3 File Offset: 0x0074A7B3
+	// Token: 0x060188CF RID: 100559 RVA: 0x00772418 File Offset: 0x00770618
 	[NullableContext(2)]
 	private int CreateMoveHandle(MoveToLocationController.EMoveHandleKind kind, string context = null)
 	{
@@ -390,13 +347,13 @@ public class MoveToLocationController : IStaticVariableResetter
 		return this.CurrentMoveHandleId;
 	}
 
-	// Token: 0x0601AE9D RID: 110237 RVA: 0x0074C5F0 File Offset: 0x0074A7F0
+	// Token: 0x060188D0 RID: 100560 RVA: 0x00772455 File Offset: 0x00770655
 	public int GetCurrentMoveHandleId()
 	{
 		return this.CurrentMoveHandleId;
 	}
 
-	// Token: 0x0601AE9E RID: 110238 RVA: 0x0074C5F8 File Offset: 0x0074A7F8
+	// Token: 0x060188D1 RID: 100561 RVA: 0x0077245D File Offset: 0x0077065D
 	[NullableContext(2)]
 	public bool StopMoveByHandleId(int handleId, string context = null)
 	{
@@ -412,7 +369,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601AE9F RID: 110239 RVA: 0x0074C613 File Offset: 0x0074A813
+	// Token: 0x060188D2 RID: 100562 RVA: 0x00772478 File Offset: 0x00770678
 	[NullableContext(2)]
 	private void ClearCurrentMoveHandle(string reason = null)
 	{
@@ -424,7 +381,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		this.CurrentMoveKind = MoveToLocationController.EMoveHandleKind.None;
 	}
 
-	// Token: 0x0601AEA0 RID: 110240 RVA: 0x0074C62C File Offset: 0x0074A82C
+	// Token: 0x060188D3 RID: 100563 RVA: 0x00772491 File Offset: 0x00770691
 	public int StartKeepFollowingWithDataAsset(CharacterActorComponent leader, BP_KeepFollowingConfig_C da, EHandType? handType = null, bool followingOnce = false, [Nullable(2)] Action<ELevelEventState> onFinish = null, [TupleElementNames(new string[]
 	{
 		"X",
@@ -436,7 +393,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0601AEA1 RID: 110241 RVA: 0x0074C64A File Offset: 0x0074A84A
+	// Token: 0x060188D4 RID: 100564 RVA: 0x007724AF File Offset: 0x007706AF
 	public int StartKeepFollowingWithDataAssetPath(CharacterActorComponent leader, string daPath, EHandType? handType = null, bool followingOnce = false, [Nullable(2)] Action<ELevelEventState> onFinish = null, [TupleElementNames(new string[]
 	{
 		"X",
@@ -448,7 +405,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0601AEA2 RID: 110242 RVA: 0x0074C668 File Offset: 0x0074A868
+	// Token: 0x060188D5 RID: 100565 RVA: 0x007724D0 File Offset: 0x007706D0
 	public int StartSplineKeepFollowingWithDataAssetPath(CharacterActorComponent leader, string daPath, SplineDistanceParams param, [Nullable(2)] Action<ELevelEventState> onFinish = null)
 	{
 		int result = this.CreateMoveHandle(MoveToLocationController.EMoveHandleKind.KeepFollowingSpline, null);
@@ -457,7 +414,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0601AEA3 RID: 110243 RVA: 0x0074C6AB File Offset: 0x0074A8AB
+	// Token: 0x060188D6 RID: 100566 RVA: 0x00772513 File Offset: 0x00770713
 	public void StopKeepHoldingHands()
 	{
 		this.KeepFollowingMoveLogic.StopMove();
@@ -467,14 +424,14 @@ public class MoveToLocationController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AEA4 RID: 110244 RVA: 0x0074C6D5 File Offset: 0x0074A8D5
+	// Token: 0x060188D7 RID: 100567 RVA: 0x0077253D File Offset: 0x0077073D
 	public bool IsAttachMoving()
 	{
 		AttachMoveLogic attachMoveLogicInternal = this.AttachMoveLogicInternal;
 		return attachMoveLogicInternal != null && attachMoveLogicInternal.IsMoving();
 	}
 
-	// Token: 0x0601AEA5 RID: 110245 RVA: 0x0074C6E8 File Offset: 0x0074A8E8
+	// Token: 0x060188D8 RID: 100568 RVA: 0x00772550 File Offset: 0x00770750
 	public int StartAttachMoveWithData(CharacterActorComponent leader, BP_AttachMoveConfig_C data, [Nullable(2)] Action endCallback = null)
 	{
 		int result = this.CreateMoveHandle(MoveToLocationController.EMoveHandleKind.AttachMove, null);
@@ -488,7 +445,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0601AEA6 RID: 110246 RVA: 0x0074C740 File Offset: 0x0074A940
+	// Token: 0x060188D9 RID: 100569 RVA: 0x007725A8 File Offset: 0x007707A8
 	public void StopAttachMove()
 	{
 		AttachMoveLogic attachMoveLogicInternal = this.AttachMoveLogicInternal;
@@ -503,7 +460,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AEA7 RID: 110247 RVA: 0x0074C76E File Offset: 0x0074A96E
+	// Token: 0x060188DA RID: 100570 RVA: 0x007725D6 File Offset: 0x007707D6
 	public void StartAssistedWalk()
 	{
 		AttachMoveLogic attachMoveLogicInternal = this.AttachMoveLogicInternal;
@@ -514,7 +471,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		attachMoveLogicInternal.StartAssistedWalk();
 	}
 
-	// Token: 0x0601AEA8 RID: 110248 RVA: 0x0074C780 File Offset: 0x0074A980
+	// Token: 0x060188DB RID: 100571 RVA: 0x007725E8 File Offset: 0x007707E8
 	public void EnterAssistedWalkIdle()
 	{
 		AttachMoveLogic attachMoveLogicInternal = this.AttachMoveLogicInternal;
@@ -525,7 +482,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		attachMoveLogicInternal.EnterAssistedWalkIdle();
 	}
 
-	// Token: 0x0601AEA9 RID: 110249 RVA: 0x0074C792 File Offset: 0x0074A992
+	// Token: 0x060188DC RID: 100572 RVA: 0x007725FA File Offset: 0x007707FA
 	public void EnterAssistedWalking()
 	{
 		AttachMoveLogic attachMoveLogicInternal = this.AttachMoveLogicInternal;
@@ -536,7 +493,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		attachMoveLogicInternal.EnterAssistedWalking();
 	}
 
-	// Token: 0x0601AEAA RID: 110250 RVA: 0x0074C7A4 File Offset: 0x0074A9A4
+	// Token: 0x060188DD RID: 100573 RVA: 0x0077260C File Offset: 0x0077080C
 	public void LeftAssistedWalking()
 	{
 		AttachMoveLogic attachMoveLogicInternal = this.AttachMoveLogicInternal;
@@ -547,7 +504,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		attachMoveLogicInternal.LeftAssistedWalking();
 	}
 
-	// Token: 0x0601AEAB RID: 110251 RVA: 0x0074C7B8 File Offset: 0x0074A9B8
+	// Token: 0x060188DE RID: 100574 RVA: 0x00772620 File Offset: 0x00770820
 	public int StartAssistedWalkWithData(CharacterActorComponent leader, BP_AssistedWalkConfig_C data, [Nullable(2)] Action endCallback = null, bool waitAnim = true)
 	{
 		int result = this.CreateMoveHandle(MoveToLocationController.EMoveHandleKind.AttachMove, null);
@@ -562,7 +519,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0601AEAC RID: 110252 RVA: 0x0074C810 File Offset: 0x0074AA10
+	// Token: 0x060188DF RID: 100575 RVA: 0x00772678 File Offset: 0x00770878
 	public int StartLeaderAssistedWalkWithData(BP_AssistedWalkConfig_C data, [Nullable(2)] Action endCallback = null, bool waitAnim = true)
 	{
 		int result = this.CreateMoveHandle(MoveToLocationController.EMoveHandleKind.AttachMove, null);
@@ -577,13 +534,13 @@ public class MoveToLocationController : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0601AEAD RID: 110253 RVA: 0x0074C865 File Offset: 0x0074AA65
+	// Token: 0x060188E0 RID: 100576 RVA: 0x007726CD File Offset: 0x007708CD
 	public void StopAssistedWalk()
 	{
 		this.StopAttachMove();
 	}
 
-	// Token: 0x0601AEAE RID: 110254 RVA: 0x0074C870 File Offset: 0x0074AA70
+	// Token: 0x060188E1 RID: 100577 RVA: 0x007726D8 File Offset: 0x007708D8
 	public unsafe int MoveAlongPath(MoveCharacterConfig config, [Nullable(2)] string context = null)
 	{
 		if (this.IsMoving())
@@ -610,14 +567,14 @@ public class MoveToLocationController : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0601AEAF RID: 110255 RVA: 0x0074C951 File Offset: 0x0074AB51
+	// Token: 0x060188E2 RID: 100578 RVA: 0x007727B9 File Offset: 0x007709B9
 	public bool IsMovingAlongPath()
 	{
 		BaseMoveCharacter moveAlongPathLogic = this.MoveAlongPathLogic;
 		return moveAlongPathLogic != null && moveAlongPathLogic.IsRunning;
 	}
 
-	// Token: 0x0601AEB0 RID: 110256 RVA: 0x0074C964 File Offset: 0x0074AB64
+	// Token: 0x060188E3 RID: 100579 RVA: 0x007727CC File Offset: 0x007709CC
 	public void StopMoveAlongPath()
 	{
 		BaseMoveCharacter moveAlongPathLogic = this.MoveAlongPathLogic;
@@ -631,14 +588,14 @@ public class MoveToLocationController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AEB1 RID: 110257 RVA: 0x0074C98B File Offset: 0x0074AB8B
+	// Token: 0x060188E4 RID: 100580 RVA: 0x007727F3 File Offset: 0x007709F3
 	public bool IsMovingToLocation()
 	{
 		MoveToLocation moveToLocationLogic = this.MoveToLocationLogic;
 		return ((moveToLocationLogic != null) ? moveToLocationLogic.GetCurrentMoveToLocation() : null) != null;
 	}
 
-	// Token: 0x0601AEB2 RID: 110258 RVA: 0x0074C9A2 File Offset: 0x0074ABA2
+	// Token: 0x060188E5 RID: 100581 RVA: 0x0077280A File Offset: 0x00770A0A
 	[NullableContext(2)]
 	public void StopMoveToLocation(string context = null)
 	{
@@ -649,7 +606,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AEB3 RID: 110259 RVA: 0x0074C9C9 File Offset: 0x0074ABC9
+	// Token: 0x060188E6 RID: 100582 RVA: 0x00772831 File Offset: 0x00770A31
 	[NullableContext(2)]
 	public MoveToLocation GetMoveToLocationLogic()
 	{
@@ -661,7 +618,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0601AEB4 RID: 110260 RVA: 0x0074C9E7 File Offset: 0x0074ABE7
+	// Token: 0x060188E7 RID: 100583 RVA: 0x0077284F File Offset: 0x00770A4F
 	public void PullbackMoveToLocation()
 	{
 		MoveToLocation moveToLocationLogic = this.MoveToLocationLogic;
@@ -676,7 +633,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AEB5 RID: 110261 RVA: 0x0074CA10 File Offset: 0x0074AC10
+	// Token: 0x060188E8 RID: 100584 RVA: 0x00772878 File Offset: 0x00770A78
 	public bool MoveToLocation(IMoveToPointConfig moveConfig, bool stopMove = true, [Nullable(2)] string context = null)
 	{
 		if (this.MoveToLocationLogic == null)
@@ -712,7 +669,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601AEB6 RID: 110262 RVA: 0x0074CAF4 File Offset: 0x0074ACF4
+	// Token: 0x060188E9 RID: 100585 RVA: 0x0077295C File Offset: 0x00770B5C
 	public bool NavigateMoveToLocation(IMoveToPointConfig moveConfig, bool? navFailReturn = null, bool clear = true, [Nullable(2)] string context = null)
 	{
 		if (this.MoveToLocationLogic == null)
@@ -775,7 +732,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AEB7 RID: 110263 RVA: 0x0074CC90 File Offset: 0x0074AE90
+	// Token: 0x060188EA RID: 100586 RVA: 0x00772AF8 File Offset: 0x00770CF8
 	private unsafe void ClearLastMove()
 	{
 		MoveToLocation moveToLocationLogic = this.MoveToLocationLogic;
@@ -798,7 +755,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AEB8 RID: 110264 RVA: 0x0074CD58 File Offset: 0x0074AF58
+	// Token: 0x060188EB RID: 100587 RVA: 0x00772BC0 File Offset: 0x00770DC0
 	private string GetMoveKindDesc(MoveToLocationController.EMoveHandleKind kind)
 	{
 		switch (kind)
@@ -822,38 +779,37 @@ public class MoveToLocationController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AEB9 RID: 110265 RVA: 0x0074CDB8 File Offset: 0x0074AFB8
-	private string GetPointsDebugText([Nullable(2)] object points)
+	// Token: 0x060188EC RID: 100588 RVA: 0x00772C20 File Offset: 0x00770E20
+	private string GetPointsDebugText([Nullable(new byte[]
 	{
-		if (points == null)
-		{
-			return string.Empty;
-		}
-		IList list = points as IList;
-		if (list == null)
-		{
-			return this.GetPointPositionDebugText(points);
-		}
-		if (list.Count <= 0)
-		{
-			return string.Empty;
-		}
-		return this.GetPointPositionDebugText(list[list.Count - 1]);
-	}
-
-	// Token: 0x0601AEBA RID: 110266 RVA: 0x0074CE04 File Offset: 0x0074B004
-	private string GetPointPositionDebugText([Nullable(2)] object point)
+		0,
+		1,
+		1,
+		1
+	})] OneOf<MoveCharacterPoint, IList<MoveCharacterPoint>> points)
 	{
-		if (point == null)
+		if (!points.HasValue)
 		{
 			return string.Empty;
 		}
-		PropertyInfo property = point.GetType().GetProperty("Position");
-		global::Vector vector = ((property != null) ? property.GetValue(point) : null) as global::Vector;
+		global::Vector vector = null;
+		if (points.IsT2)
+		{
+			IList<MoveCharacterPoint> asT = points.AsT2;
+			if (asT.Count > 0)
+			{
+				IList<MoveCharacterPoint> list = asT;
+				vector = list[list.Count - 1].Position;
+			}
+		}
+		else
+		{
+			vector = points.AsT1.Position;
+		}
 		return ((vector != null) ? vector.ToString() : null) ?? string.Empty;
 	}
 
-	// Token: 0x0601AEBB RID: 110267 RVA: 0x0074CE54 File Offset: 0x0074B054
+	// Token: 0x060188ED RID: 100589 RVA: 0x00772C90 File Offset: 0x00770E90
 	private void CheckStopMontage()
 	{
 		Entity entity = this.Entity;
@@ -868,7 +824,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AEBC RID: 110268 RVA: 0x0074CEA4 File Offset: 0x0074B0A4
+	// Token: 0x060188EE RID: 100590 RVA: 0x00772CE0 File Offset: 0x00770EE0
 	private static bool GetNavigateMoveToLocationQueue(CharacterActorComponent actor, global::Vector start, global::Vector target, Queue<global::Vector> queue, double minDistance)
 	{
 		queue.Clear();
@@ -892,7 +848,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601AEBD RID: 110269 RVA: 0x0074CF64 File Offset: 0x0074B164
+	// Token: 0x060188EF RID: 100591 RVA: 0x00772DA0 File Offset: 0x00770FA0
 	public static void CreateStaticDefaultValue()
 	{
 		MoveToLocationController.IS_WITH_EDITOR = (KuroApplication.IsWithEditor() ? new int?(1) : null);
@@ -900,7 +856,7 @@ public class MoveToLocationController : IStaticVariableResetter
 		MoveToLocationController.CacheVector = global::Vector.Create();
 	}
 
-	// Token: 0x0601AEBE RID: 110270 RVA: 0x0074CFA2 File Offset: 0x0074B1A2
+	// Token: 0x060188F0 RID: 100592 RVA: 0x00772DDE File Offset: 0x00770FDE
 	public static void ResetStaticDefaultValue()
 	{
 		MoveToLocationController.IS_WITH_EDITOR = null;
@@ -909,102 +865,102 @@ public class MoveToLocationController : IStaticVariableResetter
 		MoveToLocationController.CacheVector = null;
 	}
 
-	// Token: 0x0400D0C9 RID: 53449
+	// Token: 0x0400D4D7 RID: 54487
 	private static int? IS_WITH_EDITOR;
 
-	// Token: 0x0400D0CA RID: 53450
+	// Token: 0x0400D4D8 RID: 54488
 	private const int ASYNC_INTERVAL = 5;
 
-	// Token: 0x0400D0CB RID: 53451
+	// Token: 0x0400D4D9 RID: 54489
 	private const float ASYNC_RATIO = 0.01f;
 
-	// Token: 0x0400D0CC RID: 53452
+	// Token: 0x0400D4DA RID: 54490
 	private const float ASYNC_MIN_INTERVAL = 0.25f;
 
-	// Token: 0x0400D0CD RID: 53453
+	// Token: 0x0400D4DB RID: 54491
 	public static bool DebugDraw;
 
-	// Token: 0x0400D0CE RID: 53454
+	// Token: 0x0400D4DC RID: 54492
 	private readonly Queue<global::Vector> CacheQueue = new Queue<global::Vector>(4);
 
-	// Token: 0x0400D0CF RID: 53455
+	// Token: 0x0400D4DD RID: 54493
 	[Nullable(2)]
 	private MoveToLocation MoveToLocationLogicInternal;
 
-	// Token: 0x0400D0D0 RID: 53456
+	// Token: 0x0400D4DE RID: 54494
 	[Nullable(2)]
 	private BaseMoveCharacter MoveAlongPathLogicInternal;
 
-	// Token: 0x0400D0D1 RID: 53457
+	// Token: 0x0400D4DF RID: 54495
 	[Nullable(2)]
 	private KeepFollowingMoveLogic KeepFollowingMoveLogicInternal;
 
-	// Token: 0x0400D0D2 RID: 53458
+	// Token: 0x0400D4E0 RID: 54496
 	[Nullable(2)]
 	private AttachMoveLogic AttachMoveLogicInternal;
 
-	// Token: 0x0400D0D3 RID: 53459
+	// Token: 0x0400D4E1 RID: 54497
 	[Nullable(2)]
 	private readonly Entity Entity;
 
-	// Token: 0x0400D0D4 RID: 53460
+	// Token: 0x0400D4E2 RID: 54498
 	[Nullable(2)]
 	private readonly CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D0D5 RID: 53461
+	// Token: 0x0400D4E3 RID: 54499
 	[Nullable(2)]
 	private readonly BaseUnifiedStateComponent StateComp;
 
-	// Token: 0x0400D0D6 RID: 53462
+	// Token: 0x0400D4E4 RID: 54500
 	private int LastMoveHandleId;
 
-	// Token: 0x0400D0D7 RID: 53463
+	// Token: 0x0400D4E5 RID: 54501
 	private int CurrentMoveHandleId;
 
-	// Token: 0x0400D0D8 RID: 53464
+	// Token: 0x0400D4E6 RID: 54502
 	private MoveToLocationController.EMoveHandleKind CurrentMoveKind;
 
-	// Token: 0x0400D0D9 RID: 53465
+	// Token: 0x0400D4E7 RID: 54503
 	private static global::Vector CacheVector;
 
-	// Token: 0x0400D0DA RID: 53466
+	// Token: 0x0400D4E8 RID: 54504
 	private bool AutoSyncEnabled;
 
-	// Token: 0x0400D0DB RID: 53467
+	// Token: 0x0400D4E9 RID: 54505
 	private int AutoSyncInterval = 5;
 
-	// Token: 0x0400D0DC RID: 53468
+	// Token: 0x0400D4EA RID: 54506
 	private float AutoSyncRatio = 0.01f;
 
-	// Token: 0x0400D0DD RID: 53469
+	// Token: 0x0400D4EB RID: 54507
 	private float AutoSyncTimer;
 
-	// Token: 0x0400D0DE RID: 53470
+	// Token: 0x0400D4EC RID: 54508
 	private readonly global::Vector AutoSyncLastLocation = global::Vector.Create();
 
-	// Token: 0x0400D0DF RID: 53471
+	// Token: 0x0400D4ED RID: 54509
 	private bool AutoSyncLastLocationValid;
 
-	// Token: 0x0400D0E0 RID: 53472
+	// Token: 0x0400D4EE RID: 54510
 	private static List<global::Vector> CacheMovePath;
 
-	// Token: 0x0200968C RID: 38540
+	// Token: 0x020088AE RID: 34990
 	[NullableContext(0)]
 	private enum EMoveHandleKind
 	{
-		// Token: 0x04030431 RID: 197681
+		// Token: 0x0402BABF RID: 178879
 		None,
-		// Token: 0x04030432 RID: 197682
+		// Token: 0x0402BAC0 RID: 178880
 		MoveAlongPath,
-		// Token: 0x04030433 RID: 197683
+		// Token: 0x0402BAC1 RID: 178881
 		MoveToLocation,
-		// Token: 0x04030434 RID: 197684
+		// Token: 0x0402BAC2 RID: 178882
 		NavigateMoveToLocation,
-		// Token: 0x04030435 RID: 197685
+		// Token: 0x0402BAC3 RID: 178883
 		KeepFollowing,
-		// Token: 0x04030436 RID: 197686
+		// Token: 0x0402BAC4 RID: 178884
 		KeepFollowingSpline,
-		// Token: 0x04030437 RID: 197687
+		// Token: 0x0402BAC5 RID: 178885
 		AttachMove
 	}
 }

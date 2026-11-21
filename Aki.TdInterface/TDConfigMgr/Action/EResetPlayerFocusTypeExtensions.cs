@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023ED RID: 9197
+	// Token: 0x02002684 RID: 9860
 	public static class EResetPlayerFocusTypeExtensions
 	{
-		// Token: 0x0600C829 RID: 51241 RVA: 0x001D4D44 File Offset: 0x001D2F44
+		// Token: 0x0600D4AC RID: 54444 RVA: 0x001EE4F0 File Offset: 0x001EC6F0
 		public static string ToEnumString(this EResetPlayerFocusType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C82A RID: 51242 RVA: 0x001D4D7C File Offset: 0x001D2F7C
+		// Token: 0x0600D4AD RID: 54445 RVA: 0x001EE528 File Offset: 0x001EC728
 		public static EResetPlayerFocusType FromString(string name)
 		{
 			EResetPlayerFocusType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C82B RID: 51243 RVA: 0x001D4DA5 File Offset: 0x001D2FA5
+		// Token: 0x0600D4AE RID: 54446 RVA: 0x001EE551 File Offset: 0x001EC751
 		public static bool TryFromString(string name, out EResetPlayerFocusType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C82C RID: 51244 RVA: 0x001D4DDE File Offset: 0x001D2FDE
+		// Token: 0x0600D4AF RID: 54447 RVA: 0x001EE58A File Offset: 0x001EC78A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C82D RID: 51245 RVA: 0x001D4DF6 File Offset: 0x001D2FF6
+		// Token: 0x0600D4B0 RID: 54448 RVA: 0x001EE5A2 File Offset: 0x001EC7A2
 		public static EResetPlayerFocusType[] GetValues()
 		{
 			return new EResetPlayerFocusType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C82E RID: 51246 RVA: 0x001D4E02 File Offset: 0x001D3002
+		// Token: 0x0600D4B1 RID: 54449 RVA: 0x001EE5AE File Offset: 0x001EC7AE
 		public static string[] GetNames()
 		{
 			return new string[]

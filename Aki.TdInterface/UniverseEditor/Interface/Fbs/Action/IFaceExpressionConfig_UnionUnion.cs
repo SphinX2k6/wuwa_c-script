@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200674E RID: 26446
+	// Token: 0x02006DCE RID: 28110
 	public class IFaceExpressionConfig_UnionUnion
 	{
-		// Token: 0x1700C456 RID: 50262
-		// (get) Token: 0x0602E007 RID: 188423 RVA: 0x006498AA File Offset: 0x00647AAA
-		// (set) Token: 0x0602E008 RID: 188424 RVA: 0x006498B2 File Offset: 0x00647AB2
+		// Token: 0x1700CE0C RID: 52748
+		// (get) Token: 0x0603084D RID: 198733 RVA: 0x00696FEE File Offset: 0x006951EE
+		// (set) Token: 0x0603084E RID: 198734 RVA: 0x00696FF6 File Offset: 0x006951F6
 		public IFaceExpressionConfig_Union Type { get; set; }
 
-		// Token: 0x1700C457 RID: 50263
-		// (get) Token: 0x0602E009 RID: 188425 RVA: 0x006498BB File Offset: 0x00647ABB
-		// (set) Token: 0x0602E00A RID: 188426 RVA: 0x006498C3 File Offset: 0x00647AC3
+		// Token: 0x1700CE0D RID: 52749
+		// (get) Token: 0x0603084F RID: 198735 RVA: 0x00696FFF File Offset: 0x006951FF
+		// (set) Token: 0x06030850 RID: 198736 RVA: 0x00697007 File Offset: 0x00695207
 		public object Value { get; set; }
 
-		// Token: 0x0602E00B RID: 188427 RVA: 0x006498CC File Offset: 0x00647ACC
+		// Token: 0x06030851 RID: 198737 RVA: 0x00697010 File Offset: 0x00695210
 		public IFaceExpressionConfig_UnionUnion()
 		{
 			this.Type = IFaceExpressionConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602E00C RID: 188428 RVA: 0x006498E2 File Offset: 0x00647AE2
+		// Token: 0x06030852 RID: 198738 RVA: 0x00697026 File Offset: 0x00695226
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602E00D RID: 188429 RVA: 0x006498F4 File Offset: 0x00647AF4
+		// Token: 0x06030853 RID: 198739 RVA: 0x00697038 File Offset: 0x00695238
 		public IFaceExpressionConfigT AsIFaceExpressionConfig()
 		{
 			return this.As<IFaceExpressionConfigT>();
 		}
 
-		// Token: 0x0602E00E RID: 188430 RVA: 0x006498FC File Offset: 0x00647AFC
+		// Token: 0x06030854 RID: 198740 RVA: 0x00697040 File Offset: 0x00695240
 		public static IFaceExpressionConfig_UnionUnion FromIFaceExpressionConfig(IFaceExpressionConfigT _ifaceexpressionconfig)
 		{
 			return new IFaceExpressionConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E00F RID: 188431 RVA: 0x00649911 File Offset: 0x00647B11
+		// Token: 0x06030855 RID: 198741 RVA: 0x00697055 File Offset: 0x00695255
 		public IFaceExpressionMorphConfigT AsIFaceExpressionMorphConfig()
 		{
 			return this.As<IFaceExpressionMorphConfigT>();
 		}
 
-		// Token: 0x0602E010 RID: 188432 RVA: 0x00649919 File Offset: 0x00647B19
+		// Token: 0x06030856 RID: 198742 RVA: 0x0069705D File Offset: 0x0069525D
 		public static IFaceExpressionConfig_UnionUnion FromIFaceExpressionMorphConfig(IFaceExpressionMorphConfigT _ifaceexpressionmorphconfig)
 		{
 			return new IFaceExpressionConfig_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E011 RID: 188433 RVA: 0x0064992E File Offset: 0x00647B2E
+		// Token: 0x06030857 RID: 198743 RVA: 0x00697072 File Offset: 0x00695272
 		public IFaceExpressionTextureConfigT AsIFaceExpressionTextureConfig()
 		{
 			return this.As<IFaceExpressionTextureConfigT>();
 		}
 
-		// Token: 0x0602E012 RID: 188434 RVA: 0x00649936 File Offset: 0x00647B36
+		// Token: 0x06030858 RID: 198744 RVA: 0x0069707A File Offset: 0x0069527A
 		public static IFaceExpressionConfig_UnionUnion FromIFaceExpressionTextureConfig(IFaceExpressionTextureConfigT _ifaceexpressiontextureconfig)
 		{
 			return new IFaceExpressionConfig_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E013 RID: 188435 RVA: 0x0064994B File Offset: 0x00647B4B
+		// Token: 0x06030859 RID: 198745 RVA: 0x0069708F File Offset: 0x0069528F
 		public IFaceExpressionAnimSequenceConfigT AsIFaceExpressionAnimSequenceConfig()
 		{
 			return this.As<IFaceExpressionAnimSequenceConfigT>();
 		}
 
-		// Token: 0x0602E014 RID: 188436 RVA: 0x00649953 File Offset: 0x00647B53
+		// Token: 0x0603085A RID: 198746 RVA: 0x00697097 File Offset: 0x00695297
 		public static IFaceExpressionConfig_UnionUnion FromIFaceExpressionAnimSequenceConfig(IFaceExpressionAnimSequenceConfigT _ifaceexpressionanimsequenceconfig)
 		{
 			return new IFaceExpressionConfig_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E015 RID: 188437 RVA: 0x00649968 File Offset: 0x00647B68
+		// Token: 0x0603085B RID: 198747 RVA: 0x006970AC File Offset: 0x006952AC
 		public IFaceExpressionTextureMultiSlotConfigT AsIFaceExpressionTextureMultiSlotConfig()
 		{
 			return this.As<IFaceExpressionTextureMultiSlotConfigT>();
 		}
 
-		// Token: 0x0602E016 RID: 188438 RVA: 0x00649970 File Offset: 0x00647B70
+		// Token: 0x0603085C RID: 198748 RVA: 0x006970B4 File Offset: 0x006952B4
 		public static IFaceExpressionConfig_UnionUnion FromIFaceExpressionTextureMultiSlotConfig(IFaceExpressionTextureMultiSlotConfigT _ifaceexpressiontexturemultislotconfig)
 		{
 			return new IFaceExpressionConfig_UnionUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E017 RID: 188439 RVA: 0x00649988 File Offset: 0x00647B88
+		// Token: 0x0603085D RID: 198749 RVA: 0x006970CC File Offset: 0x006952CC
 		public static int Pack(FlatBufferBuilder builder, IFaceExpressionConfig_UnionUnion _o)
 		{
 			switch (_o.Type)

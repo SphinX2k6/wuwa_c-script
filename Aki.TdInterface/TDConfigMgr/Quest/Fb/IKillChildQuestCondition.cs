@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001370 RID: 4976
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014C1 RID: 5313
 	public class IKillChildQuestCondition : IQuestCondition
 	{
-		// Token: 0x060071DE RID: 29150 RVA: 0x0011230E File Offset: 0x0011050E
+		// Token: 0x06007883 RID: 30851 RVA: 0x00120916 File Offset: 0x0011EB16
 		public static IKillChildQuestCondition Create(IKillChildQuestCondition? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170024D1 RID: 9425
-		// (get) Token: 0x060071DF RID: 29151 RVA: 0x0011232D File Offset: 0x0011052D
+		// Token: 0x170026A3 RID: 9891
+		// (get) Token: 0x06007884 RID: 30852 RVA: 0x00120935 File Offset: 0x0011EB35
 		public override EChildQuest Type
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024D2 RID: 9426
-		// (get) Token: 0x060071E0 RID: 29152 RVA: 0x0011233A File Offset: 0x0011053A
+		// Token: 0x170026A4 RID: 9892
+		// (get) Token: 0x06007885 RID: 30853 RVA: 0x00120942 File Offset: 0x0011EB42
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024D3 RID: 9427
-		// (get) Token: 0x060071E1 RID: 29153 RVA: 0x00112370 File Offset: 0x00110570
+		// Token: 0x170026A5 RID: 9893
+		// (get) Token: 0x06007886 RID: 30854 RVA: 0x00120978 File Offset: 0x0011EB78
 		public virtual List<int> ExistTargets
 		{
 			get
@@ -74,8 +72,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024D4 RID: 9428
-		// (get) Token: 0x060071E2 RID: 29154 RVA: 0x001123D4 File Offset: 0x001105D4
+		// Token: 0x170026A6 RID: 9894
+		// (get) Token: 0x06007887 RID: 30855 RVA: 0x001209DC File Offset: 0x0011EBDC
 		public virtual List<int> TargetsToAwake
 		{
 			get
@@ -95,8 +93,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024D5 RID: 9429
-		// (get) Token: 0x060071E3 RID: 29155 RVA: 0x00112438 File Offset: 0x00110638
+		// Token: 0x170026A7 RID: 9895
+		// (get) Token: 0x06007888 RID: 30856 RVA: 0x00120A40 File Offset: 0x0011EC40
 		public virtual VarRef PrefabVar
 		{
 			get
@@ -111,19 +109,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024D6 RID: 9430
-		// (get) Token: 0x060071E4 RID: 29156 RVA: 0x00112468 File Offset: 0x00110668
+		// Token: 0x170026A8 RID: 9896
+		// (get) Token: 0x06007889 RID: 30857 RVA: 0x00120A70 File Offset: 0x0011EC70
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IEntityDeadPosition> EntityDeadPositions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -146,43 +144,89 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040041CA RID: 16842
-		private IKillChildQuestCondition Instance;
-
-		// Token: 0x040041CB RID: 16843
-		[Nullable(2)]
-		private IConditionGroup _PreConditionsCache;
-
-		// Token: 0x040041CC RID: 16844
-		private bool _PreConditionsInited;
-
-		// Token: 0x040041CD RID: 16845
-		private List<int> _ExistTargetsCache;
-
-		// Token: 0x040041CE RID: 16846
-		private bool _ExistTargetsInited;
-
-		// Token: 0x040041CF RID: 16847
-		private List<int> _TargetsToAwakeCache;
-
-		// Token: 0x040041D0 RID: 16848
-		private bool _TargetsToAwakeInited;
-
-		// Token: 0x040041D1 RID: 16849
-		private VarRef _PrefabVarCache;
-
-		// Token: 0x040041D2 RID: 16850
-		private bool _PrefabVarInited;
-
-		// Token: 0x040041D3 RID: 16851
+		// Token: 0x170026A9 RID: 9897
+		// (get) Token: 0x0600788A RID: 30858 RVA: 0x00120AEC File Offset: 0x0011ECEC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
+		})]
+		public virtual List<ISpecificMonsterDeadPosition> SpecificMonsterDeadPositions
+		{
+			[return: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
+			get
+			{
+				if (this._SpecificMonsterDeadPositionsInited)
+				{
+					return this._SpecificMonsterDeadPositionsCache;
+				}
+				this._SpecificMonsterDeadPositionsInited = true;
+				if ((this.Instance.NullMask & 2) == 0)
+				{
+					return null;
+				}
+				int specificMonsterDeadPositionsLength = this.Instance.SpecificMonsterDeadPositionsLength;
+				this._SpecificMonsterDeadPositionsCache = new List<ISpecificMonsterDeadPosition>(specificMonsterDeadPositionsLength);
+				for (int i = 0; i < specificMonsterDeadPositionsLength; i++)
+				{
+					this._SpecificMonsterDeadPositionsCache.Add(ISpecificMonsterDeadPosition.Create(this.Instance.SpecificMonsterDeadPositions(i)));
+				}
+				return this._SpecificMonsterDeadPositionsCache;
+			}
+		}
+
+		// Token: 0x04004549 RID: 17737
+		private IKillChildQuestCondition Instance;
+
+		// Token: 0x0400454A RID: 17738
+		[Nullable(2)]
+		private IConditionGroup _PreConditionsCache;
+
+		// Token: 0x0400454B RID: 17739
+		private bool _PreConditionsInited;
+
+		// Token: 0x0400454C RID: 17740
+		private List<int> _ExistTargetsCache;
+
+		// Token: 0x0400454D RID: 17741
+		private bool _ExistTargetsInited;
+
+		// Token: 0x0400454E RID: 17742
+		private List<int> _TargetsToAwakeCache;
+
+		// Token: 0x0400454F RID: 17743
+		private bool _TargetsToAwakeInited;
+
+		// Token: 0x04004550 RID: 17744
+		private VarRef _PrefabVarCache;
+
+		// Token: 0x04004551 RID: 17745
+		private bool _PrefabVarInited;
+
+		// Token: 0x04004552 RID: 17746
+		[Nullable(new byte[]
+		{
+			2,
+			0
 		})]
 		private List<IEntityDeadPosition> _EntityDeadPositionsCache;
 
-		// Token: 0x040041D4 RID: 16852
+		// Token: 0x04004553 RID: 17747
 		private bool _EntityDeadPositionsInited;
+
+		// Token: 0x04004554 RID: 17748
+		[Nullable(new byte[]
+		{
+			2,
+			0
+		})]
+		private List<ISpecificMonsterDeadPosition> _SpecificMonsterDeadPositionsCache;
+
+		// Token: 0x04004555 RID: 17749
+		private bool _SpecificMonsterDeadPositionsInited;
 	}
 }

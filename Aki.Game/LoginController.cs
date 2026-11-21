@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
@@ -39,12 +38,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02002094 RID: 8340
+// Token: 0x0200156A RID: 5482
 [NullableContext(1)]
 [Nullable(0)]
 public class LoginController : UiControllerBase
 {
-	// Token: 0x06010682 RID: 67202 RVA: 0x003FFBA4 File Offset: 0x003FDDA4
+	// Token: 0x0600DAED RID: 56045 RVA: 0x0040C03C File Offset: 0x0040A23C
 	protected unsafe override bool OnInit()
 	{
 		Net.Instance.InitCanTimerOutMessage(new HashSet<ERequestMessageId>
@@ -83,7 +82,7 @@ public class LoginController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010683 RID: 67203 RVA: 0x003FFD68 File Offset: 0x003FDF68
+	// Token: 0x0600DAEE RID: 56046 RVA: 0x0040C200 File Offset: 0x0040A400
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.UiManagerInit, new Action(this.UiManagerInit));
@@ -100,7 +99,7 @@ public class LoginController : UiControllerBase
 		this.RptTimerHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.RptAction), 600000f, 1f, null, null, false);
 	}
 
-	// Token: 0x06010684 RID: 67204 RVA: 0x003FFE9C File Offset: 0x003FE09C
+	// Token: 0x0600DAEF RID: 56047 RVA: 0x0040C334 File Offset: 0x0040A534
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.UiManagerInit, new Action(this.UiManagerInit));
@@ -127,7 +126,7 @@ public class LoginController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010685 RID: 67205 RVA: 0x003FFFBC File Offset: 0x003FE1BC
+	// Token: 0x0600DAF0 RID: 56048 RVA: 0x0040C454 File Offset: 0x0040A654
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.LogoutNotify, new Action<IMessage, Net.CallbackStatus>(this.LogoutNotify));
@@ -137,7 +136,7 @@ public class LoginController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.ConfirmCompleteRefMp4QuestNotify, new Action<IMessage, Net.CallbackStatus>(this.ConfirmCompleteRefMp4QuestNotify));
 	}
 
-	// Token: 0x06010686 RID: 67206 RVA: 0x0040004F File Offset: 0x003FE24F
+	// Token: 0x0600DAF1 RID: 56049 RVA: 0x0040C4E7 File Offset: 0x0040A6E7
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.LogoutNotify);
@@ -146,7 +145,7 @@ public class LoginController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.ConfirmResourceQuestNotify);
 	}
 
-	// Token: 0x06010687 RID: 67207 RVA: 0x0040008C File Offset: 0x003FE28C
+	// Token: 0x0600DAF2 RID: 56050 RVA: 0x0040C524 File Offset: 0x0040A724
 	[NullableContext(2)]
 	private void LogoutNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -166,7 +165,7 @@ public class LoginController : UiControllerBase
 		LoginModel.Instance.LogoutNotify = logoutNotify;
 	}
 
-	// Token: 0x06010688 RID: 67208 RVA: 0x004000FD File Offset: 0x003FE2FD
+	// Token: 0x0600DAF3 RID: 56051 RVA: 0x0040C595 File Offset: 0x0040A795
 	[NullableContext(2)]
 	private void SwitchNodeNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -174,7 +173,7 @@ public class LoginController : UiControllerBase
 		ReConnectController.Instance.TryBackToGame();
 	}
 
-	// Token: 0x06010689 RID: 67209 RVA: 0x00400118 File Offset: 0x003FE318
+	// Token: 0x0600DAF4 RID: 56052 RVA: 0x0040C5B0 File Offset: 0x0040A7B0
 	[NullableContext(2)]
 	private void FightDataCheckNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -187,7 +186,7 @@ public class LoginController : UiControllerBase
 		instance.Error(flag, entityId, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601068A RID: 67210 RVA: 0x0040015C File Offset: 0x003FE35C
+	// Token: 0x0600DAF5 RID: 56053 RVA: 0x0040C5F4 File Offset: 0x0040A7F4
 	[NullableContext(2)]
 	private void ConfirmResourceQuestNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -195,15 +194,21 @@ public class LoginController : UiControllerBase
 		if (QuestResourceModel.Instance.IsSeparateVideo)
 		{
 			Log.Instance.Info(ELogModule.QuestResource, ELogAuthor.ZWY, "添加资源检查", default(ReadOnlySpan<ValueTuple<string, object>>));
-			QuestResourceModel.Instance.FillCheckQuests(confirmResourceQuestNotify.QuestIds.ToArray<int>());
+			int[] array = new int[confirmResourceQuestNotify.QuestIds.Count];
+			confirmResourceQuestNotify.QuestIds.CopyTo(array, 0);
+			QuestResourceModel.Instance.FillCheckQuests(array);
 		}
 		if (ResourceDiffUpdaterManager.Instance.IsGrayBoxHit())
 		{
-			ResourceManagerModel.Instance.FillLoginInfo(confirmResourceQuestNotify.QuestIds.ToArray<int>(), confirmResourceQuestNotify.SceneInfo.ToArray<ConfirmResourceSceneInfo>());
+			int[] array2 = new int[confirmResourceQuestNotify.QuestIds.Count];
+			confirmResourceQuestNotify.QuestIds.CopyTo(array2, 0);
+			ConfirmResourceSceneInfo[] array3 = new ConfirmResourceSceneInfo[confirmResourceQuestNotify.SceneInfo.Count];
+			confirmResourceQuestNotify.SceneInfo.CopyTo(array3, 0);
+			ResourceManagerModel.Instance.FillLoginInfo(array2, array3);
 		}
 	}
 
-	// Token: 0x0601068B RID: 67211 RVA: 0x004001DC File Offset: 0x003FE3DC
+	// Token: 0x0600DAF6 RID: 56054 RVA: 0x0040C6B0 File Offset: 0x0040A8B0
 	[NullableContext(2)]
 	private void ConfirmCompleteRefMp4QuestNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -211,19 +216,21 @@ public class LoginController : UiControllerBase
 		if (QuestResourceModel.Instance.IsSeparateVideo)
 		{
 			Log.Instance.Info(ELogModule.QuestResource, ELogAuthor.HWK, "视频分包: 添加已完成任务信息", default(ReadOnlySpan<ValueTuple<string, object>>));
-			QuestResourceModel.Instance.FillFinishedQuests(confirmCompleteRefMp4QuestNotify.QuestIds.ToArray<int>());
+			int[] array = new int[confirmCompleteRefMp4QuestNotify.QuestIds.Count];
+			confirmCompleteRefMp4QuestNotify.QuestIds.CopyTo(array, 0);
+			QuestResourceModel.Instance.FillFinishedQuests(array);
 			return;
 		}
 		Log.Instance.Info(ELogModule.QuestResource, ELogAuthor.HWK, "视频分包: 功能未开启", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0601068C RID: 67212 RVA: 0x0040024A File Offset: 0x003FE44A
+	// Token: 0x0600DAF7 RID: 56055 RVA: 0x0040C732 File Offset: 0x0040A932
 	private void OnGetPlayerBasicInfo()
 	{
 		KuroSdkController.Instance.PostKuroSdkEvent(EKuroSdkEventKey.KUROSDKSELECTROLE);
 	}
 
-	// Token: 0x0601068D RID: 67213 RVA: 0x00400258 File Offset: 0x003FE458
+	// Token: 0x0600DAF8 RID: 56056 RVA: 0x0040C740 File Offset: 0x0040A940
 	private void HandleLogoutNotify(LogoutNotify notify)
 	{
 		Heartbeat.Instance.StopHeartBeat(HeartbeatDefine.EStopHeartbeat.LogoutNotify);
@@ -322,7 +329,7 @@ public class LoginController : UiControllerBase
 		LoginModel.Instance.LogoutNotify = null;
 	}
 
-	// Token: 0x0601068E RID: 67214 RVA: 0x00400530 File Offset: 0x003FE730
+	// Token: 0x0600DAF9 RID: 56057 RVA: 0x0040CA18 File Offset: 0x0040AC18
 	private void OnPsnTick(float deltaTime)
 	{
 		if (!UiManager.Instance.IsInited)
@@ -343,7 +350,7 @@ public class LoginController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601068F RID: 67215 RVA: 0x004005C4 File Offset: 0x003FE7C4
+	// Token: 0x0600DAFA RID: 56058 RVA: 0x0040CAAC File Offset: 0x0040ACAC
 	private void OnHealthTipTick(float deltaTime)
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -379,7 +386,7 @@ public class LoginController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010690 RID: 67216 RVA: 0x004006A0 File Offset: 0x003FE8A0
+	// Token: 0x0600DAFB RID: 56059 RVA: 0x0040CB88 File Offset: 0x0040AD88
 	private void UiManagerInit()
 	{
 		if (LoginModel.Instance.GetAutoOpenLoginView())
@@ -398,14 +405,14 @@ public class LoginController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010691 RID: 67217 RVA: 0x0040070C File Offset: 0x003FE90C
+	// Token: 0x0600DAFC RID: 56060 RVA: 0x0040CBF4 File Offset: 0x0040ADF4
 	private void ExitGamePush()
 	{
 		Net.Instance.Send(EPushMessageId.ExitGamePush, Aki.Protocol.ExitGamePush.Create());
 		LanguageUpdateManager.Instance.StopAllDownload();
 	}
 
-	// Token: 0x06010692 RID: 67218 RVA: 0x0040072C File Offset: 0x003FE92C
+	// Token: 0x0600DAFD RID: 56061 RVA: 0x0040CC14 File Offset: 0x0040AE14
 	private void PlayOpenLoginSequence()
 	{
 		Log.Instance.Info(ELogModule.Login, ELogAuthor.TL, "LoginProcedure-OpenLoginView-加载进入登录的镜头", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -426,7 +433,7 @@ public class LoginController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06010693 RID: 67219 RVA: 0x00400780 File Offset: 0x003FE980
+	// Token: 0x0600DAFE RID: 56062 RVA: 0x0040CC68 File Offset: 0x0040AE68
 	public void OpenLoginView()
 	{
 		if (!KuroSdkModel.Instance.ReportedInitState)
@@ -459,7 +466,7 @@ public class LoginController : UiControllerBase
 		UiLoginSceneManager.Instance.InitRoleObservers(new Action(this.PlayOpenLoginSequence));
 	}
 
-	// Token: 0x06010694 RID: 67220 RVA: 0x004008BC File Offset: 0x003FEABC
+	// Token: 0x0600DAFF RID: 56063 RVA: 0x0040CDA4 File Offset: 0x0040AFA4
 	public void CreateCharacterViewToLoginView()
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.CreateCharacterView))
@@ -474,14 +481,14 @@ public class LoginController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06010695 RID: 67221 RVA: 0x0040091A File Offset: 0x003FEB1A
+	// Token: 0x0600DB00 RID: 56064 RVA: 0x0040CE02 File Offset: 0x0040B002
 	public void GetHttp(bool isSmokeTest = false, bool genLoginTraceId = true)
 	{
 		this.LoginUrlPollingIndex = 0;
 		this.GetHttpAsync(isSmokeTest, genLoginTraceId);
 	}
 
-	// Token: 0x06010696 RID: 67222 RVA: 0x0040092C File Offset: 0x003FEB2C
+	// Token: 0x0600DB01 RID: 56065 RVA: 0x0040CE14 File Offset: 0x0040B014
 	[NullableContext(0)]
 	public UniTask<bool> GetHttpAsync(bool isSmokeTest = false, bool genLoginTraceId = true)
 	{
@@ -495,7 +502,7 @@ public class LoginController : UiControllerBase
 		return <GetHttpAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010697 RID: 67223 RVA: 0x00400980 File Offset: 0x003FEB80
+	// Token: 0x0600DB02 RID: 56066 RVA: 0x0040CE68 File Offset: 0x0040B068
 	private unsafe string BuildHttp()
 	{
 		string text = LoginModel.Instance.TryGetRealServerPort();
@@ -597,12 +604,18 @@ public class LoginController : UiControllerBase
 				return defaultInterpolatedStringHandler.ToStringAndClear();
 			}
 			Log.Instance.Info(ELogModule.Login, ELogAuthor.TL, "LoginProcedure-Http-非SDK环境", default(ReadOnlySpan<ValueTuple<string, object>>));
-			if (LoginModel.Instance.IsCopyAccount)
+			LoginDefine.EAccountLoginMode selectedAccountLoginMode = LoginModel.Instance.SelectedAccountLoginMode;
+			if (selectedAccountLoginMode == LoginDefine.EAccountLoginMode.CopyAccount || selectedAccountLoginMode == LoginDefine.EAccountLoginMode.CopyAccountQuickFormation)
 			{
-				string value4 = LoginModel.Instance.GetSourcePlayerAccount() ?? string.Empty;
+				CopyUserLoginMode value4 = CopyUserLoginMode.None;
+				if (selectedAccountLoginMode == LoginDefine.EAccountLoginMode.CopyAccountQuickFormation)
+				{
+					value4 = CopyUserLoginMode.QuickFormation;
+				}
+				string stringToEscape = LoginModel.Instance.GetSourcePlayerAccount() ?? string.Empty;
 				string value5 = (serverIp != null && serverIp.StartsWith("http", StringComparison.OrdinalIgnoreCase)) ? serverIp : ("http://" + serverIp + ":" + text);
 				Log.Instance.Info(ELogModule.Login, ELogAuthor.TL, "LoginProcedure-Http-非SDK环境-IsCopyAccount", default(ReadOnlySpan<ValueTuple<string, object>>));
-				defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(95, 6);
+				defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(114, 7);
 				defaultInterpolatedStringHandler.AppendFormatted(value5);
 				defaultInterpolatedStringHandler.AppendLiteral("/api/CopyUserLogin?loginType=0&userId=");
 				defaultInterpolatedStringHandler.AppendFormatted(value2);
@@ -613,7 +626,9 @@ public class LoginController : UiControllerBase
 				defaultInterpolatedStringHandler.AppendLiteral("&loginTraceId=");
 				defaultInterpolatedStringHandler.AppendFormatted(LoginModel.Instance.LoginTraceId);
 				defaultInterpolatedStringHandler.AppendLiteral("&sourceAccount=");
-				defaultInterpolatedStringHandler.AppendFormatted(value4);
+				defaultInterpolatedStringHandler.AppendFormatted(Uri.EscapeDataString(stringToEscape));
+				defaultInterpolatedStringHandler.AppendLiteral("&copyUserLoginMode=");
+				defaultInterpolatedStringHandler.AppendFormatted<int>((int)value4);
 				return defaultInterpolatedStringHandler.ToStringAndClear();
 			}
 			string value6 = (serverIp != null && serverIp.StartsWith("http", StringComparison.OrdinalIgnoreCase)) ? serverIp : ("http://" + serverIp + ":" + text);
@@ -631,7 +646,7 @@ public class LoginController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010698 RID: 67224 RVA: 0x00400F4C File Offset: 0x003FF14C
+	// Token: 0x0600DB03 RID: 56067 RVA: 0x0040D464 File Offset: 0x0040B664
 	private unsafe string BuildGlobalSdkLoginHttp()
 	{
 		string currentServerTargetIp = this.GetCurrentServerTargetIp();
@@ -679,7 +694,7 @@ public class LoginController : UiControllerBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06010699 RID: 67225 RVA: 0x0040114C File Offset: 0x003FF34C
+	// Token: 0x0600DB04 RID: 56068 RVA: 0x0040D664 File Offset: 0x0040B864
 	public UniTask GetSubPackageHttp()
 	{
 		LoginController.<GetSubPackageHttp>d__40 <GetSubPackageHttp>d__;
@@ -690,7 +705,7 @@ public class LoginController : UiControllerBase
 		return <GetSubPackageHttp>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601069A RID: 67226 RVA: 0x00401190 File Offset: 0x003FF390
+	// Token: 0x0600DB05 RID: 56069 RVA: 0x0040D6A8 File Offset: 0x0040B8A8
 	public unsafe string BuildSubPackageHttp()
 	{
 		string str = this.IsGlobalSdkLoginMode() ? "5500" : LoginModel.Instance.TryGetRealServerPort().ToString();
@@ -744,7 +759,7 @@ public class LoginController : UiControllerBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0601069B RID: 67227 RVA: 0x004013F4 File Offset: 0x003FF5F4
+	// Token: 0x0600DB06 RID: 56070 RVA: 0x0040D90C File Offset: 0x0040BB0C
 	private string GetCurrentServerTargetIp()
 	{
 		string text = LoginServerModel.Instance.GetCurrentSelectServerIp();
@@ -756,19 +771,19 @@ public class LoginController : UiControllerBase
 		return text ?? string.Empty;
 	}
 
-	// Token: 0x0601069C RID: 67228 RVA: 0x00401431 File Offset: 0x003FF631
+	// Token: 0x0600DB07 RID: 56071 RVA: 0x0040D949 File Offset: 0x0040BB49
 	public bool IsSdkLoginMode()
 	{
 		return KuroSdkController.Instance.CanUseSdk() || PlatformSdkManagerNew.Instance.IsSdkOn;
 	}
 
-	// Token: 0x0601069D RID: 67229 RVA: 0x0040144B File Offset: 0x003FF64B
+	// Token: 0x0600DB08 RID: 56072 RVA: 0x0040D963 File Offset: 0x0040BB63
 	public bool IsGlobalSdkLoginMode()
 	{
 		return (KuroSdkController.Instance.CanUseSdk() && KuroSdkController.Instance.GetIfGlobalSdk()) || (PlatformSdkManagerNew.Instance.IsSdkOn && PlatformSdkConfig.Instance.IsGlobal);
 	}
 
-	// Token: 0x0601069E RID: 67230 RVA: 0x0040147F File Offset: 0x003FF67F
+	// Token: 0x0600DB09 RID: 56073 RVA: 0x0040D997 File Offset: 0x0040BB97
 	private void HttpTimeoutHandle()
 	{
 		ErrorCodeController.Instance.OpenConfirmBoxByTextId("HttpTimeout");
@@ -777,7 +792,7 @@ public class LoginController : UiControllerBase
 		this.LogLoginProcessLink(LoginDefine.ELoginStatus.LoginHttpRet, Aki.Protocol.ErrorCode.HttpTimeout);
 	}
 
-	// Token: 0x0601069F RID: 67231 RVA: 0x004014B4 File Offset: 0x003FF6B4
+	// Token: 0x0600DB0A RID: 56074 RVA: 0x0040D9CC File Offset: 0x0040BBCC
 	private unsafe void OnBackToGameResult(bool result)
 	{
 		if (!LoginModel.Instance.HasBackToGameData())
@@ -813,7 +828,7 @@ public class LoginController : UiControllerBase
 		}, 3000f, null, null, true, 1f);
 	}
 
-	// Token: 0x060106A0 RID: 67232 RVA: 0x004015BC File Offset: 0x003FF7BC
+	// Token: 0x0600DB0B RID: 56075 RVA: 0x0040DAD4 File Offset: 0x0040BCD4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -832,8 +847,8 @@ public class LoginController : UiControllerBase
 		return <ConnectServer>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060106A1 RID: 67233 RVA: 0x00401618 File Offset: 0x003FF818
-	private bool HttpResultCheck(HttpResult loginHttpResult)
+	// Token: 0x0600DB0C RID: 56076 RVA: 0x0040DB30 File Offset: 0x0040BD30
+	private bool HttpResultCheck(global::HttpResult loginHttpResult)
 	{
 		int code = loginHttpResult.code;
 		if (code == 0)
@@ -861,7 +876,7 @@ public class LoginController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x060106A2 RID: 67234 RVA: 0x00401694 File Offset: 0x003FF894
+	// Token: 0x0600DB0D RID: 56077 RVA: 0x0040DBAC File Offset: 0x0040BDAC
 	private void ShowLoginHttpBanReason(int errorCode, long banTimeStamp, int banReason)
 	{
 		double num = (double)MathUtils.Instance.LongToNumber(banTimeStamp) - TimeUtil.Instance.GetServerTime();
@@ -901,7 +916,7 @@ public class LoginController : UiControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060106A3 RID: 67235 RVA: 0x004017AC File Offset: 0x003FF9AC
+	// Token: 0x0600DB0E RID: 56078 RVA: 0x0040DCC4 File Offset: 0x0040BEC4
 	[return: Nullable(0)]
 	private UniTask<bool> NewConnect(string token, List<NetHostInfo> hostInfos, [Nullable(2)] GatewayLatencyConfigVo gatewayLatencyConfig, bool isSmokeTest)
 	{
@@ -917,7 +932,7 @@ public class LoginController : UiControllerBase
 		return <NewConnect>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060106A4 RID: 67236 RVA: 0x00401810 File Offset: 0x003FFA10
+	// Token: 0x0600DB0F RID: 56079 RVA: 0x0040DD28 File Offset: 0x0040BF28
 	public void DisConnect(bool result)
 	{
 		if (!result)
@@ -930,7 +945,7 @@ public class LoginController : UiControllerBase
 		HotPatchLogReport.Instance.ReportLogin(7, "enter_game_success");
 	}
 
-	// Token: 0x060106A5 RID: 67237 RVA: 0x00401850 File Offset: 0x003FFA50
+	// Token: 0x0600DB10 RID: 56080 RVA: 0x0040DD68 File Offset: 0x0040BF68
 	[NullableContext(0)]
 	public unsafe UniTask<bool> HandleLoginGame(bool isSmokeTest, bool result)
 	{
@@ -968,7 +983,7 @@ public class LoginController : UiControllerBase
 		return tcs.Task;
 	}
 
-	// Token: 0x060106A6 RID: 67238 RVA: 0x004018A0 File Offset: 0x003FFAA0
+	// Token: 0x0600DB11 RID: 56081 RVA: 0x0040DDB8 File Offset: 0x0040BFB8
 	private string GetTdmDeviceInfo()
 	{
 		if (!UKuroStaticLibrary.IsModuleLoaded("KuroTDM"))
@@ -995,7 +1010,7 @@ public class LoginController : UiControllerBase
 		return deviceInfo;
 	}
 
-	// Token: 0x060106A7 RID: 67239 RVA: 0x0040195C File Offset: 0x003FFB5C
+	// Token: 0x0600DB12 RID: 56082 RVA: 0x0040DE74 File Offset: 0x0040C074
 	[NullableContext(0)]
 	private UniTask<bool> LoginRequest([Nullable(1)] string token)
 	{
@@ -1008,7 +1023,7 @@ public class LoginController : UiControllerBase
 		return <LoginRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060106A8 RID: 67240 RVA: 0x004019A8 File Offset: 0x003FFBA8
+	// Token: 0x0600DB13 RID: 56083 RVA: 0x0040DEC0 File Offset: 0x0040C0C0
 	private UniTask SetThirdPartyLoginInfo(LoginRequest request)
 	{
 		LoginController.<SetThirdPartyLoginInfo>d__55 <SetThirdPartyLoginInfo>d__;
@@ -1019,7 +1034,7 @@ public class LoginController : UiControllerBase
 		return <SetThirdPartyLoginInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060106A9 RID: 67241 RVA: 0x004019EC File Offset: 0x003FFBEC
+	// Token: 0x0600DB14 RID: 56084 RVA: 0x0040DF04 File Offset: 0x0040C104
 	[NullableContext(0)]
 	private UniTask<bool> AskProtoKey()
 	{
@@ -1031,7 +1046,7 @@ public class LoginController : UiControllerBase
 		return <AskProtoKey>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060106AA RID: 67242 RVA: 0x00401A30 File Offset: 0x003FFC30
+	// Token: 0x0600DB15 RID: 56085 RVA: 0x0040DF48 File Offset: 0x0040C148
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1049,7 +1064,7 @@ public class LoginController : UiControllerBase
 		return <TryLogin>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060106AB RID: 67243 RVA: 0x00401A84 File Offset: 0x003FFC84
+	// Token: 0x0600DB16 RID: 56086 RVA: 0x0040DF9C File Offset: 0x0040C19C
 	[NullableContext(0)]
 	public UniTask<Aki.Protocol.ErrorCode> CreateCharacterRequest()
 	{
@@ -1061,14 +1076,14 @@ public class LoginController : UiControllerBase
 		return <CreateCharacterRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060106AC RID: 67244 RVA: 0x00401AC7 File Offset: 0x003FFCC7
+	// Token: 0x0600DB17 RID: 56087 RVA: 0x0040DFDF File Offset: 0x0040C1DF
 	public void SetIfFirstTimeLogin()
 	{
 		LoginModel.Instance.SetTodayFirstTimeLogin(this.CheckIfDayChange());
 		LoginModel.Instance.SetLastLoginTime(TimeUtil.Instance.GetServerTime());
 	}
 
-	// Token: 0x060106AD RID: 67245 RVA: 0x00401AF0 File Offset: 0x003FFCF0
+	// Token: 0x0600DB18 RID: 56088 RVA: 0x0040E008 File Offset: 0x0040C208
 	private bool CheckIfDayChange()
 	{
 		double lastLoginTime = LoginModel.Instance.GetLastLoginTime();
@@ -1100,7 +1115,7 @@ public class LoginController : UiControllerBase
 		return serverTime >= (double)num && lastLoginTime < (double)num;
 	}
 
-	// Token: 0x060106AE RID: 67246 RVA: 0x00401C00 File Offset: 0x003FFE00
+	// Token: 0x0600DB19 RID: 56089 RVA: 0x0040E118 File Offset: 0x0040C318
 	private void RequestEnterGame(Action<bool> resolve)
 	{
 		if (this.IsSdkLoginMode())
@@ -1193,7 +1208,7 @@ public class LoginController : UiControllerBase
 		}, 13000);
 	}
 
-	// Token: 0x060106AF RID: 67247 RVA: 0x00401D80 File Offset: 0x003FFF80
+	// Token: 0x0600DB1A RID: 56090 RVA: 0x0040E298 File Offset: 0x0040C498
 	[NullableContext(0)]
 	private UniTask<bool?> AutoLoginPromise(int clientWaitingMode, int clientWaitingTime, int clientAutoInInterval)
 	{
@@ -1207,7 +1222,7 @@ public class LoginController : UiControllerBase
 		return <AutoLoginPromise>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060106B0 RID: 67248 RVA: 0x00401DD4 File Offset: 0x003FFFD4
+	// Token: 0x0600DB1B RID: 56091 RVA: 0x0040E2EC File Offset: 0x0040C4EC
 	public void EnterGame(Action<bool> resolve)
 	{
 		Log.Instance.Info(ELogModule.Login, ELogAuthor.TL, "LoginProcedure-EnterGame-进入游戏", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1217,6 +1232,22 @@ public class LoginController : UiControllerBase
 			return;
 		}
 		Log.Instance.Info(ELogModule.Login, ELogAuthor.TL, "LoginProcedure-EnterGame-请求进入游戏", default(ReadOnlySpan<ValueTuple<string, object>>));
+		ConsoleParallelVersionController.Instance.CheckOnEnterLoginServer(delegate(bool canEnter)
+		{
+			if (!canEnter)
+			{
+				Log.Instance.Warn(ELogModule.Login, ELogAuthor.TL, "LoginProcedure-EnterGame-平行包版本不一致, 阻断进入游戏", default(ReadOnlySpan<ValueTuple<string, object>>));
+				LoginModel.Instance.SetLoginStatus(LoginDefine.ELoginStatus.Init, false);
+				resolve(false);
+				return;
+			}
+			this.DoRequestEnterGame(resolve);
+		});
+	}
+
+	// Token: 0x0600DB1C RID: 56092 RVA: 0x0040E378 File Offset: 0x0040C578
+	private void DoRequestEnterGame(Action<bool> resolve)
+	{
 		Action<bool> <>9__1;
 		this.RequestEnterGame(delegate(bool isRequestEnterGameSuccess)
 		{
@@ -1226,6 +1257,7 @@ public class LoginController : UiControllerBase
 				resolve(false);
 				return;
 			}
+			HotPatchLogReport.Instance.ReportStartupTiming(EStartupTimingStep.EnterGameServer, null);
 			if (UiManager.Instance.IsViewOpen(EUiViewName.LoginQueueTipsView))
 			{
 				UniTask<bool> task = UiManager.Instance.CloseViewAsync(EUiViewName.LoginQueueTipsView);
@@ -1262,7 +1294,7 @@ public class LoginController : UiControllerBase
 		LoginUdpDelay.Start();
 	}
 
-	// Token: 0x060106B1 RID: 67249 RVA: 0x00401E60 File Offset: 0x00400060
+	// Token: 0x0600DB1D RID: 56093 RVA: 0x0040E3B4 File Offset: 0x0040C5B4
 	public bool CheckCanReConnect()
 	{
 		if (this.IsLoginViewOpen())
@@ -1281,7 +1313,7 @@ public class LoginController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060106B2 RID: 67250 RVA: 0x00401EE6 File Offset: 0x004000E6
+	// Token: 0x0600DB1E RID: 56094 RVA: 0x0040E43A File Offset: 0x0040C63A
 	private bool TimeOutCreateCharacterViewToToLoginView()
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.CreateCharacterView) && !LoginModel.Instance.IsLoginStatus(LoginDefine.ELoginStatus.EnterGameRet))
@@ -1293,7 +1325,7 @@ public class LoginController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x060106B3 RID: 67251 RVA: 0x00401F20 File Offset: 0x00400120
+	// Token: 0x0600DB1F RID: 56095 RVA: 0x0040E474 File Offset: 0x0040C674
 	public void OnSdkLogin(FLoginStruct info)
 	{
 		this.OnSdkLogin(new LoginInfo
@@ -1305,7 +1337,7 @@ public class LoginController : UiControllerBase
 		});
 	}
 
-	// Token: 0x060106B4 RID: 67252 RVA: 0x00401F60 File Offset: 0x00400160
+	// Token: 0x0600DB20 RID: 56096 RVA: 0x0040E4B4 File Offset: 0x0040C6B4
 	public void OnSdkLogin(ILoginInfo info)
 	{
 		this.LogLoginProcessLink(LoginDefine.ELoginStatus.SDKLoginAfter, Aki.Protocol.ErrorCode.Success);
@@ -1335,18 +1367,18 @@ public class LoginController : UiControllerBase
 		this.OnAfterSdkLogin(info).Forget();
 	}
 
-	// Token: 0x060106B5 RID: 67253 RVA: 0x00402084 File Offset: 0x00400284
+	// Token: 0x0600DB21 RID: 56097 RVA: 0x0040E5D8 File Offset: 0x0040C7D8
 	private UniTask OnAfterSdkLogin(ILoginInfo info)
 	{
-		LoginController.<OnAfterSdkLogin>d__69 <OnAfterSdkLogin>d__;
+		LoginController.<OnAfterSdkLogin>d__70 <OnAfterSdkLogin>d__;
 		<OnAfterSdkLogin>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<OnAfterSdkLogin>d__.info = info;
 		<OnAfterSdkLogin>d__.<>1__state = -1;
-		<OnAfterSdkLogin>d__.<>t__builder.Start<LoginController.<OnAfterSdkLogin>d__69>(ref <OnAfterSdkLogin>d__);
+		<OnAfterSdkLogin>d__.<>t__builder.Start<LoginController.<OnAfterSdkLogin>d__70>(ref <OnAfterSdkLogin>d__);
 		return <OnAfterSdkLogin>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060106B6 RID: 67254 RVA: 0x004020C8 File Offset: 0x004002C8
+	// Token: 0x0600DB22 RID: 56098 RVA: 0x0040E61C File Offset: 0x0040C81C
 	private void OnSdkServerFail(string msg, bool needReLogin = false, [Nullable(2)] Action callback = null)
 	{
 		if (msg == PlatformSdkServerMsg.PsnAuthFail.ToEnumString())
@@ -1417,19 +1449,19 @@ public class LoginController : UiControllerBase
 		ConfirmBoxController.Instance.ShowNetWorkConfirmBoxView(confirmBoxDataNew4, null);
 	}
 
-	// Token: 0x060106B7 RID: 67255 RVA: 0x0040224C File Offset: 0x0040044C
+	// Token: 0x0600DB23 RID: 56099 RVA: 0x0040E7A0 File Offset: 0x0040C9A0
 	[NullableContext(0)]
 	public UniTask<int> SdkLoginNew()
 	{
-		LoginController.<SdkLoginNew>d__71 <SdkLoginNew>d__;
+		LoginController.<SdkLoginNew>d__72 <SdkLoginNew>d__;
 		<SdkLoginNew>d__.<>t__builder = AsyncUniTaskMethodBuilder<int>.Create();
 		<SdkLoginNew>d__.<>4__this = this;
 		<SdkLoginNew>d__.<>1__state = -1;
-		<SdkLoginNew>d__.<>t__builder.Start<LoginController.<SdkLoginNew>d__71>(ref <SdkLoginNew>d__);
+		<SdkLoginNew>d__.<>t__builder.Start<LoginController.<SdkLoginNew>d__72>(ref <SdkLoginNew>d__);
 		return <SdkLoginNew>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060106B8 RID: 67256 RVA: 0x00402290 File Offset: 0x00400490
+	// Token: 0x0600DB24 RID: 56100 RVA: 0x0040E7E4 File Offset: 0x0040C9E4
 	private void LoginToSdkServer(CustomPromise<bool> finishPromise)
 	{
 		PlatformSdkManagerNew.Instance.GetPlatformSdk().Login(delegate(string msg, bool needReLogin, bool needSelectLoginFunction, [Nullable(2)] ILoginResponseData data)
@@ -1458,7 +1490,7 @@ public class LoginController : UiControllerBase
 		});
 	}
 
-	// Token: 0x060106B9 RID: 67257 RVA: 0x004022CC File Offset: 0x004004CC
+	// Token: 0x0600DB25 RID: 56101 RVA: 0x0040E820 File Offset: 0x0040CA20
 	private void ConnectToSdkServer(int currentTryTime, CustomPromise<bool> finishPromise)
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -1498,7 +1530,7 @@ public class LoginController : UiControllerBase
 		});
 	}
 
-	// Token: 0x060106BA RID: 67258 RVA: 0x0040232A File Offset: 0x0040052A
+	// Token: 0x0600DB26 RID: 56102 RVA: 0x0040E87E File Offset: 0x0040CA7E
 	public void OnSdkLoginResult(string loginCode, string uid, string username)
 	{
 		LoginModel.Instance.SetSdkLoginInfo(loginCode, uid, username);
@@ -1506,17 +1538,17 @@ public class LoginController : UiControllerBase
 		this.GetAccessToken();
 	}
 
-	// Token: 0x060106BB RID: 67259 RVA: 0x00402348 File Offset: 0x00400548
+	// Token: 0x0600DB27 RID: 56103 RVA: 0x0040E89C File Offset: 0x0040CA9C
 	private UniTask OpenSdkLoginSuccessView()
 	{
-		LoginController.<OpenSdkLoginSuccessView>d__75 <OpenSdkLoginSuccessView>d__;
+		LoginController.<OpenSdkLoginSuccessView>d__76 <OpenSdkLoginSuccessView>d__;
 		<OpenSdkLoginSuccessView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<OpenSdkLoginSuccessView>d__.<>1__state = -1;
-		<OpenSdkLoginSuccessView>d__.<>t__builder.Start<LoginController.<OpenSdkLoginSuccessView>d__75>(ref <OpenSdkLoginSuccessView>d__);
+		<OpenSdkLoginSuccessView>d__.<>t__builder.Start<LoginController.<OpenSdkLoginSuccessView>d__76>(ref <OpenSdkLoginSuccessView>d__);
 		return <OpenSdkLoginSuccessView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060106BC RID: 67260 RVA: 0x00402384 File Offset: 0x00400584
+	// Token: 0x0600DB28 RID: 56104 RVA: 0x0040E8D8 File Offset: 0x0040CAD8
 	private void GetAccessToken()
 	{
 		SdkLoginInfo sdkLoginInfo = LoginModel.Instance.GetSdkLoginInfo();
@@ -1557,7 +1589,7 @@ public class LoginController : UiControllerBase
 		});
 	}
 
-	// Token: 0x060106BD RID: 67261 RVA: 0x004023F4 File Offset: 0x004005F4
+	// Token: 0x0600DB29 RID: 56105 RVA: 0x0040E948 File Offset: 0x0040CB48
 	private void RenewSdkAccessTokenPeriodically()
 	{
 		if (LoginModel.Instance.SdkAccessTokenCountingState)
@@ -1568,7 +1600,7 @@ public class LoginController : UiControllerBase
 		LoginModel.Instance.SdkAccessTokenCountingState = true;
 	}
 
-	// Token: 0x060106BE RID: 67262 RVA: 0x0040241C File Offset: 0x0040061C
+	// Token: 0x0600DB2A RID: 56106 RVA: 0x0040E970 File Offset: 0x0040CB70
 	private void RenewSdkAccessTokenTimer()
 	{
 		double num = (double)DateTimeOffset.Now.ToUnixTimeMilliseconds() * TimeUtil.Instance.Millisecond;
@@ -1581,7 +1613,7 @@ public class LoginController : UiControllerBase
 		this.RenewSdkAccessToken();
 	}
 
-	// Token: 0x060106BF RID: 67263 RVA: 0x00402480 File Offset: 0x00400680
+	// Token: 0x0600DB2B RID: 56107 RVA: 0x0040E9D4 File Offset: 0x0040CBD4
 	private unsafe void RenewSdkAccessToken()
 	{
 		string sdkAccessToken = LoginModel.Instance.SdkAccessToken;
@@ -1611,7 +1643,7 @@ public class LoginController : UiControllerBase
 		});
 	}
 
-	// Token: 0x060106C0 RID: 67264 RVA: 0x004024B8 File Offset: 0x004006B8
+	// Token: 0x0600DB2C RID: 56108 RVA: 0x0040EA0C File Offset: 0x0040CC0C
 	public void OpenSdkLoginView()
 	{
 		if (LoginModel.Instance.HasBackToGameData())
@@ -1644,7 +1676,7 @@ public class LoginController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060106C1 RID: 67265 RVA: 0x004025A0 File Offset: 0x004007A0
+	// Token: 0x0600DB2D RID: 56109 RVA: 0x0040EAF4 File Offset: 0x0040CCF4
 	public void GetAndShowStopServerNotice()
 	{
 		string currentLoginServerId = LoginServerModel.Instance.GetCurrentLoginServerId();
@@ -1658,7 +1690,7 @@ public class LoginController : UiControllerBase
 		Http.Get(text, null, new Action<bool, int, string>(this.SetLoginNoticeData), null);
 	}
 
-	// Token: 0x060106C2 RID: 67266 RVA: 0x00402624 File Offset: 0x00400824
+	// Token: 0x0600DB2E RID: 56110 RVA: 0x0040EB78 File Offset: 0x0040CD78
 	private void SetLoginNoticeData(bool success, int code, string data)
 	{
 		if (code != 200)
@@ -1666,7 +1698,7 @@ public class LoginController : UiControllerBase
 			this.ShowDefaultServerServerMaintenanceNotice();
 			return;
 		}
-		LoginNoticeEx loginNoticeEx = LauncherJson.Parse<LoginNoticeEx>(data, null);
+		global::LoginNoticeEx loginNoticeEx = LauncherJson.Parse<global::LoginNoticeEx>(data, null);
 		if (loginNoticeEx == null)
 		{
 			this.ShowDefaultServerServerMaintenanceNotice();
@@ -1686,7 +1718,7 @@ public class LoginController : UiControllerBase
 		this.ShowLoginNotice(loginNotice);
 	}
 
-	// Token: 0x060106C3 RID: 67267 RVA: 0x004026A8 File Offset: 0x004008A8
+	// Token: 0x0600DB2F RID: 56111 RVA: 0x0040EBFC File Offset: 0x0040CDFC
 	private void ShowDefaultServerServerMaintenanceNotice()
 	{
 		this.ShowLoginNotice(new LoginNotice
@@ -1696,7 +1728,7 @@ public class LoginController : UiControllerBase
 		});
 	}
 
-	// Token: 0x060106C4 RID: 67268 RVA: 0x004026F8 File Offset: 0x004008F8
+	// Token: 0x0600DB30 RID: 56112 RVA: 0x0040EC4C File Offset: 0x0040CE4C
 	private void ShowLoginNotice(LoginNotice notice)
 	{
 		if (notice == null)
@@ -1713,7 +1745,7 @@ public class LoginController : UiControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060106C5 RID: 67269 RVA: 0x0040275C File Offset: 0x0040095C
+	// Token: 0x0600DB31 RID: 56113 RVA: 0x0040ECB0 File Offset: 0x0040CEB0
 	private void EnterLoginView()
 	{
 		if (LoginModel.Instance.HasBackToGameData())
@@ -1753,7 +1785,7 @@ public class LoginController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060106C6 RID: 67270 RVA: 0x004027F8 File Offset: 0x004009F8
+	// Token: 0x0600DB32 RID: 56114 RVA: 0x0040ED4C File Offset: 0x0040CF4C
 	private void LoginToCacheServer()
 	{
 		bool flag = this.IsSdkLoginMode();
@@ -1772,7 +1804,7 @@ public class LoginController : UiControllerBase
 		this.GetHttp(!flag, true);
 	}
 
-	// Token: 0x060106C7 RID: 67271 RVA: 0x00402878 File Offset: 0x00400A78
+	// Token: 0x0600DB33 RID: 56115 RVA: 0x0040EDCC File Offset: 0x0040CFCC
 	private void RecoverSdkLoginData()
 	{
 		BackToGameData backToGameData = LoginModel.Instance.GetBackToGameData();
@@ -1798,7 +1830,7 @@ public class LoginController : UiControllerBase
 		KuroSdkController.Instance.RecoverSdkData();
 	}
 
-	// Token: 0x060106C8 RID: 67272 RVA: 0x00402924 File Offset: 0x00400B24
+	// Token: 0x0600DB34 RID: 56116 RVA: 0x0040EE78 File Offset: 0x0040D078
 	private bool EnterLoadArchive()
 	{
 		if (!GlobalData.IsPlayInEditor)
@@ -1824,13 +1856,13 @@ public class LoginController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x060106C9 RID: 67273 RVA: 0x004029C2 File Offset: 0x00400BC2
+	// Token: 0x0600DB35 RID: 56117 RVA: 0x0040EF16 File Offset: 0x0040D116
 	public bool IsLoginViewOpen()
 	{
 		return UiManager.Instance.IsViewShow(EUiViewName.LoginView) || UiManager.Instance.IsViewShow(EUiViewName.LoginDebugView);
 	}
 
-	// Token: 0x060106CA RID: 67274 RVA: 0x004029E8 File Offset: 0x00400BE8
+	// Token: 0x0600DB36 RID: 56118 RVA: 0x0040EF3C File Offset: 0x0040D13C
 	public void ExitLoginView()
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.LoginDebugView))
@@ -1843,7 +1875,7 @@ public class LoginController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060106CB RID: 67275 RVA: 0x00402A38 File Offset: 0x00400C38
+	// Token: 0x0600DB37 RID: 56119 RVA: 0x0040EF8C File Offset: 0x0040D18C
 	private void GenerateLoginTraceId()
 	{
 		if (CloudGameManager.Instance.IsCloudGame)
@@ -1857,16 +1889,18 @@ public class LoginController : UiControllerBase
 			LoginModel.Instance.LoginTraceId = CloudGameManager.Instance.CloudGameTraceId;
 			return;
 		}
-		if (!string.IsNullOrEmpty(LauncherSdk.Get().LauncherTraceId))
+		if (string.IsNullOrEmpty(LoginModel.Instance.LoginTraceId))
 		{
-			LoginModel.Instance.LoginTraceId = LauncherSdk.Get().LauncherTraceId;
-			LauncherSdk.Get().LauncherTraceId = string.Empty;
-			return;
+			if (!string.IsNullOrEmpty(LauncherSdk.Get().LauncherTraceId))
+			{
+				LoginModel.Instance.LoginTraceId = LauncherSdk.Get().LauncherTraceId;
+				return;
+			}
+			LoginModel.Instance.LoginTraceId = Launch.StartupTraceId;
 		}
-		LoginModel.Instance.LoginTraceId = UKismetGuidLibrary.NewGuid().ToString();
 	}
 
-	// Token: 0x060106CC RID: 67276 RVA: 0x00402AEC File Offset: 0x00400CEC
+	// Token: 0x0600DB38 RID: 56120 RVA: 0x0040F034 File Offset: 0x0040D234
 	public void LogLoginProcessLink(LoginDefine.ELoginStatus loginStep, Aki.Protocol.ErrorCode code = Aki.Protocol.ErrorCode.Success)
 	{
 		SdkLoginConfig sdkLoginConfig = LoginModel.Instance.GetSdkLoginConfig();
@@ -1896,11 +1930,16 @@ public class LoginController : UiControllerBase
 		loginProcessLink.s_resolved_ip = LoginModel.Instance.ResolvedIp;
 		loginProcessLink.s_ping_results = LoginModel.Instance.PingResults;
 		loginProcessLink.s_ping_gar_results = LoginModel.Instance.GarPingResults;
-		loginProcessLink.s_quality_version = (int)HotFixManager.GetLocalResourceQualityTier();
+		ETier localResourceQualityTier = HotFixManager.LocalResourceQualityTier;
+		if (localResourceQualityTier == ETier.None)
+		{
+			localResourceQualityTier = HotFixManager.GetLocalResourceQualityTier();
+		}
+		loginProcessLink.s_quality_version = (int)localResourceQualityTier;
 		LogReportController.Instance.LogReport(loginProcessLink);
 	}
 
-	// Token: 0x060106CD RID: 67277 RVA: 0x00402CA0 File Offset: 0x00400EA0
+	// Token: 0x0600DB39 RID: 56121 RVA: 0x0040F1F4 File Offset: 0x0040D3F4
 	private List<KuroConfigMonitorData> ParseKuroConfigMonitorData()
 	{
 		List<KuroConfigMonitorData> list = new List<KuroConfigMonitorData>();
@@ -1978,7 +2017,7 @@ public class LoginController : UiControllerBase
 		return list;
 	}
 
-	// Token: 0x060106CE RID: 67278 RVA: 0x00402E68 File Offset: 0x00401068
+	// Token: 0x0600DB3A RID: 56122 RVA: 0x0040F3BC File Offset: 0x0040D5BC
 	public void DevLoginWithEditorConfig()
 	{
 		PublicUtil.Instance.SetIsSilentLogin(true);
@@ -1986,7 +2025,7 @@ public class LoginController : UiControllerBase
 		UiBlueprintFunctionLibrary.TestSceneLogin("AkiWorld_WP");
 	}
 
-	// Token: 0x060106CF RID: 67279 RVA: 0x00402E8C File Offset: 0x0040108C
+	// Token: 0x0600DB3B RID: 56123 RVA: 0x0040F3E0 File Offset: 0x0040D5E0
 	public void DoPreLogin()
 	{
 		this.DoPreDownloadCheck();
@@ -2004,19 +2043,19 @@ public class LoginController : UiControllerBase
 		this.Rpt();
 	}
 
-	// Token: 0x060106D0 RID: 67280 RVA: 0x00402EFA File Offset: 0x004010FA
+	// Token: 0x0600DB3C RID: 56124 RVA: 0x0040F44E File Offset: 0x0040D64E
 	private bool IsPioneer()
 	{
 		return AppUtil.IsPioneerApp() || KuroApplication.GetAppReleaseType().ToLower() == "prerelease";
 	}
 
-	// Token: 0x060106D1 RID: 67281 RVA: 0x00402F19 File Offset: 0x00401119
+	// Token: 0x0600DB3D RID: 56125 RVA: 0x0040F46D File Offset: 0x0040D66D
 	private bool CanRpt()
 	{
 		return this.IsPioneer() || BaseConfigController.Instance.GetRptIsOpen();
 	}
 
-	// Token: 0x060106D2 RID: 67282 RVA: 0x00402F30 File Offset: 0x00401130
+	// Token: 0x0600DB3E RID: 56126 RVA: 0x0040F484 File Offset: 0x0040D684
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -2072,33 +2111,33 @@ public class LoginController : UiControllerBase
 		return new ValueTuple<string, bool>(this.Url2, item);
 	}
 
-	// Token: 0x060106D3 RID: 67283 RVA: 0x00403060 File Offset: 0x00401260
+	// Token: 0x0600DB3F RID: 56127 RVA: 0x0040F5B4 File Offset: 0x0040D7B4
 	private void RptAction(float deltaTime)
 	{
 		this.Rpt();
 	}
 
-	// Token: 0x060106D4 RID: 67284 RVA: 0x00403068 File Offset: 0x00401268
+	// Token: 0x0600DB40 RID: 56128 RVA: 0x0040F5BC File Offset: 0x0040D7BC
 	private void Rpt()
 	{
 		this.RptAsync().Forget();
 	}
 
-	// Token: 0x060106D5 RID: 67285 RVA: 0x00403078 File Offset: 0x00401278
+	// Token: 0x0600DB41 RID: 56129 RVA: 0x0040F5CC File Offset: 0x0040D7CC
 	private UniTask RptAsync()
 	{
-		LoginController.<RptAsync>d__110 <RptAsync>d__;
+		LoginController.<RptAsync>d__111 <RptAsync>d__;
 		<RptAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<RptAsync>d__.<>4__this = this;
 		<RptAsync>d__.<>1__state = -1;
-		<RptAsync>d__.<>t__builder.Start<LoginController.<RptAsync>d__110>(ref <RptAsync>d__);
+		<RptAsync>d__.<>t__builder.Start<LoginController.<RptAsync>d__111>(ref <RptAsync>d__);
 		return <RptAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060106D6 RID: 67286 RVA: 0x004030BC File Offset: 0x004012BC
+	// Token: 0x0600DB42 RID: 56130 RVA: 0x0040F610 File Offset: 0x0040D810
 	private void RptInternal(string data, string data1, string fileName, bool isResend)
 	{
-		LoginController.<>c__DisplayClass111_0 CS$<>8__locals1 = new LoginController.<>c__DisplayClass111_0();
+		LoginController.<>c__DisplayClass112_0 CS$<>8__locals1 = new LoginController.<>c__DisplayClass112_0();
 		CS$<>8__locals1.isResend = isResend;
 		CS$<>8__locals1.fileName = fileName;
 		CS$<>8__locals1.<>4__this = this;
@@ -2110,10 +2149,10 @@ public class LoginController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060106D7 RID: 67287 RVA: 0x00403130 File Offset: 0x00401330
+	// Token: 0x0600DB43 RID: 56131 RVA: 0x0040F684 File Offset: 0x0040D884
 	private void Rpt2Internal(string data, string data1)
 	{
-		LoginController.<>c__DisplayClass112_0 CS$<>8__locals1 = new LoginController.<>c__DisplayClass112_0();
+		LoginController.<>c__DisplayClass113_0 CS$<>8__locals1 = new LoginController.<>c__DisplayClass113_0();
 		CS$<>8__locals1.data = data;
 		CS$<>8__locals1.data1 = data1;
 		ValueTuple<string, bool> url = this.GetUrl2(PublicUtil.Instance.GetIfGlobalSdk());
@@ -2129,7 +2168,7 @@ public class LoginController : UiControllerBase
 		}, 1200000f, null, null, false, 1f);
 	}
 
-	// Token: 0x060106D8 RID: 67288 RVA: 0x004031C8 File Offset: 0x004013C8
+	// Token: 0x0600DB44 RID: 56132 RVA: 0x0040F71C File Offset: 0x0040D91C
 	private unsafe void ProcessNextResend()
 	{
 		string text = (this.LocalStrArray.Count > 0) ? this.LocalStrArray[0] : string.Empty;
@@ -2176,7 +2215,7 @@ public class LoginController : UiControllerBase
 		}
 		else
 		{
-			data = LauncherJson.Stringify<RptExtra>(new RptExtra
+			data = LauncherJson.Stringify(new RptExtra
 			{
 				FailedTime = text.Split('.', StringSplitOptions.None)[0]
 			}, null);
@@ -2184,7 +2223,7 @@ public class LoginController : UiControllerBase
 		this.RptInternal(text5, data, text, true);
 	}
 
-	// Token: 0x060106D9 RID: 67289 RVA: 0x0040337E File Offset: 0x0040157E
+	// Token: 0x0600DB45 RID: 56133 RVA: 0x0040F8D2 File Offset: 0x0040DAD2
 	private void DeleteResend(string filePath)
 	{
 		if (UKuroStaticLibrary.DeleteFile(filePath, false, false, false))
@@ -2194,7 +2233,7 @@ public class LoginController : UiControllerBase
 		this.ProcessNextResend();
 	}
 
-	// Token: 0x060106DA RID: 67290 RVA: 0x004033A0 File Offset: 0x004015A0
+	// Token: 0x0600DB46 RID: 56134 RVA: 0x0040F8F4 File Offset: 0x0040DAF4
 	[NullableContext(0)]
 	private ValueTuple<float, float> GetWidthHeightWithLimit(float width, float height, float limit)
 	{
@@ -2211,10 +2250,10 @@ public class LoginController : UiControllerBase
 		return new ValueTuple<float, float>(MathF.Floor(width / num2), MathF.Floor(height / num2));
 	}
 
-	// Token: 0x060106DB RID: 67291 RVA: 0x004033F0 File Offset: 0x004015F0
+	// Token: 0x0600DB47 RID: 56135 RVA: 0x0040F944 File Offset: 0x0040DB44
 	private unsafe void RequestByIdString(string idString)
 	{
-		LoginController.<>c__DisplayClass116_0 CS$<>8__locals1 = new LoginController.<>c__DisplayClass116_0();
+		LoginController.<>c__DisplayClass117_0 CS$<>8__locals1 = new LoginController.<>c__DisplayClass117_0();
 		CS$<>8__locals1.<>4__this = this;
 		CS$<>8__locals1.idString = idString;
 		if (this.SucceedIdStr == CS$<>8__locals1.idString)
@@ -2247,13 +2286,13 @@ public class LoginController : UiControllerBase
 		UKuroHttp.PostAli(tmap, DelegateUtils.ToManualReleaseDelegate<FHttpResponseHandle>(new Action<bool, int, string>(CS$<>8__locals1.<RequestByIdString>g__ResponseCallback|0)), 10f);
 	}
 
-	// Token: 0x060106DC RID: 67292 RVA: 0x004035B8 File Offset: 0x004017B8
+	// Token: 0x0600DB48 RID: 56136 RVA: 0x0040FB0C File Offset: 0x0040DD0C
 	private void DoDownload(string result, string idString)
 	{
-		LoginController.<>c__DisplayClass117_0 CS$<>8__locals1 = new LoginController.<>c__DisplayClass117_0();
+		LoginController.<>c__DisplayClass118_0 CS$<>8__locals1 = new LoginController.<>c__DisplayClass118_0();
 		CS$<>8__locals1.<>4__this = this;
 		CS$<>8__locals1.idString = idString;
-		Result result2 = LauncherJson.Parse<Result>(result, null);
+		global::Result result2 = LauncherJson.Parse<global::Result>(result, null);
 		if (result2 == null || result2.Data == null)
 		{
 			return;
@@ -2290,7 +2329,7 @@ public class LoginController : UiControllerBase
 		this.DownloadCount++;
 	}
 
-	// Token: 0x060106DD RID: 67293 RVA: 0x004036EC File Offset: 0x004018EC
+	// Token: 0x0600DB49 RID: 56137 RVA: 0x0040FC40 File Offset: 0x0040DE40
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -2321,7 +2360,7 @@ public class LoginController : UiControllerBase
 		return new ValueTuple<string, string>(string.Empty, string.Empty);
 	}
 
-	// Token: 0x060106DE RID: 67294 RVA: 0x0040377C File Offset: 0x0040197C
+	// Token: 0x0600DB4A RID: 56138 RVA: 0x0040FCD0 File Offset: 0x0040DED0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -2373,7 +2412,7 @@ public class LoginController : UiControllerBase
 		return new ValueTuple<string, string>(item, item2);
 	}
 
-	// Token: 0x060106DF RID: 67295 RVA: 0x004038BC File Offset: 0x00401ABC
+	// Token: 0x0600DB4B RID: 56139 RVA: 0x0040FE10 File Offset: 0x0040E010
 	private void UpdateConfigVersion()
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -2390,13 +2429,35 @@ public class LoginController : UiControllerBase
 		instance.ResourceVersion = ((!string.IsNullOrEmpty(instance.ResourceVersion)) ? instance.ResourceVersion : appVersion);
 	}
 
-	// Token: 0x060106E0 RID: 67296 RVA: 0x00403992 File Offset: 0x00401B92
+	// Token: 0x0600DB4C RID: 56140 RVA: 0x0040FEE8 File Offset: 0x0040E0E8
+	private string GetGradedResourceVersion()
+	{
+		RemoteVersionConfig valueOrDefault = RemoteInfo.Instance.NewTierConfig.GetValueOrDefault(RemoteInfo.Instance.ActiveTier);
+		string text;
+		if (valueOrDefault == null)
+		{
+			text = null;
+		}
+		else
+		{
+			VersionItem valueOrDefault2 = valueOrDefault.ResVersions.GetValueOrDefault("resource");
+			text = ((valueOrDefault2 != null) ? valueOrDefault2.Version : null);
+		}
+		string text2 = text;
+		if (!string.IsNullOrEmpty(text2))
+		{
+			return text2;
+		}
+		return LoginModel.Instance.ResourceVersion;
+	}
+
+	// Token: 0x0600DB4D RID: 56141 RVA: 0x0040FF45 File Offset: 0x0040E145
 	private bool NeedVerifyConfigVersion()
 	{
 		return !GlobalData.IsPlayInEditor;
 	}
 
-	// Token: 0x060106E1 RID: 67297 RVA: 0x0040399C File Offset: 0x00401B9C
+	// Token: 0x0600DB4E RID: 56142 RVA: 0x0040FF50 File Offset: 0x0040E150
 	private void RegisterVersionVerifyTick()
 	{
 		if (!this.NeedVerifyConfigVersion())
@@ -2412,7 +2473,7 @@ public class LoginController : UiControllerBase
 		instance.VerifyConfigVersionHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnVerifyVersionTick), 90000f, 1f, null, null, true);
 	}
 
-	// Token: 0x060106E2 RID: 67298 RVA: 0x00403A04 File Offset: 0x00401C04
+	// Token: 0x0600DB4F RID: 56143 RVA: 0x0040FFB8 File Offset: 0x0040E1B8
 	private void RemoveVersionVerifyTick()
 	{
 		if (!this.NeedVerifyConfigVersion())
@@ -2428,7 +2489,7 @@ public class LoginController : UiControllerBase
 		instance.VerifyConfigVersionHandle = null;
 	}
 
-	// Token: 0x060106E3 RID: 67299 RVA: 0x00403A44 File Offset: 0x00401C44
+	// Token: 0x0600DB50 RID: 56144 RVA: 0x0040FFF8 File Offset: 0x0040E1F8
 	private void OnVerifyVersionTick(float deltaTime)
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -2439,7 +2500,7 @@ public class LoginController : UiControllerBase
 		Net.Instance.Send(EPushMessageId.CheckClientPush, checkClientPush);
 	}
 
-	// Token: 0x060106E4 RID: 67300 RVA: 0x00403A90 File Offset: 0x00401C90
+	// Token: 0x0600DB51 RID: 56145 RVA: 0x00410044 File Offset: 0x0040E244
 	private bool TryOpenSdkChangeExitGameConfirmBoxView()
 	{
 		bool flag = LoginModel.Instance.CheckLoginToGameServerSdkConfigIfSame();
@@ -2455,13 +2516,13 @@ public class LoginController : UiControllerBase
 		return flag;
 	}
 
-	// Token: 0x060106E5 RID: 67301 RVA: 0x00403AE3 File Offset: 0x00401CE3
+	// Token: 0x0600DB52 RID: 56146 RVA: 0x00410097 File Offset: 0x0040E297
 	private void OnWorldDoneAndCloseLoading()
 	{
 		this.TryOpenSdkChangeExitGameConfirmBoxView();
 	}
 
-	// Token: 0x060106E6 RID: 67302 RVA: 0x00403AEC File Offset: 0x00401CEC
+	// Token: 0x0600DB53 RID: 56147 RVA: 0x004100A0 File Offset: 0x0040E2A0
 	private void SdkLoginResult()
 	{
 		if (LoginModel.Instance.HasBackToGameData() && PlatformSdkManagerNew.Instance.IsSdkOn)
@@ -2475,13 +2536,13 @@ public class LoginController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060106E7 RID: 67303 RVA: 0x00403B25 File Offset: 0x00401D25
+	// Token: 0x0600DB54 RID: 56148 RVA: 0x004100D9 File Offset: 0x0040E2D9
 	private void SdkRefreshAccessToken()
 	{
 		this.RenewSdkAccessToken();
 	}
 
-	// Token: 0x060106E8 RID: 67304 RVA: 0x00403B2D File Offset: 0x00401D2D
+	// Token: 0x0600DB55 RID: 56149 RVA: 0x004100E1 File Offset: 0x0040E2E1
 	private void DoPreDownloadCheck()
 	{
 		IPreDownload preDownload = PreDownloadManager.Get();
@@ -2492,8 +2553,8 @@ public class LoginController : UiControllerBase
 		}
 	}
 
-	// Token: 0x17001448 RID: 5192
-	// (get) Token: 0x060106E9 RID: 67305 RVA: 0x00403B4B File Offset: 0x00401D4B
+	// Token: 0x17001475 RID: 5237
+	// (get) Token: 0x0600DB56 RID: 56150 RVA: 0x004100FF File Offset: 0x0040E2FF
 	public static LoginController Instance
 	{
 		get
@@ -2502,7 +2563,7 @@ public class LoginController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060106EA RID: 67306 RVA: 0x00403B52 File Offset: 0x00401D52
+	// Token: 0x0600DB57 RID: 56151 RVA: 0x00410106 File Offset: 0x0040E306
 	public static LoginController GetOrCreateInstance()
 	{
 		if (LoginController._Instance == null)
@@ -2512,7 +2573,7 @@ public class LoginController : UiControllerBase
 		return LoginController._Instance;
 	}
 
-	// Token: 0x060106EB RID: 67307 RVA: 0x00403B66 File Offset: 0x00401D66
+	// Token: 0x0600DB58 RID: 56152 RVA: 0x0041011A File Offset: 0x0040E31A
 	public static bool CreateInstance()
 	{
 		if (LoginController._Instance != null)
@@ -2523,80 +2584,80 @@ public class LoginController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060106EC RID: 67308 RVA: 0x00403B7C File Offset: 0x00401D7C
+	// Token: 0x0600DB59 RID: 56153 RVA: 0x00410130 File Offset: 0x0040E330
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060106ED RID: 67309 RVA: 0x00403B7E File Offset: 0x00401D7E
+	// Token: 0x0600DB5A RID: 56154 RVA: 0x00410132 File Offset: 0x0040E332
 	public static void ResetStaticDefaultValue()
 	{
 		LoginController._Instance = null;
 	}
 
-	// Token: 0x060106EE RID: 67310 RVA: 0x00403B86 File Offset: 0x00401D86
+	// Token: 0x0600DB5B RID: 56155 RVA: 0x0041013A File Offset: 0x0040E33A
 	static LoginController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LoginController.CreateStaticDefaultValue), new Action(LoginController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400794D RID: 31053
+	// Token: 0x04007A46 RID: 31302
 	private const long VERIFY_CONFIG_VERSION_INTERVAL = 90000L;
 
-	// Token: 0x0400794E RID: 31054
+	// Token: 0x04007A47 RID: 31303
 	private const int TRY_BACK_TO_GAME_INTERVAL = 3000;
 
-	// Token: 0x0400794F RID: 31055
+	// Token: 0x04007A48 RID: 31304
 	private const long RENWE_ACCESS_TOKEN_INTERVAL = 600000L;
 
-	// Token: 0x04007950 RID: 31056
+	// Token: 0x04007A49 RID: 31305
 	private const long RPT_INTERVAL = 600000L;
 
-	// Token: 0x04007951 RID: 31057
+	// Token: 0x04007A4A RID: 31306
 	private const int RENWE_ACCESS_TOKEN_CD = 600;
 
-	// Token: 0x04007952 RID: 31058
+	// Token: 0x04007A4B RID: 31307
 	private const long FOREVERTIME = 86313600L;
 
-	// Token: 0x04007953 RID: 31059
+	// Token: 0x04007A4C RID: 31308
 	private const string HTTP_PREFIX_STRING = "http://";
 
-	// Token: 0x04007954 RID: 31060
+	// Token: 0x04007A4D RID: 31309
 	private const int LOGINURL_TIMEOUT = 6;
 
-	// Token: 0x04007955 RID: 31061
+	// Token: 0x04007A4E RID: 31310
 	private const int LOGINURL_POLLING_COUNT = 3;
 
-	// Token: 0x04007956 RID: 31062
+	// Token: 0x04007A4F RID: 31311
 	private const int PSN_TICK_INTERVAL = 1000;
 
-	// Token: 0x04007957 RID: 31063
+	// Token: 0x04007A50 RID: 31312
 	private const int HEALTH_TIP_INTERVAL = 1000;
 
-	// Token: 0x04007958 RID: 31064
+	// Token: 0x04007A51 RID: 31313
 	[Nullable(2)]
 	private TimerHandle PsnTimerHandle;
 
-	// Token: 0x04007959 RID: 31065
+	// Token: 0x04007A52 RID: 31314
 	[Nullable(2)]
 	private TimerHandle HealthTipTimerHandle;
 
-	// Token: 0x0400795A RID: 31066
+	// Token: 0x04007A53 RID: 31315
 	private int LoginUrlPollingIndex;
 
-	// Token: 0x0400795B RID: 31067
+	// Token: 0x04007A54 RID: 31316
 	[Nullable(2)]
 	private TimerHandle RptTimerHandle;
 
-	// Token: 0x0400795C RID: 31068
+	// Token: 0x04007A55 RID: 31317
 	[Nullable(2)]
 	private string RptLocalIp;
 
-	// Token: 0x0400795D RID: 31069
+	// Token: 0x04007A56 RID: 31318
 	[Nullable(2)]
 	public SubPackageHttpData GameSubPackageHttpData;
 
-	// Token: 0x0400795E RID: 31070
+	// Token: 0x04007A57 RID: 31319
 	[Nullable(new byte[]
 	{
 		1,
@@ -2624,10 +2685,10 @@ public class LoginController : UiControllerBase
 		instance2.Error(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 	};
 
-	// Token: 0x0400795F RID: 31071
+	// Token: 0x04007A58 RID: 31320
 	private double LastRenewSdkAccessTokenServerTimeStamp;
 
-	// Token: 0x04007960 RID: 31072
+	// Token: 0x04007A59 RID: 31321
 	public readonly Action OnLogoutAccount = delegate()
 	{
 		bool flag = LoginModel.Instance.IsSdkLoggedIn();
@@ -2641,32 +2702,32 @@ public class LoginController : UiControllerBase
 		HotPatchLogReport.Instance.ReportLogin(5, "sdk_login_logout");
 	};
 
-	// Token: 0x04007961 RID: 31073
+	// Token: 0x04007A5A RID: 31322
 	private readonly Action QuitGame = delegate()
 	{
 		KuroSdkController.Instance.PostKuroSdkEvent(EKuroSdkEventKey.KUROSDKEXIT);
 	};
 
-	// Token: 0x04007962 RID: 31074
+	// Token: 0x04007A5B RID: 31323
 	private string SucceedIdStr = string.Empty;
 
-	// Token: 0x04007963 RID: 31075
+	// Token: 0x04007A5C RID: 31324
 	private readonly List<string> LocalStrArray = new List<string>();
 
-	// Token: 0x04007964 RID: 31076
+	// Token: 0x04007A5D RID: 31325
 	private int SavedCount;
 
-	// Token: 0x04007965 RID: 31077
+	// Token: 0x04007A5E RID: 31326
 	private int DownloadCount;
 
-	// Token: 0x04007966 RID: 31078
+	// Token: 0x04007A5F RID: 31327
 	[Nullable(2)]
 	private UDownloaderProxy CurDownloadProxy;
 
-	// Token: 0x04007967 RID: 31079
+	// Token: 0x04007A60 RID: 31328
 	private string Url2 = string.Empty;
 
-	// Token: 0x04007968 RID: 31080
+	// Token: 0x04007A61 RID: 31329
 	[Nullable(2)]
 	private static LoginController _Instance;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A33 RID: 6707
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BC8 RID: 7112
 	public class IFaceExpressionAnimSequenceConfig : IFaceExpressionConfig
 	{
-		// Token: 0x06008F9A RID: 36762 RVA: 0x0014F39C File Offset: 0x0014D59C
+		// Token: 0x06009704 RID: 38660 RVA: 0x0015F2C8 File Offset: 0x0015D4C8
 		private IFaceExpressionAnimSequenceConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008F9B RID: 36763 RVA: 0x0014F3D4 File Offset: 0x0014D5D4
+		// Token: 0x06009705 RID: 38661 RVA: 0x0015F300 File Offset: 0x0015D500
 		public static IFaceExpressionAnimSequenceConfig Create([Nullable(2)] IFaceExpressionAnimSequenceConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008F9C RID: 36764 RVA: 0x0014F3E7 File Offset: 0x0014D5E7
+		// Token: 0x06009706 RID: 38662 RVA: 0x0015F313 File Offset: 0x0015D513
 		public static IFaceExpressionAnimSequenceConfig CreateFromSetValue([Nullable(2)] IFaceExpressionAnimSequenceConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008F9D RID: 36765 RVA: 0x0014F3FA File Offset: 0x0014D5FA
+		// Token: 0x06009707 RID: 38663 RVA: 0x0015F326 File Offset: 0x0015D526
 		public new IFaceExpressionAnimSequenceConfig_SetValue ToSetValue()
 		{
 			return new IFaceExpressionAnimSequenceConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DD6 RID: 11734
-		// (get) Token: 0x06008F9E RID: 36766 RVA: 0x0014F419 File Offset: 0x0014D619
-		// (set) Token: 0x06008F9F RID: 36767 RVA: 0x0014F444 File Offset: 0x0014D644
+		// Token: 0x17002FE3 RID: 12259
+		// (get) Token: 0x06009708 RID: 38664 RVA: 0x0015F345 File Offset: 0x0015D545
+		// (set) Token: 0x06009709 RID: 38665 RVA: 0x0015F370 File Offset: 0x0015D570
 		public override EFaceExpressionConfigType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DD7 RID: 11735
-		// (get) Token: 0x06008FA0 RID: 36768 RVA: 0x0014F452 File Offset: 0x0014D652
-		// (set) Token: 0x06008FA1 RID: 36769 RVA: 0x0014F47D File Offset: 0x0014D67D
+		// Token: 0x17002FE4 RID: 12260
+		// (get) Token: 0x0600970A RID: 38666 RVA: 0x0015F37E File Offset: 0x0015D57E
+		// (set) Token: 0x0600970B RID: 38667 RVA: 0x0015F3A9 File Offset: 0x0015D5A9
 		public virtual string Path
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040058D1 RID: 22737
+		// Token: 0x04005D36 RID: 23862
 		[Nullable(2)]
 		protected new IFaceExpressionAnimSequenceConfig FbInstance;
 
-		// Token: 0x040058D2 RID: 22738
+		// Token: 0x04005D37 RID: 23863
 		[Nullable(2)]
 		protected new IFaceExpressionAnimSequenceConfig_SetValue PocoInterface;
 	}

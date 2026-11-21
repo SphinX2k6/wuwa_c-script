@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C87 RID: 19591
+	// Token: 0x02005180 RID: 20864
 	public static class IPlayerAttributeTypeVerify
 	{
-		// Token: 0x0601F12E RID: 127278 RVA: 0x00457B96 File Offset: 0x00455D96
+		// Token: 0x06020D50 RID: 134480 RVA: 0x0048B6E6 File Offset: 0x004898E6
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			return verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyTableEnd(tablePos);

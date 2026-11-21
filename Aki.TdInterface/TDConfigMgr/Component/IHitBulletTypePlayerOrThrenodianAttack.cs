@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200041A RID: 1050
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000473 RID: 1139
 	public class IHitBulletTypePlayerOrThrenodianAttack : IHitBulletType
 	{
-		// Token: 0x0600152B RID: 5419 RVA: 0x00042A10 File Offset: 0x00040C10
+		// Token: 0x060016C5 RID: 5829 RVA: 0x00046758 File Offset: 0x00044958
 		private IHitBulletTypePlayerOrThrenodianAttack_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600152C RID: 5420 RVA: 0x00042A48 File Offset: 0x00040C48
+		// Token: 0x060016C6 RID: 5830 RVA: 0x00046790 File Offset: 0x00044990
 		public static IHitBulletTypePlayerOrThrenodianAttack Create([Nullable(2)] IHitBulletTypePlayerOrThrenodianAttack instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600152D RID: 5421 RVA: 0x00042A5B File Offset: 0x00040C5B
+		// Token: 0x060016C7 RID: 5831 RVA: 0x000467A3 File Offset: 0x000449A3
 		public static IHitBulletTypePlayerOrThrenodianAttack CreateFromSetValue([Nullable(2)] IHitBulletTypePlayerOrThrenodianAttack_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600152E RID: 5422 RVA: 0x00042A6E File Offset: 0x00040C6E
+		// Token: 0x060016C8 RID: 5832 RVA: 0x000467B6 File Offset: 0x000449B6
 		public new IHitBulletTypePlayerOrThrenodianAttack_SetValue ToSetValue()
 		{
 			return new IHitBulletTypePlayerOrThrenodianAttack_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005CC RID: 1484
-		// (get) Token: 0x0600152F RID: 5423 RVA: 0x00042A81 File Offset: 0x00040C81
-		// (set) Token: 0x06001530 RID: 5424 RVA: 0x00042AAC File Offset: 0x00040CAC
+		// Token: 0x17000633 RID: 1587
+		// (get) Token: 0x060016C9 RID: 5833 RVA: 0x000467C9 File Offset: 0x000449C9
+		// (set) Token: 0x060016CA RID: 5834 RVA: 0x000467F4 File Offset: 0x000449F4
 		public override EHitBulletType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400106D RID: 4205
+		// Token: 0x0400118F RID: 4495
 		[Nullable(2)]
 		protected new IHitBulletTypePlayerOrThrenodianAttack FbInstance;
 
-		// Token: 0x0400106E RID: 4206
+		// Token: 0x04001190 RID: 4496
 		[Nullable(2)]
 		protected new IHitBulletTypePlayerOrThrenodianAttack_SetValue PocoInterface;
 	}

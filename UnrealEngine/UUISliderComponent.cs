@@ -6,38 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021B2 RID: 8626
-	[NullableContext(1)]
+	// Token: 0x02000725 RID: 1829
+	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UISliderComponent")]
 	[UnrealStructLayout(1320, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1320)]
-	public class UUISliderComponent : UUISelectableComponent, IUnrealUObject, IUnrealObject, ILGUIPointerDragInterface, IUnrealNativeInterface, IUnrealInterface
+	public class UUISliderComponent : UUISelectableComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020CE9 RID: 134377 RVA: 0x00307A67 File Offset: 0x00305C67
+		// Token: 0x06009E9D RID: 40605 RVA: 0x000EBB96 File Offset: 0x000E9D96
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUISliderComponent._ClassPtr;
 		}
 
-		// Token: 0x06020CEA RID: 134378 RVA: 0x00307A73 File Offset: 0x00305C73
-		int ILGUIPointerDragInterface.InterfaceOffset()
-		{
-			return UUISliderComponent.__InterfaceOffset_ILGUIPointerDragInterface;
-		}
-
-		// Token: 0x06020CEB RID: 134379 RVA: 0x00307A7C File Offset: 0x00305C7C
+		// Token: 0x06009E9E RID: 40606 RVA: 0x000EBBA4 File Offset: 0x000E9DA4
 		public UUISliderComponent() : this(BuiltinUtils.AllocNativeUObject(UUISliderComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020CEC RID: 134380 RVA: 0x00307AA4 File Offset: 0x00305CA4
+		// Token: 0x06009E9F RID: 40607 RVA: 0x000EBBCC File Offset: 0x000E9DCC
+		[NullableContext(1)]
 		public UUISliderComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUISliderComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008020 RID: 32800
-		// (get) Token: 0x06020CED RID: 134381 RVA: 0x00307AD7 File Offset: 0x00305CD7
-		// (set) Token: 0x06020CEE RID: 134382 RVA: 0x00307AE7 File Offset: 0x00305CE7
+		// Token: 0x17001D6E RID: 7534
+		// (get) Token: 0x06009EA0 RID: 40608 RVA: 0x000EBBFF File Offset: 0x000E9DFF
+		// (set) Token: 0x06009EA1 RID: 40609 RVA: 0x000EBC0F File Offset: 0x000E9E0F
 		public unsafe float Value
 		{
 			get
@@ -50,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008021 RID: 32801
-		// (get) Token: 0x06020CEF RID: 134383 RVA: 0x00307AF8 File Offset: 0x00305CF8
-		// (set) Token: 0x06020CF0 RID: 134384 RVA: 0x00307B08 File Offset: 0x00305D08
+		// Token: 0x17001D6F RID: 7535
+		// (get) Token: 0x06009EA2 RID: 40610 RVA: 0x000EBC20 File Offset: 0x000E9E20
+		// (set) Token: 0x06009EA3 RID: 40611 RVA: 0x000EBC30 File Offset: 0x000E9E30
 		public unsafe float MinValue
 		{
 			get
@@ -65,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008022 RID: 32802
-		// (get) Token: 0x06020CF1 RID: 134385 RVA: 0x00307B19 File Offset: 0x00305D19
-		// (set) Token: 0x06020CF2 RID: 134386 RVA: 0x00307B29 File Offset: 0x00305D29
+		// Token: 0x17001D70 RID: 7536
+		// (get) Token: 0x06009EA4 RID: 40612 RVA: 0x000EBC41 File Offset: 0x000E9E41
+		// (set) Token: 0x06009EA5 RID: 40613 RVA: 0x000EBC51 File Offset: 0x000E9E51
 		public unsafe float MaxValue
 		{
 			get
@@ -80,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008023 RID: 32803
-		// (get) Token: 0x06020CF3 RID: 134387 RVA: 0x00307B3A File Offset: 0x00305D3A
-		// (set) Token: 0x06020CF4 RID: 134388 RVA: 0x00307B4A File Offset: 0x00305D4A
+		// Token: 0x17001D71 RID: 7537
+		// (get) Token: 0x06009EA6 RID: 40614 RVA: 0x000EBC62 File Offset: 0x000E9E62
+		// (set) Token: 0x06009EA7 RID: 40615 RVA: 0x000EBC72 File Offset: 0x000E9E72
 		public unsafe bool WholeNumbers
 		{
 			get
@@ -95,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008024 RID: 32804
-		// (get) Token: 0x06020CF5 RID: 134389 RVA: 0x00307B5B File Offset: 0x00305D5B
-		// (set) Token: 0x06020CF6 RID: 134390 RVA: 0x00307B6F File Offset: 0x00305D6F
+		// Token: 0x17001D72 RID: 7538
+		// (get) Token: 0x06009EA8 RID: 40616 RVA: 0x000EBC83 File Offset: 0x000E9E83
+		// (set) Token: 0x06009EA9 RID: 40617 RVA: 0x000EBC97 File Offset: 0x000E9E97
 		[Nullable(new byte[]
 		{
 			0,
@@ -125,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008025 RID: 32805
-		// (get) Token: 0x06020CF7 RID: 134391 RVA: 0x00307B84 File Offset: 0x00305D84
-		// (set) Token: 0x06020CF8 RID: 134392 RVA: 0x00307B98 File Offset: 0x00305D98
+		// Token: 0x17001D73 RID: 7539
+		// (get) Token: 0x06009EAA RID: 40618 RVA: 0x000EBCAC File Offset: 0x000E9EAC
+		// (set) Token: 0x06009EAB RID: 40619 RVA: 0x000EBCC0 File Offset: 0x000E9EC0
 		[Nullable(new byte[]
 		{
 			0,
@@ -155,26 +150,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008026 RID: 32806
-		// (get) Token: 0x06020CF9 RID: 134393 RVA: 0x00307BAD File Offset: 0x00305DAD
-		// (set) Token: 0x06020CFA RID: 134394 RVA: 0x00307BBD File Offset: 0x00305DBD
-		public unsafe UISliderDirectionType DirectionType
-		{
-			get
-			{
-				return (UISliderDirectionType)(*(base.NativePtr + (IntPtr)UUISliderComponent.__PropertyOffset_DirectionType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUISliderComponent.__PropertyOffset_DirectionType) = (byte)value;
-			}
-		}
-
-		// Token: 0x17008027 RID: 32807
-		// (get) Token: 0x06020CFB RID: 134395 RVA: 0x00307BD0 File Offset: 0x00305DD0
-		// (set) Token: 0x06020CFC RID: 134396 RVA: 0x00307C09 File Offset: 0x00305E09
+		// Token: 0x17001D74 RID: 7540
+		// (get) Token: 0x06009EAC RID: 40620 RVA: 0x000EBCD8 File Offset: 0x000E9ED8
+		// (set) Token: 0x06009EAD RID: 40621 RVA: 0x000EBD11 File Offset: 0x000E9F11
+		[Nullable(1)]
 		public FLGUISliderDynamicDelegate OnValueChangeCb
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -185,17 +167,20 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				FScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)UUISliderComponent.__PropertyOffset_OnValueChangeCb, (value != null) ? value.NativePtr : ((IntPtr)0));
 			}
 		}
 
-		// Token: 0x17008028 RID: 32808
-		// (get) Token: 0x06020CFD RID: 134397 RVA: 0x00307C2C File Offset: 0x00305E2C
-		// (set) Token: 0x06020CFE RID: 134398 RVA: 0x00307C65 File Offset: 0x00305E65
+		// Token: 0x17001D75 RID: 7541
+		// (get) Token: 0x06009EAE RID: 40622 RVA: 0x000EBD34 File Offset: 0x000E9F34
+		// (set) Token: 0x06009EAF RID: 40623 RVA: 0x000EBD6D File Offset: 0x000E9F6D
+		[Nullable(1)]
 		public FLGUISliderEndDragDelegate OnEndDragCb
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -206,17 +191,20 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				FScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)UUISliderComponent.__PropertyOffset_OnEndDragCb, (value != null) ? value.NativePtr : ((IntPtr)0));
 			}
 		}
 
-		// Token: 0x17008029 RID: 32809
-		// (get) Token: 0x06020CFF RID: 134399 RVA: 0x00307C88 File Offset: 0x00305E88
-		// (set) Token: 0x06020D00 RID: 134400 RVA: 0x00307CC1 File Offset: 0x00305EC1
+		// Token: 0x17001D76 RID: 7542
+		// (get) Token: 0x06009EB0 RID: 40624 RVA: 0x000EBD90 File Offset: 0x000E9F90
+		// (set) Token: 0x06009EB1 RID: 40625 RVA: 0x000EBDC9 File Offset: 0x000E9FC9
+		[Nullable(1)]
 		public FLGUISliderPointUpDelegateOneParams OnPointUpCallBack
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -227,69 +215,61 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				FScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)UUISliderComponent.__PropertyOffset_OnPointUpCallBack, (value != null) ? value.NativePtr : ((IntPtr)0));
 			}
 		}
 
-		// Token: 0x1700802A RID: 32810
-		// (get) Token: 0x06020D01 RID: 134401 RVA: 0x00307CE2 File Offset: 0x00305EE2
-		// (set) Token: 0x06020D02 RID: 134402 RVA: 0x00307CF6 File Offset: 0x00305EF6
-		[Nullable(2)]
+		// Token: 0x17001D77 RID: 7543
+		// (get) Token: 0x06009EB2 RID: 40626 RVA: 0x000EBDEA File Offset: 0x000E9FEA
+		// (set) Token: 0x06009EB3 RID: 40627 RVA: 0x000EBDFE File Offset: 0x000E9FFE
 		public unsafe UAkAudioEvent DragBeginAudioEvent
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + UUISliderComponent.__PropertyOffset_DragBeginAudioEvent);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UUISliderComponent.__PropertyOffset_DragBeginAudioEvent, value);
 			}
 		}
 
-		// Token: 0x1700802B RID: 32811
-		// (get) Token: 0x06020D03 RID: 134403 RVA: 0x00307D0B File Offset: 0x00305F0B
-		// (set) Token: 0x06020D04 RID: 134404 RVA: 0x00307D1F File Offset: 0x00305F1F
-		[Nullable(2)]
+		// Token: 0x17001D78 RID: 7544
+		// (get) Token: 0x06009EB4 RID: 40628 RVA: 0x000EBE13 File Offset: 0x000EA013
+		// (set) Token: 0x06009EB5 RID: 40629 RVA: 0x000EBE27 File Offset: 0x000EA027
 		public unsafe UAkAudioEvent DragEndAudioEvent
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + UUISliderComponent.__PropertyOffset_DragEndAudioEvent);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UUISliderComponent.__PropertyOffset_DragEndAudioEvent, value);
 			}
 		}
 
-		// Token: 0x1700802C RID: 32812
-		// (get) Token: 0x06020D05 RID: 134405 RVA: 0x00307D34 File Offset: 0x00305F34
-		// (set) Token: 0x06020D06 RID: 134406 RVA: 0x00307D48 File Offset: 0x00305F48
-		[Nullable(2)]
+		// Token: 0x17001D79 RID: 7545
+		// (get) Token: 0x06009EB6 RID: 40630 RVA: 0x000EBE3C File Offset: 0x000EA03C
+		// (set) Token: 0x06009EB7 RID: 40631 RVA: 0x000EBE50 File Offset: 0x000EA050
 		public unsafe UAkAudioEvent DraggingAudioEvent
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + UUISliderComponent.__PropertyOffset_DraggingAudioEvent);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UUISliderComponent.__PropertyOffset_DraggingAudioEvent, value);
 			}
 		}
 
-		// Token: 0x1700802D RID: 32813
-		// (get) Token: 0x06020D07 RID: 134407 RVA: 0x00307D5D File Offset: 0x00305F5D
-		// (set) Token: 0x06020D08 RID: 134408 RVA: 0x00307D6D File Offset: 0x00305F6D
+		// Token: 0x17001D7A RID: 7546
+		// (get) Token: 0x06009EB8 RID: 40632 RVA: 0x000EBE65 File Offset: 0x000EA065
+		// (set) Token: 0x06009EB9 RID: 40633 RVA: 0x000EBE75 File Offset: 0x000EA075
 		public unsafe float DraggingAudioEventInterval
 		{
 			get
@@ -302,9 +282,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700802E RID: 32814
-		// (get) Token: 0x06020D09 RID: 134409 RVA: 0x00307D7E File Offset: 0x00305F7E
-		// (set) Token: 0x06020D0A RID: 134410 RVA: 0x00307D92 File Offset: 0x00305F92
+		// Token: 0x17001D7B RID: 7547
+		// (get) Token: 0x06009EBA RID: 40634 RVA: 0x000EBE86 File Offset: 0x000EA086
+		// (set) Token: 0x06009EBB RID: 40635 RVA: 0x000EBE9A File Offset: 0x000EA09A
 		[Nullable(new byte[]
 		{
 			0,
@@ -332,9 +312,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700802F RID: 32815
-		// (get) Token: 0x06020D0B RID: 134411 RVA: 0x00307DA7 File Offset: 0x00305FA7
-		// (set) Token: 0x06020D0C RID: 134412 RVA: 0x00307DBB File Offset: 0x00305FBB
+		// Token: 0x17001D7C RID: 7548
+		// (get) Token: 0x06009EBC RID: 40636 RVA: 0x000EBEAF File Offset: 0x000EA0AF
+		// (set) Token: 0x06009EBD RID: 40637 RVA: 0x000EBEC3 File Offset: 0x000EA0C3
 		[Nullable(new byte[]
 		{
 			0,
@@ -362,9 +342,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008030 RID: 32816
-		// (get) Token: 0x06020D0D RID: 134413 RVA: 0x00307DD0 File Offset: 0x00305FD0
-		// (set) Token: 0x06020D0E RID: 134414 RVA: 0x00307DE4 File Offset: 0x00305FE4
+		// Token: 0x17001D7D RID: 7549
+		// (get) Token: 0x06009EBE RID: 40638 RVA: 0x000EBED8 File Offset: 0x000EA0D8
+		// (set) Token: 0x06009EBF RID: 40639 RVA: 0x000EBEEC File Offset: 0x000EA0EC
 		[Nullable(new byte[]
 		{
 			0,
@@ -392,9 +372,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008031 RID: 32817
-		// (get) Token: 0x06020D0F RID: 134415 RVA: 0x00307DF9 File Offset: 0x00305FF9
-		// (set) Token: 0x06020D10 RID: 134416 RVA: 0x00307E0D File Offset: 0x0030600D
+		// Token: 0x17001D7E RID: 7550
+		// (get) Token: 0x06009EC0 RID: 40640 RVA: 0x000EBF01 File Offset: 0x000EA101
+		// (set) Token: 0x06009EC1 RID: 40641 RVA: 0x000EBF15 File Offset: 0x000EA115
 		[Nullable(new byte[]
 		{
 			0,
@@ -422,65 +402,44 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008032 RID: 32818
-		// (get) Token: 0x06020D11 RID: 134417 RVA: 0x00307E24 File Offset: 0x00306024
-		// (set) Token: 0x06020D12 RID: 134418 RVA: 0x00307E5D File Offset: 0x0030605D
-		public FLGUIDrawableEvent OnValueChange
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FLGUIDrawableEvent result;
-				if ((result = this._OnValueChange) == null)
-				{
-					result = (this._OnValueChange = new FLGUIDrawableEvent(base.NativePtr + (IntPtr)UUISliderComponent.__PropertyOffset_OnValueChange, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLGUIDrawableEvent.StaticStruct(), base.NativePtr + (IntPtr)UUISliderComponent.__PropertyOffset_OnValueChange, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x06020D13 RID: 134419 RVA: 0x00307E7E File Offset: 0x0030607E
-		[NullableContext(2)]
+		// Token: 0x06009EC2 RID: 40642 RVA: 0x000EBF2A File Offset: 0x000EA12A
 		public void UnregisterSlideEvent(in FLGUIDelegateHandleWrapper InDelegateHandle)
 		{
 			UUISliderComponent.__UnregisterSlideEvent_Internal(base.NativePtr, (InDelegateHandle ?? new FLGUIDelegateHandleWrapper()).NativePtr);
 		}
 
-		// Token: 0x06020D14 RID: 134420 RVA: 0x00307E9B File Offset: 0x0030609B
+		// Token: 0x06009EC3 RID: 40643 RVA: 0x000EBF47 File Offset: 0x000EA147
 		public void SetValueWithAudio(float InValue, bool FireEvent = true)
 		{
 			UUISliderComponent.__SetValueWithAudio_Internal(base.NativePtr, InValue, FireEvent);
 		}
 
-		// Token: 0x06020D15 RID: 134421 RVA: 0x00307EAA File Offset: 0x003060AA
+		// Token: 0x06009EC4 RID: 40644 RVA: 0x000EBF56 File Offset: 0x000EA156
 		public void SetValue(float InValue, bool FireEvent = true)
 		{
 			UUISliderComponent.__SetValue_Internal(base.NativePtr, InValue, FireEvent);
 		}
 
-		// Token: 0x06020D16 RID: 134422 RVA: 0x00307EB9 File Offset: 0x003060B9
+		// Token: 0x06009EC5 RID: 40645 RVA: 0x000EBF65 File Offset: 0x000EA165
 		public void SetProgressIncrement(float incrementValue, bool needRound = true, bool NeedAudio = false)
 		{
 			UUISliderComponent.__SetProgressIncrement_Internal(base.NativePtr, incrementValue, needRound, NeedAudio);
 		}
 
-		// Token: 0x06020D17 RID: 134423 RVA: 0x00307EC9 File Offset: 0x003060C9
+		// Token: 0x06009EC6 RID: 40646 RVA: 0x000EBF75 File Offset: 0x000EA175
 		public void SetMinValue(float InMinValue, bool KeepRelativeValue, bool FireEvent = true)
 		{
 			UUISliderComponent.__SetMinValue_Internal(base.NativePtr, InMinValue, KeepRelativeValue, FireEvent);
 		}
 
-		// Token: 0x06020D18 RID: 134424 RVA: 0x00307ED9 File Offset: 0x003060D9
+		// Token: 0x06009EC7 RID: 40647 RVA: 0x000EBF85 File Offset: 0x000EA185
 		public void SetMaxValue(float InMaxValue, bool KeepRelativeValue, bool FireEvent = true)
 		{
 			UUISliderComponent.__SetMaxValue_Internal(base.NativePtr, InMaxValue, KeepRelativeValue, FireEvent);
 		}
 
-		// Token: 0x06020D19 RID: 134425 RVA: 0x00307EE9 File Offset: 0x003060E9
+		// Token: 0x06009EC8 RID: 40648 RVA: 0x000EBF95 File Offset: 0x000EA195
+		[NullableContext(1)]
 		public FLGUIDelegateHandleWrapper RegisterSlideEvent([Nullable(2)] in FLGUISliderDynamicDelegate InDelegate)
 		{
 			IntPtr nativePtr = base.NativePtr;
@@ -488,158 +447,143 @@ namespace UnrealEngine
 			return new FLGUIDelegateHandleWrapper(UUISliderComponent.__RegisterSlideEvent_Internal(nativePtr, (flguisliderDynamicDelegate != null) ? flguisliderDynamicDelegate.NativePtr : ((IntPtr)0)), null);
 		}
 
-		// Token: 0x06020D1A RID: 134426 RVA: 0x00307F0B File Offset: 0x0030610B
+		// Token: 0x06009EC9 RID: 40649 RVA: 0x000EBFB7 File Offset: 0x000EA1B7
 		public float GetValue()
 		{
 			return UUISliderComponent.__GetValue_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020D1B RID: 134427 RVA: 0x00307F18 File Offset: 0x00306118
+		// Token: 0x06009ECA RID: 40650 RVA: 0x000EBFC4 File Offset: 0x000EA1C4
 		public float GetMinValue()
 		{
 			return UUISliderComponent.__GetMinValue_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020D1C RID: 134428 RVA: 0x00307F25 File Offset: 0x00306125
+		// Token: 0x06009ECB RID: 40651 RVA: 0x000EBFD1 File Offset: 0x000EA1D1
 		public float GetMaxValue()
 		{
 			return UUISliderComponent.__GetMaxValue_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020D1D RID: 134429
+		// Token: 0x06009ECC RID: 40652
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnregisterSlideEvent_Internal(IntPtr @this, IntPtr InDelegateHandle);
 
-		// Token: 0x06020D1E RID: 134430
+		// Token: 0x06009ECD RID: 40653
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetValueWithAudio_Internal(IntPtr @this, float InValue, bool FireEvent);
 
-		// Token: 0x06020D1F RID: 134431
+		// Token: 0x06009ECE RID: 40654
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetValue_Internal(IntPtr @this, float InValue, bool FireEvent);
 
-		// Token: 0x06020D20 RID: 134432
+		// Token: 0x06009ECF RID: 40655
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetProgressIncrement_Internal(IntPtr @this, float incrementValue, bool needRound, bool NeedAudio);
 
-		// Token: 0x06020D21 RID: 134433
+		// Token: 0x06009ED0 RID: 40656
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMinValue_Internal(IntPtr @this, float InMinValue, bool KeepRelativeValue, bool FireEvent);
 
-		// Token: 0x06020D22 RID: 134434
+		// Token: 0x06009ED1 RID: 40657
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMaxValue_Internal(IntPtr @this, float InMaxValue, bool KeepRelativeValue, bool FireEvent);
 
-		// Token: 0x06020D23 RID: 134435
+		// Token: 0x06009ED2 RID: 40658
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __RegisterSlideEvent_Internal(IntPtr @this, IntPtr InDelegate);
 
-		// Token: 0x06020D24 RID: 134436
+		// Token: 0x06009ED3 RID: 40659
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetValue_Internal(IntPtr @this);
 
-		// Token: 0x06020D25 RID: 134437
+		// Token: 0x06009ED4 RID: 40660
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetMinValue_Internal(IntPtr @this);
 
-		// Token: 0x06020D26 RID: 134438
+		// Token: 0x06009ED5 RID: 40661
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetMaxValue_Internal(IntPtr @this);
 
-		// Token: 0x06020D27 RID: 134439 RVA: 0x00307F32 File Offset: 0x00306132
+		// Token: 0x06009ED6 RID: 40662 RVA: 0x000EBFDE File Offset: 0x000EA1DE
 		static UUISliderComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UISliderComponent");
 		}
 
-		// Token: 0x06020D28 RID: 134440 RVA: 0x00307F40 File Offset: 0x00306140
+		// Token: 0x06009ED7 RID: 40663 RVA: 0x000EBFEC File Offset: 0x000EA1EC
 		protected UUISliderComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011862 RID: 71778
-		internal static int __InterfaceOffset_ILGUIPointerDragInterface;
-
-		// Token: 0x04011863 RID: 71779
+		// Token: 0x04004411 RID: 17425
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UISliderComponent";
 
-		// Token: 0x04011864 RID: 71780
+		// Token: 0x04004412 RID: 17426
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011865 RID: 71781
+		// Token: 0x04004413 RID: 17427
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011866 RID: 71782
+		// Token: 0x04004414 RID: 17428
 		internal static int __PropertyOffset_Value;
 
-		// Token: 0x04011867 RID: 71783
+		// Token: 0x04004415 RID: 17429
 		internal static int __PropertyOffset_MinValue;
 
-		// Token: 0x04011868 RID: 71784
+		// Token: 0x04004416 RID: 17430
 		internal static int __PropertyOffset_MaxValue;
 
-		// Token: 0x04011869 RID: 71785
+		// Token: 0x04004417 RID: 17431
 		internal static int __PropertyOffset_WholeNumbers;
 
-		// Token: 0x0401186A RID: 71786
+		// Token: 0x04004418 RID: 17432
 		internal static int __PropertyOffset_FillActor;
 
-		// Token: 0x0401186B RID: 71787
+		// Token: 0x04004419 RID: 17433
 		internal static int __PropertyOffset_HandleActor;
 
-		// Token: 0x0401186C RID: 71788
-		internal static int __PropertyOffset_DirectionType;
-
-		// Token: 0x0401186D RID: 71789
+		// Token: 0x0400441A RID: 17434
 		internal static int __PropertyOffset_OnValueChangeCb;
 
-		// Token: 0x0401186E RID: 71790
-		[Nullable(2)]
+		// Token: 0x0400441B RID: 17435
 		private FLGUISliderDynamicDelegate _OnValueChangeCb;
 
-		// Token: 0x0401186F RID: 71791
+		// Token: 0x0400441C RID: 17436
 		internal static int __PropertyOffset_OnEndDragCb;
 
-		// Token: 0x04011870 RID: 71792
-		[Nullable(2)]
+		// Token: 0x0400441D RID: 17437
 		private FLGUISliderEndDragDelegate _OnEndDragCb;
 
-		// Token: 0x04011871 RID: 71793
+		// Token: 0x0400441E RID: 17438
 		internal static int __PropertyOffset_OnPointUpCallBack;
 
-		// Token: 0x04011872 RID: 71794
-		[Nullable(2)]
+		// Token: 0x0400441F RID: 17439
 		private FLGUISliderPointUpDelegateOneParams _OnPointUpCallBack;
 
-		// Token: 0x04011873 RID: 71795
+		// Token: 0x04004420 RID: 17440
 		internal static int __PropertyOffset_DragBeginAudioEvent;
 
-		// Token: 0x04011874 RID: 71796
+		// Token: 0x04004421 RID: 17441
 		internal static int __PropertyOffset_DragEndAudioEvent;
 
-		// Token: 0x04011875 RID: 71797
+		// Token: 0x04004422 RID: 17442
 		internal static int __PropertyOffset_DraggingAudioEvent;
 
-		// Token: 0x04011876 RID: 71798
+		// Token: 0x04004423 RID: 17443
 		internal static int __PropertyOffset_DraggingAudioEventInterval;
 
-		// Token: 0x04011877 RID: 71799
+		// Token: 0x04004424 RID: 17444
 		internal static int __PropertyOffset_Fill;
 
-		// Token: 0x04011878 RID: 71800
+		// Token: 0x04004425 RID: 17445
 		internal static int __PropertyOffset_FillArea;
 
-		// Token: 0x04011879 RID: 71801
+		// Token: 0x04004426 RID: 17446
 		internal static int __PropertyOffset_Handle;
 
-		// Token: 0x0401187A RID: 71802
+		// Token: 0x04004427 RID: 17447
 		internal static int __PropertyOffset_HandleArea;
-
-		// Token: 0x0401187B RID: 71803
-		internal static int __PropertyOffset_OnValueChange;
-
-		// Token: 0x0401187C RID: 71804
-		[Nullable(2)]
-		private FLGUIDrawableEvent _OnValueChange;
 	}
 }

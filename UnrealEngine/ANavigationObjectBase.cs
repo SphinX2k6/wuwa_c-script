@@ -6,28 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000EDC RID: 3804
+	// Token: 0x02000247 RID: 583
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.NavigationObjectBase")]
 	[UnrealStructLayout(1080, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1080)]
-	public abstract class ANavigationObjectBase : AActor, IUnrealUObject, IUnrealObject, INavAgentInterface, IUnrealNativeInterface, IUnrealInterface
+	public abstract class ANavigationObjectBase : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600CE2F RID: 52783 RVA: 0x0012CD98 File Offset: 0x0012AF98
+		// Token: 0x0600326C RID: 12908 RVA: 0x00047F01 File Offset: 0x00046101
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ANavigationObjectBase._ClassPtr;
 		}
 
-		// Token: 0x0600CE30 RID: 52784 RVA: 0x0012CDA4 File Offset: 0x0012AFA4
-		int INavAgentInterface.InterfaceOffset()
-		{
-			return ANavigationObjectBase.__InterfaceOffset_INavAgentInterface;
-		}
-
-		// Token: 0x17003094 RID: 12436
-		// (get) Token: 0x0600CE31 RID: 52785 RVA: 0x0012CDAB File Offset: 0x0012AFAB
-		// (set) Token: 0x0600CE32 RID: 52786 RVA: 0x0012CDBF File Offset: 0x0012AFBF
+		// Token: 0x17000716 RID: 1814
+		// (get) Token: 0x0600326D RID: 12909 RVA: 0x00047F0D File Offset: 0x0004610D
+		// (set) Token: 0x0600326E RID: 12910 RVA: 0x00047F21 File Offset: 0x00046121
 		public unsafe UCapsuleComponent CapsuleComponent
 		{
 			get
@@ -40,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003095 RID: 12437
-		// (get) Token: 0x0600CE33 RID: 52787 RVA: 0x0012CDD4 File Offset: 0x0012AFD4
-		// (set) Token: 0x0600CE34 RID: 52788 RVA: 0x0012CDE8 File Offset: 0x0012AFE8
+		// Token: 0x17000717 RID: 1815
+		// (get) Token: 0x0600326F RID: 12911 RVA: 0x00047F36 File Offset: 0x00046136
+		// (set) Token: 0x06003270 RID: 12912 RVA: 0x00047F4A File Offset: 0x0004614A
 		public unsafe UBillboardComponent GoodSprite
 		{
 			get
@@ -55,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003096 RID: 12438
-		// (get) Token: 0x0600CE35 RID: 52789 RVA: 0x0012CDFD File Offset: 0x0012AFFD
-		// (set) Token: 0x0600CE36 RID: 52790 RVA: 0x0012CE11 File Offset: 0x0012B011
+		// Token: 0x17000718 RID: 1816
+		// (get) Token: 0x06003271 RID: 12913 RVA: 0x00047F5F File Offset: 0x0004615F
+		// (set) Token: 0x06003272 RID: 12914 RVA: 0x00047F73 File Offset: 0x00046173
 		public unsafe UBillboardComponent BadSprite
 		{
 			get
@@ -70,9 +64,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003097 RID: 12439
-		// (get) Token: 0x0600CE37 RID: 52791 RVA: 0x0012CE26 File Offset: 0x0012B026
-		// (set) Token: 0x0600CE38 RID: 52792 RVA: 0x0012CE3F File Offset: 0x0012B03F
+		// Token: 0x17000719 RID: 1817
+		// (get) Token: 0x06003273 RID: 12915 RVA: 0x00047F88 File Offset: 0x00046188
+		// (set) Token: 0x06003274 RID: 12916 RVA: 0x00047FA1 File Offset: 0x000461A1
 		public unsafe bool bIsPIEPlayerStart
 		{
 			get
@@ -85,48 +79,45 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600CE39 RID: 52793 RVA: 0x0012CE6F File Offset: 0x0012B06F
+		// Token: 0x06003275 RID: 12917 RVA: 0x00047FD1 File Offset: 0x000461D1
 		static ANavigationObjectBase()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.NavigationObjectBase");
 		}
 
-		// Token: 0x0600CE3A RID: 52794 RVA: 0x0012CE80 File Offset: 0x0012B080
+		// Token: 0x06003276 RID: 12918 RVA: 0x00047FE0 File Offset: 0x000461E0
 		protected ANavigationObjectBase() : this(BuiltinUtils.AllocNativeUObject(ANavigationObjectBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600CE3B RID: 52795 RVA: 0x0012CEA8 File Offset: 0x0012B0A8
+		// Token: 0x06003277 RID: 12919 RVA: 0x00048008 File Offset: 0x00046208
 		protected ANavigationObjectBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04006F2B RID: 28459
-		internal static int __InterfaceOffset_INavAgentInterface;
-
-		// Token: 0x04006F2C RID: 28460
+		// Token: 0x0400118F RID: 4495
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.NavigationObjectBase";
 
-		// Token: 0x04006F2D RID: 28461
+		// Token: 0x04001190 RID: 4496
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04006F2E RID: 28462
+		// Token: 0x04001191 RID: 4497
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04006F2F RID: 28463
+		// Token: 0x04001192 RID: 4498
 		internal static int __PropertyOffset_CapsuleComponent;
 
-		// Token: 0x04006F30 RID: 28464
+		// Token: 0x04001193 RID: 4499
 		internal static int __PropertyOffset_GoodSprite;
 
-		// Token: 0x04006F31 RID: 28465
+		// Token: 0x04001194 RID: 4500
 		internal static int __PropertyOffset_BadSprite;
 
-		// Token: 0x04006F32 RID: 28466
+		// Token: 0x04001195 RID: 4501
 		internal static int __PropertyOffset_bIsPIEPlayerStart;
 
-		// Token: 0x04006F33 RID: 28467
+		// Token: 0x04001196 RID: 4502
 		internal static byte __PropertyMask_bIsPIEPlayerStart;
 	}
 }

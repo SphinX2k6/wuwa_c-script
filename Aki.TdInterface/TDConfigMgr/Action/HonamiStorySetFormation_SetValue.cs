@@ -4,33 +4,33 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200174F RID: 5967
+	// Token: 0x020018D0 RID: 6352
 	public class HonamiStorySetFormation_SetValue
 	{
-		// Token: 0x04005074 RID: 20596
+		// Token: 0x040054AA RID: 21674
 		public int ActivityId;
 
-		// Token: 0x04005075 RID: 20597
+		// Token: 0x040054AB RID: 21675
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IHonamiStoryRoleSetting> RoleSetting;
 
-		// Token: 0x04005076 RID: 20598
+		// Token: 0x040054AC RID: 21676
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IHonamiStoryWeaponEquipSetting> WeaponSetting;
 
-		// Token: 0x04005077 RID: 20599
+		// Token: 0x040054AD RID: 21677
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IHonamiStoryPluginEquipSetting> PluginSetting;
 	}

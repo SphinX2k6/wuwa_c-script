@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B11 RID: 15121
+	// Token: 0x02003F13 RID: 16147
 	public struct IVarQuestStateValidateConfig : IFlatbufferObject
 	{
-		// Token: 0x170067C0 RID: 26560
-		// (get) Token: 0x06014A39 RID: 84537 RVA: 0x00301261 File Offset: 0x002FF461
+		// Token: 0x17006D5B RID: 27995
+		// (get) Token: 0x06015EE3 RID: 89827 RVA: 0x003274F1 File Offset: 0x003256F1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014A3A RID: 84538 RVA: 0x0030126E File Offset: 0x002FF46E
+		// Token: 0x06015EE4 RID: 89828 RVA: 0x003274FE File Offset: 0x003256FE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014A3B RID: 84539 RVA: 0x00301278 File Offset: 0x002FF478
+		// Token: 0x06015EE5 RID: 89829 RVA: 0x00327508 File Offset: 0x00325708
 		public static IVarQuestStateValidateConfig GetRootAsIVarQuestStateValidateConfig(ByteBuffer _bb)
 		{
 			return IVarQuestStateValidateConfig.GetRootAsIVarQuestStateValidateConfig(_bb, default(IVarQuestStateValidateConfig));
 		}
 
-		// Token: 0x06014A3C RID: 84540 RVA: 0x00301294 File Offset: 0x002FF494
+		// Token: 0x06015EE6 RID: 89830 RVA: 0x00327524 File Offset: 0x00325724
 		public static IVarQuestStateValidateConfig GetRootAsIVarQuestStateValidateConfig(ByteBuffer _bb, IVarQuestStateValidateConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014A3D RID: 84541 RVA: 0x003012B1 File Offset: 0x002FF4B1
+		// Token: 0x06015EE7 RID: 89831 RVA: 0x00327541 File Offset: 0x00325741
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014A3E RID: 84542 RVA: 0x003012C0 File Offset: 0x002FF4C0
+		// Token: 0x06015EE8 RID: 89832 RVA: 0x00327550 File Offset: 0x00325750
 		public IVarQuestStateValidateConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170067C1 RID: 26561
-		// (get) Token: 0x06014A3F RID: 84543 RVA: 0x003012D0 File Offset: 0x002FF4D0
+		// Token: 0x17006D5C RID: 27996
+		// (get) Token: 0x06015EE9 RID: 89833 RVA: 0x00327560 File Offset: 0x00325760
 		public EVar Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014A40 RID: 84544 RVA: 0x0030130C File Offset: 0x002FF50C
+		// Token: 0x06015EEA RID: 89834 RVA: 0x0032759C File Offset: 0x0032579C
 		public static Offset<IVarQuestStateValidateConfig> CreateIVarQuestStateValidateConfig(FlatBufferBuilder builder, EVar Type = EVar.Boolean)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IVarQuestStateValidateConfig.EndIVarQuestStateValidateConfig(builder);
 		}
 
-		// Token: 0x06014A41 RID: 84545 RVA: 0x00301322 File Offset: 0x002FF522
+		// Token: 0x06015EEB RID: 89835 RVA: 0x003275B2 File Offset: 0x003257B2
 		public static void StartIVarQuestStateValidateConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06014A42 RID: 84546 RVA: 0x0030132B File Offset: 0x002FF52B
+		// Token: 0x06015EEC RID: 89836 RVA: 0x003275BB File Offset: 0x003257BB
 		public static void AddType(FlatBufferBuilder builder, EVar type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06014A43 RID: 84547 RVA: 0x00301336 File Offset: 0x002FF536
+		// Token: 0x06015EED RID: 89837 RVA: 0x003275C6 File Offset: 0x003257C6
 		public static Offset<IVarQuestStateValidateConfig> EndIVarQuestStateValidateConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IVarQuestStateValidateConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06014A44 RID: 84548 RVA: 0x00301344 File Offset: 0x002FF544
+		// Token: 0x06015EEE RID: 89838 RVA: 0x003275D4 File Offset: 0x003257D4
 		public IVarQuestStateValidateConfigT UnPack()
 		{
 			IVarQuestStateValidateConfigT varQuestStateValidateConfigT = new IVarQuestStateValidateConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return varQuestStateValidateConfigT;
 		}
 
-		// Token: 0x06014A45 RID: 84549 RVA: 0x0030135F File Offset: 0x002FF55F
+		// Token: 0x06015EEF RID: 89839 RVA: 0x003275EF File Offset: 0x003257EF
 		public void UnPackTo(IVarQuestStateValidateConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06014A46 RID: 84550 RVA: 0x00301370 File Offset: 0x002FF570
+		// Token: 0x06015EF0 RID: 89840 RVA: 0x00327600 File Offset: 0x00325800
 		public static Offset<IVarQuestStateValidateConfig> Pack(FlatBufferBuilder builder, IVarQuestStateValidateConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IVarQuestStateValidateConfig.CreateIVarQuestStateValidateConfig(builder, _o.Type);
 		}
 
-		// Token: 0x0400AFE1 RID: 45025
+		// Token: 0x0400B94E RID: 47438
 		private Table __p;
 	}
 }

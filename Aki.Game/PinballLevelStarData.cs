@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020013F5 RID: 5109
+// Token: 0x020008A9 RID: 2217
 [NullableContext(2)]
 [Nullable(0)]
 public class PinballLevelStarData : IPinballLevelStarData
 {
-	// Token: 0x17000C2B RID: 3115
-	// (get) Token: 0x06009074 RID: 36980 RVA: 0x001F2AAC File Offset: 0x001F0CAC
-	// (set) Token: 0x06009075 RID: 36981 RVA: 0x001F2AB4 File Offset: 0x001F0CB4
+	// Token: 0x17000C4B RID: 3147
+	// (get) Token: 0x06006409 RID: 25609 RVA: 0x001FB5E8 File Offset: 0x001F97E8
+	// (set) Token: 0x0600640A RID: 25610 RVA: 0x001FB5F0 File Offset: 0x001F97F0
 	public int ConditionId { get; set; }
 
-	// Token: 0x17000C2C RID: 3116
-	// (get) Token: 0x06009076 RID: 36982 RVA: 0x001F2ABD File Offset: 0x001F0CBD
-	// (set) Token: 0x06009077 RID: 36983 RVA: 0x001F2AC5 File Offset: 0x001F0CC5
+	// Token: 0x17000C4C RID: 3148
+	// (get) Token: 0x0600640B RID: 25611 RVA: 0x001FB5F9 File Offset: 0x001F97F9
+	// (set) Token: 0x0600640C RID: 25612 RVA: 0x001FB601 File Offset: 0x001F9801
 	public bool Passed { get; set; }
 
-	// Token: 0x17000C2D RID: 3117
-	// (get) Token: 0x06009078 RID: 36984 RVA: 0x001F2ACE File Offset: 0x001F0CCE
-	// (set) Token: 0x06009079 RID: 36985 RVA: 0x001F2AD6 File Offset: 0x001F0CD6
+	// Token: 0x17000C4D RID: 3149
+	// (get) Token: 0x0600640D RID: 25613 RVA: 0x001FB60A File Offset: 0x001F980A
+	// (set) Token: 0x0600640E RID: 25614 RVA: 0x001FB612 File Offset: 0x001F9812
 	public string ConfigConditionDesc { get; set; }
 
-	// Token: 0x17000C2E RID: 3118
-	// (get) Token: 0x0600907A RID: 36986 RVA: 0x001F2ADF File Offset: 0x001F0CDF
-	// (set) Token: 0x0600907B RID: 36987 RVA: 0x001F2AE7 File Offset: 0x001F0CE7
+	// Token: 0x17000C4E RID: 3150
+	// (get) Token: 0x0600640F RID: 25615 RVA: 0x001FB61B File Offset: 0x001F981B
+	// (set) Token: 0x06006410 RID: 25616 RVA: 0x001FB623 File Offset: 0x001F9823
 	public int? ConfigTargetValue { get; set; }
 }

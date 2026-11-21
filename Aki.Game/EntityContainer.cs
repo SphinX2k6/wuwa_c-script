@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x020034FD RID: 13565
+// Token: 0x02002A72 RID: 10866
 [NullableContext(1)]
 [Nullable(0)]
 public class EntityContainer
 {
-	// Token: 0x0601DBCE RID: 121806 RVA: 0x0085529B File Offset: 0x0085349B
+	// Token: 0x0601B8E5 RID: 112869 RVA: 0x0087D6EF File Offset: 0x0087B8EF
 	public bool AddEntity(long creatureDataId, EntityHandle handle)
 	{
 		if (this.EntityMap.Contains(creatureDataId))
@@ -20,7 +20,7 @@ public class EntityContainer
 		return true;
 	}
 
-	// Token: 0x0601DBCF RID: 121807 RVA: 0x008552D0 File Offset: 0x008534D0
+	// Token: 0x0601B8E6 RID: 112870 RVA: 0x0087D724 File Offset: 0x0087B924
 	public bool RemoveEntity(long creatureDataId)
 	{
 		EntityHandle entityHandle = this.EntityMap.Get(creatureDataId);
@@ -37,20 +37,20 @@ public class EntityContainer
 		return true;
 	}
 
-	// Token: 0x0601DBD0 RID: 121808 RVA: 0x0085532A File Offset: 0x0085352A
+	// Token: 0x0601B8E7 RID: 112871 RVA: 0x0087D77E File Offset: 0x0087B97E
 	[NullableContext(2)]
 	public EntityHandle GetEntity(long creatureDataId)
 	{
 		return this.EntityMap.Get(creatureDataId);
 	}
 
-	// Token: 0x0601DBD1 RID: 121809 RVA: 0x00855338 File Offset: 0x00853538
+	// Token: 0x0601B8E8 RID: 112872 RVA: 0x0087D78C File Offset: 0x0087B98C
 	public bool ExistEntity(long creatureDataId)
 	{
 		return this.EntityMap.Contains(creatureDataId);
 	}
 
-	// Token: 0x0601DBD2 RID: 121810 RVA: 0x00855348 File Offset: 0x00853548
+	// Token: 0x0601B8E9 RID: 112873 RVA: 0x0087D79C File Offset: 0x0087B99C
 	[NullableContext(2)]
 	public EntityHandle GetEntityById(int entityId)
 	{
@@ -62,7 +62,7 @@ public class EntityContainer
 		return this.EntityMap.Get(key);
 	}
 
-	// Token: 0x0601DBD3 RID: 121811 RVA: 0x00855374 File Offset: 0x00853574
+	// Token: 0x0601B8EA RID: 112874 RVA: 0x0087D7C8 File Offset: 0x0087B9C8
 	[NullableContext(2)]
 	public EntityHandle GetEntityByPbDataId(int pbDataId)
 	{
@@ -74,7 +74,7 @@ public class EntityContainer
 		return this.EntityMap.Get(key);
 	}
 
-	// Token: 0x0601DBD4 RID: 121812 RVA: 0x008553A0 File Offset: 0x008535A0
+	// Token: 0x0601B8EB RID: 112875 RVA: 0x0087D7F4 File Offset: 0x0087B9F4
 	public void CheckSetPrefabEntity(EntityHandle handle)
 	{
 		CreatureDataComponent component = handle.Entity.GetComponent<CreatureDataComponent>();
@@ -89,13 +89,13 @@ public class EntityContainer
 		this.PbDataIdMap[component.GetPbDataId()] = component.GetCreatureDataId();
 	}
 
-	// Token: 0x0601DBD5 RID: 121813 RVA: 0x008553DE File Offset: 0x008535DE
+	// Token: 0x0601B8EC RID: 112876 RVA: 0x0087D832 File Offset: 0x0087BA32
 	public long GetCreatureDataIdByPbDataId(int pbDataId)
 	{
 		return this.PbDataIdMap.GetValueOrDefault(pbDataId, 0L);
 	}
 
-	// Token: 0x0601DBD6 RID: 121814 RVA: 0x008553F0 File Offset: 0x008535F0
+	// Token: 0x0601B8ED RID: 112877 RVA: 0x0087D844 File Offset: 0x0087BA44
 	public EntityHandle PopEntity()
 	{
 		EntityHandle byIndex = this.EntityMap.GetByIndex(0);
@@ -107,26 +107,26 @@ public class EntityContainer
 		return byIndex;
 	}
 
-	// Token: 0x0601DBD7 RID: 121815 RVA: 0x0085541D File Offset: 0x0085361D
+	// Token: 0x0601B8EE RID: 112878 RVA: 0x0087D871 File Offset: 0x0087BA71
 	[NullableContext(2)]
 	public EntityHandle PeekEntity()
 	{
 		return this.EntityMap.GetByIndex(0);
 	}
 
-	// Token: 0x0601DBD8 RID: 121816 RVA: 0x0085542B File Offset: 0x0085362B
+	// Token: 0x0601B8EF RID: 112879 RVA: 0x0087D87F File Offset: 0x0087BA7F
 	public IReadOnlyList<EntityHandle> GetAllEntities()
 	{
 		return this.EntityMap.GetItems();
 	}
 
-	// Token: 0x0601DBD9 RID: 121817 RVA: 0x00855438 File Offset: 0x00853638
+	// Token: 0x0601B8F0 RID: 112880 RVA: 0x0087D88C File Offset: 0x0087BA8C
 	public int Size()
 	{
 		return this.EntityMap.Size();
 	}
 
-	// Token: 0x0601DBDA RID: 121818 RVA: 0x00855445 File Offset: 0x00853645
+	// Token: 0x0601B8F1 RID: 112881 RVA: 0x0087D899 File Offset: 0x0087BA99
 	public void Clear()
 	{
 		this.EntityMap.Clear();
@@ -134,7 +134,7 @@ public class EntityContainer
 		this.PbDataIdMap.Clear();
 	}
 
-	// Token: 0x0400E97A RID: 59770
+	// Token: 0x0400EE35 RID: 60981
 	[Nullable(new byte[]
 	{
 		1,
@@ -142,9 +142,9 @@ public class EntityContainer
 	})]
 	public readonly CustomMap<long, EntityHandle> EntityMap = new CustomMap<long, EntityHandle>();
 
-	// Token: 0x0400E97B RID: 59771
+	// Token: 0x0400EE36 RID: 60982
 	public readonly Dictionary<int, long> EntityIdMap = new Dictionary<int, long>();
 
-	// Token: 0x0400E97C RID: 59772
+	// Token: 0x0400EE37 RID: 60983
 	public readonly Dictionary<int, long> PbDataIdMap = new Dictionary<int, long>();
 }

@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016F0 RID: 5872
+	// Token: 0x0200186C RID: 6252
 	public enum EValueChangeType
 	{
-		// Token: 0x04004F75 RID: 20341
+		// Token: 0x040053A2 RID: 21410
 		AddOrSub,
-		// Token: 0x04004F76 RID: 20342
+		// Token: 0x040053A3 RID: 21411
 		Max,
-		// Token: 0x04004F77 RID: 20343
+		// Token: 0x040053A4 RID: 21412
 		Min,
-		// Token: 0x04004F78 RID: 20344
+		// Token: 0x040053A5 RID: 21413
 		Custom
 	}
 }

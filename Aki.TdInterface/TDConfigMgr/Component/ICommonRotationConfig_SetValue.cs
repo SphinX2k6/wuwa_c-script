@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000252 RID: 594
+	// Token: 0x02000295 RID: 661
 	public class ICommonRotationConfig_SetValue
 	{
-		// Token: 0x04000A8E RID: 2702
+		// Token: 0x04000B6F RID: 2927
 		public ERotationType Type;
 
-		// Token: 0x04000A8F RID: 2703
+		// Token: 0x04000B70 RID: 2928
 		public float Time;
 
-		// Token: 0x04000A90 RID: 2704
+		// Token: 0x04000B71 RID: 2929
 		public float? Cd;
 
-		// Token: 0x04000A91 RID: 2705
+		// Token: 0x04000B72 RID: 2930
 		[Nullable(2)]
 		public string Curve;
 	}

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004898 RID: 18584
+	// Token: 0x02004CFD RID: 19709
 	public struct IPipelineConfig : IFlatbufferObject
 	{
-		// Token: 0x170086C6 RID: 34502
-		// (get) Token: 0x0601CFFC RID: 118780 RVA: 0x00418C84 File Offset: 0x00416E84
+		// Token: 0x17008D0E RID: 36110
+		// (get) Token: 0x0601E7E9 RID: 124905 RVA: 0x00445420 File Offset: 0x00443620
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CFFD RID: 118781 RVA: 0x00418C91 File Offset: 0x00416E91
+		// Token: 0x0601E7EA RID: 124906 RVA: 0x0044542D File Offset: 0x0044362D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601CFFE RID: 118782 RVA: 0x00418C98 File Offset: 0x00416E98
+		// Token: 0x0601E7EB RID: 124907 RVA: 0x00445434 File Offset: 0x00443634
 		public static IPipelineConfig GetRootAsIPipelineConfig(ByteBuffer _bb)
 		{
 			return IPipelineConfig.GetRootAsIPipelineConfig(_bb, default(IPipelineConfig));
 		}
 
-		// Token: 0x0601CFFF RID: 118783 RVA: 0x00418CB4 File Offset: 0x00416EB4
+		// Token: 0x0601E7EC RID: 124908 RVA: 0x00445450 File Offset: 0x00443650
 		public static IPipelineConfig GetRootAsIPipelineConfig(ByteBuffer _bb, IPipelineConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D000 RID: 118784 RVA: 0x00418CD1 File Offset: 0x00416ED1
+		// Token: 0x0601E7ED RID: 124909 RVA: 0x0044546D File Offset: 0x0044366D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D001 RID: 118785 RVA: 0x00418CE0 File Offset: 0x00416EE0
+		// Token: 0x0601E7EE RID: 124910 RVA: 0x0044547C File Offset: 0x0044367C
 		public IPipelineConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0601D002 RID: 118786 RVA: 0x00418CF0 File Offset: 0x00416EF0
+		// Token: 0x0601E7EF RID: 124911 RVA: 0x0044548C File Offset: 0x0044368C
 		public int VoxelLevels(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170086C7 RID: 34503
-		// (get) Token: 0x0601D003 RID: 118787 RVA: 0x00418D30 File Offset: 0x00416F30
+		// Token: 0x17008D0F RID: 36111
+		// (get) Token: 0x0601E7F0 RID: 124912 RVA: 0x004454CC File Offset: 0x004436CC
 		public int VoxelLevelsLength
 		{
 			get
@@ -74,20 +74,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D004 RID: 118788 RVA: 0x00418D5B File Offset: 0x00416F5B
+		// Token: 0x0601E7F1 RID: 124913 RVA: 0x004454F7 File Offset: 0x004436F7
 		public Span<int> GetVoxelLevelsBytes()
 		{
 			return this.__p.__vector_as_span<int>(4, 4);
 		}
 
-		// Token: 0x0601D005 RID: 118789 RVA: 0x00418D6A File Offset: 0x00416F6A
+		// Token: 0x0601E7F2 RID: 124914 RVA: 0x00445506 File Offset: 0x00443706
 		public int[] GetVoxelLevelsArray()
 		{
 			return this.__p.__vector_as_array<int>(4);
 		}
 
-		// Token: 0x170086C8 RID: 34504
-		// (get) Token: 0x0601D006 RID: 118790 RVA: 0x00418D78 File Offset: 0x00416F78
+		// Token: 0x17008D10 RID: 36112
+		// (get) Token: 0x0601E7F3 RID: 124915 RVA: 0x00445514 File Offset: 0x00443714
 		public byte NullMask
 		{
 			get
@@ -101,7 +101,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D007 RID: 118791 RVA: 0x00418DB4 File Offset: 0x00416FB4
+		// Token: 0x0601E7F4 RID: 124916 RVA: 0x00445550 File Offset: 0x00443750
 		public static Offset<IPipelineConfig> CreateIPipelineConfig(FlatBufferBuilder builder, VectorOffset VoxelLevelsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(2);
@@ -110,19 +110,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IPipelineConfig.EndIPipelineConfig(builder);
 		}
 
-		// Token: 0x0601D008 RID: 118792 RVA: 0x00418DD1 File Offset: 0x00416FD1
+		// Token: 0x0601E7F5 RID: 124917 RVA: 0x0044556D File Offset: 0x0044376D
 		public static void StartIPipelineConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601D009 RID: 118793 RVA: 0x00418DDA File Offset: 0x00416FDA
+		// Token: 0x0601E7F6 RID: 124918 RVA: 0x00445576 File Offset: 0x00443776
 		public static void AddVoxelLevels(FlatBufferBuilder builder, VectorOffset voxelLevelsOffset)
 		{
 			builder.AddOffset(0, voxelLevelsOffset.Value, 0);
 		}
 
-		// Token: 0x0601D00A RID: 118794 RVA: 0x00418DEC File Offset: 0x00416FEC
+		// Token: 0x0601E7F7 RID: 124919 RVA: 0x00445588 File Offset: 0x00443788
 		public static VectorOffset CreateVoxelLevelsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -133,7 +133,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D00B RID: 118795 RVA: 0x00418E23 File Offset: 0x00417023
+		// Token: 0x0601E7F8 RID: 124920 RVA: 0x004455BF File Offset: 0x004437BF
 		public static VectorOffset CreateVoxelLevelsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D00C RID: 118796 RVA: 0x00418E3D File Offset: 0x0041703D
+		// Token: 0x0601E7F9 RID: 124921 RVA: 0x004455D9 File Offset: 0x004437D9
 		public static VectorOffset CreateVoxelLevelsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D00D RID: 118797 RVA: 0x00418E5B File Offset: 0x0041705B
+		// Token: 0x0601E7FA RID: 124922 RVA: 0x004455F7 File Offset: 0x004437F7
 		public static VectorOffset CreateVoxelLevelsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -157,25 +157,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D00E RID: 118798 RVA: 0x00418E74 File Offset: 0x00417074
+		// Token: 0x0601E7FB RID: 124923 RVA: 0x00445610 File Offset: 0x00443810
 		public static void StartVoxelLevelsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601D00F RID: 118799 RVA: 0x00418E7F File Offset: 0x0041707F
+		// Token: 0x0601E7FC RID: 124924 RVA: 0x0044561B File Offset: 0x0044381B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(1, nullMask, 0);
 		}
 
-		// Token: 0x0601D010 RID: 118800 RVA: 0x00418E8A File Offset: 0x0041708A
+		// Token: 0x0601E7FD RID: 124925 RVA: 0x00445626 File Offset: 0x00443826
 		public static Offset<IPipelineConfig> EndIPipelineConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IPipelineConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601D011 RID: 118801 RVA: 0x00418E98 File Offset: 0x00417098
+		// Token: 0x0601E7FE RID: 124926 RVA: 0x00445634 File Offset: 0x00443834
 		public IPipelineConfigT UnPack()
 		{
 			IPipelineConfigT pipelineConfigT = new IPipelineConfigT();
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return pipelineConfigT;
 		}
 
-		// Token: 0x0601D012 RID: 118802 RVA: 0x00418EB4 File Offset: 0x004170B4
+		// Token: 0x0601E7FF RID: 124927 RVA: 0x00445650 File Offset: 0x00443850
 		public void UnPackTo(IPipelineConfigT _o)
 		{
 			_o.VoxelLevels = new List<int>();
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601D013 RID: 118803 RVA: 0x00418EFC File Offset: 0x004170FC
+		// Token: 0x0601E800 RID: 124928 RVA: 0x00445698 File Offset: 0x00443898
 		public static Offset<IPipelineConfig> Pack(FlatBufferBuilder builder, IPipelineConfigT _o)
 		{
 			if (_o == null)
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IPipelineConfig.CreateIPipelineConfig(builder, voxelLevelsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400CE85 RID: 52869
+		// Token: 0x0400D8BE RID: 55486
 		private Table __p;
 	}
 }

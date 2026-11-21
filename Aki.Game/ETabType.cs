@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002B06 RID: 11014
+// Token: 0x02002082 RID: 8322
 public enum ETabType
 {
-	// Token: 0x0400AA15 RID: 43541
+	// Token: 0x0400AE1B RID: 44571
 	Role,
-	// Token: 0x0400AA16 RID: 43542
+	// Token: 0x0400AE1C RID: 44572
 	Weapon,
-	// Token: 0x0400AA17 RID: 43543
+	// Token: 0x0400AE1D RID: 44573
 	Item
 }

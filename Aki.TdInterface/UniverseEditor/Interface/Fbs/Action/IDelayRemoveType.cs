@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006561 RID: 25953
+	// Token: 0x02006BD2 RID: 27602
 	public struct IDelayRemoveType : IFlatbufferObject
 	{
-		// Token: 0x1700C0DF RID: 49375
-		// (get) Token: 0x0602D070 RID: 184432 RVA: 0x0062DEE1 File Offset: 0x0062C0E1
+		// Token: 0x1700CA7A RID: 51834
+		// (get) Token: 0x0602F82C RID: 194604 RVA: 0x0067A6A5 File Offset: 0x006788A5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D071 RID: 184433 RVA: 0x0062DEEE File Offset: 0x0062C0EE
+		// Token: 0x0602F82D RID: 194605 RVA: 0x0067A6B2 File Offset: 0x006788B2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D072 RID: 184434 RVA: 0x0062DEF8 File Offset: 0x0062C0F8
+		// Token: 0x0602F82E RID: 194606 RVA: 0x0067A6BC File Offset: 0x006788BC
 		public static IDelayRemoveType GetRootAsIDelayRemoveType(ByteBuffer _bb)
 		{
 			return IDelayRemoveType.GetRootAsIDelayRemoveType(_bb, default(IDelayRemoveType));
 		}
 
-		// Token: 0x0602D073 RID: 184435 RVA: 0x0062DF14 File Offset: 0x0062C114
+		// Token: 0x0602F82F RID: 194607 RVA: 0x0067A6D8 File Offset: 0x006788D8
 		public static IDelayRemoveType GetRootAsIDelayRemoveType(ByteBuffer _bb, IDelayRemoveType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D074 RID: 184436 RVA: 0x0062DF31 File Offset: 0x0062C131
+		// Token: 0x0602F830 RID: 194608 RVA: 0x0067A6F5 File Offset: 0x006788F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D075 RID: 184437 RVA: 0x0062DF40 File Offset: 0x0062C140
+		// Token: 0x0602F831 RID: 194609 RVA: 0x0067A704 File Offset: 0x00678904
 		public IDelayRemoveType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C0E0 RID: 49376
-		// (get) Token: 0x0602D076 RID: 184438 RVA: 0x0062DF50 File Offset: 0x0062C150
+		// Token: 0x1700CA7B RID: 51835
+		// (get) Token: 0x0602F832 RID: 194610 RVA: 0x0067A714 File Offset: 0x00678914
 		public EDelayRemoveType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D077 RID: 184439 RVA: 0x0062DF8C File Offset: 0x0062C18C
+		// Token: 0x0602F833 RID: 194611 RVA: 0x0067A750 File Offset: 0x00678950
 		public static Offset<IDelayRemoveType> CreateIDelayRemoveType(FlatBufferBuilder builder, EDelayRemoveType Type = EDelayRemoveType.DelayRemoveAfterSkillFinish)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDelayRemoveType.EndIDelayRemoveType(builder);
 		}
 
-		// Token: 0x0602D078 RID: 184440 RVA: 0x0062DFA2 File Offset: 0x0062C1A2
+		// Token: 0x0602F834 RID: 194612 RVA: 0x0067A766 File Offset: 0x00678966
 		public static void StartIDelayRemoveType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602D079 RID: 184441 RVA: 0x0062DFAB File Offset: 0x0062C1AB
+		// Token: 0x0602F835 RID: 194613 RVA: 0x0067A76F File Offset: 0x0067896F
 		public static void AddType(FlatBufferBuilder builder, EDelayRemoveType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D07A RID: 184442 RVA: 0x0062DFB6 File Offset: 0x0062C1B6
+		// Token: 0x0602F836 RID: 194614 RVA: 0x0067A77A File Offset: 0x0067897A
 		public static Offset<IDelayRemoveType> EndIDelayRemoveType(FlatBufferBuilder builder)
 		{
 			return new Offset<IDelayRemoveType>(builder.EndTable());
 		}
 
-		// Token: 0x0602D07B RID: 184443 RVA: 0x0062DFC4 File Offset: 0x0062C1C4
+		// Token: 0x0602F837 RID: 194615 RVA: 0x0067A788 File Offset: 0x00678988
 		public IDelayRemoveTypeT UnPack()
 		{
 			IDelayRemoveTypeT delayRemoveTypeT = new IDelayRemoveTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return delayRemoveTypeT;
 		}
 
-		// Token: 0x0602D07C RID: 184444 RVA: 0x0062DFDF File Offset: 0x0062C1DF
+		// Token: 0x0602F838 RID: 194616 RVA: 0x0067A7A3 File Offset: 0x006789A3
 		public void UnPackTo(IDelayRemoveTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602D07D RID: 184445 RVA: 0x0062DFF0 File Offset: 0x0062C1F0
+		// Token: 0x0602F839 RID: 194617 RVA: 0x0067A7B4 File Offset: 0x006789B4
 		public static Offset<IDelayRemoveType> Pack(FlatBufferBuilder builder, IDelayRemoveTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDelayRemoveType.CreateIDelayRemoveType(builder, _o.Type);
 		}
 
-		// Token: 0x04010BB3 RID: 68531
+		// Token: 0x040119D1 RID: 72145
 		private Table __p;
 	}
 }

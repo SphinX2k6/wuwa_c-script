@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015A7 RID: 5543
+	// Token: 0x02001706 RID: 5894
 	public enum EChangeTimerUiType
 	{
-		// Token: 0x040049CE RID: 18894
+		// Token: 0x04004D80 RID: 19840
 		GreatSwordChallenge = 4
 	}
 }

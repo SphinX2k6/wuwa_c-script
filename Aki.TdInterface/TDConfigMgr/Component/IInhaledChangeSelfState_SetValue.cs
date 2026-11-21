@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200045D RID: 1117
+	// Token: 0x020004B6 RID: 1206
 	public class IInhaledChangeSelfState_SetValue
 	{
-		// Token: 0x0400112F RID: 4399
+		// Token: 0x04001251 RID: 4689
 		public EInhaledPerResultType Type;
 
-		// Token: 0x04001130 RID: 4400
-		[Nullable(1)]
+		// Token: 0x04001252 RID: 4690
 		public string ChangeSelfState;
 	}
 }

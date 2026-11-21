@@ -2,22 +2,22 @@
 
 namespace C
 {
-	// Token: 0x0200001F RID: 31
+	// Token: 0x02000004 RID: 4
 	public static class math
 	{
-		// Token: 0x0600007E RID: 126 RVA: 0x0000583D File Offset: 0x00003A3D
+		// Token: 0x06000003 RID: 3 RVA: 0x000020A9 File Offset: 0x000002A9
 		public unsafe static int SingleToInt32Bits(float value)
 		{
 			return *(int*)(&value);
 		}
 
-		// Token: 0x0600007F RID: 127 RVA: 0x00005843 File Offset: 0x00003A43
+		// Token: 0x06000004 RID: 4 RVA: 0x000020AF File Offset: 0x000002AF
 		public unsafe static float Int32BitsToSingle(int value)
 		{
 			return *(float*)(&value);
 		}
 
-		// Token: 0x06000080 RID: 128 RVA: 0x0000584C File Offset: 0x00003A4C
+		// Token: 0x06000005 RID: 5 RVA: 0x000020B8 File Offset: 0x000002B8
 		private static int _leadingZeroesCount(int x)
 		{
 			int num = 32;
@@ -53,7 +53,7 @@ namespace C
 			return num - x;
 		}
 
-		// Token: 0x06000081 RID: 129 RVA: 0x000058A4 File Offset: 0x00003AA4
+		// Token: 0x06000006 RID: 6 RVA: 0x00002110 File Offset: 0x00000310
 		private static int _leadingZeroesCount(long x)
 		{
 			int num = 64;
@@ -95,7 +95,7 @@ namespace C
 			return num - (int)x;
 		}
 
-		// Token: 0x06000082 RID: 130 RVA: 0x0000590D File Offset: 0x00003B0D
+		// Token: 0x06000007 RID: 7 RVA: 0x00002179 File Offset: 0x00000379
 		public static int signbit(double number)
 		{
 			if (double.IsNaN(number))
@@ -105,7 +105,7 @@ namespace C
 			return ((BitConverter.DoubleToInt64Bits(number) & long.MinValue) != 0L) ? 1 : 0;
 		}
 
-		// Token: 0x06000083 RID: 131 RVA: 0x00005940 File Offset: 0x00003B40
+		// Token: 0x06000008 RID: 8 RVA: 0x000021AC File Offset: 0x000003AC
 		public static int signbit(float number)
 		{
 			if (double.IsNaN((double)number))
@@ -115,7 +115,7 @@ namespace C
 			return ((math.SingleToInt32Bits(number) & int.MinValue) != 0) ? 1 : 0;
 		}
 
-		// Token: 0x06000084 RID: 132 RVA: 0x0000596C File Offset: 0x00003B6C
+		// Token: 0x06000009 RID: 9 RVA: 0x000021D8 File Offset: 0x000003D8
 		public static double frexp(double number, ref int exponent)
 		{
 			long num = BitConverter.DoubleToInt64Bits(number);
@@ -140,7 +140,7 @@ namespace C
 			return number;
 		}
 
-		// Token: 0x06000085 RID: 133 RVA: 0x00005A0C File Offset: 0x00003C0C
+		// Token: 0x0600000A RID: 10 RVA: 0x00002278 File Offset: 0x00000478
 		public static float frexp(float number, ref int exponent)
 		{
 			int num = math.SingleToInt32Bits(number);
@@ -165,31 +165,31 @@ namespace C
 			return number;
 		}
 
-		// Token: 0x06000086 RID: 134 RVA: 0x00005A8C File Offset: 0x00003C8C
+		// Token: 0x0600000B RID: 11 RVA: 0x000022F8 File Offset: 0x000004F8
 		public static double ldexp(double number, int exponent)
 		{
 			return math.scalbn(number, exponent);
 		}
 
-		// Token: 0x06000087 RID: 135 RVA: 0x00005A95 File Offset: 0x00003C95
+		// Token: 0x0600000C RID: 12 RVA: 0x00002301 File Offset: 0x00000501
 		public static float ldexp(float number, int exponent)
 		{
 			return math.scalbn(number, exponent);
 		}
 
-		// Token: 0x06000088 RID: 136 RVA: 0x00005A9E File Offset: 0x00003C9E
+		// Token: 0x0600000D RID: 13 RVA: 0x0000230A File Offset: 0x0000050A
 		public static double scalbn(double number, int exponent)
 		{
 			return math.scalbln(number, (long)exponent);
 		}
 
-		// Token: 0x06000089 RID: 137 RVA: 0x00005AA8 File Offset: 0x00003CA8
+		// Token: 0x0600000E RID: 14 RVA: 0x00002314 File Offset: 0x00000514
 		public static float scalbn(float number, int exponent)
 		{
 			return math.scalbln(number, (long)exponent);
 		}
 
-		// Token: 0x0600008A RID: 138 RVA: 0x00005AB4 File Offset: 0x00003CB4
+		// Token: 0x0600000F RID: 15 RVA: 0x00002320 File Offset: 0x00000520
 		public static double scalbln(double number, long exponent)
 		{
 			long num = BitConverter.DoubleToInt64Bits(number);
@@ -230,7 +230,7 @@ namespace C
 			return number * BitConverter.Int64BitsToDouble(4363988038922010624L);
 		}
 
-		// Token: 0x0600008B RID: 139 RVA: 0x00005BC0 File Offset: 0x00003DC0
+		// Token: 0x06000010 RID: 16 RVA: 0x0000242C File Offset: 0x0000062C
 		public static float scalbln(float number, long exponent)
 		{
 			int num = math.SingleToInt32Bits(number);
@@ -271,54 +271,54 @@ namespace C
 			return number * math.Int32BitsToSingle(855638016);
 		}
 
-		// Token: 0x0600008C RID: 140 RVA: 0x00005CA0 File Offset: 0x00003EA0
+		// Token: 0x06000011 RID: 17 RVA: 0x0000250C File Offset: 0x0000070C
 		public static double copysign(double number1, double number2)
 		{
 			long num = ((math.signbit(number2) == 1) ? long.MinValue : 0L) ^ (double.IsNaN(number1) ? long.MinValue : 0L);
 			return BitConverter.Int64BitsToDouble((BitConverter.DoubleToInt64Bits(number1) & long.MaxValue) | num);
 		}
 
-		// Token: 0x0600008D RID: 141 RVA: 0x00005CF4 File Offset: 0x00003EF4
+		// Token: 0x06000012 RID: 18 RVA: 0x00002560 File Offset: 0x00000760
 		public static float copysign(float number1, float number2)
 		{
 			int num = ((math.signbit(number2) == 1) ? int.MinValue : 0) ^ (double.IsNaN((double)number1) ? int.MinValue : 0);
 			return math.Int32BitsToSingle((math.SingleToInt32Bits(number1) & int.MaxValue) | num);
 		}
 
-		// Token: 0x0400004C RID: 76
+		// Token: 0x04000005 RID: 5
 		public const long DBL_EXP_MASK = 9218868437227405312L;
 
-		// Token: 0x0400004D RID: 77
+		// Token: 0x04000006 RID: 6
 		public const int DBL_MANT_BITS = 52;
 
-		// Token: 0x0400004E RID: 78
+		// Token: 0x04000007 RID: 7
 		public const long DBL_EXP_CLR_MASK = -9218868437227405313L;
 
-		// Token: 0x0400004F RID: 79
+		// Token: 0x04000008 RID: 8
 		public const long DBL_SGN_MASK = -9223372036854775808L;
 
-		// Token: 0x04000050 RID: 80
+		// Token: 0x04000009 RID: 9
 		public const long DBL_MANT_MASK = 4503599627370495L;
 
-		// Token: 0x04000051 RID: 81
+		// Token: 0x0400000A RID: 10
 		public const int FLT_EXP_MASK = 2139095040;
 
-		// Token: 0x04000052 RID: 82
+		// Token: 0x0400000B RID: 11
 		public const int FLT_MANT_BITS = 23;
 
-		// Token: 0x04000053 RID: 83
+		// Token: 0x0400000C RID: 12
 		public const int FLT_MANT_MASK = 8388607;
 
-		// Token: 0x04000054 RID: 84
+		// Token: 0x0400000D RID: 13
 		public const int FLT_EXP_CLR_MASK = -2139095041;
 
-		// Token: 0x04000055 RID: 85
+		// Token: 0x0400000E RID: 14
 		public const int FLT_SGN_MASK = -2147483648;
 
-		// Token: 0x04000056 RID: 86
+		// Token: 0x0400000F RID: 15
 		public const long DBL_SGN_CLR_MASK = 9223372036854775807L;
 
-		// Token: 0x04000057 RID: 87
+		// Token: 0x04000010 RID: 16
 		public const int FLT_SGN_CLR_MASK = 2147483647;
 	}
 }

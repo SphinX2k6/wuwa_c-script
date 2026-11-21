@@ -6,25 +6,25 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x0200318A RID: 12682
+// Token: 0x020026F7 RID: 9975
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class SpecialSkillAimingBase : SpecialSkillBase
 {
-	// Token: 0x170025BD RID: 9661
-	// (get) Token: 0x0601B493 RID: 111763
+	// Token: 0x170027AE RID: 10158
+	// (get) Token: 0x06018F98 RID: 102296
 	protected abstract int AimingTagId { get; }
 
-	// Token: 0x170025BE RID: 9662
-	// (get) Token: 0x0601B494 RID: 111764
+	// Token: 0x170027AF RID: 10159
+	// (get) Token: 0x06018F99 RID: 102297
 	protected abstract EEventName SwitchLockTargetEventName { get; }
 
-	// Token: 0x0601B495 RID: 111765 RVA: 0x00771AB7 File Offset: 0x0076FCB7
+	// Token: 0x06018F9A RID: 102298 RVA: 0x0079941B File Offset: 0x0079761B
 	protected SpecialSkillAimingBase(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B496 RID: 111766 RVA: 0x00771AF8 File Offset: 0x0076FCF8
+	// Token: 0x06018F9B RID: 102299 RVA: 0x0079945C File Offset: 0x0079765C
 	public override void OnStart()
 	{
 		this.ActorComp = this.SpecialSkillComponent.Entity.GetComponent<CharacterActorComponent>();
@@ -42,7 +42,7 @@ public abstract class SpecialSkillAimingBase : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B497 RID: 111767 RVA: 0x00771B97 File Offset: 0x0076FD97
+	// Token: 0x06018F9C RID: 102300 RVA: 0x007994FB File Offset: 0x007976FB
 	public override void OnEnd()
 	{
 		this.ClearLockOnTarget();
@@ -58,7 +58,7 @@ public abstract class SpecialSkillAimingBase : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B498 RID: 111768 RVA: 0x00771BC8 File Offset: 0x0076FDC8
+	// Token: 0x06018F9D RID: 102301 RVA: 0x0079952C File Offset: 0x0079772C
 	public override void OnTick(float delta)
 	{
 		if (!this.EnableLockOn)
@@ -76,39 +76,39 @@ public abstract class SpecialSkillAimingBase : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B499 RID: 111769 RVA: 0x00771C19 File Offset: 0x0076FE19
+	// Token: 0x06018F9E RID: 102302 RVA: 0x0079957D File Offset: 0x0079777D
 	protected virtual void OnAimingStart()
 	{
 	}
 
-	// Token: 0x0601B49A RID: 111770 RVA: 0x00771C1B File Offset: 0x0076FE1B
+	// Token: 0x06018F9F RID: 102303 RVA: 0x0079957F File Offset: 0x0079777F
 	protected virtual void OnAimingEnd()
 	{
 		this.TimeCount = 0f;
 	}
 
-	// Token: 0x0601B49B RID: 111771
+	// Token: 0x06018FA0 RID: 102304
 	protected abstract void DoOnTargetLocked(EntityHandle target, string socketName);
 
-	// Token: 0x0601B49C RID: 111772
+	// Token: 0x06018FA1 RID: 102305
 	protected abstract void DoOnTargetUnlocked(EntityHandle target, string socketName);
 
-	// Token: 0x0601B49D RID: 111773
+	// Token: 0x06018FA2 RID: 102306
 	protected abstract void LockOn();
 
-	// Token: 0x0601B49E RID: 111774 RVA: 0x00771C28 File Offset: 0x0076FE28
+	// Token: 0x06018FA3 RID: 102307 RVA: 0x0079958C File Offset: 0x0079778C
 	protected void OnTargetLocked(EntityHandle target, string socketName)
 	{
 		this.DoOnTargetLocked(target, socketName);
 	}
 
-	// Token: 0x0601B49F RID: 111775 RVA: 0x00771C32 File Offset: 0x0076FE32
+	// Token: 0x06018FA4 RID: 102308 RVA: 0x00799596 File Offset: 0x00797796
 	protected void OnTargetUnlocked(EntityHandle target, string socketName)
 	{
 		this.DoOnTargetUnlocked(target, socketName);
 	}
 
-	// Token: 0x0601B4A0 RID: 111776 RVA: 0x00771C3C File Offset: 0x0076FE3C
+	// Token: 0x06018FA5 RID: 102309 RVA: 0x007995A0 File Offset: 0x007977A0
 	private void OnAimingTagChanged(bool tagExist)
 	{
 		if (this.EnableLockOn == tagExist)
@@ -126,7 +126,7 @@ public abstract class SpecialSkillAimingBase : SpecialSkillBase
 		this.OnAimingEnd();
 	}
 
-	// Token: 0x0601B4A1 RID: 111777 RVA: 0x00771C70 File Offset: 0x0076FE70
+	// Token: 0x06018FA6 RID: 102310 RVA: 0x007995D4 File Offset: 0x007977D4
 	private void ClearLockOnTarget()
 	{
 		AimingLockOnInfo lockOnTarget = this.LockOnTarget;
@@ -139,7 +139,7 @@ public abstract class SpecialSkillAimingBase : SpecialSkillBase
 		EventSystem.Instance.Emit<EntityHandle, string>(this.SwitchLockTargetEventName, null, "");
 	}
 
-	// Token: 0x0601B4A2 RID: 111778 RVA: 0x00771CD0 File Offset: 0x0076FED0
+	// Token: 0x06018FA7 RID: 102311 RVA: 0x00799634 File Offset: 0x00797834
 	protected void LockOnCircle(int distance, int radius)
 	{
 		this.LockOnShape(distance, delegate(Vector2D screenPos)
@@ -153,7 +153,7 @@ public abstract class SpecialSkillAimingBase : SpecialSkillBase
 		});
 	}
 
-	// Token: 0x0601B4A3 RID: 111779 RVA: 0x00771D00 File Offset: 0x0076FF00
+	// Token: 0x06018FA8 RID: 102312 RVA: 0x00799664 File Offset: 0x00797864
 	protected void LockOnRect(int distance, int halfWidth, int halfHeight)
 	{
 		this.LockOnShape(distance, delegate(Vector2D screenPos)
@@ -168,7 +168,7 @@ public abstract class SpecialSkillAimingBase : SpecialSkillBase
 		});
 	}
 
-	// Token: 0x0601B4A4 RID: 111780 RVA: 0x00771D34 File Offset: 0x0076FF34
+	// Token: 0x06018FA9 RID: 102313 RVA: 0x00799698 File Offset: 0x00797898
 	private void LockOnShape(int distance, Func<Vector2D, double> getShapeScore)
 	{
 		List<EntityHandle> list = new List<EntityHandle>();
@@ -272,7 +272,7 @@ public abstract class SpecialSkillAimingBase : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4A5 RID: 111781 RVA: 0x007720E4 File Offset: 0x007702E4
+	// Token: 0x06018FAA RID: 102314 RVA: 0x00799A48 File Offset: 0x00797C48
 	[return: Nullable(2)]
 	protected unsafe AimingCandidate CheckLockOnPoint(EntityHandle handle, string partName, string socketName, Func<Vector2D, double> getShapeScore)
 	{
@@ -328,7 +328,7 @@ public abstract class SpecialSkillAimingBase : SpecialSkillBase
 		};
 	}
 
-	// Token: 0x0601B4A6 RID: 111782 RVA: 0x00772290 File Offset: 0x00770490
+	// Token: 0x06018FAB RID: 102315 RVA: 0x00799BF4 File Offset: 0x00797DF4
 	[return: Nullable(2)]
 	private AActor TraceDetectBlock(global::Vector from, global::Vector to, [Nullable(2)] AActor targetActor)
 	{
@@ -362,7 +362,7 @@ public abstract class SpecialSkillAimingBase : SpecialSkillBase
 		return aactor;
 	}
 
-	// Token: 0x0601B4A7 RID: 111783 RVA: 0x00772390 File Offset: 0x00770590
+	// Token: 0x06018FAC RID: 102316 RVA: 0x00799CF4 File Offset: 0x00797EF4
 	[return: Nullable(2)]
 	private EntityHandle FindHandleByActor(AActor hitActor, HashSet<EntityHandle> validHandles)
 	{
@@ -378,7 +378,7 @@ public abstract class SpecialSkillAimingBase : SpecialSkillBase
 		return null;
 	}
 
-	// Token: 0x0601B4A8 RID: 111784 RVA: 0x00772400 File Offset: 0x00770600
+	// Token: 0x06018FAD RID: 102317 RVA: 0x00799D64 File Offset: 0x00797F64
 	[return: Nullable(2)]
 	private global::Vector GetLockOnPointLocation(EntityHandle handle, string partName, string socketName)
 	{
@@ -408,7 +408,7 @@ public abstract class SpecialSkillAimingBase : SpecialSkillBase
 		return baseActorComponent.ActorLocationProxy;
 	}
 
-	// Token: 0x0601B4A9 RID: 111785 RVA: 0x00772484 File Offset: 0x00770684
+	// Token: 0x06018FAE RID: 102318 RVA: 0x00799DE8 File Offset: 0x00797FE8
 	protected void GetBoneLocation(EntityHandle target, string boneName, global::Vector @out)
 	{
 		if (target.Entity == null)
@@ -426,47 +426,47 @@ public abstract class SpecialSkillAimingBase : SpecialSkillBase
 		@out.Reset();
 	}
 
-	// Token: 0x0400D520 RID: 54560
+	// Token: 0x0400D983 RID: 55683
 	private const string PROFILE_KEY = "SpecialSkillAimingBase_TraceDetectBlock";
 
-	// Token: 0x0400D521 RID: 54561
+	// Token: 0x0400D984 RID: 55684
 	protected readonly int GapTime = 200;
 
-	// Token: 0x0400D522 RID: 54562
+	// Token: 0x0400D985 RID: 55685
 	protected readonly int Distance = 5000;
 
-	// Token: 0x0400D523 RID: 54563
+	// Token: 0x0400D986 RID: 55686
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D524 RID: 54564
+	// Token: 0x0400D987 RID: 55687
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400D525 RID: 54565
+	// Token: 0x0400D988 RID: 55688
 	[Nullable(2)]
 	private ITagTask TagTask;
 
-	// Token: 0x0400D526 RID: 54566
+	// Token: 0x0400D989 RID: 55689
 	private bool EnableLockOn;
 
-	// Token: 0x0400D527 RID: 54567
+	// Token: 0x0400D98A RID: 55690
 	[Nullable(2)]
 	private AimingLockOnInfo LockOnTarget;
 
-	// Token: 0x0400D528 RID: 54568
+	// Token: 0x0400D98B RID: 55691
 	private float TimeCount;
 
-	// Token: 0x0400D529 RID: 54569
+	// Token: 0x0400D98C RID: 55692
 	private readonly Vector2D ScreenPos = new Vector2D();
 
-	// Token: 0x0400D52A RID: 54570
+	// Token: 0x0400D98D RID: 55693
 	private readonly global::Vector TmpBoneLocation = global::Vector.Create();
 
-	// Token: 0x0400D52B RID: 54571
+	// Token: 0x0400D98E RID: 55694
 	private readonly global::Vector TmpActorLocation = global::Vector.Create();
 
-	// Token: 0x0400D52C RID: 54572
+	// Token: 0x0400D98F RID: 55695
 	[Nullable(2)]
 	private UTraceLineElement AimingLineTrace;
 }

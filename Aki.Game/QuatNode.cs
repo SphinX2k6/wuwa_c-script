@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public class QuatNode
 {
-	// Token: 0x060003A0 RID: 928 RVA: 0x00010CE1 File Offset: 0x0000EEE1
+	// Token: 0x060003A0 RID: 928 RVA: 0x000114A9 File Offset: 0x0000F6A9
 	public QuatNode(Quat quat, double cost)
 	{
 		this.Quaternion = Quat.Create(quat);

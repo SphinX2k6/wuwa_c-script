@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001990 RID: 6544
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B17 RID: 6935
 	public class IDestroySummonedVehicle : IDestroySummonedEntitiesType
 	{
-		// Token: 0x06008C17 RID: 35863 RVA: 0x00148EE4 File Offset: 0x001470E4
+		// Token: 0x0600933B RID: 37691 RVA: 0x001586F4 File Offset: 0x001568F4
 		private IDestroySummonedVehicle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008C18 RID: 35864 RVA: 0x00148F1C File Offset: 0x0014711C
+		// Token: 0x0600933C RID: 37692 RVA: 0x0015872C File Offset: 0x0015692C
 		public static IDestroySummonedVehicle Create([Nullable(2)] IDestroySummonedVehicle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C19 RID: 35865 RVA: 0x00148F2F File Offset: 0x0014712F
+		// Token: 0x0600933D RID: 37693 RVA: 0x0015873F File Offset: 0x0015693F
 		public static IDestroySummonedVehicle CreateFromSetValue([Nullable(2)] IDestroySummonedVehicle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C1A RID: 35866 RVA: 0x00148F42 File Offset: 0x00147142
+		// Token: 0x0600933E RID: 37694 RVA: 0x00158752 File Offset: 0x00156952
 		public new IDestroySummonedVehicle_SetValue ToSetValue()
 		{
 			return new IDestroySummonedVehicle_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D08 RID: 11528
-		// (get) Token: 0x06008C1B RID: 35867 RVA: 0x00148F61 File Offset: 0x00147161
-		// (set) Token: 0x06008C1C RID: 35868 RVA: 0x00148F8C File Offset: 0x0014718C
+		// Token: 0x17002F07 RID: 12039
+		// (get) Token: 0x0600933F RID: 37695 RVA: 0x00158771 File Offset: 0x00156971
+		// (set) Token: 0x06009340 RID: 37696 RVA: 0x0015879C File Offset: 0x0015699C
 		public override ESummonEntityType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D09 RID: 11529
-		// (get) Token: 0x06008C1D RID: 35869 RVA: 0x00148F9A File Offset: 0x0014719A
-		// (set) Token: 0x06008C1E RID: 35870 RVA: 0x00148FC5 File Offset: 0x001471C5
+		// Token: 0x17002F08 RID: 12040
+		// (get) Token: 0x06009341 RID: 37697 RVA: 0x001587AA File Offset: 0x001569AA
+		// (set) Token: 0x06009342 RID: 37698 RVA: 0x001587D5 File Offset: 0x001569D5
 		public override string TemplateId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005745 RID: 22341
+		// Token: 0x04005B8E RID: 23438
 		[Nullable(2)]
 		protected new IDestroySummonedVehicle FbInstance;
 
-		// Token: 0x04005746 RID: 22342
+		// Token: 0x04005B8F RID: 23439
 		[Nullable(2)]
 		protected new IDestroySummonedVehicle_SetValue PocoInterface;
 	}

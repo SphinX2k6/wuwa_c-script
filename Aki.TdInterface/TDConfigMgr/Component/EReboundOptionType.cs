@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000124 RID: 292
+	// Token: 0x02000135 RID: 309
 	[EnumExtensions]
 	public enum EReboundOptionType
 	{
-		// Token: 0x040005D9 RID: 1497
+		// Token: 0x04000616 RID: 1558
 		ForwardFront
 	}
 }

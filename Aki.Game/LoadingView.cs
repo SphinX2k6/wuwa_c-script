@@ -5,17 +5,17 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200207E RID: 8318
+// Token: 0x02001551 RID: 5457
 [NullableContext(1)]
 [Nullable(0)]
 public class LoadingView : LoadingViewBase
 {
-	// Token: 0x06010610 RID: 67088 RVA: 0x003FE6EE File Offset: 0x003FC8EE
+	// Token: 0x0600DA78 RID: 55928 RVA: 0x0040AB36 File Offset: 0x00408D36
 	public LoadingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010611 RID: 67089 RVA: 0x003FE6F8 File Offset: 0x003FC8F8
+	// Token: 0x0600DA79 RID: 55929 RVA: 0x0040AB40 File Offset: 0x00408D40
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -52,7 +52,7 @@ public class LoadingView : LoadingViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06010612 RID: 67090 RVA: 0x003FE8A8 File Offset: 0x003FCAA8
+	// Token: 0x0600DA7A RID: 55930 RVA: 0x0040ACF0 File Offset: 0x00408EF0
 	protected override void OnStart()
 	{
 		this.FillWidth = base.GetItem(9).Width;
@@ -66,14 +66,14 @@ public class LoadingView : LoadingViewBase
 		rootItem.SetAlpha(1f);
 	}
 
-	// Token: 0x06010613 RID: 67091 RVA: 0x003FE90A File Offset: 0x003FCB0A
+	// Token: 0x0600DA7B RID: 55931 RVA: 0x0040AD52 File Offset: 0x00408F52
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
 		this.InitContent();
 	}
 
-	// Token: 0x06010614 RID: 67092 RVA: 0x003FE918 File Offset: 0x003FCB18
+	// Token: 0x0600DA7C RID: 55932 RVA: 0x0040AD60 File Offset: 0x00408F60
 	private void InitContent()
 	{
 		UUILayoutBase layout = base.GetLayoutBase(7);
@@ -112,14 +112,14 @@ public class LoadingView : LoadingViewBase
 		});
 	}
 
-	// Token: 0x06010615 RID: 67093 RVA: 0x003FE97A File Offset: 0x003FCB7A
+	// Token: 0x0600DA7D RID: 55933 RVA: 0x0040ADC2 File Offset: 0x00408FC2
 	protected override void UpdateShowTipsUi(string title, string tips)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), tips, Array.Empty<object>());
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), title, Array.Empty<object>());
 	}
 
-	// Token: 0x06010616 RID: 67094 RVA: 0x003FE9AC File Offset: 0x003FCBAC
+	// Token: 0x0600DA7E RID: 55934 RVA: 0x0040ADF4 File Offset: 0x00408FF4
 	protected override void UpdateProgressRate(float rate)
 	{
 		base.SetTextureProgressRate(0, rate);
@@ -132,54 +132,54 @@ public class LoadingView : LoadingViewBase
 		item.SetAnchorOffsetX(anchorOffsetX);
 	}
 
-	// Token: 0x06010617 RID: 67095 RVA: 0x003FE9DC File Offset: 0x003FCBDC
+	// Token: 0x0600DA7F RID: 55935 RVA: 0x0040AE24 File Offset: 0x00409024
 	protected override void UpdateProgressValue(float value)
 	{
 		this.SetTextProgressValue(5, value, "");
 	}
 
-	// Token: 0x06010618 RID: 67096 RVA: 0x003FE9EB File Offset: 0x003FCBEB
+	// Token: 0x0600DA80 RID: 55936 RVA: 0x0040AE33 File Offset: 0x00409033
 	protected override void UpdateBgUi(string path)
 	{
 		base.SetTextureByPath(path, base.GetTexture(3), new EUiViewName?(this.ViewInfo.Name), null);
 	}
 
-	// Token: 0x040078FA RID: 30970
+	// Token: 0x040079E3 RID: 31203
 	private float FillWidth;
 
-	// Token: 0x02008666 RID: 34406
+	// Token: 0x020077ED RID: 30701
 	[NullableContext(0)]
 	[StaticVariableRuleIgnore]
 	public static class EChildType
 	{
-		// Token: 0x0402BBA0 RID: 179104
+		// Token: 0x04026EAF RID: 159407
 		public const int Progress = 0;
 
-		// Token: 0x0402BBA1 RID: 179105
+		// Token: 0x04026EB0 RID: 159408
 		public const int Tips = 1;
 
-		// Token: 0x0402BBA2 RID: 179106
+		// Token: 0x04026EB1 RID: 159409
 		public const int Title = 2;
 
-		// Token: 0x0402BBA3 RID: 179107
+		// Token: 0x04026EB2 RID: 159410
 		public const int BgTexture = 3;
 
-		// Token: 0x0402BBA4 RID: 179108
+		// Token: 0x04026EB3 RID: 159411
 		public const int NextButton = 4;
 
-		// Token: 0x0402BBA5 RID: 179109
+		// Token: 0x04026EB4 RID: 159412
 		public const int ProgressText = 5;
 
-		// Token: 0x0402BBA6 RID: 179110
+		// Token: 0x04026EB5 RID: 159413
 		public const int TypeSprite = 6;
 
-		// Token: 0x0402BBA7 RID: 179111
+		// Token: 0x04026EB6 RID: 159414
 		public const int Layout = 7;
 
-		// Token: 0x0402BBA8 RID: 179112
+		// Token: 0x04026EB7 RID: 159415
 		public const int MoveHandle = 8;
 
-		// Token: 0x0402BBA9 RID: 179113
+		// Token: 0x04026EB8 RID: 159416
 		public const int MoveHandleFollowTarget = 9;
 	}
 }

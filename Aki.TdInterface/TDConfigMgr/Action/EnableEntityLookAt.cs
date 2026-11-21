@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001638 RID: 5688
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017A5 RID: 6053
 	public class EnableEntityLookAt : ActionParams
 	{
-		// Token: 0x06007C33 RID: 31795 RVA: 0x0012AC74 File Offset: 0x00128E74
+		// Token: 0x06008311 RID: 33553 RVA: 0x00139D20 File Offset: 0x00137F20
 		private EnableEntityLookAt_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007C34 RID: 31796 RVA: 0x0012ACAC File Offset: 0x00128EAC
+		// Token: 0x06008312 RID: 33554 RVA: 0x00139D58 File Offset: 0x00137F58
 		public static EnableEntityLookAt Create([Nullable(2)] EnableEntityLookAt instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C35 RID: 31797 RVA: 0x0012ACBF File Offset: 0x00128EBF
+		// Token: 0x06008313 RID: 33555 RVA: 0x00139D6B File Offset: 0x00137F6B
 		public static EnableEntityLookAt CreateFromSetValue([Nullable(2)] EnableEntityLookAt_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C36 RID: 31798 RVA: 0x0012ACD2 File Offset: 0x00128ED2
+		// Token: 0x06008314 RID: 33556 RVA: 0x00139D7E File Offset: 0x00137F7E
 		public EnableEntityLookAt_SetValue ToSetValue()
 		{
 			return new EnableEntityLookAt_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002918 RID: 10520
-		// (get) Token: 0x06007C37 RID: 31799 RVA: 0x0012AD09 File Offset: 0x00128F09
-		// (set) Token: 0x06007C38 RID: 31800 RVA: 0x0012AD34 File Offset: 0x00128F34
+		// Token: 0x17002B03 RID: 11011
+		// (get) Token: 0x06008315 RID: 33557 RVA: 0x00139DB5 File Offset: 0x00137FB5
+		// (set) Token: 0x06008316 RID: 33558 RVA: 0x00139DE0 File Offset: 0x00137FE0
 		public virtual string Key
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002919 RID: 10521
-		// (get) Token: 0x06007C39 RID: 31801 RVA: 0x0012AD42 File Offset: 0x00128F42
-		// (set) Token: 0x06007C3A RID: 31802 RVA: 0x0012AD69 File Offset: 0x00128F69
+		// Token: 0x17002B04 RID: 11012
+		// (get) Token: 0x06008317 RID: 33559 RVA: 0x00139DEE File Offset: 0x00137FEE
+		// (set) Token: 0x06008318 RID: 33560 RVA: 0x00139E15 File Offset: 0x00138015
 		public virtual IDefaultLookAtType DefaultLookAtType
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700291A RID: 10522
-		// (get) Token: 0x06007C3B RID: 31803 RVA: 0x0012AD78 File Offset: 0x00128F78
-		// (set) Token: 0x06007C3C RID: 31804 RVA: 0x0012ADD9 File Offset: 0x00128FD9
+		// Token: 0x17002B05 RID: 11013
+		// (get) Token: 0x06008319 RID: 33561 RVA: 0x00139E24 File Offset: 0x00138024
+		// (set) Token: 0x0600831A RID: 33562 RVA: 0x00139E85 File Offset: 0x00138085
 		[Nullable(2)]
 		public virtual ICheckFlowLookAt OverrideLookAtType
 		{
@@ -143,9 +141,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700291B RID: 10523
-		// (get) Token: 0x06007C3D RID: 31805 RVA: 0x0012ADEE File Offset: 0x00128FEE
-		// (set) Token: 0x06007C3E RID: 31806 RVA: 0x0012AE15 File Offset: 0x00129015
+		// Token: 0x17002B06 RID: 11014
+		// (get) Token: 0x0600831B RID: 33563 RVA: 0x00139E9A File Offset: 0x0013809A
+		// (set) Token: 0x0600831C RID: 33564 RVA: 0x00139EC1 File Offset: 0x001380C1
 		public virtual List<int> EntityIds
 		{
 			get
@@ -167,18 +165,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004C50 RID: 19536
+		// Token: 0x04005044 RID: 20548
 		[Nullable(2)]
 		protected new EnableEntityLookAt FbInstance;
 
-		// Token: 0x04004C51 RID: 19537
+		// Token: 0x04005045 RID: 20549
 		[Nullable(2)]
 		protected EnableEntityLookAt_SetValue PocoInterface;
 
-		// Token: 0x04004C52 RID: 19538
+		// Token: 0x04005046 RID: 20550
 		private ICheckFlowLookAt _OverrideLookAtTypeCache;
 
-		// Token: 0x04004C53 RID: 19539
+		// Token: 0x04005047 RID: 20551
 		private bool _OverrideLookAtTypeInited;
 	}
 }

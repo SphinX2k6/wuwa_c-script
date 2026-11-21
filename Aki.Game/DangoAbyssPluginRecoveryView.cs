@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -11,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A4C RID: 6732
+// Token: 0x02000F0B RID: 3851
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoAbyssPluginRecoveryView : UiViewBase
 {
-	// Token: 0x0600C622 RID: 50722 RVA: 0x002D068F File Offset: 0x002CE88F
+	// Token: 0x06009A32 RID: 39474 RVA: 0x002DB78C File Offset: 0x002D998C
 	public DangoAbyssPluginRecoveryView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C623 RID: 50723 RVA: 0x002D06BC File Offset: 0x002CE8BC
+	// Token: 0x06009A33 RID: 39475 RVA: 0x002DB7B8 File Offset: 0x002D99B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,13 +49,13 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600C624 RID: 50724 RVA: 0x002D087A File Offset: 0x002CEA7A
-	public override bool GetLoopAudioEventSwitch()
+	// Token: 0x06009A34 RID: 39476 RVA: 0x002DB976 File Offset: 0x002D9B76
+	public override bool GetBgmSwitch()
 	{
 		return !DangoAbyssModel.Instance.CheckIfInSmallWorldInstance();
 	}
 
-	// Token: 0x0600C625 RID: 50725 RVA: 0x002D088C File Offset: 0x002CEA8C
+	// Token: 0x06009A35 RID: 39477 RVA: 0x002DB988 File Offset: 0x002D9B88
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoAbyssPluginRecoveryView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -67,7 +66,7 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C626 RID: 50726 RVA: 0x002D08CF File Offset: 0x002CEACF
+	// Token: 0x06009A36 RID: 39478 RVA: 0x002DB9CB File Offset: 0x002D9BCB
 	protected override void OnBeforeShow()
 	{
 		this.RefreshList();
@@ -75,14 +74,14 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 		base.GetItem(0).SetUIActive(true);
 	}
 
-	// Token: 0x0600C627 RID: 50727 RVA: 0x002D08EC File Offset: 0x002CEAEC
+	// Token: 0x06009A37 RID: 39479 RVA: 0x002DB9E8 File Offset: 0x002D9BE8
 	private void RefreshList()
 	{
 		global::AbyssPluginItemInfo[] allPluginItemList = DangoAbyssModel.Instance.GetAllPluginItemList();
-		this.DataList = allPluginItemList.ToList<global::AbyssPluginItemInfo>();
+		this.DataList = new List<global::AbyssPluginItemInfo>(allPluginItemList);
 		LguiUtil.Instance.TrySetLocalTextNew(base.GetText(6), "Text_DangoPluginCount_Text", new <>z__ReadOnlySingleElementList<object>(allPluginItemList.Length));
 		base.GetItem(9).SetUIActive(allPluginItemList.Length == 0);
-		this.ItemScroll.UpdateComponent(allPluginItemList.ToList<global::AbyssPluginItemInfo>(), this.Selection, null);
+		this.ItemScroll.UpdateComponent(this.DataList, this.Selection, null);
 		int dangoId = this.ViewModel.GetDangoId();
 		this.FilterSortEntrance.UpdateData(EFilterSortGroupId.DangoAbyssPluginRecovery, this.DataList, new object[]
 		{
@@ -90,7 +89,7 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600C628 RID: 50728 RVA: 0x002D098C File Offset: 0x002CEB8C
+	// Token: 0x06009A38 RID: 39480 RVA: 0x002DBA88 File Offset: 0x002D9C88
 	private void RefreshAwardText()
 	{
 		int pluginItemPackageCapacity = DangoAbyssModel.Instance.GetPluginItemPackageCapacity();
@@ -118,7 +117,7 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 		LguiUtil.Instance.TrySetLocalTextNew(base.GetText(3), "Text_RecoveryTimes_Text", new <>z__ReadOnlySingleElementList<object>(num));
 	}
 
-	// Token: 0x0600C629 RID: 50729 RVA: 0x002D0AB8 File Offset: 0x002CECB8
+	// Token: 0x06009A39 RID: 39481 RVA: 0x002DBBB4 File Offset: 0x002D9DB4
 	public void ShowTipsComponent(ItemTipsData data)
 	{
 		this.TipsComponent.Refresh(data);
@@ -126,7 +125,7 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 		base.GetButton(12).RootUIComp.Get().SetUIActive(true);
 	}
 
-	// Token: 0x0600C62A RID: 50730 RVA: 0x002D0AFC File Offset: 0x002CECFC
+	// Token: 0x06009A3A RID: 39482 RVA: 0x002DBBF8 File Offset: 0x002D9DF8
 	private void SwitchAllSelection(bool isClear)
 	{
 		if (isClear)
@@ -158,31 +157,31 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 				}
 			}
 		}
-		this.ItemScroll.UpdateComponent(this.DataList.ToList<global::AbyssPluginItemInfo>(), this.Selection, null);
-		this.ItemScroll.UpdateDataList(this.DataList.ToList<global::AbyssPluginItemInfo>());
+		this.ItemScroll.UpdateComponent(this.DataList, this.Selection, null);
+		this.ItemScroll.UpdateDataList(this.DataList);
 		this.RefreshAwardText();
 	}
 
-	// Token: 0x0600C62B RID: 50731 RVA: 0x002D0C14 File Offset: 0x002CEE14
+	// Token: 0x06009A3B RID: 39483 RVA: 0x002DBD08 File Offset: 0x002D9F08
 	private void OnChangeSelection(List<ISelectedData> dataList, SelectableExpData _)
 	{
 		this.Selection = dataList;
 		this.RefreshAwardText();
 	}
 
-	// Token: 0x0600C62C RID: 50732 RVA: 0x002D0C23 File Offset: 0x002CEE23
+	// Token: 0x06009A3C RID: 39484 RVA: 0x002DBD17 File Offset: 0x002D9F17
 	private RecoveryRewardItem InitAwardItem()
 	{
 		return new RecoveryRewardItem();
 	}
 
-	// Token: 0x0600C62D RID: 50733 RVA: 0x002D0C2A File Offset: 0x002CEE2A
+	// Token: 0x06009A3D RID: 39485 RVA: 0x002DBD1E File Offset: 0x002D9F1E
 	private void OnClickClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600C62E RID: 50734 RVA: 0x002D0C34 File Offset: 0x002CEE34
+	// Token: 0x06009A3E RID: 39486 RVA: 0x002DBD28 File Offset: 0x002D9F28
 	private void OnClickConfirm()
 	{
 		Log.Instance.Info(ELogModule.Activity, ELogAuthor.WDX, "OnClickConfirm", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -202,20 +201,20 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 		DangoAbyssActivityController.Instance.RequestPluginRecovery(list);
 	}
 
-	// Token: 0x0600C62F RID: 50735 RVA: 0x002D0D1C File Offset: 0x002CEF1C
+	// Token: 0x06009A3F RID: 39487 RVA: 0x002DBE10 File Offset: 0x002DA010
 	protected void OnClickMask()
 	{
 		base.GetItem(11).SetUIActive(false);
 		base.GetButton(12).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x0600C630 RID: 50736 RVA: 0x002D0D52 File Offset: 0x002CEF52
+	// Token: 0x06009A40 RID: 39488 RVA: 0x002DBE46 File Offset: 0x002DA046
 	protected void OnClickAll(EToggleState state)
 	{
 		this.SwitchAllSelection(state == EToggleState.ETT_UnChecked);
 	}
 
-	// Token: 0x0600C631 RID: 50737 RVA: 0x002D0D60 File Offset: 0x002CEF60
+	// Token: 0x06009A41 RID: 39489 RVA: 0x002DBE54 File Offset: 0x002DA054
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnSelectItemAdd, new Action<int, int>(this.OnEventClickItem));
@@ -223,7 +222,7 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 		EventSystem.Instance.Add<IReadOnlyList<AddCountItemInfo>>(EEventName.OnAbyssPluginRecovery, new Action<IReadOnlyList<AddCountItemInfo>>(this.OnEventRecovery));
 	}
 
-	// Token: 0x0600C632 RID: 50738 RVA: 0x002D0DC4 File Offset: 0x002CEFC4
+	// Token: 0x06009A42 RID: 39490 RVA: 0x002DBEB8 File Offset: 0x002DA0B8
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int, int>(EEventName.OnSelectItemAdd, new Action<int, int>(this.OnEventClickItem));
@@ -231,14 +230,14 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 		EventSystem.Instance.Remove<IReadOnlyList<AddCountItemInfo>>(EEventName.OnAbyssPluginRecovery, new Action<IReadOnlyList<AddCountItemInfo>>(this.OnEventRecovery));
 	}
 
-	// Token: 0x0600C633 RID: 50739 RVA: 0x002D0E28 File Offset: 0x002CF028
+	// Token: 0x06009A43 RID: 39491 RVA: 0x002DBF1C File Offset: 0x002DA11C
 	private void OnEventClickItem(int itemId, int uniqueId)
 	{
 		ItemTipsData tipsDataByPram = ItemTipsComponentUtilTool.GetTipsDataByPram(DangoAbyssModel.Instance.GetPluginItemTipsData(itemId, uniqueId, null, null));
 		this.ShowTipsComponent(tipsDataByPram);
 	}
 
-	// Token: 0x0600C634 RID: 50740 RVA: 0x002D0E60 File Offset: 0x002CF060
+	// Token: 0x06009A44 RID: 39492 RVA: 0x002DBF54 File Offset: 0x002DA154
 	private void OnEventItemFuncValueChange(int uniqueId)
 	{
 		int num = -1;
@@ -258,7 +257,7 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 		this.RefreshAwardText();
 	}
 
-	// Token: 0x0600C635 RID: 50741 RVA: 0x002D0EC0 File Offset: 0x002CF0C0
+	// Token: 0x06009A45 RID: 39493 RVA: 0x002DBFB4 File Offset: 0x002DA1B4
 	private void OnEventRecovery(IReadOnlyList<AddCountItemInfo> infoList)
 	{
 		if (infoList == null || infoList.Count <= 0)
@@ -268,7 +267,12 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 			this.RefreshAwardText();
 			return;
 		}
-		UiManager.Instance.OpenView(EUiViewName.DangoAbyssPluginRecoveryResultView, infoList.ToArray<AddCountItemInfo>(), delegate(bool _1, int _2)
+		AddCountItemInfo[] array = new AddCountItemInfo[infoList.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = infoList[i];
+		}
+		UiManager.Instance.OpenView(EUiViewName.DangoAbyssPluginRecoveryResultView, array, delegate(bool _1, int _2)
 		{
 			this.Selection = new List<ISelectedData>();
 			this.RefreshList();
@@ -276,7 +280,7 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600C636 RID: 50742 RVA: 0x002D0F14 File Offset: 0x002CF114
+	// Token: 0x06009A46 RID: 39494 RVA: 0x002DC028 File Offset: 0x002DA228
 	private void OnFilterSortRefresh(List<global::AbyssPluginItemInfo> list, bool _1, EFilterSortType _2)
 	{
 		this.DataList = list;
@@ -285,17 +289,17 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 		base.GetButton(12).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x04005B4C RID: 23372
+	// Token: 0x04005C1B RID: 23579
 	private List<ISelectedData> Selection = new List<ISelectedData>();
 
-	// Token: 0x04005B4D RID: 23373
+	// Token: 0x04005C1C RID: 23580
 	private List<global::AbyssPluginItemInfo> DataList = new List<global::AbyssPluginItemInfo>();
 
-	// Token: 0x04005B4E RID: 23374
+	// Token: 0x04005C1D RID: 23581
 	[Nullable(2)]
 	private ItemTipsComponentContentComponent TipsComponent;
 
-	// Token: 0x04005B4F RID: 23375
+	// Token: 0x04005C1E RID: 23582
 	[Nullable(new byte[]
 	{
 		2,
@@ -303,10 +307,10 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 	})]
 	private FilterSortEntrance<global::AbyssPluginItemInfo> FilterSortEntrance;
 
-	// Token: 0x04005B50 RID: 23376
+	// Token: 0x04005C1F RID: 23583
 	private readonly DangoAbyssSelectableComponent<global::AbyssPluginItemInfo> ItemScroll = new DangoAbyssSelectableComponent<global::AbyssPluginItemInfo>(false);
 
-	// Token: 0x04005B51 RID: 23377
+	// Token: 0x04005C20 RID: 23584
 	[Nullable(new byte[]
 	{
 		2,
@@ -315,41 +319,41 @@ public class DangoAbyssPluginRecoveryView : UiViewBase
 	})]
 	private GenericLayout<RecoveryRewardItem, DangoAbyssDefine.IRecoveryRewardData> AwardScroll;
 
-	// Token: 0x04005B52 RID: 23378
+	// Token: 0x04005C21 RID: 23585
 	[Nullable(2)]
 	private PluginEquipViewModel ViewModel;
 
-	// Token: 0x02007F93 RID: 32659
+	// Token: 0x02007122 RID: 28962
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029A70 RID: 170608
+		// Token: 0x04024DAD RID: 150957
 		PanelReward,
-		// Token: 0x04029A71 RID: 170609
+		// Token: 0x04024DAE RID: 150958
 		LayoutReward,
-		// Token: 0x04029A72 RID: 170610
+		// Token: 0x04024DAF RID: 150959
 		TextSelection,
-		// Token: 0x04029A73 RID: 170611
+		// Token: 0x04024DB0 RID: 150960
 		TextCount,
-		// Token: 0x04029A74 RID: 170612
+		// Token: 0x04024DB1 RID: 150961
 		BtnConfirm,
-		// Token: 0x04029A75 RID: 170613
+		// Token: 0x04024DB2 RID: 150962
 		BtnClose,
-		// Token: 0x04029A76 RID: 170614
+		// Token: 0x04024DB3 RID: 150963
 		TextPluginCount,
-		// Token: 0x04029A77 RID: 170615
+		// Token: 0x04024DB4 RID: 150964
 		ItemFilterSort,
-		// Token: 0x04029A78 RID: 170616
+		// Token: 0x04024DB5 RID: 150965
 		LoopScrollPlugin,
-		// Token: 0x04029A79 RID: 170617
+		// Token: 0x04024DB6 RID: 150966
 		ItemEmpty,
-		// Token: 0x04029A7A RID: 170618
+		// Token: 0x04024DB7 RID: 150967
 		ItemPlugin,
-		// Token: 0x04029A7B RID: 170619
+		// Token: 0x04024DB8 RID: 150968
 		ItemTips,
-		// Token: 0x04029A7C RID: 170620
+		// Token: 0x04024DB9 RID: 150969
 		BtnMask,
-		// Token: 0x04029A7D RID: 170621
+		// Token: 0x04024DBA RID: 150970
 		ToggleAll
 	}
 }

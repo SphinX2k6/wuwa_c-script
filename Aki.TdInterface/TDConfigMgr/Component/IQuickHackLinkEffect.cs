@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200063E RID: 1598
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006DB RID: 1755
 	public class IQuickHackLinkEffect
 	{
-		// Token: 0x06002220 RID: 8736 RVA: 0x0005DE94 File Offset: 0x0005C094
+		// Token: 0x06002526 RID: 9510 RVA: 0x00064BA8 File Offset: 0x00062DA8
 		private IQuickHackLinkEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002221 RID: 8737 RVA: 0x0005DECC File Offset: 0x0005C0CC
+		// Token: 0x06002527 RID: 9511 RVA: 0x00064BE0 File Offset: 0x00062DE0
 		public static IQuickHackLinkEffect Create([Nullable(2)] IQuickHackLinkEffect instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002222 RID: 8738 RVA: 0x0005DEDF File Offset: 0x0005C0DF
+		// Token: 0x06002528 RID: 9512 RVA: 0x00064BF3 File Offset: 0x00062DF3
 		public static IQuickHackLinkEffect CreateFromSetValue([Nullable(2)] IQuickHackLinkEffect_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002223 RID: 8739 RVA: 0x0005DEF2 File Offset: 0x0005C0F2
+		// Token: 0x06002529 RID: 9513 RVA: 0x00064C06 File Offset: 0x00062E06
 		public IQuickHackLinkEffect_SetValue ToSetValue()
 		{
 			return new IQuickHackLinkEffect_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000912 RID: 2322
-		// (get) Token: 0x06002224 RID: 8740 RVA: 0x0005DF29 File Offset: 0x0005C129
-		// (set) Token: 0x06002225 RID: 8741 RVA: 0x0005DF54 File Offset: 0x0005C154
+		// Token: 0x170009C9 RID: 2505
+		// (get) Token: 0x0600252A RID: 9514 RVA: 0x00064C3D File Offset: 0x00062E3D
+		// (set) Token: 0x0600252B RID: 9515 RVA: 0x00064C68 File Offset: 0x00062E68
 		public virtual string RequiredState
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000913 RID: 2323
-		// (get) Token: 0x06002226 RID: 8742 RVA: 0x0005DF62 File Offset: 0x0005C162
-		// (set) Token: 0x06002227 RID: 8743 RVA: 0x0005DF8D File Offset: 0x0005C18D
+		// Token: 0x170009CA RID: 2506
+		// (get) Token: 0x0600252C RID: 9516 RVA: 0x00064C76 File Offset: 0x00062E76
+		// (set) Token: 0x0600252D RID: 9517 RVA: 0x00064CA1 File Offset: 0x00062EA1
 		public virtual string EffectPath
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000914 RID: 2324
-		// (get) Token: 0x06002228 RID: 8744 RVA: 0x0005DF9C File Offset: 0x0005C19C
-		// (set) Token: 0x06002229 RID: 8745 RVA: 0x0005DFFD File Offset: 0x0005C1FD
+		// Token: 0x170009CB RID: 2507
+		// (get) Token: 0x0600252E RID: 9518 RVA: 0x00064CB0 File Offset: 0x00062EB0
+		// (set) Token: 0x0600252F RID: 9519 RVA: 0x00064D11 File Offset: 0x00062F11
 		public virtual VectorInfo StartPoint
 		{
 			get
@@ -139,9 +137,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000915 RID: 2325
-		// (get) Token: 0x0600222A RID: 8746 RVA: 0x0005E014 File Offset: 0x0005C214
-		// (set) Token: 0x0600222B RID: 8747 RVA: 0x0005E075 File Offset: 0x0005C275
+		// Token: 0x170009CC RID: 2508
+		// (get) Token: 0x06002530 RID: 9520 RVA: 0x00064D28 File Offset: 0x00062F28
+		// (set) Token: 0x06002531 RID: 9521 RVA: 0x00064D89 File Offset: 0x00062F89
 		public virtual VectorInfo EndPoint
 		{
 			get
@@ -169,24 +167,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040017B6 RID: 6070
+		// Token: 0x040019A8 RID: 6568
 		[Nullable(2)]
 		protected IQuickHackLinkEffect FbInstance;
 
-		// Token: 0x040017B7 RID: 6071
+		// Token: 0x040019A9 RID: 6569
 		[Nullable(2)]
 		protected IQuickHackLinkEffect_SetValue PocoInterface;
 
-		// Token: 0x040017B8 RID: 6072
+		// Token: 0x040019AA RID: 6570
 		private VectorInfo _StartPointCache;
 
-		// Token: 0x040017B9 RID: 6073
+		// Token: 0x040019AB RID: 6571
 		private bool _StartPointInited;
 
-		// Token: 0x040017BA RID: 6074
+		// Token: 0x040019AC RID: 6572
 		private VectorInfo _EndPointCache;
 
-		// Token: 0x040017BB RID: 6075
+		// Token: 0x040019AD RID: 6573
 		private bool _EndPointInited;
 	}
 }

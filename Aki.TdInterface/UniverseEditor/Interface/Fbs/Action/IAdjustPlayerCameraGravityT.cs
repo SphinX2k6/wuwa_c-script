@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200616B RID: 24939
+	// Token: 0x020067D0 RID: 26576
 	public class IAdjustPlayerCameraGravityT
 	{
-		// Token: 0x1700B99D RID: 47517
-		// (get) Token: 0x0602AE7E RID: 175742 RVA: 0x005EB3F1 File Offset: 0x005E95F1
-		// (set) Token: 0x0602AE7F RID: 175743 RVA: 0x005EB3F9 File Offset: 0x005E95F9
+		// Token: 0x1700C30D RID: 49933
+		// (get) Token: 0x0602D577 RID: 185719 RVA: 0x006355CD File Offset: 0x006337CD
+		// (set) Token: 0x0602D578 RID: 185720 RVA: 0x006355D5 File Offset: 0x006337D5
 		public TGravityDirectionUnion GravityDirection { get; set; }
 
-		// Token: 0x1700B99E RID: 47518
-		// (get) Token: 0x0602AE80 RID: 175744 RVA: 0x005EB402 File Offset: 0x005E9602
-		// (set) Token: 0x0602AE81 RID: 175745 RVA: 0x005EB40A File Offset: 0x005E960A
+		// Token: 0x1700C30E RID: 49934
+		// (get) Token: 0x0602D579 RID: 185721 RVA: 0x006355DE File Offset: 0x006337DE
+		// (set) Token: 0x0602D57A RID: 185722 RVA: 0x006355E6 File Offset: 0x006337E6
 		public float LerpTime { get; set; }
 
-		// Token: 0x1700B99F RID: 47519
-		// (get) Token: 0x0602AE82 RID: 175746 RVA: 0x005EB413 File Offset: 0x005E9613
-		// (set) Token: 0x0602AE83 RID: 175747 RVA: 0x005EB41B File Offset: 0x005E961B
+		// Token: 0x1700C30F RID: 49935
+		// (get) Token: 0x0602D57B RID: 185723 RVA: 0x006355EF File Offset: 0x006337EF
+		// (set) Token: 0x0602D57C RID: 185724 RVA: 0x006355F7 File Offset: 0x006337F7
 		public string LerpCurve { get; set; }
 
-		// Token: 0x0602AE84 RID: 175748 RVA: 0x005EB424 File Offset: 0x005E9624
+		// Token: 0x0602D57D RID: 185725 RVA: 0x00635600 File Offset: 0x00633800
 		public IAdjustPlayerCameraGravityT()
 		{
 			this.GravityDirection = null;

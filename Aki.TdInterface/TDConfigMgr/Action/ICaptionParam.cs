@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001856 RID: 6230
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019E1 RID: 6625
 	public class ICaptionParam
 	{
-		// Token: 0x060085D9 RID: 34265 RVA: 0x0013E3BC File Offset: 0x0013C5BC
+		// Token: 0x06008CFF RID: 36095 RVA: 0x0014DBB0 File Offset: 0x0014BDB0
 		private ICaptionParam_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060085DA RID: 34266 RVA: 0x0013E3F4 File Offset: 0x0013C5F4
+		// Token: 0x06008D00 RID: 36096 RVA: 0x0014DBE8 File Offset: 0x0014BDE8
 		public static ICaptionParam Create([Nullable(2)] ICaptionParam instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060085DB RID: 34267 RVA: 0x0013E407 File Offset: 0x0013C607
+		// Token: 0x06008D01 RID: 36097 RVA: 0x0014DBFB File Offset: 0x0014BDFB
 		public static ICaptionParam CreateFromSetValue([Nullable(2)] ICaptionParam_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060085DC RID: 34268 RVA: 0x0013E41A File Offset: 0x0013C61A
+		// Token: 0x06008D02 RID: 36098 RVA: 0x0014DC0E File Offset: 0x0014BE0E
 		public ICaptionParam_SetValue ToSetValue()
 		{
 			return new ICaptionParam_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BC0 RID: 11200
-		// (get) Token: 0x060085DD RID: 34269 RVA: 0x0013E448 File Offset: 0x0013C648
-		// (set) Token: 0x060085DE RID: 34270 RVA: 0x0013E482 File Offset: 0x0013C682
+		// Token: 0x17002DBA RID: 11706
+		// (get) Token: 0x06008D03 RID: 36099 RVA: 0x0014DC3C File Offset: 0x0014BE3C
+		// (set) Token: 0x06008D04 RID: 36100 RVA: 0x0014DC76 File Offset: 0x0014BE76
 		public virtual float? StartTime
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BC1 RID: 11201
-		// (get) Token: 0x060085DF RID: 34271 RVA: 0x0013E490 File Offset: 0x0013C690
-		// (set) Token: 0x060085E0 RID: 34272 RVA: 0x0013E4CA File Offset: 0x0013C6CA
+		// Token: 0x17002DBB RID: 11707
+		// (get) Token: 0x06008D05 RID: 36101 RVA: 0x0014DC84 File Offset: 0x0014BE84
+		// (set) Token: 0x06008D06 RID: 36102 RVA: 0x0014DCBE File Offset: 0x0014BEBE
 		public virtual float? TotalTime
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BC2 RID: 11202
-		// (get) Token: 0x060085E1 RID: 34273 RVA: 0x0013E4D8 File Offset: 0x0013C6D8
-		// (set) Token: 0x060085E2 RID: 34274 RVA: 0x0013E512 File Offset: 0x0013C712
+		// Token: 0x17002DBC RID: 11708
+		// (get) Token: 0x06008D07 RID: 36103 RVA: 0x0014DCCC File Offset: 0x0014BECC
+		// (set) Token: 0x06008D08 RID: 36104 RVA: 0x0014DD06 File Offset: 0x0014BF06
 		public virtual float? IntervalTime
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005481 RID: 21633
+		// Token: 0x040058CD RID: 22733
 		[Nullable(2)]
 		protected ICaptionParam FbInstance;
 
-		// Token: 0x04005482 RID: 21634
+		// Token: 0x040058CE RID: 22734
 		[Nullable(2)]
 		protected ICaptionParam_SetValue PocoInterface;
 	}

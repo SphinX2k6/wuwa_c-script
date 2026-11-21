@@ -2,10 +2,10 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-// Token: 0x02003550 RID: 13648
+// Token: 0x02002AC5 RID: 10949
 public class EMapExploreToolUseTipIdJsonConverter : JsonConverter<EMapExploreToolUseTipId>
 {
-	// Token: 0x0601DF90 RID: 122768 RVA: 0x008665A0 File Offset: 0x008647A0
+	// Token: 0x0601BCB8 RID: 113848 RVA: 0x0088E108 File Offset: 0x0088C308
 	public override EMapExploreToolUseTipId Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 	{
 		string @string = reader.GetString();
@@ -16,7 +16,7 @@ public class EMapExploreToolUseTipIdJsonConverter : JsonConverter<EMapExploreToo
 		return EMapExploreToolUseTipIdExtensions.FromString(@string);
 	}
 
-	// Token: 0x0601DF91 RID: 122769 RVA: 0x008665C4 File Offset: 0x008647C4
+	// Token: 0x0601BCB9 RID: 113849 RVA: 0x0088E12C File Offset: 0x0088C32C
 	public override void Write(Utf8JsonWriter writer, EMapExploreToolUseTipId value, JsonSerializerOptions options)
 	{
 		writer.WriteStringValue(value.ToEnumString());

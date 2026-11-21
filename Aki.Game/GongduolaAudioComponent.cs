@@ -4,12 +4,12 @@ using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.Module.Audio;
 using UnrealEngine;
 
-// Token: 0x020032E8 RID: 13032
+// Token: 0x0200285A RID: 10330
 [NullableContext(1)]
 [Nullable(0)]
 public class GongduolaAudioComponent : VehicleAudioComponent
 {
-	// Token: 0x0601C59F RID: 116127 RVA: 0x007EDEB6 File Offset: 0x007EC0B6
+	// Token: 0x0601A252 RID: 107090 RVA: 0x008145FC File Offset: 0x008127FC
 	protected override void OnVehicleBeenEntered(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		GameAudioModel.Instance.GondolaGetOnAudioEvent(base.Entity);
@@ -28,13 +28,13 @@ public class GongduolaAudioComponent : VehicleAudioComponent
 		}
 	}
 
-	// Token: 0x0601C5A0 RID: 116128 RVA: 0x007EDEF4 File Offset: 0x007EC0F4
+	// Token: 0x0601A253 RID: 107091 RVA: 0x0081463A File Offset: 0x0081283A
 	protected override void OnVehicleBeenLeaved(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		GameAudioModel.Instance.GondolaGetOnAudioEvent(base.Entity);
 	}
 
-	// Token: 0x0601C5A1 RID: 116129 RVA: 0x007EDF08 File Offset: 0x007EC108
+	// Token: 0x0601A254 RID: 107092 RVA: 0x0081464C File Offset: 0x0081284C
 	public override void UpdateVehicleMoveSound(float speed, AActor owner)
 	{
 		if (Math.Abs(this.LastSpeed - speed) < 50f && (this.LastSpeed == 0f || speed != 0f))
@@ -57,7 +57,7 @@ public class GongduolaAudioComponent : VehicleAudioComponent
 		}
 	}
 
-	// Token: 0x0601C5A2 RID: 116130 RVA: 0x007EDFC0 File Offset: 0x007EC1C0
+	// Token: 0x0601A255 RID: 107093 RVA: 0x00814704 File Offset: 0x00812904
 	private void StopMoveSound(AActor owner)
 	{
 		if (this.MoveSoundEventHandle != 0)
@@ -67,7 +67,7 @@ public class GongduolaAudioComponent : VehicleAudioComponent
 		}
 	}
 
-	// Token: 0x0601C5A3 RID: 116131 RVA: 0x007EDFF8 File Offset: 0x007EC1F8
+	// Token: 0x0601A256 RID: 107094 RVA: 0x0081473C File Offset: 0x0081293C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -75,32 +75,66 @@ public class GongduolaAudioComponent : VehicleAudioComponent
 			return false;
 		}
 		GongduolaAudioComponent gongduolaAudioComponent = (GongduolaAudioComponent)componentTemplate;
-		if (base.CanResetComponentProperty("LastSpeed"))
-		{
-			this.LastSpeed = gongduolaAudioComponent.LastSpeed;
-		}
-		if (base.CanResetComponentProperty("MoveSoundEventHandle"))
-		{
-			this.MoveSoundEventHandle = gongduolaAudioComponent.MoveSoundEventHandle;
-		}
+		this.LastSpeed = gongduolaAudioComponent.LastSpeed;
+		this.MoveSoundEventHandle = gongduolaAudioComponent.MoveSoundEventHandle;
 		return true;
 	}
 
-	// Token: 0x0400E0A7 RID: 57511
+	// Token: 0x17002A9E RID: 10910
+	// (get) Token: 0x0601A257 RID: 107095 RVA: 0x00814774 File Offset: 0x00812974
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A9F RID: 10911
+	// (get) Token: 0x0601A258 RID: 107096 RVA: 0x00814777 File Offset: 0x00812977
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AA0 RID: 10912
+	// (get) Token: 0x0601A259 RID: 107097 RVA: 0x0081477A File Offset: 0x0081297A
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AA1 RID: 10913
+	// (get) Token: 0x0601A25A RID: 107098 RVA: 0x0081477D File Offset: 0x0081297D
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E552 RID: 58706
 	private const string VEHICLE_MOVE_EVENT = "play_interactive_gongduola_move";
 
-	// Token: 0x0400E0A8 RID: 57512
+	// Token: 0x0400E553 RID: 58707
 	private const float MAX_VEHICLE_SPEED_RTPC_PARAM = 50f;
 
-	// Token: 0x0400E0A9 RID: 57513
+	// Token: 0x0400E554 RID: 58708
 	private const float CHANGE_VEHICLE_SPEED_TOLERENCE = 50f;
 
-	// Token: 0x0400E0AA RID: 57514
+	// Token: 0x0400E555 RID: 58709
 	private const float VEHICLE_MOVE_SPEED_MAPPING = 100f;
 
-	// Token: 0x0400E0AB RID: 57515
+	// Token: 0x0400E556 RID: 58710
 	private float LastSpeed;
 
-	// Token: 0x0400E0AC RID: 57516
+	// Token: 0x0400E557 RID: 58711
 	private int MoveSoundEventHandle;
 }

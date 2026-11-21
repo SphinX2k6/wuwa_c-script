@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001520 RID: 5408
+	// Token: 0x02001596 RID: 5526
 	[NetMessage(EMessageId.WorldTeamPlayerInfoChangeNotify)]
 	public sealed class WorldTeamPlayerInfoChangeNotify : IMessage<WorldTeamPlayerInfoChangeNotify>, IMessage, IEquatable<WorldTeamPlayerInfoChangeNotify>, IDeepCloneable<WorldTeamPlayerInfoChangeNotify>, IBufferMessage
 	{
-		// Token: 0x0601C941 RID: 117057 RVA: 0x004207E1 File Offset: 0x0041E9E1
+		// Token: 0x0601D408 RID: 119816 RVA: 0x0043C29D File Offset: 0x0043A49D
 		[NullableContext(1)]
 		public static WorldTeamPlayerInfoChangeNotify Create()
 		{
 			return new WorldTeamPlayerInfoChangeNotify();
 		}
 
-		// Token: 0x17006057 RID: 24663
-		// (get) Token: 0x0601C942 RID: 117058 RVA: 0x004207E8 File Offset: 0x0041E9E8
+		// Token: 0x170062F8 RID: 25336
+		// (get) Token: 0x0601D409 RID: 119817 RVA: 0x0043C2A4 File Offset: 0x0043A4A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17006058 RID: 24664
-		// (get) Token: 0x0601C943 RID: 117059 RVA: 0x004207EB File Offset: 0x0041E9EB
+		// Token: 0x170062F9 RID: 25337
+		// (get) Token: 0x0601D40A RID: 119818 RVA: 0x0043C2A7 File Offset: 0x0043A4A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C944 RID: 117060 RVA: 0x004207F2 File Offset: 0x0041E9F2
+		// Token: 0x0601D40B RID: 119819 RVA: 0x0043C2AE File Offset: 0x0043A4AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WorldTeamPlayerInfoChangeNotify()
 		{
 		}
 
-		// Token: 0x0601C945 RID: 117061 RVA: 0x00420808 File Offset: 0x0041EA08
+		// Token: 0x0601D40C RID: 119820 RVA: 0x0043C2C4 File Offset: 0x0043A4C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WorldTeamPlayerInfoChangeNotify(WorldTeamPlayerInfoChangeNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601C946 RID: 117062 RVA: 0x0042085C File Offset: 0x0041EA5C
+		// Token: 0x0601D40D RID: 119821 RVA: 0x0043C318 File Offset: 0x0043A518
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WorldTeamPlayerInfoChangeNotify Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new WorldTeamPlayerInfoChangeNotify(this);
 		}
 
-		// Token: 0x17006059 RID: 24665
-		// (get) Token: 0x0601C947 RID: 117063 RVA: 0x00420864 File Offset: 0x0041EA64
-		// (set) Token: 0x0601C948 RID: 117064 RVA: 0x0042086C File Offset: 0x0041EA6C
+		// Token: 0x170062FA RID: 25338
+		// (get) Token: 0x0601D40E RID: 119822 RVA: 0x0043C320 File Offset: 0x0043A520
+		// (set) Token: 0x0601D40F RID: 119823 RVA: 0x0043C328 File Offset: 0x0043A528
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PlayerId
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700605A RID: 24666
-		// (get) Token: 0x0601C949 RID: 117065 RVA: 0x00420875 File Offset: 0x0041EA75
-		// (set) Token: 0x0601C94A RID: 117066 RVA: 0x0042087D File Offset: 0x0041EA7D
+		// Token: 0x170062FB RID: 25339
+		// (get) Token: 0x0601D410 RID: 119824 RVA: 0x0043C331 File Offset: 0x0043A531
+		// (set) Token: 0x0601D411 RID: 119825 RVA: 0x0043C339 File Offset: 0x0043A539
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WorldTeamPlayerChangeType ChangeType
@@ -103,9 +103,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700605B RID: 24667
-		// (get) Token: 0x0601C94B RID: 117067 RVA: 0x00420886 File Offset: 0x0041EA86
-		// (set) Token: 0x0601C94C RID: 117068 RVA: 0x0042088E File Offset: 0x0041EA8E
+		// Token: 0x170062FC RID: 25340
+		// (get) Token: 0x0601D412 RID: 119826 RVA: 0x0043C342 File Offset: 0x0043A542
+		// (set) Token: 0x0601D413 RID: 119827 RVA: 0x0043C34A File Offset: 0x0043A54A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int IntValue
@@ -120,9 +120,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700605C RID: 24668
-		// (get) Token: 0x0601C94D RID: 117069 RVA: 0x00420897 File Offset: 0x0041EA97
-		// (set) Token: 0x0601C94E RID: 117070 RVA: 0x0042089F File Offset: 0x0041EA9F
+		// Token: 0x170062FD RID: 25341
+		// (get) Token: 0x0601D414 RID: 119828 RVA: 0x0043C353 File Offset: 0x0043A553
+		// (set) Token: 0x0601D415 RID: 119829 RVA: 0x0043C35B File Offset: 0x0043A55B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string StringValue
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C94F RID: 117071 RVA: 0x004208B2 File Offset: 0x0041EAB2
+		// Token: 0x0601D416 RID: 119830 RVA: 0x0043C36E File Offset: 0x0043A56E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return this.Equals(other as WorldTeamPlayerInfoChangeNotify);
 		}
 
-		// Token: 0x0601C950 RID: 117072 RVA: 0x004208C0 File Offset: 0x0041EAC0
+		// Token: 0x0601D417 RID: 119831 RVA: 0x0043C37C File Offset: 0x0043A57C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(WorldTeamPlayerInfoChangeNotify other)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.PlayerId == other.PlayerId && this.ChangeType == other.ChangeType && this.IntValue == other.IntValue && !(this.StringValue != other.StringValue) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601C951 RID: 117073 RVA: 0x00420930 File Offset: 0x0041EB30
+		// Token: 0x0601D418 RID: 119832 RVA: 0x0043C3EC File Offset: 0x0043A5EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C952 RID: 117074 RVA: 0x004209C2 File Offset: 0x0041EBC2
+		// Token: 0x0601D419 RID: 119833 RVA: 0x0043C47E File Offset: 0x0043A67E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601C953 RID: 117075 RVA: 0x004209CF File Offset: 0x0041EBCF
+		// Token: 0x0601D41A RID: 119834 RVA: 0x0043C48B File Offset: 0x0043A68B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -198,24 +198,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601C954 RID: 117076 RVA: 0x004209D8 File Offset: 0x0041EBD8
+		// Token: 0x0601D41B RID: 119835 RVA: 0x0043C494 File Offset: 0x0043A694
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.PlayerId != 0)
-			{
-				output.WriteRawTag(16);
-				output.WriteInt32(this.PlayerId);
-			}
-			if (this.StringValue.Length != 0)
-			{
-				output.WriteRawTag(50);
-				output.WriteString(this.StringValue);
-			}
 			if (this.IntValue != 0)
 			{
-				output.WriteRawTag(72);
+				output.WriteRawTag(16);
 				output.WriteInt32(this.IntValue);
 			}
 			if (this.ChangeType != WorldTeamPlayerChangeType.Name)
@@ -223,13 +213,23 @@ namespace Aki.Protocol
 				output.WriteRawTag(80);
 				output.WriteEnum((int)this.ChangeType);
 			}
+			if (this.PlayerId != 0)
+			{
+				output.WriteRawTag(96);
+				output.WriteInt32(this.PlayerId);
+			}
+			if (this.StringValue.Length != 0)
+			{
+				output.WriteRawTag(114);
+				output.WriteString(this.StringValue);
+			}
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0601C955 RID: 117077 RVA: 0x00420A70 File Offset: 0x0041EC70
+		// Token: 0x0601D41C RID: 119836 RVA: 0x0043C52C File Offset: 0x0043A72C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C956 RID: 117078 RVA: 0x00420AFC File Offset: 0x0041ECFC
+		// Token: 0x0601D41D RID: 119837 RVA: 0x0043C5B8 File Offset: 0x0043A7B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(WorldTeamPlayerInfoChangeNotify other)
@@ -286,7 +286,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601C957 RID: 117079 RVA: 0x00420B79 File Offset: 0x0041ED79
+		// Token: 0x0601D41E RID: 119838 RVA: 0x0043C635 File Offset: 0x0043A835
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601C958 RID: 117080 RVA: 0x00420B84 File Offset: 0x0041ED84
+		// Token: 0x0601D41F RID: 119839 RVA: 0x0043C640 File Offset: 0x0043A840
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -306,22 +306,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 50U)
+				if (num <= 80U)
 				{
 					if (num == 16U)
-					{
-						this.PlayerId = input.ReadInt32();
-						continue;
-					}
-					if (num == 50U)
-					{
-						this.StringValue = input.ReadString();
-						continue;
-					}
-				}
-				else
-				{
-					if (num == 72U)
 					{
 						this.IntValue = input.ReadInt32();
 						continue;
@@ -332,35 +319,48 @@ namespace Aki.Protocol
 						continue;
 					}
 				}
+				else
+				{
+					if (num == 96U)
+					{
+						this.PlayerId = input.ReadInt32();
+						continue;
+					}
+					if (num == 114U)
+					{
+						this.StringValue = input.ReadString();
+						continue;
+					}
+				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x0400A371 RID: 41841
+		// Token: 0x0400A7CA RID: 42954
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400A372 RID: 41842
-		public const int PlayerIdFieldNumber = 2;
+		// Token: 0x0400A7CB RID: 42955
+		public const int PlayerIdFieldNumber = 12;
 
-		// Token: 0x0400A373 RID: 41843
+		// Token: 0x0400A7CC RID: 42956
 		private int playerId_;
 
-		// Token: 0x0400A374 RID: 41844
+		// Token: 0x0400A7CD RID: 42957
 		public const int ChangeTypeFieldNumber = 10;
 
-		// Token: 0x0400A375 RID: 41845
+		// Token: 0x0400A7CE RID: 42958
 		private WorldTeamPlayerChangeType changeType_;
 
-		// Token: 0x0400A376 RID: 41846
-		public const int IntValueFieldNumber = 9;
+		// Token: 0x0400A7CF RID: 42959
+		public const int IntValueFieldNumber = 2;
 
-		// Token: 0x0400A377 RID: 41847
+		// Token: 0x0400A7D0 RID: 42960
 		private int intValue_;
 
-		// Token: 0x0400A378 RID: 41848
-		public const int StringValueFieldNumber = 6;
+		// Token: 0x0400A7D1 RID: 42961
+		public const int StringValueFieldNumber = 14;
 
-		// Token: 0x0400A379 RID: 41849
+		// Token: 0x0400A7D2 RID: 42962
 		private string stringValue_ = "";
 	}
 }

@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x02002FDD RID: 12253
-// (Invoke) Token: 0x06019F8A RID: 106378
+// Token: 0x02002532 RID: 9522
+// (Invoke) Token: 0x060178BD RID: 96445
 public delegate bool TTriggerChecker();

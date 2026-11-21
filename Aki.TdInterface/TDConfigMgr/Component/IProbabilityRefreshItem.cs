@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000624 RID: 1572
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006C1 RID: 1729
 	public class IProbabilityRefreshItem
 	{
-		// Token: 0x06002188 RID: 8584 RVA: 0x0005CBD0 File Offset: 0x0005ADD0
+		// Token: 0x0600248E RID: 9358 RVA: 0x000638E4 File Offset: 0x00061AE4
 		private IProbabilityRefreshItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002189 RID: 8585 RVA: 0x0005CC08 File Offset: 0x0005AE08
+		// Token: 0x0600248F RID: 9359 RVA: 0x0006391C File Offset: 0x00061B1C
 		public static IProbabilityRefreshItem Create([Nullable(2)] IProbabilityRefreshItem instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600218A RID: 8586 RVA: 0x0005CC1B File Offset: 0x0005AE1B
+		// Token: 0x06002490 RID: 9360 RVA: 0x0006392F File Offset: 0x00061B2F
 		public static IProbabilityRefreshItem CreateFromSetValue([Nullable(2)] IProbabilityRefreshItem_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600218B RID: 8587 RVA: 0x0005CC2E File Offset: 0x0005AE2E
+		// Token: 0x06002491 RID: 9361 RVA: 0x00063942 File Offset: 0x00061B42
 		public IProbabilityRefreshItem_SetValue ToSetValue()
 		{
 			return new IProbabilityRefreshItem_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008ED RID: 2285
-		// (get) Token: 0x0600218C RID: 8588 RVA: 0x0005CC59 File Offset: 0x0005AE59
-		// (set) Token: 0x0600218D RID: 8589 RVA: 0x0005CC84 File Offset: 0x0005AE84
+		// Token: 0x170009A4 RID: 2468
+		// (get) Token: 0x06002492 RID: 9362 RVA: 0x0006396D File Offset: 0x00061B6D
+		// (set) Token: 0x06002493 RID: 9363 RVA: 0x00063998 File Offset: 0x00061B98
 		public virtual int Probability
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008EE RID: 2286
-		// (get) Token: 0x0600218E RID: 8590 RVA: 0x0005CC92 File Offset: 0x0005AE92
-		// (set) Token: 0x0600218F RID: 8591 RVA: 0x0005CCBD File Offset: 0x0005AEBD
+		// Token: 0x170009A5 RID: 2469
+		// (get) Token: 0x06002494 RID: 9364 RVA: 0x000639A6 File Offset: 0x00061BA6
+		// (set) Token: 0x06002495 RID: 9365 RVA: 0x000639D1 File Offset: 0x00061BD1
 		public virtual int RefreshEntityId
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008EF RID: 2287
-		// (get) Token: 0x06002190 RID: 8592 RVA: 0x0005CCCC File Offset: 0x0005AECC
-		// (set) Token: 0x06002191 RID: 8593 RVA: 0x0005CD2D File Offset: 0x0005AF2D
+		// Token: 0x170009A6 RID: 2470
+		// (get) Token: 0x06002496 RID: 9366 RVA: 0x000639E0 File Offset: 0x00061BE0
+		// (set) Token: 0x06002497 RID: 9367 RVA: 0x00063A41 File Offset: 0x00061C41
 		[Nullable(2)]
 		public virtual IConditionGroup AdditionalCondition
 		{
@@ -141,18 +139,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001769 RID: 5993
+		// Token: 0x0400195B RID: 6491
 		[Nullable(2)]
 		protected IProbabilityRefreshItem FbInstance;
 
-		// Token: 0x0400176A RID: 5994
+		// Token: 0x0400195C RID: 6492
 		[Nullable(2)]
 		protected IProbabilityRefreshItem_SetValue PocoInterface;
 
-		// Token: 0x0400176B RID: 5995
+		// Token: 0x0400195D RID: 6493
 		private IConditionGroup _AdditionalConditionCache;
 
-		// Token: 0x0400176C RID: 5996
+		// Token: 0x0400195E RID: 6494
 		private bool _AdditionalConditionInited;
 	}
 }

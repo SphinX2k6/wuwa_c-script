@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020031AB RID: 12715
+// Token: 0x0200271A RID: 10010
 [NullableContext(1)]
 [Nullable(0)]
 public class GameplayAbilityVisionPresent : GameplayAbilityVisionMorph
 {
-	// Token: 0x0601B67E RID: 112254 RVA: 0x0077E70B File Offset: 0x0077C90B
+	// Token: 0x060191B1 RID: 102833 RVA: 0x007A6A37 File Offset: 0x007A4C37
 	public GameplayAbilityVisionPresent(CharacterVisionComponent visionComponent) : base(visionComponent)
 	{
 	}
 
-	// Token: 0x0601B67F RID: 112255 RVA: 0x0077E72C File Offset: 0x0077C92C
+	// Token: 0x060191B2 RID: 102834 RVA: 0x007A6A58 File Offset: 0x007A4C58
 	[NullableContext(2)]
 	protected override void SetVisionEnable(bool enable, EntityHandle visionEntity = null)
 	{
@@ -44,30 +44,30 @@ public class GameplayAbilityVisionPresent : GameplayAbilityVisionMorph
 		EventSystem.Instance.Emit<bool>(EEventName.OnPhantomEnableStateChange, enable);
 	}
 
-	// Token: 0x0601B680 RID: 112256 RVA: 0x0077E82A File Offset: 0x0077CA2A
+	// Token: 0x060191B3 RID: 102835 RVA: 0x007A6B56 File Offset: 0x007A4D56
 	protected override bool NeedNoAi()
 	{
 		return false;
 	}
 
-	// Token: 0x0601B681 RID: 112257 RVA: 0x0077E82D File Offset: 0x0077CA2D
+	// Token: 0x060191B4 RID: 102836 RVA: 0x007A6B59 File Offset: 0x007A4D59
 	protected override bool NeedNoActive()
 	{
 		return false;
 	}
 
-	// Token: 0x0601B682 RID: 112258 RVA: 0x0077E830 File Offset: 0x0077CA30
+	// Token: 0x060191B5 RID: 102837 RVA: 0x007A6B5C File Offset: 0x007A4D5C
 	protected override void OnTeleportStart()
 	{
 		this.NeedResetLocation = false;
 	}
 
-	// Token: 0x0400D6B7 RID: 54967
+	// Token: 0x0400DB3E RID: 56126
 	private readonly Vector DangoOriginalPosition = Vector.Create();
 
-	// Token: 0x0400D6B8 RID: 54968
+	// Token: 0x0400DB3F RID: 56127
 	private readonly Rotator DangoOriginalRotation = Rotator.Create();
 
-	// Token: 0x0400D6B9 RID: 54969
+	// Token: 0x0400DB40 RID: 56128
 	private bool NeedResetLocation;
 }

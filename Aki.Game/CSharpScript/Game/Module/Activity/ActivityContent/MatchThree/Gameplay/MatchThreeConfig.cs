@@ -5,82 +5,82 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064A9 RID: 25769
+	// Token: 0x02005427 RID: 21543
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class MatchThreeConfig : ConfigBase
 	{
-		// Token: 0x06040B48 RID: 265032 RVA: 0x00FAA7D3 File Offset: 0x00FA89D3
+		// Token: 0x0603580C RID: 219148 RVA: 0x00EF181B File Offset: 0x00EEFA1B
 		public MatchThreePiece? GetPieceConfig(int id)
 		{
 			return ConfigMatchThreePieceById.GetConfig(id, true);
 		}
 
-		// Token: 0x06040B49 RID: 265033 RVA: 0x00FAA7DC File Offset: 0x00FA89DC
+		// Token: 0x0603580D RID: 219149 RVA: 0x00EF1824 File Offset: 0x00EEFA24
 		public MatchThreeEliminate? GetEliminateConfig(int id)
 		{
 			return ConfigMatchThreeEliminateById.GetConfig(id, true);
 		}
 
-		// Token: 0x06040B4A RID: 265034 RVA: 0x00FAA7E5 File Offset: 0x00FA89E5
+		// Token: 0x0603580E RID: 219150 RVA: 0x00EF182D File Offset: 0x00EEFA2D
 		public MatchThreeComponent? GetComponentConfig(int id)
 		{
 			return ConfigMatchThreeComponentById.GetConfig(id, true);
 		}
 
-		// Token: 0x06040B4B RID: 265035 RVA: 0x00FAA7EE File Offset: 0x00FA89EE
+		// Token: 0x0603580F RID: 219151 RVA: 0x00EF1836 File Offset: 0x00EEFA36
 		public MatchThreeGameplay? GetGameplayConfig(int id)
 		{
 			return ConfigMatchThreeGameplayById.GetConfig(id, true);
 		}
 
-		// Token: 0x06040B4C RID: 265036 RVA: 0x00FAA7F7 File Offset: 0x00FA89F7
+		// Token: 0x06035810 RID: 219152 RVA: 0x00EF183F File Offset: 0x00EEFA3F
 		public MatchThreeGoal? GetGoalConfig(int id)
 		{
 			return ConfigMatchThreeGoalById.GetConfig(id, true);
 		}
 
-		// Token: 0x06040B4D RID: 265037 RVA: 0x00FAA800 File Offset: 0x00FA8A00
+		// Token: 0x06035811 RID: 219153 RVA: 0x00EF1848 File Offset: 0x00EEFA48
 		public MatchThreeEnviroment? GetEnviromentConfig(int id)
 		{
 			return ConfigMatchThreeEnviromentById.GetConfig(id, true);
 		}
 
-		// Token: 0x06040B4E RID: 265038 RVA: 0x00FAA809 File Offset: 0x00FA8A09
+		// Token: 0x06035812 RID: 219154 RVA: 0x00EF1851 File Offset: 0x00EEFA51
 		public MatchThreeRole? GetRoleConfig(int id)
 		{
 			return ConfigMatchThreeRoleById.GetConfig(id, true);
 		}
 
-		// Token: 0x06040B4F RID: 265039 RVA: 0x00FAA812 File Offset: 0x00FA8A12
+		// Token: 0x06035813 RID: 219155 RVA: 0x00EF185A File Offset: 0x00EEFA5A
 		public MatchThreeSkill? GetSkillConfig(int id)
 		{
 			return ConfigMatchThreeSkillById.GetConfig(id, true);
 		}
 
-		// Token: 0x06040B50 RID: 265040 RVA: 0x00FAA81B File Offset: 0x00FA8A1B
+		// Token: 0x06035814 RID: 219156 RVA: 0x00EF1863 File Offset: 0x00EEFA63
 		[NullableContext(2)]
 		public IReadOnlyList<MatchThreeBoard> GetBoardConfigList(int boardId)
 		{
 			return ConfigMatchThreeBoardByBoardId.GetConfigList(boardId, true);
 		}
 
-		// Token: 0x06040B51 RID: 265041 RVA: 0x00FAA824 File Offset: 0x00FA8A24
+		// Token: 0x06035815 RID: 219157 RVA: 0x00EF186C File Offset: 0x00EEFA6C
 		protected override bool OnClear()
 		{
 			this.ScoreComments = null;
 			return true;
 		}
 
-		// Token: 0x06040B52 RID: 265042 RVA: 0x00FAA830 File Offset: 0x00FA8A30
+		// Token: 0x06035816 RID: 219158 RVA: 0x00EF1878 File Offset: 0x00EEFA78
 		public ScoreComment? GetCommentConfig(int score)
 		{
 			int num;
 			return this.GetCommentConfig(score, out num);
 		}
 
-		// Token: 0x06040B53 RID: 265043 RVA: 0x00FAA848 File Offset: 0x00FA8A48
+		// Token: 0x06035817 RID: 219159 RVA: 0x00EF1890 File Offset: 0x00EEFA90
 		public ScoreComment? GetCommentConfig(int score, out int gradeLevel)
 		{
 			ScoreComment[] array = this.EnsureScoreComments();
@@ -101,8 +101,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return new ScoreComment?(array[0]);
 		}
 
-		// Token: 0x170094B7 RID: 38071
-		// (get) Token: 0x06040B54 RID: 265044 RVA: 0x00FAA8AD File Offset: 0x00FA8AAD
+		// Token: 0x17006819 RID: 26649
+		// (get) Token: 0x06035818 RID: 219160 RVA: 0x00EF18F5 File Offset: 0x00EEFAF5
 		public int ScoreGradeCount
 		{
 			get
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x06040B55 RID: 265045 RVA: 0x00FAA8B8 File Offset: 0x00FA8AB8
+		// Token: 0x06035819 RID: 219161 RVA: 0x00EF1900 File Offset: 0x00EEFB00
 		private ScoreComment[] EnsureScoreComments()
 		{
 			if (this.ScoreComments != null)
@@ -131,14 +131,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return this.ScoreComments;
 		}
 
-		// Token: 0x06040B56 RID: 265046 RVA: 0x00FAA959 File Offset: 0x00FA8B59
+		// Token: 0x0603581A RID: 219162 RVA: 0x00EF19A1 File Offset: 0x00EEFBA1
 		public MatchThreeFillRules? GetFillRulesConfig(int id)
 		{
 			return ConfigMatchThreeFillRulesById.GetConfig(id, true);
 		}
 
-		// Token: 0x170094B8 RID: 38072
-		// (get) Token: 0x06040B57 RID: 265047 RVA: 0x00FAA962 File Offset: 0x00FA8B62
+		// Token: 0x1700681A RID: 26650
+		// (get) Token: 0x0603581B RID: 219163 RVA: 0x00EF19AA File Offset: 0x00EEFBAA
 		public static MatchThreeConfig Instance
 		{
 			get
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			}
 		}
 
-		// Token: 0x06040B58 RID: 265048 RVA: 0x00FAA969 File Offset: 0x00FA8B69
+		// Token: 0x0603581C RID: 219164 RVA: 0x00EF19B1 File Offset: 0x00EEFBB1
 		public static MatchThreeConfig GetOrCreateInstance()
 		{
 			if (MatchThreeConfig._Instance == null)
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return MatchThreeConfig._Instance;
 		}
 
-		// Token: 0x06040B59 RID: 265049 RVA: 0x00FAA97D File Offset: 0x00FA8B7D
+		// Token: 0x0603581D RID: 219165 RVA: 0x00EF19C5 File Offset: 0x00EEFBC5
 		public static bool CreateInstance()
 		{
 			if (MatchThreeConfig._Instance != null)
@@ -168,28 +168,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return true;
 		}
 
-		// Token: 0x06040B5A RID: 265050 RVA: 0x00FAA993 File Offset: 0x00FA8B93
+		// Token: 0x0603581E RID: 219166 RVA: 0x00EF19DB File Offset: 0x00EEFBDB
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06040B5B RID: 265051 RVA: 0x00FAA995 File Offset: 0x00FA8B95
+		// Token: 0x0603581F RID: 219167 RVA: 0x00EF19DD File Offset: 0x00EEFBDD
 		public static void ResetStaticDefaultValue()
 		{
 			MatchThreeConfig._Instance = null;
 		}
 
-		// Token: 0x06040B5C RID: 265052 RVA: 0x00FAA99D File Offset: 0x00FA8B9D
+		// Token: 0x06035820 RID: 219168 RVA: 0x00EF19E5 File Offset: 0x00EEFBE5
 		static MatchThreeConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MatchThreeConfig.CreateStaticDefaultValue), new Action(MatchThreeConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04021AC7 RID: 137927
+		// Token: 0x0401C3F8 RID: 115704
 		[Nullable(2)]
 		private ScoreComment[] ScoreComments;
 
-		// Token: 0x04021AC8 RID: 137928
+		// Token: 0x0401C3F9 RID: 115705
 		[Nullable(2)]
 		private static MatchThreeConfig _Instance;
 	}

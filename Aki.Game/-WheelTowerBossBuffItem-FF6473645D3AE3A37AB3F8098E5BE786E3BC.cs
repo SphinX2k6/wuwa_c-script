@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x020015B3 RID: 5555
+// Token: 0x02000A6B RID: 2667
 internal enum <WheelTowerBossBuffItem>FF6473645D3AE3A37AB3F8098E5BE786E3BC1C42BFF93CC0F7C68CEBEB040293F__EWheelTowerBossBuffItemComponent
 {
-	// Token: 0x040045AD RID: 17837
+	// Token: 0x04004653 RID: 18003
 	ToggleRoot,
-	// Token: 0x040045AE RID: 17838
+	// Token: 0x04004654 RID: 18004
 	TextureIcon,
-	// Token: 0x040045AF RID: 17839
+	// Token: 0x04004655 RID: 18005
 	TextName,
-	// Token: 0x040045B0 RID: 17840
+	// Token: 0x04004656 RID: 18006
 	TextDesc,
-	// Token: 0x040045B1 RID: 17841
+	// Token: 0x04004657 RID: 18007
 	ItemTag,
-	// Token: 0x040045B2 RID: 17842
+	// Token: 0x04004658 RID: 18008
 	SpriteQuality
 }

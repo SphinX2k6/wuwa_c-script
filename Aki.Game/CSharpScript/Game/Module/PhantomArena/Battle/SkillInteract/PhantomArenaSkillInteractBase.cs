@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 {
-	// Token: 0x02005283 RID: 21123
+	// Token: 0x02004253 RID: 16979
 	public abstract class PhantomArenaSkillInteractBase
 	{
-		// Token: 0x06036055 RID: 221269 RVA: 0x00CC8F00 File Offset: 0x00CC7100
+		// Token: 0x0602AF50 RID: 175952 RVA: 0x00C16604 File Offset: 0x00C14804
 		[NullableContext(1)]
 		[return: Nullable(0)]
 		public UniTask<EPhantomArenaSkillInteractExecuteResult> Execute(PhantomArenaBattleProxy proxy, ISkillInteractMainInterface info)
@@ -26,10 +26,10 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			return <Execute>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036056 RID: 221270
+		// Token: 0x0602AF51 RID: 175953
 		protected abstract UniTask<EPhantomArenaSkillInteractExecuteResult> OnExecute([Nullable(1)] PhantomArenaBattleProxy proxy);
 
-		// Token: 0x06036057 RID: 221271 RVA: 0x00CC8F54 File Offset: 0x00CC7154
+		// Token: 0x0602AF52 RID: 175954 RVA: 0x00C16658 File Offset: 0x00C14858
 		protected UniTask<bool> RequestSelectResultInfo([Nullable(1)] List<int> fightIdList)
 		{
 			PhantomArenaSkillInteractBase.<RequestSelectResultInfo>d__5 <RequestSelectResultInfo>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			return <RequestSelectResultInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036058 RID: 221272 RVA: 0x00CC8FA0 File Offset: 0x00CC71A0
+		// Token: 0x0602AF53 RID: 175955 RVA: 0x00C166A4 File Offset: 0x00C148A4
 		protected UniTask<bool> PassiveSkillRequest([Nullable(1)] List<int> fightIdList)
 		{
 			PhantomArenaSkillInteractBase.<PassiveSkillRequest>d__6 <PassiveSkillRequest>d__;
@@ -52,15 +52,15 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			return <PassiveSkillRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401C9A0 RID: 117152
+		// Token: 0x040173D5 RID: 95189
 		[Nullable(1)]
 		protected PhantomArenaBattleProxy BattleProxy;
 
-		// Token: 0x0401C9A1 RID: 117153
+		// Token: 0x040173D6 RID: 95190
 		[Nullable(1)]
 		protected ISkillInteractMainInterface Info;
 
-		// Token: 0x0401C9A2 RID: 117154
+		// Token: 0x040173D7 RID: 95191
 		[Nullable(1)]
 		protected ISkillTriggerInfo Data;
 	}

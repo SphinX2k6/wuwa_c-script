@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack.View
 {
-	// Token: 0x02004F91 RID: 20369
+	// Token: 0x02003F5A RID: 16218
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class QuickHackRamBar
 	{
-		// Token: 0x0603428F RID: 213647 RVA: 0x00C3E73C File Offset: 0x00C3C93C
+		// Token: 0x060290FD RID: 168189 RVA: 0x00B87EE8 File Offset: 0x00B860E8
 		[NullableContext(1)]
 		public void Init(UUISprite darkBlueSprite, UUISprite blueSprite, UUISprite redSpriteA, UUISprite redSpriteB, UUIItem ramItem, [Nullable(2)] UCurveFloat selectedCurve)
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x06034290 RID: 213648 RVA: 0x00C3E824 File Offset: 0x00C3CA24
+		// Token: 0x060290FE RID: 168190 RVA: 0x00B87FD0 File Offset: 0x00B861D0
 		public void Clear()
 		{
 			this.IsInit = false;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action(this.NextReduceRamAnim));
 		}
 
-		// Token: 0x06034291 RID: 213649 RVA: 0x00C3E944 File Offset: 0x00C3CB44
+		// Token: 0x060290FF RID: 168191 RVA: 0x00B880F0 File Offset: 0x00B862F0
 		public void TickRamBar(float delta)
 		{
 			if (this.IsInit && this.IsPlayingRamSelected)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x06034292 RID: 213650 RVA: 0x00C3E9E4 File Offset: 0x00C3CBE4
+		// Token: 0x06029100 RID: 168192 RVA: 0x00B88190 File Offset: 0x00B86390
 		public void RefreshRam(int current, int max, bool playReduceAnim = false)
 		{
 			if (!this.IsInit)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.RefreshAllRamView(playReduceAnim, reduceSize);
 		}
 
-		// Token: 0x06034293 RID: 213651 RVA: 0x00C3EA69 File Offset: 0x00C3CC69
+		// Token: 0x06029101 RID: 168193 RVA: 0x00B88215 File Offset: 0x00B86415
 		public void SelectRam(int value)
 		{
 			if (!this.IsInit)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.StopRamSelectedAnim();
 		}
 
-		// Token: 0x06034294 RID: 213652 RVA: 0x00C3EA9C File Offset: 0x00C3CC9C
+		// Token: 0x06029102 RID: 168194 RVA: 0x00B88248 File Offset: 0x00B86448
 		private void RefreshEnableRamView()
 		{
 			float leftX = this.GetLeftX();
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.UpdateItem(this.BlueSprite, leftX, num, this.Selected, true);
 		}
 
-		// Token: 0x06034295 RID: 213653 RVA: 0x00C3EAF4 File Offset: 0x00C3CCF4
+		// Token: 0x06029103 RID: 168195 RVA: 0x00B882A0 File Offset: 0x00B864A0
 		private void RefreshAllRamView(bool playReduceAnim = false, int reduceSize = 0)
 		{
 			float leftX = this.GetLeftX();
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.StopReduceRamAnim();
 		}
 
-		// Token: 0x06034296 RID: 213654 RVA: 0x00C3EBD4 File Offset: 0x00C3CDD4
+		// Token: 0x06029104 RID: 168196 RVA: 0x00B88380 File Offset: 0x00B86580
 		private void StartRamSelectedAnim()
 		{
 			if (this.IsPlayingRamSelected)
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.PlayingRamSelectedDuration = 0f;
 		}
 
-		// Token: 0x06034297 RID: 213655 RVA: 0x00C3EC01 File Offset: 0x00C3CE01
+		// Token: 0x06029105 RID: 168197 RVA: 0x00B883AD File Offset: 0x00B865AD
 		private void StopRamSelectedAnim()
 		{
 			if (!this.IsPlayingRamSelected)
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.IsPlayingRamSelected = false;
 		}
 
-		// Token: 0x06034298 RID: 213656 RVA: 0x00C3EC14 File Offset: 0x00C3CE14
+		// Token: 0x06029106 RID: 168198 RVA: 0x00B883C0 File Offset: 0x00B865C0
 		private void StartReduceRamAnim(int reduceSize)
 		{
 			if (this.IsPlayingReduceRam)
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.NextReduceRamAnim();
 		}
 
-		// Token: 0x06034299 RID: 213657 RVA: 0x00C3ECA8 File Offset: 0x00C3CEA8
+		// Token: 0x06029107 RID: 168199 RVA: 0x00B88454 File Offset: 0x00B86654
 		private void NextReduceRamAnim()
 		{
 			if (!this.IsInit || !this.IsPlayingReduceRam)
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.UpdateItem(this.RedSpriteB, leftX, num2 + 1, size, true);
 		}
 
-		// Token: 0x0603429A RID: 213658 RVA: 0x00C3EDA4 File Offset: 0x00C3CFA4
+		// Token: 0x06029108 RID: 168200 RVA: 0x00B88550 File Offset: 0x00B86750
 		private void StopReduceRamAnim()
 		{
 			this.IsPlayingReduceRam = false;
@@ -261,13 +261,13 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.PlayingReduceRamSize = 0;
 		}
 
-		// Token: 0x0603429B RID: 213659 RVA: 0x00C3EDFD File Offset: 0x00C3CFFD
+		// Token: 0x06029109 RID: 168201 RVA: 0x00B885A9 File Offset: 0x00B867A9
 		private float GetLeftX()
 		{
 			return -((float)this.Max / 2f) * 28f;
 		}
 
-		// Token: 0x0603429C RID: 213660 RVA: 0x00C3EE14 File Offset: 0x00C3D014
+		// Token: 0x0602910A RID: 168202 RVA: 0x00B885C0 File Offset: 0x00B867C0
 		[NullableContext(1)]
 		private void UpdateItem(UUIItem item, float startX, int preSize, int size, bool updateWidth = true)
 		{
@@ -280,65 +280,65 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x0401BB9B RID: 113563
+		// Token: 0x04016570 RID: 91504
 		private bool IsInit;
 
-		// Token: 0x0401BB9C RID: 113564
+		// Token: 0x04016571 RID: 91505
 		private int Current;
 
-		// Token: 0x0401BB9D RID: 113565
+		// Token: 0x04016572 RID: 91506
 		private int Max;
 
-		// Token: 0x0401BB9E RID: 113566
+		// Token: 0x04016573 RID: 91507
 		private int Used;
 
-		// Token: 0x0401BB9F RID: 113567
+		// Token: 0x04016574 RID: 91508
 		private int Selected;
 
-		// Token: 0x0401BBA0 RID: 113568
+		// Token: 0x04016575 RID: 91509
 		private UUISprite DarkBlueSprite;
 
-		// Token: 0x0401BBA1 RID: 113569
+		// Token: 0x04016576 RID: 91510
 		private UUISprite BlueSprite;
 
-		// Token: 0x0401BBA2 RID: 113570
+		// Token: 0x04016577 RID: 91511
 		private UUISprite RedSpriteA;
 
-		// Token: 0x0401BBA3 RID: 113571
+		// Token: 0x04016578 RID: 91512
 		private UUISprite RedSpriteB;
 
-		// Token: 0x0401BBA4 RID: 113572
+		// Token: 0x04016579 RID: 91513
 		private UUIItem RamItem;
 
-		// Token: 0x0401BBA5 RID: 113573
+		// Token: 0x0401657A RID: 91514
 		private UCurveFloat SelectedCurve;
 
-		// Token: 0x0401BBA6 RID: 113574
+		// Token: 0x0401657B RID: 91515
 		private float SelectedRamFrameInterval;
 
-		// Token: 0x0401BBA7 RID: 113575
+		// Token: 0x0401657C RID: 91516
 		private bool IsPlayingRamSelected;
 
-		// Token: 0x0401BBA8 RID: 113576
+		// Token: 0x0401657D RID: 91517
 		private float PlayingRamSelectedDuration;
 
-		// Token: 0x0401BBA9 RID: 113577
+		// Token: 0x0401657E RID: 91518
 		private bool IsPlayingReduceRam;
 
-		// Token: 0x0401BBAA RID: 113578
+		// Token: 0x0401657F RID: 91519
 		private int PlayingReduceRamIndex = -1;
 
-		// Token: 0x0401BBAB RID: 113579
+		// Token: 0x04016580 RID: 91520
 		private int PlayingReduceRamSize;
 
-		// Token: 0x0401BBAC RID: 113580
+		// Token: 0x04016581 RID: 91521
 		[Nullable(1)]
 		private readonly List<ULGUIPlayTweenComponent> RamItemAnimList = new List<ULGUIPlayTweenComponent>();
 
-		// Token: 0x0401BBAD RID: 113581
+		// Token: 0x04016582 RID: 91522
 		private ULGUIPlayTween CallbackTween;
 
-		// Token: 0x0401BBAE RID: 113582
+		// Token: 0x04016583 RID: 91523
 		private FLGUIDelegateHandleWrapper Wrapper;
 	}
 }

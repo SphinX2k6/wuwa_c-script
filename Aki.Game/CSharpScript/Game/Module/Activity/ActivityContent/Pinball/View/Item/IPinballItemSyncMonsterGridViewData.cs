@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 {
-	// Token: 0x02006345 RID: 25413
+	// Token: 0x020052C3 RID: 21187
 	[NullableContext(1)]
 	public interface IPinballItemSyncMonsterGridViewData
 	{
-		// Token: 0x1700930F RID: 37647
-		// (get) Token: 0x0603FF32 RID: 261938
-		// (set) Token: 0x0603FF33 RID: 261939
+		// Token: 0x17006671 RID: 26225
+		// (get) Token: 0x06034BF3 RID: 216051
+		// (set) Token: 0x06034BF4 RID: 216052
 		IPinballItemDataMonster ItemData { get; set; }
 
-		// Token: 0x17009310 RID: 37648
-		// (get) Token: 0x0603FF34 RID: 261940
-		// (set) Token: 0x0603FF35 RID: 261941
+		// Token: 0x17006672 RID: 26226
+		// (get) Token: 0x06034BF5 RID: 216053
+		// (set) Token: 0x06034BF6 RID: 216054
 		bool IsSelected { get; set; }
 
-		// Token: 0x17009311 RID: 37649
-		// (get) Token: 0x0603FF36 RID: 261942
-		// (set) Token: 0x0603FF37 RID: 261943
+		// Token: 0x17006673 RID: 26227
+		// (get) Token: 0x06034BF7 RID: 216055
+		// (set) Token: 0x06034BF8 RID: 216056
 		Action<IPinballItemToggleCallback> OnStateChangeDelegate { get; set; }
 	}
 }

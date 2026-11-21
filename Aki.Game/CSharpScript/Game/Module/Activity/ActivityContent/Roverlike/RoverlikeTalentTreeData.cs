@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,24 +7,24 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060E3 RID: 24803
+	// Token: 0x02005061 RID: 20577
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeTalentTreeData
 	{
-		// Token: 0x0603EB52 RID: 256850 RVA: 0x00F2538C File Offset: 0x00F2358C
+		// Token: 0x06033814 RID: 210964 RVA: 0x00E6C1E4 File Offset: 0x00E6A3E4
 		public static bool IsSameNode(RoverRogueTalentTree a, RoverRogueTalentTree b)
 		{
 			return a.Row == b.Row && a.Column == b.Column;
 		}
 
-		// Token: 0x0603EB53 RID: 256851 RVA: 0x00F253B0 File Offset: 0x00F235B0
+		// Token: 0x06033815 RID: 210965 RVA: 0x00E6C208 File Offset: 0x00E6A408
 		private static int GetNodeKey(RoverRogueTalentTree config)
 		{
 			return config.Column * 10000 + config.Row;
 		}
 
-		// Token: 0x0603EB54 RID: 256852 RVA: 0x00F253C8 File Offset: 0x00F235C8
+		// Token: 0x06033816 RID: 210966 RVA: 0x00E6C220 File Offset: 0x00E6A420
 		public void PhraseEx(int activityId, int talentPointItemId, RoverRogueActivityData roverData)
 		{
 			this.ActivityId = activityId;
@@ -35,12 +34,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 				this.BuildStructure();
 				this.IsStructureBuilt = true;
 			}
-			List<int> activeIds = (roverData.ActiveTalentIdList != null) ? roverData.ActiveTalentIdList.ToList<int>() : new List<int>();
-			List<int> unlockIds = (roverData.UnlockTalentIdList != null) ? roverData.UnlockTalentIdList.ToList<int>() : new List<int>();
+			List<int> activeIds = (roverData.ActiveTalentIdList != null) ? new List<int>(roverData.ActiveTalentIdList) : new List<int>();
+			List<int> unlockIds = (roverData.UnlockTalentIdList != null) ? new List<int>(roverData.UnlockTalentIdList) : new List<int>();
 			this.UpdateTalentStateByServer(activeIds, unlockIds, true);
 		}
 
-		// Token: 0x0603EB55 RID: 256853 RVA: 0x00F25438 File Offset: 0x00F23638
+		// Token: 0x06033817 RID: 210967 RVA: 0x00E6C290 File Offset: 0x00E6A490
 		private void BuildStructure()
 		{
 			this.NodeIdMap.Clear();
@@ -69,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 				}
 				list2.Add(roverRogueTalentTree);
 			}
-			Dictionary<int, List<RoverlikeTalentNodeData>> columnGroupMap = new Dictionary<int, List<RoverlikeTalentNodeData>>();
+			Dictionary<int, List<RoverlikeTalentNodeData>> dictionary2 = new Dictionary<int, List<RoverlikeTalentNodeData>>();
 			foreach (int key in list)
 			{
 				List<RoverRogueTalentTree> list3 = dictionary[key];
@@ -89,22 +88,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 					this.LevelIdToHeadIdMap[roverRogueTalentTree2.Id] = roverlikeTalentNodeData.HeadConfig.Id;
 				}
 				List<RoverlikeTalentNodeData> list4;
-				if (!columnGroupMap.TryGetValue(roverlikeTalentNodeData.HeadConfig.Column, out list4))
+				if (!dictionary2.TryGetValue(roverlikeTalentNodeData.HeadConfig.Column, out list4))
 				{
 					list4 = new List<RoverlikeTalentNodeData>();
-					columnGroupMap[roverlikeTalentNodeData.HeadConfig.Column] = list4;
+					dictionary2[roverlikeTalentNodeData.HeadConfig.Column] = list4;
 				}
 				list4.Add(roverlikeTalentNodeData);
 			}
-			List<int> list5 = columnGroupMap.Keys.ToList<int>();
+			List<int> list5 = new List<int>(dictionary2.Keys);
 			list5.Sort((int a, int b) => a - b);
-			this.NodeColumnList = list5.Select(delegate(int col, int index)
+			List<List<RoverlikeTalentNodeData>> list6 = new List<List<RoverlikeTalentNodeData>>(list5.Count);
+			for (int i = 0; i < list5.Count; i++)
 			{
-				this.ColumnIndexMap[col] = index;
-				List<RoverlikeTalentNodeData> list6 = columnGroupMap[col];
-				list6.Sort((RoverlikeTalentNodeData a, RoverlikeTalentNodeData b) => a.HeadConfig.Row - b.HeadConfig.Row);
-				return list6;
-			}).ToList<List<RoverlikeTalentNodeData>>();
+				int key2 = list5[i];
+				this.ColumnIndexMap[key2] = i;
+				List<RoverlikeTalentNodeData> list7 = dictionary2[key2];
+				list7.Sort((RoverlikeTalentNodeData a, RoverlikeTalentNodeData b) => a.HeadConfig.Row - b.HeadConfig.Row);
+				list6.Add(list7);
+			}
+			this.NodeColumnList = list6;
 			this.NodeList.Sort(delegate(RoverlikeTalentNodeData a, RoverlikeTalentNodeData b)
 			{
 				if (a.HeadConfig.Column != b.HeadConfig.Column)
@@ -117,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshLineActiveMap();
 		}
 
-		// Token: 0x0603EB56 RID: 256854 RVA: 0x00F25728 File Offset: 0x00F23928
+		// Token: 0x06033818 RID: 210968 RVA: 0x00E6C5C0 File Offset: 0x00E6A7C0
 		private void BuildRowStructure()
 		{
 			this.NodeRowMap.Clear();
@@ -144,14 +146,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RowDataList.Sort((RoverlikeTalentTreeNodeRowData a, RoverlikeTalentTreeNodeRowData b) => a.Row - b.Row);
 		}
 
-		// Token: 0x0603EB57 RID: 256855 RVA: 0x00F25890 File Offset: 0x00F23A90
+		// Token: 0x06033819 RID: 210969 RVA: 0x00E6C728 File Offset: 0x00E6A928
 		public void Reset()
 		{
 			this.CurSelectNode = null;
 			this.OnClickNode = null;
 		}
 
-		// Token: 0x0603EB58 RID: 256856 RVA: 0x00F258A0 File Offset: 0x00F23AA0
+		// Token: 0x0603381A RID: 210970 RVA: 0x00E6C738 File Offset: 0x00E6A938
 		public int GetColumnIndex(int column)
 		{
 			int result;
@@ -162,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return result;
 		}
 
-		// Token: 0x0603EB59 RID: 256857 RVA: 0x00F258C0 File Offset: 0x00F23AC0
+		// Token: 0x0603381B RID: 210971 RVA: 0x00E6C758 File Offset: 0x00E6A958
 		[NullableContext(2)]
 		public RoverlikeTalentNodeData GetNodeData(int id)
 		{
@@ -180,7 +182,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return result;
 		}
 
-		// Token: 0x0603EB5A RID: 256858 RVA: 0x00F25910 File Offset: 0x00F23B10
+		// Token: 0x0603381C RID: 210972 RVA: 0x00E6C7A8 File Offset: 0x00E6A9A8
 		[NullableContext(2)]
 		public RoverlikeTalentNodeData GetDefaultSelectNode()
 		{
@@ -223,7 +225,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return result;
 		}
 
-		// Token: 0x0603EB5B RID: 256859 RVA: 0x00F259E4 File Offset: 0x00F23BE4
+		// Token: 0x0603381D RID: 210973 RVA: 0x00E6C87C File Offset: 0x00E6AA7C
 		private bool IsDeeper([Nullable(2)] RoverlikeTalentNodeData current, RoverlikeTalentNodeData candidate)
 		{
 			if (current == null)
@@ -237,7 +239,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return candidate.Row > current.Row;
 		}
 
-		// Token: 0x0603EB5C RID: 256860 RVA: 0x00F25A16 File Offset: 0x00F23C16
+		// Token: 0x0603381E RID: 210974 RVA: 0x00E6C8AE File Offset: 0x00E6AAAE
 		private bool IsCloserToTop([Nullable(2)] RoverlikeTalentNodeData current, RoverlikeTalentNodeData candidate)
 		{
 			if (current == null)
@@ -251,7 +253,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return candidate.Row < current.Row;
 		}
 
-		// Token: 0x0603EB5D RID: 256861 RVA: 0x00F25A48 File Offset: 0x00F23C48
+		// Token: 0x0603381F RID: 210975 RVA: 0x00E6C8E0 File Offset: 0x00E6AAE0
 		public void SelectNode(RoverlikeTalentNodeData node)
 		{
 			if (node == null || (this.CurSelectNode != null && this.CurSelectNode.HeadConfig.Id == node.HeadConfig.Id))
@@ -261,13 +263,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.CurSelectNode = node;
 		}
 
-		// Token: 0x0603EB5E RID: 256862 RVA: 0x00F25A8B File Offset: 0x00F23C8B
+		// Token: 0x06033820 RID: 210976 RVA: 0x00E6C923 File Offset: 0x00E6AB23
 		public int GetTalentCoinNum()
 		{
 			return RoverlikeModel.Instance.GetCurrency(this.TalentPointItemId);
 		}
 
-		// Token: 0x0603EB5F RID: 256863 RVA: 0x00F25A9D File Offset: 0x00F23C9D
+		// Token: 0x06033821 RID: 210977 RVA: 0x00E6C935 File Offset: 0x00E6AB35
 		public void UpdateTalentStateByServer(IReadOnlyList<int> activeIds, IReadOnlyList<int> unlockIds, bool needEmit = false)
 		{
 			this.MergeTalentIds(activeIds, unlockIds);
@@ -279,7 +281,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EB60 RID: 256864 RVA: 0x00F25ACC File Offset: 0x00F23CCC
+		// Token: 0x06033822 RID: 210978 RVA: 0x00E6C964 File Offset: 0x00E6AB64
 		public void UpdateUnlockTalentIds(IReadOnlyList<int> unlockIds, bool needEmit = true)
 		{
 			this.MergeTalentIds(new List<int>(), unlockIds);
@@ -290,7 +292,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EB61 RID: 256865 RVA: 0x00F25AFC File Offset: 0x00F23CFC
+		// Token: 0x06033823 RID: 210979 RVA: 0x00E6C994 File Offset: 0x00E6AB94
 		private void MergeTalentIds(IReadOnlyList<int> activeIds, IReadOnlyList<int> unlockIds)
 		{
 			foreach (int item in activeIds)
@@ -304,7 +306,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EB62 RID: 256866 RVA: 0x00F25B94 File Offset: 0x00F23D94
+		// Token: 0x06033824 RID: 210980 RVA: 0x00E6CA2C File Offset: 0x00E6AC2C
 		private void RecomputeNodeStateFromCache()
 		{
 			foreach (RoverlikeTalentNodeData roverlikeTalentNodeData in this.NodeIdMap.Values)
@@ -329,7 +331,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EB63 RID: 256867 RVA: 0x00F25C74 File Offset: 0x00F23E74
+		// Token: 0x06033825 RID: 210981 RVA: 0x00E6CB0C File Offset: 0x00E6AD0C
 		public string GetTalentProgress()
 		{
 			int num = 0;
@@ -350,7 +352,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0603EB64 RID: 256868 RVA: 0x00F25D04 File Offset: 0x00F23F04
+		// Token: 0x06033826 RID: 210982 RVA: 0x00E6CB9C File Offset: 0x00E6AD9C
 		public bool IsPreNodeAllUnlock(RoverlikeTalentNodeData node)
 		{
 			RoverRogueTalentTree headConfig = node.HeadConfig;
@@ -366,13 +368,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return true;
 		}
 
-		// Token: 0x0603EB65 RID: 256869 RVA: 0x00F25D4E File Offset: 0x00F23F4E
+		// Token: 0x06033827 RID: 210983 RVA: 0x00E6CBE6 File Offset: 0x00E6ADE6
 		public bool IsTalentCanUnlock(RoverlikeTalentNodeData node)
 		{
 			return !node.IsMaxLevel && node.IsServerUnlocked && this.GetTalentCoinNum() >= node.NextLevelCost;
 		}
 
-		// Token: 0x0603EB66 RID: 256870 RVA: 0x00F25D78 File Offset: 0x00F23F78
+		// Token: 0x06033828 RID: 210984 RVA: 0x00E6CC10 File Offset: 0x00E6AE10
 		public bool IsTalentTreeHasRedDot()
 		{
 			foreach (RoverlikeTalentNodeData node in this.NodeList)
@@ -385,7 +387,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return false;
 		}
 
-		// Token: 0x0603EB67 RID: 256871 RVA: 0x00F25DD4 File Offset: 0x00F23FD4
+		// Token: 0x06033829 RID: 210985 RVA: 0x00E6CC6C File Offset: 0x00E6AE6C
 		public void UpdateTalentLevelByActivatedIds(IReadOnlyList<int> activatedLevelIds, bool needEmit = false)
 		{
 			foreach (RoverlikeTalentNodeData roverlikeTalentNodeData in this.NodeIdMap.Values)
@@ -411,7 +413,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EB68 RID: 256872 RVA: 0x00F25EE4 File Offset: 0x00F240E4
+		// Token: 0x0603382A RID: 210986 RVA: 0x00E6CD7C File Offset: 0x00E6AF7C
 		public bool LocalUnlockNextTalentLevel(int headTalentId)
 		{
 			RoverlikeTalentNodeData roverlikeTalentNodeData;
@@ -432,7 +434,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return true;
 		}
 
-		// Token: 0x0603EB69 RID: 256873 RVA: 0x00F25F64 File Offset: 0x00F24164
+		// Token: 0x0603382B RID: 210987 RVA: 0x00E6CDFC File Offset: 0x00E6AFFC
 		private List<RoverlikeTalentNodeData> GetPreNodes(RoverlikeTalentNodeData node)
 		{
 			List<RoverlikeTalentNodeData> list = new List<RoverlikeTalentNodeData>();
@@ -451,7 +453,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list;
 		}
 
-		// Token: 0x0603EB6A RID: 256874 RVA: 0x00F25FCC File Offset: 0x00F241CC
+		// Token: 0x0603382C RID: 210988 RVA: 0x00E6CE64 File Offset: 0x00E6B064
 		[return: TupleElementNames(new string[]
 		{
 			"Row",
@@ -479,13 +481,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list;
 		}
 
-		// Token: 0x0603EB6B RID: 256875 RVA: 0x00F26080 File Offset: 0x00F24280
+		// Token: 0x0603382D RID: 210989 RVA: 0x00E6CF18 File Offset: 0x00E6B118
 		private bool GetPathActive(RoverlikeTalentNodeData a, RoverlikeTalentNodeData b)
 		{
 			return a.IsMaxLevel && b.IsMaxLevel;
 		}
 
-		// Token: 0x0603EB6C RID: 256876 RVA: 0x00F26094 File Offset: 0x00F24294
+		// Token: 0x0603382E RID: 210990 RVA: 0x00E6CF2C File Offset: 0x00E6B12C
 		public void RefreshLineActiveMap()
 		{
 			foreach (Dictionary<int, bool> dictionary in this.LineActiveMap)
@@ -524,7 +526,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EB6D RID: 256877 RVA: 0x00F26288 File Offset: 0x00F24488
+		// Token: 0x0603382F RID: 210991 RVA: 0x00E6D120 File Offset: 0x00E6B320
 		private void EnsureLineActiveMapSize(int row)
 		{
 			while (this.LineActiveMap.Count <= row)
@@ -533,7 +535,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EB6E RID: 256878 RVA: 0x00F262A8 File Offset: 0x00F244A8
+		// Token: 0x06033830 RID: 210992 RVA: 0x00E6D140 File Offset: 0x00E6B340
 		public bool IsDotVisible(int row, int index)
 		{
 			List<RoverlikeTalentNodeData> list;
@@ -567,32 +569,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return false;
 		}
 
-		// Token: 0x04020C79 RID: 134265
+		// Token: 0x0401B5A6 RID: 112038
 		public int ActivityId;
 
-		// Token: 0x04020C7A RID: 134266
+		// Token: 0x0401B5A7 RID: 112039
 		public int TalentPointItemId;
 
-		// Token: 0x04020C7B RID: 134267
+		// Token: 0x0401B5A8 RID: 112040
 		public readonly Dictionary<int, RoverlikeTalentNodeData> NodeIdMap = new Dictionary<int, RoverlikeTalentNodeData>();
 
-		// Token: 0x04020C7C RID: 134268
+		// Token: 0x0401B5A9 RID: 112041
 		public readonly List<RoverlikeTalentNodeData> NodeList = new List<RoverlikeTalentNodeData>();
 
-		// Token: 0x04020C7D RID: 134269
+		// Token: 0x0401B5AA RID: 112042
 		public List<List<RoverlikeTalentNodeData>> NodeColumnList = new List<List<RoverlikeTalentNodeData>>();
 
-		// Token: 0x04020C7E RID: 134270
+		// Token: 0x0401B5AB RID: 112043
 		public readonly Dictionary<int, int> ColumnIndexMap = new Dictionary<int, int>();
 
-		// Token: 0x04020C7F RID: 134271
+		// Token: 0x0401B5AC RID: 112044
 		public readonly Dictionary<int, int> LevelIdToHeadIdMap = new Dictionary<int, int>();
 
-		// Token: 0x04020C80 RID: 134272
+		// Token: 0x0401B5AD RID: 112045
 		[Nullable(2)]
 		public RoverlikeTalentNodeData CurSelectNode;
 
-		// Token: 0x04020C81 RID: 134273
+		// Token: 0x0401B5AE RID: 112046
 		[Nullable(new byte[]
 		{
 			2,
@@ -600,16 +602,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		public Action<bool, RoverlikeTalentNodeData> OnClickNode;
 
-		// Token: 0x04020C82 RID: 134274
+		// Token: 0x0401B5AF RID: 112047
 		public int MaxRow;
 
-		// Token: 0x04020C83 RID: 134275
+		// Token: 0x0401B5B0 RID: 112048
 		public readonly Dictionary<int, List<RoverlikeTalentNodeData>> NodeRowMap = new Dictionary<int, List<RoverlikeTalentNodeData>>();
 
-		// Token: 0x04020C84 RID: 134276
+		// Token: 0x0401B5B1 RID: 112049
 		public readonly List<RoverlikeTalentTreeNodeRowData> RowDataList = new List<RoverlikeTalentTreeNodeRowData>();
 
-		// Token: 0x04020C85 RID: 134277
+		// Token: 0x0401B5B2 RID: 112050
 		[Nullable(new byte[]
 		{
 			1,
@@ -617,13 +619,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		public List<Dictionary<int, bool>> LineActiveMap = new List<Dictionary<int, bool>>();
 
-		// Token: 0x04020C86 RID: 134278
+		// Token: 0x0401B5B3 RID: 112051
 		private readonly HashSet<int> ActivatedTalentIdSet = new HashSet<int>();
 
-		// Token: 0x04020C87 RID: 134279
+		// Token: 0x0401B5B4 RID: 112052
 		private readonly HashSet<int> UnlockedTalentIdSet = new HashSet<int>();
 
-		// Token: 0x04020C88 RID: 134280
+		// Token: 0x0401B5B5 RID: 112053
 		private bool IsStructureBuilt;
 	}
 }

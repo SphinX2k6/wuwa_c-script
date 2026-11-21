@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002866 RID: 10342
+	// Token: 0x02002B39 RID: 11065
 	public class IRideFlyingCar : IUiGame
 	{
-		// Token: 0x0600E537 RID: 58679 RVA: 0x0021B64B File Offset: 0x0021984B
-		[NullableContext(1)]
+		// Token: 0x0600F35C RID: 62300 RVA: 0x002384AF File Offset: 0x002366AF
 		public static IRideFlyingCar Create(IRideFlyingCar? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700462D RID: 17965
-		// (get) Token: 0x0600E538 RID: 58680 RVA: 0x0021B66A File Offset: 0x0021986A
+		// Token: 0x17004998 RID: 18840
+		// (get) Token: 0x0600F35D RID: 62301 RVA: 0x002384CE File Offset: 0x002366CE
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700462E RID: 17966
-		// (get) Token: 0x0600E539 RID: 58681 RVA: 0x0021B678 File Offset: 0x00219878
+		// Token: 0x17004999 RID: 18841
+		// (get) Token: 0x0600F35E RID: 62302 RVA: 0x002384DC File Offset: 0x002366DC
 		public virtual int? FirstPersonCameraTag
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700462F RID: 17967
-		// (get) Token: 0x0600E53A RID: 58682 RVA: 0x0021B6B0 File Offset: 0x002198B0
+		// Token: 0x1700499A RID: 18842
+		// (get) Token: 0x0600F35F RID: 62303 RVA: 0x00238514 File Offset: 0x00236714
 		public virtual int? ThirdPersonCameraTag
 		{
 			get
@@ -59,7 +57,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EC8 RID: 32456
+		// Token: 0x04008585 RID: 34181
 		private IRideFlyingCar Instance;
 	}
 }

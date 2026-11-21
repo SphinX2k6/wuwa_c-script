@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B60 RID: 2912
+	// Token: 0x02000C2E RID: 3118
 	public class IBuildingBlockFoundation : IItemFoundationType
 	{
-		// Token: 0x06004312 RID: 17170 RVA: 0x000AB119 File Offset: 0x000A9319
-		[NullableContext(1)]
+		// Token: 0x0600476B RID: 18283 RVA: 0x000B51DD File Offset: 0x000B33DD
 		public static IBuildingBlockFoundation Create(IBuildingBlockFoundation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700120F RID: 4623
-		// (get) Token: 0x06004313 RID: 17171 RVA: 0x000AB138 File Offset: 0x000A9338
+		// Token: 0x1700130A RID: 4874
+		// (get) Token: 0x0600476C RID: 18284 RVA: 0x000B51FC File Offset: 0x000B33FC
 		public override EItemFoundation Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025DB RID: 9691
+		// Token: 0x04002823 RID: 10275
 		private IBuildingBlockFoundation Instance;
 	}
 }

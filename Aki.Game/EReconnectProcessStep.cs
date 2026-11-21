@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x0200274C RID: 10060
+// Token: 0x02001C37 RID: 7223
 public enum EReconnectProcessStep
 {
-	// Token: 0x04009B02 RID: 39682
+	// Token: 0x04009C5B RID: 40027
 	ConvGate,
-	// Token: 0x04009B03 RID: 39683
+	// Token: 0x04009C5C RID: 40028
 	ConvRet,
-	// Token: 0x04009B04 RID: 39684
+	// Token: 0x04009C5D RID: 40029
 	ProtoKeyReq,
-	// Token: 0x04009B05 RID: 39685
+	// Token: 0x04009C5E RID: 40030
 	ProtoKeyRet,
-	// Token: 0x04009B06 RID: 39686
+	// Token: 0x04009C5F RID: 40031
 	ReconvReq,
-	// Token: 0x04009B07 RID: 39687
+	// Token: 0x04009C60 RID: 40032
 	ReconvRet,
-	// Token: 0x04009B08 RID: 39688
+	// Token: 0x04009C61 RID: 40033
 	ReconvCancel,
-	// Token: 0x04009B09 RID: 39689
+	// Token: 0x04009C62 RID: 40034
 	ReconvSuccess,
-	// Token: 0x04009B0A RID: 39690
+	// Token: 0x04009C63 RID: 40035
 	ReconvFail,
-	// Token: 0x04009B0B RID: 39691
+	// Token: 0x04009C64 RID: 40036
 	Max
 }

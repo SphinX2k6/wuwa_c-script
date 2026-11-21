@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03A230D2-6EEE-4B35-BE86-5EB1E30E8F9A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mscorlib</RootNamespace>
+    <AssemblyName>mscorlib</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Win32.Registry" />
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Collections.NonGeneric.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.AccessControl" />
+    <Reference Include="System.IO.FileSystem.DriveInfo" />
+    <Reference Include="System.IO.IsolatedStorage" />
+    <Reference Include="System.Memory">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.TypeExtensions" />
+    <Reference Include="System.Resources.Writer" />
+    <Reference Include="System.Runtime.CompilerServices.VisualC" />
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters" />
+    <Reference Include="System.Security.AccessControl" />
+    <Reference Include="System.Security.Claims" />
+    <Reference Include="System.Security.Cryptography" />
+    <Reference Include="System.Security.Permissions" />
+    <Reference Include="System.Security.Principal.Windows" />
+    <Reference Include="System.Threading">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.AccessControl" />
+    <Reference Include="System.Threading.Tasks.Parallel" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\System.Collections\System.Collections.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8FA0}</Project>
+      <Name>System.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Private.CoreLib\System.Private.CoreLib.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8FA1}</Project>
+      <Name>System.Private.CoreLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

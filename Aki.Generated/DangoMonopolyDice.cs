@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BD8 RID: 3032
+	// Token: 0x02000CBA RID: 3258
 	public struct DangoMonopolyDice : IFlatbufferObject
 	{
-		// Token: 0x17000BEC RID: 3052
-		// (get) Token: 0x0600606D RID: 24685 RVA: 0x0020F920 File Offset: 0x0020DB20
+		// Token: 0x17000C32 RID: 3122
+		// (get) Token: 0x06006646 RID: 26182 RVA: 0x0022EFA4 File Offset: 0x0022D1A4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600606E RID: 24686 RVA: 0x0020F92D File Offset: 0x0020DB2D
+		// Token: 0x06006647 RID: 26183 RVA: 0x0022EFB1 File Offset: 0x0022D1B1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600606F RID: 24687 RVA: 0x0020F934 File Offset: 0x0020DB34
+		// Token: 0x06006648 RID: 26184 RVA: 0x0022EFB8 File Offset: 0x0022D1B8
 		public static DangoMonopolyDice GetRootAsDangoMonopolyDice(ByteBuffer _bb)
 		{
 			return DangoMonopolyDice.GetRootAsDangoMonopolyDice(_bb, default(DangoMonopolyDice));
 		}
 
-		// Token: 0x06006070 RID: 24688 RVA: 0x0020F950 File Offset: 0x0020DB50
+		// Token: 0x06006649 RID: 26185 RVA: 0x0022EFD4 File Offset: 0x0022D1D4
 		public static DangoMonopolyDice GetRootAsDangoMonopolyDice(ByteBuffer _bb, DangoMonopolyDice obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006071 RID: 24689 RVA: 0x0020F96D File Offset: 0x0020DB6D
+		// Token: 0x0600664A RID: 26186 RVA: 0x0022EFF1 File Offset: 0x0022D1F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006072 RID: 24690 RVA: 0x0020F97C File Offset: 0x0020DB7C
+		// Token: 0x0600664B RID: 26187 RVA: 0x0022F000 File Offset: 0x0022D200
 		public DangoMonopolyDice __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000BED RID: 3053
-		// (get) Token: 0x06006073 RID: 24691 RVA: 0x0020F98C File Offset: 0x0020DB8C
+		// Token: 0x17000C33 RID: 3123
+		// (get) Token: 0x0600664C RID: 26188 RVA: 0x0022F010 File Offset: 0x0022D210
 		public int DiceNum
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004C05 RID: 19461
+		// Token: 0x040051E7 RID: 20967
 		private Table __p;
 	}
 }

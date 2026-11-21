@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025D6 RID: 9686
+// Token: 0x02001AC1 RID: 6849
 public class PhotographValueSetup : PhotographSetupBase
 {
-	// Token: 0x06013A8A RID: 80522 RVA: 0x004EAA74 File Offset: 0x004E8C74
+	// Token: 0x06010F6A RID: 69482 RVA: 0x004F9674 File Offset: 0x004F7874
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,21 +17,21 @@ public class PhotographValueSetup : PhotographSetupBase
 		};
 	}
 
-	// Token: 0x06013A8B RID: 80523 RVA: 0x004EAACE File Offset: 0x004E8CCE
+	// Token: 0x06010F6B RID: 69483 RVA: 0x004F96CE File Offset: 0x004F78CE
 	protected override void OnStart()
 	{
 		base.GetSlider(1).OnValueChangeCb.Bind(new Action<float>(this.OnValueChanged));
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06013A8C RID: 80524 RVA: 0x004EAAFE File Offset: 0x004E8CFE
+	// Token: 0x06010F6C RID: 69484 RVA: 0x004F96FE File Offset: 0x004F78FE
 	protected override void OnBeforeDestroy()
 	{
 		base.GetSlider(1).OnValueChangeCb.Unbind();
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x06013A8D RID: 80525 RVA: 0x004EAB18 File Offset: 0x004E8D18
+	// Token: 0x06010F6D RID: 69485 RVA: 0x004F9718 File Offset: 0x004F7918
 	protected override void OnBeforeShow()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -42,7 +42,7 @@ public class PhotographValueSetup : PhotographSetupBase
 		levelSequencePlayer.PlayLevelSequenceByName("Start01", false, null, false);
 	}
 
-	// Token: 0x06013A8E RID: 80526 RVA: 0x004EAB48 File Offset: 0x004E8D48
+	// Token: 0x06010F6E RID: 69486 RVA: 0x004F9748 File Offset: 0x004F7948
 	private void OnValueChanged(float value)
 	{
 		if (this.SetupConfig.Value.IsReverseSet)
@@ -55,14 +55,14 @@ public class PhotographValueSetup : PhotographSetupBase
 		PhotographController.Instance.SetPhotographOption((EPhotoSetupValueType)this.SetupConfig.Value.ValueType, value, false, true);
 	}
 
-	// Token: 0x06013A8F RID: 80527 RVA: 0x004EABD7 File Offset: 0x004E8DD7
+	// Token: 0x06010F6F RID: 69487 RVA: 0x004F97D7 File Offset: 0x004F79D7
 	public override void Initialize(EPhotoSetupValueType setupValueType)
 	{
 		this.SetupValueType = setupValueType;
 		this.Refresh();
 	}
 
-	// Token: 0x06013A90 RID: 80528 RVA: 0x004EABE8 File Offset: 0x004E8DE8
+	// Token: 0x06010F70 RID: 69488 RVA: 0x004F97E8 File Offset: 0x004F79E8
 	public override void Refresh()
 	{
 		if (this.SetupConfig == null || this.SetupConfig.Value.Type == 0)
@@ -84,18 +84,18 @@ public class PhotographValueSetup : PhotographSetupBase
 		slider.SetValue(num, false);
 	}
 
-	// Token: 0x0400942C RID: 37932
+	// Token: 0x04009582 RID: 38274
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02008BF0 RID: 35824
+	// Token: 0x02007D78 RID: 32120
 	private enum EChildType
 	{
-		// Token: 0x0402D6DE RID: 186078
+		// Token: 0x040289F3 RID: 166387
 		OptionNameText,
-		// Token: 0x0402D6DF RID: 186079
+		// Token: 0x040289F4 RID: 166388
 		ValueSlider,
-		// Token: 0x0402D6E0 RID: 186080
+		// Token: 0x040289F5 RID: 166389
 		SpriteHandle
 	}
 }

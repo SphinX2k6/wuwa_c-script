@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006046 RID: 24646
+	// Token: 0x02004FC4 RID: 20420
 	public class SpringManorBrochureDetailViewOpenParam
 	{
-		// Token: 0x04020957 RID: 133463
+		// Token: 0x0401B284 RID: 111236
 		public int ActivityId;
 
-		// Token: 0x04020958 RID: 133464
+		// Token: 0x0401B285 RID: 111237
 		public int StartIndex;
 
-		// Token: 0x04020959 RID: 133465
+		// Token: 0x0401B286 RID: 111238
 		public bool IsHideReward;
 	}
 }

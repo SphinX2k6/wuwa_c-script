@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.VehicleStream
 {
-	// Token: 0x020048AA RID: 18602
+	// Token: 0x02003821 RID: 14369
 	public class MoveCheckInfo
 	{
-		// Token: 0x06030A01 RID: 199169 RVA: 0x00B4A624 File Offset: 0x00B48824
+		// Token: 0x0602552D RID: 152877 RVA: 0x00A8542C File Offset: 0x00A8362C
 		public void Reset()
 		{
 			this.BeforeMoveCheckResult = EMoveCheckResult.None;
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			this.AfterMoveCheckInfo.AfterAdjustDistance = float.MaxValue;
 		}
 
-		// Token: 0x06030A02 RID: 199170 RVA: 0x00B4A650 File Offset: 0x00B48850
+		// Token: 0x0602552E RID: 152878 RVA: 0x00A85458 File Offset: 0x00A83658
 		public void TryUpdateAdjustDistance(EMoveCheckResult checkResult, float afterAdjustDistance)
 		{
 			if (afterAdjustDistance < this.AfterMoveCheckInfo.AfterAdjustDistance)
@@ -25,13 +25,13 @@ namespace CSharpScript.Game.Module.VehicleStream
 			}
 		}
 
-		// Token: 0x0401A21E RID: 107038
+		// Token: 0x04014A91 RID: 84625
 		public EMoveCheckResult BeforeMoveCheckResult;
 
-		// Token: 0x0401A21F RID: 107039
+		// Token: 0x04014A92 RID: 84626
 		public EMoveCheckResult AfterMoveCheckResult;
 
-		// Token: 0x0401A220 RID: 107040
+		// Token: 0x04014A93 RID: 84627
 		[Nullable(1)]
 		public IMoveCheckResultAndDistance AfterMoveCheckInfo = new MoveCheckResultAndDistance
 		{
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			AfterAdjustDistance = float.MaxValue
 		};
 
-		// Token: 0x0401A221 RID: 107041
+		// Token: 0x04014A94 RID: 84628
 		public float BrakingDistance;
 	}
 }

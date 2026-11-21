@@ -1,32 +1,32 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020024EC RID: 9452
+// Token: 0x020019D3 RID: 6611
 [NullableContext(2)]
 public interface IVisionRecommendViewOpenParam
 {
-	// Token: 0x170018B8 RID: 6328
-	// (get) Token: 0x06013025 RID: 77861
-	// (set) Token: 0x06013026 RID: 77862
+	// Token: 0x170018F2 RID: 6386
+	// (get) Token: 0x060104E4 RID: 66788
+	// (set) Token: 0x060104E5 RID: 66789
 	int RoleId { get; set; }
 
-	// Token: 0x170018B9 RID: 6329
-	// (get) Token: 0x06013027 RID: 77863
-	// (set) Token: 0x06013028 RID: 77864
+	// Token: 0x170018F3 RID: 6387
+	// (get) Token: 0x060104E6 RID: 66790
+	// (set) Token: 0x060104E7 RID: 66791
 	bool IsFromRoleDev { get; set; }
 
-	// Token: 0x170018BA RID: 6330
-	// (get) Token: 0x06013029 RID: 77865
-	// (set) Token: 0x0601302A RID: 77866
+	// Token: 0x170018F4 RID: 6388
+	// (get) Token: 0x060104E8 RID: 66792
+	// (set) Token: 0x060104E9 RID: 66793
 	Action<int, int, int?> SuccessCallBack { get; set; }
 
-	// Token: 0x170018BB RID: 6331
-	// (get) Token: 0x0601302B RID: 77867
-	// (set) Token: 0x0601302C RID: 77868
+	// Token: 0x170018F5 RID: 6389
+	// (get) Token: 0x060104EA RID: 66794
+	// (set) Token: 0x060104EB RID: 66795
 	Func<int, int> GetSelectedPlanIdCallBack { get; set; }
 
-	// Token: 0x170018BC RID: 6332
-	// (get) Token: 0x0601302D RID: 77869
-	// (set) Token: 0x0601302E RID: 77870
+	// Token: 0x170018F6 RID: 6390
+	// (get) Token: 0x060104EC RID: 66796
+	// (set) Token: 0x060104ED RID: 66797
 	Func<int, int> GetSelectedFirstVisionMonsterIdCallBack { get; set; }
 }

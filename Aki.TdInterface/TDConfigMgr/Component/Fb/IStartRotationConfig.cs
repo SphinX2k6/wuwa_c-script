@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A66 RID: 2662
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B30 RID: 2864
 	public class IStartRotationConfig
 	{
-		// Token: 0x06003D5A RID: 15706 RVA: 0x0009D8A7 File Offset: 0x0009BAA7
+		// Token: 0x06004182 RID: 16770 RVA: 0x000A6DE4 File Offset: 0x000A4FE4
 		public static IStartRotationConfig Create(IStartRotationConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E4B RID: 3659
-		// (get) Token: 0x06003D5B RID: 15707 RVA: 0x0009D8C6 File Offset: 0x0009BAC6
+		// Token: 0x17000F1D RID: 3869
+		// (get) Token: 0x06004183 RID: 16771 RVA: 0x000A6E03 File Offset: 0x000A5003
 		public virtual VectorInfo TargetRotation
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E4C RID: 3660
-		// (get) Token: 0x06003D5C RID: 15708 RVA: 0x0009D8FA File Offset: 0x0009BAFA
+		// Token: 0x17000F1E RID: 3870
+		// (get) Token: 0x06004184 RID: 16772 RVA: 0x000A6E37 File Offset: 0x000A5037
 		public virtual float AngularSpeed
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400222B RID: 8747
+		// Token: 0x04002445 RID: 9285
 		private IStartRotationConfig Instance;
 
-		// Token: 0x0400222C RID: 8748
+		// Token: 0x04002446 RID: 9286
 		[Nullable(2)]
 		private VectorInfo _TargetRotationCache;
 
-		// Token: 0x0400222D RID: 8749
+		// Token: 0x04002447 RID: 9287
 		private bool _TargetRotationInited;
 	}
 }

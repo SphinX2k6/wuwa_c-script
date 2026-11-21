@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000901 RID: 2305
+	// Token: 0x0200094C RID: 2380
 	public class ConfigSelectRoleItemPerformanceById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003619 RID: 13849 RVA: 0x0018B294 File Offset: 0x00189494
+		// Token: 0x060037DB RID: 14299 RVA: 0x001984B4 File Offset: 0x001966B4
 		static ConfigSelectRoleItemPerformanceById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSelectRoleItemPerformanceById.CreateStaticDefaultValue), new Action(ConfigSelectRoleItemPerformanceById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600361A RID: 13850 RVA: 0x0018B2B4 File Offset: 0x001894B4
+		// Token: 0x060037DC RID: 14300 RVA: 0x001984D4 File Offset: 0x001966D4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSelectRoleItemPerformanceById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600361B RID: 13851 RVA: 0x0018B333 File Offset: 0x00189533
+		// Token: 0x060037DD RID: 14301 RVA: 0x00198553 File Offset: 0x00196753
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSelectRoleItemPerformanceById.LogPair = null;
 			ConfigSelectRoleItemPerformanceById.HandleId = 0;
 		}
 
-		// Token: 0x0600361C RID: 13852 RVA: 0x0018B341 File Offset: 0x00189541
+		// Token: 0x060037DE RID: 14302 RVA: 0x00198561 File Offset: 0x00196761
 		public static void Init()
 		{
 			ConfigSelectRoleItemPerformanceById.HandleId = ConfigCommon.InitDataStatement(ConfigSelectRoleItemPerformanceById.HandleId, "db_roleselectperformance.db", "select BinData from `SelectRoleItemPerformance` where Id=?");
 		}
 
-		// Token: 0x0600361D RID: 13853 RVA: 0x0018B35C File Offset: 0x0018955C
+		// Token: 0x060037DF RID: 14303 RVA: 0x0019857C File Offset: 0x0019677C
 		public static SelectRoleItemPerformance? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSelectRoleItemPerformanceById.HandleId, ConfigSelectRoleItemPerformanceById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SelectRoleItemPerformance?(rootAsSelectRoleItemPerformance);
 		}
 
-		// Token: 0x04003EED RID: 16109
+		// Token: 0x040040FA RID: 16634
 		private const string DB = "db_roleselectperformance.db";
 
-		// Token: 0x04003EEE RID: 16110
+		// Token: 0x040040FB RID: 16635
 		private const string FILE = "z.自选道具表现.xlsx";
 
-		// Token: 0x04003EEF RID: 16111
+		// Token: 0x040040FC RID: 16636
 		private const string TABLE = "SelectRoleItemPerformance";
 
-		// Token: 0x04003EF0 RID: 16112
+		// Token: 0x040040FD RID: 16637
 		private const string COMMAND = "select BinData from `SelectRoleItemPerformance` where Id=?";
 
-		// Token: 0x04003EF1 RID: 16113
+		// Token: 0x040040FE RID: 16638
 		private const string KEY_PREFIX = "SelectRoleItemPerformanceById";
 
-		// Token: 0x04003EF2 RID: 16114
+		// Token: 0x040040FF RID: 16639
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003EF3 RID: 16115
+		// Token: 0x04004100 RID: 16640
 		private static int HandleId;
 	}
 }

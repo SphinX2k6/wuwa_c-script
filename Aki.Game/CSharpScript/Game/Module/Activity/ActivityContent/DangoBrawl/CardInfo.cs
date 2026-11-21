@@ -2,11 +2,11 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067C5 RID: 26565
+	// Token: 0x02005715 RID: 22293
 	public struct CardInfo
 	{
-		// Token: 0x170096BB RID: 38587
-		// (get) Token: 0x0604228D RID: 270989 RVA: 0x0100B0BD File Offset: 0x010092BD
+		// Token: 0x170069FC RID: 27132
+		// (get) Token: 0x06036DE3 RID: 224739 RVA: 0x00F4C4A1 File Offset: 0x00F4A6A1
 		public readonly int RemainRefreshCount
 		{
 			get
@@ -15,13 +15,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x040228A5 RID: 141477
+		// Token: 0x0401D102 RID: 119042
 		public int CardId;
 
-		// Token: 0x040228A6 RID: 141478
+		// Token: 0x0401D103 RID: 119043
 		public int TotalRefreshCount;
 
-		// Token: 0x040228A7 RID: 141479
+		// Token: 0x0401D104 RID: 119044
 		public int RefreshCount;
 	}
 }

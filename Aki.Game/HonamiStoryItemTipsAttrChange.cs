@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EA9 RID: 7849
+// Token: 0x0200136B RID: 4971
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryItemTipsAttrChange : UiPanelBase
 {
-	// Token: 0x0600F134 RID: 61748 RVA: 0x0039F288 File Offset: 0x0039D488
+	// Token: 0x0600C553 RID: 50515 RVA: 0x003AAE44 File Offset: 0x003A9044
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,19 +25,19 @@ public class HonamiStoryItemTipsAttrChange : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F135 RID: 61749 RVA: 0x0039F30E File Offset: 0x0039D50E
+	// Token: 0x0600C554 RID: 50516 RVA: 0x003AAECA File Offset: 0x003A90CA
 	protected override void OnStart()
 	{
 		this.AttrLayout = new GenericLayout<HonamiStoryAttrItem, IHonamiStoryAttrData>(base.GetVerticalLayout(0), new Func<HonamiStoryAttrItem>(this.InitAttrItem), base.GetItem(1).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x0600F136 RID: 61750 RVA: 0x0039F341 File Offset: 0x0039D541
+	// Token: 0x0600C555 RID: 50517 RVA: 0x003AAEFD File Offset: 0x003A90FD
 	private HonamiStoryAttrItem InitAttrItem()
 	{
 		return new HonamiStoryAttrItem();
 	}
 
-	// Token: 0x0600F137 RID: 61751 RVA: 0x0039F348 File Offset: 0x0039D548
+	// Token: 0x0600C556 RID: 50518 RVA: 0x003AAF04 File Offset: 0x003A9104
 	public List<IHonamiStoryAttrData> CombineDataList(HonamiStoryEquipItemData oldData, HonamiStoryEquipItemData newData)
 	{
 		int[] mainPropList = oldData.GetMainPropList();
@@ -101,7 +101,7 @@ public class HonamiStoryItemTipsAttrChange : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x0600F138 RID: 61752 RVA: 0x0039F5DC File Offset: 0x0039D7DC
+	// Token: 0x0600C557 RID: 50519 RVA: 0x003AB198 File Offset: 0x003A9398
 	public void Refresh(HonamiStoryEquipItemData oldData, HonamiStoryEquipItemData newData, Action callBack)
 	{
 		List<IHonamiStoryAttrData> data = this.CombineDataList(oldData, newData);
@@ -116,14 +116,14 @@ public class HonamiStoryItemTipsAttrChange : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x0600F139 RID: 61753 RVA: 0x0039F618 File Offset: 0x0039D818
+	// Token: 0x0600C558 RID: 50520 RVA: 0x003AB1D4 File Offset: 0x003A93D4
 	public void AddHotKey(UUIItem hotKeyItem)
 	{
 		hotKeyItem.SetUIActive(true);
 		hotKeyItem.SetUIParent(base.GetItem(2), false);
 	}
 
-	// Token: 0x0600F13A RID: 61754 RVA: 0x0039F630 File Offset: 0x0039D830
+	// Token: 0x0600C559 RID: 50521 RVA: 0x003AB1EC File Offset: 0x003A93EC
 	public void SetAutoLocation(UUIItem gridItem)
 	{
 		global::Vector adaptiveTipsPosition = LguiUtil.Instance.GetAdaptiveTipsPosition(gridItem, this.RootItem, 0f);
@@ -135,7 +135,7 @@ public class HonamiStoryItemTipsAttrChange : UiPanelBase
 		rootItem.SetUIWorldLocation(fvector);
 	}
 
-	// Token: 0x04006F8E RID: 28558
+	// Token: 0x0400706F RID: 28783
 	[Nullable(new byte[]
 	{
 		2,
@@ -144,22 +144,22 @@ public class HonamiStoryItemTipsAttrChange : UiPanelBase
 	})]
 	private GenericLayout<HonamiStoryAttrItem, IHonamiStoryAttrData> AttrLayout;
 
-	// Token: 0x04006F8F RID: 28559
+	// Token: 0x04007070 RID: 28784
 	private readonly Dictionary<int, IHonamiStoryAttrData> PropertyMap = new Dictionary<int, IHonamiStoryAttrData>();
 
-	// Token: 0x02008479 RID: 33913
+	// Token: 0x020075FE RID: 30206
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x0402B1CC RID: 176588
+		// Token: 0x040264F0 RID: 156912
 		PnlAttrList,
-		// Token: 0x0402B1CD RID: 176589
+		// Token: 0x040264F1 RID: 156913
 		PnlAttrItem,
-		// Token: 0x0402B1CE RID: 176590
+		// Token: 0x040264F2 RID: 156914
 		PnlKeyDown,
-		// Token: 0x0402B1CF RID: 176591
+		// Token: 0x040264F3 RID: 156915
 		PnlKeyUp,
-		// Token: 0x0402B1D0 RID: 176592
+		// Token: 0x040264F4 RID: 156916
 		PnlLocalOffsetX
 	}
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051CF RID: 20943
+	// Token: 0x02005734 RID: 22324
 	public class IExhibitComponentT
 	{
-		// Token: 0x17009948 RID: 39240
-		// (get) Token: 0x06021F60 RID: 139104 RVA: 0x004B6259 File Offset: 0x004B4459
-		// (set) Token: 0x06021F61 RID: 139105 RVA: 0x004B6261 File Offset: 0x004B4461
+		// Token: 0x1700A137 RID: 41271
+		// (get) Token: 0x06023EB8 RID: 147128 RVA: 0x004F02C1 File Offset: 0x004EE4C1
+		// (set) Token: 0x06023EB9 RID: 147129 RVA: 0x004F02C9 File Offset: 0x004EE4C9
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009949 RID: 39241
-		// (get) Token: 0x06021F62 RID: 139106 RVA: 0x004B626A File Offset: 0x004B446A
-		// (set) Token: 0x06021F63 RID: 139107 RVA: 0x004B6272 File Offset: 0x004B4472
+		// Token: 0x1700A138 RID: 41272
+		// (get) Token: 0x06023EBA RID: 147130 RVA: 0x004F02D2 File Offset: 0x004EE4D2
+		// (set) Token: 0x06023EBB RID: 147131 RVA: 0x004F02DA File Offset: 0x004EE4DA
 		public TExhibitConfigUnion ExhibitConfig { get; set; }
 
-		// Token: 0x1700994A RID: 39242
-		// (get) Token: 0x06021F64 RID: 139108 RVA: 0x004B627B File Offset: 0x004B447B
-		// (set) Token: 0x06021F65 RID: 139109 RVA: 0x004B6283 File Offset: 0x004B4483
+		// Token: 0x1700A139 RID: 41273
+		// (get) Token: 0x06023EBC RID: 147132 RVA: 0x004F02E3 File Offset: 0x004EE4E3
+		// (set) Token: 0x06023EBD RID: 147133 RVA: 0x004F02EB File Offset: 0x004EE4EB
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021F66 RID: 139110 RVA: 0x004B628C File Offset: 0x004B448C
+		// Token: 0x06023EBE RID: 147134 RVA: 0x004F02F4 File Offset: 0x004EE4F4
 		public IExhibitComponentT()
 		{
 			this.Disabled = false;

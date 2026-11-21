@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009D3 RID: 2515
+	// Token: 0x02000AA8 RID: 2728
 	public class ConfigTetrisByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003B06 RID: 15110 RVA: 0x001A7874 File Offset: 0x001A5A74
+		// Token: 0x06004004 RID: 16388 RVA: 0x001C6C08 File Offset: 0x001C4E08
 		static ConfigTetrisByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTetrisByActivityId.CreateStaticDefaultValue), new Action(ConfigTetrisByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003B07 RID: 15111 RVA: 0x001A7894 File Offset: 0x001A5A94
+		// Token: 0x06004005 RID: 16389 RVA: 0x001C6C28 File Offset: 0x001C4E28
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTetrisByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003B08 RID: 15112 RVA: 0x001A7913 File Offset: 0x001A5B13
+		// Token: 0x06004006 RID: 16390 RVA: 0x001C6CA7 File Offset: 0x001C4EA7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTetrisByActivityId.LogPair = null;
 			ConfigTetrisByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06003B09 RID: 15113 RVA: 0x001A7921 File Offset: 0x001A5B21
+		// Token: 0x06004007 RID: 16391 RVA: 0x001C6CB5 File Offset: 0x001C4EB5
 		public static void Init()
 		{
 			ConfigTetrisByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigTetrisByActivityId.HandleId, "db_tetris.db", "select BinData from `Tetris` where ActivityId=?");
 		}
 
-		// Token: 0x06003B0A RID: 15114 RVA: 0x001A793C File Offset: 0x001A5B3C
+		// Token: 0x06004008 RID: 16392 RVA: 0x001C6CD0 File Offset: 0x001C4ED0
 		[NullableContext(2)]
 		public static IReadOnlyList<Tetris> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040044AB RID: 17579
+		// Token: 0x04004A7E RID: 19070
 		private const string DB = "db_tetris.db";
 
-		// Token: 0x040044AC RID: 17580
+		// Token: 0x04004A7F RID: 19071
 		private const string FILE = "e.俄罗斯方块.xlsx";
 
-		// Token: 0x040044AD RID: 17581
+		// Token: 0x04004A80 RID: 19072
 		private const string TABLE = "Tetris";
 
-		// Token: 0x040044AE RID: 17582
+		// Token: 0x04004A81 RID: 19073
 		private const string COMMAND = "select BinData from `Tetris` where ActivityId=?";
 
-		// Token: 0x040044AF RID: 17583
+		// Token: 0x04004A82 RID: 19074
 		private const string KEY_PREFIX = "TetrisByActivityId";
 
-		// Token: 0x040044B0 RID: 17584
+		// Token: 0x04004A83 RID: 19075
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040044B1 RID: 17585
+		// Token: 0x04004A84 RID: 19076
 		private static int HandleId;
 	}
 }

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DBA RID: 28090
+	// Token: 0x02007535 RID: 30005
 	public class IProjectionMachinePhotoFilterT
 	{
-		// Token: 0x1700D17B RID: 53627
-		// (get) Token: 0x060319F1 RID: 203249 RVA: 0x006B9388 File Offset: 0x006B7588
-		// (set) Token: 0x060319F2 RID: 203250 RVA: 0x006B9390 File Offset: 0x006B7590
+		// Token: 0x1700DCC3 RID: 56515
+		// (get) Token: 0x060349ED RID: 215533 RVA: 0x00714A70 File Offset: 0x00712C70
+		// (set) Token: 0x060349EE RID: 215534 RVA: 0x00714A78 File Offset: 0x00712C78
 		public float DefaultParam1 { get; set; }
 
-		// Token: 0x1700D17C RID: 53628
-		// (get) Token: 0x060319F3 RID: 203251 RVA: 0x006B9399 File Offset: 0x006B7599
-		// (set) Token: 0x060319F4 RID: 203252 RVA: 0x006B93A1 File Offset: 0x006B75A1
+		// Token: 0x1700DCC4 RID: 56516
+		// (get) Token: 0x060349EF RID: 215535 RVA: 0x00714A81 File Offset: 0x00712C81
+		// (set) Token: 0x060349F0 RID: 215536 RVA: 0x00714A89 File Offset: 0x00712C89
 		public float DefaultParam2 { get; set; }
 
-		// Token: 0x1700D17D RID: 53629
-		// (get) Token: 0x060319F5 RID: 203253 RVA: 0x006B93AA File Offset: 0x006B75AA
-		// (set) Token: 0x060319F6 RID: 203254 RVA: 0x006B93B2 File Offset: 0x006B75B2
+		// Token: 0x1700DCC5 RID: 56517
+		// (get) Token: 0x060349F1 RID: 215537 RVA: 0x00714A92 File Offset: 0x00712C92
+		// (set) Token: 0x060349F2 RID: 215538 RVA: 0x00714A9A File Offset: 0x00712C9A
 		public float TargetParam1 { get; set; }
 
-		// Token: 0x1700D17E RID: 53630
-		// (get) Token: 0x060319F7 RID: 203255 RVA: 0x006B93BB File Offset: 0x006B75BB
-		// (set) Token: 0x060319F8 RID: 203256 RVA: 0x006B93C3 File Offset: 0x006B75C3
+		// Token: 0x1700DCC6 RID: 56518
+		// (get) Token: 0x060349F3 RID: 215539 RVA: 0x00714AA3 File Offset: 0x00712CA3
+		// (set) Token: 0x060349F4 RID: 215540 RVA: 0x00714AAB File Offset: 0x00712CAB
 		public float TargetParam2 { get; set; }
 
-		// Token: 0x060319F9 RID: 203257 RVA: 0x006B93CC File Offset: 0x006B75CC
+		// Token: 0x060349F5 RID: 215541 RVA: 0x00714AB4 File Offset: 0x00712CB4
 		public IProjectionMachinePhotoFilterT()
 		{
 			this.DefaultParam1 = 0f;

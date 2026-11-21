@@ -18,27 +18,27 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F6C RID: 20332
+	// Token: 0x02003F35 RID: 16181
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class QuickHackController : ControllerBase
 	{
-		// Token: 0x06034155 RID: 213333 RVA: 0x00C3752F File Offset: 0x00C3572F
+		// Token: 0x06028FC3 RID: 167875 RVA: 0x00B80CCF File Offset: 0x00B7EECF
 		protected override bool OnLeaveLevel()
 		{
 			this.CloseAllQuickHack("LeaveLevel");
 			return true;
 		}
 
-		// Token: 0x06034156 RID: 213334 RVA: 0x00C3753D File Offset: 0x00C3573D
+		// Token: 0x06028FC4 RID: 167876 RVA: 0x00B80CDD File Offset: 0x00B7EEDD
 		protected override bool OnChangeMode()
 		{
 			this.CloseAllQuickHack("ChangeMode");
 			return true;
 		}
 
-		// Token: 0x06034157 RID: 213335 RVA: 0x00C3754C File Offset: 0x00C3574C
+		// Token: 0x06028FC5 RID: 167877 RVA: 0x00B80CEC File Offset: 0x00B7EEEC
 		[NullableContext(2)]
 		public void OpenQuickHack(int deviceId, int ownerEntityId, bool closeWhenInteractFinish = true, FGameplayTag? interactFinishGameplayEventTag = null, Action onCloseQuickHack = null)
 		{
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			CombatNet.Instance.Send(EPushMessageId.QuickHackOpenPush, playerEntity, quickHackOpenPush, null, new long?(instance.CombatMessageId), null);
 		}
 
-		// Token: 0x06034158 RID: 213336 RVA: 0x00C37BF0 File Offset: 0x00C35DF0
+		// Token: 0x06028FC6 RID: 167878 RVA: 0x00B81390 File Offset: 0x00B7F590
 		public void CloseQuickHack()
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			EventSystem.Instance.Emit(EEventName.OnQuickHackClose);
 		}
 
-		// Token: 0x06034159 RID: 213337 RVA: 0x00C37F98 File Offset: 0x00C36198
+		// Token: 0x06028FC7 RID: 167879 RVA: 0x00B81738 File Offset: 0x00B7F938
 		public void UpdateLockTarget(float delta)
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			EventSystem.Instance.Emit(EEventName.OnQuickHackTargetChange);
 		}
 
-		// Token: 0x0603415A RID: 213338 RVA: 0x00C38028 File Offset: 0x00C36228
+		// Token: 0x06028FC8 RID: 167880 RVA: 0x00B817C8 File Offset: 0x00B7F9C8
 		[NullableContext(2)]
 		private QuickHackSkillInstance GetSkillInstance(int skillId)
 		{
@@ -380,7 +380,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return quickHackSkillInstance;
 		}
 
-		// Token: 0x0603415B RID: 213339 RVA: 0x00C3808C File Offset: 0x00C3628C
+		// Token: 0x06028FC9 RID: 167881 RVA: 0x00B8182C File Offset: 0x00B7FA2C
 		[NullableContext(2)]
 		private void RefreshCurrentSkillInfo(IQuickHackLockTargetInfo targetInfo)
 		{
@@ -450,7 +450,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			QuickHackSkillInstance currentSelectSkill = instance.CurrentSelectSkill;
 			if (currentSelectSkill == null || !list.Contains(currentSelectSkill))
 			{
-				this.SelectSkill(list[0], false);
+				this.SelectSkill((list.Count > 0) ? list[0] : null, false);
 			}
 			if (instance.SkillInstanceMap != null)
 			{
@@ -474,7 +474,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			EventSystem.Instance.Emit(EEventName.OnQuickHackAllSkillChange);
 		}
 
-		// Token: 0x0603415C RID: 213340 RVA: 0x00C38304 File Offset: 0x00C36504
+		// Token: 0x06028FCA RID: 167882 RVA: 0x00B81AB0 File Offset: 0x00B7FCB0
 		private void RefreshTargetsHighlight(IEnumerable<EntityHandle> lockTargets, IEnumerable<EntityHandle> onScreenTargets)
 		{
 			List<QuickHackHighlightManager> highlightManagerList = QuickHackModel.Instance.HighlightManagerList;
@@ -488,7 +488,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603415D RID: 213341 RVA: 0x00C38360 File Offset: 0x00C36560
+		// Token: 0x06028FCB RID: 167883 RVA: 0x00B81B0C File Offset: 0x00B7FD0C
 		public void SelectNextSkill(bool isForward, bool checkSkillCanUse)
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -538,7 +538,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603415E RID: 213342 RVA: 0x00C38440 File Offset: 0x00C36640
+		// Token: 0x06028FCC RID: 167884 RVA: 0x00B81BEC File Offset: 0x00B7FDEC
 		[NullableContext(2)]
 		public void SelectSkill(QuickHackSkillInstance skill, bool broadcastEvent = true)
 		{
@@ -578,13 +578,13 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603415F RID: 213343 RVA: 0x00C38507 File Offset: 0x00C36707
+		// Token: 0x06028FCD RID: 167885 RVA: 0x00B81CB3 File Offset: 0x00B7FEB3
 		private void OnCurrentSKillCheckSkillCanUse(QuickHackSkillConditionResult result)
 		{
 			this.RefreshHighlightBySkill();
 		}
 
-		// Token: 0x06034160 RID: 213344 RVA: 0x00C38510 File Offset: 0x00C36710
+		// Token: 0x06028FCE RID: 167886 RVA: 0x00B81CBC File Offset: 0x00B7FEBC
 		private void RefreshHighlightBySkill()
 		{
 			QuickHackTargetSelector targetSelector = QuickHackModel.Instance.TargetSelector;
@@ -597,7 +597,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.RefreshTargetsHighlight(lockTargetInfo.Targets, onScreenTargetInfo.Targets);
 		}
 
-		// Token: 0x06034161 RID: 213345 RVA: 0x00C3854C File Offset: 0x00C3674C
+		// Token: 0x06028FCF RID: 167887 RVA: 0x00B81CF8 File Offset: 0x00B7FEF8
 		public bool CheckRamEnoughUseAnySkill()
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -626,7 +626,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return false;
 		}
 
-		// Token: 0x06034162 RID: 213346 RVA: 0x00C385F4 File Offset: 0x00C367F4
+		// Token: 0x06028FD0 RID: 167888 RVA: 0x00B81DA0 File Offset: 0x00B7FFA0
 		public bool CheckAnySkillCanUse()
 		{
 			List<QuickHackSkillInstance> currentSkillList = QuickHackModel.Instance.CurrentSkillList;
@@ -647,7 +647,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return false;
 		}
 
-		// Token: 0x06034163 RID: 213347 RVA: 0x00C38668 File Offset: 0x00C36868
+		// Token: 0x06028FD1 RID: 167889 RVA: 0x00B81E14 File Offset: 0x00B80014
 		public bool UseCurrentSkill()
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -754,7 +754,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return true;
 		}
 
-		// Token: 0x06034164 RID: 213348 RVA: 0x00C38978 File Offset: 0x00C36B78
+		// Token: 0x06028FD2 RID: 167890 RVA: 0x00B82124 File Offset: 0x00B80324
 		private void ApplySkillToMonsters(EntityHandle instigator, QuickHackSkillInstance skill, IEnumerable<EntityHandle> targets, long? preMessageId)
 		{
 			QuickHackSkill config = skill.GetConfig();
@@ -808,7 +808,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034165 RID: 213349 RVA: 0x00C38B0C File Offset: 0x00C36D0C
+		// Token: 0x06028FD3 RID: 167891 RVA: 0x00B822B8 File Offset: 0x00B804B8
 		private void RecordTargetUsedSkill(int targetId, int skillId)
 		{
 			Dictionary<int, HashSet<int>> dictionary = QuickHackModel.Instance.TargetBeenUsedSkillRecordMap;
@@ -826,7 +826,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			hashSet.Add(skillId);
 		}
 
-		// Token: 0x06034166 RID: 213350 RVA: 0x00C38B5C File Offset: 0x00C36D5C
+		// Token: 0x06028FD4 RID: 167892 RVA: 0x00B82308 File Offset: 0x00B80508
 		private void ExecuteExtraEffect(IEnumerable<int> effectList)
 		{
 			foreach (int type in effectList)
@@ -839,7 +839,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034167 RID: 213351 RVA: 0x00C38BB4 File Offset: 0x00C36DB4
+		// Token: 0x06028FD5 RID: 167893 RVA: 0x00B82360 File Offset: 0x00B80560
 		public void InteractFinish()
 		{
 			QuickHackModel model = QuickHackModel.Instance;
@@ -894,7 +894,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			component.SendGameplayEventToActor(interactFinishGameplayEventTag.Value, null);
 		}
 
-		// Token: 0x06034168 RID: 213352 RVA: 0x00C38CE8 File Offset: 0x00C36EE8
+		// Token: 0x06028FD6 RID: 167894 RVA: 0x00B82494 File Offset: 0x00B80694
 		private void OnOpenQuickHackViewFinish(bool success, int viewId)
 		{
 			if (!success)
@@ -916,7 +916,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034169 RID: 213353 RVA: 0x00C38D80 File Offset: 0x00C36F80
+		// Token: 0x06028FD7 RID: 167895 RVA: 0x00B8252C File Offset: 0x00B8072C
 		private void DurationLimitTimerAction(float deltaTime)
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -936,7 +936,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			EventSystem.Instance.Emit<double, double>(EEventName.OnQuickHackDurationLimitChange, instance.DurationLimitRemainTime, instance.DurationLimitTotalTime);
 		}
 
-		// Token: 0x0603416A RID: 213354 RVA: 0x00C38E0E File Offset: 0x00C3700E
+		// Token: 0x06028FD8 RID: 167896 RVA: 0x00B825BA File Offset: 0x00B807BA
 		private EUiViewName GetViewNameByDevice(QuickHackDevice device)
 		{
 			if (device.UiType != 1)
@@ -946,7 +946,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return EUiViewName.BattleQuickHackView;
 		}
 
-		// Token: 0x0603416B RID: 213355 RVA: 0x00C38E28 File Offset: 0x00C37028
+		// Token: 0x06028FD9 RID: 167897 RVA: 0x00B825D4 File Offset: 0x00B807D4
 		[NullableContext(2)]
 		public EntityHandle GetClosestOnScreenTarget()
 		{
@@ -982,7 +982,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return result;
 		}
 
-		// Token: 0x0603416C RID: 213356 RVA: 0x00C38F20 File Offset: 0x00C37120
+		// Token: 0x06028FDA RID: 167898 RVA: 0x00B826CC File Offset: 0x00B808CC
 		public void LookAtNextEnableLockTarget(bool isLeft)
 		{
 			QuickHackTargetSelector targetSelector = QuickHackModel.Instance.TargetSelector;
@@ -1066,7 +1066,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603416D RID: 213357 RVA: 0x00C39128 File Offset: 0x00C37328
+		// Token: 0x06028FDB RID: 167899 RVA: 0x00B828D4 File Offset: 0x00B80AD4
 		public void OpenQuickHackCameraControl(int pbDataId, OpenQuickHackSystem @params)
 		{
 			if (@params.CameraConfig == null || @params.Entities == null)
@@ -1118,7 +1118,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			UiManager.Instance.OpenView(EUiViewName.QuickHackCameraControlView, null, null);
 		}
 
-		// Token: 0x0603416E RID: 213358 RVA: 0x00C3929C File Offset: 0x00C3749C
+		// Token: 0x06028FDC RID: 167900 RVA: 0x00B82A48 File Offset: 0x00B80C48
 		public void CloseQuickHackCameraControl()
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -1163,7 +1163,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			EventSystem.Instance.Emit(EEventName.OnQuickHackCameraControlClose);
 		}
 
-		// Token: 0x0603416F RID: 213359 RVA: 0x00C393C4 File Offset: 0x00C375C4
+		// Token: 0x06028FDD RID: 167901 RVA: 0x00B82B70 File Offset: 0x00B80D70
 		public void ChangeCameraByCurrentPbDataId()
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -1176,7 +1176,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.ChangeCameraByPbDataId(pbDataId);
 		}
 
-		// Token: 0x06034170 RID: 213360 RVA: 0x00C39400 File Offset: 0x00C37600
+		// Token: 0x06028FDE RID: 167902 RVA: 0x00B82BAC File Offset: 0x00B80DAC
 		public void ChangeNextCamera(bool isForward)
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -1196,7 +1196,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.ChangeCameraByPbDataId(pbDataId);
 		}
 
-		// Token: 0x06034171 RID: 213361 RVA: 0x00C39454 File Offset: 0x00C37654
+		// Token: 0x06028FDF RID: 167903 RVA: 0x00B82C00 File Offset: 0x00B80E00
 		public void ChangeCameraByPbDataId(int pbDataId)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(pbDataId);
@@ -1217,7 +1217,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.UpdateCameraControl(pbDataId, hackCameraParams);
 		}
 
-		// Token: 0x06034172 RID: 213362 RVA: 0x00C394A4 File Offset: 0x00C376A4
+		// Token: 0x06028FE0 RID: 167904 RVA: 0x00B82C50 File Offset: 0x00B80E50
 		private void UpdateCameraControl(int pbDataId, OpenQuickHackSystem @params)
 		{
 			if (@params.CameraConfig == null || @params.Entities == null)
@@ -1268,7 +1268,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034173 RID: 213363 RVA: 0x00C3960C File Offset: 0x00C3780C
+		// Token: 0x06028FE1 RID: 167905 RVA: 0x00B82DB8 File Offset: 0x00B80FB8
 		public void OpenQuickHackByCameraControl(Action onCloseQuickHack)
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -1286,7 +1286,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.OpenQuickHack(cameraControlDeviceId, getCurrentEntity.Id, true, null, onCloseQuickHack);
 		}
 
-		// Token: 0x06034174 RID: 213364 RVA: 0x00C39668 File Offset: 0x00C37868
+		// Token: 0x06028FE2 RID: 167906 RVA: 0x00B82E14 File Offset: 0x00B81014
 		public void UpdateCameraControlFov(float fov)
 		{
 			ECustomCameraMode? cameraMode = CameraModel.Instance.MainModel.CameraMode;
@@ -1298,7 +1298,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034175 RID: 213365 RVA: 0x00C396C8 File Offset: 0x00C378C8
+		// Token: 0x06028FE3 RID: 167907 RVA: 0x00B82E74 File Offset: 0x00B81074
 		private void UpdateFixedCamera(int oldPbDataId, int pbDataId, IOpenQuickHackCameraConfig @params)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(pbDataId);
@@ -1351,7 +1351,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034176 RID: 213366 RVA: 0x00C398D4 File Offset: 0x00C37AD4
+		// Token: 0x06028FE4 RID: 167908 RVA: 0x00B83080 File Offset: 0x00B81280
 		[NullableContext(2)]
 		private void RefreshBattleView(List<EBattleUiChild> excludeChildren = null)
 		{
@@ -1364,25 +1364,25 @@ namespace CSharpScript.Game.Module.QuickHack
 			BattleUiModel.Instance.ChildViewData.ShowBattleView(EBattleUiVisibleReason.SpecialSkill, 0);
 		}
 
-		// Token: 0x06034177 RID: 213367 RVA: 0x00C39926 File Offset: 0x00C37B26
+		// Token: 0x06028FE5 RID: 167909 RVA: 0x00B830D2 File Offset: 0x00B812D2
 		private void OnRemoveOwnerEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			this.CloseAllQuickHack("RemoveEntity");
 		}
 
-		// Token: 0x06034178 RID: 213368 RVA: 0x00C39933 File Offset: 0x00C37B33
+		// Token: 0x06028FE6 RID: 167910 RVA: 0x00B830DF File Offset: 0x00B812DF
 		private void OnOwnerDead()
 		{
 			this.CloseAllQuickHack("OwnerDead");
 		}
 
-		// Token: 0x06034179 RID: 213369 RVA: 0x00C39940 File Offset: 0x00C37B40
+		// Token: 0x06028FE7 RID: 167911 RVA: 0x00B830EC File Offset: 0x00B812EC
 		private void OnTeleportStart(bool isLoading)
 		{
 			this.CloseAllQuickHack("TeleportStart");
 		}
 
-		// Token: 0x0603417A RID: 213370 RVA: 0x00C3994D File Offset: 0x00C37B4D
+		// Token: 0x06028FE8 RID: 167912 RVA: 0x00B830F9 File Offset: 0x00B812F9
 		private void OnPlotNetworkStart(PlotInfo plotInfo)
 		{
 			if (plotInfo.PlotLevel == EPlotLevel.LevelA || plotInfo.PlotLevel == EPlotLevel.LevelB || plotInfo.PlotLevel == EPlotLevel.LevelC)
@@ -1391,7 +1391,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603417B RID: 213371 RVA: 0x00C39974 File Offset: 0x00C37B74
+		// Token: 0x06028FE9 RID: 167913 RVA: 0x00B83120 File Offset: 0x00B81320
 		private void CloseAllQuickHack(string reason)
 		{
 			global::Log instance = global::Log.Instance;
@@ -1405,8 +1405,8 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.CloseQuickHackCameraControl();
 		}
 
-		// Token: 0x17007F55 RID: 32597
-		// (get) Token: 0x0603417C RID: 213372 RVA: 0x00C399BD File Offset: 0x00C37BBD
+		// Token: 0x17005305 RID: 21253
+		// (get) Token: 0x06028FEA RID: 167914 RVA: 0x00B83169 File Offset: 0x00B81369
 		public static QuickHackController Instance
 		{
 			get
@@ -1415,7 +1415,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603417D RID: 213373 RVA: 0x00C399C4 File Offset: 0x00C37BC4
+		// Token: 0x06028FEB RID: 167915 RVA: 0x00B83170 File Offset: 0x00B81370
 		public static QuickHackController GetOrCreateInstance()
 		{
 			if (QuickHackController._Instance == null)
@@ -1425,7 +1425,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return QuickHackController._Instance;
 		}
 
-		// Token: 0x0603417E RID: 213374 RVA: 0x00C399D8 File Offset: 0x00C37BD8
+		// Token: 0x06028FEC RID: 167916 RVA: 0x00B83184 File Offset: 0x00B81384
 		public static bool CreateInstance()
 		{
 			if (QuickHackController._Instance != null)
@@ -1436,27 +1436,27 @@ namespace CSharpScript.Game.Module.QuickHack
 			return true;
 		}
 
-		// Token: 0x0603417F RID: 213375 RVA: 0x00C399EE File Offset: 0x00C37BEE
+		// Token: 0x06028FED RID: 167917 RVA: 0x00B8319A File Offset: 0x00B8139A
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06034180 RID: 213376 RVA: 0x00C399F0 File Offset: 0x00C37BF0
+		// Token: 0x06028FEE RID: 167918 RVA: 0x00B8319C File Offset: 0x00B8139C
 		public static void ResetStaticDefaultValue()
 		{
 			QuickHackController._Instance = null;
 		}
 
-		// Token: 0x06034181 RID: 213377 RVA: 0x00C399F8 File Offset: 0x00C37BF8
+		// Token: 0x06028FEF RID: 167919 RVA: 0x00B831A4 File Offset: 0x00B813A4
 		static QuickHackController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(QuickHackController.CreateStaticDefaultValue), new Action(QuickHackController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BABC RID: 113340
+		// Token: 0x04016491 RID: 91281
 		private readonly Stat StatQuickHackUpdateTarget = Stat.Create("QuickHackUpdateTarget", "", "");
 
-		// Token: 0x0401BABD RID: 113341
+		// Token: 0x04016492 RID: 91282
 		[Nullable(2)]
 		private static QuickHackController _Instance;
 	}

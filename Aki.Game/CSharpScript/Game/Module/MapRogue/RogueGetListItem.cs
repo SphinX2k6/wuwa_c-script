@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055ED RID: 21997
+	// Token: 0x020045C3 RID: 17859
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueGetListItem : SliderItem
 	{
-		// Token: 0x0603804D RID: 229453 RVA: 0x00D44AC6 File Offset: 0x00D42CC6
+		// Token: 0x0602CF4B RID: 184139 RVA: 0x00C9280E File Offset: 0x00C90A0E
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,14 +22,14 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0603804E RID: 229454 RVA: 0x00D44AFF File Offset: 0x00D42CFF
+		// Token: 0x0602CF4C RID: 184140 RVA: 0x00C92847 File Offset: 0x00C90A47
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayerInstance = new LevelSequencePlayer(this.RootItem);
 			this.LevelSequencePlayerInstance.BindSequenceCloseEvent(new TSequenceEndEvent(this.FinishSequenceEvent), false);
 		}
 
-		// Token: 0x0603804F RID: 229455 RVA: 0x00D44B2A File Offset: 0x00D42D2A
+		// Token: 0x0602CF4D RID: 184141 RVA: 0x00C92872 File Offset: 0x00C90A72
 		protected override void OnBeforeDestroy()
 		{
 			if (this.LevelSequencePlayerInstance != null)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038050 RID: 229456 RVA: 0x00D44B46 File Offset: 0x00D42D46
+		// Token: 0x0602CF4E RID: 184142 RVA: 0x00C9288E File Offset: 0x00C90A8E
 		private void FinishSequenceEvent(string sequenceName)
 		{
 			if (sequenceName == "Start")
@@ -53,24 +53,24 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038051 RID: 229457 RVA: 0x00D44B70 File Offset: 0x00D42D70
+		// Token: 0x0602CF4F RID: 184143 RVA: 0x00C928B8 File Offset: 0x00C90AB8
 		protected override void PlayStart()
 		{
 			this.LevelSequencePlayerInstance.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x06038052 RID: 229458 RVA: 0x00D44B98 File Offset: 0x00D42D98
+		// Token: 0x0602CF50 RID: 184144 RVA: 0x00C928E0 File Offset: 0x00C90AE0
 		public override void PlayEnd()
 		{
 			this.LevelSequencePlayerInstance.PlayLevelSequenceByName("Close", false, null, false);
 		}
 
-		// Token: 0x06038053 RID: 229459 RVA: 0x00D44BC0 File Offset: 0x00D42DC0
+		// Token: 0x0602CF51 RID: 184145 RVA: 0x00C92908 File Offset: 0x00C90B08
 		protected override void OnActiveStatusChange(bool value)
 		{
 		}
 
-		// Token: 0x06038054 RID: 229460 RVA: 0x00D44BC4 File Offset: 0x00D42DC4
+		// Token: 0x0602CF52 RID: 184146 RVA: 0x00C9290C File Offset: 0x00C90B0C
 		public override UniTask AsyncLoadUiResource()
 		{
 			RogueGetListItem.<AsyncLoadUiResource>d__9 <AsyncLoadUiResource>d__;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <AsyncLoadUiResource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038055 RID: 229461 RVA: 0x00D44C08 File Offset: 0x00D42E08
+		// Token: 0x0602CF53 RID: 184147 RVA: 0x00C92950 File Offset: 0x00C90B50
 		public UniTask Refresh(IRogueGetListItemData data)
 		{
 			RogueGetListItem.<Refresh>d__10 <Refresh>d__;
@@ -93,11 +93,11 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <Refresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401D6F8 RID: 120568
+		// Token: 0x04018183 RID: 98691
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayerInstance;
 
-		// Token: 0x0401D6F9 RID: 120569
+		// Token: 0x04018184 RID: 98692
 		[Nullable(2)]
 		protected IRogueGetListItemData Data;
 	}

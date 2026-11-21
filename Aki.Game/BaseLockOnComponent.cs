@@ -12,13 +12,13 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.LevelGamePlay;
 using UnrealEngine;
 
-// Token: 0x020030D7 RID: 12503
+// Token: 0x0200262F RID: 9775
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseLockOnComponent : EntityComponent
 {
-	// Token: 0x170024C9 RID: 9417
-	// (get) Token: 0x0601AC3F RID: 109631 RVA: 0x0073664E File Offset: 0x0073484E
+	// Token: 0x1700264C RID: 9804
+	// (get) Token: 0x06018654 RID: 99924 RVA: 0x0075C36A File Offset: 0x0075A56A
 	protected global::Vector ActorLocationProxy
 	{
 		get
@@ -31,8 +31,8 @@ public class BaseLockOnComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170024CA RID: 9418
-	// (get) Token: 0x0601AC40 RID: 109632 RVA: 0x0073666A File Offset: 0x0073486A
+	// Token: 0x1700264D RID: 9805
+	// (get) Token: 0x06018655 RID: 99925 RVA: 0x0075C386 File Offset: 0x0075A586
 	private global::Vector ActorForwardProxy
 	{
 		get
@@ -45,8 +45,8 @@ public class BaseLockOnComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170024CB RID: 9419
-	// (get) Token: 0x0601AC41 RID: 109633 RVA: 0x00736686 File Offset: 0x00734886
+	// Token: 0x1700264E RID: 9806
+	// (get) Token: 0x06018656 RID: 99926 RVA: 0x0075C3A2 File Offset: 0x0075A5A2
 	[Nullable(2)]
 	public LockOnInfo GetCurrentInfo
 	{
@@ -57,8 +57,8 @@ public class BaseLockOnComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170024CC RID: 9420
-	// (get) Token: 0x0601AC42 RID: 109634 RVA: 0x0073668E File Offset: 0x0073488E
+	// Token: 0x1700264F RID: 9807
+	// (get) Token: 0x06018657 RID: 99927 RVA: 0x0075C3AA File Offset: 0x0075A5AA
 	protected CustomizedLockedQueue SVarHardLockedQueue
 	{
 		get
@@ -67,7 +67,7 @@ public class BaseLockOnComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AC43 RID: 109635 RVA: 0x00736698 File Offset: 0x00734898
+	// Token: 0x06018658 RID: 99928 RVA: 0x0075C3B4 File Offset: 0x0075A5B4
 	[NullableContext(2)]
 	protected void SetCurrentInfo(LockOnInfo info)
 	{
@@ -95,7 +95,7 @@ public class BaseLockOnComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AC44 RID: 109636 RVA: 0x007367DD File Offset: 0x007349DD
+	// Token: 0x06018659 RID: 99929 RVA: 0x0075C4F9 File Offset: 0x0075A6F9
 	[NullableContext(2)]
 	public EntityHandle GetCurrentTarget()
 	{
@@ -107,14 +107,14 @@ public class BaseLockOnComponent : EntityComponent
 		return currentInfo.EntityHandle;
 	}
 
-	// Token: 0x0601AC45 RID: 109637 RVA: 0x007367F0 File Offset: 0x007349F0
+	// Token: 0x0601865A RID: 99930 RVA: 0x0075C50C File Offset: 0x0075A70C
 	public string GetCurrentTargetSocketName()
 	{
 		LockOnInfo currentInfo = this.CurrentInfo;
 		return ((currentInfo != null) ? currentInfo.SocketName : null) ?? "";
 	}
 
-	// Token: 0x0601AC46 RID: 109638 RVA: 0x0073680D File Offset: 0x00734A0D
+	// Token: 0x0601865B RID: 99931 RVA: 0x0075C529 File Offset: 0x0075A729
 	public ShowTargetInfo GetTargetInfo()
 	{
 		this.TargetInfo.ShowTarget = this.ShowTarget;
@@ -123,8 +123,8 @@ public class BaseLockOnComponent : EntityComponent
 		return this.TargetInfo;
 	}
 
-	// Token: 0x170024CD RID: 9421
-	// (get) Token: 0x0601AC47 RID: 109639 RVA: 0x00736848 File Offset: 0x00734A48
+	// Token: 0x17002650 RID: 9808
+	// (get) Token: 0x0601865C RID: 99932 RVA: 0x0075C564 File Offset: 0x0075A764
 	[Nullable(2)]
 	public EntityHandle ShowTarget
 	{
@@ -135,8 +135,8 @@ public class BaseLockOnComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170024CE RID: 9422
-	// (get) Token: 0x0601AC48 RID: 109640 RVA: 0x00736850 File Offset: 0x00734A50
+	// Token: 0x17002651 RID: 9809
+	// (get) Token: 0x0601865D RID: 99933 RVA: 0x0075C56C File Offset: 0x0075A76C
 	public string ShowTargetSocket
 	{
 		get
@@ -145,7 +145,7 @@ public class BaseLockOnComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AC49 RID: 109641 RVA: 0x00736858 File Offset: 0x00734A58
+	// Token: 0x0601865E RID: 99934 RVA: 0x0075C574 File Offset: 0x0075A774
 	private void CharOnRoleDead(int id)
 	{
 		LockOnInfo currentInfo = this.CurrentInfo;
@@ -167,7 +167,7 @@ public class BaseLockOnComponent : EntityComponent
 		this.OnTargetDeadOrRemoved();
 	}
 
-	// Token: 0x0601AC4A RID: 109642 RVA: 0x007368B1 File Offset: 0x00734AB1
+	// Token: 0x0601865F RID: 99935 RVA: 0x0075C5CD File Offset: 0x0075A7CD
 	private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		LockOnInfo currentInfo = this.CurrentInfo;
@@ -178,14 +178,14 @@ public class BaseLockOnComponent : EntityComponent
 		this.OnTargetDeadOrRemoved();
 	}
 
-	// Token: 0x0601AC4B RID: 109643 RVA: 0x007368CF File Offset: 0x00734ACF
+	// Token: 0x06018660 RID: 99936 RVA: 0x0075C5EB File Offset: 0x0075A7EB
 	protected virtual void OnTargetDeadOrRemoved()
 	{
 		this.SetCurrentInfo(null);
 		this.SetShowTarget(null, "", false);
 	}
 
-	// Token: 0x0601AC4C RID: 109644 RVA: 0x007368E8 File Offset: 0x00734AE8
+	// Token: 0x06018661 RID: 99937 RVA: 0x0075C604 File Offset: 0x0075A804
 	protected HashSet<EntityHandle> GetEntitiesToCheck(float distance)
 	{
 		this.TempSet.Clear();
@@ -210,7 +210,7 @@ public class BaseLockOnComponent : EntityComponent
 		return this.TempSet;
 	}
 
-	// Token: 0x0601AC4D RID: 109645 RVA: 0x007369B4 File Offset: 0x00734BB4
+	// Token: 0x06018662 RID: 99938 RVA: 0x0075C6D0 File Offset: 0x0075A8D0
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -218,7 +218,7 @@ public class BaseLockOnComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601AC4E RID: 109646 RVA: 0x007369C4 File Offset: 0x00734BC4
+	// Token: 0x06018663 RID: 99939 RVA: 0x0075C6E0 File Offset: 0x0075A8E0
 	protected override bool OnStart()
 	{
 		this.BaseActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -227,7 +227,7 @@ public class BaseLockOnComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601AC4F RID: 109647 RVA: 0x00736A10 File Offset: 0x00734C10
+	// Token: 0x06018664 RID: 99940 RVA: 0x0075C72C File Offset: 0x0075A92C
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.Remove(EEventName.CharOnRoleDead, new Action<int>(this.CharOnRoleDead));
@@ -235,7 +235,7 @@ public class BaseLockOnComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601AC50 RID: 109648 RVA: 0x00736A36 File Offset: 0x00734C36
+	// Token: 0x06018665 RID: 99941 RVA: 0x0075C752 File Offset: 0x0075A952
 	public void SetLockOnConfig(int softLockConfigId, int hardLockConfigId)
 	{
 		if (softLockConfigId != 0)
@@ -248,13 +248,13 @@ public class BaseLockOnComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AC51 RID: 109649 RVA: 0x00736A60 File Offset: 0x00734C60
+	// Token: 0x06018666 RID: 99942 RVA: 0x0075C77C File Offset: 0x0075A97C
 	protected override void OnTick(float delta)
 	{
 		LockOnDebug.Tick(base.Entity);
 	}
 
-	// Token: 0x0601AC52 RID: 109650 RVA: 0x00736A70 File Offset: 0x00734C70
+	// Token: 0x06018667 RID: 99943 RVA: 0x0075C78C File Offset: 0x0075A98C
 	protected void Check(float delta)
 	{
 		LockOnInfo currentInfo = this.CurrentInfo;
@@ -290,14 +290,14 @@ public class BaseLockOnComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AC53 RID: 109651 RVA: 0x00736B1E File Offset: 0x00734D1E
+	// Token: 0x06018668 RID: 99944 RVA: 0x0075C83A File Offset: 0x0075AA3A
 	protected virtual void ClearLockOnTarget()
 	{
 		this.SetCurrentInfo(null);
 		this.SetShowTarget(null, "", false);
 	}
 
-	// Token: 0x0601AC54 RID: 109652 RVA: 0x00736B38 File Offset: 0x00734D38
+	// Token: 0x06018669 RID: 99945 RVA: 0x0075C854 File Offset: 0x0075AA54
 	protected void UpdateTargetsIsLock(float delta)
 	{
 		if (!this.IsHardLock)
@@ -314,7 +314,7 @@ public class BaseLockOnComponent : EntityComponent
 		BaseLockOnComponent._hardLockedQueue.Push(this.CurrentInfo);
 	}
 
-	// Token: 0x0601AC55 RID: 109653 RVA: 0x00736B90 File Offset: 0x00734D90
+	// Token: 0x0601866A RID: 99946 RVA: 0x0075C8AC File Offset: 0x0075AAAC
 	private void SetSearchInfo(string blackboardKey)
 	{
 		if (blackboardKey == "")
@@ -335,7 +335,7 @@ public class BaseLockOnComponent : EntityComponent
 		this.SearchForward = component.ActorForwardProxy;
 	}
 
-	// Token: 0x0601AC56 RID: 109654 RVA: 0x00736C03 File Offset: 0x00734E03
+	// Token: 0x0601866B RID: 99947 RVA: 0x0075C91F File Offset: 0x0075AB1F
 	private void ClearSearchInfo()
 	{
 		if (this.SearchPos != null)
@@ -345,7 +345,7 @@ public class BaseLockOnComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AC57 RID: 109655 RVA: 0x00736C1C File Offset: 0x00734E1C
+	// Token: 0x0601866C RID: 99948 RVA: 0x0075C938 File Offset: 0x0075AB38
 	public void DetectSoftLockTarget(ISkillTarget skillTarget, bool enableLockOn = true)
 	{
 		int valueOrDefault = skillTarget.LockOnConfigId.GetValueOrDefault();
@@ -393,19 +393,19 @@ public class BaseLockOnComponent : EntityComponent
 		this.ClearSearchInfo();
 	}
 
-	// Token: 0x0601AC58 RID: 109656 RVA: 0x00736D6F File Offset: 0x00734F6F
+	// Token: 0x0601866D RID: 99949 RVA: 0x0075CA8B File Offset: 0x0075AC8B
 	[NullableContext(2)]
 	protected virtual void SetAndShowTarget(LockOnInfo bestInfo, bool showTarget)
 	{
 	}
 
-	// Token: 0x0601AC59 RID: 109657 RVA: 0x00736D71 File Offset: 0x00734F71
+	// Token: 0x0601866E RID: 99950 RVA: 0x0075CA8D File Offset: 0x0075AC8D
 	public virtual bool SetShowTarget([Nullable(2)] EntityHandle target, string socketName = "", bool isHardLock = false)
 	{
 		return false;
 	}
 
-	// Token: 0x0601AC5A RID: 109658 RVA: 0x00736D74 File Offset: 0x00734F74
+	// Token: 0x0601866F RID: 99951 RVA: 0x0075CA90 File Offset: 0x0075AC90
 	[return: Nullable(2)]
 	public LockOnInfo FindTheBest(List<LockOnInfo> lockOnInfos, ESkillTargetPriority priority, bool isHardLock, float toleranceAngle, double skillTargetRemainTime)
 	{
@@ -513,7 +513,7 @@ public class BaseLockOnComponent : EntityComponent
 		return lockOnInfo;
 	}
 
-	// Token: 0x0601AC5B RID: 109659 RVA: 0x0073700C File Offset: 0x0073520C
+	// Token: 0x06018670 RID: 99952 RVA: 0x0075CD28 File Offset: 0x0075AF28
 	private EFilter Filter(LockOnInfo info, bool isHardLock, bool inheritTarget)
 	{
 		if (isHardLock && BaseLockOnComponent._hardLockedQueue.Has(info))
@@ -542,7 +542,7 @@ public class BaseLockOnComponent : EntityComponent
 		return EFilter.Valid;
 	}
 
-	// Token: 0x0601AC5C RID: 109660 RVA: 0x00737090 File Offset: 0x00735290
+	// Token: 0x06018671 RID: 99953 RVA: 0x0075CDAC File Offset: 0x0075AFAC
 	private global::Vector GetCameraDirection()
 	{
 		global::Vector vector = global::Vector.Create();
@@ -550,13 +550,13 @@ public class BaseLockOnComponent : EntityComponent
 		return vector;
 	}
 
-	// Token: 0x0601AC5D RID: 109661 RVA: 0x007370C4 File Offset: 0x007352C4
+	// Token: 0x06018672 RID: 99954 RVA: 0x0075CDE0 File Offset: 0x0075AFE0
 	private float GetAngle(global::Vector a, global::Vector b, bool directIs3D = false)
 	{
 		return (float)(Math.Acos(directIs3D ? (a.DotProduct(b) / Math.Sqrt(a.SizeSquared() * b.SizeSquared())) : a.CosineAngle2D(b, 9.999999747378752E-05)) * 57.295780181884766);
 	}
 
-	// Token: 0x0601AC5E RID: 109662 RVA: 0x00737110 File Offset: 0x00735310
+	// Token: 0x06018673 RID: 99955 RVA: 0x0075CE2C File Offset: 0x0075B02C
 	public void ResetFocus()
 	{
 		if (CameraController.Instance.MainModel.FightCamera.LogicComponent.IsDisableResetFocus != 0f || !CameraModel.Instance.MainModel.IsEnableResetFocus || this.IsLookAt || this.IsHardLock)
@@ -567,7 +567,7 @@ public class BaseLockOnComponent : EntityComponent
 		CameraController.Instance.MainModel.FightCamera.LogicComponent.PlayCameraEulerRotatorWithCurve(CameraUtility.GetCameraDefaultFocusRotator(), 0.6f, null, true, 0f);
 	}
 
-	// Token: 0x0601AC5F RID: 109663 RVA: 0x007371A4 File Offset: 0x007353A4
+	// Token: 0x06018674 RID: 99956 RVA: 0x0075CEC0 File Offset: 0x0075B0C0
 	public void ResetPitch(float time = 0.6f, [Nullable(2)] CurveBase curve = null, bool canBreakByInput = true, float stayTime = 0f, string cameraName = "MainCamera")
 	{
 		CameraModelInstance separateCameraModel = CameraModel.Instance.GetSeparateCameraModel(cameraName);
@@ -582,7 +582,7 @@ public class BaseLockOnComponent : EntityComponent
 		separateCameraModel.FightCamera.LogicComponent.PlayCameraEulerRotatorWithCurve(tmpRotator, time, curve, canBreakByInput, stayTime);
 	}
 
-	// Token: 0x0601AC60 RID: 109664 RVA: 0x0073721C File Offset: 0x0073541C
+	// Token: 0x06018675 RID: 99957 RVA: 0x0075CF38 File Offset: 0x0075B138
 	protected void GetSkillBoneLocation([Nullable(2)] EntityHandle target, string bone, global::Vector @out)
 	{
 		if (target == null || target.Entity == null)
@@ -600,7 +600,7 @@ public class BaseLockOnComponent : EntityComponent
 		@out.Reset();
 	}
 
-	// Token: 0x0601AC61 RID: 109665 RVA: 0x00737278 File Offset: 0x00735478
+	// Token: 0x06018676 RID: 99958 RVA: 0x0075CF94 File Offset: 0x0075B194
 	public void LockOnSpecifyTarget([Nullable(2)] EntityHandle targetEntity, string socketName = "")
 	{
 		if (this.IsHardLock || this.IsLookAt)
@@ -621,7 +621,7 @@ public class BaseLockOnComponent : EntityComponent
 		this.SetShowTarget(targetEntity, socketName, false);
 	}
 
-	// Token: 0x0601AC62 RID: 109666 RVA: 0x007372E8 File Offset: 0x007354E8
+	// Token: 0x06018677 RID: 99959 RVA: 0x0075D004 File Offset: 0x0075B204
 	protected bool IsBlock(LockOnInfo info, FVectorDouble cameraLocation)
 	{
 		this.RayBeginLocation.FromUeVector(cameraLocation);
@@ -658,7 +658,7 @@ public class BaseLockOnComponent : EntityComponent
 		return LockOnUtils.TraceDetectBlock(owner, from, fvectorDouble2, component.Owner, false, this.TagComponent);
 	}
 
-	// Token: 0x0601AC63 RID: 109667 RVA: 0x00737408 File Offset: 0x00735608
+	// Token: 0x06018678 RID: 99960 RVA: 0x0075D124 File Offset: 0x0075B324
 	protected virtual int GetSelfCamp()
 	{
 		TsBaseCharacter tsBaseCharacter = this.BaseActorComp.Owner as TsBaseCharacter;
@@ -666,7 +666,7 @@ public class BaseLockOnComponent : EntityComponent
 		return ((ecamp != null) ? new int?((int)ecamp.GetValueOrDefault()) : null).GetValueOrDefault(-1);
 	}
 
-	// Token: 0x0601AC64 RID: 109668 RVA: 0x00737468 File Offset: 0x00735668
+	// Token: 0x06018679 RID: 99961 RVA: 0x0075D184 File Offset: 0x0075B384
 	public List<LockOnInfo> DetectAlternativeTargets(Aki.Config.LockOnConfig lockOnConfig, bool isHardLock)
 	{
 		LockOnDebug.Clear();
@@ -820,7 +820,7 @@ public class BaseLockOnComponent : EntityComponent
 		return list;
 	}
 
-	// Token: 0x0601AC65 RID: 109669 RVA: 0x007379B0 File Offset: 0x00735BB0
+	// Token: 0x0601867A RID: 99962 RVA: 0x0075D6CC File Offset: 0x0075B8CC
 	protected List<LockOnInfo> GetVipList(List<LockOnInfo> alternativeTargetInfo, bool isHardLock)
 	{
 		List<LockOnInfo> list = new List<LockOnInfo>();
@@ -871,7 +871,7 @@ public class BaseLockOnComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AC66 RID: 109670 RVA: 0x00737A64 File Offset: 0x00735C64
+	// Token: 0x0601867B RID: 99963 RVA: 0x0075D780 File Offset: 0x0075B980
 	protected unsafe bool IsEntityContainsDisableHardLockTag(EntityHandle handle)
 	{
 		WorldEntity entity = handle.Entity;
@@ -894,7 +894,7 @@ public class BaseLockOnComponent : EntityComponent
 		return flag | tagComponent.HasAnyTag(readOnlySpan);
 	}
 
-	// Token: 0x0601AC67 RID: 109671 RVA: 0x00737B30 File Offset: 0x00735D30
+	// Token: 0x0601867C RID: 99964 RVA: 0x0075D84C File Offset: 0x0075BA4C
 	protected unsafe bool IsEntityContainsDisableSoftLockTag(EntityHandle handle)
 	{
 		WorldEntity entity = handle.Entity;
@@ -917,7 +917,7 @@ public class BaseLockOnComponent : EntityComponent
 		return flag | tagComponent.HasAnyTag(readOnlySpan);
 	}
 
-	// Token: 0x0601AC68 RID: 109672 RVA: 0x00737BFC File Offset: 0x00735DFC
+	// Token: 0x0601867D RID: 99965 RVA: 0x0075D918 File Offset: 0x0075BB18
 	protected bool IsEntityDetectableByMe(EntityHandle handle)
 	{
 		WorldEntity entity = handle.Entity;
@@ -927,13 +927,13 @@ public class BaseLockOnComponent : EntityComponent
 		return !flag || creatureDataComponent.GetSummonerId() == this.CreatureComp.GetCreatureDataId();
 	}
 
-	// Token: 0x0601AC69 RID: 109673 RVA: 0x00737C59 File Offset: 0x00735E59
+	// Token: 0x0601867E RID: 99966 RVA: 0x0075D975 File Offset: 0x0075BB75
 	protected bool CannotBeDetected(Aki.Config.LockOnConfig config, EntityHandle handle, global::Vector targetLocation)
 	{
 		return !this.IsInAreaRole(config, this.ActorLocationProxy, targetLocation) && !this.IsInAreaMonster(handle, targetLocation, this.ActorLocationProxy);
 	}
 
-	// Token: 0x0601AC6A RID: 109674 RVA: 0x00737C80 File Offset: 0x00735E80
+	// Token: 0x0601867F RID: 99967 RVA: 0x0075D99C File Offset: 0x0075BB9C
 	protected bool IsInAreaRole(Aki.Config.LockOnConfig config, global::Vector sourceLocation, global::Vector targetLocation)
 	{
 		double num = sourceLocation.Z - targetLocation.Z;
@@ -963,7 +963,7 @@ public class BaseLockOnComponent : EntityComponent
 		return num3 <= (double)(config.SectorAngle / 2);
 	}
 
-	// Token: 0x0601AC6B RID: 109675 RVA: 0x00737DC0 File Offset: 0x00735FC0
+	// Token: 0x06018680 RID: 99968 RVA: 0x0075DADC File Offset: 0x0075BCDC
 	private bool IsInAreaMonster(EntityHandle handle, global::Vector sourceLocation, global::Vector targetLocation)
 	{
 		WorldEntity entity = handle.Entity;
@@ -981,8 +981,8 @@ public class BaseLockOnComponent : EntityComponent
 		return num >= -component.LockOnConfig.UpDistance && num <= component.LockOnConfig.DownDistance && global::Vector.DistSquared(sourceLocation, targetLocation) <= component.LockOnConfig.Distance * component.LockOnConfig.Distance;
 	}
 
-	// Token: 0x170024CF RID: 9423
-	// (get) Token: 0x0601AC6C RID: 109676 RVA: 0x00737E63 File Offset: 0x00736063
+	// Token: 0x17002652 RID: 9810
+	// (get) Token: 0x06018681 RID: 99969 RVA: 0x0075DB7F File Offset: 0x0075BD7F
 	protected bool IsHardLock
 	{
 		get
@@ -991,8 +991,8 @@ public class BaseLockOnComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170024D0 RID: 9424
-	// (get) Token: 0x0601AC6D RID: 109677 RVA: 0x00737E7F File Offset: 0x0073607F
+	// Token: 0x17002653 RID: 9811
+	// (get) Token: 0x06018682 RID: 99970 RVA: 0x0075DB9B File Offset: 0x0075BD9B
 	protected bool HasShowTarget
 	{
 		get
@@ -1001,7 +1001,7 @@ public class BaseLockOnComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AC6E RID: 109678 RVA: 0x00737E9C File Offset: 0x0073609C
+	// Token: 0x06018683 RID: 99971 RVA: 0x0075DBB8 File Offset: 0x0075BDB8
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1009,281 +1009,245 @@ public class BaseLockOnComponent : EntityComponent
 			return false;
 		}
 		BaseLockOnComponent baseLockOnComponent = (BaseLockOnComponent)componentTemplate;
-		if (base.CanResetComponentProperty("StatDetectAlternativeTargets") && baseLockOnComponent.StatDetectAlternativeTargets != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatDetectAlternativeTargets), "StatDetectAlternativeTargets"))
+		if (baseLockOnComponent.StatDetectAlternativeTargets != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatDetectAlternativeTargets), "StatDetectAlternativeTargets"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatDetectAlternativeTargets1") && baseLockOnComponent.StatDetectAlternativeTargets1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatDetectAlternativeTargets1), "StatDetectAlternativeTargets1"))
+		if (baseLockOnComponent.StatDetectAlternativeTargets1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatDetectAlternativeTargets1), "StatDetectAlternativeTargets1"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatDetectAlternativeTargets2") && baseLockOnComponent.StatDetectAlternativeTargets2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatDetectAlternativeTargets2), "StatDetectAlternativeTargets2"))
+		if (baseLockOnComponent.StatDetectAlternativeTargets2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatDetectAlternativeTargets2), "StatDetectAlternativeTargets2"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatDetectAlternativeTargets3") && baseLockOnComponent.StatDetectAlternativeTargets3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatDetectAlternativeTargets3), "StatDetectAlternativeTargets3"))
+		if (baseLockOnComponent.StatDetectAlternativeTargets3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatDetectAlternativeTargets3), "StatDetectAlternativeTargets3"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatCannotBeDetected") && baseLockOnComponent.StatCannotBeDetected != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatCannotBeDetected), "StatCannotBeDetected"))
+		if (baseLockOnComponent.StatCannotBeDetected != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatCannotBeDetected), "StatCannotBeDetected"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatIsBlock") && baseLockOnComponent.StatIsBlock != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatIsBlock), "StatIsBlock"))
+		if (baseLockOnComponent.StatIsBlock != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatIsBlock), "StatIsBlock"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatIsBlock1") && baseLockOnComponent.StatIsBlock1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatIsBlock1), "StatIsBlock1"))
+		if (baseLockOnComponent.StatIsBlock1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatIsBlock1), "StatIsBlock1"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatIsBlock2") && baseLockOnComponent.StatIsBlock2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatIsBlock2), "StatIsBlock2"))
+		if (baseLockOnComponent.StatIsBlock2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatIsBlock2), "StatIsBlock2"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatFindTheBest") && baseLockOnComponent.StatFindTheBest != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatFindTheBest), "StatFindTheBest"))
+		if (baseLockOnComponent.StatFindTheBest != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatFindTheBest), "StatFindTheBest"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatFindTheBest1") && baseLockOnComponent.StatFindTheBest1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatFindTheBest1), "StatFindTheBest1"))
+		if (baseLockOnComponent.StatFindTheBest1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatFindTheBest1), "StatFindTheBest1"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatFindTheBest2") && baseLockOnComponent.StatFindTheBest2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatFindTheBest2), "StatFindTheBest2"))
+		if (baseLockOnComponent.StatFindTheBest2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatFindTheBest2), "StatFindTheBest2"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatGetSkillBoneLocation") && baseLockOnComponent.StatGetSkillBoneLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatGetSkillBoneLocation), "StatGetSkillBoneLocation"))
+		if (baseLockOnComponent.StatGetSkillBoneLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatGetSkillBoneLocation), "StatGetSkillBoneLocation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatLockOnDebugTick") && baseLockOnComponent.StatLockOnDebugTick != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatLockOnDebugTick), "StatLockOnDebugTick"))
+		if (baseLockOnComponent.StatLockOnDebugTick != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatLockOnDebugTick), "StatLockOnDebugTick"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BaseActorComp"))
+		if (baseLockOnComponent.BaseActorComp == null)
 		{
-			if (baseLockOnComponent.BaseActorComp == null)
-			{
-				this.BaseActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.BaseActorComp), "BaseActorComp"))
-			{
-				return false;
-			}
+			this.BaseActorComp = null;
 		}
-		if (base.CanResetComponentProperty("CreatureComp"))
-		{
-			if (baseLockOnComponent.CreatureComp == null)
-			{
-				this.CreatureComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureComp), "CreatureComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CurrentInfo"))
-		{
-			if (baseLockOnComponent.CurrentInfo == null)
-			{
-				this.CurrentInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LockOnInfo>(this.CurrentInfo), "CurrentInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SearchPos"))
-		{
-			if (baseLockOnComponent.SearchPos == null)
-			{
-				this.SearchPos = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SearchPos), "SearchPos"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SearchForward"))
-		{
-			if (baseLockOnComponent.SearchForward == null)
-			{
-				this.SearchForward = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SearchForward), "SearchForward"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ShowTargetInternal"))
-		{
-			if (baseLockOnComponent.ShowTargetInternal == null)
-			{
-				this.ShowTargetInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.ShowTargetInternal), "ShowTargetInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ShowTargetSocketInternal"))
-		{
-			this.ShowTargetSocketInternal = baseLockOnComponent.ShowTargetSocketInternal;
-		}
-		if (base.CanResetComponentProperty("RestoreIgnoreTarget"))
-		{
-			if (baseLockOnComponent.RestoreIgnoreTarget == null)
-			{
-				this.RestoreIgnoreTarget = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LockOnInfo>(this.RestoreIgnoreTarget), "RestoreIgnoreTarget"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IgnoreInfos"))
-		{
-			if (baseLockOnComponent.IgnoreInfos == null)
-			{
-				this.IgnoreInfos = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<LockOnInfo>>(this.IgnoreInfos), "IgnoreInfos"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OldInfoAtRemoveDisableHardLockTag"))
-		{
-			if (baseLockOnComponent.OldInfoAtRemoveDisableHardLockTag == null)
-			{
-				this.OldInfoAtRemoveDisableHardLockTag = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LockOnInfo>(this.OldInfoAtRemoveDisableHardLockTag), "OldInfoAtRemoveDisableHardLockTag"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ShowTargetSetTime"))
-		{
-			this.ShowTargetSetTime = baseLockOnComponent.ShowTargetSetTime;
-		}
-		if (base.CanResetComponentProperty("LastSkillTargetSetTime"))
-		{
-			this.LastSkillTargetSetTime = baseLockOnComponent.LastSkillTargetSetTime;
-		}
-		if (base.CanResetComponentProperty("TagComponent"))
-		{
-			if (baseLockOnComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SoftLockConfig"))
-		{
-			this.SoftLockConfig = baseLockOnComponent.SoftLockConfig;
-		}
-		if (base.CanResetComponentProperty("CurSoftLockConfig"))
-		{
-			this.CurSoftLockConfig = baseLockOnComponent.CurSoftLockConfig;
-		}
-		if (base.CanResetComponentProperty("HardLockConfig"))
-		{
-			this.HardLockConfig = baseLockOnComponent.HardLockConfig;
-		}
-		if (base.CanResetComponentProperty("TargetInfo"))
-		{
-			if (baseLockOnComponent.TargetInfo == null)
-			{
-				this.TargetInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ShowTargetInfo>(this.TargetInfo), "TargetInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsLookAt"))
-		{
-			this.IsLookAt = baseLockOnComponent.IsLookAt;
-		}
-		if (base.CanResetComponentProperty("TmpVector1") && baseLockOnComponent.TmpVector1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector1), "TmpVector1"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BaseActorComp), "BaseActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector2") && baseLockOnComponent.TmpVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector2), "TmpVector2"))
+		if (baseLockOnComponent.CreatureComp == null)
+		{
+			this.CreatureComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureComp), "CreatureComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpRotator") && baseLockOnComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.TmpRotator), "TmpRotator"))
+		if (baseLockOnComponent.CurrentInfo == null)
+		{
+			this.CurrentInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentInfo), "CurrentInfo"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("InverseQuat") && baseLockOnComponent.InverseQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.InverseQuat), "InverseQuat"))
+		if (baseLockOnComponent.SearchPos == null)
+		{
+			this.SearchPos = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SearchPos), "SearchPos"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector2D") && baseLockOnComponent.TmpVector2D != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector2D>(this.TmpVector2D), "TmpVector2D"))
+		if (baseLockOnComponent.SearchForward == null)
+		{
+			this.SearchForward = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SearchForward), "SearchForward"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("RayBeginLocation") && baseLockOnComponent.RayBeginLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.RayBeginLocation), "RayBeginLocation"))
+		if (baseLockOnComponent.ShowTargetInternal == null)
+		{
+			this.ShowTargetInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ShowTargetInternal), "ShowTargetInternal"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("RayEndLocation") && baseLockOnComponent.RayEndLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.RayEndLocation), "RayEndLocation"))
+		this.ShowTargetSocketInternal = baseLockOnComponent.ShowTargetSocketInternal;
+		if (baseLockOnComponent.RestoreIgnoreTarget == null)
+		{
+			this.RestoreIgnoreTarget = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RestoreIgnoreTarget), "RestoreIgnoreTarget"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CheckCount"))
+		if (baseLockOnComponent.IgnoreInfos == null)
 		{
-			this.CheckCount = baseLockOnComponent.CheckCount;
+			this.IgnoreInfos = null;
 		}
-		if (base.CanResetComponentProperty("CurrentCheckTime"))
-		{
-			this.CurrentCheckTime = baseLockOnComponent.CurrentCheckTime;
-		}
-		if (base.CanResetComponentProperty("TimeElapsedSinceLastLock"))
-		{
-			this.TimeElapsedSinceLastLock = baseLockOnComponent.TimeElapsedSinceLastLock;
-		}
-		if (base.CanResetComponentProperty("TempSet") && baseLockOnComponent.TempSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.TempSet), "TempSet"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.IgnoreInfos), "IgnoreInfos"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("InputDirect") && baseLockOnComponent.InputDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.InputDirect), "InputDirect"))
+		if (baseLockOnComponent.OldInfoAtRemoveDisableHardLockTag == null)
+		{
+			this.OldInfoAtRemoveDisableHardLockTag = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OldInfoAtRemoveDisableHardLockTag), "OldInfoAtRemoveDisableHardLockTag"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("HasChangeInput"))
+		this.ShowTargetSetTime = baseLockOnComponent.ShowTargetSetTime;
+		this.LastSkillTargetSetTime = baseLockOnComponent.LastSkillTargetSetTime;
+		if (baseLockOnComponent.TagComponent == null)
 		{
-			this.HasChangeInput = baseLockOnComponent.HasChangeInput;
+			this.TagComponent = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
+		{
+			return false;
+		}
+		this.SoftLockConfig = baseLockOnComponent.SoftLockConfig;
+		this.CurSoftLockConfig = baseLockOnComponent.CurSoftLockConfig;
+		this.HardLockConfig = baseLockOnComponent.HardLockConfig;
+		if (baseLockOnComponent.TargetInfo == null)
+		{
+			this.TargetInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetInfo), "TargetInfo"))
+		{
+			return false;
+		}
+		this.IsLookAt = baseLockOnComponent.IsLookAt;
+		if (baseLockOnComponent.TmpVector1 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector1), "TmpVector1"))
+		{
+			return false;
+		}
+		if (baseLockOnComponent.TmpVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector2), "TmpVector2"))
+		{
+			return false;
+		}
+		if (baseLockOnComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator"))
+		{
+			return false;
+		}
+		if (baseLockOnComponent.InverseQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InverseQuat), "InverseQuat"))
+		{
+			return false;
+		}
+		if (baseLockOnComponent.TmpVector2D != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector2D), "TmpVector2D"))
+		{
+			return false;
+		}
+		if (baseLockOnComponent.RayBeginLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.RayBeginLocation), "RayBeginLocation"))
+		{
+			return false;
+		}
+		if (baseLockOnComponent.RayEndLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.RayEndLocation), "RayEndLocation"))
+		{
+			return false;
+		}
+		this.CheckCount = baseLockOnComponent.CheckCount;
+		this.CurrentCheckTime = baseLockOnComponent.CurrentCheckTime;
+		this.TimeElapsedSinceLastLock = baseLockOnComponent.TimeElapsedSinceLastLock;
+		if (baseLockOnComponent.TempSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.TempSet), "TempSet"))
+		{
+			return false;
+		}
+		if (baseLockOnComponent.InputDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputDirect), "InputDirect"))
+		{
+			return false;
+		}
+		this.HasChangeInput = baseLockOnComponent.HasChangeInput;
 		return true;
 	}
 
-	// Token: 0x0400CE9D RID: 52893
+	// Token: 0x17002654 RID: 9812
+	// (get) Token: 0x06018684 RID: 99972 RVA: 0x0075E121 File Offset: 0x0075C321
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002655 RID: 9813
+	// (get) Token: 0x06018685 RID: 99973 RVA: 0x0075E124 File Offset: 0x0075C324
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002656 RID: 9814
+	// (get) Token: 0x06018686 RID: 99974 RVA: 0x0075E127 File Offset: 0x0075C327
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D28D RID: 53901
 	private const string PROFILE_KEY = "BaseLockOnComponent_IsBlock";
 
-	// Token: 0x0400CE9E RID: 52894
+	// Token: 0x0400D28E RID: 53902
 	private const int DELAY_TIME = 1000;
 
-	// Token: 0x0400CE9F RID: 52895
+	// Token: 0x0400D28F RID: 53903
 	private const int CHECK_COUNT = 3;
 
-	// Token: 0x0400CEA0 RID: 52896
+	// Token: 0x0400D290 RID: 53904
 	private const float RESET_FOCUS_TIME = 0.6f;
 
-	// Token: 0x0400CEA1 RID: 52897
+	// Token: 0x0400D291 RID: 53905
 	private const int RESET_TARGETS_ISLOCK_TIME = 10000;
 
-	// Token: 0x0400CEA2 RID: 52898
+	// Token: 0x0400D292 RID: 53906
 	private const int DEFAULT_LOCKON_CONFIG_ID = 0;
 
-	// Token: 0x0400CEA3 RID: 52899
+	// Token: 0x0400D293 RID: 53907
 	[StaticVariableRuleIgnore]
 	public static readonly int[] lockOnEnhancedTags = new int[]
 	{
@@ -1291,153 +1255,153 @@ public class BaseLockOnComponent : EntityComponent
 		GameplayTagDefine.EGameplayTagId["怪物.common.状态标识.强化强锁"]
 	};
 
-	// Token: 0x0400CEA4 RID: 52900
+	// Token: 0x0400D294 RID: 53908
 	private readonly Stat StatDetectAlternativeTargets = Stat.Create("BaseLockOnComponent.DetectAlternativeTargets.Total", "", "");
 
-	// Token: 0x0400CEA5 RID: 52901
+	// Token: 0x0400D295 RID: 53909
 	private readonly Stat StatDetectAlternativeTargets1 = Stat.Create("BaseLockOnComponent.DetectAlternativeTargets.CheckBase", "", "");
 
-	// Token: 0x0400CEA6 RID: 52902
+	// Token: 0x0400D296 RID: 53910
 	private readonly Stat StatDetectAlternativeTargets2 = Stat.Create("BaseLockOnComponent.DetectAlternativeTargets.CheckDistance", "", "");
 
-	// Token: 0x0400CEA7 RID: 52903
+	// Token: 0x0400D297 RID: 53911
 	private readonly Stat StatDetectAlternativeTargets3 = Stat.Create("BaseLockOnComponent.DetectAlternativeTargets.FinalSetting", "", "");
 
-	// Token: 0x0400CEA8 RID: 52904
+	// Token: 0x0400D298 RID: 53912
 	private readonly Stat StatCannotBeDetected = Stat.Create("BaseLockOnComponent.CannotBeDetected", "", "");
 
-	// Token: 0x0400CEA9 RID: 52905
+	// Token: 0x0400D299 RID: 53913
 	private readonly Stat StatIsBlock = Stat.Create("BaseLockOnComponent.IsBlock", "", "");
 
-	// Token: 0x0400CEAA RID: 52906
+	// Token: 0x0400D29A RID: 53914
 	private readonly Stat StatIsBlock1 = Stat.Create("BaseLockOnComponent.IsBlock.RayEndLocation", "", "");
 
-	// Token: 0x0400CEAB RID: 52907
+	// Token: 0x0400D29B RID: 53915
 	private readonly Stat StatIsBlock2 = Stat.Create("BaseLockOnComponent.IsBlock.TraceDetectBlock", "", "");
 
-	// Token: 0x0400CEAC RID: 52908
+	// Token: 0x0400D29C RID: 53916
 	private readonly Stat StatFindTheBest = Stat.Create("BaseLockOnComponent.FindTheBest", "", "");
 
-	// Token: 0x0400CEAD RID: 52909
+	// Token: 0x0400D29D RID: 53917
 	private readonly Stat StatFindTheBest1 = Stat.Create("BaseLockOnComponent.FindTheBest.Direction", "", "");
 
-	// Token: 0x0400CEAE RID: 52910
+	// Token: 0x0400D29E RID: 53918
 	private readonly Stat StatFindTheBest2 = Stat.Create("BaseLockOnComponent.FindTheBest.Calculation", "", "");
 
-	// Token: 0x0400CEAF RID: 52911
+	// Token: 0x0400D29F RID: 53919
 	private readonly Stat StatGetSkillBoneLocation = Stat.Create("BaseLockOnComponent.GetSkillBoneLocation", "", "");
 
-	// Token: 0x0400CEB0 RID: 52912
+	// Token: 0x0400D2A0 RID: 53920
 	private readonly Stat StatLockOnDebugTick = Stat.Create("BaseLockOnComponent.StatLockOnDebugTick", "", "");
 
-	// Token: 0x0400CEB1 RID: 52913
+	// Token: 0x0400D2A1 RID: 53921
 	[Nullable(2)]
 	private BaseActorComponent BaseActorComp;
 
-	// Token: 0x0400CEB2 RID: 52914
+	// Token: 0x0400D2A2 RID: 53922
 	[Nullable(2)]
 	protected CreatureDataComponent CreatureComp;
 
-	// Token: 0x0400CEB3 RID: 52915
+	// Token: 0x0400D2A3 RID: 53923
 	[Nullable(2)]
 	private LockOnInfo CurrentInfo;
 
-	// Token: 0x0400CEB4 RID: 52916
+	// Token: 0x0400D2A4 RID: 53924
 	[Nullable(2)]
 	private global::Vector SearchPos;
 
-	// Token: 0x0400CEB5 RID: 52917
+	// Token: 0x0400D2A5 RID: 53925
 	[Nullable(2)]
 	private global::Vector SearchForward;
 
-	// Token: 0x0400CEB6 RID: 52918
+	// Token: 0x0400D2A6 RID: 53926
 	[Nullable(2)]
 	protected EntityHandle ShowTargetInternal;
 
-	// Token: 0x0400CEB7 RID: 52919
+	// Token: 0x0400D2A7 RID: 53927
 	protected string ShowTargetSocketInternal = "";
 
-	// Token: 0x0400CEB8 RID: 52920
+	// Token: 0x0400D2A8 RID: 53928
 	[StaticVariableRuleIgnore]
 	private static readonly CustomizedLockedQueue _hardLockedQueue = new CustomizedLockedQueue();
 
-	// Token: 0x0400CEB9 RID: 52921
+	// Token: 0x0400D2A9 RID: 53929
 	[Nullable(2)]
 	protected LockOnInfo RestoreIgnoreTarget;
 
-	// Token: 0x0400CEBA RID: 52922
+	// Token: 0x0400D2AA RID: 53930
 	protected List<LockOnInfo> IgnoreInfos = new List<LockOnInfo>();
 
-	// Token: 0x0400CEBB RID: 52923
+	// Token: 0x0400D2AB RID: 53931
 	[Nullable(2)]
 	protected LockOnInfo OldInfoAtRemoveDisableHardLockTag;
 
-	// Token: 0x0400CEBC RID: 52924
+	// Token: 0x0400D2AC RID: 53932
 	protected double ShowTargetSetTime;
 
-	// Token: 0x0400CEBD RID: 52925
+	// Token: 0x0400D2AD RID: 53933
 	protected double LastSkillTargetSetTime;
 
-	// Token: 0x0400CEBE RID: 52926
+	// Token: 0x0400D2AE RID: 53934
 	[Nullable(2)]
 	protected BaseTagComponent TagComponent;
 
-	// Token: 0x0400CEBF RID: 52927
+	// Token: 0x0400D2AF RID: 53935
 	public Aki.Config.LockOnConfig? SoftLockConfig;
 
-	// Token: 0x0400CEC0 RID: 52928
+	// Token: 0x0400D2B0 RID: 53936
 	protected Aki.Config.LockOnConfig? CurSoftLockConfig;
 
-	// Token: 0x0400CEC1 RID: 52929
+	// Token: 0x0400D2B1 RID: 53937
 	protected Aki.Config.LockOnConfig? HardLockConfig;
 
-	// Token: 0x0400CEC2 RID: 52930
+	// Token: 0x0400D2B2 RID: 53938
 	[Nullable(2)]
 	private ShowTargetInfo TargetInfo;
 
-	// Token: 0x0400CEC3 RID: 52931
+	// Token: 0x0400D2B3 RID: 53939
 	protected bool IsLookAt;
 
-	// Token: 0x0400CEC4 RID: 52932
+	// Token: 0x0400D2B4 RID: 53940
 	protected readonly global::Vector TmpVector1 = global::Vector.Create();
 
-	// Token: 0x0400CEC5 RID: 52933
+	// Token: 0x0400D2B5 RID: 53941
 	protected readonly global::Vector TmpVector2 = global::Vector.Create();
 
-	// Token: 0x0400CEC6 RID: 52934
+	// Token: 0x0400D2B6 RID: 53942
 	protected readonly global::Rotator TmpRotator = global::Rotator.Create();
 
-	// Token: 0x0400CEC7 RID: 52935
+	// Token: 0x0400D2B7 RID: 53943
 	protected readonly Quat InverseQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400CEC8 RID: 52936
+	// Token: 0x0400D2B8 RID: 53944
 	protected readonly Vector2D TmpVector2D = Vector2D.Create();
 
-	// Token: 0x0400CEC9 RID: 52937
+	// Token: 0x0400D2B9 RID: 53945
 	protected readonly global::Vector RayBeginLocation = global::Vector.Create();
 
-	// Token: 0x0400CECA RID: 52938
+	// Token: 0x0400D2BA RID: 53946
 	protected readonly global::Vector RayEndLocation = global::Vector.Create();
 
-	// Token: 0x0400CECB RID: 52939
+	// Token: 0x0400D2BB RID: 53947
 	protected int CheckCount;
 
-	// Token: 0x0400CECC RID: 52940
+	// Token: 0x0400D2BC RID: 53948
 	private float CurrentCheckTime;
 
-	// Token: 0x0400CECD RID: 52941
+	// Token: 0x0400D2BD RID: 53949
 	protected float TimeElapsedSinceLastLock;
 
-	// Token: 0x0400CECE RID: 52942
+	// Token: 0x0400D2BE RID: 53950
 	[StaticVariableRuleIgnore]
 	public static readonly HashSet<int> EnhancedEntityIds = new HashSet<int>();
 
-	// Token: 0x0400CECF RID: 52943
+	// Token: 0x0400D2BF RID: 53951
 	private readonly HashSet<EntityHandle> TempSet = new HashSet<EntityHandle>();
 
-	// Token: 0x0400CED0 RID: 52944
+	// Token: 0x0400D2C0 RID: 53952
 	protected readonly global::Vector InputDirect = global::Vector.Create();
 
-	// Token: 0x0400CED1 RID: 52945
+	// Token: 0x0400D2C1 RID: 53953
 	protected bool HasChangeInput;
 }

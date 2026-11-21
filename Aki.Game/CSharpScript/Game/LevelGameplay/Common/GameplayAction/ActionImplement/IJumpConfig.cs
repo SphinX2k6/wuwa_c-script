@@ -4,38 +4,38 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction.ActionImplement
 {
-	// Token: 0x02006F2D RID: 28461
+	// Token: 0x020060AE RID: 24750
 	[NullableContext(1)]
 	public interface IJumpConfig : IMoveConfig
 	{
-		// Token: 0x17009B12 RID: 39698
-		// (get) Token: 0x060453E3 RID: 283619
-		// (set) Token: 0x060453E4 RID: 283620
+		// Token: 0x17007051 RID: 28753
+		// (get) Token: 0x0603B591 RID: 243089
+		// (set) Token: 0x0603B592 RID: 243090
 		float JumpTime { get; set; }
 
-		// Token: 0x17009B13 RID: 39699
-		// (get) Token: 0x060453E5 RID: 283621
-		// (set) Token: 0x060453E6 RID: 283622
+		// Token: 0x17007052 RID: 28754
+		// (get) Token: 0x0603B593 RID: 243091
+		// (set) Token: 0x0603B594 RID: 243092
 		float MoveBaseHeightOffset { get; set; }
 
-		// Token: 0x17009B14 RID: 39700
-		// (get) Token: 0x060453E7 RID: 283623
-		// (set) Token: 0x060453E8 RID: 283624
+		// Token: 0x17007053 RID: 28755
+		// (get) Token: 0x0603B595 RID: 243093
+		// (set) Token: 0x0603B596 RID: 243094
 		float MaxRiseHeightEdge { get; set; }
 
-		// Token: 0x17009B15 RID: 39701
-		// (get) Token: 0x060453E9 RID: 283625
-		// (set) Token: 0x060453EA RID: 283626
+		// Token: 0x17007054 RID: 28756
+		// (get) Token: 0x0603B597 RID: 243095
+		// (set) Token: 0x0603B598 RID: 243096
 		float MaxFallHeightEdge { get; set; }
 
-		// Token: 0x17009B16 RID: 39702
-		// (get) Token: 0x060453EB RID: 283627
-		// (set) Token: 0x060453EC RID: 283628
+		// Token: 0x17007055 RID: 28757
+		// (get) Token: 0x0603B599 RID: 243097
+		// (set) Token: 0x0603B59A RID: 243098
 		UCurveFloat MoveRiseCurve { get; set; }
 
-		// Token: 0x17009B17 RID: 39703
-		// (get) Token: 0x060453ED RID: 283629
-		// (set) Token: 0x060453EE RID: 283630
+		// Token: 0x17007056 RID: 28758
+		// (get) Token: 0x0603B59B RID: 243099
+		// (set) Token: 0x0603B59C RID: 243100
 		UCurveFloat MoveFallCurve { get; set; }
 	}
 }

@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049D9 RID: 18905
+	// Token: 0x02003953 RID: 14675
 	public class SettingSliderIncreaseComponent : SliderIncreaseComponent
 	{
-		// Token: 0x06031216 RID: 201238 RVA: 0x00B65556 File Offset: 0x00B63756
+		// Token: 0x06025D4C RID: 154956 RVA: 0x00AA04A6 File Offset: 0x00A9E6A6
 		public SettingSliderIncreaseComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031217 RID: 201239 RVA: 0x00B6555F File Offset: 0x00B6375F
+		// Token: 0x06025D4D RID: 154957 RVA: 0x00AA04AF File Offset: 0x00A9E6AF
 		[NullableContext(1)]
 		protected override void OnInputAxis(string axisName, float value)
 		{
@@ -22,10 +22,10 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.SetValue(value * 0.01f);
 		}
 
-		// Token: 0x0401A4CD RID: 107725
+		// Token: 0x04014D3F RID: 85311
 		private const float SETTING_DEAD_AREA = 0.073f;
 
-		// Token: 0x0401A4CE RID: 107726
+		// Token: 0x04014D40 RID: 85312
 		private const float SETTING_INTERVAL = 0.01f;
 	}
 }

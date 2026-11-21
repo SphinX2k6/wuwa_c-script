@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200075A RID: 1882
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007FB RID: 2043
 	public class ItemFoundation : IComponentBase
 	{
-		// Token: 0x0600289B RID: 10395 RVA: 0x0006B65C File Offset: 0x0006985C
+		// Token: 0x06002BBF RID: 11199 RVA: 0x00072804 File Offset: 0x00070A04
 		private ItemFoundation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600289C RID: 10396 RVA: 0x0006B694 File Offset: 0x00069894
+		// Token: 0x06002BC0 RID: 11200 RVA: 0x0007283C File Offset: 0x00070A3C
 		public static ItemFoundation Create([Nullable(2)] ItemFoundation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600289D RID: 10397 RVA: 0x0006B6A7 File Offset: 0x000698A7
+		// Token: 0x06002BC1 RID: 11201 RVA: 0x0007284F File Offset: 0x00070A4F
 		public static ItemFoundation CreateFromSetValue([Nullable(2)] ItemFoundation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600289E RID: 10398 RVA: 0x0006B6BC File Offset: 0x000698BC
+		// Token: 0x06002BC2 RID: 11202 RVA: 0x00072864 File Offset: 0x00070A64
 		public new ItemFoundation_SetValue ToSetValue()
 		{
 			return new ItemFoundation_SetValue
@@ -66,9 +64,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AA7 RID: 2727
-		// (get) Token: 0x0600289F RID: 10399 RVA: 0x0006B730 File Offset: 0x00069930
-		// (set) Token: 0x060028A0 RID: 10400 RVA: 0x0006B76A File Offset: 0x0006996A
+		// Token: 0x17000B67 RID: 2919
+		// (get) Token: 0x06002BC3 RID: 11203 RVA: 0x000728D8 File Offset: 0x00070AD8
+		// (set) Token: 0x06002BC4 RID: 11204 RVA: 0x00072912 File Offset: 0x00070B12
 		public override bool? Disabled
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AA8 RID: 2728
-		// (get) Token: 0x060028A1 RID: 10401 RVA: 0x0006B778 File Offset: 0x00069978
-		// (set) Token: 0x060028A2 RID: 10402 RVA: 0x0006B7A2 File Offset: 0x000699A2
+		// Token: 0x17000B68 RID: 2920
+		// (get) Token: 0x06002BC5 RID: 11205 RVA: 0x00072920 File Offset: 0x00070B20
+		// (set) Token: 0x06002BC6 RID: 11206 RVA: 0x0007294A File Offset: 0x00070B4A
 		public override bool? EdIsLocked
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AA9 RID: 2729
-		// (get) Token: 0x060028A3 RID: 10403 RVA: 0x0006B7B0 File Offset: 0x000699B0
-		// (set) Token: 0x060028A4 RID: 10404 RVA: 0x0006B811 File Offset: 0x00069A11
+		// Token: 0x17000B69 RID: 2921
+		// (get) Token: 0x06002BC7 RID: 11207 RVA: 0x00072958 File Offset: 0x00070B58
+		// (set) Token: 0x06002BC8 RID: 11208 RVA: 0x000729B9 File Offset: 0x00070BB9
 		public virtual IAdsortTransform AdsorptionPoint
 		{
 			get
@@ -139,9 +137,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AAA RID: 2730
-		// (get) Token: 0x060028A5 RID: 10405 RVA: 0x0006B828 File Offset: 0x00069A28
-		// (set) Token: 0x060028A6 RID: 10406 RVA: 0x0006B889 File Offset: 0x00069A89
+		// Token: 0x17000B6A RID: 2922
+		// (get) Token: 0x06002BC9 RID: 11209 RVA: 0x000729D0 File Offset: 0x00070BD0
+		// (set) Token: 0x06002BCA RID: 11210 RVA: 0x00072A31 File Offset: 0x00070C31
 		public virtual IEntityMatch AdsorptionMatch
 		{
 			get
@@ -169,9 +167,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AAB RID: 2731
-		// (get) Token: 0x060028A7 RID: 10407 RVA: 0x0006B8A0 File Offset: 0x00069AA0
-		// (set) Token: 0x060028A8 RID: 10408 RVA: 0x0006B901 File Offset: 0x00069B01
+		// Token: 0x17000B6B RID: 2923
+		// (get) Token: 0x06002BCB RID: 11211 RVA: 0x00072A48 File Offset: 0x00070C48
+		// (set) Token: 0x06002BCC RID: 11212 RVA: 0x00072AA9 File Offset: 0x00070CA9
 		public virtual IEntityMatch ActiveMatch
 		{
 			get
@@ -199,9 +197,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AAC RID: 2732
-		// (get) Token: 0x060028A9 RID: 10409 RVA: 0x0006B916 File Offset: 0x00069B16
-		// (set) Token: 0x060028AA RID: 10410 RVA: 0x0006B941 File Offset: 0x00069B41
+		// Token: 0x17000B6C RID: 2924
+		// (get) Token: 0x06002BCD RID: 11213 RVA: 0x00072ABE File Offset: 0x00070CBE
+		// (set) Token: 0x06002BCE RID: 11214 RVA: 0x00072AE9 File Offset: 0x00070CE9
 		public virtual bool IsSilent
 		{
 			get
@@ -218,9 +216,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AAD RID: 2733
-		// (get) Token: 0x060028AB RID: 10411 RVA: 0x0006B94F File Offset: 0x00069B4F
-		// (set) Token: 0x060028AC RID: 10412 RVA: 0x0006B97A File Offset: 0x00069B7A
+		// Token: 0x17000B6D RID: 2925
+		// (get) Token: 0x06002BCF RID: 11215 RVA: 0x00072AF7 File Offset: 0x00070CF7
+		// (set) Token: 0x06002BD0 RID: 11216 RVA: 0x00072B22 File Offset: 0x00070D22
 		public virtual bool IsDestroy
 		{
 			get
@@ -237,9 +235,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AAE RID: 2734
-		// (get) Token: 0x060028AD RID: 10413 RVA: 0x0006B988 File Offset: 0x00069B88
-		// (set) Token: 0x060028AE RID: 10414 RVA: 0x0006B9E9 File Offset: 0x00069BE9
+		// Token: 0x17000B6E RID: 2926
+		// (get) Token: 0x06002BD1 RID: 11217 RVA: 0x00072B30 File Offset: 0x00070D30
+		// (set) Token: 0x06002BD2 RID: 11218 RVA: 0x00072B91 File Offset: 0x00070D91
 		[Nullable(2)]
 		public virtual IItemChangeAdsorbateState ChangeAdsorbateState
 		{
@@ -270,36 +268,36 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001B46 RID: 6982
+		// Token: 0x04001D4B RID: 7499
 		[Nullable(2)]
 		protected new ItemFoundation FbInstance;
 
-		// Token: 0x04001B47 RID: 6983
+		// Token: 0x04001D4C RID: 7500
 		[Nullable(2)]
 		protected new ItemFoundation_SetValue PocoInterface;
 
-		// Token: 0x04001B48 RID: 6984
+		// Token: 0x04001D4D RID: 7501
 		private IAdsortTransform _AdsorptionPointCache;
 
-		// Token: 0x04001B49 RID: 6985
+		// Token: 0x04001D4E RID: 7502
 		private bool _AdsorptionPointInited;
 
-		// Token: 0x04001B4A RID: 6986
+		// Token: 0x04001D4F RID: 7503
 		private IEntityMatch _AdsorptionMatchCache;
 
-		// Token: 0x04001B4B RID: 6987
+		// Token: 0x04001D50 RID: 7504
 		private bool _AdsorptionMatchInited;
 
-		// Token: 0x04001B4C RID: 6988
+		// Token: 0x04001D51 RID: 7505
 		private IEntityMatch _ActiveMatchCache;
 
-		// Token: 0x04001B4D RID: 6989
+		// Token: 0x04001D52 RID: 7506
 		private bool _ActiveMatchInited;
 
-		// Token: 0x04001B4E RID: 6990
+		// Token: 0x04001D53 RID: 7507
 		private IItemChangeAdsorbateState _ChangeAdsorbateStateCache;
 
-		// Token: 0x04001B4F RID: 6991
+		// Token: 0x04001D54 RID: 7508
 		private bool _ChangeAdsorbateStateInited;
 	}
 }

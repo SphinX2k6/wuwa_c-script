@@ -1,40 +1,40 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002ADF RID: 10975
+// Token: 0x0200205B RID: 8283
 [NullableContext(1)]
 public interface ISurvivorsEvolveViewInfo
 {
-	// Token: 0x17001E61 RID: 7777
-	// (get) Token: 0x06016D6C RID: 93548
+	// Token: 0x17001EB9 RID: 7865
+	// (get) Token: 0x0601479D RID: 83869
 	ESurvivorsRogueItemType SourceType { get; }
 
-	// Token: 0x17001E62 RID: 7778
-	// (get) Token: 0x06016D6D RID: 93549
+	// Token: 0x17001EBA RID: 7866
+	// (get) Token: 0x0601479E RID: 83870
 	int SourceId { get; }
 
-	// Token: 0x17001E63 RID: 7779
-	// (get) Token: 0x06016D6E RID: 93550
+	// Token: 0x17001EBB RID: 7867
+	// (get) Token: 0x0601479F RID: 83871
 	string TitleId { get; }
 
-	// Token: 0x17001E64 RID: 7780
-	// (get) Token: 0x06016D6F RID: 93551
+	// Token: 0x17001EBC RID: 7868
+	// (get) Token: 0x060147A0 RID: 83872
 	int EvolveId { get; }
 
-	// Token: 0x17001E65 RID: 7781
-	// (get) Token: 0x06016D70 RID: 93552
+	// Token: 0x17001EBD RID: 7869
+	// (get) Token: 0x060147A1 RID: 83873
 	ESurvivorsRogueItemType? BondType { get; }
 
-	// Token: 0x17001E66 RID: 7782
-	// (get) Token: 0x06016D71 RID: 93553
+	// Token: 0x17001EBE RID: 7870
+	// (get) Token: 0x060147A2 RID: 83874
 	int? BondId { get; }
 
-	// Token: 0x17001E67 RID: 7783
-	// (get) Token: 0x06016D72 RID: 93554
+	// Token: 0x17001EBF RID: 7871
+	// (get) Token: 0x060147A3 RID: 83875
 	bool? PlayTween { get; }
 
-	// Token: 0x17001E68 RID: 7784
-	// (get) Token: 0x06016D73 RID: 93555
+	// Token: 0x17001EC0 RID: 7872
+	// (get) Token: 0x060147A4 RID: 83876
 	[Nullable(2)]
 	int[] WeaponEvolveIds { [NullableContext(2)] get; }
 }

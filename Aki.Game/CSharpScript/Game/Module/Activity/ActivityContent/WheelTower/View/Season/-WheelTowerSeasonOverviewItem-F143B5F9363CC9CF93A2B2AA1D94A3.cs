@@ -2,40 +2,40 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Season
 {
-	// Token: 0x02005F69 RID: 24425
+	// Token: 0x02004F50 RID: 20304
 	internal enum <WheelTowerSeasonOverviewItem>F143B5F9363CC9CF93A2B2AA1D94A3769081DDCB941B0AEB1C1853BD7C1E9AE2E__EWheelTowerSeasonOverviewItemComponent
 	{
-		// Token: 0x04020607 RID: 132615
+		// Token: 0x0401B0D9 RID: 110809
 		Toggle,
-		// Token: 0x04020608 RID: 132616
+		// Token: 0x0401B0DA RID: 110810
 		SeasonTex,
-		// Token: 0x04020609 RID: 132617
+		// Token: 0x0401B0DB RID: 110811
 		SeasonTitleTxt,
-		// Token: 0x0402060A RID: 132618
+		// Token: 0x0401B0DC RID: 110812
 		SeaonVersionTxt,
-		// Token: 0x0402060B RID: 132619
+		// Token: 0x0401B0DD RID: 110813
 		SeasonNameTxt,
-		// Token: 0x0402060C RID: 132620
+		// Token: 0x0401B0DE RID: 110814
 		MedalRootPnl,
-		// Token: 0x0402060D RID: 132621
+		// Token: 0x0401B0DF RID: 110815
 		EmptyPnl,
-		// Token: 0x0402060E RID: 132622
+		// Token: 0x0401B0E0 RID: 110816
 		MedalPnl,
-		// Token: 0x0402060F RID: 132623
+		// Token: 0x0401B0E1 RID: 110817
 		MedalItem,
-		// Token: 0x04020610 RID: 132624
+		// Token: 0x0401B0E2 RID: 110818
 		StagePnl,
-		// Token: 0x04020611 RID: 132625
+		// Token: 0x0401B0E3 RID: 110819
 		StageItem,
-		// Token: 0x04020612 RID: 132626
+		// Token: 0x0401B0E4 RID: 110820
 		FinishedPnl,
-		// Token: 0x04020613 RID: 132627
+		// Token: 0x0401B0E5 RID: 110821
 		CurrentSeasonPnl,
-		// Token: 0x04020614 RID: 132628
+		// Token: 0x0401B0E6 RID: 110822
 		CurrentSeasonTxt,
-		// Token: 0x04020615 RID: 132629
+		// Token: 0x0401B0E7 RID: 110823
 		SeasonDecorItem,
-		// Token: 0x04020616 RID: 132630
+		// Token: 0x0401B0E8 RID: 110824
 		FinishedVXPnl
 	}
 }

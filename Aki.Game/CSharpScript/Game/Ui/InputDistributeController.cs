@@ -5,27 +5,27 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004675 RID: 18037
+	// Token: 0x020035A6 RID: 13734
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class InputDistributeController : ControllerBase
 	{
-		// Token: 0x0602E8B3 RID: 190643 RVA: 0x00AC65CA File Offset: 0x00AC47CA
+		// Token: 0x06022FFD RID: 143357 RVA: 0x009F412A File Offset: 0x009F232A
 		protected override bool OnInit()
 		{
 			this.AddEvents();
 			return true;
 		}
 
-		// Token: 0x0602E8B4 RID: 190644 RVA: 0x00AC65D3 File Offset: 0x00AC47D3
+		// Token: 0x06022FFE RID: 143358 RVA: 0x009F4133 File Offset: 0x009F2333
 		protected override bool OnClear()
 		{
 			this.RemoveEvents();
 			return true;
 		}
 
-		// Token: 0x0602E8B5 RID: 190645 RVA: 0x00AC65DC File Offset: 0x00AC47DC
+		// Token: 0x06022FFF RID: 143359 RVA: 0x009F413C File Offset: 0x009F233C
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnAddNotAllowFightInputViewName, new Action(this.OnRefreshInputDistributeTag));
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Add(EEventName.ResetModuleByResetToBattleView, new Action(this.OnResetModuleByResetToBattleView));
 		}
 
-		// Token: 0x0602E8B6 RID: 190646 RVA: 0x00AC68EC File Offset: 0x00AC4AEC
+		// Token: 0x06023000 RID: 143360 RVA: 0x009F444C File Offset: 0x009F264C
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnAddNotAllowFightInputViewName, new Action(this.OnRefreshInputDistributeTag));
@@ -91,51 +91,51 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Remove(EEventName.ResetModuleByResetToBattleView, new Action(this.OnResetModuleByResetToBattleView));
 		}
 
-		// Token: 0x0602E8B7 RID: 190647 RVA: 0x00AC6BF9 File Offset: 0x00AC4DF9
+		// Token: 0x06023001 RID: 143361 RVA: 0x009F4759 File Offset: 0x009F2959
 		private void OnRefreshInputDistributeTag(bool _)
 		{
 			this.RefreshInputTag();
 		}
 
-		// Token: 0x0602E8B8 RID: 190648 RVA: 0x00AC6C01 File Offset: 0x00AC4E01
+		// Token: 0x06023002 RID: 143362 RVA: 0x009F4761 File Offset: 0x009F2961
 		private void OnRefreshInputDistributeTag(bool _, string _1)
 		{
 			this.RefreshInputTag();
 		}
 
-		// Token: 0x0602E8B9 RID: 190649 RVA: 0x00AC6C09 File Offset: 0x00AC4E09
+		// Token: 0x06023003 RID: 143363 RVA: 0x009F4769 File Offset: 0x009F2969
 		private void OnOnlyAllowFightInputStateChanged()
 		{
 			this.RefreshInputTag();
 		}
 
-		// Token: 0x0602E8BA RID: 190650 RVA: 0x00AC6C11 File Offset: 0x00AC4E11
+		// Token: 0x06023004 RID: 143364 RVA: 0x009F4771 File Offset: 0x009F2971
 		private void OnRefreshInputDistributeTag(EOperationType last, EOperationType now)
 		{
 			this.RefreshInputTag();
 		}
 
-		// Token: 0x0602E8BB RID: 190651 RVA: 0x00AC6C19 File Offset: 0x00AC4E19
+		// Token: 0x06023005 RID: 143365 RVA: 0x009F4779 File Offset: 0x009F2979
 		private void OnRefreshInputDistributeTag()
 		{
 			this.RefreshInputTag();
 		}
 
-		// Token: 0x0602E8BC RID: 190652 RVA: 0x00AC6C24 File Offset: 0x00AC4E24
+		// Token: 0x06023006 RID: 143366 RVA: 0x009F4784 File Offset: 0x009F2984
 		private void OnWorldDone()
 		{
 			Log.Instance.Info(ELogModule.Input, ELogAuthor.XXJ, "当世界加载完成时，清理所有输入分发Tag", default(ReadOnlySpan<ValueTuple<string, object>>));
 			this.ClearAllNotAllowFightInputViewNames();
 		}
 
-		// Token: 0x0602E8BD RID: 190653 RVA: 0x00AC6C54 File Offset: 0x00AC4E54
+		// Token: 0x06023007 RID: 143367 RVA: 0x009F47B4 File Offset: 0x009F29B4
 		private void OnResetModuleByResetToBattleView()
 		{
 			Log.Instance.Info(ELogModule.Input, ELogAuthor.XXJ, "[InputDistribute]当回到主界面时，清理所有输入分发Tag", default(ReadOnlySpan<ValueTuple<string, object>>));
 			this.ClearAllNotAllowFightInputViewNames();
 		}
 
-		// Token: 0x0602E8BE RID: 190654 RVA: 0x00AC6C84 File Offset: 0x00AC4E84
+		// Token: 0x06023008 RID: 143368 RVA: 0x009F47E4 File Offset: 0x009F29E4
 		private void OnOpenView(EUiViewName viewName, int viewId)
 		{
 			if (!InputDistributeConfig.Instance.IsViewAllowFightInput(viewName))
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Emit(EEventName.OnAddNotAllowFightInputViewName);
 		}
 
-		// Token: 0x0602E8BF RID: 190655 RVA: 0x00AC6CE8 File Offset: 0x00AC4EE8
+		// Token: 0x06023009 RID: 143369 RVA: 0x009F4848 File Offset: 0x009F2A48
 		private void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			if (!InputDistributeConfig.Instance.IsViewAllowFightInput(viewName))
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Emit(EEventName.OnRemoveNotAllowFightInputViewName);
 		}
 
-		// Token: 0x0602E8C0 RID: 190656 RVA: 0x00AC6D4C File Offset: 0x00AC4F4C
+		// Token: 0x0602300A RID: 143370 RVA: 0x009F48AC File Offset: 0x009F2AAC
 		private void OnOpenViewBegined(EUiViewName viewName)
 		{
 			if (!InputDistributeConfig.Instance.IsViewAllowFightInput(viewName))
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Emit(EEventName.OnAddNotAllowFightInputViewName);
 		}
 
-		// Token: 0x0602E8C1 RID: 190657 RVA: 0x00AC6DB0 File Offset: 0x00AC4FB0
+		// Token: 0x0602300B RID: 143371 RVA: 0x009F4910 File Offset: 0x009F2B10
 		private void OnOpenViewFail(EUiViewName viewName)
 		{
 			if (!InputDistributeConfig.Instance.IsViewAllowFightInput(viewName))
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Emit(EEventName.OnRemoveNotAllowFightInputViewName);
 		}
 
-		// Token: 0x0602E8C2 RID: 190658 RVA: 0x00AC6E14 File Offset: 0x00AC5014
+		// Token: 0x0602300C RID: 143372 RVA: 0x009F4974 File Offset: 0x009F2B74
 		private void OnFloatQueueCloseView(EUiViewName viewName, int viewId)
 		{
 			if (!InputDistributeConfig.Instance.IsViewAllowFightInput(viewName))
@@ -215,152 +215,152 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Emit(EEventName.OnRemoveNotAllowFightInputViewName);
 		}
 
-		// Token: 0x0602E8C3 RID: 190659 RVA: 0x00AC6E75 File Offset: 0x00AC5075
+		// Token: 0x0602300D RID: 143373 RVA: 0x009F49D5 File Offset: 0x009F2BD5
 		private void ClearAllNotAllowFightInputViewNames()
 		{
 			InputDistributeModel.Instance.ClearAllNotAllowFightInputViewNames();
 			EventSystem.Instance.Emit(EEventName.OnClearNotAllowFightInputViewName);
 		}
 
-		// Token: 0x0602E8C4 RID: 190660 RVA: 0x00AC6E91 File Offset: 0x00AC5091
+		// Token: 0x0602300E RID: 143374 RVA: 0x009F49F1 File Offset: 0x009F2BF1
 		public void RefreshInputTag()
 		{
 			InputDistributeModel.Instance.RefreshInputDistributeTag();
 		}
 
-		// Token: 0x0602E8C5 RID: 190661 RVA: 0x00AC6E9D File Offset: 0x00AC509D
+		// Token: 0x0602300F RID: 143375 RVA: 0x009F49FD File Offset: 0x009F2BFD
 		public void BindAction(string actionName, TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			InputDistributeModel.Instance.BindAction(actionName, actionCallback);
 		}
 
-		// Token: 0x0602E8C6 RID: 190662 RVA: 0x00AC6EAB File Offset: 0x00AC50AB
+		// Token: 0x06023010 RID: 143376 RVA: 0x009F4A0B File Offset: 0x009F2C0B
 		public void ExecuteDelayInputAction(string actionName)
 		{
 			InputDistributeModel.Instance.ExecuteDelayInputAction(actionName);
 		}
 
-		// Token: 0x0602E8C7 RID: 190663 RVA: 0x00AC6EB8 File Offset: 0x00AC50B8
+		// Token: 0x06023011 RID: 143377 RVA: 0x009F4A18 File Offset: 0x009F2C18
 		public void BindActions(IReadOnlyList<string> actionNames, TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			InputDistributeModel.Instance.BindActions(actionNames, actionCallback);
 		}
 
-		// Token: 0x0602E8C8 RID: 190664 RVA: 0x00AC6EC6 File Offset: 0x00AC50C6
+		// Token: 0x06023012 RID: 143378 RVA: 0x009F4A26 File Offset: 0x009F2C26
 		public void UnBindAction(string actionName, TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			InputDistributeModel.Instance.UnBindAction(actionName, actionCallback);
 		}
 
-		// Token: 0x0602E8C9 RID: 190665 RVA: 0x00AC6ED4 File Offset: 0x00AC50D4
+		// Token: 0x06023013 RID: 143379 RVA: 0x009F4A34 File Offset: 0x009F2C34
 		public void UnBindActions(IReadOnlyList<string> actionNames, TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			InputDistributeModel.Instance.UnBindActions(actionNames, actionCallback);
 		}
 
-		// Token: 0x0602E8CA RID: 190666 RVA: 0x00AC6EE2 File Offset: 0x00AC50E2
+		// Token: 0x06023014 RID: 143380 RVA: 0x009F4A42 File Offset: 0x009F2C42
 		public void BindActionIgnoreLimit(string actionName, TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			InputDistributeModel.Instance.BindActionIgnoreLimit(actionName, actionCallback);
 		}
 
-		// Token: 0x0602E8CB RID: 190667 RVA: 0x00AC6EF0 File Offset: 0x00AC50F0
+		// Token: 0x06023015 RID: 143381 RVA: 0x009F4A50 File Offset: 0x009F2C50
 		public void UnBindActionIgnoreLimit(string actionName, TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			InputDistributeModel.Instance.UnBindActionIgnoreLimit(actionName, actionCallback);
 		}
 
-		// Token: 0x0602E8CC RID: 190668 RVA: 0x00AC6EFE File Offset: 0x00AC50FE
+		// Token: 0x06023016 RID: 143382 RVA: 0x009F4A5E File Offset: 0x009F2C5E
 		public void BindAxis(string axisName, TInputHandle<float> axisCallback)
 		{
 			InputDistributeModel.Instance.BindAxis(axisName, axisCallback);
 		}
 
-		// Token: 0x0602E8CD RID: 190669 RVA: 0x00AC6F0C File Offset: 0x00AC510C
+		// Token: 0x06023017 RID: 143383 RVA: 0x009F4A6C File Offset: 0x009F2C6C
 		public void BindAxes(IReadOnlyList<string> axisNames, TInputHandle<float> axisCallback)
 		{
 			InputDistributeModel.Instance.BindAxes(axisNames, axisCallback);
 		}
 
-		// Token: 0x0602E8CE RID: 190670 RVA: 0x00AC6F1A File Offset: 0x00AC511A
+		// Token: 0x06023018 RID: 143384 RVA: 0x009F4A7A File Offset: 0x009F2C7A
 		public void UnBindAxis(string axisName, TInputHandle<float> axisCallback)
 		{
 			InputDistributeModel.Instance.UnBindAxis(axisName, axisCallback);
 		}
 
-		// Token: 0x0602E8CF RID: 190671 RVA: 0x00AC6F28 File Offset: 0x00AC5128
+		// Token: 0x06023019 RID: 143385 RVA: 0x009F4A88 File Offset: 0x009F2C88
 		public void UnBindAxes(IReadOnlyList<string> axisNames, TInputHandle<float> axisCallback)
 		{
 			InputDistributeModel.Instance.UnBindAxes(axisNames, axisCallback);
 		}
 
-		// Token: 0x0602E8D0 RID: 190672 RVA: 0x00AC6F36 File Offset: 0x00AC5136
+		// Token: 0x0602301A RID: 143386 RVA: 0x009F4A96 File Offset: 0x009F2C96
 		public bool HasAxisBind(string axisName)
 		{
 			return InputDistributeModel.Instance.HasAxisBind(axisName);
 		}
 
-		// Token: 0x0602E8D1 RID: 190673 RVA: 0x00AC6F43 File Offset: 0x00AC5143
+		// Token: 0x0602301B RID: 143387 RVA: 0x009F4AA3 File Offset: 0x009F2CA3
 		public bool HasActionBind(string actionName)
 		{
 			return InputDistributeModel.Instance.HasActionBind(actionName);
 		}
 
-		// Token: 0x0602E8D2 RID: 190674 RVA: 0x00AC6F50 File Offset: 0x00AC5150
+		// Token: 0x0602301C RID: 143388 RVA: 0x009F4AB0 File Offset: 0x009F2CB0
 		public bool IsActionRespondable(string actionName)
 		{
 			return InputDistributeModel.Instance.IsActionRespondable(actionName);
 		}
 
-		// Token: 0x0602E8D3 RID: 190675 RVA: 0x00AC6F5D File Offset: 0x00AC515D
+		// Token: 0x0602301D RID: 143389 RVA: 0x009F4ABD File Offset: 0x009F2CBD
 		public void BindAxisIgnoreLimit(string axisName, TInputHandle<float> axisCallback)
 		{
 			InputDistributeModel.Instance.BindAxisIgnoreLimit(axisName, axisCallback);
 		}
 
-		// Token: 0x0602E8D4 RID: 190676 RVA: 0x00AC6F6B File Offset: 0x00AC516B
+		// Token: 0x0602301E RID: 143390 RVA: 0x009F4ACB File Offset: 0x009F2CCB
 		public void UnBindAxisIgnoreLimit(string axisName, TInputHandle<float> axisCallback)
 		{
 			InputDistributeModel.Instance.UnBindAxisIgnoreLimit(axisName, axisCallback);
 		}
 
-		// Token: 0x0602E8D5 RID: 190677 RVA: 0x00AC6F79 File Offset: 0x00AC5179
+		// Token: 0x0602301F RID: 143391 RVA: 0x009F4AD9 File Offset: 0x009F2CD9
 		public void BindTouch(int touchId, TInputHandle<InputDistributeDefine.ITouchData> touchCallback)
 		{
 			InputDistributeModel.Instance.BindTouch(touchId, touchCallback);
 		}
 
-		// Token: 0x0602E8D6 RID: 190678 RVA: 0x00AC6F87 File Offset: 0x00AC5187
+		// Token: 0x06023020 RID: 143392 RVA: 0x009F4AE7 File Offset: 0x009F2CE7
 		public void BindTouches(int[] touchIdList, TInputHandle<InputDistributeDefine.ITouchData> touchCallback)
 		{
 			InputDistributeModel.Instance.BindTouches(touchIdList, touchCallback);
 		}
 
-		// Token: 0x0602E8D7 RID: 190679 RVA: 0x00AC6F95 File Offset: 0x00AC5195
+		// Token: 0x06023021 RID: 143393 RVA: 0x009F4AF5 File Offset: 0x009F2CF5
 		public void UnBindTouch(int touchId, TInputHandle<InputDistributeDefine.ITouchData> touchCallback)
 		{
 			InputDistributeModel.Instance.UnBindTouch(touchId, touchCallback);
 		}
 
-		// Token: 0x0602E8D8 RID: 190680 RVA: 0x00AC6FA3 File Offset: 0x00AC51A3
+		// Token: 0x06023022 RID: 143394 RVA: 0x009F4B03 File Offset: 0x009F2D03
 		public void UnBindTouches(IReadOnlyList<int> touchIdList, TInputHandle<InputDistributeDefine.ITouchData> touchCallback)
 		{
 			InputDistributeModel.Instance.UnBindTouches(touchIdList, touchCallback);
 		}
 
-		// Token: 0x0602E8D9 RID: 190681 RVA: 0x00AC6FB1 File Offset: 0x00AC51B1
+		// Token: 0x06023023 RID: 143395 RVA: 0x009F4B11 File Offset: 0x009F2D11
 		public void BindKey(string keyName, TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			InputDistributeModel.Instance.BindKey(keyName, actionCallback);
 		}
 
-		// Token: 0x0602E8DA RID: 190682 RVA: 0x00AC6FBF File Offset: 0x00AC51BF
+		// Token: 0x06023024 RID: 143396 RVA: 0x009F4B1F File Offset: 0x009F2D1F
 		public void UnBindKey(string keyName, TInputHandle<InputDistributeDefine.EActionType> actionCallback)
 		{
 			InputDistributeModel.Instance.UnBindKey(keyName, actionCallback);
 		}
 
-		// Token: 0x0602E8DB RID: 190683 RVA: 0x00AC6FCD File Offset: 0x00AC51CD
+		// Token: 0x06023025 RID: 143397 RVA: 0x009F4B2D File Offset: 0x009F2D2D
 		public void InputAxis(string axisName, float value, bool force = false)
 		{
 			if (Math.Abs(value) <= 0.02f)
@@ -371,82 +371,82 @@ namespace CSharpScript.Game.Ui
 			InputDistributeModel.Instance.InputAxis(axisName, value, force);
 		}
 
-		// Token: 0x0602E8DC RID: 190684 RVA: 0x00AC6FFB File Offset: 0x00AC51FB
+		// Token: 0x06023026 RID: 143398 RVA: 0x009F4B5B File Offset: 0x009F2D5B
 		public bool IsAxisRespondable(string axisName)
 		{
 			return InputDistributeModel.Instance.IsAxisRespondable(axisName);
 		}
 
-		// Token: 0x0602E8DD RID: 190685 RVA: 0x00AC7008 File Offset: 0x00AC5208
+		// Token: 0x06023027 RID: 143399 RVA: 0x009F4B68 File Offset: 0x009F2D68
 		public bool InputAction(string actionName, bool bPress)
 		{
 			return InputDistributeModel.Instance.InputAction(actionName, bPress);
 		}
 
-		// Token: 0x0602E8DE RID: 190686 RVA: 0x00AC7016 File Offset: 0x00AC5216
+		// Token: 0x06023028 RID: 143400 RVA: 0x009F4B76 File Offset: 0x009F2D76
 		public void InputTouch(int touchId, InputDistributeDefine.ITouchData touchData)
 		{
 			InputDistributeModel.Instance.InputTouch(touchId, touchData);
 		}
 
-		// Token: 0x0602E8DF RID: 190687 RVA: 0x00AC7024 File Offset: 0x00AC5224
+		// Token: 0x06023029 RID: 143401 RVA: 0x009F4B84 File Offset: 0x009F2D84
 		public void InputKey(string keyName, bool bPress)
 		{
 			InputDistributeModel.Instance.InputKey(keyName, bPress);
 		}
 
-		// Token: 0x0602E8E0 RID: 190688 RVA: 0x00AC7032 File Offset: 0x00AC5232
+		// Token: 0x0602302A RID: 143402 RVA: 0x009F4B92 File Offset: 0x009F2D92
 		[NullableContext(2)]
 		public string GetCurrentActionName()
 		{
 			return InputDistributeModel.Instance.GetCurrentActionName();
 		}
 
-		// Token: 0x0602E8E1 RID: 190689 RVA: 0x00AC703E File Offset: 0x00AC523E
+		// Token: 0x0602302B RID: 143403 RVA: 0x009F4B9E File Offset: 0x009F2D9E
 		[NullableContext(2)]
 		public string GetCurrentAxisName()
 		{
 			return InputDistributeModel.Instance.GetCurrentAxisName();
 		}
 
-		// Token: 0x0602E8E2 RID: 190690 RVA: 0x00AC704A File Offset: 0x00AC524A
+		// Token: 0x0602302C RID: 143404 RVA: 0x009F4BAA File Offset: 0x009F2DAA
 		public bool IsAllowFightInput()
 		{
 			return InputDistributeModel.Instance.IsAllowFightInput();
 		}
 
-		// Token: 0x0602E8E3 RID: 190691 RVA: 0x00AC7056 File Offset: 0x00AC5256
+		// Token: 0x0602302D RID: 143405 RVA: 0x009F4BB6 File Offset: 0x009F2DB6
 		public bool IsAllowFightMoveInput()
 		{
 			return InputDistributeModel.Instance.IsAllowFightMoveInput();
 		}
 
-		// Token: 0x0602E8E4 RID: 190692 RVA: 0x00AC7062 File Offset: 0x00AC5262
+		// Token: 0x0602302E RID: 143406 RVA: 0x009F4BC2 File Offset: 0x009F2DC2
 		public bool IsAllowFightActionInput()
 		{
 			return InputDistributeModel.Instance.IsAllowFightActionInput();
 		}
 
-		// Token: 0x0602E8E5 RID: 190693 RVA: 0x00AC706E File Offset: 0x00AC526E
+		// Token: 0x0602302F RID: 143407 RVA: 0x009F4BCE File Offset: 0x009F2DCE
 		public bool IsAllowFightCameraRotationInput()
 		{
 			return InputDistributeModel.Instance.IsAllowFightCameraRotationInput();
 		}
 
-		// Token: 0x0602E8E6 RID: 190694 RVA: 0x00AC707A File Offset: 0x00AC527A
+		// Token: 0x06023030 RID: 143408 RVA: 0x009F4BDA File Offset: 0x009F2DDA
 		public bool IsAllowFightCameraZoomInput()
 		{
 			return InputDistributeModel.Instance.IsAllowFightCameraZoomInput();
 		}
 
-		// Token: 0x0602E8E7 RID: 190695 RVA: 0x00AC7086 File Offset: 0x00AC5286
+		// Token: 0x06023031 RID: 143409 RVA: 0x009F4BE6 File Offset: 0x009F2DE6
 		public bool IsAllowHeadRotation()
 		{
 			return InputDistributeModel.Instance.IsAllowHeadRotation();
 		}
 
-		// Token: 0x1700762D RID: 30253
-		// (get) Token: 0x0602E8E8 RID: 190696 RVA: 0x00AC7092 File Offset: 0x00AC5292
+		// Token: 0x170048E9 RID: 18665
+		// (get) Token: 0x06023032 RID: 143410 RVA: 0x009F4BF2 File Offset: 0x009F2DF2
 		public static InputDistributeController Instance
 		{
 			get
@@ -455,7 +455,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E8E9 RID: 190697 RVA: 0x00AC7099 File Offset: 0x00AC5299
+		// Token: 0x06023033 RID: 143411 RVA: 0x009F4BF9 File Offset: 0x009F2DF9
 		public static InputDistributeController GetOrCreateInstance()
 		{
 			if (InputDistributeController._Instance == null)
@@ -465,7 +465,7 @@ namespace CSharpScript.Game.Ui
 			return InputDistributeController._Instance;
 		}
 
-		// Token: 0x0602E8EA RID: 190698 RVA: 0x00AC70AD File Offset: 0x00AC52AD
+		// Token: 0x06023034 RID: 143412 RVA: 0x009F4C0D File Offset: 0x009F2E0D
 		public static bool CreateInstance()
 		{
 			if (InputDistributeController._Instance != null)
@@ -476,24 +476,24 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602E8EB RID: 190699 RVA: 0x00AC70C3 File Offset: 0x00AC52C3
+		// Token: 0x06023035 RID: 143413 RVA: 0x009F4C23 File Offset: 0x009F2E23
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E8EC RID: 190700 RVA: 0x00AC70C5 File Offset: 0x00AC52C5
+		// Token: 0x06023036 RID: 143414 RVA: 0x009F4C25 File Offset: 0x009F2E25
 		public static void ResetStaticDefaultValue()
 		{
 			InputDistributeController._Instance = null;
 		}
 
-		// Token: 0x0602E8ED RID: 190701 RVA: 0x00AC70CD File Offset: 0x00AC52CD
+		// Token: 0x06023037 RID: 143415 RVA: 0x009F4C2D File Offset: 0x009F2E2D
 		static InputDistributeController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InputDistributeController.CreateStaticDefaultValue), new Action(InputDistributeController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04019519 RID: 103705
+		// Token: 0x04013BC0 RID: 80832
 		[Nullable(2)]
 		private static InputDistributeController _Instance;
 	}

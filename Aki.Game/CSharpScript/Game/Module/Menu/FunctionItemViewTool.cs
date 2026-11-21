@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x02005405 RID: 21509
+	// Token: 0x020043E8 RID: 17384
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FunctionItemViewTool
 	{
-		// Token: 0x06036F5E RID: 225118 RVA: 0x00D0502C File Offset: 0x00D0322C
+		// Token: 0x0602BEA6 RID: 179878 RVA: 0x00C54470 File Offset: 0x00C52670
 		public static float GetSliderPosition(float[] rangeList, float value, int digit = 0)
 		{
 			float min = rangeList[0];
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Menu
 			return MathUtils.Instance.GetFloatPointFloor(rangePct * num, digit);
 		}
 
-		// Token: 0x06036F5F RID: 225119 RVA: 0x00D05060 File Offset: 0x00D03260
+		// Token: 0x0602BEA7 RID: 179879 RVA: 0x00C544A4 File Offset: 0x00C526A4
 		public static float GetSliderDisplayValue(MenuData data, float actualValue)
 		{
 			float[] sliderRange = data.SliderRange;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Menu
 			return (float)MathUtils.Instance.GetRoundToNDecimalPlaces((double)num, data.SliderDigits);
 		}
 
-		// Token: 0x06036F60 RID: 225120 RVA: 0x00D050AC File Offset: 0x00D032AC
+		// Token: 0x0602BEA8 RID: 179880 RVA: 0x00C544F0 File Offset: 0x00C526F0
 		public static float GetActualSliderStep(MenuData data, float displayStep)
 		{
 			float[] sliderRange = data.SliderRange;

@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 {
-	// Token: 0x02006E1F RID: 28191
+	// Token: 0x02005F9F RID: 24479
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class GongduolaSummonController : ControllerBase
 	{
-		// Token: 0x06044BAA RID: 281514 RVA: 0x010F6C30 File Offset: 0x010F4E30
+		// Token: 0x0603AD13 RID: 240915 RVA: 0x010A116C File Offset: 0x0109F36C
 		[NullableContext(1)]
 		public void PlaySummonAnim(Entity entity)
 		{
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06044BAB RID: 281515 RVA: 0x010F6C90 File Offset: 0x010F4E90
+		// Token: 0x0603AD14 RID: 240916 RVA: 0x010A11CC File Offset: 0x0109F3CC
 		[NullableContext(1)]
 		public void PlayCancelSummonAnim(Entity entity, Vector newLoc, Rotator newRot, Vector newGravityDir)
 		{
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06044BAC RID: 281516 RVA: 0x010F6CF0 File Offset: 0x010F4EF0
+		// Token: 0x0603AD15 RID: 240917 RVA: 0x010A122C File Offset: 0x0109F42C
 		[NullableContext(1)]
 		public void StopCancelSummonAnim(Entity entity)
 		{
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			component.StopModelBuffer();
 		}
 
-		// Token: 0x06044BAD RID: 281517 RVA: 0x010F6D38 File Offset: 0x010F4F38
+		// Token: 0x0603AD16 RID: 240918 RVA: 0x010A1274 File Offset: 0x0109F474
 		private unsafe void OnSummonAnimEnd(UAnimMontage montage, bool interrupted)
 		{
 			Log instance = Log.Instance;
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			this.OnAnimEnd();
 		}
 
-		// Token: 0x06044BAE RID: 281518 RVA: 0x010F6E0C File Offset: 0x010F500C
+		// Token: 0x0603AD17 RID: 240919 RVA: 0x010A1348 File Offset: 0x0109F548
 		private unsafe void OnCancelSummonAnimEnd(UAnimMontage montage, bool interrupted)
 		{
 			Log instance = Log.Instance;
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			this.OnAnimEnd();
 		}
 
-		// Token: 0x06044BAF RID: 281519 RVA: 0x010F6E97 File Offset: 0x010F5097
+		// Token: 0x0603AD18 RID: 240920 RVA: 0x010A13D3 File Offset: 0x0109F5D3
 		private void OnAnimEnd()
 		{
 			this.CacheVehicleMoveComponent.IsSummoningPerform = false;
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			cacheVehicleAnimationComponent.CancelForceDisableAnimOptimization(EForceDisableAnimOptimization.SpecialAction);
 		}
 
-		// Token: 0x06044BB0 RID: 281520 RVA: 0x010F6EC8 File Offset: 0x010F50C8
+		// Token: 0x0603AD19 RID: 240921 RVA: 0x010A1404 File Offset: 0x0109F604
 		private void StartLookAtGongduola()
 		{
 			BP_SummonGongduolaConfig_C config = GongduolaSummonModel.Instance.SummonConfig;
@@ -268,8 +268,8 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			}, (float)((int)(num * 1000f)), null, null, true, 1f);
 		}
 
-		// Token: 0x170099FD RID: 39421
-		// (get) Token: 0x06044BB1 RID: 281521 RVA: 0x010F707F File Offset: 0x010F527F
+		// Token: 0x17006F00 RID: 28416
+		// (get) Token: 0x0603AD1A RID: 240922 RVA: 0x010A15BB File Offset: 0x0109F7BB
 		[Nullable(1)]
 		public static GongduolaSummonController Instance
 		{
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			}
 		}
 
-		// Token: 0x06044BB2 RID: 281522 RVA: 0x010F7086 File Offset: 0x010F5286
+		// Token: 0x0603AD1B RID: 240923 RVA: 0x010A15C2 File Offset: 0x0109F7C2
 		[NullableContext(1)]
 		public static GongduolaSummonController GetOrCreateInstance()
 		{
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			return GongduolaSummonController._Instance;
 		}
 
-		// Token: 0x06044BB3 RID: 281523 RVA: 0x010F709A File Offset: 0x010F529A
+		// Token: 0x0603AD1C RID: 240924 RVA: 0x010A15D6 File Offset: 0x0109F7D6
 		public static bool CreateInstance()
 		{
 			if (GongduolaSummonController._Instance != null)
@@ -302,45 +302,45 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			return true;
 		}
 
-		// Token: 0x06044BB4 RID: 281524 RVA: 0x010F70B0 File Offset: 0x010F52B0
+		// Token: 0x0603AD1D RID: 240925 RVA: 0x010A15EC File Offset: 0x0109F7EC
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06044BB5 RID: 281525 RVA: 0x010F70B2 File Offset: 0x010F52B2
+		// Token: 0x0603AD1E RID: 240926 RVA: 0x010A15EE File Offset: 0x0109F7EE
 		public static void ResetStaticDefaultValue()
 		{
 			GongduolaSummonController._Instance = null;
 		}
 
-		// Token: 0x06044BB6 RID: 281526 RVA: 0x010F70BA File Offset: 0x010F52BA
+		// Token: 0x0603AD1F RID: 240927 RVA: 0x010A15F6 File Offset: 0x0109F7F6
 		static GongduolaSummonController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GongduolaSummonController.CreateStaticDefaultValue), new Action(GongduolaSummonController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023C04 RID: 146436
+		// Token: 0x0401EEA7 RID: 126631
 		private UAnimMontage CacheSummonAm;
 
-		// Token: 0x04023C05 RID: 146437
+		// Token: 0x0401EEA8 RID: 126632
 		private UAnimMontage CacheCancelSummonAm;
 
-		// Token: 0x04023C06 RID: 146438
+		// Token: 0x0401EEA9 RID: 126633
 		private BaseActorComponent CacheActorComponent;
 
-		// Token: 0x04023C07 RID: 146439
+		// Token: 0x0401EEAA RID: 126634
 		private VehicleAnimationComponent CacheVehicleAnimationComponent;
 
-		// Token: 0x04023C08 RID: 146440
+		// Token: 0x0401EEAB RID: 126635
 		private VehicleMoveComponent CacheVehicleMoveComponent;
 
-		// Token: 0x04023C09 RID: 146441
+		// Token: 0x0401EEAC RID: 126636
 		private UeSkeletalTickManageComponent CacheUeSkeletalTickManagerComp;
 
-		// Token: 0x04023C0A RID: 146442
+		// Token: 0x0401EEAD RID: 126637
 		private BaseTagComponent CacheVehicleTagComp;
 
-		// Token: 0x04023C0B RID: 146443
+		// Token: 0x0401EEAE RID: 126638
 		private static GongduolaSummonController _Instance;
 	}
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027C8 RID: 10184
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A9B RID: 10907
 	public class LimitPlayerOperation : ActionParams
 	{
-		// Token: 0x0600E278 RID: 57976 RVA: 0x002171FA File Offset: 0x002153FA
+		// Token: 0x0600F09A RID: 61594 RVA: 0x00233FCE File Offset: 0x002321CE
 		public static LimitPlayerOperation Create(ILimitPlayerOperation? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044AA RID: 17578
-		// (get) Token: 0x0600E279 RID: 57977 RVA: 0x00217219 File Offset: 0x00215419
+		// Token: 0x17004812 RID: 18450
+		// (get) Token: 0x0600F09B RID: 61595 RVA: 0x00233FED File Offset: 0x002321ED
 		public virtual ILimitPlayerOption Type
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D98 RID: 32152
+		// Token: 0x0400844F RID: 33871
 		private ILimitPlayerOperation Instance;
 
-		// Token: 0x04007D99 RID: 32153
+		// Token: 0x04008450 RID: 33872
 		private ILimitPlayerOption _TypeCache;
 
-		// Token: 0x04007D9A RID: 32154
+		// Token: 0x04008451 RID: 33873
 		private bool _TypeInited;
 	}
 }

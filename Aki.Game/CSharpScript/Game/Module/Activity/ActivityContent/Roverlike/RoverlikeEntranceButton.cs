@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200616B RID: 24939
+	// Token: 0x020050E9 RID: 20713
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoverlikeEntranceButton : ButtonItem
 	{
-		// Token: 0x0603F0A8 RID: 258216 RVA: 0x00F3BC7B File Offset: 0x00F39E7B
+		// Token: 0x06033D68 RID: 212328 RVA: 0x00E82B4F File Offset: 0x00E80D4F
 		public RoverlikeEntranceButton(UUIItem uiItem = null) : base(uiItem)
 		{
 		}
 
-		// Token: 0x0603F0A9 RID: 258217 RVA: 0x00F3BC84 File Offset: 0x00F39E84
+		// Token: 0x06033D69 RID: 212329 RVA: 0x00E82B58 File Offset: 0x00E80D58
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(4, typeof(UUIText)));
 		}
 
-		// Token: 0x0603F0AA RID: 258218 RVA: 0x00F3BCE8 File Offset: 0x00F39EE8
+		// Token: 0x06033D6A RID: 212330 RVA: 0x00E82BBC File Offset: 0x00E80DBC
 		public void RefreshSaveInfo(RoverlikeActivityData activityData)
 		{
 			UUIItem item = base.GetItem(3);
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}));
 		}
 
-		// Token: 0x0603F0AB RID: 258219 RVA: 0x00F3BDD8 File Offset: 0x00F39FD8
+		// Token: 0x06033D6B RID: 212331 RVA: 0x00E82CAC File Offset: 0x00E80EAC
 		public void RefreshNewLevelUnlockRedDot(RoverlikeActivityData activityData)
 		{
 			bool uiactive = activityData != null && activityData.HasNewLevelUnlockRedDot();
@@ -67,17 +67,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0200C3D1 RID: 50129
+		// Token: 0x0200ADB8 RID: 44472
 		[NullableContext(0)]
 		private class EEntranceButtonDefine
 		{
-			// Token: 0x0403B16E RID: 242030
+			// Token: 0x04035ACF RID: 219855
 			public const int RedDotItem = 2;
 
-			// Token: 0x0403B16F RID: 242031
+			// Token: 0x04035AD0 RID: 219856
 			public const int PnlSaveInfo = 3;
 
-			// Token: 0x0403B170 RID: 242032
+			// Token: 0x04035AD1 RID: 219857
 			public const int TxtSaveInfo = 4;
 		}
 	}

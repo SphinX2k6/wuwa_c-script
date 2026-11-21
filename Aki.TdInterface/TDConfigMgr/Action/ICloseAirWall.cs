@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018D6 RID: 6358
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A67 RID: 6759
 	public class ICloseAirWall : IToggleAirWallType
 	{
-		// Token: 0x0600885B RID: 34907 RVA: 0x001429C4 File Offset: 0x00140BC4
+		// Token: 0x06008FA3 RID: 36771 RVA: 0x0015253C File Offset: 0x0015073C
 		private ICloseAirWall_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600885C RID: 34908 RVA: 0x001429FC File Offset: 0x00140BFC
+		// Token: 0x06008FA4 RID: 36772 RVA: 0x00152574 File Offset: 0x00150774
 		public static ICloseAirWall Create([Nullable(2)] ICloseAirWall instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600885D RID: 34909 RVA: 0x00142A0F File Offset: 0x00140C0F
+		// Token: 0x06008FA5 RID: 36773 RVA: 0x00152587 File Offset: 0x00150787
 		public static ICloseAirWall CreateFromSetValue([Nullable(2)] ICloseAirWall_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600885E RID: 34910 RVA: 0x00142A22 File Offset: 0x00140C22
+		// Token: 0x06008FA6 RID: 36774 RVA: 0x0015259A File Offset: 0x0015079A
 		public new ICloseAirWall_SetValue ToSetValue()
 		{
 			return new ICloseAirWall_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C41 RID: 11329
-		// (get) Token: 0x0600885F RID: 34911 RVA: 0x00142A35 File Offset: 0x00140C35
-		// (set) Token: 0x06008860 RID: 34912 RVA: 0x00142A60 File Offset: 0x00140C60
+		// Token: 0x17002E43 RID: 11843
+		// (get) Token: 0x06008FA7 RID: 36775 RVA: 0x001525AD File Offset: 0x001507AD
+		// (set) Token: 0x06008FA8 RID: 36776 RVA: 0x001525D8 File Offset: 0x001507D8
 		public override EToggleAirWall Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040055A6 RID: 21926
+		// Token: 0x04005A00 RID: 23040
 		[Nullable(2)]
 		protected new ICloseAirWall FbInstance;
 
-		// Token: 0x040055A7 RID: 21927
+		// Token: 0x04005A01 RID: 23041
 		[Nullable(2)]
 		protected new ICloseAirWall_SetValue PocoInterface;
 	}

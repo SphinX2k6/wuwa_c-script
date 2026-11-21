@@ -6,37 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021A3 RID: 8611
+	// Token: 0x0200071D RID: 1821
 	[UnrealObjectPath("/Script/LGUI.UIScrollbarComponent")]
 	[UnrealStructLayout(1160, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1160)]
-	public class UUIScrollbarComponent : UUISelectableComponent, IUnrealUObject, IUnrealObject, ILGUIPointerDragInterface, IUnrealNativeInterface, IUnrealInterface
+	public class UUIScrollbarComponent : UUISelectableComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020A8C RID: 133772 RVA: 0x00305449 File Offset: 0x00303649
+		// Token: 0x06009CB9 RID: 40121 RVA: 0x000E9F1B File Offset: 0x000E811B
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIScrollbarComponent._ClassPtr;
 		}
 
-		// Token: 0x06020A8D RID: 133773 RVA: 0x00305455 File Offset: 0x00303655
-		int ILGUIPointerDragInterface.InterfaceOffset()
-		{
-			return UUIScrollbarComponent.__InterfaceOffset_ILGUIPointerDragInterface;
-		}
-
-		// Token: 0x06020A8E RID: 133774 RVA: 0x0030545C File Offset: 0x0030365C
+		// Token: 0x06009CBA RID: 40122 RVA: 0x000E9F28 File Offset: 0x000E8128
 		public UUIScrollbarComponent() : this(BuiltinUtils.AllocNativeUObject(UUIScrollbarComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020A8F RID: 133775 RVA: 0x00305484 File Offset: 0x00303684
+		// Token: 0x06009CBB RID: 40123 RVA: 0x000E9F50 File Offset: 0x000E8150
 		[NullableContext(1)]
 		public UUIScrollbarComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIScrollbarComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007FA7 RID: 32679
-		// (get) Token: 0x06020A90 RID: 133776 RVA: 0x003054B7 File Offset: 0x003036B7
-		// (set) Token: 0x06020A91 RID: 133777 RVA: 0x003054C7 File Offset: 0x003036C7
+		// Token: 0x17001D12 RID: 7442
+		// (get) Token: 0x06009CBC RID: 40124 RVA: 0x000E9F83 File Offset: 0x000E8183
+		// (set) Token: 0x06009CBD RID: 40125 RVA: 0x000E9F93 File Offset: 0x000E8193
 		public unsafe float Value
 		{
 			get
@@ -49,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FA8 RID: 32680
-		// (get) Token: 0x06020A92 RID: 133778 RVA: 0x003054D8 File Offset: 0x003036D8
-		// (set) Token: 0x06020A93 RID: 133779 RVA: 0x003054E8 File Offset: 0x003036E8
+		// Token: 0x17001D13 RID: 7443
+		// (get) Token: 0x06009CBE RID: 40126 RVA: 0x000E9FA4 File Offset: 0x000E81A4
+		// (set) Token: 0x06009CBF RID: 40127 RVA: 0x000E9FB4 File Offset: 0x000E81B4
 		public unsafe float Size
 		{
 			get
@@ -64,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FA9 RID: 32681
-		// (get) Token: 0x06020A94 RID: 133780 RVA: 0x003054F9 File Offset: 0x003036F9
-		// (set) Token: 0x06020A95 RID: 133781 RVA: 0x0030550D File Offset: 0x0030370D
+		// Token: 0x17001D14 RID: 7444
+		// (get) Token: 0x06009CC0 RID: 40128 RVA: 0x000E9FC5 File Offset: 0x000E81C5
+		// (set) Token: 0x06009CC1 RID: 40129 RVA: 0x000E9FD9 File Offset: 0x000E81D9
 		[Nullable(new byte[]
 		{
 			0,
@@ -94,24 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FAA RID: 32682
-		// (get) Token: 0x06020A96 RID: 133782 RVA: 0x00305522 File Offset: 0x00303722
-		// (set) Token: 0x06020A97 RID: 133783 RVA: 0x00305532 File Offset: 0x00303732
-		public unsafe UIScrollbarDirectionType DirectionType
-		{
-			get
-			{
-				return (UIScrollbarDirectionType)(*(base.NativePtr + (IntPtr)UUIScrollbarComponent.__PropertyOffset_DirectionType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUIScrollbarComponent.__PropertyOffset_DirectionType) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007FAB RID: 32683
-		// (get) Token: 0x06020A98 RID: 133784 RVA: 0x00305543 File Offset: 0x00303743
-		// (set) Token: 0x06020A99 RID: 133785 RVA: 0x00305557 File Offset: 0x00303757
+		// Token: 0x17001D15 RID: 7445
+		// (get) Token: 0x06009CC2 RID: 40130 RVA: 0x000E9FEE File Offset: 0x000E81EE
+		// (set) Token: 0x06009CC3 RID: 40131 RVA: 0x000EA002 File Offset: 0x000E8202
 		[Nullable(new byte[]
 		{
 			0,
@@ -139,9 +118,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FAC RID: 32684
-		// (get) Token: 0x06020A9A RID: 133786 RVA: 0x0030556C File Offset: 0x0030376C
-		// (set) Token: 0x06020A9B RID: 133787 RVA: 0x00305580 File Offset: 0x00303780
+		// Token: 0x17001D16 RID: 7446
+		// (get) Token: 0x06009CC4 RID: 40132 RVA: 0x000EA017 File Offset: 0x000E8217
+		// (set) Token: 0x06009CC5 RID: 40133 RVA: 0x000EA02B File Offset: 0x000E822B
 		[Nullable(new byte[]
 		{
 			0,
@@ -169,33 +148,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FAD RID: 32685
-		// (get) Token: 0x06020A9C RID: 133788 RVA: 0x00305598 File Offset: 0x00303798
-		// (set) Token: 0x06020A9D RID: 133789 RVA: 0x003055D1 File Offset: 0x003037D1
-		[Nullable(1)]
-		public FLGUIDrawableEvent OnValueChange
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FLGUIDrawableEvent result;
-				if ((result = this._OnValueChange) == null)
-				{
-					result = (this._OnValueChange = new FLGUIDrawableEvent(base.NativePtr + (IntPtr)UUIScrollbarComponent.__PropertyOffset_OnValueChange, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLGUIDrawableEvent.StaticStruct(), base.NativePtr + (IntPtr)UUIScrollbarComponent.__PropertyOffset_OnValueChange, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17007FAE RID: 32686
-		// (get) Token: 0x06020A9E RID: 133790 RVA: 0x003055F2 File Offset: 0x003037F2
-		// (set) Token: 0x06020A9F RID: 133791 RVA: 0x00305606 File Offset: 0x00303806
+		// Token: 0x17001D17 RID: 7447
+		// (get) Token: 0x06009CC6 RID: 40134 RVA: 0x000EA040 File Offset: 0x000E8240
+		// (set) Token: 0x06009CC7 RID: 40135 RVA: 0x000EA054 File Offset: 0x000E8254
 		[Nullable(new byte[]
 		{
 			0,
@@ -223,9 +178,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FAF RID: 32687
-		// (get) Token: 0x06020AA0 RID: 133792 RVA: 0x0030561B File Offset: 0x0030381B
-		// (set) Token: 0x06020AA1 RID: 133793 RVA: 0x0030562F File Offset: 0x0030382F
+		// Token: 0x17001D18 RID: 7448
+		// (get) Token: 0x06009CC8 RID: 40136 RVA: 0x000EA069 File Offset: 0x000E8269
+		// (set) Token: 0x06009CC9 RID: 40137 RVA: 0x000EA07D File Offset: 0x000E827D
 		[Nullable(new byte[]
 		{
 			0,
@@ -253,9 +208,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FB0 RID: 32688
-		// (get) Token: 0x06020AA2 RID: 133794 RVA: 0x00305644 File Offset: 0x00303844
-		// (set) Token: 0x06020AA3 RID: 133795 RVA: 0x00305654 File Offset: 0x00303854
+		// Token: 0x17001D19 RID: 7449
+		// (get) Token: 0x06009CCA RID: 40138 RVA: 0x000EA092 File Offset: 0x000E8292
+		// (set) Token: 0x06009CCB RID: 40139 RVA: 0x000EA0A2 File Offset: 0x000E82A2
 		public unsafe bool MainScrollbar
 		{
 			get
@@ -268,9 +223,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007FB1 RID: 32689
-		// (get) Token: 0x06020AA4 RID: 133796 RVA: 0x00305665 File Offset: 0x00303865
-		// (set) Token: 0x06020AA5 RID: 133797 RVA: 0x00305675 File Offset: 0x00303875
+		// Token: 0x17001D1A RID: 7450
+		// (get) Token: 0x06009CCC RID: 40140 RVA: 0x000EA0B3 File Offset: 0x000E82B3
+		// (set) Token: 0x06009CCD RID: 40141 RVA: 0x000EA0C3 File Offset: 0x000E82C3
 		public unsafe int ViewId
 		{
 			get
@@ -283,32 +238,32 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020AA6 RID: 133798 RVA: 0x00305686 File Offset: 0x00303886
+		// Token: 0x06009CCE RID: 40142 RVA: 0x000EA0D4 File Offset: 0x000E82D4
 		[NullableContext(2)]
 		public void UnregisterSlideEvent(in FLGUIDelegateHandleWrapper InDelegateHandle)
 		{
 			UUIScrollbarComponent.__UnregisterSlideEvent_Internal(base.NativePtr, (InDelegateHandle ?? new FLGUIDelegateHandleWrapper()).NativePtr);
 		}
 
-		// Token: 0x06020AA7 RID: 133799 RVA: 0x003056A3 File Offset: 0x003038A3
+		// Token: 0x06009CCF RID: 40143 RVA: 0x000EA0F1 File Offset: 0x000E82F1
 		public void SetValueAndSize(float InValue, float InSize, bool FireEvent = true)
 		{
 			UUIScrollbarComponent.__SetValueAndSize_Internal(base.NativePtr, InValue, InSize, FireEvent);
 		}
 
-		// Token: 0x06020AA8 RID: 133800 RVA: 0x003056B3 File Offset: 0x003038B3
+		// Token: 0x06009CD0 RID: 40144 RVA: 0x000EA101 File Offset: 0x000E8301
 		public void SetValue(float InValue, bool FireEvent = true)
 		{
 			UUIScrollbarComponent.__SetValue_Internal(base.NativePtr, InValue, FireEvent);
 		}
 
-		// Token: 0x06020AA9 RID: 133801 RVA: 0x003056C2 File Offset: 0x003038C2
+		// Token: 0x06009CD1 RID: 40145 RVA: 0x000EA110 File Offset: 0x000E8310
 		public void SetSize(float InSize)
 		{
 			UUIScrollbarComponent.__SetSize_Internal(base.NativePtr, InSize);
 		}
 
-		// Token: 0x06020AAA RID: 133802 RVA: 0x003056D0 File Offset: 0x003038D0
+		// Token: 0x06009CD2 RID: 40146 RVA: 0x000EA11E File Offset: 0x000E831E
 		[NullableContext(2)]
 		public static void SetScrollbarDelegate(in FLGUIScrollbarDelegate Delegate)
 		{
@@ -316,11 +271,11 @@ namespace UnrealEngine
 			UUIScrollbarComponent.__SetScrollbarDelegate_Internal((flguiscrollbarDelegate != null) ? flguiscrollbarDelegate.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x06020AAB RID: 133803
+		// Token: 0x06009CD3 RID: 40147
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ResetScrollbarDelegate();
 
-		// Token: 0x06020AAC RID: 133804 RVA: 0x003056E6 File Offset: 0x003038E6
+		// Token: 0x06009CD4 RID: 40148 RVA: 0x000EA134 File Offset: 0x000E8334
 		[NullableContext(1)]
 		public FLGUIDelegateHandleWrapper RegisterSlideEvent([Nullable(2)] in FLGUIScrollbarDynamicDelegate InDelegate)
 		{
@@ -329,119 +284,106 @@ namespace UnrealEngine
 			return new FLGUIDelegateHandleWrapper(UUIScrollbarComponent.__RegisterSlideEvent_Internal(nativePtr, (flguiscrollbarDynamicDelegate != null) ? flguiscrollbarDynamicDelegate.NativePtr : ((IntPtr)0)), null);
 		}
 
-		// Token: 0x06020AAD RID: 133805 RVA: 0x00305708 File Offset: 0x00303908
+		// Token: 0x06009CD5 RID: 40149 RVA: 0x000EA156 File Offset: 0x000E8356
 		public float GetValue()
 		{
 			return UUIScrollbarComponent.__GetValue_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020AAE RID: 133806 RVA: 0x00305715 File Offset: 0x00303915
+		// Token: 0x06009CD6 RID: 40150 RVA: 0x000EA163 File Offset: 0x000E8363
 		public float GetSize()
 		{
 			return UUIScrollbarComponent.__GetSize_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020AAF RID: 133807 RVA: 0x00305722 File Offset: 0x00303922
+		// Token: 0x06009CD7 RID: 40151 RVA: 0x000EA170 File Offset: 0x000E8370
 		public void ChangeSchedule(ELGUINavigationDirection InDirection)
 		{
 			UUIScrollbarComponent.__ChangeSchedule_Internal(base.NativePtr, InDirection);
 		}
 
-		// Token: 0x06020AB0 RID: 133808
+		// Token: 0x06009CD8 RID: 40152
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnregisterSlideEvent_Internal(IntPtr @this, IntPtr InDelegateHandle);
 
-		// Token: 0x06020AB1 RID: 133809
+		// Token: 0x06009CD9 RID: 40153
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetValueAndSize_Internal(IntPtr @this, float InValue, float InSize, bool FireEvent);
 
-		// Token: 0x06020AB2 RID: 133810
+		// Token: 0x06009CDA RID: 40154
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetValue_Internal(IntPtr @this, float InValue, bool FireEvent);
 
-		// Token: 0x06020AB3 RID: 133811
+		// Token: 0x06009CDB RID: 40155
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSize_Internal(IntPtr @this, float InSize);
 
-		// Token: 0x06020AB4 RID: 133812
+		// Token: 0x06009CDC RID: 40156
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetScrollbarDelegate_Internal(IntPtr Delegate);
 
-		// Token: 0x06020AB5 RID: 133813
+		// Token: 0x06009CDD RID: 40157
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __RegisterSlideEvent_Internal(IntPtr @this, IntPtr InDelegate);
 
-		// Token: 0x06020AB6 RID: 133814
+		// Token: 0x06009CDE RID: 40158
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetValue_Internal(IntPtr @this);
 
-		// Token: 0x06020AB7 RID: 133815
+		// Token: 0x06009CDF RID: 40159
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetSize_Internal(IntPtr @this);
 
-		// Token: 0x06020AB8 RID: 133816
+		// Token: 0x06009CE0 RID: 40160
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ChangeSchedule_Internal(IntPtr @this, ELGUINavigationDirection InDirection);
 
-		// Token: 0x06020AB9 RID: 133817 RVA: 0x00305730 File Offset: 0x00303930
+		// Token: 0x06009CE1 RID: 40161 RVA: 0x000EA17E File Offset: 0x000E837E
 		static UUIScrollbarComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIScrollbarComponent");
 		}
 
-		// Token: 0x06020ABA RID: 133818 RVA: 0x0030573E File Offset: 0x0030393E
+		// Token: 0x06009CE2 RID: 40162 RVA: 0x000EA18C File Offset: 0x000E838C
 		protected UUIScrollbarComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011798 RID: 71576
-		internal static int __InterfaceOffset_ILGUIPointerDragInterface;
-
-		// Token: 0x04011799 RID: 71577
+		// Token: 0x04004393 RID: 17299
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UIScrollbarComponent";
 
-		// Token: 0x0401179A RID: 71578
+		// Token: 0x04004394 RID: 17300
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401179B RID: 71579
+		// Token: 0x04004395 RID: 17301
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401179C RID: 71580
+		// Token: 0x04004396 RID: 17302
 		internal static int __PropertyOffset_Value;
 
-		// Token: 0x0401179D RID: 71581
+		// Token: 0x04004397 RID: 17303
 		internal static int __PropertyOffset_Size;
 
-		// Token: 0x0401179E RID: 71582
+		// Token: 0x04004398 RID: 17304
 		internal static int __PropertyOffset_HandleActor;
 
-		// Token: 0x0401179F RID: 71583
-		internal static int __PropertyOffset_DirectionType;
-
-		// Token: 0x040117A0 RID: 71584
+		// Token: 0x04004399 RID: 17305
 		internal static int __PropertyOffset_Handle;
 
-		// Token: 0x040117A1 RID: 71585
+		// Token: 0x0400439A RID: 17306
 		internal static int __PropertyOffset_HandleArea;
 
-		// Token: 0x040117A2 RID: 71586
-		internal static int __PropertyOffset_OnValueChange;
-
-		// Token: 0x040117A3 RID: 71587
-		[Nullable(2)]
-		private FLGUIDrawableEvent _OnValueChange;
-
-		// Token: 0x040117A4 RID: 71588
+		// Token: 0x0400439B RID: 17307
 		internal static int __PropertyOffset_ScrollViewBackgroundActor;
 
-		// Token: 0x040117A5 RID: 71589
+		// Token: 0x0400439C RID: 17308
 		internal static int __PropertyOffset_ScrollViewBackgroundComponent;
 
-		// Token: 0x040117A6 RID: 71590
+		// Token: 0x0400439D RID: 17309
 		internal static int __PropertyOffset_MainScrollbar;
 
-		// Token: 0x040117A7 RID: 71591
+		// Token: 0x0400439E RID: 17310
 		internal static int __PropertyOffset_ViewId;
 	}
 }

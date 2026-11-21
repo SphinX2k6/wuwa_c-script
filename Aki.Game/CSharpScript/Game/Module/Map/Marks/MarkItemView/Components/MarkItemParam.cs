@@ -4,34 +4,34 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 {
-	// Token: 0x02005547 RID: 21831
+	// Token: 0x02004519 RID: 17689
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MarkItemParam : IMarkItemParam
 	{
-		// Token: 0x170085C2 RID: 34242
-		// (get) Token: 0x06037B5F RID: 228191 RVA: 0x00D382BB File Offset: 0x00D364BB
-		// (set) Token: 0x06037B60 RID: 228192 RVA: 0x00D382C3 File Offset: 0x00D364C3
+		// Token: 0x17005962 RID: 22882
+		// (get) Token: 0x0602CA2E RID: 182830 RVA: 0x00C85D8F File Offset: 0x00C83F8F
+		// (set) Token: 0x0602CA2F RID: 182831 RVA: 0x00C85D97 File Offset: 0x00C83F97
 		public string Txt { get; set; }
 
-		// Token: 0x170085C3 RID: 34243
-		// (get) Token: 0x06037B61 RID: 228193 RVA: 0x00D382CC File Offset: 0x00D364CC
-		// (set) Token: 0x06037B62 RID: 228194 RVA: 0x00D382D4 File Offset: 0x00D364D4
+		// Token: 0x17005963 RID: 22883
+		// (get) Token: 0x0602CA30 RID: 182832 RVA: 0x00C85DA0 File Offset: 0x00C83FA0
+		// (set) Token: 0x0602CA31 RID: 182833 RVA: 0x00C85DA8 File Offset: 0x00C83FA8
 		public int? FontSize { get; set; }
 
-		// Token: 0x170085C4 RID: 34244
-		// (get) Token: 0x06037B63 RID: 228195 RVA: 0x00D382DD File Offset: 0x00D364DD
-		// (set) Token: 0x06037B64 RID: 228196 RVA: 0x00D382E5 File Offset: 0x00D364E5
+		// Token: 0x17005964 RID: 22884
+		// (get) Token: 0x0602CA32 RID: 182834 RVA: 0x00C85DB1 File Offset: 0x00C83FB1
+		// (set) Token: 0x0602CA33 RID: 182835 RVA: 0x00C85DB9 File Offset: 0x00C83FB9
 		public FVector2D? AnchorOffset { get; set; }
 
-		// Token: 0x170085C5 RID: 34245
-		// (get) Token: 0x06037B65 RID: 228197 RVA: 0x00D382EE File Offset: 0x00D364EE
-		// (set) Token: 0x06037B66 RID: 228198 RVA: 0x00D382F6 File Offset: 0x00D364F6
+		// Token: 0x17005965 RID: 22885
+		// (get) Token: 0x0602CA34 RID: 182836 RVA: 0x00C85DC2 File Offset: 0x00C83FC2
+		// (set) Token: 0x0602CA35 RID: 182837 RVA: 0x00C85DCA File Offset: 0x00C83FCA
 		public float? OutlineSize { get; set; }
 
-		// Token: 0x170085C6 RID: 34246
-		// (get) Token: 0x06037B67 RID: 228199 RVA: 0x00D382FF File Offset: 0x00D364FF
-		// (set) Token: 0x06037B68 RID: 228200 RVA: 0x00D38307 File Offset: 0x00D36507
+		// Token: 0x17005966 RID: 22886
+		// (get) Token: 0x0602CA36 RID: 182838 RVA: 0x00C85DD3 File Offset: 0x00C83FD3
+		// (set) Token: 0x0602CA37 RID: 182839 RVA: 0x00C85DDB File Offset: 0x00C83FDB
 		public FColor? OutlineColor { get; set; }
 	}
 }

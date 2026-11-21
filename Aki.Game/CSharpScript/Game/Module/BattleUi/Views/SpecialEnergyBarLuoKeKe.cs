@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DED RID: 24045
+	// Token: 0x02004DD2 RID: 19922
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarLuoKeKe : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D208 RID: 250376 RVA: 0x00EB7918 File Offset: 0x00EB5B18
+		// Token: 0x06032197 RID: 205207 RVA: 0x00E08E58 File Offset: 0x00E07058
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D209 RID: 250377 RVA: 0x00EB7A6C File Offset: 0x00EB5C6C
+		// Token: 0x06032198 RID: 205208 RVA: 0x00E08FAC File Offset: 0x00E071AC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarLuoKeKe.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D20A RID: 250378 RVA: 0x00EB7AB0 File Offset: 0x00EB5CB0
+		// Token: 0x06032199 RID: 205209 RVA: 0x00E08FF0 File Offset: 0x00E071F0
 		protected UniTask InitBarItem()
 		{
 			SpecialEnergyBarLuoKeKe.<InitBarItem>d__14 <InitBarItem>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D20B RID: 250379 RVA: 0x00EB7AF4 File Offset: 0x00EB5CF4
+		// Token: 0x0603219A RID: 205210 RVA: 0x00E09034 File Offset: 0x00E07234
 		private void UpdateIsGhost()
 		{
 			this.IsInGhost = false;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D20C RID: 250380 RVA: 0x00EB7B40 File Offset: 0x00EB5D40
+		// Token: 0x0603219B RID: 205211 RVA: 0x00E09080 File Offset: 0x00E07280
 		protected override void AddEvents()
 		{
 			base.AddEvents();
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D20D RID: 250381 RVA: 0x00EB7B7E File Offset: 0x00EB5D7E
+		// Token: 0x0603219C RID: 205212 RVA: 0x00E090BE File Offset: 0x00E072BE
 		private void OnGhostTagChange(int tagId, bool bTagExists)
 		{
 			if (bTagExists)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshGhostEffectItem(false);
 		}
 
-		// Token: 0x0603D20E RID: 250382 RVA: 0x00EB7B9C File Offset: 0x00EB5D9C
+		// Token: 0x0603219D RID: 205213 RVA: 0x00E090DC File Offset: 0x00E072DC
 		protected override void OnStart()
 		{
 			base.InitTweenAnim(7);
@@ -117,13 +117,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshGhostEffectItem(true);
 		}
 
-		// Token: 0x0603D20F RID: 250383 RVA: 0x00EB7C0A File Offset: 0x00EB5E0A
+		// Token: 0x0603219E RID: 205214 RVA: 0x00E0914A File Offset: 0x00E0734A
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshGhostEffectItem(false);
 		}
 
-		// Token: 0x0603D210 RID: 250384 RVA: 0x00EB7C14 File Offset: 0x00EB5E14
+		// Token: 0x0603219F RID: 205215 RVA: 0x00E09154 File Offset: 0x00E07354
 		private void RefreshGhostEffectItem(bool isStart = false)
 		{
 			int num = (int)Math.Floor((double)(this.PercentMachine.GetCurPercent() * 3f));
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D211 RID: 250385 RVA: 0x00EB7D78 File Offset: 0x00EB5F78
+		// Token: 0x060321A0 RID: 205216 RVA: 0x00E092B8 File Offset: 0x00E074B8
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -207,13 +207,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FDCF RID: 130511
+		// Token: 0x0401A896 RID: 108694
 		private const int NUM = 3;
 
-		// Token: 0x0401FDD0 RID: 130512
+		// Token: 0x0401A897 RID: 108695
 		private const double EFFECT_TIME = 1000.0;
 
-		// Token: 0x0401FDD1 RID: 130513
+		// Token: 0x0401A898 RID: 108696
 		[StaticVariableRuleIgnore]
 		private static readonly int[] GhostTags = new int[]
 		{
@@ -222,52 +222,52 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			GameplayTagDefine.EGameplayTagId["角色.R2T1LuokekeMd10011.状态标识.灵感3层"]
 		};
 
-		// Token: 0x0401FDD2 RID: 130514
+		// Token: 0x0401A899 RID: 108697
 		[Nullable(2)]
 		private SpecialEnergyBarSlot BarItem;
 
-		// Token: 0x0401FDD3 RID: 130515
+		// Token: 0x0401A89A RID: 108698
 		private readonly List<UUIItem> GhostItemList = new List<UUIItem>();
 
-		// Token: 0x0401FDD4 RID: 130516
+		// Token: 0x0401A89B RID: 108699
 		private readonly List<UUIItem> GhostEffectItemList = new List<UUIItem>();
 
-		// Token: 0x0401FDD5 RID: 130517
+		// Token: 0x0401A89C RID: 108700
 		private bool IsAnyEffectPlaying;
 
-		// Token: 0x0401FDD6 RID: 130518
+		// Token: 0x0401A89D RID: 108701
 		private double EffectFinishTime;
 
-		// Token: 0x0401FDD7 RID: 130519
+		// Token: 0x0401A89E RID: 108702
 		private bool IsInGhost;
 
-		// Token: 0x0401FDD8 RID: 130520
+		// Token: 0x0401A89F RID: 108703
 		private int LastGhostCount;
 
-		// Token: 0x0401FDD9 RID: 130521
+		// Token: 0x0401A8A0 RID: 108704
 		private int LastVisibleGhostCount;
 
-		// Token: 0x0200C123 RID: 49443
+		// Token: 0x0200AB32 RID: 43826
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A536 RID: 238902
+			// Token: 0x04034F28 RID: 216872
 			SlotBarItem,
-			// Token: 0x0403A537 RID: 238903
+			// Token: 0x04034F29 RID: 216873
 			GhostItem1,
-			// Token: 0x0403A538 RID: 238904
+			// Token: 0x04034F2A RID: 216874
 			GhostItem2,
-			// Token: 0x0403A539 RID: 238905
+			// Token: 0x04034F2B RID: 216875
 			GhostItem3,
-			// Token: 0x0403A53A RID: 238906
+			// Token: 0x04034F2C RID: 216876
 			GhostEffectItem1,
-			// Token: 0x0403A53B RID: 238907
+			// Token: 0x04034F2D RID: 216877
 			GhostEffectItem2,
-			// Token: 0x0403A53C RID: 238908
+			// Token: 0x04034F2E RID: 216878
 			GhostEffectItem3,
-			// Token: 0x0403A53D RID: 238909
+			// Token: 0x04034F2F RID: 216879
 			AniGhostIn,
-			// Token: 0x0403A53E RID: 238910
+			// Token: 0x04034F30 RID: 216880
 			AniGhostOut
 		}
 	}

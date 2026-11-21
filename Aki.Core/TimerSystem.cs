@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020000D6 RID: 214
+// Token: 0x020000D8 RID: 216
 [NullableContext(1)]
 [Nullable(0)]
 public class TimerSystem : IStaticVariableResetter
 {
-	// Token: 0x170000D9 RID: 217
-	// (get) Token: 0x060006BB RID: 1723 RVA: 0x00023F68 File Offset: 0x00022168
+	// Token: 0x170000EB RID: 235
+	// (get) Token: 0x060006FC RID: 1788 RVA: 0x0002453C File Offset: 0x0002273C
 	public static TimerSystemInstance Instance
 	{
 		get
@@ -16,8 +16,8 @@ public class TimerSystem : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x170000DA RID: 218
-	// (get) Token: 0x060006BC RID: 1724 RVA: 0x00023F6F File Offset: 0x0002216F
+	// Token: 0x170000EC RID: 236
+	// (get) Token: 0x060006FD RID: 1789 RVA: 0x00024543 File Offset: 0x00022743
 	public static TimerSystemInstance RealTimeInstance
 	{
 		get
@@ -26,8 +26,8 @@ public class TimerSystem : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x170000DB RID: 219
-	// (get) Token: 0x060006BD RID: 1725 RVA: 0x00023F76 File Offset: 0x00022176
+	// Token: 0x170000ED RID: 237
+	// (get) Token: 0x060006FE RID: 1790 RVA: 0x0002454A File Offset: 0x0002274A
 	public static TimerSystemInstance FlowTimeInstance
 	{
 		get
@@ -36,8 +36,8 @@ public class TimerSystem : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x170000DC RID: 220
-	// (get) Token: 0x060006BE RID: 1726 RVA: 0x00023F7D File Offset: 0x0002217D
+	// Token: 0x170000EE RID: 238
+	// (get) Token: 0x060006FF RID: 1791 RVA: 0x00024551 File Offset: 0x00022751
 	public static TimerSystemInstance GameplayTimeInstance
 	{
 		get
@@ -46,13 +46,13 @@ public class TimerSystem : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060006BF RID: 1727 RVA: 0x00023F84 File Offset: 0x00022184
+	// Token: 0x06000700 RID: 1792 RVA: 0x00024558 File Offset: 0x00022758
 	static TimerSystem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TimerSystem.CreateStaticDefaultValue), new Action(TimerSystem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060006C0 RID: 1728 RVA: 0x00023FA3 File Offset: 0x000221A3
+	// Token: 0x06000701 RID: 1793 RVA: 0x00024577 File Offset: 0x00022777
 	public static void CreateStaticDefaultValue()
 	{
 		TimerSystem._instance = new TimerSystemInstance();
@@ -61,7 +61,7 @@ public class TimerSystem : IStaticVariableResetter
 		TimerSystem._gameplayTimeInstance = new TimerSystemInstance();
 	}
 
-	// Token: 0x060006C1 RID: 1729 RVA: 0x00023FCD File Offset: 0x000221CD
+	// Token: 0x06000702 RID: 1794 RVA: 0x000245A1 File Offset: 0x000227A1
 	public static void ResetStaticDefaultValue()
 	{
 		TimerSystem._instance = null;
@@ -70,19 +70,19 @@ public class TimerSystem : IStaticVariableResetter
 		TimerSystem._gameplayTimeInstance = null;
 	}
 
-	// Token: 0x04000568 RID: 1384
+	// Token: 0x04000577 RID: 1399
 	[Nullable(2)]
 	private static TimerSystemInstance _instance;
 
-	// Token: 0x04000569 RID: 1385
+	// Token: 0x04000578 RID: 1400
 	[Nullable(2)]
 	private static TimerSystemInstance _realTimeInstance;
 
-	// Token: 0x0400056A RID: 1386
+	// Token: 0x04000579 RID: 1401
 	[Nullable(2)]
 	private static TimerSystemInstance _flowTimeInstance;
 
-	// Token: 0x0400056B RID: 1387
+	// Token: 0x0400057A RID: 1402
 	[Nullable(2)]
 	private static TimerSystemInstance _gameplayTimeInstance;
 }

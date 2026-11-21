@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075FF RID: 30207
+	// Token: 0x02007E0D RID: 32269
 	public class IWaitMovieModeFixedTimeT
 	{
-		// Token: 0x1700E578 RID: 58744
-		// (get) Token: 0x0603706C RID: 225388 RVA: 0x0077737C File Offset: 0x0077557C
-		// (set) Token: 0x0603706D RID: 225389 RVA: 0x00777384 File Offset: 0x00775584
+		// Token: 0x1700F1B6 RID: 61878
+		// (get) Token: 0x0603A511 RID: 238865 RVA: 0x007DB478 File Offset: 0x007D9678
+		// (set) Token: 0x0603A512 RID: 238866 RVA: 0x007DB480 File Offset: 0x007D9680
 		public EEnterMovieModeDurationType Type { get; set; }
 
-		// Token: 0x1700E579 RID: 58745
-		// (get) Token: 0x0603706E RID: 225390 RVA: 0x0077738D File Offset: 0x0077558D
-		// (set) Token: 0x0603706F RID: 225391 RVA: 0x00777395 File Offset: 0x00775595
+		// Token: 0x1700F1B7 RID: 61879
+		// (get) Token: 0x0603A513 RID: 238867 RVA: 0x007DB489 File Offset: 0x007D9689
+		// (set) Token: 0x0603A514 RID: 238868 RVA: 0x007DB491 File Offset: 0x007D9691
 		public float Duration { get; set; }
 
-		// Token: 0x06037070 RID: 225392 RVA: 0x0077739E File Offset: 0x0077559E
+		// Token: 0x0603A515 RID: 238869 RVA: 0x007DB49A File Offset: 0x007D969A
 		public IWaitMovieModeFixedTimeT()
 		{
 			this.Type = EEnterMovieModeDurationType.BorderAnimFinished;

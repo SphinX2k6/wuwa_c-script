@@ -5,14 +5,13 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000639 RID: 1593
+	// Token: 0x020006D6 RID: 1750
 	public class IQteCallback_SetValue
 	{
-		// Token: 0x040017AB RID: 6059
-		[Nullable(1)]
+		// Token: 0x0400199D RID: 6557
 		public List<ActionInfo> Actions;
 
-		// Token: 0x040017AC RID: 6060
+		// Token: 0x0400199E RID: 6558
 		[Nullable(2)]
 		public string SendSelfEvent;
 	}

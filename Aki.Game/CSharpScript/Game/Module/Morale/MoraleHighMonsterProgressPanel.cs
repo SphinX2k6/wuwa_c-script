@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053B1 RID: 21425
+	// Token: 0x02004394 RID: 17300
 	public class MoraleHighMonsterProgressPanel : UiPanelBase
 	{
-		// Token: 0x06036C06 RID: 224262 RVA: 0x00CF5734 File Offset: 0x00CF3934
+		// Token: 0x0602BB4C RID: 179020 RVA: 0x00C447DC File Offset: 0x00C429DC
 		[NullableContext(1)]
 		public UniTask Init(UUIItem item)
 		{
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C07 RID: 224263 RVA: 0x00CF577F File Offset: 0x00CF397F
+		// Token: 0x0602BB4D RID: 179021 RVA: 0x00C44827 File Offset: 0x00C42A27
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036C08 RID: 224264 RVA: 0x00CF57A4 File Offset: 0x00CF39A4
+		// Token: 0x0602BB4E RID: 179022 RVA: 0x00C4484C File Offset: 0x00C42A4C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleHighMonsterProgressPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -44,22 +44,22 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C09 RID: 224265 RVA: 0x00CF57E7 File Offset: 0x00CF39E7
+		// Token: 0x0602BB4F RID: 179023 RVA: 0x00C4488F File Offset: 0x00C42A8F
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06036C0A RID: 224266 RVA: 0x00CF57E9 File Offset: 0x00CF39E9
+		// Token: 0x0602BB50 RID: 179024 RVA: 0x00C44891 File Offset: 0x00C42A91
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x06036C0B RID: 224267 RVA: 0x00CF57EB File Offset: 0x00CF39EB
+		// Token: 0x0602BB51 RID: 179025 RVA: 0x00C44893 File Offset: 0x00C42A93
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x06036C0C RID: 224268 RVA: 0x00CF57F0 File Offset: 0x00CF39F0
+		// Token: 0x0602BB52 RID: 179026 RVA: 0x00C44898 File Offset: 0x00C42A98
 		public void UpdateProgress(int? val = null)
 		{
 			int value = val ?? MoraleModel.Instance.GetAllHighMonsterProgress();
@@ -77,10 +77,10 @@ namespace CSharpScript.Game.Module.Morale
 			text.SetText(newText, true);
 		}
 
-		// Token: 0x0200B64B RID: 46667
+		// Token: 0x0200A083 RID: 41091
 		private class EChildType
 		{
-			// Token: 0x040373A3 RID: 226211
+			// Token: 0x04031DF8 RID: 204280
 			public const int TextProgress = 0;
 		}
 	}

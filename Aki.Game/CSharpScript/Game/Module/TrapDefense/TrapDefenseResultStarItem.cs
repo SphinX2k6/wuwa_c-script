@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AA4 RID: 19108
+	// Token: 0x02003A4C RID: 14924
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	internal class TrapDefenseResultStarItem : GridProxyAbstract<ITrapDefenseStarInfo>
 	{
-		// Token: 0x06031846 RID: 202822 RVA: 0x00B7AC84 File Offset: 0x00B78E84
+		// Token: 0x060265D6 RID: 157142 RVA: 0x00ABEC38 File Offset: 0x00ABCE38
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031847 RID: 202823 RVA: 0x00B7ACCC File Offset: 0x00B78ECC
+		// Token: 0x060265D7 RID: 157143 RVA: 0x00ABEC80 File Offset: 0x00ABCE80
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 			this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnAnimEnd), false);
 		}
 
-		// Token: 0x06031848 RID: 202824 RVA: 0x00B7ACF7 File Offset: 0x00B78EF7
+		// Token: 0x060265D8 RID: 157144 RVA: 0x00ABECAB File Offset: 0x00ABCEAB
 		public override void Refresh(ITrapDefenseStarInfo data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			item.SetUIActive(data.IsAchieve && (!data.IsNew || data.HasPlayed));
 		}
 
-		// Token: 0x06031849 RID: 202825 RVA: 0x00B7AD30 File Offset: 0x00B78F30
+		// Token: 0x060265D9 RID: 157145 RVA: 0x00ABECE4 File Offset: 0x00ABCEE4
 		public void PlayAnim()
 		{
 			if (this.Data.IsNew && !this.Data.HasPlayed)
@@ -87,16 +87,16 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603184A RID: 202826 RVA: 0x00B7ADC3 File Offset: 0x00B78FC3
+		// Token: 0x060265DA RID: 157146 RVA: 0x00ABED77 File Offset: 0x00ABCF77
 		private void OnAnimEnd(string name)
 		{
 			this.Data.HasPlayed = true;
 		}
 
-		// Token: 0x0401A77E RID: 108414
+		// Token: 0x040150D0 RID: 86224
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401A77F RID: 108415
+		// Token: 0x040150D1 RID: 86225
 		private ITrapDefenseStarInfo Data;
 	}
 }

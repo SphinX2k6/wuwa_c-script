@@ -3,14 +3,14 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x02000073 RID: 115
+	// Token: 0x02000076 RID: 118
 	[EnumExtensions]
 	public enum EMetaType
 	{
-		// Token: 0x04000230 RID: 560
+		// Token: 0x0400025C RID: 604
 		[EnumStringMember("___Map___")]
 		Map,
-		// Token: 0x04000231 RID: 561
+		// Token: 0x0400025D RID: 605
 		[EnumStringMember("___Set___")]
 		Set
 	}

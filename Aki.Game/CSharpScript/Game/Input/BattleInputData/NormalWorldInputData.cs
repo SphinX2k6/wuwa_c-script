@@ -5,12 +5,12 @@ using CSharpScript.Game.InputSetting;
 
 namespace CSharpScript.Game.Input.BattleInputData
 {
-	// Token: 0x02006FDE RID: 28638
+	// Token: 0x0200615F RID: 24927
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NormalWorldInputData : BattleInputData
 	{
-		// Token: 0x06045A35 RID: 285237 RVA: 0x0114AF1C File Offset: 0x0114911C
+		// Token: 0x0603BBE6 RID: 244710 RVA: 0x010F4D10 File Offset: 0x010F2F10
 		public NormalWorldInputData()
 		{
 			Dictionary<string, EInputAction> dictionary = new Dictionary<string, EInputAction>();
@@ -39,22 +39,22 @@ namespace CSharpScript.Game.Input.BattleInputData
 			base..ctor(EInputDataType.NormalWorld, EInputBindingType.Original);
 		}
 
-		// Token: 0x06045A36 RID: 285238 RVA: 0x0114B077 File Offset: 0x01149277
+		// Token: 0x0603BBE7 RID: 244711 RVA: 0x010F4E6B File Offset: 0x010F306B
 		protected override Dictionary<string, EInputAction> OnGetActionMap()
 		{
 			return this.ActionMap;
 		}
 
-		// Token: 0x06045A37 RID: 285239 RVA: 0x0114B07F File Offset: 0x0114927F
+		// Token: 0x0603BBE8 RID: 244712 RVA: 0x010F4E73 File Offset: 0x010F3073
 		protected override Dictionary<string, EInputAxis> OnGetAxisMap()
 		{
 			return this.AxisMap;
 		}
 
-		// Token: 0x04024582 RID: 148866
+		// Token: 0x0401F837 RID: 129079
 		private readonly Dictionary<string, EInputAction> ActionMap;
 
-		// Token: 0x04024583 RID: 148867
+		// Token: 0x0401F838 RID: 129080
 		private readonly Dictionary<string, EInputAxis> AxisMap;
 	}
 }

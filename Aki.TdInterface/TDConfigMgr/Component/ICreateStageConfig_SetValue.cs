@@ -5,21 +5,21 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000294 RID: 660
+	// Token: 0x020002D7 RID: 727
 	public class ICreateStageConfig_SetValue
 	{
-		// Token: 0x04000B9F RID: 2975
+		// Token: 0x04000C80 RID: 3200
 		public float? PerformDuration;
 
-		// Token: 0x04000BA0 RID: 2976
+		// Token: 0x04000C81 RID: 3201
 		[Nullable(2)]
 		public ICreateBulletConfig BulletConfig;
 
-		// Token: 0x04000BA1 RID: 2977
+		// Token: 0x04000C82 RID: 3202
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> Actions;
 	}

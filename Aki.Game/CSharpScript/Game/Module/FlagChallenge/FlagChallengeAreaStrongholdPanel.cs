@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A50 RID: 23120
+	// Token: 0x02004A2C RID: 18988
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeAreaStrongholdPanel : UiPanelBase
 	{
-		// Token: 0x0603A9EF RID: 240111 RVA: 0x00DF45E2 File Offset: 0x00DF27E2
+		// Token: 0x0602F938 RID: 194872 RVA: 0x00D44B66 File Offset: 0x00D42D66
 		public FlagChallengeAreaStrongholdPanel(int activityId)
 		{
 			this.ActivityId = activityId;
 		}
 
-		// Token: 0x0603A9F0 RID: 240112 RVA: 0x00DF45F4 File Offset: 0x00DF27F4
+		// Token: 0x0602F939 RID: 194873 RVA: 0x00D44B78 File Offset: 0x00D42D78
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603A9F1 RID: 240113 RVA: 0x00DF46D4 File Offset: 0x00DF28D4
+		// Token: 0x0602F93A RID: 194874 RVA: 0x00D44C58 File Offset: 0x00D42E58
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FlagChallengeAreaStrongholdPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A9F2 RID: 240114 RVA: 0x00DF4718 File Offset: 0x00DF2918
+		// Token: 0x0602F93B RID: 194875 RVA: 0x00D44C9C File Offset: 0x00D42E9C
 		public void RefreshView(int id)
 		{
 			this.Data = FlagChallengeModel.Instance.GetStrongholdData(id);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base.GetItem(7).SetUIActive(!flag);
 		}
 
-		// Token: 0x0603A9F3 RID: 240115 RVA: 0x00DF4884 File Offset: 0x00DF2A84
+		// Token: 0x0602F93C RID: 194876 RVA: 0x00D44E08 File Offset: 0x00D43008
 		private string GetLevelDiffBgRes(int targetLevel)
 		{
 			switch (FlagChallengeModel.Instance.GetLevelDiffType(this.ActivityId, targetLevel, null))
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603A9F4 RID: 240116 RVA: 0x00DF48D8 File Offset: 0x00DF2AD8
+		// Token: 0x0602F93D RID: 194877 RVA: 0x00D44E5C File Offset: 0x00D4305C
 		private void OnClickButton(int _)
 		{
 			int challengeLevelId = this.Data.StrongholdConfig.ChallengeLevelId;
@@ -119,24 +119,24 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0401E8D8 RID: 125144
+		// Token: 0x0401937F RID: 103295
 		[Nullable(2)]
 		private FlagChallengeStrongholdData Data;
 
-		// Token: 0x0401E8D9 RID: 125145
+		// Token: 0x04019380 RID: 103296
 		private readonly int ActivityId;
 
-		// Token: 0x0401E8DA RID: 125146
+		// Token: 0x04019381 RID: 103297
 		[Nullable(2)]
 		private ActivityDescriptionTypeA DescriptionComponent;
 
-		// Token: 0x0401E8DB RID: 125147
+		// Token: 0x04019382 RID: 103298
 		private ButtonItem FunctionButton;
 
-		// Token: 0x0401E8DC RID: 125148
+		// Token: 0x04019383 RID: 103299
 		private FlagChallengeLockItem LockItem;
 
-		// Token: 0x0401E8DD RID: 125149
+		// Token: 0x04019384 RID: 103300
 		private FlagChallengeCompleteItem CompleteItem;
 	}
 }

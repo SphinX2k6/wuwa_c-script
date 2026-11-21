@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001070 RID: 4208
+// Token: 0x02000524 RID: 1316
 public class GuessJokerCoinFlipItem : UiPanelBase
 {
-	// Token: 0x06006CAF RID: 27823 RVA: 0x0015F9B0 File Offset: 0x0015DBB0
+	// Token: 0x06004044 RID: 16452 RVA: 0x001682E4 File Offset: 0x001664E4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class GuessJokerCoinFlipItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006CB0 RID: 27824 RVA: 0x0015FA5C File Offset: 0x0015DC5C
+	// Token: 0x06004045 RID: 16453 RVA: 0x00168390 File Offset: 0x00166590
 	public void Refresh()
 	{
 		EGuessJokerPlayerType firstPlayerTurn = GuessJokerGamePlayModel.Instance.FirstPlayerTurn;
@@ -54,20 +54,20 @@ public class GuessJokerCoinFlipItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "GuessJoker_FirstPlayerText", new <>z__ReadOnlySingleElementList<object>(playerNameByType));
 	}
 
-	// Token: 0x06006CB1 RID: 27825 RVA: 0x0015FB98 File Offset: 0x0015DD98
+	// Token: 0x06004046 RID: 16454 RVA: 0x001684CC File Offset: 0x001666CC
 	[NullableContext(1)]
 	public void SetClickCallback(Action callback)
 	{
 		this.ClickCallback = callback;
 	}
 
-	// Token: 0x06006CB2 RID: 27826 RVA: 0x0015FBA1 File Offset: 0x0015DDA1
+	// Token: 0x06004047 RID: 16455 RVA: 0x001684D5 File Offset: 0x001666D5
 	public void SetClickEnable(bool enable)
 	{
 		this.ClickEnable = enable;
 	}
 
-	// Token: 0x06006CB3 RID: 27827 RVA: 0x0015FBAA File Offset: 0x0015DDAA
+	// Token: 0x06004048 RID: 16456 RVA: 0x001684DE File Offset: 0x001666DE
 	private void OnMaskButtonClick()
 	{
 		if (!this.ClickEnable)
@@ -82,29 +82,29 @@ public class GuessJokerCoinFlipItem : UiPanelBase
 		clickCallback();
 	}
 
-	// Token: 0x04003253 RID: 12883
+	// Token: 0x040032EC RID: 13036
 	[Nullable(2)]
 	private Action ClickCallback;
 
-	// Token: 0x04003254 RID: 12884
+	// Token: 0x040032ED RID: 13037
 	private bool ClickEnable;
 
-	// Token: 0x02007665 RID: 30309
+	// Token: 0x020067F9 RID: 26617
 	private static class EComponentDefine
 	{
-		// Token: 0x0402714A RID: 160074
+		// Token: 0x04022495 RID: 140437
 		public const int MaskButton = 0;
 
-		// Token: 0x0402714B RID: 160075
+		// Token: 0x04022496 RID: 140438
 		public const int CoinTexture = 1;
 
-		// Token: 0x0402714C RID: 160076
+		// Token: 0x04022497 RID: 140439
 		public const int ResultText = 2;
 
-		// Token: 0x0402714D RID: 160077
+		// Token: 0x04022498 RID: 140440
 		public const int BackCoinTexture = 3;
 
-		// Token: 0x0402714E RID: 160078
+		// Token: 0x04022499 RID: 140441
 		public const int FrontCoinTexture = 4;
 	}
 }

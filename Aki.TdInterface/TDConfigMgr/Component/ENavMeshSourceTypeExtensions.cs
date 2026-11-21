@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009A8 RID: 2472
+	// Token: 0x02000A5D RID: 2653
 	public static class ENavMeshSourceTypeExtensions
 	{
-		// Token: 0x06003725 RID: 14117 RVA: 0x0008F570 File Offset: 0x0008D770
+		// Token: 0x06003AB5 RID: 15029 RVA: 0x00097634 File Offset: 0x00095834
 		public static string ToEnumString(this ENavMeshSourceType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003726 RID: 14118 RVA: 0x0008F598 File Offset: 0x0008D798
+		// Token: 0x06003AB6 RID: 15030 RVA: 0x0009765C File Offset: 0x0009585C
 		public static ENavMeshSourceType FromString(string name)
 		{
 			ENavMeshSourceType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003727 RID: 14119 RVA: 0x0008F5C1 File Offset: 0x0008D7C1
+		// Token: 0x06003AB7 RID: 15031 RVA: 0x00097685 File Offset: 0x00095885
 		public static bool TryFromString(string name, out ENavMeshSourceType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003728 RID: 14120 RVA: 0x0008F5E6 File Offset: 0x0008D7E6
+		// Token: 0x06003AB8 RID: 15032 RVA: 0x000976AA File Offset: 0x000958AA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003729 RID: 14121 RVA: 0x0008F5F6 File Offset: 0x0008D7F6
+		// Token: 0x06003AB9 RID: 15033 RVA: 0x000976BA File Offset: 0x000958BA
 		public static ENavMeshSourceType[] GetValues()
 		{
 			return new ENavMeshSourceType[1];
 		}
 
-		// Token: 0x0600372A RID: 14122 RVA: 0x0008F5FE File Offset: 0x0008D7FE
+		// Token: 0x06003ABA RID: 15034 RVA: 0x000976C2 File Offset: 0x000958C2
 		public static string[] GetNames()
 		{
 			return new string[]

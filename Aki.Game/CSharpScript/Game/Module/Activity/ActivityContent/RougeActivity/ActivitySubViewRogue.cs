@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 {
-	// Token: 0x020061B2 RID: 25010
+	// Token: 0x02005130 RID: 20784
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivitySubViewRogue : ActivitySubViewBase
 	{
-		// Token: 0x0603F289 RID: 258697 RVA: 0x00F41B04 File Offset: 0x00F3FD04
+		// Token: 0x06033F49 RID: 212809 RVA: 0x00E889D0 File Offset: 0x00E86BD0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			};
 		}
 
-		// Token: 0x0603F28A RID: 258698 RVA: 0x00F41C4C File Offset: 0x00F3FE4C
+		// Token: 0x06033F4A RID: 212810 RVA: 0x00E88B18 File Offset: 0x00E86D18
 		protected void OnBtnAchievement()
 		{
 			if (ActivityRogueController.Instance.GetCurrentActivityData().GetRogueActivityState() == ERogueActivityState.Close)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			UiManager.Instance.OpenView(EUiViewName.RoguelikeAchievementView, null, null);
 		}
 
-		// Token: 0x0603F28B RID: 258699 RVA: 0x00F41CD0 File Offset: 0x00F3FED0
+		// Token: 0x06033F4B RID: 212811 RVA: 0x00E88B9C File Offset: 0x00E86D9C
 		protected void OnBtnShop()
 		{
 			ActivityRogueData currentActivityData = ActivityRogueController.Instance.GetCurrentActivityData();
@@ -90,12 +90,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			PayShopController.Instance.OpenPayShopView(payShopViewData, null);
 		}
 
-		// Token: 0x0603F28C RID: 258700 RVA: 0x00F41D8E File Offset: 0x00F3FF8E
+		// Token: 0x06033F4C RID: 212812 RVA: 0x00E88C5A File Offset: 0x00E86E5A
 		protected override void OnSetData()
 		{
 		}
 
-		// Token: 0x0603F28D RID: 258701 RVA: 0x00F41D90 File Offset: 0x00F3FF90
+		// Token: 0x06033F4D RID: 212813 RVA: 0x00E88C5C File Offset: 0x00E86E5C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivitySubViewRogue.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F28E RID: 258702 RVA: 0x00F41DD4 File Offset: 0x00F3FFD4
+		// Token: 0x06033F4E RID: 212814 RVA: 0x00E88CA0 File Offset: 0x00E86EA0
 		protected override void OnStart()
 		{
 			Activity? localConfig = (this.ActivityBaseData as ActivityRogueData).LocalConfig;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			this.OnRefreshView();
 		}
 
-		// Token: 0x0603F28F RID: 258703 RVA: 0x00F41F40 File Offset: 0x00F40140
+		// Token: 0x06033F4F RID: 212815 RVA: 0x00E88E0C File Offset: 0x00E8700C
 		protected override UniTask OnBeforeHideSelfAsync()
 		{
 			ActivitySubViewRogue.<OnBeforeHideSelfAsync>d__11 <OnBeforeHideSelfAsync>d__;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			return <OnBeforeHideSelfAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F290 RID: 258704 RVA: 0x00F41F7C File Offset: 0x00F4017C
+		// Token: 0x06033F50 RID: 212816 RVA: 0x00E88E48 File Offset: 0x00E87048
 		protected override void OnRefreshView()
 		{
 			this.RefreshCondition();
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			base.GetItem(9).SetUIActive(preGuideQuestFinishState);
 		}
 
-		// Token: 0x0603F291 RID: 258705 RVA: 0x00F41FFC File Offset: 0x00F401FC
+		// Token: 0x06033F51 RID: 212817 RVA: 0x00E88EC8 File Offset: 0x00E870C8
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshCondition();
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0603F292 RID: 258706 RVA: 0x00F42010 File Offset: 0x00F40210
+		// Token: 0x06033F52 RID: 212818 RVA: 0x00E88EDC File Offset: 0x00E870DC
 		private void RefreshRedDot()
 		{
 			ActivityFunctionalTypeA functionalComponent = this.FunctionalComponent;
@@ -186,14 +186,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			functionalComponent.SetFunctionRedDotVisible((this.ActivityBaseData as ActivityRogueData).RedPointShowState);
 		}
 
-		// Token: 0x0603F293 RID: 258707 RVA: 0x00F42034 File Offset: 0x00F40234
+		// Token: 0x06033F53 RID: 212819 RVA: 0x00E88F00 File Offset: 0x00E87100
 		private void RefreshTimerText()
 		{
 			string item = this.GetTimeVisibleAndRemainTime().Item2;
 			this.TitleComponent.SetTimeTextByText(item);
 		}
 
-		// Token: 0x0603F294 RID: 258708 RVA: 0x00F42059 File Offset: 0x00F40259
+		// Token: 0x06033F54 RID: 212820 RVA: 0x00E88F25 File Offset: 0x00E87125
 		private void FunctionExecute()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			});
 		}
 
-		// Token: 0x0603F295 RID: 258709 RVA: 0x00F42078 File Offset: 0x00F40278
+		// Token: 0x06033F55 RID: 212821 RVA: 0x00E88F44 File Offset: 0x00E87144
 		private void RefreshCondition()
 		{
 			RogueActivity? extraConfig = (this.ActivityBaseData as ActivityRogueData).GetExtraConfig();
@@ -253,13 +253,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			this.FunctionalComponent.SetLockTextByTextId("Rogue_Function_End_Tip", Array.Empty<string>());
 		}
 
-		// Token: 0x04020EC1 RID: 134849
+		// Token: 0x0401B7EE RID: 112622
 		private ActivityTitleTypeA TitleComponent;
 
-		// Token: 0x04020EC2 RID: 134850
+		// Token: 0x0401B7EF RID: 112623
 		private ActivityDescriptionTypeA DescriptionComponent;
 
-		// Token: 0x04020EC3 RID: 134851
+		// Token: 0x0401B7F0 RID: 112624
 		[Nullable(new byte[]
 		{
 			2,
@@ -267,10 +267,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 		})]
 		private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-		// Token: 0x04020EC4 RID: 134852
+		// Token: 0x0401B7F1 RID: 112625
 		private ActivityFunctionalTypeA FunctionalComponent;
 
-		// Token: 0x04020EC5 RID: 134853
+		// Token: 0x0401B7F2 RID: 112626
 		private RoguelikeBlackFlowerItem BlackFlowerComponent;
 	}
 }

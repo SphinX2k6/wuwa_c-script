@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x02005399 RID: 21401
+	// Token: 0x0200437C RID: 17276
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleAreaInfoFlagItem : UiPanelBase
 	{
-		// Token: 0x06036ACB RID: 223947 RVA: 0x00CF0888 File Offset: 0x00CEEA88
+		// Token: 0x0602BA11 RID: 178705 RVA: 0x00C3F930 File Offset: 0x00C3DB30
 		public UniTask Init(string path, UUIItem parentItem, MoraleAreaFlagData flagData)
 		{
 			MoraleAreaInfoFlagItem.<Init>d__4 <Init>d__;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036ACC RID: 223948 RVA: 0x00CF08E4 File Offset: 0x00CEEAE4
+		// Token: 0x0602BA12 RID: 178706 RVA: 0x00C3F98C File Offset: 0x00C3DB8C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06036ACD RID: 223949 RVA: 0x00CF0A0E File Offset: 0x00CEEC0E
+		// Token: 0x0602BA13 RID: 178707 RVA: 0x00C3FAB6 File Offset: 0x00C3DCB6
 		protected override void OnStart()
 		{
 			UUIText text = base.GetText(2);
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.Morale
 			text.ShowTextNew(this.FlagData.Config.Index);
 		}
 
-		// Token: 0x06036ACE RID: 223950 RVA: 0x00CF0A31 File Offset: 0x00CEEC31
+		// Token: 0x0602BA14 RID: 178708 RVA: 0x00C3FAD9 File Offset: 0x00C3DCD9
 		[Conditional("WITH_EDITOR")]
 		private void EditorShowFlagInfo()
 		{
 		}
 
-		// Token: 0x06036ACF RID: 223951 RVA: 0x00CF0A33 File Offset: 0x00CEEC33
+		// Token: 0x0602BA15 RID: 178709 RVA: 0x00C3FADB File Offset: 0x00C3DCDB
 		private void OnBtnSelf(EToggleState toggleState)
 		{
 			Action<MoraleAreaFlagData> clickCallback = this.ClickCallback;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Morale
 			clickCallback(this.FlagData);
 		}
 
-		// Token: 0x06036AD0 RID: 223952 RVA: 0x00CF0A4C File Offset: 0x00CEEC4C
+		// Token: 0x0602BA16 RID: 178710 RVA: 0x00C3FAF4 File Offset: 0x00C3DCF4
 		public void UpdateData()
 		{
 			this.UpdateSelectState();
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.SetSpriteByPath(isActive ? array2[1] : array[1], sprite, false, null, null);
 		}
 
-		// Token: 0x06036AD1 RID: 223953 RVA: 0x00CF0B10 File Offset: 0x00CEED10
+		// Token: 0x0602BA17 RID: 178711 RVA: 0x00C3FBB8 File Offset: 0x00C3DDB8
 		public void UpdatePosition(UUIItem item)
 		{
 			FVector uiworldPosition = item.GetUIWorldPosition();
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Morale
 			rootItem.SetUIWorldLocation(uiworldPosition);
 		}
 
-		// Token: 0x06036AD2 RID: 223954 RVA: 0x00CF0B38 File Offset: 0x00CEED38
+		// Token: 0x0602BA18 RID: 178712 RVA: 0x00C3FBE0 File Offset: 0x00C3DDE0
 		public void UpdateSelectState()
 		{
 			EToggleState state = this.FlagData.IsSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Morale
 			extendToggle.SetToggleStateForce(state, false, false, false);
 		}
 
-		// Token: 0x06036AD3 RID: 223955 RVA: 0x00CF0B6C File Offset: 0x00CEED6C
+		// Token: 0x0602BA19 RID: 178713 RVA: 0x00C3FC14 File Offset: 0x00C3DE14
 		public void PlayStartSequence()
 		{
 			LevelSequencePlayer sequence = this.Sequence;
@@ -149,10 +149,10 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x0401CE16 RID: 118294
+		// Token: 0x040178AE RID: 96430
 		public MoraleAreaFlagData FlagData;
 
-		// Token: 0x0401CE17 RID: 118295
+		// Token: 0x040178AF RID: 96431
 		[Nullable(new byte[]
 		{
 			2,
@@ -160,25 +160,25 @@ namespace CSharpScript.Game.Module.Morale
 		})]
 		public Action<MoraleAreaFlagData> ClickCallback;
 
-		// Token: 0x0401CE18 RID: 118296
+		// Token: 0x040178B0 RID: 96432
 		[Nullable(2)]
 		public LevelSequencePlayer Sequence;
 
-		// Token: 0x0200B604 RID: 46596
+		// Token: 0x0200A03C RID: 41020
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04037222 RID: 225826
+			// Token: 0x04031C77 RID: 203895
 			ToggleSelf,
-			// Token: 0x04037223 RID: 225827
+			// Token: 0x04031C78 RID: 203896
 			TextureIcon,
-			// Token: 0x04037224 RID: 225828
+			// Token: 0x04031C79 RID: 203897
 			TxtTitle,
-			// Token: 0x04037225 RID: 225829
+			// Token: 0x04031C7A RID: 203898
 			ItemSelect,
-			// Token: 0x04037226 RID: 225830
+			// Token: 0x04031C7B RID: 203899
 			SpriteTitleBg,
-			// Token: 0x04037227 RID: 225831
+			// Token: 0x04031C7C RID: 203900
 			ItemBoxShow
 		}
 	}

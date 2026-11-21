@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DE4 RID: 19940
+	// Token: 0x02003DAD RID: 15789
 	public class RoguelikeActivityNormalInstButton : UiPanelBase
 	{
-		// Token: 0x0603376C RID: 210796 RVA: 0x00C06328 File Offset: 0x00C04528
+		// Token: 0x060285D7 RID: 165335 RVA: 0x00B4F838 File Offset: 0x00B4DA38
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603376D RID: 210797 RVA: 0x00C06410 File Offset: 0x00C04610
+		// Token: 0x060285D8 RID: 165336 RVA: 0x00B4F920 File Offset: 0x00B4DB20
 		private void ButtonCallback()
 		{
 			Action buttonCallbackInternal = this.ButtonCallbackInternal;
@@ -46,36 +46,36 @@ namespace CSharpScript.Game.Module.Roguelike
 			buttonCallbackInternal();
 		}
 
-		// Token: 0x0603376E RID: 210798 RVA: 0x00C06422 File Offset: 0x00C04622
+		// Token: 0x060285D9 RID: 165337 RVA: 0x00B4F932 File Offset: 0x00B4DB32
 		[NullableContext(1)]
 		public void SetButtonCallback(Action callback)
 		{
 			this.ButtonCallbackInternal = callback;
 		}
 
-		// Token: 0x0603376F RID: 210799 RVA: 0x00C0642B File Offset: 0x00C0462B
+		// Token: 0x060285DA RID: 165338 RVA: 0x00B4F93B File Offset: 0x00B4DB3B
 		public void SetProcessingState(bool bVisible)
 		{
 			base.GetItem(3).SetUIActive(bVisible);
 		}
 
-		// Token: 0x0401B517 RID: 111895
+		// Token: 0x04015EEA RID: 89834
 		[Nullable(2)]
 		private Action ButtonCallbackInternal;
 
-		// Token: 0x0200AF6B RID: 44907
+		// Token: 0x020099A0 RID: 39328
 		private class EComponents
 		{
-			// Token: 0x0403543B RID: 218171
+			// Token: 0x0402FE6E RID: 196206
 			public const int BtnConfirm = 0;
 
-			// Token: 0x0403543C RID: 218172
+			// Token: 0x0402FE6F RID: 196207
 			public const int TxtConfirm = 1;
 
-			// Token: 0x0403543D RID: 218173
+			// Token: 0x0402FE70 RID: 196208
 			public const int ItemRedDot = 2;
 
-			// Token: 0x0403543E RID: 218174
+			// Token: 0x0402FE71 RID: 196209
 			public const int PanelProcessing = 3;
 		}
 	}

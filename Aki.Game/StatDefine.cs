@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x02000254 RID: 596
+// Token: 0x02000258 RID: 600
 public class StatDefine : IStaticVariableResetter
 {
-	// Token: 0x06002422 RID: 9250 RVA: 0x000DC80F File Offset: 0x000DAA0F
+	// Token: 0x060024D9 RID: 9433 RVA: 0x000E2BC3 File Offset: 0x000E0DC3
 	static StatDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(StatDefine.CreateStaticDefaultValue), new Action(StatDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06002423 RID: 9251 RVA: 0x000DC830 File Offset: 0x000DAA30
+	// Token: 0x060024DA RID: 9434 RVA: 0x000E2BE4 File Offset: 0x000E0DE4
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -37,7 +37,7 @@ public class StatDefine : IStaticVariableResetter
 		return dictionary2;
 	}
 
-	// Token: 0x06002424 RID: 9252 RVA: 0x000DC908 File Offset: 0x000DAB08
+	// Token: 0x060024DB RID: 9435 RVA: 0x000E2CBC File Offset: 0x000E0EBC
 	[NullableContext(1)]
 	private static void StatConsoleCommand(UObject worldContextObject, string command, [Nullable(2)] APlayerController specificPlayer = null)
 	{
@@ -52,7 +52,7 @@ public class StatDefine : IStaticVariableResetter
 		FKuroPerfSightHelper.PostValueFloat1("ExecuteConsoleCommand", key, (float)num);
 	}
 
-	// Token: 0x06002425 RID: 9253 RVA: 0x000DC954 File Offset: 0x000DAB54
+	// Token: 0x060024DC RID: 9436 RVA: 0x000E2D08 File Offset: 0x000E0F08
 	public static void InitStatConsoleCommand()
 	{
 		Action<UObject, string, APlayerController> action;
@@ -63,27 +63,27 @@ public class StatDefine : IStaticVariableResetter
 		StatDefine.orgExecuteConsoleCommand = action;
 	}
 
-	// Token: 0x06002426 RID: 9254 RVA: 0x000DC976 File Offset: 0x000DAB76
+	// Token: 0x060024DD RID: 9437 RVA: 0x000E2D2A File Offset: 0x000E0F2A
 	public static void CreateStaticDefaultValue()
 	{
 		StatDefine.battleStat = StatDefine.InitializeBattleStat();
 	}
 
-	// Token: 0x06002427 RID: 9255 RVA: 0x000DC982 File Offset: 0x000DAB82
+	// Token: 0x060024DE RID: 9438 RVA: 0x000E2D36 File Offset: 0x000E0F36
 	public static void ResetStaticDefaultValue()
 	{
 		StatDefine.battleStat = null;
 		StatDefine.orgExecuteConsoleCommand = null;
 	}
 
-	// Token: 0x040023C4 RID: 9156
+	// Token: 0x04002442 RID: 9282
 	public const bool BATTLESTAT_ENABLED = true;
 
-	// Token: 0x040023C5 RID: 9157
+	// Token: 0x04002443 RID: 9283
 	[Nullable(1)]
 	public const string BATTLESTAT_GROUP = "STATGROUP_KuroBattle";
 
-	// Token: 0x040023C6 RID: 9158
+	// Token: 0x04002444 RID: 9284
 	[Nullable(new byte[]
 	{
 		2,
@@ -92,7 +92,7 @@ public class StatDefine : IStaticVariableResetter
 	})]
 	public static Dictionary<string, Stat> battleStat;
 
-	// Token: 0x040023C7 RID: 9159
+	// Token: 0x04002445 RID: 9285
 	[Nullable(new byte[]
 	{
 		2,
@@ -102,11 +102,11 @@ public class StatDefine : IStaticVariableResetter
 	})]
 	private static Action<UObject, string, APlayerController> orgExecuteConsoleCommand;
 
-	// Token: 0x02007441 RID: 29761
+	// Token: 0x020065D2 RID: 26066
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04026825 RID: 157733
+		// Token: 0x04021B63 RID: 138083
 		[Nullable(new byte[]
 		{
 			0,

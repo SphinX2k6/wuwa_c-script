@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007610 RID: 30224
+	// Token: 0x02007E1E RID: 32286
 	public struct IWindProtagonistParkour4 : IFlatbufferObject
 	{
-		// Token: 0x1700E58D RID: 58765
-		// (get) Token: 0x060370D8 RID: 225496 RVA: 0x00777CB9 File Offset: 0x00775EB9
+		// Token: 0x1700F1CB RID: 61899
+		// (get) Token: 0x0603A57D RID: 238973 RVA: 0x007DBDB5 File Offset: 0x007D9FB5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060370D9 RID: 225497 RVA: 0x00777CC6 File Offset: 0x00775EC6
+		// Token: 0x0603A57E RID: 238974 RVA: 0x007DBDC2 File Offset: 0x007D9FC2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060370DA RID: 225498 RVA: 0x00777CD0 File Offset: 0x00775ED0
+		// Token: 0x0603A57F RID: 238975 RVA: 0x007DBDCC File Offset: 0x007D9FCC
 		public static IWindProtagonistParkour4 GetRootAsIWindProtagonistParkour4(ByteBuffer _bb)
 		{
 			return IWindProtagonistParkour4.GetRootAsIWindProtagonistParkour4(_bb, default(IWindProtagonistParkour4));
 		}
 
-		// Token: 0x060370DB RID: 225499 RVA: 0x00777CEC File Offset: 0x00775EEC
+		// Token: 0x0603A580 RID: 238976 RVA: 0x007DBDE8 File Offset: 0x007D9FE8
 		public static IWindProtagonistParkour4 GetRootAsIWindProtagonistParkour4(ByteBuffer _bb, IWindProtagonistParkour4 obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060370DC RID: 225500 RVA: 0x00777D09 File Offset: 0x00775F09
+		// Token: 0x0603A581 RID: 238977 RVA: 0x007DBE05 File Offset: 0x007DA005
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060370DD RID: 225501 RVA: 0x00777D18 File Offset: 0x00775F18
+		// Token: 0x0603A582 RID: 238978 RVA: 0x007DBE14 File Offset: 0x007DA014
 		public IWindProtagonistParkour4 __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E58E RID: 58766
-		// (get) Token: 0x060370DE RID: 225502 RVA: 0x00777D28 File Offset: 0x00775F28
+		// Token: 0x1700F1CC RID: 61900
+		// (get) Token: 0x0603A583 RID: 238979 RVA: 0x007DBE24 File Offset: 0x007DA024
 		public ELeisureInteract Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060370DF RID: 225503 RVA: 0x00777D64 File Offset: 0x00775F64
+		// Token: 0x0603A584 RID: 238980 RVA: 0x007DBE60 File Offset: 0x007DA060
 		public static Offset<IWindProtagonistParkour4> CreateIWindProtagonistParkour4(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IWindProtagonistParkour4.EndIWindProtagonistParkour4(builder);
 		}
 
-		// Token: 0x060370E0 RID: 225504 RVA: 0x00777D7A File Offset: 0x00775F7A
+		// Token: 0x0603A585 RID: 238981 RVA: 0x007DBE76 File Offset: 0x007DA076
 		public static void StartIWindProtagonistParkour4(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060370E1 RID: 225505 RVA: 0x00777D83 File Offset: 0x00775F83
+		// Token: 0x0603A586 RID: 238982 RVA: 0x007DBE7F File Offset: 0x007DA07F
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060370E2 RID: 225506 RVA: 0x00777D8E File Offset: 0x00775F8E
+		// Token: 0x0603A587 RID: 238983 RVA: 0x007DBE8A File Offset: 0x007DA08A
 		public static Offset<IWindProtagonistParkour4> EndIWindProtagonistParkour4(FlatBufferBuilder builder)
 		{
 			return new Offset<IWindProtagonistParkour4>(builder.EndTable());
 		}
 
-		// Token: 0x060370E3 RID: 225507 RVA: 0x00777D9C File Offset: 0x00775F9C
+		// Token: 0x0603A588 RID: 238984 RVA: 0x007DBE98 File Offset: 0x007DA098
 		public IWindProtagonistParkour4T UnPack()
 		{
 			IWindProtagonistParkour4T windProtagonistParkour4T = new IWindProtagonistParkour4T();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return windProtagonistParkour4T;
 		}
 
-		// Token: 0x060370E4 RID: 225508 RVA: 0x00777DB7 File Offset: 0x00775FB7
+		// Token: 0x0603A589 RID: 238985 RVA: 0x007DBEB3 File Offset: 0x007DA0B3
 		public void UnPackTo(IWindProtagonistParkour4T _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060370E5 RID: 225509 RVA: 0x00777DC8 File Offset: 0x00775FC8
+		// Token: 0x0603A58A RID: 238986 RVA: 0x007DBEC4 File Offset: 0x007DA0C4
 		public static Offset<IWindProtagonistParkour4> Pack(FlatBufferBuilder builder, IWindProtagonistParkour4T _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IWindProtagonistParkour4.CreateIWindProtagonistParkour4(builder, _o.Type);
 		}
 
-		// Token: 0x0401257F RID: 75135
+		// Token: 0x040135C9 RID: 79305
 		private Table __p;
 	}
 }

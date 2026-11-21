@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A6B RID: 2667
+	// Token: 0x02000B40 RID: 2880
 	public class ConfigUiPlayItemById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003E96 RID: 16022 RVA: 0x001BBE97 File Offset: 0x001BA097
+		// Token: 0x06004394 RID: 17300 RVA: 0x001DB22B File Offset: 0x001D942B
 		static ConfigUiPlayItemById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigUiPlayItemById.CreateStaticDefaultValue), new Action(ConfigUiPlayItemById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003E97 RID: 16023 RVA: 0x001BBEB8 File Offset: 0x001BA0B8
+		// Token: 0x06004395 RID: 17301 RVA: 0x001DB24C File Offset: 0x001D944C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigUiPlayItemById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003E98 RID: 16024 RVA: 0x001BBF37 File Offset: 0x001BA137
+		// Token: 0x06004396 RID: 17302 RVA: 0x001DB2CB File Offset: 0x001D94CB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigUiPlayItemById.LogPair = null;
 			ConfigUiPlayItemById.HandleId = 0;
 		}
 
-		// Token: 0x06003E99 RID: 16025 RVA: 0x001BBF45 File Offset: 0x001BA145
+		// Token: 0x06004397 RID: 17303 RVA: 0x001DB2D9 File Offset: 0x001D94D9
 		public static void Init()
 		{
 			ConfigUiPlayItemById.HandleId = ConfigCommon.InitDataStatement(ConfigUiPlayItemById.HandleId, "db_uiplayitem.db", "select BinData from `UiPlayItem` where Id=?");
 		}
 
-		// Token: 0x06003E9A RID: 16026 RVA: 0x001BBF60 File Offset: 0x001BA160
+		// Token: 0x06004398 RID: 17304 RVA: 0x001DB2F4 File Offset: 0x001D94F4
 		public static UiPlayItem? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigUiPlayItemById.HandleId, ConfigUiPlayItemById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new UiPlayItem?(rootAsUiPlayItem);
 		}
 
-		// Token: 0x040048D3 RID: 18643
+		// Token: 0x04004EA6 RID: 20134
 		private const string DB = "db_uiplayitem.db";
 
-		// Token: 0x040048D4 RID: 18644
+		// Token: 0x04004EA7 RID: 20135
 		private const string FILE = "u.UI玩法道具.xlsx";
 
-		// Token: 0x040048D5 RID: 18645
+		// Token: 0x04004EA8 RID: 20136
 		private const string TABLE = "UiPlayItem";
 
-		// Token: 0x040048D6 RID: 18646
+		// Token: 0x04004EA9 RID: 20137
 		private const string COMMAND = "select BinData from `UiPlayItem` where Id=?";
 
-		// Token: 0x040048D7 RID: 18647
+		// Token: 0x04004EAA RID: 20138
 		private const string KEY_PREFIX = "UiPlayItemById";
 
-		// Token: 0x040048D8 RID: 18648
+		// Token: 0x04004EAB RID: 20139
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040048D9 RID: 18649
+		// Token: 0x04004EAC RID: 20140
 		private static int HandleId;
 	}
 }

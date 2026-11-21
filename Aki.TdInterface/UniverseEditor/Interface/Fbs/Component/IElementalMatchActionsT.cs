@@ -5,25 +5,25 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005130 RID: 20784
+	// Token: 0x02005695 RID: 22165
 	public class IElementalMatchActionsT
 	{
-		// Token: 0x17009784 RID: 38788
-		// (get) Token: 0x06021866 RID: 137318 RVA: 0x004A7B66 File Offset: 0x004A5D66
-		// (set) Token: 0x06021867 RID: 137319 RVA: 0x004A7B6E File Offset: 0x004A5D6E
+		// Token: 0x17009F71 RID: 40817
+		// (get) Token: 0x060237BA RID: 145338 RVA: 0x004E1AF2 File Offset: 0x004DFCF2
+		// (set) Token: 0x060237BB RID: 145339 RVA: 0x004E1AFA File Offset: 0x004DFCFA
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17009785 RID: 38789
-		// (get) Token: 0x06021868 RID: 137320 RVA: 0x004A7B77 File Offset: 0x004A5D77
-		// (set) Token: 0x06021869 RID: 137321 RVA: 0x004A7B7F File Offset: 0x004A5D7F
+		// Token: 0x17009F72 RID: 40818
+		// (get) Token: 0x060237BC RID: 145340 RVA: 0x004E1B03 File Offset: 0x004DFD03
+		// (set) Token: 0x060237BD RID: 145341 RVA: 0x004E1B0B File Offset: 0x004DFD0B
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x17009786 RID: 38790
-		// (get) Token: 0x0602186A RID: 137322 RVA: 0x004A7B88 File Offset: 0x004A5D88
-		// (set) Token: 0x0602186B RID: 137323 RVA: 0x004A7B90 File Offset: 0x004A5D90
+		// Token: 0x17009F73 RID: 40819
+		// (get) Token: 0x060237BE RID: 145342 RVA: 0x004E1B14 File Offset: 0x004DFD14
+		// (set) Token: 0x060237BF RID: 145343 RVA: 0x004E1B1C File Offset: 0x004DFD1C
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602186C RID: 137324 RVA: 0x004A7B99 File Offset: 0x004A5D99
+		// Token: 0x060237C0 RID: 145344 RVA: 0x004E1B25 File Offset: 0x004DFD25
 		public IElementalMatchActionsT()
 		{
 			this.Condition = null;

@@ -5,18 +5,18 @@ using CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logi
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Goals
 {
-	// Token: 0x02006524 RID: 25892
+	// Token: 0x020054A2 RID: 21666
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ClearTypeCountGoal : LevelGoal
 	{
-		// Token: 0x06040EE1 RID: 265953 RVA: 0x00FBBCED File Offset: 0x00FB9EED
+		// Token: 0x06035BA5 RID: 220069 RVA: 0x00F02D1D File Offset: 0x00F00F1D
 		public ClearTypeCountGoal(EGoalCondType condType, EPieceType targetType, int[] targetTiers) : base(condType, targetTiers)
 		{
 			this.TargetType = targetType;
 		}
 
-		// Token: 0x06040EE2 RID: 265954 RVA: 0x00FBBD00 File Offset: 0x00FB9F00
+		// Token: 0x06035BA6 RID: 220070 RVA: 0x00F02D30 File Offset: 0x00F00F30
 		public override void OnSequencesSolved(SolvedData solved)
 		{
 			if (base.IsAchieved)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			base.MarkAchieved();
 		}
 
-		// Token: 0x04021DE8 RID: 138728
+		// Token: 0x0401C719 RID: 116505
 		public readonly EPieceType TargetType;
 	}
 }

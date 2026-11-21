@@ -4,17 +4,17 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006109 RID: 24841
+	// Token: 0x02005087 RID: 20615
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class RoverlikeActionViewBase : UiViewBase
 	{
-		// Token: 0x0603ECCD RID: 257229 RVA: 0x00F2A72D File Offset: 0x00F2892D
+		// Token: 0x0603398F RID: 211343 RVA: 0x00E71541 File Offset: 0x00E6F741
 		protected RoverlikeActionViewBase(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603ECCE RID: 257230 RVA: 0x00F2A736 File Offset: 0x00F28936
+		// Token: 0x06033990 RID: 211344 RVA: 0x00E7154A File Offset: 0x00E6F74A
 		protected override void OnBeforeCreateImplementImplement()
 		{
 			RoverlikeActionStack actionStack = this.GetActionStack();
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			actionStack.Push(this);
 		}
 
-		// Token: 0x0603ECCF RID: 257231 RVA: 0x00F2A749 File Offset: 0x00F28949
+		// Token: 0x06033991 RID: 211345 RVA: 0x00E7155D File Offset: 0x00E6F75D
 		protected override void OnBeforeDestroyImplement()
 		{
 			RoverlikeActionStack actionStack = this.GetActionStack();
@@ -36,14 +36,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			actionStack.Pop(this);
 		}
 
-		// Token: 0x0603ECD0 RID: 257232 RVA: 0x00F2A75C File Offset: 0x00F2895C
+		// Token: 0x06033992 RID: 211346 RVA: 0x00E71570 File Offset: 0x00E6F770
 		protected bool TryInteractAction(Action action)
 		{
 			RoverlikeActionStack actionStack = this.GetActionStack();
 			return actionStack != null && actionStack.TryAction(this, action);
 		}
 
-		// Token: 0x0603ECD1 RID: 257233 RVA: 0x00F2A77D File Offset: 0x00F2897D
+		// Token: 0x06033993 RID: 211347 RVA: 0x00E71591 File Offset: 0x00E6F791
 		[NullableContext(2)]
 		private RoverlikeActionStack GetActionStack()
 		{

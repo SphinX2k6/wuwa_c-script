@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001445 RID: 5189
+// Token: 0x020008F9 RID: 2297
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 internal class PoolScrollItem : GridProxyAbstract<ProtoGachaPoolInfo>
 {
-	// Token: 0x06009296 RID: 37526 RVA: 0x001F6C08 File Offset: 0x001F4E08
+	// Token: 0x0600662B RID: 26155 RVA: 0x001FF744 File Offset: 0x001FD944
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ internal class PoolScrollItem : GridProxyAbstract<ProtoGachaPoolInfo>
 		};
 	}
 
-	// Token: 0x06009297 RID: 37527 RVA: 0x001F6C9C File Offset: 0x001F4E9C
+	// Token: 0x0600662C RID: 26156 RVA: 0x001FF7D8 File Offset: 0x001FD9D8
 	public override void Refresh(ProtoGachaPoolInfo data, bool isSelected, int gridIndex)
 	{
 		GachaViewInfo? gachaViewInfo = GachaConfig.Instance.GetGachaViewInfo(data.Id);
@@ -44,13 +44,13 @@ internal class PoolScrollItem : GridProxyAbstract<ProtoGachaPoolInfo>
 		base.GetText(2).SetText(data.Title, true);
 	}
 
-	// Token: 0x06009298 RID: 37528 RVA: 0x001F6D05 File Offset: 0x001F4F05
+	// Token: 0x0600662D RID: 26157 RVA: 0x001FF841 File Offset: 0x001FDA41
 	public void SelectedToggle()
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_Checked, true, false, false);
 	}
 
-	// Token: 0x06009299 RID: 37529 RVA: 0x001F6D17 File Offset: 0x001F4F17
+	// Token: 0x0600662E RID: 26158 RVA: 0x001FF853 File Offset: 0x001FDA53
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		Action<ProtoGachaPoolInfo, UUIExtendToggle> onClickToggleCallBack = this.OnClickToggleCallBack;
@@ -61,11 +61,11 @@ internal class PoolScrollItem : GridProxyAbstract<ProtoGachaPoolInfo>
 		onClickToggleCallBack(this.PoolInfo, base.GetExtendToggle(0));
 	}
 
-	// Token: 0x040040F6 RID: 16630
+	// Token: 0x0400418E RID: 16782
 	[Nullable(2)]
 	private ProtoGachaPoolInfo PoolInfo;
 
-	// Token: 0x040040F7 RID: 16631
+	// Token: 0x0400418F RID: 16783
 	[Nullable(new byte[]
 	{
 		2,

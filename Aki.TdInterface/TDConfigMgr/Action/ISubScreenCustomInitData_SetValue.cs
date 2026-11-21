@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ED6 RID: 7894
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200210F RID: 8463
 	public class ISubScreenCustomInitData_SetValue
 	{
-		// Token: 0x04006493 RID: 25747
+		// Token: 0x04006A82 RID: 27266
 		public ESubScreenInitDataType Type;
 
-		// Token: 0x04006494 RID: 25748
+		// Token: 0x04006A83 RID: 27267
 		public string SubScreenKey;
 
-		// Token: 0x04006495 RID: 25749
+		// Token: 0x04006A84 RID: 27268
 		public ISubScreenConfig InitConfig;
 	}
 }

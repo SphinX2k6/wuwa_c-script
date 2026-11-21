@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000033 RID: 51
+	// Token: 0x02000018 RID: 24
 	public static class FRotationAboutPointMatrix
 	{
-		// Token: 0x060002FD RID: 765
+		// Token: 0x06000282 RID: 642
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix Internal_Make_FQuat_FVector(in FQuat a, in FVector b);
 
-		// Token: 0x060002FE RID: 766
+		// Token: 0x06000283 RID: 643
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix Internal_Make_FRotator_FVector(in FRotator a, in FVector b);
 
-		// Token: 0x060002FF RID: 767 RVA: 0x0000961C File Offset: 0x0000781C
+		// Token: 0x06000284 RID: 644 RVA: 0x00005E88 File Offset: 0x00004088
 		public unsafe static FMatrix Make(in FQuat q, in FVector origin)
 		{
 			fixed (FQuat* ptr = &q)
@@ -26,7 +26,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000300 RID: 768 RVA: 0x00009638 File Offset: 0x00007838
+		// Token: 0x06000285 RID: 645 RVA: 0x00005EA4 File Offset: 0x000040A4
 		public unsafe static FMatrix Make(in FRotator rot, in FVector origin)
 		{
 			fixed (FRotator* ptr = &rot)

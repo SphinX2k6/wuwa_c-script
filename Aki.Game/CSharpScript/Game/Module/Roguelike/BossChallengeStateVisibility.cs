@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DC1 RID: 19905
+	// Token: 0x02003D8A RID: 15754
 	public class BossChallengeStateVisibility : IBossChallengeStateVisibility
 	{
-		// Token: 0x17007EB6 RID: 32438
-		// (get) Token: 0x06033629 RID: 210473 RVA: 0x00BFF3E6 File Offset: 0x00BFD5E6
-		// (set) Token: 0x0603362A RID: 210474 RVA: 0x00BFF3EE File Offset: 0x00BFD5EE
+		// Token: 0x17005266 RID: 21094
+		// (get) Token: 0x06028496 RID: 165014 RVA: 0x00B48926 File Offset: 0x00B46B26
+		// (set) Token: 0x06028497 RID: 165015 RVA: 0x00B4892E File Offset: 0x00B46B2E
 		public bool ShowUnlock { get; set; }
 
-		// Token: 0x17007EB7 RID: 32439
-		// (get) Token: 0x0603362B RID: 210475 RVA: 0x00BFF3F7 File Offset: 0x00BFD5F7
-		// (set) Token: 0x0603362C RID: 210476 RVA: 0x00BFF3FF File Offset: 0x00BFD5FF
+		// Token: 0x17005267 RID: 21095
+		// (get) Token: 0x06028498 RID: 165016 RVA: 0x00B48937 File Offset: 0x00B46B37
+		// (set) Token: 0x06028499 RID: 165017 RVA: 0x00B4893F File Offset: 0x00B46B3F
 		public bool ShowEmptyIcon { get; set; }
 
-		// Token: 0x17007EB8 RID: 32440
-		// (get) Token: 0x0603362D RID: 210477 RVA: 0x00BFF408 File Offset: 0x00BFD608
-		// (set) Token: 0x0603362E RID: 210478 RVA: 0x00BFF410 File Offset: 0x00BFD610
+		// Token: 0x17005268 RID: 21096
+		// (get) Token: 0x0602849A RID: 165018 RVA: 0x00B48948 File Offset: 0x00B46B48
+		// (set) Token: 0x0602849B RID: 165019 RVA: 0x00B48950 File Offset: 0x00B46B50
 		public bool ShowFinished { get; set; }
 	}
 }

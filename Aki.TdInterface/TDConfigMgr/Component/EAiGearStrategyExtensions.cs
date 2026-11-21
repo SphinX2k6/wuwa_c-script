@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008EE RID: 2286
+	// Token: 0x02000993 RID: 2451
 	public static class EAiGearStrategyExtensions
 	{
-		// Token: 0x060033E0 RID: 13280 RVA: 0x00084A78 File Offset: 0x00082C78
+		// Token: 0x06003728 RID: 14120 RVA: 0x0008C0B4 File Offset: 0x0008A2B4
 		public static string ToEnumString(this EAiGearStrategy value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060033E1 RID: 13281 RVA: 0x00084AB0 File Offset: 0x00082CB0
+		// Token: 0x06003729 RID: 14121 RVA: 0x0008C0EC File Offset: 0x0008A2EC
 		public static EAiGearStrategy FromString(string name)
 		{
 			EAiGearStrategy result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060033E2 RID: 13282 RVA: 0x00084AD9 File Offset: 0x00082CD9
+		// Token: 0x0600372A RID: 14122 RVA: 0x0008C115 File Offset: 0x0008A315
 		public static bool TryFromString(string name, out EAiGearStrategy value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060033E3 RID: 13283 RVA: 0x00084B12 File Offset: 0x00082D12
+		// Token: 0x0600372B RID: 14123 RVA: 0x0008C14E File Offset: 0x0008A34E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060033E4 RID: 13284 RVA: 0x00084B2A File Offset: 0x00082D2A
+		// Token: 0x0600372C RID: 14124 RVA: 0x0008C166 File Offset: 0x0008A366
 		public static EAiGearStrategy[] GetValues()
 		{
 			return new EAiGearStrategy[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060033E5 RID: 13285 RVA: 0x00084B36 File Offset: 0x00082D36
+		// Token: 0x0600372D RID: 14125 RVA: 0x0008C172 File Offset: 0x0008A372
 		public static string[] GetNames()
 		{
 			return new string[]

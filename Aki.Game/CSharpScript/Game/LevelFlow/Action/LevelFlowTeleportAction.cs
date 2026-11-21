@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006FA3 RID: 28579
+	// Token: 0x02006124 RID: 24868
 	public class LevelFlowTeleportAction : LevelFlowActionBase
 	{
-		// Token: 0x06045784 RID: 284548 RVA: 0x0113B7FC File Offset: 0x011399FC
+		// Token: 0x0603B932 RID: 244018 RVA: 0x010E5600 File Offset: 0x010E3800
 		[NullableContext(1)]
 		public LevelFlowTeleportAction Init(int targetEntityId)
 		{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045785 RID: 284549 RVA: 0x0113B806 File Offset: 0x01139A06
+		// Token: 0x0603B933 RID: 244019 RVA: 0x010E560A File Offset: 0x010E380A
 		protected override void OnExecute()
 		{
 			if (LevelFlowModel.Instance.IsEnd)
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			LevelFlowController.Instance.LevelFlowTeleportRequest(this.TargetEntityId, new Action<bool>(base.FinishExecute));
 		}
 
-		// Token: 0x040243F9 RID: 148473
+		// Token: 0x0401F6AE RID: 128686
 		private int TargetEntityId;
 	}
 }

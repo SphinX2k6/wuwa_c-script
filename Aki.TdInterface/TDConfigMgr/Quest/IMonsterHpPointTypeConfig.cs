@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001015 RID: 4117
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001141 RID: 4417
 	public class IMonsterHpPointTypeConfig
 	{
-		// Token: 0x06005BE4 RID: 23524 RVA: 0x000DEDA4 File Offset: 0x000DCFA4
+		// Token: 0x060061C6 RID: 25030 RVA: 0x000EBA9C File Offset: 0x000E9C9C
 		private IMonsterHpPointTypeConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005BE5 RID: 23525 RVA: 0x000DEDDC File Offset: 0x000DCFDC
+		// Token: 0x060061C7 RID: 25031 RVA: 0x000EBAD4 File Offset: 0x000E9CD4
 		public static IMonsterHpPointTypeConfig Create([Nullable(2)] IMonsterHpPointTypeConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005BE6 RID: 23526 RVA: 0x000DEDEF File Offset: 0x000DCFEF
+		// Token: 0x060061C8 RID: 25032 RVA: 0x000EBAE7 File Offset: 0x000E9CE7
 		public static IMonsterHpPointTypeConfig CreateFromSetValue([Nullable(2)] IMonsterHpPointTypeConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005BE7 RID: 23527 RVA: 0x000DEE02 File Offset: 0x000DD002
+		// Token: 0x060061C9 RID: 25033 RVA: 0x000EBAFA File Offset: 0x000E9CFA
 		public IMonsterHpPointTypeConfig_SetValue ToSetValue()
 		{
 			return new IMonsterHpPointTypeConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E54 RID: 7764
-		// (get) Token: 0x06005BE8 RID: 23528 RVA: 0x000DEE21 File Offset: 0x000DD021
-		// (set) Token: 0x06005BE9 RID: 23529 RVA: 0x000DEE4C File Offset: 0x000DD04C
+		// Token: 0x17001FFE RID: 8190
+		// (get) Token: 0x060061CA RID: 25034 RVA: 0x000EBB19 File Offset: 0x000E9D19
+		// (set) Token: 0x060061CB RID: 25035 RVA: 0x000EBB44 File Offset: 0x000E9D44
 		public virtual EMonsterMatchType MonsterType
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E55 RID: 7765
-		// (get) Token: 0x06005BEA RID: 23530 RVA: 0x000DEE5A File Offset: 0x000DD05A
-		// (set) Token: 0x06005BEB RID: 23531 RVA: 0x000DEE85 File Offset: 0x000DD085
+		// Token: 0x17001FFF RID: 8191
+		// (get) Token: 0x060061CC RID: 25036 RVA: 0x000EBB52 File Offset: 0x000E9D52
+		// (set) Token: 0x060061CD RID: 25037 RVA: 0x000EBB7D File Offset: 0x000E9D7D
 		public virtual int PointOfEveryOnePercentHp
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003755 RID: 14165
+		// Token: 0x04003A90 RID: 14992
 		[Nullable(2)]
 		protected IMonsterHpPointTypeConfig FbInstance;
 
-		// Token: 0x04003756 RID: 14166
+		// Token: 0x04003A91 RID: 14993
 		[Nullable(2)]
 		protected IMonsterHpPointTypeConfig_SetValue PocoInterface;
 	}

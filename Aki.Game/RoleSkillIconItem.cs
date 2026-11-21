@@ -6,19 +6,19 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028B0 RID: 10416
+// Token: 0x02001E2B RID: 7723
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleSkillIconItem : UiPanelBase
 {
-	// Token: 0x060157AF RID: 87983 RVA: 0x0056AC47 File Offset: 0x00568E47
+	// Token: 0x060131AF RID: 78255 RVA: 0x00595A8F File Offset: 0x00593C8F
 	public RoleSkillIconItem(UUIItem uiItem, bool useTexture = false)
 	{
 		this.UseTexture = useTexture;
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x060157B0 RID: 87984 RVA: 0x0056AC64 File Offset: 0x00568E64
+	// Token: 0x060131B0 RID: 78256 RVA: 0x00595AAC File Offset: 0x00593CAC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -57,7 +57,7 @@ public class RoleSkillIconItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060157B1 RID: 87985 RVA: 0x0056AE2E File Offset: 0x0056902E
+	// Token: 0x060131B1 RID: 78257 RVA: 0x00595C76 File Offset: 0x00593E76
 	private void ToggleCallBackInternal(EToggleState toggleState)
 	{
 		Action toggleCallBack = this.ToggleCallBack;
@@ -68,14 +68,14 @@ public class RoleSkillIconItem : UiPanelBase
 		toggleCallBack();
 	}
 
-	// Token: 0x060157B2 RID: 87986 RVA: 0x0056AE40 File Offset: 0x00569040
+	// Token: 0x060131B2 RID: 78258 RVA: 0x00595C88 File Offset: 0x00593E88
 	public void Update(int roleId, int skillNodeId)
 	{
 		this.SetId(roleId, skillNodeId);
 		this.Refresh();
 	}
 
-	// Token: 0x060157B3 RID: 87987 RVA: 0x0056AE50 File Offset: 0x00569050
+	// Token: 0x060131B3 RID: 78259 RVA: 0x00595C98 File Offset: 0x00593E98
 	public void SetId(int roleId, int skillNodeId)
 	{
 		this.RoleId = roleId;
@@ -88,14 +88,14 @@ public class RoleSkillIconItem : UiPanelBase
 		this.UpgradeSkillConfig = ((this.UpgradeSkillId > 0) ? RoleSkillConfig.Instance.GetSkillConfigById(this.UpgradeSkillId) : null);
 	}
 
-	// Token: 0x060157B4 RID: 87988 RVA: 0x0056AF11 File Offset: 0x00569111
+	// Token: 0x060131B4 RID: 78260 RVA: 0x00595D59 File Offset: 0x00593F59
 	public void Refresh()
 	{
 		this.RefreshSkillIcon();
 		this.RefreshState();
 	}
 
-	// Token: 0x060157B5 RID: 87989 RVA: 0x0056AF20 File Offset: 0x00569120
+	// Token: 0x060131B5 RID: 78261 RVA: 0x00595D68 File Offset: 0x00593F68
 	public void RefreshState()
 	{
 		int roleSkillTreeNodeLevel = RoleModel.Instance.GetRoleSkillTreeNodeLevel(this.RoleId, this.SkillNodeId);
@@ -134,7 +134,7 @@ public class RoleSkillIconItem : UiPanelBase
 		item3.SetUIActive(roleSkillTreeNodeState.GetValueOrDefault() != ESkillTreeNodeState.Lock && roleSkillTreeNodeLevel == 0);
 	}
 
-	// Token: 0x060157B6 RID: 87990 RVA: 0x0056B018 File Offset: 0x00569218
+	// Token: 0x060131B6 RID: 78262 RVA: 0x00595E60 File Offset: 0x00594060
 	public void RefreshSkillIcon()
 	{
 		string text;
@@ -152,7 +152,7 @@ public class RoleSkillIconItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060157B7 RID: 87991 RVA: 0x0056B076 File Offset: 0x00569276
+	// Token: 0x060131B7 RID: 78263 RVA: 0x00595EBE File Offset: 0x005940BE
 	private void SetSkillIconByPath(string iconPath)
 	{
 		if (this.UseTexture)
@@ -167,7 +167,7 @@ public class RoleSkillIconItem : UiPanelBase
 		this.SetIconBySprite(6, iconPath);
 	}
 
-	// Token: 0x060157B8 RID: 87992 RVA: 0x0056B0B4 File Offset: 0x005692B4
+	// Token: 0x060131B8 RID: 78264 RVA: 0x00595EFC File Offset: 0x005940FC
 	private void SetIconByTexture(int name, string iconPath)
 	{
 		UUITexture iconTexture = base.GetTexture(name);
@@ -191,7 +191,7 @@ public class RoleSkillIconItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060157B9 RID: 87993 RVA: 0x0056B118 File Offset: 0x00569318
+	// Token: 0x060131B9 RID: 78265 RVA: 0x00595F60 File Offset: 0x00594160
 	private void SetIconBySprite(int name, string iconPath)
 	{
 		UUISprite iconSprite = base.GetSprite(name);
@@ -215,113 +215,113 @@ public class RoleSkillIconItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060157BA RID: 87994 RVA: 0x0056B17C File Offset: 0x0056937C
+	// Token: 0x060131BA RID: 78266 RVA: 0x00595FC4 File Offset: 0x005941C4
 	public int GetRoleId()
 	{
 		return this.RoleId;
 	}
 
-	// Token: 0x060157BB RID: 87995 RVA: 0x0056B184 File Offset: 0x00569384
+	// Token: 0x060131BB RID: 78267 RVA: 0x00595FCC File Offset: 0x005941CC
 	public int GetSkillNodeId()
 	{
 		return this.SkillNodeId;
 	}
 
-	// Token: 0x060157BC RID: 87996 RVA: 0x0056B18C File Offset: 0x0056938C
+	// Token: 0x060131BC RID: 78268 RVA: 0x00595FD4 File Offset: 0x005941D4
 	public int GetSkillId()
 	{
 		return this.SkillId;
 	}
 
-	// Token: 0x060157BD RID: 87997 RVA: 0x0056B194 File Offset: 0x00569394
+	// Token: 0x060131BD RID: 78269 RVA: 0x00595FDC File Offset: 0x005941DC
 	public int GetUpgradeSkillId()
 	{
 		return this.UpgradeSkillId;
 	}
 
-	// Token: 0x060157BE RID: 87998 RVA: 0x0056B19C File Offset: 0x0056939C
+	// Token: 0x060131BE RID: 78270 RVA: 0x00595FE4 File Offset: 0x005941E4
 	public SkillTree? GetSkillTreeNodeConfig()
 	{
 		return this.SkillTreeNodeConfig;
 	}
 
-	// Token: 0x060157BF RID: 87999 RVA: 0x0056B1A4 File Offset: 0x005693A4
+	// Token: 0x060131BF RID: 78271 RVA: 0x00595FEC File Offset: 0x005941EC
 	public Aki.Config.Skill? GetSkillConfig()
 	{
 		return this.SkillConfig;
 	}
 
-	// Token: 0x060157C0 RID: 88000 RVA: 0x0056B1AC File Offset: 0x005693AC
+	// Token: 0x060131C0 RID: 78272 RVA: 0x00595FF4 File Offset: 0x005941F4
 	public Aki.Config.Skill? GetUpgradeSkillConfig()
 	{
 		return this.UpgradeSkillConfig;
 	}
 
-	// Token: 0x060157C1 RID: 88001 RVA: 0x0056B1B4 File Offset: 0x005693B4
+	// Token: 0x060131C1 RID: 78273 RVA: 0x00595FFC File Offset: 0x005941FC
 	public void SetToggleCallBack(Action callBack)
 	{
 		this.ToggleCallBack = callBack;
 	}
 
-	// Token: 0x060157C2 RID: 88002 RVA: 0x0056B1BD File Offset: 0x005693BD
+	// Token: 0x060131C2 RID: 78274 RVA: 0x00596005 File Offset: 0x00594205
 	public void SetToggleState(EToggleState state, bool bFireEvent = false)
 	{
 		base.GetExtendToggle(0).SetToggleState(state, bFireEvent, false, false);
 	}
 
-	// Token: 0x060157C3 RID: 88003 RVA: 0x0056B1D0 File Offset: 0x005693D0
+	// Token: 0x060131C3 RID: 78275 RVA: 0x00596018 File Offset: 0x00594218
 	public UUIItem GetToggleItem()
 	{
 		return base.GetExtendToggle(0).GetRootComponent();
 	}
 
-	// Token: 0x0400A02D RID: 41005
+	// Token: 0x0400A416 RID: 42006
 	private int RoleId;
 
-	// Token: 0x0400A02E RID: 41006
+	// Token: 0x0400A417 RID: 42007
 	private int SkillNodeId;
 
-	// Token: 0x0400A02F RID: 41007
+	// Token: 0x0400A418 RID: 42008
 	private int SkillId;
 
-	// Token: 0x0400A030 RID: 41008
+	// Token: 0x0400A419 RID: 42009
 	private int UpgradeSkillId;
 
-	// Token: 0x0400A031 RID: 41009
+	// Token: 0x0400A41A RID: 42010
 	private SkillTree? SkillTreeNodeConfig;
 
-	// Token: 0x0400A032 RID: 41010
+	// Token: 0x0400A41B RID: 42011
 	private Aki.Config.Skill? SkillConfig;
 
-	// Token: 0x0400A033 RID: 41011
+	// Token: 0x0400A41C RID: 42012
 	private Aki.Config.Skill? UpgradeSkillConfig;
 
-	// Token: 0x0400A034 RID: 41012
+	// Token: 0x0400A41D RID: 42013
 	[Nullable(2)]
 	private Action ToggleCallBack;
 
-	// Token: 0x0400A035 RID: 41013
+	// Token: 0x0400A41E RID: 42014
 	private readonly bool UseTexture;
 
-	// Token: 0x02008EAF RID: 36527
+	// Token: 0x020080F6 RID: 33014
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402E43F RID: 189503
+		// Token: 0x04029B3C RID: 170812
 		Toggle,
-		// Token: 0x0402E440 RID: 189504
+		// Token: 0x04029B3D RID: 170813
 		Icon,
-		// Token: 0x0402E441 RID: 189505
+		// Token: 0x04029B3E RID: 170814
 		ActivatedItem,
-		// Token: 0x0402E442 RID: 189506
+		// Token: 0x04029B3F RID: 170815
 		InactiveItem,
-		// Token: 0x0402E443 RID: 189507
+		// Token: 0x04029B40 RID: 170816
 		LockItem,
-		// Token: 0x0402E444 RID: 189508
+		// Token: 0x04029B41 RID: 170817
 		ExIcon1,
-		// Token: 0x0402E445 RID: 189509
+		// Token: 0x04029B42 RID: 170818
 		ExIcon2,
-		// Token: 0x0402E446 RID: 189510
+		// Token: 0x04029B43 RID: 170819
 		ExtendToggleTransition
 	}
 }

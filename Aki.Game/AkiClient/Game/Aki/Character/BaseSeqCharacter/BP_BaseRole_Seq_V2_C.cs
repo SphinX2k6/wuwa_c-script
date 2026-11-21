@@ -11,14 +11,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 {
-	// Token: 0x0200426E RID: 17006
+	// Token: 0x020032DB RID: 13019
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseSeqCharacter/BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C")]
 	[UnrealStructLayout(1392, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1392)]
-	public class BP_BaseRole_Seq_V2_C : APawn, IUnrealUObject, IUnrealObject, IABPC_Seq_Interface_C, IUnrealBlueprintInterface, IUnrealInterface, ISeqAnimDataInterface, IUnrealNativeInterface, IBPI_SeqAudio_C, IBPI_SeqBindingActor_C, IBPI_SeqBlendActor_C, IBPI_SeqTalkActor_C, IBPI_SeqCostumeState_C, IBPI_SeqRoleMesh_C
+	public class BP_BaseRole_Seq_V2_C : APawn, IUnrealUObject, IUnrealObject, IBPI_SeqAudio_C, IUnrealBlueprintInterface, IUnrealInterface, IBPI_SeqBindingActor_C, IBPI_SeqBlendActor_C, IBPI_SeqTalkActor_C, IBPI_SeqCostumeState_C, IBPI_SeqRoleMesh_C
 	{
-		// Token: 0x0602C19E RID: 180638 RVA: 0x00A15AC8 File Offset: 0x00A13CC8
+		// Token: 0x0602104B RID: 135243 RVA: 0x00956848 File Offset: 0x00954A48
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_BaseRole_Seq_V2_C._ClassPtr == IntPtr.Zero)
@@ -28,311 +28,305 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			return BP_BaseRole_Seq_V2_C._ClassPtr;
 		}
 
-		// Token: 0x0602C19F RID: 180639 RVA: 0x00A15AEC File Offset: 0x00A13CEC
-		int ISeqAnimDataInterface.InterfaceOffset()
-		{
-			return BP_BaseRole_Seq_V2_C.__InterfaceOffset_ISeqAnimDataInterface;
-		}
-
-		// Token: 0x0602C1A0 RID: 180640 RVA: 0x00A15AF4 File Offset: 0x00A13CF4
+		// Token: 0x0602104C RID: 135244 RVA: 0x0095686C File Offset: 0x00954A6C
 		public BP_BaseRole_Seq_V2_C() : this(BuiltinUtils.AllocNativeUObject(BP_BaseRole_Seq_V2_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602C1A1 RID: 180641 RVA: 0x00A15B1C File Offset: 0x00A13D1C
+		// Token: 0x0602104D RID: 135245 RVA: 0x00956894 File Offset: 0x00954A94
 		[NullableContext(1)]
 		public BP_BaseRole_Seq_V2_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_BaseRole_Seq_V2_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006D9C RID: 28060
-		// (get) Token: 0x0602C1A2 RID: 180642 RVA: 0x00A15B4F File Offset: 0x00A13D4F
-		// (set) Token: 0x0602C1A3 RID: 180643 RVA: 0x00A15B63 File Offset: 0x00A13D63
+		// Token: 0x1700421E RID: 16926
+		// (get) Token: 0x0602104E RID: 135246 RVA: 0x009568C7 File Offset: 0x00954AC7
+		// (set) Token: 0x0602104F RID: 135247 RVA: 0x009568DB File Offset: 0x00954ADB
 		public unsafe SeqAudio_Seq_V2_C SeqAudio_Seq_V2
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<SeqAudio_Seq_V2_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<SeqAudio_Seq_V2_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_SeqAudio_Seq_V2);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_SeqAudio_Seq_V2, value);
 			}
 		}
 
-		// Token: 0x17006D9D RID: 28061
-		// (get) Token: 0x0602C1A4 RID: 180644 RVA: 0x00A15B78 File Offset: 0x00A13D78
-		// (set) Token: 0x0602C1A5 RID: 180645 RVA: 0x00A15B8C File Offset: 0x00A13D8C
+		// Token: 0x1700421F RID: 16927
+		// (get) Token: 0x06021050 RID: 135248 RVA: 0x009568F0 File Offset: 0x00954AF0
+		// (set) Token: 0x06021051 RID: 135249 RVA: 0x00956904 File Offset: 0x00954B04
 		public unsafe UChildActorComponent Hulu
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UChildActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UChildActorComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_Hulu);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_Hulu, value);
 			}
 		}
 
-		// Token: 0x17006D9E RID: 28062
-		// (get) Token: 0x0602C1A6 RID: 180646 RVA: 0x00A15BA1 File Offset: 0x00A13DA1
-		// (set) Token: 0x0602C1A7 RID: 180647 RVA: 0x00A15BB5 File Offset: 0x00A13DB5
+		// Token: 0x17004220 RID: 16928
+		// (get) Token: 0x06021052 RID: 135250 RVA: 0x00956919 File Offset: 0x00954B19
+		// (set) Token: 0x06021053 RID: 135251 RVA: 0x0095692D File Offset: 0x00954B2D
 		public unsafe ABPC_Seq_Body_V2_C ABPC_Body_V2
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<ABPC_Seq_Body_V2_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<ABPC_Seq_Body_V2_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_ABPC_Body_V2);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_ABPC_Body_V2, value);
 			}
 		}
 
-		// Token: 0x17006D9F RID: 28063
-		// (get) Token: 0x0602C1A8 RID: 180648 RVA: 0x00A15BCA File Offset: 0x00A13DCA
-		// (set) Token: 0x0602C1A9 RID: 180649 RVA: 0x00A15BDE File Offset: 0x00A13DDE
+		// Token: 0x17004221 RID: 16929
+		// (get) Token: 0x06021054 RID: 135252 RVA: 0x00956942 File Offset: 0x00954B42
+		// (set) Token: 0x06021055 RID: 135253 RVA: 0x00956956 File Offset: 0x00954B56
 		public unsafe USkeletalMeshComponent SkeletalMeshComponent0
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_4);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_SkeletalMeshComponent0);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_4, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_SkeletalMeshComponent0, value);
 			}
 		}
 
-		// Token: 0x17006DA0 RID: 28064
-		// (get) Token: 0x0602C1AA RID: 180650 RVA: 0x00A15BF3 File Offset: 0x00A13DF3
-		// (set) Token: 0x0602C1AB RID: 180651 RVA: 0x00A15C07 File Offset: 0x00A13E07
+		// Token: 0x17004222 RID: 16930
+		// (get) Token: 0x06021056 RID: 135254 RVA: 0x0095696B File Offset: 0x00954B6B
+		// (set) Token: 0x06021057 RID: 135255 RVA: 0x0095697F File Offset: 0x00954B7F
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17006DA1 RID: 28065
-		// (get) Token: 0x0602C1AC RID: 180652 RVA: 0x00A15C1C File Offset: 0x00A13E1C
-		// (set) Token: 0x0602C1AD RID: 180653 RVA: 0x00A15C2C File Offset: 0x00A13E2C
+		// Token: 0x17004223 RID: 16931
+		// (get) Token: 0x06021058 RID: 135256 RVA: 0x00956994 File Offset: 0x00954B94
+		// (set) Token: 0x06021059 RID: 135257 RVA: 0x009569A4 File Offset: 0x00954BA4
 		public unsafe int TalkID
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_TalkID);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_TalkID) = value;
 			}
 		}
 
-		// Token: 0x17006DA2 RID: 28066
-		// (get) Token: 0x0602C1AE RID: 180654 RVA: 0x00A15C3D File Offset: 0x00A13E3D
-		// (set) Token: 0x0602C1AF RID: 180655 RVA: 0x00A15C51 File Offset: 0x00A13E51
+		// Token: 0x17004224 RID: 16932
+		// (get) Token: 0x0602105A RID: 135258 RVA: 0x009569B5 File Offset: 0x00954BB5
+		// (set) Token: 0x0602105B RID: 135259 RVA: 0x009569C9 File Offset: 0x00954BC9
 		public unsafe FName BindingTag
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_BindingTag);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_BindingTag) = value;
 			}
 		}
 
-		// Token: 0x17006DA3 RID: 28067
-		// (get) Token: 0x0602C1B0 RID: 180656 RVA: 0x00A15C66 File Offset: 0x00A13E66
-		// (set) Token: 0x0602C1B1 RID: 180657 RVA: 0x00A15C76 File Offset: 0x00A13E76
+		// Token: 0x17004225 RID: 16933
+		// (get) Token: 0x0602105C RID: 135260 RVA: 0x009569DE File Offset: 0x00954BDE
+		// (set) Token: 0x0602105D RID: 135261 RVA: 0x009569EE File Offset: 0x00954BEE
 		public unsafe float HuluFX_Handle
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_HuluFX_Handle);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_HuluFX_Handle) = value;
 			}
 		}
 
-		// Token: 0x17006DA4 RID: 28068
-		// (get) Token: 0x0602C1B2 RID: 180658 RVA: 0x00A15C87 File Offset: 0x00A13E87
-		// (set) Token: 0x0602C1B3 RID: 180659 RVA: 0x00A15C97 File Offset: 0x00A13E97
+		// Token: 0x17004226 RID: 16934
+		// (get) Token: 0x0602105E RID: 135262 RVA: 0x009569FF File Offset: 0x00954BFF
+		// (set) Token: 0x0602105F RID: 135263 RVA: 0x00956A0F File Offset: 0x00954C0F
 		public unsafe float CharFX_Group_Handle
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_CharFX_Group_Handle);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_CharFX_Group_Handle) = value;
 			}
 		}
 
-		// Token: 0x17006DA5 RID: 28069
-		// (get) Token: 0x0602C1B4 RID: 180660 RVA: 0x00A15CA8 File Offset: 0x00A13EA8
-		// (set) Token: 0x0602C1B5 RID: 180661 RVA: 0x00A15CB8 File Offset: 0x00A13EB8
+		// Token: 0x17004227 RID: 16935
+		// (get) Token: 0x06021060 RID: 135264 RVA: 0x00956A20 File Offset: 0x00954C20
+		// (set) Token: 0x06021061 RID: 135265 RVA: 0x00956A30 File Offset: 0x00954C30
 		public unsafe float CharFX_Handle
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_CharFX_Handle);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_CharFX_Handle) = value;
 			}
 		}
 
-		// Token: 0x17006DA6 RID: 28070
-		// (get) Token: 0x0602C1B6 RID: 180662 RVA: 0x00A15CC9 File Offset: 0x00A13EC9
-		// (set) Token: 0x0602C1B7 RID: 180663 RVA: 0x00A15CDD File Offset: 0x00A13EDD
+		// Token: 0x17004228 RID: 16936
+		// (get) Token: 0x06021062 RID: 135266 RVA: 0x00956A41 File Offset: 0x00954C41
+		// (set) Token: 0x06021063 RID: 135267 RVA: 0x00956A55 File Offset: 0x00954C55
 		public unsafe PD_CharacterControllerDataGroup_C DataGroup
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<PD_CharacterControllerDataGroup_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_11);
+				return BuiltinUtils.ObjectPropertyGetter<PD_CharacterControllerDataGroup_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_DataGroup);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_11, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_DataGroup, value);
 			}
 		}
 
-		// Token: 0x17006DA7 RID: 28071
-		// (get) Token: 0x0602C1B8 RID: 180664 RVA: 0x00A15CF2 File Offset: 0x00A13EF2
-		// (set) Token: 0x0602C1B9 RID: 180665 RVA: 0x00A15D06 File Offset: 0x00A13F06
+		// Token: 0x17004229 RID: 16937
+		// (get) Token: 0x06021064 RID: 135268 RVA: 0x00956A6A File Offset: 0x00954C6A
+		// (set) Token: 0x06021065 RID: 135269 RVA: 0x00956A7E File Offset: 0x00954C7E
 		public unsafe PD_CharacterControllerData_C Data
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<PD_CharacterControllerData_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_12);
+				return BuiltinUtils.ObjectPropertyGetter<PD_CharacterControllerData_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_Data);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_12, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_Data, value);
 			}
 		}
 
-		// Token: 0x17006DA8 RID: 28072
-		// (get) Token: 0x0602C1BA RID: 180666 RVA: 0x00A15D1B File Offset: 0x00A13F1B
-		// (set) Token: 0x0602C1BB RID: 180667 RVA: 0x00A15D2F File Offset: 0x00A13F2F
+		// Token: 0x1700422A RID: 16938
+		// (get) Token: 0x06021066 RID: 135270 RVA: 0x00956A93 File Offset: 0x00954C93
+		// (set) Token: 0x06021067 RID: 135271 RVA: 0x00956AA7 File Offset: 0x00954CA7
 		public unsafe BP_Fx_Scanning_C BPScanning
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<BP_Fx_Scanning_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_13);
+				return BuiltinUtils.ObjectPropertyGetter<BP_Fx_Scanning_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_BPScanning);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_13, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_BPScanning, value);
 			}
 		}
 
-		// Token: 0x17006DA9 RID: 28073
-		// (get) Token: 0x0602C1BC RID: 180668 RVA: 0x00A15D44 File Offset: 0x00A13F44
-		// (set) Token: 0x0602C1BD RID: 180669 RVA: 0x00A15D58 File Offset: 0x00A13F58
+		// Token: 0x1700422B RID: 16939
+		// (get) Token: 0x06021068 RID: 135272 RVA: 0x00956ABC File Offset: 0x00954CBC
+		// (set) Token: 0x06021069 RID: 135273 RVA: 0x00956AD0 File Offset: 0x00954CD0
 		public unsafe CharRenderingComponent CharRenderingComponent
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<CharRenderingComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_14);
+				return BuiltinUtils.ObjectPropertyGetter<CharRenderingComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_CharRenderingComponent);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_14, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BaseRole_Seq_V2_C.__PropertyOffset_CharRenderingComponent, value);
 			}
 		}
 
-		// Token: 0x17006DAA RID: 28074
-		// (get) Token: 0x0602C1BE RID: 180670 RVA: 0x00A15D6D File Offset: 0x00A13F6D
-		// (set) Token: 0x0602C1BF RID: 180671 RVA: 0x00A15D7D File Offset: 0x00A13F7D
+		// Token: 0x1700422C RID: 16940
+		// (get) Token: 0x0602106A RID: 135274 RVA: 0x00956AE5 File Offset: 0x00954CE5
+		// (set) Token: 0x0602106B RID: 135275 RVA: 0x00956AF5 File Offset: 0x00954CF5
 		public unsafe int TalkID_SP
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_TalkID_SP);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_TalkID_SP) = value;
 			}
 		}
 
-		// Token: 0x17006DAB RID: 28075
-		// (get) Token: 0x0602C1C0 RID: 180672 RVA: 0x00A15D8E File Offset: 0x00A13F8E
-		// (set) Token: 0x0602C1C1 RID: 180673 RVA: 0x00A15D9E File Offset: 0x00A13F9E
+		// Token: 0x1700422D RID: 16941
+		// (get) Token: 0x0602106C RID: 135276 RVA: 0x00956B06 File Offset: 0x00954D06
+		// (set) Token: 0x0602106D RID: 135277 RVA: 0x00956B16 File Offset: 0x00954D16
 		public unsafe bool EnableKeyLightChan
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_16) != 0;
+				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_EnableKeyLightChan) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_16) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_EnableKeyLightChan) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006DAC RID: 28076
-		// (get) Token: 0x0602C1C2 RID: 180674 RVA: 0x00A15DAF File Offset: 0x00A13FAF
-		// (set) Token: 0x0602C1C3 RID: 180675 RVA: 0x00A15DBF File Offset: 0x00A13FBF
+		// Token: 0x1700422E RID: 16942
+		// (get) Token: 0x0602106E RID: 135278 RVA: 0x00956B27 File Offset: 0x00954D27
+		// (set) Token: 0x0602106F RID: 135279 RVA: 0x00956B37 File Offset: 0x00954D37
 		public unsafe bool ToonLightChan0
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_17) != 0;
+				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_ToonLightChan0) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_17) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_ToonLightChan0) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006DAD RID: 28077
-		// (get) Token: 0x0602C1C4 RID: 180676 RVA: 0x00A15DD0 File Offset: 0x00A13FD0
-		// (set) Token: 0x0602C1C5 RID: 180677 RVA: 0x00A15DE0 File Offset: 0x00A13FE0
+		// Token: 0x1700422F RID: 16943
+		// (get) Token: 0x06021070 RID: 135280 RVA: 0x00956B48 File Offset: 0x00954D48
+		// (set) Token: 0x06021071 RID: 135281 RVA: 0x00956B58 File Offset: 0x00954D58
 		public unsafe bool ToonLightChan1
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_18) != 0;
+				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_ToonLightChan1) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_18) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_ToonLightChan1) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006DAE RID: 28078
-		// (get) Token: 0x0602C1C6 RID: 180678 RVA: 0x00A15DF1 File Offset: 0x00A13FF1
-		// (set) Token: 0x0602C1C7 RID: 180679 RVA: 0x00A15E01 File Offset: 0x00A14001
+		// Token: 0x17004230 RID: 16944
+		// (get) Token: 0x06021072 RID: 135282 RVA: 0x00956B69 File Offset: 0x00954D69
+		// (set) Token: 0x06021073 RID: 135283 RVA: 0x00956B79 File Offset: 0x00954D79
 		public unsafe bool ToonLightChan2
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_19) != 0;
+				return *(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_ToonLightChan2) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_19) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_ToonLightChan2) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006DAF RID: 28079
-		// (get) Token: 0x0602C1C8 RID: 180680 RVA: 0x00A15E14 File Offset: 0x00A14014
-		// (set) Token: 0x0602C1C9 RID: 180681 RVA: 0x00A15E4D File Offset: 0x00A1404D
+		// Token: 0x17004231 RID: 16945
+		// (get) Token: 0x06021074 RID: 135284 RVA: 0x00956B8C File Offset: 0x00954D8C
+		// (set) Token: 0x06021075 RID: 135285 RVA: 0x00956BC5 File Offset: 0x00954DC5
 		[Nullable(1)]
 		public TMap<FName, FTransform> CustomData
 		{
@@ -343,7 +337,7 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 				TMap<FName, FTransform> result;
 				if ((result = this._CustomData) == null)
 				{
-					result = (this._CustomData = new TMap<FName, FTransform>(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_20, this));
+					result = (this._CustomData = new TMap<FName, FTransform>(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_CustomData, this));
 				}
 				return result;
 			}
@@ -354,28 +348,27 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			}
 		}
 
-		// Token: 0x17006DB0 RID: 28080
-		// (get) Token: 0x0602C1CA RID: 180682 RVA: 0x00A15E5B File Offset: 0x00A1405B
-		// (set) Token: 0x0602C1CB RID: 180683 RVA: 0x00A15E70 File Offset: 0x00A14070
+		// Token: 0x17004232 RID: 16946
+		// (get) Token: 0x06021076 RID: 135286 RVA: 0x00956BD3 File Offset: 0x00954DD3
+		// (set) Token: 0x06021077 RID: 135287 RVA: 0x00956BE8 File Offset: 0x00954DE8
 		[Nullable(1)]
 		public TSoftObjectPtr<USkeletalMesh> MeshRef
 		{
 			[NullableContext(1)]
 			get
 			{
-				return new TSoftObjectPtr<USkeletalMesh>(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_21, this);
+				return new TSoftObjectPtr<USkeletalMesh>(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_MeshRef, this);
 			}
 			[NullableContext(1)]
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_21, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_BaseRole_Seq_V2_C.__PropertyOffset_MeshRef, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x0602C1CC RID: 180684 RVA: 0x00A15E98 File Offset: 0x00A14098
+		// Token: 0x06021078 RID: 135288 RVA: 0x00956C10 File Offset: 0x00954E10
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetSeqMeshRef(ref TSoftObjectPtr<USkeletalMesh> MeshRef)
 		{
 			BP_BaseRole_Seq_V2_C.__GetSeqMeshRef_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetSeqMeshRef_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetSeqMeshRef_FunctionParams) & -16L;
@@ -392,9 +385,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			UnrealReflectionUtils.DestroyStruct(BP_BaseRole_Seq_V2_C.__GetSeqMeshRef_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602C1CD RID: 180685 RVA: 0x00A15F24 File Offset: 0x00A14124
+		// Token: 0x06021079 RID: 135289 RVA: 0x00956C9C File Offset: 0x00954E9C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetSeqTalkId(ref int TalkID, ref int TalkID_SP)
 		{
 			BP_BaseRole_Seq_V2_C.__GetSeqTalkId_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetSeqTalkId_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetSeqTalkId_FunctionParams) & -16L;
@@ -406,9 +398,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			TalkID_SP = ptr->TalkID_SP;
 		}
 
-		// Token: 0x0602C1CE RID: 180686 RVA: 0x00A15F84 File Offset: 0x00A14184
+		// Token: 0x0602107A RID: 135290 RVA: 0x00956CFC File Offset: 0x00954EFC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetSeqMouthAnimInstance(ref UAnimInstance AnimInstance)
 		{
 			BP_BaseRole_Seq_V2_C.__GetSeqMouthAnimInstance_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetSeqMouthAnimInstance_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetSeqMouthAnimInstance_FunctionParams) & -16L;
@@ -420,9 +411,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			AnimInstance = BuiltinUtils.GetOrCreateUObjectByNativePointer<UAnimInstance>(ptr->AnimInstance);
 		}
 
-		// Token: 0x0602C1CF RID: 180687 RVA: 0x00A15FE8 File Offset: 0x00A141E8
+		// Token: 0x0602107B RID: 135291 RVA: 0x00956D60 File Offset: 0x00954F60
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetSeqBlendMesh(ref USkeletalMeshComponent Mesh)
 		{
 			BP_BaseRole_Seq_V2_C.__GetSeqBlendMesh_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetSeqBlendMesh_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetSeqBlendMesh_FunctionParams) & -16L;
@@ -434,9 +424,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			Mesh = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(ptr->Mesh);
 		}
 
-		// Token: 0x0602C1D0 RID: 180688 RVA: 0x00A1604C File Offset: 0x00A1424C
+		// Token: 0x0602107C RID: 135292 RVA: 0x00956DC4 File Offset: 0x00954FC4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetSeqBindingTag(ref FName Tag)
 		{
 			BP_BaseRole_Seq_V2_C.__GetSeqBindingTag_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetSeqBindingTag_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetSeqBindingTag_FunctionParams) & -16L;
@@ -446,9 +435,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			Tag = ptr->Tag;
 		}
 
-		// Token: 0x0602C1D1 RID: 180689 RVA: 0x00A160A4 File Offset: 0x00A142A4
+		// Token: 0x0602107D RID: 135293 RVA: 0x00956E1C File Offset: 0x0095501C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetSeqAudio(ref SeqAudio_Seq_V2_C SeqAudio)
 		{
 			BP_BaseRole_Seq_V2_C.__GetSeqAudio_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetSeqAudio_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetSeqAudio_FunctionParams) & -16L;
@@ -460,9 +448,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			SeqAudio = BuiltinUtils.GetOrCreateUObjectByNativePointer<SeqAudio_Seq_V2_C>(ptr->SeqAudio);
 		}
 
-		// Token: 0x0602C1D2 RID: 180690 RVA: 0x00A16108 File Offset: 0x00A14308
+		// Token: 0x0602107E RID: 135294 RVA: 0x00956E80 File Offset: 0x00955080
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual bool GetAnimDataTransform(ref TMap<FName, FTransform> FloatCurveData)
 		{
 			BP_BaseRole_Seq_V2_C.__GetAnimDataTransform_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetAnimDataTransform_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetAnimDataTransform_FunctionParams) & -16L;
@@ -483,9 +470,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			return _Result;
 		}
 
-		// Token: 0x0602C1D3 RID: 180691 RVA: 0x00A16188 File Offset: 0x00A14388
+		// Token: 0x0602107F RID: 135295 RVA: 0x00956F00 File Offset: 0x00955100
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual bool GetAnimDataTransform_Implementation(ref TMap<FName, FTransform> FloatCurveData)
 		{
 			BP_BaseRole_Seq_V2_C.__GetAnimDataTransform_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetAnimDataTransform_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetAnimDataTransform_FunctionParams) & -16L;
@@ -495,7 +481,7 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			{
 				tmap.MoveTo(&ptr->FloatCurveData);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__GetAnimDataTransform_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__GetAnimDataTransform_NativeFunctionPtr, (void*)ptr);
 			TMap<FName, FTransform> tmap2 = FloatCurveData;
 			if (tmap2 != null)
 			{
@@ -506,9 +492,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			return _Result;
 		}
 
-		// Token: 0x0602C1D4 RID: 180692 RVA: 0x00A16208 File Offset: 0x00A14408
+		// Token: 0x06021080 RID: 135296 RVA: 0x00956F80 File Offset: 0x00955180
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual bool IsCustomSupport()
 		{
 			BP_BaseRole_Seq_V2_C.__IsCustomSupport_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__IsCustomSupport_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__IsCustomSupport_FunctionParams) & -16L;
@@ -517,20 +502,18 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			return ptr->__Result;
 		}
 
-		// Token: 0x0602C1D5 RID: 180693 RVA: 0x00A16250 File Offset: 0x00A14450
+		// Token: 0x06021081 RID: 135297 RVA: 0x00956FC8 File Offset: 0x009551C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual bool IsCustomSupport_Implementation()
 		{
 			BP_BaseRole_Seq_V2_C.__IsCustomSupport_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__IsCustomSupport_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__IsCustomSupport_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_BaseRole_Seq_V2_C.__IsCustomSupport_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__IsCustomSupport_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__IsCustomSupport_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0602C1D6 RID: 180694 RVA: 0x00A16298 File Offset: 0x00A14498
+		// Token: 0x06021082 RID: 135298 RVA: 0x00957010 File Offset: 0x00955210
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual bool SetAnimDataTransform(in TMap<FName, FTransform> FloatCurveData)
 		{
 			BP_BaseRole_Seq_V2_C.__SetAnimDataTransform_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__SetAnimDataTransform_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__SetAnimDataTransform_FunctionParams) & -16L;
@@ -551,9 +534,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			return _Result;
 		}
 
-		// Token: 0x0602C1D7 RID: 180695 RVA: 0x00A16318 File Offset: 0x00A14518
+		// Token: 0x06021083 RID: 135299 RVA: 0x00957090 File Offset: 0x00955290
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual bool SetAnimDataTransform_Implementation(in TMap<FName, FTransform> FloatCurveData)
 		{
 			BP_BaseRole_Seq_V2_C.__SetAnimDataTransform_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__SetAnimDataTransform_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__SetAnimDataTransform_FunctionParams) & -16L;
@@ -563,7 +545,7 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			{
 				obj.MoveTo(&ptr->FloatCurveData);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__SetAnimDataTransform_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__SetAnimDataTransform_NativeFunctionPtr, (void*)ptr);
 			object obj2 = FloatCurveData;
 			if (obj2 != null)
 			{
@@ -574,10 +556,9 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			return _Result;
 		}
 
-		// Token: 0x0602C1D8 RID: 180696 RVA: 0x00A16398 File Offset: 0x00A14598
+		// Token: 0x06021084 RID: 135300 RVA: 0x00957110 File Offset: 0x00955310
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual TArray<FName> GetSupportGroupNames()
 		{
 			BP_BaseRole_Seq_V2_C.__GetSupportGroupNames_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetSupportGroupNames_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetSupportGroupNames_FunctionParams) & -16L;
@@ -588,77 +569,21 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			return result;
 		}
 
-		// Token: 0x0602C1D9 RID: 180697 RVA: 0x00A163F8 File Offset: 0x00A145F8
+		// Token: 0x06021085 RID: 135301 RVA: 0x00957170 File Offset: 0x00955370
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual TArray<FName> GetSupportGroupNames_Implementation()
 		{
 			BP_BaseRole_Seq_V2_C.__GetSupportGroupNames_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetSupportGroupNames_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetSupportGroupNames_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_BaseRole_Seq_V2_C.__GetSupportGroupNames_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__GetSupportGroupNames_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__GetSupportGroupNames_NativeFunctionPtr, (void*)ptr);
 			TArray<FName> result = new TArray<FName>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(BP_BaseRole_Seq_V2_C.__GetSupportGroupNames_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0602C1DA RID: 180698 RVA: 0x00A16458 File Offset: 0x00A14658
+		// Token: 0x06021086 RID: 135302 RVA: 0x009571D0 File Offset: 0x009553D0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual bool GetAnimDataFloat([Nullable(new byte[]
-		{
-			2,
-			1
-		})] ref TArray<FNamedCurveValue> FloatCurveData)
-		{
-			BP_BaseRole_Seq_V2_C.__GetAnimDataFloat_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetAnimDataFloat_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetAnimDataFloat_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_BaseRole_Seq_V2_C.__GetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			TArray<FNamedCurveValue> tarray = FloatCurveData;
-			if (tarray != null)
-			{
-				tarray.MoveTo(&ptr->FloatCurveData);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__GetAnimDataFloat_NativeFunctionPtr, (void*)ptr);
-			TArray<FNamedCurveValue> tarray2 = FloatCurveData;
-			if (tarray2 != null)
-			{
-				tarray2.MoveAssign(&ptr->FloatCurveData);
-			}
-			bool _Result = ptr->__Result;
-			UnrealReflectionUtils.DestroyStruct(BP_BaseRole_Seq_V2_C.__GetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			return _Result;
-		}
-
-		// Token: 0x0602C1DB RID: 180699 RVA: 0x00A164D8 File Offset: 0x00A146D8
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		protected unsafe virtual bool GetAnimDataFloat_Implementation([Nullable(new byte[]
-		{
-			2,
-			1
-		})] ref TArray<FNamedCurveValue> FloatCurveData)
-		{
-			BP_BaseRole_Seq_V2_C.__GetAnimDataFloat_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetAnimDataFloat_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetAnimDataFloat_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_BaseRole_Seq_V2_C.__GetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			TArray<FNamedCurveValue> tarray = FloatCurveData;
-			if (tarray != null)
-			{
-				tarray.MoveTo(&ptr->FloatCurveData);
-			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__GetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 0);
-			TArray<FNamedCurveValue> tarray2 = FloatCurveData;
-			if (tarray2 != null)
-			{
-				tarray2.MoveAssign(&ptr->FloatCurveData);
-			}
-			bool _Result = ptr->__Result;
-			UnrealReflectionUtils.DestroyStruct(BP_BaseRole_Seq_V2_C.__GetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			return _Result;
-		}
-
-		// Token: 0x0602C1DC RID: 180700 RVA: 0x00A16558 File Offset: 0x00A14758
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual bool GetAnimDataVector(ref TMap<FName, FVector> VectorCurveData)
 		{
 			BP_BaseRole_Seq_V2_C.__GetAnimDataVector_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetAnimDataVector_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetAnimDataVector_FunctionParams) & -16L;
@@ -679,9 +604,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			return _Result;
 		}
 
-		// Token: 0x0602C1DD RID: 180701 RVA: 0x00A165D8 File Offset: 0x00A147D8
+		// Token: 0x06021087 RID: 135303 RVA: 0x00957250 File Offset: 0x00955450
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual bool GetAnimDataVector_Implementation(ref TMap<FName, FVector> VectorCurveData)
 		{
 			BP_BaseRole_Seq_V2_C.__GetAnimDataVector_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetAnimDataVector_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetAnimDataVector_FunctionParams) & -16L;
@@ -691,7 +615,7 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			{
 				tmap.MoveTo(&ptr->VectorCurveData);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__GetAnimDataVector_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__GetAnimDataVector_NativeFunctionPtr, (void*)ptr);
 			TMap<FName, FVector> tmap2 = VectorCurveData;
 			if (tmap2 != null)
 			{
@@ -702,63 +626,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			return _Result;
 		}
 
-		// Token: 0x0602C1DE RID: 180702 RVA: 0x00A16658 File Offset: 0x00A14858
+		// Token: 0x06021088 RID: 135304 RVA: 0x009572D0 File Offset: 0x009554D0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual bool SetAnimDataFloat([Nullable(new byte[]
-		{
-			2,
-			1
-		})] in TArray<FNamedCurveValue> FloatCurveData)
-		{
-			BP_BaseRole_Seq_V2_C.__SetAnimDataFloat_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__SetAnimDataFloat_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__SetAnimDataFloat_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_BaseRole_Seq_V2_C.__SetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			object obj = FloatCurveData;
-			if (obj != null)
-			{
-				obj.MoveTo(&ptr->FloatCurveData);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__SetAnimDataFloat_NativeFunctionPtr, (void*)ptr);
-			object obj2 = FloatCurveData;
-			if (obj2 != null)
-			{
-				obj2.MoveAssign(&ptr->FloatCurveData);
-			}
-			bool _Result = ptr->__Result;
-			UnrealReflectionUtils.DestroyStruct(BP_BaseRole_Seq_V2_C.__SetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			return _Result;
-		}
-
-		// Token: 0x0602C1DF RID: 180703 RVA: 0x00A166D8 File Offset: 0x00A148D8
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		protected unsafe virtual bool SetAnimDataFloat_Implementation([Nullable(new byte[]
-		{
-			2,
-			1
-		})] in TArray<FNamedCurveValue> FloatCurveData)
-		{
-			BP_BaseRole_Seq_V2_C.__SetAnimDataFloat_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__SetAnimDataFloat_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__SetAnimDataFloat_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_BaseRole_Seq_V2_C.__SetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			object obj = FloatCurveData;
-			if (obj != null)
-			{
-				obj.MoveTo(&ptr->FloatCurveData);
-			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__SetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 0);
-			object obj2 = FloatCurveData;
-			if (obj2 != null)
-			{
-				obj2.MoveAssign(&ptr->FloatCurveData);
-			}
-			bool _Result = ptr->__Result;
-			UnrealReflectionUtils.DestroyStruct(BP_BaseRole_Seq_V2_C.__SetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			return _Result;
-		}
-
-		// Token: 0x0602C1E0 RID: 180704 RVA: 0x00A16758 File Offset: 0x00A14958
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual bool SetAnimDataVector(in TMap<FName, FVector> VectorCurveData)
 		{
 			BP_BaseRole_Seq_V2_C.__SetAnimDataVector_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__SetAnimDataVector_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__SetAnimDataVector_FunctionParams) & -16L;
@@ -779,9 +648,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			return _Result;
 		}
 
-		// Token: 0x0602C1E1 RID: 180705 RVA: 0x00A167D8 File Offset: 0x00A149D8
+		// Token: 0x06021089 RID: 135305 RVA: 0x00957350 File Offset: 0x00955550
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual bool SetAnimDataVector_Implementation(in TMap<FName, FVector> VectorCurveData)
 		{
 			BP_BaseRole_Seq_V2_C.__SetAnimDataVector_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__SetAnimDataVector_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__SetAnimDataVector_FunctionParams) & -16L;
@@ -791,7 +659,7 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			{
 				obj.MoveTo(&ptr->VectorCurveData);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__SetAnimDataVector_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__SetAnimDataVector_NativeFunctionPtr, (void*)ptr);
 			object obj2 = VectorCurveData;
 			if (obj2 != null)
 			{
@@ -802,9 +670,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			return _Result;
 		}
 
-		// Token: 0x0602C1E2 RID: 180706 RVA: 0x00A16858 File Offset: 0x00A14A58
+		// Token: 0x0602108A RID: 135306 RVA: 0x009573D0 File Offset: 0x009555D0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetABPC_Body_V2(ref ABPC_Seq_Body_V2_C ABPC_Body_V2)
 		{
 			BP_BaseRole_Seq_V2_C.__GetABPC_Body_V2_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__GetABPC_Body_V2_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__GetABPC_Body_V2_FunctionParams) & -16L;
@@ -816,17 +683,15 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			ABPC_Body_V2 = BuiltinUtils.GetOrCreateUObjectByNativePointer<ABPC_Seq_Body_V2_C>(ptr->ABPC_Body_V2);
 		}
 
-		// Token: 0x0602C1E3 RID: 180707 RVA: 0x00A168BC File Offset: 0x00A14ABC
+		// Token: 0x0602108B RID: 135307 RVA: 0x00957434 File Offset: 0x00955634
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void LightChanel()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__LightChanel_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C1E4 RID: 180708 RVA: 0x00A168D0 File Offset: 0x00A14AD0
+		// Token: 0x0602108C RID: 135308 RVA: 0x00957448 File Offset: 0x00955648
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void EndSwitchPose_ToBP(AActor To, bool Log)
 		{
 			BP_BaseRole_Seq_V2_C.__EndSwitchPose_ToBP_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__EndSwitchPose_ToBP_FunctionParams[(UIntPtr)119] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__EndSwitchPose_ToBP_FunctionParams) & -16L;
@@ -836,9 +701,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__EndSwitchPose_ToBP_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C1E5 RID: 180709 RVA: 0x00A1692C File Offset: 0x00A14B2C
+		// Token: 0x0602108D RID: 135309 RVA: 0x009574A4 File Offset: 0x009556A4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void EndSwitchPose_ToSeq(AActor To, bool Log)
 		{
 			BP_BaseRole_Seq_V2_C.__EndSwitchPose_ToSeq_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__EndSwitchPose_ToSeq_FunctionParams[(UIntPtr)79] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__EndSwitchPose_ToSeq_FunctionParams) & -16L;
@@ -848,9 +712,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__EndSwitchPose_ToSeq_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C1E6 RID: 180710 RVA: 0x00A16988 File Offset: 0x00A14B88
+		// Token: 0x0602108E RID: 135310 RVA: 0x00957500 File Offset: 0x00955700
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void BeginSwitchPose_ToBP(AActor From, AActor To, float SwitchTime, bool ErrorLog)
 		{
 			BP_BaseRole_Seq_V2_C.__BeginSwitchPose_ToBP_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__BeginSwitchPose_ToBP_FunctionParams[(UIntPtr)231] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__BeginSwitchPose_ToBP_FunctionParams) & -16L;
@@ -862,9 +725,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__BeginSwitchPose_ToBP_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C1E7 RID: 180711 RVA: 0x00A16A08 File Offset: 0x00A14C08
+		// Token: 0x0602108F RID: 135311 RVA: 0x00957580 File Offset: 0x00955780
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Begin_Switch_Pose_to_Seq(AActor From, AActor To, float SwitchTime, bool ErrorLog)
 		{
 			BP_BaseRole_Seq_V2_C.__Begin_Switch_Pose_to_Seq_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__Begin_Switch_Pose_to_Seq_FunctionParams[(UIntPtr)191] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__Begin_Switch_Pose_to_Seq_FunctionParams) & -16L;
@@ -876,57 +738,50 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__Begin_Switch_Pose_to_Seq_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C1E8 RID: 180712 RVA: 0x00A16A85 File Offset: 0x00A14C85
+		// Token: 0x06021090 RID: 135312 RVA: 0x009575FD File Offset: 0x009557FD
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 添加扫描效果()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__添加扫描效果_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C1E9 RID: 180713 RVA: 0x00A16A99 File Offset: 0x00A14C99
+		// Token: 0x06021091 RID: 135313 RVA: 0x00957611 File Offset: 0x00955811
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 卸载角色材质控制器()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__卸载角色材质控制器_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C1EA RID: 180714 RVA: 0x00A16AAD File Offset: 0x00A14CAD
+		// Token: 0x06021092 RID: 135314 RVA: 0x00957625 File Offset: 0x00955825
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 添加角色材质控制器()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__添加角色材质控制器_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C1EB RID: 180715 RVA: 0x00A16AC1 File Offset: 0x00A14CC1
+		// Token: 0x06021093 RID: 135315 RVA: 0x00957639 File Offset: 0x00955839
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 卸载角色材质控制器组()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__卸载角色材质控制器组_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C1EC RID: 180716 RVA: 0x00A16AD5 File Offset: 0x00A14CD5
+		// Token: 0x06021094 RID: 135316 RVA: 0x0095764D File Offset: 0x0095584D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 添加角色材质控制器组()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__添加角色材质控制器组_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C1ED RID: 180717 RVA: 0x00A16AE9 File Offset: 0x00A14CE9
+		// Token: 0x06021095 RID: 135317 RVA: 0x00957661 File Offset: 0x00955861
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void CleanHuluState()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__CleanHuluState_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C1EE RID: 180718 RVA: 0x00A16B00 File Offset: 0x00A14D00
+		// Token: 0x06021096 RID: 135318 RVA: 0x00957678 File Offset: 0x00955878
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void ChangeHuluState(int State)
 		{
 			BP_BaseRole_Seq_V2_C.__ChangeHuluState_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__ChangeHuluState_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__ChangeHuluState_FunctionParams) & -16L;
@@ -935,9 +790,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__ChangeHuluState_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C1EF RID: 180719 RVA: 0x00A16B48 File Offset: 0x00A14D48
+		// Token: 0x06021097 RID: 135319 RVA: 0x009576C0 File Offset: 0x009558C0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SwitchMeshTransform(bool LevelA)
 		{
 			BP_BaseRole_Seq_V2_C.__SwitchMeshTransform_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__SwitchMeshTransform_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__SwitchMeshTransform_FunctionParams) & -16L;
@@ -946,9 +800,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__SwitchMeshTransform_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C1F0 RID: 180720 RVA: 0x00A16B90 File Offset: 0x00A14D90
+		// Token: 0x06021098 RID: 135320 RVA: 0x00957708 File Offset: 0x00955908
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void EndSwitchPose(AActor To, bool Log)
 		{
 			BP_BaseRole_Seq_V2_C.__EndSwitchPose_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__EndSwitchPose_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__EndSwitchPose_FunctionParams) & -16L;
@@ -958,9 +811,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__EndSwitchPose_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C1F1 RID: 180721 RVA: 0x00A16BEC File Offset: 0x00A14DEC
+		// Token: 0x06021099 RID: 135321 RVA: 0x00957764 File Offset: 0x00955964
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void BeginSwitchPose(AActor From, AActor To, float SwitchTime, bool ErrorLog)
 		{
 			BP_BaseRole_Seq_V2_C.__BeginSwitchPose_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__BeginSwitchPose_FunctionParams[(UIntPtr)71] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__BeginSwitchPose_FunctionParams) & -16L;
@@ -972,49 +824,43 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__BeginSwitchPose_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C1F2 RID: 180722 RVA: 0x00A16C66 File Offset: 0x00A14E66
+		// Token: 0x0602109A RID: 135322 RVA: 0x009577DE File Offset: 0x009559DE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void JumpFrame()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__JumpFrame_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C1F3 RID: 180723 RVA: 0x00A16C7A File Offset: 0x00A14E7A
+		// Token: 0x0602109B RID: 135323 RVA: 0x009577F2 File Offset: 0x009559F2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C1F4 RID: 180724 RVA: 0x00A16C8E File Offset: 0x00A14E8E
+		// Token: 0x0602109C RID: 135324 RVA: 0x00957806 File Offset: 0x00955A06
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C1F5 RID: 180725 RVA: 0x00A16CA3 File Offset: 0x00A14EA3
+		// Token: 0x0602109D RID: 135325 RVA: 0x0095781A File Offset: 0x00955A1A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveDestroyed()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__ReceiveDestroyed_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C1F6 RID: 180726 RVA: 0x00A16CB7 File Offset: 0x00A14EB7
+		// Token: 0x0602109E RID: 135326 RVA: 0x0095782E File Offset: 0x00955A2E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveDestroyed_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__ReceiveDestroyed_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__ReceiveDestroyed_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C1F7 RID: 180727 RVA: 0x00A16CCC File Offset: 0x00A14ECC
+		// Token: 0x0602109F RID: 135327 RVA: 0x00957844 File Offset: 0x00955A44
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void BeginSeqSwitchPose(AActor From, AActor To, float SwitchTime)
 		{
 			BP_BaseRole_Seq_V2_C.__BeginSeqSwitchPose_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__BeginSeqSwitchPose_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__BeginSeqSwitchPose_FunctionParams) & -16L;
@@ -1025,9 +871,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__BeginSeqSwitchPose_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C1F8 RID: 180728 RVA: 0x00A16D40 File Offset: 0x00A14F40
+		// Token: 0x060210A0 RID: 135328 RVA: 0x009578B8 File Offset: 0x00955AB8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void EndSeqSwitchPose(AActor To)
 		{
 			BP_BaseRole_Seq_V2_C.__EndSeqSwitchPose_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__EndSeqSwitchPose_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__EndSeqSwitchPose_FunctionParams) & -16L;
@@ -1036,9 +881,8 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__EndSeqSwitchPose_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C1F9 RID: 180729 RVA: 0x00A16D98 File Offset: 0x00A14F98
+		// Token: 0x060210A1 RID: 135329 RVA: 0x00957910 File Offset: 0x00955B10
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void ApplySeqCostumeState(int State)
 		{
 			BP_BaseRole_Seq_V2_C.__ApplySeqCostumeState_FunctionParams* ptr = stackalloc BP_BaseRole_Seq_V2_C.__ApplySeqCostumeState_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_BaseRole_Seq_V2_C.__ApplySeqCostumeState_FunctionParams) & -16L;
@@ -1047,575 +891,535 @@ namespace AkiClient.Game.Aki.Character.BaseSeqCharacter
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__ApplySeqCostumeState_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C1FA RID: 180730 RVA: 0x00A16DDE File Offset: 0x00A14FDE
+		// Token: 0x060210A2 RID: 135330 RVA: 0x00957956 File Offset: 0x00955B56
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void ClearSeqCostumeState()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BaseRole_Seq_V2_C.__ClearSeqCostumeState_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C1FB RID: 180731 RVA: 0x00A16DF2 File Offset: 0x00A14FF2
+		// Token: 0x060210A3 RID: 135331 RVA: 0x0095796A File Offset: 0x00955B6A
 		protected BP_BaseRole_Seq_V2_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401710F RID: 94479
-		internal static int __InterfaceOffset_ISeqAnimDataInterface;
-
-		// Token: 0x04017110 RID: 94480
+		// Token: 0x04011E92 RID: 73362
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseSeqCharacter/BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C";
 
-		// Token: 0x04017111 RID: 94481
+		// Token: 0x04011E93 RID: 73363
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04017112 RID: 94482
+		// Token: 0x04011E94 RID: 73364
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04017113 RID: 94483
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011E95 RID: 73365
+		internal static int __PropertyOffset_SeqAudio_Seq_V2;
 
-		// Token: 0x04017114 RID: 94484
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011E96 RID: 73366
+		internal static int __PropertyOffset_Hulu;
 
-		// Token: 0x04017115 RID: 94485
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011E97 RID: 73367
+		internal static int __PropertyOffset_ABPC_Body_V2;
 
-		// Token: 0x04017116 RID: 94486
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011E98 RID: 73368
+		internal static int __PropertyOffset_SkeletalMeshComponent0;
 
-		// Token: 0x04017117 RID: 94487
-		internal static int __PropertyOffset_5;
+		// Token: 0x04011E99 RID: 73369
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x04017118 RID: 94488
-		internal static int __PropertyOffset_6;
+		// Token: 0x04011E9A RID: 73370
+		internal static int __PropertyOffset_TalkID;
 
-		// Token: 0x04017119 RID: 94489
-		internal static int __PropertyOffset_7;
+		// Token: 0x04011E9B RID: 73371
+		internal static int __PropertyOffset_BindingTag;
 
-		// Token: 0x0401711A RID: 94490
-		internal static int __PropertyOffset_8;
+		// Token: 0x04011E9C RID: 73372
+		internal static int __PropertyOffset_HuluFX_Handle;
 
-		// Token: 0x0401711B RID: 94491
-		internal static int __PropertyOffset_9;
+		// Token: 0x04011E9D RID: 73373
+		internal static int __PropertyOffset_CharFX_Group_Handle;
 
-		// Token: 0x0401711C RID: 94492
-		internal static int __PropertyOffset_10;
+		// Token: 0x04011E9E RID: 73374
+		internal static int __PropertyOffset_CharFX_Handle;
 
-		// Token: 0x0401711D RID: 94493
-		internal static int __PropertyOffset_11;
+		// Token: 0x04011E9F RID: 73375
+		internal static int __PropertyOffset_DataGroup;
 
-		// Token: 0x0401711E RID: 94494
-		internal static int __PropertyOffset_12;
+		// Token: 0x04011EA0 RID: 73376
+		internal static int __PropertyOffset_Data;
 
-		// Token: 0x0401711F RID: 94495
-		internal static int __PropertyOffset_13;
+		// Token: 0x04011EA1 RID: 73377
+		internal static int __PropertyOffset_BPScanning;
 
-		// Token: 0x04017120 RID: 94496
-		internal static int __PropertyOffset_14;
+		// Token: 0x04011EA2 RID: 73378
+		internal static int __PropertyOffset_CharRenderingComponent;
 
-		// Token: 0x04017121 RID: 94497
-		internal static int __PropertyOffset_15;
+		// Token: 0x04011EA3 RID: 73379
+		internal static int __PropertyOffset_TalkID_SP;
 
-		// Token: 0x04017122 RID: 94498
-		internal static int __PropertyOffset_16;
+		// Token: 0x04011EA4 RID: 73380
+		internal static int __PropertyOffset_EnableKeyLightChan;
 
-		// Token: 0x04017123 RID: 94499
-		internal static int __PropertyOffset_17;
+		// Token: 0x04011EA5 RID: 73381
+		internal static int __PropertyOffset_ToonLightChan0;
 
-		// Token: 0x04017124 RID: 94500
-		internal static int __PropertyOffset_18;
+		// Token: 0x04011EA6 RID: 73382
+		internal static int __PropertyOffset_ToonLightChan1;
 
-		// Token: 0x04017125 RID: 94501
-		internal static int __PropertyOffset_19;
+		// Token: 0x04011EA7 RID: 73383
+		internal static int __PropertyOffset_ToonLightChan2;
 
-		// Token: 0x04017126 RID: 94502
-		internal static int __PropertyOffset_20;
+		// Token: 0x04011EA8 RID: 73384
+		internal static int __PropertyOffset_CustomData;
 
-		// Token: 0x04017127 RID: 94503
+		// Token: 0x04011EA9 RID: 73385
 		private TMap<FName, FTransform> _CustomData;
 
-		// Token: 0x04017128 RID: 94504
-		internal static int __PropertyOffset_21;
+		// Token: 0x04011EAA RID: 73386
+		internal static int __PropertyOffset_MeshRef;
 
-		// Token: 0x04017129 RID: 94505
+		// Token: 0x04011EAB RID: 73387
 		private static IntPtr __GetSeqMeshRef_NativeFunctionPtr;
 
-		// Token: 0x0401712A RID: 94506
+		// Token: 0x04011EAC RID: 73388
 		private static IntPtr __GetSeqTalkId_NativeFunctionPtr;
 
-		// Token: 0x0401712B RID: 94507
+		// Token: 0x04011EAD RID: 73389
 		private static IntPtr __GetSeqMouthAnimInstance_NativeFunctionPtr;
 
-		// Token: 0x0401712C RID: 94508
+		// Token: 0x04011EAE RID: 73390
 		private static IntPtr __GetSeqBlendMesh_NativeFunctionPtr;
 
-		// Token: 0x0401712D RID: 94509
+		// Token: 0x04011EAF RID: 73391
 		private static IntPtr __GetSeqBindingTag_NativeFunctionPtr;
 
-		// Token: 0x0401712E RID: 94510
+		// Token: 0x04011EB0 RID: 73392
 		private static IntPtr __GetSeqAudio_NativeFunctionPtr;
 
-		// Token: 0x0401712F RID: 94511
+		// Token: 0x04011EB1 RID: 73393
 		private static IntPtr __GetAnimDataTransform_NativeFunctionPtr;
 
-		// Token: 0x04017130 RID: 94512
+		// Token: 0x04011EB2 RID: 73394
 		private static IntPtr __IsCustomSupport_NativeFunctionPtr;
 
-		// Token: 0x04017131 RID: 94513
+		// Token: 0x04011EB3 RID: 73395
 		private static IntPtr __SetAnimDataTransform_NativeFunctionPtr;
 
-		// Token: 0x04017132 RID: 94514
+		// Token: 0x04011EB4 RID: 73396
 		private static IntPtr __GetSupportGroupNames_NativeFunctionPtr;
 
-		// Token: 0x04017133 RID: 94515
-		private static IntPtr __GetAnimDataFloat_NativeFunctionPtr;
-
-		// Token: 0x04017134 RID: 94516
+		// Token: 0x04011EB5 RID: 73397
 		private static IntPtr __GetAnimDataVector_NativeFunctionPtr;
 
-		// Token: 0x04017135 RID: 94517
-		private static IntPtr __SetAnimDataFloat_NativeFunctionPtr;
-
-		// Token: 0x04017136 RID: 94518
+		// Token: 0x04011EB6 RID: 73398
 		private static IntPtr __SetAnimDataVector_NativeFunctionPtr;
 
-		// Token: 0x04017137 RID: 94519
+		// Token: 0x04011EB7 RID: 73399
 		private static IntPtr __GetABPC_Body_V2_NativeFunctionPtr;
 
-		// Token: 0x04017138 RID: 94520
+		// Token: 0x04011EB8 RID: 73400
 		private static IntPtr __LightChanel_NativeFunctionPtr;
 
-		// Token: 0x04017139 RID: 94521
+		// Token: 0x04011EB9 RID: 73401
 		private static IntPtr __EndSwitchPose_ToBP_NativeFunctionPtr;
 
-		// Token: 0x0401713A RID: 94522
+		// Token: 0x04011EBA RID: 73402
 		private static IntPtr __EndSwitchPose_ToSeq_NativeFunctionPtr;
 
-		// Token: 0x0401713B RID: 94523
+		// Token: 0x04011EBB RID: 73403
 		private static IntPtr __BeginSwitchPose_ToBP_NativeFunctionPtr;
 
-		// Token: 0x0401713C RID: 94524
+		// Token: 0x04011EBC RID: 73404
 		private static IntPtr __Begin_Switch_Pose_to_Seq_NativeFunctionPtr;
 
-		// Token: 0x0401713D RID: 94525
+		// Token: 0x04011EBD RID: 73405
 		private static IntPtr __添加扫描效果_NativeFunctionPtr;
 
-		// Token: 0x0401713E RID: 94526
+		// Token: 0x04011EBE RID: 73406
 		private static IntPtr __卸载角色材质控制器_NativeFunctionPtr;
 
-		// Token: 0x0401713F RID: 94527
+		// Token: 0x04011EBF RID: 73407
 		private static IntPtr __添加角色材质控制器_NativeFunctionPtr;
 
-		// Token: 0x04017140 RID: 94528
+		// Token: 0x04011EC0 RID: 73408
 		private static IntPtr __卸载角色材质控制器组_NativeFunctionPtr;
 
-		// Token: 0x04017141 RID: 94529
+		// Token: 0x04011EC1 RID: 73409
 		private static IntPtr __添加角色材质控制器组_NativeFunctionPtr;
 
-		// Token: 0x04017142 RID: 94530
+		// Token: 0x04011EC2 RID: 73410
 		private static IntPtr __CleanHuluState_NativeFunctionPtr;
 
-		// Token: 0x04017143 RID: 94531
+		// Token: 0x04011EC3 RID: 73411
 		private static IntPtr __ChangeHuluState_NativeFunctionPtr;
 
-		// Token: 0x04017144 RID: 94532
+		// Token: 0x04011EC4 RID: 73412
 		private static IntPtr __SwitchMeshTransform_NativeFunctionPtr;
 
-		// Token: 0x04017145 RID: 94533
+		// Token: 0x04011EC5 RID: 73413
 		private static IntPtr __EndSwitchPose_NativeFunctionPtr;
 
-		// Token: 0x04017146 RID: 94534
+		// Token: 0x04011EC6 RID: 73414
 		private static IntPtr __BeginSwitchPose_NativeFunctionPtr;
 
-		// Token: 0x04017147 RID: 94535
+		// Token: 0x04011EC7 RID: 73415
 		private static IntPtr __JumpFrame_NativeFunctionPtr;
 
-		// Token: 0x04017148 RID: 94536
+		// Token: 0x04011EC8 RID: 73416
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x04017149 RID: 94537
+		// Token: 0x04011EC9 RID: 73417
 		private static IntPtr __ReceiveDestroyed_NativeFunctionPtr;
 
-		// Token: 0x0401714A RID: 94538
+		// Token: 0x04011ECA RID: 73418
 		private static IntPtr __BeginSeqSwitchPose_NativeFunctionPtr;
 
-		// Token: 0x0401714B RID: 94539
+		// Token: 0x04011ECB RID: 73419
 		private static IntPtr __EndSeqSwitchPose_NativeFunctionPtr;
 
-		// Token: 0x0401714C RID: 94540
+		// Token: 0x04011ECC RID: 73420
 		private static IntPtr __ApplySeqCostumeState_NativeFunctionPtr;
 
-		// Token: 0x0401714D RID: 94541
+		// Token: 0x04011ECD RID: 73421
 		private static IntPtr __ClearSeqCostumeState_NativeFunctionPtr;
 
-		// Token: 0x0200A62D RID: 42541
+		// Token: 0x02009062 RID: 36962
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __GetSeqMeshRef_FunctionParams
 		{
-			// Token: 0x04032517 RID: 206103
+			// Token: 0x0402CE62 RID: 183906
 			[FieldOffset(0)]
 			public byte MeshRef;
 		}
 
-		// Token: 0x0200A62E RID: 42542
+		// Token: 0x02009063 RID: 36963
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetSeqTalkId_FunctionParams
 		{
-			// Token: 0x04032518 RID: 206104
+			// Token: 0x0402CE63 RID: 183907
 			[FieldOffset(0)]
 			public int TalkID;
 
-			// Token: 0x04032519 RID: 206105
+			// Token: 0x0402CE64 RID: 183908
 			[FieldOffset(4)]
 			public int TalkID_SP;
 		}
 
-		// Token: 0x0200A62F RID: 42543
+		// Token: 0x02009064 RID: 36964
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetSeqMouthAnimInstance_FunctionParams
 		{
-			// Token: 0x0403251A RID: 206106
+			// Token: 0x0402CE65 RID: 183909
 			[FieldOffset(0)]
 			public IntPtr AnimInstance;
 		}
 
-		// Token: 0x0200A630 RID: 42544
+		// Token: 0x02009065 RID: 36965
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetSeqBlendMesh_FunctionParams
 		{
-			// Token: 0x0403251B RID: 206107
+			// Token: 0x0402CE66 RID: 183910
 			[FieldOffset(0)]
 			public IntPtr Mesh;
 		}
 
-		// Token: 0x0200A631 RID: 42545
+		// Token: 0x02009066 RID: 36966
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __GetSeqBindingTag_FunctionParams
 		{
-			// Token: 0x0403251C RID: 206108
+			// Token: 0x0402CE67 RID: 183911
 			[FieldOffset(0)]
 			public FName Tag;
 		}
 
-		// Token: 0x0200A632 RID: 42546
+		// Token: 0x02009067 RID: 36967
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetSeqAudio_FunctionParams
 		{
-			// Token: 0x0403251D RID: 206109
+			// Token: 0x0402CE68 RID: 183912
 			[FieldOffset(0)]
 			public IntPtr SeqAudio;
 		}
 
-		// Token: 0x0200A633 RID: 42547
+		// Token: 0x02009068 RID: 36968
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 88)]
 		protected ref struct __GetAnimDataTransform_FunctionParams
 		{
-			// Token: 0x0403251E RID: 206110
+			// Token: 0x0402CE69 RID: 183913
 			[FieldOffset(0)]
 			public byte FloatCurveData;
 
-			// Token: 0x0403251F RID: 206111
+			// Token: 0x0402CE6A RID: 183914
 			[FieldOffset(80)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200A634 RID: 42548
+		// Token: 0x02009069 RID: 36969
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsCustomSupport_FunctionParams
 		{
-			// Token: 0x04032520 RID: 206112
+			// Token: 0x0402CE6B RID: 183915
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200A635 RID: 42549
+		// Token: 0x0200906A RID: 36970
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 88)]
 		protected ref struct __SetAnimDataTransform_FunctionParams
 		{
-			// Token: 0x04032521 RID: 206113
+			// Token: 0x0402CE6C RID: 183916
 			[FieldOffset(0)]
 			public byte FloatCurveData;
 
-			// Token: 0x04032522 RID: 206114
+			// Token: 0x0402CE6D RID: 183917
 			[FieldOffset(80)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200A636 RID: 42550
+		// Token: 0x0200906B RID: 36971
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __GetSupportGroupNames_FunctionParams
 		{
-			// Token: 0x04032523 RID: 206115
+			// Token: 0x0402CE6E RID: 183918
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A637 RID: 42551
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __GetAnimDataFloat_FunctionParams
-		{
-			// Token: 0x04032524 RID: 206116
-			[FieldOffset(0)]
-			public byte FloatCurveData;
-
-			// Token: 0x04032525 RID: 206117
-			[FieldOffset(16)]
-			public bool __Result;
-		}
-
-		// Token: 0x0200A638 RID: 42552
+		// Token: 0x0200906C RID: 36972
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 88)]
 		protected ref struct __GetAnimDataVector_FunctionParams
 		{
-			// Token: 0x04032526 RID: 206118
+			// Token: 0x0402CE6F RID: 183919
 			[FieldOffset(0)]
 			public byte VectorCurveData;
 
-			// Token: 0x04032527 RID: 206119
+			// Token: 0x0402CE70 RID: 183920
 			[FieldOffset(80)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200A639 RID: 42553
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __SetAnimDataFloat_FunctionParams
-		{
-			// Token: 0x04032528 RID: 206120
-			[FieldOffset(0)]
-			public byte FloatCurveData;
-
-			// Token: 0x04032529 RID: 206121
-			[FieldOffset(16)]
-			public bool __Result;
-		}
-
-		// Token: 0x0200A63A RID: 42554
+		// Token: 0x0200906D RID: 36973
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 88)]
 		protected ref struct __SetAnimDataVector_FunctionParams
 		{
-			// Token: 0x0403252A RID: 206122
+			// Token: 0x0402CE71 RID: 183921
 			[FieldOffset(0)]
 			public byte VectorCurveData;
 
-			// Token: 0x0403252B RID: 206123
+			// Token: 0x0402CE72 RID: 183922
 			[FieldOffset(80)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200A63B RID: 42555
+		// Token: 0x0200906E RID: 36974
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetABPC_Body_V2_FunctionParams
 		{
-			// Token: 0x0403252C RID: 206124
+			// Token: 0x0402CE73 RID: 183923
 			[FieldOffset(0)]
 			public IntPtr ABPC_Body_V2;
 		}
 
-		// Token: 0x0200A63C RID: 42556
+		// Token: 0x0200906F RID: 36975
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 104)]
 		protected ref struct __EndSwitchPose_ToBP_FunctionParams
 		{
-			// Token: 0x0403252D RID: 206125
+			// Token: 0x0402CE74 RID: 183924
 			[FieldOffset(0)]
 			public IntPtr To;
 
-			// Token: 0x0403252E RID: 206126
+			// Token: 0x0402CE75 RID: 183925
 			[FieldOffset(8)]
 			public bool Log;
 		}
 
-		// Token: 0x0200A63D RID: 42557
+		// Token: 0x02009070 RID: 36976
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
 		protected ref struct __EndSwitchPose_ToSeq_FunctionParams
 		{
-			// Token: 0x0403252F RID: 206127
+			// Token: 0x0402CE76 RID: 183926
 			[FieldOffset(0)]
 			public IntPtr To;
 
-			// Token: 0x04032530 RID: 206128
+			// Token: 0x0402CE77 RID: 183927
 			[FieldOffset(8)]
 			public bool Log;
 		}
 
-		// Token: 0x0200A63E RID: 42558
+		// Token: 0x02009071 RID: 36977
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 216)]
 		protected ref struct __BeginSwitchPose_ToBP_FunctionParams
 		{
-			// Token: 0x04032531 RID: 206129
+			// Token: 0x0402CE78 RID: 183928
 			[FieldOffset(0)]
 			public IntPtr From;
 
-			// Token: 0x04032532 RID: 206130
+			// Token: 0x0402CE79 RID: 183929
 			[FieldOffset(8)]
 			public IntPtr To;
 
-			// Token: 0x04032533 RID: 206131
+			// Token: 0x0402CE7A RID: 183930
 			[FieldOffset(16)]
 			public float SwitchTime;
 
-			// Token: 0x04032534 RID: 206132
+			// Token: 0x0402CE7B RID: 183931
 			[FieldOffset(20)]
 			public bool ErrorLog;
 		}
 
-		// Token: 0x0200A63F RID: 42559
+		// Token: 0x02009072 RID: 36978
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 176)]
 		protected ref struct __Begin_Switch_Pose_to_Seq_FunctionParams
 		{
-			// Token: 0x04032535 RID: 206133
+			// Token: 0x0402CE7C RID: 183932
 			[FieldOffset(0)]
 			public IntPtr From;
 
-			// Token: 0x04032536 RID: 206134
+			// Token: 0x0402CE7D RID: 183933
 			[FieldOffset(8)]
 			public IntPtr To;
 
-			// Token: 0x04032537 RID: 206135
+			// Token: 0x0402CE7E RID: 183934
 			[FieldOffset(16)]
 			public float SwitchTime;
 
-			// Token: 0x04032538 RID: 206136
+			// Token: 0x0402CE7F RID: 183935
 			[FieldOffset(20)]
 			public bool ErrorLog;
 		}
 
-		// Token: 0x0200A640 RID: 42560
+		// Token: 0x02009073 RID: 36979
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __ChangeHuluState_FunctionParams
 		{
-			// Token: 0x04032539 RID: 206137
+			// Token: 0x0402CE80 RID: 183936
 			[FieldOffset(0)]
 			public int State;
 		}
 
-		// Token: 0x0200A641 RID: 42561
+		// Token: 0x02009074 RID: 36980
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SwitchMeshTransform_FunctionParams
 		{
-			// Token: 0x0403253A RID: 206138
+			// Token: 0x0402CE81 RID: 183937
 			[FieldOffset(0)]
 			public bool LevelA;
 		}
 
-		// Token: 0x0200A642 RID: 42562
+		// Token: 0x02009075 RID: 36981
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __EndSwitchPose_FunctionParams
 		{
-			// Token: 0x0403253B RID: 206139
+			// Token: 0x0402CE82 RID: 183938
 			[FieldOffset(0)]
 			public IntPtr To;
 
-			// Token: 0x0403253C RID: 206140
+			// Token: 0x0402CE83 RID: 183939
 			[FieldOffset(8)]
 			public bool Log;
 		}
 
-		// Token: 0x0200A643 RID: 42563
+		// Token: 0x02009076 RID: 36982
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 56)]
 		protected ref struct __BeginSwitchPose_FunctionParams
 		{
-			// Token: 0x0403253D RID: 206141
+			// Token: 0x0402CE84 RID: 183940
 			[FieldOffset(0)]
 			public IntPtr From;
 
-			// Token: 0x0403253E RID: 206142
+			// Token: 0x0402CE85 RID: 183941
 			[FieldOffset(8)]
 			public IntPtr To;
 
-			// Token: 0x0403253F RID: 206143
+			// Token: 0x0402CE86 RID: 183942
 			[FieldOffset(16)]
 			public float SwitchTime;
 
-			// Token: 0x04032540 RID: 206144
+			// Token: 0x0402CE87 RID: 183943
 			[FieldOffset(20)]
 			public bool ErrorLog;
 		}
 
-		// Token: 0x0200A644 RID: 42564
+		// Token: 0x02009077 RID: 36983
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __BeginSeqSwitchPose_FunctionParams
 		{
-			// Token: 0x04032541 RID: 206145
+			// Token: 0x0402CE88 RID: 183944
 			[FieldOffset(0)]
 			public IntPtr From;
 
-			// Token: 0x04032542 RID: 206146
+			// Token: 0x0402CE89 RID: 183945
 			[FieldOffset(8)]
 			public IntPtr To;
 
-			// Token: 0x04032543 RID: 206147
+			// Token: 0x0402CE8A RID: 183946
 			[FieldOffset(16)]
 			public float SwitchTime;
 		}
 
-		// Token: 0x0200A645 RID: 42565
+		// Token: 0x02009078 RID: 36984
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __EndSeqSwitchPose_FunctionParams
 		{
-			// Token: 0x04032544 RID: 206148
+			// Token: 0x0402CE8B RID: 183947
 			[FieldOffset(0)]
 			public IntPtr To;
 		}
 
-		// Token: 0x0200A646 RID: 42566
+		// Token: 0x02009079 RID: 36985
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __ApplySeqCostumeState_FunctionParams
 		{
-			// Token: 0x04032545 RID: 206149
+			// Token: 0x0402CE8C RID: 183948
 			[FieldOffset(0)]
 			public int State;
 		}

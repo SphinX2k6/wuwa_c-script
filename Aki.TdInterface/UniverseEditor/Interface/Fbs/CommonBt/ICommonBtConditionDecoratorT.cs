@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 {
-	// Token: 0x02005EA9 RID: 24233
+	// Token: 0x020064EC RID: 25836
 	public class ICommonBtConditionDecoratorT
 	{
-		// Token: 0x1700B515 RID: 46357
-		// (get) Token: 0x06029840 RID: 170048 RVA: 0x005B0255 File Offset: 0x005AE455
-		// (set) Token: 0x06029841 RID: 170049 RVA: 0x005B025D File Offset: 0x005AE45D
+		// Token: 0x1700BE80 RID: 48768
+		// (get) Token: 0x0602BEE8 RID: 179944 RVA: 0x005F91F9 File Offset: 0x005F73F9
+		// (set) Token: 0x0602BEE9 RID: 179945 RVA: 0x005F9201 File Offset: 0x005F7401
 		public ECommonBtDecoratorType Type { get; set; }
 
-		// Token: 0x1700B516 RID: 46358
-		// (get) Token: 0x06029842 RID: 170050 RVA: 0x005B0266 File Offset: 0x005AE466
-		// (set) Token: 0x06029843 RID: 170051 RVA: 0x005B026E File Offset: 0x005AE46E
+		// Token: 0x1700BE81 RID: 48769
+		// (get) Token: 0x0602BEEA RID: 179946 RVA: 0x005F920A File Offset: 0x005F740A
+		// (set) Token: 0x0602BEEB RID: 179947 RVA: 0x005F9212 File Offset: 0x005F7412
 		public ICommonBtConditionGroupT Condition { get; set; }
 
-		// Token: 0x1700B517 RID: 46359
-		// (get) Token: 0x06029844 RID: 170052 RVA: 0x005B0277 File Offset: 0x005AE477
-		// (set) Token: 0x06029845 RID: 170053 RVA: 0x005B027F File Offset: 0x005AE47F
+		// Token: 0x1700BE82 RID: 48770
+		// (get) Token: 0x0602BEEC RID: 179948 RVA: 0x005F921B File Offset: 0x005F741B
+		// (set) Token: 0x0602BEED RID: 179949 RVA: 0x005F9223 File Offset: 0x005F7423
 		public bool Reverse { get; set; }
 
-		// Token: 0x1700B518 RID: 46360
-		// (get) Token: 0x06029846 RID: 170054 RVA: 0x005B0288 File Offset: 0x005AE488
-		// (set) Token: 0x06029847 RID: 170055 RVA: 0x005B0290 File Offset: 0x005AE490
+		// Token: 0x1700BE83 RID: 48771
+		// (get) Token: 0x0602BEEE RID: 179950 RVA: 0x005F922C File Offset: 0x005F742C
+		// (set) Token: 0x0602BEEF RID: 179951 RVA: 0x005F9234 File Offset: 0x005F7434
 		public ECommonBtAbortType AbortType { get; set; }
 
-		// Token: 0x1700B519 RID: 46361
-		// (get) Token: 0x06029848 RID: 170056 RVA: 0x005B0299 File Offset: 0x005AE499
-		// (set) Token: 0x06029849 RID: 170057 RVA: 0x005B02A1 File Offset: 0x005AE4A1
+		// Token: 0x1700BE84 RID: 48772
+		// (get) Token: 0x0602BEF0 RID: 179952 RVA: 0x005F923D File Offset: 0x005F743D
+		// (set) Token: 0x0602BEF1 RID: 179953 RVA: 0x005F9245 File Offset: 0x005F7445
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602984A RID: 170058 RVA: 0x005B02AA File Offset: 0x005AE4AA
+		// Token: 0x0602BEF2 RID: 179954 RVA: 0x005F924E File Offset: 0x005F744E
 		public ICommonBtConditionDecoratorT()
 		{
 			this.Type = ECommonBtDecoratorType.Condition;

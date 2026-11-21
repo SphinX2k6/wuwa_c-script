@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020026E5 RID: 9957
+// Token: 0x02001BD0 RID: 7120
 public enum ERacingBetsRewardType
 {
-	// Token: 0x04009992 RID: 39314
+	// Token: 0x04009AEA RID: 39658
 	BetsCount = 1,
-	// Token: 0x04009993 RID: 39315
+	// Token: 0x04009AEB RID: 39659
 	DailyGameEarn,
-	// Token: 0x04009994 RID: 39316
+	// Token: 0x04009AEC RID: 39660
 	DailyEarn
 }

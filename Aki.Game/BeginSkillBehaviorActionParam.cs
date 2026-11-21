@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003157 RID: 12631
+// Token: 0x020026C4 RID: 9924
 [NullableContext(1)]
 [Nullable(0)]
 public class BeginSkillBehaviorActionParam : IBeginSkillBehaviorActionParam
 {
-	// Token: 0x170025AD RID: 9645
-	// (get) Token: 0x0601B2FA RID: 111354 RVA: 0x00767FF3 File Offset: 0x007661F3
-	// (set) Token: 0x0601B2FB RID: 111355 RVA: 0x00767FFB File Offset: 0x007661FB
+	// Token: 0x1700279E RID: 10142
+	// (get) Token: 0x06018DFF RID: 101887 RVA: 0x0078F9BF File Offset: 0x0078DBBF
+	// (set) Token: 0x06018E00 RID: 101888 RVA: 0x0078F9C7 File Offset: 0x0078DBC7
 	public Entity Entity { get; set; }
 
-	// Token: 0x170025AE RID: 9646
-	// (get) Token: 0x0601B2FC RID: 111356 RVA: 0x00768004 File Offset: 0x00766204
-	// (set) Token: 0x0601B2FD RID: 111357 RVA: 0x0076800C File Offset: 0x0076620C
+	// Token: 0x1700279F RID: 10143
+	// (get) Token: 0x06018E01 RID: 101889 RVA: 0x0078F9D0 File Offset: 0x0078DBD0
+	// (set) Token: 0x06018E02 RID: 101890 RVA: 0x0078F9D8 File Offset: 0x0078DBD8
 	public BaseSkillComponent SkillComponent { get; set; }
 
-	// Token: 0x170025AF RID: 9647
-	// (get) Token: 0x0601B2FE RID: 111358 RVA: 0x00768015 File Offset: 0x00766215
-	// (set) Token: 0x0601B2FF RID: 111359 RVA: 0x0076801D File Offset: 0x0076621D
+	// Token: 0x170027A0 RID: 10144
+	// (get) Token: 0x06018E03 RID: 101891 RVA: 0x0078F9E1 File Offset: 0x0078DBE1
+	// (set) Token: 0x06018E04 RID: 101892 RVA: 0x0078F9E9 File Offset: 0x0078DBE9
 	public Skill Skill { get; set; }
 }

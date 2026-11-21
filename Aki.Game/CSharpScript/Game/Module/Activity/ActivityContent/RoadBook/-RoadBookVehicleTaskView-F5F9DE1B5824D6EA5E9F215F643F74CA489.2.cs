@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061F4 RID: 25076
+	// Token: 0x02005172 RID: 20850
 	internal enum <RoadBookVehicleTaskView>F5F9DE1B5824D6EA5E9F215F643F74CA4891869456481D8AF511B1A0B54A4E2FB__ETabGroupComponents
 	{
-		// Token: 0x04021019 RID: 135193
+		// Token: 0x0401B948 RID: 112968
 		TogParent,
-		// Token: 0x0402101A RID: 135194
+		// Token: 0x0401B949 RID: 112969
 		TexBg,
-		// Token: 0x0402101B RID: 135195
+		// Token: 0x0401B94A RID: 112970
 		TxtTitle,
-		// Token: 0x0402101C RID: 135196
+		// Token: 0x0401B94B RID: 112971
 		PanelChildItemLayout,
-		// Token: 0x0402101D RID: 135197
+		// Token: 0x0401B94C RID: 112972
 		PanelItem,
-		// Token: 0x0402101E RID: 135198
+		// Token: 0x0401B94D RID: 112973
 		Arrow
 	}
 }

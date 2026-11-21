@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200353A RID: 13626
+// Token: 0x02002AAF RID: 10927
 [NullableContext(1)]
 public interface IGraphNodeWithCyclicDependency
 {
-	// Token: 0x17002974 RID: 10612
-	// (get) Token: 0x0601DEFB RID: 122619 RVA: 0x00863B80 File Offset: 0x00861D80
+	// Token: 0x17002D0D RID: 11533
+	// (get) Token: 0x0601BC23 RID: 113699 RVA: 0x0088B7B8 File Offset: 0x008899B8
 	bool HasCycle
 	{
 		get
@@ -15,8 +15,8 @@ public interface IGraphNodeWithCyclicDependency
 		}
 	}
 
-	// Token: 0x17002975 RID: 10613
-	// (get) Token: 0x0601DEFC RID: 122620
-	// (set) Token: 0x0601DEFD RID: 122621
+	// Token: 0x17002D0E RID: 11534
+	// (get) Token: 0x0601BC24 RID: 113700
+	// (set) Token: 0x0601BC25 RID: 113701
 	string[] Cycle { get; set; }
 }

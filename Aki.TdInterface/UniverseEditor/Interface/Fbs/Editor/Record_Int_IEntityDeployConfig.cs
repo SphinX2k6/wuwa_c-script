@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048D1 RID: 18641
+	// Token: 0x02004D36 RID: 19766
 	public struct Record_Int_IEntityDeployConfig : IFlatbufferObject
 	{
-		// Token: 0x17008755 RID: 34645
-		// (get) Token: 0x0601D266 RID: 119398 RVA: 0x0041D7F4 File Offset: 0x0041B9F4
+		// Token: 0x17008D9D RID: 36253
+		// (get) Token: 0x0601EA53 RID: 125523 RVA: 0x00449F90 File Offset: 0x00448190
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D267 RID: 119399 RVA: 0x0041D801 File Offset: 0x0041BA01
+		// Token: 0x0601EA54 RID: 125524 RVA: 0x00449F9D File Offset: 0x0044819D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D268 RID: 119400 RVA: 0x0041D808 File Offset: 0x0041BA08
+		// Token: 0x0601EA55 RID: 125525 RVA: 0x00449FA4 File Offset: 0x004481A4
 		public static Record_Int_IEntityDeployConfig GetRootAsRecord_Int_IEntityDeployConfig(ByteBuffer _bb)
 		{
 			return Record_Int_IEntityDeployConfig.GetRootAsRecord_Int_IEntityDeployConfig(_bb, default(Record_Int_IEntityDeployConfig));
 		}
 
-		// Token: 0x0601D269 RID: 119401 RVA: 0x0041D824 File Offset: 0x0041BA24
+		// Token: 0x0601EA56 RID: 125526 RVA: 0x00449FC0 File Offset: 0x004481C0
 		public static Record_Int_IEntityDeployConfig GetRootAsRecord_Int_IEntityDeployConfig(ByteBuffer _bb, Record_Int_IEntityDeployConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D26A RID: 119402 RVA: 0x0041D841 File Offset: 0x0041BA41
+		// Token: 0x0601EA57 RID: 125527 RVA: 0x00449FDD File Offset: 0x004481DD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D26B RID: 119403 RVA: 0x0041D850 File Offset: 0x0041BA50
+		// Token: 0x0601EA58 RID: 125528 RVA: 0x00449FEC File Offset: 0x004481EC
 		public Record_Int_IEntityDeployConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008756 RID: 34646
-		// (get) Token: 0x0601D26C RID: 119404 RVA: 0x0041D860 File Offset: 0x0041BA60
+		// Token: 0x17008D9E RID: 36254
+		// (get) Token: 0x0601EA59 RID: 125529 RVA: 0x00449FFC File Offset: 0x004481FC
 		public int Key
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008757 RID: 34647
-		// (get) Token: 0x0601D26D RID: 119405 RVA: 0x0041D89C File Offset: 0x0041BA9C
+		// Token: 0x17008D9F RID: 36255
+		// (get) Token: 0x0601EA5A RID: 125530 RVA: 0x0044A038 File Offset: 0x00448238
 		public IEntityDeployConfig? Value
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D26E RID: 119406 RVA: 0x0041D8F9 File Offset: 0x0041BAF9
+		// Token: 0x0601EA5B RID: 125531 RVA: 0x0044A095 File Offset: 0x00448295
 		public static Offset<Record_Int_IEntityDeployConfig> CreateRecord_Int_IEntityDeployConfig(FlatBufferBuilder builder, int Key = 0, Offset<IEntityDeployConfig> ValueOffset = default(Offset<IEntityDeployConfig>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return Record_Int_IEntityDeployConfig.EndRecord_Int_IEntityDeployConfig(builder);
 		}
 
-		// Token: 0x0601D26F RID: 119407 RVA: 0x0041D916 File Offset: 0x0041BB16
+		// Token: 0x0601EA5C RID: 125532 RVA: 0x0044A0B2 File Offset: 0x004482B2
 		public static void StartRecord_Int_IEntityDeployConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601D270 RID: 119408 RVA: 0x0041D91F File Offset: 0x0041BB1F
+		// Token: 0x0601EA5D RID: 125533 RVA: 0x0044A0BB File Offset: 0x004482BB
 		public static void AddKey(FlatBufferBuilder builder, int key)
 		{
 			builder.AddInt(0, key, 0);
 		}
 
-		// Token: 0x0601D271 RID: 119409 RVA: 0x0041D92A File Offset: 0x0041BB2A
+		// Token: 0x0601EA5E RID: 125534 RVA: 0x0044A0C6 File Offset: 0x004482C6
 		public static void AddValue(FlatBufferBuilder builder, Offset<IEntityDeployConfig> valueOffset)
 		{
 			builder.AddOffset(1, valueOffset.Value, 0);
 		}
 
-		// Token: 0x0601D272 RID: 119410 RVA: 0x0041D93A File Offset: 0x0041BB3A
+		// Token: 0x0601EA5F RID: 125535 RVA: 0x0044A0D6 File Offset: 0x004482D6
 		public static Offset<Record_Int_IEntityDeployConfig> EndRecord_Int_IEntityDeployConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<Record_Int_IEntityDeployConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601D273 RID: 119411 RVA: 0x0041D948 File Offset: 0x0041BB48
+		// Token: 0x0601EA60 RID: 125536 RVA: 0x0044A0E4 File Offset: 0x004482E4
 		public Record_Int_IEntityDeployConfigT UnPack()
 		{
 			Record_Int_IEntityDeployConfigT record_Int_IEntityDeployConfigT = new Record_Int_IEntityDeployConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return record_Int_IEntityDeployConfigT;
 		}
 
-		// Token: 0x0601D274 RID: 119412 RVA: 0x0041D964 File Offset: 0x0041BB64
+		// Token: 0x0601EA61 RID: 125537 RVA: 0x0044A100 File Offset: 0x00448300
 		public void UnPackTo(Record_Int_IEntityDeployConfigT _o)
 		{
 			_o.Key = this.Key;
 			_o.Value = ((this.Value != null) ? this.Value.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601D275 RID: 119413 RVA: 0x0041D9AC File Offset: 0x0041BBAC
+		// Token: 0x0601EA62 RID: 125538 RVA: 0x0044A148 File Offset: 0x00448348
 		public static Offset<Record_Int_IEntityDeployConfig> Pack(FlatBufferBuilder builder, Record_Int_IEntityDeployConfigT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return Record_Int_IEntityDeployConfig.CreateRecord_Int_IEntityDeployConfig(builder, _o.Key, valueOffset);
 		}
 
-		// Token: 0x0400CEDB RID: 52955
+		// Token: 0x0400D914 RID: 55572
 		private Table __p;
 	}
 }

@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045C9 RID: 17865
+	// Token: 0x020034F1 RID: 13553
 	public class EffectNiagaraParameters : EffectParametersBase
 	{
-		// Token: 0x0602E0F6 RID: 188662 RVA: 0x00A9E181 File Offset: 0x00A9C381
+		// Token: 0x060227E1 RID: 141281 RVA: 0x009CA449 File Offset: 0x009C8649
 		public EffectNiagaraParameters([Nullable(new byte[]
 		{
 			2,

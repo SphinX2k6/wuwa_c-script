@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022C7 RID: 8903
+	// Token: 0x02002536 RID: 9526
 	public static class EBvbPlayerOperationTypeExtensions
 	{
-		// Token: 0x0600C2FE RID: 49918 RVA: 0x001C7D60 File Offset: 0x001C5F60
+		// Token: 0x0600CECD RID: 52941 RVA: 0x001DFB68 File Offset: 0x001DDD68
 		public static string ToEnumString(this EBvbPlayerOperationType value)
 		{
 			string result;
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2FF RID: 49919 RVA: 0x001C7DFC File Offset: 0x001C5FFC
+		// Token: 0x0600CECE RID: 52942 RVA: 0x001DFC04 File Offset: 0x001DDE04
 		public static EBvbPlayerOperationType FromString(string name)
 		{
 			EBvbPlayerOperationType result;
@@ -59,7 +59,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C300 RID: 49920 RVA: 0x001C7E28 File Offset: 0x001C6028
+		// Token: 0x0600CECF RID: 52943 RVA: 0x001DFC30 File Offset: 0x001DDE30
 		public static bool TryFromString(string name, out EBvbPlayerOperationType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -161,7 +161,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C301 RID: 49921 RVA: 0x001C7F9C File Offset: 0x001C619C
+		// Token: 0x0600CED0 RID: 52944 RVA: 0x001DFDA4 File Offset: 0x001DDFA4
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -179,7 +179,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C302 RID: 49922 RVA: 0x001C8001 File Offset: 0x001C6201
+		// Token: 0x0600CED1 RID: 52945 RVA: 0x001DFE09 File Offset: 0x001DE009
 		public static EBvbPlayerOperationType[] GetValues()
 		{
 			return new EBvbPlayerOperationType[]
@@ -197,7 +197,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C303 RID: 49923 RVA: 0x001C8018 File Offset: 0x001C6218
+		// Token: 0x0600CED2 RID: 52946 RVA: 0x001DFE20 File Offset: 0x001DE020
 		public static string[] GetNames()
 		{
 			return new string[]

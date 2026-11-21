@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View
 {
-	// Token: 0x02004FAE RID: 20398
+	// Token: 0x02003F77 RID: 16247
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestMultiLineTipsView : UiTickViewBase
 	{
-		// Token: 0x06034372 RID: 213874 RVA: 0x00C41A85 File Offset: 0x00C3FC85
+		// Token: 0x060291E0 RID: 168416 RVA: 0x00B8B231 File Offset: 0x00B89431
 		public QuestMultiLineTipsView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06034373 RID: 213875 RVA: 0x00C41A90 File Offset: 0x00C3FC90
+		// Token: 0x060291E1 RID: 168417 RVA: 0x00B8B23C File Offset: 0x00B8943C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06034374 RID: 213876 RVA: 0x00C41B9C File Offset: 0x00C3FD9C
+		// Token: 0x060291E2 RID: 168418 RVA: 0x00B8B348 File Offset: 0x00B89548
 		protected override UniTask OnBeforeStartAsync()
 		{
 			QuestMultiLineTipsView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034375 RID: 213877 RVA: 0x00C41BE0 File Offset: 0x00C3FDE0
+		// Token: 0x060291E3 RID: 168419 RVA: 0x00B8B38C File Offset: 0x00B8958C
 		protected override void OnStart()
 		{
 			this.TimePointId = ((QuestMultiLineTipsParam)this.OpenParam).TimePointId;
@@ -69,13 +69,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			this.UiViewSequence.AddSequenceFinishEvent("CloseTips", new Action<string>(this.OnCloseSeqFinish), false);
 		}
 
-		// Token: 0x06034376 RID: 213878 RVA: 0x00C41C94 File Offset: 0x00C3FE94
+		// Token: 0x060291E4 RID: 168420 RVA: 0x00B8B440 File Offset: 0x00B89640
 		protected override void OnAfterShow()
 		{
 			this.UiViewSequence.PlaySequence("StartTips", false, null);
 		}
 
-		// Token: 0x06034377 RID: 213879 RVA: 0x00C41CBC File Offset: 0x00C3FEBC
+		// Token: 0x060291E5 RID: 168421 RVA: 0x00B8B468 File Offset: 0x00B89668
 		protected override void OnTick(float delta)
 		{
 			if (this.TimePointId == 0 || !this.StartTick)
@@ -98,56 +98,56 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			sprite.SetFillAmount(num / 1000f);
 		}
 
-		// Token: 0x06034378 RID: 213880 RVA: 0x00C41D48 File Offset: 0x00C3FF48
+		// Token: 0x060291E6 RID: 168422 RVA: 0x00B8B4F4 File Offset: 0x00B896F4
 		private void OnClick()
 		{
 			QuestMultiLineController.Instance.OpenQuestMultiLineView(this.TimePointId, this.EnableAnimation, false);
 			this.UiViewSequence.PlaySequence("CloseTips", true, null);
 		}
 
-		// Token: 0x06034379 RID: 213881 RVA: 0x00C41D88 File Offset: 0x00C3FF88
+		// Token: 0x060291E7 RID: 168423 RVA: 0x00B8B534 File Offset: 0x00B89734
 		private void OnStartSeqFinish(string _)
 		{
 			this.UiViewSequence.PlaySequence("StartAtOnce", false, null);
 			this.StartTick = true;
 		}
 
-		// Token: 0x0603437A RID: 213882 RVA: 0x00C41DB6 File Offset: 0x00C3FFB6
+		// Token: 0x060291E8 RID: 168424 RVA: 0x00B8B562 File Offset: 0x00B89762
 		private void OnCloseSeqFinish(string _)
 		{
 			this.StartTick = false;
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401BC2F RID: 113711
+		// Token: 0x04016604 RID: 91652
 		private int TimePointId;
 
-		// Token: 0x0401BC30 RID: 113712
+		// Token: 0x04016605 RID: 91653
 		private bool EnableAnimation;
 
-		// Token: 0x0401BC31 RID: 113713
+		// Token: 0x04016606 RID: 91654
 		private float CountDownTime;
 
-		// Token: 0x0401BC32 RID: 113714
+		// Token: 0x04016607 RID: 91655
 		private bool StartTick;
 
-		// Token: 0x0200B0BB RID: 45243
+		// Token: 0x02009AEB RID: 39659
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04035A71 RID: 219761
+			// Token: 0x0403049C RID: 197788
 			public const int TextName = 0;
 
-			// Token: 0x04035A72 RID: 219762
+			// Token: 0x0403049D RID: 197789
 			public const int SpriteIcon = 1;
 
-			// Token: 0x04035A73 RID: 219763
+			// Token: 0x0403049E RID: 197790
 			public const int ButtonTips = 2;
 
-			// Token: 0x04035A74 RID: 219764
+			// Token: 0x0403049F RID: 197791
 			public const int SpriteTimeBar = 3;
 
-			// Token: 0x04035A75 RID: 219765
+			// Token: 0x040304A0 RID: 197792
 			public const int TextTitle = 4;
 		}
 	}

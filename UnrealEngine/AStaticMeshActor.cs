@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001192 RID: 4498
+	// Token: 0x0200028F RID: 655
 	[UnrealObjectPath("/Script/Engine.StaticMeshActor")]
 	[UnrealStructLayout(1056, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1056)]
 	public class AStaticMeshActor : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060108C3 RID: 67779 RVA: 0x00184CDC File Offset: 0x00182EDC
+		// Token: 0x0600483F RID: 18495 RVA: 0x0006538E File Offset: 0x0006358E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AStaticMeshActor._ClassPtr;
 		}
 
-		// Token: 0x060108C4 RID: 67780 RVA: 0x00184CE8 File Offset: 0x00182EE8
+		// Token: 0x06004840 RID: 18496 RVA: 0x0006539C File Offset: 0x0006359C
 		public AStaticMeshActor() : this(BuiltinUtils.AllocNativeUObject(AStaticMeshActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060108C5 RID: 67781 RVA: 0x00184D10 File Offset: 0x00182F10
+		// Token: 0x06004841 RID: 18497 RVA: 0x000653C4 File Offset: 0x000635C4
 		[NullableContext(1)]
 		public AStaticMeshActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AStaticMeshActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700408B RID: 16523
-		// (get) Token: 0x060108C6 RID: 67782 RVA: 0x00184D43 File Offset: 0x00182F43
-		// (set) Token: 0x060108C7 RID: 67783 RVA: 0x00184D57 File Offset: 0x00182F57
+		// Token: 0x17000D6D RID: 3437
+		// (get) Token: 0x06004842 RID: 18498 RVA: 0x000653F7 File Offset: 0x000635F7
+		// (set) Token: 0x06004843 RID: 18499 RVA: 0x0006540B File Offset: 0x0006360B
 		[Nullable(2)]
 		public unsafe UStaticMeshComponent StaticMeshComponent
 		{
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700408C RID: 16524
-		// (get) Token: 0x060108C8 RID: 67784 RVA: 0x00184D6C File Offset: 0x00182F6C
-		// (set) Token: 0x060108C9 RID: 67785 RVA: 0x00184D7C File Offset: 0x00182F7C
+		// Token: 0x17000D6E RID: 3438
+		// (get) Token: 0x06004844 RID: 18500 RVA: 0x00065420 File Offset: 0x00063620
+		// (set) Token: 0x06004845 RID: 18501 RVA: 0x00065430 File Offset: 0x00063630
 		public unsafe bool bStaticMeshReplicateMovement
 		{
 			get
@@ -61,24 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700408D RID: 16525
-		// (get) Token: 0x060108CA RID: 67786 RVA: 0x00184D8D File Offset: 0x00182F8D
-		// (set) Token: 0x060108CB RID: 67787 RVA: 0x00184D9D File Offset: 0x00182F9D
-		public unsafe ENavDataGatheringMode NavigationGeometryGatheringMode
-		{
-			get
-			{
-				return (ENavDataGatheringMode)(*(base.NativePtr + (IntPtr)AStaticMeshActor.__PropertyOffset_NavigationGeometryGatheringMode));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)AStaticMeshActor.__PropertyOffset_NavigationGeometryGatheringMode) = (byte)value;
-			}
-		}
-
-		// Token: 0x1700408E RID: 16526
-		// (get) Token: 0x060108CC RID: 67788 RVA: 0x00184DAE File Offset: 0x00182FAE
-		// (set) Token: 0x060108CD RID: 67789 RVA: 0x00184DC7 File Offset: 0x00182FC7
+		// Token: 0x17000D6F RID: 3439
+		// (get) Token: 0x06004846 RID: 18502 RVA: 0x00065441 File Offset: 0x00063641
+		// (set) Token: 0x06004847 RID: 18503 RVA: 0x0006545A File Offset: 0x0006365A
 		public unsafe bool bHideLogicallyOnBeginPlay
 		{
 			get
@@ -91,70 +76,67 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060108CE RID: 67790 RVA: 0x00184DF7 File Offset: 0x00182FF7
+		// Token: 0x06004848 RID: 18504 RVA: 0x0006548A File Offset: 0x0006368A
 		public void SetMobility(EComponentMobility InMobility)
 		{
 			AStaticMeshActor.__SetMobility_Internal(base.NativePtr, InMobility);
 		}
 
-		// Token: 0x060108CF RID: 67791 RVA: 0x00184E0A File Offset: 0x0018300A
+		// Token: 0x06004849 RID: 18505 RVA: 0x0006549D File Offset: 0x0006369D
 		public void SetLogicallyShow(ECollisionEnabled Type)
 		{
 			AStaticMeshActor.__SetLogicallyShow_Internal(base.NativePtr, Type);
 		}
 
-		// Token: 0x060108D0 RID: 67792 RVA: 0x00184E1D File Offset: 0x0018301D
+		// Token: 0x0600484A RID: 18506 RVA: 0x000654B0 File Offset: 0x000636B0
 		public void SetLogicallyHidden()
 		{
 			AStaticMeshActor.__SetLogicallyHidden_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060108D1 RID: 67793
+		// Token: 0x0600484B RID: 18507
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMobility_Internal(IntPtr @this, TEnumAsByte<EComponentMobility> InMobility);
 
-		// Token: 0x060108D2 RID: 67794
+		// Token: 0x0600484C RID: 18508
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLogicallyShow_Internal(IntPtr @this, TEnumAsByte<ECollisionEnabled> Type);
 
-		// Token: 0x060108D3 RID: 67795
+		// Token: 0x0600484D RID: 18509
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLogicallyHidden_Internal(IntPtr @this);
 
-		// Token: 0x060108D4 RID: 67796 RVA: 0x00184E2A File Offset: 0x0018302A
+		// Token: 0x0600484E RID: 18510 RVA: 0x000654BD File Offset: 0x000636BD
 		static AStaticMeshActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.StaticMeshActor");
 		}
 
-		// Token: 0x060108D5 RID: 67797 RVA: 0x00184E38 File Offset: 0x00183038
+		// Token: 0x0600484F RID: 18511 RVA: 0x000654CB File Offset: 0x000636CB
 		protected AStaticMeshActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04008D9E RID: 36254
+		// Token: 0x04001BEE RID: 7150
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.StaticMeshActor";
 
-		// Token: 0x04008D9F RID: 36255
+		// Token: 0x04001BEF RID: 7151
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04008DA0 RID: 36256
+		// Token: 0x04001BF0 RID: 7152
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04008DA1 RID: 36257
+		// Token: 0x04001BF1 RID: 7153
 		internal static int __PropertyOffset_StaticMeshComponent;
 
-		// Token: 0x04008DA2 RID: 36258
+		// Token: 0x04001BF2 RID: 7154
 		internal static int __PropertyOffset_bStaticMeshReplicateMovement;
 
-		// Token: 0x04008DA3 RID: 36259
-		internal static int __PropertyOffset_NavigationGeometryGatheringMode;
-
-		// Token: 0x04008DA4 RID: 36260
+		// Token: 0x04001BF3 RID: 7155
 		internal static int __PropertyOffset_bHideLogicallyOnBeginPlay;
 
-		// Token: 0x04008DA5 RID: 36261
+		// Token: 0x04001BF4 RID: 7156
 		internal static byte __PropertyMask_bHideLogicallyOnBeginPlay;
 	}
 }

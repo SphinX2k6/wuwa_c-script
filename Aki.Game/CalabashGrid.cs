@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.AutoAttach;
 using UnrealEngine;
 
-// Token: 0x02001749 RID: 5961
+// Token: 0x02000C02 RID: 3074
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class CalabashGrid : AutoAttachItem<CalabashGridData>
 {
-	// Token: 0x0600AC69 RID: 44137 RVA: 0x0026AA84 File Offset: 0x00268C84
+	// Token: 0x06008050 RID: 32848 RVA: 0x00274ECC File Offset: 0x002730CC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class CalabashGrid : AutoAttachItem<CalabashGridData>
 		};
 	}
 
-	// Token: 0x0600AC6A RID: 44138 RVA: 0x0026ABF9 File Offset: 0x00268DF9
+	// Token: 0x06008051 RID: 32849 RVA: 0x00275041 File Offset: 0x00273241
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(9);
@@ -50,13 +50,13 @@ public class CalabashGrid : AutoAttachItem<CalabashGridData>
 		extendToggle.CanExecuteChange.Bind(new Func<bool>(this.CheckCanClick));
 	}
 
-	// Token: 0x0600AC6B RID: 44139 RVA: 0x0026AC1E File Offset: 0x00268E1E
+	// Token: 0x06008052 RID: 32850 RVA: 0x00275066 File Offset: 0x00273266
 	private bool CheckCanClick()
 	{
 		return this.CheckToggleCanClick == null || this.CheckToggleCanClick();
 	}
 
-	// Token: 0x0600AC6C RID: 44140 RVA: 0x0026AC38 File Offset: 0x00268E38
+	// Token: 0x06008053 RID: 32851 RVA: 0x00275080 File Offset: 0x00273280
 	[NullableContext(1)]
 	protected override void OnRefreshItem(CalabashGridData data)
 	{
@@ -91,7 +91,7 @@ public class CalabashGrid : AutoAttachItem<CalabashGridData>
 		this.RefreshSpecialActiveEffectItem(levelReach, data.IsMaxLevel);
 	}
 
-	// Token: 0x0600AC6D RID: 44141 RVA: 0x0026AD40 File Offset: 0x00268F40
+	// Token: 0x06008054 RID: 32852 RVA: 0x00275188 File Offset: 0x00273388
 	private void RefreshSpecialReachItem(int level, bool levelReach)
 	{
 		UUIItem item = base.GetItem(10);
@@ -102,7 +102,7 @@ public class CalabashGrid : AutoAttachItem<CalabashGridData>
 		item.SetUIActive(levelReach);
 	}
 
-	// Token: 0x0600AC6E RID: 44142 RVA: 0x0026AD62 File Offset: 0x00268F62
+	// Token: 0x06008055 RID: 32853 RVA: 0x002751AA File Offset: 0x002733AA
 	private void RefreshSpecialActiveEffectItem(bool levelReach, bool isMaxLevel)
 	{
 		UUIItem item = base.GetItem(12);
@@ -118,7 +118,7 @@ public class CalabashGrid : AutoAttachItem<CalabashGridData>
 		item2.SetUIActive(levelReach && isMaxLevel);
 	}
 
-	// Token: 0x0600AC6F RID: 44143 RVA: 0x0026AD90 File Offset: 0x00268F90
+	// Token: 0x06008056 RID: 32854 RVA: 0x002751D8 File Offset: 0x002733D8
 	private void RefreshSpecialInActiveItem(int level, bool levelReach)
 	{
 		bool uiactive = !levelReach;
@@ -130,7 +130,7 @@ public class CalabashGrid : AutoAttachItem<CalabashGridData>
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600AC70 RID: 44144 RVA: 0x0026ADB8 File Offset: 0x00268FB8
+	// Token: 0x06008057 RID: 32855 RVA: 0x00275200 File Offset: 0x00273400
 	private void RefreshSpecialUi(int level, bool levelReach)
 	{
 		if (CalabashConfig.Instance.GetCalabashConfigByLevel(level) == null)
@@ -143,7 +143,7 @@ public class CalabashGrid : AutoAttachItem<CalabashGridData>
 		this.RefreshSpecialInActiveItem(level, levelReach);
 	}
 
-	// Token: 0x0600AC71 RID: 44145 RVA: 0x0026ADFC File Offset: 0x00268FFC
+	// Token: 0x06008058 RID: 32856 RVA: 0x00275244 File Offset: 0x00273444
 	private void RefreshLevelText(int level)
 	{
 		UUIText text = base.GetText(3);
@@ -153,7 +153,7 @@ public class CalabashGrid : AutoAttachItem<CalabashGridData>
 		}
 	}
 
-	// Token: 0x0600AC72 RID: 44146 RVA: 0x0026AE24 File Offset: 0x00269024
+	// Token: 0x06008059 RID: 32857 RVA: 0x0027526C File Offset: 0x0027346C
 	private void RefreshLevelTextColor(bool isSelected, bool levelReach)
 	{
 		UUIText text = base.GetText(3);
@@ -166,7 +166,7 @@ public class CalabashGrid : AutoAttachItem<CalabashGridData>
 		}
 	}
 
-	// Token: 0x0600AC73 RID: 44147 RVA: 0x0026AE56 File Offset: 0x00269056
+	// Token: 0x0600805A RID: 32858 RVA: 0x0027529E File Offset: 0x0027349E
 	private void SelectedItem(EToggleState toggleState)
 	{
 		Action<int> buttonFunction = this.ButtonFunction;
@@ -177,7 +177,7 @@ public class CalabashGrid : AutoAttachItem<CalabashGridData>
 		buttonFunction(this.CurrentShowItemIndex);
 	}
 
-	// Token: 0x0600AC74 RID: 44148 RVA: 0x0026AE6E File Offset: 0x0026906E
+	// Token: 0x0600805B RID: 32859 RVA: 0x002752B6 File Offset: 0x002734B6
 	public override void OnSelect()
 	{
 		this.SetSelectState(true);
@@ -190,7 +190,7 @@ public class CalabashGrid : AutoAttachItem<CalabashGridData>
 		this.RefreshLevelTextColor(true, this.LevelReach);
 	}
 
-	// Token: 0x0600AC75 RID: 44149 RVA: 0x0026AEA4 File Offset: 0x002690A4
+	// Token: 0x0600805C RID: 32860 RVA: 0x002752EC File Offset: 0x002734EC
 	protected override void OnUnSelect()
 	{
 		this.SetSelectState(false);
@@ -207,30 +207,30 @@ public class CalabashGrid : AutoAttachItem<CalabashGridData>
 		this.RefreshLevelTextColor(false, this.LevelReach);
 	}
 
-	// Token: 0x0600AC76 RID: 44150 RVA: 0x0026AEE9 File Offset: 0x002690E9
+	// Token: 0x0600805D RID: 32861 RVA: 0x00275331 File Offset: 0x00273531
 	public void SetSelectState(bool isSelected)
 	{
 	}
 
-	// Token: 0x0600AC77 RID: 44151 RVA: 0x0026AEEB File Offset: 0x002690EB
+	// Token: 0x0600805E RID: 32862 RVA: 0x00275333 File Offset: 0x00273533
 	protected override void OnMoveItem()
 	{
 	}
 
-	// Token: 0x0600AC78 RID: 44152 RVA: 0x0026AEED File Offset: 0x002690ED
+	// Token: 0x0600805F RID: 32863 RVA: 0x00275335 File Offset: 0x00273535
 	public CalabashGrid() : base(null)
 	{
 	}
 
-	// Token: 0x04004E4F RID: 20047
+	// Token: 0x04004EF8 RID: 20216
 	public Action<int> ButtonFunction;
 
-	// Token: 0x04004E50 RID: 20048
+	// Token: 0x04004EF9 RID: 20217
 	public Func<bool> CheckToggleCanClick;
 
-	// Token: 0x04004E51 RID: 20049
+	// Token: 0x04004EFA RID: 20218
 	public UCurveFloat ItemCurve;
 
-	// Token: 0x04004E52 RID: 20050
+	// Token: 0x04004EFB RID: 20219
 	private bool LevelReach;
 }

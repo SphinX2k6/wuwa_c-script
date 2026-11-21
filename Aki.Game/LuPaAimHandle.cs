@@ -4,46 +4,46 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.BattleUi;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02001F31 RID: 7985
+// Token: 0x020013F3 RID: 5107
 [NullableContext(2)]
 [Nullable(0)]
 public class LuPaAimHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F645 RID: 63045 RVA: 0x003B74BE File Offset: 0x003B56BE
+	// Token: 0x0600CA64 RID: 51812 RVA: 0x003C2FAA File Offset: 0x003C11AA
 	protected override void OnInitialize()
 	{
 		base.OnInitialize();
 		this.TryActivate();
 	}
 
-	// Token: 0x0600F646 RID: 63046 RVA: 0x003B74CC File Offset: 0x003B56CC
+	// Token: 0x0600CA65 RID: 51813 RVA: 0x003C2FB8 File Offset: 0x003C11B8
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnChangeRole));
 		EventSystem.Instance.Add<EntityHandle>(EEventName.SpecialSkillLuPaSwitchLockTarget, new Action<EntityHandle>(this.OnSwitchLockTarget));
 	}
 
-	// Token: 0x0600F647 RID: 63047 RVA: 0x003B7503 File Offset: 0x003B5703
+	// Token: 0x0600CA66 RID: 51814 RVA: 0x003C2FEF File Offset: 0x003C11EF
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<int, int>(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnChangeRole));
 		EventSystem.Instance.Remove<EntityHandle>(EEventName.SpecialSkillLuPaSwitchLockTarget, new Action<EntityHandle>(this.OnSwitchLockTarget));
 	}
 
-	// Token: 0x0600F648 RID: 63048 RVA: 0x003B753A File Offset: 0x003B573A
+	// Token: 0x0600CA67 RID: 51815 RVA: 0x003C3026 File Offset: 0x003C1226
 	private void OnChangeRole(int newEntityId, int oldEntityId)
 	{
 		this.TryActivate();
 	}
 
-	// Token: 0x0600F649 RID: 63049 RVA: 0x003B7542 File Offset: 0x003B5742
+	// Token: 0x0600CA68 RID: 51816 RVA: 0x003C302E File Offset: 0x003C122E
 	private void OnSwitchLockTarget(EntityHandle target)
 	{
 		this.LockTarget = target;
 		this.RefreshLockState();
 	}
 
-	// Token: 0x0600F64A RID: 63050 RVA: 0x003B7551 File Offset: 0x003B5751
+	// Token: 0x0600CA69 RID: 51817 RVA: 0x003C303D File Offset: 0x003C123D
 	private void RefreshAimVisible()
 	{
 		if (this.AimUnit == null)
@@ -53,7 +53,7 @@ public class LuPaAimHandle : HudUnitHandleBase
 		this.AimUnit.SetTargetVisible(this.IsAiming);
 	}
 
-	// Token: 0x0600F64B RID: 63051 RVA: 0x003B756D File Offset: 0x003B576D
+	// Token: 0x0600CA6A RID: 51818 RVA: 0x003C3059 File Offset: 0x003C1259
 	private void RefreshLockState()
 	{
 		if (this.AimUnit == null)
@@ -69,7 +69,7 @@ public class LuPaAimHandle : HudUnitHandleBase
 		this.AimUnit.SetLockState(false);
 	}
 
-	// Token: 0x0600F64C RID: 63052 RVA: 0x003B75A8 File Offset: 0x003B57A8
+	// Token: 0x0600CA6B RID: 51819 RVA: 0x003C3094 File Offset: 0x003C1294
 	private void TryActivate()
 	{
 		BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -87,7 +87,7 @@ public class LuPaAimHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F64D RID: 63053 RVA: 0x003B764C File Offset: 0x003B584C
+	// Token: 0x0600CA6C RID: 51820 RVA: 0x003C3138 File Offset: 0x003C1338
 	private void Activate()
 	{
 		if (this.AimUnit != null)
@@ -111,7 +111,7 @@ public class LuPaAimHandle : HudUnitHandleBase
 		}, true);
 	}
 
-	// Token: 0x0600F64E RID: 63054 RVA: 0x003B76B2 File Offset: 0x003B58B2
+	// Token: 0x0600CA6D RID: 51821 RVA: 0x003C319E File Offset: 0x003C139E
 	private void Deactivate()
 	{
 		if (this.TagTask != null)
@@ -125,7 +125,7 @@ public class LuPaAimHandle : HudUnitHandleBase
 		this.RefreshAimVisible();
 	}
 
-	// Token: 0x0600F64F RID: 63055 RVA: 0x003B76E9 File Offset: 0x003B58E9
+	// Token: 0x0600CA6E RID: 51822 RVA: 0x003C31D5 File Offset: 0x003C13D5
 	private void OnAimTagChanged(int tagId, bool tagExist)
 	{
 		this.IsAiming = tagExist;
@@ -137,7 +137,7 @@ public class LuPaAimHandle : HudUnitHandleBase
 		this.RefreshAimVisible();
 	}
 
-	// Token: 0x0600F650 RID: 63056 RVA: 0x003B7708 File Offset: 0x003B5908
+	// Token: 0x0600CA6F RID: 51823 RVA: 0x003C31F4 File Offset: 0x003C13F4
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -157,30 +157,30 @@ public class LuPaAimHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x040071F9 RID: 29177
+	// Token: 0x040072DA RID: 29402
 	private const long BUFF_ID = 12076110101L;
 
-	// Token: 0x040071FA RID: 29178
+	// Token: 0x040072DB RID: 29403
 	private bool IsLoadingAimUnit;
 
-	// Token: 0x040071FB RID: 29179
+	// Token: 0x040072DC RID: 29404
 	private LuPaAimUnit AimUnit;
 
-	// Token: 0x040071FC RID: 29180
+	// Token: 0x040072DD RID: 29405
 	private ITagTask TagTask;
 
-	// Token: 0x040071FD RID: 29181
+	// Token: 0x040072DE RID: 29406
 	private bool IsAiming;
 
-	// Token: 0x040071FE RID: 29182
+	// Token: 0x040072DF RID: 29407
 	private CharacterBuffComponent BuffComponent;
 
-	// Token: 0x040071FF RID: 29183
+	// Token: 0x040072E0 RID: 29408
 	private IActiveBuff Buff;
 
-	// Token: 0x04007200 RID: 29184
+	// Token: 0x040072E1 RID: 29409
 	private int BuffHandle;
 
-	// Token: 0x04007201 RID: 29185
+	// Token: 0x040072E2 RID: 29410
 	private EntityHandle LockTarget;
 }

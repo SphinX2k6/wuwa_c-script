@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.Views
 {
-	// Token: 0x0200540D RID: 21517
+	// Token: 0x020043F0 RID: 17392
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MenuScrollSettingContainerItem : UiPanelBase, IDynamicScrollItem<MenuScrollItemData>
 	{
-		// Token: 0x06036FC6 RID: 225222 RVA: 0x00D07228 File Offset: 0x00D05428
+		// Token: 0x0602BF0F RID: 179983 RVA: 0x00C56644 File Offset: 0x00C54844
 		public UniTask Init(UUIItem actor)
 		{
 			MenuScrollSettingContainerItem.<Init>d__8 <Init>d__;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036FC7 RID: 225223 RVA: 0x00D07274 File Offset: 0x00D05474
+		// Token: 0x0602BF10 RID: 179984 RVA: 0x00C56690 File Offset: 0x00C54890
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x06036FC8 RID: 225224 RVA: 0x00D0738B File Offset: 0x00D0558B
+		// Token: 0x0602BF11 RID: 179985 RVA: 0x00C567A7 File Offset: 0x00C549A7
 		protected override void OnStart()
 		{
 			if (this.LevelSequencePlayer == null)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.AddEventListener();
 		}
 
-		// Token: 0x06036FC9 RID: 225225 RVA: 0x00D073AC File Offset: 0x00D055AC
+		// Token: 0x0602BF12 RID: 179986 RVA: 0x00C567C8 File Offset: 0x00C549C8
 		protected void AddEventListener()
 		{
 			EventSystem.Instance.Add<EFunction>(EEventName.RefreshMenuSetting, new Action<EFunction>(this.OnRefreshMenuSetting));
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			base.GetExtendToggle(0).OnUndeterminedClicked.Add(new Action(this.OnUndeterminedClicked));
 		}
 
-		// Token: 0x06036FCA RID: 225226 RVA: 0x00D0740F File Offset: 0x00D0560F
+		// Token: 0x0602BF13 RID: 179987 RVA: 0x00C5682B File Offset: 0x00C54A2B
 		protected void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshMenuSetting, new Action<EFunction>(this.OnRefreshMenuSetting));
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			base.GetExtendToggle(0).OnStateChange.Clear();
 		}
 
-		// Token: 0x06036FCB RID: 225227 RVA: 0x00D07450 File Offset: 0x00D05650
+		// Token: 0x0602BF14 RID: 179988 RVA: 0x00C5686C File Offset: 0x00C54A6C
 		private void OnUndeterminedClicked()
 		{
 			if (this.Data == null || !this.Data.CanClickWhenDisable || this.Data.GetEnable())
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.SetDetailVisible(false);
 		}
 
-		// Token: 0x06036FCC RID: 225228 RVA: 0x00D0749C File Offset: 0x00D0569C
+		// Token: 0x0602BF15 RID: 179989 RVA: 0x00C568B8 File Offset: 0x00C54AB8
 		private void OnToggleStateChange(EToggleState state)
 		{
 			if (this.Data == null)
@@ -116,19 +116,19 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06036FCD RID: 225229 RVA: 0x00D07503 File Offset: 0x00D05703
+		// Token: 0x0602BF16 RID: 179990 RVA: 0x00C5691F File Offset: 0x00C54B1F
 		public void BindOnToggleStateChangedCallback(Action<MenuScrollSettingContainerItem, EToggleState> onToggleReleasedCallback)
 		{
 			this.OnToggleStateChangedCallback = onToggleReleasedCallback;
 		}
 
-		// Token: 0x06036FCE RID: 225230 RVA: 0x00D0750C File Offset: 0x00D0570C
+		// Token: 0x0602BF17 RID: 179991 RVA: 0x00C56928 File Offset: 0x00C54B28
 		public void BindOnDetailPopOpenCallback(Action<MenuScrollSettingContainerItem> onDetailPopOpenCallback)
 		{
 			this.OnDetailPopOpenCallback = onDetailPopOpenCallback;
 		}
 
-		// Token: 0x06036FCF RID: 225231 RVA: 0x00D07518 File Offset: 0x00D05718
+		// Token: 0x0602BF18 RID: 179992 RVA: 0x00C56934 File Offset: 0x00C54B34
 		private void TryShowClickedTips()
 		{
 			if (this.Data == null)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06036FD0 RID: 225232 RVA: 0x00D075E8 File Offset: 0x00D057E8
+		// Token: 0x0602BF19 RID: 179993 RVA: 0x00C56A04 File Offset: 0x00C54C04
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEventListener();
@@ -179,13 +179,13 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.ClearData();
 		}
 
-		// Token: 0x06036FD1 RID: 225233 RVA: 0x00D0763F File Offset: 0x00D0583F
+		// Token: 0x0602BF1A RID: 179994 RVA: 0x00C56A5B File Offset: 0x00C54C5B
 		public void ClearItem()
 		{
 			this.ClearData();
 		}
 
-		// Token: 0x06036FD2 RID: 225234 RVA: 0x00D07647 File Offset: 0x00D05847
+		// Token: 0x0602BF1B RID: 179995 RVA: 0x00C56A63 File Offset: 0x00C54C63
 		private void ClearData()
 		{
 			if (this.VectorValue != null)
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.MenuScrollItemData = null;
 		}
 
-		// Token: 0x06036FD3 RID: 225235 RVA: 0x00D07688 File Offset: 0x00D05888
+		// Token: 0x0602BF1C RID: 179996 RVA: 0x00C56AA4 File Offset: 0x00C54CA4
 		[return: Nullable(2)]
 		public AUIBaseActor GetUsingItem(MenuScrollItemData itemData)
 		{
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06036FD4 RID: 225236 RVA: 0x00D077BB File Offset: 0x00D059BB
+		// Token: 0x0602BF1D RID: 179997 RVA: 0x00C56BD7 File Offset: 0x00C54DD7
 		public void Update(MenuScrollItemData itemData, int index)
 		{
 			this.Type = new EMenuScrollItemType?(itemData.Type);
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.HandleCurrentItem(itemData).Forget();
 		}
 
-		// Token: 0x06036FD5 RID: 225237 RVA: 0x00D077F4 File Offset: 0x00D059F4
+		// Token: 0x0602BF1E RID: 179998 RVA: 0x00C56C10 File Offset: 0x00C54E10
 		private UniTask HandleCurrentItem(MenuScrollItemData itemData)
 		{
 			MenuScrollSettingContainerItem.<HandleCurrentItem>d__23 <HandleCurrentItem>d__;
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			return <HandleCurrentItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036FD6 RID: 225238 RVA: 0x00D07840 File Offset: 0x00D05A40
+		// Token: 0x0602BF1F RID: 179999 RVA: 0x00C56C5C File Offset: 0x00C54E5C
 		private void RefreshItem(MenuScrollSettingBaseItem item, MenuScrollItemData itemData)
 		{
 			if (item == null)
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06036FD7 RID: 225239 RVA: 0x00D078C8 File Offset: 0x00D05AC8
+		// Token: 0x0602BF20 RID: 180000 RVA: 0x00C56CE4 File Offset: 0x00C54EE4
 		[return: Nullable(2)]
 		private MenuScrollSettingBaseItem GetCreateScrollItem(MenuScrollItemData itemData)
 		{
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			return null;
 		}
 
-		// Token: 0x06036FD8 RID: 225240 RVA: 0x00D07A2C File Offset: 0x00D05C2C
+		// Token: 0x0602BF21 RID: 180001 RVA: 0x00C56E48 File Offset: 0x00C55048
 		private TItem CreateScrollItem<[Nullable(0)] TItem>(int name, Func<TItem> alloc) where TItem : MenuScrollSettingBaseItem
 		{
 			TItem titem = alloc();
@@ -353,7 +353,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			return titem;
 		}
 
-		// Token: 0x06036FD9 RID: 225241 RVA: 0x00D07A60 File Offset: 0x00D05C60
+		// Token: 0x0602BF22 RID: 180002 RVA: 0x00C56E7C File Offset: 0x00C5507C
 		private void RefreshData()
 		{
 			if (this.CurrentItem != null)
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06036FDA RID: 225242 RVA: 0x00D07AB8 File Offset: 0x00D05CB8
+		// Token: 0x0602BF23 RID: 180003 RVA: 0x00C56ED4 File Offset: 0x00C550D4
 		private void ResetItemActive()
 		{
 			base.GetItem(1).SetUIActive(false);
@@ -383,7 +383,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			base.GetItem(10).SetUIActive(false);
 		}
 
-		// Token: 0x06036FDB RID: 225243 RVA: 0x00D07B3C File Offset: 0x00D05D3C
+		// Token: 0x0602BF24 RID: 180004 RVA: 0x00C56F58 File Offset: 0x00C55158
 		private void OnRefreshMenuSetting(EFunction functionId)
 		{
 			if (this.Data == null)
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06036FDC RID: 225244 RVA: 0x00D07B5C File Offset: 0x00D05D5C
+		// Token: 0x0602BF25 RID: 180005 RVA: 0x00C56F78 File Offset: 0x00C55178
 		private void SetItemInteractionActive(bool isActive)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -444,13 +444,13 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06036FDD RID: 225245 RVA: 0x00D07C30 File Offset: 0x00D05E30
+		// Token: 0x0602BF26 RID: 180006 RVA: 0x00C5704C File Offset: 0x00C5524C
 		private void PlayLevelSequenceByName(string val)
 		{
 			this.LevelSequencePlayer.PlayLevelSequenceByName(val, false, null, false);
 		}
 
-		// Token: 0x06036FDE RID: 225246 RVA: 0x00D07C54 File Offset: 0x00D05E54
+		// Token: 0x0602BF27 RID: 180007 RVA: 0x00C57070 File Offset: 0x00C55270
 		private void FireSaveMenuChange(float val)
 		{
 			int targetValue = (int)val;
@@ -487,7 +487,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			MenuController.Instance.HandleFireSaveMenuChange(this.Data, val);
 		}
 
-		// Token: 0x06036FDF RID: 225247 RVA: 0x00D07D0C File Offset: 0x00D05F0C
+		// Token: 0x0602BF28 RID: 180008 RVA: 0x00C57128 File Offset: 0x00C55328
 		private void BuildThenShowConfirmBoxForRayTracing(EConfirmBoxConfigId confirmBoxId)
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(confirmBoxId);
@@ -506,7 +506,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06036FE0 RID: 225248 RVA: 0x00D07D70 File Offset: 0x00D05F70
+		// Token: 0x0602BF29 RID: 180009 RVA: 0x00C5718C File Offset: 0x00C5538C
 		private void TryPlayConfirmBoxForRayTracing(int targetValue)
 		{
 			if (GameSettingsDeviceRender.Instance.IsDxr1_1NotSupported() && targetValue > 0)
@@ -537,7 +537,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			MenuController.Instance.HandleFireSaveMenuChange(this.Data, (float)targetValue);
 		}
 
-		// Token: 0x06036FE1 RID: 225249 RVA: 0x00D07EA4 File Offset: 0x00D060A4
+		// Token: 0x0602BF2A RID: 180010 RVA: 0x00C572C0 File Offset: 0x00C554C0
 		private void TryPlayConfirmBoxForDlssFg(int targetValue)
 		{
 			if (targetValue > 0 && GameSettingsDeviceRender.Instance.IsDlss3HardwareSchedulingDisabled())
@@ -561,13 +561,13 @@ namespace CSharpScript.Game.Module.Menu.Views
 			MenuController.Instance.HandleFireSaveMenuChange(this.Data, (float)targetValue);
 		}
 
-		// Token: 0x06036FE2 RID: 225250 RVA: 0x00D07F2D File Offset: 0x00D0612D
+		// Token: 0x0602BF2B RID: 180011 RVA: 0x00C57349 File Offset: 0x00C55549
 		private void TryPlayConfirmBoxForHdr(int targetValue)
 		{
 			MenuController.Instance.HandleFireSaveMenuChange(this.Data, (float)targetValue);
 		}
 
-		// Token: 0x06036FE3 RID: 225251 RVA: 0x00D07F44 File Offset: 0x00D06144
+		// Token: 0x0602BF2C RID: 180012 RVA: 0x00C57360 File Offset: 0x00C55560
 		private void TryPlayConfirmBoxForAnisoLevel(int targetValue)
 		{
 			if (targetValue > 0 && !MenuModel.Instance.IsAnisoLevelOpenChecked)
@@ -579,7 +579,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			MenuController.Instance.HandleFireSaveMenuChange(this.Data, (float)targetValue);
 		}
 
-		// Token: 0x06036FE4 RID: 225252 RVA: 0x00D07F98 File Offset: 0x00D06198
+		// Token: 0x0602BF2D RID: 180013 RVA: 0x00C573B4 File Offset: 0x00C555B4
 		private void TryPlayConfirmBoxForVulkan(int targetValue)
 		{
 			if (targetValue > 0 && !MenuModel.Instance.IsVulkanOpenChecked)
@@ -591,7 +591,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			MenuController.Instance.HandleFireSaveMenuChange(this.Data, (float)targetValue);
 		}
 
-		// Token: 0x06036FE5 RID: 225253 RVA: 0x00D07FEC File Offset: 0x00D061EC
+		// Token: 0x0602BF2E RID: 180014 RVA: 0x00C57408 File Offset: 0x00C55608
 		private void TryPlayConfirmBoxForHighestFps(int targetValue)
 		{
 			if (MenuController.Instance.NeedRedMagicFpsConfirmBox(targetValue))
@@ -602,7 +602,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			MenuController.Instance.HandleFireSaveMenuChange(this.Data, (float)targetValue);
 		}
 
-		// Token: 0x06036FE6 RID: 225254 RVA: 0x00D0802F File Offset: 0x00D0622F
+		// Token: 0x0602BF2F RID: 180015 RVA: 0x00C5744B File Offset: 0x00C5564B
 		public void SetDetailVisible(bool bVisible)
 		{
 			if (this.CurrentItem == null)
@@ -612,14 +612,14 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.CurrentItem.SetDetailVisible(bVisible);
 		}
 
-		// Token: 0x06036FE7 RID: 225255 RVA: 0x00D08046 File Offset: 0x00D06246
+		// Token: 0x0602BF30 RID: 180016 RVA: 0x00C57462 File Offset: 0x00C55662
 		[NullableContext(2)]
 		public MenuData GetMenuData()
 		{
 			return this.Data;
 		}
 
-		// Token: 0x06036FE8 RID: 225256 RVA: 0x00D0804E File Offset: 0x00D0624E
+		// Token: 0x0602BF31 RID: 180017 RVA: 0x00C5746A File Offset: 0x00C5566A
 		public void SetSelected(bool bSelected)
 		{
 			if (bSelected)
@@ -644,30 +644,30 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x0401D038 RID: 118840
+		// Token: 0x04017AD1 RID: 96977
 		public EMenuScrollItemType? Type;
 
-		// Token: 0x0401D039 RID: 118841
+		// Token: 0x04017AD2 RID: 96978
 		[Nullable(2)]
 		private MenuData Data;
 
-		// Token: 0x0401D03A RID: 118842
+		// Token: 0x04017AD3 RID: 96979
 		[Nullable(2)]
 		public MenuScrollItemData MenuScrollItemData;
 
-		// Token: 0x0401D03B RID: 118843
+		// Token: 0x04017AD4 RID: 96980
 		[Nullable(2)]
 		private Vector2D VectorValue;
 
-		// Token: 0x0401D03C RID: 118844
+		// Token: 0x04017AD5 RID: 96981
 		[Nullable(2)]
 		private MenuScrollSettingBaseItem CurrentItem;
 
-		// Token: 0x0401D03D RID: 118845
+		// Token: 0x04017AD6 RID: 96982
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401D03E RID: 118846
+		// Token: 0x04017AD7 RID: 96983
 		[Nullable(new byte[]
 		{
 			2,
@@ -675,7 +675,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 		})]
 		private Action<MenuScrollSettingContainerItem, EToggleState> OnToggleStateChangedCallback;
 
-		// Token: 0x0401D03F RID: 118847
+		// Token: 0x04017AD8 RID: 96984
 		[Nullable(new byte[]
 		{
 			2,

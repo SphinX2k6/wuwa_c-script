@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200547F RID: 21631
+	// Token: 0x02005A05 RID: 23045
 	public struct IInteractStylePanorama : IFlatbufferObject
 	{
-		// Token: 0x17009F34 RID: 40756
-		// (get) Token: 0x06023957 RID: 145751 RVA: 0x004EBA68 File Offset: 0x004E9C68
+		// Token: 0x1700A76E RID: 42862
+		// (get) Token: 0x06025A0F RID: 154127 RVA: 0x00528ADC File Offset: 0x00526CDC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023958 RID: 145752 RVA: 0x004EBA75 File Offset: 0x004E9C75
+		// Token: 0x06025A10 RID: 154128 RVA: 0x00528AE9 File Offset: 0x00526CE9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023959 RID: 145753 RVA: 0x004EBA7C File Offset: 0x004E9C7C
+		// Token: 0x06025A11 RID: 154129 RVA: 0x00528AF0 File Offset: 0x00526CF0
 		public static IInteractStylePanorama GetRootAsIInteractStylePanorama(ByteBuffer _bb)
 		{
 			return IInteractStylePanorama.GetRootAsIInteractStylePanorama(_bb, default(IInteractStylePanorama));
 		}
 
-		// Token: 0x0602395A RID: 145754 RVA: 0x004EBA98 File Offset: 0x004E9C98
+		// Token: 0x06025A12 RID: 154130 RVA: 0x00528B0C File Offset: 0x00526D0C
 		public static IInteractStylePanorama GetRootAsIInteractStylePanorama(ByteBuffer _bb, IInteractStylePanorama obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602395B RID: 145755 RVA: 0x004EBAB5 File Offset: 0x004E9CB5
+		// Token: 0x06025A13 RID: 154131 RVA: 0x00528B29 File Offset: 0x00526D29
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602395C RID: 145756 RVA: 0x004EBAC4 File Offset: 0x004E9CC4
+		// Token: 0x06025A14 RID: 154132 RVA: 0x00528B38 File Offset: 0x00526D38
 		public IInteractStylePanorama __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009F35 RID: 40757
-		// (get) Token: 0x0602395D RID: 145757 RVA: 0x004EBAD4 File Offset: 0x004E9CD4
+		// Token: 0x1700A76F RID: 42863
+		// (get) Token: 0x06025A15 RID: 154133 RVA: 0x00528B48 File Offset: 0x00526D48
 		public EInteractStyleType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F36 RID: 40758
-		// (get) Token: 0x0602395E RID: 145758 RVA: 0x004EBB10 File Offset: 0x004E9D10
+		// Token: 0x1700A770 RID: 42864
+		// (get) Token: 0x06025A16 RID: 154134 RVA: 0x00528B84 File Offset: 0x00526D84
 		public IVectorInfo? TargetPos
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F37 RID: 40759
-		// (get) Token: 0x0602395F RID: 145759 RVA: 0x004EBB70 File Offset: 0x004E9D70
+		// Token: 0x1700A771 RID: 42865
+		// (get) Token: 0x06025A17 RID: 154135 RVA: 0x00528BE4 File Offset: 0x00526DE4
 		public int TriggerRange
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F38 RID: 40760
-		// (get) Token: 0x06023960 RID: 145760 RVA: 0x004EBBAC File Offset: 0x004E9DAC
+		// Token: 0x1700A772 RID: 42866
+		// (get) Token: 0x06025A18 RID: 154136 RVA: 0x00528C20 File Offset: 0x00526E20
 		public int TriggerAngle
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F39 RID: 40761
-		// (get) Token: 0x06023961 RID: 145761 RVA: 0x004EBBEC File Offset: 0x004E9DEC
+		// Token: 0x1700A773 RID: 42867
+		// (get) Token: 0x06025A19 RID: 154137 RVA: 0x00528C60 File Offset: 0x00526E60
 		public int ProtectRange
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F3A RID: 40762
-		// (get) Token: 0x06023962 RID: 145762 RVA: 0x004EBC2C File Offset: 0x004E9E2C
+		// Token: 0x1700A774 RID: 42868
+		// (get) Token: 0x06025A1A RID: 154138 RVA: 0x00528CA0 File Offset: 0x00526EA0
 		public byte NullMask
 		{
 			get
@@ -138,7 +138,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023963 RID: 145763 RVA: 0x004EBC69 File Offset: 0x004E9E69
+		// Token: 0x06025A1B RID: 154139 RVA: 0x00528CDD File Offset: 0x00526EDD
 		public static Offset<IInteractStylePanorama> CreateIInteractStylePanorama(FlatBufferBuilder builder, EInteractStyleType Type = EInteractStyleType.Panorama, Offset<IVectorInfo> TargetPosOffset = default(Offset<IVectorInfo>), int TriggerRange = 0, int TriggerAngle = 0, int ProtectRange = 0, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -151,55 +151,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IInteractStylePanorama.EndIInteractStylePanorama(builder);
 		}
 
-		// Token: 0x06023964 RID: 145764 RVA: 0x004EBCA5 File Offset: 0x004E9EA5
+		// Token: 0x06025A1C RID: 154140 RVA: 0x00528D19 File Offset: 0x00526F19
 		public static void StartIInteractStylePanorama(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06023965 RID: 145765 RVA: 0x004EBCAE File Offset: 0x004E9EAE
+		// Token: 0x06025A1D RID: 154141 RVA: 0x00528D22 File Offset: 0x00526F22
 		public static void AddType(FlatBufferBuilder builder, EInteractStyleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06023966 RID: 145766 RVA: 0x004EBCB9 File Offset: 0x004E9EB9
+		// Token: 0x06025A1E RID: 154142 RVA: 0x00528D2D File Offset: 0x00526F2D
 		public static void AddTargetPos(FlatBufferBuilder builder, Offset<IVectorInfo> targetPosOffset)
 		{
 			builder.AddOffset(1, targetPosOffset.Value, 0);
 		}
 
-		// Token: 0x06023967 RID: 145767 RVA: 0x004EBCC9 File Offset: 0x004E9EC9
+		// Token: 0x06025A1F RID: 154143 RVA: 0x00528D3D File Offset: 0x00526F3D
 		public static void AddTriggerRange(FlatBufferBuilder builder, int triggerRange)
 		{
 			builder.AddInt(2, triggerRange, 0);
 		}
 
-		// Token: 0x06023968 RID: 145768 RVA: 0x004EBCD4 File Offset: 0x004E9ED4
+		// Token: 0x06025A20 RID: 154144 RVA: 0x00528D48 File Offset: 0x00526F48
 		public static void AddTriggerAngle(FlatBufferBuilder builder, int triggerAngle)
 		{
 			builder.AddInt(3, triggerAngle, 0);
 		}
 
-		// Token: 0x06023969 RID: 145769 RVA: 0x004EBCDF File Offset: 0x004E9EDF
+		// Token: 0x06025A21 RID: 154145 RVA: 0x00528D53 File Offset: 0x00526F53
 		public static void AddProtectRange(FlatBufferBuilder builder, int protectRange)
 		{
 			builder.AddInt(4, protectRange, 0);
 		}
 
-		// Token: 0x0602396A RID: 145770 RVA: 0x004EBCEA File Offset: 0x004E9EEA
+		// Token: 0x06025A22 RID: 154146 RVA: 0x00528D5E File Offset: 0x00526F5E
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x0602396B RID: 145771 RVA: 0x004EBCF5 File Offset: 0x004E9EF5
+		// Token: 0x06025A23 RID: 154147 RVA: 0x00528D69 File Offset: 0x00526F69
 		public static Offset<IInteractStylePanorama> EndIInteractStylePanorama(FlatBufferBuilder builder)
 		{
 			return new Offset<IInteractStylePanorama>(builder.EndTable());
 		}
 
-		// Token: 0x0602396C RID: 145772 RVA: 0x004EBD04 File Offset: 0x004E9F04
+		// Token: 0x06025A24 RID: 154148 RVA: 0x00528D78 File Offset: 0x00526F78
 		public IInteractStylePanoramaT UnPack()
 		{
 			IInteractStylePanoramaT interactStylePanoramaT = new IInteractStylePanoramaT();
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return interactStylePanoramaT;
 		}
 
-		// Token: 0x0602396D RID: 145773 RVA: 0x004EBD20 File Offset: 0x004E9F20
+		// Token: 0x06025A25 RID: 154149 RVA: 0x00528D94 File Offset: 0x00526F94
 		public void UnPackTo(IInteractStylePanoramaT _o)
 		{
 			_o.Type = this.Type;
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602396E RID: 145774 RVA: 0x004EBD98 File Offset: 0x004E9F98
+		// Token: 0x06025A26 RID: 154150 RVA: 0x00528E0C File Offset: 0x0052700C
 		public static Offset<IInteractStylePanorama> Pack(FlatBufferBuilder builder, IInteractStylePanoramaT _o)
 		{
 			if (_o == null)
@@ -229,7 +229,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IInteractStylePanorama.CreateIInteractStylePanorama(builder, _o.Type, targetPosOffset, _o.TriggerRange, _o.TriggerAngle, _o.ProtectRange, _o.NullMask);
 		}
 
-		// Token: 0x0400E702 RID: 59138
+		// Token: 0x0400F333 RID: 62259
 		private Table __p;
 	}
 }

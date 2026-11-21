@@ -2,28 +2,28 @@
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x020044F0 RID: 17648
+	// Token: 0x02003412 RID: 13330
 	public enum EAstNodeType
 	{
-		// Token: 0x040184E5 RID: 99557
+		// Token: 0x04012B0D RID: 76557
 		Number,
-		// Token: 0x040184E6 RID: 99558
+		// Token: 0x04012B0E RID: 76558
 		Boolean,
-		// Token: 0x040184E7 RID: 99559
+		// Token: 0x04012B0F RID: 76559
 		String,
-		// Token: 0x040184E8 RID: 99560
+		// Token: 0x04012B10 RID: 76560
 		Array,
-		// Token: 0x040184E9 RID: 99561
+		// Token: 0x04012B11 RID: 76561
 		Identifier,
-		// Token: 0x040184EA RID: 99562
+		// Token: 0x04012B12 RID: 76562
 		BinaryOperator,
-		// Token: 0x040184EB RID: 99563
+		// Token: 0x04012B13 RID: 76563
 		UnaryOperator,
-		// Token: 0x040184EC RID: 99564
+		// Token: 0x04012B14 RID: 76564
 		FunctionCall,
-		// Token: 0x040184ED RID: 99565
+		// Token: 0x04012B15 RID: 76565
 		ParenthesizedExpression,
-		// Token: 0x040184EE RID: 99566
+		// Token: 0x04012B16 RID: 76566
 		Index
 	}
 }

@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005244 RID: 21060
+	// Token: 0x020057AC RID: 22444
 	public class IFightMusicsSwitchByTagListT
 	{
-		// Token: 0x17009A50 RID: 39504
-		// (get) Token: 0x0602242B RID: 140331 RVA: 0x004C080B File Offset: 0x004BEA0B
-		// (set) Token: 0x0602242C RID: 140332 RVA: 0x004C0813 File Offset: 0x004BEA13
+		// Token: 0x1700A24C RID: 41548
+		// (get) Token: 0x060243C1 RID: 148417 RVA: 0x004FB2CF File Offset: 0x004F94CF
+		// (set) Token: 0x060243C2 RID: 148418 RVA: 0x004FB2D7 File Offset: 0x004F94D7
 		public EFightMusicsSwitchType Type { get; set; }
 
-		// Token: 0x17009A51 RID: 39505
-		// (get) Token: 0x0602242D RID: 140333 RVA: 0x004C081C File Offset: 0x004BEA1C
-		// (set) Token: 0x0602242E RID: 140334 RVA: 0x004C0824 File Offset: 0x004BEA24
+		// Token: 0x1700A24D RID: 41549
+		// (get) Token: 0x060243C3 RID: 148419 RVA: 0x004FB2E0 File Offset: 0x004F94E0
+		// (set) Token: 0x060243C4 RID: 148420 RVA: 0x004FB2E8 File Offset: 0x004F94E8
 		public List<IFightMusicSwitchByTagT> Element { get; set; }
 
-		// Token: 0x0602242F RID: 140335 RVA: 0x004C082D File Offset: 0x004BEA2D
+		// Token: 0x060243C5 RID: 148421 RVA: 0x004FB2F1 File Offset: 0x004F94F1
 		public IFightMusicsSwitchByTagListT()
 		{
 			this.Type = EFightMusicsSwitchType.SwitchByTag;

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Area;
@@ -14,17 +13,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001AB9 RID: 6841
+// Token: 0x02000F78 RID: 3960
 [NullableContext(1)]
 [Nullable(0)]
 public class ExploreDetailView : UiViewBase
 {
-	// Token: 0x0600CABE RID: 51902 RVA: 0x002E2E77 File Offset: 0x002E1077
+	// Token: 0x06009ECF RID: 40655 RVA: 0x002EDFC7 File Offset: 0x002EC1C7
 	public ExploreDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600CABF RID: 51903 RVA: 0x002E2E88 File Offset: 0x002E1088
+	// Token: 0x06009ED0 RID: 40656 RVA: 0x002EDFD8 File Offset: 0x002EC1D8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -55,7 +54,7 @@ public class ExploreDetailView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CAC0 RID: 51904 RVA: 0x002E2FD4 File Offset: 0x002E11D4
+	// Token: 0x06009ED1 RID: 40657 RVA: 0x002EE124 File Offset: 0x002EC324
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ExploreDetailView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -66,7 +65,7 @@ public class ExploreDetailView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CAC1 RID: 51905 RVA: 0x002E3018 File Offset: 0x002E1218
+	// Token: 0x06009ED2 RID: 40658 RVA: 0x002EE168 File Offset: 0x002EC368
 	protected override void OnStart()
 	{
 		this.PopupCaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -80,7 +79,7 @@ public class ExploreDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600CAC2 RID: 51906 RVA: 0x002E309C File Offset: 0x002E129C
+	// Token: 0x06009ED3 RID: 40659 RVA: 0x002EE1EC File Offset: 0x002EC3EC
 	protected override void OnBeforeDestroy()
 	{
 		PopupCaptionItem popupCaptionItem = this.PopupCaptionItem;
@@ -103,7 +102,7 @@ public class ExploreDetailView : UiViewBase
 		this.GenericScrollView = null;
 	}
 
-	// Token: 0x0600CAC3 RID: 51907 RVA: 0x002E30F4 File Offset: 0x002E12F4
+	// Token: 0x06009ED4 RID: 40660 RVA: 0x002EE244 File Offset: 0x002EC444
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -125,13 +124,13 @@ public class ExploreDetailView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600CAC4 RID: 51908 RVA: 0x002E3160 File Offset: 0x002E1360
+	// Token: 0x06009ED5 RID: 40661 RVA: 0x002EE2B0 File Offset: 0x002EC4B0
 	private void OnCloseButtonClicked()
 	{
 		UiManager.Instance.CloseView(EUiViewName.ExploreDetailView, null);
 	}
 
-	// Token: 0x0600CAC5 RID: 51909 RVA: 0x002E3174 File Offset: 0x002E1374
+	// Token: 0x06009ED6 RID: 40662 RVA: 0x002EE2C4 File Offset: 0x002EC4C4
 	private void OnClickSkipButton()
 	{
 		if (FunctionModel.Instance.IsOpen(10057))
@@ -147,7 +146,7 @@ public class ExploreDetailView : UiViewBase
 		GenericPromptController.Instance.ShowPromptByCode("ExploreProgressRewardNotOpen", Array.Empty<object>());
 	}
 
-	// Token: 0x0600CAC6 RID: 51910 RVA: 0x002E31D8 File Offset: 0x002E13D8
+	// Token: 0x06009ED7 RID: 40663 RVA: 0x002EE328 File Offset: 0x002EC528
 	private ExploreAreaParentItem OnCreateTabItem(ExploreAreaViewData data, UUIItem uiItem, int index)
 	{
 		ExploreAreaParentItem exploreAreaParentItem = new ExploreAreaParentItem();
@@ -161,7 +160,7 @@ public class ExploreDetailView : UiViewBase
 		return exploreAreaParentItem;
 	}
 
-	// Token: 0x0600CAC7 RID: 51911 RVA: 0x002E322C File Offset: 0x002E142C
+	// Token: 0x06009ED8 RID: 40664 RVA: 0x002EE37C File Offset: 0x002EC57C
 	private void OnCountrySelected(ExploreCountryItem exploreCountryItem, ExploreAreaViewData data, EToggleState state)
 	{
 		int countryId = data.CountryId;
@@ -177,7 +176,7 @@ public class ExploreDetailView : UiViewBase
 		this.RefreshTabScrollView();
 	}
 
-	// Token: 0x0600CAC8 RID: 51912 RVA: 0x002E326A File Offset: 0x002E146A
+	// Token: 0x06009ED9 RID: 40665 RVA: 0x002EE3BA File Offset: 0x002EC5BA
 	private void OnAreaSelected(ExploreAreaItem exploreAreaItem, ExploreAreaViewData data, bool bSelected)
 	{
 		if (!bSelected)
@@ -189,7 +188,7 @@ public class ExploreDetailView : UiViewBase
 		base.PlaySequence("Switch", null, false);
 	}
 
-	// Token: 0x0600CAC9 RID: 51913 RVA: 0x002E3290 File Offset: 0x002E1490
+	// Token: 0x06009EDA RID: 40666 RVA: 0x002EE3E0 File Offset: 0x002EC5E0
 	[NullableContext(2)]
 	private void SelectedArea(int areaId, ExploreAreaItem exploreAreaItem = null)
 	{
@@ -207,7 +206,7 @@ public class ExploreDetailView : UiViewBase
 		ExploreProgressModel.Instance.SelectedAreaId = areaId;
 	}
 
-	// Token: 0x0600CACA RID: 51914 RVA: 0x002E32C4 File Offset: 0x002E14C4
+	// Token: 0x06009EDB RID: 40667 RVA: 0x002EE414 File Offset: 0x002EC614
 	private void RefreshSelectedCountryIdAndAreaId(int countryId)
 	{
 		ExploreProgressModel instance = ExploreProgressModel.Instance;
@@ -221,12 +220,12 @@ public class ExploreDetailView : UiViewBase
 		instance.SelectedAreaId = MapUtil.GetWorldMapLevelOneAreaId();
 	}
 
-	// Token: 0x0600CACB RID: 51915 RVA: 0x002E3314 File Offset: 0x002E1514
+	// Token: 0x06009EDC RID: 40668 RVA: 0x002EE464 File Offset: 0x002EC664
 	private void RefreshTabScrollView()
 	{
 		List<ExploreAreaViewData> list = new List<ExploreAreaViewData>();
 		int exploreAreaViewDataList = this.GetExploreAreaViewDataList(list);
-		if (list.ElementAtOrDefault(exploreAreaViewDataList) == null)
+		if (((exploreAreaViewDataList >= 0 && exploreAreaViewDataList < list.Count) ? list[exploreAreaViewDataList] : null) == null)
 		{
 			this.SelectedAreaItem = null;
 			return;
@@ -235,7 +234,7 @@ public class ExploreDetailView : UiViewBase
 		this.SelectedAreaIndex = exploreAreaViewDataList;
 	}
 
-	// Token: 0x0600CACC RID: 51916 RVA: 0x002E335C File Offset: 0x002E155C
+	// Token: 0x06009EDD RID: 40669 RVA: 0x002EE4BC File Offset: 0x002EC6BC
 	private int GetExploreAreaViewDataList(List<ExploreAreaViewData> exploreAreaViewDataList)
 	{
 		ExploreProgressModel instance = ExploreProgressModel.Instance;
@@ -286,7 +285,7 @@ public class ExploreDetailView : UiViewBase
 		return result;
 	}
 
-	// Token: 0x0600CACD RID: 51917 RVA: 0x002E34C8 File Offset: 0x002E16C8
+	// Token: 0x06009EDE RID: 40670 RVA: 0x002EE628 File Offset: 0x002EC828
 	private void RefreshExploreProgressScrollView()
 	{
 		ExploreProgressModel instance = ExploreProgressModel.Instance;
@@ -299,15 +298,15 @@ public class ExploreDetailView : UiViewBase
 		this.GenericScrollView.RefreshByData<ExploreAreaItemData>(exploreAreaData.GetAllExploreAreaItemData(), null);
 	}
 
-	// Token: 0x04005D55 RID: 23893
+	// Token: 0x04005E24 RID: 24100
 	[Nullable(2)]
 	private PopupCaptionItem PopupCaptionItem;
 
-	// Token: 0x04005D56 RID: 23894
+	// Token: 0x04005E25 RID: 24101
 	[Nullable(2)]
 	private ExploreAreaItem SelectedAreaItem;
 
-	// Token: 0x04005D57 RID: 23895
+	// Token: 0x04005E26 RID: 24102
 	[Nullable(new byte[]
 	{
 		2,
@@ -317,7 +316,7 @@ public class ExploreDetailView : UiViewBase
 	})]
 	private DynamicScrollView<ExploreAreaParentItem, ExploreAreaDynamicItem, ExploreAreaViewData> TabLoopScroll;
 
-	// Token: 0x04005D58 RID: 23896
+	// Token: 0x04005E27 RID: 24103
 	[Nullable(new byte[]
 	{
 		2,
@@ -325,26 +324,26 @@ public class ExploreDetailView : UiViewBase
 	})]
 	private GenericScrollView<ExploreProgressItem> GenericScrollView;
 
-	// Token: 0x04005D59 RID: 23897
+	// Token: 0x04005E28 RID: 24104
 	private int SelectedAreaIndex = -1;
 
-	// Token: 0x0200800D RID: 32781
+	// Token: 0x0200719C RID: 29084
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029CDB RID: 171227
+		// Token: 0x04025015 RID: 151573
 		PopupCaptionItem,
-		// Token: 0x04029CDC RID: 171228
+		// Token: 0x04025016 RID: 151574
 		TagDynamicScrollViewItem,
-		// Token: 0x04029CDD RID: 171229
+		// Token: 0x04025017 RID: 151575
 		TabSourceItem,
-		// Token: 0x04029CDE RID: 171230
+		// Token: 0x04025018 RID: 151576
 		AreaContentItem,
-		// Token: 0x04029CDF RID: 171231
+		// Token: 0x04025019 RID: 151577
 		ExploreProgressScrollView,
-		// Token: 0x04029CE0 RID: 171232
+		// Token: 0x0402501A RID: 151578
 		ExploreProgressContentItem,
-		// Token: 0x04029CE1 RID: 171233
+		// Token: 0x0402501B RID: 151579
 		SkipButton
 	}
 }

@@ -2,30 +2,30 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000239 RID: 569
+// Token: 0x0200023D RID: 573
 [NullableContext(2)]
 [Nullable(0)]
 [RequiredMember]
 public class CapabilityHostInitParam : ICapabilityHostInitParam
 {
-	// Token: 0x1700053E RID: 1342
-	// (get) Token: 0x060022FA RID: 8954 RVA: 0x000D95C1 File Offset: 0x000D77C1
-	// (set) Token: 0x060022FB RID: 8955 RVA: 0x000D95C9 File Offset: 0x000D77C9
+	// Token: 0x17000565 RID: 1381
+	// (get) Token: 0x060023B2 RID: 9138 RVA: 0x000DFA81 File Offset: 0x000DDC81
+	// (set) Token: 0x060023B3 RID: 9139 RVA: 0x000DFA89 File Offset: 0x000DDC89
 	[Nullable(1)]
 	[RequiredMember]
 	public object Id { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x1700053F RID: 1343
-	// (get) Token: 0x060022FC RID: 8956 RVA: 0x000D95D2 File Offset: 0x000D77D2
-	// (set) Token: 0x060022FD RID: 8957 RVA: 0x000D95DA File Offset: 0x000D77DA
+	// Token: 0x17000566 RID: 1382
+	// (get) Token: 0x060023B4 RID: 9140 RVA: 0x000DFA92 File Offset: 0x000DDC92
+	// (set) Token: 0x060023B5 RID: 9141 RVA: 0x000DFA9A File Offset: 0x000DDC9A
 	public Func<bool> IsValid { get; set; }
 
-	// Token: 0x17000540 RID: 1344
-	// (get) Token: 0x060022FE RID: 8958 RVA: 0x000D95E3 File Offset: 0x000D77E3
-	// (set) Token: 0x060022FF RID: 8959 RVA: 0x000D95EB File Offset: 0x000D77EB
+	// Token: 0x17000567 RID: 1383
+	// (get) Token: 0x060023B6 RID: 9142 RVA: 0x000DFAA3 File Offset: 0x000DDCA3
+	// (set) Token: 0x060023B7 RID: 9143 RVA: 0x000DFAAB File Offset: 0x000DDCAB
 	public Func<AActor> GetBoundActor { get; set; }
 
-	// Token: 0x06002300 RID: 8960 RVA: 0x000D95F4 File Offset: 0x000D77F4
+	// Token: 0x060023B8 RID: 9144 RVA: 0x000DFAB4 File Offset: 0x000DDCB4
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public CapabilityHostInitParam()

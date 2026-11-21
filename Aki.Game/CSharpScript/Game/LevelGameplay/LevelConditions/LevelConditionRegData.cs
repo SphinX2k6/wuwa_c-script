@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006D77 RID: 28023
+	// Token: 0x02005EF6 RID: 24310
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionRegData
 	{
-		// Token: 0x06044796 RID: 280470 RVA: 0x010E30BC File Offset: 0x010E12BC
+		// Token: 0x0603A8FA RID: 239866 RVA: 0x0108D2A0 File Offset: 0x0108B4A0
 		public LevelConditionRegData(LevelConditionGroupRegData owner, Condition conditionConfig, List<EEventName> eventNames)
 		{
 			this.Owner = owner;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x06044797 RID: 280471 RVA: 0x010E330F File Offset: 0x010E150F
+		// Token: 0x0603A8FB RID: 239867 RVA: 0x0108D4F3 File Offset: 0x0108B6F3
 		private void OnGlobalGameplayTagChanged(int entityId, int gameplayTagId, int originTagCount, int newTagCount)
 		{
 			this.OnEventInvokeCheck(new object[]
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			});
 		}
 
-		// Token: 0x06044798 RID: 280472 RVA: 0x010E3342 File Offset: 0x010E1542
+		// Token: 0x0603A8FC RID: 239868 RVA: 0x0108D526 File Offset: 0x0108B726
 		private void OnEntityFightByBpType(string blueprintType)
 		{
 			this.OnEventInvokeCheck(new object[]
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			});
 		}
 
-		// Token: 0x06044799 RID: 280473 RVA: 0x010E3354 File Offset: 0x010E1554
+		// Token: 0x0603A8FD RID: 239869 RVA: 0x0108D538 File Offset: 0x0108B738
 		public void Destroy()
 		{
 			if (this.ConditionConfig.Type == ELevelGeneralCondition.PawnInRange.ToEnumString())
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x0604479A RID: 280474 RVA: 0x010E357C File Offset: 0x010E177C
+		// Token: 0x0603A8FE RID: 239870 RVA: 0x0108D760 File Offset: 0x0108B960
 		private void OnEventInvokeCheck(params object[] eventArgs)
 		{
 			if (this.OnEventInvokeCheckStat == null)
@@ -179,19 +179,19 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x040239DF RID: 145887
+		// Token: 0x0401EC81 RID: 126081
 		public LevelConditionGroupRegData Owner;
 
-		// Token: 0x040239E0 RID: 145888
+		// Token: 0x0401EC82 RID: 126082
 		public Condition ConditionConfig;
 
-		// Token: 0x040239E1 RID: 145889
+		// Token: 0x0401EC83 RID: 126083
 		public List<EEventName> EventNames;
 
-		// Token: 0x040239E2 RID: 145890
+		// Token: 0x0401EC84 RID: 126084
 		public bool ConditionReached;
 
-		// Token: 0x040239E3 RID: 145891
+		// Token: 0x0401EC85 RID: 126085
 		[Nullable(2)]
 		private Stat OnEventInvokeCheckStat;
 	}

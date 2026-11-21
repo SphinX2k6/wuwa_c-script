@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000E72 RID: 3698
+	// Token: 0x02000E62 RID: 3682
 	[NetMessage(EMessageId.RacingBetsRankRequest)]
 	public sealed class RacingBetsRankRequest : IMessage<RacingBetsRankRequest>, IMessage, IEquatable<RacingBetsRankRequest>, IDeepCloneable<RacingBetsRankRequest>, IBufferMessage
 	{
-		// Token: 0x06013DDB RID: 81371 RVA: 0x002E4AB7 File Offset: 0x002E2CB7
+		// Token: 0x06013CF6 RID: 81142 RVA: 0x002E33F7 File Offset: 0x002E15F7
 		[NullableContext(1)]
 		public static RacingBetsRankRequest Create()
 		{
 			return new RacingBetsRankRequest();
 		}
 
-		// Token: 0x17004211 RID: 16913
-		// (get) Token: 0x06013DDC RID: 81372 RVA: 0x002E4ABE File Offset: 0x002E2CBE
+		// Token: 0x170041E7 RID: 16871
+		// (get) Token: 0x06013CF7 RID: 81143 RVA: 0x002E33FE File Offset: 0x002E15FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004212 RID: 16914
-		// (get) Token: 0x06013DDD RID: 81373 RVA: 0x002E4AC1 File Offset: 0x002E2CC1
+		// Token: 0x170041E8 RID: 16872
+		// (get) Token: 0x06013CF8 RID: 81144 RVA: 0x002E3401 File Offset: 0x002E1601
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013DDE RID: 81374 RVA: 0x002E4AC8 File Offset: 0x002E2CC8
+		// Token: 0x06013CF9 RID: 81145 RVA: 0x002E3408 File Offset: 0x002E1608
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RacingBetsRankRequest()
 		{
 		}
 
-		// Token: 0x06013DDF RID: 81375 RVA: 0x002E4AD0 File Offset: 0x002E2CD0
+		// Token: 0x06013CFA RID: 81146 RVA: 0x002E3410 File Offset: 0x002E1610
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RacingBetsRankRequest(RacingBetsRankRequest other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06013DE0 RID: 81376 RVA: 0x002E4AF5 File Offset: 0x002E2CF5
+		// Token: 0x06013CFB RID: 81147 RVA: 0x002E3435 File Offset: 0x002E1635
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RacingBetsRankRequest Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new RacingBetsRankRequest(this);
 		}
 
-		// Token: 0x17004213 RID: 16915
-		// (get) Token: 0x06013DE1 RID: 81377 RVA: 0x002E4AFD File Offset: 0x002E2CFD
-		// (set) Token: 0x06013DE2 RID: 81378 RVA: 0x002E4B05 File Offset: 0x002E2D05
+		// Token: 0x170041E9 RID: 16873
+		// (get) Token: 0x06013CFC RID: 81148 RVA: 0x002E343D File Offset: 0x002E163D
+		// (set) Token: 0x06013CFD RID: 81149 RVA: 0x002E3445 File Offset: 0x002E1645
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013DE3 RID: 81379 RVA: 0x002E4B0E File Offset: 0x002E2D0E
+		// Token: 0x06013CFE RID: 81150 RVA: 0x002E344E File Offset: 0x002E164E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RacingBetsRankRequest);
 		}
 
-		// Token: 0x06013DE4 RID: 81380 RVA: 0x002E4B1C File Offset: 0x002E2D1C
+		// Token: 0x06013CFF RID: 81151 RVA: 0x002E345C File Offset: 0x002E165C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RacingBetsRankRequest other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ActivityId == other.ActivityId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06013DE5 RID: 81381 RVA: 0x002E4B4C File Offset: 0x002E2D4C
+		// Token: 0x06013D00 RID: 81152 RVA: 0x002E348C File Offset: 0x002E168C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013DE6 RID: 81382 RVA: 0x002E4B8B File Offset: 0x002E2D8B
+		// Token: 0x06013D01 RID: 81153 RVA: 0x002E34CB File Offset: 0x002E16CB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06013DE7 RID: 81383 RVA: 0x002E4B98 File Offset: 0x002E2D98
+		// Token: 0x06013D02 RID: 81154 RVA: 0x002E34D8 File Offset: 0x002E16D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06013DE8 RID: 81384 RVA: 0x002E4BA1 File Offset: 0x002E2DA1
+		// Token: 0x06013D03 RID: 81155 RVA: 0x002E34E1 File Offset: 0x002E16E1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.ActivityId != 0)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(88);
 				output.WriteInt32(this.ActivityId);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013DE9 RID: 81385 RVA: 0x002E4BD4 File Offset: 0x002E2DD4
+		// Token: 0x06013D04 RID: 81156 RVA: 0x002E3514 File Offset: 0x002E1714
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013DEA RID: 81386 RVA: 0x002E4C12 File Offset: 0x002E2E12
+		// Token: 0x06013D05 RID: 81157 RVA: 0x002E3552 File Offset: 0x002E1752
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RacingBetsRankRequest other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06013DEB RID: 81387 RVA: 0x002E4C43 File Offset: 0x002E2E43
+		// Token: 0x06013D06 RID: 81158 RVA: 0x002E3583 File Offset: 0x002E1783
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06013DEC RID: 81388 RVA: 0x002E4C4C File Offset: 0x002E2E4C
+		// Token: 0x06013D07 RID: 81159 RVA: 0x002E358C File Offset: 0x002E178C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 120U)
+				if (num != 88U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400797F RID: 31103
+		// Token: 0x040079A9 RID: 31145
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007980 RID: 31104
-		public const int ActivityIdFieldNumber = 15;
+		// Token: 0x040079AA RID: 31146
+		public const int ActivityIdFieldNumber = 11;
 
-		// Token: 0x04007981 RID: 31105
+		// Token: 0x040079AB RID: 31147
 		private int activityId_;
 	}
 }

@@ -13,9 +13,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskWriteEntityId.TsTaskWriteEntityId_C")]
 public class TsTaskWriteEntityId : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000250 RID: 592
-	// (get) Token: 0x06000C83 RID: 3203 RVA: 0x0004056F File Offset: 0x0003E76F
-	// (set) Token: 0x06000C84 RID: 3204 RVA: 0x00040583 File Offset: 0x0003E783
+	// Token: 0x17000253 RID: 595
+	// (get) Token: 0x06000C89 RID: 3209 RVA: 0x000410F7 File Offset: 0x0003F2F7
+	// (set) Token: 0x06000C8A RID: 3210 RVA: 0x0004110B File Offset: 0x0003F30B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string BlackboardKeyTarget
 	{
@@ -29,9 +29,9 @@ public class TsTaskWriteEntityId : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x17000251 RID: 593
-	// (get) Token: 0x06000C85 RID: 3205 RVA: 0x00040598 File Offset: 0x0003E798
-	// (set) Token: 0x06000C86 RID: 3206 RVA: 0x000405AC File Offset: 0x0003E7AC
+	// Token: 0x17000254 RID: 596
+	// (get) Token: 0x06000C8B RID: 3211 RVA: 0x00041120 File Offset: 0x0003F320
+	// (set) Token: 0x06000C8C RID: 3212 RVA: 0x00041134 File Offset: 0x0003F334
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string BlackboardKeyWriteTo
 	{
@@ -45,7 +45,7 @@ public class TsTaskWriteEntityId : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x06000C87 RID: 3207 RVA: 0x000405C1 File Offset: 0x0003E7C1
+	// Token: 0x06000C8D RID: 3213 RVA: 0x00041149 File Offset: 0x0003F349
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -56,31 +56,28 @@ public class TsTaskWriteEntityId : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x06000C88 RID: 3208 RVA: 0x000405F4 File Offset: 0x0003E7F4
+	// Token: 0x06000C8E RID: 3214 RVA: 0x0004117C File Offset: 0x0003F37C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskWriteEntityId) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskWriteEntityId.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000C89 RID: 3209 RVA: 0x00040694 File Offset: 0x0003E894
+	// Token: 0x06000C8F RID: 3215 RVA: 0x00041234 File Offset: 0x0003F434
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -141,7 +138,7 @@ public class TsTaskWriteEntityId : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000C8A RID: 3210 RVA: 0x000407C1 File Offset: 0x0003E9C1
+	// Token: 0x06000C90 RID: 3216 RVA: 0x00041361 File Offset: 0x0003F561
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskWriteEntityId._ClassPtr == IntPtr.Zero)
@@ -151,22 +148,22 @@ public class TsTaskWriteEntityId : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		return TsTaskWriteEntityId._ClassPtr;
 	}
 
-	// Token: 0x06000C8B RID: 3211 RVA: 0x000407E8 File Offset: 0x0003E9E8
+	// Token: 0x06000C91 RID: 3217 RVA: 0x00041388 File Offset: 0x0003F588
 	public TsTaskWriteEntityId() : this(BuiltinUtils.AllocNativeUObject(TsTaskWriteEntityId.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000C8C RID: 3212 RVA: 0x00040810 File Offset: 0x0003EA10
+	// Token: 0x06000C92 RID: 3218 RVA: 0x000413B0 File Offset: 0x0003F5B0
 	public TsTaskWriteEntityId(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskWriteEntityId.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000C8D RID: 3213 RVA: 0x00040843 File Offset: 0x0003EA43
+	// Token: 0x06000C93 RID: 3219 RVA: 0x000413E3 File Offset: 0x0003F5E3
 	protected TsTaskWriteEntityId(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000C8E RID: 3214 RVA: 0x00040864 File Offset: 0x0003EA64
+	// Token: 0x06000C94 RID: 3220 RVA: 0x00041404 File Offset: 0x0003F604
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -175,27 +172,27 @@ public class TsTaskWriteEntityId : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x04000A04 RID: 2564
+	// Token: 0x04000A0C RID: 2572
 	private bool IsInitTsVariables;
 
-	// Token: 0x04000A05 RID: 2565
+	// Token: 0x04000A0D RID: 2573
 	private string TsBlackboardKeyTarget = "";
 
-	// Token: 0x04000A06 RID: 2566
+	// Token: 0x04000A0E RID: 2574
 	private string TsBlackboardKeyWriteTo = "";
 
-	// Token: 0x04000A07 RID: 2567
+	// Token: 0x04000A0F RID: 2575
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskWriteEntityId.TsTaskWriteEntityId_C";
 
-	// Token: 0x04000A08 RID: 2568
+	// Token: 0x04000A10 RID: 2576
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000A09 RID: 2569
+	// Token: 0x04000A11 RID: 2577
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000A0A RID: 2570
+	// Token: 0x04000A12 RID: 2578
 	private static int __PropertyOffset_BlackboardKeyTarget;
 
-	// Token: 0x04000A0B RID: 2571
+	// Token: 0x04000A13 RID: 2579
 	private static int __PropertyOffset_BlackboardKeyWriteTo;
 }

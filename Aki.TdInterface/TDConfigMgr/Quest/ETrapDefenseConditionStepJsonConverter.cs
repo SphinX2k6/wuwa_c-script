@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012B1 RID: 4785
+	// Token: 0x020013F7 RID: 5111
 	public class ETrapDefenseConditionStepJsonConverter : JsonConverter<ETrapDefenseConditionStep>
 	{
-		// Token: 0x06006BC5 RID: 27589 RVA: 0x00103504 File Offset: 0x00101704
+		// Token: 0x06007233 RID: 29235 RVA: 0x001114CC File Offset: 0x0010F6CC
 		public override ETrapDefenseConditionStep Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ETrapDefenseConditionStepExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006BC6 RID: 27590 RVA: 0x00103528 File Offset: 0x00101728
+		// Token: 0x06007234 RID: 29236 RVA: 0x001114F0 File Offset: 0x0010F6F0
 		public override void Write(Utf8JsonWriter writer, ETrapDefenseConditionStep value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

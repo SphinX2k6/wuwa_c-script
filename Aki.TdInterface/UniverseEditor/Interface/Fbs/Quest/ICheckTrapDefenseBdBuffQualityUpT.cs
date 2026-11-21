@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D77 RID: 15735
+	// Token: 0x0200418E RID: 16782
 	public class ICheckTrapDefenseBdBuffQualityUpT
 	{
-		// Token: 0x17006C00 RID: 27648
-		// (get) Token: 0x06015C95 RID: 89237 RVA: 0x003241DA File Offset: 0x003223DA
-		// (set) Token: 0x06015C96 RID: 89238 RVA: 0x003241E2 File Offset: 0x003223E2
+		// Token: 0x170071BA RID: 29114
+		// (get) Token: 0x060171CD RID: 94669 RVA: 0x0034B452 File Offset: 0x00349652
+		// (set) Token: 0x060171CE RID: 94670 RVA: 0x0034B45A File Offset: 0x0034965A
 		public ECheckTrapDefenseEvent Type { get; set; }
 
-		// Token: 0x06015C97 RID: 89239 RVA: 0x003241EB File Offset: 0x003223EB
+		// Token: 0x060171CF RID: 94671 RVA: 0x0034B463 File Offset: 0x00349663
 		public ICheckTrapDefenseBdBuffQualityUpT()
 		{
 			this.Type = ECheckTrapDefenseEvent.MonsterKilled;

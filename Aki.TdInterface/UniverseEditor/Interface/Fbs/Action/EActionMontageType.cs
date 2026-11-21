@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F04 RID: 24324
+	// Token: 0x02006547 RID: 25927
 	public enum EActionMontageType : byte
 	{
-		// Token: 0x0400FB9E RID: 64414
+		// Token: 0x04010911 RID: 67857
 		Normal,
-		// Token: 0x0400FB9F RID: 64415
+		// Token: 0x04010912 RID: 67858
 		Sequence
 	}
 }

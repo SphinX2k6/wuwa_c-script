@@ -4,21 +4,32 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02006FFE RID: 28670
+	// Token: 0x0200617F RID: 24959
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputActionKey
 	{
-		// Token: 0x06045C4E RID: 285774 RVA: 0x01159C94 File Offset: 0x01157E94
+		// Token: 0x0603BE04 RID: 245252 RVA: 0x01103FFC File Offset: 0x011021FC
 		public void CreateUeData()
 		{
 			this.UeActionName = FNameUtil.GetCheckDynamicFName(this.ActionName);
 			this.UeKeyName = FNameUtil.GetCheckDynamicFName(this.KeyName);
-			this.UeKey = new FKey(this.UeKeyName);
-			this.UeInputActionKeyMapping = new FInputActionKeyMapping(this.UeActionName, this.IsShift, this.IsCtrl, this.IsAlt, this.IsCmd, this.UeKey);
+			this.UeKey = new FKey
+			{
+				KeyName = this.UeKeyName
+			};
+			this.UeInputActionKeyMapping = new FInputActionKeyMapping
+			{
+				ActionName = this.UeActionName,
+				bShift = this.IsShift,
+				bCtrl = this.IsCtrl,
+				bAlt = this.IsAlt,
+				bCmd = this.IsCmd,
+				Key = this.UeKey
+			};
 		}
 
-		// Token: 0x06045C4F RID: 285775 RVA: 0x01159D03 File Offset: 0x01157F03
+		// Token: 0x0603BE05 RID: 245253 RVA: 0x01104095 File Offset: 0x01102295
 		public static InputActionKey New(string actionName, bool bShift, bool bCtrl, bool bAlt, bool bCmd, string keyName)
 		{
 			InputActionKey inputActionKey = new InputActionKey();
@@ -32,7 +43,7 @@ namespace CSharpScript.Game.InputSetting
 			return inputActionKey;
 		}
 
-		// Token: 0x06045C50 RID: 285776 RVA: 0x01159D3C File Offset: 0x01157F3C
+		// Token: 0x0603BE06 RID: 245254 RVA: 0x011040D0 File Offset: 0x011022D0
 		public static InputActionKey NewByInputActionKeyMapping(FInputActionKeyMapping inputActionKeyMapping)
 		{
 			InputActionKey inputActionKey = new InputActionKey();
@@ -46,7 +57,7 @@ namespace CSharpScript.Game.InputSetting
 			return inputActionKey;
 		}
 
-		// Token: 0x06045C51 RID: 285777 RVA: 0x01159DC0 File Offset: 0x01157FC0
+		// Token: 0x0603BE07 RID: 245255 RVA: 0x01104154 File Offset: 0x01102354
 		public static void Refresh(InputActionKey inputActionKey, string actionName, bool bShift, bool bCtrl, bool bAlt, bool bCmd, string keyName)
 		{
 			inputActionKey.ActionName = actionName;
@@ -66,20 +77,20 @@ namespace CSharpScript.Game.InputSetting
 			inputActionKey.UeInputActionKeyMapping.Key = inputActionKey.UeKey;
 		}
 
-		// Token: 0x06045C52 RID: 285778 RVA: 0x01159E78 File Offset: 0x01158078
+		// Token: 0x0603BE08 RID: 245256 RVA: 0x0110420C File Offset: 0x0110240C
 		public FInputActionKeyMapping ToUeInputActionKeyMapping()
 		{
 			return this.UeInputActionKeyMapping;
 		}
 
-		// Token: 0x06045C53 RID: 285779 RVA: 0x01159E80 File Offset: 0x01158080
+		// Token: 0x0603BE09 RID: 245257 RVA: 0x01104214 File Offset: 0x01102414
 		[NullableContext(2)]
 		public InputKey GetKey()
 		{
 			return InputSettings.Instance.GetKey(this.KeyName);
 		}
 
-		// Token: 0x06045C54 RID: 285780 RVA: 0x01159E94 File Offset: 0x01158094
+		// Token: 0x0603BE0A RID: 245258 RVA: 0x01104228 File Offset: 0x01102428
 		public string GetKeyIconPath()
 		{
 			InputKey key = this.GetKey();
@@ -90,40 +101,40 @@ namespace CSharpScript.Game.InputSetting
 			return key.GetKeyIconPath();
 		}
 
-		// Token: 0x06045C55 RID: 285781 RVA: 0x01159EB8 File Offset: 0x011580B8
+		// Token: 0x0603BE0B RID: 245259 RVA: 0x0110424C File Offset: 0x0110244C
 		public bool IsEqual(FInputActionKeyMapping inputActionKeyMapping)
 		{
 			return this.ActionName == inputActionKeyMapping.ActionName.ToString() && this.KeyName == inputActionKeyMapping.Key.KeyName.ToString() && this.IsAlt == inputActionKeyMapping.bAlt && this.IsCmd == inputActionKeyMapping.bCmd && this.IsCtrl == inputActionKeyMapping.bCtrl && this.IsShift == inputActionKeyMapping.bShift;
 		}
 
-		// Token: 0x040247D0 RID: 149456
+		// Token: 0x0401FA86 RID: 129670
 		public string ActionName = "";
 
-		// Token: 0x040247D1 RID: 149457
+		// Token: 0x0401FA87 RID: 129671
 		public bool IsAlt;
 
-		// Token: 0x040247D2 RID: 149458
+		// Token: 0x0401FA88 RID: 129672
 		public bool IsCmd;
 
-		// Token: 0x040247D3 RID: 149459
+		// Token: 0x0401FA89 RID: 129673
 		public bool IsCtrl;
 
-		// Token: 0x040247D4 RID: 149460
+		// Token: 0x0401FA8A RID: 129674
 		public bool IsShift;
 
-		// Token: 0x040247D5 RID: 149461
+		// Token: 0x0401FA8B RID: 129675
 		public string KeyName = "";
 
-		// Token: 0x040247D6 RID: 149462
+		// Token: 0x0401FA8C RID: 129676
 		public FName UeActionName;
 
-		// Token: 0x040247D7 RID: 149463
+		// Token: 0x0401FA8D RID: 129677
 		public FName UeKeyName;
 
-		// Token: 0x040247D8 RID: 149464
+		// Token: 0x0401FA8E RID: 129678
 		public FKey UeKey;
 
-		// Token: 0x040247D9 RID: 149465
+		// Token: 0x0401FA8F RID: 129679
 		public FInputActionKeyMapping UeInputActionKeyMapping;
 	}
 }

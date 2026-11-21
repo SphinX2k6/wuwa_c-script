@@ -1,36 +1,23 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Pawn.Component
 {
-	// Token: 0x0200706A RID: 28778
+	// Token: 0x020061EB RID: 25067
 	public class PawnGamePlayComponent : EntityComponent
 	{
-		// Token: 0x060460DE RID: 286942 RVA: 0x0117922D File Offset: 0x0117742D
+		// Token: 0x0603C2DD RID: 246493 RVA: 0x01122DAC File Offset: 0x01120FAC
 		public void ScanResponse()
 		{
 		}
 
-		// Token: 0x060460DF RID: 286943 RVA: 0x0117922F File Offset: 0x0117742F
+		// Token: 0x0603C2DE RID: 246494 RVA: 0x01122DAE File Offset: 0x01120FAE
 		public void WeightResponse()
 		{
 		}
 
-		// Token: 0x060460E0 RID: 286944 RVA: 0x01179231 File Offset: 0x01177431
+		// Token: 0x0603C2DF RID: 246495 RVA: 0x01122DB0 File Offset: 0x01120FB0
 		public void GrabResponse()
 		{
-		}
-
-		// Token: 0x060460E1 RID: 286945 RVA: 0x01179233 File Offset: 0x01177433
-		[NullableContext(1)]
-		public override bool ClearComponent(EntityComponent componentTemplate)
-		{
-			if (!base.ClearComponent(componentTemplate))
-			{
-				return false;
-			}
-			PawnGamePlayComponent pawnGamePlayComponent = (PawnGamePlayComponent)componentTemplate;
-			return true;
 		}
 	}
 }

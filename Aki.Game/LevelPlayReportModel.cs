@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -11,13 +10,13 @@ using CSharpScript.Game.Module.Map.Mark;
 using CSharpScript.Game.Module.WorldMap;
 using Google.Protobuf.Collections;
 
-// Token: 0x02002056 RID: 8278
+// Token: 0x02001529 RID: 5417
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class LevelPlayReportModel : ModelBase
 {
-	// Token: 0x0601044A RID: 66634 RVA: 0x003F75A8 File Offset: 0x003F57A8
+	// Token: 0x0600D8B1 RID: 55473 RVA: 0x00403AA0 File Offset: 0x00401CA0
 	public bool HasRequestDetail(int instId, int levelPlayId)
 	{
 		string reportDetailKey = this.GetReportDetailKey(instId, levelPlayId);
@@ -25,26 +24,26 @@ public class LevelPlayReportModel : ModelBase
 		return this.LevelPlayReportDetailFlagMap.TryGetValue(reportDetailKey, out flag) && flag;
 	}
 
-	// Token: 0x0601044B RID: 66635 RVA: 0x003F75D4 File Offset: 0x003F57D4
+	// Token: 0x0600D8B2 RID: 55474 RVA: 0x00403ACC File Offset: 0x00401CCC
 	public void SetRequestDetailFlag(int instId, int levelPlayId)
 	{
 		string reportDetailKey = this.GetReportDetailKey(instId, levelPlayId);
 		this.LevelPlayReportDetailFlagMap[reportDetailKey] = true;
 	}
 
-	// Token: 0x0601044C RID: 66636 RVA: 0x003F75F7 File Offset: 0x003F57F7
+	// Token: 0x0600D8B3 RID: 55475 RVA: 0x00403AEF File Offset: 0x00401CEF
 	public void ResetDetailRequestFlag()
 	{
 		this.LevelPlayReportDetailFlagMap.Clear();
 	}
 
-	// Token: 0x0601044D RID: 66637 RVA: 0x003F7604 File Offset: 0x003F5804
+	// Token: 0x0600D8B4 RID: 55476 RVA: 0x00403AFC File Offset: 0x00401CFC
 	private string GetReportDetailKey(int instId, int levelPlayId)
 	{
 		return MapUtil.GetGamePlayKey(instId, levelPlayId);
 	}
 
-	// Token: 0x0601044E RID: 66638 RVA: 0x003F7610 File Offset: 0x003F5810
+	// Token: 0x0600D8B5 RID: 55477 RVA: 0x00403B08 File Offset: 0x00401D08
 	public void UpdateSimpleReportMsg(IReadOnlyList<SimpleTrackReportMsg> msgList)
 	{
 		this.SimpleReportMap.Clear();
@@ -56,13 +55,13 @@ public class LevelPlayReportModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.LevelPlayReportSimpleUpdate);
 	}
 
-	// Token: 0x0601044F RID: 66639 RVA: 0x003F768C File Offset: 0x003F588C
+	// Token: 0x0600D8B6 RID: 55478 RVA: 0x00403B84 File Offset: 0x00401D84
 	public Dictionary<string, SimpleTrackReportMsg> GetSimpleReportMsgMap()
 	{
 		return this.SimpleReportMap;
 	}
 
-	// Token: 0x06010450 RID: 66640 RVA: 0x003F7694 File Offset: 0x003F5894
+	// Token: 0x0600D8B7 RID: 55479 RVA: 0x00403B8C File Offset: 0x00401D8C
 	public void UpdateLevelPlayStateMsg(IReadOnlyList<InstLevelPlayStateReq> requestList, IReadOnlyList<InstLevelPlayStateRsp> msgList)
 	{
 		foreach (InstLevelPlayStateReq instLevelPlayStateReq in requestList)
@@ -154,8 +153,12 @@ public class LevelPlayReportModel : ModelBase
 				LevelPlayGainRewardInfo levelPlayGainRewardInfo;
 				if (gainRewardInfoDict.TryGetValue(num, out levelPlayGainRewardInfo))
 				{
-					this.LevelPlayRewardNodeIds[reportDetailKey2] = levelPlayGainRewardInfo.RewardNodeIds.ToArray<int>();
-					this.LevelPlayRewardTreasureBoxIds[reportDetailKey2] = levelPlayGainRewardInfo.TreasureBoxIds.ToArray<int>();
+					int[] array = new int[levelPlayGainRewardInfo.RewardNodeIds.Count];
+					levelPlayGainRewardInfo.RewardNodeIds.CopyTo(array, 0);
+					this.LevelPlayRewardNodeIds[reportDetailKey2] = array;
+					int[] array2 = new int[levelPlayGainRewardInfo.TreasureBoxIds.Count];
+					levelPlayGainRewardInfo.TreasureBoxIds.CopyTo(array2, 0);
+					this.LevelPlayRewardTreasureBoxIds[reportDetailKey2] = array2;
 				}
 				else
 				{
@@ -167,7 +170,7 @@ public class LevelPlayReportModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.LevelPlayStateDetailUpdate);
 	}
 
-	// Token: 0x06010451 RID: 66641 RVA: 0x003F7B14 File Offset: 0x003F5D14
+	// Token: 0x0600D8B8 RID: 55480 RVA: 0x0040403C File Offset: 0x0040223C
 	public void UpdateLevelPlayRewardsMsg(int instId, int levelPlayId, int[] nodeIds, int[] treasureBoxIds)
 	{
 		string reportDetailKey = this.GetReportDetailKey(instId, levelPlayId);
@@ -175,7 +178,7 @@ public class LevelPlayReportModel : ModelBase
 		this.LevelPlayRewardTreasureBoxIds[reportDetailKey] = treasureBoxIds;
 	}
 
-	// Token: 0x06010452 RID: 66642 RVA: 0x003F7B48 File Offset: 0x003F5D48
+	// Token: 0x0600D8B9 RID: 55481 RVA: 0x00404070 File Offset: 0x00402270
 	public void UpdateLevelPlayRewardMsgByNotify(LevelPlayGainRewardInfoNotify data)
 	{
 		foreach (KeyValuePair<int, LevelPlayGainRewardInfo> keyValuePair in data.GainRewardInfoDict)
@@ -185,13 +188,17 @@ public class LevelPlayReportModel : ModelBase
 			ILevelPlay levelPlayConfig = LevelPlayModel.Instance.GetLevelPlayConfig(key);
 			if (levelPlayConfig != null)
 			{
-				this.UpdateLevelPlayRewardsMsg(levelPlayConfig.LevelId, key, value.RewardNodeIds.ToArray<int>(), value.TreasureBoxIds.ToArray<int>());
+				int[] array = new int[value.RewardNodeIds.Count];
+				value.RewardNodeIds.CopyTo(array, 0);
+				int[] array2 = new int[value.TreasureBoxIds.Count];
+				value.TreasureBoxIds.CopyTo(array2, 0);
+				this.UpdateLevelPlayRewardsMsg(levelPlayConfig.LevelId, key, array, array2);
 			}
 		}
 		EventSystem.Instance.Emit(EEventName.LevelPlayRewardDetailUpdate);
 	}
 
-	// Token: 0x06010453 RID: 66643 RVA: 0x003F7BE4 File Offset: 0x003F5DE4
+	// Token: 0x0600D8BA RID: 55482 RVA: 0x0040413C File Offset: 0x0040233C
 	[NullableContext(2)]
 	public string GetLevelPlayHideReason(int instId, int levelPlayId)
 	{
@@ -204,13 +211,19 @@ public class LevelPlayReportModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06010454 RID: 66644 RVA: 0x003F7C17 File Offset: 0x003F5E17
+	// Token: 0x0600D8BB RID: 55483 RVA: 0x0040416F File Offset: 0x0040236F
 	public Dictionary<string, int> GetLevelPlayStateMsgMap()
 	{
 		return this.LevelPlayStateMap;
 	}
 
-	// Token: 0x06010455 RID: 66645 RVA: 0x003F7C20 File Offset: 0x003F5E20
+	// Token: 0x0600D8BC RID: 55484 RVA: 0x00404177 File Offset: 0x00402377
+	public bool HasLevelPlayState(int instId, int levelPlayId)
+	{
+		return this.LevelPlayStateMap.ContainsKey(this.GetReportDetailKey(instId, levelPlayId));
+	}
+
+	// Token: 0x0600D8BD RID: 55485 RVA: 0x0040418C File Offset: 0x0040238C
 	public bool GetLevelPlayIsUnlock(int instId, int levelPlayId)
 	{
 		string reportDetailKey = this.GetReportDetailKey(instId, levelPlayId);
@@ -218,7 +231,7 @@ public class LevelPlayReportModel : ModelBase
 		return this.LevelPlayUnlockDict.TryGetValue(reportDetailKey, out flag) && flag;
 	}
 
-	// Token: 0x06010456 RID: 66646 RVA: 0x003F7C4C File Offset: 0x003F5E4C
+	// Token: 0x0600D8BE RID: 55486 RVA: 0x004041B8 File Offset: 0x004023B8
 	public bool IsCommonLevelPlayComplete(int instId, int levelPlayId)
 	{
 		string reportDetailKey = this.GetReportDetailKey(instId, levelPlayId);
@@ -254,7 +267,7 @@ public class LevelPlayReportModel : ModelBase
 		return mapMarkByRelativeId != null && mapMarkByRelativeId.GetValueOrDefault().HistoryState == 1;
 	}
 
-	// Token: 0x06010457 RID: 66647 RVA: 0x003F7CC8 File Offset: 0x003F5EC8
+	// Token: 0x0600D8BF RID: 55487 RVA: 0x00404234 File Offset: 0x00402434
 	public bool IsCommonLevelPlayHide(int instId, int levelPlayId)
 	{
 		string reportDetailKey = this.GetReportDetailKey(instId, levelPlayId);
@@ -271,7 +284,7 @@ public class LevelPlayReportModel : ModelBase
 		return num2 == 5;
 	}
 
-	// Token: 0x06010458 RID: 66648 RVA: 0x003F7CF8 File Offset: 0x003F5EF8
+	// Token: 0x0600D8C0 RID: 55488 RVA: 0x00404264 File Offset: 0x00402464
 	public bool IsCommonLevelPlayDiscover(int instId, int levelPlayId)
 	{
 		if (this.IsCommonLevelPlayComplete(instId, levelPlayId))
@@ -292,7 +305,7 @@ public class LevelPlayReportModel : ModelBase
 		return num2 > 0;
 	}
 
-	// Token: 0x06010459 RID: 66649 RVA: 0x003F7D34 File Offset: 0x003F5F34
+	// Token: 0x0600D8C1 RID: 55489 RVA: 0x004042A0 File Offset: 0x004024A0
 	[NullableContext(2)]
 	public SimpleTrackReportMsg GetSimpleReportMsg(int instId, int levelPlayId)
 	{
@@ -305,7 +318,7 @@ public class LevelPlayReportModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0601045A RID: 66650 RVA: 0x003F7D60 File Offset: 0x003F5F60
+	// Token: 0x0600D8C2 RID: 55490 RVA: 0x004042CC File Offset: 0x004024CC
 	public void UpdateDetailReportMsg(int instId, int levelPlayId, Dictionary<string, VarDefinePb> varsMap)
 	{
 		string reportDetailKey = this.GetReportDetailKey(instId, levelPlayId);
@@ -313,7 +326,7 @@ public class LevelPlayReportModel : ModelBase
 		EventSystem.Instance.Emit<int, int>(EEventName.LevelPlayReportDetailUpdate, instId, levelPlayId);
 	}
 
-	// Token: 0x0601045B RID: 66651 RVA: 0x003F7D98 File Offset: 0x003F5F98
+	// Token: 0x0600D8C3 RID: 55491 RVA: 0x00404304 File Offset: 0x00402504
 	[NullableContext(2)]
 	public T GetVar<T>(int instId, int levelPlayId, [Nullable(1)] string varKey)
 	{
@@ -350,7 +363,7 @@ public class LevelPlayReportModel : ModelBase
 		return (T)((object)obj);
 	}
 
-	// Token: 0x0601045C RID: 66652 RVA: 0x003F7E4C File Offset: 0x003F604C
+	// Token: 0x0600D8C4 RID: 55492 RVA: 0x004043B8 File Offset: 0x004025B8
 	public bool IsLevelPlayReportComplete(int instId, int levelPlayId)
 	{
 		LevelPlayReportDefine.ILevelPlayReportConfigData levelPlayReportConfig = LevelPlayReportConfig.Instance.GetLevelPlayReportConfig(levelPlayId);
@@ -366,7 +379,7 @@ public class LevelPlayReportModel : ModelBase
 		return epunishReportMarkStateType == EPunishReportMarkStateType.Complete;
 	}
 
-	// Token: 0x0601045D RID: 66653 RVA: 0x003F7EA0 File Offset: 0x003F60A0
+	// Token: 0x0600D8C5 RID: 55493 RVA: 0x0040440C File Offset: 0x0040260C
 	public bool HaveLevelPlayReportRewardCanGet(int instId, int levelPlayId)
 	{
 		LevelPlayReportDefine.ILevelPlayReportConfigData levelPlayReportConfig = LevelPlayReportConfig.Instance.GetLevelPlayReportConfig(levelPlayId);
@@ -383,7 +396,7 @@ public class LevelPlayReportModel : ModelBase
 		return num < num2;
 	}
 
-	// Token: 0x0601045E RID: 66654 RVA: 0x003F7EFC File Offset: 0x003F60FC
+	// Token: 0x0600D8C6 RID: 55494 RVA: 0x00404468 File Offset: 0x00402668
 	public PunishReportTarget GetLevelPlayReportTarget(int instId, int levelPlayId)
 	{
 		LevelPlayReportDefine.ILevelPlayReportConfigData levelPlayReportConfig = LevelPlayReportConfig.Instance.GetLevelPlayReportConfig(levelPlayId);
@@ -417,7 +430,7 @@ public class LevelPlayReportModel : ModelBase
 		return punishReportTarget;
 	}
 
-	// Token: 0x0601045F RID: 66655 RVA: 0x003F8054 File Offset: 0x003F6254
+	// Token: 0x0600D8C7 RID: 55495 RVA: 0x004045C0 File Offset: 0x004027C0
 	public int[] GetLevelPlayRewardNodeIds(int instId, int levelPlayId)
 	{
 		string reportDetailKey = this.GetReportDetailKey(instId, levelPlayId);
@@ -429,7 +442,7 @@ public class LevelPlayReportModel : ModelBase
 		return new int[0];
 	}
 
-	// Token: 0x06010460 RID: 66656 RVA: 0x003F8084 File Offset: 0x003F6284
+	// Token: 0x0600D8C8 RID: 55496 RVA: 0x004045F0 File Offset: 0x004027F0
 	public int[] GetLevelPlayRewardTreasureBoxIds(int instId, int levelPlayId)
 	{
 		string reportDetailKey = this.GetReportDetailKey(instId, levelPlayId);
@@ -441,8 +454,8 @@ public class LevelPlayReportModel : ModelBase
 		return Array.Empty<int>();
 	}
 
-	// Token: 0x170013F7 RID: 5111
-	// (get) Token: 0x06010461 RID: 66657 RVA: 0x003F80B1 File Offset: 0x003F62B1
+	// Token: 0x17001424 RID: 5156
+	// (get) Token: 0x0600D8C9 RID: 55497 RVA: 0x0040461D File Offset: 0x0040281D
 	public static LevelPlayReportModel Instance
 	{
 		get
@@ -451,7 +464,7 @@ public class LevelPlayReportModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010462 RID: 66658 RVA: 0x003F80B8 File Offset: 0x003F62B8
+	// Token: 0x0600D8CA RID: 55498 RVA: 0x00404624 File Offset: 0x00402824
 	public static LevelPlayReportModel GetOrCreateInstance()
 	{
 		if (LevelPlayReportModel._Instance == null)
@@ -461,7 +474,7 @@ public class LevelPlayReportModel : ModelBase
 		return LevelPlayReportModel._Instance;
 	}
 
-	// Token: 0x06010463 RID: 66659 RVA: 0x003F80CC File Offset: 0x003F62CC
+	// Token: 0x0600D8CB RID: 55499 RVA: 0x00404638 File Offset: 0x00402838
 	public static bool CreateInstance()
 	{
 		if (LevelPlayReportModel._Instance != null)
@@ -472,51 +485,51 @@ public class LevelPlayReportModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06010464 RID: 66660 RVA: 0x003F80E2 File Offset: 0x003F62E2
+	// Token: 0x0600D8CC RID: 55500 RVA: 0x0040464E File Offset: 0x0040284E
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010465 RID: 66661 RVA: 0x003F80E4 File Offset: 0x003F62E4
+	// Token: 0x0600D8CD RID: 55501 RVA: 0x00404650 File Offset: 0x00402850
 	public static void ResetStaticDefaultValue()
 	{
 		LevelPlayReportModel._Instance = null;
 	}
 
-	// Token: 0x06010466 RID: 66662 RVA: 0x003F80EC File Offset: 0x003F62EC
+	// Token: 0x0600D8CE RID: 55502 RVA: 0x00404658 File Offset: 0x00402858
 	static LevelPlayReportModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LevelPlayReportModel.CreateStaticDefaultValue), new Action(LevelPlayReportModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007843 RID: 30787
+	// Token: 0x0400792C RID: 31020
 	private readonly Dictionary<string, bool> LevelPlayReportDetailFlagMap = new Dictionary<string, bool>();
 
-	// Token: 0x04007844 RID: 30788
+	// Token: 0x0400792D RID: 31021
 	private readonly Dictionary<string, SimpleTrackReportMsg> SimpleReportMap = new Dictionary<string, SimpleTrackReportMsg>();
 
-	// Token: 0x04007845 RID: 30789
+	// Token: 0x0400792E RID: 31022
 	private readonly Dictionary<string, Dictionary<string, VarDefinePb>> DetailReportMap = new Dictionary<string, Dictionary<string, VarDefinePb>>();
 
-	// Token: 0x04007846 RID: 30790
+	// Token: 0x0400792F RID: 31023
 	private readonly Dictionary<string, int> LevelPlayStateMap = new Dictionary<string, int>();
 
-	// Token: 0x04007847 RID: 30791
+	// Token: 0x04007930 RID: 31024
 	private readonly Dictionary<string, int> LevelPlayFinishCountMap = new Dictionary<string, int>();
 
-	// Token: 0x04007848 RID: 30792
+	// Token: 0x04007931 RID: 31025
 	private readonly Dictionary<string, string> LevelPlayHideInfoMap = new Dictionary<string, string>();
 
-	// Token: 0x04007849 RID: 30793
+	// Token: 0x04007932 RID: 31026
 	private readonly Dictionary<string, bool> LevelPlayUnlockDict = new Dictionary<string, bool>();
 
-	// Token: 0x0400784A RID: 30794
+	// Token: 0x04007933 RID: 31027
 	private readonly Dictionary<string, int[]> LevelPlayRewardNodeIds = new Dictionary<string, int[]>();
 
-	// Token: 0x0400784B RID: 30795
+	// Token: 0x04007934 RID: 31028
 	private readonly Dictionary<string, int[]> LevelPlayRewardTreasureBoxIds = new Dictionary<string, int[]>();
 
-	// Token: 0x0400784C RID: 30796
+	// Token: 0x04007935 RID: 31029
 	[Nullable(2)]
 	private static LevelPlayReportModel _Instance;
 }

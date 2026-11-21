@@ -4,10 +4,10 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x02005093 RID: 20627
+	// Token: 0x02004063 RID: 16483
 	public class FlowActionUtils
 	{
-		// Token: 0x06034DAE RID: 216494 RVA: 0x00C81674 File Offset: 0x00C7F874
+		// Token: 0x06029CA7 RID: 171175 RVA: 0x00BCEC40 File Offset: 0x00BCCE40
 		public static bool? CheckEntityInAoi(int pbDataId)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(pbDataId);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return new bool?(Vector.Dist2D(vector, actorLocationProxy) < (double)num && (num2 < 0 || Math.Abs(vector.Z - actorLocationProxy.Z) < (double)num2));
 		}
 
-		// Token: 0x0401C280 RID: 115328
+		// Token: 0x04016CAF RID: 93359
 		public const int WAIT_ENTITY_TIME = 20000;
 	}
 }

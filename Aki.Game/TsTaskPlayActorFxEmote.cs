@@ -14,9 +14,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskPlayActorFxEmote.TsTaskPlayActorFxEmote_C")]
 public class TsTaskPlayActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170001B2 RID: 434
-	// (get) Token: 0x060009B5 RID: 2485 RVA: 0x0003133B File Offset: 0x0002F53B
-	// (set) Token: 0x060009B6 RID: 2486 RVA: 0x0003134B File Offset: 0x0002F54B
+	// Token: 0x170001B5 RID: 437
+	// (get) Token: 0x060009BB RID: 2491 RVA: 0x00032423 File Offset: 0x00030623
+	// (set) Token: 0x060009BC RID: 2492 RVA: 0x00032433 File Offset: 0x00030633
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe long EffectBuffId
 	{
@@ -30,9 +30,9 @@ public class TsTaskPlayActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170001B3 RID: 435
-	// (get) Token: 0x060009B7 RID: 2487 RVA: 0x0003135C File Offset: 0x0002F55C
-	// (set) Token: 0x060009B8 RID: 2488 RVA: 0x00031370 File Offset: 0x0002F570
+	// Token: 0x170001B6 RID: 438
+	// (get) Token: 0x060009BD RID: 2493 RVA: 0x00032444 File Offset: 0x00030644
+	// (set) Token: 0x060009BE RID: 2494 RVA: 0x00032458 File Offset: 0x00030658
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string SocketName
 	{
@@ -46,9 +46,9 @@ public class TsTaskPlayActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170001B4 RID: 436
-	// (get) Token: 0x060009B9 RID: 2489 RVA: 0x00031385 File Offset: 0x0002F585
-	// (set) Token: 0x060009BA RID: 2490 RVA: 0x00031399 File Offset: 0x0002F599
+	// Token: 0x170001B7 RID: 439
+	// (get) Token: 0x060009BF RID: 2495 RVA: 0x0003246D File Offset: 0x0003066D
+	// (set) Token: 0x060009C0 RID: 2496 RVA: 0x00032481 File Offset: 0x00030681
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector RelativePosition
 	{
@@ -62,9 +62,9 @@ public class TsTaskPlayActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170001B5 RID: 437
-	// (get) Token: 0x060009BB RID: 2491 RVA: 0x000313AE File Offset: 0x0002F5AE
-	// (set) Token: 0x060009BC RID: 2492 RVA: 0x000313C2 File Offset: 0x0002F5C2
+	// Token: 0x170001B8 RID: 440
+	// (get) Token: 0x060009C1 RID: 2497 RVA: 0x00032496 File Offset: 0x00030696
+	// (set) Token: 0x060009C2 RID: 2498 RVA: 0x000324AA File Offset: 0x000306AA
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FRotator RelativeRotation
 	{
@@ -78,9 +78,9 @@ public class TsTaskPlayActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170001B6 RID: 438
-	// (get) Token: 0x060009BD RID: 2493 RVA: 0x000313D7 File Offset: 0x0002F5D7
-	// (set) Token: 0x060009BE RID: 2494 RVA: 0x000313EB File Offset: 0x0002F5EB
+	// Token: 0x170001B9 RID: 441
+	// (get) Token: 0x060009C3 RID: 2499 RVA: 0x000324BF File Offset: 0x000306BF
+	// (set) Token: 0x060009C4 RID: 2500 RVA: 0x000324D3 File Offset: 0x000306D3
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector Scale
 	{
@@ -94,9 +94,9 @@ public class TsTaskPlayActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170001B7 RID: 439
-	// (get) Token: 0x060009BF RID: 2495 RVA: 0x00031400 File Offset: 0x0002F600
-	// (set) Token: 0x060009C0 RID: 2496 RVA: 0x00031414 File Offset: 0x0002F614
+	// Token: 0x170001BA RID: 442
+	// (get) Token: 0x060009C5 RID: 2501 RVA: 0x000324E8 File Offset: 0x000306E8
+	// (set) Token: 0x060009C6 RID: 2502 RVA: 0x000324FC File Offset: 0x000306FC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string TsSocketName
 	{
@@ -110,7 +110,7 @@ public class TsTaskPlayActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x060009C1 RID: 2497 RVA: 0x0003142C File Offset: 0x0002F62C
+	// Token: 0x060009C7 RID: 2503 RVA: 0x00032514 File Offset: 0x00030714
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -135,30 +135,27 @@ public class TsTaskPlayActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x060009C2 RID: 2498 RVA: 0x000314F8 File Offset: 0x0002F6F8
+	// Token: 0x060009C8 RID: 2504 RVA: 0x000325E0 File Offset: 0x000307E0
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskPlayActorFxEmote) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskPlayActorFxEmote.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060009C3 RID: 2499 RVA: 0x00031594 File Offset: 0x0002F794
+	// Token: 0x060009C9 RID: 2505 RVA: 0x00032690 File Offset: 0x00030890
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -193,7 +190,7 @@ public class TsTaskPlayActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x060009C4 RID: 2500 RVA: 0x00031676 File Offset: 0x0002F876
+	// Token: 0x060009CA RID: 2506 RVA: 0x00032772 File Offset: 0x00030972
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskPlayActorFxEmote._ClassPtr == IntPtr.Zero)
@@ -203,22 +200,22 @@ public class TsTaskPlayActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		return TsTaskPlayActorFxEmote._ClassPtr;
 	}
 
-	// Token: 0x060009C5 RID: 2501 RVA: 0x0003169C File Offset: 0x0002F89C
+	// Token: 0x060009CB RID: 2507 RVA: 0x00032798 File Offset: 0x00030998
 	public TsTaskPlayActorFxEmote() : this(BuiltinUtils.AllocNativeUObject(TsTaskPlayActorFxEmote.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060009C6 RID: 2502 RVA: 0x000316C4 File Offset: 0x0002F8C4
+	// Token: 0x060009CC RID: 2508 RVA: 0x000327C0 File Offset: 0x000309C0
 	public TsTaskPlayActorFxEmote(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskPlayActorFxEmote.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060009C7 RID: 2503 RVA: 0x000316F8 File Offset: 0x0002F8F8
+	// Token: 0x060009CD RID: 2509 RVA: 0x000327F4 File Offset: 0x000309F4
 	protected TsTaskPlayActorFxEmote(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060009C8 RID: 2504 RVA: 0x00031748 File Offset: 0x0002F948
+	// Token: 0x060009CE RID: 2510 RVA: 0x00032844 File Offset: 0x00030A44
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -227,45 +224,45 @@ public class TsTaskPlayActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0400077E RID: 1918
+	// Token: 0x04000786 RID: 1926
 	private bool IsInitTsVariables;
 
-	// Token: 0x0400077F RID: 1919
+	// Token: 0x04000787 RID: 1927
 	private long TsEffectBuffId;
 
-	// Token: 0x04000780 RID: 1920
+	// Token: 0x04000788 RID: 1928
 	private readonly Vector TsRelativePosition = Vector.Create();
 
-	// Token: 0x04000781 RID: 1921
+	// Token: 0x04000789 RID: 1929
 	private readonly Rotator TsRelativeRotation = Rotator.Create();
 
-	// Token: 0x04000782 RID: 1922
+	// Token: 0x0400078A RID: 1930
 	private readonly Vector TsScale = Vector.Create(1.0, 1.0, 1.0);
 
-	// Token: 0x04000783 RID: 1923
+	// Token: 0x0400078B RID: 1931
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskPlayActorFxEmote.TsTaskPlayActorFxEmote_C";
 
-	// Token: 0x04000784 RID: 1924
+	// Token: 0x0400078C RID: 1932
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000785 RID: 1925
+	// Token: 0x0400078D RID: 1933
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000786 RID: 1926
+	// Token: 0x0400078E RID: 1934
 	private static int __PropertyOffset_EffectBuffId;
 
-	// Token: 0x04000787 RID: 1927
+	// Token: 0x0400078F RID: 1935
 	private static int __PropertyOffset_SocketName;
 
-	// Token: 0x04000788 RID: 1928
+	// Token: 0x04000790 RID: 1936
 	private static int __PropertyOffset_RelativePosition;
 
-	// Token: 0x04000789 RID: 1929
+	// Token: 0x04000791 RID: 1937
 	private static int __PropertyOffset_RelativeRotation;
 
-	// Token: 0x0400078A RID: 1930
+	// Token: 0x04000792 RID: 1938
 	private static int __PropertyOffset_Scale;
 
-	// Token: 0x0400078B RID: 1931
+	// Token: 0x04000793 RID: 1939
 	private static int __PropertyOffset_TsSocketName;
 }

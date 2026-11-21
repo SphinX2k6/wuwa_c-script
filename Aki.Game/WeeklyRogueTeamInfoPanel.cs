@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D44 RID: 11588
+// Token: 0x0200229E RID: 8862
 public class WeeklyRogueTeamInfoPanel : UiPanelBase
 {
-	// Token: 0x06018599 RID: 99737 RVA: 0x00632E9C File Offset: 0x0063109C
+	// Token: 0x06015E3B RID: 89659 RVA: 0x00658EAC File Offset: 0x006570AC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class WeeklyRogueTeamInfoPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601859A RID: 99738 RVA: 0x00632F48 File Offset: 0x00631148
+	// Token: 0x06015E3C RID: 89660 RVA: 0x00658F58 File Offset: 0x00657158
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyRogueTeamInfoPanel.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -40,7 +40,7 @@ public class WeeklyRogueTeamInfoPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601859B RID: 99739 RVA: 0x00632F8B File Offset: 0x0063118B
+	// Token: 0x06015E3D RID: 89661 RVA: 0x00658F9B File Offset: 0x0065719B
 	[NullableContext(1)]
 	private WeeklyRogueInfoViewRoleItem CreateRoleItem()
 	{
@@ -50,7 +50,7 @@ public class WeeklyRogueTeamInfoPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601859C RID: 99740 RVA: 0x00632FA4 File Offset: 0x006311A4
+	// Token: 0x06015E3E RID: 89662 RVA: 0x00658FB4 File Offset: 0x006571B4
 	private void OnSelectRole(int index)
 	{
 		List<SceneTeamItem> teamItems = SceneTeamModel.Instance.GetTeamItems(false);
@@ -69,7 +69,7 @@ public class WeeklyRogueTeamInfoPanel : UiPanelBase
 		this.UpdateAttribute();
 	}
 
-	// Token: 0x0601859D RID: 99741 RVA: 0x00633038 File Offset: 0x00631238
+	// Token: 0x06015E3F RID: 89663 RVA: 0x00659048 File Offset: 0x00657248
 	private void OnBtnDetail()
 	{
 		List<SceneTeamItem> teamItems = SceneTeamModel.Instance.GetTeamItems(false);
@@ -82,7 +82,7 @@ public class WeeklyRogueTeamInfoPanel : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.WeeklyRogueAttributeDetailView, roleDataById.GetShowAttrList(), null);
 	}
 
-	// Token: 0x0601859E RID: 99742 RVA: 0x006330B4 File Offset: 0x006312B4
+	// Token: 0x06015E40 RID: 89664 RVA: 0x006590C4 File Offset: 0x006572C4
 	private UniTask InitAttributeItemList()
 	{
 		WeeklyRogueTeamInfoPanel.<InitAttributeItemList>d__8 <InitAttributeItemList>d__;
@@ -93,7 +93,7 @@ public class WeeklyRogueTeamInfoPanel : UiPanelBase
 		return <InitAttributeItemList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601859F RID: 99743 RVA: 0x006330F8 File Offset: 0x006312F8
+	// Token: 0x06015E41 RID: 89665 RVA: 0x00659108 File Offset: 0x00657308
 	protected void UpdateAttribute()
 	{
 		List<SceneTeamItem> teamItems = SceneTeamModel.Instance.GetTeamItems(false);
@@ -114,7 +114,7 @@ public class WeeklyRogueTeamInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400B4C2 RID: 46274
+	// Token: 0x0400B837 RID: 47159
 	[Nullable(new byte[]
 	{
 		2,
@@ -122,22 +122,22 @@ public class WeeklyRogueTeamInfoPanel : UiPanelBase
 	})]
 	public GenericLayout<WeeklyRogueInfoViewRoleItem, int> RoleListLayout;
 
-	// Token: 0x0400B4C3 RID: 46275
+	// Token: 0x0400B838 RID: 47160
 	[Nullable(1)]
 	public List<AttributeItem> AttributeItemList = new List<AttributeItem>();
 
-	// Token: 0x020092D2 RID: 37586
+	// Token: 0x020084F9 RID: 34041
 	private enum EWeeklyRogueTeamInfoPanelDefine
 	{
-		// Token: 0x0402F74A RID: 194378
+		// Token: 0x0402ADD2 RID: 175570
 		RoleListLayout,
-		// Token: 0x0402F74B RID: 194379
+		// Token: 0x0402ADD3 RID: 175571
 		AttrPanelItem,
-		// Token: 0x0402F74C RID: 194380
+		// Token: 0x0402ADD4 RID: 175572
 		AttrItem,
-		// Token: 0x0402F74D RID: 194381
+		// Token: 0x0402ADD5 RID: 175573
 		BtnDetail,
-		// Token: 0x0402F74E RID: 194382
+		// Token: 0x0402ADD6 RID: 175574
 		TxtBuffDesc
 	}
 }

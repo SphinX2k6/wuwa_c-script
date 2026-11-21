@@ -3,31 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011CB RID: 4555
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001307 RID: 4871
 	public class ITrackTarget_SetValue
 	{
-		// Token: 0x04003E23 RID: 15907
-		[Nullable(1)]
+		// Token: 0x04004191 RID: 16785
 		public ITrackType TrackType;
 
-		// Token: 0x04003E24 RID: 15908
+		// Token: 0x04004192 RID: 16786
 		public ETrackViewMode? TrackViewMode;
 
-		// Token: 0x04003E25 RID: 15909
+		// Token: 0x04004193 RID: 16787
 		public float? Range;
 
-		// Token: 0x04003E26 RID: 15910
+		// Token: 0x04004194 RID: 16788
 		public float? ViewRange;
 
-		// Token: 0x04003E27 RID: 15911
+		// Token: 0x04004195 RID: 16789
+		[Nullable(2)]
 		public IZaxisViewRange ZaxisViewRange;
 
-		// Token: 0x04003E28 RID: 15912
+		// Token: 0x04004196 RID: 16790
 		public ETrackEffect? Effect;
 
-		// Token: 0x04003E29 RID: 15913
+		// Token: 0x04004197 RID: 16791
+		[Nullable(2)]
 		public ITrackEffectAutoChange EffectOption;
 	}
 }

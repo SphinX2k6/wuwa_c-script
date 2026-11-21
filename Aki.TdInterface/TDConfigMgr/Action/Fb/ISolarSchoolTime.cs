@@ -4,12 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002586 RID: 9606
-	[NullableContext(1)]
+	// Token: 0x02002834 RID: 10292
+	[NullableContext(2)]
 	[Nullable(0)]
 	public class ISolarSchoolTime
 	{
-		// Token: 0x0600D799 RID: 55193 RVA: 0x00201B6B File Offset: 0x001FFD6B
+		// Token: 0x0600E513 RID: 58643 RVA: 0x0021D89F File Offset: 0x0021BA9F
+		[NullableContext(0)]
 		public static ISolarSchoolTime Create(ISolarSchoolTime? instance)
 		{
 			if (instance == null)
@@ -22,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E4F RID: 15951
-		// (get) Token: 0x0600D79A RID: 55194 RVA: 0x00201B8A File Offset: 0x001FFD8A
+		// Token: 0x17004159 RID: 16729
+		// (get) Token: 0x0600E514 RID: 58644 RVA: 0x0021D8BE File Offset: 0x0021BABE
 		public virtual IVisualNovelDate Date
 		{
 			get
@@ -38,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E50 RID: 15952
-		// (get) Token: 0x0600D79B RID: 55195 RVA: 0x00201BBE File Offset: 0x001FFDBE
+		// Token: 0x1700415A RID: 16730
+		// (get) Token: 0x0600E515 RID: 58645 RVA: 0x0021D8F2 File Offset: 0x0021BAF2
 		public virtual int PeriodId
 		{
 			get
@@ -48,14 +49,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400774A RID: 30538
+		// Token: 0x04007DB0 RID: 32176
 		private ISolarSchoolTime Instance;
 
-		// Token: 0x0400774B RID: 30539
-		[Nullable(2)]
+		// Token: 0x04007DB1 RID: 32177
 		private IVisualNovelDate _DateCache;
 
-		// Token: 0x0400774C RID: 30540
+		// Token: 0x04007DB2 RID: 32178
 		private bool _DateInited;
 	}
 }

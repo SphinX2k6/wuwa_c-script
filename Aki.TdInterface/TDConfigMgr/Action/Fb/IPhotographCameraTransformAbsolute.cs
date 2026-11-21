@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002650 RID: 9808
+	// Token: 0x02002914 RID: 10516
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IPhotographCameraTransformAbsolute : IPhotographCameraTransformBase
 	{
-		// Token: 0x0600DBF1 RID: 56305 RVA: 0x0020BC7A File Offset: 0x00209E7A
-		[NullableContext(1)]
+		// Token: 0x0600E9CD RID: 59853 RVA: 0x00228552 File Offset: 0x00226752
+		[NullableContext(0)]
 		public static IPhotographCameraTransformAbsolute Create(IPhotographCameraTransformAbsolute? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004113 RID: 16659
-		// (get) Token: 0x0600DBF2 RID: 56306 RVA: 0x0020BC99 File Offset: 0x00209E99
+		// Token: 0x17004453 RID: 17491
+		// (get) Token: 0x0600E9CE RID: 59854 RVA: 0x00228571 File Offset: 0x00226771
 		public override EPhotographCameraTransform Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004114 RID: 16660
-		// (get) Token: 0x0600DBF3 RID: 56307 RVA: 0x0020BCA6 File Offset: 0x00209EA6
+		// Token: 0x17004454 RID: 17492
+		// (get) Token: 0x0600E9CF RID: 59855 RVA: 0x0022857E File Offset: 0x0022677E
 		public virtual VectorInfo CameraPos
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004115 RID: 16661
-		// (get) Token: 0x0600DBF4 RID: 56308 RVA: 0x0020BCDA File Offset: 0x00209EDA
+		// Token: 0x17004455 RID: 17493
+		// (get) Token: 0x0600E9D0 RID: 59856 RVA: 0x002285B2 File Offset: 0x002267B2
 		public virtual VectorInfo CameraRot
 		{
 			get
@@ -66,19 +66,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A40 RID: 31296
+		// Token: 0x040080E2 RID: 32994
 		private IPhotographCameraTransformAbsolute Instance;
 
-		// Token: 0x04007A41 RID: 31297
+		// Token: 0x040080E3 RID: 32995
 		private VectorInfo _CameraPosCache;
 
-		// Token: 0x04007A42 RID: 31298
+		// Token: 0x040080E4 RID: 32996
 		private bool _CameraPosInited;
 
-		// Token: 0x04007A43 RID: 31299
+		// Token: 0x040080E5 RID: 32997
 		private VectorInfo _CameraRotCache;
 
-		// Token: 0x04007A44 RID: 31300
+		// Token: 0x040080E6 RID: 32998
 		private bool _CameraRotInited;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061A4 RID: 24996
+	// Token: 0x0200680F RID: 26639
 	public class IAssistCharacterSplineMoveT
 	{
-		// Token: 0x1700BA50 RID: 47696
-		// (get) Token: 0x0602B0E2 RID: 176354 RVA: 0x005F01B0 File Offset: 0x005EE3B0
-		// (set) Token: 0x0602B0E3 RID: 176355 RVA: 0x005F01B8 File Offset: 0x005EE3B8
+		// Token: 0x1700C3CE RID: 50126
+		// (get) Token: 0x0602D813 RID: 186387 RVA: 0x0063AA24 File Offset: 0x00638C24
+		// (set) Token: 0x0602D814 RID: 186388 RVA: 0x0063AA2C File Offset: 0x00638C2C
 		public EAssistCharacterMoveType Type { get; set; }
 
-		// Token: 0x1700BA51 RID: 47697
-		// (get) Token: 0x0602B0E4 RID: 176356 RVA: 0x005F01C1 File Offset: 0x005EE3C1
-		// (set) Token: 0x0602B0E5 RID: 176357 RVA: 0x005F01C9 File Offset: 0x005EE3C9
+		// Token: 0x1700C3CF RID: 50127
+		// (get) Token: 0x0602D815 RID: 186389 RVA: 0x0063AA35 File Offset: 0x00638C35
+		// (set) Token: 0x0602D816 RID: 186390 RVA: 0x0063AA3D File Offset: 0x00638C3D
 		public int SplineId { get; set; }
 
-		// Token: 0x0602B0E6 RID: 176358 RVA: 0x005F01D2 File Offset: 0x005EE3D2
+		// Token: 0x0602D817 RID: 186391 RVA: 0x0063AA46 File Offset: 0x00638C46
 		public IAssistCharacterSplineMoveT()
 		{
 			this.Type = EAssistCharacterMoveType.Navigation;

@@ -1,32 +1,32 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020018E9 RID: 6377
+// Token: 0x02000DA2 RID: 3490
 [NullableContext(1)]
 public interface IButtonInfo
 {
-	// Token: 0x17000F88 RID: 3976
-	// (get) Token: 0x0600BAD5 RID: 47829
-	// (set) Token: 0x0600BAD6 RID: 47830
+	// Token: 0x17000FAB RID: 4011
+	// (get) Token: 0x06008EBE RID: 36542
+	// (set) Token: 0x06008EBF RID: 36543
 	Action<int> Function { get; set; }
 
-	// Token: 0x17000F89 RID: 3977
-	// (get) Token: 0x0600BAD7 RID: 47831
-	// (set) Token: 0x0600BAD8 RID: 47832
+	// Token: 0x17000FAC RID: 4012
+	// (get) Token: 0x06008EC0 RID: 36544
+	// (set) Token: 0x06008EC1 RID: 36545
 	string Text { get; set; }
 
-	// Token: 0x17000F8A RID: 3978
-	// (get) Token: 0x0600BAD9 RID: 47833
-	// (set) Token: 0x0600BADA RID: 47834
+	// Token: 0x17000FAD RID: 4013
+	// (get) Token: 0x06008EC2 RID: 36546
+	// (set) Token: 0x06008EC3 RID: 36547
 	int Index { get; set; }
 
-	// Token: 0x17000F8B RID: 3979
-	// (get) Token: 0x0600BADB RID: 47835
-	// (set) Token: 0x0600BADC RID: 47836
+	// Token: 0x17000FAE RID: 4014
+	// (get) Token: 0x06008EC4 RID: 36548
+	// (set) Token: 0x06008EC5 RID: 36549
 	ERedDotName? RedDotName { get; set; }
 
-	// Token: 0x17000F8C RID: 3980
-	// (get) Token: 0x0600BADD RID: 47837
-	// (set) Token: 0x0600BADE RID: 47838
+	// Token: 0x17000FAF RID: 4015
+	// (get) Token: 0x06008EC6 RID: 36550
+	// (set) Token: 0x06008EC7 RID: 36551
 	int? RedDotId { get; set; }
 }

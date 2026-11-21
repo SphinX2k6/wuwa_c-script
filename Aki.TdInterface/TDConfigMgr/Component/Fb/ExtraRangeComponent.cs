@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C2D RID: 3117
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D00 RID: 3328
 	public class ExtraRangeComponent : IComponentBase
 	{
-		// Token: 0x06004765 RID: 18277 RVA: 0x000B3C62 File Offset: 0x000B1E62
+		// Token: 0x06004BD5 RID: 19413 RVA: 0x000BE012 File Offset: 0x000BC212
 		public static ExtraRangeComponent Create(IExtraRangeComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014C8 RID: 5320
-		// (get) Token: 0x06004766 RID: 18278 RVA: 0x000B3C84 File Offset: 0x000B1E84
+		// Token: 0x170015D0 RID: 5584
+		// (get) Token: 0x06004BD6 RID: 19414 RVA: 0x000BE034 File Offset: 0x000BC234
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014C9 RID: 5321
-		// (get) Token: 0x06004767 RID: 18279 RVA: 0x000B3CBC File Offset: 0x000B1EBC
+		// Token: 0x170015D1 RID: 5585
+		// (get) Token: 0x06004BD7 RID: 19415 RVA: 0x000BE06C File Offset: 0x000BC26C
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014CA RID: 5322
-		// (get) Token: 0x06004768 RID: 18280 RVA: 0x000B3CD4 File Offset: 0x000B1ED4
+		// Token: 0x170015D2 RID: 5586
+		// (get) Token: 0x06004BD8 RID: 19416 RVA: 0x000BE084 File Offset: 0x000BC284
 		public virtual List<ISunSpiritBlockExtraRange> ExtraRangeConfigs
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002888 RID: 10376
+		// Token: 0x04002ADD RID: 10973
 		private IExtraRangeComponent Instance;
 
-		// Token: 0x04002889 RID: 10377
+		// Token: 0x04002ADE RID: 10974
 		private List<ISunSpiritBlockExtraRange> _ExtraRangeConfigsCache;
 
-		// Token: 0x0400288A RID: 10378
+		// Token: 0x04002ADF RID: 10975
 		private bool _ExtraRangeConfigsInited;
 	}
 }

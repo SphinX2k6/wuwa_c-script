@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C44 RID: 15428
+	// Token: 0x02004053 RID: 16467
 	public class ISphereTriggerShapeT
 	{
-		// Token: 0x17006A4F RID: 27215
-		// (get) Token: 0x06015517 RID: 87319 RVA: 0x00315C29 File Offset: 0x00313E29
-		// (set) Token: 0x06015518 RID: 87320 RVA: 0x00315C31 File Offset: 0x00313E31
+		// Token: 0x17007000 RID: 28672
+		// (get) Token: 0x06016A2B RID: 92715 RVA: 0x0033CAC9 File Offset: 0x0033ACC9
+		// (set) Token: 0x06016A2C RID: 92716 RVA: 0x0033CAD1 File Offset: 0x0033ACD1
 		public ETriggerShape Type { get; set; }
 
-		// Token: 0x17006A50 RID: 27216
-		// (get) Token: 0x06015519 RID: 87321 RVA: 0x00315C3A File Offset: 0x00313E3A
-		// (set) Token: 0x0601551A RID: 87322 RVA: 0x00315C42 File Offset: 0x00313E42
+		// Token: 0x17007001 RID: 28673
+		// (get) Token: 0x06016A2D RID: 92717 RVA: 0x0033CADA File Offset: 0x0033ACDA
+		// (set) Token: 0x06016A2E RID: 92718 RVA: 0x0033CAE2 File Offset: 0x0033ACE2
 		public IVectorInfoT Center { get; set; }
 
-		// Token: 0x17006A51 RID: 27217
-		// (get) Token: 0x0601551B RID: 87323 RVA: 0x00315C4B File Offset: 0x00313E4B
-		// (set) Token: 0x0601551C RID: 87324 RVA: 0x00315C53 File Offset: 0x00313E53
+		// Token: 0x17007002 RID: 28674
+		// (get) Token: 0x06016A2F RID: 92719 RVA: 0x0033CAEB File Offset: 0x0033ACEB
+		// (set) Token: 0x06016A30 RID: 92720 RVA: 0x0033CAF3 File Offset: 0x0033ACF3
 		public int Radius { get; set; }
 
-		// Token: 0x0601551D RID: 87325 RVA: 0x00315C5C File Offset: 0x00313E5C
+		// Token: 0x06016A31 RID: 92721 RVA: 0x0033CAFC File Offset: 0x0033ACFC
 		public ISphereTriggerShapeT()
 		{
 			this.Type = ETriggerShape.Box;

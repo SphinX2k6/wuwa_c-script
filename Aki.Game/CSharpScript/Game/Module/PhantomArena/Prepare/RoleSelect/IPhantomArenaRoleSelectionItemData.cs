@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 {
-	// Token: 0x02005150 RID: 20816
+	// Token: 0x02004120 RID: 16672
 	public interface IPhantomArenaRoleSelectionItemData
 	{
-		// Token: 0x17008101 RID: 33025
-		// (get) Token: 0x0603537A RID: 217978
-		// (set) Token: 0x0603537B RID: 217979
+		// Token: 0x170054C1 RID: 21697
+		// (get) Token: 0x0602A276 RID: 172662
+		// (set) Token: 0x0602A277 RID: 172663
 		int CardRoleId { get; set; }
 
-		// Token: 0x17008102 RID: 33026
-		// (get) Token: 0x0603537C RID: 217980
-		// (set) Token: 0x0603537D RID: 217981
+		// Token: 0x170054C2 RID: 21698
+		// (get) Token: 0x0602A278 RID: 172664
+		// (set) Token: 0x0602A279 RID: 172665
 		bool CanReceived { get; set; }
 
-		// Token: 0x17008103 RID: 33027
-		// (get) Token: 0x0603537E RID: 217982
-		// (set) Token: 0x0603537F RID: 217983
+		// Token: 0x170054C3 RID: 21699
+		// (get) Token: 0x0602A27A RID: 172666
+		// (set) Token: 0x0602A27B RID: 172667
 		bool IsLocked { get; set; }
 
-		// Token: 0x17008104 RID: 33028
-		// (get) Token: 0x06035380 RID: 217984
-		// (set) Token: 0x06035381 RID: 217985
+		// Token: 0x170054C4 RID: 21700
+		// (get) Token: 0x0602A27C RID: 172668
+		// (set) Token: 0x0602A27D RID: 172669
 		bool CanSelect { get; set; }
 	}
 }

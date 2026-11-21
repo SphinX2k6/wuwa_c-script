@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CF5 RID: 7413
+	// Token: 0x02001F04 RID: 7940
 	public class IPieceBase_SetValue
 	{
-		// Token: 0x04006015 RID: 24597
-		[Nullable(1)]
+		// Token: 0x04006588 RID: 25992
 		public IPieceIndex Index;
 
-		// Token: 0x04006016 RID: 24598
+		// Token: 0x04006589 RID: 25993
 		public bool Active;
 	}
 }

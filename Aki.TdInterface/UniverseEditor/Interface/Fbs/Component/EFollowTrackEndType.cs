@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DA5 RID: 19877
+	// Token: 0x020052A8 RID: 21160
 	public enum EFollowTrackEndType : byte
 	{
-		// Token: 0x0400D998 RID: 55704
+		// Token: 0x0400E4E2 RID: 58594
 		ToStart,
-		// Token: 0x0400D999 RID: 55705
+		// Token: 0x0400E4E3 RID: 58595
 		ToFoundation,
-		// Token: 0x0400D99A RID: 55706
+		// Token: 0x0400E4E4 RID: 58596
 		ToSplineDestination
 	}
 }

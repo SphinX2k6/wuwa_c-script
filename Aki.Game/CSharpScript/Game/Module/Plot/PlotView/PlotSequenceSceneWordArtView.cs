@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005060 RID: 20576
+	// Token: 0x02004030 RID: 16432
 	public class PlotSequenceSceneWordArtView : SceneUiView
 	{
-		// Token: 0x06034A6F RID: 215663 RVA: 0x00C712E0 File Offset: 0x00C6F4E0
+		// Token: 0x06029962 RID: 170338 RVA: 0x00BBE5B8 File Offset: 0x00BBC7B8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034A70 RID: 215664 RVA: 0x00C71328 File Offset: 0x00C6F528
+		// Token: 0x06029963 RID: 170339 RVA: 0x00BBE600 File Offset: 0x00BBC800
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PlotSequenceSceneWordArtView.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -34,10 +34,10 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0200B1C7 RID: 45511
+		// Token: 0x02009C01 RID: 39937
 		private enum EComponents
 		{
-			// Token: 0x04035E98 RID: 220824
+			// Token: 0x040308ED RID: 198893
 			TextureWordArt
 		}
 	}

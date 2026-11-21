@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C22 RID: 23586
+	// Token: 0x02006241 RID: 25153
 	public class TFillConfigUnion
 	{
-		// Token: 0x1700B1F4 RID: 45556
-		// (get) Token: 0x0602872D RID: 165677 RVA: 0x0059100A File Offset: 0x0058F20A
-		// (set) Token: 0x0602872E RID: 165678 RVA: 0x00591012 File Offset: 0x0058F212
+		// Token: 0x1700BB42 RID: 47938
+		// (get) Token: 0x0602AD1F RID: 175391 RVA: 0x005D8F9A File Offset: 0x005D719A
+		// (set) Token: 0x0602AD20 RID: 175392 RVA: 0x005D8FA2 File Offset: 0x005D71A2
 		public TFillConfig Type { get; set; }
 
-		// Token: 0x1700B1F5 RID: 45557
-		// (get) Token: 0x0602872F RID: 165679 RVA: 0x0059101B File Offset: 0x0058F21B
-		// (set) Token: 0x06028730 RID: 165680 RVA: 0x00591023 File Offset: 0x0058F223
+		// Token: 0x1700BB43 RID: 47939
+		// (get) Token: 0x0602AD21 RID: 175393 RVA: 0x005D8FAB File Offset: 0x005D71AB
+		// (set) Token: 0x0602AD22 RID: 175394 RVA: 0x005D8FB3 File Offset: 0x005D71B3
 		public object Value { get; set; }
 
-		// Token: 0x06028731 RID: 165681 RVA: 0x0059102C File Offset: 0x0058F22C
+		// Token: 0x0602AD23 RID: 175395 RVA: 0x005D8FBC File Offset: 0x005D71BC
 		public TFillConfigUnion()
 		{
 			this.Type = TFillConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028732 RID: 165682 RVA: 0x00591042 File Offset: 0x0058F242
+		// Token: 0x0602AD24 RID: 175396 RVA: 0x005D8FD2 File Offset: 0x005D71D2
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028733 RID: 165683 RVA: 0x00591054 File Offset: 0x0058F254
+		// Token: 0x0602AD25 RID: 175397 RVA: 0x005D8FE4 File Offset: 0x005D71E4
 		public IDirectionFillT AsIDirectionFill()
 		{
 			return this.As<IDirectionFillT>();
 		}
 
-		// Token: 0x06028734 RID: 165684 RVA: 0x0059105C File Offset: 0x0058F25C
+		// Token: 0x0602AD26 RID: 175398 RVA: 0x005D8FEC File Offset: 0x005D71EC
 		public static TFillConfigUnion FromIDirectionFill(IDirectionFillT _idirectionfill)
 		{
 			return new TFillConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028735 RID: 165685 RVA: 0x00591071 File Offset: 0x0058F271
+		// Token: 0x0602AD27 RID: 175399 RVA: 0x005D9001 File Offset: 0x005D7201
 		public IFixedFillT AsIFixedFill()
 		{
 			return this.As<IFixedFillT>();
 		}
 
-		// Token: 0x06028736 RID: 165686 RVA: 0x00591079 File Offset: 0x0058F279
+		// Token: 0x0602AD28 RID: 175400 RVA: 0x005D9009 File Offset: 0x005D7209
 		public static TFillConfigUnion FromIFixedFill(IFixedFillT _ifixedfill)
 		{
 			return new TFillConfigUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028737 RID: 165687 RVA: 0x00591090 File Offset: 0x0058F290
+		// Token: 0x0602AD29 RID: 175401 RVA: 0x005D9020 File Offset: 0x005D7220
 		public static int Pack(FlatBufferBuilder builder, TFillConfigUnion _o)
 		{
 			TFillConfig type = _o.Type;

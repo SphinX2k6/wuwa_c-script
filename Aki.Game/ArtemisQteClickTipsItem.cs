@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020010F6 RID: 4342
+// Token: 0x020005AA RID: 1450
 public class ArtemisQteClickTipsItem : UiPanelBase
 {
-	// Token: 0x06007147 RID: 28999 RVA: 0x0017230D File Offset: 0x0017050D
+	// Token: 0x060044DD RID: 17629 RVA: 0x0017ACC9 File Offset: 0x00178EC9
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,20 +16,20 @@ public class ArtemisQteClickTipsItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06007148 RID: 29000 RVA: 0x00172330 File Offset: 0x00170530
+	// Token: 0x060044DE RID: 17630 RVA: 0x0017ACEC File Offset: 0x00178EEC
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 	}
 
-	// Token: 0x06007149 RID: 29001 RVA: 0x0017235B File Offset: 0x0017055B
+	// Token: 0x060044DF RID: 17631 RVA: 0x0017AD17 File Offset: 0x00178F17
 	protected override void OnBeforeHide()
 	{
 		this.InProgressType = EArtemisTipsType.None;
 	}
 
-	// Token: 0x0600714A RID: 29002 RVA: 0x00172364 File Offset: 0x00170564
+	// Token: 0x060044E0 RID: 17632 RVA: 0x0017AD20 File Offset: 0x00178F20
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -40,7 +40,7 @@ public class ArtemisQteClickTipsItem : UiPanelBase
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x0600714B RID: 29003 RVA: 0x00172380 File Offset: 0x00170580
+	// Token: 0x060044E1 RID: 17633 RVA: 0x0017AD3C File Offset: 0x00178F3C
 	[NullableContext(1)]
 	private void OnSequenceClose(string sequenceName)
 	{
@@ -69,7 +69,7 @@ public class ArtemisQteClickTipsItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600714C RID: 29004 RVA: 0x001723D4 File Offset: 0x001705D4
+	// Token: 0x060044E2 RID: 17634 RVA: 0x0017AD90 File Offset: 0x00178F90
 	[NullableContext(1)]
 	private void PlayAnim(string sequenceName)
 	{
@@ -85,7 +85,7 @@ public class ArtemisQteClickTipsItem : UiPanelBase
 		this.SetActive(true);
 	}
 
-	// Token: 0x0600714D RID: 29005 RVA: 0x00172430 File Offset: 0x00170630
+	// Token: 0x060044E3 RID: 17635 RVA: 0x0017ADEC File Offset: 0x00178FEC
 	public void ShowTip(EArtemisTipsType tipsType)
 	{
 		string sequenceName = "Success";
@@ -106,29 +106,29 @@ public class ArtemisQteClickTipsItem : UiPanelBase
 		this.PlayAnim(sequenceName);
 	}
 
-	// Token: 0x0600714E RID: 29006 RVA: 0x00172480 File Offset: 0x00170680
+	// Token: 0x060044E4 RID: 17636 RVA: 0x0017AE3C File Offset: 0x0017903C
 	private void SetTipMiss()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "Activity_ArtemisChatFixTips_Miss", Array.Empty<object>());
 	}
 
-	// Token: 0x0600714F RID: 29007 RVA: 0x0017249D File Offset: 0x0017069D
+	// Token: 0x060044E5 RID: 17637 RVA: 0x0017AE59 File Offset: 0x00179059
 	private void SetTipSuccess()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "Activity_ArtemisChatFixTips_Perfect", Array.Empty<object>());
 	}
 
-	// Token: 0x04003471 RID: 13425
+	// Token: 0x0400350A RID: 13578
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04003472 RID: 13426
+	// Token: 0x0400350B RID: 13579
 	protected EArtemisTipsType InProgressType;
 
-	// Token: 0x020076BE RID: 30398
+	// Token: 0x02006852 RID: 26706
 	private class EComponents
 	{
-		// Token: 0x0402730C RID: 160524
+		// Token: 0x04022655 RID: 140885
 		public const int Tips = 0;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -10,17 +9,17 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F84 RID: 8068
+// Token: 0x02001446 RID: 5190
 [NullableContext(1)]
 [Nullable(0)]
 public class InfluenceReputationView : UiViewBase
 {
-	// Token: 0x0600FA48 RID: 64072 RVA: 0x003CA07F File Offset: 0x003C827F
+	// Token: 0x0600CE67 RID: 52839 RVA: 0x003D5BBB File Offset: 0x003D3DBB
 	public InfluenceReputationView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FA49 RID: 64073 RVA: 0x003CA0A0 File Offset: 0x003C82A0
+	// Token: 0x0600CE68 RID: 52840 RVA: 0x003D5BDC File Offset: 0x003D3DDC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -71,25 +70,25 @@ public class InfluenceReputationView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FA4A RID: 64074 RVA: 0x003CA344 File Offset: 0x003C8544
+	// Token: 0x0600CE69 RID: 52841 RVA: 0x003D5E80 File Offset: 0x003D4080
 	private void CloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600FA4B RID: 64075 RVA: 0x003CA34D File Offset: 0x003C854D
+	// Token: 0x0600CE6A RID: 52842 RVA: 0x003D5E89 File Offset: 0x003D4089
 	private void SearchClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.InfluenceSearchView, this.CurrentCountryId, null);
 	}
 
-	// Token: 0x0600FA4C RID: 64076 RVA: 0x003CA36A File Offset: 0x003C856A
+	// Token: 0x0600CE6B RID: 52843 RVA: 0x003D5EA6 File Offset: 0x003D40A6
 	private void SwitchClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.InfluenceAreaSelectView, this.CurrentCountryId, null);
 	}
 
-	// Token: 0x0600FA4D RID: 64077 RVA: 0x003CA388 File Offset: 0x003C8588
+	// Token: 0x0600CE6C RID: 52844 RVA: 0x003D5EC4 File Offset: 0x003D40C4
 	private void LeftArrowClick()
 	{
 		UUIItem uuiitem = this.ScrollView.ContentItem.Get();
@@ -114,7 +113,7 @@ public class InfluenceReputationView : UiViewBase
 		this.ScrollView.ScrollToRight(num4);
 	}
 
-	// Token: 0x0600FA4E RID: 64078 RVA: 0x003CA42C File Offset: 0x003C862C
+	// Token: 0x0600CE6D RID: 52845 RVA: 0x003D5F68 File Offset: 0x003D4168
 	private void RightArrowClick()
 	{
 		UUIItem uuiitem = this.ScrollView.ContentItem.Get();
@@ -139,7 +138,7 @@ public class InfluenceReputationView : UiViewBase
 		this.ScrollView.ScrollToLeft(num5);
 	}
 
-	// Token: 0x0600FA4F RID: 64079 RVA: 0x003CA4CC File Offset: 0x003C86CC
+	// Token: 0x0600CE6E RID: 52846 RVA: 0x003D6008 File Offset: 0x003D4208
 	private void DisActiveClick()
 	{
 		this.ShowHideContentDisActiveButton(false);
@@ -150,13 +149,13 @@ public class InfluenceReputationView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FA50 RID: 64080 RVA: 0x003CA519 File Offset: 0x003C8719
+	// Token: 0x0600CE6F RID: 52847 RVA: 0x003D6055 File Offset: 0x003D4255
 	protected override void OnBeforeCreate()
 	{
 		this.CurrentCountryId = (int)this.OpenParam;
 	}
 
-	// Token: 0x0600FA51 RID: 64081 RVA: 0x003CA52C File Offset: 0x003C872C
+	// Token: 0x0600CE70 RID: 52848 RVA: 0x003D6068 File Offset: 0x003D4268
 	protected override void OnStart()
 	{
 		this.ScrollView = new GenericScrollView<InfluenceDisplayItem>(base.GetScrollViewWithScrollbar(1), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<InfluenceDisplayItem>(this.InitItem), null);
@@ -172,7 +171,7 @@ public class InfluenceReputationView : UiViewBase
 		this.RightArrowActive = false;
 	}
 
-	// Token: 0x0600FA52 RID: 64082 RVA: 0x003CA604 File Offset: 0x003C8804
+	// Token: 0x0600CE71 RID: 52849 RVA: 0x003D6140 File Offset: 0x003D4340
 	private ILayoutItem<InfluenceDisplayItem> InitItem(object influenceId, UUIItem uiItem, int index)
 	{
 		InfluenceDisplayItem influenceDisplayItem = new InfluenceDisplayItem(uiItem);
@@ -186,7 +185,7 @@ public class InfluenceReputationView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600FA53 RID: 64083 RVA: 0x003CA65C File Offset: 0x003C885C
+	// Token: 0x0600CE72 RID: 52850 RVA: 0x003D6198 File Offset: 0x003D4398
 	private void ToggleCallBack(EToggleState state, int index)
 	{
 		if (state == EToggleState.ETT_UnChecked)
@@ -214,7 +213,7 @@ public class InfluenceReputationView : UiViewBase
 		this.ShowHideContentDisActiveButton(true);
 	}
 
-	// Token: 0x0600FA54 RID: 64084 RVA: 0x003CA6F4 File Offset: 0x003C88F4
+	// Token: 0x0600CE73 RID: 52851 RVA: 0x003D6230 File Offset: 0x003D4430
 	private void ScrollValueChange(FVector2D progress)
 	{
 		if (!this.IsExpand)
@@ -230,28 +229,28 @@ public class InfluenceReputationView : UiViewBase
 		this.RefreshArrow();
 	}
 
-	// Token: 0x0600FA55 RID: 64085 RVA: 0x003CA73C File Offset: 0x003C893C
+	// Token: 0x0600CE74 RID: 52852 RVA: 0x003D6278 File Offset: 0x003D4478
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshInfluencePanel, new Action<int>(this.RefreshPanel));
 		EventSystem.Instance.Add<int, int>(EEventName.SearchInfluence, new Action<int, int>(this.SearchInfluence));
 	}
 
-	// Token: 0x0600FA56 RID: 64086 RVA: 0x003CA776 File Offset: 0x003C8976
+	// Token: 0x0600CE75 RID: 52853 RVA: 0x003D62B2 File Offset: 0x003D44B2
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshInfluencePanel, new Action<int>(this.RefreshPanel));
 		EventSystem.Instance.Remove(EEventName.SearchInfluence, new Action<int, int>(this.SearchInfluence));
 	}
 
-	// Token: 0x0600FA57 RID: 64087 RVA: 0x003CA7B0 File Offset: 0x003C89B0
+	// Token: 0x0600CE76 RID: 52854 RVA: 0x003D62EC File Offset: 0x003D44EC
 	private void RefreshPanel(int countryId)
 	{
 		this.CurrentCountryId = countryId;
 		this.RefreshView();
 	}
 
-	// Token: 0x0600FA58 RID: 64088 RVA: 0x003CA7BF File Offset: 0x003C89BF
+	// Token: 0x0600CE77 RID: 52855 RVA: 0x003D62FB File Offset: 0x003D44FB
 	private void SearchInfluence(int influenceId, int countryId)
 	{
 		this.CurrentCountryId = countryId;
@@ -259,13 +258,13 @@ public class InfluenceReputationView : UiViewBase
 		this.SelectInfluence(influenceId);
 	}
 
-	// Token: 0x0600FA59 RID: 64089 RVA: 0x003CA7D5 File Offset: 0x003C89D5
+	// Token: 0x0600CE78 RID: 52856 RVA: 0x003D6311 File Offset: 0x003D4511
 	protected override void OnAfterShow()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600FA5A RID: 64090 RVA: 0x003CA7DD File Offset: 0x003C89DD
+	// Token: 0x0600CE79 RID: 52857 RVA: 0x003D6319 File Offset: 0x003D4519
 	protected override void OnBeforeDestroy()
 	{
 		this.ScrollView.ClearChildren();
@@ -274,7 +273,7 @@ public class InfluenceReputationView : UiViewBase
 		this.LeftArrow = null;
 	}
 
-	// Token: 0x0600FA5B RID: 64091 RVA: 0x003CA800 File Offset: 0x003C8A00
+	// Token: 0x0600CE7A RID: 52858 RVA: 0x003D633C File Offset: 0x003D453C
 	private void RefreshView()
 	{
 		Country? countryConfig = InfluenceConfig.Instance.GetCountryConfig(this.CurrentCountryId);
@@ -299,28 +298,28 @@ public class InfluenceReputationView : UiViewBase
 		this.ShowHideContentDisActiveButton(false);
 	}
 
-	// Token: 0x0600FA5C RID: 64092 RVA: 0x003CA894 File Offset: 0x003C8A94
+	// Token: 0x0600CE7B RID: 52859 RVA: 0x003D63D0 File Offset: 0x003D45D0
 	private void SelectInfluence(int influenceId)
 	{
 		int num = Array.IndexOf<int>(this.InfluenceList, influenceId);
 		this.ScrollView.GetScrollItemByKey(num).SetToggleState(EToggleState.ETT_Checked, true);
 	}
 
-	// Token: 0x0600FA5D RID: 64093 RVA: 0x003CA8C8 File Offset: 0x003C8AC8
+	// Token: 0x0600CE7C RID: 52860 RVA: 0x003D6404 File Offset: 0x003D4604
 	private void RefreshScrollView()
 	{
 		this.SelectedIndex = null;
-		this.ScrollView.RefreshByData<int>(this.InfluenceList.ToList<int>(), null);
+		this.ScrollView.RefreshByData<int>(this.InfluenceList, null);
 		this.RefreshArrowDirty = true;
 	}
 
-	// Token: 0x0600FA5E RID: 64094 RVA: 0x003CA907 File Offset: 0x003C8B07
+	// Token: 0x0600CE7D RID: 52861 RVA: 0x003D643E File Offset: 0x003D463E
 	private void RefreshCountryName(string title)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(7), title, Array.Empty<object>());
 	}
 
-	// Token: 0x0600FA5F RID: 64095 RVA: 0x003CA920 File Offset: 0x003C8B20
+	// Token: 0x0600CE7E RID: 52862 RVA: 0x003D6458 File Offset: 0x003D4658
 	private void RefreshUnLock()
 	{
 		int num = 0;
@@ -338,14 +337,14 @@ public class InfluenceReputationView : UiViewBase
 		base.GetText(9).SetText(this.InfluenceList.Length.ToString(), true);
 	}
 
-	// Token: 0x0600FA60 RID: 64096 RVA: 0x003CA9B4 File Offset: 0x003C8BB4
+	// Token: 0x0600CE7F RID: 52863 RVA: 0x003D64EC File Offset: 0x003D46EC
 	private void RefreshSwitchRedDot()
 	{
 		bool uiactive = InfluenceReputationModel.Instance.HasRedDotExcludeCurrentCountry(this.CurrentCountryId);
 		base.GetItem(11).SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600FA61 RID: 64097 RVA: 0x003CA9E0 File Offset: 0x003C8BE0
+	// Token: 0x0600CE80 RID: 52864 RVA: 0x003D6518 File Offset: 0x003D4718
 	private void RefreshArrow()
 	{
 		if (!this.IsExpand || this.SelectedIndex != null)
@@ -376,13 +375,13 @@ public class InfluenceReputationView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FA62 RID: 64098 RVA: 0x003CAA90 File Offset: 0x003C8C90
+	// Token: 0x0600CE81 RID: 52865 RVA: 0x003D65C8 File Offset: 0x003D47C8
 	private void ShowHideContentDisActiveButton(bool bShow)
 	{
 		base.GetButton(10).RootUIComp.Get().SetUIActive(bShow);
 	}
 
-	// Token: 0x0600FA63 RID: 64099 RVA: 0x003CAAB8 File Offset: 0x003C8CB8
+	// Token: 0x0600CE82 RID: 52866 RVA: 0x003D65F0 File Offset: 0x003D47F0
 	private void ScrollTo()
 	{
 		int count = this.ScrollView.GetScrollItemMap().Count;
@@ -396,7 +395,7 @@ public class InfluenceReputationView : UiViewBase
 		this.ScrollView.ScrollToLeft(this.SelectedIndex.Value);
 	}
 
-	// Token: 0x0600FA64 RID: 64100 RVA: 0x003CAB2C File Offset: 0x003C8D2C
+	// Token: 0x0600CE83 RID: 52867 RVA: 0x003D6664 File Offset: 0x003D4864
 	private void LateUpdate(float deltaTime)
 	{
 		if (this.ScrollToDirty)
@@ -412,7 +411,7 @@ public class InfluenceReputationView : UiViewBase
 		}
 	}
 
-	// Token: 0x04007498 RID: 29848
+	// Token: 0x04007579 RID: 30073
 	[Nullable(new byte[]
 	{
 		2,
@@ -420,68 +419,68 @@ public class InfluenceReputationView : UiViewBase
 	})]
 	private GenericScrollView<InfluenceDisplayItem> ScrollView;
 
-	// Token: 0x04007499 RID: 29849
+	// Token: 0x0400757A RID: 30074
 	private int CurrentCountryId;
 
-	// Token: 0x0400749A RID: 29850
+	// Token: 0x0400757B RID: 30075
 	private int? SelectedIndex = new int?(0);
 
-	// Token: 0x0400749B RID: 29851
+	// Token: 0x0400757C RID: 30076
 	private float ScrollValueX;
 
-	// Token: 0x0400749C RID: 29852
+	// Token: 0x0400757D RID: 30077
 	private bool IsExpand;
 
-	// Token: 0x0400749D RID: 29853
+	// Token: 0x0400757E RID: 30078
 	private bool LeftArrowActive;
 
-	// Token: 0x0400749E RID: 29854
+	// Token: 0x0400757F RID: 30079
 	private bool RightArrowActive;
 
-	// Token: 0x0400749F RID: 29855
+	// Token: 0x04007580 RID: 30080
 	[Nullable(2)]
 	private UUIItem LeftArrow;
 
-	// Token: 0x040074A0 RID: 29856
+	// Token: 0x04007581 RID: 30081
 	[Nullable(2)]
 	private UUIItem RightArrow;
 
-	// Token: 0x040074A1 RID: 29857
+	// Token: 0x04007582 RID: 30082
 	private int[] InfluenceList = new int[0];
 
-	// Token: 0x040074A2 RID: 29858
+	// Token: 0x04007583 RID: 30083
 	private bool ScrollToDirty;
 
-	// Token: 0x040074A3 RID: 29859
+	// Token: 0x04007584 RID: 30084
 	private bool RefreshArrowDirty;
 
-	// Token: 0x0200856F RID: 34159
+	// Token: 0x020076F4 RID: 30452
 	[NullableContext(0)]
 	private enum EInfluenceReputationView
 	{
-		// Token: 0x0402B71B RID: 177947
+		// Token: 0x04026A3E RID: 158270
 		CloseButton,
-		// Token: 0x0402B71C RID: 177948
+		// Token: 0x04026A3F RID: 158271
 		InfluenceScrollView,
-		// Token: 0x0402B71D RID: 177949
+		// Token: 0x04026A40 RID: 158272
 		LeftArrow,
-		// Token: 0x0402B71E RID: 177950
+		// Token: 0x04026A41 RID: 158273
 		RightArrow,
-		// Token: 0x0402B71F RID: 177951
+		// Token: 0x04026A42 RID: 158274
 		InfluenceSwitch,
-		// Token: 0x0402B720 RID: 177952
+		// Token: 0x04026A43 RID: 158275
 		InfluenceSearch,
-		// Token: 0x0402B721 RID: 177953
+		// Token: 0x04026A44 RID: 158276
 		CharacterTexture,
-		// Token: 0x0402B722 RID: 177954
+		// Token: 0x04026A45 RID: 158277
 		CountryName,
-		// Token: 0x0402B723 RID: 177955
+		// Token: 0x04026A46 RID: 158278
 		InfluenceUnLockText,
-		// Token: 0x0402B724 RID: 177956
+		// Token: 0x04026A47 RID: 158279
 		InfluenceAllText,
-		// Token: 0x0402B725 RID: 177957
+		// Token: 0x04026A48 RID: 158280
 		ContentDisActiveButton,
-		// Token: 0x0402B726 RID: 177958
+		// Token: 0x04026A49 RID: 158281
 		SwitchRedDot
 	}
 }

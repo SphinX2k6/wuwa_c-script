@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002778 RID: 10104
+	// Token: 0x02002A4A RID: 10826
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FadeOutScreen : ActionParams
 	{
-		// Token: 0x0600E0FC RID: 57596 RVA: 0x00213D63 File Offset: 0x00211F63
-		[NullableContext(1)]
+		// Token: 0x0600EF1A RID: 61210 RVA: 0x00230AF7 File Offset: 0x0022ECF7
+		[NullableContext(0)]
 		public static FadeOutScreen Create(IFadeOutScreen? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043CE RID: 17358
-		// (get) Token: 0x0600E0FD RID: 57597 RVA: 0x00213D82 File Offset: 0x00211F82
+		// Token: 0x17004734 RID: 18228
+		// (get) Token: 0x0600EF1B RID: 61211 RVA: 0x00230B16 File Offset: 0x0022ED16
 		public virtual IEaseData Ease
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043CF RID: 17359
-		// (get) Token: 0x0600E0FE RID: 57598 RVA: 0x00213DB8 File Offset: 0x00211FB8
+		// Token: 0x17004735 RID: 18229
+		// (get) Token: 0x0600EF1C RID: 61212 RVA: 0x00230B4C File Offset: 0x0022ED4C
 		public virtual bool? OnlyLowMemoryDeviceExecute
 		{
 			get
@@ -53,13 +53,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C94 RID: 31892
+		// Token: 0x0400834A RID: 33610
 		private IFadeOutScreen Instance;
 
-		// Token: 0x04007C95 RID: 31893
+		// Token: 0x0400834B RID: 33611
 		private IEaseData _EaseCache;
 
-		// Token: 0x04007C96 RID: 31894
+		// Token: 0x0400834C RID: 33612
 		private bool _EaseInited;
 	}
 }

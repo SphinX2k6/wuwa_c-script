@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002066 RID: 8294
+	// Token: 0x0200068C RID: 1676
 	public sealed class FLGUIDrawableEvent_Vector3_DynamicDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F4C4 RID: 128196 RVA: 0x002E7984 File Offset: 0x002E5B84
+		// Token: 0x060090DA RID: 37082 RVA: 0x000D9CFA File Offset: 0x000D7EFA
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIDrawableEvent_Vector3_DynamicDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F4C5 RID: 128197 RVA: 0x002E7990 File Offset: 0x002E5B90
+		// Token: 0x060090DB RID: 37083 RVA: 0x000D9D06 File Offset: 0x000D7F06
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIDrawableEvent_Vector3_DynamicDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLGUIDrawableEvent_Vector3_DynamicDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F4C6 RID: 128198 RVA: 0x002E79B3 File Offset: 0x002E5BB3
+		// Token: 0x060090DC RID: 37084 RVA: 0x000D9D29 File Offset: 0x000D7F29
 		public FLGUIDrawableEvent_Vector3_DynamicDelegate()
 		{
 		}
 
-		// Token: 0x0601F4C7 RID: 128199 RVA: 0x002E79BB File Offset: 0x002E5BBB
+		// Token: 0x060090DD RID: 37085 RVA: 0x000D9D31 File Offset: 0x000D7F31
 		[NullableContext(2)]
 		public FLGUIDrawableEvent_Vector3_DynamicDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F4C8 RID: 128200 RVA: 0x002E79C5 File Offset: 0x002E5BC5
+		// Token: 0x060090DE RID: 37086 RVA: 0x000D9D3B File Offset: 0x000D7F3B
 		public FLGUIDrawableEvent_Vector3_DynamicDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F4C9 RID: 128201 RVA: 0x002E79D0 File Offset: 0x002E5BD0
+		// Token: 0x060090DF RID: 37087 RVA: 0x000D9D46 File Offset: 0x000D7F46
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FVector>) ?? ((Action<FVector>)Delegate.CreateDelegate(typeof(Action<FVector>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F4CA RID: 128202 RVA: 0x002E7A02 File Offset: 0x002E5C02
+		// Token: 0x060090E0 RID: 37088 RVA: 0x000D9D78 File Offset: 0x000D7F78
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FVector> Callback)
 		{
 			if (FLGUIDrawableEvent_Vector3_DynamicDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIDrawableEvent_Vector3_DynamicDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F4CB RID: 128203 RVA: 0x002E7A3C File Offset: 0x002E5C3C
+		// Token: 0x060090E1 RID: 37089 RVA: 0x000D9DB4 File Offset: 0x000D7FB4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(FVector value)
 		{
 			FLGUIDrawableEvent_Vector3_DynamicDelegate.__FLGUIDrawableEvent_Vector3_DynamicDelegate_DelegateParams* ptr = stackalloc FLGUIDrawableEvent_Vector3_DynamicDelegate.__FLGUIDrawableEvent_Vector3_DynamicDelegate_DelegateParams[(UIntPtr)27] + 15L / (long)sizeof(FLGUIDrawableEvent_Vector3_DynamicDelegate.__FLGUIDrawableEvent_Vector3_DynamicDelegate_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F4CC RID: 128204 RVA: 0x002E7A7C File Offset: 0x002E5C7C
+		// Token: 0x060090E2 RID: 37090 RVA: 0x000D9DF4 File Offset: 0x000D7FF4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FVector> action = target as Action<FVector>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FLGUIDrawableEvent_Vector3_DynamicDelegate.__FLGUIDrawableEvent_Vector3_DynamicDelegate_DelegateParams*)__Parameters)->value);
 		}
 
-		// Token: 0x04010EC3 RID: 69315
+		// Token: 0x04003F3D RID: 16189
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010EC4 RID: 69316
+		// Token: 0x04003F3E RID: 16190
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIDrawableEvent_Vector3_DynamicDelegate__DelegateSignature";
 
-		// Token: 0x04010EC5 RID: 69317
+		// Token: 0x04003F3F RID: 16191
 		private static int RegisterId;
 
-		// Token: 0x02003468 RID: 13416
+		// Token: 0x02000EAB RID: 3755
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
-		protected ref struct __FLGUIDrawableEvent_Vector3_DynamicDelegate_DelegateParams
+		private ref struct __FLGUIDrawableEvent_Vector3_DynamicDelegate_DelegateParams
 		{
-			// Token: 0x0401744B RID: 95307
+			// Token: 0x0400625A RID: 25178
 			[FieldOffset(0)]
 			public FVector value;
 		}
 
-		// Token: 0x02003469 RID: 13417
+		// Token: 0x02000EAC RID: 3756
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401744C RID: 95308
+			// Token: 0x0400625B RID: 25179
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

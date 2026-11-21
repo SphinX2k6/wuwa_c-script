@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Map.MapDefine;
 using CSharpScript.Game.Module.WorldMap;
 
-// Token: 0x02002D79 RID: 11641
+// Token: 0x020022D3 RID: 8915
 public static class WorldMapSecondaryUiDefine
 {
-	// Token: 0x060187A1 RID: 100257 RVA: 0x0063A8B0 File Offset: 0x00638AB0
+	// Token: 0x06016043 RID: 90179 RVA: 0x006608C8 File Offset: 0x0065EAC8
 	// Note: this type is marked as 'beforefieldinit'.
 	static WorldMapSecondaryUiDefine()
 	{
@@ -46,7 +46,7 @@ public static class WorldMapSecondaryUiDefine
 		WorldMapSecondaryUiDefine.MarkPanelTypeMap = dictionary;
 	}
 
-	// Token: 0x0400B56E RID: 46446
+	// Token: 0x0400B8E3 RID: 47331
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<EMarkType, ESecondaryPanel> MarkPanelTypeMap;

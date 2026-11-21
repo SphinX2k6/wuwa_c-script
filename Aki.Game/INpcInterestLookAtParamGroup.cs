@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020031EF RID: 12783
+// Token: 0x0200275E RID: 10078
 [NullableContext(1)]
 public interface INpcInterestLookAtParamGroup
 {
-	// Token: 0x17002625 RID: 9765
-	// (get) Token: 0x0601B949 RID: 112969
-	// (set) Token: 0x0601B94A RID: 112970
+	// Token: 0x17002866 RID: 10342
+	// (get) Token: 0x060194CE RID: 103630
+	// (set) Token: 0x060194CF RID: 103631
 	string Key { get; set; }
 
-	// Token: 0x17002626 RID: 9766
-	// (get) Token: 0x0601B94B RID: 112971
-	// (set) Token: 0x0601B94C RID: 112972
+	// Token: 0x17002867 RID: 10343
+	// (get) Token: 0x060194D0 RID: 103632
+	// (set) Token: 0x060194D1 RID: 103633
 	IList<int> PbDataIds { get; set; }
 
-	// Token: 0x17002627 RID: 9767
-	// (get) Token: 0x0601B94D RID: 112973
-	// (set) Token: 0x0601B94E RID: 112974
+	// Token: 0x17002868 RID: 10344
+	// (get) Token: 0x060194D2 RID: 103634
+	// (set) Token: 0x060194D3 RID: 103635
 	IList<INpcInterestLookAtParam> Params { get; set; }
 }

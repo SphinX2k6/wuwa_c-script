@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002329 RID: 9001
+	// Token: 0x0200259A RID: 9626
 	public static class EExecClientBattleActionTypeExtensions
 	{
-		// Token: 0x0600C4B7 RID: 50359 RVA: 0x001CB64C File Offset: 0x001C984C
+		// Token: 0x0600D08F RID: 53391 RVA: 0x001E36C4 File Offset: 0x001E18C4
 		public static string ToEnumString(this EExecClientBattleActionType value)
 		{
 			string result;
@@ -41,6 +41,9 @@ namespace Aki.TDConfigMgr.Action
 			case EExecClientBattleActionType.AssistCharacterStopMoveToPoint:
 				result = "AssistCharacterStopMoveToPoint";
 				break;
+			case EExecClientBattleActionType.MechExecute:
+				result = "MechExecute";
+				break;
 			default:
 				result = value.ToString();
 				break;
@@ -48,7 +51,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C4B8 RID: 50360 RVA: 0x001CB6E8 File Offset: 0x001C98E8
+		// Token: 0x0600D090 RID: 53392 RVA: 0x001E376C File Offset: 0x001E196C
 		public static EExecClientBattleActionType FromString(string name)
 		{
 			EExecClientBattleActionType result;
@@ -59,7 +62,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C4B9 RID: 50361 RVA: 0x001CB714 File Offset: 0x001C9914
+		// Token: 0x0600D091 RID: 53393 RVA: 0x001E3798 File Offset: 0x001E1998
 		public static bool TryFromString(string name, out EExecClientBattleActionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -70,107 +73,115 @@ namespace Aki.TDConfigMgr.Action
 			if (name != null)
 			{
 				int length = name.Length;
-				switch (length)
+				if (length != 11)
 				{
-				case 17:
-					if (name == "TriggerMotorSkill")
+					switch (length)
 					{
-						value = EExecClientBattleActionType.TriggerMotorSkill;
-						return true;
-					}
-					break;
-				case 18:
-				{
-					char c = name[0];
-					if (c != 'F')
-					{
-						if (c != 'G')
+					case 17:
+						if (name == "TriggerMotorSkill")
 						{
-							if (c == 'M')
-							{
-								if (name == "MonsterNpcInteract")
-								{
-									value = EExecClientBattleActionType.MonsterNpcInteract;
-									return true;
-								}
-							}
-						}
-						else if (name == "GroupAiCommunicate")
-						{
-							value = EExecClientBattleActionType.GroupAiCommunicate;
+							value = EExecClientBattleActionType.TriggerMotorSkill;
 							return true;
 						}
-					}
-					else if (name == "FollowShooterSkill")
-					{
-						value = EExecClientBattleActionType.FollowShooterSkill;
-						return true;
-					}
-					break;
-				}
-				case 19:
-				case 20:
-				case 22:
-				case 23:
-				case 24:
-					break;
-				case 21:
-					if (name == "TriggerHookPointSkill")
-					{
-						value = EExecClientBattleActionType.TriggerHookPointSkill;
-						return true;
-					}
-					break;
-				case 25:
-					if (name == "ChangeAnimalEmotionBubble")
-					{
-						value = EExecClientBattleActionType.ChangeAnimalEmotionBubble;
-						return true;
-					}
-					break;
-				case 26:
-					if (name == "AssistCharacterMoveToPoint")
-					{
-						value = EExecClientBattleActionType.AssistCharacterMoveToPoint;
-						return true;
-					}
-					break;
-				case 27:
-					if (name == "RoboSoldierSpecialHookSkill")
-					{
-						value = EExecClientBattleActionType.RoboSoldierSpecialHookSkill;
-						return true;
-					}
-					break;
-				default:
-					if (length == 30)
+						break;
+					case 18:
 					{
 						char c = name[0];
-						if (c != 'A')
+						if (c != 'F')
 						{
-							if (c == 'S')
+							if (c != 'G')
 							{
-								if (name == "SendTagEventToControlCharacter")
+								if (c == 'M')
 								{
-									value = EExecClientBattleActionType.SendTagEventToControlCharacter;
-									return true;
+									if (name == "MonsterNpcInteract")
+									{
+										value = EExecClientBattleActionType.MonsterNpcInteract;
+										return true;
+									}
 								}
 							}
+							else if (name == "GroupAiCommunicate")
+							{
+								value = EExecClientBattleActionType.GroupAiCommunicate;
+								return true;
+							}
 						}
-						else if (name == "AssistCharacterStopMoveToPoint")
+						else if (name == "FollowShooterSkill")
 						{
-							value = EExecClientBattleActionType.AssistCharacterStopMoveToPoint;
+							value = EExecClientBattleActionType.FollowShooterSkill;
 							return true;
 						}
+						break;
 					}
-					break;
+					case 19:
+					case 20:
+					case 22:
+					case 23:
+					case 24:
+						break;
+					case 21:
+						if (name == "TriggerHookPointSkill")
+						{
+							value = EExecClientBattleActionType.TriggerHookPointSkill;
+							return true;
+						}
+						break;
+					case 25:
+						if (name == "ChangeAnimalEmotionBubble")
+						{
+							value = EExecClientBattleActionType.ChangeAnimalEmotionBubble;
+							return true;
+						}
+						break;
+					case 26:
+						if (name == "AssistCharacterMoveToPoint")
+						{
+							value = EExecClientBattleActionType.AssistCharacterMoveToPoint;
+							return true;
+						}
+						break;
+					case 27:
+						if (name == "RoboSoldierSpecialHookSkill")
+						{
+							value = EExecClientBattleActionType.RoboSoldierSpecialHookSkill;
+							return true;
+						}
+						break;
+					default:
+						if (length == 30)
+						{
+							char c = name[0];
+							if (c != 'A')
+							{
+								if (c == 'S')
+								{
+									if (name == "SendTagEventToControlCharacter")
+									{
+										value = EExecClientBattleActionType.SendTagEventToControlCharacter;
+										return true;
+									}
+								}
+							}
+							else if (name == "AssistCharacterStopMoveToPoint")
+							{
+								value = EExecClientBattleActionType.AssistCharacterStopMoveToPoint;
+								return true;
+							}
+						}
+						break;
+					}
+				}
+				else if (name == "MechExecute")
+				{
+					value = EExecClientBattleActionType.MechExecute;
+					return true;
 				}
 			}
 			value = EExecClientBattleActionType.SendTagEventToControlCharacter;
 			return false;
 		}
 
-		// Token: 0x0600C4BA RID: 50362 RVA: 0x001CB88C File Offset: 0x001C9A8C
+		// Token: 0x0600D092 RID: 53394 RVA: 0x001E3934 File Offset: 0x001E1B34
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -184,11 +195,12 @@ namespace Aki.TDConfigMgr.Action
 				"MonsterNpcInteract",
 				"RoboSoldierSpecialHookSkill",
 				"AssistCharacterMoveToPoint",
-				"AssistCharacterStopMoveToPoint"
+				"AssistCharacterStopMoveToPoint",
+				"MechExecute"
 			};
 		}
 
-		// Token: 0x0600C4BB RID: 50363 RVA: 0x001CB8F1 File Offset: 0x001C9AF1
+		// Token: 0x0600D093 RID: 53395 RVA: 0x001E39A2 File Offset: 0x001E1BA2
 		public static EExecClientBattleActionType[] GetValues()
 		{
 			return new EExecClientBattleActionType[]
@@ -202,11 +214,12 @@ namespace Aki.TDConfigMgr.Action
 				EExecClientBattleActionType.MonsterNpcInteract,
 				EExecClientBattleActionType.RoboSoldierSpecialHookSkill,
 				EExecClientBattleActionType.AssistCharacterMoveToPoint,
-				EExecClientBattleActionType.AssistCharacterStopMoveToPoint
+				EExecClientBattleActionType.AssistCharacterStopMoveToPoint,
+				EExecClientBattleActionType.MechExecute
 			};
 		}
 
-		// Token: 0x0600C4BC RID: 50364 RVA: 0x001CB908 File Offset: 0x001C9B08
+		// Token: 0x0600D094 RID: 53396 RVA: 0x001E39B8 File Offset: 0x001E1BB8
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -220,7 +233,8 @@ namespace Aki.TDConfigMgr.Action
 				"MonsterNpcInteract",
 				"RoboSoldierSpecialHookSkill",
 				"AssistCharacterMoveToPoint",
-				"AssistCharacterStopMoveToPoint"
+				"AssistCharacterStopMoveToPoint",
+				"MechExecute"
 			};
 		}
 	}

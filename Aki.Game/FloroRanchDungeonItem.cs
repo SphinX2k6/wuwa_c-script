@@ -6,7 +6,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001B8C RID: 7052
+// Token: 0x0200104B RID: 4171
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class FloroRanchDungeonItem : GridProxyAbstract<FloroRanchDungeonData>
 {
-	// Token: 0x0600D1F2 RID: 53746 RVA: 0x003023EC File Offset: 0x003005EC
+	// Token: 0x0600A603 RID: 42499 RVA: 0x0030D4C4 File Offset: 0x0030B6C4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -54,25 +54,25 @@ public class FloroRanchDungeonItem : GridProxyAbstract<FloroRanchDungeonData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D1F3 RID: 53747 RVA: 0x003025BE File Offset: 0x003007BE
+	// Token: 0x0600A604 RID: 42500 RVA: 0x0030D696 File Offset: 0x0030B896
 	protected override void OnStart()
 	{
 		this.SubDungeonLayout = new GenericLayout<FloroRanchSubDungeonItem, FloroRanchSubDungeonData>(base.GetHorizontalLayout(2), new Func<FloroRanchSubDungeonItem>(this.CreateSubDungeonItem), null, false, true);
 	}
 
-	// Token: 0x0600D1F4 RID: 53748 RVA: 0x003025E1 File Offset: 0x003007E1
+	// Token: 0x0600A605 RID: 42501 RVA: 0x0030D6B9 File Offset: 0x0030B8B9
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
 	}
 
-	// Token: 0x0600D1F5 RID: 53749 RVA: 0x003025FF File Offset: 0x003007FF
+	// Token: 0x0600A606 RID: 42502 RVA: 0x0030D6D7 File Offset: 0x0030B8D7
 	public override void Refresh(FloroRanchDungeonData data, bool isSelected, int gridIndex)
 	{
 		this.RefreshItem(data);
 	}
 
-	// Token: 0x0600D1F6 RID: 53750 RVA: 0x00302608 File Offset: 0x00300808
+	// Token: 0x0600A607 RID: 42503 RVA: 0x0030D6E0 File Offset: 0x0030B8E0
 	private void RefreshItem(FloroRanchDungeonData data)
 	{
 		this.Data = data;
@@ -135,7 +135,7 @@ public class FloroRanchDungeonItem : GridProxyAbstract<FloroRanchDungeonData>
 		item.SetUIActive(data.HasRedDot);
 	}
 
-	// Token: 0x0600D1F7 RID: 53751 RVA: 0x003027BA File Offset: 0x003009BA
+	// Token: 0x0600A608 RID: 42504 RVA: 0x0030D892 File Offset: 0x0030BA92
 	private void UpdateUnlock()
 	{
 		if (this.Data.IsUnLock)
@@ -144,7 +144,7 @@ public class FloroRanchDungeonItem : GridProxyAbstract<FloroRanchDungeonData>
 		}
 	}
 
-	// Token: 0x0600D1F8 RID: 53752 RVA: 0x003027D5 File Offset: 0x003009D5
+	// Token: 0x0600A609 RID: 42505 RVA: 0x0030D8AD File Offset: 0x0030BAAD
 	private void AddTimer()
 	{
 		this.RemoveTimer();
@@ -154,7 +154,7 @@ public class FloroRanchDungeonItem : GridProxyAbstract<FloroRanchDungeonData>
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x0600D1F9 RID: 53753 RVA: 0x00302806 File Offset: 0x00300A06
+	// Token: 0x0600A60A RID: 42506 RVA: 0x0030D8DE File Offset: 0x0030BADE
 	private void RemoveTimer()
 	{
 		if (this.TimerHandle != null)
@@ -164,19 +164,19 @@ public class FloroRanchDungeonItem : GridProxyAbstract<FloroRanchDungeonData>
 		}
 	}
 
-	// Token: 0x0600D1FA RID: 53754 RVA: 0x00302828 File Offset: 0x00300A28
+	// Token: 0x0600A60B RID: 42507 RVA: 0x0030D900 File Offset: 0x0030BB00
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
 	}
 
-	// Token: 0x0600D1FB RID: 53755 RVA: 0x00302846 File Offset: 0x00300A46
+	// Token: 0x0600A60C RID: 42508 RVA: 0x0030D91E File Offset: 0x0030BB1E
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveTimer();
 	}
 
-	// Token: 0x0600D1FC RID: 53756 RVA: 0x00302850 File Offset: 0x00300A50
+	// Token: 0x0600A60D RID: 42509 RVA: 0x0030D928 File Offset: 0x0030BB28
 	private void OnRefreshRedDot(int activityId)
 	{
 		FloroRanchActivityData activityData = FloroRanchModel.Instance.GetActivityData(EFloroRanchActivityDataType.Normal, true);
@@ -192,7 +192,7 @@ public class FloroRanchDungeonItem : GridProxyAbstract<FloroRanchDungeonData>
 		item.SetUIActive(this.Data.HasRedDot);
 	}
 
-	// Token: 0x0600D1FD RID: 53757 RVA: 0x00302894 File Offset: 0x00300A94
+	// Token: 0x0600A60E RID: 42510 RVA: 0x0030D96C File Offset: 0x0030BB6C
 	private void OnClickToggle(EToggleState _)
 	{
 		if (this.OnToggleCallBack != null)
@@ -201,7 +201,7 @@ public class FloroRanchDungeonItem : GridProxyAbstract<FloroRanchDungeonData>
 		}
 	}
 
-	// Token: 0x0600D1FE RID: 53758 RVA: 0x003028BC File Offset: 0x00300ABC
+	// Token: 0x0600A60F RID: 42511 RVA: 0x0030D994 File Offset: 0x0030BB94
 	public void SetToggleCallBack(Action<FloroRanchDungeonData> callBack)
 	{
 		this.OnToggleCallBack = delegate(FloroRanchDungeonData dungeonData, FloroRanchSubDungeonData subDungeonData)
@@ -210,41 +210,41 @@ public class FloroRanchDungeonItem : GridProxyAbstract<FloroRanchDungeonData>
 		};
 	}
 
-	// Token: 0x0600D1FF RID: 53759 RVA: 0x003028E8 File Offset: 0x00300AE8
+	// Token: 0x0600A610 RID: 42512 RVA: 0x0030D9C0 File Offset: 0x0030BBC0
 	private FloroRanchSubDungeonItem CreateSubDungeonItem()
 	{
 		return new FloroRanchSubDungeonItem();
 	}
 
-	// Token: 0x0600D200 RID: 53760 RVA: 0x003028EF File Offset: 0x00300AEF
+	// Token: 0x0600A611 RID: 42513 RVA: 0x0030D9C7 File Offset: 0x0030BBC7
 	public override object GetKey(FloroRanchDungeonData data, int displayIndex)
 	{
 		return data.Id;
 	}
 
-	// Token: 0x0600D201 RID: 53761 RVA: 0x003028FC File Offset: 0x00300AFC
+	// Token: 0x0600A612 RID: 42514 RVA: 0x0030D9D4 File Offset: 0x0030BBD4
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x0600D202 RID: 53762 RVA: 0x0030290E File Offset: 0x00300B0E
+	// Token: 0x0600A613 RID: 42515 RVA: 0x0030D9E6 File Offset: 0x0030BBE6
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04006042 RID: 24642
+	// Token: 0x04006111 RID: 24849
 	private FloroRanchDungeonData Data;
 
-	// Token: 0x04006043 RID: 24643
+	// Token: 0x04006112 RID: 24850
 	private GenericLayout<FloroRanchSubDungeonItem, FloroRanchSubDungeonData> SubDungeonLayout;
 
-	// Token: 0x04006044 RID: 24644
+	// Token: 0x04006113 RID: 24851
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04006045 RID: 24645
+	// Token: 0x04006114 RID: 24852
 	[Nullable(new byte[]
 	{
 		2,
@@ -253,41 +253,41 @@ public class FloroRanchDungeonItem : GridProxyAbstract<FloroRanchDungeonData>
 	})]
 	protected Action<FloroRanchDungeonData, FloroRanchSubDungeonData> OnToggleCallBack;
 
-	// Token: 0x02008110 RID: 33040
+	// Token: 0x0200729E RID: 29342
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A1F9 RID: 172537
+		// Token: 0x0402552D RID: 152877
 		public const int ToggleRoot = 0;
 
-		// Token: 0x0402A1FA RID: 172538
+		// Token: 0x0402552E RID: 152878
 		public const int TextName = 1;
 
-		// Token: 0x0402A1FB RID: 172539
+		// Token: 0x0402552F RID: 152879
 		public const int LayoutSubIns = 2;
 
-		// Token: 0x0402A1FC RID: 172540
+		// Token: 0x04025530 RID: 152880
 		public const int ItemSubIns = 3;
 
-		// Token: 0x0402A1FD RID: 172541
+		// Token: 0x04025531 RID: 152881
 		public const int TextLock = 4;
 
-		// Token: 0x0402A1FE RID: 172542
+		// Token: 0x04025532 RID: 152882
 		public const int SpriteDifficultyIcon = 5;
 
-		// Token: 0x0402A1FF RID: 172543
+		// Token: 0x04025533 RID: 152883
 		public const int SpriteRomeNum = 6;
 
-		// Token: 0x0402A200 RID: 172544
+		// Token: 0x04025534 RID: 152884
 		public const int SpriteLock = 7;
 
-		// Token: 0x0402A201 RID: 172545
+		// Token: 0x04025535 RID: 152885
 		public const int SpriteDifficultyLock = 8;
 
-		// Token: 0x0402A202 RID: 172546
+		// Token: 0x04025536 RID: 152886
 		public const int ItemRedDot = 9;
 
-		// Token: 0x0402A203 RID: 172547
+		// Token: 0x04025537 RID: 152887
 		public const int SpriteTranRomeNum = 10;
 	}
 }

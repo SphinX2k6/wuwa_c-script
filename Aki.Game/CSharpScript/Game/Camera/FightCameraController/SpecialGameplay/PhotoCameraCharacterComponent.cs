@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072F8 RID: 29432
+	// Token: 0x0200647B RID: 25723
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RegisterPhotoCameraComponent(EPhotoCameraComponent.Character)]
 	public class PhotoCameraCharacterComponent : PhotoCameraComponentBase
 	{
-		// Token: 0x06048380 RID: 295808 RVA: 0x0128D064 File Offset: 0x0128B264
+		// Token: 0x0603E7CC RID: 255948 RVA: 0x0122FA18 File Offset: 0x0122DC18
 		protected override void OnInit()
 		{
 			TsBaseCharacter character = this.Host.Character;
@@ -31,14 +31,14 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048381 RID: 295809 RVA: 0x0128D0F0 File Offset: 0x0128B2F0
+		// Token: 0x0603E7CD RID: 255949 RVA: 0x0122FAA4 File Offset: 0x0122DCA4
 		protected override void OnModeChangeStart(PhotoCameraType? prev, PhotoCameraType next)
 		{
 			this.RefreshModeTag();
 			this.ApplyModeCollision(this.Host.Character, new PhotoCameraType?(next));
 		}
 
-		// Token: 0x06048382 RID: 295810 RVA: 0x0128D110 File Offset: 0x0128B310
+		// Token: 0x0603E7CE RID: 255950 RVA: 0x0122FAC4 File Offset: 0x0122DCC4
 		protected override void OnModeChangeFinish(PhotoCameraType? prev, PhotoCameraType next)
 		{
 			this.StopAutoMoving();
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.UpdatePlayerDither(character, currentConfig);
 		}
 
-		// Token: 0x06048383 RID: 295811 RVA: 0x0128D18C File Offset: 0x0128B38C
+		// Token: 0x0603E7CF RID: 255951 RVA: 0x0122FB40 File Offset: 0x0122DD40
 		private void StopAutoMoving()
 		{
 			IPhotoCameraHost host = this.Host;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			component.InterruptAutoMoving("拍照切换模式", true);
 		}
 
-		// Token: 0x06048384 RID: 295812 RVA: 0x0128D1DC File Offset: 0x0128B3DC
+		// Token: 0x0603E7D0 RID: 255952 RVA: 0x0122FB90 File Offset: 0x0122DD90
 		[NullableContext(2)]
 		protected override void OnCharacterChanged(TsBaseCharacter character)
 		{
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048385 RID: 295813 RVA: 0x0128D235 File Offset: 0x0128B435
+		// Token: 0x0603E7D1 RID: 255953 RVA: 0x0122FBE9 File Offset: 0x0122DDE9
 		protected override void OnActivate()
 		{
 			this.SetFightCameraDitherEnable(false);
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			character.SetDitherEffect(1f, ECharacterDitherType.Fight);
 		}
 
-		// Token: 0x06048386 RID: 295814 RVA: 0x0128D259 File Offset: 0x0128B459
+		// Token: 0x0603E7D2 RID: 255954 RVA: 0x0122FC0D File Offset: 0x0122DE0D
 		protected override void OnDeactivate()
 		{
 			this.RestoreModeTag();
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.SetFightCameraDitherEnable(true);
 		}
 
-		// Token: 0x06048387 RID: 295815 RVA: 0x0128D27A File Offset: 0x0128B47A
+		// Token: 0x0603E7D3 RID: 255955 RVA: 0x0122FC2E File Offset: 0x0122DE2E
 		private void SetFightCameraDitherEnable(bool enable)
 		{
 			CameraModelInstance cameraModel = this.Host.CameraModel;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			logicComponent.SetIsDitherEffectEnable(enable);
 		}
 
-		// Token: 0x06048388 RID: 295816 RVA: 0x0128D2A8 File Offset: 0x0128B4A8
+		// Token: 0x0603E7D4 RID: 255956 RVA: 0x0122FC5C File Offset: 0x0122DE5C
 		protected override void OnTick(float deltaTime)
 		{
 			TsBaseCharacter character = this.Host.Character;
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.UpdateNpcDither(currentConfig);
 		}
 
-		// Token: 0x06048389 RID: 295817 RVA: 0x0128D328 File Offset: 0x0128B528
+		// Token: 0x0603E7D5 RID: 255957 RVA: 0x0122FCDC File Offset: 0x0122DEDC
 		private void UpdatePlayerDither(TsBaseCharacter character, BP_PhotoCameraConfig_C config)
 		{
 			Vector playerLocation = this.PlayerLocation;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.ApplyDither(character, dither);
 		}
 
-		// Token: 0x0604838A RID: 295818 RVA: 0x0128D38E File Offset: 0x0128B58E
+		// Token: 0x0603E7D6 RID: 255958 RVA: 0x0122FD42 File Offset: 0x0122DF42
 		protected override void OnDestroy()
 		{
 			this.RestoreDither();
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x0604838B RID: 295819 RVA: 0x0128D3B8 File Offset: 0x0128B5B8
+		// Token: 0x0603E7D7 RID: 255959 RVA: 0x0122FD6C File Offset: 0x0122DF6C
 		private float ComputePlayerDither(BP_PhotoCameraConfig_C config, TsBaseCharacter character, float distance, float cameraPitch, float fov)
 		{
 			SPhotoCameraMoveConfig moveConfig = config.MoveConfig;
@@ -222,14 +222,14 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return num;
 		}
 
-		// Token: 0x0604838C RID: 295820 RVA: 0x0128D53C File Offset: 0x0128B73C
+		// Token: 0x0603E7D8 RID: 255960 RVA: 0x0122FEF0 File Offset: 0x0122E0F0
 		private void ApplyDither(TsBaseCharacter character, float dither)
 		{
 			this.DitheredCharacter = character;
 			character.SetDitherEffect(dither, ECharacterDitherType.Fight);
 		}
 
-		// Token: 0x0604838D RID: 295821 RVA: 0x0128D550 File Offset: 0x0128B750
+		// Token: 0x0603E7D9 RID: 255961 RVA: 0x0122FF04 File Offset: 0x0122E104
 		private void RestoreDither()
 		{
 			TsBaseCharacter ditheredCharacter = this.DitheredCharacter;
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.DitheredCharacter = null;
 		}
 
-		// Token: 0x0604838E RID: 295822 RVA: 0x0128D584 File Offset: 0x0128B784
+		// Token: 0x0603E7DA RID: 255962 RVA: 0x0122FF38 File Offset: 0x0122E138
 		private void UpdateNpcDither(BP_PhotoCameraConfig_C config)
 		{
 			if (!(config.Type == PhotoCameraType.Normal) && !(config.Type == PhotoCameraType.Drone))
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x0604838F RID: 295823 RVA: 0x0128D8CC File Offset: 0x0128BACC
+		// Token: 0x0603E7DB RID: 255963 RVA: 0x01230280 File Offset: 0x0122E480
 		private void UpdateDitheredNpcDistance(UKuroHitResult hitResult, Vector cameraLocation)
 		{
 			int hitCount = hitResult.GetHitCount();
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048390 RID: 295824 RVA: 0x0128D96C File Offset: 0x0128BB6C
+		// Token: 0x0603E7DC RID: 255964 RVA: 0x01230320 File Offset: 0x0122E520
 		private float GetNpcDitherValue(float distance, float startHideDistance, float completeHideDistance)
 		{
 			if (distance >= startHideDistance)
@@ -353,7 +353,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return MathUtils.Instance.RangeClamp(distance, startHideDistance, completeHideDistance, 0.3f, 0.01f);
 		}
 
-		// Token: 0x06048391 RID: 295825 RVA: 0x0128D990 File Offset: 0x0128BB90
+		// Token: 0x0603E7DD RID: 255965 RVA: 0x01230344 File Offset: 0x0122E544
 		private bool IsCharacterIgnoreNpcDither(TsBaseCharacter character)
 		{
 			Entity entityNoBlueprint = character.GetEntityNoBlueprint();
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return ((component != null) ? new bool?(component.HasTag(GameplayTagDefine.EGameplayTagId["功能.通用镜头.忽略碰撞隐藏"])) : null).GetValueOrDefault();
 		}
 
-		// Token: 0x06048392 RID: 295826 RVA: 0x0128D9E0 File Offset: 0x0128BBE0
+		// Token: 0x0603E7DE RID: 255966 RVA: 0x01230394 File Offset: 0x0122E594
 		[NullableContext(2)]
 		private bool IsCharacterRenderingType(AActor actor)
 		{
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return false;
 		}
 
-		// Token: 0x06048393 RID: 295827 RVA: 0x0128DA28 File Offset: 0x0128BC28
+		// Token: 0x0603E7DF RID: 255967 RVA: 0x012303DC File Offset: 0x0122E5DC
 		private void RestoreAllNpcDither()
 		{
 			foreach (TsBaseCharacter tsBaseCharacter in this.DitheredNpcSet)
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.DitheredNpcDistanceMap.Clear();
 		}
 
-		// Token: 0x06048394 RID: 295828 RVA: 0x0128DAA0 File Offset: 0x0128BCA0
+		// Token: 0x0603E7E0 RID: 255968 RVA: 0x01230454 File Offset: 0x0122E654
 		private void RefreshModeTag()
 		{
 			this.RestoreModeTag();
@@ -431,7 +431,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048395 RID: 295829 RVA: 0x0128DB70 File Offset: 0x0128BD70
+		// Token: 0x0603E7E1 RID: 255969 RVA: 0x01230524 File Offset: 0x0122E724
 		private void RestoreModeTag()
 		{
 			if (this.AppliedModeTagIds.Count == 0)
@@ -446,7 +446,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.AppliedModeTagIds.Clear();
 		}
 
-		// Token: 0x06048396 RID: 295830 RVA: 0x0128DBF4 File Offset: 0x0128BDF4
+		// Token: 0x0603E7E2 RID: 255970 RVA: 0x012305A8 File Offset: 0x0122E7A8
 		[NullableContext(2)]
 		private void ApplyModeCollision(TsBaseCharacter character, PhotoCameraType? mode)
 		{
@@ -470,7 +470,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			characterActorComponent.SetRadiusAndHalfHeight(modeCollisionRadius, characterActorComponent.HalfHeight, false, false);
 		}
 
-		// Token: 0x06048397 RID: 295831 RVA: 0x0128DC54 File Offset: 0x0128BE54
+		// Token: 0x0603E7E3 RID: 255971 RVA: 0x01230608 File Offset: 0x0122E808
 		private void RestoreModeCollision()
 		{
 			if (this.CollisionAppliedCharacter == null)
@@ -486,57 +486,57 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			characterActorComponent.SetRadiusAndHalfHeight(characterActorComponent.DefaultRadius, characterActorComponent.HalfHeight, false, false);
 		}
 
-		// Token: 0x04026273 RID: 156275
+		// Token: 0x0402155E RID: 136542
 		private const float MIN_DITHER = 0.01f;
 
-		// Token: 0x04026274 RID: 156276
+		// Token: 0x0402155F RID: 136543
 		private const float START_DITHER_VALUE = 0.3f;
 
-		// Token: 0x04026275 RID: 156277
+		// Token: 0x04021560 RID: 136544
 		private const float NPC_START_DITHER_VALUE = 0.3f;
 
-		// Token: 0x04026276 RID: 156278
+		// Token: 0x04021561 RID: 136545
 		private const float HIDE_DISTANCE_OFFSET = 50f;
 
-		// Token: 0x04026277 RID: 156279
+		// Token: 0x04021562 RID: 136546
 		private const float MAX_DISTANCE = 9999999f;
 
-		// Token: 0x04026278 RID: 156280
+		// Token: 0x04021563 RID: 136547
 		private const string NPC_PROFILE_KEY = "PhotoCameraCharacterComponent_NpcSweep";
 
-		// Token: 0x04026279 RID: 156281
+		// Token: 0x04021564 RID: 136548
 		private readonly Vector PlayerLocation = Vector.Create();
 
-		// Token: 0x0402627A RID: 156282
+		// Token: 0x04021565 RID: 136549
 		[Nullable(2)]
 		private TsBaseCharacter DitheredCharacter;
 
-		// Token: 0x0402627B RID: 156283
+		// Token: 0x04021566 RID: 136550
 		[Nullable(2)]
 		private UTraceSphereElement NpcSphereTrace;
 
-		// Token: 0x0402627C RID: 156284
+		// Token: 0x04021567 RID: 136551
 		private float CurrentNpcDitherFov;
 
-		// Token: 0x0402627D RID: 156285
+		// Token: 0x04021568 RID: 136552
 		private float NpcCollisionRadius;
 
-		// Token: 0x0402627E RID: 156286
+		// Token: 0x04021569 RID: 136553
 		private readonly Vector NpcSweepEnd = Vector.Create();
 
-		// Token: 0x0402627F RID: 156287
+		// Token: 0x0402156A RID: 136554
 		private readonly Vector TmpVector = Vector.Create();
 
-		// Token: 0x04026280 RID: 156288
+		// Token: 0x0402156B RID: 136555
 		private readonly List<TsBaseCharacter> DitheredNpcSet = new List<TsBaseCharacter>();
 
-		// Token: 0x04026281 RID: 156289
+		// Token: 0x0402156C RID: 136556
 		private readonly Dictionary<TsBaseCharacter, float> DitheredNpcDistanceMap = new Dictionary<TsBaseCharacter, float>();
 
-		// Token: 0x04026282 RID: 156290
+		// Token: 0x0402156D RID: 136557
 		private readonly List<int> AppliedModeTagIds = new List<int>();
 
-		// Token: 0x04026283 RID: 156291
+		// Token: 0x0402156E RID: 136558
 		[Nullable(2)]
 		private TsBaseCharacter CollisionAppliedCharacter;
 	}

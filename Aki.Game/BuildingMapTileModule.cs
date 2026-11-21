@@ -7,27 +7,27 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012F1 RID: 4849
+// Token: 0x020007A5 RID: 1957
 [NullableContext(1)]
 [Nullable(0)]
 public class BuildingMapTileModule : UiPanelBase
 {
-	// Token: 0x06008614 RID: 34324 RVA: 0x001C925A File Offset: 0x001C745A
+	// Token: 0x060059AF RID: 22959 RVA: 0x001D20C6 File Offset: 0x001D02C6
 	public BuildingMapTileModule(bool needLoadingFixRole, bool needLoadingShowRoleItem)
 	{
 		this.NeedLoadingFixRole = needLoadingFixRole;
 		this.NeedLoadingShowRoleItem = needLoadingShowRoleItem;
 	}
 
-	// Token: 0x17000B7C RID: 2940
-	// (get) Token: 0x06008615 RID: 34325 RVA: 0x001C9291 File Offset: 0x001C7491
+	// Token: 0x17000B9C RID: 2972
+	// (get) Token: 0x060059B0 RID: 22960 RVA: 0x001D20FD File Offset: 0x001D02FD
 	public bool NeedLoadingFixRole { get; }
 
-	// Token: 0x17000B7D RID: 2941
-	// (get) Token: 0x06008616 RID: 34326 RVA: 0x001C9299 File Offset: 0x001C7499
+	// Token: 0x17000B9D RID: 2973
+	// (get) Token: 0x060059B1 RID: 22961 RVA: 0x001D2105 File Offset: 0x001D0305
 	public bool NeedLoadingShowRoleItem { get; }
 
-	// Token: 0x06008617 RID: 34327 RVA: 0x001C92A4 File Offset: 0x001C74A4
+	// Token: 0x060059B2 RID: 22962 RVA: 0x001D2110 File Offset: 0x001D0310
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -49,7 +49,7 @@ public class BuildingMapTileModule : UiPanelBase
 		};
 	}
 
-	// Token: 0x06008618 RID: 34328 RVA: 0x001C93F8 File Offset: 0x001C75F8
+	// Token: 0x060059B3 RID: 22963 RVA: 0x001D2264 File Offset: 0x001D0464
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -78,7 +78,7 @@ public class BuildingMapTileModule : UiPanelBase
 		return buildingItem.GetGuideUiItemAndUiItemForShowEx(configParams);
 	}
 
-	// Token: 0x06008619 RID: 34329 RVA: 0x001C9454 File Offset: 0x001C7654
+	// Token: 0x060059B4 RID: 22964 RVA: 0x001D22C0 File Offset: 0x001D04C0
 	private UniTask InitMapLayout()
 	{
 		BuildingMapTileModule.<InitMapLayout>d__17 <InitMapLayout>d__;
@@ -89,7 +89,7 @@ public class BuildingMapTileModule : UiPanelBase
 		return <InitMapLayout>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600861A RID: 34330 RVA: 0x001C9498 File Offset: 0x001C7698
+	// Token: 0x060059B5 RID: 22965 RVA: 0x001D2304 File Offset: 0x001D0504
 	private UniTask LoadMapTexture()
 	{
 		BuildingMapTileModule.<LoadMapTexture>d__18 <LoadMapTexture>d__;
@@ -100,7 +100,7 @@ public class BuildingMapTileModule : UiPanelBase
 		return <LoadMapTexture>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600861B RID: 34331 RVA: 0x001C94DC File Offset: 0x001C76DC
+	// Token: 0x060059B6 RID: 22966 RVA: 0x001D2348 File Offset: 0x001D0548
 	private List<UUIItem> GetBuildingItemList()
 	{
 		return new List<UUIItem>
@@ -118,7 +118,7 @@ public class BuildingMapTileModule : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600861C RID: 34332 RVA: 0x001C9574 File Offset: 0x001C7774
+	// Token: 0x060059B7 RID: 22967 RVA: 0x001D23E0 File Offset: 0x001D05E0
 	private UniTask InitBuild()
 	{
 		BuildingMapTileModule.<InitBuild>d__20 <InitBuild>d__;
@@ -129,7 +129,7 @@ public class BuildingMapTileModule : UiPanelBase
 		return <InitBuild>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600861D RID: 34333 RVA: 0x001C95B8 File Offset: 0x001C77B8
+	// Token: 0x060059B8 RID: 22968 RVA: 0x001D2424 File Offset: 0x001D0624
 	private UniTask CreateRoleItem(UUIItem parentItem, int roleId)
 	{
 		BuildingMapTileModule.<CreateRoleItem>d__21 <CreateRoleItem>d__;
@@ -142,7 +142,7 @@ public class BuildingMapTileModule : UiPanelBase
 		return <CreateRoleItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600861E RID: 34334 RVA: 0x001C960C File Offset: 0x001C780C
+	// Token: 0x060059B9 RID: 22969 RVA: 0x001D2478 File Offset: 0x001D0678
 	private List<int> GetRandomNumberList(int count, int endIndex)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -161,7 +161,7 @@ public class BuildingMapTileModule : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x0600861F RID: 34335 RVA: 0x001C9668 File Offset: 0x001C7868
+	// Token: 0x060059BA RID: 22970 RVA: 0x001D24D4 File Offset: 0x001D06D4
 	private UniTask InitRole()
 	{
 		BuildingMapTileModule.<InitRole>d__23 <InitRole>d__;
@@ -172,7 +172,7 @@ public class BuildingMapTileModule : UiPanelBase
 		return <InitRole>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008620 RID: 34336 RVA: 0x001C96AC File Offset: 0x001C78AC
+	// Token: 0x060059BB RID: 22971 RVA: 0x001D2518 File Offset: 0x001D0718
 	private UniTask InitShowRole()
 	{
 		BuildingMapTileModule.<InitShowRole>d__24 <InitShowRole>d__;
@@ -183,7 +183,7 @@ public class BuildingMapTileModule : UiPanelBase
 		return <InitShowRole>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008621 RID: 34337 RVA: 0x001C96F0 File Offset: 0x001C78F0
+	// Token: 0x060059BC RID: 22972 RVA: 0x001D255C File Offset: 0x001D075C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BuildingMapTileModule.<OnBeforeStartAsync>d__25 <OnBeforeStartAsync>d__;
@@ -194,19 +194,19 @@ public class BuildingMapTileModule : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008622 RID: 34338 RVA: 0x001C9733 File Offset: 0x001C7933
+	// Token: 0x060059BD RID: 22973 RVA: 0x001D259F File Offset: 0x001D079F
 	public void RefreshRole()
 	{
 		this.InitRole().Forget();
 	}
 
-	// Token: 0x06008623 RID: 34339 RVA: 0x001C9740 File Offset: 0x001C7940
+	// Token: 0x060059BE RID: 22974 RVA: 0x001D25AC File Offset: 0x001D07AC
 	private BuildingMapTileModule.TileItem InitTileItem()
 	{
 		return new BuildingMapTileModule.TileItem(this.TileMgr);
 	}
 
-	// Token: 0x06008624 RID: 34340 RVA: 0x001C9750 File Offset: 0x001C7950
+	// Token: 0x060059BF RID: 22975 RVA: 0x001D25BC File Offset: 0x001D07BC
 	public void SetAllBuildingExhibitionMode(bool bShowOnly)
 	{
 		foreach (BuildingItem buildingItem in this.BuildingItemMap.Values)
@@ -216,7 +216,7 @@ public class BuildingMapTileModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008625 RID: 34341 RVA: 0x001C97B0 File Offset: 0x001C79B0
+	// Token: 0x060059C0 RID: 22976 RVA: 0x001D261C File Offset: 0x001D081C
 	public void SetBuildingItemActive(bool value)
 	{
 		foreach (BuildingItem buildingItem in this.BuildingItemMap.Values)
@@ -225,36 +225,36 @@ public class BuildingMapTileModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008626 RID: 34342 RVA: 0x001C9808 File Offset: 0x001C7A08
+	// Token: 0x060059C1 RID: 22977 RVA: 0x001D2674 File Offset: 0x001D0874
 	public void RefreshBuildingItem(int buildingId)
 	{
 		this.BuildingItemMap[buildingId].Refresh();
 	}
 
-	// Token: 0x04003C11 RID: 15377
+	// Token: 0x04003CA9 RID: 15529
 	private readonly BuildingMapTileMgr TileMgr = new BuildingMapTileMgr();
 
-	// Token: 0x04003C12 RID: 15378
+	// Token: 0x04003CAA RID: 15530
 	protected GenericLayout<BuildingMapTileModule.TileItem, string> MapLayout;
 
-	// Token: 0x04003C13 RID: 15379
+	// Token: 0x04003CAB RID: 15531
 	private readonly Dictionary<int, BuildingItem> BuildingItemMap = new Dictionary<int, BuildingItem>();
 
-	// Token: 0x04003C14 RID: 15380
+	// Token: 0x04003CAC RID: 15532
 	private readonly List<BuildingRoleItem> RoleItemList = new List<BuildingRoleItem>();
 
-	// Token: 0x04003C15 RID: 15381
+	// Token: 0x04003CAD RID: 15533
 	private BuildingMapShowRoleModule ShowRoleItem;
 
-	// Token: 0x02007916 RID: 30998
+	// Token: 0x02006AA0 RID: 27296
 	[NullableContext(0)]
 	private static class ETileItem
 	{
-		// Token: 0x04027E45 RID: 163397
+		// Token: 0x04023172 RID: 143730
 		public const int Texture = 0;
 	}
 
-	// Token: 0x02007917 RID: 30999
+	// Token: 0x02006AA1 RID: 27297
 	[Nullable(new byte[]
 	{
 		0,
@@ -262,17 +262,17 @@ public class BuildingMapTileModule : UiPanelBase
 	})]
 	protected class TileItem : GridProxyAbstract<string>
 	{
-		// Token: 0x06049299 RID: 299673 RVA: 0x012E37A6 File Offset: 0x012E19A6
+		// Token: 0x0603F6CD RID: 259789 RVA: 0x012869A2 File Offset: 0x01284BA2
 		public TileItem(BuildingMapTileMgr tileMgr)
 		{
 			this.TileMgr = tileMgr;
 		}
 
-		// Token: 0x1700A02B RID: 41003
-		// (get) Token: 0x0604929A RID: 299674 RVA: 0x012E37B5 File Offset: 0x012E19B5
+		// Token: 0x170077C9 RID: 30665
+		// (get) Token: 0x0603F6CE RID: 259790 RVA: 0x012869B1 File Offset: 0x01284BB1
 		public BuildingMapTileMgr TileMgr { get; }
 
-		// Token: 0x0604929B RID: 299675 RVA: 0x012E37BD File Offset: 0x012E19BD
+		// Token: 0x0603F6CF RID: 259791 RVA: 0x012869B9 File Offset: 0x01284BB9
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -281,12 +281,12 @@ public class BuildingMapTileModule : UiPanelBase
 			};
 		}
 
-		// Token: 0x0604929C RID: 299676 RVA: 0x012E37E0 File Offset: 0x012E19E0
+		// Token: 0x0603F6D0 RID: 259792 RVA: 0x012869DC File Offset: 0x01284BDC
 		public override void Refresh(string data, bool isSelected, int gridIndex)
 		{
 		}
 
-		// Token: 0x0604929D RID: 299677 RVA: 0x012E37E4 File Offset: 0x012E19E4
+		// Token: 0x0603F6D1 RID: 259793 RVA: 0x012869E0 File Offset: 0x01284BE0
 		public override UniTask RefreshAsync(string data, bool isSelected, int gridIndex)
 		{
 			BuildingMapTileModule.TileItem.<RefreshAsync>d__6 <RefreshAsync>d__;
@@ -299,50 +299,50 @@ public class BuildingMapTileModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x02007918 RID: 31000
+	// Token: 0x02006AA2 RID: 27298
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04027E47 RID: 163399
+		// Token: 0x04023174 RID: 143732
 		public const int TileRootItem = 0;
 
-		// Token: 0x04027E48 RID: 163400
+		// Token: 0x04023175 RID: 143733
 		public const int TileItem = 1;
 
-		// Token: 0x04027E49 RID: 163401
+		// Token: 0x04023176 RID: 143734
 		public const int RoleRootItem = 2;
 
-		// Token: 0x04027E4A RID: 163402
+		// Token: 0x04023177 RID: 143735
 		public const int BuildingItem1 = 3;
 
-		// Token: 0x04027E4B RID: 163403
+		// Token: 0x04023178 RID: 143736
 		public const int BuildingItem2 = 4;
 
-		// Token: 0x04027E4C RID: 163404
+		// Token: 0x04023179 RID: 143737
 		public const int BuildingItem3 = 5;
 
-		// Token: 0x04027E4D RID: 163405
+		// Token: 0x0402317A RID: 143738
 		public const int BuildingItem4 = 6;
 
-		// Token: 0x04027E4E RID: 163406
+		// Token: 0x0402317B RID: 143739
 		public const int BuildingItem5 = 7;
 
-		// Token: 0x04027E4F RID: 163407
+		// Token: 0x0402317C RID: 143740
 		public const int BuildingItem6 = 8;
 
-		// Token: 0x04027E50 RID: 163408
+		// Token: 0x0402317D RID: 143741
 		public const int BuildingItem7 = 9;
 
-		// Token: 0x04027E51 RID: 163409
+		// Token: 0x0402317E RID: 143742
 		public const int BuildingItem8 = 10;
 
-		// Token: 0x04027E52 RID: 163410
+		// Token: 0x0402317F RID: 143743
 		public const int BuildingItem9 = 11;
 
-		// Token: 0x04027E53 RID: 163411
+		// Token: 0x04023180 RID: 143744
 		public const int BuildingItem10 = 12;
 
-		// Token: 0x04027E54 RID: 163412
+		// Token: 0x04023181 RID: 143745
 		public const int ShowRoleRootItem = 13;
 	}
 }

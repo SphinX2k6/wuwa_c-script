@@ -3,19 +3,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001550 RID: 5456
+	// Token: 0x020015C6 RID: 5574
 	public enum PbAdviceContentType
 	{
-		// Token: 0x0400A591 RID: 42385
+		// Token: 0x0400A9EF RID: 43503
 		[OriginalName("Sentence")]
 		Sentence,
-		// Token: 0x0400A592 RID: 42386
+		// Token: 0x0400A9F0 RID: 43504
 		[OriginalName("Conjunction")]
 		Conjunction,
-		// Token: 0x0400A593 RID: 42387
+		// Token: 0x0400A9F1 RID: 43505
 		[OriginalName("Expression")]
 		Expression,
-		// Token: 0x0400A594 RID: 42388
+		// Token: 0x0400A9F2 RID: 43506
 		[OriginalName("Motion")]
 		Motion
 	}

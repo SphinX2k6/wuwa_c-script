@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleDev;
 
-// Token: 0x02002806 RID: 10246
+// Token: 0x02001D81 RID: 7553
 public class RoleDevPhantomViewItemDataFactory
 {
-	// Token: 0x06015062 RID: 86114 RVA: 0x00552CF4 File Offset: 0x00550EF4
+	// Token: 0x06012A62 RID: 76386 RVA: 0x0057DAC8 File Offset: 0x0057BCC8
 	[NullableContext(1)]
 	public static RoleDevPhantomViewItemDataBase Create(int roleId, RoleDevViewModel roleDevViewModel)
 	{

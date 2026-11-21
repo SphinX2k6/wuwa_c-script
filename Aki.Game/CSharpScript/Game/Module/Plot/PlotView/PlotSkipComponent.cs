@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005061 RID: 20577
+	// Token: 0x02004031 RID: 16433
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotSkipComponent
 	{
-		// Token: 0x06034A72 RID: 215666 RVA: 0x00C71374 File Offset: 0x00C6F574
+		// Token: 0x06029965 RID: 170341 RVA: 0x00BBE64C File Offset: 0x00BBC84C
 		public PlotSkipComponent([Nullable(1)] UUIButtonComponent skipButton, Action skipCallback = null, Action clickCallback = null, UiViewBase attachParent = null, Action cancelCallback = null, EUiBehaviourPopType? customConfirmBoxPopType = null, string customConfirmBoxResourceId = null)
 		{
 			this.SkipButton = skipButton;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034A73 RID: 215667 RVA: 0x00C71450 File Offset: 0x00C6F650
+		// Token: 0x06029966 RID: 170342 RVA: 0x00BBE728 File Offset: 0x00BBC928
 		public void OnClear()
 		{
 			this.IsActive = false;
@@ -58,19 +58,19 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034A74 RID: 215668 RVA: 0x00C714C4 File Offset: 0x00C6F6C4
+		// Token: 0x06029967 RID: 170343 RVA: 0x00BBE79C File Offset: 0x00BBC99C
 		public void AddEventListener()
 		{
 			EventSystem.Instance.Add<bool>(EEventName.EnableSkipPlot, new Action<bool>(this.EnableSkipButton));
 		}
 
-		// Token: 0x06034A75 RID: 215669 RVA: 0x00C714E2 File Offset: 0x00C6F6E2
+		// Token: 0x06029968 RID: 170344 RVA: 0x00BBE7BA File Offset: 0x00BBC9BA
 		public void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove<bool>(EEventName.EnableSkipPlot, new Action<bool>(this.EnableSkipButton));
 		}
 
-		// Token: 0x06034A76 RID: 215670 RVA: 0x00C71500 File Offset: 0x00C6F700
+		// Token: 0x06029969 RID: 170345 RVA: 0x00BBE7D8 File Offset: 0x00BBC9D8
 		public void AddSummary(IShowTalkOutline config)
 		{
 			if (config == null || StringUtils.IsEmpty(config.TidOutline))
@@ -81,13 +81,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.SummaryText = PlotModel.Instance.PlotTextReplacer.Replace(flowConfigLocalText, false);
 		}
 
-		// Token: 0x06034A77 RID: 215671 RVA: 0x00C71546 File Offset: 0x00C6F746
+		// Token: 0x0602996A RID: 170346 RVA: 0x00BBE81E File Offset: 0x00BBCA1E
 		public bool IsSkipButtonEnabled()
 		{
 			return this.IsActive;
 		}
 
-		// Token: 0x06034A78 RID: 215672 RVA: 0x00C71550 File Offset: 0x00C6F750
+		// Token: 0x0602996B RID: 170347 RVA: 0x00BBE828 File Offset: 0x00BBCA28
 		public void EnableSkipButton(bool enable)
 		{
 			if (enable && !PlotModel.Instance.PlotConfig.CanSkip)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034A79 RID: 215673 RVA: 0x00C71613 File Offset: 0x00C6F813
+		// Token: 0x0602996C RID: 170348 RVA: 0x00BBE8EB File Offset: 0x00BBCAEB
 		private void HideSkipButtonAfterConfirm()
 		{
 			this.IsActive = false;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			skipItem.SetUIActive(false);
 		}
 
-		// Token: 0x06034A7A RID: 215674 RVA: 0x00C71630 File Offset: 0x00C6F830
+		// Token: 0x0602996D RID: 170349 RVA: 0x00BBE908 File Offset: 0x00BBCB08
 		private void OnSkipButtonClick()
 		{
 			if (!this.IsActive)
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			skipCallback();
 		}
 
-		// Token: 0x06034A7B RID: 215675 RVA: 0x00C7178E File Offset: 0x00C6F98E
+		// Token: 0x0602996E RID: 170350 RVA: 0x00BBEA66 File Offset: 0x00BBCC66
 		private void OnToggle(bool isSelectOn)
 		{
 			if (!this.IsActive)
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.IsSkipConfirmBoxShowTmp = !isSelectOn;
 		}
 
-		// Token: 0x06034A7C RID: 215676 RVA: 0x00C717A3 File Offset: 0x00C6F9A3
+		// Token: 0x0602996F RID: 170351 RVA: 0x00BBEA7B File Offset: 0x00BBCC7B
 		public void UpdateImmersiveInputWakeState(bool isWake)
 		{
 			if (isWake && !this.ImmersiveInputWakeState && this.IsActive)
@@ -281,49 +281,49 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ImmersiveInputWakeState = isWake;
 		}
 
-		// Token: 0x0401C0F8 RID: 114936
+		// Token: 0x04016B23 RID: 92963
 		private bool IsActive;
 
-		// Token: 0x0401C0F9 RID: 114937
+		// Token: 0x04016B24 RID: 92964
 		private UUIItem SkipItem;
 
-		// Token: 0x0401C0FA RID: 114938
+		// Token: 0x04016B25 RID: 92965
 		private UUIButtonComponent SkipButton;
 
-		// Token: 0x0401C0FB RID: 114939
+		// Token: 0x04016B26 RID: 92966
 		private Action SkipCallback;
 
-		// Token: 0x0401C0FC RID: 114940
+		// Token: 0x04016B27 RID: 92967
 		private Action ClickCallback;
 
-		// Token: 0x0401C0FD RID: 114941
+		// Token: 0x04016B28 RID: 92968
 		private Action CancelCallback;
 
-		// Token: 0x0401C0FE RID: 114942
+		// Token: 0x04016B29 RID: 92969
 		private readonly string ToggleText;
 
-		// Token: 0x0401C0FF RID: 114943
+		// Token: 0x04016B2A RID: 92970
 		private bool IsSkipConfirmBoxShowTmp = true;
 
-		// Token: 0x0401C100 RID: 114944
+		// Token: 0x04016B2B RID: 92971
 		private UiViewBase AttachParent;
 
-		// Token: 0x0401C101 RID: 114945
+		// Token: 0x04016B2C RID: 92972
 		private string SummaryText;
 
-		// Token: 0x0401C102 RID: 114946
+		// Token: 0x04016B2D RID: 92973
 		private bool IsConfirmBoxShowing;
 
-		// Token: 0x0401C103 RID: 114947
+		// Token: 0x04016B2E RID: 92974
 		private bool IsSummaryViewShowing;
 
-		// Token: 0x0401C104 RID: 114948
+		// Token: 0x04016B2F RID: 92975
 		private bool ImmersiveInputWakeState = true;
 
-		// Token: 0x0401C105 RID: 114949
+		// Token: 0x04016B30 RID: 92976
 		private readonly EUiBehaviourPopType? CustomConfirmBoxPopType;
 
-		// Token: 0x0401C106 RID: 114950
+		// Token: 0x04016B31 RID: 92977
 		private readonly string CustomConfirmBoxResourceId;
 	}
 }

@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020024C7 RID: 9415
+// Token: 0x020019AE RID: 6574
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,13 +14,13 @@ using UnrealEngine;
 })]
 public class VisionIdentifyAttributeItem : GridProxyAbstract<AttrListScrollData>
 {
-	// Token: 0x06012E77 RID: 77431 RVA: 0x004AC890 File Offset: 0x004AAA90
+	// Token: 0x06010336 RID: 66358 RVA: 0x004BA490 File Offset: 0x004B8690
 	public override void Refresh(AttrListScrollData data, bool isSelected, int gridIndex)
 	{
 		this.Update(data);
 	}
 
-	// Token: 0x06012E78 RID: 77432 RVA: 0x004AC89C File Offset: 0x004AAA9C
+	// Token: 0x06010337 RID: 66359 RVA: 0x004BA49C File Offset: 0x004B869C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class VisionIdentifyAttributeItem : GridProxyAbstract<AttrListScrollData>
 		};
 	}
 
-	// Token: 0x06012E79 RID: 77433 RVA: 0x004AC924 File Offset: 0x004AAB24
+	// Token: 0x06010338 RID: 66360 RVA: 0x004BA524 File Offset: 0x004B8724
 	public void Update(AttrListScrollData data)
 	{
 		PropertyIndex? propertyIndexInfo = PropertyIndexConfig.Instance.GetPropertyIndexInfo(data.Id);
@@ -49,19 +49,19 @@ public class VisionIdentifyAttributeItem : GridProxyAbstract<AttrListScrollData>
 		base.GetText(3).SetUIActive(data.AddValue - data.BaseValue > 0.0);
 	}
 
-	// Token: 0x02008A49 RID: 35401
+	// Token: 0x02007BD2 RID: 31698
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CE67 RID: 183911
+		// Token: 0x04028185 RID: 164229
 		AttributeText,
-		// Token: 0x0402CE68 RID: 183912
+		// Token: 0x04028186 RID: 164230
 		BeforeText,
-		// Token: 0x0402CE69 RID: 183913
+		// Token: 0x04028187 RID: 164231
 		ArrowItem,
-		// Token: 0x0402CE6A RID: 183914
+		// Token: 0x04028188 RID: 164232
 		AfterText,
-		// Token: 0x0402CE6B RID: 183915
+		// Token: 0x04028189 RID: 164233
 		AttributeTexture
 	}
 }

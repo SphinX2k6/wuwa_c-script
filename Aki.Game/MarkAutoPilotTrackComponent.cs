@@ -1,7 +1,7 @@
 ﻿using System;
 using CSharpScript.Game.Module.Map.Marks.MarkItemView;
 
-// Token: 0x020021F2 RID: 8690
+// Token: 0x020016D6 RID: 5846
 public class MarkAutoPilotTrackComponent : MarkPanelBase
 {
 }

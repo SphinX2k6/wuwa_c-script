@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064E2 RID: 25826
+	// Token: 0x02005460 RID: 21600
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MatchThreeSkillPointView : UiPanelBase
 	{
-		// Token: 0x06040D59 RID: 265561 RVA: 0x00FB4735 File Offset: 0x00FB2935
+		// Token: 0x06035A1D RID: 219677 RVA: 0x00EFB765 File Offset: 0x00EF9965
 		[NullableContext(2)]
 		public MatchThreeSkillPointView(UUIItem item)
 		{
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			base.CreateThenShowByActor(item.GetOwner(), null);
 		}
 
-		// Token: 0x06040D5A RID: 265562 RVA: 0x00FB475C File Offset: 0x00FB295C
+		// Token: 0x06035A1E RID: 219678 RVA: 0x00EFB78C File Offset: 0x00EF998C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040D5B RID: 265563 RVA: 0x00FB4808 File Offset: 0x00FB2A08
+		// Token: 0x06035A1F RID: 219679 RVA: 0x00EFB838 File Offset: 0x00EF9A38
 		public void Refresh(SkillPointDisplayData data)
 		{
 			this.PlayStateAnim(data);
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040D5C RID: 265564 RVA: 0x00FB48C9 File Offset: 0x00FB2AC9
+		// Token: 0x06035A20 RID: 219680 RVA: 0x00EFB8F9 File Offset: 0x00EF9AF9
 		public void SetOffsetX(float x)
 		{
 			if (this.RootItem == null)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.RootItem.SetAnchorOffset(this.TempLocation.ToUeVector2D(true));
 		}
 
-		// Token: 0x06040D5D RID: 265565 RVA: 0x00FB4904 File Offset: 0x00FB2B04
+		// Token: 0x06035A21 RID: 219681 RVA: 0x00EFB934 File Offset: 0x00EF9B34
 		private void PlayStateAnim(SkillPointDisplayData data)
 		{
 			bool charged = data.Charged;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.PrevReleased = released;
 		}
 
-		// Token: 0x06040D5E RID: 265566 RVA: 0x00FB495C File Offset: 0x00FB2B5C
+		// Token: 0x06035A22 RID: 219682 RVA: 0x00EFB98C File Offset: 0x00EF9B8C
 		private void PlayAnim(string sequence)
 		{
 			if (this.RootItem == null)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.SequencePlayer.PlaySequence(sequence, false, null);
 		}
 
-		// Token: 0x06040D5F RID: 265567 RVA: 0x00FB49A1 File Offset: 0x00FB2BA1
+		// Token: 0x06035A23 RID: 219683 RVA: 0x00EFB9D1 File Offset: 0x00EF9BD1
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -125,39 +125,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x04021C68 RID: 138344
+		// Token: 0x0401C599 RID: 116121
 		private const string IconColorIdle = "857A7E";
 
-		// Token: 0x04021C69 RID: 138345
+		// Token: 0x0401C59A RID: 116122
 		private const string IconColorCharged = "312126";
 
-		// Token: 0x04021C6A RID: 138346
+		// Token: 0x0401C59B RID: 116123
 		private const string IconColorReleased = "DF9B28";
 
-		// Token: 0x04021C6B RID: 138347
+		// Token: 0x0401C59C RID: 116124
 		private readonly Vector2D TempLocation = Vector2D.Create();
 
-		// Token: 0x04021C6C RID: 138348
+		// Token: 0x0401C59D RID: 116125
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04021C6D RID: 138349
+		// Token: 0x0401C59E RID: 116126
 		private bool PrevCharged;
 
-		// Token: 0x04021C6E RID: 138350
+		// Token: 0x0401C59F RID: 116127
 		private bool PrevReleased;
 
-		// Token: 0x0200C721 RID: 50977
+		// Token: 0x0200B107 RID: 45319
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403C28E RID: 246414
+			// Token: 0x04036BE9 RID: 224233
 			SprBgFill,
-			// Token: 0x0403C28F RID: 246415
+			// Token: 0x04036BEA RID: 224234
 			PnlDone,
-			// Token: 0x0403C290 RID: 246416
+			// Token: 0x04036BEB RID: 224235
 			SprIcon,
-			// Token: 0x0403C291 RID: 246417
+			// Token: 0x04036BEC RID: 224236
 			TxtNum
 		}
 	}

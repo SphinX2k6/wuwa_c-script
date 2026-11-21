@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002D4D RID: 11597
+// Token: 0x020022A7 RID: 8871
 [NullableContext(2)]
 [Nullable(0)]
 public class ExtraRoomTipsData : IExtraRoomTipsData
 {
-	// Token: 0x170020DD RID: 8413
-	// (get) Token: 0x060185E8 RID: 99816 RVA: 0x00634551 File Offset: 0x00632751
-	// (set) Token: 0x060185E9 RID: 99817 RVA: 0x00634559 File Offset: 0x00632759
+	// Token: 0x17002138 RID: 8504
+	// (get) Token: 0x06015E8A RID: 89738 RVA: 0x0065A561 File Offset: 0x00658761
+	// (set) Token: 0x06015E8B RID: 89739 RVA: 0x0065A569 File Offset: 0x00658769
 	public int CurScore { get; set; }
 
-	// Token: 0x170020DE RID: 8414
-	// (get) Token: 0x060185EA RID: 99818 RVA: 0x00634562 File Offset: 0x00632762
-	// (set) Token: 0x060185EB RID: 99819 RVA: 0x0063456A File Offset: 0x0063276A
+	// Token: 0x17002139 RID: 8505
+	// (get) Token: 0x06015E8C RID: 89740 RVA: 0x0065A572 File Offset: 0x00658772
+	// (set) Token: 0x06015E8D RID: 89741 RVA: 0x0065A57A File Offset: 0x0065877A
 	public int MaxScore { get; set; }
 
-	// Token: 0x170020DF RID: 8415
-	// (get) Token: 0x060185EC RID: 99820 RVA: 0x00634573 File Offset: 0x00632773
-	// (set) Token: 0x060185ED RID: 99821 RVA: 0x0063457B File Offset: 0x0063277B
+	// Token: 0x1700213A RID: 8506
+	// (get) Token: 0x06015E8E RID: 89742 RVA: 0x0065A583 File Offset: 0x00658783
+	// (set) Token: 0x06015E8F RID: 89743 RVA: 0x0065A58B File Offset: 0x0065878B
 	public Action CancelFunc { get; set; }
 
-	// Token: 0x170020E0 RID: 8416
-	// (get) Token: 0x060185EE RID: 99822 RVA: 0x00634584 File Offset: 0x00632784
-	// (set) Token: 0x060185EF RID: 99823 RVA: 0x0063458C File Offset: 0x0063278C
+	// Token: 0x1700213B RID: 8507
+	// (get) Token: 0x06015E90 RID: 89744 RVA: 0x0065A594 File Offset: 0x00658794
+	// (set) Token: 0x06015E91 RID: 89745 RVA: 0x0065A59C File Offset: 0x0065879C
 	public Action ConfirmFunc { get; set; }
 }

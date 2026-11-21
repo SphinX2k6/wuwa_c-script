@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006055 RID: 24661
+	// Token: 0x020066B6 RID: 26294
 	public enum EVisualNovelAmplitude : byte
 	{
-		// Token: 0x040101E4 RID: 66020
+		// Token: 0x04010FD7 RID: 69591
 		Small,
-		// Token: 0x040101E5 RID: 66021
+		// Token: 0x04010FD8 RID: 69592
 		Medium,
-		// Token: 0x040101E6 RID: 66022
+		// Token: 0x04010FD9 RID: 69593
 		Large
 	}
 }

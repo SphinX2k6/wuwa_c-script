@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016B4 RID: 5812
+// Token: 0x02000B6C RID: 2924
 public class PeriodicityChallengeItemTopTips : UiPanelBase
 {
-	// Token: 0x0600A5C1 RID: 42433 RVA: 0x00250E68 File Offset: 0x0024F068
+	// Token: 0x060079A1 RID: 31137 RVA: 0x0025B278 File Offset: 0x00259478
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,7 +22,7 @@ public class PeriodicityChallengeItemTopTips : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A5C2 RID: 42434 RVA: 0x00250ED1 File Offset: 0x0024F0D1
+	// Token: 0x060079A2 RID: 31138 RVA: 0x0025B2E1 File Offset: 0x002594E1
 	[NullableContext(1)]
 	public void Refresh(IPeriodicityChallengeTopTips data)
 	{
@@ -35,12 +35,12 @@ public class PeriodicityChallengeItemTopTips : UiPanelBase
 		text.SetText(data.TxtNum, true);
 	}
 
-	// Token: 0x02007C88 RID: 31880
+	// Token: 0x02006E0D RID: 28173
 	private enum ETipsDefine
 	{
-		// Token: 0x04028DB8 RID: 167352
+		// Token: 0x040240E1 RID: 147681
 		TxtTitle,
-		// Token: 0x04028DB9 RID: 167353
+		// Token: 0x040240E2 RID: 147682
 		TxtNum
 	}
 }

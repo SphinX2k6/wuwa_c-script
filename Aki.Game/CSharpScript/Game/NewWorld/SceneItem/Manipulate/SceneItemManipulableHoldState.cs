@@ -16,12 +16,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071E8 RID: 29160
+	// Token: 0x0200629D RID: 25245
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemManipulableHoldState : SceneItemManipulableBaseState
 	{
-		// Token: 0x060475F4 RID: 292340 RVA: 0x01226DE0 File Offset: 0x01224FE0
+		// Token: 0x0603CEF6 RID: 249590 RVA: 0x01180C18 File Offset: 0x0117EE18
 		[NullableContext(1)]
 		public SceneItemManipulableHoldState(SceneItemManipulatableComponent sceneItem, [Nullable(new byte[]
 		{
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.ExtraHoldingTags = extraTags;
 		}
 
-		// Token: 0x060475F5 RID: 292341 RVA: 0x01226E35 File Offset: 0x01225035
+		// Token: 0x0603CEF7 RID: 249591 RVA: 0x01180C6D File Offset: 0x0117EE6D
 		[NullableContext(1)]
 		public void SetEnterCallback(Action callback)
 		{
 			this.EnterCallback = callback;
 		}
 
-		// Token: 0x060475F6 RID: 292342 RVA: 0x01226E40 File Offset: 0x01225040
+		// Token: 0x0603CEF8 RID: 249592 RVA: 0x01180C78 File Offset: 0x0117EE78
 		protected override void OnEnter()
 		{
 			base.StartCameraShake(this.CameraShake);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			component.AddTag(new int?(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.新控物.控制.普通控物"]));
 		}
 
-		// Token: 0x060475F7 RID: 292343 RVA: 0x01227060 File Offset: 0x01225260
+		// Token: 0x0603CEF9 RID: 249593 RVA: 0x01180E98 File Offset: 0x0117F098
 		protected override void OnTick(float delta)
 		{
 			this.Timer += delta;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475F8 RID: 292344 RVA: 0x012270F4 File Offset: 0x012252F4
+		// Token: 0x0603CEFA RID: 249594 RVA: 0x01180F2C File Offset: 0x0117F12C
 		protected override void OnExit()
 		{
 			base.StopCameraShake();
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475F9 RID: 292345 RVA: 0x0122727C File Offset: 0x0122547C
+		// Token: 0x0603CEFB RID: 249595 RVA: 0x011810B4 File Offset: 0x0117F2B4
 		public SceneItemManipulableHoldState.LocRot UpdateTargetLocationAndRotation()
 		{
 			if (!this.SceneItem.IsEnableTargetLocationCalculation)
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return targetLocationAndRotation;
 		}
 
-		// Token: 0x060475FA RID: 292346 RVA: 0x01227344 File Offset: 0x01225544
+		// Token: 0x0603CEFC RID: 249596 RVA: 0x0118117C File Offset: 0x0117F37C
 		private SceneItemManipulableHoldState.LocRot GetTargetLocationAndRotation()
 		{
 			BP_TeleControlConfig_C manipulateBaseConfig = this.SceneItem.ManipulateBaseConfig;
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			};
 		}
 
-		// Token: 0x060475FB RID: 292347 RVA: 0x0122747C File Offset: 0x0122567C
+		// Token: 0x0603CEFD RID: 249597 RVA: 0x011812B4 File Offset: 0x0117F4B4
 		private void UpdateEffectSpline()
 		{
 			if (this.CacheSplineComp != null)
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475FC RID: 292348 RVA: 0x012274DC File Offset: 0x012256DC
+		// Token: 0x0603CEFE RID: 249598 RVA: 0x01181314 File Offset: 0x0117F514
 		private void ClearEffectSpline()
 		{
 			if (EffectSystem.Instance.IsValid(this.EffectHandle))
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475FD RID: 292349 RVA: 0x0122755C File Offset: 0x0122575C
+		// Token: 0x0603CEFF RID: 249599 RVA: 0x01181394 File Offset: 0x0117F594
 		private void GenerateGuideEffect()
 		{
 			IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(this.SceneItem.Config.HoldCfg.TrackTarget.EntityId), null);
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.CacheSplineComp = guideEffectSpline.SplineComp;
 		}
 
-		// Token: 0x060475FE RID: 292350 RVA: 0x01227668 File Offset: 0x01225868
+		// Token: 0x0603CF00 RID: 249600 RVA: 0x011814A0 File Offset: 0x0117F6A0
 		[NullableContext(1)]
 		private TArray<FVectorDouble> GenerateSplinePoint(Vector startPos, Vector targetPos)
 		{
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return tarray;
 		}
 
-		// Token: 0x060475FF RID: 292351 RVA: 0x012276F4 File Offset: 0x012258F4
+		// Token: 0x0603CF01 RID: 249601 RVA: 0x0118152C File Offset: 0x0117F72C
 		private void GeneratePredictProjectilePoints()
 		{
 			if (this.PathPositions == null)
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.CacheAfterPortalProjectileSplineComp = guideEffectSpline2.SplineComp;
 		}
 
-		// Token: 0x06047600 RID: 292352 RVA: 0x01227870 File Offset: 0x01225A70
+		// Token: 0x0603CF02 RID: 249602 RVA: 0x011816A8 File Offset: 0x0117F8A8
 		private void UpdateProjectileSpline()
 		{
 			if (this.CacheProjectileSplineComp == null)
@@ -541,7 +541,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			effectActor.D_K2_SetActorLocation(fvectorDouble2, false, ref WorldGlobal.SweepHitResult, true);
 		}
 
-		// Token: 0x06047601 RID: 292353 RVA: 0x012280D0 File Offset: 0x012262D0
+		// Token: 0x0603CF03 RID: 249603 RVA: 0x01181F08 File Offset: 0x01180108
 		private void ClearProjectileSpline()
 		{
 			if (EffectSystem.Instance.IsValid(this.CacheProjectileEffectHandle.GetValueOrDefault()))
@@ -575,7 +575,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x06047602 RID: 292354 RVA: 0x01228228 File Offset: 0x01226428
+		// Token: 0x0603CF04 RID: 249604 RVA: 0x01182060 File Offset: 0x01180260
 		public void EnterProjectileAimMode()
 		{
 			this.GeneratePredictProjectilePoints();
@@ -586,7 +586,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.CurrentCameraTag = new FGameplayTag?(抛物瞄准模式镜头);
 		}
 
-		// Token: 0x06047603 RID: 292355 RVA: 0x01228290 File Offset: 0x01226490
+		// Token: 0x0603CF05 RID: 249605 RVA: 0x011820C8 File Offset: 0x011802C8
 		public void ExitProjectileAimMode()
 		{
 			this.ClearProjectileSpline();
@@ -596,11 +596,11 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.CurrentCameraTag = this.SubCameraTag;
 		}
 
-		// Token: 0x04025873 RID: 153715
+		// Token: 0x040204E2 RID: 132322
 		[Nullable(1)]
 		private const string PORTAL_COLLISION = "PortalPlane";
 
-		// Token: 0x04025874 RID: 153716
+		// Token: 0x040204E3 RID: 132323
 		[Nullable(new byte[]
 		{
 			0,
@@ -608,33 +608,33 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 		})]
 		private readonly TSubclassOf<UCameraShakeBase>? CameraShake;
 
-		// Token: 0x04025875 RID: 153717
+		// Token: 0x040204E4 RID: 132324
 		private readonly FGameplayTag? SubCameraTag;
 
-		// Token: 0x04025876 RID: 153718
+		// Token: 0x040204E5 RID: 132325
 		private readonly TArray<FGameplayTag> ExtraHoldingTags;
 
-		// Token: 0x04025877 RID: 153719
+		// Token: 0x040204E6 RID: 132326
 		private int EffectHandle;
 
-		// Token: 0x04025878 RID: 153720
+		// Token: 0x040204E7 RID: 132327
 		[Nullable(1)]
 		private readonly Vector CacheVector = Vector.Create();
 
-		// Token: 0x04025879 RID: 153721
+		// Token: 0x040204E8 RID: 132328
 		[Nullable(1)]
 		private readonly Vector TargetVector = Vector.Create();
 
-		// Token: 0x0402587A RID: 153722
+		// Token: 0x040204E9 RID: 132329
 		private AActor CacheSplineActor;
 
-		// Token: 0x0402587B RID: 153723
+		// Token: 0x040204EA RID: 132330
 		private USplineComponent CacheSplineComp;
 
-		// Token: 0x0402587C RID: 153724
+		// Token: 0x040204EB RID: 132331
 		private FHitResult HitResult;
 
-		// Token: 0x0402587D RID: 153725
+		// Token: 0x040204EC RID: 132332
 		[Nullable(new byte[]
 		{
 			2,
@@ -642,57 +642,57 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 		})]
 		private TArray<FPredictProjectilePathPointData> PathData;
 
-		// Token: 0x0402587E RID: 153726
+		// Token: 0x040204ED RID: 132333
 		private TArray<FVectorDouble> PathPositions;
 
-		// Token: 0x0402587F RID: 153727
+		// Token: 0x040204EE RID: 132334
 		private TArray<FVectorDouble> AfterPortalPathPositions;
 
-		// Token: 0x04025880 RID: 153728
+		// Token: 0x040204EF RID: 132335
 		private FVectorDouble? AfterPortalStartPosition;
 
-		// Token: 0x04025881 RID: 153729
+		// Token: 0x040204F0 RID: 132336
 		private FPredictProjectilePathPointData LastDestination;
 
-		// Token: 0x04025882 RID: 153730
+		// Token: 0x040204F1 RID: 132337
 		[Nullable(1)]
 		private readonly TArray<AActor> IgnoreActors = new TArray<AActor>();
 
-		// Token: 0x04025883 RID: 153731
+		// Token: 0x040204F2 RID: 132338
 		private int? CacheProjectileEffectHandle;
 
-		// Token: 0x04025884 RID: 153732
+		// Token: 0x040204F3 RID: 132339
 		private int? CacheAfterPortalProjectileEffectHandle;
 
-		// Token: 0x04025885 RID: 153733
+		// Token: 0x040204F4 RID: 132340
 		private AActor CacheProjectileActor;
 
-		// Token: 0x04025886 RID: 153734
+		// Token: 0x040204F5 RID: 132341
 		private AActor CacheAfterPortalProjectileActor;
 
-		// Token: 0x04025887 RID: 153735
+		// Token: 0x040204F6 RID: 132342
 		private USplineComponent CacheProjectileSplineComp;
 
-		// Token: 0x04025888 RID: 153736
+		// Token: 0x040204F7 RID: 132343
 		private USplineComponent CacheAfterPortalProjectileSplineComp;
 
-		// Token: 0x04025889 RID: 153737
+		// Token: 0x040204F8 RID: 132344
 		private int? FinalDestinationEffectHandle;
 
-		// Token: 0x0402588A RID: 153738
+		// Token: 0x040204F9 RID: 132345
 		private FGameplayTag? CurrentCameraTag;
 
-		// Token: 0x0402588B RID: 153739
+		// Token: 0x040204FA RID: 132346
 		private bool ThoughPortal;
 
-		// Token: 0x0200CF2B RID: 53035
+		// Token: 0x0200BAC0 RID: 47808
 		[NullableContext(0)]
 		public struct LocRot
 		{
-			// Token: 0x0403E4BF RID: 255167
+			// Token: 0x040397E4 RID: 235492
 			public FVectorDouble Loc;
 
-			// Token: 0x0403E4C0 RID: 255168
+			// Token: 0x040397E5 RID: 235493
 			public FRotator Rot;
 		}
 	}

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200506A RID: 20586
+	// Token: 0x020055CC RID: 21964
 	public class ICycleModeType_UnionUnion
 	{
-		// Token: 0x17009555 RID: 38229
-		// (get) Token: 0x06020FDB RID: 135131 RVA: 0x0049589D File Offset: 0x00493A9D
-		// (set) Token: 0x06020FDC RID: 135132 RVA: 0x004958A5 File Offset: 0x00493AA5
+		// Token: 0x17009D3B RID: 40251
+		// (get) Token: 0x06022F15 RID: 143125 RVA: 0x004CF551 File Offset: 0x004CD751
+		// (set) Token: 0x06022F16 RID: 143126 RVA: 0x004CF559 File Offset: 0x004CD759
 		public ICycleModeType_Union Type { get; set; }
 
-		// Token: 0x17009556 RID: 38230
-		// (get) Token: 0x06020FDD RID: 135133 RVA: 0x004958AE File Offset: 0x00493AAE
-		// (set) Token: 0x06020FDE RID: 135134 RVA: 0x004958B6 File Offset: 0x00493AB6
+		// Token: 0x17009D3C RID: 40252
+		// (get) Token: 0x06022F17 RID: 143127 RVA: 0x004CF562 File Offset: 0x004CD762
+		// (set) Token: 0x06022F18 RID: 143128 RVA: 0x004CF56A File Offset: 0x004CD76A
 		public object Value { get; set; }
 
-		// Token: 0x06020FDF RID: 135135 RVA: 0x004958BF File Offset: 0x00493ABF
+		// Token: 0x06022F19 RID: 143129 RVA: 0x004CF573 File Offset: 0x004CD773
 		public ICycleModeType_UnionUnion()
 		{
 			this.Type = ICycleModeType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06020FE0 RID: 135136 RVA: 0x004958D5 File Offset: 0x00493AD5
+		// Token: 0x06022F1A RID: 143130 RVA: 0x004CF589 File Offset: 0x004CD789
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06020FE1 RID: 135137 RVA: 0x004958E7 File Offset: 0x00493AE7
+		// Token: 0x06022F1B RID: 143131 RVA: 0x004CF59B File Offset: 0x004CD79B
 		public ICycleModeTypeT AsICycleModeType()
 		{
 			return this.As<ICycleModeTypeT>();
 		}
 
-		// Token: 0x06020FE2 RID: 135138 RVA: 0x004958EF File Offset: 0x00493AEF
+		// Token: 0x06022F1C RID: 143132 RVA: 0x004CF5A3 File Offset: 0x004CD7A3
 		public static ICycleModeType_UnionUnion FromICycleModeType(ICycleModeTypeT _icyclemodetype)
 		{
 			return new ICycleModeType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06020FE3 RID: 135139 RVA: 0x00495904 File Offset: 0x00493B04
+		// Token: 0x06022F1D RID: 143133 RVA: 0x004CF5B8 File Offset: 0x004CD7B8
 		public IPatrolCycleLooplyT AsIPatrolCycleLooply()
 		{
 			return this.As<IPatrolCycleLooplyT>();
 		}
 
-		// Token: 0x06020FE4 RID: 135140 RVA: 0x0049590C File Offset: 0x00493B0C
+		// Token: 0x06022F1E RID: 143134 RVA: 0x004CF5C0 File Offset: 0x004CD7C0
 		public static ICycleModeType_UnionUnion FromIPatrolCycleLooply(IPatrolCycleLooplyT _ipatrolcyclelooply)
 		{
 			return new ICycleModeType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06020FE5 RID: 135141 RVA: 0x00495921 File Offset: 0x00493B21
+		// Token: 0x06022F1F RID: 143135 RVA: 0x004CF5D5 File Offset: 0x004CD7D5
 		public IPatrolCycleOncelyT AsIPatrolCycleOncely()
 		{
 			return this.As<IPatrolCycleOncelyT>();
 		}
 
-		// Token: 0x06020FE6 RID: 135142 RVA: 0x00495929 File Offset: 0x00493B29
+		// Token: 0x06022F20 RID: 143136 RVA: 0x004CF5DD File Offset: 0x004CD7DD
 		public static ICycleModeType_UnionUnion FromIPatrolCycleOncely(IPatrolCycleOncelyT _ipatrolcycleoncely)
 		{
 			return new ICycleModeType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06020FE7 RID: 135143 RVA: 0x00495940 File Offset: 0x00493B40
+		// Token: 0x06022F21 RID: 143137 RVA: 0x004CF5F4 File Offset: 0x004CD7F4
 		public static int Pack(FlatBufferBuilder builder, ICycleModeType_UnionUnion _o)
 		{
 			switch (_o.Type)

@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DC0 RID: 24000
+	// Token: 0x02004DA4 RID: 19876
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SilentAreaInfoItem : UiPanelBase
 	{
-		// Token: 0x0603CFC7 RID: 249799 RVA: 0x00EA9A40 File Offset: 0x00EA7C40
+		// Token: 0x06031F3E RID: 204606 RVA: 0x00DFA91C File Offset: 0x00DF8B1C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CFC8 RID: 249800 RVA: 0x00EA9ACC File Offset: 0x00EA7CCC
+		// Token: 0x06031F3F RID: 204607 RVA: 0x00DFA9A8 File Offset: 0x00DF8BA8
 		public void Initialize(AActor actor, ILevelPlayInformation config)
 		{
 			base.CreateByActorAsync(actor, null, false).ContinueWith(delegate()
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}).Forget();
 		}
 
-		// Token: 0x0603CFC9 RID: 249801 RVA: 0x00EA9B0C File Offset: 0x00EA7D0C
+		// Token: 0x06031F40 RID: 204608 RVA: 0x00DFA9E8 File Offset: 0x00DF8BE8
 		public void SetCurrentShowType(EInformationViewType type)
 		{
 			this.CurrentShowType = type;
 		}
 
-		// Token: 0x0603CFCA RID: 249802 RVA: 0x00EA9B18 File Offset: 0x00EA7D18
+		// Token: 0x06031F41 RID: 204609 RVA: 0x00DFA9F4 File Offset: 0x00DF8BF4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SilentAreaInfoItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -58,14 +58,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CFCB RID: 249803 RVA: 0x00EA9B5B File Offset: 0x00EA7D5B
+		// Token: 0x06031F42 RID: 204610 RVA: 0x00DFAA37 File Offset: 0x00DF8C37
 		public void UpdateItem(ILevelPlayInformation config)
 		{
 			this.UpdateTitleText(config.TidMainTitle);
 			this.UpdateSubItems(config.SubTitles);
 		}
 
-		// Token: 0x0603CFCC RID: 249804 RVA: 0x00EA9B78 File Offset: 0x00EA7D78
+		// Token: 0x06031F43 RID: 204611 RVA: 0x00DFAA54 File Offset: 0x00DF8C54
 		private void UpdateTitleText(string title)
 		{
 			UUIText text = base.GetText(0);
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			text.SetText(newText, true);
 		}
 
-		// Token: 0x0603CFCD RID: 249805 RVA: 0x00EA9BB8 File Offset: 0x00EA7DB8
+		// Token: 0x06031F44 RID: 204612 RVA: 0x00DFAA94 File Offset: 0x00DF8C94
 		private void UpdateSubItems(List<IInformationSubTitle> subConfigs)
 		{
 			for (int i = 0; i < subConfigs.Count; i++)
@@ -112,21 +112,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FC68 RID: 130152
+		// Token: 0x0401A725 RID: 108325
 		private EInformationViewType CurrentShowType;
 
-		// Token: 0x0401FC69 RID: 130153
+		// Token: 0x0401A726 RID: 108326
 		private readonly List<SilentAreaInfoSubItem> SubItems = new List<SilentAreaInfoSubItem>();
 
-		// Token: 0x0200C0BE RID: 49342
+		// Token: 0x0200AAC7 RID: 43719
 		[NullableContext(0)]
 		private enum EChildComponent
 		{
-			// Token: 0x0403A284 RID: 238212
+			// Token: 0x04034C56 RID: 216150
 			ParentTitleText,
-			// Token: 0x0403A285 RID: 238213
+			// Token: 0x04034C57 RID: 216151
 			SubItem,
-			// Token: 0x0403A286 RID: 238214
+			// Token: 0x04034C58 RID: 216152
 			SubItemRoot
 		}
 	}

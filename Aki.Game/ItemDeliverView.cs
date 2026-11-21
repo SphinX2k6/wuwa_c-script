@@ -15,17 +15,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FE6 RID: 8166
+// Token: 0x020014B9 RID: 5305
 [NullableContext(1)]
 [Nullable(0)]
 public class ItemDeliverView : UiViewBase
 {
-	// Token: 0x0600FFEB RID: 65515 RVA: 0x003E593D File Offset: 0x003E3B3D
+	// Token: 0x0600D453 RID: 54355 RVA: 0x003F1F3D File Offset: 0x003F013D
 	public ItemDeliverView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600FFEC RID: 65516 RVA: 0x003E5948 File Offset: 0x003E3B48
+	// Token: 0x0600D454 RID: 54356 RVA: 0x003F1F48 File Offset: 0x003F0148
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -56,7 +56,7 @@ public class ItemDeliverView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FFED RID: 65517 RVA: 0x003E5A94 File Offset: 0x003E3C94
+	// Token: 0x0600D455 RID: 54357 RVA: 0x003F2094 File Offset: 0x003F0294
 	private void OnClickConfirmButton()
 	{
 		if (this.IsDelivering)
@@ -122,7 +122,7 @@ public class ItemDeliverView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FFEE RID: 65518 RVA: 0x003E5C40 File Offset: 0x003E3E40
+	// Token: 0x0600D456 RID: 54358 RVA: 0x003F2240 File Offset: 0x003F0440
 	private void OnDeliverResponse(bool bSuccess)
 	{
 		this.IsDelivering = false;
@@ -132,7 +132,7 @@ public class ItemDeliverView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FFEF RID: 65519 RVA: 0x003E5C54 File Offset: 0x003E3E54
+	// Token: 0x0600D457 RID: 54359 RVA: 0x003F2254 File Offset: 0x003F0454
 	private bool IsEnoughSubmit()
 	{
 		foreach (DeliverSlotData deliverSlotData in this.DeliverData.GetSlotDataList())
@@ -145,7 +145,7 @@ public class ItemDeliverView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x0600FFF0 RID: 65520 RVA: 0x003E5CBC File Offset: 0x003E3EBC
+	// Token: 0x0600D458 RID: 54360 RVA: 0x003F22BC File Offset: 0x003F04BC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ItemDeliverView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -156,7 +156,7 @@ public class ItemDeliverView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FFF1 RID: 65521 RVA: 0x003E5D00 File Offset: 0x003E3F00
+	// Token: 0x0600D459 RID: 54361 RVA: 0x003F2300 File Offset: 0x003F0500
 	protected override void OnStart()
 	{
 		this.DeliverData = (this.OpenParam as DeliverData);
@@ -186,7 +186,7 @@ public class ItemDeliverView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600FFF2 RID: 65522 RVA: 0x003E5D5D File Offset: 0x003E3F5D
+	// Token: 0x0600D45A RID: 54362 RVA: 0x003F235D File Offset: 0x003F055D
 	protected override void OnBeforeDestroy()
 	{
 		DeliverData deliverData = this.DeliverData;
@@ -199,12 +199,12 @@ public class ItemDeliverView : UiViewBase
 		this.ItemInteractionPanel = null;
 	}
 
-	// Token: 0x0600FFF3 RID: 65523 RVA: 0x003E5D88 File Offset: 0x003E3F88
+	// Token: 0x0600D45B RID: 54363 RVA: 0x003F2388 File Offset: 0x003F0588
 	private void OnItemExtendToggleStateChanged(ItemInteractionPanelItemData data)
 	{
 		if (!data.IsEnable())
 		{
-			ItemController.Instance.OpenItemTipsByItemId(data.ItemConfigId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(data.ItemConfigId, true, null, false);
 			this.ItemInteractionPanel.SetItemGridSelected(false, data);
 			return;
 		}
@@ -219,13 +219,13 @@ public class ItemDeliverView : UiViewBase
 		this.ItemInteractionPanel.RefreshItemGrid(data);
 	}
 
-	// Token: 0x0600FFF4 RID: 65524 RVA: 0x003E5E08 File Offset: 0x003E4008
+	// Token: 0x0600D45C RID: 54364 RVA: 0x003F2409 File Offset: 0x003F0609
 	private bool OnCanExecuteChange(ItemInteractionPanelItemData data)
 	{
 		return this.DeliverData != null && this.DeliverData.HasEmptySlot();
 	}
 
-	// Token: 0x0600FFF5 RID: 65525 RVA: 0x003E5E20 File Offset: 0x003E4020
+	// Token: 0x0600D45D RID: 54365 RVA: 0x003F2420 File Offset: 0x003F0620
 	private void OnItemReduceButtonTrigger(ItemInteractionPanelItemData data)
 	{
 		int num = Math.Max(data.GetCurrentCount() - 1, 0);
@@ -239,14 +239,14 @@ public class ItemDeliverView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FFF6 RID: 65526 RVA: 0x003E5E75 File Offset: 0x003E4075
+	// Token: 0x0600D45E RID: 54366 RVA: 0x003F2475 File Offset: 0x003F0675
 	private void OnClickedCloseButton()
 	{
 		ItemDeliverModel.Instance.SetItemDeliverData(null);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600FFF7 RID: 65527 RVA: 0x003E5E89 File Offset: 0x003E4089
+	// Token: 0x0600D45F RID: 54367 RVA: 0x003F2489 File Offset: 0x003F0689
 	private DeliverMediumItemGrid OnCreateDeliverMediumItemGrid()
 	{
 		DeliverMediumItemGrid deliverMediumItemGrid = new DeliverMediumItemGrid();
@@ -254,7 +254,7 @@ public class ItemDeliverView : UiViewBase
 		return deliverMediumItemGrid;
 	}
 
-	// Token: 0x0600FFF8 RID: 65528 RVA: 0x003E5EA4 File Offset: 0x003E40A4
+	// Token: 0x0600D460 RID: 54368 RVA: 0x003F24A4 File Offset: 0x003F06A4
 	private void OnDeliverSlotReduceTrigger(MediumItemGridButtonCallback callbackParameter)
 	{
 		DeliverSlotData deliverSlotData = callbackParameter.Data as DeliverSlotData;
@@ -277,7 +277,7 @@ public class ItemDeliverView : UiViewBase
 		this.RefreshAllDeliverSlot(null);
 	}
 
-	// Token: 0x0600FFF9 RID: 65529 RVA: 0x003E5F24 File Offset: 0x003E4124
+	// Token: 0x0600D461 RID: 54369 RVA: 0x003F2524 File Offset: 0x003F0724
 	private void RefreshTitleText()
 	{
 		string titleTextId = this.DeliverData.TitleTextId;
@@ -293,7 +293,7 @@ public class ItemDeliverView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FFFA RID: 65530 RVA: 0x003E5F64 File Offset: 0x003E4164
+	// Token: 0x0600D462 RID: 54370 RVA: 0x003F2564 File Offset: 0x003F0764
 	private void RefreshDescriptionText()
 	{
 		string descriptionTextId = this.DeliverData.DescriptionTextId;
@@ -306,7 +306,7 @@ public class ItemDeliverView : UiViewBase
 		text.SetText(newText, true);
 	}
 
-	// Token: 0x0600FFFB RID: 65531 RVA: 0x003E5FAC File Offset: 0x003E41AC
+	// Token: 0x0600D463 RID: 54371 RVA: 0x003F25AC File Offset: 0x003F07AC
 	private bool SetDeliverSlotItemByItemConfigId(int itemConfigId, int changeCount)
 	{
 		List<DeliverSlotData> slotDataList = this.DeliverData.GetSlotDataList();
@@ -365,7 +365,7 @@ public class ItemDeliverView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x0600FFFC RID: 65532 RVA: 0x003E60F4 File Offset: 0x003E42F4
+	// Token: 0x0600D464 RID: 54372 RVA: 0x003F26F4 File Offset: 0x003F08F4
 	[NullableContext(2)]
 	private void RefreshAllDeliverSlot(Action callBack = null)
 	{
@@ -378,7 +378,7 @@ public class ItemDeliverView : UiViewBase
 		deliverScrollView.RefreshByData(slotDataList, callBack, false);
 	}
 
-	// Token: 0x0600FFFD RID: 65533 RVA: 0x003E6120 File Offset: 0x003E4320
+	// Token: 0x0600D465 RID: 54373 RVA: 0x003F2720 File Offset: 0x003F0920
 	private void RefreshItemInteractionPanel(DeliverSlotData deliverSlotData, int needCount)
 	{
 		List<ItemInteractionPanelItemInfo> list = new List<ItemInteractionPanelItemInfo>();
@@ -434,11 +434,11 @@ public class ItemDeliverView : UiViewBase
 		this.ItemInteractionPanel.SetActive(true);
 	}
 
-	// Token: 0x04007672 RID: 30322
+	// Token: 0x0400775B RID: 30555
 	[Nullable(2)]
 	private DeliverData DeliverData;
 
-	// Token: 0x04007673 RID: 30323
+	// Token: 0x0400775C RID: 30556
 	[Nullable(new byte[]
 	{
 		2,
@@ -447,40 +447,40 @@ public class ItemDeliverView : UiViewBase
 	})]
 	private GenericLayout<DeliverMediumItemGrid, DeliverSlotData> DeliverScrollView;
 
-	// Token: 0x04007674 RID: 30324
+	// Token: 0x0400775D RID: 30557
 	[Nullable(2)]
 	private ItemInteractionPanel ItemInteractionPanel;
 
-	// Token: 0x04007675 RID: 30325
+	// Token: 0x0400775E RID: 30558
 	[Nullable(2)]
 	private PopupCaptionItem PopupCaptionItem;
 
-	// Token: 0x04007676 RID: 30326
+	// Token: 0x0400775F RID: 30559
 	private bool IsDelivering;
 
-	// Token: 0x020085FB RID: 34299
+	// Token: 0x02007782 RID: 30594
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402B9B7 RID: 178615
+		// Token: 0x04026CC6 RID: 158918
 		public const int TitleItem = 0;
 
-		// Token: 0x0402B9B8 RID: 178616
+		// Token: 0x04026CC7 RID: 158919
 		public const int ItemPanelItem = 1;
 
-		// Token: 0x0402B9B9 RID: 178617
+		// Token: 0x04026CC8 RID: 158920
 		public const int ConfirmButton = 2;
 
-		// Token: 0x0402B9BA RID: 178618
+		// Token: 0x04026CC9 RID: 158921
 		public const int DescriptionText = 3;
 
-		// Token: 0x0402B9BB RID: 178619
+		// Token: 0x04026CCA RID: 158922
 		public const int DeliverScrollView = 4;
 
-		// Token: 0x0402B9BC RID: 178620
+		// Token: 0x04026CCB RID: 158923
 		public const int ContentHorizontalLayout = 5;
 
-		// Token: 0x0402B9BD RID: 178621
+		// Token: 0x04026CCC RID: 158924
 		public const int TitleText = 6;
 	}
 }

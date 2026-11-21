@@ -10,46 +10,52 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Plot;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 using CSharpScript.Game.NewWorld.Vehicle.Motorcycle;
+using CSharpScript.Game.Utils;
 using UnrealEngine;
 using UnrealEngine.Interface;
 using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002E47 RID: 11847
+// Token: 0x020023A3 RID: 9123
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C")]
 public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06019448 RID: 103496 RVA: 0x0067FCAC File Offset: 0x0067DEAC
+	// Token: 0x06016D1E RID: 93470 RVA: 0x006A5C3C File Offset: 0x006A3E3C
 	static TsVehicleBlueprintFunctionLibrary()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TsVehicleBlueprintFunctionLibrary.CreateStaticDefaultValue), new Action(TsVehicleBlueprintFunctionLibrary.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06019449 RID: 103497 RVA: 0x0067FD1C File Offset: 0x0067DF1C
+	// Token: 0x06016D1F RID: 93471 RVA: 0x006A5CC7 File Offset: 0x006A3EC7
 	public static void CreateStaticDefaultValue()
 	{
 		TsVehicleBlueprintFunctionLibrary.MotorHangTimerHandle = null;
+		TsVehicleBlueprintFunctionLibrary._motorSummonTraceInternal = null;
+		TsVehicleBlueprintFunctionLibrary._motorSummonPlaceLocationInternal = new FVectorDouble();
 		TsVehicleBlueprintFunctionLibrary.MotorDisappearTimerHandle = null;
 		TsVehicleBlueprintFunctionLibrary.MotorCheckDistanceTimerHandle = null;
 		TsVehicleBlueprintFunctionLibrary.CurrentMotor = null;
 		TsVehicleBlueprintFunctionLibrary.MotorDisapperBuffContext = null;
 	}
 
-	// Token: 0x0601944A RID: 103498 RVA: 0x0067FD3C File Offset: 0x0067DF3C
+	// Token: 0x06016D20 RID: 93472 RVA: 0x006A5CF7 File Offset: 0x006A3EF7
 	public static void ResetStaticDefaultValue()
 	{
 		TsVehicleBlueprintFunctionLibrary.MotorHangTimerHandle = null;
+		TsVehicleBlueprintFunctionLibrary._motorSummonTraceInternal = null;
+		TsVehicleBlueprintFunctionLibrary._motorSummonPlaceLocationInternal = new FVectorDouble();
 		TsVehicleBlueprintFunctionLibrary.MotorDisappearTimerHandle = null;
 		TsVehicleBlueprintFunctionLibrary.MotorCheckDistanceTimerHandle = null;
 		TsVehicleBlueprintFunctionLibrary.CurrentMotor = null;
 		TsVehicleBlueprintFunctionLibrary.MotorDisapperBuffContext = null;
 	}
 
-	// Token: 0x0601944B RID: 103499 RVA: 0x0067FD5C File Offset: 0x0067DF5C
+	// Token: 0x06016D21 RID: 93473 RVA: 0x006A5D28 File Offset: 0x006A3F28
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void UpdateVehiclePerformData(int entityId, ref bool isImpacted, ref float direction, ref float strength)
 	{
@@ -62,7 +68,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		}
 	}
 
-	// Token: 0x0601944C RID: 103500 RVA: 0x0067FD90 File Offset: 0x0067DF90
+	// Token: 0x06016D22 RID: 93474 RVA: 0x006A5D5C File Offset: 0x006A3F5C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void UpdateDrivedVehiclePerformData(int entityId, ref bool isImpacted, ref float direction, ref float strength)
 	{
@@ -86,7 +92,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		}
 	}
 
-	// Token: 0x0601944D RID: 103501 RVA: 0x0067FDDC File Offset: 0x0067DFDC
+	// Token: 0x06016D23 RID: 93475 RVA: 0x006A5DA8 File Offset: 0x006A3FA8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void GetVehicleImpactInfo(int entityId, ref bool isImpacted, ref FVector impactVelocity, ref FHitResult impactHitResult)
@@ -98,7 +104,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		}
 	}
 
-	// Token: 0x0601944E RID: 103502 RVA: 0x0067FE04 File Offset: 0x0067E004
+	// Token: 0x06016D24 RID: 93476 RVA: 0x006A5DD0 File Offset: 0x006A3FD0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void GetDrivingVehicleImpactInfo(int entityId, ref bool isImpacted, ref FVector impactVelocity, ref FHitResult impactHitResult)
@@ -121,7 +127,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		}
 	}
 
-	// Token: 0x0601944F RID: 103503 RVA: 0x0067FE41 File Offset: 0x0067E041
+	// Token: 0x06016D25 RID: 93477 RVA: 0x006A5E0D File Offset: 0x006A400D
 	[NullableContext(1)]
 	private static void GetVehicleImpactInfoInternal(MotorcyclePerformComponent motorPerformComp, ref bool isImpacted, ref FVector impactVelocity, ref FHitResult impactHitResult)
 	{
@@ -130,7 +136,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		impactHitResult = motorPerformComp.CacheImpactHitResult;
 	}
 
-	// Token: 0x06019450 RID: 103504 RVA: 0x0067FE64 File Offset: 0x0067E064
+	// Token: 0x06016D26 RID: 93478 RVA: 0x006A5E30 File Offset: 0x006A4030
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void UpdateAnimInfo(int entityId)
 	{
@@ -138,7 +144,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		TsVehicleBlueprintFunctionLibrary.UpdateAnimInfoUnifiedState(entityId);
 	}
 
-	// Token: 0x06019451 RID: 103505 RVA: 0x0067FE74 File Offset: 0x0067E074
+	// Token: 0x06016D27 RID: 93479 RVA: 0x006A5E40 File Offset: 0x006A4040
 	protected static void UpdateAnimInfoMove(int entityId)
 	{
 		VehicleAnimationComponent component = EntitySystem.Instance.GetComponent<VehicleAnimationComponent>(entityId);
@@ -199,7 +205,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		}
 	}
 
-	// Token: 0x06019452 RID: 103506 RVA: 0x0068001C File Offset: 0x0067E21C
+	// Token: 0x06016D28 RID: 93480 RVA: 0x006A5FE8 File Offset: 0x006A41E8
 	protected static void UpdateAnimInfoUnifiedState(int entityId)
 	{
 		VehicleAnimationComponent component = EntitySystem.Instance.GetComponent<VehicleAnimationComponent>(entityId);
@@ -237,7 +243,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 			animLogicParamsSetter.IsInSequence = flag3;
 			uabpLogicParams.bIsInSequence = flag3;
 		}
-		bool flag4 = UiCameraAnimationManager.Instance.IsDisablePlayer();
+		bool flag4 = UiCameraModel.Instance.IsDisablePlayer();
 		if (animLogicParamsSetter.IsInUiCamera != flag4)
 		{
 			animLogicParamsSetter.IsInUiCamera = flag4;
@@ -245,7 +251,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		}
 	}
 
-	// Token: 0x06019453 RID: 103507 RVA: 0x0068015C File Offset: 0x0067E35C
+	// Token: 0x06016D29 RID: 93481 RVA: 0x006A6128 File Offset: 0x006A4328
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetAndResetEnterSprint(int entityId)
 	{
@@ -259,7 +265,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return isEnterSprint;
 	}
 
-	// Token: 0x06019454 RID: 103508 RVA: 0x0068018C File Offset: 0x0067E38C
+	// Token: 0x06016D2A RID: 93482 RVA: 0x006A6158 File Offset: 0x006A4358
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetDrivedVehicleSeatRot(int entityId, ref FRotator outRot)
 	{
@@ -289,7 +295,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return true;
 	}
 
-	// Token: 0x06019455 RID: 103509 RVA: 0x00680248 File Offset: 0x0067E448
+	// Token: 0x06016D2B RID: 93483 RVA: 0x006A6214 File Offset: 0x006A4414
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static float ConvertAngleToPassengerSpace(int entityId, float yawInVehicleCoordinate)
 	{
@@ -302,7 +308,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return MathUtils.Instance.WrapAngle(yawInVehicleCoordinate + num);
 	}
 
-	// Token: 0x06019456 RID: 103510 RVA: 0x006802A0 File Offset: 0x0067E4A0
+	// Token: 0x06016D2C RID: 93484 RVA: 0x006A626C File Offset: 0x006A446C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetVehicleVelocity(int entityId, ref FVector outVelocity)
 	{
@@ -334,7 +340,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return true;
 	}
 
-	// Token: 0x06019457 RID: 103511 RVA: 0x00680340 File Offset: 0x0067E540
+	// Token: 0x06016D2D RID: 93485 RVA: 0x006A630C File Offset: 0x006A450C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetDrivedVehicleVelocity(int entityId, ref FVector outVelocity)
 	{
@@ -371,7 +377,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return true;
 	}
 
-	// Token: 0x06019458 RID: 103512 RVA: 0x006803FC File Offset: 0x0067E5FC
+	// Token: 0x06016D2E RID: 93486 RVA: 0x006A63C8 File Offset: 0x006A45C8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static float GetVehicleRotiationSpeed(int entityId)
 	{
@@ -393,7 +399,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return component.SimulatedRotYawSpeed;
 	}
 
-	// Token: 0x06019459 RID: 103513 RVA: 0x00680454 File Offset: 0x0067E654
+	// Token: 0x06016D2F RID: 93487 RVA: 0x006A6420 File Offset: 0x006A4620
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static float GetDrivedVehicleRotiationSpeed(int entityId)
 	{
@@ -420,7 +426,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return component2.SimulatedRotYawSpeed;
 	}
 
-	// Token: 0x0601945A RID: 103514 RVA: 0x006804CE File Offset: 0x0067E6CE
+	// Token: 0x06016D30 RID: 93488 RVA: 0x006A649A File Offset: 0x006A469A
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SmoothVehicleRotation(int entityId, FRotator target, float speed, string context)
@@ -433,7 +439,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		component.SmoothVehicleRotation(target, speed, Time.Instance.DeltaTimeSeconds, false, context, true);
 	}
 
-	// Token: 0x0601945B RID: 103515 RVA: 0x006804FC File Offset: 0x0067E6FC
+	// Token: 0x06016D31 RID: 93489 RVA: 0x006A64C8 File Offset: 0x006A46C8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected unsafe static void AddBuffToVehicleFromGA(int entityId, TsBaseVehicle target, long buffId, string skillId, int addCount)
@@ -488,7 +494,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		}
 	}
 
-	// Token: 0x0601945C RID: 103516 RVA: 0x00680668 File Offset: 0x0067E868
+	// Token: 0x06016D32 RID: 93490 RVA: 0x006A6634 File Offset: 0x006A4834
 	[NullableContext(1)]
 	private static bool IsSpecificVehicle(Entity entity, EVehicleType vehicleType)
 	{
@@ -505,7 +511,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return false;
 	}
 
-	// Token: 0x0601945D RID: 103517 RVA: 0x006806B4 File Offset: 0x0067E8B4
+	// Token: 0x06016D33 RID: 93491 RVA: 0x006A6680 File Offset: 0x006A4880
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int TryGetPlayerMotorEntityId()
 	{
@@ -547,7 +553,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return num2.GetValueOrDefault();
 	}
 
-	// Token: 0x0601945E RID: 103518 RVA: 0x0068076C File Offset: 0x0067E96C
+	// Token: 0x06016D34 RID: 93492 RVA: 0x006A6738 File Offset: 0x006A4938
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ClearMotorTimer()
 	{
@@ -650,7 +656,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		}
 	}
 
-	// Token: 0x0601945F RID: 103519 RVA: 0x00680978 File Offset: 0x0067EB78
+	// Token: 0x06016D35 RID: 93493 RVA: 0x006A6944 File Offset: 0x006A4B44
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ClearMotorAppearanceTag(TsBaseVehicle motor)
@@ -666,7 +672,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		}
 	}
 
-	// Token: 0x06019460 RID: 103520 RVA: 0x006809BC File Offset: 0x0067EBBC
+	// Token: 0x06016D36 RID: 93494 RVA: 0x006A6988 File Offset: 0x006A4B88
 	[NullableContext(1)]
 	protected static void OnVehicleBeenEntered(VehiclePassengerInfo info, bool byChangeRole)
 	{
@@ -681,7 +687,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		VehicleModel.Instance.MaterialControllerHandles.Clear();
 	}
 
-	// Token: 0x06019461 RID: 103521 RVA: 0x00680A18 File Offset: 0x0067EC18
+	// Token: 0x06016D37 RID: 93495 RVA: 0x006A69E4 File Offset: 0x006A4BE4
 	[NullableContext(1)]
 	protected static void ExitMotorAppearance(int entityId, long buffId, string skillId)
 	{
@@ -775,7 +781,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		TsVehicleBlueprintFunctionLibrary.CurrentMotor = null;
 	}
 
-	// Token: 0x06019462 RID: 103522 RVA: 0x00680C1C File Offset: 0x0067EE1C
+	// Token: 0x06016D38 RID: 93496 RVA: 0x006A6BE8 File Offset: 0x006A4DE8
 	[NullableContext(1)]
 	protected unsafe static void OnAddMaterialController(PD_CharacterControllerData_C data, [Nullable(2)] UObject userData, int handle)
 	{
@@ -790,7 +796,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x06019463 RID: 103523 RVA: 0x00680CA0 File Offset: 0x0067EEA0
+	// Token: 0x06016D39 RID: 93497 RVA: 0x006A6C6C File Offset: 0x006A4E6C
 	protected unsafe static void OnRemoveMaterialController(int handle)
 	{
 		Log instance = Log.Instance;
@@ -847,7 +853,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		}
 	}
 
-	// Token: 0x06019464 RID: 103524 RVA: 0x00680E28 File Offset: 0x0067F028
+	// Token: 0x06016D3A RID: 93498 RVA: 0x006A6DF4 File Offset: 0x006A4FF4
 	private static void OnDisableMotorcycleTagChanged(int gameplayTagId, bool tagExist)
 	{
 		if (gameplayTagId != TsVehicleBlueprintFunctionLibrary.disableMotorcycleTagId)
@@ -867,7 +873,145 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		TsVehicleBlueprintFunctionLibrary.ExitMotorAppearance(vehicleBuffContext2.EntityId, vehicleBuffContext2.BuffId, vehicleBuffContext2.SkillId);
 	}
 
-	// Token: 0x06019465 RID: 103525 RVA: 0x00680E80 File Offset: 0x0067F080
+	// Token: 0x1700230E RID: 8974
+	// (get) Token: 0x06016D3B RID: 93499 RVA: 0x006A6E4C File Offset: 0x006A504C
+	[Nullable(1)]
+	private static UTraceLineElement MotorSummonTrace
+	{
+		[NullableContext(1)]
+		get
+		{
+			if (TsVehicleBlueprintFunctionLibrary._motorSummonTraceInternal != null)
+			{
+				return TsVehicleBlueprintFunctionLibrary._motorSummonTraceInternal;
+			}
+			UTraceLineElement utraceLineElement = new UTraceLineElement
+			{
+				bIsSingle = true,
+				bIgnoreSelf = true,
+				bTraceComplex = true
+			};
+			TraceElementCommon.Instance.SetTraceColor(utraceLineElement, ColorUtils.LinearGreen);
+			TraceElementCommon.Instance.SetTraceHitColor(utraceLineElement, ColorUtils.LinearRed);
+			TsVehicleBlueprintFunctionLibrary._motorSummonTraceInternal = utraceLineElement;
+			return TsVehicleBlueprintFunctionLibrary._motorSummonTraceInternal;
+		}
+	}
+
+	// Token: 0x06016D3C RID: 93500 RVA: 0x006A6EAC File Offset: 0x006A50AC
+	[NullableContext(1)]
+	[UFunction(EFunctionFlags.FUNC_None)]
+	public static bool FindMotorSummonPlaceLocation(int entityId, AActor motor, UPrimitiveComponent testComponent, FRotator testRotation, float upOffset, float sideOffset, float frontOffset, float maxVerticalAdjust, int iterations)
+	{
+		CharacterActorComponent characterActorComponent;
+		if ((characterActorComponent = EntitySystem.Instance.GetComponent<CharacterActorComponent>(entityId)) == null)
+		{
+			TsBaseCharacter baseCharacter = Global.BaseCharacter;
+			characterActorComponent = ((baseCharacter != null) ? baseCharacter.CharacterActorComponent : null);
+		}
+		CharacterActorComponent characterActorComponent2 = characterActorComponent;
+		if (characterActorComponent2 == null)
+		{
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.Motor;
+			ELogAuthor author = ELogAuthor.XDW;
+			string message = "FindMotorSummonPlaceLocation 找不到召唤者";
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("EntityId", entityId);
+			instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+			return false;
+		}
+		global::Vector actorUpProxy = characterActorComponent2.ActorUpProxy;
+		global::Vector actorRightProxy = characterActorComponent2.ActorRightProxy;
+		global::Vector actorForwardProxy = characterActorComponent2.ActorForwardProxy;
+		FVectorDouble fvectorDouble = characterActorComponent2.ActorLocationProxy.ToUeVector(false);
+		TsVehicleBlueprintFunctionLibrary.AddScaledVector(ref fvectorDouble, actorUpProxy, (double)(upOffset - characterActorComponent2.ScaledHalfHeight));
+		float num = characterActorComponent2.ScaledRadius + sideOffset;
+		float num2 = characterActorComponent2.ScaledRadius + frontOffset;
+		for (int i = 0; i < 4; i++)
+		{
+			FVectorDouble fvectorDouble2 = fvectorDouble;
+			switch (i)
+			{
+			case 0:
+				TsVehicleBlueprintFunctionLibrary.AddScaledVector(ref fvectorDouble2, actorRightProxy, (double)num);
+				break;
+			case 1:
+				TsVehicleBlueprintFunctionLibrary.AddScaledVector(ref fvectorDouble2, actorRightProxy, (double)(-(double)num));
+				break;
+			case 2:
+				TsVehicleBlueprintFunctionLibrary.AddScaledVector(ref fvectorDouble2, actorForwardProxy, (double)num2);
+				break;
+			default:
+				TsVehicleBlueprintFunctionLibrary.AddScaledVector(ref fvectorDouble2, actorForwardProxy, (double)(-(double)num2));
+				break;
+			}
+			FVectorDouble fvectorDouble3 = fvectorDouble2;
+			if (UKuroLevelPlaySubsystem.D_FindTeleportSpot(motor, testComponent, fvectorDouble2, testRotation, (byte)iterations, ref fvectorDouble3) && Math.Abs(actorUpProxy.DotProduct(fvectorDouble3.X - fvectorDouble2.X, fvectorDouble3.Y - fvectorDouble2.Y, fvectorDouble3.Z - fvectorDouble2.Z)) <= (double)maxVerticalAdjust && !TsVehicleBlueprintFunctionLibrary.IsMotorSummonTraceBlocked(characterActorComponent2.Actor, motor, fvectorDouble, fvectorDouble3))
+			{
+				TsVehicleBlueprintFunctionLibrary._motorSummonPlaceLocationInternal = fvectorDouble3;
+				return true;
+			}
+		}
+		return false;
+	}
+
+	// Token: 0x06016D3D RID: 93501 RVA: 0x006A702A File Offset: 0x006A522A
+	[UFunction(EFunctionFlags.FUNC_None)]
+	public static FVectorDouble GetMotorSummonPlaceLocation()
+	{
+		return TsVehicleBlueprintFunctionLibrary._motorSummonPlaceLocationInternal;
+	}
+
+	// Token: 0x06016D3E RID: 93502 RVA: 0x006A7034 File Offset: 0x006A5234
+	[NullableContext(1)]
+	private static string FormatDebugLocation(FVectorDouble location)
+	{
+		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(6, 3);
+		defaultInterpolatedStringHandler.AppendLiteral("(");
+		defaultInterpolatedStringHandler.AppendFormatted<double>(location.X, "F1");
+		defaultInterpolatedStringHandler.AppendLiteral(", ");
+		defaultInterpolatedStringHandler.AppendFormatted<double>(location.Y, "F1");
+		defaultInterpolatedStringHandler.AppendLiteral(", ");
+		defaultInterpolatedStringHandler.AppendFormatted<double>(location.Z, "F1");
+		defaultInterpolatedStringHandler.AppendLiteral(")");
+		return defaultInterpolatedStringHandler.ToStringAndClear();
+	}
+
+	// Token: 0x06016D3F RID: 93503 RVA: 0x006A70B7 File Offset: 0x006A52B7
+	[NullableContext(1)]
+	private static void AddScaledVector(ref FVectorDouble location, global::Vector direction, double scale)
+	{
+		location.X += direction.X * scale;
+		location.Y += direction.Y * scale;
+		location.Z += direction.Z * scale;
+	}
+
+	// Token: 0x06016D40 RID: 93504 RVA: 0x006A70F0 File Offset: 0x006A52F0
+	[NullableContext(1)]
+	private static bool IsMotorSummonTraceBlocked(AActor summoner, AActor motor, FVectorDouble start, FVectorDouble end)
+	{
+		UTraceLineElement motorSummonTrace = TsVehicleBlueprintFunctionLibrary.MotorSummonTrace;
+		motorSummonTrace.WorldContextObject = summoner;
+		motorSummonTrace.ActorsToIgnore.Empty(true);
+		motorSummonTrace.ActorsToIgnore.Add(motor);
+		TraceElementCommon.Instance.SetStartLocation(motorSummonTrace, start);
+		TraceElementCommon.Instance.SetEndLocation(motorSummonTrace, end);
+		bool result = false;
+		foreach (ETraceTypeQuery traceTypeQuery in TsVehicleBlueprintFunctionLibrary.MotorSummonTraceTypes)
+		{
+			motorSummonTrace.SetTraceTypeQuery(traceTypeQuery);
+			if (TraceElementCommon.Instance.LineTrace(motorSummonTrace, "TsVehicleBlueprintFunctionLibrary.FindMotorSummonPlaceLocation") && motorSummonTrace.HitResult.bBlockingHit)
+			{
+				result = true;
+				break;
+			}
+		}
+		motorSummonTrace.WorldContextObject = null;
+		motorSummonTrace.ActorsToIgnore.Empty(true);
+		return result;
+	}
+
+	// Token: 0x06016D41 RID: 93505 RVA: 0x006A71A0 File Offset: 0x006A53A0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static void MotorAppearance(int entityId, TsBaseVehicle motor, string skillId, bool forceBrake = true, float hangTimeAfterAppear = 2f, long endHangBuffId = 0L, float disappearDistance = 1000f, float disappearTime = 60f, long disappearBuffId = 0L)
@@ -1055,7 +1199,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		}, 500f, 1f, null, null, true);
 	}
 
-	// Token: 0x06019466 RID: 103526 RVA: 0x0068127C File Offset: 0x0067F47C
+	// Token: 0x06016D42 RID: 93506 RVA: 0x006A759C File Offset: 0x006A579C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected unsafe static TsBaseVehicle SummonAndRideMotorcycle(int entityId, FTransform seatTrans, long motorSkillId)
@@ -1172,7 +1316,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return component4.Actor;
 	}
 
-	// Token: 0x06019467 RID: 103527 RVA: 0x006816FC File Offset: 0x0067F8FC
+	// Token: 0x06016D43 RID: 93507 RVA: 0x006A7A1C File Offset: 0x006A5C1C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static TsBaseCharacter GetPassengerOnVehicle(int entityId, int seat)
@@ -1200,7 +1344,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return component2.Actor;
 	}
 
-	// Token: 0x06019468 RID: 103528 RVA: 0x00681748 File Offset: 0x0067F948
+	// Token: 0x06016D44 RID: 93508 RVA: 0x006A7A68 File Offset: 0x006A5C68
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void SetMotorAndroidInitParams(UKuroVehicleMovementComponent vehicleMove)
@@ -1223,7 +1367,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		vehicleMove.MaxSimulationIterations = 1;
 	}
 
-	// Token: 0x06019469 RID: 103529 RVA: 0x006817F8 File Offset: 0x0067F9F8
+	// Token: 0x06016D45 RID: 93509 RVA: 0x006A7B18 File Offset: 0x006A5D18
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool NeedSimulateMotorIk(int entityId)
 	{
@@ -1235,7 +1379,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return component != null && component.GetPlayerId() != CreatureModel.Instance.GetPlayerId();
 	}
 
-	// Token: 0x0601946A RID: 103530 RVA: 0x00681839 File Offset: 0x0067FA39
+	// Token: 0x06016D46 RID: 93510 RVA: 0x006A7B59 File Offset: 0x006A5D59
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool IsVehicleInCatapult(int entityId)
 	{
@@ -1243,7 +1387,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return component != null && component.Active;
 	}
 
-	// Token: 0x0601946B RID: 103531 RVA: 0x00681851 File Offset: 0x0067FA51
+	// Token: 0x06016D47 RID: 93511 RVA: 0x006A7B71 File Offset: 0x006A5D71
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool HasVehicleCatapultReachedTarget(int entityId)
 	{
@@ -1251,7 +1395,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return component != null && component.GetHasReachedTarget();
 	}
 
-	// Token: 0x0601946C RID: 103532 RVA: 0x00681869 File Offset: 0x0067FA69
+	// Token: 0x06016D48 RID: 93512 RVA: 0x006A7B89 File Offset: 0x006A5D89
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsVehicleBlueprintFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -1261,35 +1405,35 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		return TsVehicleBlueprintFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x0601946D RID: 103533 RVA: 0x00681890 File Offset: 0x0067FA90
+	// Token: 0x06016D49 RID: 93513 RVA: 0x006A7BB0 File Offset: 0x006A5DB0
 	public TsVehicleBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(TsVehicleBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601946E RID: 103534 RVA: 0x006818B8 File Offset: 0x0067FAB8
+	// Token: 0x06016D4A RID: 93514 RVA: 0x006A7BD8 File Offset: 0x006A5DD8
 	[NullableContext(1)]
 	public TsVehicleBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsVehicleBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601946F RID: 103535 RVA: 0x006818EB File Offset: 0x0067FAEB
+	// Token: 0x06016D4B RID: 93515 RVA: 0x006A7C0B File Offset: 0x006A5E0B
 	protected TsVehicleBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06019470 RID: 103536 RVA: 0x006818F4 File Offset: 0x0067FAF4
+	// Token: 0x06016D4C RID: 93516 RVA: 0x006A7C14 File Offset: 0x006A5E14
 	protected unsafe static void __CPPCALL_UpdateVehiclePerformData_Implementation(TsVehicleBlueprintFunctionLibrary.__UpdateVehiclePerformData_FunctionParams* __Params)
 	{
 		TsVehicleBlueprintFunctionLibrary.UpdateVehiclePerformData(__Params->entityId, ref __Params->isImpacted, ref __Params->direction, ref __Params->strength);
 	}
 
-	// Token: 0x06019471 RID: 103537 RVA: 0x00681913 File Offset: 0x0067FB13
+	// Token: 0x06016D4D RID: 93517 RVA: 0x006A7C33 File Offset: 0x006A5E33
 	protected unsafe static void __CPPCALL_UpdateDrivedVehiclePerformData_Implementation(TsVehicleBlueprintFunctionLibrary.__UpdateDrivedVehiclePerformData_FunctionParams* __Params)
 	{
 		TsVehicleBlueprintFunctionLibrary.UpdateDrivedVehiclePerformData(__Params->entityId, ref __Params->isImpacted, ref __Params->direction, ref __Params->strength);
 	}
 
-	// Token: 0x06019472 RID: 103538 RVA: 0x00681934 File Offset: 0x0067FB34
+	// Token: 0x06016D4E RID: 93518 RVA: 0x006A7C54 File Offset: 0x006A5E54
 	protected unsafe static void __CPPCALL_GetVehicleImpactInfo_Implementation(TsVehicleBlueprintFunctionLibrary.__GetVehicleImpactInfo_FunctionParams* __Params)
 	{
 		FHitResult fhitResult = new FHitResult(&__Params->impactHitResult, true, true);
@@ -1297,7 +1441,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		UnrealReflectionUtils.CopyNativeStruct(FHitResult.StaticStruct(), &__Params->impactHitResult, (fhitResult != null) ? fhitResult.NativePtr : ((IntPtr)0), 1, false);
 	}
 
-	// Token: 0x06019473 RID: 103539 RVA: 0x0068198C File Offset: 0x0067FB8C
+	// Token: 0x06016D4F RID: 93519 RVA: 0x006A7CAC File Offset: 0x006A5EAC
 	protected unsafe static void __CPPCALL_GetDrivingVehicleImpactInfo_Implementation(TsVehicleBlueprintFunctionLibrary.__GetDrivingVehicleImpactInfo_FunctionParams* __Params)
 	{
 		FHitResult fhitResult = new FHitResult(&__Params->impactHitResult, true, true);
@@ -1305,62 +1449,62 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		UnrealReflectionUtils.CopyNativeStruct(FHitResult.StaticStruct(), &__Params->impactHitResult, (fhitResult != null) ? fhitResult.NativePtr : ((IntPtr)0), 1, false);
 	}
 
-	// Token: 0x06019474 RID: 103540 RVA: 0x006819E1 File Offset: 0x0067FBE1
+	// Token: 0x06016D50 RID: 93520 RVA: 0x006A7D01 File Offset: 0x006A5F01
 	protected unsafe static void __CPPCALL_UpdateAnimInfo_Implementation(TsVehicleBlueprintFunctionLibrary.__UpdateAnimInfo_FunctionParams* __Params)
 	{
 		TsVehicleBlueprintFunctionLibrary.UpdateAnimInfo(__Params->entityId);
 	}
 
-	// Token: 0x06019475 RID: 103541 RVA: 0x006819EE File Offset: 0x0067FBEE
+	// Token: 0x06016D51 RID: 93521 RVA: 0x006A7D0E File Offset: 0x006A5F0E
 	protected unsafe static void __CPPCALL_GetAndResetEnterSprint_Implementation(TsVehicleBlueprintFunctionLibrary.__GetAndResetEnterSprint_FunctionParams* __Params)
 	{
 		__Params->__Result = TsVehicleBlueprintFunctionLibrary.GetAndResetEnterSprint(__Params->entityId);
 	}
 
-	// Token: 0x06019476 RID: 103542 RVA: 0x00681A01 File Offset: 0x0067FC01
+	// Token: 0x06016D52 RID: 93522 RVA: 0x006A7D21 File Offset: 0x006A5F21
 	protected unsafe static void __CPPCALL_GetDrivedVehicleSeatRot_Implementation(TsVehicleBlueprintFunctionLibrary.__GetDrivedVehicleSeatRot_FunctionParams* __Params)
 	{
 		__Params->__Result = TsVehicleBlueprintFunctionLibrary.GetDrivedVehicleSeatRot(__Params->entityId, ref __Params->outRot);
 	}
 
-	// Token: 0x06019477 RID: 103543 RVA: 0x00681A1A File Offset: 0x0067FC1A
+	// Token: 0x06016D53 RID: 93523 RVA: 0x006A7D3A File Offset: 0x006A5F3A
 	protected unsafe static void __CPPCALL_ConvertAngleToPassengerSpace_Implementation(TsVehicleBlueprintFunctionLibrary.__ConvertAngleToPassengerSpace_FunctionParams* __Params)
 	{
 		__Params->__Result = TsVehicleBlueprintFunctionLibrary.ConvertAngleToPassengerSpace(__Params->entityId, __Params->yawInVehicleCoordinate);
 	}
 
-	// Token: 0x06019478 RID: 103544 RVA: 0x00681A33 File Offset: 0x0067FC33
+	// Token: 0x06016D54 RID: 93524 RVA: 0x006A7D53 File Offset: 0x006A5F53
 	protected unsafe static void __CPPCALL_GetVehicleVelocity_Implementation(TsVehicleBlueprintFunctionLibrary.__GetVehicleVelocity_FunctionParams* __Params)
 	{
 		__Params->__Result = TsVehicleBlueprintFunctionLibrary.GetVehicleVelocity(__Params->entityId, ref __Params->outVelocity);
 	}
 
-	// Token: 0x06019479 RID: 103545 RVA: 0x00681A4C File Offset: 0x0067FC4C
+	// Token: 0x06016D55 RID: 93525 RVA: 0x006A7D6C File Offset: 0x006A5F6C
 	protected unsafe static void __CPPCALL_GetDrivedVehicleVelocity_Implementation(TsVehicleBlueprintFunctionLibrary.__GetDrivedVehicleVelocity_FunctionParams* __Params)
 	{
 		__Params->__Result = TsVehicleBlueprintFunctionLibrary.GetDrivedVehicleVelocity(__Params->entityId, ref __Params->outVelocity);
 	}
 
-	// Token: 0x0601947A RID: 103546 RVA: 0x00681A65 File Offset: 0x0067FC65
+	// Token: 0x06016D56 RID: 93526 RVA: 0x006A7D85 File Offset: 0x006A5F85
 	protected unsafe static void __CPPCALL_GetVehicleRotiationSpeed_Implementation(TsVehicleBlueprintFunctionLibrary.__GetVehicleRotiationSpeed_FunctionParams* __Params)
 	{
 		__Params->__Result = TsVehicleBlueprintFunctionLibrary.GetVehicleRotiationSpeed(__Params->entityId);
 	}
 
-	// Token: 0x0601947B RID: 103547 RVA: 0x00681A78 File Offset: 0x0067FC78
+	// Token: 0x06016D57 RID: 93527 RVA: 0x006A7D98 File Offset: 0x006A5F98
 	protected unsafe static void __CPPCALL_GetDrivedVehicleRotiationSpeed_Implementation(TsVehicleBlueprintFunctionLibrary.__GetDrivedVehicleRotiationSpeed_FunctionParams* __Params)
 	{
 		__Params->__Result = TsVehicleBlueprintFunctionLibrary.GetDrivedVehicleRotiationSpeed(__Params->entityId);
 	}
 
-	// Token: 0x0601947C RID: 103548 RVA: 0x00681A8C File Offset: 0x0067FC8C
+	// Token: 0x06016D58 RID: 93528 RVA: 0x006A7DAC File Offset: 0x006A5FAC
 	protected unsafe static void __CPPCALL_SmoothVehicleRotation_Implementation(TsVehicleBlueprintFunctionLibrary.__SmoothVehicleRotation_FunctionParams* __Params)
 	{
 		string context = FString.ToString((void*)(&__Params->context));
 		TsVehicleBlueprintFunctionLibrary.SmoothVehicleRotation(__Params->entityId, __Params->target, __Params->speed, context);
 	}
 
-	// Token: 0x0601947D RID: 103549 RVA: 0x00681AC0 File Offset: 0x0067FCC0
+	// Token: 0x06016D59 RID: 93529 RVA: 0x006A7DE0 File Offset: 0x006A5FE0
 	protected unsafe static void __CPPCALL_AddBuffToVehicleFromGA_Implementation(TsVehicleBlueprintFunctionLibrary.__AddBuffToVehicleFromGA_FunctionParams* __Params)
 	{
 		TsBaseVehicle orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsBaseVehicle>(__Params->target);
@@ -1368,25 +1512,39 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		TsVehicleBlueprintFunctionLibrary.AddBuffToVehicleFromGA(__Params->entityId, orCreateUObjectByNativePointer, __Params->buffId, skillId, __Params->addCount);
 	}
 
-	// Token: 0x0601947E RID: 103550 RVA: 0x00681AFF File Offset: 0x0067FCFF
+	// Token: 0x06016D5A RID: 93530 RVA: 0x006A7E1F File Offset: 0x006A601F
 	protected unsafe static void __CPPCALL_TryGetPlayerMotorEntityId_Implementation(TsVehicleBlueprintFunctionLibrary.__TryGetPlayerMotorEntityId_FunctionParams* __Params)
 	{
 		__Params->__Result = TsVehicleBlueprintFunctionLibrary.TryGetPlayerMotorEntityId();
 	}
 
-	// Token: 0x0601947F RID: 103551 RVA: 0x00681B0C File Offset: 0x0067FD0C
+	// Token: 0x06016D5B RID: 93531 RVA: 0x006A7E2C File Offset: 0x006A602C
 	protected unsafe static void __CPPCALL_ClearMotorTimer_Implementation(TsVehicleBlueprintFunctionLibrary.__ClearMotorTimer_FunctionParams* __Params)
 	{
 		TsVehicleBlueprintFunctionLibrary.ClearMotorTimer();
 	}
 
-	// Token: 0x06019480 RID: 103552 RVA: 0x00681B13 File Offset: 0x0067FD13
+	// Token: 0x06016D5C RID: 93532 RVA: 0x006A7E33 File Offset: 0x006A6033
 	protected unsafe static void __CPPCALL_ClearMotorAppearanceTag_Implementation(TsVehicleBlueprintFunctionLibrary.__ClearMotorAppearanceTag_FunctionParams* __Params)
 	{
 		TsVehicleBlueprintFunctionLibrary.ClearMotorAppearanceTag(BuiltinUtils.GetOrCreateUObjectByNativePointer<TsBaseVehicle>(__Params->motor));
 	}
 
-	// Token: 0x06019481 RID: 103553 RVA: 0x00681B28 File Offset: 0x0067FD28
+	// Token: 0x06016D5D RID: 93533 RVA: 0x006A7E48 File Offset: 0x006A6048
+	protected unsafe static void __CPPCALL_FindMotorSummonPlaceLocation_Implementation(TsVehicleBlueprintFunctionLibrary.__FindMotorSummonPlaceLocation_FunctionParams* __Params)
+	{
+		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->motor);
+		UPrimitiveComponent orCreateUObjectByNativePointer2 = BuiltinUtils.GetOrCreateUObjectByNativePointer<UPrimitiveComponent>(__Params->testComponent);
+		__Params->__Result = TsVehicleBlueprintFunctionLibrary.FindMotorSummonPlaceLocation(__Params->entityId, orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->testRotation, __Params->upOffset, __Params->sideOffset, __Params->frontOffset, __Params->maxVerticalAdjust, __Params->iterations);
+	}
+
+	// Token: 0x06016D5E RID: 93534 RVA: 0x006A7EA4 File Offset: 0x006A60A4
+	protected unsafe static void __CPPCALL_GetMotorSummonPlaceLocation_Implementation(TsVehicleBlueprintFunctionLibrary.__GetMotorSummonPlaceLocation_FunctionParams* __Params)
+	{
+		__Params->__Result = TsVehicleBlueprintFunctionLibrary.GetMotorSummonPlaceLocation();
+	}
+
+	// Token: 0x06016D5F RID: 93535 RVA: 0x006A7EB4 File Offset: 0x006A60B4
 	protected unsafe static void __CPPCALL_MotorAppearance_Implementation(TsVehicleBlueprintFunctionLibrary.__MotorAppearance_FunctionParams* __Params)
 	{
 		TsBaseVehicle orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsBaseVehicle>(__Params->motor);
@@ -1394,7 +1552,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		TsVehicleBlueprintFunctionLibrary.MotorAppearance(__Params->entityId, orCreateUObjectByNativePointer, skillId, __Params->forceBrake, __Params->hangTimeAfterAppear, __Params->endHangBuffId, __Params->disappearDistance, __Params->disappearTime, __Params->disappearBuffId);
 	}
 
-	// Token: 0x06019482 RID: 103554 RVA: 0x00681B7F File Offset: 0x0067FD7F
+	// Token: 0x06016D60 RID: 93536 RVA: 0x006A7F0B File Offset: 0x006A610B
 	protected unsafe static void __CPPCALL_SummonAndRideMotorcycle_Implementation(TsVehicleBlueprintFunctionLibrary.__SummonAndRideMotorcycle_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -1402,7 +1560,7 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		ptr = ((tsBaseVehicle != null) ? tsBaseVehicle.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x06019483 RID: 103555 RVA: 0x00681BAD File Offset: 0x0067FDAD
+	// Token: 0x06016D61 RID: 93537 RVA: 0x006A7F39 File Offset: 0x006A6139
 	protected unsafe static void __CPPCALL_GetPassengerOnVehicle_Implementation(TsVehicleBlueprintFunctionLibrary.__GetPassengerOnVehicle_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -1410,51 +1568,67 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		ptr = ((passengerOnVehicle != null) ? passengerOnVehicle.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x06019484 RID: 103556 RVA: 0x00681BD5 File Offset: 0x0067FDD5
+	// Token: 0x06016D62 RID: 93538 RVA: 0x006A7F61 File Offset: 0x006A6161
 	protected unsafe static void __CPPCALL_SetMotorAndroidInitParams_Implementation(TsVehicleBlueprintFunctionLibrary.__SetMotorAndroidInitParams_FunctionParams* __Params)
 	{
 		TsVehicleBlueprintFunctionLibrary.SetMotorAndroidInitParams(BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroVehicleMovementComponent>(__Params->vehicleMove));
 	}
 
-	// Token: 0x06019485 RID: 103557 RVA: 0x00681BE7 File Offset: 0x0067FDE7
+	// Token: 0x06016D63 RID: 93539 RVA: 0x006A7F73 File Offset: 0x006A6173
 	protected unsafe static void __CPPCALL_NeedSimulateMotorIk_Implementation(TsVehicleBlueprintFunctionLibrary.__NeedSimulateMotorIk_FunctionParams* __Params)
 	{
 		__Params->__Result = TsVehicleBlueprintFunctionLibrary.NeedSimulateMotorIk(__Params->entityId);
 	}
 
-	// Token: 0x06019486 RID: 103558 RVA: 0x00681BFA File Offset: 0x0067FDFA
+	// Token: 0x06016D64 RID: 93540 RVA: 0x006A7F86 File Offset: 0x006A6186
 	protected unsafe static void __CPPCALL_IsVehicleInCatapult_Implementation(TsVehicleBlueprintFunctionLibrary.__IsVehicleInCatapult_FunctionParams* __Params)
 	{
 		__Params->__Result = TsVehicleBlueprintFunctionLibrary.IsVehicleInCatapult(__Params->entityId);
 	}
 
-	// Token: 0x06019487 RID: 103559 RVA: 0x00681C0D File Offset: 0x0067FE0D
+	// Token: 0x06016D65 RID: 93541 RVA: 0x006A7F99 File Offset: 0x006A6199
 	protected unsafe static void __CPPCALL_HasVehicleCatapultReachedTarget_Implementation(TsVehicleBlueprintFunctionLibrary.__HasVehicleCatapultReachedTarget_FunctionParams* __Params)
 	{
 		__Params->__Result = TsVehicleBlueprintFunctionLibrary.HasVehicleCatapultReachedTarget(__Params->entityId);
 	}
 
-	// Token: 0x0400BBB9 RID: 48057
+	// Token: 0x0400BF47 RID: 48967
+	private const int MotorSummonDirectionCount = 4;
+
+	// Token: 0x0400BF48 RID: 48968
+	[Nullable(1)]
+	private const string MotorSummonTraceProfileKey = "TsVehicleBlueprintFunctionLibrary.FindMotorSummonPlaceLocation";
+
+	// Token: 0x0400BF49 RID: 48969
+	[Nullable(1)]
+	[StaticVariableRuleIgnore]
+	private static readonly ETraceTypeQuery[] MotorSummonTraceTypes = new ETraceTypeQuery[]
+	{
+		KuroTraceTypeQuery.IkGround,
+		KuroTraceTypeQuery.AcrossBlock
+	};
+
+	// Token: 0x0400BF4A RID: 48970
 	[StaticVariableRuleIgnore]
 	private static int photographTagId = GameplayTagDefine.EGameplayTagId["载具.摩托.功能开关.强制刹停.摩托拍照召唤"];
 
-	// Token: 0x0400BBBA RID: 48058
+	// Token: 0x0400BF4B RID: 48971
 	[StaticVariableRuleIgnore]
 	private static int disableMotorcycleTagId = GameplayTagDefine.EGameplayTagId["角色.Common.探索技能.禁用摩托"];
 
-	// Token: 0x0400BBBB RID: 48059
+	// Token: 0x0400BF4C RID: 48972
 	[Nullable(2)]
 	protected static TimerHandle MotorHangTimerHandle = null;
 
-	// Token: 0x0400BBBC RID: 48060
+	// Token: 0x0400BF4D RID: 48973
 	[Nullable(2)]
 	protected static TimerHandle MotorDisappearTimerHandle = null;
 
-	// Token: 0x0400BBBD RID: 48061
+	// Token: 0x0400BF4E RID: 48974
 	[Nullable(2)]
 	protected static TimerHandle MotorCheckDistanceTimerHandle = null;
 
-	// Token: 0x0400BBBE RID: 48062
+	// Token: 0x0400BF4F RID: 48975
 	[Nullable(new byte[]
 	{
 		2,
@@ -1462,561 +1636,632 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 	})]
 	protected static WeakReference<TsBaseVehicle> CurrentMotor = null;
 
-	// Token: 0x0400BBBF RID: 48063
+	// Token: 0x0400BF50 RID: 48976
 	[Nullable(2)]
 	protected static TsVehicleBlueprintFunctionLibrary.IVehicleBuffContext MotorDisapperBuffContext = null;
 
-	// Token: 0x0400BBC0 RID: 48064
+	// Token: 0x0400BF51 RID: 48977
+	[Nullable(2)]
+	private static UTraceLineElement _motorSummonTraceInternal;
+
+	// Token: 0x0400BF52 RID: 48978
+	private static FVectorDouble _motorSummonPlaceLocationInternal;
+
+	// Token: 0x0400BF53 RID: 48979
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C";
 
-	// Token: 0x0400BBC1 RID: 48065
+	// Token: 0x0400BF54 RID: 48980
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400BBC2 RID: 48066
+	// Token: 0x0400BF55 RID: 48981
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x020095B0 RID: 38320
+	// Token: 0x020087DA RID: 34778
 	[NullableContext(1)]
 	public interface IVehicleBuffContext
 	{
-		// Token: 0x1700A0B2 RID: 41138
-		// (get) Token: 0x0604C054 RID: 311380
-		// (set) Token: 0x0604C055 RID: 311381
+		// Token: 0x17007841 RID: 30785
+		// (get) Token: 0x060424F7 RID: 271607
+		// (set) Token: 0x060424F8 RID: 271608
 		int EntityId { get; set; }
 
-		// Token: 0x1700A0B3 RID: 41139
-		// (get) Token: 0x0604C056 RID: 311382
-		// (set) Token: 0x0604C057 RID: 311383
+		// Token: 0x17007842 RID: 30786
+		// (get) Token: 0x060424F9 RID: 271609
+		// (set) Token: 0x060424FA RID: 271610
 		long BuffId { get; set; }
 
-		// Token: 0x1700A0B4 RID: 41140
-		// (get) Token: 0x0604C058 RID: 311384
-		// (set) Token: 0x0604C059 RID: 311385
+		// Token: 0x17007843 RID: 30787
+		// (get) Token: 0x060424FB RID: 271611
+		// (set) Token: 0x060424FC RID: 271612
 		string SkillId { get; set; }
 	}
 
-	// Token: 0x020095B1 RID: 38321
+	// Token: 0x020087DB RID: 34779
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __UpdateVehiclePerformData_FunctionParams
 	{
-		// Token: 0x0403010A RID: 196874
+		// Token: 0x0402B79D RID: 178077
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0403010B RID: 196875
+		// Token: 0x0402B79E RID: 178078
 		[FieldOffset(4)]
 		public bool isImpacted;
 
-		// Token: 0x0403010C RID: 196876
+		// Token: 0x0402B79F RID: 178079
 		[FieldOffset(8)]
 		public float direction;
 
-		// Token: 0x0403010D RID: 196877
+		// Token: 0x0402B7A0 RID: 178080
 		[FieldOffset(12)]
 		public float strength;
 
-		// Token: 0x0403010E RID: 196878
+		// Token: 0x0402B7A1 RID: 178081
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020095B2 RID: 38322
+	// Token: 0x020087DC RID: 34780
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __UpdateDrivedVehiclePerformData_FunctionParams
 	{
-		// Token: 0x0403010F RID: 196879
+		// Token: 0x0402B7A2 RID: 178082
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030110 RID: 196880
+		// Token: 0x0402B7A3 RID: 178083
 		[FieldOffset(4)]
 		public bool isImpacted;
 
-		// Token: 0x04030111 RID: 196881
+		// Token: 0x0402B7A4 RID: 178084
 		[FieldOffset(8)]
 		public float direction;
 
-		// Token: 0x04030112 RID: 196882
+		// Token: 0x0402B7A5 RID: 178085
 		[FieldOffset(12)]
 		public float strength;
 
-		// Token: 0x04030113 RID: 196883
+		// Token: 0x0402B7A6 RID: 178086
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020095B3 RID: 38323
+	// Token: 0x020087DD RID: 34781
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 176)]
 	protected ref struct __GetVehicleImpactInfo_FunctionParams
 	{
-		// Token: 0x04030114 RID: 196884
+		// Token: 0x0402B7A7 RID: 178087
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030115 RID: 196885
+		// Token: 0x0402B7A8 RID: 178088
 		[FieldOffset(4)]
 		public bool isImpacted;
 
-		// Token: 0x04030116 RID: 196886
+		// Token: 0x0402B7A9 RID: 178089
 		[FieldOffset(8)]
 		public FVector impactVelocity;
 
-		// Token: 0x04030117 RID: 196887
+		// Token: 0x0402B7AA RID: 178090
 		[FieldOffset(20)]
 		public byte impactHitResult;
 
-		// Token: 0x04030118 RID: 196888
+		// Token: 0x0402B7AB RID: 178091
 		[FieldOffset(168)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020095B4 RID: 38324
+	// Token: 0x020087DE RID: 34782
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 176)]
 	protected ref struct __GetDrivingVehicleImpactInfo_FunctionParams
 	{
-		// Token: 0x04030119 RID: 196889
+		// Token: 0x0402B7AC RID: 178092
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0403011A RID: 196890
+		// Token: 0x0402B7AD RID: 178093
 		[FieldOffset(4)]
 		public bool isImpacted;
 
-		// Token: 0x0403011B RID: 196891
+		// Token: 0x0402B7AE RID: 178094
 		[FieldOffset(8)]
 		public FVector impactVelocity;
 
-		// Token: 0x0403011C RID: 196892
+		// Token: 0x0402B7AF RID: 178095
 		[FieldOffset(20)]
 		public byte impactHitResult;
 
-		// Token: 0x0403011D RID: 196893
+		// Token: 0x0402B7B0 RID: 178096
 		[FieldOffset(168)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020095B5 RID: 38325
+	// Token: 0x020087DF RID: 34783
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __UpdateAnimInfo_FunctionParams
 	{
-		// Token: 0x0403011E RID: 196894
+		// Token: 0x0402B7B1 RID: 178097
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0403011F RID: 196895
+		// Token: 0x0402B7B2 RID: 178098
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020095B6 RID: 38326
+	// Token: 0x020087E0 RID: 34784
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetAndResetEnterSprint_FunctionParams
 	{
-		// Token: 0x04030120 RID: 196896
+		// Token: 0x0402B7B3 RID: 178099
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030121 RID: 196897
+		// Token: 0x0402B7B4 RID: 178100
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030122 RID: 196898
+		// Token: 0x0402B7B5 RID: 178101
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020095B7 RID: 38327
+	// Token: 0x020087E1 RID: 34785
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetDrivedVehicleSeatRot_FunctionParams
 	{
-		// Token: 0x04030123 RID: 196899
+		// Token: 0x0402B7B6 RID: 178102
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030124 RID: 196900
+		// Token: 0x0402B7B7 RID: 178103
 		[FieldOffset(4)]
 		public FRotator outRot;
 
-		// Token: 0x04030125 RID: 196901
+		// Token: 0x0402B7B8 RID: 178104
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030126 RID: 196902
+		// Token: 0x0402B7B9 RID: 178105
 		[FieldOffset(24)]
 		public bool __Result;
 	}
 
-	// Token: 0x020095B8 RID: 38328
+	// Token: 0x020087E2 RID: 34786
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ConvertAngleToPassengerSpace_FunctionParams
 	{
-		// Token: 0x04030127 RID: 196903
+		// Token: 0x0402B7BA RID: 178106
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030128 RID: 196904
+		// Token: 0x0402B7BB RID: 178107
 		[FieldOffset(4)]
 		public float yawInVehicleCoordinate;
 
-		// Token: 0x04030129 RID: 196905
+		// Token: 0x0402B7BC RID: 178108
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0403012A RID: 196906
+		// Token: 0x0402B7BD RID: 178109
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x020095B9 RID: 38329
+	// Token: 0x020087E3 RID: 34787
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetVehicleVelocity_FunctionParams
 	{
-		// Token: 0x0403012B RID: 196907
+		// Token: 0x0402B7BE RID: 178110
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0403012C RID: 196908
+		// Token: 0x0402B7BF RID: 178111
 		[FieldOffset(4)]
 		public FVector outVelocity;
 
-		// Token: 0x0403012D RID: 196909
+		// Token: 0x0402B7C0 RID: 178112
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0403012E RID: 196910
+		// Token: 0x0402B7C1 RID: 178113
 		[FieldOffset(24)]
 		public bool __Result;
 	}
 
-	// Token: 0x020095BA RID: 38330
+	// Token: 0x020087E4 RID: 34788
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetDrivedVehicleVelocity_FunctionParams
 	{
-		// Token: 0x0403012F RID: 196911
+		// Token: 0x0402B7C2 RID: 178114
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030130 RID: 196912
+		// Token: 0x0402B7C3 RID: 178115
 		[FieldOffset(4)]
 		public FVector outVelocity;
 
-		// Token: 0x04030131 RID: 196913
+		// Token: 0x0402B7C4 RID: 178116
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030132 RID: 196914
+		// Token: 0x0402B7C5 RID: 178117
 		[FieldOffset(24)]
 		public bool __Result;
 	}
 
-	// Token: 0x020095BB RID: 38331
+	// Token: 0x020087E5 RID: 34789
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetVehicleRotiationSpeed_FunctionParams
 	{
-		// Token: 0x04030133 RID: 196915
+		// Token: 0x0402B7C6 RID: 178118
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030134 RID: 196916
+		// Token: 0x0402B7C7 RID: 178119
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030135 RID: 196917
+		// Token: 0x0402B7C8 RID: 178120
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x020095BC RID: 38332
+	// Token: 0x020087E6 RID: 34790
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetDrivedVehicleRotiationSpeed_FunctionParams
 	{
-		// Token: 0x04030136 RID: 196918
+		// Token: 0x0402B7C9 RID: 178121
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030137 RID: 196919
+		// Token: 0x0402B7CA RID: 178122
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030138 RID: 196920
+		// Token: 0x0402B7CB RID: 178123
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x020095BD RID: 38333
+	// Token: 0x020087E7 RID: 34791
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SmoothVehicleRotation_FunctionParams
 	{
-		// Token: 0x04030139 RID: 196921
+		// Token: 0x0402B7CC RID: 178124
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0403013A RID: 196922
+		// Token: 0x0402B7CD RID: 178125
 		[FieldOffset(4)]
 		public FRotator target;
 
-		// Token: 0x0403013B RID: 196923
+		// Token: 0x0402B7CE RID: 178126
 		[FieldOffset(16)]
 		public float speed;
 
-		// Token: 0x0403013C RID: 196924
+		// Token: 0x0402B7CF RID: 178127
 		[FieldOffset(24)]
 		public FString context;
 
-		// Token: 0x0403013D RID: 196925
+		// Token: 0x0402B7D0 RID: 178128
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020095BE RID: 38334
+	// Token: 0x020087E8 RID: 34792
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 56)]
 	protected ref struct __AddBuffToVehicleFromGA_FunctionParams
 	{
-		// Token: 0x0403013E RID: 196926
+		// Token: 0x0402B7D1 RID: 178129
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0403013F RID: 196927
+		// Token: 0x0402B7D2 RID: 178130
 		[FieldOffset(8)]
 		public IntPtr target;
 
-		// Token: 0x04030140 RID: 196928
+		// Token: 0x0402B7D3 RID: 178131
 		[FieldOffset(16)]
 		public long buffId;
 
-		// Token: 0x04030141 RID: 196929
+		// Token: 0x0402B7D4 RID: 178132
 		[FieldOffset(24)]
 		public FString skillId;
 
-		// Token: 0x04030142 RID: 196930
+		// Token: 0x0402B7D5 RID: 178133
 		[FieldOffset(40)]
 		public int addCount;
 
-		// Token: 0x04030143 RID: 196931
+		// Token: 0x0402B7D6 RID: 178134
 		[FieldOffset(48)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020095BF RID: 38335
+	// Token: 0x020087E9 RID: 34793
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __TryGetPlayerMotorEntityId_FunctionParams
 	{
-		// Token: 0x04030144 RID: 196932
+		// Token: 0x0402B7D7 RID: 178135
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030145 RID: 196933
+		// Token: 0x0402B7D8 RID: 178136
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x020095C0 RID: 38336
+	// Token: 0x020087EA RID: 34794
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __ClearMotorTimer_FunctionParams
 	{
-		// Token: 0x04030146 RID: 196934
+		// Token: 0x0402B7D9 RID: 178137
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020095C1 RID: 38337
+	// Token: 0x020087EB RID: 34795
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __ClearMotorAppearanceTag_FunctionParams
 	{
-		// Token: 0x04030147 RID: 196935
+		// Token: 0x0402B7DA RID: 178138
 		[FieldOffset(0)]
 		public IntPtr motor;
 
-		// Token: 0x04030148 RID: 196936
+		// Token: 0x0402B7DB RID: 178139
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020095C2 RID: 38338
+	// Token: 0x020087EC RID: 34796
+	[CompilerFeatureRequired("RefStructs")]
+	[StructLayout(LayoutKind.Explicit, Size = 72)]
+	protected ref struct __FindMotorSummonPlaceLocation_FunctionParams
+	{
+		// Token: 0x0402B7DC RID: 178140
+		[FieldOffset(0)]
+		public int entityId;
+
+		// Token: 0x0402B7DD RID: 178141
+		[FieldOffset(8)]
+		public IntPtr motor;
+
+		// Token: 0x0402B7DE RID: 178142
+		[FieldOffset(16)]
+		public IntPtr testComponent;
+
+		// Token: 0x0402B7DF RID: 178143
+		[FieldOffset(24)]
+		public FRotator testRotation;
+
+		// Token: 0x0402B7E0 RID: 178144
+		[FieldOffset(36)]
+		public float upOffset;
+
+		// Token: 0x0402B7E1 RID: 178145
+		[FieldOffset(40)]
+		public float sideOffset;
+
+		// Token: 0x0402B7E2 RID: 178146
+		[FieldOffset(44)]
+		public float frontOffset;
+
+		// Token: 0x0402B7E3 RID: 178147
+		[FieldOffset(48)]
+		public float maxVerticalAdjust;
+
+		// Token: 0x0402B7E4 RID: 178148
+		[FieldOffset(52)]
+		public int iterations;
+
+		// Token: 0x0402B7E5 RID: 178149
+		[FieldOffset(56)]
+		public IntPtr __WorldContext;
+
+		// Token: 0x0402B7E6 RID: 178150
+		[FieldOffset(64)]
+		public bool __Result;
+	}
+
+	// Token: 0x020087ED RID: 34797
+	[CompilerFeatureRequired("RefStructs")]
+	[StructLayout(LayoutKind.Explicit, Size = 32)]
+	protected ref struct __GetMotorSummonPlaceLocation_FunctionParams
+	{
+		// Token: 0x0402B7E7 RID: 178151
+		[FieldOffset(0)]
+		public IntPtr __WorldContext;
+
+		// Token: 0x0402B7E8 RID: 178152
+		[FieldOffset(8)]
+		public FVectorDouble __Result;
+	}
+
+	// Token: 0x020087EE RID: 34798
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 72)]
 	protected ref struct __MotorAppearance_FunctionParams
 	{
-		// Token: 0x04030149 RID: 196937
+		// Token: 0x0402B7E9 RID: 178153
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0403014A RID: 196938
+		// Token: 0x0402B7EA RID: 178154
 		[FieldOffset(8)]
 		public IntPtr motor;
 
-		// Token: 0x0403014B RID: 196939
+		// Token: 0x0402B7EB RID: 178155
 		[FieldOffset(16)]
 		public FString skillId;
 
-		// Token: 0x0403014C RID: 196940
+		// Token: 0x0402B7EC RID: 178156
 		[FieldOffset(32)]
 		public bool forceBrake;
 
-		// Token: 0x0403014D RID: 196941
+		// Token: 0x0402B7ED RID: 178157
 		[FieldOffset(36)]
 		public float hangTimeAfterAppear;
 
-		// Token: 0x0403014E RID: 196942
+		// Token: 0x0402B7EE RID: 178158
 		[FieldOffset(40)]
 		public long endHangBuffId;
 
-		// Token: 0x0403014F RID: 196943
+		// Token: 0x0402B7EF RID: 178159
 		[FieldOffset(48)]
 		public float disappearDistance;
 
-		// Token: 0x04030150 RID: 196944
+		// Token: 0x0402B7F0 RID: 178160
 		[FieldOffset(52)]
 		public float disappearTime;
 
-		// Token: 0x04030151 RID: 196945
+		// Token: 0x0402B7F1 RID: 178161
 		[FieldOffset(56)]
 		public long disappearBuffId;
 
-		// Token: 0x04030152 RID: 196946
+		// Token: 0x0402B7F2 RID: 178162
 		[FieldOffset(64)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020095C3 RID: 38339
+	// Token: 0x020087EF RID: 34799
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 96)]
 	protected ref struct __SummonAndRideMotorcycle_FunctionParams
 	{
-		// Token: 0x04030153 RID: 196947
+		// Token: 0x0402B7F3 RID: 178163
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030154 RID: 196948
+		// Token: 0x0402B7F4 RID: 178164
 		[FieldOffset(16)]
 		public FTransform seatTrans;
 
-		// Token: 0x04030155 RID: 196949
+		// Token: 0x0402B7F5 RID: 178165
 		[FieldOffset(64)]
 		public long motorSkillId;
 
-		// Token: 0x04030156 RID: 196950
+		// Token: 0x0402B7F6 RID: 178166
 		[FieldOffset(72)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030157 RID: 196951
+		// Token: 0x0402B7F7 RID: 178167
 		[FieldOffset(80)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x020095C4 RID: 38340
+	// Token: 0x020087F0 RID: 34800
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetPassengerOnVehicle_FunctionParams
 	{
-		// Token: 0x04030158 RID: 196952
+		// Token: 0x0402B7F8 RID: 178168
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030159 RID: 196953
+		// Token: 0x0402B7F9 RID: 178169
 		[FieldOffset(4)]
 		public int seat;
 
-		// Token: 0x0403015A RID: 196954
+		// Token: 0x0402B7FA RID: 178170
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0403015B RID: 196955
+		// Token: 0x0402B7FB RID: 178171
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x020095C5 RID: 38341
+	// Token: 0x020087F1 RID: 34801
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetMotorAndroidInitParams_FunctionParams
 	{
-		// Token: 0x0403015C RID: 196956
+		// Token: 0x0402B7FC RID: 178172
 		[FieldOffset(0)]
 		public IntPtr vehicleMove;
 
-		// Token: 0x0403015D RID: 196957
+		// Token: 0x0402B7FD RID: 178173
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020095C6 RID: 38342
+	// Token: 0x020087F2 RID: 34802
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __NeedSimulateMotorIk_FunctionParams
 	{
-		// Token: 0x0403015E RID: 196958
+		// Token: 0x0402B7FE RID: 178174
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0403015F RID: 196959
+		// Token: 0x0402B7FF RID: 178175
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030160 RID: 196960
+		// Token: 0x0402B800 RID: 178176
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020095C7 RID: 38343
+	// Token: 0x020087F3 RID: 34803
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __IsVehicleInCatapult_FunctionParams
 	{
-		// Token: 0x04030161 RID: 196961
+		// Token: 0x0402B801 RID: 178177
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030162 RID: 196962
+		// Token: 0x0402B802 RID: 178178
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030163 RID: 196963
+		// Token: 0x0402B803 RID: 178179
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020095C8 RID: 38344
+	// Token: 0x020087F4 RID: 34804
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __HasVehicleCatapultReachedTarget_FunctionParams
 	{
-		// Token: 0x04030164 RID: 196964
+		// Token: 0x0402B804 RID: 178180
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030165 RID: 196965
+		// Token: 0x0402B805 RID: 178181
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030166 RID: 196966
+		// Token: 0x0402B806 RID: 178182
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020095C9 RID: 38345
+	// Token: 0x020087F5 RID: 34805
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04030167 RID: 196967
+		// Token: 0x0402B807 RID: 178183
 		[Nullable(new byte[]
 		{
 			0,
@@ -2025,13 +2270,13 @@ public class TsVehicleBlueprintFunctionLibrary : UBlueprintFunctionLibrary, ISta
 		})]
 		public static Action<PD_CharacterControllerData_C, UObject, int> <0>__OnAddMaterialController;
 
-		// Token: 0x04030168 RID: 196968
+		// Token: 0x0402B808 RID: 178184
 		public static Action<int> <1>__OnRemoveMaterialController;
 
-		// Token: 0x04030169 RID: 196969
+		// Token: 0x0402B809 RID: 178185
 		public static BaseTagComponent.TTagSwitchedCallback <2>__OnDisableMotorcycleTagChanged;
 
-		// Token: 0x0403016A RID: 196970
+		// Token: 0x0402B80A RID: 178186
 		[Nullable(new byte[]
 		{
 			0,

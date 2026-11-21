@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C5A RID: 27738
+	// Token: 0x020073C1 RID: 29633
 	public enum IOverrideLookAtType_Union : byte
 	{
-		// Token: 0x0401159D RID: 71069
+		// Token: 0x040124F5 RID: 74997
 		NONE,
-		// Token: 0x0401159E RID: 71070
+		// Token: 0x040124F6 RID: 74998
 		IOverrideLookAtType,
-		// Token: 0x0401159F RID: 71071
+		// Token: 0x040124F7 RID: 74999
 		ICheckFlowLookAt
 	}
 }

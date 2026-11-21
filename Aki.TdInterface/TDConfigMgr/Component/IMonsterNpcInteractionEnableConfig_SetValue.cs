@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200050B RID: 1291
+	// Token: 0x02000572 RID: 1394
 	public class IMonsterNpcInteractionEnableConfig_SetValue
 	{
-		// Token: 0x0400130D RID: 4877
-		[Nullable(1)]
+		// Token: 0x04001477 RID: 5239
 		public List<IMonsterNpcInteractionConfig> Interactions;
 	}
 }

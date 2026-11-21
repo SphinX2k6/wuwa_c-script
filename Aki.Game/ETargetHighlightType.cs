@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001A76 RID: 6774
+// Token: 0x02000F35 RID: 3893
 public enum ETargetHighlightType
 {
-	// Token: 0x04005C03 RID: 23555
+	// Token: 0x04005CD2 RID: 23762
 	None,
-	// Token: 0x04005C04 RID: 23556
+	// Token: 0x04005CD3 RID: 23763
 	NotLock,
-	// Token: 0x04005C05 RID: 23557
+	// Token: 0x04005CD4 RID: 23764
 	Locked
 }

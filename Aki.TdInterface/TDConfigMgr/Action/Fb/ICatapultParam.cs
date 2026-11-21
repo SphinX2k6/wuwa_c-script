@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027DA RID: 10202
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002AAD RID: 10925
 	public class ICatapultParam
 	{
-		// Token: 0x0600E2C4 RID: 58052 RVA: 0x00217882 File Offset: 0x00215A82
+		// Token: 0x0600F0E8 RID: 61672 RVA: 0x002346B6 File Offset: 0x002328B6
 		public static ICatapultParam Create(ICatapultParam? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044D2 RID: 17618
-		// (get) Token: 0x0600E2C5 RID: 58053 RVA: 0x002178A1 File Offset: 0x00215AA1
+		// Token: 0x1700483C RID: 18492
+		// (get) Token: 0x0600F0E9 RID: 61673 RVA: 0x002346D5 File Offset: 0x002328D5
 		public virtual VectorInfo P1
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044D3 RID: 17619
-		// (get) Token: 0x0600E2C6 RID: 58054 RVA: 0x002178D5 File Offset: 0x00215AD5
+		// Token: 0x1700483D RID: 18493
+		// (get) Token: 0x0600F0EA RID: 61674 RVA: 0x00234709 File Offset: 0x00232909
 		public virtual VectorInfo P2
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044D4 RID: 17620
-		// (get) Token: 0x0600E2C7 RID: 58055 RVA: 0x0021790C File Offset: 0x00215B0C
+		// Token: 0x1700483E RID: 18494
+		// (get) Token: 0x0600F0EB RID: 61675 RVA: 0x00234740 File Offset: 0x00232940
 		public virtual float? Gravity
 		{
 			get
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044D5 RID: 17621
-		// (get) Token: 0x0600E2C8 RID: 58056 RVA: 0x00217944 File Offset: 0x00215B44
+		// Token: 0x1700483F RID: 18495
+		// (get) Token: 0x0600F0EC RID: 61676 RVA: 0x00234778 File Offset: 0x00232978
 		public virtual float? Time
 		{
 			get
@@ -83,8 +81,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044D6 RID: 17622
-		// (get) Token: 0x0600E2C9 RID: 58057 RVA: 0x0021797A File Offset: 0x00215B7A
+		// Token: 0x17004840 RID: 18496
+		// (get) Token: 0x0600F0ED RID: 61677 RVA: 0x002347AE File Offset: 0x002329AE
 		[Nullable(2)]
 		public virtual string MotionCurve
 		{
@@ -95,21 +93,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DAE RID: 32174
+		// Token: 0x04008469 RID: 33897
 		private ICatapultParam Instance;
 
-		// Token: 0x04007DAF RID: 32175
+		// Token: 0x0400846A RID: 33898
 		[Nullable(2)]
 		private VectorInfo _P1Cache;
 
-		// Token: 0x04007DB0 RID: 32176
+		// Token: 0x0400846B RID: 33899
 		private bool _P1Inited;
 
-		// Token: 0x04007DB1 RID: 32177
+		// Token: 0x0400846C RID: 33900
 		[Nullable(2)]
 		private VectorInfo _P2Cache;
 
-		// Token: 0x04007DB2 RID: 32178
+		// Token: 0x0400846D RID: 33901
 		private bool _P2Inited;
 	}
 }

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C35 RID: 3125
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D08 RID: 3336
 	public class TimelineTrackControlComponent : IComponentBase
 	{
-		// Token: 0x0600478F RID: 18319 RVA: 0x000B4322 File Offset: 0x000B2522
+		// Token: 0x06004BFF RID: 19455 RVA: 0x000BE6D2 File Offset: 0x000BC8D2
 		public static TimelineTrackControlComponent Create(ITimelineTrackControlComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014E2 RID: 5346
-		// (get) Token: 0x06004790 RID: 18320 RVA: 0x000B4344 File Offset: 0x000B2544
+		// Token: 0x170015EA RID: 5610
+		// (get) Token: 0x06004C00 RID: 19456 RVA: 0x000BE6F4 File Offset: 0x000BC8F4
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014E3 RID: 5347
-		// (get) Token: 0x06004791 RID: 18321 RVA: 0x000B437C File Offset: 0x000B257C
+		// Token: 0x170015EB RID: 5611
+		// (get) Token: 0x06004C01 RID: 19457 RVA: 0x000BE72C File Offset: 0x000BC92C
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014E4 RID: 5348
-		// (get) Token: 0x06004792 RID: 18322 RVA: 0x000B4394 File Offset: 0x000B2594
+		// Token: 0x170015EC RID: 5612
+		// (get) Token: 0x06004C02 RID: 19458 RVA: 0x000BE744 File Offset: 0x000BC944
 		public virtual List<ITimelineControlGroup> ControlGroups
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028A8 RID: 10408
+		// Token: 0x04002AFD RID: 11005
 		private ITimelineTrackControlComponent Instance;
 
-		// Token: 0x040028A9 RID: 10409
+		// Token: 0x04002AFE RID: 11006
 		private List<ITimelineControlGroup> _ControlGroupsCache;
 
-		// Token: 0x040028AA RID: 10410
+		// Token: 0x04002AFF RID: 11007
 		private bool _ControlGroupsInited;
 	}
 }

@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.DiffPatch.Update
 {
-	// Token: 0x02000209 RID: 521
+	// Token: 0x0200020E RID: 526
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UpdateUiEvent : IDiffUpdateUiEvent
 	{
-		// Token: 0x06000D6B RID: 3435 RVA: 0x0005189E File Offset: 0x0004FA9E
+		// Token: 0x06000DAC RID: 3500 RVA: 0x00054392 File Offset: 0x00052592
 		public UpdateUiEvent(HotFixManager uiMgr, string tag)
 		{
 			this.UiMgr = uiMgr;
@@ -20,7 +20,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			this.TryShowNoticeWindowOnce = new Action<long, string>(this.OnTryShowNoticeWindowOnce);
 		}
 
-		// Token: 0x06000D6C RID: 3436 RVA: 0x000518C8 File Offset: 0x0004FAC8
+		// Token: 0x06000DAD RID: 3501 RVA: 0x000543BC File Offset: 0x000525BC
 		public UniTask WaitFrame(int? num = null)
 		{
 			UpdateUiEvent.<WaitFrame>d__3 <WaitFrame>d__;
@@ -32,7 +32,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <WaitFrame>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D6D RID: 3437 RVA: 0x00051914 File Offset: 0x0004FB14
+		// Token: 0x06000DAE RID: 3502 RVA: 0x00054408 File Offset: 0x00052608
 		[NullableContext(2)]
 		public UniTask ShowInfo(bool bWithProgress, string textId, bool bUseTag = false)
 		{
@@ -47,7 +47,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <ShowInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D6E RID: 3438 RVA: 0x00051970 File Offset: 0x0004FB70
+		// Token: 0x06000DAF RID: 3503 RVA: 0x00054464 File Offset: 0x00052664
 		public UniTask UpdateProgress(bool bNeedWait, float rate, string textId, params string[] args)
 		{
 			UpdateUiEvent.<UpdateProgress>d__5 <UpdateProgress>d__;
@@ -62,7 +62,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <UpdateProgress>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D6F RID: 3439 RVA: 0x000519D4 File Offset: 0x0004FBD4
+		// Token: 0x06000DB0 RID: 3504 RVA: 0x000544C8 File Offset: 0x000526C8
 		public UniTask UpdatePatchDownProgress(bool bNeedWait, float rate, string fileName, string speedText, string sizeCurrent, string sizeTotal)
 		{
 			UpdateUiEvent.<UpdatePatchDownProgress>d__6 <UpdatePatchDownProgress>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <UpdatePatchDownProgress>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D70 RID: 3440 RVA: 0x00051A4C File Offset: 0x0004FC4C
+		// Token: 0x06000DB1 RID: 3505 RVA: 0x00054540 File Offset: 0x00052740
 		[return: Nullable(0)]
 		public UniTask<bool> ShowDialog(bool bSelect, string titleId, string contentId, [Nullable(2)] string leftId, [Nullable(2)] string rightId, [Nullable(2)] string middleId, params string[] contentArgs)
 		{
@@ -98,18 +98,18 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <ShowDialog>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x17000146 RID: 326
-		// (get) Token: 0x06000D71 RID: 3441 RVA: 0x00051ACB File Offset: 0x0004FCCB
-		// (set) Token: 0x06000D72 RID: 3442 RVA: 0x00051AD3 File Offset: 0x0004FCD3
+		// Token: 0x1700014C RID: 332
+		// (get) Token: 0x06000DB2 RID: 3506 RVA: 0x000545BF File Offset: 0x000527BF
+		// (set) Token: 0x06000DB3 RID: 3507 RVA: 0x000545C7 File Offset: 0x000527C7
 		public bool? ShouldShowNoticeWindow { get; set; }
 
-		// Token: 0x17000147 RID: 327
-		// (get) Token: 0x06000D73 RID: 3443 RVA: 0x00051ADC File Offset: 0x0004FCDC
-		// (set) Token: 0x06000D74 RID: 3444 RVA: 0x00051AE4 File Offset: 0x0004FCE4
+		// Token: 0x1700014D RID: 333
+		// (get) Token: 0x06000DB4 RID: 3508 RVA: 0x000545D0 File Offset: 0x000527D0
+		// (set) Token: 0x06000DB5 RID: 3509 RVA: 0x000545D8 File Offset: 0x000527D8
 		[Nullable(2)]
 		public Action<long, string> TryShowNoticeWindowOnce { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x06000D75 RID: 3445 RVA: 0x00051AF0 File Offset: 0x0004FCF0
+		// Token: 0x06000DB6 RID: 3510 RVA: 0x000545E4 File Offset: 0x000527E4
 		[NullableContext(2)]
 		private void OnTryShowNoticeWindowOnce(long downloadSize, string logMsg = null)
 		{
@@ -122,13 +122,13 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			this.UiMgr.ShowNoticeWindow(logMsg);
 		}
 
-		// Token: 0x06000D76 RID: 3446 RVA: 0x00051B20 File Offset: 0x0004FD20
+		// Token: 0x06000DB7 RID: 3511 RVA: 0x00054614 File Offset: 0x00052814
 		public bool IsCompatible()
 		{
 			return false;
 		}
 
-		// Token: 0x06000D77 RID: 3447 RVA: 0x00051B24 File Offset: 0x0004FD24
+		// Token: 0x06000DB8 RID: 3512 RVA: 0x00054618 File Offset: 0x00052818
 		[NullableContext(0)]
 		public UniTask<bool> ShowNotEnoughSpaceConfirmation(long totalSize)
 		{
@@ -139,15 +139,15 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <ShowNotEnoughSpaceConfirmation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D78 RID: 3448 RVA: 0x00051B5F File Offset: 0x0004FD5F
+		// Token: 0x06000DB9 RID: 3513 RVA: 0x00054653 File Offset: 0x00052853
 		public void UpdatePatchProgress(long receiveSize, long curProgress, long totalProgress, long downloadSpeed)
 		{
 		}
 
-		// Token: 0x04000867 RID: 2151
+		// Token: 0x040008A8 RID: 2216
 		private readonly HotFixManager UiMgr;
 
-		// Token: 0x04000868 RID: 2152
+		// Token: 0x040008A9 RID: 2217
 		private readonly string Tag;
 	}
 }

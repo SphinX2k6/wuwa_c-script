@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000252 RID: 594
+	// Token: 0x02000266 RID: 614
 	public class ConfigEdgeRunnerTrialByCyberPunkActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000DF0 RID: 3568 RVA: 0x000A848F File Offset: 0x000A668F
+		// Token: 0x06000E68 RID: 3688 RVA: 0x000AE753 File Offset: 0x000AC953
 		static ConfigEdgeRunnerTrialByCyberPunkActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEdgeRunnerTrialByCyberPunkActivityId.CreateStaticDefaultValue), new Action(ConfigEdgeRunnerTrialByCyberPunkActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000DF1 RID: 3569 RVA: 0x000A84B0 File Offset: 0x000A66B0
+		// Token: 0x06000E69 RID: 3689 RVA: 0x000AE774 File Offset: 0x000AC974
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEdgeRunnerTrialByCyberPunkActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000DF2 RID: 3570 RVA: 0x000A852F File Offset: 0x000A672F
+		// Token: 0x06000E6A RID: 3690 RVA: 0x000AE7F3 File Offset: 0x000AC9F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEdgeRunnerTrialByCyberPunkActivityId.LogPair = null;
 			ConfigEdgeRunnerTrialByCyberPunkActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06000DF3 RID: 3571 RVA: 0x000A853D File Offset: 0x000A673D
+		// Token: 0x06000E6B RID: 3691 RVA: 0x000AE801 File Offset: 0x000ACA01
 		public static void Init()
 		{
 			ConfigEdgeRunnerTrialByCyberPunkActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigEdgeRunnerTrialByCyberPunkActivityId.HandleId, "db_edgerunner.db", "select BinData from `EdgeRunnerTrial` where CyberPunkActivityId=?");
 		}
 
-		// Token: 0x06000DF4 RID: 3572 RVA: 0x000A8558 File Offset: 0x000A6758
+		// Token: 0x06000E6C RID: 3692 RVA: 0x000AE81C File Offset: 0x000ACA1C
 		[NullableContext(2)]
 		public static IReadOnlyList<EdgeRunnerTrial> GetConfigList(int p0CyberPunkActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001022 RID: 4130
+		// Token: 0x040010AE RID: 4270
 		private const string DB = "db_edgerunner.db";
 
-		// Token: 0x04001023 RID: 4131
+		// Token: 0x040010AF RID: 4271
 		private const string FILE = "b.边缘行者联动.xlsx";
 
-		// Token: 0x04001024 RID: 4132
+		// Token: 0x040010B0 RID: 4272
 		private const string TABLE = "EdgeRunnerTrial";
 
-		// Token: 0x04001025 RID: 4133
+		// Token: 0x040010B1 RID: 4273
 		private const string COMMAND = "select BinData from `EdgeRunnerTrial` where CyberPunkActivityId=?";
 
-		// Token: 0x04001026 RID: 4134
+		// Token: 0x040010B2 RID: 4274
 		private const string KEY_PREFIX = "EdgeRunnerTrialByCyberPunkActivityId";
 
-		// Token: 0x04001027 RID: 4135
+		// Token: 0x040010B3 RID: 4275
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001028 RID: 4136
+		// Token: 0x040010B4 RID: 4276
 		private static int HandleId;
 	}
 }

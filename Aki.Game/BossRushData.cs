@@ -9,19 +9,19 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Reward;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020011BA RID: 4538
+// Token: 0x0200066E RID: 1646
 [NullableContext(1)]
 [Nullable(0)]
 public class BossRushData : ActivityBaseData
 {
-	// Token: 0x0600789C RID: 30876 RVA: 0x001950A0 File Offset: 0x001932A0
+	// Token: 0x06004C33 RID: 19507 RVA: 0x0019DCA8 File Offset: 0x0019BEA8
 	protected override void PhraseEx(ActivityData data)
 	{
 		this.CurrentBuffs = data.BossRushActivityData.UnlockedBuffIndices.ToArray<int>();
-		this.PhraseLevelInfo(this.CurrentBuffs, data.BossRushActivityData.BossRushLevelInfo.ToArray<BossRushLevelData>());
+		this.PhraseLevelInfo(this.CurrentBuffs, data.BossRushActivityData.BossRushLevelInfo);
 		this.CheckIfNewBossRushOpen();
-		this.PhraseRewardInfo(data.BossRushActivityData.BossRushScoreScoreRewardInfo.ToArray<BossRushScoreRewardData>());
-		this.RefreshTaskData(data.BossRushActivityData.ActivityTasks.ToArray<ActivityTask>());
+		this.PhraseRewardInfo(data.BossRushActivityData.BossRushScoreScoreRewardInfo);
+		this.RefreshTaskData(data.BossRushActivityData.ActivityTasks);
 		this.CurrentData = data;
 		EventSystem.Instance.Emit(EEventName.BossRushDataUpdate);
 		if (UiManager.Instance.IsViewOpen(EUiViewName.ActivityRewardPopUpView))
@@ -31,7 +31,7 @@ public class BossRushData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.BossRefreshBossRushRewardRedDot, base.Id);
 	}
 
-	// Token: 0x0600789D RID: 30877 RVA: 0x00195168 File Offset: 0x00193368
+	// Token: 0x06004C34 RID: 19508 RVA: 0x0019DD60 File Offset: 0x0019BF60
 	public void RefreshSingleTaskData(ActivityTask task)
 	{
 		global::ActivityTaskData activityTaskData;
@@ -51,8 +51,8 @@ public class BossRushData : ActivityBaseData
 		this.TaskData[task.Id] = activityTaskData;
 	}
 
-	// Token: 0x0600789E RID: 30878 RVA: 0x001951F0 File Offset: 0x001933F0
-	public void RefreshTaskData(ActivityTask[] tasks)
+	// Token: 0x06004C35 RID: 19509 RVA: 0x0019DDE8 File Offset: 0x0019BFE8
+	public void RefreshTaskData(IReadOnlyList<ActivityTask> tasks)
 	{
 		foreach (ActivityTask task in tasks)
 		{
@@ -60,7 +60,7 @@ public class BossRushData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600789F RID: 30879 RVA: 0x00195218 File Offset: 0x00193418
+	// Token: 0x06004C36 RID: 19510 RVA: 0x0019DE30 File Offset: 0x0019C030
 	public int GetFinishTaskCount()
 	{
 		int num = 0;
@@ -74,13 +74,13 @@ public class BossRushData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x060078A0 RID: 30880 RVA: 0x00195284 File Offset: 0x00193484
+	// Token: 0x06004C37 RID: 19511 RVA: 0x0019DE9C File Offset: 0x0019C09C
 	public int GetAllTaskCount()
 	{
 		return this.TaskData.Count;
 	}
 
-	// Token: 0x060078A1 RID: 30881 RVA: 0x00195294 File Offset: 0x00193494
+	// Token: 0x06004C38 RID: 19512 RVA: 0x0019DEAC File Offset: 0x0019C0AC
 	public List<BossRushTaskTab> GetBossRushAllTabData()
 	{
 		IEnumerable<BossRushTaskTab> bossRushTabListByActivityId = BossRushConfig.Instance.GetBossRushTabListByActivityId(base.Id);
@@ -92,7 +92,7 @@ public class BossRushData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x060078A2 RID: 30882 RVA: 0x001952F4 File Offset: 0x001934F4
+	// Token: 0x06004C39 RID: 19513 RVA: 0x0019DF0C File Offset: 0x0019C10C
 	public bool GetTabRedDotState(int tabId)
 	{
 		List<global::ActivityTaskData> list;
@@ -113,7 +113,7 @@ public class BossRushData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x060078A3 RID: 30883 RVA: 0x0019535C File Offset: 0x0019355C
+	// Token: 0x06004C3A RID: 19514 RVA: 0x0019DF74 File Offset: 0x0019C174
 	public void RebuildData()
 	{
 		if (this.CurrentData != null)
@@ -122,13 +122,13 @@ public class BossRushData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060078A4 RID: 30884 RVA: 0x00195372 File Offset: 0x00193572
+	// Token: 0x06004C3B RID: 19515 RVA: 0x0019DF8A File Offset: 0x0019C18A
 	public void SetInsSelectedBuffIdMap(int levelId, int[] buffIds)
 	{
 		this.InsSelectedBuffIdMap[levelId] = buffIds;
 	}
 
-	// Token: 0x060078A5 RID: 30885 RVA: 0x00195384 File Offset: 0x00193584
+	// Token: 0x06004C3C RID: 19516 RVA: 0x0019DF9C File Offset: 0x0019C19C
 	public int[] GetInsSelectedBuffId(int levelId)
 	{
 		int[] result;
@@ -139,8 +139,8 @@ public class BossRushData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x060078A6 RID: 30886 RVA: 0x001953AC File Offset: 0x001935AC
-	public void PhraseRewardInfo(BossRushScoreRewardData[] rewardData)
+	// Token: 0x06004C3D RID: 19517 RVA: 0x0019DFC4 File Offset: 0x0019C1C4
+	public void PhraseRewardInfo(IReadOnlyList<BossRushScoreRewardData> rewardData)
 	{
 		this.CurrentScoreRewardInfo = new List<IActivityRewardData>();
 		foreach (BossRushScoreRewardData reward in rewardData)
@@ -155,8 +155,8 @@ public class BossRushData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060078A7 RID: 30887 RVA: 0x0019542C File Offset: 0x0019362C
-	public void PhraseLevelInfo(int[] unlockBuffs, BossRushLevelData[] data)
+	// Token: 0x06004C3E RID: 19518 RVA: 0x0019E064 File Offset: 0x0019C264
+	public void PhraseLevelInfo(int[] unlockBuffs, IReadOnlyList<BossRushLevelData> data)
 	{
 		this.CurrentLevelInfo = new List<BossRushLevelDetailInfo>();
 		this.CurrentLevelRewardInfo = new List<IActivityRewardData>();
@@ -180,7 +180,7 @@ public class BossRushData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060078A8 RID: 30888 RVA: 0x00195530 File Offset: 0x00193730
+	// Token: 0x06004C3F RID: 19519 RVA: 0x0019E184 File Offset: 0x0019C384
 	[NullableContext(2)]
 	public BossRushLevelDetailInfo GetBossRushLevelDetailInfoById(int instanceId)
 	{
@@ -194,31 +194,31 @@ public class BossRushData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x060078A9 RID: 30889 RVA: 0x0019558C File Offset: 0x0019378C
+	// Token: 0x06004C40 RID: 19520 RVA: 0x0019E1E0 File Offset: 0x0019C3E0
 	public List<BossRushLevelDetailInfo> GetBossRushLevelDetailInfo()
 	{
 		return this.CurrentLevelInfo;
 	}
 
-	// Token: 0x060078AA RID: 30890 RVA: 0x00195594 File Offset: 0x00193794
+	// Token: 0x06004C41 RID: 19521 RVA: 0x0019E1E8 File Offset: 0x0019C3E8
 	public override bool GetExDataRedPointShowState()
 	{
 		return base.GetPreGuideQuestFinishState() && (this.NewOpenBossRushState || this.GetIfCanTakeReward());
 	}
 
-	// Token: 0x060078AB RID: 30891 RVA: 0x001955B0 File Offset: 0x001937B0
+	// Token: 0x06004C42 RID: 19522 RVA: 0x0019E204 File Offset: 0x0019C404
 	public bool GetNewUnlockState()
 	{
 		return this.NeedShowNewUnlock;
 	}
 
-	// Token: 0x060078AC RID: 30892 RVA: 0x001955B8 File Offset: 0x001937B8
+	// Token: 0x06004C43 RID: 19523 RVA: 0x0019E20C File Offset: 0x0019C40C
 	public bool GetNewBuffState()
 	{
 		return this.NeedShowNewBuff;
 	}
 
-	// Token: 0x060078AD RID: 30893 RVA: 0x001955C0 File Offset: 0x001937C0
+	// Token: 0x06004C44 RID: 19524 RVA: 0x0019E214 File Offset: 0x0019C414
 	private bool GetIfCanTakeReward()
 	{
 		using (Dictionary<int, global::ActivityTaskData>.ValueCollection.Enumerator enumerator = this.TaskData.Values.GetEnumerator())
@@ -234,7 +234,7 @@ public class BossRushData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x060078AE RID: 30894 RVA: 0x00195620 File Offset: 0x00193820
+	// Token: 0x06004C45 RID: 19525 RVA: 0x0019E274 File Offset: 0x0019C474
 	private bool GetIfCanTakeRewardByLevelId(int levelId)
 	{
 		foreach (IActivityRewardData activityRewardData in this.CurrentLevelRewardInfo)
@@ -248,13 +248,13 @@ public class BossRushData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x060078AF RID: 30895 RVA: 0x0019569C File Offset: 0x0019389C
+	// Token: 0x06004C46 RID: 19526 RVA: 0x0019E2F0 File Offset: 0x0019C4F0
 	public int[] GetUnlockedBuffIndices()
 	{
 		return this.CurrentBuffs;
 	}
 
-	// Token: 0x060078B0 RID: 30896 RVA: 0x001956A4 File Offset: 0x001938A4
+	// Token: 0x06004C47 RID: 19527 RVA: 0x0019E2F8 File Offset: 0x0019C4F8
 	public void CheckIfNewBossRushOpen()
 	{
 		int activityCacheData = ActivityModel.Instance.GetActivityCacheData(base.Id, 0, base.Id, 0, 0);
@@ -266,7 +266,7 @@ public class BossRushData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x060078B1 RID: 30897 RVA: 0x00195720 File Offset: 0x00193920
+	// Token: 0x06004C48 RID: 19528 RVA: 0x0019E374 File Offset: 0x0019C574
 	private void CheckIfNewBuffOpen()
 	{
 		this.NeedShowNewBuff = false;
@@ -283,7 +283,7 @@ public class BossRushData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060078B2 RID: 30898 RVA: 0x001957B0 File Offset: 0x001939B0
+	// Token: 0x06004C49 RID: 19529 RVA: 0x0019E404 File Offset: 0x0019C604
 	private int GetCurrentCheckBuffIndex()
 	{
 		int result = 0;
@@ -299,7 +299,7 @@ public class BossRushData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x060078B3 RID: 30899 RVA: 0x001957EC File Offset: 0x001939EC
+	// Token: 0x06004C4A RID: 19530 RVA: 0x0019E440 File Offset: 0x0019C640
 	private int GetCurrentOpenBossNum()
 	{
 		int num = 0;
@@ -316,7 +316,7 @@ public class BossRushData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x060078B4 RID: 30900 RVA: 0x00195848 File Offset: 0x00193A48
+	// Token: 0x06004C4B RID: 19531 RVA: 0x0019E49C File Offset: 0x0019C69C
 	public void CacheNewBuffUnlock()
 	{
 		this.NeedShowNewBuff = false;
@@ -325,7 +325,7 @@ public class BossRushData : ActivityBaseData
 		this.CheckIfNewBuffOpen();
 	}
 
-	// Token: 0x060078B5 RID: 30901 RVA: 0x00195888 File Offset: 0x00193A88
+	// Token: 0x06004C4C RID: 19532 RVA: 0x0019E4DC File Offset: 0x0019C6DC
 	public void CacheNewUnlock()
 	{
 		this.NeedShowNewUnlock = false;
@@ -334,7 +334,7 @@ public class BossRushData : ActivityBaseData
 		this.CheckIfNewBossRushOpen();
 	}
 
-	// Token: 0x060078B6 RID: 30902 RVA: 0x001958C4 File Offset: 0x00193AC4
+	// Token: 0x06004C4D RID: 19533 RVA: 0x0019E518 File Offset: 0x0019C718
 	public void CacheCurrentOpenBossNum()
 	{
 		int currentOpenBossNum = this.GetCurrentOpenBossNum();
@@ -342,54 +342,68 @@ public class BossRushData : ActivityBaseData
 		this.CheckIfNewBossRushOpen();
 	}
 
-	// Token: 0x060078B7 RID: 30903 RVA: 0x001958F7 File Offset: 0x00193AF7
+	// Token: 0x06004C4E RID: 19534 RVA: 0x0019E54B File Offset: 0x0019C74B
 	public bool EntranceRedDot()
 	{
 		return this.GetExDataRedPointShowState();
 	}
 
-	// Token: 0x060078B8 RID: 30904 RVA: 0x001958FF File Offset: 0x00193AFF
+	// Token: 0x06004C4F RID: 19535 RVA: 0x0019E553 File Offset: 0x0019C753
 	public bool HaveRewardCanTake()
 	{
 		return this.GetIfCanTakeReward();
 	}
 
-	// Token: 0x060078B9 RID: 30905 RVA: 0x00195907 File Offset: 0x00193B07
+	// Token: 0x06004C50 RID: 19536 RVA: 0x0019E55B File Offset: 0x0019C75B
 	public bool HaveLevelRewardCanTake(int levelId)
 	{
 		return this.GetIfCanTakeRewardByLevelId(levelId);
 	}
 
-	// Token: 0x060078BA RID: 30906 RVA: 0x00195910 File Offset: 0x00193B10
+	// Token: 0x06004C51 RID: 19537 RVA: 0x0019E564 File Offset: 0x0019C764
 	public IActivityRewardViewData GetRewardPopUpViewData()
 	{
 		this.RebuildData();
 		return this.GetRewardViewData();
 	}
 
-	// Token: 0x060078BB RID: 30907 RVA: 0x00195920 File Offset: 0x00193B20
+	// Token: 0x06004C52 RID: 19538 RVA: 0x0019E574 File Offset: 0x0019C774
 	public IActivityRewardViewData GetRewardViewData()
 	{
 		string tabTips = StringUtils.Format(ConfigMultiTextLang.GetLocalTextNew("BossRushFullPoint", null) ?? "", new string[]
 		{
 			this.GetFullScore().ToString()
 		});
-		List<IActivityRewardData> dataList = (from a in this.CurrentLevelRewardInfo
-		orderby this.GetRewardSort(a) descending, a.Id.GetValueOrDefault()
-		select a).ToList<IActivityRewardData>();
+		List<IActivityRewardData> dataList = NoLinq.SortToList<IActivityRewardData>(this.CurrentLevelRewardInfo, delegate(IActivityRewardData left, IActivityRewardData right)
+		{
+			int num = this.GetRewardSort(right).CompareTo(this.GetRewardSort(left));
+			if (num == 0)
+			{
+				return left.Id.GetValueOrDefault().CompareTo(right.Id.GetValueOrDefault());
+			}
+			return num;
+		});
 		ActivityRewardDataPage item = new ActivityRewardDataPage
 		{
 			DataList = dataList,
 			TabName = ConfigMultiTextLang.GetLocalTextNew("BossRushLevelRewardText", null),
 			TabTips = " "
 		};
-		ActivityRewardDataPage activityRewardDataPage = new ActivityRewardDataPage();
-		activityRewardDataPage.DataList = (from a in this.CurrentScoreRewardInfo
-		orderby this.GetRewardSort(a), a.Id.GetValueOrDefault()
-		select a).ToList<IActivityRewardData>();
-		activityRewardDataPage.TabName = ConfigMultiTextLang.GetLocalTextNew("BossRushScoreRewardText", null);
-		activityRewardDataPage.TabTips = tabTips;
-		ActivityRewardDataPage item2 = activityRewardDataPage;
+		List<IActivityRewardData> dataList2 = NoLinq.SortToList<IActivityRewardData>(this.CurrentScoreRewardInfo, delegate(IActivityRewardData left, IActivityRewardData right)
+		{
+			int num = this.GetRewardSort(left).CompareTo(this.GetRewardSort(right));
+			if (num == 0)
+			{
+				return left.Id.GetValueOrDefault().CompareTo(right.Id.GetValueOrDefault());
+			}
+			return num;
+		});
+		ActivityRewardDataPage item2 = new ActivityRewardDataPage
+		{
+			DataList = dataList2,
+			TabName = ConfigMultiTextLang.GetLocalTextNew("BossRushScoreRewardText", null),
+			TabTips = tabTips
+		};
 		return new ActivityRewardViewData
 		{
 			DataPageList = new List<IActivityRewardDataPage>
@@ -401,7 +415,7 @@ public class BossRushData : ActivityBaseData
 		};
 	}
 
-	// Token: 0x060078BC RID: 30908 RVA: 0x00195A58 File Offset: 0x00193C58
+	// Token: 0x06004C53 RID: 19539 RVA: 0x0019E65C File Offset: 0x0019C85C
 	private int GetRewardSort(IActivityRewardData data)
 	{
 		int result;
@@ -423,7 +437,7 @@ public class BossRushData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x060078BD RID: 30909 RVA: 0x00195A94 File Offset: 0x00193C94
+	// Token: 0x06004C54 RID: 19540 RVA: 0x0019E698 File Offset: 0x0019C898
 	public int GetFullScore()
 	{
 		int num = 0;
@@ -434,7 +448,7 @@ public class BossRushData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x060078BE RID: 30910 RVA: 0x00195AEC File Offset: 0x00193CEC
+	// Token: 0x06004C55 RID: 19541 RVA: 0x0019E6F0 File Offset: 0x0019C8F0
 	private IActivityRewardData CreateScoreReward(BossRushScoreRewardData reward)
 	{
 		BossRushScore? bossRushScoreConfigById = BossRushConfig.Instance.GetBossRushScoreConfigById(reward.RewardId);
@@ -463,7 +477,7 @@ public class BossRushData : ActivityBaseData
 		};
 	}
 
-	// Token: 0x060078BF RID: 30911 RVA: 0x00195C1C File Offset: 0x00193E1C
+	// Token: 0x06004C56 RID: 19542 RVA: 0x0019E820 File Offset: 0x0019CA20
 	private string GetButtonText(int state)
 	{
 		string result = "";
@@ -482,7 +496,7 @@ public class BossRushData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x060078C0 RID: 30912 RVA: 0x00195C5C File Offset: 0x00193E5C
+	// Token: 0x06004C57 RID: 19543 RVA: 0x0019E860 File Offset: 0x0019CA60
 	private TItem[] GetRewardItems(int dropId)
 	{
 		List<TItem> list = new List<TItem>();
@@ -497,7 +511,7 @@ public class BossRushData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x060078C1 RID: 30913 RVA: 0x00195CE0 File Offset: 0x00193EE0
+	// Token: 0x06004C58 RID: 19544 RVA: 0x0019E8E4 File Offset: 0x0019CAE4
 	private List<IActivityRewardData> CreateLevelReward(BossRushLevelDetailInfo levelInfo, BossRushLevelData levelData)
 	{
 		BossRushActivity? config = BossRushConfig.Instance.GetBossRushByActivityIdAndInstanceId(base.Id, levelData.InstId);
@@ -541,7 +555,7 @@ public class BossRushData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x060078C2 RID: 30914 RVA: 0x00195EA0 File Offset: 0x001940A0
+	// Token: 0x06004C59 RID: 19545 RVA: 0x0019EAA4 File Offset: 0x0019CCA4
 	private IActivityRewardData CreateTaskReward(global::ActivityTaskData task)
 	{
 		EActivityTaskState status = task.Status;
@@ -570,7 +584,7 @@ public class BossRushData : ActivityBaseData
 		};
 	}
 
-	// Token: 0x060078C3 RID: 30915 RVA: 0x00195FC0 File Offset: 0x001941C0
+	// Token: 0x06004C5A RID: 19546 RVA: 0x0019EBC4 File Offset: 0x0019CDC4
 	public List<IActivityRewardData> GetTabRewardData(int tabId)
 	{
 		if (tabId == 0)
@@ -588,12 +602,19 @@ public class BossRushData : ActivityBaseData
 			IActivityRewardData item = this.CreateTaskReward(task);
 			list2.Add(item);
 		}
-		return (from a in list2
-		orderby this.GetRewardSort(a), a.Id.GetValueOrDefault()
-		select a).ToList<IActivityRewardData>();
+		NoLinq.SortStable<IActivityRewardData>(list2, delegate(IActivityRewardData left, IActivityRewardData right)
+		{
+			int num = this.GetRewardSort(left).CompareTo(this.GetRewardSort(right));
+			if (num == 0)
+			{
+				return left.Id.GetValueOrDefault().CompareTo(right.Id.GetValueOrDefault());
+			}
+			return num;
+		});
+		return list2;
 	}
 
-	// Token: 0x060078C4 RID: 30916 RVA: 0x00196078 File Offset: 0x00194278
+	// Token: 0x06004C5B RID: 19547 RVA: 0x0019EC54 File Offset: 0x0019CE54
 	public List<IActivityRewardData> GetRewardByLevelId(int? levelId = null)
 	{
 		int valueOrDefault = levelId.GetValueOrDefault();
@@ -605,7 +626,7 @@ public class BossRushData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x060078C5 RID: 30917 RVA: 0x001960A4 File Offset: 0x001942A4
+	// Token: 0x06004C5C RID: 19548 RVA: 0x0019EC80 File Offset: 0x0019CE80
 	public void SetRewardStateClaimed(int levelId, int index)
 	{
 		List<IActivityRewardData> list;
@@ -625,7 +646,7 @@ public class BossRushData : ActivityBaseData
 		activityRewardData.RewardState = EActivityRewardState.Claimed;
 	}
 
-	// Token: 0x060078C6 RID: 30918 RVA: 0x001960E0 File Offset: 0x001942E0
+	// Token: 0x06004C5D RID: 19549 RVA: 0x0019ECBC File Offset: 0x0019CEBC
 	protected override bool GetExDataFinishShowState()
 	{
 		using (Dictionary<int, global::ActivityTaskData>.ValueCollection.Enumerator enumerator = this.TaskData.Values.GetEnumerator())
@@ -641,7 +662,7 @@ public class BossRushData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x060078C7 RID: 30919 RVA: 0x00196140 File Offset: 0x00194340
+	// Token: 0x06004C5E RID: 19550 RVA: 0x0019ED1C File Offset: 0x0019CF1C
 	public int[] GetFinishAndUnclaimedTaskList()
 	{
 		List<int> list = new List<int>();
@@ -655,46 +676,46 @@ public class BossRushData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x04003773 RID: 14195
+	// Token: 0x0400380C RID: 14348
 	private const int UNLOCKLOCALKEY = 100;
 
-	// Token: 0x04003774 RID: 14196
+	// Token: 0x0400380D RID: 14349
 	private const int UNLOCKBUFFKEY = 200;
 
-	// Token: 0x04003775 RID: 14197
+	// Token: 0x0400380E RID: 14350
 	private List<IActivityRewardData> CurrentLevelRewardInfo = new List<IActivityRewardData>();
 
-	// Token: 0x04003776 RID: 14198
+	// Token: 0x0400380F RID: 14351
 	private readonly Dictionary<int, List<IActivityRewardData>> CurrentLevelRewardInfoMap = new Dictionary<int, List<IActivityRewardData>>();
 
-	// Token: 0x04003777 RID: 14199
+	// Token: 0x04003810 RID: 14352
 	private readonly Dictionary<int, global::ActivityTaskData> TaskData = new Dictionary<int, global::ActivityTaskData>();
 
-	// Token: 0x04003778 RID: 14200
+	// Token: 0x04003811 RID: 14353
 	private readonly Dictionary<int, List<global::ActivityTaskData>> TabTaskData = new Dictionary<int, List<global::ActivityTaskData>>();
 
-	// Token: 0x04003779 RID: 14201
+	// Token: 0x04003812 RID: 14354
 	private List<IActivityRewardData> CurrentScoreRewardInfo = new List<IActivityRewardData>();
 
-	// Token: 0x0400377A RID: 14202
+	// Token: 0x04003813 RID: 14355
 	private bool NewOpenBossRushState;
 
-	// Token: 0x0400377B RID: 14203
+	// Token: 0x04003814 RID: 14356
 	private bool NeedShowNewUnlock;
 
-	// Token: 0x0400377C RID: 14204
+	// Token: 0x04003815 RID: 14357
 	private bool NeedShowNewBuff;
 
-	// Token: 0x0400377D RID: 14205
+	// Token: 0x04003816 RID: 14358
 	private List<BossRushLevelDetailInfo> CurrentLevelInfo = new List<BossRushLevelDetailInfo>();
 
-	// Token: 0x0400377E RID: 14206
+	// Token: 0x04003817 RID: 14359
 	private int[] CurrentBuffs = new int[0];
 
-	// Token: 0x0400377F RID: 14207
+	// Token: 0x04003818 RID: 14360
 	[Nullable(2)]
 	private ActivityData CurrentData;
 
-	// Token: 0x04003780 RID: 14208
+	// Token: 0x04003819 RID: 14361
 	private readonly Dictionary<int, int[]> InsSelectedBuffIdMap = new Dictionary<int, int[]>();
 }

@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 {
-	// Token: 0x020052C4 RID: 21188
+	// Token: 0x02004294 RID: 17044
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaNormalLogic : PhantomArenaCardLogic
 	{
-		// Token: 0x06036324 RID: 221988 RVA: 0x00CD2229 File Offset: 0x00CD0429
+		// Token: 0x0602B21F RID: 176671 RVA: 0x00C1F951 File Offset: 0x00C1DB51
 		public PhantomArenaNormalLogic(PhantomArenaCard card, PhantomArenaBattleProxy viewProxy) : base(card, viewProxy)
 		{
 		}
 
-		// Token: 0x06036325 RID: 221989 RVA: 0x00CD2234 File Offset: 0x00CD0434
+		// Token: 0x0602B220 RID: 176672 RVA: 0x00C1F95C File Offset: 0x00C1DB5C
 		public override Tuple<bool, EPhantomCardSettingFailReason> CheckFunctionalSettingCondition(PhantomArenaCard oldCard)
 		{
 			if (oldCard != null)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			return Tuple.Create<bool, EPhantomCardSettingFailReason>(true, EPhantomCardSettingFailReason.None);
 		}
 
-		// Token: 0x06036326 RID: 221990 RVA: 0x00CD2304 File Offset: 0x00CD0504
+		// Token: 0x0602B221 RID: 176673 RVA: 0x00C1FA2C File Offset: 0x00C1DC2C
 		private Tuple<bool, EPhantomCardSettingFailReason> CheckCanSettingCardByEvolve(PhantomArenaCard oldCard)
 		{
 			if (this.Card.Data.Index == -1)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			return Tuple.Create<bool, EPhantomCardSettingFailReason>(true, EPhantomCardSettingFailReason.None);
 		}
 
-		// Token: 0x06036327 RID: 221991 RVA: 0x00CD237C File Offset: 0x00CD057C
+		// Token: 0x0602B222 RID: 176674 RVA: 0x00C1FAA4 File Offset: 0x00C1DCA4
 		private Tuple<bool, EPhantomCardSettingFailReason> CheckCanSettingCardBySetting()
 		{
 			if (this.Card.Data.Index == -1)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			return Tuple.Create<bool, EPhantomCardSettingFailReason>(true, EPhantomCardSettingFailReason.None);
 		}
 
-		// Token: 0x06036328 RID: 221992 RVA: 0x00CD23E4 File Offset: 0x00CD05E4
+		// Token: 0x0602B223 RID: 176675 RVA: 0x00C1FB0C File Offset: 0x00C1DD0C
 		public override Tuple<bool, EPhantomCardSettingFailReason> CheckMonsterSettingCondition(PhantomArenaCard oldCard)
 		{
 			if (this.Card.Data.Index == -1)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			}
 		}
 
-		// Token: 0x06036329 RID: 221993 RVA: 0x00CD24B0 File Offset: 0x00CD06B0
+		// Token: 0x0602B224 RID: 176676 RVA: 0x00C1FBD8 File Offset: 0x00C1DDD8
 		protected override Tuple<bool, EPhantomCardSettingFailReason> OnCheckRecycleSettingConditionFromHead()
 		{
 			if (this.Card.Data.UseCost == 0)
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			return Tuple.Create<bool, EPhantomCardSettingFailReason>(true, EPhantomCardSettingFailReason.None);
 		}
 
-		// Token: 0x0603632A RID: 221994 RVA: 0x00CD24DB File Offset: 0x00CD06DB
+		// Token: 0x0602B225 RID: 176677 RVA: 0x00C1FC03 File Offset: 0x00C1DE03
 		protected override Tuple<bool, EPhantomCardSettingFailReason> OnCheckRecycleSettingConditionFromFunctional()
 		{
 			if (this.Card.Data.UseCost == 0)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			return Tuple.Create<bool, EPhantomCardSettingFailReason>(true, EPhantomCardSettingFailReason.None);
 		}
 
-		// Token: 0x0603632B RID: 221995 RVA: 0x00CD2508 File Offset: 0x00CD0708
+		// Token: 0x0602B226 RID: 176678 RVA: 0x00C1FC30 File Offset: 0x00C1DE30
 		protected override void OnBeforeStart()
 		{
 			CardSkillComponent component = this.Card.GetComponent<CardSkillComponent>(ECardItemComponent.CardSkillComponent);
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			}
 		}
 
-		// Token: 0x0603632C RID: 221996 RVA: 0x00CD2538 File Offset: 0x00CD0738
+		// Token: 0x0602B227 RID: 176679 RVA: 0x00C1FC60 File Offset: 0x00C1DE60
 		public override List<TCardComponentsRegisterInfoByResourceId> GetComponentsDataList()
 		{
 			List<TCardComponentsRegisterInfoByResourceId> list = new List<TCardComponentsRegisterInfoByResourceId>();
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			return list;
 		}
 
-		// Token: 0x0603632D RID: 221997 RVA: 0x00CD25AC File Offset: 0x00CD07AC
+		// Token: 0x0602B228 RID: 176680 RVA: 0x00C1FCD4 File Offset: 0x00C1DED4
 		protected override void OnRefresh()
 		{
 			CardSkillComponentData data = new CardSkillComponentData
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			component2.Refresh(data2);
 		}
 
-		// Token: 0x0603632E RID: 221998 RVA: 0x00CD2678 File Offset: 0x00CD0878
+		// Token: 0x0602B229 RID: 176681 RVA: 0x00C1FDA0 File Offset: 0x00C1DFA0
 		protected override void OnSetSelectedState(bool value)
 		{
 			CardSkillComponentData data = new CardSkillComponentData
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			component.Refresh(data);
 		}
 
-		// Token: 0x0603632F RID: 221999 RVA: 0x00CD26F4 File Offset: 0x00CD08F4
+		// Token: 0x0602B22A RID: 176682 RVA: 0x00C1FE1C File Offset: 0x00C1E01C
 		protected override UniTask OnRefreshEffect(int curEffectCount)
 		{
 			PhantomArenaNormalLogic.<OnRefreshEffect>d__11 <OnRefreshEffect>d__;

@@ -6,13 +6,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 {
-	// Token: 0x02006F13 RID: 28435
+	// Token: 0x02006094 RID: 24724
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class DigitalScreenController : UiControllerBase
 	{
-		// Token: 0x06045353 RID: 283475 RVA: 0x0111FAAC File Offset: 0x0111DCAC
+		// Token: 0x0603B501 RID: 242945 RVA: 0x010C9A4C File Offset: 0x010C7C4C
 		[NullableContext(0)]
 		public UniTask<bool> OpenDigitalScreenById(int index, [Nullable(2)] object param = null, bool isPlot = false)
 		{
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			return <OpenDigitalScreenById>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x17009AFF RID: 39679
-		// (get) Token: 0x06045354 RID: 283476 RVA: 0x0111FAFF File Offset: 0x0111DCFF
+		// Token: 0x1700703E RID: 28734
+		// (get) Token: 0x0603B502 RID: 242946 RVA: 0x010C9A9F File Offset: 0x010C7C9F
 		public static DigitalScreenController Instance
 		{
 			get
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			}
 		}
 
-		// Token: 0x06045355 RID: 283477 RVA: 0x0111FB06 File Offset: 0x0111DD06
+		// Token: 0x0603B503 RID: 242947 RVA: 0x010C9AA6 File Offset: 0x010C7CA6
 		public static DigitalScreenController GetOrCreateInstance()
 		{
 			if (DigitalScreenController._Instance == null)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			return DigitalScreenController._Instance;
 		}
 
-		// Token: 0x06045356 RID: 283478 RVA: 0x0111FB1A File Offset: 0x0111DD1A
+		// Token: 0x0603B504 RID: 242948 RVA: 0x010C9ABA File Offset: 0x010C7CBA
 		public static bool CreateInstance()
 		{
 			if (DigitalScreenController._Instance != null)
@@ -57,24 +57,24 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			return true;
 		}
 
-		// Token: 0x06045357 RID: 283479 RVA: 0x0111FB30 File Offset: 0x0111DD30
+		// Token: 0x0603B505 RID: 242949 RVA: 0x010C9AD0 File Offset: 0x010C7CD0
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06045358 RID: 283480 RVA: 0x0111FB32 File Offset: 0x0111DD32
+		// Token: 0x0603B506 RID: 242950 RVA: 0x010C9AD2 File Offset: 0x010C7CD2
 		public static void ResetStaticDefaultValue()
 		{
 			DigitalScreenController._Instance = null;
 		}
 
-		// Token: 0x06045359 RID: 283481 RVA: 0x0111FB3A File Offset: 0x0111DD3A
+		// Token: 0x0603B507 RID: 242951 RVA: 0x010C9ADA File Offset: 0x010C7CDA
 		static DigitalScreenController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DigitalScreenController.CreateStaticDefaultValue), new Action(DigitalScreenController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402413C RID: 147772
+		// Token: 0x0401F3F1 RID: 127985
 		[Nullable(2)]
 		private static DigitalScreenController _Instance;
 	}

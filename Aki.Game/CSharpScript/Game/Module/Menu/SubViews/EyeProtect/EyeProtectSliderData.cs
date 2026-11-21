@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 {
-	// Token: 0x0200544B RID: 21579
+	// Token: 0x0200442E RID: 17454
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EyeProtectSliderData
 	{
-		// Token: 0x0603717F RID: 225663 RVA: 0x00D0EE2C File Offset: 0x00D0D02C
+		// Token: 0x0602C0C8 RID: 180424 RVA: 0x00C5E244 File Offset: 0x00C5C444
 		public EyeProtectSliderData(MenuData metaData, EyeProtectViewModel viewModel, EModeValue modeValue)
 		{
 			this.FunctionIdInternal = new EFunction?(metaData.FunctionId);
@@ -67,8 +67,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			this.OnApplyValue = new Action(this.OnApplyValueImpl);
 		}
 
-		// Token: 0x17008445 RID: 33861
-		// (get) Token: 0x06037180 RID: 225664 RVA: 0x00D0EFBA File Offset: 0x00D0D1BA
+		// Token: 0x17005811 RID: 22545
+		// (get) Token: 0x0602C0C9 RID: 180425 RVA: 0x00C5E3D2 File Offset: 0x00C5C5D2
 		public MenuData MenuData
 		{
 			get
@@ -77,8 +77,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			}
 		}
 
-		// Token: 0x17008446 RID: 33862
-		// (get) Token: 0x06037181 RID: 225665 RVA: 0x00D0EFC2 File Offset: 0x00D0D1C2
+		// Token: 0x17005812 RID: 22546
+		// (get) Token: 0x0602C0CA RID: 180426 RVA: 0x00C5E3DA File Offset: 0x00C5C5DA
 		public float MinValue
 		{
 			get
@@ -87,8 +87,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			}
 		}
 
-		// Token: 0x17008447 RID: 33863
-		// (get) Token: 0x06037182 RID: 225666 RVA: 0x00D0EFCA File Offset: 0x00D0D1CA
+		// Token: 0x17005813 RID: 22547
+		// (get) Token: 0x0602C0CB RID: 180427 RVA: 0x00C5E3E2 File Offset: 0x00C5C5E2
 		public float MaxValue
 		{
 			get
@@ -97,8 +97,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			}
 		}
 
-		// Token: 0x17008448 RID: 33864
-		// (get) Token: 0x06037183 RID: 225667 RVA: 0x00D0EFD2 File Offset: 0x00D0D1D2
+		// Token: 0x17005814 RID: 22548
+		// (get) Token: 0x0602C0CC RID: 180428 RVA: 0x00C5E3EA File Offset: 0x00C5C5EA
 		public float CurValue
 		{
 			get
@@ -107,8 +107,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			}
 		}
 
-		// Token: 0x17008449 RID: 33865
-		// (get) Token: 0x06037184 RID: 225668 RVA: 0x00D0EFDA File Offset: 0x00D0D1DA
+		// Token: 0x17005815 RID: 22549
+		// (get) Token: 0x0602C0CD RID: 180429 RVA: 0x00C5E3F2 File Offset: 0x00C5C5F2
 		public float DefaultCurValue
 		{
 			get
@@ -117,8 +117,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			}
 		}
 
-		// Token: 0x1700844A RID: 33866
-		// (get) Token: 0x06037185 RID: 225669 RVA: 0x00D0EFE2 File Offset: 0x00D0D1E2
+		// Token: 0x17005816 RID: 22550
+		// (get) Token: 0x0602C0CE RID: 180430 RVA: 0x00C5E3FA File Offset: 0x00C5C5FA
 		public string Title
 		{
 			get
@@ -127,8 +127,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			}
 		}
 
-		// Token: 0x1700844B RID: 33867
-		// (get) Token: 0x06037186 RID: 225670 RVA: 0x00D0EFEA File Offset: 0x00D0D1EA
+		// Token: 0x17005817 RID: 22551
+		// (get) Token: 0x0602C0CF RID: 180431 RVA: 0x00C5E402 File Offset: 0x00C5C602
 		public EFunction? FunctionId
 		{
 			get
@@ -137,13 +137,13 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			}
 		}
 
-		// Token: 0x06037187 RID: 225671 RVA: 0x00D0EFF2 File Offset: 0x00D0D1F2
+		// Token: 0x0602C0D0 RID: 180432 RVA: 0x00C5E40A File Offset: 0x00C5C60A
 		public EModeValue? GetModeValue()
 		{
 			return this.ModeValue;
 		}
 
-		// Token: 0x06037188 RID: 225672 RVA: 0x00D0EFFC File Offset: 0x00D0D1FC
+		// Token: 0x0602C0D1 RID: 180433 RVA: 0x00C5E414 File Offset: 0x00C5C614
 		private void OnChangeValueImpl(float value)
 		{
 			if (this.GetModeValue().GetValueOrDefault() != EModeValue.Custom)
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			}
 		}
 
-		// Token: 0x06037189 RID: 225673 RVA: 0x00D0F0D0 File Offset: 0x00D0D2D0
+		// Token: 0x0602C0D2 RID: 180434 RVA: 0x00C5E4E8 File Offset: 0x00C5C6E8
 		public void OnSetValue()
 		{
 			EFunction? functionId = this.FunctionId;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			}
 		}
 
-		// Token: 0x0603718A RID: 225674 RVA: 0x00D0F174 File Offset: 0x00D0D374
+		// Token: 0x0602C0D3 RID: 180435 RVA: 0x00C5E58C File Offset: 0x00C5C78C
 		private void OnApplyValueImpl()
 		{
 			if (this.GetModeValue().GetValueOrDefault() != EModeValue.Custom)
@@ -219,39 +219,39 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			GameSettingsManager.Instance.HandleValueChangeFloat(this.FunctionId.Value, this.CurValueInternal, EGameSettingsApplyReason.WhenUi);
 		}
 
-		// Token: 0x0401D10D RID: 119053
+		// Token: 0x04017BA6 RID: 97190
 		protected float MinValueInternal;
 
-		// Token: 0x0401D10E RID: 119054
+		// Token: 0x04017BA7 RID: 97191
 		protected float MaxValueInternal;
 
-		// Token: 0x0401D10F RID: 119055
+		// Token: 0x04017BA8 RID: 97192
 		protected float CurValueInternal;
 
-		// Token: 0x0401D110 RID: 119056
+		// Token: 0x04017BA9 RID: 97193
 		protected float DefaultValueInternal;
 
-		// Token: 0x0401D111 RID: 119057
+		// Token: 0x04017BAA RID: 97194
 		protected string TitleInternal = "";
 
-		// Token: 0x0401D112 RID: 119058
+		// Token: 0x04017BAB RID: 97195
 		[Nullable(2)]
 		protected EyeProtectViewModel ViewModel;
 
-		// Token: 0x0401D113 RID: 119059
+		// Token: 0x04017BAC RID: 97196
 		protected EFunction? FunctionIdInternal;
 
-		// Token: 0x0401D114 RID: 119060
+		// Token: 0x04017BAD RID: 97197
 		[Nullable(2)]
 		protected MenuData MetaData;
 
-		// Token: 0x0401D115 RID: 119061
+		// Token: 0x04017BAE RID: 97198
 		protected EModeValue? ModeValue;
 
-		// Token: 0x0401D116 RID: 119062
+		// Token: 0x04017BAF RID: 97199
 		public Action<float> OnChangeValue;
 
-		// Token: 0x0401D117 RID: 119063
+		// Token: 0x04017BB0 RID: 97200
 		public Action OnApplyValue;
 	}
 }

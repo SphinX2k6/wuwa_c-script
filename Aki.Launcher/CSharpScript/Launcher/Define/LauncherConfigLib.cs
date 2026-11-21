@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Define
 {
-	// Token: 0x0200023A RID: 570
+	// Token: 0x0200023F RID: 575
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LauncherConfigLib : Singleton
 	{
-		// Token: 0x06000E70 RID: 3696 RVA: 0x00055B18 File Offset: 0x00053D18
+		// Token: 0x06000EB1 RID: 3761 RVA: 0x00058620 File Offset: 0x00056820
 		public void Initialize()
 		{
 			if (this.IsInit)
@@ -55,7 +55,7 @@ namespace CSharpScript.Launcher.Define
 			}
 		}
 
-		// Token: 0x06000E71 RID: 3697 RVA: 0x00055C5C File Offset: 0x00053E5C
+		// Token: 0x06000EB2 RID: 3762 RVA: 0x00058764 File Offset: 0x00056964
 		public LauncherMenuConfig GetMenuConfigByFunctionId(int functionId)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(34, 2);
@@ -88,7 +88,7 @@ namespace CSharpScript.Launcher.Define
 			return result;
 		}
 
-		// Token: 0x06000E72 RID: 3698 RVA: 0x00055D18 File Offset: 0x00053F18
+		// Token: 0x06000EB3 RID: 3763 RVA: 0x00058820 File Offset: 0x00056A20
 		public LaunchGameSettingMenuConfig GetGameSettingsMenuConfigByFunctionId(int functionId)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(34, 2);
@@ -121,7 +121,7 @@ namespace CSharpScript.Launcher.Define
 			return result;
 		}
 
-		// Token: 0x06000E73 RID: 3699 RVA: 0x00055DD4 File Offset: 0x00053FD4
+		// Token: 0x06000EB4 RID: 3764 RVA: 0x000588DC File Offset: 0x00056ADC
 		public LauncherServerLimitConfig GetServerLimitConfig(string regionId)
 		{
 			string sql = "SELECT * FROM `" + LauncherServerLimitConfig.GetTableName() + "` WHERE Id=" + regionId;
@@ -149,7 +149,7 @@ namespace CSharpScript.Launcher.Define
 			return result;
 		}
 
-		// Token: 0x06000E74 RID: 3700 RVA: 0x00055E60 File Offset: 0x00054060
+		// Token: 0x06000EB5 RID: 3765 RVA: 0x00058968 File Offset: 0x00056B68
 		public unsafe bool IsLanguageValid(string languageCode)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(38, 2);
@@ -190,7 +190,7 @@ namespace CSharpScript.Launcher.Define
 			return result;
 		}
 
-		// Token: 0x06000E75 RID: 3701 RVA: 0x00055F84 File Offset: 0x00054184
+		// Token: 0x06000EB6 RID: 3766 RVA: 0x00058A8C File Offset: 0x00056C8C
 		[return: Nullable(2)]
 		public unsafe string GetHotPatchText(string id)
 		{
@@ -243,14 +243,14 @@ namespace CSharpScript.Launcher.Define
 			return result;
 		}
 
-		// Token: 0x06000E76 RID: 3702 RVA: 0x000560EC File Offset: 0x000542EC
+		// Token: 0x06000EB7 RID: 3767 RVA: 0x00058BF4 File Offset: 0x00056DF4
 		private string GetTextDbPath(string dbName, string culture = null)
 		{
 			string str = ((!string.IsNullOrEmpty(culture)) ? culture : LauncherLanguageLib.Instance.GetPackageLanguage()) + "/" + dbName;
 			return this.BaseDir + str;
 		}
 
-		// Token: 0x06000E77 RID: 3703 RVA: 0x00056128 File Offset: 0x00054328
+		// Token: 0x06000EB8 RID: 3768 RVA: 0x00058C30 File Offset: 0x00056E30
 		public unsafe LauncherDownLoadConfig GetDownLoadTabConfig(string regionId)
 		{
 			string sql = "SELECT * FROM `" + LauncherDownLoadConfig.GetTableName() + "` WHERE Id=" + regionId;
@@ -286,8 +286,8 @@ namespace CSharpScript.Launcher.Define
 			return result;
 		}
 
-		// Token: 0x1700015B RID: 347
-		// (get) Token: 0x06000E78 RID: 3704 RVA: 0x00056230 File Offset: 0x00054430
+		// Token: 0x17000161 RID: 353
+		// (get) Token: 0x06000EB9 RID: 3769 RVA: 0x00058D38 File Offset: 0x00056F38
 		public static LauncherConfigLib Instance
 		{
 			get
@@ -301,12 +301,12 @@ namespace CSharpScript.Launcher.Define
 			}
 		}
 
-		// Token: 0x06000E79 RID: 3705 RVA: 0x00056253 File Offset: 0x00054453
+		// Token: 0x06000EBA RID: 3770 RVA: 0x00058D5B File Offset: 0x00056F5B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000E7A RID: 3706 RVA: 0x00056255 File Offset: 0x00054455
+		// Token: 0x06000EBB RID: 3771 RVA: 0x00058D5D File Offset: 0x00056F5D
 		public static void ResetStaticDefaultValue()
 		{
 			LauncherConfigLib instance = LauncherConfigLib._instance;
@@ -317,37 +317,37 @@ namespace CSharpScript.Launcher.Define
 			LauncherConfigLib._instance = null;
 		}
 
-		// Token: 0x06000E7B RID: 3707 RVA: 0x0005626E File Offset: 0x0005446E
+		// Token: 0x06000EBC RID: 3772 RVA: 0x00058D76 File Offset: 0x00056F76
 		static LauncherConfigLib()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LauncherConfigLib.CreateStaticDefaultValue), new Action(LauncherConfigLib.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04000929 RID: 2345
+		// Token: 0x0400096B RID: 2411
 		private string BaseDir = "";
 
-		// Token: 0x0400092A RID: 2346
+		// Token: 0x0400096C RID: 2412
 		private DbInfo MenuConfigDbInfo;
 
-		// Token: 0x0400092B RID: 2347
+		// Token: 0x0400096D RID: 2413
 		private DbInfo ServerLimitConfigDbInfo;
 
-		// Token: 0x0400092C RID: 2348
+		// Token: 0x0400096E RID: 2414
 		private DbInfo DownLoadDbInfo;
 
-		// Token: 0x0400092D RID: 2349
+		// Token: 0x0400096F RID: 2415
 		private readonly Dictionary<string, string> HotPatchTextMap = new Dictionary<string, string>();
 
-		// Token: 0x0400092E RID: 2350
+		// Token: 0x04000970 RID: 2416
 		private bool IsInit;
 
-		// Token: 0x0400092F RID: 2351
+		// Token: 0x04000971 RID: 2417
 		private const string DB = "lang_hot_patch.db";
 
-		// Token: 0x04000930 RID: 2352
+		// Token: 0x04000972 RID: 2418
 		private const string TABLE = "HotPatchText";
 
-		// Token: 0x04000931 RID: 2353
+		// Token: 0x04000973 RID: 2419
 		[Nullable(2)]
 		private static LauncherConfigLib _instance;
 	}

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003279 RID: 12921
+// Token: 0x020027E9 RID: 10217
 [NullableContext(1)]
 [Nullable(0)]
-public class UeComponentTickManageComponent : EntityComponent, IComponentDependency
+public class UeComponentTickManageComponent : EntityComponent
 {
-	// Token: 0x17002697 RID: 9879
-	// (get) Token: 0x0601BF64 RID: 114532 RVA: 0x007C3894 File Offset: 0x007C1A94
-	public static Type[] Dependencies
+	// Token: 0x1700293D RID: 10557
+	// (get) Token: 0x06019B52 RID: 105298 RVA: 0x007EAC64 File Offset: 0x007E8E64
+	public override Type[] Dependencies
 	{
 		get
 		{
@@ -21,7 +21,7 @@ public class UeComponentTickManageComponent : EntityComponent, IComponentDepende
 		}
 	}
 
-	// Token: 0x0601BF65 RID: 114533 RVA: 0x007C38AC File Offset: 0x007C1AAC
+	// Token: 0x06019B53 RID: 105299 RVA: 0x007EAC7C File Offset: 0x007E8E7C
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -40,7 +40,7 @@ public class UeComponentTickManageComponent : EntityComponent, IComponentDepende
 		return true;
 	}
 
-	// Token: 0x0601BF66 RID: 114534 RVA: 0x007C3904 File Offset: 0x007C1B04
+	// Token: 0x06019B54 RID: 105300 RVA: 0x007EACD4 File Offset: 0x007E8ED4
 	protected override void OnActivate()
 	{
 		BaseActorComponent component = base.Entity.GetComponent<BaseActorComponent>();
@@ -79,7 +79,7 @@ public class UeComponentTickManageComponent : EntityComponent, IComponentDepende
 		}
 	}
 
-	// Token: 0x0601BF67 RID: 114535 RVA: 0x007C3A34 File Offset: 0x007C1C34
+	// Token: 0x06019B55 RID: 105301 RVA: 0x007EAE04 File Offset: 0x007E9004
 	protected override void OnTick(float delta)
 	{
 		float customTimeDilation = base.Entity.GetComponent<BaseCharacterComponent>().Actor.CustomTimeDilation;
@@ -90,7 +90,7 @@ public class UeComponentTickManageComponent : EntityComponent, IComponentDepende
 		}
 	}
 
-	// Token: 0x0601BF68 RID: 114536 RVA: 0x007C3AA8 File Offset: 0x007C1CA8
+	// Token: 0x06019B56 RID: 105302 RVA: 0x007EAE78 File Offset: 0x007E9078
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -98,10 +98,30 @@ public class UeComponentTickManageComponent : EntityComponent, IComponentDepende
 			return false;
 		}
 		UeComponentTickManageComponent ueComponentTickManageComponent = (UeComponentTickManageComponent)componentTemplate;
-		return (!base.CanResetComponentProperty("Classes") || ueComponentTickManageComponent.Classes == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<TWeakObjectPtr<UClass>>>(this.Classes), "Classes")) && (!base.CanResetComponentProperty("UeActorComps") || ueComponentTickManageComponent.UeActorComps == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<UActorComponent>>(this.UeActorComps), "UeActorComps"));
+		return (ueComponentTickManageComponent.Classes == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.Classes), "Classes")) && (ueComponentTickManageComponent.UeActorComps == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.UeActorComps), "UeActorComps"));
 	}
 
-	// Token: 0x0400DCE0 RID: 56544
+	// Token: 0x1700293E RID: 10558
+	// (get) Token: 0x06019B57 RID: 105303 RVA: 0x007EAEDC File Offset: 0x007E90DC
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700293F RID: 10559
+	// (get) Token: 0x06019B58 RID: 105304 RVA: 0x007EAEDF File Offset: 0x007E90DF
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E182 RID: 57730
 	[Nullable(new byte[]
 	{
 		1,
@@ -110,6 +130,6 @@ public class UeComponentTickManageComponent : EntityComponent, IComponentDepende
 	})]
 	private readonly List<TWeakObjectPtr<UClass>> Classes = new List<TWeakObjectPtr<UClass>>();
 
-	// Token: 0x0400DCE1 RID: 56545
+	// Token: 0x0400E183 RID: 57731
 	private readonly List<UActorComponent> UeActorComps = new List<UActorComponent>();
 }

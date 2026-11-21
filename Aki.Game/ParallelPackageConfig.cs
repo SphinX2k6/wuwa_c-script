@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002315 RID: 8981
+// Token: 0x020017FA RID: 6138
 public class ParallelPackageConfig
 {
-	// Token: 0x040086AC RID: 34476
+	// Token: 0x040087EF RID: 34799
 	public int version;
 
-	// Token: 0x040086AD RID: 34477
+	// Token: 0x040087F0 RID: 34800
 	[Nullable(new byte[]
 	{
 		2,
@@ -16,7 +16,7 @@ public class ParallelPackageConfig
 	})]
 	public List<ParallelPackageUrlConfig> packageConfig;
 
-	// Token: 0x040086AE RID: 34478
+	// Token: 0x040087F1 RID: 34801
 	[Nullable(new byte[]
 	{
 		2,

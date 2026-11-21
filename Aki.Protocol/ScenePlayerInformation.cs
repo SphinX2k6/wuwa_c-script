@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001184 RID: 4484
+	// Token: 0x020011BE RID: 4542
 	public sealed class ScenePlayerInformation : IMessage<ScenePlayerInformation>, IMessage, IEquatable<ScenePlayerInformation>, IDeepCloneable<ScenePlayerInformation>, IBufferMessage
 	{
-		// Token: 0x06017E4B RID: 97867 RVA: 0x00377F6E File Offset: 0x0037616E
+		// Token: 0x060183EC RID: 99308 RVA: 0x003872B2 File Offset: 0x003854B2
 		[NullableContext(1)]
 		public static ScenePlayerInformation Create()
 		{
 			return new ScenePlayerInformation();
 		}
 
-		// Token: 0x1700503C RID: 20540
-		// (get) Token: 0x06017E4C RID: 97868 RVA: 0x00377F75 File Offset: 0x00376175
+		// Token: 0x170051A8 RID: 20904
+		// (get) Token: 0x060183ED RID: 99309 RVA: 0x003872B9 File Offset: 0x003854B9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<ScenePlayerInformation> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700503D RID: 20541
-		// (get) Token: 0x06017E4D RID: 97869 RVA: 0x00377F7C File Offset: 0x0037617C
+		// Token: 0x170051A9 RID: 20905
+		// (get) Token: 0x060183EE RID: 99310 RVA: 0x003872C0 File Offset: 0x003854C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700503E RID: 20542
-		// (get) Token: 0x06017E4E RID: 97870 RVA: 0x00377F7F File Offset: 0x0037617F
+		// Token: 0x170051AA RID: 20906
+		// (get) Token: 0x060183EF RID: 99311 RVA: 0x003872C3 File Offset: 0x003854C3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017E4F RID: 97871 RVA: 0x00377F86 File Offset: 0x00376186
+		// Token: 0x060183F0 RID: 99312 RVA: 0x003872CA File Offset: 0x003854CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ScenePlayerInformation()
 		{
 		}
 
-		// Token: 0x06017E50 RID: 97872 RVA: 0x00377FBC File Offset: 0x003761BC
+		// Token: 0x060183F1 RID: 99313 RVA: 0x00387300 File Offset: 0x00385500
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ScenePlayerInformation(ScenePlayerInformation other) : this()
@@ -86,7 +86,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06017E51 RID: 97873 RVA: 0x003780F1 File Offset: 0x003762F1
+		// Token: 0x060183F2 RID: 99314 RVA: 0x00387435 File Offset: 0x00385635
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ScenePlayerInformation Clone()
@@ -94,9 +94,9 @@ namespace Aki.Protocol
 			return new ScenePlayerInformation(this);
 		}
 
-		// Token: 0x1700503F RID: 20543
-		// (get) Token: 0x06017E52 RID: 97874 RVA: 0x003780F9 File Offset: 0x003762F9
-		// (set) Token: 0x06017E53 RID: 97875 RVA: 0x00378101 File Offset: 0x00376301
+		// Token: 0x170051AB RID: 20907
+		// (get) Token: 0x060183F3 RID: 99315 RVA: 0x0038743D File Offset: 0x0038563D
+		// (set) Token: 0x060183F4 RID: 99316 RVA: 0x00387445 File Offset: 0x00385645
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PlayerId
@@ -111,9 +111,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005040 RID: 20544
-		// (get) Token: 0x06017E54 RID: 97876 RVA: 0x0037810A File Offset: 0x0037630A
-		// (set) Token: 0x06017E55 RID: 97877 RVA: 0x00378112 File Offset: 0x00376312
+		// Token: 0x170051AC RID: 20908
+		// (get) Token: 0x060183F5 RID: 99317 RVA: 0x0038744E File Offset: 0x0038564E
+		// (set) Token: 0x060183F6 RID: 99318 RVA: 0x00387456 File Offset: 0x00385656
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string PlayerName
@@ -128,9 +128,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005041 RID: 20545
-		// (get) Token: 0x06017E56 RID: 97878 RVA: 0x00378125 File Offset: 0x00376325
-		// (set) Token: 0x06017E57 RID: 97879 RVA: 0x0037812D File Offset: 0x0037632D
+		// Token: 0x170051AD RID: 20909
+		// (get) Token: 0x060183F7 RID: 99319 RVA: 0x00387469 File Offset: 0x00385669
+		// (set) Token: 0x060183F8 RID: 99320 RVA: 0x00387471 File Offset: 0x00385671
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PlayerIcon
@@ -145,9 +145,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005042 RID: 20546
-		// (get) Token: 0x06017E58 RID: 97880 RVA: 0x00378136 File Offset: 0x00376336
-		// (set) Token: 0x06017E59 RID: 97881 RVA: 0x0037813E File Offset: 0x0037633E
+		// Token: 0x170051AE RID: 20910
+		// (get) Token: 0x060183F9 RID: 99321 RVA: 0x0038747A File Offset: 0x0038567A
+		// (set) Token: 0x060183FA RID: 99322 RVA: 0x00387482 File Offset: 0x00385682
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Level
@@ -162,9 +162,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005043 RID: 20547
-		// (get) Token: 0x06017E5A RID: 97882 RVA: 0x00378147 File Offset: 0x00376347
-		// (set) Token: 0x06017E5B RID: 97883 RVA: 0x0037814F File Offset: 0x0037634F
+		// Token: 0x170051AF RID: 20911
+		// (get) Token: 0x060183FB RID: 99323 RVA: 0x0038748B File Offset: 0x0038568B
+		// (set) Token: 0x060183FC RID: 99324 RVA: 0x00387493 File Offset: 0x00385693
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string GuildName
@@ -179,9 +179,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005044 RID: 20548
-		// (get) Token: 0x06017E5C RID: 97884 RVA: 0x00378162 File Offset: 0x00376362
-		// (set) Token: 0x06017E5D RID: 97885 RVA: 0x0037816A File Offset: 0x0037636A
+		// Token: 0x170051B0 RID: 20912
+		// (get) Token: 0x060183FD RID: 99325 RVA: 0x003874A6 File Offset: 0x003856A6
+		// (set) Token: 0x060183FE RID: 99326 RVA: 0x003874AE File Offset: 0x003856AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string GuildIntro
@@ -196,9 +196,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005045 RID: 20549
-		// (get) Token: 0x06017E5E RID: 97886 RVA: 0x0037817D File Offset: 0x0037637D
-		// (set) Token: 0x06017E5F RID: 97887 RVA: 0x00378185 File Offset: 0x00376385
+		// Token: 0x170051B1 RID: 20913
+		// (get) Token: 0x060183FF RID: 99327 RVA: 0x003874C1 File Offset: 0x003856C1
+		// (set) Token: 0x06018400 RID: 99328 RVA: 0x003874C9 File Offset: 0x003856C9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Vector Location
@@ -213,9 +213,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005046 RID: 20550
-		// (get) Token: 0x06017E60 RID: 97888 RVA: 0x0037818E File Offset: 0x0037638E
-		// (set) Token: 0x06017E61 RID: 97889 RVA: 0x00378196 File Offset: 0x00376396
+		// Token: 0x170051B2 RID: 20914
+		// (get) Token: 0x06018401 RID: 99329 RVA: 0x003874D2 File Offset: 0x003856D2
+		// (set) Token: 0x06018402 RID: 99330 RVA: 0x003874DA File Offset: 0x003856DA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsOffline
@@ -230,9 +230,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005047 RID: 20551
-		// (get) Token: 0x06017E62 RID: 97890 RVA: 0x0037819F File Offset: 0x0037639F
-		// (set) Token: 0x06017E63 RID: 97891 RVA: 0x003781A7 File Offset: 0x003763A7
+		// Token: 0x170051B3 RID: 20915
+		// (get) Token: 0x06018403 RID: 99331 RVA: 0x003874E3 File Offset: 0x003856E3
+		// (set) Token: 0x06018404 RID: 99332 RVA: 0x003874EB File Offset: 0x003856EB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PlayerPrefix
@@ -247,9 +247,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005048 RID: 20552
-		// (get) Token: 0x06017E64 RID: 97892 RVA: 0x003781B0 File Offset: 0x003763B0
-		// (set) Token: 0x06017E65 RID: 97893 RVA: 0x003781B8 File Offset: 0x003763B8
+		// Token: 0x170051B4 RID: 20916
+		// (get) Token: 0x06018405 RID: 99333 RVA: 0x003874F4 File Offset: 0x003856F4
+		// (set) Token: 0x06018406 RID: 99334 RVA: 0x003874FC File Offset: 0x003856FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PlayerGEIncHandle
@@ -264,8 +264,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005049 RID: 20553
-		// (get) Token: 0x06017E66 RID: 97894 RVA: 0x003781C1 File Offset: 0x003763C1
+		// Token: 0x170051B5 RID: 20917
+		// (get) Token: 0x06018407 RID: 99335 RVA: 0x00387505 File Offset: 0x00385705
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PlayerSceneGroupData> PlayerSceneGroupData
@@ -276,9 +276,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700504A RID: 20554
-		// (get) Token: 0x06017E67 RID: 97895 RVA: 0x003781C9 File Offset: 0x003763C9
-		// (set) Token: 0x06017E68 RID: 97896 RVA: 0x003781D1 File Offset: 0x003763D1
+		// Token: 0x170051B6 RID: 20918
+		// (get) Token: 0x06018408 RID: 99336 RVA: 0x0038750D File Offset: 0x0038570D
+		// (set) Token: 0x06018409 RID: 99337 RVA: 0x00387515 File Offset: 0x00385715
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Rotator Rotation
@@ -293,9 +293,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700504B RID: 20555
-		// (get) Token: 0x06017E69 RID: 97897 RVA: 0x003781DA File Offset: 0x003763DA
-		// (set) Token: 0x06017E6A RID: 97898 RVA: 0x003781E2 File Offset: 0x003763E2
+		// Token: 0x170051B7 RID: 20919
+		// (get) Token: 0x0601840A RID: 99338 RVA: 0x0038751E File Offset: 0x0038571E
+		// (set) Token: 0x0601840B RID: 99339 RVA: 0x00387526 File Offset: 0x00385726
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Group
@@ -310,9 +310,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700504C RID: 20556
-		// (get) Token: 0x06017E6B RID: 97899 RVA: 0x003781EB File Offset: 0x003763EB
-		// (set) Token: 0x06017E6C RID: 97900 RVA: 0x003781F3 File Offset: 0x003763F3
+		// Token: 0x170051B8 RID: 20920
+		// (get) Token: 0x0601840C RID: 99340 RVA: 0x0038752F File Offset: 0x0038572F
+		// (set) Token: 0x0601840D RID: 99341 RVA: 0x00387537 File Offset: 0x00385737
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurRole
@@ -327,9 +327,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700504D RID: 20557
-		// (get) Token: 0x06017E6D RID: 97901 RVA: 0x003781FC File Offset: 0x003763FC
-		// (set) Token: 0x06017E6E RID: 97902 RVA: 0x00378204 File Offset: 0x00376404
+		// Token: 0x170051B9 RID: 20921
+		// (get) Token: 0x0601840E RID: 99342 RVA: 0x00387540 File Offset: 0x00385740
+		// (set) Token: 0x0601840F RID: 99343 RVA: 0x00387548 File Offset: 0x00385748
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public VehicleInfoPb VehicleInfoPb
@@ -344,9 +344,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700504E RID: 20558
-		// (get) Token: 0x06017E6F RID: 97903 RVA: 0x0037820D File Offset: 0x0037640D
-		// (set) Token: 0x06017E70 RID: 97904 RVA: 0x00378215 File Offset: 0x00376415
+		// Token: 0x170051BA RID: 20922
+		// (get) Token: 0x06018410 RID: 99344 RVA: 0x00387551 File Offset: 0x00385751
+		// (set) Token: 0x06018411 RID: 99345 RVA: 0x00387559 File Offset: 0x00385759
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Vector GravityDirection
@@ -361,9 +361,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700504F RID: 20559
-		// (get) Token: 0x06017E71 RID: 97905 RVA: 0x0037821E File Offset: 0x0037641E
-		// (set) Token: 0x06017E72 RID: 97906 RVA: 0x00378226 File Offset: 0x00376426
+		// Token: 0x170051BB RID: 20923
+		// (get) Token: 0x06018412 RID: 99346 RVA: 0x00387562 File Offset: 0x00385762
+		// (set) Token: 0x06018413 RID: 99347 RVA: 0x0038756A File Offset: 0x0038576A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int AreaId
@@ -378,7 +378,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017E73 RID: 97907 RVA: 0x0037822F File Offset: 0x0037642F
+		// Token: 0x06018414 RID: 99348 RVA: 0x00387573 File Offset: 0x00385773
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -386,7 +386,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ScenePlayerInformation);
 		}
 
-		// Token: 0x06017E74 RID: 97908 RVA: 0x00378240 File Offset: 0x00376440
+		// Token: 0x06018415 RID: 99349 RVA: 0x00387584 File Offset: 0x00385784
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ScenePlayerInformation other)
@@ -394,7 +394,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.PlayerId == other.PlayerId && !(this.PlayerName != other.PlayerName) && this.PlayerIcon == other.PlayerIcon && this.Level == other.Level && !(this.GuildName != other.GuildName) && !(this.GuildIntro != other.GuildIntro) && object.Equals(this.Location, other.Location) && this.IsOffline == other.IsOffline && this.PlayerPrefix == other.PlayerPrefix && this.PlayerGEIncHandle == other.PlayerGEIncHandle && this.playerSceneGroupData_.Equals(other.playerSceneGroupData_) && object.Equals(this.Rotation, other.Rotation) && this.Group == other.Group && this.CurRole == other.CurRole && object.Equals(this.VehicleInfoPb, other.VehicleInfoPb) && object.Equals(this.GravityDirection, other.GravityDirection) && this.AreaId == other.AreaId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06017E75 RID: 97909 RVA: 0x003783A4 File Offset: 0x003765A4
+		// Token: 0x06018416 RID: 99350 RVA: 0x003876E8 File Offset: 0x003858E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -472,7 +472,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017E76 RID: 97910 RVA: 0x00378562 File Offset: 0x00376762
+		// Token: 0x06018417 RID: 99351 RVA: 0x003878A6 File Offset: 0x00385AA6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -480,7 +480,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06017E77 RID: 97911 RVA: 0x0037856F File Offset: 0x0037676F
+		// Token: 0x06018418 RID: 99352 RVA: 0x003878B3 File Offset: 0x00385AB3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -488,7 +488,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06017E78 RID: 97912 RVA: 0x00378578 File Offset: 0x00376778
+		// Token: 0x06018419 RID: 99353 RVA: 0x003878BC File Offset: 0x00385ABC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -580,7 +580,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017E79 RID: 97913 RVA: 0x00378784 File Offset: 0x00376984
+		// Token: 0x0601841A RID: 99354 RVA: 0x00387AC8 File Offset: 0x00385CC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -658,7 +658,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017E7A RID: 97914 RVA: 0x00378940 File Offset: 0x00376B40
+		// Token: 0x0601841B RID: 99355 RVA: 0x00387C84 File Offset: 0x00385E84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ScenePlayerInformation other)
@@ -751,7 +751,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06017E7B RID: 97915 RVA: 0x00378B28 File Offset: 0x00376D28
+		// Token: 0x0601841C RID: 99356 RVA: 0x00387E6C File Offset: 0x0038606C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -759,7 +759,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06017E7C RID: 97916 RVA: 0x00378B34 File Offset: 0x00376D34
+		// Token: 0x0601841D RID: 99357 RVA: 0x00387E78 File Offset: 0x00386078
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -909,115 +909,115 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008D80 RID: 36224
+		// Token: 0x04009013 RID: 36883
 		private static readonly MessageParser<ScenePlayerInformation> _parser = new MessageParser<ScenePlayerInformation>(() => new ScenePlayerInformation());
 
-		// Token: 0x04008D81 RID: 36225
+		// Token: 0x04009014 RID: 36884
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008D82 RID: 36226
+		// Token: 0x04009015 RID: 36885
 		public const int PlayerIdFieldNumber = 1;
 
-		// Token: 0x04008D83 RID: 36227
+		// Token: 0x04009016 RID: 36886
 		private int playerId_;
 
-		// Token: 0x04008D84 RID: 36228
+		// Token: 0x04009017 RID: 36887
 		public const int PlayerNameFieldNumber = 2;
 
-		// Token: 0x04008D85 RID: 36229
+		// Token: 0x04009018 RID: 36888
 		private string playerName_ = "";
 
-		// Token: 0x04008D86 RID: 36230
+		// Token: 0x04009019 RID: 36889
 		public const int PlayerIconFieldNumber = 3;
 
-		// Token: 0x04008D87 RID: 36231
+		// Token: 0x0400901A RID: 36890
 		private int playerIcon_;
 
-		// Token: 0x04008D88 RID: 36232
+		// Token: 0x0400901B RID: 36891
 		public const int LevelFieldNumber = 4;
 
-		// Token: 0x04008D89 RID: 36233
+		// Token: 0x0400901C RID: 36892
 		private int level_;
 
-		// Token: 0x04008D8A RID: 36234
+		// Token: 0x0400901D RID: 36893
 		public const int GuildNameFieldNumber = 5;
 
-		// Token: 0x04008D8B RID: 36235
+		// Token: 0x0400901E RID: 36894
 		private string guildName_ = "";
 
-		// Token: 0x04008D8C RID: 36236
+		// Token: 0x0400901F RID: 36895
 		public const int GuildIntroFieldNumber = 6;
 
-		// Token: 0x04008D8D RID: 36237
+		// Token: 0x04009020 RID: 36896
 		private string guildIntro_ = "";
 
-		// Token: 0x04008D8E RID: 36238
+		// Token: 0x04009021 RID: 36897
 		public const int LocationFieldNumber = 7;
 
-		// Token: 0x04008D8F RID: 36239
+		// Token: 0x04009022 RID: 36898
 		private Vector location_;
 
-		// Token: 0x04008D90 RID: 36240
+		// Token: 0x04009023 RID: 36899
 		public const int IsOfflineFieldNumber = 8;
 
-		// Token: 0x04008D91 RID: 36241
+		// Token: 0x04009024 RID: 36900
 		private bool isOffline_;
 
-		// Token: 0x04008D92 RID: 36242
+		// Token: 0x04009025 RID: 36901
 		public const int PlayerPrefixFieldNumber = 9;
 
-		// Token: 0x04008D93 RID: 36243
+		// Token: 0x04009026 RID: 36902
 		private int playerPrefix_;
 
-		// Token: 0x04008D94 RID: 36244
+		// Token: 0x04009027 RID: 36903
 		public const int PlayerGEIncHandleFieldNumber = 10;
 
-		// Token: 0x04008D95 RID: 36245
+		// Token: 0x04009028 RID: 36904
 		private int playerGEIncHandle_;
 
-		// Token: 0x04008D96 RID: 36246
+		// Token: 0x04009029 RID: 36905
 		public const int PlayerSceneGroupDataFieldNumber = 11;
 
-		// Token: 0x04008D97 RID: 36247
+		// Token: 0x0400902A RID: 36906
 		private static readonly FieldCodec<PlayerSceneGroupData> _repeated_playerSceneGroupData_codec = FieldCodec.ForMessage<PlayerSceneGroupData>(90U, Aki.Protocol.PlayerSceneGroupData.Parser);
 
-		// Token: 0x04008D98 RID: 36248
+		// Token: 0x0400902B RID: 36907
 		private readonly RepeatedField<PlayerSceneGroupData> playerSceneGroupData_ = new RepeatedField<PlayerSceneGroupData>();
 
-		// Token: 0x04008D99 RID: 36249
+		// Token: 0x0400902C RID: 36908
 		public const int RotationFieldNumber = 13;
 
-		// Token: 0x04008D9A RID: 36250
+		// Token: 0x0400902D RID: 36909
 		private Rotator rotation_;
 
-		// Token: 0x04008D9B RID: 36251
+		// Token: 0x0400902E RID: 36910
 		public const int GroupFieldNumber = 14;
 
-		// Token: 0x04008D9C RID: 36252
+		// Token: 0x0400902F RID: 36911
 		private int group_;
 
-		// Token: 0x04008D9D RID: 36253
+		// Token: 0x04009030 RID: 36912
 		public const int CurRoleFieldNumber = 15;
 
-		// Token: 0x04008D9E RID: 36254
+		// Token: 0x04009031 RID: 36913
 		private int curRole_;
 
-		// Token: 0x04008D9F RID: 36255
+		// Token: 0x04009032 RID: 36914
 		public const int VehicleInfoPbFieldNumber = 16;
 
-		// Token: 0x04008DA0 RID: 36256
+		// Token: 0x04009033 RID: 36915
 		private VehicleInfoPb vehicleInfoPb_;
 
-		// Token: 0x04008DA1 RID: 36257
+		// Token: 0x04009034 RID: 36916
 		public const int GravityDirectionFieldNumber = 17;
 
-		// Token: 0x04008DA2 RID: 36258
+		// Token: 0x04009035 RID: 36917
 		private Vector gravityDirection_;
 
-		// Token: 0x04008DA3 RID: 36259
+		// Token: 0x04009036 RID: 36918
 		public const int AreaIdFieldNumber = 18;
 
-		// Token: 0x04008DA4 RID: 36260
+		// Token: 0x04009037 RID: 36919
 		private int areaId_;
 	}
 }

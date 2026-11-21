@@ -6,12 +6,12 @@ using CSharpScript.Game.LevelGamePlay.LevelAi.Tasks;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 {
-	// Token: 0x02006DC9 RID: 28105
+	// Token: 0x02005F48 RID: 24392
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelAiNodeBehaviourActions : LevelAiStandaloneNode
 	{
-		// Token: 0x060448F6 RID: 280822 RVA: 0x010E8C00 File Offset: 0x010E6E00
+		// Token: 0x0603AA5A RID: 240218 RVA: 0x01092E50 File Offset: 0x01091050
 		public unsafe override void MakePlanExpansions(PlanningContext context, LevelAiWorldState worldState)
 		{
 			if (this.Actions == null)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 			context.SubmitCandidatePlan(item);
 		}
 
-		// Token: 0x060448F7 RID: 280823 RVA: 0x010E8CC8 File Offset: 0x010E6EC8
+		// Token: 0x0603AA5B RID: 240219 RVA: 0x01092F18 File Offset: 0x01091118
 		public override void GetNextSteps(GetNextStepsContext context, LevelAiPlanStepId thisStepId)
 		{
 			if (!this.LastAbortedSubLevelStepId.Equal(LevelAiPlanStepId.None))
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 			context.AddNextStepsAfter(new LevelAiPlanStepId(step.SubLevelIndex, -1));
 		}
 
-		// Token: 0x060448F8 RID: 280824 RVA: 0x010E8D46 File Offset: 0x010E6F46
+		// Token: 0x0603AA5C RID: 240220 RVA: 0x01092F96 File Offset: 0x01091196
 		public override bool OnSubLevelStepFinished(LevelAiPlanInstance planInstance, LevelAiPlanStepId thisStepId, LevelAiPlanStepId finishedSubLevelStepId, ELevelAiNodeResult result, bool bFinishedLevel)
 		{
 			if (result == ELevelAiNodeResult.Aborted)
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 			return true;
 		}
 
-		// Token: 0x060448F9 RID: 280825 RVA: 0x010E8D5C File Offset: 0x010E6F5C
+		// Token: 0x0603AA5D RID: 240221 RVA: 0x01092FAC File Offset: 0x010911AC
 		private void InitActions()
 		{
 			LevelAiTaskSuccess levelAiTaskSuccess = new LevelAiTaskSuccess();
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 			this.ActionsInited = true;
 		}
 
-		// Token: 0x04023A7B RID: 146043
+		// Token: 0x0401ED1D RID: 126237
 		[Nullable(new byte[]
 		{
 			2,
@@ -98,16 +98,16 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Nodes
 		})]
 		public List<ActionInfo> Actions;
 
-		// Token: 0x04023A7C RID: 146044
+		// Token: 0x0401ED1E RID: 126238
 		public bool CanRecordPlanProgress;
 
-		// Token: 0x04023A7D RID: 146045
+		// Token: 0x0401ED1F RID: 126239
 		public int Cost;
 
-		// Token: 0x04023A7E RID: 146046
+		// Token: 0x0401ED20 RID: 126240
 		private bool ActionsInited;
 
-		// Token: 0x04023A7F RID: 146047
+		// Token: 0x0401ED21 RID: 126241
 		private readonly LevelAiPlanStepId LastAbortedSubLevelStepId = new LevelAiPlanStepId(-1, -1);
 	}
 }

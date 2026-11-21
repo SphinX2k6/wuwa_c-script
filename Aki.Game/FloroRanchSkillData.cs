@@ -2,19 +2,19 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001AFF RID: 6911
+// Token: 0x02000FBE RID: 4030
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchSkillData
 {
-	// Token: 0x0600CD23 RID: 52515 RVA: 0x002ECB14 File Offset: 0x002EAD14
+	// Token: 0x0600A134 RID: 41268 RVA: 0x002F7C00 File Offset: 0x002F5E00
 	public FloroRanchSkillData(FloroRanchSkill config)
 	{
 		this.Config = config;
 	}
 
-	// Token: 0x170010F9 RID: 4345
-	// (get) Token: 0x0600CD24 RID: 52516 RVA: 0x002ECB24 File Offset: 0x002EAD24
+	// Token: 0x1700111E RID: 4382
+	// (get) Token: 0x0600A135 RID: 41269 RVA: 0x002F7C10 File Offset: 0x002F5E10
 	public int Id
 	{
 		get
@@ -23,8 +23,8 @@ public class FloroRanchSkillData
 		}
 	}
 
-	// Token: 0x170010FA RID: 4346
-	// (get) Token: 0x0600CD25 RID: 52517 RVA: 0x002ECB40 File Offset: 0x002EAD40
+	// Token: 0x1700111F RID: 4383
+	// (get) Token: 0x0600A136 RID: 41270 RVA: 0x002F7C2C File Offset: 0x002F5E2C
 	public string Name
 	{
 		get
@@ -33,14 +33,14 @@ public class FloroRanchSkillData
 		}
 	}
 
-	// Token: 0x0600CD26 RID: 52518 RVA: 0x002ECB5C File Offset: 0x002EAD5C
+	// Token: 0x0600A137 RID: 41271 RVA: 0x002F7C48 File Offset: 0x002F5E48
 	public string GetRealName()
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.Config.Name, null);
 	}
 
-	// Token: 0x170010FB RID: 4347
-	// (get) Token: 0x0600CD27 RID: 52519 RVA: 0x002ECB80 File Offset: 0x002EAD80
+	// Token: 0x17001120 RID: 4384
+	// (get) Token: 0x0600A138 RID: 41272 RVA: 0x002F7C6C File Offset: 0x002F5E6C
 	public string Icon
 	{
 		get
@@ -49,8 +49,8 @@ public class FloroRanchSkillData
 		}
 	}
 
-	// Token: 0x170010FC RID: 4348
-	// (get) Token: 0x0600CD28 RID: 52520 RVA: 0x002ECB9C File Offset: 0x002EAD9C
+	// Token: 0x17001121 RID: 4385
+	// (get) Token: 0x0600A139 RID: 41273 RVA: 0x002F7C88 File Offset: 0x002F5E88
 	public string Desc
 	{
 		get
@@ -59,8 +59,8 @@ public class FloroRanchSkillData
 		}
 	}
 
-	// Token: 0x170010FD RID: 4349
-	// (get) Token: 0x0600CD29 RID: 52521 RVA: 0x002ECBB8 File Offset: 0x002EADB8
+	// Token: 0x17001122 RID: 4386
+	// (get) Token: 0x0600A13A RID: 41274 RVA: 0x002F7CA4 File Offset: 0x002F5EA4
 	public bool IsActiveSkill
 	{
 		get
@@ -69,6 +69,6 @@ public class FloroRanchSkillData
 		}
 	}
 
-	// Token: 0x04005E1D RID: 24093
+	// Token: 0x04005EEC RID: 24300
 	private readonly FloroRanchSkill Config;
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl;
@@ -12,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 {
-	// Token: 0x02005A10 RID: 23056
+	// Token: 0x020049EC RID: 18924
 	public class DangoBrawlBattleLogPanel : UiPanelBase
 	{
-		// Token: 0x0603A77E RID: 239486 RVA: 0x00DE9B44 File Offset: 0x00DE7D44
+		// Token: 0x0602F6C7 RID: 194247 RVA: 0x00D3A0C4 File Offset: 0x00D382C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -48,7 +47,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A77F RID: 239487 RVA: 0x00DE9CB4 File Offset: 0x00DE7EB4
+		// Token: 0x0602F6C8 RID: 194248 RVA: 0x00D3A234 File Offset: 0x00D38434
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlBattleLogPanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -59,20 +58,20 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A780 RID: 239488 RVA: 0x00DE9CF7 File Offset: 0x00DE7EF7
+		// Token: 0x0602F6C9 RID: 194249 RVA: 0x00D3A277 File Offset: 0x00D38477
 		protected override void OnStart()
 		{
 			this.ScrollView = new LoopScrollView<DangoBrawlBattleLogItem, DangoBrawlBattleLogInfo>(base.GetLoopScrollViewComponent(3), base.GetItem(4).GetOwner() as AUIBaseActor, new Func<DangoBrawlBattleLogItem>(this.CreateLogItem), false);
 		}
 
-		// Token: 0x0603A781 RID: 239489 RVA: 0x00DE9D29 File Offset: 0x00DE7F29
+		// Token: 0x0602F6CA RID: 194250 RVA: 0x00D3A2A9 File Offset: 0x00D384A9
 		public void SetActiveByToggle(bool isShow)
 		{
 			base.SetUiActive(isShow);
 			this.Refresh();
 		}
 
-		// Token: 0x0603A782 RID: 239490 RVA: 0x00DE9D38 File Offset: 0x00DE7F38
+		// Token: 0x0602F6CB RID: 194251 RVA: 0x00D3A2B8 File Offset: 0x00D384B8
 		public void OnShowInit()
 		{
 			this.SetActiveByToggle(false);
@@ -101,7 +100,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			logPanelToggleOpponent.SetSelected(false);
 		}
 
-		// Token: 0x0603A783 RID: 239491 RVA: 0x00DE9DAC File Offset: 0x00DE7FAC
+		// Token: 0x0602F6CC RID: 194252 RVA: 0x00D3A32C File Offset: 0x00D3852C
 		public void RefreshOnEmit(bool isSelf, bool isHeal)
 		{
 			bool flag = !isHeal;
@@ -112,7 +111,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.Refresh();
 		}
 
-		// Token: 0x0603A784 RID: 239492 RVA: 0x00DE9DD8 File Offset: 0x00DE7FD8
+		// Token: 0x0602F6CD RID: 194253 RVA: 0x00D3A358 File Offset: 0x00D38558
 		private void Refresh()
 		{
 			if (!this.RootItem.IsUIActiveSelf())
@@ -143,9 +142,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			DangoBrawlBattleLogAggregator dangoBrawlBattleLogAggregator2 = dangoBrawlBattleLogAggregator;
 			if (dangoBrawlBattleLogAggregator2 != null)
 			{
-				List<DangoBrawlBattleLogInfo> list = (from info in (this.IsAttack ? dangoBrawlBattleLogAggregator2.GetDamage(this.IsSelf) : dangoBrawlBattleLogAggregator2.GetHeal(this.IsSelf)).Values
-				orderby info.Value descending
-				select info).ToList<DangoBrawlBattleLogInfo>();
+				List<DangoBrawlBattleLogInfo> list = NoLinq.OrderByDescendingToList<DangoBrawlBattleLogInfo, int>((this.IsAttack ? dangoBrawlBattleLogAggregator2.GetDamage(this.IsSelf) : dangoBrawlBattleLogAggregator2.GetHeal(this.IsSelf)).Values, (DangoBrawlBattleLogInfo info) => info.Value);
 				foreach (DangoBrawlBattleLogInfo dangoBrawlBattleLogInfo in list)
 				{
 					dangoBrawlBattleLogInfo.IsHeal = !this.IsAttack;
@@ -155,7 +152,11 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 				{
 					scrollView.RefreshByData(list, false, null, false);
 				}
-				int num = list.Sum((DangoBrawlBattleLogInfo info) => info.Value);
+				int num = 0;
+				foreach (DangoBrawlBattleLogInfo dangoBrawlBattleLogInfo2 in list)
+				{
+					num += dangoBrawlBattleLogInfo2.Value;
+				}
 				string textStringId = this.IsAttack ? "DangoBrawlBattleUIText_011" : "DangoBrawlBattleUIText_029";
 				LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textStringId, new <>z__ReadOnlySingleElementList<object>(num));
 				return;
@@ -168,14 +169,14 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			scrollView2.RefreshByData(Array.Empty<DangoBrawlBattleLogInfo>(), false, null, false);
 		}
 
-		// Token: 0x0603A785 RID: 239493 RVA: 0x00DE9F68 File Offset: 0x00DE8168
+		// Token: 0x0602F6CE RID: 194254 RVA: 0x00D3A500 File Offset: 0x00D38700
 		[NullableContext(1)]
 		private DangoBrawlBattleLogItem CreateLogItem()
 		{
 			return new DangoBrawlBattleLogItem();
 		}
 
-		// Token: 0x0603A786 RID: 239494 RVA: 0x00DE9F6F File Offset: 0x00DE816F
+		// Token: 0x0602F6CF RID: 194255 RVA: 0x00D3A507 File Offset: 0x00D38707
 		private void OnToggleAttack(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -191,7 +192,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.Refresh();
 		}
 
-		// Token: 0x0603A787 RID: 239495 RVA: 0x00DE9F9A File Offset: 0x00DE819A
+		// Token: 0x0602F6D0 RID: 194256 RVA: 0x00D3A532 File Offset: 0x00D38732
 		private void OnToggleHeal(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -207,7 +208,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.Refresh();
 		}
 
-		// Token: 0x0603A788 RID: 239496 RVA: 0x00DE9FC5 File Offset: 0x00DE81C5
+		// Token: 0x0602F6D1 RID: 194257 RVA: 0x00D3A55D File Offset: 0x00D3875D
 		private void OnToggleTab1(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -223,7 +224,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.Refresh();
 		}
 
-		// Token: 0x0603A789 RID: 239497 RVA: 0x00DE9FEB File Offset: 0x00DE81EB
+		// Token: 0x0602F6D2 RID: 194258 RVA: 0x00D3A583 File Offset: 0x00D38783
 		private void OnToggleTab2(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -239,13 +240,13 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.Refresh();
 		}
 
-		// Token: 0x0401E769 RID: 124777
+		// Token: 0x04019210 RID: 102928
 		private bool IsSelf = true;
 
-		// Token: 0x0401E76A RID: 124778
+		// Token: 0x04019211 RID: 102929
 		private bool IsAttack = true;
 
-		// Token: 0x0401E76B RID: 124779
+		// Token: 0x04019212 RID: 102930
 		[Nullable(new byte[]
 		{
 			2,
@@ -254,30 +255,30 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 		})]
 		protected LoopScrollView<DangoBrawlBattleLogItem, DangoBrawlBattleLogInfo> ScrollView;
 
-		// Token: 0x0401E76C RID: 124780
+		// Token: 0x04019213 RID: 102931
 		[Nullable(2)]
 		private DangoBrawlBattleLogToggle LogPanelToggleSelf;
 
-		// Token: 0x0401E76D RID: 124781
+		// Token: 0x04019214 RID: 102932
 		[Nullable(2)]
 		private DangoBrawlBattleLogToggle LogPanelToggleOpponent;
 
-		// Token: 0x0200BC7E RID: 48254
+		// Token: 0x0200A687 RID: 42631
 		private enum EComp
 		{
-			// Token: 0x04038DEA RID: 232938
+			// Token: 0x040337B6 RID: 210870
 			TogAttack,
-			// Token: 0x04038DEB RID: 232939
+			// Token: 0x040337B7 RID: 210871
 			TogHeal,
-			// Token: 0x04038DEC RID: 232940
+			// Token: 0x040337B8 RID: 210872
 			TxtItemName,
-			// Token: 0x04038DED RID: 232941
+			// Token: 0x040337B9 RID: 210873
 			SvDefault,
-			// Token: 0x04038DEE RID: 232942
+			// Token: 0x040337BA RID: 210874
 			PanelItem,
-			// Token: 0x04038DEF RID: 232943
+			// Token: 0x040337BB RID: 210875
 			TogTab1,
-			// Token: 0x04038DF0 RID: 232944
+			// Token: 0x040337BC RID: 210876
 			TogTab2
 		}
 	}

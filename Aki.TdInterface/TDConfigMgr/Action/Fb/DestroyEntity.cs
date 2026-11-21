@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002620 RID: 9760
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028E0 RID: 10464
 	public class DestroyEntity : ActionParams
 	{
-		// Token: 0x0600DB1C RID: 56092 RVA: 0x0020A205 File Offset: 0x00208405
+		// Token: 0x0600E8EA RID: 59626 RVA: 0x002269D1 File Offset: 0x00224BD1
 		public static DestroyEntity Create(IDestroyEntity? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700409E RID: 16542
-		// (get) Token: 0x0600DB1D RID: 56093 RVA: 0x0020A224 File Offset: 0x00208424
+		// Token: 0x170043D8 RID: 17368
+		// (get) Token: 0x0600E8EB RID: 59627 RVA: 0x002269F0 File Offset: 0x00224BF0
 		public virtual List<int> EntityIds
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700409F RID: 16543
-		// (get) Token: 0x0600DB1E RID: 56094 RVA: 0x0020A288 File Offset: 0x00208488
+		// Token: 0x170043D9 RID: 17369
+		// (get) Token: 0x0600E8EC RID: 59628 RVA: 0x00226A54 File Offset: 0x00224C54
 		public virtual bool? DelayDestroy
 		{
 			get
@@ -58,13 +55,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040079BE RID: 31166
+		// Token: 0x0400805A RID: 32858
 		private IDestroyEntity Instance;
 
-		// Token: 0x040079BF RID: 31167
+		// Token: 0x0400805B RID: 32859
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x040079C0 RID: 31168
+		// Token: 0x0400805C RID: 32860
 		private bool _EntityIdsInited;
 	}
 }

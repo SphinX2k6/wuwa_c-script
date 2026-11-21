@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000504 RID: 1284
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200056B RID: 1387
 	public class IMonsterFormation
 	{
-		// Token: 0x06001A1A RID: 6682 RVA: 0x0004C7AC File Offset: 0x0004A9AC
+		// Token: 0x06001C16 RID: 7190 RVA: 0x00051568 File Offset: 0x0004F768
 		private IMonsterFormation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001A1B RID: 6683 RVA: 0x0004C7E4 File Offset: 0x0004A9E4
+		// Token: 0x06001C17 RID: 7191 RVA: 0x000515A0 File Offset: 0x0004F7A0
 		public static IMonsterFormation Create([Nullable(2)] IMonsterFormation instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A1C RID: 6684 RVA: 0x0004C7F7 File Offset: 0x0004A9F7
+		// Token: 0x06001C18 RID: 7192 RVA: 0x000515B3 File Offset: 0x0004F7B3
 		public static IMonsterFormation CreateFromSetValue([Nullable(2)] IMonsterFormation_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A1D RID: 6685 RVA: 0x0004C80A File Offset: 0x0004AA0A
+		// Token: 0x06001C19 RID: 7193 RVA: 0x000515C6 File Offset: 0x0004F7C6
 		public IMonsterFormation_SetValue ToSetValue()
 		{
 			return new IMonsterFormation_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006E6 RID: 1766
-		// (get) Token: 0x06001A1E RID: 6686 RVA: 0x0004C81D File Offset: 0x0004AA1D
-		// (set) Token: 0x06001A1F RID: 6687 RVA: 0x0004C844 File Offset: 0x0004AA44
+		// Token: 0x17000769 RID: 1897
+		// (get) Token: 0x06001C1A RID: 7194 RVA: 0x000515D9 File Offset: 0x0004F7D9
+		// (set) Token: 0x06001C1B RID: 7195 RVA: 0x00051600 File Offset: 0x0004F800
 		public virtual List<EMonsterMatchType> FormationPosConfig
 		{
 			get
@@ -85,11 +83,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001300 RID: 4864
+		// Token: 0x0400146A RID: 5226
 		[Nullable(2)]
 		protected IMonsterFormation FbInstance;
 
-		// Token: 0x04001301 RID: 4865
+		// Token: 0x0400146B RID: 5227
 		[Nullable(2)]
 		protected IMonsterFormation_SetValue PocoInterface;
 	}

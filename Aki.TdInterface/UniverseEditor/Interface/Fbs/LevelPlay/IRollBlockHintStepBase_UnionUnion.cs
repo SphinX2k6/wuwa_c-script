@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004585 RID: 17797
+	// Token: 0x020049ED RID: 18925
 	public class IRollBlockHintStepBase_UnionUnion
 	{
-		// Token: 0x17007E72 RID: 32370
-		// (get) Token: 0x0601AE13 RID: 110099 RVA: 0x003D61D5 File Offset: 0x003D43D5
-		// (set) Token: 0x0601AE14 RID: 110100 RVA: 0x003D61DD File Offset: 0x003D43DD
+		// Token: 0x170084B3 RID: 33971
+		// (get) Token: 0x0601C5E8 RID: 116200 RVA: 0x00402471 File Offset: 0x00400671
+		// (set) Token: 0x0601C5E9 RID: 116201 RVA: 0x00402479 File Offset: 0x00400679
 		public IRollBlockHintStepBase_Union Type { get; set; }
 
-		// Token: 0x17007E73 RID: 32371
-		// (get) Token: 0x0601AE15 RID: 110101 RVA: 0x003D61E6 File Offset: 0x003D43E6
-		// (set) Token: 0x0601AE16 RID: 110102 RVA: 0x003D61EE File Offset: 0x003D43EE
+		// Token: 0x170084B4 RID: 33972
+		// (get) Token: 0x0601C5EA RID: 116202 RVA: 0x00402482 File Offset: 0x00400682
+		// (set) Token: 0x0601C5EB RID: 116203 RVA: 0x0040248A File Offset: 0x0040068A
 		public object Value { get; set; }
 
-		// Token: 0x0601AE17 RID: 110103 RVA: 0x003D61F7 File Offset: 0x003D43F7
+		// Token: 0x0601C5EC RID: 116204 RVA: 0x00402493 File Offset: 0x00400693
 		public IRollBlockHintStepBase_UnionUnion()
 		{
 			this.Type = IRollBlockHintStepBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601AE18 RID: 110104 RVA: 0x003D620D File Offset: 0x003D440D
+		// Token: 0x0601C5ED RID: 116205 RVA: 0x004024A9 File Offset: 0x004006A9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601AE19 RID: 110105 RVA: 0x003D621F File Offset: 0x003D441F
+		// Token: 0x0601C5EE RID: 116206 RVA: 0x004024BB File Offset: 0x004006BB
 		public IRollBlockHintStepBaseT AsIRollBlockHintStepBase()
 		{
 			return this.As<IRollBlockHintStepBaseT>();
 		}
 
-		// Token: 0x0601AE1A RID: 110106 RVA: 0x003D6227 File Offset: 0x003D4427
+		// Token: 0x0601C5EF RID: 116207 RVA: 0x004024C3 File Offset: 0x004006C3
 		public static IRollBlockHintStepBase_UnionUnion FromIRollBlockHintStepBase(IRollBlockHintStepBaseT _irollblockhintstepbase)
 		{
 			return new IRollBlockHintStepBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601AE1B RID: 110107 RVA: 0x003D623C File Offset: 0x003D443C
+		// Token: 0x0601C5F0 RID: 116208 RVA: 0x004024D8 File Offset: 0x004006D8
 		public IRollBlockHintStepRollT AsIRollBlockHintStepRoll()
 		{
 			return this.As<IRollBlockHintStepRollT>();
 		}
 
-		// Token: 0x0601AE1C RID: 110108 RVA: 0x003D6244 File Offset: 0x003D4444
+		// Token: 0x0601C5F1 RID: 116209 RVA: 0x004024E0 File Offset: 0x004006E0
 		public static IRollBlockHintStepBase_UnionUnion FromIRollBlockHintStepRoll(IRollBlockHintStepRollT _irollblockhintsteproll)
 		{
 			return new IRollBlockHintStepBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601AE1D RID: 110109 RVA: 0x003D6259 File Offset: 0x003D4459
+		// Token: 0x0601C5F2 RID: 116210 RVA: 0x004024F5 File Offset: 0x004006F5
 		public IRollBlockHintStepJumpT AsIRollBlockHintStepJump()
 		{
 			return this.As<IRollBlockHintStepJumpT>();
 		}
 
-		// Token: 0x0601AE1E RID: 110110 RVA: 0x003D6261 File Offset: 0x003D4461
+		// Token: 0x0601C5F3 RID: 116211 RVA: 0x004024FD File Offset: 0x004006FD
 		public static IRollBlockHintStepBase_UnionUnion FromIRollBlockHintStepJump(IRollBlockHintStepJumpT _irollblockhintstepjump)
 		{
 			return new IRollBlockHintStepBase_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601AE1F RID: 110111 RVA: 0x003D6276 File Offset: 0x003D4476
+		// Token: 0x0601C5F4 RID: 116212 RVA: 0x00402512 File Offset: 0x00400712
 		public IRollBlockHintStepOperationT AsIRollBlockHintStepOperation()
 		{
 			return this.As<IRollBlockHintStepOperationT>();
 		}
 
-		// Token: 0x0601AE20 RID: 110112 RVA: 0x003D627E File Offset: 0x003D447E
+		// Token: 0x0601C5F5 RID: 116213 RVA: 0x0040251A File Offset: 0x0040071A
 		public static IRollBlockHintStepBase_UnionUnion FromIRollBlockHintStepOperation(IRollBlockHintStepOperationT _irollblockhintstepoperation)
 		{
 			return new IRollBlockHintStepBase_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601AE21 RID: 110113 RVA: 0x003D6294 File Offset: 0x003D4494
+		// Token: 0x0601C5F6 RID: 116214 RVA: 0x00402530 File Offset: 0x00400730
 		public static int Pack(FlatBufferBuilder builder, IRollBlockHintStepBase_UnionUnion _o)
 		{
 			switch (_o.Type)

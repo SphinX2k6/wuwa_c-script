@@ -13,13 +13,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067F6 RID: 26614
+	// Token: 0x02005746 RID: 22342
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlPnlShopSlot : UiPanelBase
 	{
-		// Token: 0x1700971A RID: 38682
-		// (get) Token: 0x060425A6 RID: 271782 RVA: 0x0101C857 File Offset: 0x0101AA57
+		// Token: 0x17006A5B RID: 27227
+		// (get) Token: 0x060370FB RID: 225531 RVA: 0x00F5DD9B File Offset: 0x00F5BF9B
 		public int MySlotIndex
 		{
 			get
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060425A7 RID: 271783 RVA: 0x0101C860 File Offset: 0x0101AA60
+		// Token: 0x060370FC RID: 225532 RVA: 0x00F5DDA4 File Offset: 0x00F5BFA4
 		public int GetConfigId()
 		{
 			DangoBrawlShopSlotInfo slot = this.GetSlot();
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return num2.GetValueOrDefault();
 		}
 
-		// Token: 0x060425A8 RID: 271784 RVA: 0x0101C8A8 File Offset: 0x0101AAA8
+		// Token: 0x060370FD RID: 225533 RVA: 0x00F5DDEC File Offset: 0x00F5BFEC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060425A9 RID: 271785 RVA: 0x0101CAE0 File Offset: 0x0101ACE0
+		// Token: 0x060370FE RID: 225534 RVA: 0x00F5E024 File Offset: 0x00F5C224
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlPnlShopSlot.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -102,14 +102,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060425AA RID: 271786 RVA: 0x0101CB23 File Offset: 0x0101AD23
+		// Token: 0x060370FF RID: 225535 RVA: 0x00F5E067 File Offset: 0x00F5C267
 		protected override void OnBeforeDestroy()
 		{
 			this.UnBindEvents();
 			this.ClearSequencePlayer();
 		}
 
-		// Token: 0x060425AB RID: 271787 RVA: 0x0101CB34 File Offset: 0x0101AD34
+		// Token: 0x06037100 RID: 225536 RVA: 0x00F5E078 File Offset: 0x00F5C278
 		private void BineEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnDangoBrawlLayerModeChanged, new Action<bool>(this.OnDangoBrawlLayerModeChanged));
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			EventSystem.Instance.Add(EEventName.OnDangoBrawlShopRefreshed, new Action(this.OnDangoBrawlShopRefreshed));
 		}
 
-		// Token: 0x060425AC RID: 271788 RVA: 0x0101CBB4 File Offset: 0x0101ADB4
+		// Token: 0x06037101 RID: 225537 RVA: 0x00F5E0F8 File Offset: 0x00F5C2F8
 		private void UnBindEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnDangoBrawlLayerModeChanged, new Action<bool>(this.OnDangoBrawlLayerModeChanged));
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			EventSystem.Instance.Remove(EEventName.OnDangoBrawlShopRefreshed, new Action(this.OnDangoBrawlShopRefreshed));
 		}
 
-		// Token: 0x060425AD RID: 271789 RVA: 0x0101CC34 File Offset: 0x0101AE34
+		// Token: 0x06037102 RID: 225538 RVA: 0x00F5E178 File Offset: 0x00F5C378
 		public void BindShopSlot(int slotIndex, ActivityDangoBrawlData actData)
 		{
 			this.ActData = actData;
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshView();
 		}
 
-		// Token: 0x060425AE RID: 271790 RVA: 0x0101CC98 File Offset: 0x0101AE98
+		// Token: 0x06037103 RID: 225539 RVA: 0x00F5E1DC File Offset: 0x00F5C3DC
 		private void InitSequencePlayer()
 		{
 			this.ClearSequencePlayer();
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SequencePlayer.BindOnEndSequenceEvent(new Action<string>(this.OnEndSequenceEvent));
 		}
 
-		// Token: 0x060425AF RID: 271791 RVA: 0x0101CCF0 File Offset: 0x0101AEF0
+		// Token: 0x06037104 RID: 225540 RVA: 0x00F5E234 File Offset: 0x00F5C434
 		private void ClearSequencePlayer()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x060425B0 RID: 271792 RVA: 0x0101CD0A File Offset: 0x0101AF0A
+		// Token: 0x06037105 RID: 225541 RVA: 0x00F5E24E File Offset: 0x00F5C44E
 		public void SetSelected(bool selected)
 		{
 			DangoBrawlPnlShopSlotIcon iconPanel = this.IconPanel;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			iconPanel.SetSelected(selected);
 		}
 
-		// Token: 0x060425B1 RID: 271793 RVA: 0x0101CD1D File Offset: 0x0101AF1D
+		// Token: 0x06037106 RID: 225542 RVA: 0x00F5E261 File Offset: 0x00F5C461
 		private void OnDangoBrawlLayerModeChanged(bool isLayerMode)
 		{
 			DangoBrawlPnlShopSlotIcon iconPanel = this.IconPanel;
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			iconPanel.ApplyLayerMode(isLayerMode);
 		}
 
-		// Token: 0x060425B2 RID: 271794 RVA: 0x0101CD30 File Offset: 0x0101AF30
+		// Token: 0x06037107 RID: 225543 RVA: 0x00F5E274 File Offset: 0x00F5C474
 		[NullableContext(2)]
 		private DangoBrawlShopSlotInfo GetSlot()
 		{
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return shopSlots[this.SlotIndex];
 		}
 
-		// Token: 0x060425B3 RID: 271795 RVA: 0x0101CD70 File Offset: 0x0101AF70
+		// Token: 0x06037108 RID: 225544 RVA: 0x00F5E2B4 File Offset: 0x00F5C4B4
 		private UniTask CreateIconPanel()
 		{
 			DangoBrawlPnlShopSlot.<CreateIconPanel>d__23 <CreateIconPanel>d__;
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <CreateIconPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060425B4 RID: 271796 RVA: 0x0101CDB4 File Offset: 0x0101AFB4
+		// Token: 0x06037109 RID: 225545 RVA: 0x00F5E2F8 File Offset: 0x00F5C4F8
 		public void TryToggleLock()
 		{
 			DangoBrawlShopSlotInfo slot = this.GetSlot();
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.OnToggleLockAsync(!slot.Locked).Forget();
 		}
 
-		// Token: 0x060425B5 RID: 271797 RVA: 0x0101CDEC File Offset: 0x0101AFEC
+		// Token: 0x0603710A RID: 225546 RVA: 0x00F5E330 File Offset: 0x00F5C530
 		private UniTask CreateWeightPanel()
 		{
 			DangoBrawlPnlShopSlot.<CreateWeightPanel>d__25 <CreateWeightPanel>d__;
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <CreateWeightPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060425B6 RID: 271798 RVA: 0x0101CE30 File Offset: 0x0101B030
+		// Token: 0x0603710B RID: 225547 RVA: 0x00F5E374 File Offset: 0x00F5C574
 		private void RefreshView()
 		{
 			DangoBrawlShopSlotInfo slot = this.GetSlot();
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060425B7 RID: 271799 RVA: 0x0101CF10 File Offset: 0x0101B110
+		// Token: 0x0603710C RID: 225548 RVA: 0x00F5E454 File Offset: 0x00F5C654
 		private void RefreshCostView()
 		{
 			DangoBrawlShopSlotInfo slot = this.GetSlot();
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060425B8 RID: 271800 RVA: 0x0101CF54 File Offset: 0x0101B154
+		// Token: 0x0603710D RID: 225549 RVA: 0x00F5E498 File Offset: 0x00F5C698
 		private void RefreshLock(bool locked)
 		{
 			UUIItem item = base.GetItem(8);
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.IsLocked = locked;
 		}
 
-		// Token: 0x060425B9 RID: 271801 RVA: 0x0101CFCC File Offset: 0x0101B1CC
+		// Token: 0x0603710E RID: 225550 RVA: 0x00F5E510 File Offset: 0x00F5C710
 		private void RefreshCost(int price, int configId)
 		{
 			UUIItem item = base.GetItem(5);
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			text3.SetText(num2.ToString(), true);
 		}
 
-		// Token: 0x060425BA RID: 271802 RVA: 0x0101D0B0 File Offset: 0x0101B2B0
+		// Token: 0x0603710F RID: 225551 RVA: 0x00F5E5F4 File Offset: 0x00F5C7F4
 		private void RefreshRecommend(int configId)
 		{
 			int roleId = this.ActData.GetRoleId();
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x060425BB RID: 271803 RVA: 0x0101D104 File Offset: 0x0101B304
+		// Token: 0x06037110 RID: 225552 RVA: 0x00F5E648 File Offset: 0x00F5C848
 		private void RefreshQuality(int configId)
 		{
 			DangoBrawlItem? itemConfigById = DangoBrawlConfig.Instance.GetItemConfigById(configId);
@@ -410,12 +410,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			sprite.SetColor(FColor.FromHex(text));
 		}
 
-		// Token: 0x060425BC RID: 271804 RVA: 0x0101D17E File Offset: 0x0101B37E
+		// Token: 0x06037111 RID: 225553 RVA: 0x00F5E6C2 File Offset: 0x00F5C8C2
 		private void OnStartSequenceEvent(string sequenceStartEvent)
 		{
 		}
 
-		// Token: 0x060425BD RID: 271805 RVA: 0x0101D180 File Offset: 0x0101B380
+		// Token: 0x06037112 RID: 225554 RVA: 0x00F5E6C4 File Offset: 0x00F5C8C4
 		private void OnEndSequenceEvent(string sequenceStartEvent)
 		{
 			if (sequenceStartEvent == "Refresh")
@@ -424,7 +424,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060425BE RID: 271806 RVA: 0x0101D198 File Offset: 0x0101B398
+		// Token: 0x06037113 RID: 225555 RVA: 0x00F5E6DC File Offset: 0x00F5C8DC
 		private void OnClickLock()
 		{
 			DangoBrawlShopSlotInfo slot = this.GetSlot();
@@ -435,19 +435,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.OnToggleLockAsync(!slot.Locked).Forget();
 		}
 
-		// Token: 0x060425BF RID: 271807 RVA: 0x0101D1CF File Offset: 0x0101B3CF
+		// Token: 0x06037114 RID: 225556 RVA: 0x00F5E713 File Offset: 0x00F5C913
 		private void OnDangoBrawlCoinUpdated()
 		{
 			this.RefreshCostView();
 		}
 
-		// Token: 0x060425C0 RID: 271808 RVA: 0x0101D1D7 File Offset: 0x0101B3D7
+		// Token: 0x06037115 RID: 225557 RVA: 0x00F5E71B File Offset: 0x00F5C91B
 		private void OnDangoBrawlItemGiveCoinNotify(DangoBrawlItemGiveCoinNotify message)
 		{
 			this.RefreshCostView();
 		}
 
-		// Token: 0x060425C1 RID: 271809 RVA: 0x0101D1E0 File Offset: 0x0101B3E0
+		// Token: 0x06037116 RID: 225558 RVA: 0x00F5E724 File Offset: 0x00F5C924
 		private void OnDangoBrawlShopRefreshed()
 		{
 			DangoBrawlShopSlotInfo slot = this.GetSlot();
@@ -479,7 +479,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060425C2 RID: 271810 RVA: 0x0101D264 File Offset: 0x0101B464
+		// Token: 0x06037117 RID: 225559 RVA: 0x00F5E7A8 File Offset: 0x00F5C9A8
 		private UniTask OnToggleLockAsync(bool isOn)
 		{
 			DangoBrawlPnlShopSlot.<OnToggleLockAsync>d__38 <OnToggleLockAsync>d__;
@@ -491,66 +491,66 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnToggleLockAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04022998 RID: 141720
+		// Token: 0x0401D1F5 RID: 119285
 		private ActivityDangoBrawlData ActData;
 
-		// Token: 0x04022999 RID: 141721
+		// Token: 0x0401D1F6 RID: 119286
 		private int SlotIndex = -1;
 
-		// Token: 0x0402299A RID: 141722
+		// Token: 0x0401D1F7 RID: 119287
 		private int SlotUid = -1;
 
-		// Token: 0x0402299B RID: 141723
+		// Token: 0x0401D1F8 RID: 119288
 		private bool IsLocked;
 
-		// Token: 0x0402299C RID: 141724
+		// Token: 0x0401D1F9 RID: 119289
 		private bool IsRefreshFxPlaying;
 
-		// Token: 0x0402299D RID: 141725
+		// Token: 0x0401D1FA RID: 119290
 		[Nullable(2)]
 		private DangoBrawlPnlShopSlotIcon IconPanel;
 
-		// Token: 0x0402299E RID: 141726
+		// Token: 0x0401D1FB RID: 119291
 		[Nullable(2)]
 		private DangoBrawlViewCost WeightPanel;
 
-		// Token: 0x0402299F RID: 141727
+		// Token: 0x0401D1FC RID: 119292
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0200C958 RID: 51544
+		// Token: 0x0200B325 RID: 45861
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403CCB8 RID: 249016
+			// Token: 0x040375A5 RID: 226725
 			PnlEmpty,
-			// Token: 0x0403CCB9 RID: 249017
+			// Token: 0x040375A6 RID: 226726
 			PnlNor,
-			// Token: 0x0403CCBA RID: 249018
+			// Token: 0x040375A7 RID: 226727
 			SprQuality,
-			// Token: 0x0403CCBB RID: 249019
+			// Token: 0x040375A8 RID: 226728
 			PnlItem,
-			// Token: 0x0403CCBC RID: 249020
+			// Token: 0x040375A9 RID: 226729
 			BtnLock,
-			// Token: 0x0403CCBD RID: 249021
+			// Token: 0x040375AA RID: 226730
 			PnlCost,
-			// Token: 0x0403CCBE RID: 249022
+			// Token: 0x040375AB RID: 226731
 			TxtCost,
-			// Token: 0x0403CCBF RID: 249023
+			// Token: 0x040375AC RID: 226732
 			TemplateWeight,
-			// Token: 0x0403CCC0 RID: 249024
+			// Token: 0x040375AD RID: 226733
 			ItemFxLock,
-			// Token: 0x0403CCC1 RID: 249025
+			// Token: 0x040375AE RID: 226734
 			SprRecommend,
-			// Token: 0x0403CCC2 RID: 249026
+			// Token: 0x040375AF RID: 226735
 			TemplateIcon,
-			// Token: 0x0403CCC3 RID: 249027
+			// Token: 0x040375B0 RID: 226736
 			ItemSelf,
-			// Token: 0x0403CCC4 RID: 249028
+			// Token: 0x040375B1 RID: 226737
 			TxtPreCost,
-			// Token: 0x0403CCC5 RID: 249029
+			// Token: 0x040375B2 RID: 226738
 			SprUnLock,
-			// Token: 0x0403CCC6 RID: 249030
+			// Token: 0x040375B3 RID: 226739
 			SprLock
 		}
 	}

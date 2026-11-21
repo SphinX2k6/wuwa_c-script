@@ -14,13 +14,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C98 RID: 23704
+	// Token: 0x02004C7A RID: 19578
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class BattleUiModel : ModelBase
 	{
-		// Token: 0x0603BDC7 RID: 245191 RVA: 0x00E4C98C File Offset: 0x00E4AB8C
+		// Token: 0x06030D1A RID: 199962 RVA: 0x00D9CF80 File Offset: 0x00D9B180
 		protected override bool OnInit()
 		{
 			this.HeadStateCommonParam = new HeadStateCommonParam();
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return true;
 		}
 
-		// Token: 0x0603BDC8 RID: 245192 RVA: 0x00E4CDAC File Offset: 0x00E4AFAC
+		// Token: 0x06030D1B RID: 199963 RVA: 0x00D9D3A0 File Offset: 0x00D9B5A0
 		[NullableContext(0)]
 		public UniTask<bool> Preload()
 		{
@@ -144,20 +144,20 @@ namespace CSharpScript.Game.Module.BattleUi
 			return <Preload>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BDC9 RID: 245193 RVA: 0x00E4CDEF File Offset: 0x00E4AFEF
+		// Token: 0x06030D1C RID: 199964 RVA: 0x00D9D3E3 File Offset: 0x00D9B5E3
 		[NullableContext(2)]
 		public string GetHeadStateHpColor(ECamp camp)
 		{
 			return this.HeadStateHpColorMap.GetValueOrDefault(camp);
 		}
 
-		// Token: 0x0603BDCA RID: 245194 RVA: 0x00E4CDFD File Offset: 0x00E4AFFD
+		// Token: 0x06030D1D RID: 199965 RVA: 0x00D9D3F1 File Offset: 0x00D9B5F1
 		public string GetPropertyColor(int propertyId)
 		{
 			return this.PropertyColor[propertyId];
 		}
 
-		// Token: 0x0603BDCB RID: 245195 RVA: 0x00E4CE08 File Offset: 0x00E4B008
+		// Token: 0x06030D1E RID: 199966 RVA: 0x00D9D3FC File Offset: 0x00D9B5FC
 		protected override bool OnLeaveLevel()
 		{
 			this.IsPreload = false;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return true;
 		}
 
-		// Token: 0x0603BDCC RID: 245196 RVA: 0x00E4CEA0 File Offset: 0x00E4B0A0
+		// Token: 0x06030D1F RID: 199967 RVA: 0x00D9D494 File Offset: 0x00D9B694
 		protected override bool OnClear()
 		{
 			this.ClearNextTick();
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return true;
 		}
 
-		// Token: 0x0603BDCD RID: 245197 RVA: 0x00E4D06F File Offset: 0x00E4B26F
+		// Token: 0x06030D20 RID: 199968 RVA: 0x00D9D663 File Offset: 0x00D9B863
 		public void OnWorldDone()
 		{
 			BattleUiExploreModeData exploreModeData = this.ExploreModeData;
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			exploreModeData.UpdateDungeonState();
 		}
 
-		// Token: 0x0603BDCE RID: 245198 RVA: 0x00E4D081 File Offset: 0x00E4B281
+		// Token: 0x06030D21 RID: 199969 RVA: 0x00D9D675 File Offset: 0x00D9B875
 		public void TryBroadcastRoleLevelUpData(int configId, int exp, int level)
 		{
 			if (UiManager.Instance.IsViewShow(EUiViewName.BattleView))
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.AddLevelUpCacheData(configId, exp, level);
 		}
 
-		// Token: 0x0603BDCF RID: 245199 RVA: 0x00E4D0B4 File Offset: 0x00E4B2B4
+		// Token: 0x06030D22 RID: 199970 RVA: 0x00D9D6A8 File Offset: 0x00D9B8A8
 		public void TryBroadcastCacheRoleLevelUpData()
 		{
 			if (!UiManager.Instance.IsViewShow(EUiViewName.BattleView))
@@ -267,20 +267,20 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.ClearAllLevelUpCacheData();
 		}
 
-		// Token: 0x0603BDD0 RID: 245200 RVA: 0x00E4D140 File Offset: 0x00E4B340
+		// Token: 0x06030D23 RID: 199971 RVA: 0x00D9D734 File Offset: 0x00D9B934
 		public void AddLevelUpCacheData(int configId, int exp, int level)
 		{
 			LevelUpCacheData item = new LevelUpCacheData(configId, exp, level);
 			this.LevelUpCacheDataListInternal.Add(item);
 		}
 
-		// Token: 0x0603BDD1 RID: 245201 RVA: 0x00E4D162 File Offset: 0x00E4B362
+		// Token: 0x06030D24 RID: 199972 RVA: 0x00D9D756 File Offset: 0x00D9B956
 		public void ClearAllLevelUpCacheData()
 		{
 			this.LevelUpCacheDataListInternal.Clear();
 		}
 
-		// Token: 0x0603BDD2 RID: 245202 RVA: 0x00E4D16F File Offset: 0x00E4B36F
+		// Token: 0x06030D25 RID: 199973 RVA: 0x00D9D763 File Offset: 0x00D9B963
 		public void TryBroadcastRevive(int entityId)
 		{
 			if (UiManager.Instance.IsViewShow(EUiViewName.BattleView))
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.AddReviveEntityIdList(entityId);
 		}
 
-		// Token: 0x0603BDD3 RID: 245203 RVA: 0x00E4D1A0 File Offset: 0x00E4B3A0
+		// Token: 0x06030D26 RID: 199974 RVA: 0x00D9D794 File Offset: 0x00D9B994
 		public void TryBroadcastCacheRevive()
 		{
 			if (!UiManager.Instance.IsViewShow(EUiViewName.BattleView))
@@ -302,32 +302,32 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.ClearReviveEntityIdList();
 		}
 
-		// Token: 0x0603BDD4 RID: 245204 RVA: 0x00E4D1D0 File Offset: 0x00E4B3D0
+		// Token: 0x06030D27 RID: 199975 RVA: 0x00D9D7C4 File Offset: 0x00D9B9C4
 		public void AddReviveEntityIdList(int entityId)
 		{
 			this.ReviveEntityIdList.Add(entityId);
 		}
 
-		// Token: 0x0603BDD5 RID: 245205 RVA: 0x00E4D1DE File Offset: 0x00E4B3DE
+		// Token: 0x06030D28 RID: 199976 RVA: 0x00D9D7D2 File Offset: 0x00D9B9D2
 		public void ClearReviveEntityIdList()
 		{
 			this.ReviveEntityIdList.Clear();
 		}
 
-		// Token: 0x0603BDD6 RID: 245206 RVA: 0x00E4D1EB File Offset: 0x00E4B3EB
+		// Token: 0x06030D29 RID: 199977 RVA: 0x00D9D7DF File Offset: 0x00D9B9DF
 		public bool GetIsBossStateVisible()
 		{
 			return this.IsBossStateVisible;
 		}
 
-		// Token: 0x0603BDD7 RID: 245207 RVA: 0x00E4D1F3 File Offset: 0x00E4B3F3
+		// Token: 0x06030D2A RID: 199978 RVA: 0x00D9D7E7 File Offset: 0x00D9B9E7
 		[NullableContext(2)]
 		public FullScreenEffectHandle GetFullScreenEffect(long uniqueId)
 		{
 			return this.FullScreenEffectMap.GetValueOrDefault(uniqueId);
 		}
 
-		// Token: 0x0603BDD8 RID: 245208 RVA: 0x00E4D204 File Offset: 0x00E4B404
+		// Token: 0x06030D2B RID: 199979 RVA: 0x00D9D7F8 File Offset: 0x00D9B9F8
 		public FullScreenEffectHandle AddFullScreenEffect(string niagaraPath, long? uniqueId = null)
 		{
 			long num;
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return fullScreenEffectHandle;
 		}
 
-		// Token: 0x0603BDD9 RID: 245209 RVA: 0x00E4D26C File Offset: 0x00E4B46C
+		// Token: 0x06030D2C RID: 199980 RVA: 0x00D9D860 File Offset: 0x00D9BA60
 		[NullableContext(2)]
 		public void RemoveFullScreenEffect(FullScreenEffectHandle fullScreenEffectHandle)
 		{
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.FullScreenEffectMap.Remove(uniqueId);
 		}
 
-		// Token: 0x0603BDDA RID: 245210 RVA: 0x00E4D2A4 File Offset: 0x00E4B4A4
+		// Token: 0x06030D2D RID: 199981 RVA: 0x00D9D898 File Offset: 0x00D9BA98
 		public void RemoveFullScreenEffectByUniqueId(long uniqueId)
 		{
 			FullScreenEffectHandle fullScreenEffectHandle;
@@ -375,14 +375,14 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDDB RID: 245211 RVA: 0x00E4D2C8 File Offset: 0x00E4B4C8
+		// Token: 0x06030D2E RID: 199982 RVA: 0x00D9D8BC File Offset: 0x00D9BABC
 		public void ClearFullScreenEffect()
 		{
 			this.FullScreenEffectMap.Clear();
 			EventSystem.Instance.Emit(EEventName.OnClearFullScreenEffect);
 		}
 
-		// Token: 0x0603BDDC RID: 245212 RVA: 0x00E4D2E8 File Offset: 0x00E4B4E8
+		// Token: 0x06030D2F RID: 199983 RVA: 0x00D9D8DC File Offset: 0x00D9BADC
 		public void UpdateViewPortSize()
 		{
 			Global.PlayerController.GetViewportSize(ref this.ViewportSizeX, ref this.ViewportSizeY);
@@ -398,21 +398,21 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.ScreenPositionOffset.Set((double)(-(double)uiRootItem.GetWidth() * 0.5f), (double)(-(double)uiRootItem.GetHeight() * 0.5f));
 		}
 
-		// Token: 0x0603BDDD RID: 245213 RVA: 0x00E4D36D File Offset: 0x00E4B56D
+		// Token: 0x06030D30 RID: 199984 RVA: 0x00D9D961 File Offset: 0x00D9BB61
 		[NullableContext(2)]
 		public BattleUiRoleData GetRoleData(int entityId)
 		{
 			return this.RoleDataMap.GetValueOrDefault(entityId);
 		}
 
-		// Token: 0x0603BDDE RID: 245214 RVA: 0x00E4D37B File Offset: 0x00E4B57B
+		// Token: 0x06030D31 RID: 199985 RVA: 0x00D9D96F File Offset: 0x00D9BB6F
 		[NullableContext(2)]
 		public BattleUiRoleData GetCurRoleData()
 		{
 			return this.CurRoleData;
 		}
 
-		// Token: 0x0603BDDF RID: 245215 RVA: 0x00E4D384 File Offset: 0x00E4B584
+		// Token: 0x06030D32 RID: 199986 RVA: 0x00D9D978 File Offset: 0x00D9BB78
 		public void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 		{
 			bool flag = false;
@@ -448,7 +448,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			motorcycleData.OnChangeRole(newEntityHandle, oldEntityHandle);
 		}
 
-		// Token: 0x0603BDE0 RID: 245216 RVA: 0x00E4D488 File Offset: 0x00E4B688
+		// Token: 0x06030D33 RID: 199987 RVA: 0x00D9DA7C File Offset: 0x00D9BC7C
 		public void OnFormationLoaded()
 		{
 			this.FormationPanelData.UpdateFormationPanelData();
@@ -457,14 +457,14 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit(EEventName.BattleUiAllRoleDataChanged);
 		}
 
-		// Token: 0x0603BDE1 RID: 245217 RVA: 0x00E4D4B1 File Offset: 0x00E4B6B1
+		// Token: 0x06030D34 RID: 199988 RVA: 0x00D9DAA5 File Offset: 0x00D9BCA5
 		public void OnAddEntity(EntityHandle handle)
 		{
 			this.MergeHeadStateData.OnAddEntity(handle);
 			this.TowerMergeHeadStateData.OnAddEntity(handle);
 		}
 
-		// Token: 0x0603BDE2 RID: 245218 RVA: 0x00E4D4CC File Offset: 0x00E4B6CC
+		// Token: 0x06030D35 RID: 199989 RVA: 0x00D9DAC0 File Offset: 0x00D9BCC0
 		public void OnRemoveEntity(EntityHandle handle)
 		{
 			BattleUiRoleData battleUiRoleData;
@@ -481,7 +481,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.TowerMergeHeadStateData.OnRemoveEntity(handle);
 		}
 
-		// Token: 0x0603BDE3 RID: 245219 RVA: 0x00E4D534 File Offset: 0x00E4B734
+		// Token: 0x06030D36 RID: 199990 RVA: 0x00D9DB28 File Offset: 0x00D9BD28
 		private void CreateAllRoleData()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -511,7 +511,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDE4 RID: 245220 RVA: 0x00E4D630 File Offset: 0x00E4B830
+		// Token: 0x06030D37 RID: 199991 RVA: 0x00D9DC24 File Offset: 0x00D9BE24
 		private BattleUiRoleData CreateRoleData(EntityHandle entity, bool isCurEntity, bool updateCurState = true)
 		{
 			BattleUiRoleData battleUiRoleData;
@@ -529,7 +529,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return battleUiRoleData;
 		}
 
-		// Token: 0x0603BDE5 RID: 245221 RVA: 0x00E4D688 File Offset: 0x00E4B888
+		// Token: 0x06030D38 RID: 199992 RVA: 0x00D9DC7C File Offset: 0x00D9BE7C
 		private void ClearAllRoleData()
 		{
 			foreach (BattleUiRoleData battleUiRoleData in this.RoleDataMap.Values)
@@ -539,7 +539,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.RoleDataMap.Clear();
 		}
 
-		// Token: 0x0603BDE6 RID: 245222 RVA: 0x00E4D6E8 File Offset: 0x00E4B8E8
+		// Token: 0x06030D39 RID: 199993 RVA: 0x00D9DCDC File Offset: 0x00D9BEDC
 		private void EnableNextTick()
 		{
 			if (this.NextTickTimerId != null)
@@ -549,7 +549,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.NextTickTimerId = TimerSystem.Instance.Next(new TTimerAction(this.NextTick), BattleUiModel.NextTickStat, null);
 		}
 
-		// Token: 0x0603BDE7 RID: 245223 RVA: 0x00E4D718 File Offset: 0x00E4B918
+		// Token: 0x06030D3A RID: 199994 RVA: 0x00D9DD0C File Offset: 0x00D9BF0C
 		private void ClearNextTick()
 		{
 			if (this.NextTickTimerId == null)
@@ -567,7 +567,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.OldEntityId = null;
 		}
 
-		// Token: 0x0603BDE8 RID: 245224 RVA: 0x00E4D780 File Offset: 0x00E4B980
+		// Token: 0x06030D3B RID: 199995 RVA: 0x00D9DD74 File Offset: 0x00D9BF74
 		private void NextTick(float delta)
 		{
 			if (this.DelayNextTick)
@@ -587,7 +587,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDE9 RID: 245225 RVA: 0x00E4D81C File Offset: 0x00E4BA1C
+		// Token: 0x06030D3C RID: 199996 RVA: 0x00D9DE10 File Offset: 0x00D9C010
 		private void RefreshRoleConfigVisibleState()
 		{
 			BattleUiRoleData curRoleData = this.GetCurRoleData();
@@ -613,20 +613,20 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.ChildViewData.SetChildVisible(EBattleUiVisibleReason.RoleConfig, EBattleUiChild.GamepadSkillButton, true, true, 0);
 		}
 
-		// Token: 0x0603BDEA RID: 245226 RVA: 0x00E4D9F1 File Offset: 0x00E4BBF1
+		// Token: 0x06030D3D RID: 199997 RVA: 0x00D9DFE5 File Offset: 0x00D9C1E5
 		public void SetIsDynamicJoystick(bool isDynamicJoystick)
 		{
 			this.IsDynamicJoystick = isDynamicJoystick;
 			EventSystem.Instance.Emit<bool>(EEventName.OnSetJoystickMode, isDynamicJoystick);
 		}
 
-		// Token: 0x0603BDEB RID: 245227 RVA: 0x00E4DA0B File Offset: 0x00E4BC0B
+		// Token: 0x06030D3E RID: 199998 RVA: 0x00D9DFFF File Offset: 0x00D9C1FF
 		public bool GetIsDynamicJoystick()
 		{
 			return this.IsDynamicJoystick;
 		}
 
-		// Token: 0x0603BDEC RID: 245228 RVA: 0x00E4DA13 File Offset: 0x00E4BC13
+		// Token: 0x06030D3F RID: 199999 RVA: 0x00D9E007 File Offset: 0x00D9C207
 		public void SetIsAutoSwitchSkillButtonMode(bool isAutoSwitchSkillButtonMode)
 		{
 			this.IsAutoSwitchSkillButtonMode = isAutoSwitchSkillButtonMode;
@@ -638,13 +638,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			exploreModeData.SetAutoSwitch(isAutoSwitchSkillButtonMode);
 		}
 
-		// Token: 0x0603BDED RID: 245229 RVA: 0x00E4DA2D File Offset: 0x00E4BC2D
+		// Token: 0x06030D40 RID: 200000 RVA: 0x00D9E021 File Offset: 0x00D9C221
 		public bool GetIsAutoSwitchSkillButtonMode()
 		{
 			return this.IsAutoSwitchSkillButtonMode;
 		}
 
-		// Token: 0x0603BDEE RID: 245230 RVA: 0x00E4DA35 File Offset: 0x00E4BC35
+		// Token: 0x06030D41 RID: 200001 RVA: 0x00D9E029 File Offset: 0x00D9C229
 		public void SetExecutionInteractEnable(bool bEnable)
 		{
 			this.ExecutionInteractEnable = bEnable;
@@ -656,15 +656,15 @@ namespace CSharpScript.Game.Module.BattleUi
 			InputDistributeController.Instance.RefreshInputTag();
 		}
 
-		// Token: 0x0603BDEF RID: 245231 RVA: 0x00E4DA64 File Offset: 0x00E4BC64
+		// Token: 0x06030D42 RID: 200002 RVA: 0x00D9E058 File Offset: 0x00D9C258
 		public bool ExistBattleInteract()
 		{
 			return this.ExecutionInteractEnable;
 		}
 
-		// Token: 0x17008DE5 RID: 36325
-		// (get) Token: 0x0603BDF0 RID: 245232 RVA: 0x00E4DA6C File Offset: 0x00E4BC6C
-		// (set) Token: 0x0603BDF1 RID: 245233 RVA: 0x00E4DA74 File Offset: 0x00E4BC74
+		// Token: 0x170061B7 RID: 25015
+		// (get) Token: 0x06030D43 RID: 200003 RVA: 0x00D9E060 File Offset: 0x00D9C260
+		// (set) Token: 0x06030D44 RID: 200004 RVA: 0x00D9E068 File Offset: 0x00D9C268
 		public bool ChatScrollViewVisible
 		{
 			get
@@ -682,13 +682,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDF2 RID: 245234 RVA: 0x00E4DA97 File Offset: 0x00E4BC97
+		// Token: 0x06030D45 RID: 200005 RVA: 0x00D9E08B File Offset: 0x00D9C28B
 		public bool IsEnableChangeInputControllerOnMobile()
 		{
 			return !PanelQteModel.Instance.IsInQte.GetValueOrDefault();
 		}
 
-		// Token: 0x0603BDF3 RID: 245235 RVA: 0x00E4DAAD File Offset: 0x00E4BCAD
+		// Token: 0x06030D46 RID: 200006 RVA: 0x00D9E0A1 File Offset: 0x00D9C2A1
 		public void SetBattleUiAlpha(float alpha)
 		{
 			if (this.BattleUiAlpha == alpha)
@@ -699,13 +699,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit<float>(EEventName.BattleUiAlphaChanged, alpha);
 		}
 
-		// Token: 0x0603BDF4 RID: 245236 RVA: 0x00E4DAD1 File Offset: 0x00E4BCD1
+		// Token: 0x06030D47 RID: 200007 RVA: 0x00D9E0C5 File Offset: 0x00D9C2C5
 		public float GetBattleUiAlpha()
 		{
 			return this.BattleUiAlpha;
 		}
 
-		// Token: 0x0603BDF5 RID: 245237 RVA: 0x00E4DADC File Offset: 0x00E4BCDC
+		// Token: 0x06030D48 RID: 200008 RVA: 0x00D9E0D0 File Offset: 0x00D9C2D0
 		private void BehaviorTreeEndShow(long treeIncId, ETreeTextExpressReason reason, bool _)
 		{
 			long? treeIncIdHandle = this.TreeIncIdHandle;
@@ -717,7 +717,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.TreeHandle = null;
 		}
 
-		// Token: 0x0603BDF6 RID: 245238 RVA: 0x00E4DB1A File Offset: 0x00E4BD1A
+		// Token: 0x06030D49 RID: 200009 RVA: 0x00D9E10E File Offset: 0x00D9C30E
 		public void ShowTypeChange(EOperationType last, EOperationType now)
 		{
 			BattleUiPureModeData pureModeData = this.PureModeData;
@@ -733,7 +733,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			motorcycleData.ShowTypeChange(last, now);
 		}
 
-		// Token: 0x0603BDF7 RID: 245239 RVA: 0x00E4DB44 File Offset: 0x00E4BD44
+		// Token: 0x06030D4A RID: 200010 RVA: 0x00D9E138 File Offset: 0x00D9C338
 		private void OnBehaviorTreeStartShow(BehaviorTreeViewShowData showData, ETreeTextExpressReason eTreeTextExpressReason, bool arg3)
 		{
 			BaseBehaviorTree behaviorTree = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(showData.Id), false);
@@ -745,7 +745,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.TreeHandle = behaviorTree;
 		}
 
-		// Token: 0x0603BDF8 RID: 245240 RVA: 0x00E4DB90 File Offset: 0x00E4BD90
+		// Token: 0x06030D4B RID: 200011 RVA: 0x00D9E184 File Offset: 0x00D9C384
 		private void OnGeneralLogicTreeRemove(long treeId, ETreeRemoveReason eTreeRemoveReason)
 		{
 			if (this.MissionViewData == null)
@@ -771,7 +771,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDF9 RID: 245241 RVA: 0x00E4DC58 File Offset: 0x00E4BE58
+		// Token: 0x06030D4C RID: 200012 RVA: 0x00D9E24C File Offset: 0x00D9C44C
 		private void OnSetBattleUiChildCacheStateNotify(EBattleUiChildCacheType cacheType, bool needCache)
 		{
 			if (cacheType == EBattleUiChildCacheType.Motorcycle)
@@ -785,7 +785,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDFA RID: 245242 RVA: 0x00E4DC6E File Offset: 0x00E4BE6E
+		// Token: 0x06030D4D RID: 200013 RVA: 0x00D9E262 File Offset: 0x00D9C462
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -796,7 +796,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return this.MissionViewData;
 		}
 
-		// Token: 0x0603BDFB RID: 245243 RVA: 0x00E4DC76 File Offset: 0x00E4BE76
+		// Token: 0x06030D4E RID: 200014 RVA: 0x00D9E26A File Offset: 0x00D9C46A
 		[NullableContext(2)]
 		public IMissionItemViewShowData GetMissionViewData(EMissionItemView viewType)
 		{
@@ -808,7 +808,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return missionViewData.GetValueOrDefault(viewType);
 		}
 
-		// Token: 0x0603BDFC RID: 245244 RVA: 0x00E4DC8C File Offset: 0x00E4BE8C
+		// Token: 0x06030D4F RID: 200015 RVA: 0x00D9E280 File Offset: 0x00D9C480
 		public void ClearMissionViewData()
 		{
 			if (this.MissionViewData == null)
@@ -825,7 +825,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDFD RID: 245245 RVA: 0x00E4DCF8 File Offset: 0x00E4BEF8
+		// Token: 0x06030D50 RID: 200016 RVA: 0x00D9E2EC File Offset: 0x00D9C4EC
 		[NullableContext(2)]
 		public unsafe void SetMissionViewData(EMissionItemView viewType, IMissionItemViewShowData showData = null)
 		{
@@ -871,7 +871,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDFE RID: 245246 RVA: 0x00E4DE10 File Offset: 0x00E4C010
+		// Token: 0x06030D51 RID: 200017 RVA: 0x00D9E404 File Offset: 0x00D9C604
 		private void SetRule(EMissionRuleId? ruleId = null)
 		{
 			if (ruleId == null)
@@ -894,7 +894,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.CurrentRuleInternal = this.GetAutoRule();
 		}
 
-		// Token: 0x0603BDFF RID: 245247 RVA: 0x00E4DE94 File Offset: 0x00E4C094
+		// Token: 0x06030D52 RID: 200018 RVA: 0x00D9E488 File Offset: 0x00D9C688
 		private TrackingDisplayRuleBase GetAutoRule()
 		{
 			TrackingDisplayRuleBase result = this.DefaultRuleInternal;
@@ -910,7 +910,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return result;
 		}
 
-		// Token: 0x0603BE00 RID: 245248 RVA: 0x00E4DEEC File Offset: 0x00E4C0EC
+		// Token: 0x06030D53 RID: 200019 RVA: 0x00D9E4E0 File Offset: 0x00D9C6E0
 		[NullableContext(2)]
 		public TrackingDisplayRuleBase GetRuleById(EMissionRuleId? ruleId)
 		{
@@ -935,7 +935,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return null;
 		}
 
-		// Token: 0x0603BE01 RID: 245249 RVA: 0x00E4DF68 File Offset: 0x00E4C168
+		// Token: 0x06030D54 RID: 200020 RVA: 0x00D9E55C File Offset: 0x00D9C75C
 		public TrackingDisplayRuleBase[] GetAllRule()
 		{
 			TrackingDisplayRuleBase defaultRuleInternal = this.DefaultRuleInternal;
@@ -950,13 +950,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			return array;
 		}
 
-		// Token: 0x0603BE02 RID: 245250 RVA: 0x00E4DFC8 File Offset: 0x00E4C1C8
+		// Token: 0x06030D55 RID: 200021 RVA: 0x00D9E5BC File Offset: 0x00D9C7BC
 		public void CheckAndUpdateRule()
 		{
 			this.CurrentRuleInternal = this.GetAutoRule();
 		}
 
-		// Token: 0x0603BE03 RID: 245251 RVA: 0x00E4DFD8 File Offset: 0x00E4C1D8
+		// Token: 0x06030D56 RID: 200022 RVA: 0x00D9E5CC File Offset: 0x00D9C7CC
 		public void SafeSwitchMissionRule(EMissionRuleId? ruleId = null, bool forceRefresh = false)
 		{
 			TrackingDisplayRuleBase trackingDisplayRuleBase = (ruleId != null) ? this.GetRuleById(ruleId) : this.GetAutoRule();
@@ -988,7 +988,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE04 RID: 245252 RVA: 0x00E4E098 File Offset: 0x00E4C298
+		// Token: 0x06030D57 RID: 200023 RVA: 0x00D9E68C File Offset: 0x00D9C88C
 		private void ReassignAllMissionViews([Nullable(new byte[]
 		{
 			2,
@@ -1025,26 +1025,26 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit(EEventName.MissionTrackRuleChange);
 		}
 
-		// Token: 0x0603BE05 RID: 245253 RVA: 0x00E4E178 File Offset: 0x00E4C378
+		// Token: 0x06030D58 RID: 200024 RVA: 0x00D9E76C File Offset: 0x00D9C96C
 		public EMissionItemView? CheckMissionViewItem(IMissionItemViewShowData showData, ETreeTextExpressReason? reason = null)
 		{
 			return this.CurrentRuleInternal.CustomTypeCheck(showData, reason);
 		}
 
-		// Token: 0x0603BE06 RID: 245254 RVA: 0x00E4E187 File Offset: 0x00E4C387
+		// Token: 0x06030D59 RID: 200025 RVA: 0x00D9E77B File Offset: 0x00D9C97B
 		public void SortMissionViewItem(List<IMissionItemViewShowData> showData)
 		{
 			this.CurrentRuleInternal.SortShowData(showData);
 		}
 
-		// Token: 0x0603BE07 RID: 245255 RVA: 0x00E4E195 File Offset: 0x00E4C395
+		// Token: 0x06030D5A RID: 200026 RVA: 0x00D9E789 File Offset: 0x00D9C989
 		public void AddGuest(int guestId)
 		{
 			this.GuestId = guestId;
 			EventSystem.Instance.Emit(EEventName.RefreshGuest);
 		}
 
-		// Token: 0x0603BE08 RID: 245256 RVA: 0x00E4E1B0 File Offset: 0x00E4C3B0
+		// Token: 0x06030D5B RID: 200027 RVA: 0x00D9E7A4 File Offset: 0x00D9C9A4
 		public unsafe void RemoveGuest(int guestId)
 		{
 			if (this.GuestId == 0)
@@ -1067,7 +1067,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit(EEventName.RefreshGuest);
 		}
 
-		// Token: 0x0603BE09 RID: 245257 RVA: 0x00E4E24C File Offset: 0x00E4C44C
+		// Token: 0x06030D5C RID: 200028 RVA: 0x00D9E840 File Offset: 0x00D9CA40
 		public void InitHeadIconEnergyBarConfig()
 		{
 			IReadOnlyList<HeadIconEnergyBar> allHeadIconEnergyBarConfig = BattleUiConfig.Instance.GetAllHeadIconEnergyBarConfig();
@@ -1081,45 +1081,45 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE0A RID: 245258 RVA: 0x00E4E2B0 File Offset: 0x00E4C4B0
+		// Token: 0x06030D5D RID: 200029 RVA: 0x00D9E8A4 File Offset: 0x00D9CAA4
 		public HeadIconEnergyBar? GetHeadIconEnergyBarConfig(int id)
 		{
 			return this.HeadIconEnergyBarMap.GetValueOrNull(id);
 		}
 
-		// Token: 0x0603BE0B RID: 245259 RVA: 0x00E4E2BE File Offset: 0x00E4C4BE
+		// Token: 0x06030D5E RID: 200030 RVA: 0x00D9E8B2 File Offset: 0x00D9CAB2
 		[NullableContext(2)]
 		public int[] GetTagIdJoystickStaticVisible()
 		{
 			return this.TagIdJoystickStaticVisible;
 		}
 
-		// Token: 0x0603BE0C RID: 245260 RVA: 0x00E4E2C6 File Offset: 0x00E4C4C6
+		// Token: 0x06030D5F RID: 200031 RVA: 0x00D9E8BA File Offset: 0x00D9CABA
 		public void SetTagIdJoystickStaticVisible(int[] value)
 		{
 			this.TagIdJoystickStaticVisible = value;
 		}
 
-		// Token: 0x0603BE0D RID: 245261 RVA: 0x00E4E2CF File Offset: 0x00E4C4CF
+		// Token: 0x06030D60 RID: 200032 RVA: 0x00D9E8C3 File Offset: 0x00D9CAC3
 		[NullableContext(2)]
 		public int[] GetTagIdMoveCursorVisible()
 		{
 			return this.TagIdMoveCursorVisible;
 		}
 
-		// Token: 0x0603BE0E RID: 245262 RVA: 0x00E4E2D7 File Offset: 0x00E4C4D7
+		// Token: 0x06030D61 RID: 200033 RVA: 0x00D9E8CB File Offset: 0x00D9CACB
 		public void SetTagIdMoveCursorVisible(int[] value)
 		{
 			this.TagIdMoveCursorVisible = value;
 		}
 
-		// Token: 0x0603BE0F RID: 245263 RVA: 0x00E4E2E0 File Offset: 0x00E4C4E0
+		// Token: 0x06030D62 RID: 200034 RVA: 0x00D9E8D4 File Offset: 0x00D9CAD4
 		public bool GetRoleSpecialState(ERoleSpecialState state)
 		{
 			return this.RoleSpecialStateMap.GetValueOrDefault(state, false);
 		}
 
-		// Token: 0x0603BE10 RID: 245264 RVA: 0x00E4E2F0 File Offset: 0x00E4C4F0
+		// Token: 0x06030D63 RID: 200035 RVA: 0x00D9E8E4 File Offset: 0x00D9CAE4
 		public void RefreshRoleSpecialState(ERoleSpecialState state)
 		{
 			BattleUiRoleData curRoleData = this.CurRoleData;
@@ -1210,14 +1210,39 @@ namespace CSharpScript.Game.Module.BattleUi
 						return;
 					}
 					onlyAllowFightInputHandle2.SetEnable(false);
+					return;
 				}
+				break;
+			case ERoleSpecialState.PetalMechanic:
+				if (flag)
+				{
+					UiManager.Instance.OpenView(EUiViewName.PetalMechanicView, null, null);
+					this.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.RoleSpecialState, new <>z__ReadOnlyArray<EBattleUiChild>(new EBattleUiChild[]
+					{
+						EBattleUiChild.Formation,
+						EBattleUiChild.GamepadFormation,
+						EBattleUiChild.SkillButton,
+						EBattleUiChild.GamepadSkillButton
+					}), false, true, 0);
+					this.JoystickData.SetForceWalkRunRate(0f);
+					return;
+				}
+				UiManager.Instance.CloseView(EUiViewName.PetalMechanicView, null);
+				this.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.RoleSpecialState, new <>z__ReadOnlyArray<EBattleUiChild>(new EBattleUiChild[]
+				{
+					EBattleUiChild.Formation,
+					EBattleUiChild.GamepadFormation,
+					EBattleUiChild.SkillButton,
+					EBattleUiChild.GamepadSkillButton
+				}), true, true, 0);
+				this.JoystickData.SetForceWalkRunRate(-1f);
 				break;
 			default:
 				return;
 			}
 		}
 
-		// Token: 0x0603BE11 RID: 245265 RVA: 0x00E4E4BC File Offset: 0x00E4C6BC
+		// Token: 0x06030D64 RID: 200036 RVA: 0x00D9EB44 File Offset: 0x00D9CD44
 		public void RefreshAllRoleSpecialState()
 		{
 			foreach (KeyValuePair<ERoleSpecialState, bool> keyValuePair in this.RoleSpecialStateMap)
@@ -1249,20 +1274,20 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE12 RID: 245266 RVA: 0x00E4E588 File Offset: 0x00E4C788
+		// Token: 0x06030D65 RID: 200037 RVA: 0x00D9EC10 File Offset: 0x00D9CE10
 		public void SetTimeDilationSkillButtonEnable(bool enable)
 		{
 			this.IsTimeDilationSkillButtonEnableInternal = enable;
 			BattleUiControl.Instance.UpdateTimeDilationSkillButtonState();
 		}
 
-		// Token: 0x0603BE13 RID: 245267 RVA: 0x00E4E59B File Offset: 0x00E4C79B
+		// Token: 0x06030D66 RID: 200038 RVA: 0x00D9EC23 File Offset: 0x00D9CE23
 		public bool IsTimeDilationSkillButtonEnable()
 		{
 			return this.IsTimeDilationSkillButtonEnableInternal;
 		}
 
-		// Token: 0x0603BE14 RID: 245268 RVA: 0x00E4E5A4 File Offset: 0x00E4C7A4
+		// Token: 0x06030D67 RID: 200039 RVA: 0x00D9EC2C File Offset: 0x00D9CE2C
 		public void SetTimeDilationState(ETimeDilationSkillState state)
 		{
 			this.CurrentTimeDilationSkillState = state;
@@ -1299,14 +1324,14 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit(EEventName.BattleUiTimeDilationStateChanged);
 		}
 
-		// Token: 0x0603BE15 RID: 245269 RVA: 0x00E4E701 File Offset: 0x00E4C901
+		// Token: 0x06030D68 RID: 200040 RVA: 0x00D9ED89 File Offset: 0x00D9CF89
 		public void Test()
 		{
 			this.ChildViewData = new BattleUiChildViewData();
 			this.ChildViewData.Init();
 		}
 
-		// Token: 0x0603BE16 RID: 245270 RVA: 0x00E4E71C File Offset: 0x00E4C91C
+		// Token: 0x06030D69 RID: 200041 RVA: 0x00D9EDA4 File Offset: 0x00D9CFA4
 		public void UpdateBossStateArea(EBossStateAreaType type, bool isAdd)
 		{
 			if (this.BossStateAreaList[(int)type] == isAdd)
@@ -1322,7 +1347,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE17 RID: 245271 RVA: 0x00E4E764 File Offset: 0x00E4C964
+		// Token: 0x06030D6A RID: 200042 RVA: 0x00D9EDEC File Offset: 0x00D9CFEC
 		public EBossStateAreaType GetBossStateAreaType()
 		{
 			for (int i = 0; i < 4; i++)
@@ -1335,19 +1360,19 @@ namespace CSharpScript.Game.Module.BattleUi
 			return EBossStateAreaType.Max;
 		}
 
-		// Token: 0x0603BE18 RID: 245272 RVA: 0x00E4E78A File Offset: 0x00E4C98A
+		// Token: 0x06030D6B RID: 200043 RVA: 0x00D9EE12 File Offset: 0x00D9D012
 		public int GetCount(EBattleUiCountType type)
 		{
 			return this.CountMap.GetValueOrDefault(type, 0);
 		}
 
-		// Token: 0x0603BE19 RID: 245273 RVA: 0x00E4E799 File Offset: 0x00E4C999
+		// Token: 0x06030D6C RID: 200044 RVA: 0x00D9EE21 File Offset: 0x00D9D021
 		public void SetCount(EBattleUiCountType type, int count)
 		{
 			this.CountMap[type] = count;
 		}
 
-		// Token: 0x0603BE1A RID: 245274 RVA: 0x00E4E7A8 File Offset: 0x00E4C9A8
+		// Token: 0x06030D6D RID: 200045 RVA: 0x00D9EE30 File Offset: 0x00D9D030
 		public void RegisterTopPanelHook(IBattleTopPanelHook hook)
 		{
 			if (!this.TopPanelHooks.Contains(hook))
@@ -1356,7 +1381,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE1B RID: 245275 RVA: 0x00E4E7C4 File Offset: 0x00E4C9C4
+		// Token: 0x06030D6E RID: 200046 RVA: 0x00D9EE4C File Offset: 0x00D9D04C
 		public void UnregisterTopPanelHook(IBattleTopPanelHook hook)
 		{
 			int num = this.TopPanelHooks.IndexOf(hook);
@@ -1366,8 +1391,8 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x17008DE6 RID: 36326
-		// (get) Token: 0x0603BE1C RID: 245276 RVA: 0x00E4E7EE File Offset: 0x00E4C9EE
+		// Token: 0x170061B8 RID: 25016
+		// (get) Token: 0x06030D6F RID: 200047 RVA: 0x00D9EE76 File Offset: 0x00D9D076
 		public static BattleUiModel Instance
 		{
 			get
@@ -1376,7 +1401,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE1D RID: 245277 RVA: 0x00E4E7F5 File Offset: 0x00E4C9F5
+		// Token: 0x06030D70 RID: 200048 RVA: 0x00D9EE7D File Offset: 0x00D9D07D
 		public static BattleUiModel GetOrCreateInstance()
 		{
 			if (BattleUiModel._Instance == null)
@@ -1386,7 +1411,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return BattleUiModel._Instance;
 		}
 
-		// Token: 0x0603BE1E RID: 245278 RVA: 0x00E4E809 File Offset: 0x00E4CA09
+		// Token: 0x06030D71 RID: 200049 RVA: 0x00D9EE91 File Offset: 0x00D9D091
 		public static bool CreateInstance()
 		{
 			if (BattleUiModel._Instance != null)
@@ -1397,107 +1422,107 @@ namespace CSharpScript.Game.Module.BattleUi
 			return true;
 		}
 
-		// Token: 0x0603BE1F RID: 245279 RVA: 0x00E4E81F File Offset: 0x00E4CA1F
+		// Token: 0x06030D72 RID: 200050 RVA: 0x00D9EEA7 File Offset: 0x00D9D0A7
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603BE20 RID: 245280 RVA: 0x00E4E821 File Offset: 0x00E4CA21
+		// Token: 0x06030D73 RID: 200051 RVA: 0x00D9EEA9 File Offset: 0x00D9D0A9
 		public static void ResetStaticDefaultValue()
 		{
 			BattleUiModel._Instance = null;
 		}
 
-		// Token: 0x0603BE21 RID: 245281 RVA: 0x00E4E829 File Offset: 0x00E4CA29
+		// Token: 0x06030D74 RID: 200052 RVA: 0x00D9EEB1 File Offset: 0x00D9D0B1
 		static BattleUiModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BattleUiModel.CreateStaticDefaultValue), new Action(BattleUiModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401F36E RID: 127854
+		// Token: 0x04019E27 RID: 106023
 		private readonly Dictionary<int, BattleUiRoleData> RoleDataMap = new Dictionary<int, BattleUiRoleData>();
 
-		// Token: 0x0401F36F RID: 127855
+		// Token: 0x04019E28 RID: 106024
 		[Nullable(2)]
 		private BattleUiRoleData CurRoleData;
 
-		// Token: 0x0401F370 RID: 127856
+		// Token: 0x04019E29 RID: 106025
 		[Nullable(2)]
 		public BattleUiFormationData FormationData;
 
-		// Token: 0x0401F371 RID: 127857
+		// Token: 0x04019E2A RID: 106026
 		[Nullable(2)]
 		public BattleUiSpecialEnergyBarData SpecialEnergyBarData;
 
-		// Token: 0x0401F372 RID: 127858
+		// Token: 0x04019E2B RID: 106027
 		[Nullable(2)]
 		public BattleUiChildViewData ChildViewData;
 
-		// Token: 0x0401F373 RID: 127859
+		// Token: 0x04019E2C RID: 106028
 		[Nullable(2)]
 		public BattleUiFloatTipsData FloatTipsData;
 
-		// Token: 0x0401F374 RID: 127860
+		// Token: 0x04019E2D RID: 106029
 		[Nullable(2)]
 		public BattleUiAudioData AudioData;
 
-		// Token: 0x0401F375 RID: 127861
+		// Token: 0x04019E2E RID: 106030
 		[Nullable(2)]
 		public BattleUiExploreModeData ExploreModeData;
 
-		// Token: 0x0401F376 RID: 127862
+		// Token: 0x04019E2F RID: 106031
 		[Nullable(2)]
 		public BattleUiMergeHeadStateData MergeHeadStateData;
 
-		// Token: 0x0401F377 RID: 127863
+		// Token: 0x04019E30 RID: 106032
 		[Nullable(2)]
 		public BattleUiTowerMergeHeadStateData TowerMergeHeadStateData;
 
-		// Token: 0x0401F378 RID: 127864
+		// Token: 0x04019E31 RID: 106033
 		[Nullable(2)]
 		public BattleUiEnvironmentKeyData EnvironmentKeyData;
 
-		// Token: 0x0401F379 RID: 127865
+		// Token: 0x04019E32 RID: 106034
 		[Nullable(2)]
 		public BattleUiFormationPanelData FormationPanelData;
 
-		// Token: 0x0401F37A RID: 127866
+		// Token: 0x04019E33 RID: 106035
 		[Nullable(2)]
 		public BattleUiPureModeData PureModeData;
 
-		// Token: 0x0401F37B RID: 127867
+		// Token: 0x04019E34 RID: 106036
 		[Nullable(2)]
 		public BattleUiMotorcycleData MotorcycleData;
 
-		// Token: 0x0401F37C RID: 127868
+		// Token: 0x04019E35 RID: 106037
 		public BattleUiSlideControlData SlideControlData = new BattleUiSlideControlData();
 
-		// Token: 0x0401F37D RID: 127869
+		// Token: 0x04019E36 RID: 106038
 		public BattleUiJoystickData JoystickData = new BattleUiJoystickData();
 
-		// Token: 0x0401F37E RID: 127870
+		// Token: 0x04019E37 RID: 106039
 		private readonly List<LevelUpCacheData> LevelUpCacheDataListInternal = new List<LevelUpCacheData>();
 
-		// Token: 0x0401F37F RID: 127871
+		// Token: 0x04019E38 RID: 106040
 		private readonly List<int> ReviveEntityIdList = new List<int>();
 
-		// Token: 0x0401F380 RID: 127872
+		// Token: 0x04019E39 RID: 106041
 		private readonly bool IsBossStateVisible = true;
 
-		// Token: 0x0401F381 RID: 127873
+		// Token: 0x04019E3A RID: 106042
 		public bool IsMissionPanelVisible = true;
 
-		// Token: 0x0401F382 RID: 127874
+		// Token: 0x04019E3B RID: 106043
 		private long FullScreenEffectUniqueId;
 
-		// Token: 0x0401F383 RID: 127875
+		// Token: 0x04019E3C RID: 106044
 		private readonly Dictionary<long, FullScreenEffectHandle> FullScreenEffectMap = new Dictionary<long, FullScreenEffectHandle>();
 
-		// Token: 0x0401F384 RID: 127876
+		// Token: 0x04019E3D RID: 106045
 		[Nullable(2)]
 		public HeadStateCommonParam HeadStateCommonParam;
 
-		// Token: 0x0401F385 RID: 127877
+		// Token: 0x04019E3E RID: 106046
 		[Nullable(new byte[]
 		{
 			2,
@@ -1505,84 +1530,84 @@ namespace CSharpScript.Game.Module.BattleUi
 		})]
 		private string[] PropertyColor;
 
-		// Token: 0x0401F386 RID: 127878
+		// Token: 0x04019E3F RID: 106047
 		public int ThreatLevel1;
 
-		// Token: 0x0401F387 RID: 127879
+		// Token: 0x04019E40 RID: 106048
 		public int ThreatLevel3;
 
-		// Token: 0x0401F388 RID: 127880
+		// Token: 0x04019E41 RID: 106049
 		public string ThreatLevelColor1 = string.Empty;
 
-		// Token: 0x0401F389 RID: 127881
+		// Token: 0x04019E42 RID: 106050
 		public string ThreatLevelColor2 = string.Empty;
 
-		// Token: 0x0401F38A RID: 127882
+		// Token: 0x04019E43 RID: 106051
 		public string ThreatLevelColor3 = string.Empty;
 
-		// Token: 0x0401F38B RID: 127883
+		// Token: 0x04019E44 RID: 106052
 		public bool IsOpenJoystickLog;
 
-		// Token: 0x0401F38C RID: 127884
+		// Token: 0x04019E45 RID: 106053
 		public int ConcertoChangeEffectDelay;
 
-		// Token: 0x0401F38D RID: 127885
+		// Token: 0x04019E46 RID: 106054
 		[Nullable(2)]
 		private Dictionary<ECamp, string> HeadStateHpColorMap;
 
-		// Token: 0x0401F38E RID: 127886
+		// Token: 0x04019E47 RID: 106055
 		public readonly Rotator CursorCameraRotatorOffset = Rotator.Create(0f, 0f, 0f);
 
-		// Token: 0x0401F38F RID: 127887
+		// Token: 0x04019E48 RID: 106056
 		public readonly Rotator ResetAddRotator = Rotator.Create(0f, 0f, 0f);
 
-		// Token: 0x0401F390 RID: 127888
+		// Token: 0x04019E49 RID: 106057
 		public float CursorCameraRotationTime;
 
-		// Token: 0x0401F391 RID: 127889
+		// Token: 0x04019E4A RID: 106058
 		private int ViewportSizeX;
 
-		// Token: 0x0401F392 RID: 127890
+		// Token: 0x04019E4B RID: 106059
 		private int ViewportSizeY;
 
-		// Token: 0x0401F393 RID: 127891
+		// Token: 0x04019E4C RID: 106060
 		public readonly Vector2D ViewportSize = Vector2D.Create();
 
-		// Token: 0x0401F394 RID: 127892
+		// Token: 0x04019E4D RID: 106061
 		public float ScreenPositionScale;
 
-		// Token: 0x0401F395 RID: 127893
+		// Token: 0x04019E4E RID: 106062
 		public Vector2D ScreenPositionOffset = Vector2D.Create();
 
-		// Token: 0x0401F396 RID: 127894
+		// Token: 0x04019E4F RID: 106063
 		public bool IsLongPressExploreButton;
 
-		// Token: 0x0401F397 RID: 127895
+		// Token: 0x04019E50 RID: 106064
 		public bool IsPressJoyStick;
 
-		// Token: 0x0401F398 RID: 127896
+		// Token: 0x04019E51 RID: 106065
 		private bool IsPreload;
 
-		// Token: 0x0401F399 RID: 127897
+		// Token: 0x04019E52 RID: 106066
 		private bool IsDynamicJoystick;
 
-		// Token: 0x0401F39A RID: 127898
+		// Token: 0x04019E53 RID: 106067
 		private bool IsAutoSwitchSkillButtonMode;
 
-		// Token: 0x0401F39B RID: 127899
+		// Token: 0x04019E54 RID: 106068
 		public bool IsInBattleSettlement;
 
-		// Token: 0x0401F39C RID: 127900
+		// Token: 0x04019E55 RID: 106069
 		private bool ExecutionInteractEnable;
 
-		// Token: 0x0401F39D RID: 127901
+		// Token: 0x04019E56 RID: 106070
 		private bool ChatScrollViewVisibleInner;
 
-		// Token: 0x0401F39E RID: 127902
+		// Token: 0x04019E57 RID: 106071
 		[Nullable(2)]
 		public Dictionary<EMissionItemView, bool> IsShowingMissionViewItems;
 
-		// Token: 0x0401F39F RID: 127903
+		// Token: 0x04019E58 RID: 106072
 		[Nullable(new byte[]
 		{
 			2,
@@ -1590,101 +1615,101 @@ namespace CSharpScript.Game.Module.BattleUi
 		})]
 		private Dictionary<EMissionItemView, IMissionItemViewShowData> MissionViewData;
 
-		// Token: 0x0401F3A0 RID: 127904
+		// Token: 0x04019E59 RID: 106073
 		public readonly Dictionary<int, Dictionary<int, ITrackData>> TrackDatas = new Dictionary<int, Dictionary<int, ITrackData>>();
 
-		// Token: 0x0401F3A1 RID: 127905
+		// Token: 0x04019E5A RID: 106074
 		public long? TreeIncIdHandle;
 
-		// Token: 0x0401F3A2 RID: 127906
+		// Token: 0x04019E5B RID: 106075
 		[Nullable(2)]
 		public BaseBehaviorTree TreeHandle;
 
-		// Token: 0x0401F3A3 RID: 127907
+		// Token: 0x04019E5C RID: 106076
 		private bool IsTimeDilationSkillButtonEnableInternal;
 
-		// Token: 0x0401F3A4 RID: 127908
+		// Token: 0x04019E5D RID: 106077
 		public float TimeDilationSkillMaxTime;
 
-		// Token: 0x0401F3A5 RID: 127909
+		// Token: 0x04019E5E RID: 106078
 		public float TimeDilationSkillCdTime;
 
-		// Token: 0x0401F3A6 RID: 127910
+		// Token: 0x04019E5F RID: 106079
 		public float TimeDilationSkillRatio;
 
-		// Token: 0x0401F3A7 RID: 127911
+		// Token: 0x04019E60 RID: 106080
 		public float TimeDilationCoolDownStartTime;
 
-		// Token: 0x0401F3A8 RID: 127912
+		// Token: 0x04019E61 RID: 106081
 		[Nullable(2)]
 		private TimerHandle TimeDilationSkillTimerHandler;
 
-		// Token: 0x0401F3A9 RID: 127913
+		// Token: 0x04019E62 RID: 106082
 		public ETimeDilationSkillState CurrentTimeDilationSkillState;
 
-		// Token: 0x0401F3AA RID: 127914
+		// Token: 0x04019E63 RID: 106083
 		private readonly Dictionary<int, HeadIconEnergyBar> HeadIconEnergyBarMap = new Dictionary<int, HeadIconEnergyBar>();
 
-		// Token: 0x0401F3AB RID: 127915
+		// Token: 0x04019E64 RID: 106084
 		public readonly bool[] BossStateAreaList = new bool[4];
 
-		// Token: 0x0401F3AC RID: 127916
+		// Token: 0x04019E65 RID: 106085
 		private readonly Dictionary<EBattleUiCountType, int> CountMap = new Dictionary<EBattleUiCountType, int>();
 
-		// Token: 0x0401F3AD RID: 127917
+		// Token: 0x04019E66 RID: 106086
 		[Nullable(2)]
 		public BattleUiOnlyAllowFightInputHandle OnlyAllowFightInputHandle;
 
-		// Token: 0x0401F3AE RID: 127918
+		// Token: 0x04019E67 RID: 106087
 		[Nullable(2)]
 		private TimerHandle NextTickTimerId;
 
-		// Token: 0x0401F3AF RID: 127919
+		// Token: 0x04019E68 RID: 106088
 		private bool DelayNextTick;
 
-		// Token: 0x0401F3B0 RID: 127920
+		// Token: 0x04019E69 RID: 106089
 		[StaticVariableRuleIgnore]
 		private static readonly Stat NextTickStat = Stat.Create("SkillButtonEntityDataNextTick", "", "");
 
-		// Token: 0x0401F3B1 RID: 127921
+		// Token: 0x04019E6A RID: 106090
 		private bool ChangeRole;
 
-		// Token: 0x0401F3B2 RID: 127922
+		// Token: 0x04019E6B RID: 106091
 		private int? NewEntityId;
 
-		// Token: 0x0401F3B3 RID: 127923
+		// Token: 0x04019E6C RID: 106092
 		private int? OldEntityId;
 
-		// Token: 0x0401F3B4 RID: 127924
+		// Token: 0x04019E6D RID: 106093
 		private float BattleUiAlpha = 1f;
 
-		// Token: 0x0401F3B5 RID: 127925
+		// Token: 0x04019E6E RID: 106094
 		private TrackingDisplayRuleBase CurrentRuleInternal = new DefaultTrackingRule();
 
-		// Token: 0x0401F3B6 RID: 127926
+		// Token: 0x04019E6F RID: 106095
 		private readonly TrackingDisplayRuleBase DefaultRuleInternal = new DefaultTrackingRule();
 
-		// Token: 0x0401F3B7 RID: 127927
+		// Token: 0x04019E70 RID: 106096
 		public int GuestId;
 
-		// Token: 0x0401F3B8 RID: 127928
+		// Token: 0x04019E71 RID: 106097
 		public bool GuestEffect;
 
-		// Token: 0x0401F3B9 RID: 127929
+		// Token: 0x04019E72 RID: 106098
 		[Nullable(2)]
 		private int[] TagIdJoystickStaticVisible;
 
-		// Token: 0x0401F3BA RID: 127930
+		// Token: 0x04019E73 RID: 106099
 		[Nullable(2)]
 		private int[] TagIdMoveCursorVisible;
 
-		// Token: 0x0401F3BB RID: 127931
+		// Token: 0x04019E74 RID: 106100
 		private readonly Dictionary<ERoleSpecialState, bool> RoleSpecialStateMap = new Dictionary<ERoleSpecialState, bool>();
 
-		// Token: 0x0401F3BC RID: 127932
+		// Token: 0x04019E75 RID: 106101
 		public List<IBattleTopPanelHook> TopPanelHooks = new List<IBattleTopPanelHook>();
 
-		// Token: 0x0401F3BD RID: 127933
+		// Token: 0x04019E76 RID: 106102
 		[Nullable(2)]
 		private static BattleUiModel _Instance;
 	}

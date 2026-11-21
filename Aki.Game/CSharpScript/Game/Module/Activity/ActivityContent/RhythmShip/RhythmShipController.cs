@@ -14,61 +14,61 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 {
-	// Token: 0x02006200 RID: 25088
+	// Token: 0x0200517E RID: 20862
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class RhythmShipController : ActivityControllerBase
 	{
-		// Token: 0x0603F4CB RID: 259275 RVA: 0x00F4BAA8 File Offset: 0x00F49CA8
+		// Token: 0x0603418C RID: 213388 RVA: 0x00E92A00 File Offset: 0x00E90C00
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x0603F4CC RID: 259276 RVA: 0x00F4BAAA File Offset: 0x00F49CAA
+		// Token: 0x0603418D RID: 213389 RVA: 0x00E92A02 File Offset: 0x00E90C02
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_RhythmShipActivityMain";
 		}
 
-		// Token: 0x0603F4CD RID: 259277 RVA: 0x00F4BAB1 File Offset: 0x00F49CB1
+		// Token: 0x0603418E RID: 213390 RVA: 0x00E92A09 File Offset: 0x00E90C09
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new RhythmShipSubView();
 		}
 
-		// Token: 0x0603F4CE RID: 259278 RVA: 0x00F4BAB8 File Offset: 0x00F49CB8
+		// Token: 0x0603418F RID: 213391 RVA: 0x00E92A10 File Offset: 0x00E90C10
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			RhythmShipModel.Instance.ActivityId = data.Id;
 			return new RhythmShipData();
 		}
 
-		// Token: 0x0603F4CF RID: 259279 RVA: 0x00F4BACF File Offset: 0x00F49CCF
+		// Token: 0x06034190 RID: 213392 RVA: 0x00E92A27 File Offset: 0x00E90C27
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x0603F4D0 RID: 259280 RVA: 0x00F4BAD2 File Offset: 0x00F49CD2
+		// Token: 0x06034191 RID: 213393 RVA: 0x00E92A2A File Offset: 0x00E90C2A
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 		}
 
-		// Token: 0x0603F4D1 RID: 259281 RVA: 0x00F4BAF0 File Offset: 0x00F49CF0
+		// Token: 0x06034192 RID: 213394 RVA: 0x00E92A48 File Offset: 0x00E90C48
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 		}
 
-		// Token: 0x0603F4D2 RID: 259282 RVA: 0x00F4BB0E File Offset: 0x00F49D0E
+		// Token: 0x06034193 RID: 213395 RVA: 0x00E92A66 File Offset: 0x00E90C66
 		private void OnWorldDone()
 		{
 			RhythmShipModel.Instance.InitLocalCalibrationValue();
 		}
 
-		// Token: 0x0603F4D3 RID: 259283 RVA: 0x00F4BB1C File Offset: 0x00F49D1C
+		// Token: 0x06034194 RID: 213396 RVA: 0x00E92A74 File Offset: 0x00E90C74
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.RhythmRoleUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.RhythmRoleUpdateNotify));
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			Net.Instance.Register(ENotifyMessageId.RhythmShipStartNotify, new Action<IMessage, Net.CallbackStatus>(this.RhythmShipStartNotify));
 		}
 
-		// Token: 0x0603F4D4 RID: 259284 RVA: 0x00F4BB9C File Offset: 0x00F49D9C
+		// Token: 0x06034195 RID: 213397 RVA: 0x00E92AF4 File Offset: 0x00E90CF4
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.RhythmRoleUpdateNotify);
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			Net.Instance.UnRegister(ENotifyMessageId.RhythmShipStartNotify);
 		}
 
-		// Token: 0x0603F4D5 RID: 259285 RVA: 0x00F4BBEC File Offset: 0x00F49DEC
+		// Token: 0x06034196 RID: 213398 RVA: 0x00E92B44 File Offset: 0x00E90D44
 		[NullableContext(2)]
 		public void RhythmSetRedDotRequest(List<int> planetId = null, List<int> subLevelId = null, List<int> roleId = null)
 		{
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}, 0);
 		}
 
-		// Token: 0x0603F4D6 RID: 259286 RVA: 0x00F4BD0C File Offset: 0x00F49F0C
+		// Token: 0x06034197 RID: 213399 RVA: 0x00E92C64 File Offset: 0x00E90E64
 		public void RhythmChangePartnerRoleRequest(int roleId)
 		{
 			RhythmChangePartnerRoleRequest rhythmChangePartnerRoleRequest = Aki.Protocol.RhythmChangePartnerRoleRequest.Create();
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}, 0);
 		}
 
-		// Token: 0x0603F4D7 RID: 259287 RVA: 0x00F4BD58 File Offset: 0x00F49F58
+		// Token: 0x06034198 RID: 213400 RVA: 0x00E92CB0 File Offset: 0x00E90EB0
 		public void RhythmTaskOneKeyRewardRequest(int taskId)
 		{
 			RhythmTaskOneKeyRewardRequest rhythmTaskOneKeyRewardRequest = Aki.Protocol.RhythmTaskOneKeyRewardRequest.Create();
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}, 0);
 		}
 
-		// Token: 0x0603F4D8 RID: 259288 RVA: 0x00F4BDF0 File Offset: 0x00F49FF0
+		// Token: 0x06034199 RID: 213401 RVA: 0x00E92D48 File Offset: 0x00E90F48
 		public UniTask RhythmRankListRequest()
 		{
 			RhythmShipController.<RhythmRankListRequest>d__15 <RhythmRankListRequest>d__;
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return <RhythmRankListRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F4D9 RID: 259289 RVA: 0x00F4BE34 File Offset: 0x00F4A034
+		// Token: 0x0603419A RID: 213402 RVA: 0x00E92D8C File Offset: 0x00E90F8C
 		public UniTask RhythmRankListSelfDataRequest()
 		{
 			RhythmShipController.<RhythmRankListSelfDataRequest>d__16 <RhythmRankListSelfDataRequest>d__;
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return <RhythmRankListSelfDataRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F4DA RID: 259290 RVA: 0x00F4BE70 File Offset: 0x00F4A070
+		// Token: 0x0603419B RID: 213403 RVA: 0x00E92DC8 File Offset: 0x00E90FC8
 		public void RhythmSettleRequest(int subLevelId, RhythmSettleReasonPb reason, RhythmResultPayload payload, Dictionary<ERhythmShipSettlementType, int> settlementItemMap, bool isDisableRecordUpLoad, bool isQuit = false)
 		{
 			int score = payload.Score;
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}, 0);
 		}
 
-		// Token: 0x0603F4DB RID: 259291 RVA: 0x00F4BF3C File Offset: 0x00F4A13C
+		// Token: 0x0603419C RID: 213404 RVA: 0x00E92E94 File Offset: 0x00E91094
 		public void StartRequest(int subLevelId, int levelId)
 		{
 			if (this.IsStartRequesting)
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			this.StartRequestAsync(instId, subLevelId, levelId).Forget();
 		}
 
-		// Token: 0x0603F4DC RID: 259292 RVA: 0x00F4BFA0 File Offset: 0x00F4A1A0
+		// Token: 0x0603419D RID: 213405 RVA: 0x00E92EF8 File Offset: 0x00E910F8
 		private UniTask StartRequestAsync(int instanceId, int subLevelId, int levelId)
 		{
 			RhythmShipController.<StartRequestAsync>d__19 <StartRequestAsync>d__;
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return <StartRequestAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F4DD RID: 259293 RVA: 0x00F4BFFC File Offset: 0x00F4A1FC
+		// Token: 0x0603419E RID: 213406 RVA: 0x00E92F54 File Offset: 0x00E91154
 		public UniTask RhythmMainLineInfoRequest()
 		{
 			RhythmShipController.<RhythmMainLineInfoRequest>d__20 <RhythmMainLineInfoRequest>d__;
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return <RhythmMainLineInfoRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F4DE RID: 259294 RVA: 0x00F4C038 File Offset: 0x00F4A238
+		// Token: 0x0603419F RID: 213407 RVA: 0x00E92F90 File Offset: 0x00E91190
 		[NullableContext(2)]
 		private void RhythmRoleUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}
 		}
 
-		// Token: 0x0603F4DF RID: 259295 RVA: 0x00F4C06C File Offset: 0x00F4A26C
+		// Token: 0x060341A0 RID: 213408 RVA: 0x00E92FC4 File Offset: 0x00E911C4
 		[NullableContext(2)]
 		private void RhythmTaskUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}
 		}
 
-		// Token: 0x0603F4E0 RID: 259296 RVA: 0x00F4C228 File Offset: 0x00F4A428
+		// Token: 0x060341A1 RID: 213409 RVA: 0x00E93180 File Offset: 0x00E91380
 		[NullableContext(2)]
 		private void RhythmSubLevelUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}
 		}
 
-		// Token: 0x0603F4E1 RID: 259297 RVA: 0x00F4C2C0 File Offset: 0x00F4A4C0
+		// Token: 0x060341A2 RID: 213410 RVA: 0x00E93218 File Offset: 0x00E91418
 		[NullableContext(2)]
 		private void RhythmShipStartNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			RhythmShipModel.Instance.RhythmShipLevelRole = rhythmShipStartNotify.RhythmRoleId;
 		}
 
-		// Token: 0x0603F4E2 RID: 259298 RVA: 0x00F4C2E4 File Offset: 0x00F4A4E4
+		// Token: 0x060341A3 RID: 213411 RVA: 0x00E9323C File Offset: 0x00E9143C
 		[NullableContext(0)]
 		protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 		{
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return <OnOpenSubView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F4E3 RID: 259299 RVA: 0x00F4C328 File Offset: 0x00F4A528
+		// Token: 0x060341A4 RID: 213412 RVA: 0x00E93280 File Offset: 0x00E91480
 		public void PlayLoopAudioEvent(string @event)
 		{
 			if (StringUtils.IsEmpty(this.LastLoopAudio))
@@ -390,7 +390,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			AudioSystem.Instance.ExecuteAction(this.LastLoopAudio, EAudioActionType.Resume, null);
 		}
 
-		// Token: 0x0603F4E4 RID: 259300 RVA: 0x00F4C3B4 File Offset: 0x00F4A5B4
+		// Token: 0x060341A5 RID: 213413 RVA: 0x00E9330C File Offset: 0x00E9150C
 		public void StopLoopAudioEvent()
 		{
 			if (!StringUtils.IsEmpty(this.LastLoopAudio))
@@ -400,8 +400,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}
 		}
 
-		// Token: 0x1700922F RID: 37423
-		// (get) Token: 0x0603F4E5 RID: 259301 RVA: 0x00F4C3F3 File Offset: 0x00F4A5F3
+		// Token: 0x17006591 RID: 26001
+		// (get) Token: 0x060341A6 RID: 213414 RVA: 0x00E9334B File Offset: 0x00E9154B
 		public static RhythmShipController Instance
 		{
 			get
@@ -410,7 +410,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}
 		}
 
-		// Token: 0x0603F4E6 RID: 259302 RVA: 0x00F4C3FA File Offset: 0x00F4A5FA
+		// Token: 0x060341A7 RID: 213415 RVA: 0x00E93352 File Offset: 0x00E91552
 		public static RhythmShipController GetOrCreateInstance()
 		{
 			if (RhythmShipController._Instance == null)
@@ -420,7 +420,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return RhythmShipController._Instance;
 		}
 
-		// Token: 0x0603F4E7 RID: 259303 RVA: 0x00F4C40E File Offset: 0x00F4A60E
+		// Token: 0x060341A8 RID: 213416 RVA: 0x00E93366 File Offset: 0x00E91566
 		public static bool CreateInstance()
 		{
 			if (RhythmShipController._Instance != null)
@@ -431,33 +431,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return true;
 		}
 
-		// Token: 0x0603F4E8 RID: 259304 RVA: 0x00F4C424 File Offset: 0x00F4A624
+		// Token: 0x060341A9 RID: 213417 RVA: 0x00E9337C File Offset: 0x00E9157C
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603F4E9 RID: 259305 RVA: 0x00F4C426 File Offset: 0x00F4A626
+		// Token: 0x060341AA RID: 213418 RVA: 0x00E9337E File Offset: 0x00E9157E
 		public static void ResetStaticDefaultValue()
 		{
 			RhythmShipController._Instance = null;
 		}
 
-		// Token: 0x0603F4EA RID: 259306 RVA: 0x00F4C42E File Offset: 0x00F4A62E
+		// Token: 0x060341AB RID: 213419 RVA: 0x00E93386 File Offset: 0x00E91586
 		static RhythmShipController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RhythmShipController.CreateStaticDefaultValue), new Action(RhythmShipController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402103C RID: 135228
+		// Token: 0x0401B96B RID: 113003
 		private bool IsStartRequesting;
 
-		// Token: 0x0402103D RID: 135229
+		// Token: 0x0401B96C RID: 113004
 		public double NextCanRhythmRankListRequestTime;
 
-		// Token: 0x0402103E RID: 135230
+		// Token: 0x0401B96D RID: 113005
 		public string LastLoopAudio = "";
 
-		// Token: 0x0402103F RID: 135231
+		// Token: 0x0401B96E RID: 113006
 		[Nullable(2)]
 		private static RhythmShipController _Instance;
 	}

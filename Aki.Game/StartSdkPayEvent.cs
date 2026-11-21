@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020020E6 RID: 8422
+// Token: 0x020015BD RID: 5565
 [NullableContext(1)]
 [Nullable(0)]
 public class StartSdkPayEvent : PlayerCommonLogData
 {
-	// Token: 0x1700148C RID: 5260
-	// (get) Token: 0x060108EE RID: 67822 RVA: 0x0040ADEE File Offset: 0x00408FEE
-	// (set) Token: 0x060108EF RID: 67823 RVA: 0x0040ADF6 File Offset: 0x00408FF6
+	// Token: 0x170014B9 RID: 5305
+	// (get) Token: 0x0600DD5E RID: 56670 RVA: 0x004174FE File Offset: 0x004156FE
+	// (set) Token: 0x0600DD5F RID: 56671 RVA: 0x00417506 File Offset: 0x00415706
 	public override string event_id { get; set; } = "1040";
 
-	// Token: 0x04007C16 RID: 31766
+	// Token: 0x04007D15 RID: 32021
 	public string s_sdk_pay_order = "";
 
-	// Token: 0x04007C17 RID: 31767
+	// Token: 0x04007D16 RID: 32022
 	public string s_sdk_callback_url = "";
 }

@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C9C RID: 23708
+	// Token: 0x02004C7E RID: 19582
 	public class BattleUiPoolElement
 	{
-		// Token: 0x0603BE5B RID: 245339 RVA: 0x00E4F480 File Offset: 0x00E4D680
+		// Token: 0x06030DAE RID: 200110 RVA: 0x00D9FB08 File Offset: 0x00D9DD08
 		public void Clear()
 		{
 			if (this.ActorList != null)
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.Actor = null;
 		}
 
-		// Token: 0x0401F3E3 RID: 127971
+		// Token: 0x04019E9C RID: 106140
 		[Nullable(new byte[]
 		{
 			2,
@@ -30,10 +30,10 @@ namespace CSharpScript.Game.Module.BattleUi
 		})]
 		public List<AActor> ActorList;
 
-		// Token: 0x0401F3E4 RID: 127972
+		// Token: 0x04019E9D RID: 106141
 		public bool ExistMulti = true;
 
-		// Token: 0x0401F3E5 RID: 127973
+		// Token: 0x04019E9E RID: 106142
 		[Nullable(2)]
 		public AActor Actor;
 	}

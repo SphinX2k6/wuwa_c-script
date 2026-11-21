@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C94 RID: 27796
+	// Token: 0x020073FB RID: 29691
 	public class IPerformSunSpiritGearRoundTripT
 	{
-		// Token: 0x1700CEFC RID: 52988
-		// (get) Token: 0x06030FBB RID: 200635 RVA: 0x006A6640 File Offset: 0x006A4840
-		// (set) Token: 0x06030FBC RID: 200636 RVA: 0x006A6648 File Offset: 0x006A4848
+		// Token: 0x1700DA17 RID: 55831
+		// (get) Token: 0x06033F16 RID: 212758 RVA: 0x00700B40 File Offset: 0x006FED40
+		// (set) Token: 0x06033F17 RID: 212759 RVA: 0x00700B48 File Offset: 0x006FED48
 		public ESunSpiritGearRoundTripType PerformType { get; set; }
 
-		// Token: 0x1700CEFD RID: 52989
-		// (get) Token: 0x06030FBD RID: 200637 RVA: 0x006A6651 File Offset: 0x006A4851
-		// (set) Token: 0x06030FBE RID: 200638 RVA: 0x006A6659 File Offset: 0x006A4859
+		// Token: 0x1700DA18 RID: 55832
+		// (get) Token: 0x06033F18 RID: 212760 RVA: 0x00700B51 File Offset: 0x006FED51
+		// (set) Token: 0x06033F19 RID: 212761 RVA: 0x00700B59 File Offset: 0x006FED59
 		public int SunSpiritGearId { get; set; }
 
-		// Token: 0x06030FBF RID: 200639 RVA: 0x006A6662 File Offset: 0x006A4862
+		// Token: 0x06033F1A RID: 212762 RVA: 0x00700B62 File Offset: 0x006FED62
 		public IPerformSunSpiritGearRoundTripT()
 		{
 			this.PerformType = ESunSpiritGearRoundTripType.FlyToGear;

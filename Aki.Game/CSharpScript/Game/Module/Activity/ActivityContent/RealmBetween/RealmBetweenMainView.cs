@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006279 RID: 25209
+	// Token: 0x020051F7 RID: 20983
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RealmBetweenMainView : UiViewBase
 	{
-		// Token: 0x0603F75E RID: 259934 RVA: 0x00F57497 File Offset: 0x00F55697
+		// Token: 0x0603441F RID: 214047 RVA: 0x00E9E3F3 File Offset: 0x00E9C5F3
 		public RealmBetweenMainView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F75F RID: 259935 RVA: 0x00F574B4 File Offset: 0x00F556B4
+		// Token: 0x06034420 RID: 214048 RVA: 0x00E9E410 File Offset: 0x00E9C610
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F760 RID: 259936 RVA: 0x00F5761C File Offset: 0x00F5581C
+		// Token: 0x06034421 RID: 214049 RVA: 0x00E9E578 File Offset: 0x00E9C778
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RealmBetweenMainView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -56,32 +56,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F761 RID: 259937 RVA: 0x00F5765F File Offset: 0x00F5585F
+		// Token: 0x06034422 RID: 214050 RVA: 0x00E9E5BB File Offset: 0x00E9C7BB
 		protected override void OnStart()
 		{
 			this.SelectedLevel = this.ActivityBaseData.TravelLevel;
 		}
 
-		// Token: 0x0603F762 RID: 259938 RVA: 0x00F57672 File Offset: 0x00F55872
+		// Token: 0x06034423 RID: 214051 RVA: 0x00E9E5CE File Offset: 0x00E9C7CE
 		protected override void OnBeforeShow()
 		{
 			this.RefreshExpComponent(this.SelectedLevel);
 			this.RefreshSubViewButton();
 		}
 
-		// Token: 0x0603F763 RID: 259939 RVA: 0x00F57686 File Offset: 0x00F55886
+		// Token: 0x06034424 RID: 214052 RVA: 0x00E9E5E2 File Offset: 0x00E9C7E2
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnRewardViewClose));
 		}
 
-		// Token: 0x0603F764 RID: 259940 RVA: 0x00F576A1 File Offset: 0x00F558A1
+		// Token: 0x06034425 RID: 214053 RVA: 0x00E9E5FD File Offset: 0x00E9C7FD
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnRewardViewClose));
 		}
 
-		// Token: 0x0603F765 RID: 259941 RVA: 0x00F576BC File Offset: 0x00F558BC
+		// Token: 0x06034426 RID: 214054 RVA: 0x00E9E618 File Offset: 0x00E9C818
 		private UniTask CreateSubViewButton()
 		{
 			RealmBetweenMainView.<CreateSubViewButton>d__17 <CreateSubViewButton>d__;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return <CreateSubViewButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F766 RID: 259942 RVA: 0x00F57700 File Offset: 0x00F55900
+		// Token: 0x06034427 RID: 214055 RVA: 0x00E9E65C File Offset: 0x00E9C85C
 		protected void OnOpenSubView(ERealmBetweenSubType type)
 		{
 			switch (type)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F767 RID: 259943 RVA: 0x00F5776A File Offset: 0x00F5596A
+		// Token: 0x06034428 RID: 214056 RVA: 0x00E9E6C6 File Offset: 0x00E9C8C6
 		private void OnClickedLevelUpButton()
 		{
 			ActivityRealmBetweenController.Instance.RequestRealmBetweenLevelUp(delegate(bool success)
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			});
 		}
 
-		// Token: 0x0603F768 RID: 259944 RVA: 0x00F57784 File Offset: 0x00F55984
+		// Token: 0x06034429 RID: 214057 RVA: 0x00E9E6E0 File Offset: 0x00E9C8E0
 		private void LevelUp()
 		{
 			if (this.NeedLevelUp)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F769 RID: 259945 RVA: 0x00F577ED File Offset: 0x00F559ED
+		// Token: 0x0603442A RID: 214058 RVA: 0x00E9E749 File Offset: 0x00E9C949
 		private void OnRewardViewClose(EUiViewName viewName, int viewId)
 		{
 			if (this.SelectedViewType != ERealmBetweenSubType.Main)
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F76A RID: 259946 RVA: 0x00F57818 File Offset: 0x00F55A18
+		// Token: 0x0603442B RID: 214059 RVA: 0x00E9E774 File Offset: 0x00E9C974
 		private void RefreshExpComponent(int level)
 		{
 			bool hasClaimed = level < this.ActivityBaseData.TravelLevel;
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			base.GetItem(4).SetUIActive(level < this.ActivityBaseData.MaxTravelLevel);
 		}
 
-		// Token: 0x0603F76B RID: 259947 RVA: 0x00F579F4 File Offset: 0x00F55BF4
+		// Token: 0x0603442C RID: 214060 RVA: 0x00E9E950 File Offset: 0x00E9CB50
 		private void RefreshSubViewButton()
 		{
 			foreach (KeyValuePair<ERealmBetweenSubType, RealmBetweenSubViewButton> keyValuePair in this.SubViewButtonMap)
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F76C RID: 259948 RVA: 0x00F57AE8 File Offset: 0x00F55CE8
+		// Token: 0x0603442D RID: 214061 RVA: 0x00E9EA44 File Offset: 0x00E9CC44
 		private void SetPerformanceFinishedLevel(int level)
 		{
 			IRealmBetweenLevelData realmBetweenLevelData;
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}));
 		}
 
-		// Token: 0x0603F76D RID: 259949 RVA: 0x00F57B84 File Offset: 0x00F55D84
+		// Token: 0x0603442E RID: 214062 RVA: 0x00E9EAE0 File Offset: 0x00E9CCE0
 		private void SetPerformanceCurrentLevel(int level)
 		{
 			ActivityRealmBetweenData activityBaseData = this.ActivityBaseData;
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.LevelUpButton.SetEnableClick(false);
 		}
 
-		// Token: 0x0603F76E RID: 259950 RVA: 0x00F57CE0 File Offset: 0x00F55EE0
+		// Token: 0x0603442F RID: 214063 RVA: 0x00E9EC3C File Offset: 0x00E9CE3C
 		private void SetPerformanceUnFinishedLevel(int level)
 		{
 			bool flag = this.ActivityBaseData.MaxTravelLevel == level;
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			base.GetText(2).SetUIActive(false);
 		}
 
-		// Token: 0x0603F76F RID: 259951 RVA: 0x00F57D70 File Offset: 0x00F55F70
+		// Token: 0x06034430 RID: 214064 RVA: 0x00E9ECCC File Offset: 0x00E9CECC
 		private void OnClickedPreLevelButton()
 		{
 			this.SelectedLevel--;
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.UiViewSequence.PlaySequence("Switch", true, null);
 		}
 
-		// Token: 0x0603F770 RID: 259952 RVA: 0x00F57DB4 File Offset: 0x00F55FB4
+		// Token: 0x06034431 RID: 214065 RVA: 0x00E9ED10 File Offset: 0x00E9CF10
 		private void OnClickedNextLevelButton()
 		{
 			this.SelectedLevel++;
@@ -325,39 +325,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.UiViewSequence.PlaySequence("Switch", true, null);
 		}
 
-		// Token: 0x0603F771 RID: 259953 RVA: 0x00F57DF5 File Offset: 0x00F55FF5
+		// Token: 0x06034432 RID: 214066 RVA: 0x00E9ED51 File Offset: 0x00E9CF51
 		private void CloseButtonClicked()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603F772 RID: 259954 RVA: 0x00F57E00 File Offset: 0x00F56000
+		// Token: 0x06034433 RID: 214067 RVA: 0x00E9ED5C File Offset: 0x00E9CF5C
 		private void HelpButtonClicked()
 		{
 			HelpController.Instance.OpenHelpById(this.ActivityBaseData.LocalConfig.Value.HelpId);
 		}
 
-		// Token: 0x04021299 RID: 135833
+		// Token: 0x0401BBC8 RID: 113608
 		[Nullable(2)]
 		private PopupCaptionItem CaptionComponent;
 
-		// Token: 0x0402129A RID: 135834
+		// Token: 0x0401BBC9 RID: 113609
 		protected ActivityRealmBetweenData ActivityBaseData;
 
-		// Token: 0x0402129B RID: 135835
+		// Token: 0x0401BBCA RID: 113610
 		private int SelectedLevel = -1;
 
-		// Token: 0x0402129C RID: 135836
+		// Token: 0x0401BBCB RID: 113611
 		[Nullable(2)]
 		private ActivityButtonItem LevelUpButton;
 
-		// Token: 0x0402129D RID: 135837
+		// Token: 0x0401BBCC RID: 113612
 		private readonly Dictionary<ERealmBetweenSubType, RealmBetweenSubViewButton> SubViewButtonMap = new Dictionary<ERealmBetweenSubType, RealmBetweenSubViewButton>();
 
-		// Token: 0x0402129E RID: 135838
+		// Token: 0x0401BBCD RID: 113613
 		private bool NeedLevelUp;
 
-		// Token: 0x0402129F RID: 135839
+		// Token: 0x0401BBCE RID: 113614
 		[Nullable(new byte[]
 		{
 			2,
@@ -366,13 +366,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 		})]
 		private GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData> LevelRewardLayout;
 
-		// Token: 0x040212A0 RID: 135840
+		// Token: 0x0401BBCF RID: 113615
 		private readonly ERealmBetweenSubType SelectedViewType;
 
-		// Token: 0x040212A1 RID: 135841
+		// Token: 0x0401BBD0 RID: 113616
 		private ButtonWithRedDot BtnRight;
 
-		// Token: 0x040212A2 RID: 135842
+		// Token: 0x0401BBD1 RID: 113617
 		private ButtonWithRedDot BtnLeft;
 	}
 }

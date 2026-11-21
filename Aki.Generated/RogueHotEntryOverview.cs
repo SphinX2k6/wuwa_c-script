@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FE3 RID: 4067
+	// Token: 0x020010CB RID: 4299
 	public struct RogueHotEntryOverview : IFlatbufferObject
 	{
-		// Token: 0x17002F4F RID: 12111
-		// (get) Token: 0x0600BF6B RID: 49003 RVA: 0x002E5B1D File Offset: 0x002E3D1D
+		// Token: 0x17002FCA RID: 12234
+		// (get) Token: 0x0600C5B5 RID: 50613 RVA: 0x00301F3C File Offset: 0x0030013C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BF6C RID: 49004 RVA: 0x002E5B2A File Offset: 0x002E3D2A
+		// Token: 0x0600C5B6 RID: 50614 RVA: 0x00301F49 File Offset: 0x00300149
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BF6D RID: 49005 RVA: 0x002E5B34 File Offset: 0x002E3D34
+		// Token: 0x0600C5B7 RID: 50615 RVA: 0x00301F50 File Offset: 0x00300150
 		public static RogueHotEntryOverview GetRootAsRogueHotEntryOverview(ByteBuffer _bb)
 		{
 			return RogueHotEntryOverview.GetRootAsRogueHotEntryOverview(_bb, default(RogueHotEntryOverview));
 		}
 
-		// Token: 0x0600BF6E RID: 49006 RVA: 0x002E5B50 File Offset: 0x002E3D50
+		// Token: 0x0600C5B8 RID: 50616 RVA: 0x00301F6C File Offset: 0x0030016C
 		public static RogueHotEntryOverview GetRootAsRogueHotEntryOverview(ByteBuffer _bb, RogueHotEntryOverview obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BF6F RID: 49007 RVA: 0x002E5B6D File Offset: 0x002E3D6D
+		// Token: 0x0600C5B9 RID: 50617 RVA: 0x00301F89 File Offset: 0x00300189
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BF70 RID: 49008 RVA: 0x002E5B7C File Offset: 0x002E3D7C
+		// Token: 0x0600C5BA RID: 50618 RVA: 0x00301F98 File Offset: 0x00300198
 		public RogueHotEntryOverview __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002F50 RID: 12112
-		// (get) Token: 0x0600BF71 RID: 49009 RVA: 0x002E5B8C File Offset: 0x002E3D8C
+		// Token: 0x17002FCB RID: 12235
+		// (get) Token: 0x0600C5BB RID: 50619 RVA: 0x00301FA8 File Offset: 0x003001A8
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002F51 RID: 12113
-		// (get) Token: 0x0600BF72 RID: 49010 RVA: 0x002E5BC8 File Offset: 0x002E3DC8
+		// Token: 0x17002FCC RID: 12236
+		// (get) Token: 0x0600C5BC RID: 50620 RVA: 0x00301FE4 File Offset: 0x003001E4
 		public int Type
 		{
 			get
@@ -80,15 +80,15 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BF73 RID: 49011 RVA: 0x002E5C04 File Offset: 0x002E3E04
+		// Token: 0x0600C5BD RID: 50621 RVA: 0x00302020 File Offset: 0x00300220
 		public bool ParamShowPercent(int j)
 		{
 			int num = this.__p.__offset(8);
 			return num != 0 && this.__p.bb.Get(this.__p.__vector(num) + j) > 0;
 		}
 
-		// Token: 0x17002F52 RID: 12114
-		// (get) Token: 0x0600BF74 RID: 49012 RVA: 0x002E5C44 File Offset: 0x002E3E44
+		// Token: 0x17002FCD RID: 12237
+		// (get) Token: 0x0600C5BE RID: 50622 RVA: 0x00302060 File Offset: 0x00300260
 		public int ParamShowPercentLength
 		{
 			get
@@ -102,19 +102,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BF75 RID: 49013 RVA: 0x002E5C6F File Offset: 0x002E3E6F
+		// Token: 0x0600C5BF RID: 50623 RVA: 0x0030208B File Offset: 0x0030028B
 		public Span<bool> GetParamShowPercentBytes()
 		{
 			return this.__p.__vector_as_span<bool>(8, 1);
 		}
 
-		// Token: 0x0600BF76 RID: 49014 RVA: 0x002E5C7E File Offset: 0x002E3E7E
+		// Token: 0x0600C5C0 RID: 50624 RVA: 0x0030209A File Offset: 0x0030029A
 		public bool[] GetParamShowPercentArray()
 		{
 			return this.__p.__vector_as_array<bool>(8) ?? Array.Empty<bool>();
 		}
 
-		// Token: 0x0600BF77 RID: 49015 RVA: 0x002E5C98 File Offset: 0x002E3E98
+		// Token: 0x0600C5C1 RID: 50625 RVA: 0x003020B4 File Offset: 0x003002B4
 		public string Desc(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -125,8 +125,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002F53 RID: 12115
-		// (get) Token: 0x0600BF78 RID: 49016 RVA: 0x002E5CD4 File Offset: 0x002E3ED4
+		// Token: 0x17002FCE RID: 12238
+		// (get) Token: 0x0600C5C2 RID: 50626 RVA: 0x003020F0 File Offset: 0x003002F0
 		public int DescLength
 		{
 			get
@@ -140,8 +140,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002F54 RID: 12116
-		// (get) Token: 0x0600BF79 RID: 49017 RVA: 0x002E5D00 File Offset: 0x002E3F00
+		// Token: 0x17002FCF RID: 12239
+		// (get) Token: 0x0600C5C3 RID: 50627 RVA: 0x0030211C File Offset: 0x0030031C
 		public int SortId
 		{
 			get
@@ -155,42 +155,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BF7A RID: 49018 RVA: 0x002E5D3D File Offset: 0x002E3F3D
+		// Token: 0x0600C5C4 RID: 50628 RVA: 0x00302159 File Offset: 0x00300359
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DescIter()或GetDescBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] Desc()
+		public string[] Desc()
 		{
 			return this.DescIter().ToArray<string>();
 		}
 
-		// Token: 0x0600BF7B RID: 49019 RVA: 0x002E5D4A File Offset: 0x002E3F4A
+		// Token: 0x0600C5C5 RID: 50629 RVA: 0x00302166 File Offset: 0x00300366
 		[NullableContext(1)]
-		public readonly IEnumerable<string> DescIter()
+		public IEnumerable<string> DescIter()
 		{
 			RogueHotEntryOverview.<DescIter>d__23 <DescIter>d__ = new RogueHotEntryOverview.<DescIter>d__23(-2);
 			<DescIter>d__.<>3__<>4__this = this;
 			return <DescIter>d__;
 		}
 
-		// Token: 0x0600BF7C RID: 49020 RVA: 0x002E5D60 File Offset: 0x002E3F60
+		// Token: 0x0600C5C6 RID: 50630 RVA: 0x0030217B File Offset: 0x0030037B
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ParamShowPercentIter()或GetParamShowPercentBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly bool[] ParamShowPercent()
+		public bool[] ParamShowPercent()
 		{
-			RogueHotEntryOverview rogueHotEntryOverview = this;
-			return rogueHotEntryOverview.GetParamShowPercentArray() ?? Array.Empty<bool>();
+			return this.GetParamShowPercentArray();
 		}
 
-		// Token: 0x0600BF7D RID: 49021 RVA: 0x002E5D84 File Offset: 0x002E3F84
+		// Token: 0x0600C5C7 RID: 50631 RVA: 0x00302183 File Offset: 0x00300383
 		[NullableContext(1)]
-		public readonly IEnumerable<bool> ParamShowPercentIter()
+		public IEnumerable<bool> ParamShowPercentIter()
 		{
 			RogueHotEntryOverview.<ParamShowPercentIter>d__25 <ParamShowPercentIter>d__ = new RogueHotEntryOverview.<ParamShowPercentIter>d__25(-2);
 			<ParamShowPercentIter>d__.<>3__<>4__this = this;
 			return <ParamShowPercentIter>d__;
 		}
 
-		// Token: 0x040050C0 RID: 20672
+		// Token: 0x040056A8 RID: 22184
 		private Table __p;
 	}
 }

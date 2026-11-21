@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FB4 RID: 16308
+	// Token: 0x020043F5 RID: 17397
 	public class IPreShowInfoT
 	{
-		// Token: 0x170071E5 RID: 29157
-		// (get) Token: 0x06017512 RID: 95506 RVA: 0x0035C7E3 File Offset: 0x0035A9E3
-		// (set) Token: 0x06017513 RID: 95507 RVA: 0x0035C7EB File Offset: 0x0035A9EB
+		// Token: 0x170077E3 RID: 30691
+		// (get) Token: 0x06018BA1 RID: 101281 RVA: 0x003863FB File Offset: 0x003845FB
+		// (set) Token: 0x06018BA2 RID: 101282 RVA: 0x00386403 File Offset: 0x00384603
 		public IAccessQuestConditionT PreShowCondition { get; set; }
 
-		// Token: 0x170071E6 RID: 29158
-		// (get) Token: 0x06017514 RID: 95508 RVA: 0x0035C7F4 File Offset: 0x0035A9F4
-		// (set) Token: 0x06017515 RID: 95509 RVA: 0x0035C7FC File Offset: 0x0035A9FC
+		// Token: 0x170077E4 RID: 30692
+		// (get) Token: 0x06018BA3 RID: 101283 RVA: 0x0038640C File Offset: 0x0038460C
+		// (set) Token: 0x06018BA4 RID: 101284 RVA: 0x00386414 File Offset: 0x00384614
 		public string TidPreShowDesc { get; set; }
 
-		// Token: 0x06017516 RID: 95510 RVA: 0x0035C805 File Offset: 0x0035AA05
+		// Token: 0x06018BA5 RID: 101285 RVA: 0x0038641D File Offset: 0x0038461D
 		public IPreShowInfoT()
 		{
 			this.PreShowCondition = null;

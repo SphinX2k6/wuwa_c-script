@@ -11,30 +11,30 @@ using CSharpScript.Game.KuroSimpleCombat;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x02000ECD RID: 3789
+// Token: 0x02000382 RID: 898
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueSubController : KscSubControllerBase
 {
-	// Token: 0x06005E22 RID: 24098 RVA: 0x00115B4D File Offset: 0x00113D4D
+	// Token: 0x060031B9 RID: 12729 RVA: 0x0011D805 File Offset: 0x0011BA05
 	protected override void CreateModel()
 	{
 		this.SubModel = new SurvivorsRogueSubModel();
 	}
 
-	// Token: 0x06005E23 RID: 24099 RVA: 0x00115B5A File Offset: 0x00113D5A
+	// Token: 0x060031BA RID: 12730 RVA: 0x0011D812 File Offset: 0x0011BA12
 	public SurvivorsRogueSubModel GetModel()
 	{
 		return (SurvivorsRogueSubModel)this.SubModel;
 	}
 
-	// Token: 0x06005E24 RID: 24100 RVA: 0x00115B67 File Offset: 0x00113D67
+	// Token: 0x060031BB RID: 12731 RVA: 0x0011D81F File Offset: 0x0011BA1F
 	public override bool IsTargetMap(int instSubType)
 	{
 		return instSubType == 41;
 	}
 
-	// Token: 0x06005E25 RID: 24101 RVA: 0x00115B70 File Offset: 0x00113D70
+	// Token: 0x060031BC RID: 12732 RVA: 0x0011D828 File Offset: 0x0011BA28
 	protected override void OnInitMap()
 	{
 		FDamageConfig fdamageConfig = new FDamageConfig();
@@ -44,7 +44,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		DamageUiController.Instance.SetUeDamageConfig(fdamageConfig, true);
 	}
 
-	// Token: 0x06005E26 RID: 24102 RVA: 0x00115BAC File Offset: 0x00113DAC
+	// Token: 0x060031BD RID: 12733 RVA: 0x0011D864 File Offset: 0x0011BA64
 	protected override void OnMapLoaded()
 	{
 		this.InitBulletWorld();
@@ -65,7 +65,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		this.AddTreeListener();
 	}
 
-	// Token: 0x06005E27 RID: 24103 RVA: 0x00115C2C File Offset: 0x00113E2C
+	// Token: 0x060031BE RID: 12734 RVA: 0x0011D8E4 File Offset: 0x0011BAE4
 	protected override void OnWorldDone()
 	{
 		UBulletWorld kuroBulletWorld = BulletModel.Instance.GetKuroBulletWorld();
@@ -94,7 +94,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005E28 RID: 24104 RVA: 0x00115D16 File Offset: 0x00113F16
+	// Token: 0x060031BF RID: 12735 RVA: 0x0011D9CE File Offset: 0x0011BBCE
 	protected override void OnWorldReset()
 	{
 		this.ClearBulletWorld();
@@ -104,7 +104,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		this.PlayerHpHandle.Clear();
 	}
 
-	// Token: 0x06005E29 RID: 24105 RVA: 0x00115D40 File Offset: 0x00113F40
+	// Token: 0x060031C0 RID: 12736 RVA: 0x0011D9F8 File Offset: 0x0011BBF8
 	public unsafe override void OnEntityRemoved(KscRemoveContext context, Dictionary<long, SimpleCombatEntityDieContext> protoContexts)
 	{
 		int? logicProxy = base.Model.GetLogicProxy(context.CreatureDataId);
@@ -170,7 +170,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		protoContexts[context.CreatureDataId] = simpleCombatEntityDieContext;
 	}
 
-	// Token: 0x06005E2A RID: 24106 RVA: 0x00115F77 File Offset: 0x00114177
+	// Token: 0x060031C1 RID: 12737 RVA: 0x0011DC2F File Offset: 0x0011BE2F
 	private void RemoveAllMonsterNextFrame()
 	{
 		TimerSystem.Instance.Next(delegate(float _)
@@ -195,20 +195,20 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		}, null, null);
 	}
 
-	// Token: 0x06005E2B RID: 24107 RVA: 0x00115F92 File Offset: 0x00114192
+	// Token: 0x060031C2 RID: 12738 RVA: 0x0011DC4A File Offset: 0x0011BE4A
 	protected override void CreateEntityFilter()
 	{
 		this.RedirectFilter = this.EntityRedirectFilter;
 	}
 
-	// Token: 0x06005E2C RID: 24108 RVA: 0x00115FA0 File Offset: 0x001141A0
+	// Token: 0x060031C3 RID: 12739 RVA: 0x0011DC58 File Offset: 0x0011BE58
 	[NullableContext(2)]
 	protected override EntityHandle GetPossessedPlayerEntity()
 	{
 		return this.PlayerEntityHandle;
 	}
 
-	// Token: 0x06005E2D RID: 24109 RVA: 0x00115FA8 File Offset: 0x001141A8
+	// Token: 0x060031C4 RID: 12740 RVA: 0x0011DC60 File Offset: 0x0011BE60
 	protected override bool AddInputLayer()
 	{
 		SurvivorsRogueInputLayer survivorsRogueInputLayer = this.GetInputLayer();
@@ -234,7 +234,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		return false;
 	}
 
-	// Token: 0x06005E2E RID: 24110 RVA: 0x0011603C File Offset: 0x0011423C
+	// Token: 0x060031C5 RID: 12741 RVA: 0x0011DCF4 File Offset: 0x0011BEF4
 	protected override bool RemoveInputLayer()
 	{
 		SurvivorsRogueInputLayer inputLayer = this.GetInputLayer();
@@ -248,7 +248,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		return false;
 	}
 
-	// Token: 0x06005E2F RID: 24111 RVA: 0x00116088 File Offset: 0x00114288
+	// Token: 0x060031C6 RID: 12742 RVA: 0x0011DD40 File Offset: 0x0011BF40
 	[NullableContext(2)]
 	private SurvivorsRogueInputLayer GetInputLayer()
 	{
@@ -260,13 +260,13 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		return null;
 	}
 
-	// Token: 0x06005E30 RID: 24112 RVA: 0x001160B8 File Offset: 0x001142B8
+	// Token: 0x060031C7 RID: 12743 RVA: 0x0011DD70 File Offset: 0x0011BF70
 	protected override void AddKscPlayerEntity()
 	{
 		this.AddInputLayer();
 	}
 
-	// Token: 0x06005E31 RID: 24113 RVA: 0x001160C4 File Offset: 0x001142C4
+	// Token: 0x060031C8 RID: 12744 RVA: 0x0011DD7C File Offset: 0x0011BF7C
 	public override void OnPlayerEntityCreated()
 	{
 		base.OnPlayerEntityCreated();
@@ -291,7 +291,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005E32 RID: 24114 RVA: 0x00116150 File Offset: 0x00114350
+	// Token: 0x060031C9 RID: 12745 RVA: 0x0011DE08 File Offset: 0x0011C008
 	protected override void SyncPlayerTransform()
 	{
 		if (this.GetModel().KscPlayerEntity == null && this.GetModel().WeaponKscEntities.Count <= 0)
@@ -315,7 +315,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005E33 RID: 24115 RVA: 0x00116214 File Offset: 0x00114414
+	// Token: 0x060031CA RID: 12746 RVA: 0x0011DECC File Offset: 0x0011C0CC
 	public void OnWeaponCreated(AKSC_Entity kscEntity)
 	{
 		SurvivorsRogueSubModel model = this.GetModel();
@@ -337,7 +337,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005E34 RID: 24116 RVA: 0x0011627C File Offset: 0x0011447C
+	// Token: 0x060031CB RID: 12747 RVA: 0x0011DF34 File Offset: 0x0011C134
 	public void ExecSkillAction()
 	{
 		AKSC_Entity kscPlayerEntity = this.SubModel.KscPlayerEntity;
@@ -393,7 +393,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005E35 RID: 24117 RVA: 0x001163C8 File Offset: 0x001145C8
+	// Token: 0x060031CC RID: 12748 RVA: 0x0011E080 File Offset: 0x0011C280
 	private void AddTreeListener()
 	{
 		BehaviorTreeUpdateDelegateProxy behaviorDelegate = SurvivorsRogueModel.Instance.BattleData.BehaviorDelegate;
@@ -401,7 +401,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		this.AddTreeVarUpdateDelegate(behaviorDelegate, ESurvivorsRougeSystemVarType.ConsecutiveKillCount.ToEnumString(), new TTreeVarUpdateDelegate(this.OnSurvivorsComboUpdate));
 	}
 
-	// Token: 0x06005E36 RID: 24118 RVA: 0x00116418 File Offset: 0x00114618
+	// Token: 0x060031CD RID: 12749 RVA: 0x0011E0D0 File Offset: 0x0011C2D0
 	private void AddTreeVarUpdateDelegate(BehaviorTreeUpdateDelegateProxy behaviorDelegate, string key, TTreeVarUpdateDelegate delegate_)
 	{
 		behaviorDelegate.AddTreeVarUpdateDelegate(key, delegate_);
@@ -412,7 +412,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005E37 RID: 24119 RVA: 0x00116440 File Offset: 0x00114640
+	// Token: 0x060031CE RID: 12750 RVA: 0x0011E0F8 File Offset: 0x0011C2F8
 	private void RemoveTreeListener()
 	{
 		BehaviorTreeUpdateDelegateProxy behaviorDelegate = SurvivorsRogueModel.Instance.BattleData.BehaviorDelegate;
@@ -420,7 +420,7 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		behaviorDelegate.RemoveTreeVarUpdateDelegate(ESurvivorsRougeSystemVarType.ConsecutiveKillCount.ToEnumString(), new TTreeVarUpdateDelegate(this.OnSurvivorsComboUpdate));
 	}
 
-	// Token: 0x06005E38 RID: 24120 RVA: 0x00116480 File Offset: 0x00114680
+	// Token: 0x060031CF RID: 12751 RVA: 0x0011E138 File Offset: 0x0011C338
 	private void OnSurvivorsCurrencyUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		int num = (int)MathUtils.Instance.LongToNumber(newVarDefine.Int);
@@ -436,14 +436,14 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005E39 RID: 24121 RVA: 0x001164D0 File Offset: 0x001146D0
+	// Token: 0x060031D0 RID: 12752 RVA: 0x0011E188 File Offset: 0x0011C388
 	private void OnSurvivorsComboUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		int newCombo = (int)MathUtils.Instance.LongToNumber(newVarDefine.Int);
 		this.RefreshCombo(newCombo);
 	}
 
-	// Token: 0x06005E3A RID: 24122 RVA: 0x001164F8 File Offset: 0x001146F8
+	// Token: 0x060031D1 RID: 12753 RVA: 0x0011E1B0 File Offset: 0x0011C3B0
 	private void RefreshCombo(int newCombo)
 	{
 		SurvivorsCombo? curComboConfig = SurvivorsRogueModel.Instance.CurComboConfig;
@@ -506,14 +506,14 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		model.KillComboStage = num;
 	}
 
-	// Token: 0x06005E3B RID: 24123 RVA: 0x001166EC File Offset: 0x001148EC
+	// Token: 0x060031D2 RID: 12754 RVA: 0x0011E3A4 File Offset: 0x0011C5A4
 	protected override void OnHandlePlayerHeadHpInfo(KscHeadStateData kscPlayerHeadStateData, FKSC_HeadHpContext headInfo)
 	{
 		base.OnHandlePlayerHeadHpInfo(kscPlayerHeadStateData, headInfo);
 		this.PlayerHpHandle.OnPlayerHpChange(kscPlayerHeadStateData);
 	}
 
-	// Token: 0x06005E3C RID: 24124 RVA: 0x00116704 File Offset: 0x00114904
+	// Token: 0x060031D3 RID: 12755 RVA: 0x0011E3BC File Offset: 0x0011C5BC
 	public override void GmPrintInfo()
 	{
 		SurvivorsRogueSubModel model = this.GetModel();
@@ -552,21 +552,21 @@ public class SurvivorsRogueSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x04002AD4 RID: 10964
+	// Token: 0x04002B6F RID: 11119
 	[Nullable(2)]
 	private EntityHandle PlayerEntityHandle;
 
-	// Token: 0x04002AD5 RID: 10965
+	// Token: 0x04002B70 RID: 11120
 	[Nullable(2)]
 	private CharacterSkillCdComponent SkillCdComp;
 
-	// Token: 0x04002AD6 RID: 10966
+	// Token: 0x04002B71 RID: 11121
 	[Nullable(2)]
 	private CharacterSkillComponent SkillComp;
 
-	// Token: 0x04002AD7 RID: 10967
+	// Token: 0x04002B72 RID: 11122
 	private readonly SurvivorsRogueEntityRedirectFilter EntityRedirectFilter = new SurvivorsRogueEntityRedirectFilter();
 
-	// Token: 0x04002AD8 RID: 10968
+	// Token: 0x04002B73 RID: 11123
 	private readonly ActivityPlayerHpHandle PlayerHpHandle = new ActivityPlayerHpHandle();
 }

@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007057 RID: 28759
+	// Token: 0x02007823 RID: 30755
 	public static class ISetPlayerPosVerify
 	{
-		// Token: 0x06032E6D RID: 208493 RVA: 0x006DDBF8 File Offset: 0x006DBDF8
+		// Token: 0x0603610E RID: 221454 RVA: 0x0073E19C File Offset: 0x0073C39C
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false))
@@ -36,7 +36,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 						{
 							verifyAction3 = (ISetPlayerPosVerify.<>O.<2>__Verify = new VerifyUnionAction(TTeleportTransitionOptionVerify.Verify));
 						}
-						if (verifier.VerifyUnion(tablePos, typeIdVOffset2, valueVOffset2, verifyAction3, false) && verifier.VerifyField(tablePos, 14, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 16, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 18, 1UL, 1UL, false))
+						if (verifier.VerifyUnion(tablePos, typeIdVOffset2, valueVOffset2, verifyAction3, false) && verifier.VerifyField(tablePos, 14, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 16, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 18, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 20, 1UL, 1UL, false))
 						{
 							return verifier.VerifyTableEnd(tablePos);
 						}
@@ -46,17 +46,17 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return false;
 		}
 
-		// Token: 0x02007E4B RID: 32331
+		// Token: 0x020086E1 RID: 34529
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013A16 RID: 80406
+			// Token: 0x04014AEA RID: 84714
 			public static VerifyUnionAction <0>__Verify;
 
-			// Token: 0x04013A17 RID: 80407
+			// Token: 0x04014AEB RID: 84715
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x04013A18 RID: 80408
+			// Token: 0x04014AEC RID: 84716
 			public static VerifyUnionAction <2>__Verify;
 		}
 	}

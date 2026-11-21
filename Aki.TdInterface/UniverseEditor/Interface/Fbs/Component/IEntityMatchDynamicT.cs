@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200519C RID: 20892
+	// Token: 0x02005701 RID: 22273
 	public class IEntityMatchDynamicT
 	{
-		// Token: 0x170098A1 RID: 39073
-		// (get) Token: 0x06021CC9 RID: 138441 RVA: 0x004B0553 File Offset: 0x004AE753
-		// (set) Token: 0x06021CCA RID: 138442 RVA: 0x004B055B File Offset: 0x004AE75B
+		// Token: 0x1700A090 RID: 41104
+		// (get) Token: 0x06023C21 RID: 146465 RVA: 0x004EA573 File Offset: 0x004E8773
+		// (set) Token: 0x06023C22 RID: 146466 RVA: 0x004EA57B File Offset: 0x004E877B
 		public EEntityMatchType Type { get; set; }
 
-		// Token: 0x170098A2 RID: 39074
-		// (get) Token: 0x06021CCB RID: 138443 RVA: 0x004B0564 File Offset: 0x004AE764
-		// (set) Token: 0x06021CCC RID: 138444 RVA: 0x004B056C File Offset: 0x004AE76C
+		// Token: 0x1700A091 RID: 41105
+		// (get) Token: 0x06023C23 RID: 146467 RVA: 0x004EA584 File Offset: 0x004E8784
+		// (set) Token: 0x06023C24 RID: 146468 RVA: 0x004EA58C File Offset: 0x004E878C
 		public List<IDynamicEntityMatchT> MatchEntity { get; set; }
 
-		// Token: 0x06021CCD RID: 138445 RVA: 0x004B0575 File Offset: 0x004AE775
+		// Token: 0x06023C25 RID: 146469 RVA: 0x004EA595 File Offset: 0x004E8795
 		public IEntityMatchDynamicT()
 		{
 			this.Type = EEntityMatchType.Player;

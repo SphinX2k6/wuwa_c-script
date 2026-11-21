@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200090C RID: 2316
+	// Token: 0x02000957 RID: 2391
 	public class ConfigSharePlatformById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600365B RID: 13915 RVA: 0x0018C91F File Offset: 0x0018AB1F
+		// Token: 0x0600381D RID: 14365 RVA: 0x00199B3F File Offset: 0x00197D3F
 		static ConfigSharePlatformById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSharePlatformById.CreateStaticDefaultValue), new Action(ConfigSharePlatformById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600365C RID: 13916 RVA: 0x0018C940 File Offset: 0x0018AB40
+		// Token: 0x0600381E RID: 14366 RVA: 0x00199B60 File Offset: 0x00197D60
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSharePlatformById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600365D RID: 13917 RVA: 0x0018C9BF File Offset: 0x0018ABBF
+		// Token: 0x0600381F RID: 14367 RVA: 0x00199BDF File Offset: 0x00197DDF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSharePlatformById.LogPair = null;
 			ConfigSharePlatformById.HandleId = 0;
 		}
 
-		// Token: 0x0600365E RID: 13918 RVA: 0x0018C9CD File Offset: 0x0018ABCD
+		// Token: 0x06003820 RID: 14368 RVA: 0x00199BED File Offset: 0x00197DED
 		public static void Init()
 		{
 			ConfigSharePlatformById.HandleId = ConfigCommon.InitDataStatement(ConfigSharePlatformById.HandleId, "db_platformchannel.db", "select BinData from `SharePlatform` where Id=?");
 		}
 
-		// Token: 0x0600365F RID: 13919 RVA: 0x0018C9E8 File Offset: 0x0018ABE8
+		// Token: 0x06003821 RID: 14369 RVA: 0x00199C08 File Offset: 0x00197E08
 		public static SharePlatform? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSharePlatformById.HandleId, ConfigSharePlatformById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SharePlatform?(rootAsSharePlatform);
 		}
 
-		// Token: 0x04003F3A RID: 16186
+		// Token: 0x04004147 RID: 16711
 		private const string DB = "db_platformchannel.db";
 
-		// Token: 0x04003F3B RID: 16187
+		// Token: 0x04004148 RID: 16712
 		private const string FILE = "p.平台渠道.xlsx";
 
-		// Token: 0x04003F3C RID: 16188
+		// Token: 0x04004149 RID: 16713
 		private const string TABLE = "SharePlatform";
 
-		// Token: 0x04003F3D RID: 16189
+		// Token: 0x0400414A RID: 16714
 		private const string COMMAND = "select BinData from `SharePlatform` where Id=?";
 
-		// Token: 0x04003F3E RID: 16190
+		// Token: 0x0400414B RID: 16715
 		private const string KEY_PREFIX = "SharePlatformById";
 
-		// Token: 0x04003F3F RID: 16191
+		// Token: 0x0400414C RID: 16716
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003F40 RID: 16192
+		// Token: 0x0400414D RID: 16717
 		private static int HandleId;
 	}
 }

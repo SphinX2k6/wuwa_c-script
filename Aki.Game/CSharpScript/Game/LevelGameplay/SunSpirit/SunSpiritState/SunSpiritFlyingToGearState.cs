@@ -4,12 +4,12 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 {
-	// Token: 0x020069FC RID: 27132
+	// Token: 0x02005B59 RID: 23385
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SunSpiritFlyingToGearState : SunSpiritFlyingEffectState
 	{
-		// Token: 0x060437EF RID: 276463 RVA: 0x01081418 File Offset: 0x0107F618
+		// Token: 0x06039839 RID: 235577 RVA: 0x01025A37 File Offset: 0x01023C37
 		public SunSpiritFlyingToGearState(SunSpiritData sunSpiritData, float waitBeforeFlyDuration, float flyingDuration, int gearConfigId, int gearSocketIndex, [Nullable(2)] Action flyingEndCallback) : base(ESunSpiritStateType.FlyingToGear, sunSpiritData, waitBeforeFlyDuration, flyingDuration)
 		{
 			this.GearConfigId = gearConfigId;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			};
 		}
 
-		// Token: 0x060437F0 RID: 276464 RVA: 0x01081458 File Offset: 0x0107F658
+		// Token: 0x0603983A RID: 235578 RVA: 0x01025A78 File Offset: 0x01023C78
 		public override bool IsSameState(SunSpiritBaseState otherState)
 		{
 			if (base.IsSameState(otherState))
@@ -56,14 +56,14 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			return false;
 		}
 
-		// Token: 0x060437F1 RID: 276465 RVA: 0x01081496 File Offset: 0x0107F696
+		// Token: 0x0603983B RID: 235579 RVA: 0x01025AB6 File Offset: 0x01023CB6
 		protected override void OnSunSpiritFlyToTargetEnd(bool bKeepEffect = false, bool bIsInterrupt = false)
 		{
 			base.OnSunSpiritFlyToTargetEnd(bKeepEffect, bIsInterrupt);
 			this.SunSpiritData.StopAllAndSetNextSunSpiritState(new SunSpiritOccupiedByGearState(this.SunSpiritData, this.GearConfigId, this.GearSocketIndex), false);
 		}
 
-		// Token: 0x060437F2 RID: 276466 RVA: 0x010814C4 File Offset: 0x0107F6C4
+		// Token: 0x0603983C RID: 235580 RVA: 0x01025AE4 File Offset: 0x01023CE4
 		protected override bool OnEnter()
 		{
 			base.OnEnter();
@@ -92,10 +92,20 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			return true;
 		}
 
-		// Token: 0x040233C6 RID: 144326
+		// Token: 0x17006D70 RID: 28016
+		// (get) Token: 0x0603983D RID: 235581 RVA: 0x01025BC2 File Offset: 0x01023DC2
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401E5B8 RID: 124344
 		public readonly int GearConfigId;
 
-		// Token: 0x040233C7 RID: 144327
+		// Token: 0x0401E5B9 RID: 124345
 		public readonly int GearSocketIndex;
 	}
 }

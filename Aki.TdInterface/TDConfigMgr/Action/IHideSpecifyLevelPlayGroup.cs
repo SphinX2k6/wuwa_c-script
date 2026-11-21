@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B09 RID: 6921
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CB8 RID: 7352
 	public class IHideSpecifyLevelPlayGroup : IHideGroupType
 	{
-		// Token: 0x06009432 RID: 37938 RVA: 0x0015759C File Offset: 0x0015579C
+		// Token: 0x06009C1C RID: 39964 RVA: 0x00168278 File Offset: 0x00166478
 		private IHideSpecifyLevelPlayGroup_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009433 RID: 37939 RVA: 0x001575D4 File Offset: 0x001557D4
+		// Token: 0x06009C1D RID: 39965 RVA: 0x001682B0 File Offset: 0x001664B0
 		public static IHideSpecifyLevelPlayGroup Create([Nullable(2)] IHideSpecifyLevelPlayGroup instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009434 RID: 37940 RVA: 0x001575E7 File Offset: 0x001557E7
+		// Token: 0x06009C1E RID: 39966 RVA: 0x001682C3 File Offset: 0x001664C3
 		public static IHideSpecifyLevelPlayGroup CreateFromSetValue([Nullable(2)] IHideSpecifyLevelPlayGroup_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009435 RID: 37941 RVA: 0x001575FA File Offset: 0x001557FA
+		// Token: 0x06009C1F RID: 39967 RVA: 0x001682D6 File Offset: 0x001664D6
 		public new IHideSpecifyLevelPlayGroup_SetValue ToSetValue()
 		{
 			return new IHideSpecifyLevelPlayGroup_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EE1 RID: 12001
-		// (get) Token: 0x06009436 RID: 37942 RVA: 0x00157619 File Offset: 0x00155819
-		// (set) Token: 0x06009437 RID: 37943 RVA: 0x00157644 File Offset: 0x00155844
+		// Token: 0x17003107 RID: 12551
+		// (get) Token: 0x06009C20 RID: 39968 RVA: 0x001682F5 File Offset: 0x001664F5
+		// (set) Token: 0x06009C21 RID: 39969 RVA: 0x00168320 File Offset: 0x00166520
 		public override EHideType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EE2 RID: 12002
-		// (get) Token: 0x06009438 RID: 37944 RVA: 0x00157652 File Offset: 0x00155852
-		// (set) Token: 0x06009439 RID: 37945 RVA: 0x00157679 File Offset: 0x00155879
+		// Token: 0x17003108 RID: 12552
+		// (get) Token: 0x06009C22 RID: 39970 RVA: 0x0016832E File Offset: 0x0016652E
+		// (set) Token: 0x06009C23 RID: 39971 RVA: 0x00168355 File Offset: 0x00166555
 		public virtual List<int> LevelPlays
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AE8 RID: 23272
+		// Token: 0x04005F86 RID: 24454
 		[Nullable(2)]
 		protected new IHideSpecifyLevelPlayGroup FbInstance;
 
-		// Token: 0x04005AE9 RID: 23273
+		// Token: 0x04005F87 RID: 24455
 		[Nullable(2)]
 		protected new IHideSpecifyLevelPlayGroup_SetValue PocoInterface;
 	}

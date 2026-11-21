@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000084 RID: 132
+	// Token: 0x0200008C RID: 140
 	public class ConfigAiBehaviorTreeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000318 RID: 792 RVA: 0x0006AF9C File Offset: 0x0006919C
+		// Token: 0x06000348 RID: 840 RVA: 0x0006F850 File Offset: 0x0006DA50
 		static ConfigAiBehaviorTreeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAiBehaviorTreeById.CreateStaticDefaultValue), new Action(ConfigAiBehaviorTreeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000319 RID: 793 RVA: 0x0006AFBC File Offset: 0x000691BC
+		// Token: 0x06000349 RID: 841 RVA: 0x0006F870 File Offset: 0x0006DA70
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAiBehaviorTreeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600031A RID: 794 RVA: 0x0006B03B File Offset: 0x0006923B
+		// Token: 0x0600034A RID: 842 RVA: 0x0006F8EF File Offset: 0x0006DAEF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAiBehaviorTreeById.LogPair = null;
 			ConfigAiBehaviorTreeById.HandleId = 0;
 		}
 
-		// Token: 0x0600031B RID: 795 RVA: 0x0006B049 File Offset: 0x00069249
+		// Token: 0x0600034B RID: 843 RVA: 0x0006F8FD File Offset: 0x0006DAFD
 		public static void Init()
 		{
 			ConfigAiBehaviorTreeById.HandleId = ConfigCommon.InitDataStatement(ConfigAiBehaviorTreeById.HandleId, "db_aibehaviortree.db", "select BinData from `AiBehaviorTree` where Id=?");
 		}
 
-		// Token: 0x0600031C RID: 796 RVA: 0x0006B064 File Offset: 0x00069264
+		// Token: 0x0600034C RID: 844 RVA: 0x0006F918 File Offset: 0x0006DB18
 		public static AiBehaviorTree? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAiBehaviorTreeById.HandleId, ConfigAiBehaviorTreeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AiBehaviorTree?(rootAsAiBehaviorTree);
 		}
 
-		// Token: 0x04000380 RID: 896
+		// Token: 0x040003B8 RID: 952
 		private const string DB = "db_aibehaviortree.db";
 
-		// Token: 0x04000381 RID: 897
+		// Token: 0x040003B9 RID: 953
 		private const string FILE = "k.可视化编辑/c.Csv/a.AI行为树/*.csv*";
 
-		// Token: 0x04000382 RID: 898
+		// Token: 0x040003BA RID: 954
 		private const string TABLE = "AiBehaviorTree";
 
-		// Token: 0x04000383 RID: 899
+		// Token: 0x040003BB RID: 955
 		private const string COMMAND = "select BinData from `AiBehaviorTree` where Id=?";
 
-		// Token: 0x04000384 RID: 900
+		// Token: 0x040003BC RID: 956
 		private const string KEY_PREFIX = "AiBehaviorTreeById";
 
-		// Token: 0x04000385 RID: 901
+		// Token: 0x040003BD RID: 957
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000386 RID: 902
+		// Token: 0x040003BE RID: 958
 		private static int HandleId;
 	}
 }

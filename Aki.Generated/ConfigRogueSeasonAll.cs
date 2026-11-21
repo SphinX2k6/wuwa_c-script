@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000864 RID: 2148
+	// Token: 0x02000880 RID: 2176
 	public class ConfigRogueSeasonAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600326A RID: 12906 RVA: 0x00176838 File Offset: 0x00174A38
+		// Token: 0x06003312 RID: 13074 RVA: 0x0017DB20 File Offset: 0x0017BD20
 		static ConfigRogueSeasonAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueSeasonAll.CreateStaticDefaultValue), new Action(ConfigRogueSeasonAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600326B RID: 12907 RVA: 0x00176858 File Offset: 0x00174A58
+		// Token: 0x06003313 RID: 13075 RVA: 0x0017DB40 File Offset: 0x0017BD40
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueSeasonAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600326C RID: 12908 RVA: 0x001768D7 File Offset: 0x00174AD7
+		// Token: 0x06003314 RID: 13076 RVA: 0x0017DBBF File Offset: 0x0017BDBF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueSeasonAll.LogPair = null;
 			ConfigRogueSeasonAll.HandleId = 0;
 		}
 
-		// Token: 0x0600326D RID: 12909 RVA: 0x001768E5 File Offset: 0x00174AE5
+		// Token: 0x06003315 RID: 13077 RVA: 0x0017DBCD File Offset: 0x0017BDCD
 		public static void Init()
 		{
 			ConfigRogueSeasonAll.HandleId = ConfigCommon.InitDataStatement(ConfigRogueSeasonAll.HandleId, "db_rogue.db", "select BinData from `RogueSeason`");
 		}
 
-		// Token: 0x0600326E RID: 12910 RVA: 0x00176900 File Offset: 0x00174B00
+		// Token: 0x06003316 RID: 13078 RVA: 0x0017DBE8 File Offset: 0x0017BDE8
 		[NullableContext(2)]
 		public static IReadOnlyList<RogueSeason> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003AA2 RID: 15010
+		// Token: 0x04003B66 RID: 15206
 		private const string DB = "db_rogue.db";
 
-		// Token: 0x04003AA3 RID: 15011
+		// Token: 0x04003B67 RID: 15207
 		private const string FILE = "r.肉鸽.xlsx";
 
-		// Token: 0x04003AA4 RID: 15012
+		// Token: 0x04003B68 RID: 15208
 		private const string TABLE = "RogueSeason";
 
-		// Token: 0x04003AA5 RID: 15013
+		// Token: 0x04003B69 RID: 15209
 		private const string COMMAND = "select BinData from `RogueSeason`";
 
-		// Token: 0x04003AA6 RID: 15014
+		// Token: 0x04003B6A RID: 15210
 		private const string KEY_PREFIX = "RogueSeasonAll";
 
-		// Token: 0x04003AA7 RID: 15015
+		// Token: 0x04003B6B RID: 15211
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003AA8 RID: 15016
+		// Token: 0x04003B6C RID: 15212
 		private static int HandleId;
 	}
 }

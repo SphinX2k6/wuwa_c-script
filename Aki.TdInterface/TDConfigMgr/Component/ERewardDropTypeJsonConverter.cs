@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009F7 RID: 2551
+	// Token: 0x02000ABC RID: 2748
 	public class ERewardDropTypeJsonConverter : JsonConverter<ERewardDropType>
 	{
-		// Token: 0x0600388A RID: 14474 RVA: 0x000926C0 File Offset: 0x000908C0
+		// Token: 0x06003C62 RID: 15458 RVA: 0x0009AFB0 File Offset: 0x000991B0
 		public override ERewardDropType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ERewardDropTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600388B RID: 14475 RVA: 0x000926E4 File Offset: 0x000908E4
+		// Token: 0x06003C63 RID: 15459 RVA: 0x0009AFD4 File Offset: 0x000991D4
 		public override void Write(Utf8JsonWriter writer, ERewardDropType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

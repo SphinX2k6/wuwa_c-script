@@ -4,7 +4,7 @@ using CSharpScript.Game.NewWorld.Character.Common.Component;
 using CSharpScript.Game.NewWorld.Common.Component;
 using UnrealEngine;
 
-// Token: 0x02003168 RID: 12648
+// Token: 0x020026D5 RID: 9941
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,18 +13,18 @@ using UnrealEngine;
 })]
 public class CodeAnimNotifyFoxPickUp : CodeAnimNotifyBase<SpecialSkillAnimalFox>
 {
-	// Token: 0x0601B354 RID: 111444 RVA: 0x0076A5AC File Offset: 0x007687AC
+	// Token: 0x06018E59 RID: 101977 RVA: 0x00791F10 File Offset: 0x00790110
 	public CodeAnimNotifyFoxPickUp(SpecialSkillAnimalFox specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B355 RID: 111445 RVA: 0x0076A5C1 File Offset: 0x007687C1
+	// Token: 0x06018E5A RID: 101978 RVA: 0x00791F25 File Offset: 0x00790125
 	public override void OnNotify(FKuroCodeFunctionPayload payload)
 	{
 		this.ConsumePendingOperation(false);
 	}
 
-	// Token: 0x0601B356 RID: 111446 RVA: 0x0076A5CC File Offset: 0x007687CC
+	// Token: 0x06018E5B RID: 101979 RVA: 0x00791F30 File Offset: 0x00790130
 	private void ConsumePendingOperation(bool isFallback)
 	{
 		if (this.PendingOperations.Empty)
@@ -48,7 +48,7 @@ public class CodeAnimNotifyFoxPickUp : CodeAnimNotifyBase<SpecialSkillAnimalFox>
 		this.StartOperationFallbackTimer();
 	}
 
-	// Token: 0x0601B357 RID: 111447 RVA: 0x0076A638 File Offset: 0x00768838
+	// Token: 0x06018E5C RID: 101980 RVA: 0x00791F9C File Offset: 0x0079019C
 	public void RequestPickUp(int itemId, bool keepMouthClosed = false)
 	{
 		if (itemId == 0)
@@ -94,7 +94,7 @@ public class CodeAnimNotifyFoxPickUp : CodeAnimNotifyBase<SpecialSkillAnimalFox>
 		this.EquipPickUpDecoration(itemId, keepMouthClosed, num4);
 	}
 
-	// Token: 0x0601B358 RID: 111448 RVA: 0x0076A768 File Offset: 0x00768968
+	// Token: 0x06018E5D RID: 101981 RVA: 0x007920CC File Offset: 0x007902CC
 	public void RequestPutDown()
 	{
 		BaseTagComponent component = this.SpecialSkill.GetOwnerEntity().GetComponent<BaseTagComponent>();
@@ -116,14 +116,14 @@ public class CodeAnimNotifyFoxPickUp : CodeAnimNotifyBase<SpecialSkillAnimalFox>
 		component.RemoveTag(new int?(num));
 	}
 
-	// Token: 0x0601B359 RID: 111449 RVA: 0x0076A803 File Offset: 0x00768A03
+	// Token: 0x06018E5E RID: 101982 RVA: 0x00792167 File Offset: 0x00790367
 	private void EnqueueOperation(FoxPickUpOperation operation)
 	{
 		this.PendingOperations.Push(operation);
 		this.StartOperationFallbackTimer();
 	}
 
-	// Token: 0x0601B35A RID: 111450 RVA: 0x0076A818 File Offset: 0x00768A18
+	// Token: 0x06018E5F RID: 101983 RVA: 0x0079217C File Offset: 0x0079037C
 	private void StartOperationFallbackTimer()
 	{
 		if (this.OperationFallbackTimer != null || this.PendingOperations.Empty)
@@ -137,7 +137,7 @@ public class CodeAnimNotifyFoxPickUp : CodeAnimNotifyBase<SpecialSkillAnimalFox>
 		}, 1000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601B35B RID: 111451 RVA: 0x0076A864 File Offset: 0x00768A64
+	// Token: 0x06018E60 RID: 101984 RVA: 0x007921C8 File Offset: 0x007903C8
 	private void ClearOperationFallbackTimer()
 	{
 		if (this.OperationFallbackTimer == null)
@@ -148,7 +148,7 @@ public class CodeAnimNotifyFoxPickUp : CodeAnimNotifyBase<SpecialSkillAnimalFox>
 		this.OperationFallbackTimer = null;
 	}
 
-	// Token: 0x0601B35C RID: 111452 RVA: 0x0076A887 File Offset: 0x00768A87
+	// Token: 0x06018E61 RID: 101985 RVA: 0x007921EB File Offset: 0x007903EB
 	public void Clear()
 	{
 		this.ClearOperationFallbackTimer();
@@ -157,7 +157,7 @@ public class CodeAnimNotifyFoxPickUp : CodeAnimNotifyBase<SpecialSkillAnimalFox>
 		this.MouthStateGeneration++;
 	}
 
-	// Token: 0x0601B35D RID: 111453 RVA: 0x0076A8AF File Offset: 0x00768AAF
+	// Token: 0x06018E62 RID: 101986 RVA: 0x00792213 File Offset: 0x00790413
 	[NullableContext(2)]
 	private FoxPickUpOperation GetLastPendingOperation()
 	{
@@ -168,7 +168,7 @@ public class CodeAnimNotifyFoxPickUp : CodeAnimNotifyBase<SpecialSkillAnimalFox>
 		return this.PendingOperations.Get(this.PendingOperations.Size - 1);
 	}
 
-	// Token: 0x0601B35E RID: 111454 RVA: 0x0076A8D8 File Offset: 0x00768AD8
+	// Token: 0x06018E63 RID: 101987 RVA: 0x0079223C File Offset: 0x0079043C
 	private unsafe void EquipPickUpDecoration(int decorationConfigId, bool keepMouthClosed, int pickUpHandle)
 	{
 		if (decorationConfigId == 0)
@@ -198,7 +198,7 @@ public class CodeAnimNotifyFoxPickUp : CodeAnimNotifyBase<SpecialSkillAnimalFox>
 		this.ChangeMouthState(false);
 	}
 
-	// Token: 0x0601B35F RID: 111455 RVA: 0x0076A99C File Offset: 0x00768B9C
+	// Token: 0x06018E64 RID: 101988 RVA: 0x00792300 File Offset: 0x00790500
 	private void ChangeMouthState(bool remove)
 	{
 		CodeAnimNotifyFoxPickUp.<>c__DisplayClass20_0 CS$<>8__locals1 = new CodeAnimNotifyFoxPickUp.<>c__DisplayClass20_0();
@@ -245,7 +245,7 @@ public class CodeAnimNotifyFoxPickUp : CodeAnimNotifyBase<SpecialSkillAnimalFox>
 		}
 	}
 
-	// Token: 0x0601B360 RID: 111456 RVA: 0x0076AA94 File Offset: 0x00768C94
+	// Token: 0x06018E65 RID: 101989 RVA: 0x007923F8 File Offset: 0x007905F8
 	private void ClearPickUpDecoration(int operationHandle, int pickUpHandle)
 	{
 		Entity ownerEntity = this.SpecialSkill.GetOwnerEntity();
@@ -257,31 +257,31 @@ public class CodeAnimNotifyFoxPickUp : CodeAnimNotifyBase<SpecialSkillAnimalFox>
 		this.ChangeMouthState(!this.PickUpCloseMouth);
 	}
 
-	// Token: 0x0400D403 RID: 54275
+	// Token: 0x0400D866 RID: 55398
 	public const string EventName = "Fox.PickUp";
 
-	// Token: 0x0400D404 RID: 54276
+	// Token: 0x0400D867 RID: 55399
 	private const int DELAY_CLOSED_MOUTH = 200;
 
-	// Token: 0x0400D405 RID: 54277
+	// Token: 0x0400D868 RID: 55400
 	private const int OPERATION_FALLBACK_DELAY = 1000;
 
-	// Token: 0x0400D406 RID: 54278
+	// Token: 0x0400D869 RID: 55401
 	private bool PickUpCloseMouth;
 
-	// Token: 0x0400D407 RID: 54279
+	// Token: 0x0400D86A RID: 55402
 	private int MouthStateGeneration;
 
-	// Token: 0x0400D408 RID: 54280
+	// Token: 0x0400D86B RID: 55403
 	private int LastOperationHandle;
 
-	// Token: 0x0400D409 RID: 54281
+	// Token: 0x0400D86C RID: 55404
 	private int CurrentPickUpHandle;
 
-	// Token: 0x0400D40A RID: 54282
+	// Token: 0x0400D86D RID: 55405
 	private readonly Queue<FoxPickUpOperation> PendingOperations = new Queue<FoxPickUpOperation>(4);
 
-	// Token: 0x0400D40B RID: 54283
+	// Token: 0x0400D86E RID: 55406
 	[Nullable(2)]
 	private TimerHandle OperationFallbackTimer;
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200457E RID: 17790
+	// Token: 0x020049E6 RID: 18918
 	public struct IRollBlockGridTemplate : IFlatbufferObject
 	{
-		// Token: 0x17007E6A RID: 32362
-		// (get) Token: 0x0601ADE9 RID: 110057 RVA: 0x003D5E2A File Offset: 0x003D402A
+		// Token: 0x170084AB RID: 33963
+		// (get) Token: 0x0601C5BE RID: 116158 RVA: 0x004020C6 File Offset: 0x004002C6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601ADEA RID: 110058 RVA: 0x003D5E37 File Offset: 0x003D4037
+		// Token: 0x0601C5BF RID: 116159 RVA: 0x004020D3 File Offset: 0x004002D3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601ADEB RID: 110059 RVA: 0x003D5E40 File Offset: 0x003D4040
+		// Token: 0x0601C5C0 RID: 116160 RVA: 0x004020DC File Offset: 0x004002DC
 		public static IRollBlockGridTemplate GetRootAsIRollBlockGridTemplate(ByteBuffer _bb)
 		{
 			return IRollBlockGridTemplate.GetRootAsIRollBlockGridTemplate(_bb, default(IRollBlockGridTemplate));
 		}
 
-		// Token: 0x0601ADEC RID: 110060 RVA: 0x003D5E5C File Offset: 0x003D405C
+		// Token: 0x0601C5C1 RID: 116161 RVA: 0x004020F8 File Offset: 0x004002F8
 		public static IRollBlockGridTemplate GetRootAsIRollBlockGridTemplate(ByteBuffer _bb, IRollBlockGridTemplate obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601ADED RID: 110061 RVA: 0x003D5E79 File Offset: 0x003D4079
+		// Token: 0x0601C5C2 RID: 116162 RVA: 0x00402115 File Offset: 0x00400315
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601ADEE RID: 110062 RVA: 0x003D5E88 File Offset: 0x003D4088
+		// Token: 0x0601C5C3 RID: 116163 RVA: 0x00402124 File Offset: 0x00400324
 		public IRollBlockGridTemplate __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007E6B RID: 32363
-		// (get) Token: 0x0601ADEF RID: 110063 RVA: 0x003D5E98 File Offset: 0x003D4098
+		// Token: 0x170084AC RID: 33964
+		// (get) Token: 0x0601C5C4 RID: 116164 RVA: 0x00402134 File Offset: 0x00400334
 		public ERollBlockGridType GridType
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007E6C RID: 32364
-		// (get) Token: 0x0601ADF0 RID: 110064 RVA: 0x003D5ED4 File Offset: 0x003D40D4
+		// Token: 0x170084AD RID: 33965
+		// (get) Token: 0x0601C5C5 RID: 116165 RVA: 0x00402170 File Offset: 0x00400370
 		public string TemplateId
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601ADF1 RID: 110065 RVA: 0x003D5F0B File Offset: 0x003D410B
+		// Token: 0x0601C5C6 RID: 116166 RVA: 0x004021A7 File Offset: 0x004003A7
 		public Span<byte> GetTemplateIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601ADF2 RID: 110066 RVA: 0x003D5F1A File Offset: 0x003D411A
+		// Token: 0x0601C5C7 RID: 116167 RVA: 0x004021B6 File Offset: 0x004003B6
 		public byte[] GetTemplateIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601ADF3 RID: 110067 RVA: 0x003D5F28 File Offset: 0x003D4128
+		// Token: 0x0601C5C8 RID: 116168 RVA: 0x004021C4 File Offset: 0x004003C4
 		public static Offset<IRollBlockGridTemplate> CreateIRollBlockGridTemplate(FlatBufferBuilder builder, ERollBlockGridType GridType = ERollBlockGridType.Empty, StringOffset TemplateIdOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IRollBlockGridTemplate.EndIRollBlockGridTemplate(builder);
 		}
 
-		// Token: 0x0601ADF4 RID: 110068 RVA: 0x003D5F45 File Offset: 0x003D4145
+		// Token: 0x0601C5C9 RID: 116169 RVA: 0x004021E1 File Offset: 0x004003E1
 		public static void StartIRollBlockGridTemplate(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601ADF5 RID: 110069 RVA: 0x003D5F4E File Offset: 0x003D414E
+		// Token: 0x0601C5CA RID: 116170 RVA: 0x004021EA File Offset: 0x004003EA
 		public static void AddGridType(FlatBufferBuilder builder, ERollBlockGridType gridType)
 		{
 			builder.AddByte(0, (byte)gridType, 0);
 		}
 
-		// Token: 0x0601ADF6 RID: 110070 RVA: 0x003D5F59 File Offset: 0x003D4159
+		// Token: 0x0601C5CB RID: 116171 RVA: 0x004021F5 File Offset: 0x004003F5
 		public static void AddTemplateId(FlatBufferBuilder builder, StringOffset templateIdOffset)
 		{
 			builder.AddOffset(1, templateIdOffset.Value, 0);
 		}
 
-		// Token: 0x0601ADF7 RID: 110071 RVA: 0x003D5F69 File Offset: 0x003D4169
+		// Token: 0x0601C5CC RID: 116172 RVA: 0x00402205 File Offset: 0x00400405
 		public static Offset<IRollBlockGridTemplate> EndIRollBlockGridTemplate(FlatBufferBuilder builder)
 		{
 			return new Offset<IRollBlockGridTemplate>(builder.EndTable());
 		}
 
-		// Token: 0x0601ADF8 RID: 110072 RVA: 0x003D5F78 File Offset: 0x003D4178
+		// Token: 0x0601C5CD RID: 116173 RVA: 0x00402214 File Offset: 0x00400414
 		public IRollBlockGridTemplateT UnPack()
 		{
 			IRollBlockGridTemplateT rollBlockGridTemplateT = new IRollBlockGridTemplateT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return rollBlockGridTemplateT;
 		}
 
-		// Token: 0x0601ADF9 RID: 110073 RVA: 0x003D5F93 File Offset: 0x003D4193
+		// Token: 0x0601C5CE RID: 116174 RVA: 0x0040222F File Offset: 0x0040042F
 		public void UnPackTo(IRollBlockGridTemplateT _o)
 		{
 			_o.GridType = this.GridType;
 			_o.TemplateId = this.TemplateId;
 		}
 
-		// Token: 0x0601ADFA RID: 110074 RVA: 0x003D5FB0 File Offset: 0x003D41B0
+		// Token: 0x0601C5CF RID: 116175 RVA: 0x0040224C File Offset: 0x0040044C
 		public static Offset<IRollBlockGridTemplate> Pack(FlatBufferBuilder builder, IRollBlockGridTemplateT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IRollBlockGridTemplate.CreateIRollBlockGridTemplate(builder, _o.GridType, templateIdOffset);
 		}
 
-		// Token: 0x0400C633 RID: 50739
+		// Token: 0x0400D062 RID: 53346
 		private Table __p;
 	}
 }

@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.Common
 {
-	// Token: 0x02006F1E RID: 28446
+	// Token: 0x0200609F RID: 24735
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class GameSplineModel : ModelBase
 	{
-		// Token: 0x06045394 RID: 283540 RVA: 0x011215A0 File Offset: 0x0111F7A0
+		// Token: 0x0603B542 RID: 243010 RVA: 0x010CB54C File Offset: 0x010C974C
 		private void CheckAndReleaseActor(float _)
 		{
 			foreach (KeyValuePair<int, ValueTuple<TsGameSplineActor, USplineComponent, HashSet<ActorId>>> keyValuePair in this.ActorMaps)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			}
 		}
 
-		// Token: 0x06045395 RID: 283541 RVA: 0x0112178C File Offset: 0x0111F98C
+		// Token: 0x0603B543 RID: 243011 RVA: 0x010CB738 File Offset: 0x010C9938
 		public USplineComponent LoadAndGetSplineComponent(int splineId, int id, EIdType idType = EIdType.PbDataId)
 		{
 			ValueTuple<TsGameSplineActor, USplineComponent, HashSet<ActorId>> value;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			return valueTuple.Value.Item2;
 		}
 
-		// Token: 0x06045396 RID: 283542 RVA: 0x01121854 File Offset: 0x0111FA54
+		// Token: 0x0603B544 RID: 243012 RVA: 0x010CB800 File Offset: 0x010C9A00
 		[NullableContext(2)]
 		public TsGameSplineActor GetSplineActorBySplineId(int splineId)
 		{
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			return valueTuple.Item1;
 		}
 
-		// Token: 0x06045397 RID: 283543 RVA: 0x0112187C File Offset: 0x0111FA7C
+		// Token: 0x0603B545 RID: 243013 RVA: 0x010CB828 File Offset: 0x010C9A28
 		public void ReleaseSpline(int splineId, long id, EIdType idType = EIdType.PbDataId)
 		{
 			ValueTuple<TsGameSplineActor, USplineComponent, HashSet<ActorId>> valueTuple;
@@ -119,8 +119,8 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			}
 		}
 
-		// Token: 0x17009B08 RID: 39688
-		// (get) Token: 0x06045398 RID: 283544 RVA: 0x011218FC File Offset: 0x0111FAFC
+		// Token: 0x17007047 RID: 28743
+		// (get) Token: 0x0603B546 RID: 243014 RVA: 0x010CB8A8 File Offset: 0x010C9AA8
 		public static GameSplineModel Instance
 		{
 			get
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			}
 		}
 
-		// Token: 0x06045399 RID: 283545 RVA: 0x01121903 File Offset: 0x0111FB03
+		// Token: 0x0603B547 RID: 243015 RVA: 0x010CB8AF File Offset: 0x010C9AAF
 		public static GameSplineModel GetOrCreateInstance()
 		{
 			if (GameSplineModel._Instance == null)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			return GameSplineModel._Instance;
 		}
 
-		// Token: 0x0604539A RID: 283546 RVA: 0x01121917 File Offset: 0x0111FB17
+		// Token: 0x0603B548 RID: 243016 RVA: 0x010CB8C3 File Offset: 0x010C9AC3
 		public static bool CreateInstance()
 		{
 			if (GameSplineModel._Instance != null)
@@ -150,27 +150,27 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			return true;
 		}
 
-		// Token: 0x0604539B RID: 283547 RVA: 0x0112192D File Offset: 0x0111FB2D
+		// Token: 0x0603B549 RID: 243017 RVA: 0x010CB8D9 File Offset: 0x010C9AD9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604539C RID: 283548 RVA: 0x0112192F File Offset: 0x0111FB2F
+		// Token: 0x0603B54A RID: 243018 RVA: 0x010CB8DB File Offset: 0x010C9ADB
 		public static void ResetStaticDefaultValue()
 		{
 			GameSplineModel._Instance = null;
 		}
 
-		// Token: 0x0604539D RID: 283549 RVA: 0x01121937 File Offset: 0x0111FB37
+		// Token: 0x0603B54B RID: 243019 RVA: 0x010CB8E3 File Offset: 0x010C9AE3
 		static GameSplineModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GameSplineModel.CreateStaticDefaultValue), new Action(GameSplineModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04024176 RID: 147830
+		// Token: 0x0401F42B RID: 128043
 		private const int TIMER_PERIOD = 5000;
 
-		// Token: 0x04024177 RID: 147831
+		// Token: 0x0401F42C RID: 128044
 		[Nullable(new byte[]
 		{
 			1,
@@ -182,17 +182,17 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 		})]
 		private readonly Dictionary<int, ValueTuple<TsGameSplineActor, USplineComponent, HashSet<ActorId>>> ActorMaps = new Dictionary<int, ValueTuple<TsGameSplineActor, USplineComponent, HashSet<ActorId>>>();
 
-		// Token: 0x04024178 RID: 147832
+		// Token: 0x0401F42D RID: 128045
 		[Nullable(2)]
 		private TimerHandle Timer;
 
-		// Token: 0x04024179 RID: 147833
+		// Token: 0x0401F42E RID: 128046
 		public float CurWindPipelineResistance;
 
-		// Token: 0x0402417A RID: 147834
+		// Token: 0x0401F42F RID: 128047
 		public float CurWindPipelineSpeedLimit;
 
-		// Token: 0x0402417B RID: 147835
+		// Token: 0x0401F430 RID: 128048
 		[Nullable(2)]
 		private static GameSplineModel _Instance;
 	}

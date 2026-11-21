@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E34 RID: 20020
+	// Token: 0x02003DFD RID: 15869
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -15,25 +15,25 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RoguelikeTokenGrid : LoopScrollMediumItemGrid<RogueTokenData>
 	{
-		// Token: 0x17007ED2 RID: 32466
-		// (get) Token: 0x060339D7 RID: 211415 RVA: 0x00C14453 File Offset: 0x00C12653
-		// (set) Token: 0x060339D8 RID: 211416 RVA: 0x00C1445B File Offset: 0x00C1265B
+		// Token: 0x17005282 RID: 21122
+		// (get) Token: 0x06028842 RID: 165954 RVA: 0x00B5D97B File Offset: 0x00B5BB7B
+		// (set) Token: 0x06028843 RID: 165955 RVA: 0x00B5D983 File Offset: 0x00B5BB83
 		public new RogueTokenData Data { get; set; }
 
-		// Token: 0x060339D9 RID: 211417 RVA: 0x00C14464 File Offset: 0x00C12664
+		// Token: 0x06028844 RID: 165956 RVA: 0x00B5D98C File Offset: 0x00B5BB8C
 		protected override void OnStart()
 		{
 			base.BindOnExtendToggleClicked(new Action<MediumItemGridExtendCallback>(this.OnClicked));
 		}
 
-		// Token: 0x060339DA RID: 211418 RVA: 0x00C14478 File Offset: 0x00C12678
+		// Token: 0x06028845 RID: 165957 RVA: 0x00B5D9A0 File Offset: 0x00B5BBA0
 		[NullableContext(1)]
 		protected void OnClicked(MediumItemGridExtendCallback _)
 		{
 			base.ScrollViewDelegate.SelectGridProxy(base.GridIndex, base.DisplayIndex, true);
 		}
 
-		// Token: 0x060339DB RID: 211419 RVA: 0x00C14494 File Offset: 0x00C12694
+		// Token: 0x06028846 RID: 165958 RVA: 0x00B5D9BC File Offset: 0x00B5BBBC
 		[NullableContext(1)]
 		protected override void OnRefresh(RogueTokenData data, bool isSelected, int gridIndex)
 		{
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060339DC RID: 211420 RVA: 0x00C14555 File Offset: 0x00C12755
+		// Token: 0x06028847 RID: 165959 RVA: 0x00B5DA7D File Offset: 0x00B5BC7D
 		public override void OnSelected(bool fireEvent)
 		{
 			if (fireEvent)

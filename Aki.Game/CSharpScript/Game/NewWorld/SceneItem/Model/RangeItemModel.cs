@@ -4,20 +4,20 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Model
 {
-	// Token: 0x020071D6 RID: 29142
+	// Token: 0x0200628B RID: 25227
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class RangeItemModel : ModelBase
 	{
-		// Token: 0x0604752A RID: 292138 RVA: 0x012231CF File Offset: 0x012213CF
+		// Token: 0x0603CE2C RID: 249388 RVA: 0x0117D003 File Offset: 0x0117B203
 		protected override bool OnInit()
 		{
 			this.BoxRangeCache = new Dictionary<string, TsBoxRangeItem>();
 			return true;
 		}
 
-		// Token: 0x0604752B RID: 292139 RVA: 0x012231E0 File Offset: 0x012213E0
+		// Token: 0x0603CE2D RID: 249389 RVA: 0x0117D014 File Offset: 0x0117B214
 		public void AddBoxRange(string rangeId, TsBoxRangeItem range)
 		{
 			if (this.BoxRangeCache.ContainsKey(rangeId))
@@ -32,27 +32,27 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			this.BoxRangeCache[rangeId] = range;
 		}
 
-		// Token: 0x0604752C RID: 292140 RVA: 0x0122322F File Offset: 0x0122142F
+		// Token: 0x0603CE2E RID: 249390 RVA: 0x0117D063 File Offset: 0x0117B263
 		public void RemoveBoxRange(string rangeId)
 		{
 			this.BoxRangeCache.Remove(rangeId);
 		}
 
-		// Token: 0x0604752D RID: 292141 RVA: 0x0122323E File Offset: 0x0122143E
+		// Token: 0x0603CE2F RID: 249391 RVA: 0x0117D072 File Offset: 0x0117B272
 		public TsBoxRangeItem GetBoxRange(string rangeId)
 		{
 			return this.BoxRangeCache[rangeId];
 		}
 
-		// Token: 0x0604752E RID: 292142 RVA: 0x0122324C File Offset: 0x0122144C
+		// Token: 0x0603CE30 RID: 249392 RVA: 0x0117D080 File Offset: 0x0117B280
 		protected override bool OnClear()
 		{
 			this.BoxRangeCache = null;
 			return true;
 		}
 
-		// Token: 0x17009DF0 RID: 40432
-		// (get) Token: 0x0604752F RID: 292143 RVA: 0x01223256 File Offset: 0x01221456
+		// Token: 0x17007347 RID: 29511
+		// (get) Token: 0x0603CE31 RID: 249393 RVA: 0x0117D08A File Offset: 0x0117B28A
 		public static RangeItemModel Instance
 		{
 			get
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			}
 		}
 
-		// Token: 0x06047530 RID: 292144 RVA: 0x0122325D File Offset: 0x0122145D
+		// Token: 0x0603CE32 RID: 249394 RVA: 0x0117D091 File Offset: 0x0117B291
 		public static RangeItemModel GetOrCreateInstance()
 		{
 			if (RangeItemModel._Instance == null)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return RangeItemModel._Instance;
 		}
 
-		// Token: 0x06047531 RID: 292145 RVA: 0x01223271 File Offset: 0x01221471
+		// Token: 0x0603CE33 RID: 249395 RVA: 0x0117D0A5 File Offset: 0x0117B2A5
 		public static bool CreateInstance()
 		{
 			if (RangeItemModel._Instance != null)
@@ -82,24 +82,24 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return true;
 		}
 
-		// Token: 0x06047532 RID: 292146 RVA: 0x01223287 File Offset: 0x01221487
+		// Token: 0x0603CE34 RID: 249396 RVA: 0x0117D0BB File Offset: 0x0117B2BB
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047533 RID: 292147 RVA: 0x01223289 File Offset: 0x01221489
+		// Token: 0x0603CE35 RID: 249397 RVA: 0x0117D0BD File Offset: 0x0117B2BD
 		public static void ResetStaticDefaultValue()
 		{
 			RangeItemModel._Instance = null;
 		}
 
-		// Token: 0x06047534 RID: 292148 RVA: 0x01223291 File Offset: 0x01221491
+		// Token: 0x0603CE36 RID: 249398 RVA: 0x0117D0C5 File Offset: 0x0117B2C5
 		static RangeItemModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RangeItemModel.CreateStaticDefaultValue), new Action(RangeItemModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402580B RID: 153611
+		// Token: 0x0402047A RID: 132218
 		[Nullable(new byte[]
 		{
 			2,
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 		})]
 		private Dictionary<string, TsBoxRangeItem> BoxRangeCache;
 
-		// Token: 0x0402580C RID: 153612
+		// Token: 0x0402047B RID: 132219
 		[Nullable(2)]
 		private static RangeItemModel _Instance;
 	}

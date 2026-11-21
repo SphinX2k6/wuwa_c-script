@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007212 RID: 29202
+	// Token: 0x020079E7 RID: 31207
 	public class ISubScreenModeConfigT
 	{
-		// Token: 0x1700D8CD RID: 55501
-		// (get) Token: 0x06033CC6 RID: 212166 RVA: 0x006F89F2 File Offset: 0x006F6BF2
-		// (set) Token: 0x06033CC7 RID: 212167 RVA: 0x006F89FA File Offset: 0x006F6BFA
+		// Token: 0x1700E4C6 RID: 58566
+		// (get) Token: 0x06036FC8 RID: 225224 RVA: 0x00759D52 File Offset: 0x00757F52
+		// (set) Token: 0x06036FC9 RID: 225225 RVA: 0x00759D5A File Offset: 0x00757F5A
 		public ESubScreenOperationType Type { get; set; }
 
-		// Token: 0x06033CC8 RID: 212168 RVA: 0x006F8A03 File Offset: 0x006F6C03
+		// Token: 0x06036FCA RID: 225226 RVA: 0x00759D63 File Offset: 0x00757F63
 		public ISubScreenModeConfigT()
 		{
 			this.Type = ESubScreenOperationType.Init;

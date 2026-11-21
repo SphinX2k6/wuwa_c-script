@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.AutoPilot;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200467F RID: 18047
+	// Token: 0x020035B0 RID: 13744
 	public class AutoPilotInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E978 RID: 190840 RVA: 0x00AC9378 File Offset: 0x00AC7578
+		// Token: 0x060230C2 RID: 143554 RVA: 0x009F70AC File Offset: 0x009F52AC
 		public override bool OnRefresh()
 		{
 			AutoPilotModel instance = AutoPilotModel.Instance;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x04019541 RID: 103745
+		// Token: 0x04013BE8 RID: 80872
 		[Nullable(1)]
 		private readonly List<string> TagNames = new List<string>();
 	}

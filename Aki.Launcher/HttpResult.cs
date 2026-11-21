@@ -8,46 +8,46 @@ using CSharpScript.Core.Net;
 [Nullable(0)]
 public class HttpResult
 {
-	// Token: 0x0400002F RID: 47
+	// Token: 0x04000030 RID: 48
 	public int code;
 
-	// Token: 0x04000030 RID: 48
+	// Token: 0x04000031 RID: 49
 	public string token = string.Empty;
 
-	// Token: 0x04000031 RID: 49
+	// Token: 0x04000032 RID: 50
 	public List<NetHostInfo> udpHosts = new List<NetHostInfo>();
 
-	// Token: 0x04000032 RID: 50
+	// Token: 0x04000033 RID: 51
 	public List<NetHostInfo> tcpHosts = new List<NetHostInfo>();
 
-	// Token: 0x04000033 RID: 51
+	// Token: 0x04000034 RID: 52
 	public int tcpRatio;
 
-	// Token: 0x04000034 RID: 52
+	// Token: 0x04000035 RID: 53
 	[Nullable(2)]
 	public GatewayLatencyConfigVo gatewayLatencyConfig;
 
-	// Token: 0x04000035 RID: 53
+	// Token: 0x04000036 RID: 54
 	public int userData;
 
-	// Token: 0x04000036 RID: 54
+	// Token: 0x04000037 RID: 55
 	public string errMessage = string.Empty;
 
-	// Token: 0x04000037 RID: 55
+	// Token: 0x04000038 RID: 56
 	public int? sex;
 
-	// Token: 0x04000038 RID: 56
+	// Token: 0x04000039 RID: 57
 	public long banTimeStamp;
 
-	// Token: 0x04000039 RID: 57
+	// Token: 0x0400003A RID: 58
 	public int banReason;
 
-	// Token: 0x0400003A RID: 58
+	// Token: 0x0400003B RID: 59
 	public int clientWaitingMode;
 
-	// Token: 0x0400003B RID: 59
+	// Token: 0x0400003C RID: 60
 	public int clientWaitingTime;
 
-	// Token: 0x0400003C RID: 60
+	// Token: 0x0400003D RID: 61
 	public int clientAutoInInterval;
 }

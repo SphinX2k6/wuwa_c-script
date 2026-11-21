@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render.DebugDraw
 {
-	// Token: 0x020045F7 RID: 17911
+	// Token: 0x02003520 RID: 13600
 	public class DebugDrawManager : IStaticVariableResetter
 	{
-		// Token: 0x0602E313 RID: 189203 RVA: 0x00AAE064 File Offset: 0x00AAC264
+		// Token: 0x06022A08 RID: 141832 RVA: 0x009DA758 File Offset: 0x009D8958
 		protected static void EnsureInstance()
 		{
 			if (DebugDrawManager.Instance != null)
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Render.DebugDraw
 			DebugDrawManager.Instance.DebugDrawMap = new Dictionary<int, DebugDrawManager.EffectDebugDrawInfo>();
 		}
 
-		// Token: 0x0602E314 RID: 189204 RVA: 0x00AAE094 File Offset: 0x00AAC294
+		// Token: 0x06022A09 RID: 141833 RVA: 0x009DA788 File Offset: 0x009D8988
 		[NullableContext(1)]
 		public static int AddDebugLineFromPlayer(Vector toLocation, FLinearColor color, float width)
 		{
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Render.DebugDraw
 			return effectDebugDrawInfo.Index;
 		}
 
-		// Token: 0x0602E315 RID: 189205 RVA: 0x00AAE110 File Offset: 0x00AAC310
+		// Token: 0x06022A0A RID: 141834 RVA: 0x009DA804 File Offset: 0x009D8A04
 		public static int AddDebugBox(FBox box, FLinearColor color, float width)
 		{
 			DebugDrawManager.EnsureInstance();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Render.DebugDraw
 			return effectDebugDrawInfo.Index;
 		}
 
-		// Token: 0x0602E316 RID: 189206 RVA: 0x00AAE191 File Offset: 0x00AAC391
+		// Token: 0x06022A0B RID: 141835 RVA: 0x009DA885 File Offset: 0x009D8A85
 		public static void RemoveDebugDraw(int index)
 		{
 			if (DebugDrawManager.Instance == null)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Render.DebugDraw
 			DebugDrawManager.Instance.DebugDrawMap.Remove(index);
 		}
 
-		// Token: 0x0602E317 RID: 189207 RVA: 0x00AAE1AC File Offset: 0x00AAC3AC
+		// Token: 0x06022A0C RID: 141836 RVA: 0x009DA8A0 File Offset: 0x009D8AA0
 		public static void ClearDebugDraw()
 		{
 			if (DebugDrawManager.Instance == null)
@@ -71,12 +71,12 @@ namespace CSharpScript.Game.Render.DebugDraw
 			DebugDrawManager.Instance.DebugDrawMap.Clear();
 		}
 
-		// Token: 0x0602E318 RID: 189208 RVA: 0x00AAE1C5 File Offset: 0x00AAC3C5
+		// Token: 0x06022A0D RID: 141837 RVA: 0x009DA8B9 File Offset: 0x009D8AB9
 		public static void Initialize()
 		{
 		}
 
-		// Token: 0x0602E319 RID: 189209 RVA: 0x00AAE1C8 File Offset: 0x00AAC3C8
+		// Token: 0x06022A0E RID: 141838 RVA: 0x009DA8BC File Offset: 0x009D8ABC
 		public static void Tick(float delta)
 		{
 			if (DebugDrawManager.Instance == null)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Render.DebugDraw
 			}
 		}
 
-		// Token: 0x0602E31A RID: 189210 RVA: 0x00AAE340 File Offset: 0x00AAC540
+		// Token: 0x06022A0F RID: 141839 RVA: 0x009DAA34 File Offset: 0x009D8C34
 		public static void Destroy()
 		{
 			if (DebugDrawManager.Instance == null)
@@ -116,25 +116,25 @@ namespace CSharpScript.Game.Render.DebugDraw
 			DebugDrawManager.Instance = null;
 		}
 
-		// Token: 0x0602E31B RID: 189211 RVA: 0x00AAE350 File Offset: 0x00AAC550
+		// Token: 0x06022A10 RID: 141840 RVA: 0x009DAA44 File Offset: 0x009D8C44
 		static DebugDrawManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DebugDrawManager.CreateStaticDefaultValue), new Action(DebugDrawManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602E31C RID: 189212 RVA: 0x00AAE36F File Offset: 0x00AAC56F
+		// Token: 0x06022A11 RID: 141841 RVA: 0x009DAA63 File Offset: 0x009D8C63
 		public static void CreateStaticDefaultValue()
 		{
 			DebugDrawManager.Instance = null;
 		}
 
-		// Token: 0x0602E31D RID: 189213 RVA: 0x00AAE377 File Offset: 0x00AAC577
+		// Token: 0x06022A12 RID: 141842 RVA: 0x009DAA6B File Offset: 0x009D8C6B
 		public static void ResetStaticDefaultValue()
 		{
 			DebugDrawManager.Instance = null;
 		}
 
-		// Token: 0x04018CA3 RID: 101539
+		// Token: 0x040132E2 RID: 78562
 		[Nullable(new byte[]
 		{
 			2,
@@ -142,42 +142,42 @@ namespace CSharpScript.Game.Render.DebugDraw
 		})]
 		protected Dictionary<int, DebugDrawManager.EffectDebugDrawInfo> DebugDrawMap;
 
-		// Token: 0x04018CA4 RID: 101540
+		// Token: 0x040132E3 RID: 78563
 		protected int Counter;
 
-		// Token: 0x04018CA5 RID: 101541
+		// Token: 0x040132E4 RID: 78564
 		[Nullable(2)]
 		protected static DebugDrawManager Instance;
 
-		// Token: 0x0200A843 RID: 43075
+		// Token: 0x020091FB RID: 37371
 		public enum EEffectDebugDrawType
 		{
-			// Token: 0x0403339A RID: 209818
+			// Token: 0x0402DB28 RID: 187176
 			LineFromPlayer,
-			// Token: 0x0403339B RID: 209819
+			// Token: 0x0402DB29 RID: 187177
 			Box
 		}
 
-		// Token: 0x0200A844 RID: 43076
+		// Token: 0x020091FC RID: 37372
 		public class EffectDebugDrawInfo
 		{
-			// Token: 0x0403339C RID: 209820
+			// Token: 0x0402DB2A RID: 187178
 			public int Index;
 
-			// Token: 0x0403339D RID: 209821
+			// Token: 0x0402DB2B RID: 187179
 			public DebugDrawManager.EEffectDebugDrawType? Type;
 
-			// Token: 0x0403339E RID: 209822
+			// Token: 0x0402DB2C RID: 187180
 			[Nullable(2)]
 			public Vector VectorA;
 
-			// Token: 0x0403339F RID: 209823
+			// Token: 0x0402DB2D RID: 187181
 			public FLinearColor? ColorA;
 
-			// Token: 0x040333A0 RID: 209824
+			// Token: 0x0402DB2E RID: 187182
 			public float NumberA;
 
-			// Token: 0x040333A1 RID: 209825
+			// Token: 0x0402DB2F RID: 187183
 			public FBox? BoxA;
 		}
 	}

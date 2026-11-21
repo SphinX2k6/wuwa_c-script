@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C3D RID: 19517
+	// Token: 0x02003BEE RID: 15342
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffMainTabItemData : ISheriffMainTabItemData
 	{
-		// Token: 0x17007CAD RID: 31917
-		// (get) Token: 0x060327C9 RID: 206793 RVA: 0x00BC31C2 File Offset: 0x00BC13C2
-		// (set) Token: 0x060327CA RID: 206794 RVA: 0x00BC31CA File Offset: 0x00BC13CA
+		// Token: 0x17005057 RID: 20567
+		// (get) Token: 0x0602757C RID: 161148 RVA: 0x00B07DDA File Offset: 0x00B05FDA
+		// (set) Token: 0x0602757D RID: 161149 RVA: 0x00B07DE2 File Offset: 0x00B05FE2
 		public ESheriffMainTabType TabType { get; set; }
 
-		// Token: 0x17007CAE RID: 31918
-		// (get) Token: 0x060327CB RID: 206795 RVA: 0x00BC31D3 File Offset: 0x00BC13D3
-		// (set) Token: 0x060327CC RID: 206796 RVA: 0x00BC31DB File Offset: 0x00BC13DB
+		// Token: 0x17005058 RID: 20568
+		// (get) Token: 0x0602757E RID: 161150 RVA: 0x00B07DEB File Offset: 0x00B05FEB
+		// (set) Token: 0x0602757F RID: 161151 RVA: 0x00B07DF3 File Offset: 0x00B05FF3
 		public string TabIcon { get; set; } = "";
 
-		// Token: 0x17007CAF RID: 31919
-		// (get) Token: 0x060327CD RID: 206797 RVA: 0x00BC31E4 File Offset: 0x00BC13E4
-		// (set) Token: 0x060327CE RID: 206798 RVA: 0x00BC31EC File Offset: 0x00BC13EC
+		// Token: 0x17005059 RID: 20569
+		// (get) Token: 0x06027580 RID: 161152 RVA: 0x00B07DFC File Offset: 0x00B05FFC
+		// (set) Token: 0x06027581 RID: 161153 RVA: 0x00B07E04 File Offset: 0x00B06004
 		public string TabTxt { get; set; } = "";
 
-		// Token: 0x17007CB0 RID: 31920
-		// (get) Token: 0x060327CF RID: 206799 RVA: 0x00BC31F5 File Offset: 0x00BC13F5
-		// (set) Token: 0x060327D0 RID: 206800 RVA: 0x00BC31FD File Offset: 0x00BC13FD
+		// Token: 0x1700505A RID: 20570
+		// (get) Token: 0x06027582 RID: 161154 RVA: 0x00B07E0D File Offset: 0x00B0600D
+		// (set) Token: 0x06027583 RID: 161155 RVA: 0x00B07E15 File Offset: 0x00B06015
 		public bool? IsLock { get; set; }
 
-		// Token: 0x17007CB1 RID: 31921
-		// (get) Token: 0x060327D1 RID: 206801 RVA: 0x00BC3206 File Offset: 0x00BC1406
-		// (set) Token: 0x060327D2 RID: 206802 RVA: 0x00BC320E File Offset: 0x00BC140E
+		// Token: 0x1700505B RID: 20571
+		// (get) Token: 0x06027584 RID: 161156 RVA: 0x00B07E1E File Offset: 0x00B0601E
+		// (set) Token: 0x06027585 RID: 161157 RVA: 0x00B07E26 File Offset: 0x00B06026
 		public EFunctionType FunctionType { get; set; }
 	}
 }

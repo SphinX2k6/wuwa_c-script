@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C9D RID: 7325
+	// Token: 0x02000536 RID: 1334
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FSDKExternalWriteAchievementsDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C706 RID: 116486 RVA: 0x002A03AE File Offset: 0x0029E5AE
+		// Token: 0x06007C43 RID: 31811 RVA: 0x000B7D62 File Offset: 0x000B5F62
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSDKExternalWriteAchievementsDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C707 RID: 116487 RVA: 0x002A03BA File Offset: 0x0029E5BA
+		// Token: 0x06007C44 RID: 31812 RVA: 0x000B7D6E File Offset: 0x000B5F6E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSDKExternalWriteAchievementsDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FSDKExternalWriteAchievementsDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601C708 RID: 116488 RVA: 0x002A03DD File Offset: 0x0029E5DD
+		// Token: 0x06007C45 RID: 31813 RVA: 0x000B7D91 File Offset: 0x000B5F91
 		public FSDKExternalWriteAchievementsDelegate()
 		{
 		}
 
-		// Token: 0x0601C709 RID: 116489 RVA: 0x002A03E5 File Offset: 0x0029E5E5
+		// Token: 0x06007C46 RID: 31814 RVA: 0x000B7D99 File Offset: 0x000B5F99
 		[NullableContext(2)]
 		public FSDKExternalWriteAchievementsDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C70A RID: 116490 RVA: 0x002A03EF File Offset: 0x0029E5EF
+		// Token: 0x06007C47 RID: 31815 RVA: 0x000B7DA3 File Offset: 0x000B5FA3
 		public FSDKExternalWriteAchievementsDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C70B RID: 116491 RVA: 0x002A03FA File Offset: 0x0029E5FA
+		// Token: 0x06007C48 RID: 31816 RVA: 0x000B7DAE File Offset: 0x000B5FAE
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<bool, TArray<string>>) ?? ((Action<bool, TArray<string>>)Delegate.CreateDelegate(typeof(Action<bool, TArray<string>>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C70C RID: 116492 RVA: 0x002A042C File Offset: 0x0029E62C
+		// Token: 0x06007C49 RID: 31817 RVA: 0x000B7DE0 File Offset: 0x000B5FE0
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<bool, TArray<string>> Callback)
 		{
 			if (FSDKExternalWriteAchievementsDelegate.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FSDKExternalWriteAchievementsDelegate.RegisterId);
 		}
 
-		// Token: 0x0601C70D RID: 116493 RVA: 0x002A0466 File Offset: 0x0029E666
+		// Token: 0x06007C4A RID: 31818 RVA: 0x000B7E1A File Offset: 0x000B601A
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<bool, TArray<string>> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C70E RID: 116494 RVA: 0x002A0470 File Offset: 0x0029E670
+		// Token: 0x06007C4B RID: 31819 RVA: 0x000B7E24 File Offset: 0x000B6024
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(bool result, [Nullable(new byte[]
 		{
 			2,
@@ -95,10 +92,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FSDKExternalWriteAchievementsDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C70F RID: 116495 RVA: 0x002A04D8 File Offset: 0x0029E6D8
+		// Token: 0x06007C4C RID: 31820 RVA: 0x000B7E8C File Offset: 0x000B608C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool, TArray<string>> action = target as Action<bool, TArray<string>>;
@@ -110,35 +106,35 @@ namespace UnrealEngine
 			action(((FSDKExternalWriteAchievementsDelegate.__FSDKExternalWriteAchievementsDelegate_DelegateParams*)__Parameters)->result, arg);
 		}
 
-		// Token: 0x0400F4B8 RID: 62648
+		// Token: 0x04003522 RID: 13602
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F4B9 RID: 62649
+		// Token: 0x04003523 RID: 13603
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSDK.SDKExternalWriteAchievementsDelegate__DelegateSignature";
 
-		// Token: 0x0400F4BA RID: 62650
+		// Token: 0x04003524 RID: 13604
 		private static int RegisterId;
 
-		// Token: 0x0200326D RID: 12909
+		// Token: 0x02000CE2 RID: 3298
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FSDKExternalWriteAchievementsDelegate_DelegateParams
+		private ref struct __FSDKExternalWriteAchievementsDelegate_DelegateParams
 		{
-			// Token: 0x040170F0 RID: 94448
+			// Token: 0x04005F64 RID: 24420
 			[FieldOffset(0)]
 			public bool result;
 
-			// Token: 0x040170F1 RID: 94449
+			// Token: 0x04005F65 RID: 24421
 			[FieldOffset(8)]
 			public byte data;
 		}
 
-		// Token: 0x0200326E RID: 12910
+		// Token: 0x02000CE3 RID: 3299
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040170F2 RID: 94450
+			// Token: 0x04005F66 RID: 24422
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

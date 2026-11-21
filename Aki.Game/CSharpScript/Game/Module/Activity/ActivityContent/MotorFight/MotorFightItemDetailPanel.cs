@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006412 RID: 25618
+	// Token: 0x02005390 RID: 21392
 	public class MotorFightItemDetailPanel : UiPanelBase
 	{
-		// Token: 0x060406F0 RID: 263920 RVA: 0x00F96360 File Offset: 0x00F94560
+		// Token: 0x060353B1 RID: 218033 RVA: 0x00EDD300 File Offset: 0x00EDB500
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060406F1 RID: 263921 RVA: 0x00F96490 File Offset: 0x00F94690
+		// Token: 0x060353B2 RID: 218034 RVA: 0x00EDD430 File Offset: 0x00EDB630
 		[NullableContext(1)]
 		public void Refresh(MotorFightItemData data)
 		{
@@ -60,34 +60,34 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x0200C636 RID: 50742
+		// Token: 0x0200B01D RID: 45085
 		private class EComponents
 		{
-			// Token: 0x0403BD65 RID: 245093
+			// Token: 0x040366C2 RID: 222914
 			public const int ToggleRoot = 0;
 
-			// Token: 0x0403BD66 RID: 245094
+			// Token: 0x040366C3 RID: 222915
 			public const int TextureQuality = 1;
 
-			// Token: 0x0403BD67 RID: 245095
+			// Token: 0x040366C4 RID: 222916
 			public const int TextName = 2;
 
-			// Token: 0x0403BD68 RID: 245096
+			// Token: 0x040366C5 RID: 222917
 			public const int TextureIcon = 3;
 
-			// Token: 0x0403BD69 RID: 245097
+			// Token: 0x040366C6 RID: 222918
 			public const int TextTypeName = 4;
 
-			// Token: 0x0403BD6A RID: 245098
+			// Token: 0x040366C7 RID: 222919
 			public const int SpriteTypeIcon = 5;
 
-			// Token: 0x0403BD6B RID: 245099
+			// Token: 0x040366C8 RID: 222920
 			public const int TextDesc = 6;
 
-			// Token: 0x0403BD6C RID: 245100
+			// Token: 0x040366C9 RID: 222921
 			public const int ItemUnlockPanel = 7;
 
-			// Token: 0x0403BD6D RID: 245101
+			// Token: 0x040366CA RID: 222922
 			public const int TextLockTip = 8;
 		}
 	}

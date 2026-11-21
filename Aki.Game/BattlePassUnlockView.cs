@@ -8,16 +8,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002338 RID: 9016
+// Token: 0x0200181D RID: 6173
 public class BattlePassUnlockView : UiViewBase
 {
-	// Token: 0x06011D98 RID: 73112 RVA: 0x00465BFC File Offset: 0x00463DFC
+	// Token: 0x0600F248 RID: 62024 RVA: 0x00472CC4 File Offset: 0x00470EC4
 	[NullableContext(1)]
 	public BattlePassUnlockView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011D99 RID: 73113 RVA: 0x00465C10 File Offset: 0x00463E10
+	// Token: 0x0600F249 RID: 62025 RVA: 0x00472CD8 File Offset: 0x00470ED8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -46,25 +46,25 @@ public class BattlePassUnlockView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011D9A RID: 73114 RVA: 0x00465D3A File Offset: 0x00463F3A
+	// Token: 0x0600F24A RID: 62026 RVA: 0x00472E02 File Offset: 0x00471002
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.BattlePassMainViewHide, new Action(this.OnMainViewHide));
 	}
 
-	// Token: 0x06011D9B RID: 73115 RVA: 0x00465D58 File Offset: 0x00463F58
+	// Token: 0x0600F24B RID: 62027 RVA: 0x00472E20 File Offset: 0x00471020
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.BattlePassMainViewHide, new Action(this.OnMainViewHide));
 	}
 
-	// Token: 0x06011D9C RID: 73116 RVA: 0x00465D76 File Offset: 0x00463F76
+	// Token: 0x0600F24C RID: 62028 RVA: 0x00472E3E File Offset: 0x0047103E
 	private void OnMainViewHide()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011D9D RID: 73117 RVA: 0x00465D80 File Offset: 0x00463F80
+	// Token: 0x0600F24D RID: 62029 RVA: 0x00472E48 File Offset: 0x00471048
 	protected override void OnStart()
 	{
 		EBattlePassUnlockType ebattlePassUnlockType = (EBattlePassUnlockType)this.OpenParam;
@@ -79,14 +79,14 @@ public class BattlePassUnlockView : UiViewBase
 		base.GetItem(3).SetUIActive(ebattlePassUnlockType != EBattlePassUnlockType.Primary);
 	}
 
-	// Token: 0x06011D9E RID: 73118 RVA: 0x00465E5A File Offset: 0x0046405A
+	// Token: 0x0600F24E RID: 62030 RVA: 0x00472F22 File Offset: 0x00471122
 	[NullableContext(1)]
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06011D9F RID: 73119 RVA: 0x00465E64 File Offset: 0x00464064
+	// Token: 0x0600F24F RID: 62031 RVA: 0x00472F2C File Offset: 0x0047112C
 	protected override void OnBeforeDestroy()
 	{
 		this.RewardList.Clear();
@@ -100,13 +100,13 @@ public class BattlePassUnlockView : UiViewBase
 		BattlePassController.Instance.PopHighUnlockReward();
 	}
 
-	// Token: 0x06011DA0 RID: 73120 RVA: 0x00465EB3 File Offset: 0x004640B3
+	// Token: 0x0600F250 RID: 62032 RVA: 0x00472F7B File Offset: 0x0047117B
 	private void OnBtnClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04008748 RID: 34632
+	// Token: 0x0400888B RID: 34955
 	[Nullable(new byte[]
 	{
 		2,
@@ -114,24 +114,24 @@ public class BattlePassUnlockView : UiViewBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardGridView;
 
-	// Token: 0x04008749 RID: 34633
+	// Token: 0x0400888C RID: 34956
 	[Nullable(2)]
 	private List<TItem> RewardList = new List<TItem>();
 
-	// Token: 0x020088BE RID: 35006
+	// Token: 0x02007A47 RID: 31303
 	private enum EComponents
 	{
-		// Token: 0x0402C70D RID: 182029
+		// Token: 0x04027A21 RID: 162337
 		ItemGrid,
-		// Token: 0x0402C70E RID: 182030
+		// Token: 0x04027A22 RID: 162338
 		TxtTitle,
-		// Token: 0x0402C70F RID: 182031
+		// Token: 0x04027A23 RID: 162339
 		PrimaryPic,
-		// Token: 0x0402C710 RID: 182032
+		// Token: 0x04027A24 RID: 162340
 		HighPic,
-		// Token: 0x0402C711 RID: 182033
+		// Token: 0x04027A25 RID: 162341
 		BtnClose,
-		// Token: 0x0402C712 RID: 182034
+		// Token: 0x04027A26 RID: 162342
 		TxtTip
 	}
 }

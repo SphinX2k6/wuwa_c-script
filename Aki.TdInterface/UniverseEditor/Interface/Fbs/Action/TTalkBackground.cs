@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077BF RID: 30655
+	// Token: 0x02007FF7 RID: 32759
 	public enum TTalkBackground : byte
 	{
-		// Token: 0x040129B5 RID: 76213
+		// Token: 0x04013A6E RID: 80494
 		NONE,
-		// Token: 0x040129B6 RID: 76214
+		// Token: 0x04013A6F RID: 80495
 		ITalkBackgroundClean,
-		// Token: 0x040129B7 RID: 76215
+		// Token: 0x04013A70 RID: 80496
 		ITalkBackgroundIcon,
-		// Token: 0x040129B8 RID: 76216
+		// Token: 0x04013A71 RID: 80497
 		ITalkBackgroundImage,
-		// Token: 0x040129B9 RID: 76217
+		// Token: 0x04013A72 RID: 80498
 		ITalkBackgroundImageByMcGender,
-		// Token: 0x040129BA RID: 76218
+		// Token: 0x04013A73 RID: 80499
 		ITalkBackgroundSpineImage
 	}
 }

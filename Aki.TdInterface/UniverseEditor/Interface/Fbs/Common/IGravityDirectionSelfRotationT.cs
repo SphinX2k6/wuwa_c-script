@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DF8 RID: 24056
+	// Token: 0x02006435 RID: 25653
 	public class IGravityDirectionSelfRotationT
 	{
-		// Token: 0x1700B406 RID: 46086
-		// (get) Token: 0x060292DE RID: 168670 RVA: 0x005A6636 File Offset: 0x005A4836
-		// (set) Token: 0x060292DF RID: 168671 RVA: 0x005A663E File Offset: 0x005A483E
+		// Token: 0x1700BD6C RID: 48492
+		// (get) Token: 0x0602B968 RID: 178536 RVA: 0x005EF366 File Offset: 0x005ED566
+		// (set) Token: 0x0602B969 RID: 178537 RVA: 0x005EF36E File Offset: 0x005ED56E
 		public EGravityDirectionType Type { get; set; }
 
-		// Token: 0x060292E0 RID: 168672 RVA: 0x005A6647 File Offset: 0x005A4847
+		// Token: 0x0602B96A RID: 178538 RVA: 0x005EF377 File Offset: 0x005ED577
 		public IGravityDirectionSelfRotationT()
 		{
 			this.Type = EGravityDirectionType.SelfRotation;

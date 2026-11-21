@@ -12,10 +12,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001394 RID: 5012
+// Token: 0x02000848 RID: 2120
 public class ActivityMowingSubView : ActivitySubViewBase
 {
-	// Token: 0x06008C78 RID: 35960 RVA: 0x001E1CE0 File Offset: 0x001DFEE0
+	// Token: 0x06006013 RID: 24595 RVA: 0x001EAB34 File Offset: 0x001E8D34
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 16;
@@ -64,7 +64,7 @@ public class ActivityMowingSubView : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008C79 RID: 35961 RVA: 0x001E1F60 File Offset: 0x001E0160
+	// Token: 0x06006014 RID: 24596 RVA: 0x001EADB4 File Offset: 0x001E8FB4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityMowingSubView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -75,7 +75,7 @@ public class ActivityMowingSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008C7A RID: 35962 RVA: 0x001E1FA4 File Offset: 0x001E01A4
+	// Token: 0x06006015 RID: 24597 RVA: 0x001EADF8 File Offset: 0x001E8FF8
 	protected override void OnStart()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(5);
@@ -84,23 +84,23 @@ public class ActivityMowingSubView : ActivitySubViewBase
 		this.FunctionalComponent.FunctionButton.SetFunction(new Action(this.OnClickBtnEnter));
 	}
 
-	// Token: 0x06008C7B RID: 35963 RVA: 0x001E2001 File Offset: 0x001E0201
+	// Token: 0x06006016 RID: 24598 RVA: 0x001EAE55 File Offset: 0x001E9055
 	protected override void OnSetData()
 	{
 		this.MowingData = (this.ActivityBaseData as ActivityMowingData);
 	}
 
-	// Token: 0x06008C7C RID: 35964 RVA: 0x001E2014 File Offset: 0x001E0214
+	// Token: 0x06006017 RID: 24599 RVA: 0x001EAE68 File Offset: 0x001E9068
 	protected override void OnAddEventListener()
 	{
 	}
 
-	// Token: 0x06008C7D RID: 35965 RVA: 0x001E2016 File Offset: 0x001E0216
+	// Token: 0x06006018 RID: 24600 RVA: 0x001EAE6A File Offset: 0x001E906A
 	protected override void OnRemoveEventListener()
 	{
 	}
 
-	// Token: 0x06008C7E RID: 35966 RVA: 0x001E2018 File Offset: 0x001E0218
+	// Token: 0x06006019 RID: 24601 RVA: 0x001EAE6C File Offset: 0x001E906C
 	protected override void OnRefreshView()
 	{
 		this.RefreshText();
@@ -110,7 +110,7 @@ public class ActivityMowingSubView : ActivitySubViewBase
 		this.NewInstanceCheck();
 	}
 
-	// Token: 0x06008C7F RID: 35967 RVA: 0x001E2038 File Offset: 0x001E0238
+	// Token: 0x0600601A RID: 24602 RVA: 0x001EAE8C File Offset: 0x001E908C
 	private void NewInstanceCheck()
 	{
 		bool flag = this.MowingData.IsNewInstanceOpen();
@@ -122,7 +122,7 @@ public class ActivityMowingSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008C80 RID: 35968 RVA: 0x001E2078 File Offset: 0x001E0278
+	// Token: 0x0600601B RID: 24603 RVA: 0x001EAECC File Offset: 0x001E90CC
 	protected override void OnTimer(float gap)
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -135,7 +135,7 @@ public class ActivityMowingSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008C81 RID: 35969 RVA: 0x001E20B8 File Offset: 0x001E02B8
+	// Token: 0x0600601C RID: 24604 RVA: 0x001EAF0C File Offset: 0x001E910C
 	private void RefreshText()
 	{
 		string title = this.MowingData.GetTitle();
@@ -158,14 +158,14 @@ public class ActivityMowingSubView : ActivitySubViewBase
 		text3.ShowTextNew("CollectActivity_Button_ahead");
 	}
 
-	// Token: 0x06008C82 RID: 35970 RVA: 0x001E211C File Offset: 0x001E031C
+	// Token: 0x0600601D RID: 24605 RVA: 0x001EAF70 File Offset: 0x001E9170
 	private void RefreshRewards()
 	{
 		List<TItem> previewReward = this.ActivityBaseData.GetPreviewReward(null);
 		this.RewardScrollView.RefreshByData(previewReward, null, false);
 	}
 
-	// Token: 0x06008C83 RID: 35971 RVA: 0x001E214C File Offset: 0x001E034C
+	// Token: 0x0600601E RID: 24606 RVA: 0x001EAFA0 File Offset: 0x001E91A0
 	private void RefreshState()
 	{
 		bool flag = this.ActivityBaseData.IsUnLock();
@@ -182,7 +182,7 @@ public class ActivityMowingSubView : ActivitySubViewBase
 		item.SetUIActive(flag);
 	}
 
-	// Token: 0x06008C84 RID: 35972 RVA: 0x001E21AC File Offset: 0x001E03AC
+	// Token: 0x0600601F RID: 24607 RVA: 0x001EB000 File Offset: 0x001E9200
 	private void RefreshRedDot()
 	{
 		bool rewardRedDotVisible = this.MowingData.IsHaveRewardToGet();
@@ -192,13 +192,13 @@ public class ActivityMowingSubView : ActivitySubViewBase
 		this.FunctionalComponent.FunctionButton.SetRedDotVisible(preGuideQuestFinishState && flag);
 	}
 
-	// Token: 0x06008C85 RID: 35973 RVA: 0x001E21FC File Offset: 0x001E03FC
+	// Token: 0x06006020 RID: 24608 RVA: 0x001EB050 File Offset: 0x001E9250
 	private void OnClickBtnReward()
 	{
 		UiManager.Instance.OpenView(EUiViewName.ActivityRewardPopUpView, this.MowingData.GetRewardViewData(), null);
 	}
 
-	// Token: 0x06008C86 RID: 35974 RVA: 0x001E2219 File Offset: 0x001E0419
+	// Token: 0x06006021 RID: 24609 RVA: 0x001EB06D File Offset: 0x001E926D
 	private void OnClickBtnEnter()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -219,11 +219,11 @@ public class ActivityMowingSubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x04003E5B RID: 15963
+	// Token: 0x04003EF3 RID: 16115
 	[Nullable(2)]
 	private ActivityMowingData MowingData;
 
-	// Token: 0x04003E5C RID: 15964
+	// Token: 0x04003EF4 RID: 16116
 	[Nullable(new byte[]
 	{
 		2,
@@ -231,63 +231,63 @@ public class ActivityMowingSubView : ActivitySubViewBase
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-	// Token: 0x04003E5D RID: 15965
+	// Token: 0x04003EF5 RID: 16117
 	[Nullable(2)]
 	private ActivityFunctionalArea FunctionalComponent;
 
-	// Token: 0x04003E5E RID: 15966
+	// Token: 0x04003EF6 RID: 16118
 	[Nullable(1)]
 	private readonly Func<CommonItemSmallItemGrid> CreatePropItem = () => new CommonItemSmallItemGrid();
 
-	// Token: 0x02007A01 RID: 31233
+	// Token: 0x02006B8B RID: 27531
 	private class EActivityMowingComponents
 	{
-		// Token: 0x0402827F RID: 164479
+		// Token: 0x040235AC RID: 144812
 		public const int TitleItem = 0;
 
-		// Token: 0x04028280 RID: 164480
+		// Token: 0x040235AD RID: 144813
 		public const int TxtTitle = 1;
 
-		// Token: 0x04028281 RID: 164481
+		// Token: 0x040235AE RID: 144814
 		public const int DescItem = 2;
 
-		// Token: 0x04028282 RID: 164482
+		// Token: 0x040235AF RID: 144815
 		public const int TxtDesc = 3;
 
-		// Token: 0x04028283 RID: 164483
+		// Token: 0x040235B0 RID: 144816
 		public const int RewardItem = 4;
 
-		// Token: 0x04028284 RID: 164484
+		// Token: 0x040235B1 RID: 144817
 		public const int RewardScrollView = 5;
 
-		// Token: 0x04028285 RID: 164485
+		// Token: 0x040235B2 RID: 144818
 		public const int FunctionItem = 6;
 
-		// Token: 0x04028286 RID: 164486
+		// Token: 0x040235B3 RID: 144819
 		public const int PnlAactive = 7;
 
-		// Token: 0x04028287 RID: 164487
+		// Token: 0x040235B4 RID: 144820
 		public const int RewardButtonItem = 8;
 
-		// Token: 0x04028288 RID: 164488
+		// Token: 0x040235B5 RID: 144821
 		public const int BtnEnter = 9;
 
-		// Token: 0x04028289 RID: 164489
+		// Token: 0x040235B6 RID: 144822
 		public const int TxtTime = 10;
 
-		// Token: 0x0402828A RID: 164490
+		// Token: 0x040235B7 RID: 144823
 		public const int PnlButton = 11;
 
-		// Token: 0x0402828B RID: 164491
+		// Token: 0x040235B8 RID: 144824
 		public const int RedDot = 12;
 
-		// Token: 0x0402828C RID: 164492
+		// Token: 0x040235B9 RID: 144825
 		public const int TxtCondition = 13;
 
-		// Token: 0x0402828D RID: 164493
+		// Token: 0x040235BA RID: 144826
 		public const int TxtConfirm = 14;
 
-		// Token: 0x0402828E RID: 164494
+		// Token: 0x040235BB RID: 144827
 		public const int BtnReward = 15;
 	}
 }

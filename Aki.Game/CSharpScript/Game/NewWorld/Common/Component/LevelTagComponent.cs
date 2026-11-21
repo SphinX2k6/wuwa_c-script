@@ -8,14 +8,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x02007086 RID: 28806
+	// Token: 0x02006207 RID: 25095
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelTagComponent : BaseTagComponent
 	{
-		// Token: 0x17009C1F RID: 39967
-		// (get) Token: 0x06046288 RID: 287368 RVA: 0x01186EBC File Offset: 0x011850BC
-		// (set) Token: 0x06046289 RID: 287369 RVA: 0x01186EC4 File Offset: 0x011850C4
+		// Token: 0x170071C9 RID: 29129
+		// (get) Token: 0x0603C4A7 RID: 246951 RVA: 0x011303FC File Offset: 0x0112E5FC
+		// (set) Token: 0x0603C4A8 RID: 246952 RVA: 0x01130404 File Offset: 0x0112E604
 		public long NotifyLock
 		{
 			get
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604628A RID: 287370 RVA: 0x01186EE8 File Offset: 0x011850E8
+		// Token: 0x0603C4A9 RID: 246953 RVA: 0x01130428 File Offset: 0x0112E628
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604628B RID: 287371 RVA: 0x01186F88 File Offset: 0x01185188
+		// Token: 0x0603C4AA RID: 246954 RVA: 0x011304C8 File Offset: 0x0112E6C8
 		protected unsafe override bool OnStart()
 		{
 			base.OnStart();
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604628C RID: 287372 RVA: 0x0118713C File Offset: 0x0118533C
+		// Token: 0x0603C4AB RID: 246955 RVA: 0x0113067C File Offset: 0x0112E87C
 		protected unsafe override void OnTick(float delta)
 		{
 			if (this.NotifyLock != 0L)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604628D RID: 287373 RVA: 0x011871DC File Offset: 0x011853DC
+		// Token: 0x0603C4AC RID: 246956 RVA: 0x0113071C File Offset: 0x0112E91C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -151,21 +151,21 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return list.ToArray();
 		}
 
-		// Token: 0x0604628E RID: 287374 RVA: 0x01187250 File Offset: 0x01185450
+		// Token: 0x0603C4AD RID: 246957 RVA: 0x01130790 File Offset: 0x0112E990
 		public bool ContainsTag(FGameplayTag tag)
 		{
 			int num = tag.TagId();
 			return num != 0 && this.HasTag(num);
 		}
 
-		// Token: 0x0604628F RID: 287375 RVA: 0x01187270 File Offset: 0x01185470
+		// Token: 0x0603C4AE RID: 246958 RVA: 0x011307B0 File Offset: 0x0112E9B0
 		public bool ContainsTagByName(string tagName)
 		{
 			int tagIdByName = GameplayTagUtils.GetTagIdByName(tagName);
 			return tagIdByName != 0 && this.HasTag(tagIdByName);
 		}
 
-		// Token: 0x06046290 RID: 287376 RVA: 0x01187290 File Offset: 0x01185490
+		// Token: 0x0603C4AF RID: 246959 RVA: 0x011307D0 File Offset: 0x0112E9D0
 		public override void AddTag(int? tagId)
 		{
 			long notifyLock = this.NotifyLock;
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.NotifyLock = notifyLock - 1L;
 		}
 
-		// Token: 0x06046291 RID: 287377 RVA: 0x011872C8 File Offset: 0x011854C8
+		// Token: 0x0603C4B0 RID: 246960 RVA: 0x01130808 File Offset: 0x0112EA08
 		public override bool RemoveTag(int? tagId)
 		{
 			long notifyLock = this.NotifyLock;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return result;
 		}
 
-		// Token: 0x06046292 RID: 287378 RVA: 0x01187300 File Offset: 0x01185500
+		// Token: 0x0603C4B1 RID: 246961 RVA: 0x01130840 File Offset: 0x0112EA40
 		public void ChangeLocalLevelTag(int tagAdd, int tagRemove)
 		{
 			long notifyLock = this.NotifyLock;
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.NotifyLock = notifyLock - 1L;
 		}
 
-		// Token: 0x06046293 RID: 287379 RVA: 0x01187348 File Offset: 0x01185548
+		// Token: 0x0603C4B2 RID: 246962 RVA: 0x01130888 File Offset: 0x0112EA88
 		private void AddServerTagInternal(int tagId)
 		{
 			if (this.HasTag(tagId))
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.NotifyLock = notifyLock - 1L;
 		}
 
-		// Token: 0x06046294 RID: 287380 RVA: 0x011873C4 File Offset: 0x011855C4
+		// Token: 0x0603C4B3 RID: 246963 RVA: 0x01130904 File Offset: 0x0112EB04
 		private void RemoveServerTagInternal(int tagId)
 		{
 			if (this.TagContainer.GetRawTagCount(ETagChannel.LevelServer, tagId) <= 0)
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.NotifyLock = notifyLock - 1L;
 		}
 
-		// Token: 0x06046295 RID: 287381 RVA: 0x01187414 File Offset: 0x01185614
+		// Token: 0x0603C4B4 RID: 246964 RVA: 0x01130954 File Offset: 0x0112EB54
 		public void SyncTagsFromServer(IList<CommonTagData> tags)
 		{
 			foreach (CommonTagData commonTagData in tags)
@@ -252,19 +252,19 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046296 RID: 287382 RVA: 0x01187474 File Offset: 0x01185674
+		// Token: 0x0603C4B5 RID: 246965 RVA: 0x011309B4 File Offset: 0x0112EBB4
 		public void AddServerTagByIdLocal(int tagId, string reason)
 		{
 			this.AddServerTagInternal(tagId);
 		}
 
-		// Token: 0x06046297 RID: 287383 RVA: 0x0118747D File Offset: 0x0118567D
+		// Token: 0x0603C4B6 RID: 246966 RVA: 0x011309BD File Offset: 0x0112EBBD
 		public void RemoveServerTagByIdLocal(int tagId, string reason)
 		{
 			this.RemoveServerTagInternal(tagId);
 		}
 
-		// Token: 0x06046298 RID: 287384 RVA: 0x01187488 File Offset: 0x01185688
+		// Token: 0x0603C4B7 RID: 246967 RVA: 0x011309C8 File Offset: 0x0112EBC8
 		public void NotifyTagChanged()
 		{
 			List<int> list = new List<int>();
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046299 RID: 287385 RVA: 0x011875F0 File Offset: 0x011857F0
+		// Token: 0x0603C4B8 RID: 246968 RVA: 0x01130B30 File Offset: 0x0112ED30
 		public IEnumerable<int> GetTagIds()
 		{
 			LevelTagComponent.<GetTagIds>d__22 <GetTagIds>d__ = new LevelTagComponent.<GetTagIds>d__22(-2);
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return <GetTagIds>d__;
 		}
 
-		// Token: 0x0604629A RID: 287386 RVA: 0x01187600 File Offset: 0x01185800
+		// Token: 0x0603C4B9 RID: 246969 RVA: 0x01130B40 File Offset: 0x0112ED40
 		protected override void OnAnyTagChanged(int tagId, int newCount, int oldCount, int exactTagId)
 		{
 			if (tagId == 0 || oldCount == newCount)
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604629B RID: 287387 RVA: 0x01187630 File Offset: 0x01185830
+		// Token: 0x0603C4BA RID: 246970 RVA: 0x01130B70 File Offset: 0x0112ED70
 		private bool IsTagShouldNotify(int tagId)
 		{
 			foreach (int tagB in LevelTagComponent.shouldNotifyTagType)
@@ -347,7 +347,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x0604629C RID: 287388 RVA: 0x01187664 File Offset: 0x01185864
+		// Token: 0x0603C4BB RID: 246971 RVA: 0x01130BA4 File Offset: 0x0112EDA4
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -355,29 +355,63 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			LevelTagComponent levelTagComponent = (LevelTagComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComponent"))
+			if (levelTagComponent.CreatureDataComponent == null)
 			{
-				if (levelTagComponent.CreatureDataComponent == null)
-				{
-					this.CreatureDataComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-				{
-					return false;
-				}
+				this.CreatureDataComponent = null;
 			}
-			if (base.CanResetComponentProperty("OldCountMap") && levelTagComponent.OldCountMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, int>>(this.OldCountMap), "OldCountMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("NotifyLockInternal"))
+			if (levelTagComponent.OldCountMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.OldCountMap), "OldCountMap"))
 			{
-				this.NotifyLockInternal = levelTagComponent.NotifyLockInternal;
+				return false;
 			}
+			this.NotifyLockInternal = levelTagComponent.NotifyLockInternal;
 			return true;
 		}
 
-		// Token: 0x04024C09 RID: 150537
+		// Token: 0x170071CA RID: 29130
+		// (get) Token: 0x0603C4BC RID: 246972 RVA: 0x01130C1D File Offset: 0x0112EE1D
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071CB RID: 29131
+		// (get) Token: 0x0603C4BD RID: 246973 RVA: 0x01130C20 File Offset: 0x0112EE20
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071CC RID: 29132
+		// (get) Token: 0x0603C4BE RID: 246974 RVA: 0x01130C23 File Offset: 0x0112EE23
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071CD RID: 29133
+		// (get) Token: 0x0603C4BF RID: 246975 RVA: 0x01130C26 File Offset: 0x0112EE26
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FEC4 RID: 130756
 		[StaticVariableRuleIgnore]
 		public static readonly int[] shouldNotifyTagType = new int[]
 		{
@@ -385,14 +419,14 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			GameplayTagDefine.EGameplayTagId["关卡"]
 		};
 
-		// Token: 0x04024C0A RID: 150538
+		// Token: 0x0401FEC5 RID: 130757
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComponent;
 
-		// Token: 0x04024C0B RID: 150539
+		// Token: 0x0401FEC6 RID: 130758
 		private readonly Dictionary<int, int> OldCountMap = new Dictionary<int, int>();
 
-		// Token: 0x04024C0C RID: 150540
+		// Token: 0x0401FEC7 RID: 130759
 		private long NotifyLockInternal;
 	}
 }

@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D4F RID: 7503
+	// Token: 0x02001F60 RID: 8032
 	public class IPreloadSubLevels_SetValue
 	{
-		// Token: 0x040060EF RID: 24815
+		// Token: 0x0400666B RID: 26219
 		public ESwitchSubLevelsType Type;
 
-		// Token: 0x040060F0 RID: 24816
-		[Nullable(1)]
+		// Token: 0x0400666C RID: 26220
 		public List<string> PreloadLevels;
 	}
 }

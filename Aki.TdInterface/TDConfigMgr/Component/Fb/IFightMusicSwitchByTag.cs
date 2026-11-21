@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A9C RID: 2716
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B66 RID: 2918
 	public class IFightMusicSwitchByTag
 	{
-		// Token: 0x06003E6D RID: 15981 RVA: 0x0009FBB5 File Offset: 0x0009DDB5
+		// Token: 0x06004296 RID: 17046 RVA: 0x000A916D File Offset: 0x000A736D
 		public static IFightMusicSwitchByTag Create(IFightMusicSwitchByTag? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000EF2 RID: 3826
-		// (get) Token: 0x06003E6E RID: 15982 RVA: 0x0009FBD4 File Offset: 0x0009DDD4
+		// Token: 0x17000FC5 RID: 4037
+		// (get) Token: 0x06004297 RID: 17047 RVA: 0x000A918C File Offset: 0x000A738C
 		public virtual string FightMusic
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EF3 RID: 3827
-		// (get) Token: 0x06003E6F RID: 15983 RVA: 0x0009FBE1 File Offset: 0x0009DDE1
+		// Token: 0x17000FC6 RID: 4038
+		// (get) Token: 0x06004298 RID: 17048 RVA: 0x000A9199 File Offset: 0x000A7399
 		[Nullable(2)]
 		public virtual string ActivateTag
 		{
@@ -44,7 +42,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022C5 RID: 8901
+		// Token: 0x040024E1 RID: 9441
 		private IFightMusicSwitchByTag Instance;
 	}
 }

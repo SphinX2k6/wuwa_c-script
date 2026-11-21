@@ -15,30 +15,30 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x020026E1 RID: 9953
+// Token: 0x02001BCC RID: 7116
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class RacingBetsController : ActivityControllerBase
 {
-	// Token: 0x060146C3 RID: 83651 RVA: 0x0052ABF5 File Offset: 0x00528DF5
+	// Token: 0x06011BA5 RID: 72613 RVA: 0x00539911 File Offset: 0x00537B11
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x060146C4 RID: 83652 RVA: 0x0052ABF7 File Offset: 0x00528DF7
+	// Token: 0x06011BA6 RID: 72614 RVA: 0x00539913 File Offset: 0x00537B13
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_RaceHorseGuide";
 	}
 
-	// Token: 0x060146C5 RID: 83653 RVA: 0x0052ABFE File Offset: 0x00528DFE
+	// Token: 0x06011BA7 RID: 72615 RVA: 0x0053991A File Offset: 0x00537B1A
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new RacingBetsActivityView();
 	}
 
-	// Token: 0x060146C6 RID: 83654 RVA: 0x0052AC08 File Offset: 0x00528E08
+	// Token: 0x06011BA8 RID: 72616 RVA: 0x00539924 File Offset: 0x00537B24
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		RacingBetsSeasonData racingBetsSeasonData = new RacingBetsSeasonData();
@@ -46,20 +46,20 @@ public class RacingBetsController : ActivityControllerBase
 		return racingBetsSeasonData;
 	}
 
-	// Token: 0x060146C7 RID: 83655 RVA: 0x0052AC27 File Offset: 0x00528E27
+	// Token: 0x06011BA9 RID: 72617 RVA: 0x00539943 File Offset: 0x00537B43
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x060146C8 RID: 83656 RVA: 0x0052AC2A File Offset: 0x00528E2A
+	// Token: 0x06011BAA RID: 72618 RVA: 0x00539946 File Offset: 0x00537B46
 	protected override bool OnInit()
 	{
 		this.IsShowDangoFrameTipView = false;
 		return true;
 	}
 
-	// Token: 0x060146C9 RID: 83657 RVA: 0x0052AC34 File Offset: 0x00528E34
+	// Token: 0x06011BAB RID: 72619 RVA: 0x00539950 File Offset: 0x00537B50
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<RacingBetsSeasonData>(EEventName.OnRacingBetsDataRefresh, new Action<RacingBetsSeasonData>(this.OnRacingBetsDataInit));
@@ -68,7 +68,7 @@ public class RacingBetsController : ActivityControllerBase
 		EventSystem.Instance.Add(EEventName.LeaveInstanceDungeon, new Action(this.OnLeaveDungeon));
 	}
 
-	// Token: 0x060146CA RID: 83658 RVA: 0x0052ACB4 File Offset: 0x00528EB4
+	// Token: 0x06011BAC RID: 72620 RVA: 0x005399D0 File Offset: 0x00537BD0
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRacingBetsDataRefresh, new Action<RacingBetsSeasonData>(this.OnRacingBetsDataInit));
@@ -77,7 +77,7 @@ public class RacingBetsController : ActivityControllerBase
 		EventSystem.Instance.Remove(EEventName.LeaveInstanceDungeon, new Action(this.OnLeaveDungeon));
 	}
 
-	// Token: 0x060146CB RID: 83659 RVA: 0x0052AD34 File Offset: 0x00528F34
+	// Token: 0x06011BAD RID: 72621 RVA: 0x00539A50 File Offset: 0x00537C50
 	protected override bool OnClear()
 	{
 		this.IsShowDangoFrameTipView = false;
@@ -94,13 +94,13 @@ public class RacingBetsController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x060146CC RID: 83660 RVA: 0x0052AD89 File Offset: 0x00528F89
+	// Token: 0x06011BAE RID: 72622 RVA: 0x00539AA5 File Offset: 0x00537CA5
 	public override void OnShowActivityFirstUnlockView(ActivityBaseData data)
 	{
 		UiManager.Instance.OpenView(EUiViewName.RacingBetsDangoActivityOpenTips, null, null);
 	}
 
-	// Token: 0x060146CD RID: 83661 RVA: 0x0052AD9C File Offset: 0x00528F9C
+	// Token: 0x06011BAF RID: 72623 RVA: 0x00539AB8 File Offset: 0x00537CB8
 	private void WorldDoneAndCloseLoading()
 	{
 		if (!GameModeController.Instance.IsInInstance())
@@ -121,7 +121,7 @@ public class RacingBetsController : ActivityControllerBase
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.NGX.DLSS.Enable 0", null);
 	}
 
-	// Token: 0x060146CE RID: 83662 RVA: 0x0052AE40 File Offset: 0x00529040
+	// Token: 0x06011BB0 RID: 72624 RVA: 0x00539B5C File Offset: 0x00537D5C
 	private void HandleRacingBetsFrameViewShow()
 	{
 		if (!GameModeController.Instance.IsInInstance())
@@ -157,7 +157,7 @@ public class RacingBetsController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060146CF RID: 83663 RVA: 0x0052AF28 File Offset: 0x00529128
+	// Token: 0x06011BB1 RID: 72625 RVA: 0x00539C44 File Offset: 0x00537E44
 	private void OnLeaveDungeon()
 	{
 		if (RacingBetsModel.Instance.CheckInRacingBetsDungeon())
@@ -177,14 +177,14 @@ public class RacingBetsController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060146D0 RID: 83664 RVA: 0x0052AFB7 File Offset: 0x005291B7
+	// Token: 0x06011BB2 RID: 72626 RVA: 0x00539CD3 File Offset: 0x00537ED3
 	private void OnRacingBetsDataInit(RacingBetsSeasonData seasonData)
 	{
 		this.TryRegisterNextDangoOddsUpdateRequest(seasonData);
 		this.TryRegisterLegMatchStateChange(seasonData);
 	}
 
-	// Token: 0x060146D1 RID: 83665 RVA: 0x0052AFC8 File Offset: 0x005291C8
+	// Token: 0x06011BB3 RID: 72627 RVA: 0x00539CE4 File Offset: 0x00537EE4
 	public void TryRegisterNextDangoOddsUpdateRequest(RacingBetsSeasonData seasonData)
 	{
 		RacingBetsLegMatchData curLegMatchData = seasonData.GetCurLegMatchData();
@@ -205,7 +205,7 @@ public class RacingBetsController : ActivityControllerBase
 		this.RefreshOddsTimeTimers = TimerSystem.RealTimeInstance.Delay(new TTimerAction(this.RacingBetsUpdateOddsRequest), (float)num, null, null, false, 1f);
 	}
 
-	// Token: 0x060146D2 RID: 83666 RVA: 0x0052B048 File Offset: 0x00529248
+	// Token: 0x06011BB4 RID: 72628 RVA: 0x00539D64 File Offset: 0x00537F64
 	public void TryRegisterLegMatchStateChange(RacingBetsSeasonData seasonData)
 	{
 		if (seasonData == null)
@@ -230,7 +230,7 @@ public class RacingBetsController : ActivityControllerBase
 		this.LegMatchStateChangeTimer = TimerSystem.RealTimeInstance.Delay(new TTimerAction(this.OnLegMatchStateChange), (float)num, null, null, false, 1f);
 	}
 
-	// Token: 0x060146D3 RID: 83667 RVA: 0x0052B0C8 File Offset: 0x005292C8
+	// Token: 0x06011BB5 RID: 72629 RVA: 0x00539DE4 File Offset: 0x00537FE4
 	public void TryStartRacingBetsGaming(int legMatchId)
 	{
 		if (ConfirmBoxController.Instance.CheckIsConfirmBoxOpen())
@@ -251,7 +251,7 @@ public class RacingBetsController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060146D4 RID: 83668 RVA: 0x0052B13C File Offset: 0x0052933C
+	// Token: 0x06011BB6 RID: 72630 RVA: 0x00539E58 File Offset: 0x00538058
 	private void OnLegMatchStateChange(float _)
 	{
 		RacingBetsSeasonData racingBetsSeasonData = RacingBetsModel.Instance.GetRacingBetsSeasonData();
@@ -263,7 +263,7 @@ public class RacingBetsController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, racingBetsSeasonData.Id);
 	}
 
-	// Token: 0x060146D5 RID: 83669 RVA: 0x0052B178 File Offset: 0x00529378
+	// Token: 0x06011BB7 RID: 72631 RVA: 0x00539E94 File Offset: 0x00538094
 	public bool TryOpenRacingBetsLegMatchResultView()
 	{
 		RacingBetLegMatchResultNotify legMatchResultData = RacingBetsModel.Instance.GetLegMatchResultData();
@@ -283,7 +283,7 @@ public class RacingBetsController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x060146D6 RID: 83670 RVA: 0x0052B1D0 File Offset: 0x005293D0
+	// Token: 0x06011BB8 RID: 72632 RVA: 0x00539EEC File Offset: 0x005380EC
 	public void TryLeaveRacingBetsDungeon()
 	{
 		if (!RacingBetsModel.Instance.CheckInRacingBetsDungeon())
@@ -299,7 +299,7 @@ public class RacingBetsController : ActivityControllerBase
 		InstanceDungeonEntranceController.Instance.LeaveInstanceDungeonRequest(LeaveInstWay.Default).Forget<bool>();
 	}
 
-	// Token: 0x060146D7 RID: 83671 RVA: 0x0052B21C File Offset: 0x0052941C
+	// Token: 0x06011BB9 RID: 72633 RVA: 0x00539F38 File Offset: 0x00538138
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.RacingBetsPlayerInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRacingBetsPlayerInfoUpdateNotify));
@@ -308,7 +308,7 @@ public class RacingBetsController : ActivityControllerBase
 		Net.Instance.Register(ENotifyMessageId.RacingBetLegMatchSettleNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRacingBetLegMatchSettleNotify));
 	}
 
-	// Token: 0x060146D8 RID: 83672 RVA: 0x0052B29C File Offset: 0x0052949C
+	// Token: 0x06011BBA RID: 72634 RVA: 0x00539FB8 File Offset: 0x005381B8
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.RacingBetsPlayerInfoUpdateNotify);
@@ -317,7 +317,7 @@ public class RacingBetsController : ActivityControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.RacingBetLegMatchSettleNotify);
 	}
 
-	// Token: 0x060146D9 RID: 83673 RVA: 0x0052B2EC File Offset: 0x005294EC
+	// Token: 0x06011BBB RID: 72635 RVA: 0x0053A008 File Offset: 0x00538208
 	public void RacingBetsGearRequest(int activityId, RacingBetsLegMatchData legMatchData, int dangoId, int gearId, int costCount)
 	{
 		RacingBetsGearRequest racingBetsGearRequest = Aki.Protocol.RacingBetsGearRequest.Create();
@@ -336,7 +336,7 @@ public class RacingBetsController : ActivityControllerBase
 			}
 			if (racingBetsGearResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsGearResponse.ErrorCode, 26722, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsGearResponse.ErrorCode, 29611, null, true, true);
 				return;
 			}
 			ScrollingTipsController.Instance.ShowTipsByTextId("Dango_BetPage_BetSuccess", Array.Empty<object>());
@@ -346,7 +346,7 @@ public class RacingBetsController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060146DA RID: 83674 RVA: 0x0052B370 File Offset: 0x00529570
+	// Token: 0x06011BBC RID: 72636 RVA: 0x0053A08C File Offset: 0x0053828C
 	public void RacingBetsGearRefundRequest(int activityId, RacingBetsLegMatchData legMatchData, int dangoId)
 	{
 		RacingBetsGearRefundRequest racingBetsGearRefundRequest = Aki.Protocol.RacingBetsGearRefundRequest.Create();
@@ -362,7 +362,7 @@ public class RacingBetsController : ActivityControllerBase
 			}
 			if (racingBetsGearRefundResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsGearRefundResponse.ErrorCode, 16117, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsGearRefundResponse.ErrorCode, 17259, null, true, true);
 				return;
 			}
 			RacingBetsModel.Instance.OnPlayerInfoUpdate(racingBetsGearRefundResponse.PlayerInfo);
@@ -372,7 +372,7 @@ public class RacingBetsController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060146DB RID: 83675 RVA: 0x0052B3D8 File Offset: 0x005295D8
+	// Token: 0x06011BBD RID: 72637 RVA: 0x0053A0F4 File Offset: 0x005382F4
 	[NullableContext(2)]
 	public void RacingBetsRankRequest(int activityId, Action callback = null)
 	{
@@ -392,7 +392,7 @@ public class RacingBetsController : ActivityControllerBase
 			}
 			if (racingBetsRankResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsRankResponse.ErrorCode, 28404, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsRankResponse.ErrorCode, 21901, null, true, true);
 				return;
 			}
 			RacingBetsModel.Instance.RacingBetsRankRefresh(racingBetsRankResponse);
@@ -405,7 +405,7 @@ public class RacingBetsController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060146DC RID: 83676 RVA: 0x0052B41C File Offset: 0x0052961C
+	// Token: 0x06011BBE RID: 72638 RVA: 0x0053A138 File Offset: 0x00538338
 	public void RacingBetsTaskRewardRequest(int taskId)
 	{
 		RacingBetsTaskRewardRequest racingBetsTaskRewardRequest = Aki.Protocol.RacingBetsTaskRewardRequest.Create();
@@ -419,14 +419,14 @@ public class RacingBetsController : ActivityControllerBase
 			}
 			if (racingBetsTaskRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsTaskRewardResponse.ErrorCode, 18798, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsTaskRewardResponse.ErrorCode, 20940, null, true, true);
 			}
 			int id = RacingBetsModel.Instance.GetRacingBetsSeasonData().Id;
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, id);
 		}, 0);
 	}
 
-	// Token: 0x060146DD RID: 83677 RVA: 0x0052B468 File Offset: 0x00529668
+	// Token: 0x06011BBF RID: 72639 RVA: 0x0053A184 File Offset: 0x00538384
 	public void RacingBetsUpdateOddsRequest(float _)
 	{
 		RacingBetsUpdateOddsRequest racingBetsUpdateOddsRequest = Aki.Protocol.RacingBetsUpdateOddsRequest.Create();
@@ -443,7 +443,7 @@ public class RacingBetsController : ActivityControllerBase
 			}
 			if (racingBetsUpdateOddsResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsUpdateOddsResponse.ErrorCode, 16685, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsUpdateOddsResponse.ErrorCode, 19078, null, true, true);
 				return;
 			}
 			RacingBetsModel.Instance.OnRacingBetsOddsUpdate(racingBetsUpdateOddsResponse);
@@ -452,7 +452,7 @@ public class RacingBetsController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060146DE RID: 83678 RVA: 0x0052B4E0 File Offset: 0x005296E0
+	// Token: 0x06011BC0 RID: 72640 RVA: 0x0053A1FC File Offset: 0x005383FC
 	[NullableContext(2)]
 	private void OnRacingBetsPlayerInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -461,7 +461,7 @@ public class RacingBetsController : ActivityControllerBase
 		EventSystem.Instance.Emit(EEventName.OnRacingBetsPlayerInfoUpdate);
 	}
 
-	// Token: 0x060146DF RID: 83679 RVA: 0x0052B514 File Offset: 0x00529714
+	// Token: 0x06011BC1 RID: 72641 RVA: 0x0053A230 File Offset: 0x00538430
 	[NullableContext(2)]
 	private void OnRacingBetsTaskNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -476,7 +476,7 @@ public class RacingBetsController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, racingBetsSeasonData.Id);
 	}
 
-	// Token: 0x060146E0 RID: 83680 RVA: 0x0052B568 File Offset: 0x00529768
+	// Token: 0x06011BC2 RID: 72642 RVA: 0x0053A284 File Offset: 0x00538484
 	[NullableContext(2)]
 	private void OnRacingBetLegMatchResultNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -484,7 +484,7 @@ public class RacingBetsController : ActivityControllerBase
 		RacingBetsModel.Instance.OnRacingBetsMatchResultNotify(message);
 	}
 
-	// Token: 0x060146E1 RID: 83681 RVA: 0x0052B588 File Offset: 0x00529788
+	// Token: 0x06011BC3 RID: 72643 RVA: 0x0053A2A4 File Offset: 0x005384A4
 	[NullableContext(2)]
 	private void OnRacingBetLegMatchSettleNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -493,7 +493,7 @@ public class RacingBetsController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.OnRacingBetsLegMatchEnd, racingBetLegMatchSettleNotify.Result.LegMatchId);
 	}
 
-	// Token: 0x060146E2 RID: 83682 RVA: 0x0052B5C8 File Offset: 0x005297C8
+	// Token: 0x06011BC4 RID: 72644 RVA: 0x0053A2E4 File Offset: 0x005384E4
 	public void RacingBetMatchActionRequest(int activityId, int legMatchId)
 	{
 		RacingBetMatchActionRequest racingBetMatchActionRequest = Aki.Protocol.RacingBetMatchActionRequest.Create();
@@ -508,7 +508,7 @@ public class RacingBetsController : ActivityControllerBase
 			}
 			if (racingBetMatchActionResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetMatchActionResponse.ErrorCode, 25269, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetMatchActionResponse.ErrorCode, 23348, null, true, true);
 				return;
 			}
 			RacingBetsModel.Instance.RacingBetsMatchStart(legMatchId, racingBetMatchActionResponse);
@@ -516,7 +516,7 @@ public class RacingBetsController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060146E3 RID: 83683 RVA: 0x0052B624 File Offset: 0x00529824
+	// Token: 0x06011BC5 RID: 72645 RVA: 0x0053A340 File Offset: 0x00538540
 	[NullableContext(0)]
 	public UniTask<bool> RacingBetsMatchRoundActionRequestAsync(int activityId, int legMatchId, int roundId)
 	{
@@ -530,7 +530,7 @@ public class RacingBetsController : ActivityControllerBase
 		return <RacingBetsMatchRoundActionRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060146E4 RID: 83684 RVA: 0x0052B678 File Offset: 0x00529878
+	// Token: 0x06011BC6 RID: 72646 RVA: 0x0053A394 File Offset: 0x00538594
 	public void RacingBetsMatchInfoRequest(int activityId, int legMatchId)
 	{
 		RacingBetMatchInfoRequest racingBetMatchInfoRequest = RacingBetMatchInfoRequest.Create();
@@ -545,14 +545,14 @@ public class RacingBetsController : ActivityControllerBase
 			}
 			if (racingBetMatchInfoResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetMatchInfoResponse.ErrorCode, 22985, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetMatchInfoResponse.ErrorCode, 23023, null, true, true);
 				return;
 			}
 			RacingBetsModel.Instance.RacingBetsMatchPreview(legMatchId, racingBetMatchInfoResponse);
 		}, 0);
 	}
 
-	// Token: 0x060146E5 RID: 83685 RVA: 0x0052B6C8 File Offset: 0x005298C8
+	// Token: 0x06011BC7 RID: 72647 RVA: 0x0053A3E4 File Offset: 0x005385E4
 	public void RacingBetsRepeatedTaskRewardRequest(List<int> taskId)
 	{
 		RacingBetsRepeatedTaskRewardRequest racingBetsRepeatedTaskRewardRequest = Aki.Protocol.RacingBetsRepeatedTaskRewardRequest.Create();
@@ -566,14 +566,14 @@ public class RacingBetsController : ActivityControllerBase
 			}
 			if (racingBetsRepeatedTaskRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsRepeatedTaskRewardResponse.ErrorCode, 15170, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsRepeatedTaskRewardResponse.ErrorCode, 22994, null, true, true);
 			}
 			int id = RacingBetsModel.Instance.GetRacingBetsSeasonData().Id;
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, id);
 		}, 0);
 	}
 
-	// Token: 0x060146E6 RID: 83686 RVA: 0x0052B718 File Offset: 0x00529918
+	// Token: 0x06011BC8 RID: 72648 RVA: 0x0053A434 File Offset: 0x00538634
 	public void RacingBetsCloseSettleMenuRequest(int legMatchId)
 	{
 		RacingBetsCloseSettleMenuRequest racingBetsCloseSettleMenuRequest = Aki.Protocol.RacingBetsCloseSettleMenuRequest.Create();
@@ -589,14 +589,14 @@ public class RacingBetsController : ActivityControllerBase
 			}
 			if (racingBetsCloseSettleMenuResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsCloseSettleMenuResponse.ErrorCode, 22872, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsCloseSettleMenuResponse.ErrorCode, 23836, null, true, true);
 				return;
 			}
 			RacingBetsModel.Instance.OnRacingBetsCloseSettleMenu(legMatchId);
 		}, 0);
 	}
 
-	// Token: 0x060146E7 RID: 83687 RVA: 0x0052B778 File Offset: 0x00529978
+	// Token: 0x06011BC9 RID: 72649 RVA: 0x0053A494 File Offset: 0x00538694
 	public UniTask RacingBetsMatchInfoRequestAsync(int activityId)
 	{
 		RacingBetsController.<RacingBetsMatchInfoRequestAsync>d__39 <RacingBetsMatchInfoRequestAsync>d__;
@@ -607,7 +607,7 @@ public class RacingBetsController : ActivityControllerBase
 		return <RacingBetsMatchInfoRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060146E8 RID: 83688 RVA: 0x0052B7BC File Offset: 0x005299BC
+	// Token: 0x06011BCA RID: 72650 RVA: 0x0053A4D8 File Offset: 0x005386D8
 	public void RacingBetsBulletScreenRequest(int bulletScreenId)
 	{
 		RacingBetsBulletScreenRequest racingBetsBulletScreenRequest = Aki.Protocol.RacingBetsBulletScreenRequest.Create();
@@ -625,7 +625,7 @@ public class RacingBetsController : ActivityControllerBase
 			}
 			if (racingBetsBulletScreenResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsBulletScreenResponse.ErrorCode, 26542, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(racingBetsBulletScreenResponse.ErrorCode, 19809, null, true, true);
 				return;
 			}
 			EventSystem.Instance.Emit<IReadOnlyList<int>, bool>(EEventName.OnRacingBetsPushBulletScreen, new List<int>
@@ -635,8 +635,8 @@ public class RacingBetsController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x17001A91 RID: 6801
-	// (get) Token: 0x060146E9 RID: 83689 RVA: 0x0052B83C File Offset: 0x00529A3C
+	// Token: 0x17001AC9 RID: 6857
+	// (get) Token: 0x06011BCB RID: 72651 RVA: 0x0053A558 File Offset: 0x00538758
 	public static RacingBetsController Instance
 	{
 		get
@@ -645,7 +645,7 @@ public class RacingBetsController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060146EA RID: 83690 RVA: 0x0052B843 File Offset: 0x00529A43
+	// Token: 0x06011BCC RID: 72652 RVA: 0x0053A55F File Offset: 0x0053875F
 	public static RacingBetsController GetOrCreateInstance()
 	{
 		if (RacingBetsController._Instance == null)
@@ -655,7 +655,7 @@ public class RacingBetsController : ActivityControllerBase
 		return RacingBetsController._Instance;
 	}
 
-	// Token: 0x060146EB RID: 83691 RVA: 0x0052B857 File Offset: 0x00529A57
+	// Token: 0x06011BCD RID: 72653 RVA: 0x0053A573 File Offset: 0x00538773
 	public static bool CreateInstance()
 	{
 		if (RacingBetsController._Instance != null)
@@ -666,35 +666,35 @@ public class RacingBetsController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x060146EC RID: 83692 RVA: 0x0052B86D File Offset: 0x00529A6D
+	// Token: 0x06011BCE RID: 72654 RVA: 0x0053A589 File Offset: 0x00538789
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060146ED RID: 83693 RVA: 0x0052B86F File Offset: 0x00529A6F
+	// Token: 0x06011BCF RID: 72655 RVA: 0x0053A58B File Offset: 0x0053878B
 	public static void ResetStaticDefaultValue()
 	{
 		RacingBetsController._Instance = null;
 	}
 
-	// Token: 0x060146EE RID: 83694 RVA: 0x0052B877 File Offset: 0x00529A77
+	// Token: 0x06011BD0 RID: 72656 RVA: 0x0053A593 File Offset: 0x00538793
 	static RacingBetsController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RacingBetsController.CreateStaticDefaultValue), new Action(RacingBetsController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009966 RID: 39270
+	// Token: 0x04009ABE RID: 39614
 	private bool IsShowDangoFrameTipView;
 
-	// Token: 0x04009967 RID: 39271
+	// Token: 0x04009ABF RID: 39615
 	[Nullable(2)]
 	private TimerHandle RefreshOddsTimeTimers;
 
-	// Token: 0x04009968 RID: 39272
+	// Token: 0x04009AC0 RID: 39616
 	[Nullable(2)]
 	private TimerHandle LegMatchStateChangeTimer;
 
-	// Token: 0x04009969 RID: 39273
+	// Token: 0x04009AC1 RID: 39617
 	[Nullable(2)]
 	private static RacingBetsController _Instance;
 }

@@ -5,16 +5,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001548 RID: 5448
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x020016A4 RID: 5796
 	public class IResetPosTypeConverter : JsonConverter<IResetPosType>
 	{
-		// Token: 0x06007B46 RID: 31558 RVA: 0x00128FD8 File Offset: 0x001271D8
+		// Token: 0x0600821A RID: 33306 RVA: 0x00137F84 File Offset: 0x00136184
 		[return: Nullable(2)]
 		public override IResetPosType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
@@ -54,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007B47 RID: 31559 RVA: 0x0012907C File Offset: 0x0012727C
+		// Token: 0x0600821B RID: 33307 RVA: 0x00138028 File Offset: 0x00136228
 		public override void Write(Utf8JsonWriter writer, IResetPosType value, JsonSerializerOptions options)
 		{
 			IResetPosByPosEntity resetPosByPosEntity = value as IResetPosByPosEntity;

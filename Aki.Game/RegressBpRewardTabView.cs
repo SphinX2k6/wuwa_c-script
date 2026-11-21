@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001483 RID: 5251
+// Token: 0x02000937 RID: 2359
 public class RegressBpRewardTabView : UiTabViewBase, IRegressBpTabView
 {
-	// Token: 0x060094A6 RID: 38054 RVA: 0x002003FC File Offset: 0x001FE5FC
+	// Token: 0x0600683B RID: 26683 RVA: 0x00209360 File Offset: 0x00207560
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class RegressBpRewardTabView : UiTabViewBase, IRegressBpTabView
 		};
 	}
 
-	// Token: 0x060094A7 RID: 38055 RVA: 0x002004A8 File Offset: 0x001FE6A8
+	// Token: 0x0600683C RID: 26684 RVA: 0x0020940C File Offset: 0x0020760C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RegressBpRewardTabView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -38,33 +38,33 @@ public class RegressBpRewardTabView : UiTabViewBase, IRegressBpTabView
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060094A8 RID: 38056 RVA: 0x002004EB File Offset: 0x001FE6EB
+	// Token: 0x0600683D RID: 26685 RVA: 0x0020944F File Offset: 0x0020764F
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView(true);
 	}
 
-	// Token: 0x060094A9 RID: 38057 RVA: 0x002004F4 File Offset: 0x001FE6F4
+	// Token: 0x0600683E RID: 26686 RVA: 0x00209458 File Offset: 0x00207658
 	[NullableContext(1)]
 	public void RefreshBtnClaimVisible(UUIItem uiItem)
 	{
 		uiItem.SetUIActive(ActivityRegressModel.Instance.ActivityData.CheckRegressScoreRewardReached());
 	}
 
-	// Token: 0x060094AA RID: 38058 RVA: 0x0020050B File Offset: 0x001FE70B
+	// Token: 0x0600683F RID: 26687 RVA: 0x0020946F File Offset: 0x0020766F
 	public void OnClickBtnClaimAll()
 	{
 		ActivityRegressController.Instance.RequestAllTaskScoreRewards();
 	}
 
-	// Token: 0x060094AB RID: 38059 RVA: 0x00200517 File Offset: 0x001FE717
+	// Token: 0x06006840 RID: 26688 RVA: 0x0020947B File Offset: 0x0020767B
 	[NullableContext(1)]
 	private RegressBpRewardItem OnCreateRewardItem()
 	{
 		return new RegressBpRewardItem();
 	}
 
-	// Token: 0x060094AC RID: 38060 RVA: 0x00200520 File Offset: 0x001FE720
+	// Token: 0x06006841 RID: 26689 RVA: 0x00209484 File Offset: 0x00207684
 	public void RefreshView(bool playAnim = false)
 	{
 		if (this.LoopScrollView == null)
@@ -79,13 +79,13 @@ public class RegressBpRewardTabView : UiTabViewBase, IRegressBpTabView
 		base.GetButton(4).SetSelfInteractive(!ActivityRegressModel.Instance.ActivityData.IsPayRewardUnlock());
 	}
 
-	// Token: 0x060094AD RID: 38061 RVA: 0x002005B8 File Offset: 0x001FE7B8
+	// Token: 0x06006842 RID: 26690 RVA: 0x0020951C File Offset: 0x0020771C
 	private void OnScrollViewScrollValueChanged()
 	{
 		this.RefreshStageReward(false);
 	}
 
-	// Token: 0x060094AE RID: 38062 RVA: 0x002005C4 File Offset: 0x001FE7C4
+	// Token: 0x06006843 RID: 26691 RVA: 0x00209528 File Offset: 0x00207728
 	private void RefreshStageReward(bool forceRefresh = false)
 	{
 		int endGridIndex = this.LoopScrollView.EndGridIndex;
@@ -104,7 +104,7 @@ public class RegressBpRewardTabView : UiTabViewBase, IRegressBpTabView
 		this.StageRewardView.Refresh(activityRegressTaskScoreRewardGridData, false, this.StageRewardView.GridIndex);
 	}
 
-	// Token: 0x060094AF RID: 38063 RVA: 0x00200659 File Offset: 0x001FE859
+	// Token: 0x06006844 RID: 26692 RVA: 0x002095BD File Offset: 0x002077BD
 	private void OnClickBtnPay()
 	{
 		ActivityRegressModel.Instance.ActivityData.SetBpPayButtonRedDotChecked();
@@ -119,7 +119,7 @@ public class RegressBpRewardTabView : UiTabViewBase, IRegressBpTabView
 		});
 	}
 
-	// Token: 0x040041DB RID: 16859
+	// Token: 0x04004273 RID: 17011
 	[Nullable(new byte[]
 	{
 		2,
@@ -128,26 +128,26 @@ public class RegressBpRewardTabView : UiTabViewBase, IRegressBpTabView
 	})]
 	private LoopScrollView<RegressBpRewardItem, ActivityRegressTaskScoreRewardGridData> LoopScrollView;
 
-	// Token: 0x040041DC RID: 16860
+	// Token: 0x04004274 RID: 17012
 	[Nullable(2)]
 	private RegressBpRewardItem StageRewardView;
 
-	// Token: 0x02007AAA RID: 31402
+	// Token: 0x02006C2E RID: 27694
 	private class EComponents
 	{
-		// Token: 0x040285C3 RID: 165315
+		// Token: 0x040238DD RID: 145629
 		public const int SpriteLock = 0;
 
-		// Token: 0x040285C4 RID: 165316
+		// Token: 0x040238DE RID: 145630
 		public const int RewardScroll = 1;
 
-		// Token: 0x040285C5 RID: 165317
+		// Token: 0x040238DF RID: 145631
 		public const int Item = 2;
 
-		// Token: 0x040285C6 RID: 165318
+		// Token: 0x040238E0 RID: 145632
 		public const int StageRewardItem = 3;
 
-		// Token: 0x040285C7 RID: 165319
+		// Token: 0x040238E1 RID: 145633
 		public const int BtnPay = 4;
 	}
 }

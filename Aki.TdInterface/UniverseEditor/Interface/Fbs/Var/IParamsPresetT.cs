@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003AAC RID: 15020
+	// Token: 0x02003EAE RID: 16046
 	public class IParamsPresetT
 	{
-		// Token: 0x17006701 RID: 26369
-		// (get) Token: 0x06014690 RID: 83600 RVA: 0x002F9C46 File Offset: 0x002F7E46
-		// (set) Token: 0x06014691 RID: 83601 RVA: 0x002F9C4E File Offset: 0x002F7E4E
+		// Token: 0x17006C9C RID: 27804
+		// (get) Token: 0x06015B36 RID: 88886 RVA: 0x0031FE52 File Offset: 0x0031E052
+		// (set) Token: 0x06015B37 RID: 88887 RVA: 0x0031FE5A File Offset: 0x0031E05A
 		public EParamsPreset Type { get; set; }
 
-		// Token: 0x06014692 RID: 83602 RVA: 0x002F9C57 File Offset: 0x002F7E57
+		// Token: 0x06015B38 RID: 88888 RVA: 0x0031FE63 File Offset: 0x0031E063
 		public IParamsPresetT()
 		{
 			this.Type = EParamsPreset.Decal;

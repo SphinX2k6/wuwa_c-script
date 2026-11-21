@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 {
-	// Token: 0x02006A17 RID: 27159
+	// Token: 0x02005B74 RID: 23412
 	public enum ESplineMoveState
 	{
-		// Token: 0x0402347A RID: 144506
+		// Token: 0x0401E66C RID: 124524
 		None,
-		// Token: 0x0402347B RID: 144507
+		// Token: 0x0401E66D RID: 124525
 		Start,
-		// Token: 0x0402347C RID: 144508
+		// Token: 0x0401E66E RID: 124526
 		Prepare,
-		// Token: 0x0402347D RID: 144509
+		// Token: 0x0401E66F RID: 124527
 		MoveToStartPoint,
-		// Token: 0x0402347E RID: 144510
+		// Token: 0x0401E670 RID: 124528
 		SplineMove,
-		// Token: 0x0402347F RID: 144511
+		// Token: 0x0401E671 RID: 124529
 		WaitEnd,
-		// Token: 0x04023480 RID: 144512
+		// Token: 0x0401E672 RID: 124530
 		End
 	}
 }

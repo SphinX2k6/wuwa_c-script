@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006628 RID: 26152
+	// Token: 0x020055A6 RID: 21926
 	public class FishingTechCostItem : UiPanelBase
 	{
-		// Token: 0x06041902 RID: 268546 RVA: 0x00FE67C4 File Offset: 0x00FE49C4
+		// Token: 0x060365C7 RID: 222663 RVA: 0x00F2D878 File Offset: 0x00F2BA78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06041903 RID: 268547 RVA: 0x00FE6830 File Offset: 0x00FE4A30
+		// Token: 0x060365C8 RID: 222664 RVA: 0x00F2D8E4 File Offset: 0x00F2BAE4
 		public void RefreshCost(int itemId, int costNum, bool setColor = true)
 		{
 			ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(itemId);
@@ -59,16 +59,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetText(1).SetText(newText, true);
 		}
 
-		// Token: 0x0200C842 RID: 51266
+		// Token: 0x0200B224 RID: 45604
 		private class EComponentDefine
 		{
-			// Token: 0x0403C7EB RID: 247787
+			// Token: 0x04037130 RID: 225584
 			public const int TipsText = 0;
 
-			// Token: 0x0403C7EC RID: 247788
+			// Token: 0x04037131 RID: 225585
 			public const int CostText = 1;
 
-			// Token: 0x0403C7ED RID: 247789
+			// Token: 0x04037132 RID: 225586
 			public const int Texture = 2;
 		}
 	}

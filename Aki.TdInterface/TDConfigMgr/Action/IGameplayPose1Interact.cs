@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ACB RID: 6859
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C72 RID: 7282
 	public class IGameplayPose1Interact : ILeisureInteractType
 	{
-		// Token: 0x06009314 RID: 37652 RVA: 0x00155944 File Offset: 0x00153B44
+		// Token: 0x06009AD2 RID: 39634 RVA: 0x00166164 File Offset: 0x00164364
 		private IGameplayPose1Interact_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009315 RID: 37653 RVA: 0x0015597C File Offset: 0x00153B7C
+		// Token: 0x06009AD3 RID: 39635 RVA: 0x0016619C File Offset: 0x0016439C
 		public static IGameplayPose1Interact Create([Nullable(2)] IGameplayPose1Interact instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009316 RID: 37654 RVA: 0x0015598F File Offset: 0x00153B8F
+		// Token: 0x06009AD4 RID: 39636 RVA: 0x001661AF File Offset: 0x001643AF
 		public static IGameplayPose1Interact CreateFromSetValue([Nullable(2)] IGameplayPose1Interact_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009317 RID: 37655 RVA: 0x001559A2 File Offset: 0x00153BA2
+		// Token: 0x06009AD5 RID: 39637 RVA: 0x001661C2 File Offset: 0x001643C2
 		public new IGameplayPose1Interact_SetValue ToSetValue()
 		{
 			return new IGameplayPose1Interact_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EAF RID: 11951
-		// (get) Token: 0x06009318 RID: 37656 RVA: 0x001559B5 File Offset: 0x00153BB5
-		// (set) Token: 0x06009319 RID: 37657 RVA: 0x001559E0 File Offset: 0x00153BE0
+		// Token: 0x170030CB RID: 12491
+		// (get) Token: 0x06009AD6 RID: 39638 RVA: 0x001661D5 File Offset: 0x001643D5
+		// (set) Token: 0x06009AD7 RID: 39639 RVA: 0x00166200 File Offset: 0x00164400
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A76 RID: 23158
+		// Token: 0x04005F00 RID: 24320
 		[Nullable(2)]
 		protected new IGameplayPose1Interact FbInstance;
 
-		// Token: 0x04005A77 RID: 23159
+		// Token: 0x04005F01 RID: 24321
 		[Nullable(2)]
 		protected new IGameplayPose1Interact_SetValue PocoInterface;
 	}

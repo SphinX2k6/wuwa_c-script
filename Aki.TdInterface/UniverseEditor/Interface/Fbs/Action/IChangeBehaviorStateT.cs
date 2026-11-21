@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062D0 RID: 25296
+	// Token: 0x02006941 RID: 26945
 	public class IChangeBehaviorStateT
 	{
-		// Token: 0x1700BCD6 RID: 48342
-		// (get) Token: 0x0602BB9D RID: 179101 RVA: 0x0060452C File Offset: 0x0060272C
-		// (set) Token: 0x0602BB9E RID: 179102 RVA: 0x00604534 File Offset: 0x00602734
+		// Token: 0x1700C660 RID: 50784
+		// (get) Token: 0x0602E306 RID: 189190 RVA: 0x0064F538 File Offset: 0x0064D738
+		// (set) Token: 0x0602E307 RID: 189191 RVA: 0x0064F540 File Offset: 0x0064D740
 		public int StateId { get; set; }
 
-		// Token: 0x1700BCD7 RID: 48343
-		// (get) Token: 0x0602BB9F RID: 179103 RVA: 0x0060453D File Offset: 0x0060273D
-		// (set) Token: 0x0602BBA0 RID: 179104 RVA: 0x00604545 File Offset: 0x00602745
+		// Token: 0x1700C661 RID: 50785
+		// (get) Token: 0x0602E308 RID: 189192 RVA: 0x0064F549 File Offset: 0x0064D749
+		// (set) Token: 0x0602E309 RID: 189193 RVA: 0x0064F551 File Offset: 0x0064D751
 		public bool IsInstant { get; set; }
 
-		// Token: 0x0602BBA1 RID: 179105 RVA: 0x0060454E File Offset: 0x0060274E
+		// Token: 0x0602E30A RID: 189194 RVA: 0x0064F55A File Offset: 0x0064D75A
 		public IChangeBehaviorStateT()
 		{
 			this.StateId = 0;

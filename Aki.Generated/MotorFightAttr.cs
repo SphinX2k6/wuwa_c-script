@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E3B RID: 3643
+	// Token: 0x02000F20 RID: 3872
 	public struct MotorFightAttr : IFlatbufferObject
 	{
-		// Token: 0x1700206A RID: 8298
-		// (get) Token: 0x060097B5 RID: 38837 RVA: 0x0028D388 File Offset: 0x0028B588
+		// Token: 0x170020CF RID: 8399
+		// (get) Token: 0x06009DD5 RID: 40405 RVA: 0x002AAFEC File Offset: 0x002A91EC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060097B6 RID: 38838 RVA: 0x0028D395 File Offset: 0x0028B595
+		// Token: 0x06009DD6 RID: 40406 RVA: 0x002AAFF9 File Offset: 0x002A91F9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060097B7 RID: 38839 RVA: 0x0028D39C File Offset: 0x0028B59C
+		// Token: 0x06009DD7 RID: 40407 RVA: 0x002AB000 File Offset: 0x002A9200
 		public static MotorFightAttr GetRootAsMotorFightAttr(ByteBuffer _bb)
 		{
 			return MotorFightAttr.GetRootAsMotorFightAttr(_bb, default(MotorFightAttr));
 		}
 
-		// Token: 0x060097B8 RID: 38840 RVA: 0x0028D3B8 File Offset: 0x0028B5B8
+		// Token: 0x06009DD8 RID: 40408 RVA: 0x002AB01C File Offset: 0x002A921C
 		public static MotorFightAttr GetRootAsMotorFightAttr(ByteBuffer _bb, MotorFightAttr obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060097B9 RID: 38841 RVA: 0x0028D3D5 File Offset: 0x0028B5D5
+		// Token: 0x06009DD9 RID: 40409 RVA: 0x002AB039 File Offset: 0x002A9239
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060097BA RID: 38842 RVA: 0x0028D3E4 File Offset: 0x0028B5E4
+		// Token: 0x06009DDA RID: 40410 RVA: 0x002AB048 File Offset: 0x002A9248
 		public MotorFightAttr __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700206B RID: 8299
-		// (get) Token: 0x060097BB RID: 38843 RVA: 0x0028D3F4 File Offset: 0x0028B5F4
+		// Token: 0x170020D0 RID: 8400
+		// (get) Token: 0x06009DDB RID: 40411 RVA: 0x002AB058 File Offset: 0x002A9258
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700206C RID: 8300
-		// (get) Token: 0x060097BC RID: 38844 RVA: 0x0028D430 File Offset: 0x0028B630
+		// Token: 0x170020D1 RID: 8401
+		// (get) Token: 0x06009DDC RID: 40412 RVA: 0x002AB094 File Offset: 0x002A9294
 		public int Life
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700206D RID: 8301
-		// (get) Token: 0x060097BD RID: 38845 RVA: 0x0028D46C File Offset: 0x0028B66C
+		// Token: 0x170020D2 RID: 8402
+		// (get) Token: 0x06009DDD RID: 40413 RVA: 0x002AB0D0 File Offset: 0x002A92D0
 		public int LifeMax
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700206E RID: 8302
-		// (get) Token: 0x060097BE RID: 38846 RVA: 0x0028D4A8 File Offset: 0x0028B6A8
+		// Token: 0x170020D3 RID: 8403
+		// (get) Token: 0x06009DDE RID: 40414 RVA: 0x002AB10C File Offset: 0x002A930C
 		public int Atk
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700206F RID: 8303
-		// (get) Token: 0x060097BF RID: 38847 RVA: 0x0028D4E8 File Offset: 0x0028B6E8
+		// Token: 0x170020D4 RID: 8404
+		// (get) Token: 0x06009DDF RID: 40415 RVA: 0x002AB14C File Offset: 0x002A934C
 		public int Shield
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002070 RID: 8304
-		// (get) Token: 0x060097C0 RID: 38848 RVA: 0x0028D528 File Offset: 0x0028B728
+		// Token: 0x170020D5 RID: 8405
+		// (get) Token: 0x06009DE0 RID: 40416 RVA: 0x002AB18C File Offset: 0x002A938C
 		public int Crit
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002071 RID: 8305
-		// (get) Token: 0x060097C1 RID: 38849 RVA: 0x0028D568 File Offset: 0x0028B768
+		// Token: 0x170020D6 RID: 8406
+		// (get) Token: 0x06009DE1 RID: 40417 RVA: 0x002AB1CC File Offset: 0x002A93CC
 		public int CritDamage
 		{
 			get
@@ -152,8 +152,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002072 RID: 8306
-		// (get) Token: 0x060097C2 RID: 38850 RVA: 0x0028D5A8 File Offset: 0x0028B7A8
+		// Token: 0x170020D7 RID: 8407
+		// (get) Token: 0x06009DE2 RID: 40418 RVA: 0x002AB20C File Offset: 0x002A940C
 		public int AtkChange
 		{
 			get
@@ -167,8 +167,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002073 RID: 8307
-		// (get) Token: 0x060097C3 RID: 38851 RVA: 0x0028D5E8 File Offset: 0x0028B7E8
+		// Token: 0x170020D8 RID: 8408
+		// (get) Token: 0x06009DE3 RID: 40419 RVA: 0x002AB24C File Offset: 0x002A944C
 		public int MaxLifeShieldChange
 		{
 			get
@@ -182,8 +182,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002074 RID: 8308
-		// (get) Token: 0x060097C4 RID: 38852 RVA: 0x0028D628 File Offset: 0x0028B828
+		// Token: 0x170020D9 RID: 8409
+		// (get) Token: 0x06009DE4 RID: 40420 RVA: 0x002AB28C File Offset: 0x002A948C
 		public int CritChange
 		{
 			get
@@ -197,8 +197,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002075 RID: 8309
-		// (get) Token: 0x060097C5 RID: 38853 RVA: 0x0028D668 File Offset: 0x0028B868
+		// Token: 0x170020DA RID: 8410
+		// (get) Token: 0x06009DE5 RID: 40421 RVA: 0x002AB2CC File Offset: 0x002A94CC
 		public int DamageChange
 		{
 			get
@@ -212,8 +212,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002076 RID: 8310
-		// (get) Token: 0x060097C6 RID: 38854 RVA: 0x0028D6A8 File Offset: 0x0028B8A8
+		// Token: 0x170020DB RID: 8411
+		// (get) Token: 0x06009DE6 RID: 40422 RVA: 0x002AB30C File Offset: 0x002A950C
 		public int DamageReduce
 		{
 			get
@@ -227,8 +227,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002077 RID: 8311
-		// (get) Token: 0x060097C7 RID: 38855 RVA: 0x0028D6E8 File Offset: 0x0028B8E8
+		// Token: 0x170020DC RID: 8412
+		// (get) Token: 0x06009DE7 RID: 40423 RVA: 0x002AB34C File Offset: 0x002A954C
 		public int DamageLifeSteal
 		{
 			get
@@ -242,8 +242,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002078 RID: 8312
-		// (get) Token: 0x060097C8 RID: 38856 RVA: 0x0028D728 File Offset: 0x0028B928
+		// Token: 0x170020DD RID: 8413
+		// (get) Token: 0x06009DE8 RID: 40424 RVA: 0x002AB38C File Offset: 0x002A958C
 		public int HealedChange
 		{
 			get
@@ -257,8 +257,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002079 RID: 8313
-		// (get) Token: 0x060097C9 RID: 38857 RVA: 0x0028D768 File Offset: 0x0028B968
+		// Token: 0x170020DE RID: 8414
+		// (get) Token: 0x06009DE9 RID: 40425 RVA: 0x002AB3CC File Offset: 0x002A95CC
 		public int DamageReduceCollision
 		{
 			get
@@ -272,8 +272,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700207A RID: 8314
-		// (get) Token: 0x060097CA RID: 38858 RVA: 0x0028D7A8 File Offset: 0x0028B9A8
+		// Token: 0x170020DF RID: 8415
+		// (get) Token: 0x06009DEA RID: 40426 RVA: 0x002AB40C File Offset: 0x002A960C
 		public int HealBase
 		{
 			get
@@ -287,8 +287,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700207B RID: 8315
-		// (get) Token: 0x060097CB RID: 38859 RVA: 0x0028D7E8 File Offset: 0x0028B9E8
+		// Token: 0x170020E0 RID: 8416
+		// (get) Token: 0x06009DEB RID: 40427 RVA: 0x002AB44C File Offset: 0x002A964C
 		public int MoveSpeed
 		{
 			get
@@ -302,8 +302,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700207C RID: 8316
-		// (get) Token: 0x060097CC RID: 38860 RVA: 0x0028D828 File Offset: 0x0028BA28
+		// Token: 0x170020E1 RID: 8417
+		// (get) Token: 0x06009DEC RID: 40428 RVA: 0x002AB48C File Offset: 0x002A968C
 		public int DamageAbsorptionCount
 		{
 			get
@@ -317,8 +317,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700207D RID: 8317
-		// (get) Token: 0x060097CD RID: 38861 RVA: 0x0028D868 File Offset: 0x0028BA68
+		// Token: 0x170020E2 RID: 8418
+		// (get) Token: 0x06009DED RID: 40429 RVA: 0x002AB4CC File Offset: 0x002A96CC
 		public int AttackSpeed
 		{
 			get
@@ -332,8 +332,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700207E RID: 8318
-		// (get) Token: 0x060097CE RID: 38862 RVA: 0x0028D8A8 File Offset: 0x0028BAA8
+		// Token: 0x170020E3 RID: 8419
+		// (get) Token: 0x06009DEE RID: 40430 RVA: 0x002AB50C File Offset: 0x002A970C
 		public int AttackSpeedChange
 		{
 			get
@@ -347,7 +347,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004EE3 RID: 20195
+		// Token: 0x040054C8 RID: 21704
 		private Table __p;
 	}
 }

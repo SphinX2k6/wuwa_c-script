@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B58 RID: 27480
+	// Token: 0x0200729E RID: 29342
 	public class IMoveSceneItemTypeT
 	{
-		// Token: 0x1700CC2E RID: 52270
-		// (get) Token: 0x060303CF RID: 197583 RVA: 0x0068DF5A File Offset: 0x0068C15A
-		// (set) Token: 0x060303D0 RID: 197584 RVA: 0x0068DF62 File Offset: 0x0068C162
+		// Token: 0x1700D713 RID: 55059
+		// (get) Token: 0x06033226 RID: 209446 RVA: 0x006E6516 File Offset: 0x006E4716
+		// (set) Token: 0x06033227 RID: 209447 RVA: 0x006E651E File Offset: 0x006E471E
 		public EMoveSceneItemType Type { get; set; }
 
-		// Token: 0x060303D1 RID: 197585 RVA: 0x0068DF6B File Offset: 0x0068C16B
+		// Token: 0x06033228 RID: 209448 RVA: 0x006E6527 File Offset: 0x006E4727
 		public IMoveSceneItemTypeT()
 		{
 			this.Type = EMoveSceneItemType.MoveToPoint;

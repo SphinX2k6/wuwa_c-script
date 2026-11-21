@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B1D RID: 2845
+	// Token: 0x02000BEB RID: 3051
 	public class IRoleMotionInteractType
 	{
-		// Token: 0x060041B9 RID: 16825 RVA: 0x000A8A46 File Offset: 0x000A6C46
-		[NullableContext(1)]
+		// Token: 0x06004610 RID: 17936 RVA: 0x000B2AA6 File Offset: 0x000B0CA6
 		public static IRoleMotionInteractType Create(IRoleMotionInteractType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700113C RID: 4412
-		// (get) Token: 0x060041BA RID: 16826 RVA: 0x000A8A65 File Offset: 0x000A6C65
+		// Token: 0x17001235 RID: 4661
+		// (get) Token: 0x06004611 RID: 17937 RVA: 0x000B2AC5 File Offset: 0x000B0CC5
 		public virtual ERoleMotionInteractType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002510 RID: 9488
+		// Token: 0x04002756 RID: 10070
 		private IRoleMotionInteractType Instance;
 	}
 }

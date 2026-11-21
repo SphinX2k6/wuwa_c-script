@@ -8,16 +8,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020029E9 RID: 10729
+// Token: 0x02001F64 RID: 8036
 public class ShipTogetherView : UiViewBase
 {
-	// Token: 0x0601640A RID: 91146 RVA: 0x005A0EFF File Offset: 0x0059F0FF
+	// Token: 0x06013E11 RID: 81425 RVA: 0x005CBEF3 File Offset: 0x005CA0F3
 	[NullableContext(1)]
 	public ShipTogetherView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601640B RID: 91147 RVA: 0x005A0F08 File Offset: 0x0059F108
+	// Token: 0x06013E12 RID: 81426 RVA: 0x005CBEFC File Offset: 0x005CA0FC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,14 +32,14 @@ public class ShipTogetherView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601640C RID: 91148 RVA: 0x005A0F88 File Offset: 0x0059F188
+	// Token: 0x06013E13 RID: 81427 RVA: 0x005CBF7C File Offset: 0x005CA17C
 	protected override void OnStart()
 	{
 		this.RoleScrollView = new LoopScrollView<ShipTogetherRoleItem, IShipTogetherRoleItemData>(base.GetLoopScrollViewComponent(0), base.GetItem(1).GetOwner() as AUIBaseActor, new Func<ShipTogetherRoleItem>(this.CreateLoopItem), false);
 		ShipTogetherModel.Instance.CurrentSelectTogetherRoleId = ShipTogetherModel.Instance.RiderSharingRoleId;
 	}
 
-	// Token: 0x0601640D RID: 91149 RVA: 0x005A0FDC File Offset: 0x0059F1DC
+	// Token: 0x06013E14 RID: 81428 RVA: 0x005CBFD0 File Offset: 0x005CA1D0
 	protected override void OnBeforeShow()
 	{
 		ShipTogetherView.<>c__DisplayClass6_0 CS$<>8__locals1 = new ShipTogetherView.<>c__DisplayClass6_0();
@@ -106,7 +106,7 @@ public class ShipTogetherView : UiViewBase
 		roleScrollView.RefreshByData(list, false, null, false);
 	}
 
-	// Token: 0x0601640E RID: 91150 RVA: 0x005A1144 File Offset: 0x0059F344
+	// Token: 0x06013E15 RID: 81429 RVA: 0x005CC138 File Offset: 0x005CA338
 	[NullableContext(1)]
 	private ShipTogetherRoleItem CreateLoopItem()
 	{
@@ -115,7 +115,7 @@ public class ShipTogetherView : UiViewBase
 		return shipTogetherRoleItem;
 	}
 
-	// Token: 0x0601640F RID: 91151 RVA: 0x005A115D File Offset: 0x0059F35D
+	// Token: 0x06013E16 RID: 81430 RVA: 0x005CC151 File Offset: 0x005CA351
 	[NullableContext(2)]
 	private void RoleItemToggleCallBack(UUIExtendToggle toggle, int roleId)
 	{
@@ -131,7 +131,7 @@ public class ShipTogetherView : UiViewBase
 		ShipTogetherModel.Instance.CurrentSelectTogetherRoleId = roleId;
 	}
 
-	// Token: 0x06016410 RID: 91152 RVA: 0x005A1190 File Offset: 0x0059F390
+	// Token: 0x06013E17 RID: 81431 RVA: 0x005CC184 File Offset: 0x005CA384
 	private void OnClickConfirmBtn()
 	{
 		if (ShipTogetherModel.Instance.CurrentSelectTogetherRoleId != -1)
@@ -145,7 +145,7 @@ public class ShipTogetherView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400A590 RID: 42384
+	// Token: 0x0400A97A RID: 43386
 	[Nullable(new byte[]
 	{
 		2,
@@ -154,20 +154,20 @@ public class ShipTogetherView : UiViewBase
 	})]
 	private LoopScrollView<ShipTogetherRoleItem, IShipTogetherRoleItemData> RoleScrollView;
 
-	// Token: 0x0400A591 RID: 42385
+	// Token: 0x0400A97B RID: 43387
 	[Nullable(2)]
 	private UUIExtendToggle CurrentSelectToggle;
 
-	// Token: 0x02009023 RID: 36899
+	// Token: 0x0200826A RID: 33386
 	private class EChildType
 	{
-		// Token: 0x0402EAB2 RID: 191154
+		// Token: 0x0402A1AA RID: 172458
 		public const int RoleLoopScrollView = 0;
 
-		// Token: 0x0402EAB3 RID: 191155
+		// Token: 0x0402A1AB RID: 172459
 		public const int RoleItem = 1;
 
-		// Token: 0x0402EAB4 RID: 191156
+		// Token: 0x0402A1AC RID: 172460
 		public const int ConfirmBtn = 2;
 	}
 }

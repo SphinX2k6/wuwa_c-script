@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001A39 RID: 6713
+// Token: 0x02000EF8 RID: 3832
 [NullableContext(1)]
 [Nullable(0)]
 internal class SpriteTextItem : UiPanelBase
 {
-	// Token: 0x0600C571 RID: 50545 RVA: 0x002CCB9C File Offset: 0x002CAD9C
+	// Token: 0x06009981 RID: 39297 RVA: 0x002D7CC0 File Offset: 0x002D5EC0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ internal class SpriteTextItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600C572 RID: 50546 RVA: 0x002CCBF6 File Offset: 0x002CADF6
+	// Token: 0x06009982 RID: 39298 RVA: 0x002D7D1A File Offset: 0x002D5F1A
 	public void SetTitle(string title)
 	{
 		UUIText text = base.GetText(1);
@@ -31,7 +31,7 @@ internal class SpriteTextItem : UiPanelBase
 		text.SetText(title, true);
 	}
 
-	// Token: 0x0600C573 RID: 50547 RVA: 0x002CCC0B File Offset: 0x002CAE0B
+	// Token: 0x06009983 RID: 39299 RVA: 0x002D7D2F File Offset: 0x002D5F2F
 	public void SetDesc(string desc)
 	{
 		UUIText text = base.GetText(2);

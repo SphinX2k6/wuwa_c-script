@@ -5,12 +5,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DCA RID: 19914
+	// Token: 0x02003D93 RID: 15763
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeBossChallengeDefine
 	{
-		// Token: 0x0603366A RID: 210538 RVA: 0x00C0033D File Offset: 0x00BFE53D
+		// Token: 0x060284D7 RID: 165079 RVA: 0x00B4987D File Offset: 0x00B47A7D
 		public static ERoguelikeBossChallengeBossState ConvertProtoToBossState(RogueTowerTrialBossState protoState)
 		{
 			switch (protoState)
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0603366B RID: 210539 RVA: 0x00C0035A File Offset: 0x00BFE55A
+		// Token: 0x060284D8 RID: 165080 RVA: 0x00B4989A File Offset: 0x00B47A9A
 		private static int GetBossStateSortPriority(ERoguelikeBossChallengeBossState state)
 		{
 			switch (state)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0603366C RID: 210540 RVA: 0x00C00378 File Offset: 0x00BFE578
+		// Token: 0x060284D9 RID: 165081 RVA: 0x00B498B8 File Offset: 0x00B47AB8
 		public static List<RoguelikeBossChallengeBossData> SortBossDataListStable(List<RoguelikeBossChallengeBossData> dataList)
 		{
 			List<RoguelikeBossChallengeDefine.IndexedBossData> list = new List<RoguelikeBossChallengeDefine.IndexedBossData>();
@@ -71,35 +71,35 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list2;
 		}
 
-		// Token: 0x0401B4AA RID: 111786
+		// Token: 0x04015E7D RID: 89725
 		public const int ROGUELIKE_BOSS_CHALLENGE_INSTANCE_SUCCESS = 3032;
 
-		// Token: 0x0200AF40 RID: 44864
+		// Token: 0x02009975 RID: 39285
 		private interface IIndexedBossData
 		{
-			// Token: 0x1700A161 RID: 41313
-			// (get) Token: 0x0604E183 RID: 319875
-			// (set) Token: 0x0604E184 RID: 319876
+			// Token: 0x170078FF RID: 30975
+			// (get) Token: 0x06044782 RID: 280450
+			// (set) Token: 0x06044783 RID: 280451
 			RoguelikeBossChallengeBossData BossData { get; set; }
 
-			// Token: 0x1700A162 RID: 41314
-			// (get) Token: 0x0604E185 RID: 319877
-			// (set) Token: 0x0604E186 RID: 319878
+			// Token: 0x17007900 RID: 30976
+			// (get) Token: 0x06044784 RID: 280452
+			// (set) Token: 0x06044785 RID: 280453
 			int OriginalIndex { get; set; }
 		}
 
-		// Token: 0x0200AF41 RID: 44865
+		// Token: 0x02009976 RID: 39286
 		[Nullable(0)]
 		private class IndexedBossData : RoguelikeBossChallengeDefine.IIndexedBossData
 		{
-			// Token: 0x1700A163 RID: 41315
-			// (get) Token: 0x0604E187 RID: 319879 RVA: 0x014B02E1 File Offset: 0x014AE4E1
-			// (set) Token: 0x0604E188 RID: 319880 RVA: 0x014B02E9 File Offset: 0x014AE4E9
+			// Token: 0x17007901 RID: 30977
+			// (get) Token: 0x06044786 RID: 280454 RVA: 0x01469471 File Offset: 0x01467671
+			// (set) Token: 0x06044787 RID: 280455 RVA: 0x01469479 File Offset: 0x01467679
 			public RoguelikeBossChallengeBossData BossData { get; set; } = new RoguelikeBossChallengeBossData();
 
-			// Token: 0x1700A164 RID: 41316
-			// (get) Token: 0x0604E189 RID: 319881 RVA: 0x014B02F2 File Offset: 0x014AE4F2
-			// (set) Token: 0x0604E18A RID: 319882 RVA: 0x014B02FA File Offset: 0x014AE4FA
+			// Token: 0x17007902 RID: 30978
+			// (get) Token: 0x06044788 RID: 280456 RVA: 0x01469482 File Offset: 0x01467682
+			// (set) Token: 0x06044789 RID: 280457 RVA: 0x0146948A File Offset: 0x0146768A
 			public int OriginalIndex { get; set; }
 		}
 	}

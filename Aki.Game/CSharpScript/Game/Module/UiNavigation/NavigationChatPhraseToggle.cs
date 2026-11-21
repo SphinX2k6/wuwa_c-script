@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004927 RID: 18727
+	// Token: 0x0200389E RID: 14494
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationChatPhraseToggle : NavigationButton
 	{
-		// Token: 0x06030EB4 RID: 200372 RVA: 0x00B5B7CF File Offset: 0x00B599CF
+		// Token: 0x060259E1 RID: 154081 RVA: 0x00A9663F File Offset: 0x00A9483F
 		public NavigationChatPhraseToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x170079CF RID: 31183
-		// (get) Token: 0x06030EB5 RID: 200373 RVA: 0x00B5B7DC File Offset: 0x00B599DC
+		// Token: 0x17004D37 RID: 19767
+		// (get) Token: 0x060259E2 RID: 154082 RVA: 0x00A9664C File Offset: 0x00A9484C
 		protected PhoneSystemChatProxy Proxy
 		{
 			get
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030EB6 RID: 200374 RVA: 0x00B5B81B File Offset: 0x00B59A1B
+		// Token: 0x060259E3 RID: 154083 RVA: 0x00A9668B File Offset: 0x00A9488B
 		protected override void OnNotifyFocusListener(bool isSameListener)
 		{
 			if (this.Proxy != null && !isSameListener)
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0401A3E1 RID: 107489
+		// Token: 0x04014C54 RID: 85076
 		protected PhoneSystemChatProxy ProxyInternal;
 	}
 }

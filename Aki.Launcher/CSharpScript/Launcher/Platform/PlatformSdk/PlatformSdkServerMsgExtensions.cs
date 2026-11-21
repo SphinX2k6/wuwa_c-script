@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x020001A0 RID: 416
+	// Token: 0x020001A4 RID: 420
 	public static class PlatformSdkServerMsgExtensions
 	{
-		// Token: 0x06000B79 RID: 2937 RVA: 0x00048C20 File Offset: 0x00046E20
+		// Token: 0x06000BB0 RID: 2992 RVA: 0x0004B410 File Offset: 0x00049610
 		public static string ToEnumString(this PlatformSdkServerMsg value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return result;
 		}
 
-		// Token: 0x06000B7A RID: 2938 RVA: 0x00048C58 File Offset: 0x00046E58
+		// Token: 0x06000BB1 RID: 2993 RVA: 0x0004B448 File Offset: 0x00049648
 		public static PlatformSdkServerMsg FromString(string name)
 		{
 			PlatformSdkServerMsg result;
@@ -38,7 +38,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return result;
 		}
 
-		// Token: 0x06000B7B RID: 2939 RVA: 0x00048C81 File Offset: 0x00046E81
+		// Token: 0x06000BB2 RID: 2994 RVA: 0x0004B471 File Offset: 0x00049671
 		public static bool TryFromString(string name, out PlatformSdkServerMsg value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return true;
 		}
 
-		// Token: 0x06000B7C RID: 2940 RVA: 0x00048CBA File Offset: 0x00046EBA
+		// Token: 0x06000BB3 RID: 2995 RVA: 0x0004B4AA File Offset: 0x000496AA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			};
 		}
 
-		// Token: 0x06000B7D RID: 2941 RVA: 0x00048CD2 File Offset: 0x00046ED2
+		// Token: 0x06000BB4 RID: 2996 RVA: 0x0004B4C2 File Offset: 0x000496C2
 		public static PlatformSdkServerMsg[] GetValues()
 		{
 			return new PlatformSdkServerMsg[]
@@ -80,7 +80,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			};
 		}
 
-		// Token: 0x06000B7E RID: 2942 RVA: 0x00048CDE File Offset: 0x00046EDE
+		// Token: 0x06000BB5 RID: 2997 RVA: 0x0004B4CE File Offset: 0x000496CE
 		public static string[] GetNames()
 		{
 			return new string[]

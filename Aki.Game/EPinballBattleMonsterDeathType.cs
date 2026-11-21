@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02000EA4 RID: 3748
+// Token: 0x02000359 RID: 857
 public enum EPinballBattleMonsterDeathType
 {
-	// Token: 0x04002A34 RID: 10804
+	// Token: 0x04002ACF RID: 10959
 	Normal
 }

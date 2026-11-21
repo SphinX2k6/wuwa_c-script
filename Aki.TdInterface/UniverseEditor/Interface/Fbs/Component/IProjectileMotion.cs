@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057A5 RID: 22437
+	// Token: 0x02005DAC RID: 23980
 	public struct IProjectileMotion : IFlatbufferObject
 	{
-		// Token: 0x1700A76C RID: 42860
-		// (get) Token: 0x06025A40 RID: 154176 RVA: 0x00531402 File Offset: 0x0052F602
+		// Token: 0x1700B090 RID: 45200
+		// (get) Token: 0x06027F60 RID: 163680 RVA: 0x0057758E File Offset: 0x0057578E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025A41 RID: 154177 RVA: 0x0053140F File Offset: 0x0052F60F
+		// Token: 0x06027F61 RID: 163681 RVA: 0x0057759B File Offset: 0x0057579B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025A42 RID: 154178 RVA: 0x00531418 File Offset: 0x0052F618
+		// Token: 0x06027F62 RID: 163682 RVA: 0x005775A4 File Offset: 0x005757A4
 		public static IProjectileMotion GetRootAsIProjectileMotion(ByteBuffer _bb)
 		{
 			return IProjectileMotion.GetRootAsIProjectileMotion(_bb, default(IProjectileMotion));
 		}
 
-		// Token: 0x06025A43 RID: 154179 RVA: 0x00531434 File Offset: 0x0052F634
+		// Token: 0x06027F63 RID: 163683 RVA: 0x005775C0 File Offset: 0x005757C0
 		public static IProjectileMotion GetRootAsIProjectileMotion(ByteBuffer _bb, IProjectileMotion obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025A44 RID: 154180 RVA: 0x00531451 File Offset: 0x0052F651
+		// Token: 0x06027F64 RID: 163684 RVA: 0x005775DD File Offset: 0x005757DD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025A45 RID: 154181 RVA: 0x00531460 File Offset: 0x0052F660
+		// Token: 0x06027F65 RID: 163685 RVA: 0x005775EC File Offset: 0x005757EC
 		public IProjectileMotion __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A76D RID: 42861
-		// (get) Token: 0x06025A46 RID: 154182 RVA: 0x00531470 File Offset: 0x0052F670
+		// Token: 0x1700B091 RID: 45201
+		// (get) Token: 0x06027F66 RID: 163686 RVA: 0x005775FC File Offset: 0x005757FC
 		public EThrowMotion Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A76E RID: 42862
-		// (get) Token: 0x06025A47 RID: 154183 RVA: 0x005314AC File Offset: 0x0052F6AC
+		// Token: 0x1700B092 RID: 45202
+		// (get) Token: 0x06027F67 RID: 163687 RVA: 0x00577638 File Offset: 0x00575838
 		public float Velocity
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A76F RID: 42863
-		// (get) Token: 0x06025A48 RID: 154184 RVA: 0x005314EC File Offset: 0x0052F6EC
+		// Token: 0x1700B093 RID: 45203
+		// (get) Token: 0x06027F68 RID: 163688 RVA: 0x00577678 File Offset: 0x00575878
 		public float AngularVelocity
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A770 RID: 42864
-		// (get) Token: 0x06025A49 RID: 154185 RVA: 0x0053152C File Offset: 0x0052F72C
+		// Token: 0x1700B094 RID: 45204
+		// (get) Token: 0x06027F69 RID: 163689 RVA: 0x005776B8 File Offset: 0x005758B8
 		public string CameraShake
 		{
 			get
@@ -107,20 +107,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025A4A RID: 154186 RVA: 0x00531564 File Offset: 0x0052F764
+		// Token: 0x06027F6A RID: 163690 RVA: 0x005776F0 File Offset: 0x005758F0
 		public Span<byte> GetCameraShakeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06025A4B RID: 154187 RVA: 0x00531574 File Offset: 0x0052F774
+		// Token: 0x06027F6B RID: 163691 RVA: 0x00577700 File Offset: 0x00575900
 		public byte[] GetCameraShakeArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700A771 RID: 42865
-		// (get) Token: 0x06025A4C RID: 154188 RVA: 0x00531584 File Offset: 0x0052F784
+		// Token: 0x1700B095 RID: 45205
+		// (get) Token: 0x06027F6C RID: 163692 RVA: 0x00577710 File Offset: 0x00575910
 		public ISpeedCurveMotion? MatchSpeedCurve
 		{
 			get
@@ -134,7 +134,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025A4D RID: 154189 RVA: 0x005315E2 File Offset: 0x0052F7E2
+		// Token: 0x06027F6D RID: 163693 RVA: 0x0057776E File Offset: 0x0057596E
 		public static Offset<IProjectileMotion> CreateIProjectileMotion(FlatBufferBuilder builder, EThrowMotion Type = EThrowMotion.Projectile, float Velocity = 0f, float AngularVelocity = 0f, StringOffset CameraShakeOffset = default(StringOffset), Offset<ISpeedCurveMotion> MatchSpeedCurveOffset = default(Offset<ISpeedCurveMotion>))
 		{
 			builder.StartTable(5);
@@ -146,49 +146,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IProjectileMotion.EndIProjectileMotion(builder);
 		}
 
-		// Token: 0x06025A4E RID: 154190 RVA: 0x00531616 File Offset: 0x0052F816
+		// Token: 0x06027F6E RID: 163694 RVA: 0x005777A2 File Offset: 0x005759A2
 		public static void StartIProjectileMotion(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06025A4F RID: 154191 RVA: 0x0053161F File Offset: 0x0052F81F
+		// Token: 0x06027F6F RID: 163695 RVA: 0x005777AB File Offset: 0x005759AB
 		public static void AddType(FlatBufferBuilder builder, EThrowMotion type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06025A50 RID: 154192 RVA: 0x0053162A File Offset: 0x0052F82A
+		// Token: 0x06027F70 RID: 163696 RVA: 0x005777B6 File Offset: 0x005759B6
 		public static void AddVelocity(FlatBufferBuilder builder, float velocity)
 		{
 			builder.AddFloat(1, velocity, 0.0);
 		}
 
-		// Token: 0x06025A51 RID: 154193 RVA: 0x0053163D File Offset: 0x0052F83D
+		// Token: 0x06027F71 RID: 163697 RVA: 0x005777C9 File Offset: 0x005759C9
 		public static void AddAngularVelocity(FlatBufferBuilder builder, float angularVelocity)
 		{
 			builder.AddFloat(2, angularVelocity, 0.0);
 		}
 
-		// Token: 0x06025A52 RID: 154194 RVA: 0x00531650 File Offset: 0x0052F850
+		// Token: 0x06027F72 RID: 163698 RVA: 0x005777DC File Offset: 0x005759DC
 		public static void AddCameraShake(FlatBufferBuilder builder, StringOffset cameraShakeOffset)
 		{
 			builder.AddOffset(3, cameraShakeOffset.Value, 0);
 		}
 
-		// Token: 0x06025A53 RID: 154195 RVA: 0x00531660 File Offset: 0x0052F860
+		// Token: 0x06027F73 RID: 163699 RVA: 0x005777EC File Offset: 0x005759EC
 		public static void AddMatchSpeedCurve(FlatBufferBuilder builder, Offset<ISpeedCurveMotion> matchSpeedCurveOffset)
 		{
 			builder.AddOffset(4, matchSpeedCurveOffset.Value, 0);
 		}
 
-		// Token: 0x06025A54 RID: 154196 RVA: 0x00531670 File Offset: 0x0052F870
+		// Token: 0x06027F74 RID: 163700 RVA: 0x005777FC File Offset: 0x005759FC
 		public static Offset<IProjectileMotion> EndIProjectileMotion(FlatBufferBuilder builder)
 		{
 			return new Offset<IProjectileMotion>(builder.EndTable());
 		}
 
-		// Token: 0x06025A55 RID: 154197 RVA: 0x00531680 File Offset: 0x0052F880
+		// Token: 0x06027F75 RID: 163701 RVA: 0x0057780C File Offset: 0x00575A0C
 		public IProjectileMotionT UnPack()
 		{
 			IProjectileMotionT projectileMotionT = new IProjectileMotionT();
@@ -196,7 +196,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return projectileMotionT;
 		}
 
-		// Token: 0x06025A56 RID: 154198 RVA: 0x0053169C File Offset: 0x0052F89C
+		// Token: 0x06027F76 RID: 163702 RVA: 0x00577828 File Offset: 0x00575A28
 		public void UnPackTo(IProjectileMotionT _o)
 		{
 			_o.Type = this.Type;
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.MatchSpeedCurve = ((this.MatchSpeedCurve != null) ? this.MatchSpeedCurve.Value.UnPack() : null);
 		}
 
-		// Token: 0x06025A57 RID: 154199 RVA: 0x00531708 File Offset: 0x0052F908
+		// Token: 0x06027F77 RID: 163703 RVA: 0x00577894 File Offset: 0x00575A94
 		public static Offset<IProjectileMotion> Pack(FlatBufferBuilder builder, IProjectileMotionT _o)
 		{
 			if (_o == null)
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IProjectileMotion.CreateIProjectileMotion(builder, _o.Type, _o.Velocity, _o.AngularVelocity, cameraShakeOffset, matchSpeedCurveOffset);
 		}
 
-		// Token: 0x0400EC71 RID: 60529
+		// Token: 0x0400F95C RID: 63836
 		private Table __p;
 	}
 }

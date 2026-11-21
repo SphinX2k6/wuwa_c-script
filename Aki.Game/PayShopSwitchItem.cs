@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002390 RID: 9104
+// Token: 0x02001875 RID: 6261
 [NullableContext(1)]
 [Nullable(0)]
 public class PayShopSwitchItem : CommonTabItemBase, ITabViewRegister
 {
-	// Token: 0x06012339 RID: 74553 RVA: 0x0047B2D0 File Offset: 0x004794D0
+	// Token: 0x0600F7EB RID: 63467 RVA: 0x00488620 File Offset: 0x00486820
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -41,7 +41,7 @@ public class PayShopSwitchItem : CommonTabItemBase, ITabViewRegister
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601233A RID: 74554 RVA: 0x0047B41C File Offset: 0x0047961C
+	// Token: 0x0600F7EC RID: 63468 RVA: 0x0048876C File Offset: 0x0048696C
 	public override void Refresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		this.CurrentData = data;
@@ -50,26 +50,26 @@ public class PayShopSwitchItem : CommonTabItemBase, ITabViewRegister
 		this.GetTabToggle().RootUIComp.Get().SetUIActive(true);
 	}
 
-	// Token: 0x0601233B RID: 74555 RVA: 0x0047B46B File Offset: 0x0047966B
+	// Token: 0x0600F7ED RID: 63469 RVA: 0x004887BB File Offset: 0x004869BB
 	protected override void OnStart()
 	{
 		base.OnStart();
 		base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0601233C RID: 74556 RVA: 0x0047B484 File Offset: 0x00479684
+	// Token: 0x0600F7EE RID: 63470 RVA: 0x004887D4 File Offset: 0x004869D4
 	protected override void OnBeforeHide()
 	{
 		this.UnBindRedDot();
 	}
 
-	// Token: 0x0601233D RID: 74557 RVA: 0x0047B48C File Offset: 0x0047968C
+	// Token: 0x0600F7EF RID: 63471 RVA: 0x004887DC File Offset: 0x004869DC
 	public void RegisterViewModule(UiTabViewBase tabView)
 	{
 		tabView.AddUiTabViewBehavior<UiTabSequence>().SetRootItem(tabView);
 	}
 
-	// Token: 0x0601233E RID: 74558 RVA: 0x0047B49A File Offset: 0x0047969A
+	// Token: 0x0600F7F0 RID: 63472 RVA: 0x004887EA File Offset: 0x004869EA
 	private void OnExtendToggleToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -78,13 +78,13 @@ public class PayShopSwitchItem : CommonTabItemBase, ITabViewRegister
 		}
 	}
 
-	// Token: 0x0601233F RID: 74559 RVA: 0x0047B4B3 File Offset: 0x004796B3
+	// Token: 0x0600F7F1 RID: 63473 RVA: 0x00488803 File Offset: 0x00486A03
 	protected override void OnSetToggleState(EToggleState state, bool bFire)
 	{
 		base.GetExtendToggle(1).SetToggleStateForce(state, bFire, false, false);
 	}
 
-	// Token: 0x06012340 RID: 74560 RVA: 0x0047B4C5 File Offset: 0x004796C5
+	// Token: 0x0600F7F2 RID: 63474 RVA: 0x00488815 File Offset: 0x00486A15
 	protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		if (data.Data != null)
@@ -93,18 +93,18 @@ public class PayShopSwitchItem : CommonTabItemBase, ITabViewRegister
 		}
 	}
 
-	// Token: 0x06012341 RID: 74561 RVA: 0x0047B4E0 File Offset: 0x004796E0
+	// Token: 0x0600F7F3 RID: 63475 RVA: 0x00488830 File Offset: 0x00486A30
 	protected override void OnUpdateTabIcon(string iconPath)
 	{
 	}
 
-	// Token: 0x06012342 RID: 74562 RVA: 0x0047B4E2 File Offset: 0x004796E2
+	// Token: 0x0600F7F4 RID: 63476 RVA: 0x00488832 File Offset: 0x00486A32
 	protected override UUIExtendToggle GetTabToggle()
 	{
 		return base.GetExtendToggle(1);
 	}
 
-	// Token: 0x06012343 RID: 74563 RVA: 0x0047B4EC File Offset: 0x004796EC
+	// Token: 0x0600F7F5 RID: 63477 RVA: 0x0048883C File Offset: 0x00486A3C
 	public void UpdateView(PayShopDefine.EPayShopTabType payShopId, int tabId)
 	{
 		PayShopTabData payShopTabDataByPayShopIdAndTabId = PayShopModel.Instance.GetPayShopTabDataByPayShopIdAndTabId(payShopId, tabId);
@@ -115,7 +115,7 @@ public class PayShopSwitchItem : CommonTabItemBase, ITabViewRegister
 		this.RefreshCountDown(payShopId, tabId);
 	}
 
-	// Token: 0x06012344 RID: 74564 RVA: 0x0047B554 File Offset: 0x00479754
+	// Token: 0x0600F7F6 RID: 63478 RVA: 0x004888A4 File Offset: 0x00486AA4
 	private void RefreshSpriteBg(PayShopDefine.EPayShopTabType payShopId, int tabId)
 	{
 		PayShopTabData payShopTabDataByPayShopIdAndTabId = PayShopModel.Instance.GetPayShopTabDataByPayShopIdAndTabId(payShopId, tabId);
@@ -147,7 +147,7 @@ public class PayShopSwitchItem : CommonTabItemBase, ITabViewRegister
 		}
 	}
 
-	// Token: 0x06012345 RID: 74565 RVA: 0x0047B5B4 File Offset: 0x004797B4
+	// Token: 0x0600F7F7 RID: 63479 RVA: 0x00488904 File Offset: 0x00486B04
 	private void RefreshTextureBg(PayShopDefine.EPayShopTabType payShopId, int tabId)
 	{
 		UUITexture texture = base.GetTexture(4);
@@ -162,7 +162,7 @@ public class PayShopSwitchItem : CommonTabItemBase, ITabViewRegister
 		texture.SetUIActive(false);
 	}
 
-	// Token: 0x06012346 RID: 74566 RVA: 0x0047B620 File Offset: 0x00479820
+	// Token: 0x0600F7F8 RID: 63480 RVA: 0x00488970 File Offset: 0x00486B70
 	public void RefreshCountDown(PayShopDefine.EPayShopTabType payShopId, int tabId)
 	{
 		UUIItem item = base.GetItem(5);
@@ -189,13 +189,13 @@ public class PayShopSwitchItem : CommonTabItemBase, ITabViewRegister
 		text.SetText("", true);
 	}
 
-	// Token: 0x06012347 RID: 74567 RVA: 0x0047B6C3 File Offset: 0x004798C3
+	// Token: 0x0600F7F9 RID: 63481 RVA: 0x00488A13 File Offset: 0x00486C13
 	public void UpdateTitle(string title)
 	{
 		base.GetText(0).SetText(title, true);
 	}
 
-	// Token: 0x06012348 RID: 74568 RVA: 0x0047B6D4 File Offset: 0x004798D4
+	// Token: 0x0600F7FA RID: 63482 RVA: 0x00488A24 File Offset: 0x00486C24
 	public void BindRedDot(ERedDotName redDotName, int tabId = 0)
 	{
 		this.UnBindRedDot();
@@ -205,7 +205,7 @@ public class PayShopSwitchItem : CommonTabItemBase, ITabViewRegister
 		RedDotController.Instance.BindRedDot(redDotName, item, null, tabId);
 	}
 
-	// Token: 0x06012349 RID: 74569 RVA: 0x0047B710 File Offset: 0x00479910
+	// Token: 0x0600F7FB RID: 63483 RVA: 0x00488A60 File Offset: 0x00486C60
 	public void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -216,35 +216,35 @@ public class PayShopSwitchItem : CommonTabItemBase, ITabViewRegister
 		}
 	}
 
-	// Token: 0x04008994 RID: 35220
+	// Token: 0x04008ADB RID: 35547
 	private ERedDotName? RedDotName;
 
-	// Token: 0x04008995 RID: 35221
+	// Token: 0x04008ADC RID: 35548
 	private int TabId;
 
-	// Token: 0x02008932 RID: 35122
+	// Token: 0x02007ABD RID: 31421
 	[NullableContext(0)]
 	private class EPayShopSwitchItem
 	{
-		// Token: 0x0402C993 RID: 182675
+		// Token: 0x04027CB1 RID: 162993
 		public const int Name = 0;
 
-		// Token: 0x0402C994 RID: 182676
+		// Token: 0x04027CB2 RID: 162994
 		public const int SwitchToggle = 1;
 
-		// Token: 0x0402C995 RID: 182677
+		// Token: 0x04027CB3 RID: 162995
 		public const int RedDot = 2;
 
-		// Token: 0x0402C996 RID: 182678
+		// Token: 0x04027CB4 RID: 162996
 		public const int SpriteTransitionNum = 3;
 
-		// Token: 0x0402C997 RID: 182679
+		// Token: 0x04027CB5 RID: 162997
 		public const int TextureBg = 4;
 
-		// Token: 0x0402C998 RID: 182680
+		// Token: 0x04027CB6 RID: 162998
 		public const int CountDownItem = 5;
 
-		// Token: 0x0402C999 RID: 182681
+		// Token: 0x04027CB7 RID: 162999
 		public const int CountDownText = 6;
 	}
 }

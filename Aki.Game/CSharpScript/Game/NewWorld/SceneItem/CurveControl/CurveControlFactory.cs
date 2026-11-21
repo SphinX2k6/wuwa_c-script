@@ -5,12 +5,12 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.CurveControl
 {
-	// Token: 0x0200720B RID: 29195
+	// Token: 0x020062C0 RID: 25280
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CurveControlFactory : Singleton
 	{
-		// Token: 0x06047789 RID: 292745 RVA: 0x012344A0 File Offset: 0x012326A0
+		// Token: 0x0603D09A RID: 250010 RVA: 0x0118DF30 File Offset: 0x0118C130
 		[NullableContext(2)]
 		public CurveControlBase CreateCurveControl(ECurveControlType? type)
 		{
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.CurveControl
 			return null;
 		}
 
-		// Token: 0x17009E1C RID: 40476
-		// (get) Token: 0x0604778A RID: 292746 RVA: 0x012344D6 File Offset: 0x012326D6
+		// Token: 0x17007382 RID: 29570
+		// (get) Token: 0x0603D09B RID: 250011 RVA: 0x0118DF66 File Offset: 0x0118C166
 		public static CurveControlFactory Instance
 		{
 			get
@@ -41,12 +41,12 @@ namespace CSharpScript.Game.NewWorld.SceneItem.CurveControl
 			}
 		}
 
-		// Token: 0x0604778B RID: 292747 RVA: 0x012344F9 File Offset: 0x012326F9
+		// Token: 0x0603D09C RID: 250012 RVA: 0x0118DF89 File Offset: 0x0118C189
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604778C RID: 292748 RVA: 0x012344FB File Offset: 0x012326FB
+		// Token: 0x0603D09D RID: 250013 RVA: 0x0118DF8B File Offset: 0x0118C18B
 		public static void ResetStaticDefaultValue()
 		{
 			CurveControlFactory instance = CurveControlFactory._instance;
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.CurveControl
 			CurveControlFactory._instance = null;
 		}
 
-		// Token: 0x0604778D RID: 292749 RVA: 0x01234514 File Offset: 0x01232714
+		// Token: 0x0603D09E RID: 250014 RVA: 0x0118DFA4 File Offset: 0x0118C1A4
 		static CurveControlFactory()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CurveControlFactory.CreateStaticDefaultValue), new Action(CurveControlFactory.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0604778E RID: 292750 RVA: 0x01234533 File Offset: 0x01232733
+		// Token: 0x0603D09F RID: 250015 RVA: 0x0118DFC3 File Offset: 0x0118C1C3
 		public CurveControlFactory()
 		{
 			Dictionary<ECurveControlType, Func<CurveControlBase>> dictionary = new Dictionary<ECurveControlType, Func<CurveControlBase>>();
@@ -72,10 +72,10 @@ namespace CSharpScript.Game.NewWorld.SceneItem.CurveControl
 			base..ctor();
 		}
 
-		// Token: 0x0402597E RID: 153982
+		// Token: 0x040205ED RID: 132589
 		private readonly Dictionary<ECurveControlType, Func<CurveControlBase>> CurveControlTypeMap;
 
-		// Token: 0x0402597F RID: 153983
+		// Token: 0x040205EE RID: 132590
 		[Nullable(2)]
 		private static CurveControlFactory _instance;
 	}

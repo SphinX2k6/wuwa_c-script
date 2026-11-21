@@ -1,16 +1,18 @@
 ﻿using System;
 
-// Token: 0x02003281 RID: 12929
+// Token: 0x020027F1 RID: 10225
 public enum ESkeletalMeshTickMode
 {
-	// Token: 0x0400DD1F RID: 56607
+	// Token: 0x0400E1BB RID: 57787
 	None,
-	// Token: 0x0400DD20 RID: 56608
+	// Token: 0x0400E1BC RID: 57788
 	TsProxy,
-	// Token: 0x0400DD21 RID: 56609
+	// Token: 0x0400E1BD RID: 57789
 	TsProxyMainMeshNotParallel,
-	// Token: 0x0400DD22 RID: 56610
+	// Token: 0x0400E1BE RID: 57790
 	TsTakeOver,
-	// Token: 0x0400DD23 RID: 56611
-	UeUpdate
+	// Token: 0x0400E1BF RID: 57791
+	UeUpdate,
+	// Token: 0x0400E1C0 RID: 57792
+	TsProxyEvaluateOnTick
 }

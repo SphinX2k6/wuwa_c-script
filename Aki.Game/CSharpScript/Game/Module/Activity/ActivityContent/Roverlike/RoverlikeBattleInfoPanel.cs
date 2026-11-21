@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006143 RID: 24899
+	// Token: 0x020050C1 RID: 20673
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeBattleInfoPanel : BattleViewDynamicUiBase
 	{
-		// Token: 0x0603EF0B RID: 257803 RVA: 0x00F340EC File Offset: 0x00F322EC
+		// Token: 0x06033BCB RID: 211915 RVA: 0x00E7AFCC File Offset: 0x00E791CC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EF0C RID: 257804 RVA: 0x00F341FC File Offset: 0x00F323FC
+		// Token: 0x06033BCC RID: 211916 RVA: 0x00E7B0DC File Offset: 0x00E792DC
 		protected override void OnStart()
 		{
 			this.LifeLayout = new GenericLayout<RoverlikeReviveLifeItem, bool>(base.GetHorizontalLayout(2), new Func<RoverlikeReviveLifeItem>(this.CreateLifeItem), (AUIBaseActor)base.GetItem(3).GetOwner(), false, true);
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshQSkillBuffUI();
 		}
 
-		// Token: 0x0603EF0D RID: 257805 RVA: 0x00F342A0 File Offset: 0x00F324A0
+		// Token: 0x06033BCD RID: 211917 RVA: 0x00E7B180 File Offset: 0x00E79380
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<int, int>(EEventName.RoverlikeReviveTimesUpdate, new Action<int, int>(this.OnReviveTimesUpdate));
@@ -77,20 +77,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.StopRoleShowSequencePromise = null;
 		}
 
-		// Token: 0x0603EF0E RID: 257806 RVA: 0x00F34324 File Offset: 0x00F32524
+		// Token: 0x06033BCE RID: 211918 RVA: 0x00E7B204 File Offset: 0x00E79404
 		private void RefreshLifeUI()
 		{
 			RoverlikeModel instance = RoverlikeModel.Instance;
 			this.BuildLifeUI(instance.GetReviveTimes(), instance.GetReviveTimesMax());
 		}
 
-		// Token: 0x0603EF0F RID: 257807 RVA: 0x00F34349 File Offset: 0x00F32549
+		// Token: 0x06033BCF RID: 211919 RVA: 0x00E7B229 File Offset: 0x00E79429
 		private void OnReviveTimesUpdate(int reviveTimes, int reviveTimesMax)
 		{
 			this.BuildLifeUI(reviveTimes, reviveTimesMax);
 		}
 
-		// Token: 0x0603EF10 RID: 257808 RVA: 0x00F34354 File Offset: 0x00F32554
+		// Token: 0x06033BD0 RID: 211920 RVA: 0x00E7B234 File Offset: 0x00E79434
 		private void RefreshQSkillBuffUI()
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EF11 RID: 257809 RVA: 0x00F34424 File Offset: 0x00F32624
+		// Token: 0x06033BD1 RID: 211921 RVA: 0x00E7B304 File Offset: 0x00E79504
 		private unsafe void OnQSkillBuffChanged(int entityId, GameplayCue cue, bool isAdd, int handleId)
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ShowQSkillRolePanel();
 		}
 
-		// Token: 0x0603EF12 RID: 257810 RVA: 0x00F34598 File Offset: 0x00F32798
+		// Token: 0x06033BD2 RID: 211922 RVA: 0x00E7B478 File Offset: 0x00E79678
 		private void ShowQSkillRolePanel()
 		{
 			UUIItem item = base.GetItem(1);
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RoleShowSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x0603EF13 RID: 257811 RVA: 0x00F34630 File Offset: 0x00F32830
+		// Token: 0x06033BD3 RID: 211923 RVA: 0x00E7B510 File Offset: 0x00E79710
 		private void HideQSkillRolePanel()
 		{
 			UUIItem roleShowPanel = base.GetItem(1);
@@ -253,14 +253,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			roleShowPanel3.SetUIActive(false);
 		}
 
-		// Token: 0x0603EF14 RID: 257812 RVA: 0x00F3470B File Offset: 0x00F3290B
+		// Token: 0x06033BD4 RID: 211924 RVA: 0x00E7B5EB File Offset: 0x00E797EB
 		private void BuildLifeUI(int reviveTimes, int reviveTimesMax)
 		{
 			this.UpdateLifeBgNiagaraVisible(reviveTimesMax);
 			this.UpdateLifeLayout(reviveTimes, reviveTimesMax);
 		}
 
-		// Token: 0x0603EF15 RID: 257813 RVA: 0x00F3471C File Offset: 0x00F3291C
+		// Token: 0x06033BD5 RID: 211925 RVA: 0x00E7B5FC File Offset: 0x00E797FC
 		private void UpdateLifeBgNiagaraVisible(int reviveTimesMax)
 		{
 			bool flag = reviveTimesMax > 0;
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			item.SetUIActive(flag);
 		}
 
-		// Token: 0x0603EF16 RID: 257814 RVA: 0x00F3476C File Offset: 0x00F3296C
+		// Token: 0x06033BD6 RID: 211926 RVA: 0x00E7B64C File Offset: 0x00E7984C
 		private void UpdateLifeLayout(int reviveTimes, int reviveTimesMax)
 		{
 			List<bool> list = new List<bool>();
@@ -295,22 +295,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			lifeLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603EF17 RID: 257815 RVA: 0x00F347A8 File Offset: 0x00F329A8
+		// Token: 0x06033BD7 RID: 211927 RVA: 0x00E7B688 File Offset: 0x00E79888
 		private RoverlikeReviveLifeItem CreateLifeItem()
 		{
 			return new RoverlikeReviveLifeItem();
 		}
 
-		// Token: 0x04020D9F RID: 134559
+		// Token: 0x0401B6CC RID: 112332
 		private const string ROLE_SHOW_SEQ_START = "Start";
 
-		// Token: 0x04020DA0 RID: 134560
+		// Token: 0x0401B6CD RID: 112333
 		private const string ROLE_SHOW_SEQ_CLOSE = "Close";
 
-		// Token: 0x04020DA1 RID: 134561
+		// Token: 0x0401B6CE RID: 112334
 		private readonly HashSet<int> ActiveQSkillBuffSet = new HashSet<int>();
 
-		// Token: 0x04020DA2 RID: 134562
+		// Token: 0x0401B6CF RID: 112335
 		[Nullable(new byte[]
 		{
 			2,
@@ -318,40 +318,40 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeReviveLifeItem, bool> LifeLayout;
 
-		// Token: 0x04020DA3 RID: 134563
+		// Token: 0x0401B6D0 RID: 112336
 		[Nullable(2)]
 		private LevelSequencePlayer RoleShowSequencePlayer;
 
-		// Token: 0x04020DA4 RID: 134564
+		// Token: 0x0401B6D1 RID: 112337
 		[Nullable(2)]
 		private CustomPromise<bool> StopRoleShowSequencePromise;
 
-		// Token: 0x04020DA5 RID: 134565
+		// Token: 0x0401B6D2 RID: 112338
 		private bool? IsLifeBgNiaVisible;
 
-		// Token: 0x0200C39F RID: 50079
+		// Token: 0x0200AD86 RID: 44422
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B080 RID: 241792
+			// Token: 0x040359E1 RID: 219617
 			public const int LifePanel = 0;
 
-			// Token: 0x0403B081 RID: 241793
+			// Token: 0x040359E2 RID: 219618
 			public const int RoleShowPanel = 1;
 
-			// Token: 0x0403B082 RID: 241794
+			// Token: 0x040359E3 RID: 219619
 			public const int LifeList = 2;
 
-			// Token: 0x0403B083 RID: 241795
+			// Token: 0x040359E4 RID: 219620
 			public const int LifeItem = 3;
 
-			// Token: 0x0403B084 RID: 241796
+			// Token: 0x040359E5 RID: 219621
 			public const int RoleTexture = 4;
 
-			// Token: 0x0403B085 RID: 241797
+			// Token: 0x040359E6 RID: 219622
 			public const int RoleNameText = 5;
 
-			// Token: 0x0403B086 RID: 241798
+			// Token: 0x040359E7 RID: 219623
 			public const int LifeBgNiagara = 6;
 		}
 	}

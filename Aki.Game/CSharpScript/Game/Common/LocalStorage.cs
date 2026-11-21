@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Common
 {
-	// Token: 0x02007286 RID: 29318
+	// Token: 0x02006405 RID: 25605
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LocalStorage : IStaticVariableResetter
 	{
-		// Token: 0x06047DB7 RID: 294327 RVA: 0x01262FF0 File Offset: 0x012611F0
+		// Token: 0x0603E177 RID: 254327 RVA: 0x01203A00 File Offset: 0x01201C00
 		static LocalStorage()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LocalStorage.CreateStaticDefaultValue), new Action(LocalStorage.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06047DB8 RID: 294328 RVA: 0x01263054 File Offset: 0x01261254
+		// Token: 0x0603E178 RID: 254328 RVA: 0x01203A64 File Offset: 0x01201C64
 		private static string GetJournalMode(LocalStorage.EJournalMode mode)
 		{
 			switch (mode)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Common
 			}
 		}
 
-		// Token: 0x06047DB9 RID: 294329 RVA: 0x012630A0 File Offset: 0x012612A0
+		// Token: 0x0603E179 RID: 254329 RVA: 0x01203AB0 File Offset: 0x01201CB0
 		public static void Initialize()
 		{
 			if (LocalStorage.IsInited)
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Common
 			LocalStorage.AddEventListener();
 		}
 
-		// Token: 0x06047DBA RID: 294330 RVA: 0x012630C0 File Offset: 0x012612C0
+		// Token: 0x0603E17A RID: 254330 RVA: 0x01203AD0 File Offset: 0x01201CD0
 		public static void Destroy()
 		{
 			LocalStorage.PlayerId = null;
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Common
 			LocalStorage.RemoveEventListener();
 		}
 
-		// Token: 0x06047DBB RID: 294331 RVA: 0x012630E2 File Offset: 0x012612E2
+		// Token: 0x0603E17B RID: 254331 RVA: 0x01203AF2 File Offset: 0x01201CF2
 		public static bool HasPlayerId()
 		{
 			return LocalStorage.PlayerId != null;
 		}
 
-		// Token: 0x06047DBC RID: 294332 RVA: 0x012630F0 File Offset: 0x012612F0
+		// Token: 0x0603E17C RID: 254332 RVA: 0x01203B00 File Offset: 0x01201D00
 		[NullableContext(2)]
 		public static T GetGlobal<T>(ELocalStorageGlobalKey key, T defaultValue = default(T))
 		{
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Common
 			return result;
 		}
 
-		// Token: 0x06047DBD RID: 294333 RVA: 0x012631DC File Offset: 0x012613DC
+		// Token: 0x0603E17D RID: 254333 RVA: 0x01203BEC File Offset: 0x01201DEC
 		[NullableContext(2)]
 		public unsafe static bool SetGlobal<T>(ELocalStorageGlobalKey key, T value)
 		{
@@ -167,14 +167,14 @@ namespace CSharpScript.Game.Common
 			return result;
 		}
 
-		// Token: 0x06047DBE RID: 294334 RVA: 0x012632F0 File Offset: 0x012614F0
+		// Token: 0x0603E17E RID: 254334 RVA: 0x01203D00 File Offset: 0x01201F00
 		public static bool DeleteGlobal(ELocalStorageGlobalKey key)
 		{
 			string text = LocalStorage.CheckAndGetGlobalKeyName(key);
 			return text != null && LocalStorage.DeleteKey(text, false);
 		}
 
-		// Token: 0x06047DBF RID: 294335 RVA: 0x01263310 File Offset: 0x01261510
+		// Token: 0x0603E17F RID: 254335 RVA: 0x01203D20 File Offset: 0x01201F20
 		[NullableContext(2)]
 		public static T GetDeviceSaved<[Nullable(1)] T>(ELocalStorageDeviceKey key, T defaultValue = default(T)) where T : class
 		{
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Common
 			return result;
 		}
 
-		// Token: 0x06047DC0 RID: 294336 RVA: 0x012633C4 File Offset: 0x012615C4
+		// Token: 0x0603E180 RID: 254336 RVA: 0x01203DD4 File Offset: 0x01201FD4
 		[NullableContext(2)]
 		public unsafe static bool SetDeviceSaved<T>(ELocalStorageDeviceKey key, T value)
 		{
@@ -253,14 +253,14 @@ namespace CSharpScript.Game.Common
 			return result;
 		}
 
-		// Token: 0x06047DC1 RID: 294337 RVA: 0x012634A0 File Offset: 0x012616A0
+		// Token: 0x0603E181 RID: 254337 RVA: 0x01203EB0 File Offset: 0x012020B0
 		public static bool DeleteDeviceSaved(ELocalStorageDeviceKey key)
 		{
 			string text = LocalStorage.CheckAndGetDeviceKeyName(key);
 			return text != null && LocalStorage.DeleteKey(text, true);
 		}
 
-		// Token: 0x06047DC2 RID: 294338 RVA: 0x012634C0 File Offset: 0x012616C0
+		// Token: 0x0603E182 RID: 254338 RVA: 0x01203ED0 File Offset: 0x012020D0
 		[NullableContext(2)]
 		public static T GetPlayer<T>(ELocalStoragePlayerKey key, T defaultValue = default(T))
 		{
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Common
 			return result;
 		}
 
-		// Token: 0x06047DC3 RID: 294339 RVA: 0x01263574 File Offset: 0x01261774
+		// Token: 0x0603E183 RID: 254339 RVA: 0x01203F84 File Offset: 0x01202184
 		public unsafe static bool SetPlayer<[Nullable(2)] T>(ELocalStoragePlayerKey key, T value)
 		{
 			string text = LocalStorage.CheckAndGetPlayerKeyName(key);
@@ -338,14 +338,14 @@ namespace CSharpScript.Game.Common
 			return result;
 		}
 
-		// Token: 0x06047DC4 RID: 294340 RVA: 0x01263650 File Offset: 0x01261850
+		// Token: 0x0603E184 RID: 254340 RVA: 0x01204060 File Offset: 0x01202260
 		public static bool DeletePlayer(ELocalStoragePlayerKey key)
 		{
 			string text = LocalStorage.CheckAndGetPlayerKeyName(key);
 			return text != null && LocalStorage.DeleteKey(text, false);
 		}
 
-		// Token: 0x06047DC5 RID: 294341 RVA: 0x01263670 File Offset: 0x01261870
+		// Token: 0x0603E185 RID: 254341 RVA: 0x01204080 File Offset: 0x01202280
 		private static void InitDbPath()
 		{
 			if (string.IsNullOrEmpty(LocalStorage.DbPath))
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.Common
 			}
 		}
 
-		// Token: 0x06047DC6 RID: 294342 RVA: 0x012636A4 File Offset: 0x012618A4
+		// Token: 0x0603E186 RID: 254342 RVA: 0x012040B4 File Offset: 0x012022B4
 		private static bool OpenOrCreateDb()
 		{
 			string text = LocalStorage.DbPath;
@@ -426,7 +426,7 @@ namespace CSharpScript.Game.Common
 			return LocalStorage.CreateTable();
 		}
 
-		// Token: 0x06047DC7 RID: 294343 RVA: 0x0126382C File Offset: 0x01261A2C
+		// Token: 0x0603E187 RID: 254343 RVA: 0x0120423C File Offset: 0x0120243C
 		private static bool CreateTable()
 		{
 			string dbPath = LocalStorage.DbPath;
@@ -453,7 +453,7 @@ namespace CSharpScript.Game.Common
 			return flag;
 		}
 
-		// Token: 0x06047DC8 RID: 294344 RVA: 0x012638B0 File Offset: 0x01261AB0
+		// Token: 0x0603E188 RID: 254344 RVA: 0x012042C0 File Offset: 0x012024C0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -482,7 +482,7 @@ namespace CSharpScript.Game.Common
 			return new ValueTuple<bool, string>(true, empty);
 		}
 
-		// Token: 0x06047DC9 RID: 294345 RVA: 0x01263944 File Offset: 0x01261B44
+		// Token: 0x0603E189 RID: 254345 RVA: 0x01204354 File Offset: 0x01202554
 		private static bool SetValue(string keyName, string value, bool bIsDeviceDb)
 		{
 			string dbPath = bIsDeviceDb ? LocalStorage.DeviceDbPath : LocalStorage.DbPath;
@@ -501,20 +501,20 @@ namespace CSharpScript.Game.Common
 			return true;
 		}
 
-		// Token: 0x06047DCA RID: 294346 RVA: 0x012639DB File Offset: 0x01261BDB
+		// Token: 0x0603E18A RID: 254346 RVA: 0x012043EB File Offset: 0x012025EB
 		[return: Nullable(2)]
 		private static string GetCacheEncodeValue(string keyName)
 		{
 			return LocalStorage.Cache.Get(keyName);
 		}
 
-		// Token: 0x06047DCB RID: 294347 RVA: 0x012639E8 File Offset: 0x01261BE8
+		// Token: 0x0603E18B RID: 254347 RVA: 0x012043F8 File Offset: 0x012025F8
 		private static void SetCacheValue(string keyName, string encodeValue)
 		{
 			LocalStorage.Cache.Set(keyName, encodeValue);
 		}
 
-		// Token: 0x06047DCC RID: 294348 RVA: 0x012639F8 File Offset: 0x01261BF8
+		// Token: 0x0603E18C RID: 254348 RVA: 0x01204408 File Offset: 0x01202608
 		private static bool DeleteKey(string key, bool bIsDeviceDb)
 		{
 			string dbPath = bIsDeviceDb ? LocalStorage.DeviceDbPath : LocalStorage.DbPath;
@@ -529,7 +529,7 @@ namespace CSharpScript.Game.Common
 			return true;
 		}
 
-		// Token: 0x06047DCD RID: 294349 RVA: 0x01263A67 File Offset: 0x01261C67
+		// Token: 0x0603E18D RID: 254349 RVA: 0x01204477 File Offset: 0x01202677
 		private static void AddEventListener()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -542,7 +542,7 @@ namespace CSharpScript.Game.Common
 			instance.Add(name, handle);
 		}
 
-		// Token: 0x06047DCE RID: 294350 RVA: 0x01263A94 File Offset: 0x01261C94
+		// Token: 0x0603E18E RID: 254350 RVA: 0x012044A4 File Offset: 0x012026A4
 		private static void RemoveEventListener()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -555,14 +555,14 @@ namespace CSharpScript.Game.Common
 			instance.Remove(name, handle);
 		}
 
-		// Token: 0x06047DCF RID: 294351 RVA: 0x01263AC1 File Offset: 0x01261CC1
+		// Token: 0x0603E18F RID: 254351 RVA: 0x012044D1 File Offset: 0x012026D1
 		private static void SetPlayerId(int id)
 		{
 			LocalStorage.PlayerId = new int?(id);
 			EventSystem.Instance.Emit(EEventName.LocalStorageInitPlayerId);
 		}
 
-		// Token: 0x06047DD0 RID: 294352 RVA: 0x01263AE0 File Offset: 0x01261CE0
+		// Token: 0x0603E190 RID: 254352 RVA: 0x012044F0 File Offset: 0x012026F0
 		[NullableContext(2)]
 		private static string CheckAndGetGlobalKeyName(ELocalStorageGlobalKey key)
 		{
@@ -580,7 +580,7 @@ namespace CSharpScript.Game.Common
 			return text;
 		}
 
-		// Token: 0x06047DD1 RID: 294353 RVA: 0x01263B38 File Offset: 0x01261D38
+		// Token: 0x0603E191 RID: 254353 RVA: 0x01204548 File Offset: 0x01202748
 		[NullableContext(2)]
 		private static string CheckAndGetDeviceKeyName(ELocalStorageDeviceKey key)
 		{
@@ -598,7 +598,7 @@ namespace CSharpScript.Game.Common
 			return text;
 		}
 
-		// Token: 0x06047DD2 RID: 294354 RVA: 0x01263B90 File Offset: 0x01261D90
+		// Token: 0x0603E192 RID: 254354 RVA: 0x012045A0 File Offset: 0x012027A0
 		[NullableContext(2)]
 		private unsafe static string CheckAndGetPlayerKeyName(ELocalStoragePlayerKey key)
 		{
@@ -632,13 +632,13 @@ namespace CSharpScript.Game.Common
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06047DD3 RID: 294355 RVA: 0x01263C78 File Offset: 0x01261E78
+		// Token: 0x0603E193 RID: 254355 RVA: 0x01204688 File Offset: 0x01202888
 		public static void CreateStaticDefaultValue()
 		{
 			LocalStorage.Cache = new LocalStorageCache();
 		}
 
-		// Token: 0x06047DD4 RID: 294356 RVA: 0x01263C84 File Offset: 0x01261E84
+		// Token: 0x0603E194 RID: 254356 RVA: 0x01204694 File Offset: 0x01202894
 		public static void ResetStaticDefaultValue()
 		{
 			LocalStorage.DbPath = null;
@@ -648,89 +648,89 @@ namespace CSharpScript.Game.Common
 			LocalStorage.IsInited = false;
 		}
 
-		// Token: 0x04025C7A RID: 154746
+		// Token: 0x04020F3A RID: 134970
 		private const string DBPATH = "LocalStorage/LocalStorage";
 
-		// Token: 0x04025C7B RID: 154747
+		// Token: 0x04020F3B RID: 134971
 		private const string DEVICEDBPATH = "DeviceSaved/DeviceStorage";
 
-		// Token: 0x04025C7C RID: 154748
+		// Token: 0x04020F3C RID: 134972
 		private const string DBSUFFIX = ".db";
 
-		// Token: 0x04025C7D RID: 154749
+		// Token: 0x04020F3D RID: 134973
 		private const string TABLENAME = "LocalStorage";
 
-		// Token: 0x04025C7E RID: 154750
+		// Token: 0x04020F3E RID: 134974
 		private const int DBNUM = 10;
 
-		// Token: 0x04025C7F RID: 154751
+		// Token: 0x04020F3F RID: 134975
 		private const bool ISUSEDB = true;
 
-		// Token: 0x04025C80 RID: 154752
+		// Token: 0x04020F40 RID: 134976
 		private const bool USE_THREAD = true;
 
-		// Token: 0x04025C81 RID: 154753
+		// Token: 0x04020F41 RID: 134977
 		private const bool USE_CACHE = true;
 
-		// Token: 0x04025C82 RID: 154754
+		// Token: 0x04020F42 RID: 134978
 		private const int SQLITE_ERR = -1;
 
-		// Token: 0x04025C83 RID: 154755
+		// Token: 0x04020F43 RID: 134979
 		private const int SQLITE_NO_DATA = 1;
 
-		// Token: 0x04025C84 RID: 154756
+		// Token: 0x04020F44 RID: 134980
 		private const int CHECK_COMPLEX_THRESHOLD = 600;
 
-		// Token: 0x04025C85 RID: 154757
+		// Token: 0x04020F45 RID: 134981
 		private const LocalStorage.EJournalMode USE_JOURNAL_MODE = LocalStorage.EJournalMode.Persist;
 
-		// Token: 0x04025C86 RID: 154758
+		// Token: 0x04020F46 RID: 134982
 		[Nullable(2)]
 		private static string DbPath;
 
-		// Token: 0x04025C87 RID: 154759
+		// Token: 0x04020F47 RID: 134983
 		[Nullable(2)]
 		private static string DeviceDbPath;
 
-		// Token: 0x04025C88 RID: 154760
+		// Token: 0x04020F48 RID: 134984
 		private static int? PlayerId;
 
-		// Token: 0x04025C89 RID: 154761
+		// Token: 0x04020F49 RID: 134985
 		[Nullable(2)]
 		private static LocalStorageCache Cache;
 
-		// Token: 0x04025C8A RID: 154762
+		// Token: 0x04020F4A RID: 134986
 		private static bool IsInited = false;
 
-		// Token: 0x04025C8B RID: 154763
+		// Token: 0x04020F4B RID: 134987
 		[StaticVariableRuleIgnore]
 		private static readonly Stat StatOpenOrCreateDb = Stat.Create("LocalStorage_OpenOrCreateDb", "", "");
 
-		// Token: 0x04025C8C RID: 154764
+		// Token: 0x04020F4C RID: 134988
 		[StaticVariableRuleIgnore]
 		private static readonly Stat StatCreateTable = Stat.Create("LocalStorage_CreateTable", "", "");
 
-		// Token: 0x0200CF8E RID: 53134
+		// Token: 0x0200BB7A RID: 47994
 		[NullableContext(0)]
 		private enum EJournalMode
 		{
-			// Token: 0x0403E61F RID: 255519
+			// Token: 0x04039A4B RID: 236107
 			Delete,
-			// Token: 0x0403E620 RID: 255520
+			// Token: 0x04039A4C RID: 236108
 			Truncate,
-			// Token: 0x0403E621 RID: 255521
+			// Token: 0x04039A4D RID: 236109
 			Persist,
-			// Token: 0x0403E622 RID: 255522
+			// Token: 0x04039A4E RID: 236110
 			Memory,
-			// Token: 0x0403E623 RID: 255523
+			// Token: 0x04039A4F RID: 236111
 			Off
 		}
 
-		// Token: 0x0200CF8F RID: 53135
+		// Token: 0x0200BB7B RID: 47995
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403E624 RID: 255524
+			// Token: 0x04039A50 RID: 236112
 			[Nullable(0)]
 			public static Action<int> <0>__SetPlayerId;
 		}

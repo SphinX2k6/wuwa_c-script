@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001252 RID: 4690
+	// Token: 0x02001392 RID: 5010
 	public static class ELevelPlayTrackSwitchRuleExtensions
 	{
-		// Token: 0x06006A18 RID: 27160 RVA: 0x000FE634 File Offset: 0x000FC834
+		// Token: 0x0600706B RID: 28779 RVA: 0x0010C260 File Offset: 0x0010A460
 		public static string ToEnumString(this ELevelPlayTrackSwitchRule value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A19 RID: 27161 RVA: 0x000FE66C File Offset: 0x000FC86C
+		// Token: 0x0600706C RID: 28780 RVA: 0x0010C298 File Offset: 0x0010A498
 		public static ELevelPlayTrackSwitchRule FromString(string name)
 		{
 			ELevelPlayTrackSwitchRule result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A1A RID: 27162 RVA: 0x000FE695 File Offset: 0x000FC895
+		// Token: 0x0600706D RID: 28781 RVA: 0x0010C2C1 File Offset: 0x0010A4C1
 		public static bool TryFromString(string name, out ELevelPlayTrackSwitchRule value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006A1B RID: 27163 RVA: 0x000FE6CE File Offset: 0x000FC8CE
+		// Token: 0x0600706E RID: 28782 RVA: 0x0010C2FA File Offset: 0x0010A4FA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A1C RID: 27164 RVA: 0x000FE6E6 File Offset: 0x000FC8E6
+		// Token: 0x0600706F RID: 28783 RVA: 0x0010C312 File Offset: 0x0010A512
 		public static ELevelPlayTrackSwitchRule[] GetValues()
 		{
 			return new ELevelPlayTrackSwitchRule[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A1D RID: 27165 RVA: 0x000FE6F2 File Offset: 0x000FC8F2
+		// Token: 0x06007070 RID: 28784 RVA: 0x0010C31E File Offset: 0x0010A51E
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200316F RID: 12655
+// Token: 0x020026DC RID: 9948
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,12 +11,12 @@ using UnrealEngine;
 })]
 public class CodeFunctionAnimalFoxSetJumpTarget : CodeFunctionBase<SpecialSkillAnimalFox>
 {
-	// Token: 0x0601B399 RID: 111513 RVA: 0x0076D8CA File Offset: 0x0076BACA
+	// Token: 0x06018E9E RID: 102046 RVA: 0x0079522E File Offset: 0x0079342E
 	public CodeFunctionAnimalFoxSetJumpTarget(SpecialSkillAnimalFox specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B39A RID: 111514 RVA: 0x0076D8D4 File Offset: 0x0076BAD4
+	// Token: 0x06018E9F RID: 102047 RVA: 0x00795238 File Offset: 0x00793438
 	public override FKuroCodeFunctionResult Execute(FKuroCodeFunctionPayload payload)
 	{
 		FVector fvector;
@@ -28,9 +28,9 @@ public class CodeFunctionAnimalFoxSetJumpTarget : CodeFunctionBase<SpecialSkillA
 		return base.GetDefaultSuccessResult();
 	}
 
-	// Token: 0x0400D468 RID: 54376
+	// Token: 0x0400D8CB RID: 55499
 	public static readonly string FunctionName = "AnimalFox.SetJumpTarget";
 
-	// Token: 0x0400D469 RID: 54377
+	// Token: 0x0400D8CC RID: 55500
 	private const string JUMP_TARGET = "JumpTarget";
 }

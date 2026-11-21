@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200290E RID: 10510
+// Token: 0x02001E89 RID: 7817
 public interface IRouletteReplaceParam
 {
-	// Token: 0x17001D1A RID: 7450
-	// (get) Token: 0x06015AD1 RID: 88785
-	// (set) Token: 0x06015AD2 RID: 88786
+	// Token: 0x17001D74 RID: 7540
+	// (get) Token: 0x060134D5 RID: 79061
+	// (set) Token: 0x060134D6 RID: 79062
 	int TagId { get; set; }
 
-	// Token: 0x17001D1B RID: 7451
-	// (get) Token: 0x06015AD3 RID: 88787
-	// (set) Token: 0x06015AD4 RID: 88788
+	// Token: 0x17001D75 RID: 7541
+	// (get) Token: 0x060134D7 RID: 79063
+	// (set) Token: 0x060134D8 RID: 79064
 	int SortId { get; set; }
 
-	// Token: 0x17001D1C RID: 7452
-	// (get) Token: 0x06015AD5 RID: 88789
-	// (set) Token: 0x06015AD6 RID: 88790
+	// Token: 0x17001D76 RID: 7542
+	// (get) Token: 0x060134D9 RID: 79065
+	// (set) Token: 0x060134DA RID: 79066
 	int ReplaceId { get; set; }
 }

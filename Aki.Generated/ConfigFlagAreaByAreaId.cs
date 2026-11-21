@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002F2 RID: 754
+	// Token: 0x02000307 RID: 775
 	public class ConfigFlagAreaByAreaId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060011B1 RID: 4529 RVA: 0x000BD7BF File Offset: 0x000BB9BF
+		// Token: 0x0600122F RID: 4655 RVA: 0x000C3CCB File Offset: 0x000C1ECB
 		static ConfigFlagAreaByAreaId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFlagAreaByAreaId.CreateStaticDefaultValue), new Action(ConfigFlagAreaByAreaId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060011B2 RID: 4530 RVA: 0x000BD7E0 File Offset: 0x000BB9E0
+		// Token: 0x06001230 RID: 4656 RVA: 0x000C3CEC File Offset: 0x000C1EEC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFlagAreaByAreaId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060011B3 RID: 4531 RVA: 0x000BD85F File Offset: 0x000BBA5F
+		// Token: 0x06001231 RID: 4657 RVA: 0x000C3D6B File Offset: 0x000C1F6B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFlagAreaByAreaId.LogPair = null;
 			ConfigFlagAreaByAreaId.HandleId = 0;
 		}
 
-		// Token: 0x060011B4 RID: 4532 RVA: 0x000BD86D File Offset: 0x000BBA6D
+		// Token: 0x06001232 RID: 4658 RVA: 0x000C3D79 File Offset: 0x000C1F79
 		public static void Init()
 		{
 			ConfigFlagAreaByAreaId.HandleId = ConfigCommon.InitDataStatement(ConfigFlagAreaByAreaId.HandleId, "db_moraleplay.db", "select BinData from `FlagArea` where FlagAreaId=?");
 		}
 
-		// Token: 0x060011B5 RID: 4533 RVA: 0x000BD888 File Offset: 0x000BBA88
+		// Token: 0x06001233 RID: 4659 RVA: 0x000C3D94 File Offset: 0x000C1F94
 		[NullableContext(2)]
 		public static IReadOnlyList<FlagArea> GetConfigList(int p0FlagAreaId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001482 RID: 5250
+		// Token: 0x04001515 RID: 5397
 		private const string DB = "db_moraleplay.db";
 
-		// Token: 0x04001483 RID: 5251
+		// Token: 0x04001516 RID: 5398
 		private const string FILE = "c.插旗玩法.xlsx";
 
-		// Token: 0x04001484 RID: 5252
+		// Token: 0x04001517 RID: 5399
 		private const string TABLE = "FlagArea";
 
-		// Token: 0x04001485 RID: 5253
+		// Token: 0x04001518 RID: 5400
 		private const string COMMAND = "select BinData from `FlagArea` where FlagAreaId=?";
 
-		// Token: 0x04001486 RID: 5254
+		// Token: 0x04001519 RID: 5401
 		private const string KEY_PREFIX = "FlagAreaByAreaId";
 
-		// Token: 0x04001487 RID: 5255
+		// Token: 0x0400151A RID: 5402
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001488 RID: 5256
+		// Token: 0x0400151B RID: 5403
 		private static int HandleId;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -10,41 +9,41 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 {
-	// Token: 0x0200654E RID: 25934
+	// Token: 0x020054CC RID: 21708
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LinkageRewardActivityController : ActivityControllerBase
 	{
-		// Token: 0x06040FE0 RID: 266208 RVA: 0x00FBFB70 File Offset: 0x00FBDD70
+		// Token: 0x06035CA5 RID: 220325 RVA: 0x00F06B60 File Offset: 0x00F04D60
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x06040FE1 RID: 266209 RVA: 0x00FBFB72 File Offset: 0x00FBDD72
+		// Token: 0x06035CA6 RID: 220326 RVA: 0x00F06B62 File Offset: 0x00F04D62
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_ActivityCyberWelfare";
 		}
 
-		// Token: 0x06040FE2 RID: 266210 RVA: 0x00FBFB79 File Offset: 0x00FBDD79
+		// Token: 0x06035CA7 RID: 220327 RVA: 0x00F06B69 File Offset: 0x00F04D69
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new LinkageRewardActivitySubView();
 		}
 
-		// Token: 0x06040FE3 RID: 266211 RVA: 0x00FBFB80 File Offset: 0x00FBDD80
+		// Token: 0x06035CA8 RID: 220328 RVA: 0x00F06B70 File Offset: 0x00F04D70
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			return new LinkageRewardActivityData();
 		}
 
-		// Token: 0x06040FE4 RID: 266212 RVA: 0x00FBFB87 File Offset: 0x00FBDD87
+		// Token: 0x06035CA9 RID: 220329 RVA: 0x00F06B77 File Offset: 0x00F04D77
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x06040FE5 RID: 266213 RVA: 0x00FBFB8C File Offset: 0x00FBDD8C
+		// Token: 0x06035CAA RID: 220330 RVA: 0x00F06B7C File Offset: 0x00F04D7C
 		[NullableContext(2)]
 		public static void ClaimAllRewardsByController(int activityId, int fallbackId, LinkageCheckInType fallbackType, Action onFinished = null)
 		{
@@ -163,7 +162,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			});
 		}
 
-		// Token: 0x06040FE6 RID: 266214 RVA: 0x00FBFCEC File Offset: 0x00FBDEEC
+		// Token: 0x06035CAB RID: 220331 RVA: 0x00F06CDC File Offset: 0x00F04EDC
 		[NullableContext(2)]
 		public static void GetRewardById(int activityId, int id, LinkageCheckInType linkageCheckInType, int[] rewardIds = null, Action<bool> onResponse = null)
 		{
@@ -203,7 +202,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 					}
 					if (linkageCheckInRewardResponse != null)
 					{
-						ErrorCodeController.Instance.OpenErrorCodeTipView(linkageCheckInRewardResponse.ErrorCode, 16096, null, true, true);
+						ErrorCodeController.Instance.OpenErrorCodeTipView(linkageCheckInRewardResponse.ErrorCode, 19375, null, true, true);
 					}
 				}
 				Action<bool> onResponse2 = CS$<>8__locals1.onResponse;
@@ -215,14 +214,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			}, 0);
 		}
 
-		// Token: 0x06040FE7 RID: 266215 RVA: 0x00FBFD9B File Offset: 0x00FBDF9B
+		// Token: 0x06035CAC RID: 220332 RVA: 0x00F06D8B File Offset: 0x00F04F8B
 		[NullableContext(2)]
 		private static LinkageRewardActivityData GetActivityData(int activityId)
 		{
 			return ActivityModel.Instance.GetActivityById(activityId) as LinkageRewardActivityData;
 		}
 
-		// Token: 0x06040FE8 RID: 266216 RVA: 0x00FBFDB0 File Offset: 0x00FBDFB0
+		// Token: 0x06035CAD RID: 220333 RVA: 0x00F06DA0 File Offset: 0x00F04FA0
 		private static List<RewardItemData> BuildPreviewRewardItems(IReadOnlyList<int> rewardIds, LinkageCheckInType linkageType)
 		{
 			Dictionary<string, RewardItemData> dictionary = new Dictionary<string, RewardItemData>();
@@ -254,10 +253,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 					}
 				}
 			}
-			return dictionary.Values.ToList<RewardItemData>();
+			return new List<RewardItemData>(dictionary.Values);
 		}
 
-		// Token: 0x06040FE9 RID: 266217 RVA: 0x00FBFF50 File Offset: 0x00FBE150
+		// Token: 0x06035CAE RID: 220334 RVA: 0x00F06F40 File Offset: 0x00F05140
 		private static void OpenMergedRewardView(List<RewardItemData> rewardItems)
 		{
 			if (rewardItems.Count <= 0)
@@ -267,7 +266,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			ItemRewardController.Instance.OpenCommonRewardView(1009, rewardItems, null);
 		}
 
-		// Token: 0x06040FEA RID: 266218 RVA: 0x00FBFF70 File Offset: 0x00FBE170
+		// Token: 0x06035CAF RID: 220335 RVA: 0x00F06F60 File Offset: 0x00F05160
 		private static List<RewardItemData> MergeRewardItems(IReadOnlyList<RewardItemData> rewardItems)
 		{
 			Dictionary<int, RewardItemData> dictionary = new Dictionary<int, RewardItemData>();
@@ -284,11 +283,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 					dictionary[configId] = new RewardItemData(configId, rewardItemData.Count, new int?(rewardItemData.UniqueId), EDropItemType.Normal);
 				}
 			}
-			return dictionary.Values.ToList<RewardItemData>();
+			return new List<RewardItemData>(dictionary.Values);
 		}
 
-		// Token: 0x17009540 RID: 38208
-		// (get) Token: 0x06040FEB RID: 266219 RVA: 0x00FC000C File Offset: 0x00FBE20C
+		// Token: 0x170068A2 RID: 26786
+		// (get) Token: 0x06035CB0 RID: 220336 RVA: 0x00F06FFC File Offset: 0x00F051FC
 		public static LinkageRewardActivityController Instance
 		{
 			get
@@ -297,7 +296,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			}
 		}
 
-		// Token: 0x06040FEC RID: 266220 RVA: 0x00FC0013 File Offset: 0x00FBE213
+		// Token: 0x06035CB1 RID: 220337 RVA: 0x00F07003 File Offset: 0x00F05203
 		public static LinkageRewardActivityController GetOrCreateInstance()
 		{
 			if (LinkageRewardActivityController._Instance == null)
@@ -307,7 +306,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			return LinkageRewardActivityController._Instance;
 		}
 
-		// Token: 0x06040FED RID: 266221 RVA: 0x00FC0027 File Offset: 0x00FBE227
+		// Token: 0x06035CB2 RID: 220338 RVA: 0x00F07017 File Offset: 0x00F05217
 		public static bool CreateInstance()
 		{
 			if (LinkageRewardActivityController._Instance != null)
@@ -318,24 +317,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			return true;
 		}
 
-		// Token: 0x06040FEE RID: 266222 RVA: 0x00FC003D File Offset: 0x00FBE23D
+		// Token: 0x06035CB3 RID: 220339 RVA: 0x00F0702D File Offset: 0x00F0522D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06040FEF RID: 266223 RVA: 0x00FC003F File Offset: 0x00FBE23F
+		// Token: 0x06035CB4 RID: 220340 RVA: 0x00F0702F File Offset: 0x00F0522F
 		public static void ResetStaticDefaultValue()
 		{
 			LinkageRewardActivityController._Instance = null;
 		}
 
-		// Token: 0x06040FF0 RID: 266224 RVA: 0x00FC0047 File Offset: 0x00FBE247
+		// Token: 0x06035CB5 RID: 220341 RVA: 0x00F07037 File Offset: 0x00F05237
 		static LinkageRewardActivityController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LinkageRewardActivityController.CreateStaticDefaultValue), new Action(LinkageRewardActivityController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04021E39 RID: 138809
+		// Token: 0x0401C76A RID: 116586
 		[Nullable(2)]
 		private static LinkageRewardActivityController _Instance;
 	}

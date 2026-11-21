@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EEE RID: 3822
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001004 RID: 4100
 	public class ICheckMonsterBattleAttribute : ITargetBattleAttribute
 	{
-		// Token: 0x06005456 RID: 21590 RVA: 0x000CF1DC File Offset: 0x000CD3DC
+		// Token: 0x060059D2 RID: 22994 RVA: 0x000DB384 File Offset: 0x000D9584
 		private ICheckMonsterBattleAttribute_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005457 RID: 21591 RVA: 0x000CF214 File Offset: 0x000CD414
+		// Token: 0x060059D3 RID: 22995 RVA: 0x000DB3BC File Offset: 0x000D95BC
 		public static ICheckMonsterBattleAttribute Create([Nullable(2)] ICheckMonsterBattleAttribute instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005458 RID: 21592 RVA: 0x000CF227 File Offset: 0x000CD427
+		// Token: 0x060059D4 RID: 22996 RVA: 0x000DB3CF File Offset: 0x000D95CF
 		public static ICheckMonsterBattleAttribute CreateFromSetValue([Nullable(2)] ICheckMonsterBattleAttribute_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005459 RID: 21593 RVA: 0x000CF23A File Offset: 0x000CD43A
+		// Token: 0x060059D5 RID: 22997 RVA: 0x000DB3E2 File Offset: 0x000D95E2
 		public new ICheckMonsterBattleAttribute_SetValue ToSetValue()
 		{
 			return new ICheckMonsterBattleAttribute_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C47 RID: 7239
-		// (get) Token: 0x0600545A RID: 21594 RVA: 0x000CF265 File Offset: 0x000CD465
-		// (set) Token: 0x0600545B RID: 21595 RVA: 0x000CF290 File Offset: 0x000CD490
+		// Token: 0x17001DDF RID: 7647
+		// (get) Token: 0x060059D6 RID: 22998 RVA: 0x000DB40D File Offset: 0x000D960D
+		// (set) Token: 0x060059D7 RID: 22999 RVA: 0x000DB438 File Offset: 0x000D9638
 		public override ETargetBattleAttribute Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C48 RID: 7240
-		// (get) Token: 0x0600545C RID: 21596 RVA: 0x000CF2A0 File Offset: 0x000CD4A0
-		// (set) Token: 0x0600545D RID: 21597 RVA: 0x000CF301 File Offset: 0x000CD501
+		// Token: 0x17001DE0 RID: 7648
+		// (get) Token: 0x060059D8 RID: 23000 RVA: 0x000DB448 File Offset: 0x000D9648
+		// (set) Token: 0x060059D9 RID: 23001 RVA: 0x000DB4A9 File Offset: 0x000D96A9
 		public virtual IHealthAttributeToTarget Option
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C49 RID: 7241
-		// (get) Token: 0x0600545E RID: 21598 RVA: 0x000CF316 File Offset: 0x000CD516
-		// (set) Token: 0x0600545F RID: 21599 RVA: 0x000CF33D File Offset: 0x000CD53D
+		// Token: 0x17001DE1 RID: 7649
+		// (get) Token: 0x060059DA RID: 23002 RVA: 0x000DB4BE File Offset: 0x000D96BE
+		// (set) Token: 0x060059DB RID: 23003 RVA: 0x000DB4E5 File Offset: 0x000D96E5
 		public virtual List<int> EntityIds
 		{
 			get
@@ -139,18 +137,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003318 RID: 13080
+		// Token: 0x04003625 RID: 13861
 		[Nullable(2)]
 		protected new ICheckMonsterBattleAttribute FbInstance;
 
-		// Token: 0x04003319 RID: 13081
+		// Token: 0x04003626 RID: 13862
 		[Nullable(2)]
 		protected new ICheckMonsterBattleAttribute_SetValue PocoInterface;
 
-		// Token: 0x0400331A RID: 13082
+		// Token: 0x04003627 RID: 13863
 		private IHealthAttributeToTarget _OptionCache;
 
-		// Token: 0x0400331B RID: 13083
+		// Token: 0x04003628 RID: 13864
 		private bool _OptionInited;
 	}
 }

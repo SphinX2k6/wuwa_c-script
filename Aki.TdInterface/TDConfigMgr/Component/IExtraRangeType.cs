@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000366 RID: 870
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003AF RID: 943
 	public class IExtraRangeType
 	{
-		// Token: 0x06001147 RID: 4423 RVA: 0x0003AB10 File Offset: 0x00038D10
+		// Token: 0x0600128B RID: 4747 RVA: 0x0003DDF4 File Offset: 0x0003BFF4
 		private IExtraRangeType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001148 RID: 4424 RVA: 0x0003AB48 File Offset: 0x00038D48
+		// Token: 0x0600128C RID: 4748 RVA: 0x0003DE2C File Offset: 0x0003C02C
 		public static IExtraRangeType Create([Nullable(2)] IExtraRangeType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001149 RID: 4425 RVA: 0x0003AB5B File Offset: 0x00038D5B
+		// Token: 0x0600128D RID: 4749 RVA: 0x0003DE3F File Offset: 0x0003C03F
 		public static IExtraRangeType CreateFromSetValue([Nullable(2)] IExtraRangeType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600114A RID: 4426 RVA: 0x0003AB6E File Offset: 0x00038D6E
+		// Token: 0x0600128E RID: 4750 RVA: 0x0003DE52 File Offset: 0x0003C052
 		public IExtraRangeType_SetValue ToSetValue()
 		{
 			return new IExtraRangeType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004E8 RID: 1256
-		// (get) Token: 0x0600114B RID: 4427 RVA: 0x0003AB81 File Offset: 0x00038D81
-		// (set) Token: 0x0600114C RID: 4428 RVA: 0x0003ABAC File Offset: 0x00038DAC
+		// Token: 0x1700053C RID: 1340
+		// (get) Token: 0x0600128F RID: 4751 RVA: 0x0003DE65 File Offset: 0x0003C065
+		// (set) Token: 0x06001290 RID: 4752 RVA: 0x0003DE90 File Offset: 0x0003C090
 		public virtual EExtraRangeType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E45 RID: 3653
+		// Token: 0x04000F3C RID: 3900
 		[Nullable(2)]
 		protected IExtraRangeType FbInstance;
 
-		// Token: 0x04000E46 RID: 3654
+		// Token: 0x04000F3D RID: 3901
 		[Nullable(2)]
 		protected IExtraRangeType_SetValue PocoInterface;
 	}

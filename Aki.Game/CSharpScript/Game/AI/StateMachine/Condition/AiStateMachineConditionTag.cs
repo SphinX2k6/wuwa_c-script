@@ -5,17 +5,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x02007346 RID: 29510
+	// Token: 0x020064C9 RID: 25801
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionTag : AiStateMachineCondition
 	{
-		// Token: 0x06048676 RID: 296566 RVA: 0x012A02FF File Offset: 0x0129E4FF
+		// Token: 0x0603EAC3 RID: 256707 RVA: 0x01242D87 File Offset: 0x01240F87
 		public AiStateMachineConditionTag(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x06048677 RID: 296567 RVA: 0x012A0318 File Offset: 0x0129E518
+		// Token: 0x0603EAC4 RID: 256708 RVA: 0x01242DA0 File Offset: 0x01240FA0
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Condition condition)
 		{
 			this.TagId = condition.CondTag.TagId;
@@ -25,13 +25,13 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return true;
 		}
 
-		// Token: 0x06048678 RID: 296568 RVA: 0x012A0392 File Offset: 0x0129E592
+		// Token: 0x0603EAC5 RID: 256709 RVA: 0x01242E1A File Offset: 0x0124101A
 		protected override void OnEnter()
 		{
 			this.ResultSelf = this.Node.TagComponent.HasTag(this.TagId);
 		}
 
-		// Token: 0x06048679 RID: 296569 RVA: 0x012A03B0 File Offset: 0x0129E5B0
+		// Token: 0x0603EAC6 RID: 256710 RVA: 0x01242E38 File Offset: 0x01241038
 		private void OnTagChange(int tagId, bool tagExists)
 		{
 			this.ResultSelf = tagExists;
@@ -42,14 +42,14 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x0604867A RID: 296570 RVA: 0x012A03FE File Offset: 0x0129E5FE
+		// Token: 0x0603EAC7 RID: 256711 RVA: 0x01242E86 File Offset: 0x01241086
 		protected override void OnClear()
 		{
 			this.Handle.EndTask();
 			this.Handle = null;
 		}
 
-		// Token: 0x0604867B RID: 296571 RVA: 0x012A0414 File Offset: 0x0129E614
+		// Token: 0x0603EAC8 RID: 256712 RVA: 0x01242E9C File Offset: 0x0124109C
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);
@@ -60,13 +60,13 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			outBuilder.Append(ref appendInterpolatedStringHandler);
 		}
 
-		// Token: 0x0402646D RID: 156781
+		// Token: 0x0402175A RID: 137050
 		public string TagName = "";
 
-		// Token: 0x0402646E RID: 156782
+		// Token: 0x0402175B RID: 137051
 		public int TagId;
 
-		// Token: 0x0402646F RID: 156783
+		// Token: 0x0402175C RID: 137052
 		[Nullable(2)]
 		private ITagTask Handle;
 	}

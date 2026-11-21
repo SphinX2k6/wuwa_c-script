@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014F3 RID: 5363
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200164C RID: 5708
 	public class ClaimDynamicEntityReward : ActionParams
 	{
-		// Token: 0x060079FE RID: 31230 RVA: 0x00123968 File Offset: 0x00121B68
+		// Token: 0x060080CB RID: 32971 RVA: 0x001325A0 File Offset: 0x001307A0
 		private ClaimDynamicEntityReward_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060079FF RID: 31231 RVA: 0x001239A0 File Offset: 0x00121BA0
+		// Token: 0x060080CC RID: 32972 RVA: 0x001325D8 File Offset: 0x001307D8
 		public static ClaimDynamicEntityReward Create([Nullable(2)] ClaimDynamicEntityReward instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A00 RID: 31232 RVA: 0x001239B3 File Offset: 0x00121BB3
+		// Token: 0x060080CD RID: 32973 RVA: 0x001325EB File Offset: 0x001307EB
 		public static ClaimDynamicEntityReward CreateFromSetValue([Nullable(2)] ClaimDynamicEntityReward_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A01 RID: 31233 RVA: 0x001239C6 File Offset: 0x00121BC6
+		// Token: 0x060080CE RID: 32974 RVA: 0x001325FE File Offset: 0x001307FE
 		public ClaimDynamicEntityReward_SetValue ToSetValue()
 		{
 			return new ClaimDynamicEntityReward_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028C9 RID: 10441
-		// (get) Token: 0x06007A02 RID: 31234 RVA: 0x001239DC File Offset: 0x00121BDC
-		// (set) Token: 0x06007A03 RID: 31235 RVA: 0x00123A3D File Offset: 0x00121C3D
+		// Token: 0x17002AB3 RID: 10931
+		// (get) Token: 0x060080CF RID: 32975 RVA: 0x00132614 File Offset: 0x00130814
+		// (set) Token: 0x060080D0 RID: 32976 RVA: 0x00132675 File Offset: 0x00130875
 		public virtual IClaimDynamicTrafficReward RewardType
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040046B7 RID: 18103
+		// Token: 0x04004A52 RID: 19026
 		[Nullable(2)]
 		protected new ClaimDynamicEntityReward FbInstance;
 
-		// Token: 0x040046B8 RID: 18104
+		// Token: 0x04004A53 RID: 19027
 		[Nullable(2)]
 		protected ClaimDynamicEntityReward_SetValue PocoInterface;
 
-		// Token: 0x040046B9 RID: 18105
+		// Token: 0x04004A54 RID: 19028
 		private IClaimDynamicTrafficReward _RewardTypeCache;
 
-		// Token: 0x040046BA RID: 18106
+		// Token: 0x04004A55 RID: 19029
 		private bool _RewardTypeInited;
 	}
 }

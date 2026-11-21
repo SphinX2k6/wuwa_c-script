@@ -8,18 +8,18 @@ using CSharpScript.Game.Module.RecallQuest.Model;
 using CSharpScript.Game.Module.RoleUi.RoleDevelop;
 using UnrealEngine;
 
-// Token: 0x020018F5 RID: 6389
+// Token: 0x02000DAE RID: 3502
 [NullableContext(1)]
 [Nullable(0)]
 public class TipsMaterialComponent : TipsBaseSubComponent
 {
-	// Token: 0x0600BB39 RID: 47929 RVA: 0x002A62BD File Offset: 0x002A44BD
+	// Token: 0x06008F23 RID: 36643 RVA: 0x002B0A1D File Offset: 0x002AEC1D
 	public TipsMaterialComponent(UUIItem rootUiItem) : base(rootUiItem)
 	{
 		base.CreateThenShowByResourceIdAsync("UiItem_TipsMaterial", rootUiItem, false);
 	}
 
-	// Token: 0x0600BB3A RID: 47930 RVA: 0x002A62D4 File Offset: 0x002A44D4
+	// Token: 0x06008F24 RID: 36644 RVA: 0x002B0A34 File Offset: 0x002AEC34
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -57,14 +57,14 @@ public class TipsMaterialComponent : TipsBaseSubComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BB3B RID: 47931 RVA: 0x002A64D0 File Offset: 0x002A46D0
+	// Token: 0x06008F25 RID: 36645 RVA: 0x002B0C30 File Offset: 0x002AEE30
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(6);
 		this.TipsGetWayPanel = new TipsGetWayPanel(item);
 	}
 
-	// Token: 0x0600BB3C RID: 47932 RVA: 0x002A64F1 File Offset: 0x002A46F1
+	// Token: 0x06008F26 RID: 36646 RVA: 0x002B0C51 File Offset: 0x002AEE51
 	protected override void OnBeforeDestroy()
 	{
 		if (this.Data != null)
@@ -74,7 +74,7 @@ public class TipsMaterialComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600BB3D RID: 47933 RVA: 0x002A6510 File Offset: 0x002A4710
+	// Token: 0x06008F27 RID: 36647 RVA: 0x002B0C70 File Offset: 0x002AEE70
 	public override void Refresh(ItemTipsData data)
 	{
 		TipsMaterialData tipsMaterialData = (TipsMaterialData)data;
@@ -97,7 +97,7 @@ public class TipsMaterialComponent : TipsBaseSubComponent
 		action();
 	}
 
-	// Token: 0x0600BB3E RID: 47934 RVA: 0x002A6564 File Offset: 0x002A4764
+	// Token: 0x06008F28 RID: 36648 RVA: 0x002B0CC4 File Offset: 0x002AEEC4
 	private void RefreshBaseInfo(TipsMaterialData data)
 	{
 		bool flag = !StringUtils.IsEmpty(data.MaterialType);
@@ -158,7 +158,7 @@ public class TipsMaterialComponent : TipsBaseSubComponent
 		this.RefreshLimitTimePanel(data.LimitTimeTxt);
 	}
 
-	// Token: 0x0600BB3F RID: 47935 RVA: 0x002A66E4 File Offset: 0x002A48E4
+	// Token: 0x06008F29 RID: 36649 RVA: 0x002B0E44 File Offset: 0x002AF044
 	private bool GetIsHideHave(int? itemType)
 	{
 		bool result = false;
@@ -173,7 +173,7 @@ public class TipsMaterialComponent : TipsBaseSubComponent
 		return result;
 	}
 
-	// Token: 0x0600BB40 RID: 47936 RVA: 0x002A672C File Offset: 0x002A492C
+	// Token: 0x06008F2A RID: 36650 RVA: 0x002B0E8C File Offset: 0x002AF08C
 	private void RefreshStockAndGetWay(TipsMaterialData data, int? itemType, bool isHideHave)
 	{
 		this.SetPanelNumVisible(!isHideHave);
@@ -187,7 +187,7 @@ public class TipsMaterialComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600BB41 RID: 47937 RVA: 0x002A67A0 File Offset: 0x002A49A0
+	// Token: 0x06008F2B RID: 36651 RVA: 0x002B0F00 File Offset: 0x002AF100
 	private void RefreshRoleDevelopPanel(TipsMaterialData data)
 	{
 		RoleDevelopModel instance = RoleDevelopModel.Instance;
@@ -210,7 +210,7 @@ public class TipsMaterialComponent : TipsBaseSubComponent
 		base.GetItem(12).SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600BB42 RID: 47938 RVA: 0x002A6874 File Offset: 0x002A4A74
+	// Token: 0x06008F2C RID: 36652 RVA: 0x002B0FD4 File Offset: 0x002AF1D4
 	public IGetWayItemData[] GetWayDataList(TipsMaterialData data, InventoryDefine.EItemType? itemType)
 	{
 		bool flag = data.Num > 0;
@@ -221,7 +221,7 @@ public class TipsMaterialComponent : TipsBaseSubComponent
 		return data.GetWayData ?? new IGetWayItemData[0];
 	}
 
-	// Token: 0x0600BB43 RID: 47939 RVA: 0x002A68B4 File Offset: 0x002A4AB4
+	// Token: 0x06008F2D RID: 36653 RVA: 0x002B1014 File Offset: 0x002AF214
 	private void RefreshGetWayPanel(IGetWayItemData[] getWayData)
 	{
 		bool uiactive = this.NeedShowTip(getWayData);
@@ -232,13 +232,13 @@ public class TipsMaterialComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600BB44 RID: 47940 RVA: 0x002A68E5 File Offset: 0x002A4AE5
+	// Token: 0x06008F2E RID: 36654 RVA: 0x002B1045 File Offset: 0x002AF245
 	private bool NeedShowTip(IGetWayItemData[] getWayData)
 	{
 		return getWayData.Length != 0 && !RecallQuestModel.Instance.IsInRecallInstance();
 	}
 
-	// Token: 0x0600BB45 RID: 47941 RVA: 0x002A68FA File Offset: 0x002A4AFA
+	// Token: 0x06008F2F RID: 36655 RVA: 0x002B105A File Offset: 0x002AF25A
 	private void RefreshLimitTimePanel(string limitTimeTxt)
 	{
 		base.GetItem(7).SetUIActive(limitTimeTxt != null);
@@ -248,7 +248,7 @@ public class TipsMaterialComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600BB46 RID: 47942 RVA: 0x002A6924 File Offset: 0x002A4B24
+	// Token: 0x06008F30 RID: 36656 RVA: 0x002B1084 File Offset: 0x002AF284
 	public override void SetPanelNumVisible(bool isShow)
 	{
 		Action action = delegate()
@@ -263,58 +263,58 @@ public class TipsMaterialComponent : TipsBaseSubComponent
 		action();
 	}
 
-	// Token: 0x04005501 RID: 21761
+	// Token: 0x040055AC RID: 21932
 	[Nullable(2)]
 	private TipsMaterialData Data;
 
-	// Token: 0x04005502 RID: 21762
+	// Token: 0x040055AD RID: 21933
 	[Nullable(2)]
 	private TipsGetWayPanel TipsGetWayPanel;
 
-	// Token: 0x02007E6A RID: 32362
+	// Token: 0x02006FF1 RID: 28657
 	[NullableContext(0)]
 	private class ETipsMaterialNode
 	{
-		// Token: 0x040295C9 RID: 169417
+		// Token: 0x040248F5 RID: 149749
 		public const int TxtType = 0;
 
-		// Token: 0x040295CA RID: 169418
+		// Token: 0x040248F6 RID: 149750
 		public const int SpriteIcon = 1;
 
-		// Token: 0x040295CB RID: 169419
+		// Token: 0x040248F7 RID: 149751
 		public const int PanelNum = 2;
 
-		// Token: 0x040295CC RID: 169420
+		// Token: 0x040248F8 RID: 149752
 		public const int TxtNum = 3;
 
-		// Token: 0x040295CD RID: 169421
+		// Token: 0x040248F9 RID: 149753
 		public const int TxtEffect = 4;
 
-		// Token: 0x040295CE RID: 169422
+		// Token: 0x040248FA RID: 149754
 		public const int TxtDescription = 5;
 
-		// Token: 0x040295CF RID: 169423
+		// Token: 0x040248FB RID: 149755
 		public const int PanelPath = 6;
 
-		// Token: 0x040295D0 RID: 169424
+		// Token: 0x040248FC RID: 149756
 		public const int PanelLimitTime = 7;
 
-		// Token: 0x040295D1 RID: 169425
+		// Token: 0x040248FD RID: 149757
 		public const int TxtLimitTime = 8;
 
-		// Token: 0x040295D2 RID: 169426
+		// Token: 0x040248FE RID: 149758
 		public const int PnlRoleDevelopMat = 9;
 
-		// Token: 0x040295D3 RID: 169427
+		// Token: 0x040248FF RID: 149759
 		public const int TexRole = 10;
 
-		// Token: 0x040295D4 RID: 169428
+		// Token: 0x04024900 RID: 149760
 		public const int TxtLinkDesc = 11;
 
-		// Token: 0x040295D5 RID: 169429
+		// Token: 0x04024901 RID: 149761
 		public const int UiItemRoleDevelopMatFull = 12;
 
-		// Token: 0x040295D6 RID: 169430
+		// Token: 0x04024902 RID: 149762
 		public const int ExTxtDescription = 13;
 	}
 }

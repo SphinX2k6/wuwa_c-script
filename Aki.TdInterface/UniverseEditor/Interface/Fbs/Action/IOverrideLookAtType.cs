@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C57 RID: 27735
+	// Token: 0x020073BE RID: 29630
 	public struct IOverrideLookAtType : IFlatbufferObject
 	{
-		// Token: 0x1700CE94 RID: 52884
-		// (get) Token: 0x06030DE7 RID: 200167 RVA: 0x006A3588 File Offset: 0x006A1788
+		// Token: 0x1700D9AF RID: 55727
+		// (get) Token: 0x06033D42 RID: 212290 RVA: 0x006FDA88 File Offset: 0x006FBC88
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030DE8 RID: 200168 RVA: 0x006A3595 File Offset: 0x006A1795
+		// Token: 0x06033D43 RID: 212291 RVA: 0x006FDA95 File Offset: 0x006FBC95
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030DE9 RID: 200169 RVA: 0x006A359C File Offset: 0x006A179C
+		// Token: 0x06033D44 RID: 212292 RVA: 0x006FDA9C File Offset: 0x006FBC9C
 		public static IOverrideLookAtType GetRootAsIOverrideLookAtType(ByteBuffer _bb)
 		{
 			return IOverrideLookAtType.GetRootAsIOverrideLookAtType(_bb, default(IOverrideLookAtType));
 		}
 
-		// Token: 0x06030DEA RID: 200170 RVA: 0x006A35B8 File Offset: 0x006A17B8
+		// Token: 0x06033D45 RID: 212293 RVA: 0x006FDAB8 File Offset: 0x006FBCB8
 		public static IOverrideLookAtType GetRootAsIOverrideLookAtType(ByteBuffer _bb, IOverrideLookAtType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030DEB RID: 200171 RVA: 0x006A35D5 File Offset: 0x006A17D5
+		// Token: 0x06033D46 RID: 212294 RVA: 0x006FDAD5 File Offset: 0x006FBCD5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030DEC RID: 200172 RVA: 0x006A35E4 File Offset: 0x006A17E4
+		// Token: 0x06033D47 RID: 212295 RVA: 0x006FDAE4 File Offset: 0x006FBCE4
 		public IOverrideLookAtType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CE95 RID: 52885
-		// (get) Token: 0x06030DED RID: 200173 RVA: 0x006A35F4 File Offset: 0x006A17F4
+		// Token: 0x1700D9B0 RID: 55728
+		// (get) Token: 0x06033D48 RID: 212296 RVA: 0x006FDAF4 File Offset: 0x006FBCF4
 		public EOverrideLookAtType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030DEE RID: 200174 RVA: 0x006A3630 File Offset: 0x006A1830
+		// Token: 0x06033D49 RID: 212297 RVA: 0x006FDB30 File Offset: 0x006FBD30
 		public static Offset<IOverrideLookAtType> CreateIOverrideLookAtType(FlatBufferBuilder builder, EOverrideLookAtType Type = EOverrideLookAtType.CheckFlowLookAt)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOverrideLookAtType.EndIOverrideLookAtType(builder);
 		}
 
-		// Token: 0x06030DEF RID: 200175 RVA: 0x006A3646 File Offset: 0x006A1846
+		// Token: 0x06033D4A RID: 212298 RVA: 0x006FDB46 File Offset: 0x006FBD46
 		public static void StartIOverrideLookAtType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06030DF0 RID: 200176 RVA: 0x006A364F File Offset: 0x006A184F
+		// Token: 0x06033D4B RID: 212299 RVA: 0x006FDB4F File Offset: 0x006FBD4F
 		public static void AddType(FlatBufferBuilder builder, EOverrideLookAtType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06030DF1 RID: 200177 RVA: 0x006A365A File Offset: 0x006A185A
+		// Token: 0x06033D4C RID: 212300 RVA: 0x006FDB5A File Offset: 0x006FBD5A
 		public static Offset<IOverrideLookAtType> EndIOverrideLookAtType(FlatBufferBuilder builder)
 		{
 			return new Offset<IOverrideLookAtType>(builder.EndTable());
 		}
 
-		// Token: 0x06030DF2 RID: 200178 RVA: 0x006A3668 File Offset: 0x006A1868
+		// Token: 0x06033D4D RID: 212301 RVA: 0x006FDB68 File Offset: 0x006FBD68
 		public IOverrideLookAtTypeT UnPack()
 		{
 			IOverrideLookAtTypeT overrideLookAtTypeT = new IOverrideLookAtTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return overrideLookAtTypeT;
 		}
 
-		// Token: 0x06030DF3 RID: 200179 RVA: 0x006A3683 File Offset: 0x006A1883
+		// Token: 0x06033D4E RID: 212302 RVA: 0x006FDB83 File Offset: 0x006FBD83
 		public void UnPackTo(IOverrideLookAtTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06030DF4 RID: 200180 RVA: 0x006A3694 File Offset: 0x006A1894
+		// Token: 0x06033D4F RID: 212303 RVA: 0x006FDB94 File Offset: 0x006FBD94
 		public static Offset<IOverrideLookAtType> Pack(FlatBufferBuilder builder, IOverrideLookAtTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOverrideLookAtType.CreateIOverrideLookAtType(builder, _o.Type);
 		}
 
-		// Token: 0x0401159A RID: 71066
+		// Token: 0x040124F2 RID: 74994
 		private Table __p;
 	}
 }

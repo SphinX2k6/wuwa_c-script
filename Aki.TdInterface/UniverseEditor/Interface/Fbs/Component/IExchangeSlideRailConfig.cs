@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051CB RID: 20939
+	// Token: 0x02005730 RID: 22320
 	public struct IExchangeSlideRailConfig : IFlatbufferObject
 	{
-		// Token: 0x1700993B RID: 39227
-		// (get) Token: 0x06021F26 RID: 139046 RVA: 0x004B5A53 File Offset: 0x004B3C53
+		// Token: 0x1700A12A RID: 41258
+		// (get) Token: 0x06023E7E RID: 147070 RVA: 0x004EFABB File Offset: 0x004EDCBB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021F27 RID: 139047 RVA: 0x004B5A60 File Offset: 0x004B3C60
+		// Token: 0x06023E7F RID: 147071 RVA: 0x004EFAC8 File Offset: 0x004EDCC8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021F28 RID: 139048 RVA: 0x004B5A68 File Offset: 0x004B3C68
+		// Token: 0x06023E80 RID: 147072 RVA: 0x004EFAD0 File Offset: 0x004EDCD0
 		public static IExchangeSlideRailConfig GetRootAsIExchangeSlideRailConfig(ByteBuffer _bb)
 		{
 			return IExchangeSlideRailConfig.GetRootAsIExchangeSlideRailConfig(_bb, default(IExchangeSlideRailConfig));
 		}
 
-		// Token: 0x06021F29 RID: 139049 RVA: 0x004B5A84 File Offset: 0x004B3C84
+		// Token: 0x06023E81 RID: 147073 RVA: 0x004EFAEC File Offset: 0x004EDCEC
 		public static IExchangeSlideRailConfig GetRootAsIExchangeSlideRailConfig(ByteBuffer _bb, IExchangeSlideRailConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021F2A RID: 139050 RVA: 0x004B5AA1 File Offset: 0x004B3CA1
+		// Token: 0x06023E82 RID: 147074 RVA: 0x004EFB09 File Offset: 0x004EDD09
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021F2B RID: 139051 RVA: 0x004B5AB0 File Offset: 0x004B3CB0
+		// Token: 0x06023E83 RID: 147075 RVA: 0x004EFB18 File Offset: 0x004EDD18
 		public IExchangeSlideRailConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700993C RID: 39228
-		// (get) Token: 0x06021F2C RID: 139052 RVA: 0x004B5AC0 File Offset: 0x004B3CC0
+		// Token: 0x1700A12B RID: 41259
+		// (get) Token: 0x06023E84 RID: 147076 RVA: 0x004EFB28 File Offset: 0x004EDD28
 		public int MaxExchangeDistance
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700993D RID: 39229
-		// (get) Token: 0x06021F2D RID: 139053 RVA: 0x004B5AFC File Offset: 0x004B3CFC
+		// Token: 0x1700A12C RID: 41260
+		// (get) Token: 0x06023E85 RID: 147077 RVA: 0x004EFB64 File Offset: 0x004EDD64
 		public int MaxExchangeHigh
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021F2E RID: 139054 RVA: 0x004B5B38 File Offset: 0x004B3D38
+		// Token: 0x06023E86 RID: 147078 RVA: 0x004EFBA0 File Offset: 0x004EDDA0
 		public INextSlideRail? NextRails(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new INextSlideRail?(default(INextSlideRail).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700993E RID: 39230
-		// (get) Token: 0x06021F2F RID: 139055 RVA: 0x004B5B98 File Offset: 0x004B3D98
+		// Token: 0x1700A12D RID: 41261
+		// (get) Token: 0x06023E87 RID: 147079 RVA: 0x004EFC00 File Offset: 0x004EDE00
 		public int NextRailsLength
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700993F RID: 39231
-		// (get) Token: 0x06021F30 RID: 139056 RVA: 0x004B5BC4 File Offset: 0x004B3DC4
+		// Token: 0x1700A12E RID: 41262
+		// (get) Token: 0x06023E88 RID: 147080 RVA: 0x004EFC2C File Offset: 0x004EDE2C
 		public byte NullMask
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021F31 RID: 139057 RVA: 0x004B5C01 File Offset: 0x004B3E01
+		// Token: 0x06023E89 RID: 147081 RVA: 0x004EFC69 File Offset: 0x004EDE69
 		public static Offset<IExchangeSlideRailConfig> CreateIExchangeSlideRailConfig(FlatBufferBuilder builder, int MaxExchangeDistance = 0, int MaxExchangeHigh = 0, VectorOffset NextRailsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -130,31 +130,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExchangeSlideRailConfig.EndIExchangeSlideRailConfig(builder);
 		}
 
-		// Token: 0x06021F32 RID: 139058 RVA: 0x004B5C2D File Offset: 0x004B3E2D
+		// Token: 0x06023E8A RID: 147082 RVA: 0x004EFC95 File Offset: 0x004EDE95
 		public static void StartIExchangeSlideRailConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06021F33 RID: 139059 RVA: 0x004B5C36 File Offset: 0x004B3E36
+		// Token: 0x06023E8B RID: 147083 RVA: 0x004EFC9E File Offset: 0x004EDE9E
 		public static void AddMaxExchangeDistance(FlatBufferBuilder builder, int maxExchangeDistance)
 		{
 			builder.AddInt(0, maxExchangeDistance, 0);
 		}
 
-		// Token: 0x06021F34 RID: 139060 RVA: 0x004B5C41 File Offset: 0x004B3E41
+		// Token: 0x06023E8C RID: 147084 RVA: 0x004EFCA9 File Offset: 0x004EDEA9
 		public static void AddMaxExchangeHigh(FlatBufferBuilder builder, int maxExchangeHigh)
 		{
 			builder.AddInt(1, maxExchangeHigh, 0);
 		}
 
-		// Token: 0x06021F35 RID: 139061 RVA: 0x004B5C4C File Offset: 0x004B3E4C
+		// Token: 0x06023E8D RID: 147085 RVA: 0x004EFCB4 File Offset: 0x004EDEB4
 		public static void AddNextRails(FlatBufferBuilder builder, VectorOffset nextRailsOffset)
 		{
 			builder.AddOffset(2, nextRailsOffset.Value, 0);
 		}
 
-		// Token: 0x06021F36 RID: 139062 RVA: 0x004B5C5C File Offset: 0x004B3E5C
+		// Token: 0x06023E8E RID: 147086 RVA: 0x004EFCC4 File Offset: 0x004EDEC4
 		public static VectorOffset CreateNextRailsVector(FlatBufferBuilder builder, Offset<INextSlideRail>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021F37 RID: 139063 RVA: 0x004B5C9C File Offset: 0x004B3E9C
+		// Token: 0x06023E8F RID: 147087 RVA: 0x004EFD04 File Offset: 0x004EDF04
 		public static VectorOffset CreateNextRailsVectorBlock(FlatBufferBuilder builder, Offset<INextSlideRail>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021F38 RID: 139064 RVA: 0x004B5CB6 File Offset: 0x004B3EB6
+		// Token: 0x06023E90 RID: 147088 RVA: 0x004EFD1E File Offset: 0x004EDF1E
 		public static VectorOffset CreateNextRailsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<INextSlideRail>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021F39 RID: 139065 RVA: 0x004B5CD4 File Offset: 0x004B3ED4
+		// Token: 0x06023E91 RID: 147089 RVA: 0x004EFD3C File Offset: 0x004EDF3C
 		public static VectorOffset CreateNextRailsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -189,25 +189,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021F3A RID: 139066 RVA: 0x004B5CED File Offset: 0x004B3EED
+		// Token: 0x06023E92 RID: 147090 RVA: 0x004EFD55 File Offset: 0x004EDF55
 		public static void StartNextRailsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06021F3B RID: 139067 RVA: 0x004B5CF8 File Offset: 0x004B3EF8
+		// Token: 0x06023E93 RID: 147091 RVA: 0x004EFD60 File Offset: 0x004EDF60
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06021F3C RID: 139068 RVA: 0x004B5D03 File Offset: 0x004B3F03
+		// Token: 0x06023E94 RID: 147092 RVA: 0x004EFD6B File Offset: 0x004EDF6B
 		public static Offset<IExchangeSlideRailConfig> EndIExchangeSlideRailConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IExchangeSlideRailConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06021F3D RID: 139069 RVA: 0x004B5D10 File Offset: 0x004B3F10
+		// Token: 0x06023E95 RID: 147093 RVA: 0x004EFD78 File Offset: 0x004EDF78
 		public IExchangeSlideRailConfigT UnPack()
 		{
 			IExchangeSlideRailConfigT exchangeSlideRailConfigT = new IExchangeSlideRailConfigT();
@@ -215,7 +215,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return exchangeSlideRailConfigT;
 		}
 
-		// Token: 0x06021F3E RID: 139070 RVA: 0x004B5D2C File Offset: 0x004B3F2C
+		// Token: 0x06023E96 RID: 147094 RVA: 0x004EFD94 File Offset: 0x004EDF94
 		public void UnPackTo(IExchangeSlideRailConfigT _o)
 		{
 			_o.MaxExchangeDistance = this.MaxExchangeDistance;
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06021F3F RID: 139071 RVA: 0x004B5DB0 File Offset: 0x004B3FB0
+		// Token: 0x06023E97 RID: 147095 RVA: 0x004EFE18 File Offset: 0x004EE018
 		public static Offset<IExchangeSlideRailConfig> Pack(FlatBufferBuilder builder, IExchangeSlideRailConfigT _o)
 		{
 			if (_o == null)
@@ -248,7 +248,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExchangeSlideRailConfig.CreateIExchangeSlideRailConfig(builder, _o.MaxExchangeDistance, _o.MaxExchangeHigh, nextRailsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E2CD RID: 58061
+		// Token: 0x0400EECB RID: 61131
 		private Table __p;
 	}
 }

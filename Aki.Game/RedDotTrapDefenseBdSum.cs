@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200343F RID: 13375
+// Token: 0x020029B3 RID: 10675
 public class RedDotTrapDefenseBdSum : RedDotBase
 {
 }

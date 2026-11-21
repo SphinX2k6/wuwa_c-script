@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014F5 RID: 5365
+	// Token: 0x0200164E RID: 5710
 	public class ClaimLevelPlayReward : ActionParams
 	{
-		// Token: 0x06007A06 RID: 31238 RVA: 0x00123A62 File Offset: 0x00121C62
-		[NullableContext(1)]
+		// Token: 0x060080D3 RID: 32979 RVA: 0x0013269A File Offset: 0x0013089A
 		public static ClaimLevelPlayReward Create([Nullable(2)] ClaimLevelPlayReward instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x040046BC RID: 18108
+		// Token: 0x04004A57 RID: 19031
 		[Nullable(2)]
 		protected new ClaimLevelPlayReward FbInstance;
 	}

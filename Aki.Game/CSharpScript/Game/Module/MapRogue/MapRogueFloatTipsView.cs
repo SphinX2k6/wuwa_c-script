@@ -6,16 +6,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055F8 RID: 22008
+	// Token: 0x020045CE RID: 17870
 	public class MapRogueFloatTipsView : UiViewBase
 	{
-		// Token: 0x0603807B RID: 229499 RVA: 0x00D450C9 File Offset: 0x00D432C9
+		// Token: 0x0602CF79 RID: 184185 RVA: 0x00C92E11 File Offset: 0x00C91011
 		[NullableContext(1)]
 		public MapRogueFloatTipsView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603807C RID: 229500 RVA: 0x00D450D2 File Offset: 0x00D432D2
+		// Token: 0x0602CF7A RID: 184186 RVA: 0x00C92E1A File Offset: 0x00C9101A
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0603807D RID: 229501 RVA: 0x00D450F8 File Offset: 0x00D432F8
+		// Token: 0x0602CF7B RID: 184187 RVA: 0x00C92E40 File Offset: 0x00C91040
 		protected override void OnStart()
 		{
 			this.Data = (this.OpenParam as IRogueTipsData);
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), this.Data.TextId, this.Data.TextParam);
 		}
 
-		// Token: 0x0603807E RID: 229502 RVA: 0x00D45146 File Offset: 0x00D43346
+		// Token: 0x0602CF7C RID: 184188 RVA: 0x00C92E8E File Offset: 0x00C9108E
 		protected override void OnAfterShow()
 		{
 			base.CloseMe(delegate(bool _)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			});
 		}
 
-		// Token: 0x0401D713 RID: 120595
+		// Token: 0x0401819E RID: 98718
 		[Nullable(2)]
 		protected IRogueTipsData Data;
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200027B RID: 635
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002BE RID: 702
 	public class IConnectorPathAdvanceVisual
 	{
-		// Token: 0x06000BAD RID: 2989 RVA: 0x0002E6A4 File Offset: 0x0002C8A4
+		// Token: 0x06000CC7 RID: 3271 RVA: 0x00031394 File Offset: 0x0002F594
 		private IConnectorPathAdvanceVisual_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000BAE RID: 2990 RVA: 0x0002E6DC File Offset: 0x0002C8DC
+		// Token: 0x06000CC8 RID: 3272 RVA: 0x000313CC File Offset: 0x0002F5CC
 		public static IConnectorPathAdvanceVisual Create([Nullable(2)] IConnectorPathAdvanceVisual instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000BAF RID: 2991 RVA: 0x0002E6EF File Offset: 0x0002C8EF
+		// Token: 0x06000CC9 RID: 3273 RVA: 0x000313DF File Offset: 0x0002F5DF
 		public static IConnectorPathAdvanceVisual CreateFromSetValue([Nullable(2)] IConnectorPathAdvanceVisual_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000BB0 RID: 2992 RVA: 0x0002E702 File Offset: 0x0002C902
+		// Token: 0x06000CCA RID: 3274 RVA: 0x000313F2 File Offset: 0x0002F5F2
 		public IConnectorPathAdvanceVisual_SetValue ToSetValue()
 		{
 			return new IConnectorPathAdvanceVisual_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700037B RID: 891
-		// (get) Token: 0x06000BB1 RID: 2993 RVA: 0x0002E715 File Offset: 0x0002C915
-		// (set) Token: 0x06000BB2 RID: 2994 RVA: 0x0002E740 File Offset: 0x0002C940
+		// Token: 0x170003C3 RID: 963
+		// (get) Token: 0x06000CCB RID: 3275 RVA: 0x00031405 File Offset: 0x0002F605
+		// (set) Token: 0x06000CCC RID: 3276 RVA: 0x00031430 File Offset: 0x0002F630
 		public virtual EConnectorPathAdvanceVisualType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000B30 RID: 2864
+		// Token: 0x04000C11 RID: 3089
 		[Nullable(2)]
 		protected IConnectorPathAdvanceVisual FbInstance;
 
-		// Token: 0x04000B31 RID: 2865
+		// Token: 0x04000C12 RID: 3090
 		[Nullable(2)]
 		protected IConnectorPathAdvanceVisual_SetValue PocoInterface;
 	}

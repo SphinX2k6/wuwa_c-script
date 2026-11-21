@@ -1,25 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002420 RID: 9248
+// Token: 0x02001905 RID: 6405
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomBattleInstance
 {
-	// Token: 0x06012828 RID: 75816 RVA: 0x0048F5DE File Offset: 0x0048D7DE
+	// Token: 0x0600FCDE RID: 64734 RVA: 0x0049CBFA File Offset: 0x0049ADFA
 	public PhantomBattleInstance(PhantomItem data)
 	{
 		this.PhantomId = data.MonsterId;
 		this.PhantomItem = new PhantomItem?(data);
-		this.PhantomSkill = PhantomBattleConfig.Instance.GetPhantomSkillList(data.SkillId).ToList<PhantomSkill>();
+		this.PhantomSkill = new List<PhantomSkill>(PhantomBattleConfig.Instance.GetPhantomSkillList(data.SkillId));
 	}
 
-	// Token: 0x17001806 RID: 6150
-	// (get) Token: 0x06012829 RID: 75817 RVA: 0x0048F61B File Offset: 0x0048D81B
-	// (set) Token: 0x0601282A RID: 75818 RVA: 0x0048F623 File Offset: 0x0048D823
+	// Token: 0x17001840 RID: 6208
+	// (get) Token: 0x0600FCDF RID: 64735 RVA: 0x0049CC37 File Offset: 0x0049AE37
+	// (set) Token: 0x0600FCE0 RID: 64736 RVA: 0x0049CC3F File Offset: 0x0049AE3F
 	public int PhantomId
 	{
 		get
@@ -32,9 +31,9 @@ public class PhantomBattleInstance
 		}
 	}
 
-	// Token: 0x17001807 RID: 6151
-	// (get) Token: 0x0601282B RID: 75819 RVA: 0x0048F62C File Offset: 0x0048D82C
-	// (set) Token: 0x0601282C RID: 75820 RVA: 0x0048F634 File Offset: 0x0048D834
+	// Token: 0x17001841 RID: 6209
+	// (get) Token: 0x0600FCE1 RID: 64737 RVA: 0x0049CC48 File Offset: 0x0049AE48
+	// (set) Token: 0x0600FCE2 RID: 64738 RVA: 0x0049CC50 File Offset: 0x0049AE50
 	public PhantomItem? PhantomItem
 	{
 		get
@@ -47,9 +46,9 @@ public class PhantomBattleInstance
 		}
 	}
 
-	// Token: 0x17001808 RID: 6152
-	// (get) Token: 0x0601282D RID: 75821 RVA: 0x0048F63D File Offset: 0x0048D83D
-	// (set) Token: 0x0601282E RID: 75822 RVA: 0x0048F645 File Offset: 0x0048D845
+	// Token: 0x17001842 RID: 6210
+	// (get) Token: 0x0600FCE3 RID: 64739 RVA: 0x0049CC59 File Offset: 0x0049AE59
+	// (set) Token: 0x0600FCE4 RID: 64740 RVA: 0x0049CC61 File Offset: 0x0049AE61
 	[Nullable(2)]
 	public List<PhantomSkill> PhantomSkill
 	{
@@ -65,13 +64,13 @@ public class PhantomBattleInstance
 		}
 	}
 
-	// Token: 0x0601282F RID: 75823 RVA: 0x0048F650 File Offset: 0x0048D850
+	// Token: 0x0600FCE5 RID: 64741 RVA: 0x0049CC6C File Offset: 0x0049AE6C
 	public int? GetPhantomSkillId()
 	{
 		return new int?(this.Skill[0].Id);
 	}
 
-	// Token: 0x06012830 RID: 75824 RVA: 0x0048F678 File Offset: 0x0048D878
+	// Token: 0x0600FCE6 RID: 64742 RVA: 0x0049CC94 File Offset: 0x0049AE94
 	public PhantomSkill? GetPhantomSkillInfoByLevel()
 	{
 		if (this.PhantomSkill.Count <= 0)
@@ -81,37 +80,37 @@ public class PhantomBattleInstance
 		return new PhantomSkill?(this.PhantomSkill[0]);
 	}
 
-	// Token: 0x06012831 RID: 75825 RVA: 0x0048F6B0 File Offset: 0x0048D8B0
+	// Token: 0x0600FCE7 RID: 64743 RVA: 0x0049CCCC File Offset: 0x0049AECC
 	public float[] GetModelZoom()
 	{
 		return this.PhantomItem.Value.Zoom();
 	}
 
-	// Token: 0x06012832 RID: 75826 RVA: 0x0048F6D4 File Offset: 0x0048D8D4
+	// Token: 0x0600FCE8 RID: 64744 RVA: 0x0049CCF0 File Offset: 0x0049AEF0
 	public float[] GetModelLocation()
 	{
 		return this.PhantomItem.Value.Location();
 	}
 
-	// Token: 0x06012833 RID: 75827 RVA: 0x0048F6F8 File Offset: 0x0048D8F8
+	// Token: 0x0600FCE9 RID: 64745 RVA: 0x0049CD14 File Offset: 0x0049AF14
 	public float[] GetModelRotator()
 	{
 		return this.PhantomItem.Value.Rotator();
 	}
 
-	// Token: 0x06012834 RID: 75828 RVA: 0x0048F71C File Offset: 0x0048D91C
+	// Token: 0x0600FCEA RID: 64746 RVA: 0x0049CD38 File Offset: 0x0049AF38
 	public string GetStandAnim()
 	{
 		return this.PhantomItem.Value.StandAnim;
 	}
 
-	// Token: 0x04008BAD RID: 35757
+	// Token: 0x04008CF4 RID: 36084
 	private int Id;
 
-	// Token: 0x04008BAE RID: 35758
+	// Token: 0x04008CF5 RID: 36085
 	private PhantomItem? Item;
 
-	// Token: 0x04008BAF RID: 35759
+	// Token: 0x04008CF6 RID: 36086
 	[Nullable(2)]
 	private List<PhantomSkill> Skill;
 }

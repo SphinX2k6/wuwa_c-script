@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000F3C RID: 3900
+// Token: 0x020003F1 RID: 1009
 public enum EDrinksFlavorType
 {
-	// Token: 0x04002D21 RID: 11553
+	// Token: 0x04002DBA RID: 11706
 	Sour,
-	// Token: 0x04002D22 RID: 11554
+	// Token: 0x04002DBB RID: 11707
 	Sweet,
-	// Token: 0x04002D23 RID: 11555
+	// Token: 0x04002DBC RID: 11708
 	Bitter
 }

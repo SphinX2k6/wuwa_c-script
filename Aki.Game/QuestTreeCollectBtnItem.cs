@@ -5,18 +5,18 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020026B1 RID: 9905
+// Token: 0x02001B9C RID: 7068
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestTreeCollectBtnItem : UiPanelBase
 {
-	// Token: 0x060144B9 RID: 83129 RVA: 0x00521179 File Offset: 0x0051F379
+	// Token: 0x0601199B RID: 72091 RVA: 0x0052FEB1 File Offset: 0x0052E0B1
 	public QuestTreeCollectBtnItem(QuestTreeChapterData data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x060144BA RID: 83130 RVA: 0x00521188 File Offset: 0x0051F388
+	// Token: 0x0601199C RID: 72092 RVA: 0x0052FEC0 File Offset: 0x0052E0C0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -39,13 +39,13 @@ public class QuestTreeCollectBtnItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060144BB RID: 83131 RVA: 0x0052124F File Offset: 0x0051F44F
+	// Token: 0x0601199D RID: 72093 RVA: 0x0052FF87 File Offset: 0x0052E187
 	protected override void OnStart()
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x060144BC RID: 83132 RVA: 0x00521258 File Offset: 0x0051F458
+	// Token: 0x0601199E RID: 72094 RVA: 0x0052FF90 File Offset: 0x0052E190
 	public void Refresh()
 	{
 		List<QuestTreeNodeData> acceptableNodeList = this.Data.GetAcceptableNodeList();
@@ -64,14 +64,14 @@ public class QuestTreeCollectBtnItem : UiPanelBase
 		base.GetItem(2).SetUIActive(uiactive);
 	}
 
-	// Token: 0x060144BD RID: 83133 RVA: 0x005212C4 File Offset: 0x0051F4C4
+	// Token: 0x0601199F RID: 72095 RVA: 0x0052FFFC File Offset: 0x0052E1FC
 	public void RefreshByData(QuestTreeChapterData data)
 	{
 		this.Data = data;
 		this.Refresh();
 	}
 
-	// Token: 0x060144BE RID: 83134 RVA: 0x005212D4 File Offset: 0x0051F4D4
+	// Token: 0x060119A0 RID: 72096 RVA: 0x0053000C File Offset: 0x0052E20C
 	private void OnCollectClick()
 	{
 		List<QuestTreeNodeData> acceptableNodeList = this.Data.GetAcceptableNodeList();
@@ -86,20 +86,20 @@ public class QuestTreeCollectBtnItem : UiPanelBase
 		LogReportController.Instance.LogReport(questTreeClickAcceptableLogEvent);
 	}
 
-	// Token: 0x040098A9 RID: 39081
+	// Token: 0x04009A01 RID: 39425
 	private QuestTreeChapterData Data;
 
-	// Token: 0x02008CF8 RID: 36088
+	// Token: 0x02007E81 RID: 32385
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402DBCD RID: 187341
+		// Token: 0x04028EE4 RID: 167652
 		public const int BtnCollect = 0;
 
-		// Token: 0x0402DBCE RID: 187342
+		// Token: 0x04028EE5 RID: 167653
 		public const int ItemRedDot = 1;
 
-		// Token: 0x0402DBCF RID: 187343
+		// Token: 0x04028EE6 RID: 167654
 		public const int ItemNew = 2;
 	}
 }

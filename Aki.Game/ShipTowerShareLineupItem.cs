@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029D0 RID: 10704
+// Token: 0x02001F4B RID: 8011
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class ShipTowerShareLineupItem : GridProxyAbstract<ShipTowerRecordItemData>
 {
-	// Token: 0x060162F5 RID: 90869 RVA: 0x0059C648 File Offset: 0x0059A848
+	// Token: 0x06013CFB RID: 81147 RVA: 0x005C7600 File Offset: 0x005C5800
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class ShipTowerShareLineupItem : GridProxyAbstract<ShipTowerRecordItemDat
 		};
 	}
 
-	// Token: 0x060162F6 RID: 90870 RVA: 0x0059C6D0 File Offset: 0x0059A8D0
+	// Token: 0x06013CFC RID: 81148 RVA: 0x005C7688 File Offset: 0x005C5888
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerShareLineupItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ public class ShipTowerShareLineupItem : GridProxyAbstract<ShipTowerRecordItemDat
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060162F7 RID: 90871 RVA: 0x0059C714 File Offset: 0x0059A914
+	// Token: 0x06013CFD RID: 81149 RVA: 0x005C76CC File Offset: 0x005C58CC
 	public override void Refresh(ShipTowerRecordItemData data, bool isSelected, int gridIndex)
 	{
 		UUIText text = base.GetText(0);
@@ -75,7 +75,7 @@ public class ShipTowerShareLineupItem : GridProxyAbstract<ShipTowerRecordItemDat
 		roleLayout.RefreshByData(data2, null, false);
 	}
 
-	// Token: 0x060162F8 RID: 90872 RVA: 0x0059C7C6 File Offset: 0x0059A9C6
+	// Token: 0x06013CFE RID: 81150 RVA: 0x005C777E File Offset: 0x005C597E
 	private ShipTowerMediumItem CreateRoleItem()
 	{
 		ShipTowerMediumItem shipTowerMediumItem = new ShipTowerMediumItem();
@@ -83,7 +83,7 @@ public class ShipTowerShareLineupItem : GridProxyAbstract<ShipTowerRecordItemDat
 		return shipTowerMediumItem;
 	}
 
-	// Token: 0x0400A52C RID: 42284
+	// Token: 0x0400A916 RID: 43286
 	[Nullable(new byte[]
 	{
 		2,
@@ -92,19 +92,19 @@ public class ShipTowerShareLineupItem : GridProxyAbstract<ShipTowerRecordItemDat
 	})]
 	private GenericLayout<ShipTowerMediumItem, ShipTowerMediumItemData> RoleLayout;
 
-	// Token: 0x02008FF7 RID: 36855
+	// Token: 0x0200823E RID: 33342
 	[NullableContext(0)]
 	private enum ELineupItemComponent
 	{
-		// Token: 0x0402E9E2 RID: 190946
+		// Token: 0x0402A0DA RID: 172250
 		TitleText,
-		// Token: 0x0402E9E3 RID: 190947
+		// Token: 0x0402A0DB RID: 172251
 		NumOneText,
-		// Token: 0x0402E9E4 RID: 190948
+		// Token: 0x0402A0DC RID: 172252
 		NumTwoText,
-		// Token: 0x0402E9E5 RID: 190949
+		// Token: 0x0402A0DD RID: 172253
 		PnHor,
-		// Token: 0x0402E9E6 RID: 190950
+		// Token: 0x0402A0DE RID: 172254
 		RoleItem
 	}
 }

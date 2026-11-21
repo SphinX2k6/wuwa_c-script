@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029AC RID: 10668
+	// Token: 0x02002C99 RID: 11417
 	public class IResumeGiantDeliveryRewardPopup : IResumeSystemRewardPopupType
 	{
-		// Token: 0x0600EC0B RID: 60427 RVA: 0x00227DA4 File Offset: 0x00225FA4
-		[NullableContext(1)]
+		// Token: 0x0600FAA2 RID: 64162 RVA: 0x00245729 File Offset: 0x00243929
 		public static IResumeGiantDeliveryRewardPopup Create(IResumeGiantDeliveryRewardPopup? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A75 RID: 19061
-		// (get) Token: 0x0600EC0C RID: 60428 RVA: 0x00227DC3 File Offset: 0x00225FC3
+		// Token: 0x17004E1E RID: 19998
+		// (get) Token: 0x0600FAA3 RID: 64163 RVA: 0x00245748 File Offset: 0x00243948
 		public override ESystemType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081FC RID: 33276
+		// Token: 0x040088ED RID: 35053
 		private IResumeGiantDeliveryRewardPopup Instance;
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F92 RID: 24466
+	// Token: 0x020065D9 RID: 26073
 	public enum EJigsawPieceState : byte
 	{
-		// Token: 0x0400FE22 RID: 65058
+		// Token: 0x04010BAC RID: 68524
 		Disable,
-		// Token: 0x0400FE23 RID: 65059
+		// Token: 0x04010BAD RID: 68525
 		Correct,
-		// Token: 0x0400FE24 RID: 65060
+		// Token: 0x04010BAE RID: 68526
 		Incorrect
 	}
 }

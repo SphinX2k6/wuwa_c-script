@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200481D RID: 18461
+	// Token: 0x02004C85 RID: 19589
 	public struct IAreaConflictSelector : IFlatbufferObject
 	{
-		// Token: 0x17008471 RID: 33905
-		// (get) Token: 0x0601C833 RID: 116787 RVA: 0x0040857C File Offset: 0x0040677C
+		// Token: 0x17008ABC RID: 35516
+		// (get) Token: 0x0601E030 RID: 122928 RVA: 0x00434ECC File Offset: 0x004330CC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C834 RID: 116788 RVA: 0x00408589 File Offset: 0x00406789
+		// Token: 0x0601E031 RID: 122929 RVA: 0x00434ED9 File Offset: 0x004330D9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601C835 RID: 116789 RVA: 0x00408590 File Offset: 0x00406790
+		// Token: 0x0601E032 RID: 122930 RVA: 0x00434EE0 File Offset: 0x004330E0
 		public static IAreaConflictSelector GetRootAsIAreaConflictSelector(ByteBuffer _bb)
 		{
 			return IAreaConflictSelector.GetRootAsIAreaConflictSelector(_bb, default(IAreaConflictSelector));
 		}
 
-		// Token: 0x0601C836 RID: 116790 RVA: 0x004085AC File Offset: 0x004067AC
+		// Token: 0x0601E033 RID: 122931 RVA: 0x00434EFC File Offset: 0x004330FC
 		public static IAreaConflictSelector GetRootAsIAreaConflictSelector(ByteBuffer _bb, IAreaConflictSelector obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601C837 RID: 116791 RVA: 0x004085C9 File Offset: 0x004067C9
+		// Token: 0x0601E034 RID: 122932 RVA: 0x00434F19 File Offset: 0x00433119
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601C838 RID: 116792 RVA: 0x004085D8 File Offset: 0x004067D8
+		// Token: 0x0601E035 RID: 122933 RVA: 0x00434F28 File Offset: 0x00433128
 		public IAreaConflictSelector __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008472 RID: 33906
-		// (get) Token: 0x0601C839 RID: 116793 RVA: 0x004085E8 File Offset: 0x004067E8
+		// Token: 0x17008ABD RID: 35517
+		// (get) Token: 0x0601E036 RID: 122934 RVA: 0x00434F38 File Offset: 0x00433138
 		public EAreaConflictSelector Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C83A RID: 116794 RVA: 0x00408624 File Offset: 0x00406824
+		// Token: 0x0601E037 RID: 122935 RVA: 0x00434F74 File Offset: 0x00433174
 		public static Offset<IAreaConflictSelector> CreateIAreaConflictSelector(FlatBufferBuilder builder, EAreaConflictSelector Type = EAreaConflictSelector.Quest)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IAreaConflictSelector.EndIAreaConflictSelector(builder);
 		}
 
-		// Token: 0x0601C83B RID: 116795 RVA: 0x0040863A File Offset: 0x0040683A
+		// Token: 0x0601E038 RID: 122936 RVA: 0x00434F8A File Offset: 0x0043318A
 		public static void StartIAreaConflictSelector(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601C83C RID: 116796 RVA: 0x00408643 File Offset: 0x00406843
+		// Token: 0x0601E039 RID: 122937 RVA: 0x00434F93 File Offset: 0x00433193
 		public static void AddType(FlatBufferBuilder builder, EAreaConflictSelector type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601C83D RID: 116797 RVA: 0x0040864E File Offset: 0x0040684E
+		// Token: 0x0601E03A RID: 122938 RVA: 0x00434F9E File Offset: 0x0043319E
 		public static Offset<IAreaConflictSelector> EndIAreaConflictSelector(FlatBufferBuilder builder)
 		{
 			return new Offset<IAreaConflictSelector>(builder.EndTable());
 		}
 
-		// Token: 0x0601C83E RID: 116798 RVA: 0x0040865C File Offset: 0x0040685C
+		// Token: 0x0601E03B RID: 122939 RVA: 0x00434FAC File Offset: 0x004331AC
 		public IAreaConflictSelectorT UnPack()
 		{
 			IAreaConflictSelectorT areaConflictSelectorT = new IAreaConflictSelectorT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return areaConflictSelectorT;
 		}
 
-		// Token: 0x0601C83F RID: 116799 RVA: 0x00408677 File Offset: 0x00406877
+		// Token: 0x0601E03C RID: 122940 RVA: 0x00434FC7 File Offset: 0x004331C7
 		public void UnPackTo(IAreaConflictSelectorT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601C840 RID: 116800 RVA: 0x00408688 File Offset: 0x00406888
+		// Token: 0x0601E03D RID: 122941 RVA: 0x00434FD8 File Offset: 0x004331D8
 		public static Offset<IAreaConflictSelector> Pack(FlatBufferBuilder builder, IAreaConflictSelectorT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IAreaConflictSelector.CreateIAreaConflictSelector(builder, _o.Type);
 		}
 
-		// Token: 0x0400CD35 RID: 52533
+		// Token: 0x0400D770 RID: 55152
 		private Table __p;
 	}
 }

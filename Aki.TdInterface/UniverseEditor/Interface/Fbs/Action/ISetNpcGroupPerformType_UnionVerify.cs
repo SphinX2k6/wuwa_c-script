@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007036 RID: 28726
+	// Token: 0x020077FF RID: 30719
 	public static class ISetNpcGroupPerformType_UnionVerify
 	{
-		// Token: 0x06032D15 RID: 208149 RVA: 0x006DAD30 File Offset: 0x006D8F30
+		// Token: 0x06035F7E RID: 221054 RVA: 0x0073AA00 File Offset: 0x00738C00
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -29,6 +29,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				break;
 			case 6:
 				result = ISetNpcSupportedWalkingPerformVerify.Verify(verifier, tablePos);
+				break;
+			case 7:
+				result = ISetNpcSequencePerformVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

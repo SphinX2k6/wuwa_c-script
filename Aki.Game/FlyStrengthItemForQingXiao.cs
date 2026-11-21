@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F5D RID: 8029
+// Token: 0x0200141F RID: 5151
 [NullableContext(1)]
 [Nullable(0)]
 public class FlyStrengthItemForQingXiao : StrengthItemBase
 {
-	// Token: 0x0600F8A5 RID: 63653 RVA: 0x003C3582 File Offset: 0x003C1782
+	// Token: 0x0600CCC4 RID: 52420 RVA: 0x003CF06E File Offset: 0x003CD26E
 	protected override string GetResourceId()
 	{
 		return "UiItem_EnergyFly";
 	}
 
-	// Token: 0x0600F8A6 RID: 63654 RVA: 0x003C358C File Offset: 0x003C178C
+	// Token: 0x0600CCC5 RID: 52421 RVA: 0x003CF078 File Offset: 0x003CD278
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -48,7 +48,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F8A7 RID: 63655 RVA: 0x003C36E0 File Offset: 0x003C18E0
+	// Token: 0x0600CCC6 RID: 52422 RVA: 0x003CF1CC File Offset: 0x003CD3CC
 	protected override void OnStart()
 	{
 		for (int i = 0; i < 3; i++)
@@ -65,7 +65,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		this.RefreshStrengthPercent(true);
 	}
 
-	// Token: 0x0600F8A8 RID: 63656 RVA: 0x003C3795 File Offset: 0x003C1995
+	// Token: 0x0600CCC7 RID: 52423 RVA: 0x003CF281 File Offset: 0x003CD481
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
@@ -73,7 +73,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		base.PlayTweenAnim(7);
 	}
 
-	// Token: 0x0600F8A9 RID: 63657 RVA: 0x003C37AC File Offset: 0x003C19AC
+	// Token: 0x0600CCC8 RID: 52424 RVA: 0x003CF298 File Offset: 0x003CD498
 	protected override UniTask OnBeforeHideAsync()
 	{
 		FlyStrengthItemForQingXiao.<OnBeforeHideAsync>d__24 <OnBeforeHideAsync>d__;
@@ -84,14 +84,14 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F8AA RID: 63658 RVA: 0x003C37EF File Offset: 0x003C19EF
+	// Token: 0x0600CCC9 RID: 52425 RVA: 0x003CF2DB File Offset: 0x003CD4DB
 	protected override void OnBeforeDestroy()
 	{
 		this.DestroyCloseAnimTimer();
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600F8AB RID: 63659 RVA: 0x003C37FD File Offset: 0x003C19FD
+	// Token: 0x0600CCCA RID: 52426 RVA: 0x003CF2E9 File Offset: 0x003CD4E9
 	public override void Tick(float delta)
 	{
 		if (!base.GetUiVisible())
@@ -106,7 +106,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		this.UpdateTailProgress();
 	}
 
-	// Token: 0x0600F8AC RID: 63660 RVA: 0x003C3834 File Offset: 0x003C1A34
+	// Token: 0x0600CCCB RID: 52427 RVA: 0x003CF320 File Offset: 0x003CD520
 	protected override void OnAddEntityEvents()
 	{
 		if (this.RoleData == null)
@@ -130,7 +130,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		base.ListenForAttributeChanged(this.MaxStrengthAttributeId, new Action<EAttributeType, float, float>(this.OnStrengthMaxChanged));
 	}
 
-	// Token: 0x0600F8AD RID: 63661 RVA: 0x003C3930 File Offset: 0x003C1B30
+	// Token: 0x0600CCCC RID: 52428 RVA: 0x003CF41C File Offset: 0x003CD61C
 	protected override void OnRefreshRoleData()
 	{
 		if (this.RoleData == null)
@@ -157,25 +157,25 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		this.RefreshStrengthPercent(false);
 	}
 
-	// Token: 0x0600F8AE RID: 63662 RVA: 0x003C3A28 File Offset: 0x003C1C28
+	// Token: 0x0600CCCD RID: 52429 RVA: 0x003CF514 File Offset: 0x003CD714
 	protected override void OnEnableByHighPriority(bool b)
 	{
 		this.RefreshVisible();
 	}
 
-	// Token: 0x0600F8AF RID: 63663 RVA: 0x003C3A30 File Offset: 0x003C1C30
+	// Token: 0x0600CCCE RID: 52430 RVA: 0x003CF51C File Offset: 0x003CD71C
 	private void OnStrengthChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		this.RefreshStrengthPercent(false);
 	}
 
-	// Token: 0x0600F8B0 RID: 63664 RVA: 0x003C3A39 File Offset: 0x003C1C39
+	// Token: 0x0600CCCF RID: 52431 RVA: 0x003CF525 File Offset: 0x003CD725
 	private void OnStrengthMaxChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		this.RefreshStrengthPercent(false);
 	}
 
-	// Token: 0x0600F8B1 RID: 63665 RVA: 0x003C3A42 File Offset: 0x003C1C42
+	// Token: 0x0600CCD0 RID: 52432 RVA: 0x003CF52E File Offset: 0x003CD72E
 	protected void OnFlyStrengthTagChanged(int tagId, bool tagExists)
 	{
 		if (this.IsFlying != tagExists)
@@ -185,7 +185,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8B2 RID: 63666 RVA: 0x003C3A5A File Offset: 0x003C1C5A
+	// Token: 0x0600CCD1 RID: 52433 RVA: 0x003CF546 File Offset: 0x003CD746
 	protected void OnBaseSpeedUpTagChanged(int tagId, bool tagExists)
 	{
 		if (this.IsSpeedUp != tagExists)
@@ -195,7 +195,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8B3 RID: 63667 RVA: 0x003C3A72 File Offset: 0x003C1C72
+	// Token: 0x0600CCD2 RID: 52434 RVA: 0x003CF55E File Offset: 0x003CD75E
 	protected void OnLockTagChanged(int tagId, bool tagExists)
 	{
 		if (this.IsLock != tagExists)
@@ -205,7 +205,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8B4 RID: 63668 RVA: 0x003C3A8C File Offset: 0x003C1C8C
+	// Token: 0x0600CCD3 RID: 52435 RVA: 0x003CF578 File Offset: 0x003CD778
 	private UUIItem AddSingleStrengthItem(bool isFirst = false)
 	{
 		UUIItem item = base.GetItem(3);
@@ -223,7 +223,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		return uuiitem;
 	}
 
-	// Token: 0x0600F8B5 RID: 63669 RVA: 0x003C3AE4 File Offset: 0x003C1CE4
+	// Token: 0x0600CCD4 RID: 52436 RVA: 0x003CF5D0 File Offset: 0x003CD7D0
 	private void RefreshStrengthPercent(bool bForce = false)
 	{
 		BattleUiRoleData roleData = this.RoleData;
@@ -256,7 +256,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		this.RefreshStrengthState(bForce);
 	}
 
-	// Token: 0x0600F8B6 RID: 63670 RVA: 0x003C3B90 File Offset: 0x003C1D90
+	// Token: 0x0600CCD5 RID: 52437 RVA: 0x003CF67C File Offset: 0x003CD87C
 	private void RefreshSingleStrengthItemVisible(float maxStrength)
 	{
 		int num = (int)Math.Floor((double)(maxStrength / this.SingleStrengthValue));
@@ -276,7 +276,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		this.RefreshSingleStrengthItemRotation();
 	}
 
-	// Token: 0x0600F8B7 RID: 63671 RVA: 0x003C3BFC File Offset: 0x003C1DFC
+	// Token: 0x0600CCD6 RID: 52438 RVA: 0x003CF6E8 File Offset: 0x003CD8E8
 	private void RefreshSingleStrengthItemRotation()
 	{
 		int num = (int)Math.Floor((double)(this.MaxStrengthCurrentValue / this.SingleStrengthValue));
@@ -300,7 +300,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8B8 RID: 63672 RVA: 0x003C3C94 File Offset: 0x003C1E94
+	// Token: 0x0600CCD7 RID: 52439 RVA: 0x003CF780 File Offset: 0x003CD980
 	private void RefreshStrengthState(bool bForce = false)
 	{
 		float strengthCurrentValue = this.StrengthCurrentValue;
@@ -315,7 +315,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8B9 RID: 63673 RVA: 0x003C3CE8 File Offset: 0x003C1EE8
+	// Token: 0x0600CCD8 RID: 52440 RVA: 0x003CF7D4 File Offset: 0x003CD9D4
 	private void SetNormal(bool bNormal, bool bForce = false)
 	{
 		if (this.IsNormalState == bNormal && !bForce)
@@ -335,7 +335,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		uuiitem2.SetChangeColor(bUseChangeColor2, fcolor);
 	}
 
-	// Token: 0x0600F8BA RID: 63674 RVA: 0x003C3D4C File Offset: 0x003C1F4C
+	// Token: 0x0600CCD9 RID: 52441 RVA: 0x003CF838 File Offset: 0x003CDA38
 	protected void RefreshVisible()
 	{
 		bool flag = (this.IsFlying || !this.IsFullState) && this.EnableByHighPriority;
@@ -345,7 +345,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8BB RID: 63675 RVA: 0x003C3D84 File Offset: 0x003C1F84
+	// Token: 0x0600CCDA RID: 52442 RVA: 0x003CF870 File Offset: 0x003CDA70
 	protected void RefreshSpeedUp()
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -366,7 +366,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		item.SetUIActive(true);
 	}
 
-	// Token: 0x0600F8BC RID: 63676 RVA: 0x003C3DF0 File Offset: 0x003C1FF0
+	// Token: 0x0600CCDB RID: 52443 RVA: 0x003CF8DC File Offset: 0x003CDADC
 	private void UpdateTailProgress()
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -378,7 +378,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		uuiitem.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x0600F8BD RID: 63677 RVA: 0x003C3E4B File Offset: 0x003C204B
+	// Token: 0x0600CCDC RID: 52444 RVA: 0x003CF937 File Offset: 0x003CDB37
 	protected void RefreshLockState()
 	{
 		UUIItem item = base.GetItem(6);
@@ -389,7 +389,7 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		item.SetUIActive(this.IsLock);
 	}
 
-	// Token: 0x0600F8BE RID: 63678 RVA: 0x003C3E64 File Offset: 0x003C2064
+	// Token: 0x0600CCDD RID: 52445 RVA: 0x003CF950 File Offset: 0x003CDB50
 	private void DestroyCloseAnimTimer()
 	{
 		if (this.CloseAnimTimer != null)
@@ -404,66 +404,66 @@ public class FlyStrengthItemForQingXiao : StrengthItemBase
 		}
 	}
 
-	// Token: 0x040073AA RID: 29610
+	// Token: 0x0400748B RID: 29835
 	private const int CLOSE_ANIM_TIME = 250;
 
-	// Token: 0x040073AB RID: 29611
+	// Token: 0x0400748C RID: 29836
 	private const int PRELOAD_SINGLE_STRENGTH_ITEM_COUNT = 3;
 
-	// Token: 0x040073AC RID: 29612
+	// Token: 0x0400748D RID: 29837
 	protected EAttributeType StrengthAttributeId = EAttributeType.SpecialEnergy3;
 
-	// Token: 0x040073AD RID: 29613
+	// Token: 0x0400748E RID: 29838
 	protected EAttributeType MaxStrengthAttributeId = EAttributeType.SpecialEnergy3Max;
 
-	// Token: 0x040073AE RID: 29614
+	// Token: 0x0400748F RID: 29839
 	private bool IsNormalState = true;
 
-	// Token: 0x040073AF RID: 29615
+	// Token: 0x04007490 RID: 29840
 	private bool IsFullState = true;
 
-	// Token: 0x040073B0 RID: 29616
+	// Token: 0x04007491 RID: 29841
 	protected bool IsFlying;
 
-	// Token: 0x040073B1 RID: 29617
+	// Token: 0x04007492 RID: 29842
 	protected bool IsSpeedUp;
 
-	// Token: 0x040073B2 RID: 29618
+	// Token: 0x04007493 RID: 29843
 	protected bool IsLock;
 
-	// Token: 0x040073B3 RID: 29619
+	// Token: 0x04007494 RID: 29844
 	private float LowEndurancePercent;
 
-	// Token: 0x040073B4 RID: 29620
+	// Token: 0x04007495 RID: 29845
 	private float SingleStrengthValue;
 
-	// Token: 0x040073B5 RID: 29621
+	// Token: 0x04007496 RID: 29846
 	private int MaxSingleStrengthItemCount = 1;
 
-	// Token: 0x040073B6 RID: 29622
+	// Token: 0x04007497 RID: 29847
 	private float TailSpeed = 0.1f;
 
-	// Token: 0x040073B7 RID: 29623
+	// Token: 0x04007498 RID: 29848
 	private readonly List<UUIItem> StrengthSingleLineActorList = new List<UUIItem>();
 
-	// Token: 0x040073B8 RID: 29624
+	// Token: 0x04007499 RID: 29849
 	private float StrengthCurrentValue;
 
-	// Token: 0x040073B9 RID: 29625
+	// Token: 0x0400749A RID: 29850
 	private float MaxStrengthCurrentValue;
 
-	// Token: 0x040073BA RID: 29626
+	// Token: 0x0400749B RID: 29851
 	private float TailStrengthCurrentValue;
 
-	// Token: 0x040073BB RID: 29627
+	// Token: 0x0400749C RID: 29852
 	[Nullable(2)]
 	private TimerHandle CloseAnimTimer;
 
-	// Token: 0x040073BC RID: 29628
+	// Token: 0x0400749D RID: 29853
 	[Nullable(2)]
 	private CustomPromise CloseAnimPromise;
 
-	// Token: 0x040073BD RID: 29629
+	// Token: 0x0400749E RID: 29854
 	[StaticVariableRuleIgnore]
 	private static readonly Stat CloseAnimTimerStat = Stat.Create("StrengthCloseAnim", "", "");
 }

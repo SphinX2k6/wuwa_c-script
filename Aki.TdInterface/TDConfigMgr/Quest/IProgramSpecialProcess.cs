@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200105F RID: 4191
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200118D RID: 4493
 	public class IProgramSpecialProcess : IQuestCondition
 	{
-		// Token: 0x06005DE6 RID: 24038 RVA: 0x000E3290 File Offset: 0x000E1490
+		// Token: 0x060063D8 RID: 25560 RVA: 0x000F0264 File Offset: 0x000EE464
 		private IProgramSpecialProcess_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005DE7 RID: 24039 RVA: 0x000E32C8 File Offset: 0x000E14C8
+		// Token: 0x060063D9 RID: 25561 RVA: 0x000F029C File Offset: 0x000EE49C
 		public static IProgramSpecialProcess Create([Nullable(2)] IProgramSpecialProcess instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005DE8 RID: 24040 RVA: 0x000E32DB File Offset: 0x000E14DB
+		// Token: 0x060063DA RID: 25562 RVA: 0x000F02AF File Offset: 0x000EE4AF
 		public static IProgramSpecialProcess CreateFromSetValue([Nullable(2)] IProgramSpecialProcess_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005DE9 RID: 24041 RVA: 0x000E32EE File Offset: 0x000E14EE
+		// Token: 0x060063DB RID: 25563 RVA: 0x000F02C2 File Offset: 0x000EE4C2
 		public new IProgramSpecialProcess_SetValue ToSetValue()
 		{
 			return new IProgramSpecialProcess_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001EE6 RID: 7910
-		// (get) Token: 0x06005DEA RID: 24042 RVA: 0x000E3319 File Offset: 0x000E1519
-		// (set) Token: 0x06005DEB RID: 24043 RVA: 0x000E3344 File Offset: 0x000E1544
+		// Token: 0x17002095 RID: 8341
+		// (get) Token: 0x060063DC RID: 25564 RVA: 0x000F02ED File Offset: 0x000EE4ED
+		// (set) Token: 0x060063DD RID: 25565 RVA: 0x000F0318 File Offset: 0x000EE518
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EE7 RID: 7911
-		// (get) Token: 0x06005DEC RID: 24044 RVA: 0x000E3354 File Offset: 0x000E1554
-		// (set) Token: 0x06005DED RID: 24045 RVA: 0x000E33B5 File Offset: 0x000E15B5
+		// Token: 0x17002096 RID: 8342
+		// (get) Token: 0x060063DE RID: 25566 RVA: 0x000F0328 File Offset: 0x000EE528
+		// (set) Token: 0x060063DF RID: 25567 RVA: 0x000F0389 File Offset: 0x000EE589
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EE8 RID: 7912
-		// (get) Token: 0x06005DEE RID: 24046 RVA: 0x000E33CC File Offset: 0x000E15CC
-		// (set) Token: 0x06005DEF RID: 24047 RVA: 0x000E342D File Offset: 0x000E162D
+		// Token: 0x17002097 RID: 8343
+		// (get) Token: 0x060063E0 RID: 25568 RVA: 0x000F03A0 File Offset: 0x000EE5A0
+		// (set) Token: 0x060063E1 RID: 25569 RVA: 0x000F0401 File Offset: 0x000EE601
 		public virtual ILowMemorySceneSwitch SpecialProcess
 		{
 			get
@@ -148,24 +146,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003887 RID: 14471
+		// Token: 0x04003BCF RID: 15311
 		[Nullable(2)]
 		protected new IProgramSpecialProcess FbInstance;
 
-		// Token: 0x04003888 RID: 14472
+		// Token: 0x04003BD0 RID: 15312
 		[Nullable(2)]
 		protected new IProgramSpecialProcess_SetValue PocoInterface;
 
-		// Token: 0x04003889 RID: 14473
+		// Token: 0x04003BD1 RID: 15313
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400388A RID: 14474
+		// Token: 0x04003BD2 RID: 15314
 		private bool _PreConditionsInited;
 
-		// Token: 0x0400388B RID: 14475
+		// Token: 0x04003BD3 RID: 15315
 		private ILowMemorySceneSwitch _SpecialProcessCache;
 
-		// Token: 0x0400388C RID: 14476
+		// Token: 0x04003BD4 RID: 15316
 		private bool _SpecialProcessInited;
 	}
 }

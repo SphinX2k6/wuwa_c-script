@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A4F RID: 10831
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D3C RID: 11580
 	public class ReignsChangeBackground : ActionParams
 	{
-		// Token: 0x0600EE5E RID: 61022 RVA: 0x0022B425 File Offset: 0x00229625
+		// Token: 0x0600FCF6 RID: 64758 RVA: 0x00248DD9 File Offset: 0x00246FD9
 		public static ReignsChangeBackground Create(IReignsChangeBackground? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B82 RID: 19330
-		// (get) Token: 0x0600EE5F RID: 61023 RVA: 0x0022B444 File Offset: 0x00229644
+		// Token: 0x17004F2C RID: 20268
+		// (get) Token: 0x0600FCF7 RID: 64759 RVA: 0x00248DF8 File Offset: 0x00246FF8
 		public virtual string Background
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B83 RID: 19331
-		// (get) Token: 0x0600EE60 RID: 61024 RVA: 0x0022B451 File Offset: 0x00229651
+		// Token: 0x17004F2D RID: 20269
+		// (get) Token: 0x0600FCF8 RID: 64760 RVA: 0x00248E05 File Offset: 0x00247005
 		public virtual EReignsBackgroundChangeMode ChangeMode
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400832B RID: 33579
+		// Token: 0x04008A1E RID: 35358
 		private IReignsChangeBackground Instance;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026DD RID: 9949
+	// Token: 0x020029A1 RID: 10657
 	public class IPerceptionNotifyGatherToPlayer : IBattleStatePerceptionBehaviorType
 	{
-		// Token: 0x0600DE4A RID: 56906 RVA: 0x0020FB7C File Offset: 0x0020DD7C
-		[NullableContext(1)]
+		// Token: 0x0600EC26 RID: 60454 RVA: 0x0022C3BC File Offset: 0x0022A5BC
 		public static IPerceptionNotifyGatherToPlayer Create(IPerceptionNotifyGatherToPlayer? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004252 RID: 16978
-		// (get) Token: 0x0600DE4B RID: 56907 RVA: 0x0020FB9B File Offset: 0x0020DD9B
+		// Token: 0x17004592 RID: 17810
+		// (get) Token: 0x0600EC27 RID: 60455 RVA: 0x0022C3DB File Offset: 0x0022A5DB
 		public override EBattleStatePerceptionBehavior Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B65 RID: 31589
+		// Token: 0x04008205 RID: 33285
 		private IPerceptionNotifyGatherToPlayer Instance;
 	}
 }

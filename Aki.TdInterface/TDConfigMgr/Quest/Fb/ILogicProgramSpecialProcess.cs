@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012F6 RID: 4854
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001446 RID: 5190
 	public class ILogicProgramSpecialProcess
 	{
-		// Token: 0x06006EBB RID: 28347 RVA: 0x0010B6F4 File Offset: 0x001098F4
+		// Token: 0x0600755B RID: 30043 RVA: 0x00119C60 File Offset: 0x00117E60
 		public static ILogicProgramSpecialProcess Create(ILogicProgramSpecialProcess? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170022A2 RID: 8866
-		// (get) Token: 0x06006EBC RID: 28348 RVA: 0x0010B714 File Offset: 0x00109914
+		// Token: 0x17002471 RID: 9329
+		// (get) Token: 0x0600755C RID: 30044 RVA: 0x00119C80 File Offset: 0x00117E80
 		public virtual List<IDisableUro> SpecialProcessList
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F78 RID: 16248
+		// Token: 0x040042F4 RID: 17140
 		private ILogicProgramSpecialProcess Instance;
 
-		// Token: 0x04003F79 RID: 16249
+		// Token: 0x040042F5 RID: 17141
 		private List<IDisableUro> _SpecialProcessListCache;
 
-		// Token: 0x04003F7A RID: 16250
+		// Token: 0x040042F6 RID: 17142
 		private bool _SpecialProcessListInited;
 	}
 }

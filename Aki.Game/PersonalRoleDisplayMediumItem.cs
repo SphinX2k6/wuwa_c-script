@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020023E6 RID: 9190
+// Token: 0x020018CB RID: 6347
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class PersonalRoleDisplayMediumItem : GridProxyAbstract<PersonalRoleDisplayContentData>
 {
-	// Token: 0x060125D9 RID: 75225 RVA: 0x00486C61 File Offset: 0x00484E61
+	// Token: 0x0600FA8B RID: 64139 RVA: 0x0049416D File Offset: 0x0049236D
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class PersonalRoleDisplayMediumItem : GridProxyAbstract<PersonalRoleDispl
 		};
 	}
 
-	// Token: 0x060125DA RID: 75226 RVA: 0x00486C9C File Offset: 0x00484E9C
+	// Token: 0x0600FA8C RID: 64140 RVA: 0x004941A8 File Offset: 0x004923A8
 	protected override void OnStart()
 	{
 		this.ItemBaseItem = new MediumItemGrid();
@@ -34,7 +34,7 @@ public class PersonalRoleDisplayMediumItem : GridProxyAbstract<PersonalRoleDispl
 		this.ItemBaseItem.BindOnExtendToggleRelease(new Action<MediumItemGridExtendCallback>(this.OnClickItemBaseItem));
 	}
 
-	// Token: 0x060125DB RID: 75227 RVA: 0x00486D0C File Offset: 0x00484F0C
+	// Token: 0x0600FA8D RID: 64141 RVA: 0x00494218 File Offset: 0x00492418
 	public override void Refresh(PersonalRoleDisplayContentData data, bool isSelected, int gridIndex)
 	{
 		base.GridIndex = gridIndex;
@@ -60,13 +60,13 @@ public class PersonalRoleDisplayMediumItem : GridProxyAbstract<PersonalRoleDispl
 		this.ItemBaseItem.GetItemGridExtendToggle().SetToggleStateForce(state, false, false, false);
 	}
 
-	// Token: 0x060125DC RID: 75228 RVA: 0x00486DF4 File Offset: 0x00484FF4
+	// Token: 0x0600FA8E RID: 64142 RVA: 0x00494300 File Offset: 0x00492500
 	public void BindClickItemCallBack(Action<int> callback)
 	{
 		this.ClickItemCallBack = callback;
 	}
 
-	// Token: 0x060125DD RID: 75229 RVA: 0x00486DFD File Offset: 0x00484FFD
+	// Token: 0x0600FA8F RID: 64143 RVA: 0x00494309 File Offset: 0x00492509
 	private void OnClickItemBaseItem(MediumItemGridExtendCallback _)
 	{
 		if (this.ClickItemCallBack != null)
@@ -75,36 +75,36 @@ public class PersonalRoleDisplayMediumItem : GridProxyAbstract<PersonalRoleDispl
 		}
 	}
 
-	// Token: 0x060125DE RID: 75230 RVA: 0x00486E18 File Offset: 0x00485018
+	// Token: 0x0600FA90 RID: 64144 RVA: 0x00494324 File Offset: 0x00492524
 	public override void OnSelected(bool fireEvent)
 	{
 		this.ItemBaseItem.GetItemGridExtendToggle().SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x060125DF RID: 75231 RVA: 0x00486E2E File Offset: 0x0048502E
+	// Token: 0x0600FA91 RID: 64145 RVA: 0x0049433A File Offset: 0x0049253A
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.ItemBaseItem.GetItemGridExtendToggle().SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04008AF6 RID: 35574
+	// Token: 0x04008C3D RID: 35901
 	private int RoleId;
 
-	// Token: 0x04008AF7 RID: 35575
+	// Token: 0x04008C3E RID: 35902
 	[Nullable(2)]
 	private MediumItemGrid ItemBaseItem;
 
-	// Token: 0x04008AF8 RID: 35576
+	// Token: 0x04008C3F RID: 35903
 	[Nullable(2)]
 	private Action<int> ClickItemCallBack;
 
-	// Token: 0x02008987 RID: 35207
+	// Token: 0x02007B10 RID: 31504
 	[NullableContext(0)]
 	public enum EComponent
 	{
-		// Token: 0x0402CB0D RID: 183053
+		// Token: 0x04027E28 RID: 163368
 		EmptyItem,
-		// Token: 0x0402CB0E RID: 183054
+		// Token: 0x04027E29 RID: 163369
 		ItemBaseItem
 	}
 }

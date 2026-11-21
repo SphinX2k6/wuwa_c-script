@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200265A RID: 9818
+	// Token: 0x0200291E RID: 10526
 	public class IQuestBranchConfig
 	{
-		// Token: 0x0600DC1A RID: 56346 RVA: 0x0020C0BD File Offset: 0x0020A2BD
-		[NullableContext(1)]
+		// Token: 0x0600E9F6 RID: 59894 RVA: 0x00228995 File Offset: 0x00226B95
 		public static IQuestBranchConfig Create(IQuestBranchConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004128 RID: 16680
-		// (get) Token: 0x0600DC1B RID: 56347 RVA: 0x0020C0DC File Offset: 0x0020A2DC
+		// Token: 0x17004468 RID: 17512
+		// (get) Token: 0x0600E9F7 RID: 59895 RVA: 0x002289B4 File Offset: 0x00226BB4
 		public virtual bool? EnableAnimation
 		{
 			get
@@ -35,7 +33,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A58 RID: 31320
+		// Token: 0x040080FA RID: 33018
 		private IQuestBranchConfig Instance;
 	}
 }

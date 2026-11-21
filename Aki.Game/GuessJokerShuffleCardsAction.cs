@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001027 RID: 4135
+// Token: 0x020004DB RID: 1243
 public class GuessJokerShuffleCardsAction : GuessJokerActionBase
 {
-	// Token: 0x06006A2F RID: 27183 RVA: 0x00154DB6 File Offset: 0x00152FB6
+	// Token: 0x06003DC4 RID: 15812 RVA: 0x0015D6DE File Offset: 0x0015B8DE
 	public GuessJokerShuffleCardsAction(ECardPositionType targetPosition)
 	{
 		this.TargetPosition = targetPosition;
 	}
 
-	// Token: 0x06006A30 RID: 27184 RVA: 0x00154DC8 File Offset: 0x00152FC8
+	// Token: 0x06003DC5 RID: 15813 RVA: 0x0015D6F0 File Offset: 0x0015B8F0
 	protected override void OnStart()
 	{
 		GuessJokerGamePlayView gamePlayView = GuessJokerGamePlayModel.Instance.GetGamePlayView();
@@ -34,6 +34,6 @@ public class GuessJokerShuffleCardsAction : GuessJokerActionBase
 		});
 	}
 
-	// Token: 0x040030EF RID: 12527
+	// Token: 0x04003188 RID: 12680
 	private readonly ECardPositionType TargetPosition;
 }

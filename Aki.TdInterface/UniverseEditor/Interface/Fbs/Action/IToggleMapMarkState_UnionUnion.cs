@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007413 RID: 29715
+	// Token: 0x02007BFD RID: 31741
 	public class IToggleMapMarkState_UnionUnion
 	{
-		// Token: 0x1700E1A9 RID: 57769
-		// (get) Token: 0x06035FAD RID: 221101 RVA: 0x007581B9 File Offset: 0x007563B9
-		// (set) Token: 0x06035FAE RID: 221102 RVA: 0x007581C1 File Offset: 0x007563C1
+		// Token: 0x1700EDBE RID: 60862
+		// (get) Token: 0x06039360 RID: 234336 RVA: 0x007BA92D File Offset: 0x007B8B2D
+		// (set) Token: 0x06039361 RID: 234337 RVA: 0x007BA935 File Offset: 0x007B8B35
 		public IToggleMapMarkState_Union Type { get; set; }
 
-		// Token: 0x1700E1AA RID: 57770
-		// (get) Token: 0x06035FAF RID: 221103 RVA: 0x007581CA File Offset: 0x007563CA
-		// (set) Token: 0x06035FB0 RID: 221104 RVA: 0x007581D2 File Offset: 0x007563D2
+		// Token: 0x1700EDBF RID: 60863
+		// (get) Token: 0x06039362 RID: 234338 RVA: 0x007BA93E File Offset: 0x007B8B3E
+		// (set) Token: 0x06039363 RID: 234339 RVA: 0x007BA946 File Offset: 0x007B8B46
 		public object Value { get; set; }
 
-		// Token: 0x06035FB1 RID: 221105 RVA: 0x007581DB File Offset: 0x007563DB
+		// Token: 0x06039364 RID: 234340 RVA: 0x007BA94F File Offset: 0x007B8B4F
 		public IToggleMapMarkState_UnionUnion()
 		{
 			this.Type = IToggleMapMarkState_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06035FB2 RID: 221106 RVA: 0x007581F1 File Offset: 0x007563F1
+		// Token: 0x06039365 RID: 234341 RVA: 0x007BA965 File Offset: 0x007B8B65
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06035FB3 RID: 221107 RVA: 0x00758203 File Offset: 0x00756403
+		// Token: 0x06039366 RID: 234342 RVA: 0x007BA977 File Offset: 0x007B8B77
 		public IToggleMapMarkStateT AsIToggleMapMarkState()
 		{
 			return this.As<IToggleMapMarkStateT>();
 		}
 
-		// Token: 0x06035FB4 RID: 221108 RVA: 0x0075820B File Offset: 0x0075640B
+		// Token: 0x06039367 RID: 234343 RVA: 0x007BA97F File Offset: 0x007B8B7F
 		public static IToggleMapMarkState_UnionUnion FromIToggleMapMarkState(IToggleMapMarkStateT _itogglemapmarkstate)
 		{
 			return new IToggleMapMarkState_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035FB5 RID: 221109 RVA: 0x00758220 File Offset: 0x00756420
+		// Token: 0x06039368 RID: 234344 RVA: 0x007BA994 File Offset: 0x007B8B94
 		public IShowMapMarkT AsIShowMapMark()
 		{
 			return this.As<IShowMapMarkT>();
 		}
 
-		// Token: 0x06035FB6 RID: 221110 RVA: 0x00758228 File Offset: 0x00756428
+		// Token: 0x06039369 RID: 234345 RVA: 0x007BA99C File Offset: 0x007B8B9C
 		public static IToggleMapMarkState_UnionUnion FromIShowMapMark(IShowMapMarkT _ishowmapmark)
 		{
 			return new IToggleMapMarkState_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035FB7 RID: 221111 RVA: 0x0075823D File Offset: 0x0075643D
+		// Token: 0x0603936A RID: 234346 RVA: 0x007BA9B1 File Offset: 0x007B8BB1
 		public IHideMapMarkT AsIHideMapMark()
 		{
 			return this.As<IHideMapMarkT>();
 		}
 
-		// Token: 0x06035FB8 RID: 221112 RVA: 0x00758245 File Offset: 0x00756445
+		// Token: 0x0603936B RID: 234347 RVA: 0x007BA9B9 File Offset: 0x007B8BB9
 		public static IToggleMapMarkState_UnionUnion FromIHideMapMark(IHideMapMarkT _ihidemapmark)
 		{
 			return new IToggleMapMarkState_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035FB9 RID: 221113 RVA: 0x0075825A File Offset: 0x0075645A
+		// Token: 0x0603936C RID: 234348 RVA: 0x007BA9CE File Offset: 0x007B8BCE
 		public IDisableMapMarkT AsIDisableMapMark()
 		{
 			return this.As<IDisableMapMarkT>();
 		}
 
-		// Token: 0x06035FBA RID: 221114 RVA: 0x00758262 File Offset: 0x00756462
+		// Token: 0x0603936D RID: 234349 RVA: 0x007BA9D6 File Offset: 0x007B8BD6
 		public static IToggleMapMarkState_UnionUnion FromIDisableMapMark(IDisableMapMarkT _idisablemapmark)
 		{
 			return new IToggleMapMarkState_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035FBB RID: 221115 RVA: 0x00758278 File Offset: 0x00756478
+		// Token: 0x0603936E RID: 234350 RVA: 0x007BA9EC File Offset: 0x007B8BEC
 		public static int Pack(FlatBufferBuilder builder, IToggleMapMarkState_UnionUnion _o)
 		{
 			switch (_o.Type)

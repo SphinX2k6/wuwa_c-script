@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200698B RID: 27019
+	// Token: 0x02005AE7 RID: 23271
 	public enum ECodeCondition
 	{
-		// Token: 0x0402306D RID: 143469
+		// Token: 0x0401E257 RID: 123479
 		CheckCharacterTag
 	}
 }

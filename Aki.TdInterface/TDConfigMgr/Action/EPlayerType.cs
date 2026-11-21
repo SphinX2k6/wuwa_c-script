@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001678 RID: 5752
+	// Token: 0x020017EB RID: 6123
 	[EnumExtensions]
 	public enum EPlayerType
 	{
-		// Token: 0x04004D12 RID: 19730
+		// Token: 0x04005117 RID: 20759
 		P1,
-		// Token: 0x04004D13 RID: 19731
+		// Token: 0x04005118 RID: 20760
 		P2,
-		// Token: 0x04004D14 RID: 19732
+		// Token: 0x04005119 RID: 20761
 		P3
 	}
 }

@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001371 RID: 4977
+// Token: 0x02000825 RID: 2085
 public class ActivityMotorGiftSubView : ActivitySubViewBase
 {
-	// Token: 0x06008ADF RID: 35551 RVA: 0x001DA778 File Offset: 0x001D8978
+	// Token: 0x06005E7A RID: 24186 RVA: 0x001E35D4 File Offset: 0x001E17D4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -43,13 +43,13 @@ public class ActivityMotorGiftSubView : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008AE0 RID: 35552 RVA: 0x001DA8E4 File Offset: 0x001D8AE4
+	// Token: 0x06005E7B RID: 24187 RVA: 0x001E3740 File Offset: 0x001E1940
 	protected override void OnSetData()
 	{
 		this.MotorGiftData = (this.ActivityBaseData as ActivityMotorGiftData);
 	}
 
-	// Token: 0x06008AE1 RID: 35553 RVA: 0x001DA8F8 File Offset: 0x001D8AF8
+	// Token: 0x06005E7C RID: 24188 RVA: 0x001E3754 File Offset: 0x001E1954
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityMotorGiftSubView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -60,20 +60,20 @@ public class ActivityMotorGiftSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008AE2 RID: 35554 RVA: 0x001DA93B File Offset: 0x001D8B3B
+	// Token: 0x06005E7D RID: 24189 RVA: 0x001E3797 File Offset: 0x001E1997
 	protected override void OnStart()
 	{
 		this.OnRefreshView();
 	}
 
-	// Token: 0x06008AE3 RID: 35555 RVA: 0x001DA943 File Offset: 0x001D8B43
+	// Token: 0x06005E7E RID: 24190 RVA: 0x001E379F File Offset: 0x001E199F
 	protected override void OnRefreshView()
 	{
 		this.RefreshMotorInfo();
 		this.RefreshFinishState();
 	}
 
-	// Token: 0x06008AE4 RID: 35556 RVA: 0x001DA954 File Offset: 0x001D8B54
+	// Token: 0x06005E7F RID: 24191 RVA: 0x001E37B0 File Offset: 0x001E19B0
 	private void RefreshMotorInfo()
 	{
 		ActivityMotorGiftData motorGiftData = this.MotorGiftData;
@@ -87,7 +87,7 @@ public class ActivityMotorGiftSubView : ActivitySubViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), value.SubTitle, Array.Empty<object>());
 	}
 
-	// Token: 0x06008AE5 RID: 35557 RVA: 0x001DA9C8 File Offset: 0x001D8BC8
+	// Token: 0x06005E80 RID: 24192 RVA: 0x001E3824 File Offset: 0x001E1A24
 	private void RefreshFinishState()
 	{
 		ActivityMotorGiftData motorGiftData = this.MotorGiftData;
@@ -117,7 +117,7 @@ public class ActivityMotorGiftSubView : ActivitySubViewBase
 		text.SetUIActive(true);
 	}
 
-	// Token: 0x06008AE6 RID: 35558 RVA: 0x001DAA64 File Offset: 0x001D8C64
+	// Token: 0x06005E81 RID: 24193 RVA: 0x001E38C0 File Offset: 0x001E1AC0
 	private void RefreshFinishText()
 	{
 		UUIItem item = base.GetItem(7);
@@ -129,7 +129,7 @@ public class ActivityMotorGiftSubView : ActivitySubViewBase
 		LguiUtil.Instance.SetLocalTextNew(uiText, "MotorGiftFinishDes", Array.Empty<object>());
 	}
 
-	// Token: 0x06008AE7 RID: 35559 RVA: 0x001DAAAE File Offset: 0x001D8CAE
+	// Token: 0x06005E82 RID: 24194 RVA: 0x001E390A File Offset: 0x001E1B0A
 	private void OnPreviewButtonClick()
 	{
 		ActivityMotorGiftData motorGiftData = this.MotorGiftData;
@@ -140,54 +140,54 @@ public class ActivityMotorGiftSubView : ActivitySubViewBase
 		motorGiftData.OpenMotorPreviewView();
 	}
 
-	// Token: 0x04003DC6 RID: 15814
+	// Token: 0x04003E5E RID: 15966
 	[Nullable(2)]
 	private ActivityMotorGiftData MotorGiftData;
 
-	// Token: 0x04003DC7 RID: 15815
+	// Token: 0x04003E5F RID: 15967
 	[Nullable(2)]
 	private ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x020079E6 RID: 31206
+	// Token: 0x02006B70 RID: 27504
 	[NullableContext(1)]
 	[Nullable(0)]
 	private static class EMotorGiftTextKey
 	{
-		// Token: 0x040281F5 RID: 164341
+		// Token: 0x04023522 RID: 144674
 		public const string MotorGiftHintDes = "MotorGiftHintDes";
 
-		// Token: 0x040281F6 RID: 164342
+		// Token: 0x04023523 RID: 144675
 		public const string MotorGiftHintName = "MotorGiftHintName";
 
-		// Token: 0x040281F7 RID: 164343
+		// Token: 0x04023524 RID: 144676
 		public const string MotorGiftFinishDes = "MotorGiftFinishDes";
 	}
 
-	// Token: 0x020079E7 RID: 31207
+	// Token: 0x02006B71 RID: 27505
 	private class EComponents
 	{
-		// Token: 0x040281F8 RID: 164344
+		// Token: 0x04023525 RID: 144677
 		public const int BtnLookA = 0;
 
-		// Token: 0x040281F9 RID: 164345
+		// Token: 0x04023526 RID: 144678
 		public const int ComActivityInfo = 1;
 
-		// Token: 0x040281FA RID: 164346
+		// Token: 0x04023527 RID: 144679
 		public const int TxtSkinMainTitle = 2;
 
-		// Token: 0x040281FB RID: 164347
+		// Token: 0x04023528 RID: 144680
 		public const int TxtSubTitle = 3;
 
-		// Token: 0x040281FC RID: 164348
+		// Token: 0x04023529 RID: 144681
 		public const int PnlLayout = 4;
 
-		// Token: 0x040281FD RID: 164349
+		// Token: 0x0402352A RID: 144682
 		public const int TxtTip2 = 5;
 
-		// Token: 0x040281FE RID: 164350
+		// Token: 0x0402352B RID: 144683
 		public const int TxtTip1 = 6;
 
-		// Token: 0x040281FF RID: 164351
+		// Token: 0x0402352C RID: 144684
 		public const int PnlFinish = 7;
 	}
 }

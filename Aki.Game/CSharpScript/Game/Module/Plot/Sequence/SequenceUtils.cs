@@ -9,24 +9,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence
 {
-	// Token: 0x0200501A RID: 20506
+	// Token: 0x02003FE4 RID: 16356
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SequenceUtils : IStaticVariableResetter
 	{
-		// Token: 0x060347B6 RID: 214966 RVA: 0x00C5CB12 File Offset: 0x00C5AD12
+		// Token: 0x06029659 RID: 169561 RVA: 0x00BA805E File Offset: 0x00BA625E
 		static SequenceUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SequenceUtils.CreateStaticDefaultValue), new Action(SequenceUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060347B7 RID: 214967 RVA: 0x00C5CB31 File Offset: 0x00C5AD31
+		// Token: 0x0602965A RID: 169562 RVA: 0x00BA807D File Offset: 0x00BA627D
 		public static ULevelSequence GetSelectedSequenceInEditor()
 		{
 			return null;
 		}
 
-		// Token: 0x060347B8 RID: 214968 RVA: 0x00C5CB34 File Offset: 0x00C5AD34
+		// Token: 0x0602965B RID: 169563 RVA: 0x00BA8080 File Offset: 0x00BA6280
 		[NullableContext(1)]
 		public static bool CheckIfUseAudioSeq(AActor actor)
 		{
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return seqAudio_Seq_V2_C2 != null && seqAudio_Seq_V2_C2.UseAudioSeq;
 		}
 
-		// Token: 0x060347B9 RID: 214969 RVA: 0x00C5CBB0 File Offset: 0x00C5ADB0
+		// Token: 0x0602965C RID: 169564 RVA: 0x00BA80FC File Offset: 0x00BA62FC
 		public static FName? GetSeqBindingTag(AActor actor)
 		{
 			if (actor == null || !actor.IsValid())
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return null;
 		}
 
-		// Token: 0x060347BA RID: 214970 RVA: 0x00C5CC38 File Offset: 0x00C5AE38
+		// Token: 0x0602965D RID: 169565 RVA: 0x00BA8184 File Offset: 0x00BA6384
 		public static USkeletalMeshComponent GetSeqBlendMesh(AActor actor)
 		{
 			if (actor == null || !actor.IsValid())
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return null;
 		}
 
-		// Token: 0x060347BB RID: 214971 RVA: 0x00C5CC84 File Offset: 0x00C5AE84
+		// Token: 0x0602965E RID: 169566 RVA: 0x00BA81D0 File Offset: 0x00BA63D0
 		public static bool BeginSeqSwitchPose(AActor actor, AActor from, AActor to, float switchTime)
 		{
 			if (actor == null || !actor.IsValid())
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return false;
 		}
 
-		// Token: 0x060347BC RID: 214972 RVA: 0x00C5CCD0 File Offset: 0x00C5AED0
+		// Token: 0x0602965F RID: 169567 RVA: 0x00BA821C File Offset: 0x00BA641C
 		public static bool EndSeqSwitchPose(AActor actor, AActor to)
 		{
 			if (actor == null || !actor.IsValid())
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return false;
 		}
 
-		// Token: 0x060347BD RID: 214973 RVA: 0x00C5CD18 File Offset: 0x00C5AF18
+		// Token: 0x06029660 RID: 169568 RVA: 0x00BA8264 File Offset: 0x00BA6464
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return null;
 		}
 
-		// Token: 0x060347BE RID: 214974 RVA: 0x00C5CE2C File Offset: 0x00C5B02C
+		// Token: 0x06029661 RID: 169569 RVA: 0x00BA8378 File Offset: 0x00BA6578
 		public static UAnimInstance GetSeqMouthAnimInstance(AActor actor)
 		{
 			if (actor == null || !actor.IsValid())
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x060347BF RID: 214975 RVA: 0x00C5CF00 File Offset: 0x00C5B100
+		// Token: 0x06029662 RID: 169570 RVA: 0x00BA844C File Offset: 0x00BA664C
 		public static bool ApplySeqCostumeState(AActor actor, int state)
 		{
 			if (actor == null || !actor.IsValid())
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return false;
 		}
 
-		// Token: 0x060347C0 RID: 214976 RVA: 0x00C5CF48 File Offset: 0x00C5B148
+		// Token: 0x06029663 RID: 169571 RVA: 0x00BA8494 File Offset: 0x00BA6694
 		public static bool ClearSeqCostumeState(AActor actor)
 		{
 			if (actor == null || !actor.IsValid())
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return false;
 		}
 
-		// Token: 0x060347C1 RID: 214977 RVA: 0x00C5CF90 File Offset: 0x00C5B190
+		// Token: 0x06029664 RID: 169572 RVA: 0x00BA84DC File Offset: 0x00BA66DC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -373,7 +373,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return null;
 		}
 
-		// Token: 0x060347C2 RID: 214978 RVA: 0x00C5CFEC File Offset: 0x00C5B1EC
+		// Token: 0x06029665 RID: 169573 RVA: 0x00BA8538 File Offset: 0x00BA6738
 		[NullableContext(1)]
 		public static void AsFrameTime(FFrameRate frameRate, float timeInSeconds, ref FFrameTime outFrameTime)
 		{
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			outFrameTime.SubFrame = num3;
 		}
 
-		// Token: 0x060347C3 RID: 214979 RVA: 0x00C5D040 File Offset: 0x00C5B240
+		// Token: 0x06029666 RID: 169574 RVA: 0x00BA858C File Offset: 0x00BA678C
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public static UMovieSceneTrack GetLevelSequenceTransformTrack(ULevelSequence sequence, FName tag)
@@ -421,7 +421,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return tarray2.Get(0);
 		}
 
-		// Token: 0x060347C4 RID: 214980 RVA: 0x00C5D0CB File Offset: 0x00C5B2CB
+		// Token: 0x06029667 RID: 169575 RVA: 0x00BA8617 File Offset: 0x00BA6817
 		[NullableContext(1)]
 		public static FTransformDouble GetLevelSequenceTransform(ULevelSequence sequence, UMovieSceneTrack track, float time)
 		{
@@ -433,22 +433,22 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return UKismetMathLibrary.Conv_TransformToTransformDouble(UKuroSequenceRuntimeFunctionLibrary.GetFrameTransform(track, SequenceUtils._frameTime));
 		}
 
-		// Token: 0x060347C5 RID: 214981 RVA: 0x00C5D10A File Offset: 0x00C5B30A
+		// Token: 0x06029668 RID: 169576 RVA: 0x00BA8656 File Offset: 0x00BA6856
 		public static void CreateStaticDefaultValue()
 		{
 			SequenceUtils._frameTime = null;
 		}
 
-		// Token: 0x060347C6 RID: 214982 RVA: 0x00C5D112 File Offset: 0x00C5B312
+		// Token: 0x06029669 RID: 169577 RVA: 0x00BA865E File Offset: 0x00BA685E
 		public static void ResetStaticDefaultValue()
 		{
 			SequenceUtils._frameTime = null;
 		}
 
-		// Token: 0x0401BF8D RID: 114573
+		// Token: 0x04016978 RID: 92536
 		private const float MINI_SUB_FRAME_TIME = 0.1f;
 
-		// Token: 0x0401BF8E RID: 114574
+		// Token: 0x04016979 RID: 92537
 		private static FFrameTime _frameTime;
 	}
 }

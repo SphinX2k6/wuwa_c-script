@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200678D RID: 26509
+	// Token: 0x020056DD RID: 22237
 	public struct CombineItem
 	{
-		// Token: 0x04022805 RID: 141317
+		// Token: 0x0401D062 RID: 118882
 		public int Uid;
 
-		// Token: 0x04022806 RID: 141318
+		// Token: 0x0401D063 RID: 118883
 		public EDragSourceKind Source;
 	}
 }

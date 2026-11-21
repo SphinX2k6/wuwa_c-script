@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B5A RID: 19290
+	// Token: 0x02005041 RID: 20545
 	public class ICheckTeleControlStateT
 	{
-		// Token: 0x17008BF2 RID: 35826
-		// (get) Token: 0x0601E61D RID: 124445 RVA: 0x004419BE File Offset: 0x0043FBBE
-		// (set) Token: 0x0601E61E RID: 124446 RVA: 0x004419C6 File Offset: 0x0043FBC6
+		// Token: 0x17009302 RID: 37634
+		// (get) Token: 0x060201AB RID: 131499 RVA: 0x0047420A File Offset: 0x0047240A
+		// (set) Token: 0x060201AC RID: 131500 RVA: 0x00474212 File Offset: 0x00472412
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008BF3 RID: 35827
-		// (get) Token: 0x0601E61F RID: 124447 RVA: 0x004419CF File Offset: 0x0043FBCF
-		// (set) Token: 0x0601E620 RID: 124448 RVA: 0x004419D7 File Offset: 0x0043FBD7
+		// Token: 0x17009303 RID: 37635
+		// (get) Token: 0x060201AD RID: 131501 RVA: 0x0047421B File Offset: 0x0047241B
+		// (set) Token: 0x060201AE RID: 131502 RVA: 0x00474223 File Offset: 0x00472423
 		public int EntityId { get; set; }
 
-		// Token: 0x17008BF4 RID: 35828
-		// (get) Token: 0x0601E621 RID: 124449 RVA: 0x004419E0 File Offset: 0x0043FBE0
-		// (set) Token: 0x0601E622 RID: 124450 RVA: 0x004419E8 File Offset: 0x0043FBE8
+		// Token: 0x17009304 RID: 37636
+		// (get) Token: 0x060201AF RID: 131503 RVA: 0x0047422C File Offset: 0x0047242C
+		// (set) Token: 0x060201B0 RID: 131504 RVA: 0x00474234 File Offset: 0x00472434
 		public ECompare CompareType { get; set; }
 
-		// Token: 0x17008BF5 RID: 35829
-		// (get) Token: 0x0601E623 RID: 124451 RVA: 0x004419F1 File Offset: 0x0043FBF1
-		// (set) Token: 0x0601E624 RID: 124452 RVA: 0x004419F9 File Offset: 0x0043FBF9
+		// Token: 0x17009305 RID: 37637
+		// (get) Token: 0x060201B1 RID: 131505 RVA: 0x0047423D File Offset: 0x0047243D
+		// (set) Token: 0x060201B2 RID: 131506 RVA: 0x00474245 File Offset: 0x00472445
 		public ETeleControlState State { get; set; }
 
-		// Token: 0x17008BF6 RID: 35830
-		// (get) Token: 0x0601E625 RID: 124453 RVA: 0x00441A02 File Offset: 0x0043FC02
-		// (set) Token: 0x0601E626 RID: 124454 RVA: 0x00441A0A File Offset: 0x0043FC0A
+		// Token: 0x17009306 RID: 37638
+		// (get) Token: 0x060201B3 RID: 131507 RVA: 0x0047424E File Offset: 0x0047244E
+		// (set) Token: 0x060201B4 RID: 131508 RVA: 0x00474256 File Offset: 0x00472456
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601E627 RID: 124455 RVA: 0x00441A13 File Offset: 0x0043FC13
+		// Token: 0x060201B5 RID: 131509 RVA: 0x0047425F File Offset: 0x0047245F
 		public ICheckTeleControlStateT()
 		{
 			this.Type = ECondition.CompareVar;

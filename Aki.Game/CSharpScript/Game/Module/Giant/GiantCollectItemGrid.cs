@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x0200596F RID: 22895
+	// Token: 0x02004948 RID: 18760
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.Module.Giant
 	})]
 	public class GiantCollectItemGrid : LoopScrollMediumItemGrid<GiantCollectItemData>
 	{
-		// Token: 0x0603A186 RID: 237958 RVA: 0x00DCE5B0 File Offset: 0x00DCC7B0
+		// Token: 0x0602F0AC RID: 192684 RVA: 0x00D1D838 File Offset: 0x00D1BA38
 		protected override void OnRefresh(GiantCollectItemData data, bool isSelected, int gridIndex)
 		{
 			this.ItemId = data.ItemId;
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.Giant
 			base.Apply<PropMediumItemGrid>(parameters);
 		}
 
-		// Token: 0x0603A187 RID: 237959 RVA: 0x00DCE68D File Offset: 0x00DCC88D
+		// Token: 0x0602F0AD RID: 192685 RVA: 0x00D1D915 File Offset: 0x00D1BB15
 		protected override bool OnCanExecuteChange()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A188 RID: 237960 RVA: 0x00DCE690 File Offset: 0x00DCC890
+		// Token: 0x0602F0AE RID: 192686 RVA: 0x00D1D918 File Offset: 0x00D1BB18
 		protected override void OnExtendToggleClicked()
 		{
 			Action<int> onClickCallback = this.OnClickCallback;
@@ -50,10 +50,10 @@ namespace CSharpScript.Game.Module.Giant
 			onClickCallback(this.ItemId);
 		}
 
-		// Token: 0x0401E4B5 RID: 124085
+		// Token: 0x04018F53 RID: 102227
 		private int ItemId;
 
-		// Token: 0x0401E4B6 RID: 124086
+		// Token: 0x04018F54 RID: 102228
 		[Nullable(2)]
 		private Action<int> OnClickCallback;
 	}

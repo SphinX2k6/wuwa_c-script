@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.TowerDefenseEvent.Model;
 
-// Token: 0x02002BCE RID: 11214
+// Token: 0x02002149 RID: 8521
 public static class TowerDefenseEventUtility
 {
-	// Token: 0x06017490 RID: 95376 RVA: 0x005EB31D File Offset: 0x005E951D
+	// Token: 0x06014EC1 RID: 85697 RVA: 0x00617EB5 File Offset: 0x006160B5
 	public static GridPbDirection ConvertDegree2Direction(float degree)
 	{
 		if (degree > 45f && degree < 135f)
@@ -24,7 +24,7 @@ public static class TowerDefenseEventUtility
 		return GridPbDirection.GridForward;
 	}
 
-	// Token: 0x06017491 RID: 95377 RVA: 0x005EB358 File Offset: 0x005E9558
+	// Token: 0x06014EC2 RID: 85698 RVA: 0x00617EF0 File Offset: 0x006160F0
 	public static int ConvertDirection2Degree(GridPbDirection? direction)
 	{
 		if (direction != null)
@@ -42,7 +42,7 @@ public static class TowerDefenseEventUtility
 		return 0;
 	}
 
-	// Token: 0x06017492 RID: 95378 RVA: 0x005EB39C File Offset: 0x005E959C
+	// Token: 0x06014EC3 RID: 85699 RVA: 0x00617F34 File Offset: 0x00616134
 	[NullableContext(1)]
 	public static bool ValidatePlacementWithGridNormal(ETowerDefenseEventTrapPlacementType placementType, global::Vector gridNormal, float threshold = 0.7f)
 	{

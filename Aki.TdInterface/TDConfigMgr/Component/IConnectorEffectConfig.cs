@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000271 RID: 625
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020002B4 RID: 692
 	public class IConnectorEffectConfig
 	{
-		// Token: 0x06000B67 RID: 2919 RVA: 0x0002DDB8 File Offset: 0x0002BFB8
-		[NullableContext(1)]
+		// Token: 0x06000C81 RID: 3201 RVA: 0x00030AA8 File Offset: 0x0002ECA8
 		private IConnectorEffectConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000B68 RID: 2920 RVA: 0x0002DDF0 File Offset: 0x0002BFF0
-		[NullableContext(1)]
+		// Token: 0x06000C82 RID: 3202 RVA: 0x00030AE0 File Offset: 0x0002ECE0
 		public static IConnectorEffectConfig Create([Nullable(2)] IConnectorEffectConfig instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B69 RID: 2921 RVA: 0x0002DE03 File Offset: 0x0002C003
-		[NullableContext(1)]
+		// Token: 0x06000C83 RID: 3203 RVA: 0x00030AF3 File Offset: 0x0002ECF3
 		public static IConnectorEffectConfig CreateFromSetValue([Nullable(2)] IConnectorEffectConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B6A RID: 2922 RVA: 0x0002DE16 File Offset: 0x0002C016
-		[NullableContext(1)]
+		// Token: 0x06000C84 RID: 3204 RVA: 0x00030B06 File Offset: 0x0002ED06
 		public IConnectorEffectConfig_SetValue ToSetValue()
 		{
 			return new IConnectorEffectConfig_SetValue
@@ -65,13 +59,11 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000367 RID: 871
-		// (get) Token: 0x06000B6B RID: 2923 RVA: 0x0002DE41 File Offset: 0x0002C041
-		// (set) Token: 0x06000B6C RID: 2924 RVA: 0x0002DE6C File Offset: 0x0002C06C
-		[Nullable(1)]
+		// Token: 0x170003AF RID: 943
+		// (get) Token: 0x06000C85 RID: 3205 RVA: 0x00030B31 File Offset: 0x0002ED31
+		// (set) Token: 0x06000C86 RID: 3206 RVA: 0x00030B5C File Offset: 0x0002ED5C
 		public virtual string EffectPath
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -84,18 +76,19 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this.PocoInterface.EffectPath;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.GetOrCreatePoco().EffectPath = value;
 			}
 		}
 
-		// Token: 0x17000368 RID: 872
-		// (get) Token: 0x06000B6D RID: 2925 RVA: 0x0002DE7A File Offset: 0x0002C07A
-		// (set) Token: 0x06000B6E RID: 2926 RVA: 0x0002DEA1 File Offset: 0x0002C0A1
+		// Token: 0x170003B0 RID: 944
+		// (get) Token: 0x06000C87 RID: 3207 RVA: 0x00030B6A File Offset: 0x0002ED6A
+		// (set) Token: 0x06000C88 RID: 3208 RVA: 0x00030B91 File Offset: 0x0002ED91
+		[Nullable(2)]
 		public virtual string StartPoint
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -109,17 +102,20 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.StartPoint;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().StartPoint = value;
 			}
 		}
 
-		// Token: 0x17000369 RID: 873
-		// (get) Token: 0x06000B6F RID: 2927 RVA: 0x0002DEAF File Offset: 0x0002C0AF
-		// (set) Token: 0x06000B70 RID: 2928 RVA: 0x0002DED6 File Offset: 0x0002C0D6
+		// Token: 0x170003B1 RID: 945
+		// (get) Token: 0x06000C89 RID: 3209 RVA: 0x00030B9F File Offset: 0x0002ED9F
+		// (set) Token: 0x06000C8A RID: 3210 RVA: 0x00030BC6 File Offset: 0x0002EDC6
+		[Nullable(2)]
 		public virtual string EndPoint
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -133,16 +129,19 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.EndPoint;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().EndPoint = value;
 			}
 		}
 
-		// Token: 0x04000B0C RID: 2828
+		// Token: 0x04000BED RID: 3053
+		[Nullable(2)]
 		protected IConnectorEffectConfig FbInstance;
 
-		// Token: 0x04000B0D RID: 2829
+		// Token: 0x04000BEE RID: 3054
+		[Nullable(2)]
 		protected IConnectorEffectConfig_SetValue PocoInterface;
 	}
 }

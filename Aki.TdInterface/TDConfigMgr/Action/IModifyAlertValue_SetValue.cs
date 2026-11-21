@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BE7 RID: 7143
+	// Token: 0x02001DD6 RID: 7638
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IModifyAlertValue_SetValue
 	{
-		// Token: 0x04005D36 RID: 23862
+		// Token: 0x0400625C RID: 25180
 		public EAlertSystemOption Type;
 
-		// Token: 0x04005D37 RID: 23863
+		// Token: 0x0400625D RID: 25181
 		public int AreaId;
 
-		// Token: 0x04005D38 RID: 23864
+		// Token: 0x0400625E RID: 25182
 		public ISetAlertValueType SetType;
 
-		// Token: 0x04005D39 RID: 23865
+		// Token: 0x0400625F RID: 25183
 		public IAlertValueSpeedChangeType ChangeSpeed;
 	}
 }

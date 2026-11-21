@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020024F6 RID: 9462
+// Token: 0x020019DD RID: 6621
 public class VisionSlotItem : UiPanelBase
 {
-	// Token: 0x06013081 RID: 77953 RVA: 0x004B682B File Offset: 0x004B4A2B
+	// Token: 0x06010540 RID: 66880 RVA: 0x004C44BA File Offset: 0x004C26BA
 	[NullableContext(1)]
 	public VisionSlotItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x06013082 RID: 77954 RVA: 0x004B6840 File Offset: 0x004B4A40
+	// Token: 0x06010541 RID: 66881 RVA: 0x004C44D0 File Offset: 0x004C26D0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class VisionSlotItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013083 RID: 77955 RVA: 0x004B68B0 File Offset: 0x004B4AB0
+	// Token: 0x06010542 RID: 66882 RVA: 0x004C4540 File Offset: 0x004C2740
 	[NullableContext(1)]
 	public void Update(VisionSlotData data)
 	{
@@ -55,16 +55,16 @@ public class VisionSlotItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x02008A89 RID: 35465
+	// Token: 0x02007C11 RID: 31761
 	private enum ESlotComponent
 	{
-		// Token: 0x0402CFCC RID: 184268
+		// Token: 0x040282E4 RID: 164580
 		ShowStateD,
-		// Token: 0x0402CFCD RID: 184269
+		// Token: 0x040282E5 RID: 164581
 		ShowStateC,
-		// Token: 0x0402CFCE RID: 184270
+		// Token: 0x040282E6 RID: 164582
 		ShowStateB,
-		// Token: 0x0402CFCF RID: 184271
+		// Token: 0x040282E7 RID: 164583
 		ShowStateA
 	}
 }

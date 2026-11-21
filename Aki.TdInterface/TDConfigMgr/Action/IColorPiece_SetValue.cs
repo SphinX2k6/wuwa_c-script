@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018F7 RID: 6391
+	// Token: 0x02001A7E RID: 6782
 	public class IColorPiece_SetValue
 	{
-		// Token: 0x040055E6 RID: 21990
+		// Token: 0x04005A30 RID: 23088
 		public EPieceColorType Color;
 	}
 }

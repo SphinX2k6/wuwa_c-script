@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E48 RID: 20040
+	// Token: 0x02003E11 RID: 15889
 	internal enum <RogueBattleBuyRolePreviewPanel>F1E583D7187BC7CB8514ED50F8871BDEA971294DFC524CDAE20A5706F05183012__EComponents
 	{
-		// Token: 0x0401B649 RID: 112201
+		// Token: 0x0401601C RID: 90140
 		ElementItem,
-		// Token: 0x0401B64A RID: 112202
+		// Token: 0x0401601D RID: 90141
 		TxtCharacterName,
-		// Token: 0x0401B64B RID: 112203
+		// Token: 0x0401601E RID: 90142
 		StarLayout,
-		// Token: 0x0401B64C RID: 112204
+		// Token: 0x0401601F RID: 90143
 		StarItem,
-		// Token: 0x0401B64D RID: 112205
+		// Token: 0x04016020 RID: 90144
 		FetterLayout,
-		// Token: 0x0401B64E RID: 112206
+		// Token: 0x04016021 RID: 90145
 		FetterItem,
-		// Token: 0x0401B64F RID: 112207
+		// Token: 0x04016022 RID: 90146
 		BtnConfirm,
-		// Token: 0x0401B650 RID: 112208
+		// Token: 0x04016023 RID: 90147
 		BtnBack
 	}
 }

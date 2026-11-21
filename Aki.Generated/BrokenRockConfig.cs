@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B50 RID: 2896
+	// Token: 0x02000C30 RID: 3120
 	public struct BrokenRockConfig : IFlatbufferObject
 	{
-		// Token: 0x1700060B RID: 1547
-		// (get) Token: 0x06004FC4 RID: 20420 RVA: 0x001E8E75 File Offset: 0x001E7075
+		// Token: 0x1700064B RID: 1611
+		// (get) Token: 0x06005586 RID: 21894 RVA: 0x00208F99 File Offset: 0x00207199
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004FC5 RID: 20421 RVA: 0x001E8E82 File Offset: 0x001E7082
+		// Token: 0x06005587 RID: 21895 RVA: 0x00208FA6 File Offset: 0x002071A6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004FC6 RID: 20422 RVA: 0x001E8E8C File Offset: 0x001E708C
+		// Token: 0x06005588 RID: 21896 RVA: 0x00208FB0 File Offset: 0x002071B0
 		public static BrokenRockConfig GetRootAsBrokenRockConfig(ByteBuffer _bb)
 		{
 			return BrokenRockConfig.GetRootAsBrokenRockConfig(_bb, default(BrokenRockConfig));
 		}
 
-		// Token: 0x06004FC7 RID: 20423 RVA: 0x001E8EA8 File Offset: 0x001E70A8
+		// Token: 0x06005589 RID: 21897 RVA: 0x00208FCC File Offset: 0x002071CC
 		public static BrokenRockConfig GetRootAsBrokenRockConfig(ByteBuffer _bb, BrokenRockConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004FC8 RID: 20424 RVA: 0x001E8EC5 File Offset: 0x001E70C5
+		// Token: 0x0600558A RID: 21898 RVA: 0x00208FE9 File Offset: 0x002071E9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004FC9 RID: 20425 RVA: 0x001E8ED4 File Offset: 0x001E70D4
+		// Token: 0x0600558B RID: 21899 RVA: 0x00208FF8 File Offset: 0x002071F8
 		public BrokenRockConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700060C RID: 1548
-		// (get) Token: 0x06004FCA RID: 20426 RVA: 0x001E8EE4 File Offset: 0x001E70E4
+		// Token: 0x1700064C RID: 1612
+		// (get) Token: 0x0600558C RID: 21900 RVA: 0x00209008 File Offset: 0x00207208
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700060D RID: 1549
-		// (get) Token: 0x06004FCB RID: 20427 RVA: 0x001E8F20 File Offset: 0x001E7120
+		// Token: 0x1700064D RID: 1613
+		// (get) Token: 0x0600558D RID: 21901 RVA: 0x00209044 File Offset: 0x00207244
 		public string EntityUid
 		{
 			get
@@ -79,19 +79,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004FCC RID: 20428 RVA: 0x001E8F57 File Offset: 0x001E7157
+		// Token: 0x0600558E RID: 21902 RVA: 0x0020907B File Offset: 0x0020727B
 		public Span<byte> GetEntityUidBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06004FCD RID: 20429 RVA: 0x001E8F66 File Offset: 0x001E7166
+		// Token: 0x0600558F RID: 21903 RVA: 0x0020908A File Offset: 0x0020728A
 		public byte[] GetEntityUidArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06004FCE RID: 20430 RVA: 0x001E8F80 File Offset: 0x001E7180
+		// Token: 0x06005590 RID: 21904 RVA: 0x002090A4 File Offset: 0x002072A4
 		public int Rings(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -102,8 +102,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700060E RID: 1550
-		// (get) Token: 0x06004FCF RID: 20431 RVA: 0x001E8FC0 File Offset: 0x001E71C0
+		// Token: 0x1700064E RID: 1614
+		// (get) Token: 0x06005591 RID: 21905 RVA: 0x002090E4 File Offset: 0x002072E4
 		public int RingsLength
 		{
 			get
@@ -117,20 +117,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004FD0 RID: 20432 RVA: 0x001E8FEB File Offset: 0x001E71EB
+		// Token: 0x06005592 RID: 21906 RVA: 0x0020910F File Offset: 0x0020730F
 		public Span<int> GetRingsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06004FD1 RID: 20433 RVA: 0x001E8FFA File Offset: 0x001E71FA
+		// Token: 0x06005593 RID: 21907 RVA: 0x0020911E File Offset: 0x0020731E
 		public int[] GetRingsArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x1700060F RID: 1551
-		// (get) Token: 0x06004FD2 RID: 20434 RVA: 0x001E9014 File Offset: 0x001E7214
+		// Token: 0x1700064F RID: 1615
+		// (get) Token: 0x06005594 RID: 21908 RVA: 0x00209138 File Offset: 0x00207338
 		public int ScoreMax
 		{
 			get
@@ -144,8 +144,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000610 RID: 1552
-		// (get) Token: 0x06004FD3 RID: 20435 RVA: 0x001E9054 File Offset: 0x001E7254
+		// Token: 0x17000650 RID: 1616
+		// (get) Token: 0x06005595 RID: 21909 RVA: 0x00209178 File Offset: 0x00207378
 		public int ScoreUp
 		{
 			get
@@ -159,8 +159,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000611 RID: 1553
-		// (get) Token: 0x06004FD4 RID: 20436 RVA: 0x001E9094 File Offset: 0x001E7294
+		// Token: 0x17000651 RID: 1617
+		// (get) Token: 0x06005596 RID: 21910 RVA: 0x002091B8 File Offset: 0x002073B8
 		public int ScoreDown
 		{
 			get
@@ -174,8 +174,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000612 RID: 1554
-		// (get) Token: 0x06004FD5 RID: 20437 RVA: 0x001E90D4 File Offset: 0x001E72D4
+		// Token: 0x17000652 RID: 1618
+		// (get) Token: 0x06005597 RID: 21911 RVA: 0x002091F8 File Offset: 0x002073F8
 		public int GlobalTime
 		{
 			get
@@ -189,8 +189,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000613 RID: 1555
-		// (get) Token: 0x06004FD6 RID: 20438 RVA: 0x001E9114 File Offset: 0x001E7314
+		// Token: 0x17000653 RID: 1619
+		// (get) Token: 0x06005598 RID: 21912 RVA: 0x00209238 File Offset: 0x00207438
 		public int NormalSkill
 		{
 			get
@@ -204,8 +204,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000614 RID: 1556
-		// (get) Token: 0x06004FD7 RID: 20439 RVA: 0x001E9154 File Offset: 0x001E7354
+		// Token: 0x17000654 RID: 1620
+		// (get) Token: 0x06005599 RID: 21913 RVA: 0x00209278 File Offset: 0x00207478
 		public int FinishSkill
 		{
 			get
@@ -219,25 +219,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004FD8 RID: 20440 RVA: 0x001E9194 File Offset: 0x001E7394
+		// Token: 0x0600559A RID: 21914 RVA: 0x002092B5 File Offset: 0x002074B5
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RingsIter()或GetRingsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Rings()
+		public int[] Rings()
 		{
-			BrokenRockConfig brokenRockConfig = this;
-			return brokenRockConfig.GetRingsArray() ?? Array.Empty<int>();
+			return this.GetRingsArray();
 		}
 
-		// Token: 0x06004FD9 RID: 20441 RVA: 0x001E91B8 File Offset: 0x001E73B8
+		// Token: 0x0600559B RID: 21915 RVA: 0x002092BD File Offset: 0x002074BD
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RingsIter()
+		public IEnumerable<int> RingsIter()
 		{
 			BrokenRockConfig.<RingsIter>d__32 <RingsIter>d__ = new BrokenRockConfig.<RingsIter>d__32(-2);
 			<RingsIter>d__.<>3__<>4__this = this;
 			return <RingsIter>d__;
 		}
 
-		// Token: 0x04004B4B RID: 19275
+		// Token: 0x0400512B RID: 20779
 		private Table __p;
 	}
 }

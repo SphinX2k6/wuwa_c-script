@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023DE RID: 9182
+// Token: 0x020018C3 RID: 6339
 [NullableContext(2)]
 [Nullable(0)]
 public class PersonalPlayerTitlePreviewComponent : UiPanelBase, IItemTipsUiProxy
 {
-	// Token: 0x060125B1 RID: 75185 RVA: 0x00486014 File Offset: 0x00484214
+	// Token: 0x0600FA63 RID: 64099 RVA: 0x00493520 File Offset: 0x00491720
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class PersonalPlayerTitlePreviewComponent : UiPanelBase, IItemTipsUiProxy
 		};
 	}
 
-	// Token: 0x060125B2 RID: 75186 RVA: 0x00486138 File Offset: 0x00484338
+	// Token: 0x0600FA64 RID: 64100 RVA: 0x00493644 File Offset: 0x00491844
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PersonalPlayerTitlePreviewComponent.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -45,19 +45,19 @@ public class PersonalPlayerTitlePreviewComponent : UiPanelBase, IItemTipsUiProxy
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060125B3 RID: 75187 RVA: 0x0048617B File Offset: 0x0048437B
+	// Token: 0x0600FA65 RID: 64101 RVA: 0x00493687 File Offset: 0x00491887
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x060125B4 RID: 75188 RVA: 0x0048618E File Offset: 0x0048438E
+	// Token: 0x0600FA66 RID: 64102 RVA: 0x0049369A File Offset: 0x0049189A
 	protected override void OnBeforeShow()
 	{
 		this.PlayStartSequence();
 	}
 
-	// Token: 0x060125B5 RID: 75189 RVA: 0x00486198 File Offset: 0x00484398
+	// Token: 0x0600FA67 RID: 64103 RVA: 0x004936A4 File Offset: 0x004918A4
 	private void PlayStartSequence()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -68,7 +68,7 @@ public class PersonalPlayerTitlePreviewComponent : UiPanelBase, IItemTipsUiProxy
 		levelSequencePlayer.PlaySequencePurely("Start", false, false, null, null, false);
 	}
 
-	// Token: 0x060125B6 RID: 75190 RVA: 0x004861C8 File Offset: 0x004843C8
+	// Token: 0x0600FA68 RID: 64104 RVA: 0x004936D4 File Offset: 0x004918D4
 	public UniTask PlayCloseSequence()
 	{
 		PersonalPlayerTitlePreviewComponent.<PlayCloseSequence>d__10 <PlayCloseSequence>d__;
@@ -79,7 +79,7 @@ public class PersonalPlayerTitlePreviewComponent : UiPanelBase, IItemTipsUiProxy
 		return <PlayCloseSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060125B7 RID: 75191 RVA: 0x0048620C File Offset: 0x0048440C
+	// Token: 0x0600FA69 RID: 64105 RVA: 0x00493718 File Offset: 0x00491918
 	public void Refresh(int titleId)
 	{
 		PlayerTitle? playerTitleItemConfig = InventoryConfig.Instance.GetPlayerTitleItemConfig(titleId);
@@ -114,7 +114,7 @@ public class PersonalPlayerTitlePreviewComponent : UiPanelBase, IItemTipsUiProxy
 		this.RefreshPlayerTitle(playerTitleItemConfig.Value);
 	}
 
-	// Token: 0x060125B8 RID: 75192 RVA: 0x00486410 File Offset: 0x00484610
+	// Token: 0x0600FA6A RID: 64106 RVA: 0x0049391C File Offset: 0x00491B1C
 	private void RefreshPlayerTitle(PlayerTitle titleConfig)
 	{
 		PlayerTitleItem itemTitleInMid = this.ItemTitleInMid;
@@ -135,45 +135,45 @@ public class PersonalPlayerTitlePreviewComponent : UiPanelBase, IItemTipsUiProxy
 		itemTitleInList.Refresh(new int?(titleConfig.Id), new int?(PersonalModel.Instance.GetPlayerTitleStarLevel(titleConfig.Id)), new int?(PersonalModel.Instance.GetSex()));
 	}
 
-	// Token: 0x04008ADB RID: 35547
+	// Token: 0x04008C22 RID: 35874
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04008ADC RID: 35548
+	// Token: 0x04008C23 RID: 35875
 	private PlayerTitleItem ItemTitleInMid;
 
-	// Token: 0x04008ADD RID: 35549
+	// Token: 0x04008C24 RID: 35876
 	private PlayerTitleItem ItemTitleInRight;
 
-	// Token: 0x04008ADE RID: 35550
+	// Token: 0x04008C25 RID: 35877
 	private PlayerTitleItem ItemTitleInList;
 
-	// Token: 0x02008982 RID: 35202
+	// Token: 0x02007B0B RID: 31499
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CAF2 RID: 183026
+		// Token: 0x04027E0D RID: 163341
 		TxtDesc,
-		// Token: 0x0402CAF3 RID: 183027
+		// Token: 0x04027E0E RID: 163342
 		TxtGetWay,
-		// Token: 0x0402CAF4 RID: 183028
+		// Token: 0x04027E0F RID: 163343
 		TxtTitleName,
-		// Token: 0x0402CAF5 RID: 183029
+		// Token: 0x04027E10 RID: 163344
 		TexCard,
-		// Token: 0x0402CAF6 RID: 183030
+		// Token: 0x04027E11 RID: 163345
 		TexRole,
-		// Token: 0x0402CAF7 RID: 183031
+		// Token: 0x04027E12 RID: 163346
 		TexRoleInList,
-		// Token: 0x0402CAF8 RID: 183032
+		// Token: 0x04027E13 RID: 163347
 		TexCardInList,
-		// Token: 0x0402CAF9 RID: 183033
+		// Token: 0x04027E14 RID: 163348
 		TxtPlayerNameInList,
-		// Token: 0x0402CAFA RID: 183034
+		// Token: 0x04027E15 RID: 163349
 		ItemTitleInMid,
-		// Token: 0x0402CAFB RID: 183035
+		// Token: 0x04027E16 RID: 163350
 		TxtPlayerNameInMid,
-		// Token: 0x0402CAFC RID: 183036
+		// Token: 0x04027E17 RID: 163351
 		ItemTitleInRight,
-		// Token: 0x0402CAFD RID: 183037
+		// Token: 0x04027E18 RID: 163352
 		ItemTitleInList
 	}
 }

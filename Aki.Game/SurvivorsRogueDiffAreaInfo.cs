@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002B47 RID: 11079
+// Token: 0x020020C3 RID: 8387
 public class SurvivorsRogueDiffAreaInfo : IDiffAreaInfo
 {
-	// Token: 0x17001EA9 RID: 7849
-	// (get) Token: 0x06016FA4 RID: 94116 RVA: 0x005D4F48 File Offset: 0x005D3148
-	// (set) Token: 0x06016FA5 RID: 94117 RVA: 0x005D4F50 File Offset: 0x005D3150
+	// Token: 0x17001F01 RID: 7937
+	// (get) Token: 0x060149D5 RID: 84437 RVA: 0x00601AB4 File Offset: 0x005FFCB4
+	// (set) Token: 0x060149D6 RID: 84438 RVA: 0x00601ABC File Offset: 0x005FFCBC
 	public ESurvivorsLevelDiff Diff { get; set; }
 
-	// Token: 0x17001EAA RID: 7850
-	// (get) Token: 0x06016FA6 RID: 94118 RVA: 0x005D4F59 File Offset: 0x005D3159
-	// (set) Token: 0x06016FA7 RID: 94119 RVA: 0x005D4F61 File Offset: 0x005D3161
+	// Token: 0x17001F02 RID: 7938
+	// (get) Token: 0x060149D7 RID: 84439 RVA: 0x00601AC5 File Offset: 0x005FFCC5
+	// (set) Token: 0x060149D8 RID: 84440 RVA: 0x00601ACD File Offset: 0x005FFCCD
 	public int LowerBoundLevelId { get; set; }
 
-	// Token: 0x17001EAB RID: 7851
-	// (get) Token: 0x06016FA8 RID: 94120 RVA: 0x005D4F6A File Offset: 0x005D316A
-	// (set) Token: 0x06016FA9 RID: 94121 RVA: 0x005D4F72 File Offset: 0x005D3172
+	// Token: 0x17001F03 RID: 7939
+	// (get) Token: 0x060149D9 RID: 84441 RVA: 0x00601AD6 File Offset: 0x005FFCD6
+	// (set) Token: 0x060149DA RID: 84442 RVA: 0x00601ADE File Offset: 0x005FFCDE
 	public float LowerBoundPosY { get; set; }
 }

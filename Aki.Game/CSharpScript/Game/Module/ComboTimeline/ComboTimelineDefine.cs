@@ -5,16 +5,16 @@ using CSharpScript.Game.Input;
 
 namespace CSharpScript.Game.Module.ComboTimeline
 {
-	// Token: 0x02005B91 RID: 23441
+	// Token: 0x02004B71 RID: 19313
 	public class ComboTimelineDefine : IStaticVariableResetter
 	{
-		// Token: 0x0603B4D5 RID: 242901 RVA: 0x00E21DFC File Offset: 0x00E1FFFC
+		// Token: 0x06030422 RID: 197666 RVA: 0x00D7234C File Offset: 0x00D7054C
 		static ComboTimelineDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ComboTimelineDefine.CreateStaticDefaultValue), new Action(ComboTimelineDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603B4D6 RID: 242902 RVA: 0x00E21E1C File Offset: 0x00E2001C
+		// Token: 0x06030423 RID: 197667 RVA: 0x00D7236C File Offset: 0x00D7056C
 		public static void CreateStaticDefaultValue()
 		{
 			ComboTimelineDefine.recordedInputActions = new List<EInputAction>
@@ -51,36 +51,36 @@ namespace CSharpScript.Game.Module.ComboTimeline
 			};
 		}
 
-		// Token: 0x0603B4D7 RID: 242903 RVA: 0x00E21F5B File Offset: 0x00E2015B
+		// Token: 0x06030424 RID: 197668 RVA: 0x00D724AB File Offset: 0x00D706AB
 		public static void ResetStaticDefaultValue()
 		{
 			ComboTimelineDefine.recordedInputActions = null;
 			ComboTimelineDefine.replayBlockedInputActions = null;
 		}
 
-		// Token: 0x0401EE8A RID: 126602
+		// Token: 0x0401993B RID: 104763
 		public const int SHOW_TIMELINE_FPS = 60;
 
-		// Token: 0x0401EE8B RID: 126603
+		// Token: 0x0401993C RID: 104764
 		public const int MILLISECONDS_PER_SECOND = 1000;
 
-		// Token: 0x0401EE8C RID: 126604
+		// Token: 0x0401993D RID: 104765
 		public const int REPLAY_COUNTDOWN_SECONDS = 3;
 
-		// Token: 0x0401EE8D RID: 126605
+		// Token: 0x0401993E RID: 104766
 		public const int REPLAY_DRAIN_TIMEOUT_MS = 3000;
 
-		// Token: 0x0401EE8E RID: 126606
+		// Token: 0x0401993F RID: 104767
 		public const double MS_PER_FRAME = 16.666666666666668;
 
-		// Token: 0x0401EE8F RID: 126607
+		// Token: 0x04019940 RID: 104768
 		public const int RECORDER_INPUT_PRIORITY = 100000;
 
-		// Token: 0x0401EE90 RID: 126608
+		// Token: 0x04019941 RID: 104769
 		[Nullable(2)]
 		public static IReadOnlyList<EInputAction> recordedInputActions;
 
-		// Token: 0x0401EE91 RID: 126609
+		// Token: 0x04019942 RID: 104770
 		[Nullable(2)]
 		public static IReadOnlyList<EInputAction> replayBlockedInputActions;
 	}

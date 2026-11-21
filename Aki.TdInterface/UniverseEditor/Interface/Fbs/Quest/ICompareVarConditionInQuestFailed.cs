@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DA3 RID: 15779
+	// Token: 0x020041BA RID: 16826
 	public struct ICompareVarConditionInQuestFailed : IFlatbufferObject
 	{
-		// Token: 0x17006C8F RID: 27791
-		// (get) Token: 0x06015EE8 RID: 89832 RVA: 0x0032ABE6 File Offset: 0x00328DE6
+		// Token: 0x17007249 RID: 29257
+		// (get) Token: 0x06017420 RID: 95264 RVA: 0x00351F12 File Offset: 0x00350112
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015EE9 RID: 89833 RVA: 0x0032ABF3 File Offset: 0x00328DF3
+		// Token: 0x06017421 RID: 95265 RVA: 0x00351F1F File Offset: 0x0035011F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015EEA RID: 89834 RVA: 0x0032ABFC File Offset: 0x00328DFC
+		// Token: 0x06017422 RID: 95266 RVA: 0x00351F28 File Offset: 0x00350128
 		public static ICompareVarConditionInQuestFailed GetRootAsICompareVarConditionInQuestFailed(ByteBuffer _bb)
 		{
 			return ICompareVarConditionInQuestFailed.GetRootAsICompareVarConditionInQuestFailed(_bb, default(ICompareVarConditionInQuestFailed));
 		}
 
-		// Token: 0x06015EEB RID: 89835 RVA: 0x0032AC18 File Offset: 0x00328E18
+		// Token: 0x06017423 RID: 95267 RVA: 0x00351F44 File Offset: 0x00350144
 		public static ICompareVarConditionInQuestFailed GetRootAsICompareVarConditionInQuestFailed(ByteBuffer _bb, ICompareVarConditionInQuestFailed obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015EEC RID: 89836 RVA: 0x0032AC35 File Offset: 0x00328E35
+		// Token: 0x06017424 RID: 95268 RVA: 0x00351F61 File Offset: 0x00350161
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015EED RID: 89837 RVA: 0x0032AC44 File Offset: 0x00328E44
+		// Token: 0x06017425 RID: 95269 RVA: 0x00351F70 File Offset: 0x00350170
 		public ICompareVarConditionInQuestFailed __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006C90 RID: 27792
-		// (get) Token: 0x06015EEE RID: 89838 RVA: 0x0032AC54 File Offset: 0x00328E54
+		// Token: 0x1700724A RID: 29258
+		// (get) Token: 0x06017426 RID: 95270 RVA: 0x00351F80 File Offset: 0x00350180
 		public EConditionCount Count
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015EEF RID: 89839 RVA: 0x0032AC90 File Offset: 0x00328E90
+		// Token: 0x06017427 RID: 95271 RVA: 0x00351FBC File Offset: 0x003501BC
 		public ICompareVarInChildQuest? Conditions(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new ICompareVarInChildQuest?(default(ICompareVarInChildQuest).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17006C91 RID: 27793
-		// (get) Token: 0x06015EF0 RID: 89840 RVA: 0x0032ACF0 File Offset: 0x00328EF0
+		// Token: 0x1700724B RID: 29259
+		// (get) Token: 0x06017428 RID: 95272 RVA: 0x0035201C File Offset: 0x0035021C
 		public int ConditionsLength
 		{
 			get
@@ -90,7 +90,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015EF1 RID: 89841 RVA: 0x0032AD1B File Offset: 0x00328F1B
+		// Token: 0x06017429 RID: 95273 RVA: 0x00352047 File Offset: 0x00350247
 		public static Offset<ICompareVarConditionInQuestFailed> CreateICompareVarConditionInQuestFailed(FlatBufferBuilder builder, EConditionCount Count = EConditionCount.All, VectorOffset ConditionsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -99,25 +99,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICompareVarConditionInQuestFailed.EndICompareVarConditionInQuestFailed(builder);
 		}
 
-		// Token: 0x06015EF2 RID: 89842 RVA: 0x0032AD38 File Offset: 0x00328F38
+		// Token: 0x0601742A RID: 95274 RVA: 0x00352064 File Offset: 0x00350264
 		public static void StartICompareVarConditionInQuestFailed(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06015EF3 RID: 89843 RVA: 0x0032AD41 File Offset: 0x00328F41
+		// Token: 0x0601742B RID: 95275 RVA: 0x0035206D File Offset: 0x0035026D
 		public static void AddCount(FlatBufferBuilder builder, EConditionCount count)
 		{
 			builder.AddByte(0, (byte)count, 0);
 		}
 
-		// Token: 0x06015EF4 RID: 89844 RVA: 0x0032AD4C File Offset: 0x00328F4C
+		// Token: 0x0601742C RID: 95276 RVA: 0x00352078 File Offset: 0x00350278
 		public static void AddConditions(FlatBufferBuilder builder, VectorOffset conditionsOffset)
 		{
 			builder.AddOffset(1, conditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06015EF5 RID: 89845 RVA: 0x0032AD5C File Offset: 0x00328F5C
+		// Token: 0x0601742D RID: 95277 RVA: 0x00352088 File Offset: 0x00350288
 		public static VectorOffset CreateConditionsVector(FlatBufferBuilder builder, Offset<ICompareVarInChildQuest>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -128,7 +128,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015EF6 RID: 89846 RVA: 0x0032AD9C File Offset: 0x00328F9C
+		// Token: 0x0601742E RID: 95278 RVA: 0x003520C8 File Offset: 0x003502C8
 		public static VectorOffset CreateConditionsVectorBlock(FlatBufferBuilder builder, Offset<ICompareVarInChildQuest>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015EF7 RID: 89847 RVA: 0x0032ADB6 File Offset: 0x00328FB6
+		// Token: 0x0601742F RID: 95279 RVA: 0x003520E2 File Offset: 0x003502E2
 		public static VectorOffset CreateConditionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ICompareVarInChildQuest>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015EF8 RID: 89848 RVA: 0x0032ADD4 File Offset: 0x00328FD4
+		// Token: 0x06017430 RID: 95280 RVA: 0x00352100 File Offset: 0x00350300
 		public static VectorOffset CreateConditionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -152,19 +152,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015EF9 RID: 89849 RVA: 0x0032ADED File Offset: 0x00328FED
+		// Token: 0x06017431 RID: 95281 RVA: 0x00352119 File Offset: 0x00350319
 		public static void StartConditionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06015EFA RID: 89850 RVA: 0x0032ADF8 File Offset: 0x00328FF8
+		// Token: 0x06017432 RID: 95282 RVA: 0x00352124 File Offset: 0x00350324
 		public static Offset<ICompareVarConditionInQuestFailed> EndICompareVarConditionInQuestFailed(FlatBufferBuilder builder)
 		{
 			return new Offset<ICompareVarConditionInQuestFailed>(builder.EndTable());
 		}
 
-		// Token: 0x06015EFB RID: 89851 RVA: 0x0032AE08 File Offset: 0x00329008
+		// Token: 0x06017433 RID: 95283 RVA: 0x00352134 File Offset: 0x00350334
 		public ICompareVarConditionInQuestFailedT UnPack()
 		{
 			ICompareVarConditionInQuestFailedT compareVarConditionInQuestFailedT = new ICompareVarConditionInQuestFailedT();
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return compareVarConditionInQuestFailedT;
 		}
 
-		// Token: 0x06015EFC RID: 89852 RVA: 0x0032AE24 File Offset: 0x00329024
+		// Token: 0x06017434 RID: 95284 RVA: 0x00352150 File Offset: 0x00350350
 		public void UnPackTo(ICompareVarConditionInQuestFailedT _o)
 		{
 			_o.Count = this.Count;
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015EFD RID: 89853 RVA: 0x0032AE90 File Offset: 0x00329090
+		// Token: 0x06017435 RID: 95285 RVA: 0x003521BC File Offset: 0x003503BC
 		public static Offset<ICompareVarConditionInQuestFailed> Pack(FlatBufferBuilder builder, ICompareVarConditionInQuestFailedT _o)
 		{
 			if (_o == null)
@@ -203,7 +203,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICompareVarConditionInQuestFailed.CreateICompareVarConditionInQuestFailed(builder, _o.Count, conditionsOffset);
 		}
 
-		// Token: 0x0400B6B4 RID: 46772
+		// Token: 0x0400C061 RID: 49249
 		private Table __p;
 	}
 }

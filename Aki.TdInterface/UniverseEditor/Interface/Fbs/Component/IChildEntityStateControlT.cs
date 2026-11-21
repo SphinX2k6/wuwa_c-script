@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F9B RID: 20379
+	// Token: 0x020054CA RID: 21706
 	public class IChildEntityStateControlT
 	{
-		// Token: 0x1700937E RID: 37758
-		// (get) Token: 0x06020687 RID: 132743 RVA: 0x004824E0 File Offset: 0x004806E0
-		// (set) Token: 0x06020688 RID: 132744 RVA: 0x004824E8 File Offset: 0x004806E8
+		// Token: 0x17009AF7 RID: 39671
+		// (get) Token: 0x060223D9 RID: 140249 RVA: 0x004B84D0 File Offset: 0x004B66D0
+		// (set) Token: 0x060223DA RID: 140250 RVA: 0x004B84D8 File Offset: 0x004B66D8
 		public ETemplateEntityGroupType GroupType { get; set; }
 
-		// Token: 0x1700937F RID: 37759
-		// (get) Token: 0x06020689 RID: 132745 RVA: 0x004824F1 File Offset: 0x004806F1
-		// (set) Token: 0x0602068A RID: 132746 RVA: 0x004824F9 File Offset: 0x004806F9
+		// Token: 0x17009AF8 RID: 39672
+		// (get) Token: 0x060223DB RID: 140251 RVA: 0x004B84E1 File Offset: 0x004B66E1
+		// (set) Token: 0x060223DC RID: 140252 RVA: 0x004B84E9 File Offset: 0x004B66E9
 		public string InitState { get; set; }
 
-		// Token: 0x17009380 RID: 37760
-		// (get) Token: 0x0602068B RID: 132747 RVA: 0x00482502 File Offset: 0x00480702
-		// (set) Token: 0x0602068C RID: 132748 RVA: 0x0048250A File Offset: 0x0048070A
+		// Token: 0x17009AF9 RID: 39673
+		// (get) Token: 0x060223DD RID: 140253 RVA: 0x004B84F2 File Offset: 0x004B66F2
+		// (set) Token: 0x060223DE RID: 140254 RVA: 0x004B84FA File Offset: 0x004B66FA
 		public List<IChildStateChangedConfigT> OnChildStateChangedConfigs { get; set; }
 
-		// Token: 0x17009381 RID: 37761
-		// (get) Token: 0x0602068D RID: 132749 RVA: 0x00482513 File Offset: 0x00480713
-		// (set) Token: 0x0602068E RID: 132750 RVA: 0x0048251B File Offset: 0x0048071B
+		// Token: 0x17009AFA RID: 39674
+		// (get) Token: 0x060223DF RID: 140255 RVA: 0x004B8503 File Offset: 0x004B6703
+		// (set) Token: 0x060223E0 RID: 140256 RVA: 0x004B850B File Offset: 0x004B670B
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602068F RID: 132751 RVA: 0x00482524 File Offset: 0x00480724
+		// Token: 0x060223E1 RID: 140257 RVA: 0x004B8514 File Offset: 0x004B6714
 		public IChildEntityStateControlT()
 		{
 			this.GroupType = ETemplateEntityGroupType.None;

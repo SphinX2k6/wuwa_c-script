@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001554 RID: 5460
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020016B0 RID: 5808
 	public class CustomJson_SetValue
 	{
-		// Token: 0x0400471B RID: 18203
+		// Token: 0x04004AB7 RID: 19127
 		public string Name;
 
-		// Token: 0x0400471C RID: 18204
+		// Token: 0x04004AB8 RID: 19128
 		public string JsonString;
 	}
 }

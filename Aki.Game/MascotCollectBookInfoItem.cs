@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001F0D RID: 7949
+// Token: 0x020013CF RID: 5071
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class MascotCollectBookInfoItem : GridProxyAbstract<IMascotCollectInfoData>
 {
-	// Token: 0x0600F4D4 RID: 62676 RVA: 0x003B11E8 File Offset: 0x003AF3E8
+	// Token: 0x0600C8F3 RID: 51443 RVA: 0x003BCCD4 File Offset: 0x003BAED4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,13 +26,13 @@ public class MascotCollectBookInfoItem : GridProxyAbstract<IMascotCollectInfoDat
 		};
 	}
 
-	// Token: 0x0600F4D5 RID: 62677 RVA: 0x003B1258 File Offset: 0x003AF458
+	// Token: 0x0600C8F4 RID: 51444 RVA: 0x003BCD44 File Offset: 0x003BAF44
 	protected override void OnStart()
 	{
 		this.MascotToggleLayout = new GenericLayout<MascotCollectBookMascotToggle, HonamiStoryMascotData>(base.GetHorizontalLayout(1), new Func<MascotCollectBookMascotToggle>(this.CreateMascotToggleItem), null, false, true);
 	}
 
-	// Token: 0x0600F4D6 RID: 62678 RVA: 0x003B127C File Offset: 0x003AF47C
+	// Token: 0x0600C8F5 RID: 51445 RVA: 0x003BCD68 File Offset: 0x003BAF68
 	private MascotCollectBookMascotToggle CreateMascotToggleItem()
 	{
 		MascotCollectBookMascotToggle mascotCollectBookMascotToggle = new MascotCollectBookMascotToggle();
@@ -41,14 +41,14 @@ public class MascotCollectBookInfoItem : GridProxyAbstract<IMascotCollectInfoDat
 		return mascotCollectBookMascotToggle;
 	}
 
-	// Token: 0x0600F4D7 RID: 62679 RVA: 0x003B12A8 File Offset: 0x003AF4A8
+	// Token: 0x0600C8F6 RID: 51446 RVA: 0x003BCD94 File Offset: 0x003BAF94
 	public override void Refresh(IMascotCollectInfoData infoData, bool isSelected, int gridIndex)
 	{
 		this.InfoData = infoData;
 		this.RefreshItem();
 	}
 
-	// Token: 0x0600F4D8 RID: 62680 RVA: 0x003B12B8 File Offset: 0x003AF4B8
+	// Token: 0x0600C8F7 RID: 51447 RVA: 0x003BCDA4 File Offset: 0x003BAFA4
 	private void RefreshItem()
 	{
 		HonamiStoryAreaData areaData = this.InfoData.AreaData;
@@ -66,28 +66,28 @@ public class MascotCollectBookInfoItem : GridProxyAbstract<IMascotCollectInfoDat
 		base.GetText(0).SetText("???", true);
 	}
 
-	// Token: 0x0600F4D9 RID: 62681 RVA: 0x003B1351 File Offset: 0x003AF551
+	// Token: 0x0600C8F8 RID: 51448 RVA: 0x003BCE3D File Offset: 0x003BB03D
 	public IReadOnlyList<MascotCollectBookMascotToggle> GetMascotToggleList()
 	{
 		return this.MascotToggleList;
 	}
 
-	// Token: 0x0600F4DA RID: 62682 RVA: 0x003B1359 File Offset: 0x003AF559
+	// Token: 0x0600C8F9 RID: 51449 RVA: 0x003BCE45 File Offset: 0x003BB045
 	public void BindMascotToggleClick(Action<MascotCollectBookMascotToggle> callback)
 	{
 		this.OnMascotToggleClick = callback;
 	}
 
-	// Token: 0x04007141 RID: 28993
+	// Token: 0x04007222 RID: 29218
 	private IMascotCollectInfoData InfoData;
 
-	// Token: 0x04007142 RID: 28994
+	// Token: 0x04007223 RID: 29219
 	private GenericLayout<MascotCollectBookMascotToggle, HonamiStoryMascotData> MascotToggleLayout;
 
-	// Token: 0x04007143 RID: 28995
+	// Token: 0x04007224 RID: 29220
 	private readonly List<MascotCollectBookMascotToggle> MascotToggleList = new List<MascotCollectBookMascotToggle>();
 
-	// Token: 0x04007144 RID: 28996
+	// Token: 0x04007225 RID: 29221
 	[Nullable(new byte[]
 	{
 		2,
@@ -95,17 +95,17 @@ public class MascotCollectBookInfoItem : GridProxyAbstract<IMascotCollectInfoDat
 	})]
 	private Action<MascotCollectBookMascotToggle> OnMascotToggleClick;
 
-	// Token: 0x0200851A RID: 34074
+	// Token: 0x0200769F RID: 30367
 	[NullableContext(0)]
 	private enum EMascotCollectBookInfoItemComponent
 	{
-		// Token: 0x0402B513 RID: 177427
+		// Token: 0x04026837 RID: 157751
 		TitleText,
-		// Token: 0x0402B514 RID: 177428
+		// Token: 0x04026838 RID: 157752
 		MascotToggleLayout,
-		// Token: 0x0402B515 RID: 177429
+		// Token: 0x04026839 RID: 157753
 		MascotToggleItem,
-		// Token: 0x0402B516 RID: 177430
+		// Token: 0x0402683A RID: 157754
 		EmptyPanel
 	}
 }

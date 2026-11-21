@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020026BD RID: 9917
+// Token: 0x02001BA8 RID: 7080
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class QuestTreeChapterGroupItem : GridProxyAbstract<List<QuestTreeChapterData>>
 {
-	// Token: 0x0601454F RID: 83279 RVA: 0x00525040 File Offset: 0x00523240
+	// Token: 0x06011A31 RID: 72241 RVA: 0x00533D78 File Offset: 0x00531F78
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -49,7 +49,7 @@ public class QuestTreeChapterGroupItem : GridProxyAbstract<List<QuestTreeChapter
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014550 RID: 83280 RVA: 0x005251D8 File Offset: 0x005233D8
+	// Token: 0x06011A32 RID: 72242 RVA: 0x00533F10 File Offset: 0x00532110
 	protected override void OnStart()
 	{
 		this.AttachPointList.Add(base.GetItem(6));
@@ -69,13 +69,13 @@ public class QuestTreeChapterGroupItem : GridProxyAbstract<List<QuestTreeChapter
 		}
 	}
 
-	// Token: 0x06014551 RID: 83281 RVA: 0x005252C2 File Offset: 0x005234C2
+	// Token: 0x06011A33 RID: 72243 RVA: 0x00533FFA File Offset: 0x005321FA
 	public override void Refresh(List<QuestTreeChapterData> data, bool isSelected, int gridIndex)
 	{
 		this.RefreshImp(data);
 	}
 
-	// Token: 0x06014552 RID: 83282 RVA: 0x005252CC File Offset: 0x005234CC
+	// Token: 0x06011A34 RID: 72244 RVA: 0x00534004 File Offset: 0x00532204
 	public override UniTask RefreshAsync(List<QuestTreeChapterData> data, bool isSelected, int gridIndex)
 	{
 		QuestTreeChapterGroupItem.<RefreshAsync>d__8 <RefreshAsync>d__;
@@ -87,7 +87,7 @@ public class QuestTreeChapterGroupItem : GridProxyAbstract<List<QuestTreeChapter
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014553 RID: 83283 RVA: 0x00525318 File Offset: 0x00523518
+	// Token: 0x06011A35 RID: 72245 RVA: 0x00534050 File Offset: 0x00532250
 	private UniTask RefreshImp(List<QuestTreeChapterData> data)
 	{
 		QuestTreeChapterGroupItem.<RefreshImp>d__9 <RefreshImp>d__;
@@ -99,7 +99,7 @@ public class QuestTreeChapterGroupItem : GridProxyAbstract<List<QuestTreeChapter
 		return <RefreshImp>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014554 RID: 83284 RVA: 0x00525364 File Offset: 0x00523564
+	// Token: 0x06011A36 RID: 72246 RVA: 0x0053409C File Offset: 0x0053229C
 	[NullableContext(2)]
 	public UUIItem GetChapterToggleUiItem(int chapterId)
 	{
@@ -113,53 +113,53 @@ public class QuestTreeChapterGroupItem : GridProxyAbstract<List<QuestTreeChapter
 		return null;
 	}
 
-	// Token: 0x040098DF RID: 39135
+	// Token: 0x04009A37 RID: 39479
 	private List<QuestTreeChapterData> DataList = new List<QuestTreeChapterData>();
 
-	// Token: 0x040098E0 RID: 39136
+	// Token: 0x04009A38 RID: 39480
 	private List<UUIItem> AttachPointList = new List<UUIItem>();
 
-	// Token: 0x040098E1 RID: 39137
+	// Token: 0x04009A39 RID: 39481
 	private List<UUIItem> ContainerList = new List<UUIItem>();
 
-	// Token: 0x040098E2 RID: 39138
+	// Token: 0x04009A3A RID: 39482
 	private List<QuestTreeChapterItem> ChapterItemList = new List<QuestTreeChapterItem>();
 
-	// Token: 0x02008D1B RID: 36123
+	// Token: 0x02007EA4 RID: 32420
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402DCCE RID: 187598
+		// Token: 0x04028FE5 RID: 167909
 		public const int ItemSelf = 0;
 
-		// Token: 0x0402DCCF RID: 187599
+		// Token: 0x04028FE6 RID: 167910
 		public const int ItemContainer1 = 1;
 
-		// Token: 0x0402DCD0 RID: 187600
+		// Token: 0x04028FE7 RID: 167911
 		public const int ItemContainer2 = 2;
 
-		// Token: 0x0402DCD1 RID: 187601
+		// Token: 0x04028FE8 RID: 167912
 		public const int ItemContainer3 = 3;
 
-		// Token: 0x0402DCD2 RID: 187602
+		// Token: 0x04028FE9 RID: 167913
 		public const int ItemContainer4 = 4;
 
-		// Token: 0x0402DCD3 RID: 187603
+		// Token: 0x04028FEA RID: 167914
 		public const int ItemContainer5 = 5;
 
-		// Token: 0x0402DCD4 RID: 187604
+		// Token: 0x04028FEB RID: 167915
 		public const int ItemAttachPoint1 = 6;
 
-		// Token: 0x0402DCD5 RID: 187605
+		// Token: 0x04028FEC RID: 167916
 		public const int ItemAttachPoint2 = 7;
 
-		// Token: 0x0402DCD6 RID: 187606
+		// Token: 0x04028FED RID: 167917
 		public const int ItemAttachPoint3 = 8;
 
-		// Token: 0x0402DCD7 RID: 187607
+		// Token: 0x04028FEE RID: 167918
 		public const int ItemAttachPoint4 = 9;
 
-		// Token: 0x0402DCD8 RID: 187608
+		// Token: 0x04028FEF RID: 167919
 		public const int ItemAttachPoint5 = 10;
 	}
 }

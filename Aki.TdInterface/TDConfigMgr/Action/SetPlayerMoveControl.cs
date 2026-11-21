@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021CB RID: 8651
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002436 RID: 9270
 	public class SetPlayerMoveControl : ActionParams
 	{
-		// Token: 0x0600BDF8 RID: 48632 RVA: 0x001B564C File Offset: 0x001B384C
+		// Token: 0x0600C9B2 RID: 51634 RVA: 0x001CCC84 File Offset: 0x001CAE84
 		private SetPlayerMoveControl_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BDF9 RID: 48633 RVA: 0x001B5684 File Offset: 0x001B3884
+		// Token: 0x0600C9B3 RID: 51635 RVA: 0x001CCCBC File Offset: 0x001CAEBC
 		public static SetPlayerMoveControl Create([Nullable(2)] SetPlayerMoveControl instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDFA RID: 48634 RVA: 0x001B5697 File Offset: 0x001B3897
+		// Token: 0x0600C9B4 RID: 51636 RVA: 0x001CCCCF File Offset: 0x001CAECF
 		public static SetPlayerMoveControl CreateFromSetValue([Nullable(2)] SetPlayerMoveControl_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDFB RID: 48635 RVA: 0x001B56AA File Offset: 0x001B38AA
+		// Token: 0x0600C9B5 RID: 51637 RVA: 0x001CCCE2 File Offset: 0x001CAEE2
 		public SetPlayerMoveControl_SetValue ToSetValue()
 		{
 			return new SetPlayerMoveControl_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039AC RID: 14764
-		// (get) Token: 0x0600BDFC RID: 48636 RVA: 0x001B56E1 File Offset: 0x001B38E1
-		// (set) Token: 0x0600BDFD RID: 48637 RVA: 0x001B570C File Offset: 0x001B390C
+		// Token: 0x17003CA0 RID: 15520
+		// (get) Token: 0x0600C9B6 RID: 51638 RVA: 0x001CCD19 File Offset: 0x001CAF19
+		// (set) Token: 0x0600C9B7 RID: 51639 RVA: 0x001CCD44 File Offset: 0x001CAF44
 		public virtual int Left
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039AD RID: 14765
-		// (get) Token: 0x0600BDFE RID: 48638 RVA: 0x001B571A File Offset: 0x001B391A
-		// (set) Token: 0x0600BDFF RID: 48639 RVA: 0x001B5745 File Offset: 0x001B3945
+		// Token: 0x17003CA1 RID: 15521
+		// (get) Token: 0x0600C9B8 RID: 51640 RVA: 0x001CCD52 File Offset: 0x001CAF52
+		// (set) Token: 0x0600C9B9 RID: 51641 RVA: 0x001CCD7D File Offset: 0x001CAF7D
 		public virtual int Right
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039AE RID: 14766
-		// (get) Token: 0x0600BE00 RID: 48640 RVA: 0x001B5753 File Offset: 0x001B3953
-		// (set) Token: 0x0600BE01 RID: 48641 RVA: 0x001B577E File Offset: 0x001B397E
+		// Token: 0x17003CA2 RID: 15522
+		// (get) Token: 0x0600C9BA RID: 51642 RVA: 0x001CCD8B File Offset: 0x001CAF8B
+		// (set) Token: 0x0600C9BB RID: 51643 RVA: 0x001CCDB6 File Offset: 0x001CAFB6
 		public virtual int Forward
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039AF RID: 14767
-		// (get) Token: 0x0600BE02 RID: 48642 RVA: 0x001B578C File Offset: 0x001B398C
-		// (set) Token: 0x0600BE03 RID: 48643 RVA: 0x001B57B7 File Offset: 0x001B39B7
+		// Token: 0x17003CA3 RID: 15523
+		// (get) Token: 0x0600C9BC RID: 51644 RVA: 0x001CCDC4 File Offset: 0x001CAFC4
+		// (set) Token: 0x0600C9BD RID: 51645 RVA: 0x001CCDEF File Offset: 0x001CAFEF
 		public virtual int Back
 		{
 			get
@@ -154,11 +152,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400715D RID: 29021
+		// Token: 0x040077A5 RID: 30629
 		[Nullable(2)]
 		protected new SetPlayerMoveControl FbInstance;
 
-		// Token: 0x0400715E RID: 29022
+		// Token: 0x040077A6 RID: 30630
 		[Nullable(2)]
 		protected SetPlayerMoveControl_SetValue PocoInterface;
 	}

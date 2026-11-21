@@ -1,15 +1,15 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02002D86 RID: 11654
+// Token: 0x020022E0 RID: 8928
 public class BulletActionDelayDestroyBullet : BulletActionBase
 {
-	// Token: 0x060187E2 RID: 100322 RVA: 0x0063C137 File Offset: 0x0063A337
+	// Token: 0x06016084 RID: 90244 RVA: 0x00661E6F File Offset: 0x0066006F
 	public BulletActionDelayDestroyBullet(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x060187E3 RID: 100323 RVA: 0x0063C140 File Offset: 0x0063A340
+	// Token: 0x06016085 RID: 90245 RVA: 0x00661E78 File Offset: 0x00660078
 	protected override void OnExecute()
 	{
 		BulletActionInfoDelayDestroyBullet bulletActionInfoDelayDestroyBullet = (BulletActionInfoDelayDestroyBullet)this.ActionInfo;
@@ -21,7 +21,7 @@ public class BulletActionDelayDestroyBullet : BulletActionBase
 		this.RemainingTime = bulletActionInfoDelayDestroyBullet.DelayTime;
 	}
 
-	// Token: 0x060187E4 RID: 100324 RVA: 0x0063C17C File Offset: 0x0063A37C
+	// Token: 0x06016086 RID: 90246 RVA: 0x00661EB4 File Offset: 0x006600B4
 	protected override void OnTick(float delta)
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -53,7 +53,7 @@ public class BulletActionDelayDestroyBullet : BulletActionBase
 		}
 	}
 
-	// Token: 0x060187E5 RID: 100325 RVA: 0x0063C224 File Offset: 0x0063A424
+	// Token: 0x06016087 RID: 90247 RVA: 0x00661F5C File Offset: 0x0066015C
 	private void DestroyBullet()
 	{
 		BulletActionInfoDelayDestroyBullet bulletActionInfoDelayDestroyBullet = (BulletActionInfoDelayDestroyBullet)this.ActionInfo;
@@ -61,13 +61,13 @@ public class BulletActionDelayDestroyBullet : BulletActionBase
 		this.IsFinish = true;
 	}
 
-	// Token: 0x060187E6 RID: 100326 RVA: 0x0063C261 File Offset: 0x0063A461
+	// Token: 0x06016088 RID: 90248 RVA: 0x00661F99 File Offset: 0x00660199
 	public override void Clear()
 	{
 		base.Clear();
 		this.RemainingTime = 0f;
 	}
 
-	// Token: 0x0400B588 RID: 46472
+	// Token: 0x0400B8FD RID: 47357
 	private float RemainingTime;
 }

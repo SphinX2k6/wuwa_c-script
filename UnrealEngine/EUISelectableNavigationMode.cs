@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200200B RID: 8203
+	// Token: 0x0200065B RID: 1627
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.EUISelectableNavigationMode")]
 	public enum EUISelectableNavigationMode : byte
 	{
-		// Token: 0x04010CA6 RID: 68774
+		// Token: 0x04003E2E RID: 15918
 		None,
-		// Token: 0x04010CA7 RID: 68775
+		// Token: 0x04003E2F RID: 15919
 		Auto,
-		// Token: 0x04010CA8 RID: 68776
+		// Token: 0x04003E30 RID: 15920
 		Explicit,
-		// Token: 0x04010CA9 RID: 68777
+		// Token: 0x04003E31 RID: 15921
 		EUISelectableNavigationMode_MAX
 	}
 }

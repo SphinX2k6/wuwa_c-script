@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A7C RID: 2684
+	// Token: 0x02000B46 RID: 2886
 	public class IInteractEntityPartBindBase
 	{
-		// Token: 0x06003DC8 RID: 15816 RVA: 0x0009E5CE File Offset: 0x0009C7CE
-		[NullableContext(1)]
+		// Token: 0x060041F1 RID: 16881 RVA: 0x000A7B86 File Offset: 0x000A5D86
 		public static IInteractEntityPartBindBase Create(IInteractEntityPartBindBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E8D RID: 3725
-		// (get) Token: 0x06003DC9 RID: 15817 RVA: 0x0009E5ED File Offset: 0x0009C7ED
+		// Token: 0x17000F60 RID: 3936
+		// (get) Token: 0x060041F2 RID: 16882 RVA: 0x000A7BA5 File Offset: 0x000A5DA5
 		public virtual EInteractEntityPartBindType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002265 RID: 8805
+		// Token: 0x04002481 RID: 9345
 		private IInteractEntityPartBindBase Instance;
 	}
 }

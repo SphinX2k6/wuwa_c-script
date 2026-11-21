@@ -4,13 +4,13 @@ using CSharpScript.Game.Camera.SceneCameraRotator;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072DC RID: 29404
+	// Token: 0x0200645E RID: 25694
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneCameraInputComponent : EntityComponent
 	{
-		// Token: 0x17009F42 RID: 40770
-		// (get) Token: 0x0604827B RID: 295547 RVA: 0x012839BB File Offset: 0x01281BBB
+		// Token: 0x170076C2 RID: 30402
+		// (get) Token: 0x0603E695 RID: 255637 RVA: 0x0122615A File Offset: 0x0122435A
 		public CameraModelInstance CameraModel
 		{
 			get
@@ -19,21 +19,21 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x0604827C RID: 295548 RVA: 0x012839C3 File Offset: 0x01281BC3
+		// Token: 0x0603E696 RID: 255638 RVA: 0x01226162 File Offset: 0x01224362
 		protected override bool OnCreate(IEntityArgs args = null)
 		{
 			this.CameraModelInstanceInternal = ((args != null) ? args.GetP1<CameraModelInstance>() : null);
 			return base.OnCreate(args);
 		}
 
-		// Token: 0x0604827D RID: 295549 RVA: 0x012839DE File Offset: 0x01281BDE
+		// Token: 0x0603E697 RID: 255639 RVA: 0x0122617D File Offset: 0x0122437D
 		protected override bool OnStart()
 		{
 			this.DisplayComponent = base.Entity.GetComponent<SceneCameraDisplayComponent>();
 			return this.DisplayComponent != null && this.DisplayComponent.Valid;
 		}
 
-		// Token: 0x0604827E RID: 295550 RVA: 0x01283A06 File Offset: 0x01281C06
+		// Token: 0x0603E698 RID: 255640 RVA: 0x012261A5 File Offset: 0x012243A5
 		protected override bool OnEnd()
 		{
 			this.ClearAllRotator();
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x0604827F RID: 295551 RVA: 0x01283A2C File Offset: 0x01281C2C
+		// Token: 0x0603E699 RID: 255641 RVA: 0x012261CC File Offset: 0x012243CC
 		protected override void OnTick(float deltaTime)
 		{
 			if (this.DisplayComponent == null)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Camera
 			activeRotator.OnTick(curSceneSubCamera, fightLogic, deltaTime);
 		}
 
-		// Token: 0x06048280 RID: 295552 RVA: 0x01283A80 File Offset: 0x01281C80
+		// Token: 0x0603E69A RID: 255642 RVA: 0x01226220 File Offset: 0x01224420
 		[NullableContext(1)]
 		public void SetLookAtTarget(Vector targetPosition, float blendInMs)
 		{
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Camera
 			this.SetOverrideRotator(sceneCameraBlendToTargetRotator);
 		}
 
-		// Token: 0x06048281 RID: 295553 RVA: 0x01283AD8 File Offset: 0x01281CD8
+		// Token: 0x0603E69B RID: 255643 RVA: 0x01226278 File Offset: 0x01224478
 		private SceneCameraRotatorBase GetActiveRotator()
 		{
 			if (this.OverrideRotator != null)
@@ -116,13 +116,13 @@ namespace CSharpScript.Game.Camera
 			return null;
 		}
 
-		// Token: 0x06048282 RID: 295554 RVA: 0x01283B42 File Offset: 0x01281D42
+		// Token: 0x0603E69C RID: 255644 RVA: 0x012262E2 File Offset: 0x012244E2
 		private bool ShouldRebuildConfig(SceneSubCamera subCamera)
 		{
 			return subCamera != this.LastBuiltSubCamera || ((subCamera != null) ? subCamera.FixInputData : null) != this.LastBuiltFixInputData || ((subCamera != null) ? subCamera.FollowConfig : null) != this.LastBuiltFollowConfig;
 		}
 
-		// Token: 0x06048283 RID: 295555 RVA: 0x01283B7C File Offset: 0x01281D7C
+		// Token: 0x0603E69D RID: 255645 RVA: 0x0122631C File Offset: 0x0122451C
 		private void RebuildConfigRotator(SceneSubCamera subCamera)
 		{
 			this.ClearAllRotator();
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Camera
 			this.LastBuiltFollowConfig = ((subCamera != null) ? subCamera.FollowConfig : null);
 		}
 
-		// Token: 0x06048284 RID: 295556 RVA: 0x01283C0F File Offset: 0x01281E0F
+		// Token: 0x0603E69E RID: 255646 RVA: 0x012263AF File Offset: 0x012245AF
 		[NullableContext(1)]
 		private void SetOverrideRotator(SceneCameraRotatorBase rotator)
 		{
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Camera
 			this.OverrideRotator.OnActivate();
 		}
 
-		// Token: 0x06048285 RID: 295557 RVA: 0x01283C36 File Offset: 0x01281E36
+		// Token: 0x0603E69F RID: 255647 RVA: 0x012263D6 File Offset: 0x012245D6
 		private void ClearAllRotator()
 		{
 			if (this.OverrideRotator != null)
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048286 RID: 295558 RVA: 0x01283C6C File Offset: 0x01281E6C
+		// Token: 0x0603E6A0 RID: 255648 RVA: 0x0122640C File Offset: 0x0122460C
 		private FightCameraLogicComponent GetFightLogic()
 		{
 			CameraModelInstance cameraModel = this.CameraModel;
@@ -187,14 +187,14 @@ namespace CSharpScript.Game.Camera
 			return fightCamera.LogicComponent;
 		}
 
-		// Token: 0x06048287 RID: 295559 RVA: 0x01283C8A File Offset: 0x01281E8A
+		// Token: 0x0603E6A1 RID: 255649 RVA: 0x0122642A File Offset: 0x0122462A
 		protected override bool OnClear()
 		{
 			this.CameraModelInstanceInternal = null;
 			return true;
 		}
 
-		// Token: 0x06048288 RID: 295560 RVA: 0x01283C94 File Offset: 0x01281E94
+		// Token: 0x0603E6A2 RID: 255650 RVA: 0x01226434 File Offset: 0x01224634
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -203,105 +203,134 @@ namespace CSharpScript.Game.Camera
 				return false;
 			}
 			SceneCameraInputComponent sceneCameraInputComponent = (SceneCameraInputComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CameraModelInstanceInternal"))
+			if (sceneCameraInputComponent.CameraModelInstanceInternal == null)
 			{
-				if (sceneCameraInputComponent.CameraModelInstanceInternal == null)
-				{
-					this.CameraModelInstanceInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraModelInstance>(this.CameraModelInstanceInternal), "CameraModelInstanceInternal"))
-				{
-					return false;
-				}
+				this.CameraModelInstanceInternal = null;
 			}
-			if (base.CanResetComponentProperty("DisplayComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraModelInstanceInternal), "CameraModelInstanceInternal"))
 			{
-				if (sceneCameraInputComponent.DisplayComponent == null)
-				{
-					this.DisplayComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneCameraDisplayComponent>(this.DisplayComponent), "DisplayComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ConfigRotator"))
+			if (sceneCameraInputComponent.DisplayComponent == null)
 			{
-				if (sceneCameraInputComponent.ConfigRotator == null)
-				{
-					this.ConfigRotator = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneCameraRotatorBase>(this.ConfigRotator), "ConfigRotator"))
-				{
-					return false;
-				}
+				this.DisplayComponent = null;
 			}
-			if (base.CanResetComponentProperty("OverrideRotator"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisplayComponent), "DisplayComponent"))
 			{
-				if (sceneCameraInputComponent.OverrideRotator == null)
-				{
-					this.OverrideRotator = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneCameraRotatorBase>(this.OverrideRotator), "OverrideRotator"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LastBuiltSubCamera"))
+			if (sceneCameraInputComponent.ConfigRotator == null)
 			{
-				if (sceneCameraInputComponent.LastBuiltSubCamera == null)
-				{
-					this.LastBuiltSubCamera = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneSubCamera>(this.LastBuiltSubCamera), "LastBuiltSubCamera"))
-				{
-					return false;
-				}
+				this.ConfigRotator = null;
 			}
-			if (base.CanResetComponentProperty("LastBuiltFixInputData"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConfigRotator), "ConfigRotator"))
 			{
-				if (sceneCameraInputComponent.LastBuiltFixInputData == null)
-				{
-					this.LastBuiltFixInputData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneFixInputData>(this.LastBuiltFixInputData), "LastBuiltFixInputData"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LastBuiltFollowConfig"))
+			if (sceneCameraInputComponent.OverrideRotator == null)
 			{
-				if (sceneCameraInputComponent.LastBuiltFollowConfig == null)
-				{
-					this.LastBuiltFollowConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneCameraFollowConfig>(this.LastBuiltFollowConfig), "LastBuiltFollowConfig"))
-				{
-					return false;
-				}
+				this.OverrideRotator = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OverrideRotator), "OverrideRotator"))
+			{
+				return false;
+			}
+			if (sceneCameraInputComponent.LastBuiltSubCamera == null)
+			{
+				this.LastBuiltSubCamera = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastBuiltSubCamera), "LastBuiltSubCamera"))
+			{
+				return false;
+			}
+			if (sceneCameraInputComponent.LastBuiltFixInputData == null)
+			{
+				this.LastBuiltFixInputData = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastBuiltFixInputData), "LastBuiltFixInputData"))
+			{
+				return false;
+			}
+			if (sceneCameraInputComponent.LastBuiltFollowConfig == null)
+			{
+				this.LastBuiltFollowConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastBuiltFollowConfig), "LastBuiltFollowConfig"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04026158 RID: 155992
+		// Token: 0x170076C3 RID: 30403
+		// (get) Token: 0x0603E6A3 RID: 255651 RVA: 0x01226581 File Offset: 0x01224781
+		public override bool NeedCreateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076C4 RID: 30404
+		// (get) Token: 0x0603E6A4 RID: 255652 RVA: 0x01226584 File Offset: 0x01224784
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076C5 RID: 30405
+		// (get) Token: 0x0603E6A5 RID: 255653 RVA: 0x01226587 File Offset: 0x01224787
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076C6 RID: 30406
+		// (get) Token: 0x0603E6A6 RID: 255654 RVA: 0x0122658A File Offset: 0x0122478A
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076C7 RID: 30407
+		// (get) Token: 0x0603E6A7 RID: 255655 RVA: 0x0122658D File Offset: 0x0122478D
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402143B RID: 136251
 		private CameraModelInstance CameraModelInstanceInternal;
 
-		// Token: 0x04026159 RID: 155993
+		// Token: 0x0402143C RID: 136252
 		private SceneCameraDisplayComponent DisplayComponent;
 
-		// Token: 0x0402615A RID: 155994
+		// Token: 0x0402143D RID: 136253
 		private SceneCameraRotatorBase ConfigRotator;
 
-		// Token: 0x0402615B RID: 155995
+		// Token: 0x0402143E RID: 136254
 		private SceneCameraRotatorBase OverrideRotator;
 
-		// Token: 0x0402615C RID: 155996
+		// Token: 0x0402143F RID: 136255
 		private SceneSubCamera LastBuiltSubCamera;
 
-		// Token: 0x0402615D RID: 155997
+		// Token: 0x04021440 RID: 136256
 		private SceneFixInputData LastBuiltFixInputData;
 
-		// Token: 0x0402615E RID: 155998
+		// Token: 0x04021441 RID: 136257
 		private SceneCameraFollowConfig LastBuiltFollowConfig;
 	}
 }

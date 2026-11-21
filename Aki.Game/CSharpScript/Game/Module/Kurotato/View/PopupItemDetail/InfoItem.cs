@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 {
-	// Token: 0x0200573B RID: 22331
+	// Token: 0x02004712 RID: 18194
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 	})]
 	internal class InfoItem : GridProxyAbstract<IInfoItemData>
 	{
-		// Token: 0x06038C5D RID: 232541 RVA: 0x00D7A7C8 File Offset: 0x00D789C8
+		// Token: 0x0602DB6D RID: 187245 RVA: 0x00CC8E78 File Offset: 0x00CC7078
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038C5E RID: 232542 RVA: 0x00D7A834 File Offset: 0x00D78A34
+		// Token: 0x0602DB6E RID: 187246 RVA: 0x00CC8EE4 File Offset: 0x00CC70E4
 		[NullableContext(1)]
 		public override void Refresh(IInfoItemData data, bool isSelected, int gridIndex)
 		{
@@ -45,12 +45,12 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			base.GetSprite(1).SetUIActive(data.IsArrowLevel);
 		}
 
-		// Token: 0x0200B91B RID: 47387
+		// Token: 0x0200A33C RID: 41788
 		private enum EInfoItemComp
 		{
-			// Token: 0x04037FBD RID: 229309
+			// Token: 0x040329CD RID: 207309
 			TextDesc,
-			// Token: 0x04037FBE RID: 229310
+			// Token: 0x040329CE RID: 207310
 			SpriteArrow
 		}
 	}

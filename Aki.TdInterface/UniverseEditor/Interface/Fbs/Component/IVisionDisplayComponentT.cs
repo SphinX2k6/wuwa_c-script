@@ -3,45 +3,45 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B42 RID: 23362
+	// Token: 0x02006158 RID: 24920
 	public class IVisionDisplayComponentT
 	{
-		// Token: 0x1700B057 RID: 45143
-		// (get) Token: 0x06027EFC RID: 163580 RVA: 0x0057DBAD File Offset: 0x0057BDAD
-		// (set) Token: 0x06027EFD RID: 163581 RVA: 0x0057DBB5 File Offset: 0x0057BDB5
+		// Token: 0x1700B99F RID: 47519
+		// (get) Token: 0x0602A4C0 RID: 173248 RVA: 0x005C563D File Offset: 0x005C383D
+		// (set) Token: 0x0602A4C1 RID: 173249 RVA: 0x005C5645 File Offset: 0x005C3845
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700B058 RID: 45144
-		// (get) Token: 0x06027EFE RID: 163582 RVA: 0x0057DBBE File Offset: 0x0057BDBE
-		// (set) Token: 0x06027EFF RID: 163583 RVA: 0x0057DBC6 File Offset: 0x0057BDC6
+		// Token: 0x1700B9A0 RID: 47520
+		// (get) Token: 0x0602A4C2 RID: 173250 RVA: 0x005C564E File Offset: 0x005C384E
+		// (set) Token: 0x0602A4C3 RID: 173251 RVA: 0x005C5656 File Offset: 0x005C3856
 		public bool IsNeedInView { get; set; }
 
-		// Token: 0x1700B059 RID: 45145
-		// (get) Token: 0x06027F00 RID: 163584 RVA: 0x0057DBCF File Offset: 0x0057BDCF
-		// (set) Token: 0x06027F01 RID: 163585 RVA: 0x0057DBD7 File Offset: 0x0057BDD7
+		// Token: 0x1700B9A1 RID: 47521
+		// (get) Token: 0x0602A4C4 RID: 173252 RVA: 0x005C565F File Offset: 0x005C385F
+		// (set) Token: 0x0602A4C5 RID: 173253 RVA: 0x005C5667 File Offset: 0x005C3867
 		public bool IsBanOcclusion { get; set; }
 
-		// Token: 0x1700B05A RID: 45146
-		// (get) Token: 0x06027F02 RID: 163586 RVA: 0x0057DBE0 File Offset: 0x0057BDE0
-		// (set) Token: 0x06027F03 RID: 163587 RVA: 0x0057DBE8 File Offset: 0x0057BDE8
+		// Token: 0x1700B9A2 RID: 47522
+		// (get) Token: 0x0602A4C6 RID: 173254 RVA: 0x005C5670 File Offset: 0x005C3870
+		// (set) Token: 0x0602A4C7 RID: 173255 RVA: 0x005C5678 File Offset: 0x005C3878
 		public int ViewEntityId { get; set; }
 
-		// Token: 0x1700B05B RID: 45147
-		// (get) Token: 0x06027F04 RID: 163588 RVA: 0x0057DBF1 File Offset: 0x0057BDF1
-		// (set) Token: 0x06027F05 RID: 163589 RVA: 0x0057DBF9 File Offset: 0x0057BDF9
+		// Token: 0x1700B9A3 RID: 47523
+		// (get) Token: 0x0602A4C8 RID: 173256 RVA: 0x005C5681 File Offset: 0x005C3881
+		// (set) Token: 0x0602A4C9 RID: 173257 RVA: 0x005C5689 File Offset: 0x005C3889
 		public bool IsBornInTargetPoint { get; set; }
 
-		// Token: 0x1700B05C RID: 45148
-		// (get) Token: 0x06027F06 RID: 163590 RVA: 0x0057DC02 File Offset: 0x0057BE02
-		// (set) Token: 0x06027F07 RID: 163591 RVA: 0x0057DC0A File Offset: 0x0057BE0A
+		// Token: 0x1700B9A4 RID: 47524
+		// (get) Token: 0x0602A4CA RID: 173258 RVA: 0x005C5692 File Offset: 0x005C3892
+		// (set) Token: 0x0602A4CB RID: 173259 RVA: 0x005C569A File Offset: 0x005C389A
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x1700B05D RID: 45149
-		// (get) Token: 0x06027F08 RID: 163592 RVA: 0x0057DC13 File Offset: 0x0057BE13
-		// (set) Token: 0x06027F09 RID: 163593 RVA: 0x0057DC1B File Offset: 0x0057BE1B
+		// Token: 0x1700B9A5 RID: 47525
+		// (get) Token: 0x0602A4CC RID: 173260 RVA: 0x005C56A3 File Offset: 0x005C38A3
+		// (set) Token: 0x0602A4CD RID: 173261 RVA: 0x005C56AB File Offset: 0x005C38AB
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027F0A RID: 163594 RVA: 0x0057DC24 File Offset: 0x0057BE24
+		// Token: 0x0602A4CE RID: 173262 RVA: 0x005C56B4 File Offset: 0x005C38B4
 		public IVisionDisplayComponentT()
 		{
 			this.Disabled = false;

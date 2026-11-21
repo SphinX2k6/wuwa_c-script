@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000213 RID: 531
+	// Token: 0x02000225 RID: 549
 	public class ConfigDollGrabMachineHelpInfoAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C75 RID: 3189 RVA: 0x000A0034 File Offset: 0x0009E234
+		// Token: 0x06000CE1 RID: 3297 RVA: 0x000A5F6C File Offset: 0x000A416C
 		static ConfigDollGrabMachineHelpInfoAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDollGrabMachineHelpInfoAll.CreateStaticDefaultValue), new Action(ConfigDollGrabMachineHelpInfoAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C76 RID: 3190 RVA: 0x000A0054 File Offset: 0x0009E254
+		// Token: 0x06000CE2 RID: 3298 RVA: 0x000A5F8C File Offset: 0x000A418C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDollGrabMachineHelpInfoAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000C77 RID: 3191 RVA: 0x000A00D3 File Offset: 0x0009E2D3
+		// Token: 0x06000CE3 RID: 3299 RVA: 0x000A600B File Offset: 0x000A420B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDollGrabMachineHelpInfoAll.LogPair = null;
 			ConfigDollGrabMachineHelpInfoAll.HandleId = 0;
 		}
 
-		// Token: 0x06000C78 RID: 3192 RVA: 0x000A00E1 File Offset: 0x0009E2E1
+		// Token: 0x06000CE4 RID: 3300 RVA: 0x000A6019 File Offset: 0x000A4219
 		public static void Init()
 		{
 			ConfigDollGrabMachineHelpInfoAll.HandleId = ConfigCommon.InitDataStatement(ConfigDollGrabMachineHelpInfoAll.HandleId, "db_dollgrabmachinehelpinfo.db", "select BinData from `DollGrabMachineHelpInfo`");
 		}
 
-		// Token: 0x06000C79 RID: 3193 RVA: 0x000A00FC File Offset: 0x0009E2FC
+		// Token: 0x06000CE5 RID: 3301 RVA: 0x000A6034 File Offset: 0x000A4234
 		[NullableContext(2)]
 		public static IReadOnlyList<DollGrabMachineHelpInfo> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000E69 RID: 3689
+		// Token: 0x04000EE7 RID: 3815
 		private const string DB = "db_dollgrabmachinehelpinfo.db";
 
-		// Token: 0x04000E6A RID: 3690
+		// Token: 0x04000EE8 RID: 3816
 		private const string FILE = "w.娃娃机帮助文档.xlsx";
 
-		// Token: 0x04000E6B RID: 3691
+		// Token: 0x04000EE9 RID: 3817
 		private const string TABLE = "DollGrabMachineHelpInfo";
 
-		// Token: 0x04000E6C RID: 3692
+		// Token: 0x04000EEA RID: 3818
 		private const string COMMAND = "select BinData from `DollGrabMachineHelpInfo`";
 
-		// Token: 0x04000E6D RID: 3693
+		// Token: 0x04000EEB RID: 3819
 		private const string KEY_PREFIX = "DollGrabMachineHelpInfoAll";
 
-		// Token: 0x04000E6E RID: 3694
+		// Token: 0x04000EEC RID: 3820
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000E6F RID: 3695
+		// Token: 0x04000EED RID: 3821
 		private static int HandleId;
 	}
 }

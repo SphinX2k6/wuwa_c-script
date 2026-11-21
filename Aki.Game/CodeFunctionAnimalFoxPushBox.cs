@@ -6,7 +6,7 @@ using CSharpScript.Game.LevelGamePlay.Common;
 using CSharpScript.Game.NewWorld.SceneItem;
 using UnrealEngine;
 
-// Token: 0x0200316E RID: 12654
+// Token: 0x020026DB RID: 9947
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,13 +15,13 @@ using UnrealEngine;
 })]
 public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalFox>
 {
-	// Token: 0x0601B373 RID: 111475 RVA: 0x0076B4FC File Offset: 0x007696FC
+	// Token: 0x06018E78 RID: 102008 RVA: 0x00792E60 File Offset: 0x00791060
 	public CodeFunctionAnimalFoxPushBox(SpecialSkillAnimalFox specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x170025B8 RID: 9656
-	// (get) Token: 0x0601B374 RID: 111476 RVA: 0x0076B5A2 File Offset: 0x007697A2
+	// Token: 0x170027A9 RID: 10153
+	// (get) Token: 0x06018E79 RID: 102009 RVA: 0x00792F06 File Offset: 0x00791106
 	public bool IsInPushInteraction
 	{
 		get
@@ -30,7 +30,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		}
 	}
 
-	// Token: 0x0601B375 RID: 111477 RVA: 0x0076B5C0 File Offset: 0x007697C0
+	// Token: 0x06018E7A RID: 102010 RVA: 0x00792F24 File Offset: 0x00791124
 	public override FKuroCodeFunctionResult Execute(FKuroCodeFunctionPayload payload)
 	{
 		if (this.IsReversePostChecking)
@@ -82,7 +82,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		}
 	}
 
-	// Token: 0x0601B376 RID: 111478 RVA: 0x0076B6B8 File Offset: 0x007698B8
+	// Token: 0x06018E7B RID: 102011 RVA: 0x0079301C File Offset: 0x0079121C
 	public FKuroCodeFunctionResult Stop(string reason, bool success, bool unlockRotationImmediately = false)
 	{
 		this.CancelDeferredTransition();
@@ -104,7 +104,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		if (obj2 != null && this.FoxActorComp != null)
 		{
 			this.FoxActorComp.Actor.SetAnimRootMotionTranslationScale(1f);
-			this.FoxActorComp.SetInputDirect(Vector.ZeroVectorProxy, false);
+			this.FoxActorComp.SetInputDirect(Vector.ZeroVectorProxy, false, EInputDirectSpace.World);
 		}
 		if (obj2 != null && this.FoxMoveComp != null)
 		{
@@ -144,7 +144,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return this.CreateExitResult(reason);
 	}
 
-	// Token: 0x0601B377 RID: 111479 RVA: 0x0076B868 File Offset: 0x00769A68
+	// Token: 0x06018E7C RID: 102012 RVA: 0x007931CC File Offset: 0x007913CC
 	public void ForceStop()
 	{
 		CodeFunctionAnimalFoxPushBox.EDeferredPushTransition pendingTransition = this.PendingTransition;
@@ -163,7 +163,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		this.UnbindMovementUpdated();
 	}
 
-	// Token: 0x0601B378 RID: 111480 RVA: 0x0076B8EA File Offset: 0x00769AEA
+	// Token: 0x06018E7D RID: 102013 RVA: 0x0079324E File Offset: 0x0079144E
 	private void ClearUnlockRotationTimer(bool unlockPending = false)
 	{
 		if (this.UnlockRotationTimer != null)
@@ -178,7 +178,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		this.PendingUnlockMoveComp = null;
 	}
 
-	// Token: 0x0601B379 RID: 111481 RVA: 0x0076B92C File Offset: 0x00769B2C
+	// Token: 0x06018E7E RID: 102014 RVA: 0x00793290 File Offset: 0x00791490
 	private FKuroCodeFunctionResult TryStart()
 	{
 		SpecialSkillAnimalFox specialSkill = this.SpecialSkill;
@@ -259,7 +259,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return this.CreateContinueResult();
 	}
 
-	// Token: 0x0601B37A RID: 111482 RVA: 0x0076BC64 File Offset: 0x00769E64
+	// Token: 0x06018E7F RID: 102015 RVA: 0x007935C8 File Offset: 0x007917C8
 	private FKuroCodeFunctionResult TickApproach()
 	{
 		if (this.FoxActorComp == null || this.FoxMoveComp == null || this.Spline == null || this.BoxActorComp == null)
@@ -284,7 +284,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return this.CreateContinueResult();
 	}
 
-	// Token: 0x0601B37B RID: 111483 RVA: 0x0076BD9C File Offset: 0x00769F9C
+	// Token: 0x06018E80 RID: 102016 RVA: 0x00793700 File Offset: 0x00791900
 	private void EnterPushState()
 	{
 		if (this.FoxActorComp == null || this.FoxMoveComp == null || this.BoxActorComp == null)
@@ -307,7 +307,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		this.CorrectFoxPosition();
 	}
 
-	// Token: 0x0601B37C RID: 111484 RVA: 0x0076BEB5 File Offset: 0x0076A0B5
+	// Token: 0x06018E81 RID: 102017 RVA: 0x00793819 File Offset: 0x00791A19
 	private bool RequestDeferredTransition(CodeFunctionAnimalFoxPushBox.EDeferredPushTransition transition)
 	{
 		if (this.PendingTransition == transition)
@@ -323,7 +323,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return true;
 	}
 
-	// Token: 0x0601B37D RID: 111485 RVA: 0x0076BEE8 File Offset: 0x0076A0E8
+	// Token: 0x06018E82 RID: 102018 RVA: 0x0079384C File Offset: 0x00791A4C
 	private bool EnsureMovementUpdatedBinding()
 	{
 		CharacterActorComponent foxActorComp = this.FoxActorComp;
@@ -342,7 +342,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return true;
 	}
 
-	// Token: 0x0601B37E RID: 111486 RVA: 0x0076BF4B File Offset: 0x0076A14B
+	// Token: 0x06018E83 RID: 102019 RVA: 0x007938AF File Offset: 0x00791AAF
 	private void UnbindMovementUpdated()
 	{
 		ACharacter movementUpdatedActor = this.MovementUpdatedActor;
@@ -353,14 +353,14 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		this.MovementUpdatedActor = null;
 	}
 
-	// Token: 0x0601B37F RID: 111487 RVA: 0x0076BF84 File Offset: 0x0076A184
+	// Token: 0x06018E84 RID: 102020 RVA: 0x007938E8 File Offset: 0x00791AE8
 	private void CancelDeferredTransition()
 	{
 		this.PendingTransition = CodeFunctionAnimalFoxPushBox.EDeferredPushTransition.None;
 		this.DeferredTransitionWaitTime = 0f;
 	}
 
-	// Token: 0x0601B380 RID: 111488 RVA: 0x0076BF98 File Offset: 0x0076A198
+	// Token: 0x06018E85 RID: 102021 RVA: 0x007938FC File Offset: 0x00791AFC
 	private void HandleCharacterMovementUpdated(float deltaSeconds, FVector oldLocation, FVector oldVelocity)
 	{
 		if (this.PendingTransition == CodeFunctionAnimalFoxPushBox.EDeferredPushTransition.None || this.IsApplyingDeferredTransition)
@@ -387,7 +387,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		}
 	}
 
-	// Token: 0x0601B381 RID: 111489 RVA: 0x0076BFF8 File Offset: 0x0076A1F8
+	// Token: 0x06018E86 RID: 102022 RVA: 0x0079395C File Offset: 0x00791B5C
 	private void ApplyDeferredPushTransition()
 	{
 		CharacterActorComponent foxActorComp = this.FoxActorComp;
@@ -430,7 +430,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		this.Stop("延迟进入时组件已失效", false, false);
 	}
 
-	// Token: 0x0601B382 RID: 111490 RVA: 0x0076C104 File Offset: 0x0076A304
+	// Token: 0x06018E87 RID: 102023 RVA: 0x00793A68 File Offset: 0x00791C68
 	private void ApplyDeferredReversePushTransition()
 	{
 		if (this.ActiveReversePushRequestVersion != this.SpecialSkill.ReversePushRequestVersion)
@@ -470,7 +470,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		this.StopReversePush("延迟进入时组件已失效", false);
 	}
 
-	// Token: 0x0601B383 RID: 111491 RVA: 0x0076C1D4 File Offset: 0x0076A3D4
+	// Token: 0x06018E88 RID: 102024 RVA: 0x00793B38 File Offset: 0x00791D38
 	private bool IsForwardPushAtSplineEnd(bool refreshDistance)
 	{
 		if (this.Spline == null || this.BoxActorComp == null || this.SplineLength <= 1f)
@@ -485,7 +485,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return this.CurrentDistance >= this.SplineLength - 1f;
 	}
 
-	// Token: 0x0601B384 RID: 111492 RVA: 0x0076C244 File Offset: 0x0076A444
+	// Token: 0x06018E89 RID: 102025 RVA: 0x00793BA8 File Offset: 0x00791DA8
 	private FKuroCodeFunctionResult Tick()
 	{
 		if (this.FoxActorComp == null || this.FoxMoveComp == null || this.Spline == null || this.BoxActorComp == null)
@@ -531,7 +531,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return this.CreateContinueResult();
 	}
 
-	// Token: 0x0601B385 RID: 111493 RVA: 0x0076C3F0 File Offset: 0x0076A5F0
+	// Token: 0x06018E8A RID: 102026 RVA: 0x00793D54 File Offset: 0x00791F54
 	private bool CheckDeviateExit(float delta)
 	{
 		Vector inputDirectProxy = this.FoxActorComp.InputDirectProxy;
@@ -552,13 +552,13 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return false;
 	}
 
-	// Token: 0x0601B386 RID: 111494 RVA: 0x0076C493 File Offset: 0x0076A693
+	// Token: 0x06018E8B RID: 102027 RVA: 0x00793DF7 File Offset: 0x00791FF7
 	private float GetFrameDisplacement(float delta)
 	{
 		return 63.75f * delta;
 	}
 
-	// Token: 0x0601B387 RID: 111495 RVA: 0x0076C49C File Offset: 0x0076A69C
+	// Token: 0x06018E8C RID: 102028 RVA: 0x00793E00 File Offset: 0x00792000
 	private void ChangePushBoxMoveAudio(bool stop = false)
 	{
 		if (stop)
@@ -580,7 +580,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		}));
 	}
 
-	// Token: 0x0601B388 RID: 111496 RVA: 0x0076C524 File Offset: 0x0076A724
+	// Token: 0x06018E8D RID: 102029 RVA: 0x00793E88 File Offset: 0x00792088
 	private void CorrectFoxPosition()
 	{
 		if (this.Spline == null || this.FoxActorComp == null || this.FoxMoveComp == null || this.BoxActorComp == null)
@@ -608,7 +608,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		this.SetFoxRotationToTangent(this.TmpTangent);
 	}
 
-	// Token: 0x0601B389 RID: 111497 RVA: 0x0076C740 File Offset: 0x0076A940
+	// Token: 0x06018E8E RID: 102030 RVA: 0x007940A4 File Offset: 0x007922A4
 	private void SetFoxRotationToTangent(Vector tangent)
 	{
 		if (this.FoxActorComp == null || this.FoxMoveComp == null)
@@ -625,7 +625,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		this.FoxActorComp.SetActorRotation(this.TmpRotator.ToUeRotator(), "FoxPushBox", false);
 	}
 
-	// Token: 0x0601B38A RID: 111498 RVA: 0x0076C834 File Offset: 0x0076AA34
+	// Token: 0x06018E8F RID: 102031 RVA: 0x00794198 File Offset: 0x00792398
 	private void SnapFoxToSpline(string label)
 	{
 		if (this.FoxActorComp == null || this.Spline == null)
@@ -649,7 +649,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		component.SetLocationAndRotatorWithModelBuffer(this.TmpOffset.ToUeVector(false), this.TmpRotator.ToUeRotator(), 200f, label, ESetRotationPriority.Anim, true);
 	}
 
-	// Token: 0x0601B38B RID: 111499 RVA: 0x0076C974 File Offset: 0x0076AB74
+	// Token: 0x06018E90 RID: 102032 RVA: 0x007942D8 File Offset: 0x007924D8
 	private void GetSliderWorldPos(Vector @out)
 	{
 		if (this.SliderActor == null)
@@ -660,7 +660,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		@out.Set((double)fvector.X + this.SliderOffset.X, (double)fvector.Y + this.SliderOffset.Y, (double)fvector.Z + this.SliderOffset.Z);
 	}
 
-	// Token: 0x0601B38C RID: 111500 RVA: 0x0076C9D8 File Offset: 0x0076ABD8
+	// Token: 0x06018E91 RID: 102033 RVA: 0x0079433C File Offset: 0x0079253C
 	private FKuroCodeFunctionResult TryStartReversePush()
 	{
 		SpecialSkillAnimalFox specialSkill = this.SpecialSkill;
@@ -720,7 +720,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return this.CreateContinueResult();
 	}
 
-	// Token: 0x0601B38D RID: 111501 RVA: 0x0076CC40 File Offset: 0x0076AE40
+	// Token: 0x06018E92 RID: 102034 RVA: 0x007945A4 File Offset: 0x007927A4
 	[return: Nullable(2)]
 	private string ResolveSliderActor(int seqEntityId, string sliderTag)
 	{
@@ -778,7 +778,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return null;
 	}
 
-	// Token: 0x0601B38E RID: 111502 RVA: 0x0076CDE0 File Offset: 0x0076AFE0
+	// Token: 0x06018E93 RID: 102035 RVA: 0x00794744 File Offset: 0x00792944
 	private FKuroCodeFunctionResult RestartReversePush()
 	{
 		this.CancelDeferredTransition();
@@ -802,7 +802,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return this.TryStartReversePush();
 	}
 
-	// Token: 0x0601B38F RID: 111503 RVA: 0x0076CE8C File Offset: 0x0076B08C
+	// Token: 0x06018E94 RID: 102036 RVA: 0x007947F0 File Offset: 0x007929F0
 	private void EnterReversePushState()
 	{
 		if (this.FoxActorComp == null || this.FoxMoveComp == null)
@@ -815,7 +815,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		this.IsApproaching = false;
 		this.IsPushingForward = true;
 		this.FoxActorComp.Actor.SetAnimRootMotionTranslationScale(0f);
-		this.FoxActorComp.SetInputDirect(Vector.ZeroVectorProxy, false);
+		this.FoxActorComp.SetInputDirect(Vector.ZeroVectorProxy, false, EInputDirectSpace.World);
 		AActor sliderActor = this.SliderActor;
 		if (sliderActor != null && sliderActor.IsValid())
 		{
@@ -828,7 +828,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		this.SpecialSkill.OnPushBoxInteractionStateChanged();
 	}
 
-	// Token: 0x0601B390 RID: 111504 RVA: 0x0076CF5C File Offset: 0x0076B15C
+	// Token: 0x06018E95 RID: 102037 RVA: 0x007948C0 File Offset: 0x00792AC0
 	private FKuroCodeFunctionResult TickReversePush()
 	{
 		if (this.FoxActorComp == null || this.FoxMoveComp == null || this.Spline == null || this.SliderActor == null)
@@ -857,7 +857,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return this.CreateContinueResult();
 	}
 
-	// Token: 0x0601B391 RID: 111505 RVA: 0x0076D094 File Offset: 0x0076B294
+	// Token: 0x06018E96 RID: 102038 RVA: 0x007949F8 File Offset: 0x00792BF8
 	private void CorrectFoxPositionReversePush()
 	{
 		if (this.Spline == null || this.FoxActorComp == null || this.FoxMoveComp == null)
@@ -878,13 +878,13 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		this.SetFoxRotationToTangent(this.TmpTangent);
 	}
 
-	// Token: 0x0601B392 RID: 111506 RVA: 0x0076D1E8 File Offset: 0x0076B3E8
+	// Token: 0x06018E97 RID: 102039 RVA: 0x00794B4C File Offset: 0x00792D4C
 	private FKuroCodeFunctionResult EnterReversePostCheck()
 	{
 		if (this.FoxActorComp != null)
 		{
 			this.FoxActorComp.Actor.SetAnimRootMotionTranslationScale(1f);
-			this.FoxActorComp.SetInputDirect(Vector.ZeroVectorProxy, false);
+			this.FoxActorComp.SetInputDirect(Vector.ZeroVectorProxy, false, EInputDirectSpace.World);
 			this.FoxActorComp.SetInputFacing(this.FoxActorComp.ActorForwardProxy, true);
 			AActor sliderActor = this.SliderActor;
 			if (sliderActor != null && sliderActor.IsValid())
@@ -909,7 +909,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return this.CreateContinueResult();
 	}
 
-	// Token: 0x0601B393 RID: 111507 RVA: 0x0076D2E8 File Offset: 0x0076B4E8
+	// Token: 0x06018E98 RID: 102040 RVA: 0x00794C4C File Offset: 0x00792E4C
 	private FKuroCodeFunctionResult TickReversePostCheck()
 	{
 		if (this.FoxActorComp == null || this.FoxMoveComp == null || this.SliderActor == null || !this.SliderActor.IsValid())
@@ -947,7 +947,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return this.CreateContinueResult();
 	}
 
-	// Token: 0x0601B394 RID: 111508 RVA: 0x0076D420 File Offset: 0x0076B620
+	// Token: 0x06018E99 RID: 102041 RVA: 0x00794D84 File Offset: 0x00792F84
 	private void PushFoxOutFromMovingSlider(float deltaSeconds)
 	{
 		CharacterActorComponent foxActorComp = this.FoxActorComp;
@@ -1000,7 +1000,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		}
 	}
 
-	// Token: 0x0601B395 RID: 111509 RVA: 0x0076D624 File Offset: 0x0076B824
+	// Token: 0x06018E9A RID: 102042 RVA: 0x00794F88 File Offset: 0x00793188
 	private FKuroCodeFunctionResult StopReversePush(string reason, bool success)
 	{
 		this.CancelDeferredTransition();
@@ -1008,7 +1008,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		if (isReversePush && this.FoxActorComp != null)
 		{
 			this.FoxActorComp.Actor.SetAnimRootMotionTranslationScale(1f);
-			this.FoxActorComp.SetInputDirect(Vector.ZeroVectorProxy, false);
+			this.FoxActorComp.SetInputDirect(Vector.ZeroVectorProxy, false, EInputDirectSpace.World);
 			this.FoxActorComp.SetInputFacing(this.FoxActorComp.ActorForwardProxy, true);
 		}
 		if (isReversePush && this.FoxMoveComp != null)
@@ -1043,7 +1043,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return this.CreateExitResult(reason);
 	}
 
-	// Token: 0x0601B396 RID: 111510 RVA: 0x0076D778 File Offset: 0x0076B978
+	// Token: 0x06018E9B RID: 102043 RVA: 0x007950DC File Offset: 0x007932DC
 	private FKuroCodeFunctionResult CreateContinueResult()
 	{
 		if (this.CachedContinueResult == null)
@@ -1056,7 +1056,7 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return this.CachedContinueResult;
 	}
 
-	// Token: 0x0601B397 RID: 111511 RVA: 0x0076D820 File Offset: 0x0076BA20
+	// Token: 0x06018E9C RID: 102044 RVA: 0x00795184 File Offset: 0x00793384
 	private FKuroCodeFunctionResult CreateExitResult(string reason)
 	{
 		if (this.CachedExitResult == null)
@@ -1069,199 +1069,199 @@ public class CodeFunctionAnimalFoxPushBox : CodeFunctionBase<SpecialSkillAnimalF
 		return this.CachedExitResult;
 	}
 
-	// Token: 0x0400D42E RID: 54318
+	// Token: 0x0400D891 RID: 55441
 	public static readonly string FunctionName = "AnimalFox.PushBox";
 
-	// Token: 0x0400D42F RID: 54319
+	// Token: 0x0400D892 RID: 55442
 	private const float PUSH_SPEED = 63.75f;
 
-	// Token: 0x0400D430 RID: 54320
+	// Token: 0x0400D893 RID: 55443
 	private const float ANGLE_THRESHOLD = 60f;
 
-	// Token: 0x0400D431 RID: 54321
+	// Token: 0x0400D894 RID: 55444
 	private const float DEVIATE_EXIT_TIME = 100f;
 
-	// Token: 0x0400D432 RID: 54322
+	// Token: 0x0400D895 RID: 55445
 	private const float APPROACH_SNAP_DIST = 50f;
 
-	// Token: 0x0400D433 RID: 54323
+	// Token: 0x0400D896 RID: 55446
 	private const float MODEL_BUFFER_TIME = 200f;
 
-	// Token: 0x0400D434 RID: 54324
+	// Token: 0x0400D897 RID: 55447
 	private const float UNLOCK_ROTATION_DELAY = 200f;
 
-	// Token: 0x0400D435 RID: 54325
+	// Token: 0x0400D898 RID: 55448
 	private const float END_DISTANCE_TOLERANCE = 1f;
 
-	// Token: 0x0400D436 RID: 54326
+	// Token: 0x0400D899 RID: 55449
 	private const float DEFERRED_TRANSITION_TIMEOUT = 1f;
 
-	// Token: 0x0400D437 RID: 54327
+	// Token: 0x0400D89A RID: 55450
 	private const float SLIDER_MOVE_SPEED_THRESHOLD_SQUARED = 1f;
 
-	// Token: 0x0400D438 RID: 54328
+	// Token: 0x0400D89B RID: 55451
 	private const float REVERSE_POST_CHECK_STILL_TIME = 1f;
 
-	// Token: 0x0400D439 RID: 54329
+	// Token: 0x0400D89C RID: 55452
 	private const float REVERSE_POST_CHECK_MAX_TIME = 10f;
 
-	// Token: 0x0400D43A RID: 54330
+	// Token: 0x0400D89D RID: 55453
 	private const float REVERSE_POST_CHECK_DIRECTION_DOT = 0.5f;
 
-	// Token: 0x0400D43B RID: 54331
+	// Token: 0x0400D89E RID: 55454
 	private const float REVERSE_POST_CHECK_MAX_PUSH_DISTANCE = 30f;
 
-	// Token: 0x0400D43C RID: 54332
+	// Token: 0x0400D89F RID: 55455
 	private const string PUSH_BOX_MOVE_AUDIO_EVENT = "play_sfx_gp_boxforpushing_loop";
 
-	// Token: 0x0400D43D RID: 54333
+	// Token: 0x0400D8A0 RID: 55456
 	private const string RESULT_PUSHING_FORWARD = "PushingForward";
 
-	// Token: 0x0400D43E RID: 54334
+	// Token: 0x0400D8A1 RID: 55457
 	private const string RESULT_PROGRESS = "Progress";
 
-	// Token: 0x0400D43F RID: 54335
+	// Token: 0x0400D8A2 RID: 55458
 	private const string RESULT_PUSHING_BOX_STATE = "PushingBoxState";
 
-	// Token: 0x0400D440 RID: 54336
+	// Token: 0x0400D8A3 RID: 55459
 	[Nullable(2)]
 	private SplineCurve Spline;
 
-	// Token: 0x0400D441 RID: 54337
+	// Token: 0x0400D8A4 RID: 55460
 	private float SplineLength;
 
-	// Token: 0x0400D442 RID: 54338
+	// Token: 0x0400D8A5 RID: 55461
 	private float CurrentDistance;
 
-	// Token: 0x0400D443 RID: 54339
+	// Token: 0x0400D8A6 RID: 55462
 	private float CollisionRadius;
 
-	// Token: 0x0400D444 RID: 54340
+	// Token: 0x0400D8A7 RID: 55463
 	[Nullable(2)]
 	private BaseActorComponent BoxActorComp;
 
-	// Token: 0x0400D445 RID: 54341
+	// Token: 0x0400D8A8 RID: 55464
 	[Nullable(2)]
 	private CharacterActorComponent FoxActorComp;
 
-	// Token: 0x0400D446 RID: 54342
+	// Token: 0x0400D8A9 RID: 55465
 	[Nullable(2)]
 	private CharacterMoveComponent FoxMoveComp;
 
-	// Token: 0x0400D447 RID: 54343
+	// Token: 0x0400D8AA RID: 55466
 	private bool IsActive;
 
-	// Token: 0x0400D448 RID: 54344
+	// Token: 0x0400D8AB RID: 55467
 	private bool IsApproaching;
 
-	// Token: 0x0400D449 RID: 54345
+	// Token: 0x0400D8AC RID: 55468
 	private bool IsPushingForward;
 
-	// Token: 0x0400D44A RID: 54346
+	// Token: 0x0400D8AD RID: 55469
 	private float DeviateTime;
 
-	// Token: 0x0400D44B RID: 54347
+	// Token: 0x0400D8AE RID: 55470
 	private float InitialBoxYaw;
 
-	// Token: 0x0400D44C RID: 54348
+	// Token: 0x0400D8AF RID: 55471
 	private float InitialTangentYaw;
 
-	// Token: 0x0400D44D RID: 54349
+	// Token: 0x0400D8B0 RID: 55472
 	[Nullable(2)]
 	private TimerHandle UnlockRotationTimer;
 
-	// Token: 0x0400D44E RID: 54350
+	// Token: 0x0400D8B1 RID: 55473
 	[Nullable(2)]
 	private CharacterMoveComponent PendingUnlockMoveComp;
 
-	// Token: 0x0400D44F RID: 54351
+	// Token: 0x0400D8B2 RID: 55474
 	private bool IsReversePush;
 
-	// Token: 0x0400D450 RID: 54352
+	// Token: 0x0400D8B3 RID: 55475
 	private bool IsReversePostChecking;
 
-	// Token: 0x0400D451 RID: 54353
+	// Token: 0x0400D8B4 RID: 55476
 	private float ReversePostStillTime;
 
-	// Token: 0x0400D452 RID: 54354
+	// Token: 0x0400D8B5 RID: 55477
 	private float ReversePostTotalTime;
 
-	// Token: 0x0400D453 RID: 54355
+	// Token: 0x0400D8B6 RID: 55478
 	private bool HasReversePostMoved;
 
-	// Token: 0x0400D454 RID: 54356
+	// Token: 0x0400D8B7 RID: 55479
 	private CodeFunctionAnimalFoxPushBox.EDeferredPushTransition PendingTransition;
 
-	// Token: 0x0400D455 RID: 54357
+	// Token: 0x0400D8B8 RID: 55480
 	private float DeferredTransitionWaitTime;
 
-	// Token: 0x0400D456 RID: 54358
+	// Token: 0x0400D8B9 RID: 55481
 	private bool IsApplyingDeferredTransition;
 
-	// Token: 0x0400D457 RID: 54359
+	// Token: 0x0400D8BA RID: 55482
 	[Nullable(2)]
 	private ACharacter MovementUpdatedActor;
 
-	// Token: 0x0400D458 RID: 54360
+	// Token: 0x0400D8BB RID: 55483
 	private int ActivePushBoxRequestVersion;
 
-	// Token: 0x0400D459 RID: 54361
+	// Token: 0x0400D8BC RID: 55484
 	private int ActiveReversePushRequestVersion;
 
-	// Token: 0x0400D45A RID: 54362
+	// Token: 0x0400D8BD RID: 55485
 	private int PushBoxMoveAudioHandle;
 
-	// Token: 0x0400D45B RID: 54363
+	// Token: 0x0400D8BE RID: 55486
 	[Nullable(2)]
 	private AActor SliderActor;
 
-	// Token: 0x0400D45C RID: 54364
+	// Token: 0x0400D8BF RID: 55487
 	private readonly Vector SliderOffset = Vector.Create();
 
-	// Token: 0x0400D45D RID: 54365
+	// Token: 0x0400D8C0 RID: 55488
 	private readonly Vector LastSliderWorldPos = Vector.Create();
 
-	// Token: 0x0400D45E RID: 54366
+	// Token: 0x0400D8C1 RID: 55489
 	private readonly Vector TmpOffset = Vector.Create();
 
-	// Token: 0x0400D45F RID: 54367
+	// Token: 0x0400D8C2 RID: 55490
 	private readonly Vector TmpDir = Vector.Create();
 
-	// Token: 0x0400D460 RID: 54368
+	// Token: 0x0400D8C3 RID: 55491
 	private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400D461 RID: 54369
+	// Token: 0x0400D8C4 RID: 55492
 	private readonly Rotator TmpRotator = Rotator.Create();
 
-	// Token: 0x0400D462 RID: 54370
+	// Token: 0x0400D8C5 RID: 55493
 	private readonly Vector TmpSplinePos = Vector.Create();
 
-	// Token: 0x0400D463 RID: 54371
+	// Token: 0x0400D8C6 RID: 55494
 	private readonly Vector TmpTangent = Vector.Create();
 
-	// Token: 0x0400D464 RID: 54372
+	// Token: 0x0400D8C7 RID: 55495
 	private readonly Vector TmpPlanarMove = Vector.Create();
 
-	// Token: 0x0400D465 RID: 54373
+	// Token: 0x0400D8C8 RID: 55496
 	private readonly Vector TmpPlanarToFox = Vector.Create();
 
-	// Token: 0x0400D466 RID: 54374
+	// Token: 0x0400D8C9 RID: 55497
 	[Nullable(2)]
 	private FKuroCodeFunctionResult CachedContinueResult;
 
-	// Token: 0x0400D467 RID: 54375
+	// Token: 0x0400D8CA RID: 55498
 	[Nullable(2)]
 	private FKuroCodeFunctionResult CachedExitResult;
 
-	// Token: 0x020096BA RID: 38586
+	// Token: 0x020088E0 RID: 35040
 	[NullableContext(0)]
 	private enum EDeferredPushTransition
 	{
-		// Token: 0x040304F8 RID: 197880
+		// Token: 0x0402BB8D RID: 179085
 		None,
-		// Token: 0x040304F9 RID: 197881
+		// Token: 0x0402BB8E RID: 179086
 		EnterPush,
-		// Token: 0x040304FA RID: 197882
+		// Token: 0x0402BB8F RID: 179087
 		EnterReversePush
 	}
 }

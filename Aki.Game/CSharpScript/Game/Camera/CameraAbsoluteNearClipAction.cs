@@ -4,18 +4,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072C1 RID: 29377
+	// Token: 0x02006443 RID: 25667
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CameraAbsoluteNearClipAction : ICameraNearClipAction<CameraAbsoluteNearClipConfig>
 	{
-		// Token: 0x0604811C RID: 295196 RVA: 0x0127AB3E File Offset: 0x01278D3E
+		// Token: 0x0603E510 RID: 255248 RVA: 0x0121CED6 File Offset: 0x0121B0D6
 		public CameraAbsoluteNearClipAction(int id, CameraAbsoluteNearClipConfig nearClipConfig)
 		{
 		}
 
-		// Token: 0x17009F2E RID: 40750
-		// (get) Token: 0x0604811D RID: 295197 RVA: 0x0127AB54 File Offset: 0x01278D54
+		// Token: 0x17007695 RID: 30357
+		// (get) Token: 0x0603E511 RID: 255249 RVA: 0x0121CEEC File Offset: 0x0121B0EC
 		public CameraAbsoluteNearClipConfig NearClipConfig
 		{
 			get
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Camera
 			}
 		} = nearClipConfig;
 
-		// Token: 0x0604811E RID: 295198 RVA: 0x0127AB5C File Offset: 0x01278D5C
+		// Token: 0x0603E512 RID: 255250 RVA: 0x0121CEF4 File Offset: 0x0121B0F4
 		public unsafe void Start()
 		{
 			Log instance = Log.Instance;
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Camera
 			UKuroCameraFunctionLibrary.DelaySetNearClipPlane(this.<nearClipConfig>P.Distance);
 		}
 
-		// Token: 0x0604811F RID: 295199 RVA: 0x0127AC11 File Offset: 0x01278E11
+		// Token: 0x0603E513 RID: 255251 RVA: 0x0121CFA9 File Offset: 0x0121B1A9
 		public bool IsPause()
 		{
 			return this.IsPauseState;
 		}
 
-		// Token: 0x06048120 RID: 295200 RVA: 0x0127AC1C File Offset: 0x01278E1C
+		// Token: 0x0603E514 RID: 255252 RVA: 0x0121CFB4 File Offset: 0x0121B1B4
 		public unsafe void Pause()
 		{
 			Log instance = Log.Instance;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Camera
 			this.IsPauseState = true;
 		}
 
-		// Token: 0x06048121 RID: 295201 RVA: 0x0127ACC8 File Offset: 0x01278EC8
+		// Token: 0x0603E515 RID: 255253 RVA: 0x0121D060 File Offset: 0x0121B260
 		public unsafe void Resume()
 		{
 			Log instance = Log.Instance;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Camera
 			UKuroCameraFunctionLibrary.DelaySetNearClipPlane(this.<nearClipConfig>P.Distance);
 		}
 
-		// Token: 0x06048122 RID: 295202 RVA: 0x0127AD84 File Offset: 0x01278F84
+		// Token: 0x0603E516 RID: 255254 RVA: 0x0121D11C File Offset: 0x0121B31C
 		public unsafe void End()
 		{
 			Log instance = Log.Instance;
@@ -90,14 +90,14 @@ namespace CSharpScript.Game.Camera
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x04026061 RID: 155745
+		// Token: 0x04021341 RID: 136001
 		[CompilerGenerated]
 		private CameraAbsoluteNearClipConfig <nearClipConfig>P;
 
-		// Token: 0x04026062 RID: 155746
+		// Token: 0x04021342 RID: 136002
 		public readonly int Id = id;
 
-		// Token: 0x04026063 RID: 155747
+		// Token: 0x04021343 RID: 136003
 		private bool IsPauseState;
 	}
 }

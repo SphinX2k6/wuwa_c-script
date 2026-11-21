@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200494B RID: 18763
+	// Token: 0x020038C2 RID: 14530
 	public class BagTagNavigationNextComponent : NavigationGroupNextComponent
 	{
-		// Token: 0x06030FCF RID: 200655 RVA: 0x00B60697 File Offset: 0x00B5E897
+		// Token: 0x06025AFB RID: 154363 RVA: 0x00A9B4DB File Offset: 0x00A996DB
 		public BagTagNavigationNextComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06030FD0 RID: 200656 RVA: 0x00B606A0 File Offset: 0x00B5E8A0
+		// Token: 0x06025AFC RID: 154364 RVA: 0x00A9B4E4 File Offset: 0x00A996E4
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

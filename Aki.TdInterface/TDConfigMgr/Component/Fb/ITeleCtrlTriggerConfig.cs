@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B52 RID: 2898
+	// Token: 0x02000C20 RID: 3104
 	public class ITeleCtrlTriggerConfig
 	{
-		// Token: 0x060042BF RID: 17087 RVA: 0x000AA5C5 File Offset: 0x000A87C5
-		[NullableContext(1)]
+		// Token: 0x06004718 RID: 18200 RVA: 0x000B4689 File Offset: 0x000B2889
 		public static ITeleCtrlTriggerConfig Create(ITeleCtrlTriggerConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011D8 RID: 4568
-		// (get) Token: 0x060042C0 RID: 17088 RVA: 0x000AA5E4 File Offset: 0x000A87E4
+		// Token: 0x170012D3 RID: 4819
+		// (get) Token: 0x06004719 RID: 18201 RVA: 0x000B46A8 File Offset: 0x000B28A8
 		public virtual ETeleCtrlTriggerType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002597 RID: 9623
+		// Token: 0x040027DF RID: 10207
 		private ITeleCtrlTriggerConfig Instance;
 	}
 }

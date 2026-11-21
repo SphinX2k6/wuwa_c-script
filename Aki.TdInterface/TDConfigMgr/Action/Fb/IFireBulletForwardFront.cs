@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026B1 RID: 9905
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002974 RID: 10612
 	public class IFireBulletForwardFront : IFireBulletType
 	{
-		// Token: 0x0600DD9E RID: 56734 RVA: 0x0020E9CE File Offset: 0x0020CBCE
+		// Token: 0x0600EB75 RID: 60277 RVA: 0x0022B16E File Offset: 0x0022936E
 		public static IFireBulletForwardFront Create(IFireBulletForwardFront? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041FE RID: 16894
-		// (get) Token: 0x0600DD9F RID: 56735 RVA: 0x0020E9ED File Offset: 0x0020CBED
+		// Token: 0x1700453B RID: 17723
+		// (get) Token: 0x0600EB76 RID: 60278 RVA: 0x0022B18D File Offset: 0x0022938D
 		public override EFireBulletType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041FF RID: 16895
-		// (get) Token: 0x0600DDA0 RID: 56736 RVA: 0x0020E9FA File Offset: 0x0020CBFA
+		// Token: 0x1700453C RID: 17724
+		// (get) Token: 0x0600EB77 RID: 60279 RVA: 0x0022B19A File Offset: 0x0022939A
 		public virtual long BulletId
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004200 RID: 16896
-		// (get) Token: 0x0600DDA1 RID: 56737 RVA: 0x0020EA07 File Offset: 0x0020CC07
+		// Token: 0x1700453D RID: 17725
+		// (get) Token: 0x0600EB78 RID: 60280 RVA: 0x0022B1A7 File Offset: 0x002293A7
 		public virtual ITargetEntityType Launcher
 		{
 			get
@@ -58,13 +55,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B0D RID: 31501
+		// Token: 0x040081AA RID: 33194
 		private IFireBulletForwardFront Instance;
 
-		// Token: 0x04007B0E RID: 31502
+		// Token: 0x040081AB RID: 33195
 		private ITargetEntityType _LauncherCache;
 
-		// Token: 0x04007B0F RID: 31503
+		// Token: 0x040081AC RID: 33196
 		private bool _LauncherInited;
 	}
 }

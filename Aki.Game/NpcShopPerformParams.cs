@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
-// Token: 0x0200322E RID: 12846
+// Token: 0x0200279D RID: 10141
 [NullableContext(2)]
 [Nullable(0)]
 public class NpcShopPerformParams
 {
-	// Token: 0x0601BB28 RID: 113448 RVA: 0x0079DB70 File Offset: 0x0079BD70
+	// Token: 0x060196AD RID: 104109 RVA: 0x007C630C File Offset: 0x007C450C
 	public void TryLoadAllMontage()
 	{
 		NpcSystemUiMontageInfo enterMontageInfo = this.EnterMontageInfo;
@@ -48,76 +48,76 @@ public class NpcShopPerformParams
 		deliverSuccessMontageInfo.TryLoadAsset();
 	}
 
-	// Token: 0x0400DA17 RID: 55831
+	// Token: 0x0400DEB6 RID: 57014
 	public NpcSystemUiMontageInfo EnterMontageInfo;
 
-	// Token: 0x0400DA18 RID: 55832
+	// Token: 0x0400DEB7 RID: 57015
 	public NpcSystemUiMontageInfo StandByMontageInfo;
 
-	// Token: 0x0400DA19 RID: 55833
+	// Token: 0x0400DEB8 RID: 57016
 	public NpcSystemUiMontageInfo ShopSuccessMontageInfo;
 
-	// Token: 0x0400DA1A RID: 55834
+	// Token: 0x0400DEB9 RID: 57017
 	public NpcSystemUiMontageInfo SwitchMusicMontageInfo;
 
-	// Token: 0x0400DA1B RID: 55835
+	// Token: 0x0400DEBA RID: 57018
 	public NpcSystemUiMontageInfo ExitMontageInfo;
 
-	// Token: 0x0400DA1C RID: 55836
+	// Token: 0x0400DEBB RID: 57019
 	public NpcSystemUiMontageInfo DeliverSuccessMontageInfo;
 
-	// Token: 0x0400DA1D RID: 55837
+	// Token: 0x0400DEBC RID: 57020
 	public NpcSystemUiMontageInfo CompleteMontageInfo;
 
-	// Token: 0x0400DA1E RID: 55838
+	// Token: 0x0400DEBD RID: 57021
 	public NpcSystemUiMontageInfo FirstDollMontageInfo;
 
-	// Token: 0x0400DA1F RID: 55839
+	// Token: 0x0400DEBE RID: 57022
 	public NpcSystemUiMontageInfo SubsequentDollMontageInfo;
 
-	// Token: 0x0400DA20 RID: 55840
+	// Token: 0x0400DEBF RID: 57023
 	public NpcSystemUiMontageInfo FirstDollPartMontageInfo;
 
-	// Token: 0x0400DA21 RID: 55841
+	// Token: 0x0400DEC0 RID: 57024
 	public NpcSystemUiMontageInfo SubsequentDollPartMontageInfo;
 
-	// Token: 0x0400DA22 RID: 55842
+	// Token: 0x0400DEC1 RID: 57025
 	public PlayFlow EnterFlow;
 
-	// Token: 0x0400DA23 RID: 55843
+	// Token: 0x0400DEC2 RID: 57026
 	public PlayFlow ShopSuccessFlow;
 
-	// Token: 0x0400DA24 RID: 55844
+	// Token: 0x0400DEC3 RID: 57027
 	public PlayFlow ShopFailedFlow;
 
-	// Token: 0x0400DA25 RID: 55845
+	// Token: 0x0400DEC4 RID: 57028
 	public PlayFlow UpgradeFlow;
 
-	// Token: 0x0400DA26 RID: 55846
+	// Token: 0x0400DEC5 RID: 57029
 	public PlayFlow DeliverSuccessFlow;
 
-	// Token: 0x0400DA27 RID: 55847
+	// Token: 0x0400DEC6 RID: 57030
 	public PlayFlow CompleteFlow;
 
-	// Token: 0x0400DA28 RID: 55848
+	// Token: 0x0400DEC7 RID: 57031
 	public PlayFlow FirstDollFlow;
 
-	// Token: 0x0400DA29 RID: 55849
+	// Token: 0x0400DEC8 RID: 57032
 	public PlayFlow SubsequentDollFlow;
 
-	// Token: 0x0400DA2A RID: 55850
+	// Token: 0x0400DEC9 RID: 57033
 	public PlayFlow FirstDollPartFlow;
 
-	// Token: 0x0400DA2B RID: 55851
+	// Token: 0x0400DECA RID: 57034
 	public PlayFlow SubsequentDollPartFlow;
 
-	// Token: 0x0400DA2C RID: 55852
+	// Token: 0x0400DECB RID: 57035
 	public string UpgradeSequencePath;
 
-	// Token: 0x0400DA2D RID: 55853
+	// Token: 0x0400DECC RID: 57036
 	[Nullable(1)]
 	public string FinishDeliverySequence = "";
 
-	// Token: 0x0400DA2E RID: 55854
+	// Token: 0x0400DECD RID: 57037
 	public bool ShowNpcWhilePlayingSequence;
 }

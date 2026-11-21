@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012B6 RID: 4790
+	// Token: 0x020013FC RID: 5116
 	public static class EUseWeatherSwitchCheckTypeExtensions
 	{
-		// Token: 0x06006BDA RID: 27610 RVA: 0x001039E8 File Offset: 0x00101BE8
+		// Token: 0x06007248 RID: 29256 RVA: 0x001119B0 File Offset: 0x0010FBB0
 		public static string ToEnumString(this EUseWeatherSwitchCheckType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BDB RID: 27611 RVA: 0x00103A20 File Offset: 0x00101C20
+		// Token: 0x06007249 RID: 29257 RVA: 0x001119E8 File Offset: 0x0010FBE8
 		public static EUseWeatherSwitchCheckType FromString(string name)
 		{
 			EUseWeatherSwitchCheckType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BDC RID: 27612 RVA: 0x00103A49 File Offset: 0x00101C49
+		// Token: 0x0600724A RID: 29258 RVA: 0x00111A11 File Offset: 0x0010FC11
 		public static bool TryFromString(string name, out EUseWeatherSwitchCheckType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006BDD RID: 27613 RVA: 0x00103A82 File Offset: 0x00101C82
+		// Token: 0x0600724B RID: 29259 RVA: 0x00111A4A File Offset: 0x0010FC4A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BDE RID: 27614 RVA: 0x00103A9A File Offset: 0x00101C9A
+		// Token: 0x0600724C RID: 29260 RVA: 0x00111A62 File Offset: 0x0010FC62
 		public static EUseWeatherSwitchCheckType[] GetValues()
 		{
 			return new EUseWeatherSwitchCheckType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BDF RID: 27615 RVA: 0x00103AA6 File Offset: 0x00101CA6
+		// Token: 0x0600724D RID: 29261 RVA: 0x00111A6E File Offset: 0x0010FC6E
 		public static string[] GetNames()
 		{
 			return new string[]

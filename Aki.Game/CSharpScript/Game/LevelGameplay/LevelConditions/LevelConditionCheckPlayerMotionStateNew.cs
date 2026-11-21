@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CD7 RID: 27863
+	// Token: 0x02005E51 RID: 24145
 	public class LevelConditionCheckPlayerMotionStateNew : LevelConditionBase
 	{
-		// Token: 0x0604464A RID: 280138 RVA: 0x010DE21C File Offset: 0x010DC41C
+		// Token: 0x0603A7A4 RID: 239524 RVA: 0x010882F8 File Offset: 0x010864F8
 		[NullableContext(1)]
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
@@ -35,37 +35,37 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			{
 			case EPlayerMotionState.Ground:
 				flag = (component.PositionState == ECharPositionState.Ground && component.PositionSubState == ECharPositionSubState.None);
-				goto IL_1A4;
+				goto IL_1A8;
 			case EPlayerMotionState.Air:
 				flag = (component.PositionState == ECharPositionState.Air);
-				goto IL_1A4;
+				goto IL_1A8;
 			case EPlayerMotionState.Water:
 				flag = (component.PositionState == ECharPositionState.Water);
-				goto IL_1A4;
+				goto IL_1A8;
 			case EPlayerMotionState.Climb:
 				flag = (component.PositionState == ECharPositionState.Climb);
-				goto IL_1A4;
+				goto IL_1A8;
 			case EPlayerMotionState.OnClimbing:
 				flag = (component.PositionState == ECharPositionState.Climb && (component.MoveState == ECharMoveState.Other || component.MoveState == ECharMoveState.NormalClimb || component.MoveState == ECharMoveState.FastClimb));
-				goto IL_1A4;
+				goto IL_1A8;
 			case EPlayerMotionState.WalkOnWater:
 				flag = (component.PositionState == ECharPositionState.Ground && component.PositionSubState == ECharPositionSubState.WaterSurface);
-				goto IL_1A4;
+				goto IL_1A8;
 			case EPlayerMotionState.GlideInAir:
 				flag = (component.PositionState == ECharPositionState.Air && component.MoveState == ECharMoveState.Glide);
-				goto IL_1A4;
+				goto IL_1A8;
 			case EPlayerMotionState.FallInAir:
 				flag = (component.PositionState == ECharPositionState.Air && component.MoveState == ECharMoveState.Other);
-				goto IL_1A4;
+				goto IL_1A8;
 			case EPlayerMotionState.Soaring:
 				flag = (component.PositionState == ECharPositionState.Air && component.MoveState == ECharMoveState.Soar);
-				goto IL_1A4;
+				goto IL_1A8;
 			case EPlayerMotionState.Gongduola:
 				flag = (component.PositionState == ECharPositionState.Ride && component.MoveState == ECharMoveState.Gongduola);
-				goto IL_1A4;
+				goto IL_1A8;
 			}
 			flag2 = true;
-			IL_1A4:
+			IL_1A8:
 			if (flag2)
 			{
 				BaseTagComponent component2 = getCurrentEntity.Entity.GetComponent<BaseTagComponent>();

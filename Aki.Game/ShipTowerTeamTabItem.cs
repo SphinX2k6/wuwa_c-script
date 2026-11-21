@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029DD RID: 10717
+// Token: 0x02001F58 RID: 8024
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerTeamTabItem : CommonTabItemBase, ITabViewRegister
 {
-	// Token: 0x06016349 RID: 90953 RVA: 0x0059DCE8 File Offset: 0x0059BEE8
+	// Token: 0x06013D4F RID: 81231 RVA: 0x005C8CA0 File Offset: 0x005C6EA0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class ShipTowerTeamTabItem : CommonTabItemBase, ITabViewRegister
 		};
 	}
 
-	// Token: 0x0601634A RID: 90954 RVA: 0x0059DD68 File Offset: 0x0059BF68
+	// Token: 0x06013D50 RID: 81232 RVA: 0x005C8D20 File Offset: 0x005C6F20
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerTeamTabItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -37,13 +37,13 @@ public class ShipTowerTeamTabItem : CommonTabItemBase, ITabViewRegister
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601634B RID: 90955 RVA: 0x0059DDAB File Offset: 0x0059BFAB
+	// Token: 0x06013D51 RID: 81233 RVA: 0x005C8D63 File Offset: 0x005C6F63
 	public void RegisterViewModule(UiTabViewBase tabView)
 	{
 		tabView.AddUiTabViewBehavior<UiTabSequence>().SetRootItem(tabView);
 	}
 
-	// Token: 0x0601634C RID: 90956 RVA: 0x0059DDB9 File Offset: 0x0059BFB9
+	// Token: 0x06013D52 RID: 81234 RVA: 0x005C8D71 File Offset: 0x005C6F71
 	private void OnExtendToggleToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -52,13 +52,13 @@ public class ShipTowerTeamTabItem : CommonTabItemBase, ITabViewRegister
 		}
 	}
 
-	// Token: 0x0601634D RID: 90957 RVA: 0x0059DDD2 File Offset: 0x0059BFD2
+	// Token: 0x06013D53 RID: 81235 RVA: 0x005C8D8A File Offset: 0x005C6F8A
 	protected override void OnSetToggleState(EToggleState state, bool bFire)
 	{
 		this.GetTabToggle().SetToggleStateForce(state, bFire, false, false);
 	}
 
-	// Token: 0x0601634E RID: 90958 RVA: 0x0059DDE3 File Offset: 0x0059BFE3
+	// Token: 0x06013D54 RID: 81236 RVA: 0x005C8D9B File Offset: 0x005C6F9B
 	protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		if (data.Data != null)
@@ -67,42 +67,42 @@ public class ShipTowerTeamTabItem : CommonTabItemBase, ITabViewRegister
 		}
 	}
 
-	// Token: 0x0601634F RID: 90959 RVA: 0x0059DE07 File Offset: 0x0059C007
+	// Token: 0x06013D55 RID: 81237 RVA: 0x005C8DBF File Offset: 0x005C6FBF
 	protected override void OnUpdateTabIcon(string iconPath)
 	{
 	}
 
-	// Token: 0x06016350 RID: 90960 RVA: 0x0059DE09 File Offset: 0x0059C009
+	// Token: 0x06013D56 RID: 81238 RVA: 0x005C8DC1 File Offset: 0x005C6FC1
 	protected override UUIExtendToggle GetTabToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x06016351 RID: 90961 RVA: 0x0059DE12 File Offset: 0x0059C012
+	// Token: 0x06013D57 RID: 81239 RVA: 0x005C8DCA File Offset: 0x005C6FCA
 	public void UpdateName(string name)
 	{
 		base.GetText(1).ShowTextNew(name);
 	}
 
-	// Token: 0x06016352 RID: 90962 RVA: 0x0059DE21 File Offset: 0x0059C021
+	// Token: 0x06013D58 RID: 81240 RVA: 0x005C8DD9 File Offset: 0x005C6FD9
 	public void UpdateNameText(string name)
 	{
 		base.GetText(1).SetText(name, true);
 	}
 
-	// Token: 0x06016353 RID: 90963 RVA: 0x0059DE31 File Offset: 0x0059C031
+	// Token: 0x06013D59 RID: 81241 RVA: 0x005C8DE9 File Offset: 0x005C6FE9
 	public void UpdateRedDotVisible(bool visible)
 	{
 		this.GetRedDotItem().SetUIActive(visible);
 	}
 
-	// Token: 0x06016354 RID: 90964 RVA: 0x0059DE3F File Offset: 0x0059C03F
+	// Token: 0x06013D5A RID: 81242 RVA: 0x005C8DF7 File Offset: 0x005C6FF7
 	private UUIItem GetRedDotItem()
 	{
 		return base.GetItem(2);
 	}
 
-	// Token: 0x06016355 RID: 90965 RVA: 0x0059DE48 File Offset: 0x0059C048
+	// Token: 0x06013D5B RID: 81243 RVA: 0x005C8E00 File Offset: 0x005C7000
 	public void BindRedDot(ERedDotName redDotName, int uId = 0)
 	{
 		this.UnBindRedDot();
@@ -113,7 +113,7 @@ public class ShipTowerTeamTabItem : CommonTabItemBase, ITabViewRegister
 		}
 	}
 
-	// Token: 0x06016356 RID: 90966 RVA: 0x0059DE86 File Offset: 0x0059C086
+	// Token: 0x06013D5C RID: 81244 RVA: 0x005C8E3E File Offset: 0x005C703E
 	public void BindGivenUid(ERedDotName redDotName, int uId)
 	{
 		this.RedDotName = new ERedDotName?(redDotName);
@@ -123,7 +123,7 @@ public class ShipTowerTeamTabItem : CommonTabItemBase, ITabViewRegister
 		}
 	}
 
-	// Token: 0x06016357 RID: 90967 RVA: 0x0059DEBE File Offset: 0x0059C0BE
+	// Token: 0x06013D5D RID: 81245 RVA: 0x005C8E76 File Offset: 0x005C7076
 	public void UnBindGivenUid(int uId)
 	{
 		if (this.RedDotName != null)
@@ -132,7 +132,7 @@ public class ShipTowerTeamTabItem : CommonTabItemBase, ITabViewRegister
 		}
 	}
 
-	// Token: 0x06016358 RID: 90968 RVA: 0x0059DEE9 File Offset: 0x0059C0E9
+	// Token: 0x06013D5E RID: 81246 RVA: 0x005C8EA1 File Offset: 0x005C70A1
 	public void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -142,26 +142,26 @@ public class ShipTowerTeamTabItem : CommonTabItemBase, ITabViewRegister
 		}
 	}
 
-	// Token: 0x06016359 RID: 90969 RVA: 0x0059DF19 File Offset: 0x0059C119
+	// Token: 0x06013D5F RID: 81247 RVA: 0x005C8ED1 File Offset: 0x005C70D1
 	protected override void OnBeforeDestroy()
 	{
 		this.UnBindGivenUid(0);
 	}
 
-	// Token: 0x0400A54B RID: 42315
+	// Token: 0x0400A935 RID: 43317
 	private ERedDotName? RedDotName;
 
-	// Token: 0x0200900B RID: 36875
+	// Token: 0x02008252 RID: 33362
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402EA3B RID: 191035
+		// Token: 0x0402A133 RID: 172339
 		public const int SwitchToggle = 0;
 
-		// Token: 0x0402EA3C RID: 191036
+		// Token: 0x0402A134 RID: 172340
 		public const int Name = 1;
 
-		// Token: 0x0402EA3D RID: 191037
+		// Token: 0x0402A135 RID: 172341
 		public const int RedDot = 2;
 	}
 }

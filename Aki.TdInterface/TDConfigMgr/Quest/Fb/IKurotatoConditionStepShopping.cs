@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013EE RID: 5102
+	// Token: 0x02001545 RID: 5445
 	public class IKurotatoConditionStepShopping : IKurotatoConditionStepBase
 	{
-		// Token: 0x06007432 RID: 29746 RVA: 0x00116300 File Offset: 0x00114500
-		[NullableContext(1)]
+		// Token: 0x06007AF3 RID: 31475 RVA: 0x00124CE4 File Offset: 0x00122EE4
 		public static IKurotatoConditionStepShopping Create(IKurotatoConditionStepShopping? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002629 RID: 9769
-		// (get) Token: 0x06007433 RID: 29747 RVA: 0x0011631F File Offset: 0x0011451F
+		// Token: 0x1700280B RID: 10251
+		// (get) Token: 0x06007AF4 RID: 31476 RVA: 0x00124D03 File Offset: 0x00122F03
 		public override EKurotatoConditionStep Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400433C RID: 17212
+		// Token: 0x040046CD RID: 18125
 		private IKurotatoConditionStepShopping Instance;
 	}
 }

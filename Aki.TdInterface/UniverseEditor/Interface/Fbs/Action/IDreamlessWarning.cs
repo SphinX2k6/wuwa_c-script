@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200660C RID: 26124
+	// Token: 0x02006C7D RID: 27773
 	public struct IDreamlessWarning : IFlatbufferObject
 	{
-		// Token: 0x1700C21A RID: 49690
-		// (get) Token: 0x0602D5BF RID: 185791 RVA: 0x00637510 File Offset: 0x00635710
+		// Token: 0x1700CBB8 RID: 52152
+		// (get) Token: 0x0602FD90 RID: 195984 RVA: 0x00684078 File Offset: 0x00682278
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D5C0 RID: 185792 RVA: 0x0063751D File Offset: 0x0063571D
+		// Token: 0x0602FD91 RID: 195985 RVA: 0x00684085 File Offset: 0x00682285
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D5C1 RID: 185793 RVA: 0x00637524 File Offset: 0x00635724
+		// Token: 0x0602FD92 RID: 195986 RVA: 0x0068408C File Offset: 0x0068228C
 		public static IDreamlessWarning GetRootAsIDreamlessWarning(ByteBuffer _bb)
 		{
 			return IDreamlessWarning.GetRootAsIDreamlessWarning(_bb, default(IDreamlessWarning));
 		}
 
-		// Token: 0x0602D5C2 RID: 185794 RVA: 0x00637540 File Offset: 0x00635740
+		// Token: 0x0602FD93 RID: 195987 RVA: 0x006840A8 File Offset: 0x006822A8
 		public static IDreamlessWarning GetRootAsIDreamlessWarning(ByteBuffer _bb, IDreamlessWarning obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D5C3 RID: 185795 RVA: 0x0063755D File Offset: 0x0063575D
+		// Token: 0x0602FD94 RID: 195988 RVA: 0x006840C5 File Offset: 0x006822C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D5C4 RID: 185796 RVA: 0x0063756C File Offset: 0x0063576C
+		// Token: 0x0602FD95 RID: 195989 RVA: 0x006840D4 File Offset: 0x006822D4
 		public IDreamlessWarning __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C21B RID: 49691
-		// (get) Token: 0x0602D5C5 RID: 185797 RVA: 0x0063757C File Offset: 0x0063577C
+		// Token: 0x1700CBB9 RID: 52153
+		// (get) Token: 0x0602FD96 RID: 195990 RVA: 0x006840E4 File Offset: 0x006822E4
 		public ECommonTipType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C21C RID: 49692
-		// (get) Token: 0x0602D5C6 RID: 185798 RVA: 0x006375B8 File Offset: 0x006357B8
+		// Token: 0x1700CBBA RID: 52154
+		// (get) Token: 0x0602FD97 RID: 195991 RVA: 0x00684120 File Offset: 0x00682320
 		public string WarningText
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D5C7 RID: 185799 RVA: 0x006375EF File Offset: 0x006357EF
+		// Token: 0x0602FD98 RID: 195992 RVA: 0x00684157 File Offset: 0x00682357
 		public Span<byte> GetWarningTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602D5C8 RID: 185800 RVA: 0x006375FE File Offset: 0x006357FE
+		// Token: 0x0602FD99 RID: 195993 RVA: 0x00684166 File Offset: 0x00682366
 		public byte[] GetWarningTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0602D5C9 RID: 185801 RVA: 0x0063760C File Offset: 0x0063580C
+		// Token: 0x0602FD9A RID: 195994 RVA: 0x00684174 File Offset: 0x00682374
 		public static Offset<IDreamlessWarning> CreateIDreamlessWarning(FlatBufferBuilder builder, ECommonTipType Type = ECommonTipType.ChallengeCondition, StringOffset WarningTextOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDreamlessWarning.EndIDreamlessWarning(builder);
 		}
 
-		// Token: 0x0602D5CA RID: 185802 RVA: 0x00637629 File Offset: 0x00635829
+		// Token: 0x0602FD9B RID: 195995 RVA: 0x00684191 File Offset: 0x00682391
 		public static void StartIDreamlessWarning(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602D5CB RID: 185803 RVA: 0x00637632 File Offset: 0x00635832
+		// Token: 0x0602FD9C RID: 195996 RVA: 0x0068419A File Offset: 0x0068239A
 		public static void AddType(FlatBufferBuilder builder, ECommonTipType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D5CC RID: 185804 RVA: 0x0063763D File Offset: 0x0063583D
+		// Token: 0x0602FD9D RID: 195997 RVA: 0x006841A5 File Offset: 0x006823A5
 		public static void AddWarningText(FlatBufferBuilder builder, StringOffset warningTextOffset)
 		{
 			builder.AddOffset(1, warningTextOffset.Value, 0);
 		}
 
-		// Token: 0x0602D5CD RID: 185805 RVA: 0x0063764D File Offset: 0x0063584D
+		// Token: 0x0602FD9E RID: 195998 RVA: 0x006841B5 File Offset: 0x006823B5
 		public static Offset<IDreamlessWarning> EndIDreamlessWarning(FlatBufferBuilder builder)
 		{
 			return new Offset<IDreamlessWarning>(builder.EndTable());
 		}
 
-		// Token: 0x0602D5CE RID: 185806 RVA: 0x0063765C File Offset: 0x0063585C
+		// Token: 0x0602FD9F RID: 195999 RVA: 0x006841C4 File Offset: 0x006823C4
 		public IDreamlessWarningT UnPack()
 		{
 			IDreamlessWarningT dreamlessWarningT = new IDreamlessWarningT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return dreamlessWarningT;
 		}
 
-		// Token: 0x0602D5CF RID: 185807 RVA: 0x00637677 File Offset: 0x00635877
+		// Token: 0x0602FDA0 RID: 196000 RVA: 0x006841DF File Offset: 0x006823DF
 		public void UnPackTo(IDreamlessWarningT _o)
 		{
 			_o.Type = this.Type;
 			_o.WarningText = this.WarningText;
 		}
 
-		// Token: 0x0602D5D0 RID: 185808 RVA: 0x00637694 File Offset: 0x00635894
+		// Token: 0x0602FDA1 RID: 196001 RVA: 0x006841FC File Offset: 0x006823FC
 		public static Offset<IDreamlessWarning> Pack(FlatBufferBuilder builder, IDreamlessWarningT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDreamlessWarning.CreateIDreamlessWarning(builder, _o.Type, warningTextOffset);
 		}
 
-		// Token: 0x04010C92 RID: 68754
+		// Token: 0x04011AAD RID: 72365
 		private Table __p;
 	}
 }

@@ -6,17 +6,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x02007347 RID: 29511
+	// Token: 0x020064CA RID: 25802
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionTaskFinish : AiStateMachineCondition
 	{
-		// Token: 0x0604867C RID: 296572 RVA: 0x012A0463 File Offset: 0x0129E663
+		// Token: 0x0603EAC9 RID: 256713 RVA: 0x01242EEB File Offset: 0x012410EB
 		public AiStateMachineConditionTaskFinish(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x0604867D RID: 296573 RVA: 0x012A0470 File Offset: 0x0129E670
+		// Token: 0x0603EACA RID: 256714 RVA: 0x01242EF8 File Offset: 0x012410F8
 		protected override bool RegisterEvents()
 		{
 			if (base.RegisterEvents())
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return false;
 		}
 
-		// Token: 0x0604867E RID: 296574 RVA: 0x012A04D4 File Offset: 0x0129E6D4
+		// Token: 0x0603EACB RID: 256715 RVA: 0x01242F5C File Offset: 0x0124115C
 		protected override bool UnregisterEvents()
 		{
 			if (base.UnregisterEvents())
@@ -46,32 +46,32 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return false;
 		}
 
-		// Token: 0x0604867F RID: 296575 RVA: 0x012A0536 File Offset: 0x0129E736
+		// Token: 0x0603EACC RID: 256716 RVA: 0x01242FBE File Offset: 0x012411BE
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Condition condition)
 		{
 			this.HasTaskFinishCondition = true;
 			return true;
 		}
 
-		// Token: 0x06048680 RID: 296576 RVA: 0x012A0540 File Offset: 0x0129E740
+		// Token: 0x0603EACD RID: 256717 RVA: 0x01242FC8 File Offset: 0x012411C8
 		protected override void OnClear()
 		{
 			this.HasTaskFinishCondition = false;
 		}
 
-		// Token: 0x06048681 RID: 296577 RVA: 0x012A0549 File Offset: 0x0129E749
+		// Token: 0x0603EACE RID: 256718 RVA: 0x01242FD1 File Offset: 0x012411D1
 		protected override void OnEnter()
 		{
 			this.ResultSelf = this.Node.CurrentLeafNode.TaskFinished;
 		}
 
-		// Token: 0x06048682 RID: 296578 RVA: 0x012A0561 File Offset: 0x0129E761
+		// Token: 0x0603EACF RID: 256719 RVA: 0x01242FE9 File Offset: 0x012411E9
 		protected override void OnTick()
 		{
 			this.ResultSelf = this.Node.CurrentLeafNode.TaskFinished;
 		}
 
-		// Token: 0x06048683 RID: 296579 RVA: 0x012A057C File Offset: 0x0129E77C
+		// Token: 0x0603EAD0 RID: 256720 RVA: 0x01243004 File Offset: 0x01241204
 		private void OnStateTaskFinished(bool taskFinished)
 		{
 			this.ResultSelf = this.Node.CurrentLeafNode.TaskFinished;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x06048684 RID: 296580 RVA: 0x012A05D9 File Offset: 0x0129E7D9
+		// Token: 0x0603EAD1 RID: 256721 RVA: 0x01243061 File Offset: 0x01241261
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);

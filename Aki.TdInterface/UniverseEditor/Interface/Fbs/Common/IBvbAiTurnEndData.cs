@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D43 RID: 23875
+	// Token: 0x0200637A RID: 25466
 	public struct IBvbAiTurnEndData : IFlatbufferObject
 	{
-		// Token: 0x1700B2FA RID: 45818
-		// (get) Token: 0x06028D7A RID: 167290 RVA: 0x0059D1F0 File Offset: 0x0059B3F0
+		// Token: 0x1700BC5B RID: 48219
+		// (get) Token: 0x0602B3E4 RID: 177124 RVA: 0x005E5C60 File Offset: 0x005E3E60
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028D7B RID: 167291 RVA: 0x0059D1FD File Offset: 0x0059B3FD
+		// Token: 0x0602B3E5 RID: 177125 RVA: 0x005E5C6D File Offset: 0x005E3E6D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028D7C RID: 167292 RVA: 0x0059D204 File Offset: 0x0059B404
+		// Token: 0x0602B3E6 RID: 177126 RVA: 0x005E5C74 File Offset: 0x005E3E74
 		public static IBvbAiTurnEndData GetRootAsIBvbAiTurnEndData(ByteBuffer _bb)
 		{
 			return IBvbAiTurnEndData.GetRootAsIBvbAiTurnEndData(_bb, default(IBvbAiTurnEndData));
 		}
 
-		// Token: 0x06028D7D RID: 167293 RVA: 0x0059D220 File Offset: 0x0059B420
+		// Token: 0x0602B3E7 RID: 177127 RVA: 0x005E5C90 File Offset: 0x005E3E90
 		public static IBvbAiTurnEndData GetRootAsIBvbAiTurnEndData(ByteBuffer _bb, IBvbAiTurnEndData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028D7E RID: 167294 RVA: 0x0059D23D File Offset: 0x0059B43D
+		// Token: 0x0602B3E8 RID: 177128 RVA: 0x005E5CAD File Offset: 0x005E3EAD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028D7F RID: 167295 RVA: 0x0059D24C File Offset: 0x0059B44C
+		// Token: 0x0602B3E9 RID: 177129 RVA: 0x005E5CBC File Offset: 0x005E3EBC
 		public IBvbAiTurnEndData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B2FB RID: 45819
-		// (get) Token: 0x06028D80 RID: 167296 RVA: 0x0059D25C File Offset: 0x0059B45C
+		// Token: 0x1700BC5C RID: 48220
+		// (get) Token: 0x0602B3EA RID: 177130 RVA: 0x005E5CCC File Offset: 0x005E3ECC
 		public EBvbEventName Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028D81 RID: 167297 RVA: 0x0059D298 File Offset: 0x0059B498
+		// Token: 0x0602B3EB RID: 177131 RVA: 0x005E5D08 File Offset: 0x005E3F08
 		public static Offset<IBvbAiTurnEndData> CreateIBvbAiTurnEndData(FlatBufferBuilder builder, EBvbEventName Type = EBvbEventName.AIEvolution)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IBvbAiTurnEndData.EndIBvbAiTurnEndData(builder);
 		}
 
-		// Token: 0x06028D82 RID: 167298 RVA: 0x0059D2AE File Offset: 0x0059B4AE
+		// Token: 0x0602B3EC RID: 177132 RVA: 0x005E5D1E File Offset: 0x005E3F1E
 		public static void StartIBvbAiTurnEndData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06028D83 RID: 167299 RVA: 0x0059D2B7 File Offset: 0x0059B4B7
+		// Token: 0x0602B3ED RID: 177133 RVA: 0x005E5D27 File Offset: 0x005E3F27
 		public static void AddType(FlatBufferBuilder builder, EBvbEventName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06028D84 RID: 167300 RVA: 0x0059D2C2 File Offset: 0x0059B4C2
+		// Token: 0x0602B3EE RID: 177134 RVA: 0x005E5D32 File Offset: 0x005E3F32
 		public static Offset<IBvbAiTurnEndData> EndIBvbAiTurnEndData(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbAiTurnEndData>(builder.EndTable());
 		}
 
-		// Token: 0x06028D85 RID: 167301 RVA: 0x0059D2D0 File Offset: 0x0059B4D0
+		// Token: 0x0602B3EF RID: 177135 RVA: 0x005E5D40 File Offset: 0x005E3F40
 		public IBvbAiTurnEndDataT UnPack()
 		{
 			IBvbAiTurnEndDataT bvbAiTurnEndDataT = new IBvbAiTurnEndDataT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return bvbAiTurnEndDataT;
 		}
 
-		// Token: 0x06028D86 RID: 167302 RVA: 0x0059D2EB File Offset: 0x0059B4EB
+		// Token: 0x0602B3F0 RID: 177136 RVA: 0x005E5D5B File Offset: 0x005E3F5B
 		public void UnPackTo(IBvbAiTurnEndDataT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06028D87 RID: 167303 RVA: 0x0059D2FC File Offset: 0x0059B4FC
+		// Token: 0x0602B3F1 RID: 177137 RVA: 0x005E5D6C File Offset: 0x005E3F6C
 		public static Offset<IBvbAiTurnEndData> Pack(FlatBufferBuilder builder, IBvbAiTurnEndDataT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IBvbAiTurnEndData.CreateIBvbAiTurnEndData(builder, _o.Type);
 		}
 
-		// Token: 0x0400F6FA RID: 63226
+		// Token: 0x0401044C RID: 66636
 		private Table __p;
 	}
 }

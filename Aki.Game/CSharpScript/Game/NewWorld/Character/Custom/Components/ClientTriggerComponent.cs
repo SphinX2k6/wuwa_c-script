@@ -16,13 +16,13 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 {
-	// Token: 0x020070A9 RID: 28841
+	// Token: 0x02006308 RID: 25352
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ClientTriggerComponent : EntityComponent
 	{
-		// Token: 0x17009C2F RID: 39983
-		// (get) Token: 0x06046441 RID: 287809 RVA: 0x01195A2C File Offset: 0x01193C2C
+		// Token: 0x17007412 RID: 29714
+		// (get) Token: 0x0603D50F RID: 251151 RVA: 0x011B7EC4 File Offset: 0x011B60C4
 		private int CurMatchedCount
 		{
 			get
@@ -51,8 +51,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C30 RID: 39984
-		// (get) Token: 0x06046442 RID: 287810 RVA: 0x01195AF4 File Offset: 0x01193CF4
+		// Token: 0x17007413 RID: 29715
+		// (get) Token: 0x0603D510 RID: 251152 RVA: 0x011B7F8C File Offset: 0x011B618C
 		[Nullable(new byte[]
 		{
 			2,
@@ -93,8 +93,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C31 RID: 39985
-		// (get) Token: 0x06046443 RID: 287811 RVA: 0x01195B2C File Offset: 0x01193D2C
+		// Token: 0x17007414 RID: 29716
+		// (get) Token: 0x0603D511 RID: 251153 RVA: 0x011B7FC4 File Offset: 0x011B61C4
 		[Nullable(new byte[]
 		{
 			2,
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x06046444 RID: 287812 RVA: 0x01195B7C File Offset: 0x01193D7C
+		// Token: 0x0603D512 RID: 251154 RVA: 0x011B8014 File Offset: 0x011B6214
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x06046445 RID: 287813 RVA: 0x01195DF0 File Offset: 0x01193FF0
+		// Token: 0x0603D513 RID: 251155 RVA: 0x011B8288 File Offset: 0x011B6488
 		protected override bool OnStart()
 		{
 			this.RangeComp = base.Entity.GetComponent<RangeComponent>();
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x06046446 RID: 287814 RVA: 0x01196024 File Offset: 0x01194224
+		// Token: 0x0603D514 RID: 251156 RVA: 0x011B84BC File Offset: 0x011B66BC
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget<bool, EntityHandle>(base.Entity, EEventName.OnEntityInOutRangeLocal, new Action<bool, EntityHandle>(this.OnEntityInOutRange)))
@@ -330,34 +330,34 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x06046447 RID: 287815 RVA: 0x01196120 File Offset: 0x01194320
+		// Token: 0x0603D515 RID: 251157 RVA: 0x011B85B8 File Offset: 0x011B67B8
 		public TriggerContext CreateTriggerContext(int targetId, ETriggerEventType triggerType)
 		{
 			return TriggerContext.Create(base.Entity.Id, targetId, null, new ETriggerEventType?(triggerType), new bool?(true));
 		}
 
-		// Token: 0x06046448 RID: 287816 RVA: 0x01196153 File Offset: 0x01194353
+		// Token: 0x0603D516 RID: 251158 RVA: 0x011B85EB File Offset: 0x011B67EB
 		private void OnEntityInOutRange(bool isEnter, EntityHandle entity)
 		{
 			this.UpdateEntityMatchAndTrigger(isEnter, entity);
 			this.RefreshTimerActivation();
 		}
 
-		// Token: 0x06046449 RID: 287817 RVA: 0x01196163 File Offset: 0x01194363
+		// Token: 0x0603D517 RID: 251159 RVA: 0x011B85FB File Offset: 0x011B67FB
 		private void OnPlayerInOutRange(bool isEnter)
 		{
 			this.UpdatePlayerMatchAndTrigger(isEnter);
 			this.RefreshTimerActivation();
 		}
 
-		// Token: 0x0604644A RID: 287818 RVA: 0x01196172 File Offset: 0x01194372
+		// Token: 0x0603D518 RID: 251160 RVA: 0x011B860A File Offset: 0x011B680A
 		private void OnActorInOutRange(bool isEnter, AActor actor)
 		{
 			this.UpdateActorMatchAndTrigger(isEnter, actor);
 			this.RefreshTimerActivation();
 		}
 
-		// Token: 0x0604644B RID: 287819 RVA: 0x01196184 File Offset: 0x01194384
+		// Token: 0x0603D519 RID: 251161 RVA: 0x011B861C File Offset: 0x011B681C
 		private void UpdateEntityMatchAndTrigger(bool isEnter, EntityHandle entity)
 		{
 			if (entity == null || !entity.Valid)
@@ -402,7 +402,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x0604644C RID: 287820 RVA: 0x01196248 File Offset: 0x01194448
+		// Token: 0x0603D51A RID: 251162 RVA: 0x011B86E0 File Offset: 0x011B68E0
 		private void UpdatePlayerMatchAndTrigger(bool isEnter)
 		{
 			if (isEnter)
@@ -448,7 +448,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x0604644D RID: 287821 RVA: 0x011962F4 File Offset: 0x011944F4
+		// Token: 0x0603D51B RID: 251163 RVA: 0x011B878C File Offset: 0x011B698C
 		private void UpdateActorMatchAndTrigger(bool isEnter, AActor actor)
 		{
 			if (actor == null || !actor.IsValid())
@@ -493,7 +493,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x0604644E RID: 287822 RVA: 0x011963A4 File Offset: 0x011945A4
+		// Token: 0x0603D51C RID: 251164 RVA: 0x011B883C File Offset: 0x011B6A3C
 		private bool CheckActorMatch(bool isEnter, AActor actor)
 		{
 			if (actor == null || !actor.IsValid())
@@ -540,7 +540,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return conditionGroup2 == null || LevelGeneralController.Instance.CheckConditionNew(conditionGroup2, null, this.CreateTriggerContext(0, isEnter ? ETriggerEventType.Enter : ETriggerEventType.Exit), null);
 		}
 
-		// Token: 0x0604644F RID: 287823 RVA: 0x01196450 File Offset: 0x01194650
+		// Token: 0x0603D51D RID: 251165 RVA: 0x011B88E8 File Offset: 0x011B6AE8
 		private bool SpecificBpMatchCheck(AActor actor)
 		{
 			if (this.SpecificBpList == null || this.SpecificBpList.Count <= 0)
@@ -563,7 +563,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return false;
 		}
 
-		// Token: 0x06046450 RID: 287824 RVA: 0x011964F4 File Offset: 0x011946F4
+		// Token: 0x0603D51E RID: 251166 RVA: 0x011B898C File Offset: 0x011B6B8C
 		private void TryExecuteTriggerActorTarget(bool isEnter)
 		{
 			if (!this.CheckExecuteTriggerOrExit(isEnter))
@@ -588,7 +588,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.ExecuteTriggerActorTarget(false);
 		}
 
-		// Token: 0x06046451 RID: 287825 RVA: 0x01196558 File Offset: 0x01194758
+		// Token: 0x0603D51F RID: 251167 RVA: 0x011B89F0 File Offset: 0x011B6BF0
 		private void ExecuteTriggerActorTarget(bool isEnter)
 		{
 			bool valueOrDefault;
@@ -616,7 +616,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.EnqueueActionGroup(list, this.CreateTriggerContext(0, isEnter ? ETriggerEventType.Enter : ETriggerEventType.Exit));
 		}
 
-		// Token: 0x06046452 RID: 287826 RVA: 0x0119660C File Offset: 0x0119480C
+		// Token: 0x0603D520 RID: 251168 RVA: 0x011B8AA4 File Offset: 0x011B6CA4
 		private void RefreshTimerActivation()
 		{
 			SceneItemPropertyComponent propComp = this.PropComp;
@@ -649,7 +649,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.StopRequestTimer();
 		}
 
-		// Token: 0x06046453 RID: 287827 RVA: 0x011966FC File Offset: 0x011948FC
+		// Token: 0x0603D521 RID: 251169 RVA: 0x011B8B94 File Offset: 0x011B6D94
 		private bool CheckEntityMatch(bool isEnter, EntityHandle entity)
 		{
 			if (entity == null || !entity.Valid)
@@ -696,7 +696,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return conditionGroup2 == null || LevelGeneralController.Instance.CheckConditionNew(conditionGroup2, null, this.CreateTriggerContext(entity.Id, isEnter ? ETriggerEventType.Enter : ETriggerEventType.Exit), null);
 		}
 
-		// Token: 0x06046454 RID: 287828 RVA: 0x011967AC File Offset: 0x011949AC
+		// Token: 0x0603D522 RID: 251170 RVA: 0x011B8C44 File Offset: 0x011B6E44
 		private bool CheckPlayerMatch(bool isEnter)
 		{
 			SceneTeamModel instance = SceneTeamModel.Instance;
@@ -745,7 +745,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return conditionGroup2 == null || LevelGeneralController.Instance.CheckConditionNew(conditionGroup2, null, this.CreateTriggerContext(entityHandle.Id, isEnter ? ETriggerEventType.Enter : ETriggerEventType.Exit), null);
 		}
 
-		// Token: 0x06046455 RID: 287829 RVA: 0x01196870 File Offset: 0x01194A70
+		// Token: 0x0603D523 RID: 251171 RVA: 0x011B8D08 File Offset: 0x011B6F08
 		private bool CheckMatchEntityMatchConfig(EntityHandle entity)
 		{
 			bool result = false;
@@ -782,7 +782,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return result;
 		}
 
-		// Token: 0x06046456 RID: 287830 RVA: 0x01196904 File Offset: 0x01194B04
+		// Token: 0x0603D524 RID: 251172 RVA: 0x011B8D9C File Offset: 0x011B6F9C
 		private bool CheckMatchPlayerMatchConfig()
 		{
 			bool result = false;
@@ -802,7 +802,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return result;
 		}
 
-		// Token: 0x06046457 RID: 287831 RVA: 0x0119697A File Offset: 0x01194B7A
+		// Token: 0x0603D525 RID: 251173 RVA: 0x011B8E12 File Offset: 0x011B7012
 		private void TryExecuteTriggerTarget(EntityHandle target)
 		{
 			if (!this.CheckExecuteTriggerOrExit(true))
@@ -817,7 +817,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.ExecuteTriggerTarget(target);
 		}
 
-		// Token: 0x06046458 RID: 287832 RVA: 0x011969AA File Offset: 0x01194BAA
+		// Token: 0x0603D526 RID: 251174 RVA: 0x011B8E42 File Offset: 0x011B7042
 		private void TryExecuteTriggerTargetExit(EntityHandle target)
 		{
 			if (!this.CheckExecuteTriggerOrExit(false))
@@ -832,7 +832,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.ExecuteTriggerTargetExit(target);
 		}
 
-		// Token: 0x06046459 RID: 287833 RVA: 0x011969DC File Offset: 0x01194BDC
+		// Token: 0x0603D527 RID: 251175 RVA: 0x011B8E74 File Offset: 0x011B7074
 		private bool CheckExecuteTriggerOrExit(bool isEnter)
 		{
 			if (isEnter)
@@ -870,7 +870,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x0604645A RID: 287834 RVA: 0x01196A98 File Offset: 0x01194C98
+		// Token: 0x0603D528 RID: 251176 RVA: 0x011B8F30 File Offset: 0x011B7130
 		private void ExecuteTriggerTarget(EntityHandle target)
 		{
 			if (target == null || !target.Valid)
@@ -897,7 +897,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.EnqueueActionGroup(this.Actions, this.CreateTriggerContext(target.Id, ETriggerEventType.Enter));
 		}
 
-		// Token: 0x0604645B RID: 287835 RVA: 0x01196B84 File Offset: 0x01194D84
+		// Token: 0x0603D529 RID: 251177 RVA: 0x011B901C File Offset: 0x011B721C
 		private void ExecuteTriggerTargetExit(EntityHandle target)
 		{
 			if (target == null || !target.Valid)
@@ -924,7 +924,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.EnqueueActionGroup(this.ExitActions, this.CreateTriggerContext(target.Id, ETriggerEventType.Exit));
 		}
 
-		// Token: 0x0604645C RID: 287836 RVA: 0x01196C70 File Offset: 0x01194E70
+		// Token: 0x0603D52A RID: 251178 RVA: 0x011B9108 File Offset: 0x011B7308
 		private unsafe void EnqueueActionGroup(List<ActionInfo> actions, TriggerContext context)
 		{
 			if (this.ActionGroupQueue.Count >= 64)
@@ -943,7 +943,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.TryRunNextActionGroup();
 		}
 
-		// Token: 0x0604645D RID: 287837 RVA: 0x01196D14 File Offset: 0x01194F14
+		// Token: 0x0603D52B RID: 251179 RVA: 0x011B91AC File Offset: 0x011B73AC
 		private void TryRunNextActionGroup()
 		{
 			if (this.IsActionGroupRunning)
@@ -964,7 +964,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			});
 		}
 
-		// Token: 0x0604645E RID: 287838 RVA: 0x01196D7A File Offset: 0x01194F7A
+		// Token: 0x0603D52C RID: 251180 RVA: 0x011B9212 File Offset: 0x011B7412
 		private void StartRequestTimer()
 		{
 			if (this.RequestTimer != null)
@@ -977,7 +977,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}, 2000f, 1f, null, null, true);
 		}
 
-		// Token: 0x0604645F RID: 287839 RVA: 0x01196DAE File Offset: 0x01194FAE
+		// Token: 0x0603D52D RID: 251181 RVA: 0x011B9246 File Offset: 0x011B7446
 		private void StopRequestTimer()
 		{
 			if (this.RequestTimer != null)
@@ -987,7 +987,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.RequestTimer = null;
 		}
 
-		// Token: 0x06046460 RID: 287840 RVA: 0x01196DD0 File Offset: 0x01194FD0
+		// Token: 0x0603D52E RID: 251182 RVA: 0x011B9268 File Offset: 0x011B7468
 		private void RequestUpdate()
 		{
 			SundryModel instance = SundryModel.Instance;
@@ -1033,7 +1033,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.RefreshTimerActivation();
 		}
 
-		// Token: 0x06046461 RID: 287841 RVA: 0x01196F8C File Offset: 0x0119518C
+		// Token: 0x0603D52F RID: 251183 RVA: 0x011B9424 File Offset: 0x011B7624
 		private bool EntityMatchCheck(IEntityCategory category)
 		{
 			if (this.EntityMatchConfig != null)
@@ -1057,13 +1057,13 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x06046462 RID: 287842 RVA: 0x0119700C File Offset: 0x0119520C
+		// Token: 0x0603D530 RID: 251184 RVA: 0x011B94A4 File Offset: 0x011B76A4
 		private bool MultiplayerLimitTypeCheck(bool showTip)
 		{
 			return LevelGamePlayController.Instance.MultiplayerLimitTypeCheck(this.CreatureDataComp.GetEntityOnlineInteractType(), showTip);
 		}
 
-		// Token: 0x06046463 RID: 287843 RVA: 0x01197024 File Offset: 0x01195224
+		// Token: 0x0603D531 RID: 251185 RVA: 0x011B94BC File Offset: 0x011B76BC
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1071,227 +1071,178 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 				return false;
 			}
 			ClientTriggerComponent clientTriggerComponent = (ClientTriggerComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (clientTriggerComponent.CreatureDataComp == null)
 			{
-				if (clientTriggerComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("RangeComp"))
-			{
-				if (clientTriggerComponent.RangeComp == null)
-				{
-					this.RangeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RangeComponent>(this.RangeComp), "RangeComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("Config"))
-			{
-				if (clientTriggerComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ClientTriggerComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("EntityConfigId"))
-			{
-				this.EntityConfigId = clientTriggerComponent.EntityConfigId;
-			}
-			if (base.CanResetComponentProperty("IsCheckRole"))
-			{
-				this.IsCheckRole = clientTriggerComponent.IsCheckRole;
-			}
-			if (base.CanResetComponentProperty("IsCheckMatch"))
-			{
-				this.IsCheckMatch = clientTriggerComponent.IsCheckMatch;
-			}
-			if (base.CanResetComponentProperty("IsTriggerConsiderMatchedCount"))
-			{
-				this.IsTriggerConsiderMatchedCount = clientTriggerComponent.IsTriggerConsiderMatchedCount;
-			}
-			if (base.CanResetComponentProperty("TargetMatchedCount"))
-			{
-				this.TargetMatchedCount = clientTriggerComponent.TargetMatchedCount;
-			}
-			if (base.CanResetComponentProperty("IsMatchCountLimitTriggeredIn"))
-			{
-				this.IsMatchCountLimitTriggeredIn = clientTriggerComponent.IsMatchCountLimitTriggeredIn;
-			}
-			if (base.CanResetComponentProperty("InRangeEntityInfos") && clientTriggerComponent.InRangeEntityInfos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, ClientTriggerComponent.InRangeEntityInfoData>>(this.InRangeEntityInfos), "InRangeEntityInfos"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("InRangeActorInfos") && clientTriggerComponent.InRangeActorInfos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<AActor, ClientTriggerComponent.InRangeActorInfoData>>(this.InRangeActorInfos), "InRangeActorInfos"))
+			if (clientTriggerComponent.RangeComp == null)
+			{
+				this.RangeComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComp), "RangeComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("InRangePlayerInfo"))
+			if (clientTriggerComponent.Config == null)
 			{
-				if (clientTriggerComponent.InRangePlayerInfo == null)
-				{
-					this.InRangePlayerInfo = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ClientTriggerComponent.InRangePlayerInfoData>(this.InRangePlayerInfo), "InRangePlayerInfo"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("RoleMatchConfig"))
-			{
-				if (clientTriggerComponent.RoleMatchConfig == null)
-				{
-					this.RoleMatchConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<IMatchRoleType>>(this.RoleMatchConfig), "RoleMatchConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("EntityMatchConfig"))
-			{
-				if (clientTriggerComponent.EntityMatchConfig == null)
-				{
-					this.EntityMatchConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<IDynamicEntityMatch>>(this.EntityMatchConfig), "EntityMatchConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SpecificBpList"))
-			{
-				if (clientTriggerComponent.SpecificBpList == null)
-				{
-					this.SpecificBpList = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<string>>(this.SpecificBpList), "SpecificBpList"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("RequestTimer"))
-			{
-				if (clientTriggerComponent.RequestTimer == null)
-				{
-					this.RequestTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.RequestTimer), "RequestTimer"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActionGroupQueue") && clientTriggerComponent.ActionGroupQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ClientTriggerComponent.ActionGroupJob>>(this.ActionGroupQueue), "ActionGroupQueue"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IsActionGroupRunning"))
+			this.EntityConfigId = clientTriggerComponent.EntityConfigId;
+			this.IsCheckRole = clientTriggerComponent.IsCheckRole;
+			this.IsCheckMatch = clientTriggerComponent.IsCheckMatch;
+			this.IsTriggerConsiderMatchedCount = clientTriggerComponent.IsTriggerConsiderMatchedCount;
+			this.TargetMatchedCount = clientTriggerComponent.TargetMatchedCount;
+			this.IsMatchCountLimitTriggeredIn = clientTriggerComponent.IsMatchCountLimitTriggeredIn;
+			if (clientTriggerComponent.InRangeEntityInfos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InRangeEntityInfos), "InRangeEntityInfos"))
 			{
-				this.IsActionGroupRunning = clientTriggerComponent.IsActionGroupRunning;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsClientPrePerformance"))
+			if (clientTriggerComponent.InRangeActorInfos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InRangeActorInfos), "InRangeActorInfos"))
 			{
-				this.IsClientPrePerformance = clientTriggerComponent.IsClientPrePerformance;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ClientPrePerformanceConfig"))
+			if (clientTriggerComponent.InRangePlayerInfo == null)
 			{
-				if (clientTriggerComponent.ClientPrePerformanceConfig == null)
-				{
-					this.ClientPrePerformanceConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TriggerComponent>(this.ClientPrePerformanceConfig), "ClientPrePerformanceConfig"))
-				{
-					return false;
-				}
+				this.InRangePlayerInfo = null;
 			}
-			if (base.CanResetComponentProperty("CurTriggeredCount"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InRangePlayerInfo), "InRangePlayerInfo"))
 			{
-				this.CurTriggeredCount = clientTriggerComponent.CurTriggeredCount;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurTriggeredExitCount"))
+			if (clientTriggerComponent.RoleMatchConfig == null)
 			{
-				this.CurTriggeredExitCount = clientTriggerComponent.CurTriggeredExitCount;
+				this.RoleMatchConfig = null;
 			}
-			if (base.CanResetComponentProperty("MaxTriggeredCount"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RoleMatchConfig), "RoleMatchConfig"))
 			{
-				this.MaxTriggeredCount = clientTriggerComponent.MaxTriggeredCount;
+				return false;
 			}
-			if (base.CanResetComponentProperty("MaxTriggeredExitCount"))
+			if (clientTriggerComponent.EntityMatchConfig == null)
 			{
-				this.MaxTriggeredExitCount = clientTriggerComponent.MaxTriggeredExitCount;
+				this.EntityMatchConfig = null;
 			}
-			if (base.CanResetComponentProperty("ClientPrePerformancePreMessageId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EntityMatchConfig), "EntityMatchConfig"))
 			{
-				this.ClientPrePerformancePreMessageId = clientTriggerComponent.ClientPrePerformancePreMessageId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PropComp"))
+			if (clientTriggerComponent.SpecificBpList == null)
 			{
-				if (clientTriggerComponent.PropComp == null)
-				{
-					this.PropComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemPropertyComponent>(this.PropComp), "PropComp"))
-				{
-					return false;
-				}
+				this.SpecificBpList = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SpecificBpList), "SpecificBpList"))
+			{
+				return false;
+			}
+			if (clientTriggerComponent.RequestTimer == null)
+			{
+				this.RequestTimer = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RequestTimer), "RequestTimer"))
+			{
+				return false;
+			}
+			if (clientTriggerComponent.ActionGroupQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActionGroupQueue), "ActionGroupQueue"))
+			{
+				return false;
+			}
+			this.IsActionGroupRunning = clientTriggerComponent.IsActionGroupRunning;
+			this.IsClientPrePerformance = clientTriggerComponent.IsClientPrePerformance;
+			if (clientTriggerComponent.ClientPrePerformanceConfig == null)
+			{
+				this.ClientPrePerformanceConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClientPrePerformanceConfig), "ClientPrePerformanceConfig"))
+			{
+				return false;
+			}
+			this.CurTriggeredCount = clientTriggerComponent.CurTriggeredCount;
+			this.CurTriggeredExitCount = clientTriggerComponent.CurTriggeredExitCount;
+			this.MaxTriggeredCount = clientTriggerComponent.MaxTriggeredCount;
+			this.MaxTriggeredExitCount = clientTriggerComponent.MaxTriggeredExitCount;
+			this.ClientPrePerformancePreMessageId = clientTriggerComponent.ClientPrePerformancePreMessageId;
+			if (clientTriggerComponent.PropComp == null)
+			{
+				this.PropComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PropComp), "PropComp"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024D1E RID: 150814
+		// Token: 0x17007415 RID: 29717
+		// (get) Token: 0x0603D532 RID: 251186 RVA: 0x011B978C File Offset: 0x011B798C
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007416 RID: 29718
+		// (get) Token: 0x0603D533 RID: 251187 RVA: 0x011B978F File Offset: 0x011B798F
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020862 RID: 133218
 		private const int UPDATE_INTERVAL = 2000;
 
-		// Token: 0x04024D1F RID: 150815
+		// Token: 0x04020863 RID: 133219
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04024D20 RID: 150816
+		// Token: 0x04020864 RID: 133220
 		[Nullable(2)]
 		private RangeComponent RangeComp;
 
-		// Token: 0x04024D21 RID: 150817
+		// Token: 0x04020865 RID: 133221
 		[Nullable(2)]
 		private ClientTriggerComponent Config;
 
-		// Token: 0x04024D22 RID: 150818
+		// Token: 0x04020866 RID: 133222
 		private int EntityConfigId;
 
-		// Token: 0x04024D23 RID: 150819
+		// Token: 0x04020867 RID: 133223
 		private bool IsCheckRole;
 
-		// Token: 0x04024D24 RID: 150820
+		// Token: 0x04020868 RID: 133224
 		private bool IsCheckMatch;
 
-		// Token: 0x04024D25 RID: 150821
+		// Token: 0x04020869 RID: 133225
 		private bool IsTriggerConsiderMatchedCount;
 
-		// Token: 0x04024D26 RID: 150822
+		// Token: 0x0402086A RID: 133226
 		private int TargetMatchedCount;
 
-		// Token: 0x04024D27 RID: 150823
+		// Token: 0x0402086B RID: 133227
 		private bool IsMatchCountLimitTriggeredIn;
 
-		// Token: 0x04024D28 RID: 150824
+		// Token: 0x0402086C RID: 133228
 		private readonly Dictionary<int, ClientTriggerComponent.InRangeEntityInfoData> InRangeEntityInfos = new Dictionary<int, ClientTriggerComponent.InRangeEntityInfoData>();
 
-		// Token: 0x04024D29 RID: 150825
+		// Token: 0x0402086D RID: 133229
 		private readonly Dictionary<AActor, ClientTriggerComponent.InRangeActorInfoData> InRangeActorInfos = new Dictionary<AActor, ClientTriggerComponent.InRangeActorInfoData>();
 
-		// Token: 0x04024D2A RID: 150826
+		// Token: 0x0402086E RID: 133230
 		[Nullable(2)]
 		private ClientTriggerComponent.InRangePlayerInfoData InRangePlayerInfo;
 
-		// Token: 0x04024D2B RID: 150827
+		// Token: 0x0402086F RID: 133231
 		[Nullable(new byte[]
 		{
 			2,
@@ -1299,7 +1250,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 		})]
 		private List<IMatchRoleType> RoleMatchConfig;
 
-		// Token: 0x04024D2C RID: 150828
+		// Token: 0x04020870 RID: 133232
 		[Nullable(new byte[]
 		{
 			2,
@@ -1307,7 +1258,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 		})]
 		private List<IDynamicEntityMatch> EntityMatchConfig;
 
-		// Token: 0x04024D2D RID: 150829
+		// Token: 0x04020871 RID: 133233
 		[Nullable(new byte[]
 		{
 			2,
@@ -1315,98 +1266,98 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 		})]
 		private List<string> SpecificBpList;
 
-		// Token: 0x04024D2E RID: 150830
+		// Token: 0x04020872 RID: 133234
 		[Nullable(2)]
 		private TimerHandle RequestTimer;
 
-		// Token: 0x04024D2F RID: 150831
+		// Token: 0x04020873 RID: 133235
 		private readonly List<ClientTriggerComponent.ActionGroupJob> ActionGroupQueue = new List<ClientTriggerComponent.ActionGroupJob>();
 
-		// Token: 0x04024D30 RID: 150832
+		// Token: 0x04020874 RID: 133236
 		private bool IsActionGroupRunning;
 
-		// Token: 0x04024D31 RID: 150833
+		// Token: 0x04020875 RID: 133237
 		private const int MaxActionGroupQueueSize = 64;
 
-		// Token: 0x04024D32 RID: 150834
+		// Token: 0x04020876 RID: 133238
 		private bool IsClientPrePerformance;
 
-		// Token: 0x04024D33 RID: 150835
+		// Token: 0x04020877 RID: 133239
 		[Nullable(2)]
 		private TriggerComponent ClientPrePerformanceConfig;
 
-		// Token: 0x04024D34 RID: 150836
+		// Token: 0x04020878 RID: 133240
 		private int CurTriggeredCount;
 
-		// Token: 0x04024D35 RID: 150837
+		// Token: 0x04020879 RID: 133241
 		private int CurTriggeredExitCount;
 
-		// Token: 0x04024D36 RID: 150838
+		// Token: 0x0402087A RID: 133242
 		private int? MaxTriggeredCount;
 
-		// Token: 0x04024D37 RID: 150839
+		// Token: 0x0402087B RID: 133243
 		private int? MaxTriggeredExitCount;
 
-		// Token: 0x04024D38 RID: 150840
+		// Token: 0x0402087C RID: 133244
 		public long ClientPrePerformancePreMessageId;
 
-		// Token: 0x04024D39 RID: 150841
+		// Token: 0x0402087D RID: 133245
 		[Nullable(2)]
 		private SceneItemPropertyComponent PropComp;
 
-		// Token: 0x0200CE51 RID: 52817
+		// Token: 0x0200BB2B RID: 47915
 		[Nullable(0)]
 		private class InRangeEntityInfoData
 		{
-			// Token: 0x06051E59 RID: 335449 RVA: 0x016414EA File Offset: 0x0163F6EA
+			// Token: 0x060488CE RID: 297166 RVA: 0x0161F5F2 File Offset: 0x0161D7F2
 			public InRangeEntityInfoData(EntityHandle entity)
 			{
 			}
 
-			// Token: 0x0403E1FF RID: 254463
+			// Token: 0x0403993A RID: 235834
 			public readonly EntityHandle Entity = entity;
 
-			// Token: 0x0403E200 RID: 254464
+			// Token: 0x0403993B RID: 235835
 			public bool IsEnterMatched;
 		}
 
-		// Token: 0x0200CE52 RID: 52818
+		// Token: 0x0200BB2C RID: 47916
 		[Nullable(0)]
 		private class InRangeActorInfoData
 		{
-			// Token: 0x06051E5A RID: 335450 RVA: 0x016414F9 File Offset: 0x0163F6F9
+			// Token: 0x060488CF RID: 297167 RVA: 0x0161F601 File Offset: 0x0161D801
 			public InRangeActorInfoData(AActor actor)
 			{
 			}
 
-			// Token: 0x0403E201 RID: 254465
+			// Token: 0x0403993C RID: 235836
 			public readonly AActor Actor = actor;
 
-			// Token: 0x0403E202 RID: 254466
+			// Token: 0x0403993D RID: 235837
 			public bool IsEnterMatched;
 		}
 
-		// Token: 0x0200CE53 RID: 52819
+		// Token: 0x0200BB2D RID: 47917
 		[NullableContext(0)]
 		private class InRangePlayerInfoData
 		{
-			// Token: 0x0403E203 RID: 254467
+			// Token: 0x0403993E RID: 235838
 			public bool IsEnterMatched;
 		}
 
-		// Token: 0x0200CE54 RID: 52820
+		// Token: 0x0200BB2E RID: 47918
 		[Nullable(0)]
 		private class ActionGroupJob
 		{
-			// Token: 0x06051E5C RID: 335452 RVA: 0x01641510 File Offset: 0x0163F710
+			// Token: 0x060488D1 RID: 297169 RVA: 0x0161F618 File Offset: 0x0161D818
 			public ActionGroupJob(List<ActionInfo> actions, TriggerContext context)
 			{
 			}
 
-			// Token: 0x0403E204 RID: 254468
+			// Token: 0x0403993F RID: 235839
 			public readonly List<ActionInfo> Actions = actions;
 
-			// Token: 0x0403E205 RID: 254469
+			// Token: 0x04039940 RID: 235840
 			public readonly TriggerContext Context = context;
 		}
 	}

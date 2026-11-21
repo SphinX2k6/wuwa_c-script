@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A7C RID: 23164
+	// Token: 0x02006089 RID: 24713
 	public struct ITimelineTrackControlComponent : IFlatbufferObject
 	{
-		// Token: 0x1700AE7A RID: 44666
-		// (get) Token: 0x0602773B RID: 161595 RVA: 0x0056DCAB File Offset: 0x0056BEAB
+		// Token: 0x1700B7B2 RID: 47026
+		// (get) Token: 0x06029CB3 RID: 171187 RVA: 0x005B4CB7 File Offset: 0x005B2EB7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602773C RID: 161596 RVA: 0x0056DCB8 File Offset: 0x0056BEB8
+		// Token: 0x06029CB4 RID: 171188 RVA: 0x005B4CC4 File Offset: 0x005B2EC4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602773D RID: 161597 RVA: 0x0056DCC0 File Offset: 0x0056BEC0
+		// Token: 0x06029CB5 RID: 171189 RVA: 0x005B4CCC File Offset: 0x005B2ECC
 		public static ITimelineTrackControlComponent GetRootAsITimelineTrackControlComponent(ByteBuffer _bb)
 		{
 			return ITimelineTrackControlComponent.GetRootAsITimelineTrackControlComponent(_bb, default(ITimelineTrackControlComponent));
 		}
 
-		// Token: 0x0602773E RID: 161598 RVA: 0x0056DCDC File Offset: 0x0056BEDC
+		// Token: 0x06029CB6 RID: 171190 RVA: 0x005B4CE8 File Offset: 0x005B2EE8
 		public static ITimelineTrackControlComponent GetRootAsITimelineTrackControlComponent(ByteBuffer _bb, ITimelineTrackControlComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602773F RID: 161599 RVA: 0x0056DCF9 File Offset: 0x0056BEF9
+		// Token: 0x06029CB7 RID: 171191 RVA: 0x005B4D05 File Offset: 0x005B2F05
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027740 RID: 161600 RVA: 0x0056DD08 File Offset: 0x0056BF08
+		// Token: 0x06029CB8 RID: 171192 RVA: 0x005B4D14 File Offset: 0x005B2F14
 		public ITimelineTrackControlComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AE7B RID: 44667
-		// (get) Token: 0x06027741 RID: 161601 RVA: 0x0056DD18 File Offset: 0x0056BF18
+		// Token: 0x1700B7B3 RID: 47027
+		// (get) Token: 0x06029CB9 RID: 171193 RVA: 0x005B4D24 File Offset: 0x005B2F24
 		public bool Disabled
 		{
 			get
@@ -59,7 +59,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027742 RID: 161602 RVA: 0x0056DD58 File Offset: 0x0056BF58
+		// Token: 0x06029CBA RID: 171194 RVA: 0x005B4D64 File Offset: 0x005B2F64
 		public ITimelineControlGroup? ControlGroups(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -70,8 +70,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new ITimelineControlGroup?(default(ITimelineControlGroup).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700AE7C RID: 44668
-		// (get) Token: 0x06027743 RID: 161603 RVA: 0x0056DDB8 File Offset: 0x0056BFB8
+		// Token: 0x1700B7B4 RID: 47028
+		// (get) Token: 0x06029CBB RID: 171195 RVA: 0x005B4DC4 File Offset: 0x005B2FC4
 		public int ControlGroupsLength
 		{
 			get
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AE7D RID: 44669
-		// (get) Token: 0x06027744 RID: 161604 RVA: 0x0056DDE4 File Offset: 0x0056BFE4
+		// Token: 0x1700B7B5 RID: 47029
+		// (get) Token: 0x06029CBC RID: 171196 RVA: 0x005B4DF0 File Offset: 0x005B2FF0
 		public byte NullMask
 		{
 			get
@@ -100,7 +100,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027745 RID: 161605 RVA: 0x0056DE20 File Offset: 0x0056C020
+		// Token: 0x06029CBD RID: 171197 RVA: 0x005B4E2C File Offset: 0x005B302C
 		public static Offset<ITimelineTrackControlComponent> CreateITimelineTrackControlComponent(FlatBufferBuilder builder, bool Disabled = false, VectorOffset ControlGroupsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -110,25 +110,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITimelineTrackControlComponent.EndITimelineTrackControlComponent(builder);
 		}
 
-		// Token: 0x06027746 RID: 161606 RVA: 0x0056DE44 File Offset: 0x0056C044
+		// Token: 0x06029CBE RID: 171198 RVA: 0x005B4E50 File Offset: 0x005B3050
 		public static void StartITimelineTrackControlComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06027747 RID: 161607 RVA: 0x0056DE4D File Offset: 0x0056C04D
+		// Token: 0x06029CBF RID: 171199 RVA: 0x005B4E59 File Offset: 0x005B3059
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06027748 RID: 161608 RVA: 0x0056DE58 File Offset: 0x0056C058
+		// Token: 0x06029CC0 RID: 171200 RVA: 0x005B4E64 File Offset: 0x005B3064
 		public static void AddControlGroups(FlatBufferBuilder builder, VectorOffset controlGroupsOffset)
 		{
 			builder.AddOffset(1, controlGroupsOffset.Value, 0);
 		}
 
-		// Token: 0x06027749 RID: 161609 RVA: 0x0056DE68 File Offset: 0x0056C068
+		// Token: 0x06029CC1 RID: 171201 RVA: 0x005B4E74 File Offset: 0x005B3074
 		public static VectorOffset CreateControlGroupsVector(FlatBufferBuilder builder, Offset<ITimelineControlGroup>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602774A RID: 161610 RVA: 0x0056DEA8 File Offset: 0x0056C0A8
+		// Token: 0x06029CC2 RID: 171202 RVA: 0x005B4EB4 File Offset: 0x005B30B4
 		public static VectorOffset CreateControlGroupsVectorBlock(FlatBufferBuilder builder, Offset<ITimelineControlGroup>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -147,7 +147,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602774B RID: 161611 RVA: 0x0056DEC2 File Offset: 0x0056C0C2
+		// Token: 0x06029CC3 RID: 171203 RVA: 0x005B4ECE File Offset: 0x005B30CE
 		public static VectorOffset CreateControlGroupsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ITimelineControlGroup>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602774C RID: 161612 RVA: 0x0056DEE0 File Offset: 0x0056C0E0
+		// Token: 0x06029CC4 RID: 171204 RVA: 0x005B4EEC File Offset: 0x005B30EC
 		public static VectorOffset CreateControlGroupsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -163,25 +163,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602774D RID: 161613 RVA: 0x0056DEF9 File Offset: 0x0056C0F9
+		// Token: 0x06029CC5 RID: 171205 RVA: 0x005B4F05 File Offset: 0x005B3105
 		public static void StartControlGroupsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602774E RID: 161614 RVA: 0x0056DF04 File Offset: 0x0056C104
+		// Token: 0x06029CC6 RID: 171206 RVA: 0x005B4F10 File Offset: 0x005B3110
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602774F RID: 161615 RVA: 0x0056DF0F File Offset: 0x0056C10F
+		// Token: 0x06029CC7 RID: 171207 RVA: 0x005B4F1B File Offset: 0x005B311B
 		public static Offset<ITimelineTrackControlComponent> EndITimelineTrackControlComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ITimelineTrackControlComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06027750 RID: 161616 RVA: 0x0056DF1C File Offset: 0x0056C11C
+		// Token: 0x06029CC8 RID: 171208 RVA: 0x005B4F28 File Offset: 0x005B3128
 		public ITimelineTrackControlComponentT UnPack()
 		{
 			ITimelineTrackControlComponentT timelineTrackControlComponentT = new ITimelineTrackControlComponentT();
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return timelineTrackControlComponentT;
 		}
 
-		// Token: 0x06027751 RID: 161617 RVA: 0x0056DF38 File Offset: 0x0056C138
+		// Token: 0x06029CC9 RID: 171209 RVA: 0x005B4F44 File Offset: 0x005B3144
 		public void UnPackTo(ITimelineTrackControlComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06027752 RID: 161618 RVA: 0x0056DFB0 File Offset: 0x0056C1B0
+		// Token: 0x06029CCA RID: 171210 RVA: 0x005B4FBC File Offset: 0x005B31BC
 		public static Offset<ITimelineTrackControlComponent> Pack(FlatBufferBuilder builder, ITimelineTrackControlComponentT _o)
 		{
 			if (_o == null)
@@ -221,7 +221,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITimelineTrackControlComponent.CreateITimelineTrackControlComponent(builder, _o.Disabled, controlGroupsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400F12D RID: 61741
+		// Token: 0x0400FE24 RID: 65060
 		private Table __p;
 	}
 }

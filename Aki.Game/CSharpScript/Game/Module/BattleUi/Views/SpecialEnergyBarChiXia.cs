@@ -3,10 +3,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DD1 RID: 24017
+	// Token: 0x02004DB5 RID: 19893
 	public class SpecialEnergyBarChiXia : SpecialEnergyBarPointGraduate
 	{
-		// Token: 0x0603D092 RID: 250002 RVA: 0x00EADD83 File Offset: 0x00EABF83
+		// Token: 0x06032009 RID: 204809 RVA: 0x00DFEC77 File Offset: 0x00DFCE77
 		protected override void OnInitData()
 		{
 			base.OnInitData();
@@ -14,14 +14,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.NeedInitNumItem = true;
 		}
 
-		// Token: 0x0603D093 RID: 250003 RVA: 0x00EADD99 File Offset: 0x00EABF99
+		// Token: 0x0603200A RID: 204810 RVA: 0x00DFEC8D File Offset: 0x00DFCE8D
 		protected override void AddEvents()
 		{
 			base.AddEvents();
 			base.ListenForTagAddOrRemoveChanged(GameplayTagDefine.EGameplayTagId["角色.R2T1MaxiaofangMd10011.技能标识.移动射击技能持续"], new BaseTagComponent.TTagSwitchedCallback(this.OnTagChange));
 		}
 
-		// Token: 0x0603D094 RID: 250004 RVA: 0x00EADDC4 File Offset: 0x00EABFC4
+		// Token: 0x0603200B RID: 204811 RVA: 0x00DFECB8 File Offset: 0x00DFCEB8
 		private void OnTagChange(int tagId, bool tagExist)
 		{
 			if (!tagExist)
@@ -45,14 +45,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.GraduateItemList[0].SetUIActive(false);
 		}
 
-		// Token: 0x0603D095 RID: 250005 RVA: 0x00EADE62 File Offset: 0x00EAC062
+		// Token: 0x0603200C RID: 204812 RVA: 0x00DFED56 File Offset: 0x00DFCF56
 		protected override void OnStart()
 		{
 			base.OnStart();
 			this.GraduateItemList[0].SetUIActive(false);
 		}
 
-		// Token: 0x0603D096 RID: 250006 RVA: 0x00EADE7C File Offset: 0x00EAC07C
+		// Token: 0x0603200D RID: 204813 RVA: 0x00DFED70 File Offset: 0x00DFCF70
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			numItem.SetNum(num);
 		}
 
-		// Token: 0x0401FCCA RID: 130250
+		// Token: 0x0401A787 RID: 108423
 		private const int GRADUATE_ENERGY_NUM = 30;
 	}
 }

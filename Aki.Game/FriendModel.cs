@@ -9,20 +9,20 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001C35 RID: 7221
+// Token: 0x020010F4 RID: 4340
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class FriendModel : ModelBase
 {
-	// Token: 0x0600D933 RID: 55603 RVA: 0x003251D8 File Offset: 0x003233D8
+	// Token: 0x0600AD49 RID: 44361 RVA: 0x003305D8 File Offset: 0x0032E7D8
 	protected override bool OnInit()
 	{
 		this.ApplyCdTime = ConfigCommonParamById.GetIntConfig("apply_valid_time").Value;
 		return base.OnInit();
 	}
 
-	// Token: 0x0600D934 RID: 55604 RVA: 0x00325204 File Offset: 0x00323404
+	// Token: 0x0600AD4A RID: 44362 RVA: 0x00330604 File Offset: 0x0032E804
 	protected override bool OnClear()
 	{
 		this.CurrentSelectedPlayerId = null;
@@ -36,7 +36,7 @@ public class FriendModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600D935 RID: 55605 RVA: 0x00325268 File Offset: 0x00323468
+	// Token: 0x0600AD4B RID: 44363 RVA: 0x00330668 File Offset: 0x0032E868
 	public void LoadLocalFriendApplication()
 	{
 		Dictionary<int, LocalFriendApplication> dictionary = LocalStorage.GetPlayer<Dictionary<int, LocalFriendApplication>>(ELocalStoragePlayerKey.LocalFriendApplication, null) ?? new Dictionary<int, LocalFriendApplication>();
@@ -54,7 +54,7 @@ public class FriendModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D936 RID: 55606 RVA: 0x0032531C File Offset: 0x0032351C
+	// Token: 0x0600AD4C RID: 44364 RVA: 0x0033071C File Offset: 0x0032E91C
 	private void SaveLocalFriendApplication()
 	{
 		if (!LocalStorage.HasPlayerId())
@@ -79,13 +79,13 @@ public class FriendModel : ModelBase
 		LocalStorage.SetPlayer<Dictionary<int, LocalFriendApplication>>(ELocalStoragePlayerKey.LocalFriendApplication, dictionary);
 	}
 
-	// Token: 0x0600D937 RID: 55607 RVA: 0x00325400 File Offset: 0x00323600
+	// Token: 0x0600AD4D RID: 44365 RVA: 0x00330800 File Offset: 0x0032EA00
 	public int GetFriendListCount()
 	{
 		return this.MyFriends.Count;
 	}
 
-	// Token: 0x0600D938 RID: 55608 RVA: 0x00325410 File Offset: 0x00323610
+	// Token: 0x0600AD4E RID: 44366 RVA: 0x00330810 File Offset: 0x0032EA10
 	public List<int> GetFriendSortedListIds()
 	{
 		List<int> list = new List<int>();
@@ -99,7 +99,7 @@ public class FriendModel : ModelBase
 		return FriendController.Instance.GetSortedFriendListByRules(list, new Func<int, int, int>(FriendController.Instance.FriendListSortHook));
 	}
 
-	// Token: 0x0600D939 RID: 55609 RVA: 0x00325498 File Offset: 0x00323698
+	// Token: 0x0600AD4F RID: 44367 RVA: 0x00330898 File Offset: 0x0032EA98
 	public List<int> GetFriendApplyListIds()
 	{
 		List<int> list = new List<int>();
@@ -113,7 +113,7 @@ public class FriendModel : ModelBase
 		return FriendController.Instance.GetSortedBlackOrApplyList(list);
 	}
 
-	// Token: 0x0600D93A RID: 55610 RVA: 0x00325520 File Offset: 0x00323720
+	// Token: 0x0600AD50 RID: 44368 RVA: 0x00330920 File Offset: 0x0032EB20
 	public List<int> GetRecentlyTeamIds()
 	{
 		List<int> list = new List<int>();
@@ -133,13 +133,13 @@ public class FriendModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600D93B RID: 55611 RVA: 0x003255B0 File Offset: 0x003237B0
+	// Token: 0x0600AD51 RID: 44369 RVA: 0x003309B0 File Offset: 0x0032EBB0
 	public bool HasNewFriendApplication()
 	{
 		return this.FreshFriendApplicationIds.Count > 0;
 	}
 
-	// Token: 0x0600D93C RID: 55612 RVA: 0x003255C0 File Offset: 0x003237C0
+	// Token: 0x0600AD52 RID: 44370 RVA: 0x003309C0 File Offset: 0x0032EBC0
 	public List<int> GetFriendSearchResultListIds()
 	{
 		List<int> list = new List<int>();
@@ -156,7 +156,7 @@ public class FriendModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600D93D RID: 55613 RVA: 0x00325638 File Offset: 0x00323838
+	// Token: 0x0600AD53 RID: 44371 RVA: 0x00330A38 File Offset: 0x0032EC38
 	public List<int> GetBlackListIds()
 	{
 		List<int> list = new List<int>();
@@ -167,7 +167,7 @@ public class FriendModel : ModelBase
 		return FriendController.Instance.GetSortedBlackOrApplyList(list);
 	}
 
-	// Token: 0x0600D93E RID: 55614 RVA: 0x003256A4 File Offset: 0x003238A4
+	// Token: 0x0600AD54 RID: 44372 RVA: 0x00330AA4 File Offset: 0x0032ECA4
 	[NullableContext(2)]
 	public FriendData GetFriendById(int friendId)
 	{
@@ -183,7 +183,7 @@ public class FriendModel : ModelBase
 		return this.MyFriends[friendId];
 	}
 
-	// Token: 0x0600D93F RID: 55615 RVA: 0x003256F1 File Offset: 0x003238F1
+	// Token: 0x0600AD55 RID: 44373 RVA: 0x00330AF1 File Offset: 0x0032ECF1
 	[NullableContext(2)]
 	public FriendData GetFriendDataInApplicationById(int playerId)
 	{
@@ -194,7 +194,7 @@ public class FriendModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600D940 RID: 55616 RVA: 0x00325714 File Offset: 0x00323914
+	// Token: 0x0600AD56 RID: 44374 RVA: 0x00330B14 File Offset: 0x0032ED14
 	[NullableContext(2)]
 	public FriendBlackListData GetBlockedPlayerById(int playerId)
 	{
@@ -205,7 +205,7 @@ public class FriendModel : ModelBase
 		return this.MyBlackList[playerId];
 	}
 
-	// Token: 0x0600D941 RID: 55617 RVA: 0x00325732 File Offset: 0x00323932
+	// Token: 0x0600AD57 RID: 44375 RVA: 0x00330B32 File Offset: 0x0032ED32
 	[NullableContext(2)]
 	public FriendData GetFriendSearchResultById(int playerId)
 	{
@@ -216,19 +216,19 @@ public class FriendModel : ModelBase
 		return this.FriendSearchResults[playerId];
 	}
 
-	// Token: 0x0600D942 RID: 55618 RVA: 0x00325750 File Offset: 0x00323950
+	// Token: 0x0600AD58 RID: 44376 RVA: 0x00330B50 File Offset: 0x0032ED50
 	public void AddFriend(FriendData friend)
 	{
 		this.MyFriends.TryAdd(friend.PlayerId, friend);
 	}
 
-	// Token: 0x0600D943 RID: 55619 RVA: 0x00325765 File Offset: 0x00323965
+	// Token: 0x0600AD59 RID: 44377 RVA: 0x00330B65 File Offset: 0x0032ED65
 	public bool HasFriend(int id)
 	{
 		return this.MyFriends.ContainsKey(id);
 	}
 
-	// Token: 0x0600D944 RID: 55620 RVA: 0x00325773 File Offset: 0x00323973
+	// Token: 0x0600AD5A RID: 44378 RVA: 0x00330B73 File Offset: 0x0032ED73
 	public void DeleteFriend(int id)
 	{
 		if (this.MyFriends.ContainsKey(id))
@@ -239,13 +239,13 @@ public class FriendModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.UpdateFriendViewShow);
 	}
 
-	// Token: 0x0600D945 RID: 55621 RVA: 0x003257B1 File Offset: 0x003239B1
+	// Token: 0x0600AD5B RID: 44379 RVA: 0x00330BB1 File Offset: 0x0032EDB1
 	public bool IsMyFriend(int id)
 	{
 		return this.MyFriends.ContainsKey(id);
 	}
 
-	// Token: 0x0600D946 RID: 55622 RVA: 0x003257BF File Offset: 0x003239BF
+	// Token: 0x0600AD5C RID: 44380 RVA: 0x00330BBF File Offset: 0x0032EDBF
 	public void AddFriendApplication(FriendApplyData friendApply)
 	{
 		this.MyFriendApplyList[friendApply.ApplyPlayerData.PlayerId] = friendApply;
@@ -255,13 +255,13 @@ public class FriendModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D947 RID: 55623 RVA: 0x003257FC File Offset: 0x003239FC
+	// Token: 0x0600AD5D RID: 44381 RVA: 0x00330BFC File Offset: 0x0032EDFC
 	public bool HasFriendApplication(int id)
 	{
 		return this.MyFriendApplyList.ContainsKey(id);
 	}
 
-	// Token: 0x0600D948 RID: 55624 RVA: 0x0032580C File Offset: 0x00323A0C
+	// Token: 0x0600AD5E RID: 44382 RVA: 0x00330C0C File Offset: 0x0032EE0C
 	public void DeleteFriendApplication(int id)
 	{
 		if (this.MyFriendApplyList.ContainsKey(id))
@@ -275,7 +275,7 @@ public class FriendModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.UpdateFriendViewShow);
 	}
 
-	// Token: 0x0600D949 RID: 55625 RVA: 0x00325860 File Offset: 0x00323A60
+	// Token: 0x0600AD5F RID: 44383 RVA: 0x00330C60 File Offset: 0x0032EE60
 	public void MarkDirtyNewApplications()
 	{
 		foreach (FriendApplyData friendApplyData in this.MyFriendApplyList.Values)
@@ -285,37 +285,37 @@ public class FriendModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D94A RID: 55626 RVA: 0x003258D0 File Offset: 0x00323AD0
+	// Token: 0x0600AD60 RID: 44384 RVA: 0x00330CD0 File Offset: 0x0032EED0
 	public void AddFriendSearchResults(FriendData playerResult)
 	{
 		this.FriendSearchResults[playerResult.PlayerId] = playerResult;
 	}
 
-	// Token: 0x0600D94B RID: 55627 RVA: 0x003258E4 File Offset: 0x00323AE4
+	// Token: 0x0600AD61 RID: 44385 RVA: 0x00330CE4 File Offset: 0x0032EEE4
 	public void ClearFriendSearchResults()
 	{
 		this.FriendSearchResults.Clear();
 	}
 
-	// Token: 0x0600D94C RID: 55628 RVA: 0x003258F1 File Offset: 0x00323AF1
+	// Token: 0x0600AD62 RID: 44386 RVA: 0x00330CF1 File Offset: 0x0032EEF1
 	public void AddToBlackList(FriendBlackListData playerInfo)
 	{
 		this.MyBlackList[playerInfo.GetBlockedPlayerData.PlayerId] = playerInfo;
 	}
 
-	// Token: 0x0600D94D RID: 55629 RVA: 0x0032590A File Offset: 0x00323B0A
+	// Token: 0x0600AD63 RID: 44387 RVA: 0x00330D0A File Offset: 0x0032EF0A
 	public bool HasBlockedPlayer(int id)
 	{
 		return this.MyBlackList.ContainsKey(id);
 	}
 
-	// Token: 0x0600D94E RID: 55630 RVA: 0x00325918 File Offset: 0x00323B18
+	// Token: 0x0600AD64 RID: 44388 RVA: 0x00330D18 File Offset: 0x0032EF18
 	public void DeleteBlockedPlayer(int playerId)
 	{
 		this.MyBlackList.Remove(playerId);
 	}
 
-	// Token: 0x0600D94F RID: 55631 RVA: 0x00325928 File Offset: 0x00323B28
+	// Token: 0x0600AD65 RID: 44389 RVA: 0x00330D28 File Offset: 0x0032EF28
 	[NullableContext(2)]
 	public FriendData GetSelectedPlayerOrItemInstance(int? id = null, EUiViewName? sourceView = null)
 	{
@@ -377,13 +377,13 @@ public class FriendModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D950 RID: 55632 RVA: 0x00325B20 File Offset: 0x00323D20
+	// Token: 0x0600AD66 RID: 44390 RVA: 0x00330F20 File Offset: 0x0032F120
 	public void ResetShowingView()
 	{
 		this.ShowingView = new EUiViewName?(EUiViewName.FriendView);
 	}
 
-	// Token: 0x0600D951 RID: 55633 RVA: 0x00325B34 File Offset: 0x00323D34
+	// Token: 0x0600AD67 RID: 44391 RVA: 0x00330F34 File Offset: 0x0032F134
 	public void ClearTestFriendData()
 	{
 		if (!this.TestDataLoaded)
@@ -445,13 +445,13 @@ public class FriendModel : ModelBase
 		this.TestDataLoaded = false;
 	}
 
-	// Token: 0x0600D952 RID: 55634 RVA: 0x00325E1C File Offset: 0x0032401C
+	// Token: 0x0600AD68 RID: 44392 RVA: 0x0033121C File Offset: 0x0032F41C
 	public bool CurrentApplyFriendListHasPlayer(int playerId)
 	{
 		return this.CurrentApplyFriendList.Contains(playerId);
 	}
 
-	// Token: 0x0600D953 RID: 55635 RVA: 0x00325E2A File Offset: 0x0032402A
+	// Token: 0x0600AD69 RID: 44393 RVA: 0x0033122A File Offset: 0x0032F42A
 	public void AddPlayerToApplyFriendList(int playerId)
 	{
 		if (!this.CurrentApplyFriendList.Contains(playerId))
@@ -460,19 +460,19 @@ public class FriendModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D954 RID: 55636 RVA: 0x00325E47 File Offset: 0x00324047
+	// Token: 0x0600AD6A RID: 44394 RVA: 0x00331247 File Offset: 0x0032F447
 	public void ClearApplyFriendList()
 	{
 		this.CurrentApplyFriendList.Clear();
 	}
 
-	// Token: 0x0600D955 RID: 55637 RVA: 0x00325E54 File Offset: 0x00324054
+	// Token: 0x0600AD6B RID: 44395 RVA: 0x00331254 File Offset: 0x0032F454
 	public bool CurrentApproveFriendListHasPlayer(int playerId)
 	{
 		return this.CurrentApproveFriendList.Contains(playerId);
 	}
 
-	// Token: 0x0600D956 RID: 55638 RVA: 0x00325E62 File Offset: 0x00324062
+	// Token: 0x0600AD6C RID: 44396 RVA: 0x00331262 File Offset: 0x0032F462
 	public void AddPlayerToApproveFriendList(int playerId)
 	{
 		if (!this.CurrentApproveFriendList.Contains(playerId))
@@ -481,19 +481,19 @@ public class FriendModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D957 RID: 55639 RVA: 0x00325E7F File Offset: 0x0032407F
+	// Token: 0x0600AD6D RID: 44397 RVA: 0x0033127F File Offset: 0x0032F47F
 	public void ClearApproveFriendList()
 	{
 		this.CurrentApproveFriendList.Clear();
 	}
 
-	// Token: 0x0600D958 RID: 55640 RVA: 0x00325E8C File Offset: 0x0032408C
+	// Token: 0x0600AD6E RID: 44398 RVA: 0x0033128C File Offset: 0x0032F48C
 	public bool CurrentRefuseFriendListHasPlayer(int playerId)
 	{
 		return this.CurrentRefuseFriendList.Contains(playerId);
 	}
 
-	// Token: 0x0600D959 RID: 55641 RVA: 0x00325E9A File Offset: 0x0032409A
+	// Token: 0x0600AD6F RID: 44399 RVA: 0x0033129A File Offset: 0x0032F49A
 	public void AddPlayerToRefuseFriendList(int playerId)
 	{
 		if (!this.CurrentRefuseFriendList.Contains(playerId))
@@ -502,7 +502,7 @@ public class FriendModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D95A RID: 55642 RVA: 0x00325EB8 File Offset: 0x003240B8
+	// Token: 0x0600AD70 RID: 44400 RVA: 0x003312B8 File Offset: 0x0032F4B8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -527,7 +527,7 @@ public class FriendModel : ModelBase
 		return new ValueTuple<string, int>(item, num);
 	}
 
-	// Token: 0x0600D95B RID: 55643 RVA: 0x00325F08 File Offset: 0x00324108
+	// Token: 0x0600AD71 RID: 44401 RVA: 0x00331308 File Offset: 0x0032F508
 	public UniTask InitRecentlyTeamDataByResponse(RecentlyTeamInfo[] responseInfo)
 	{
 		FriendModel.<InitRecentlyTeamDataByResponse>d__56 <InitRecentlyTeamDataByResponse>d__;
@@ -539,7 +539,7 @@ public class FriendModel : ModelBase
 		return <InitRecentlyTeamDataByResponse>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D95C RID: 55644 RVA: 0x00325F53 File Offset: 0x00324153
+	// Token: 0x0600AD72 RID: 44402 RVA: 0x00331353 File Offset: 0x0032F553
 	[NullableContext(2)]
 	public RecentlyTeamData GetRecentlyTeamData(int playerId)
 	{
@@ -550,13 +550,13 @@ public class FriendModel : ModelBase
 		return this.RecentlyTeamList[playerId];
 	}
 
-	// Token: 0x0600D95D RID: 55645 RVA: 0x00325F71 File Offset: 0x00324171
+	// Token: 0x0600AD73 RID: 44403 RVA: 0x00331371 File Offset: 0x0032F571
 	public void ClearRefuseFriendList()
 	{
 		this.CurrentRefuseFriendList.Clear();
 	}
 
-	// Token: 0x0600D95E RID: 55646 RVA: 0x00325F80 File Offset: 0x00324180
+	// Token: 0x0600AD74 RID: 44404 RVA: 0x00331380 File Offset: 0x0032F580
 	public List<FriendApplyData> GetApplyViewDataList([Nullable(2)] List<int> playerIdFilterList = null)
 	{
 		List<FriendApplyData> list = new List<FriendApplyData>();
@@ -582,9 +582,9 @@ public class FriendModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x170011CB RID: 4555
-	// (get) Token: 0x0600D95F RID: 55647 RVA: 0x0032603C File Offset: 0x0032423C
-	// (set) Token: 0x0600D960 RID: 55648 RVA: 0x00326044 File Offset: 0x00324244
+	// Token: 0x170011F1 RID: 4593
+	// (get) Token: 0x0600AD75 RID: 44405 RVA: 0x0033143C File Offset: 0x0032F63C
+	// (set) Token: 0x0600AD76 RID: 44406 RVA: 0x00331444 File Offset: 0x0032F644
 	public int? SelectedPlayerId
 	{
 		get
@@ -598,9 +598,9 @@ public class FriendModel : ModelBase
 		}
 	}
 
-	// Token: 0x170011CC RID: 4556
-	// (get) Token: 0x0600D961 RID: 55649 RVA: 0x00326064 File Offset: 0x00324264
-	// (set) Token: 0x0600D962 RID: 55650 RVA: 0x0032606C File Offset: 0x0032426C
+	// Token: 0x170011F2 RID: 4594
+	// (get) Token: 0x0600AD77 RID: 44407 RVA: 0x00331464 File Offset: 0x0032F664
+	// (set) Token: 0x0600AD78 RID: 44408 RVA: 0x0033146C File Offset: 0x0032F66C
 	public EFriendFilter? FilterState
 	{
 		get
@@ -613,9 +613,9 @@ public class FriendModel : ModelBase
 		}
 	}
 
-	// Token: 0x170011CD RID: 4557
-	// (get) Token: 0x0600D963 RID: 55651 RVA: 0x00326075 File Offset: 0x00324275
-	// (set) Token: 0x0600D964 RID: 55652 RVA: 0x0032607D File Offset: 0x0032427D
+	// Token: 0x170011F3 RID: 4595
+	// (get) Token: 0x0600AD79 RID: 44409 RVA: 0x00331475 File Offset: 0x0032F675
+	// (set) Token: 0x0600AD7A RID: 44410 RVA: 0x0033147D File Offset: 0x0032F67D
 	public EUiViewName? ShowingView
 	{
 		get
@@ -628,20 +628,20 @@ public class FriendModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D965 RID: 55653 RVA: 0x00326086 File Offset: 0x00324286
+	// Token: 0x0600AD7B RID: 44411 RVA: 0x00331486 File Offset: 0x0032F686
 	public void SetCurrentOperationPlayerId(int playerId)
 	{
 		this.CurrentOperationPlayerId = new int?(playerId);
 	}
 
-	// Token: 0x0600D966 RID: 55654 RVA: 0x00326094 File Offset: 0x00324294
+	// Token: 0x0600AD7C RID: 44412 RVA: 0x00331494 File Offset: 0x0032F694
 	public int? GetCurrentOperationPlayerId()
 	{
 		return this.CurrentOperationPlayerId;
 	}
 
-	// Token: 0x170011CE RID: 4558
-	// (get) Token: 0x0600D967 RID: 55655 RVA: 0x0032609C File Offset: 0x0032429C
+	// Token: 0x170011F4 RID: 4596
+	// (get) Token: 0x0600AD7D RID: 44413 RVA: 0x0033149C File Offset: 0x0032F69C
 	public static FriendModel Instance
 	{
 		get
@@ -650,7 +650,7 @@ public class FriendModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D968 RID: 55656 RVA: 0x003260A3 File Offset: 0x003242A3
+	// Token: 0x0600AD7E RID: 44414 RVA: 0x003314A3 File Offset: 0x0032F6A3
 	public static FriendModel GetOrCreateInstance()
 	{
 		if (FriendModel._Instance == null)
@@ -660,7 +660,7 @@ public class FriendModel : ModelBase
 		return FriendModel._Instance;
 	}
 
-	// Token: 0x0600D969 RID: 55657 RVA: 0x003260B7 File Offset: 0x003242B7
+	// Token: 0x0600AD7F RID: 44415 RVA: 0x003314B7 File Offset: 0x0032F6B7
 	public static bool CreateInstance()
 	{
 		if (FriendModel._Instance != null)
@@ -671,73 +671,73 @@ public class FriendModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600D96A RID: 55658 RVA: 0x003260CD File Offset: 0x003242CD
+	// Token: 0x0600AD80 RID: 44416 RVA: 0x003314CD File Offset: 0x0032F6CD
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600D96B RID: 55659 RVA: 0x003260CF File Offset: 0x003242CF
+	// Token: 0x0600AD81 RID: 44417 RVA: 0x003314CF File Offset: 0x0032F6CF
 	public static void ResetStaticDefaultValue()
 	{
 		FriendModel._Instance = null;
 	}
 
-	// Token: 0x0600D96C RID: 55660 RVA: 0x003260D7 File Offset: 0x003242D7
+	// Token: 0x0600AD82 RID: 44418 RVA: 0x003314D7 File Offset: 0x0032F6D7
 	static FriendModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FriendModel.CreateStaticDefaultValue), new Action(FriendModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400630C RID: 25356
+	// Token: 0x040063DE RID: 25566
 	private readonly Dictionary<int, FriendData> MyFriends = new Dictionary<int, FriendData>();
 
-	// Token: 0x0400630D RID: 25357
+	// Token: 0x040063DF RID: 25567
 	private readonly Dictionary<int, FriendApplyData> MyFriendApplyList = new Dictionary<int, FriendApplyData>();
 
-	// Token: 0x0400630E RID: 25358
+	// Token: 0x040063E0 RID: 25568
 	private readonly Dictionary<int, FriendData> FriendSearchResults = new Dictionary<int, FriendData>();
 
-	// Token: 0x0400630F RID: 25359
+	// Token: 0x040063E1 RID: 25569
 	private readonly Dictionary<int, FriendBlackListData> MyBlackList = new Dictionary<int, FriendBlackListData>();
 
-	// Token: 0x04006310 RID: 25360
+	// Token: 0x040063E2 RID: 25570
 	public readonly HashSet<int> FreshFriendApplicationIds = new HashSet<int>();
 
-	// Token: 0x04006311 RID: 25361
+	// Token: 0x040063E3 RID: 25571
 	public Dictionary<int, RecentlyTeamData> RecentlyTeamList = new Dictionary<int, RecentlyTeamData>();
 
-	// Token: 0x04006312 RID: 25362
+	// Token: 0x040063E4 RID: 25572
 	private int? CurrentSelectedPlayerId;
 
-	// Token: 0x04006313 RID: 25363
+	// Token: 0x040063E5 RID: 25573
 	private int? CurrentOperationPlayerId;
 
-	// Token: 0x04006314 RID: 25364
+	// Token: 0x040063E6 RID: 25574
 	private EFriendFilter? FriendFilterState;
 
-	// Token: 0x04006315 RID: 25365
+	// Token: 0x040063E7 RID: 25575
 	private EUiViewName? CurrentlyShowingView;
 
-	// Token: 0x04006316 RID: 25366
+	// Token: 0x040063E8 RID: 25576
 	public bool TestDataLoaded;
 
-	// Token: 0x04006317 RID: 25367
+	// Token: 0x040063E9 RID: 25577
 	[Nullable(2)]
 	public FriendData CachePlayerData;
 
-	// Token: 0x04006318 RID: 25368
+	// Token: 0x040063EA RID: 25578
 	private readonly HashSet<int> CurrentApplyFriendList = new HashSet<int>();
 
-	// Token: 0x04006319 RID: 25369
+	// Token: 0x040063EB RID: 25579
 	private readonly HashSet<int> CurrentApproveFriendList = new HashSet<int>();
 
-	// Token: 0x0400631A RID: 25370
+	// Token: 0x040063EC RID: 25580
 	private readonly HashSet<int> CurrentRefuseFriendList = new HashSet<int>();
 
-	// Token: 0x0400631B RID: 25371
+	// Token: 0x040063ED RID: 25581
 	public int ApplyCdTime;
 
-	// Token: 0x0400631C RID: 25372
+	// Token: 0x040063EE RID: 25582
 	[Nullable(2)]
 	private static FriendModel _Instance;
 }

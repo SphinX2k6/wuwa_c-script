@@ -3,83 +3,83 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020038DA RID: 14554
+// Token: 0x02002E53 RID: 11859
 public class __TsUiNavigationBehaviorListener_InheritProxy : TsUiNavigationBehaviorListener
 {
-	// Token: 0x0601EB0E RID: 125710 RVA: 0x00897894 File Offset: 0x00895A94
+	// Token: 0x0601C7C6 RID: 116678 RVA: 0x008BBD38 File Offset: 0x008B9F38
 	[NullableContext(1)]
 	public __TsUiNavigationBehaviorListener_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsUiNavigationBehaviorListener.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601EB0F RID: 125711 RVA: 0x008978C7 File Offset: 0x00895AC7
+	// Token: 0x0601C7C7 RID: 116679 RVA: 0x008BBD6B File Offset: 0x008B9F6B
 	protected __TsUiNavigationBehaviorListener_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601EB10 RID: 125712 RVA: 0x008978D0 File Offset: 0x00895AD0
+	// Token: 0x0601C7C8 RID: 116680 RVA: 0x008BBD74 File Offset: 0x008B9F74
 	protected override void __CPPCALL_AwakeBP_Implementation()
 	{
 		base.AwakeBP_Implementation();
 	}
 
-	// Token: 0x0601EB11 RID: 125713 RVA: 0x008978D8 File Offset: 0x00895AD8
+	// Token: 0x0601C7C9 RID: 116681 RVA: 0x008BBD7C File Offset: 0x008B9F7C
 	protected override void __CPPCALL_StartBP_Implementation()
 	{
 		base.StartBP_Implementation();
 	}
 
-	// Token: 0x0601EB12 RID: 125714 RVA: 0x008978E0 File Offset: 0x00895AE0
+	// Token: 0x0601C7CA RID: 116682 RVA: 0x008BBD84 File Offset: 0x008B9F84
 	protected unsafe override void __CPPCALL_OnNotifyNavigationEnterBP_Implementation(UUINavigationBehaviour.__OnNotifyNavigationEnterBP_FunctionParams* __Params)
 	{
 		ULGUIPointerEventData orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<ULGUIPointerEventData>(__Params->eventData);
 		base.OnNotifyNavigationEnterBP_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601EB13 RID: 125715 RVA: 0x00897900 File Offset: 0x00895B00
+	// Token: 0x0601C7CB RID: 116683 RVA: 0x008BBDA4 File Offset: 0x008B9FA4
 	protected unsafe override void __CPPCALL_OnNotifyNavigationSelectBP_Implementation(UUINavigationBehaviour.__OnNotifyNavigationSelectBP_FunctionParams* __Params)
 	{
 		ULGUIPointerEventData orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<ULGUIPointerEventData>(__Params->eventData);
 		base.OnNotifyNavigationSelectBP_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601EB14 RID: 125716 RVA: 0x00897920 File Offset: 0x00895B20
+	// Token: 0x0601C7CC RID: 116684 RVA: 0x008BBDC4 File Offset: 0x008B9FC4
 	protected unsafe override void __CPPCALL_OnCheckCanSetNavigationBP_Implementation(UUINavigationBehaviour.__OnCheckCanSetNavigationBP_FunctionParams* __Params)
 	{
 		__Params->__Result = base.OnCheckCanSetNavigationBP_Implementation();
 	}
 
-	// Token: 0x0601EB15 RID: 125717 RVA: 0x0089792E File Offset: 0x00895B2E
+	// Token: 0x0601C7CD RID: 116685 RVA: 0x008BBDD2 File Offset: 0x008B9FD2
 	protected unsafe override void __CPPCALL_OnCheckLoopScrollChangeNavigationBP_Implementation(UUINavigationBehaviour.__OnCheckLoopScrollChangeNavigationBP_FunctionParams* __Params)
 	{
 		__Params->__Result = base.OnCheckLoopScrollChangeNavigationBP_Implementation();
 	}
 
-	// Token: 0x0601EB16 RID: 125718 RVA: 0x0089793C File Offset: 0x00895B3C
+	// Token: 0x0601C7CE RID: 116686 RVA: 0x008BBDE0 File Offset: 0x008B9FE0
 	protected override void __CPPCALL_OnEnableBP_Implementation()
 	{
 		base.OnEnableBP_Implementation();
 	}
 
-	// Token: 0x0601EB17 RID: 125719 RVA: 0x00897944 File Offset: 0x00895B44
+	// Token: 0x0601C7CF RID: 116687 RVA: 0x008BBDE8 File Offset: 0x008B9FE8
 	protected override void __CPPCALL_OnDisableBP_Implementation()
 	{
 		base.OnDisableBP_Implementation();
 	}
 
-	// Token: 0x0601EB18 RID: 125720 RVA: 0x0089794C File Offset: 0x00895B4C
+	// Token: 0x0601C7D0 RID: 116688 RVA: 0x008BBDF0 File Offset: 0x008B9FF0
 	protected override void __CPPCALL_OnNotifyInteractiveBP_Implementation()
 	{
 		base.OnNotifyInteractiveBP_Implementation();
 	}
 
-	// Token: 0x0601EB19 RID: 125721 RVA: 0x00897954 File Offset: 0x00895B54
+	// Token: 0x0601C7D1 RID: 116689 RVA: 0x008BBDF8 File Offset: 0x008B9FF8
 	protected override void __CPPCALL_OnNotifyNotInteractiveBP_Implementation()
 	{
 		base.OnNotifyNotInteractiveBP_Implementation();
 	}
 
-	// Token: 0x0601EB1A RID: 125722 RVA: 0x0089795C File Offset: 0x00895B5C
+	// Token: 0x0601C7D2 RID: 116690 RVA: 0x008BBE00 File Offset: 0x008BA000
 	protected override void __CPPCALL_OnPreDestroyBP_Implementation()
 	{
 		base.OnPreDestroyBP_Implementation();

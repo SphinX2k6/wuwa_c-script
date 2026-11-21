@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200182C RID: 6188
+	// Token: 0x0200037B RID: 891
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroFastCollision.EKuroFastCollisionCenterSource")]
 	public enum EKuroFastCollisionCenterSource : byte
 	{
-		// Token: 0x0400C68C RID: 50828
+		// Token: 0x04002557 RID: 9559
 		ManualVars,
-		// Token: 0x0400C68D RID: 50829
+		// Token: 0x04002558 RID: 9560
 		OwnerRoot,
-		// Token: 0x0400C68E RID: 50830
+		// Token: 0x04002559 RID: 9561
 		SceneComponent,
-		// Token: 0x0400C68F RID: 50831
+		// Token: 0x0400255A RID: 9562
 		EKuroFastCollisionCenterSource_MAX
 	}
 }

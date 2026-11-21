@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020032F5 RID: 13045
+// Token: 0x02002867 RID: 10343
 [NullableContext(1)]
 [Nullable(0)]
 public class PlayDrivingSoundOnReachSpeed : KeepDrivingInfo
 {
-	// Token: 0x0601C63E RID: 116286 RVA: 0x007F3112 File Offset: 0x007F1312
+	// Token: 0x0601A303 RID: 107267 RVA: 0x0081963E File Offset: 0x0081783E
 	public PlayDrivingSoundOnReachSpeed(double[] speed, float cd, [Nullable(2)] Func<bool> condition, Action action)
 	{
 		this.SpeedRange = speed;
@@ -15,7 +15,7 @@ public class PlayDrivingSoundOnReachSpeed : KeepDrivingInfo
 		this.RunAction = action;
 	}
 
-	// Token: 0x0601C63F RID: 116287 RVA: 0x007F3144 File Offset: 0x007F1344
+	// Token: 0x0601A304 RID: 107268 RVA: 0x00819670 File Offset: 0x00817870
 	public override bool UpdateDrivingInfo(float delta, VehicleMoveComponent moveComp)
 	{
 		bool flag = !MathUtils.Instance.InRangeArray((double)this.LastSpeed, this.SpeedRange) && MathUtils.Instance.InRangeArray((double)moveComp.Speed, this.SpeedRange);
@@ -28,7 +28,7 @@ public class PlayDrivingSoundOnReachSpeed : KeepDrivingInfo
 		return false;
 	}
 
-	// Token: 0x0601C640 RID: 116288 RVA: 0x007F31C4 File Offset: 0x007F13C4
+	// Token: 0x0601A305 RID: 107269 RVA: 0x008196F0 File Offset: 0x008178F0
 	public override string ToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(24, 3);
@@ -42,15 +42,15 @@ public class PlayDrivingSoundOnReachSpeed : KeepDrivingInfo
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400E13F RID: 57663
+	// Token: 0x0400E5EA RID: 58858
 	protected double[] SpeedRange = new double[2];
 
-	// Token: 0x0400E140 RID: 57664
+	// Token: 0x0400E5EB RID: 58859
 	protected float CoolDown;
 
-	// Token: 0x0400E141 RID: 57665
+	// Token: 0x0400E5EC RID: 58860
 	protected float LastSpeed;
 
-	// Token: 0x0400E142 RID: 57666
+	// Token: 0x0400E5ED RID: 58861
 	protected double LastTime;
 }

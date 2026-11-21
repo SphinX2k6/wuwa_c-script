@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C58 RID: 23640
+	// Token: 0x0200627D RID: 25213
 	public class TLookAtTargetUnion
 	{
-		// Token: 0x1700B218 RID: 45592
-		// (get) Token: 0x06028851 RID: 165969 RVA: 0x00592BFA File Offset: 0x00590DFA
-		// (set) Token: 0x06028852 RID: 165970 RVA: 0x00592C02 File Offset: 0x00590E02
+		// Token: 0x1700BB6A RID: 47978
+		// (get) Token: 0x0602AE5F RID: 175711 RVA: 0x005DAE12 File Offset: 0x005D9012
+		// (set) Token: 0x0602AE60 RID: 175712 RVA: 0x005DAE1A File Offset: 0x005D901A
 		public TLookAtTarget Type { get; set; }
 
-		// Token: 0x1700B219 RID: 45593
-		// (get) Token: 0x06028853 RID: 165971 RVA: 0x00592C0B File Offset: 0x00590E0B
-		// (set) Token: 0x06028854 RID: 165972 RVA: 0x00592C13 File Offset: 0x00590E13
+		// Token: 0x1700BB6B RID: 47979
+		// (get) Token: 0x0602AE61 RID: 175713 RVA: 0x005DAE23 File Offset: 0x005D9023
+		// (set) Token: 0x0602AE62 RID: 175714 RVA: 0x005DAE2B File Offset: 0x005D902B
 		public object Value { get; set; }
 
-		// Token: 0x06028855 RID: 165973 RVA: 0x00592C1C File Offset: 0x00590E1C
+		// Token: 0x0602AE63 RID: 175715 RVA: 0x005DAE34 File Offset: 0x005D9034
 		public TLookAtTargetUnion()
 		{
 			this.Type = TLookAtTarget.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028856 RID: 165974 RVA: 0x00592C32 File Offset: 0x00590E32
+		// Token: 0x0602AE64 RID: 175716 RVA: 0x005DAE4A File Offset: 0x005D904A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028857 RID: 165975 RVA: 0x00592C44 File Offset: 0x00590E44
+		// Token: 0x0602AE65 RID: 175717 RVA: 0x005DAE5C File Offset: 0x005D905C
 		public ILookAtTargetEntityT AsILookAtTargetEntity()
 		{
 			return this.As<ILookAtTargetEntityT>();
 		}
 
-		// Token: 0x06028858 RID: 165976 RVA: 0x00592C4C File Offset: 0x00590E4C
+		// Token: 0x0602AE66 RID: 175718 RVA: 0x005DAE64 File Offset: 0x005D9064
 		public static TLookAtTargetUnion FromILookAtTargetEntity(ILookAtTargetEntityT _ilookattargetentity)
 		{
 			return new TLookAtTargetUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028859 RID: 165977 RVA: 0x00592C61 File Offset: 0x00590E61
+		// Token: 0x0602AE67 RID: 175719 RVA: 0x005DAE79 File Offset: 0x005D9079
 		public ILookAtTargetPlayerT AsILookAtTargetPlayer()
 		{
 			return this.As<ILookAtTargetPlayerT>();
 		}
 
-		// Token: 0x0602885A RID: 165978 RVA: 0x00592C69 File Offset: 0x00590E69
+		// Token: 0x0602AE68 RID: 175720 RVA: 0x005DAE81 File Offset: 0x005D9081
 		public static TLookAtTargetUnion FromILookAtTargetPlayer(ILookAtTargetPlayerT _ilookattargetplayer)
 		{
 			return new TLookAtTargetUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602885B RID: 165979 RVA: 0x00592C80 File Offset: 0x00590E80
+		// Token: 0x0602AE69 RID: 175721 RVA: 0x005DAE98 File Offset: 0x005D9098
 		public static int Pack(FlatBufferBuilder builder, TLookAtTargetUnion _o)
 		{
 			TLookAtTarget type = _o.Type;

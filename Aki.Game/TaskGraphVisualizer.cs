@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003543 RID: 13635
+// Token: 0x02002AB8 RID: 10936
 [NullableContext(1)]
 [Nullable(0)]
 public class TaskGraphVisualizer
 {
-	// Token: 0x0601DF26 RID: 122662 RVA: 0x008640F8 File Offset: 0x008622F8
+	// Token: 0x0601BC4E RID: 113742 RVA: 0x0088BD30 File Offset: 0x00889F30
 	public TaskGraphVisualizer([Nullable(new byte[]
 	{
 		1,
@@ -23,7 +23,7 @@ public class TaskGraphVisualizer
 		}
 	}
 
-	// Token: 0x0601DF27 RID: 122663 RVA: 0x0086414C File Offset: 0x0086234C
+	// Token: 0x0601BC4F RID: 113743 RVA: 0x0088BD84 File Offset: 0x00889F84
 	private void BuildGraph()
 	{
 		foreach (ValueTuple<string, string> valueTuple in this.Dependencies)
@@ -51,7 +51,7 @@ public class TaskGraphVisualizer
 		}
 	}
 
-	// Token: 0x0601DF28 RID: 122664 RVA: 0x0086423C File Offset: 0x0086243C
+	// Token: 0x0601BC50 RID: 113744 RVA: 0x0088BE74 File Offset: 0x0088A074
 	private void CalculateLevels()
 	{
 		TaskGraphVisualizer.<>c__DisplayClass6_0 CS$<>8__locals1;
@@ -92,7 +92,7 @@ public class TaskGraphVisualizer
 		this.Levels = list;
 	}
 
-	// Token: 0x0601DF29 RID: 122665 RVA: 0x008643E4 File Offset: 0x008625E4
+	// Token: 0x0601BC51 RID: 113745 RVA: 0x0088C01C File Offset: 0x0088A21C
 	private void CalculateLayout()
 	{
 		List<int> list = new List<int>();
@@ -137,7 +137,7 @@ public class TaskGraphVisualizer
 		}
 	}
 
-	// Token: 0x0601DF2A RID: 122666 RVA: 0x008645DC File Offset: 0x008627DC
+	// Token: 0x0601BC52 RID: 113746 RVA: 0x0088C214 File Offset: 0x0088A414
 	private string[][] GenerateGrid()
 	{
 		int num = this.Levels.Count * 3 + 2;
@@ -165,7 +165,7 @@ public class TaskGraphVisualizer
 		return array;
 	}
 
-	// Token: 0x0601DF2B RID: 122667 RVA: 0x008646E8 File Offset: 0x008628E8
+	// Token: 0x0601BC53 RID: 113747 RVA: 0x0088C320 File Offset: 0x0088A520
 	private void DrawNodes(string[][] grid)
 	{
 		foreach (KeyValuePair<string, NodePosition> keyValuePair in this.NodePositions)
@@ -184,7 +184,7 @@ public class TaskGraphVisualizer
 		}
 	}
 
-	// Token: 0x0601DF2C RID: 122668 RVA: 0x0086479C File Offset: 0x0086299C
+	// Token: 0x0601BC54 RID: 113748 RVA: 0x0088C3D4 File Offset: 0x0088A5D4
 	private void DrawEdges(string[][] grid)
 	{
 		foreach (ValueTuple<string, string> valueTuple in this.Dependencies)
@@ -222,7 +222,7 @@ public class TaskGraphVisualizer
 		}
 	}
 
-	// Token: 0x0601DF2D RID: 122669 RVA: 0x00864954 File Offset: 0x00862B54
+	// Token: 0x0601BC55 RID: 113749 RVA: 0x0088C58C File Offset: 0x0088A78C
 	public string Visualize()
 	{
 		this.BuildGraph();
@@ -243,7 +243,7 @@ public class TaskGraphVisualizer
 		return text;
 	}
 
-	// Token: 0x0601DF2E RID: 122670 RVA: 0x008649F0 File Offset: 0x00862BF0
+	// Token: 0x0601BC56 RID: 113750 RVA: 0x0088C628 File Offset: 0x0088A828
 	[CompilerGenerated]
 	private int <CalculateLevels>g__Dfs|6_0(string node, ref TaskGraphVisualizer.<>c__DisplayClass6_0 A_2)
 	{
@@ -261,16 +261,16 @@ public class TaskGraphVisualizer
 		return num2;
 	}
 
-	// Token: 0x0400EB3D RID: 60221
+	// Token: 0x0400EFFA RID: 61434
 	private readonly Dictionary<string, GraphNodeInfo> Graph = new Dictionary<string, GraphNodeInfo>();
 
-	// Token: 0x0400EB3E RID: 60222
+	// Token: 0x0400EFFB RID: 61435
 	private List<List<string>> Levels = new List<List<string>>();
 
-	// Token: 0x0400EB3F RID: 60223
+	// Token: 0x0400EFFC RID: 61436
 	private readonly Dictionary<string, NodePosition> NodePositions = new Dictionary<string, NodePosition>();
 
-	// Token: 0x0400EB40 RID: 60224
+	// Token: 0x0400EFFD RID: 61437
 	[Nullable(new byte[]
 	{
 		1,

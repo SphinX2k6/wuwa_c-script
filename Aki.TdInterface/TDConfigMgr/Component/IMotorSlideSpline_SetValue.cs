@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000531 RID: 1329
+	// Token: 0x02000598 RID: 1432
 	public class IMotorSlideSpline_SetValue
 	{
-		// Token: 0x04001388 RID: 5000
+		// Token: 0x040014F2 RID: 5362
 		public ESplineType Type;
 
-		// Token: 0x04001389 RID: 5001
+		// Token: 0x040014F3 RID: 5363
 		public float RangeRadius;
 
-		// Token: 0x0400138A RID: 5002
-		[Nullable(1)]
+		// Token: 0x040014F4 RID: 5364
 		public List<IMotorSlideSplinePoint> Points;
 	}
 }

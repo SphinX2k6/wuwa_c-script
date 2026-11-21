@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C77 RID: 3191
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D56 RID: 3414
 	public class IFixedAngleTurntable : ITurntableControlType
 	{
-		// Token: 0x0600491E RID: 18718 RVA: 0x000B77DC File Offset: 0x000B59DC
+		// Token: 0x06004DBD RID: 19901 RVA: 0x000C1FE0 File Offset: 0x000C01E0
 		public static IFixedAngleTurntable Create(IFixedAngleTurntable? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015ED RID: 5613
-		// (get) Token: 0x0600491F RID: 18719 RVA: 0x000B77FB File Offset: 0x000B59FB
+		// Token: 0x1700170C RID: 5900
+		// (get) Token: 0x06004DBE RID: 19902 RVA: 0x000C1FFF File Offset: 0x000C01FF
 		public override EControllerType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015EE RID: 5614
-		// (get) Token: 0x06004920 RID: 18720 RVA: 0x000B7808 File Offset: 0x000B5A08
+		// Token: 0x1700170D RID: 5901
+		// (get) Token: 0x06004DBF RID: 19903 RVA: 0x000C200C File Offset: 0x000C020C
 		public override int RotationSpeed
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015EF RID: 5615
-		// (get) Token: 0x06004921 RID: 18721 RVA: 0x000B7818 File Offset: 0x000B5A18
+		// Token: 0x1700170E RID: 5902
+		// (get) Token: 0x06004DC0 RID: 19904 RVA: 0x000C201C File Offset: 0x000C021C
 		public virtual List<IFixedAngleItem> ItemConfig
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029B4 RID: 10676
+		// Token: 0x04002C21 RID: 11297
 		private IFixedAngleTurntable Instance;
 
-		// Token: 0x040029B5 RID: 10677
+		// Token: 0x04002C22 RID: 11298
 		private List<IFixedAngleItem> _ItemConfigCache;
 
-		// Token: 0x040029B6 RID: 10678
+		// Token: 0x04002C23 RID: 11299
 		private bool _ItemConfigInited;
 	}
 }

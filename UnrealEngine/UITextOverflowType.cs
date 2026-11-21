@@ -4,24 +4,24 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021CF RID: 8655
+	// Token: 0x02000731 RID: 1841
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.UITextOverflowType")]
 	public enum UITextOverflowType : byte
 	{
-		// Token: 0x040119A4 RID: 72100
+		// Token: 0x040044C5 RID: 17605
 		HorizontalOverflow,
-		// Token: 0x040119A5 RID: 72101
+		// Token: 0x040044C6 RID: 17606
 		VerticalOverflow,
-		// Token: 0x040119A6 RID: 72102
+		// Token: 0x040044C7 RID: 17607
 		ClampContent,
-		// Token: 0x040119A7 RID: 72103
+		// Token: 0x040044C8 RID: 17608
 		HorizontalMinMax,
-		// Token: 0x040119A8 RID: 72104
+		// Token: 0x040044C9 RID: 17609
 		MaxHeightWidth,
-		// Token: 0x040119A9 RID: 72105
+		// Token: 0x040044CA RID: 17610
 		BestFitClamp,
-		// Token: 0x040119AA RID: 72106
+		// Token: 0x040044CB RID: 17611
 		UITextOverflowType_MAX
 	}
 }

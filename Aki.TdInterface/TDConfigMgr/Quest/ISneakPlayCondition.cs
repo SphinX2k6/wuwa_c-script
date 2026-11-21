@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001142 RID: 4418
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001270 RID: 4720
 	public class ISneakPlayCondition
 	{
-		// Token: 0x06006452 RID: 25682 RVA: 0x000F142C File Offset: 0x000EF62C
+		// Token: 0x06006A4D RID: 27213 RVA: 0x000FE5A0 File Offset: 0x000FC7A0
 		private ISneakPlayCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006453 RID: 25683 RVA: 0x000F1464 File Offset: 0x000EF664
+		// Token: 0x06006A4E RID: 27214 RVA: 0x000FE5D8 File Offset: 0x000FC7D8
 		public static ISneakPlayCondition Create([Nullable(2)] ISneakPlayCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006454 RID: 25684 RVA: 0x000F1477 File Offset: 0x000EF677
+		// Token: 0x06006A4F RID: 27215 RVA: 0x000FE5EB File Offset: 0x000FC7EB
 		public static ISneakPlayCondition CreateFromSetValue([Nullable(2)] ISneakPlayCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006455 RID: 25685 RVA: 0x000F148A File Offset: 0x000EF68A
+		// Token: 0x06006A50 RID: 27216 RVA: 0x000FE5FE File Offset: 0x000FC7FE
 		public ISneakPlayCondition_SetValue ToSetValue()
 		{
 			return new ISneakPlayCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170020CB RID: 8395
-		// (get) Token: 0x06006456 RID: 25686 RVA: 0x000F149D File Offset: 0x000EF69D
-		// (set) Token: 0x06006457 RID: 25687 RVA: 0x000F14C8 File Offset: 0x000EF6C8
+		// Token: 0x1700227E RID: 8830
+		// (get) Token: 0x06006A51 RID: 27217 RVA: 0x000FE611 File Offset: 0x000FC811
+		// (set) Token: 0x06006A52 RID: 27218 RVA: 0x000FE63C File Offset: 0x000FC83C
 		public virtual int Time
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003C4A RID: 15434
+		// Token: 0x04003F98 RID: 16280
 		[Nullable(2)]
 		protected ISneakPlayCondition FbInstance;
 
-		// Token: 0x04003C4B RID: 15435
+		// Token: 0x04003F99 RID: 16281
 		[Nullable(2)]
 		protected ISneakPlayCondition_SetValue PocoInterface;
 	}

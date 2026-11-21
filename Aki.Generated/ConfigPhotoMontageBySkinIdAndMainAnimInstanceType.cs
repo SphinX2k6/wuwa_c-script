@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006ED RID: 1773
+	// Token: 0x02000705 RID: 1797
 	public class ConfigPhotoMontageBySkinIdAndMainAnimInstanceType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600299E RID: 10654 RVA: 0x001449F3 File Offset: 0x00142BF3
+		// Token: 0x06002A2E RID: 10798 RVA: 0x0014B46F File Offset: 0x0014966F
 		static ConfigPhotoMontageBySkinIdAndMainAnimInstanceType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoMontageBySkinIdAndMainAnimInstanceType.CreateStaticDefaultValue), new Action(ConfigPhotoMontageBySkinIdAndMainAnimInstanceType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600299F RID: 10655 RVA: 0x00144A14 File Offset: 0x00142C14
+		// Token: 0x06002A2F RID: 10799 RVA: 0x0014B490 File Offset: 0x00149690
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoMontageBySkinIdAndMainAnimInstanceType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060029A0 RID: 10656 RVA: 0x00144A93 File Offset: 0x00142C93
+		// Token: 0x06002A30 RID: 10800 RVA: 0x0014B50F File Offset: 0x0014970F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoMontageBySkinIdAndMainAnimInstanceType.LogPair = null;
 			ConfigPhotoMontageBySkinIdAndMainAnimInstanceType.HandleId = 0;
 		}
 
-		// Token: 0x060029A1 RID: 10657 RVA: 0x00144AA1 File Offset: 0x00142CA1
+		// Token: 0x06002A31 RID: 10801 RVA: 0x0014B51D File Offset: 0x0014971D
 		public static void Init()
 		{
 			ConfigPhotoMontageBySkinIdAndMainAnimInstanceType.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoMontageBySkinIdAndMainAnimInstanceType.HandleId, "db_photograph.db", "select BinData from `PhotoMontage` where SkinId=? And MainAnimInstanceType=?");
 		}
 
-		// Token: 0x060029A2 RID: 10658 RVA: 0x00144ABC File Offset: 0x00142CBC
+		// Token: 0x06002A32 RID: 10802 RVA: 0x0014B538 File Offset: 0x00149738
 		[NullableContext(2)]
 		public static IReadOnlyList<PhotoMontage> GetConfigList(int p0SkinId, int p1MainAnimInstanceType, bool useCache = true)
 		{
@@ -99,22 +99,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003061 RID: 12385
+		// Token: 0x04003109 RID: 12553
 		private const string DB = "db_photograph.db";
 
-		// Token: 0x04003062 RID: 12386
+		// Token: 0x0400310A RID: 12554
 		private const string FILE = "p.拍照.xlsx";
 
-		// Token: 0x04003063 RID: 12387
+		// Token: 0x0400310B RID: 12555
 		private const string TABLE = "PhotoMontage";
 
-		// Token: 0x04003064 RID: 12388
+		// Token: 0x0400310C RID: 12556
 		private const string COMMAND = "select BinData from `PhotoMontage` where SkinId=? And MainAnimInstanceType=?";
 
-		// Token: 0x04003065 RID: 12389
+		// Token: 0x0400310D RID: 12557
 		private const string KEY_PREFIX = "PhotoMontageBySkinIdAndMainAnimInstanceType";
 
-		// Token: 0x04003066 RID: 12390
+		// Token: 0x0400310E RID: 12558
 		[Nullable(new byte[]
 		{
 			2,
@@ -124,7 +124,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003067 RID: 12391
+		// Token: 0x0400310F RID: 12559
 		private static int HandleId;
 	}
 }

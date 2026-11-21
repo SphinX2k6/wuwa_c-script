@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007019 RID: 28697
+	// Token: 0x020077E2 RID: 30690
 	public struct ISetMonsterMoveTarget : IFlatbufferObject
 	{
-		// Token: 0x1700D513 RID: 54547
-		// (get) Token: 0x06032C0F RID: 207887 RVA: 0x006D8E22 File Offset: 0x006D7022
+		// Token: 0x1700E0E7 RID: 57575
+		// (get) Token: 0x06035E75 RID: 220789 RVA: 0x00738A66 File Offset: 0x00736C66
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032C10 RID: 207888 RVA: 0x006D8E2F File Offset: 0x006D702F
+		// Token: 0x06035E76 RID: 220790 RVA: 0x00738A73 File Offset: 0x00736C73
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032C11 RID: 207889 RVA: 0x006D8E38 File Offset: 0x006D7038
+		// Token: 0x06035E77 RID: 220791 RVA: 0x00738A7C File Offset: 0x00736C7C
 		public static ISetMonsterMoveTarget GetRootAsISetMonsterMoveTarget(ByteBuffer _bb)
 		{
 			return ISetMonsterMoveTarget.GetRootAsISetMonsterMoveTarget(_bb, default(ISetMonsterMoveTarget));
 		}
 
-		// Token: 0x06032C12 RID: 207890 RVA: 0x006D8E54 File Offset: 0x006D7054
+		// Token: 0x06035E78 RID: 220792 RVA: 0x00738A98 File Offset: 0x00736C98
 		public static ISetMonsterMoveTarget GetRootAsISetMonsterMoveTarget(ByteBuffer _bb, ISetMonsterMoveTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032C13 RID: 207891 RVA: 0x006D8E71 File Offset: 0x006D7071
+		// Token: 0x06035E79 RID: 220793 RVA: 0x00738AB5 File Offset: 0x00736CB5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032C14 RID: 207892 RVA: 0x006D8E80 File Offset: 0x006D7080
+		// Token: 0x06035E7A RID: 220794 RVA: 0x00738AC4 File Offset: 0x00736CC4
 		public ISetMonsterMoveTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D514 RID: 54548
-		// (get) Token: 0x06032C15 RID: 207893 RVA: 0x006D8E90 File Offset: 0x006D7090
+		// Token: 0x1700E0E8 RID: 57576
+		// (get) Token: 0x06035E7B RID: 220795 RVA: 0x00738AD4 File Offset: 0x00736CD4
 		public EExecBattleActionType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D515 RID: 54549
-		// (get) Token: 0x06032C16 RID: 207894 RVA: 0x006D8ECC File Offset: 0x006D70CC
+		// Token: 0x1700E0E9 RID: 57577
+		// (get) Token: 0x06035E7C RID: 220796 RVA: 0x00738B10 File Offset: 0x00736D10
 		public int TargetEntityId
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D516 RID: 54550
-		// (get) Token: 0x06032C17 RID: 207895 RVA: 0x006D8F08 File Offset: 0x006D7108
+		// Token: 0x1700E0EA RID: 57578
+		// (get) Token: 0x06035E7D RID: 220797 RVA: 0x00738B4C File Offset: 0x00736D4C
 		public EMoveEvent MoveEvent
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032C18 RID: 207896 RVA: 0x006D8F44 File Offset: 0x006D7144
+		// Token: 0x06035E7E RID: 220798 RVA: 0x00738B88 File Offset: 0x00736D88
 		public int MonsterEntityIds(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700D517 RID: 54551
-		// (get) Token: 0x06032C19 RID: 207897 RVA: 0x006D8F84 File Offset: 0x006D7184
+		// Token: 0x1700E0EB RID: 57579
+		// (get) Token: 0x06035E7F RID: 220799 RVA: 0x00738BC8 File Offset: 0x00736DC8
 		public int MonsterEntityIdsLength
 		{
 			get
@@ -119,20 +119,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032C1A RID: 207898 RVA: 0x006D8FB0 File Offset: 0x006D71B0
+		// Token: 0x06035E80 RID: 220800 RVA: 0x00738BF4 File Offset: 0x00736DF4
 		public Span<int> GetMonsterEntityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06032C1B RID: 207899 RVA: 0x006D8FC0 File Offset: 0x006D71C0
+		// Token: 0x06035E81 RID: 220801 RVA: 0x00738C04 File Offset: 0x00736E04
 		public int[] GetMonsterEntityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(10);
 		}
 
-		// Token: 0x1700D518 RID: 54552
-		// (get) Token: 0x06032C1C RID: 207900 RVA: 0x006D8FD0 File Offset: 0x006D71D0
+		// Token: 0x1700E0EC RID: 57580
+		// (get) Token: 0x06035E82 RID: 220802 RVA: 0x00738C14 File Offset: 0x00736E14
 		public byte NullMask
 		{
 			get
@@ -146,7 +146,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032C1D RID: 207901 RVA: 0x006D900D File Offset: 0x006D720D
+		// Token: 0x06035E83 RID: 220803 RVA: 0x00738C51 File Offset: 0x00736E51
 		public static Offset<ISetMonsterMoveTarget> CreateISetMonsterMoveTarget(FlatBufferBuilder builder, EExecBattleActionType Type = EExecBattleActionType.SetBattleTags, int TargetEntityId = 0, EMoveEvent MoveEvent = EMoveEvent.Walk, VectorOffset MonsterEntityIdsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -158,37 +158,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetMonsterMoveTarget.EndISetMonsterMoveTarget(builder);
 		}
 
-		// Token: 0x06032C1E RID: 207902 RVA: 0x006D9041 File Offset: 0x006D7241
+		// Token: 0x06035E84 RID: 220804 RVA: 0x00738C85 File Offset: 0x00736E85
 		public static void StartISetMonsterMoveTarget(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06032C1F RID: 207903 RVA: 0x006D904A File Offset: 0x006D724A
+		// Token: 0x06035E85 RID: 220805 RVA: 0x00738C8E File Offset: 0x00736E8E
 		public static void AddType(FlatBufferBuilder builder, EExecBattleActionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06032C20 RID: 207904 RVA: 0x006D9055 File Offset: 0x006D7255
+		// Token: 0x06035E86 RID: 220806 RVA: 0x00738C99 File Offset: 0x00736E99
 		public static void AddTargetEntityId(FlatBufferBuilder builder, int targetEntityId)
 		{
 			builder.AddInt(1, targetEntityId, 0);
 		}
 
-		// Token: 0x06032C21 RID: 207905 RVA: 0x006D9060 File Offset: 0x006D7260
+		// Token: 0x06035E87 RID: 220807 RVA: 0x00738CA4 File Offset: 0x00736EA4
 		public static void AddMoveEvent(FlatBufferBuilder builder, EMoveEvent moveEvent)
 		{
 			builder.AddByte(2, (byte)moveEvent, 0);
 		}
 
-		// Token: 0x06032C22 RID: 207906 RVA: 0x006D906B File Offset: 0x006D726B
+		// Token: 0x06035E88 RID: 220808 RVA: 0x00738CAF File Offset: 0x00736EAF
 		public static void AddMonsterEntityIds(FlatBufferBuilder builder, VectorOffset monsterEntityIdsOffset)
 		{
 			builder.AddOffset(3, monsterEntityIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06032C23 RID: 207907 RVA: 0x006D907C File Offset: 0x006D727C
+		// Token: 0x06035E89 RID: 220809 RVA: 0x00738CC0 File Offset: 0x00736EC0
 		public static VectorOffset CreateMonsterEntityIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -199,7 +199,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032C24 RID: 207908 RVA: 0x006D90B3 File Offset: 0x006D72B3
+		// Token: 0x06035E8A RID: 220810 RVA: 0x00738CF7 File Offset: 0x00736EF7
 		public static VectorOffset CreateMonsterEntityIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032C25 RID: 207909 RVA: 0x006D90CD File Offset: 0x006D72CD
+		// Token: 0x06035E8B RID: 220811 RVA: 0x00738D11 File Offset: 0x00736F11
 		public static VectorOffset CreateMonsterEntityIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -215,7 +215,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032C26 RID: 207910 RVA: 0x006D90EB File Offset: 0x006D72EB
+		// Token: 0x06035E8C RID: 220812 RVA: 0x00738D2F File Offset: 0x00736F2F
 		public static VectorOffset CreateMonsterEntityIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -223,25 +223,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06032C27 RID: 207911 RVA: 0x006D9104 File Offset: 0x006D7304
+		// Token: 0x06035E8D RID: 220813 RVA: 0x00738D48 File Offset: 0x00736F48
 		public static void StartMonsterEntityIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06032C28 RID: 207912 RVA: 0x006D910F File Offset: 0x006D730F
+		// Token: 0x06035E8E RID: 220814 RVA: 0x00738D53 File Offset: 0x00736F53
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06032C29 RID: 207913 RVA: 0x006D911A File Offset: 0x006D731A
+		// Token: 0x06035E8F RID: 220815 RVA: 0x00738D5E File Offset: 0x00736F5E
 		public static Offset<ISetMonsterMoveTarget> EndISetMonsterMoveTarget(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetMonsterMoveTarget>(builder.EndTable());
 		}
 
-		// Token: 0x06032C2A RID: 207914 RVA: 0x006D9128 File Offset: 0x006D7328
+		// Token: 0x06035E90 RID: 220816 RVA: 0x00738D6C File Offset: 0x00736F6C
 		public ISetMonsterMoveTargetT UnPack()
 		{
 			ISetMonsterMoveTargetT setMonsterMoveTargetT = new ISetMonsterMoveTargetT();
@@ -249,7 +249,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setMonsterMoveTargetT;
 		}
 
-		// Token: 0x06032C2B RID: 207915 RVA: 0x006D9144 File Offset: 0x006D7344
+		// Token: 0x06035E91 RID: 220817 RVA: 0x00738D88 File Offset: 0x00736F88
 		public void UnPackTo(ISetMonsterMoveTargetT _o)
 		{
 			_o.Type = this.Type;
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06032C2C RID: 207916 RVA: 0x006D91B0 File Offset: 0x006D73B0
+		// Token: 0x06035E92 RID: 220818 RVA: 0x00738DF4 File Offset: 0x00736FF4
 		public static Offset<ISetMonsterMoveTarget> Pack(FlatBufferBuilder builder, ISetMonsterMoveTargetT _o)
 		{
 			if (_o == null)
@@ -279,7 +279,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetMonsterMoveTarget.CreateISetMonsterMoveTarget(builder, _o.Type, _o.TargetEntityId, _o.MoveEvent, monsterEntityIdsOffset, _o.NullMask);
 		}
 
-		// Token: 0x04011A3F RID: 72255
+		// Token: 0x04012A24 RID: 76324
 		private Table __p;
 	}
 }

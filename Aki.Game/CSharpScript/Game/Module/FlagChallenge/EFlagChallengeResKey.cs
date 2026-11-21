@@ -3,90 +3,90 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A3B RID: 23099
+	// Token: 0x02004A17 RID: 18967
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class EFlagChallengeResKey
 	{
-		// Token: 0x0401E828 RID: 124968
+		// Token: 0x040192CF RID: 103119
 		public const string ActiveStateBgActive = "SP_FrameActivated";
 
-		// Token: 0x0401E829 RID: 124969
+		// Token: 0x040192D0 RID: 103120
 		public const string ActiveStateBgNotActive = "SP_FrameUnactivated";
 
-		// Token: 0x0401E82A RID: 124970
+		// Token: 0x040192D1 RID: 103121
 		public const string ActiveBgActive = "T_FlagChallengeBuffBgActivate";
 
-		// Token: 0x0401E82B RID: 124971
+		// Token: 0x040192D2 RID: 103122
 		public const string ActiveBgNotActive = "T_FlagChallengeBuffBgUnactivated";
 
-		// Token: 0x0401E82C RID: 124972
+		// Token: 0x040192D3 RID: 103123
 		public const string ActiveBgTempActive = "T_FlagChallengeBuffBgActivateTemp";
 
-		// Token: 0x0401E82D RID: 124973
+		// Token: 0x040192D4 RID: 103124
 		public const string MonsterLvDiffBgEasy = "T_EnemyFlagChallengeLevelGreenBg";
 
-		// Token: 0x0401E82E RID: 124974
+		// Token: 0x040192D5 RID: 103125
 		public const string MonsterLvDiffBgNormal = "T_EnemyFlagChallengeLevelYellowBg";
 
-		// Token: 0x0401E82F RID: 124975
+		// Token: 0x040192D6 RID: 103126
 		public const string MonsterLvDiffBgHard = "T_EnemyFlagChallengeLevelRedBg";
 
-		// Token: 0x0401E830 RID: 124976
+		// Token: 0x040192D7 RID: 103127
 		public const string DeathViewKillEnemy = "SP_IconDeathKillEnemy";
 
-		// Token: 0x0401E831 RID: 124977
+		// Token: 0x040192D8 RID: 103128
 		public const string DeathViewCapturePoint = "SP_IconDeathCapturePoint";
 
-		// Token: 0x0401E832 RID: 124978
+		// Token: 0x040192D9 RID: 103129
 		public const string LevelTabItemTimeIcon = "SP_IconMorale3";
 
-		// Token: 0x0401E833 RID: 124979
+		// Token: 0x040192DA RID: 103130
 		public const string LevelTabItemLevelIcon = "SP_IconMorale4";
 
-		// Token: 0x0401E834 RID: 124980
+		// Token: 0x040192DB RID: 103131
 		public const string LevelDetailLvDiffBgEasy = "SP_MoralePowerGreen";
 
-		// Token: 0x0401E835 RID: 124981
+		// Token: 0x040192DC RID: 103132
 		public const string LevelDetailLvDiffBgNormal = "SP_MoralePowerYellow";
 
-		// Token: 0x0401E836 RID: 124982
+		// Token: 0x040192DD RID: 103133
 		public const string LevelDetailLvDiffBgHard = "SP_MoralePowerRed";
 
-		// Token: 0x0401E837 RID: 124983
+		// Token: 0x040192DE RID: 103134
 		public const string AreaDetailStrongholdContainerItem = "UiItem_MapDetail";
 
-		// Token: 0x0401E838 RID: 124984
+		// Token: 0x040192DF RID: 103135
 		public const string AreaDetailNormalStrongholdItem = "UiItem_UnoccupiedFlagLarger";
 
-		// Token: 0x0401E839 RID: 124985
+		// Token: 0x040192E0 RID: 103136
 		public const string AreaDetailBossStrongholdItem = "UiItem_UnoccupiedFlagBoss";
 
-		// Token: 0x0401E83A RID: 124986
+		// Token: 0x040192E1 RID: 103137
 		public const string AreaDetailPanelLevelDiffBgEasy = "T_EnemyFlagChallengeLevelGreenBg";
 
-		// Token: 0x0401E83B RID: 124987
+		// Token: 0x040192E2 RID: 103138
 		public const string AreaDetailPanelLevelDiffBgNormal = "T_EnemyFlagChallengeLevelYellowBg";
 
-		// Token: 0x0401E83C RID: 124988
+		// Token: 0x040192E3 RID: 103139
 		public const string AreaDetailPanelLevelDiffBgHard = "T_EnemyFlagChallengeLevelRedBg";
 
-		// Token: 0x0401E83D RID: 124989
+		// Token: 0x040192E4 RID: 103140
 		public const string AreaDetailPanelOutsideTeleport = "Morale_32_RegionSelect_StartButt";
 
-		// Token: 0x0401E83E RID: 124990
+		// Token: 0x040192E5 RID: 103141
 		public const string AreaDetailPanelInsideTeleport = "Morale_32_RegionSelect_TeleportButt";
 
-		// Token: 0x0401E83F RID: 124991
+		// Token: 0x040192E6 RID: 103142
 		public const string AreaDetailFrameBg0 = "T_GridLine0";
 
-		// Token: 0x0401E840 RID: 124992
+		// Token: 0x040192E7 RID: 103143
 		public const string AreaDetailFrameBg1 = "T_GridLine1";
 
-		// Token: 0x0401E841 RID: 124993
+		// Token: 0x040192E8 RID: 103144
 		public const string ActiveStateTagBgInvalid = "SP_InvalidationBg";
 
-		// Token: 0x0401E842 RID: 124994
+		// Token: 0x040192E9 RID: 103145
 		public const string ActiveStateTagBgNormal = "SP_ItemNewBg";
 	}
 }

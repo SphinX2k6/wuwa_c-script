@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 {
-	// Token: 0x0200655E RID: 25950
+	// Token: 0x020054DC RID: 21724
 	public enum ELineCrossGroupState
 	{
-		// Token: 0x04021E65 RID: 138853
+		// Token: 0x0401C796 RID: 116630
 		Normal,
-		// Token: 0x04021E66 RID: 138854
+		// Token: 0x0401C797 RID: 116631
 		Passed,
-		// Token: 0x04021E67 RID: 138855
+		// Token: 0x0401C798 RID: 116632
 		Lock
 	}
 }

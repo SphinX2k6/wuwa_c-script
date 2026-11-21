@@ -12,12 +12,12 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DBA RID: 23994
+	// Token: 0x02004D9E RID: 19870
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueScoreItem : BaseScoreItem
 	{
-		// Token: 0x0603CF62 RID: 249698 RVA: 0x00EA6AC8 File Offset: 0x00EA4CC8
+		// Token: 0x06031ED9 RID: 204505 RVA: 0x00DF79A4 File Offset: 0x00DF5BA4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsMobile = Info.Instance.IsInTouch();
 		}
 
-		// Token: 0x0603CF63 RID: 249699 RVA: 0x00EA6C2C File Offset: 0x00EA4E2C
+		// Token: 0x06031EDA RID: 204506 RVA: 0x00DF7B08 File Offset: 0x00DF5D08
 		protected override UniTask OnCreateAsync()
 		{
 			RogueScoreItem.<OnCreateAsync>d__49 <OnCreateAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CF64 RID: 249700 RVA: 0x00EA6C70 File Offset: 0x00EA4E70
+		// Token: 0x06031EDB RID: 204507 RVA: 0x00DF7B4C File Offset: 0x00DF5D4C
 		private UniTask LoadTexture(string path, int index, [Nullable(new byte[]
 		{
 			1,
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadTexture>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CF65 RID: 249701 RVA: 0x00EA6CC4 File Offset: 0x00EA4EC4
+		// Token: 0x06031EDC RID: 204508 RVA: 0x00DF7BA0 File Offset: 0x00DF5DA0
 		private UniTask LoadNiagara(string path, int index, [Nullable(new byte[]
 		{
 			1,
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadNiagara>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CF66 RID: 249702 RVA: 0x00EA6D18 File Offset: 0x00EA4F18
+		// Token: 0x06031EDD RID: 204509 RVA: 0x00DF7BF4 File Offset: 0x00DF5DF4
 		private UniTask LoadShader(string path)
 		{
 			RogueScoreItem.<LoadShader>d__52 <LoadShader>d__;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadShader>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CF67 RID: 249703 RVA: 0x00EA6D64 File Offset: 0x00EA4F64
+		// Token: 0x06031EDE RID: 204510 RVA: 0x00DF7C40 File Offset: 0x00DF5E40
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF68 RID: 249704 RVA: 0x00EA6F0C File Offset: 0x00EA510C
+		// Token: 0x06031EDF RID: 204511 RVA: 0x00DF7DE8 File Offset: 0x00DF5FE8
 		protected override void OnBeforeDestroy()
 		{
 			this.LevelSequencePlayer.Clear();
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603CF69 RID: 249705 RVA: 0x00EA6F28 File Offset: 0x00EA5128
+		// Token: 0x06031EE0 RID: 204512 RVA: 0x00DF7E04 File Offset: 0x00DF6004
 		protected override UniTask OnShowAsyncImplement()
 		{
 			RogueScoreItem.<OnShowAsyncImplement>d__55 <OnShowAsyncImplement>d__;
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnShowAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CF6A RID: 249706 RVA: 0x00EA6F6B File Offset: 0x00EA516B
+		// Token: 0x06031EE1 RID: 204513 RVA: 0x00DF7E47 File Offset: 0x00DF6047
 		protected override void OnBattleScoreChanged(int scoreId, int score)
 		{
 			if (base.IsHideOrHiding)
@@ -179,13 +179,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF6B RID: 249707 RVA: 0x00EA6FA4 File Offset: 0x00EA51A4
+		// Token: 0x06031EE2 RID: 204514 RVA: 0x00DF7E80 File Offset: 0x00DF6080
 		public void UpdateScore(int score, BattleScoreLevelConf? scoreLevelConfig)
 		{
 			this.RogueScoreMachine.UpdateTargetScore((float)score, scoreLevelConfig);
 		}
 
-		// Token: 0x0603CF6C RID: 249708 RVA: 0x00EA6FB4 File Offset: 0x00EA51B4
+		// Token: 0x06031EE3 RID: 204515 RVA: 0x00DF7E90 File Offset: 0x00DF6090
 		private void OnUpdateScore(float curScore, BattleScoreLevelConf? curScoreLevelConfig)
 		{
 			if (this.CurScore == curScore)
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF6D RID: 249709 RVA: 0x00EA7145 File Offset: 0x00EA5345
+		// Token: 0x06031EE4 RID: 204516 RVA: 0x00DF8021 File Offset: 0x00DF6221
 		private void SetScoreLevelUi(int level)
 		{
 			this.SetScoreTexture(level);
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetNode(level);
 		}
 
-		// Token: 0x0603CF6E RID: 249710 RVA: 0x00EA7164 File Offset: 0x00EA5364
+		// Token: 0x06031EE5 RID: 204517 RVA: 0x00DF8040 File Offset: 0x00DF6240
 		private void SetScoreTexture(int level)
 		{
 			UTexture utexture = this.ScoreTextureDataList[level - 1];
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ScoreTexture.SetSizeFromTexture();
 		}
 
-		// Token: 0x0603CF6F RID: 249711 RVA: 0x00EA71A8 File Offset: 0x00EA53A8
+		// Token: 0x06031EE6 RID: 204518 RVA: 0x00DF8084 File Offset: 0x00DF6284
 		private void SetScoreBgTexture(int level)
 		{
 			UTexture utexture = this.ScoreBgTextureDataList[level - 1];
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ScoreBgTexture.SetCustomMaterialVectorParameter(RogueScoreItem.flowColorB, RogueScoreItem.flowColorListB[level - 1]);
 		}
 
-		// Token: 0x0603CF70 RID: 249712 RVA: 0x00EA7240 File Offset: 0x00EA5440
+		// Token: 0x06031EE7 RID: 204519 RVA: 0x00DF811C File Offset: 0x00DF631C
 		private void SetScoreNiagara(int level)
 		{
 			int num = RogueScoreItem.scoreNiagaraIndexList[level - 1];
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ScoreNiagara.ActivateSystem(true);
 		}
 
-		// Token: 0x0603CF71 RID: 249713 RVA: 0x00EA728C File Offset: 0x00EA548C
+		// Token: 0x06031EE8 RID: 204520 RVA: 0x00DF8168 File Offset: 0x00DF6368
 		private void SetNode(int level)
 		{
 			int num = level - 1;
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurNodeIndex = num;
 		}
 
-		// Token: 0x0603CF72 RID: 249714 RVA: 0x00EA72E4 File Offset: 0x00EA54E4
+		// Token: 0x06031EE9 RID: 204521 RVA: 0x00DF81C0 File Offset: 0x00DF63C0
 		private void PlayAudio(int level, bool isLevelUp)
 		{
 			BattleScoreModel.Instance.RougeScoreMusicState.State = RogueScoreItem.musicStateList[level];
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			AudioSystem.Instance.PostEvent("play_ui_rogue_combo_down");
 		}
 
-		// Token: 0x0603CF73 RID: 249715 RVA: 0x00EA7320 File Offset: 0x00EA5520
+		// Token: 0x06031EEA RID: 204522 RVA: 0x00DF81FC File Offset: 0x00DF63FC
 		private void PlayChangeAnim(int level)
 		{
 			if (this.IsPlayingStartAnim)
@@ -328,13 +328,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LevelSequencePlayer.PlaySequencePurely(RogueScoreItem.sequenceNameList[level - 1], false, false, null, null, false);
 		}
 
-		// Token: 0x0603CF74 RID: 249716 RVA: 0x00EA7357 File Offset: 0x00EA5557
+		// Token: 0x06031EEB RID: 204523 RVA: 0x00DF8233 File Offset: 0x00DF6433
 		private void SetPercent(float percent)
 		{
 			this.ScoreBgTexture.SetCustomMaterialScalarParameter(RogueScoreItem.filledAmount, percent);
 		}
 
-		// Token: 0x0603CF75 RID: 249717 RVA: 0x00EA736A File Offset: 0x00EA556A
+		// Token: 0x06031EEC RID: 204524 RVA: 0x00DF8246 File Offset: 0x00DF6446
 		private void PlayUpAnim()
 		{
 			this.IsPlayingUpAnim = true;
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayUpEffect(1f);
 		}
 
-		// Token: 0x0603CF76 RID: 249718 RVA: 0x00EA7399 File Offset: 0x00EA5599
+		// Token: 0x06031EED RID: 204525 RVA: 0x00DF8275 File Offset: 0x00DF6475
 		private void PlayUpEffect(float param)
 		{
 			if (this.GlobalShaderCollection != null)
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF77 RID: 249719 RVA: 0x00EA73C0 File Offset: 0x00EA55C0
+		// Token: 0x06031EEE RID: 204526 RVA: 0x00DF829C File Offset: 0x00DF649C
 		public override void OnTick(float delta)
 		{
 			if (base.GetActive())
@@ -392,7 +392,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF78 RID: 249720 RVA: 0x00EA74CC File Offset: 0x00EA56CC
+		// Token: 0x06031EEF RID: 204527 RVA: 0x00DF83A8 File Offset: 0x00DF65A8
 		public override bool IsValidScore(int scoreId)
 		{
 			BattleScoreModel instance = BattleScoreModel.Instance;
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return type == 1 || type == 2 || type == 3 || type == 6;
 		}
 
-		// Token: 0x0603CF79 RID: 249721 RVA: 0x00EA7523 File Offset: 0x00EA5723
+		// Token: 0x06031EF0 RID: 204528 RVA: 0x00DF83FF File Offset: 0x00DF65FF
 		public override void ShowScore()
 		{
 			base.ShowScore();
@@ -420,7 +420,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			scoreNiagara.SetUIActive(true);
 		}
 
-		// Token: 0x0603CF7A RID: 249722 RVA: 0x00EA7558 File Offset: 0x00EA5758
+		// Token: 0x06031EF1 RID: 204529 RVA: 0x00DF8434 File Offset: 0x00DF6634
 		public override void HideScore()
 		{
 			base.HideScore();
@@ -449,7 +449,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}).Forget();
 		}
 
-		// Token: 0x0603CF7B RID: 249723 RVA: 0x00EA75D0 File Offset: 0x00EA57D0
+		// Token: 0x06031EF2 RID: 204530 RVA: 0x00DF84AC File Offset: 0x00DF66AC
 		public override void OnShowFirstTime()
 		{
 			if (this.IsScoreEnable && this.CurScore > 0f)
@@ -458,7 +458,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF7C RID: 249724 RVA: 0x00EA75F0 File Offset: 0x00EA57F0
+		// Token: 0x06031EF3 RID: 204531 RVA: 0x00DF84CC File Offset: 0x00DF66CC
 		private void UpdateScoreConfig(int scoreId, int score)
 		{
 			BattleScoreConf? scoreConfig = BattleScoreModel.Instance.GetScoreConfig(scoreId, false);
@@ -498,7 +498,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF7D RID: 249725 RVA: 0x00EA7724 File Offset: 0x00EA5924
+		// Token: 0x06031EF4 RID: 204532 RVA: 0x00DF8600 File Offset: 0x00DF6800
 		private void UpdateMaxAndMinScore()
 		{
 			this.MinScoreLevelConfig = null;
@@ -525,7 +525,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF7E RID: 249726 RVA: 0x00EA77C4 File Offset: 0x00EA59C4
+		// Token: 0x06031EF5 RID: 204533 RVA: 0x00DF86A0 File Offset: 0x00DF68A0
 		private void UpdateScoreOffset(int scoreId)
 		{
 			BattleScoreModel instance = BattleScoreModel.Instance;
@@ -564,7 +564,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rootItem.SetAnchorOffset(anchorOffset);
 		}
 
-		// Token: 0x0603CF7F RID: 249727 RVA: 0x00EA78DB File Offset: 0x00EA5ADB
+		// Token: 0x06031EF6 RID: 204534 RVA: 0x00DF87B7 File Offset: 0x00DF69B7
 		private void ResetScore()
 		{
 			this.CurScore = 0f;
@@ -573,41 +573,41 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurScoreLevelId = 0;
 		}
 
-		// Token: 0x0401FC18 RID: 130072
+		// Token: 0x0401A6D5 RID: 108245
 		private const int UP_ANIM_TIME = 600;
 
-		// Token: 0x0401FC19 RID: 130073
+		// Token: 0x0401A6D6 RID: 108246
 		private const int HALF_UP_ANIM_TIME = 0;
 
-		// Token: 0x0401FC1A RID: 130074
+		// Token: 0x0401A6D7 RID: 108247
 		private const int UP_EFFECT_TIME = 100;
 
-		// Token: 0x0401FC1B RID: 130075
+		// Token: 0x0401A6D8 RID: 108248
 		private const string SHADER_PATH = "/Game/Aki/Render/Shaders/UI/MPC_RGBSplitGlitch_FightScore.MPC_RGBSplitGlitch_FightScore";
 
-		// Token: 0x0401FC1C RID: 130076
+		// Token: 0x0401A6D9 RID: 108249
 		[StaticVariableRuleIgnore]
 		private static readonly Stat TickStatsObject = Stat.Create("[BattleView]RogueScoreItem", "", "");
 
-		// Token: 0x0401FC1D RID: 130077
+		// Token: 0x0401A6DA RID: 108250
 		private static readonly FName filledAmount = new FName("FilledAmount");
 
-		// Token: 0x0401FC1E RID: 130078
+		// Token: 0x0401A6DB RID: 108251
 		private static readonly FName fillColor = new FName("FillColor");
 
-		// Token: 0x0401FC1F RID: 130079
+		// Token: 0x0401A6DC RID: 108252
 		private static readonly FName flowColorA = new FName("FlowColorA");
 
-		// Token: 0x0401FC20 RID: 130080
+		// Token: 0x0401A6DD RID: 108253
 		private static readonly FName flowColorB = new FName("FlowColorB");
 
-		// Token: 0x0401FC21 RID: 130081
+		// Token: 0x0401A6DE RID: 108254
 		private static readonly FName globalInt = new FName("GlobalInt");
 
-		// Token: 0x0401FC22 RID: 130082
+		// Token: 0x0401A6DF RID: 108255
 		private static readonly FName rgbSplitProgress = new FName("RGBSplit_Progress");
 
-		// Token: 0x0401FC23 RID: 130083
+		// Token: 0x0401A6E0 RID: 108256
 		[StaticVariableRuleIgnore]
 		private static readonly string[] scoreTexturePathList = new string[]
 		{
@@ -619,7 +619,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			"/Game/Aki/UI/UIResources/UiFight/Image/T_FightScoreSS.T_FightScoreSS"
 		};
 
-		// Token: 0x0401FC24 RID: 130084
+		// Token: 0x0401A6E1 RID: 108257
 		[StaticVariableRuleIgnore]
 		private static readonly string[] scoreBgTexturePathList = new string[]
 		{
@@ -631,7 +631,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			"/Game/Aki/UI/UIResources/UiFight/Image/T_FightScoreBgSS.T_FightScoreBgSS"
 		};
 
-		// Token: 0x0401FC25 RID: 130085
+		// Token: 0x0401A6E2 RID: 108258
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor[] fillColorList = new FLinearColor[]
 		{
@@ -643,7 +643,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			new FLinearColor(1f, 0.5725f, 0.1098f, 0.651f)
 		};
 
-		// Token: 0x0401FC26 RID: 130086
+		// Token: 0x0401A6E3 RID: 108259
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor[] flowColorListA = new FLinearColor[]
 		{
@@ -655,7 +655,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			new FLinearColor(1f, 0.8588f, 0.7451f, 1f)
 		};
 
-		// Token: 0x0401FC27 RID: 130087
+		// Token: 0x0401A6E4 RID: 108260
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor[] flowColorListB = new FLinearColor[]
 		{
@@ -667,7 +667,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			new FLinearColor(0.7255f, 0.6471f, 0.1882f, 0.0941f)
 		};
 
-		// Token: 0x0401FC28 RID: 130088
+		// Token: 0x0401A6E5 RID: 108261
 		[StaticVariableRuleIgnore]
 		private static readonly string[] scoreNiagaraPathList = new string[]
 		{
@@ -677,7 +677,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			"/Game/Aki/Effect/UI/Niagaras/RouGe/PingFen/NS_Fx_LGUI_Rouge_S02.NS_Fx_LGUI_Rouge_S02"
 		};
 
-		// Token: 0x0401FC29 RID: 130089
+		// Token: 0x0401A6E6 RID: 108262
 		[StaticVariableRuleIgnore]
 		private static readonly int[] scoreNiagaraIndexList = new int[]
 		{
@@ -689,7 +689,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			3
 		};
 
-		// Token: 0x0401FC2A RID: 130090
+		// Token: 0x0401A6E7 RID: 108263
 		[StaticVariableRuleIgnore]
 		private static readonly string[] sequenceNameList = new string[]
 		{
@@ -701,7 +701,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			"StartSS"
 		};
 
-		// Token: 0x0401FC2B RID: 130091
+		// Token: 0x0401A6E8 RID: 108264
 		[StaticVariableRuleIgnore]
 		private static readonly string[] musicStateList = new string[]
 		{
@@ -714,65 +714,65 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			"ss"
 		};
 
-		// Token: 0x0401FC2C RID: 130092
+		// Token: 0x0401A6E9 RID: 108265
 		private float CurScore;
 
-		// Token: 0x0401FC2D RID: 130093
+		// Token: 0x0401A6EA RID: 108266
 		private int CurScoreLevelId;
 
-		// Token: 0x0401FC2E RID: 130094
+		// Token: 0x0401A6EB RID: 108267
 		private BattleScoreLevelConf? CurScoreLevelConfig;
 
-		// Token: 0x0401FC2F RID: 130095
+		// Token: 0x0401A6EC RID: 108268
 		[Nullable(2)]
 		private IReadOnlyList<BattleScoreLevelConf> CurScoreLevelConfigList;
 
-		// Token: 0x0401FC30 RID: 130096
+		// Token: 0x0401A6ED RID: 108269
 		private BattleScoreLevelConf? UiScoreLevelConfig;
 
-		// Token: 0x0401FC31 RID: 130097
+		// Token: 0x0401A6EE RID: 108270
 		private BattleScoreLevelConf? MinScoreLevelConfig;
 
-		// Token: 0x0401FC32 RID: 130098
+		// Token: 0x0401A6EF RID: 108271
 		private BattleScoreLevelConf? MaxScoreLevelConfig;
 
-		// Token: 0x0401FC33 RID: 130099
+		// Token: 0x0401A6F0 RID: 108272
 		private readonly RogueScoreMachine RogueScoreMachine = new RogueScoreMachine();
 
-		// Token: 0x0401FC34 RID: 130100
+		// Token: 0x0401A6F1 RID: 108273
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401FC35 RID: 130101
+		// Token: 0x0401A6F2 RID: 108274
 		[Nullable(2)]
 		private UUITexture ScoreTexture;
 
-		// Token: 0x0401FC36 RID: 130102
+		// Token: 0x0401A6F3 RID: 108275
 		[Nullable(2)]
 		private UUITextureTransitionComponent ScoreTextureTransitionComp;
 
-		// Token: 0x0401FC37 RID: 130103
+		// Token: 0x0401A6F4 RID: 108276
 		[Nullable(2)]
 		private UUITexture ScoreBgTexture;
 
-		// Token: 0x0401FC38 RID: 130104
+		// Token: 0x0401A6F5 RID: 108277
 		[Nullable(2)]
 		private UUITextureTransitionComponent ScoreBgTextureTransitionComp;
 
-		// Token: 0x0401FC39 RID: 130105
+		// Token: 0x0401A6F6 RID: 108278
 		[Nullable(2)]
 		private UUINiagara ScoreNiagara;
 
-		// Token: 0x0401FC3A RID: 130106
+		// Token: 0x0401A6F7 RID: 108279
 		private int CurScoreNiagaraIndex = -1;
 
-		// Token: 0x0401FC3B RID: 130107
+		// Token: 0x0401A6F8 RID: 108280
 		private readonly List<UUIItem> NodeList = new List<UUIItem>();
 
-		// Token: 0x0401FC3C RID: 130108
+		// Token: 0x0401A6F9 RID: 108281
 		private int CurNodeIndex = -1;
 
-		// Token: 0x0401FC3D RID: 130109
+		// Token: 0x0401A6FA RID: 108282
 		[Nullable(new byte[]
 		{
 			1,
@@ -780,7 +780,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private UTexture[] ScoreTextureDataList = Array.Empty<UTexture>();
 
-		// Token: 0x0401FC3E RID: 130110
+		// Token: 0x0401A6FB RID: 108283
 		[Nullable(new byte[]
 		{
 			1,
@@ -788,7 +788,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private UTexture[] ScoreBgTextureDataList = Array.Empty<UTexture>();
 
-		// Token: 0x0401FC3F RID: 130111
+		// Token: 0x0401A6FC RID: 108284
 		[Nullable(new byte[]
 		{
 			1,
@@ -796,49 +796,49 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private UNiagaraSystem[] ScoreNiagaraList = Array.Empty<UNiagaraSystem>();
 
-		// Token: 0x0401FC40 RID: 130112
+		// Token: 0x0401A6FD RID: 108285
 		private bool IsPlayingStartAnim;
 
-		// Token: 0x0401FC41 RID: 130113
+		// Token: 0x0401A6FE RID: 108286
 		private bool IsPlayingUpAnim;
 
-		// Token: 0x0401FC42 RID: 130114
+		// Token: 0x0401A6FF RID: 108287
 		private readonly SquaredCurve UpAnimCurve = CurveUtils.DefaultPara;
 
-		// Token: 0x0401FC43 RID: 130115
+		// Token: 0x0401A700 RID: 108288
 		private double UpAnimStartTime;
 
-		// Token: 0x0401FC44 RID: 130116
+		// Token: 0x0401A701 RID: 108289
 		[Nullable(2)]
 		private UMaterialParameterCollection GlobalShaderCollection;
 
-		// Token: 0x0401FC45 RID: 130117
+		// Token: 0x0401A702 RID: 108290
 		private float UpEffectCountdown = -1f;
 
-		// Token: 0x0401FC46 RID: 130118
+		// Token: 0x0401A703 RID: 108291
 		private bool IsMobile;
 
-		// Token: 0x0200C0A7 RID: 49319
+		// Token: 0x0200AAB0 RID: 43696
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A225 RID: 238117
+			// Token: 0x04034BF7 RID: 216055
 			ScoreTexture,
-			// Token: 0x0403A226 RID: 238118
+			// Token: 0x04034BF8 RID: 216056
 			ScoreBgTexture,
-			// Token: 0x0403A227 RID: 238119
+			// Token: 0x04034BF9 RID: 216057
 			ScoreNiagara,
-			// Token: 0x0403A228 RID: 238120
+			// Token: 0x04034BFA RID: 216058
 			NodeD,
-			// Token: 0x0403A229 RID: 238121
+			// Token: 0x04034BFB RID: 216059
 			NodeC,
-			// Token: 0x0403A22A RID: 238122
+			// Token: 0x04034BFC RID: 216060
 			NodeB,
-			// Token: 0x0403A22B RID: 238123
+			// Token: 0x04034BFD RID: 216061
 			NodeA,
-			// Token: 0x0403A22C RID: 238124
+			// Token: 0x04034BFE RID: 216062
 			NodeS,
-			// Token: 0x0403A22D RID: 238125
+			// Token: 0x04034BFF RID: 216063
 			NodeSS
 		}
 	}

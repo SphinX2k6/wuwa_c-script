@@ -5,10 +5,10 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x0200584D RID: 22605
+	// Token: 0x02004825 RID: 18469
 	public class HonamiStoryConfirmBoxAction : InteractConfirmBoxActionBase
 	{
-		// Token: 0x06039769 RID: 235369 RVA: 0x00DA4328 File Offset: 0x00DA2528
+		// Token: 0x0602E685 RID: 190085 RVA: 0x00CF2FE8 File Offset: 0x00CF11E8
 		[NullableContext(2)]
 		protected override ConfirmBoxDataNew ConfigConfirmBoxData()
 		{
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.Interaction
 			return confirmBoxDataNew;
 		}
 
-		// Token: 0x0603976A RID: 235370 RVA: 0x00DA43AF File Offset: 0x00DA25AF
+		// Token: 0x0602E686 RID: 190086 RVA: 0x00CF306F File Offset: 0x00CF126F
 		public float GetHonamiStoryLifeSupport()
 		{
 			return FormationAttributeController.Instance.GetValue(EFormationAttributeId.HonamiStoryLifeSupport);
 		}
 
-		// Token: 0x0603976B RID: 235371 RVA: 0x00DA43C0 File Offset: 0x00DA25C0
+		// Token: 0x0602E687 RID: 190087 RVA: 0x00CF3080 File Offset: 0x00CF1280
 		public int GetLifeSupportCost()
 		{
 			InteractSecondConfirmContext context = this.Context;

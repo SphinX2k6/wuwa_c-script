@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E0C RID: 24076
+	// Token: 0x02006449 RID: 25673
 	public struct IMotorParkourSystemVar : IFlatbufferObject
 	{
-		// Token: 0x1700B428 RID: 46120
-		// (get) Token: 0x06029374 RID: 168820 RVA: 0x005A764D File Offset: 0x005A584D
+		// Token: 0x1700BD8E RID: 48526
+		// (get) Token: 0x0602B9FE RID: 178686 RVA: 0x005F037D File Offset: 0x005EE57D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029375 RID: 168821 RVA: 0x005A765A File Offset: 0x005A585A
+		// Token: 0x0602B9FF RID: 178687 RVA: 0x005F038A File Offset: 0x005EE58A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06029376 RID: 168822 RVA: 0x005A7664 File Offset: 0x005A5864
+		// Token: 0x0602BA00 RID: 178688 RVA: 0x005F0394 File Offset: 0x005EE594
 		public static IMotorParkourSystemVar GetRootAsIMotorParkourSystemVar(ByteBuffer _bb)
 		{
 			return IMotorParkourSystemVar.GetRootAsIMotorParkourSystemVar(_bb, default(IMotorParkourSystemVar));
 		}
 
-		// Token: 0x06029377 RID: 168823 RVA: 0x005A7680 File Offset: 0x005A5880
+		// Token: 0x0602BA01 RID: 178689 RVA: 0x005F03B0 File Offset: 0x005EE5B0
 		public static IMotorParkourSystemVar GetRootAsIMotorParkourSystemVar(ByteBuffer _bb, IMotorParkourSystemVar obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06029378 RID: 168824 RVA: 0x005A769D File Offset: 0x005A589D
+		// Token: 0x0602BA02 RID: 178690 RVA: 0x005F03CD File Offset: 0x005EE5CD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06029379 RID: 168825 RVA: 0x005A76AC File Offset: 0x005A58AC
+		// Token: 0x0602BA03 RID: 178691 RVA: 0x005F03DC File Offset: 0x005EE5DC
 		public IMotorParkourSystemVar __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B429 RID: 46121
-		// (get) Token: 0x0602937A RID: 168826 RVA: 0x005A76BC File Offset: 0x005A58BC
+		// Token: 0x1700BD8F RID: 48527
+		// (get) Token: 0x0602BA04 RID: 178692 RVA: 0x005F03EC File Offset: 0x005EE5EC
 		public EMotorParkourSystemVarType VarType
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B42A RID: 46122
-		// (get) Token: 0x0602937B RID: 168827 RVA: 0x005A76F8 File Offset: 0x005A58F8
+		// Token: 0x1700BD90 RID: 48528
+		// (get) Token: 0x0602BA05 RID: 178693 RVA: 0x005F0428 File Offset: 0x005EE628
 		public TVarRef VarRefType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x0602937C RID: 168828 RVA: 0x005A7734 File Offset: 0x005A5934
+		// Token: 0x0602BA06 RID: 178694 RVA: 0x005F0464 File Offset: 0x005EE664
 		public TTable? VarRef<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,37 +89,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602937D RID: 168829 RVA: 0x005A7778 File Offset: 0x005A5978
+		// Token: 0x0602BA07 RID: 178695 RVA: 0x005F04A8 File Offset: 0x005EE6A8
 		public IConstVarRef VarRefAsIConstVarRef()
 		{
 			return this.VarRef<IConstVarRef>().Value;
 		}
 
-		// Token: 0x0602937E RID: 168830 RVA: 0x005A7794 File Offset: 0x005A5994
+		// Token: 0x0602BA08 RID: 178696 RVA: 0x005F04C4 File Offset: 0x005EE6C4
 		public IGlobalVarRef VarRefAsIGlobalVarRef()
 		{
 			return this.VarRef<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x0602937F RID: 168831 RVA: 0x005A77B0 File Offset: 0x005A59B0
+		// Token: 0x0602BA09 RID: 178697 RVA: 0x005F04E0 File Offset: 0x005EE6E0
 		public IOtherVarRef VarRefAsIOtherVarRef()
 		{
 			return this.VarRef<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06029380 RID: 168832 RVA: 0x005A77CC File Offset: 0x005A59CC
+		// Token: 0x0602BA0A RID: 178698 RVA: 0x005F04FC File Offset: 0x005EE6FC
 		public ISelfVarRef VarRefAsISelfVarRef()
 		{
 			return this.VarRef<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x06029381 RID: 168833 RVA: 0x005A77E8 File Offset: 0x005A59E8
+		// Token: 0x0602BA0B RID: 178699 RVA: 0x005F0518 File Offset: 0x005EE718
 		public ISystemVarRef VarRefAsISystemVarRef()
 		{
 			return this.VarRef<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x06029382 RID: 168834 RVA: 0x005A7803 File Offset: 0x005A5A03
+		// Token: 0x0602BA0C RID: 178700 RVA: 0x005F0533 File Offset: 0x005EE733
 		public static Offset<IMotorParkourSystemVar> CreateIMotorParkourSystemVar(FlatBufferBuilder builder, EMotorParkourSystemVarType VarType = EMotorParkourSystemVarType.CurLap, TVarRef VarRef_type = TVarRef.NONE, int VarRefOffset = 0)
 		{
 			builder.StartTable(3);
@@ -129,37 +129,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IMotorParkourSystemVar.EndIMotorParkourSystemVar(builder);
 		}
 
-		// Token: 0x06029383 RID: 168835 RVA: 0x005A7827 File Offset: 0x005A5A27
+		// Token: 0x0602BA0D RID: 178701 RVA: 0x005F0557 File Offset: 0x005EE757
 		public static void StartIMotorParkourSystemVar(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06029384 RID: 168836 RVA: 0x005A7830 File Offset: 0x005A5A30
+		// Token: 0x0602BA0E RID: 178702 RVA: 0x005F0560 File Offset: 0x005EE760
 		public static void AddVarType(FlatBufferBuilder builder, EMotorParkourSystemVarType varType)
 		{
 			builder.AddByte(0, (byte)varType, 0);
 		}
 
-		// Token: 0x06029385 RID: 168837 RVA: 0x005A783B File Offset: 0x005A5A3B
+		// Token: 0x0602BA0F RID: 178703 RVA: 0x005F056B File Offset: 0x005EE76B
 		public static void AddVarRefType(FlatBufferBuilder builder, TVarRef varRefType)
 		{
 			builder.AddByte(1, (byte)varRefType, 0);
 		}
 
-		// Token: 0x06029386 RID: 168838 RVA: 0x005A7846 File Offset: 0x005A5A46
+		// Token: 0x0602BA10 RID: 178704 RVA: 0x005F0576 File Offset: 0x005EE776
 		public static void AddVarRef(FlatBufferBuilder builder, int varRefOffset)
 		{
 			builder.AddOffset(2, varRefOffset, 0);
 		}
 
-		// Token: 0x06029387 RID: 168839 RVA: 0x005A7851 File Offset: 0x005A5A51
+		// Token: 0x0602BA11 RID: 178705 RVA: 0x005F0581 File Offset: 0x005EE781
 		public static Offset<IMotorParkourSystemVar> EndIMotorParkourSystemVar(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorParkourSystemVar>(builder.EndTable());
 		}
 
-		// Token: 0x06029388 RID: 168840 RVA: 0x005A7860 File Offset: 0x005A5A60
+		// Token: 0x0602BA12 RID: 178706 RVA: 0x005F0590 File Offset: 0x005EE790
 		public IMotorParkourSystemVarT UnPack()
 		{
 			IMotorParkourSystemVarT motorParkourSystemVarT = new IMotorParkourSystemVarT();
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return motorParkourSystemVarT;
 		}
 
-		// Token: 0x06029389 RID: 168841 RVA: 0x005A787C File Offset: 0x005A5A7C
+		// Token: 0x0602BA13 RID: 178707 RVA: 0x005F05AC File Offset: 0x005EE7AC
 		public void UnPackTo(IMotorParkourSystemVarT _o)
 		{
 			_o.VarType = this.VarType;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x0602938A RID: 168842 RVA: 0x005A79E8 File Offset: 0x005A5BE8
+		// Token: 0x0602BA14 RID: 178708 RVA: 0x005F0718 File Offset: 0x005EE918
 		public static Offset<IMotorParkourSystemVar> Pack(FlatBufferBuilder builder, IMotorParkourSystemVarT _o)
 		{
 			if (_o == null)
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IMotorParkourSystemVar.CreateIMotorParkourSystemVar(builder, _o.VarType, varRef_type, varRefOffset);
 		}
 
-		// Token: 0x0400F802 RID: 63490
+		// Token: 0x0401055D RID: 66909
 		private Table __p;
 	}
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BF8 RID: 23544
+	// Token: 0x02006217 RID: 25111
 	public class TComponentsDataT
 	{
-		// Token: 0x1700B1D4 RID: 45524
-		// (get) Token: 0x06028651 RID: 165457 RVA: 0x0058F97D File Offset: 0x0058DB7D
-		// (set) Token: 0x06028652 RID: 165458 RVA: 0x0058F985 File Offset: 0x0058DB85
+		// Token: 0x1700BB22 RID: 47906
+		// (get) Token: 0x0602AC41 RID: 175169 RVA: 0x005D78C5 File Offset: 0x005D5AC5
+		// (set) Token: 0x0602AC42 RID: 175170 RVA: 0x005D78CD File Offset: 0x005D5ACD
 		public List<TComponentDataT> Items { get; set; }
 
-		// Token: 0x06028653 RID: 165459 RVA: 0x0058F98E File Offset: 0x0058DB8E
+		// Token: 0x0602AC43 RID: 175171 RVA: 0x005D78D6 File Offset: 0x005D5AD6
 		public TComponentsDataT()
 		{
 			this.Items = null;

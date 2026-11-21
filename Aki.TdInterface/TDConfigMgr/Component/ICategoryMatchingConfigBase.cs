@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000221 RID: 545
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000248 RID: 584
 	public class ICategoryMatchingConfigBase
 	{
-		// Token: 0x0600095A RID: 2394 RVA: 0x00028E7C File Offset: 0x0002707C
+		// Token: 0x060009CE RID: 2510 RVA: 0x0002A63C File Offset: 0x0002883C
 		private ICategoryMatchingConfigBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600095B RID: 2395 RVA: 0x00028EB4 File Offset: 0x000270B4
+		// Token: 0x060009CF RID: 2511 RVA: 0x0002A674 File Offset: 0x00028874
 		public static ICategoryMatchingConfigBase Create([Nullable(2)] ICategoryMatchingConfigBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600095C RID: 2396 RVA: 0x00028EC7 File Offset: 0x000270C7
+		// Token: 0x060009D0 RID: 2512 RVA: 0x0002A687 File Offset: 0x00028887
 		public static ICategoryMatchingConfigBase CreateFromSetValue([Nullable(2)] ICategoryMatchingConfigBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600095D RID: 2397 RVA: 0x00028EDA File Offset: 0x000270DA
+		// Token: 0x060009D1 RID: 2513 RVA: 0x0002A69A File Offset: 0x0002889A
 		public ICategoryMatchingConfigBase_SetValue ToSetValue()
 		{
 			return new ICategoryMatchingConfigBase_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170002D9 RID: 729
-		// (get) Token: 0x0600095E RID: 2398 RVA: 0x00028F08 File Offset: 0x00027108
-		// (set) Token: 0x0600095F RID: 2399 RVA: 0x00028F69 File Offset: 0x00027169
+		// Token: 0x170002F8 RID: 760
+		// (get) Token: 0x060009D2 RID: 2514 RVA: 0x0002A6C8 File Offset: 0x000288C8
+		// (set) Token: 0x060009D3 RID: 2515 RVA: 0x0002A729 File Offset: 0x00028929
 		public virtual ICategoryMatchingCondition Condition
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002DA RID: 730
-		// (get) Token: 0x06000960 RID: 2400 RVA: 0x00028F80 File Offset: 0x00027180
-		// (set) Token: 0x06000961 RID: 2401 RVA: 0x00028FE1 File Offset: 0x000271E1
+		// Token: 0x170002F9 RID: 761
+		// (get) Token: 0x060009D4 RID: 2516 RVA: 0x0002A740 File Offset: 0x00028940
+		// (set) Token: 0x060009D5 RID: 2517 RVA: 0x0002A7A1 File Offset: 0x000289A1
 		public virtual ICategoryMatchingAnimationBase Animation
 		{
 			get
@@ -121,9 +119,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002DB RID: 731
-		// (get) Token: 0x06000962 RID: 2402 RVA: 0x00028FF8 File Offset: 0x000271F8
-		// (set) Token: 0x06000963 RID: 2403 RVA: 0x00029059 File Offset: 0x00027259
+		// Token: 0x170002FA RID: 762
+		// (get) Token: 0x060009D6 RID: 2518 RVA: 0x0002A7B8 File Offset: 0x000289B8
+		// (set) Token: 0x060009D7 RID: 2519 RVA: 0x0002A819 File Offset: 0x00028A19
 		public virtual ICategoryMatchingSucceedBase Callback
 		{
 			get
@@ -151,30 +149,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040009BB RID: 2491
+		// Token: 0x04000A45 RID: 2629
 		[Nullable(2)]
 		protected ICategoryMatchingConfigBase FbInstance;
 
-		// Token: 0x040009BC RID: 2492
+		// Token: 0x04000A46 RID: 2630
 		[Nullable(2)]
 		protected ICategoryMatchingConfigBase_SetValue PocoInterface;
 
-		// Token: 0x040009BD RID: 2493
+		// Token: 0x04000A47 RID: 2631
 		private ICategoryMatchingCondition _ConditionCache;
 
-		// Token: 0x040009BE RID: 2494
+		// Token: 0x04000A48 RID: 2632
 		private bool _ConditionInited;
 
-		// Token: 0x040009BF RID: 2495
+		// Token: 0x04000A49 RID: 2633
 		private ICategoryMatchingAnimationBase _AnimationCache;
 
-		// Token: 0x040009C0 RID: 2496
+		// Token: 0x04000A4A RID: 2634
 		private bool _AnimationInited;
 
-		// Token: 0x040009C1 RID: 2497
+		// Token: 0x04000A4B RID: 2635
 		private ICategoryMatchingSucceedBase _CallbackCache;
 
-		// Token: 0x040009C2 RID: 2498
+		// Token: 0x04000A4C RID: 2636
 		private bool _CallbackInited;
 	}
 }

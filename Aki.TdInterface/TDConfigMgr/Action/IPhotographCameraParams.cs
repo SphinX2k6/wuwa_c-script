@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CE6 RID: 7398
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EF5 RID: 7925
 	public class IPhotographCameraParams
 	{
-		// Token: 0x06009EC7 RID: 40647 RVA: 0x0016AF70 File Offset: 0x00169170
+		// Token: 0x0600A8A7 RID: 43175 RVA: 0x0017F1D0 File Offset: 0x0017D3D0
 		private IPhotographCameraParams_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009EC8 RID: 40648 RVA: 0x0016AFA8 File Offset: 0x001691A8
+		// Token: 0x0600A8A8 RID: 43176 RVA: 0x0017F208 File Offset: 0x0017D408
 		public static IPhotographCameraParams Create([Nullable(2)] IPhotographCameraParams instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009EC9 RID: 40649 RVA: 0x0016AFBB File Offset: 0x001691BB
+		// Token: 0x0600A8A9 RID: 43177 RVA: 0x0017F21B File Offset: 0x0017D41B
 		public static IPhotographCameraParams CreateFromSetValue([Nullable(2)] IPhotographCameraParams_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009ECA RID: 40650 RVA: 0x0016AFCE File Offset: 0x001691CE
+		// Token: 0x0600A8AA RID: 43178 RVA: 0x0017F22E File Offset: 0x0017D42E
 		public IPhotographCameraParams_SetValue ToSetValue()
 		{
 			return new IPhotographCameraParams_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003161 RID: 12641
-		// (get) Token: 0x06009ECB RID: 40651 RVA: 0x0016AFF0 File Offset: 0x001691F0
-		// (set) Token: 0x06009ECC RID: 40652 RVA: 0x0016B051 File Offset: 0x00169251
+		// Token: 0x170033F2 RID: 13298
+		// (get) Token: 0x0600A8AB RID: 43179 RVA: 0x0017F250 File Offset: 0x0017D450
+		// (set) Token: 0x0600A8AC RID: 43180 RVA: 0x0017F2B1 File Offset: 0x0017D4B1
 		[Nullable(2)]
 		public virtual IPhotographCameraTransformAbsolute CameraTransform
 		{
@@ -93,9 +91,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003162 RID: 12642
-		// (get) Token: 0x06009ECD RID: 40653 RVA: 0x0016B068 File Offset: 0x00169268
-		// (set) Token: 0x06009ECE RID: 40654 RVA: 0x0016B0A2 File Offset: 0x001692A2
+		// Token: 0x170033F3 RID: 13299
+		// (get) Token: 0x0600A8AD RID: 43181 RVA: 0x0017F2C8 File Offset: 0x0017D4C8
+		// (set) Token: 0x0600A8AE RID: 43182 RVA: 0x0017F302 File Offset: 0x0017D502
 		public virtual float? Fov
 		{
 			get
@@ -117,18 +115,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005FE6 RID: 24550
+		// Token: 0x04006559 RID: 25945
 		[Nullable(2)]
 		protected IPhotographCameraParams FbInstance;
 
-		// Token: 0x04005FE7 RID: 24551
+		// Token: 0x0400655A RID: 25946
 		[Nullable(2)]
 		protected IPhotographCameraParams_SetValue PocoInterface;
 
-		// Token: 0x04005FE8 RID: 24552
+		// Token: 0x0400655B RID: 25947
 		private IPhotographCameraTransformAbsolute _CameraTransformCache;
 
-		// Token: 0x04005FE9 RID: 24553
+		// Token: 0x0400655C RID: 25948
 		private bool _CameraTransformInited;
 	}
 }

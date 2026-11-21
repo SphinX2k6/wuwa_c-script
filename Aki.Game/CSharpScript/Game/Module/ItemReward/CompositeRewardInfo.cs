@@ -3,60 +3,60 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057B9 RID: 22457
+	// Token: 0x02004790 RID: 18320
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CompositeRewardInfo : RewardInfo, ICompositeRewardInfo, IRewardInfo
 	{
-		// Token: 0x1700894A RID: 35146
-		// (get) Token: 0x06039194 RID: 233876 RVA: 0x00D8FD1E File Offset: 0x00D8DF1E
-		// (set) Token: 0x06039195 RID: 233877 RVA: 0x00D8FD26 File Offset: 0x00D8DF26
+		// Token: 0x17005D12 RID: 23826
+		// (get) Token: 0x0602E0A4 RID: 188580 RVA: 0x00CDEB56 File Offset: 0x00CDCD56
+		// (set) Token: 0x0602E0A5 RID: 188581 RVA: 0x00CDEB5E File Offset: 0x00CDCD5E
 		public new ERewardInfoType Type { get; set; } = ERewardInfoType.Composite;
 
-		// Token: 0x1700894B RID: 35147
-		// (get) Token: 0x06039196 RID: 233878 RVA: 0x00D8FD2F File Offset: 0x00D8DF2F
-		// (set) Token: 0x06039197 RID: 233879 RVA: 0x00D8FD37 File Offset: 0x00D8DF37
+		// Token: 0x17005D13 RID: 23827
+		// (get) Token: 0x0602E0A6 RID: 188582 RVA: 0x00CDEB67 File Offset: 0x00CDCD67
+		// (set) Token: 0x0602E0A7 RID: 188583 RVA: 0x00CDEB6F File Offset: 0x00CDCD6F
 		public int Id { get; set; }
 
-		// Token: 0x1700894C RID: 35148
-		// (get) Token: 0x06039198 RID: 233880 RVA: 0x00D8FD40 File Offset: 0x00D8DF40
-		// (set) Token: 0x06039199 RID: 233881 RVA: 0x00D8FD48 File Offset: 0x00D8DF48
+		// Token: 0x17005D14 RID: 23828
+		// (get) Token: 0x0602E0A8 RID: 188584 RVA: 0x00CDEB78 File Offset: 0x00CDCD78
+		// (set) Token: 0x0602E0A9 RID: 188585 RVA: 0x00CDEB80 File Offset: 0x00CDCD80
 		public bool IsSuccess { get; set; }
 
-		// Token: 0x1700894D RID: 35149
-		// (get) Token: 0x0603919A RID: 233882 RVA: 0x00D8FD51 File Offset: 0x00D8DF51
-		// (set) Token: 0x0603919B RID: 233883 RVA: 0x00D8FD59 File Offset: 0x00D8DF59
+		// Token: 0x17005D15 RID: 23829
+		// (get) Token: 0x0602E0AA RID: 188586 RVA: 0x00CDEB89 File Offset: 0x00CDCD89
+		// (set) Token: 0x0602E0AB RID: 188587 RVA: 0x00CDEB91 File Offset: 0x00CDCD91
 		public string Title { get; set; }
 
-		// Token: 0x1700894E RID: 35150
-		// (get) Token: 0x0603919C RID: 233884 RVA: 0x00D8FD62 File Offset: 0x00D8DF62
-		// (set) Token: 0x0603919D RID: 233885 RVA: 0x00D8FD6A File Offset: 0x00D8DF6A
+		// Token: 0x17005D16 RID: 23830
+		// (get) Token: 0x0602E0AC RID: 188588 RVA: 0x00CDEB9A File Offset: 0x00CDCD9A
+		// (set) Token: 0x0602E0AD RID: 188589 RVA: 0x00CDEBA2 File Offset: 0x00CDCDA2
 		public string ContinueText { get; set; }
 
-		// Token: 0x1700894F RID: 35151
-		// (get) Token: 0x0603919E RID: 233886 RVA: 0x00D8FD73 File Offset: 0x00D8DF73
-		// (set) Token: 0x0603919F RID: 233887 RVA: 0x00D8FD7B File Offset: 0x00D8DF7B
+		// Token: 0x17005D17 RID: 23831
+		// (get) Token: 0x0602E0AE RID: 188590 RVA: 0x00CDEBAB File Offset: 0x00CDCDAB
+		// (set) Token: 0x0602E0AF RID: 188591 RVA: 0x00CDEBB3 File Offset: 0x00CDCDB3
 		public string TitleIconPath { get; set; }
 
-		// Token: 0x17008950 RID: 35152
-		// (get) Token: 0x060391A0 RID: 233888 RVA: 0x00D8FD84 File Offset: 0x00D8DF84
-		// (set) Token: 0x060391A1 RID: 233889 RVA: 0x00D8FD8C File Offset: 0x00D8DF8C
+		// Token: 0x17005D18 RID: 23832
+		// (get) Token: 0x0602E0B0 RID: 188592 RVA: 0x00CDEBBC File Offset: 0x00CDCDBC
+		// (set) Token: 0x0602E0B1 RID: 188593 RVA: 0x00CDEBC4 File Offset: 0x00CDCDC4
 		public bool IsProgressVisible { get; set; }
 
-		// Token: 0x17008951 RID: 35153
-		// (get) Token: 0x060391A2 RID: 233890 RVA: 0x00D8FD95 File Offset: 0x00D8DF95
-		// (set) Token: 0x060391A3 RID: 233891 RVA: 0x00D8FD9D File Offset: 0x00D8DF9D
+		// Token: 0x17005D19 RID: 23833
+		// (get) Token: 0x0602E0B2 RID: 188594 RVA: 0x00CDEBCD File Offset: 0x00CDCDCD
+		// (set) Token: 0x0602E0B3 RID: 188595 RVA: 0x00CDEBD5 File Offset: 0x00CDCDD5
 		[Nullable(1)]
 		public string ProgressBarTitle { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x17008952 RID: 35154
-		// (get) Token: 0x060391A4 RID: 233892 RVA: 0x00D8FDA6 File Offset: 0x00D8DFA6
-		// (set) Token: 0x060391A5 RID: 233893 RVA: 0x00D8FDAE File Offset: 0x00D8DFAE
+		// Token: 0x17005D1A RID: 23834
+		// (get) Token: 0x0602E0B4 RID: 188596 RVA: 0x00CDEBDE File Offset: 0x00CDCDDE
+		// (set) Token: 0x0602E0B5 RID: 188597 RVA: 0x00CDEBE6 File Offset: 0x00CDCDE6
 		public int ProgressBarAnimationTime { get; set; }
 
-		// Token: 0x17008953 RID: 35155
-		// (get) Token: 0x060391A6 RID: 233894 RVA: 0x00D8FDB7 File Offset: 0x00D8DFB7
-		// (set) Token: 0x060391A7 RID: 233895 RVA: 0x00D8FDBF File Offset: 0x00D8DFBF
+		// Token: 0x17005D1B RID: 23835
+		// (get) Token: 0x0602E0B6 RID: 188598 RVA: 0x00CDEBEF File Offset: 0x00CDCDEF
+		// (set) Token: 0x0602E0B7 RID: 188599 RVA: 0x00CDEBF7 File Offset: 0x00CDCDF7
 		public bool IsItemVisible { get; set; }
 	}
 }

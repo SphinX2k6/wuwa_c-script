@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02003547 RID: 13639
+// Token: 0x02002ABC RID: 10940
 public class GraphNodeWithNoCyclicDependency : IGraphNodeWithNoCyclicDependency
 {
-	// Token: 0x17002988 RID: 10632
-	// (get) Token: 0x0601DF4D RID: 122701 RVA: 0x00865506 File Offset: 0x00863706
-	// (set) Token: 0x0601DF4E RID: 122702 RVA: 0x0086550E File Offset: 0x0086370E
+	// Token: 0x17002D21 RID: 11553
+	// (get) Token: 0x0601BC75 RID: 113781 RVA: 0x0088D13E File Offset: 0x0088B33E
+	// (set) Token: 0x0601BC76 RID: 113782 RVA: 0x0088D146 File Offset: 0x0088B346
 	public bool HasCycle { get; set; }
 }

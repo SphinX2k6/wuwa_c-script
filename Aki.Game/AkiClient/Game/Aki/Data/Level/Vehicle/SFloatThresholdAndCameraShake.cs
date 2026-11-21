@@ -7,36 +7,36 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Level.Vehicle
 {
-	// Token: 0x02003EFF RID: 16127
+	// Token: 0x020031BC RID: 12732
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Data/Level/Vehicle/SFloatThresholdAndCameraShake.SFloatThresholdAndCameraShake")]
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class SFloatThresholdAndCameraShake : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06028E15 RID: 167445 RVA: 0x009B6AEC File Offset: 0x009B4CEC
+		// Token: 0x0601F7B2 RID: 128946 RVA: 0x0092EBB4 File Offset: 0x0092CDB4
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SFloatThresholdAndCameraShake._ScriptStructPtr != 0) ? SFloatThresholdAndCameraShake._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Level/Vehicle/SFloatThresholdAndCameraShake.SFloatThresholdAndCameraShake", ref SFloatThresholdAndCameraShake._ScriptStructPtr);
 		}
 
-		// Token: 0x17006022 RID: 24610
-		// (get) Token: 0x06028E16 RID: 167446 RVA: 0x009B6B10 File Offset: 0x009B4D10
-		// (set) Token: 0x06028E17 RID: 167447 RVA: 0x009B6B20 File Offset: 0x009B4D20
+		// Token: 0x1700398F RID: 14735
+		// (get) Token: 0x0601F7B3 RID: 128947 RVA: 0x0092EBD8 File Offset: 0x0092CDD8
+		// (set) Token: 0x0601F7B4 RID: 128948 RVA: 0x0092EBE8 File Offset: 0x0092CDE8
 		public unsafe float Threshold
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFloatThresholdAndCameraShake.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SFloatThresholdAndCameraShake.__PropertyOffset_Threshold);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFloatThresholdAndCameraShake.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SFloatThresholdAndCameraShake.__PropertyOffset_Threshold) = value;
 			}
 		}
 
-		// Token: 0x17006023 RID: 24611
-		// (get) Token: 0x06028E18 RID: 167448 RVA: 0x009B6B31 File Offset: 0x009B4D31
-		// (set) Token: 0x06028E19 RID: 167449 RVA: 0x009B6B45 File Offset: 0x009B4D45
+		// Token: 0x17003990 RID: 14736
+		// (get) Token: 0x0601F7B5 RID: 128949 RVA: 0x0092EBF9 File Offset: 0x0092CDF9
+		// (set) Token: 0x0601F7B6 RID: 128950 RVA: 0x0092EC0D File Offset: 0x0092CE0D
 		[Nullable(new byte[]
 		{
 			0,
@@ -51,7 +51,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			})]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFloatThresholdAndCameraShake.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SFloatThresholdAndCameraShake.__PropertyOffset_CameraShakeAndForceFeedback);
 			}
 			[param: Nullable(new byte[]
 			{
@@ -60,68 +60,57 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			})]
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFloatThresholdAndCameraShake.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SFloatThresholdAndCameraShake.__PropertyOffset_CameraShakeAndForceFeedback) = value;
 			}
 		}
 
-		// Token: 0x06028E1A RID: 167450 RVA: 0x009B6B5A File Offset: 0x009B4D5A
+		// Token: 0x0601F7B7 RID: 128951 RVA: 0x0092EC22 File Offset: 0x0092CE22
 		public SFloatThresholdAndCameraShake()
 		{
 		}
 
-		// Token: 0x06028E1B RID: 167451 RVA: 0x009B6B62 File Offset: 0x009B4D62
-		public SFloatThresholdAndCameraShake(float Threshold, [Nullable(new byte[]
-		{
-			0,
-			1
-		})] TSubclassOf<BP_CameraShakeAndForceFeedback_C> CameraShakeAndForceFeedback)
-		{
-			this.Threshold = Threshold;
-			this.CameraShakeAndForceFeedback = CameraShakeAndForceFeedback;
-		}
-
-		// Token: 0x06028E1C RID: 167452 RVA: 0x009B6B78 File Offset: 0x009B4D78
+		// Token: 0x0601F7B8 RID: 128952 RVA: 0x0092EC2A File Offset: 0x0092CE2A
 		protected override IntPtr GetUStructPtr()
 		{
 			return SFloatThresholdAndCameraShake.StaticStruct();
 		}
 
-		// Token: 0x06028E1D RID: 167453 RVA: 0x009B6B84 File Offset: 0x009B4D84
+		// Token: 0x0601F7B9 RID: 128953 RVA: 0x0092EC36 File Offset: 0x0092CE36
 		[NullableContext(2)]
 		public SFloatThresholdAndCameraShake(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06028E1E RID: 167454 RVA: 0x009B6B8E File Offset: 0x009B4D8E
+		// Token: 0x0601F7BA RID: 128954 RVA: 0x0092EC40 File Offset: 0x0092CE40
 		public SFloatThresholdAndCameraShake(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06028E1F RID: 167455 RVA: 0x009B6B99 File Offset: 0x009B4D99
+		// Token: 0x0601F7BB RID: 128955 RVA: 0x0092EC4B File Offset: 0x0092CE4B
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SFloatThresholdAndCameraShake(Pointer, false, true);
 		}
 
-		// Token: 0x06028E20 RID: 167456 RVA: 0x009B6BA3 File Offset: 0x009B4DA3
+		// Token: 0x0601F7BC RID: 128956 RVA: 0x0092EC55 File Offset: 0x0092CE55
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SFloatThresholdAndCameraShake(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014E83 RID: 85635
+		// Token: 0x04010E28 RID: 69160
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Data/Level/Vehicle/SFloatThresholdAndCameraShake.SFloatThresholdAndCameraShake";
 
-		// Token: 0x04014E84 RID: 85636
+		// Token: 0x04010E29 RID: 69161
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014E85 RID: 85637
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010E2A RID: 69162
+		internal static int __PropertyOffset_Threshold;
 
-		// Token: 0x04014E86 RID: 85638
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010E2B RID: 69163
+		internal static int __PropertyOffset_CameraShakeAndForceFeedback;
 	}
 }

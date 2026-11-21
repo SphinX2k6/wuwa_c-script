@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x0200551B RID: 21787
+	// Token: 0x020044EE RID: 17646
 	internal class NpcIconPanel : UiPanelBase
 	{
-		// Token: 0x06037A4C RID: 227916 RVA: 0x00D35628 File Offset: 0x00D33828
+		// Token: 0x0602C91A RID: 182554 RVA: 0x00C833FC File Offset: 0x00C815FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,13 +24,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06037A4D RID: 227917 RVA: 0x00D35691 File Offset: 0x00D33891
+		// Token: 0x0602C91B RID: 182555 RVA: 0x00C83465 File Offset: 0x00C81665
 		protected override void OnStart()
 		{
 			this.LevelSequencer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06037A4E RID: 227918 RVA: 0x00D356A4 File Offset: 0x00D338A4
+		// Token: 0x0602C91C RID: 182556 RVA: 0x00C83478 File Offset: 0x00C81678
 		[NullableContext(1)]
 		public void SetIcon(string iconPath, Action successCb)
 		{
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			});
 		}
 
-		// Token: 0x06037A4F RID: 227919 RVA: 0x00D356E4 File Offset: 0x00D338E4
+		// Token: 0x0602C91D RID: 182557 RVA: 0x00C834B8 File Offset: 0x00C816B8
 		public void PlaySequence()
 		{
 			LevelSequencePlayer levelSequencer = this.LevelSequencer;
@@ -51,16 +51,16 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			levelSequencer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x0401D425 RID: 119845
+		// Token: 0x04017EA8 RID: 97960
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencer;
 
-		// Token: 0x0200B75A RID: 46938
+		// Token: 0x0200A185 RID: 41349
 		private enum ENpcChildComp
 		{
-			// Token: 0x0403784E RID: 227406
+			// Token: 0x04032279 RID: 205433
 			Item,
-			// Token: 0x0403784F RID: 227407
+			// Token: 0x0403227A RID: 205434
 			Icon
 		}
 	}

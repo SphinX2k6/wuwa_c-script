@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002D7A RID: 11642
+// Token: 0x020022D4 RID: 8916
 public interface IInstanceTipGridData
 {
-	// Token: 0x17002117 RID: 8471
-	// (get) Token: 0x060187A2 RID: 100258
-	// (set) Token: 0x060187A3 RID: 100259
+	// Token: 0x17002172 RID: 8562
+	// (get) Token: 0x06016044 RID: 90180
+	// (set) Token: 0x06016045 RID: 90181
 	int InstanceId { get; set; }
 
-	// Token: 0x17002118 RID: 8472
-	// (get) Token: 0x060187A4 RID: 100260
-	// (set) Token: 0x060187A5 RID: 100261
+	// Token: 0x17002173 RID: 8563
+	// (get) Token: 0x06016046 RID: 90182
+	// (set) Token: 0x06016047 RID: 90183
 	bool IsDouble { get; set; }
 }

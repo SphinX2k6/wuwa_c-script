@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064FC RID: 25852
+	// Token: 0x02006B6A RID: 27498
 	public class ICustomScreenBackgroundImageT
 	{
-		// Token: 0x1700C048 RID: 49224
-		// (get) Token: 0x0602CD95 RID: 183701 RVA: 0x0062949B File Offset: 0x0062769B
-		// (set) Token: 0x0602CD96 RID: 183702 RVA: 0x006294A3 File Offset: 0x006276A3
+		// Token: 0x1700C9D8 RID: 51672
+		// (get) Token: 0x0602F52B RID: 193835 RVA: 0x0067573B File Offset: 0x0067393B
+		// (set) Token: 0x0602F52C RID: 193836 RVA: 0x00675743 File Offset: 0x00673943
 		public ECustomScreenType Type { get; set; }
 
-		// Token: 0x1700C049 RID: 49225
-		// (get) Token: 0x0602CD97 RID: 183703 RVA: 0x006294AC File Offset: 0x006276AC
-		// (set) Token: 0x0602CD98 RID: 183704 RVA: 0x006294B4 File Offset: 0x006276B4
+		// Token: 0x1700C9D9 RID: 51673
+		// (get) Token: 0x0602F52D RID: 193837 RVA: 0x0067574C File Offset: 0x0067394C
+		// (set) Token: 0x0602F52E RID: 193838 RVA: 0x00675754 File Offset: 0x00673954
 		public string BackgroundImagePath { get; set; }
 
-		// Token: 0x0602CD99 RID: 183705 RVA: 0x006294BD File Offset: 0x006276BD
+		// Token: 0x0602F52F RID: 193839 RVA: 0x0067575D File Offset: 0x0067395D
 		public ICustomScreenBackgroundImageT()
 		{
 			this.Type = ECustomScreenType.Spine;

@@ -2,79 +2,79 @@
 
 namespace CSharpScript.Game.Module.MingSu
 {
-	// Token: 0x020053CE RID: 21454
+	// Token: 0x020043B1 RID: 17329
 	public static class MingSuDefine
 	{
-		// Token: 0x0401CF0E RID: 118542
+		// Token: 0x040179A6 RID: 96678
 		public const int EXP_BAR_ANIMATION_TIME = 1200;
 
-		// Token: 0x0401CF0F RID: 118543
+		// Token: 0x040179A7 RID: 96679
 		public const int MING_SU_ITEM_CONFIG_ID = 40040001;
 
-		// Token: 0x0401CF10 RID: 118544
+		// Token: 0x040179A8 RID: 96680
 		public const int MING_SU_POOL_CONFIG_ID = 1;
 
-		// Token: 0x0401CF11 RID: 118545
+		// Token: 0x040179A9 RID: 96681
 		public const int CHENG_XIAO_SHAN_POOL_CONFIG_ID = 2;
 
-		// Token: 0x0401CF12 RID: 118546
+		// Token: 0x040179AA RID: 96682
 		public const int DARK_COAST_POOL_CONFIG_ID = 3;
 
-		// Token: 0x0401CF13 RID: 118547
+		// Token: 0x040179AB RID: 96683
 		public const int PUPU_VILLAGE_POOL_CONFIG_ID = 4;
 
-		// Token: 0x0401CF14 RID: 118548
+		// Token: 0x040179AC RID: 96684
 		public const int PUPU_VILLAGE_QIQIU_POOL_CONFIG_ID = 5;
 
-		// Token: 0x0401CF15 RID: 118549
+		// Token: 0x040179AD RID: 96685
 		public const int LAHAILUOSHENGXIA_POOL_CONFIG_ID = 6;
 
-		// Token: 0x0401CF16 RID: 118550
+		// Token: 0x040179AE RID: 96686
 		public const int RILINGCOLLECT_POOL_CONFIG_ID = 7;
 
-		// Token: 0x0401CF17 RID: 118551
+		// Token: 0x040179AF RID: 96687
 		public const int MENGZHOU_POOL_CONFIG_ID = 8;
 
-		// Token: 0x0401CF18 RID: 118552
+		// Token: 0x040179B0 RID: 96688
 		public const int PLOTPARAM_NUM = 3;
 
-		// Token: 0x0401CF19 RID: 118553
+		// Token: 0x040179B1 RID: 96689
 		public const int DARK_COAST_HELP_ID = 113;
 
-		// Token: 0x0200B677 RID: 46711
+		// Token: 0x0200A0AF RID: 41135
 		public enum EMingSuShowState
 		{
-			// Token: 0x04037453 RID: 226387
+			// Token: 0x04031EA8 RID: 204456
 			Done,
-			// Token: 0x04037454 RID: 226388
+			// Token: 0x04031EA9 RID: 204457
 			OnGoing,
-			// Token: 0x04037455 RID: 226389
+			// Token: 0x04031EAA RID: 204458
 			NoStart,
-			// Token: 0x04037456 RID: 226390
+			// Token: 0x04031EAB RID: 204459
 			Finish
 		}
 
-		// Token: 0x0200B678 RID: 46712
+		// Token: 0x0200A0B0 RID: 41136
 		public enum EDragonPoolStatus
 		{
-			// Token: 0x04037458 RID: 226392
+			// Token: 0x04031EAD RID: 204461
 			UnActive,
-			// Token: 0x04037459 RID: 226393
+			// Token: 0x04031EAE RID: 204462
 			OnGoing,
-			// Token: 0x0403745A RID: 226394
+			// Token: 0x04031EAF RID: 204463
 			Finish
 		}
 
-		// Token: 0x0200B679 RID: 46713
+		// Token: 0x0200A0B1 RID: 41137
 		public enum EDarkCoastDeliveryLevelDataState
 		{
-			// Token: 0x0403745C RID: 226396
+			// Token: 0x04031EB1 RID: 204465
 			Lock,
-			// Token: 0x0403745D RID: 226397
+			// Token: 0x04031EB2 RID: 204466
 			UnLock,
-			// Token: 0x0403745E RID: 226398
+			// Token: 0x04031EB3 RID: 204467
 			Passed = 3,
-			// Token: 0x0403745F RID: 226399
+			// Token: 0x04031EB4 RID: 204468
 			Received
 		}
 	}

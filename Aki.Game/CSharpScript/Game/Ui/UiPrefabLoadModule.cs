@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046DA RID: 18138
+	// Token: 0x0200360A RID: 13834
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiPrefabLoadModule
 	{
-		// Token: 0x0602EC9F RID: 191647 RVA: 0x00AD5474 File Offset: 0x00AD3674
+		// Token: 0x060233D9 RID: 144345 RVA: 0x00A02F18 File Offset: 0x00A01118
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Ui
 			return <LoadPrefabAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602ECA0 RID: 191648 RVA: 0x00AD54D0 File Offset: 0x00AD36D0
+		// Token: 0x060233DA RID: 144346 RVA: 0x00A02F74 File Offset: 0x00A01174
 		public void Clear()
 		{
 			foreach (KeyValuePair<int, string> keyValuePair in this.PrefabIdSet)
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Ui
 			this.PrefabIdSet.Clear();
 		}
 
-		// Token: 0x0401974A RID: 104266
+		// Token: 0x04013DE8 RID: 81384
 		private readonly Dictionary<int, string> PrefabIdSet = new Dictionary<int, string>();
 	}
 }

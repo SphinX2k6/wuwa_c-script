@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045AF RID: 17839
+	// Token: 0x020034D7 RID: 13527
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharMaterialController : CharRenderBase
 	{
-		// Token: 0x0602E033 RID: 188467 RVA: 0x00A9856C File Offset: 0x00A9676C
+		// Token: 0x0602271D RID: 141085 RVA: 0x009C478C File Offset: 0x009C298C
 		public unsafe void PrintCurrentInfo()
 		{
 			string text = string.Empty;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Render
 			instance.Info(module, author, empty, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x0602E034 RID: 188468 RVA: 0x00A9863C File Offset: 0x00A9683C
+		// Token: 0x0602271E RID: 141086 RVA: 0x009C485C File Offset: 0x009C2A5C
 		public override void Start()
 		{
 			base.Start();
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Render
 			base.OnInitSuccess();
 		}
 
-		// Token: 0x0602E035 RID: 188469 RVA: 0x00A98724 File Offset: 0x00A96924
+		// Token: 0x0602271F RID: 141087 RVA: 0x009C4944 File Offset: 0x009C2B44
 		public bool GetRuntimeMaterialControllerValid(int id)
 		{
 			return this.AllMaterialControlRuntimeDataMap.ContainsKey(id);
 		}
 
-		// Token: 0x0602E036 RID: 188470 RVA: 0x00A98734 File Offset: 0x00A96934
+		// Token: 0x06022720 RID: 141088 RVA: 0x009C4954 File Offset: 0x009C2B54
 		public unsafe override void Update()
 		{
 			foreach (CharMaterialControlRuntimeData charMaterialControlRuntimeData in this.AllMaterialControlRuntimeDataMap.Values)
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E037 RID: 188471 RVA: 0x00A98984 File Offset: 0x00A96B84
+		// Token: 0x06022721 RID: 141089 RVA: 0x009C4BA4 File Offset: 0x009C2DA4
 		public void SetEffectProgress(float progress, int handleId)
 		{
 			CharMaterialControlRuntimeData charMaterialControlRuntimeData;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E038 RID: 188472 RVA: 0x00A989A8 File Offset: 0x00A96BA8
+		// Token: 0x06022722 RID: 141090 RVA: 0x009C4BC8 File Offset: 0x009C2DC8
 		public override void Destroy()
 		{
 			foreach (CharMaterialControlRuntimeData charMaterialControlRuntimeData in this.AllMaterialControlRuntimeDataMap.Values)
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Render
 			this.AllMaterialControlRuntimeDataMap = new Dictionary<int, CharMaterialControlRuntimeData>();
 		}
 
-		// Token: 0x0602E039 RID: 188473 RVA: 0x00A98A08 File Offset: 0x00A96C08
+		// Token: 0x06022723 RID: 141091 RVA: 0x009C4C28 File Offset: 0x009C2E28
 		public unsafe void RemoveSkeletalMeshMaterialControllerData(string skelName)
 		{
 			foreach (CharMaterialControlRuntimeData charMaterialControlRuntimeData in this.AllMaterialControlRuntimeDataMap.Values)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E03A RID: 188474 RVA: 0x00A98AD0 File Offset: 0x00A96CD0
+		// Token: 0x06022724 RID: 141092 RVA: 0x009C4CF0 File Offset: 0x009C2EF0
 		public override void OnResetRenderState()
 		{
 			if (this.AllMaterialControlRuntimeDataMap.Count > 0)
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Render
 			this.AllMaterialControlRuntimeDataMap.Clear();
 		}
 
-		// Token: 0x0602E03B RID: 188475 RVA: 0x00A98B84 File Offset: 0x00A96D84
+		// Token: 0x06022725 RID: 141093 RVA: 0x009C4DA4 File Offset: 0x009C2FA4
 		public bool RemoveMaterialControllerData(int handle)
 		{
 			CharMaterialControlRuntimeData charMaterialControlRuntimeData;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x0602E03C RID: 188476 RVA: 0x00A98BE4 File Offset: 0x00A96DE4
+		// Token: 0x06022726 RID: 141094 RVA: 0x009C4E04 File Offset: 0x009C3004
 		public bool RemoveMaterialControllerDataWithEnding(int handle)
 		{
 			CharMaterialControlRuntimeData charMaterialControlRuntimeData;
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x0602E03D RID: 188477 RVA: 0x00A98C1C File Offset: 0x00A96E1C
+		// Token: 0x06022727 RID: 141095 RVA: 0x009C4E3C File Offset: 0x009C303C
 		[NullableContext(2)]
 		public unsafe int AddMaterialControllerData(PD_CharacterControllerData_C data, UObject userData = null)
 		{
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Render
 			return runtimeDataIdGenerator;
 		}
 
-		// Token: 0x0602E03E RID: 188478 RVA: 0x00A98D2C File Offset: 0x00A96F2C
+		// Token: 0x06022728 RID: 141096 RVA: 0x009C4F4C File Offset: 0x009C314C
 		private void UpdateRuntimeDataEffectState()
 		{
 			List<CharMaterialControlRuntimeData> list = new List<CharMaterialControlRuntimeData>(this.AllMaterialControlRuntimeDataMap.Values);
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E03F RID: 188479 RVA: 0x00A98DAC File Offset: 0x00A96FAC
+		// Token: 0x06022729 RID: 141097 RVA: 0x009C4FCC File Offset: 0x009C31CC
 		public bool AddMaterialControllerDataDestroyCallback(int handle, Action<int> callback)
 		{
 			CharMaterialControlRuntimeData charMaterialControlRuntimeData;
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Render
 			return charMaterialControlRuntimeData.AddDestroyCallback(callback);
 		}
 
-		// Token: 0x0602E040 RID: 188480 RVA: 0x00A98DE0 File Offset: 0x00A96FE0
+		// Token: 0x0602272A RID: 141098 RVA: 0x009C5000 File Offset: 0x009C3200
 		public bool RemoveMaterialControllerDataDestroyCallback(int handle, Action<int> callback)
 		{
 			CharMaterialControlRuntimeData charMaterialControlRuntimeData;
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Render
 			return charMaterialControlRuntimeData.RemoveDestroyCallback(callback);
 		}
 
-		// Token: 0x0602E041 RID: 188481 RVA: 0x00A98E18 File Offset: 0x00A97018
+		// Token: 0x0602272B RID: 141099 RVA: 0x009C5038 File Offset: 0x009C3238
 		protected unsafe bool DealWithExtraMesh(PD_CharacterControllerData_C data, int handle)
 		{
 			if (data.SpecifiedBodyType != ECharacterBodySpecifiedType.ExtraBody)
@@ -351,27 +351,27 @@ namespace CSharpScript.Game.Render
 			return false;
 		}
 
-		// Token: 0x0602E042 RID: 188482 RVA: 0x00A98F79 File Offset: 0x00A97179
+		// Token: 0x0602272C RID: 141100 RVA: 0x009C5199 File Offset: 0x009C3399
 		public override int GetComponentId()
 		{
 			return 2;
 		}
 
-		// Token: 0x0602E043 RID: 188483 RVA: 0x00A98F7C File Offset: 0x00A9717C
+		// Token: 0x0602272D RID: 141101 RVA: 0x009C519C File Offset: 0x009C339C
 		public override string GetStatName()
 		{
 			return "CharMaterialController";
 		}
 
-		// Token: 0x04018907 RID: 100615
+		// Token: 0x04012F42 RID: 77634
 		[Nullable(2)]
 		public CharMaterialContainer MaterialContainer;
 
-		// Token: 0x04018908 RID: 100616
+		// Token: 0x04012F43 RID: 77635
 		[Nullable(2)]
 		public CharExtraMesh ExtraMesh;
 
-		// Token: 0x04018909 RID: 100617
+		// Token: 0x04012F44 RID: 77636
 		[Nullable(new byte[]
 		{
 			2,
@@ -379,23 +379,23 @@ namespace CSharpScript.Game.Render
 		})]
 		public Dictionary<int, CharMaterialControlRuntimeData> AllMaterialControlRuntimeDataMap;
 
-		// Token: 0x0401890A RID: 100618
+		// Token: 0x04012F45 RID: 77637
 		private int RuntimeDataIdGenerator;
 
-		// Token: 0x0401890B RID: 100619
+		// Token: 0x04012F46 RID: 77638
 		private readonly List<int> TempRemoveList = new List<int>();
 
-		// Token: 0x0401890C RID: 100620
+		// Token: 0x04012F47 RID: 77639
 		private string OwnerActorName = string.Empty;
 
-		// Token: 0x0401890D RID: 100621
+		// Token: 0x04012F48 RID: 77640
 		public bool EnableDebug;
 
-		// Token: 0x0401890E RID: 100622
+		// Token: 0x04012F49 RID: 77641
 		[Nullable(2)]
 		public PD_MaterialDebug_C DebugInfo;
 
-		// Token: 0x0401890F RID: 100623
+		// Token: 0x04012F4A RID: 77642
 		[Nullable(2)]
 		private Stat StatMaterialControllerTick;
 	}

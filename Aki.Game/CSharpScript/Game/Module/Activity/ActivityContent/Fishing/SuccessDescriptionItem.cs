@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200662B RID: 26155
+	// Token: 0x020055A9 RID: 21929
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 	})]
 	public class SuccessDescriptionItem : GridProxyAbstract<SingleText>
 	{
-		// Token: 0x06041913 RID: 268563 RVA: 0x00FE6D54 File Offset: 0x00FE4F54
+		// Token: 0x060365D8 RID: 222680 RVA: 0x00F2DE0C File Offset: 0x00F2C00C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,23 +28,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06041914 RID: 268564 RVA: 0x00FE6D9C File Offset: 0x00FE4F9C
+		// Token: 0x060365D9 RID: 222681 RVA: 0x00F2DE54 File Offset: 0x00F2C054
 		public void SetDescriptionText(SingleText text)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), text.TextId, text.Params);
 		}
 
-		// Token: 0x06041915 RID: 268565 RVA: 0x00FE6DBB File Offset: 0x00FE4FBB
+		// Token: 0x060365DA RID: 222682 RVA: 0x00F2DE73 File Offset: 0x00F2C073
 		public override void Refresh(SingleText data, bool isSelected, int gridIndex)
 		{
 			this.SetDescriptionText(data);
 		}
 
-		// Token: 0x0200C845 RID: 51269
+		// Token: 0x0200B227 RID: 45607
 		[NullableContext(0)]
 		private class EDescriptionNode
 		{
-			// Token: 0x0403C7F6 RID: 247798
+			// Token: 0x0403713B RID: 225595
 			public const int TextDescription = 0;
 		}
 	}

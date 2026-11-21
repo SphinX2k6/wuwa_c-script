@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.FilterSort.Sort.SortEntrance;
+using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.RoleUi.TabView.VisionSubView;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.UiComponent;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
@@ -15,17 +16,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using FilterDefine;
 using UnrealEngine;
 
-// Token: 0x020024C5 RID: 9413
+// Token: 0x020019AC RID: 6572
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionEquipmentView : UiViewBase
 {
-	// Token: 0x06012DF1 RID: 77297 RVA: 0x004A8CFC File Offset: 0x004A6EFC
+	// Token: 0x060102B1 RID: 66225 RVA: 0x004B68B0 File Offset: 0x004B4AB0
 	public VisionEquipmentView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06012DF2 RID: 77298 RVA: 0x004A8D90 File Offset: 0x004A6F90
+	// Token: 0x060102B2 RID: 66226 RVA: 0x004B6944 File Offset: 0x004B4B44
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -78,7 +79,7 @@ public class VisionEquipmentView : UiViewBase
 		};
 	}
 
-	// Token: 0x06012DF3 RID: 77299 RVA: 0x004A917C File Offset: 0x004A737C
+	// Token: 0x060102B3 RID: 66227 RVA: 0x004B6D30 File Offset: 0x004B4F30
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.PhantomPersonalSkillActive, new Action<int>(this.RefreshPhantom));
@@ -87,14 +88,14 @@ public class VisionEquipmentView : UiViewBase
 		EventSystem.Instance.Add(EEventName.PhantomEquip, new Action(this.OnPhantomEquip));
 		EventSystem.Instance.Add<int, int, bool>(EEventName.PhantomEquipWithSourceAndTargetPos, new Action<int, int, bool>(this.OnEquipEquipment));
 		EventSystem.Instance.Add(EEventName.VisionFilterMonster, new Action(this.OnVisionFilterMonster));
-		EventSystem.Instance.Add<UiCameraAnimationDefine.IFinishData>(EEventName.OnPlayCameraAnimationFinish, new Action<UiCameraAnimationDefine.IFinishData>(this.OnCameraFinish));
+		EventSystem.Instance.Add<UiCameraDefine.IFinishData>(EEventName.OnPlayCameraAnimationFinish, new Action<UiCameraDefine.IFinishData>(this.OnCameraFinish));
 		EventSystem.Instance.Add<bool>(EEventName.VisionSkinViewClose, new Action<bool>(this.VisionSkinViewClose));
 		EventSystem.Instance.Add<IReadOnlyList<Aki.Protocol.PhantomItem>, bool>(EEventName.OnAddPhantomItemList, new Action<IReadOnlyList<Aki.Protocol.PhantomItem>, bool>(this.OnAddPhantomItemList));
 		EventSystem.Instance.Add<IReadOnlyList<int>>(EEventName.OnRemovePhantomItem, new Action<IReadOnlyList<int>>(this.OnRemovePhantomItem));
 		EventSystem.Instance.Add<int, int>(EEventName.OnPhantomStackMerge, new Action<int, int>(this.OnPhantomStackMerge));
 	}
 
-	// Token: 0x06012DF4 RID: 77300 RVA: 0x004A92C0 File Offset: 0x004A74C0
+	// Token: 0x060102B4 RID: 66228 RVA: 0x004B6E74 File Offset: 0x004B5074
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.PhantomPersonalSkillActive, new Action<int>(this.RefreshPhantom));
@@ -103,14 +104,14 @@ public class VisionEquipmentView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.PhantomEquip, new Action(this.OnPhantomEquip));
 		EventSystem.Instance.Remove<int, int, bool>(EEventName.PhantomEquipWithSourceAndTargetPos, new Action<int, int, bool>(this.OnEquipEquipment));
 		EventSystem.Instance.Remove(EEventName.VisionFilterMonster, new Action(this.OnVisionFilterMonster));
-		EventSystem.Instance.Remove<UiCameraAnimationDefine.IFinishData>(EEventName.OnPlayCameraAnimationFinish, new Action<UiCameraAnimationDefine.IFinishData>(this.OnCameraFinish));
+		EventSystem.Instance.Remove<UiCameraDefine.IFinishData>(EEventName.OnPlayCameraAnimationFinish, new Action<UiCameraDefine.IFinishData>(this.OnCameraFinish));
 		EventSystem.Instance.Remove<bool>(EEventName.VisionSkinViewClose, new Action<bool>(this.VisionSkinViewClose));
 		EventSystem.Instance.Remove(EEventName.OnAddPhantomItemList, new Action<IReadOnlyList<Aki.Protocol.PhantomItem>, bool>(this.OnAddPhantomItemList));
 		EventSystem.Instance.Remove(EEventName.OnRemovePhantomItem, new Action<IReadOnlyList<int>>(this.OnRemovePhantomItem));
 		EventSystem.Instance.Remove(EEventName.OnPhantomStackMerge, new Action<int, int>(this.OnPhantomStackMerge));
 	}
 
-	// Token: 0x06012DF5 RID: 77301 RVA: 0x004A9404 File Offset: 0x004A7604
+	// Token: 0x060102B5 RID: 66229 RVA: 0x004B6FB8 File Offset: 0x004B51B8
 	protected override void OnStart()
 	{
 		this.InitUiBlur();
@@ -159,7 +160,7 @@ public class VisionEquipmentView : UiViewBase
 		base.GetButton(32).RootUIComp.Get().SetUIActive(FunctionModel.Instance.IsOpen(10024001));
 	}
 
-	// Token: 0x06012DF6 RID: 77302 RVA: 0x004A963A File Offset: 0x004A783A
+	// Token: 0x060102B6 RID: 66230 RVA: 0x004B71EE File Offset: 0x004B53EE
 	private void InitUiBlur()
 	{
 		AUIBaseActor rootActor = this.RootActor;
@@ -170,7 +171,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012DF7 RID: 77303 RVA: 0x004A9678 File Offset: 0x004A7878
+	// Token: 0x060102B7 RID: 66231 RVA: 0x004B722C File Offset: 0x004B542C
 	protected override void OnHandlePostLoadScene(bool isSceneLoad)
 	{
 		if (this.PreSelectMeshId <= 0)
@@ -196,7 +197,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012DF8 RID: 77304 RVA: 0x004A96EC File Offset: 0x004A78EC
+	// Token: 0x060102B8 RID: 66232 RVA: 0x004B72A0 File Offset: 0x004B54A0
 	private void SequenceFinishEvent(string sequenceName)
 	{
 		if (sequenceName == "ContrastSwitch")
@@ -205,7 +206,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012DF9 RID: 77305 RVA: 0x004A970E File Offset: 0x004A790E
+	// Token: 0x060102B9 RID: 66233 RVA: 0x004B72C2 File Offset: 0x004B54C2
 	private void OnDeselectMainPhantomCallback()
 	{
 		FilterEntrance<IPhantomItemData> filterEntrance = this.FilterEntrance;
@@ -220,7 +221,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshSelectAllToggleState();
 	}
 
-	// Token: 0x06012DFA RID: 77306 RVA: 0x004A9740 File Offset: 0x004A7940
+	// Token: 0x060102BA RID: 66234 RVA: 0x004B72F4 File Offset: 0x004B54F4
 	private void OnMainPhantomFilterChanged(IMainPhantomFilterChangedInfo info)
 	{
 		if (info.IsDeselect)
@@ -239,7 +240,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012DFB RID: 77307 RVA: 0x004A9780 File Offset: 0x004A7980
+	// Token: 0x060102BB RID: 66235 RVA: 0x004B7334 File Offset: 0x004B5534
 	private void OnSelectAllCallback(List<int> fetterGroupIds, bool isSelectAll)
 	{
 		FilterEntrance<IPhantomItemData> filterEntrance = this.FilterEntrance;
@@ -249,10 +250,15 @@ public class VisionEquipmentView : UiViewBase
 		}
 		if (isSelectAll)
 		{
-			List<int> list = (from id in fetterGroupIds
-			select this.FetterSuitFilterArray.IndexOf(id) into idx
-			where idx > 0
-			select idx).ToList<int>();
+			List<int> list = new List<int>();
+			foreach (int item in fetterGroupIds)
+			{
+				int num = this.FetterSuitFilterArray.IndexOf(item);
+				if (num > 0)
+				{
+					list.Add(num);
+				}
+			}
 			MultiSelectDropDown<int, int> multiSelectDropDown = this.MultiSelectDropDown;
 			List<int> selectedIndices;
 			if (list.Count <= 0)
@@ -276,7 +282,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshSelectAllToggleState();
 	}
 
-	// Token: 0x06012DFC RID: 77308 RVA: 0x004A9828 File Offset: 0x004A7A28
+	// Token: 0x060102BC RID: 66236 RVA: 0x004B73F8 File Offset: 0x004B55F8
 	private void RefreshSelectAllToggleState()
 	{
 		if (this.VisionEquipmentRecommendItem == null)
@@ -287,7 +293,7 @@ public class VisionEquipmentView : UiViewBase
 		this.VisionEquipmentRecommendItem.RefreshSelectAllToggleState(selectedFetterGroupIds);
 	}
 
-	// Token: 0x06012DFD RID: 77309 RVA: 0x004A9854 File Offset: 0x004A7A54
+	// Token: 0x060102BD RID: 66237 RVA: 0x004B7424 File Offset: 0x004B5624
 	private void OnChangeSelectRecommendAttr()
 	{
 		if (this.InitState)
@@ -323,7 +329,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshSelectAllToggleState();
 	}
 
-	// Token: 0x06012DFE RID: 77310 RVA: 0x004A9904 File Offset: 0x004A7B04
+	// Token: 0x060102BE RID: 66238 RVA: 0x004B74D4 File Offset: 0x004B56D4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionEquipmentView.<OnBeforeStartAsync>d__75 <OnBeforeStartAsync>d__;
@@ -334,7 +340,7 @@ public class VisionEquipmentView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012DFF RID: 77311 RVA: 0x004A9948 File Offset: 0x004A7B48
+	// Token: 0x060102BF RID: 66239 RVA: 0x004B7518 File Offset: 0x004B5718
 	private void InitDetailItem()
 	{
 		this.VisionDetailComponent.GetDetailUnderComponent().SetRightButtonClick(new Action(this.OnClickLevelUpButton));
@@ -344,7 +350,7 @@ public class VisionEquipmentView : UiViewBase
 		this.VisionDetailComponentCompare.SetActive(true);
 	}
 
-	// Token: 0x06012E00 RID: 77312 RVA: 0x004A99B4 File Offset: 0x004A7BB4
+	// Token: 0x060102C0 RID: 66240 RVA: 0x004B7584 File Offset: 0x004B5784
 	private UniTask InitVisionTabItem()
 	{
 		VisionEquipmentView.<InitVisionTabItem>d__77 <InitVisionTabItem>d__;
@@ -355,7 +361,7 @@ public class VisionEquipmentView : UiViewBase
 		return <InitVisionTabItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012E01 RID: 77313 RVA: 0x004A99F8 File Offset: 0x004A7BF8
+	// Token: 0x060102C1 RID: 66241 RVA: 0x004B75C8 File Offset: 0x004B57C8
 	private void InitDropDown()
 	{
 		List<VisionFetterRecommendInfo> recommendInfoList = VisionRecommendModel.Instance.GetRoleFetterRecommendInfo(this.RoleId);
@@ -396,13 +402,13 @@ public class VisionEquipmentView : UiViewBase
 		});
 	}
 
-	// Token: 0x06012E02 RID: 77314 RVA: 0x004A9B24 File Offset: 0x004A7D24
+	// Token: 0x060102C2 RID: 66242 RVA: 0x004B76F4 File Offset: 0x004B58F4
 	private void OnSuitToggled(int index, bool isSelected)
 	{
 		this.DropDownDirty = true;
 		if (index == 0 && isSelected)
 		{
-			using (List<int>.Enumerator enumerator = this.MultiSelectDropDown.GetSelectedIndices().ToList<int>().GetEnumerator())
+			using (IEnumerator<int> enumerator = this.MultiSelectDropDown.GetSelectedIndices().GetEnumerator())
 			{
 				while (enumerator.MoveNext())
 				{
@@ -412,21 +418,21 @@ public class VisionEquipmentView : UiViewBase
 						this.MultiSelectDropDown.ToggleItem(num, false);
 					}
 				}
-				goto IL_80;
+				goto IL_75;
 			}
 		}
 		if (index != 0 && isSelected && this.MultiSelectDropDown.GetSelectedIndices().Contains(0))
 		{
 			this.MultiSelectDropDown.ToggleItem(0, false);
 		}
-		IL_80:
+		IL_75:
 		if (this.MultiSelectDropDown.GetSelectedIndices().Count == 0)
 		{
 			this.MultiSelectDropDown.ToggleItem(0, true);
 		}
 	}
 
-	// Token: 0x06012E03 RID: 77315 RVA: 0x004A9BE0 File Offset: 0x004A7DE0
+	// Token: 0x060102C3 RID: 66243 RVA: 0x004B77A8 File Offset: 0x004B59A8
 	private void OnDropDownClose(List<int> indices)
 	{
 		if (this.InitState && this.DropDownDirty)
@@ -446,13 +452,13 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshSelectAllToggleState();
 	}
 
-	// Token: 0x06012E04 RID: 77316 RVA: 0x004A9C48 File Offset: 0x004A7E48
+	// Token: 0x060102C4 RID: 66244 RVA: 0x004B7810 File Offset: 0x004B5A10
 	private int GetDropDownTextId(int data)
 	{
 		return data;
 	}
 
-	// Token: 0x06012E05 RID: 77317 RVA: 0x004A9C4B File Offset: 0x004A7E4B
+	// Token: 0x060102C5 RID: 66245 RVA: 0x004B7813 File Offset: 0x004B5A13
 	private VisionEquipmentDropDownItem CreateDropDownItem(UUIItem uiItem, int data)
 	{
 		VisionEquipmentDropDownItem visionEquipmentDropDownItem = new VisionEquipmentDropDownItem(uiItem);
@@ -460,13 +466,13 @@ public class VisionEquipmentView : UiViewBase
 		return visionEquipmentDropDownItem;
 	}
 
-	// Token: 0x06012E06 RID: 77318 RVA: 0x004A9C5F File Offset: 0x004A7E5F
+	// Token: 0x060102C6 RID: 66246 RVA: 0x004B7827 File Offset: 0x004B5A27
 	private VisionEquipmentMultiSelectDropDownTitleItem CreateTitleItem(UUIItem uiItem)
 	{
 		return new VisionEquipmentMultiSelectDropDownTitleItem(uiItem);
 	}
 
-	// Token: 0x06012E07 RID: 77319 RVA: 0x004A9C68 File Offset: 0x004A7E68
+	// Token: 0x060102C7 RID: 66247 RVA: 0x004B7830 File Offset: 0x004B5A30
 	private List<int> GetSelectedFetterGroupIds()
 	{
 		MultiSelectDropDown<int, int> multiSelectDropDown = this.MultiSelectDropDown;
@@ -487,7 +493,7 @@ public class VisionEquipmentView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06012E08 RID: 77320 RVA: 0x004A9CF8 File Offset: 0x004A7EF8
+	// Token: 0x060102C8 RID: 66248 RVA: 0x004B78C0 File Offset: 0x004B5AC0
 	private void InitCostTab()
 	{
 		int num = 23;
@@ -517,7 +523,7 @@ public class VisionEquipmentView : UiViewBase
 		this.StaticTabComponent.SelectToggleByIndex(0, true);
 	}
 
-	// Token: 0x06012E09 RID: 77321 RVA: 0x004A9DAB File Offset: 0x004A7FAB
+	// Token: 0x060102C9 RID: 66249 RVA: 0x004B7973 File Offset: 0x004B5B73
 	private CostTabItem TabItemProxyCreate(UUIItem uiItem, int index)
 	{
 		CostTabItem costTabItem = new CostTabItem(uiItem);
@@ -525,20 +531,20 @@ public class VisionEquipmentView : UiViewBase
 		return costTabItem;
 	}
 
-	// Token: 0x06012E0A RID: 77322 RVA: 0x004A9DB9 File Offset: 0x004A7FB9
+	// Token: 0x060102CA RID: 66250 RVA: 0x004B7981 File Offset: 0x004B5B81
 	private void ToggleCallBack(int index)
 	{
 		this.CurrentCost = this.CostArray[index];
 		this.VisionEquipmentRecommendItem.ChangeCost(this.CurrentCost, this.RoleId);
 	}
 
-	// Token: 0x06012E0B RID: 77323 RVA: 0x004A9DE4 File Offset: 0x004A7FE4
+	// Token: 0x060102CB RID: 66251 RVA: 0x004B79AC File Offset: 0x004B5BAC
 	private void OnSimplyButtonClick(EToggleState toggleState)
 	{
 		PhantomBattleModel.Instance.SaveIfSimpleState(1, toggleState != EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x06012E0C RID: 77324 RVA: 0x004A9DF8 File Offset: 0x004A7FF8
+	// Token: 0x060102CC RID: 66252 RVA: 0x004B79C0 File Offset: 0x004B5BC0
 	private void OnMonsterSkinBtnClick()
 	{
 		VisionSkinViewOpenParam visionSkinViewOpenParam = new VisionSkinViewOpenParam();
@@ -549,10 +555,10 @@ public class VisionEquipmentView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.VisionSkinView, param, null);
 	}
 
-	// Token: 0x06012E0D RID: 77325 RVA: 0x004A9E48 File Offset: 0x004A8048
-	private void OnCameraFinish(UiCameraAnimationDefine.IFinishData finishData)
+	// Token: 0x060102CD RID: 66253 RVA: 0x004B7A10 File Offset: 0x004B5C10
+	private void OnCameraFinish(UiCameraDefine.IFinishData finishData)
 	{
-		if (finishData.ToHandleData.ViewName != EUiViewName.VisionEquipmentView)
+		if (finishData.ToHandleData.GetViewName() != EUiViewName.VisionEquipmentView)
 		{
 			return;
 		}
@@ -567,7 +573,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E0E RID: 77326 RVA: 0x004A9EA8 File Offset: 0x004A80A8
+	// Token: 0x060102CE RID: 66254 RVA: 0x004B7A70 File Offset: 0x004B5C70
 	private void VisionSkinViewClose(bool skinChanged)
 	{
 		if (!skinChanged)
@@ -579,7 +585,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshMesh(currentMeshId, false);
 	}
 
-	// Token: 0x06012E0F RID: 77327 RVA: 0x004A9ED0 File Offset: 0x004A80D0
+	// Token: 0x060102CF RID: 66255 RVA: 0x004B7A98 File Offset: 0x004B5C98
 	private void InitCurrentSelectVision()
 	{
 		if (this.PresetSelectIndexInternal >= 0)
@@ -601,7 +607,7 @@ public class VisionEquipmentView : UiViewBase
 		this.SetCurrentSelectPhantomData(this.GetCurrentSelectIndexPhantomData((int)this.CurrentSelectIndex));
 	}
 
-	// Token: 0x06012E10 RID: 77328 RVA: 0x004A9F4C File Offset: 0x004A814C
+	// Token: 0x060102D0 RID: 66256 RVA: 0x004B7B14 File Offset: 0x004B5D14
 	private void TryUnbindConfirmButtonRedDot()
 	{
 		if (this.CurrentConfirmButtonRedDotUniqueId > 0)
@@ -611,7 +617,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E11 RID: 77329 RVA: 0x004A9F78 File Offset: 0x004A8178
+	// Token: 0x060102D1 RID: 66257 RVA: 0x004B7B40 File Offset: 0x004B5D40
 	private void RefreshConfirmButtonRedDot()
 	{
 		this.TryUnbindConfirmButtonRedDot();
@@ -622,7 +628,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E12 RID: 77330 RVA: 0x004A9FB4 File Offset: 0x004A81B4
+	// Token: 0x060102D2 RID: 66258 RVA: 0x004B7B7C File Offset: 0x004B5D7C
 	private void ShowDefaultElement()
 	{
 		this.RefreshView(this.CurrentSelectPhantomData);
@@ -630,7 +636,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshPhantomClickState();
 	}
 
-	// Token: 0x06012E13 RID: 77331 RVA: 0x004A9FE8 File Offset: 0x004A81E8
+	// Token: 0x060102D3 RID: 66259 RVA: 0x004B7BB0 File Offset: 0x004B5DB0
 	private void OnClickEquipButton()
 	{
 		if (this.CurrentSelectPhantomData == null || PhantomBattleModel.Instance.GetPhantomBattleData(this.CurrentSelectPhantomData.GetUniqueId()) == null)
@@ -653,20 +659,20 @@ public class VisionEquipmentView : UiViewBase
 		this.DoEquip(this.CurrentSelectPhantomData, (int)this.CurrentSelectIndex, doFunction);
 	}
 
-	// Token: 0x06012E14 RID: 77332 RVA: 0x004AA095 File Offset: 0x004A8295
+	// Token: 0x060102D4 RID: 66260 RVA: 0x004B7C5D File Offset: 0x004B5E5D
 	private void SetPressItemAlpha(float alpha)
 	{
 		base.GetItem(18).SetAlpha(alpha);
 		this.LongPressItemAlpha = alpha;
 	}
 
-	// Token: 0x06012E15 RID: 77333 RVA: 0x004AA0AC File Offset: 0x004A82AC
+	// Token: 0x060102D5 RID: 66261 RVA: 0x004B7C74 File Offset: 0x004B5E74
 	private void SetPressItemShowState(bool state)
 	{
 		base.GetItem(18).SetUIActive(state);
 	}
 
-	// Token: 0x06012E16 RID: 77334 RVA: 0x004AA0BC File Offset: 0x004A82BC
+	// Token: 0x060102D6 RID: 66262 RVA: 0x004B7C84 File Offset: 0x004B5E84
 	private void DoEquip(PhantomBattleData phantomData, int targetIndex, Action doFunction)
 	{
 		if (!this.CheckCost(phantomData, targetIndex))
@@ -677,7 +683,7 @@ public class VisionEquipmentView : UiViewBase
 		this.TryEquip(phantomData, targetIndex, doFunction);
 	}
 
-	// Token: 0x06012E17 RID: 77335 RVA: 0x004AA0DC File Offset: 0x004A82DC
+	// Token: 0x060102D7 RID: 66263 RVA: 0x004B7CA4 File Offset: 0x004B5EA4
 	private bool CheckCost(PhantomBattleData phantomData, int targetIndex)
 	{
 		int? equipRole = PhantomBattleController.Instance.GetEquipRole(phantomData.GetUniqueId());
@@ -711,7 +717,7 @@ public class VisionEquipmentView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x06012E18 RID: 77336 RVA: 0x004AA1D8 File Offset: 0x004A83D8
+	// Token: 0x060102D8 RID: 66264 RVA: 0x004B7DA0 File Offset: 0x004B5FA0
 	private void TryShowMaxCost()
 	{
 		if (this.GetCostMax() < PhantomBattleConfig.Instance.GetVisionReachableCostMax())
@@ -738,7 +744,7 @@ public class VisionEquipmentView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew2);
 	}
 
-	// Token: 0x06012E19 RID: 77337 RVA: 0x004AA248 File Offset: 0x004A8448
+	// Token: 0x060102D9 RID: 66265 RVA: 0x004B7E10 File Offset: 0x004B6010
 	private void RefreshCostText()
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(this.RoleId);
@@ -805,7 +811,7 @@ public class VisionEquipmentView : UiViewBase
 		base.GetText(5).SetColor(FColor.FromHex(hexStr2));
 	}
 
-	// Token: 0x06012E1A RID: 77338 RVA: 0x004AA464 File Offset: 0x004A8664
+	// Token: 0x060102DA RID: 66266 RVA: 0x004B802C File Offset: 0x004B622C
 	private void OnClickLevelUpButton()
 	{
 		VisionIntensifyViewPassData visionIntensifyViewPassData = new VisionIntensifyViewPassData
@@ -818,7 +824,7 @@ public class VisionEquipmentView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.VisionIntensifyView, visionIntensifyViewPassData, null);
 	}
 
-	// Token: 0x06012E1B RID: 77339 RVA: 0x004AA4B8 File Offset: 0x004A86B8
+	// Token: 0x060102DB RID: 66267 RVA: 0x004B8080 File Offset: 0x004B6280
 	private void OnClickJumpVisionRecoveryButton()
 	{
 		this.PreSelectMeshId = this.CurrentMeshId;
@@ -826,7 +832,7 @@ public class VisionEquipmentView : UiViewBase
 		CalabashController.Instance.JumpToCalabashRootView(EUiTabViewName.VisionRecoveryTabView, null);
 	}
 
-	// Token: 0x06012E1C RID: 77340 RVA: 0x004AA4DC File Offset: 0x004A86DC
+	// Token: 0x060102DC RID: 66268 RVA: 0x004B80A4 File Offset: 0x004B62A4
 	private void OnClickRecommendToggle(EToggleState toggleState)
 	{
 		if (this.CurrentCompareState)
@@ -841,7 +847,7 @@ public class VisionEquipmentView : UiViewBase
 		this.VisionEquipmentRecommendItem.Hide(null);
 	}
 
-	// Token: 0x06012E1D RID: 77341 RVA: 0x004AA517 File Offset: 0x004A8717
+	// Token: 0x060102DD RID: 66269 RVA: 0x004B80DF File Offset: 0x004B62DF
 	private void OnClickCompareButton()
 	{
 		if (base.GetExtendToggle(34).GetToggleState() == EToggleState.ETT_Checked)
@@ -852,7 +858,7 @@ public class VisionEquipmentView : UiViewBase
 		this.OnCompareButtonClicked();
 	}
 
-	// Token: 0x06012E1E RID: 77342 RVA: 0x004AA550 File Offset: 0x004A8750
+	// Token: 0x060102DE RID: 66270 RVA: 0x004B8118 File Offset: 0x004B6318
 	private void OnCompareButtonClicked()
 	{
 		this.CurrentCompareState = !this.CurrentCompareState;
@@ -887,7 +893,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshVisionDetailCompare();
 	}
 
-	// Token: 0x06012E1F RID: 77343 RVA: 0x004AA65C File Offset: 0x004A885C
+	// Token: 0x060102DF RID: 66271 RVA: 0x004B8224 File Offset: 0x004B6424
 	private void RefreshVisionDetailCompare()
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(this.RoleId);
@@ -907,7 +913,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E20 RID: 77344 RVA: 0x004AA717 File Offset: 0x004A8917
+	// Token: 0x060102E0 RID: 66272 RVA: 0x004B82DF File Offset: 0x004B64DF
 	private void RefreshUiBlur(bool state)
 	{
 		if (this.UiBlur != null)
@@ -916,7 +922,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E21 RID: 77345 RVA: 0x004AA730 File Offset: 0x004A8930
+	// Token: 0x060102E1 RID: 66273 RVA: 0x004B82F8 File Offset: 0x004B64F8
 	private VisionMediumItemGrid InitItem()
 	{
 		VisionMediumItemGrid visionMediumItemGrid = new VisionMediumItemGrid();
@@ -930,7 +936,7 @@ public class VisionEquipmentView : UiViewBase
 		return visionMediumItemGrid;
 	}
 
-	// Token: 0x06012E22 RID: 77346 RVA: 0x004AA7A9 File Offset: 0x004A89A9
+	// Token: 0x060102E2 RID: 66274 RVA: 0x004B8371 File Offset: 0x004B6571
 	private void OnItemRefresh(VisionMediumItemGrid item)
 	{
 		if (item.CheckSelectedState(this.CurrentSelectPhantomData))
@@ -940,7 +946,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E23 RID: 77347 RVA: 0x004AA7D7 File Offset: 0x004A89D7
+	// Token: 0x060102E3 RID: 66275 RVA: 0x004B839F File Offset: 0x004B659F
 	private void SetCurrentSelectPhantomData(PhantomBattleData data)
 	{
 		this.CurrentSelectPhantomData = data;
@@ -949,7 +955,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshConfirmButtonRedDot();
 	}
 
-	// Token: 0x06012E24 RID: 77348 RVA: 0x004AA7F2 File Offset: 0x004A89F2
+	// Token: 0x060102E4 RID: 66276 RVA: 0x004B83BA File Offset: 0x004B65BA
 	private void ClearPhantomClickTick()
 	{
 		if (this.PhantomClickTick != -1)
@@ -959,7 +965,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E25 RID: 77349 RVA: 0x004AA818 File Offset: 0x004A8A18
+	// Token: 0x060102E5 RID: 66277 RVA: 0x004B83E0 File Offset: 0x004B65E0
 	private void OnPhantomPointerDown(VisionMediumItemGrid item, PhantomBattleData data)
 	{
 		this.ClearPhantomClickTick();
@@ -980,7 +986,7 @@ public class VisionEquipmentView : UiViewBase
 		this.PhantomClickTick = TickSystem.Instance.Add(new Action<float>(this.OnPhantomPointerTick), "RoleVisionAnimation", ETickingGroup.TG_PrePhysics, true, 0, true).Id;
 	}
 
-	// Token: 0x06012E26 RID: 77350 RVA: 0x004AA8F0 File Offset: 0x004A8AF0
+	// Token: 0x060102E6 RID: 66278 RVA: 0x004B84B8 File Offset: 0x004B66B8
 	private void RefreshLongPressItemPosition()
 	{
 		FVector? pointerEventDataPosition = LguiEventSystemManager.Instance.GetPointerEventDataPosition(0);
@@ -998,7 +1004,7 @@ public class VisionEquipmentView : UiViewBase
 		item.SetLGUISpaceAbsolutePosition(fvector);
 	}
 
-	// Token: 0x06012E27 RID: 77351 RVA: 0x004AA9B8 File Offset: 0x004A8BB8
+	// Token: 0x060102E7 RID: 66279 RVA: 0x004B8580 File Offset: 0x004B6780
 	[NullableContext(2)]
 	private void OnPhantomPointerUp(VisionMediumItemGrid item, PhantomBattleData data)
 	{
@@ -1018,7 +1024,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E28 RID: 77352 RVA: 0x004AAA15 File Offset: 0x004A8C15
+	// Token: 0x060102E8 RID: 66280 RVA: 0x004B85DD File Offset: 0x004B67DD
 	private void ClearScrollerMoveTick()
 	{
 		if (this.ScrollerTickId != -1)
@@ -1028,7 +1034,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E29 RID: 77353 RVA: 0x004AAA38 File Offset: 0x004A8C38
+	// Token: 0x060102E9 RID: 66281 RVA: 0x004B8600 File Offset: 0x004B6800
 	private void OnPhantomPointerTick(float _)
 	{
 		this.PressTime += Time.Instance.DeltaTime;
@@ -1079,7 +1085,7 @@ public class VisionEquipmentView : UiViewBase
 		base.GetSprite(19).SetFillAmount(this.FillPressTime / this.LongPressTime);
 	}
 
-	// Token: 0x06012E2A RID: 77354 RVA: 0x004AABF4 File Offset: 0x004A8DF4
+	// Token: 0x060102EA RID: 66282 RVA: 0x004B87BC File Offset: 0x004B69BC
 	private void CheckPhantomsScrollerItemMove(float _)
 	{
 		bool flag = LguiEventSystemManager.Instance.IsPressComponentIsValid(0);
@@ -1101,7 +1107,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E2B RID: 77355 RVA: 0x004AAC74 File Offset: 0x004A8E74
+	// Token: 0x060102EB RID: 66283 RVA: 0x004B883C File Offset: 0x004B6A3C
 	private void ClearScrollerItemMoveTick()
 	{
 		if (this.PhantomScrollerItemPositionTick != -1)
@@ -1111,7 +1117,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E2C RID: 77356 RVA: 0x004AAC98 File Offset: 0x004A8E98
+	// Token: 0x060102EC RID: 66284 RVA: 0x004B8860 File Offset: 0x004B6A60
 	private void OnPhantomItemClick(PhantomBattleData data, int index)
 	{
 		this.SetCurrentSelectPhantomData(data);
@@ -1124,7 +1130,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshSkinButton();
 	}
 
-	// Token: 0x06012E2D RID: 77357 RVA: 0x004AAD08 File Offset: 0x004A8F08
+	// Token: 0x060102ED RID: 66285 RVA: 0x004B88D0 File Offset: 0x004B6AD0
 	protected void TryEquip(PhantomBattleData phantomData, int targetIndex, Action doFunction)
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(this.RoleId);
@@ -1148,14 +1154,14 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E2E RID: 77358 RVA: 0x004AAD78 File Offset: 0x004A8F78
+	// Token: 0x060102EE RID: 66286 RVA: 0x004B8940 File Offset: 0x004B6B40
 	private void UnEquip(int index)
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(this.RoleId);
 		PhantomBattleController.Instance.SendPhantomPutOnRequest(0, roleInstanceById.GetRoleId(), index, index, false);
 	}
 
-	// Token: 0x06012E2F RID: 77359 RVA: 0x004AADAC File Offset: 0x004A8FAC
+	// Token: 0x060102EF RID: 66287 RVA: 0x004B8974 File Offset: 0x004B6B74
 	private void CheckIfCanEquip(PhantomBattleData phantomData, int index, Action call)
 	{
 		int? equipRole = PhantomBattleController.Instance.GetEquipRole(phantomData.GetUniqueId());
@@ -1163,10 +1169,11 @@ public class VisionEquipmentView : UiViewBase
 		if (equipRole != null && equipRole.Value != roleInstanceById.GetRoleId())
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PhantomEquipRoleTip);
-			RoleInstance roleInstanceById2 = RoleModel.Instance.GetRoleInstanceById(equipRole.Value);
+			RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(equipRole.Value);
+			string roleName = RoleConfig.Instance.GetRoleName(roleConfig.Value.Name);
 			confirmBoxDataNew.SetTextArgs(new string[]
 			{
-				roleInstanceById2.GetName(null)
+				roleName
 			});
 			confirmBoxDataNew.FunctionMap.Add(1, delegate
 			{
@@ -1179,13 +1186,13 @@ public class VisionEquipmentView : UiViewBase
 		call();
 	}
 
-	// Token: 0x06012E30 RID: 77360 RVA: 0x004AAE7A File Offset: 0x004A907A
+	// Token: 0x060102F0 RID: 66288 RVA: 0x004B8A53 File Offset: 0x004B6C53
 	protected void OnClickFailVision(int index)
 	{
 		this.ResetVisionPosition(true);
 	}
 
-	// Token: 0x06012E31 RID: 77361 RVA: 0x004AAE84 File Offset: 0x004A9084
+	// Token: 0x060102F1 RID: 66289 RVA: 0x004B8A60 File Offset: 0x004B6C60
 	protected void OnClickVisionAndRefreshVisionView(int index)
 	{
 		base.GetItem(15).SetRaycastTarget(false);
@@ -1204,7 +1211,7 @@ public class VisionEquipmentView : UiViewBase
 		AudioSystem.Instance.PostEvent("ui_vision_item_click");
 	}
 
-	// Token: 0x06012E32 RID: 77362 RVA: 0x004AAF08 File Offset: 0x004A9108
+	// Token: 0x060102F2 RID: 66290 RVA: 0x004B8AE4 File Offset: 0x004B6CE4
 	private void SetCurrentSelectIndex(int index)
 	{
 		if (this.CurrentSelectIndex == (EPhantomItemIndex)index)
@@ -1215,14 +1222,14 @@ public class VisionEquipmentView : UiViewBase
 		PhantomBattleModel.Instance.CurrentEquipmentSelectIndex = index;
 	}
 
-	// Token: 0x06012E33 RID: 77363 RVA: 0x004AAF26 File Offset: 0x004A9126
+	// Token: 0x060102F3 RID: 66291 RVA: 0x004B8B02 File Offset: 0x004B6D02
 	private void RefreshVisionBySelectIndex(bool meshChangeGoldEffect = false, bool needResetScrollerWhenUniqueIdZero = true, bool needScrollToItem = true)
 	{
 		this.RefreshScrollByCurrentUniqueId(needResetScrollerWhenUniqueIdZero, needScrollToItem);
 		this.RefreshVisionBySelectPhantomData(meshChangeGoldEffect);
 	}
 
-	// Token: 0x06012E34 RID: 77364 RVA: 0x004AAF38 File Offset: 0x004A9138
+	// Token: 0x060102F4 RID: 66292 RVA: 0x004B8B14 File Offset: 0x004B6D14
 	private void RefreshScrollByCurrentUniqueId(bool needResetScrollerWhenUniqueIdZero = true, bool needScrollToItem = true)
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(this.RoleId);
@@ -1243,7 +1250,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E35 RID: 77365 RVA: 0x004AAFC8 File Offset: 0x004A91C8
+	// Token: 0x060102F5 RID: 66293 RVA: 0x004B8BA4 File Offset: 0x004B6DA4
 	private void RefreshVisionBySelectPhantomData(bool meshChangeGoldEffect = false)
 	{
 		this.RefreshCurrentDetailComponent(this.CurrentSelectPhantomData, false);
@@ -1256,7 +1263,7 @@ public class VisionEquipmentView : UiViewBase
 		this.ResetVisionPosition(true);
 	}
 
-	// Token: 0x06012E36 RID: 77366 RVA: 0x004AB01C File Offset: 0x004A921C
+	// Token: 0x060102F6 RID: 66294 RVA: 0x004B8BF8 File Offset: 0x004B6DF8
 	private void SetClickStateUnCheck()
 	{
 		int count = this.RoleVisionItem.Count;
@@ -1266,7 +1273,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E37 RID: 77367 RVA: 0x004AB058 File Offset: 0x004A9258
+	// Token: 0x060102F7 RID: 66295 RVA: 0x004B8C34 File Offset: 0x004B6E34
 	private void RefreshPhantomClickState()
 	{
 		int count = this.RoleVisionItem.Count;
@@ -1276,7 +1283,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E38 RID: 77368 RVA: 0x004AB0A0 File Offset: 0x004A92A0
+	// Token: 0x060102F8 RID: 66296 RVA: 0x004B8C7C File Offset: 0x004B6E7C
 	[NullableContext(2)]
 	private PhantomBattleData GetCurrentSelectIndexPhantomData(int index)
 	{
@@ -1290,7 +1297,7 @@ public class VisionEquipmentView : UiViewBase
 		return phantomBattleData;
 	}
 
-	// Token: 0x06012E39 RID: 77369 RVA: 0x004AB0FE File Offset: 0x004A92FE
+	// Token: 0x060102F9 RID: 66297 RVA: 0x004B8CDA File Offset: 0x004B6EDA
 	private void RefreshCurrentDetailComponent(PhantomBattleData data, bool ifOnEquip = false)
 	{
 		if (data == null)
@@ -1302,7 +1309,7 @@ public class VisionEquipmentView : UiViewBase
 		this.VisionDetailComponent.Update(data, this.RoleId, this.CurrentCost, false);
 	}
 
-	// Token: 0x06012E3A RID: 77370 RVA: 0x004AB138 File Offset: 0x004A9338
+	// Token: 0x060102FA RID: 66298 RVA: 0x004B8D14 File Offset: 0x004B6F14
 	private void RefreshCurrentSelectAfterIntensify()
 	{
 		VisionIntensifyViewPassData visionIntensifyPassData = this.VisionIntensifyPassData;
@@ -1320,7 +1327,7 @@ public class VisionEquipmentView : UiViewBase
 		this.CurrentSelectPhantomData = phantomBattleData;
 	}
 
-	// Token: 0x06012E3B RID: 77371 RVA: 0x004AB17C File Offset: 0x004A937C
+	// Token: 0x060102FB RID: 66299 RVA: 0x004B8D58 File Offset: 0x004B6F58
 	private void ScrollToUniqueItem(int uniqueId, bool needScrollToItem = true)
 	{
 		this.LoopScrollView.DeselectCurrentGridProxy(false);
@@ -1352,7 +1359,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E3C RID: 77372 RVA: 0x004AB21C File Offset: 0x004A941C
+	// Token: 0x060102FC RID: 66300 RVA: 0x004B8DF8 File Offset: 0x004B6FF8
 	protected override void OnBeforeShow()
 	{
 		PhantomBattleModel instance = PhantomBattleModel.Instance;
@@ -1405,7 +1412,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshPhantomHead();
 	}
 
-	// Token: 0x06012E3D RID: 77373 RVA: 0x004AB328 File Offset: 0x004A9528
+	// Token: 0x060102FD RID: 66301 RVA: 0x004B8F04 File Offset: 0x004B7104
 	private void RefreshFilterList()
 	{
 		if (PhantomBattleModel.Instance.CurrentSelectedFetter != null)
@@ -1414,15 +1421,15 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E3E RID: 77374 RVA: 0x004AB35C File Offset: 0x004A955C
+	// Token: 0x060102FE RID: 66302 RVA: 0x004B8F38 File Offset: 0x004B7138
 	private void UpdateFilterComponent()
 	{
 		MultiSelectDropDown<int, int> multiSelectDropDown = this.MultiSelectDropDown;
 		IReadOnlySet<int> readOnlySet = (multiSelectDropDown != null) ? multiSelectDropDown.GetSelectedIndices() : null;
-		IPhantomItemData[] source;
+		IPhantomItemData[] collection;
 		if (readOnlySet == null || readOnlySet.Contains(0) || readOnlySet.Count == 0)
 		{
-			source = PhantomBattleModel.Instance.GetVisionSortUseDataList(0, this.CurrentCost);
+			collection = PhantomBattleModel.Instance.GetVisionSortUseDataList(0, this.CurrentCost);
 		}
 		else
 		{
@@ -1431,20 +1438,20 @@ public class VisionEquipmentView : UiViewBase
 			{
 				hashSet.Add(this.FetterSuitFilterArray[index]);
 			}
-			source = PhantomBattleModel.Instance.GetVisionSortUseDataListByMultiGroup(hashSet, this.CurrentCost);
+			collection = PhantomBattleModel.Instance.GetVisionSortUseDataListByMultiGroup(hashSet, this.CurrentCost);
 		}
 		MultiSelectDropDown<int, int> multiSelectDropDown2 = this.MultiSelectDropDown;
 		if (multiSelectDropDown2 != null)
 		{
 			multiSelectDropDown2.RefreshAllDropDownItem();
 		}
-		this.FilterEntrance.UpdateDataWithConfig(this.UseWayId, EFilterSortConfigId.VisionEquipment, source.ToList<IPhantomItemData>(), this.RoleId.ToString(), new object[]
+		this.FilterEntrance.UpdateDataWithConfig(this.UseWayId, EFilterSortConfigId.VisionEquipment, new List<IPhantomItemData>(collection), this.RoleId.ToString(), new object[]
 		{
 			this.RoleId
 		});
 		int uniqueIdByGroupId = this.FilterEntrance.GetUniqueIdByGroupId(this.UseWayId);
 		this.SortEntrance.SetFilterUniqueId(uniqueIdByGroupId);
-		this.SortEntrance.UpdateDataWithConfig(this.UseWayId, EFilterSortConfigId.VisionEquipment, source.ToList<IPhantomItemData>(), this.RoleId.ToString(), new object[]
+		this.SortEntrance.UpdateDataWithConfig(this.UseWayId, EFilterSortConfigId.VisionEquipment, new List<IPhantomItemData>(collection), this.RoleId.ToString(), new object[]
 		{
 			this.RoleId
 		});
@@ -1452,7 +1459,7 @@ public class VisionEquipmentView : UiViewBase
 		this.FilterEntrance.SetSortUniqueId(uniqueIdByGroupId2);
 	}
 
-	// Token: 0x06012E3F RID: 77375 RVA: 0x004AB4C8 File Offset: 0x004A96C8
+	// Token: 0x060102FF RID: 66303 RVA: 0x004B90A4 File Offset: 0x004B72A4
 	protected override void OnAfterShow()
 	{
 		foreach (VisionCommonDragItem visionCommonDragItem in this.VisionDragItem)
@@ -1467,7 +1474,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E40 RID: 77376 RVA: 0x004AB554 File Offset: 0x004A9754
+	// Token: 0x06010300 RID: 66304 RVA: 0x004B9130 File Offset: 0x004B7330
 	protected override void OnAfterHide()
 	{
 		this.ResetVisionPosition(true);
@@ -1475,7 +1482,7 @@ public class VisionEquipmentView : UiViewBase
 		UiLayer.Instance.SetShowMaskLayer("OnEquipVision", false);
 	}
 
-	// Token: 0x06012E41 RID: 77377 RVA: 0x004AB580 File Offset: 0x004A9780
+	// Token: 0x06010301 RID: 66305 RVA: 0x004B915C File Offset: 0x004B735C
 	private void RefreshMesh(int uniqueId, bool needGoldEffect = false)
 	{
 		if (!this.CameraState)
@@ -1499,7 +1506,7 @@ public class VisionEquipmentView : UiViewBase
 		this.CurrentMeshId = uniqueId;
 	}
 
-	// Token: 0x06012E42 RID: 77378 RVA: 0x004AB5FC File Offset: 0x004A97FC
+	// Token: 0x06010302 RID: 66306 RVA: 0x004B91D8 File Offset: 0x004B73D8
 	private void PlayMeshEffect(bool needGoldEffect = false)
 	{
 		if (this.VisionSkeletalHandle == null)
@@ -1523,7 +1530,7 @@ public class VisionEquipmentView : UiViewBase
 		UiModelUtil.Instance.SetRenderingMaterial(model, materialId);
 	}
 
-	// Token: 0x06012E43 RID: 77379 RVA: 0x004AB658 File Offset: 0x004A9858
+	// Token: 0x06010303 RID: 66307 RVA: 0x004B9234 File Offset: 0x004B7434
 	[NullableContext(2)]
 	private void RefreshView(PhantomBattleData data)
 	{
@@ -1533,7 +1540,7 @@ public class VisionEquipmentView : UiViewBase
 		this.ScrollToUniqueItem((data != null) ? data.GetUniqueId() : 0, true);
 	}
 
-	// Token: 0x06012E44 RID: 77380 RVA: 0x004AB680 File Offset: 0x004A9880
+	// Token: 0x06010304 RID: 66308 RVA: 0x004B925C File Offset: 0x004B745C
 	private void RefreshSwitchButtonText()
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(this.RoleId);
@@ -1554,7 +1561,7 @@ public class VisionEquipmentView : UiViewBase
 		this.VisionDetailComponent.SetUnderLeftButtonText(underLeftButtonText);
 	}
 
-	// Token: 0x06012E45 RID: 77381 RVA: 0x004AB708 File Offset: 0x004A9908
+	// Token: 0x06010305 RID: 66309 RVA: 0x004B92E4 File Offset: 0x004B74E4
 	private void RefreshPhantomNotReload()
 	{
 		this.LoopScrollView.DeselectCurrentGridProxy(false);
@@ -1567,13 +1574,13 @@ public class VisionEquipmentView : UiViewBase
 		base.GetLoopScrollViewComponent(6).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x06012E46 RID: 77382 RVA: 0x004AB76F File Offset: 0x004A996F
+	// Token: 0x06010306 RID: 66310 RVA: 0x004B934B File Offset: 0x004B754B
 	private void OnItemFuncValueChange(int _)
 	{
 		this.LoopScrollView.RefreshAllGridProxies();
 	}
 
-	// Token: 0x06012E47 RID: 77383 RVA: 0x004AB77C File Offset: 0x004A997C
+	// Token: 0x06010307 RID: 66311 RVA: 0x004B9358 File Offset: 0x004B7558
 	private void RefreshPhantom(int uniqueId = 0)
 	{
 		this.LoopScrollView.DeselectCurrentGridProxy(false);
@@ -1589,7 +1596,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshEmptyItem();
 	}
 
-	// Token: 0x06012E48 RID: 77384 RVA: 0x004AB7F8 File Offset: 0x004A99F8
+	// Token: 0x06010308 RID: 66312 RVA: 0x004B93D4 File Offset: 0x004B75D4
 	private void RefreshPhantomHead()
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(this.RoleId);
@@ -1604,7 +1611,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshPhantomHeadSelectState();
 	}
 
-	// Token: 0x06012E49 RID: 77385 RVA: 0x004AB880 File Offset: 0x004A9A80
+	// Token: 0x06010309 RID: 66313 RVA: 0x004B945C File Offset: 0x004B765C
 	private void RefreshPhantomHeadSelectState()
 	{
 		int count = this.RoleVisionItem.Count;
@@ -1621,7 +1628,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E4A RID: 77386 RVA: 0x004AB8D4 File Offset: 0x004A9AD4
+	// Token: 0x0601030A RID: 66314 RVA: 0x004B94B0 File Offset: 0x004B76B0
 	protected void OnBeginDrag(int index)
 	{
 		int count = this.VisionDragItem.Count;
@@ -1641,7 +1648,7 @@ public class VisionEquipmentView : UiViewBase
 		AudioSystem.Instance.PostEvent("ui_vision_item_drag");
 	}
 
-	// Token: 0x06012E4B RID: 77387 RVA: 0x004AB96C File Offset: 0x004A9B6C
+	// Token: 0x0601030B RID: 66315 RVA: 0x004B9548 File Offset: 0x004B7748
 	protected void OnPointerDownCallBack(int index)
 	{
 		base.GetItem(15).SetRaycastTarget(true);
@@ -1652,7 +1659,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E4C RID: 77388 RVA: 0x004AB9B0 File Offset: 0x004A9BB0
+	// Token: 0x0601030C RID: 66316 RVA: 0x004B958C File Offset: 0x004B778C
 	private void OnFailAnimationTick(float _)
 	{
 		this.CurrentRunningTime += Time.Instance.DeltaTime;
@@ -1669,7 +1676,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E4D RID: 77389 RVA: 0x004ABA24 File Offset: 0x004A9C24
+	// Token: 0x0601030D RID: 66317 RVA: 0x004B9600 File Offset: 0x004B7800
 	private UniTask DoFailCeaseAnimation(int index)
 	{
 		VisionEquipmentView.<DoFailCeaseAnimation>d__154 <DoFailCeaseAnimation>d__;
@@ -1681,7 +1688,7 @@ public class VisionEquipmentView : UiViewBase
 		return <DoFailCeaseAnimation>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012E4E RID: 77390 RVA: 0x004ABA70 File Offset: 0x004A9C70
+	// Token: 0x0601030E RID: 66318 RVA: 0x004B964C File Offset: 0x004B784C
 	private UniTask PlayCeaseAnimation(int index)
 	{
 		VisionEquipmentView.<PlayCeaseAnimation>d__155 <PlayCeaseAnimation>d__;
@@ -1693,7 +1700,7 @@ public class VisionEquipmentView : UiViewBase
 		return <PlayCeaseAnimation>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012E4F RID: 77391 RVA: 0x004ABABB File Offset: 0x004A9CBB
+	// Token: 0x0601030F RID: 66319 RVA: 0x004B9697 File Offset: 0x004B7897
 	private void ClearFailAnimationTick()
 	{
 		if (this.FailAnimationTick != -1)
@@ -1703,7 +1710,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E50 RID: 77392 RVA: 0x004ABAE0 File Offset: 0x004A9CE0
+	// Token: 0x06010310 RID: 66320 RVA: 0x004B96BC File Offset: 0x004B78BC
 	private UniTask ResetVisionPosition(bool playBackToStartPositionAnimation = true)
 	{
 		VisionEquipmentView.<ResetVisionPosition>d__157 <ResetVisionPosition>d__;
@@ -1715,7 +1722,7 @@ public class VisionEquipmentView : UiViewBase
 		return <ResetVisionPosition>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012E51 RID: 77393 RVA: 0x004ABB2B File Offset: 0x004A9D2B
+	// Token: 0x06010311 RID: 66321 RVA: 0x004B9707 File Offset: 0x004B7907
 	private void SetIndexVisionMoveState(int index, bool state)
 	{
 		if (index >= 0)
@@ -1724,7 +1731,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E52 RID: 77394 RVA: 0x004ABB43 File Offset: 0x004A9D43
+	// Token: 0x06010312 RID: 66322 RVA: 0x004B971F File Offset: 0x004B791F
 	private void SetIndexVisionAnimateState(int index, bool state)
 	{
 		if (index >= 0)
@@ -1733,26 +1740,26 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E53 RID: 77395 RVA: 0x004ABB5B File Offset: 0x004A9D5B
+	// Token: 0x06010313 RID: 66323 RVA: 0x004B9737 File Offset: 0x004B7937
 	protected void OnEquipError()
 	{
 		this.ResetVisionPosition(true);
 	}
 
-	// Token: 0x06012E54 RID: 77396 RVA: 0x004ABB68 File Offset: 0x004A9D68
+	// Token: 0x06010314 RID: 66324 RVA: 0x004B9744 File Offset: 0x004B7944
 	private void RefreshEmptyItem()
 	{
 		int count = this.CurrentShowingDataList.Count;
 		base.GetItem(35).SetUIActive(count == 0);
 	}
 
-	// Token: 0x06012E55 RID: 77397 RVA: 0x004ABB92 File Offset: 0x004A9D92
+	// Token: 0x06010315 RID: 66325 RVA: 0x004B976E File Offset: 0x004B796E
 	protected void OnPhantomEquip()
 	{
 		this.RefreshVisionDetailCompare();
 	}
 
-	// Token: 0x06012E56 RID: 77398 RVA: 0x004ABB9A File Offset: 0x004A9D9A
+	// Token: 0x06010316 RID: 66326 RVA: 0x004B9776 File Offset: 0x004B7976
 	private void OnAddPhantomItemList(IReadOnlyList<Aki.Protocol.PhantomItem> phantomItemList, bool isCatch)
 	{
 		this.SuppressScrollOnRebuild = true;
@@ -1760,7 +1767,7 @@ public class VisionEquipmentView : UiViewBase
 		this.SuppressScrollOnRebuild = false;
 	}
 
-	// Token: 0x06012E57 RID: 77399 RVA: 0x004ABBB0 File Offset: 0x004A9DB0
+	// Token: 0x06010317 RID: 66327 RVA: 0x004B978C File Offset: 0x004B798C
 	private void OnRemovePhantomItem(IReadOnlyList<int> uniqueIdList)
 	{
 		this.SuppressScrollOnRebuild = true;
@@ -1768,7 +1775,7 @@ public class VisionEquipmentView : UiViewBase
 		this.SuppressScrollOnRebuild = false;
 	}
 
-	// Token: 0x06012E58 RID: 77400 RVA: 0x004ABBC8 File Offset: 0x004A9DC8
+	// Token: 0x06010318 RID: 66328 RVA: 0x004B97A4 File Offset: 0x004B79A4
 	private void OnPhantomStackMerge(int mergedIncrId, int representativeIncrId)
 	{
 		if (this.CurrentSelectPhantomData == null || this.CurrentSelectPhantomData.GetUniqueId() != mergedIncrId)
@@ -1783,13 +1790,13 @@ public class VisionEquipmentView : UiViewBase
 		this.SetCurrentSelectPhantomData(phantomBattleData);
 	}
 
-	// Token: 0x06012E59 RID: 77401 RVA: 0x004ABC03 File Offset: 0x004A9E03
+	// Token: 0x06010319 RID: 66329 RVA: 0x004B97DF File Offset: 0x004B79DF
 	protected void OnVisionFilterMonster()
 	{
 		this.RefreshFilterList();
 	}
 
-	// Token: 0x06012E5A RID: 77402 RVA: 0x004ABC0C File Offset: 0x004A9E0C
+	// Token: 0x0601031A RID: 66330 RVA: 0x004B97E8 File Offset: 0x004B79E8
 	private void OnMoveToScrollViewDragEndCallBack(int index, PhantomBattleData data)
 	{
 		this.ClearFailAnimationTick();
@@ -1807,7 +1814,7 @@ public class VisionEquipmentView : UiViewBase
 		this.DoEquip(data, index, doFunction);
 	}
 
-	// Token: 0x06012E5B RID: 77403 RVA: 0x004ABCD0 File Offset: 0x004A9ED0
+	// Token: 0x0601031B RID: 66331 RVA: 0x004B98AC File Offset: 0x004B7AAC
 	protected void OnDragEndCallBack(VisionCommonDragItem self, List<VisionCommonDragItem> targets, bool _)
 	{
 		if (targets.Count < 1)
@@ -1840,7 +1847,7 @@ public class VisionEquipmentView : UiViewBase
 		this.DoEquip(self.GetCurrentData() as PhantomBattleData, targetIndex, doFunction);
 	}
 
-	// Token: 0x06012E5C RID: 77404 RVA: 0x004ABDB0 File Offset: 0x004A9FB0
+	// Token: 0x0601031C RID: 66332 RVA: 0x004B998C File Offset: 0x004B7B8C
 	private void OnEquipEquipment(int selfIndex, int targetIndex, bool fromDrag)
 	{
 		this.CurrentDragIndex = 999;
@@ -1886,7 +1893,7 @@ public class VisionEquipmentView : UiViewBase
 		AudioSystem.Instance.PostEvent("ui_vision_equip_on");
 	}
 
-	// Token: 0x06012E5D RID: 77405 RVA: 0x004ABF44 File Offset: 0x004AA144
+	// Token: 0x0601031D RID: 66333 RVA: 0x004B9B20 File Offset: 0x004B7D20
 	private UniTask PlayTargetIndexEquipmentCeaseAnimation(int targetIndex)
 	{
 		VisionEquipmentView.<PlayTargetIndexEquipmentCeaseAnimation>d__170 <PlayTargetIndexEquipmentCeaseAnimation>d__;
@@ -1898,7 +1905,7 @@ public class VisionEquipmentView : UiViewBase
 		return <PlayTargetIndexEquipmentCeaseAnimation>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012E5E RID: 77406 RVA: 0x004ABF90 File Offset: 0x004AA190
+	// Token: 0x0601031E RID: 66334 RVA: 0x004B9B6C File Offset: 0x004B7D6C
 	private void OnTick(float _)
 	{
 		this.CurrentRunningTime += Time.Instance.DeltaTime;
@@ -1917,7 +1924,7 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E5F RID: 77407 RVA: 0x004AC028 File Offset: 0x004AA228
+	// Token: 0x0601031F RID: 66335 RVA: 0x004B9C04 File Offset: 0x004B7E04
 	private UniTask DoCeaseAnimationAndResetView()
 	{
 		VisionEquipmentView.<DoCeaseAnimationAndResetView>d__172 <DoCeaseAnimationAndResetView>d__;
@@ -1928,7 +1935,7 @@ public class VisionEquipmentView : UiViewBase
 		return <DoCeaseAnimationAndResetView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012E60 RID: 77408 RVA: 0x004AC06B File Offset: 0x004AA26B
+	// Token: 0x06010320 RID: 66336 RVA: 0x004B9C47 File Offset: 0x004B7E47
 	private void RefreshOnEquip()
 	{
 		this.RefreshPhantomNotReload();
@@ -1940,7 +1947,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshSelectAllToggleState();
 	}
 
-	// Token: 0x06012E61 RID: 77409 RVA: 0x004AC099 File Offset: 0x004AA299
+	// Token: 0x06010321 RID: 66337 RVA: 0x004B9C75 File Offset: 0x004B7E75
 	private void ClearAnimationTick()
 	{
 		if (this.MoveAnimationTick != -1)
@@ -1950,19 +1957,19 @@ public class VisionEquipmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012E62 RID: 77410 RVA: 0x004AC0BC File Offset: 0x004AA2BC
+	// Token: 0x06010322 RID: 66338 RVA: 0x004B9C98 File Offset: 0x004B7E98
 	private void OnClickBackBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06012E63 RID: 77411 RVA: 0x004AC0C5 File Offset: 0x004AA2C5
+	// Token: 0x06010323 RID: 66339 RVA: 0x004B9CA1 File Offset: 0x004B7EA1
 	private int GetCostMax()
 	{
 		return PhantomBattleModel.Instance.GetMaxCost();
 	}
 
-	// Token: 0x06012E64 RID: 77412 RVA: 0x004AC0D1 File Offset: 0x004AA2D1
+	// Token: 0x06010324 RID: 66340 RVA: 0x004B9CAD File Offset: 0x004B7EAD
 	private void CheckAndCreateVisionHandle()
 	{
 		if (!UiSceneManager.Instance.HasVisionSkeletalHandle())
@@ -1972,7 +1979,7 @@ public class VisionEquipmentView : UiViewBase
 		this.VisionSkeletalHandle = UiSceneManager.Instance.GetVisionSkeletalHandle();
 	}
 
-	// Token: 0x06012E65 RID: 77413 RVA: 0x004AC0F9 File Offset: 0x004AA2F9
+	// Token: 0x06010325 RID: 66341 RVA: 0x004B9CD5 File Offset: 0x004B7ED5
 	private void DestroyVisionHandle()
 	{
 		UiSceneManager.Instance.DestroyVisionSkeletalHandle();
@@ -1980,7 +1987,7 @@ public class VisionEquipmentView : UiViewBase
 		this.CurrentMeshId = 0;
 	}
 
-	// Token: 0x06012E66 RID: 77414 RVA: 0x004AC113 File Offset: 0x004AA313
+	// Token: 0x06010326 RID: 66342 RVA: 0x004B9CEF File Offset: 0x004B7EEF
 	protected override void OnBeforeHide()
 	{
 		PhantomBattleModel instance = PhantomBattleModel.Instance;
@@ -1997,7 +2004,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshUiBlur(false);
 	}
 
-	// Token: 0x06012E67 RID: 77415 RVA: 0x004AC150 File Offset: 0x004AA350
+	// Token: 0x06010327 RID: 66343 RVA: 0x004B9D2C File Offset: 0x004B7F2C
 	protected override void OnBeforePlayCloseSequence()
 	{
 		this.DestroyVisionHandle();
@@ -2009,7 +2016,7 @@ public class VisionEquipmentView : UiViewBase
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06012E68 RID: 77416 RVA: 0x004AC170 File Offset: 0x004AA370
+	// Token: 0x06010328 RID: 66344 RVA: 0x004B9D4C File Offset: 0x004B7F4C
 	protected override void OnBeforeDestroy()
 	{
 		this.DestroyVisionHandle();
@@ -2029,7 +2036,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshUiBlur(false);
 	}
 
-	// Token: 0x06012E69 RID: 77417 RVA: 0x004AC1D8 File Offset: 0x004AA3D8
+	// Token: 0x06010329 RID: 66345 RVA: 0x004B9DB4 File Offset: 0x004B7FB4
 	private bool NeedClearSelectMainPhantom()
 	{
 		Dictionary<FilterDefine.EFilterType, Dictionary<int, string>> selectRuleDataMap = this.FilterEntrance.GetSelectRuleDataMap();
@@ -2054,17 +2061,23 @@ public class VisionEquipmentView : UiViewBase
 			}
 			else
 			{
-				Dictionary<int, string> dictionary = selectRuleDataMap.Values.ToArray<Dictionary<int, string>>()[0];
-				if (dictionary == null || dictionary.Count > 1 || !dictionary.ContainsKey(num2.Value))
+				using (Dictionary<FilterDefine.EFilterType, Dictionary<int, string>>.ValueCollection.Enumerator enumerator = selectRuleDataMap.Values.GetEnumerator())
 				{
-					result = true;
+					if (enumerator.MoveNext())
+					{
+						Dictionary<int, string> dictionary = enumerator.Current;
+						if (dictionary == null || dictionary.Count > 1 || !dictionary.ContainsKey(num2.Value))
+						{
+							result = true;
+						}
+					}
 				}
 			}
 		}
 		return result;
 	}
 
-	// Token: 0x06012E6A RID: 77418 RVA: 0x004AC270 File Offset: 0x004AA470
+	// Token: 0x0601032A RID: 66346 RVA: 0x004B9E80 File Offset: 0x004B8080
 	private void OnFilterRefresh(List<IPhantomItemData> list, bool ifOutSideChange, EFilterSortType type)
 	{
 		if (type == EFilterSortType.Filter && !ifOutSideChange && this.NeedClearSelectMainPhantom())
@@ -2092,7 +2105,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshDefaultVisionOnFilter(list.ToArray(), ifOutSideChange, type);
 	}
 
-	// Token: 0x06012E6B RID: 77419 RVA: 0x004AC34C File Offset: 0x004AA54C
+	// Token: 0x0601032B RID: 66347 RVA: 0x004B9F5C File Offset: 0x004B815C
 	private void RefreshDefaultVisionOnFilter(IPhantomItemData[] dataList, bool ifOutSideChange, EFilterSortType type)
 	{
 		if (dataList == null || dataList.Length == 0)
@@ -2139,7 +2152,7 @@ public class VisionEquipmentView : UiViewBase
 		this.RefreshPhantomClickState();
 	}
 
-	// Token: 0x06012E6C RID: 77420 RVA: 0x004AC450 File Offset: 0x004AA650
+	// Token: 0x0601032C RID: 66348 RVA: 0x004BA060 File Offset: 0x004B8260
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -2203,7 +2216,7 @@ public class VisionEquipmentView : UiViewBase
 		};
 	}
 
-	// Token: 0x06012E6D RID: 77421 RVA: 0x004AC578 File Offset: 0x004AA778
+	// Token: 0x0601032D RID: 66349 RVA: 0x004BA188 File Offset: 0x004B8388
 	private void RefreshSkinButton()
 	{
 		PhantomBattleData currentSelectPhantomData = this.CurrentSelectPhantomData;
@@ -2225,54 +2238,54 @@ public class VisionEquipmentView : UiViewBase
 		base.GetItem(31).SetUIActive(monsterSkinListHasNew);
 	}
 
-	// Token: 0x04008E3A RID: 36410
+	// Token: 0x04008F84 RID: 36740
 	private const int ANIMATIONTIME = 300;
 
-	// Token: 0x04008E3B RID: 36411
+	// Token: 0x04008F85 RID: 36741
 	private const int INVALIDINDEX = 999;
 
-	// Token: 0x04008E3C RID: 36412
+	// Token: 0x04008F86 RID: 36742
 	private readonly EFilterSortGroupId UseWayId = EFilterSortGroupId.PhantomEquip;
 
-	// Token: 0x04008E3D RID: 36413
+	// Token: 0x04008F87 RID: 36743
 	[Nullable(2)]
 	private CustomPromise<bool> FailAnimationPromise;
 
-	// Token: 0x04008E3E RID: 36414
+	// Token: 0x04008F88 RID: 36744
 	private int MoveAnimationTick = -1;
 
-	// Token: 0x04008E3F RID: 36415
+	// Token: 0x04008F89 RID: 36745
 	private int PhantomClickTick = -1;
 
-	// Token: 0x04008E40 RID: 36416
+	// Token: 0x04008F8A RID: 36746
 	private int FailAnimationTick = -1;
 
-	// Token: 0x04008E41 RID: 36417
+	// Token: 0x04008F8B RID: 36747
 	private int PhantomScrollerItemPositionTick = -1;
 
-	// Token: 0x04008E42 RID: 36418
+	// Token: 0x04008F8C RID: 36748
 	private int RoleId;
 
-	// Token: 0x04008E43 RID: 36419
+	// Token: 0x04008F8D RID: 36749
 	private int CurrentAnimationSourceIndex;
 
-	// Token: 0x04008E44 RID: 36420
+	// Token: 0x04008F8E RID: 36750
 	private int CurrentAnimationTargetIndex;
 
-	// Token: 0x04008E45 RID: 36421
+	// Token: 0x04008F8F RID: 36751
 	private float CurrentRunningTime;
 
-	// Token: 0x04008E46 RID: 36422
+	// Token: 0x04008F90 RID: 36752
 	private ERoleViewSource Source;
 
-	// Token: 0x04008E47 RID: 36423
+	// Token: 0x04008F91 RID: 36753
 	private readonly List<RoleVisionCommonItem> RoleVisionItem = new List<RoleVisionCommonItem>();
 
-	// Token: 0x04008E48 RID: 36424
+	// Token: 0x04008F92 RID: 36754
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04008E49 RID: 36425
+	// Token: 0x04008F93 RID: 36755
 	[Nullable(new byte[]
 	{
 		2,
@@ -2281,32 +2294,32 @@ public class VisionEquipmentView : UiViewBase
 	})]
 	protected LoopScrollView<VisionMediumItemGrid, PhantomBattleData> LoopScrollView;
 
-	// Token: 0x04008E4A RID: 36426
+	// Token: 0x04008F94 RID: 36756
 	private List<PhantomBattleData> CurrentShowingDataList = new List<PhantomBattleData>();
 
-	// Token: 0x04008E4B RID: 36427
+	// Token: 0x04008F95 RID: 36757
 	[Nullable(2)]
 	private PhantomBattleData CurrentSelectPhantomData;
 
-	// Token: 0x04008E4C RID: 36428
+	// Token: 0x04008F96 RID: 36758
 	[Nullable(2)]
 	private VisionIntensifyViewPassData VisionIntensifyPassData;
 
-	// Token: 0x04008E4D RID: 36429
+	// Token: 0x04008F97 RID: 36759
 	private EPhantomItemIndex CurrentSelectIndex;
 
-	// Token: 0x04008E4E RID: 36430
+	// Token: 0x04008F98 RID: 36760
 	[Nullable(2)]
 	private VisionDetailComponent VisionDetailComponent;
 
-	// Token: 0x04008E4F RID: 36431
+	// Token: 0x04008F99 RID: 36761
 	[Nullable(2)]
 	private VisionDetailComponent VisionDetailComponentCompare;
 
-	// Token: 0x04008E50 RID: 36432
+	// Token: 0x04008F9A RID: 36762
 	private int CurrentMeshId;
 
-	// Token: 0x04008E51 RID: 36433
+	// Token: 0x04008F9B RID: 36763
 	[Nullable(new byte[]
 	{
 		2,
@@ -2314,7 +2327,7 @@ public class VisionEquipmentView : UiViewBase
 	})]
 	private FilterEntrance<IPhantomItemData> FilterEntrance;
 
-	// Token: 0x04008E52 RID: 36434
+	// Token: 0x04008F9C RID: 36764
 	[Nullable(new byte[]
 	{
 		2,
@@ -2322,65 +2335,65 @@ public class VisionEquipmentView : UiViewBase
 	})]
 	private SortEntrance<IPhantomItemData> SortEntrance;
 
-	// Token: 0x04008E53 RID: 36435
+	// Token: 0x04008F9D RID: 36765
 	[Nullable(2)]
 	private LevelSequencePlayer RootLevelSequence;
 
-	// Token: 0x04008E54 RID: 36436
+	// Token: 0x04008F9E RID: 36766
 	private int CurrentDragIndex = 999;
 
-	// Token: 0x04008E55 RID: 36437
+	// Token: 0x04008F9F RID: 36767
 	private bool SuppressScrollOnRebuild;
 
-	// Token: 0x04008E56 RID: 36438
+	// Token: 0x04008FA0 RID: 36768
 	private float PressTime;
 
-	// Token: 0x04008E57 RID: 36439
+	// Token: 0x04008FA1 RID: 36769
 	private float FillPressTime;
 
-	// Token: 0x04008E58 RID: 36440
+	// Token: 0x04008FA2 RID: 36770
 	private bool CheckState;
 
-	// Token: 0x04008E59 RID: 36441
+	// Token: 0x04008FA3 RID: 36771
 	private bool AfterLongPressState;
 
-	// Token: 0x04008E5A RID: 36442
+	// Token: 0x04008FA4 RID: 36772
 	private float OnPressPositionX;
 
-	// Token: 0x04008E5B RID: 36443
+	// Token: 0x04008FA5 RID: 36773
 	private float OnPressPositionY;
 
-	// Token: 0x04008E5C RID: 36444
+	// Token: 0x04008FA6 RID: 36774
 	private int ScrollerTickId = -1;
 
-	// Token: 0x04008E5D RID: 36445
+	// Token: 0x04008FA7 RID: 36775
 	[Nullable(2)]
 	private VisionMediumItemGrid CurrentPressItem;
 
-	// Token: 0x04008E5E RID: 36446
+	// Token: 0x04008FA8 RID: 36776
 	[Nullable(2)]
 	protected VisionEquipmentDragItem VisionEquipmentDragItem;
 
-	// Token: 0x04008E5F RID: 36447
+	// Token: 0x04008FA9 RID: 36777
 	private readonly List<VisionCommonDragItem> VisionDragItem = new List<VisionCommonDragItem>();
 
-	// Token: 0x04008E60 RID: 36448
+	// Token: 0x04008FAA RID: 36778
 	[Nullable(2)]
 	private VisionCommonDragItem ScrollVisionDragItem;
 
-	// Token: 0x04008E61 RID: 36449
+	// Token: 0x04008FAB RID: 36779
 	private float LongPressTime;
 
-	// Token: 0x04008E62 RID: 36450
+	// Token: 0x04008FAC RID: 36780
 	private float BeforeLongPressTime;
 
-	// Token: 0x04008E63 RID: 36451
+	// Token: 0x04008FAD RID: 36781
 	private float LongPressItemAlpha;
 
-	// Token: 0x04008E64 RID: 36452
+	// Token: 0x04008FAE RID: 36782
 	private float ScrollerMoveDistance;
 
-	// Token: 0x04008E65 RID: 36453
+	// Token: 0x04008FAF RID: 36783
 	[Nullable(new byte[]
 	{
 		2,
@@ -2388,144 +2401,144 @@ public class VisionEquipmentView : UiViewBase
 	})]
 	private StaticTabComponent<CostTabItem> StaticTabComponent;
 
-	// Token: 0x04008E66 RID: 36454
+	// Token: 0x04008FB0 RID: 36784
 	private int CurrentCost;
 
-	// Token: 0x04008E67 RID: 36455
+	// Token: 0x04008FB1 RID: 36785
 	private readonly List<int> CostArray = new List<int>();
 
-	// Token: 0x04008E68 RID: 36456
+	// Token: 0x04008FB2 RID: 36786
 	[Nullable(2)]
 	private MultiSelectDropDown<int, int> MultiSelectDropDown;
 
-	// Token: 0x04008E69 RID: 36457
+	// Token: 0x04008FB3 RID: 36787
 	private readonly List<int> FetterSuitFilterArray = new List<int>();
 
-	// Token: 0x04008E6A RID: 36458
+	// Token: 0x04008FB4 RID: 36788
 	private readonly Dictionary<int, int> FetterSortIdMap = new Dictionary<int, int>();
 
-	// Token: 0x04008E6B RID: 36459
+	// Token: 0x04008FB5 RID: 36789
 	private bool DropDownDirty;
 
-	// Token: 0x04008E6C RID: 36460
+	// Token: 0x04008FB6 RID: 36790
 	private bool InitState;
 
-	// Token: 0x04008E6D RID: 36461
+	// Token: 0x04008FB7 RID: 36791
 	private bool CurrentCompareState;
 
-	// Token: 0x04008E6E RID: 36462
+	// Token: 0x04008FB8 RID: 36792
 	private bool CurrentAnimationState;
 
-	// Token: 0x04008E6F RID: 36463
+	// Token: 0x04008FB9 RID: 36793
 	private int CurrentConfirmButtonRedDotUniqueId;
 
-	// Token: 0x04008E70 RID: 36464
+	// Token: 0x04008FBA RID: 36794
 	private bool CameraState = true;
 
-	// Token: 0x04008E71 RID: 36465
+	// Token: 0x04008FBB RID: 36795
 	private bool IfPlayingCostBlinkAnimate;
 
-	// Token: 0x04008E72 RID: 36466
+	// Token: 0x04008FBC RID: 36796
 	private int PreSelectMeshId;
 
-	// Token: 0x04008E73 RID: 36467
+	// Token: 0x04008FBD RID: 36797
 	[Nullable(2)]
 	private VisionEquipmentRecommendItem VisionEquipmentRecommendItem;
 
-	// Token: 0x04008E74 RID: 36468
+	// Token: 0x04008FBE RID: 36798
 	private int PresetSelectIndexInternal;
 
-	// Token: 0x04008E75 RID: 36469
+	// Token: 0x04008FBF RID: 36799
 	[Nullable(2)]
 	private TsUiBlur UiBlur;
 
-	// Token: 0x04008E76 RID: 36470
+	// Token: 0x04008FC0 RID: 36800
 	[Nullable(2)]
 	private VisionEquipmentRecommendFetterGroupView VisionEquipmentRecommendFetterGroupView;
 
-	// Token: 0x04008E77 RID: 36471
+	// Token: 0x04008FC1 RID: 36801
 	[Nullable(2)]
 	private SkeletalObserverHandle VisionSkeletalHandle;
 
-	// Token: 0x02008A37 RID: 35383
+	// Token: 0x02007BC0 RID: 31680
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CE02 RID: 183810
+		// Token: 0x04028121 RID: 164129
 		MainVisionItem,
-		// Token: 0x0402CE03 RID: 183811
+		// Token: 0x04028122 RID: 164130
 		SubVisionItem1,
-		// Token: 0x0402CE04 RID: 183812
+		// Token: 0x04028123 RID: 164131
 		SubVisionItem2,
-		// Token: 0x0402CE05 RID: 183813
+		// Token: 0x04028124 RID: 164132
 		SubVisionItem3,
-		// Token: 0x0402CE06 RID: 183814
+		// Token: 0x04028125 RID: 164133
 		SubVisionItem4,
-		// Token: 0x0402CE07 RID: 183815
+		// Token: 0x04028126 RID: 164134
 		CostTextBack,
-		// Token: 0x0402CE08 RID: 183816
+		// Token: 0x04028127 RID: 164135
 		Scroller,
-		// Token: 0x0402CE09 RID: 183817
+		// Token: 0x04028128 RID: 164136
 		CaptionItem,
-		// Token: 0x0402CE0A RID: 183818
+		// Token: 0x04028129 RID: 164137
 		LoopItem,
-		// Token: 0x0402CE0B RID: 183819
+		// Token: 0x0402812A RID: 164138
 		FilterItem,
-		// Token: 0x0402CE0C RID: 183820
+		// Token: 0x0402812B RID: 164139
 		AttributePanelOne,
-		// Token: 0x0402CE0D RID: 183821
+		// Token: 0x0402812C RID: 164140
 		AttributePanelTwo,
-		// Token: 0x0402CE0E RID: 183822
+		// Token: 0x0402812D RID: 164141
 		Filter,
-		// Token: 0x0402CE0F RID: 183823
+		// Token: 0x0402812E RID: 164142
 		Sort,
-		// Token: 0x0402CE10 RID: 183824
+		// Token: 0x0402812F RID: 164143
 		BgBlack,
-		// Token: 0x0402CE11 RID: 183825
+		// Token: 0x04028130 RID: 164144
 		DragPanel,
-		// Token: 0x0402CE12 RID: 183826
+		// Token: 0x04028131 RID: 164145
 		DragItem,
-		// Token: 0x0402CE13 RID: 183827
+		// Token: 0x04028132 RID: 164146
 		HeadListLayout,
-		// Token: 0x0402CE14 RID: 183828
+		// Token: 0x04028133 RID: 164147
 		LongPressItem,
-		// Token: 0x0402CE15 RID: 183829
+		// Token: 0x04028134 RID: 164148
 		LongPressBar,
-		// Token: 0x0402CE16 RID: 183830
+		// Token: 0x04028135 RID: 164149
 		SwitchCostTab,
-		// Token: 0x0402CE17 RID: 183831
+		// Token: 0x04028136 RID: 164150
 		SimplyToggle,
-		// Token: 0x0402CE18 RID: 183832
+		// Token: 0x04028137 RID: 164151
 		SuitFilter,
-		// Token: 0x0402CE19 RID: 183833
+		// Token: 0x04028138 RID: 164152
 		TabItem1,
-		// Token: 0x0402CE1A RID: 183834
+		// Token: 0x04028139 RID: 164153
 		TabItem2,
-		// Token: 0x0402CE1B RID: 183835
+		// Token: 0x0402813A RID: 164154
 		TabItem3,
-		// Token: 0x0402CE1C RID: 183836
+		// Token: 0x0402813B RID: 164155
 		TabItem4,
-		// Token: 0x0402CE1D RID: 183837
+		// Token: 0x0402813C RID: 164156
 		MonsterSkinBtn,
-		// Token: 0x0402CE1E RID: 183838
+		// Token: 0x0402813D RID: 164157
 		ButtonRedDot,
-		// Token: 0x0402CE1F RID: 183839
+		// Token: 0x0402813E RID: 164158
 		CompareButton,
-		// Token: 0x0402CE20 RID: 183840
+		// Token: 0x0402813F RID: 164159
 		CostTextFront,
-		// Token: 0x0402CE21 RID: 183841
+		// Token: 0x04028140 RID: 164160
 		MonsterSkinBtnRedDot,
-		// Token: 0x0402CE22 RID: 183842
+		// Token: 0x04028141 RID: 164161
 		JumpVisionRecoveryButton,
-		// Token: 0x0402CE23 RID: 183843
+		// Token: 0x04028142 RID: 164162
 		RecommendPanel,
-		// Token: 0x0402CE24 RID: 183844
+		// Token: 0x04028143 RID: 164163
 		RecommendToggle,
-		// Token: 0x0402CE25 RID: 183845
+		// Token: 0x04028144 RID: 164164
 		EmptyItem,
-		// Token: 0x0402CE26 RID: 183846
+		// Token: 0x04028145 RID: 164165
 		PnlRoleVisionPrefabInfo,
-		// Token: 0x0402CE27 RID: 183847
+		// Token: 0x04028146 RID: 164166
 		PnlCurrentElement
 	}
 }

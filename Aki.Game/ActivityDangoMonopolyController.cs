@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -8,43 +7,43 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02001220 RID: 4640
+// Token: 0x020006D4 RID: 1748
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityDangoMonopolyController : ActivityControllerBase
 {
-	// Token: 0x06007CE1 RID: 31969 RVA: 0x001A6735 File Offset: 0x001A4935
+	// Token: 0x06005077 RID: 20599 RVA: 0x001AF3E9 File Offset: 0x001AD5E9
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.Data = new ActivityDangoMonopolyData();
 		return this.Data;
 	}
 
-	// Token: 0x06007CE2 RID: 31970 RVA: 0x001A6748 File Offset: 0x001A4948
+	// Token: 0x06005078 RID: 20600 RVA: 0x001AF3FC File Offset: 0x001AD5FC
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06007CE3 RID: 31971 RVA: 0x001A674B File Offset: 0x001A494B
+	// Token: 0x06005079 RID: 20601 RVA: 0x001AF3FF File Offset: 0x001AD5FF
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06007CE4 RID: 31972 RVA: 0x001A674D File Offset: 0x001A494D
+	// Token: 0x0600507A RID: 20602 RVA: 0x001AF401 File Offset: 0x001AD601
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityMonopoly";
 	}
 
-	// Token: 0x06007CE5 RID: 31973 RVA: 0x001A6754 File Offset: 0x001A4954
+	// Token: 0x0600507B RID: 20603 RVA: 0x001AF408 File Offset: 0x001AD608
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewDangoMonopoly();
 	}
 
-	// Token: 0x06007CE6 RID: 31974 RVA: 0x001A675C File Offset: 0x001A495C
+	// Token: 0x0600507C RID: 20604 RVA: 0x001AF410 File Offset: 0x001AD610
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.DangoMonopolyTaskUpdateNotify, delegate(IMessage msg, Net.CallbackStatus status)
@@ -55,7 +54,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 			{
 				return;
 			}
-			data.ProtoTaskUpdateNotify(dangoMonopolyTaskUpdateNotify.TaskDatas.ToList<Aki.Protocol.DangoMonopolyTaskData>());
+			data.ProtoTaskUpdateNotify(new List<Aki.Protocol.DangoMonopolyTaskData>(dangoMonopolyTaskUpdateNotify.TaskDatas));
 		});
 		Net.Instance.Register(ENotifyMessageId.DangoMonopolySceneGridInfoNotify, delegate(IMessage msg, Net.CallbackStatus status)
 		{
@@ -75,7 +74,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 			{
 				return;
 			}
-			data.ProtoTaskAddNotify(dangoMonopolyTaskAddNotify.TaskDatas.ToList<Aki.Protocol.DangoMonopolyTaskData>());
+			data.ProtoTaskAddNotify(dangoMonopolyTaskAddNotify.TaskDatas);
 		});
 		Net.Instance.Register(ENotifyMessageId.DangoMonopolyTaskRemoveNotify, delegate(IMessage msg, Net.CallbackStatus status)
 		{
@@ -85,7 +84,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 			{
 				return;
 			}
-			data.ProtoTaskRemoveNotify(dangoMonopolyTaskRemoveNotify.TaskIds.ToList<int>());
+			data.ProtoTaskRemoveNotify(dangoMonopolyTaskRemoveNotify.TaskIds);
 		});
 		Net.Instance.Register(ENotifyMessageId.DangoMonopolyRewardNotify, delegate(IMessage msg, Net.CallbackStatus status)
 		{
@@ -99,7 +98,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		});
 	}
 
-	// Token: 0x06007CE7 RID: 31975 RVA: 0x001A67F8 File Offset: 0x001A49F8
+	// Token: 0x0600507D RID: 20605 RVA: 0x001AF4AC File Offset: 0x001AD6AC
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.DangoMonopolyTaskUpdateNotify);
@@ -109,28 +108,28 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.DangoMonopolyRewardNotify);
 	}
 
-	// Token: 0x06007CE8 RID: 31976 RVA: 0x001A6855 File Offset: 0x001A4A55
+	// Token: 0x0600507E RID: 20606 RVA: 0x001AF509 File Offset: 0x001AD709
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.EventWorldDone));
 		EventSystem.Instance.Add<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.EventCommonItemCountAnyChange));
 	}
 
-	// Token: 0x06007CE9 RID: 31977 RVA: 0x001A688F File Offset: 0x001A4A8F
+	// Token: 0x0600507F RID: 20607 RVA: 0x001AF543 File Offset: 0x001AD743
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.EventWorldDone));
 		EventSystem.Instance.Remove<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.EventCommonItemCountAnyChange));
 	}
 
-	// Token: 0x06007CEA RID: 31978 RVA: 0x001A68C9 File Offset: 0x001A4AC9
+	// Token: 0x06005080 RID: 20608 RVA: 0x001AF57D File Offset: 0x001AD77D
 	[NullableContext(2)]
 	private static ActivityDangoMonopolyController GetController()
 	{
 		return ActivityManager.GetActivityController(ActivityType.DangoMonopoly) as ActivityDangoMonopolyController;
 	}
 
-	// Token: 0x06007CEB RID: 31979 RVA: 0x001A68D7 File Offset: 0x001A4AD7
+	// Token: 0x06005081 RID: 20609 RVA: 0x001AF58B File Offset: 0x001AD78B
 	[NullableContext(2)]
 	public ActivityDangoMonopolyData GetData()
 	{
@@ -142,7 +141,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		return controller.Data;
 	}
 
-	// Token: 0x06007CEC RID: 31980 RVA: 0x001A68EC File Offset: 0x001A4AEC
+	// Token: 0x06005082 RID: 20610 RVA: 0x001AF5A0 File Offset: 0x001AD7A0
 	public void RefreshActivityRedDot()
 	{
 		ActivityDangoMonopolyData data = this.Data;
@@ -153,7 +152,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06007CED RID: 31981 RVA: 0x001A693C File Offset: 0x001A4B3C
+	// Token: 0x06005083 RID: 20611 RVA: 0x001AF5F0 File Offset: 0x001AD7F0
 	public UniTask RequestReceiveTaskReward(List<int> taskIdList)
 	{
 		ActivityDangoMonopolyController.<RequestReceiveTaskReward>d__13 <RequestReceiveTaskReward>d__;
@@ -165,7 +164,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		return <RequestReceiveTaskReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007CEE RID: 31982 RVA: 0x001A6988 File Offset: 0x001A4B88
+	// Token: 0x06005084 RID: 20612 RVA: 0x001AF63C File Offset: 0x001AD83C
 	public UniTask RequestReceiveBoardReward(List<int> boardIdList)
 	{
 		ActivityDangoMonopolyController.<RequestReceiveBoardReward>d__14 <RequestReceiveBoardReward>d__;
@@ -177,7 +176,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		return <RequestReceiveBoardReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007CEF RID: 31983 RVA: 0x001A69D4 File Offset: 0x001A4BD4
+	// Token: 0x06005085 RID: 20613 RVA: 0x001AF688 File Offset: 0x001AD888
 	public UniTask RequestReceiveGridReward()
 	{
 		ActivityDangoMonopolyController.<RequestReceiveGridReward>d__15 <RequestReceiveGridReward>d__;
@@ -188,7 +187,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		return <RequestReceiveGridReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007CF0 RID: 31984 RVA: 0x001A6A18 File Offset: 0x001A4C18
+	// Token: 0x06005086 RID: 20614 RVA: 0x001AF6CC File Offset: 0x001AD8CC
 	public UniTask RequestDice()
 	{
 		ActivityDangoMonopolyController.<RequestDice>d__16 <RequestDice>d__;
@@ -199,7 +198,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		return <RequestDice>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007CF1 RID: 31985 RVA: 0x001A6A5C File Offset: 0x001A4C5C
+	// Token: 0x06005087 RID: 20615 RVA: 0x001AF710 File Offset: 0x001AD910
 	public UniTask RequestEnterNextBoard()
 	{
 		ActivityDangoMonopolyController.<RequestEnterNextBoard>d__17 <RequestEnterNextBoard>d__;
@@ -210,7 +209,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		return <RequestEnterNextBoard>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007CF2 RID: 31986 RVA: 0x001A6A9F File Offset: 0x001A4C9F
+	// Token: 0x06005088 RID: 20616 RVA: 0x001AF753 File Offset: 0x001AD953
 	private void EventWorldDone()
 	{
 		ActivityDangoMonopolyData data = this.Data;
@@ -225,7 +224,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06007CF3 RID: 31987 RVA: 0x001A6AD8 File Offset: 0x001A4CD8
+	// Token: 0x06005089 RID: 20617 RVA: 0x001AF78C File Offset: 0x001AD98C
 	private void EventCommonItemCountAnyChange(int id, int _)
 	{
 		ActivityDangoMonopolyData data = this.Data;
@@ -238,8 +237,8 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		this.RefreshActivityRedDot();
 	}
 
-	// Token: 0x17000A94 RID: 2708
-	// (get) Token: 0x06007CF4 RID: 31988 RVA: 0x001A6B30 File Offset: 0x001A4D30
+	// Token: 0x17000AB4 RID: 2740
+	// (get) Token: 0x0600508A RID: 20618 RVA: 0x001AF7E4 File Offset: 0x001AD9E4
 	public static ActivityDangoMonopolyController Instance
 	{
 		get
@@ -248,7 +247,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06007CF5 RID: 31989 RVA: 0x001A6B37 File Offset: 0x001A4D37
+	// Token: 0x0600508B RID: 20619 RVA: 0x001AF7EB File Offset: 0x001AD9EB
 	public static ActivityDangoMonopolyController GetOrCreateInstance()
 	{
 		if (ActivityDangoMonopolyController._Instance == null)
@@ -258,7 +257,7 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		return ActivityDangoMonopolyController._Instance;
 	}
 
-	// Token: 0x06007CF6 RID: 31990 RVA: 0x001A6B4B File Offset: 0x001A4D4B
+	// Token: 0x0600508C RID: 20620 RVA: 0x001AF7FF File Offset: 0x001AD9FF
 	public static bool CreateInstance()
 	{
 		if (ActivityDangoMonopolyController._Instance != null)
@@ -269,28 +268,28 @@ public class ActivityDangoMonopolyController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06007CF7 RID: 31991 RVA: 0x001A6B61 File Offset: 0x001A4D61
+	// Token: 0x0600508D RID: 20621 RVA: 0x001AF815 File Offset: 0x001ADA15
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06007CF8 RID: 31992 RVA: 0x001A6B63 File Offset: 0x001A4D63
+	// Token: 0x0600508E RID: 20622 RVA: 0x001AF817 File Offset: 0x001ADA17
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityDangoMonopolyController._Instance = null;
 	}
 
-	// Token: 0x06007CF9 RID: 31993 RVA: 0x001A6B6B File Offset: 0x001A4D6B
+	// Token: 0x0600508F RID: 20623 RVA: 0x001AF81F File Offset: 0x001ADA1F
 	static ActivityDangoMonopolyController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityDangoMonopolyController.CreateStaticDefaultValue), new Action(ActivityDangoMonopolyController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040038F5 RID: 14581
+	// Token: 0x0400398E RID: 14734
 	[Nullable(2)]
 	public ActivityDangoMonopolyData Data;
 
-	// Token: 0x040038F6 RID: 14582
+	// Token: 0x0400398F RID: 14735
 	[Nullable(2)]
 	private static ActivityDangoMonopolyController _Instance;
 }

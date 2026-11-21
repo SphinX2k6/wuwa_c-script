@@ -5,10 +5,10 @@ using CSharpScript.Launcher.LogUpload;
 
 namespace CSharpScript.Game.Module.LogUpload
 {
-	// Token: 0x020056A6 RID: 22182
+	// Token: 0x0200467C RID: 18044
 	public static class LogUploadHelper
 	{
-		// Token: 0x06038723 RID: 231203 RVA: 0x00D66BAC File Offset: 0x00D64DAC
+		// Token: 0x0602D620 RID: 185888 RVA: 0x00CB4D00 File Offset: 0x00CB2F00
 		[NullableContext(1)]
 		public static ILogUploadParams CreateParams()
 		{

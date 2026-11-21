@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002B76 RID: 11126
+// Token: 0x020020F2 RID: 8434
 internal enum <SurvivorsRogueGeneralObtainView>F2C91F5F7657457BAE22B7C13923A272C30A1B66FB26522F414FE477DF929C440__EComponents
 {
-	// Token: 0x0400AC69 RID: 44137
+	// Token: 0x0400B06F RID: 45167
 	BaseItem,
-	// Token: 0x0400AC6A RID: 44138
+	// Token: 0x0400B070 RID: 45168
 	LayoutCard,
-	// Token: 0x0400AC6B RID: 44139
+	// Token: 0x0400B071 RID: 45169
 	CardItem,
-	// Token: 0x0400AC6C RID: 44140
+	// Token: 0x0400B072 RID: 45170
 	BtnConfirm,
-	// Token: 0x0400AC6D RID: 44141
+	// Token: 0x0400B073 RID: 45171
 	TxtBtnConfirm
 }

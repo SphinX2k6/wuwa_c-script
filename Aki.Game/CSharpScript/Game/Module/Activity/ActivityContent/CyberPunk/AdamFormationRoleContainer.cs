@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068A5 RID: 26789
+	// Token: 0x020057F5 RID: 22517
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AdamFormationRoleContainer : UiPanelBase, IDynamicScrollItem<AdamFormationRoleGroupInfo>
 	{
-		// Token: 0x06042D96 RID: 273814 RVA: 0x010462C8 File Offset: 0x010444C8
+		// Token: 0x060378EE RID: 227566 RVA: 0x00F878D8 File Offset: 0x00F85AD8
 		public UniTask Init(UUIItem actor)
 		{
 			AdamFormationRoleContainer.<Init>d__5 <Init>d__;
@@ -27,12 +27,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042D97 RID: 273815 RVA: 0x01046313 File Offset: 0x01044513
+		// Token: 0x060378EF RID: 227567 RVA: 0x00F87923 File Offset: 0x00F85B23
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x06042D98 RID: 273816 RVA: 0x01046315 File Offset: 0x01044515
+		// Token: 0x060378F0 RID: 227568 RVA: 0x00F87925 File Offset: 0x00F85B25
 		[return: Nullable(2)]
 		public AUIBaseActor GetUsingItem(AdamFormationRoleGroupInfo data)
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return ((gridLayout != null) ? gridLayout.GetOwner() : null) as AUIBaseActor;
 		}
 
-		// Token: 0x06042D99 RID: 273817 RVA: 0x01046350 File Offset: 0x01044550
+		// Token: 0x060378F1 RID: 227569 RVA: 0x00F87960 File Offset: 0x00F85B60
 		public void Update(AdamFormationRoleGroupInfo data, int index)
 		{
 			this.Data = data;
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshRoleList();
 		}
 
-		// Token: 0x06042D9A RID: 273818 RVA: 0x0104636E File Offset: 0x0104456E
+		// Token: 0x060378F2 RID: 227570 RVA: 0x00F8797E File Offset: 0x00F85B7E
 		public void InitData(AdamFormationRoleGroupInfo data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x06042D9B RID: 273819 RVA: 0x01046377 File Offset: 0x01044577
+		// Token: 0x060378F3 RID: 227571 RVA: 0x00F87987 File Offset: 0x00F85B87
 		public void Refresh()
 		{
 			if (this.Data.IsTitleType)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			roleLayout.RefreshWithoutDataSync();
 		}
 
-		// Token: 0x06042D9C RID: 273820 RVA: 0x010463A0 File Offset: 0x010445A0
+		// Token: 0x060378F4 RID: 227572 RVA: 0x00F879B0 File Offset: 0x00F85BB0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -92,14 +92,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x06042D9D RID: 273821 RVA: 0x01046428 File Offset: 0x01044628
+		// Token: 0x060378F5 RID: 227573 RVA: 0x00F87A38 File Offset: 0x00F85C38
 		protected override void OnStart()
 		{
 			base.GetItem(2).SetUIActive(false);
 			base.GetGridLayout(0).RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x06042D9E RID: 273822 RVA: 0x0104645C File Offset: 0x0104465C
+		// Token: 0x060378F6 RID: 227574 RVA: 0x00F87A6C File Offset: 0x00F85C6C
 		private void RefreshTitle()
 		{
 			base.GetGridLayout(0).RootUIComp.Get().SetUIActive(false);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			base.GetItem(2).SetUIActive(true);
 		}
 
-		// Token: 0x06042D9F RID: 273823 RVA: 0x010464CC File Offset: 0x010446CC
+		// Token: 0x060378F7 RID: 227575 RVA: 0x00F87ADC File Offset: 0x00F85CDC
 		private void RefreshRoleList()
 		{
 			base.GetItem(2).SetUIActive(false);
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042DA0 RID: 273824 RVA: 0x0104657A File Offset: 0x0104477A
+		// Token: 0x060378F8 RID: 227576 RVA: 0x00F87B8A File Offset: 0x00F85D8A
 		private AdamFormationRoleGridItem OnCreateRole()
 		{
 			AdamFormationRoleGridItem adamFormationRoleGridItem = new AdamFormationRoleGridItem();
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return adamFormationRoleGridItem;
 		}
 
-		// Token: 0x06042DA1 RID: 273825 RVA: 0x010465B4 File Offset: 0x010447B4
+		// Token: 0x060378F9 RID: 227577 RVA: 0x00F87BC4 File Offset: 0x00F85DC4
 		protected void ToggleFunction(MediumItemGridExtendCallback param)
 		{
 			Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			refreshRole(roleDataBase);
 		}
 
-		// Token: 0x06042DA2 RID: 273826 RVA: 0x010466B0 File Offset: 0x010448B0
+		// Token: 0x060378FA RID: 227578 RVA: 0x00F87CC0 File Offset: 0x00F85EC0
 		[NullableContext(2)]
 		protected bool CanExecuteChangeFunction(object data, bool isForceSelected, EToggleState state)
 		{
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return true;
 		}
 
-		// Token: 0x04022C9C RID: 142492
+		// Token: 0x0401D4F8 RID: 120056
 		[Nullable(new byte[]
 		{
 			2,
@@ -258,11 +258,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 		})]
 		public Action<RoleDataBase> RefreshRole;
 
-		// Token: 0x04022C9D RID: 142493
+		// Token: 0x0401D4F9 RID: 120057
 		[Nullable(2)]
 		public IReadOnlySet<int> RecommendedRoleIdSet;
 
-		// Token: 0x04022C9E RID: 142494
+		// Token: 0x0401D4FA RID: 120058
 		[Nullable(new byte[]
 		{
 			2,
@@ -271,10 +271,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 		})]
 		private GenericLayout<WeeklyRogueRoleGridItem, RoleDataBase> RoleLayout;
 
-		// Token: 0x04022C9F RID: 142495
+		// Token: 0x0401D4FB RID: 120059
 		private AdamFormationRoleGroupInfo Data;
 
-		// Token: 0x04022CA0 RID: 142496
+		// Token: 0x0401D4FC RID: 120060
 		private RoleDataBase[] RoleDataList = Array.Empty<RoleDataBase>();
 	}
 }

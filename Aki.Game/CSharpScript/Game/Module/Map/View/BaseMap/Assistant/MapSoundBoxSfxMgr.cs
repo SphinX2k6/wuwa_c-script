@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.WorldMap;
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 {
-	// Token: 0x02005495 RID: 21653
+	// Token: 0x02004478 RID: 17528
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapSoundBoxSfxMgr
 	{
-		// Token: 0x06037528 RID: 226600 RVA: 0x00D225B4 File Offset: 0x00D207B4
+		// Token: 0x0602C47E RID: 181374 RVA: 0x00C72170 File Offset: 0x00C70370
 		public unsafe void OnMarkItemBecomeVisible(MarkItem markItem, Vector playerLocation)
 		{
 			if (markItem.MarkType != EMarkType.SoundBox && markItem.MarkType != EMarkType.CalmingWindBell)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x06037529 RID: 226601 RVA: 0x00D226B0 File Offset: 0x00D208B0
+		// Token: 0x0602C47F RID: 181375 RVA: 0x00C7226C File Offset: 0x00C7046C
 		public void OnMarkItemBecomeInvisible(MarkItem markItem)
 		{
 			int markId = markItem.MarkId;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			WorldMapModel.Instance.SetPlaySoundMarkSfxForbidden(markId, false);
 		}
 
-		// Token: 0x0401D246 RID: 119366
+		// Token: 0x04017CE2 RID: 97506
 		public const float SOUND_MARK_INRANGE_DISTANCE_SQUARE = 434850980f;
 	}
 }

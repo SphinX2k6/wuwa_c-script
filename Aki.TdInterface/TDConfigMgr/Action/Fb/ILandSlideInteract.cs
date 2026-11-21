@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027FE RID: 10238
+	// Token: 0x02002AD1 RID: 10961
 	public class ILandSlideInteract : ILeisureInteractType
 	{
-		// Token: 0x0600E344 RID: 58180 RVA: 0x002182E6 File Offset: 0x002164E6
-		[NullableContext(1)]
+		// Token: 0x0600F169 RID: 61801 RVA: 0x0023514A File Offset: 0x0023334A
 		public static ILandSlideInteract Create(ILandSlideInteract? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700450A RID: 17674
-		// (get) Token: 0x0600E345 RID: 58181 RVA: 0x00218305 File Offset: 0x00216505
+		// Token: 0x17004875 RID: 18549
+		// (get) Token: 0x0600F16A RID: 61802 RVA: 0x00235169 File Offset: 0x00233369
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DE2 RID: 32226
+		// Token: 0x0400849F RID: 33951
 		private ILandSlideInteract Instance;
 	}
 }

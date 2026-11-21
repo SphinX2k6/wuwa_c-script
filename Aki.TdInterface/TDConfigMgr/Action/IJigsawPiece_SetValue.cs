@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B6B RID: 7019
+	// Token: 0x02001D18 RID: 7448
 	public class IJigsawPiece_SetValue
 	{
-		// Token: 0x04005BEF RID: 23535
-		[Nullable(1)]
+		// Token: 0x04006088 RID: 24712
 		public IPieceIndex Index;
 
-		// Token: 0x04005BF0 RID: 23536
+		// Token: 0x04006089 RID: 24713
 		public bool Active;
 
-		// Token: 0x04005BF1 RID: 23537
+		// Token: 0x0400608A RID: 24714
 		public bool IsCorrect;
 
-		// Token: 0x04005BF2 RID: 23538
+		// Token: 0x0400608B RID: 24715
 		public EJigsawPieceState InitState;
 	}
 }

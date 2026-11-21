@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002D08 RID: 11528
+// Token: 0x02002262 RID: 8802
 public class LevelUpConditionData
 {
-	// Token: 0x060183D2 RID: 99282 RVA: 0x0062B68E File Offset: 0x0062988E
+	// Token: 0x06015C73 RID: 89203 RVA: 0x00651686 File Offset: 0x0064F886
 	public bool CheckAllCondition()
 	{
 		return this.HasHighQuality && this.HasBeStrength && this.HasResonance;
 	}
 
-	// Token: 0x060183D3 RID: 99283 RVA: 0x0062B6A8 File Offset: 0x006298A8
+	// Token: 0x06015C74 RID: 89204 RVA: 0x006516A0 File Offset: 0x0064F8A0
 	[NullableContext(1)]
 	public string[] GetConditionTextList()
 	{
@@ -34,12 +34,12 @@ public class LevelUpConditionData
 		return list.ToArray();
 	}
 
-	// Token: 0x0400B417 RID: 46103
+	// Token: 0x0400B78C RID: 46988
 	public bool HasHighQuality;
 
-	// Token: 0x0400B418 RID: 46104
+	// Token: 0x0400B78D RID: 46989
 	public bool HasBeStrength;
 
-	// Token: 0x0400B419 RID: 46105
+	// Token: 0x0400B78E RID: 46990
 	public bool HasResonance;
 }

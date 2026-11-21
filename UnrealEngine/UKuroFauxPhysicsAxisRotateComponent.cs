@@ -6,44 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200183C RID: 6204
+	// Token: 0x02000384 RID: 900
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroFauxPhysics.KuroFauxPhysicsAxisRotateComponent")]
 	[UnrealStructLayout(880, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 880)]
-	public class UKuroFauxPhysicsAxisRotateComponent : UKuroFauxPhysicsRotateComponentBase, IUnrealUObject, IUnrealObject, IKuroVisualizedInterface, IUnrealNativeInterface, IUnrealInterface, IKuroAxisVisualizedInterface
+	public class UKuroFauxPhysicsAxisRotateComponent : UKuroFauxPhysicsRotateComponentBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06016DE9 RID: 93673 RVA: 0x0021629C File Offset: 0x0021449C
+		// Token: 0x06005A58 RID: 23128 RVA: 0x0007FBA8 File Offset: 0x0007DDA8
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroFauxPhysicsAxisRotateComponent._ClassPtr;
 		}
 
-		// Token: 0x06016DEA RID: 93674 RVA: 0x002162A8 File Offset: 0x002144A8
-		int IKuroVisualizedInterface.InterfaceOffset()
-		{
-			return UKuroFauxPhysicsAxisRotateComponent.__InterfaceOffset_IKuroVisualizedInterface;
-		}
-
-		// Token: 0x06016DEB RID: 93675 RVA: 0x002162AF File Offset: 0x002144AF
-		int IKuroAxisVisualizedInterface.InterfaceOffset()
-		{
-			return UKuroFauxPhysicsAxisRotateComponent.__InterfaceOffset_IKuroAxisVisualizedInterface;
-		}
-
-		// Token: 0x06016DEC RID: 93676 RVA: 0x002162B8 File Offset: 0x002144B8
+		// Token: 0x06005A59 RID: 23129 RVA: 0x0007FBB4 File Offset: 0x0007DDB4
 		public UKuroFauxPhysicsAxisRotateComponent() : this(BuiltinUtils.AllocNativeUObject(UKuroFauxPhysicsAxisRotateComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06016DED RID: 93677 RVA: 0x002162E0 File Offset: 0x002144E0
+		// Token: 0x06005A5A RID: 23130 RVA: 0x0007FBDC File Offset: 0x0007DDDC
 		public UKuroFauxPhysicsAxisRotateComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroFauxPhysicsAxisRotateComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005C4B RID: 23627
-		// (get) Token: 0x06016DEE RID: 93678 RVA: 0x00216313 File Offset: 0x00214513
-		// (set) Token: 0x06016DEF RID: 93679 RVA: 0x00216327 File Offset: 0x00214527
+		// Token: 0x170011DE RID: 4574
+		// (get) Token: 0x06005A5B RID: 23131 RVA: 0x0007FC0F File Offset: 0x0007DE0F
+		// (set) Token: 0x06005A5C RID: 23132 RVA: 0x0007FC23 File Offset: 0x0007DE23
 		public unsafe FVector LocalRotationAxis
 		{
 			get
@@ -56,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C4C RID: 23628
-		// (get) Token: 0x06016DF0 RID: 93680 RVA: 0x0021633C File Offset: 0x0021453C
-		// (set) Token: 0x06016DF1 RID: 93681 RVA: 0x0021634C File Offset: 0x0021454C
+		// Token: 0x170011DF RID: 4575
+		// (get) Token: 0x06005A5D RID: 23133 RVA: 0x0007FC38 File Offset: 0x0007DE38
+		// (set) Token: 0x06005A5E RID: 23134 RVA: 0x0007FC48 File Offset: 0x0007DE48
 		public unsafe bool bConstrain
 		{
 			get
@@ -71,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C4D RID: 23629
-		// (get) Token: 0x06016DF2 RID: 93682 RVA: 0x0021635D File Offset: 0x0021455D
-		// (set) Token: 0x06016DF3 RID: 93683 RVA: 0x0021636D File Offset: 0x0021456D
+		// Token: 0x170011E0 RID: 4576
+		// (get) Token: 0x06005A5F RID: 23135 RVA: 0x0007FC59 File Offset: 0x0007DE59
+		// (set) Token: 0x06005A60 RID: 23136 RVA: 0x0007FC69 File Offset: 0x0007DE69
 		public unsafe float ConstrainAngleMin
 		{
 			get
@@ -86,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C4E RID: 23630
-		// (get) Token: 0x06016DF4 RID: 93684 RVA: 0x0021637E File Offset: 0x0021457E
-		// (set) Token: 0x06016DF5 RID: 93685 RVA: 0x0021638E File Offset: 0x0021458E
+		// Token: 0x170011E1 RID: 4577
+		// (get) Token: 0x06005A61 RID: 23137 RVA: 0x0007FC7A File Offset: 0x0007DE7A
+		// (set) Token: 0x06005A62 RID: 23138 RVA: 0x0007FC8A File Offset: 0x0007DE8A
 		public unsafe float ConstrainAngleMax
 		{
 			get
@@ -101,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C4F RID: 23631
-		// (get) Token: 0x06016DF6 RID: 93686 RVA: 0x0021639F File Offset: 0x0021459F
-		// (set) Token: 0x06016DF7 RID: 93687 RVA: 0x002163AF File Offset: 0x002145AF
+		// Token: 0x170011E2 RID: 4578
+		// (get) Token: 0x06005A63 RID: 23139 RVA: 0x0007FC9B File Offset: 0x0007DE9B
+		// (set) Token: 0x06005A64 RID: 23140 RVA: 0x0007FCAB File Offset: 0x0007DEAB
 		public unsafe float ConstrainBounce
 		{
 			get
@@ -116,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C50 RID: 23632
-		// (get) Token: 0x06016DF8 RID: 93688 RVA: 0x002163C0 File Offset: 0x002145C0
-		// (set) Token: 0x06016DF9 RID: 93689 RVA: 0x002163D0 File Offset: 0x002145D0
+		// Token: 0x170011E3 RID: 4579
+		// (get) Token: 0x06005A65 RID: 23141 RVA: 0x0007FCBC File Offset: 0x0007DEBC
+		// (set) Token: 0x06005A66 RID: 23142 RVA: 0x0007FCCC File Offset: 0x0007DECC
 		public unsafe float ImpactMinStrength
 		{
 			get
@@ -131,9 +119,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C51 RID: 23633
-		// (get) Token: 0x06016DFA RID: 93690 RVA: 0x002163E1 File Offset: 0x002145E1
-		// (set) Token: 0x06016DFB RID: 93691 RVA: 0x002163F1 File Offset: 0x002145F1
+		// Token: 0x170011E4 RID: 4580
+		// (get) Token: 0x06005A67 RID: 23143 RVA: 0x0007FCDD File Offset: 0x0007DEDD
+		// (set) Token: 0x06005A68 RID: 23144 RVA: 0x0007FCED File Offset: 0x0007DEED
 		public unsafe float MinTimeBetweenImpacts
 		{
 			get
@@ -146,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C52 RID: 23634
-		// (get) Token: 0x06016DFC RID: 93692 RVA: 0x00216404 File Offset: 0x00214604
-		// (set) Token: 0x06016DFD RID: 93693 RVA: 0x0021643D File Offset: 0x0021463D
+		// Token: 0x170011E5 RID: 4581
+		// (get) Token: 0x06005A69 RID: 23145 RVA: 0x0007FD00 File Offset: 0x0007DF00
+		// (set) Token: 0x06005A6A RID: 23146 RVA: 0x0007FD39 File Offset: 0x0007DF39
 		public FKuroFauxPhysicsAxisRotateConstraintHit OnMinConstraintHit
 		{
 			get
@@ -167,9 +155,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C53 RID: 23635
-		// (get) Token: 0x06016DFE RID: 93694 RVA: 0x00216460 File Offset: 0x00214660
-		// (set) Token: 0x06016DFF RID: 93695 RVA: 0x00216499 File Offset: 0x00214699
+		// Token: 0x170011E6 RID: 4582
+		// (get) Token: 0x06005A6B RID: 23147 RVA: 0x0007FD5C File Offset: 0x0007DF5C
+		// (set) Token: 0x06005A6C RID: 23148 RVA: 0x0007FD95 File Offset: 0x0007DF95
 		public FKuroFauxPhysicsAxisRotateConstraintHit OnMaxConstraintHit
 		{
 			get
@@ -188,104 +176,98 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06016E00 RID: 93696 RVA: 0x002164BA File Offset: 0x002146BA
+		// Token: 0x06005A6D RID: 23149 RVA: 0x0007FDB6 File Offset: 0x0007DFB6
 		public float GetCurrentAlphaBetweenConstraints()
 		{
 			return UKuroFauxPhysicsAxisRotateComponent.__GetCurrentAlphaBetweenConstraints_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06016E01 RID: 93697 RVA: 0x002164C7 File Offset: 0x002146C7
+		// Token: 0x06005A6E RID: 23150 RVA: 0x0007FDC3 File Offset: 0x0007DFC3
 		public void ApplyAngularMovement(float AngleRadians)
 		{
 			UKuroFauxPhysicsAxisRotateComponent.__ApplyAngularMovement_Internal(base.NativePtr, AngleRadians);
 		}
 
-		// Token: 0x06016E02 RID: 93698 RVA: 0x002164D5 File Offset: 0x002146D5
+		// Token: 0x06005A6F RID: 23151 RVA: 0x0007FDD1 File Offset: 0x0007DFD1
 		public void ApplyAngularImpulse(float AngularImpulseRadians)
 		{
 			UKuroFauxPhysicsAxisRotateComponent.__ApplyAngularImpulse_Internal(base.NativePtr, AngularImpulseRadians);
 		}
 
-		// Token: 0x06016E03 RID: 93699 RVA: 0x002164E3 File Offset: 0x002146E3
+		// Token: 0x06005A70 RID: 23152 RVA: 0x0007FDDF File Offset: 0x0007DFDF
 		public void ApplyAngularForce(float AngularForceRadians)
 		{
 			UKuroFauxPhysicsAxisRotateComponent.__ApplyAngularForce_Internal(base.NativePtr, AngularForceRadians);
 		}
 
-		// Token: 0x06016E04 RID: 93700
+		// Token: 0x06005A71 RID: 23153
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetCurrentAlphaBetweenConstraints_Internal(IntPtr @this);
 
-		// Token: 0x06016E05 RID: 93701
+		// Token: 0x06005A72 RID: 23154
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ApplyAngularMovement_Internal(IntPtr @this, float AngleRadians);
 
-		// Token: 0x06016E06 RID: 93702
+		// Token: 0x06005A73 RID: 23155
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ApplyAngularImpulse_Internal(IntPtr @this, float AngularImpulseRadians);
 
-		// Token: 0x06016E07 RID: 93703
+		// Token: 0x06005A74 RID: 23156
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ApplyAngularForce_Internal(IntPtr @this, float AngularForceRadians);
 
-		// Token: 0x06016E08 RID: 93704 RVA: 0x002164F1 File Offset: 0x002146F1
+		// Token: 0x06005A75 RID: 23157 RVA: 0x0007FDED File Offset: 0x0007DFED
 		static UKuroFauxPhysicsAxisRotateComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroFauxPhysics.KuroFauxPhysicsAxisRotateComponent");
 		}
 
-		// Token: 0x06016E09 RID: 93705 RVA: 0x002164FF File Offset: 0x002146FF
+		// Token: 0x06005A76 RID: 23158 RVA: 0x0007FDFB File Offset: 0x0007DFFB
 		protected UKuroFauxPhysicsAxisRotateComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C6E9 RID: 50921
-		internal static int __InterfaceOffset_IKuroVisualizedInterface;
-
-		// Token: 0x0400C6EA RID: 50922
-		internal static int __InterfaceOffset_IKuroAxisVisualizedInterface;
-
-		// Token: 0x0400C6EB RID: 50923
+		// Token: 0x0400258F RID: 9615
 		public new const string __ObjectPath = "/Script/KuroFauxPhysics.KuroFauxPhysicsAxisRotateComponent";
 
-		// Token: 0x0400C6EC RID: 50924
+		// Token: 0x04002590 RID: 9616
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C6ED RID: 50925
+		// Token: 0x04002591 RID: 9617
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C6EE RID: 50926
+		// Token: 0x04002592 RID: 9618
 		internal static int __PropertyOffset_LocalRotationAxis;
 
-		// Token: 0x0400C6EF RID: 50927
+		// Token: 0x04002593 RID: 9619
 		internal static int __PropertyOffset_bConstrain;
 
-		// Token: 0x0400C6F0 RID: 50928
+		// Token: 0x04002594 RID: 9620
 		internal static int __PropertyOffset_ConstrainAngleMin;
 
-		// Token: 0x0400C6F1 RID: 50929
+		// Token: 0x04002595 RID: 9621
 		internal static int __PropertyOffset_ConstrainAngleMax;
 
-		// Token: 0x0400C6F2 RID: 50930
+		// Token: 0x04002596 RID: 9622
 		internal static int __PropertyOffset_ConstrainBounce;
 
-		// Token: 0x0400C6F3 RID: 50931
+		// Token: 0x04002597 RID: 9623
 		internal static int __PropertyOffset_ImpactMinStrength;
 
-		// Token: 0x0400C6F4 RID: 50932
+		// Token: 0x04002598 RID: 9624
 		internal static int __PropertyOffset_MinTimeBetweenImpacts;
 
-		// Token: 0x0400C6F5 RID: 50933
+		// Token: 0x04002599 RID: 9625
 		internal static int __PropertyOffset_OnMinConstraintHit;
 
-		// Token: 0x0400C6F6 RID: 50934
+		// Token: 0x0400259A RID: 9626
 		[Nullable(2)]
 		private FKuroFauxPhysicsAxisRotateConstraintHit _OnMinConstraintHit;
 
-		// Token: 0x0400C6F7 RID: 50935
+		// Token: 0x0400259B RID: 9627
 		internal static int __PropertyOffset_OnMaxConstraintHit;
 
-		// Token: 0x0400C6F8 RID: 50936
+		// Token: 0x0400259C RID: 9628
 		[Nullable(2)]
 		private FKuroFauxPhysicsAxisRotateConstraintHit _OnMaxConstraintHit;
 	}

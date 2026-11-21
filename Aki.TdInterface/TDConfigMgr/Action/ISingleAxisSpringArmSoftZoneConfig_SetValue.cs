@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E72 RID: 7794
+	// Token: 0x020020A7 RID: 8359
 	public class ISingleAxisSpringArmSoftZoneConfig_SetValue
 	{
-		// Token: 0x0400639C RID: 25500
+		// Token: 0x04006980 RID: 27008
 		public float? MaxOffsetDistance;
 
-		// Token: 0x0400639D RID: 25501
+		// Token: 0x04006981 RID: 27009
 		public float? MinOffsetDistance;
 
-		// Token: 0x0400639E RID: 25502
+		// Token: 0x04006982 RID: 27010
 		public float? MaxInterpolationSpeed;
 
-		// Token: 0x0400639F RID: 25503
+		// Token: 0x04006983 RID: 27011
 		public float? MinInterpolationSpeed;
 	}
 }

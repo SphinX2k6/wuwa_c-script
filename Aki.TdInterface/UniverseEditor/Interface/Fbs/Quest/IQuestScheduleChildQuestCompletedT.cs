@@ -4,55 +4,55 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004017 RID: 16407
+	// Token: 0x02004458 RID: 17496
 	public class IQuestScheduleChildQuestCompletedT
 	{
-		// Token: 0x17007358 RID: 29528
-		// (get) Token: 0x06017B25 RID: 97061 RVA: 0x0036B285 File Offset: 0x00369485
-		// (set) Token: 0x06017B26 RID: 97062 RVA: 0x0036B28D File Offset: 0x0036948D
+		// Token: 0x1700795A RID: 31066
+		// (get) Token: 0x060191BE RID: 102846 RVA: 0x00395079 File Offset: 0x00393279
+		// (set) Token: 0x060191BF RID: 102847 RVA: 0x00395081 File Offset: 0x00393281
 		public EQuestScheduleType Type { get; set; }
 
-		// Token: 0x17007359 RID: 29529
-		// (get) Token: 0x06017B27 RID: 97063 RVA: 0x0036B296 File Offset: 0x00369496
-		// (set) Token: 0x06017B28 RID: 97064 RVA: 0x0036B29E File Offset: 0x0036949E
+		// Token: 0x1700795B RID: 31067
+		// (get) Token: 0x060191C0 RID: 102848 RVA: 0x0039508A File Offset: 0x0039328A
+		// (set) Token: 0x060191C1 RID: 102849 RVA: 0x00395092 File Offset: 0x00393292
 		public int ChildQuestId { get; set; }
 
-		// Token: 0x1700735A RID: 29530
-		// (get) Token: 0x06017B29 RID: 97065 RVA: 0x0036B2A7 File Offset: 0x003694A7
-		// (set) Token: 0x06017B2A RID: 97066 RVA: 0x0036B2AF File Offset: 0x003694AF
+		// Token: 0x1700795C RID: 31068
+		// (get) Token: 0x060191C2 RID: 102850 RVA: 0x0039509B File Offset: 0x0039329B
+		// (set) Token: 0x060191C3 RID: 102851 RVA: 0x003950A3 File Offset: 0x003932A3
 		public bool ShowTracking { get; set; }
 
-		// Token: 0x1700735B RID: 29531
-		// (get) Token: 0x06017B2B RID: 97067 RVA: 0x0036B2B8 File Offset: 0x003694B8
-		// (set) Token: 0x06017B2C RID: 97068 RVA: 0x0036B2C0 File Offset: 0x003694C0
+		// Token: 0x1700795D RID: 31069
+		// (get) Token: 0x060191C4 RID: 102852 RVA: 0x003950AC File Offset: 0x003932AC
+		// (set) Token: 0x060191C5 RID: 102853 RVA: 0x003950B4 File Offset: 0x003932B4
 		public bool ShowComplete { get; set; }
 
-		// Token: 0x1700735C RID: 29532
-		// (get) Token: 0x06017B2D RID: 97069 RVA: 0x0036B2C9 File Offset: 0x003694C9
-		// (set) Token: 0x06017B2E RID: 97070 RVA: 0x0036B2D1 File Offset: 0x003694D1
+		// Token: 0x1700795E RID: 31070
+		// (get) Token: 0x060191C6 RID: 102854 RVA: 0x003950BD File Offset: 0x003932BD
+		// (set) Token: 0x060191C7 RID: 102855 RVA: 0x003950C5 File Offset: 0x003932C5
 		public bool OnlyShowWhileRunning { get; set; }
 
-		// Token: 0x1700735D RID: 29533
-		// (get) Token: 0x06017B2F RID: 97071 RVA: 0x0036B2DA File Offset: 0x003694DA
-		// (set) Token: 0x06017B30 RID: 97072 RVA: 0x0036B2E2 File Offset: 0x003694E2
+		// Token: 0x1700795F RID: 31071
+		// (get) Token: 0x060191C8 RID: 102856 RVA: 0x003950CE File Offset: 0x003932CE
+		// (set) Token: 0x060191C9 RID: 102857 RVA: 0x003950D6 File Offset: 0x003932D6
 		public List<TVarRefUnion> Vars { get; set; }
 
-		// Token: 0x1700735E RID: 29534
-		// (get) Token: 0x06017B31 RID: 97073 RVA: 0x0036B2EB File Offset: 0x003694EB
-		// (set) Token: 0x06017B32 RID: 97074 RVA: 0x0036B2F3 File Offset: 0x003694F3
+		// Token: 0x17007960 RID: 31072
+		// (get) Token: 0x060191CA RID: 102858 RVA: 0x003950DF File Offset: 0x003932DF
+		// (set) Token: 0x060191CB RID: 102859 RVA: 0x003950E7 File Offset: 0x003932E7
 		public int CustomIcon { get; set; }
 
-		// Token: 0x1700735F RID: 29535
-		// (get) Token: 0x06017B33 RID: 97075 RVA: 0x0036B2FC File Offset: 0x003694FC
-		// (set) Token: 0x06017B34 RID: 97076 RVA: 0x0036B304 File Offset: 0x00369504
+		// Token: 0x17007961 RID: 31073
+		// (get) Token: 0x060191CC RID: 102860 RVA: 0x003950F0 File Offset: 0x003932F0
+		// (set) Token: 0x060191CD RID: 102861 RVA: 0x003950F8 File Offset: 0x003932F8
 		public ITitlePreStateT TitlePreState { get; set; }
 
-		// Token: 0x17007360 RID: 29536
-		// (get) Token: 0x06017B35 RID: 97077 RVA: 0x0036B30D File Offset: 0x0036950D
-		// (set) Token: 0x06017B36 RID: 97078 RVA: 0x0036B315 File Offset: 0x00369515
+		// Token: 0x17007962 RID: 31074
+		// (get) Token: 0x060191CE RID: 102862 RVA: 0x00395101 File Offset: 0x00393301
+		// (set) Token: 0x060191CF RID: 102863 RVA: 0x00395109 File Offset: 0x00393309
 		public byte NullMask { get; set; }
 
-		// Token: 0x06017B37 RID: 97079 RVA: 0x0036B320 File Offset: 0x00369520
+		// Token: 0x060191D0 RID: 102864 RVA: 0x00395114 File Offset: 0x00393314
 		public IQuestScheduleChildQuestCompletedT()
 		{
 			this.Type = EQuestScheduleType.None;

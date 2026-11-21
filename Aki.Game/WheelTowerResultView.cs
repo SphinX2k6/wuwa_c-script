@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001630 RID: 5680
+// Token: 0x02000AE8 RID: 2792
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerResultView : UiViewBase
 {
-	// Token: 0x06009FC2 RID: 40898 RVA: 0x00231B90 File Offset: 0x0022FD90
+	// Token: 0x060073A0 RID: 29600 RVA: 0x0023B9DC File Offset: 0x00239BDC
 	[NullableContext(1)]
 	public WheelTowerResultView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009FC3 RID: 40899 RVA: 0x00231B9C File Offset: 0x0022FD9C
+	// Token: 0x060073A1 RID: 29601 RVA: 0x0023B9E8 File Offset: 0x00239BE8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -48,7 +48,7 @@ public class WheelTowerResultView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009FC4 RID: 40900 RVA: 0x00231CF0 File Offset: 0x0022FEF0
+	// Token: 0x060073A2 RID: 29602 RVA: 0x0023BB3C File Offset: 0x00239D3C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerResultView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ public class WheelTowerResultView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009FC5 RID: 40901 RVA: 0x00231D34 File Offset: 0x0022FF34
+	// Token: 0x060073A3 RID: 29603 RVA: 0x0023BB80 File Offset: 0x00239D80
 	protected override void OnStart()
 	{
 		this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
@@ -68,7 +68,7 @@ public class WheelTowerResultView : UiViewBase
 		this.RefreshEndlessUnlockTipsVisibility();
 	}
 
-	// Token: 0x06009FC6 RID: 40902 RVA: 0x00231D7B File Offset: 0x0022FF7B
+	// Token: 0x060073A4 RID: 29604 RVA: 0x0023BBC7 File Offset: 0x00239DC7
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -79,19 +79,19 @@ public class WheelTowerResultView : UiViewBase
 		seqPlayer.Clear();
 	}
 
-	// Token: 0x06009FC7 RID: 40903 RVA: 0x00231D8D File Offset: 0x0022FF8D
+	// Token: 0x060073A5 RID: 29605 RVA: 0x0023BBD9 File Offset: 0x00239DD9
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.Refresh));
 	}
 
-	// Token: 0x06009FC8 RID: 40904 RVA: 0x00231DAB File Offset: 0x0022FFAB
+	// Token: 0x060073A6 RID: 29606 RVA: 0x0023BBF7 File Offset: 0x00239DF7
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.Refresh));
 	}
 
-	// Token: 0x06009FC9 RID: 40905 RVA: 0x00231DCC File Offset: 0x0022FFCC
+	// Token: 0x060073A7 RID: 29607 RVA: 0x0023BC18 File Offset: 0x00239E18
 	private void RefreshEndlessUnlockTipsVisibility()
 	{
 		IWheelTowerResultViewData data = this.Data;
@@ -104,7 +104,7 @@ public class WheelTowerResultView : UiViewBase
 		item.SetUIActive(valueOrDefault);
 	}
 
-	// Token: 0x06009FCA RID: 40906 RVA: 0x00231E10 File Offset: 0x00230010
+	// Token: 0x060073A8 RID: 29608 RVA: 0x0023BC5C File Offset: 0x00239E5C
 	private void RefreshButton()
 	{
 		IWheelTowerResultViewData data = this.Data;
@@ -170,7 +170,7 @@ public class WheelTowerResultView : UiViewBase
 		btnRight3.SetFunction(new Action<int>(this.ClickContinueCallback));
 	}
 
-	// Token: 0x06009FCB RID: 40907 RVA: 0x00231F84 File Offset: 0x00230184
+	// Token: 0x060073A9 RID: 29609 RVA: 0x0023BDD0 File Offset: 0x00239FD0
 	[NullableContext(1)]
 	private void Refresh(string eventName)
 	{
@@ -196,28 +196,28 @@ public class WheelTowerResultView : UiViewBase
 		bossList.Refresh(this.Data.BossInfoList);
 	}
 
-	// Token: 0x06009FCC RID: 40908 RVA: 0x0023201B File Offset: 0x0023021B
+	// Token: 0x060073AA RID: 29610 RVA: 0x0023BE67 File Offset: 0x0023A067
 	private void ClickBackCallback(int _)
 	{
 		IWheelTowerResultViewData data = this.Data;
 		this.HandleButtonClick((data != null) ? data.LeftButtonData : null);
 	}
 
-	// Token: 0x06009FCD RID: 40909 RVA: 0x00232035 File Offset: 0x00230235
+	// Token: 0x060073AB RID: 29611 RVA: 0x0023BE81 File Offset: 0x0023A081
 	private void ClickRetryCallback(int _)
 	{
 		IWheelTowerResultViewData data = this.Data;
 		this.HandleButtonClick((data != null) ? data.CenterButtonData : null);
 	}
 
-	// Token: 0x06009FCE RID: 40910 RVA: 0x0023204F File Offset: 0x0023024F
+	// Token: 0x060073AC RID: 29612 RVA: 0x0023BE9B File Offset: 0x0023A09B
 	private void ClickContinueCallback(int _)
 	{
 		IWheelTowerResultViewData data = this.Data;
 		this.HandleButtonClick((data != null) ? data.RightButtonData : null);
 	}
 
-	// Token: 0x06009FCF RID: 40911 RVA: 0x0023206C File Offset: 0x0023026C
+	// Token: 0x060073AD RID: 29613 RVA: 0x0023BEB8 File Offset: 0x0023A0B8
 	private void HandleButtonClick(IWheelTowerResultViewButtonData buttonData)
 	{
 		IWheelTowerResultViewButtonData buttonData2 = buttonData;
@@ -240,7 +240,7 @@ public class WheelTowerResultView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009FD0 RID: 40912 RVA: 0x00232104 File Offset: 0x00230304
+	// Token: 0x060073AE RID: 29614 RVA: 0x0023BF50 File Offset: 0x0023A150
 	private UniTask CreateResultContent()
 	{
 		WheelTowerResultView.<CreateResultContent>d__23 <CreateResultContent>d__;
@@ -251,30 +251,30 @@ public class WheelTowerResultView : UiViewBase
 		return <CreateResultContent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04004879 RID: 18553
+	// Token: 0x0400491F RID: 18719
 	private UUIItem Content;
 
-	// Token: 0x0400487A RID: 18554
+	// Token: 0x04004920 RID: 18720
 	private WheelTowerResultRoundItem RoundItem;
 
-	// Token: 0x0400487B RID: 18555
+	// Token: 0x04004921 RID: 18721
 	private WheelTowerResultScoreList ScoreList;
 
-	// Token: 0x0400487C RID: 18556
+	// Token: 0x04004922 RID: 18722
 	private WheelTowerResultBossList BossList;
 
-	// Token: 0x0400487D RID: 18557
+	// Token: 0x04004923 RID: 18723
 	private IWheelTowerResultViewData Data;
 
-	// Token: 0x0400487E RID: 18558
+	// Token: 0x04004924 RID: 18724
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x0400487F RID: 18559
+	// Token: 0x04004925 RID: 18725
 	private ButtonItem BtnLeft;
 
-	// Token: 0x04004880 RID: 18560
+	// Token: 0x04004926 RID: 18726
 	private ButtonItem BtnCenter;
 
-	// Token: 0x04004881 RID: 18561
+	// Token: 0x04004927 RID: 18727
 	private ButtonItem BtnRight;
 }

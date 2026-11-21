@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000AC5 RID: 2757
+	// Token: 0x02000AB4 RID: 2740
 	public sealed class MoveSplineConfig : IMessage<MoveSplineConfig>, IMessage, IEquatable<MoveSplineConfig>, IDeepCloneable<MoveSplineConfig>, IBufferMessage
 	{
-		// Token: 0x0600EFFB RID: 61435 RVA: 0x00230DDD File Offset: 0x0022EFDD
+		// Token: 0x0600EEE1 RID: 61153 RVA: 0x0022EBD5 File Offset: 0x0022CDD5
 		[NullableContext(1)]
 		public static MoveSplineConfig Create()
 		{
 			return new MoveSplineConfig();
 		}
 
-		// Token: 0x170030D3 RID: 12499
-		// (get) Token: 0x0600EFFC RID: 61436 RVA: 0x00230DE4 File Offset: 0x0022EFE4
+		// Token: 0x17003095 RID: 12437
+		// (get) Token: 0x0600EEE2 RID: 61154 RVA: 0x0022EBDC File Offset: 0x0022CDDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170030D4 RID: 12500
-		// (get) Token: 0x0600EFFD RID: 61437 RVA: 0x00230DE7 File Offset: 0x0022EFE7
+		// Token: 0x17003096 RID: 12438
+		// (get) Token: 0x0600EEE3 RID: 61155 RVA: 0x0022EBDF File Offset: 0x0022CDDF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600EFFE RID: 61438 RVA: 0x00230DEE File Offset: 0x0022EFEE
+		// Token: 0x0600EEE4 RID: 61156 RVA: 0x0022EBE6 File Offset: 0x0022CDE6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MoveSplineConfig()
 		{
 		}
 
-		// Token: 0x0600EFFF RID: 61439 RVA: 0x00230DF8 File Offset: 0x0022EFF8
+		// Token: 0x0600EEE5 RID: 61157 RVA: 0x0022EBF0 File Offset: 0x0022CDF0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MoveSplineConfig(MoveSplineConfig other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600F000 RID: 61440 RVA: 0x00230E64 File Offset: 0x0022F064
+		// Token: 0x0600EEE6 RID: 61158 RVA: 0x0022EC5C File Offset: 0x0022CE5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MoveSplineConfig Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new MoveSplineConfig(this);
 		}
 
-		// Token: 0x170030D5 RID: 12501
-		// (get) Token: 0x0600F001 RID: 61441 RVA: 0x00230E6C File Offset: 0x0022F06C
-		// (set) Token: 0x0600F002 RID: 61442 RVA: 0x00230E84 File Offset: 0x0022F084
+		// Token: 0x17003097 RID: 12439
+		// (get) Token: 0x0600EEE7 RID: 61159 RVA: 0x0022EC64 File Offset: 0x0022CE64
+		// (set) Token: 0x0600EEE8 RID: 61160 RVA: 0x0022EC7C File Offset: 0x0022CE7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int StartPointIndex
@@ -92,8 +92,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170030D6 RID: 12502
-		// (get) Token: 0x0600F003 RID: 61443 RVA: 0x00230E9B File Offset: 0x0022F09B
+		// Token: 0x17003098 RID: 12440
+		// (get) Token: 0x0600EEE9 RID: 61161 RVA: 0x0022EC93 File Offset: 0x0022CE93
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasStartPointIndex
@@ -104,7 +104,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F004 RID: 61444 RVA: 0x00230EA8 File Offset: 0x0022F0A8
+		// Token: 0x0600EEEA RID: 61162 RVA: 0x0022ECA0 File Offset: 0x0022CEA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearStartPointIndex()
@@ -112,9 +112,9 @@ namespace Aki.Protocol
 			this._hasBits0 &= -2;
 		}
 
-		// Token: 0x170030D7 RID: 12503
-		// (get) Token: 0x0600F005 RID: 61445 RVA: 0x00230EB9 File Offset: 0x0022F0B9
-		// (set) Token: 0x0600F006 RID: 61446 RVA: 0x00230ED1 File Offset: 0x0022F0D1
+		// Token: 0x17003099 RID: 12441
+		// (get) Token: 0x0600EEEB RID: 61163 RVA: 0x0022ECB1 File Offset: 0x0022CEB1
+		// (set) Token: 0x0600EEEC RID: 61164 RVA: 0x0022ECC9 File Offset: 0x0022CEC9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int EndPointIndex
@@ -134,8 +134,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170030D8 RID: 12504
-		// (get) Token: 0x0600F007 RID: 61447 RVA: 0x00230EE8 File Offset: 0x0022F0E8
+		// Token: 0x1700309A RID: 12442
+		// (get) Token: 0x0600EEED RID: 61165 RVA: 0x0022ECE0 File Offset: 0x0022CEE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasEndPointIndex
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F008 RID: 61448 RVA: 0x00230EF5 File Offset: 0x0022F0F5
+		// Token: 0x0600EEEE RID: 61166 RVA: 0x0022ECED File Offset: 0x0022CEED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearEndPointIndex()
@@ -154,9 +154,9 @@ namespace Aki.Protocol
 			this._hasBits0 &= -3;
 		}
 
-		// Token: 0x170030D9 RID: 12505
-		// (get) Token: 0x0600F009 RID: 61449 RVA: 0x00230F06 File Offset: 0x0022F106
-		// (set) Token: 0x0600F00A RID: 61450 RVA: 0x00230F1E File Offset: 0x0022F11E
+		// Token: 0x1700309B RID: 12443
+		// (get) Token: 0x0600EEEF RID: 61167 RVA: 0x0022ECFE File Offset: 0x0022CEFE
+		// (set) Token: 0x0600EEF0 RID: 61168 RVA: 0x0022ED16 File Offset: 0x0022CF16
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsLookDir
@@ -176,8 +176,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170030DA RID: 12506
-		// (get) Token: 0x0600F00B RID: 61451 RVA: 0x00230F35 File Offset: 0x0022F135
+		// Token: 0x1700309C RID: 12444
+		// (get) Token: 0x0600EEF1 RID: 61169 RVA: 0x0022ED2D File Offset: 0x0022CF2D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasIsLookDir
@@ -188,7 +188,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F00C RID: 61452 RVA: 0x00230F42 File Offset: 0x0022F142
+		// Token: 0x0600EEF2 RID: 61170 RVA: 0x0022ED3A File Offset: 0x0022CF3A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearIsLookDir()
@@ -196,9 +196,9 @@ namespace Aki.Protocol
 			this._hasBits0 &= -5;
 		}
 
-		// Token: 0x170030DB RID: 12507
-		// (get) Token: 0x0600F00D RID: 61453 RVA: 0x00230F53 File Offset: 0x0022F153
-		// (set) Token: 0x0600F00E RID: 61454 RVA: 0x00230F6B File Offset: 0x0022F16B
+		// Token: 0x1700309D RID: 12445
+		// (get) Token: 0x0600EEF3 RID: 61171 RVA: 0x0022ED4B File Offset: 0x0022CF4B
+		// (set) Token: 0x0600EEF4 RID: 61172 RVA: 0x0022ED63 File Offset: 0x0022CF63
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CycleCount
@@ -218,8 +218,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170030DC RID: 12508
-		// (get) Token: 0x0600F00F RID: 61455 RVA: 0x00230F82 File Offset: 0x0022F182
+		// Token: 0x1700309E RID: 12446
+		// (get) Token: 0x0600EEF5 RID: 61173 RVA: 0x0022ED7A File Offset: 0x0022CF7A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasCycleCount
@@ -230,7 +230,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F010 RID: 61456 RVA: 0x00230F8F File Offset: 0x0022F18F
+		// Token: 0x0600EEF6 RID: 61174 RVA: 0x0022ED87 File Offset: 0x0022CF87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearCycleCount()
@@ -238,9 +238,9 @@ namespace Aki.Protocol
 			this._hasBits0 &= -9;
 		}
 
-		// Token: 0x170030DD RID: 12509
-		// (get) Token: 0x0600F011 RID: 61457 RVA: 0x00230FA0 File Offset: 0x0022F1A0
-		// (set) Token: 0x0600F012 RID: 61458 RVA: 0x00230FB9 File Offset: 0x0022F1B9
+		// Token: 0x1700309F RID: 12447
+		// (get) Token: 0x0600EEF7 RID: 61175 RVA: 0x0022ED98 File Offset: 0x0022CF98
+		// (set) Token: 0x0600EEF8 RID: 61176 RVA: 0x0022EDB1 File Offset: 0x0022CFB1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsCircle
@@ -260,8 +260,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170030DE RID: 12510
-		// (get) Token: 0x0600F013 RID: 61459 RVA: 0x00230FD1 File Offset: 0x0022F1D1
+		// Token: 0x170030A0 RID: 12448
+		// (get) Token: 0x0600EEF9 RID: 61177 RVA: 0x0022EDC9 File Offset: 0x0022CFC9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasIsCircle
@@ -272,7 +272,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F014 RID: 61460 RVA: 0x00230FDF File Offset: 0x0022F1DF
+		// Token: 0x0600EEFA RID: 61178 RVA: 0x0022EDD7 File Offset: 0x0022CFD7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearIsCircle()
@@ -280,7 +280,7 @@ namespace Aki.Protocol
 			this._hasBits0 &= -17;
 		}
 
-		// Token: 0x0600F015 RID: 61461 RVA: 0x00230FF0 File Offset: 0x0022F1F0
+		// Token: 0x0600EEFB RID: 61179 RVA: 0x0022EDE8 File Offset: 0x0022CFE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -288,7 +288,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MoveSplineConfig);
 		}
 
-		// Token: 0x0600F016 RID: 61462 RVA: 0x00231000 File Offset: 0x0022F200
+		// Token: 0x0600EEFC RID: 61180 RVA: 0x0022EDF8 File Offset: 0x0022CFF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MoveSplineConfig other)
@@ -296,7 +296,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.StartPointIndex == other.StartPointIndex && this.EndPointIndex == other.EndPointIndex && this.IsLookDir == other.IsLookDir && this.CycleCount == other.CycleCount && this.IsCircle == other.IsCircle && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600F017 RID: 61463 RVA: 0x0023107C File Offset: 0x0022F27C
+		// Token: 0x0600EEFD RID: 61181 RVA: 0x0022EE74 File Offset: 0x0022D074
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -329,7 +329,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F018 RID: 61464 RVA: 0x0023111F File Offset: 0x0022F31F
+		// Token: 0x0600EEFE RID: 61182 RVA: 0x0022EF17 File Offset: 0x0022D117
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -337,7 +337,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600F019 RID: 61465 RVA: 0x0023112C File Offset: 0x0022F32C
+		// Token: 0x0600EEFF RID: 61183 RVA: 0x0022EF24 File Offset: 0x0022D124
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -345,7 +345,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600F01A RID: 61466 RVA: 0x00231138 File Offset: 0x0022F338
+		// Token: 0x0600EF00 RID: 61184 RVA: 0x0022EF30 File Offset: 0x0022D130
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -381,7 +381,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F01B RID: 61467 RVA: 0x002311E4 File Offset: 0x0022F3E4
+		// Token: 0x0600EF01 RID: 61185 RVA: 0x0022EFDC File Offset: 0x0022D1DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -414,7 +414,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F01C RID: 61468 RVA: 0x0023126C File Offset: 0x0022F46C
+		// Token: 0x0600EF02 RID: 61186 RVA: 0x0022F064 File Offset: 0x0022D264
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MoveSplineConfig other)
@@ -446,7 +446,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600F01D RID: 61469 RVA: 0x002312F8 File Offset: 0x0022F4F8
+		// Token: 0x0600EF03 RID: 61187 RVA: 0x0022F0F0 File Offset: 0x0022D2F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -454,7 +454,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600F01E RID: 61470 RVA: 0x00231304 File Offset: 0x0022F504
+		// Token: 0x0600EF04 RID: 61188 RVA: 0x0022F0FC File Offset: 0x0022D2FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -501,55 +501,55 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006104 RID: 24836
+		// Token: 0x0400610D RID: 24845
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006105 RID: 24837
+		// Token: 0x0400610E RID: 24846
 		private int _hasBits0;
 
-		// Token: 0x04006106 RID: 24838
+		// Token: 0x0400610F RID: 24847
 		public const int StartPointIndexFieldNumber = 1;
 
-		// Token: 0x04006107 RID: 24839
+		// Token: 0x04006110 RID: 24848
 		private static readonly int StartPointIndexDefaultValue;
 
-		// Token: 0x04006108 RID: 24840
+		// Token: 0x04006111 RID: 24849
 		private int startPointIndex_;
 
-		// Token: 0x04006109 RID: 24841
+		// Token: 0x04006112 RID: 24850
 		public const int EndPointIndexFieldNumber = 2;
 
-		// Token: 0x0400610A RID: 24842
+		// Token: 0x04006113 RID: 24851
 		private static readonly int EndPointIndexDefaultValue;
 
-		// Token: 0x0400610B RID: 24843
+		// Token: 0x04006114 RID: 24852
 		private int endPointIndex_;
 
-		// Token: 0x0400610C RID: 24844
+		// Token: 0x04006115 RID: 24853
 		public const int IsLookDirFieldNumber = 3;
 
-		// Token: 0x0400610D RID: 24845
+		// Token: 0x04006116 RID: 24854
 		private static readonly bool IsLookDirDefaultValue;
 
-		// Token: 0x0400610E RID: 24846
+		// Token: 0x04006117 RID: 24855
 		private bool isLookDir_;
 
-		// Token: 0x0400610F RID: 24847
+		// Token: 0x04006118 RID: 24856
 		public const int CycleCountFieldNumber = 4;
 
-		// Token: 0x04006110 RID: 24848
+		// Token: 0x04006119 RID: 24857
 		private static readonly int CycleCountDefaultValue;
 
-		// Token: 0x04006111 RID: 24849
+		// Token: 0x0400611A RID: 24858
 		private int cycleCount_;
 
-		// Token: 0x04006112 RID: 24850
+		// Token: 0x0400611B RID: 24859
 		public const int IsCircleFieldNumber = 5;
 
-		// Token: 0x04006113 RID: 24851
+		// Token: 0x0400611C RID: 24860
 		private static readonly bool IsCircleDefaultValue;
 
-		// Token: 0x04006114 RID: 24852
+		// Token: 0x0400611D RID: 24861
 		private bool isCircle_;
 	}
 }

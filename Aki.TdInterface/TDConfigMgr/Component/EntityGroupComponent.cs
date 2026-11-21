@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000FD RID: 253
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000106 RID: 262
 	public class EntityGroupComponent : IComponentBase
 	{
-		// Token: 0x06000404 RID: 1028 RVA: 0x0001D1B0 File Offset: 0x0001B3B0
+		// Token: 0x06000408 RID: 1032 RVA: 0x0001DB24 File Offset: 0x0001BD24
 		private EntityGroupComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000405 RID: 1029 RVA: 0x0001D1E8 File Offset: 0x0001B3E8
+		// Token: 0x06000409 RID: 1033 RVA: 0x0001DB5C File Offset: 0x0001BD5C
 		public static EntityGroupComponent Create([Nullable(2)] EntityGroupComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000406 RID: 1030 RVA: 0x0001D1FB File Offset: 0x0001B3FB
+		// Token: 0x0600040A RID: 1034 RVA: 0x0001DB6F File Offset: 0x0001BD6F
 		public static EntityGroupComponent CreateFromSetValue([Nullable(2)] EntityGroupComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000407 RID: 1031 RVA: 0x0001D210 File Offset: 0x0001B410
+		// Token: 0x0600040B RID: 1035 RVA: 0x0001DB84 File Offset: 0x0001BD84
 		public new EntityGroupComponent_SetValue ToSetValue()
 		{
 			return new EntityGroupComponent_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000157 RID: 343
-		// (get) Token: 0x06000408 RID: 1032 RVA: 0x0001D26C File Offset: 0x0001B46C
-		// (set) Token: 0x06000409 RID: 1033 RVA: 0x0001D2A6 File Offset: 0x0001B4A6
+		// Token: 0x17000159 RID: 345
+		// (get) Token: 0x0600040C RID: 1036 RVA: 0x0001DBE0 File Offset: 0x0001BDE0
+		// (set) Token: 0x0600040D RID: 1037 RVA: 0x0001DC1A File Offset: 0x0001BE1A
 		public override bool? Disabled
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000158 RID: 344
-		// (get) Token: 0x0600040A RID: 1034 RVA: 0x0001D2B4 File Offset: 0x0001B4B4
-		// (set) Token: 0x0600040B RID: 1035 RVA: 0x0001D2DE File Offset: 0x0001B4DE
+		// Token: 0x1700015A RID: 346
+		// (get) Token: 0x0600040E RID: 1038 RVA: 0x0001DC28 File Offset: 0x0001BE28
+		// (set) Token: 0x0600040F RID: 1039 RVA: 0x0001DC52 File Offset: 0x0001BE52
 		public override bool? EdIsLocked
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000159 RID: 345
-		// (get) Token: 0x0600040C RID: 1036 RVA: 0x0001D2EC File Offset: 0x0001B4EC
-		// (set) Token: 0x0600040D RID: 1037 RVA: 0x0001D313 File Offset: 0x0001B513
+		// Token: 0x1700015B RID: 347
+		// (get) Token: 0x06000410 RID: 1040 RVA: 0x0001DC60 File Offset: 0x0001BE60
+		// (set) Token: 0x06000411 RID: 1041 RVA: 0x0001DC87 File Offset: 0x0001BE87
 		public virtual List<int> EntityIds
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700015A RID: 346
-		// (get) Token: 0x0600040E RID: 1038 RVA: 0x0001D324 File Offset: 0x0001B524
-		// (set) Token: 0x0600040F RID: 1039 RVA: 0x0001D3B7 File Offset: 0x0001B5B7
+		// Token: 0x1700015C RID: 348
+		// (get) Token: 0x06000412 RID: 1042 RVA: 0x0001DC98 File Offset: 0x0001BE98
+		// (set) Token: 0x06000413 RID: 1043 RVA: 0x0001DD2B File Offset: 0x0001BF2B
 		public virtual List<IEntityStateTrigger> StateTriggers
 		{
 			get
@@ -170,9 +168,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700015B RID: 347
-		// (get) Token: 0x06000410 RID: 1040 RVA: 0x0001D3CC File Offset: 0x0001B5CC
-		// (set) Token: 0x06000411 RID: 1041 RVA: 0x0001D42D File Offset: 0x0001B62D
+		// Token: 0x1700015D RID: 349
+		// (get) Token: 0x06000414 RID: 1044 RVA: 0x0001DD40 File Offset: 0x0001BF40
+		// (set) Token: 0x06000415 RID: 1045 RVA: 0x0001DDA1 File Offset: 0x0001BFA1
 		public virtual IFinishStateTrigger FinishState
 		{
 			get
@@ -200,9 +198,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700015C RID: 348
-		// (get) Token: 0x06000412 RID: 1042 RVA: 0x0001D444 File Offset: 0x0001B644
-		// (set) Token: 0x06000413 RID: 1043 RVA: 0x0001D4A5 File Offset: 0x0001B6A5
+		// Token: 0x1700015E RID: 350
+		// (get) Token: 0x06000416 RID: 1046 RVA: 0x0001DDB8 File Offset: 0x0001BFB8
+		// (set) Token: 0x06000417 RID: 1047 RVA: 0x0001DE19 File Offset: 0x0001C019
 		[Nullable(2)]
 		public virtual IFailureStateTrigger FailureState
 		{
@@ -233,30 +231,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000547 RID: 1351
+		// Token: 0x04000571 RID: 1393
 		[Nullable(2)]
 		protected new EntityGroupComponent FbInstance;
 
-		// Token: 0x04000548 RID: 1352
+		// Token: 0x04000572 RID: 1394
 		[Nullable(2)]
 		protected new EntityGroupComponent_SetValue PocoInterface;
 
-		// Token: 0x04000549 RID: 1353
+		// Token: 0x04000573 RID: 1395
 		private List<IEntityStateTrigger> _StateTriggersCache;
 
-		// Token: 0x0400054A RID: 1354
+		// Token: 0x04000574 RID: 1396
 		private bool _StateTriggersInited;
 
-		// Token: 0x0400054B RID: 1355
+		// Token: 0x04000575 RID: 1397
 		private IFinishStateTrigger _FinishStateCache;
 
-		// Token: 0x0400054C RID: 1356
+		// Token: 0x04000576 RID: 1398
 		private bool _FinishStateInited;
 
-		// Token: 0x0400054D RID: 1357
+		// Token: 0x04000577 RID: 1399
 		private IFailureStateTrigger _FailureStateCache;
 
-		// Token: 0x0400054E RID: 1358
+		// Token: 0x04000578 RID: 1400
 		private bool _FailureStateInited;
 	}
 }

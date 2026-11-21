@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005A4 RID: 1444
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200060D RID: 1549
 	public class IObstacleDetectionConfig
 	{
-		// Token: 0x06001E7A RID: 7802 RVA: 0x0005650C File Offset: 0x0005470C
+		// Token: 0x06002080 RID: 8320 RVA: 0x0005B3C8 File Offset: 0x000595C8
 		private IObstacleDetectionConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001E7B RID: 7803 RVA: 0x00056544 File Offset: 0x00054744
+		// Token: 0x06002081 RID: 8321 RVA: 0x0005B400 File Offset: 0x00059600
 		public static IObstacleDetectionConfig Create([Nullable(2)] IObstacleDetectionConfig instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001E7C RID: 7804 RVA: 0x00056557 File Offset: 0x00054757
+		// Token: 0x06002082 RID: 8322 RVA: 0x0005B413 File Offset: 0x00059613
 		public static IObstacleDetectionConfig CreateFromSetValue([Nullable(2)] IObstacleDetectionConfig_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001E7D RID: 7805 RVA: 0x0005656A File Offset: 0x0005476A
+		// Token: 0x06002083 RID: 8323 RVA: 0x0005B426 File Offset: 0x00059626
 		public IObstacleDetectionConfig_SetValue ToSetValue()
 		{
 			return new IObstacleDetectionConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000826 RID: 2086
-		// (get) Token: 0x06001E7E RID: 7806 RVA: 0x0005658C File Offset: 0x0005478C
-		// (set) Token: 0x06001E7F RID: 7807 RVA: 0x000565ED File Offset: 0x000547ED
+		// Token: 0x170008AB RID: 2219
+		// (get) Token: 0x06002084 RID: 8324 RVA: 0x0005B448 File Offset: 0x00059648
+		// (set) Token: 0x06002085 RID: 8325 RVA: 0x0005B4A9 File Offset: 0x000596A9
 		public virtual ITrafficMatchTarget ObstacleDetectionType
 		{
 			get
@@ -92,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000827 RID: 2087
-		// (get) Token: 0x06001E80 RID: 7808 RVA: 0x00056602 File Offset: 0x00054802
-		// (set) Token: 0x06001E81 RID: 7809 RVA: 0x00056629 File Offset: 0x00054829
+		// Token: 0x170008AC RID: 2220
+		// (get) Token: 0x06002086 RID: 8326 RVA: 0x0005B4BE File Offset: 0x000596BE
+		// (set) Token: 0x06002087 RID: 8327 RVA: 0x0005B4E5 File Offset: 0x000596E5
 		[Nullable(2)]
 		public virtual ITriggerShape ExtraObstacleDetectionRange
 		{
@@ -119,18 +117,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040015B8 RID: 5560
+		// Token: 0x04001726 RID: 5926
 		[Nullable(2)]
 		protected IObstacleDetectionConfig FbInstance;
 
-		// Token: 0x040015B9 RID: 5561
+		// Token: 0x04001727 RID: 5927
 		[Nullable(2)]
 		protected IObstacleDetectionConfig_SetValue PocoInterface;
 
-		// Token: 0x040015BA RID: 5562
+		// Token: 0x04001728 RID: 5928
 		private ITrafficMatchTarget _ObstacleDetectionTypeCache;
 
-		// Token: 0x040015BB RID: 5563
+		// Token: 0x04001729 RID: 5929
 		private bool _ObstacleDetectionTypeInited;
 	}
 }

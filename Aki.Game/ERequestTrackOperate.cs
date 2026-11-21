@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002653 RID: 9811
+// Token: 0x02001B3E RID: 6974
 public enum ERequestTrackOperate
 {
-	// Token: 0x0400976A RID: 38762
+	// Token: 0x040098C2 RID: 39106
 	None,
-	// Token: 0x0400976B RID: 38763
+	// Token: 0x040098C3 RID: 39107
 	Manual,
-	// Token: 0x0400976C RID: 38764
+	// Token: 0x040098C4 RID: 39108
 	Auto
 }

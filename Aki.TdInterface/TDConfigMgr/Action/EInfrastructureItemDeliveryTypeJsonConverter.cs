@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200235E RID: 9054
+	// Token: 0x020025D3 RID: 9683
 	public class EInfrastructureItemDeliveryTypeJsonConverter : JsonConverter<EInfrastructureItemDeliveryType>
 	{
-		// Token: 0x0600C5A7 RID: 50599 RVA: 0x001CD818 File Offset: 0x001CBA18
+		// Token: 0x0600D191 RID: 53649 RVA: 0x001E5AF8 File Offset: 0x001E3CF8
 		public override EInfrastructureItemDeliveryType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EInfrastructureItemDeliveryTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C5A8 RID: 50600 RVA: 0x001CD83C File Offset: 0x001CBA3C
+		// Token: 0x0600D192 RID: 53650 RVA: 0x001E5B1C File Offset: 0x001E3D1C
 		public override void Write(Utf8JsonWriter writer, EInfrastructureItemDeliveryType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

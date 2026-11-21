@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DF2 RID: 19954
+	// Token: 0x02003DBB RID: 15803
 	public class RoguelikePhantomDotItem : GridProxyAbstract<int>
 	{
-		// Token: 0x060337EC RID: 210924 RVA: 0x00C084B0 File Offset: 0x00C066B0
+		// Token: 0x06028657 RID: 165463 RVA: 0x00B519C0 File Offset: 0x00B4FBC0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -21,28 +21,28 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060337ED RID: 210925 RVA: 0x00C084F8 File Offset: 0x00C066F8
+		// Token: 0x06028658 RID: 165464 RVA: 0x00B51A08 File Offset: 0x00B4FC08
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			base.GetItem(0).SetUIActive(isSelected);
 		}
 
-		// Token: 0x060337EE RID: 210926 RVA: 0x00C08507 File Offset: 0x00C06707
+		// Token: 0x06028659 RID: 165465 RVA: 0x00B51A17 File Offset: 0x00B4FC17
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetItem(0).SetUIActive(false);
 		}
 
-		// Token: 0x060337EF RID: 210927 RVA: 0x00C08516 File Offset: 0x00C06716
+		// Token: 0x0602865A RID: 165466 RVA: 0x00B51A26 File Offset: 0x00B4FC26
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetItem(0).SetUIActive(true);
 		}
 
-		// Token: 0x0200AF79 RID: 44921
+		// Token: 0x020099AE RID: 39342
 		private class EComponents
 		{
-			// Token: 0x04035484 RID: 218244
+			// Token: 0x0402FEB7 RID: 196279
 			public const int Item = 0;
 		}
 	}

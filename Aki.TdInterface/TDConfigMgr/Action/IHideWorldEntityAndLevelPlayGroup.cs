@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B0D RID: 6925
+	// Token: 0x02001CBC RID: 7356
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IHideWorldEntityAndLevelPlayGroup : IHideGroupType
 	{
-		// Token: 0x06009446 RID: 37958 RVA: 0x00157794 File Offset: 0x00155994
-		[NullableContext(1)]
+		// Token: 0x06009C30 RID: 39984 RVA: 0x00168470 File Offset: 0x00166670
+		[NullableContext(0)]
 		private IHideWorldEntityAndLevelPlayGroup_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009447 RID: 37959 RVA: 0x001577CC File Offset: 0x001559CC
-		[NullableContext(1)]
+		// Token: 0x06009C31 RID: 39985 RVA: 0x001684A8 File Offset: 0x001666A8
+		[NullableContext(0)]
 		public static IHideWorldEntityAndLevelPlayGroup Create([Nullable(2)] IHideWorldEntityAndLevelPlayGroup instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009448 RID: 37960 RVA: 0x001577DF File Offset: 0x001559DF
-		[NullableContext(1)]
+		// Token: 0x06009C32 RID: 39986 RVA: 0x001684BB File Offset: 0x001666BB
+		[NullableContext(0)]
 		public static IHideWorldEntityAndLevelPlayGroup CreateFromSetValue([Nullable(2)] IHideWorldEntityAndLevelPlayGroup_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009449 RID: 37961 RVA: 0x001577F4 File Offset: 0x001559F4
-		[NullableContext(1)]
+		// Token: 0x06009C33 RID: 39987 RVA: 0x001684D0 File Offset: 0x001666D0
+		[NullableContext(0)]
 		public new IHideWorldEntityAndLevelPlayGroup_SetValue ToSetValue()
 		{
 			return new IHideWorldEntityAndLevelPlayGroup_SetValue
@@ -69,9 +69,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EE5 RID: 12005
-		// (get) Token: 0x0600944A RID: 37962 RVA: 0x0015784E File Offset: 0x00155A4E
-		// (set) Token: 0x0600944B RID: 37963 RVA: 0x00157879 File Offset: 0x00155A79
+		// Token: 0x1700310B RID: 12555
+		// (get) Token: 0x06009C34 RID: 39988 RVA: 0x0016852A File Offset: 0x0016672A
+		// (set) Token: 0x06009C35 RID: 39989 RVA: 0x00168555 File Offset: 0x00166755
 		public override EHideType Type
 		{
 			get
@@ -92,13 +92,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EE6 RID: 12006
-		// (get) Token: 0x0600944C RID: 37964 RVA: 0x00157887 File Offset: 0x00155A87
-		// (set) Token: 0x0600944D RID: 37965 RVA: 0x001578AE File Offset: 0x00155AAE
-		[Nullable(1)]
+		// Token: 0x1700310C RID: 12556
+		// (get) Token: 0x06009C36 RID: 39990 RVA: 0x00168563 File Offset: 0x00166763
+		// (set) Token: 0x06009C37 RID: 39991 RVA: 0x0016858A File Offset: 0x0016678A
+		[Nullable(0)]
 		public virtual List<int> HideRangeEntities
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -112,16 +112,16 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.HideRangeEntities;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().HideRangeEntities = value;
 			}
 		}
 
-		// Token: 0x17002EE7 RID: 12007
-		// (get) Token: 0x0600944E RID: 37966 RVA: 0x001578BC File Offset: 0x00155ABC
-		// (set) Token: 0x0600944F RID: 37967 RVA: 0x001578E3 File Offset: 0x00155AE3
+		// Token: 0x1700310D RID: 12557
+		// (get) Token: 0x06009C38 RID: 39992 RVA: 0x00168598 File Offset: 0x00166798
+		// (set) Token: 0x06009C39 RID: 39993 RVA: 0x001685BF File Offset: 0x001667BF
 		public virtual List<int> ExcludeEntities
 		{
 			get
@@ -143,9 +143,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EE8 RID: 12008
-		// (get) Token: 0x06009450 RID: 37968 RVA: 0x001578F1 File Offset: 0x00155AF1
-		// (set) Token: 0x06009451 RID: 37969 RVA: 0x00157918 File Offset: 0x00155B18
+		// Token: 0x1700310E RID: 12558
+		// (get) Token: 0x06009C3A RID: 39994 RVA: 0x001685CD File Offset: 0x001667CD
+		// (set) Token: 0x06009C3B RID: 39995 RVA: 0x001685F4 File Offset: 0x001667F4
 		public virtual List<int> ExcludeLevelPlays
 		{
 			get
@@ -167,9 +167,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EE9 RID: 12009
-		// (get) Token: 0x06009452 RID: 37970 RVA: 0x00157926 File Offset: 0x00155B26
-		// (set) Token: 0x06009453 RID: 37971 RVA: 0x0015794D File Offset: 0x00155B4D
+		// Token: 0x1700310F RID: 12559
+		// (get) Token: 0x06009C3C RID: 39996 RVA: 0x00168602 File Offset: 0x00166802
+		// (set) Token: 0x06009C3D RID: 39997 RVA: 0x00168629 File Offset: 0x00166829
 		public virtual List<int> AppendEntities
 		{
 			get
@@ -191,9 +191,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EEA RID: 12010
-		// (get) Token: 0x06009454 RID: 37972 RVA: 0x0015795B File Offset: 0x00155B5B
-		// (set) Token: 0x06009455 RID: 37973 RVA: 0x00157982 File Offset: 0x00155B82
+		// Token: 0x17003110 RID: 12560
+		// (get) Token: 0x06009C3E RID: 39998 RVA: 0x00168637 File Offset: 0x00166837
+		// (set) Token: 0x06009C3F RID: 39999 RVA: 0x0016865E File Offset: 0x0016685E
 		public virtual List<int> AppendLevelPlays
 		{
 			get
@@ -215,10 +215,10 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AF0 RID: 23280
+		// Token: 0x04005F8E RID: 24462
 		protected new IHideWorldEntityAndLevelPlayGroup FbInstance;
 
-		// Token: 0x04005AF1 RID: 23281
+		// Token: 0x04005F8F RID: 24463
 		protected new IHideWorldEntityAndLevelPlayGroup_SetValue PocoInterface;
 	}
 }

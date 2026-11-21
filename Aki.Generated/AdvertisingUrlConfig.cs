@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AE0 RID: 2784
+	// Token: 0x02000BBA RID: 3002
 	public struct AdvertisingUrlConfig : IFlatbufferObject
 	{
-		// Token: 0x17000223 RID: 547
-		// (get) Token: 0x060045D9 RID: 17881 RVA: 0x001D1544 File Offset: 0x001CF744
+		// Token: 0x1700023A RID: 570
+		// (get) Token: 0x06004B20 RID: 19232 RVA: 0x001F0FDC File Offset: 0x001EF1DC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060045DA RID: 17882 RVA: 0x001D1551 File Offset: 0x001CF751
+		// Token: 0x06004B21 RID: 19233 RVA: 0x001F0FE9 File Offset: 0x001EF1E9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060045DB RID: 17883 RVA: 0x001D1558 File Offset: 0x001CF758
+		// Token: 0x06004B22 RID: 19234 RVA: 0x001F0FF0 File Offset: 0x001EF1F0
 		public static AdvertisingUrlConfig GetRootAsAdvertisingUrlConfig(ByteBuffer _bb)
 		{
 			return AdvertisingUrlConfig.GetRootAsAdvertisingUrlConfig(_bb, default(AdvertisingUrlConfig));
 		}
 
-		// Token: 0x060045DC RID: 17884 RVA: 0x001D1574 File Offset: 0x001CF774
+		// Token: 0x06004B23 RID: 19235 RVA: 0x001F100C File Offset: 0x001EF20C
 		public static AdvertisingUrlConfig GetRootAsAdvertisingUrlConfig(ByteBuffer _bb, AdvertisingUrlConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060045DD RID: 17885 RVA: 0x001D1591 File Offset: 0x001CF791
+		// Token: 0x06004B24 RID: 19236 RVA: 0x001F1029 File Offset: 0x001EF229
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060045DE RID: 17886 RVA: 0x001D15A0 File Offset: 0x001CF7A0
+		// Token: 0x06004B25 RID: 19237 RVA: 0x001F1038 File Offset: 0x001EF238
 		public AdvertisingUrlConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000224 RID: 548
-		// (get) Token: 0x060045DF RID: 17887 RVA: 0x001D15B0 File Offset: 0x001CF7B0
+		// Token: 0x1700023B RID: 571
+		// (get) Token: 0x06004B26 RID: 19238 RVA: 0x001F1048 File Offset: 0x001EF248
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000225 RID: 549
-		// (get) Token: 0x060045E0 RID: 17888 RVA: 0x001D15EC File Offset: 0x001CF7EC
+		// Token: 0x1700023C RID: 572
+		// (get) Token: 0x06004B27 RID: 19239 RVA: 0x001F1084 File Offset: 0x001EF284
 		public string LinkUrl
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060045E1 RID: 17889 RVA: 0x001D1623 File Offset: 0x001CF823
+		// Token: 0x06004B28 RID: 19240 RVA: 0x001F10BB File Offset: 0x001EF2BB
 		public Span<byte> GetLinkUrlBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060045E2 RID: 17890 RVA: 0x001D1632 File Offset: 0x001CF832
+		// Token: 0x06004B29 RID: 19241 RVA: 0x001F10CA File Offset: 0x001EF2CA
 		public byte[] GetLinkUrlArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000226 RID: 550
-		// (get) Token: 0x060045E3 RID: 17891 RVA: 0x001D164C File Offset: 0x001CF84C
+		// Token: 0x1700023D RID: 573
+		// (get) Token: 0x06004B2A RID: 19242 RVA: 0x001F10E4 File Offset: 0x001EF2E4
 		public string GlobalLinkUrl
 		{
 			get
@@ -104,19 +104,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060045E4 RID: 17892 RVA: 0x001D1683 File Offset: 0x001CF883
+		// Token: 0x06004B2B RID: 19243 RVA: 0x001F111B File Offset: 0x001EF31B
 		public Span<byte> GetGlobalLinkUrlBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060045E5 RID: 17893 RVA: 0x001D1692 File Offset: 0x001CF892
+		// Token: 0x06004B2C RID: 19244 RVA: 0x001F112A File Offset: 0x001EF32A
 		public byte[] GetGlobalLinkUrlArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004AC0 RID: 19136
+		// Token: 0x0400509A RID: 20634
 		private Table __p;
 	}
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002E8A RID: 11914
+// Token: 0x020023DC RID: 9180
 public enum EAttributeBasedFloatCalculationType
 {
-	// Token: 0x0400BDA7 RID: 48551
+	// Token: 0x0400C13E RID: 49470
 	BaseValue,
-	// Token: 0x0400BDA8 RID: 48552
+	// Token: 0x0400C13F RID: 49471
 	CurrentValue,
-	// Token: 0x0400BDA9 RID: 48553
+	// Token: 0x0400C140 RID: 49472
 	BonusValue
 }

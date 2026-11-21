@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020013AD RID: 5037
+	// Token: 0x02001420 RID: 5152
 	public sealed class TowerDefenceRoleInfo : IMessage<TowerDefenceRoleInfo>, IMessage, IEquatable<TowerDefenceRoleInfo>, IDeepCloneable<TowerDefenceRoleInfo>, IBufferMessage
 	{
-		// Token: 0x0601AB94 RID: 109460 RVA: 0x003E0221 File Offset: 0x003DE421
+		// Token: 0x0601B61F RID: 112159 RVA: 0x003FB4E1 File Offset: 0x003F96E1
 		[NullableContext(1)]
 		public static TowerDefenceRoleInfo Create()
 		{
 			return new TowerDefenceRoleInfo();
 		}
 
-		// Token: 0x17005A1D RID: 23069
-		// (get) Token: 0x0601AB95 RID: 109461 RVA: 0x003E0228 File Offset: 0x003DE428
+		// Token: 0x17005CB2 RID: 23730
+		// (get) Token: 0x0601B620 RID: 112160 RVA: 0x003FB4E8 File Offset: 0x003F96E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<TowerDefenceRoleInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005A1E RID: 23070
-		// (get) Token: 0x0601AB96 RID: 109462 RVA: 0x003E022F File Offset: 0x003DE42F
+		// Token: 0x17005CB3 RID: 23731
+		// (get) Token: 0x0601B621 RID: 112161 RVA: 0x003FB4EF File Offset: 0x003F96EF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005A1F RID: 23071
-		// (get) Token: 0x0601AB97 RID: 109463 RVA: 0x003E0232 File Offset: 0x003DE432
+		// Token: 0x17005CB4 RID: 23732
+		// (get) Token: 0x0601B622 RID: 112162 RVA: 0x003FB4F2 File Offset: 0x003F96F2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601AB98 RID: 109464 RVA: 0x003E0239 File Offset: 0x003DE439
+		// Token: 0x0601B623 RID: 112163 RVA: 0x003FB4F9 File Offset: 0x003F96F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TowerDefenceRoleInfo()
 		{
 		}
 
-		// Token: 0x0601AB99 RID: 109465 RVA: 0x003E0244 File Offset: 0x003DE444
+		// Token: 0x0601B624 RID: 112164 RVA: 0x003FB504 File Offset: 0x003F9704
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TowerDefenceRoleInfo(TowerDefenceRoleInfo other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601AB9A RID: 109466 RVA: 0x003E0290 File Offset: 0x003DE490
+		// Token: 0x0601B625 RID: 112165 RVA: 0x003FB550 File Offset: 0x003F9750
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TowerDefenceRoleInfo Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new TowerDefenceRoleInfo(this);
 		}
 
-		// Token: 0x17005A20 RID: 23072
-		// (get) Token: 0x0601AB9B RID: 109467 RVA: 0x003E0298 File Offset: 0x003DE498
-		// (set) Token: 0x0601AB9C RID: 109468 RVA: 0x003E02A0 File Offset: 0x003DE4A0
+		// Token: 0x17005CB5 RID: 23733
+		// (get) Token: 0x0601B626 RID: 112166 RVA: 0x003FB558 File Offset: 0x003F9758
+		// (set) Token: 0x0601B627 RID: 112167 RVA: 0x003FB560 File Offset: 0x003F9760
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005A21 RID: 23073
-		// (get) Token: 0x0601AB9D RID: 109469 RVA: 0x003E02A9 File Offset: 0x003DE4A9
-		// (set) Token: 0x0601AB9E RID: 109470 RVA: 0x003E02B1 File Offset: 0x003DE4B1
+		// Token: 0x17005CB6 RID: 23734
+		// (get) Token: 0x0601B628 RID: 112168 RVA: 0x003FB569 File Offset: 0x003F9769
+		// (set) Token: 0x0601B629 RID: 112169 RVA: 0x003FB571 File Offset: 0x003F9771
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TowerDefencePhantomInfo Phantom
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601AB9F RID: 109471 RVA: 0x003E02BA File Offset: 0x003DE4BA
+		// Token: 0x0601B62A RID: 112170 RVA: 0x003FB57A File Offset: 0x003F977A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TowerDefenceRoleInfo);
 		}
 
-		// Token: 0x0601ABA0 RID: 109472 RVA: 0x003E02C8 File Offset: 0x003DE4C8
+		// Token: 0x0601B62B RID: 112171 RVA: 0x003FB588 File Offset: 0x003F9788
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TowerDefenceRoleInfo other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.RoleId == other.RoleId && object.Equals(this.Phantom, other.Phantom) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601ABA1 RID: 109473 RVA: 0x003E0318 File Offset: 0x003DE518
+		// Token: 0x0601B62C RID: 112172 RVA: 0x003FB5D8 File Offset: 0x003F97D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601ABA2 RID: 109474 RVA: 0x003E036D File Offset: 0x003DE56D
+		// Token: 0x0601B62D RID: 112173 RVA: 0x003FB62D File Offset: 0x003F982D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601ABA3 RID: 109475 RVA: 0x003E037A File Offset: 0x003DE57A
+		// Token: 0x0601B62E RID: 112174 RVA: 0x003FB63A File Offset: 0x003F983A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601ABA4 RID: 109476 RVA: 0x003E0384 File Offset: 0x003DE584
+		// Token: 0x0601B62F RID: 112175 RVA: 0x003FB644 File Offset: 0x003F9844
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601ABA5 RID: 109477 RVA: 0x003E03DC File Offset: 0x003DE5DC
+		// Token: 0x0601B630 RID: 112176 RVA: 0x003FB69C File Offset: 0x003F989C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601ABA6 RID: 109478 RVA: 0x003E0434 File Offset: 0x003DE634
+		// Token: 0x0601B631 RID: 112177 RVA: 0x003FB6F4 File Offset: 0x003F98F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TowerDefenceRoleInfo other)
@@ -231,7 +231,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601ABA7 RID: 109479 RVA: 0x003E049C File Offset: 0x003DE69C
+		// Token: 0x0601B632 RID: 112178 RVA: 0x003FB75C File Offset: 0x003F995C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -239,7 +239,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601ABA8 RID: 109480 RVA: 0x003E04A8 File Offset: 0x003DE6A8
+		// Token: 0x0601B633 RID: 112179 RVA: 0x003FB768 File Offset: 0x003F9968
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -273,22 +273,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009B2F RID: 39727
+		// Token: 0x04009F76 RID: 40822
 		private static readonly MessageParser<TowerDefenceRoleInfo> _parser = new MessageParser<TowerDefenceRoleInfo>(() => new TowerDefenceRoleInfo());
 
-		// Token: 0x04009B30 RID: 39728
+		// Token: 0x04009F77 RID: 40823
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009B31 RID: 39729
+		// Token: 0x04009F78 RID: 40824
 		public const int RoleIdFieldNumber = 1;
 
-		// Token: 0x04009B32 RID: 39730
+		// Token: 0x04009F79 RID: 40825
 		private int roleId_;
 
-		// Token: 0x04009B33 RID: 39731
+		// Token: 0x04009F7A RID: 40826
 		public const int PhantomFieldNumber = 2;
 
-		// Token: 0x04009B34 RID: 39732
+		// Token: 0x04009F7B RID: 40827
 		private TowerDefencePhantomInfo phantom_;
 	}
 }

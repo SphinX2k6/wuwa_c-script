@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BDF RID: 23519
+	// Token: 0x020061F5 RID: 25077
 	public enum TAddBuffMode : byte
 	{
-		// Token: 0x0400F363 RID: 62307
+		// Token: 0x04010069 RID: 65641
 		NONE,
-		// Token: 0x0400F364 RID: 62308
+		// Token: 0x0401006A RID: 65642
 		IAdsorbAddBuff,
-		// Token: 0x0400F365 RID: 62309
+		// Token: 0x0401006B RID: 65643
 		IFireBulletAddBuff,
-		// Token: 0x0400F366 RID: 62310
+		// Token: 0x0401006C RID: 65644
 		IImmediateAddBuff
 	}
 }

@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 {
-	// Token: 0x02004825 RID: 18469
+	// Token: 0x02003756 RID: 14166
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapFishingPointSecondaryPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x0603058B RID: 198027 RVA: 0x00B38E65 File Offset: 0x00B37065
+		// Token: 0x06024D5B RID: 150875 RVA: 0x00A68F31 File Offset: 0x00A67131
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x0603058C RID: 198028 RVA: 0x00B38E6C File Offset: 0x00B3706C
+		// Token: 0x06024D5C RID: 150876 RVA: 0x00A68F38 File Offset: 0x00A67138
 		protected override UniTask OnBeforeStartAsync()
 		{
 			WorldMapFishingPointSecondaryPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603058D RID: 198029 RVA: 0x00B38EB0 File Offset: 0x00B370B0
+		// Token: 0x06024D5D RID: 150877 RVA: 0x00A68F7C File Offset: 0x00A6717C
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			panelListLayout.RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x0603058E RID: 198030 RVA: 0x00B38EEC File Offset: 0x00B370EC
+		// Token: 0x06024D5E RID: 150878 RVA: 0x00A68FB8 File Offset: 0x00A671B8
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			}
 		}
 
-		// Token: 0x0603058F RID: 198031 RVA: 0x00B39000 File Offset: 0x00B37200
+		// Token: 0x06024D5F RID: 150879 RVA: 0x00A690CC File Offset: 0x00A672CC
 		private void RefreshTipList()
 		{
 			List<IWorldMapSecondaryTipItemParam> data = new List<IWorldMapSecondaryTipItemParam>
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			this.WorldMapSecondaryTipList.RefreshByData(data);
 		}
 
-		// Token: 0x06030590 RID: 198032 RVA: 0x00B39044 File Offset: 0x00B37244
+		// Token: 0x06024D60 RID: 150880 RVA: 0x00A69110 File Offset: 0x00A67310
 		private IWorldMapSecondaryTipItemParam GetCapacityTipItemData()
 		{
 			FishingPointMarkItem fishingPointMarkItem = this.LayoutContext.MarkItem as FishingPointMarkItem;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			};
 		}
 
-		// Token: 0x06030591 RID: 198033 RVA: 0x00B390C4 File Offset: 0x00B372C4
+		// Token: 0x06024D61 RID: 150881 RVA: 0x00A69190 File Offset: 0x00A67390
 		private IWorldMapSecondaryTipItemParam GetNeedTechTipItemData()
 		{
 			MarkItem markItem = this.LayoutContext.MarkItem;
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			};
 		}
 
-		// Token: 0x06030592 RID: 198034 RVA: 0x00B39144 File Offset: 0x00B37344
+		// Token: 0x06024D62 RID: 150882 RVA: 0x00A69210 File Offset: 0x00A67410
 		private IWorldMapSecondaryTipItemParam GetAppearTimeTipItemData()
 		{
 			MarkItem markItem = this.LayoutContext.MarkItem;
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			};
 		}
 
-		// Token: 0x06030593 RID: 198035 RVA: 0x00B391C1 File Offset: 0x00B373C1
+		// Token: 0x06024D63 RID: 150883 RVA: 0x00A6928D File Offset: 0x00A6748D
 		protected override void OnConfirmBtnClick(int index)
 		{
 			FishingController.Instance.RequestFishingEntrustTrace(0);
@@ -175,14 +175,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			base.Close();
 		}
 
-		// Token: 0x0401A01A RID: 106522
+		// Token: 0x040146CE RID: 83662
 		private WorldMapSecondaryTipListPanel WorldMapSecondaryTipList;
 
-		// Token: 0x0200AAFA RID: 43770
+		// Token: 0x020094A9 RID: 38057
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F99 RID: 212889
+			// Token: 0x0402E719 RID: 190233
 			public const int FishingPoint = 0;
 		}
 	}

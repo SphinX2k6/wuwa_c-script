@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001572 RID: 5490
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020016D0 RID: 5840
 	public class DrinksRollRoleRequirement : ActionParams
 	{
-		// Token: 0x06007BEB RID: 31723 RVA: 0x0012A3E4 File Offset: 0x001285E4
+		// Token: 0x060082C9 RID: 33481 RVA: 0x00139490 File Offset: 0x00137690
 		private DrinksRollRoleRequirement_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007BEC RID: 31724 RVA: 0x0012A41C File Offset: 0x0012861C
+		// Token: 0x060082CA RID: 33482 RVA: 0x001394C8 File Offset: 0x001376C8
 		public static DrinksRollRoleRequirement Create([Nullable(2)] DrinksRollRoleRequirement instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007BED RID: 31725 RVA: 0x0012A42F File Offset: 0x0012862F
+		// Token: 0x060082CB RID: 33483 RVA: 0x001394DB File Offset: 0x001376DB
 		public static DrinksRollRoleRequirement CreateFromSetValue([Nullable(2)] DrinksRollRoleRequirement_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007BEE RID: 31726 RVA: 0x0012A442 File Offset: 0x00128642
+		// Token: 0x060082CC RID: 33484 RVA: 0x001394EE File Offset: 0x001376EE
 		public DrinksRollRoleRequirement_SetValue ToSetValue()
 		{
 			return new DrinksRollRoleRequirement_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002906 RID: 10502
-		// (get) Token: 0x06007BEF RID: 31727 RVA: 0x0012A461 File Offset: 0x00128661
-		// (set) Token: 0x06007BF0 RID: 31728 RVA: 0x0012A48C File Offset: 0x0012868C
+		// Token: 0x17002AF1 RID: 10993
+		// (get) Token: 0x060082CD RID: 33485 RVA: 0x0013950D File Offset: 0x0013770D
+		// (set) Token: 0x060082CE RID: 33486 RVA: 0x00139538 File Offset: 0x00137738
 		public virtual int RoleId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002907 RID: 10503
-		// (get) Token: 0x06007BF1 RID: 31729 RVA: 0x0012A49C File Offset: 0x0012869C
-		// (set) Token: 0x06007BF2 RID: 31730 RVA: 0x0012A4D6 File Offset: 0x001286D6
+		// Token: 0x17002AF2 RID: 10994
+		// (get) Token: 0x060082CF RID: 33487 RVA: 0x00139548 File Offset: 0x00137748
+		// (set) Token: 0x060082D0 RID: 33488 RVA: 0x00139582 File Offset: 0x00137782
 		public virtual int? RequirementId
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004750 RID: 18256
+		// Token: 0x04004AF0 RID: 19184
 		[Nullable(2)]
 		protected new DrinksRollRoleRequirement FbInstance;
 
-		// Token: 0x04004751 RID: 18257
+		// Token: 0x04004AF1 RID: 19185
 		[Nullable(2)]
 		protected DrinksRollRoleRequirement_SetValue PocoInterface;
 	}

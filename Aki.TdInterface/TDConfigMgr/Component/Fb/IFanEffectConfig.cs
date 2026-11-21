@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CCB RID: 3275
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DAF RID: 3503
 	public class IFanEffectConfig
 	{
-		// Token: 0x06004AE4 RID: 19172 RVA: 0x000BB685 File Offset: 0x000B9885
+		// Token: 0x06004F9F RID: 20383 RVA: 0x000C62BD File Offset: 0x000C44BD
 		public static IFanEffectConfig Create(IFanEffectConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700170B RID: 5899
-		// (get) Token: 0x06004AE5 RID: 19173 RVA: 0x000BB6A4 File Offset: 0x000B98A4
+		// Token: 0x1700183C RID: 6204
+		// (get) Token: 0x06004FA0 RID: 20384 RVA: 0x000C62DC File Offset: 0x000C44DC
 		public virtual string EffectPath
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700170C RID: 5900
-		// (get) Token: 0x06004AE6 RID: 19174 RVA: 0x000BB6B1 File Offset: 0x000B98B1
+		// Token: 0x1700183D RID: 6205
+		// (get) Token: 0x06004FA1 RID: 20385 RVA: 0x000C62E9 File Offset: 0x000C44E9
 		public virtual float DefaultEffectLength
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700170D RID: 5901
-		// (get) Token: 0x06004AE7 RID: 19175 RVA: 0x000BB6BE File Offset: 0x000B98BE
+		// Token: 0x1700183E RID: 6206
+		// (get) Token: 0x06004FA2 RID: 20386 RVA: 0x000C62F6 File Offset: 0x000C44F6
 		[Nullable(2)]
 		public virtual string HitEffectPath
 		{
@@ -54,7 +52,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002AE0 RID: 10976
+		// Token: 0x04002D66 RID: 11622
 		private IFanEffectConfig Instance;
 	}
 }

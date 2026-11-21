@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,56 +11,56 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x0200137B RID: 4987
+// Token: 0x0200082F RID: 2095
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class MowingTowerController : ActivityControllerBase
 {
-	// Token: 0x06008B91 RID: 35729 RVA: 0x001DD6B0 File Offset: 0x001DB8B0
+	// Token: 0x06005F2C RID: 24364 RVA: 0x001E64EC File Offset: 0x001E46EC
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06008B92 RID: 35730 RVA: 0x001DD6B2 File Offset: 0x001DB8B2
+	// Token: 0x06005F2D RID: 24365 RVA: 0x001E64EE File Offset: 0x001E46EE
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityMowingTower";
 	}
 
-	// Token: 0x06008B93 RID: 35731 RVA: 0x001DD6B9 File Offset: 0x001DB8B9
+	// Token: 0x06005F2E RID: 24366 RVA: 0x001E64F5 File Offset: 0x001E46F5
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new MowingTowerSubView();
 	}
 
-	// Token: 0x06008B94 RID: 35732 RVA: 0x001DD6C0 File Offset: 0x001DB8C0
+	// Token: 0x06005F2F RID: 24367 RVA: 0x001E64FC File Offset: 0x001E46FC
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return new MowingTowerData();
 	}
 
-	// Token: 0x06008B95 RID: 35733 RVA: 0x001DD6C7 File Offset: 0x001DB8C7
+	// Token: 0x06005F30 RID: 24368 RVA: 0x001E6503 File Offset: 0x001E4703
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06008B96 RID: 35734 RVA: 0x001DD6CA File Offset: 0x001DB8CA
+	// Token: 0x06005F31 RID: 24369 RVA: 0x001E6506 File Offset: 0x001E4706
 	protected override bool OnInit()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.MowingTowerMainView, new Func<EUiViewName, object, bool>(this.CheckCanOpen), "MowingTowerController.CheckCanOpen");
 		return true;
 	}
 
-	// Token: 0x06008B97 RID: 35735 RVA: 0x001DD6ED File Offset: 0x001DB8ED
+	// Token: 0x06005F32 RID: 24370 RVA: 0x001E6529 File Offset: 0x001E4729
 	protected override bool OnClear()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.MowingTowerMainView, new Func<EUiViewName, object, bool>(this.CheckCanOpen));
 		return true;
 	}
 
-	// Token: 0x06008B98 RID: 35736 RVA: 0x001DD70C File Offset: 0x001DB90C
+	// Token: 0x06005F33 RID: 24371 RVA: 0x001E6548 File Offset: 0x001E4748
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.MowTowerResultNotify, new Action<IMessage, Net.CallbackStatus>(this.OnChallengeEndNotify));
@@ -69,7 +68,7 @@ public class MowingTowerController : ActivityControllerBase
 		Net.Instance.Register(ENotifyMessageId.MowTowerFirstScoreNotify, new Action<IMessage, Net.CallbackStatus>(this.OnMowTowerFirstScoreNotify));
 	}
 
-	// Token: 0x06008B99 RID: 35737 RVA: 0x001DD76D File Offset: 0x001DB96D
+	// Token: 0x06005F34 RID: 24372 RVA: 0x001E65A9 File Offset: 0x001E47A9
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.MowTowerResultNotify);
@@ -77,19 +76,19 @@ public class MowingTowerController : ActivityControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.MowTowerFirstScoreNotify);
 	}
 
-	// Token: 0x06008B9A RID: 35738 RVA: 0x001DD79F File Offset: 0x001DB99F
+	// Token: 0x06005F35 RID: 24373 RVA: 0x001E65DB File Offset: 0x001E47DB
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.LeaveInstanceDungeonConfirm, new Action(this.OnLeaveInstanceDungeonConfirm));
 	}
 
-	// Token: 0x06008B9B RID: 35739 RVA: 0x001DD7BD File Offset: 0x001DB9BD
+	// Token: 0x06005F36 RID: 24374 RVA: 0x001E65F9 File Offset: 0x001E47F9
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.LeaveInstanceDungeonConfirm, new Action(this.OnLeaveInstanceDungeonConfirm));
 	}
 
-	// Token: 0x06008B9C RID: 35740 RVA: 0x001DD7DC File Offset: 0x001DB9DC
+	// Token: 0x06005F37 RID: 24375 RVA: 0x001E6618 File Offset: 0x001E4818
 	private void OnLeaveInstanceDungeonConfirm()
 	{
 		int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -100,7 +99,7 @@ public class MowingTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008B9D RID: 35741 RVA: 0x001DD828 File Offset: 0x001DBA28
+	// Token: 0x06005F38 RID: 24376 RVA: 0x001E6664 File Offset: 0x001E4864
 	[NullableContext(2)]
 	private void OnMowingTowerLevelInfoNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -109,8 +108,8 @@ public class MowingTowerController : ActivityControllerBase
 		MowingTowerData mowingTowerData = ActivityModel.Instance.GetActivityById(activityId) as MowingTowerData;
 		if (mowingTowerData != null)
 		{
-			mowingTowerData.PhraseLevelInfo(mowTowerLevelsInfoUpdateNotify.MowTowerLevelsInfos.ToList<MowTowerLevelsInfo>());
-			mowingTowerData.PhraseRewardInfo(mowTowerLevelsInfoUpdateNotify.MowTowerLevelsInfos.ToList<MowTowerLevelsInfo>());
+			mowingTowerData.PhraseLevelInfo(mowTowerLevelsInfoUpdateNotify.MowTowerLevelsInfos);
+			mowingTowerData.PhraseRewardInfo(mowTowerLevelsInfoUpdateNotify.MowTowerLevelsInfos);
 			mowingTowerData.CheckIfNewMowingTowerOpen();
 			EventSystem.Instance.Emit(EEventName.RefreshMowingTowerData);
 			EventSystem.Instance.Emit<int>(EEventName.RefreshMowingTowerRewardRedDot, activityId);
@@ -118,13 +117,13 @@ public class MowingTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008B9E RID: 35742 RVA: 0x001DD8D7 File Offset: 0x001DBAD7
+	// Token: 0x06005F39 RID: 24377 RVA: 0x001E6709 File Offset: 0x001E4909
 	[NullableContext(2)]
 	protected void OnMowTowerFirstScoreNotify(IMessage msg, Net.CallbackStatus _2)
 	{
 	}
 
-	// Token: 0x06008B9F RID: 35743 RVA: 0x001DD8DC File Offset: 0x001DBADC
+	// Token: 0x06005F3A RID: 24378 RVA: 0x001E670C File Offset: 0x001E490C
 	[NullableContext(2)]
 	private void OnChallengeEndNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -185,7 +184,7 @@ public class MowingTowerController : ActivityControllerBase
 		ItemRewardController.Instance.Open<IExploreRewardInfo>(rewardData, null);
 	}
 
-	// Token: 0x06008BA0 RID: 35744 RVA: 0x001DDAAC File Offset: 0x001DBCAC
+	// Token: 0x06005F3B RID: 24379 RVA: 0x001E68DC File Offset: 0x001E4ADC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -242,7 +241,7 @@ public class MowingTowerController : ActivityControllerBase
 		return ItemRewardModel.Instance.RefreshExploreRewardDataFromConfig(configId, isSuccess, null, null, null, list, null, null, onCloseCallback, null, null, null, null, null, null, null);
 	}
 
-	// Token: 0x06008BA1 RID: 35745 RVA: 0x001DDBC8 File Offset: 0x001DBDC8
+	// Token: 0x06005F3C RID: 24380 RVA: 0x001E69F8 File Offset: 0x001E4BF8
 	public void RequestStartMowingTowerByTeamData(MowingTowerTeamInfo data)
 	{
 		List<BuffSelection> list = new List<BuffSelection>();
@@ -260,7 +259,7 @@ public class MowingTowerController : ActivityControllerBase
 		MowingTowerController.Instance.RequestStartMowingTower(activityId, data.GetCurrentSelectLevel().GetInstanceDungeonId(), data.GetCurrentSelectLevel().GetId(), list.ToArray(), firstPartRole, lowPartRole);
 	}
 
-	// Token: 0x06008BA2 RID: 35746 RVA: 0x001DDC94 File Offset: 0x001DBE94
+	// Token: 0x06005F3D RID: 24381 RVA: 0x001E6AC4 File Offset: 0x001E4CC4
 	public void RequestStartMowingTower(int id, int instanceDungeonId, int configId, BuffSelection[] buff, int[] firstPartRole, int[] lowPartRole)
 	{
 		if (this.LastRequestMowingTowerTime != 0f && Time.Instance.Now - (double)this.LastRequestMowingTowerTime <= 1000.0)
@@ -291,10 +290,10 @@ public class MowingTowerController : ActivityControllerBase
 		mowTowerCtx.LevelsId = configId;
 		mowTowerCtx.SecondRoles.AddRange(list2);
 		InstanceDungeonModel.Instance.InstanceEnterContentText.MowTowerCtx = mowTowerCtx;
-		InstanceDungeonController.Instance.PrewarTeamFightRequest(instanceDungeonId, firstPartRole.ToList<int>(), 0, 0, null, null);
+		InstanceDungeonController.Instance.PrewarTeamFightRequest(instanceDungeonId, new List<int>(firstPartRole), 0, 0, null, null);
 	}
 
-	// Token: 0x06008BA3 RID: 35747 RVA: 0x001DDDA8 File Offset: 0x001DBFA8
+	// Token: 0x06005F3E RID: 24382 RVA: 0x001E6BD8 File Offset: 0x001E4DD8
 	public void RequestSettlement()
 	{
 		MowTowerSettlementRequest message = MowTowerSettlementRequest.Create();
@@ -303,12 +302,12 @@ public class MowingTowerController : ActivityControllerBase
 			MowTowerSettlementResponse mowTowerSettlementResponse = (MowTowerSettlementResponse)msg;
 			if (mowTowerSettlementResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(mowTowerSettlementResponse.ErrorCode, 24294, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(mowTowerSettlementResponse.ErrorCode, 27490, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x06008BA4 RID: 35748 RVA: 0x001DDDEB File Offset: 0x001DBFEB
+	// Token: 0x06005F3F RID: 24383 RVA: 0x001E6C1B File Offset: 0x001E4E1B
 	public bool CheckCanOpen(EUiViewName _, object _1)
 	{
 		GameModeModel instance = GameModeModel.Instance;
@@ -320,7 +319,7 @@ public class MowingTowerController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06008BA5 RID: 35749 RVA: 0x001DDE18 File Offset: 0x001DC018
+	// Token: 0x06005F40 RID: 24384 RVA: 0x001E6C48 File Offset: 0x001E4E48
 	public void RequestGetMowingTowerLevelReward(int activityId, int configId, int levelId, int index)
 	{
 		MowTowerLevelsRewardRequest mowTowerLevelsRewardRequest = MowTowerLevelsRewardRequest.Create();
@@ -330,7 +329,7 @@ public class MowingTowerController : ActivityControllerBase
 			MowTowerLevelsRewardResponse mowTowerLevelsRewardResponse = (MowTowerLevelsRewardResponse)msg;
 			if (mowTowerLevelsRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(mowTowerLevelsRewardResponse.ErrorCode, 25477, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(mowTowerLevelsRewardResponse.ErrorCode, 17233, null, true, true);
 			}
 			MowingTowerData mowingTowerData = ActivityModel.Instance.GetActivityById(activityId) as MowingTowerData;
 			if (mowingTowerData != null)
@@ -343,7 +342,7 @@ public class MowingTowerController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06008BA6 RID: 35750 RVA: 0x001DDE6C File Offset: 0x001DC06C
+	// Token: 0x06005F41 RID: 24385 RVA: 0x001E6C9C File Offset: 0x001E4E9C
 	[NullableContext(0)]
 	public UniTask<bool> OpenDefaultMowingTowerView()
 	{
@@ -354,7 +353,7 @@ public class MowingTowerController : ActivityControllerBase
 		return <OpenDefaultMowingTowerView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008BA7 RID: 35751 RVA: 0x001DDEA8 File Offset: 0x001DC0A8
+	// Token: 0x06005F42 RID: 24386 RVA: 0x001E6CD8 File Offset: 0x001E4ED8
 	[NullableContext(0)]
 	public UniTask<bool> OpenMowingTowerView(int activityId)
 	{
@@ -366,8 +365,8 @@ public class MowingTowerController : ActivityControllerBase
 		return <OpenMowingTowerView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x17000BDF RID: 3039
-	// (get) Token: 0x06008BA8 RID: 35752 RVA: 0x001DDEEB File Offset: 0x001DC0EB
+	// Token: 0x17000BFF RID: 3071
+	// (get) Token: 0x06005F43 RID: 24387 RVA: 0x001E6D1B File Offset: 0x001E4F1B
 	public static MowingTowerController Instance
 	{
 		get
@@ -376,7 +375,7 @@ public class MowingTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008BA9 RID: 35753 RVA: 0x001DDEF2 File Offset: 0x001DC0F2
+	// Token: 0x06005F44 RID: 24388 RVA: 0x001E6D22 File Offset: 0x001E4F22
 	public static MowingTowerController GetOrCreateInstance()
 	{
 		if (MowingTowerController._Instance == null)
@@ -386,7 +385,7 @@ public class MowingTowerController : ActivityControllerBase
 		return MowingTowerController._Instance;
 	}
 
-	// Token: 0x06008BAA RID: 35754 RVA: 0x001DDF06 File Offset: 0x001DC106
+	// Token: 0x06005F45 RID: 24389 RVA: 0x001E6D36 File Offset: 0x001E4F36
 	public static bool CreateInstance()
 	{
 		if (MowingTowerController._Instance != null)
@@ -397,33 +396,33 @@ public class MowingTowerController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06008BAB RID: 35755 RVA: 0x001DDF1C File Offset: 0x001DC11C
+	// Token: 0x06005F46 RID: 24390 RVA: 0x001E6D4C File Offset: 0x001E4F4C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008BAC RID: 35756 RVA: 0x001DDF1E File Offset: 0x001DC11E
+	// Token: 0x06005F47 RID: 24391 RVA: 0x001E6D4E File Offset: 0x001E4F4E
 	public static void ResetStaticDefaultValue()
 	{
 		MowingTowerController._Instance = null;
 	}
 
-	// Token: 0x06008BAD RID: 35757 RVA: 0x001DDF26 File Offset: 0x001DC126
+	// Token: 0x06005F48 RID: 24392 RVA: 0x001E6D56 File Offset: 0x001E4F56
 	static MowingTowerController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MowingTowerController.CreateStaticDefaultValue), new Action(MowingTowerController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003DE9 RID: 15849
+	// Token: 0x04003E81 RID: 16001
 	private const int SENDCD = 1000;
 
-	// Token: 0x04003DEA RID: 15850
+	// Token: 0x04003E82 RID: 16002
 	private const string BUFF_IS_NOT_VAILD = "ErrorCode_2500057_Text";
 
-	// Token: 0x04003DEB RID: 15851
+	// Token: 0x04003E83 RID: 16003
 	private float LastRequestMowingTowerTime;
 
-	// Token: 0x04003DEC RID: 15852
+	// Token: 0x04003E84 RID: 16004
 	[Nullable(2)]
 	private static MowingTowerController _Instance;
 }

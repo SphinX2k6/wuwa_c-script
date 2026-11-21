@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001451 RID: 5201
+// Token: 0x02000905 RID: 2309
 public static class ActivityRegressMainViewComponentsInfo
 {
-	// Token: 0x06009370 RID: 37744 RVA: 0x001FB4A0 File Offset: 0x001F96A0
+	// Token: 0x06006705 RID: 26373 RVA: 0x002042A8 File Offset: 0x002024A8
 	// Note: this type is marked as 'beforefieldinit'.
 	unsafe static ActivityRegressMainViewComponentsInfo()
 	{
@@ -36,7 +36,7 @@ public static class ActivityRegressMainViewComponentsInfo
 		ActivityRegressMainViewComponentsInfo.Value = list;
 	}
 
-	// Token: 0x0400411F RID: 16671
+	// Token: 0x040041B7 RID: 16823
 	[Nullable(new byte[]
 	{
 		1,

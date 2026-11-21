@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008BA RID: 2234
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200095D RID: 2397
 	public class TComponentsData
 	{
-		// Token: 0x06003233 RID: 12851 RVA: 0x00080B21 File Offset: 0x0007ED21
+		// Token: 0x0600356F RID: 13679 RVA: 0x00088009 File Offset: 0x00086209
 		public static TComponentsData Create([Nullable(2)] TComponentsData instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D67 RID: 3431
-		// (get) Token: 0x06003234 RID: 12852 RVA: 0x00080B34 File Offset: 0x0007ED34
+		// Token: 0x17000E30 RID: 3632
+		// (get) Token: 0x06003570 RID: 13680 RVA: 0x0008801C File Offset: 0x0008621C
 		public virtual List<TComponentData> Items
 		{
 			get
@@ -50,13 +48,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040020E6 RID: 8422
+		// Token: 0x040022F8 RID: 8952
 		private TComponentsData FbInstance;
 
-		// Token: 0x040020E7 RID: 8423
+		// Token: 0x040022F9 RID: 8953
 		private List<TComponentData> _ItemsCache;
 
-		// Token: 0x040020E8 RID: 8424
+		// Token: 0x040022FA RID: 8954
 		private bool _ItemsInited;
 	}
 }

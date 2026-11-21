@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072A7 RID: 29351
+	// Token: 0x02006426 RID: 25638
 	public enum ENpcDitherLockType
 	{
-		// Token: 0x04025F52 RID: 155474
+		// Token: 0x04021225 RID: 135717
 		SequenceCameraPlayer,
-		// Token: 0x04025F53 RID: 155475
+		// Token: 0x04021226 RID: 135718
 		LevelEventAdjustPlayerCamera
 	}
 }

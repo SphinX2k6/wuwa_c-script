@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F41 RID: 16193
+	// Token: 0x0200437F RID: 17279
 	public struct IMonsterPointTypeConfig : IFlatbufferObject
 	{
-		// Token: 0x1700709C RID: 28828
-		// (get) Token: 0x0601703B RID: 94267 RVA: 0x00351AFE File Offset: 0x0034FCFE
+		// Token: 0x1700768D RID: 30349
+		// (get) Token: 0x0601869D RID: 99997 RVA: 0x0037AF72 File Offset: 0x00379172
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601703C RID: 94268 RVA: 0x00351B0B File Offset: 0x0034FD0B
+		// Token: 0x0601869E RID: 99998 RVA: 0x0037AF7F File Offset: 0x0037917F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601703D RID: 94269 RVA: 0x00351B14 File Offset: 0x0034FD14
+		// Token: 0x0601869F RID: 99999 RVA: 0x0037AF88 File Offset: 0x00379188
 		public static IMonsterPointTypeConfig GetRootAsIMonsterPointTypeConfig(ByteBuffer _bb)
 		{
 			return IMonsterPointTypeConfig.GetRootAsIMonsterPointTypeConfig(_bb, default(IMonsterPointTypeConfig));
 		}
 
-		// Token: 0x0601703E RID: 94270 RVA: 0x00351B30 File Offset: 0x0034FD30
+		// Token: 0x060186A0 RID: 100000 RVA: 0x0037AFA4 File Offset: 0x003791A4
 		public static IMonsterPointTypeConfig GetRootAsIMonsterPointTypeConfig(ByteBuffer _bb, IMonsterPointTypeConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601703F RID: 94271 RVA: 0x00351B4D File Offset: 0x0034FD4D
+		// Token: 0x060186A1 RID: 100001 RVA: 0x0037AFC1 File Offset: 0x003791C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017040 RID: 94272 RVA: 0x00351B5C File Offset: 0x0034FD5C
+		// Token: 0x060186A2 RID: 100002 RVA: 0x0037AFD0 File Offset: 0x003791D0
 		public IMonsterPointTypeConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700709D RID: 28829
-		// (get) Token: 0x06017041 RID: 94273 RVA: 0x00351B6C File Offset: 0x0034FD6C
+		// Token: 0x1700768E RID: 30350
+		// (get) Token: 0x060186A3 RID: 100003 RVA: 0x0037AFE0 File Offset: 0x003791E0
 		public EMonsterMatchType MonsterType
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700709E RID: 28830
-		// (get) Token: 0x06017042 RID: 94274 RVA: 0x00351BA8 File Offset: 0x0034FDA8
+		// Token: 0x1700768F RID: 30351
+		// (get) Token: 0x060186A4 RID: 100004 RVA: 0x0037B01C File Offset: 0x0037921C
 		public int Point
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017043 RID: 94275 RVA: 0x00351BE4 File Offset: 0x0034FDE4
+		// Token: 0x060186A5 RID: 100005 RVA: 0x0037B058 File Offset: 0x00379258
 		public static Offset<IMonsterPointTypeConfig> CreateIMonsterPointTypeConfig(FlatBufferBuilder builder, EMonsterMatchType MonsterType = EMonsterMatchType.Normal, int Point = 0)
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMonsterPointTypeConfig.EndIMonsterPointTypeConfig(builder);
 		}
 
-		// Token: 0x06017044 RID: 94276 RVA: 0x00351C01 File Offset: 0x0034FE01
+		// Token: 0x060186A6 RID: 100006 RVA: 0x0037B075 File Offset: 0x00379275
 		public static void StartIMonsterPointTypeConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06017045 RID: 94277 RVA: 0x00351C0A File Offset: 0x0034FE0A
+		// Token: 0x060186A7 RID: 100007 RVA: 0x0037B07E File Offset: 0x0037927E
 		public static void AddMonsterType(FlatBufferBuilder builder, EMonsterMatchType monsterType)
 		{
 			builder.AddByte(0, (byte)monsterType, 0);
 		}
 
-		// Token: 0x06017046 RID: 94278 RVA: 0x00351C15 File Offset: 0x0034FE15
+		// Token: 0x060186A8 RID: 100008 RVA: 0x0037B089 File Offset: 0x00379289
 		public static void AddPoint(FlatBufferBuilder builder, int point)
 		{
 			builder.AddInt(1, point, 0);
 		}
 
-		// Token: 0x06017047 RID: 94279 RVA: 0x00351C20 File Offset: 0x0034FE20
+		// Token: 0x060186A9 RID: 100009 RVA: 0x0037B094 File Offset: 0x00379294
 		public static Offset<IMonsterPointTypeConfig> EndIMonsterPointTypeConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMonsterPointTypeConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06017048 RID: 94280 RVA: 0x00351C30 File Offset: 0x0034FE30
+		// Token: 0x060186AA RID: 100010 RVA: 0x0037B0A4 File Offset: 0x003792A4
 		public IMonsterPointTypeConfigT UnPack()
 		{
 			IMonsterPointTypeConfigT monsterPointTypeConfigT = new IMonsterPointTypeConfigT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return monsterPointTypeConfigT;
 		}
 
-		// Token: 0x06017049 RID: 94281 RVA: 0x00351C4B File Offset: 0x0034FE4B
+		// Token: 0x060186AB RID: 100011 RVA: 0x0037B0BF File Offset: 0x003792BF
 		public void UnPackTo(IMonsterPointTypeConfigT _o)
 		{
 			_o.MonsterType = this.MonsterType;
 			_o.Point = this.Point;
 		}
 
-		// Token: 0x0601704A RID: 94282 RVA: 0x00351C68 File Offset: 0x0034FE68
+		// Token: 0x060186AC RID: 100012 RVA: 0x0037B0DC File Offset: 0x003792DC
 		public static Offset<IMonsterPointTypeConfig> Pack(FlatBufferBuilder builder, IMonsterPointTypeConfigT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMonsterPointTypeConfig.CreateIMonsterPointTypeConfig(builder, _o.MonsterType, _o.Point);
 		}
 
-		// Token: 0x0400B951 RID: 47441
+		// Token: 0x0400C32F RID: 49967
 		private Table __p;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005DE RID: 1502
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200066F RID: 1647
 	public class IPathDrivenActorSplineMove : IPathDrivenActorMoveBase
 	{
-		// Token: 0x06001FC6 RID: 8134 RVA: 0x00058D98 File Offset: 0x00056F98
+		// Token: 0x06002292 RID: 8850 RVA: 0x0005F424 File Offset: 0x0005D624
 		private IPathDrivenActorSplineMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001FC7 RID: 8135 RVA: 0x00058DD0 File Offset: 0x00056FD0
+		// Token: 0x06002293 RID: 8851 RVA: 0x0005F45C File Offset: 0x0005D65C
 		public static IPathDrivenActorSplineMove Create([Nullable(2)] IPathDrivenActorSplineMove instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001FC8 RID: 8136 RVA: 0x00058DE3 File Offset: 0x00056FE3
+		// Token: 0x06002294 RID: 8852 RVA: 0x0005F46F File Offset: 0x0005D66F
 		public static IPathDrivenActorSplineMove CreateFromSetValue([Nullable(2)] IPathDrivenActorSplineMove_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001FC9 RID: 8137 RVA: 0x00058DF8 File Offset: 0x00056FF8
+		// Token: 0x06002295 RID: 8853 RVA: 0x0005F484 File Offset: 0x0005D684
 		public new IPathDrivenActorSplineMove_SetValue ToSetValue()
 		{
 			return new IPathDrivenActorSplineMove_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000875 RID: 2165
-		// (get) Token: 0x06001FCA RID: 8138 RVA: 0x00058E52 File Offset: 0x00057052
-		// (set) Token: 0x06001FCB RID: 8139 RVA: 0x00058E7D File Offset: 0x0005707D
+		// Token: 0x17000921 RID: 2337
+		// (get) Token: 0x06002296 RID: 8854 RVA: 0x0005F4DE File Offset: 0x0005D6DE
+		// (set) Token: 0x06002297 RID: 8855 RVA: 0x0005F509 File Offset: 0x0005D709
 		public override EPathDrivenActorMoveType Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000876 RID: 2166
-		// (get) Token: 0x06001FCC RID: 8140 RVA: 0x00058E8B File Offset: 0x0005708B
-		// (set) Token: 0x06001FCD RID: 8141 RVA: 0x00058EB2 File Offset: 0x000570B2
+		// Token: 0x17000922 RID: 2338
+		// (get) Token: 0x06002298 RID: 8856 RVA: 0x0005F517 File Offset: 0x0005D717
+		// (set) Token: 0x06002299 RID: 8857 RVA: 0x0005F53E File Offset: 0x0005D73E
 		public virtual List<int> SplineEntityIds
 		{
 			get
@@ -112,9 +110,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000877 RID: 2167
-		// (get) Token: 0x06001FCE RID: 8142 RVA: 0x00058EC0 File Offset: 0x000570C0
-		// (set) Token: 0x06001FCF RID: 8143 RVA: 0x00058EFA File Offset: 0x000570FA
+		// Token: 0x17000923 RID: 2339
+		// (get) Token: 0x0600229A RID: 8858 RVA: 0x0005F54C File Offset: 0x0005D74C
+		// (set) Token: 0x0600229B RID: 8859 RVA: 0x0005F586 File Offset: 0x0005D786
 		public virtual bool? IsRandomSpline
 		{
 			get
@@ -136,9 +134,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000878 RID: 2168
-		// (get) Token: 0x06001FD0 RID: 8144 RVA: 0x00058F08 File Offset: 0x00057108
-		// (set) Token: 0x06001FD1 RID: 8145 RVA: 0x00058F42 File Offset: 0x00057142
+		// Token: 0x17000924 RID: 2340
+		// (get) Token: 0x0600229C RID: 8860 RVA: 0x0005F594 File Offset: 0x0005D794
+		// (set) Token: 0x0600229D RID: 8861 RVA: 0x0005F5CE File Offset: 0x0005D7CE
 		public virtual bool? IsChainedSpline
 		{
 			get
@@ -160,9 +158,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000879 RID: 2169
-		// (get) Token: 0x06001FD2 RID: 8146 RVA: 0x00058F50 File Offset: 0x00057150
-		// (set) Token: 0x06001FD3 RID: 8147 RVA: 0x00058F8A File Offset: 0x0005718A
+		// Token: 0x17000925 RID: 2341
+		// (get) Token: 0x0600229E RID: 8862 RVA: 0x0005F5DC File Offset: 0x0005D7DC
+		// (set) Token: 0x0600229F RID: 8863 RVA: 0x0005F616 File Offset: 0x0005D816
 		public virtual bool? IsLoop
 		{
 			get
@@ -184,9 +182,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700087A RID: 2170
-		// (get) Token: 0x06001FD4 RID: 8148 RVA: 0x00058F98 File Offset: 0x00057198
-		// (set) Token: 0x06001FD5 RID: 8149 RVA: 0x00058FD2 File Offset: 0x000571D2
+		// Token: 0x17000926 RID: 2342
+		// (get) Token: 0x060022A0 RID: 8864 RVA: 0x0005F624 File Offset: 0x0005D824
+		// (set) Token: 0x060022A1 RID: 8865 RVA: 0x0005F65E File Offset: 0x0005D85E
 		public virtual bool? IsFollowSplineDir
 		{
 			get
@@ -208,11 +206,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001661 RID: 5729
+		// Token: 0x04001838 RID: 6200
 		[Nullable(2)]
 		protected new IPathDrivenActorSplineMove FbInstance;
 
-		// Token: 0x04001662 RID: 5730
+		// Token: 0x04001839 RID: 6201
 		[Nullable(2)]
 		protected new IPathDrivenActorSplineMove_SetValue PocoInterface;
 	}

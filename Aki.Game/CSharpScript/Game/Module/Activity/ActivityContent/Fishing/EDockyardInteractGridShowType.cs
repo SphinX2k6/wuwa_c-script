@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065D9 RID: 26073
+	// Token: 0x02005557 RID: 21847
 	public enum EDockyardInteractGridShowType
 	{
-		// Token: 0x04022045 RID: 139333
+		// Token: 0x0401C976 RID: 117110
 		None,
-		// Token: 0x04022046 RID: 139334
+		// Token: 0x0401C977 RID: 117111
 		Empty,
-		// Token: 0x04022047 RID: 139335
+		// Token: 0x0401C978 RID: 117112
 		Outline,
-		// Token: 0x04022048 RID: 139336
+		// Token: 0x0401C979 RID: 117113
 		PreviewError,
-		// Token: 0x04022049 RID: 139337
+		// Token: 0x0401C97A RID: 117114
 		PreviewOccupancy,
-		// Token: 0x0402204A RID: 139338
+		// Token: 0x0401C97B RID: 117115
 		PreviewMatch,
-		// Token: 0x0402204B RID: 139339
+		// Token: 0x0401C97C RID: 117116
 		Match
 	}
 }

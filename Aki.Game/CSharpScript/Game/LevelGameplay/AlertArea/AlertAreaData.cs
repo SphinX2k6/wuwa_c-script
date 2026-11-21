@@ -2,29 +2,29 @@
 
 namespace CSharpScript.Game.LevelGamePlay.AlertArea
 {
-	// Token: 0x02006F62 RID: 28514
+	// Token: 0x020060E3 RID: 24803
 	public class AlertAreaData
 	{
-		// Token: 0x060455D8 RID: 284120 RVA: 0x0112BB1B File Offset: 0x01129D1B
+		// Token: 0x0603B786 RID: 243590 RVA: 0x010D58FB File Offset: 0x010D3AFB
 		public AlertAreaData(float MinAlertValue, float MaxAlertValue)
 		{
 			this.MinAlertValue = MinAlertValue;
 			this.MaxAlertValue = MaxAlertValue;
 		}
 
-		// Token: 0x040242FF RID: 148223
+		// Token: 0x0401F5B4 RID: 128436
 		public float MinAlertValue;
 
-		// Token: 0x04024300 RID: 148224
+		// Token: 0x0401F5B5 RID: 128437
 		public float MaxAlertValue;
 
-		// Token: 0x04024301 RID: 148225
+		// Token: 0x0401F5B6 RID: 128438
 		public float AlertValue;
 
-		// Token: 0x04024302 RID: 148226
+		// Token: 0x0401F5B7 RID: 128439
 		public bool AlertUiEnabled;
 
-		// Token: 0x04024303 RID: 148227
+		// Token: 0x0401F5B8 RID: 128440
 		public bool AlertUiVisible;
 	}
 }

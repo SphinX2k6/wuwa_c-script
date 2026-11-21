@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001412 RID: 5138
+	// Token: 0x02001569 RID: 5481
 	public class ICheckSpringFestivalGameplayType
 	{
-		// Token: 0x060074CD RID: 29901 RVA: 0x0011733C File Offset: 0x0011553C
-		[NullableContext(1)]
+		// Token: 0x06007B8E RID: 31630 RVA: 0x00125D20 File Offset: 0x00123F20
 		public static ICheckSpringFestivalGameplayType Create(ICheckSpringFestivalGameplayType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700267C RID: 9852
-		// (get) Token: 0x060074CE RID: 29902 RVA: 0x0011735B File Offset: 0x0011555B
+		// Token: 0x1700285E RID: 10334
+		// (get) Token: 0x06007B8F RID: 31631 RVA: 0x00125D3F File Offset: 0x00123F3F
 		public virtual ESpringFestivalGameplayType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040043A0 RID: 17312
+		// Token: 0x04004731 RID: 18225
 		private ICheckSpringFestivalGameplayType Instance;
 	}
 }

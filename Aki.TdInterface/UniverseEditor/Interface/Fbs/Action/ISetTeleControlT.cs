@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007089 RID: 28809
+	// Token: 0x02007855 RID: 30805
 	public class ISetTeleControlT
 	{
-		// Token: 0x1700D617 RID: 54807
-		// (get) Token: 0x0603303D RID: 208957 RVA: 0x006E1AED File Offset: 0x006DFCED
-		// (set) Token: 0x0603303E RID: 208958 RVA: 0x006E1AF5 File Offset: 0x006DFCF5
+		// Token: 0x1700E1FA RID: 57850
+		// (get) Token: 0x060362DF RID: 221919 RVA: 0x007420F9 File Offset: 0x007402F9
+		// (set) Token: 0x060362E0 RID: 221920 RVA: 0x00742101 File Offset: 0x00740301
 		public TSetTeleControlConfigUnion Config { get; set; }
 
-		// Token: 0x0603303F RID: 208959 RVA: 0x006E1AFE File Offset: 0x006DFCFE
+		// Token: 0x060362E1 RID: 221921 RVA: 0x0074210A File Offset: 0x0074030A
 		public ISetTeleControlT()
 		{
 			this.Config = null;

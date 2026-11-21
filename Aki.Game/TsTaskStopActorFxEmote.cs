@@ -14,9 +14,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskStopActorFxEmote.TsTaskStopActorFxEmote_C")]
 public class TsTaskStopActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700020C RID: 524
-	// (get) Token: 0x06000B37 RID: 2871 RVA: 0x00038181 File Offset: 0x00036381
-	// (set) Token: 0x06000B38 RID: 2872 RVA: 0x00038191 File Offset: 0x00036391
+	// Token: 0x1700020F RID: 527
+	// (get) Token: 0x06000B3D RID: 2877 RVA: 0x00039345 File Offset: 0x00037545
+	// (set) Token: 0x06000B3E RID: 2878 RVA: 0x00039355 File Offset: 0x00037555
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool StopAll
 	{
@@ -30,9 +30,9 @@ public class TsTaskStopActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x1700020D RID: 525
-	// (get) Token: 0x06000B39 RID: 2873 RVA: 0x000381A4 File Offset: 0x000363A4
-	// (set) Token: 0x06000B3A RID: 2874 RVA: 0x000381DD File Offset: 0x000363DD
+	// Token: 0x17000210 RID: 528
+	// (get) Token: 0x06000B3F RID: 2879 RVA: 0x00039368 File Offset: 0x00037568
+	// (set) Token: 0x06000B40 RID: 2880 RVA: 0x000393A1 File Offset: 0x000375A1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<string> SocketNames
 	{
@@ -52,30 +52,27 @@ public class TsTaskStopActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06000B3B RID: 2875 RVA: 0x000381EC File Offset: 0x000363EC
+	// Token: 0x06000B41 RID: 2881 RVA: 0x000393B0 File Offset: 0x000375B0
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskStopActorFxEmote) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskStopActorFxEmote.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000B3C RID: 2876 RVA: 0x00038288 File Offset: 0x00036488
+	// Token: 0x06000B42 RID: 2882 RVA: 0x00039460 File Offset: 0x00037660
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -116,7 +113,7 @@ public class TsTaskStopActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000B3D RID: 2877 RVA: 0x00038363 File Offset: 0x00036563
+	// Token: 0x06000B43 RID: 2883 RVA: 0x0003953B File Offset: 0x0003773B
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskStopActorFxEmote._ClassPtr == IntPtr.Zero)
@@ -126,22 +123,22 @@ public class TsTaskStopActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		return TsTaskStopActorFxEmote._ClassPtr;
 	}
 
-	// Token: 0x06000B3E RID: 2878 RVA: 0x00038388 File Offset: 0x00036588
+	// Token: 0x06000B44 RID: 2884 RVA: 0x00039560 File Offset: 0x00037760
 	public TsTaskStopActorFxEmote() : this(BuiltinUtils.AllocNativeUObject(TsTaskStopActorFxEmote.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000B3F RID: 2879 RVA: 0x000383B0 File Offset: 0x000365B0
+	// Token: 0x06000B45 RID: 2885 RVA: 0x00039588 File Offset: 0x00037788
 	public TsTaskStopActorFxEmote(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskStopActorFxEmote.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000B40 RID: 2880 RVA: 0x000383E3 File Offset: 0x000365E3
+	// Token: 0x06000B46 RID: 2886 RVA: 0x000395BB File Offset: 0x000377BB
 	protected TsTaskStopActorFxEmote(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000B41 RID: 2881 RVA: 0x000383EC File Offset: 0x000365EC
+	// Token: 0x06000B47 RID: 2887 RVA: 0x000395C4 File Offset: 0x000377C4
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -150,22 +147,22 @@ public class TsTaskStopActorFxEmote : TsTaskAbortImmediatelyBase, IUnrealUObject
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x040008C7 RID: 2247
+	// Token: 0x040008CF RID: 2255
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskStopActorFxEmote.TsTaskStopActorFxEmote_C";
 
-	// Token: 0x040008C8 RID: 2248
+	// Token: 0x040008D0 RID: 2256
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040008C9 RID: 2249
+	// Token: 0x040008D1 RID: 2257
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040008CA RID: 2250
+	// Token: 0x040008D2 RID: 2258
 	private static int __PropertyOffset_StopAll;
 
-	// Token: 0x040008CB RID: 2251
+	// Token: 0x040008D3 RID: 2259
 	private static int __PropertyOffset_SocketNames;
 
-	// Token: 0x040008CC RID: 2252
+	// Token: 0x040008D4 RID: 2260
 	[Nullable(new byte[]
 	{
 		2,

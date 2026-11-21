@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011DE RID: 4574
+	// Token: 0x02001315 RID: 4885
 	public struct SCreatureGenNavAssistAreaExportDefine : IFlatbufferObject
 	{
-		// Token: 0x17003F26 RID: 16166
-		// (get) Token: 0x0600EB59 RID: 60249 RVA: 0x0034A1F4 File Offset: 0x003483F4
+		// Token: 0x1700428E RID: 17038
+		// (get) Token: 0x0600F8D2 RID: 63698 RVA: 0x00374EE4 File Offset: 0x003730E4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,38 +19,38 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EB5A RID: 60250 RVA: 0x0034A201 File Offset: 0x00348401
+		// Token: 0x0600F8D3 RID: 63699 RVA: 0x00374EF1 File Offset: 0x003730F1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EB5B RID: 60251 RVA: 0x0034A208 File Offset: 0x00348408
+		// Token: 0x0600F8D4 RID: 63700 RVA: 0x00374EF8 File Offset: 0x003730F8
 		public static SCreatureGenNavAssistAreaExportDefine GetRootAsSCreatureGenNavAssistAreaExportDefine(ByteBuffer _bb)
 		{
 			return SCreatureGenNavAssistAreaExportDefine.GetRootAsSCreatureGenNavAssistAreaExportDefine(_bb, default(SCreatureGenNavAssistAreaExportDefine));
 		}
 
-		// Token: 0x0600EB5C RID: 60252 RVA: 0x0034A224 File Offset: 0x00348424
+		// Token: 0x0600F8D5 RID: 63701 RVA: 0x00374F14 File Offset: 0x00373114
 		public static SCreatureGenNavAssistAreaExportDefine GetRootAsSCreatureGenNavAssistAreaExportDefine(ByteBuffer _bb, SCreatureGenNavAssistAreaExportDefine obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EB5D RID: 60253 RVA: 0x0034A241 File Offset: 0x00348441
+		// Token: 0x0600F8D6 RID: 63702 RVA: 0x00374F31 File Offset: 0x00373131
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EB5E RID: 60254 RVA: 0x0034A250 File Offset: 0x00348450
+		// Token: 0x0600F8D7 RID: 63703 RVA: 0x00374F40 File Offset: 0x00373140
 		public SCreatureGenNavAssistAreaExportDefine __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0600EB5F RID: 60255 RVA: 0x0034A260 File Offset: 0x00348460
+		// Token: 0x0600F8D8 RID: 63704 RVA: 0x00374F50 File Offset: 0x00373150
 		public IntVector? Points(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -61,8 +61,8 @@ namespace Aki.Config
 			return new IntVector?(default(IntVector).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003F27 RID: 16167
-		// (get) Token: 0x0600EB60 RID: 60256 RVA: 0x0034A2C0 File Offset: 0x003484C0
+		// Token: 0x1700428F RID: 17039
+		// (get) Token: 0x0600F8D9 RID: 63705 RVA: 0x00374FB0 File Offset: 0x003731B0
 		public int PointsLength
 		{
 			get
@@ -76,24 +76,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EB61 RID: 60257 RVA: 0x0034A2EB File Offset: 0x003484EB
+		// Token: 0x0600F8DA RID: 63706 RVA: 0x00374FDB File Offset: 0x003731DB
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PointsIter()或GetPointsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntVector[] Points()
+		public IntVector[] Points()
 		{
 			return this.PointsIter().ToArray<IntVector>();
 		}
 
-		// Token: 0x0600EB62 RID: 60258 RVA: 0x0034A2F8 File Offset: 0x003484F8
+		// Token: 0x0600F8DB RID: 63707 RVA: 0x00374FE8 File Offset: 0x003731E8
 		[NullableContext(1)]
-		public readonly IEnumerable<IntVector> PointsIter()
+		public IEnumerable<IntVector> PointsIter()
 		{
 			SCreatureGenNavAssistAreaExportDefine.<PointsIter>d__12 <PointsIter>d__ = new SCreatureGenNavAssistAreaExportDefine.<PointsIter>d__12(-2);
 			<PointsIter>d__.<>3__<>4__this = this;
 			return <PointsIter>d__;
 		}
 
-		// Token: 0x04005357 RID: 21335
+		// Token: 0x0400599B RID: 22939
 		private Table __p;
 	}
 }

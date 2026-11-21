@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D3C RID: 27964
+	// Token: 0x020074B7 RID: 29879
 	public class IPlayScreenEffectT
 	{
-		// Token: 0x1700D07C RID: 53372
-		// (get) Token: 0x060315C5 RID: 202181 RVA: 0x006B1D10 File Offset: 0x006AFF10
-		// (set) Token: 0x060315C6 RID: 202182 RVA: 0x006B1D18 File Offset: 0x006AFF18
+		// Token: 0x1700DBC4 RID: 56260
+		// (get) Token: 0x060345C1 RID: 214465 RVA: 0x0070D3F8 File Offset: 0x0070B5F8
+		// (set) Token: 0x060345C2 RID: 214466 RVA: 0x0070D400 File Offset: 0x0070B600
 		public EEffectType Type { get; set; }
 
-		// Token: 0x1700D07D RID: 53373
-		// (get) Token: 0x060315C7 RID: 202183 RVA: 0x006B1D21 File Offset: 0x006AFF21
-		// (set) Token: 0x060315C8 RID: 202184 RVA: 0x006B1D29 File Offset: 0x006AFF29
+		// Token: 0x1700DBC5 RID: 56261
+		// (get) Token: 0x060345C3 RID: 214467 RVA: 0x0070D409 File Offset: 0x0070B609
+		// (set) Token: 0x060345C4 RID: 214468 RVA: 0x0070D411 File Offset: 0x0070B611
 		public string Path { get; set; }
 
-		// Token: 0x1700D07E RID: 53374
-		// (get) Token: 0x060315C9 RID: 202185 RVA: 0x006B1D32 File Offset: 0x006AFF32
-		// (set) Token: 0x060315CA RID: 202186 RVA: 0x006B1D3A File Offset: 0x006AFF3A
+		// Token: 0x1700DBC6 RID: 56262
+		// (get) Token: 0x060345C5 RID: 214469 RVA: 0x0070D41A File Offset: 0x0070B61A
+		// (set) Token: 0x060345C6 RID: 214470 RVA: 0x0070D422 File Offset: 0x0070B622
 		public float DestroyTime { get; set; }
 
-		// Token: 0x1700D07F RID: 53375
-		// (get) Token: 0x060315CB RID: 202187 RVA: 0x006B1D43 File Offset: 0x006AFF43
-		// (set) Token: 0x060315CC RID: 202188 RVA: 0x006B1D4B File Offset: 0x006AFF4B
+		// Token: 0x1700DBC7 RID: 56263
+		// (get) Token: 0x060345C7 RID: 214471 RVA: 0x0070D42B File Offset: 0x0070B62B
+		// (set) Token: 0x060345C8 RID: 214472 RVA: 0x0070D433 File Offset: 0x0070B633
 		public string BindSubScreenKey { get; set; }
 
-		// Token: 0x1700D080 RID: 53376
-		// (get) Token: 0x060315CD RID: 202189 RVA: 0x006B1D54 File Offset: 0x006AFF54
-		// (set) Token: 0x060315CE RID: 202190 RVA: 0x006B1D5C File Offset: 0x006AFF5C
+		// Token: 0x1700DBC8 RID: 56264
+		// (get) Token: 0x060345C9 RID: 214473 RVA: 0x0070D43C File Offset: 0x0070B63C
+		// (set) Token: 0x060345CA RID: 214474 RVA: 0x0070D444 File Offset: 0x0070B644
 		public byte NullMask { get; set; }
 
-		// Token: 0x060315CF RID: 202191 RVA: 0x006B1D65 File Offset: 0x006AFF65
+		// Token: 0x060345CB RID: 214475 RVA: 0x0070D44D File Offset: 0x0070B64D
 		public IPlayScreenEffectT()
 		{
 			this.Type = EEffectType.Effect;

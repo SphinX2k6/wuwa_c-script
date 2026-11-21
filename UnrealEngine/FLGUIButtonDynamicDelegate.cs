@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200202B RID: 8235
+	// Token: 0x0200066F RID: 1647
 	public sealed class FLGUIButtonDynamicDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F18F RID: 127375 RVA: 0x002E35E4 File Offset: 0x002E17E4
+		// Token: 0x06008EF1 RID: 36593 RVA: 0x000D6ED0 File Offset: 0x000D50D0
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIButtonDynamicDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F190 RID: 127376 RVA: 0x002E35F0 File Offset: 0x002E17F0
+		// Token: 0x06008EF2 RID: 36594 RVA: 0x000D6EDC File Offset: 0x000D50DC
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIButtonDynamicDelegate._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FLGUIButtonDynamicDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F191 RID: 127377 RVA: 0x002E3613 File Offset: 0x002E1813
+		// Token: 0x06008EF3 RID: 36595 RVA: 0x000D6EFF File Offset: 0x000D50FF
 		public FLGUIButtonDynamicDelegate()
 		{
 		}
 
-		// Token: 0x0601F192 RID: 127378 RVA: 0x002E361B File Offset: 0x002E181B
+		// Token: 0x06008EF4 RID: 36596 RVA: 0x000D6F07 File Offset: 0x000D5107
 		[NullableContext(2)]
 		public FLGUIButtonDynamicDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F193 RID: 127379 RVA: 0x002E3625 File Offset: 0x002E1825
+		// Token: 0x06008EF5 RID: 36597 RVA: 0x000D6F11 File Offset: 0x000D5111
 		public FLGUIButtonDynamicDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F194 RID: 127380 RVA: 0x002E3630 File Offset: 0x002E1830
+		// Token: 0x06008EF6 RID: 36598 RVA: 0x000D6F1C File Offset: 0x000D511C
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F195 RID: 127381 RVA: 0x002E3662 File Offset: 0x002E1862
+		// Token: 0x06008EF7 RID: 36599 RVA: 0x000D6F4E File Offset: 0x000D514E
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FLGUIButtonDynamicDelegate.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIButtonDynamicDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F196 RID: 127382 RVA: 0x002E369C File Offset: 0x002E189C
+		// Token: 0x06008EF8 RID: 36600 RVA: 0x000D6F88 File Offset: 0x000D5188
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x0601F197 RID: 127383 RVA: 0x002E36A8 File Offset: 0x002E18A8
+		// Token: 0x06008EF9 RID: 36601 RVA: 0x000D6F94 File Offset: 0x000D5194
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x04010DAE RID: 69038
+		// Token: 0x04003EAB RID: 16043
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010DAF RID: 69039
+		// Token: 0x04003EAC RID: 16044
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIButtonDynamicDelegate__DelegateSignature";
 
-		// Token: 0x04010DB0 RID: 69040
+		// Token: 0x04003EAD RID: 16045
 		private static int RegisterId;
 
-		// Token: 0x02003439 RID: 13369
+		// Token: 0x02000E7C RID: 3708
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017419 RID: 95257
+			// Token: 0x04006228 RID: 25128
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

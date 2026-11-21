@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02001977 RID: 6519
+// Token: 0x02000E34 RID: 3636
 public class SmallItemGridElementComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BEDA RID: 48858 RVA: 0x002B2D24 File Offset: 0x002B0F24
+	// Token: 0x060092E2 RID: 37602 RVA: 0x002BDCA8 File Offset: 0x002BBEA8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -20,14 +20,14 @@ public class SmallItemGridElementComponent : SmallItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BEDB RID: 48859 RVA: 0x002B2D6C File Offset: 0x002B0F6C
+	// Token: 0x060092E3 RID: 37603 RVA: 0x002BDCF0 File Offset: 0x002BBEF0
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemElement";
 	}
 
-	// Token: 0x0600BEDC RID: 48860 RVA: 0x002B2D74 File Offset: 0x002B0F74
+	// Token: 0x060092E4 RID: 37604 RVA: 0x002BDCF8 File Offset: 0x002BBEF8
 	[NullableContext(2)]
 	protected override void OnRefresh(object tempData)
 	{
@@ -55,10 +55,10 @@ public class SmallItemGridElementComponent : SmallItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x02007EC3 RID: 32451
+	// Token: 0x02007052 RID: 28754
 	private enum EChildType
 	{
-		// Token: 0x040296FF RID: 169727
+		// Token: 0x04024A3C RID: 150076
 		ElementTexture
 	}
 }

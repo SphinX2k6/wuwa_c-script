@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200570E RID: 22286
+	// Token: 0x02005D15 RID: 23829
 	public class IPatrolRangeT
 	{
-		// Token: 0x1700A5EC RID: 42476
-		// (get) Token: 0x06025433 RID: 152627 RVA: 0x0052436F File Offset: 0x0052256F
-		// (set) Token: 0x06025434 RID: 152628 RVA: 0x00524377 File Offset: 0x00522577
+		// Token: 0x1700AF08 RID: 44808
+		// (get) Token: 0x06027934 RID: 162100 RVA: 0x00569DA3 File Offset: 0x00567FA3
+		// (set) Token: 0x06027935 RID: 162101 RVA: 0x00569DAB File Offset: 0x00567FAB
 		public IVectorInfoT Center { get; set; }
 
-		// Token: 0x1700A5ED RID: 42477
-		// (get) Token: 0x06025435 RID: 152629 RVA: 0x00524380 File Offset: 0x00522580
-		// (set) Token: 0x06025436 RID: 152630 RVA: 0x00524388 File Offset: 0x00522588
+		// Token: 0x1700AF09 RID: 44809
+		// (get) Token: 0x06027936 RID: 162102 RVA: 0x00569DB4 File Offset: 0x00567FB4
+		// (set) Token: 0x06027937 RID: 162103 RVA: 0x00569DBC File Offset: 0x00567FBC
 		public int Radius { get; set; }
 
-		// Token: 0x06025437 RID: 152631 RVA: 0x00524391 File Offset: 0x00522591
+		// Token: 0x06027938 RID: 162104 RVA: 0x00569DC5 File Offset: 0x00567FC5
 		public IPatrolRangeT()
 		{
 			this.Center = null;

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AEF RID: 6895
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C9C RID: 7324
 	public class IHeadStyleMonsterDisplay : IHeadStyle
 	{
-		// Token: 0x060093B4 RID: 37812 RVA: 0x00156910 File Offset: 0x00154B10
+		// Token: 0x06009B92 RID: 39826 RVA: 0x00167458 File Offset: 0x00165658
 		private IHeadStyleMonsterDisplay_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060093B5 RID: 37813 RVA: 0x00156948 File Offset: 0x00154B48
+		// Token: 0x06009B93 RID: 39827 RVA: 0x00167490 File Offset: 0x00165690
 		public static IHeadStyleMonsterDisplay Create([Nullable(2)] IHeadStyleMonsterDisplay instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093B6 RID: 37814 RVA: 0x0015695B File Offset: 0x00154B5B
+		// Token: 0x06009B94 RID: 39828 RVA: 0x001674A3 File Offset: 0x001656A3
 		public static IHeadStyleMonsterDisplay CreateFromSetValue([Nullable(2)] IHeadStyleMonsterDisplay_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093B7 RID: 37815 RVA: 0x0015696E File Offset: 0x00154B6E
+		// Token: 0x06009B95 RID: 39829 RVA: 0x001674B6 File Offset: 0x001656B6
 		public new IHeadStyleMonsterDisplay_SetValue ToSetValue()
 		{
 			return new IHeadStyleMonsterDisplay_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EC9 RID: 11977
-		// (get) Token: 0x060093B8 RID: 37816 RVA: 0x0015698D File Offset: 0x00154B8D
-		// (set) Token: 0x060093B9 RID: 37817 RVA: 0x001569B8 File Offset: 0x00154BB8
+		// Token: 0x170030EC RID: 12524
+		// (get) Token: 0x06009B96 RID: 39830 RVA: 0x001674D5 File Offset: 0x001656D5
+		// (set) Token: 0x06009B97 RID: 39831 RVA: 0x00167500 File Offset: 0x00165700
 		public override EHeadStyle Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002ECA RID: 11978
-		// (get) Token: 0x060093BA RID: 37818 RVA: 0x001569C6 File Offset: 0x00154BC6
-		// (set) Token: 0x060093BB RID: 37819 RVA: 0x001569F1 File Offset: 0x00154BF1
+		// Token: 0x170030ED RID: 12525
+		// (get) Token: 0x06009B98 RID: 39832 RVA: 0x0016750E File Offset: 0x0016570E
+		// (set) Token: 0x06009B99 RID: 39833 RVA: 0x00167539 File Offset: 0x00165739
 		public virtual int MonsterDisplayId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AB6 RID: 23222
+		// Token: 0x04005F4D RID: 24397
 		[Nullable(2)]
 		protected new IHeadStyleMonsterDisplay FbInstance;
 
-		// Token: 0x04005AB7 RID: 23223
+		// Token: 0x04005F4E RID: 24398
 		[Nullable(2)]
 		protected new IHeadStyleMonsterDisplay_SetValue PocoInterface;
 	}

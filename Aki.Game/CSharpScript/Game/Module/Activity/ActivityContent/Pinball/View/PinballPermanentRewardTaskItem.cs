@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 {
-	// Token: 0x020062D3 RID: 25299
+	// Token: 0x02005251 RID: 21073
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 	})]
 	public class PinballPermanentRewardTaskItem : GridProxyAbstract<PinballTaskData>
 	{
-		// Token: 0x0603FAA4 RID: 260772 RVA: 0x00F674D0 File Offset: 0x00F656D0
+		// Token: 0x06034765 RID: 214885 RVA: 0x00EAE42C File Offset: 0x00EAC62C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FAA5 RID: 260773 RVA: 0x00F6765E File Offset: 0x00F6585E
+		// Token: 0x06034766 RID: 214886 RVA: 0x00EAE5BA File Offset: 0x00EAC7BA
 		protected override void OnStart()
 		{
 			this.RewardScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(3), new Func<CommonItemSmallItemGrid>(this.CreateRewardItem), null, false, null);
 		}
 
-		// Token: 0x0603FAA6 RID: 260774 RVA: 0x00F67684 File Offset: 0x00F65884
+		// Token: 0x06034767 RID: 214887 RVA: 0x00EAE5E0 File Offset: 0x00EAC7E0
 		public override void Refresh(PinballTaskData data, bool isSelected, int gridIndex)
 		{
 			this.TaskData = data;
@@ -86,13 +86,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			text2.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603FAA7 RID: 260775 RVA: 0x00F67788 File Offset: 0x00F65988
+		// Token: 0x06034768 RID: 214888 RVA: 0x00EAE6E4 File Offset: 0x00EAC8E4
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0603FAA8 RID: 260776 RVA: 0x00F67790 File Offset: 0x00F65990
+		// Token: 0x06034769 RID: 214889 RVA: 0x00EAE6EC File Offset: 0x00EAC8EC
 		private UniTask OnRewardBtnClickAsync()
 		{
 			PinballPermanentRewardTaskItem.<OnRewardBtnClickAsync>d__7 <OnRewardBtnClickAsync>d__;
@@ -103,13 +103,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			return <OnRewardBtnClickAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FAA9 RID: 260777 RVA: 0x00F677D3 File Offset: 0x00F659D3
+		// Token: 0x0603476A RID: 214890 RVA: 0x00EAE72F File Offset: 0x00EAC92F
 		private void OnRewardBtnClick()
 		{
 			this.OnRewardBtnClickAsync().Forget();
 		}
 
-		// Token: 0x04021434 RID: 136244
+		// Token: 0x0401BD63 RID: 114019
 		[Nullable(new byte[]
 		{
 			2,
@@ -117,35 +117,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-		// Token: 0x04021435 RID: 136245
+		// Token: 0x0401BD64 RID: 114020
 		[Nullable(2)]
 		private PinballTaskData TaskData;
 
-		// Token: 0x04021436 RID: 136246
+		// Token: 0x0401BD65 RID: 114021
 		[Nullable(2)]
 		public Func<int, UniTask> OnTaskRewardClick;
 
-		// Token: 0x0200C4BD RID: 50365
+		// Token: 0x0200AEA4 RID: 44708
 		[NullableContext(0)]
 		private enum ETaskComponents
 		{
-			// Token: 0x0403B5DA RID: 243162
+			// Token: 0x04035F3C RID: 220988
 			ScriptBtn,
-			// Token: 0x0403B5DB RID: 243163
+			// Token: 0x04035F3D RID: 220989
 			TxtName,
-			// Token: 0x0403B5DC RID: 243164
+			// Token: 0x04035F3E RID: 220990
 			TxtNum,
-			// Token: 0x0403B5DD RID: 243165
+			// Token: 0x04035F3F RID: 220991
 			ItemLayout,
-			// Token: 0x0403B5DE RID: 243166
+			// Token: 0x04035F40 RID: 220992
 			ItemBaseB,
-			// Token: 0x0403B5DF RID: 243167
+			// Token: 0x04035F41 RID: 220993
 			TxtDoing,
-			// Token: 0x0403B5E0 RID: 243168
+			// Token: 0x04035F42 RID: 220994
 			BtnConfirmBaseA,
-			// Token: 0x0403B5E1 RID: 243169
+			// Token: 0x04035F43 RID: 220995
 			RedPoint,
-			// Token: 0x0403B5E2 RID: 243170
+			// Token: 0x04035F44 RID: 220996
 			PanelDone
 		}
 	}

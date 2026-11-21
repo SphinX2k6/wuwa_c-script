@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 {
-	// Token: 0x02005E9F RID: 24223
+	// Token: 0x020064E2 RID: 25826
 	public struct ICommonBtActionInfo : IFlatbufferObject
 	{
-		// Token: 0x1700B504 RID: 46340
-		// (get) Token: 0x060297F0 RID: 169968 RVA: 0x005AF9AC File Offset: 0x005ADBAC
+		// Token: 0x1700BE6F RID: 48751
+		// (get) Token: 0x0602BE98 RID: 179864 RVA: 0x005F8950 File Offset: 0x005F6B50
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x060297F1 RID: 169969 RVA: 0x005AF9B9 File Offset: 0x005ADBB9
+		// Token: 0x0602BE99 RID: 179865 RVA: 0x005F895D File Offset: 0x005F6B5D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060297F2 RID: 169970 RVA: 0x005AF9C0 File Offset: 0x005ADBC0
+		// Token: 0x0602BE9A RID: 179866 RVA: 0x005F8964 File Offset: 0x005F6B64
 		public static ICommonBtActionInfo GetRootAsICommonBtActionInfo(ByteBuffer _bb)
 		{
 			return ICommonBtActionInfo.GetRootAsICommonBtActionInfo(_bb, default(ICommonBtActionInfo));
 		}
 
-		// Token: 0x060297F3 RID: 169971 RVA: 0x005AF9DC File Offset: 0x005ADBDC
+		// Token: 0x0602BE9B RID: 179867 RVA: 0x005F8980 File Offset: 0x005F6B80
 		public static ICommonBtActionInfo GetRootAsICommonBtActionInfo(ByteBuffer _bb, ICommonBtActionInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060297F4 RID: 169972 RVA: 0x005AF9F9 File Offset: 0x005ADBF9
+		// Token: 0x0602BE9C RID: 179868 RVA: 0x005F899D File Offset: 0x005F6B9D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060297F5 RID: 169973 RVA: 0x005AFA08 File Offset: 0x005ADC08
+		// Token: 0x0602BE9D RID: 179869 RVA: 0x005F89AC File Offset: 0x005F6BAC
 		public ICommonBtActionInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B505 RID: 46341
-		// (get) Token: 0x060297F6 RID: 169974 RVA: 0x005AFA18 File Offset: 0x005ADC18
+		// Token: 0x1700BE70 RID: 48752
+		// (get) Token: 0x0602BE9E RID: 179870 RVA: 0x005F89BC File Offset: 0x005F6BBC
 		public int TaskId
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x1700B506 RID: 46342
-		// (get) Token: 0x060297F7 RID: 169975 RVA: 0x005AFA54 File Offset: 0x005ADC54
+		// Token: 0x1700BE71 RID: 48753
+		// (get) Token: 0x0602BE9F RID: 179871 RVA: 0x005F89F8 File Offset: 0x005F6BF8
 		public IActionInfo? Action
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x060297F8 RID: 169976 RVA: 0x005AFAB1 File Offset: 0x005ADCB1
+		// Token: 0x0602BEA0 RID: 179872 RVA: 0x005F8A55 File Offset: 0x005F6C55
 		public static Offset<ICommonBtActionInfo> CreateICommonBtActionInfo(FlatBufferBuilder builder, int TaskId = 0, Offset<IActionInfo> ActionOffset = default(Offset<IActionInfo>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return ICommonBtActionInfo.EndICommonBtActionInfo(builder);
 		}
 
-		// Token: 0x060297F9 RID: 169977 RVA: 0x005AFACE File Offset: 0x005ADCCE
+		// Token: 0x0602BEA1 RID: 179873 RVA: 0x005F8A72 File Offset: 0x005F6C72
 		public static void StartICommonBtActionInfo(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060297FA RID: 169978 RVA: 0x005AFAD7 File Offset: 0x005ADCD7
+		// Token: 0x0602BEA2 RID: 179874 RVA: 0x005F8A7B File Offset: 0x005F6C7B
 		public static void AddTaskId(FlatBufferBuilder builder, int taskId)
 		{
 			builder.AddInt(0, taskId, 0);
 		}
 
-		// Token: 0x060297FB RID: 169979 RVA: 0x005AFAE2 File Offset: 0x005ADCE2
+		// Token: 0x0602BEA3 RID: 179875 RVA: 0x005F8A86 File Offset: 0x005F6C86
 		public static void AddAction(FlatBufferBuilder builder, Offset<IActionInfo> actionOffset)
 		{
 			builder.AddOffset(1, actionOffset.Value, 0);
 		}
 
-		// Token: 0x060297FC RID: 169980 RVA: 0x005AFAF2 File Offset: 0x005ADCF2
+		// Token: 0x0602BEA4 RID: 179876 RVA: 0x005F8A96 File Offset: 0x005F6C96
 		public static Offset<ICommonBtActionInfo> EndICommonBtActionInfo(FlatBufferBuilder builder)
 		{
 			return new Offset<ICommonBtActionInfo>(builder.EndTable());
 		}
 
-		// Token: 0x060297FD RID: 169981 RVA: 0x005AFB00 File Offset: 0x005ADD00
+		// Token: 0x0602BEA5 RID: 179877 RVA: 0x005F8AA4 File Offset: 0x005F6CA4
 		public ICommonBtActionInfoT UnPack()
 		{
 			ICommonBtActionInfoT commonBtActionInfoT = new ICommonBtActionInfoT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return commonBtActionInfoT;
 		}
 
-		// Token: 0x060297FE RID: 169982 RVA: 0x005AFB1C File Offset: 0x005ADD1C
+		// Token: 0x0602BEA6 RID: 179878 RVA: 0x005F8AC0 File Offset: 0x005F6CC0
 		public void UnPackTo(ICommonBtActionInfoT _o)
 		{
 			_o.TaskId = this.TaskId;
 			_o.Action = ((this.Action != null) ? this.Action.Value.UnPack() : null);
 		}
 
-		// Token: 0x060297FF RID: 169983 RVA: 0x005AFB64 File Offset: 0x005ADD64
+		// Token: 0x0602BEA7 RID: 179879 RVA: 0x005F8B08 File Offset: 0x005F6D08
 		public static Offset<ICommonBtActionInfo> Pack(FlatBufferBuilder builder, ICommonBtActionInfoT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return ICommonBtActionInfo.CreateICommonBtActionInfo(builder, _o.TaskId, actionOffset);
 		}
 
-		// Token: 0x0400F90F RID: 63759
+		// Token: 0x04010672 RID: 67186
 		private Table __p;
 	}
 }

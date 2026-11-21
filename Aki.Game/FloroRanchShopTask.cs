@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001B4B RID: 6987
+// Token: 0x0200100A RID: 4106
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchShopTask : FloroRanchDailyTaskBase
 {
-	// Token: 0x0600CF63 RID: 53091 RVA: 0x002F3F8E File Offset: 0x002F218E
+	// Token: 0x0600A374 RID: 41844 RVA: 0x002FF066 File Offset: 0x002FD266
 	public FloroRanchShopTask(FloroRanchShop data)
 	{
 		this.ShopData = data;
 	}
 
-	// Token: 0x0600CF64 RID: 53092 RVA: 0x002F3FA0 File Offset: 0x002F21A0
+	// Token: 0x0600A375 RID: 41845 RVA: 0x002FF078 File Offset: 0x002FD278
 	protected override void OnExecute()
 	{
 		FloroRanchShopViewParam floroRanchShopViewParam = new FloroRanchShopViewParam
@@ -28,6 +28,6 @@ public class FloroRanchShopTask : FloroRanchDailyTaskBase
 		FloroRanchGamePlayModel.Instance.OpenAndRecordView(EUiViewName.FloroRanchShopView, floroRanchShopViewParam, null);
 	}
 
-	// Token: 0x04005F64 RID: 24420
+	// Token: 0x04006033 RID: 24627
 	private readonly FloroRanchShop ShopData;
 }

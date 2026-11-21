@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002F71 RID: 12145
+// Token: 0x020024C5 RID: 9413
 [NullableContext(1)]
 [Nullable(0)]
 public class SnapModifier : IStaticVariableResetter
 {
-	// Token: 0x06019D02 RID: 105730 RVA: 0x006BBC98 File Offset: 0x006B9E98
+	// Token: 0x06017614 RID: 95764 RVA: 0x006E2584 File Offset: 0x006E0784
 	static SnapModifier()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SnapModifier.CreateStaticDefaultValue), new Action(SnapModifier.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170023B2 RID: 9138
-	// (get) Token: 0x06019D03 RID: 105731 RVA: 0x006BBCB7 File Offset: 0x006B9EB7
+	// Token: 0x17002474 RID: 9332
+	// (get) Token: 0x06017615 RID: 95765 RVA: 0x006E25A3 File Offset: 0x006E07A3
 	private static EExtraEffectId[] SnapModifyEffectIds
 	{
 		get
@@ -24,7 +24,7 @@ public class SnapModifier : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019D04 RID: 105732 RVA: 0x006BBCBE File Offset: 0x006B9EBE
+	// Token: 0x06017616 RID: 95766 RVA: 0x006E25AA File Offset: 0x006E07AA
 	public static void CreateStaticDefaultValue()
 	{
 		SnapModifier._snapModifyEffectIds = new EExtraEffectId[]
@@ -36,7 +36,7 @@ public class SnapModifier : IStaticVariableResetter
 		SnapModifier._effectListPool = new List<List<SnapModifyBuffEffect>>();
 	}
 
-	// Token: 0x06019D05 RID: 105733 RVA: 0x006BBCE8 File Offset: 0x006B9EE8
+	// Token: 0x06017617 RID: 95767 RVA: 0x006E25D4 File Offset: 0x006E07D4
 	public static void ResetStaticDefaultValue()
 	{
 		SnapModifier._snapModifyEffectIds = null;
@@ -44,7 +44,7 @@ public class SnapModifier : IStaticVariableResetter
 		SnapModifier._effectListPool = null;
 	}
 
-	// Token: 0x06019D06 RID: 105734 RVA: 0x006BBCFC File Offset: 0x006B9EFC
+	// Token: 0x06017618 RID: 95768 RVA: 0x006E25E8 File Offset: 0x006E07E8
 	private static Dictionary<EAttributeType, float> RentResultMap()
 	{
 		List<Dictionary<EAttributeType, float>> resultMapPool = SnapModifier._resultMapPool;
@@ -57,7 +57,7 @@ public class SnapModifier : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x06019D07 RID: 105735 RVA: 0x006BBD3C File Offset: 0x006B9F3C
+	// Token: 0x06017619 RID: 95769 RVA: 0x006E2628 File Offset: 0x006E0828
 	private static void ReturnResultMap(Dictionary<EAttributeType, float> map)
 	{
 		map.Clear();
@@ -69,7 +69,7 @@ public class SnapModifier : IStaticVariableResetter
 		resultMapPool.Add(map);
 	}
 
-	// Token: 0x06019D08 RID: 105736 RVA: 0x006BBD54 File Offset: 0x006B9F54
+	// Token: 0x0601761A RID: 95770 RVA: 0x006E2640 File Offset: 0x006E0840
 	private static List<SnapModifyBuffEffect> RentEffectList()
 	{
 		List<List<SnapModifyBuffEffect>> effectListPool = SnapModifier._effectListPool;
@@ -82,7 +82,7 @@ public class SnapModifier : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x06019D09 RID: 105737 RVA: 0x006BBD94 File Offset: 0x006B9F94
+	// Token: 0x0601761B RID: 95771 RVA: 0x006E2680 File Offset: 0x006E0880
 	private static void ReturnEffectList(List<SnapModifyBuffEffect> list)
 	{
 		list.Clear();
@@ -94,7 +94,7 @@ public class SnapModifier : IStaticVariableResetter
 		effectListPool.Add(list);
 	}
 
-	// Token: 0x06019D0A RID: 105738 RVA: 0x006BBDAC File Offset: 0x006B9FAC
+	// Token: 0x0601761C RID: 95772 RVA: 0x006E2698 File Offset: 0x006E0898
 	private static void PrepareModify(RequirementPayload requirements, SnapshotPayload snapshots, bool isCheckCritical)
 	{
 		ExtraEffectManager buffEffectManager = snapshots.Attacker.OwnerBuffComponent.BuffEffectManager;
@@ -123,19 +123,19 @@ public class SnapModifier : IStaticVariableResetter
 		SnapModifier.ReturnResultMap(dictionary2);
 	}
 
-	// Token: 0x06019D0B RID: 105739 RVA: 0x006BBE66 File Offset: 0x006BA066
+	// Token: 0x0601761D RID: 95773 RVA: 0x006E2752 File Offset: 0x006E0952
 	public static void PreCriticalModify(RequirementPayload requirements, SnapshotPayload snapshots)
 	{
 		SnapModifier.PrepareModify(requirements, snapshots, false);
 	}
 
-	// Token: 0x06019D0C RID: 105740 RVA: 0x006BBE70 File Offset: 0x006BA070
+	// Token: 0x0601761E RID: 95774 RVA: 0x006E275C File Offset: 0x006E095C
 	public static void PostCriticalModify(RequirementPayload requirements, SnapshotPayload snapshots)
 	{
 		SnapModifier.PrepareModify(requirements, snapshots, true);
 	}
 
-	// Token: 0x06019D0D RID: 105741 RVA: 0x006BBE7C File Offset: 0x006BA07C
+	// Token: 0x0601761F RID: 95775 RVA: 0x006E2768 File Offset: 0x006E0968
 	private static void CalculateModifyMap(RequirementPayload requires, SnapshotPayload snapshots, Dictionary<EAttributeType, float> resultMap, ExtraEffectManager holder, ESnapTargetType targetType, bool isCheckCritical)
 	{
 		IBuffComponent opponent = null;
@@ -163,7 +163,7 @@ public class SnapModifier : IStaticVariableResetter
 		SnapModifier.ReturnEffectList(list);
 	}
 
-	// Token: 0x06019D0E RID: 105742 RVA: 0x006BBF3C File Offset: 0x006BA13C
+	// Token: 0x06017620 RID: 95776 RVA: 0x006E2828 File Offset: 0x006E0A28
 	private static void ModifySnapshot(Dictionary<EAttributeType, float> resultMap, AttributeSnapshot snapshot)
 	{
 		foreach (KeyValuePair<EAttributeType, float> keyValuePair in resultMap)
@@ -177,11 +177,11 @@ public class SnapModifier : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0400C2D9 RID: 49881
+	// Token: 0x0400C682 RID: 50818
 	[Nullable(2)]
 	private static EExtraEffectId[] _snapModifyEffectIds;
 
-	// Token: 0x0400C2DA RID: 49882
+	// Token: 0x0400C683 RID: 50819
 	[Nullable(new byte[]
 	{
 		2,
@@ -189,7 +189,7 @@ public class SnapModifier : IStaticVariableResetter
 	})]
 	private static List<Dictionary<EAttributeType, float>> _resultMapPool;
 
-	// Token: 0x0400C2DB RID: 49883
+	// Token: 0x0400C684 RID: 50820
 	[Nullable(new byte[]
 	{
 		2,

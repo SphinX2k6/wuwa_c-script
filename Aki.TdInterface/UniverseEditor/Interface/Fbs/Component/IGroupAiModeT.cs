@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005336 RID: 21302
+	// Token: 0x020058BC RID: 22716
 	public class IGroupAiModeT
 	{
-		// Token: 0x17009C7F RID: 40063
-		// (get) Token: 0x06022D5C RID: 142684 RVA: 0x004D3986 File Offset: 0x004D1B86
-		// (set) Token: 0x06022D5D RID: 142685 RVA: 0x004D398E File Offset: 0x004D1B8E
+		// Token: 0x1700A4B7 RID: 42167
+		// (get) Token: 0x06024E10 RID: 151056 RVA: 0x0051085A File Offset: 0x0050EA5A
+		// (set) Token: 0x06024E11 RID: 151057 RVA: 0x00510862 File Offset: 0x0050EA62
 		public EGroupAiMode Type { get; set; }
 
-		// Token: 0x06022D5E RID: 142686 RVA: 0x004D3997 File Offset: 0x004D1B97
+		// Token: 0x06024E12 RID: 151058 RVA: 0x0051086B File Offset: 0x0050EA6B
 		public IGroupAiModeT()
 		{
 			this.Type = EGroupAiMode.Default;

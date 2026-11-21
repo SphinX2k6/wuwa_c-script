@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Common.Item
 {
-	// Token: 0x020056A0 RID: 22176
+	// Token: 0x02004676 RID: 18038
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ManufactureMaterialDynamicItem : UiPanelBase, IDynamicScrollBaseItem<ISingleItemInfo>
 	{
-		// Token: 0x060386DC RID: 231132 RVA: 0x00D65C00 File Offset: 0x00D63E00
+		// Token: 0x0602D5D9 RID: 185817 RVA: 0x00CB3D50 File Offset: 0x00CB1F50
 		public UniTask Init(UUIItem actor)
 		{
 			ManufactureMaterialDynamicItem.<Init>d__1 <Init>d__;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common.Item
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060386DD RID: 231133 RVA: 0x00D65C4C File Offset: 0x00D63E4C
+		// Token: 0x0602D5DA RID: 185818 RVA: 0x00CB3D9C File Offset: 0x00CB1F9C
 		public FVector2D GetItemSize(ISingleItemInfo data)
 		{
 			if (this.ItemSizeVector == null)
@@ -37,12 +37,12 @@ namespace CSharpScript.Game.Module.Manufacture.Common.Item
 			return this.ItemSizeVector.ToUeVector2D(false);
 		}
 
-		// Token: 0x060386DE RID: 231134 RVA: 0x00D65C98 File Offset: 0x00D63E98
+		// Token: 0x0602D5DB RID: 185819 RVA: 0x00CB3DE8 File Offset: 0x00CB1FE8
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0401DA2F RID: 121391
+		// Token: 0x040184BA RID: 99514
 		[Nullable(2)]
 		private Vector2D ItemSizeVector;
 	}

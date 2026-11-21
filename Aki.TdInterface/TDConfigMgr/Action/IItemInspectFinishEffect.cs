@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B62 RID: 7010
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D0F RID: 7439
 	public class IItemInspectFinishEffect
 	{
-		// Token: 0x06009611 RID: 38417 RVA: 0x0015ABB4 File Offset: 0x00158DB4
+		// Token: 0x06009DF3 RID: 40435 RVA: 0x0016B760 File Offset: 0x00169960
 		private IItemInspectFinishEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009612 RID: 38418 RVA: 0x0015ABEC File Offset: 0x00158DEC
+		// Token: 0x06009DF4 RID: 40436 RVA: 0x0016B798 File Offset: 0x00169998
 		public static IItemInspectFinishEffect Create([Nullable(2)] IItemInspectFinishEffect instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009613 RID: 38419 RVA: 0x0015ABFF File Offset: 0x00158DFF
+		// Token: 0x06009DF5 RID: 40437 RVA: 0x0016B7AB File Offset: 0x001699AB
 		public static IItemInspectFinishEffect CreateFromSetValue([Nullable(2)] IItemInspectFinishEffect_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009614 RID: 38420 RVA: 0x0015AC12 File Offset: 0x00158E12
+		// Token: 0x06009DF6 RID: 40438 RVA: 0x0016B7BE File Offset: 0x001699BE
 		public IItemInspectFinishEffect_SetValue ToSetValue()
 		{
 			return new IItemInspectFinishEffect_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F4C RID: 12108
-		// (get) Token: 0x06009615 RID: 38421 RVA: 0x0015AC31 File Offset: 0x00158E31
-		// (set) Token: 0x06009616 RID: 38422 RVA: 0x0015AC58 File Offset: 0x00158E58
+		// Token: 0x17003171 RID: 12657
+		// (get) Token: 0x06009DF7 RID: 40439 RVA: 0x0016B7DD File Offset: 0x001699DD
+		// (set) Token: 0x06009DF8 RID: 40440 RVA: 0x0016B804 File Offset: 0x00169A04
 		public virtual List<IInteractEffect> EffectList
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F4D RID: 12109
-		// (get) Token: 0x06009617 RID: 38423 RVA: 0x0015AC68 File Offset: 0x00158E68
-		// (set) Token: 0x06009618 RID: 38424 RVA: 0x0015ACA2 File Offset: 0x00158EA2
+		// Token: 0x17003172 RID: 12658
+		// (get) Token: 0x06009DF9 RID: 40441 RVA: 0x0016B814 File Offset: 0x00169A14
+		// (set) Token: 0x06009DFA RID: 40442 RVA: 0x0016B84E File Offset: 0x00169A4E
 		public virtual float? ProtectTime
 		{
 			get
@@ -109,11 +107,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005BC7 RID: 23495
+		// Token: 0x04006060 RID: 24672
 		[Nullable(2)]
 		protected IItemInspectFinishEffect FbInstance;
 
-		// Token: 0x04005BC8 RID: 23496
+		// Token: 0x04006061 RID: 24673
 		[Nullable(2)]
 		protected IItemInspectFinishEffect_SetValue PocoInterface;
 	}

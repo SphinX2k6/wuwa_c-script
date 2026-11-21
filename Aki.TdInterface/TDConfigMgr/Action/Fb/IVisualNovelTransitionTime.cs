@@ -4,12 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002587 RID: 9607
-	[NullableContext(1)]
+	// Token: 0x02002835 RID: 10293
+	[NullableContext(2)]
 	[Nullable(0)]
 	public class IVisualNovelTransitionTime : IVisualNovelTransitionConfigBase
 	{
-		// Token: 0x0600D79D RID: 55197 RVA: 0x00201BD3 File Offset: 0x001FFDD3
+		// Token: 0x0600E517 RID: 58647 RVA: 0x0021D907 File Offset: 0x0021BB07
+		[NullableContext(0)]
 		public static IVisualNovelTransitionTime Create(IVisualNovelTransitionTime? instance)
 		{
 			if (instance == null)
@@ -22,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E51 RID: 15953
-		// (get) Token: 0x0600D79E RID: 55198 RVA: 0x00201BF2 File Offset: 0x001FFDF2
+		// Token: 0x1700415B RID: 16731
+		// (get) Token: 0x0600E518 RID: 58648 RVA: 0x0021D926 File Offset: 0x0021BB26
 		public override EVisualNovelTransitionType Type
 		{
 			get
@@ -32,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E52 RID: 15954
-		// (get) Token: 0x0600D79F RID: 55199 RVA: 0x00201BFF File Offset: 0x001FFDFF
+		// Token: 0x1700415C RID: 16732
+		// (get) Token: 0x0600E519 RID: 58649 RVA: 0x0021D933 File Offset: 0x0021BB33
 		public virtual IVisualNovelDate EndDate
 		{
 			get
@@ -48,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E53 RID: 15955
-		// (get) Token: 0x0600D7A0 RID: 55200 RVA: 0x00201C33 File Offset: 0x001FFE33
+		// Token: 0x1700415D RID: 16733
+		// (get) Token: 0x0600E51A RID: 58650 RVA: 0x0021D967 File Offset: 0x0021BB67
 		public virtual int EndPeriodId
 		{
 			get
@@ -58,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E54 RID: 15956
-		// (get) Token: 0x0600D7A1 RID: 55201 RVA: 0x00201C40 File Offset: 0x001FFE40
+		// Token: 0x1700415E RID: 16734
+		// (get) Token: 0x0600E51B RID: 58651 RVA: 0x0021D974 File Offset: 0x0021BB74
 		public virtual bool? IsFullScreen
 		{
 			get
@@ -72,14 +73,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400774D RID: 30541
+		// Token: 0x04007DB3 RID: 32179
 		private IVisualNovelTransitionTime Instance;
 
-		// Token: 0x0400774E RID: 30542
-		[Nullable(2)]
+		// Token: 0x04007DB4 RID: 32180
 		private IVisualNovelDate _EndDateCache;
 
-		// Token: 0x0400774F RID: 30543
+		// Token: 0x04007DB5 RID: 32181
 		private bool _EndDateInited;
 	}
 }

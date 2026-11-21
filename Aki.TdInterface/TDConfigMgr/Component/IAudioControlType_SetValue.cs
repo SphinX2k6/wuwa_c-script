@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001D4 RID: 468
+	// Token: 0x020001FB RID: 507
 	public class IAudioControlType_SetValue
 	{
-		// Token: 0x040008A9 RID: 2217
+		// Token: 0x04000930 RID: 2352
 		public EAudioControlType Type;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200126C RID: 4716
+	// Token: 0x020013AC RID: 5036
 	public static class EProgressBarLeftTypeExtensions
 	{
-		// Token: 0x06006A8D RID: 27277 RVA: 0x000FF6F4 File Offset: 0x000FD8F4
+		// Token: 0x060070E0 RID: 28896 RVA: 0x0010D320 File Offset: 0x0010B520
 		public static string ToEnumString(this EProgressBarLeftType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A8E RID: 27278 RVA: 0x000FF72C File Offset: 0x000FD92C
+		// Token: 0x060070E1 RID: 28897 RVA: 0x0010D358 File Offset: 0x0010B558
 		public static EProgressBarLeftType FromString(string name)
 		{
 			EProgressBarLeftType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A8F RID: 27279 RVA: 0x000FF755 File Offset: 0x000FD955
+		// Token: 0x060070E2 RID: 28898 RVA: 0x0010D381 File Offset: 0x0010B581
 		public static bool TryFromString(string name, out EProgressBarLeftType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006A90 RID: 27280 RVA: 0x000FF78E File Offset: 0x000FD98E
+		// Token: 0x060070E3 RID: 28899 RVA: 0x0010D3BA File Offset: 0x0010B5BA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A91 RID: 27281 RVA: 0x000FF7A6 File Offset: 0x000FD9A6
+		// Token: 0x060070E4 RID: 28900 RVA: 0x0010D3D2 File Offset: 0x0010B5D2
 		public static EProgressBarLeftType[] GetValues()
 		{
 			return new EProgressBarLeftType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A92 RID: 27282 RVA: 0x000FF7B2 File Offset: 0x000FD9B2
+		// Token: 0x060070E5 RID: 28901 RVA: 0x0010D3DE File Offset: 0x0010B5DE
 		public static string[] GetNames()
 		{
 			return new string[]

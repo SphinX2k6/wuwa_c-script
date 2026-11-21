@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.WorldMap;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054FA RID: 21754
+	// Token: 0x020044CD RID: 17613
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TaskTrackedMarkItem
 	{
-		// Token: 0x06037933 RID: 227635 RVA: 0x00D320AC File Offset: 0x00D302AC
+		// Token: 0x0602C802 RID: 182274 RVA: 0x00C80038 File Offset: 0x00C7E238
 		public TaskTrackedMarkItem(QuestMarkCreateInfo markPointInfo, ETrackSource trackSource)
 		{
 			this.MarkPointInfo = markPointInfo;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037934 RID: 227636 RVA: 0x00D322D8 File Offset: 0x00D304D8
+		// Token: 0x0602C803 RID: 182275 RVA: 0x00C80264 File Offset: 0x00C7E464
 		public void Update()
 		{
 			if (!this.IsRangeTrack)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037935 RID: 227637 RVA: 0x00D3230C File Offset: 0x00D3050C
+		// Token: 0x0602C804 RID: 182276 RVA: 0x00C80298 File Offset: 0x00C7E498
 		private void UpdateRangeShow(global::Vector playerLocation)
 		{
 			if (!this.IsRangeTrack)
@@ -122,8 +122,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			this.SetRangeActive(num3 < num && flag);
 		}
 
-		// Token: 0x17008585 RID: 34181
-		// (get) Token: 0x06037936 RID: 227638 RVA: 0x00D32415 File Offset: 0x00D30615
+		// Token: 0x17005920 RID: 22816
+		// (get) Token: 0x0602C805 RID: 182277 RVA: 0x00C803A1 File Offset: 0x00C7E5A1
 		public global::Vector WorldPosition
 		{
 			get
@@ -132,8 +132,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x17008586 RID: 34182
-		// (get) Token: 0x06037937 RID: 227639 RVA: 0x00D32438 File Offset: 0x00D30638
+		// Token: 0x17005921 RID: 22817
+		// (get) Token: 0x0602C806 RID: 182278 RVA: 0x00C803C4 File Offset: 0x00C7E5C4
 		public int? InstanceDungeonId
 		{
 			get
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037938 RID: 227640 RVA: 0x00D32464 File Offset: 0x00D30664
+		// Token: 0x0602C807 RID: 182279 RVA: 0x00C803F0 File Offset: 0x00C7E5F0
 		private void SetRangeActive(bool active)
 		{
 			if (!this.IsRangeTrack)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			EventSystem.Instance.Emit<ETrackSource, long, int, int, bool>(EEventName.TaskRangeTrackStateChange, this.TrackSource, this.TreeIncId.Value, this.MarkPointInfo.NodeId, this.MarkPointInfo.MarkId.Value, active);
 		}
 
-		// Token: 0x06037939 RID: 227641 RVA: 0x00D324CC File Offset: 0x00D306CC
+		// Token: 0x0602C808 RID: 182280 RVA: 0x00C80458 File Offset: 0x00C7E658
 		public bool TargetInDiffWorld()
 		{
 			if (this.Tree != null)
@@ -171,10 +171,12 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 				int instanceId = CreatureModel.Instance.GetInstanceId();
 				return (WorldMapModel.Instance.IsPlayerInStoryInstanceDungeon() && this.IsInConsistentBigWorldDungeon()) || MapUtil.IsDungeonDiffWorld(instanceId, dungeonId).GetValueOrDefault();
 			}
-			return false;
+			QuestMarkCreateInfo markPointInfo = this.MarkPointInfo;
+			int valueOrDefault = ((markPointInfo != null) ? markPointInfo.InstanceDungeonId : null).GetValueOrDefault();
+			return MapUtil.IsDungeonDiffWorld(CreatureModel.Instance.GetInstanceId(), valueOrDefault).GetValueOrDefault();
 		}
 
-		// Token: 0x0603793A RID: 227642 RVA: 0x00D32520 File Offset: 0x00D30720
+		// Token: 0x0602C809 RID: 182281 RVA: 0x00C804E8 File Offset: 0x00C7E6E8
 		private bool IsInConsistentBigWorldDungeon()
 		{
 			int? instanceDungeonId = this.InstanceDungeonId;
@@ -188,52 +190,52 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return !(instanceDungeonId.GetValueOrDefault() == num & instanceDungeonId != null);
 		}
 
-		// Token: 0x0401D3ED RID: 119789
+		// Token: 0x04017E74 RID: 97908
 		public double MarkRange;
 
-		// Token: 0x0401D3EE RID: 119790
+		// Token: 0x04017E75 RID: 97909
 		public double RangeMarkShowDisUp;
 
-		// Token: 0x0401D3EF RID: 119791
+		// Token: 0x04017E76 RID: 97910
 		public double RangeMarkShowDisDown;
 
-		// Token: 0x0401D3F0 RID: 119792
+		// Token: 0x04017E77 RID: 97911
 		public double RangeMarkShowDis;
 
-		// Token: 0x0401D3F1 RID: 119793
+		// Token: 0x04017E78 RID: 97912
 		public BtType? BtType;
 
-		// Token: 0x0401D3F2 RID: 119794
+		// Token: 0x04017E79 RID: 97913
 		public long? TreeIncId;
 
-		// Token: 0x0401D3F3 RID: 119795
+		// Token: 0x04017E7A RID: 97914
 		public int TreeConfigId;
 
-		// Token: 0x0401D3F4 RID: 119796
+		// Token: 0x04017E7B RID: 97915
 		[Nullable(2)]
 		public BaseBehaviorTree Tree;
 
-		// Token: 0x0401D3F5 RID: 119797
+		// Token: 0x04017E7C RID: 97916
 		public int NodeId;
 
-		// Token: 0x0401D3F6 RID: 119798
+		// Token: 0x04017E7D RID: 97917
 		[Nullable(2)]
 		public TTrackTarget TrackTarget;
 
-		// Token: 0x0401D3F7 RID: 119799
+		// Token: 0x04017E7E RID: 97918
 		[Nullable(2)]
 		public QuestMarkCreateInfo MarkPointInfo;
 
-		// Token: 0x0401D3F8 RID: 119800
+		// Token: 0x04017E7F RID: 97919
 		private bool RangeActive;
 
-		// Token: 0x0401D3F9 RID: 119801
+		// Token: 0x04017E80 RID: 97920
 		private readonly ETrackSource TrackSource = ETrackSource.Instance;
 
-		// Token: 0x0401D3FA RID: 119802
+		// Token: 0x04017E81 RID: 97921
 		private readonly bool IsRangeTrack;
 
-		// Token: 0x0401D3FB RID: 119803
+		// Token: 0x04017E82 RID: 97922
 		private bool Flag;
 	}
 }

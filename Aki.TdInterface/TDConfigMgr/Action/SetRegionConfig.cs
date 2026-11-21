@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021D4 RID: 8660
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200243F RID: 9279
 	public class SetRegionConfig : ActionParams
 	{
-		// Token: 0x0600BE51 RID: 48721 RVA: 0x001B63E4 File Offset: 0x001B45E4
+		// Token: 0x0600CA0D RID: 51725 RVA: 0x001CDA70 File Offset: 0x001CBC70
 		private SetRegionConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BE52 RID: 48722 RVA: 0x001B641C File Offset: 0x001B461C
+		// Token: 0x0600CA0E RID: 51726 RVA: 0x001CDAA8 File Offset: 0x001CBCA8
 		public static SetRegionConfig Create([Nullable(2)] SetRegionConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE53 RID: 48723 RVA: 0x001B642F File Offset: 0x001B462F
+		// Token: 0x0600CA0F RID: 51727 RVA: 0x001CDABB File Offset: 0x001CBCBB
 		public static SetRegionConfig CreateFromSetValue([Nullable(2)] SetRegionConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE54 RID: 48724 RVA: 0x001B6442 File Offset: 0x001B4642
+		// Token: 0x0600CA10 RID: 51728 RVA: 0x001CDACE File Offset: 0x001CBCCE
 		public SetRegionConfig_SetValue ToSetValue()
 		{
 			return new SetRegionConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039CC RID: 14796
-		// (get) Token: 0x0600BE55 RID: 48725 RVA: 0x001B6455 File Offset: 0x001B4655
-		// (set) Token: 0x0600BE56 RID: 48726 RVA: 0x001B6480 File Offset: 0x001B4680
+		// Token: 0x17003CC1 RID: 15553
+		// (get) Token: 0x0600CA11 RID: 51729 RVA: 0x001CDAE1 File Offset: 0x001CBCE1
+		// (set) Token: 0x0600CA12 RID: 51730 RVA: 0x001CDB0C File Offset: 0x001CBD0C
 		public virtual ERegionConfigType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007198 RID: 29080
+		// Token: 0x040077E1 RID: 30689
 		[Nullable(2)]
 		protected new SetRegionConfig FbInstance;
 
-		// Token: 0x04007199 RID: 29081
+		// Token: 0x040077E2 RID: 30690
 		[Nullable(2)]
 		protected SetRegionConfig_SetValue PocoInterface;
 	}

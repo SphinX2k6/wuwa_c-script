@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 {
-	// Token: 0x02006F5D RID: 28509
+	// Token: 0x020060DE RID: 24798
 	public class BigStuffedRingSubItem<T> : UiPanelBase where T : Enum
 	{
-		// Token: 0x060455A3 RID: 284067 RVA: 0x0112A5D5 File Offset: 0x011287D5
+		// Token: 0x0603B751 RID: 243537 RVA: 0x010D43B5 File Offset: 0x010D25B5
 		public BigStuffedRingSubItem(int RingId, [Nullable(new byte[]
 		{
 			0,
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.RingConfig = RingConfig;
 		}
 
-		// Token: 0x060455A4 RID: 284068 RVA: 0x0112A5EC File Offset: 0x011287EC
+		// Token: 0x0603B752 RID: 243538 RVA: 0x010D43CC File Offset: 0x010D25CC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -36,30 +36,30 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060455A5 RID: 284069 RVA: 0x0112A655 File Offset: 0x01128855
+		// Token: 0x0603B753 RID: 243539 RVA: 0x010D4435 File Offset: 0x010D2635
 		protected override void OnStart()
 		{
 			this.TextureRing = base.GetTexture(1);
 		}
 
-		// Token: 0x060455A6 RID: 284070 RVA: 0x0112A664 File Offset: 0x01128864
+		// Token: 0x0603B754 RID: 243540 RVA: 0x010D4444 File Offset: 0x010D2644
 		protected override void OnBeforeDestroy()
 		{
 			this.TextureRing = null;
 		}
 
-		// Token: 0x040242DB RID: 148187
+		// Token: 0x0401F590 RID: 128400
 		[Nullable(2)]
 		protected T Type;
 
-		// Token: 0x040242DC RID: 148188
+		// Token: 0x0401F591 RID: 128401
 		[Nullable(2)]
 		protected UUITexture TextureRing;
 
-		// Token: 0x040242DD RID: 148189
+		// Token: 0x0401F592 RID: 128402
 		protected int RingId;
 
-		// Token: 0x040242DE RID: 148190
+		// Token: 0x0401F593 RID: 128403
 		[Nullable(new byte[]
 		{
 			0,

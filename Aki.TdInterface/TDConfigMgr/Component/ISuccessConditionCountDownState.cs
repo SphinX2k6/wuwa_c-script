@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200072F RID: 1839
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007D0 RID: 2000
 	public class ISuccessConditionCountDownState : ITargetGearGroupSuccessContdion
 	{
-		// Token: 0x060027B3 RID: 10163 RVA: 0x000697D8 File Offset: 0x000679D8
+		// Token: 0x06002AD7 RID: 10967 RVA: 0x00070980 File Offset: 0x0006EB80
 		private ISuccessConditionCountDownState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060027B4 RID: 10164 RVA: 0x00069810 File Offset: 0x00067A10
+		// Token: 0x06002AD8 RID: 10968 RVA: 0x000709B8 File Offset: 0x0006EBB8
 		public static ISuccessConditionCountDownState Create([Nullable(2)] ISuccessConditionCountDownState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027B5 RID: 10165 RVA: 0x00069823 File Offset: 0x00067A23
+		// Token: 0x06002AD9 RID: 10969 RVA: 0x000709CB File Offset: 0x0006EBCB
 		public static ISuccessConditionCountDownState CreateFromSetValue([Nullable(2)] ISuccessConditionCountDownState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027B6 RID: 10166 RVA: 0x00069836 File Offset: 0x00067A36
+		// Token: 0x06002ADA RID: 10970 RVA: 0x000709DE File Offset: 0x0006EBDE
 		public new ISuccessConditionCountDownState_SetValue ToSetValue()
 		{
 			return new ISuccessConditionCountDownState_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A73 RID: 2675
-		// (get) Token: 0x060027B7 RID: 10167 RVA: 0x00069849 File Offset: 0x00067A49
-		// (set) Token: 0x060027B8 RID: 10168 RVA: 0x00069874 File Offset: 0x00067A74
+		// Token: 0x17000B33 RID: 2867
+		// (get) Token: 0x06002ADB RID: 10971 RVA: 0x000709F1 File Offset: 0x0006EBF1
+		// (set) Token: 0x06002ADC RID: 10972 RVA: 0x00070A1C File Offset: 0x0006EC1C
 		public override ETargetGearGroupSuccessCondition Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001AC3 RID: 6851
+		// Token: 0x04001CC8 RID: 7368
 		[Nullable(2)]
 		protected new ISuccessConditionCountDownState FbInstance;
 
-		// Token: 0x04001AC4 RID: 6852
+		// Token: 0x04001CC9 RID: 7369
 		[Nullable(2)]
 		protected new ISuccessConditionCountDownState_SetValue PocoInterface;
 	}

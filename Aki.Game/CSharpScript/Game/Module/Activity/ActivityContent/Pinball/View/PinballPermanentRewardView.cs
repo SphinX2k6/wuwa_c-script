@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 {
-	// Token: 0x020062D4 RID: 25300
+	// Token: 0x02005252 RID: 21074
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballPermanentRewardView : UiTickViewBase
 	{
-		// Token: 0x0603FAAB RID: 260779 RVA: 0x00F677E8 File Offset: 0x00F659E8
+		// Token: 0x0603476C RID: 214892 RVA: 0x00EAE744 File Offset: 0x00EAC944
 		public PinballPermanentRewardView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603FAAC RID: 260780 RVA: 0x00F677F4 File Offset: 0x00F659F4
+		// Token: 0x0603476D RID: 214893 RVA: 0x00EAE750 File Offset: 0x00EAC950
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FAAD RID: 260781 RVA: 0x00F67880 File Offset: 0x00F65A80
+		// Token: 0x0603476E RID: 214894 RVA: 0x00EAE7DC File Offset: 0x00EAC9DC
 		protected override void OnStart()
 		{
 			this.ActivityData = (this.OpenParam as PinballActivityData);
@@ -48,19 +48,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.RefreshTaskLayout(true);
 		}
 
-		// Token: 0x0603FAAE RID: 260782 RVA: 0x00F678EA File Offset: 0x00F65AEA
+		// Token: 0x0603476F RID: 214895 RVA: 0x00EAE846 File Offset: 0x00EACA46
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x0603FAAF RID: 260783 RVA: 0x00F67908 File Offset: 0x00F65B08
+		// Token: 0x06034770 RID: 214896 RVA: 0x00EAE864 File Offset: 0x00EACA64
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x0603FAB0 RID: 260784 RVA: 0x00F67926 File Offset: 0x00F65B26
+		// Token: 0x06034771 RID: 214897 RVA: 0x00EAE882 File Offset: 0x00EACA82
 		private void OnRefreshCommonActivityRedDot(int id)
 		{
 			if (id != this.ActivityData.Id)
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.RefreshTaskLayout(false);
 		}
 
-		// Token: 0x0603FAB1 RID: 260785 RVA: 0x00F6793E File Offset: 0x00F65B3E
+		// Token: 0x06034772 RID: 214898 RVA: 0x00EAE89A File Offset: 0x00EACA9A
 		private void RefreshTaskLayout(bool isPlayAnim = false)
 		{
 			this.TaskLayout.RefreshByData(this.ActivityData.GetPermanentTaskList(), delegate
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			}, isPlayAnim);
 		}
 
-		// Token: 0x0603FAB2 RID: 260786 RVA: 0x00F67963 File Offset: 0x00F65B63
+		// Token: 0x06034773 RID: 214899 RVA: 0x00EAE8BF File Offset: 0x00EACABF
 		private PinballPermanentRewardTaskItem CreateTaskItem()
 		{
 			return new PinballPermanentRewardTaskItem
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			};
 		}
 
-		// Token: 0x0603FAB3 RID: 260787 RVA: 0x00F6797C File Offset: 0x00F65B7C
+		// Token: 0x06034774 RID: 214900 RVA: 0x00EAE8D8 File Offset: 0x00EACAD8
 		private UniTask OnTaskRewardBtnClick(int taskId)
 		{
 			PinballPermanentRewardView.<OnTaskRewardBtnClick>d__11 <OnTaskRewardBtnClick>d__;
@@ -104,28 +104,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			return <OnTaskRewardBtnClick>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FAB4 RID: 260788 RVA: 0x00F679BF File Offset: 0x00F65BBF
+		// Token: 0x06034775 RID: 214901 RVA: 0x00EAE91B File Offset: 0x00EACB1B
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04021437 RID: 136247
+		// Token: 0x0401BD66 RID: 114022
 		[Nullable(2)]
 		private PinballActivityData ActivityData;
 
-		// Token: 0x04021438 RID: 136248
+		// Token: 0x0401BD67 RID: 114023
 		private GenericScrollViewNew<PinballPermanentRewardTaskItem, PinballTaskData> TaskLayout;
 
-		// Token: 0x0200C4BF RID: 50367
+		// Token: 0x0200AEA6 RID: 44710
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403B5E8 RID: 243176
+			// Token: 0x04035F4A RID: 221002
 			ItemCaption,
-			// Token: 0x0403B5E9 RID: 243177
+			// Token: 0x04035F4B RID: 221003
 			RewardItemScroll,
-			// Token: 0x0403B5EA RID: 243178
+			// Token: 0x04035F4C RID: 221004
 			RewardItem
 		}
 	}

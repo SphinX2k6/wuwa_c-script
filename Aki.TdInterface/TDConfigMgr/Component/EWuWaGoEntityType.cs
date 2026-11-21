@@ -3,29 +3,29 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000162 RID: 354
+	// Token: 0x02000177 RID: 375
 	[EnumExtensions]
 	public enum EWuWaGoEntityType
 	{
-		// Token: 0x040006B3 RID: 1715
+		// Token: 0x04000700 RID: 1792
 		LevelCenter,
-		// Token: 0x040006B4 RID: 1716
+		// Token: 0x04000701 RID: 1793
 		MovableFloor,
-		// Token: 0x040006B5 RID: 1717
+		// Token: 0x04000702 RID: 1794
 		PullRod,
-		// Token: 0x040006B6 RID: 1718
+		// Token: 0x04000703 RID: 1795
 		PressureTrigger,
-		// Token: 0x040006B7 RID: 1719
+		// Token: 0x04000704 RID: 1796
 		Gear,
-		// Token: 0x040006B8 RID: 1720
+		// Token: 0x04000705 RID: 1797
 		SpikeTrap,
-		// Token: 0x040006B9 RID: 1721
+		// Token: 0x04000706 RID: 1798
 		BowTrap,
-		// Token: 0x040006BA RID: 1722
+		// Token: 0x04000707 RID: 1799
 		SaveGrid,
-		// Token: 0x040006BB RID: 1723
+		// Token: 0x04000708 RID: 1800
 		EndGrid,
-		// Token: 0x040006BC RID: 1724
+		// Token: 0x04000709 RID: 1801
 		StartGrid
 	}
 }

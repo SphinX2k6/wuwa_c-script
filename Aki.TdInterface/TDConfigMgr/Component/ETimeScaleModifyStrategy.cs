@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000153 RID: 339
+	// Token: 0x02000166 RID: 358
 	public enum ETimeScaleModifyStrategy
 	{
-		// Token: 0x04000682 RID: 1666
+		// Token: 0x040006C7 RID: 1735
 		Default,
-		// Token: 0x04000683 RID: 1667
+		// Token: 0x040006C8 RID: 1736
 		AllowClientModify
 	}
 }

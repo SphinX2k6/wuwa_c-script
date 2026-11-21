@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F9C RID: 28572
+	// Token: 0x0200611D RID: 24861
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowSequenceAction : LevelFlowActionBase
 	{
-		// Token: 0x06045769 RID: 284521 RVA: 0x0113AAAE File Offset: 0x01138CAE
+		// Token: 0x0603B917 RID: 243991 RVA: 0x010E48B2 File Offset: 0x010E2AB2
 		public LevelFlowSequenceAction Init(List<LevelFlowActionBase> actions)
 		{
 			this.Actions = actions;
 			return this;
 		}
 
-		// Token: 0x0604576A RID: 284522 RVA: 0x0113AAB8 File Offset: 0x01138CB8
+		// Token: 0x0603B918 RID: 243992 RVA: 0x010E48BC File Offset: 0x010E2ABC
 		protected override void OnExecute()
 		{
 			if (this.Actions.Count <= 0)
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.LevelFlow.Action
 			levelFlowActionBase.Execute();
 		}
 
-		// Token: 0x0604576B RID: 284523 RVA: 0x0113AB0A File Offset: 0x01138D0A
+		// Token: 0x0603B919 RID: 243993 RVA: 0x010E490E File Offset: 0x010E2B0E
 		protected override void OnTick(float deltaTime)
 		{
 			this.Actions[this.CurrentActionIndex].Tick(deltaTime);
 		}
 
-		// Token: 0x0604576C RID: 284524 RVA: 0x0113AB24 File Offset: 0x01138D24
+		// Token: 0x0603B91A RID: 243994 RVA: 0x010E4928 File Offset: 0x010E2B28
 		private void OnActionComplete(LevelFlowActionBase action, bool isSuccess)
 		{
 			if (!isSuccess)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			levelFlowActionBase.Execute();
 		}
 
-		// Token: 0x0604576D RID: 284525 RVA: 0x0113AB90 File Offset: 0x01138D90
+		// Token: 0x0603B91B RID: 243995 RVA: 0x010E4994 File Offset: 0x010E2B94
 		protected override void OnReset()
 		{
 			this.CurrentActionIndex = 0;
@@ -65,10 +65,10 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x040243EB RID: 148459
+		// Token: 0x0401F6A0 RID: 128672
 		private List<LevelFlowActionBase> Actions = new List<LevelFlowActionBase>();
 
-		// Token: 0x040243EC RID: 148460
+		// Token: 0x0401F6A1 RID: 128673
 		private int CurrentActionIndex;
 	}
 }

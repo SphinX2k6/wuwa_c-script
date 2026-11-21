@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelFlow
 {
-	// Token: 0x02006F6E RID: 28526
+	// Token: 0x020060EF RID: 24815
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ResourceLoadCallbackHandle
 	{
-		// Token: 0x06045651 RID: 284241 RVA: 0x0112E44C File Offset: 0x0112C64C
+		// Token: 0x0603B7FF RID: 243711 RVA: 0x010D8250 File Offset: 0x010D6450
 		public ResourceLoadCallbackHandle(string path, [Nullable(new byte[]
 		{
 			1,
@@ -23,10 +23,10 @@ namespace CSharpScript.Game.LevelFlow
 			};
 		}
 
-		// Token: 0x0402434A RID: 148298
+		// Token: 0x0401F5FF RID: 128511
 		public string Path;
 
-		// Token: 0x0402434B RID: 148299
+		// Token: 0x0401F600 RID: 128512
 		[Nullable(new byte[]
 		{
 			1,
@@ -35,14 +35,14 @@ namespace CSharpScript.Game.LevelFlow
 		})]
 		public Action<UObject, string> Callback;
 
-		// Token: 0x0402434C RID: 148300
+		// Token: 0x0401F601 RID: 128513
 		public int ResourceSystemId = -1;
 
-		// Token: 0x0402434D RID: 148301
+		// Token: 0x0401F602 RID: 128514
 		[Nullable(2)]
 		public UObject Asset;
 
-		// Token: 0x0402434E RID: 148302
+		// Token: 0x0401F603 RID: 128515
 		public bool LoadAsyncFinished;
 	}
 }

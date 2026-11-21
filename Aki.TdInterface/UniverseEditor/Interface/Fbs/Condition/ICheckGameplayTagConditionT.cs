@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A34 RID: 18996
+	// Token: 0x02004EF7 RID: 20215
 	public class ICheckGameplayTagConditionT
 	{
-		// Token: 0x17008985 RID: 35205
-		// (get) Token: 0x0601DBC6 RID: 121798 RVA: 0x0042EA8B File Offset: 0x0042CC8B
-		// (set) Token: 0x0601DBC7 RID: 121799 RVA: 0x0042EA93 File Offset: 0x0042CC93
+		// Token: 0x1700905A RID: 36954
+		// (get) Token: 0x0601F64F RID: 128591 RVA: 0x0045F983 File Offset: 0x0045DB83
+		// (set) Token: 0x0601F650 RID: 128592 RVA: 0x0045F98B File Offset: 0x0045DB8B
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008986 RID: 35206
-		// (get) Token: 0x0601DBC8 RID: 121800 RVA: 0x0042EA9C File Offset: 0x0042CC9C
-		// (set) Token: 0x0601DBC9 RID: 121801 RVA: 0x0042EAA4 File Offset: 0x0042CCA4
+		// Token: 0x1700905B RID: 36955
+		// (get) Token: 0x0601F651 RID: 128593 RVA: 0x0045F994 File Offset: 0x0045DB94
+		// (set) Token: 0x0601F652 RID: 128594 RVA: 0x0045F99C File Offset: 0x0045DB9C
 		public TTargetEntityUnion Target { get; set; }
 
-		// Token: 0x17008987 RID: 35207
-		// (get) Token: 0x0601DBCA RID: 121802 RVA: 0x0042EAAD File Offset: 0x0042CCAD
-		// (set) Token: 0x0601DBCB RID: 121803 RVA: 0x0042EAB5 File Offset: 0x0042CCB5
+		// Token: 0x1700905C RID: 36956
+		// (get) Token: 0x0601F653 RID: 128595 RVA: 0x0045F9A5 File Offset: 0x0045DBA5
+		// (set) Token: 0x0601F654 RID: 128596 RVA: 0x0045F9AD File Offset: 0x0045DBAD
 		public string GameplayTag { get; set; }
 
-		// Token: 0x17008988 RID: 35208
-		// (get) Token: 0x0601DBCC RID: 121804 RVA: 0x0042EABE File Offset: 0x0042CCBE
-		// (set) Token: 0x0601DBCD RID: 121805 RVA: 0x0042EAC6 File Offset: 0x0042CCC6
+		// Token: 0x1700905D RID: 36957
+		// (get) Token: 0x0601F655 RID: 128597 RVA: 0x0045F9B6 File Offset: 0x0045DBB6
+		// (set) Token: 0x0601F656 RID: 128598 RVA: 0x0045F9BE File Offset: 0x0045DBBE
 		public ECompare Compare { get; set; }
 
-		// Token: 0x0601DBCE RID: 121806 RVA: 0x0042EACF File Offset: 0x0042CCCF
+		// Token: 0x0601F657 RID: 128599 RVA: 0x0045F9C7 File Offset: 0x0045DBC7
 		public ICheckGameplayTagConditionT()
 		{
 			this.Type = ECondition.CompareVar;

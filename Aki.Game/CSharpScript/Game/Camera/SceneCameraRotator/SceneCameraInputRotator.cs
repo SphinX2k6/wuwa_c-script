@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.SceneCameraRotator
 {
-	// Token: 0x020072E8 RID: 29416
+	// Token: 0x0200646B RID: 25707
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneCameraInputRotator : SceneCameraRotatorBase
 	{
-		// Token: 0x06048324 RID: 295716 RVA: 0x0128A67C File Offset: 0x0128887C
+		// Token: 0x0603E770 RID: 255856 RVA: 0x0122D028 File Offset: 0x0122B228
 		public SceneCameraInputRotator(SceneFixInputData fixInputData)
 		{
 			this.CapturedFixInputData.DeepCopy(fixInputData);
@@ -20,13 +20,13 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			this.MobileDensityPitchScale = instance.MobileDensityPitchScale;
 		}
 
-		// Token: 0x06048325 RID: 295717 RVA: 0x0128A6C4 File Offset: 0x012888C4
+		// Token: 0x0603E771 RID: 255857 RVA: 0x0122D070 File Offset: 0x0122B270
 		public override bool IsValid()
 		{
 			return true;
 		}
 
-		// Token: 0x06048326 RID: 295718 RVA: 0x0128A6C8 File Offset: 0x012888C8
+		// Token: 0x0603E772 RID: 255858 RVA: 0x0122D074 File Offset: 0x0122B274
 		public override void ComputeExpectRotation()
 		{
 			this.ComputeCameraInput(this.FightCameraLogicComp);
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			this.WorkingQuat.DeepCopy(this.ScratchQuat2);
 		}
 
-		// Token: 0x06048327 RID: 295719 RVA: 0x0128A828 File Offset: 0x01288A28
+		// Token: 0x0603E773 RID: 255859 RVA: 0x0122D1D4 File Offset: 0x0122B3D4
 		public override void ApplyRotationLimit()
 		{
 			if (!this.IsNormalGravity)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			base.ApplyRotatorInputLimits(this.CapturedFixInputData, this.StartRotator);
 		}
 
-		// Token: 0x06048328 RID: 295720 RVA: 0x0128A899 File Offset: 0x01288A99
+		// Token: 0x0603E774 RID: 255860 RVA: 0x0122D245 File Offset: 0x0122B445
 		public override void ApplyRotationToCameraActor()
 		{
 			if (!this.IsNormalGravity)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			base.WriteCameraRotation();
 		}
 
-		// Token: 0x06048329 RID: 295721 RVA: 0x0128A8D4 File Offset: 0x01288AD4
+		// Token: 0x0603E775 RID: 255861 RVA: 0x0122D280 File Offset: 0x0122B480
 		[NullableContext(2)]
 		private void ComputeCameraInput(FightCameraLogicComponent fightCameraLogicComp)
 		{
@@ -149,46 +149,46 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			this.PitchRotateSpeed = -num2 * this.CapturedFixInputData.PitchInputSpeed;
 		}
 
-		// Token: 0x0604832A RID: 295722 RVA: 0x0128AA25 File Offset: 0x01288C25
+		// Token: 0x0603E776 RID: 255862 RVA: 0x0122D3D1 File Offset: 0x0122B5D1
 		private static bool IsInTouch()
 		{
 			return Info.Instance.IsInTouch() || (Info.Instance.IsInGamepad() && ControlScreenModel.Instance.IsTouching);
 		}
 
-		// Token: 0x0604832B RID: 295723 RVA: 0x0128AA4D File Offset: 0x01288C4D
+		// Token: 0x0603E777 RID: 255863 RVA: 0x0122D3F9 File Offset: 0x0122B5F9
 		private static bool IsInGamepad()
 		{
 			return Info.Instance.IsInGamepad() && !ControlScreenModel.Instance.IsTouching;
 		}
 
-		// Token: 0x04026201 RID: 156161
+		// Token: 0x040214EC RID: 136428
 		private const float DEFAULT_FPS = 60f;
 
-		// Token: 0x04026202 RID: 156162
+		// Token: 0x040214ED RID: 136429
 		private const float TOUCH_DEFAULT_PARAM = 3f;
 
-		// Token: 0x04026203 RID: 156163
+		// Token: 0x040214EE RID: 136430
 		private const float DEFAULT_DPI = 180f;
 
-		// Token: 0x04026204 RID: 156164
+		// Token: 0x040214EF RID: 136431
 		private const float DEFAULT_GAMEPAD_INPUT_RATE = 1f;
 
-		// Token: 0x04026205 RID: 156165
+		// Token: 0x040214F0 RID: 136432
 		private readonly SceneFixInputData CapturedFixInputData = new SceneFixInputData();
 
-		// Token: 0x04026206 RID: 156166
+		// Token: 0x040214F1 RID: 136433
 		private readonly float MobileDensityYawScale;
 
-		// Token: 0x04026207 RID: 156167
+		// Token: 0x040214F2 RID: 136434
 		private readonly float MobileDensityPitchScale;
 
-		// Token: 0x04026208 RID: 156168
+		// Token: 0x040214F3 RID: 136435
 		private float PitchRotateSpeed;
 
-		// Token: 0x04026209 RID: 156169
+		// Token: 0x040214F4 RID: 136436
 		private float YawRotateSpeed;
 
-		// Token: 0x0402620A RID: 156170
+		// Token: 0x040214F5 RID: 136437
 		private bool CurrentFrameHasCameraRotationInput;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BDE RID: 3038
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CAD RID: 3245
 	public class IConveyorBeltState
 	{
-		// Token: 0x060045D0 RID: 17872 RVA: 0x000B09A8 File Offset: 0x000AEBA8
+		// Token: 0x06004A2E RID: 18990 RVA: 0x000BAB24 File Offset: 0x000B8D24
 		public static IConveyorBeltState Create(IConveyorBeltState? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013D1 RID: 5073
-		// (get) Token: 0x060045D1 RID: 17873 RVA: 0x000B09C7 File Offset: 0x000AEBC7
+		// Token: 0x170014CF RID: 5327
+		// (get) Token: 0x06004A2F RID: 18991 RVA: 0x000BAB43 File Offset: 0x000B8D43
 		public virtual string EntityState
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013D2 RID: 5074
-		// (get) Token: 0x060045D2 RID: 17874 RVA: 0x000B09D4 File Offset: 0x000AEBD4
+		// Token: 0x170014D0 RID: 5328
+		// (get) Token: 0x06004A30 RID: 18992 RVA: 0x000BAB50 File Offset: 0x000B8D50
 		public virtual IConveyorBeltField FieldType
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013D3 RID: 5075
-		// (get) Token: 0x060045D3 RID: 17875 RVA: 0x000B0A03 File Offset: 0x000AEC03
+		// Token: 0x170014D1 RID: 5329
+		// (get) Token: 0x06004A31 RID: 18993 RVA: 0x000BAB7F File Offset: 0x000B8D7F
 		public virtual IFixSpeed MoveType
 		{
 			get
@@ -64,20 +62,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027BF RID: 10175
+		// Token: 0x04002A0A RID: 10762
 		private IConveyorBeltState Instance;
 
-		// Token: 0x040027C0 RID: 10176
+		// Token: 0x04002A0B RID: 10763
 		private IConveyorBeltField _FieldTypeCache;
 
-		// Token: 0x040027C1 RID: 10177
+		// Token: 0x04002A0C RID: 10764
 		private bool _FieldTypeInited;
 
-		// Token: 0x040027C2 RID: 10178
+		// Token: 0x04002A0D RID: 10765
 		[Nullable(2)]
 		private IFixSpeed _MoveTypeCache;
 
-		// Token: 0x040027C3 RID: 10179
+		// Token: 0x04002A0E RID: 10766
 		private bool _MoveTypeInited;
 	}
 }

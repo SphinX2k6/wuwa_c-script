@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065C6 RID: 26054
+	// Token: 0x02005544 RID: 21828
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 	})]
 	public class QuestInfoItem : GridProxyAbstract<IFishingDockQuestChildItemData>
 	{
-		// Token: 0x060415A3 RID: 267683 RVA: 0x00FD6214 File Offset: 0x00FD4414
+		// Token: 0x06036268 RID: 221800 RVA: 0x00F1D254 File Offset: 0x00F1B454
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060415A4 RID: 267684 RVA: 0x00FD6280 File Offset: 0x00FD4480
+		// Token: 0x06036269 RID: 221801 RVA: 0x00F1D2C0 File Offset: 0x00F1B4C0
 		[NullableContext(1)]
 		public override void Refresh(IFishingDockQuestChildItemData data, bool isSelected, int gridIndex)
 		{
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x0200C7E7 RID: 51175
+		// Token: 0x0200B1CA RID: 45514
 		private class EListComponent
 		{
-			// Token: 0x0403C602 RID: 247298
+			// Token: 0x04036F50 RID: 225104
 			public const int TxtInfo = 0;
 
-			// Token: 0x0403C603 RID: 247299
+			// Token: 0x04036F51 RID: 225105
 			public const int TxtCount = 1;
 		}
 	}

@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 {
-	// Token: 0x02005262 RID: 21090
+	// Token: 0x02004232 RID: 16946
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaFieldItem : UiPanelBase, IAreaCanvas, ISkillInteractMainInterface
 	{
-		// Token: 0x06035EA3 RID: 220835 RVA: 0x00CC1FD0 File Offset: 0x00CC01D0
+		// Token: 0x0602AD9E RID: 175518 RVA: 0x00C0F660 File Offset: 0x00C0D860
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			};
 		}
 
-		// Token: 0x06035EA4 RID: 220836 RVA: 0x00CC218C File Offset: 0x00CC038C
+		// Token: 0x0602AD9F RID: 175519 RVA: 0x00C0F81C File Offset: 0x00C0DA1C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaFieldItem.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035EA5 RID: 220837 RVA: 0x00CC21D0 File Offset: 0x00CC03D0
+		// Token: 0x0602ADA0 RID: 175520 RVA: 0x00C0F860 File Offset: 0x00C0DA60
 		protected override void OnStart()
 		{
 			this.Sequence = new UiSequencePlayer(this.RootItem);
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			button.OnPointExitCallBack.Bind(new Action(this.OnPointerExit));
 		}
 
-		// Token: 0x06035EA6 RID: 220838 RVA: 0x00CC2240 File Offset: 0x00CC0440
+		// Token: 0x0602ADA1 RID: 175521 RVA: 0x00C0F8D0 File Offset: 0x00C0DAD0
 		protected override void OnBeforeDestroy()
 		{
 			this.Sequence.Clear();
 		}
 
-		// Token: 0x06035EA7 RID: 220839 RVA: 0x00CC224D File Offset: 0x00CC044D
+		// Token: 0x0602ADA2 RID: 175522 RVA: 0x00C0F8DD File Offset: 0x00C0DADD
 		private void OnInteractClick()
 		{
 			Action<PhantomArenaFieldData, PhantomArenaFieldItem> interactClickCallback = this.InteractClickCallback;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			interactClickCallback(this.FieldData, this);
 		}
 
-		// Token: 0x06035EA8 RID: 220840 RVA: 0x00CC2266 File Offset: 0x00CC0466
+		// Token: 0x0602ADA3 RID: 175523 RVA: 0x00C0F8F6 File Offset: 0x00C0DAF6
 		private void OnPointerEnter()
 		{
 			Action<PhantomArenaFieldData, UUIItem> pointerEnterCallback = this.PointerEnterCallback;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			pointerEnterCallback(this.FieldData, base.GetItem(16));
 		}
 
-		// Token: 0x06035EA9 RID: 220841 RVA: 0x00CC2286 File Offset: 0x00CC0486
+		// Token: 0x0602ADA4 RID: 175524 RVA: 0x00C0F916 File Offset: 0x00C0DB16
 		private void OnPointerExit()
 		{
 			Action pointerExitCallback = this.PointerExitCallback;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			pointerExitCallback();
 		}
 
-		// Token: 0x06035EAA RID: 220842 RVA: 0x00CC2298 File Offset: 0x00CC0498
+		// Token: 0x0602ADA5 RID: 175525 RVA: 0x00C0F928 File Offset: 0x00C0DB28
 		private void OnSequenceEndEvent(string sequenceName)
 		{
 			if (!(sequenceName == "CdClose"))
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			sprite.SetUIActive(false);
 		}
 
-		// Token: 0x06035EAB RID: 220843 RVA: 0x00CC22D4 File Offset: 0x00CC04D4
+		// Token: 0x0602ADA6 RID: 175526 RVA: 0x00C0F964 File Offset: 0x00C0DB64
 		private void RefreshCount()
 		{
 			if (this.FieldData.HasCountSkill)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			base.GetItem(8).SetUIActive(false);
 		}
 
-		// Token: 0x06035EAC RID: 220844 RVA: 0x00CC23AC File Offset: 0x00CC05AC
+		// Token: 0x0602ADA7 RID: 175527 RVA: 0x00C0FA3C File Offset: 0x00C0DC3C
 		private void RefreshCdState()
 		{
 			if (this.IsLastInSkillCd && !this.FieldData.IsInSkillCd)
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			this.IsLastInSkillCd = this.FieldData.IsInSkillCd;
 		}
 
-		// Token: 0x06035EAD RID: 220845 RVA: 0x00CC2450 File Offset: 0x00CC0650
+		// Token: 0x0602ADA8 RID: 175528 RVA: 0x00C0FAE0 File Offset: 0x00C0DCE0
 		private void RefreshInteractState()
 		{
 			if (!this.IsLastCanInteract && this.FieldData.IsCanInteractive)
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			this.IsLastCanInteract = this.FieldData.IsCanInteractive;
 		}
 
-		// Token: 0x06035EAE RID: 220846 RVA: 0x00CC24C4 File Offset: 0x00CC06C4
+		// Token: 0x0602ADA9 RID: 175529 RVA: 0x00C0FB54 File Offset: 0x00C0DD54
 		private void RefreshTexState()
 		{
 			if (this.FieldData.CardData != null && !StringUtils.IsBlank(this.FieldData.FieldButtonColor))
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			}
 		}
 
-		// Token: 0x06035EAF RID: 220847 RVA: 0x00CC2520 File Offset: 0x00CC0720
+		// Token: 0x0602ADAA RID: 175530 RVA: 0x00C0FBB0 File Offset: 0x00C0DDB0
 		private void RefreshNiagaraState()
 		{
 			if (this.FieldData.CardData != null)
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			}
 		}
 
-		// Token: 0x06035EB0 RID: 220848 RVA: 0x00CC25AC File Offset: 0x00CC07AC
+		// Token: 0x0602ADAB RID: 175531 RVA: 0x00C0FC3C File Offset: 0x00C0DE3C
 		private UniTask RefreshIcon()
 		{
 			PhantomArenaFieldItem.<RefreshIcon>d__24 <RefreshIcon>d__;
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <RefreshIcon>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035EB1 RID: 220849 RVA: 0x00CC25F0 File Offset: 0x00CC07F0
+		// Token: 0x0602ADAC RID: 175532 RVA: 0x00C0FC80 File Offset: 0x00C0DE80
 		private UniTask RefreshNiagaraSystemState()
 		{
 			PhantomArenaFieldItem.<RefreshNiagaraSystemState>d__25 <RefreshNiagaraSystemState>d__;
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <RefreshNiagaraSystemState>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035EB2 RID: 220850 RVA: 0x00CC2634 File Offset: 0x00CC0834
+		// Token: 0x0602ADAD RID: 175533 RVA: 0x00C0FCC4 File Offset: 0x00C0DEC4
 		private UniTask RefreshLockState()
 		{
 			PhantomArenaFieldItem.<RefreshLockState>d__26 <RefreshLockState>d__;
@@ -250,14 +250,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <RefreshLockState>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035EB3 RID: 220851 RVA: 0x00CC2677 File Offset: 0x00CC0877
+		// Token: 0x0602ADAE RID: 175534 RVA: 0x00C0FD07 File Offset: 0x00C0DF07
 		private void SwitchActiveState(bool isActive)
 		{
 			base.GetItem(4).SetUIActive(isActive);
 			base.GetItem(1).SetUIActive(!isActive);
 		}
 
-		// Token: 0x06035EB4 RID: 220852 RVA: 0x00CC2698 File Offset: 0x00CC0898
+		// Token: 0x0602ADAF RID: 175535 RVA: 0x00C0FD28 File Offset: 0x00C0DF28
 		public UniTask Refresh(PhantomArenaFieldData filedData)
 		{
 			PhantomArenaFieldItem.<Refresh>d__28 <Refresh>d__;
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <Refresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035EB5 RID: 220853 RVA: 0x00CC26E4 File Offset: 0x00CC08E4
+		// Token: 0x0602ADB0 RID: 175536 RVA: 0x00C0FD74 File Offset: 0x00C0DF74
 		public UniTask RefreshSelf()
 		{
 			PhantomArenaFieldItem.<RefreshSelf>d__29 <RefreshSelf>d__;
@@ -280,49 +280,49 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <RefreshSelf>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035EB6 RID: 220854 RVA: 0x00CC2728 File Offset: 0x00CC0928
+		// Token: 0x0602ADB1 RID: 175537 RVA: 0x00C0FDB8 File Offset: 0x00C0DFB8
 		public void UseSkill()
 		{
 			this.Sequence.PlaySequence("Use", false, null);
 		}
 
-		// Token: 0x06035EB7 RID: 220855 RVA: 0x00CC274F File Offset: 0x00CC094F
+		// Token: 0x0602ADB2 RID: 175538 RVA: 0x00C0FDDF File Offset: 0x00C0DFDF
 		public void ResetSkill()
 		{
 			this.Sequence.PlaySequencePurely("UnUse", false, false);
 		}
 
-		// Token: 0x06035EB8 RID: 220856 RVA: 0x00CC2763 File Offset: 0x00CC0963
+		// Token: 0x0602ADB3 RID: 175539 RVA: 0x00C0FDF3 File Offset: 0x00C0DFF3
 		public void SetInteractClickCallback(Action<PhantomArenaFieldData, PhantomArenaFieldItem> callback)
 		{
 			this.InteractClickCallback = callback;
 		}
 
-		// Token: 0x06035EB9 RID: 220857 RVA: 0x00CC276C File Offset: 0x00CC096C
+		// Token: 0x0602ADB4 RID: 175540 RVA: 0x00C0FDFC File Offset: 0x00C0DFFC
 		public void SetFinishSkillInteractCallback(Action<PhantomArenaFieldData> callback)
 		{
 			this.FinishSkillInteractClickCallback = callback;
 		}
 
-		// Token: 0x06035EBA RID: 220858 RVA: 0x00CC2775 File Offset: 0x00CC0975
+		// Token: 0x0602ADB5 RID: 175541 RVA: 0x00C0FE05 File Offset: 0x00C0E005
 		public void SetPointerEnterCallback(Action<PhantomArenaFieldData, UUIItem> callback)
 		{
 			this.PointerEnterCallback = callback;
 		}
 
-		// Token: 0x06035EBB RID: 220859 RVA: 0x00CC277E File Offset: 0x00CC097E
+		// Token: 0x0602ADB6 RID: 175542 RVA: 0x00C0FE0E File Offset: 0x00C0E00E
 		public void SetPointerExitCallback(Action callback)
 		{
 			this.PointerExitCallback = callback;
 		}
 
-		// Token: 0x06035EBC RID: 220860 RVA: 0x00CC2788 File Offset: 0x00CC0988
+		// Token: 0x0602ADB7 RID: 175543 RVA: 0x00C0FE18 File Offset: 0x00C0E018
 		public string GetFieldDesc()
 		{
 			return PhantomArenaConfig.Instance.GetPhantomBattleCardConfig(this.FieldData.CardConfigId).FieldTriggerDesc;
 		}
 
-		// Token: 0x06035EBD RID: 220861 RVA: 0x00CC27B2 File Offset: 0x00CC09B2
+		// Token: 0x0602ADB8 RID: 175544 RVA: 0x00C0FE42 File Offset: 0x00C0E042
 		public void SetFieldItemActive(bool active)
 		{
 			if (this.FieldData.CardData != null && active)
@@ -333,7 +333,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			this.SetActive(false);
 		}
 
-		// Token: 0x06035EBE RID: 220862 RVA: 0x00CC27D8 File Offset: 0x00CC09D8
+		// Token: 0x0602ADB9 RID: 175545 RVA: 0x00C0FE68 File Offset: 0x00C0E068
 		public bool CheckCanvasSortOrder(List<EPhantomArenaInteractTag> tagList, ISkillTriggerInfo skillTriggerInfo)
 		{
 			if (!tagList.Contains(EPhantomArenaInteractTag.OwnFiled))
@@ -345,31 +345,31 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return dataId.GetValueOrDefault() == cardConfigId & dataId != null;
 		}
 
-		// Token: 0x06035EBF RID: 220863 RVA: 0x00CC281A File Offset: 0x00CC0A1A
+		// Token: 0x0602ADBA RID: 175546 RVA: 0x00C0FEAA File Offset: 0x00C0E0AA
 		public void HandleSortOrder()
 		{
 			this.RootItem.GetRenderCanvas().SetSortOrderNew(2, true);
 		}
 
-		// Token: 0x06035EC0 RID: 220864 RVA: 0x00CC282E File Offset: 0x00CC0A2E
+		// Token: 0x0602ADBB RID: 175547 RVA: 0x00C0FEBE File Offset: 0x00C0E0BE
 		public void CancelSortOrder()
 		{
 			this.RootItem.GetRenderCanvas().SetSortOrderNew(0, true);
 		}
 
-		// Token: 0x06035EC1 RID: 220865 RVA: 0x00CC2844 File Offset: 0x00CC0A44
+		// Token: 0x0602ADBC RID: 175548 RVA: 0x00C0FED4 File Offset: 0x00C0E0D4
 		public UniTask StartSkillInteract()
 		{
 			return default(UniTask);
 		}
 
-		// Token: 0x06035EC2 RID: 220866 RVA: 0x00CC285A File Offset: 0x00CC0A5A
+		// Token: 0x0602ADBD RID: 175549 RVA: 0x00C0FEEA File Offset: 0x00C0E0EA
 		public ISkillTriggerInfo GetData()
 		{
 			return PhantomArenaBattleModel.Instance.BuffEffectData.CardSkillTriggerInfo;
 		}
 
-		// Token: 0x06035EC3 RID: 220867 RVA: 0x00CC286B File Offset: 0x00CC0A6B
+		// Token: 0x0602ADBE RID: 175550 RVA: 0x00C0FEFB File Offset: 0x00C0E0FB
 		public void FinishSkillInteract()
 		{
 			Action<PhantomArenaFieldData> finishSkillInteractClickCallback = this.FinishSkillInteractClickCallback;
@@ -380,101 +380,101 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			finishSkillInteractClickCallback(this.FieldData);
 		}
 
-		// Token: 0x06035EC4 RID: 220868 RVA: 0x00CC2883 File Offset: 0x00CC0A83
+		// Token: 0x0602ADBF RID: 175551 RVA: 0x00C0FF13 File Offset: 0x00C0E113
 		public void CancelSkillInteract()
 		{
 			this.Sequence.PlaySequencePurely("UnUse", false, false);
 		}
 
-		// Token: 0x06035EC5 RID: 220869 RVA: 0x00CC2897 File Offset: 0x00CC0A97
+		// Token: 0x0602ADC0 RID: 175552 RVA: 0x00C0FF27 File Offset: 0x00C0E127
 		[NullableContext(2)]
 		public void ReceiveUiInteract(ISkillInteractMainUiInteract uiInteract)
 		{
 		}
 
-		// Token: 0x0401C8F6 RID: 116982
+		// Token: 0x0401732B RID: 95019
 		public PhantomArenaFieldData FieldData;
 
-		// Token: 0x0401C8F7 RID: 116983
+		// Token: 0x0401732C RID: 95020
 		protected PhantomArenaSealItem SealItem;
 
-		// Token: 0x0401C8F8 RID: 116984
+		// Token: 0x0401732D RID: 95021
 		protected Action<PhantomArenaFieldData, PhantomArenaFieldItem> InteractClickCallback;
 
-		// Token: 0x0401C8F9 RID: 116985
+		// Token: 0x0401732E RID: 95022
 		protected Action<PhantomArenaFieldData> FinishSkillInteractClickCallback;
 
-		// Token: 0x0401C8FA RID: 116986
+		// Token: 0x0401732F RID: 95023
 		protected Action<PhantomArenaFieldData, UUIItem> PointerEnterCallback;
 
-		// Token: 0x0401C8FB RID: 116987
+		// Token: 0x04017330 RID: 95024
 		protected Action PointerExitCallback;
 
-		// Token: 0x0401C8FC RID: 116988
+		// Token: 0x04017331 RID: 95025
 		protected UiSequencePlayer Sequence;
 
-		// Token: 0x0401C8FD RID: 116989
+		// Token: 0x04017332 RID: 95026
 		protected bool IsLastInSkillCd;
 
-		// Token: 0x0401C8FE RID: 116990
+		// Token: 0x04017333 RID: 95027
 		protected bool IsLastCanInteract;
 
-		// Token: 0x0401C8FF RID: 116991
+		// Token: 0x04017334 RID: 95028
 		protected int LastEffectCount;
 
-		// Token: 0x0200B442 RID: 46146
+		// Token: 0x02009E7A RID: 40570
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040369D7 RID: 223703
+			// Token: 0x0403142A RID: 201770
 			public const int InteractButton = 0;
 
-			// Token: 0x040369D8 RID: 223704
+			// Token: 0x0403142B RID: 201771
 			public const int NormalItem = 1;
 
-			// Token: 0x040369D9 RID: 223705
+			// Token: 0x0403142C RID: 201772
 			public const int NormalRing = 2;
 
-			// Token: 0x040369DA RID: 223706
+			// Token: 0x0403142D RID: 201773
 			public const int NormalIcon = 3;
 
-			// Token: 0x040369DB RID: 223707
+			// Token: 0x0403142E RID: 201774
 			public const int ActiveItem = 4;
 
-			// Token: 0x040369DC RID: 223708
+			// Token: 0x0403142F RID: 201775
 			public const int ActiveRing = 5;
 
-			// Token: 0x040369DD RID: 223709
+			// Token: 0x04031430 RID: 201776
 			public const int ActiveIcon = 6;
 
-			// Token: 0x040369DE RID: 223710
+			// Token: 0x04031431 RID: 201777
 			public const int CdIcon = 7;
 
-			// Token: 0x040369DF RID: 223711
+			// Token: 0x04031432 RID: 201778
 			public const int CountItem = 8;
 
-			// Token: 0x040369E0 RID: 223712
+			// Token: 0x04031433 RID: 201779
 			public const int CountText = 9;
 
-			// Token: 0x040369E1 RID: 223713
+			// Token: 0x04031434 RID: 201780
 			public const int SealItem = 10;
 
-			// Token: 0x040369E2 RID: 223714
+			// Token: 0x04031435 RID: 201781
 			public const int NormalTex = 11;
 
-			// Token: 0x040369E3 RID: 223715
+			// Token: 0x04031436 RID: 201782
 			public const int ActivateTex = 12;
 
-			// Token: 0x040369E4 RID: 223716
+			// Token: 0x04031437 RID: 201783
 			public const int NormalNiagara = 13;
 
-			// Token: 0x040369E5 RID: 223717
+			// Token: 0x04031438 RID: 201784
 			public const int ElementNiagara = 14;
 
-			// Token: 0x040369E6 RID: 223718
+			// Token: 0x04031439 RID: 201785
 			public const int ActivateNiagara = 15;
 
-			// Token: 0x040369E7 RID: 223719
+			// Token: 0x0403143A RID: 201786
 			public const int ContentItem = 16;
 		}
 	}

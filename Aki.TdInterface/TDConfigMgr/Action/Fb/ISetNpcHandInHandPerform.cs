@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A5B RID: 10843
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D48 RID: 11592
 	public class ISetNpcHandInHandPerform : ISetNpcGroupPerformType
 	{
-		// Token: 0x0600EE85 RID: 61061 RVA: 0x0022B6DE File Offset: 0x002298DE
+		// Token: 0x0600FD1D RID: 64797 RVA: 0x00249092 File Offset: 0x00247292
 		public static ISetNpcHandInHandPerform Create(ISetNpcHandInHandPerform? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B91 RID: 19345
-		// (get) Token: 0x0600EE86 RID: 61062 RVA: 0x0022B6FD File Offset: 0x002298FD
+		// Token: 0x17004F3B RID: 20283
+		// (get) Token: 0x0600FD1E RID: 64798 RVA: 0x002490B1 File Offset: 0x002472B1
 		public override ENpcGroupPerformType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B92 RID: 19346
-		// (get) Token: 0x0600EE87 RID: 61063 RVA: 0x0022B70A File Offset: 0x0022990A
+		// Token: 0x17004F3C RID: 20284
+		// (get) Token: 0x0600FD1F RID: 64799 RVA: 0x002490BE File Offset: 0x002472BE
 		public virtual IHandInHandInitiator Initiator
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B93 RID: 19347
-		// (get) Token: 0x0600EE88 RID: 61064 RVA: 0x0022B73E File Offset: 0x0022993E
+		// Token: 0x17004F3D RID: 20285
+		// (get) Token: 0x0600FD20 RID: 64800 RVA: 0x002490F2 File Offset: 0x002472F2
 		public virtual int Follower
 		{
 			get
@@ -58,14 +56,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008339 RID: 33593
+		// Token: 0x04008A2C RID: 35372
 		private ISetNpcHandInHandPerform Instance;
 
-		// Token: 0x0400833A RID: 33594
+		// Token: 0x04008A2D RID: 35373
 		[Nullable(2)]
 		private IHandInHandInitiator _InitiatorCache;
 
-		// Token: 0x0400833B RID: 33595
+		// Token: 0x04008A2E RID: 35374
 		private bool _InitiatorInited;
 	}
 }

@@ -4,23 +4,23 @@ using CSharpScript.Game.Module.Map.Marks.MarkItem;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x0200550E RID: 21774
+	// Token: 0x020044E1 RID: 17633
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FixedSceneGamePlayMarkItemView : ConfigMarkItemView
 	{
-		// Token: 0x060379B6 RID: 227766 RVA: 0x00D338E9 File Offset: 0x00D31AE9
+		// Token: 0x0602C884 RID: 182404 RVA: 0x00C817BD File Offset: 0x00C7F9BD
 		public FixedSceneGamePlayMarkItemView(FixedSceneGameplayMarkItem holder) : base(holder)
 		{
 		}
 
-		// Token: 0x060379B7 RID: 227767 RVA: 0x00D338F2 File Offset: 0x00D31AF2
+		// Token: 0x0602C885 RID: 182405 RVA: 0x00C817C6 File Offset: 0x00C7F9C6
 		protected override void OnViewRefresh()
 		{
 			this.UpdateIcon();
 		}
 
-		// Token: 0x060379B8 RID: 227768 RVA: 0x00D338FC File Offset: 0x00D31AFC
+		// Token: 0x0602C886 RID: 182406 RVA: 0x00C817D0 File Offset: 0x00C7F9D0
 		protected override void OnSafeUpdate(Vector playerLocation, bool bDragging = false, bool bIsScale = false)
 		{
 			FixedSceneGameplayMarkItem fixedSceneGameplayMarkItem = (FixedSceneGameplayMarkItem)this.Holder;

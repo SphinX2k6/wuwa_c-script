@@ -3,10 +3,10 @@ using CSharpScript.Game.Module.Plot.Sequence;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050B0 RID: 20656
+	// Token: 0x02004080 RID: 16512
 	public class FlowActionChangeFormation : FlowActionServerAction
 	{
-		// Token: 0x06034EB8 RID: 216760 RVA: 0x00C88D38 File Offset: 0x00C86F38
+		// Token: 0x06029DB1 RID: 171441 RVA: 0x00BD5FF4 File Offset: 0x00BD41F4
 		protected override void OnExecute()
 		{
 			if (!PlotModel.Instance.IsInSequencePlot() || !SequenceModel.Instance.IsPlaying)
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034EB9 RID: 216761 RVA: 0x00C88D9C File Offset: 0x00C86F9C
+		// Token: 0x06029DB2 RID: 171442 RVA: 0x00BD6058 File Offset: 0x00BD4258
 		protected override void OnBackgroundExecute()
 		{
 			base.FinishExecute(true, true);

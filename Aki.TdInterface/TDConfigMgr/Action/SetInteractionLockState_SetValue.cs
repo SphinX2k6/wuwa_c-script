@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021BE RID: 8638
+	// Token: 0x02002429 RID: 9257
 	public class SetInteractionLockState_SetValue
 	{
-		// Token: 0x0400713E RID: 28990
+		// Token: 0x04007786 RID: 30598
 		public bool IsLock;
 	}
 }

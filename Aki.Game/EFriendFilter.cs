@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001C29 RID: 7209
+// Token: 0x020010E8 RID: 4328
 public enum EFriendFilter
 {
-	// Token: 0x040062C8 RID: 25288
+	// Token: 0x0400639A RID: 25498
 	FriendList = 1,
-	// Token: 0x040062C9 RID: 25289
+	// Token: 0x0400639B RID: 25499
 	FriendRequest,
-	// Token: 0x040062CA RID: 25290
+	// Token: 0x0400639C RID: 25500
 	RecentMultiple
 }

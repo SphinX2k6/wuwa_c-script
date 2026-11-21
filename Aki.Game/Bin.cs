@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020021FB RID: 8699
+// Token: 0x020016DF RID: 5855
 public class Bin
 {
-	// Token: 0x0400808F RID: 32911
+	// Token: 0x040081CD RID: 33229
 	[Nullable(new byte[]
 	{
 		2,
@@ -12,12 +12,12 @@ public class Bin
 	})]
 	public Edge[] EdgeSet;
 
-	// Token: 0x04008090 RID: 32912
+	// Token: 0x040081CE RID: 33230
 	public double MinX;
 
-	// Token: 0x04008091 RID: 32913
+	// Token: 0x040081CF RID: 33231
 	public double MaxX;
 
-	// Token: 0x04008092 RID: 32914
+	// Token: 0x040081D0 RID: 33232
 	public int Count;
 }

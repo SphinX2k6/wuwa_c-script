@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EDB RID: 16091
+	// Token: 0x02004319 RID: 17177
 	public struct IKurotatoConditionStepChestReward : IFlatbufferObject
 	{
-		// Token: 0x17006FAF RID: 28591
-		// (get) Token: 0x06016C2D RID: 93229 RVA: 0x00348FD1 File Offset: 0x003471D1
+		// Token: 0x1700759E RID: 30110
+		// (get) Token: 0x06018284 RID: 98948 RVA: 0x0037219D File Offset: 0x0037039D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016C2E RID: 93230 RVA: 0x00348FDE File Offset: 0x003471DE
+		// Token: 0x06018285 RID: 98949 RVA: 0x003721AA File Offset: 0x003703AA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016C2F RID: 93231 RVA: 0x00348FE8 File Offset: 0x003471E8
+		// Token: 0x06018286 RID: 98950 RVA: 0x003721B4 File Offset: 0x003703B4
 		public static IKurotatoConditionStepChestReward GetRootAsIKurotatoConditionStepChestReward(ByteBuffer _bb)
 		{
 			return IKurotatoConditionStepChestReward.GetRootAsIKurotatoConditionStepChestReward(_bb, default(IKurotatoConditionStepChestReward));
 		}
 
-		// Token: 0x06016C30 RID: 93232 RVA: 0x00349004 File Offset: 0x00347204
+		// Token: 0x06018287 RID: 98951 RVA: 0x003721D0 File Offset: 0x003703D0
 		public static IKurotatoConditionStepChestReward GetRootAsIKurotatoConditionStepChestReward(ByteBuffer _bb, IKurotatoConditionStepChestReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016C31 RID: 93233 RVA: 0x00349021 File Offset: 0x00347221
+		// Token: 0x06018288 RID: 98952 RVA: 0x003721ED File Offset: 0x003703ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016C32 RID: 93234 RVA: 0x00349030 File Offset: 0x00347230
+		// Token: 0x06018289 RID: 98953 RVA: 0x003721FC File Offset: 0x003703FC
 		public IKurotatoConditionStepChestReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006FB0 RID: 28592
-		// (get) Token: 0x06016C33 RID: 93235 RVA: 0x00349040 File Offset: 0x00347240
+		// Token: 0x1700759F RID: 30111
+		// (get) Token: 0x0601828A RID: 98954 RVA: 0x0037220C File Offset: 0x0037040C
 		public EKurotatoConditionStep Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016C34 RID: 93236 RVA: 0x0034907C File Offset: 0x0034727C
+		// Token: 0x0601828B RID: 98955 RVA: 0x00372248 File Offset: 0x00370448
 		public static Offset<IKurotatoConditionStepChestReward> CreateIKurotatoConditionStepChestReward(FlatBufferBuilder builder, EKurotatoConditionStep Type = EKurotatoConditionStep.Prepare)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IKurotatoConditionStepChestReward.EndIKurotatoConditionStepChestReward(builder);
 		}
 
-		// Token: 0x06016C35 RID: 93237 RVA: 0x00349092 File Offset: 0x00347292
+		// Token: 0x0601828C RID: 98956 RVA: 0x0037225E File Offset: 0x0037045E
 		public static void StartIKurotatoConditionStepChestReward(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06016C36 RID: 93238 RVA: 0x0034909B File Offset: 0x0034729B
+		// Token: 0x0601828D RID: 98957 RVA: 0x00372267 File Offset: 0x00370467
 		public static void AddType(FlatBufferBuilder builder, EKurotatoConditionStep type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06016C37 RID: 93239 RVA: 0x003490A6 File Offset: 0x003472A6
+		// Token: 0x0601828E RID: 98958 RVA: 0x00372272 File Offset: 0x00370472
 		public static Offset<IKurotatoConditionStepChestReward> EndIKurotatoConditionStepChestReward(FlatBufferBuilder builder)
 		{
 			return new Offset<IKurotatoConditionStepChestReward>(builder.EndTable());
 		}
 
-		// Token: 0x06016C38 RID: 93240 RVA: 0x003490B4 File Offset: 0x003472B4
+		// Token: 0x0601828F RID: 98959 RVA: 0x00372280 File Offset: 0x00370480
 		public IKurotatoConditionStepChestRewardT UnPack()
 		{
 			IKurotatoConditionStepChestRewardT kurotatoConditionStepChestRewardT = new IKurotatoConditionStepChestRewardT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return kurotatoConditionStepChestRewardT;
 		}
 
-		// Token: 0x06016C39 RID: 93241 RVA: 0x003490CF File Offset: 0x003472CF
+		// Token: 0x06018290 RID: 98960 RVA: 0x0037229B File Offset: 0x0037049B
 		public void UnPackTo(IKurotatoConditionStepChestRewardT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06016C3A RID: 93242 RVA: 0x003490E0 File Offset: 0x003472E0
+		// Token: 0x06018291 RID: 98961 RVA: 0x003722AC File Offset: 0x003704AC
 		public static Offset<IKurotatoConditionStepChestReward> Pack(FlatBufferBuilder builder, IKurotatoConditionStepChestRewardT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IKurotatoConditionStepChestReward.CreateIKurotatoConditionStepChestReward(builder, _o.Type);
 		}
 
-		// Token: 0x0400B8BF RID: 47295
+		// Token: 0x0400C29C RID: 49820
 		private Table __p;
 	}
 }

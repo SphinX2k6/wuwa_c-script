@@ -4,24 +4,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 {
-	// Token: 0x02006350 RID: 25424
+	// Token: 0x020052CE RID: 21198
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class PinballItemToggleCallbackData : IPinballItemToggleCallback
 	{
-		// Token: 0x17009329 RID: 37673
-		// (get) Token: 0x0603FFCE RID: 262094 RVA: 0x00F7B39D File Offset: 0x00F7959D
-		// (set) Token: 0x0603FFCF RID: 262095 RVA: 0x00F7B3A5 File Offset: 0x00F795A5
+		// Token: 0x1700668B RID: 26251
+		// (get) Token: 0x06034C8F RID: 216207 RVA: 0x00EC22FD File Offset: 0x00EC04FD
+		// (set) Token: 0x06034C90 RID: 216208 RVA: 0x00EC2305 File Offset: 0x00EC0505
 		public PinballItemView View { get; set; }
 
-		// Token: 0x1700932A RID: 37674
-		// (get) Token: 0x0603FFD0 RID: 262096 RVA: 0x00F7B3AE File Offset: 0x00F795AE
-		// (set) Token: 0x0603FFD1 RID: 262097 RVA: 0x00F7B3B6 File Offset: 0x00F795B6
+		// Token: 0x1700668C RID: 26252
+		// (get) Token: 0x06034C91 RID: 216209 RVA: 0x00EC230E File Offset: 0x00EC050E
+		// (set) Token: 0x06034C92 RID: 216210 RVA: 0x00EC2316 File Offset: 0x00EC0516
 		public EToggleState State { get; set; }
 
-		// Token: 0x1700932B RID: 37675
-		// (get) Token: 0x0603FFD2 RID: 262098 RVA: 0x00F7B3BF File Offset: 0x00F795BF
-		// (set) Token: 0x0603FFD3 RID: 262099 RVA: 0x00F7B3C7 File Offset: 0x00F795C7
+		// Token: 0x1700668D RID: 26253
+		// (get) Token: 0x06034C93 RID: 216211 RVA: 0x00EC231F File Offset: 0x00EC051F
+		// (set) Token: 0x06034C94 RID: 216212 RVA: 0x00EC2327 File Offset: 0x00EC0527
 		[Nullable(2)]
 		public object Data { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

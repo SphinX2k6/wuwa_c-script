@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200086C RID: 2156
+	// Token: 0x0200085B RID: 2139
 	public sealed class JokerGuessHpAction : IMessage<JokerGuessHpAction>, IMessage, IEquatable<JokerGuessHpAction>, IDeepCloneable<JokerGuessHpAction>, IBufferMessage
 	{
-		// Token: 0x0600C005 RID: 49157 RVA: 0x001C7F07 File Offset: 0x001C6107
+		// Token: 0x0600BEE9 RID: 48873 RVA: 0x001C5C1E File Offset: 0x001C3E1E
 		[NullableContext(1)]
 		public static JokerGuessHpAction Create()
 		{
 			return new JokerGuessHpAction();
 		}
 
-		// Token: 0x170026C7 RID: 9927
-		// (get) Token: 0x0600C006 RID: 49158 RVA: 0x001C7F0E File Offset: 0x001C610E
+		// Token: 0x17002688 RID: 9864
+		// (get) Token: 0x0600BEEA RID: 48874 RVA: 0x001C5C25 File Offset: 0x001C3E25
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170026C8 RID: 9928
-		// (get) Token: 0x0600C007 RID: 49159 RVA: 0x001C7F11 File Offset: 0x001C6111
+		// Token: 0x17002689 RID: 9865
+		// (get) Token: 0x0600BEEB RID: 48875 RVA: 0x001C5C28 File Offset: 0x001C3E28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C008 RID: 49160 RVA: 0x001C7F18 File Offset: 0x001C6118
+		// Token: 0x0600BEEC RID: 48876 RVA: 0x001C5C2F File Offset: 0x001C3E2F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public JokerGuessHpAction()
 		{
 		}
 
-		// Token: 0x0600C009 RID: 49161 RVA: 0x001C7F20 File Offset: 0x001C6120
+		// Token: 0x0600BEED RID: 48877 RVA: 0x001C5C37 File Offset: 0x001C3E37
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public JokerGuessHpAction(JokerGuessHpAction other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600C00A RID: 49162 RVA: 0x001C7F51 File Offset: 0x001C6151
+		// Token: 0x0600BEEE RID: 48878 RVA: 0x001C5C68 File Offset: 0x001C3E68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public JokerGuessHpAction Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new JokerGuessHpAction(this);
 		}
 
-		// Token: 0x170026C9 RID: 9929
-		// (get) Token: 0x0600C00B RID: 49163 RVA: 0x001C7F59 File Offset: 0x001C6159
-		// (set) Token: 0x0600C00C RID: 49164 RVA: 0x001C7F61 File Offset: 0x001C6161
+		// Token: 0x1700268A RID: 9866
+		// (get) Token: 0x0600BEEF RID: 48879 RVA: 0x001C5C70 File Offset: 0x001C3E70
+		// (set) Token: 0x0600BEF0 RID: 48880 RVA: 0x001C5C78 File Offset: 0x001C3E78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public JokerGuessActor Actor
@@ -83,9 +83,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170026CA RID: 9930
-		// (get) Token: 0x0600C00D RID: 49165 RVA: 0x001C7F6A File Offset: 0x001C616A
-		// (set) Token: 0x0600C00E RID: 49166 RVA: 0x001C7F72 File Offset: 0x001C6172
+		// Token: 0x1700268B RID: 9867
+		// (get) Token: 0x0600BEF1 RID: 48881 RVA: 0x001C5C81 File Offset: 0x001C3E81
+		// (set) Token: 0x0600BEF2 RID: 48882 RVA: 0x001C5C89 File Offset: 0x001C3E89
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int HealthHp
@@ -100,7 +100,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C00F RID: 49167 RVA: 0x001C7F7B File Offset: 0x001C617B
+		// Token: 0x0600BEF3 RID: 48883 RVA: 0x001C5C92 File Offset: 0x001C3E92
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return this.Equals(other as JokerGuessHpAction);
 		}
 
-		// Token: 0x0600C010 RID: 49168 RVA: 0x001C7F89 File Offset: 0x001C6189
+		// Token: 0x0600BEF4 RID: 48884 RVA: 0x001C5CA0 File Offset: 0x001C3EA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(JokerGuessHpAction other)
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Actor == other.Actor && this.HealthHp == other.HealthHp && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600C011 RID: 49169 RVA: 0x001C7FC8 File Offset: 0x001C61C8
+		// Token: 0x0600BEF5 RID: 48885 RVA: 0x001C5CE0 File Offset: 0x001C3EE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C012 RID: 49170 RVA: 0x001C8026 File Offset: 0x001C6226
+		// Token: 0x0600BEF6 RID: 48886 RVA: 0x001C5D3E File Offset: 0x001C3F3E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600C013 RID: 49171 RVA: 0x001C8033 File Offset: 0x001C6233
+		// Token: 0x0600BEF7 RID: 48887 RVA: 0x001C5D4B File Offset: 0x001C3F4B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600C014 RID: 49172 RVA: 0x001C803C File Offset: 0x001C623C
+		// Token: 0x0600BEF8 RID: 48888 RVA: 0x001C5D54 File Offset: 0x001C3F54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -174,7 +174,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C015 RID: 49173 RVA: 0x001C8094 File Offset: 0x001C6294
+		// Token: 0x0600BEF9 RID: 48889 RVA: 0x001C5DAC File Offset: 0x001C3FAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -195,7 +195,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C016 RID: 49174 RVA: 0x001C80EC File Offset: 0x001C62EC
+		// Token: 0x0600BEFA RID: 48890 RVA: 0x001C5E04 File Offset: 0x001C4004
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(JokerGuessHpAction other)
@@ -215,7 +215,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600C017 RID: 49175 RVA: 0x001C813C File Offset: 0x001C633C
+		// Token: 0x0600BEFB RID: 48891 RVA: 0x001C5E54 File Offset: 0x001C4054
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -223,7 +223,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600C018 RID: 49176 RVA: 0x001C8148 File Offset: 0x001C6348
+		// Token: 0x0600BEFC RID: 48892 RVA: 0x001C5E60 File Offset: 0x001C4060
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -253,19 +253,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400537D RID: 21373
+		// Token: 0x04005384 RID: 21380
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400537E RID: 21374
+		// Token: 0x04005385 RID: 21381
 		public const int ActorFieldNumber = 1;
 
-		// Token: 0x0400537F RID: 21375
+		// Token: 0x04005386 RID: 21382
 		private JokerGuessActor actor_;
 
-		// Token: 0x04005380 RID: 21376
+		// Token: 0x04005387 RID: 21383
 		public const int HealthHpFieldNumber = 2;
 
-		// Token: 0x04005381 RID: 21377
+		// Token: 0x04005388 RID: 21384
 		private int healthHp_;
 	}
 }

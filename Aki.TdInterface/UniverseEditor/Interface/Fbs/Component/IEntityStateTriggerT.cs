@@ -5,35 +5,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051BD RID: 20925
+	// Token: 0x02005722 RID: 22306
 	public class IEntityStateTriggerT
 	{
-		// Token: 0x17009910 RID: 39184
-		// (get) Token: 0x06021E84 RID: 138884 RVA: 0x004B43ED File Offset: 0x004B25ED
-		// (set) Token: 0x06021E85 RID: 138885 RVA: 0x004B43F5 File Offset: 0x004B25F5
+		// Token: 0x1700A0FF RID: 41215
+		// (get) Token: 0x06023DDC RID: 146908 RVA: 0x004EE455 File Offset: 0x004EC655
+		// (set) Token: 0x06023DDD RID: 146909 RVA: 0x004EE45D File Offset: 0x004EC65D
 		public IEntityGroupConditionT GroupCondition { get; set; }
 
-		// Token: 0x17009911 RID: 39185
-		// (get) Token: 0x06021E86 RID: 138886 RVA: 0x004B43FE File Offset: 0x004B25FE
-		// (set) Token: 0x06021E87 RID: 138887 RVA: 0x004B4406 File Offset: 0x004B2606
+		// Token: 0x1700A100 RID: 41216
+		// (get) Token: 0x06023DDE RID: 146910 RVA: 0x004EE466 File Offset: 0x004EC666
+		// (set) Token: 0x06023DDF RID: 146911 RVA: 0x004EE46E File Offset: 0x004EC66E
 		public List<IActionInfoT> SuccessActions { get; set; }
 
-		// Token: 0x17009912 RID: 39186
-		// (get) Token: 0x06021E88 RID: 138888 RVA: 0x004B440F File Offset: 0x004B260F
-		// (set) Token: 0x06021E89 RID: 138889 RVA: 0x004B4417 File Offset: 0x004B2617
+		// Token: 0x1700A101 RID: 41217
+		// (get) Token: 0x06023DE0 RID: 146912 RVA: 0x004EE477 File Offset: 0x004EC677
+		// (set) Token: 0x06023DE1 RID: 146913 RVA: 0x004EE47F File Offset: 0x004EC67F
 		public List<IActionInfoT> FailActions { get; set; }
 
-		// Token: 0x17009913 RID: 39187
-		// (get) Token: 0x06021E8A RID: 138890 RVA: 0x004B4420 File Offset: 0x004B2620
-		// (set) Token: 0x06021E8B RID: 138891 RVA: 0x004B4428 File Offset: 0x004B2628
+		// Token: 0x1700A102 RID: 41218
+		// (get) Token: 0x06023DE2 RID: 146914 RVA: 0x004EE488 File Offset: 0x004EC688
+		// (set) Token: 0x06023DE3 RID: 146915 RVA: 0x004EE490 File Offset: 0x004EC690
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17009914 RID: 39188
-		// (get) Token: 0x06021E8C RID: 138892 RVA: 0x004B4431 File Offset: 0x004B2631
-		// (set) Token: 0x06021E8D RID: 138893 RVA: 0x004B4439 File Offset: 0x004B2639
+		// Token: 0x1700A103 RID: 41219
+		// (get) Token: 0x06023DE4 RID: 146916 RVA: 0x004EE499 File Offset: 0x004EC699
+		// (set) Token: 0x06023DE5 RID: 146917 RVA: 0x004EE4A1 File Offset: 0x004EC6A1
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021E8E RID: 138894 RVA: 0x004B4442 File Offset: 0x004B2642
+		// Token: 0x06023DE6 RID: 146918 RVA: 0x004EE4AA File Offset: 0x004EC6AA
 		public IEntityStateTriggerT()
 		{
 			this.GroupCondition = null;

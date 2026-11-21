@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001735 RID: 5941
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018B4 RID: 6324
 	public class GetItem : ActionParams
 	{
-		// Token: 0x06007DBF RID: 32191 RVA: 0x0012D770 File Offset: 0x0012B970
+		// Token: 0x060084A7 RID: 33959 RVA: 0x0013C918 File Offset: 0x0013AB18
 		private GetItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007DC0 RID: 32192 RVA: 0x0012D7A8 File Offset: 0x0012B9A8
+		// Token: 0x060084A8 RID: 33960 RVA: 0x0013C950 File Offset: 0x0013AB50
 		public static GetItem Create([Nullable(2)] GetItem instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007DC1 RID: 32193 RVA: 0x0012D7BB File Offset: 0x0012B9BB
+		// Token: 0x060084A9 RID: 33961 RVA: 0x0013C963 File Offset: 0x0013AB63
 		public static GetItem CreateFromSetValue([Nullable(2)] GetItem_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007DC2 RID: 32194 RVA: 0x0012D7CE File Offset: 0x0012B9CE
+		// Token: 0x060084AA RID: 33962 RVA: 0x0013C976 File Offset: 0x0013AB76
 		public GetItem_SetValue ToSetValue()
 		{
 			return new GetItem_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002963 RID: 10595
-		// (get) Token: 0x06007DC3 RID: 32195 RVA: 0x0012D7FC File Offset: 0x0012B9FC
-		// (set) Token: 0x06007DC4 RID: 32196 RVA: 0x0012D88F File Offset: 0x0012BA8F
+		// Token: 0x17002B50 RID: 11088
+		// (get) Token: 0x060084AB RID: 33963 RVA: 0x0013C9A4 File Offset: 0x0013ABA4
+		// (set) Token: 0x060084AC RID: 33964 RVA: 0x0013CA37 File Offset: 0x0013AC37
 		public virtual List<IItemData> Items
 		{
 			get
@@ -100,9 +98,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002964 RID: 10596
-		// (get) Token: 0x06007DC5 RID: 32197 RVA: 0x0012D8A4 File Offset: 0x0012BAA4
-		// (set) Token: 0x06007DC6 RID: 32198 RVA: 0x0012D8DE File Offset: 0x0012BADE
+		// Token: 0x17002B51 RID: 11089
+		// (get) Token: 0x060084AD RID: 33965 RVA: 0x0013CA4C File Offset: 0x0013AC4C
+		// (set) Token: 0x060084AE RID: 33966 RVA: 0x0013CA86 File Offset: 0x0013AC86
 		public virtual EItemGetUiType? UiType
 		{
 			get
@@ -124,9 +122,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002965 RID: 10597
-		// (get) Token: 0x06007DC7 RID: 32199 RVA: 0x0012D8EC File Offset: 0x0012BAEC
-		// (set) Token: 0x06007DC8 RID: 32200 RVA: 0x0012D94D File Offset: 0x0012BB4D
+		// Token: 0x17002B52 RID: 11090
+		// (get) Token: 0x060084AF RID: 33967 RVA: 0x0013CA94 File Offset: 0x0013AC94
+		// (set) Token: 0x060084B0 RID: 33968 RVA: 0x0013CAF5 File Offset: 0x0013ACF5
 		[Nullable(2)]
 		public virtual IItemGetUiConfigSpecialQuest UiConfig
 		{
@@ -157,24 +155,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005031 RID: 20529
+		// Token: 0x04005464 RID: 21604
 		[Nullable(2)]
 		protected new GetItem FbInstance;
 
-		// Token: 0x04005032 RID: 20530
+		// Token: 0x04005465 RID: 21605
 		[Nullable(2)]
 		protected GetItem_SetValue PocoInterface;
 
-		// Token: 0x04005033 RID: 20531
+		// Token: 0x04005466 RID: 21606
 		private List<IItemData> _ItemsCache;
 
-		// Token: 0x04005034 RID: 20532
+		// Token: 0x04005467 RID: 21607
 		private bool _ItemsInited;
 
-		// Token: 0x04005035 RID: 20533
+		// Token: 0x04005468 RID: 21608
 		private IItemGetUiConfigSpecialQuest _UiConfigCache;
 
-		// Token: 0x04005036 RID: 20534
+		// Token: 0x04005469 RID: 21609
 		private bool _UiConfigInited;
 	}
 }

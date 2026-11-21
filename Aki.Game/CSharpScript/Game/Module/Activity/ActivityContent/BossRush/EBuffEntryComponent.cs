@@ -2,26 +2,26 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x02006906 RID: 26886
+	// Token: 0x02005856 RID: 22614
 	internal enum EBuffEntryComponent
 	{
-		// Token: 0x04022E6F RID: 142959
+		// Token: 0x0401D6CB RID: 120523
 		EntryButton,
-		// Token: 0x04022E70 RID: 142960
+		// Token: 0x0401D6CC RID: 120524
 		NoneItem,
-		// Token: 0x04022E71 RID: 142961
+		// Token: 0x0401D6CD RID: 120525
 		NotNoneItem,
-		// Token: 0x04022E72 RID: 142962
+		// Token: 0x0401D6CE RID: 120526
 		SelectBuffTipsText,
-		// Token: 0x04022E73 RID: 142963
+		// Token: 0x0401D6CF RID: 120527
 		BuffTexture,
-		// Token: 0x04022E74 RID: 142964
+		// Token: 0x0401D6D0 RID: 120528
 		BuffName,
-		// Token: 0x04022E75 RID: 142965
+		// Token: 0x0401D6D1 RID: 120529
 		BuffDesc,
-		// Token: 0x04022E76 RID: 142966
+		// Token: 0x0401D6D2 RID: 120530
 		SwitchButton,
-		// Token: 0x04022E77 RID: 142967
+		// Token: 0x0401D6D3 RID: 120531
 		LockItem
 	}
 }

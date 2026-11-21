@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F71 RID: 20337
+	// Token: 0x02003F3A RID: 16186
 	public enum EQuickHackTimeScaleMode
 	{
-		// Token: 0x0401BAD1 RID: 113361
+		// Token: 0x040164A6 RID: 91302
 		WorldTimeDilation,
-		// Token: 0x0401BAD2 RID: 113362
+		// Token: 0x040164A7 RID: 91303
 		AbsoluteTimeStop
 	}
 }

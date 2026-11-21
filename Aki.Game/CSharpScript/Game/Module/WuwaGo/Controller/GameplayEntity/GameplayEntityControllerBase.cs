@@ -14,18 +14,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 {
-	// Token: 0x0200476D RID: 18285
+	// Token: 0x0200369E RID: 13982
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class GameplayEntityControllerBase : ExecutableUnitBase
 	{
-		// Token: 0x0602FCCF RID: 195791 RVA: 0x00B12F8B File Offset: 0x00B1118B
+		// Token: 0x06024499 RID: 148633 RVA: 0x00A42F4B File Offset: 0x00A4114B
 		protected GameplayEntityControllerBase(WuWaGoGameplayEntityBase entity, WuWaGoGameData gameData, WuWaGoGameModeBase gameMode)
 		{
 		}
 
-		// Token: 0x17007766 RID: 30566
-		// (get) Token: 0x0602FCD0 RID: 195792 RVA: 0x00B12FA8 File Offset: 0x00B111A8
+		// Token: 0x17004A22 RID: 18978
+		// (get) Token: 0x0602449A RID: 148634 RVA: 0x00A42F68 File Offset: 0x00A41168
 		public override int Id
 		{
 			get
@@ -34,8 +34,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			}
 		}
 
-		// Token: 0x17007767 RID: 30567
-		// (get) Token: 0x0602FCD1 RID: 195793 RVA: 0x00B12FB5 File Offset: 0x00B111B5
+		// Token: 0x17004A23 RID: 18979
+		// (get) Token: 0x0602449B RID: 148635 RVA: 0x00A42F75 File Offset: 0x00A41175
 		public override Enum Type
 		{
 			get
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			}
 		}
 
-		// Token: 0x0602FCD2 RID: 195794 RVA: 0x00B12FC7 File Offset: 0x00B111C7
+		// Token: 0x0602449C RID: 148636 RVA: 0x00A42F87 File Offset: 0x00A41187
 		public virtual UniTask SyncRuntimePresentationAfterCoordinateChanged()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602FCD3 RID: 195795 RVA: 0x00B12FD0 File Offset: 0x00B111D0
+		// Token: 0x0602449D RID: 148637 RVA: 0x00A42F90 File Offset: 0x00A41190
 		protected override bool OnCreate()
 		{
 			EntityHandle entityHandle = this.Entity.EntityHandle;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return true;
 		}
 
-		// Token: 0x0602FCD4 RID: 195796 RVA: 0x00B13054 File Offset: 0x00B11254
+		// Token: 0x0602449E RID: 148638 RVA: 0x00A43014 File Offset: 0x00A41214
 		protected override void OnDestroy()
 		{
 			EntityHandle entityHandle = this.Entity.EntityHandle;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			}
 		}
 
-		// Token: 0x0602FCD5 RID: 195797 RVA: 0x00B130D8 File Offset: 0x00B112D8
+		// Token: 0x0602449F RID: 148639 RVA: 0x00A43098 File Offset: 0x00A41298
 		protected bool ResetActorToEntityConfigInitialTransform()
 		{
 			IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(this.Entity.EntityPbDataId), null);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return false;
 		}
 
-		// Token: 0x0602FCD6 RID: 195798 RVA: 0x00B13242 File Offset: 0x00B11442
+		// Token: 0x060244A0 RID: 148640 RVA: 0x00A43202 File Offset: 0x00A41402
 		protected void RegisterAttachedGridMoveParticipant()
 		{
 			WuWaGoGrid gridById = this.GameData.GetGridById(this.Entity.StandGridId);
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			gridById.RegisterMoveParticipant(this.GetAttachedGridMoveParticipant());
 		}
 
-		// Token: 0x0602FCD7 RID: 195799 RVA: 0x00B1326A File Offset: 0x00B1146A
+		// Token: 0x060244A1 RID: 148641 RVA: 0x00A4322A File Offset: 0x00A4142A
 		protected void UnregisterAttachedGridMoveParticipant()
 		{
 			WuWaGoGrid gridById = this.GameData.GetGridById(this.Entity.StandGridId);
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			gridById.UnregisterMoveParticipant(this.GetAttachedGridMoveParticipant());
 		}
 
-		// Token: 0x0602FCD8 RID: 195800 RVA: 0x00B13294 File Offset: 0x00B11494
+		// Token: 0x060244A2 RID: 148642 RVA: 0x00A43254 File Offset: 0x00A41454
 		protected IWuWaGoGridMoveParticipant GetAttachedGridMoveParticipant()
 		{
 			if (this.AttachedGridMoveParticipantInner == null)
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return this.AttachedGridMoveParticipantInner;
 		}
 
-		// Token: 0x0602FCD9 RID: 195801 RVA: 0x00B1331F File Offset: 0x00B1151F
+		// Token: 0x060244A3 RID: 148643 RVA: 0x00A432DF File Offset: 0x00A414DF
 		[return: Nullable(2)]
 		protected IWuWaGoWorldMoveTarget CreateAttachedGridWorldMoveTarget(IWuWaGoGridRelocationContext context)
 		{
@@ -190,13 +190,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			};
 		}
 
-		// Token: 0x0602FCDA RID: 195802 RVA: 0x00B13341 File Offset: 0x00B11541
+		// Token: 0x060244A4 RID: 148644 RVA: 0x00A43301 File Offset: 0x00A41501
 		protected void CommitAttachedGridMove(IWuWaGoGridRelocationContext context)
 		{
 			this.Entity.SetCoordinate(context.TargetCoordinate);
 		}
 
-		// Token: 0x0602FCDB RID: 195803 RVA: 0x00B13354 File Offset: 0x00B11554
+		// Token: 0x060244A5 RID: 148645 RVA: 0x00A43314 File Offset: 0x00A41514
 		protected void PostAudioEventOnEntity(EWuWaGoAudioEventIndex index)
 		{
 			string audioEvent = WuWaGoGlobal.GetAudioEvent(index);
@@ -215,17 +215,17 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			}));
 		}
 
-		// Token: 0x04019C96 RID: 105622
+		// Token: 0x04014346 RID: 82758
 		[Nullable(2)]
 		private IWuWaGoGridMoveParticipant AttachedGridMoveParticipantInner;
 
-		// Token: 0x04019C97 RID: 105623
+		// Token: 0x04014347 RID: 82759
 		public readonly WuWaGoGameplayEntityBase Entity = entity;
 
-		// Token: 0x04019C98 RID: 105624
+		// Token: 0x04014348 RID: 82760
 		public readonly WuWaGoGameData GameData = gameData;
 
-		// Token: 0x04019C99 RID: 105625
+		// Token: 0x04014349 RID: 82761
 		protected readonly WuWaGoGameModeBase GameMode = gameMode;
 	}
 }

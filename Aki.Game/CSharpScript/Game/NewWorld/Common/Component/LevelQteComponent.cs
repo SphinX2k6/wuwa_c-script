@@ -7,12 +7,12 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x02007085 RID: 28805
+	// Token: 0x02006206 RID: 25094
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelQteComponent : EntityComponent
 	{
-		// Token: 0x0604627E RID: 287358 RVA: 0x01186B3C File Offset: 0x01184D3C
+		// Token: 0x0603C49C RID: 246940 RVA: 0x011300A0 File Offset: 0x0112E2A0
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			LevelQteComponent levelQteComponent = args.GetP1<CreateEntityData>().GetParam<LevelQteComponent>() as LevelQteComponent;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604627F RID: 287359 RVA: 0x01186B78 File Offset: 0x01184D78
+		// Token: 0x0603C49D RID: 246941 RVA: 0x011300DC File Offset: 0x0112E2DC
 		protected override bool OnEnd()
 		{
 			CommonQteContextBase activeQteContext = this.ActiveQteContext;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046280 RID: 287360 RVA: 0x01186BA4 File Offset: 0x01184DA4
+		// Token: 0x0603C49E RID: 246942 RVA: 0x01130108 File Offset: 0x0112E308
 		public bool StartQte(bool restartIfSameQteExist = false)
 		{
 			CommonQteContextBase activeQteContext = this.ActiveQteContext;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x06046281 RID: 287361 RVA: 0x01186C4E File Offset: 0x01184E4E
+		// Token: 0x0603C49F RID: 246943 RVA: 0x011301B2 File Offset: 0x0112E3B2
 		public void StopQte()
 		{
 			CommonQteContextBase activeQteContext = this.ActiveQteContext;
@@ -62,14 +62,14 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046282 RID: 287362 RVA: 0x01186C79 File Offset: 0x01184E79
+		// Token: 0x0603C4A0 RID: 246944 RVA: 0x011301DD File Offset: 0x0112E3DD
 		public bool IsQteActive()
 		{
 			CommonQteContextBase activeQteContext = this.ActiveQteContext;
 			return activeQteContext != null && activeQteContext.IsActive();
 		}
 
-		// Token: 0x06046283 RID: 287363 RVA: 0x01186C8C File Offset: 0x01184E8C
+		// Token: 0x0603C4A1 RID: 246945 RVA: 0x011301F0 File Offset: 0x0112E3F0
 		private void OnQteSuccess(CommonQteContextBase context)
 		{
 			this.ActiveQteContext = null;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046284 RID: 287364 RVA: 0x01186D24 File Offset: 0x01184F24
+		// Token: 0x0603C4A2 RID: 246946 RVA: 0x01130288 File Offset: 0x0112E488
 		private void OnQteFailed(CommonQteContextBase context)
 		{
 			this.ActiveQteContext = null;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046285 RID: 287365 RVA: 0x01186DBC File Offset: 0x01184FBC
+		// Token: 0x0603C4A3 RID: 246947 RVA: 0x01130320 File Offset: 0x0112E520
 		[NullableContext(1)]
 		private EntityContext CreateEntityContext()
 		{
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return entityContext;
 		}
 
-		// Token: 0x06046286 RID: 287366 RVA: 0x01186DEC File Offset: 0x01184FEC
+		// Token: 0x0603C4A4 RID: 246948 RVA: 0x01130350 File Offset: 0x0112E550
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -131,49 +131,50 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			LevelQteComponent levelQteComponent = (LevelQteComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (levelQteComponent.CreatureDataComp == null)
 			{
-				if (levelQteComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("QteConfig"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (levelQteComponent.QteConfig == null)
-				{
-					this.QteConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IQteType>(this.QteConfig), "QteConfig"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActiveQteContext"))
+			if (levelQteComponent.QteConfig == null)
 			{
-				if (levelQteComponent.ActiveQteContext == null)
-				{
-					this.ActiveQteContext = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CommonQteContextBase>(this.ActiveQteContext), "ActiveQteContext"))
-				{
-					return false;
-				}
+				this.QteConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.QteConfig), "QteConfig"))
+			{
+				return false;
+			}
+			if (levelQteComponent.ActiveQteContext == null)
+			{
+				this.ActiveQteContext = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActiveQteContext), "ActiveQteContext"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024C06 RID: 150534
+		// Token: 0x170071C8 RID: 29128
+		// (get) Token: 0x0603C4A5 RID: 246949 RVA: 0x011303F1 File Offset: 0x0112E5F1
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FEC1 RID: 130753
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04024C07 RID: 150535
+		// Token: 0x0401FEC2 RID: 130754
 		private IQteType QteConfig;
 
-		// Token: 0x04024C08 RID: 150536
+		// Token: 0x0401FEC3 RID: 130755
 		private CommonQteContextBase ActiveQteContext;
 	}
 }

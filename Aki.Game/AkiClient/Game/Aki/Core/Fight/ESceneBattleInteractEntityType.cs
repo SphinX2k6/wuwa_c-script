@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Core.Fight
 {
-	// Token: 0x02004009 RID: 16393
+	// Token: 0x0200326D RID: 12909
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Core/Fight/ESceneBattleInteractEntityType.ESceneBattleInteractEntityType")]
 	public enum ESceneBattleInteractEntityType : byte
 	{
-		// Token: 0x040159DA RID: 88538
+		// Token: 0x0401163B RID: 71227
 		Player,
-		// Token: 0x040159DB RID: 88539
+		// Token: 0x0401163C RID: 71228
 		Summoned,
-		// Token: 0x040159DC RID: 88540
+		// Token: 0x0401163D RID: 71229
 		Monster,
-		// Token: 0x040159DD RID: 88541
+		// Token: 0x0401163E RID: 71230
 		Weapon,
-		// Token: 0x040159DE RID: 88542
+		// Token: 0x0401163F RID: 71231
 		ESceneBattleInteractEntityType_MAX
 	}
 }

@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200009F RID: 159
+// Token: 0x020000A1 RID: 161
 [AttributeUsage(AttributeTargets.Class)]
 public class ControllerAttribute : Attribute
 {
-	// Token: 0x1700009E RID: 158
-	// (get) Token: 0x060004BB RID: 1211 RVA: 0x0001B13C File Offset: 0x0001933C
-	// (set) Token: 0x060004BC RID: 1212 RVA: 0x0001B144 File Offset: 0x00019344
+	// Token: 0x170000B0 RID: 176
+	// (get) Token: 0x060004FC RID: 1276 RVA: 0x0001B824 File Offset: 0x00019A24
+	// (set) Token: 0x060004FD RID: 1277 RVA: 0x0001B82C File Offset: 0x00019A2C
 	public int Priority { get; private set; }
 
-	// Token: 0x060004BD RID: 1213 RVA: 0x0001B14D File Offset: 0x0001934D
+	// Token: 0x060004FE RID: 1278 RVA: 0x0001B835 File Offset: 0x00019A35
 	public ControllerAttribute(int priority = 0)
 	{
 		this.Priority = priority;

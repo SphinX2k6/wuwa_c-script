@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200656D RID: 25965
+	// Token: 0x02006BDB RID: 27611
 	public struct IDeliverItemProbeCollectiblesConfig : IFlatbufferObject
 	{
-		// Token: 0x1700C0F0 RID: 49392
-		// (get) Token: 0x0602D0BE RID: 184510 RVA: 0x0062E5E6 File Offset: 0x0062C7E6
+		// Token: 0x1700CA86 RID: 51846
+		// (get) Token: 0x0602F864 RID: 194660 RVA: 0x0067ABAC File Offset: 0x00678DAC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D0BF RID: 184511 RVA: 0x0062E5F3 File Offset: 0x0062C7F3
+		// Token: 0x0602F865 RID: 194661 RVA: 0x0067ABB9 File Offset: 0x00678DB9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D0C0 RID: 184512 RVA: 0x0062E5FC File Offset: 0x0062C7FC
+		// Token: 0x0602F866 RID: 194662 RVA: 0x0067ABC0 File Offset: 0x00678DC0
 		public static IDeliverItemProbeCollectiblesConfig GetRootAsIDeliverItemProbeCollectiblesConfig(ByteBuffer _bb)
 		{
 			return IDeliverItemProbeCollectiblesConfig.GetRootAsIDeliverItemProbeCollectiblesConfig(_bb, default(IDeliverItemProbeCollectiblesConfig));
 		}
 
-		// Token: 0x0602D0C1 RID: 184513 RVA: 0x0062E618 File Offset: 0x0062C818
+		// Token: 0x0602F867 RID: 194663 RVA: 0x0067ABDC File Offset: 0x00678DDC
 		public static IDeliverItemProbeCollectiblesConfig GetRootAsIDeliverItemProbeCollectiblesConfig(ByteBuffer _bb, IDeliverItemProbeCollectiblesConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D0C2 RID: 184514 RVA: 0x0062E635 File Offset: 0x0062C835
+		// Token: 0x0602F868 RID: 194664 RVA: 0x0067ABF9 File Offset: 0x00678DF9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D0C3 RID: 184515 RVA: 0x0062E644 File Offset: 0x0062C844
+		// Token: 0x0602F869 RID: 194665 RVA: 0x0067AC08 File Offset: 0x00678E08
 		public IDeliverItemProbeCollectiblesConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C0F1 RID: 49393
-		// (get) Token: 0x0602D0C4 RID: 184516 RVA: 0x0062E654 File Offset: 0x0062C854
+		// Token: 0x1700CA87 RID: 51847
+		// (get) Token: 0x0602F86A RID: 194666 RVA: 0x0067AC18 File Offset: 0x00678E18
 		public IHandInItemViewStyle? ViewStyle
 		{
 			get
@@ -62,77 +62,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C0F2 RID: 49394
-		// (get) Token: 0x0602D0C5 RID: 184517 RVA: 0x0062E6B4 File Offset: 0x0062C8B4
-		public IItemCellIndependentDeliverType? DeliverType
+		// Token: 0x1700CA88 RID: 51848
+		// (get) Token: 0x0602F86B RID: 194667 RVA: 0x0067AC78 File Offset: 0x00678E78
+		public int CollectiblesDetectionId
 		{
 			get
 			{
 				int num = this.__p.__offset(6);
 				if (num == 0)
 				{
-					return null;
+					return 0;
 				}
-				return new IItemCellIndependentDeliverType?(default(IItemCellIndependentDeliverType).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x1700C0F3 RID: 49395
-		// (get) Token: 0x0602D0C6 RID: 184518 RVA: 0x0062E714 File Offset: 0x0062C914
-		public IPlaceholderCollectibleMarkerType? MarkerType
+		// Token: 0x0602F86C RID: 194668 RVA: 0x0067ACB4 File Offset: 0x00678EB4
+		public static Offset<IDeliverItemProbeCollectiblesConfig> CreateIDeliverItemProbeCollectiblesConfig(FlatBufferBuilder builder, Offset<IHandInItemViewStyle> ViewStyleOffset = default(Offset<IHandInItemViewStyle>), int CollectiblesDetectionId = 0)
 		{
-			get
-			{
-				int num = this.__p.__offset(8);
-				if (num == 0)
-				{
-					return null;
-				}
-				return new IPlaceholderCollectibleMarkerType?(default(IPlaceholderCollectibleMarkerType).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
-			}
-		}
-
-		// Token: 0x0602D0C7 RID: 184519 RVA: 0x0062E771 File Offset: 0x0062C971
-		public static Offset<IDeliverItemProbeCollectiblesConfig> CreateIDeliverItemProbeCollectiblesConfig(FlatBufferBuilder builder, Offset<IHandInItemViewStyle> ViewStyleOffset = default(Offset<IHandInItemViewStyle>), Offset<IItemCellIndependentDeliverType> DeliverTypeOffset = default(Offset<IItemCellIndependentDeliverType>), Offset<IPlaceholderCollectibleMarkerType> MarkerTypeOffset = default(Offset<IPlaceholderCollectibleMarkerType>))
-		{
-			builder.StartTable(3);
-			IDeliverItemProbeCollectiblesConfig.AddMarkerType(builder, MarkerTypeOffset);
-			IDeliverItemProbeCollectiblesConfig.AddDeliverType(builder, DeliverTypeOffset);
+			builder.StartTable(2);
+			IDeliverItemProbeCollectiblesConfig.AddCollectiblesDetectionId(builder, CollectiblesDetectionId);
 			IDeliverItemProbeCollectiblesConfig.AddViewStyle(builder, ViewStyleOffset);
 			return IDeliverItemProbeCollectiblesConfig.EndIDeliverItemProbeCollectiblesConfig(builder);
 		}
 
-		// Token: 0x0602D0C8 RID: 184520 RVA: 0x0062E795 File Offset: 0x0062C995
+		// Token: 0x0602F86D RID: 194669 RVA: 0x0067ACD1 File Offset: 0x00678ED1
 		public static void StartIDeliverItemProbeCollectiblesConfig(FlatBufferBuilder builder)
 		{
-			builder.StartTable(3);
+			builder.StartTable(2);
 		}
 
-		// Token: 0x0602D0C9 RID: 184521 RVA: 0x0062E79E File Offset: 0x0062C99E
+		// Token: 0x0602F86E RID: 194670 RVA: 0x0067ACDA File Offset: 0x00678EDA
 		public static void AddViewStyle(FlatBufferBuilder builder, Offset<IHandInItemViewStyle> viewStyleOffset)
 		{
 			builder.AddOffset(0, viewStyleOffset.Value, 0);
 		}
 
-		// Token: 0x0602D0CA RID: 184522 RVA: 0x0062E7AE File Offset: 0x0062C9AE
-		public static void AddDeliverType(FlatBufferBuilder builder, Offset<IItemCellIndependentDeliverType> deliverTypeOffset)
+		// Token: 0x0602F86F RID: 194671 RVA: 0x0067ACEA File Offset: 0x00678EEA
+		public static void AddCollectiblesDetectionId(FlatBufferBuilder builder, int collectiblesDetectionId)
 		{
-			builder.AddOffset(1, deliverTypeOffset.Value, 0);
+			builder.AddInt(1, collectiblesDetectionId, 0);
 		}
 
-		// Token: 0x0602D0CB RID: 184523 RVA: 0x0062E7BE File Offset: 0x0062C9BE
-		public static void AddMarkerType(FlatBufferBuilder builder, Offset<IPlaceholderCollectibleMarkerType> markerTypeOffset)
-		{
-			builder.AddOffset(2, markerTypeOffset.Value, 0);
-		}
-
-		// Token: 0x0602D0CC RID: 184524 RVA: 0x0062E7CE File Offset: 0x0062C9CE
+		// Token: 0x0602F870 RID: 194672 RVA: 0x0067ACF5 File Offset: 0x00678EF5
 		public static Offset<IDeliverItemProbeCollectiblesConfig> EndIDeliverItemProbeCollectiblesConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IDeliverItemProbeCollectiblesConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602D0CD RID: 184525 RVA: 0x0062E7DC File Offset: 0x0062C9DC
+		// Token: 0x0602F871 RID: 194673 RVA: 0x0067AD04 File Offset: 0x00678F04
 		public IDeliverItemProbeCollectiblesConfigT UnPack()
 		{
 			IDeliverItemProbeCollectiblesConfigT deliverItemProbeCollectiblesConfigT = new IDeliverItemProbeCollectiblesConfigT();
@@ -140,15 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return deliverItemProbeCollectiblesConfigT;
 		}
 
-		// Token: 0x0602D0CE RID: 184526 RVA: 0x0062E7F8 File Offset: 0x0062C9F8
+		// Token: 0x0602F872 RID: 194674 RVA: 0x0067AD20 File Offset: 0x00678F20
 		public void UnPackTo(IDeliverItemProbeCollectiblesConfigT _o)
 		{
 			_o.ViewStyle = ((this.ViewStyle != null) ? this.ViewStyle.Value.UnPack() : null);
-			_o.DeliverType = ((this.DeliverType != null) ? this.DeliverType.Value.UnPack() : null);
-			_o.MarkerType = ((this.MarkerType != null) ? this.MarkerType.Value.UnPack() : null);
+			_o.CollectiblesDetectionId = this.CollectiblesDetectionId;
 		}
 
-		// Token: 0x0602D0CF RID: 184527 RVA: 0x0062E898 File Offset: 0x0062CA98
+		// Token: 0x0602F873 RID: 194675 RVA: 0x0067AD68 File Offset: 0x00678F68
 		public static Offset<IDeliverItemProbeCollectiblesConfig> Pack(FlatBufferBuilder builder, IDeliverItemProbeCollectiblesConfigT _o)
 		{
 			if (_o == null)
@@ -156,12 +133,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				return default(Offset<IDeliverItemProbeCollectiblesConfig>);
 			}
 			Offset<IHandInItemViewStyle> viewStyleOffset = (_o.ViewStyle == null) ? default(Offset<IHandInItemViewStyle>) : IHandInItemViewStyle.Pack(builder, _o.ViewStyle);
-			Offset<IItemCellIndependentDeliverType> deliverTypeOffset = (_o.DeliverType == null) ? default(Offset<IItemCellIndependentDeliverType>) : IItemCellIndependentDeliverType.Pack(builder, _o.DeliverType);
-			Offset<IPlaceholderCollectibleMarkerType> markerTypeOffset = (_o.MarkerType == null) ? default(Offset<IPlaceholderCollectibleMarkerType>) : IPlaceholderCollectibleMarkerType.Pack(builder, _o.MarkerType);
-			return IDeliverItemProbeCollectiblesConfig.CreateIDeliverItemProbeCollectiblesConfig(builder, viewStyleOffset, deliverTypeOffset, markerTypeOffset);
+			return IDeliverItemProbeCollectiblesConfig.CreateIDeliverItemProbeCollectiblesConfig(builder, viewStyleOffset, _o.CollectiblesDetectionId);
 		}
 
-		// Token: 0x04010BC2 RID: 68546
+		// Token: 0x040119DD RID: 72157
 		private Table __p;
 	}
 }

@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Core.Fight;
 using UnrealEngine;
 
-// Token: 0x02002DAE RID: 11694
+// Token: 0x02002308 RID: 8968
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletDataMain
 {
-	// Token: 0x06018963 RID: 100707 RVA: 0x0064855C File Offset: 0x0064675C
+	// Token: 0x0601620B RID: 90635 RVA: 0x0066E344 File Offset: 0x0066C544
 	public BulletDataMain(SReBulletDataMain data, string bulletRowName, [Nullable(new byte[]
 	{
 		2,
@@ -42,7 +42,7 @@ public class BulletDataMain
 		this.SimpleBullet = BulletDataMain.CheckSimpleBullet(this);
 	}
 
-	// Token: 0x06018964 RID: 100708 RVA: 0x006486C0 File Offset: 0x006468C0
+	// Token: 0x0601620C RID: 90636 RVA: 0x0066E4A8 File Offset: 0x0066C6A8
 	private static bool CheckSimpleBullet(BulletDataMain data)
 	{
 		BulletDataBase @base = data.Base;
@@ -80,7 +80,7 @@ public class BulletDataMain
 		return false;
 	}
 
-	// Token: 0x06018965 RID: 100709 RVA: 0x006489BE File Offset: 0x00646BBE
+	// Token: 0x0601620D RID: 90637 RVA: 0x0066E7A6 File Offset: 0x0066C9A6
 	public bool CheckValid()
 	{
 		BulletDataLogic logic = this.Logic;
@@ -92,7 +92,7 @@ public class BulletDataMain
 		return true;
 	}
 
-	// Token: 0x06018966 RID: 100710 RVA: 0x006489E0 File Offset: 0x00646BE0
+	// Token: 0x0601620E RID: 90638 RVA: 0x0066E7C8 File Offset: 0x0066C9C8
 	private bool CheckIsOverSizeForTrace()
 	{
 		switch (this.Base.Shape)
@@ -119,7 +119,7 @@ public class BulletDataMain
 		return this.Base.IsOversizeForTrace;
 	}
 
-	// Token: 0x06018967 RID: 100711 RVA: 0x00648AF8 File Offset: 0x00646CF8
+	// Token: 0x0601620F RID: 90639 RVA: 0x0066E8E0 File Offset: 0x0066CAE0
 	public void Preload()
 	{
 		this.Base.Preload();
@@ -131,61 +131,61 @@ public class BulletDataMain
 		this.Render.Preload();
 	}
 
-	// Token: 0x0400B682 RID: 46722
+	// Token: 0x0400B9FC RID: 47612
 	private const float TRACE_SIZE_MAX = 600f;
 
-	// Token: 0x0400B683 RID: 46723
+	// Token: 0x0400B9FD RID: 47613
 	public SReBulletDataMain Data;
 
-	// Token: 0x0400B684 RID: 46724
+	// Token: 0x0400B9FE RID: 47614
 	public string BulletRowName;
 
-	// Token: 0x0400B685 RID: 46725
+	// Token: 0x0400B9FF RID: 47615
 	public FName BulletFName;
 
-	// Token: 0x0400B686 RID: 46726
+	// Token: 0x0400BA00 RID: 47616
 	public string BulletName;
 
-	// Token: 0x0400B687 RID: 46727
+	// Token: 0x0400BA01 RID: 47617
 	public readonly bool SimpleBullet;
 
-	// Token: 0x0400B688 RID: 46728
+	// Token: 0x0400BA02 RID: 47618
 	public readonly BulletDataBase Base;
 
-	// Token: 0x0400B689 RID: 46729
+	// Token: 0x0400BA03 RID: 47619
 	public readonly BulletDataLogic Logic;
 
-	// Token: 0x0400B68A RID: 46730
+	// Token: 0x0400BA04 RID: 47620
 	public readonly BulletDataAimed Aimed;
 
-	// Token: 0x0400B68B RID: 46731
+	// Token: 0x0400BA05 RID: 47621
 	public readonly BulletDataMove Move;
 
-	// Token: 0x0400B68C RID: 46732
+	// Token: 0x0400BA06 RID: 47622
 	public readonly BulletDataRender Render;
 
-	// Token: 0x0400B68D RID: 46733
+	// Token: 0x0400BA07 RID: 47623
 	public readonly BulletDataTimeScale TimeScale;
 
-	// Token: 0x0400B68E RID: 46734
+	// Token: 0x0400BA08 RID: 47624
 	public readonly BulletDataExecution Execution;
 
-	// Token: 0x0400B68F RID: 46735
+	// Token: 0x0400BA09 RID: 47625
 	public readonly BulletDataScale Scale;
 
-	// Token: 0x0400B690 RID: 46736
+	// Token: 0x0400BA0A RID: 47626
 	public readonly BulletDataSummon Summon;
 
-	// Token: 0x0400B691 RID: 46737
+	// Token: 0x0400BA0B RID: 47627
 	public readonly BulletDataChild[] Children;
 
-	// Token: 0x0400B692 RID: 46738
+	// Token: 0x0400BA0C RID: 47628
 	public readonly BulletDataObstacle Obstacle;
 
-	// Token: 0x0400B693 RID: 46739
+	// Token: 0x0400BA0D RID: 47629
 	public readonly BulletDataInteract Interact;
 
-	// Token: 0x0400B694 RID: 46740
+	// Token: 0x0400BA0E RID: 47630
 	[Nullable(new byte[]
 	{
 		2,
@@ -193,6 +193,6 @@ public class BulletDataMain
 	})]
 	public readonly List<BulletActionOverride> SpecialActionOverrides;
 
-	// Token: 0x0400B695 RID: 46741
+	// Token: 0x0400BA0F RID: 47631
 	private static readonly string StrNone = "None";
 }

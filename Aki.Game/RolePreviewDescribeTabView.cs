@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CA4 RID: 7332
+// Token: 0x02001163 RID: 4451
 [NullableContext(2)]
 [Nullable(0)]
 public class RolePreviewDescribeTabView : UiTabViewBase
 {
-	// Token: 0x0600DD6D RID: 56685 RVA: 0x0033C89C File Offset: 0x0033AA9C
+	// Token: 0x0600B183 RID: 45443 RVA: 0x00347CE8 File Offset: 0x00345EE8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -39,14 +39,14 @@ public class RolePreviewDescribeTabView : UiTabViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600DD6E RID: 56686 RVA: 0x0033C9CB File Offset: 0x0033ABCB
+	// Token: 0x0600B184 RID: 45444 RVA: 0x00347E17 File Offset: 0x00346017
 	protected override void OnStart()
 	{
 		this.InitText();
 		this.PlayMontageStart();
 	}
 
-	// Token: 0x0600DD6F RID: 56687 RVA: 0x0033C9D9 File Offset: 0x0033ABD9
+	// Token: 0x0600B185 RID: 45445 RVA: 0x00347E25 File Offset: 0x00346025
 	protected override void OnBeforeDestroy()
 	{
 		this.CharacterVoiceTitleText = null;
@@ -55,7 +55,7 @@ public class RolePreviewDescribeTabView : UiTabViewBase
 		this.AttributeText = null;
 	}
 
-	// Token: 0x0600DD70 RID: 56688 RVA: 0x0033C9F8 File Offset: 0x0033ABF8
+	// Token: 0x0600B186 RID: 45446 RVA: 0x00347E44 File Offset: 0x00346044
 	private void InitText()
 	{
 		RoleInstance curSelectMainRoleInstance = RoleModel.Instance.GetCurSelectMainRoleInstance();
@@ -76,63 +76,63 @@ public class RolePreviewDescribeTabView : UiTabViewBase
 		this.SetAttributeInfo();
 	}
 
-	// Token: 0x0600DD71 RID: 56689 RVA: 0x0033CAE3 File Offset: 0x0033ACE3
+	// Token: 0x0600B187 RID: 45447 RVA: 0x00347F2F File Offset: 0x0034612F
 	protected virtual void SetCharacterVoiceInfo()
 	{
 		this.CharacterVoiceTitleText.SetUIActive(false);
 		this.CharacterVoiceNameText.SetUIActive(false);
 	}
 
-	// Token: 0x0600DD72 RID: 56690 RVA: 0x0033CAFD File Offset: 0x0033ACFD
+	// Token: 0x0600B188 RID: 45448 RVA: 0x00347F49 File Offset: 0x00346149
 	protected virtual void SetAttributeInfo()
 	{
 		this.AttributeIconTexture.SetUIActive(false);
 		this.AttributeText.SetUIActive(false);
 	}
 
-	// Token: 0x0600DD73 RID: 56691 RVA: 0x0033CB17 File Offset: 0x0033AD17
+	// Token: 0x0600B189 RID: 45449 RVA: 0x00347F63 File Offset: 0x00346163
 	protected void PlayMontageStart()
 	{
 		RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Attribute_Perform, false, false, false);
 	}
 
-	// Token: 0x0600DD74 RID: 56692 RVA: 0x0033CB27 File Offset: 0x0033AD27
+	// Token: 0x0600B18A RID: 45450 RVA: 0x00347F73 File Offset: 0x00346173
 	protected override void OnBeforeShow()
 	{
 		this.PlayMontageStart();
 	}
 
-	// Token: 0x04006599 RID: 26009
+	// Token: 0x0400666A RID: 26218
 	protected UUIText CharacterVoiceTitleText;
 
-	// Token: 0x0400659A RID: 26010
+	// Token: 0x0400666B RID: 26219
 	protected UUIText CharacterVoiceNameText;
 
-	// Token: 0x0400659B RID: 26011
+	// Token: 0x0400666C RID: 26220
 	protected UUITexture AttributeIconTexture;
 
-	// Token: 0x0400659C RID: 26012
+	// Token: 0x0400666D RID: 26221
 	protected UUIText AttributeText;
 
-	// Token: 0x0200828B RID: 33419
+	// Token: 0x02007412 RID: 29714
 	[NullableContext(0)]
 	private enum ERolePreviewDescribeTabViewCom
 	{
-		// Token: 0x0402A974 RID: 174452
+		// Token: 0x04025C92 RID: 154770
 		NameText,
-		// Token: 0x0402A975 RID: 174453
+		// Token: 0x04025C93 RID: 154771
 		WeaponTypeText,
-		// Token: 0x0402A976 RID: 174454
+		// Token: 0x04025C94 RID: 154772
 		IntroductionText,
-		// Token: 0x0402A977 RID: 174455
+		// Token: 0x04025C95 RID: 154773
 		WeaponTitleText,
-		// Token: 0x0402A978 RID: 174456
+		// Token: 0x04025C96 RID: 154774
 		CharacterVoiceTitleText,
-		// Token: 0x0402A979 RID: 174457
+		// Token: 0x04025C97 RID: 154775
 		CharacterVoiceNameText,
-		// Token: 0x0402A97A RID: 174458
+		// Token: 0x04025C98 RID: 154776
 		AttributeIconTexture,
-		// Token: 0x0402A97B RID: 174459
+		// Token: 0x04025C99 RID: 154777
 		AttributeText
 	}
 }

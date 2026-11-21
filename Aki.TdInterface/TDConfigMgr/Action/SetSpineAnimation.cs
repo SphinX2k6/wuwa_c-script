@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021DA RID: 8666
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002445 RID: 9285
 	public class SetSpineAnimation : ActionParams
 	{
-		// Token: 0x0600BE6F RID: 48751 RVA: 0x001B6728 File Offset: 0x001B4928
+		// Token: 0x0600CA2B RID: 51755 RVA: 0x001CDDB4 File Offset: 0x001CBFB4
 		private SetSpineAnimation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BE70 RID: 48752 RVA: 0x001B6760 File Offset: 0x001B4960
+		// Token: 0x0600CA2C RID: 51756 RVA: 0x001CDDEC File Offset: 0x001CBFEC
 		public static SetSpineAnimation Create([Nullable(2)] SetSpineAnimation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE71 RID: 48753 RVA: 0x001B6773 File Offset: 0x001B4973
+		// Token: 0x0600CA2D RID: 51757 RVA: 0x001CDDFF File Offset: 0x001CBFFF
 		public static SetSpineAnimation CreateFromSetValue([Nullable(2)] SetSpineAnimation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE72 RID: 48754 RVA: 0x001B6786 File Offset: 0x001B4986
+		// Token: 0x0600CA2E RID: 51758 RVA: 0x001CDE12 File Offset: 0x001CC012
 		public SetSpineAnimation_SetValue ToSetValue()
 		{
 			return new SetSpineAnimation_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039D2 RID: 14802
-		// (get) Token: 0x0600BE73 RID: 48755 RVA: 0x001B679C File Offset: 0x001B499C
-		// (set) Token: 0x0600BE74 RID: 48756 RVA: 0x001B67FD File Offset: 0x001B49FD
+		// Token: 0x17003CC7 RID: 15559
+		// (get) Token: 0x0600CA2F RID: 51759 RVA: 0x001CDE28 File Offset: 0x001CC028
+		// (set) Token: 0x0600CA30 RID: 51760 RVA: 0x001CDE89 File Offset: 0x001CC089
 		public virtual IPlaySpineAnimation Config
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071A6 RID: 29094
+		// Token: 0x040077EF RID: 30703
 		[Nullable(2)]
 		protected new SetSpineAnimation FbInstance;
 
-		// Token: 0x040071A7 RID: 29095
+		// Token: 0x040077F0 RID: 30704
 		[Nullable(2)]
 		protected SetSpineAnimation_SetValue PocoInterface;
 
-		// Token: 0x040071A8 RID: 29096
+		// Token: 0x040077F1 RID: 30705
 		private IPlaySpineAnimation _ConfigCache;
 
-		// Token: 0x040071A9 RID: 29097
+		// Token: 0x040077F2 RID: 30706
 		private bool _ConfigInited;
 	}
 }

@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055A6 RID: 21926
+	// Token: 0x0200457C RID: 17788
 	public class RogueGetListItemData : IRogueGetListItemData
 	{
-		// Token: 0x17008686 RID: 34438
-		// (get) Token: 0x06037E0C RID: 228876 RVA: 0x00D3DC1F File Offset: 0x00D3BE1F
-		// (set) Token: 0x06037E0D RID: 228877 RVA: 0x00D3DC27 File Offset: 0x00D3BE27
+		// Token: 0x17005A4D RID: 23117
+		// (get) Token: 0x0602CD0A RID: 183562 RVA: 0x00C8B967 File Offset: 0x00C89B67
+		// (set) Token: 0x0602CD0B RID: 183563 RVA: 0x00C8B96F File Offset: 0x00C89B6F
 		public int ItemId { get; set; }
 
-		// Token: 0x17008687 RID: 34439
-		// (get) Token: 0x06037E0E RID: 228878 RVA: 0x00D3DC30 File Offset: 0x00D3BE30
-		// (set) Token: 0x06037E0F RID: 228879 RVA: 0x00D3DC38 File Offset: 0x00D3BE38
+		// Token: 0x17005A4E RID: 23118
+		// (get) Token: 0x0602CD0C RID: 183564 RVA: 0x00C8B978 File Offset: 0x00C89B78
+		// (set) Token: 0x0602CD0D RID: 183565 RVA: 0x00C8B980 File Offset: 0x00C89B80
 		public int ChangeCount { get; set; }
 	}
 }

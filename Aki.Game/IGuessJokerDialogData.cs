@@ -2,20 +2,20 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200102D RID: 4141
+// Token: 0x020004E1 RID: 1249
 [NullableContext(2)]
 public interface IGuessJokerDialogData
 {
-	// Token: 0x1700088D RID: 2189
-	// (get) Token: 0x06006A4E RID: 27214
+	// Token: 0x170008AD RID: 2221
+	// (get) Token: 0x06003DE3 RID: 15843
 	Func<EGuessJokerPlayerType, UUIItem> GetDialogItem { get; }
 
-	// Token: 0x1700088E RID: 2190
-	// (get) Token: 0x06006A4F RID: 27215
+	// Token: 0x170008AE RID: 2222
+	// (get) Token: 0x06003DE4 RID: 15844
 	Func<EGuessJokerPlayerType, UUIText> GetDialogText { get; }
 
-	// Token: 0x1700088F RID: 2191
-	// (get) Token: 0x06006A50 RID: 27216
+	// Token: 0x170008AF RID: 2223
+	// (get) Token: 0x06003DE5 RID: 15845
 	[Nullable(new byte[]
 	{
 		2,
@@ -29,8 +29,8 @@ public interface IGuessJokerDialogData
 		1
 	})] get; }
 
-	// Token: 0x17000890 RID: 2192
-	// (get) Token: 0x06006A51 RID: 27217
+	// Token: 0x170008B0 RID: 2224
+	// (get) Token: 0x06003DE6 RID: 15846
 	[Nullable(new byte[]
 	{
 		2,
@@ -42,7 +42,7 @@ public interface IGuessJokerDialogData
 		1
 	})] get; }
 
-	// Token: 0x17000891 RID: 2193
-	// (get) Token: 0x06006A52 RID: 27218
+	// Token: 0x170008B1 RID: 2225
+	// (get) Token: 0x06003DE7 RID: 15847
 	Action<EGuessJokerPlayerType> OnCancelDialogStartAnim { get; }
 }

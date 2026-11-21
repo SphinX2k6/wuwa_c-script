@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024F3 RID: 9459
+	// Token: 0x02002799 RID: 10137
 	public class Prompt : ActionParams
 	{
-		// Token: 0x0600D339 RID: 54073 RVA: 0x001F530E File Offset: 0x001F350E
-		[NullableContext(1)]
+		// Token: 0x0600E095 RID: 57493 RVA: 0x00210D06 File Offset: 0x0020EF06
 		public static Prompt Create(IPrompt? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B15 RID: 15125
-		// (get) Token: 0x0600D33A RID: 54074 RVA: 0x001F532D File Offset: 0x001F352D
+		// Token: 0x17003E11 RID: 15889
+		// (get) Token: 0x0600E096 RID: 57494 RVA: 0x00210D25 File Offset: 0x0020EF25
 		public virtual int GeneralTextId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073D1 RID: 29649
+		// Token: 0x04007A23 RID: 31267
 		private IPrompt Instance;
 	}
 }

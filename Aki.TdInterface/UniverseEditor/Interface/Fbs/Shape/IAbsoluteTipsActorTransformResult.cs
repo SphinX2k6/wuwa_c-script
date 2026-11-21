@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003BE0 RID: 15328
+	// Token: 0x02003FEC RID: 16364
 	public struct IAbsoluteTipsActorTransformResult : IFlatbufferObject
 	{
-		// Token: 0x17006922 RID: 26914
-		// (get) Token: 0x06015113 RID: 86291 RVA: 0x0030DB56 File Offset: 0x0030BD56
+		// Token: 0x17006ECA RID: 28362
+		// (get) Token: 0x06016609 RID: 91657 RVA: 0x003346DE File Offset: 0x003328DE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015114 RID: 86292 RVA: 0x0030DB63 File Offset: 0x0030BD63
+		// Token: 0x0601660A RID: 91658 RVA: 0x003346EB File Offset: 0x003328EB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015115 RID: 86293 RVA: 0x0030DB6C File Offset: 0x0030BD6C
+		// Token: 0x0601660B RID: 91659 RVA: 0x003346F4 File Offset: 0x003328F4
 		public static IAbsoluteTipsActorTransformResult GetRootAsIAbsoluteTipsActorTransformResult(ByteBuffer _bb)
 		{
 			return IAbsoluteTipsActorTransformResult.GetRootAsIAbsoluteTipsActorTransformResult(_bb, default(IAbsoluteTipsActorTransformResult));
 		}
 
-		// Token: 0x06015116 RID: 86294 RVA: 0x0030DB88 File Offset: 0x0030BD88
+		// Token: 0x0601660C RID: 91660 RVA: 0x00334710 File Offset: 0x00332910
 		public static IAbsoluteTipsActorTransformResult GetRootAsIAbsoluteTipsActorTransformResult(ByteBuffer _bb, IAbsoluteTipsActorTransformResult obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015117 RID: 86295 RVA: 0x0030DBA5 File Offset: 0x0030BDA5
+		// Token: 0x0601660D RID: 91661 RVA: 0x0033472D File Offset: 0x0033292D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015118 RID: 86296 RVA: 0x0030DBB4 File Offset: 0x0030BDB4
+		// Token: 0x0601660E RID: 91662 RVA: 0x0033473C File Offset: 0x0033293C
 		public IAbsoluteTipsActorTransformResult __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006923 RID: 26915
-		// (get) Token: 0x06015119 RID: 86297 RVA: 0x0030DBC4 File Offset: 0x0030BDC4
+		// Token: 0x17006ECB RID: 28363
+		// (get) Token: 0x0601660F RID: 91663 RVA: 0x0033474C File Offset: 0x0033294C
 		public bool IsSuccess
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006924 RID: 26916
-		// (get) Token: 0x0601511A RID: 86298 RVA: 0x0030DC04 File Offset: 0x0030BE04
+		// Token: 0x17006ECC RID: 28364
+		// (get) Token: 0x06016610 RID: 91664 RVA: 0x0033478C File Offset: 0x0033298C
 		public string Reason
 		{
 			get
@@ -73,20 +73,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x0601511B RID: 86299 RVA: 0x0030DC3B File Offset: 0x0030BE3B
+		// Token: 0x06016611 RID: 91665 RVA: 0x003347C3 File Offset: 0x003329C3
 		public Span<byte> GetReasonBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601511C RID: 86300 RVA: 0x0030DC4A File Offset: 0x0030BE4A
+		// Token: 0x06016612 RID: 91666 RVA: 0x003347D2 File Offset: 0x003329D2
 		public byte[] GetReasonArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x17006925 RID: 26917
-		// (get) Token: 0x0601511D RID: 86301 RVA: 0x0030DC58 File Offset: 0x0030BE58
+		// Token: 0x17006ECD RID: 28365
+		// (get) Token: 0x06016613 RID: 91667 RVA: 0x003347E0 File Offset: 0x003329E0
 		public ETipsActorTransformType Type
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006926 RID: 26918
-		// (get) Token: 0x0601511E RID: 86302 RVA: 0x0030DC94 File Offset: 0x0030BE94
+		// Token: 0x17006ECE RID: 28366
+		// (get) Token: 0x06016614 RID: 91668 RVA: 0x0033481C File Offset: 0x00332A1C
 		public IShapeTransform? TransformWorld
 		{
 			get
@@ -115,8 +115,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006927 RID: 26919
-		// (get) Token: 0x0601511F RID: 86303 RVA: 0x0030DCF4 File Offset: 0x0030BEF4
+		// Token: 0x17006ECF RID: 28367
+		// (get) Token: 0x06016615 RID: 91669 RVA: 0x0033487C File Offset: 0x00332A7C
 		public IHollowTipsActorComponent? HollowTipsActorComponent
 		{
 			get
@@ -130,7 +130,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015120 RID: 86304 RVA: 0x0030DD52 File Offset: 0x0030BF52
+		// Token: 0x06016616 RID: 91670 RVA: 0x003348DA File Offset: 0x00332ADA
 		public static Offset<IAbsoluteTipsActorTransformResult> CreateIAbsoluteTipsActorTransformResult(FlatBufferBuilder builder, bool IsSuccess = false, StringOffset ReasonOffset = default(StringOffset), ETipsActorTransformType Type = ETipsActorTransformType.Absolute, Offset<IShapeTransform> TransformWorldOffset = default(Offset<IShapeTransform>), Offset<IHollowTipsActorComponent> HollowTipsActorComponentOffset = default(Offset<IHollowTipsActorComponent>))
 		{
 			builder.StartTable(5);
@@ -142,49 +142,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IAbsoluteTipsActorTransformResult.EndIAbsoluteTipsActorTransformResult(builder);
 		}
 
-		// Token: 0x06015121 RID: 86305 RVA: 0x0030DD86 File Offset: 0x0030BF86
+		// Token: 0x06016617 RID: 91671 RVA: 0x0033490E File Offset: 0x00332B0E
 		public static void StartIAbsoluteTipsActorTransformResult(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06015122 RID: 86306 RVA: 0x0030DD8F File Offset: 0x0030BF8F
+		// Token: 0x06016618 RID: 91672 RVA: 0x00334917 File Offset: 0x00332B17
 		public static void AddIsSuccess(FlatBufferBuilder builder, bool isSuccess)
 		{
 			builder.AddBool(0, isSuccess, false);
 		}
 
-		// Token: 0x06015123 RID: 86307 RVA: 0x0030DD9A File Offset: 0x0030BF9A
+		// Token: 0x06016619 RID: 91673 RVA: 0x00334922 File Offset: 0x00332B22
 		public static void AddReason(FlatBufferBuilder builder, StringOffset reasonOffset)
 		{
 			builder.AddOffset(1, reasonOffset.Value, 0);
 		}
 
-		// Token: 0x06015124 RID: 86308 RVA: 0x0030DDAA File Offset: 0x0030BFAA
+		// Token: 0x0601661A RID: 91674 RVA: 0x00334932 File Offset: 0x00332B32
 		public static void AddType(FlatBufferBuilder builder, ETipsActorTransformType type)
 		{
 			builder.AddByte(2, (byte)type, 0);
 		}
 
-		// Token: 0x06015125 RID: 86309 RVA: 0x0030DDB5 File Offset: 0x0030BFB5
+		// Token: 0x0601661B RID: 91675 RVA: 0x0033493D File Offset: 0x00332B3D
 		public static void AddTransformWorld(FlatBufferBuilder builder, Offset<IShapeTransform> transformWorldOffset)
 		{
 			builder.AddOffset(3, transformWorldOffset.Value, 0);
 		}
 
-		// Token: 0x06015126 RID: 86310 RVA: 0x0030DDC5 File Offset: 0x0030BFC5
+		// Token: 0x0601661C RID: 91676 RVA: 0x0033494D File Offset: 0x00332B4D
 		public static void AddHollowTipsActorComponent(FlatBufferBuilder builder, Offset<IHollowTipsActorComponent> hollowTipsActorComponentOffset)
 		{
 			builder.AddOffset(4, hollowTipsActorComponentOffset.Value, 0);
 		}
 
-		// Token: 0x06015127 RID: 86311 RVA: 0x0030DDD5 File Offset: 0x0030BFD5
+		// Token: 0x0601661D RID: 91677 RVA: 0x0033495D File Offset: 0x00332B5D
 		public static Offset<IAbsoluteTipsActorTransformResult> EndIAbsoluteTipsActorTransformResult(FlatBufferBuilder builder)
 		{
 			return new Offset<IAbsoluteTipsActorTransformResult>(builder.EndTable());
 		}
 
-		// Token: 0x06015128 RID: 86312 RVA: 0x0030DDE4 File Offset: 0x0030BFE4
+		// Token: 0x0601661E RID: 91678 RVA: 0x0033496C File Offset: 0x00332B6C
 		public IAbsoluteTipsActorTransformResultT UnPack()
 		{
 			IAbsoluteTipsActorTransformResultT absoluteTipsActorTransformResultT = new IAbsoluteTipsActorTransformResultT();
@@ -192,7 +192,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return absoluteTipsActorTransformResultT;
 		}
 
-		// Token: 0x06015129 RID: 86313 RVA: 0x0030DE00 File Offset: 0x0030C000
+		// Token: 0x0601661F RID: 91679 RVA: 0x00334988 File Offset: 0x00332B88
 		public void UnPackTo(IAbsoluteTipsActorTransformResultT _o)
 		{
 			_o.IsSuccess = this.IsSuccess;
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			_o.HollowTipsActorComponent = ((this.HollowTipsActorComponent != null) ? this.HollowTipsActorComponent.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601512A RID: 86314 RVA: 0x0030DE90 File Offset: 0x0030C090
+		// Token: 0x06016620 RID: 91680 RVA: 0x00334A18 File Offset: 0x00332C18
 		public static Offset<IAbsoluteTipsActorTransformResult> Pack(FlatBufferBuilder builder, IAbsoluteTipsActorTransformResultT _o)
 		{
 			if (_o == null)
@@ -215,7 +215,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IAbsoluteTipsActorTransformResult.CreateIAbsoluteTipsActorTransformResult(builder, _o.IsSuccess, reasonOffset, _o.Type, transformWorldOffset, hollowTipsActorComponentOffset);
 		}
 
-		// Token: 0x0400B1A0 RID: 45472
+		// Token: 0x0400BB2B RID: 47915
 		private Table __p;
 	}
 }

@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x02002EC3 RID: 11971
+// Token: 0x02002416 RID: 9238
 public enum EMovementModeName
 {
-	// Token: 0x0400BF08 RID: 48904
+	// Token: 0x0400C2A3 RID: 49827
 	MOVE_None,
-	// Token: 0x0400BF09 RID: 48905
+	// Token: 0x0400C2A4 RID: 49828
 	MOVE_Walking,
-	// Token: 0x0400BF0A RID: 48906
+	// Token: 0x0400C2A5 RID: 49829
 	MOVE_NavWalking,
-	// Token: 0x0400BF0B RID: 48907
+	// Token: 0x0400C2A6 RID: 49830
 	MOVE_Falling,
-	// Token: 0x0400BF0C RID: 48908
+	// Token: 0x0400C2A7 RID: 49831
 	MOVE_Swimming,
-	// Token: 0x0400BF0D RID: 48909
+	// Token: 0x0400C2A8 RID: 49832
 	MOVE_Flying,
-	// Token: 0x0400BF0E RID: 48910
+	// Token: 0x0400C2A9 RID: 49833
 	MOVE_Custom,
-	// Token: 0x0400BF0F RID: 48911
+	// Token: 0x0400C2AA RID: 49834
 	MOVE_MAX
 }

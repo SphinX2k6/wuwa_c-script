@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Input;
 
-// Token: 0x020030BF RID: 12479
+// Token: 0x02002617 RID: 9751
 [NullableContext(1)]
 [Nullable(0)]
 public class InputLayerHelper
 {
-	// Token: 0x0601AB8A RID: 109450 RVA: 0x007337A8 File Offset: 0x007319A8
+	// Token: 0x06018599 RID: 99737 RVA: 0x00759114 File Offset: 0x00757314
 	public void Init(EInputLayer layerType)
 	{
 		this.InputLayer = InputController.Instance.CreateInputLayer(layerType);
@@ -17,7 +17,7 @@ public class InputLayerHelper
 		EventSystem.Instance.Add<VehiclePassengerInfo, bool>(EEventName.OnLeaveVehicle, new Action<VehiclePassengerInfo, bool>(this.OnLeaveVehicle));
 	}
 
-	// Token: 0x0601AB8B RID: 109451 RVA: 0x0073381C File Offset: 0x00731A1C
+	// Token: 0x0601859A RID: 99738 RVA: 0x00759188 File Offset: 0x00757388
 	public void Clear()
 	{
 		EventSystem.Instance.Remove(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -34,7 +34,7 @@ public class InputLayerHelper
 		}
 	}
 
-	// Token: 0x0601AB8C RID: 109452 RVA: 0x007338A5 File Offset: 0x00731AA5
+	// Token: 0x0601859B RID: 99739 RVA: 0x00759211 File Offset: 0x00757411
 	public void AddInputLayer()
 	{
 		if (this.IsEnable)
@@ -45,7 +45,7 @@ public class InputLayerHelper
 		this.RefreshInputLayer();
 	}
 
-	// Token: 0x0601AB8D RID: 109453 RVA: 0x007338BD File Offset: 0x00731ABD
+	// Token: 0x0601859C RID: 99740 RVA: 0x00759229 File Offset: 0x00757429
 	public void RemoveInputLayer()
 	{
 		if (!this.IsEnable)
@@ -56,32 +56,32 @@ public class InputLayerHelper
 		this.RefreshInputLayer();
 	}
 
-	// Token: 0x0601AB8E RID: 109454 RVA: 0x007338D5 File Offset: 0x00731AD5
+	// Token: 0x0601859D RID: 99741 RVA: 0x00759241 File Offset: 0x00757441
 	[NullableContext(2)]
 	public InputLayer GetInputLayer()
 	{
 		return this.InputLayer;
 	}
 
-	// Token: 0x0601AB8F RID: 109455 RVA: 0x007338DD File Offset: 0x00731ADD
+	// Token: 0x0601859E RID: 99742 RVA: 0x00759249 File Offset: 0x00757449
 	private void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 	{
 		this.RefreshInputLayer();
 	}
 
-	// Token: 0x0601AB90 RID: 109456 RVA: 0x007338E5 File Offset: 0x00731AE5
+	// Token: 0x0601859F RID: 99743 RVA: 0x00759251 File Offset: 0x00757451
 	private void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		this.RefreshInputLayer();
 	}
 
-	// Token: 0x0601AB91 RID: 109457 RVA: 0x007338ED File Offset: 0x00731AED
+	// Token: 0x060185A0 RID: 99744 RVA: 0x00759259 File Offset: 0x00757459
 	private void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		this.RefreshInputLayer();
 	}
 
-	// Token: 0x0601AB92 RID: 109458 RVA: 0x007338F8 File Offset: 0x00731AF8
+	// Token: 0x060185A1 RID: 99745 RVA: 0x00759264 File Offset: 0x00757464
 	private void RefreshInputLayer()
 	{
 		if (this.InputLayer == null)
@@ -140,13 +140,13 @@ public class InputLayerHelper
 		}
 	}
 
-	// Token: 0x0400CE5C RID: 52828
+	// Token: 0x0400D248 RID: 53832
 	[Nullable(2)]
 	private InputLayer InputLayer;
 
-	// Token: 0x0400CE5D RID: 52829
+	// Token: 0x0400D249 RID: 53833
 	private int LayerEntityId;
 
-	// Token: 0x0400CE5E RID: 52830
+	// Token: 0x0400D24A RID: 53834
 	private bool IsEnable;
 }

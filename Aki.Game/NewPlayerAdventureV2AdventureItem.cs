@@ -13,12 +13,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020013D0 RID: 5072
+// Token: 0x02000884 RID: 2180
 [NullableContext(1)]
 [Nullable(0)]
 internal class NewPlayerAdventureV2AdventureItem : GridProxyAbstract<int>
 {
-	// Token: 0x06008F1C RID: 36636 RVA: 0x001EE694 File Offset: 0x001EC894
+	// Token: 0x060062B1 RID: 25265 RVA: 0x001F71B4 File Offset: 0x001F53B4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ internal class NewPlayerAdventureV2AdventureItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06008F1D RID: 36637 RVA: 0x001EE7B0 File Offset: 0x001EC9B0
+	// Token: 0x060062B2 RID: 25266 RVA: 0x001F72D0 File Offset: 0x001F54D0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		NewPlayerAdventureV2AdventureItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -51,19 +51,19 @@ internal class NewPlayerAdventureV2AdventureItem : GridProxyAbstract<int>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008F1E RID: 36638 RVA: 0x001EE7F3 File Offset: 0x001EC9F3
+	// Token: 0x060062B3 RID: 25267 RVA: 0x001F7313 File Offset: 0x001F5513
 	protected override void OnStart()
 	{
 		this.RewardLayout = new GenericLayout<NewSoundDetectRewardItem, INewSoundDetectRewardItemData>(base.GetHorizontalLayout(3), new Func<NewSoundDetectRewardItem>(this.InitRewardItem), null, false, true);
 	}
 
-	// Token: 0x06008F1F RID: 36639 RVA: 0x001EE816 File Offset: 0x001ECA16
+	// Token: 0x060062B4 RID: 25268 RVA: 0x001F7336 File Offset: 0x001F5536
 	private NewSoundDetectRewardItem InitRewardItem()
 	{
 		return new NewSoundDetectRewardItem();
 	}
 
-	// Token: 0x06008F20 RID: 36640 RVA: 0x001EE820 File Offset: 0x001ECA20
+	// Token: 0x060062B5 RID: 25269 RVA: 0x001F7340 File Offset: 0x001F5540
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		GachaRoleDevelopIns? gachaRoleDevelopIns = ActivityRegressConfig.Instance.GetGachaRoleDevelopIns(data);
@@ -186,7 +186,7 @@ internal class NewPlayerAdventureV2AdventureItem : GridProxyAbstract<int>
 		this.RefreshRewardLayout(this.DataSilent);
 	}
 
-	// Token: 0x06008F21 RID: 36641 RVA: 0x001EEB8C File Offset: 0x001ECD8C
+	// Token: 0x060062B6 RID: 25270 RVA: 0x001F76AC File Offset: 0x001F58AC
 	private void ReportJumpLog()
 	{
 		GachaRoleDevelopIns? gachaRoleDevelopIns = ActivityRegressConfig.Instance.GetGachaRoleDevelopIns(this.GetGachaRoleDevelopInsId);
@@ -213,7 +213,7 @@ internal class NewPlayerAdventureV2AdventureItem : GridProxyAbstract<int>
 		LogReportController.Instance.LogReport(newPlayerAdventureJumpLogEvent);
 	}
 
-	// Token: 0x06008F22 RID: 36642 RVA: 0x001EEC64 File Offset: 0x001ECE64
+	// Token: 0x060062B7 RID: 25271 RVA: 0x001F7784 File Offset: 0x001F5984
 	private int GetActivityTimeLeft()
 	{
 		ActivityNewPlayerSupportActivityV2Controller activityNewPlayerSupportActivityV2Controller = ActivityManager.GetActivityController(ActivityType.NewPlayerSupportActivityV2) as ActivityNewPlayerSupportActivityV2Controller;
@@ -225,7 +225,7 @@ internal class NewPlayerAdventureV2AdventureItem : GridProxyAbstract<int>
 		return (int)Math.Round(Math.Max(0.0, (double)activityNewPlayerSupportActivityV2Data.GetDisplayRemainEndTime() - TimeUtil.Instance.GetServerTime()));
 	}
 
-	// Token: 0x06008F23 RID: 36643 RVA: 0x001EECB8 File Offset: 0x001ECEB8
+	// Token: 0x060062B8 RID: 25272 RVA: 0x001F77D8 File Offset: 0x001F59D8
 	private void OnClickLockBtn()
 	{
 		int? num = null;
@@ -277,19 +277,19 @@ internal class NewPlayerAdventureV2AdventureItem : GridProxyAbstract<int>
 		UiManager.Instance.OpenView(EUiViewName.CommonConditionView, param, null);
 	}
 
-	// Token: 0x06008F24 RID: 36644 RVA: 0x001EEE96 File Offset: 0x001ED096
+	// Token: 0x060062B9 RID: 25273 RVA: 0x001F79B6 File Offset: 0x001F5BB6
 	private void RefreshRewardLayout(DungeonDetectionRecord record)
 	{
 		this.RefreshRewardLayoutInternal(record.Conf);
 	}
 
-	// Token: 0x06008F25 RID: 36645 RVA: 0x001EEEA9 File Offset: 0x001ED0A9
+	// Token: 0x060062BA RID: 25274 RVA: 0x001F79C9 File Offset: 0x001F5BC9
 	private void RefreshRewardLayout(SilentAreaDetectionRecord record)
 	{
 		this.RefreshRewardLayoutInternal(record.Conf);
 	}
 
-	// Token: 0x06008F26 RID: 36646 RVA: 0x001EEEBC File Offset: 0x001ED0BC
+	// Token: 0x060062BB RID: 25275 RVA: 0x001F79DC File Offset: 0x001F5BDC
 	private void RefreshRewardLayoutInternal(object recordConf)
 	{
 		int curWorldLevel = WorldLevelModel.Instance.CurWorldLevel;
@@ -359,7 +359,7 @@ internal class NewPlayerAdventureV2AdventureItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06008F27 RID: 36647 RVA: 0x001EF0E8 File Offset: 0x001ED2E8
+	// Token: 0x060062BC RID: 25276 RVA: 0x001F7C08 File Offset: 0x001F5E08
 	private void OnClickJumpToBtn()
 	{
 		this.ReportJumpLog();
@@ -388,7 +388,7 @@ internal class NewPlayerAdventureV2AdventureItem : GridProxyAbstract<int>
 		this.HandlePreOpenDetection();
 	}
 
-	// Token: 0x06008F28 RID: 36648 RVA: 0x001EF1CC File Offset: 0x001ED3CC
+	// Token: 0x060062BD RID: 25277 RVA: 0x001F7CEC File Offset: 0x001F5EEC
 	private void HandlePreOpenDetection()
 	{
 		if (OnlineModel.Instance.GetIsTeamModel())
@@ -422,7 +422,7 @@ internal class NewPlayerAdventureV2AdventureItem : GridProxyAbstract<int>
 		this.HandlePreOpenDetectionConfirmAction();
 	}
 
-	// Token: 0x06008F29 RID: 36649 RVA: 0x001EF2B0 File Offset: 0x001ED4B0
+	// Token: 0x060062BE RID: 25278 RVA: 0x001F7DD0 File Offset: 0x001F5FD0
 	private void HandlePreOpenDetectionConfirmAction()
 	{
 		if (this.DataDungeon != null)
@@ -435,25 +435,25 @@ internal class NewPlayerAdventureV2AdventureItem : GridProxyAbstract<int>
 		AdventureGuideController.Instance.HandlePreOpenDetection(conf2.Id, ESoundAreaDataType.SilentArea, conf2.PreOpenId);
 	}
 
-	// Token: 0x06008F2B RID: 36651 RVA: 0x001EF318 File Offset: 0x001ED518
+	// Token: 0x060062C0 RID: 25280 RVA: 0x001F7E38 File Offset: 0x001F6038
 	[CompilerGenerated]
 	private void <HandlePreOpenDetection>g__ConfirmFunction|18_0()
 	{
 		this.HandlePreOpenDetectionConfirmAction();
 	}
 
-	// Token: 0x04003F5E RID: 16222
+	// Token: 0x04003FF6 RID: 16374
 	[Nullable(2)]
 	private DungeonDetectionRecord DataDungeon;
 
-	// Token: 0x04003F5F RID: 16223
+	// Token: 0x04003FF7 RID: 16375
 	[Nullable(2)]
 	private SilentAreaDetectionRecord DataSilent;
 
-	// Token: 0x04003F60 RID: 16224
+	// Token: 0x04003FF8 RID: 16376
 	private int GetGachaRoleDevelopInsId;
 
-	// Token: 0x04003F61 RID: 16225
+	// Token: 0x04003FF9 RID: 16377
 	[Nullable(new byte[]
 	{
 		2,
@@ -462,11 +462,11 @@ internal class NewPlayerAdventureV2AdventureItem : GridProxyAbstract<int>
 	})]
 	private GenericLayout<NewSoundDetectRewardItem, INewSoundDetectRewardItemData> RewardLayout;
 
-	// Token: 0x04003F62 RID: 16226
+	// Token: 0x04003FFA RID: 16378
 	[Nullable(2)]
 	private NewPlayerAdventureV2Tag AdventureTag;
 
-	// Token: 0x04003F63 RID: 16227
+	// Token: 0x04003FFB RID: 16379
 	[Nullable(2)]
 	public Action OnClickJumpToCallBack;
 }

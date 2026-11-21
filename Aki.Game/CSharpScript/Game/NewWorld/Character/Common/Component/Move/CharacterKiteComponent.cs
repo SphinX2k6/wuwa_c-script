@@ -15,14 +15,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070E5 RID: 28901
+	// Token: 0x02006395 RID: 25493
 	[NullableContext(1)]
 	[Nullable(0)]
-	public class CharacterKiteComponent : EntityComponent, IComponentDependency
+	public class CharacterKiteComponent : EntityComponent
 	{
-		// Token: 0x17009CBA RID: 40122
-		// (get) Token: 0x060468B9 RID: 288953 RVA: 0x011BB9BF File Offset: 0x011B9BBF
-		public static Type[] Dependencies
+		// Token: 0x1700753D RID: 30013
+		// (get) Token: 0x0603DCAC RID: 253100 RVA: 0x011EAE83 File Offset: 0x011E9083
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468BA RID: 288954 RVA: 0x011BB9D4 File Offset: 0x011B9BD4
+		// Token: 0x0603DCAD RID: 253101 RVA: 0x011EAE98 File Offset: 0x011E9098
 		protected void OnMoveStateChanged(global::ECharMoveState oldMoveState, global::ECharMoveState newMoveState)
 		{
 			if (oldMoveState == global::ECharMoveState.Kite)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468BB RID: 288955 RVA: 0x011BB9F8 File Offset: 0x011B9BF8
+		// Token: 0x0603DCAE RID: 253102 RVA: 0x011EAEBC File Offset: 0x011E90BC
 		public void KiteMove(float deltaSeconds)
 		{
 			if (SeamlessTravelModel.Instance.GetIsKeepingCurrentMovementMode() || TeleportModel.Instance.GetIsKeepingCurrentMovementMode())
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			});
 		}
 
-		// Token: 0x060468BC RID: 288956 RVA: 0x011BBCC0 File Offset: 0x011B9EC0
+		// Token: 0x0603DCAF RID: 253103 RVA: 0x011EB184 File Offset: 0x011E9384
 		private void KiteMoveOld(float deltaSeconds)
 		{
 			FVector targetPrevPos = UKismetMathLibrary.WD_WorldToLocal(GlobalData.World, this.TargetPrevPos.ToUeVector(false));
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			UKuroMovementBPLibrary.KuroKite(deltaSeconds, this.MoveComp.CharacterMovement, targetPrevPos, targetNextPos, 300f, 900f, 1200f, 18000f, 0.98f, ref this.RefTargetForward, 240f, 0.9f);
 		}
 
-		// Token: 0x060468BD RID: 288957 RVA: 0x011BBD40 File Offset: 0x011B9F40
+		// Token: 0x0603DCB0 RID: 253104 RVA: 0x011EB204 File Offset: 0x011E9404
 		private void KiteMoveNew(float deltaSeconds)
 		{
 			UCharacterMovementComponent characterMovement = this.MoveComp.CharacterMovement;
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.KiteDistToTarget = global::Vector.Dist(tmpTargetPos, actorComp.ActorLocationProxy);
 		}
 
-		// Token: 0x060468BE RID: 288958 RVA: 0x011BBF10 File Offset: 0x011BA110
+		// Token: 0x0603DCB1 RID: 253105 RVA: 0x011EB3D4 File Offset: 0x011E95D4
 		private void UpdateFacing(float deltaSeconds, global::Vector targetPos, BaseActorComponent actorComp)
 		{
 			CharacterKiteComponent.TmpActorForward.DeepCopy(actorComp.ActorForwardProxy);
@@ -273,13 +273,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			actorComp.SetActorRotation(CharacterKiteComponent.TmpRotator.ToUeRotator(), "KiteMoveNew.Facing", false);
 		}
 
-		// Token: 0x060468BF RID: 288959 RVA: 0x011BC11B File Offset: 0x011BA31B
+		// Token: 0x0603DCB2 RID: 253106 RVA: 0x011EB5DF File Offset: 0x011E97DF
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x060468C0 RID: 288960 RVA: 0x011BC11E File Offset: 0x011BA31E
+		// Token: 0x0603DCB3 RID: 253107 RVA: 0x011EB5E2 File Offset: 0x011E97E2
 		protected override bool OnStart()
 		{
 			this.MoveComp = base.Entity.GetComponent<CharacterMoveComponent>();
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x060468C1 RID: 288961 RVA: 0x011BC154 File Offset: 0x011BA354
+		// Token: 0x0603DCB4 RID: 253108 RVA: 0x011EB618 File Offset: 0x011E9818
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget<global::ECharMoveState, global::ECharMoveState>(base.Entity, EEventName.CharOnUnifiedMoveStateChanged, new Action<global::ECharMoveState, global::ECharMoveState>(this.OnMoveStateChanged));
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x060468C2 RID: 288962 RVA: 0x011BC180 File Offset: 0x011BA380
+		// Token: 0x0603DCB5 RID: 253109 RVA: 0x011EB644 File Offset: 0x011E9844
 		[NullableContext(2)]
 		public unsafe bool EnterKite(GrapplingHookPointComponent target)
 		{
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return false;
 		}
 
-		// Token: 0x060468C3 RID: 288963 RVA: 0x011BC3D4 File Offset: 0x011BA5D4
+		// Token: 0x0603DCB6 RID: 253110 RVA: 0x011EB898 File Offset: 0x011E9A98
 		[NullableContext(2)]
 		public unsafe void EnterKiteOnlyMonster(GrapplingHookPointComponent hookComp, Action onSuccess = null, Action onFailure = null)
 		{
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			Log.Instance.Error(ELogModule.Character, ELogAuthor.CWZ, "[CharacterKiteComponent.EnterKiteOnlyMonster] 执行失败，没有creatureDataId", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060468C4 RID: 288964 RVA: 0x011BC630 File Offset: 0x011BA830
+		// Token: 0x0603DCB7 RID: 253111 RVA: 0x011EBAF4 File Offset: 0x011E9CF4
 		private void RemoveKiteCue()
 		{
 			if (this.KiteHookCueHandle != 0)
@@ -492,7 +492,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468C5 RID: 288965 RVA: 0x011BC668 File Offset: 0x011BA868
+		// Token: 0x0603DCB8 RID: 253112 RVA: 0x011EBB2C File Offset: 0x011E9D2C
 		[NullableContext(2)]
 		private unsafe void ExitKiteOnlyMonster(GrapplingHookPointComponent target)
 		{
@@ -549,7 +549,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468C6 RID: 288966 RVA: 0x011BC84C File Offset: 0x011BAA4C
+		// Token: 0x0603DCB9 RID: 253113 RVA: 0x011EBD10 File Offset: 0x011E9F10
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -557,242 +557,233 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 				return false;
 			}
 			CharacterKiteComponent characterKiteComponent = (CharacterKiteComponent)componentTemplate;
-			if (base.CanResetComponentProperty("MoveComp"))
+			if (characterKiteComponent.MoveComp == null)
 			{
-				if (characterKiteComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
+				this.MoveComp = null;
 			}
-			if (base.CanResetComponentProperty("TargetPrevPos") && characterKiteComponent.TargetPrevPos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TargetPrevPos), "TargetPrevPos"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CurrentTarget"))
-			{
-				if (characterKiteComponent.CurrentTarget == null)
-				{
-					this.CurrentTarget = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GrapplingHookPointComponent>(this.CurrentTarget), "CurrentTarget"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LastTargetEndCount"))
-			{
-				this.LastTargetEndCount = characterKiteComponent.LastTargetEndCount;
-			}
-			if (base.CanResetComponentProperty("LastTargetMoveBrokenCount"))
-			{
-				this.LastTargetMoveBrokenCount = characterKiteComponent.LastTargetMoveBrokenCount;
-			}
-			if (base.CanResetComponentProperty("PrevLocation") && characterKiteComponent.PrevLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PrevLocation), "PrevLocation"))
+			if (characterKiteComponent.TargetPrevPos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetPrevPos), "TargetPrevPos"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("PrevLocationTime"))
+			if (characterKiteComponent.CurrentTarget == null)
 			{
-				this.PrevLocationTime = characterKiteComponent.PrevLocationTime;
+				this.CurrentTarget = null;
 			}
-			if (base.CanResetComponentProperty("PrevLocationBlockCount"))
-			{
-				this.PrevLocationBlockCount = characterKiteComponent.PrevLocationBlockCount;
-			}
-			if (base.CanResetComponentProperty("RefTargetForward"))
-			{
-				this.RefTargetForward = characterKiteComponent.RefTargetForward;
-			}
-			if (base.CanResetComponentProperty("UseNewKiteMode"))
-			{
-				this.UseNewKiteMode = characterKiteComponent.UseNewKiteMode;
-			}
-			if (base.CanResetComponentProperty("KiteVelocity") && characterKiteComponent.KiteVelocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.KiteVelocity), "KiteVelocity"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentTarget), "CurrentTarget"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("KiteDistToTarget"))
-			{
-				this.KiteDistToTarget = characterKiteComponent.KiteDistToTarget;
-			}
-			if (base.CanResetComponentProperty("TargetForward") && characterKiteComponent.TargetForward != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TargetForward), "TargetForward"))
+			this.LastTargetEndCount = characterKiteComponent.LastTargetEndCount;
+			this.LastTargetMoveBrokenCount = characterKiteComponent.LastTargetMoveBrokenCount;
+			if (characterKiteComponent.PrevLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PrevLocation), "PrevLocation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TargetForwardInited"))
+			this.PrevLocationTime = characterKiteComponent.PrevLocationTime;
+			this.PrevLocationBlockCount = characterKiteComponent.PrevLocationBlockCount;
+			this.RefTargetForward = characterKiteComponent.RefTargetForward;
+			this.UseNewKiteMode = characterKiteComponent.UseNewKiteMode;
+			if (characterKiteComponent.KiteVelocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.KiteVelocity), "KiteVelocity"))
 			{
-				this.TargetForwardInited = characterKiteComponent.TargetForwardInited;
+				return false;
 			}
-			if (base.CanResetComponentProperty("KiteConfigData"))
+			this.KiteDistToTarget = characterKiteComponent.KiteDistToTarget;
+			if (characterKiteComponent.TargetForward != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetForward), "TargetForward"))
 			{
-				if (characterKiteComponent.KiteConfigData == null)
-				{
-					this.KiteConfigData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterKiteComponent.KiteConfig>(this.KiteConfigData), "KiteConfigData"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("InMonsterKiteMove"))
+			this.TargetForwardInited = characterKiteComponent.TargetForwardInited;
+			if (characterKiteComponent.KiteConfigData == null)
 			{
-				this.InMonsterKiteMove = characterKiteComponent.InMonsterKiteMove;
+				this.KiteConfigData = null;
 			}
-			if (base.CanResetComponentProperty("KiteHookCueHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.KiteConfigData), "KiteConfigData"))
 			{
-				this.KiteHookCueHandle = characterKiteComponent.KiteHookCueHandle;
+				return false;
 			}
+			this.InMonsterKiteMove = characterKiteComponent.InMonsterKiteMove;
+			this.KiteHookCueHandle = characterKiteComponent.KiteHookCueHandle;
 			return true;
 		}
 
-		// Token: 0x04024FF7 RID: 151543
+		// Token: 0x1700753E RID: 30014
+		// (get) Token: 0x0603DCBA RID: 253114 RVA: 0x011EBEB1 File Offset: 0x011EA0B1
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700753F RID: 30015
+		// (get) Token: 0x0603DCBB RID: 253115 RVA: 0x011EBEB4 File Offset: 0x011EA0B4
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007540 RID: 30016
+		// (get) Token: 0x0603DCBC RID: 253116 RVA: 0x011EBEB7 File Offset: 0x011EA0B7
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020C8C RID: 134284
 		private const float KITE_MIN_ACCEL_DIST = 300f;
 
-		// Token: 0x04024FF8 RID: 151544
+		// Token: 0x04020C8D RID: 134285
 		private const float KITE_MAX_ACCEL_DIST = 900f;
 
-		// Token: 0x04024FF9 RID: 151545
+		// Token: 0x04020C8E RID: 134286
 		private const float KITE_MIN_ACCEL = 1200f;
 
-		// Token: 0x04024FFA RID: 151546
+		// Token: 0x04020C8F RID: 134287
 		private const float KITE_MAX_ACCEL = 18000f;
 
-		// Token: 0x04024FFB RID: 151547
+		// Token: 0x04020C90 RID: 134288
 		private const float KITE_FRICTION = 0.98f;
 
-		// Token: 0x04024FFC RID: 151548
+		// Token: 0x04020C91 RID: 134289
 		private const float KITE_FACING_LERP_SPEED = 240f;
 
-		// Token: 0x04024FFD RID: 151549
+		// Token: 0x04020C92 RID: 134290
 		private const float KITE_FACING_LERP_RATE = 0.9f;
 
-		// Token: 0x04024FFE RID: 151550
+		// Token: 0x04020C93 RID: 134291
 		private const float KITE_MAX_BLOCK = 1f;
 
-		// Token: 0x04024FFF RID: 151551
+		// Token: 0x04020C94 RID: 134292
 		private const float BLOCK_DIST_THRESHOLD_SQUARED = 40000f;
 
-		// Token: 0x04025000 RID: 151552
+		// Token: 0x04020C95 RID: 134293
 		private const int KITE_BLOCK_COUNT = 3;
 
-		// Token: 0x04025001 RID: 151553
+		// Token: 0x04020C96 RID: 134294
 		private static readonly int hookKeepAttachedTag = GameplayTagDefine.EGameplayTagId["关卡.Common.表现.钩锁不自动脱离"];
 
-		// Token: 0x04025002 RID: 151554
+		// Token: 0x04020C97 RID: 134295
 		private const long HOOK_BUFF_EFFECT_CUE = 7000000100L;
 
-		// Token: 0x04025003 RID: 151555
+		// Token: 0x04020C98 RID: 134296
 		[Nullable(2)]
 		private CharacterMoveComponent MoveComp;
 
-		// Token: 0x04025004 RID: 151556
+		// Token: 0x04020C99 RID: 134297
 		private readonly global::Vector TargetPrevPos = global::Vector.Create();
 
-		// Token: 0x04025005 RID: 151557
+		// Token: 0x04020C9A RID: 134298
 		[Nullable(2)]
 		private GrapplingHookPointComponent CurrentTarget;
 
-		// Token: 0x04025006 RID: 151558
+		// Token: 0x04020C9B RID: 134299
 		private int LastTargetEndCount;
 
-		// Token: 0x04025007 RID: 151559
+		// Token: 0x04020C9C RID: 134300
 		private int LastTargetMoveBrokenCount;
 
-		// Token: 0x04025008 RID: 151560
+		// Token: 0x04020C9D RID: 134301
 		private readonly global::Vector PrevLocation = global::Vector.Create();
 
-		// Token: 0x04025009 RID: 151561
+		// Token: 0x04020C9E RID: 134302
 		private float PrevLocationTime;
 
-		// Token: 0x0402500A RID: 151562
+		// Token: 0x04020C9F RID: 134303
 		private int PrevLocationBlockCount;
 
-		// Token: 0x0402500B RID: 151563
+		// Token: 0x04020CA0 RID: 134304
 		private FVector RefTargetForward;
 
-		// Token: 0x0402500C RID: 151564
+		// Token: 0x04020CA1 RID: 134305
 		private bool UseNewKiteMode = true;
 
-		// Token: 0x0402500D RID: 151565
+		// Token: 0x04020CA2 RID: 134306
 		private readonly global::Vector KiteVelocity = global::Vector.Create();
 
-		// Token: 0x0402500E RID: 151566
+		// Token: 0x04020CA3 RID: 134307
 		private double KiteDistToTarget;
 
-		// Token: 0x0402500F RID: 151567
+		// Token: 0x04020CA4 RID: 134308
 		private readonly global::Vector TargetForward = global::Vector.Create();
 
-		// Token: 0x04025010 RID: 151568
+		// Token: 0x04020CA5 RID: 134309
 		private bool TargetForwardInited;
 
-		// Token: 0x04025011 RID: 151569
+		// Token: 0x04020CA6 RID: 134310
 		[Nullable(2)]
 		private CharacterKiteComponent.KiteConfig KiteConfigData;
 
-		// Token: 0x04025012 RID: 151570
+		// Token: 0x04020CA7 RID: 134311
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TmpTargetPos = global::Vector.Create();
 
-		// Token: 0x04025013 RID: 151571
+		// Token: 0x04020CA8 RID: 134312
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TmpGravityDelta = global::Vector.Create();
 
-		// Token: 0x04025014 RID: 151572
+		// Token: 0x04020CA9 RID: 134313
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TmpTentativePos = global::Vector.Create();
 
-		// Token: 0x04025015 RID: 151573
+		// Token: 0x04020CAA RID: 134314
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TmpMoveDelta = global::Vector.Create();
 
-		// Token: 0x04025016 RID: 151574
+		// Token: 0x04020CAB RID: 134315
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TmpToTarget = global::Vector.Create();
 
-		// Token: 0x04025017 RID: 151575
+		// Token: 0x04020CAC RID: 134316
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TmpNewTargetForward = global::Vector.Create();
 
-		// Token: 0x04025018 RID: 151576
+		// Token: 0x04020CAD RID: 134317
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TmpActorForward = global::Vector.Create();
 
-		// Token: 0x04025019 RID: 151577
+		// Token: 0x04020CAE RID: 134318
 		[StaticVariableRuleIgnore]
 		private static readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x0402501A RID: 151578
+		// Token: 0x04020CAF RID: 134319
 		[StaticVariableRuleIgnore]
 		private static readonly Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x0402501B RID: 151579
+		// Token: 0x04020CB0 RID: 134320
 		[StaticVariableRuleIgnore]
 		private static readonly global::Rotator TmpRotator = global::Rotator.Create();
 
-		// Token: 0x0402501C RID: 151580
+		// Token: 0x04020CB1 RID: 134321
 		private bool InMonsterKiteMove;
 
-		// Token: 0x0402501D RID: 151581
+		// Token: 0x04020CB2 RID: 134322
 		private int KiteHookCueHandle;
 
-		// Token: 0x0200CE70 RID: 52848
+		// Token: 0x0200BB69 RID: 47977
 		[NullableContext(0)]
 		private class KiteConfig
 		{
-			// Token: 0x0403E250 RID: 254544
+			// Token: 0x040399F5 RID: 236021
 			public float Gravity;
 
-			// Token: 0x0403E251 RID: 254545
+			// Token: 0x040399F6 RID: 236022
 			public float InertiaDecay;
 
-			// Token: 0x0403E252 RID: 254546
+			// Token: 0x040399F7 RID: 236023
 			public float MinDist;
 
-			// Token: 0x0403E253 RID: 254547
+			// Token: 0x040399F8 RID: 236024
 			public float ShrinkSpeed;
 		}
 	}

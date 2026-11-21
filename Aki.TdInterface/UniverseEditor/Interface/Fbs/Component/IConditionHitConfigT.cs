@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FF2 RID: 20466
+	// Token: 0x02005551 RID: 21841
 	public class IConditionHitConfigT
 	{
-		// Token: 0x17009444 RID: 37956
-		// (get) Token: 0x06020B5D RID: 133981 RVA: 0x0048C4D3 File Offset: 0x0048A6D3
-		// (set) Token: 0x06020B5E RID: 133982 RVA: 0x0048C4DB File Offset: 0x0048A6DB
+		// Token: 0x17009C25 RID: 39973
+		// (get) Token: 0x06022A7D RID: 141949 RVA: 0x004C5F23 File Offset: 0x004C4123
+		// (set) Token: 0x06022A7E RID: 141950 RVA: 0x004C5F2B File Offset: 0x004C412B
 		public IConditionGroupT Conditions { get; set; }
 
-		// Token: 0x17009445 RID: 37957
-		// (get) Token: 0x06020B5F RID: 133983 RVA: 0x0048C4E4 File Offset: 0x0048A6E4
-		// (set) Token: 0x06020B60 RID: 133984 RVA: 0x0048C4EC File Offset: 0x0048A6EC
+		// Token: 0x17009C26 RID: 39974
+		// (get) Token: 0x06022A7F RID: 141951 RVA: 0x004C5F34 File Offset: 0x004C4134
+		// (set) Token: 0x06022A80 RID: 141952 RVA: 0x004C5F3C File Offset: 0x004C413C
 		public string State { get; set; }
 
-		// Token: 0x06020B61 RID: 133985 RVA: 0x0048C4F5 File Offset: 0x0048A6F5
+		// Token: 0x06022A81 RID: 141953 RVA: 0x004C5F45 File Offset: 0x004C4145
 		public IConditionHitConfigT()
 		{
 			this.Conditions = null;

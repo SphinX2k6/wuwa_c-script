@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200101C RID: 4124
+	// Token: 0x02001104 RID: 4356
 	public struct RogueRoomPool : IFlatbufferObject
 	{
-		// Token: 0x170030FB RID: 12539
-		// (get) Token: 0x0600C499 RID: 50329 RVA: 0x002F1340 File Offset: 0x002EF540
+		// Token: 0x17003176 RID: 12662
+		// (get) Token: 0x0600CAE3 RID: 51939 RVA: 0x0030D348 File Offset: 0x0030B548
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C49A RID: 50330 RVA: 0x002F134D File Offset: 0x002EF54D
+		// Token: 0x0600CAE4 RID: 51940 RVA: 0x0030D355 File Offset: 0x0030B555
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C49B RID: 50331 RVA: 0x002F1354 File Offset: 0x002EF554
+		// Token: 0x0600CAE5 RID: 51941 RVA: 0x0030D35C File Offset: 0x0030B55C
 		public static RogueRoomPool GetRootAsRogueRoomPool(ByteBuffer _bb)
 		{
 			return RogueRoomPool.GetRootAsRogueRoomPool(_bb, default(RogueRoomPool));
 		}
 
-		// Token: 0x0600C49C RID: 50332 RVA: 0x002F1370 File Offset: 0x002EF570
+		// Token: 0x0600CAE6 RID: 51942 RVA: 0x0030D378 File Offset: 0x0030B578
 		public static RogueRoomPool GetRootAsRogueRoomPool(ByteBuffer _bb, RogueRoomPool obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C49D RID: 50333 RVA: 0x002F138D File Offset: 0x002EF58D
+		// Token: 0x0600CAE7 RID: 51943 RVA: 0x0030D395 File Offset: 0x0030B595
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C49E RID: 50334 RVA: 0x002F139C File Offset: 0x002EF59C
+		// Token: 0x0600CAE8 RID: 51944 RVA: 0x0030D3A4 File Offset: 0x0030B5A4
 		public RogueRoomPool __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170030FC RID: 12540
-		// (get) Token: 0x0600C49F RID: 50335 RVA: 0x002F13AC File Offset: 0x002EF5AC
+		// Token: 0x17003177 RID: 12663
+		// (get) Token: 0x0600CAE9 RID: 51945 RVA: 0x0030D3B4 File Offset: 0x0030B5B4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170030FD RID: 12541
-		// (get) Token: 0x0600C4A0 RID: 50336 RVA: 0x002F13E8 File Offset: 0x002EF5E8
+		// Token: 0x17003178 RID: 12664
+		// (get) Token: 0x0600CAEA RID: 51946 RVA: 0x0030D3F0 File Offset: 0x0030B5F0
 		public int BehaviorTree
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170030FE RID: 12542
-		// (get) Token: 0x0600C4A1 RID: 50337 RVA: 0x002F1424 File Offset: 0x002EF624
+		// Token: 0x17003179 RID: 12665
+		// (get) Token: 0x0600CAEB RID: 51947 RVA: 0x0030D42C File Offset: 0x0030B62C
 		public string RoomsMusicState
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C4A2 RID: 50338 RVA: 0x002F145B File Offset: 0x002EF65B
+		// Token: 0x0600CAEC RID: 51948 RVA: 0x0030D463 File Offset: 0x0030B663
 		public Span<byte> GetRoomsMusicStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600C4A3 RID: 50339 RVA: 0x002F146A File Offset: 0x002EF66A
+		// Token: 0x0600CAED RID: 51949 RVA: 0x0030D472 File Offset: 0x0030B672
 		public byte[] GetRoomsMusicStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0400510C RID: 20748
+		// Token: 0x040056F4 RID: 22260
 		private Table __p;
 	}
 }

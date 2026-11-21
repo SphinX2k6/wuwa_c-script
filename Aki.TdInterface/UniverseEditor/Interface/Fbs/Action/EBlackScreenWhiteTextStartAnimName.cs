@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F24 RID: 24356
+	// Token: 0x02006568 RID: 25960
 	public enum EBlackScreenWhiteTextStartAnimName : byte
 	{
-		// Token: 0x0400FC3C RID: 64572
+		// Token: 0x040109B2 RID: 68018
 		Start01,
-		// Token: 0x0400FC3D RID: 64573
+		// Token: 0x040109B3 RID: 68019
 		Start02,
-		// Token: 0x0400FC3E RID: 64574
+		// Token: 0x040109B4 RID: 68020
 		Start03
 	}
 }

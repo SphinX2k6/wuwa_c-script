@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007107 RID: 28935
+	// Token: 0x020078D3 RID: 30931
 	public class IShowTargetRangeT
 	{
-		// Token: 0x1700D718 RID: 55064
-		// (get) Token: 0x060334BF RID: 210111 RVA: 0x006EA697 File Offset: 0x006E8897
-		// (set) Token: 0x060334C0 RID: 210112 RVA: 0x006EA69F File Offset: 0x006E889F
+		// Token: 0x1700E2FB RID: 58107
+		// (get) Token: 0x06036761 RID: 223073 RVA: 0x0074ACA3 File Offset: 0x00748EA3
+		// (set) Token: 0x06036762 RID: 223074 RVA: 0x0074ACAB File Offset: 0x00748EAB
 		public List<int> RangeEntities { get; set; }
 
-		// Token: 0x1700D719 RID: 55065
-		// (get) Token: 0x060334C1 RID: 210113 RVA: 0x006EA6A8 File Offset: 0x006E88A8
-		// (set) Token: 0x060334C2 RID: 210114 RVA: 0x006EA6B0 File Offset: 0x006E88B0
+		// Token: 0x1700E2FC RID: 58108
+		// (get) Token: 0x06036763 RID: 223075 RVA: 0x0074ACB4 File Offset: 0x00748EB4
+		// (set) Token: 0x06036764 RID: 223076 RVA: 0x0074ACBC File Offset: 0x00748EBC
 		public bool DelayShow { get; set; }
 
-		// Token: 0x060334C3 RID: 210115 RVA: 0x006EA6B9 File Offset: 0x006E88B9
+		// Token: 0x06036765 RID: 223077 RVA: 0x0074ACC5 File Offset: 0x00748EC5
 		public IShowTargetRangeT()
 		{
 			this.RangeEntities = null;

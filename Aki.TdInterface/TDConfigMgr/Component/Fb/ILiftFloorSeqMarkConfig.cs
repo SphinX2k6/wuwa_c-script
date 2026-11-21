@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C6B RID: 3179
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D4A RID: 3402
 	public class ILiftFloorSeqMarkConfig
 	{
-		// Token: 0x060048DE RID: 18654 RVA: 0x000B6ECE File Offset: 0x000B50CE
+		// Token: 0x06004D7D RID: 19837 RVA: 0x000C16D2 File Offset: 0x000BF8D2
 		public static ILiftFloorSeqMarkConfig Create(ILiftFloorSeqMarkConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015C5 RID: 5573
-		// (get) Token: 0x060048DF RID: 18655 RVA: 0x000B6EED File Offset: 0x000B50ED
+		// Token: 0x170016E4 RID: 5860
+		// (get) Token: 0x06004D7E RID: 19838 RVA: 0x000C16F1 File Offset: 0x000BF8F1
 		public virtual string SequencePath
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015C6 RID: 5574
-		// (get) Token: 0x060048E0 RID: 18656 RVA: 0x000B6EFC File Offset: 0x000B50FC
+		// Token: 0x170016E5 RID: 5861
+		// (get) Token: 0x06004D7F RID: 19839 RVA: 0x000C1700 File Offset: 0x000BF900
 		public virtual List<ILiftFloorSeqMark> FloorMarks
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400298A RID: 10634
+		// Token: 0x04002BF7 RID: 11255
 		private ILiftFloorSeqMarkConfig Instance;
 
-		// Token: 0x0400298B RID: 10635
+		// Token: 0x04002BF8 RID: 11256
 		private List<ILiftFloorSeqMark> _FloorMarksCache;
 
-		// Token: 0x0400298C RID: 10636
+		// Token: 0x04002BF9 RID: 11257
 		private bool _FloorMarksInited;
 	}
 }

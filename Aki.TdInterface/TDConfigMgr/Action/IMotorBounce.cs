@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C10 RID: 7184
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001DFF RID: 7679
 	public class IMotorBounce : ILeisureInteractType
 	{
-		// Token: 0x06009A01 RID: 39425 RVA: 0x001624E4 File Offset: 0x001606E4
-		[NullableContext(1)]
+		// Token: 0x0600A331 RID: 41777 RVA: 0x00175430 File Offset: 0x00173630
 		private IMotorBounce_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009A02 RID: 39426 RVA: 0x0016251C File Offset: 0x0016071C
-		[NullableContext(1)]
+		// Token: 0x0600A332 RID: 41778 RVA: 0x00175468 File Offset: 0x00173668
 		public static IMotorBounce Create([Nullable(2)] IMotorBounce instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A03 RID: 39427 RVA: 0x0016252F File Offset: 0x0016072F
-		[NullableContext(1)]
+		// Token: 0x0600A333 RID: 41779 RVA: 0x0017547B File Offset: 0x0017367B
 		public static IMotorBounce CreateFromSetValue([Nullable(2)] IMotorBounce_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A04 RID: 39428 RVA: 0x00162544 File Offset: 0x00160744
-		[NullableContext(1)]
+		// Token: 0x0600A334 RID: 41780 RVA: 0x00175490 File Offset: 0x00173690
 		public new IMotorBounce_SetValue ToSetValue()
 		{
 			return new IMotorBounce_SetValue
@@ -67,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700303F RID: 12351
-		// (get) Token: 0x06009A05 RID: 39429 RVA: 0x00162592 File Offset: 0x00160792
-		// (set) Token: 0x06009A06 RID: 39430 RVA: 0x001625BD File Offset: 0x001607BD
+		// Token: 0x170032A8 RID: 12968
+		// (get) Token: 0x0600A335 RID: 41781 RVA: 0x001754DE File Offset: 0x001736DE
+		// (set) Token: 0x0600A336 RID: 41782 RVA: 0x00175509 File Offset: 0x00173709
 		public override ELeisureInteract Type
 		{
 			get
@@ -90,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003040 RID: 12352
-		// (get) Token: 0x06009A07 RID: 39431 RVA: 0x001625CB File Offset: 0x001607CB
-		// (set) Token: 0x06009A08 RID: 39432 RVA: 0x001625F6 File Offset: 0x001607F6
+		// Token: 0x170032A9 RID: 12969
+		// (get) Token: 0x0600A337 RID: 41783 RVA: 0x00175517 File Offset: 0x00173717
+		// (set) Token: 0x0600A338 RID: 41784 RVA: 0x00175542 File Offset: 0x00173742
 		public virtual int Height
 		{
 			get
@@ -113,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003041 RID: 12353
-		// (get) Token: 0x06009A09 RID: 39433 RVA: 0x00162604 File Offset: 0x00160804
-		// (set) Token: 0x06009A0A RID: 39434 RVA: 0x0016263E File Offset: 0x0016083E
+		// Token: 0x170032AA RID: 12970
+		// (get) Token: 0x0600A339 RID: 41785 RVA: 0x00175550 File Offset: 0x00173750
+		// (set) Token: 0x0600A33A RID: 41786 RVA: 0x0017558A File Offset: 0x0017378A
 		public virtual float? Time
 		{
 			get
@@ -137,11 +131,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003042 RID: 12354
-		// (get) Token: 0x06009A0B RID: 39435 RVA: 0x0016264C File Offset: 0x0016084C
-		// (set) Token: 0x06009A0C RID: 39436 RVA: 0x00162673 File Offset: 0x00160873
+		// Token: 0x170032AB RID: 12971
+		// (get) Token: 0x0600A33B RID: 41787 RVA: 0x00175598 File Offset: 0x00173798
+		// (set) Token: 0x0600A33C RID: 41788 RVA: 0x001755BF File Offset: 0x001737BF
+		[Nullable(2)]
 		public virtual string MotionCurve
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -155,15 +151,16 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.MotionCurve;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().MotionCurve = value;
 			}
 		}
 
-		// Token: 0x17003043 RID: 12355
-		// (get) Token: 0x06009A0D RID: 39437 RVA: 0x00162684 File Offset: 0x00160884
-		// (set) Token: 0x06009A0E RID: 39438 RVA: 0x001626BE File Offset: 0x001608BE
+		// Token: 0x170032AC RID: 12972
+		// (get) Token: 0x0600A33D RID: 41789 RVA: 0x001755D0 File Offset: 0x001737D0
+		// (set) Token: 0x0600A33E RID: 41790 RVA: 0x0017560A File Offset: 0x0017380A
 		public virtual EMotorBounceSkillType? SkillType
 		{
 			get
@@ -185,10 +182,12 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005DB6 RID: 23990
+		// Token: 0x040062DD RID: 25309
+		[Nullable(2)]
 		protected new IMotorBounce FbInstance;
 
-		// Token: 0x04005DB7 RID: 23991
+		// Token: 0x040062DE RID: 25310
+		[Nullable(2)]
 		protected new IMotorBounce_SetValue PocoInterface;
 	}
 }

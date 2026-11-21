@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028C0 RID: 10432
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B95 RID: 11157
 	public class IResetFocusConfig
 	{
-		// Token: 0x0600E7CD RID: 59341 RVA: 0x00220931 File Offset: 0x0021EB31
+		// Token: 0x0600F5FC RID: 62972 RVA: 0x0023D8B1 File Offset: 0x0023BAB1
 		public static IResetFocusConfig Create(IResetFocusConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700480F RID: 18447
-		// (get) Token: 0x0600E7CE RID: 59342 RVA: 0x00220950 File Offset: 0x0021EB50
+		// Token: 0x17004B80 RID: 19328
+		// (get) Token: 0x0600F5FD RID: 62973 RVA: 0x0023D8D0 File Offset: 0x0023BAD0
 		public virtual float FadeInTime
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004810 RID: 18448
-		// (get) Token: 0x0600E7CF RID: 59343 RVA: 0x0022095D File Offset: 0x0021EB5D
+		// Token: 0x17004B81 RID: 19329
+		// (get) Token: 0x0600F5FE RID: 62974 RVA: 0x0023D8DD File Offset: 0x0023BADD
 		public virtual IBaseCurve FadeInCurve
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008024 RID: 32804
+		// Token: 0x040086E3 RID: 34531
 		private IResetFocusConfig Instance;
 
-		// Token: 0x04008025 RID: 32805
+		// Token: 0x040086E4 RID: 34532
 		[Nullable(2)]
 		private IBaseCurve _FadeInCurveCache;
 
-		// Token: 0x04008026 RID: 32806
+		// Token: 0x040086E5 RID: 34533
 		private bool _FadeInCurveInited;
 	}
 }

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.ItemReward;
 
-// Token: 0x02002A26 RID: 10790
+// Token: 0x02001FA1 RID: 8097
 public class FlySkinObtainViewData
 {
-	// Token: 0x0400A6BB RID: 42683
+	// Token: 0x0400AAA5 RID: 43685
 	[Nullable(new byte[]
 	{
 		2,
@@ -14,7 +14,7 @@ public class FlySkinObtainViewData
 	})]
 	public List<RewardItemData> ObtainFlySkinData;
 
-	// Token: 0x0400A6BC RID: 42684
+	// Token: 0x0400AAA6 RID: 43686
 	[Nullable(new byte[]
 	{
 		2,

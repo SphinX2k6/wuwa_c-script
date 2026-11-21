@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060D1 RID: 24785
+	// Token: 0x0200504F RID: 20559
 	public class SolarSpeedRolePanel : SolarSpeedRolePanelBase
 	{
 	}

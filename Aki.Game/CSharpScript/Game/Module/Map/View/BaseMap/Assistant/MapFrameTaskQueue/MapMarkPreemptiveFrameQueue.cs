@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Map.MapDefine;
@@ -8,17 +7,17 @@ using CSharpScript.Game.Module.Map.Misc.PreemptiveFrameQueue;
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 {
-	// Token: 0x020054A6 RID: 21670
+	// Token: 0x02004489 RID: 17545
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapMarkPreemptiveFrameQueue : SimplePreemptiveFrameQueue
 	{
-		// Token: 0x060375DF RID: 226783 RVA: 0x00D27377 File Offset: 0x00D25577
+		// Token: 0x0602C535 RID: 181557 RVA: 0x00C770F7 File Offset: 0x00C752F7
 		public MapMarkPreemptiveFrameQueue(int perFrameTaskLimit, int executeFrameInterval = 0) : base(perFrameTaskLimit, executeFrameInterval)
 		{
 		}
 
-		// Token: 0x060375E0 RID: 226784 RVA: 0x00D2738C File Offset: 0x00D2558C
+		// Token: 0x0602C536 RID: 181558 RVA: 0x00C7710C File Offset: 0x00C7530C
 		public override void AddTask(IPreemptiveFrameTask task)
 		{
 			base.AddTask(task);
@@ -32,7 +31,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 			dictionary[mapMarkPreemptiveFrameTask.MarkId] = mapMarkPreemptiveFrameTask;
 		}
 
-		// Token: 0x060375E1 RID: 226785 RVA: 0x00D273E4 File Offset: 0x00D255E4
+		// Token: 0x0602C537 RID: 181559 RVA: 0x00C77164 File Offset: 0x00C75364
 		public void ForceExecuteTask(EMarkType markType, int markId)
 		{
 			IMapMarkPreemptiveFrameTask task = this.GetTask(markType, markId);
@@ -43,7 +42,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 			}
 		}
 
-		// Token: 0x060375E2 RID: 226786 RVA: 0x00D27410 File Offset: 0x00D25610
+		// Token: 0x0602C538 RID: 181560 RVA: 0x00C77190 File Offset: 0x00C75390
 		public void Flush()
 		{
 			this.EnableFlush = true;
@@ -51,7 +50,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 			this.EnableFlush = false;
 		}
 
-		// Token: 0x060375E3 RID: 226787 RVA: 0x00D27428 File Offset: 0x00D25628
+		// Token: 0x0602C539 RID: 181561 RVA: 0x00C771A8 File Offset: 0x00C753A8
 		public void CancelMapTask(EMarkType markType, int markId)
 		{
 			IMapMarkPreemptiveFrameTask task = this.GetTask(markType, markId);
@@ -62,7 +61,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 			}
 		}
 
-		// Token: 0x060375E4 RID: 226788 RVA: 0x00D27450 File Offset: 0x00D25650
+		// Token: 0x0602C53A RID: 181562 RVA: 0x00C771D0 File Offset: 0x00C753D0
 		private void RemoveTaskCache(IMapMarkPreemptiveFrameTask task)
 		{
 			Dictionary<int, IMapMarkPreemptiveFrameTask> dictionary;
@@ -72,13 +71,13 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 			}
 		}
 
-		// Token: 0x060375E5 RID: 226789 RVA: 0x00D2747F File Offset: 0x00D2567F
+		// Token: 0x0602C53B RID: 181563 RVA: 0x00C771FF File Offset: 0x00C753FF
 		public bool HasTask(EMarkType markType, int markId)
 		{
 			return this.GetTask(markType, markId) != null;
 		}
 
-		// Token: 0x060375E6 RID: 226790 RVA: 0x00D2748C File Offset: 0x00D2568C
+		// Token: 0x0602C53C RID: 181564 RVA: 0x00C7720C File Offset: 0x00C7540C
 		[NullableContext(2)]
 		private IMapMarkPreemptiveFrameTask GetTask(EMarkType markType, int markId)
 		{
@@ -107,13 +106,13 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 			return null;
 		}
 
-		// Token: 0x060375E7 RID: 226791 RVA: 0x00D27510 File Offset: 0x00D25710
+		// Token: 0x0602C53D RID: 181565 RVA: 0x00C77290 File Offset: 0x00C75490
 		public void CancelMapTaskByType(EMarkType markType)
 		{
 			Dictionary<int, IMapMarkPreemptiveFrameTask> dictionary;
 			if (this.MarkTaskMap.TryGetValue(markType, out dictionary))
 			{
-				foreach (IMapMarkPreemptiveFrameTask task in dictionary.Values.ToList<IMapMarkPreemptiveFrameTask>())
+				foreach (IMapMarkPreemptiveFrameTask task in dictionary.Values)
 				{
 					base.CancelTask(task);
 					this.RemoveTaskCache(task);
@@ -121,7 +120,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 			}
 		}
 
-		// Token: 0x060375E8 RID: 226792 RVA: 0x00D27580 File Offset: 0x00D25780
+		// Token: 0x0602C53E RID: 181566 RVA: 0x00C772FC File Offset: 0x00C754FC
 		protected override void OnTaskComplete(IPreemptiveFrameTask task)
 		{
 			base.OnTaskComplete(task);
@@ -130,7 +129,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapFrameTaskQueue
 			EventSystem.Instance.Emit<EMarkType, int>(EEventName.OnMapMarkTaskComplete, mapMarkPreemptiveFrameTask.MarkType, mapMarkPreemptiveFrameTask.MarkId);
 		}
 
-		// Token: 0x0401D2B4 RID: 119476
+		// Token: 0x04017D50 RID: 97616
 		private readonly Dictionary<EMarkType, Dictionary<int, IMapMarkPreemptiveFrameTask>> MarkTaskMap = new Dictionary<EMarkType, Dictionary<int, IMapMarkPreemptiveFrameTask>>();
 	}
 }

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052CA RID: 21194
+	// Token: 0x02005835 RID: 22581
 	public struct IFoxJumpPositionOnPathDrivenSpawnedActor : IFlatbufferObject
 	{
-		// Token: 0x17009B6E RID: 39790
-		// (get) Token: 0x06022919 RID: 141593 RVA: 0x004CA9C0 File Offset: 0x004C8BC0
+		// Token: 0x1700A377 RID: 41847
+		// (get) Token: 0x060248DD RID: 149725 RVA: 0x00505ABC File Offset: 0x00503CBC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602291A RID: 141594 RVA: 0x004CA9CD File Offset: 0x004C8BCD
+		// Token: 0x060248DE RID: 149726 RVA: 0x00505AC9 File Offset: 0x00503CC9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602291B RID: 141595 RVA: 0x004CA9D4 File Offset: 0x004C8BD4
+		// Token: 0x060248DF RID: 149727 RVA: 0x00505AD0 File Offset: 0x00503CD0
 		public static IFoxJumpPositionOnPathDrivenSpawnedActor GetRootAsIFoxJumpPositionOnPathDrivenSpawnedActor(ByteBuffer _bb)
 		{
 			return IFoxJumpPositionOnPathDrivenSpawnedActor.GetRootAsIFoxJumpPositionOnPathDrivenSpawnedActor(_bb, default(IFoxJumpPositionOnPathDrivenSpawnedActor));
 		}
 
-		// Token: 0x0602291C RID: 141596 RVA: 0x004CA9F0 File Offset: 0x004C8BF0
+		// Token: 0x060248E0 RID: 149728 RVA: 0x00505AEC File Offset: 0x00503CEC
 		public static IFoxJumpPositionOnPathDrivenSpawnedActor GetRootAsIFoxJumpPositionOnPathDrivenSpawnedActor(ByteBuffer _bb, IFoxJumpPositionOnPathDrivenSpawnedActor obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602291D RID: 141597 RVA: 0x004CAA0D File Offset: 0x004C8C0D
+		// Token: 0x060248E1 RID: 149729 RVA: 0x00505B09 File Offset: 0x00503D09
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602291E RID: 141598 RVA: 0x004CAA1C File Offset: 0x004C8C1C
+		// Token: 0x060248E2 RID: 149730 RVA: 0x00505B18 File Offset: 0x00503D18
 		public IFoxJumpPositionOnPathDrivenSpawnedActor __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009B6F RID: 39791
-		// (get) Token: 0x0602291F RID: 141599 RVA: 0x004CAA2C File Offset: 0x004C8C2C
+		// Token: 0x1700A378 RID: 41848
+		// (get) Token: 0x060248E3 RID: 149731 RVA: 0x00505B28 File Offset: 0x00503D28
 		public EFoxJumpInteractPointRelationType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B70 RID: 39792
-		// (get) Token: 0x06022920 RID: 141600 RVA: 0x004CAA68 File Offset: 0x004C8C68
+		// Token: 0x1700A379 RID: 41849
+		// (get) Token: 0x060248E4 RID: 149732 RVA: 0x00505B64 File Offset: 0x00503D64
 		public IVectorInfo? Offset
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B71 RID: 39793
-		// (get) Token: 0x06022921 RID: 141601 RVA: 0x004CAAC8 File Offset: 0x004C8CC8
+		// Token: 0x1700A37A RID: 41850
+		// (get) Token: 0x060248E5 RID: 149733 RVA: 0x00505BC4 File Offset: 0x00503DC4
 		public IVectorInfo? RaycastDestOffset
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B72 RID: 39794
-		// (get) Token: 0x06022922 RID: 141602 RVA: 0x004CAB28 File Offset: 0x004C8D28
+		// Token: 0x1700A37B RID: 41851
+		// (get) Token: 0x060248E6 RID: 149734 RVA: 0x00505C24 File Offset: 0x00503E24
 		public IFoxJumpShapeAndPointsParams? BottomParams
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B73 RID: 39795
-		// (get) Token: 0x06022923 RID: 141603 RVA: 0x004CAB88 File Offset: 0x004C8D88
+		// Token: 0x1700A37C RID: 41852
+		// (get) Token: 0x060248E7 RID: 149735 RVA: 0x00505C84 File Offset: 0x00503E84
 		public int BottomRangeSplineEntityId
 		{
 			get
@@ -124,8 +124,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B74 RID: 39796
-		// (get) Token: 0x06022924 RID: 141604 RVA: 0x004CABC8 File Offset: 0x004C8DC8
+		// Token: 0x1700A37D RID: 41853
+		// (get) Token: 0x060248E8 RID: 149736 RVA: 0x00505CC4 File Offset: 0x00503EC4
 		public IFoxJumpShapeAndPointsParams? TopParams
 		{
 			get
@@ -139,8 +139,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B75 RID: 39797
-		// (get) Token: 0x06022925 RID: 141605 RVA: 0x004CAC28 File Offset: 0x004C8E28
+		// Token: 0x1700A37E RID: 41854
+		// (get) Token: 0x060248E9 RID: 149737 RVA: 0x00505D24 File Offset: 0x00503F24
 		public IBoxTriggerShape? HollowShape
 		{
 			get
@@ -154,8 +154,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B76 RID: 39798
-		// (get) Token: 0x06022926 RID: 141606 RVA: 0x004CAC88 File Offset: 0x004C8E88
+		// Token: 0x1700A37F RID: 41855
+		// (get) Token: 0x060248EA RID: 149738 RVA: 0x00505D84 File Offset: 0x00503F84
 		public byte NullMask
 		{
 			get
@@ -169,7 +169,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022927 RID: 141607 RVA: 0x004CACC8 File Offset: 0x004C8EC8
+		// Token: 0x060248EB RID: 149739 RVA: 0x00505DC4 File Offset: 0x00503FC4
 		public static Offset<IFoxJumpPositionOnPathDrivenSpawnedActor> CreateIFoxJumpPositionOnPathDrivenSpawnedActor(FlatBufferBuilder builder, EFoxJumpInteractPointRelationType Type = EFoxJumpInteractPointRelationType.ThisEntity, Offset<IVectorInfo> OffsetOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RaycastDestOffsetOffset = default(Offset<IVectorInfo>), Offset<IFoxJumpShapeAndPointsParams> BottomParamsOffset = default(Offset<IFoxJumpShapeAndPointsParams>), int BottomRangeSplineEntityId = 0, Offset<IFoxJumpShapeAndPointsParams> TopParamsOffset = default(Offset<IFoxJumpShapeAndPointsParams>), Offset<IBoxTriggerShape> HollowShapeOffset = default(Offset<IBoxTriggerShape>), byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -184,67 +184,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFoxJumpPositionOnPathDrivenSpawnedActor.EndIFoxJumpPositionOnPathDrivenSpawnedActor(builder);
 		}
 
-		// Token: 0x06022928 RID: 141608 RVA: 0x004CAD1F File Offset: 0x004C8F1F
+		// Token: 0x060248EC RID: 149740 RVA: 0x00505E1B File Offset: 0x0050401B
 		public static void StartIFoxJumpPositionOnPathDrivenSpawnedActor(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06022929 RID: 141609 RVA: 0x004CAD28 File Offset: 0x004C8F28
+		// Token: 0x060248ED RID: 149741 RVA: 0x00505E24 File Offset: 0x00504024
 		public static void AddType(FlatBufferBuilder builder, EFoxJumpInteractPointRelationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602292A RID: 141610 RVA: 0x004CAD33 File Offset: 0x004C8F33
+		// Token: 0x060248EE RID: 149742 RVA: 0x00505E2F File Offset: 0x0050402F
 		public static void AddOffset(FlatBufferBuilder builder, Offset<IVectorInfo> offsetOffset)
 		{
 			builder.AddOffset(1, offsetOffset.Value, 0);
 		}
 
-		// Token: 0x0602292B RID: 141611 RVA: 0x004CAD43 File Offset: 0x004C8F43
+		// Token: 0x060248EF RID: 149743 RVA: 0x00505E3F File Offset: 0x0050403F
 		public static void AddRaycastDestOffset(FlatBufferBuilder builder, Offset<IVectorInfo> raycastDestOffsetOffset)
 		{
 			builder.AddOffset(2, raycastDestOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x0602292C RID: 141612 RVA: 0x004CAD53 File Offset: 0x004C8F53
+		// Token: 0x060248F0 RID: 149744 RVA: 0x00505E4F File Offset: 0x0050404F
 		public static void AddBottomParams(FlatBufferBuilder builder, Offset<IFoxJumpShapeAndPointsParams> bottomParamsOffset)
 		{
 			builder.AddOffset(3, bottomParamsOffset.Value, 0);
 		}
 
-		// Token: 0x0602292D RID: 141613 RVA: 0x004CAD63 File Offset: 0x004C8F63
+		// Token: 0x060248F1 RID: 149745 RVA: 0x00505E5F File Offset: 0x0050405F
 		public static void AddBottomRangeSplineEntityId(FlatBufferBuilder builder, int bottomRangeSplineEntityId)
 		{
 			builder.AddInt(4, bottomRangeSplineEntityId, 0);
 		}
 
-		// Token: 0x0602292E RID: 141614 RVA: 0x004CAD6E File Offset: 0x004C8F6E
+		// Token: 0x060248F2 RID: 149746 RVA: 0x00505E6A File Offset: 0x0050406A
 		public static void AddTopParams(FlatBufferBuilder builder, Offset<IFoxJumpShapeAndPointsParams> topParamsOffset)
 		{
 			builder.AddOffset(5, topParamsOffset.Value, 0);
 		}
 
-		// Token: 0x0602292F RID: 141615 RVA: 0x004CAD7E File Offset: 0x004C8F7E
+		// Token: 0x060248F3 RID: 149747 RVA: 0x00505E7A File Offset: 0x0050407A
 		public static void AddHollowShape(FlatBufferBuilder builder, Offset<IBoxTriggerShape> hollowShapeOffset)
 		{
 			builder.AddOffset(6, hollowShapeOffset.Value, 0);
 		}
 
-		// Token: 0x06022930 RID: 141616 RVA: 0x004CAD8E File Offset: 0x004C8F8E
+		// Token: 0x060248F4 RID: 149748 RVA: 0x00505E8A File Offset: 0x0050408A
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x06022931 RID: 141617 RVA: 0x004CAD99 File Offset: 0x004C8F99
+		// Token: 0x060248F5 RID: 149749 RVA: 0x00505E95 File Offset: 0x00504095
 		public static Offset<IFoxJumpPositionOnPathDrivenSpawnedActor> EndIFoxJumpPositionOnPathDrivenSpawnedActor(FlatBufferBuilder builder)
 		{
 			return new Offset<IFoxJumpPositionOnPathDrivenSpawnedActor>(builder.EndTable());
 		}
 
-		// Token: 0x06022932 RID: 141618 RVA: 0x004CADA8 File Offset: 0x004C8FA8
+		// Token: 0x060248F6 RID: 149750 RVA: 0x00505EA4 File Offset: 0x005040A4
 		public IFoxJumpPositionOnPathDrivenSpawnedActorT UnPack()
 		{
 			IFoxJumpPositionOnPathDrivenSpawnedActorT foxJumpPositionOnPathDrivenSpawnedActorT = new IFoxJumpPositionOnPathDrivenSpawnedActorT();
@@ -252,7 +252,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return foxJumpPositionOnPathDrivenSpawnedActorT;
 		}
 
-		// Token: 0x06022933 RID: 141619 RVA: 0x004CADC4 File Offset: 0x004C8FC4
+		// Token: 0x060248F7 RID: 149751 RVA: 0x00505EC0 File Offset: 0x005040C0
 		public void UnPackTo(IFoxJumpPositionOnPathDrivenSpawnedActorT _o)
 		{
 			_o.Type = this.Type;
@@ -265,7 +265,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022934 RID: 141620 RVA: 0x004CAEE4 File Offset: 0x004C90E4
+		// Token: 0x060248F8 RID: 149752 RVA: 0x00505FE0 File Offset: 0x005041E0
 		public static Offset<IFoxJumpPositionOnPathDrivenSpawnedActor> Pack(FlatBufferBuilder builder, IFoxJumpPositionOnPathDrivenSpawnedActorT _o)
 		{
 			if (_o == null)
@@ -280,7 +280,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFoxJumpPositionOnPathDrivenSpawnedActor.CreateIFoxJumpPositionOnPathDrivenSpawnedActor(builder, _o.Type, offsetOffset, raycastDestOffsetOffset, bottomParamsOffset, _o.BottomRangeSplineEntityId, topParamsOffset, hollowShapeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E455 RID: 58453
+		// Token: 0x0400F062 RID: 61538
 		private Table __p;
 	}
 }

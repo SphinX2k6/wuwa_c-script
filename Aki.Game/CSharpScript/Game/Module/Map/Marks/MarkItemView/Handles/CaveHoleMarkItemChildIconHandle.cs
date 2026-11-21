@@ -4,16 +4,16 @@ using CSharpScript.Game.Module.Map.Marks.MarkItem;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 {
-	// Token: 0x0200552B RID: 21803
+	// Token: 0x020044FE RID: 17662
 	public class CaveHoleMarkItemChildIconHandle : MarkItemChildIconHandle
 	{
-		// Token: 0x06037AA1 RID: 228001 RVA: 0x00D36700 File Offset: 0x00D34900
+		// Token: 0x0602C971 RID: 182641 RVA: 0x00C8441C File Offset: 0x00C8261C
 		[NullableContext(1)]
 		public CaveHoleMarkItemChildIconHandle(IMarkItemComponentContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06037AA2 RID: 228002 RVA: 0x00D3670C File Offset: 0x00D3490C
+		// Token: 0x0602C972 RID: 182642 RVA: 0x00C84428 File Offset: 0x00C82628
 		protected override void OnUpdate()
 		{
 			MarkItem markItem = this.Context.MarkItem;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 				bool isSelectThisFloor = markItem.IsSelectThisFloor;
 				bool flag = markItem.LocateInGround() && isSelectThisFloor;
 				base.SetVisible(!flag);
-				this.Context.MarkItemEntity.Resource.ChildIconPath = UiResourceConfig.Instance.GetResourcePath(isSelectThisFloor ? "SP_MarkMultiMapSelect" : "SP_MarkMultiMap");
+				markItem.ChildIconPath = UiResourceConfig.Instance.GetResourcePath(isSelectThisFloor ? "SP_MarkMultiMapSelect" : "SP_MarkMultiMap");
 				return;
 			}
 			base.SetVisible(false);

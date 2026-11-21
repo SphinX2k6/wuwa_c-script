@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200130D RID: 4877
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200145D RID: 5213
 	public class ITrackEntities : ITrackType
 	{
-		// Token: 0x06007004 RID: 28676 RVA: 0x0010EB95 File Offset: 0x0010CD95
+		// Token: 0x060076A4 RID: 30372 RVA: 0x0011D101 File Offset: 0x0011B301
 		public static ITrackEntities Create(ITrackEntities? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023BD RID: 9149
-		// (get) Token: 0x06007005 RID: 28677 RVA: 0x0010EBB4 File Offset: 0x0010CDB4
+		// Token: 0x1700258C RID: 9612
+		// (get) Token: 0x060076A5 RID: 30373 RVA: 0x0011D120 File Offset: 0x0011B320
 		public override ETrackType Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023BE RID: 9150
-		// (get) Token: 0x06007006 RID: 28678 RVA: 0x0010EBC1 File Offset: 0x0010CDC1
+		// Token: 0x1700258D RID: 9613
+		// (get) Token: 0x060076A6 RID: 30374 RVA: 0x0011D12D File Offset: 0x0011B32D
 		public override IGravityDirectionType GravityDirection
 		{
 			get
@@ -50,8 +48,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023BF RID: 9151
-		// (get) Token: 0x06007007 RID: 28679 RVA: 0x0010EBF0 File Offset: 0x0010CDF0
+		// Token: 0x1700258E RID: 9614
+		// (get) Token: 0x060076A7 RID: 30375 RVA: 0x0011D15C File Offset: 0x0011B35C
 		public virtual List<int> EntityIds
 		{
 			get
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023C0 RID: 9152
-		// (get) Token: 0x06007008 RID: 28680 RVA: 0x0010EC54 File Offset: 0x0010CE54
+		// Token: 0x1700258F RID: 9615
+		// (get) Token: 0x060076A8 RID: 30376 RVA: 0x0011D1C0 File Offset: 0x0011B3C0
 		[Nullable(2)]
 		public virtual IOutOfRangeTrackTarget OutOfRangeTrackTargetLocation
 		{
@@ -89,8 +87,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023C1 RID: 9153
-		// (get) Token: 0x06007009 RID: 28681 RVA: 0x0010EC88 File Offset: 0x0010CE88
+		// Token: 0x17002590 RID: 9616
+		// (get) Token: 0x060076A9 RID: 30377 RVA: 0x0011D1F4 File Offset: 0x0011B3F4
 		[Nullable(2)]
 		public virtual IOutOfRangeTrackEntity OutOfRangeTrackTarget
 		{
@@ -107,33 +105,33 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004097 RID: 16535
+		// Token: 0x04004413 RID: 17427
 		private ITrackEntities Instance;
 
-		// Token: 0x04004098 RID: 16536
+		// Token: 0x04004414 RID: 17428
 		private IGravityDirectionType _GravityDirectionCache;
 
-		// Token: 0x04004099 RID: 16537
+		// Token: 0x04004415 RID: 17429
 		private bool _GravityDirectionInited;
 
-		// Token: 0x0400409A RID: 16538
+		// Token: 0x04004416 RID: 17430
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x0400409B RID: 16539
+		// Token: 0x04004417 RID: 17431
 		private bool _EntityIdsInited;
 
-		// Token: 0x0400409C RID: 16540
+		// Token: 0x04004418 RID: 17432
 		[Nullable(2)]
 		private IOutOfRangeTrackTarget _OutOfRangeTrackTargetLocationCache;
 
-		// Token: 0x0400409D RID: 16541
+		// Token: 0x04004419 RID: 17433
 		private bool _OutOfRangeTrackTargetLocationInited;
 
-		// Token: 0x0400409E RID: 16542
+		// Token: 0x0400441A RID: 17434
 		[Nullable(2)]
 		private IOutOfRangeTrackEntity _OutOfRangeTrackTargetCache;
 
-		// Token: 0x0400409F RID: 16543
+		// Token: 0x0400441B RID: 17435
 		private bool _OutOfRangeTrackTargetInited;
 	}
 }

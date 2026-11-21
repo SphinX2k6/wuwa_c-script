@@ -8,7 +8,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.AnimNotifyState
 {
-	// Token: 0x020043E6 RID: 17382
+	// Token: 0x020033F9 RID: 13305
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(12, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 12)]
@@ -16,7 +16,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.AnimNotifyState
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 12)]
 	public struct SGameplayResultSkillInfo : IEqualityOperators<SGameplayResultSkillInfo, SGameplayResultSkillInfo, bool>, IEquatable<SGameplayResultSkillInfo>, IUnrealScriptStruct
 	{
-		// Token: 0x0602D08B RID: 184459 RVA: 0x00A2EF5E File Offset: 0x00A2D15E
+		// Token: 0x06021C06 RID: 138246 RVA: 0x00968351 File Offset: 0x00966551
 		public SGameplayResultSkillInfo(int SkillId, bool IsWinResult, bool IsCheckStartTimeStamp, float TimeStampDelta)
 		{
 			this.SkillId = SkillId;
@@ -25,25 +25,25 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.AnimNotifyState
 			this.TimeStampDelta = TimeStampDelta;
 		}
 
-		// Token: 0x0602D08C RID: 184460 RVA: 0x00A2EF7D File Offset: 0x00A2D17D
+		// Token: 0x06021C07 RID: 138247 RVA: 0x00968370 File Offset: 0x00966570
 		public static bool operator ==(SGameplayResultSkillInfo left, SGameplayResultSkillInfo right)
 		{
 			return left.SkillId == right.SkillId && left.IsWinResult == right.IsWinResult && left.IsCheckStartTimeStamp == right.IsCheckStartTimeStamp && left.TimeStampDelta == right.TimeStampDelta;
 		}
 
-		// Token: 0x0602D08D RID: 184461 RVA: 0x00A2EFB9 File Offset: 0x00A2D1B9
+		// Token: 0x06021C08 RID: 138248 RVA: 0x009683AC File Offset: 0x009665AC
 		public static bool operator !=(SGameplayResultSkillInfo left, SGameplayResultSkillInfo right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x0602D08E RID: 184462 RVA: 0x00A2EFC5 File Offset: 0x00A2D1C5
+		// Token: 0x06021C09 RID: 138249 RVA: 0x009683B8 File Offset: 0x009665B8
 		public bool Equals(SGameplayResultSkillInfo other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x0602D08F RID: 184463 RVA: 0x00A2EFD4 File Offset: 0x00A2D1D4
+		// Token: 0x06021C0A RID: 138250 RVA: 0x009683C8 File Offset: 0x009665C8
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -55,38 +55,38 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.AnimNotifyState
 			return false;
 		}
 
-		// Token: 0x0602D090 RID: 184464 RVA: 0x00A2EFF9 File Offset: 0x00A2D1F9
+		// Token: 0x06021C0B RID: 138251 RVA: 0x009683ED File Offset: 0x009665ED
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<int, bool, bool, float>(this.SkillId, this.IsWinResult, this.IsCheckStartTimeStamp, this.TimeStampDelta);
 		}
 
-		// Token: 0x0602D091 RID: 184465 RVA: 0x00A2F018 File Offset: 0x00A2D218
+		// Token: 0x06021C0C RID: 138252 RVA: 0x0096840C File Offset: 0x0096660C
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SGameplayResultSkillInfo._ScriptStructPtr != 0) ? SGameplayResultSkillInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/AnimNotifyState/SGameplayResultSkillInfo.SGameplayResultSkillInfo", ref SGameplayResultSkillInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x04017E60 RID: 97888
+		// Token: 0x04012980 RID: 76160
 		[FieldOffset(0)]
 		public int SkillId;
 
-		// Token: 0x04017E61 RID: 97889
+		// Token: 0x04012981 RID: 76161
 		[FieldOffset(4)]
 		public bool IsWinResult;
 
-		// Token: 0x04017E62 RID: 97890
+		// Token: 0x04012982 RID: 76162
 		[FieldOffset(5)]
 		public bool IsCheckStartTimeStamp;
 
-		// Token: 0x04017E63 RID: 97891
+		// Token: 0x04012983 RID: 76163
 		[FieldOffset(8)]
 		public float TimeStampDelta;
 
-		// Token: 0x04017E64 RID: 97892
+		// Token: 0x04012984 RID: 76164
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/AnimNotifyState/SGameplayResultSkillInfo.SGameplayResultSkillInfo";
 
-		// Token: 0x04017E65 RID: 97893
+		// Token: 0x04012985 RID: 76165
 		private static IntPtr _ScriptStructPtr;
 	}
 }

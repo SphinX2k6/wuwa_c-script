@@ -5,16 +5,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200151E RID: 5406
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x02001677 RID: 5751
 	public class ActionParamsConverter : JsonConverter<ActionParams>
 	{
-		// Token: 0x06007AC8 RID: 31432 RVA: 0x00124EE0 File Offset: 0x001230E0
+		// Token: 0x06008193 RID: 33171 RVA: 0x00133B08 File Offset: 0x00131D08
 		[return: Nullable(2)]
 		public override ActionParams Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
@@ -22,7 +16,7 @@ namespace Aki.TDConfigMgr.Action
 			return null;
 		}
 
-		// Token: 0x06007AC9 RID: 31433 RVA: 0x00124EEC File Offset: 0x001230EC
+		// Token: 0x06008194 RID: 33172 RVA: 0x00133B14 File Offset: 0x00131D14
 		public override void Write(Utf8JsonWriter writer, ActionParams value, JsonSerializerOptions options)
 		{
 			IPlayCommonEffect playCommonEffect = value as IPlayCommonEffect;
@@ -493,6 +487,12 @@ namespace Aki.TDConfigMgr.Action
 				JsonSerializer.Serialize<SetCameraMode>(writer, setCameraMode, options);
 				return;
 			}
+			ModifySceneUiSubtitle modifySceneUiSubtitle = value as ModifySceneUiSubtitle;
+			if (modifySceneUiSubtitle != null)
+			{
+				JsonSerializer.Serialize<ModifySceneUiSubtitle>(writer, modifySceneUiSubtitle, options);
+				return;
+			}
 			SetPlotMode setPlotMode = value as SetPlotMode;
 			if (setPlotMode != null)
 			{
@@ -793,6 +793,12 @@ namespace Aki.TDConfigMgr.Action
 				JsonSerializer.Serialize<FinishDoInteract>(writer, finishDoInteract, options);
 				return;
 			}
+			ModifyEntityDecoration modifyEntityDecoration = value as ModifyEntityDecoration;
+			if (modifyEntityDecoration != null)
+			{
+				JsonSerializer.Serialize<ModifyEntityDecoration>(writer, modifyEntityDecoration, options);
+				return;
+			}
 			AddBuffToEntity addBuffToEntity = value as AddBuffToEntity;
 			if (addBuffToEntity != null)
 			{
@@ -1001,6 +1007,12 @@ namespace Aki.TDConfigMgr.Action
 			if (fireBulletEffect != null)
 			{
 				JsonSerializer.Serialize<FireBulletEffect>(writer, fireBulletEffect, options);
+				return;
+			}
+			SetAssistCharacterPos setAssistCharacterPos = value as SetAssistCharacterPos;
+			if (setAssistCharacterPos != null)
+			{
+				JsonSerializer.Serialize<SetAssistCharacterPos>(writer, setAssistCharacterPos, options);
 				return;
 			}
 			SetPlayerPos setPlayerPos = value as SetPlayerPos;
@@ -1351,6 +1363,12 @@ namespace Aki.TDConfigMgr.Action
 				JsonSerializer.Serialize<ToggleDragActorPlay>(writer, toggleDragActorPlay, options);
 				return;
 			}
+			DarkTideSetMapMarkState darkTideSetMapMarkState = value as DarkTideSetMapMarkState;
+			if (darkTideSetMapMarkState != null)
+			{
+				JsonSerializer.Serialize<DarkTideSetMapMarkState>(writer, darkTideSetMapMarkState, options);
+				return;
+			}
 			ManualOccupations manualOccupations = value as ManualOccupations;
 			if (manualOccupations != null)
 			{
@@ -1513,10 +1531,10 @@ namespace Aki.TDConfigMgr.Action
 				JsonSerializer.Serialize<OpenSimpleGameplay>(writer, openSimpleGameplay, options);
 				return;
 			}
-			CloseSimpleGameplay closeSimpleGameplay = value as CloseSimpleGameplay;
-			if (closeSimpleGameplay != null)
+			ToggleRideFlyingCarUiGameplay toggleRideFlyingCarUiGameplay = value as ToggleRideFlyingCarUiGameplay;
+			if (toggleRideFlyingCarUiGameplay != null)
 			{
-				JsonSerializer.Serialize<CloseSimpleGameplay>(writer, closeSimpleGameplay, options);
+				JsonSerializer.Serialize<ToggleRideFlyingCarUiGameplay>(writer, toggleRideFlyingCarUiGameplay, options);
 				return;
 			}
 			ChangePhantom changePhantom = value as ChangePhantom;
@@ -1885,6 +1903,12 @@ namespace Aki.TDConfigMgr.Action
 				JsonSerializer.Serialize<SetAudioState>(writer, setAudioState, options);
 				return;
 			}
+			SendBattleTag sendBattleTag = value as SendBattleTag;
+			if (sendBattleTag != null)
+			{
+				JsonSerializer.Serialize<SendBattleTag>(writer, sendBattleTag, options);
+				return;
+			}
 			PerformerAiSplineMove performerAiSplineMove = value as PerformerAiSplineMove;
 			if (performerAiSplineMove != null)
 			{
@@ -1913,6 +1937,12 @@ namespace Aki.TDConfigMgr.Action
 			if (enableFollowShooterAbility != null)
 			{
 				JsonSerializer.Serialize<EnableFollowShooterAbility>(writer, enableFollowShooterAbility, options);
+				return;
+			}
+			FollowShooterLeisureInteract followShooterLeisureInteract = value as FollowShooterLeisureInteract;
+			if (followShooterLeisureInteract != null)
+			{
+				JsonSerializer.Serialize<FollowShooterLeisureInteract>(writer, followShooterLeisureInteract, options);
 				return;
 			}
 			ClientFollowShooterLeisureInteract clientFollowShooterLeisureInteract = value as ClientFollowShooterLeisureInteract;
@@ -2690,14 +2720,68 @@ namespace Aki.TDConfigMgr.Action
 				return;
 			}
 			SetElementalBoxToTarget setElementalBoxToTarget = value as SetElementalBoxToTarget;
-			if (setElementalBoxToTarget == null)
+			if (setElementalBoxToTarget != null)
+			{
+				JsonSerializer.Serialize<SetElementalBoxToTarget>(writer, setElementalBoxToTarget, options);
+				return;
+			}
+			SeasonWeatherSetRotationLock seasonWeatherSetRotationLock = value as SeasonWeatherSetRotationLock;
+			if (seasonWeatherSetRotationLock != null)
+			{
+				JsonSerializer.Serialize<SeasonWeatherSetRotationLock>(writer, seasonWeatherSetRotationLock, options);
+				return;
+			}
+			SeasonWeatherChangeTo seasonWeatherChangeTo = value as SeasonWeatherChangeTo;
+			if (seasonWeatherChangeTo != null)
+			{
+				JsonSerializer.Serialize<SeasonWeatherChangeTo>(writer, seasonWeatherChangeTo, options);
+				return;
+			}
+			SeasonWeatherUnlockSpecial seasonWeatherUnlockSpecial = value as SeasonWeatherUnlockSpecial;
+			if (seasonWeatherUnlockSpecial != null)
+			{
+				JsonSerializer.Serialize<SeasonWeatherUnlockSpecial>(writer, seasonWeatherUnlockSpecial, options);
+				return;
+			}
+			HandBookModifySystemProgress handBookModifySystemProgress = value as HandBookModifySystemProgress;
+			if (handBookModifySystemProgress != null)
+			{
+				JsonSerializer.Serialize<HandBookModifySystemProgress>(writer, handBookModifySystemProgress, options);
+				return;
+			}
+			ClientExecEntityPrefabAction clientExecEntityPrefabAction = value as ClientExecEntityPrefabAction;
+			if (clientExecEntityPrefabAction != null)
+			{
+				JsonSerializer.Serialize<ClientExecEntityPrefabAction>(writer, clientExecEntityPrefabAction, options);
+				return;
+			}
+			LiveSetUi liveSetUi = value as LiveSetUi;
+			if (liveSetUi != null)
+			{
+				JsonSerializer.Serialize<LiveSetUi>(writer, liveSetUi, options);
+				return;
+			}
+			LiveSetDanmaku liveSetDanmaku = value as LiveSetDanmaku;
+			if (liveSetDanmaku != null)
+			{
+				JsonSerializer.Serialize<LiveSetDanmaku>(writer, liveSetDanmaku, options);
+				return;
+			}
+			LiveSetParam liveSetParam = value as LiveSetParam;
+			if (liveSetParam != null)
+			{
+				JsonSerializer.Serialize<LiveSetParam>(writer, liveSetParam, options);
+				return;
+			}
+			LiveSetSc liveSetSc = value as LiveSetSc;
+			if (liveSetSc == null)
 			{
 				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(10, 1);
 				defaultInterpolatedStringHandler.AppendLiteral("还未支持的变量类型:");
 				defaultInterpolatedStringHandler.AppendFormatted<Type>(value.GetType());
 				throw new JsonException(defaultInterpolatedStringHandler.ToStringAndClear());
 			}
-			JsonSerializer.Serialize<SetElementalBoxToTarget>(writer, setElementalBoxToTarget, options);
+			JsonSerializer.Serialize<LiveSetSc>(writer, liveSetSc, options);
 		}
 	}
 }

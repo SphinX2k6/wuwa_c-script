@@ -9,16 +9,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001DE RID: 478
+// Token: 0x020001E2 RID: 482
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifySwitchSequenceCamera.TsAnimNotifySwitchSequenceCamera_C")]
 public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170004C2 RID: 1218
-	// (get) Token: 0x06001DB9 RID: 7609 RVA: 0x0009598F File Offset: 0x00093B8F
-	// (set) Token: 0x06001DBA RID: 7610 RVA: 0x0009599F File Offset: 0x00093B9F
+	// Token: 0x170004E4 RID: 1252
+	// (get) Token: 0x06001E56 RID: 7766 RVA: 0x0009C94B File Offset: 0x0009AB4B
+	// (set) Token: 0x06001E57 RID: 7767 RVA: 0x0009C95B File Offset: 0x0009AB5B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ESequenceCameraAnsEffectiveClientType 生效客户端
 	{
@@ -32,9 +32,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004C3 RID: 1219
-	// (get) Token: 0x06001DBB RID: 7611 RVA: 0x000959B0 File Offset: 0x00093BB0
-	// (set) Token: 0x06001DBC RID: 7612 RVA: 0x000959E9 File Offset: 0x00093BE9
+	// Token: 0x170004E5 RID: 1253
+	// (get) Token: 0x06001E58 RID: 7768 RVA: 0x0009C96C File Offset: 0x0009AB6C
+	// (set) Token: 0x06001E59 RID: 7769 RVA: 0x0009C9A5 File Offset: 0x0009ABA5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public SSequenceCamera_Settings 特写镜头配置
 	{
@@ -54,9 +54,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004C4 RID: 1220
-	// (get) Token: 0x06001DBD RID: 7613 RVA: 0x00095A11 File Offset: 0x00093C11
-	// (set) Token: 0x06001DBE RID: 7614 RVA: 0x00095A21 File Offset: 0x00093C21
+	// Token: 0x170004E6 RID: 1254
+	// (get) Token: 0x06001E5A RID: 7770 RVA: 0x0009C9CD File Offset: 0x0009ABCD
+	// (set) Token: 0x06001E5B RID: 7771 RVA: 0x0009C9DD File Offset: 0x0009ABDD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool bResetLockOnCamera
 	{
@@ -70,9 +70,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004C5 RID: 1221
-	// (get) Token: 0x06001DBF RID: 7615 RVA: 0x00095A32 File Offset: 0x00093C32
-	// (set) Token: 0x06001DC0 RID: 7616 RVA: 0x00095A46 File Offset: 0x00093C46
+	// Token: 0x170004E7 RID: 1255
+	// (get) Token: 0x06001E5C RID: 7772 RVA: 0x0009C9EE File Offset: 0x0009ABEE
+	// (set) Token: 0x06001E5D RID: 7773 RVA: 0x0009CA02 File Offset: 0x0009AC02
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FRotator AdditiveRotation
 	{
@@ -86,9 +86,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004C6 RID: 1222
-	// (get) Token: 0x06001DC1 RID: 7617 RVA: 0x00095A5B File Offset: 0x00093C5B
-	// (set) Token: 0x06001DC2 RID: 7618 RVA: 0x00095A6F File Offset: 0x00093C6F
+	// Token: 0x170004E8 RID: 1256
+	// (get) Token: 0x06001E5E RID: 7774 RVA: 0x0009CA17 File Offset: 0x0009AC17
+	// (set) Token: 0x06001E5F RID: 7775 RVA: 0x0009CA2B File Offset: 0x0009AC2B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string CameraAttachSocket
 	{
@@ -102,9 +102,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004C7 RID: 1223
-	// (get) Token: 0x06001DC3 RID: 7619 RVA: 0x00095A84 File Offset: 0x00093C84
-	// (set) Token: 0x06001DC4 RID: 7620 RVA: 0x00095A98 File Offset: 0x00093C98
+	// Token: 0x170004E9 RID: 1257
+	// (get) Token: 0x06001E60 RID: 7776 RVA: 0x0009CA40 File Offset: 0x0009AC40
+	// (set) Token: 0x06001E61 RID: 7777 RVA: 0x0009CA54 File Offset: 0x0009AC54
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string CameraDetectSocket
 	{
@@ -118,9 +118,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004C8 RID: 1224
-	// (get) Token: 0x06001DC5 RID: 7621 RVA: 0x00095AAD File Offset: 0x00093CAD
-	// (set) Token: 0x06001DC6 RID: 7622 RVA: 0x00095ABD File Offset: 0x00093CBD
+	// Token: 0x170004EA RID: 1258
+	// (get) Token: 0x06001E62 RID: 7778 RVA: 0x0009CA69 File Offset: 0x0009AC69
+	// (set) Token: 0x06001E63 RID: 7779 RVA: 0x0009CA79 File Offset: 0x0009AC79
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 强制播放Sequence
 	{
@@ -134,9 +134,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004C9 RID: 1225
-	// (get) Token: 0x06001DC7 RID: 7623 RVA: 0x00095ACE File Offset: 0x00093CCE
-	// (set) Token: 0x06001DC8 RID: 7624 RVA: 0x00095ADE File Offset: 0x00093CDE
+	// Token: 0x170004EB RID: 1259
+	// (get) Token: 0x06001E64 RID: 7780 RVA: 0x0009CA8A File Offset: 0x0009AC8A
+	// (set) Token: 0x06001E65 RID: 7781 RVA: 0x0009CA9A File Offset: 0x0009AC9A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ExtraDetectSphereRadius
 	{
@@ -150,9 +150,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004CA RID: 1226
-	// (get) Token: 0x06001DC9 RID: 7625 RVA: 0x00095AEF File Offset: 0x00093CEF
-	// (set) Token: 0x06001DCA RID: 7626 RVA: 0x00095B03 File Offset: 0x00093D03
+	// Token: 0x170004EC RID: 1260
+	// (get) Token: 0x06001E66 RID: 7782 RVA: 0x0009CAAB File Offset: 0x0009ACAB
+	// (set) Token: 0x06001E67 RID: 7783 RVA: 0x0009CABF File Offset: 0x0009ACBF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector ExtraSphereLocation
 	{
@@ -166,9 +166,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004CB RID: 1227
-	// (get) Token: 0x06001DCB RID: 7627 RVA: 0x00095B18 File Offset: 0x00093D18
-	// (set) Token: 0x06001DCC RID: 7628 RVA: 0x00095B28 File Offset: 0x00093D28
+	// Token: 0x170004ED RID: 1261
+	// (get) Token: 0x06001E68 RID: 7784 RVA: 0x0009CAD4 File Offset: 0x0009ACD4
+	// (set) Token: 0x06001E69 RID: 7785 RVA: 0x0009CAE4 File Offset: 0x0009ACE4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsShowExtraSphere
 	{
@@ -182,9 +182,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004CC RID: 1228
-	// (get) Token: 0x06001DCD RID: 7629 RVA: 0x00095B39 File Offset: 0x00093D39
-	// (set) Token: 0x06001DCE RID: 7630 RVA: 0x00095B49 File Offset: 0x00093D49
+	// Token: 0x170004EE RID: 1262
+	// (get) Token: 0x06001E6A RID: 7786 RVA: 0x0009CAF5 File Offset: 0x0009ACF5
+	// (set) Token: 0x06001E6B RID: 7787 RVA: 0x0009CB05 File Offset: 0x0009AD05
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsIgnoreCharacterCollision
 	{
@@ -198,9 +198,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004CD RID: 1229
-	// (get) Token: 0x06001DCF RID: 7631 RVA: 0x00095B5A File Offset: 0x00093D5A
-	// (set) Token: 0x06001DD0 RID: 7632 RVA: 0x00095B6A File Offset: 0x00093D6A
+	// Token: 0x170004EF RID: 1263
+	// (get) Token: 0x06001E6C RID: 7788 RVA: 0x0009CB16 File Offset: 0x0009AD16
+	// (set) Token: 0x06001E6D RID: 7789 RVA: 0x0009CB26 File Offset: 0x0009AD26
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DisableMovementInput
 	{
@@ -214,9 +214,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004CE RID: 1230
-	// (get) Token: 0x06001DD1 RID: 7633 RVA: 0x00095B7B File Offset: 0x00093D7B
-	// (set) Token: 0x06001DD2 RID: 7634 RVA: 0x00095B8B File Offset: 0x00093D8B
+	// Token: 0x170004F0 RID: 1264
+	// (get) Token: 0x06001E6E RID: 7790 RVA: 0x0009CB37 File Offset: 0x0009AD37
+	// (set) Token: 0x06001E6F RID: 7791 RVA: 0x0009CB47 File Offset: 0x0009AD47
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DisableLookAtInput
 	{
@@ -230,9 +230,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004CF RID: 1231
-	// (get) Token: 0x06001DD3 RID: 7635 RVA: 0x00095B9C File Offset: 0x00093D9C
-	// (set) Token: 0x06001DD4 RID: 7636 RVA: 0x00095BAC File Offset: 0x00093DAC
+	// Token: 0x170004F1 RID: 1265
+	// (get) Token: 0x06001E70 RID: 7792 RVA: 0x0009CB58 File Offset: 0x0009AD58
+	// (set) Token: 0x06001E71 RID: 7793 RVA: 0x0009CB68 File Offset: 0x0009AD68
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DisableMotionBlur
 	{
@@ -246,9 +246,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004D0 RID: 1232
-	// (get) Token: 0x06001DD5 RID: 7637 RVA: 0x00095BBD File Offset: 0x00093DBD
-	// (set) Token: 0x06001DD6 RID: 7638 RVA: 0x00095BCD File Offset: 0x00093DCD
+	// Token: 0x170004F2 RID: 1266
+	// (get) Token: 0x06001E72 RID: 7794 RVA: 0x0009CB79 File Offset: 0x0009AD79
+	// (set) Token: 0x06001E73 RID: 7795 RVA: 0x0009CB89 File Offset: 0x0009AD89
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 启用特定功能下的镜头配置
 	{
@@ -262,8 +262,8 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004D1 RID: 1233
-	// (get) Token: 0x06001DD7 RID: 7639 RVA: 0x00095BE0 File Offset: 0x00093DE0
+	// Token: 0x170004F3 RID: 1267
+	// (get) Token: 0x06001E74 RID: 7796 RVA: 0x0009CB9C File Offset: 0x0009AD9C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<SSequenceCamera_SpecificConfig> 特定功能下的镜头配置
 	{
@@ -279,9 +279,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004D2 RID: 1234
-	// (get) Token: 0x06001DD8 RID: 7640 RVA: 0x00095C19 File Offset: 0x00093E19
-	// (set) Token: 0x06001DD9 RID: 7641 RVA: 0x00095C29 File Offset: 0x00093E29
+	// Token: 0x170004F4 RID: 1268
+	// (get) Token: 0x06001E75 RID: 7797 RVA: 0x0009CBD5 File Offset: 0x0009ADD5
+	// (set) Token: 0x06001E76 RID: 7798 RVA: 0x0009CBE5 File Offset: 0x0009ADE5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool ShotBeforePlaying
 	{
@@ -295,9 +295,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170004D3 RID: 1235
-	// (get) Token: 0x06001DDA RID: 7642 RVA: 0x00095C3A File Offset: 0x00093E3A
-	// (set) Token: 0x06001DDB RID: 7643 RVA: 0x00095C4A File Offset: 0x00093E4A
+	// Token: 0x170004F5 RID: 1269
+	// (get) Token: 0x06001E77 RID: 7799 RVA: 0x0009CBF6 File Offset: 0x0009ADF6
+	// (set) Token: 0x06001E78 RID: 7800 RVA: 0x0009CC06 File Offset: 0x0009AE06
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ShotDuration
 	{
@@ -311,32 +311,28 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06001DDC RID: 7644 RVA: 0x00095C5C File Offset: 0x00093E5C
+	// Token: 0x06001E79 RID: 7801 RVA: 0x0009CC18 File Offset: 0x0009AE18
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifySwitchSequenceCamera) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifySwitchSequenceCamera.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001DDD RID: 7645 RVA: 0x00095CFC File Offset: 0x00093EFC
+	// Token: 0x06001E7A RID: 7802 RVA: 0x0009CCD0 File Offset: 0x0009AED0
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -397,35 +393,31 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		return true;
 	}
 
-	// Token: 0x06001DDE RID: 7646 RVA: 0x00095F78 File Offset: 0x00094178
+	// Token: 0x06001E7B RID: 7803 RVA: 0x0009CF4C File Offset: 0x0009B14C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifySwitchSequenceCamera) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifySwitchSequenceCamera.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001DDF RID: 7647 RVA: 0x00095FF3 File Offset: 0x000941F3
+	// Token: 0x06001E7C RID: 7804 RVA: 0x0009CFDC File Offset: 0x0009B1DC
 	protected override string GetNotifyName_Implementation()
 	{
 		return "特写镜头";
 	}
 
-	// Token: 0x06001DE0 RID: 7648 RVA: 0x00095FFC File Offset: 0x000941FC
+	// Token: 0x06001E7D RID: 7805 RVA: 0x0009CFE4 File Offset: 0x0009B1E4
 	[NullableContext(2)]
 	private SSequenceCamera_SpecificConfig GetSpecificConfig()
 	{
@@ -449,7 +441,7 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		return null;
 	}
 
-	// Token: 0x06001DE1 RID: 7649 RVA: 0x0009607D File Offset: 0x0009427D
+	// Token: 0x06001E7E RID: 7806 RVA: 0x0009D065 File Offset: 0x0009B265
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifySwitchSequenceCamera._ClassPtr == IntPtr.Zero)
@@ -459,22 +451,22 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		return TsAnimNotifySwitchSequenceCamera._ClassPtr;
 	}
 
-	// Token: 0x06001DE2 RID: 7650 RVA: 0x000960A4 File Offset: 0x000942A4
+	// Token: 0x06001E7F RID: 7807 RVA: 0x0009D08C File Offset: 0x0009B28C
 	public TsAnimNotifySwitchSequenceCamera() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifySwitchSequenceCamera.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001DE3 RID: 7651 RVA: 0x000960CC File Offset: 0x000942CC
+	// Token: 0x06001E80 RID: 7808 RVA: 0x0009D0B4 File Offset: 0x0009B2B4
 	public TsAnimNotifySwitchSequenceCamera(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifySwitchSequenceCamera.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001DE4 RID: 7652 RVA: 0x000960FF File Offset: 0x000942FF
+	// Token: 0x06001E81 RID: 7809 RVA: 0x0009D0E7 File Offset: 0x0009B2E7
 	protected TsAnimNotifySwitchSequenceCamera(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001DE5 RID: 7653 RVA: 0x00096108 File Offset: 0x00094308
+	// Token: 0x06001E82 RID: 7810 RVA: 0x0009D0F0 File Offset: 0x0009B2F0
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
@@ -483,75 +475,75 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001DE6 RID: 7654 RVA: 0x0009613B File Offset: 0x0009433B
+	// Token: 0x06001E83 RID: 7811 RVA: 0x0009D123 File Offset: 0x0009B323
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x0400126D RID: 4717
+	// Token: 0x040012B0 RID: 4784
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifySwitchSequenceCamera.TsAnimNotifySwitchSequenceCamera_C";
 
-	// Token: 0x0400126E RID: 4718
+	// Token: 0x040012B1 RID: 4785
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400126F RID: 4719
+	// Token: 0x040012B2 RID: 4786
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04001270 RID: 4720
+	// Token: 0x040012B3 RID: 4787
 	private static int __PropertyOffset_生效客户端;
 
-	// Token: 0x04001271 RID: 4721
+	// Token: 0x040012B4 RID: 4788
 	private static int __PropertyOffset_特写镜头配置;
 
-	// Token: 0x04001272 RID: 4722
+	// Token: 0x040012B5 RID: 4789
 	[Nullable(2)]
 	private SSequenceCamera_Settings _特写镜头配置;
 
-	// Token: 0x04001273 RID: 4723
+	// Token: 0x040012B6 RID: 4790
 	private static int __PropertyOffset_bResetLockOnCamera;
 
-	// Token: 0x04001274 RID: 4724
+	// Token: 0x040012B7 RID: 4791
 	private static int __PropertyOffset_AdditiveRotation;
 
-	// Token: 0x04001275 RID: 4725
+	// Token: 0x040012B8 RID: 4792
 	private static int __PropertyOffset_CameraAttachSocket;
 
-	// Token: 0x04001276 RID: 4726
+	// Token: 0x040012B9 RID: 4793
 	private static int __PropertyOffset_CameraDetectSocket;
 
-	// Token: 0x04001277 RID: 4727
+	// Token: 0x040012BA RID: 4794
 	private static int __PropertyOffset_强制播放Sequence;
 
-	// Token: 0x04001278 RID: 4728
+	// Token: 0x040012BB RID: 4795
 	private static int __PropertyOffset_ExtraDetectSphereRadius;
 
-	// Token: 0x04001279 RID: 4729
+	// Token: 0x040012BC RID: 4796
 	private static int __PropertyOffset_ExtraSphereLocation;
 
-	// Token: 0x0400127A RID: 4730
+	// Token: 0x040012BD RID: 4797
 	private static int __PropertyOffset_IsShowExtraSphere;
 
-	// Token: 0x0400127B RID: 4731
+	// Token: 0x040012BE RID: 4798
 	private static int __PropertyOffset_IsIgnoreCharacterCollision;
 
-	// Token: 0x0400127C RID: 4732
+	// Token: 0x040012BF RID: 4799
 	private static int __PropertyOffset_DisableMovementInput;
 
-	// Token: 0x0400127D RID: 4733
+	// Token: 0x040012C0 RID: 4800
 	private static int __PropertyOffset_DisableLookAtInput;
 
-	// Token: 0x0400127E RID: 4734
+	// Token: 0x040012C1 RID: 4801
 	private static int __PropertyOffset_DisableMotionBlur;
 
-	// Token: 0x0400127F RID: 4735
+	// Token: 0x040012C2 RID: 4802
 	private static int __PropertyOffset_启用特定功能下的镜头配置;
 
-	// Token: 0x04001280 RID: 4736
+	// Token: 0x040012C3 RID: 4803
 	private static int __PropertyOffset_特定功能下的镜头配置;
 
-	// Token: 0x04001281 RID: 4737
+	// Token: 0x040012C4 RID: 4804
 	[Nullable(new byte[]
 	{
 		2,
@@ -559,9 +551,9 @@ public class TsAnimNotifySwitchSequenceCamera : TsAnimNotifyBase, IUnrealUObject
 	})]
 	private TArray<SSequenceCamera_SpecificConfig> _特定功能下的镜头配置;
 
-	// Token: 0x04001282 RID: 4738
+	// Token: 0x040012C5 RID: 4805
 	private static int __PropertyOffset_ShotBeforePlaying;
 
-	// Token: 0x04001283 RID: 4739
+	// Token: 0x040012C6 RID: 4806
 	private static int __PropertyOffset_ShotDuration;
 }

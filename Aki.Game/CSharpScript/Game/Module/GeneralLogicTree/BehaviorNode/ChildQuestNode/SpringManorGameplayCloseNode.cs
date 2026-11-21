@@ -5,15 +5,15 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059E3 RID: 23011
+	// Token: 0x020049BC RID: 18876
 	public class SpringManorGameplayCloseNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A510 RID: 238864 RVA: 0x00DDED17 File Offset: 0x00DDCF17
+		// Token: 0x0602F437 RID: 193591 RVA: 0x00D2E583 File Offset: 0x00D2C783
 		public SpringManorGameplayCloseNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A511 RID: 238865 RVA: 0x00DDED20 File Offset: 0x00DDCF20
+		// Token: 0x0602F438 RID: 193592 RVA: 0x00D2E58C File Offset: 0x00D2C78C
 		[NullableContext(1)]
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
@@ -59,12 +59,12 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A512 RID: 238866 RVA: 0x00DDEDFB File Offset: 0x00DDCFFB
+		// Token: 0x0602F439 RID: 193593 RVA: 0x00D2E667 File Offset: 0x00D2C867
 		protected override void OnStart(ENodeStatusUpdateReason reason)
 		{
 		}
 
-		// Token: 0x0603A513 RID: 238867 RVA: 0x00DDEDFD File Offset: 0x00DDCFFD
+		// Token: 0x0602F43A RID: 193594 RVA: 0x00D2E669 File Offset: 0x00D2C869
 		protected override void OnDestroy()
 		{
 			base.OnDestroy();
@@ -72,21 +72,21 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.LevelId = 0;
 		}
 
-		// Token: 0x0603A514 RID: 238868 RVA: 0x00DDEE18 File Offset: 0x00DDD018
+		// Token: 0x0602F43B RID: 193595 RVA: 0x00D2E684 File Offset: 0x00D2C884
 		protected override void AddEventsOnChildQuestStart()
 		{
 			base.AddEventsOnChildQuestStart();
 			EventSystem.Instance.Add<ESpringFestivalGameplayType, int>(EEventName.OnSpringManorGameplayFinish, new Action<ESpringFestivalGameplayType, int>(this.OnGameplayFinish));
 		}
 
-		// Token: 0x0603A515 RID: 238869 RVA: 0x00DDEE3C File Offset: 0x00DDD03C
+		// Token: 0x0602F43C RID: 193596 RVA: 0x00D2E6A8 File Offset: 0x00D2C8A8
 		protected override void RemoveEventsOnChildQuestEnd()
 		{
 			EventSystem.Instance.Remove<ESpringFestivalGameplayType, int>(EEventName.OnSpringManorGameplayFinish, new Action<ESpringFestivalGameplayType, int>(this.OnGameplayFinish));
 			base.RemoveEventsOnChildQuestEnd();
 		}
 
-		// Token: 0x0603A516 RID: 238870 RVA: 0x00DDEE60 File Offset: 0x00DDD060
+		// Token: 0x0602F43D RID: 193597 RVA: 0x00D2E6CC File Offset: 0x00D2C8CC
 		private void OnGameplayFinish(ESpringFestivalGameplayType type, int levelId)
 		{
 			if (this.GameplayType == null)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A517 RID: 238871 RVA: 0x00DDEEB1 File Offset: 0x00DDD0B1
+		// Token: 0x0602F43E RID: 193598 RVA: 0x00D2E71D File Offset: 0x00D2C91D
 		protected override void OnAfterSubmit(bool submitSuccess)
 		{
 			base.OnAfterSubmit(submitSuccess);
@@ -115,10 +115,10 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0401E675 RID: 124533
+		// Token: 0x04019114 RID: 102676
 		private ESpringFestivalGameplayType? GameplayType;
 
-		// Token: 0x0401E676 RID: 124534
+		// Token: 0x04019115 RID: 102677
 		private int LevelId;
 	}
 }

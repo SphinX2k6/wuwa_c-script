@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000189 RID: 393
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001A0 RID: 416
 	public class GravityFlipComponent : IComponentBase
 	{
-		// Token: 0x0600058A RID: 1418 RVA: 0x00020B10 File Offset: 0x0001ED10
+		// Token: 0x0600059E RID: 1438 RVA: 0x000216EC File Offset: 0x0001F8EC
 		private GravityFlipComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600058B RID: 1419 RVA: 0x00020B48 File Offset: 0x0001ED48
+		// Token: 0x0600059F RID: 1439 RVA: 0x00021724 File Offset: 0x0001F924
 		public static GravityFlipComponent Create([Nullable(2)] GravityFlipComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600058C RID: 1420 RVA: 0x00020B5B File Offset: 0x0001ED5B
+		// Token: 0x060005A0 RID: 1440 RVA: 0x00021737 File Offset: 0x0001F937
 		public static GravityFlipComponent CreateFromSetValue([Nullable(2)] GravityFlipComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600058D RID: 1421 RVA: 0x00020B6E File Offset: 0x0001ED6E
+		// Token: 0x060005A1 RID: 1441 RVA: 0x0002174A File Offset: 0x0001F94A
 		public new GravityFlipComponent_SetValue ToSetValue()
 		{
 			return new GravityFlipComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170001D5 RID: 469
-		// (get) Token: 0x0600058E RID: 1422 RVA: 0x00020BA8 File Offset: 0x0001EDA8
-		// (set) Token: 0x0600058F RID: 1423 RVA: 0x00020BE2 File Offset: 0x0001EDE2
+		// Token: 0x170001DC RID: 476
+		// (get) Token: 0x060005A2 RID: 1442 RVA: 0x00021784 File Offset: 0x0001F984
+		// (set) Token: 0x060005A3 RID: 1443 RVA: 0x000217BE File Offset: 0x0001F9BE
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001D6 RID: 470
-		// (get) Token: 0x06000590 RID: 1424 RVA: 0x00020BF0 File Offset: 0x0001EDF0
-		// (set) Token: 0x06000591 RID: 1425 RVA: 0x00020C1A File Offset: 0x0001EE1A
+		// Token: 0x170001DD RID: 477
+		// (get) Token: 0x060005A4 RID: 1444 RVA: 0x000217CC File Offset: 0x0001F9CC
+		// (set) Token: 0x060005A5 RID: 1445 RVA: 0x000217F6 File Offset: 0x0001F9F6
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001D7 RID: 471
-		// (get) Token: 0x06000592 RID: 1426 RVA: 0x00020C28 File Offset: 0x0001EE28
-		// (set) Token: 0x06000593 RID: 1427 RVA: 0x00020CBB File Offset: 0x0001EEBB
+		// Token: 0x170001DE RID: 478
+		// (get) Token: 0x060005A6 RID: 1446 RVA: 0x00021804 File Offset: 0x0001FA04
+		// (set) Token: 0x060005A7 RID: 1447 RVA: 0x00021897 File Offset: 0x0001FA97
 		public virtual List<IGravityFlipConfig> Config
 		{
 			get
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001D8 RID: 472
-		// (get) Token: 0x06000594 RID: 1428 RVA: 0x00020CD0 File Offset: 0x0001EED0
-		// (set) Token: 0x06000595 RID: 1429 RVA: 0x00020CFB File Offset: 0x0001EEFB
+		// Token: 0x170001DF RID: 479
+		// (get) Token: 0x060005A8 RID: 1448 RVA: 0x000218AC File Offset: 0x0001FAAC
+		// (set) Token: 0x060005A9 RID: 1449 RVA: 0x000218D7 File Offset: 0x0001FAD7
 		public virtual EGravityFlipType DefaultGravity
 		{
 			get
@@ -167,18 +165,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000779 RID: 1913
+		// Token: 0x040007CF RID: 1999
 		[Nullable(2)]
 		protected new GravityFlipComponent FbInstance;
 
-		// Token: 0x0400077A RID: 1914
+		// Token: 0x040007D0 RID: 2000
 		[Nullable(2)]
 		protected new GravityFlipComponent_SetValue PocoInterface;
 
-		// Token: 0x0400077B RID: 1915
+		// Token: 0x040007D1 RID: 2001
 		private List<IGravityFlipConfig> _ConfigCache;
 
-		// Token: 0x0400077C RID: 1916
+		// Token: 0x040007D2 RID: 2002
 		private bool _ConfigInited;
 	}
 }

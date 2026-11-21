@@ -3,10 +3,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x020014FB RID: 5371
+// Token: 0x020009B3 RID: 2483
 public static class ActivitySevenDaySignDefine
 {
-	// Token: 0x06009932 RID: 39218 RVA: 0x002123D4 File Offset: 0x002105D4
+	// Token: 0x06006D0C RID: 27916 RVA: 0x0021C0EC File Offset: 0x0021A2EC
 	public static void OpenSignActivityRewardPreviewWhenLocked(int itemId)
 	{
 		if (InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(itemId)) == InventoryDefine.EItemDataType.MotorDecorationItem)
@@ -18,6 +18,6 @@ public static class ActivitySevenDaySignDefine
 				return;
 			}
 		}
-		ItemController.Instance.OpenItemTipsByItemId(itemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(itemId, true, null, false);
 	}
 }

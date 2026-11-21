@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000098 RID: 152
+	// Token: 0x020000A0 RID: 160
 	public class ConfigAnimalHandBookByMeshId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000390 RID: 912 RVA: 0x0006DB84 File Offset: 0x0006BD84
+		// Token: 0x060003C0 RID: 960 RVA: 0x00072438 File Offset: 0x00070638
 		static ConfigAnimalHandBookByMeshId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAnimalHandBookByMeshId.CreateStaticDefaultValue), new Action(ConfigAnimalHandBookByMeshId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000391 RID: 913 RVA: 0x0006DBA4 File Offset: 0x0006BDA4
+		// Token: 0x060003C1 RID: 961 RVA: 0x00072458 File Offset: 0x00070658
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAnimalHandBookByMeshId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000392 RID: 914 RVA: 0x0006DC23 File Offset: 0x0006BE23
+		// Token: 0x060003C2 RID: 962 RVA: 0x000724D7 File Offset: 0x000706D7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAnimalHandBookByMeshId.LogPair = null;
 			ConfigAnimalHandBookByMeshId.HandleId = 0;
 		}
 
-		// Token: 0x06000393 RID: 915 RVA: 0x0006DC31 File Offset: 0x0006BE31
+		// Token: 0x060003C3 RID: 963 RVA: 0x000724E5 File Offset: 0x000706E5
 		public static void Init()
 		{
 			ConfigAnimalHandBookByMeshId.HandleId = ConfigCommon.InitDataStatement(ConfigAnimalHandBookByMeshId.HandleId, "db_handbook.db", "select BinData from `AnimalHandBook` where MeshId = ?");
 		}
 
-		// Token: 0x06000394 RID: 916 RVA: 0x0006DC4C File Offset: 0x0006BE4C
+		// Token: 0x060003C4 RID: 964 RVA: 0x00072500 File Offset: 0x00070700
 		public static AnimalHandBook? GetConfig(int p0MeshId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAnimalHandBookByMeshId.HandleId, ConfigAnimalHandBookByMeshId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AnimalHandBook?(rootAsAnimalHandBook);
 		}
 
-		// Token: 0x0400040C RID: 1036
+		// Token: 0x04000444 RID: 1092
 		private const string DB = "db_handbook.db";
 
-		// Token: 0x0400040D RID: 1037
+		// Token: 0x04000445 RID: 1093
 		private const string FILE = "t.图鉴系统.xlsx";
 
-		// Token: 0x0400040E RID: 1038
+		// Token: 0x04000446 RID: 1094
 		private const string TABLE = "AnimalHandBook";
 
-		// Token: 0x0400040F RID: 1039
+		// Token: 0x04000447 RID: 1095
 		private const string COMMAND = "select BinData from `AnimalHandBook` where MeshId = ?";
 
-		// Token: 0x04000410 RID: 1040
+		// Token: 0x04000448 RID: 1096
 		private const string KEY_PREFIX = "AnimalHandBookByMeshId";
 
-		// Token: 0x04000411 RID: 1041
+		// Token: 0x04000449 RID: 1097
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000412 RID: 1042
+		// Token: 0x0400044A RID: 1098
 		private static int HandleId;
 	}
 }

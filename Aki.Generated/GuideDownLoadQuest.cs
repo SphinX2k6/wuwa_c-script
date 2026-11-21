@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D15 RID: 3349
+	// Token: 0x02000DFA RID: 3578
 	public struct GuideDownLoadQuest : IFlatbufferObject
 	{
-		// Token: 0x17001648 RID: 5704
-		// (get) Token: 0x06007C65 RID: 31845 RVA: 0x0024F6F8 File Offset: 0x0024D8F8
+		// Token: 0x170016A9 RID: 5801
+		// (get) Token: 0x0600827D RID: 33405 RVA: 0x0026E118 File Offset: 0x0026C318
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007C66 RID: 31846 RVA: 0x0024F705 File Offset: 0x0024D905
+		// Token: 0x0600827E RID: 33406 RVA: 0x0026E125 File Offset: 0x0026C325
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007C67 RID: 31847 RVA: 0x0024F70C File Offset: 0x0024D90C
+		// Token: 0x0600827F RID: 33407 RVA: 0x0026E12C File Offset: 0x0026C32C
 		public static GuideDownLoadQuest GetRootAsGuideDownLoadQuest(ByteBuffer _bb)
 		{
 			return GuideDownLoadQuest.GetRootAsGuideDownLoadQuest(_bb, default(GuideDownLoadQuest));
 		}
 
-		// Token: 0x06007C68 RID: 31848 RVA: 0x0024F728 File Offset: 0x0024D928
+		// Token: 0x06008280 RID: 33408 RVA: 0x0026E148 File Offset: 0x0026C348
 		public static GuideDownLoadQuest GetRootAsGuideDownLoadQuest(ByteBuffer _bb, GuideDownLoadQuest obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007C69 RID: 31849 RVA: 0x0024F745 File Offset: 0x0024D945
+		// Token: 0x06008281 RID: 33409 RVA: 0x0026E165 File Offset: 0x0026C365
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007C6A RID: 31850 RVA: 0x0024F754 File Offset: 0x0024D954
+		// Token: 0x06008282 RID: 33410 RVA: 0x0026E174 File Offset: 0x0026C374
 		public GuideDownLoadQuest __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001649 RID: 5705
-		// (get) Token: 0x06007C6B RID: 31851 RVA: 0x0024F764 File Offset: 0x0024D964
+		// Token: 0x170016AA RID: 5802
+		// (get) Token: 0x06008283 RID: 33411 RVA: 0x0026E184 File Offset: 0x0026C384
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700164A RID: 5706
-		// (get) Token: 0x06007C6C RID: 31852 RVA: 0x0024F7A0 File Offset: 0x0024D9A0
+		// Token: 0x170016AB RID: 5803
+		// (get) Token: 0x06008284 RID: 33412 RVA: 0x0026E1C0 File Offset: 0x0026C3C0
 		public int QuestId
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007C6D RID: 31853 RVA: 0x0024F7DC File Offset: 0x0024D9DC
+		// Token: 0x06008285 RID: 33413 RVA: 0x0026E1FC File Offset: 0x0026C3FC
 		public int SubPackageList(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700164B RID: 5707
-		// (get) Token: 0x06007C6E RID: 31854 RVA: 0x0024F81C File Offset: 0x0024DA1C
+		// Token: 0x170016AC RID: 5804
+		// (get) Token: 0x06008286 RID: 33414 RVA: 0x0026E23C File Offset: 0x0026C43C
 		public int SubPackageListLength
 		{
 			get
@@ -105,37 +105,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007C6F RID: 31855 RVA: 0x0024F847 File Offset: 0x0024DA47
+		// Token: 0x06008287 RID: 33415 RVA: 0x0026E267 File Offset: 0x0026C467
 		public Span<int> GetSubPackageListBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06007C70 RID: 31856 RVA: 0x0024F856 File Offset: 0x0024DA56
+		// Token: 0x06008288 RID: 33416 RVA: 0x0026E276 File Offset: 0x0026C476
 		public int[] GetSubPackageListArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06007C71 RID: 31857 RVA: 0x0024F870 File Offset: 0x0024DA70
+		// Token: 0x06008289 RID: 33417 RVA: 0x0026E28D File Offset: 0x0026C48D
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SubPackageListIter()或GetSubPackageListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SubPackageList()
+		public int[] SubPackageList()
 		{
-			GuideDownLoadQuest guideDownLoadQuest = this;
-			return guideDownLoadQuest.GetSubPackageListArray() ?? Array.Empty<int>();
+			return this.GetSubPackageListArray();
 		}
 
-		// Token: 0x06007C72 RID: 31858 RVA: 0x0024F894 File Offset: 0x0024DA94
+		// Token: 0x0600828A RID: 33418 RVA: 0x0026E295 File Offset: 0x0026C495
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SubPackageListIter()
+		public IEnumerable<int> SubPackageListIter()
 		{
 			GuideDownLoadQuest.<SubPackageListIter>d__18 <SubPackageListIter>d__ = new GuideDownLoadQuest.<SubPackageListIter>d__18(-2);
 			<SubPackageListIter>d__.<>3__<>4__this = this;
 			return <SubPackageListIter>d__;
 		}
 
-		// Token: 0x04004D8D RID: 19853
+		// Token: 0x04005372 RID: 21362
 		private Table __p;
 	}
 }

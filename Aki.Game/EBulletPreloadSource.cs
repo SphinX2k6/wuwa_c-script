@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002DA4 RID: 11684
+// Token: 0x020022FE RID: 8958
 public enum EBulletPreloadSource
 {
-	// Token: 0x0400B5F4 RID: 46580
+	// Token: 0x0400B96A RID: 47466
 	Self,
-	// Token: 0x0400B5F5 RID: 46581
+	// Token: 0x0400B96B RID: 47467
 	Extra
 }

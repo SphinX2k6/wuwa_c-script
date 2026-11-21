@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Map.Base;
 
 namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 {
-	// Token: 0x020047B2 RID: 18354
+	// Token: 0x020036E3 RID: 14051
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WorldMapPlayerComponent : MapComponent
 	{
-		// Token: 0x06030107 RID: 196871 RVA: 0x00B23F80 File Offset: 0x00B22180
+		// Token: 0x060248D6 RID: 149718 RVA: 0x00A53F0C File Offset: 0x00A5210C
 		public WorldMapPlayerComponent([Nullable(new byte[]
 		{
 			0,
@@ -21,8 +21,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 		{
 		}
 
-		// Token: 0x1700785C RID: 30812
-		// (get) Token: 0x06030108 RID: 196872 RVA: 0x00B23FA6 File Offset: 0x00B221A6
+		// Token: 0x17004B18 RID: 19224
+		// (get) Token: 0x060248D7 RID: 149719 RVA: 0x00A53F32 File Offset: 0x00A52132
 		public override EMapComponent ComponentType
 		{
 			get
@@ -31,27 +31,27 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x1700785D RID: 30813
-		// (get) Token: 0x06030109 RID: 196873 RVA: 0x00B23FA9 File Offset: 0x00B221A9
-		// (set) Token: 0x0603010A RID: 196874 RVA: 0x00B23FB1 File Offset: 0x00B221B1
+		// Token: 0x17004B19 RID: 19225
+		// (get) Token: 0x060248D8 RID: 149720 RVA: 0x00A53F35 File Offset: 0x00A52135
+		// (set) Token: 0x060248D9 RID: 149721 RVA: 0x00A53F3D File Offset: 0x00A5213D
 		public Vector2D PlayerUiPosition { get; private set; } = Vector2D.Create(0.0, 0.0);
 
-		// Token: 0x1700785E RID: 30814
-		// (get) Token: 0x0603010B RID: 196875 RVA: 0x00B23FBA File Offset: 0x00B221BA
-		// (set) Token: 0x0603010C RID: 196876 RVA: 0x00B23FC2 File Offset: 0x00B221C2
+		// Token: 0x17004B1A RID: 19226
+		// (get) Token: 0x060248DA RID: 149722 RVA: 0x00A53F46 File Offset: 0x00A52146
+		// (set) Token: 0x060248DB RID: 149723 RVA: 0x00A53F4E File Offset: 0x00A5214E
 		public Vector PlayerWorldPosition { get; private set; }
 
-		// Token: 0x1700785F RID: 30815
-		// (get) Token: 0x0603010D RID: 196877 RVA: 0x00B23FCB File Offset: 0x00B221CB
-		// (set) Token: 0x0603010E RID: 196878 RVA: 0x00B23FD3 File Offset: 0x00B221D3
+		// Token: 0x17004B1B RID: 19227
+		// (get) Token: 0x060248DC RID: 149724 RVA: 0x00A53F57 File Offset: 0x00A52157
+		// (set) Token: 0x060248DD RID: 149725 RVA: 0x00A53F5F File Offset: 0x00A5215F
 		public float PlayerRotation { get; set; }
 
-		// Token: 0x17007860 RID: 30816
-		// (get) Token: 0x0603010F RID: 196879 RVA: 0x00B23FDC File Offset: 0x00B221DC
-		// (set) Token: 0x06030110 RID: 196880 RVA: 0x00B23FE4 File Offset: 0x00B221E4
+		// Token: 0x17004B1C RID: 19228
+		// (get) Token: 0x060248DE RID: 149726 RVA: 0x00A53F68 File Offset: 0x00A52168
+		// (set) Token: 0x060248DF RID: 149727 RVA: 0x00A53F70 File Offset: 0x00A52170
 		public bool PlayerOutOfBound { get; set; }
 
-		// Token: 0x06030111 RID: 196881 RVA: 0x00B23FF0 File Offset: 0x00B221F0
+		// Token: 0x060248E0 RID: 149728 RVA: 0x00A53F7C File Offset: 0x00A5217C
 		public void UpdatePlayerPosition()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;

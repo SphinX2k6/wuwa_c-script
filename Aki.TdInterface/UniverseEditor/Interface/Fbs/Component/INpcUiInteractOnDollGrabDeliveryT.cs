@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005672 RID: 22130
+	// Token: 0x02005C13 RID: 23571
 	public class INpcUiInteractOnDollGrabDeliveryT
 	{
-		// Token: 0x1700A425 RID: 42021
-		// (get) Token: 0x06024D73 RID: 150899 RVA: 0x005157FB File Offset: 0x005139FB
-		// (set) Token: 0x06024D74 RID: 150900 RVA: 0x00515803 File Offset: 0x00513A03
+		// Token: 0x1700ACB4 RID: 44212
+		// (get) Token: 0x06026FAC RID: 159660 RVA: 0x00556397 File Offset: 0x00554597
+		// (set) Token: 0x06026FAD RID: 159661 RVA: 0x0055639F File Offset: 0x0055459F
 		public ENpcUiInteractType Type { get; set; }
 
-		// Token: 0x1700A426 RID: 42022
-		// (get) Token: 0x06024D75 RID: 150901 RVA: 0x0051580C File Offset: 0x00513A0C
-		// (set) Token: 0x06024D76 RID: 150902 RVA: 0x00515814 File Offset: 0x00513A14
+		// Token: 0x1700ACB5 RID: 44213
+		// (get) Token: 0x06026FAE RID: 159662 RVA: 0x005563A8 File Offset: 0x005545A8
+		// (set) Token: 0x06026FAF RID: 159663 RVA: 0x005563B0 File Offset: 0x005545B0
 		public IOnDollGrabDeliveryPerformT OnFirstAchievementPerform { get; set; }
 
-		// Token: 0x1700A427 RID: 42023
-		// (get) Token: 0x06024D77 RID: 150903 RVA: 0x0051581D File Offset: 0x00513A1D
-		// (set) Token: 0x06024D78 RID: 150904 RVA: 0x00515825 File Offset: 0x00513A25
+		// Token: 0x1700ACB6 RID: 44214
+		// (get) Token: 0x06026FB0 RID: 159664 RVA: 0x005563B9 File Offset: 0x005545B9
+		// (set) Token: 0x06026FB1 RID: 159665 RVA: 0x005563C1 File Offset: 0x005545C1
 		public IOnDollGrabDeliveryPerformT OnSubsequentAchievementPerform { get; set; }
 
-		// Token: 0x1700A428 RID: 42024
-		// (get) Token: 0x06024D79 RID: 150905 RVA: 0x0051582E File Offset: 0x00513A2E
-		// (set) Token: 0x06024D7A RID: 150906 RVA: 0x00515836 File Offset: 0x00513A36
+		// Token: 0x1700ACB7 RID: 44215
+		// (get) Token: 0x06026FB2 RID: 159666 RVA: 0x005563CA File Offset: 0x005545CA
+		// (set) Token: 0x06026FB3 RID: 159667 RVA: 0x005563D2 File Offset: 0x005545D2
 		public IOnDollGrabDeliveryPerformT OnNeverAchievementPerform { get; set; }
 
-		// Token: 0x1700A429 RID: 42025
-		// (get) Token: 0x06024D7B RID: 150907 RVA: 0x0051583F File Offset: 0x00513A3F
-		// (set) Token: 0x06024D7C RID: 150908 RVA: 0x00515847 File Offset: 0x00513A47
+		// Token: 0x1700ACB8 RID: 44216
+		// (get) Token: 0x06026FB4 RID: 159668 RVA: 0x005563DB File Offset: 0x005545DB
+		// (set) Token: 0x06026FB5 RID: 159669 RVA: 0x005563E3 File Offset: 0x005545E3
 		public IOnDollGrabDeliveryPerformT OnAlreadyAchievementPerform { get; set; }
 
-		// Token: 0x06024D7D RID: 150909 RVA: 0x00515850 File Offset: 0x00513A50
+		// Token: 0x06026FB6 RID: 159670 RVA: 0x005563EC File Offset: 0x005545EC
 		public INpcUiInteractOnDollGrabDeliveryT()
 		{
 			this.Type = ENpcUiInteractType.HandInItem;

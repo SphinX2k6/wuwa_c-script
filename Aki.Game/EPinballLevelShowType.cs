@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020013EE RID: 5102
+// Token: 0x020008A2 RID: 2210
 public enum EPinballLevelShowType
 {
-	// Token: 0x04003FBF RID: 16319
+	// Token: 0x04004057 RID: 16471
 	Normal = 1,
-	// Token: 0x04003FC0 RID: 16320
+	// Token: 0x04004058 RID: 16472
 	Cow,
-	// Token: 0x04003FC1 RID: 16321
+	// Token: 0x04004059 RID: 16473
 	Tower,
-	// Token: 0x04003FC2 RID: 16322
+	// Token: 0x0400405A RID: 16474
 	Daily
 }

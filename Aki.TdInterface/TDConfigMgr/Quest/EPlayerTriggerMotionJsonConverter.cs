@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200126B RID: 4715
+	// Token: 0x020013AB RID: 5035
 	public class EPlayerTriggerMotionJsonConverter : JsonConverter<EPlayerTriggerMotion>
 	{
-		// Token: 0x06006A8A RID: 27274 RVA: 0x000FF6B8 File Offset: 0x000FD8B8
+		// Token: 0x060070DD RID: 28893 RVA: 0x0010D2E4 File Offset: 0x0010B4E4
 		public override EPlayerTriggerMotion Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return EPlayerTriggerMotionExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006A8B RID: 27275 RVA: 0x000FF6DC File Offset: 0x000FD8DC
+		// Token: 0x060070DE RID: 28894 RVA: 0x0010D308 File Offset: 0x0010B508
 		public override void Write(Utf8JsonWriter writer, EPlayerTriggerMotion value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

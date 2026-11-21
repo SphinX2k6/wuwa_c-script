@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02001A09 RID: 6665
+// Token: 0x02000EC8 RID: 3784
 [NullableContext(1)]
 [Nullable(0)]
 public class DamageViewData
 {
-	// Token: 0x0600C346 RID: 49990 RVA: 0x002C2C00 File Offset: 0x002C0E00
+	// Token: 0x06009756 RID: 38742 RVA: 0x002CDC70 File Offset: 0x002CBE70
 	public void Initialize(DamageText damageTextConfig)
 	{
 		this.ConfigId = damageTextConfig.Id;
@@ -24,55 +24,55 @@ public class DamageViewData
 		this.CriticalStrokeColor = new FColor?(FColor.FromHex(damageTextConfig.CritStrokeColor));
 	}
 
-	// Token: 0x0600C347 RID: 49991 RVA: 0x002C2CC7 File Offset: 0x002C0EC7
+	// Token: 0x06009757 RID: 38743 RVA: 0x002CDD37 File Offset: 0x002CBF37
 	public int GetConfigId()
 	{
 		return this.ConfigId;
 	}
 
-	// Token: 0x0600C348 RID: 49992 RVA: 0x002C2CCF File Offset: 0x002C0ECF
+	// Token: 0x06009758 RID: 38744 RVA: 0x002CDD3F File Offset: 0x002CBF3F
 	public float GetRandomOffsetX()
 	{
 		return MathUtils.Instance.GetRandomFloatNumber(this.MinRandomOffsetX, this.MaxRandomOffsetX);
 	}
 
-	// Token: 0x0600C349 RID: 49993 RVA: 0x002C2CE7 File Offset: 0x002C0EE7
+	// Token: 0x06009759 RID: 38745 RVA: 0x002CDD57 File Offset: 0x002CBF57
 	public float GetRandomOffsetY()
 	{
 		return MathUtils.Instance.GetRandomFloatNumber(this.MinRandomOffsetY, this.MaxRandomOffsetY);
 	}
 
-	// Token: 0x0600C34A RID: 49994 RVA: 0x002C2CFF File Offset: 0x002C0EFF
+	// Token: 0x0600975A RID: 38746 RVA: 0x002CDD6F File Offset: 0x002CBF6F
 	public FColor? GetTextColor()
 	{
 		return this.TextColor;
 	}
 
-	// Token: 0x0600C34B RID: 49995 RVA: 0x002C2D07 File Offset: 0x002C0F07
+	// Token: 0x0600975B RID: 38747 RVA: 0x002CDD77 File Offset: 0x002CBF77
 	public FColor? GetCriticalTextColor()
 	{
 		return this.CriticalTextColor;
 	}
 
-	// Token: 0x0600C34C RID: 49996 RVA: 0x002C2D0F File Offset: 0x002C0F0F
+	// Token: 0x0600975C RID: 38748 RVA: 0x002CDD7F File Offset: 0x002CBF7F
 	public FColor? GetStrokeColor()
 	{
 		return this.StrokeColor;
 	}
 
-	// Token: 0x0600C34D RID: 49997 RVA: 0x002C2D17 File Offset: 0x002C0F17
+	// Token: 0x0600975D RID: 38749 RVA: 0x002CDD87 File Offset: 0x002CBF87
 	public FColor? GetCriticalStrokeColor()
 	{
 		return this.CriticalStrokeColor;
 	}
 
-	// Token: 0x0600C34E RID: 49998 RVA: 0x002C2D1F File Offset: 0x002C0F1F
+	// Token: 0x0600975E RID: 38750 RVA: 0x002CDD8F File Offset: 0x002CBF8F
 	public string GetCriticalNiagaraPath()
 	{
 		return this.CriticalNiagaraPath;
 	}
 
-	// Token: 0x0600C34F RID: 49999 RVA: 0x002C2D28 File Offset: 0x002C0F28
+	// Token: 0x0600975F RID: 38751 RVA: 0x002CDD98 File Offset: 0x002CBF98
 	public string GetSequencePath(bool bOwnPlayerDamage, bool bCritical, bool bCustomText)
 	{
 		if (bCustomText)
@@ -97,39 +97,39 @@ public class DamageViewData
 		}
 	}
 
-	// Token: 0x04005A1F RID: 23071
+	// Token: 0x04005AEE RID: 23278
 	public int ConfigId;
 
-	// Token: 0x04005A20 RID: 23072
+	// Token: 0x04005AEF RID: 23279
 	public DamageText? DamageTextConfig;
 
-	// Token: 0x04005A21 RID: 23073
+	// Token: 0x04005AF0 RID: 23280
 	public float MinRandomOffsetX;
 
-	// Token: 0x04005A22 RID: 23074
+	// Token: 0x04005AF1 RID: 23281
 	public float MinRandomOffsetY;
 
-	// Token: 0x04005A23 RID: 23075
+	// Token: 0x04005AF2 RID: 23282
 	public float MaxRandomOffsetX;
 
-	// Token: 0x04005A24 RID: 23076
+	// Token: 0x04005AF3 RID: 23283
 	public float MaxRandomOffsetY;
 
-	// Token: 0x04005A25 RID: 23077
+	// Token: 0x04005AF4 RID: 23284
 	public FColor? TextColor;
 
-	// Token: 0x04005A26 RID: 23078
+	// Token: 0x04005AF5 RID: 23285
 	public FColor? CriticalTextColor;
 
-	// Token: 0x04005A27 RID: 23079
+	// Token: 0x04005AF6 RID: 23286
 	public FColor? StrokeColor;
 
-	// Token: 0x04005A28 RID: 23080
+	// Token: 0x04005AF7 RID: 23287
 	public FColor? CriticalStrokeColor;
 
-	// Token: 0x04005A29 RID: 23081
+	// Token: 0x04005AF8 RID: 23288
 	public string CriticalNiagaraPath = "";
 
-	// Token: 0x04005A2A RID: 23082
+	// Token: 0x04005AF9 RID: 23289
 	public int CriticalNiagaraId = -1;
 }

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AD4 RID: 19156
+	// Token: 0x02003A7C RID: 14972
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseTalentTreeNodeItem : UiPanelBase
 	{
-		// Token: 0x060319DA RID: 203226 RVA: 0x00B82458 File Offset: 0x00B80658
+		// Token: 0x0602676A RID: 157546 RVA: 0x00AC640C File Offset: 0x00AC460C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -55,20 +55,20 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060319DB RID: 203227 RVA: 0x00B8266E File Offset: 0x00B8086E
+		// Token: 0x0602676B RID: 157547 RVA: 0x00AC6622 File Offset: 0x00AC4822
 		protected override void OnStart()
 		{
 			TrapDefenseModel.Instance.ViewModelTalentTree.AddDelegateOnNodeSelect(new Action<TrapDefenseTalentTreeNodeData, bool>(this.OnSelectedNodeChange));
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x060319DC RID: 203228 RVA: 0x00B8269C File Offset: 0x00B8089C
+		// Token: 0x0602676C RID: 157548 RVA: 0x00AC6650 File Offset: 0x00AC4850
 		protected override void OnBeforeDestroy()
 		{
 			TrapDefenseModel.Instance.ViewModelTalentTree.RemoveDelegateOnNodeSelect(new Action<TrapDefenseTalentTreeNodeData, bool>(this.OnSelectedNodeChange));
 		}
 
-		// Token: 0x060319DD RID: 203229 RVA: 0x00B826BC File Offset: 0x00B808BC
+		// Token: 0x0602676D RID: 157549 RVA: 0x00AC6670 File Offset: 0x00AC4870
 		public void Refresh(TrapDefenseTalentTreeNodeData data)
 		{
 			this.Data = data;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.NodeUnlockStateCache = data.IsUnlock;
 		}
 
-		// Token: 0x060319DE RID: 203230 RVA: 0x00B82808 File Offset: 0x00B80A08
+		// Token: 0x0602676E RID: 157550 RVA: 0x00AC67BC File Offset: 0x00AC49BC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new ValueTuple<UUIItem, UUIItem>(base.GetItem(2), base.GetItem(0));
 		}
 
-		// Token: 0x060319DF RID: 203231 RVA: 0x00B8281D File Offset: 0x00B80A1D
+		// Token: 0x0602676F RID: 157551 RVA: 0x00AC67D1 File Offset: 0x00AC49D1
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new ValueTuple<UUIItem, UUIItem>(base.GetItem(3), base.GetItem(1));
 		}
 
-		// Token: 0x060319E0 RID: 203232 RVA: 0x00B82832 File Offset: 0x00B80A32
+		// Token: 0x06026770 RID: 157552 RVA: 0x00AC67E6 File Offset: 0x00AC49E6
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new ValueTuple<UUIItem, UUIItem>(base.GetItem(10), base.GetItem(9));
 		}
 
-		// Token: 0x060319E1 RID: 203233 RVA: 0x00B8284C File Offset: 0x00B80A4C
+		// Token: 0x06026771 RID: 157553 RVA: 0x00AC6800 File Offset: 0x00AC4A00
 		public UUIItem[] GetAllLines()
 		{
 			return new UUIItem[]
@@ -143,19 +143,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x060319E2 RID: 203234 RVA: 0x00B8289D File Offset: 0x00B80A9D
+		// Token: 0x06026772 RID: 157554 RVA: 0x00AC6851 File Offset: 0x00AC4A51
 		public void SetNodeActive(bool isActive)
 		{
 			base.GetItem(8).SetUIActive(isActive);
 		}
 
-		// Token: 0x060319E3 RID: 203235 RVA: 0x00B828AC File Offset: 0x00B80AAC
+		// Token: 0x06026773 RID: 157555 RVA: 0x00AC6860 File Offset: 0x00AC4A60
 		private void OnClick(EToggleState state)
 		{
 			TrapDefenseModel.Instance.ViewModelTalentTree.SelectNode(this.Data, false);
 		}
 
-		// Token: 0x060319E4 RID: 203236 RVA: 0x00B828C4 File Offset: 0x00B80AC4
+		// Token: 0x06026774 RID: 157556 RVA: 0x00AC6878 File Offset: 0x00AC4A78
 		private void OnSelectedNodeChange(TrapDefenseTalentTreeNodeData node, bool _)
 		{
 			if (node == this.Data)
@@ -166,56 +166,56 @@ namespace CSharpScript.Game.Module.TrapDefense
 			base.GetExtendToggle(4).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0401A813 RID: 108563
+		// Token: 0x04015165 RID: 86373
 		private TrapDefenseTalentTreeNodeData Data;
 
-		// Token: 0x0401A814 RID: 108564
+		// Token: 0x04015166 RID: 86374
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0401A815 RID: 108565
+		// Token: 0x04015167 RID: 86375
 		private bool NodeUnlockStateCache = true;
 
-		// Token: 0x0200AC4E RID: 44110
+		// Token: 0x0200966E RID: 38510
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040345BC RID: 214460
+			// Token: 0x0402EF6D RID: 192365
 			public const int ItemDashedLineUp = 0;
 
-			// Token: 0x040345BD RID: 214461
+			// Token: 0x0402EF6E RID: 192366
 			public const int ItemDashedLineDown = 1;
 
-			// Token: 0x040345BE RID: 214462
+			// Token: 0x0402EF6F RID: 192367
 			public const int ItemSolidLineUp = 2;
 
-			// Token: 0x040345BF RID: 214463
+			// Token: 0x0402EF70 RID: 192368
 			public const int ItemSolidLineDown = 3;
 
-			// Token: 0x040345C0 RID: 214464
+			// Token: 0x0402EF71 RID: 192369
 			public const int Toggle = 4;
 
-			// Token: 0x040345C1 RID: 214465
+			// Token: 0x0402EF72 RID: 192370
 			public const int ItemLock = 5;
 
-			// Token: 0x040345C2 RID: 214466
+			// Token: 0x0402EF73 RID: 192371
 			public const int ItemUnlock = 6;
 
-			// Token: 0x040345C3 RID: 214467
+			// Token: 0x0402EF74 RID: 192372
 			public const int SpriteIcon = 7;
 
-			// Token: 0x040345C4 RID: 214468
+			// Token: 0x0402EF75 RID: 192373
 			public const int ItemNode = 8;
 
-			// Token: 0x040345C5 RID: 214469
+			// Token: 0x0402EF76 RID: 192374
 			public const int ItemMidLineDashed = 9;
 
-			// Token: 0x040345C6 RID: 214470
+			// Token: 0x0402EF77 RID: 192375
 			public const int ItemMidLineSolid = 10;
 
-			// Token: 0x040345C7 RID: 214471
+			// Token: 0x0402EF78 RID: 192376
 			public const int ItemLevelUpIcon = 11;
 
-			// Token: 0x040345C8 RID: 214472
+			// Token: 0x0402EF79 RID: 192377
 			public const int ItemLoopAnim = 12;
 		}
 	}

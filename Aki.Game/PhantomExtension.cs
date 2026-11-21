@@ -5,12 +5,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BCB RID: 7115
+// Token: 0x0200108A RID: 4234
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomExtension : ISlotExtension
 {
-	// Token: 0x0600D42F RID: 54319 RVA: 0x0030D244 File Offset: 0x0030B444
+	// Token: 0x0600A841 RID: 43073 RVA: 0x003183B8 File Offset: 0x003165B8
 	public UniTask OnAttach(ISlotMountPoint mount, int position)
 	{
 		PhantomExtension.<OnAttach>d__2 <OnAttach>d__;
@@ -23,7 +23,7 @@ public class PhantomExtension : ISlotExtension
 		return <OnAttach>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D430 RID: 54320 RVA: 0x0030D297 File Offset: 0x0030B497
+	// Token: 0x0600A842 RID: 43074 RVA: 0x0031840B File Offset: 0x0031660B
 	public void OnDetach()
 	{
 		if (this.PhantomComponent == null)
@@ -35,7 +35,7 @@ public class PhantomExtension : ISlotExtension
 		this.Mount = null;
 	}
 
-	// Token: 0x0600D431 RID: 54321 RVA: 0x0030D2CC File Offset: 0x0030B4CC
+	// Token: 0x0600A843 RID: 43075 RVA: 0x00318440 File Offset: 0x00316640
 	public void OnRefresh(IRoleSlotDisplayData data)
 	{
 		if (this.PhantomComponent == null || this.Mount == null)
@@ -53,7 +53,7 @@ public class PhantomExtension : ISlotExtension
 		this.PhantomComponent.SetRedDotActive(num2 == num && text == null);
 	}
 
-	// Token: 0x0600D432 RID: 54322 RVA: 0x0030D394 File Offset: 0x0030B594
+	// Token: 0x0600A844 RID: 43076 RVA: 0x00318508 File Offset: 0x00316708
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -89,7 +89,7 @@ public class PhantomExtension : ISlotExtension
 		return guideUiItemAndUiItemForShowEx;
 	}
 
-	// Token: 0x0600D433 RID: 54323 RVA: 0x0030D408 File Offset: 0x0030B608
+	// Token: 0x0600A845 RID: 43077 RVA: 0x0031857C File Offset: 0x0031677C
 	private void OnPhantomChanged()
 	{
 		if (this.PhantomComponent == null || this.Mount == null)
@@ -104,11 +104,11 @@ public class PhantomExtension : ISlotExtension
 		this.PhantomComponent.SetRedDotActive(num == playerId && text == null);
 	}
 
-	// Token: 0x040060FC RID: 24828
+	// Token: 0x040061CB RID: 25035
 	[Nullable(2)]
 	private ISlotMountPoint Mount;
 
-	// Token: 0x040060FD RID: 24829
+	// Token: 0x040061CC RID: 25036
 	[Nullable(2)]
 	private PhantomPanel PhantomComponent;
 }

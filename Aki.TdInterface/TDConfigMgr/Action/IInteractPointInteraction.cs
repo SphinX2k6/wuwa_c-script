@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B56 RID: 6998
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D05 RID: 7429
 	public class IInteractPointInteraction
 	{
-		// Token: 0x060095D9 RID: 38361 RVA: 0x0015A5C0 File Offset: 0x001587C0
+		// Token: 0x06009DC5 RID: 40389 RVA: 0x0016B2DC File Offset: 0x001694DC
 		private IInteractPointInteraction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060095DA RID: 38362 RVA: 0x0015A5F8 File Offset: 0x001587F8
+		// Token: 0x06009DC6 RID: 40390 RVA: 0x0016B314 File Offset: 0x00169514
 		public static IInteractPointInteraction Create([Nullable(2)] IInteractPointInteraction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060095DB RID: 38363 RVA: 0x0015A60B File Offset: 0x0015880B
+		// Token: 0x06009DC7 RID: 40391 RVA: 0x0016B327 File Offset: 0x00169527
 		public static IInteractPointInteraction CreateFromSetValue([Nullable(2)] IInteractPointInteraction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060095DC RID: 38364 RVA: 0x0015A61E File Offset: 0x0015881E
+		// Token: 0x06009DC8 RID: 40392 RVA: 0x0016B33A File Offset: 0x0016953A
 		public IInteractPointInteraction_SetValue ToSetValue()
 		{
 			return new IInteractPointInteraction_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F42 RID: 12098
-		// (get) Token: 0x060095DD RID: 38365 RVA: 0x0015A631 File Offset: 0x00158831
-		// (set) Token: 0x060095DE RID: 38366 RVA: 0x0015A65C File Offset: 0x0015885C
+		// Token: 0x17003169 RID: 12649
+		// (get) Token: 0x06009DC9 RID: 40393 RVA: 0x0016B34D File Offset: 0x0016954D
+		// (set) Token: 0x06009DCA RID: 40394 RVA: 0x0016B378 File Offset: 0x00169578
 		public virtual EInteractPointInteractionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005BAF RID: 23471
+		// Token: 0x0400604E RID: 24654
 		[Nullable(2)]
 		protected IInteractPointInteraction FbInstance;
 
-		// Token: 0x04005BB0 RID: 23472
+		// Token: 0x0400604F RID: 24655
 		[Nullable(2)]
 		protected IInteractPointInteraction_SetValue PocoInterface;
 	}

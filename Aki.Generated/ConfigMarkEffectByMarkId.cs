@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200052A RID: 1322
+	// Token: 0x02000540 RID: 1344
 	public class ConfigMarkEffectByMarkId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001F07 RID: 7943 RVA: 0x00108A50 File Offset: 0x00106C50
+		// Token: 0x06001F8B RID: 8075 RVA: 0x0010F1A4 File Offset: 0x0010D3A4
 		static ConfigMarkEffectByMarkId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMarkEffectByMarkId.CreateStaticDefaultValue), new Action(ConfigMarkEffectByMarkId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001F08 RID: 7944 RVA: 0x00108A70 File Offset: 0x00106C70
+		// Token: 0x06001F8C RID: 8076 RVA: 0x0010F1C4 File Offset: 0x0010D3C4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMarkEffectByMarkId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001F09 RID: 7945 RVA: 0x00108AEF File Offset: 0x00106CEF
+		// Token: 0x06001F8D RID: 8077 RVA: 0x0010F243 File Offset: 0x0010D443
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMarkEffectByMarkId.LogPair = null;
 			ConfigMarkEffectByMarkId.HandleId = 0;
 		}
 
-		// Token: 0x06001F0A RID: 7946 RVA: 0x00108AFD File Offset: 0x00106CFD
+		// Token: 0x06001F8E RID: 8078 RVA: 0x0010F251 File Offset: 0x0010D451
 		public static void Init()
 		{
 			ConfigMarkEffectByMarkId.HandleId = ConfigCommon.InitDataStatement(ConfigMarkEffectByMarkId.HandleId, "db_map_mark.db", "select BinData from `MarkEffect` where MarkId=?");
 		}
 
-		// Token: 0x06001F0B RID: 7947 RVA: 0x00108B18 File Offset: 0x00106D18
+		// Token: 0x06001F8F RID: 8079 RVA: 0x0010F26C File Offset: 0x0010D46C
 		public static MarkEffect? GetConfig(int p0MarkId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMarkEffectByMarkId.HandleId, ConfigMarkEffectByMarkId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MarkEffect?(rootAsMarkEffect);
 		}
 
-		// Token: 0x0400240A RID: 9226
+		// Token: 0x040024A4 RID: 9380
 		private const string DB = "db_map_mark.db";
 
-		// Token: 0x0400240B RID: 9227
+		// Token: 0x040024A5 RID: 9381
 		private const string FILE = "d.地图标记特效.xlsx";
 
-		// Token: 0x0400240C RID: 9228
+		// Token: 0x040024A6 RID: 9382
 		private const string TABLE = "MarkEffect";
 
-		// Token: 0x0400240D RID: 9229
+		// Token: 0x040024A7 RID: 9383
 		private const string COMMAND = "select BinData from `MarkEffect` where MarkId=?";
 
-		// Token: 0x0400240E RID: 9230
+		// Token: 0x040024A8 RID: 9384
 		private const string KEY_PREFIX = "MarkEffectByMarkId";
 
-		// Token: 0x0400240F RID: 9231
+		// Token: 0x040024A9 RID: 9385
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002410 RID: 9232
+		// Token: 0x040024AA RID: 9386
 		private static int HandleId;
 	}
 }

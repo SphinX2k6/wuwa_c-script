@@ -5,16 +5,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001550 RID: 5456
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x020016AC RID: 5804
 	public class SetPlayerOperationRestrictionConverter : JsonConverter<SetPlayerOperationRestriction>
 	{
-		// Token: 0x06007B5E RID: 31582 RVA: 0x00129508 File Offset: 0x00127708
+		// Token: 0x06008232 RID: 33330 RVA: 0x001384B4 File Offset: 0x001366B4
 		[return: Nullable(2)]
 		public override SetPlayerOperationRestriction Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
@@ -61,7 +55,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007B5F RID: 31583 RVA: 0x001295C4 File Offset: 0x001277C4
+		// Token: 0x06008233 RID: 33331 RVA: 0x00138570 File Offset: 0x00136770
 		public override void Write(Utf8JsonWriter writer, SetPlayerOperationRestriction value, JsonSerializerOptions options)
 		{
 			IEnableAllPlayerOperation enableAllPlayerOperation = value as IEnableAllPlayerOperation;

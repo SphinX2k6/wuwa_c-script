@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001B90 RID: 7056
+// Token: 0x0200104F RID: 4175
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchEvolveItem : UiPanelBase
 {
-	// Token: 0x0600D218 RID: 53784 RVA: 0x00303164 File Offset: 0x00301364
+	// Token: 0x0600A629 RID: 42537 RVA: 0x0030E23C File Offset: 0x0030C43C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -28,14 +28,14 @@ public class FloroRanchEvolveItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D219 RID: 53785 RVA: 0x0030320F File Offset: 0x0030140F
+	// Token: 0x0600A62A RID: 42538 RVA: 0x0030E2E7 File Offset: 0x0030C4E7
 	protected override void OnStart()
 	{
 		this.TemplateItem = base.GetItem(2);
 		this.TemplateItem.SetUIActive(false);
 	}
 
-	// Token: 0x0600D21A RID: 53786 RVA: 0x0030322C File Offset: 0x0030142C
+	// Token: 0x0600A62B RID: 42539 RVA: 0x0030E304 File Offset: 0x0030C504
 	[NullableContext(2)]
 	public void Refresh(FloroRanchEvolveData evolveData)
 	{
@@ -50,7 +50,7 @@ public class FloroRanchEvolveItem : UiPanelBase
 		this.RefreshLineItem(evolveData);
 	}
 
-	// Token: 0x0600D21B RID: 53787 RVA: 0x00303298 File Offset: 0x00301498
+	// Token: 0x0600A62C RID: 42540 RVA: 0x0030E370 File Offset: 0x0030C570
 	private void RefreshLineItem(FloroRanchEvolveData evolveData)
 	{
 		if (this.LineItemList.Count < evolveData.ExpPerLevel)
@@ -78,35 +78,35 @@ public class FloroRanchEvolveItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600D21C RID: 53788 RVA: 0x00303357 File Offset: 0x00301557
+	// Token: 0x0600A62D RID: 42541 RVA: 0x0030E42F File Offset: 0x0030C62F
 	private UUIItem CreateItem()
 	{
 		return LguiUtil.Instance.CopyItem(this.TemplateItem, base.GetItem(3));
 	}
 
-	// Token: 0x04006049 RID: 24649
+	// Token: 0x04006118 RID: 24856
 	private const int LINE_ROTATOR_YAW_OFFSET = 180;
 
-	// Token: 0x0400604A RID: 24650
+	// Token: 0x04006119 RID: 24857
 	private UUIItem TemplateItem;
 
-	// Token: 0x0400604B RID: 24651
+	// Token: 0x0400611A RID: 24858
 	private readonly List<UUIItem> LineItemList = new List<UUIItem>();
 
-	// Token: 0x02008117 RID: 33047
+	// Token: 0x020072A5 RID: 29349
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402A225 RID: 172581
+		// Token: 0x04025559 RID: 152921
 		public const int ProgressSprite = 0;
 
-		// Token: 0x0402A226 RID: 172582
+		// Token: 0x0402555A RID: 152922
 		public const int LevelText = 1;
 
-		// Token: 0x0402A227 RID: 172583
+		// Token: 0x0402555B RID: 152923
 		public const int LineItem = 2;
 
-		// Token: 0x0402A228 RID: 172584
+		// Token: 0x0402555C RID: 152924
 		public const int LineRoot = 3;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -10,12 +9,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005A92 RID: 23186
+	// Token: 0x02004A6E RID: 19054
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DreamLinkData : ActivityBaseData
 	{
-		// Token: 0x0603ABBA RID: 240570 RVA: 0x00DFD43C File Offset: 0x00DFB63C
+		// Token: 0x0602FB03 RID: 195331 RVA: 0x00D4D9CC File Offset: 0x00D4BBCC
 		protected override void OnInit(ActivityData data)
 		{
 			if (data.RogueWhiteCatData == null)
@@ -27,19 +26,19 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.InitBossInstData();
 		}
 
-		// Token: 0x0603ABBB RID: 240571 RVA: 0x00DFD459 File Offset: 0x00DFB659
+		// Token: 0x0602FB04 RID: 195332 RVA: 0x00D4D9E9 File Offset: 0x00D4BBE9
 		protected override void PhraseEx(ActivityData data)
 		{
 			this.RefreshDreamLinkData(data.RogueWhiteCatData);
 		}
 
-		// Token: 0x0603ABBC RID: 240572 RVA: 0x00DFD467 File Offset: 0x00DFB667
+		// Token: 0x0602FB05 RID: 195333 RVA: 0x00D4D9F7 File Offset: 0x00D4BBF7
 		public void UpdateData(RogueWhiteCatDataUpdateNotify data)
 		{
 			this.RefreshDreamLinkData(data.RogueWhiteCatData);
 		}
 
-		// Token: 0x0603ABBD RID: 240573 RVA: 0x00DFD478 File Offset: 0x00DFB678
+		// Token: 0x0602FB06 RID: 195334 RVA: 0x00D4DA08 File Offset: 0x00D4BC08
 		protected override bool GetExDataFinishShowState()
 		{
 			using (List<DreamLinkRewardData>.Enumerator enumerator = this.GetEnergyRewardDataList().GetEnumerator())
@@ -75,7 +74,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return true;
 		}
 
-		// Token: 0x0603ABBE RID: 240574 RVA: 0x00DFD56C File Offset: 0x00DFB76C
+		// Token: 0x0602FB07 RID: 195335 RVA: 0x00D4DAFC File Offset: 0x00D4BCFC
 		public override bool GetExDataRedPointShowState()
 		{
 			if (!this.IsDreamLinkFunctionUnlock(0))
@@ -109,7 +108,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return this.CheckHasLimitTimeReward() || this.CheckHasEnergyReward();
 		}
 
-		// Token: 0x0603ABBF RID: 240575 RVA: 0x00DFD5F5 File Offset: 0x00DFB7F5
+		// Token: 0x0602FB08 RID: 195336 RVA: 0x00D4DB85 File Offset: 0x00D4BD85
 		public override bool GetExternalButtonRedPointState()
 		{
 			if (!this.IsDreamLinkFunctionUnlock(0))
@@ -119,7 +118,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return this.RedPointShowState;
 		}
 
-		// Token: 0x0603ABC0 RID: 240576 RVA: 0x00DFD610 File Offset: 0x00DFB810
+		// Token: 0x0602FB09 RID: 195337 RVA: 0x00D4DBA0 File Offset: 0x00D4BDA0
 		[NullableContext(2)]
 		private void RefreshDreamLinkData(RogueWhiteCatData data)
 		{
@@ -128,14 +127,14 @@ namespace CSharpScript.Game.Module.DreamLink
 				return;
 			}
 			this.MaxEnergy = data.MaxEnergy;
-			this.RoleInstanceList = data.RogueRoleInstData.ToList<RogueRoleInstData>();
+			this.RoleInstanceList = new List<RogueRoleInstData>(data.RogueRoleInstData);
 			this.LimitTimeRewardOpenTime = data.LimitedStartTime;
 			this.LimitTimeRewardEndTime = data.LimitedEndTime;
 			this.DungeonProgressRecord = data.Record;
-			this.RefreshEnergyDataState(data.SignStateList.ToList<SignState>());
-			this.RefreshBossRewardState(data.BossRewardStateList.ToList<SignState>());
-			this.RefreshAllLimitTimeReward(data.RogueLimitedAwards.ToList<RogueLimitedAward>());
-			this.UnlockMainFunction = data.UnlockButtons.ToList<int>();
+			this.RefreshEnergyDataState(data.SignStateList);
+			this.RefreshBossRewardState(data.BossRewardStateList);
+			this.RefreshAllLimitTimeReward(data.RogueLimitedAwards);
+			this.UnlockMainFunction = new List<int>(data.UnlockButtons);
 			foreach (RogueLevelPlayData runTaskData in data.RogueLevelPlayData)
 			{
 				this.RefreshRunTask(runTaskData);
@@ -153,13 +152,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.RefreshRewardPerformance();
 		}
 
-		// Token: 0x0603ABC1 RID: 240577 RVA: 0x00DFD7E4 File Offset: 0x00DFB9E4
+		// Token: 0x0602FB0A RID: 195338 RVA: 0x00D4DD64 File Offset: 0x00D4BF64
 		public void RefreshActivityRedDotState()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603ABC2 RID: 240578 RVA: 0x00DFD7FC File Offset: 0x00DFB9FC
+		// Token: 0x0602FB0B RID: 195339 RVA: 0x00D4DD7C File Offset: 0x00D4BF7C
 		public void RefreshRewardPerformance()
 		{
 			EventSystem.Instance.Emit(EEventName.DreamLinkRewardRefresh);
@@ -170,7 +169,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ABC3 RID: 240579 RVA: 0x00DFD856 File Offset: 0x00DFBA56
+		// Token: 0x0602FB0C RID: 195340 RVA: 0x00D4DDD6 File Offset: 0x00D4BFD6
 		public void RefreshLimitRewardPerformance()
 		{
 			if (this.IsLimitTimeRewardOn())
@@ -180,7 +179,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ABC4 RID: 240580 RVA: 0x00DFD888 File Offset: 0x00DFBA88
+		// Token: 0x0602FB0D RID: 195341 RVA: 0x00D4DE08 File Offset: 0x00D4C008
 		public int GetLastUnFinishInst()
 		{
 			int result = 6;
@@ -195,7 +194,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return result;
 		}
 
-		// Token: 0x0603ABC5 RID: 240581 RVA: 0x00DFD8C8 File Offset: 0x00DFBAC8
+		// Token: 0x0602FB0E RID: 195342 RVA: 0x00D4DE48 File Offset: 0x00D4C048
 		public int GetLastUnlockInst()
 		{
 			int result = 0;
@@ -210,7 +209,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return result;
 		}
 
-		// Token: 0x0603ABC6 RID: 240582 RVA: 0x00DFD908 File Offset: 0x00DFBB08
+		// Token: 0x0602FB0F RID: 195343 RVA: 0x00D4DE88 File Offset: 0x00D4C088
 		public int GetLastFinishInst()
 		{
 			int result = 0;
@@ -225,7 +224,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return result;
 		}
 
-		// Token: 0x0603ABC7 RID: 240583 RVA: 0x00DFD948 File Offset: 0x00DFBB48
+		// Token: 0x0602FB10 RID: 195344 RVA: 0x00D4DEC8 File Offset: 0x00D4C0C8
 		public List<RogueRoleInstData> GetInstListByPages(int page, int pageSize)
 		{
 			int num = page * pageSize;
@@ -233,13 +232,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			return this.RoleInstanceList.GetRange(num, Math.Min(num2 - num, this.RoleInstanceList.Count - num));
 		}
 
-		// Token: 0x0603ABC8 RID: 240584 RVA: 0x00DFD980 File Offset: 0x00DFBB80
+		// Token: 0x0602FB11 RID: 195345 RVA: 0x00D4DF00 File Offset: 0x00D4C100
 		public int GetRoleInstDataIndex(int instId)
 		{
 			return this.RoleInstanceList.FindIndex((RogueRoleInstData roleInst) => roleInst.InstId == instId);
 		}
 
-		// Token: 0x0603ABC9 RID: 240585 RVA: 0x00DFD9B1 File Offset: 0x00DFBBB1
+		// Token: 0x0602FB12 RID: 195346 RVA: 0x00D4DF31 File Offset: 0x00D4C131
 		[NullableContext(2)]
 		public RogueRoleInstData GetRoleInstDataByIndex(int index)
 		{
@@ -250,7 +249,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return this.RoleInstanceList[index];
 		}
 
-		// Token: 0x0603ABCA RID: 240586 RVA: 0x00DFD9D4 File Offset: 0x00DFBBD4
+		// Token: 0x0602FB13 RID: 195347 RVA: 0x00D4DF54 File Offset: 0x00D4C154
 		public int GetCurrentCatProgress()
 		{
 			int num = 0;
@@ -266,25 +265,25 @@ namespace CSharpScript.Game.Module.DreamLink
 			return num + activityConfig.DungeonBaseProgress;
 		}
 
-		// Token: 0x0603ABCB RID: 240587 RVA: 0x00DFDA60 File Offset: 0x00DFBC60
+		// Token: 0x0602FB14 RID: 195348 RVA: 0x00D4DFE0 File Offset: 0x00D4C1E0
 		public RogueWhiteCat GetActivityConfig()
 		{
 			return DreamLinkConfig.Instance.GetActivityConfig(base.Id).Value;
 		}
 
-		// Token: 0x0603ABCC RID: 240588 RVA: 0x00DFDA88 File Offset: 0x00DFBC88
+		// Token: 0x0602FB15 RID: 195349 RVA: 0x00D4E008 File Offset: 0x00D4C208
 		public bool IsDreamLinkInst(int id)
 		{
 			return this.RoleInstanceList.FindIndex((RogueRoleInstData roleInst) => roleInst.InstId == id) != -1;
 		}
 
-		// Token: 0x0603ABCD RID: 240589 RVA: 0x00DFDABF File Offset: 0x00DFBCBF
+		// Token: 0x0602FB16 RID: 195350 RVA: 0x00D4E03F File Offset: 0x00D4C23F
 		public bool IsDreamLinkFunctionUnlock(int id)
 		{
 			return this.UnlockMainFunction.Contains(id);
 		}
 
-		// Token: 0x0603ABCE RID: 240590 RVA: 0x00DFDAD0 File Offset: 0x00DFBCD0
+		// Token: 0x0602FB17 RID: 195351 RVA: 0x00D4E050 File Offset: 0x00D4C250
 		public int GetFinishInstCount()
 		{
 			int num = 0;
@@ -301,13 +300,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			return num;
 		}
 
-		// Token: 0x0603ABCF RID: 240591 RVA: 0x00DFDB2C File Offset: 0x00DFBD2C
+		// Token: 0x0602FB18 RID: 195352 RVA: 0x00D4E0AC File Offset: 0x00D4C2AC
 		public bool IsAllInstFinished()
 		{
 			return this.GetFinishInstCount() == this.RoleInstanceList.Count;
 		}
 
-		// Token: 0x0603ABD0 RID: 240592 RVA: 0x00DFDB41 File Offset: 0x00DFBD41
+		// Token: 0x0602FB19 RID: 195353 RVA: 0x00D4E0C1 File Offset: 0x00D4C2C1
 		public EDreamLinkStage GetInstStage()
 		{
 			if (this.GetFinishInstCount() >= 3)
@@ -317,7 +316,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return EDreamLinkStage.First;
 		}
 
-		// Token: 0x0603ABD1 RID: 240593 RVA: 0x00DFDB50 File Offset: 0x00DFBD50
+		// Token: 0x0602FB1A RID: 195354 RVA: 0x00D4E0D0 File Offset: 0x00D4C2D0
 		public IDreamLinkDungeonToggleItemParams GetDungeonToggleItemParams()
 		{
 			if (this.GetFinishInstCount() >= 3)
@@ -337,7 +336,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			};
 		}
 
-		// Token: 0x0603ABD2 RID: 240594 RVA: 0x00DFDC00 File Offset: 0x00DFBE00
+		// Token: 0x0602FB1B RID: 195355 RVA: 0x00D4E180 File Offset: 0x00D4C380
 		public bool CheckDungeonRedDotStateByInstId(int instId)
 		{
 			int activityCacheData = ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 2, instId, 0);
@@ -351,7 +350,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return TimeUtil.Instance.GetServerTime() - (double)activityCacheData > 259200.0 && flag;
 		}
 
-		// Token: 0x0603ABD3 RID: 240595 RVA: 0x00DFDC6C File Offset: 0x00DFBE6C
+		// Token: 0x0602FB1C RID: 195356 RVA: 0x00D4E1EC File Offset: 0x00D4C3EC
 		public void SaveDungeonRedDotStateByInstId(int instId)
 		{
 			double serverTime = TimeUtil.Instance.GetServerTime();
@@ -359,7 +358,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.RefreshActivityRedDotState();
 		}
 
-		// Token: 0x0603ABD4 RID: 240596 RVA: 0x00DFDCA0 File Offset: 0x00DFBEA0
+		// Token: 0x0602FB1D RID: 195357 RVA: 0x00D4E220 File Offset: 0x00D4C420
 		public bool CheckDungeonRedDotStateByPage(int page, int pageCount)
 		{
 			if (page < 0 || pageCount <= 0)
@@ -379,7 +378,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return false;
 		}
 
-		// Token: 0x0603ABD5 RID: 240597 RVA: 0x00DFDCF8 File Offset: 0x00DFBEF8
+		// Token: 0x0602FB1E RID: 195358 RVA: 0x00D4E278 File Offset: 0x00D4C478
 		public bool CheckDungeonRedDotState()
 		{
 			foreach (RogueRoleInstData rogueRoleInstData in this.RoleInstanceList)
@@ -392,14 +391,14 @@ namespace CSharpScript.Game.Module.DreamLink
 			return false;
 		}
 
-		// Token: 0x0603ABD6 RID: 240598 RVA: 0x00DFDD5C File Offset: 0x00DFBF5C
+		// Token: 0x0602FB1F RID: 195359 RVA: 0x00D4E2DC File Offset: 0x00D4C4DC
 		public bool GetQuestRedDotState()
 		{
 			int unFinishPreGuideQuestId = base.GetUnFinishPreGuideQuestId();
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 6, unFinishPreGuideQuestId, 0) == 0;
 		}
 
-		// Token: 0x0603ABD7 RID: 240599 RVA: 0x00DFDD88 File Offset: 0x00DFBF88
+		// Token: 0x0602FB20 RID: 195360 RVA: 0x00D4E308 File Offset: 0x00D4C508
 		public void SaveQuestRedDotState()
 		{
 			if (base.GetPreGuideQuestFinishState())
@@ -411,14 +410,14 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.RefreshActivityRedDotState();
 		}
 
-		// Token: 0x0603ABD8 RID: 240600 RVA: 0x00DFDDBF File Offset: 0x00DFBFBF
+		// Token: 0x0602FB21 RID: 195361 RVA: 0x00D4E33F File Offset: 0x00D4C53F
 		public void SaveFirstCheckRedDotState(int functionId, int id = 0)
 		{
 			ActivityModel.Instance.SaveActivityData(base.Id, functionId, id, 0, 1);
 			this.RefreshActivityRedDotState();
 		}
 
-		// Token: 0x0603ABD9 RID: 240601 RVA: 0x00DFDDDC File Offset: 0x00DFBFDC
+		// Token: 0x0602FB22 RID: 195362 RVA: 0x00D4E35C File Offset: 0x00D4C55C
 		private void InitBossInstData()
 		{
 			this.BossInstDataMap.Clear();
@@ -431,7 +430,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ABDA RID: 240602 RVA: 0x00DFDE60 File Offset: 0x00DFC060
+		// Token: 0x0602FB23 RID: 195363 RVA: 0x00D4E3E0 File Offset: 0x00D4C5E0
 		private void RefreshBossInstDataByInstId(int instId, int? score = null, bool? isUnlock = null, bool? isFinished = null, long? unlockTime = null)
 		{
 			DreamLinkBossInstanceData dreamLinkBossInstanceData;
@@ -457,7 +456,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ABDB RID: 240603 RVA: 0x00DFDED8 File Offset: 0x00DFC0D8
+		// Token: 0x0602FB24 RID: 195364 RVA: 0x00D4E458 File Offset: 0x00D4C658
 		private void RefreshBossInstDataRole(int instId)
 		{
 			DreamLinkBossInstanceData dreamLinkBossInstanceData;
@@ -472,15 +471,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ABDC RID: 240604 RVA: 0x00DFDF1F File Offset: 0x00DFC11F
+		// Token: 0x0602FB25 RID: 195365 RVA: 0x00D4E49F File Offset: 0x00D4C69F
 		public List<DreamLinkBossInstanceData> GetAllBossInstData()
 		{
-			return (from a in this.BossInstDataMap.Values
-			orderby a.TypeId
-			select a).ToList<DreamLinkBossInstanceData>();
+			return NoLinq.OrderByToList<DreamLinkBossInstanceData, int>(this.BossInstDataMap.Values, (DreamLinkBossInstanceData data) => data.TypeId);
 		}
 
-		// Token: 0x0603ABDD RID: 240605 RVA: 0x00DFDF58 File Offset: 0x00DFC158
+		// Token: 0x0602FB26 RID: 195366 RVA: 0x00D4E4D0 File Offset: 0x00D4C6D0
 		public void FixBossRoleId(int instId)
 		{
 			List<int> allBossRoleId = this.GetAllBossRoleId(instId);
@@ -499,26 +496,26 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ABDE RID: 240606 RVA: 0x00DFDFBB File Offset: 0x00DFC1BB
+		// Token: 0x0602FB27 RID: 195367 RVA: 0x00D4E533 File Offset: 0x00D4C733
 		public int GetBossRoleId(int instId, int index)
 		{
 			return this.BossInstDataMap[instId].GetBossRoleIdByIndex(index);
 		}
 
-		// Token: 0x0603ABDF RID: 240607 RVA: 0x00DFDFCF File Offset: 0x00DFC1CF
+		// Token: 0x0602FB28 RID: 195368 RVA: 0x00D4E547 File Offset: 0x00D4C747
 		public void SetBossRoleId(int instId, int index, int roleId)
 		{
 			this.BossInstDataMap[instId].SetBossRoleIdByIndex(index, roleId);
 			ActivityModel.Instance.SaveActivityData(base.Id, instId, index, 0, roleId);
 		}
 
-		// Token: 0x0603ABE0 RID: 240608 RVA: 0x00DFDFF8 File Offset: 0x00DFC1F8
+		// Token: 0x0602FB29 RID: 195369 RVA: 0x00D4E570 File Offset: 0x00D4C770
 		public List<int> GetAllBossRoleId(int instId)
 		{
-			return this.BossInstDataMap[instId].GetBossRoleIdList().ToList<int>();
+			return new List<int>(this.BossInstDataMap[instId].GetBossRoleIdList());
 		}
 
-		// Token: 0x0603ABE1 RID: 240609 RVA: 0x00DFE010 File Offset: 0x00DFC210
+		// Token: 0x0602FB2A RID: 195370 RVA: 0x00D4E588 File Offset: 0x00D4C788
 		public bool CheckAllBossInstRedDotState()
 		{
 			foreach (DreamLinkBossInstanceData dreamLinkBossInstanceData in this.BossInstDataMap.Values)
@@ -531,13 +528,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			return false;
 		}
 
-		// Token: 0x0603ABE2 RID: 240610 RVA: 0x00DFE08C File Offset: 0x00DFC28C
+		// Token: 0x0602FB2B RID: 195371 RVA: 0x00D4E604 File Offset: 0x00D4C804
 		public bool GetBossInstRedDotState(int instId)
 		{
 			return this.BossInstDataMap[instId].IsUnlock && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 3, instId, 0) == 0;
 		}
 
-		// Token: 0x0603ABE3 RID: 240611 RVA: 0x00DFE0BA File Offset: 0x00DFC2BA
+		// Token: 0x0602FB2C RID: 195372 RVA: 0x00D4E632 File Offset: 0x00D4C832
 		public void SaveBossInstRedDotState(int instId)
 		{
 			if (!this.BossInstDataMap[instId].IsUnlock)
@@ -548,21 +545,19 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.RefreshActivityRedDotState();
 		}
 
-		// Token: 0x0603ABE4 RID: 240612 RVA: 0x00DFE0EA File Offset: 0x00DFC2EA
+		// Token: 0x0602FB2D RID: 195373 RVA: 0x00D4E662 File Offset: 0x00D4C862
 		public void SetRunTaskDone(int id)
 		{
 			this.RunTaskMap[id].Status = EDreamLinkRunTaskState.FinishedAndClaimed;
 		}
 
-		// Token: 0x0603ABE5 RID: 240613 RVA: 0x00DFE0FE File Offset: 0x00DFC2FE
+		// Token: 0x0602FB2E RID: 195374 RVA: 0x00D4E676 File Offset: 0x00D4C876
 		public List<DreamLinkRunTaskData> GetDreamLinkRunTaskDataList()
 		{
-			return (from a in this.RunTaskMap.Values
-			orderby a.Id
-			select a).ToList<DreamLinkRunTaskData>();
+			return NoLinq.OrderByToList<DreamLinkRunTaskData, int>(this.RunTaskMap.Values, (DreamLinkRunTaskData data) => data.Id);
 		}
 
-		// Token: 0x0603ABE6 RID: 240614 RVA: 0x00DFE134 File Offset: 0x00DFC334
+		// Token: 0x0602FB2F RID: 195375 RVA: 0x00D4E6A8 File Offset: 0x00D4C8A8
 		public bool IsDreamLinkRunMarkShow(int markId)
 		{
 			DreamLinkWorldRun? worldRunConfigByMarkId = DreamLinkConfig.Instance.GetWorldRunConfigByMarkId(markId);
@@ -570,7 +565,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return worldRunConfigByMarkId != null && this.RunTaskMap.TryGetValue(worldRunConfigByMarkId.Value.Id, out dreamLinkRunTaskData) && dreamLinkRunTaskData.Status > EDreamLinkRunTaskState.Lock;
 		}
 
-		// Token: 0x0603ABE7 RID: 240615 RVA: 0x00DFE184 File Offset: 0x00DFC384
+		// Token: 0x0602FB30 RID: 195376 RVA: 0x00D4E6F8 File Offset: 0x00D4C8F8
 		public bool CheckHasRunRedDot()
 		{
 			foreach (DreamLinkRunTaskData dreamLinkRunTaskData in this.RunTaskMap.Values)
@@ -591,7 +586,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return false;
 		}
 
-		// Token: 0x0603ABE8 RID: 240616 RVA: 0x00DFE20C File Offset: 0x00DFC40C
+		// Token: 0x0602FB31 RID: 195377 RVA: 0x00D4E780 File Offset: 0x00D4C980
 		public bool GetRunRedDotState(int id)
 		{
 			DreamLinkRunTaskData dreamLinkRunTaskData = this.RunTaskMap[id];
@@ -603,7 +598,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 1, dreamLinkRunTaskData.Id, 0) == 0;
 		}
 
-		// Token: 0x0603ABE9 RID: 240617 RVA: 0x00DFE258 File Offset: 0x00DFC458
+		// Token: 0x0602FB32 RID: 195378 RVA: 0x00D4E7CC File Offset: 0x00D4C9CC
 		public bool CheckHasRunFinished()
 		{
 			foreach (DreamLinkRunTaskData dreamLinkRunTaskData in this.RunTaskMap.Values)
@@ -616,7 +611,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return true;
 		}
 
-		// Token: 0x0603ABEA RID: 240618 RVA: 0x00DFE2C4 File Offset: 0x00DFC4C4
+		// Token: 0x0602FB33 RID: 195379 RVA: 0x00D4E838 File Offset: 0x00D4CA38
 		[NullableContext(2)]
 		private DreamLinkRunTaskData CreateRunTask(int id)
 		{
@@ -640,7 +635,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return dreamLinkRunTaskData;
 		}
 
-		// Token: 0x0603ABEB RID: 240619 RVA: 0x00DFE38C File Offset: 0x00DFC58C
+		// Token: 0x0602FB34 RID: 195380 RVA: 0x00D4E900 File Offset: 0x00D4CB00
 		private void RefreshRunTask(RogueLevelPlayData runTaskData)
 		{
 			DreamLinkRunTaskData dreamLinkRunTaskData;
@@ -670,27 +665,25 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ABEC RID: 240620 RVA: 0x00DFE414 File Offset: 0x00DFC614
+		// Token: 0x0602FB35 RID: 195381 RVA: 0x00D4E988 File Offset: 0x00D4CB88
 		public int GetEnergyItemId()
 		{
 			return this.GetActivityConfig().EnergyId;
 		}
 
-		// Token: 0x0603ABED RID: 240621 RVA: 0x00DFE42F File Offset: 0x00DFC62F
+		// Token: 0x0602FB36 RID: 195382 RVA: 0x00D4E9A3 File Offset: 0x00D4CBA3
 		public int GetEnergyItemCount()
 		{
 			return InventoryModel.Instance.GetItemCountByConfigId(this.GetEnergyItemId(), 0);
 		}
 
-		// Token: 0x0603ABEE RID: 240622 RVA: 0x00DFE442 File Offset: 0x00DFC642
+		// Token: 0x0602FB37 RID: 195383 RVA: 0x00D4E9B6 File Offset: 0x00D4CBB6
 		public List<DreamLinkRewardData> GetEnergyRewardDataList()
 		{
-			return (from a in this.EnergyRewardMap.Values
-			orderby a.Id
-			select a).ToList<DreamLinkRewardData>();
+			return NoLinq.OrderByToList<DreamLinkRewardData, int>(this.EnergyRewardMap.Values, (DreamLinkRewardData data) => data.Id);
 		}
 
-		// Token: 0x0603ABEF RID: 240623 RVA: 0x00DFE478 File Offset: 0x00DFC678
+		// Token: 0x0602FB38 RID: 195384 RVA: 0x00D4E9E8 File Offset: 0x00D4CBE8
 		public bool CheckHasEnergyReward()
 		{
 			if (ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 5, 0, 0) == 0)
@@ -710,7 +703,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return false;
 		}
 
-		// Token: 0x0603ABF0 RID: 240624 RVA: 0x00DFE4F4 File Offset: 0x00DFC6F4
+		// Token: 0x0602FB39 RID: 195385 RVA: 0x00D4EA64 File Offset: 0x00D4CC64
 		private void InitEnergyRewardData()
 		{
 			this.EnergyRewardMap.Clear();
@@ -724,8 +717,8 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ABF1 RID: 240625 RVA: 0x00DFE570 File Offset: 0x00DFC770
-		private void RefreshEnergyDataState(List<SignState> rewardStateList)
+		// Token: 0x0602FB3A RID: 195386 RVA: 0x00D4EAE0 File Offset: 0x00D4CCE0
+		private void RefreshEnergyDataState(IReadOnlyList<SignState> rewardStateList)
 		{
 			RogueWhiteCat activityConfig = this.GetActivityConfig();
 			for (int i = 0; i < rewardStateList.Count; i++)
@@ -735,7 +728,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ABF2 RID: 240626 RVA: 0x00DFE5B8 File Offset: 0x00DFC7B8
+		// Token: 0x0602FB3B RID: 195387 RVA: 0x00D4EB28 File Offset: 0x00D4CD28
 		public void RefreshEnergyRewardData(int id, EActivityTaskState status)
 		{
 			DreamLinkRewardData dreamLinkRewardData;
@@ -746,7 +739,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			dreamLinkRewardData.Status = status;
 		}
 
-		// Token: 0x0603ABF3 RID: 240627 RVA: 0x00DFE5E0 File Offset: 0x00DFC7E0
+		// Token: 0x0602FB3C RID: 195388 RVA: 0x00D4EB50 File Offset: 0x00D4CD50
 		private void InitBossRewardData()
 		{
 			this.BossRewardMap.Clear();
@@ -767,8 +760,8 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ABF4 RID: 240628 RVA: 0x00DFE6A0 File Offset: 0x00DFC8A0
-		private void RefreshBossRewardState(List<SignState> rewardStateList)
+		// Token: 0x0602FB3D RID: 195389 RVA: 0x00D4EC10 File Offset: 0x00D4CE10
+		private void RefreshBossRewardState(IReadOnlyList<SignState> rewardStateList)
 		{
 			RogueWhiteCat activityConfig = this.GetActivityConfig();
 			for (int i = 0; i < rewardStateList.Count; i++)
@@ -778,7 +771,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ABF5 RID: 240629 RVA: 0x00DFE6E8 File Offset: 0x00DFC8E8
+		// Token: 0x0602FB3E RID: 195390 RVA: 0x00D4EC58 File Offset: 0x00D4CE58
 		public void RefreshBossRewardData(int id, EActivityTaskState status)
 		{
 			DreamLinkRewardData dreamLinkRewardData;
@@ -789,7 +782,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			dreamLinkRewardData.Status = status;
 		}
 
-		// Token: 0x0603ABF6 RID: 240630 RVA: 0x00DFE710 File Offset: 0x00DFC910
+		// Token: 0x0602FB3F RID: 195391 RVA: 0x00D4EC80 File Offset: 0x00D4CE80
 		public IActivityRewardViewData GetBossRewardData()
 		{
 			RogueWhiteCat activityConfig = this.GetActivityConfig();
@@ -821,14 +814,14 @@ namespace CSharpScript.Game.Module.DreamLink
 			};
 		}
 
-		// Token: 0x0603ABF7 RID: 240631 RVA: 0x00DFE828 File Offset: 0x00DFCA28
+		// Token: 0x0602FB40 RID: 195392 RVA: 0x00D4ED98 File Offset: 0x00D4CF98
 		private string GetRewardTabNameByType(int type)
 		{
 			string text;
 			return ConfigMultiTextLang.GetLocalTextNew(this.GetActivityConfig().BossTabText().TryGetValue(type, out text) ? text : "", null) ?? "";
 		}
 
-		// Token: 0x0603ABF8 RID: 240632 RVA: 0x00DFE864 File Offset: 0x00DFCA64
+		// Token: 0x0602FB41 RID: 195393 RVA: 0x00D4EDD4 File Offset: 0x00D4CFD4
 		private IActivityRewardData GetBossRewardViewData(DreamLinkRewardData data)
 		{
 			RogueWhiteCatBossReward? bossRewardConfig = DreamLinkConfig.Instance.GetBossRewardConfig(data.Id);
@@ -873,7 +866,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			};
 		}
 
-		// Token: 0x0603ABF9 RID: 240633 RVA: 0x00DFE9A8 File Offset: 0x00DFCBA8
+		// Token: 0x0602FB42 RID: 195394 RVA: 0x00D4EF18 File Offset: 0x00D4D118
 		private int SortReward(IActivityRewardData a, IActivityRewardData b)
 		{
 			DreamLinkRewardData dreamLinkRewardData = this.BossRewardMap[a.Id.Value];
@@ -885,7 +878,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return dreamLinkRewardData.Status - dreamLinkRewardData2.Status;
 		}
 
-		// Token: 0x0603ABFA RID: 240634 RVA: 0x00DFEA14 File Offset: 0x00DFCC14
+		// Token: 0x0602FB43 RID: 195395 RVA: 0x00D4EF84 File Offset: 0x00D4D184
 		public bool CheckHasBossReward()
 		{
 			if (ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 7, 0, 0) == 0)
@@ -905,14 +898,14 @@ namespace CSharpScript.Game.Module.DreamLink
 			return false;
 		}
 
-		// Token: 0x0603ABFB RID: 240635 RVA: 0x00DFEA90 File Offset: 0x00DFCC90
+		// Token: 0x0602FB44 RID: 195396 RVA: 0x00D4F000 File Offset: 0x00D4D200
 		public int GetLimitTimeRewardTypeLength()
 		{
 			return this.GetActivityConfig().TabTextLength;
 		}
 
-		// Token: 0x0603ABFC RID: 240636 RVA: 0x00DFEAAC File Offset: 0x00DFCCAC
-		public void RefreshAllLimitTimeReward(List<RogueLimitedAward> data)
+		// Token: 0x0602FB45 RID: 195397 RVA: 0x00D4F01C File Offset: 0x00D4D21C
+		public void RefreshAllLimitTimeReward(IEnumerable<RogueLimitedAward> data)
 		{
 			foreach (RogueLimitedAward rogueLimitedAward in data)
 			{
@@ -920,7 +913,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ABFD RID: 240637 RVA: 0x00DFEB28 File Offset: 0x00DFCD28
+		// Token: 0x0602FB46 RID: 195398 RVA: 0x00D4F090 File Offset: 0x00D4D290
 		public void RefreshLimitTimeRewardData(int id, EActivityTaskState status, int? current = null, int? target = null)
 		{
 			DreamLinkRewardData dreamLinkRewardData;
@@ -948,7 +941,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			dreamLinkRewardData.Status = status;
 		}
 
-		// Token: 0x0603ABFE RID: 240638 RVA: 0x00DFEBDE File Offset: 0x00DFCDDE
+		// Token: 0x0602FB47 RID: 195399 RVA: 0x00D4F146 File Offset: 0x00D4D346
 		private int SortTargetData(DreamLinkRewardData a, DreamLinkRewardData b)
 		{
 			if (a.Status == b.Status)
@@ -958,13 +951,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			return a.Status - b.Status;
 		}
 
-		// Token: 0x0603ABFF RID: 240639 RVA: 0x00DFEC09 File Offset: 0x00DFCE09
+		// Token: 0x0602FB48 RID: 195400 RVA: 0x00D4F171 File Offset: 0x00D4D371
 		public long GetLimitTimeEndTime()
 		{
 			return this.LimitTimeRewardEndTime;
 		}
 
-		// Token: 0x0603AC00 RID: 240640 RVA: 0x00DFEC14 File Offset: 0x00DFCE14
+		// Token: 0x0602FB49 RID: 195401 RVA: 0x00D4F17C File Offset: 0x00D4D37C
 		public bool IsLimitTimeRewardOn()
 		{
 			if (!base.IsUnLock())
@@ -975,7 +968,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return serverTime >= (double)this.LimitTimeRewardOpenTime && serverTime <= (double)this.LimitTimeRewardEndTime;
 		}
 
-		// Token: 0x0603AC01 RID: 240641 RVA: 0x00DFEC50 File Offset: 0x00DFCE50
+		// Token: 0x0602FB4A RID: 195402 RVA: 0x00D4F1B8 File Offset: 0x00D4D3B8
 		public bool CheckHasLimitTimeReward()
 		{
 			if (!this.IsLimitTimeRewardOn())
@@ -999,7 +992,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return false;
 		}
 
-		// Token: 0x0603AC02 RID: 240642 RVA: 0x00DFECD4 File Offset: 0x00DFCED4
+		// Token: 0x0602FB4B RID: 195403 RVA: 0x00D4F23C File Offset: 0x00D4D43C
 		public bool CheckHasLimitTimeTabReward(int tabId)
 		{
 			if (!this.IsLimitTimeRewardOn())
@@ -1024,7 +1017,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return false;
 		}
 
-		// Token: 0x0603AC03 RID: 240643 RVA: 0x00DFED44 File Offset: 0x00DFCF44
+		// Token: 0x0602FB4C RID: 195404 RVA: 0x00D4F2AC File Offset: 0x00D4D4AC
 		public Tuple<string, string> GetTypeInfoByTabId(int tabId)
 		{
 			RogueWhiteCat activityConfig = this.GetActivityConfig();
@@ -1035,7 +1028,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return Tuple.Create<string, string>(item, item2);
 		}
 
-		// Token: 0x0603AC04 RID: 240644 RVA: 0x00DFED94 File Offset: 0x00DFCF94
+		// Token: 0x0602FB4D RID: 195405 RVA: 0x00D4F2FC File Offset: 0x00D4D4FC
 		public List<DreamLinkRewardData> GetLimitTimeRewardListByTabId(int tabId)
 		{
 			List<DreamLinkRewardData> list;
@@ -1047,49 +1040,49 @@ namespace CSharpScript.Game.Module.DreamLink
 			return list;
 		}
 
-		// Token: 0x0603AC05 RID: 240645 RVA: 0x00DFEDCC File Offset: 0x00DFCFCC
+		// Token: 0x0602FB4E RID: 195406 RVA: 0x00D4F334 File Offset: 0x00D4D534
 		public int GetPreviewWeaponId()
 		{
 			return this.GetActivityConfig().WeaponPreviewId;
 		}
 
-		// Token: 0x0401EA69 RID: 125545
+		// Token: 0x04019510 RID: 103696
 		public List<RogueRoleInstData> RoleInstanceList = new List<RogueRoleInstData>();
 
-		// Token: 0x0401EA6A RID: 125546
+		// Token: 0x04019511 RID: 103697
 		public Dictionary<int, DreamLinkRunTaskData> RunTaskMap = new Dictionary<int, DreamLinkRunTaskData>();
 
-		// Token: 0x0401EA6B RID: 125547
+		// Token: 0x04019512 RID: 103698
 		public int MaxEnergy;
 
-		// Token: 0x0401EA6C RID: 125548
+		// Token: 0x04019513 RID: 103699
 		private long LimitTimeRewardOpenTime;
 
-		// Token: 0x0401EA6D RID: 125549
+		// Token: 0x04019514 RID: 103700
 		private long LimitTimeRewardEndTime;
 
-		// Token: 0x0401EA6E RID: 125550
+		// Token: 0x04019515 RID: 103701
 		private List<int> UnlockMainFunction = new List<int>();
 
-		// Token: 0x0401EA6F RID: 125551
+		// Token: 0x04019516 RID: 103702
 		private readonly Dictionary<int, DreamLinkRewardData> EnergyRewardMap = new Dictionary<int, DreamLinkRewardData>();
 
-		// Token: 0x0401EA70 RID: 125552
+		// Token: 0x04019517 RID: 103703
 		private readonly Dictionary<int, DreamLinkRewardData> LimitTimeRewardMap = new Dictionary<int, DreamLinkRewardData>();
 
-		// Token: 0x0401EA71 RID: 125553
+		// Token: 0x04019518 RID: 103704
 		private readonly Dictionary<int, DreamLinkRewardData> BossRewardMap = new Dictionary<int, DreamLinkRewardData>();
 
-		// Token: 0x0401EA72 RID: 125554
+		// Token: 0x04019519 RID: 103705
 		private readonly Dictionary<int, List<DreamLinkRewardData>> BossTypeRewardMap = new Dictionary<int, List<DreamLinkRewardData>>();
 
-		// Token: 0x0401EA73 RID: 125555
+		// Token: 0x0401951A RID: 103706
 		private readonly Dictionary<EDreamLinkRewardType, List<DreamLinkRewardData>> LimitTimeTypeRewardMap = new Dictionary<EDreamLinkRewardType, List<DreamLinkRewardData>>();
 
-		// Token: 0x0401EA74 RID: 125556
+		// Token: 0x0401951B RID: 103707
 		private readonly Dictionary<int, DreamLinkBossInstanceData> BossInstDataMap = new Dictionary<int, DreamLinkBossInstanceData>();
 
-		// Token: 0x0401EA75 RID: 125557
+		// Token: 0x0401951C RID: 103708
 		public int DungeonProgressRecord;
 	}
 }

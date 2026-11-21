@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020030EF RID: 12527
+// Token: 0x02002647 RID: 9799
 public enum EPatrolState
 {
-	// Token: 0x0400CFB5 RID: 53173
+	// Token: 0x0400D3A6 RID: 54182
 	None,
-	// Token: 0x0400CFB6 RID: 53174
+	// Token: 0x0400D3A7 RID: 54183
 	PatrolMove,
-	// Token: 0x0400CFB7 RID: 53175
+	// Token: 0x0400D3A8 RID: 54184
 	WaitSyncEvents
 }

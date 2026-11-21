@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051CC RID: 20940
+	// Token: 0x02005731 RID: 22321
 	public class IExchangeSlideRailConfigT
 	{
-		// Token: 0x17009940 RID: 39232
-		// (get) Token: 0x06021F40 RID: 139072 RVA: 0x004B5E33 File Offset: 0x004B4033
-		// (set) Token: 0x06021F41 RID: 139073 RVA: 0x004B5E3B File Offset: 0x004B403B
+		// Token: 0x1700A12F RID: 41263
+		// (get) Token: 0x06023E98 RID: 147096 RVA: 0x004EFE9B File Offset: 0x004EE09B
+		// (set) Token: 0x06023E99 RID: 147097 RVA: 0x004EFEA3 File Offset: 0x004EE0A3
 		public int MaxExchangeDistance { get; set; }
 
-		// Token: 0x17009941 RID: 39233
-		// (get) Token: 0x06021F42 RID: 139074 RVA: 0x004B5E44 File Offset: 0x004B4044
-		// (set) Token: 0x06021F43 RID: 139075 RVA: 0x004B5E4C File Offset: 0x004B404C
+		// Token: 0x1700A130 RID: 41264
+		// (get) Token: 0x06023E9A RID: 147098 RVA: 0x004EFEAC File Offset: 0x004EE0AC
+		// (set) Token: 0x06023E9B RID: 147099 RVA: 0x004EFEB4 File Offset: 0x004EE0B4
 		public int MaxExchangeHigh { get; set; }
 
-		// Token: 0x17009942 RID: 39234
-		// (get) Token: 0x06021F44 RID: 139076 RVA: 0x004B5E55 File Offset: 0x004B4055
-		// (set) Token: 0x06021F45 RID: 139077 RVA: 0x004B5E5D File Offset: 0x004B405D
+		// Token: 0x1700A131 RID: 41265
+		// (get) Token: 0x06023E9C RID: 147100 RVA: 0x004EFEBD File Offset: 0x004EE0BD
+		// (set) Token: 0x06023E9D RID: 147101 RVA: 0x004EFEC5 File Offset: 0x004EE0C5
 		public List<INextSlideRailT> NextRails { get; set; }
 
-		// Token: 0x17009943 RID: 39235
-		// (get) Token: 0x06021F46 RID: 139078 RVA: 0x004B5E66 File Offset: 0x004B4066
-		// (set) Token: 0x06021F47 RID: 139079 RVA: 0x004B5E6E File Offset: 0x004B406E
+		// Token: 0x1700A132 RID: 41266
+		// (get) Token: 0x06023E9E RID: 147102 RVA: 0x004EFECE File Offset: 0x004EE0CE
+		// (set) Token: 0x06023E9F RID: 147103 RVA: 0x004EFED6 File Offset: 0x004EE0D6
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021F48 RID: 139080 RVA: 0x004B5E77 File Offset: 0x004B4077
+		// Token: 0x06023EA0 RID: 147104 RVA: 0x004EFEDF File Offset: 0x004EE0DF
 		public IExchangeSlideRailConfigT()
 		{
 			this.MaxExchangeDistance = 0;

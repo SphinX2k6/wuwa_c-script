@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi.RoleDevelop;
 
-// Token: 0x02002827 RID: 10279
+// Token: 0x02001DA2 RID: 7586
 [NullableContext(1)]
 [Nullable(0)]
 public class ForecastRoleDevWeaponDevData : RoleDevWeaponDevItemDataBase
 {
-	// Token: 0x060152B9 RID: 86713 RVA: 0x0055B83C File Offset: 0x00559A3C
+	// Token: 0x06012CB7 RID: 76983 RVA: 0x00586550 File Offset: 0x00584750
 	protected override void InitByRoleType(int roleId)
 	{
 		IRoleDevProsProjectConfig roleDevProsProjectConfig = RoleDevConfig.Instance.GetRoleDevProsProjectConfig(roleId);
@@ -21,25 +21,25 @@ public class ForecastRoleDevWeaponDevData : RoleDevWeaponDevItemDataBase
 		this.InitDetailItemData();
 	}
 
-	// Token: 0x060152BA RID: 86714 RVA: 0x0055B86B File Offset: 0x00559A6B
+	// Token: 0x06012CB8 RID: 76984 RVA: 0x0058657F File Offset: 0x0058477F
 	private void InitDetailItemData()
 	{
 		this.DetailItemDataInternal.InitByWeaponType(base.RoleId, this.WeaponTypeInternal);
 	}
 
-	// Token: 0x060152BB RID: 86715 RVA: 0x0055B884 File Offset: 0x00559A84
+	// Token: 0x06012CB9 RID: 76985 RVA: 0x00586598 File Offset: 0x00584798
 	protected override int GetWeaponLevel()
 	{
 		return 1;
 	}
 
-	// Token: 0x060152BC RID: 86716 RVA: 0x0055B887 File Offset: 0x00559A87
+	// Token: 0x06012CBA RID: 76986 RVA: 0x0058659B File Offset: 0x0058479B
 	protected override int GetWeaponBreachLevel()
 	{
 		return 0;
 	}
 
-	// Token: 0x060152BD RID: 86717 RVA: 0x0055B88A File Offset: 0x00559A8A
+	// Token: 0x06012CBB RID: 76987 RVA: 0x0058659E File Offset: 0x0058479E
 	protected override int GetWeaponGoalUpgradeLevel()
 	{
 		IRoleDevProsProjectConfig roleDevProsProjectConfig = RoleDevConfig.Instance.GetRoleDevProsProjectConfig(base.RoleId);
@@ -50,25 +50,25 @@ public class ForecastRoleDevWeaponDevData : RoleDevWeaponDevItemDataBase
 		return roleDevProsProjectConfig.WeaponGoalLevel;
 	}
 
-	// Token: 0x060152BE RID: 86718 RVA: 0x0055B8A7 File Offset: 0x00559AA7
+	// Token: 0x06012CBC RID: 76988 RVA: 0x005865BB File Offset: 0x005847BB
 	protected override int GetWeaponGoalBreakLevel()
 	{
 		return 0;
 	}
 
-	// Token: 0x060152BF RID: 86719 RVA: 0x0055B8AA File Offset: 0x00559AAA
+	// Token: 0x06012CBD RID: 76989 RVA: 0x005865BE File Offset: 0x005847BE
 	protected override int GetMaxLevel()
 	{
 		return 0;
 	}
 
-	// Token: 0x060152C0 RID: 86720 RVA: 0x0055B8AD File Offset: 0x00559AAD
+	// Token: 0x06012CBE RID: 76990 RVA: 0x005865C1 File Offset: 0x005847C1
 	protected override List<IRoleDevDetailItemData> GetDetailItems()
 	{
 		return this.DetailItemDataInternal.DetailItems;
 	}
 
-	// Token: 0x060152C1 RID: 86721 RVA: 0x0055B8BC File Offset: 0x00559ABC
+	// Token: 0x06012CBF RID: 76991 RVA: 0x005865D0 File Offset: 0x005847D0
 	protected override string GetWeaponName()
 	{
 		RoleDevWeaponItem? roleDevWeaponItemConfig = RoleDevConfig.Instance.GetRoleDevWeaponItemConfig(this.WeaponTypeInternal);
@@ -79,45 +79,45 @@ public class ForecastRoleDevWeaponDevData : RoleDevWeaponDevItemDataBase
 		return roleDevWeaponItemConfig.Value.WeaponTypeDescribe;
 	}
 
-	// Token: 0x060152C2 RID: 86722 RVA: 0x0055B8F8 File Offset: 0x00559AF8
+	// Token: 0x06012CC0 RID: 76992 RVA: 0x0058660C File Offset: 0x0058480C
 	protected override bool GetIsCanUpgrade()
 	{
 		return base.IsCanShowUpgradeItem;
 	}
 
-	// Token: 0x060152C3 RID: 86723 RVA: 0x0055B900 File Offset: 0x00559B00
+	// Token: 0x06012CC1 RID: 76993 RVA: 0x00586614 File Offset: 0x00584814
 	protected override bool GetIsCanBreach()
 	{
 		return false;
 	}
 
-	// Token: 0x060152C4 RID: 86724 RVA: 0x0055B903 File Offset: 0x00559B03
+	// Token: 0x06012CC2 RID: 76994 RVA: 0x00586617 File Offset: 0x00584817
 	protected override bool GetIsCall()
 	{
 		return false;
 	}
 
-	// Token: 0x060152C5 RID: 86725 RVA: 0x0055B906 File Offset: 0x00559B06
+	// Token: 0x06012CC3 RID: 76995 RVA: 0x0058661A File Offset: 0x0058481A
 	protected override int GetGachaId()
 	{
 		return 0;
 	}
 
-	// Token: 0x060152C6 RID: 86726 RVA: 0x0055B909 File Offset: 0x00559B09
+	// Token: 0x06012CC4 RID: 76996 RVA: 0x0058661D File Offset: 0x0058481D
 	protected override int GetWeaponConfigId()
 	{
 		return 0;
 	}
 
-	// Token: 0x060152C7 RID: 86727 RVA: 0x0055B90C File Offset: 0x00559B0C
+	// Token: 0x06012CC5 RID: 76997 RVA: 0x00586620 File Offset: 0x00584820
 	protected override bool GetIsHighQuality()
 	{
 		return false;
 	}
 
-	// Token: 0x04009E8B RID: 40587
+	// Token: 0x0400A274 RID: 41588
 	private int WeaponTypeInternal;
 
-	// Token: 0x04009E8C RID: 40588
+	// Token: 0x0400A275 RID: 41589
 	private readonly ForecastRoleDevWeaponDetailItemData DetailItemDataInternal = new ForecastRoleDevWeaponDetailItemData();
 }

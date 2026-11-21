@@ -6,12 +6,12 @@ using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 {
-	// Token: 0x0200711B RID: 28955
+	// Token: 0x02006349 RID: 25417
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class HighlightExploreSkillLogic
 	{
-		// Token: 0x06046B25 RID: 289573 RVA: 0x011CDBF8 File Offset: 0x011CBDF8
+		// Token: 0x0603D970 RID: 252272 RVA: 0x011D6848 File Offset: 0x011D4A48
 		[NullableContext(1)]
 		public void Init(BaseExploreComponent exploreComponent)
 		{
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.TagComponent = exploreComponent.TagComponent;
 		}
 
-		// Token: 0x06046B26 RID: 289574 RVA: 0x011CDCA8 File Offset: 0x011CBEA8
+		// Token: 0x0603D971 RID: 252273 RVA: 0x011D68F8 File Offset: 0x011D4AF8
 		public void Dispose()
 		{
 			Log instance = Log.Instance;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.TagComponent = null;
 		}
 
-		// Token: 0x06046B27 RID: 289575 RVA: 0x011CDD58 File Offset: 0x011CBF58
+		// Token: 0x0603D972 RID: 252274 RVA: 0x011D69A8 File Offset: 0x011D4BA8
 		public int GetHighlightSkillId()
 		{
 			if (!this.Highlighting)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return 0;
 		}
 
-		// Token: 0x06046B28 RID: 289576 RVA: 0x011CDD9F File Offset: 0x011CBF9F
+		// Token: 0x0603D973 RID: 252275 RVA: 0x011D69EF File Offset: 0x011D4BEF
 		public int GetHighlightExploreToolId()
 		{
 			if (!this.Highlighting)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return (int)this.ExploreToolId;
 		}
 
-		// Token: 0x06046B29 RID: 289577 RVA: 0x011CDDB4 File Offset: 0x011CBFB4
+		// Token: 0x0603D974 RID: 252276 RVA: 0x011D6A04 File Offset: 0x011D4C04
 		public unsafe void ShowHighlightExploreSkill(int exploreToolId, float duration, bool? needRevertSkill, string tagName = null, int? itemId = null, bool? needTips = null, bool? autoHideAfterUseExploreSkill = null)
 		{
 			if (this.Highlighting)
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.OnShowHighlightExploreSkill(needTips.GetValueOrDefault(), autoHideAfterUseExploreSkill.GetValueOrDefault(true));
 		}
 
-		// Token: 0x06046B2A RID: 289578 RVA: 0x011CDFA8 File Offset: 0x011CC1A8
+		// Token: 0x0603D975 RID: 252277 RVA: 0x011D6BF8 File Offset: 0x011D4DF8
 		public void HideHighlightExploreSkill()
 		{
 			if (!this.Highlighting)
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.OnHideHighlightExploreSkill(this.NeedRevertSkill);
 		}
 
-		// Token: 0x06046B2B RID: 289579 RVA: 0x011CDFFB File Offset: 0x011CC1FB
+		// Token: 0x0603D976 RID: 252278 RVA: 0x011D6C4B File Offset: 0x011D4E4B
 		private void TryAddTag()
 		{
 			if (this.TagComponent != null && !this.TagComponent.HasTag(this.HighlightTagId))
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B2C RID: 289580 RVA: 0x011CE02E File Offset: 0x011CC22E
+		// Token: 0x0603D977 RID: 252279 RVA: 0x011D6C7E File Offset: 0x011D4E7E
 		private void TryRemoveTag()
 		{
 			if (this.TagComponent != null && this.TagComponent.HasTag(this.HighlightTagId))
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B2D RID: 289581 RVA: 0x011CE064 File Offset: 0x011CC264
+		// Token: 0x0603D978 RID: 252280 RVA: 0x011D6CB4 File Offset: 0x011D4EB4
 		private void OnShowHighlightExploreSkill(bool needTips, bool autoHideAfterUseExploreSkill)
 		{
 			this.Highlighting = true;
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.StartTimer();
 		}
 
-		// Token: 0x06046B2E RID: 289582 RVA: 0x011CE17C File Offset: 0x011CC37C
+		// Token: 0x0603D979 RID: 252281 RVA: 0x011D6DCC File Offset: 0x011D4FCC
 		private void StartTimer()
 		{
 			if (this.Duration < 0f)
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}, this.Duration, null, null, true, 1f);
 		}
 
-		// Token: 0x06046B2F RID: 289583 RVA: 0x011CE20C File Offset: 0x011CC40C
+		// Token: 0x0603D97A RID: 252282 RVA: 0x011D6E5C File Offset: 0x011D505C
 		private void OnHideHighlightExploreSkill(bool needRevertSkill)
 		{
 			this.Highlighting = false;
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.Duration = 0f;
 		}
 
-		// Token: 0x06046B30 RID: 289584 RVA: 0x011CE37C File Offset: 0x011CC57C
+		// Token: 0x0603D97B RID: 252283 RVA: 0x011D6FCC File Offset: 0x011D51CC
 		private void OnHighlightTimeUp()
 		{
 			Log instance = Log.Instance;
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.OnHideHighlightExploreSkill(this.NeedRevertSkill);
 		}
 
-		// Token: 0x06046B31 RID: 289585 RVA: 0x011CE3C8 File Offset: 0x011CC5C8
+		// Token: 0x0603D97C RID: 252284 RVA: 0x011D7018 File Offset: 0x011D5218
 		private void OnChangeExploreSkill()
 		{
 			if (RouletteModel.Instance.CurrentExploreSkillId != (int)this.ExploreToolId)
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.TryRemoveTag();
 		}
 
-		// Token: 0x06046B32 RID: 289586 RVA: 0x011CE484 File Offset: 0x011CC684
+		// Token: 0x0603D97D RID: 252285 RVA: 0x011D70D4 File Offset: 0x011D52D4
 		private void OnUseExploreSkill(int charId, int skillId, bool isAutonomousProxy)
 		{
 			int num = this.ExploreToolId - ERouletteExploreId.钩索 + 210001;
@@ -362,35 +362,35 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x040251CA RID: 152010
+		// Token: 0x04020AAA RID: 133802
 		[Nullable(1)]
 		private const string DEFAULT_HIGHLIGHT_TAG = "角色.Common.技能通用标识.探索技能高亮";
 
-		// Token: 0x040251CB RID: 152011
+		// Token: 0x04020AAB RID: 133803
 		private int HighlightTagId = GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.探索技能高亮"];
 
-		// Token: 0x040251CC RID: 152012
+		// Token: 0x04020AAC RID: 133804
 		private ERouletteExploreId ExploreToolId = ERouletteExploreId.钩索;
 
-		// Token: 0x040251CD RID: 152013
+		// Token: 0x04020AAD RID: 133805
 		private int ItemId = -1;
 
-		// Token: 0x040251CE RID: 152014
+		// Token: 0x04020AAE RID: 133806
 		private bool NeedRevertSkill;
 
-		// Token: 0x040251CF RID: 152015
+		// Token: 0x04020AAF RID: 133807
 		private bool Highlighting;
 
-		// Token: 0x040251D0 RID: 152016
+		// Token: 0x04020AB0 RID: 133808
 		private float Duration;
 
-		// Token: 0x040251D1 RID: 152017
+		// Token: 0x04020AB1 RID: 133809
 		private TimerHandle TimerHandle;
 
-		// Token: 0x040251D2 RID: 152018
+		// Token: 0x04020AB2 RID: 133810
 		private BaseTagComponent TagComponent;
 
-		// Token: 0x040251D3 RID: 152019
+		// Token: 0x04020AB3 RID: 133811
 		private BaseExploreComponent ExploreComponent;
 	}
 }

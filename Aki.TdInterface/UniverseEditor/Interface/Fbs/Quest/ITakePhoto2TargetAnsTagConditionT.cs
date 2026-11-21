@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004191 RID: 16785
+	// Token: 0x020045EA RID: 17898
 	public class ITakePhoto2TargetAnsTagConditionT
 	{
-		// Token: 0x17007708 RID: 30472
-		// (get) Token: 0x06018B1F RID: 101151 RVA: 0x0038E731 File Offset: 0x0038C931
-		// (set) Token: 0x06018B20 RID: 101152 RVA: 0x0038E739 File Offset: 0x0038C939
+		// Token: 0x17007D34 RID: 32052
+		// (get) Token: 0x0601A275 RID: 107125 RVA: 0x003B9B85 File Offset: 0x003B7D85
+		// (set) Token: 0x0601A276 RID: 107126 RVA: 0x003B9B8D File Offset: 0x003B7D8D
 		public string MontageTag { get; set; }
 
-		// Token: 0x06018B21 RID: 101153 RVA: 0x0038E742 File Offset: 0x0038C942
+		// Token: 0x0601A277 RID: 107127 RVA: 0x003B9B96 File Offset: 0x003B7D96
 		public ITakePhoto2TargetAnsTagConditionT()
 		{
 			this.MontageTag = null;

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001403 RID: 5123
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200155A RID: 5466
 	public class IPhotographSubTargetAnyRole : IPhotographSubTarget
 	{
-		// Token: 0x06007481 RID: 29825 RVA: 0x00116A27 File Offset: 0x00114C27
+		// Token: 0x06007B42 RID: 31554 RVA: 0x0012540B File Offset: 0x0012360B
 		public static IPhotographSubTargetAnyRole Create(IPhotographSubTargetAnyRole? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700264E RID: 9806
-		// (get) Token: 0x06007482 RID: 29826 RVA: 0x00116A46 File Offset: 0x00114C46
+		// Token: 0x17002830 RID: 10288
+		// (get) Token: 0x06007B43 RID: 31555 RVA: 0x0012542A File Offset: 0x0012362A
 		public override EPhotographSubTargetType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700264F RID: 9807
-		// (get) Token: 0x06007483 RID: 29827 RVA: 0x00116A53 File Offset: 0x00114C53
+		// Token: 0x17002831 RID: 10289
+		// (get) Token: 0x06007B44 RID: 31556 RVA: 0x00125437 File Offset: 0x00123637
 		public virtual EOnCameraCheckType OnCameraCheckType
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002650 RID: 9808
-		// (get) Token: 0x06007484 RID: 29828 RVA: 0x00116A60 File Offset: 0x00114C60
+		// Token: 0x17002832 RID: 10290
+		// (get) Token: 0x06007B45 RID: 31557 RVA: 0x00125444 File Offset: 0x00123644
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -59,14 +57,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004369 RID: 17257
+		// Token: 0x040046FA RID: 18170
 		private IPhotographSubTargetAnyRole Instance;
 
-		// Token: 0x0400436A RID: 17258
+		// Token: 0x040046FB RID: 18171
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x0400436B RID: 17259
+		// Token: 0x040046FC RID: 18172
 		private bool _ConditionInited;
 	}
 }

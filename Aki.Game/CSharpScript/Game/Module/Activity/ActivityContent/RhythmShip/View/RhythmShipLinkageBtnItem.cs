@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200621B RID: 25115
+	// Token: 0x02005199 RID: 20889
 	internal class RhythmShipLinkageBtnItem : UiPanelBase
 	{
-		// Token: 0x0603F5B5 RID: 259509 RVA: 0x00F50564 File Offset: 0x00F4E764
+		// Token: 0x06034276 RID: 213622 RVA: 0x00E974BC File Offset: 0x00E956BC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F5B6 RID: 259510 RVA: 0x00F505E4 File Offset: 0x00F4E7E4
+		// Token: 0x06034277 RID: 213623 RVA: 0x00E9753C File Offset: 0x00E9573C
 		public void RefreshItem(bool isToLinkage)
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath(isToLinkage ? "T_IconRhythmShipLevelPic02" : "T_IconRhythmShipLevelPic01");
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), isToLinkage ? "RhythmShipLevelToLinkageArea" : "RhythmShipLevelToNormalArea", Array.Empty<object>());
 		}
 
-		// Token: 0x0603F5B7 RID: 259511 RVA: 0x00F50648 File Offset: 0x00F4E848
+		// Token: 0x06034278 RID: 213624 RVA: 0x00E975A0 File Offset: 0x00E957A0
 		private void OnClickLinkageBtn()
 		{
 			Action onClickLinkageBtnCallBack = this.OnClickLinkageBtnCallBack;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			onClickLinkageBtnCallBack();
 		}
 
-		// Token: 0x040210FF RID: 135423
+		// Token: 0x0401BA2E RID: 113198
 		[Nullable(2)]
 		public Action OnClickLinkageBtnCallBack;
 	}

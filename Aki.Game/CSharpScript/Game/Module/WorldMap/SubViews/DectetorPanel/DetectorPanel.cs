@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.DectetorPanel
 {
-	// Token: 0x02004829 RID: 18473
+	// Token: 0x0200375A RID: 14170
 	public class DetectorPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x060305AE RID: 198062 RVA: 0x00B398EF File Offset: 0x00B37AEF
+		// Token: 0x06024D7E RID: 150910 RVA: 0x00A699BB File Offset: 0x00A67BBB
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x060305AF RID: 198063 RVA: 0x00B398F8 File Offset: 0x00B37AF8
+		// Token: 0x06024D7F RID: 150911 RVA: 0x00A699C4 File Offset: 0x00A67BC4
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.DectetorPanel
 			layoutContext2.SetConfirmBtnActive(false);
 		}
 
-		// Token: 0x060305B0 RID: 198064 RVA: 0x00B399C0 File Offset: 0x00B37BC0
+		// Token: 0x06024D80 RID: 150912 RVA: 0x00A69A8C File Offset: 0x00A67C8C
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.DectetorPanel
 			}
 		}
 
-		// Token: 0x060305B1 RID: 198065 RVA: 0x00B39AD0 File Offset: 0x00B37CD0
+		// Token: 0x06024D81 RID: 150913 RVA: 0x00A69B9C File Offset: 0x00A67D9C
 		protected unsafe override void HandleTrack()
 		{
 			TreasureBoxDetectorMarkItem treasureBoxDetectorMarkItem = this.LayoutContext.MarkItem as TreasureBoxDetectorMarkItem;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.DectetorPanel
 			base.Close();
 		}
 
-		// Token: 0x060305B2 RID: 198066 RVA: 0x00B39BA2 File Offset: 0x00B37DA2
+		// Token: 0x06024D82 RID: 150914 RVA: 0x00A69C6E File Offset: 0x00A67E6E
 		protected override void OnDelBtnClick()
 		{
 			if (this.SelectedMarkItem != null && this.SelectedMarkItem.MarkId > 0)
@@ -139,14 +139,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.DectetorPanel
 			base.Close();
 		}
 
-		// Token: 0x0401A01F RID: 106527
+		// Token: 0x040146D3 RID: 83667
 		[Nullable(2)]
 		private TreasureBoxDetectorMarkItem SelectedMarkItem;
 
-		// Token: 0x0200AB02 RID: 43778
+		// Token: 0x020094B1 RID: 38065
 		public static class EComponents
 		{
-			// Token: 0x04033FB0 RID: 212912
+			// Token: 0x0402E730 RID: 190256
 			public const int DetectorPanel = 0;
 		}
 	}

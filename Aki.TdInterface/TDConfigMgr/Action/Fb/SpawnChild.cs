@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025FC RID: 9724
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028BC RID: 10428
 	public class SpawnChild : ActionParams
 	{
-		// Token: 0x0600DA75 RID: 55925 RVA: 0x00208DF6 File Offset: 0x00206FF6
+		// Token: 0x0600E842 RID: 59458 RVA: 0x0022554A File Offset: 0x0022374A
 		public static SpawnChild Create(ISpawnChild? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700403F RID: 16447
-		// (get) Token: 0x0600DA76 RID: 55926 RVA: 0x00208E15 File Offset: 0x00207015
+		// Token: 0x17004378 RID: 17272
+		// (get) Token: 0x0600E843 RID: 59459 RVA: 0x00225569 File Offset: 0x00223769
 		public virtual string TemplateGuid
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004040 RID: 16448
-		// (get) Token: 0x0600DA77 RID: 55927 RVA: 0x00208E22 File Offset: 0x00207022
+		// Token: 0x17004379 RID: 17273
+		// (get) Token: 0x0600E844 RID: 59460 RVA: 0x00225576 File Offset: 0x00223776
 		public virtual ITransform Transform
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007950 RID: 31056
+		// Token: 0x04007FEA RID: 32746
 		private ISpawnChild Instance;
 
-		// Token: 0x04007951 RID: 31057
+		// Token: 0x04007FEB RID: 32747
 		[Nullable(2)]
 		private ITransform _TransformCache;
 
-		// Token: 0x04007952 RID: 31058
+		// Token: 0x04007FEC RID: 32748
 		private bool _TransformInited;
 	}
 }

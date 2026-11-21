@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200603F RID: 24639
+	// Token: 0x020066A0 RID: 26272
 	public enum ETraceTracingImageType : byte
 	{
-		// Token: 0x04010185 RID: 65925
+		// Token: 0x04010F78 RID: 69496
 		None,
-		// Token: 0x04010186 RID: 65926
+		// Token: 0x04010F79 RID: 69497
 		Type1,
-		// Token: 0x04010187 RID: 65927
+		// Token: 0x04010F7A RID: 69498
 		Type2,
-		// Token: 0x04010188 RID: 65928
+		// Token: 0x04010F7B RID: 69499
 		Type3
 	}
 }

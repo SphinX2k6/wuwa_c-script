@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B3D RID: 6973
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CEC RID: 7404
 	public class IInstrumentKeyConfigs
 	{
-		// Token: 0x06009538 RID: 38200 RVA: 0x0015901C File Offset: 0x0015721C
+		// Token: 0x06009D22 RID: 40226 RVA: 0x00169CF8 File Offset: 0x00167EF8
 		private IInstrumentKeyConfigs_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009539 RID: 38201 RVA: 0x00159054 File Offset: 0x00157254
+		// Token: 0x06009D23 RID: 40227 RVA: 0x00169D30 File Offset: 0x00167F30
 		public static IInstrumentKeyConfigs Create([Nullable(2)] IInstrumentKeyConfigs instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600953A RID: 38202 RVA: 0x00159067 File Offset: 0x00157267
+		// Token: 0x06009D24 RID: 40228 RVA: 0x00169D43 File Offset: 0x00167F43
 		public static IInstrumentKeyConfigs CreateFromSetValue([Nullable(2)] IInstrumentKeyConfigs_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600953B RID: 38203 RVA: 0x0015907A File Offset: 0x0015727A
+		// Token: 0x06009D25 RID: 40229 RVA: 0x00169D56 File Offset: 0x00167F56
 		public IInstrumentKeyConfigs_SetValue ToSetValue()
 		{
 			return new IInstrumentKeyConfigs_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F16 RID: 12054
-		// (get) Token: 0x0600953C RID: 38204 RVA: 0x0015909C File Offset: 0x0015729C
-		// (set) Token: 0x0600953D RID: 38205 RVA: 0x0015912F File Offset: 0x0015732F
+		// Token: 0x1700313C RID: 12604
+		// (get) Token: 0x06009D26 RID: 40230 RVA: 0x00169D78 File Offset: 0x00167F78
+		// (set) Token: 0x06009D27 RID: 40231 RVA: 0x00169E0B File Offset: 0x0016800B
 		public virtual List<IInstrumentKeyAttribute> Grids
 		{
 			get
@@ -99,9 +97,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F17 RID: 12055
-		// (get) Token: 0x0600953E RID: 38206 RVA: 0x00159144 File Offset: 0x00157344
-		// (set) Token: 0x0600953F RID: 38207 RVA: 0x001591A5 File Offset: 0x001573A5
+		// Token: 0x1700313D RID: 12605
+		// (get) Token: 0x06009D28 RID: 40232 RVA: 0x00169E20 File Offset: 0x00168020
+		// (set) Token: 0x06009D29 RID: 40233 RVA: 0x00169E81 File Offset: 0x00168081
 		public virtual IInstrumentBoardSize BoardSize
 		{
 			get
@@ -129,24 +127,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B53 RID: 23379
+		// Token: 0x04005FF1 RID: 24561
 		[Nullable(2)]
 		protected IInstrumentKeyConfigs FbInstance;
 
-		// Token: 0x04005B54 RID: 23380
+		// Token: 0x04005FF2 RID: 24562
 		[Nullable(2)]
 		protected IInstrumentKeyConfigs_SetValue PocoInterface;
 
-		// Token: 0x04005B55 RID: 23381
+		// Token: 0x04005FF3 RID: 24563
 		private List<IInstrumentKeyAttribute> _GridsCache;
 
-		// Token: 0x04005B56 RID: 23382
+		// Token: 0x04005FF4 RID: 24564
 		private bool _GridsInited;
 
-		// Token: 0x04005B57 RID: 23383
+		// Token: 0x04005FF5 RID: 24565
 		private IInstrumentBoardSize _BoardSizeCache;
 
-		// Token: 0x04005B58 RID: 23384
+		// Token: 0x04005FF6 RID: 24566
 		private bool _BoardSizeInited;
 	}
 }

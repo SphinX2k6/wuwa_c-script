@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.HiddenBoss
 {
-	// Token: 0x02005955 RID: 22869
+	// Token: 0x0200492E RID: 18734
 	public class HiddenBossUiParams : IHiddenBossUiParams
 	{
-		// Token: 0x17008B1F RID: 35615
-		// (get) Token: 0x0603A066 RID: 237670 RVA: 0x00DCAD77 File Offset: 0x00DC8F77
-		// (set) Token: 0x0603A067 RID: 237671 RVA: 0x00DCAD7F File Offset: 0x00DC8F7F
+		// Token: 0x17005EEB RID: 24299
+		// (get) Token: 0x0602EF89 RID: 192393 RVA: 0x00D1A02B File Offset: 0x00D1822B
+		// (set) Token: 0x0602EF8A RID: 192394 RVA: 0x00D1A033 File Offset: 0x00D18233
 		public int UiId { get; set; }
 	}
 }

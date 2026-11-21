@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 {
-	// Token: 0x02006F56 RID: 28502
+	// Token: 0x020060D7 RID: 24791
 	public class BigStuffedDollTipItem : UiPanelBase
 	{
-		// Token: 0x06045575 RID: 284021 RVA: 0x011288B8 File Offset: 0x01126AB8
+		// Token: 0x0603B723 RID: 243491 RVA: 0x010D2698 File Offset: 0x010D0898
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06045576 RID: 284022 RVA: 0x01128900 File Offset: 0x01126B00
+		// Token: 0x0603B724 RID: 243492 RVA: 0x010D26E0 File Offset: 0x010D08E0
 		[NullableContext(1)]
 		public void ShowTips(string key, int stayTime)
 		{
@@ -35,10 +35,10 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			}, (float)stayTime, null, null, true, 1f);
 		}
 
-		// Token: 0x0200CD8D RID: 52621
+		// Token: 0x0200B97F RID: 47487
 		private class EViewComponent
 		{
-			// Token: 0x0403DEFE RID: 253694
+			// Token: 0x0403932D RID: 234285
 			public const int TextTip = 0;
 		}
 	}

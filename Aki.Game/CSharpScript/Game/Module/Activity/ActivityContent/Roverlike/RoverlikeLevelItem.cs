@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006161 RID: 24929
+	// Token: 0x020050DF RID: 20703
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeLevelItem : GridProxyAbstract<RoverlikeLevelSelectItemData>
 	{
-		// Token: 0x0603F014 RID: 258068 RVA: 0x00F38AD4 File Offset: 0x00F36CD4
+		// Token: 0x06033CD4 RID: 212180 RVA: 0x00E7F9A8 File Offset: 0x00E7DBA8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F015 RID: 258069 RVA: 0x00F38C40 File Offset: 0x00F36E40
+		// Token: 0x06033CD5 RID: 212181 RVA: 0x00E7FB14 File Offset: 0x00E7DD14
 		public override void Refresh(RoverlikeLevelSelectItemData data, bool isSelected, int gridIndex)
 		{
 			this.InstId = data.InstId;
@@ -105,19 +105,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SetToggleChecked(isSelected, false);
 		}
 
-		// Token: 0x0603F016 RID: 258070 RVA: 0x00F38DD6 File Offset: 0x00F36FD6
+		// Token: 0x06033CD6 RID: 212182 RVA: 0x00E7FCAA File Offset: 0x00E7DEAA
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleChecked(true, false);
 		}
 
-		// Token: 0x0603F017 RID: 258071 RVA: 0x00F38DE0 File Offset: 0x00F36FE0
+		// Token: 0x06033CD7 RID: 212183 RVA: 0x00E7FCB4 File Offset: 0x00E7DEB4
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleChecked(false, false);
 		}
 
-		// Token: 0x0603F018 RID: 258072 RVA: 0x00F38DEA File Offset: 0x00F36FEA
+		// Token: 0x06033CD8 RID: 212184 RVA: 0x00E7FCBE File Offset: 0x00E7DEBE
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -128,13 +128,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			extendToggle.CanExecuteChange.Bind(() => !this.IsSelected);
 		}
 
-		// Token: 0x0603F019 RID: 258073 RVA: 0x00F38E0E File Offset: 0x00F3700E
+		// Token: 0x06033CD9 RID: 212185 RVA: 0x00E7FCE2 File Offset: 0x00E7DEE2
 		public override object GetKey(RoverlikeLevelSelectItemData data, int gridIndex)
 		{
 			return data.InstId;
 		}
 
-		// Token: 0x0603F01A RID: 258074 RVA: 0x00F38E1B File Offset: 0x00F3701B
+		// Token: 0x06033CDA RID: 212186 RVA: 0x00E7FCEF File Offset: 0x00E7DEEF
 		public void SetToggleChecked(bool isChecked, bool fireEvent)
 		{
 			this.IsSelected = isChecked;
@@ -146,13 +146,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			extendToggle.SetToggleStateForce(isChecked ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x0603F01B RID: 258075 RVA: 0x00F38E3F File Offset: 0x00F3703F
+		// Token: 0x06033CDB RID: 212187 RVA: 0x00E7FD13 File Offset: 0x00E7DF13
 		public int GetInstId()
 		{
 			return this.InstId;
 		}
 
-		// Token: 0x0603F01C RID: 258076 RVA: 0x00F38E47 File Offset: 0x00F37047
+		// Token: 0x06033CDC RID: 212188 RVA: 0x00E7FD1B File Offset: 0x00E7DF1B
 		private void OnToggleStateChange(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			onSelectCallback(this.InstId);
 		}
 
-		// Token: 0x04020DF6 RID: 134646
+		// Token: 0x0401B723 RID: 112419
 		[StaticVariableRuleIgnore]
 		private static readonly IReadOnlyList<string> DifficultySpriteNames = new List<string>
 		{
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			"SP_SeleLevelTabNorLineHard"
 		};
 
-		// Token: 0x04020DF7 RID: 134647
+		// Token: 0x0401B724 RID: 112420
 		[StaticVariableRuleIgnore]
 		private static readonly IReadOnlyList<string> DifficultySeleSpriteNames = new List<string>
 		{
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			"SP_SeleLevelTabSleLightHard"
 		};
 
-		// Token: 0x04020DF8 RID: 134648
+		// Token: 0x0401B725 RID: 112421
 		[StaticVariableRuleIgnore]
 		private static readonly IReadOnlyList<FColor> DifficultyLightColors = new List<FColor>
 		{
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			FColor.FromHex("#B0233AFF")
 		};
 
-		// Token: 0x04020DF9 RID: 134649
+		// Token: 0x0401B726 RID: 112422
 		[StaticVariableRuleIgnore]
 		private static readonly IReadOnlyList<FColor> DifficultyLineColors = new List<FColor>
 		{
@@ -203,42 +203,42 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			FColor.FromHex("#FF7484FF")
 		};
 
-		// Token: 0x04020DFA RID: 134650
+		// Token: 0x0401B727 RID: 112423
 		[Nullable(2)]
 		public Action<int> OnSelectCallback;
 
-		// Token: 0x04020DFB RID: 134651
+		// Token: 0x0401B728 RID: 112424
 		private int InstId;
 
-		// Token: 0x04020DFC RID: 134652
+		// Token: 0x0401B729 RID: 112425
 		private bool IsSelected;
 
-		// Token: 0x0200C3C1 RID: 50113
+		// Token: 0x0200ADA8 RID: 44456
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B110 RID: 241936
+			// Token: 0x04035A71 RID: 219761
 			public const int TogTabLevel = 0;
 
-			// Token: 0x0403B111 RID: 241937
+			// Token: 0x04035A72 RID: 219762
 			public const int TxtLevel = 1;
 
-			// Token: 0x0403B112 RID: 241938
+			// Token: 0x04035A73 RID: 219763
 			public const int PnlLock = 2;
 
-			// Token: 0x0403B113 RID: 241939
+			// Token: 0x04035A74 RID: 219764
 			public const int PnlDone = 3;
 
-			// Token: 0x0403B114 RID: 241940
+			// Token: 0x04035A75 RID: 219765
 			public const int SprDifficulty = 4;
 
-			// Token: 0x0403B115 RID: 241941
+			// Token: 0x04035A76 RID: 219766
 			public const int SprDifficultyLight = 5;
 
-			// Token: 0x0403B116 RID: 241942
+			// Token: 0x04035A77 RID: 219767
 			public const int SprDifficultyLine = 6;
 
-			// Token: 0x0403B117 RID: 241943
+			// Token: 0x04035A78 RID: 219768
 			public const int SprSeleColor = 7;
 		}
 	}

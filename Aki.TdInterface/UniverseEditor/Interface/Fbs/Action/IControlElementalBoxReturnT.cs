@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064CF RID: 25807
+	// Token: 0x02006B3A RID: 27450
 	public class IControlElementalBoxReturnT
 	{
-		// Token: 0x1700C010 RID: 49168
-		// (get) Token: 0x0602CC50 RID: 183376 RVA: 0x006272CB File Offset: 0x006254CB
-		// (set) Token: 0x0602CC51 RID: 183377 RVA: 0x006272D3 File Offset: 0x006254D3
+		// Token: 0x1700C99D RID: 51613
+		// (get) Token: 0x0602F3D4 RID: 193492 RVA: 0x006733F3 File Offset: 0x006715F3
+		// (set) Token: 0x0602F3D5 RID: 193493 RVA: 0x006733FB File Offset: 0x006715FB
 		public EControlElementalBoxType Type { get; set; }
 
-		// Token: 0x1700C011 RID: 49169
-		// (get) Token: 0x0602CC52 RID: 183378 RVA: 0x006272DC File Offset: 0x006254DC
-		// (set) Token: 0x0602CC53 RID: 183379 RVA: 0x006272E4 File Offset: 0x006254E4
+		// Token: 0x1700C99E RID: 51614
+		// (get) Token: 0x0602F3D6 RID: 193494 RVA: 0x00673404 File Offset: 0x00671604
+		// (set) Token: 0x0602F3D7 RID: 193495 RVA: 0x0067340C File Offset: 0x0067160C
 		public string ReturnBeforeMoveSeq { get; set; }
 
-		// Token: 0x0602CC54 RID: 183380 RVA: 0x006272ED File Offset: 0x006254ED
+		// Token: 0x0602F3D8 RID: 193496 RVA: 0x00673415 File Offset: 0x00671615
 		public IControlElementalBoxReturnT()
 		{
 			this.Type = EControlElementalBoxType.Capture;

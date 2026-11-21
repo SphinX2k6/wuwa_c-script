@@ -4,16 +4,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Effect
 {
-	// Token: 0x02007266 RID: 29286
+	// Token: 0x020063E5 RID: 25573
 	public class EffectRuntimeGhostEffectContext : SkeletalMeshEffectContext
 	{
-		// Token: 0x06047BF9 RID: 293881 RVA: 0x0125C308 File Offset: 0x0125A508
+		// Token: 0x0603DFB3 RID: 253875 RVA: 0x011FCC28 File Offset: 0x011FAE28
 		[NullableContext(2)]
 		public EffectRuntimeGhostEffectContext(int? entityId = null, UObject sourceObject = null, bool disablePostProcess = false) : base(entityId, sourceObject, disablePostProcess)
 		{
 		}
 
-		// Token: 0x06047BFA RID: 293882 RVA: 0x0125C32C File Offset: 0x0125A52C
+		// Token: 0x0603DFB4 RID: 253876 RVA: 0x011FCC4C File Offset: 0x011FAE4C
 		[NullableContext(1)]
 		public override void ToKuroEffectContext(FKuroEffectContext context)
 		{
@@ -29,19 +29,19 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x04025B9C RID: 154524
+		// Token: 0x04020E5B RID: 134747
 		public float SpawnRate = --0f;
 
-		// Token: 0x04025B9D RID: 154525
+		// Token: 0x04020E5C RID: 134748
 		public bool UseSpawnRate;
 
-		// Token: 0x04025B9E RID: 154526
+		// Token: 0x04020E5D RID: 134749
 		public float SpawnInterval;
 
-		// Token: 0x04025B9F RID: 154527
+		// Token: 0x04020E5E RID: 134750
 		public float GhostLifeTime = --0f;
 
-		// Token: 0x04025BA0 RID: 154528
+		// Token: 0x04020E5F RID: 134751
 		public bool UseBaseColorTex;
 	}
 }

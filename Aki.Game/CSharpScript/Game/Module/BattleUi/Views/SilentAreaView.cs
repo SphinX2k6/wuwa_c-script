@@ -7,11 +7,11 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DC3 RID: 24003
+	// Token: 0x02004DA7 RID: 19879
 	public class SilentAreaView : BattleVisibleChildView
 	{
-		// Token: 0x17008E6C RID: 36460
-		// (get) Token: 0x0603CFE3 RID: 249827 RVA: 0x00EAA326 File Offset: 0x00EA8526
+		// Token: 0x1700623E RID: 25150
+		// (get) Token: 0x06031F5A RID: 204634 RVA: 0x00DFB202 File Offset: 0x00DF9402
 		public long Id
 		{
 			get
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CFE4 RID: 249828 RVA: 0x00EAA32E File Offset: 0x00EA852E
+		// Token: 0x06031F5B RID: 204635 RVA: 0x00DFB20A File Offset: 0x00DF940A
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -31,14 +31,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603CFE5 RID: 249829 RVA: 0x00EAA357 File Offset: 0x00EA8557
+		// Token: 0x06031F5C RID: 204636 RVA: 0x00DFB233 File Offset: 0x00DF9433
 		public override void Reset()
 		{
 			base.Reset();
 			this.RemoveEvents();
 		}
 
-		// Token: 0x0603CFE6 RID: 249830 RVA: 0x00EAA368 File Offset: 0x00EA8568
+		// Token: 0x06031F5D RID: 204637 RVA: 0x00DFB244 File Offset: 0x00DF9444
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -59,19 +59,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603CFE7 RID: 249831 RVA: 0x00EAA40E File Offset: 0x00EA860E
+		// Token: 0x06031F5E RID: 204638 RVA: 0x00DFB2EA File Offset: 0x00DF94EA
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.BattleUiToggleSilentAreaInfoView, new Action(this.OnToggleSilentAreaInfoView));
 		}
 
-		// Token: 0x0603CFE8 RID: 249832 RVA: 0x00EAA42C File Offset: 0x00EA862C
+		// Token: 0x06031F5F RID: 204639 RVA: 0x00DFB308 File Offset: 0x00DF9508
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiToggleSilentAreaInfoView, new Action(this.OnToggleSilentAreaInfoView));
 		}
 
-		// Token: 0x0603CFE9 RID: 249833 RVA: 0x00EAA44A File Offset: 0x00EA864A
+		// Token: 0x06031F60 RID: 204640 RVA: 0x00DFB326 File Offset: 0x00DF9526
 		[NullableContext(1)]
 		public void StartShow(long treeIncId, BaseBehaviorTree tree)
 		{
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			environmentKeyData.SetEnvironmentKeyVisible(EEnvironmentKey.SilentArea, true);
 		}
 
-		// Token: 0x0603CFEA RID: 249834 RVA: 0x00EAA48C File Offset: 0x00EA868C
+		// Token: 0x06031F61 RID: 204641 RVA: 0x00DFB368 File Offset: 0x00DF9568
 		public void EndShow()
 		{
 			this.Panel.EndShow();
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			environmentKeyData.SetEnvironmentKeyVisible(EEnvironmentKey.SilentArea, false);
 		}
 
-		// Token: 0x0603CFEB RID: 249835 RVA: 0x00EAA4D9 File Offset: 0x00EA86D9
+		// Token: 0x06031F62 RID: 204642 RVA: 0x00DFB3B5 File Offset: 0x00DF95B5
 		protected override void OnAfterDestroy()
 		{
 			BattleUiEnvironmentKeyData environmentKeyData = BattleUiModel.Instance.EnvironmentKeyData;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			environmentKeyData.SetEnvironmentKeyVisible(EEnvironmentKey.SilentArea, false);
 		}
 
-		// Token: 0x0603CFEC RID: 249836 RVA: 0x00EAA4F4 File Offset: 0x00EA86F4
+		// Token: 0x06031F63 RID: 204643 RVA: 0x00DFB3D0 File Offset: 0x00DF95D0
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			if (toggleState == EToggleState.ETT_Checked)
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Panel.EndShow();
 		}
 
-		// Token: 0x0603CFED RID: 249837 RVA: 0x00EAA540 File Offset: 0x00EA8740
+		// Token: 0x06031F64 RID: 204644 RVA: 0x00DFB41C File Offset: 0x00DF961C
 		private void OnToggleSilentAreaInfoView()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -145,30 +145,30 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FC70 RID: 130160
+		// Token: 0x0401A72D RID: 108333
 		[Nullable(2)]
 		private SilentAreaInfoPanel Panel;
 
-		// Token: 0x0401FC71 RID: 130161
+		// Token: 0x0401A72E RID: 108334
 		private long TreeIncId;
 
-		// Token: 0x0401FC72 RID: 130162
+		// Token: 0x0401A72F RID: 108335
 		[Nullable(2)]
 		private BaseBehaviorTree Tree;
 
-		// Token: 0x0200C0C6 RID: 49350
+		// Token: 0x0200AACF RID: 43727
 		private enum EVisibleReason
 		{
-			// Token: 0x0403A29E RID: 238238
+			// Token: 0x04034C70 RID: 216176
 			Default = 1
 		}
 
-		// Token: 0x0200C0C7 RID: 49351
+		// Token: 0x0200AAD0 RID: 43728
 		private enum EChildComponent
 		{
-			// Token: 0x0403A2A0 RID: 238240
+			// Token: 0x04034C72 RID: 216178
 			Toggle,
-			// Token: 0x0403A2A1 RID: 238241
+			// Token: 0x04034C73 RID: 216179
 			PanelNode
 		}
 	}

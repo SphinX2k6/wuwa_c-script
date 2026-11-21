@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DE8 RID: 24040
+	// Token: 0x02004DCC RID: 19916
 	internal class SpecialEnergyBarKeLaiTaUltra : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D1C1 RID: 250305 RVA: 0x00EB5D4C File Offset: 0x00EB3F4C
+		// Token: 0x06032138 RID: 205112 RVA: 0x00E06C64 File Offset: 0x00E04E64
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 18;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D1C2 RID: 250306 RVA: 0x00EB5FD0 File Offset: 0x00EB41D0
+		// Token: 0x06032139 RID: 205113 RVA: 0x00E06EE8 File Offset: 0x00E050E8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarKeLaiTaUltra.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D1C3 RID: 250307 RVA: 0x00EB6014 File Offset: 0x00EB4214
+		// Token: 0x0603213A RID: 205114 RVA: 0x00E06F2C File Offset: 0x00E0512C
 		protected override void OnStart()
 		{
 			for (int i = 0; i < 4; i++)
@@ -81,27 +81,27 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshNum(-1, true);
 		}
 
-		// Token: 0x0603D1C4 RID: 250308 RVA: 0x00EB606F File Offset: 0x00EB426F
+		// Token: 0x0603213B RID: 205115 RVA: 0x00E06F87 File Offset: 0x00E05187
 		protected override void AddEvents()
 		{
 			base.AddEvents();
 			base.ListenForTagCountChanged(SpecialEnergyBarKeLaiTaUltra.NumTagId, new BaseTagComponent.TTagChangedCallback(this.OnNumTagCountChange));
 		}
 
-		// Token: 0x0603D1C5 RID: 250309 RVA: 0x00EB608E File Offset: 0x00EB428E
+		// Token: 0x0603213C RID: 205116 RVA: 0x00E06FA6 File Offset: 0x00E051A6
 		protected override void OnBeforeDestroy()
 		{
 			this.SetPlayEndAnim(false);
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603D1C6 RID: 250310 RVA: 0x00EB609D File Offset: 0x00EB429D
+		// Token: 0x0603213D RID: 205117 RVA: 0x00E06FB5 File Offset: 0x00E051B5
 		private void OnNumTagCountChange(int count, int tagId, int exactTagId, int oldCount)
 		{
 			this.RefreshNum(count, false);
 		}
 
-		// Token: 0x0603D1C7 RID: 250311 RVA: 0x00EB60A8 File Offset: 0x00EB42A8
+		// Token: 0x0603213E RID: 205118 RVA: 0x00E06FC0 File Offset: 0x00E051C0
 		private void RefreshNum(int num = -1, bool isStart = false)
 		{
 			int num2 = num;
@@ -129,7 +129,6 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 					{
 						base.StopTweenAnim(11 + j);
 					}
-					base.PlayTweenAnim(17);
 					for (int k = 0; k < 4; k++)
 					{
 						bool flag2 = k < num2;
@@ -141,6 +140,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				{
 					for (int l = this.CurNum; l < num2; l++)
 					{
+						this.TexItemList[l].SetUIActive(true);
 						base.PlayTweenAnim(11 + l);
 					}
 				}
@@ -154,13 +154,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D1C8 RID: 250312 RVA: 0x00EB61DB File Offset: 0x00EB43DB
+		// Token: 0x0603213F RID: 205119 RVA: 0x00E070FE File Offset: 0x00E052FE
 		protected override bool GetKeyEnable()
 		{
 			return this.CurNum >= 4;
 		}
 
-		// Token: 0x0603D1C9 RID: 250313 RVA: 0x00EB61EC File Offset: 0x00EB43EC
+		// Token: 0x06032140 RID: 205120 RVA: 0x00E0710C File Offset: 0x00E0530C
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D1CA RID: 250314 RVA: 0x00EB6254 File Offset: 0x00EB4454
+		// Token: 0x06032141 RID: 205121 RVA: 0x00E07174 File Offset: 0x00E05374
 		private void RefreshBuff()
 		{
 			SpecialEnergyBarInfo config = this.Config;
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffHandle = 0;
 		}
 
-		// Token: 0x0603D1CB RID: 250315 RVA: 0x00EB62C1 File Offset: 0x00EB44C1
+		// Token: 0x06032142 RID: 205122 RVA: 0x00E071E1 File Offset: 0x00E053E1
 		private void SetPlayEndAnim(bool isPlay)
 		{
 			if (isPlay != this.IsPlayEndAnim)
@@ -227,72 +227,72 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FD9D RID: 130461
+		// Token: 0x0401A85A RID: 108634
 		private const int NUM = 4;
 
-		// Token: 0x0401FD9E RID: 130462
+		// Token: 0x0401A85B RID: 108635
 		[StaticVariableRuleIgnore]
 		private static readonly int NumTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1KamolaMd10011.被动.大招普攻记层"];
 
-		// Token: 0x0401FD9F RID: 130463
+		// Token: 0x0401A85C RID: 108636
 		private int CurNum;
 
-		// Token: 0x0401FDA0 RID: 130464
+		// Token: 0x0401A85D RID: 108637
 		[Nullable(1)]
 		private readonly List<UUIItem> TexBgItemList = new List<UUIItem>();
 
-		// Token: 0x0401FDA1 RID: 130465
+		// Token: 0x0401A85E RID: 108638
 		[Nullable(1)]
 		private readonly List<UUIItem> TexItemList = new List<UUIItem>();
 
-		// Token: 0x0401FDA2 RID: 130466
+		// Token: 0x0401A85F RID: 108639
 		[Nullable(2)]
 		private IActiveBuff Buff;
 
-		// Token: 0x0401FDA3 RID: 130467
+		// Token: 0x0401A860 RID: 108640
 		private int BuffHandle;
 
-		// Token: 0x0401FDA4 RID: 130468
+		// Token: 0x0401A861 RID: 108641
 		private bool IsPlayEndAnim;
 
-		// Token: 0x0200C114 RID: 49428
+		// Token: 0x0200AB1D RID: 43805
 		private enum EChildType
 		{
-			// Token: 0x0403A4BF RID: 238783
+			// Token: 0x04034E91 RID: 216721
 			KeyContainerItem,
-			// Token: 0x0403A4C0 RID: 238784
+			// Token: 0x04034E92 RID: 216722
 			TexBgItem1,
-			// Token: 0x0403A4C1 RID: 238785
+			// Token: 0x04034E93 RID: 216723
 			TexBgItem2,
-			// Token: 0x0403A4C2 RID: 238786
+			// Token: 0x04034E94 RID: 216724
 			TexBgItem3,
-			// Token: 0x0403A4C3 RID: 238787
+			// Token: 0x04034E95 RID: 216725
 			TexBgItem4,
-			// Token: 0x0403A4C4 RID: 238788
+			// Token: 0x04034E96 RID: 216726
 			TexItem1,
-			// Token: 0x0403A4C5 RID: 238789
+			// Token: 0x04034E97 RID: 216727
 			TexItem2,
-			// Token: 0x0403A4C6 RID: 238790
+			// Token: 0x04034E98 RID: 216728
 			TexItem3,
-			// Token: 0x0403A4C7 RID: 238791
+			// Token: 0x04034E99 RID: 216729
 			TexItem4,
-			// Token: 0x0403A4C8 RID: 238792
+			// Token: 0x04034E9A RID: 216730
 			LightItem1,
-			// Token: 0x0403A4C9 RID: 238793
+			// Token: 0x04034E9B RID: 216731
 			LightItem2,
-			// Token: 0x0403A4CA RID: 238794
+			// Token: 0x04034E9C RID: 216732
 			AniCharge1,
-			// Token: 0x0403A4CB RID: 238795
+			// Token: 0x04034E9D RID: 216733
 			AniCharge2,
-			// Token: 0x0403A4CC RID: 238796
+			// Token: 0x04034E9E RID: 216734
 			AniCharge3,
-			// Token: 0x0403A4CD RID: 238797
+			// Token: 0x04034E9F RID: 216735
 			AniCharge4,
-			// Token: 0x0403A4CE RID: 238798
+			// Token: 0x04034EA0 RID: 216736
 			AniEnd,
-			// Token: 0x0403A4CF RID: 238799
+			// Token: 0x04034EA1 RID: 216737
 			BarItem,
-			// Token: 0x0403A4D0 RID: 238800
+			// Token: 0x04034EA2 RID: 216738
 			AnimReset
 		}
 	}

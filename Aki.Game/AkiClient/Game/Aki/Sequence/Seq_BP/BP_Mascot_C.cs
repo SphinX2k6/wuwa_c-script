@@ -10,12 +10,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Sequence.Seq_BP
 {
-	// Token: 0x02003A1C RID: 14876
+	// Token: 0x0200306A RID: 12394
+	[NullableContext(2)]
+	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Sequence/Seq_BP/BP_Mascot.BP_Mascot_C")]
 	[UnrealStructLayout(1344, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1344)]
-	public class BP_Mascot_C : AActor, IUnrealUObject, IUnrealObject, ISeqAnimDataInterface, IUnrealNativeInterface, IUnrealInterface, IABPC_Seq_MascotInterface_C, IUnrealBlueprintInterface, IBPI_SeqTalkActor_C
+	public class BP_Mascot_C : AActor, IUnrealUObject, IUnrealObject, IBPI_SeqTalkActor_C, IUnrealBlueprintInterface, IUnrealInterface
 	{
-		// Token: 0x0601F35B RID: 127835 RVA: 0x008B0480 File Offset: 0x008AE680
+		// Token: 0x0601D721 RID: 120609 RVA: 0x008F6BF5 File Offset: 0x008F4DF5
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_Mascot_C._ClassPtr == IntPtr.Zero)
@@ -25,152 +27,110 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			return BP_Mascot_C._ClassPtr;
 		}
 
-		// Token: 0x0601F35C RID: 127836 RVA: 0x008B04A4 File Offset: 0x008AE6A4
-		int ISeqAnimDataInterface.InterfaceOffset()
-		{
-			return BP_Mascot_C.__InterfaceOffset_ISeqAnimDataInterface;
-		}
-
-		// Token: 0x0601F35D RID: 127837 RVA: 0x008B04AC File Offset: 0x008AE6AC
+		// Token: 0x0601D722 RID: 120610 RVA: 0x008F6C1C File Offset: 0x008F4E1C
 		public BP_Mascot_C() : this(BuiltinUtils.AllocNativeUObject(BP_Mascot_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601F35E RID: 127838 RVA: 0x008B04D4 File Offset: 0x008AE6D4
+		// Token: 0x0601D723 RID: 120611 RVA: 0x008F6C44 File Offset: 0x008F4E44
 		[NullableContext(1)]
 		public BP_Mascot_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_Mascot_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17002A45 RID: 10821
-		// (get) Token: 0x0601F35F RID: 127839 RVA: 0x008B0507 File Offset: 0x008AE707
-		// (set) Token: 0x0601F360 RID: 127840 RVA: 0x008B051B File Offset: 0x008AE71B
-		[Nullable(2)]
+		// Token: 0x17002ED6 RID: 11990
+		// (get) Token: 0x0601D724 RID: 120612 RVA: 0x008F6C77 File Offset: 0x008F4E77
+		// (set) Token: 0x0601D725 RID: 120613 RVA: 0x008F6C8B File Offset: 0x008F4E8B
 		public unsafe ABPC_Seq_Body_V2_C ABPC_Body_V2
 		{
-			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<ABPC_Seq_Body_V2_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_0);
+				return BuiltinUtils.ObjectPropertyGetter<ABPC_Seq_Body_V2_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_ABPC_Body_V2);
 			}
-			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_0, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_ABPC_Body_V2, value);
 			}
 		}
 
-		// Token: 0x17002A46 RID: 10822
-		// (get) Token: 0x0601F361 RID: 127841 RVA: 0x008B0530 File Offset: 0x008AE730
-		// (set) Token: 0x0601F362 RID: 127842 RVA: 0x008B0544 File Offset: 0x008AE744
-		[Nullable(2)]
+		// Token: 0x17002ED7 RID: 11991
+		// (get) Token: 0x0601D726 RID: 120614 RVA: 0x008F6CA0 File Offset: 0x008F4EA0
+		// (set) Token: 0x0601D727 RID: 120615 RVA: 0x008F6CB4 File Offset: 0x008F4EB4
 		public unsafe USkeletalMeshComponent SkeletalMesh
 		{
-			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_SkeletalMesh);
 			}
-			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_SkeletalMesh, value);
 			}
 		}
 
-		// Token: 0x17002A47 RID: 10823
-		// (get) Token: 0x0601F363 RID: 127843 RVA: 0x008B0559 File Offset: 0x008AE759
-		// (set) Token: 0x0601F364 RID: 127844 RVA: 0x008B056D File Offset: 0x008AE76D
-		[Nullable(2)]
+		// Token: 0x17002ED8 RID: 11992
+		// (get) Token: 0x0601D728 RID: 120616 RVA: 0x008F6CC9 File Offset: 0x008F4EC9
+		// (set) Token: 0x0601D729 RID: 120617 RVA: 0x008F6CDD File Offset: 0x008F4EDD
 		public unsafe USceneComponent DefaultSceneRoot
 		{
-			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_DefaultSceneRoot);
 			}
-			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17002A48 RID: 10824
-		// (get) Token: 0x0601F365 RID: 127845 RVA: 0x008B0582 File Offset: 0x008AE782
-		// (set) Token: 0x0601F366 RID: 127846 RVA: 0x008B0596 File Offset: 0x008AE796
+		// Token: 0x17002ED9 RID: 11993
+		// (get) Token: 0x0601D72A RID: 120618 RVA: 0x008F6CF2 File Offset: 0x008F4EF2
+		// (set) Token: 0x0601D72B RID: 120619 RVA: 0x008F6D06 File Offset: 0x008F4F06
 		public unsafe FRotator Add_Spine
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_Add_Spine);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_Add_Spine) = value;
 			}
 		}
 
-		// Token: 0x17002A49 RID: 10825
-		// (get) Token: 0x0601F367 RID: 127847 RVA: 0x008B05AB File Offset: 0x008AE7AB
-		// (set) Token: 0x0601F368 RID: 127848 RVA: 0x008B05BF File Offset: 0x008AE7BF
+		// Token: 0x17002EDA RID: 11994
+		// (get) Token: 0x0601D72C RID: 120620 RVA: 0x008F6D1B File Offset: 0x008F4F1B
+		// (set) Token: 0x0601D72D RID: 120621 RVA: 0x008F6D2F File Offset: 0x008F4F2F
 		public unsafe FRotator Add_Spine_Head
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_Add_Spine_Head);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_Add_Spine_Head) = value;
 			}
 		}
 
-		// Token: 0x17002A4A RID: 10826
-		// (get) Token: 0x0601F369 RID: 127849 RVA: 0x008B05D4 File Offset: 0x008AE7D4
-		// (set) Token: 0x0601F36A RID: 127850 RVA: 0x008B05E8 File Offset: 0x008AE7E8
-		[Nullable(2)]
+		// Token: 0x17002EDB RID: 11995
+		// (get) Token: 0x0601D72E RID: 120622 RVA: 0x008F6D44 File Offset: 0x008F4F44
+		// (set) Token: 0x0601D72F RID: 120623 RVA: 0x008F6D58 File Offset: 0x008F4F58
 		public unsafe USkeletalMesh Mesh
 		{
-			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMesh>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMesh>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_Mesh);
 			}
-			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Mascot_C.__PropertyOffset_Mesh, value);
 			}
 		}
 
-		// Token: 0x17002A4B RID: 10827
-		// (get) Token: 0x0601F36B RID: 127851 RVA: 0x008B0600 File Offset: 0x008AE800
-		// (set) Token: 0x0601F36C RID: 127852 RVA: 0x008B0639 File Offset: 0x008AE839
-		[Nullable(1)]
-		public TArray<FNamedCurveValue> NamedCurves
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FNamedCurveValue> result;
-				if ((result = this._NamedCurves) == null)
-				{
-					result = (this._NamedCurves = new TArray<FNamedCurveValue>(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_6, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				this.NamedCurves.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17002A4C RID: 10828
-		// (get) Token: 0x0601F36D RID: 127853 RVA: 0x008B0648 File Offset: 0x008AE848
-		// (set) Token: 0x0601F36E RID: 127854 RVA: 0x008B0681 File Offset: 0x008AE881
+		// Token: 0x17002EDC RID: 11996
+		// (get) Token: 0x0601D730 RID: 120624 RVA: 0x008F6D70 File Offset: 0x008F4F70
+		// (set) Token: 0x0601D731 RID: 120625 RVA: 0x008F6DA9 File Offset: 0x008F4FA9
 		[Nullable(1)]
 		public FKuroCurveFloat KuroFixCurve
 		{
@@ -181,50 +141,50 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 				FKuroCurveFloat result;
 				if ((result = this._KuroFixCurve) == null)
 				{
-					result = (this._KuroFixCurve = new FKuroCurveFloat(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_7, this));
+					result = (this._KuroFixCurve = new FKuroCurveFloat(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_KuroFixCurve, this));
 				}
 				return result;
 			}
 			[NullableContext(1)]
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FKuroCurveFloat.StaticStruct(), base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_7, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FKuroCurveFloat.StaticStruct(), base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_KuroFixCurve, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17002A4D RID: 10829
-		// (get) Token: 0x0601F36F RID: 127855 RVA: 0x008B06A2 File Offset: 0x008AE8A2
-		// (set) Token: 0x0601F370 RID: 127856 RVA: 0x008B06B2 File Offset: 0x008AE8B2
+		// Token: 0x17002EDD RID: 11997
+		// (get) Token: 0x0601D732 RID: 120626 RVA: 0x008F6DCA File Offset: 0x008F4FCA
+		// (set) Token: 0x0601D733 RID: 120627 RVA: 0x008F6DDA File Offset: 0x008F4FDA
 		public unsafe int TalkID
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_TalkID);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_TalkID) = value;
 			}
 		}
 
-		// Token: 0x17002A4E RID: 10830
-		// (get) Token: 0x0601F371 RID: 127857 RVA: 0x008B06C3 File Offset: 0x008AE8C3
-		// (set) Token: 0x0601F372 RID: 127858 RVA: 0x008B06D3 File Offset: 0x008AE8D3
+		// Token: 0x17002EDE RID: 11998
+		// (get) Token: 0x0601D734 RID: 120628 RVA: 0x008F6DEB File Offset: 0x008F4FEB
+		// (set) Token: 0x0601D735 RID: 120629 RVA: 0x008F6DFB File Offset: 0x008F4FFB
 		public unsafe int TalkID_SP
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_TalkID_SP);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_TalkID_SP) = value;
 			}
 		}
 
-		// Token: 0x17002A4F RID: 10831
-		// (get) Token: 0x0601F373 RID: 127859 RVA: 0x008B06E4 File Offset: 0x008AE8E4
-		// (set) Token: 0x0601F374 RID: 127860 RVA: 0x008B071D File Offset: 0x008AE91D
+		// Token: 0x17002EDF RID: 11999
+		// (get) Token: 0x0601D736 RID: 120630 RVA: 0x008F6E0C File Offset: 0x008F500C
+		// (set) Token: 0x0601D737 RID: 120631 RVA: 0x008F6E45 File Offset: 0x008F5045
 		[Nullable(1)]
 		public TMap<FName, FTransform> Float_Curve_Data
 		{
@@ -235,7 +195,7 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 				TMap<FName, FTransform> result;
 				if ((result = this._Float_Curve_Data) == null)
 				{
-					result = (this._Float_Curve_Data = new TMap<FName, FTransform>(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_10, this));
+					result = (this._Float_Curve_Data = new TMap<FName, FTransform>(base.NativePtr + (IntPtr)BP_Mascot_C.__PropertyOffset_Float_Curve_Data, this));
 				}
 				return result;
 			}
@@ -246,9 +206,8 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			}
 		}
 
-		// Token: 0x0601F375 RID: 127861 RVA: 0x008B072C File Offset: 0x008AE92C
+		// Token: 0x0601D738 RID: 120632 RVA: 0x008F6E54 File Offset: 0x008F5054
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetSeqTalkId(ref int TalkID, ref int TalkID_SP)
 		{
 			BP_Mascot_C.__GetSeqTalkId_FunctionParams* ptr = stackalloc BP_Mascot_C.__GetSeqTalkId_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_Mascot_C.__GetSeqTalkId_FunctionParams) & -16L;
@@ -260,10 +219,8 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			TalkID_SP = ptr->TalkID_SP;
 		}
 
-		// Token: 0x0601F376 RID: 127862 RVA: 0x008B078C File Offset: 0x008AE98C
-		[NullableContext(2)]
+		// Token: 0x0601D739 RID: 120633 RVA: 0x008F6EB4 File Offset: 0x008F50B4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetSeqMouthAnimInstance(ref UAnimInstance AnimInstance)
 		{
 			BP_Mascot_C.__GetSeqMouthAnimInstance_FunctionParams* ptr = stackalloc BP_Mascot_C.__GetSeqMouthAnimInstance_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(BP_Mascot_C.__GetSeqMouthAnimInstance_FunctionParams) & -16L;
@@ -275,9 +232,8 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			AnimInstance = BuiltinUtils.GetOrCreateUObjectByNativePointer<UAnimInstance>(ptr->AnimInstance);
 		}
 
-		// Token: 0x0601F377 RID: 127863 RVA: 0x008B07F0 File Offset: 0x008AE9F0
+		// Token: 0x0601D73A RID: 120634 RVA: 0x008F6F18 File Offset: 0x008F5118
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetAddSpineHeadValue(ref FRotator AddSpineHead)
 		{
 			BP_Mascot_C.__GetAddSpineHeadValue_FunctionParams* ptr = stackalloc BP_Mascot_C.__GetAddSpineHeadValue_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_Mascot_C.__GetAddSpineHeadValue_FunctionParams) & -16L;
@@ -287,9 +243,8 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			AddSpineHead = ptr->AddSpineHead;
 		}
 
-		// Token: 0x0601F378 RID: 127864 RVA: 0x008B0848 File Offset: 0x008AEA48
+		// Token: 0x0601D73B RID: 120635 RVA: 0x008F6F70 File Offset: 0x008F5170
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetAddSpineValue(ref FRotator AddSpine)
 		{
 			BP_Mascot_C.__GetAddSpineValue_FunctionParams* ptr = stackalloc BP_Mascot_C.__GetAddSpineValue_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_Mascot_C.__GetAddSpineValue_FunctionParams) & -16L;
@@ -299,10 +254,8 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			AddSpine = ptr->AddSpine;
 		}
 
-		// Token: 0x0601F379 RID: 127865 RVA: 0x008B08A0 File Offset: 0x008AEAA0
-		[NullableContext(2)]
+		// Token: 0x0601D73C RID: 120636 RVA: 0x008F6FC8 File Offset: 0x008F51C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual bool GetAnimDataTransform(ref TMap<FName, FTransform> FloatCurveData)
 		{
 			BP_Mascot_C.__GetAnimDataTransform_FunctionParams* ptr = stackalloc BP_Mascot_C.__GetAnimDataTransform_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_Mascot_C.__GetAnimDataTransform_FunctionParams) & -16L;
@@ -323,10 +276,8 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			return _Result;
 		}
 
-		// Token: 0x0601F37A RID: 127866 RVA: 0x008B0920 File Offset: 0x008AEB20
-		[NullableContext(2)]
+		// Token: 0x0601D73D RID: 120637 RVA: 0x008F7048 File Offset: 0x008F5248
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual bool GetAnimDataTransform_Implementation(ref TMap<FName, FTransform> FloatCurveData)
 		{
 			BP_Mascot_C.__GetAnimDataTransform_FunctionParams* ptr = stackalloc BP_Mascot_C.__GetAnimDataTransform_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_Mascot_C.__GetAnimDataTransform_FunctionParams) & -16L;
@@ -336,7 +287,7 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			{
 				tmap.MoveTo(&ptr->FloatCurveData);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__GetAnimDataTransform_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__GetAnimDataTransform_NativeFunctionPtr, (void*)ptr);
 			TMap<FName, FTransform> tmap2 = FloatCurveData;
 			if (tmap2 != null)
 			{
@@ -347,9 +298,8 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			return _Result;
 		}
 
-		// Token: 0x0601F37B RID: 127867 RVA: 0x008B09A0 File Offset: 0x008AEBA0
+		// Token: 0x0601D73E RID: 120638 RVA: 0x008F70C8 File Offset: 0x008F52C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual bool IsCustomSupport()
 		{
 			BP_Mascot_C.__IsCustomSupport_FunctionParams* ptr = stackalloc BP_Mascot_C.__IsCustomSupport_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_Mascot_C.__IsCustomSupport_FunctionParams) & -16L;
@@ -358,21 +308,18 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601F37C RID: 127868 RVA: 0x008B09E8 File Offset: 0x008AEBE8
+		// Token: 0x0601D73F RID: 120639 RVA: 0x008F7110 File Offset: 0x008F5310
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual bool IsCustomSupport_Implementation()
 		{
 			BP_Mascot_C.__IsCustomSupport_FunctionParams* ptr = stackalloc BP_Mascot_C.__IsCustomSupport_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_Mascot_C.__IsCustomSupport_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_Mascot_C.__IsCustomSupport_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__IsCustomSupport_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__IsCustomSupport_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601F37D RID: 127869 RVA: 0x008B0A30 File Offset: 0x008AEC30
-		[NullableContext(2)]
+		// Token: 0x0601D740 RID: 120640 RVA: 0x008F7158 File Offset: 0x008F5358
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual bool SetAnimDataTransform(in TMap<FName, FTransform> FloatCurveData)
 		{
 			BP_Mascot_C.__SetAnimDataTransform_FunctionParams* ptr = stackalloc BP_Mascot_C.__SetAnimDataTransform_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_Mascot_C.__SetAnimDataTransform_FunctionParams) & -16L;
@@ -393,10 +340,8 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			return _Result;
 		}
 
-		// Token: 0x0601F37E RID: 127870 RVA: 0x008B0AB0 File Offset: 0x008AECB0
-		[NullableContext(2)]
+		// Token: 0x0601D741 RID: 120641 RVA: 0x008F71D8 File Offset: 0x008F53D8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual bool SetAnimDataTransform_Implementation(in TMap<FName, FTransform> FloatCurveData)
 		{
 			BP_Mascot_C.__SetAnimDataTransform_FunctionParams* ptr = stackalloc BP_Mascot_C.__SetAnimDataTransform_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_Mascot_C.__SetAnimDataTransform_FunctionParams) & -16L;
@@ -406,7 +351,7 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			{
 				obj.MoveTo(&ptr->FloatCurveData);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__SetAnimDataTransform_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__SetAnimDataTransform_NativeFunctionPtr, (void*)ptr);
 			object obj2 = FloatCurveData;
 			if (obj2 != null)
 			{
@@ -417,64 +362,8 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			return _Result;
 		}
 
-		// Token: 0x0601F37F RID: 127871 RVA: 0x008B0B30 File Offset: 0x008AED30
+		// Token: 0x0601D742 RID: 120642 RVA: 0x008F7258 File Offset: 0x008F5458
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual bool GetAnimDataFloat([Nullable(new byte[]
-		{
-			2,
-			1
-		})] ref TArray<FNamedCurveValue> FloatCurveData)
-		{
-			BP_Mascot_C.__GetAnimDataFloat_FunctionParams* ptr = stackalloc BP_Mascot_C.__GetAnimDataFloat_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_Mascot_C.__GetAnimDataFloat_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_Mascot_C.__GetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			TArray<FNamedCurveValue> tarray = FloatCurveData;
-			if (tarray != null)
-			{
-				tarray.MoveTo(&ptr->FloatCurveData);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Mascot_C.__GetAnimDataFloat_NativeFunctionPtr, (void*)ptr);
-			TArray<FNamedCurveValue> tarray2 = FloatCurveData;
-			if (tarray2 != null)
-			{
-				tarray2.MoveAssign(&ptr->FloatCurveData);
-			}
-			bool _Result = ptr->__Result;
-			UnrealReflectionUtils.DestroyStruct(BP_Mascot_C.__GetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			return _Result;
-		}
-
-		// Token: 0x0601F380 RID: 127872 RVA: 0x008B0BB0 File Offset: 0x008AEDB0
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		protected unsafe virtual bool GetAnimDataFloat_Implementation([Nullable(new byte[]
-		{
-			2,
-			1
-		})] ref TArray<FNamedCurveValue> FloatCurveData)
-		{
-			BP_Mascot_C.__GetAnimDataFloat_FunctionParams* ptr = stackalloc BP_Mascot_C.__GetAnimDataFloat_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_Mascot_C.__GetAnimDataFloat_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_Mascot_C.__GetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			TArray<FNamedCurveValue> tarray = FloatCurveData;
-			if (tarray != null)
-			{
-				tarray.MoveTo(&ptr->FloatCurveData);
-			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__GetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 0);
-			TArray<FNamedCurveValue> tarray2 = FloatCurveData;
-			if (tarray2 != null)
-			{
-				tarray2.MoveAssign(&ptr->FloatCurveData);
-			}
-			bool _Result = ptr->__Result;
-			UnrealReflectionUtils.DestroyStruct(BP_Mascot_C.__GetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			return _Result;
-		}
-
-		// Token: 0x0601F381 RID: 127873 RVA: 0x008B0C30 File Offset: 0x008AEE30
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual bool GetAnimDataVector(ref TMap<FName, FVector> VectorCurveData)
 		{
 			BP_Mascot_C.__GetAnimDataVector_FunctionParams* ptr = stackalloc BP_Mascot_C.__GetAnimDataVector_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_Mascot_C.__GetAnimDataVector_FunctionParams) & -16L;
@@ -495,10 +384,8 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			return _Result;
 		}
 
-		// Token: 0x0601F382 RID: 127874 RVA: 0x008B0CB0 File Offset: 0x008AEEB0
-		[NullableContext(2)]
+		// Token: 0x0601D743 RID: 120643 RVA: 0x008F72D8 File Offset: 0x008F54D8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual bool GetAnimDataVector_Implementation(ref TMap<FName, FVector> VectorCurveData)
 		{
 			BP_Mascot_C.__GetAnimDataVector_FunctionParams* ptr = stackalloc BP_Mascot_C.__GetAnimDataVector_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(BP_Mascot_C.__GetAnimDataVector_FunctionParams) & -16L;
@@ -508,7 +395,7 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			{
 				tmap.MoveTo(&ptr->VectorCurveData);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__GetAnimDataVector_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__GetAnimDataVector_NativeFunctionPtr, (void*)ptr);
 			TMap<FName, FVector> tmap2 = VectorCurveData;
 			if (tmap2 != null)
 			{
@@ -519,10 +406,9 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			return _Result;
 		}
 
-		// Token: 0x0601F383 RID: 127875 RVA: 0x008B0D30 File Offset: 0x008AEF30
+		// Token: 0x0601D744 RID: 120644 RVA: 0x008F7358 File Offset: 0x008F5558
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual TArray<FName> GetSupportGroupNames()
 		{
 			BP_Mascot_C.__GetSupportGroupNames_FunctionParams* ptr = stackalloc BP_Mascot_C.__GetSupportGroupNames_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(BP_Mascot_C.__GetSupportGroupNames_FunctionParams) & -16L;
@@ -533,78 +419,21 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			return result;
 		}
 
-		// Token: 0x0601F384 RID: 127876 RVA: 0x008B0D90 File Offset: 0x008AEF90
+		// Token: 0x0601D745 RID: 120645 RVA: 0x008F73B8 File Offset: 0x008F55B8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual TArray<FName> GetSupportGroupNames_Implementation()
 		{
 			BP_Mascot_C.__GetSupportGroupNames_FunctionParams* ptr = stackalloc BP_Mascot_C.__GetSupportGroupNames_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(BP_Mascot_C.__GetSupportGroupNames_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_Mascot_C.__GetSupportGroupNames_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__GetSupportGroupNames_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__GetSupportGroupNames_NativeFunctionPtr, (void*)ptr);
 			TArray<FName> result = new TArray<FName>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(BP_Mascot_C.__GetSupportGroupNames_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0601F385 RID: 127877 RVA: 0x008B0DF0 File Offset: 0x008AEFF0
+		// Token: 0x0601D746 RID: 120646 RVA: 0x008F7418 File Offset: 0x008F5618
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual bool SetAnimDataFloat([Nullable(new byte[]
-		{
-			2,
-			1
-		})] in TArray<FNamedCurveValue> FloatCurveData)
-		{
-			BP_Mascot_C.__SetAnimDataFloat_FunctionParams* ptr = stackalloc BP_Mascot_C.__SetAnimDataFloat_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(BP_Mascot_C.__SetAnimDataFloat_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_Mascot_C.__SetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			object obj = FloatCurveData;
-			if (obj != null)
-			{
-				obj.MoveTo(&ptr->FloatCurveData);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Mascot_C.__SetAnimDataFloat_NativeFunctionPtr, (void*)ptr);
-			object obj2 = FloatCurveData;
-			if (obj2 != null)
-			{
-				obj2.MoveAssign(&ptr->FloatCurveData);
-			}
-			bool _Result = ptr->__Result;
-			UnrealReflectionUtils.DestroyStruct(BP_Mascot_C.__SetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			return _Result;
-		}
-
-		// Token: 0x0601F386 RID: 127878 RVA: 0x008B0E70 File Offset: 0x008AF070
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		protected unsafe virtual bool SetAnimDataFloat_Implementation([Nullable(new byte[]
-		{
-			2,
-			1
-		})] in TArray<FNamedCurveValue> FloatCurveData)
-		{
-			BP_Mascot_C.__SetAnimDataFloat_FunctionParams* ptr = stackalloc BP_Mascot_C.__SetAnimDataFloat_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(BP_Mascot_C.__SetAnimDataFloat_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_Mascot_C.__SetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			object obj = FloatCurveData;
-			if (obj != null)
-			{
-				obj.MoveTo(&ptr->FloatCurveData);
-			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__SetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 0);
-			object obj2 = FloatCurveData;
-			if (obj2 != null)
-			{
-				obj2.MoveAssign(&ptr->FloatCurveData);
-			}
-			bool _Result = ptr->__Result;
-			UnrealReflectionUtils.DestroyStruct(BP_Mascot_C.__SetAnimDataFloat_NativeFunctionPtr, (void*)ptr, 1);
-			return _Result;
-		}
-
-		// Token: 0x0601F387 RID: 127879 RVA: 0x008B0EF0 File Offset: 0x008AF0F0
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual bool SetAnimDataVector(in TMap<FName, FVector> VectorCurveData)
 		{
 			BP_Mascot_C.__SetAnimDataVector_FunctionParams* ptr = stackalloc BP_Mascot_C.__SetAnimDataVector_FunctionParams[(UIntPtr)207] + 15L / (long)sizeof(BP_Mascot_C.__SetAnimDataVector_FunctionParams) & -16L;
@@ -625,10 +454,8 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			return _Result;
 		}
 
-		// Token: 0x0601F388 RID: 127880 RVA: 0x008B0F74 File Offset: 0x008AF174
-		[NullableContext(2)]
+		// Token: 0x0601D747 RID: 120647 RVA: 0x008F749C File Offset: 0x008F569C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual bool SetAnimDataVector_Implementation(in TMap<FName, FVector> VectorCurveData)
 		{
 			BP_Mascot_C.__SetAnimDataVector_FunctionParams* ptr = stackalloc BP_Mascot_C.__SetAnimDataVector_FunctionParams[(UIntPtr)207] + 15L / (long)sizeof(BP_Mascot_C.__SetAnimDataVector_FunctionParams) & -16L;
@@ -638,7 +465,7 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			{
 				obj.MoveTo(&ptr->VectorCurveData);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__SetAnimDataVector_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__SetAnimDataVector_NativeFunctionPtr, (void*)ptr);
 			object obj2 = VectorCurveData;
 			if (obj2 != null)
 			{
@@ -649,59 +476,8 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			return _Result;
 		}
 
-		// Token: 0x0601F389 RID: 127881 RVA: 0x008B0FF8 File Offset: 0x008AF1F8
+		// Token: 0x0601D748 RID: 120648 RVA: 0x008F7520 File Offset: 0x008F5720
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void CalcAllCurve_2([Nullable(new byte[]
-		{
-			2,
-			1
-		})] ref TArray<FNamedCurveValue> Ret)
-		{
-			BP_Mascot_C.__CalcAllCurve_2_FunctionParams* ptr = stackalloc BP_Mascot_C.__CalcAllCurve_2_FunctionParams[(UIntPtr)263] + 15L / (long)sizeof(BP_Mascot_C.__CalcAllCurve_2_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_Mascot_C.__CalcAllCurve_2_NativeFunctionPtr, (void*)ptr, 1);
-			TArray<FNamedCurveValue> tarray = Ret;
-			if (tarray != null)
-			{
-				tarray.MoveTo(&ptr->Ret);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Mascot_C.__CalcAllCurve_2_NativeFunctionPtr, (void*)ptr);
-			TArray<FNamedCurveValue> tarray2 = Ret;
-			if (tarray2 != null)
-			{
-				tarray2.MoveAssign(&ptr->Ret);
-			}
-			UnrealReflectionUtils.DestroyStruct(BP_Mascot_C.__CalcAllCurve_2_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x0601F38A RID: 127882 RVA: 0x008B1074 File Offset: 0x008AF274
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void CalcAllCurve([Nullable(new byte[]
-		{
-			2,
-			1
-		})] ref TArray<FNamedCurveValue> Ret)
-		{
-			BP_Mascot_C.__CalcAllCurve_FunctionParams* ptr = stackalloc BP_Mascot_C.__CalcAllCurve_FunctionParams[(UIntPtr)271] + 15L / (long)sizeof(BP_Mascot_C.__CalcAllCurve_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_Mascot_C.__CalcAllCurve_NativeFunctionPtr, (void*)ptr, 1);
-			TArray<FNamedCurveValue> tarray = Ret;
-			if (tarray != null)
-			{
-				tarray.MoveTo(&ptr->Ret);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Mascot_C.__CalcAllCurve_NativeFunctionPtr, (void*)ptr);
-			TArray<FNamedCurveValue> tarray2 = Ret;
-			if (tarray2 != null)
-			{
-				tarray2.MoveAssign(&ptr->Ret);
-			}
-			UnrealReflectionUtils.DestroyStruct(BP_Mascot_C.__CalcAllCurve_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x0601F38B RID: 127883 RVA: 0x008B10F0 File Offset: 0x008AF2F0
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void HasFixCurve(FName CheckName, ref bool Ret, ref FName FixName)
 		{
 			BP_Mascot_C.__HasFixCurve_FunctionParams* ptr = stackalloc BP_Mascot_C.__HasFixCurve_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(BP_Mascot_C.__HasFixCurve_FunctionParams) & -16L;
@@ -714,9 +490,8 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			FixName = ptr->FixName;
 		}
 
-		// Token: 0x0601F38C RID: 127884 RVA: 0x008B1160 File Offset: 0x008AF360
+		// Token: 0x0601D749 RID: 120649 RVA: 0x008F7590 File Offset: 0x008F5790
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetFixValue(float inValue, ref float FixValue)
 		{
 			BP_Mascot_C.__GetFixValue_FunctionParams* ptr = stackalloc BP_Mascot_C.__GetFixValue_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_Mascot_C.__GetFixValue_FunctionParams) & -16L;
@@ -727,336 +502,270 @@ namespace AkiClient.Game.Aki.Sequence.Seq_BP
 			FixValue = ptr->FixValue;
 		}
 
-		// Token: 0x0601F38D RID: 127885 RVA: 0x008B11B6 File Offset: 0x008AF3B6
+		// Token: 0x0601D74A RID: 120650 RVA: 0x008F75E6 File Offset: 0x008F57E6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Mascot_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F38E RID: 127886 RVA: 0x008B11CA File Offset: 0x008AF3CA
+		// Token: 0x0601D74B RID: 120651 RVA: 0x008F75FA File Offset: 0x008F57FA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Mascot_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F38F RID: 127887 RVA: 0x008B11DF File Offset: 0x008AF3DF
+		// Token: 0x0601D74C RID: 120652 RVA: 0x008F760E File Offset: 0x008F580E
 		protected BP_Mascot_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400EF58 RID: 61272
-		internal static int __InterfaceOffset_ISeqAnimDataInterface;
-
-		// Token: 0x0400EF59 RID: 61273
+		// Token: 0x0400F80B RID: 63499
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Sequence/Seq_BP/BP_Mascot.BP_Mascot_C";
 
-		// Token: 0x0400EF5A RID: 61274
+		// Token: 0x0400F80C RID: 63500
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400EF5B RID: 61275
+		// Token: 0x0400F80D RID: 63501
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400EF5C RID: 61276
-		internal static int __PropertyOffset_0;
+		// Token: 0x0400F80E RID: 63502
+		internal static int __PropertyOffset_ABPC_Body_V2;
 
-		// Token: 0x0400EF5D RID: 61277
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400F80F RID: 63503
+		internal static int __PropertyOffset_SkeletalMesh;
 
-		// Token: 0x0400EF5E RID: 61278
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400F810 RID: 63504
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x0400EF5F RID: 61279
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400F811 RID: 63505
+		internal static int __PropertyOffset_Add_Spine;
 
-		// Token: 0x0400EF60 RID: 61280
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400F812 RID: 63506
+		internal static int __PropertyOffset_Add_Spine_Head;
 
-		// Token: 0x0400EF61 RID: 61281
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400F813 RID: 63507
+		internal static int __PropertyOffset_Mesh;
 
-		// Token: 0x0400EF62 RID: 61282
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400F814 RID: 63508
+		internal static int __PropertyOffset_KuroFixCurve;
 
-		// Token: 0x0400EF63 RID: 61283
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FNamedCurveValue> _NamedCurves;
-
-		// Token: 0x0400EF64 RID: 61284
-		internal static int __PropertyOffset_7;
-
-		// Token: 0x0400EF65 RID: 61285
-		[Nullable(2)]
+		// Token: 0x0400F815 RID: 63509
 		private FKuroCurveFloat _KuroFixCurve;
 
-		// Token: 0x0400EF66 RID: 61286
-		internal static int __PropertyOffset_8;
+		// Token: 0x0400F816 RID: 63510
+		internal static int __PropertyOffset_TalkID;
 
-		// Token: 0x0400EF67 RID: 61287
-		internal static int __PropertyOffset_9;
+		// Token: 0x0400F817 RID: 63511
+		internal static int __PropertyOffset_TalkID_SP;
 
-		// Token: 0x0400EF68 RID: 61288
-		internal static int __PropertyOffset_10;
+		// Token: 0x0400F818 RID: 63512
+		internal static int __PropertyOffset_Float_Curve_Data;
 
-		// Token: 0x0400EF69 RID: 61289
-		[Nullable(2)]
+		// Token: 0x0400F819 RID: 63513
 		private TMap<FName, FTransform> _Float_Curve_Data;
 
-		// Token: 0x0400EF6A RID: 61290
+		// Token: 0x0400F81A RID: 63514
 		private static IntPtr __GetSeqTalkId_NativeFunctionPtr;
 
-		// Token: 0x0400EF6B RID: 61291
+		// Token: 0x0400F81B RID: 63515
 		private static IntPtr __GetSeqMouthAnimInstance_NativeFunctionPtr;
 
-		// Token: 0x0400EF6C RID: 61292
+		// Token: 0x0400F81C RID: 63516
 		private static IntPtr __GetAddSpineHeadValue_NativeFunctionPtr;
 
-		// Token: 0x0400EF6D RID: 61293
+		// Token: 0x0400F81D RID: 63517
 		private static IntPtr __GetAddSpineValue_NativeFunctionPtr;
 
-		// Token: 0x0400EF6E RID: 61294
+		// Token: 0x0400F81E RID: 63518
 		private static IntPtr __GetAnimDataTransform_NativeFunctionPtr;
 
-		// Token: 0x0400EF6F RID: 61295
+		// Token: 0x0400F81F RID: 63519
 		private static IntPtr __IsCustomSupport_NativeFunctionPtr;
 
-		// Token: 0x0400EF70 RID: 61296
+		// Token: 0x0400F820 RID: 63520
 		private static IntPtr __SetAnimDataTransform_NativeFunctionPtr;
 
-		// Token: 0x0400EF71 RID: 61297
-		private static IntPtr __GetAnimDataFloat_NativeFunctionPtr;
-
-		// Token: 0x0400EF72 RID: 61298
+		// Token: 0x0400F821 RID: 63521
 		private static IntPtr __GetAnimDataVector_NativeFunctionPtr;
 
-		// Token: 0x0400EF73 RID: 61299
+		// Token: 0x0400F822 RID: 63522
 		private static IntPtr __GetSupportGroupNames_NativeFunctionPtr;
 
-		// Token: 0x0400EF74 RID: 61300
-		private static IntPtr __SetAnimDataFloat_NativeFunctionPtr;
-
-		// Token: 0x0400EF75 RID: 61301
+		// Token: 0x0400F823 RID: 63523
 		private static IntPtr __SetAnimDataVector_NativeFunctionPtr;
 
-		// Token: 0x0400EF76 RID: 61302
-		private static IntPtr __CalcAllCurve_2_NativeFunctionPtr;
-
-		// Token: 0x0400EF77 RID: 61303
-		private static IntPtr __CalcAllCurve_NativeFunctionPtr;
-
-		// Token: 0x0400EF78 RID: 61304
+		// Token: 0x0400F824 RID: 63524
 		private static IntPtr __HasFixCurve_NativeFunctionPtr;
 
-		// Token: 0x0400EF79 RID: 61305
+		// Token: 0x0400F825 RID: 63525
 		private static IntPtr __GetFixValue_NativeFunctionPtr;
 
-		// Token: 0x0400EF7A RID: 61306
+		// Token: 0x0400F826 RID: 63526
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x02009A73 RID: 39539
+		// Token: 0x02008D11 RID: 36113
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetSeqTalkId_FunctionParams
 		{
-			// Token: 0x04030FD6 RID: 200662
+			// Token: 0x0402C862 RID: 182370
 			[FieldOffset(0)]
 			public int TalkID;
 
-			// Token: 0x04030FD7 RID: 200663
+			// Token: 0x0402C863 RID: 182371
 			[FieldOffset(4)]
 			public int TalkID_SP;
 		}
 
-		// Token: 0x02009A74 RID: 39540
+		// Token: 0x02008D12 RID: 36114
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetSeqMouthAnimInstance_FunctionParams
 		{
-			// Token: 0x04030FD8 RID: 200664
+			// Token: 0x0402C864 RID: 182372
 			[FieldOffset(0)]
 			public IntPtr AnimInstance;
 		}
 
-		// Token: 0x02009A75 RID: 39541
+		// Token: 0x02008D13 RID: 36115
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __GetAddSpineHeadValue_FunctionParams
 		{
-			// Token: 0x04030FD9 RID: 200665
+			// Token: 0x0402C865 RID: 182373
 			[FieldOffset(0)]
 			public FRotator AddSpineHead;
 		}
 
-		// Token: 0x02009A76 RID: 39542
+		// Token: 0x02008D14 RID: 36116
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __GetAddSpineValue_FunctionParams
 		{
-			// Token: 0x04030FDA RID: 200666
+			// Token: 0x0402C866 RID: 182374
 			[FieldOffset(0)]
 			public FRotator AddSpine;
 		}
 
-		// Token: 0x02009A77 RID: 39543
+		// Token: 0x02008D15 RID: 36117
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 88)]
 		protected ref struct __GetAnimDataTransform_FunctionParams
 		{
-			// Token: 0x04030FDB RID: 200667
+			// Token: 0x0402C867 RID: 182375
 			[FieldOffset(0)]
 			public byte FloatCurveData;
 
-			// Token: 0x04030FDC RID: 200668
+			// Token: 0x0402C868 RID: 182376
 			[FieldOffset(80)]
 			public bool __Result;
 		}
 
-		// Token: 0x02009A78 RID: 39544
+		// Token: 0x02008D16 RID: 36118
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsCustomSupport_FunctionParams
 		{
-			// Token: 0x04030FDD RID: 200669
+			// Token: 0x0402C869 RID: 182377
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02009A79 RID: 39545
+		// Token: 0x02008D17 RID: 36119
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 88)]
 		protected ref struct __SetAnimDataTransform_FunctionParams
 		{
-			// Token: 0x04030FDE RID: 200670
+			// Token: 0x0402C86A RID: 182378
 			[FieldOffset(0)]
 			public byte FloatCurveData;
 
-			// Token: 0x04030FDF RID: 200671
+			// Token: 0x0402C86B RID: 182379
 			[FieldOffset(80)]
 			public bool __Result;
 		}
 
-		// Token: 0x02009A7A RID: 39546
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __GetAnimDataFloat_FunctionParams
-		{
-			// Token: 0x04030FE0 RID: 200672
-			[FieldOffset(0)]
-			public byte FloatCurveData;
-
-			// Token: 0x04030FE1 RID: 200673
-			[FieldOffset(16)]
-			public bool __Result;
-		}
-
-		// Token: 0x02009A7B RID: 39547
+		// Token: 0x02008D18 RID: 36120
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 88)]
 		protected ref struct __GetAnimDataVector_FunctionParams
 		{
-			// Token: 0x04030FE2 RID: 200674
+			// Token: 0x0402C86C RID: 182380
 			[FieldOffset(0)]
 			public byte VectorCurveData;
 
-			// Token: 0x04030FE3 RID: 200675
+			// Token: 0x0402C86D RID: 182381
 			[FieldOffset(80)]
 			public bool __Result;
 		}
 
-		// Token: 0x02009A7C RID: 39548
+		// Token: 0x02008D19 RID: 36121
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __GetSupportGroupNames_FunctionParams
 		{
-			// Token: 0x04030FE4 RID: 200676
+			// Token: 0x0402C86E RID: 182382
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02009A7D RID: 39549
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 40)]
-		protected ref struct __SetAnimDataFloat_FunctionParams
-		{
-			// Token: 0x04030FE5 RID: 200677
-			[FieldOffset(0)]
-			public byte FloatCurveData;
-
-			// Token: 0x04030FE6 RID: 200678
-			[FieldOffset(16)]
-			public bool __Result;
-		}
-
-		// Token: 0x02009A7E RID: 39550
+		// Token: 0x02008D1A RID: 36122
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 192)]
 		protected ref struct __SetAnimDataVector_FunctionParams
 		{
-			// Token: 0x04030FE7 RID: 200679
+			// Token: 0x0402C86F RID: 182383
 			[FieldOffset(0)]
 			public byte VectorCurveData;
 
-			// Token: 0x04030FE8 RID: 200680
+			// Token: 0x0402C870 RID: 182384
 			[FieldOffset(80)]
 			public bool __Result;
 		}
 
-		// Token: 0x02009A7F RID: 39551
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 248)]
-		protected ref struct __CalcAllCurve_2_FunctionParams
-		{
-			// Token: 0x04030FE9 RID: 200681
-			[FieldOffset(0)]
-			public byte Ret;
-		}
-
-		// Token: 0x02009A80 RID: 39552
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 256)]
-		protected ref struct __CalcAllCurve_FunctionParams
-		{
-			// Token: 0x04030FEA RID: 200682
-			[FieldOffset(0)]
-			public byte Ret;
-		}
-
-		// Token: 0x02009A81 RID: 39553
+		// Token: 0x02008D1B RID: 36123
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __HasFixCurve_FunctionParams
 		{
-			// Token: 0x04030FEB RID: 200683
+			// Token: 0x0402C871 RID: 182385
 			[FieldOffset(0)]
 			public FName CheckName;
 
-			// Token: 0x04030FEC RID: 200684
+			// Token: 0x0402C872 RID: 182386
 			[FieldOffset(12)]
 			public bool Ret;
 
-			// Token: 0x04030FED RID: 200685
+			// Token: 0x0402C873 RID: 182387
 			[FieldOffset(16)]
 			public FName FixName;
 		}
 
-		// Token: 0x02009A82 RID: 39554
+		// Token: 0x02008D1C RID: 36124
+		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __GetFixValue_FunctionParams
 		{
-			// Token: 0x04030FEE RID: 200686
+			// Token: 0x0402C874 RID: 182388
 			[FieldOffset(0)]
 			public float inValue;
 
-			// Token: 0x04030FEF RID: 200687
+			// Token: 0x0402C875 RID: 182389
 			[FieldOffset(4)]
 			public float FixValue;
 		}

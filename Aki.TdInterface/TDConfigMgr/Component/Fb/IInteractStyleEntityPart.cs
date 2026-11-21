@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A81 RID: 2689
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B4B RID: 2891
 	public class IInteractStyleEntityPart : IInteractStyleBase
 	{
-		// Token: 0x06003DDB RID: 15835 RVA: 0x0009E7C1 File Offset: 0x0009C9C1
+		// Token: 0x06004204 RID: 16900 RVA: 0x000A7D79 File Offset: 0x000A5F79
 		public static IInteractStyleEntityPart Create(IInteractStyleEntityPart? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E96 RID: 3734
-		// (get) Token: 0x06003DDC RID: 15836 RVA: 0x0009E7E0 File Offset: 0x0009C9E0
+		// Token: 0x17000F69 RID: 3945
+		// (get) Token: 0x06004205 RID: 16901 RVA: 0x000A7D98 File Offset: 0x000A5F98
 		public override EInteractStyleType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E97 RID: 3735
-		// (get) Token: 0x06003DDD RID: 15837 RVA: 0x0009E7ED File Offset: 0x0009C9ED
+		// Token: 0x17000F6A RID: 3946
+		// (get) Token: 0x06004206 RID: 16902 RVA: 0x000A7DA5 File Offset: 0x000A5FA5
 		public virtual IInteractEntityPartBindBase Bind
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E98 RID: 3736
-		// (get) Token: 0x06003DDE RID: 15838 RVA: 0x0009E81C File Offset: 0x0009CA1C
+		// Token: 0x17000F6B RID: 3947
+		// (get) Token: 0x06004207 RID: 16903 RVA: 0x000A7DD4 File Offset: 0x000A5FD4
 		public virtual float ShowAngle
 		{
 			get
@@ -58,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E99 RID: 3737
-		// (get) Token: 0x06003DDF RID: 15839 RVA: 0x0009E829 File Offset: 0x0009CA29
+		// Token: 0x17000F6C RID: 3948
+		// (get) Token: 0x06004208 RID: 16904 RVA: 0x000A7DE1 File Offset: 0x000A5FE1
 		public virtual float TriggerAngle
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400226E RID: 8814
+		// Token: 0x0400248A RID: 9354
 		private IInteractStyleEntityPart Instance;
 
-		// Token: 0x0400226F RID: 8815
+		// Token: 0x0400248B RID: 9355
 		private IInteractEntityPartBindBase _BindCache;
 
-		// Token: 0x04002270 RID: 8816
+		// Token: 0x0400248C RID: 9356
 		private bool _BindInited;
 	}
 }

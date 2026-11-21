@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006614 RID: 26132
+	// Token: 0x02005592 RID: 21906
 	public class FishingHandBookRewardItem : GridProxyAbstract<int>
 	{
-		// Token: 0x060417C6 RID: 268230 RVA: 0x00FDCA84 File Offset: 0x00FDAC84
+		// Token: 0x0603648B RID: 222347 RVA: 0x00F23B10 File Offset: 0x00F21D10
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -49,21 +48,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060417C7 RID: 268231 RVA: 0x00FDCC13 File Offset: 0x00FDAE13
+		// Token: 0x0603648C RID: 222348 RVA: 0x00F23C9F File Offset: 0x00F21E9F
 		protected override void OnStart()
 		{
 			base.GetItem(2).SetUIActive(false);
 			this.RewardScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(6), new Func<CommonItemSmallItemGrid>(this.OnRewardLayoutUpdater), null, false, null);
 		}
 
-		// Token: 0x060417C8 RID: 268232 RVA: 0x00FDCC43 File Offset: 0x00FDAE43
+		// Token: 0x0603648D RID: 222349 RVA: 0x00F23CCF File Offset: 0x00F21ECF
 		[NullableContext(1)]
 		private CommonItemSmallItemGrid OnRewardLayoutUpdater()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x060417C9 RID: 268233 RVA: 0x00FDCC4C File Offset: 0x00FDAE4C
+		// Token: 0x0603648E RID: 222350 RVA: 0x00F23CD8 File Offset: 0x00F21ED8
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.RewardId = data;
@@ -134,28 +133,34 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			rewardScrollView.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x060417CA RID: 268234 RVA: 0x00FDCE9C File Offset: 0x00FDB09C
+		// Token: 0x0603648F RID: 222351 RVA: 0x00F23F28 File Offset: 0x00F22128
 		private void OnClickRewardBtn()
 		{
-			List<int> list = (from v in FishingModel.Instance.FishingItemHandBookRewardMap.Values
-			where v.IsFinished && !v.IsTaken
-			select v.Id).ToList<int>();
+			Dictionary<int, IFishingReward> fishingItemHandBookRewardMap = FishingModel.Instance.FishingItemHandBookRewardMap;
+			List<int> list = new List<int>();
+			foreach (IFishingReward fishingReward in fishingItemHandBookRewardMap.Values)
+			{
+				if (fishingReward.IsFinished && !fishingReward.IsTaken)
+				{
+					list.Add(fishingReward.Id);
+				}
+			}
 			FishingController.Instance.RequestMultiFishingIllustratedRewardRequest(list.ToArray());
 		}
 
-		// Token: 0x060417CB RID: 268235 RVA: 0x00FDCF18 File Offset: 0x00FDB118
+		// Token: 0x06036490 RID: 222352 RVA: 0x00F23FB0 File Offset: 0x00F221B0
 		private void OnClickJumpToBtn()
 		{
 			SkipTaskManager.RunByConfigId(FishingConfig.Instance.GetFishingIllustratedRewardById(this.RewardId).AccessPath, null);
 		}
 
-		// Token: 0x0402213F RID: 139583
+		// Token: 0x0401CA70 RID: 117360
 		private const float TAKEN_ALPHA = 0.6f;
 
-		// Token: 0x04022140 RID: 139584
+		// Token: 0x0401CA71 RID: 117361
 		private int RewardId;
 
-		// Token: 0x04022141 RID: 139585
+		// Token: 0x0401CA72 RID: 117362
 		[Nullable(new byte[]
 		{
 			2,
@@ -163,31 +168,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-		// Token: 0x0200C823 RID: 51235
+		// Token: 0x0200B206 RID: 45574
 		private class EComponentDefine
 		{
-			// Token: 0x0403C71C RID: 247580
+			// Token: 0x04037064 RID: 225380
 			public const int RewardBtn = 0;
 
-			// Token: 0x0403C71D RID: 247581
+			// Token: 0x04037065 RID: 225381
 			public const int JumpToBtn = 1;
 
-			// Token: 0x0403C71E RID: 247582
+			// Token: 0x04037066 RID: 225382
 			public const int DoingItem = 2;
 
-			// Token: 0x0403C71F RID: 247583
+			// Token: 0x04037067 RID: 225383
 			public const int FinishItem = 3;
 
-			// Token: 0x0403C720 RID: 247584
+			// Token: 0x04037068 RID: 225384
 			public const int TitleText = 4;
 
-			// Token: 0x0403C721 RID: 247585
+			// Token: 0x04037069 RID: 225385
 			public const int CountText = 5;
 
-			// Token: 0x0403C722 RID: 247586
+			// Token: 0x0403706A RID: 225386
 			public const int ItemScrollView = 6;
 
-			// Token: 0x0403C723 RID: 247587
+			// Token: 0x0403706B RID: 225387
 			public const int EmptyItem = 7;
 		}
 	}

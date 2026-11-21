@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FA5 RID: 4005
+	// Token: 0x0200108D RID: 4237
 	public struct RedDot : IFlatbufferObject
 	{
-		// Token: 0x17002D6D RID: 11629
-		// (get) Token: 0x0600BA69 RID: 47721 RVA: 0x002DABAC File Offset: 0x002D8DAC
+		// Token: 0x17002DE8 RID: 11752
+		// (get) Token: 0x0600C0B3 RID: 49331 RVA: 0x002F7394 File Offset: 0x002F5594
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BA6A RID: 47722 RVA: 0x002DABB9 File Offset: 0x002D8DB9
+		// Token: 0x0600C0B4 RID: 49332 RVA: 0x002F73A1 File Offset: 0x002F55A1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BA6B RID: 47723 RVA: 0x002DABC0 File Offset: 0x002D8DC0
+		// Token: 0x0600C0B5 RID: 49333 RVA: 0x002F73A8 File Offset: 0x002F55A8
 		public static RedDot GetRootAsRedDot(ByteBuffer _bb)
 		{
 			return RedDot.GetRootAsRedDot(_bb, default(RedDot));
 		}
 
-		// Token: 0x0600BA6C RID: 47724 RVA: 0x002DABDC File Offset: 0x002D8DDC
+		// Token: 0x0600C0B6 RID: 49334 RVA: 0x002F73C4 File Offset: 0x002F55C4
 		public static RedDot GetRootAsRedDot(ByteBuffer _bb, RedDot obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BA6D RID: 47725 RVA: 0x002DABF9 File Offset: 0x002D8DF9
+		// Token: 0x0600C0B7 RID: 49335 RVA: 0x002F73E1 File Offset: 0x002F55E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BA6E RID: 47726 RVA: 0x002DAC08 File Offset: 0x002D8E08
+		// Token: 0x0600C0B8 RID: 49336 RVA: 0x002F73F0 File Offset: 0x002F55F0
 		public RedDot __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002D6E RID: 11630
-		// (get) Token: 0x0600BA6F RID: 47727 RVA: 0x002DAC18 File Offset: 0x002D8E18
+		// Token: 0x17002DE9 RID: 11753
+		// (get) Token: 0x0600C0B9 RID: 49337 RVA: 0x002F7400 File Offset: 0x002F5600
 		public string Name
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BA70 RID: 47728 RVA: 0x002DAC4F File Offset: 0x002D8E4F
+		// Token: 0x0600C0BA RID: 49338 RVA: 0x002F7437 File Offset: 0x002F5637
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0600BA71 RID: 47729 RVA: 0x002DAC5E File Offset: 0x002D8E5E
+		// Token: 0x0600C0BB RID: 49339 RVA: 0x002F7446 File Offset: 0x002F5646
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002D6F RID: 11631
-		// (get) Token: 0x0600BA72 RID: 47730 RVA: 0x002DAC78 File Offset: 0x002D8E78
+		// Token: 0x17002DEA RID: 11754
+		// (get) Token: 0x0600C0BC RID: 49340 RVA: 0x002F7460 File Offset: 0x002F5660
 		public string RelativeName
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BA73 RID: 47731 RVA: 0x002DACAF File Offset: 0x002D8EAF
+		// Token: 0x0600C0BD RID: 49341 RVA: 0x002F7497 File Offset: 0x002F5697
 		public Span<byte> GetRelativeNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600BA74 RID: 47732 RVA: 0x002DACBE File Offset: 0x002D8EBE
+		// Token: 0x0600C0BE RID: 49342 RVA: 0x002F74A6 File Offset: 0x002F56A6
 		public byte[] GetRelativeNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0400507E RID: 20606
+		// Token: 0x04005666 RID: 22118
 		private Table __p;
 	}
 }

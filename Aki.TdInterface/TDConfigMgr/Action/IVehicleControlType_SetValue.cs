@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002032 RID: 8242
+	// Token: 0x0200227B RID: 8827
 	public class IVehicleControlType_SetValue
 	{
-		// Token: 0x04006D0D RID: 27917
+		// Token: 0x04007316 RID: 29462
 		public EVehicleControlType Type;
 	}
 }

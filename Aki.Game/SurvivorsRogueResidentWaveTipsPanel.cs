@@ -5,12 +5,12 @@ using Aki.Protocol;
 using Aki.TDConfigMgr.Quest;
 using UnrealEngine;
 
-// Token: 0x02001D20 RID: 7456
+// Token: 0x020011E2 RID: 4578
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueResidentWaveTipsPanel : SurvivorsRogueTipsPanelBase
 {
-	// Token: 0x0600E1A2 RID: 57762 RVA: 0x0034FCDA File Offset: 0x0034DEDA
+	// Token: 0x0600B5BF RID: 46527 RVA: 0x0035B70A File Offset: 0x0035990A
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ public class SurvivorsRogueResidentWaveTipsPanel : SurvivorsRogueTipsPanelBase
 		};
 	}
 
-	// Token: 0x0600E1A3 RID: 57763 RVA: 0x0034FD13 File Offset: 0x0034DF13
+	// Token: 0x0600B5C0 RID: 46528 RVA: 0x0035B743 File Offset: 0x00359943
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -28,34 +28,34 @@ public class SurvivorsRogueResidentWaveTipsPanel : SurvivorsRogueTipsPanelBase
 		this.WaveNumText = base.GetText(1);
 	}
 
-	// Token: 0x0600E1A4 RID: 57764 RVA: 0x0034FD38 File Offset: 0x0034DF38
+	// Token: 0x0600B5C1 RID: 46529 RVA: 0x0035B768 File Offset: 0x00359968
 	protected override void OnAddEventListener()
 	{
 		SurvivorsRogueModel.Instance.BattleData.BehaviorDelegate.AddTreeVarUpdateDelegate(ESurvivorsRougeSystemVarType.Batch.ToEnumString(), new TTreeVarUpdateDelegate(this.EventRefreshWave));
 		SurvivorsRogueModel.Instance.BattleData.BehaviorDelegate.AddTreeVarUpdateDelegate(ESurvivorsRougeSystemVarType.EndlessBatchLimit.ToEnumString(), new TTreeVarUpdateDelegate(this.EventRefreshWave));
 	}
 
-	// Token: 0x0600E1A5 RID: 57765 RVA: 0x0034FD94 File Offset: 0x0034DF94
+	// Token: 0x0600B5C2 RID: 46530 RVA: 0x0035B7C4 File Offset: 0x003599C4
 	protected override void OnRemoveEventListener()
 	{
 		SurvivorsRogueModel.Instance.BattleData.BehaviorDelegate.RemoveTreeVarUpdateDelegate(ESurvivorsRougeSystemVarType.Batch.ToEnumString(), new TTreeVarUpdateDelegate(this.EventRefreshWave));
 		SurvivorsRogueModel.Instance.BattleData.BehaviorDelegate.RemoveTreeVarUpdateDelegate(ESurvivorsRougeSystemVarType.EndlessBatchLimit.ToEnumString(), new TTreeVarUpdateDelegate(this.EventRefreshWave));
 	}
 
-	// Token: 0x0600E1A6 RID: 57766 RVA: 0x0034FDED File Offset: 0x0034DFED
+	// Token: 0x0600B5C3 RID: 46531 RVA: 0x0035B81D File Offset: 0x00359A1D
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
 		this.RefreshWave();
 	}
 
-	// Token: 0x0600E1A7 RID: 57767 RVA: 0x0034FDFB File Offset: 0x0034DFFB
+	// Token: 0x0600B5C4 RID: 46532 RVA: 0x0035B82B File Offset: 0x00359A2B
 	private void EventRefreshWave(VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		this.RefreshWave();
 	}
 
-	// Token: 0x0600E1A8 RID: 57768 RVA: 0x0034FE04 File Offset: 0x0034E004
+	// Token: 0x0600B5C5 RID: 46533 RVA: 0x0035B834 File Offset: 0x00359A34
 	private void RefreshWave()
 	{
 		bool isEndlessWave = SurvivorsRogueModel.Instance.IsEndlessWave;
@@ -69,20 +69,20 @@ public class SurvivorsRogueResidentWaveTipsPanel : SurvivorsRogueTipsPanelBase
 		this.WaveNumText.SetText(SurvivorsRogueModel.Instance.BattleData.GetBatch().ToString() + "/" + SurvivorsRogueModel.Instance.MaxWaveNum.ToString(), true);
 	}
 
-	// Token: 0x04006858 RID: 26712
+	// Token: 0x04006937 RID: 26935
 	private UUIText WaveTitleText;
 
-	// Token: 0x04006859 RID: 26713
+	// Token: 0x04006938 RID: 26936
 	private UUIText WaveNumText;
 
-	// Token: 0x02008319 RID: 33561
+	// Token: 0x020074A2 RID: 29858
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AC1F RID: 175135
+		// Token: 0x04025F47 RID: 155463
 		public const int WaveTitle = 0;
 
-		// Token: 0x0402AC20 RID: 175136
+		// Token: 0x04025F48 RID: 155464
 		public const int WaveNum = 1;
 	}
 }

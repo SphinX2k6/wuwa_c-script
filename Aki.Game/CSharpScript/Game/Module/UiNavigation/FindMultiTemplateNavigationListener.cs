@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048F2 RID: 18674
+	// Token: 0x02003869 RID: 14441
 	public class FindMultiTemplateNavigationListener : FindActionBase
 	{
-		// Token: 0x06030D5E RID: 200030 RVA: 0x00B576E8 File Offset: 0x00B558E8
+		// Token: 0x0602588B RID: 153739 RVA: 0x00A92558 File Offset: 0x00A90758
 		[NullableContext(1)]
 		public override void FindNavigation(FindNavigationResult result)
 		{

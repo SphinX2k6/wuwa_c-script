@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x020066FF RID: 26367
+	// Token: 0x0200564F RID: 22095
 	public class DropCatchGameplayPauseView : UiViewBase
 	{
-		// Token: 0x06041DF1 RID: 269809 RVA: 0x00FF976C File Offset: 0x00FF796C
+		// Token: 0x0603693D RID: 223549 RVA: 0x00F3AB60 File Offset: 0x00F38D60
 		[NullableContext(1)]
 		public DropCatchGameplayPauseView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06041DF2 RID: 269810 RVA: 0x00FF9778 File Offset: 0x00FF7978
+		// Token: 0x0603693E RID: 223550 RVA: 0x00F3AB6C File Offset: 0x00F38D6C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			};
 		}
 
-		// Token: 0x06041DF3 RID: 269811 RVA: 0x00FF9867 File Offset: 0x00FF7A67
+		// Token: 0x0603693F RID: 223551 RVA: 0x00F3AC5B File Offset: 0x00F38E5B
 		protected override void OnStart()
 		{
 			this.Proxy = (this.OpenParam as DropCatchGameplayProxy);
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.RefreshRestartButtonVisible();
 		}
 
-		// Token: 0x06041DF4 RID: 269812 RVA: 0x00FF989C File Offset: 0x00FF7A9C
+		// Token: 0x06036940 RID: 223552 RVA: 0x00F3AC90 File Offset: 0x00F38E90
 		private void InitScoreLevelLayout()
 		{
 			DropCatchGameplayProxy proxy = this.Proxy;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.ScoreLevelLayout.RefreshByData(list3, null, false);
 		}
 
-		// Token: 0x06041DF5 RID: 269813 RVA: 0x00FF999C File Offset: 0x00FF7B9C
+		// Token: 0x06036941 RID: 223553 RVA: 0x00F3AD90 File Offset: 0x00F38F90
 		private void RefreshCurScore()
 		{
 			UUIArtText artText = base.GetArtText(0);
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			artText.SetText(this.Proxy.GetCurScore().ToString());
 		}
 
-		// Token: 0x06041DF6 RID: 269814 RVA: 0x00FF99D0 File Offset: 0x00FF7BD0
+		// Token: 0x06036942 RID: 223554 RVA: 0x00F3ADC4 File Offset: 0x00F38FC4
 		private void OnClickExit()
 		{
 			DropCatchGameplayProxy proxy = this.Proxy;
@@ -115,13 +115,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06041DF7 RID: 269815 RVA: 0x00FF9A41 File Offset: 0x00FF7C41
+		// Token: 0x06036943 RID: 223555 RVA: 0x00F3AE35 File Offset: 0x00F39035
 		private void OnClickContinue()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06041DF8 RID: 269816 RVA: 0x00FF9A4A File Offset: 0x00FF7C4A
+		// Token: 0x06036944 RID: 223556 RVA: 0x00F3AE3E File Offset: 0x00F3903E
 		private void OnClickRestart()
 		{
 			DropCatchGameplayProxy proxy = this.Proxy;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06041DF9 RID: 269817 RVA: 0x00FF9A70 File Offset: 0x00FF7C70
+		// Token: 0x06036945 RID: 223557 RVA: 0x00F3AE64 File Offset: 0x00F39064
 		private void RefreshRestartButtonVisible()
 		{
 			DropCatchGameplayProxy proxy = this.Proxy;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			button.RootUIComp.Get().SetUIActive(!dropCatchGameplay.Value.IsSpecial);
 		}
 
-		// Token: 0x06041DFA RID: 269818 RVA: 0x00FF9AD2 File Offset: 0x00FF7CD2
+		// Token: 0x06036946 RID: 223558 RVA: 0x00F3AEC6 File Offset: 0x00F390C6
 		protected override void OnBeforeDestroy()
 		{
 			DropCatchGameplayProxy proxy = this.Proxy;
@@ -160,11 +160,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			proxy.ResumeGameplay("PauseView");
 		}
 
-		// Token: 0x04022508 RID: 140552
+		// Token: 0x0401CD61 RID: 118113
 		[Nullable(2)]
 		private DropCatchGameplayProxy Proxy;
 
-		// Token: 0x04022509 RID: 140553
+		// Token: 0x0401CD62 RID: 118114
 		[Nullable(new byte[]
 		{
 			2,

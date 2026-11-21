@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D3A RID: 3386
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E34 RID: 3636
 	public class IEntityMatchSpecificBp : IEntityMatchConfig
 	{
-		// Token: 0x06004D3A RID: 19770 RVA: 0x000C02B9 File Offset: 0x000BE4B9
+		// Token: 0x06005256 RID: 21078 RVA: 0x000CB9FD File Offset: 0x000C9BFD
 		public static IEntityMatchSpecificBp Create(IEntityMatchSpecificBp? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001883 RID: 6275
-		// (get) Token: 0x06004D3B RID: 19771 RVA: 0x000C02D8 File Offset: 0x000BE4D8
+		// Token: 0x170019E9 RID: 6633
+		// (get) Token: 0x06005257 RID: 21079 RVA: 0x000CBA1C File Offset: 0x000C9C1C
 		public override EEntityMatchType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001884 RID: 6276
-		// (get) Token: 0x06004D3C RID: 19772 RVA: 0x000C02E8 File Offset: 0x000BE4E8
+		// Token: 0x170019EA RID: 6634
+		// (get) Token: 0x06005258 RID: 21080 RVA: 0x000CBA2C File Offset: 0x000C9C2C
 		public virtual List<string> SpecificBpList
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C45 RID: 11333
+		// Token: 0x04002F05 RID: 12037
 		private IEntityMatchSpecificBp Instance;
 
-		// Token: 0x04002C46 RID: 11334
+		// Token: 0x04002F06 RID: 12038
 		private List<string> _SpecificBpListCache;
 
-		// Token: 0x04002C47 RID: 11335
+		// Token: 0x04002F07 RID: 12039
 		private bool _SpecificBpListInited;
 	}
 }

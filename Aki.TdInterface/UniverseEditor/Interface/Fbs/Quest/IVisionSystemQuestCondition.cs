@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004274 RID: 17012
+	// Token: 0x020046D0 RID: 18128
 	public struct IVisionSystemQuestCondition : IFlatbufferObject
 	{
-		// Token: 0x170078BE RID: 30910
-		// (get) Token: 0x060192D5 RID: 103125 RVA: 0x0039E25E File Offset: 0x0039C45E
+		// Token: 0x17007EEF RID: 32495
+		// (get) Token: 0x0601AA41 RID: 109121 RVA: 0x003C9936 File Offset: 0x003C7B36
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060192D6 RID: 103126 RVA: 0x0039E26B File Offset: 0x0039C46B
+		// Token: 0x0601AA42 RID: 109122 RVA: 0x003C9943 File Offset: 0x003C7B43
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060192D7 RID: 103127 RVA: 0x0039E274 File Offset: 0x0039C474
+		// Token: 0x0601AA43 RID: 109123 RVA: 0x003C994C File Offset: 0x003C7B4C
 		public static IVisionSystemQuestCondition GetRootAsIVisionSystemQuestCondition(ByteBuffer _bb)
 		{
 			return IVisionSystemQuestCondition.GetRootAsIVisionSystemQuestCondition(_bb, default(IVisionSystemQuestCondition));
 		}
 
-		// Token: 0x060192D8 RID: 103128 RVA: 0x0039E290 File Offset: 0x0039C490
+		// Token: 0x0601AA44 RID: 109124 RVA: 0x003C9968 File Offset: 0x003C7B68
 		public static IVisionSystemQuestCondition GetRootAsIVisionSystemQuestCondition(ByteBuffer _bb, IVisionSystemQuestCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060192D9 RID: 103129 RVA: 0x0039E2AD File Offset: 0x0039C4AD
+		// Token: 0x0601AA45 RID: 109125 RVA: 0x003C9985 File Offset: 0x003C7B85
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060192DA RID: 103130 RVA: 0x0039E2BC File Offset: 0x0039C4BC
+		// Token: 0x0601AA46 RID: 109126 RVA: 0x003C9994 File Offset: 0x003C7B94
 		public IVisionSystemQuestCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170078BF RID: 30911
-		// (get) Token: 0x060192DB RID: 103131 RVA: 0x0039E2CC File Offset: 0x0039C4CC
+		// Token: 0x17007EF0 RID: 32496
+		// (get) Token: 0x0601AA47 RID: 109127 RVA: 0x003C99A4 File Offset: 0x003C7BA4
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170078C0 RID: 30912
-		// (get) Token: 0x060192DC RID: 103132 RVA: 0x0039E308 File Offset: 0x0039C508
+		// Token: 0x17007EF1 RID: 32497
+		// (get) Token: 0x0601AA48 RID: 109128 RVA: 0x003C99E0 File Offset: 0x003C7BE0
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170078C1 RID: 30913
-		// (get) Token: 0x060192DD RID: 103133 RVA: 0x0039E368 File Offset: 0x0039C568
+		// Token: 0x17007EF2 RID: 32498
+		// (get) Token: 0x0601AA49 RID: 109129 RVA: 0x003C9A40 File Offset: 0x003C7C40
 		public TVisionSystemQuest QuestType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060192DE RID: 103134 RVA: 0x0039E3A4 File Offset: 0x0039C5A4
+		// Token: 0x0601AA4A RID: 109130 RVA: 0x003C9A7C File Offset: 0x003C7C7C
 		public TTable? Quest<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -104,25 +104,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060192DF RID: 103135 RVA: 0x0039E3EC File Offset: 0x0039C5EC
+		// Token: 0x0601AA4B RID: 109131 RVA: 0x003C9AC4 File Offset: 0x003C7CC4
 		public IVisionSystemQuestDoIdentify QuestAsIVisionSystemQuestDoIdentify()
 		{
 			return this.Quest<IVisionSystemQuestDoIdentify>().Value;
 		}
 
-		// Token: 0x060192E0 RID: 103136 RVA: 0x0039E408 File Offset: 0x0039C608
+		// Token: 0x0601AA4C RID: 109132 RVA: 0x003C9AE0 File Offset: 0x003C7CE0
 		public IVisionSystemQuestSetActivated QuestAsIVisionSystemQuestSetActivated()
 		{
 			return this.Quest<IVisionSystemQuestSetActivated>().Value;
 		}
 
-		// Token: 0x060192E1 RID: 103137 RVA: 0x0039E424 File Offset: 0x0039C624
+		// Token: 0x0601AA4D RID: 109133 RVA: 0x003C9AFC File Offset: 0x003C7CFC
 		public IVisionSystemQuestTargetLevel QuestAsIVisionSystemQuestTargetLevel()
 		{
 			return this.Quest<IVisionSystemQuestTargetLevel>().Value;
 		}
 
-		// Token: 0x060192E2 RID: 103138 RVA: 0x0039E43F File Offset: 0x0039C63F
+		// Token: 0x0601AA4E RID: 109134 RVA: 0x003C9B17 File Offset: 0x003C7D17
 		public static Offset<IVisionSystemQuestCondition> CreateIVisionSystemQuestCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), TVisionSystemQuest Quest_type = TVisionSystemQuest.NONE, int QuestOffset = 0)
 		{
 			builder.StartTable(4);
@@ -133,43 +133,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IVisionSystemQuestCondition.EndIVisionSystemQuestCondition(builder);
 		}
 
-		// Token: 0x060192E3 RID: 103139 RVA: 0x0039E46B File Offset: 0x0039C66B
+		// Token: 0x0601AA4F RID: 109135 RVA: 0x003C9B43 File Offset: 0x003C7D43
 		public static void StartIVisionSystemQuestCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060192E4 RID: 103140 RVA: 0x0039E474 File Offset: 0x0039C674
+		// Token: 0x0601AA50 RID: 109136 RVA: 0x003C9B4C File Offset: 0x003C7D4C
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060192E5 RID: 103141 RVA: 0x0039E47F File Offset: 0x0039C67F
+		// Token: 0x0601AA51 RID: 109137 RVA: 0x003C9B57 File Offset: 0x003C7D57
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x060192E6 RID: 103142 RVA: 0x0039E48F File Offset: 0x0039C68F
+		// Token: 0x0601AA52 RID: 109138 RVA: 0x003C9B67 File Offset: 0x003C7D67
 		public static void AddQuestType(FlatBufferBuilder builder, TVisionSystemQuest questType)
 		{
 			builder.AddByte(2, (byte)questType, 0);
 		}
 
-		// Token: 0x060192E7 RID: 103143 RVA: 0x0039E49A File Offset: 0x0039C69A
+		// Token: 0x0601AA53 RID: 109139 RVA: 0x003C9B72 File Offset: 0x003C7D72
 		public static void AddQuest(FlatBufferBuilder builder, int questOffset)
 		{
 			builder.AddOffset(3, questOffset, 0);
 		}
 
-		// Token: 0x060192E8 RID: 103144 RVA: 0x0039E4A5 File Offset: 0x0039C6A5
+		// Token: 0x0601AA54 RID: 109140 RVA: 0x003C9B7D File Offset: 0x003C7D7D
 		public static Offset<IVisionSystemQuestCondition> EndIVisionSystemQuestCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisionSystemQuestCondition>(builder.EndTable());
 		}
 
-		// Token: 0x060192E9 RID: 103145 RVA: 0x0039E4B4 File Offset: 0x0039C6B4
+		// Token: 0x0601AA55 RID: 109141 RVA: 0x003C9B8C File Offset: 0x003C7D8C
 		public IVisionSystemQuestConditionT UnPack()
 		{
 			IVisionSystemQuestConditionT visionSystemQuestConditionT = new IVisionSystemQuestConditionT();
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return visionSystemQuestConditionT;
 		}
 
-		// Token: 0x060192EA RID: 103146 RVA: 0x0039E4D0 File Offset: 0x0039C6D0
+		// Token: 0x0601AA56 RID: 109142 RVA: 0x003C9BA8 File Offset: 0x003C7DA8
 		public void UnPackTo(IVisionSystemQuestConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -200,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060192EB RID: 103147 RVA: 0x0039E5F8 File Offset: 0x0039C7F8
+		// Token: 0x0601AA57 RID: 109143 RVA: 0x003C9CD0 File Offset: 0x003C7ED0
 		public static Offset<IVisionSystemQuestCondition> Pack(FlatBufferBuilder builder, IVisionSystemQuestConditionT _o)
 		{
 			if (_o == null)
@@ -213,7 +213,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IVisionSystemQuestCondition.CreateIVisionSystemQuestCondition(builder, _o.Type, preConditionsOffset, quest_type, questOffset);
 		}
 
-		// Token: 0x0400BF0A RID: 48906
+		// Token: 0x0400C917 RID: 51479
 		private Table __p;
 	}
 }

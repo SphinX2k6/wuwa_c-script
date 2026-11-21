@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A2A RID: 18986
+	// Token: 0x02004EED RID: 20205
 	public struct ICheckFlForestMusicBeats : IFlatbufferObject
 	{
-		// Token: 0x1700896F RID: 35183
-		// (get) Token: 0x0601DB5B RID: 121691 RVA: 0x0042DC92 File Offset: 0x0042BE92
+		// Token: 0x17009044 RID: 36932
+		// (get) Token: 0x0601F5E4 RID: 128484 RVA: 0x0045EB8A File Offset: 0x0045CD8A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DB5C RID: 121692 RVA: 0x0042DC9F File Offset: 0x0042BE9F
+		// Token: 0x0601F5E5 RID: 128485 RVA: 0x0045EB97 File Offset: 0x0045CD97
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DB5D RID: 121693 RVA: 0x0042DCA8 File Offset: 0x0042BEA8
+		// Token: 0x0601F5E6 RID: 128486 RVA: 0x0045EBA0 File Offset: 0x0045CDA0
 		public static ICheckFlForestMusicBeats GetRootAsICheckFlForestMusicBeats(ByteBuffer _bb)
 		{
 			return ICheckFlForestMusicBeats.GetRootAsICheckFlForestMusicBeats(_bb, default(ICheckFlForestMusicBeats));
 		}
 
-		// Token: 0x0601DB5E RID: 121694 RVA: 0x0042DCC4 File Offset: 0x0042BEC4
+		// Token: 0x0601F5E7 RID: 128487 RVA: 0x0045EBBC File Offset: 0x0045CDBC
 		public static ICheckFlForestMusicBeats GetRootAsICheckFlForestMusicBeats(ByteBuffer _bb, ICheckFlForestMusicBeats obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DB5F RID: 121695 RVA: 0x0042DCE1 File Offset: 0x0042BEE1
+		// Token: 0x0601F5E8 RID: 128488 RVA: 0x0045EBD9 File Offset: 0x0045CDD9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DB60 RID: 121696 RVA: 0x0042DCF0 File Offset: 0x0042BEF0
+		// Token: 0x0601F5E9 RID: 128489 RVA: 0x0045EBE8 File Offset: 0x0045CDE8
 		public ICheckFlForestMusicBeats __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008970 RID: 35184
-		// (get) Token: 0x0601DB61 RID: 121697 RVA: 0x0042DD00 File Offset: 0x0042BF00
+		// Token: 0x17009045 RID: 36933
+		// (get) Token: 0x0601F5EA RID: 128490 RVA: 0x0045EBF8 File Offset: 0x0045CDF8
 		public EMusicEventType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008971 RID: 35185
-		// (get) Token: 0x0601DB62 RID: 121698 RVA: 0x0042DD3C File Offset: 0x0042BF3C
+		// Token: 0x17009046 RID: 36934
+		// (get) Token: 0x0601F5EB RID: 128491 RVA: 0x0045EC34 File Offset: 0x0045CE34
 		public string BeatType
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DB63 RID: 121699 RVA: 0x0042DD73 File Offset: 0x0042BF73
+		// Token: 0x0601F5EC RID: 128492 RVA: 0x0045EC6B File Offset: 0x0045CE6B
 		public Span<byte> GetBeatTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601DB64 RID: 121700 RVA: 0x0042DD82 File Offset: 0x0042BF82
+		// Token: 0x0601F5ED RID: 128493 RVA: 0x0045EC7A File Offset: 0x0045CE7A
 		public byte[] GetBeatTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601DB65 RID: 121701 RVA: 0x0042DD90 File Offset: 0x0042BF90
+		// Token: 0x0601F5EE RID: 128494 RVA: 0x0045EC88 File Offset: 0x0045CE88
 		public static Offset<ICheckFlForestMusicBeats> CreateICheckFlForestMusicBeats(FlatBufferBuilder builder, EMusicEventType Type = EMusicEventType.HcMusicBattle, StringOffset BeatTypeOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckFlForestMusicBeats.EndICheckFlForestMusicBeats(builder);
 		}
 
-		// Token: 0x0601DB66 RID: 121702 RVA: 0x0042DDAD File Offset: 0x0042BFAD
+		// Token: 0x0601F5EF RID: 128495 RVA: 0x0045ECA5 File Offset: 0x0045CEA5
 		public static void StartICheckFlForestMusicBeats(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601DB67 RID: 121703 RVA: 0x0042DDB6 File Offset: 0x0042BFB6
+		// Token: 0x0601F5F0 RID: 128496 RVA: 0x0045ECAE File Offset: 0x0045CEAE
 		public static void AddType(FlatBufferBuilder builder, EMusicEventType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DB68 RID: 121704 RVA: 0x0042DDC1 File Offset: 0x0042BFC1
+		// Token: 0x0601F5F1 RID: 128497 RVA: 0x0045ECB9 File Offset: 0x0045CEB9
 		public static void AddBeatType(FlatBufferBuilder builder, StringOffset beatTypeOffset)
 		{
 			builder.AddOffset(1, beatTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601DB69 RID: 121705 RVA: 0x0042DDD1 File Offset: 0x0042BFD1
+		// Token: 0x0601F5F2 RID: 128498 RVA: 0x0045ECC9 File Offset: 0x0045CEC9
 		public static Offset<ICheckFlForestMusicBeats> EndICheckFlForestMusicBeats(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckFlForestMusicBeats>(builder.EndTable());
 		}
 
-		// Token: 0x0601DB6A RID: 121706 RVA: 0x0042DDE0 File Offset: 0x0042BFE0
+		// Token: 0x0601F5F3 RID: 128499 RVA: 0x0045ECD8 File Offset: 0x0045CED8
 		public ICheckFlForestMusicBeatsT UnPack()
 		{
 			ICheckFlForestMusicBeatsT checkFlForestMusicBeatsT = new ICheckFlForestMusicBeatsT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkFlForestMusicBeatsT;
 		}
 
-		// Token: 0x0601DB6B RID: 121707 RVA: 0x0042DDFB File Offset: 0x0042BFFB
+		// Token: 0x0601F5F4 RID: 128500 RVA: 0x0045ECF3 File Offset: 0x0045CEF3
 		public void UnPackTo(ICheckFlForestMusicBeatsT _o)
 		{
 			_o.Type = this.Type;
 			_o.BeatType = this.BeatType;
 		}
 
-		// Token: 0x0601DB6C RID: 121708 RVA: 0x0042DE18 File Offset: 0x0042C018
+		// Token: 0x0601F5F5 RID: 128501 RVA: 0x0045ED10 File Offset: 0x0045CF10
 		public static Offset<ICheckFlForestMusicBeats> Pack(FlatBufferBuilder builder, ICheckFlForestMusicBeatsT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckFlForestMusicBeats.CreateICheckFlForestMusicBeats(builder, _o.Type, beatTypeOffset);
 		}
 
-		// Token: 0x0400D27C RID: 53884
+		// Token: 0x0400DD53 RID: 56659
 		private Table __p;
 	}
 }

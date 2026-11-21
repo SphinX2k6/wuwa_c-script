@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000ECB RID: 3787
+// Token: 0x02000380 RID: 896
 [NullableContext(2)]
 [Nullable(0)]
 internal class SurvivorsRogueWorldEntityModel
 {
-	// Token: 0x04002AC9 RID: 10953
+	// Token: 0x04002B64 RID: 11108
 	public int Uid;
 
-	// Token: 0x04002ACA RID: 10954
+	// Token: 0x04002B65 RID: 11109
 	public int CombatId;
 
-	// Token: 0x04002ACB RID: 10955
+	// Token: 0x04002B66 RID: 11110
 	public int PropertyId;
 
-	// Token: 0x04002ACC RID: 10956
+	// Token: 0x04002B67 RID: 11111
 	public string AssetPath;
 
-	// Token: 0x04002ACD RID: 10957
+	// Token: 0x04002B68 RID: 11112
 	public int? SplineId;
 
-	// Token: 0x04002ACE RID: 10958
+	// Token: 0x04002B69 RID: 11113
 	public Dictionary<int, int> BuffIdLayers;
 
-	// Token: 0x04002ACF RID: 10959
+	// Token: 0x04002B6A RID: 11114
 	public Dictionary<int, int> AttributeMap;
 }

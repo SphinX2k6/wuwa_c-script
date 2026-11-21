@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000848 RID: 2120
+	// Token: 0x020008EB RID: 2283
 	public class NoRenderPortalComponent_SetValue
 	{
-		// Token: 0x04001EB5 RID: 7861
+		// Token: 0x040020C4 RID: 8388
 		public bool? Disabled;
 
-		// Token: 0x04001EB6 RID: 7862
+		// Token: 0x040020C5 RID: 8389
 		public bool? EdIsLocked;
 
-		// Token: 0x04001EB7 RID: 7863
-		[Nullable(1)]
+		// Token: 0x040020C6 RID: 8390
 		public IStaticNoRenderPortal Config;
 	}
 }

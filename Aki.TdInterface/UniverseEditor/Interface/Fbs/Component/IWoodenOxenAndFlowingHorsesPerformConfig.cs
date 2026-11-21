@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B8F RID: 23439
+	// Token: 0x020061A5 RID: 24997
 	public struct IWoodenOxenAndFlowingHorsesPerformConfig : IFlatbufferObject
 	{
-		// Token: 0x1700B125 RID: 45349
-		// (get) Token: 0x06028209 RID: 164361 RVA: 0x00583F69 File Offset: 0x00582169
+		// Token: 0x1700BA6D RID: 47725
+		// (get) Token: 0x0602A7CD RID: 174029 RVA: 0x005CB9F9 File Offset: 0x005C9BF9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602820A RID: 164362 RVA: 0x00583F76 File Offset: 0x00582176
+		// Token: 0x0602A7CE RID: 174030 RVA: 0x005CBA06 File Offset: 0x005C9C06
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602820B RID: 164363 RVA: 0x00583F80 File Offset: 0x00582180
+		// Token: 0x0602A7CF RID: 174031 RVA: 0x005CBA10 File Offset: 0x005C9C10
 		public static IWoodenOxenAndFlowingHorsesPerformConfig GetRootAsIWoodenOxenAndFlowingHorsesPerformConfig(ByteBuffer _bb)
 		{
 			return IWoodenOxenAndFlowingHorsesPerformConfig.GetRootAsIWoodenOxenAndFlowingHorsesPerformConfig(_bb, default(IWoodenOxenAndFlowingHorsesPerformConfig));
 		}
 
-		// Token: 0x0602820C RID: 164364 RVA: 0x00583F9C File Offset: 0x0058219C
+		// Token: 0x0602A7D0 RID: 174032 RVA: 0x005CBA2C File Offset: 0x005C9C2C
 		public static IWoodenOxenAndFlowingHorsesPerformConfig GetRootAsIWoodenOxenAndFlowingHorsesPerformConfig(ByteBuffer _bb, IWoodenOxenAndFlowingHorsesPerformConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602820D RID: 164365 RVA: 0x00583FB9 File Offset: 0x005821B9
+		// Token: 0x0602A7D1 RID: 174033 RVA: 0x005CBA49 File Offset: 0x005C9C49
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602820E RID: 164366 RVA: 0x00583FC8 File Offset: 0x005821C8
+		// Token: 0x0602A7D2 RID: 174034 RVA: 0x005CBA58 File Offset: 0x005C9C58
 		public IWoodenOxenAndFlowingHorsesPerformConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B126 RID: 45350
-		// (get) Token: 0x0602820F RID: 164367 RVA: 0x00583FD8 File Offset: 0x005821D8
+		// Token: 0x1700BA6E RID: 47726
+		// (get) Token: 0x0602A7D3 RID: 174035 RVA: 0x005CBA68 File Offset: 0x005C9C68
 		public IVectorInfo? Offset
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B127 RID: 45351
-		// (get) Token: 0x06028210 RID: 164368 RVA: 0x00584038 File Offset: 0x00582238
+		// Token: 0x1700BA6F RID: 47727
+		// (get) Token: 0x0602A7D4 RID: 174036 RVA: 0x005CBAC8 File Offset: 0x005C9CC8
 		public string Montage
 		{
 			get
@@ -78,20 +78,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028211 RID: 164369 RVA: 0x0058406F File Offset: 0x0058226F
+		// Token: 0x0602A7D5 RID: 174037 RVA: 0x005CBAFF File Offset: 0x005C9CFF
 		public Span<byte> GetMontageBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06028212 RID: 164370 RVA: 0x0058407E File Offset: 0x0058227E
+		// Token: 0x0602A7D6 RID: 174038 RVA: 0x005CBB0E File Offset: 0x005C9D0E
 		public byte[] GetMontageArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700B128 RID: 45352
-		// (get) Token: 0x06028213 RID: 164371 RVA: 0x0058408C File Offset: 0x0058228C
+		// Token: 0x1700BA70 RID: 47728
+		// (get) Token: 0x0602A7D7 RID: 174039 RVA: 0x005CBB1C File Offset: 0x005C9D1C
 		public IVectorInfo? RelativeRot
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028214 RID: 164372 RVA: 0x005840E9 File Offset: 0x005822E9
+		// Token: 0x0602A7D8 RID: 174040 RVA: 0x005CBB79 File Offset: 0x005C9D79
 		public static Offset<IWoodenOxenAndFlowingHorsesPerformConfig> CreateIWoodenOxenAndFlowingHorsesPerformConfig(FlatBufferBuilder builder, Offset<IVectorInfo> OffsetOffset = default(Offset<IVectorInfo>), StringOffset MontageOffset = default(StringOffset), Offset<IVectorInfo> RelativeRotOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(3);
@@ -115,37 +115,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWoodenOxenAndFlowingHorsesPerformConfig.EndIWoodenOxenAndFlowingHorsesPerformConfig(builder);
 		}
 
-		// Token: 0x06028215 RID: 164373 RVA: 0x0058410D File Offset: 0x0058230D
+		// Token: 0x0602A7D9 RID: 174041 RVA: 0x005CBB9D File Offset: 0x005C9D9D
 		public static void StartIWoodenOxenAndFlowingHorsesPerformConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06028216 RID: 164374 RVA: 0x00584116 File Offset: 0x00582316
+		// Token: 0x0602A7DA RID: 174042 RVA: 0x005CBBA6 File Offset: 0x005C9DA6
 		public static void AddOffset(FlatBufferBuilder builder, Offset<IVectorInfo> offsetOffset)
 		{
 			builder.AddOffset(0, offsetOffset.Value, 0);
 		}
 
-		// Token: 0x06028217 RID: 164375 RVA: 0x00584126 File Offset: 0x00582326
+		// Token: 0x0602A7DB RID: 174043 RVA: 0x005CBBB6 File Offset: 0x005C9DB6
 		public static void AddMontage(FlatBufferBuilder builder, StringOffset montageOffset)
 		{
 			builder.AddOffset(1, montageOffset.Value, 0);
 		}
 
-		// Token: 0x06028218 RID: 164376 RVA: 0x00584136 File Offset: 0x00582336
+		// Token: 0x0602A7DC RID: 174044 RVA: 0x005CBBC6 File Offset: 0x005C9DC6
 		public static void AddRelativeRot(FlatBufferBuilder builder, Offset<IVectorInfo> relativeRotOffset)
 		{
 			builder.AddOffset(2, relativeRotOffset.Value, 0);
 		}
 
-		// Token: 0x06028219 RID: 164377 RVA: 0x00584146 File Offset: 0x00582346
+		// Token: 0x0602A7DD RID: 174045 RVA: 0x005CBBD6 File Offset: 0x005C9DD6
 		public static Offset<IWoodenOxenAndFlowingHorsesPerformConfig> EndIWoodenOxenAndFlowingHorsesPerformConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IWoodenOxenAndFlowingHorsesPerformConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602821A RID: 164378 RVA: 0x00584154 File Offset: 0x00582354
+		// Token: 0x0602A7DE RID: 174046 RVA: 0x005CBBE4 File Offset: 0x005C9DE4
 		public IWoodenOxenAndFlowingHorsesPerformConfigT UnPack()
 		{
 			IWoodenOxenAndFlowingHorsesPerformConfigT woodenOxenAndFlowingHorsesPerformConfigT = new IWoodenOxenAndFlowingHorsesPerformConfigT();
@@ -153,7 +153,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return woodenOxenAndFlowingHorsesPerformConfigT;
 		}
 
-		// Token: 0x0602821B RID: 164379 RVA: 0x00584170 File Offset: 0x00582370
+		// Token: 0x0602A7DF RID: 174047 RVA: 0x005CBC00 File Offset: 0x005C9E00
 		public void UnPackTo(IWoodenOxenAndFlowingHorsesPerformConfigT _o)
 		{
 			_o.Offset = ((this.Offset != null) ? this.Offset.Value.UnPack() : null);
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.RelativeRot = ((this.RelativeRot != null) ? this.RelativeRot.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602821C RID: 164380 RVA: 0x005841E8 File Offset: 0x005823E8
+		// Token: 0x0602A7E0 RID: 174048 RVA: 0x005CBC78 File Offset: 0x005C9E78
 		public static Offset<IWoodenOxenAndFlowingHorsesPerformConfig> Pack(FlatBufferBuilder builder, IWoodenOxenAndFlowingHorsesPerformConfigT _o)
 		{
 			if (_o == null)
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWoodenOxenAndFlowingHorsesPerformConfig.CreateIWoodenOxenAndFlowingHorsesPerformConfig(builder, offsetOffset, montageOffset, relativeRotOffset);
 		}
 
-		// Token: 0x0400F2F0 RID: 62192
+		// Token: 0x0400FFF6 RID: 65526
 		private Table __p;
 	}
 }

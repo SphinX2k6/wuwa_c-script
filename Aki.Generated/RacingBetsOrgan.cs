@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F8E RID: 3982
+	// Token: 0x02001075 RID: 4213
 	public struct RacingBetsOrgan : IFlatbufferObject
 	{
-		// Token: 0x17002CC1 RID: 11457
-		// (get) Token: 0x0600B87B RID: 47227 RVA: 0x002D61BD File Offset: 0x002D43BD
+		// Token: 0x17002D39 RID: 11577
+		// (get) Token: 0x0600BEB8 RID: 48824 RVA: 0x002F2A6D File Offset: 0x002F0C6D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B87C RID: 47228 RVA: 0x002D61CA File Offset: 0x002D43CA
+		// Token: 0x0600BEB9 RID: 48825 RVA: 0x002F2A7A File Offset: 0x002F0C7A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B87D RID: 47229 RVA: 0x002D61D4 File Offset: 0x002D43D4
+		// Token: 0x0600BEBA RID: 48826 RVA: 0x002F2A84 File Offset: 0x002F0C84
 		public static RacingBetsOrgan GetRootAsRacingBetsOrgan(ByteBuffer _bb)
 		{
 			return RacingBetsOrgan.GetRootAsRacingBetsOrgan(_bb, default(RacingBetsOrgan));
 		}
 
-		// Token: 0x0600B87E RID: 47230 RVA: 0x002D61F0 File Offset: 0x002D43F0
+		// Token: 0x0600BEBB RID: 48827 RVA: 0x002F2AA0 File Offset: 0x002F0CA0
 		public static RacingBetsOrgan GetRootAsRacingBetsOrgan(ByteBuffer _bb, RacingBetsOrgan obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B87F RID: 47231 RVA: 0x002D620D File Offset: 0x002D440D
+		// Token: 0x0600BEBC RID: 48828 RVA: 0x002F2ABD File Offset: 0x002F0CBD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B880 RID: 47232 RVA: 0x002D621C File Offset: 0x002D441C
+		// Token: 0x0600BEBD RID: 48829 RVA: 0x002F2ACC File Offset: 0x002F0CCC
 		public RacingBetsOrgan __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002CC2 RID: 11458
-		// (get) Token: 0x0600B881 RID: 47233 RVA: 0x002D622C File Offset: 0x002D442C
+		// Token: 0x17002D3A RID: 11578
+		// (get) Token: 0x0600BEBE RID: 48830 RVA: 0x002F2ADC File Offset: 0x002F0CDC
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CC3 RID: 11459
-		// (get) Token: 0x0600B882 RID: 47234 RVA: 0x002D6268 File Offset: 0x002D4468
+		// Token: 0x17002D3B RID: 11579
+		// (get) Token: 0x0600BEBF RID: 48831 RVA: 0x002F2B18 File Offset: 0x002F0D18
 		public string Name
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B883 RID: 47235 RVA: 0x002D629F File Offset: 0x002D449F
+		// Token: 0x0600BEC0 RID: 48832 RVA: 0x002F2B4F File Offset: 0x002F0D4F
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600B884 RID: 47236 RVA: 0x002D62AE File Offset: 0x002D44AE
+		// Token: 0x0600BEC1 RID: 48833 RVA: 0x002F2B5E File Offset: 0x002F0D5E
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002CC4 RID: 11460
-		// (get) Token: 0x0600B885 RID: 47237 RVA: 0x002D62C8 File Offset: 0x002D44C8
+		// Token: 0x17002D3C RID: 11580
+		// (get) Token: 0x0600BEC2 RID: 48834 RVA: 0x002F2B78 File Offset: 0x002F0D78
 		public string Description
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B886 RID: 47238 RVA: 0x002D62FF File Offset: 0x002D44FF
+		// Token: 0x0600BEC3 RID: 48835 RVA: 0x002F2BAF File Offset: 0x002F0DAF
 		public Span<byte> GetDescriptionBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600B887 RID: 47239 RVA: 0x002D630E File Offset: 0x002D450E
+		// Token: 0x0600BEC4 RID: 48836 RVA: 0x002F2BBE File Offset: 0x002F0DBE
 		public byte[] GetDescriptionArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002CC5 RID: 11461
-		// (get) Token: 0x0600B888 RID: 47240 RVA: 0x002D6328 File Offset: 0x002D4528
+		// Token: 0x17002D3D RID: 11581
+		// (get) Token: 0x0600BEC5 RID: 48837 RVA: 0x002F2BD8 File Offset: 0x002F0DD8
 		public string ActivateDesc
 		{
 			get
@@ -131,20 +131,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B889 RID: 47241 RVA: 0x002D6360 File Offset: 0x002D4560
+		// Token: 0x0600BEC6 RID: 48838 RVA: 0x002F2C10 File Offset: 0x002F0E10
 		public Span<byte> GetActivateDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600B88A RID: 47242 RVA: 0x002D6370 File Offset: 0x002D4570
+		// Token: 0x0600BEC7 RID: 48839 RVA: 0x002F2C20 File Offset: 0x002F0E20
 		public byte[] GetActivateDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002CC6 RID: 11462
-		// (get) Token: 0x0600B88B RID: 47243 RVA: 0x002D6388 File Offset: 0x002D4588
+		// Token: 0x17002D3E RID: 11582
+		// (get) Token: 0x0600BEC8 RID: 48840 RVA: 0x002F2C38 File Offset: 0x002F0E38
 		public string IconPath
 		{
 			get
@@ -158,20 +158,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B88C RID: 47244 RVA: 0x002D63C0 File Offset: 0x002D45C0
+		// Token: 0x0600BEC9 RID: 48841 RVA: 0x002F2C70 File Offset: 0x002F0E70
 		public Span<byte> GetIconPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600B88D RID: 47245 RVA: 0x002D63D0 File Offset: 0x002D45D0
+		// Token: 0x0600BECA RID: 48842 RVA: 0x002F2C80 File Offset: 0x002F0E80
 		public byte[] GetIconPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002CC7 RID: 11463
-		// (get) Token: 0x0600B88E RID: 47246 RVA: 0x002D63E8 File Offset: 0x002D45E8
+		// Token: 0x17002D3F RID: 11583
+		// (get) Token: 0x0600BECB RID: 48843 RVA: 0x002F2C98 File Offset: 0x002F0E98
 		public string DefaultSceneEffectPath
 		{
 			get
@@ -185,20 +185,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B88F RID: 47247 RVA: 0x002D6420 File Offset: 0x002D4620
+		// Token: 0x0600BECC RID: 48844 RVA: 0x002F2CD0 File Offset: 0x002F0ED0
 		public Span<byte> GetDefaultSceneEffectPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600B890 RID: 47248 RVA: 0x002D6430 File Offset: 0x002D4630
+		// Token: 0x0600BECD RID: 48845 RVA: 0x002F2CE0 File Offset: 0x002F0EE0
 		public byte[] GetDefaultSceneEffectPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002CC8 RID: 11464
-		// (get) Token: 0x0600B891 RID: 47249 RVA: 0x002D6448 File Offset: 0x002D4648
+		// Token: 0x17002D40 RID: 11584
+		// (get) Token: 0x0600BECE RID: 48846 RVA: 0x002F2CF8 File Offset: 0x002F0EF8
 		public string DynamicSceneEffectPath
 		{
 			get
@@ -212,20 +212,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B892 RID: 47250 RVA: 0x002D6480 File Offset: 0x002D4680
+		// Token: 0x0600BECF RID: 48847 RVA: 0x002F2D30 File Offset: 0x002F0F30
 		public Span<byte> GetDynamicSceneEffectPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600B893 RID: 47251 RVA: 0x002D6490 File Offset: 0x002D4690
+		// Token: 0x0600BED0 RID: 48848 RVA: 0x002F2D40 File Offset: 0x002F0F40
 		public byte[] GetDynamicSceneEffectPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002CC9 RID: 11465
-		// (get) Token: 0x0600B894 RID: 47252 RVA: 0x002D64A8 File Offset: 0x002D46A8
+		// Token: 0x17002D41 RID: 11585
+		// (get) Token: 0x0600BED1 RID: 48849 RVA: 0x002F2D58 File Offset: 0x002F0F58
 		public string ActiveSceneEffectPath
 		{
 			get
@@ -239,19 +239,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B895 RID: 47253 RVA: 0x002D64E0 File Offset: 0x002D46E0
+		// Token: 0x0600BED2 RID: 48850 RVA: 0x002F2D90 File Offset: 0x002F0F90
 		public Span<byte> GetActiveSceneEffectPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x0600B896 RID: 47254 RVA: 0x002D64F0 File Offset: 0x002D46F0
+		// Token: 0x0600BED3 RID: 48851 RVA: 0x002F2DA0 File Offset: 0x002F0FA0
 		public byte[] GetActiveSceneEffectPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0400505D RID: 20573
+		// Token: 0x04005644 RID: 22084
 		private Table __p;
 	}
 }

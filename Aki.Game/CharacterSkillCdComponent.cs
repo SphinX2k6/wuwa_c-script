@@ -7,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Battle;
 using UnrealEngine;
 
-// Token: 0x02003145 RID: 12613
+// Token: 0x020026A7 RID: 9895
 [NullableContext(1)]
 [Nullable(0)]
-public class CharacterSkillCdComponent : BaseSkillCdComponent
+public class CharacterSkillCdComponent : BaseSkillCdComponent, ISkillTableChangeListener
 {
-	// Token: 0x0601B213 RID: 111123 RVA: 0x00760A50 File Offset: 0x0075EC50
+	// Token: 0x06018CAE RID: 101550 RVA: 0x007872D8 File Offset: 0x007854D8
 	protected override bool OnInit()
 	{
 		base.OnInit();
@@ -26,7 +26,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		return true;
 	}
 
-	// Token: 0x0601B214 RID: 111124 RVA: 0x00760AE0 File Offset: 0x0075ECE0
+	// Token: 0x06018CAF RID: 101551 RVA: 0x00787368 File Offset: 0x00785568
 	protected override bool OnStart()
 	{
 		if (this.SkillComp != null)
@@ -49,13 +49,23 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 			}
 		}
 		EventSystem.Instance.AddWithTarget<double>(base.Entity, EEventName.OnChangeRoleCoolDownChanged, new Action<double>(this.GoDown));
+		BaseSkillComponent skillComp = this.SkillComp;
+		if (skillComp != null)
+		{
+			skillComp.AddSkillTableChangeListener(this);
+		}
 		return true;
 	}
 
-	// Token: 0x0601B215 RID: 111125 RVA: 0x00760BC8 File Offset: 0x0075EDC8
+	// Token: 0x06018CB0 RID: 101552 RVA: 0x00787464 File Offset: 0x00785664
 	protected override bool OnEnd()
 	{
 		base.OnEnd();
+		BaseSkillComponent skillComp = this.SkillComp;
+		if (skillComp != null)
+		{
+			skillComp.RemoveSkillTableChangeListener(this);
+		}
 		foreach (GroupSkillCdInfo groupSkillCdInfo in this.GroupSkillCdInfoMap.Values)
 		{
 			groupSkillCdInfo.ClearCdTags(base.Entity.Id);
@@ -69,14 +79,14 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		return true;
 	}
 
-	// Token: 0x0601B216 RID: 111126 RVA: 0x00760C74 File Offset: 0x0075EE74
+	// Token: 0x06018CB1 RID: 101553 RVA: 0x00787520 File Offset: 0x00785720
 	[NullableContext(2)]
 	public MultiSkillInfo GetMultiSkillInfo(int skillId)
 	{
 		return this.MultiSkillData.GetMultiSkillInfo(skillId);
 	}
 
-	// Token: 0x0601B217 RID: 111127 RVA: 0x00760C84 File Offset: 0x0075EE84
+	// Token: 0x06018CB2 RID: 101554 RVA: 0x00787530 File Offset: 0x00785730
 	public long GetNextMultiSkillId(int skillId)
 	{
 		if (GlobalData.IsPlayInEditor)
@@ -102,38 +112,60 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		return this.MultiSkillData.GetNextMultiSkillId(skillId);
 	}
 
-	// Token: 0x0601B218 RID: 111128 RVA: 0x00760D2C File Offset: 0x0075EF2C
+	// Token: 0x06018CB3 RID: 101555 RVA: 0x007875D8 File Offset: 0x007857D8
 	public bool IsMultiSkill(SSkillInfo skillInfo)
 	{
 		return this.MultiSkillData.IsMultiSkill(skillInfo);
 	}
 
-	// Token: 0x0601B219 RID: 111129 RVA: 0x00760D3A File Offset: 0x0075EF3A
+	// Token: 0x06018CB4 RID: 101556 RVA: 0x007875E6 File Offset: 0x007857E6
 	public bool CanStartMultiSkill(Skill skill)
 	{
 		SkillCdModel instance = SkillCdModel.Instance;
 		return (instance != null && instance.SkillDebugMode) || this.MultiSkillData.CanStartMultiSkill(skill);
 	}
 
-	// Token: 0x0601B21A RID: 111130 RVA: 0x00760D5D File Offset: 0x0075EF5D
+	// Token: 0x06018CB5 RID: 101557 RVA: 0x00787609 File Offset: 0x00785809
 	public bool StartMultiSkill(Skill skill, bool bCheck = true)
 	{
 		return SkillCdModel.Instance.SkillDebugMode || this.MultiSkillData.StartMultiSkill(skill, bCheck);
 	}
 
-	// Token: 0x0601B21B RID: 111131 RVA: 0x00760D7A File Offset: 0x0075EF7A
+	// Token: 0x06018CB6 RID: 101558 RVA: 0x00787626 File Offset: 0x00785826
 	public void ResetMultiSkills(int skillId)
 	{
 		this.MultiSkillData.ResetMultiSkills(skillId, false);
 	}
 
-	// Token: 0x0601B21C RID: 111132 RVA: 0x00760D89 File Offset: 0x0075EF89
+	// Token: 0x06018CB7 RID: 101559 RVA: 0x00787635 File Offset: 0x00785835
 	private void GoDown(double coolDownTime)
 	{
 		this.MultiSkillData.ResetOnChangeRole();
 	}
 
-	// Token: 0x0601B21D RID: 111133 RVA: 0x00760D98 File Offset: 0x0075EF98
+	// Token: 0x06018CB8 RID: 101560 RVA: 0x00787644 File Offset: 0x00785844
+	public void OnSkillIdsChanged(IReadOnlyList<int> candidateSkillIds)
+	{
+		EntityHandle handleByEntity = CharacterModel.Instance.GetHandleByEntity(base.Entity);
+		foreach (int num in candidateSkillIds)
+		{
+			if (!this.GroupSkillCdInfoMap.ContainsKey((long)num))
+			{
+				BaseSkillComponent skillComp = this.SkillComp;
+				SSkillInfo sskillInfo = (skillComp != null) ? skillComp.GetSkillInfo(num) : null;
+				if (sskillInfo != null)
+				{
+					GroupSkillCdInfo groupSkillCdInfo = this.InitSkillCdBySkillInfo(num, sskillInfo);
+					if (groupSkillCdInfo != null)
+					{
+						groupSkillCdInfo.InitCdTags(handleByEntity);
+					}
+				}
+			}
+		}
+	}
+
+	// Token: 0x06018CB9 RID: 101561 RVA: 0x007876D8 File Offset: 0x007858D8
 	[return: Nullable(2)]
 	public unsafe GroupSkillCdInfo InitSkillCdBySkillInfo(int skillId, SSkillInfo skillInfo)
 	{
@@ -170,7 +202,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		return null;
 	}
 
-	// Token: 0x0601B21E RID: 111134 RVA: 0x00760EC0 File Offset: 0x0075F0C0
+	// Token: 0x06018CBA RID: 101562 RVA: 0x00787800 File Offset: 0x00785A00
 	private void InitSkillCdTags()
 	{
 		EntityHandle handleByEntity = CharacterModel.Instance.GetHandleByEntity(base.Entity);
@@ -180,13 +212,13 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		}
 	}
 
-	// Token: 0x0601B21F RID: 111135 RVA: 0x00760F28 File Offset: 0x0075F128
+	// Token: 0x06018CBB RID: 101563 RVA: 0x00787868 File Offset: 0x00785A68
 	public GroupSkillCdInfo GetGroupSkillCdInfo(int skillId)
 	{
 		return this.GroupSkillCdInfoMap.GetValueOrDefault((long)skillId);
 	}
 
-	// Token: 0x0601B220 RID: 111136 RVA: 0x00760F38 File Offset: 0x0075F138
+	// Token: 0x06018CBC RID: 101564 RVA: 0x00787878 File Offset: 0x00785A78
 	public bool IsSkillInCd(int skillId, bool checkCount = true)
 	{
 		GroupSkillCdInfo groupSkillCdInfo;
@@ -201,7 +233,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		return groupSkillCdInfo.IsInCd();
 	}
 
-	// Token: 0x0601B221 RID: 111137 RVA: 0x00760F6C File Offset: 0x0075F16C
+	// Token: 0x06018CBD RID: 101565 RVA: 0x007878AC File Offset: 0x00785AAC
 	public bool ModifyCdInfo(int skillId, float skillCd)
 	{
 		if (this.GroupSkillCdInfoMap == null)
@@ -218,7 +250,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		return true;
 	}
 
-	// Token: 0x0601B222 RID: 111138 RVA: 0x00760FC8 File Offset: 0x0075F1C8
+	// Token: 0x06018CBE RID: 101566 RVA: 0x00787908 File Offset: 0x00785B08
 	[NullableContext(2)]
 	public void ModifyCdTime(long[] skillIds, float modifyTime, float changeTimePercentage)
 	{
@@ -250,7 +282,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		}
 	}
 
-	// Token: 0x0601B223 RID: 111139 RVA: 0x00761074 File Offset: 0x0075F274
+	// Token: 0x06018CBF RID: 101567 RVA: 0x007879B4 File Offset: 0x00785BB4
 	public void ModifyCdTimeBySkillGenres(int[] skillGenres, float modifyTime, float changeTimePercentage)
 	{
 		List<int> list = new List<int>();
@@ -282,7 +314,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		}
 	}
 
-	// Token: 0x0601B224 RID: 111140 RVA: 0x00761180 File Offset: 0x0075F380
+	// Token: 0x06018CC0 RID: 101568 RVA: 0x00787AC0 File Offset: 0x00785CC0
 	public bool StartCd(int skillId, IReadOnlyList<ESkillGenre> skillGenres)
 	{
 		GroupSkillCdInfo groupSkillCdInfo;
@@ -296,7 +328,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		return true;
 	}
 
-	// Token: 0x0601B225 RID: 111141 RVA: 0x007611DC File Offset: 0x0075F3DC
+	// Token: 0x06018CC1 RID: 101569 RVA: 0x00787B1C File Offset: 0x00785D1C
 	public float CalcExtraEffectCd(float skillCd, int skillId, IReadOnlyList<ESkillGenre> skillGenres)
 	{
 		float num = 0f;
@@ -344,7 +376,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		return (skillCd + num) * num2;
 	}
 
-	// Token: 0x0601B226 RID: 111142 RVA: 0x0076134C File Offset: 0x0075F54C
+	// Token: 0x06018CC2 RID: 101570 RVA: 0x00787C8C File Offset: 0x00785E8C
 	private bool IsBuffEffectSkillCd(ModifyCd effect, int skillId, IReadOnlyList<ESkillGenre> skillGenres)
 	{
 		if (effect.SkillType == 0)
@@ -365,7 +397,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		return false;
 	}
 
-	// Token: 0x0601B227 RID: 111143 RVA: 0x007613A4 File Offset: 0x0075F5A4
+	// Token: 0x06018CC3 RID: 101571 RVA: 0x00787CE4 File Offset: 0x00785EE4
 	public unsafe bool SetLimitCount(int skillId, int? limitCount = null)
 	{
 		Dictionary<long, GroupSkillCdInfo> groupSkillCdInfoMap = this.GroupSkillCdInfoMap;
@@ -387,7 +419,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		return true;
 	}
 
-	// Token: 0x0601B228 RID: 111144 RVA: 0x0076145C File Offset: 0x0075F65C
+	// Token: 0x06018CC4 RID: 101572 RVA: 0x00787D9C File Offset: 0x00785F9C
 	public unsafe bool AddLimitCount(int skillId, int limitCount)
 	{
 		Dictionary<long, GroupSkillCdInfo> groupSkillCdInfoMap = this.GroupSkillCdInfoMap;
@@ -409,7 +441,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		return true;
 	}
 
-	// Token: 0x0601B229 RID: 111145 RVA: 0x00761514 File Offset: 0x0075F714
+	// Token: 0x06018CC5 RID: 101573 RVA: 0x00787E54 File Offset: 0x00786054
 	public bool ResetCdDelayTime(int skillId)
 	{
 		GroupSkillCdInfo groupSkillCdInfo;
@@ -433,7 +465,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 		return true;
 	}
 
-	// Token: 0x0601B22A RID: 111146 RVA: 0x00761590 File Offset: 0x0075F790
+	// Token: 0x06018CC6 RID: 101574 RVA: 0x00787ED0 File Offset: 0x007860D0
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -441,91 +473,103 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 			return false;
 		}
 		CharacterSkillCdComponent characterSkillCdComponent = (CharacterSkillCdComponent)componentTemplate;
-		if (base.CanResetComponentProperty("SkillComp"))
+		if (characterSkillCdComponent.SkillComp == null)
 		{
-			if (characterSkillCdComponent.SkillComp == null)
-			{
-				this.SkillComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseSkillComponent>(this.SkillComp), "SkillComp"))
-			{
-				return false;
-			}
+			this.SkillComp = null;
 		}
-		if (base.CanResetComponentProperty("AttrComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComp), "SkillComp"))
 		{
-			if (characterSkillCdComponent.AttrComp == null)
-			{
-				this.AttrComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseAttributeComponent>(this.AttrComp), "AttrComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CurWorldSkillCdData"))
+		if (characterSkillCdComponent.AttrComp == null)
 		{
-			if (characterSkillCdComponent.CurWorldSkillCdData == null)
-			{
-				this.CurWorldSkillCdData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WorldSkillCdData>(this.CurWorldSkillCdData), "CurWorldSkillCdData"))
-			{
-				return false;
-			}
+			this.AttrComp = null;
 		}
-		if (base.CanResetComponentProperty("GroupSkillCdInfoMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttrComp), "AttrComp"))
 		{
-			if (characterSkillCdComponent.GroupSkillCdInfoMap == null)
-			{
-				this.GroupSkillCdInfoMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, GroupSkillCdInfo>>(this.GroupSkillCdInfoMap), "GroupSkillCdInfoMap"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("SkillInfoMap"))
+		if (characterSkillCdComponent.CurWorldSkillCdData == null)
 		{
-			if (characterSkillCdComponent.SkillInfoMap == null)
-			{
-				this.SkillInfoMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, SSkillInfo>>(this.SkillInfoMap), "SkillInfoMap"))
-			{
-				return false;
-			}
+			this.CurWorldSkillCdData = null;
 		}
-		if (base.CanResetComponentProperty("MultiSkillData"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurWorldSkillCdData), "CurWorldSkillCdData"))
 		{
-			if (characterSkillCdComponent.MultiSkillData == null)
-			{
-				this.MultiSkillData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MultiSkillData>(this.MultiSkillData), "MultiSkillData"))
-			{
-				return false;
-			}
+			return false;
+		}
+		if (characterSkillCdComponent.GroupSkillCdInfoMap == null)
+		{
+			this.GroupSkillCdInfoMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GroupSkillCdInfoMap), "GroupSkillCdInfoMap"))
+		{
+			return false;
+		}
+		if (characterSkillCdComponent.SkillInfoMap == null)
+		{
+			this.SkillInfoMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillInfoMap), "SkillInfoMap"))
+		{
+			return false;
+		}
+		if (characterSkillCdComponent.MultiSkillData == null)
+		{
+			this.MultiSkillData = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MultiSkillData), "MultiSkillData"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400D313 RID: 54035
+	// Token: 0x17002755 RID: 10069
+	// (get) Token: 0x06018CC7 RID: 101575 RVA: 0x00787FF2 File Offset: 0x007861F2
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002756 RID: 10070
+	// (get) Token: 0x06018CC8 RID: 101576 RVA: 0x00787FF5 File Offset: 0x007861F5
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002757 RID: 10071
+	// (get) Token: 0x06018CC9 RID: 101577 RVA: 0x00787FF8 File Offset: 0x007861F8
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D751 RID: 55121
 	private const int DEFAULT_PROPORTTION_VALUE = 10000;
 
-	// Token: 0x0400D314 RID: 54036
+	// Token: 0x0400D752 RID: 55122
 	[Nullable(2)]
 	private BaseSkillComponent SkillComp;
 
-	// Token: 0x0400D315 RID: 54037
+	// Token: 0x0400D753 RID: 55123
 	[Nullable(2)]
 	private BaseAttributeComponent AttrComp;
 
-	// Token: 0x0400D316 RID: 54038
+	// Token: 0x0400D754 RID: 55124
 	[Nullable(2)]
 	private WorldSkillCdData CurWorldSkillCdData;
 
-	// Token: 0x0400D317 RID: 54039
+	// Token: 0x0400D755 RID: 55125
 	[Nullable(new byte[]
 	{
 		2,
@@ -533,7 +577,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 	})]
 	private Dictionary<long, GroupSkillCdInfo> GroupSkillCdInfoMap;
 
-	// Token: 0x0400D318 RID: 54040
+	// Token: 0x0400D756 RID: 55126
 	[Nullable(new byte[]
 	{
 		2,
@@ -541,7 +585,7 @@ public class CharacterSkillCdComponent : BaseSkillCdComponent
 	})]
 	private Dictionary<long, SSkillInfo> SkillInfoMap;
 
-	// Token: 0x0400D319 RID: 54041
+	// Token: 0x0400D757 RID: 55127
 	[Nullable(2)]
 	private MultiSkillData MultiSkillData;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001258 RID: 4696
+	// Token: 0x02001398 RID: 5016
 	public static class EMotorFightSystemVarExtensions
 	{
-		// Token: 0x06006A33 RID: 27187 RVA: 0x000FE97C File Offset: 0x000FCB7C
+		// Token: 0x06007086 RID: 28806 RVA: 0x0010C5A8 File Offset: 0x0010A7A8
 		public static string ToEnumString(this EMotorFightSystemVar value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A34 RID: 27188 RVA: 0x000FE9DC File Offset: 0x000FCBDC
+		// Token: 0x06007087 RID: 28807 RVA: 0x0010C608 File Offset: 0x0010A808
 		public static EMotorFightSystemVar FromString(string name)
 		{
 			EMotorFightSystemVar result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A35 RID: 27189 RVA: 0x000FEA08 File Offset: 0x000FCC08
+		// Token: 0x06007088 RID: 28808 RVA: 0x0010C634 File Offset: 0x0010A834
 		public static bool TryFromString(string name, out EMotorFightSystemVar value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006A36 RID: 27190 RVA: 0x000FEA82 File Offset: 0x000FCC82
+		// Token: 0x06007089 RID: 28809 RVA: 0x0010C6AE File Offset: 0x0010A8AE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A37 RID: 27191 RVA: 0x000FEAB2 File Offset: 0x000FCCB2
+		// Token: 0x0600708A RID: 28810 RVA: 0x0010C6DE File Offset: 0x0010A8DE
 		public static EMotorFightSystemVar[] GetValues()
 		{
 			return new EMotorFightSystemVar[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A38 RID: 27192 RVA: 0x000FEAC5 File Offset: 0x000FCCC5
+		// Token: 0x0600708B RID: 28811 RVA: 0x0010C6F1 File Offset: 0x0010A8F1
 		public static string[] GetNames()
 		{
 			return new string[]

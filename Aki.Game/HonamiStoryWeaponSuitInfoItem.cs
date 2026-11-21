@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F08 RID: 7944
+// Token: 0x020013CA RID: 5066
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class HonamiStoryWeaponSuitInfoItem : GridProxyAbstract<IHonamiStoryWeaponSuitData>
 {
-	// Token: 0x0600F4A4 RID: 62628 RVA: 0x003B059C File Offset: 0x003AE79C
+	// Token: 0x0600C8C3 RID: 51395 RVA: 0x003BC090 File Offset: 0x003BA290
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -42,7 +42,7 @@ public class HonamiStoryWeaponSuitInfoItem : GridProxyAbstract<IHonamiStoryWeapo
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F4A5 RID: 62629 RVA: 0x003B06AC File Offset: 0x003AE8AC
+	// Token: 0x0600C8C4 RID: 51396 RVA: 0x003BC1A0 File Offset: 0x003BA3A0
 	protected override void OnStart()
 	{
 		TermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -54,7 +54,7 @@ public class HonamiStoryWeaponSuitInfoItem : GridProxyAbstract<IHonamiStoryWeapo
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x0600F4A6 RID: 62630 RVA: 0x003B06E8 File Offset: 0x003AE8E8
+	// Token: 0x0600C8C5 RID: 51397 RVA: 0x003BC1DC File Offset: 0x003BA3DC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryWeaponSuitInfoItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -65,7 +65,7 @@ public class HonamiStoryWeaponSuitInfoItem : GridProxyAbstract<IHonamiStoryWeapo
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F4A7 RID: 62631 RVA: 0x003B072C File Offset: 0x003AE92C
+	// Token: 0x0600C8C6 RID: 51398 RVA: 0x003BC220 File Offset: 0x003BA420
 	public override void Refresh(IHonamiStoryWeaponSuitData data, bool isSelected, int gridIndex)
 	{
 		int suitId = data.SuitId;
@@ -107,26 +107,26 @@ public class HonamiStoryWeaponSuitInfoItem : GridProxyAbstract<IHonamiStoryWeapo
 		this.SuitActiveItem.Refresh(data);
 	}
 
-	// Token: 0x04007134 RID: 28980
+	// Token: 0x04007215 RID: 29205
 	private HonamiStoryWeaponSuitActiveItem SuitActiveItem;
 
-	// Token: 0x02008514 RID: 34068
+	// Token: 0x02007699 RID: 30361
 	[NullableContext(0)]
 	private enum EHonamiStoryWeaponSuitInfoItemComponent
 	{
-		// Token: 0x0402B4EE RID: 177390
+		// Token: 0x04026812 RID: 157714
 		TitleText,
-		// Token: 0x0402B4EF RID: 177391
+		// Token: 0x04026813 RID: 157715
 		DescText,
-		// Token: 0x0402B4F0 RID: 177392
+		// Token: 0x04026814 RID: 157716
 		ActiveSprite,
-		// Token: 0x0402B4F1 RID: 177393
+		// Token: 0x04026815 RID: 157717
 		NonActiveSprite,
-		// Token: 0x0402B4F2 RID: 177394
+		// Token: 0x04026816 RID: 157718
 		TipSprite,
-		// Token: 0x0402B4F3 RID: 177395
+		// Token: 0x04026817 RID: 157719
 		SuitActiveItem,
-		// Token: 0x0402B4F4 RID: 177396
+		// Token: 0x04026818 RID: 157720
 		SuitNumText
 	}
 }

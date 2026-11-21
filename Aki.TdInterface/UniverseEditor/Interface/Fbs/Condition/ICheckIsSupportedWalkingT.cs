@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A9D RID: 19101
+	// Token: 0x02004F6C RID: 20332
 	public class ICheckIsSupportedWalkingT
 	{
-		// Token: 0x17008A67 RID: 35431
-		// (get) Token: 0x0601DF74 RID: 122740 RVA: 0x004350A8 File Offset: 0x004332A8
-		// (set) Token: 0x0601DF75 RID: 122741 RVA: 0x004350B0 File Offset: 0x004332B0
+		// Token: 0x17009154 RID: 37204
+		// (get) Token: 0x0601FA5D RID: 129629 RVA: 0x004668C8 File Offset: 0x00464AC8
+		// (set) Token: 0x0601FA5E RID: 129630 RVA: 0x004668D0 File Offset: 0x00464AD0
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008A68 RID: 35432
-		// (get) Token: 0x0601DF76 RID: 122742 RVA: 0x004350B9 File Offset: 0x004332B9
-		// (set) Token: 0x0601DF77 RID: 122743 RVA: 0x004350C1 File Offset: 0x004332C1
+		// Token: 0x17009155 RID: 37205
+		// (get) Token: 0x0601FA5F RID: 129631 RVA: 0x004668D9 File Offset: 0x00464AD9
+		// (set) Token: 0x0601FA60 RID: 129632 RVA: 0x004668E1 File Offset: 0x00464AE1
 		public bool IsSupported { get; set; }
 
-		// Token: 0x0601DF78 RID: 122744 RVA: 0x004350CA File Offset: 0x004332CA
+		// Token: 0x0601FA61 RID: 129633 RVA: 0x004668EA File Offset: 0x00464AEA
 		public ICheckIsSupportedWalkingT()
 		{
 			this.Type = ECondition.CompareVar;

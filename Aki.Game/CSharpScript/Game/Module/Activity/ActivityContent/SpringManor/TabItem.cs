@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006071 RID: 24689
+	// Token: 0x02004FEF RID: 20463
 	public class TabItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603E705 RID: 255749 RVA: 0x00F15B0C File Offset: 0x00F13D0C
+		// Token: 0x060333C9 RID: 209865 RVA: 0x00E5C8D0 File Offset: 0x00E5AAD0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603E706 RID: 255750 RVA: 0x00F15BD4 File Offset: 0x00F13DD4
+		// Token: 0x060333CA RID: 209866 RVA: 0x00E5C998 File Offset: 0x00E5AB98
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.TabIndex = data;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item.SetUIActive(SpringManorModel.Instance.ActivityData.IsTabHasAnyClaimable(data));
 		}
 
-		// Token: 0x0603E707 RID: 255751 RVA: 0x00F15C36 File Offset: 0x00F13E36
+		// Token: 0x060333CB RID: 209867 RVA: 0x00E5C9FA File Offset: 0x00E5ABFA
 		private void OnClickToggle(EToggleState state)
 		{
 			Action<int> onTabClickCallBack = this.OnTabClickCallBack;
@@ -63,20 +63,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			onTabClickCallBack(this.TabIndex);
 		}
 
-		// Token: 0x0603E708 RID: 255752 RVA: 0x00F15C4E File Offset: 0x00F13E4E
+		// Token: 0x060333CC RID: 209868 RVA: 0x00E5CA12 File Offset: 0x00E5AC12
 		[NullableContext(1)]
 		public void SetTabClickCallback(Action<int> callback)
 		{
 			this.OnTabClickCallBack = callback;
 		}
 
-		// Token: 0x0603E709 RID: 255753 RVA: 0x00F15C57 File Offset: 0x00F13E57
+		// Token: 0x060333CD RID: 209869 RVA: 0x00E5CA1B File Offset: 0x00E5AC1B
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleSelect(false, false);
 		}
 
-		// Token: 0x0603E70A RID: 255754 RVA: 0x00F15C61 File Offset: 0x00F13E61
+		// Token: 0x060333CE RID: 209870 RVA: 0x00E5CA25 File Offset: 0x00E5AC25
 		public void SetToggleSelect(bool isSelected, bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -87,10 +87,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			extendToggle.SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x04020A49 RID: 133705
+		// Token: 0x0401B376 RID: 111478
 		private int TabIndex = -1;
 
-		// Token: 0x04020A4A RID: 133706
+		// Token: 0x0401B377 RID: 111479
 		[Nullable(2)]
 		private Action<int> OnTabClickCallBack;
 	}

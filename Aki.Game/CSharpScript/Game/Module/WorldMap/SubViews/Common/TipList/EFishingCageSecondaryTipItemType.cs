@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Common.TipList
 {
-	// Token: 0x02004839 RID: 18489
+	// Token: 0x0200376A RID: 14186
 	public enum EFishingCageSecondaryTipItemType
 	{
-		// Token: 0x0401A042 RID: 106562
+		// Token: 0x040146F6 RID: 83702
 		NextHarvestTimeStamp,
-		// Token: 0x0401A043 RID: 106563
+		// Token: 0x040146F7 RID: 83703
 		Capacity
 	}
 }

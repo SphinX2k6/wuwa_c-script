@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200492E RID: 18734
+	// Token: 0x020038A5 RID: 14501
 	public class NavigationRoleResonanceToggle : NavigationToggle
 	{
-		// Token: 0x06030EC8 RID: 200392 RVA: 0x00B5BAAB File Offset: 0x00B59CAB
+		// Token: 0x060259F5 RID: 154101 RVA: 0x00A9691B File Offset: 0x00A94B1B
 		[NullableContext(1)]
 		public NavigationRoleResonanceToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030EC9 RID: 200393 RVA: 0x00B5BAB8 File Offset: 0x00B59CB8
+		// Token: 0x060259F6 RID: 154102 RVA: 0x00A96928 File Offset: 0x00A94B28
 		protected override void OnStart()
 		{
 			UUIExtendToggle uuiextendToggle = this.Selectable as UUIExtendToggle;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationNewController.Instance.MarkViewHandleRefreshNavigationDirty();
 		}
 
-		// Token: 0x06030ECA RID: 200394 RVA: 0x00B5BB20 File Offset: 0x00B59D20
+		// Token: 0x060259F7 RID: 154103 RVA: 0x00A96990 File Offset: 0x00A94B90
 		protected override void OnToggleClick(EToggleState state)
 		{
 			RoleResonancePanelHandle roleResonancePanelHandle = this.PanelHandle as RoleResonancePanelHandle;

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200029B RID: 667
+	// Token: 0x020002AF RID: 687
 	public class ConfigExploreRewardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000FA7 RID: 4007 RVA: 0x000B2023 File Offset: 0x000B0223
+		// Token: 0x0600101F RID: 4127 RVA: 0x000B82E7 File Offset: 0x000B64E7
 		static ConfigExploreRewardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigExploreRewardById.CreateStaticDefaultValue), new Action(ConfigExploreRewardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000FA8 RID: 4008 RVA: 0x000B2044 File Offset: 0x000B0244
+		// Token: 0x06001020 RID: 4128 RVA: 0x000B8308 File Offset: 0x000B6508
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigExploreRewardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000FA9 RID: 4009 RVA: 0x000B20C3 File Offset: 0x000B02C3
+		// Token: 0x06001021 RID: 4129 RVA: 0x000B8387 File Offset: 0x000B6587
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigExploreRewardById.LogPair = null;
 			ConfigExploreRewardById.HandleId = 0;
 		}
 
-		// Token: 0x06000FAA RID: 4010 RVA: 0x000B20D1 File Offset: 0x000B02D1
+		// Token: 0x06001022 RID: 4130 RVA: 0x000B8395 File Offset: 0x000B6595
 		public static void Init()
 		{
 			ConfigExploreRewardById.HandleId = ConfigCommon.InitDataStatement(ConfigExploreRewardById.HandleId, "db_explore_progress.db", "select BinData from `ExploreReward` where Id=?");
 		}
 
-		// Token: 0x06000FAB RID: 4011 RVA: 0x000B20EC File Offset: 0x000B02EC
+		// Token: 0x06001023 RID: 4131 RVA: 0x000B83B0 File Offset: 0x000B65B0
 		public static ExploreReward? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigExploreRewardById.HandleId, ConfigExploreRewardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ExploreReward?(rootAsExploreReward);
 		}
 
-		// Token: 0x04001221 RID: 4641
+		// Token: 0x040012AD RID: 4781
 		private const string DB = "db_explore_progress.db";
 
-		// Token: 0x04001222 RID: 4642
+		// Token: 0x040012AE RID: 4782
 		private const string FILE = "t.探索度.xlsx";
 
-		// Token: 0x04001223 RID: 4643
+		// Token: 0x040012AF RID: 4783
 		private const string TABLE = "ExploreReward";
 
-		// Token: 0x04001224 RID: 4644
+		// Token: 0x040012B0 RID: 4784
 		private const string COMMAND = "select BinData from `ExploreReward` where Id=?";
 
-		// Token: 0x04001225 RID: 4645
+		// Token: 0x040012B1 RID: 4785
 		private const string KEY_PREFIX = "ExploreRewardById";
 
-		// Token: 0x04001226 RID: 4646
+		// Token: 0x040012B2 RID: 4786
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001227 RID: 4647
+		// Token: 0x040012B3 RID: 4787
 		private static int HandleId;
 	}
 }

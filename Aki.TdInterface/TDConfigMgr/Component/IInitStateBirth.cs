@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000468 RID: 1128
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004C1 RID: 1217
 	public class IInitStateBirth : IInitState
 	{
-		// Token: 0x060016BF RID: 5823 RVA: 0x00045C10 File Offset: 0x00043E10
+		// Token: 0x06001859 RID: 6233 RVA: 0x00049958 File Offset: 0x00047B58
 		private IInitStateBirth_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060016C0 RID: 5824 RVA: 0x00045C48 File Offset: 0x00043E48
+		// Token: 0x0600185A RID: 6234 RVA: 0x00049990 File Offset: 0x00047B90
 		public static IInitStateBirth Create([Nullable(2)] IInitStateBirth instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016C1 RID: 5825 RVA: 0x00045C5B File Offset: 0x00043E5B
+		// Token: 0x0600185B RID: 6235 RVA: 0x000499A3 File Offset: 0x00047BA3
 		public static IInitStateBirth CreateFromSetValue([Nullable(2)] IInitStateBirth_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016C2 RID: 5826 RVA: 0x00045C6E File Offset: 0x00043E6E
+		// Token: 0x0600185C RID: 6236 RVA: 0x000499B6 File Offset: 0x00047BB6
 		public new IInitStateBirth_SetValue ToSetValue()
 		{
 			return new IInitStateBirth_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000621 RID: 1569
-		// (get) Token: 0x060016C3 RID: 5827 RVA: 0x00045C8D File Offset: 0x00043E8D
-		// (set) Token: 0x060016C4 RID: 5828 RVA: 0x00045CB8 File Offset: 0x00043EB8
+		// Token: 0x17000688 RID: 1672
+		// (get) Token: 0x0600185D RID: 6237 RVA: 0x000499D5 File Offset: 0x00047BD5
+		// (set) Token: 0x0600185E RID: 6238 RVA: 0x00049A00 File Offset: 0x00047C00
 		public override EInitStateType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000622 RID: 1570
-		// (get) Token: 0x060016C5 RID: 5829 RVA: 0x00045CC6 File Offset: 0x00043EC6
-		// (set) Token: 0x060016C6 RID: 5830 RVA: 0x00045CF1 File Offset: 0x00043EF1
+		// Token: 0x17000689 RID: 1673
+		// (get) Token: 0x0600185F RID: 6239 RVA: 0x00049A0E File Offset: 0x00047C0E
+		// (set) Token: 0x06001860 RID: 6240 RVA: 0x00049A39 File Offset: 0x00047C39
 		public virtual string BirthTag
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001140 RID: 4416
+		// Token: 0x04001262 RID: 4706
 		[Nullable(2)]
 		protected new IInitStateBirth FbInstance;
 
-		// Token: 0x04001141 RID: 4417
+		// Token: 0x04001263 RID: 4707
 		[Nullable(2)]
 		protected new IInitStateBirth_SetValue PocoInterface;
 	}

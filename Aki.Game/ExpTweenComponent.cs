@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001823 RID: 6179
+// Token: 0x02000CDC RID: 3292
 [NullableContext(2)]
 [Nullable(0)]
 public class ExpTweenComponent
 {
-	// Token: 0x0600B559 RID: 46425 RVA: 0x0028F444 File Offset: 0x0028D644
+	// Token: 0x06008944 RID: 35140 RVA: 0x00299B64 File Offset: 0x00297D64
 	[NullableContext(1)]
 	public ExpTweenComponent(UUISprite currentSprite, UUISprite addSprite, UUISprite nextSprite, [Nullable(2)] UUIItem parent, [Nullable(2)] Action tweenFinishFunction = null)
 	{
@@ -20,7 +20,7 @@ public class ExpTweenComponent
 		this.PreviewDelegate = DelegateUtils.ToManualReleaseDelegate<FLTweenFloatSetterDynamic>(new Action<float>(this.PlayPreviewFillAmount));
 	}
 
-	// Token: 0x0600B55A RID: 46426 RVA: 0x0028F4C0 File Offset: 0x0028D6C0
+	// Token: 0x06008945 RID: 35141 RVA: 0x00299BE0 File Offset: 0x00297DE0
 	protected void PlayTween(int currentCount, int targetCount, float time, float delay = 0f, LTweenEase ease = LTweenEase.Linear)
 	{
 		float startValue = (currentCount == 1) ? this.CurrentSprite.GetFillAmount() : 0f;
@@ -37,7 +37,7 @@ public class ExpTweenComponent
 		});
 	}
 
-	// Token: 0x0600B55B RID: 46427 RVA: 0x0028F5A8 File Offset: 0x0028D7A8
+	// Token: 0x06008946 RID: 35142 RVA: 0x00299CC8 File Offset: 0x00297EC8
 	protected void TweenCompleteCallBack(int currentCount, int targetCount, float time, float delay = 0f, LTweenEase ease = LTweenEase.Linear)
 	{
 		this.KillExpTweener();
@@ -57,13 +57,13 @@ public class ExpTweenComponent
 		}
 	}
 
-	// Token: 0x0600B55C RID: 46428 RVA: 0x0028F609 File Offset: 0x0028D809
+	// Token: 0x06008947 RID: 35143 RVA: 0x00299D29 File Offset: 0x00297F29
 	protected void PlayFillAmount(float value)
 	{
 		this.SetCurrentFillAmount(value);
 	}
 
-	// Token: 0x0600B55D RID: 46429 RVA: 0x0028F612 File Offset: 0x0028D812
+	// Token: 0x06008948 RID: 35144 RVA: 0x00299D32 File Offset: 0x00297F32
 	protected void KillExpTweener()
 	{
 		if (this.ExpTweener != null)
@@ -73,7 +73,7 @@ public class ExpTweenComponent
 		}
 	}
 
-	// Token: 0x0600B55E RID: 46430 RVA: 0x0028F630 File Offset: 0x0028D830
+	// Token: 0x06008949 RID: 35145 RVA: 0x00299D50 File Offset: 0x00297F50
 	protected void PlayPreviewTween(float start, float end, float time, bool needAgain)
 	{
 		this.PreviewExpTweener = ULTweenBPLibrary.FloatTo(GlobalData.World, this.PreviewDelegate, start, end, time, 0f, LTweenEase.OutCubic);
@@ -83,7 +83,7 @@ public class ExpTweenComponent
 		});
 	}
 
-	// Token: 0x0600B55F RID: 46431 RVA: 0x0028F699 File Offset: 0x0028D899
+	// Token: 0x0600894A RID: 35146 RVA: 0x00299DB9 File Offset: 0x00297FB9
 	protected void PreviewTweenCompleteCallBack(float playTime, bool needAgain)
 	{
 		this.KillPreviewExpTweener(false);
@@ -95,7 +95,7 @@ public class ExpTweenComponent
 		this.PreviewTweenStopState();
 	}
 
-	// Token: 0x0600B560 RID: 46432 RVA: 0x0028F6B4 File Offset: 0x0028D8B4
+	// Token: 0x0600894B RID: 35147 RVA: 0x00299DD4 File Offset: 0x00297FD4
 	protected void PreviewTweenStopState()
 	{
 		if (this.PreviewFinalFillAmount == 1f)
@@ -113,7 +113,7 @@ public class ExpTweenComponent
 		}
 	}
 
-	// Token: 0x0600B561 RID: 46433 RVA: 0x0028F714 File Offset: 0x0028D914
+	// Token: 0x0600894C RID: 35148 RVA: 0x00299E34 File Offset: 0x00298034
 	protected void PreviewTweenPlayAgainState(float playTime)
 	{
 		if (this.ArrivedLevel > this.TargetLevel)
@@ -136,7 +136,7 @@ public class ExpTweenComponent
 		}
 	}
 
-	// Token: 0x0600B562 RID: 46434 RVA: 0x0028F7A3 File Offset: 0x0028D9A3
+	// Token: 0x0600894D RID: 35149 RVA: 0x00299EC3 File Offset: 0x002980C3
 	protected void PlayPreviewFillAmount(float value)
 	{
 		if (this.InCurrent)
@@ -151,7 +151,7 @@ public class ExpTweenComponent
 		}
 	}
 
-	// Token: 0x0600B563 RID: 46435 RVA: 0x0028F7D9 File Offset: 0x0028D9D9
+	// Token: 0x0600894E RID: 35150 RVA: 0x00299EF9 File Offset: 0x002980F9
 	protected void KillPreviewExpTweener(bool callComplete = false)
 	{
 		ULTweener previewExpTweener = this.PreviewExpTweener;
@@ -166,21 +166,21 @@ public class ExpTweenComponent
 		}
 	}
 
-	// Token: 0x0600B564 RID: 46436 RVA: 0x0028F7FD File Offset: 0x0028D9FD
+	// Token: 0x0600894F RID: 35151 RVA: 0x00299F1D File Offset: 0x0029811D
 	[NullableContext(1)]
 	public void BindPlayCompleteCallBack(Action<bool> callback)
 	{
 		this.PlayCompleteCallBack = callback;
 	}
 
-	// Token: 0x0600B565 RID: 46437 RVA: 0x0028F806 File Offset: 0x0028DA06
+	// Token: 0x06008950 RID: 35152 RVA: 0x00299F26 File Offset: 0x00298126
 	[NullableContext(1)]
 	public void BindPlayCurrentFillAmountCallback(Action<float> callback)
 	{
 		this.PlayCurrentFillAmountCallback = callback;
 	}
 
-	// Token: 0x0600B566 RID: 46438 RVA: 0x0028F80F File Offset: 0x0028DA0F
+	// Token: 0x06008951 RID: 35153 RVA: 0x00299F2F File Offset: 0x0029812F
 	public void SetCurrentFillAmount(float fillAmount)
 	{
 		this.CurrentSprite.SetFillAmount(fillAmount);
@@ -190,31 +190,31 @@ public class ExpTweenComponent
 		}
 	}
 
-	// Token: 0x0600B567 RID: 46439 RVA: 0x0028F831 File Offset: 0x0028DA31
+	// Token: 0x06008952 RID: 35154 RVA: 0x00299F51 File Offset: 0x00298151
 	public void SetNextFillAmount(float fillAmount)
 	{
 		this.NextSprite.SetFillAmount(fillAmount);
 	}
 
-	// Token: 0x0600B568 RID: 46440 RVA: 0x0028F83F File Offset: 0x0028DA3F
+	// Token: 0x06008953 RID: 35155 RVA: 0x00299F5F File Offset: 0x0029815F
 	public void SetAddFillAmount(float fillAmount)
 	{
 		this.AddSprite.SetFillAmount(fillAmount);
 	}
 
-	// Token: 0x0600B569 RID: 46441 RVA: 0x0028F84D File Offset: 0x0028DA4D
+	// Token: 0x06008954 RID: 35156 RVA: 0x00299F6D File Offset: 0x0029816D
 	public void SetCurrentSpriteActive(bool bActive)
 	{
 		this.CurrentSprite.SetUIActive(bActive);
 	}
 
-	// Token: 0x0600B56A RID: 46442 RVA: 0x0028F85B File Offset: 0x0028DA5B
+	// Token: 0x06008955 RID: 35157 RVA: 0x00299F7B File Offset: 0x0029817B
 	public void SetNextSpriteActive(bool bActive)
 	{
 		this.NextSprite.SetUIActive(bActive);
 	}
 
-	// Token: 0x0600B56B RID: 46443 RVA: 0x0028F86C File Offset: 0x0028DA6C
+	// Token: 0x06008956 RID: 35158 RVA: 0x00299F8C File Offset: 0x0029818C
 	public void PlayExpTween(int targetCount, float finalFillAmount, float delay = 0f, LTweenEase ease = LTweenEase.Linear)
 	{
 		this.SetCurrentSpriteActive(true);
@@ -225,7 +225,7 @@ public class ExpTweenComponent
 		this.PlayTween(this.StartCount, targetCount, time, delay, ease);
 	}
 
-	// Token: 0x0600B56C RID: 46444 RVA: 0x0028F8BC File Offset: 0x0028DABC
+	// Token: 0x06008957 RID: 35159 RVA: 0x00299FDC File Offset: 0x002981DC
 	public void PlayPreviewExpTween(int currentLevel, int lastTimeArrivedLevel, int targetLevel, int currentMaxLevel, float targetFillAmount)
 	{
 		this.KillPreviewExpTweener(true);
@@ -253,7 +253,7 @@ public class ExpTweenComponent
 		this.PlayPreviewTween(start, num.Value, time, flag);
 	}
 
-	// Token: 0x0600B56D RID: 46445 RVA: 0x0028F9A4 File Offset: 0x0028DBA4
+	// Token: 0x06008958 RID: 35160 RVA: 0x0029A0C4 File Offset: 0x002982C4
 	public void Destroy()
 	{
 		UiLayer.Instance.SetShowMaskLayer("ExpTweenComponent", false);
@@ -268,60 +268,60 @@ public class ExpTweenComponent
 		this.NextSprite = null;
 	}
 
-	// Token: 0x040051DD RID: 20957
+	// Token: 0x04005288 RID: 21128
 	protected UUISprite AddSprite;
 
-	// Token: 0x040051DE RID: 20958
+	// Token: 0x04005289 RID: 21129
 	protected UUISprite CurrentSprite;
 
-	// Token: 0x040051DF RID: 20959
+	// Token: 0x0400528A RID: 21130
 	protected UUISprite NextSprite;
 
-	// Token: 0x040051E0 RID: 20960
+	// Token: 0x0400528B RID: 21131
 	protected ULTweener ExpTweener;
 
-	// Token: 0x040051E1 RID: 20961
+	// Token: 0x0400528C RID: 21132
 	protected float TweenTime = 1f;
 
-	// Token: 0x040051E2 RID: 20962
+	// Token: 0x0400528D RID: 21133
 	protected int StartCount = 1;
 
-	// Token: 0x040051E3 RID: 20963
+	// Token: 0x0400528E RID: 21134
 	protected float FinalFillAmount;
 
-	// Token: 0x040051E4 RID: 20964
+	// Token: 0x0400528F RID: 21135
 	protected FLTweenFloatSetterDynamic Delegate;
 
-	// Token: 0x040051E5 RID: 20965
+	// Token: 0x04005290 RID: 21136
 	protected ULTweener PreviewExpTweener;
 
-	// Token: 0x040051E6 RID: 20966
+	// Token: 0x04005291 RID: 21137
 	protected float PreviewTweenTime = 0.5f;
 
-	// Token: 0x040051E7 RID: 20967
+	// Token: 0x04005292 RID: 21138
 	protected float PreviewFinalFillAmount;
 
-	// Token: 0x040051E8 RID: 20968
+	// Token: 0x04005293 RID: 21139
 	protected FLTweenFloatSetterDynamic PreviewDelegate;
 
-	// Token: 0x040051E9 RID: 20969
+	// Token: 0x04005294 RID: 21140
 	protected int CurrentLevel;
 
-	// Token: 0x040051EA RID: 20970
+	// Token: 0x04005295 RID: 21141
 	protected int ArrivedLevel;
 
-	// Token: 0x040051EB RID: 20971
+	// Token: 0x04005296 RID: 21142
 	protected int TargetLevel;
 
-	// Token: 0x040051EC RID: 20972
+	// Token: 0x04005297 RID: 21143
 	protected bool InCurrent;
 
-	// Token: 0x040051ED RID: 20973
+	// Token: 0x04005298 RID: 21144
 	private Action<float> PlayCurrentFillAmountCallback;
 
-	// Token: 0x040051EE RID: 20974
+	// Token: 0x04005299 RID: 21145
 	private Action<bool> PlayCompleteCallBack;
 
-	// Token: 0x040051EF RID: 20975
+	// Token: 0x0400529A RID: 21146
 	protected Action TweenFinishFunction;
 }

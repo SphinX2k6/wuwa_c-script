@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D3F RID: 23871
+	// Token: 0x02004D21 RID: 19745
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ChargingDeviceHeadState : HeadStateViewBase
 	{
-		// Token: 0x0603C8CD RID: 248013 RVA: 0x00E87ABC File Offset: 0x00E85CBC
+		// Token: 0x06031826 RID: 202790 RVA: 0x00DD825C File Offset: 0x00DD645C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C8CE RID: 248014 RVA: 0x00E87B48 File Offset: 0x00E85D48
+		// Token: 0x06031827 RID: 202791 RVA: 0x00DD82E8 File Offset: 0x00DD64E8
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x0603C8CF RID: 248015 RVA: 0x00E87B86 File Offset: 0x00E85D86
+		// Token: 0x06031828 RID: 202792 RVA: 0x00DD8326 File Offset: 0x00DD6526
 		protected override string GetResourceId()
 		{
 			return "UiItem_HpClean";
 		}
 
-		// Token: 0x0603C8D0 RID: 248016 RVA: 0x00E87B90 File Offset: 0x00E85D90
+		// Token: 0x06031829 RID: 202793 RVA: 0x00DD8330 File Offset: 0x00DD6530
 		protected override void ActiveBattleHeadState(HeadStateData headStateData)
 		{
 			base.ActiveBattleHeadState(headStateData);
@@ -65,14 +65,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C8D1 RID: 248017 RVA: 0x00E87C06 File Offset: 0x00E85E06
+		// Token: 0x0603182A RID: 202794 RVA: 0x00DD83A6 File Offset: 0x00DD65A6
 		protected override void BindCallback()
 		{
 			base.BindCallback();
 			this.HeadStateData.BindOnProgressControlDataChange(new Action<SceneItemProgressControlComponent.TProgressData>(this.OnProgressControlDataChange));
 		}
 
-		// Token: 0x0603C8D2 RID: 248018 RVA: 0x00E87C25 File Offset: 0x00E85E25
+		// Token: 0x0603182B RID: 202795 RVA: 0x00DD83C5 File Offset: 0x00DD65C5
 		public void OnProgressControlDataChange(SceneItemProgressControlComponent.TProgressData progressData)
 		{
 			if (progressData.ProgressCtrlType == EProgressBarControlType.ChargingDevice)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C8D3 RID: 248019 RVA: 0x00E87C44 File Offset: 0x00E85E44
+		// Token: 0x0603182C RID: 202796 RVA: 0x00DD83E4 File Offset: 0x00DD65E4
 		private void SetProgress(float progress)
 		{
 			base.GetTexture(1).SetFillAmount(progress);
@@ -104,25 +104,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F8B0 RID: 129200
+		// Token: 0x0401A369 RID: 107369
 		private float BarFullWidth;
 
-		// Token: 0x0401F8B1 RID: 129201
+		// Token: 0x0401A36A RID: 107370
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401F8B2 RID: 129202
+		// Token: 0x0401A36B RID: 107371
 		private bool PlayedFullSequence;
 
-		// Token: 0x0200BFE1 RID: 49121
+		// Token: 0x0200A9E7 RID: 43495
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039E30 RID: 237104
+			// Token: 0x040347F2 RID: 215026
 			TxtProgress,
-			// Token: 0x04039E31 RID: 237105
+			// Token: 0x040347F3 RID: 215027
 			BarProgress,
-			// Token: 0x04039E32 RID: 237106
+			// Token: 0x040347F4 RID: 215028
 			TexHandle
 		}
 	}

@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020004BB RID: 1211
+	// Token: 0x020004A4 RID: 1188
 	[NetMessage(EMessageId.EntityRemoveNotify)]
 	public sealed class EntityRemoveNotify : IMessage<EntityRemoveNotify>, IMessage, IEquatable<EntityRemoveNotify>, IDeepCloneable<EntityRemoveNotify>, IBufferMessage
 	{
-		// Token: 0x06007346 RID: 29510 RVA: 0x0011AA37 File Offset: 0x00118C37
+		// Token: 0x060071B6 RID: 29110 RVA: 0x00117917 File Offset: 0x00115B17
 		[NullableContext(1)]
 		public static EntityRemoveNotify Create()
 		{
 			return new EntityRemoveNotify();
 		}
 
-		// Token: 0x1700164C RID: 5708
-		// (get) Token: 0x06007347 RID: 29511 RVA: 0x0011AA3E File Offset: 0x00118C3E
+		// Token: 0x170015F7 RID: 5623
+		// (get) Token: 0x060071B7 RID: 29111 RVA: 0x0011791E File Offset: 0x00115B1E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700164D RID: 5709
-		// (get) Token: 0x06007348 RID: 29512 RVA: 0x0011AA41 File Offset: 0x00118C41
+		// Token: 0x170015F8 RID: 5624
+		// (get) Token: 0x060071B8 RID: 29112 RVA: 0x00117921 File Offset: 0x00115B21
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007349 RID: 29513 RVA: 0x0011AA48 File Offset: 0x00118C48
+		// Token: 0x060071B9 RID: 29113 RVA: 0x00117928 File Offset: 0x00115B28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityRemoveNotify()
 		{
 		}
 
-		// Token: 0x0600734A RID: 29514 RVA: 0x0011AA5B File Offset: 0x00118C5B
+		// Token: 0x060071BA RID: 29114 RVA: 0x0011793B File Offset: 0x00115B3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityRemoveNotify(EntityRemoveNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600734B RID: 29515 RVA: 0x0011AA91 File Offset: 0x00118C91
+		// Token: 0x060071BB RID: 29115 RVA: 0x00117971 File Offset: 0x00115B71
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityRemoveNotify Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 			return new EntityRemoveNotify(this);
 		}
 
-		// Token: 0x1700164E RID: 5710
-		// (get) Token: 0x0600734C RID: 29516 RVA: 0x0011AA99 File Offset: 0x00118C99
+		// Token: 0x170015F9 RID: 5625
+		// (get) Token: 0x060071BC RID: 29116 RVA: 0x00117979 File Offset: 0x00115B79
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<EntityRemoveInfo> RemoveInfos
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700164F RID: 5711
-		// (get) Token: 0x0600734D RID: 29517 RVA: 0x0011AAA1 File Offset: 0x00118CA1
-		// (set) Token: 0x0600734E RID: 29518 RVA: 0x0011AAA9 File Offset: 0x00118CA9
+		// Token: 0x170015FA RID: 5626
+		// (get) Token: 0x060071BD RID: 29117 RVA: 0x00117981 File Offset: 0x00115B81
+		// (set) Token: 0x060071BE RID: 29118 RVA: 0x00117989 File Offset: 0x00115B89
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsRemove
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600734F RID: 29519 RVA: 0x0011AAB2 File Offset: 0x00118CB2
+		// Token: 0x060071BF RID: 29119 RVA: 0x00117992 File Offset: 0x00115B92
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as EntityRemoveNotify);
 		}
 
-		// Token: 0x06007350 RID: 29520 RVA: 0x0011AAC0 File Offset: 0x00118CC0
+		// Token: 0x060071C0 RID: 29120 RVA: 0x001179A0 File Offset: 0x00115BA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(EntityRemoveNotify other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.removeInfos_.Equals(other.removeInfos_) && this.IsRemove == other.IsRemove && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06007351 RID: 29521 RVA: 0x0011AB10 File Offset: 0x00118D10
+		// Token: 0x060071C1 RID: 29121 RVA: 0x001179F0 File Offset: 0x00115BF0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007352 RID: 29522 RVA: 0x0011AB5D File Offset: 0x00118D5D
+		// Token: 0x060071C2 RID: 29122 RVA: 0x00117A3D File Offset: 0x00115C3D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06007353 RID: 29523 RVA: 0x0011AB6A File Offset: 0x00118D6A
+		// Token: 0x060071C3 RID: 29123 RVA: 0x00117A4A File Offset: 0x00115C4A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,14 +147,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06007354 RID: 29524 RVA: 0x0011AB74 File Offset: 0x00118D74
+		// Token: 0x060071C4 RID: 29124 RVA: 0x00117A54 File Offset: 0x00115C54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.IsRemove)
 			{
-				output.WriteRawTag(32);
+				output.WriteRawTag(80);
 				output.WriteBool(this.IsRemove);
 			}
 			this.removeInfos_.WriteTo(ref output, EntityRemoveNotify._repeated_removeInfos_codec);
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007355 RID: 29525 RVA: 0x0011ABC4 File Offset: 0x00118DC4
+		// Token: 0x060071C5 RID: 29125 RVA: 0x00117AA4 File Offset: 0x00115CA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007356 RID: 29526 RVA: 0x0011AC0C File Offset: 0x00118E0C
+		// Token: 0x060071C6 RID: 29126 RVA: 0x00117AEC File Offset: 0x00115CEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(EntityRemoveNotify other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06007357 RID: 29527 RVA: 0x0011AC59 File Offset: 0x00118E59
+		// Token: 0x060071C7 RID: 29127 RVA: 0x00117B39 File Offset: 0x00115D39
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06007358 RID: 29528 RVA: 0x0011AC64 File Offset: 0x00118E64
+		// Token: 0x060071C8 RID: 29128 RVA: 0x00117B44 File Offset: 0x00115D44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,9 +219,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 32U)
+				if (num != 80U)
 				{
-					if (num != 42U)
+					if (num != 114U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003D19 RID: 15641
+		// Token: 0x04003D05 RID: 15621
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003D1A RID: 15642
-		public const int RemoveInfosFieldNumber = 5;
+		// Token: 0x04003D06 RID: 15622
+		public const int RemoveInfosFieldNumber = 14;
 
-		// Token: 0x04003D1B RID: 15643
-		private static readonly FieldCodec<EntityRemoveInfo> _repeated_removeInfos_codec = FieldCodec.ForMessage<EntityRemoveInfo>(42U, EntityRemoveInfo.Parser);
+		// Token: 0x04003D07 RID: 15623
+		private static readonly FieldCodec<EntityRemoveInfo> _repeated_removeInfos_codec = FieldCodec.ForMessage<EntityRemoveInfo>(114U, EntityRemoveInfo.Parser);
 
-		// Token: 0x04003D1C RID: 15644
+		// Token: 0x04003D08 RID: 15624
 		private readonly RepeatedField<EntityRemoveInfo> removeInfos_ = new RepeatedField<EntityRemoveInfo>();
 
-		// Token: 0x04003D1D RID: 15645
-		public const int IsRemoveFieldNumber = 4;
+		// Token: 0x04003D09 RID: 15625
+		public const int IsRemoveFieldNumber = 10;
 
-		// Token: 0x04003D1E RID: 15646
+		// Token: 0x04003D0A RID: 15626
 		private bool isRemove_;
 	}
 }

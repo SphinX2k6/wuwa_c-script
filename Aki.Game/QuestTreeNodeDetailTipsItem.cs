@@ -5,17 +5,17 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020026B9 RID: 9913
+// Token: 0x02001BA4 RID: 7076
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestTreeNodeDetailTipsItem : UiPanelBase
 {
-	// Token: 0x06014526 RID: 83238 RVA: 0x00523FA7 File Offset: 0x005221A7
+	// Token: 0x06011A08 RID: 72200 RVA: 0x00532CDF File Offset: 0x00530EDF
 	public QuestTreeNodeDetailTipsItem(QuestTreeNodeData Data)
 	{
 	}
 
-	// Token: 0x06014527 RID: 83239 RVA: 0x00523FB8 File Offset: 0x005221B8
+	// Token: 0x06011A09 RID: 72201 RVA: 0x00532CF0 File Offset: 0x00530EF0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -38,25 +38,25 @@ public class QuestTreeNodeDetailTipsItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014528 RID: 83240 RVA: 0x0052407F File Offset: 0x0052227F
+	// Token: 0x06011A0A RID: 72202 RVA: 0x00532DB7 File Offset: 0x00530FB7
 	public void SetLocalText(string textId)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, Array.Empty<object>());
 	}
 
-	// Token: 0x06014529 RID: 83241 RVA: 0x00524098 File Offset: 0x00522298
+	// Token: 0x06011A0B RID: 72203 RVA: 0x00532DD0 File Offset: 0x00530FD0
 	public void SetBtnActive(bool active)
 	{
 		base.GetButton(2).GetRootComponent().SetUIActive(active);
 	}
 
-	// Token: 0x0601452A RID: 83242 RVA: 0x005240AC File Offset: 0x005222AC
+	// Token: 0x06011A0C RID: 72204 RVA: 0x00532DE4 File Offset: 0x00530FE4
 	public void UpdateData(QuestTreeNodeData data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x0601452B RID: 83243 RVA: 0x005240B8 File Offset: 0x005222B8
+	// Token: 0x06011A0D RID: 72205 RVA: 0x00532DF0 File Offset: 0x00530FF0
 	private void OnBtnClick()
 	{
 		Quest quest = QuestNewModel.Instance.GetQuest(this.Data.QuestId);
@@ -72,20 +72,20 @@ public class QuestTreeNodeDetailTipsItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x040098D0 RID: 39120
+	// Token: 0x04009A28 RID: 39464
 	private QuestTreeNodeData Data = Data;
 
-	// Token: 0x02008D11 RID: 36113
+	// Token: 0x02007E9A RID: 32410
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402DC8F RID: 187535
+		// Token: 0x04028FA6 RID: 167846
 		public const int SpriteLock = 0;
 
-		// Token: 0x0402DC90 RID: 187536
+		// Token: 0x04028FA7 RID: 167847
 		public const int TextContent = 1;
 
-		// Token: 0x0402DC91 RID: 187537
+		// Token: 0x04028FA8 RID: 167848
 		public const int BtnTips = 2;
 	}
 }

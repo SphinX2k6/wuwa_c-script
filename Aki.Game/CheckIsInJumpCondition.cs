@@ -1,38 +1,34 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using CSharpScript.Game;
 
-// Token: 0x020017D8 RID: 6104
+// Token: 0x02000C91 RID: 3217
 [NullableContext(1)]
 [Nullable(0)]
 public class CheckIsInJumpCondition : BaseCheckCondition
 {
-	// Token: 0x0600B271 RID: 45681 RVA: 0x00284E39 File Offset: 0x00283039
+	// Token: 0x0600865A RID: 34394 RVA: 0x0028F407 File Offset: 0x0028D607
 	public CheckIsInJumpCondition(string paramsString, bool isSuccessNode) : base(paramsString, isSuccessNode)
 	{
 		this.Type = EComboTeachingCheckType.Update;
 		this.FailType = EComboTeachingFailCondition.NotInJump;
 	}
 
-	// Token: 0x17000F09 RID: 3849
-	// (get) Token: 0x0600B272 RID: 45682 RVA: 0x00284E5F File Offset: 0x0028305F
-	// (set) Token: 0x0600B273 RID: 45683 RVA: 0x00284E67 File Offset: 0x00283067
+	// Token: 0x17000F2C RID: 3884
+	// (get) Token: 0x0600865B RID: 34395 RVA: 0x0028F42D File Offset: 0x0028D62D
+	// (set) Token: 0x0600865C RID: 34396 RVA: 0x0028F435 File Offset: 0x0028D635
 	public override EComboTeachingCheckType Type { get; set; } = EComboTeachingCheckType.Update;
 
-	// Token: 0x17000F0A RID: 3850
-	// (get) Token: 0x0600B274 RID: 45684 RVA: 0x00284E70 File Offset: 0x00283070
-	// (set) Token: 0x0600B275 RID: 45685 RVA: 0x00284E78 File Offset: 0x00283078
+	// Token: 0x17000F2D RID: 3885
+	// (get) Token: 0x0600865D RID: 34397 RVA: 0x0028F43E File Offset: 0x0028D63E
+	// (set) Token: 0x0600865E RID: 34398 RVA: 0x0028F446 File Offset: 0x0028D646
 	protected override EComboTeachingFailCondition FailType { get; set; } = EComboTeachingFailCondition.NotInJump;
 
-	// Token: 0x0600B276 RID: 45686 RVA: 0x00284E84 File Offset: 0x00283084
+	// Token: 0x0600865F RID: 34399 RVA: 0x0028F450 File Offset: 0x0028D650
 	public override bool Check(IComboTeachingInfo data, [Nullable(2)] IBaseCheckConditionInfo param = null)
 	{
-		int entityIdNoBlueprint = Global.BaseCharacter.GetEntityIdNoBlueprint();
-		Entity entity = EntitySystem.Instance.Get(entityIdNoBlueprint);
-		object obj = (entity != null) ? entity.GetComponent<BaseTagComponent>() : null;
+		BaseTagComponent playerComponent = BaseCheckCondition.GetPlayerComponent<BaseTagComponent>();
 		bool flag = ComboTeachingModel.Instance.BeforeJumpTime > 0f;
-		object obj2 = obj;
-		bool? flag2 = (obj2 != null) ? new bool?(obj2.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.地面"])) : null;
+		bool? flag2 = (playerComponent != null) ? new bool?(playerComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.地面"])) : null;
 		return !flag && flag2.GetValueOrDefault();
 	}
 }

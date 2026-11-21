@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F32 RID: 3890
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001048 RID: 4168
 	public class ICustomPlaceholderBindingProgress
 	{
-		// Token: 0x06005674 RID: 22132 RVA: 0x000D3E30 File Offset: 0x000D2030
+		// Token: 0x06005BF0 RID: 23536 RVA: 0x000DFFD8 File Offset: 0x000DE1D8
 		private ICustomPlaceholderBindingProgress_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005675 RID: 22133 RVA: 0x000D3E68 File Offset: 0x000D2068
+		// Token: 0x06005BF1 RID: 23537 RVA: 0x000E0010 File Offset: 0x000DE210
 		public static ICustomPlaceholderBindingProgress Create([Nullable(2)] ICustomPlaceholderBindingProgress instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005676 RID: 22134 RVA: 0x000D3E7B File Offset: 0x000D207B
+		// Token: 0x06005BF2 RID: 23538 RVA: 0x000E0023 File Offset: 0x000DE223
 		public static ICustomPlaceholderBindingProgress CreateFromSetValue([Nullable(2)] ICustomPlaceholderBindingProgress_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005677 RID: 22135 RVA: 0x000D3E8E File Offset: 0x000D208E
+		// Token: 0x06005BF3 RID: 23539 RVA: 0x000E0036 File Offset: 0x000DE236
 		public ICustomPlaceholderBindingProgress_SetValue ToSetValue()
 		{
 			return new ICustomPlaceholderBindingProgress_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001CF0 RID: 7408
-		// (get) Token: 0x06005678 RID: 22136 RVA: 0x000D3EAD File Offset: 0x000D20AD
-		// (set) Token: 0x06005679 RID: 22137 RVA: 0x000D3ED8 File Offset: 0x000D20D8
+		// Token: 0x17001E88 RID: 7816
+		// (get) Token: 0x06005BF4 RID: 23540 RVA: 0x000E0055 File Offset: 0x000DE255
+		// (set) Token: 0x06005BF5 RID: 23541 RVA: 0x000E0080 File Offset: 0x000DE280
 		public virtual string PlaceHolderName
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001CF1 RID: 7409
-		// (get) Token: 0x0600567A RID: 22138 RVA: 0x000D3EE8 File Offset: 0x000D20E8
-		// (set) Token: 0x0600567B RID: 22139 RVA: 0x000D3F49 File Offset: 0x000D2149
+		// Token: 0x17001E89 RID: 7817
+		// (get) Token: 0x06005BF6 RID: 23542 RVA: 0x000E0090 File Offset: 0x000DE290
+		// (set) Token: 0x06005BF7 RID: 23543 RVA: 0x000E00F1 File Offset: 0x000DE2F1
 		public virtual IPlayerHavingItemCount BindingProgressType
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003469 RID: 13417
+		// Token: 0x04003776 RID: 14198
 		[Nullable(2)]
 		protected ICustomPlaceholderBindingProgress FbInstance;
 
-		// Token: 0x0400346A RID: 13418
+		// Token: 0x04003777 RID: 14199
 		[Nullable(2)]
 		protected ICustomPlaceholderBindingProgress_SetValue PocoInterface;
 
-		// Token: 0x0400346B RID: 13419
+		// Token: 0x04003778 RID: 14200
 		private IPlayerHavingItemCount _BindingProgressTypeCache;
 
-		// Token: 0x0400346C RID: 13420
+		// Token: 0x04003779 RID: 14201
 		private bool _BindingProgressTypeInited;
 	}
 }

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DAC RID: 15788
+	// Token: 0x020041C3 RID: 16835
 	public struct IConditionBtNode : IFlatbufferObject
 	{
-		// Token: 0x17006C9E RID: 27806
-		// (get) Token: 0x06015F3E RID: 89918 RVA: 0x0032B8B5 File Offset: 0x00329AB5
+		// Token: 0x17007258 RID: 29272
+		// (get) Token: 0x06017476 RID: 95350 RVA: 0x00352BE1 File Offset: 0x00350DE1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015F3F RID: 89919 RVA: 0x0032B8C2 File Offset: 0x00329AC2
+		// Token: 0x06017477 RID: 95351 RVA: 0x00352BEE File Offset: 0x00350DEE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015F40 RID: 89920 RVA: 0x0032B8CC File Offset: 0x00329ACC
+		// Token: 0x06017478 RID: 95352 RVA: 0x00352BF8 File Offset: 0x00350DF8
 		public static IConditionBtNode GetRootAsIConditionBtNode(ByteBuffer _bb)
 		{
 			return IConditionBtNode.GetRootAsIConditionBtNode(_bb, default(IConditionBtNode));
 		}
 
-		// Token: 0x06015F41 RID: 89921 RVA: 0x0032B8E8 File Offset: 0x00329AE8
+		// Token: 0x06017479 RID: 95353 RVA: 0x00352C14 File Offset: 0x00350E14
 		public static IConditionBtNode GetRootAsIConditionBtNode(ByteBuffer _bb, IConditionBtNode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015F42 RID: 89922 RVA: 0x0032B905 File Offset: 0x00329B05
+		// Token: 0x0601747A RID: 95354 RVA: 0x00352C31 File Offset: 0x00350E31
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015F43 RID: 89923 RVA: 0x0032B914 File Offset: 0x00329B14
+		// Token: 0x0601747B RID: 95355 RVA: 0x00352C40 File Offset: 0x00350E40
 		public IConditionBtNode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006C9F RID: 27807
-		// (get) Token: 0x06015F44 RID: 89924 RVA: 0x0032B924 File Offset: 0x00329B24
+		// Token: 0x17007259 RID: 29273
+		// (get) Token: 0x0601747C RID: 95356 RVA: 0x00352C50 File Offset: 0x00350E50
 		public EBtNode Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006CA0 RID: 27808
-		// (get) Token: 0x06015F45 RID: 89925 RVA: 0x0032B960 File Offset: 0x00329B60
+		// Token: 0x1700725A RID: 29274
+		// (get) Token: 0x0601747D RID: 95357 RVA: 0x00352C8C File Offset: 0x00350E8C
 		public int Id
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006CA1 RID: 27809
-		// (get) Token: 0x06015F46 RID: 89926 RVA: 0x0032B99C File Offset: 0x00329B9C
+		// Token: 0x1700725B RID: 29275
+		// (get) Token: 0x0601747E RID: 95358 RVA: 0x00352CC8 File Offset: 0x00350EC8
 		public string Desc
 		{
 			get
@@ -94,20 +94,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015F47 RID: 89927 RVA: 0x0032B9D3 File Offset: 0x00329BD3
+		// Token: 0x0601747F RID: 95359 RVA: 0x00352CFF File Offset: 0x00350EFF
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06015F48 RID: 89928 RVA: 0x0032B9E2 File Offset: 0x00329BE2
+		// Token: 0x06017480 RID: 95360 RVA: 0x00352D0E File Offset: 0x00350F0E
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x17006CA2 RID: 27810
-		// (get) Token: 0x06015F49 RID: 89929 RVA: 0x0032B9F0 File Offset: 0x00329BF0
+		// Token: 0x1700725C RID: 29276
+		// (get) Token: 0x06017481 RID: 95361 RVA: 0x00352D1C File Offset: 0x00350F1C
 		public IFixProcessor? FixProcessor
 		{
 			get
@@ -121,8 +121,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006CA3 RID: 27811
-		// (get) Token: 0x06015F4A RID: 89930 RVA: 0x0032BA50 File Offset: 0x00329C50
+		// Token: 0x1700725D RID: 29277
+		// (get) Token: 0x06017482 RID: 95362 RVA: 0x00352D7C File Offset: 0x00350F7C
 		public bool _FoldedForTree
 		{
 			get
@@ -132,8 +132,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006CA4 RID: 27812
-		// (get) Token: 0x06015F4B RID: 89931 RVA: 0x0032BA90 File Offset: 0x00329C90
+		// Token: 0x1700725E RID: 29278
+		// (get) Token: 0x06017483 RID: 95363 RVA: 0x00352DBC File Offset: 0x00350FBC
 		public bool Disabled
 		{
 			get
@@ -143,8 +143,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006CA5 RID: 27813
-		// (get) Token: 0x06015F4C RID: 89932 RVA: 0x0032BAD0 File Offset: 0x00329CD0
+		// Token: 0x1700725F RID: 29279
+		// (get) Token: 0x06017484 RID: 95364 RVA: 0x00352DFC File Offset: 0x00350FFC
 		public IConditionGroup? Condition
 		{
 			get
@@ -158,8 +158,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006CA6 RID: 27814
-		// (get) Token: 0x06015F4D RID: 89933 RVA: 0x0032BB30 File Offset: 0x00329D30
+		// Token: 0x17007260 RID: 29280
+		// (get) Token: 0x06017485 RID: 95365 RVA: 0x00352E5C File Offset: 0x0035105C
 		public bool WaitUntilTrue
 		{
 			get
@@ -169,8 +169,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006CA7 RID: 27815
-		// (get) Token: 0x06015F4E RID: 89934 RVA: 0x0032BB70 File Offset: 0x00329D70
+		// Token: 0x17007261 RID: 29281
+		// (get) Token: 0x06017486 RID: 95366 RVA: 0x00352E9C File Offset: 0x0035109C
 		public byte NullMask
 		{
 			get
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015F4F RID: 89935 RVA: 0x0032BBB0 File Offset: 0x00329DB0
+		// Token: 0x06017487 RID: 95367 RVA: 0x00352EDC File Offset: 0x003510DC
 		public static Offset<IConditionBtNode> CreateIConditionBtNode(FlatBufferBuilder builder, EBtNode Type = EBtNode.Start, int Id = 0, StringOffset DescOffset = default(StringOffset), Offset<IFixProcessor> FixProcessorOffset = default(Offset<IFixProcessor>), bool _foldedForTree = false, bool Disabled = false, Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), bool WaitUntilTrue = false, byte NullMask = 0)
 		{
 			builder.StartTable(9);
@@ -200,73 +200,73 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IConditionBtNode.EndIConditionBtNode(builder);
 		}
 
-		// Token: 0x06015F50 RID: 89936 RVA: 0x0032BC10 File Offset: 0x00329E10
+		// Token: 0x06017488 RID: 95368 RVA: 0x00352F3C File Offset: 0x0035113C
 		public static void StartIConditionBtNode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(9);
 		}
 
-		// Token: 0x06015F51 RID: 89937 RVA: 0x0032BC1A File Offset: 0x00329E1A
+		// Token: 0x06017489 RID: 95369 RVA: 0x00352F46 File Offset: 0x00351146
 		public static void AddType(FlatBufferBuilder builder, EBtNode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015F52 RID: 89938 RVA: 0x0032BC25 File Offset: 0x00329E25
+		// Token: 0x0601748A RID: 95370 RVA: 0x00352F51 File Offset: 0x00351151
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06015F53 RID: 89939 RVA: 0x0032BC30 File Offset: 0x00329E30
+		// Token: 0x0601748B RID: 95371 RVA: 0x00352F5C File Offset: 0x0035115C
 		public static void AddDesc(FlatBufferBuilder builder, StringOffset descOffset)
 		{
 			builder.AddOffset(2, descOffset.Value, 0);
 		}
 
-		// Token: 0x06015F54 RID: 89940 RVA: 0x0032BC40 File Offset: 0x00329E40
+		// Token: 0x0601748C RID: 95372 RVA: 0x00352F6C File Offset: 0x0035116C
 		public static void AddFixProcessor(FlatBufferBuilder builder, Offset<IFixProcessor> fixProcessorOffset)
 		{
 			builder.AddOffset(3, fixProcessorOffset.Value, 0);
 		}
 
-		// Token: 0x06015F55 RID: 89941 RVA: 0x0032BC50 File Offset: 0x00329E50
+		// Token: 0x0601748D RID: 95373 RVA: 0x00352F7C File Offset: 0x0035117C
 		public static void Add_FoldedForTree(FlatBufferBuilder builder, bool _FoldedForTree)
 		{
 			builder.AddBool(4, _FoldedForTree, false);
 		}
 
-		// Token: 0x06015F56 RID: 89942 RVA: 0x0032BC5B File Offset: 0x00329E5B
+		// Token: 0x0601748E RID: 95374 RVA: 0x00352F87 File Offset: 0x00351187
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(5, disabled, false);
 		}
 
-		// Token: 0x06015F57 RID: 89943 RVA: 0x0032BC66 File Offset: 0x00329E66
+		// Token: 0x0601748F RID: 95375 RVA: 0x00352F92 File Offset: 0x00351192
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
 			builder.AddOffset(6, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x06015F58 RID: 89944 RVA: 0x0032BC76 File Offset: 0x00329E76
+		// Token: 0x06017490 RID: 95376 RVA: 0x00352FA2 File Offset: 0x003511A2
 		public static void AddWaitUntilTrue(FlatBufferBuilder builder, bool waitUntilTrue)
 		{
 			builder.AddBool(7, waitUntilTrue, false);
 		}
 
-		// Token: 0x06015F59 RID: 89945 RVA: 0x0032BC81 File Offset: 0x00329E81
+		// Token: 0x06017491 RID: 95377 RVA: 0x00352FAD File Offset: 0x003511AD
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(8, nullMask, 0);
 		}
 
-		// Token: 0x06015F5A RID: 89946 RVA: 0x0032BC8C File Offset: 0x00329E8C
+		// Token: 0x06017492 RID: 95378 RVA: 0x00352FB8 File Offset: 0x003511B8
 		public static Offset<IConditionBtNode> EndIConditionBtNode(FlatBufferBuilder builder)
 		{
 			return new Offset<IConditionBtNode>(builder.EndTable());
 		}
 
-		// Token: 0x06015F5B RID: 89947 RVA: 0x0032BC9C File Offset: 0x00329E9C
+		// Token: 0x06017493 RID: 95379 RVA: 0x00352FC8 File Offset: 0x003511C8
 		public IConditionBtNodeT UnPack()
 		{
 			IConditionBtNodeT conditionBtNodeT = new IConditionBtNodeT();
@@ -274,7 +274,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return conditionBtNodeT;
 		}
 
-		// Token: 0x06015F5C RID: 89948 RVA: 0x0032BCB8 File Offset: 0x00329EB8
+		// Token: 0x06017494 RID: 95380 RVA: 0x00352FE4 File Offset: 0x003511E4
 		public void UnPackTo(IConditionBtNodeT _o)
 		{
 			_o.Type = this.Type;
@@ -288,7 +288,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06015F5D RID: 89949 RVA: 0x0032BD78 File Offset: 0x00329F78
+		// Token: 0x06017495 RID: 95381 RVA: 0x003530A4 File Offset: 0x003512A4
 		public static Offset<IConditionBtNode> Pack(FlatBufferBuilder builder, IConditionBtNodeT _o)
 		{
 			if (_o == null)
@@ -301,7 +301,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IConditionBtNode.CreateIConditionBtNode(builder, _o.Type, _o.Id, descOffset, fixProcessorOffset, _o._FoldedForTree, _o.Disabled, conditionOffset, _o.WaitUntilTrue, _o.NullMask);
 		}
 
-		// Token: 0x0400B6BD RID: 46781
+		// Token: 0x0400C06A RID: 49258
 		private Table __p;
 	}
 }

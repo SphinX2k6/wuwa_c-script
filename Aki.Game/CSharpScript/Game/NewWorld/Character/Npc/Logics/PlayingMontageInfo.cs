@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Npc.Logics
 {
-	// Token: 0x02007096 RID: 28822
+	// Token: 0x020062FB RID: 25339
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlayingMontageInfo
 	{
-		// Token: 0x060463C1 RID: 287681 RVA: 0x01192C00 File Offset: 0x01190E00
+		// Token: 0x0603D4AC RID: 251052 RVA: 0x011B5D0C File Offset: 0x011B3F0C
 		[NullableContext(1)]
 		public PlayingMontageInfo(CharacterAnimationComponent animComp, int uid, string path, PlayMontageConfig config, [Nullable(2)] Action<PlayingMontageInfo> onPlay = null, [Nullable(2)] Action<PlayingMontageInfo> onStop = null, [Nullable(2)] Func<PlayingMontageInfo, bool> onCheck = null)
 		{
@@ -23,13 +23,13 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Logics
 			this.OnCheckPlayCondition = onCheck;
 		}
 
-		// Token: 0x060463C2 RID: 287682 RVA: 0x01192C64 File Offset: 0x01190E64
+		// Token: 0x0603D4AD RID: 251053 RVA: 0x011B5D70 File Offset: 0x011B3F70
 		public bool CheckPlayCondition()
 		{
 			return this.OnCheckPlayCondition == null || this.OnCheckPlayCondition(this);
 		}
 
-		// Token: 0x060463C3 RID: 287683 RVA: 0x01192C7C File Offset: 0x01190E7C
+		// Token: 0x0603D4AE RID: 251054 RVA: 0x011B5D88 File Offset: 0x011B3F88
 		public void OnClearInfo()
 		{
 			if (this.OnStopMontage != null)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Logics
 			this.OnCheckPlayCondition = null;
 		}
 
-		// Token: 0x060463C4 RID: 287684 RVA: 0x01192CEB File Offset: 0x01190EEB
+		// Token: 0x0603D4AF RID: 251055 RVA: 0x011B5DF7 File Offset: 0x011B3FF7
 		public void PlayMontageLoop([Nullable(new byte[]
 		{
 			1,
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Logics
 			this.PlayMontageLogic(endCallback);
 		}
 
-		// Token: 0x060463C5 RID: 287685 RVA: 0x01192D08 File Offset: 0x01190F08
+		// Token: 0x0603D4B0 RID: 251056 RVA: 0x011B5E14 File Offset: 0x011B4014
 		private void PlayMontageLogic([Nullable(new byte[]
 		{
 			1,
@@ -117,35 +117,35 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Logics
 			}, (float)((int)num), null, null, true, 1f);
 		}
 
-		// Token: 0x04024CCF RID: 150735
+		// Token: 0x04020821 RID: 133153
 		public int Uid;
 
-		// Token: 0x04024CD0 RID: 150736
+		// Token: 0x04020822 RID: 133154
 		public int EntityId;
 
-		// Token: 0x04024CD1 RID: 150737
+		// Token: 0x04020823 RID: 133155
 		[Nullable(1)]
 		public string MontagePath = "";
 
-		// Token: 0x04024CD2 RID: 150738
+		// Token: 0x04020824 RID: 133156
 		public PlayMontageConfig MontageConfig;
 
-		// Token: 0x04024CD3 RID: 150739
+		// Token: 0x04020825 RID: 133157
 		public CharacterAnimationComponent AnimComp;
 
-		// Token: 0x04024CD4 RID: 150740
+		// Token: 0x04020826 RID: 133158
 		public UAnimMontage BodyMontage;
 
-		// Token: 0x04024CD5 RID: 150741
+		// Token: 0x04020827 RID: 133159
 		public TimerHandle TimerHandle;
 
-		// Token: 0x04024CD6 RID: 150742
+		// Token: 0x04020828 RID: 133160
 		private Func<PlayingMontageInfo, bool> OnCheckPlayCondition;
 
-		// Token: 0x04024CD7 RID: 150743
+		// Token: 0x04020829 RID: 133161
 		private Action<PlayingMontageInfo> OnPlayMontage;
 
-		// Token: 0x04024CD8 RID: 150744
+		// Token: 0x0402082A RID: 133162
 		private Action<PlayingMontageInfo> OnStopMontage;
 	}
 }

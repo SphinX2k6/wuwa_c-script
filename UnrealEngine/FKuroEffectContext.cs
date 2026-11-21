@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018C7 RID: 6343
+	// Token: 0x020003E2 RID: 994
 	[UnrealObjectPath("/Script/KuroGameplay.KuroEffectContext")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 48)]
 	public class FKuroEffectContext : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060176F9 RID: 95993 RVA: 0x002246AE File Offset: 0x002228AE
+		// Token: 0x06006171 RID: 24945 RVA: 0x0008B5C6 File Offset: 0x000897C6
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroEffectContext._ScriptStructPtr != 0) ? FKuroEffectContext._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroGameplay.KuroEffectContext", ref FKuroEffectContext._ScriptStructPtr);
 		}
 
-		// Token: 0x17005E9D RID: 24221
-		// (get) Token: 0x060176FA RID: 95994 RVA: 0x002246D2 File Offset: 0x002228D2
-		// (set) Token: 0x060176FB RID: 95995 RVA: 0x002246E2 File Offset: 0x002228E2
+		// Token: 0x170013D5 RID: 5077
+		// (get) Token: 0x06006172 RID: 24946 RVA: 0x0008B5EA File Offset: 0x000897EA
+		// (set) Token: 0x06006173 RID: 24947 RVA: 0x0008B5FA File Offset: 0x000897FA
 		public unsafe int EntityId
 		{
 			get
@@ -32,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E9E RID: 24222
-		// (get) Token: 0x060176FC RID: 95996 RVA: 0x002246F3 File Offset: 0x002228F3
-		// (set) Token: 0x060176FD RID: 95997 RVA: 0x00224707 File Offset: 0x00222907
+		// Token: 0x170013D6 RID: 5078
+		// (get) Token: 0x06006174 RID: 24948 RVA: 0x0008B60B File Offset: 0x0008980B
+		// (set) Token: 0x06006175 RID: 24949 RVA: 0x0008B61F File Offset: 0x0008981F
 		[Nullable(2)]
 		public unsafe UObject SourceObject
 		{
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E9F RID: 24223
-		// (get) Token: 0x060176FE RID: 95998 RVA: 0x0022471C File Offset: 0x0022291C
-		// (set) Token: 0x060176FF RID: 95999 RVA: 0x0022472C File Offset: 0x0022292C
+		// Token: 0x170013D7 RID: 5079
+		// (get) Token: 0x06006176 RID: 24950 RVA: 0x0008B634 File Offset: 0x00089834
+		// (set) Token: 0x06006177 RID: 24951 RVA: 0x0008B644 File Offset: 0x00089844
 		public unsafe bool DisablePostProcess
 		{
 			get
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EA0 RID: 24224
-		// (get) Token: 0x06017700 RID: 96000 RVA: 0x0022473D File Offset: 0x0022293D
-		// (set) Token: 0x06017701 RID: 96001 RVA: 0x0022474D File Offset: 0x0022294D
+		// Token: 0x170013D8 RID: 5080
+		// (get) Token: 0x06006178 RID: 24952 RVA: 0x0008B655 File Offset: 0x00089855
+		// (set) Token: 0x06006179 RID: 24953 RVA: 0x0008B665 File Offset: 0x00089865
 		public unsafe int CreateFromType
 		{
 			get
@@ -80,9 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EA1 RID: 24225
-		// (get) Token: 0x06017702 RID: 96002 RVA: 0x0022475E File Offset: 0x0022295E
-		// (set) Token: 0x06017703 RID: 96003 RVA: 0x0022476E File Offset: 0x0022296E
+		// Token: 0x170013D9 RID: 5081
+		// (get) Token: 0x0600617A RID: 24954 RVA: 0x0008B676 File Offset: 0x00089876
+		// (set) Token: 0x0600617B RID: 24955 RVA: 0x0008B686 File Offset: 0x00089886
 		public unsafe int PlayFlag
 		{
 			get
@@ -95,9 +95,24 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EA2 RID: 24226
-		// (get) Token: 0x06017704 RID: 96004 RVA: 0x0022477F File Offset: 0x0022297F
-		// (set) Token: 0x06017705 RID: 96005 RVA: 0x0022478F File Offset: 0x0022298F
+		// Token: 0x170013DA RID: 5082
+		// (get) Token: 0x0600617C RID: 24956 RVA: 0x0008B697 File Offset: 0x00089897
+		// (set) Token: 0x0600617D RID: 24957 RVA: 0x0008B6A7 File Offset: 0x000898A7
+		public unsafe bool EndInnerAnimNotifyStatesOnStop
+		{
+			get
+			{
+				return *(base.NativePtr + (IntPtr)FKuroEffectContext.__PropertyOffset_EndInnerAnimNotifyStatesOnStop) != 0;
+			}
+			set
+			{
+				*(base.NativePtr + (IntPtr)FKuroEffectContext.__PropertyOffset_EndInnerAnimNotifyStatesOnStop) = (value ? 1 : 0);
+			}
+		}
+
+		// Token: 0x170013DB RID: 5083
+		// (get) Token: 0x0600617E RID: 24958 RVA: 0x0008B6B8 File Offset: 0x000898B8
+		// (set) Token: 0x0600617F RID: 24959 RVA: 0x0008B6C8 File Offset: 0x000898C8
 		public unsafe bool CreateFromBpEffectActor
 		{
 			get
@@ -110,9 +125,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EA3 RID: 24227
-		// (get) Token: 0x06017706 RID: 96006 RVA: 0x002247A0 File Offset: 0x002229A0
-		// (set) Token: 0x06017707 RID: 96007 RVA: 0x002247B0 File Offset: 0x002229B0
+		// Token: 0x170013DC RID: 5084
+		// (get) Token: 0x06006180 RID: 24960 RVA: 0x0008B6D9 File Offset: 0x000898D9
+		// (set) Token: 0x06006181 RID: 24961 RVA: 0x0008B6E9 File Offset: 0x000898E9
 		public unsafe byte ContextType
 		{
 			get
@@ -125,9 +140,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EA4 RID: 24228
-		// (get) Token: 0x06017708 RID: 96008 RVA: 0x002247C1 File Offset: 0x002229C1
-		// (set) Token: 0x06017709 RID: 96009 RVA: 0x002247D1 File Offset: 0x002229D1
+		// Token: 0x170013DD RID: 5085
+		// (get) Token: 0x06006182 RID: 24962 RVA: 0x0008B6FA File Offset: 0x000898FA
+		// (set) Token: 0x06006183 RID: 24963 RVA: 0x0008B70A File Offset: 0x0008990A
 		public unsafe int HitEffectType
 		{
 			get
@@ -140,9 +155,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EA5 RID: 24229
-		// (get) Token: 0x0601770A RID: 96010 RVA: 0x002247E2 File Offset: 0x002229E2
-		// (set) Token: 0x0601770B RID: 96011 RVA: 0x002247F6 File Offset: 0x002229F6
+		// Token: 0x170013DE RID: 5086
+		// (get) Token: 0x06006184 RID: 24964 RVA: 0x0008B71B File Offset: 0x0008991B
+		// (set) Token: 0x06006185 RID: 24965 RVA: 0x0008B72F File Offset: 0x0008992F
 		public unsafe FName AnsSlotName
 		{
 			get
@@ -155,89 +170,77 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601770C RID: 96012 RVA: 0x0022480B File Offset: 0x00222A0B
+		// Token: 0x06006186 RID: 24966 RVA: 0x0008B744 File Offset: 0x00089944
 		public FKuroEffectContext()
 		{
 		}
 
-		// Token: 0x0601770D RID: 96013 RVA: 0x00224814 File Offset: 0x00222A14
-		[NullableContext(1)]
-		public FKuroEffectContext(int EntityId, UObject SourceObject, bool DisablePostProcess, int CreateFromType, int PlayFlag, bool CreateFromBpEffectActor, byte ContextType, int HitEffectType, FName AnsSlotName)
-		{
-			this.EntityId = EntityId;
-			this.SourceObject = SourceObject;
-			this.DisablePostProcess = DisablePostProcess;
-			this.CreateFromType = CreateFromType;
-			this.PlayFlag = PlayFlag;
-			this.CreateFromBpEffectActor = CreateFromBpEffectActor;
-			this.ContextType = ContextType;
-			this.HitEffectType = HitEffectType;
-			this.AnsSlotName = AnsSlotName;
-		}
-
-		// Token: 0x0601770E RID: 96014 RVA: 0x0022486C File Offset: 0x00222A6C
+		// Token: 0x06006187 RID: 24967 RVA: 0x0008B74C File Offset: 0x0008994C
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroEffectContext.StaticStruct();
 		}
 
-		// Token: 0x0601770F RID: 96015 RVA: 0x00224878 File Offset: 0x00222A78
+		// Token: 0x06006188 RID: 24968 RVA: 0x0008B758 File Offset: 0x00089958
 		[NullableContext(2)]
 		public FKuroEffectContext(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017710 RID: 96016 RVA: 0x00224882 File Offset: 0x00222A82
+		// Token: 0x06006189 RID: 24969 RVA: 0x0008B762 File Offset: 0x00089962
 		public FKuroEffectContext(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017711 RID: 96017 RVA: 0x0022488D File Offset: 0x00222A8D
+		// Token: 0x0600618A RID: 24970 RVA: 0x0008B76D File Offset: 0x0008996D
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroEffectContext(Pointer, false, true);
 		}
 
-		// Token: 0x06017712 RID: 96018 RVA: 0x00224897 File Offset: 0x00222A97
+		// Token: 0x0600618B RID: 24971 RVA: 0x0008B777 File Offset: 0x00089977
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroEffectContext(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400CBEC RID: 52204
+		// Token: 0x0400298D RID: 10637
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.KuroEffectContext";
 
-		// Token: 0x0400CBED RID: 52205
+		// Token: 0x0400298E RID: 10638
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400CBEE RID: 52206
+		// Token: 0x0400298F RID: 10639
 		internal static int __PropertyOffset_EntityId;
 
-		// Token: 0x0400CBEF RID: 52207
+		// Token: 0x04002990 RID: 10640
 		internal static int __PropertyOffset_SourceObject;
 
-		// Token: 0x0400CBF0 RID: 52208
+		// Token: 0x04002991 RID: 10641
 		internal static int __PropertyOffset_DisablePostProcess;
 
-		// Token: 0x0400CBF1 RID: 52209
+		// Token: 0x04002992 RID: 10642
 		internal static int __PropertyOffset_CreateFromType;
 
-		// Token: 0x0400CBF2 RID: 52210
+		// Token: 0x04002993 RID: 10643
 		internal static int __PropertyOffset_PlayFlag;
 
-		// Token: 0x0400CBF3 RID: 52211
+		// Token: 0x04002994 RID: 10644
+		internal static int __PropertyOffset_EndInnerAnimNotifyStatesOnStop;
+
+		// Token: 0x04002995 RID: 10645
 		internal static int __PropertyOffset_CreateFromBpEffectActor;
 
-		// Token: 0x0400CBF4 RID: 52212
+		// Token: 0x04002996 RID: 10646
 		internal static int __PropertyOffset_ContextType;
 
-		// Token: 0x0400CBF5 RID: 52213
+		// Token: 0x04002997 RID: 10647
 		internal static int __PropertyOffset_HitEffectType;
 
-		// Token: 0x0400CBF6 RID: 52214
+		// Token: 0x04002998 RID: 10648
 		internal static int __PropertyOffset_AnsSlotName;
 	}
 }

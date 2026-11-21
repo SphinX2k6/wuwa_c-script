@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A0C RID: 2572
+	// Token: 0x02000AD1 RID: 2769
 	public static class ESlashDirTypeExtensions
 	{
-		// Token: 0x060038E7 RID: 14567 RVA: 0x000930E4 File Offset: 0x000912E4
+		// Token: 0x06003CBF RID: 15551 RVA: 0x0009B9D4 File Offset: 0x00099BD4
 		public static string ToEnumString(this ESlashDirType value)
 		{
 			string result;
@@ -36,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038E8 RID: 14568 RVA: 0x00093150 File Offset: 0x00091350
+		// Token: 0x06003CC0 RID: 15552 RVA: 0x0009BA40 File Offset: 0x00099C40
 		public static ESlashDirType FromString(string name)
 		{
 			ESlashDirType result;
@@ -47,7 +47,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038E9 RID: 14569 RVA: 0x0009317C File Offset: 0x0009137C
+		// Token: 0x06003CC1 RID: 15553 RVA: 0x0009BA6C File Offset: 0x00099C6C
 		public static bool TryFromString(string name, out ESlashDirType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -89,7 +89,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060038EA RID: 14570 RVA: 0x00093208 File Offset: 0x00091408
+		// Token: 0x06003CC2 RID: 15554 RVA: 0x0009BAF8 File Offset: 0x00099CF8
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -103,7 +103,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038EB RID: 14571 RVA: 0x00093240 File Offset: 0x00091440
+		// Token: 0x06003CC3 RID: 15555 RVA: 0x0009BB30 File Offset: 0x00099D30
 		public static ESlashDirType[] GetValues()
 		{
 			return new ESlashDirType[]
@@ -117,7 +117,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038EC RID: 14572 RVA: 0x00093253 File Offset: 0x00091453
+		// Token: 0x06003CC4 RID: 15556 RVA: 0x0009BB43 File Offset: 0x00099D43
 		public static string[] GetNames()
 		{
 			return new string[]

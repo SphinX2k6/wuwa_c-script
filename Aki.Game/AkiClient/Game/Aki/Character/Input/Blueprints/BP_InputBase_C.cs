@@ -11,12 +11,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.Input.Blueprints
 {
-	// Token: 0x02004266 RID: 16998
+	// Token: 0x020032D7 RID: 13015
 	[UnrealObjectPath("/Game/Aki/Character/Input/Blueprints/BP_InputBase.BP_InputBase_C")]
-	[UnrealStructLayout(424, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 424)]
+	[UnrealStructLayout(432, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 425)]
 	public class BP_InputBase_C : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602C0C2 RID: 180418 RVA: 0x00A12A33 File Offset: 0x00A10C33
+		// Token: 0x06020F80 RID: 135040 RVA: 0x00953B9F File Offset: 0x00951D9F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_InputBase_C._ClassPtr == IntPtr.Zero)
@@ -26,146 +26,68 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return BP_InputBase_C._ClassPtr;
 		}
 
-		// Token: 0x0602C0C3 RID: 180419 RVA: 0x00A12A58 File Offset: 0x00A10C58
+		// Token: 0x06020F81 RID: 135041 RVA: 0x00953BC4 File Offset: 0x00951DC4
 		public BP_InputBase_C() : this(BuiltinUtils.AllocNativeUObject(BP_InputBase_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602C0C4 RID: 180420 RVA: 0x00A12A80 File Offset: 0x00A10C80
+		// Token: 0x06020F82 RID: 135042 RVA: 0x00953BEC File Offset: 0x00951DEC
 		[NullableContext(1)]
 		public BP_InputBase_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_InputBase_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006D75 RID: 28021
-		// (get) Token: 0x0602C0C5 RID: 180421 RVA: 0x00A12AB3 File Offset: 0x00A10CB3
-		// (set) Token: 0x0602C0C6 RID: 180422 RVA: 0x00A12AC7 File Offset: 0x00A10CC7
+		// Token: 0x170041F9 RID: 16889
+		// (get) Token: 0x06020F83 RID: 135043 RVA: 0x00953C1F File Offset: 0x00951E1F
+		// (set) Token: 0x06020F84 RID: 135044 RVA: 0x00953C33 File Offset: 0x00951E33
 		[Nullable(2)]
 		public unsafe ABaseCharacter OwnerActor
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<ABaseCharacter>(base.NativePtr / (IntPtr)sizeof(void*) + BP_InputBase_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<ABaseCharacter>(base.NativePtr / (IntPtr)sizeof(void*) + BP_InputBase_C.__PropertyOffset_OwnerActor);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_InputBase_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_InputBase_C.__PropertyOffset_OwnerActor, value);
 			}
 		}
 
-		// Token: 0x17006D76 RID: 28022
-		// (get) Token: 0x0602C0C7 RID: 180423 RVA: 0x00A12ADC File Offset: 0x00A10CDC
-		// (set) Token: 0x0602C0C8 RID: 180424 RVA: 0x00A12AEC File Offset: 0x00A10CEC
+		// Token: 0x170041FA RID: 16890
+		// (get) Token: 0x06020F85 RID: 135045 RVA: 0x00953C48 File Offset: 0x00951E48
+		// (set) Token: 0x06020F86 RID: 135046 RVA: 0x00953C58 File Offset: 0x00951E58
 		public unsafe float UnlockLongPressTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_UnlockLongPressTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_UnlockLongPressTime) = value;
 			}
 		}
 
-		// Token: 0x17006D77 RID: 28023
-		// (get) Token: 0x0602C0C9 RID: 180425 RVA: 0x00A12AFD File Offset: 0x00A10CFD
-		// (set) Token: 0x0602C0CA RID: 180426 RVA: 0x00A12B0D File Offset: 0x00A10D0D
+		// Token: 0x170041FB RID: 16891
+		// (get) Token: 0x06020F87 RID: 135047 RVA: 0x00953C69 File Offset: 0x00951E69
+		// (set) Token: 0x06020F88 RID: 135048 RVA: 0x00953C79 File Offset: 0x00951E79
 		public unsafe float IsLockOnState
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_IsLockOnState);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_IsLockOnState) = value;
 			}
 		}
 
-		// Token: 0x17006D78 RID: 28024
-		// (get) Token: 0x0602C0CB RID: 180427 RVA: 0x00A12B20 File Offset: 0x00A10D20
-		// (set) Token: 0x0602C0CC RID: 180428 RVA: 0x00A12B59 File Offset: 0x00A10D59
-		[Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})]
-		public TMap<TEnumAsByte<EInputCharacterState>, SInputShowList> InputShowMap
-		{
-			[return: Nullable(new byte[]
-			{
-				1,
-				0,
-				1
-			})]
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<TEnumAsByte<EInputCharacterState>, SInputShowList> result;
-				if ((result = this._InputShowMap) == null)
-				{
-					result = (this._InputShowMap = new TMap<TEnumAsByte<EInputCharacterState>, SInputShowList>(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_4, this));
-				}
-				return result;
-			}
-			[param: Nullable(new byte[]
-			{
-				1,
-				0,
-				1
-			})]
-			set
-			{
-				this.InputShowMap.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17006D79 RID: 28025
-		// (get) Token: 0x0602C0CD RID: 180429 RVA: 0x00A12B68 File Offset: 0x00A10D68
-		// (set) Token: 0x0602C0CE RID: 180430 RVA: 0x00A12BA1 File Offset: 0x00A10DA1
-		[Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})]
-		public TMap<TEnumAsByte<EInputCharacterState>, SInputShowList> MobileInputShowMap
-		{
-			[return: Nullable(new byte[]
-			{
-				1,
-				0,
-				1
-			})]
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<TEnumAsByte<EInputCharacterState>, SInputShowList> result;
-				if ((result = this._MobileInputShowMap) == null)
-				{
-					result = (this._MobileInputShowMap = new TMap<TEnumAsByte<EInputCharacterState>, SInputShowList>(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_5, this));
-				}
-				return result;
-			}
-			[param: Nullable(new byte[]
-			{
-				1,
-				0,
-				1
-			})]
-			set
-			{
-				this.MobileInputShowMap.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17006D7A RID: 28026
-		// (get) Token: 0x0602C0CF RID: 180431 RVA: 0x00A12BB0 File Offset: 0x00A10DB0
-		// (set) Token: 0x0602C0D0 RID: 180432 RVA: 0x00A12BE9 File Offset: 0x00A10DE9
+		// Token: 0x170041FC RID: 16892
+		// (get) Token: 0x06020F89 RID: 135049 RVA: 0x00953C8C File Offset: 0x00951E8C
+		// (set) Token: 0x06020F8A RID: 135050 RVA: 0x00953CC5 File Offset: 0x00951EC5
 		[Nullable(1)]
 		public SInputActive 激活移动输入映射按键事件
 		{
@@ -176,20 +98,34 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 				SInputActive result;
 				if ((result = this._激活移动输入映射按键事件) == null)
 				{
-					result = (this._激活移动输入映射按键事件 = new SInputActive(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_6, this));
+					result = (this._激活移动输入映射按键事件 = new SInputActive(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_激活移动输入映射按键事件, this));
 				}
 				return result;
 			}
 			[NullableContext(1)]
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SInputActive.StaticStruct(), base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_6, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SInputActive.StaticStruct(), base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_激活移动输入映射按键事件, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x0602C0D1 RID: 180433 RVA: 0x00A12C0C File Offset: 0x00A10E0C
+		// Token: 0x170041FD RID: 16893
+		// (get) Token: 0x06020F8B RID: 135051 RVA: 0x00953CE6 File Offset: 0x00951EE6
+		// (set) Token: 0x06020F8C RID: 135052 RVA: 0x00953CFA File Offset: 0x00951EFA
+		public unsafe TEnumAsByte<EInputCompSwallowMode> 输入蓝图覆盖模式
+		{
+			get
+			{
+				return *(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_输入蓝图覆盖模式);
+			}
+			set
+			{
+				*(base.NativePtr + (IntPtr)BP_InputBase_C.__PropertyOffset_输入蓝图覆盖模式) = value;
+			}
+		}
+
+		// Token: 0x06020F8D RID: 135053 RVA: 0x00953D10 File Offset: 0x00951F10
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 移动输入抬起事件(float time, float yaw)
 		{
 			BP_InputBase_C.__移动输入抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__移动输入抬起事件_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_InputBase_C.__移动输入抬起事件_FunctionParams) & -16L;
@@ -199,9 +135,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__移动输入抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C0D2 RID: 180434 RVA: 0x00A12C5C File Offset: 0x00A10E5C
+		// Token: 0x06020F8E RID: 135054 RVA: 0x00953D60 File Offset: 0x00951F60
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 移动输入按下事件(float time, float yaw)
 		{
 			BP_InputBase_C.__移动输入按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__移动输入按下事件_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_InputBase_C.__移动输入按下事件_FunctionParams) & -16L;
@@ -211,10 +146,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__移动输入按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C0D3 RID: 180435 RVA: 0x00A12CAC File Offset: 0x00A10EAC
+		// Token: 0x06020F8F RID: 135055 RVA: 0x00953DB0 File Offset: 0x00951FB0
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 移动输入长按(float time, float yaw)
 		{
 			BP_InputBase_C.__移动输入长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__移动输入长按_FunctionParams[(UIntPtr)43] + 15L / (long)sizeof(BP_InputBase_C.__移动输入长按_FunctionParams) & -16L;
@@ -225,10 +159,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0D4 RID: 180436 RVA: 0x00A12D08 File Offset: 0x00A10F08
+		// Token: 0x06020F90 RID: 135056 RVA: 0x00953E0C File Offset: 0x0095200C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 移动输入抬起(float time, float yaw)
 		{
 			BP_InputBase_C.__移动输入抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__移动输入抬起_FunctionParams[(UIntPtr)43] + 15L / (long)sizeof(BP_InputBase_C.__移动输入抬起_FunctionParams) & -16L;
@@ -239,10 +172,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0D5 RID: 180437 RVA: 0x00A12D64 File Offset: 0x00A10F64
+		// Token: 0x06020F91 RID: 135057 RVA: 0x00953E68 File Offset: 0x00952068
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 移动输入按下(float time, float yaw)
 		{
 			BP_InputBase_C.__移动输入按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__移动输入按下_FunctionParams[(UIntPtr)43] + 15L / (long)sizeof(BP_InputBase_C.__移动输入按下_FunctionParams) & -16L;
@@ -253,9 +185,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0D6 RID: 180438 RVA: 0x00A12DC0 File Offset: 0x00A10FC0
+		// Token: 0x06020F92 RID: 135058 RVA: 0x00953EC4 File Offset: 0x009520C4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 下降抬起事件(float time)
 		{
 			BP_InputBase_C.__下降抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__下降抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__下降抬起事件_FunctionParams) & -16L;
@@ -264,9 +195,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__下降抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C0D7 RID: 180439 RVA: 0x00A12E08 File Offset: 0x00A11008
+		// Token: 0x06020F93 RID: 135059 RVA: 0x00953F0C File Offset: 0x0095210C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 下降按下事件(float time)
 		{
 			BP_InputBase_C.__下降按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__下降按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__下降按下事件_FunctionParams) & -16L;
@@ -275,10 +205,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__下降按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C0D8 RID: 180440 RVA: 0x00A12E50 File Offset: 0x00A11050
+		// Token: 0x06020F94 RID: 135060 RVA: 0x00953F54 File Offset: 0x00952154
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 下降长按(float time)
 		{
 			BP_InputBase_C.__下降长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__下降长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__下降长按_FunctionParams) & -16L;
@@ -288,10 +217,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0D9 RID: 180441 RVA: 0x00A12EA4 File Offset: 0x00A110A4
+		// Token: 0x06020F95 RID: 135061 RVA: 0x00953FA8 File Offset: 0x009521A8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 下降抬起(float time)
 		{
 			BP_InputBase_C.__下降抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__下降抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__下降抬起_FunctionParams) & -16L;
@@ -301,10 +229,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0DA RID: 180442 RVA: 0x00A12EF8 File Offset: 0x00A110F8
+		// Token: 0x06020F96 RID: 135062 RVA: 0x00953FFC File Offset: 0x009521FC
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 下降按下(float time)
 		{
 			BP_InputBase_C.__下降按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__下降按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__下降按下_FunctionParams) & -16L;
@@ -314,9 +241,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0DB RID: 180443 RVA: 0x00A12F4C File Offset: 0x00A1114C
+		// Token: 0x06020F97 RID: 135063 RVA: 0x00954050 File Offset: 0x00952250
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetMoveVector(ref FVector2D ReturnVaule)
 		{
 			BP_InputBase_C.__GetMoveVector_FunctionParams* ptr = stackalloc BP_InputBase_C.__GetMoveVector_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(BP_InputBase_C.__GetMoveVector_FunctionParams) & -16L;
@@ -326,10 +252,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			ReturnVaule = ptr->ReturnVaule;
 		}
 
-		// Token: 0x0602C0DC RID: 180444 RVA: 0x00A12FA4 File Offset: 0x00A111A4
+		// Token: 0x06020F98 RID: 135064 RVA: 0x009540A8 File Offset: 0x009522A8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 通用交互按下(float time)
 		{
 			BP_InputBase_C.__通用交互按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__通用交互按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__通用交互按下_FunctionParams) & -16L;
@@ -339,10 +264,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0DD RID: 180445 RVA: 0x00A12FF8 File Offset: 0x00A111F8
+		// Token: 0x06020F99 RID: 135065 RVA: 0x009540FC File Offset: 0x009522FC
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 锁定目标长按(float time)
 		{
 			BP_InputBase_C.__锁定目标长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__锁定目标长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__锁定目标长按_FunctionParams) & -16L;
@@ -352,10 +276,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0DE RID: 180446 RVA: 0x00A1304C File Offset: 0x00A1124C
+		// Token: 0x06020F9A RID: 135066 RVA: 0x00954150 File Offset: 0x00952350
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 瞄准长按(float time)
 		{
 			BP_InputBase_C.__瞄准长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__瞄准长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__瞄准长按_FunctionParams) & -16L;
@@ -365,10 +288,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0DF RID: 180447 RVA: 0x00A130A0 File Offset: 0x00A112A0
+		// Token: 0x06020F9B RID: 135067 RVA: 0x009541A4 File Offset: 0x009523A4
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 瞄准抬起(float time)
 		{
 			BP_InputBase_C.__瞄准抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__瞄准抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__瞄准抬起_FunctionParams) & -16L;
@@ -378,10 +300,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0E0 RID: 180448 RVA: 0x00A130F4 File Offset: 0x00A112F4
+		// Token: 0x06020F9C RID: 135068 RVA: 0x009541F8 File Offset: 0x009523F8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 瞄准按下(float time)
 		{
 			BP_InputBase_C.__瞄准按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__瞄准按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__瞄准按下_FunctionParams) & -16L;
@@ -391,10 +312,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0E1 RID: 180449 RVA: 0x00A13148 File Offset: 0x00A11348
+		// Token: 0x06020F9D RID: 135069 RVA: 0x0095424C File Offset: 0x0095244C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 切换角色3长按(float time)
 		{
 			BP_InputBase_C.__切换角色3长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色3长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__切换角色3长按_FunctionParams) & -16L;
@@ -404,10 +324,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0E2 RID: 180450 RVA: 0x00A1319C File Offset: 0x00A1139C
+		// Token: 0x06020F9E RID: 135070 RVA: 0x009542A0 File Offset: 0x009524A0
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 切换角色3抬起(float time)
 		{
 			BP_InputBase_C.__切换角色3抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色3抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__切换角色3抬起_FunctionParams) & -16L;
@@ -417,10 +336,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0E3 RID: 180451 RVA: 0x00A131F0 File Offset: 0x00A113F0
+		// Token: 0x06020F9F RID: 135071 RVA: 0x009542F4 File Offset: 0x009524F4
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 切换角色3按下(float time)
 		{
 			BP_InputBase_C.__切换角色3按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色3按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__切换角色3按下_FunctionParams) & -16L;
@@ -430,10 +348,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0E4 RID: 180452 RVA: 0x00A13244 File Offset: 0x00A11444
+		// Token: 0x06020FA0 RID: 135072 RVA: 0x00954348 File Offset: 0x00952548
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 切换角色2长按(float time)
 		{
 			BP_InputBase_C.__切换角色2长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色2长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__切换角色2长按_FunctionParams) & -16L;
@@ -443,10 +360,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0E5 RID: 180453 RVA: 0x00A13298 File Offset: 0x00A11498
+		// Token: 0x06020FA1 RID: 135073 RVA: 0x0095439C File Offset: 0x0095259C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 切换角色2抬起(float time)
 		{
 			BP_InputBase_C.__切换角色2抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色2抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__切换角色2抬起_FunctionParams) & -16L;
@@ -456,10 +372,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0E6 RID: 180454 RVA: 0x00A132EC File Offset: 0x00A114EC
+		// Token: 0x06020FA2 RID: 135074 RVA: 0x009543F0 File Offset: 0x009525F0
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 切换角色2按下(float time)
 		{
 			BP_InputBase_C.__切换角色2按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色2按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__切换角色2按下_FunctionParams) & -16L;
@@ -469,10 +384,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0E7 RID: 180455 RVA: 0x00A13340 File Offset: 0x00A11540
+		// Token: 0x06020FA3 RID: 135075 RVA: 0x00954444 File Offset: 0x00952644
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 切换角色1长按(float time)
 		{
 			BP_InputBase_C.__切换角色1长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色1长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__切换角色1长按_FunctionParams) & -16L;
@@ -482,10 +396,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0E8 RID: 180456 RVA: 0x00A13394 File Offset: 0x00A11594
+		// Token: 0x06020FA4 RID: 135076 RVA: 0x00954498 File Offset: 0x00952698
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 切换角色1抬起(float time)
 		{
 			BP_InputBase_C.__切换角色1抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色1抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__切换角色1抬起_FunctionParams) & -16L;
@@ -495,10 +408,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0E9 RID: 180457 RVA: 0x00A133E8 File Offset: 0x00A115E8
+		// Token: 0x06020FA5 RID: 135077 RVA: 0x009544EC File Offset: 0x009526EC
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 切换角色1按下(float time)
 		{
 			BP_InputBase_C.__切换角色1按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色1按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__切换角色1按下_FunctionParams) & -16L;
@@ -508,10 +420,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0EA RID: 180458 RVA: 0x00A1343C File Offset: 0x00A1163C
+		// Token: 0x06020FA6 RID: 135078 RVA: 0x00954540 File Offset: 0x00952740
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 幻象2长按(float time)
 		{
 			BP_InputBase_C.__幻象2长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__幻象2长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__幻象2长按_FunctionParams) & -16L;
@@ -521,10 +432,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0EB RID: 180459 RVA: 0x00A13490 File Offset: 0x00A11690
+		// Token: 0x06020FA7 RID: 135079 RVA: 0x00954594 File Offset: 0x00952794
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 幻象2抬起(float time)
 		{
 			BP_InputBase_C.__幻象2抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__幻象2抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__幻象2抬起_FunctionParams) & -16L;
@@ -534,10 +444,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0EC RID: 180460 RVA: 0x00A134E4 File Offset: 0x00A116E4
+		// Token: 0x06020FA8 RID: 135080 RVA: 0x009545E8 File Offset: 0x009527E8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 幻象2按下(float time)
 		{
 			BP_InputBase_C.__幻象2按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__幻象2按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__幻象2按下_FunctionParams) & -16L;
@@ -547,10 +456,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0ED RID: 180461 RVA: 0x00A13538 File Offset: 0x00A11738
+		// Token: 0x06020FA9 RID: 135081 RVA: 0x0095463C File Offset: 0x0095283C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 大招长按(float time)
 		{
 			BP_InputBase_C.__大招长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__大招长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__大招长按_FunctionParams) & -16L;
@@ -560,10 +468,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0EE RID: 180462 RVA: 0x00A1358C File Offset: 0x00A1178C
+		// Token: 0x06020FAA RID: 135082 RVA: 0x00954690 File Offset: 0x00952890
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 大招抬起(float time)
 		{
 			BP_InputBase_C.__大招抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__大招抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__大招抬起_FunctionParams) & -16L;
@@ -573,10 +480,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0EF RID: 180463 RVA: 0x00A135E0 File Offset: 0x00A117E0
+		// Token: 0x06020FAB RID: 135083 RVA: 0x009546E4 File Offset: 0x009528E4
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 大招按下(float time)
 		{
 			BP_InputBase_C.__大招按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__大招按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__大招按下_FunctionParams) & -16L;
@@ -586,10 +492,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0F0 RID: 180464 RVA: 0x00A13634 File Offset: 0x00A11834
+		// Token: 0x06020FAC RID: 135084 RVA: 0x00954738 File Offset: 0x00952938
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 幻象1长按(float time)
 		{
 			BP_InputBase_C.__幻象1长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__幻象1长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__幻象1长按_FunctionParams) & -16L;
@@ -599,10 +504,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0F1 RID: 180465 RVA: 0x00A13688 File Offset: 0x00A11888
+		// Token: 0x06020FAD RID: 135085 RVA: 0x0095478C File Offset: 0x0095298C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 幻象1抬起(float time)
 		{
 			BP_InputBase_C.__幻象1抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__幻象1抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__幻象1抬起_FunctionParams) & -16L;
@@ -612,10 +516,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0F2 RID: 180466 RVA: 0x00A136DC File Offset: 0x00A118DC
+		// Token: 0x06020FAE RID: 135086 RVA: 0x009547E0 File Offset: 0x009529E0
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 幻象1按下(float time)
 		{
 			BP_InputBase_C.__幻象1按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__幻象1按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__幻象1按下_FunctionParams) & -16L;
@@ -625,10 +528,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0F3 RID: 180467 RVA: 0x00A13730 File Offset: 0x00A11930
+		// Token: 0x06020FAF RID: 135087 RVA: 0x00954834 File Offset: 0x00952A34
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 技能1长按(float time)
 		{
 			BP_InputBase_C.__技能1长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__技能1长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__技能1长按_FunctionParams) & -16L;
@@ -638,10 +540,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0F4 RID: 180468 RVA: 0x00A13784 File Offset: 0x00A11984
+		// Token: 0x06020FB0 RID: 135088 RVA: 0x00954888 File Offset: 0x00952A88
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 技能1抬起(float time)
 		{
 			BP_InputBase_C.__技能1抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__技能1抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__技能1抬起_FunctionParams) & -16L;
@@ -651,10 +552,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0F5 RID: 180469 RVA: 0x00A137D8 File Offset: 0x00A119D8
+		// Token: 0x06020FB1 RID: 135089 RVA: 0x009548DC File Offset: 0x00952ADC
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 技能1按下(float time)
 		{
 			BP_InputBase_C.__技能1按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__技能1按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__技能1按下_FunctionParams) & -16L;
@@ -664,10 +564,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0F6 RID: 180470 RVA: 0x00A1382C File Offset: 0x00A11A2C
+		// Token: 0x06020FB2 RID: 135090 RVA: 0x00954930 File Offset: 0x00952B30
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 闪避长按(float time)
 		{
 			BP_InputBase_C.__闪避长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__闪避长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__闪避长按_FunctionParams) & -16L;
@@ -677,10 +576,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0F7 RID: 180471 RVA: 0x00A13880 File Offset: 0x00A11A80
+		// Token: 0x06020FB3 RID: 135091 RVA: 0x00954984 File Offset: 0x00952B84
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 闪避抬起(float time)
 		{
 			BP_InputBase_C.__闪避抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__闪避抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__闪避抬起_FunctionParams) & -16L;
@@ -690,10 +588,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0F8 RID: 180472 RVA: 0x00A138D4 File Offset: 0x00A11AD4
+		// Token: 0x06020FB4 RID: 135092 RVA: 0x009549D8 File Offset: 0x00952BD8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 闪避按下(float time)
 		{
 			BP_InputBase_C.__闪避按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__闪避按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__闪避按下_FunctionParams) & -16L;
@@ -703,10 +600,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0F9 RID: 180473 RVA: 0x00A13928 File Offset: 0x00A11B28
+		// Token: 0x06020FB5 RID: 135093 RVA: 0x00954A2C File Offset: 0x00952C2C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 攻击长按(float time)
 		{
 			BP_InputBase_C.__攻击长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__攻击长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__攻击长按_FunctionParams) & -16L;
@@ -716,10 +612,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0FA RID: 180474 RVA: 0x00A1397C File Offset: 0x00A11B7C
+		// Token: 0x06020FB6 RID: 135094 RVA: 0x00954A80 File Offset: 0x00952C80
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 攻击抬起(float time)
 		{
 			BP_InputBase_C.__攻击抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__攻击抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__攻击抬起_FunctionParams) & -16L;
@@ -729,10 +624,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0FB RID: 180475 RVA: 0x00A139D0 File Offset: 0x00A11BD0
+		// Token: 0x06020FB7 RID: 135095 RVA: 0x00954AD4 File Offset: 0x00952CD4
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 攻击按下(float time)
 		{
 			BP_InputBase_C.__攻击按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__攻击按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__攻击按下_FunctionParams) & -16L;
@@ -742,10 +636,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0FC RID: 180476 RVA: 0x00A13A24 File Offset: 0x00A11C24
+		// Token: 0x06020FB8 RID: 135096 RVA: 0x00954B28 File Offset: 0x00952D28
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 走跑切换长按(float time)
 		{
 			BP_InputBase_C.__走跑切换长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__走跑切换长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__走跑切换长按_FunctionParams) & -16L;
@@ -755,10 +648,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0FD RID: 180477 RVA: 0x00A13A78 File Offset: 0x00A11C78
+		// Token: 0x06020FB9 RID: 135097 RVA: 0x00954B7C File Offset: 0x00952D7C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 走跑切换抬起(float time)
 		{
 			BP_InputBase_C.__走跑切换抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__走跑切换抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__走跑切换抬起_FunctionParams) & -16L;
@@ -768,10 +660,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0FE RID: 180478 RVA: 0x00A13ACC File Offset: 0x00A11CCC
+		// Token: 0x06020FBA RID: 135098 RVA: 0x00954BD0 File Offset: 0x00952DD0
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 走跑切换按下(float time)
 		{
 			BP_InputBase_C.__走跑切换按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__走跑切换按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__走跑切换按下_FunctionParams) & -16L;
@@ -781,10 +672,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C0FF RID: 180479 RVA: 0x00A13B20 File Offset: 0x00A11D20
+		// Token: 0x06020FBB RID: 135099 RVA: 0x00954C24 File Offset: 0x00952E24
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 攀爬长按(float time)
 		{
 			BP_InputBase_C.__攀爬长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__攀爬长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__攀爬长按_FunctionParams) & -16L;
@@ -794,10 +684,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C100 RID: 180480 RVA: 0x00A13B74 File Offset: 0x00A11D74
+		// Token: 0x06020FBC RID: 135100 RVA: 0x00954C78 File Offset: 0x00952E78
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 攀爬抬起(float time)
 		{
 			BP_InputBase_C.__攀爬抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__攀爬抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__攀爬抬起_FunctionParams) & -16L;
@@ -807,10 +696,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C101 RID: 180481 RVA: 0x00A13BC8 File Offset: 0x00A11DC8
+		// Token: 0x06020FBD RID: 135101 RVA: 0x00954CCC File Offset: 0x00952ECC
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 攀爬按下(float time)
 		{
 			BP_InputBase_C.__攀爬按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__攀爬按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__攀爬按下_FunctionParams) & -16L;
@@ -820,10 +708,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C102 RID: 180482 RVA: 0x00A13C1C File Offset: 0x00A11E1C
+		// Token: 0x06020FBE RID: 135102 RVA: 0x00954D20 File Offset: 0x00952F20
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 跳跃长按(float time)
 		{
 			BP_InputBase_C.__跳跃长按_FunctionParams* ptr = stackalloc BP_InputBase_C.__跳跃长按_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__跳跃长按_FunctionParams) & -16L;
@@ -833,10 +720,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C103 RID: 180483 RVA: 0x00A13C70 File Offset: 0x00A11E70
+		// Token: 0x06020FBF RID: 135103 RVA: 0x00954D74 File Offset: 0x00952F74
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 跳跃抬起(float time)
 		{
 			BP_InputBase_C.__跳跃抬起_FunctionParams* ptr = stackalloc BP_InputBase_C.__跳跃抬起_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__跳跃抬起_FunctionParams) & -16L;
@@ -846,10 +732,9 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C104 RID: 180484 RVA: 0x00A13CC4 File Offset: 0x00A11EC4
+		// Token: 0x06020FC0 RID: 135104 RVA: 0x00954DC8 File Offset: 0x00952FC8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCommand 跳跃按下(float time)
 		{
 			BP_InputBase_C.__跳跃按下_FunctionParams* ptr = stackalloc BP_InputBase_C.__跳跃按下_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_InputBase_C.__跳跃按下_FunctionParams) & -16L;
@@ -859,9 +744,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return new SInputCommand(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x0602C105 RID: 180485 RVA: 0x00A13D18 File Offset: 0x00A11F18
+		// Token: 0x06020FC1 RID: 135105 RVA: 0x00954E1C File Offset: 0x0095301C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 瞄准抬起事件(float time)
 		{
 			BP_InputBase_C.__瞄准抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__瞄准抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__瞄准抬起事件_FunctionParams) & -16L;
@@ -870,9 +754,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__瞄准抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C106 RID: 180486 RVA: 0x00A13D60 File Offset: 0x00A11F60
+		// Token: 0x06020FC2 RID: 135106 RVA: 0x00954E64 File Offset: 0x00953064
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 瞄准按下事件(float time)
 		{
 			BP_InputBase_C.__瞄准按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__瞄准按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__瞄准按下事件_FunctionParams) & -16L;
@@ -881,9 +764,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__瞄准按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C107 RID: 180487 RVA: 0x00A13DA8 File Offset: 0x00A11FA8
+		// Token: 0x06020FC3 RID: 135107 RVA: 0x00954EAC File Offset: 0x009530AC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 锁定目标抬起事件(float time)
 		{
 			BP_InputBase_C.__锁定目标抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__锁定目标抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__锁定目标抬起事件_FunctionParams) & -16L;
@@ -892,9 +774,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__锁定目标抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C108 RID: 180488 RVA: 0x00A13DF0 File Offset: 0x00A11FF0
+		// Token: 0x06020FC4 RID: 135108 RVA: 0x00954EF4 File Offset: 0x009530F4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 锁定目标按下事件(float time)
 		{
 			BP_InputBase_C.__锁定目标按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__锁定目标按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__锁定目标按下事件_FunctionParams) & -16L;
@@ -903,9 +784,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__锁定目标按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C109 RID: 180489 RVA: 0x00A13E38 File Offset: 0x00A12038
+		// Token: 0x06020FC5 RID: 135109 RVA: 0x00954F3C File Offset: 0x0095313C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 切换角色3抬起事件(float time)
 		{
 			BP_InputBase_C.__切换角色3抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色3抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__切换角色3抬起事件_FunctionParams) & -16L;
@@ -914,9 +794,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__切换角色3抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C10A RID: 180490 RVA: 0x00A13E80 File Offset: 0x00A12080
+		// Token: 0x06020FC6 RID: 135110 RVA: 0x00954F84 File Offset: 0x00953184
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 切换角色3按下事件(float time)
 		{
 			BP_InputBase_C.__切换角色3按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色3按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__切换角色3按下事件_FunctionParams) & -16L;
@@ -925,9 +804,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__切换角色3按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C10B RID: 180491 RVA: 0x00A13EC8 File Offset: 0x00A120C8
+		// Token: 0x06020FC7 RID: 135111 RVA: 0x00954FCC File Offset: 0x009531CC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 切换角色2抬起事件(float time)
 		{
 			BP_InputBase_C.__切换角色2抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色2抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__切换角色2抬起事件_FunctionParams) & -16L;
@@ -936,9 +814,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__切换角色2抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C10C RID: 180492 RVA: 0x00A13F10 File Offset: 0x00A12110
+		// Token: 0x06020FC8 RID: 135112 RVA: 0x00955014 File Offset: 0x00953214
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 切换角色2按下事件(float time)
 		{
 			BP_InputBase_C.__切换角色2按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色2按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__切换角色2按下事件_FunctionParams) & -16L;
@@ -947,9 +824,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__切换角色2按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C10D RID: 180493 RVA: 0x00A13F58 File Offset: 0x00A12158
+		// Token: 0x06020FC9 RID: 135113 RVA: 0x0095505C File Offset: 0x0095325C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 切换角色1抬起事件(float time)
 		{
 			BP_InputBase_C.__切换角色1抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色1抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__切换角色1抬起事件_FunctionParams) & -16L;
@@ -958,9 +834,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__切换角色1抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C10E RID: 180494 RVA: 0x00A13FA0 File Offset: 0x00A121A0
+		// Token: 0x06020FCA RID: 135114 RVA: 0x009550A4 File Offset: 0x009532A4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 切换角色1按下事件(float time)
 		{
 			BP_InputBase_C.__切换角色1按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__切换角色1按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__切换角色1按下事件_FunctionParams) & -16L;
@@ -969,9 +844,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__切换角色1按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C10F RID: 180495 RVA: 0x00A13FE8 File Offset: 0x00A121E8
+		// Token: 0x06020FCB RID: 135115 RVA: 0x009550EC File Offset: 0x009532EC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 幻象2抬起事件(float time)
 		{
 			BP_InputBase_C.__幻象2抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__幻象2抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__幻象2抬起事件_FunctionParams) & -16L;
@@ -980,9 +854,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__幻象2抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C110 RID: 180496 RVA: 0x00A14030 File Offset: 0x00A12230
+		// Token: 0x06020FCC RID: 135116 RVA: 0x00955134 File Offset: 0x00953334
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 幻象2按下事件(float time)
 		{
 			BP_InputBase_C.__幻象2按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__幻象2按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__幻象2按下事件_FunctionParams) & -16L;
@@ -991,9 +864,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__幻象2按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C111 RID: 180497 RVA: 0x00A14078 File Offset: 0x00A12278
+		// Token: 0x06020FCD RID: 135117 RVA: 0x0095517C File Offset: 0x0095337C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 大招抬起事件(float time)
 		{
 			BP_InputBase_C.__大招抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__大招抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__大招抬起事件_FunctionParams) & -16L;
@@ -1002,9 +874,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__大招抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C112 RID: 180498 RVA: 0x00A140C0 File Offset: 0x00A122C0
+		// Token: 0x06020FCE RID: 135118 RVA: 0x009551C4 File Offset: 0x009533C4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 大招按下事件(float time)
 		{
 			BP_InputBase_C.__大招按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__大招按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__大招按下事件_FunctionParams) & -16L;
@@ -1013,9 +884,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__大招按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C113 RID: 180499 RVA: 0x00A14108 File Offset: 0x00A12308
+		// Token: 0x06020FCF RID: 135119 RVA: 0x0095520C File Offset: 0x0095340C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 幻象1抬起事件(float time)
 		{
 			BP_InputBase_C.__幻象1抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__幻象1抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__幻象1抬起事件_FunctionParams) & -16L;
@@ -1024,9 +894,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__幻象1抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C114 RID: 180500 RVA: 0x00A14150 File Offset: 0x00A12350
+		// Token: 0x06020FD0 RID: 135120 RVA: 0x00955254 File Offset: 0x00953454
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 幻象1按下事件(float time)
 		{
 			BP_InputBase_C.__幻象1按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__幻象1按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__幻象1按下事件_FunctionParams) & -16L;
@@ -1035,9 +904,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__幻象1按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C115 RID: 180501 RVA: 0x00A14198 File Offset: 0x00A12398
+		// Token: 0x06020FD1 RID: 135121 RVA: 0x0095529C File Offset: 0x0095349C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 技能1抬起事件(float time)
 		{
 			BP_InputBase_C.__技能1抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__技能1抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__技能1抬起事件_FunctionParams) & -16L;
@@ -1046,9 +914,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__技能1抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C116 RID: 180502 RVA: 0x00A141E0 File Offset: 0x00A123E0
+		// Token: 0x06020FD2 RID: 135122 RVA: 0x009552E4 File Offset: 0x009534E4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 技能1按下事件(float time)
 		{
 			BP_InputBase_C.__技能1按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__技能1按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__技能1按下事件_FunctionParams) & -16L;
@@ -1057,9 +924,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__技能1按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C117 RID: 180503 RVA: 0x00A14228 File Offset: 0x00A12428
+		// Token: 0x06020FD3 RID: 135123 RVA: 0x0095532C File Offset: 0x0095352C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 闪避抬起事件(float time)
 		{
 			BP_InputBase_C.__闪避抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__闪避抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__闪避抬起事件_FunctionParams) & -16L;
@@ -1068,9 +934,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__闪避抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C118 RID: 180504 RVA: 0x00A14270 File Offset: 0x00A12470
+		// Token: 0x06020FD4 RID: 135124 RVA: 0x00955374 File Offset: 0x00953574
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 闪避按下事件(float time)
 		{
 			BP_InputBase_C.__闪避按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__闪避按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__闪避按下事件_FunctionParams) & -16L;
@@ -1079,9 +944,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__闪避按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C119 RID: 180505 RVA: 0x00A142B8 File Offset: 0x00A124B8
+		// Token: 0x06020FD5 RID: 135125 RVA: 0x009553BC File Offset: 0x009535BC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 攻击抬起事件(float time)
 		{
 			BP_InputBase_C.__攻击抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__攻击抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__攻击抬起事件_FunctionParams) & -16L;
@@ -1090,9 +954,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__攻击抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C11A RID: 180506 RVA: 0x00A14300 File Offset: 0x00A12500
+		// Token: 0x06020FD6 RID: 135126 RVA: 0x00955404 File Offset: 0x00953604
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 攻击按下事件(float time)
 		{
 			BP_InputBase_C.__攻击按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__攻击按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__攻击按下事件_FunctionParams) & -16L;
@@ -1101,9 +964,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__攻击按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C11B RID: 180507 RVA: 0x00A14348 File Offset: 0x00A12548
+		// Token: 0x06020FD7 RID: 135127 RVA: 0x0095544C File Offset: 0x0095364C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 走跑切换抬起事件(float time)
 		{
 			BP_InputBase_C.__走跑切换抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__走跑切换抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__走跑切换抬起事件_FunctionParams) & -16L;
@@ -1112,9 +974,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__走跑切换抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C11C RID: 180508 RVA: 0x00A14390 File Offset: 0x00A12590
+		// Token: 0x06020FD8 RID: 135128 RVA: 0x00955494 File Offset: 0x00953694
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 走跑切换按下事件(float time)
 		{
 			BP_InputBase_C.__走跑切换按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__走跑切换按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__走跑切换按下事件_FunctionParams) & -16L;
@@ -1123,9 +984,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__走跑切换按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C11D RID: 180509 RVA: 0x00A143D8 File Offset: 0x00A125D8
+		// Token: 0x06020FD9 RID: 135129 RVA: 0x009554DC File Offset: 0x009536DC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 攀爬抬起事件(float time)
 		{
 			BP_InputBase_C.__攀爬抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__攀爬抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__攀爬抬起事件_FunctionParams) & -16L;
@@ -1134,9 +994,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__攀爬抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C11E RID: 180510 RVA: 0x00A14420 File Offset: 0x00A12620
+		// Token: 0x06020FDA RID: 135130 RVA: 0x00955524 File Offset: 0x00953724
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 攀爬按下事件(float time)
 		{
 			BP_InputBase_C.__攀爬按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__攀爬按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__攀爬按下事件_FunctionParams) & -16L;
@@ -1145,9 +1004,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__攀爬按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C11F RID: 180511 RVA: 0x00A14468 File Offset: 0x00A12668
+		// Token: 0x06020FDB RID: 135131 RVA: 0x0095556C File Offset: 0x0095376C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 跳跃抬起事件(float time)
 		{
 			BP_InputBase_C.__跳跃抬起事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__跳跃抬起事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__跳跃抬起事件_FunctionParams) & -16L;
@@ -1156,9 +1014,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__跳跃抬起事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C120 RID: 180512 RVA: 0x00A144B0 File Offset: 0x00A126B0
+		// Token: 0x06020FDC RID: 135132 RVA: 0x009555B4 File Offset: 0x009537B4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 跳跃按下事件(float time)
 		{
 			BP_InputBase_C.__跳跃按下事件_FunctionParams* ptr = stackalloc BP_InputBase_C.__跳跃按下事件_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_InputBase_C.__跳跃按下事件_FunctionParams) & -16L;
@@ -1167,9 +1024,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__跳跃按下事件_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C121 RID: 180513 RVA: 0x00A144F8 File Offset: 0x00A126F8
+		// Token: 0x06020FDD RID: 135133 RVA: 0x009555FC File Offset: 0x009537FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputHoldConfig GetUnrealHoldConfig(int action)
 		{
 			BP_InputBase_C.__GetUnrealHoldConfig_FunctionParams* ptr = stackalloc BP_InputBase_C.__GetUnrealHoldConfig_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_InputBase_C.__GetUnrealHoldConfig_FunctionParams) & -16L;
@@ -1179,9 +1035,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return ptr->__Result;
 		}
 
-		// Token: 0x0602C122 RID: 180514 RVA: 0x00A14544 File Offset: 0x00A12744
+		// Token: 0x06020FDE RID: 135134 RVA: 0x00955648 File Offset: 0x00953848
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual SInputCaches GetUnrealCacheConfig(int action)
 		{
 			BP_InputBase_C.__GetUnrealCacheConfig_FunctionParams* ptr = stackalloc BP_InputBase_C.__GetUnrealCacheConfig_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(BP_InputBase_C.__GetUnrealCacheConfig_FunctionParams) & -16L;
@@ -1191,9 +1046,8 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			return ptr->__Result;
 		}
 
-		// Token: 0x0602C123 RID: 180515 RVA: 0x00A14590 File Offset: 0x00A12790
+		// Token: 0x06020FDF RID: 135135 RVA: 0x00955694 File Offset: 0x00953894
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveEndPlay(EEndPlayReason EndPlayReason)
 		{
 			BP_InputBase_C.__ReceiveEndPlay_FunctionParams* ptr = stackalloc BP_InputBase_C.__ReceiveEndPlay_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_InputBase_C.__ReceiveEndPlay_FunctionParams) & -16L;
@@ -1202,1363 +1056,1341 @@ namespace AkiClient.Game.Aki.Character.Input.Blueprints
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_InputBase_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C124 RID: 180516 RVA: 0x00A145DC File Offset: 0x00A127DC
+		// Token: 0x06020FE0 RID: 135136 RVA: 0x009556E0 File Offset: 0x009538E0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveEndPlay_Implementation(EEndPlayReason EndPlayReason)
 		{
 			BP_InputBase_C.__ReceiveEndPlay_FunctionParams* ptr = stackalloc BP_InputBase_C.__ReceiveEndPlay_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_InputBase_C.__ReceiveEndPlay_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_InputBase_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->EndPlayReason = EndPlayReason;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_InputBase_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_InputBase_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C125 RID: 180517 RVA: 0x00A14628 File Offset: 0x00A12828
+		// Token: 0x06020FE1 RID: 135137 RVA: 0x0095572B File Offset: 0x0095392B
 		protected BP_InputBase_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401705C RID: 94300
+		// Token: 0x04011DEF RID: 73199
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/Input/Blueprints/BP_InputBase.BP_InputBase_C";
 
-		// Token: 0x0401705D RID: 94301
+		// Token: 0x04011DF0 RID: 73200
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401705E RID: 94302
+		// Token: 0x04011DF1 RID: 73201
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401705F RID: 94303
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011DF2 RID: 73202
+		internal static int __PropertyOffset_OwnerActor;
 
-		// Token: 0x04017060 RID: 94304
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011DF3 RID: 73203
+		internal static int __PropertyOffset_UnlockLongPressTime;
 
-		// Token: 0x04017061 RID: 94305
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011DF4 RID: 73204
+		internal static int __PropertyOffset_IsLockOnState;
 
-		// Token: 0x04017062 RID: 94306
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011DF5 RID: 73205
+		internal static int __PropertyOffset_激活移动输入映射按键事件;
 
-		// Token: 0x04017063 RID: 94307
-		[Nullable(new byte[]
-		{
-			2,
-			0,
-			1
-		})]
-		private TMap<TEnumAsByte<EInputCharacterState>, SInputShowList> _InputShowMap;
-
-		// Token: 0x04017064 RID: 94308
-		internal static int __PropertyOffset_5;
-
-		// Token: 0x04017065 RID: 94309
-		[Nullable(new byte[]
-		{
-			2,
-			0,
-			1
-		})]
-		private TMap<TEnumAsByte<EInputCharacterState>, SInputShowList> _MobileInputShowMap;
-
-		// Token: 0x04017066 RID: 94310
-		internal static int __PropertyOffset_6;
-
-		// Token: 0x04017067 RID: 94311
+		// Token: 0x04011DF6 RID: 73206
 		[Nullable(2)]
 		private SInputActive _激活移动输入映射按键事件;
 
-		// Token: 0x04017068 RID: 94312
+		// Token: 0x04011DF7 RID: 73207
+		internal static int __PropertyOffset_输入蓝图覆盖模式;
+
+		// Token: 0x04011DF8 RID: 73208
 		private static IntPtr __移动输入抬起事件_NativeFunctionPtr;
 
-		// Token: 0x04017069 RID: 94313
+		// Token: 0x04011DF9 RID: 73209
 		private static IntPtr __移动输入按下事件_NativeFunctionPtr;
 
-		// Token: 0x0401706A RID: 94314
+		// Token: 0x04011DFA RID: 73210
 		private static IntPtr __移动输入长按_NativeFunctionPtr;
 
-		// Token: 0x0401706B RID: 94315
+		// Token: 0x04011DFB RID: 73211
 		private static IntPtr __移动输入抬起_NativeFunctionPtr;
 
-		// Token: 0x0401706C RID: 94316
+		// Token: 0x04011DFC RID: 73212
 		private static IntPtr __移动输入按下_NativeFunctionPtr;
 
-		// Token: 0x0401706D RID: 94317
+		// Token: 0x04011DFD RID: 73213
 		private static IntPtr __下降抬起事件_NativeFunctionPtr;
 
-		// Token: 0x0401706E RID: 94318
+		// Token: 0x04011DFE RID: 73214
 		private static IntPtr __下降按下事件_NativeFunctionPtr;
 
-		// Token: 0x0401706F RID: 94319
+		// Token: 0x04011DFF RID: 73215
 		private static IntPtr __下降长按_NativeFunctionPtr;
 
-		// Token: 0x04017070 RID: 94320
+		// Token: 0x04011E00 RID: 73216
 		private static IntPtr __下降抬起_NativeFunctionPtr;
 
-		// Token: 0x04017071 RID: 94321
+		// Token: 0x04011E01 RID: 73217
 		private static IntPtr __下降按下_NativeFunctionPtr;
 
-		// Token: 0x04017072 RID: 94322
+		// Token: 0x04011E02 RID: 73218
 		private static IntPtr __GetMoveVector_NativeFunctionPtr;
 
-		// Token: 0x04017073 RID: 94323
+		// Token: 0x04011E03 RID: 73219
 		private static IntPtr __通用交互按下_NativeFunctionPtr;
 
-		// Token: 0x04017074 RID: 94324
+		// Token: 0x04011E04 RID: 73220
 		private static IntPtr __锁定目标长按_NativeFunctionPtr;
 
-		// Token: 0x04017075 RID: 94325
+		// Token: 0x04011E05 RID: 73221
 		private static IntPtr __瞄准长按_NativeFunctionPtr;
 
-		// Token: 0x04017076 RID: 94326
+		// Token: 0x04011E06 RID: 73222
 		private static IntPtr __瞄准抬起_NativeFunctionPtr;
 
-		// Token: 0x04017077 RID: 94327
+		// Token: 0x04011E07 RID: 73223
 		private static IntPtr __瞄准按下_NativeFunctionPtr;
 
-		// Token: 0x04017078 RID: 94328
+		// Token: 0x04011E08 RID: 73224
 		private static IntPtr __切换角色3长按_NativeFunctionPtr;
 
-		// Token: 0x04017079 RID: 94329
+		// Token: 0x04011E09 RID: 73225
 		private static IntPtr __切换角色3抬起_NativeFunctionPtr;
 
-		// Token: 0x0401707A RID: 94330
+		// Token: 0x04011E0A RID: 73226
 		private static IntPtr __切换角色3按下_NativeFunctionPtr;
 
-		// Token: 0x0401707B RID: 94331
+		// Token: 0x04011E0B RID: 73227
 		private static IntPtr __切换角色2长按_NativeFunctionPtr;
 
-		// Token: 0x0401707C RID: 94332
+		// Token: 0x04011E0C RID: 73228
 		private static IntPtr __切换角色2抬起_NativeFunctionPtr;
 
-		// Token: 0x0401707D RID: 94333
+		// Token: 0x04011E0D RID: 73229
 		private static IntPtr __切换角色2按下_NativeFunctionPtr;
 
-		// Token: 0x0401707E RID: 94334
+		// Token: 0x04011E0E RID: 73230
 		private static IntPtr __切换角色1长按_NativeFunctionPtr;
 
-		// Token: 0x0401707F RID: 94335
+		// Token: 0x04011E0F RID: 73231
 		private static IntPtr __切换角色1抬起_NativeFunctionPtr;
 
-		// Token: 0x04017080 RID: 94336
+		// Token: 0x04011E10 RID: 73232
 		private static IntPtr __切换角色1按下_NativeFunctionPtr;
 
-		// Token: 0x04017081 RID: 94337
+		// Token: 0x04011E11 RID: 73233
 		private static IntPtr __幻象2长按_NativeFunctionPtr;
 
-		// Token: 0x04017082 RID: 94338
+		// Token: 0x04011E12 RID: 73234
 		private static IntPtr __幻象2抬起_NativeFunctionPtr;
 
-		// Token: 0x04017083 RID: 94339
+		// Token: 0x04011E13 RID: 73235
 		private static IntPtr __幻象2按下_NativeFunctionPtr;
 
-		// Token: 0x04017084 RID: 94340
+		// Token: 0x04011E14 RID: 73236
 		private static IntPtr __大招长按_NativeFunctionPtr;
 
-		// Token: 0x04017085 RID: 94341
+		// Token: 0x04011E15 RID: 73237
 		private static IntPtr __大招抬起_NativeFunctionPtr;
 
-		// Token: 0x04017086 RID: 94342
+		// Token: 0x04011E16 RID: 73238
 		private static IntPtr __大招按下_NativeFunctionPtr;
 
-		// Token: 0x04017087 RID: 94343
+		// Token: 0x04011E17 RID: 73239
 		private static IntPtr __幻象1长按_NativeFunctionPtr;
 
-		// Token: 0x04017088 RID: 94344
+		// Token: 0x04011E18 RID: 73240
 		private static IntPtr __幻象1抬起_NativeFunctionPtr;
 
-		// Token: 0x04017089 RID: 94345
+		// Token: 0x04011E19 RID: 73241
 		private static IntPtr __幻象1按下_NativeFunctionPtr;
 
-		// Token: 0x0401708A RID: 94346
+		// Token: 0x04011E1A RID: 73242
 		private static IntPtr __技能1长按_NativeFunctionPtr;
 
-		// Token: 0x0401708B RID: 94347
+		// Token: 0x04011E1B RID: 73243
 		private static IntPtr __技能1抬起_NativeFunctionPtr;
 
-		// Token: 0x0401708C RID: 94348
+		// Token: 0x04011E1C RID: 73244
 		private static IntPtr __技能1按下_NativeFunctionPtr;
 
-		// Token: 0x0401708D RID: 94349
+		// Token: 0x04011E1D RID: 73245
 		private static IntPtr __闪避长按_NativeFunctionPtr;
 
-		// Token: 0x0401708E RID: 94350
+		// Token: 0x04011E1E RID: 73246
 		private static IntPtr __闪避抬起_NativeFunctionPtr;
 
-		// Token: 0x0401708F RID: 94351
+		// Token: 0x04011E1F RID: 73247
 		private static IntPtr __闪避按下_NativeFunctionPtr;
 
-		// Token: 0x04017090 RID: 94352
+		// Token: 0x04011E20 RID: 73248
 		private static IntPtr __攻击长按_NativeFunctionPtr;
 
-		// Token: 0x04017091 RID: 94353
+		// Token: 0x04011E21 RID: 73249
 		private static IntPtr __攻击抬起_NativeFunctionPtr;
 
-		// Token: 0x04017092 RID: 94354
+		// Token: 0x04011E22 RID: 73250
 		private static IntPtr __攻击按下_NativeFunctionPtr;
 
-		// Token: 0x04017093 RID: 94355
+		// Token: 0x04011E23 RID: 73251
 		private static IntPtr __走跑切换长按_NativeFunctionPtr;
 
-		// Token: 0x04017094 RID: 94356
+		// Token: 0x04011E24 RID: 73252
 		private static IntPtr __走跑切换抬起_NativeFunctionPtr;
 
-		// Token: 0x04017095 RID: 94357
+		// Token: 0x04011E25 RID: 73253
 		private static IntPtr __走跑切换按下_NativeFunctionPtr;
 
-		// Token: 0x04017096 RID: 94358
+		// Token: 0x04011E26 RID: 73254
 		private static IntPtr __攀爬长按_NativeFunctionPtr;
 
-		// Token: 0x04017097 RID: 94359
+		// Token: 0x04011E27 RID: 73255
 		private static IntPtr __攀爬抬起_NativeFunctionPtr;
 
-		// Token: 0x04017098 RID: 94360
+		// Token: 0x04011E28 RID: 73256
 		private static IntPtr __攀爬按下_NativeFunctionPtr;
 
-		// Token: 0x04017099 RID: 94361
+		// Token: 0x04011E29 RID: 73257
 		private static IntPtr __跳跃长按_NativeFunctionPtr;
 
-		// Token: 0x0401709A RID: 94362
+		// Token: 0x04011E2A RID: 73258
 		private static IntPtr __跳跃抬起_NativeFunctionPtr;
 
-		// Token: 0x0401709B RID: 94363
+		// Token: 0x04011E2B RID: 73259
 		private static IntPtr __跳跃按下_NativeFunctionPtr;
 
-		// Token: 0x0401709C RID: 94364
+		// Token: 0x04011E2C RID: 73260
 		private static IntPtr __瞄准抬起事件_NativeFunctionPtr;
 
-		// Token: 0x0401709D RID: 94365
+		// Token: 0x04011E2D RID: 73261
 		private static IntPtr __瞄准按下事件_NativeFunctionPtr;
 
-		// Token: 0x0401709E RID: 94366
+		// Token: 0x04011E2E RID: 73262
 		private static IntPtr __锁定目标抬起事件_NativeFunctionPtr;
 
-		// Token: 0x0401709F RID: 94367
+		// Token: 0x04011E2F RID: 73263
 		private static IntPtr __锁定目标按下事件_NativeFunctionPtr;
 
-		// Token: 0x040170A0 RID: 94368
+		// Token: 0x04011E30 RID: 73264
 		private static IntPtr __切换角色3抬起事件_NativeFunctionPtr;
 
-		// Token: 0x040170A1 RID: 94369
+		// Token: 0x04011E31 RID: 73265
 		private static IntPtr __切换角色3按下事件_NativeFunctionPtr;
 
-		// Token: 0x040170A2 RID: 94370
+		// Token: 0x04011E32 RID: 73266
 		private static IntPtr __切换角色2抬起事件_NativeFunctionPtr;
 
-		// Token: 0x040170A3 RID: 94371
+		// Token: 0x04011E33 RID: 73267
 		private static IntPtr __切换角色2按下事件_NativeFunctionPtr;
 
-		// Token: 0x040170A4 RID: 94372
+		// Token: 0x04011E34 RID: 73268
 		private static IntPtr __切换角色1抬起事件_NativeFunctionPtr;
 
-		// Token: 0x040170A5 RID: 94373
+		// Token: 0x04011E35 RID: 73269
 		private static IntPtr __切换角色1按下事件_NativeFunctionPtr;
 
-		// Token: 0x040170A6 RID: 94374
+		// Token: 0x04011E36 RID: 73270
 		private static IntPtr __幻象2抬起事件_NativeFunctionPtr;
 
-		// Token: 0x040170A7 RID: 94375
+		// Token: 0x04011E37 RID: 73271
 		private static IntPtr __幻象2按下事件_NativeFunctionPtr;
 
-		// Token: 0x040170A8 RID: 94376
+		// Token: 0x04011E38 RID: 73272
 		private static IntPtr __大招抬起事件_NativeFunctionPtr;
 
-		// Token: 0x040170A9 RID: 94377
+		// Token: 0x04011E39 RID: 73273
 		private static IntPtr __大招按下事件_NativeFunctionPtr;
 
-		// Token: 0x040170AA RID: 94378
+		// Token: 0x04011E3A RID: 73274
 		private static IntPtr __幻象1抬起事件_NativeFunctionPtr;
 
-		// Token: 0x040170AB RID: 94379
+		// Token: 0x04011E3B RID: 73275
 		private static IntPtr __幻象1按下事件_NativeFunctionPtr;
 
-		// Token: 0x040170AC RID: 94380
+		// Token: 0x04011E3C RID: 73276
 		private static IntPtr __技能1抬起事件_NativeFunctionPtr;
 
-		// Token: 0x040170AD RID: 94381
+		// Token: 0x04011E3D RID: 73277
 		private static IntPtr __技能1按下事件_NativeFunctionPtr;
 
-		// Token: 0x040170AE RID: 94382
+		// Token: 0x04011E3E RID: 73278
 		private static IntPtr __闪避抬起事件_NativeFunctionPtr;
 
-		// Token: 0x040170AF RID: 94383
+		// Token: 0x04011E3F RID: 73279
 		private static IntPtr __闪避按下事件_NativeFunctionPtr;
 
-		// Token: 0x040170B0 RID: 94384
+		// Token: 0x04011E40 RID: 73280
 		private static IntPtr __攻击抬起事件_NativeFunctionPtr;
 
-		// Token: 0x040170B1 RID: 94385
+		// Token: 0x04011E41 RID: 73281
 		private static IntPtr __攻击按下事件_NativeFunctionPtr;
 
-		// Token: 0x040170B2 RID: 94386
+		// Token: 0x04011E42 RID: 73282
 		private static IntPtr __走跑切换抬起事件_NativeFunctionPtr;
 
-		// Token: 0x040170B3 RID: 94387
+		// Token: 0x04011E43 RID: 73283
 		private static IntPtr __走跑切换按下事件_NativeFunctionPtr;
 
-		// Token: 0x040170B4 RID: 94388
+		// Token: 0x04011E44 RID: 73284
 		private static IntPtr __攀爬抬起事件_NativeFunctionPtr;
 
-		// Token: 0x040170B5 RID: 94389
+		// Token: 0x04011E45 RID: 73285
 		private static IntPtr __攀爬按下事件_NativeFunctionPtr;
 
-		// Token: 0x040170B6 RID: 94390
+		// Token: 0x04011E46 RID: 73286
 		private static IntPtr __跳跃抬起事件_NativeFunctionPtr;
 
-		// Token: 0x040170B7 RID: 94391
+		// Token: 0x04011E47 RID: 73287
 		private static IntPtr __跳跃按下事件_NativeFunctionPtr;
 
-		// Token: 0x040170B8 RID: 94392
+		// Token: 0x04011E48 RID: 73288
 		private static IntPtr __GetUnrealHoldConfig_NativeFunctionPtr;
 
-		// Token: 0x040170B9 RID: 94393
+		// Token: 0x04011E49 RID: 73289
 		private static IntPtr __GetUnrealCacheConfig_NativeFunctionPtr;
 
-		// Token: 0x040170BA RID: 94394
+		// Token: 0x04011E4A RID: 73290
 		private static IntPtr __ReceiveEndPlay_NativeFunctionPtr;
 
-		// Token: 0x0200A5B6 RID: 42422
+		// Token: 0x02008FF0 RID: 36848
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __移动输入抬起事件_FunctionParams
 		{
-			// Token: 0x04032452 RID: 205906
+			// Token: 0x0402CDA2 RID: 183714
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032453 RID: 205907
+			// Token: 0x0402CDA3 RID: 183715
 			[FieldOffset(4)]
 			public float yaw;
 		}
 
-		// Token: 0x0200A5B7 RID: 42423
+		// Token: 0x02008FF1 RID: 36849
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __移动输入按下事件_FunctionParams
 		{
-			// Token: 0x04032454 RID: 205908
+			// Token: 0x0402CDA4 RID: 183716
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032455 RID: 205909
+			// Token: 0x0402CDA5 RID: 183717
 			[FieldOffset(4)]
 			public float yaw;
 		}
 
-		// Token: 0x0200A5B8 RID: 42424
+		// Token: 0x02008FF2 RID: 36850
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 28)]
 		protected ref struct __移动输入长按_FunctionParams
 		{
-			// Token: 0x04032456 RID: 205910
+			// Token: 0x0402CDA6 RID: 183718
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032457 RID: 205911
+			// Token: 0x0402CDA7 RID: 183719
 			[FieldOffset(4)]
 			public float yaw;
 
-			// Token: 0x04032458 RID: 205912
+			// Token: 0x0402CDA8 RID: 183720
 			[FieldOffset(8)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5B9 RID: 42425
+		// Token: 0x02008FF3 RID: 36851
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 28)]
 		protected ref struct __移动输入抬起_FunctionParams
 		{
-			// Token: 0x04032459 RID: 205913
+			// Token: 0x0402CDA9 RID: 183721
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403245A RID: 205914
+			// Token: 0x0402CDAA RID: 183722
 			[FieldOffset(4)]
 			public float yaw;
 
-			// Token: 0x0403245B RID: 205915
+			// Token: 0x0402CDAB RID: 183723
 			[FieldOffset(8)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5BA RID: 42426
+		// Token: 0x02008FF4 RID: 36852
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 28)]
 		protected ref struct __移动输入按下_FunctionParams
 		{
-			// Token: 0x0403245C RID: 205916
+			// Token: 0x0402CDAC RID: 183724
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403245D RID: 205917
+			// Token: 0x0402CDAD RID: 183725
 			[FieldOffset(4)]
 			public float yaw;
 
-			// Token: 0x0403245E RID: 205918
+			// Token: 0x0402CDAE RID: 183726
 			[FieldOffset(8)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5BB RID: 42427
+		// Token: 0x02008FF5 RID: 36853
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __下降抬起事件_FunctionParams
 		{
-			// Token: 0x0403245F RID: 205919
+			// Token: 0x0402CDAF RID: 183727
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5BC RID: 42428
+		// Token: 0x02008FF6 RID: 36854
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __下降按下事件_FunctionParams
 		{
-			// Token: 0x04032460 RID: 205920
+			// Token: 0x0402CDB0 RID: 183728
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5BD RID: 42429
+		// Token: 0x02008FF7 RID: 36855
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __下降长按_FunctionParams
 		{
-			// Token: 0x04032461 RID: 205921
+			// Token: 0x0402CDB1 RID: 183729
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032462 RID: 205922
+			// Token: 0x0402CDB2 RID: 183730
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5BE RID: 42430
+		// Token: 0x02008FF8 RID: 36856
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __下降抬起_FunctionParams
 		{
-			// Token: 0x04032463 RID: 205923
+			// Token: 0x0402CDB3 RID: 183731
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032464 RID: 205924
+			// Token: 0x0402CDB4 RID: 183732
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5BF RID: 42431
+		// Token: 0x02008FF9 RID: 36857
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __下降按下_FunctionParams
 		{
-			// Token: 0x04032465 RID: 205925
+			// Token: 0x0402CDB5 RID: 183733
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032466 RID: 205926
+			// Token: 0x0402CDB6 RID: 183734
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5C0 RID: 42432
+		// Token: 0x02008FFA RID: 36858
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetMoveVector_FunctionParams
 		{
-			// Token: 0x04032467 RID: 205927
+			// Token: 0x0402CDB7 RID: 183735
 			[FieldOffset(0)]
 			public FVector2D ReturnVaule;
 		}
 
-		// Token: 0x0200A5C1 RID: 42433
+		// Token: 0x02008FFB RID: 36859
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __通用交互按下_FunctionParams
 		{
-			// Token: 0x04032468 RID: 205928
+			// Token: 0x0402CDB8 RID: 183736
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032469 RID: 205929
+			// Token: 0x0402CDB9 RID: 183737
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5C2 RID: 42434
+		// Token: 0x02008FFC RID: 36860
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __锁定目标长按_FunctionParams
 		{
-			// Token: 0x0403246A RID: 205930
+			// Token: 0x0402CDBA RID: 183738
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403246B RID: 205931
+			// Token: 0x0402CDBB RID: 183739
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5C3 RID: 42435
+		// Token: 0x02008FFD RID: 36861
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __瞄准长按_FunctionParams
 		{
-			// Token: 0x0403246C RID: 205932
+			// Token: 0x0402CDBC RID: 183740
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403246D RID: 205933
+			// Token: 0x0402CDBD RID: 183741
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5C4 RID: 42436
+		// Token: 0x02008FFE RID: 36862
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __瞄准抬起_FunctionParams
 		{
-			// Token: 0x0403246E RID: 205934
+			// Token: 0x0402CDBE RID: 183742
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403246F RID: 205935
+			// Token: 0x0402CDBF RID: 183743
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5C5 RID: 42437
+		// Token: 0x02008FFF RID: 36863
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __瞄准按下_FunctionParams
 		{
-			// Token: 0x04032470 RID: 205936
+			// Token: 0x0402CDC0 RID: 183744
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032471 RID: 205937
+			// Token: 0x0402CDC1 RID: 183745
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5C6 RID: 42438
+		// Token: 0x02009000 RID: 36864
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __切换角色3长按_FunctionParams
 		{
-			// Token: 0x04032472 RID: 205938
+			// Token: 0x0402CDC2 RID: 183746
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032473 RID: 205939
+			// Token: 0x0402CDC3 RID: 183747
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5C7 RID: 42439
+		// Token: 0x02009001 RID: 36865
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __切换角色3抬起_FunctionParams
 		{
-			// Token: 0x04032474 RID: 205940
+			// Token: 0x0402CDC4 RID: 183748
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032475 RID: 205941
+			// Token: 0x0402CDC5 RID: 183749
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5C8 RID: 42440
+		// Token: 0x02009002 RID: 36866
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __切换角色3按下_FunctionParams
 		{
-			// Token: 0x04032476 RID: 205942
+			// Token: 0x0402CDC6 RID: 183750
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032477 RID: 205943
+			// Token: 0x0402CDC7 RID: 183751
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5C9 RID: 42441
+		// Token: 0x02009003 RID: 36867
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __切换角色2长按_FunctionParams
 		{
-			// Token: 0x04032478 RID: 205944
+			// Token: 0x0402CDC8 RID: 183752
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032479 RID: 205945
+			// Token: 0x0402CDC9 RID: 183753
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5CA RID: 42442
+		// Token: 0x02009004 RID: 36868
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __切换角色2抬起_FunctionParams
 		{
-			// Token: 0x0403247A RID: 205946
+			// Token: 0x0402CDCA RID: 183754
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403247B RID: 205947
+			// Token: 0x0402CDCB RID: 183755
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5CB RID: 42443
+		// Token: 0x02009005 RID: 36869
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __切换角色2按下_FunctionParams
 		{
-			// Token: 0x0403247C RID: 205948
+			// Token: 0x0402CDCC RID: 183756
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403247D RID: 205949
+			// Token: 0x0402CDCD RID: 183757
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5CC RID: 42444
+		// Token: 0x02009006 RID: 36870
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __切换角色1长按_FunctionParams
 		{
-			// Token: 0x0403247E RID: 205950
+			// Token: 0x0402CDCE RID: 183758
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403247F RID: 205951
+			// Token: 0x0402CDCF RID: 183759
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5CD RID: 42445
+		// Token: 0x02009007 RID: 36871
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __切换角色1抬起_FunctionParams
 		{
-			// Token: 0x04032480 RID: 205952
+			// Token: 0x0402CDD0 RID: 183760
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032481 RID: 205953
+			// Token: 0x0402CDD1 RID: 183761
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5CE RID: 42446
+		// Token: 0x02009008 RID: 36872
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __切换角色1按下_FunctionParams
 		{
-			// Token: 0x04032482 RID: 205954
+			// Token: 0x0402CDD2 RID: 183762
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032483 RID: 205955
+			// Token: 0x0402CDD3 RID: 183763
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5CF RID: 42447
+		// Token: 0x02009009 RID: 36873
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __幻象2长按_FunctionParams
 		{
-			// Token: 0x04032484 RID: 205956
+			// Token: 0x0402CDD4 RID: 183764
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032485 RID: 205957
+			// Token: 0x0402CDD5 RID: 183765
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5D0 RID: 42448
+		// Token: 0x0200900A RID: 36874
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __幻象2抬起_FunctionParams
 		{
-			// Token: 0x04032486 RID: 205958
+			// Token: 0x0402CDD6 RID: 183766
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032487 RID: 205959
+			// Token: 0x0402CDD7 RID: 183767
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5D1 RID: 42449
+		// Token: 0x0200900B RID: 36875
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __幻象2按下_FunctionParams
 		{
-			// Token: 0x04032488 RID: 205960
+			// Token: 0x0402CDD8 RID: 183768
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032489 RID: 205961
+			// Token: 0x0402CDD9 RID: 183769
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5D2 RID: 42450
+		// Token: 0x0200900C RID: 36876
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __大招长按_FunctionParams
 		{
-			// Token: 0x0403248A RID: 205962
+			// Token: 0x0402CDDA RID: 183770
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403248B RID: 205963
+			// Token: 0x0402CDDB RID: 183771
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5D3 RID: 42451
+		// Token: 0x0200900D RID: 36877
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __大招抬起_FunctionParams
 		{
-			// Token: 0x0403248C RID: 205964
+			// Token: 0x0402CDDC RID: 183772
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403248D RID: 205965
+			// Token: 0x0402CDDD RID: 183773
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5D4 RID: 42452
+		// Token: 0x0200900E RID: 36878
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __大招按下_FunctionParams
 		{
-			// Token: 0x0403248E RID: 205966
+			// Token: 0x0402CDDE RID: 183774
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403248F RID: 205967
+			// Token: 0x0402CDDF RID: 183775
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5D5 RID: 42453
+		// Token: 0x0200900F RID: 36879
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __幻象1长按_FunctionParams
 		{
-			// Token: 0x04032490 RID: 205968
+			// Token: 0x0402CDE0 RID: 183776
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032491 RID: 205969
+			// Token: 0x0402CDE1 RID: 183777
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5D6 RID: 42454
+		// Token: 0x02009010 RID: 36880
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __幻象1抬起_FunctionParams
 		{
-			// Token: 0x04032492 RID: 205970
+			// Token: 0x0402CDE2 RID: 183778
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032493 RID: 205971
+			// Token: 0x0402CDE3 RID: 183779
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5D7 RID: 42455
+		// Token: 0x02009011 RID: 36881
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __幻象1按下_FunctionParams
 		{
-			// Token: 0x04032494 RID: 205972
+			// Token: 0x0402CDE4 RID: 183780
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032495 RID: 205973
+			// Token: 0x0402CDE5 RID: 183781
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5D8 RID: 42456
+		// Token: 0x02009012 RID: 36882
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __技能1长按_FunctionParams
 		{
-			// Token: 0x04032496 RID: 205974
+			// Token: 0x0402CDE6 RID: 183782
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032497 RID: 205975
+			// Token: 0x0402CDE7 RID: 183783
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5D9 RID: 42457
+		// Token: 0x02009013 RID: 36883
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __技能1抬起_FunctionParams
 		{
-			// Token: 0x04032498 RID: 205976
+			// Token: 0x0402CDE8 RID: 183784
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x04032499 RID: 205977
+			// Token: 0x0402CDE9 RID: 183785
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5DA RID: 42458
+		// Token: 0x02009014 RID: 36884
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __技能1按下_FunctionParams
 		{
-			// Token: 0x0403249A RID: 205978
+			// Token: 0x0402CDEA RID: 183786
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403249B RID: 205979
+			// Token: 0x0402CDEB RID: 183787
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5DB RID: 42459
+		// Token: 0x02009015 RID: 36885
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __闪避长按_FunctionParams
 		{
-			// Token: 0x0403249C RID: 205980
+			// Token: 0x0402CDEC RID: 183788
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403249D RID: 205981
+			// Token: 0x0402CDED RID: 183789
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5DC RID: 42460
+		// Token: 0x02009016 RID: 36886
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __闪避抬起_FunctionParams
 		{
-			// Token: 0x0403249E RID: 205982
+			// Token: 0x0402CDEE RID: 183790
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x0403249F RID: 205983
+			// Token: 0x0402CDEF RID: 183791
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5DD RID: 42461
+		// Token: 0x02009017 RID: 36887
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __闪避按下_FunctionParams
 		{
-			// Token: 0x040324A0 RID: 205984
+			// Token: 0x0402CDF0 RID: 183792
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x040324A1 RID: 205985
+			// Token: 0x0402CDF1 RID: 183793
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5DE RID: 42462
+		// Token: 0x02009018 RID: 36888
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __攻击长按_FunctionParams
 		{
-			// Token: 0x040324A2 RID: 205986
+			// Token: 0x0402CDF2 RID: 183794
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x040324A3 RID: 205987
+			// Token: 0x0402CDF3 RID: 183795
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5DF RID: 42463
+		// Token: 0x02009019 RID: 36889
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __攻击抬起_FunctionParams
 		{
-			// Token: 0x040324A4 RID: 205988
+			// Token: 0x0402CDF4 RID: 183796
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x040324A5 RID: 205989
+			// Token: 0x0402CDF5 RID: 183797
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5E0 RID: 42464
+		// Token: 0x0200901A RID: 36890
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __攻击按下_FunctionParams
 		{
-			// Token: 0x040324A6 RID: 205990
+			// Token: 0x0402CDF6 RID: 183798
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x040324A7 RID: 205991
+			// Token: 0x0402CDF7 RID: 183799
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5E1 RID: 42465
+		// Token: 0x0200901B RID: 36891
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __走跑切换长按_FunctionParams
 		{
-			// Token: 0x040324A8 RID: 205992
+			// Token: 0x0402CDF8 RID: 183800
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x040324A9 RID: 205993
+			// Token: 0x0402CDF9 RID: 183801
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5E2 RID: 42466
+		// Token: 0x0200901C RID: 36892
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __走跑切换抬起_FunctionParams
 		{
-			// Token: 0x040324AA RID: 205994
+			// Token: 0x0402CDFA RID: 183802
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x040324AB RID: 205995
+			// Token: 0x0402CDFB RID: 183803
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5E3 RID: 42467
+		// Token: 0x0200901D RID: 36893
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __走跑切换按下_FunctionParams
 		{
-			// Token: 0x040324AC RID: 205996
+			// Token: 0x0402CDFC RID: 183804
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x040324AD RID: 205997
+			// Token: 0x0402CDFD RID: 183805
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5E4 RID: 42468
+		// Token: 0x0200901E RID: 36894
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __攀爬长按_FunctionParams
 		{
-			// Token: 0x040324AE RID: 205998
+			// Token: 0x0402CDFE RID: 183806
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x040324AF RID: 205999
+			// Token: 0x0402CDFF RID: 183807
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5E5 RID: 42469
+		// Token: 0x0200901F RID: 36895
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __攀爬抬起_FunctionParams
 		{
-			// Token: 0x040324B0 RID: 206000
+			// Token: 0x0402CE00 RID: 183808
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x040324B1 RID: 206001
+			// Token: 0x0402CE01 RID: 183809
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5E6 RID: 42470
+		// Token: 0x02009020 RID: 36896
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __攀爬按下_FunctionParams
 		{
-			// Token: 0x040324B2 RID: 206002
+			// Token: 0x0402CE02 RID: 183810
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x040324B3 RID: 206003
+			// Token: 0x0402CE03 RID: 183811
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5E7 RID: 42471
+		// Token: 0x02009021 RID: 36897
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __跳跃长按_FunctionParams
 		{
-			// Token: 0x040324B4 RID: 206004
+			// Token: 0x0402CE04 RID: 183812
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x040324B5 RID: 206005
+			// Token: 0x0402CE05 RID: 183813
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5E8 RID: 42472
+		// Token: 0x02009022 RID: 36898
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __跳跃抬起_FunctionParams
 		{
-			// Token: 0x040324B6 RID: 206006
+			// Token: 0x0402CE06 RID: 183814
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x040324B7 RID: 206007
+			// Token: 0x0402CE07 RID: 183815
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5E9 RID: 42473
+		// Token: 0x02009023 RID: 36899
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __跳跃按下_FunctionParams
 		{
-			// Token: 0x040324B8 RID: 206008
+			// Token: 0x0402CE08 RID: 183816
 			[FieldOffset(0)]
 			public float time;
 
-			// Token: 0x040324B9 RID: 206009
+			// Token: 0x0402CE09 RID: 183817
 			[FieldOffset(4)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200A5EA RID: 42474
+		// Token: 0x02009024 RID: 36900
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __瞄准抬起事件_FunctionParams
 		{
-			// Token: 0x040324BA RID: 206010
+			// Token: 0x0402CE0A RID: 183818
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5EB RID: 42475
+		// Token: 0x02009025 RID: 36901
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __瞄准按下事件_FunctionParams
 		{
-			// Token: 0x040324BB RID: 206011
+			// Token: 0x0402CE0B RID: 183819
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5EC RID: 42476
+		// Token: 0x02009026 RID: 36902
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __锁定目标抬起事件_FunctionParams
 		{
-			// Token: 0x040324BC RID: 206012
+			// Token: 0x0402CE0C RID: 183820
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5ED RID: 42477
+		// Token: 0x02009027 RID: 36903
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __锁定目标按下事件_FunctionParams
 		{
-			// Token: 0x040324BD RID: 206013
+			// Token: 0x0402CE0D RID: 183821
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5EE RID: 42478
+		// Token: 0x02009028 RID: 36904
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __切换角色3抬起事件_FunctionParams
 		{
-			// Token: 0x040324BE RID: 206014
+			// Token: 0x0402CE0E RID: 183822
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5EF RID: 42479
+		// Token: 0x02009029 RID: 36905
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __切换角色3按下事件_FunctionParams
 		{
-			// Token: 0x040324BF RID: 206015
+			// Token: 0x0402CE0F RID: 183823
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5F0 RID: 42480
+		// Token: 0x0200902A RID: 36906
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __切换角色2抬起事件_FunctionParams
 		{
-			// Token: 0x040324C0 RID: 206016
+			// Token: 0x0402CE10 RID: 183824
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5F1 RID: 42481
+		// Token: 0x0200902B RID: 36907
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __切换角色2按下事件_FunctionParams
 		{
-			// Token: 0x040324C1 RID: 206017
+			// Token: 0x0402CE11 RID: 183825
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5F2 RID: 42482
+		// Token: 0x0200902C RID: 36908
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __切换角色1抬起事件_FunctionParams
 		{
-			// Token: 0x040324C2 RID: 206018
+			// Token: 0x0402CE12 RID: 183826
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5F3 RID: 42483
+		// Token: 0x0200902D RID: 36909
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __切换角色1按下事件_FunctionParams
 		{
-			// Token: 0x040324C3 RID: 206019
+			// Token: 0x0402CE13 RID: 183827
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5F4 RID: 42484
+		// Token: 0x0200902E RID: 36910
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __幻象2抬起事件_FunctionParams
 		{
-			// Token: 0x040324C4 RID: 206020
+			// Token: 0x0402CE14 RID: 183828
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5F5 RID: 42485
+		// Token: 0x0200902F RID: 36911
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __幻象2按下事件_FunctionParams
 		{
-			// Token: 0x040324C5 RID: 206021
+			// Token: 0x0402CE15 RID: 183829
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5F6 RID: 42486
+		// Token: 0x02009030 RID: 36912
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __大招抬起事件_FunctionParams
 		{
-			// Token: 0x040324C6 RID: 206022
+			// Token: 0x0402CE16 RID: 183830
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5F7 RID: 42487
+		// Token: 0x02009031 RID: 36913
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __大招按下事件_FunctionParams
 		{
-			// Token: 0x040324C7 RID: 206023
+			// Token: 0x0402CE17 RID: 183831
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5F8 RID: 42488
+		// Token: 0x02009032 RID: 36914
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __幻象1抬起事件_FunctionParams
 		{
-			// Token: 0x040324C8 RID: 206024
+			// Token: 0x0402CE18 RID: 183832
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5F9 RID: 42489
+		// Token: 0x02009033 RID: 36915
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __幻象1按下事件_FunctionParams
 		{
-			// Token: 0x040324C9 RID: 206025
+			// Token: 0x0402CE19 RID: 183833
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5FA RID: 42490
+		// Token: 0x02009034 RID: 36916
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __技能1抬起事件_FunctionParams
 		{
-			// Token: 0x040324CA RID: 206026
+			// Token: 0x0402CE1A RID: 183834
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5FB RID: 42491
+		// Token: 0x02009035 RID: 36917
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __技能1按下事件_FunctionParams
 		{
-			// Token: 0x040324CB RID: 206027
+			// Token: 0x0402CE1B RID: 183835
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5FC RID: 42492
+		// Token: 0x02009036 RID: 36918
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __闪避抬起事件_FunctionParams
 		{
-			// Token: 0x040324CC RID: 206028
+			// Token: 0x0402CE1C RID: 183836
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5FD RID: 42493
+		// Token: 0x02009037 RID: 36919
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __闪避按下事件_FunctionParams
 		{
-			// Token: 0x040324CD RID: 206029
+			// Token: 0x0402CE1D RID: 183837
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5FE RID: 42494
+		// Token: 0x02009038 RID: 36920
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __攻击抬起事件_FunctionParams
 		{
-			// Token: 0x040324CE RID: 206030
+			// Token: 0x0402CE1E RID: 183838
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A5FF RID: 42495
+		// Token: 0x02009039 RID: 36921
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __攻击按下事件_FunctionParams
 		{
-			// Token: 0x040324CF RID: 206031
+			// Token: 0x0402CE1F RID: 183839
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A600 RID: 42496
+		// Token: 0x0200903A RID: 36922
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __走跑切换抬起事件_FunctionParams
 		{
-			// Token: 0x040324D0 RID: 206032
+			// Token: 0x0402CE20 RID: 183840
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A601 RID: 42497
+		// Token: 0x0200903B RID: 36923
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __走跑切换按下事件_FunctionParams
 		{
-			// Token: 0x040324D1 RID: 206033
+			// Token: 0x0402CE21 RID: 183841
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A602 RID: 42498
+		// Token: 0x0200903C RID: 36924
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __攀爬抬起事件_FunctionParams
 		{
-			// Token: 0x040324D2 RID: 206034
+			// Token: 0x0402CE22 RID: 183842
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A603 RID: 42499
+		// Token: 0x0200903D RID: 36925
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __攀爬按下事件_FunctionParams
 		{
-			// Token: 0x040324D3 RID: 206035
+			// Token: 0x0402CE23 RID: 183843
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A604 RID: 42500
+		// Token: 0x0200903E RID: 36926
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __跳跃抬起事件_FunctionParams
 		{
-			// Token: 0x040324D4 RID: 206036
+			// Token: 0x0402CE24 RID: 183844
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A605 RID: 42501
+		// Token: 0x0200903F RID: 36927
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __跳跃按下事件_FunctionParams
 		{
-			// Token: 0x040324D5 RID: 206037
+			// Token: 0x0402CE25 RID: 183845
 			[FieldOffset(0)]
 			public float time;
 		}
 
-		// Token: 0x0200A606 RID: 42502
+		// Token: 0x02009040 RID: 36928
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __GetUnrealHoldConfig_FunctionParams
 		{
-			// Token: 0x040324D6 RID: 206038
+			// Token: 0x0402CE26 RID: 183846
 			[FieldOffset(0)]
 			public int action;
 
-			// Token: 0x040324D7 RID: 206039
+			// Token: 0x0402CE27 RID: 183847
 			[FieldOffset(4)]
 			public SInputHoldConfig __Result;
 		}
 
-		// Token: 0x0200A607 RID: 42503
+		// Token: 0x02009041 RID: 36929
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetUnrealCacheConfig_FunctionParams
 		{
-			// Token: 0x040324D8 RID: 206040
+			// Token: 0x0402CE28 RID: 183848
 			[FieldOffset(0)]
 			public int action;
 
-			// Token: 0x040324D9 RID: 206041
+			// Token: 0x0402CE29 RID: 183849
 			[FieldOffset(4)]
 			public SInputCaches __Result;
 		}
 
-		// Token: 0x0200A608 RID: 42504
+		// Token: 0x02009042 RID: 36930
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected new ref struct __ReceiveEndPlay_FunctionParams
 		{
-			// Token: 0x040324DA RID: 206042
+			// Token: 0x0402CE2A RID: 183850
 			[FieldOffset(0)]
 			public TEnumAsByte<EEndPlayReason> EndPlayReason;
 		}

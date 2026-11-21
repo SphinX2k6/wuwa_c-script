@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001A75 RID: 6773
+// Token: 0x02000F34 RID: 3892
 public enum EDeadEyeModeType
 {
-	// Token: 0x04005C00 RID: 23552
+	// Token: 0x04005CCF RID: 23759
 	JumpPlatform,
-	// Token: 0x04005C01 RID: 23553
+	// Token: 0x04005CD0 RID: 23760
 	Other
 }

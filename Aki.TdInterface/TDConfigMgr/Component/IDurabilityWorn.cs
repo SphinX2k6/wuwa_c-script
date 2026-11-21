@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002D9 RID: 729
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000320 RID: 800
 	public class IDurabilityWorn
 	{
-		// Token: 0x06000DEB RID: 3563 RVA: 0x00033364 File Offset: 0x00031564
+		// Token: 0x06000F1B RID: 3867 RVA: 0x00036298 File Offset: 0x00034498
 		private IDurabilityWorn_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000DEC RID: 3564 RVA: 0x0003339C File Offset: 0x0003159C
+		// Token: 0x06000F1C RID: 3868 RVA: 0x000362D0 File Offset: 0x000344D0
 		public static IDurabilityWorn Create([Nullable(2)] IDurabilityWorn instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000DED RID: 3565 RVA: 0x000333AF File Offset: 0x000315AF
+		// Token: 0x06000F1D RID: 3869 RVA: 0x000362E3 File Offset: 0x000344E3
 		public static IDurabilityWorn CreateFromSetValue([Nullable(2)] IDurabilityWorn_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000DEE RID: 3566 RVA: 0x000333C2 File Offset: 0x000315C2
+		// Token: 0x06000F1E RID: 3870 RVA: 0x000362F6 File Offset: 0x000344F6
 		public IDurabilityWorn_SetValue ToSetValue()
 		{
 			return new IDurabilityWorn_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700040D RID: 1037
-		// (get) Token: 0x06000DEF RID: 3567 RVA: 0x000333E4 File Offset: 0x000315E4
-		// (set) Token: 0x06000DF0 RID: 3568 RVA: 0x0003341E File Offset: 0x0003161E
+		// Token: 0x1700045A RID: 1114
+		// (get) Token: 0x06000F1F RID: 3871 RVA: 0x00036318 File Offset: 0x00034518
+		// (set) Token: 0x06000F20 RID: 3872 RVA: 0x00036352 File Offset: 0x00034552
 		public virtual int? SlightWear
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700040E RID: 1038
-		// (get) Token: 0x06000DF1 RID: 3569 RVA: 0x0003342C File Offset: 0x0003162C
-		// (set) Token: 0x06000DF2 RID: 3570 RVA: 0x00033466 File Offset: 0x00031666
+		// Token: 0x1700045B RID: 1115
+		// (get) Token: 0x06000F21 RID: 3873 RVA: 0x00036360 File Offset: 0x00034560
+		// (set) Token: 0x06000F22 RID: 3874 RVA: 0x0003639A File Offset: 0x0003459A
 		public virtual int? SevereWear
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000C76 RID: 3190
+		// Token: 0x04000D60 RID: 3424
 		[Nullable(2)]
 		protected IDurabilityWorn FbInstance;
 
-		// Token: 0x04000C77 RID: 3191
+		// Token: 0x04000D61 RID: 3425
 		[Nullable(2)]
 		protected IDurabilityWorn_SetValue PocoInterface;
 	}

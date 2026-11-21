@@ -6,15 +6,15 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C7C RID: 7292
+// Token: 0x0200113B RID: 4411
 public class CommonRoleGachaPoolItem : GachaPoolItem
 {
-	// Token: 0x0600DBEC RID: 56300 RVA: 0x00332D60 File Offset: 0x00330F60
+	// Token: 0x0600B002 RID: 45058 RVA: 0x0033E1C0 File Offset: 0x0033C3C0
 	public CommonRoleGachaPoolItem(GachaDefine.EGachaViewType gachaType) : base(gachaType)
 	{
 	}
 
-	// Token: 0x0600DBED RID: 56301 RVA: 0x00332D6C File Offset: 0x00330F6C
+	// Token: 0x0600B003 RID: 45059 RVA: 0x0033E1CC File Offset: 0x0033C3CC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -34,7 +34,7 @@ public class CommonRoleGachaPoolItem : GachaPoolItem
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600DBEE RID: 56302 RVA: 0x00332E38 File Offset: 0x00331038
+	// Token: 0x0600B004 RID: 45060 RVA: 0x0033E298 File Offset: 0x0033C498
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonRoleGachaPoolItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class CommonRoleGachaPoolItem : GachaPoolItem
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DBEF RID: 56303 RVA: 0x00332E7C File Offset: 0x0033107C
+	// Token: 0x0600B005 RID: 45061 RVA: 0x0033E2DC File Offset: 0x0033C4DC
 	public override void Refresh()
 	{
 		if (this.GachaViewInfo == null)
@@ -62,7 +62,7 @@ public class CommonRoleGachaPoolItem : GachaPoolItem
 		base.SetTextureByPath(this.GachaViewInfo.Value.TextTexture, base.GetTexture(4), null, null);
 	}
 
-	// Token: 0x040064E9 RID: 25833
+	// Token: 0x040065BB RID: 26043
 	[Nullable(new byte[]
 	{
 		2,
@@ -70,18 +70,18 @@ public class CommonRoleGachaPoolItem : GachaPoolItem
 	})]
 	private List<RoleDescribeComponent> DescComponentList;
 
-	// Token: 0x0200823B RID: 33339
+	// Token: 0x020073C4 RID: 29636
 	private enum EComponent
 	{
-		// Token: 0x0402A7D4 RID: 174036
+		// Token: 0x04025AFA RID: 154362
 		ContentTexture,
-		// Token: 0x0402A7D5 RID: 174037
+		// Token: 0x04025AFB RID: 154363
 		DescItem1,
-		// Token: 0x0402A7D6 RID: 174038
+		// Token: 0x04025AFC RID: 154364
 		DescItem2,
-		// Token: 0x0402A7D7 RID: 174039
+		// Token: 0x04025AFD RID: 154365
 		DescItem3,
-		// Token: 0x0402A7D8 RID: 174040
+		// Token: 0x04025AFE RID: 154366
 		ThemeTextTexture
 	}
 }

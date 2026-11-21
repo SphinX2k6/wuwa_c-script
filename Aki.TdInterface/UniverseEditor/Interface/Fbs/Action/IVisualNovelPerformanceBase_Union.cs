@@ -2,46 +2,44 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200759E RID: 30110
+	// Token: 0x02007D97 RID: 32151
 	public enum IVisualNovelPerformanceBase_Union : byte
 	{
-		// Token: 0x040124B1 RID: 74929
+		// Token: 0x040134E5 RID: 79077
 		NONE,
-		// Token: 0x040124B2 RID: 74930
+		// Token: 0x040134E6 RID: 79078
 		IVisualNovelPerformanceBase,
-		// Token: 0x040124B3 RID: 74931
+		// Token: 0x040134E7 RID: 79079
 		IVisualNovelPerformanceEnter,
-		// Token: 0x040124B4 RID: 74932
+		// Token: 0x040134E8 RID: 79080
 		IVisualNovelPerformanceExit,
-		// Token: 0x040124B5 RID: 74933
+		// Token: 0x040134E9 RID: 79081
 		IVisualNovelPerformanceMove,
-		// Token: 0x040124B6 RID: 74934
+		// Token: 0x040134EA RID: 79082
 		IVisualNovelPerformanceModifyRole,
-		// Token: 0x040124B7 RID: 74935
+		// Token: 0x040134EB RID: 79083
 		IVisualNovelPerformancePortraitEffect,
-		// Token: 0x040124B8 RID: 74936
-		IVisualNovelPerformanceUiShake,
-		// Token: 0x040124B9 RID: 74937
+		// Token: 0x040134EC RID: 79084
 		IVisualNovelPerformanceBackgroundMove,
-		// Token: 0x040124BA RID: 74938
+		// Token: 0x040134ED RID: 79085
 		IVisualNovelPerformanceCgMove,
-		// Token: 0x040124BB RID: 74939
+		// Token: 0x040134EE RID: 79086
 		IVisualNovelPerformanceEnterBlackScreen,
-		// Token: 0x040124BC RID: 74940
+		// Token: 0x040134EF RID: 79087
 		IVisualNovelPerformanceLeaveBlackScreen,
-		// Token: 0x040124BD RID: 74941
+		// Token: 0x040134F0 RID: 79088
 		IVisualNovelPerformancePlayScreenEffect,
-		// Token: 0x040124BE RID: 74942
+		// Token: 0x040134F1 RID: 79089
 		IVisualNovelPerformanceStopScreenEffect,
-		// Token: 0x040124BF RID: 74943
+		// Token: 0x040134F2 RID: 79090
 		IVisualNovelPerformanceSendAudioEvent,
-		// Token: 0x040124C0 RID: 74944
+		// Token: 0x040134F3 RID: 79091
 		IVisualNovelPerformanceSwitchAudioState,
-		// Token: 0x040124C1 RID: 74945
+		// Token: 0x040134F4 RID: 79092
 		IVisualNovelPerformanceTransition,
-		// Token: 0x040124C2 RID: 74946
+		// Token: 0x040134F5 RID: 79093
 		IVisualNovelPerformanceRoleIntroduction,
-		// Token: 0x040124C3 RID: 74947
+		// Token: 0x040134F6 RID: 79094
 		IVisualNovelPerformanceActivityAction
 	}
 }

@@ -6,12 +6,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LongShan
 {
-	// Token: 0x0200654B RID: 25931
+	// Token: 0x020054C9 RID: 21705
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LongShanStageInfo
 	{
-		// Token: 0x06040FD6 RID: 266198 RVA: 0x00FBFA80 File Offset: 0x00FBDC80
+		// Token: 0x06035C9B RID: 220315 RVA: 0x00F06A70 File Offset: 0x00F04C70
 		public LongShanStageInfo(LongShanStageInfo stateInfo)
 		{
 			this.ProtoStageInfo = stateInfo;
@@ -25,11 +25,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LongShan
 			}
 		}
 
-		// Token: 0x04021E33 RID: 138803
+		// Token: 0x0401C764 RID: 116580
 		[Nullable(2)]
 		public LongShanStageInfo ProtoStageInfo;
 
-		// Token: 0x04021E34 RID: 138804
+		// Token: 0x0401C765 RID: 116581
 		public Dictionary<int, LongShanTaskInfo> TaskInfoMap = new Dictionary<int, LongShanTaskInfo>();
 	}
 }

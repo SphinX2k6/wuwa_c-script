@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 {
-	// Token: 0x0200645A RID: 25690
+	// Token: 0x020053D8 RID: 21464
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivitySubViewMotorDevelop : ActivitySubViewBase
 	{
-		// Token: 0x06040905 RID: 264453 RVA: 0x00FA0740 File Offset: 0x00F9E940
+		// Token: 0x060355C6 RID: 218566 RVA: 0x00EE76BC File Offset: 0x00EE58BC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			};
 		}
 
-		// Token: 0x06040906 RID: 264454 RVA: 0x00FA07EC File Offset: 0x00F9E9EC
+		// Token: 0x060355C7 RID: 218567 RVA: 0x00EE7768 File Offset: 0x00EE5968
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivitySubViewMotorDevelop.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040907 RID: 264455 RVA: 0x00FA082F File Offset: 0x00F9EA2F
+		// Token: 0x060355C8 RID: 218568 RVA: 0x00EE77AB File Offset: 0x00EE59AB
 		protected override void OnStart()
 		{
 			ActivityMotorDevelopController.Instance.RefreshFirstUnlockUnReadRedDot();
@@ -52,19 +52,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			this.TitleComponent.SetTitleByText(this.ActivityBaseData.GetTitle());
 		}
 
-		// Token: 0x06040908 RID: 264456 RVA: 0x00FA0862 File Offset: 0x00F9EA62
+		// Token: 0x060355C9 RID: 218569 RVA: 0x00EE77DE File Offset: 0x00EE59DE
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnMotorDevelopTaskUpdate, new Action(this.OnMotorDevelopTaskUpdate));
 		}
 
-		// Token: 0x06040909 RID: 264457 RVA: 0x00FA0880 File Offset: 0x00F9EA80
+		// Token: 0x060355CA RID: 218570 RVA: 0x00EE77FC File Offset: 0x00EE59FC
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnMotorDevelopTaskUpdate, new Action(this.OnMotorDevelopTaskUpdate));
 		}
 
-		// Token: 0x0604090A RID: 264458 RVA: 0x00FA089E File Offset: 0x00F9EA9E
+		// Token: 0x060355CB RID: 218571 RVA: 0x00EE781A File Offset: 0x00EE5A1A
 		protected override void OnRefreshView()
 		{
 			this.RefreshTimerText();
@@ -72,13 +72,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			this.RefreshCondition();
 		}
 
-		// Token: 0x0604090B RID: 264459 RVA: 0x00FA08B3 File Offset: 0x00F9EAB3
+		// Token: 0x060355CC RID: 218572 RVA: 0x00EE782F File Offset: 0x00EE5A2F
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshTimerText();
 		}
 
-		// Token: 0x0604090C RID: 264460 RVA: 0x00FA08BC File Offset: 0x00F9EABC
+		// Token: 0x060355CD RID: 218573 RVA: 0x00EE7838 File Offset: 0x00EE5A38
 		private void RefreshCondition()
 		{
 			bool flag = this.ActivityBaseData.IsUnLock();
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			}
 		}
 
-		// Token: 0x0604090D RID: 264461 RVA: 0x00FA0943 File Offset: 0x00F9EB43
+		// Token: 0x060355CE RID: 218574 RVA: 0x00EE78BF File Offset: 0x00EE5ABF
 		private void OnClickBtnGo()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			});
 		}
 
-		// Token: 0x0604090E RID: 264462 RVA: 0x00FA0974 File Offset: 0x00F9EB74
+		// Token: 0x060355CF RID: 218575 RVA: 0x00EE78F0 File Offset: 0x00EE5AF0
 		public void RefreshTimerText()
 		{
 			ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			}
 		}
 
-		// Token: 0x0604090F RID: 264463 RVA: 0x00FA09B0 File Offset: 0x00F9EBB0
+		// Token: 0x060355D0 RID: 218576 RVA: 0x00EE792C File Offset: 0x00EE5B2C
 		public void RefreshTaskLayout(bool isPlayGridAnim = false)
 		{
 			ActivityMotorDevelopData activityData = ActivityMotorDevelopController.Instance.GetActivityData();
@@ -147,20 +147,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			this.TaskGenericLayout.RefreshByDataAsync(activityData.GetMotorDevelopTaskList() ?? new List<ConditionTask>(), isPlayGridAnim, null).Forget();
 		}
 
-		// Token: 0x06040910 RID: 264464 RVA: 0x00FA09F5 File Offset: 0x00F9EBF5
+		// Token: 0x060355D1 RID: 218577 RVA: 0x00EE7971 File Offset: 0x00EE5B71
 		private void OnMotorDevelopTaskUpdate()
 		{
 			this.RefreshTaskLayout(false);
 		}
 
-		// Token: 0x06040911 RID: 264465 RVA: 0x00FA09FE File Offset: 0x00F9EBFE
+		// Token: 0x060355D2 RID: 218578 RVA: 0x00EE797A File Offset: 0x00EE5B7A
 		[NullableContext(1)]
 		private ActivitySubViewMotorDevelopMonsterItem CreateGrid()
 		{
 			return new ActivitySubViewMotorDevelopMonsterItem();
 		}
 
-		// Token: 0x04021932 RID: 137522
+		// Token: 0x0401C261 RID: 115297
 		[Nullable(new byte[]
 		{
 			2,
@@ -169,13 +169,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 		})]
 		public GenericLayout<ActivitySubViewMotorDevelopMonsterItem, ConditionTask> TaskGenericLayout;
 
-		// Token: 0x04021933 RID: 137523
+		// Token: 0x0401C262 RID: 115298
 		public FunctionalPanelConditionLock PanelLock;
 
-		// Token: 0x04021934 RID: 137524
+		// Token: 0x0401C263 RID: 115299
 		public ActivityMotorDevelopData ActivityData;
 
-		// Token: 0x04021935 RID: 137525
+		// Token: 0x0401C264 RID: 115300
 		public ActivityTitleTypeA TitleComponent;
 	}
 }

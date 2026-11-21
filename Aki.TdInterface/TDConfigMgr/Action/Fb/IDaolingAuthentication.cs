@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002868 RID: 10344
+	// Token: 0x02002B3E RID: 11070
 	public class IDaolingAuthentication : IUiGame
 	{
-		// Token: 0x0600E53F RID: 58687 RVA: 0x0021B722 File Offset: 0x00219922
-		[NullableContext(1)]
+		// Token: 0x0600F36F RID: 62319 RVA: 0x0023863C File Offset: 0x0023683C
 		public static IDaolingAuthentication Create(IDaolingAuthentication? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004631 RID: 17969
-		// (get) Token: 0x0600E540 RID: 58688 RVA: 0x0021B741 File Offset: 0x00219941
+		// Token: 0x170049A1 RID: 18849
+		// (get) Token: 0x0600F370 RID: 62320 RVA: 0x0023865B File Offset: 0x0023685B
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ECA RID: 32458
+		// Token: 0x0400858A RID: 34186
 		private IDaolingAuthentication Instance;
 	}
 }

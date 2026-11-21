@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200075C RID: 1884
+	// Token: 0x02000774 RID: 1908
 	public class ConfigPreHeatTaskActivityById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002C39 RID: 11321 RVA: 0x001534B0 File Offset: 0x001516B0
+		// Token: 0x06002CC9 RID: 11465 RVA: 0x00159F2C File Offset: 0x0015812C
 		static ConfigPreHeatTaskActivityById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPreHeatTaskActivityById.CreateStaticDefaultValue), new Action(ConfigPreHeatTaskActivityById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002C3A RID: 11322 RVA: 0x001534D0 File Offset: 0x001516D0
+		// Token: 0x06002CCA RID: 11466 RVA: 0x00159F4C File Offset: 0x0015814C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPreHeatTaskActivityById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002C3B RID: 11323 RVA: 0x0015354F File Offset: 0x0015174F
+		// Token: 0x06002CCB RID: 11467 RVA: 0x00159FCB File Offset: 0x001581CB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPreHeatTaskActivityById.LogPair = null;
 			ConfigPreHeatTaskActivityById.HandleId = 0;
 		}
 
-		// Token: 0x06002C3C RID: 11324 RVA: 0x0015355D File Offset: 0x0015175D
+		// Token: 0x06002CCC RID: 11468 RVA: 0x00159FD9 File Offset: 0x001581D9
 		public static void Init()
 		{
 			ConfigPreHeatTaskActivityById.HandleId = ConfigCommon.InitDataStatement(ConfigPreHeatTaskActivityById.HandleId, "db_preheattaskactivity.db", "select BinData from `PreHeatTaskActivity` where Id=?");
 		}
 
-		// Token: 0x06002C3D RID: 11325 RVA: 0x00153578 File Offset: 0x00151778
+		// Token: 0x06002CCD RID: 11469 RVA: 0x00159FF4 File Offset: 0x001581F4
 		public static PreHeatTaskActivity? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPreHeatTaskActivityById.HandleId, ConfigPreHeatTaskActivityById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PreHeatTaskActivity?(rootAsPreHeatTaskActivity);
 		}
 
-		// Token: 0x0400336A RID: 13162
+		// Token: 0x04003412 RID: 13330
 		private const string DB = "db_preheattaskactivity.db";
 
-		// Token: 0x0400336B RID: 13163
+		// Token: 0x04003413 RID: 13331
 		private const string FILE = "y.预热活动.xlsx";
 
-		// Token: 0x0400336C RID: 13164
+		// Token: 0x04003414 RID: 13332
 		private const string TABLE = "PreHeatTaskActivity";
 
-		// Token: 0x0400336D RID: 13165
+		// Token: 0x04003415 RID: 13333
 		private const string COMMAND = "select BinData from `PreHeatTaskActivity` where Id=?";
 
-		// Token: 0x0400336E RID: 13166
+		// Token: 0x04003416 RID: 13334
 		private const string KEY_PREFIX = "PreHeatTaskActivityById";
 
-		// Token: 0x0400336F RID: 13167
+		// Token: 0x04003417 RID: 13335
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003370 RID: 13168
+		// Token: 0x04003418 RID: 13336
 		private static int HandleId;
 	}
 }

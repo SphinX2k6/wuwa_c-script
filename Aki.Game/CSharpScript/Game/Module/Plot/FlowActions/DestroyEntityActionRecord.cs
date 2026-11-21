@@ -6,19 +6,19 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050B5 RID: 20661
+	// Token: 0x02004085 RID: 16517
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DestroyEntityActionRecord : ActionRecord
 	{
-		// Token: 0x06034EC6 RID: 216774 RVA: 0x00C88F29 File Offset: 0x00C87129
+		// Token: 0x06029DBF RID: 171455 RVA: 0x00BD6212 File Offset: 0x00BD4412
 		public DestroyEntityActionRecord(ActionInfo actionInfo, Dictionary<int, int> entityStateTagIdMap)
 		{
 			base.ActionInfo = actionInfo;
 			this.EntityStateTagIdMap = entityStateTagIdMap;
 		}
 
-		// Token: 0x0401C306 RID: 115462
+		// Token: 0x04016D37 RID: 93495
 		public Dictionary<int, int> EntityStateTagIdMap;
 	}
 }

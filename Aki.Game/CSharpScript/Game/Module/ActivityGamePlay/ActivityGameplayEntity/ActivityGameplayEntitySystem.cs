@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 {
-	// Token: 0x0200693A RID: 26938
+	// Token: 0x0200588B RID: 22667
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivityGameplayEntitySystem
 	{
-		// Token: 0x0604324A RID: 275018 RVA: 0x0105DFE8 File Offset: 0x0105C1E8
+		// Token: 0x06037DA7 RID: 228775 RVA: 0x00F9F658 File Offset: 0x00F9D858
 		public static ActivityGameplayEntity CreateEntity<TData>(EActivityEntityKind kind, TData data = default(TData))
 		{
 			IActivityEntityComposition activityEntityComposition;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 			return activityGameplayEntity;
 		}
 
-		// Token: 0x0604324B RID: 275019 RVA: 0x0105E090 File Offset: 0x0105C290
+		// Token: 0x06037DA8 RID: 228776 RVA: 0x00F9F700 File Offset: 0x00F9D900
 		public static void DestroyEntity(ActivityGameplayEntity entity)
 		{
 			if (entity == null)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 			entity.End();
 		}
 
-		// Token: 0x0604324C RID: 275020 RVA: 0x0105E09C File Offset: 0x0105C29C
+		// Token: 0x06037DA9 RID: 228777 RVA: 0x00F9F70C File Offset: 0x00F9D90C
 		[NullableContext(1)]
 		public unsafe static void CreateEntityReadyPromise(string reason)
 		{
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 			instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0604324D RID: 275021 RVA: 0x0105E13F File Offset: 0x0105C33F
+		// Token: 0x06037DAA RID: 228778 RVA: 0x00F9F7AF File Offset: 0x00F9D9AF
 		public static CustomPromise<bool> WaitEntityReady()
 		{
 			return ActivityGameplayEntitySystem.EntityReadyPromise;
 		}
 
-		// Token: 0x0604324E RID: 275022 RVA: 0x0105E148 File Offset: 0x0105C348
+		// Token: 0x06037DAB RID: 228779 RVA: 0x00F9F7B8 File Offset: 0x00F9D9B8
 		public unsafe static void FinishEntityReadyPromise(bool result = true)
 		{
 			if (ActivityGameplayEntitySystem.EntityReadyPromise == null)
@@ -93,11 +93,11 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 			ActivityGameplayEntitySystem.EntityReadyReason = null;
 		}
 
-		// Token: 0x04022F5A RID: 143194
+		// Token: 0x0401D7B7 RID: 120759
 		[StaticVariableRuleIgnore]
 		private static CustomPromise<bool> EntityReadyPromise;
 
-		// Token: 0x04022F5B RID: 143195
+		// Token: 0x0401D7B8 RID: 120760
 		[StaticVariableRuleIgnore]
 		private static string EntityReadyReason;
 	}

@@ -3,34 +3,34 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200153A RID: 5434
+	// Token: 0x020015B0 RID: 5552
 	public enum ActionOpenSystemType
 	{
-		// Token: 0x0400A4C1 RID: 42177
+		// Token: 0x0400A91D RID: 43293
 		[OriginalName("None")]
 		None,
-		// Token: 0x0400A4C2 RID: 42178
+		// Token: 0x0400A91E RID: 43294
 		[OriginalName("ActionOpenSystem")]
 		ActionOpenSystem,
-		// Token: 0x0400A4C3 RID: 42179
+		// Token: 0x0400A91F RID: 43295
 		[OriginalName("SoaringChallenge")]
 		SoaringChallenge,
-		// Token: 0x0400A4C4 RID: 42180
+		// Token: 0x0400A920 RID: 43296
 		[OriginalName("FishingHandIn")]
 		FishingHandIn,
-		// Token: 0x0400A4C5 RID: 42181
+		// Token: 0x0400A921 RID: 43297
 		[OriginalName("GreatSwordChallenge")]
 		GreatSwordChallenge,
-		// Token: 0x0400A4C6 RID: 42182
+		// Token: 0x0400A922 RID: 43298
 		[OriginalName("InfrHandIn")]
 		InfrHandIn,
-		// Token: 0x0400A4C7 RID: 42183
+		// Token: 0x0400A923 RID: 43299
 		[OriginalName("MotorRaceChallenge")]
 		MotorRaceChallenge,
-		// Token: 0x0400A4C8 RID: 42184
+		// Token: 0x0400A924 RID: 43300
 		[OriginalName("InfrV2HandIn")]
 		InfrV2HandIn,
-		// Token: 0x0400A4C9 RID: 42185
+		// Token: 0x0400A925 RID: 43301
 		[OriginalName("GiantSystem")]
 		GiantSystem
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A0E RID: 6670
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BA3 RID: 7075
 	public class IEntityLookAtPerform
 	{
-		// Token: 0x06008EE1 RID: 36577 RVA: 0x0014DEA4 File Offset: 0x0014C0A4
+		// Token: 0x0600964B RID: 38475 RVA: 0x0015DDD0 File Offset: 0x0015BFD0
 		private IEntityLookAtPerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008EE2 RID: 36578 RVA: 0x0014DEDC File Offset: 0x0014C0DC
+		// Token: 0x0600964C RID: 38476 RVA: 0x0015DE08 File Offset: 0x0015C008
 		public static IEntityLookAtPerform Create([Nullable(2)] IEntityLookAtPerform instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008EE3 RID: 36579 RVA: 0x0014DEEF File Offset: 0x0014C0EF
+		// Token: 0x0600964D RID: 38477 RVA: 0x0015DE1B File Offset: 0x0015C01B
 		public static IEntityLookAtPerform CreateFromSetValue([Nullable(2)] IEntityLookAtPerform_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008EE4 RID: 36580 RVA: 0x0014DF02 File Offset: 0x0014C102
+		// Token: 0x0600964E RID: 38478 RVA: 0x0015DE2E File Offset: 0x0015C02E
 		public IEntityLookAtPerform_SetValue ToSetValue()
 		{
 			return new IEntityLookAtPerform_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DB0 RID: 11696
-		// (get) Token: 0x06008EE5 RID: 36581 RVA: 0x0014DF39 File Offset: 0x0014C139
-		// (set) Token: 0x06008EE6 RID: 36582 RVA: 0x0014DF64 File Offset: 0x0014C164
+		// Token: 0x17002FBD RID: 12221
+		// (get) Token: 0x0600964F RID: 38479 RVA: 0x0015DE65 File Offset: 0x0015C065
+		// (set) Token: 0x06009650 RID: 38480 RVA: 0x0015DE90 File Offset: 0x0015C090
 		public virtual int EntityId
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DB1 RID: 11697
-		// (get) Token: 0x06008EE7 RID: 36583 RVA: 0x0014DF74 File Offset: 0x0014C174
-		// (set) Token: 0x06008EE8 RID: 36584 RVA: 0x0014DFAE File Offset: 0x0014C1AE
+		// Token: 0x17002FBE RID: 12222
+		// (get) Token: 0x06009651 RID: 38481 RVA: 0x0015DEA0 File Offset: 0x0015C0A0
+		// (set) Token: 0x06009652 RID: 38482 RVA: 0x0015DEDA File Offset: 0x0015C0DA
 		public virtual int? FaceExpressionId
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DB2 RID: 11698
-		// (get) Token: 0x06008EE9 RID: 36585 RVA: 0x0014DFBC File Offset: 0x0014C1BC
-		// (set) Token: 0x06008EEA RID: 36586 RVA: 0x0014DFF6 File Offset: 0x0014C1F6
+		// Token: 0x17002FBF RID: 12223
+		// (get) Token: 0x06009653 RID: 38483 RVA: 0x0015DEE8 File Offset: 0x0015C0E8
+		// (set) Token: 0x06009654 RID: 38484 RVA: 0x0015DF22 File Offset: 0x0015C122
 		public virtual int? OverlapMontageId
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DB3 RID: 11699
-		// (get) Token: 0x06008EEB RID: 36587 RVA: 0x0014E004 File Offset: 0x0014C204
-		// (set) Token: 0x06008EEC RID: 36588 RVA: 0x0014E065 File Offset: 0x0014C265
+		// Token: 0x17002FC0 RID: 12224
+		// (get) Token: 0x06009655 RID: 38485 RVA: 0x0015DF30 File Offset: 0x0015C130
+		// (set) Token: 0x06009656 RID: 38486 RVA: 0x0015DF91 File Offset: 0x0015C191
 		[Nullable(2)]
 		public virtual ILookAtPerformOverlapMontageConfig OverlapMontageConfig
 		{
@@ -166,18 +164,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005879 RID: 22649
+		// Token: 0x04005CDE RID: 23774
 		[Nullable(2)]
 		protected IEntityLookAtPerform FbInstance;
 
-		// Token: 0x0400587A RID: 22650
+		// Token: 0x04005CDF RID: 23775
 		[Nullable(2)]
 		protected IEntityLookAtPerform_SetValue PocoInterface;
 
-		// Token: 0x0400587B RID: 22651
+		// Token: 0x04005CE0 RID: 23776
 		private ILookAtPerformOverlapMontageConfig _OverlapMontageConfigCache;
 
-		// Token: 0x0400587C RID: 22652
+		// Token: 0x04005CE1 RID: 23777
 		private bool _OverlapMontageConfigInited;
 	}
 }

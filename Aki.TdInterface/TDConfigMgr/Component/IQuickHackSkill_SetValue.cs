@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000641 RID: 1601
+	// Token: 0x020006DE RID: 1758
 	public class IQuickHackSkill_SetValue
 	{
-		// Token: 0x040017C4 RID: 6084
+		// Token: 0x040019B6 RID: 6582
 		public int Id;
 
-		// Token: 0x040017C5 RID: 6085
-		[Nullable(1)]
+		// Token: 0x040019B7 RID: 6583
 		public List<IQuickHackSkillContent> Content;
 	}
 }

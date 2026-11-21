@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D75 RID: 3445
+	// Token: 0x02000E71 RID: 3697
 	public class ISceneItemAiPatrolByGameTime : ISceneItemAiPatrolType
 	{
-		// Token: 0x06004E64 RID: 20068 RVA: 0x000C285F File Offset: 0x000C0A5F
-		[NullableContext(1)]
+		// Token: 0x06005389 RID: 21385 RVA: 0x000CE0AF File Offset: 0x000CC2AF
 		public static ISceneItemAiPatrolByGameTime Create(ISceneItemAiPatrolByGameTime? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001937 RID: 6455
-		// (get) Token: 0x06004E65 RID: 20069 RVA: 0x000C287E File Offset: 0x000C0A7E
+		// Token: 0x17001AA2 RID: 6818
+		// (get) Token: 0x0600538A RID: 21386 RVA: 0x000CE0CE File Offset: 0x000CC2CE
 		public override ESceneItemAiPatrolType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001938 RID: 6456
-		// (get) Token: 0x06004E66 RID: 20070 RVA: 0x000C288B File Offset: 0x000C0A8B
+		// Token: 0x17001AA3 RID: 6819
+		// (get) Token: 0x0600538B RID: 21387 RVA: 0x000CE0DB File Offset: 0x000CC2DB
 		public virtual int Spline
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CFE RID: 11518
+		// Token: 0x04002FC4 RID: 12228
 		private ISceneItemAiPatrolByGameTime Instance;
 	}
 }

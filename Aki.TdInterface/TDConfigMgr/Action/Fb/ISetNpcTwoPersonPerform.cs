@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A60 RID: 10848
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D4D RID: 11597
 	public class ISetNpcTwoPersonPerform : ISetNpcGroupPerformType
 	{
-		// Token: 0x0600EE9C RID: 61084 RVA: 0x0022B8BF File Offset: 0x00229ABF
+		// Token: 0x0600FD34 RID: 64820 RVA: 0x00249273 File Offset: 0x00247473
 		public static ISetNpcTwoPersonPerform Create(ISetNpcTwoPersonPerform? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B9E RID: 19358
-		// (get) Token: 0x0600EE9D RID: 61085 RVA: 0x0022B8DE File Offset: 0x00229ADE
+		// Token: 0x17004F48 RID: 20296
+		// (get) Token: 0x0600FD35 RID: 64821 RVA: 0x00249292 File Offset: 0x00247492
 		public override ENpcGroupPerformType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B9F RID: 19359
-		// (get) Token: 0x0600EE9E RID: 61086 RVA: 0x0022B8EB File Offset: 0x00229AEB
+		// Token: 0x17004F49 RID: 20297
+		// (get) Token: 0x0600FD36 RID: 64822 RVA: 0x0024929F File Offset: 0x0024749F
 		public virtual IPlayerInitiator Initiator
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BA0 RID: 19360
-		// (get) Token: 0x0600EE9F RID: 61087 RVA: 0x0022B91F File Offset: 0x00229B1F
+		// Token: 0x17004F4A RID: 20298
+		// (get) Token: 0x0600FD37 RID: 64823 RVA: 0x002492D3 File Offset: 0x002474D3
 		public virtual int Target
 		{
 			get
@@ -58,8 +56,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BA1 RID: 19361
-		// (get) Token: 0x0600EEA0 RID: 61088 RVA: 0x0022B92C File Offset: 0x00229B2C
+		// Token: 0x17004F4B RID: 20299
+		// (get) Token: 0x0600FD38 RID: 64824 RVA: 0x002492E0 File Offset: 0x002474E0
 		public virtual string GroupPerformMark
 		{
 			get
@@ -68,8 +66,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BA2 RID: 19362
-		// (get) Token: 0x0600EEA1 RID: 61089 RVA: 0x0022B939 File Offset: 0x00229B39
+		// Token: 0x17004F4C RID: 20300
+		// (get) Token: 0x0600FD39 RID: 64825 RVA: 0x002492ED File Offset: 0x002474ED
 		public virtual ENpcGroupPerformNpcType NpcType
 		{
 			get
@@ -78,8 +76,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BA3 RID: 19363
-		// (get) Token: 0x0600EEA2 RID: 61090 RVA: 0x0022B948 File Offset: 0x00229B48
+		// Token: 0x17004F4D RID: 20301
+		// (get) Token: 0x0600FD3A RID: 64826 RVA: 0x002492FC File Offset: 0x002474FC
 		public virtual EWaitInteractNpcMontageWaitType? WaitInteractNpcType
 		{
 			get
@@ -92,14 +90,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008344 RID: 33604
+		// Token: 0x04008A37 RID: 35383
 		private ISetNpcTwoPersonPerform Instance;
 
-		// Token: 0x04008345 RID: 33605
+		// Token: 0x04008A38 RID: 35384
 		[Nullable(2)]
 		private IPlayerInitiator _InitiatorCache;
 
-		// Token: 0x04008346 RID: 33606
+		// Token: 0x04008A39 RID: 35385
 		private bool _InitiatorInited;
 	}
 }

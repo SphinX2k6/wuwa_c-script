@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 {
-	// Token: 0x02006451 RID: 25681
+	// Token: 0x020053CF RID: 21455
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MotorLinkageBackgroundItem : UiPanelBase
 	{
-		// Token: 0x060408BF RID: 264383 RVA: 0x00F9FBCC File Offset: 0x00F9DDCC
+		// Token: 0x06035580 RID: 218496 RVA: 0x00EE6B48 File Offset: 0x00EE4D48
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			};
 		}
 
-		// Token: 0x060408C0 RID: 264384 RVA: 0x00F9FC3C File Offset: 0x00F9DE3C
+		// Token: 0x06035581 RID: 218497 RVA: 0x00EE6BB8 File Offset: 0x00EE4DB8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorLinkageBackgroundItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060408C1 RID: 264385 RVA: 0x00F9FC80 File Offset: 0x00F9DE80
+		// Token: 0x06035582 RID: 218498 RVA: 0x00EE6BFC File Offset: 0x00EE4DFC
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			this.SelectFirstIncompleteToggle();
 		}
 
-		// Token: 0x060408C2 RID: 264386 RVA: 0x00F9FCD8 File Offset: 0x00F9DED8
+		// Token: 0x06035583 RID: 218499 RVA: 0x00EE6C54 File Offset: 0x00EE4E54
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -64,13 +64,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			levelSequencePlayer.Clear();
 		}
 
-		// Token: 0x060408C3 RID: 264387 RVA: 0x00F9FCEA File Offset: 0x00F9DEEA
+		// Token: 0x06035584 RID: 218500 RVA: 0x00EE6C66 File Offset: 0x00EE4E66
 		protected override void OnBeforeShow()
 		{
 			this.Refresh(false);
 		}
 
-		// Token: 0x060408C4 RID: 264388 RVA: 0x00F9FCF4 File Offset: 0x00F9DEF4
+		// Token: 0x06035585 RID: 218501 RVA: 0x00EE6C70 File Offset: 0x00EE4E70
 		public void Refresh(bool skipAnim = false)
 		{
 			ActivityMotorLinkageConfig.Instance.GetIpConfig(this.IpId);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			levelSequencePlayer.PlaySequencePurely("Start", false, false, null, null, false);
 		}
 
-		// Token: 0x060408C5 RID: 264389 RVA: 0x00F9FD40 File Offset: 0x00F9DF40
+		// Token: 0x06035586 RID: 218502 RVA: 0x00EE6CBC File Offset: 0x00EE4EBC
 		private void RefreshToggle()
 		{
 			MotorLinkageIp ipConfig = ActivityMotorLinkageConfig.Instance.GetIpConfig(this.IpId);
@@ -104,13 +104,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			stickerItemB.Refresh(ipConfig.IpStickerList(1));
 		}
 
-		// Token: 0x060408C6 RID: 264390 RVA: 0x00F9FD8F File Offset: 0x00F9DF8F
+		// Token: 0x06035587 RID: 218503 RVA: 0x00EE6D0B File Offset: 0x00EE4F0B
 		public void SetIpId(int ipId)
 		{
 			this.IpId = ipId;
 		}
 
-		// Token: 0x060408C7 RID: 264391 RVA: 0x00F9FD98 File Offset: 0x00F9DF98
+		// Token: 0x06035588 RID: 218504 RVA: 0x00EE6D14 File Offset: 0x00EE4F14
 		private void OnToggleClick(int index)
 		{
 			if (index == 0)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			levelSequencePlayer.PlayOrReplaySequenceByName("Switch", false, null);
 		}
 
-		// Token: 0x060408C8 RID: 264392 RVA: 0x00F9FE06 File Offset: 0x00F9E006
+		// Token: 0x06035589 RID: 218505 RVA: 0x00EE6D82 File Offset: 0x00EE4F82
 		public void RefreshTexture()
 		{
 			UUIItem item = base.GetItem(1);
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			item2.SetUIActive(this.SelectedIndex == 1);
 		}
 
-		// Token: 0x060408C9 RID: 264393 RVA: 0x00F9FE40 File Offset: 0x00F9E040
+		// Token: 0x0603558A RID: 218506 RVA: 0x00EE6DBC File Offset: 0x00EE4FBC
 		private void SelectFirstIncompleteToggle()
 		{
 			if (this.StickerItemA != null && !this.StickerItemA.IsReceived())
@@ -176,19 +176,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			this.RefreshTexture();
 		}
 
-		// Token: 0x04021912 RID: 137490
+		// Token: 0x0401C241 RID: 115265
 		private int IpId;
 
-		// Token: 0x04021913 RID: 137491
+		// Token: 0x0401C242 RID: 115266
 		private int SelectedIndex;
 
-		// Token: 0x04021914 RID: 137492
+		// Token: 0x0401C243 RID: 115267
 		private MotorLinkageStickerItem StickerItemA;
 
-		// Token: 0x04021915 RID: 137493
+		// Token: 0x0401C244 RID: 115268
 		private MotorLinkageStickerItem StickerItemB;
 
-		// Token: 0x04021916 RID: 137494
+		// Token: 0x0401C245 RID: 115269
 		private LevelSequencePlayer LevelSequencePlayer;
 	}
 }

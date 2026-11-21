@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Input;
 using CSharpScript.Game.KuroSimpleCombat;
 
-// Token: 0x02000ECF RID: 3791
+// Token: 0x02000384 RID: 900
 public class TowerDefenseInputController
 {
-	// Token: 0x06005E48 RID: 24136 RVA: 0x00116AA0 File Offset: 0x00114CA0
+	// Token: 0x060031DF RID: 12767 RVA: 0x0011E758 File Offset: 0x0011C958
 	public static bool OnStart()
 	{
 		return true;
 	}
 
-	// Token: 0x06005E49 RID: 24137 RVA: 0x00116AA3 File Offset: 0x00114CA3
+	// Token: 0x060031E0 RID: 12768 RVA: 0x0011E75B File Offset: 0x0011C95B
 	public static bool OnStop()
 	{
 		TowerDefenseInputController.RemoveInputLayer();
 		return true;
 	}
 
-	// Token: 0x06005E4A RID: 24138 RVA: 0x00116AAC File Offset: 0x00114CAC
+	// Token: 0x060031E1 RID: 12769 RVA: 0x0011E764 File Offset: 0x0011C964
 	[NullableContext(2)]
 	private static TowerDefenseInputLayer GetInputLayer()
 	{
@@ -31,7 +31,7 @@ public class TowerDefenseInputController
 		return null;
 	}
 
-	// Token: 0x06005E4B RID: 24139 RVA: 0x00116ADC File Offset: 0x00114CDC
+	// Token: 0x060031E2 RID: 12770 RVA: 0x0011E794 File Offset: 0x0011C994
 	public static bool AddInputLayer()
 	{
 		TowerDefenseInputLayer towerDefenseInputLayer = TowerDefenseInputController.GetInputLayer();
@@ -57,7 +57,7 @@ public class TowerDefenseInputController
 		return false;
 	}
 
-	// Token: 0x06005E4C RID: 24140 RVA: 0x00116B6C File Offset: 0x00114D6C
+	// Token: 0x060031E3 RID: 12771 RVA: 0x0011E824 File Offset: 0x0011CA24
 	public static bool RemoveInputLayer()
 	{
 		TowerDefenseInputLayer inputLayer = TowerDefenseInputController.GetInputLayer();

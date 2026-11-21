@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004866 RID: 18534
+	// Token: 0x02004CCB RID: 19659
 	public class IEditorRestartInfoT
 	{
-		// Token: 0x1700857B RID: 34171
-		// (get) Token: 0x0601CC22 RID: 117794 RVA: 0x00410A44 File Offset: 0x0040EC44
-		// (set) Token: 0x0601CC23 RID: 117795 RVA: 0x00410A4C File Offset: 0x0040EC4C
+		// Token: 0x17008BC5 RID: 35781
+		// (get) Token: 0x0601E413 RID: 123923 RVA: 0x0043D2EC File Offset: 0x0043B4EC
+		// (set) Token: 0x0601E414 RID: 123924 RVA: 0x0043D2F4 File Offset: 0x0043B4F4
 		public bool IsRestarting { get; set; }
 
-		// Token: 0x1700857C RID: 34172
-		// (get) Token: 0x0601CC24 RID: 117796 RVA: 0x00410A55 File Offset: 0x0040EC55
-		// (set) Token: 0x0601CC25 RID: 117797 RVA: 0x00410A5D File Offset: 0x0040EC5D
+		// Token: 0x17008BC6 RID: 35782
+		// (get) Token: 0x0601E415 RID: 123925 RVA: 0x0043D2FD File Offset: 0x0043B4FD
+		// (set) Token: 0x0601E416 RID: 123926 RVA: 0x0043D305 File Offset: 0x0043B505
 		public bool IsUseIdleLoad { get; set; }
 
-		// Token: 0x1700857D RID: 34173
-		// (get) Token: 0x0601CC26 RID: 117798 RVA: 0x00410A66 File Offset: 0x0040EC66
-		// (set) Token: 0x0601CC27 RID: 117799 RVA: 0x00410A6E File Offset: 0x0040EC6E
+		// Token: 0x17008BC7 RID: 35783
+		// (get) Token: 0x0601E417 RID: 123927 RVA: 0x0043D30E File Offset: 0x0043B50E
+		// (set) Token: 0x0601E418 RID: 123928 RVA: 0x0043D316 File Offset: 0x0043B516
 		public TEditorRestartReason Reason { get; set; }
 
-		// Token: 0x1700857E RID: 34174
-		// (get) Token: 0x0601CC28 RID: 117800 RVA: 0x00410A77 File Offset: 0x0040EC77
-		// (set) Token: 0x0601CC29 RID: 117801 RVA: 0x00410A7F File Offset: 0x0040EC7F
+		// Token: 0x17008BC8 RID: 35784
+		// (get) Token: 0x0601E419 RID: 123929 RVA: 0x0043D31F File Offset: 0x0043B51F
+		// (set) Token: 0x0601E41A RID: 123930 RVA: 0x0043D327 File Offset: 0x0043B527
 		public long Timestamp { get; set; }
 
-		// Token: 0x0601CC2A RID: 117802 RVA: 0x00410A88 File Offset: 0x0040EC88
+		// Token: 0x0601E41B RID: 123931 RVA: 0x0043D330 File Offset: 0x0043B530
 		public IEditorRestartInfoT()
 		{
 			this.IsRestarting = false;

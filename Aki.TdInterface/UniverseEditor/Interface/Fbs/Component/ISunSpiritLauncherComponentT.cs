@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A0B RID: 23051
+	// Token: 0x02006018 RID: 24600
 	public class ISunSpiritLauncherComponentT
 	{
-		// Token: 0x1700AD37 RID: 44343
-		// (get) Token: 0x0602721E RID: 160286 RVA: 0x0056221A File Offset: 0x0056041A
-		// (set) Token: 0x0602721F RID: 160287 RVA: 0x00562222 File Offset: 0x00560422
+		// Token: 0x1700B66F RID: 46703
+		// (get) Token: 0x06029796 RID: 169878 RVA: 0x005A91DE File Offset: 0x005A73DE
+		// (set) Token: 0x06029797 RID: 169879 RVA: 0x005A91E6 File Offset: 0x005A73E6
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700AD38 RID: 44344
-		// (get) Token: 0x06027220 RID: 160288 RVA: 0x0056222B File Offset: 0x0056042B
-		// (set) Token: 0x06027221 RID: 160289 RVA: 0x00562233 File Offset: 0x00560433
+		// Token: 0x1700B670 RID: 46704
+		// (get) Token: 0x06029798 RID: 169880 RVA: 0x005A91EF File Offset: 0x005A73EF
+		// (set) Token: 0x06029799 RID: 169881 RVA: 0x005A91F7 File Offset: 0x005A73F7
 		public int AreaId { get; set; }
 
-		// Token: 0x1700AD39 RID: 44345
-		// (get) Token: 0x06027222 RID: 160290 RVA: 0x0056223C File Offset: 0x0056043C
-		// (set) Token: 0x06027223 RID: 160291 RVA: 0x00562244 File Offset: 0x00560444
+		// Token: 0x1700B671 RID: 46705
+		// (get) Token: 0x0602979A RID: 169882 RVA: 0x005A9200 File Offset: 0x005A7400
+		// (set) Token: 0x0602979B RID: 169883 RVA: 0x005A9208 File Offset: 0x005A7408
 		public int NeedsCount { get; set; }
 
-		// Token: 0x1700AD3A RID: 44346
-		// (get) Token: 0x06027224 RID: 160292 RVA: 0x0056224D File Offset: 0x0056044D
-		// (set) Token: 0x06027225 RID: 160293 RVA: 0x00562255 File Offset: 0x00560455
+		// Token: 0x1700B672 RID: 46706
+		// (get) Token: 0x0602979C RID: 169884 RVA: 0x005A9211 File Offset: 0x005A7411
+		// (set) Token: 0x0602979D RID: 169885 RVA: 0x005A9219 File Offset: 0x005A7419
 		public int SunSpiritGearId { get; set; }
 
-		// Token: 0x1700AD3B RID: 44347
-		// (get) Token: 0x06027226 RID: 160294 RVA: 0x0056225E File Offset: 0x0056045E
-		// (set) Token: 0x06027227 RID: 160295 RVA: 0x00562266 File Offset: 0x00560466
+		// Token: 0x1700B673 RID: 46707
+		// (get) Token: 0x0602979E RID: 169886 RVA: 0x005A9222 File Offset: 0x005A7422
+		// (set) Token: 0x0602979F RID: 169887 RVA: 0x005A922A File Offset: 0x005A742A
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027228 RID: 160296 RVA: 0x0056226F File Offset: 0x0056046F
+		// Token: 0x060297A0 RID: 169888 RVA: 0x005A9233 File Offset: 0x005A7433
 		public ISunSpiritLauncherComponentT()
 		{
 			this.Disabled = false;

@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 {
-	// Token: 0x020054D6 RID: 21718
+	// Token: 0x020044A9 RID: 17577
 	public class SheriffAnomalyMarkUi : UiPanelBase
 	{
-		// Token: 0x06037729 RID: 227113 RVA: 0x00D2BB78 File Offset: 0x00D29D78
+		// Token: 0x0602C5CE RID: 181710 RVA: 0x00C79660 File Offset: 0x00C77860
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603772A RID: 227114 RVA: 0x00D2BCA7 File Offset: 0x00D29EA7
+		// Token: 0x0602C5CF RID: 181711 RVA: 0x00C7978F File Offset: 0x00C7798F
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -51,12 +51,12 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			text.SetText("?", true);
 		}
 
-		// Token: 0x0603772B RID: 227115 RVA: 0x00D2BCD1 File Offset: 0x00D29ED1
+		// Token: 0x0602C5D0 RID: 181712 RVA: 0x00C797B9 File Offset: 0x00C779B9
 		protected override void OnAfterShow()
 		{
 		}
 
-		// Token: 0x0603772C RID: 227116 RVA: 0x00D2BCD4 File Offset: 0x00D29ED4
+		// Token: 0x0602C5D1 RID: 181713 RVA: 0x00C797BC File Offset: 0x00C779BC
 		public void SetData(int markId)
 		{
 			SheriffAnomaly? anomalyConfigByMarkId = SheriffConfig.Instance.GetAnomalyConfigByMarkId(markId);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			this.RefreshUi();
 		}
 
-		// Token: 0x0603772D RID: 227117 RVA: 0x00D2BD3C File Offset: 0x00D29F3C
+		// Token: 0x0602C5D2 RID: 181714 RVA: 0x00C79824 File Offset: 0x00C77A24
 		private void RefreshUi()
 		{
 			SheriffAnomaly? anomalyConfigByMarkId = SheriffConfig.Instance.GetAnomalyConfigByMarkId(this.MarkId);
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			this.RefreshBg(flag);
 		}
 
-		// Token: 0x0603772E RID: 227118 RVA: 0x00D2BDF0 File Offset: 0x00D29FF0
+		// Token: 0x0602C5D3 RID: 181715 RVA: 0x00C798D8 File Offset: 0x00C77AD8
 		private void RefreshCriminal(bool isKnown, SheriffAnomaly config)
 		{
 			if (isKnown)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			sprite.SetUIActive(false);
 		}
 
-		// Token: 0x0603772F RID: 227119 RVA: 0x00D2BE34 File Offset: 0x00D2A034
+		// Token: 0x0602C5D4 RID: 181716 RVA: 0x00C7991C File Offset: 0x00C77B1C
 		private void RefreshName(bool isCompleted, SheriffAnomaly config)
 		{
 			bool flag = WorldMapModel.Instance.MapScale * 100f > (float)config.TextVisibleScale;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			}
 		}
 
-		// Token: 0x06037730 RID: 227120 RVA: 0x00D2BEB8 File Offset: 0x00D2A0B8
+		// Token: 0x0602C5D5 RID: 181717 RVA: 0x00C799A0 File Offset: 0x00C77BA0
 		private void RefreshProgress(bool isCompleted, SheriffAnomaly config)
 		{
 			bool flag = WorldMapModel.Instance.MapScale * 100f > (float)config.TextVisibleScale;
@@ -176,14 +176,14 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			}
 		}
 
-		// Token: 0x06037731 RID: 227121 RVA: 0x00D2BF78 File Offset: 0x00D2A178
+		// Token: 0x0602C5D6 RID: 181718 RVA: 0x00C79A60 File Offset: 0x00C77C60
 		private void RefreshBg(bool isCompleted)
 		{
 			string resourceId = isCompleted ? "SP_SkyEyeMapDone" : "SP_SkyEyeMapUndone";
 			base.TrySetSpriteByPath(UiResourceConfig.Instance.GetResourcePath(resourceId), base.GetSprite(6), false, null, null);
 		}
 
-		// Token: 0x06037732 RID: 227122 RVA: 0x00D2BFB8 File Offset: 0x00D2A1B8
+		// Token: 0x0602C5D7 RID: 181719 RVA: 0x00C79AA0 File Offset: 0x00C77CA0
 		[NullableContext(2)]
 		private string GetMarkIcon(SheriffAnomaly anomaly)
 		{
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			return identityConfigById.GetValueOrDefault().MarkIcon;
 		}
 
-		// Token: 0x06037733 RID: 227123 RVA: 0x00D2C007 File Offset: 0x00D2A207
+		// Token: 0x0602C5D8 RID: 181720 RVA: 0x00C79AEF File Offset: 0x00C77CEF
 		protected override void OnBeforeDestroyImplement()
 		{
 			UiSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -211,44 +211,44 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			levelSequencePlayer.Clear();
 		}
 
-		// Token: 0x0401D38D RID: 119693
+		// Token: 0x04017E06 RID: 97798
 		[Nullable(2)]
 		private UiSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401D38E RID: 119694
+		// Token: 0x04017E07 RID: 97799
 		private int MarkId;
 
-		// Token: 0x0401D38F RID: 119695
+		// Token: 0x04017E08 RID: 97800
 		private ESheriffAnomalyState CurrentState;
 
-		// Token: 0x0401D390 RID: 119696
+		// Token: 0x04017E09 RID: 97801
 		private int CurrentProgress;
 
-		// Token: 0x0200B743 RID: 46915
+		// Token: 0x0200A172 RID: 41330
 		private static class EComponent
 		{
-			// Token: 0x040377EA RID: 227306
+			// Token: 0x04032223 RID: 205347
 			public const int Item = 0;
 
-			// Token: 0x040377EB RID: 227307
+			// Token: 0x04032224 RID: 205348
 			public const int SprCriminal = 1;
 
-			// Token: 0x040377EC RID: 227308
+			// Token: 0x04032225 RID: 205349
 			public const int PnlDone = 2;
 
-			// Token: 0x040377ED RID: 227309
+			// Token: 0x04032226 RID: 205350
 			public const int PnlLock = 3;
 
-			// Token: 0x040377EE RID: 227310
+			// Token: 0x04032227 RID: 205351
 			public const int TextName = 4;
 
-			// Token: 0x040377EF RID: 227311
+			// Token: 0x04032228 RID: 205352
 			public const int TextProgress = 5;
 
-			// Token: 0x040377F0 RID: 227312
+			// Token: 0x04032229 RID: 205353
 			public const int SprBg = 6;
 
-			// Token: 0x040377F1 RID: 227313
+			// Token: 0x0403222A RID: 205354
 			public const int TextUnknown = 7;
 		}
 	}

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013DD RID: 5085
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001534 RID: 5428
 	public class ICheckTrapDefenseEventCondition : IQuestCondition
 	{
-		// Token: 0x060073FA RID: 29690 RVA: 0x00115E97 File Offset: 0x00114097
+		// Token: 0x06007ABB RID: 31419 RVA: 0x0012487B File Offset: 0x00122A7B
 		public static ICheckTrapDefenseEventCondition Create(ICheckTrapDefenseEventCondition? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002613 RID: 9747
-		// (get) Token: 0x060073FB RID: 29691 RVA: 0x00115EB6 File Offset: 0x001140B6
+		// Token: 0x170027F5 RID: 10229
+		// (get) Token: 0x06007ABC RID: 31420 RVA: 0x0012489A File Offset: 0x00122A9A
 		public override EChildQuest Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002614 RID: 9748
-		// (get) Token: 0x060073FC RID: 29692 RVA: 0x00115EC3 File Offset: 0x001140C3
+		// Token: 0x170027F6 RID: 10230
+		// (get) Token: 0x06007ABD RID: 31421 RVA: 0x001248A7 File Offset: 0x00122AA7
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002615 RID: 9749
-		// (get) Token: 0x060073FD RID: 29693 RVA: 0x00115EF7 File Offset: 0x001140F7
+		// Token: 0x170027F7 RID: 10231
+		// (get) Token: 0x06007ABE RID: 31422 RVA: 0x001248DB File Offset: 0x00122ADB
 		public virtual ICheckTrapDefenseEventBase Config
 		{
 			get
@@ -67,20 +65,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004321 RID: 17185
+		// Token: 0x040046B2 RID: 18098
 		private ICheckTrapDefenseEventCondition Instance;
 
-		// Token: 0x04004322 RID: 17186
+		// Token: 0x040046B3 RID: 18099
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004323 RID: 17187
+		// Token: 0x040046B4 RID: 18100
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004324 RID: 17188
+		// Token: 0x040046B5 RID: 18101
 		private ICheckTrapDefenseEventBase _ConfigCache;
 
-		// Token: 0x04004325 RID: 17189
+		// Token: 0x040046B6 RID: 18102
 		private bool _ConfigInited;
 	}
 }

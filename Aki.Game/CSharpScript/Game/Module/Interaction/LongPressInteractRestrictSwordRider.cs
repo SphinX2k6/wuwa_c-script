@@ -9,10 +9,10 @@ using CSharpScript.Game.Module.BattleUi;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x0200584B RID: 22603
+	// Token: 0x02004823 RID: 18467
 	public static class LongPressInteractRestrictSwordRider
 	{
-		// Token: 0x06039764 RID: 235364 RVA: 0x00DA4158 File Offset: 0x00DA2358
+		// Token: 0x0602E680 RID: 190080 RVA: 0x00CF2E18 File Offset: 0x00CF1018
 		// Note: this type is marked as 'beforefieldinit'.
 		unsafe static LongPressInteractRestrictSwordRider()
 		{
@@ -54,26 +54,26 @@ namespace CSharpScript.Game.Module.Interaction
 			LongPressInteractRestrictSwordRider.swordRiderDisabledInputActions = list2;
 		}
 
-		// Token: 0x0401E0D7 RID: 123095
+		// Token: 0x04018B74 RID: 101236
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly List<EBattleUiChild> swordRiderHiddenSkillButtons;
 
-		// Token: 0x0401E0D8 RID: 123096
+		// Token: 0x04018B75 RID: 101237
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly List<EInputAction> swordRiderDisabledInputActions;
 
-		// Token: 0x0200BA6D RID: 47725
+		// Token: 0x0200A484 RID: 42116
 		public class SwordRiderLongPressRestriction : ILongPressInteractRestriction
 		{
-			// Token: 0x0604F8A4 RID: 325796 RVA: 0x01548422 File Offset: 0x01546622
+			// Token: 0x06045E32 RID: 286258 RVA: 0x015018C6 File Offset: 0x014FFAC6
 			public void Enter(EInputAction? triggerAction)
 			{
 				this.SetReadyRestrict(triggerAction, true);
 			}
 
-			// Token: 0x0604F8A5 RID: 325797 RVA: 0x0154842C File Offset: 0x0154662C
+			// Token: 0x06045E33 RID: 286259 RVA: 0x015018D0 File Offset: 0x014FFAD0
 			public void Press(EInputAction? triggerAction)
 			{
 				if (this.IsPressingRestrictApplied)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Interaction
 				this.IsPressingRestrictApplied = true;
 			}
 
-			// Token: 0x0604F8A6 RID: 325798 RVA: 0x0154848C File Offset: 0x0154668C
+			// Token: 0x06045E34 RID: 286260 RVA: 0x01501930 File Offset: 0x014FFB30
 			public void Release(EInputAction? triggerAction)
 			{
 				if (!this.IsPressingRestrictApplied)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Interaction
 				OperationRestrictUtils.Instance.SetOperationRestrictEnableAll();
 			}
 
-			// Token: 0x0604F8A7 RID: 325799 RVA: 0x015484E2 File Offset: 0x015466E2
+			// Token: 0x06045E35 RID: 286261 RVA: 0x01501986 File Offset: 0x014FFB86
 			public void Exit(EInputAction? triggerAction)
 			{
 				if (this.IsPressingRestrictApplied)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Interaction
 				this.SetReadyRestrict(triggerAction, false);
 			}
 
-			// Token: 0x0604F8A8 RID: 325800 RVA: 0x01548508 File Offset: 0x01546708
+			// Token: 0x06045E36 RID: 286262 RVA: 0x015019AC File Offset: 0x014FFBAC
 			private void SetReadyRestrict(EInputAction? triggerAction, bool restrict)
 			{
 				BattleUiModel instance = BattleUiModel.Instance;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Interaction
 				}
 			}
 
-			// Token: 0x0604F8A9 RID: 325801 RVA: 0x015485B4 File Offset: 0x015467B4
+			// Token: 0x06045E37 RID: 286263 RVA: 0x01501A58 File Offset: 0x014FFC58
 			[NullableContext(1)]
 			private IDisableModulePlayerOperation BuildPressingRestrict(EInputAction? triggerAction)
 			{
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Interaction
 				};
 			}
 
-			// Token: 0x040385C2 RID: 230850
+			// Token: 0x04032FBA RID: 208826
 			private bool IsPressingRestrictApplied;
 		}
 	}

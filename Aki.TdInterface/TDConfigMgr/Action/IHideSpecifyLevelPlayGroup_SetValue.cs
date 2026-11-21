@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B0A RID: 6922
+	// Token: 0x02001CB9 RID: 7353
 	public class IHideSpecifyLevelPlayGroup_SetValue
 	{
-		// Token: 0x04005AEA RID: 23274
+		// Token: 0x04005F88 RID: 24456
 		public EHideType Type;
 
-		// Token: 0x04005AEB RID: 23275
-		[Nullable(1)]
+		// Token: 0x04005F89 RID: 24457
 		public List<int> LevelPlays;
 	}
 }

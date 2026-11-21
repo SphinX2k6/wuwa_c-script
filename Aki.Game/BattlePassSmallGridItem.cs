@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x0200232F RID: 9007
+// Token: 0x02001814 RID: 6164
 public class BattlePassSmallGridItem : CommonItemSmallItemGrid
 {
-	// Token: 0x06011D59 RID: 73049 RVA: 0x00464ED4 File Offset: 0x004630D4
+	// Token: 0x0600F209 RID: 61961 RVA: 0x00471F9C File Offset: 0x0047019C
 	public void RefreshItem(TItem data, EBattlePassItemType type)
 	{
 		InventoryDefine.IGetItemData itemData = data.ItemData;
@@ -33,7 +33,7 @@ public class BattlePassSmallGridItem : CommonItemSmallItemGrid
 		base.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x06011D5A RID: 73050 RVA: 0x00464F7B File Offset: 0x0046317B
+	// Token: 0x0600F20A RID: 61962 RVA: 0x00472043 File Offset: 0x00470243
 	protected override void OnExtendToggleClicked()
 	{
 	}

@@ -5,17 +5,17 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D8B RID: 19851
+	// Token: 0x02003D54 RID: 15700
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueGainEntry
 	{
-		// Token: 0x060334E9 RID: 210153 RVA: 0x00BF9C53 File Offset: 0x00BF7E53
+		// Token: 0x06028356 RID: 164694 RVA: 0x00B4324F File Offset: 0x00B4144F
 		public RogueGainEntry()
 		{
 		}
 
-		// Token: 0x060334EA RID: 210154 RVA: 0x00BF9C5C File Offset: 0x00BF7E5C
+		// Token: 0x06028357 RID: 164695 RVA: 0x00B43258 File Offset: 0x00B41458
 		public RogueGainEntry(RogueGainEntry rogueGainEntry, int? bindId = null)
 		{
 			this.BindId = bindId;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060334EB RID: 210155 RVA: 0x00BF9E78 File Offset: 0x00BF8078
+		// Token: 0x06028358 RID: 164696 RVA: 0x00B43474 File Offset: 0x00B41674
 		public List<ElementInfo> GetSortElementInfoArrayByCount(bool bIgnoreTotal = false)
 		{
 			int num = 9;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x060334EC RID: 210156 RVA: 0x00BF9F28 File Offset: 0x00BF8128
+		// Token: 0x06028359 RID: 164697 RVA: 0x00B43524 File Offset: 0x00B41724
 		public bool IsDiscounted()
 		{
 			int? currentPrice = this.CurrentPrice;
@@ -94,20 +94,20 @@ namespace CSharpScript.Game.Module.Roguelike
 			return !(currentPrice.GetValueOrDefault() == originalPrice & currentPrice != null);
 		}
 
-		// Token: 0x0401B3BB RID: 111547
+		// Token: 0x04015D8E RID: 89486
 		public RoguelikeGainDataType? RoguelikeGainDataType;
 
-		// Token: 0x0401B3BC RID: 111548
+		// Token: 0x04015D8F RID: 89487
 		public int ConfigId;
 
-		// Token: 0x0401B3BD RID: 111549
+		// Token: 0x04015D90 RID: 89488
 		public int IncId;
 
-		// Token: 0x0401B3BE RID: 111550
+		// Token: 0x04015D91 RID: 89489
 		[Nullable(2)]
 		public Dictionary<int, int> ElementDict;
 
-		// Token: 0x0401B3BF RID: 111551
+		// Token: 0x04015D92 RID: 89490
 		[Nullable(new byte[]
 		{
 			2,
@@ -115,40 +115,40 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		public List<AffixEntry> AffixEntryList;
 
-		// Token: 0x0401B3C0 RID: 111552
+		// Token: 0x04015D93 RID: 89491
 		public int OriginalPrice;
 
-		// Token: 0x0401B3C1 RID: 111553
+		// Token: 0x04015D94 RID: 89492
 		public int? CurrentPrice;
 
-		// Token: 0x0401B3C2 RID: 111554
+		// Token: 0x04015D95 RID: 89493
 		public int? Index;
 
-		// Token: 0x0401B3C3 RID: 111555
+		// Token: 0x04015D96 RID: 89494
 		public int ShopItemCoinId;
 
-		// Token: 0x0401B3C4 RID: 111556
+		// Token: 0x04015D97 RID: 89495
 		public bool? IsSell;
 
-		// Token: 0x0401B3C5 RID: 111557
+		// Token: 0x04015D98 RID: 89496
 		public bool IsSelect;
 
-		// Token: 0x0401B3C6 RID: 111558
+		// Token: 0x04015D99 RID: 89497
 		public bool IsNew;
 
-		// Token: 0x0401B3C7 RID: 111559
+		// Token: 0x04015D9A RID: 89498
 		public int Discounted;
 
-		// Token: 0x0401B3C8 RID: 111560
+		// Token: 0x04015D9B RID: 89499
 		public int Cost;
 
-		// Token: 0x0401B3C9 RID: 111561
+		// Token: 0x04015D9C RID: 89500
 		public int? BindId;
 
-		// Token: 0x0401B3CA RID: 111562
+		// Token: 0x04015D9D RID: 89501
 		public int RestCount;
 
-		// Token: 0x0401B3CB RID: 111563
+		// Token: 0x04015D9E RID: 89502
 		public bool IsValid;
 	}
 }

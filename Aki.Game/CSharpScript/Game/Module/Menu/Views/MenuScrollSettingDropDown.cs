@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.Views
 {
-	// Token: 0x0200540E RID: 21518
+	// Token: 0x020043F1 RID: 17393
 	public class MenuScrollSettingDropDown : MenuScrollSettingBaseItem
 	{
-		// Token: 0x06036FF0 RID: 225264 RVA: 0x00D08114 File Offset: 0x00D06314
+		// Token: 0x0602BF39 RID: 180025 RVA: 0x00C57530 File Offset: 0x00C55730
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,14 +25,14 @@ namespace CSharpScript.Game.Module.Menu.Views
 			};
 		}
 
-		// Token: 0x06036FF1 RID: 225265 RVA: 0x00D081B0 File Offset: 0x00D063B0
+		// Token: 0x0602BF3A RID: 180026 RVA: 0x00C575CC File Offset: 0x00C557CC
 		[NullableContext(1)]
 		private TableTextArgNew GetDropDownTextId(object data)
 		{
 			return this.Logic.GetDataTextId(data, this.Data);
 		}
 
-		// Token: 0x06036FF2 RID: 225266 RVA: 0x00D081C4 File Offset: 0x00D063C4
+		// Token: 0x0602BF3B RID: 180027 RVA: 0x00C575E0 File Offset: 0x00C557E0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MenuScrollSettingDropDown.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -43,24 +43,24 @@ namespace CSharpScript.Game.Module.Menu.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036FF3 RID: 225267 RVA: 0x00D08207 File Offset: 0x00D06407
+		// Token: 0x0602BF3C RID: 180028 RVA: 0x00C57623 File Offset: 0x00C55823
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06036FF4 RID: 225268 RVA: 0x00D08209 File Offset: 0x00D06409
+		// Token: 0x0602BF3D RID: 180029 RVA: 0x00C57625 File Offset: 0x00C55825
 		protected override void OnBeforeDestroy()
 		{
 			this.DropDown.Destroy(null);
 		}
 
-		// Token: 0x06036FF5 RID: 225269 RVA: 0x00D08217 File Offset: 0x00D06417
+		// Token: 0x0602BF3E RID: 180030 RVA: 0x00C57633 File Offset: 0x00C55833
 		private void RefreshTitle()
 		{
 			base.GetText(0).ShowTextNew(this.Data.FunctionName ?? "");
 		}
 
-		// Token: 0x06036FF6 RID: 225270 RVA: 0x00D0823C File Offset: 0x00D0643C
+		// Token: 0x0602BF3F RID: 180031 RVA: 0x00C57658 File Offset: 0x00C55858
 		private void RefreshDropDown()
 		{
 			this.Logic = DropDownLogicCreator.GetDropDownLogic(this.Data.FunctionId);
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.DropDown.InitScroll(dropDownDataList, new Func<object, TableTextArgNew>(this.GetDropDownTextId), defaultIndex, true);
 		}
 
-		// Token: 0x06036FF7 RID: 225271 RVA: 0x00D082A0 File Offset: 0x00D064A0
+		// Token: 0x0602BF40 RID: 180032 RVA: 0x00C576BC File Offset: 0x00C558BC
 		[NullableContext(1)]
 		public override void Update(MenuData data, bool bGameSettingsUpdate)
 		{
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.RefreshDetailSprite().Forget();
 		}
 
-		// Token: 0x06036FF8 RID: 225272 RVA: 0x00D082CC File Offset: 0x00D064CC
+		// Token: 0x0602BF41 RID: 180033 RVA: 0x00C576E8 File Offset: 0x00C558E8
 		public override UniTask ClearAsync()
 		{
 			MenuScrollSettingDropDown.<ClearAsync>d__11 <ClearAsync>d__;
@@ -96,12 +96,12 @@ namespace CSharpScript.Game.Module.Menu.Views
 			return <ClearAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036FF9 RID: 225273 RVA: 0x00D0830F File Offset: 0x00D0650F
+		// Token: 0x0602BF42 RID: 180034 RVA: 0x00C5772B File Offset: 0x00C5592B
 		public override void SetInteractionActive(bool val)
 		{
 		}
 
-		// Token: 0x06036FFA RID: 225274 RVA: 0x00D08314 File Offset: 0x00D06514
+		// Token: 0x0602BF43 RID: 180035 RVA: 0x00C57730 File Offset: 0x00C55930
 		protected override void OnSetDetailVisible(bool bVisible)
 		{
 			UUIItem item = base.GetItem(2);
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06036FFB RID: 225275 RVA: 0x00D083C4 File Offset: 0x00D065C4
+		// Token: 0x0602BF44 RID: 180036 RVA: 0x00C577E0 File Offset: 0x00C559E0
 		private void RefreshDetailText()
 		{
 			if (this.Data == null)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			LguiUtil.Instance.SetLocalTextNew(text, detailTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x06036FFC RID: 225276 RVA: 0x00D0840D File Offset: 0x00D0660D
+		// Token: 0x0602BF45 RID: 180037 RVA: 0x00C57829 File Offset: 0x00C55A29
 		private void RefreshDetailSpriteVisible()
 		{
 			if (this.Data == null)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			sprite.SetUIActive(this.Data.ShowHelpBtn());
 		}
 
-		// Token: 0x06036FFD RID: 225277 RVA: 0x00D08434 File Offset: 0x00D06634
+		// Token: 0x0602BF46 RID: 180038 RVA: 0x00C57850 File Offset: 0x00C55A50
 		public UniTask RefreshDetailSprite()
 		{
 			MenuScrollSettingDropDown.<RefreshDetailSprite>d__16 <RefreshDetailSprite>d__;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			return <RefreshDetailSprite>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401D040 RID: 118848
+		// Token: 0x04017AD9 RID: 96985
 		[Nullable(new byte[]
 		{
 			2,
@@ -174,29 +174,29 @@ namespace CSharpScript.Game.Module.Menu.Views
 		})]
 		private CommonDropDown<TableTextArgNew, object> DropDown;
 
-		// Token: 0x0401D041 RID: 118849
+		// Token: 0x04017ADA RID: 96986
 		[Nullable(2)]
 		private DropDownLogicBase Logic;
 
-		// Token: 0x0200B6A1 RID: 46753
+		// Token: 0x0200A0D9 RID: 41177
 		private class ECompDefine
 		{
-			// Token: 0x04037549 RID: 226633
+			// Token: 0x04031F9E RID: 204702
 			public const int Title = 0;
 
-			// Token: 0x0403754A RID: 226634
+			// Token: 0x04031F9F RID: 204703
 			public const int DropDown = 1;
 
-			// Token: 0x0403754B RID: 226635
+			// Token: 0x04031FA0 RID: 204704
 			public const int DetailItem = 2;
 
-			// Token: 0x0403754C RID: 226636
+			// Token: 0x04031FA1 RID: 204705
 			public const int DetailText = 3;
 
-			// Token: 0x0403754D RID: 226637
+			// Token: 0x04031FA2 RID: 204706
 			public const int DetailSprite = 4;
 
-			// Token: 0x0403754E RID: 226638
+			// Token: 0x04031FA3 RID: 204707
 			public const int DetailToggleTransition = 5;
 		}
 	}

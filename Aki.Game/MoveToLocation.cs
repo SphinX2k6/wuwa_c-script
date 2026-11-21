@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.LevelGamePlay;
 using UnrealEngine;
 
-// Token: 0x02003102 RID: 12546
+// Token: 0x0200265A RID: 9818
 [NullableContext(1)]
 [Nullable(0)]
 public class MoveToLocation
 {
-	// Token: 0x0601AEC0 RID: 110272 RVA: 0x0074CFC9 File Offset: 0x0074B1C9
+	// Token: 0x060188F2 RID: 100594 RVA: 0x00772E05 File Offset: 0x00771005
 	[NullableContext(2)]
 	public Vector GetCurrentMoveToLocation()
 	{
@@ -16,7 +16,7 @@ public class MoveToLocation
 		return ((moveToLocationConfig != null) ? moveToLocationConfig.Position : null) ?? null;
 	}
 
-	// Token: 0x0601AEC1 RID: 110273 RVA: 0x0074CFE2 File Offset: 0x0074B1E2
+	// Token: 0x060188F3 RID: 100595 RVA: 0x00772E1E File Offset: 0x0077101E
 	public void UpdateConfigMoveState(ECharMoveState? state)
 	{
 		if (this.MoveToLocationConfig == null)
@@ -26,7 +26,7 @@ public class MoveToLocation
 		this.MoveToLocationConfig.MoveState = state;
 	}
 
-	// Token: 0x0601AEC2 RID: 110274 RVA: 0x0074CFFC File Offset: 0x0074B1FC
+	// Token: 0x060188F4 RID: 100596 RVA: 0x00772E38 File Offset: 0x00771038
 	[NullableContext(2)]
 	public Vector GetLastMoveToLocation()
 	{
@@ -61,7 +61,7 @@ public class MoveToLocation
 		return vector ?? null;
 	}
 
-	// Token: 0x0601AEC3 RID: 110275 RVA: 0x0074D08C File Offset: 0x0074B28C
+	// Token: 0x060188F5 RID: 100597 RVA: 0x00772EC8 File Offset: 0x007710C8
 	public float GetCurrentDistance()
 	{
 		MoveToPointConfig moveToLocationConfig = this.MoveToLocationConfig;
@@ -76,7 +76,7 @@ public class MoveToLocation
 		return this.CurrentDistance;
 	}
 
-	// Token: 0x0601AEC4 RID: 110276 RVA: 0x0074D110 File Offset: 0x0074B310
+	// Token: 0x060188F6 RID: 100598 RVA: 0x00772F4C File Offset: 0x0077114C
 	public void Init(Entity entity)
 	{
 		this.Entity = entity;
@@ -86,7 +86,7 @@ public class MoveToLocation
 		this.PbDataId = this.ActorComp.CreatureData.GetPbDataId();
 	}
 
-	// Token: 0x0601AEC5 RID: 110277 RVA: 0x0074D16D File Offset: 0x0074B36D
+	// Token: 0x060188F7 RID: 100599 RVA: 0x00772FA9 File Offset: 0x007711A9
 	[NullableContext(2)]
 	public bool SetMoveToLocation(IMoveToPointConfig location)
 	{
@@ -99,7 +99,7 @@ public class MoveToLocation
 		return true;
 	}
 
-	// Token: 0x0601AEC6 RID: 110278 RVA: 0x0074D184 File Offset: 0x0074B384
+	// Token: 0x060188F8 RID: 100600 RVA: 0x00772FC0 File Offset: 0x007711C0
 	public void UpdateMove(float deltaSeconds)
 	{
 		if (this.MoveToLocationConfig == null)
@@ -143,7 +143,7 @@ public class MoveToLocation
 		}
 	}
 
-	// Token: 0x0601AEC7 RID: 110279 RVA: 0x0074D27C File Offset: 0x0074B47C
+	// Token: 0x060188F9 RID: 100601 RVA: 0x007730B8 File Offset: 0x007712B8
 	public void ResetPullbackLocation()
 	{
 		if (this.TickProcessId != 0)
@@ -156,13 +156,13 @@ public class MoveToLocation
 		this.MoveEnd(ELevelEventState.Success);
 	}
 
-	// Token: 0x0601AEC8 RID: 110280 RVA: 0x0074D2D1 File Offset: 0x0074B4D1
+	// Token: 0x060188FA RID: 100602 RVA: 0x0077310D File Offset: 0x0077130D
 	public void Dispose()
 	{
 		this.StopMove(null);
 	}
 
-	// Token: 0x0601AEC9 RID: 110281 RVA: 0x0074D2DC File Offset: 0x0074B4DC
+	// Token: 0x060188FB RID: 100603 RVA: 0x00773118 File Offset: 0x00771318
 	private unsafe void CheckTimeout(float deltaSeconds)
 	{
 		if ((float)Math.Sqrt(GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.ActorComp.ActorLocationProxy, this.ActorComp.LastActorLocation)) / deltaSeconds > 30f)
@@ -186,7 +186,7 @@ public class MoveToLocation
 		}
 	}
 
-	// Token: 0x0601AECA RID: 110282 RVA: 0x0074D3F0 File Offset: 0x0074B5F0
+	// Token: 0x060188FC RID: 100604 RVA: 0x0077322C File Offset: 0x0077142C
 	protected bool UpdateMoveToDirection()
 	{
 		this.UpdateCurrentTargetVector();
@@ -203,7 +203,7 @@ public class MoveToLocation
 			double x = this.DirectionVector.X;
 			this.DirectionVector.X = this.DirectionVector.Z;
 			this.DirectionVector.Z = x;
-			this.ActorComp.SetInputDirect(this.DirectionVector, false);
+			this.ActorComp.SetInputDirect(this.DirectionVector, false, EInputDirectSpace.Relative);
 			return false;
 		}
 		float? turnSpeed = this.MoveToLocationConfig.TurnSpeed;
@@ -225,11 +225,11 @@ public class MoveToLocation
 			}
 		}
 		AiControllerLibrary.TurnToDirect(this.ActorComp, this.DirectionVector, overrideTurnSpeed.Value, this.MoveToLocationConfig.IsFly.GetValueOrDefault(), 0f);
-		this.ActorComp.SetInputDirect(this.ActorComp.ActorForwardProxy, false);
+		this.ActorComp.SetInputDirect(this.ActorComp.ActorForwardProxy, false, EInputDirectSpace.World);
 		return false;
 	}
 
-	// Token: 0x0601AECB RID: 110283 RVA: 0x0074D621 File Offset: 0x0074B821
+	// Token: 0x060188FD RID: 100605 RVA: 0x0077345F File Offset: 0x0077165F
 	[NullableContext(2)]
 	public void StopMove(string context = null)
 	{
@@ -247,7 +247,7 @@ public class MoveToLocation
 		this.MoveToLocationConfig = null;
 	}
 
-	// Token: 0x0601AECC RID: 110284 RVA: 0x0074D658 File Offset: 0x0074B858
+	// Token: 0x060188FE RID: 100606 RVA: 0x00773498 File Offset: 0x00771698
 	public void MoveEnd(ELevelEventState state)
 	{
 		MoveToPointConfig moveToLocationConfig = this.MoveToLocationConfig;
@@ -278,7 +278,7 @@ public class MoveToLocation
 		this.MoveToLocationConfig = null;
 	}
 
-	// Token: 0x0601AECD RID: 110285 RVA: 0x0074D6FC File Offset: 0x0074B8FC
+	// Token: 0x060188FF RID: 100607 RVA: 0x0077353C File Offset: 0x0077173C
 	private void UpdateMoveToLocationConfig(IMoveToPointConfig config)
 	{
 		this.StartMoveLocation.DeepCopy(this.ActorComp.ActorLocationProxy);
@@ -298,7 +298,7 @@ public class MoveToLocation
 		this.CurTimeoutTime = this.MoveToLocationConfig.ReturnTimeoutFailed.Value;
 	}
 
-	// Token: 0x0601AECE RID: 110286 RVA: 0x0074D773 File Offset: 0x0074B973
+	// Token: 0x06018900 RID: 100608 RVA: 0x007735B3 File Offset: 0x007717B3
 	private void Clear()
 	{
 		this.CurTimeoutTime = 0f;
@@ -306,7 +306,7 @@ public class MoveToLocation
 		this.LastPatrolPoint.Reset();
 	}
 
-	// Token: 0x0601AECF RID: 110287 RVA: 0x0074D798 File Offset: 0x0074B998
+	// Token: 0x06018901 RID: 100609 RVA: 0x007735D8 File Offset: 0x007717D8
 	private void UpdateCurrentTargetVector()
 	{
 		if (this.MoveToLocationConfig.UpdateTargetPosition())
@@ -334,7 +334,7 @@ public class MoveToLocation
 		this.CurrentDistance = (float)((this.MoveToLocationConfig.IsFly != null && this.MoveToLocationConfig.IsFly.Value) ? this.CurrentToTargetVector.Size() : ((double)((float)Math.Sqrt(GravityUtils.Instance.GetPlanarSizeSquared2dForActor(this.ActorComp, this.CurrentToTargetVector)))));
 	}
 
-	// Token: 0x0601AED0 RID: 110288 RVA: 0x0074D928 File Offset: 0x0074BB28
+	// Token: 0x06018902 RID: 100610 RVA: 0x00773768 File Offset: 0x00771968
 	private bool CheckExceedTargetPoint()
 	{
 		double num = (double)this.CurrentDistance;
@@ -355,7 +355,7 @@ public class MoveToLocation
 		return num2 < 0.0;
 	}
 
-	// Token: 0x0601AED1 RID: 110289 RVA: 0x0074D9F4 File Offset: 0x0074BBF4
+	// Token: 0x06018903 RID: 100611 RVA: 0x00773834 File Offset: 0x00771A34
 	private void UpdateMoveStateAndSpeed()
 	{
 		BaseMoveComponent component = this.Entity.GetComponent<BaseMoveComponent>();
@@ -392,14 +392,14 @@ public class MoveToLocation
 		}
 	}
 
-	// Token: 0x0601AED2 RID: 110290 RVA: 0x0074DAB3 File Offset: 0x0074BCB3
+	// Token: 0x06018904 RID: 100612 RVA: 0x007738F3 File Offset: 0x00771AF3
 	private void UpdateLastActorLocation()
 	{
 		this.MoveToLocationConfig.UpdateTargetPosition();
 		this.LastPatrolPoint.DeepCopy(this.MoveToLocationConfig.Position);
 	}
 
-	// Token: 0x0601AED3 RID: 110291 RVA: 0x0074DAD8 File Offset: 0x0074BCD8
+	// Token: 0x06018905 RID: 100613 RVA: 0x00773918 File Offset: 0x00771B18
 	private void ResetLastPatrolPoint(float deltaSeconds)
 	{
 		CharacterAnimationComponent animComp = this.AnimComp;
@@ -425,7 +425,7 @@ public class MoveToLocation
 		this.LastPatrolPoint.Set(0.0, 0.0, 0.0);
 	}
 
-	// Token: 0x0601AED4 RID: 110292 RVA: 0x0074DB88 File Offset: 0x0074BD88
+	// Token: 0x06018906 RID: 100614 RVA: 0x007739C8 File Offset: 0x00771BC8
 	private unsafe void SetLocationAndRotation()
 	{
 		if (this.MoveToLocationConfig.IsFly.GetValueOrDefault())
@@ -448,7 +448,7 @@ public class MoveToLocation
 		}
 	}
 
-	// Token: 0x0601AED5 RID: 110293 RVA: 0x0074DCA0 File Offset: 0x0074BEA0
+	// Token: 0x06018907 RID: 100615 RVA: 0x00773AE0 File Offset: 0x00771CE0
 	private bool ResetLastPointCondition()
 	{
 		if (this.LastPatrolPoint.Size() < 1.0)
@@ -463,7 +463,7 @@ public class MoveToLocation
 		return true;
 	}
 
-	// Token: 0x0601AED6 RID: 110294 RVA: 0x0074DD38 File Offset: 0x0074BF38
+	// Token: 0x06018908 RID: 100616 RVA: 0x00773B78 File Offset: 0x00771D78
 	private void ResetInputAndVelocity()
 	{
 		MoveToLocation.CacheVector.DeepCopy(this.MoveToLocationConfig.Position);
@@ -482,14 +482,14 @@ public class MoveToLocation
 		CharacterActorComponent actorComp2 = this.ActorComp;
 		if (actorComp2 != null)
 		{
-			actorComp2.SetInputDirect(MoveToLocation.CacheVector, false);
+			actorComp2.SetInputDirect(MoveToLocation.CacheVector, false, EInputDirectSpace.World);
 		}
 		double inB = this.ActorComp.ActorVelocityProxy.Size();
 		MoveToLocation.CacheVector.MultiplyEqual(inB);
 		this.ActorComp.ActorVelocityProxy.Set(MoveToLocation.CacheVector.X, MoveToLocation.CacheVector.Y, MoveToLocation.CacheVector.Z);
 	}
 
-	// Token: 0x0601AED7 RID: 110295 RVA: 0x0074DE3C File Offset: 0x0074C03C
+	// Token: 0x06018909 RID: 100617 RVA: 0x00773C7C File Offset: 0x00771E7C
 	private bool ShouldForceResetForLargeDelta(float deltaSeconds)
 	{
 		MoveToPointConfig moveToLocationConfig = this.MoveToLocationConfig;
@@ -511,7 +511,7 @@ public class MoveToLocation
 		return (((entity != null) ? entity.GetTickInterval() : 1) > 1 || deltaSeconds >= 0.18f) && (float)Math.Sqrt(GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.ActorComp.ActorLocationProxy, this.ActorComp.LastActorLocation)) >= (float)moveToLocationConfig.LargeDeltaResetMinMove.GetValueOrDefault(120);
 	}
 
-	// Token: 0x0601AED8 RID: 110296 RVA: 0x0074DF40 File Offset: 0x0074C140
+	// Token: 0x0601890A RID: 100618 RVA: 0x00773D80 File Offset: 0x00771F80
 	private void DrawDebug()
 	{
 		if (this.MoveToLocationConfig == null || !GlobalData.IsPlayInEditor)
@@ -536,72 +536,72 @@ public class MoveToLocation
 		}
 	}
 
-	// Token: 0x0400D0E7 RID: 53479
+	// Token: 0x0400D4F5 RID: 54517
 	[Nullable(2)]
 	private Entity Entity;
 
-	// Token: 0x0400D0E8 RID: 53480
+	// Token: 0x0400D4F6 RID: 54518
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D0E9 RID: 53481
+	// Token: 0x0400D4F7 RID: 54519
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400D0EA RID: 53482
+	// Token: 0x0400D4F8 RID: 54520
 	[Nullable(2)]
 	private BaseUnifiedStateComponent StateComp;
 
-	// Token: 0x0400D0EB RID: 53483
+	// Token: 0x0400D4F9 RID: 54521
 	[StaticVariableRuleIgnore]
 	private static readonly Vector CacheVector = Vector.Create();
 
-	// Token: 0x0400D0EC RID: 53484
+	// Token: 0x0400D4FA RID: 54522
 	[StaticVariableRuleIgnore]
 	private static readonly Vector CacheVector2 = Vector.Create();
 
-	// Token: 0x0400D0ED RID: 53485
+	// Token: 0x0400D4FB RID: 54523
 	[StaticVariableRuleIgnore]
 	private static readonly Vector CacheVector3 = Vector.Create();
 
-	// Token: 0x0400D0EE RID: 53486
+	// Token: 0x0400D4FC RID: 54524
 	[StaticVariableRuleIgnore]
 	private static readonly Quat CacheQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400D0EF RID: 53487
+	// Token: 0x0400D4FD RID: 54525
 	private float DeltaTime = 1f;
 
-	// Token: 0x0400D0F0 RID: 53488
+	// Token: 0x0400D4FE RID: 54526
 	private float CurrentDistance;
 
-	// Token: 0x0400D0F1 RID: 53489
+	// Token: 0x0400D4FF RID: 54527
 	private readonly Vector DirectionVector = Vector.Create();
 
-	// Token: 0x0400D0F2 RID: 53490
+	// Token: 0x0400D500 RID: 54528
 	private readonly Vector CurrentToTargetVector = Vector.Create();
 
-	// Token: 0x0400D0F3 RID: 53491
+	// Token: 0x0400D501 RID: 54529
 	private int PbDataId;
 
-	// Token: 0x0400D0F4 RID: 53492
+	// Token: 0x0400D502 RID: 54530
 	private readonly Vector LastPatrolPoint = Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x0400D0F5 RID: 53493
+	// Token: 0x0400D503 RID: 54531
 	private readonly Vector StartMoveLocation = Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x0400D0F6 RID: 53494
+	// Token: 0x0400D504 RID: 54532
 	[Nullable(2)]
 	private MoveToPointConfig MoveToLocationConfig;
 
-	// Token: 0x0400D0F7 RID: 53495
+	// Token: 0x0400D505 RID: 54533
 	private readonly Vector PointCacheVector = Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x0400D0F8 RID: 53496
+	// Token: 0x0400D506 RID: 54534
 	private float CurTimeoutTime;
 
-	// Token: 0x0400D0F9 RID: 53497
+	// Token: 0x0400D507 RID: 54535
 	private int TickProcessId;
 
-	// Token: 0x0400D0FA RID: 53498
+	// Token: 0x0400D508 RID: 54536
 	private FLinearColor? RandomColor;
 }

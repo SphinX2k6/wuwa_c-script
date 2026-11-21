@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200208A RID: 8330
+	// Token: 0x020022D5 RID: 8917
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IVisualNovelPerformanceModifyRole_SetValue
 	{
-		// Token: 0x04006DEF RID: 28143
+		// Token: 0x040073FC RID: 29692
 		public EVisualNovelPerformanceType Type;
 
-		// Token: 0x04006DF0 RID: 28144
+		// Token: 0x040073FD RID: 29693
 		public float? StartTime;
 
-		// Token: 0x04006DF1 RID: 28145
+		// Token: 0x040073FE RID: 29694
 		public int WhoId;
 
-		// Token: 0x04006DF2 RID: 28146
+		// Token: 0x040073FF RID: 29695
 		public IVisualNovelPortraitTransform Transform;
 
-		// Token: 0x04006DF3 RID: 28147
+		// Token: 0x04007400 RID: 29696
 		public IVisualNovelRoleConfig RoleConfig;
 	}
 }

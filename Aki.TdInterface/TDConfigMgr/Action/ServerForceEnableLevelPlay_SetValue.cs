@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002192 RID: 8594
+	// Token: 0x020023FB RID: 9211
 	public class ServerForceEnableLevelPlay_SetValue
 	{
-		// Token: 0x040070B3 RID: 28851
-		[Nullable(1)]
+		// Token: 0x040076F5 RID: 30453
 		public List<IEnableLevelPlayConfig> Configs;
 	}
 }

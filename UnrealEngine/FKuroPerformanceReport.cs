@@ -7,14 +7,14 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A20 RID: 6688
+	// Token: 0x0200049B RID: 1179
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(52, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 52)]
 	[UnrealObjectPath("/Script/KuroPerformance.KuroPerformanceReport")]
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 52)]
 	public struct FKuroPerformanceReport : IEqualityOperators<FKuroPerformanceReport, FKuroPerformanceReport, bool>, IEquatable<FKuroPerformanceReport>, IUnrealScriptStruct
 	{
-		// Token: 0x06018BEE RID: 101358 RVA: 0x00248FB0 File Offset: 0x002471B0
+		// Token: 0x06006E0B RID: 28171 RVA: 0x000A1B64 File Offset: 0x0009FD64
 		public FKuroPerformanceReport(TEnumAsByte<EKuroProcessorLoad> CPULoadStatus, TEnumAsByte<EKuroProcessorLoad> GPULoadStatus, int TargetFPS, int CPUPerfIndex, int CPULoadIndex, int GPUPerfIndex, int GPULoadIndex, int FrameID, float CPUFrameTime, float GPUFrameTime, float CurTemperature, TEnumAsByte<EKuroThermalStatus> ThermalStatus, float ThermalTempBudget, TEnumAsByte<EKuroPerformanceAdvice> PerformanceAdvice)
 		{
 			this.CPULoadStatus = CPULoadStatus;
@@ -33,25 +33,25 @@ namespace UnrealEngine
 			this.PerformanceAdvice = PerformanceAdvice;
 		}
 
-		// Token: 0x06018BEF RID: 101359 RVA: 0x0024902C File Offset: 0x0024722C
+		// Token: 0x06006E0C RID: 28172 RVA: 0x000A1BE0 File Offset: 0x0009FDE0
 		public static bool operator ==(FKuroPerformanceReport left, FKuroPerformanceReport right)
 		{
 			return left.CPULoadStatus == right.CPULoadStatus && left.GPULoadStatus == right.GPULoadStatus && left.TargetFPS == right.TargetFPS && left.CPUPerfIndex == right.CPUPerfIndex && left.CPULoadIndex == right.CPULoadIndex && left.GPUPerfIndex == right.GPUPerfIndex && left.GPULoadIndex == right.GPULoadIndex && left.FrameID == right.FrameID && left.CPUFrameTime == right.CPUFrameTime && left.GPUFrameTime == right.GPUFrameTime && left.CurTemperature == right.CurTemperature && left.ThermalStatus == right.ThermalStatus && left.ThermalTempBudget == right.ThermalTempBudget && left.PerformanceAdvice == right.PerformanceAdvice;
 		}
 
-		// Token: 0x06018BF0 RID: 101360 RVA: 0x00249120 File Offset: 0x00247320
+		// Token: 0x06006E0D RID: 28173 RVA: 0x000A1CD4 File Offset: 0x0009FED4
 		public static bool operator !=(FKuroPerformanceReport left, FKuroPerformanceReport right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x06018BF1 RID: 101361 RVA: 0x0024912C File Offset: 0x0024732C
+		// Token: 0x06006E0E RID: 28174 RVA: 0x000A1CE0 File Offset: 0x0009FEE0
 		public bool Equals(FKuroPerformanceReport other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06018BF2 RID: 101362 RVA: 0x0024913C File Offset: 0x0024733C
+		// Token: 0x06006E0F RID: 28175 RVA: 0x000A1CF0 File Offset: 0x0009FEF0
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -63,7 +63,7 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06018BF3 RID: 101363 RVA: 0x00249164 File Offset: 0x00247364
+		// Token: 0x06006E10 RID: 28176 RVA: 0x000A1D18 File Offset: 0x0009FF18
 		public override int GetHashCode()
 		{
 			HashCode hashCode = default(HashCode);
@@ -84,72 +84,72 @@ namespace UnrealEngine
 			return hashCode.ToHashCode();
 		}
 
-		// Token: 0x06018BF4 RID: 101364 RVA: 0x00249236 File Offset: 0x00247436
+		// Token: 0x06006E11 RID: 28177 RVA: 0x000A1DEA File Offset: 0x0009FFEA
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroPerformanceReport._ScriptStructPtr != 0) ? FKuroPerformanceReport._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroPerformance.KuroPerformanceReport", ref FKuroPerformanceReport._ScriptStructPtr);
 		}
 
-		// Token: 0x0400D606 RID: 54790
+		// Token: 0x04002F13 RID: 12051
 		[FieldOffset(0)]
 		public readonly TEnumAsByte<EKuroProcessorLoad> CPULoadStatus;
 
-		// Token: 0x0400D607 RID: 54791
+		// Token: 0x04002F14 RID: 12052
 		[FieldOffset(1)]
 		public readonly TEnumAsByte<EKuroProcessorLoad> GPULoadStatus;
 
-		// Token: 0x0400D608 RID: 54792
+		// Token: 0x04002F15 RID: 12053
 		[FieldOffset(4)]
 		public readonly int TargetFPS;
 
-		// Token: 0x0400D609 RID: 54793
+		// Token: 0x04002F16 RID: 12054
 		[FieldOffset(8)]
 		public readonly int CPUPerfIndex;
 
-		// Token: 0x0400D60A RID: 54794
+		// Token: 0x04002F17 RID: 12055
 		[FieldOffset(12)]
 		public readonly int CPULoadIndex;
 
-		// Token: 0x0400D60B RID: 54795
+		// Token: 0x04002F18 RID: 12056
 		[FieldOffset(16)]
 		public readonly int GPUPerfIndex;
 
-		// Token: 0x0400D60C RID: 54796
+		// Token: 0x04002F19 RID: 12057
 		[FieldOffset(20)]
 		public readonly int GPULoadIndex;
 
-		// Token: 0x0400D60D RID: 54797
+		// Token: 0x04002F1A RID: 12058
 		[FieldOffset(24)]
 		public readonly int FrameID;
 
-		// Token: 0x0400D60E RID: 54798
+		// Token: 0x04002F1B RID: 12059
 		[FieldOffset(28)]
 		public readonly float CPUFrameTime;
 
-		// Token: 0x0400D60F RID: 54799
+		// Token: 0x04002F1C RID: 12060
 		[FieldOffset(32)]
 		public readonly float GPUFrameTime;
 
-		// Token: 0x0400D610 RID: 54800
+		// Token: 0x04002F1D RID: 12061
 		[FieldOffset(36)]
 		public readonly float CurTemperature;
 
-		// Token: 0x0400D611 RID: 54801
+		// Token: 0x04002F1E RID: 12062
 		[FieldOffset(40)]
 		public readonly TEnumAsByte<EKuroThermalStatus> ThermalStatus;
 
-		// Token: 0x0400D612 RID: 54802
+		// Token: 0x04002F1F RID: 12063
 		[FieldOffset(44)]
 		public readonly float ThermalTempBudget;
 
-		// Token: 0x0400D613 RID: 54803
+		// Token: 0x04002F20 RID: 12064
 		[FieldOffset(48)]
 		public readonly TEnumAsByte<EKuroPerformanceAdvice> PerformanceAdvice;
 
-		// Token: 0x0400D614 RID: 54804
+		// Token: 0x04002F21 RID: 12065
 		public const string __ObjectPath = "/Script/KuroPerformance.KuroPerformanceReport";
 
-		// Token: 0x0400D615 RID: 54805
+		// Token: 0x04002F22 RID: 12066
 		private static IntPtr _ScriptStructPtr;
 	}
 }

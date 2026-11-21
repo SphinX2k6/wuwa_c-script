@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B3B RID: 11067
+// Token: 0x020020B7 RID: 8375
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsHandbookView : UiViewBase
 {
-	// Token: 0x06016F5F RID: 94047 RVA: 0x005D3C99 File Offset: 0x005D1E99
+	// Token: 0x06014990 RID: 84368 RVA: 0x00600809 File Offset: 0x005FEA09
 	public SurvivorsHandbookView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016F60 RID: 94048 RVA: 0x005D3CB4 File Offset: 0x005D1EB4
+	// Token: 0x06014991 RID: 84369 RVA: 0x00600824 File Offset: 0x005FEA24
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class SurvivorsHandbookView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016F61 RID: 94049 RVA: 0x005D3CF0 File Offset: 0x005D1EF0
+	// Token: 0x06014992 RID: 84370 RVA: 0x00600860 File Offset: 0x005FEA60
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsHandbookView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ public class SurvivorsHandbookView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016F62 RID: 94050 RVA: 0x005D3D34 File Offset: 0x005D1F34
+	// Token: 0x06014993 RID: 84371 RVA: 0x006008A4 File Offset: 0x005FEAA4
 	protected override void OnBeforeShow()
 	{
 		if (this.IsFirstShow)
@@ -76,7 +76,7 @@ public class SurvivorsHandbookView : UiViewBase
 		SurvivorsActivityController.Instance.CheckIsActivityClose();
 	}
 
-	// Token: 0x06016F63 RID: 94051 RVA: 0x005D3DD8 File Offset: 0x005D1FD8
+	// Token: 0x06014994 RID: 84372 RVA: 0x00600948 File Offset: 0x005FEB48
 	private void InitUiSceneRoleActor()
 	{
 		UiModelBase model = this.TsUiSceneRoleActor.Model;
@@ -88,7 +88,7 @@ public class SurvivorsHandbookView : UiViewBase
 		RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Attribute_Perform, false, false, false);
 	}
 
-	// Token: 0x06016F64 RID: 94052 RVA: 0x005D3E10 File Offset: 0x005D2010
+	// Token: 0x06014995 RID: 84373 RVA: 0x00600980 File Offset: 0x005FEB80
 	private UniTask InitHandbookTab()
 	{
 		SurvivorsHandbookView.<InitHandbookTab>d__11 <InitHandbookTab>d__;
@@ -99,19 +99,19 @@ public class SurvivorsHandbookView : UiViewBase
 		return <InitHandbookTab>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016F65 RID: 94053 RVA: 0x005D3E53 File Offset: 0x005D2053
+	// Token: 0x06014996 RID: 84374 RVA: 0x006009C3 File Offset: 0x005FEBC3
 	private void InitTabViewComponent()
 	{
 		this.TabViewComponent = new TabViewComponent<UiDynamicTab>(base.GetItem(0), EKeyMode.Default);
 	}
 
-	// Token: 0x06016F66 RID: 94054 RVA: 0x005D3E68 File Offset: 0x005D2068
+	// Token: 0x06014997 RID: 84375 RVA: 0x006009D8 File Offset: 0x005FEBD8
 	private CommonTabItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new CommonTabItem();
 	}
 
-	// Token: 0x06016F67 RID: 94055 RVA: 0x005D3E70 File Offset: 0x005D2070
+	// Token: 0x06014998 RID: 84376 RVA: 0x006009E0 File Offset: 0x005FEBE0
 	private void ToggleCallBack(int index)
 	{
 		UiDynamicTab data = this.TabDataList[index];
@@ -128,20 +128,20 @@ public class SurvivorsHandbookView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016F68 RID: 94056 RVA: 0x005D3EE8 File Offset: 0x005D20E8
+	// Token: 0x06014999 RID: 84377 RVA: 0x00600A58 File Offset: 0x005FEC58
 	private CommonTabData GetCommonData(int index)
 	{
 		UiDynamicTab uiDynamicTab = this.TabDataList[index];
 		return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x06016F69 RID: 94057 RVA: 0x005D3F20 File Offset: 0x005D2120
+	// Token: 0x0601499A RID: 84378 RVA: 0x00600A90 File Offset: 0x005FEC90
 	private void OnClickBackBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06016F6A RID: 94058 RVA: 0x005D3F2C File Offset: 0x005D212C
+	// Token: 0x0601499B RID: 84379 RVA: 0x00600A9C File Offset: 0x005FEC9C
 	protected override void OnBeforeDestroy()
 	{
 		SurvivorsRogueModel.Instance.SaveCacheHandbookClickedMap();
@@ -157,7 +157,7 @@ public class SurvivorsHandbookView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016F6B RID: 94059 RVA: 0x005D3F7E File Offset: 0x005D217E
+	// Token: 0x0601499C RID: 84380 RVA: 0x00600AEE File Offset: 0x005FECEE
 	protected override void OnAfterDestroy()
 	{
 		if (this.TsUiSceneRoleActor != null)
@@ -167,7 +167,7 @@ public class SurvivorsHandbookView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016F6C RID: 94060 RVA: 0x005D3FA0 File Offset: 0x005D21A0
+	// Token: 0x0601499D RID: 84381 RVA: 0x00600B10 File Offset: 0x005FED10
 	private EUiTabViewName? GetTabViewName(ESurvivorsRogueItemType type)
 	{
 		switch (type)
@@ -183,11 +183,11 @@ public class SurvivorsHandbookView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400AB03 RID: 43779
+	// Token: 0x0400AF09 RID: 44809
 	[Nullable(2)]
 	private TsUiSceneRoleActor TsUiSceneRoleActor;
 
-	// Token: 0x0400AB04 RID: 43780
+	// Token: 0x0400AF0A RID: 44810
 	[Nullable(new byte[]
 	{
 		2,
@@ -195,16 +195,16 @@ public class SurvivorsHandbookView : UiViewBase
 	})]
 	private TabComponentWithCaptionItem<CommonTabItem> CaptionItem;
 
-	// Token: 0x0400AB05 RID: 43781
+	// Token: 0x0400AF0B RID: 44811
 	private List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-	// Token: 0x0400AB06 RID: 43782
+	// Token: 0x0400AF0C RID: 44812
 	[Nullable(2)]
 	private TabViewComponent<UiDynamicTab> TabViewComponent;
 
-	// Token: 0x0400AB07 RID: 43783
+	// Token: 0x0400AF0D RID: 44813
 	private int? DefaultSelectId;
 
-	// Token: 0x0400AB08 RID: 43784
+	// Token: 0x0400AF0E RID: 44814
 	private bool IsFirstShow = true;
 }

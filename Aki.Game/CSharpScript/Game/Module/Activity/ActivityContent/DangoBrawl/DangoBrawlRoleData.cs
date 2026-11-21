@@ -2,25 +2,25 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067BA RID: 26554
+	// Token: 0x0200570A RID: 22282
 	public class DangoBrawlRoleData
 	{
-		// Token: 0x04022885 RID: 141445
+		// Token: 0x0401D0E2 RID: 119010
 		public int RoleId;
 
-		// Token: 0x04022886 RID: 141446
+		// Token: 0x0401D0E3 RID: 119011
 		public int SortIndex;
 
-		// Token: 0x04022887 RID: 141447
+		// Token: 0x0401D0E4 RID: 119012
 		public bool IsUnlocked;
 
-		// Token: 0x04022888 RID: 141448
+		// Token: 0x0401D0E5 RID: 119013
 		public bool? IsRecommend;
 
-		// Token: 0x04022889 RID: 141449
+		// Token: 0x0401D0E6 RID: 119014
 		public bool? IsNew;
 
-		// Token: 0x0402288A RID: 141450
+		// Token: 0x0401D0E7 RID: 119015
 		public bool? IsShowShadow;
 	}
 }

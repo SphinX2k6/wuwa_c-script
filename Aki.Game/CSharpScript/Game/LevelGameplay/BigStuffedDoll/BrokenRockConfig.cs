@@ -3,54 +3,54 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 {
-	// Token: 0x02006F47 RID: 28487
+	// Token: 0x020060C8 RID: 24776
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BrokenRockConfig : IBrokenRockConfig
 	{
-		// Token: 0x17009B34 RID: 39732
-		// (get) Token: 0x060454B0 RID: 283824 RVA: 0x01125D95 File Offset: 0x01123F95
-		// (set) Token: 0x060454B1 RID: 283825 RVA: 0x01125D9D File Offset: 0x01123F9D
+		// Token: 0x17007073 RID: 28787
+		// (get) Token: 0x0603B65E RID: 243294 RVA: 0x010CFD41 File Offset: 0x010CDF41
+		// (set) Token: 0x0603B65F RID: 243295 RVA: 0x010CFD49 File Offset: 0x010CDF49
 		public int Id { get; set; }
 
-		// Token: 0x17009B35 RID: 39733
-		// (get) Token: 0x060454B2 RID: 283826 RVA: 0x01125DA6 File Offset: 0x01123FA6
-		// (set) Token: 0x060454B3 RID: 283827 RVA: 0x01125DAE File Offset: 0x01123FAE
+		// Token: 0x17007074 RID: 28788
+		// (get) Token: 0x0603B660 RID: 243296 RVA: 0x010CFD52 File Offset: 0x010CDF52
+		// (set) Token: 0x0603B661 RID: 243297 RVA: 0x010CFD5A File Offset: 0x010CDF5A
 		public int[] Rings { get; set; }
 
-		// Token: 0x17009B36 RID: 39734
-		// (get) Token: 0x060454B4 RID: 283828 RVA: 0x01125DB7 File Offset: 0x01123FB7
-		// (set) Token: 0x060454B5 RID: 283829 RVA: 0x01125DBF File Offset: 0x01123FBF
+		// Token: 0x17007075 RID: 28789
+		// (get) Token: 0x0603B662 RID: 243298 RVA: 0x010CFD63 File Offset: 0x010CDF63
+		// (set) Token: 0x0603B663 RID: 243299 RVA: 0x010CFD6B File Offset: 0x010CDF6B
 		public int ScoreMax { get; set; }
 
-		// Token: 0x17009B37 RID: 39735
-		// (get) Token: 0x060454B6 RID: 283830 RVA: 0x01125DC8 File Offset: 0x01123FC8
-		// (set) Token: 0x060454B7 RID: 283831 RVA: 0x01125DD0 File Offset: 0x01123FD0
+		// Token: 0x17007076 RID: 28790
+		// (get) Token: 0x0603B664 RID: 243300 RVA: 0x010CFD74 File Offset: 0x010CDF74
+		// (set) Token: 0x0603B665 RID: 243301 RVA: 0x010CFD7C File Offset: 0x010CDF7C
 		public int ScoreUp { get; set; }
 
-		// Token: 0x17009B38 RID: 39736
-		// (get) Token: 0x060454B8 RID: 283832 RVA: 0x01125DD9 File Offset: 0x01123FD9
-		// (set) Token: 0x060454B9 RID: 283833 RVA: 0x01125DE1 File Offset: 0x01123FE1
+		// Token: 0x17007077 RID: 28791
+		// (get) Token: 0x0603B666 RID: 243302 RVA: 0x010CFD85 File Offset: 0x010CDF85
+		// (set) Token: 0x0603B667 RID: 243303 RVA: 0x010CFD8D File Offset: 0x010CDF8D
 		public int ScoreDown { get; set; }
 
-		// Token: 0x17009B39 RID: 39737
-		// (get) Token: 0x060454BA RID: 283834 RVA: 0x01125DEA File Offset: 0x01123FEA
-		// (set) Token: 0x060454BB RID: 283835 RVA: 0x01125DF2 File Offset: 0x01123FF2
+		// Token: 0x17007078 RID: 28792
+		// (get) Token: 0x0603B668 RID: 243304 RVA: 0x010CFD96 File Offset: 0x010CDF96
+		// (set) Token: 0x0603B669 RID: 243305 RVA: 0x010CFD9E File Offset: 0x010CDF9E
 		public int GlobalTime { get; set; }
 
-		// Token: 0x17009B3A RID: 39738
-		// (get) Token: 0x060454BC RID: 283836 RVA: 0x01125DFB File Offset: 0x01123FFB
-		// (set) Token: 0x060454BD RID: 283837 RVA: 0x01125E03 File Offset: 0x01124003
+		// Token: 0x17007079 RID: 28793
+		// (get) Token: 0x0603B66A RID: 243306 RVA: 0x010CFDA7 File Offset: 0x010CDFA7
+		// (set) Token: 0x0603B66B RID: 243307 RVA: 0x010CFDAF File Offset: 0x010CDFAF
 		public int NormalSkill { get; set; }
 
-		// Token: 0x17009B3B RID: 39739
-		// (get) Token: 0x060454BE RID: 283838 RVA: 0x01125E0C File Offset: 0x0112400C
-		// (set) Token: 0x060454BF RID: 283839 RVA: 0x01125E14 File Offset: 0x01124014
+		// Token: 0x1700707A RID: 28794
+		// (get) Token: 0x0603B66C RID: 243308 RVA: 0x010CFDB8 File Offset: 0x010CDFB8
+		// (set) Token: 0x0603B66D RID: 243309 RVA: 0x010CFDC0 File Offset: 0x010CDFC0
 		public int FinishSkill { get; set; }
 
-		// Token: 0x17009B3C RID: 39740
-		// (get) Token: 0x060454C0 RID: 283840 RVA: 0x01125E1D File Offset: 0x0112401D
-		// (set) Token: 0x060454C1 RID: 283841 RVA: 0x01125E25 File Offset: 0x01124025
+		// Token: 0x1700707B RID: 28795
+		// (get) Token: 0x0603B66E RID: 243310 RVA: 0x010CFDC9 File Offset: 0x010CDFC9
+		// (set) Token: 0x0603B66F RID: 243311 RVA: 0x010CFDD1 File Offset: 0x010CDFD1
 		public string EntityUid { get; set; }
 	}
 }

@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.AdventureGuide;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016BA RID: 5818
+// Token: 0x02000B72 RID: 2930
 public class SilentResultItem : UiPanelBase
 {
-	// Token: 0x0600A607 RID: 42503 RVA: 0x00251D01 File Offset: 0x0024FF01
+	// Token: 0x060079E7 RID: 31207 RVA: 0x0025C111 File Offset: 0x0025A311
 	[NullableContext(1)]
 	public SilentResultItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600A608 RID: 42504 RVA: 0x00251D18 File Offset: 0x0024FF18
+	// Token: 0x060079E8 RID: 31208 RVA: 0x0025C128 File Offset: 0x0025A328
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -47,7 +47,7 @@ public class SilentResultItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600A609 RID: 42505 RVA: 0x00251E64 File Offset: 0x00250064
+	// Token: 0x060079E9 RID: 31209 RVA: 0x0025C274 File Offset: 0x0025A474
 	protected override void OnStart()
 	{
 		this.ExtendToggle = base.GetExtendToggle(0);
@@ -68,7 +68,7 @@ public class SilentResultItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600A60A RID: 42506 RVA: 0x00251EC6 File Offset: 0x002500C6
+	// Token: 0x060079EA RID: 31210 RVA: 0x0025C2D6 File Offset: 0x0025A4D6
 	protected override void OnBeforeDestroy()
 	{
 		this.UnbindRedDot();
@@ -77,7 +77,7 @@ public class SilentResultItem : UiPanelBase
 		this.ExtendToggle.OnPostAudioStateEvent.Unbind();
 	}
 
-	// Token: 0x0600A60B RID: 42507 RVA: 0x00251EF8 File Offset: 0x002500F8
+	// Token: 0x060079EB RID: 31211 RVA: 0x0025C308 File Offset: 0x0025A508
 	[NullableContext(1)]
 	public void Update(SilentAreaDetectionRecord data)
 	{
@@ -102,13 +102,13 @@ public class SilentResultItem : UiPanelBase
 		this.BindRedDot();
 	}
 
-	// Token: 0x0600A60C RID: 42508 RVA: 0x00251F94 File Offset: 0x00250194
+	// Token: 0x060079EC RID: 31212 RVA: 0x0025C3A4 File Offset: 0x0025A5A4
 	private void BindRedDot()
 	{
 		RedDotController.Instance.BindRedDot(ERedDotName.AdventureFirstAwardResult, base.GetItem(6), null, this.Data.Conf.Id);
 	}
 
-	// Token: 0x0600A60D RID: 42509 RVA: 0x00251FC8 File Offset: 0x002501C8
+	// Token: 0x060079ED RID: 31213 RVA: 0x0025C3D8 File Offset: 0x0025A5D8
 	private void UnbindRedDot()
 	{
 		if (this.Data == null)
@@ -118,7 +118,7 @@ public class SilentResultItem : UiPanelBase
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.AdventureFirstAwardResult, base.GetItem(6), this.Data.Conf.Id);
 	}
 
-	// Token: 0x0600A60E RID: 42510 RVA: 0x00252004 File Offset: 0x00250204
+	// Token: 0x060079EE RID: 31214 RVA: 0x0025C414 File Offset: 0x0025A614
 	public void BindResultCallback([Nullable(new byte[]
 	{
 		2,
@@ -128,7 +128,7 @@ public class SilentResultItem : UiPanelBase
 		this.ResultCallback = onResultCallback;
 	}
 
-	// Token: 0x0600A60F RID: 42511 RVA: 0x00252010 File Offset: 0x00250210
+	// Token: 0x060079EF RID: 31215 RVA: 0x0025C420 File Offset: 0x0025A620
 	public void OnClickExtendToggle(EToggleState state)
 	{
 		if (this.ResultCallback != null)
@@ -137,7 +137,7 @@ public class SilentResultItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04004AFA RID: 19194
+	// Token: 0x04004BA1 RID: 19361
 	[Nullable(new byte[]
 	{
 		2,
@@ -145,30 +145,30 @@ public class SilentResultItem : UiPanelBase
 	})]
 	private Action<int, UUIExtendToggle> ResultCallback;
 
-	// Token: 0x04004AFB RID: 19195
+	// Token: 0x04004BA2 RID: 19362
 	[Nullable(2)]
 	private SilentAreaDetectionRecord Data;
 
-	// Token: 0x04004AFC RID: 19196
+	// Token: 0x04004BA3 RID: 19363
 	[Nullable(2)]
 	private UUIExtendToggle ExtendToggle;
 
-	// Token: 0x02007C8E RID: 31886
+	// Token: 0x02006E13 RID: 28179
 	private enum ESilentResultDefine
 	{
-		// Token: 0x04028DD8 RID: 167384
+		// Token: 0x04024101 RID: 147713
 		ExtendToggle,
-		// Token: 0x04028DD9 RID: 167385
+		// Token: 0x04024102 RID: 147714
 		TargetPic,
-		// Token: 0x04028DDA RID: 167386
+		// Token: 0x04024103 RID: 147715
 		NotFoundItem,
-		// Token: 0x04028DDB RID: 167387
+		// Token: 0x04024104 RID: 147716
 		LvlTxt,
-		// Token: 0x04028DDC RID: 167388
+		// Token: 0x04024105 RID: 147717
 		NameTxt,
-		// Token: 0x04028DDD RID: 167389
+		// Token: 0x04024106 RID: 147718
 		TargetingIco,
-		// Token: 0x04028DDE RID: 167390
+		// Token: 0x04024107 RID: 147719
 		RedDotItem
 	}
 }

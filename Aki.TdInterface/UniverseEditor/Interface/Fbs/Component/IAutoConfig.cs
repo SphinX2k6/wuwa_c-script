@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EE0 RID: 20192
+	// Token: 0x0200540F RID: 21519
 	public struct IAutoConfig : IFlatbufferObject
 	{
-		// Token: 0x170090EE RID: 37102
-		// (get) Token: 0x0601FD35 RID: 130357 RVA: 0x0046DB00 File Offset: 0x0046BD00
+		// Token: 0x17009861 RID: 39009
+		// (get) Token: 0x06021A79 RID: 137849 RVA: 0x004A38D0 File Offset: 0x004A1AD0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FD36 RID: 130358 RVA: 0x0046DB0D File Offset: 0x0046BD0D
+		// Token: 0x06021A7A RID: 137850 RVA: 0x004A38DD File Offset: 0x004A1ADD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601FD37 RID: 130359 RVA: 0x0046DB14 File Offset: 0x0046BD14
+		// Token: 0x06021A7B RID: 137851 RVA: 0x004A38E4 File Offset: 0x004A1AE4
 		public static IAutoConfig GetRootAsIAutoConfig(ByteBuffer _bb)
 		{
 			return IAutoConfig.GetRootAsIAutoConfig(_bb, default(IAutoConfig));
 		}
 
-		// Token: 0x0601FD38 RID: 130360 RVA: 0x0046DB30 File Offset: 0x0046BD30
+		// Token: 0x06021A7C RID: 137852 RVA: 0x004A3900 File Offset: 0x004A1B00
 		public static IAutoConfig GetRootAsIAutoConfig(ByteBuffer _bb, IAutoConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601FD39 RID: 130361 RVA: 0x0046DB4D File Offset: 0x0046BD4D
+		// Token: 0x06021A7D RID: 137853 RVA: 0x004A391D File Offset: 0x004A1B1D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601FD3A RID: 130362 RVA: 0x0046DB5C File Offset: 0x0046BD5C
+		// Token: 0x06021A7E RID: 137854 RVA: 0x004A392C File Offset: 0x004A1B2C
 		public IAutoConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170090EF RID: 37103
-		// (get) Token: 0x0601FD3B RID: 130363 RVA: 0x0046DB6C File Offset: 0x0046BD6C
+		// Token: 0x17009862 RID: 39010
+		// (get) Token: 0x06021A7F RID: 137855 RVA: 0x004A393C File Offset: 0x004A1B3C
 		public bool IsCircle
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090F0 RID: 37104
-		// (get) Token: 0x0601FD3C RID: 130364 RVA: 0x0046DBAC File Offset: 0x0046BDAC
+		// Token: 0x17009863 RID: 39011
+		// (get) Token: 0x06021A80 RID: 137856 RVA: 0x004A397C File Offset: 0x004A1B7C
 		public int Interval
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FD3D RID: 130365 RVA: 0x0046DBE8 File Offset: 0x0046BDE8
+		// Token: 0x06021A81 RID: 137857 RVA: 0x004A39B8 File Offset: 0x004A1BB8
 		public static Offset<IAutoConfig> CreateIAutoConfig(FlatBufferBuilder builder, bool IsCircle = false, int Interval = 0)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAutoConfig.EndIAutoConfig(builder);
 		}
 
-		// Token: 0x0601FD3E RID: 130366 RVA: 0x0046DC05 File Offset: 0x0046BE05
+		// Token: 0x06021A82 RID: 137858 RVA: 0x004A39D5 File Offset: 0x004A1BD5
 		public static void StartIAutoConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601FD3F RID: 130367 RVA: 0x0046DC0E File Offset: 0x0046BE0E
+		// Token: 0x06021A83 RID: 137859 RVA: 0x004A39DE File Offset: 0x004A1BDE
 		public static void AddIsCircle(FlatBufferBuilder builder, bool isCircle)
 		{
 			builder.AddBool(0, isCircle, false);
 		}
 
-		// Token: 0x0601FD40 RID: 130368 RVA: 0x0046DC19 File Offset: 0x0046BE19
+		// Token: 0x06021A84 RID: 137860 RVA: 0x004A39E9 File Offset: 0x004A1BE9
 		public static void AddInterval(FlatBufferBuilder builder, int interval)
 		{
 			builder.AddInt(1, interval, 0);
 		}
 
-		// Token: 0x0601FD41 RID: 130369 RVA: 0x0046DC24 File Offset: 0x0046BE24
+		// Token: 0x06021A85 RID: 137861 RVA: 0x004A39F4 File Offset: 0x004A1BF4
 		public static Offset<IAutoConfig> EndIAutoConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IAutoConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601FD42 RID: 130370 RVA: 0x0046DC34 File Offset: 0x0046BE34
+		// Token: 0x06021A86 RID: 137862 RVA: 0x004A3A04 File Offset: 0x004A1C04
 		public IAutoConfigT UnPack()
 		{
 			IAutoConfigT autoConfigT = new IAutoConfigT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return autoConfigT;
 		}
 
-		// Token: 0x0601FD43 RID: 130371 RVA: 0x0046DC4F File Offset: 0x0046BE4F
+		// Token: 0x06021A87 RID: 137863 RVA: 0x004A3A1F File Offset: 0x004A1C1F
 		public void UnPackTo(IAutoConfigT _o)
 		{
 			_o.IsCircle = this.IsCircle;
 			_o.Interval = this.Interval;
 		}
 
-		// Token: 0x0601FD44 RID: 130372 RVA: 0x0046DC6C File Offset: 0x0046BE6C
+		// Token: 0x06021A88 RID: 137864 RVA: 0x004A3A3C File Offset: 0x004A1C3C
 		public static Offset<IAutoConfig> Pack(FlatBufferBuilder builder, IAutoConfigT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAutoConfig.CreateIAutoConfig(builder, _o.IsCircle, _o.Interval);
 		}
 
-		// Token: 0x0400DCE8 RID: 56552
+		// Token: 0x0400E88F RID: 59535
 		private Table __p;
 	}
 }

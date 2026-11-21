@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000795 RID: 1941
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000836 RID: 2102
 	public class ITowardEntityConfig
 	{
-		// Token: 0x06002A0E RID: 10766 RVA: 0x0006E978 File Offset: 0x0006CB78
+		// Token: 0x06002D36 RID: 11574 RVA: 0x00075C20 File Offset: 0x00073E20
 		private ITowardEntityConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002A0F RID: 10767 RVA: 0x0006E9B0 File Offset: 0x0006CBB0
+		// Token: 0x06002D37 RID: 11575 RVA: 0x00075C58 File Offset: 0x00073E58
 		public static ITowardEntityConfig Create([Nullable(2)] ITowardEntityConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A10 RID: 10768 RVA: 0x0006E9C3 File Offset: 0x0006CBC3
+		// Token: 0x06002D38 RID: 11576 RVA: 0x00075C6B File Offset: 0x00073E6B
 		public static ITowardEntityConfig CreateFromSetValue([Nullable(2)] ITowardEntityConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A11 RID: 10769 RVA: 0x0006E9D6 File Offset: 0x0006CBD6
+		// Token: 0x06002D39 RID: 11577 RVA: 0x00075C7E File Offset: 0x00073E7E
 		public ITowardEntityConfig_SetValue ToSetValue()
 		{
 			return new ITowardEntityConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B09 RID: 2825
-		// (get) Token: 0x06002A12 RID: 10770 RVA: 0x0006E9F5 File Offset: 0x0006CBF5
-		// (set) Token: 0x06002A13 RID: 10771 RVA: 0x0006EA20 File Offset: 0x0006CC20
+		// Token: 0x17000BCB RID: 3019
+		// (get) Token: 0x06002D3A RID: 11578 RVA: 0x00075C9D File Offset: 0x00073E9D
+		// (set) Token: 0x06002D3B RID: 11579 RVA: 0x00075CC8 File Offset: 0x00073EC8
 		public virtual string ReferenceActorKey
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B0A RID: 2826
-		// (get) Token: 0x06002A14 RID: 10772 RVA: 0x0006EA2E File Offset: 0x0006CC2E
-		// (set) Token: 0x06002A15 RID: 10773 RVA: 0x0006EA59 File Offset: 0x0006CC59
+		// Token: 0x17000BCC RID: 3020
+		// (get) Token: 0x06002D3C RID: 11580 RVA: 0x00075CD6 File Offset: 0x00073ED6
+		// (set) Token: 0x06002D3D RID: 11581 RVA: 0x00075D01 File Offset: 0x00073F01
 		public virtual int TargetEntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C26 RID: 7206
+		// Token: 0x04001E2F RID: 7727
 		[Nullable(2)]
 		protected ITowardEntityConfig FbInstance;
 
-		// Token: 0x04001C27 RID: 7207
+		// Token: 0x04001E30 RID: 7728
 		[Nullable(2)]
 		protected ITowardEntityConfig_SetValue PocoInterface;
 	}

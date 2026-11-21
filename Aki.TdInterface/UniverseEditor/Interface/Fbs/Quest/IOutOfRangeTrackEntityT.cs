@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F69 RID: 16233
+	// Token: 0x020043A7 RID: 17319
 	public class IOutOfRangeTrackEntityT
 	{
-		// Token: 0x170070E1 RID: 28897
-		// (get) Token: 0x0601717E RID: 94590 RVA: 0x00354035 File Offset: 0x00352235
-		// (set) Token: 0x0601717F RID: 94591 RVA: 0x0035403D File Offset: 0x0035223D
+		// Token: 0x170076D2 RID: 30418
+		// (get) Token: 0x060187E0 RID: 100320 RVA: 0x0037D4A9 File Offset: 0x0037B6A9
+		// (set) Token: 0x060187E1 RID: 100321 RVA: 0x0037D4B1 File Offset: 0x0037B6B1
 		public int TrackEntityId { get; set; }
 
-		// Token: 0x170070E2 RID: 28898
-		// (get) Token: 0x06017180 RID: 94592 RVA: 0x00354046 File Offset: 0x00352246
-		// (set) Token: 0x06017181 RID: 94593 RVA: 0x0035404E File Offset: 0x0035224E
+		// Token: 0x170076D3 RID: 30419
+		// (get) Token: 0x060187E2 RID: 100322 RVA: 0x0037D4BA File Offset: 0x0037B6BA
+		// (set) Token: 0x060187E3 RID: 100323 RVA: 0x0037D4C2 File Offset: 0x0037B6C2
 		public IVectorInfoT Center { get; set; }
 
-		// Token: 0x170070E3 RID: 28899
-		// (get) Token: 0x06017182 RID: 94594 RVA: 0x00354057 File Offset: 0x00352257
-		// (set) Token: 0x06017183 RID: 94595 RVA: 0x0035405F File Offset: 0x0035225F
+		// Token: 0x170076D4 RID: 30420
+		// (get) Token: 0x060187E4 RID: 100324 RVA: 0x0037D4CB File Offset: 0x0037B6CB
+		// (set) Token: 0x060187E5 RID: 100325 RVA: 0x0037D4D3 File Offset: 0x0037B6D3
 		public int Radius { get; set; }
 
-		// Token: 0x170070E4 RID: 28900
-		// (get) Token: 0x06017184 RID: 94596 RVA: 0x00354068 File Offset: 0x00352268
-		// (set) Token: 0x06017185 RID: 94597 RVA: 0x00354070 File Offset: 0x00352270
+		// Token: 0x170076D5 RID: 30421
+		// (get) Token: 0x060187E6 RID: 100326 RVA: 0x0037D4DC File Offset: 0x0037B6DC
+		// (set) Token: 0x060187E7 RID: 100327 RVA: 0x0037D4E4 File Offset: 0x0037B6E4
 		public bool OverrideChildNodeTrackTarget { get; set; }
 
-		// Token: 0x170070E5 RID: 28901
-		// (get) Token: 0x06017186 RID: 94598 RVA: 0x00354079 File Offset: 0x00352279
-		// (set) Token: 0x06017187 RID: 94599 RVA: 0x00354081 File Offset: 0x00352281
+		// Token: 0x170076D6 RID: 30422
+		// (get) Token: 0x060187E8 RID: 100328 RVA: 0x0037D4ED File Offset: 0x0037B6ED
+		// (set) Token: 0x060187E9 RID: 100329 RVA: 0x0037D4F5 File Offset: 0x0037B6F5
 		public byte NullMask { get; set; }
 
-		// Token: 0x06017188 RID: 94600 RVA: 0x0035408A File Offset: 0x0035228A
+		// Token: 0x060187EA RID: 100330 RVA: 0x0037D4FE File Offset: 0x0037B6FE
 		public IOutOfRangeTrackEntityT()
 		{
 			this.TrackEntityId = 0;

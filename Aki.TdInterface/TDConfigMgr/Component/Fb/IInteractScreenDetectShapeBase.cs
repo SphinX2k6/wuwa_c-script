@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A83 RID: 2691
+	// Token: 0x02000B4D RID: 2893
 	public class IInteractScreenDetectShapeBase
 	{
-		// Token: 0x06003DE6 RID: 15846 RVA: 0x0009E8B6 File Offset: 0x0009CAB6
-		[NullableContext(1)]
+		// Token: 0x0600420F RID: 16911 RVA: 0x000A7E6E File Offset: 0x000A606E
 		public static IInteractScreenDetectShapeBase Create(IInteractScreenDetectShapeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E9D RID: 3741
-		// (get) Token: 0x06003DE7 RID: 15847 RVA: 0x0009E8D5 File Offset: 0x0009CAD5
+		// Token: 0x17000F70 RID: 3952
+		// (get) Token: 0x06004210 RID: 16912 RVA: 0x000A7E8D File Offset: 0x000A608D
 		public virtual EInteractScreenDetectShape Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002272 RID: 8818
+		// Token: 0x0400248E RID: 9358
 		private IInteractScreenDetectShapeBase Instance;
 	}
 }

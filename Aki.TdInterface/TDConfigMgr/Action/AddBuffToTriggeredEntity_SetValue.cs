@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001490 RID: 5264
+	// Token: 0x020015E9 RID: 5609
 	public class AddBuffToTriggeredEntity_SetValue
 	{
-		// Token: 0x040045A0 RID: 17824
-		[Nullable(1)]
+		// Token: 0x0400493B RID: 18747
 		public List<long> BuffIds;
 	}
 }

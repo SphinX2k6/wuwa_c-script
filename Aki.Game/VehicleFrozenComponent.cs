@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020032CA RID: 13002
+// Token: 0x0200283B RID: 10299
 [NullableContext(2)]
 [Nullable(0)]
 public class VehicleFrozenComponent : MonsterFrozenComponent
 {
-	// Token: 0x0601C3FC RID: 115708 RVA: 0x007E0190 File Offset: 0x007DE390
+	// Token: 0x0601A06E RID: 106606 RVA: 0x00806E84 File Offset: 0x00805084
 	protected override bool OnStart()
 	{
 		base.OnStart();
@@ -16,7 +16,7 @@ public class VehicleFrozenComponent : MonsterFrozenComponent
 		return true;
 	}
 
-	// Token: 0x0601C3FD RID: 115709 RVA: 0x007E01B1 File Offset: 0x007DE3B1
+	// Token: 0x0601A06F RID: 106607 RVA: 0x00806EA5 File Offset: 0x008050A5
 	protected override bool OnEnd()
 	{
 		base.OnEnd();
@@ -24,7 +24,7 @@ public class VehicleFrozenComponent : MonsterFrozenComponent
 		return true;
 	}
 
-	// Token: 0x0601C3FE RID: 115710 RVA: 0x007E01C4 File Offset: 0x007DE3C4
+	// Token: 0x0601A070 RID: 106608 RVA: 0x00806EB8 File Offset: 0x008050B8
 	private void AddEvent()
 	{
 		if (!EventSystem.Instance.HasWithTarget<Entity, Entity>(base.Entity, EEventName.OnVehicleDriverChange, new Action<Entity, Entity>(this.OnVehicleDriverChange)))
@@ -33,7 +33,7 @@ public class VehicleFrozenComponent : MonsterFrozenComponent
 		}
 	}
 
-	// Token: 0x0601C3FF RID: 115711 RVA: 0x007E0218 File Offset: 0x007DE418
+	// Token: 0x0601A071 RID: 106609 RVA: 0x00806F0C File Offset: 0x0080510C
 	private void RemoveEvent()
 	{
 		if (EventSystem.Instance.HasWithTarget<Entity, Entity>(base.Entity, EEventName.OnVehicleDriverChange, new Action<Entity, Entity>(this.OnVehicleDriverChange)))
@@ -42,7 +42,7 @@ public class VehicleFrozenComponent : MonsterFrozenComponent
 		}
 	}
 
-	// Token: 0x0601C400 RID: 115712 RVA: 0x007E026C File Offset: 0x007DE46C
+	// Token: 0x0601A072 RID: 106610 RVA: 0x00806F60 File Offset: 0x00805160
 	private void OnVehicleDriverChange(Entity preDriver, Entity newDriver)
 	{
 		if (preDriver != null && EventSystem.Instance.HasWithTarget<bool>(preDriver, EEventName.CharAfterFrozenChange, new Action<bool>(this.OnFrozenChange)))
@@ -56,7 +56,7 @@ public class VehicleFrozenComponent : MonsterFrozenComponent
 		this.RefreshFrozen();
 	}
 
-	// Token: 0x0601C401 RID: 115713 RVA: 0x007E02F0 File Offset: 0x007DE4F0
+	// Token: 0x0601A073 RID: 106611 RVA: 0x00806FE4 File Offset: 0x008051E4
 	protected override void RefreshFrozen()
 	{
 		if (this.FrozenLockSet.Count > 0)
@@ -84,13 +84,13 @@ public class VehicleFrozenComponent : MonsterFrozenComponent
 		this.SetFrozen(false);
 	}
 
-	// Token: 0x0601C402 RID: 115714 RVA: 0x007E0363 File Offset: 0x007DE563
+	// Token: 0x0601A074 RID: 106612 RVA: 0x00807057 File Offset: 0x00805257
 	private void OnFrozenChange(bool _)
 	{
 		this.RefreshFrozen();
 	}
 
-	// Token: 0x0601C403 RID: 115715 RVA: 0x007E036C File Offset: 0x007DE56C
+	// Token: 0x0601A075 RID: 106613 RVA: 0x0080705F File Offset: 0x0080525F
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -98,21 +98,47 @@ public class VehicleFrozenComponent : MonsterFrozenComponent
 		{
 			return false;
 		}
-		VehicleFrozenComponent vehicleFrozenComponent = (VehicleFrozenComponent)componentTemplate;
-		if (base.CanResetComponentProperty("VehiclePerformComponent"))
+		if (((VehicleFrozenComponent)componentTemplate).VehiclePerformComponent == null)
 		{
-			if (vehicleFrozenComponent.VehiclePerformComponent == null)
-			{
-				this.VehiclePerformComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseVehiclePerformComponent>(this.VehiclePerformComponent), "VehiclePerformComponent"))
-			{
-				return false;
-			}
+			this.VehiclePerformComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehiclePerformComponent), "VehiclePerformComponent"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400DF95 RID: 57237
+	// Token: 0x17002A4F RID: 10831
+	// (get) Token: 0x0601A076 RID: 106614 RVA: 0x0080709D File Offset: 0x0080529D
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A50 RID: 10832
+	// (get) Token: 0x0601A077 RID: 106615 RVA: 0x008070A0 File Offset: 0x008052A0
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A51 RID: 10833
+	// (get) Token: 0x0601A078 RID: 106616 RVA: 0x008070A3 File Offset: 0x008052A3
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E438 RID: 58424
 	protected BaseVehiclePerformComponent VehiclePerformComponent;
 }

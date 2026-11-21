@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005E4 RID: 1508
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000675 RID: 1653
 	public class IPatrolCycleLooply : ICycleModeType
 	{
-		// Token: 0x06001FF4 RID: 8180 RVA: 0x000593FC File Offset: 0x000575FC
+		// Token: 0x060022C0 RID: 8896 RVA: 0x0005FA88 File Offset: 0x0005DC88
 		private IPatrolCycleLooply_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001FF5 RID: 8181 RVA: 0x00059434 File Offset: 0x00057634
+		// Token: 0x060022C1 RID: 8897 RVA: 0x0005FAC0 File Offset: 0x0005DCC0
 		public static IPatrolCycleLooply Create([Nullable(2)] IPatrolCycleLooply instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001FF6 RID: 8182 RVA: 0x00059447 File Offset: 0x00057647
+		// Token: 0x060022C2 RID: 8898 RVA: 0x0005FAD3 File Offset: 0x0005DCD3
 		public static IPatrolCycleLooply CreateFromSetValue([Nullable(2)] IPatrolCycleLooply_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001FF7 RID: 8183 RVA: 0x0005945A File Offset: 0x0005765A
+		// Token: 0x060022C3 RID: 8899 RVA: 0x0005FAE6 File Offset: 0x0005DCE6
 		public new IPatrolCycleLooply_SetValue ToSetValue()
 		{
 			return new IPatrolCycleLooply_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000883 RID: 2179
-		// (get) Token: 0x06001FF8 RID: 8184 RVA: 0x00059479 File Offset: 0x00057679
-		// (set) Token: 0x06001FF9 RID: 8185 RVA: 0x000594A4 File Offset: 0x000576A4
+		// Token: 0x1700092F RID: 2351
+		// (get) Token: 0x060022C4 RID: 8900 RVA: 0x0005FB05 File Offset: 0x0005DD05
+		// (set) Token: 0x060022C5 RID: 8901 RVA: 0x0005FB30 File Offset: 0x0005DD30
 		public override EPatrolCycleMode Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000884 RID: 2180
-		// (get) Token: 0x06001FFA RID: 8186 RVA: 0x000594B2 File Offset: 0x000576B2
-		// (set) Token: 0x06001FFB RID: 8187 RVA: 0x000594DD File Offset: 0x000576DD
+		// Token: 0x17000930 RID: 2352
+		// (get) Token: 0x060022C6 RID: 8902 RVA: 0x0005FB3E File Offset: 0x0005DD3E
+		// (set) Token: 0x060022C7 RID: 8903 RVA: 0x0005FB69 File Offset: 0x0005DD69
 		public virtual bool IsCircle
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001679 RID: 5753
+		// Token: 0x04001850 RID: 6224
 		[Nullable(2)]
 		protected new IPatrolCycleLooply FbInstance;
 
-		// Token: 0x0400167A RID: 5754
+		// Token: 0x04001851 RID: 6225
 		[Nullable(2)]
 		protected new IPatrolCycleLooply_SetValue PocoInterface;
 	}

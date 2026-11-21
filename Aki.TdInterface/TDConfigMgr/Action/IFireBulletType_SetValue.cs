@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A68 RID: 6760
+	// Token: 0x02001BFD RID: 7165
 	public class IFireBulletType_SetValue
 	{
-		// Token: 0x0400595D RID: 22877
+		// Token: 0x04005DC2 RID: 24002
 		public EFireBulletType Type;
 	}
 }

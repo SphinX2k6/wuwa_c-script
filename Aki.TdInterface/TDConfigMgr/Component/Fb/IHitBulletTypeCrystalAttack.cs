@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B94 RID: 2964
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C62 RID: 3170
 	public class IHitBulletTypeCrystalAttack : IHitBulletType
 	{
-		// Token: 0x0600441B RID: 17435 RVA: 0x000AD31A File Offset: 0x000AB51A
+		// Token: 0x06004874 RID: 18548 RVA: 0x000B73DE File Offset: 0x000B55DE
 		public static IHitBulletTypeCrystalAttack Create(IHitBulletTypeCrystalAttack? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012B0 RID: 4784
-		// (get) Token: 0x0600441C RID: 17436 RVA: 0x000AD339 File Offset: 0x000AB539
+		// Token: 0x170013AB RID: 5035
+		// (get) Token: 0x06004875 RID: 18549 RVA: 0x000B73FD File Offset: 0x000B55FD
 		public override EHitBulletType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012B1 RID: 4785
-		// (get) Token: 0x0600441D RID: 17437 RVA: 0x000AD346 File Offset: 0x000AB546
+		// Token: 0x170013AC RID: 5036
+		// (get) Token: 0x06004876 RID: 18550 RVA: 0x000B740A File Offset: 0x000B560A
 		public virtual VectorInfo TrackOffset
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400266F RID: 9839
+		// Token: 0x040028B7 RID: 10423
 		private IHitBulletTypeCrystalAttack Instance;
 
-		// Token: 0x04002670 RID: 9840
+		// Token: 0x040028B8 RID: 10424
 		[Nullable(2)]
 		private VectorInfo _TrackOffsetCache;
 
-		// Token: 0x04002671 RID: 9841
+		// Token: 0x040028B9 RID: 10425
 		private bool _TrackOffsetInited;
 	}
 }

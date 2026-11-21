@@ -1,23 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using System.Runtime.CompilerServices;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
+using CSharpScript.Game.Module.UiCamera;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046D3 RID: 18131
+	// Token: 0x02003603 RID: 13827
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiManager : Singleton, ITickable
 	{
-		// Token: 0x1700767C RID: 30332
-		// (get) Token: 0x0602EC39 RID: 191545 RVA: 0x00AD2FA6 File Offset: 0x00AD11A6
+		// Token: 0x17004937 RID: 18743
+		// (get) Token: 0x06023375 RID: 144245 RVA: 0x00A0130A File Offset: 0x009FF50A
+		internal UiCommandSwitcherManager CommandSwitcherManager { get; } = new UiCommandSwitcherManager();
+
+		// Token: 0x17004938 RID: 18744
+		// (get) Token: 0x06023376 RID: 144246 RVA: 0x00A01312 File Offset: 0x009FF512
 		public bool IsInited
 		{
 			get
@@ -26,13 +27,13 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC3A RID: 191546 RVA: 0x00AD2FB1 File Offset: 0x00AD11B1
+		// Token: 0x06023377 RID: 144247 RVA: 0x00A0131D File Offset: 0x009FF51D
 		public IReadOnlyDictionary<EUiViewName, HashSet<UiViewBase>> GetNameToViewSetMap()
 		{
 			return this.NameToViewSetMap;
 		}
 
-		// Token: 0x0602EC3B RID: 191547 RVA: 0x00AD2FBC File Offset: 0x00AD11BC
+		// Token: 0x06023378 RID: 144248 RVA: 0x00A01328 File Offset: 0x009FF528
 		[NullableContext(2)]
 		private unsafe void OpenViewPrivate(EUiViewName name, object param = null, ELayerType? layerType = null, TOpenViewCallBack finishCallback = null)
 		{
@@ -85,21 +86,21 @@ namespace CSharpScript.Game.Ui
 			}, true);
 		}
 
-		// Token: 0x0602EC3C RID: 191548 RVA: 0x00AD3024 File Offset: 0x00AD1224
+		// Token: 0x06023379 RID: 144249 RVA: 0x00A01390 File Offset: 0x009FF590
 		[NullableContext(2)]
 		public void OpenView(EUiViewName name, object param = null, TOpenViewCallBack finishCallback = null)
 		{
 			this.OpenViewPrivate(name, param, null, finishCallback);
 		}
 
-		// Token: 0x0602EC3D RID: 191549 RVA: 0x00AD3043 File Offset: 0x00AD1243
+		// Token: 0x0602337A RID: 144250 RVA: 0x00A013AF File Offset: 0x009FF5AF
 		[NullableContext(2)]
 		public void OpenViewWithLayer(EUiViewName name, ELayerType layerType, object param = null, TOpenViewCallBack finishCallback = null)
 		{
 			this.OpenViewPrivate(name, param, new ELayerType?(layerType), finishCallback);
 		}
 
-		// Token: 0x0602EC3E RID: 191550 RVA: 0x00AD3055 File Offset: 0x00AD1255
+		// Token: 0x0602337B RID: 144251 RVA: 0x00A013C1 File Offset: 0x009FF5C1
 		[NullableContext(2)]
 		public void OpenViewByPlot(EUiViewName name, object param = null, TOpenViewCallBack finishCallback = null)
 		{
@@ -111,22 +112,22 @@ namespace CSharpScript.Game.Ui
 			this.OpenView(name, param, finishCallback);
 		}
 
-		// Token: 0x0602EC3F RID: 191551 RVA: 0x00AD3084 File Offset: 0x00AD1284
+		// Token: 0x0602337C RID: 144252 RVA: 0x00A013F0 File Offset: 0x009FF5F0
 		[NullableContext(0)]
 		public UniTask<int?> OpenViewAsync(EUiViewName name, [Nullable(2)] object param = null, ELayerType? layerType = null)
 		{
-			UiManager.<OpenViewAsync>d__21 <OpenViewAsync>d__;
+			UiManager.<OpenViewAsync>d__24 <OpenViewAsync>d__;
 			<OpenViewAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<int?>.Create();
 			<OpenViewAsync>d__.<>4__this = this;
 			<OpenViewAsync>d__.name = name;
 			<OpenViewAsync>d__.param = param;
 			<OpenViewAsync>d__.layerType = layerType;
 			<OpenViewAsync>d__.<>1__state = -1;
-			<OpenViewAsync>d__.<>t__builder.Start<UiManager.<OpenViewAsync>d__21>(ref <OpenViewAsync>d__);
+			<OpenViewAsync>d__.<>t__builder.Start<UiManager.<OpenViewAsync>d__24>(ref <OpenViewAsync>d__);
 			return <OpenViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC40 RID: 191552 RVA: 0x00AD30E0 File Offset: 0x00AD12E0
+		// Token: 0x0602337D RID: 144253 RVA: 0x00A0144C File Offset: 0x009FF64C
 		[NullableContext(2)]
 		public void CloseView(EUiViewName name, Action<bool> callback = null)
 		{
@@ -173,20 +174,20 @@ namespace CSharpScript.Game.Ui
 			}, true);
 		}
 
-		// Token: 0x0602EC41 RID: 191553 RVA: 0x00AD3130 File Offset: 0x00AD1330
+		// Token: 0x0602337E RID: 144254 RVA: 0x00A0149C File Offset: 0x009FF69C
 		[NullableContext(0)]
 		public UniTask<bool> CloseViewAsync(EUiViewName name)
 		{
-			UiManager.<CloseViewAsync>d__23 <CloseViewAsync>d__;
+			UiManager.<CloseViewAsync>d__26 <CloseViewAsync>d__;
 			<CloseViewAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<CloseViewAsync>d__.<>4__this = this;
 			<CloseViewAsync>d__.name = name;
 			<CloseViewAsync>d__.<>1__state = -1;
-			<CloseViewAsync>d__.<>t__builder.Start<UiManager.<CloseViewAsync>d__23>(ref <CloseViewAsync>d__);
+			<CloseViewAsync>d__.<>t__builder.Start<UiManager.<CloseViewAsync>d__26>(ref <CloseViewAsync>d__);
 			return <CloseViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC42 RID: 191554 RVA: 0x00AD317C File Offset: 0x00AD137C
+		// Token: 0x0602337F RID: 144255 RVA: 0x00A014E8 File Offset: 0x009FF6E8
 		[NullableContext(2)]
 		public void CloseViewById(int viewId, Action<bool> callback = null)
 		{
@@ -221,33 +222,33 @@ namespace CSharpScript.Game.Ui
 			}, true);
 		}
 
-		// Token: 0x0602EC43 RID: 191555 RVA: 0x00AD31CC File Offset: 0x00AD13CC
+		// Token: 0x06023380 RID: 144256 RVA: 0x00A01538 File Offset: 0x009FF738
 		[NullableContext(0)]
 		public UniTask<bool> CloseViewByIdAsync(int viewId)
 		{
-			UiManager.<CloseViewByIdAsync>d__25 <CloseViewByIdAsync>d__;
+			UiManager.<CloseViewByIdAsync>d__28 <CloseViewByIdAsync>d__;
 			<CloseViewByIdAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<CloseViewByIdAsync>d__.<>4__this = this;
 			<CloseViewByIdAsync>d__.viewId = viewId;
 			<CloseViewByIdAsync>d__.<>1__state = -1;
-			<CloseViewByIdAsync>d__.<>t__builder.Start<UiManager.<CloseViewByIdAsync>d__25>(ref <CloseViewByIdAsync>d__);
+			<CloseViewByIdAsync>d__.<>t__builder.Start<UiManager.<CloseViewByIdAsync>d__28>(ref <CloseViewByIdAsync>d__);
 			return <CloseViewByIdAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC44 RID: 191556 RVA: 0x00AD3218 File Offset: 0x00AD1418
+		// Token: 0x06023381 RID: 144257 RVA: 0x00A01584 File Offset: 0x009FF784
 		[NullableContext(0)]
 		public UniTask<bool> CloseViewImplementAsync([Nullable(1)] UiViewBase view, bool fromCloseMe = false)
 		{
-			UiManager.<CloseViewImplementAsync>d__26 <CloseViewImplementAsync>d__;
+			UiManager.<CloseViewImplementAsync>d__29 <CloseViewImplementAsync>d__;
 			<CloseViewImplementAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<CloseViewImplementAsync>d__.<>4__this = this;
 			<CloseViewImplementAsync>d__.view = view;
 			<CloseViewImplementAsync>d__.<>1__state = -1;
-			<CloseViewImplementAsync>d__.<>t__builder.Start<UiManager.<CloseViewImplementAsync>d__26>(ref <CloseViewImplementAsync>d__);
+			<CloseViewImplementAsync>d__.<>t__builder.Start<UiManager.<CloseViewImplementAsync>d__29>(ref <CloseViewImplementAsync>d__);
 			return <CloseViewImplementAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC45 RID: 191557 RVA: 0x00AD3264 File Offset: 0x00AD1464
+		// Token: 0x06023382 RID: 144258 RVA: 0x00A015D0 File Offset: 0x009FF7D0
 		[NullableContext(2)]
 		public unsafe void CloseAndOpenView(EUiViewName closeViewName, EUiViewName openViewName, object param = null, Action<bool> finishCallback = null, bool callJs = true)
 		{
@@ -278,11 +279,11 @@ namespace CSharpScript.Game.Ui
 			}, true);
 		}
 
-		// Token: 0x0602EC46 RID: 191558 RVA: 0x00AD32C8 File Offset: 0x00AD14C8
+		// Token: 0x06023383 RID: 144259 RVA: 0x00A01634 File Offset: 0x009FF834
 		[NullableContext(0)]
 		public UniTask<bool> CloseAndOpenViewAsync(EUiViewName closeViewName, EUiViewName openViewName, [Nullable(2)] object param, bool callJs = true)
 		{
-			UiManager.<CloseAndOpenViewAsync>d__28 <CloseAndOpenViewAsync>d__;
+			UiManager.<CloseAndOpenViewAsync>d__31 <CloseAndOpenViewAsync>d__;
 			<CloseAndOpenViewAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<CloseAndOpenViewAsync>d__.<>4__this = this;
 			<CloseAndOpenViewAsync>d__.closeViewName = closeViewName;
@@ -290,46 +291,46 @@ namespace CSharpScript.Game.Ui
 			<CloseAndOpenViewAsync>d__.param = param;
 			<CloseAndOpenViewAsync>d__.callJs = callJs;
 			<CloseAndOpenViewAsync>d__.<>1__state = -1;
-			<CloseAndOpenViewAsync>d__.<>t__builder.Start<UiManager.<CloseAndOpenViewAsync>d__28>(ref <CloseAndOpenViewAsync>d__);
+			<CloseAndOpenViewAsync>d__.<>t__builder.Start<UiManager.<CloseAndOpenViewAsync>d__31>(ref <CloseAndOpenViewAsync>d__);
 			return <CloseAndOpenViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC47 RID: 191559 RVA: 0x00AD332C File Offset: 0x00AD152C
+		// Token: 0x06023384 RID: 144260 RVA: 0x00A01698 File Offset: 0x009FF898
 		[NullableContext(0)]
 		public UniTask<int?> PreOpenViewAsync(EUiViewName name, bool callJs = false)
 		{
-			UiManager.<PreOpenViewAsync>d__29 <PreOpenViewAsync>d__;
+			UiManager.<PreOpenViewAsync>d__32 <PreOpenViewAsync>d__;
 			<PreOpenViewAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<int?>.Create();
 			<PreOpenViewAsync>d__.<>4__this = this;
 			<PreOpenViewAsync>d__.name = name;
 			<PreOpenViewAsync>d__.callJs = callJs;
 			<PreOpenViewAsync>d__.<>1__state = -1;
-			<PreOpenViewAsync>d__.<>t__builder.Start<UiManager.<PreOpenViewAsync>d__29>(ref <PreOpenViewAsync>d__);
+			<PreOpenViewAsync>d__.<>t__builder.Start<UiManager.<PreOpenViewAsync>d__32>(ref <PreOpenViewAsync>d__);
 			return <PreOpenViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC48 RID: 191560 RVA: 0x00AD3380 File Offset: 0x00AD1580
+		// Token: 0x06023385 RID: 144261 RVA: 0x00A016EC File Offset: 0x009FF8EC
 		[NullableContext(0)]
 		public UniTask<bool> OpenViewAfterPreOpenedAsync(int viewId, [Nullable(2)] object param = null, bool callJs = true)
 		{
-			UiManager.<OpenViewAfterPreOpenedAsync>d__30 <OpenViewAfterPreOpenedAsync>d__;
+			UiManager.<OpenViewAfterPreOpenedAsync>d__33 <OpenViewAfterPreOpenedAsync>d__;
 			<OpenViewAfterPreOpenedAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<OpenViewAfterPreOpenedAsync>d__.<>4__this = this;
 			<OpenViewAfterPreOpenedAsync>d__.viewId = viewId;
 			<OpenViewAfterPreOpenedAsync>d__.param = param;
 			<OpenViewAfterPreOpenedAsync>d__.callJs = callJs;
 			<OpenViewAfterPreOpenedAsync>d__.<>1__state = -1;
-			<OpenViewAfterPreOpenedAsync>d__.<>t__builder.Start<UiManager.<OpenViewAfterPreOpenedAsync>d__30>(ref <OpenViewAfterPreOpenedAsync>d__);
+			<OpenViewAfterPreOpenedAsync>d__.<>t__builder.Start<UiManager.<OpenViewAfterPreOpenedAsync>d__33>(ref <OpenViewAfterPreOpenedAsync>d__);
 			return <OpenViewAfterPreOpenedAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC49 RID: 191561 RVA: 0x00AD33DB File Offset: 0x00AD15DB
+		// Token: 0x06023386 RID: 144262 RVA: 0x00A01747 File Offset: 0x009FF947
 		public void RemovePreOpenView(int viewId)
 		{
 			this.PreOpeningViewMap.Remove(viewId);
 		}
 
-		// Token: 0x0602EC4A RID: 191562 RVA: 0x00AD33EC File Offset: 0x00AD15EC
+		// Token: 0x06023387 RID: 144263 RVA: 0x00A01758 File Offset: 0x009FF958
 		private unsafe void ClearPreOpenView()
 		{
 			foreach (UiViewBase uiViewBase in this.PreOpeningViewMap.Values)
@@ -360,7 +361,7 @@ namespace CSharpScript.Game.Ui
 			this.PreOpeningViewMap.Clear();
 		}
 
-		// Token: 0x0602EC4B RID: 191563 RVA: 0x00AD3504 File Offset: 0x00AD1704
+		// Token: 0x06023388 RID: 144264 RVA: 0x00A01870 File Offset: 0x009FFA70
 		public bool IsViewShow(EUiViewName name)
 		{
 			HashSet<UiViewBase> valueOrDefault = this.NameToViewSetMap.GetValueOrDefault(name);
@@ -382,7 +383,7 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602EC4C RID: 191564 RVA: 0x00AD3578 File Offset: 0x00AD1778
+		// Token: 0x06023389 RID: 144265 RVA: 0x00A018E4 File Offset: 0x009FFAE4
 		public bool IsViewOpen(EUiViewName viewName)
 		{
 			HashSet<UiViewBase> valueOrDefault = this.NameToViewSetMap.GetValueOrDefault(viewName);
@@ -408,7 +409,7 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602EC4D RID: 191565 RVA: 0x00AD3600 File Offset: 0x00AD1800
+		// Token: 0x0602338A RID: 144266 RVA: 0x00A0196C File Offset: 0x009FFB6C
 		public bool IsViewCreating(EUiViewName name)
 		{
 			HashSet<UiViewBase> valueOrDefault = this.NameToViewSetMap.GetValueOrDefault(name);
@@ -429,7 +430,7 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602EC4E RID: 191566 RVA: 0x00AD3668 File Offset: 0x00AD1868
+		// Token: 0x0602338B RID: 144267 RVA: 0x00A019D4 File Offset: 0x009FFBD4
 		public bool IsViewDestroying(EUiViewName name)
 		{
 			HashSet<UiViewBase> valueOrDefault = this.NameToViewSetMap.GetValueOrDefault(name);
@@ -450,7 +451,7 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602EC4F RID: 191567 RVA: 0x00AD36D0 File Offset: 0x00AD18D0
+		// Token: 0x0602338C RID: 144268 RVA: 0x00A01A3C File Offset: 0x009FFC3C
 		public bool IsViewHide(EUiViewName name)
 		{
 			HashSet<UiViewBase> valueOrDefault = this.NameToViewSetMap.GetValueOrDefault(name);
@@ -471,7 +472,7 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602EC50 RID: 191568 RVA: 0x00AD3738 File Offset: 0x00AD1938
+		// Token: 0x0602338D RID: 144269 RVA: 0x00A01AA4 File Offset: 0x009FFCA4
 		private void InitContainer()
 		{
 			this.Containers.Clear();
@@ -485,13 +486,9 @@ namespace CSharpScript.Game.Ui
 			this.Containers[ELayerType.Guide] = new UiViewListContainer(UiModel.Instance.GuideList);
 			this.Containers[ELayerType.Loading] = new UiViewSetContainer(UiModel.Instance.LoadingMap);
 			this.Containers[ELayerType.NetWork] = new UiViewListContainer(UiModel.Instance.NetWorkList);
-			if (!Info.Instance.IsBuildShipping)
-			{
-				this.Containers[ELayerType.Debug] = new UiViewSetContainer(UiModel.Instance.DebugMap);
-			}
 		}
 
-		// Token: 0x0602EC51 RID: 191569 RVA: 0x00AD388C File Offset: 0x00AD1A8C
+		// Token: 0x0602338E RID: 144270 RVA: 0x00A01BCC File Offset: 0x009FFDCC
 		private void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.ExitNormalQueueState, new Action(this.ExitNormalQueueState));
@@ -501,21 +498,21 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Add(EEventName.StackCloseView, new Action<int, EUiViewName, UiViewInfo>(this.OnStackCloseView));
 		}
 
-		// Token: 0x0602EC52 RID: 191570 RVA: 0x00AD391E File Offset: 0x00AD1B1E
+		// Token: 0x0602338F RID: 144271 RVA: 0x00A01C5F File Offset: 0x009FFE5F
 		[NullableContext(2)]
 		private void OnStackOpenView(int viewId, UiViewInfo lastView)
 		{
 			this.CheckAndEmitNormalTopViewChange();
 		}
 
-		// Token: 0x0602EC53 RID: 191571 RVA: 0x00AD3926 File Offset: 0x00AD1B26
+		// Token: 0x06023390 RID: 144272 RVA: 0x00A01C67 File Offset: 0x009FFE67
 		[NullableContext(2)]
 		private void OnStackCloseView(int viewId, EUiViewName viewName, UiViewInfo stackTopInfo)
 		{
 			this.CheckAndEmitNormalTopViewChange();
 		}
 
-		// Token: 0x0602EC54 RID: 191572 RVA: 0x00AD3930 File Offset: 0x00AD1B30
+		// Token: 0x06023391 RID: 144273 RVA: 0x00A01C70 File Offset: 0x009FFE70
 		private void CheckAndEmitNormalTopViewChange()
 		{
 			UiViewBase topView = UiModel.Instance.GetTopView(ELayerType.Normal);
@@ -542,7 +539,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Emit<EUiViewName>(EEventName.OnNormalTopViewChange, euiViewName2.Value);
 		}
 
-		// Token: 0x0602EC55 RID: 191573 RVA: 0x00AD39DC File Offset: 0x00AD1BDC
+		// Token: 0x06023392 RID: 144274 RVA: 0x00A01D1C File Offset: 0x009FFF1C
 		private void ResetToBattleViewForEvent()
 		{
 			Log.Instance.Info(ELogModule.UiManager, ELogAuthor.TL, "重置回到主界面", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -550,14 +547,14 @@ namespace CSharpScript.Game.Ui
 			this.NormalResetToView(EUiViewName.BattleView, null, true);
 		}
 
-		// Token: 0x0602EC56 RID: 191574 RVA: 0x00AD3A2C File Offset: 0x00AD1C2C
+		// Token: 0x06023393 RID: 144275 RVA: 0x00A01D6C File Offset: 0x009FFF6C
 		private void ExitNormalQueueState()
 		{
 			Log.Instance.Info(ELogModule.UiManager, ELogAuthor.TL, "退出队列状态,重置回到主界面", default(ReadOnlySpan<ValueTuple<string, object>>));
 			this.StartFloatWaitingNormalView();
 		}
 
-		// Token: 0x0602EC57 RID: 191575 RVA: 0x00AD3A60 File Offset: 0x00AD1C60
+		// Token: 0x06023394 RID: 144276 RVA: 0x00A01DA0 File Offset: 0x009FFFA0
 		[NullableContext(2)]
 		public void ResetToBattleView(Action<bool> callback = null)
 		{
@@ -567,7 +564,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Emit(EEventName.OnResetToBattleView);
 		}
 
-		// Token: 0x0602EC58 RID: 191576 RVA: 0x00AD3AC8 File Offset: 0x00AD1CC8
+		// Token: 0x06023395 RID: 144277 RVA: 0x00A01E08 File Offset: 0x00A00008
 		[NullableContext(2)]
 		public void NormalResetToView(EUiViewName viewName, Action<bool> callback = null, bool callJs = true)
 		{
@@ -602,20 +599,20 @@ namespace CSharpScript.Game.Ui
 			}, true);
 		}
 
-		// Token: 0x0602EC59 RID: 191577 RVA: 0x00AD3B1C File Offset: 0x00AD1D1C
+		// Token: 0x06023396 RID: 144278 RVA: 0x00A01E5C File Offset: 0x00A0005C
 		public UniTask NormalResetToViewAsync(EUiViewName viewName, bool callJs = true)
 		{
-			UiManager.<NormalResetToViewAsync>d__47 <NormalResetToViewAsync>d__;
+			UiManager.<NormalResetToViewAsync>d__50 <NormalResetToViewAsync>d__;
 			<NormalResetToViewAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<NormalResetToViewAsync>d__.<>4__this = this;
 			<NormalResetToViewAsync>d__.viewName = viewName;
 			<NormalResetToViewAsync>d__.callJs = callJs;
 			<NormalResetToViewAsync>d__.<>1__state = -1;
-			<NormalResetToViewAsync>d__.<>t__builder.Start<UiManager.<NormalResetToViewAsync>d__47>(ref <NormalResetToViewAsync>d__);
+			<NormalResetToViewAsync>d__.<>t__builder.Start<UiManager.<NormalResetToViewAsync>d__50>(ref <NormalResetToViewAsync>d__);
 			return <NormalResetToViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC5A RID: 191578 RVA: 0x00AD3B70 File Offset: 0x00AD1D70
+		// Token: 0x06023397 RID: 144279 RVA: 0x00A01EB0 File Offset: 0x00A000B0
 		[NullableContext(2)]
 		public void CloseHistoryRingView(EUiViewName viewName, Action<bool> callback = null)
 		{
@@ -650,19 +647,19 @@ namespace CSharpScript.Game.Ui
 			}, true);
 		}
 
-		// Token: 0x0602EC5B RID: 191579 RVA: 0x00AD3BC0 File Offset: 0x00AD1DC0
+		// Token: 0x06023398 RID: 144280 RVA: 0x00A01F00 File Offset: 0x00A00100
 		public UniTask CloseHistoryRingViewAsync(EUiViewName viewName)
 		{
-			UiManager.<CloseHistoryRingViewAsync>d__49 <CloseHistoryRingViewAsync>d__;
+			UiManager.<CloseHistoryRingViewAsync>d__52 <CloseHistoryRingViewAsync>d__;
 			<CloseHistoryRingViewAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<CloseHistoryRingViewAsync>d__.<>4__this = this;
 			<CloseHistoryRingViewAsync>d__.viewName = viewName;
 			<CloseHistoryRingViewAsync>d__.<>1__state = -1;
-			<CloseHistoryRingViewAsync>d__.<>t__builder.Start<UiManager.<CloseHistoryRingViewAsync>d__49>(ref <CloseHistoryRingViewAsync>d__);
+			<CloseHistoryRingViewAsync>d__.<>t__builder.Start<UiManager.<CloseHistoryRingViewAsync>d__52>(ref <CloseHistoryRingViewAsync>d__);
 			return <CloseHistoryRingViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC5C RID: 191580 RVA: 0x00AD3C0B File Offset: 0x00AD1E0B
+		// Token: 0x06023399 RID: 144281 RVA: 0x00A01F4B File Offset: 0x00A0014B
 		private void ShowFloatTips()
 		{
 			UiModel.Instance.IsInMainView = true;
@@ -670,14 +667,14 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Emit(EEventName.ShowFloatTips);
 		}
 
-		// Token: 0x0602EC5D RID: 191581 RVA: 0x00AD3C42 File Offset: 0x00AD1E42
+		// Token: 0x0602339A RID: 144282 RVA: 0x00A01F82 File Offset: 0x00A00182
 		private void HideFloatTips()
 		{
 			UiModel.Instance.IsInMainView = false;
 			((UiViewFloatContainer)this.Containers[ELayerType.Float]).HideFloatTips();
 		}
 
-		// Token: 0x0602EC5E RID: 191582 RVA: 0x00AD3C6C File Offset: 0x00AD1E6C
+		// Token: 0x0602339B RID: 144283 RVA: 0x00A01FAC File Offset: 0x00A001AC
 		public void AddTickView(IPanelTickInterface view)
 		{
 			Log instance = Log.Instance;
@@ -689,7 +686,7 @@ namespace CSharpScript.Game.Ui
 			this.TickViewSet.Add(view);
 		}
 
-		// Token: 0x0602EC5F RID: 191583 RVA: 0x00AD3CBC File Offset: 0x00AD1EBC
+		// Token: 0x0602339C RID: 144284 RVA: 0x00A01FFC File Offset: 0x00A001FC
 		public void RemoveTickView(IPanelTickInterface view)
 		{
 			Log instance = Log.Instance;
@@ -701,7 +698,7 @@ namespace CSharpScript.Game.Ui
 			this.TickViewSet.Remove(view);
 		}
 
-		// Token: 0x0602EC60 RID: 191584 RVA: 0x00AD3D0C File Offset: 0x00AD1F0C
+		// Token: 0x0602339D RID: 144285 RVA: 0x00A0204C File Offset: 0x00A0024C
 		[NullableContext(2)]
 		private UiViewBase RegisterView(EUiViewName name, object param = null, ELayerType? layer = null)
 		{
@@ -741,7 +738,7 @@ namespace CSharpScript.Game.Ui
 			return uiViewBase;
 		}
 
-		// Token: 0x0602EC61 RID: 191585 RVA: 0x00AD3DE0 File Offset: 0x00AD1FE0
+		// Token: 0x0602339E RID: 144286 RVA: 0x00A02120 File Offset: 0x00A00320
 		[NullableContext(2)]
 		private UiViewBase PickViewByName(EUiViewName viewName)
 		{
@@ -761,24 +758,24 @@ namespace CSharpScript.Game.Ui
 			return uiViewBase;
 		}
 
-		// Token: 0x0602EC62 RID: 191586 RVA: 0x00AD3E50 File Offset: 0x00AD2050
+		// Token: 0x0602339F RID: 144287 RVA: 0x00A02190 File Offset: 0x00A00390
 		private void StartFloatWaitingNormalView()
 		{
 			((UiViewFloatContainer)this.Containers[ELayerType.Float]).StartWaitingNormalView();
 		}
 
-		// Token: 0x0602EC63 RID: 191587 RVA: 0x00AD3E6C File Offset: 0x00AD206C
+		// Token: 0x060233A0 RID: 144288 RVA: 0x00A021AC File Offset: 0x00A003AC
 		public UniTask Initialize()
 		{
-			UiManager.<Initialize>d__57 <Initialize>d__;
+			UiManager.<Initialize>d__60 <Initialize>d__;
 			<Initialize>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<Initialize>d__.<>4__this = this;
 			<Initialize>d__.<>1__state = -1;
-			<Initialize>d__.<>t__builder.Start<UiManager.<Initialize>d__57>(ref <Initialize>d__);
+			<Initialize>d__.<>t__builder.Start<UiManager.<Initialize>d__60>(ref <Initialize>d__);
 			return <Initialize>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC64 RID: 191588 RVA: 0x00AD3EB0 File Offset: 0x00AD20B0
+		// Token: 0x060233A1 RID: 144289 RVA: 0x00A021F0 File Offset: 0x00A003F0
 		public void LockOpen()
 		{
 			LguiUtil.Instance.SetActorIsPermanent(UiLayer.Instance.UiRoot, true, true);
@@ -786,15 +783,15 @@ namespace CSharpScript.Game.Ui
 			Log.Instance.Info(ELogModule.UiManager, ELogAuthor.TL, "[UIManager.UnLockOpen] 禁止打开界面", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602EC65 RID: 191589 RVA: 0x00AD3EFC File Offset: 0x00AD20FC
+		// Token: 0x060233A2 RID: 144290 RVA: 0x00A0223C File Offset: 0x00A0043C
 		public void UnLockOpen()
 		{
 			this.OpenLock = false;
 			Log.Instance.Info(ELogModule.UiManager, ELogAuthor.TL, "[UIManager.UnLockOpen] 恢复打开界面", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x1700767D RID: 30333
-		// (get) Token: 0x0602EC66 RID: 191590 RVA: 0x00AD3F2F File Offset: 0x00AD212F
+		// Token: 0x17004939 RID: 18745
+		// (get) Token: 0x060233A3 RID: 144291 RVA: 0x00A0226F File Offset: 0x00A0046F
 		public bool IsLockOpen
 		{
 			get
@@ -803,7 +800,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC67 RID: 191591 RVA: 0x00AD3F38 File Offset: 0x00AD2138
+		// Token: 0x060233A4 RID: 144292 RVA: 0x00A02278 File Offset: 0x00A00478
 		[NullableContext(2)]
 		private unsafe bool CanOpenView(EUiViewName viewName, bool isMultipleView = false, object param = null)
 		{
@@ -865,7 +862,7 @@ namespace CSharpScript.Game.Ui
 			return this.CheckOpenViewCheckFunctions(viewName, false, param) && this.CheckOpenViewCheckFunctions(viewName, true, param);
 		}
 
-		// Token: 0x0602EC68 RID: 191592 RVA: 0x00AD4108 File Offset: 0x00AD2308
+		// Token: 0x060233A5 RID: 144293 RVA: 0x00A02448 File Offset: 0x00A00648
 		public void AddOpenViewCheckFunction(EUiViewName viewName, Func<EUiViewName, object, bool> func, string reason)
 		{
 			Dictionary<Func<EUiViewName, object, bool>, string> dictionary;
@@ -877,7 +874,7 @@ namespace CSharpScript.Game.Ui
 			dictionary[func] = reason;
 		}
 
-		// Token: 0x0602EC69 RID: 191593 RVA: 0x00AD4140 File Offset: 0x00AD2340
+		// Token: 0x060233A6 RID: 144294 RVA: 0x00A02480 File Offset: 0x00A00680
 		public void RemoveOpenViewCheckFunction(EUiViewName viewName, Func<EUiViewName, object, bool> func)
 		{
 			Dictionary<Func<EUiViewName, object, bool>, string> dictionary;
@@ -888,7 +885,7 @@ namespace CSharpScript.Game.Ui
 			dictionary.Remove(func);
 		}
 
-		// Token: 0x0602EC6A RID: 191594 RVA: 0x00AD4168 File Offset: 0x00AD2368
+		// Token: 0x060233A7 RID: 144295 RVA: 0x00A024A8 File Offset: 0x00A006A8
 		[NullableContext(2)]
 		private unsafe bool CheckOpenViewCheckFunctions(EUiViewName viewName, bool isAll = false, object param = null)
 		{
@@ -933,14 +930,14 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602EC6B RID: 191595 RVA: 0x00AD42A0 File Offset: 0x00AD24A0
+		// Token: 0x060233A8 RID: 144296 RVA: 0x00A025E0 File Offset: 0x00A007E0
 		[NullableContext(2)]
 		public UiViewBase GetViewByName(EUiViewName viewName)
 		{
 			return this.PickViewByName(viewName);
 		}
 
-		// Token: 0x0602EC6C RID: 191596 RVA: 0x00AD42AC File Offset: 0x00AD24AC
+		// Token: 0x060233A9 RID: 144297 RVA: 0x00A025EC File Offset: 0x00A007EC
 		[NullableContext(2)]
 		public UiViewBase GetView(int viewId)
 		{
@@ -949,7 +946,7 @@ namespace CSharpScript.Game.Ui
 			return result;
 		}
 
-		// Token: 0x0602EC6D RID: 191597 RVA: 0x00AD42CC File Offset: 0x00AD24CC
+		// Token: 0x060233AA RID: 144298 RVA: 0x00A0260C File Offset: 0x00A0080C
 		private void AddView(UiViewBase view)
 		{
 			int viewId = view.GetViewId();
@@ -963,7 +960,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC6E RID: 191598 RVA: 0x00AD4324 File Offset: 0x00AD2524
+		// Token: 0x060233AB RID: 144299 RVA: 0x00A02664 File Offset: 0x00A00864
 		public void RemoveView(int viewId)
 		{
 			UiViewBase uiViewBase;
@@ -984,7 +981,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC6F RID: 191599 RVA: 0x00AD4388 File Offset: 0x00AD2588
+		// Token: 0x060233AC RID: 144300 RVA: 0x00A026C8 File Offset: 0x00A008C8
 		public void RefreshByPureModeChanged()
 		{
 			UiViewContainer uiViewContainer;
@@ -996,26 +993,24 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC70 RID: 191600 RVA: 0x00AD43B8 File Offset: 0x00AD25B8
+		// Token: 0x060233AD RID: 144301 RVA: 0x00A026F8 File Offset: 0x00A008F8
 		public void GmClearFloatContainer()
 		{
 			(this.Containers[ELayerType.Float] as UiViewFloatContainer).ClearContainer(false);
 		}
 
-		// Token: 0x0602EC71 RID: 191601 RVA: 0x00AD43D8 File Offset: 0x00AD25D8
+		// Token: 0x060233AE RID: 144302 RVA: 0x00A02718 File Offset: 0x00A00918
 		public void Tick(float delta)
 		{
 			float deltaTime = delta * Time.Instance.InverseSelfCenteredTimeDilation;
-			this.TempTickView.Clear();
-			this.TempTickView.AddRange(this.TickViewSet);
-			foreach (IPanelTickInterface panelTickInterface in this.TempTickView)
+			foreach (IPanelTickInterface panelTickInterface in this.TickViewSet)
 			{
 				panelTickInterface.Tick(deltaTime);
 			}
 			UiActorPool.Instance.Tick(deltaTime);
 		}
 
-		// Token: 0x0602EC72 RID: 191602 RVA: 0x00AD4460 File Offset: 0x00AD2660
+		// Token: 0x060233AF RID: 144303 RVA: 0x00A02784 File Offset: 0x00A00984
 		public void AfterTick(float delta)
 		{
 			foreach (IPanelTickInterface panelTickInterface in this.TickViewSet)
@@ -1024,32 +1019,32 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC73 RID: 191603 RVA: 0x00AD44B4 File Offset: 0x00AD26B4
+		// Token: 0x060233B0 RID: 144304 RVA: 0x00A027D8 File Offset: 0x00A009D8
 		public UniTask PauseNormalContainer(Func<UniTask> createPlotView, Func<UniTask> showPlotView)
 		{
-			UiManager.<PauseNormalContainer>d__76 <PauseNormalContainer>d__;
+			UiManager.<PauseNormalContainer>d__78 <PauseNormalContainer>d__;
 			<PauseNormalContainer>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<PauseNormalContainer>d__.<>4__this = this;
 			<PauseNormalContainer>d__.createPlotView = createPlotView;
 			<PauseNormalContainer>d__.showPlotView = showPlotView;
 			<PauseNormalContainer>d__.<>1__state = -1;
-			<PauseNormalContainer>d__.<>t__builder.Start<UiManager.<PauseNormalContainer>d__76>(ref <PauseNormalContainer>d__);
+			<PauseNormalContainer>d__.<>t__builder.Start<UiManager.<PauseNormalContainer>d__78>(ref <PauseNormalContainer>d__);
 			return <PauseNormalContainer>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC74 RID: 191604 RVA: 0x00AD4508 File Offset: 0x00AD2708
+		// Token: 0x060233B1 RID: 144305 RVA: 0x00A0282C File Offset: 0x00A00A2C
 		public UniTask ResumeNormalContainer(Func<UniTask> destroyOtherView = null)
 		{
-			UiManager.<ResumeNormalContainer>d__77 <ResumeNormalContainer>d__;
+			UiManager.<ResumeNormalContainer>d__79 <ResumeNormalContainer>d__;
 			<ResumeNormalContainer>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<ResumeNormalContainer>d__.<>4__this = this;
 			<ResumeNormalContainer>d__.destroyOtherView = destroyOtherView;
 			<ResumeNormalContainer>d__.<>1__state = -1;
-			<ResumeNormalContainer>d__.<>t__builder.Start<UiManager.<ResumeNormalContainer>d__77>(ref <ResumeNormalContainer>d__);
+			<ResumeNormalContainer>d__.<>t__builder.Start<UiManager.<ResumeNormalContainer>d__79>(ref <ResumeNormalContainer>d__);
 			return <ResumeNormalContainer>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC75 RID: 191605 RVA: 0x00AD4554 File Offset: 0x00AD2754
+		// Token: 0x060233B2 RID: 144306 RVA: 0x00A02878 File Offset: 0x00A00A78
 		public void ResumeNormalContainerInClear()
 		{
 			Log.Instance.Info(ELogModule.UiManager, ELogAuthor.XXJ, "[UIManager.ClearAsync]ResumeNormalContainerInClear", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1058,7 +1053,7 @@ namespace CSharpScript.Game.Ui
 			((UiViewStackContainer)this.Containers[ELayerType.Normal]).TryUnlock();
 		}
 
-		// Token: 0x0602EC76 RID: 191606 RVA: 0x00AD45AC File Offset: 0x00AD27AC
+		// Token: 0x060233B3 RID: 144307 RVA: 0x00A028D0 File Offset: 0x00A00AD0
 		public bool CheckIfCanShowPlotView()
 		{
 			UiViewBase topView = UiModel.Instance.GetTopView(ELayerType.Normal);
@@ -1070,313 +1065,93 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602EC77 RID: 191607 RVA: 0x00AD45F1 File Offset: 0x00AD27F1
+		// Token: 0x060233B4 RID: 144308 RVA: 0x00A02915 File Offset: 0x00A00B15
 		public bool IsNormalContainerEmpty()
 		{
 			return ((UiViewStackContainer)this.Containers[ELayerType.Normal]).IsViewPendingListEmpty();
 		}
 
-		// Token: 0x0602EC78 RID: 191608 RVA: 0x00AD4609 File Offset: 0x00AD2809
+		// Token: 0x060233B5 RID: 144309 RVA: 0x00A0292D File Offset: 0x00A00B2D
 		public void CloseAllPopView()
 		{
 			((UiViewListContainer)this.Containers[ELayerType.Pop]).CloseAllView();
 		}
 
-		// Token: 0x0602EC79 RID: 191609 RVA: 0x00AD4622 File Offset: 0x00AD2822
+		// Token: 0x060233B6 RID: 144310 RVA: 0x00A02946 File Offset: 0x00A00B46
 		public UniTask ContinueNormalContainer(Func<UniTask> destroyOtherView = null)
 		{
 			return this.ResumeNormalContainer(destroyOtherView);
 		}
 
-		// Token: 0x0602EC7A RID: 191610 RVA: 0x00AD462C File Offset: 0x00AD282C
+		// Token: 0x060233B7 RID: 144311 RVA: 0x00A02950 File Offset: 0x00A00B50
 		private UniTask ClearNonNormalAndPlotContainerView(bool isSeamlessTravel)
 		{
-			UiManager.<ClearNonNormalAndPlotContainerView>d__83 <ClearNonNormalAndPlotContainerView>d__;
+			UiManager.<ClearNonNormalAndPlotContainerView>d__85 <ClearNonNormalAndPlotContainerView>d__;
 			<ClearNonNormalAndPlotContainerView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<ClearNonNormalAndPlotContainerView>d__.<>4__this = this;
 			<ClearNonNormalAndPlotContainerView>d__.isSeamlessTravel = isSeamlessTravel;
 			<ClearNonNormalAndPlotContainerView>d__.<>1__state = -1;
-			<ClearNonNormalAndPlotContainerView>d__.<>t__builder.Start<UiManager.<ClearNonNormalAndPlotContainerView>d__83>(ref <ClearNonNormalAndPlotContainerView>d__);
+			<ClearNonNormalAndPlotContainerView>d__.<>t__builder.Start<UiManager.<ClearNonNormalAndPlotContainerView>d__85>(ref <ClearNonNormalAndPlotContainerView>d__);
 			return <ClearNonNormalAndPlotContainerView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC7B RID: 191611 RVA: 0x00AD4678 File Offset: 0x00AD2878
+		// Token: 0x060233B8 RID: 144312 RVA: 0x00A0299C File Offset: 0x00A00B9C
 		private UniTask ClearNormalAndPlotContainerView(bool isSeamlessTravel)
 		{
-			UiManager.<ClearNormalAndPlotContainerView>d__84 <ClearNormalAndPlotContainerView>d__;
+			UiManager.<ClearNormalAndPlotContainerView>d__86 <ClearNormalAndPlotContainerView>d__;
 			<ClearNormalAndPlotContainerView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<ClearNormalAndPlotContainerView>d__.<>4__this = this;
 			<ClearNormalAndPlotContainerView>d__.isSeamlessTravel = isSeamlessTravel;
 			<ClearNormalAndPlotContainerView>d__.<>1__state = -1;
-			<ClearNormalAndPlotContainerView>d__.<>t__builder.Start<UiManager.<ClearNormalAndPlotContainerView>d__84>(ref <ClearNormalAndPlotContainerView>d__);
+			<ClearNormalAndPlotContainerView>d__.<>t__builder.Start<UiManager.<ClearNormalAndPlotContainerView>d__86>(ref <ClearNormalAndPlotContainerView>d__);
 			return <ClearNormalAndPlotContainerView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC7C RID: 191612 RVA: 0x00AD46C4 File Offset: 0x00AD28C4
+		// Token: 0x060233B9 RID: 144313 RVA: 0x00A029E8 File Offset: 0x00A00BE8
 		private UniTask ResumeNormalViewInClear(bool isSeamlessTravel)
 		{
-			UiManager.<ResumeNormalViewInClear>d__85 <ResumeNormalViewInClear>d__;
+			UiManager.<ResumeNormalViewInClear>d__87 <ResumeNormalViewInClear>d__;
 			<ResumeNormalViewInClear>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<ResumeNormalViewInClear>d__.<>4__this = this;
 			<ResumeNormalViewInClear>d__.isSeamlessTravel = isSeamlessTravel;
 			<ResumeNormalViewInClear>d__.<>1__state = -1;
-			<ResumeNormalViewInClear>d__.<>t__builder.Start<UiManager.<ResumeNormalViewInClear>d__85>(ref <ResumeNormalViewInClear>d__);
+			<ResumeNormalViewInClear>d__.<>t__builder.Start<UiManager.<ResumeNormalViewInClear>d__87>(ref <ResumeNormalViewInClear>d__);
 			return <ResumeNormalViewInClear>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC7D RID: 191613 RVA: 0x00AD4710 File Offset: 0x00AD2910
+		// Token: 0x060233BA RID: 144314 RVA: 0x00A02A34 File Offset: 0x00A00C34
 		private void ClearUiCameraAnimation()
 		{
 			Log.Instance.Info(ELogModule.UiManager, ELogAuthor.XXJ, "[UIManager.ClearAsync] ClearUiCameraAnimation", default(ReadOnlySpan<ValueTuple<string, object>>));
 			try
 			{
-				UiCameraAnimationManager.Instance.ClearDisplay();
+				UiCameraModel.Instance.ClearDisplay();
 			}
 			catch (Exception item)
 			{
 				Log instance = Log.Instance;
 				ELogModule module = ELogModule.Game;
 				ELogAuthor author = ELogAuthor.LFJW;
-				string message = "[Game.LeaveLevel] 调用UiCameraAnimationManager.ResetUiCameraAnimationManager异常。";
+				string message = "[Game.LeaveLevel] 调用UiCameraModel.ClearDisplay异常。";
 				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("Exception", item);
 				instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			}
 		}
 
-		// Token: 0x0602EC7E RID: 191614 RVA: 0x00AD4784 File Offset: 0x00AD2984
+		// Token: 0x060233BB RID: 144315 RVA: 0x00A02AA8 File Offset: 0x00A00CA8
 		public UniTask ClearAsync(bool isSeamlessTravel)
 		{
-			UiManager.<ClearAsync>d__87 <ClearAsync>d__;
+			UiManager.<ClearAsync>d__89 <ClearAsync>d__;
 			<ClearAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<ClearAsync>d__.<>4__this = this;
 			<ClearAsync>d__.isSeamlessTravel = isSeamlessTravel;
 			<ClearAsync>d__.<>1__state = -1;
-			<ClearAsync>d__.<>t__builder.Start<UiManager.<ClearAsync>d__87>(ref <ClearAsync>d__);
+			<ClearAsync>d__.<>t__builder.Start<UiManager.<ClearAsync>d__89>(ref <ClearAsync>d__);
 			return <ClearAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC7F RID: 191615 RVA: 0x00AD47D0 File Offset: 0x00AD29D0
-		public unsafe void CheckUiPanelBindValid()
-		{
-			List<Type> list = (from t in Assembly.GetExecutingAssembly().GetTypes()
-			where t.IsSubclassOf(typeof(UiPanelBase))
-			where !t.IsAbstract
-			where !t.ContainsGenericParameters
-			select t).ToList<Type>();
-			MethodInfo method = typeof(UiPanelBase).GetMethod("OnRegisterComponent", BindingFlags.Instance | BindingFlags.NonPublic);
-			FieldInfo field = typeof(UiPanelBase).GetField("ComponentRegisterInfos", BindingFlags.Instance | BindingFlags.NonPublic);
-			FieldInfo field2 = typeof(UiPanelBase).GetField("BtnBindInfo", BindingFlags.Instance | BindingFlags.NonPublic);
-			UiViewInfo uiViewInfo = UiConfig.Instance.TryGetViewInfo(EUiViewName.AdviceView);
-			if (method == null || field == null || field2 == null)
-			{
-				Log.Instance.Error(ELogModule.UiManager, ELogAuthor.BB, "[UIManager.CheckUiPanelBindValid] 检查UI面板绑定是否有效失败，未找到OnRegisterComponent方法或ComponentRegisterInfos字段或BtnBindInfo字段", default(ReadOnlySpan<ValueTuple<string, object>>));
-				return;
-			}
-			foreach (Type type in list)
-			{
-				try
-				{
-					UiPanelBase uiPanelBase = null;
-					if (type.IsSubclassOf(typeof(UiViewBase)))
-					{
-						uiPanelBase = (UiPanelBase)Activator.CreateInstance(type, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, new object[]
-						{
-							uiViewInfo
-						}, null);
-					}
-					else
-					{
-						ConstructorInfo[] constructors = type.GetConstructors(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-						if (constructors.Length == 0)
-						{
-							Log.Instance.Error(ELogModule.UiManager, ELogAuthor.BB, "[UIManager.CheckUiPanelBindValid] 检查UI面板绑定是否有效失败，类型" + type.Name + "未找到无参构造函数", default(ReadOnlySpan<ValueTuple<string, object>>));
-						}
-						ConstructorInfo[] array = constructors;
-						for (int i = 0; i < array.Length; i++)
-						{
-							ParameterInfo[] parameters = array[i].GetParameters();
-							if (parameters.Length == 0)
-							{
-								uiPanelBase = (UiPanelBase)Activator.CreateInstance(type, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, null, null);
-								break;
-							}
-							if (parameters.Length == 1)
-							{
-								if (parameters[0].ParameterType == typeof(int))
-								{
-									uiPanelBase = (UiPanelBase)Activator.CreateInstance(type, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, new object[]
-									{
-										0
-									}, null);
-									break;
-								}
-								if (parameters[0].ParameterType == typeof(UUIItem))
-								{
-									uiPanelBase = (UiPanelBase)Activator.CreateInstance(type, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, new object[]
-									{
-										UiLayer.Instance.UiRootItem
-									}, null);
-									break;
-								}
-								if (parameters[0].ParameterType == typeof(AActor))
-								{
-									uiPanelBase = (UiPanelBase)Activator.CreateInstance(type, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, new object[]
-									{
-										UiLayer.Instance.UiRoot
-									}, null);
-									break;
-								}
-							}
-							else
-							{
-								string value = string.Join(", ", from p in parameters
-								select p.ParameterType.Name + " " + p.Name);
-								Log instance = Log.Instance;
-								ELogModule module = ELogModule.UiManager;
-								ELogAuthor author = ELogAuthor.BB;
-								DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(46, 2);
-								defaultInterpolatedStringHandler.AppendLiteral("[CheckUiPanelBindValidLog] 构造函数参数不匹配，类型");
-								defaultInterpolatedStringHandler.AppendFormatted(type.Name);
-								defaultInterpolatedStringHandler.AppendLiteral(" 构造函数(");
-								defaultInterpolatedStringHandler.AppendFormatted(value);
-								defaultInterpolatedStringHandler.AppendLiteral(")");
-								instance.Error(module, author, defaultInterpolatedStringHandler.ToStringAndClear(), default(ReadOnlySpan<ValueTuple<string, object>>));
-							}
-						}
-					}
-					if (uiPanelBase != null)
-					{
-						method.Invoke(uiPanelBase, null);
-						List<ValueTuple<int, Type>> list2 = (List<ValueTuple<int, Type>>)field.GetValue(uiPanelBase);
-						foreach (ValueTuple<int, Delegate> valueTuple in ((List<ValueTuple<int, Delegate>>)field2.GetValue(uiPanelBase)))
-						{
-							int item = valueTuple.Item1;
-							Delegate item2 = valueTuple.Item2;
-							Type left = typeof(UUIButtonComponent);
-							foreach (ValueTuple<int, Type> valueTuple2 in list2)
-							{
-								if (valueTuple2.Item1 == item)
-								{
-									left = valueTuple2.Item2;
-									break;
-								}
-							}
-							if (left == typeof(UUIButtonComponent))
-							{
-								this.CheckUiButtonBindValid(item2, item, typeof(void), uiPanelBase);
-							}
-							else if (left == typeof(UUIToggleComponent))
-							{
-								this.CheckOneParamDelegateBindValid(item2, item, typeof(bool), uiPanelBase);
-							}
-							else if (left == typeof(UUIExtendToggle))
-							{
-								this.CheckOneParamDelegateBindValid(item2, item, typeof(EToggleState), uiPanelBase);
-							}
-							else if (left == typeof(UUISliderComponent))
-							{
-								this.CheckOneParamDelegateBindValid(item2, item, typeof(float), uiPanelBase);
-							}
-							else if (left == typeof(UUITextInputComponent))
-							{
-								this.CheckOneParamDelegateBindValid(item2, item, typeof(bool), uiPanelBase);
-							}
-						}
-					}
-				}
-				catch (Exception item3)
-				{
-					Log instance2 = Log.Instance;
-					ELogModule module2 = ELogModule.UiManager;
-					ELogAuthor author2 = ELogAuthor.BB;
-					string message = "[CheckUiPanelBindValidLog] Exception";
-					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("PanelType", type.Name);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Exception", item3);
-					instance2.Error(module2, author2, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-				}
-			}
-		}
-
-		// Token: 0x0602EC80 RID: 191616 RVA: 0x00AD4DA0 File Offset: 0x00AD2FA0
-		private unsafe void CheckUiButtonBindValid(Delegate delegateType, int componentId, Type paramType, UiPanelBase panel)
-		{
-			Type type = delegateType.GetType();
-			if (type == typeof(Action))
-			{
-				return;
-			}
-			MethodInfo method = type.GetMethod("Invoke");
-			if (method == null)
-			{
-				Log instance = Log.Instance;
-				ELogModule module = ELogModule.UiManager;
-				ELogAuthor author = ELogAuthor.BB;
-				string message = "[CheckUiPanelBindValidLog] 未找到Invoke方法";
-				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("PanelType", panel.GetType().Name);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("ComponentId", componentId);
-				instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-				return;
-			}
-			if (method.GetParameters().Length != 0)
-			{
-				Log instance2 = Log.Instance;
-				ELogModule module2 = ELogModule.UiManager;
-				ELogAuthor author2 = ELogAuthor.BB;
-				string message2 = "[CheckUiPanelBindValidLog] Invoke方法参数数量不为0";
-				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("PanelType", panel.GetType().Name);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("ComponentId", componentId);
-				instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
-			}
-		}
-
-		// Token: 0x0602EC81 RID: 191617 RVA: 0x00AD4EB4 File Offset: 0x00AD30B4
-		private unsafe void CheckOneParamDelegateBindValid(Delegate delegateType, int componentId, Type paramType, UiPanelBase panel)
-		{
-			MethodInfo method = delegateType.GetType().GetMethod("Invoke");
-			if (method == null)
-			{
-				Log instance = Log.Instance;
-				ELogModule module = ELogModule.UiManager;
-				ELogAuthor author = ELogAuthor.BB;
-				string message = "[CheckUiPanelBindValidLog] 未找到Invoke方法";
-				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("PanelType", panel.GetType().Name);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("ComponentId", componentId);
-				instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-				return;
-			}
-			ParameterInfo[] parameters = method.GetParameters();
-			if (parameters.Length != 1)
-			{
-				Log instance2 = Log.Instance;
-				ELogModule module2 = ELogModule.UiManager;
-				ELogAuthor author2 = ELogAuthor.BB;
-				string message2 = "[CheckUiPanelBindValidLog] Invoke方法参数数量不为1";
-				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("PanelType", panel.GetType().Name);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("ComponentId", componentId);
-				instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
-				return;
-			}
-			if (parameters[0].ParameterType != paramType)
-			{
-				Log instance3 = Log.Instance;
-				ELogModule module3 = ELogModule.UiManager;
-				ELogAuthor author3 = ELogAuthor.BB;
-				string message3 = "[CheckUiPanelBindValidLog] Invoke方法参数类型不为指定类型";
-				<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray3<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("PanelType", panel.GetType().Name);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("ParamType", paramType.Name);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 2) = new ValueTuple<string, object>("ComponentId", componentId);
-				instance3.Error(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 3));
-			}
-		}
-
-		// Token: 0x1700767E RID: 30334
-		// (get) Token: 0x0602EC82 RID: 191618 RVA: 0x00AD504C File Offset: 0x00AD324C
+		// Token: 0x1700493A RID: 18746
+		// (get) Token: 0x060233BC RID: 144316 RVA: 0x00A02AF3 File Offset: 0x00A00CF3
 		public static UiManager Instance
 		{
 			get
@@ -1390,12 +1165,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC83 RID: 191619 RVA: 0x00AD506F File Offset: 0x00AD326F
+		// Token: 0x060233BD RID: 144317 RVA: 0x00A02B16 File Offset: 0x00A00D16
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602EC84 RID: 191620 RVA: 0x00AD5071 File Offset: 0x00AD3271
+		// Token: 0x060233BE RID: 144318 RVA: 0x00A02B18 File Offset: 0x00A00D18
 		public static void ResetStaticDefaultValue()
 		{
 			UiManager instance = UiManager._instance;
@@ -1406,22 +1181,22 @@ namespace CSharpScript.Game.Ui
 			UiManager._instance = null;
 		}
 
-		// Token: 0x0602EC85 RID: 191621 RVA: 0x00AD508A File Offset: 0x00AD328A
+		// Token: 0x060233BF RID: 144319 RVA: 0x00A02B31 File Offset: 0x00A00D31
 		static UiManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiManager.CreateStaticDefaultValue), new Action(UiManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04019730 RID: 104240
+		// Token: 0x04013DCF RID: 81359
 		private EInitState InitState;
 
-		// Token: 0x04019731 RID: 104241
+		// Token: 0x04013DD0 RID: 81360
 		public bool IsClear;
 
-		// Token: 0x04019732 RID: 104242
+		// Token: 0x04013DD1 RID: 81361
 		private readonly Dictionary<ELayerType, UiViewContainer> Containers = new Dictionary<ELayerType, UiViewContainer>();
 
-		// Token: 0x04019733 RID: 104243
+		// Token: 0x04013DD2 RID: 81362
 		[Nullable(new byte[]
 		{
 			1,
@@ -1432,28 +1207,28 @@ namespace CSharpScript.Game.Ui
 		})]
 		private readonly Dictionary<EUiViewName, Dictionary<Func<EUiViewName, object, bool>, string>> OpenViewCheckFunctionsMap = new Dictionary<EUiViewName, Dictionary<Func<EUiViewName, object, bool>, string>>();
 
-		// Token: 0x04019734 RID: 104244
+		// Token: 0x04013DD3 RID: 81363
 		private readonly Stat StatsObject = Stat.Create("UiManger", "", "");
 
-		// Token: 0x04019735 RID: 104245
+		// Token: 0x04013DD4 RID: 81364
 		private readonly Dictionary<int, UiViewBase> IdToViewMap = new Dictionary<int, UiViewBase>();
 
-		// Token: 0x04019736 RID: 104246
+		// Token: 0x04013DD5 RID: 81365
 		private readonly Dictionary<EUiViewName, HashSet<UiViewBase>> NameToViewSetMap = new Dictionary<EUiViewName, HashSet<UiViewBase>>();
 
-		// Token: 0x04019737 RID: 104247
-		private readonly HashSet<IPanelTickInterface> TickViewSet = new HashSet<IPanelTickInterface>();
+		// Token: 0x04013DD6 RID: 81366
+		private readonly OrderedSet<IPanelTickInterface> TickViewSet = new OrderedSet<IPanelTickInterface>();
 
-		// Token: 0x04019738 RID: 104248
+		// Token: 0x04013DD7 RID: 81367
 		private readonly Dictionary<int, UiViewBase> PreOpeningViewMap = new Dictionary<int, UiViewBase>();
 
-		// Token: 0x04019739 RID: 104249
+		// Token: 0x04013DD8 RID: 81368
 		private EUiViewName? LastNormalTopViewName;
 
-		// Token: 0x0401973A RID: 104250
+		// Token: 0x04013DD9 RID: 81369
 		private int CsRequestId;
 
-		// Token: 0x0401973B RID: 104251
+		// Token: 0x04013DDA RID: 81370
 		[Nullable(new byte[]
 		{
 			1,
@@ -1461,7 +1236,7 @@ namespace CSharpScript.Game.Ui
 		})]
 		private Dictionary<int, object> CsRequestParamMap = new Dictionary<int, object>();
 
-		// Token: 0x0401973C RID: 104252
+		// Token: 0x04013DDB RID: 81371
 		[Nullable(new byte[]
 		{
 			1,
@@ -1469,16 +1244,13 @@ namespace CSharpScript.Game.Ui
 		})]
 		private Dictionary<int, TOpenViewCallBack> CsRequestCallbackMap = new Dictionary<int, TOpenViewCallBack>();
 
-		// Token: 0x0401973D RID: 104253
+		// Token: 0x04013DDC RID: 81372
 		private Dictionary<int, bool> CsRequestNeedOpenInSharpMap = new Dictionary<int, bool>();
 
-		// Token: 0x0401973E RID: 104254
+		// Token: 0x04013DDD RID: 81373
 		private bool OpenLock;
 
-		// Token: 0x0401973F RID: 104255
-		private List<IPanelTickInterface> TempTickView = new List<IPanelTickInterface>();
-
-		// Token: 0x04019740 RID: 104256
+		// Token: 0x04013DDE RID: 81374
 		[Nullable(2)]
 		private static UiManager _instance;
 	}

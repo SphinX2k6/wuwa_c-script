@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003214 RID: 12820
+// Token: 0x02002783 RID: 10115
 public static class StareActionTypeHelper
 {
-	// Token: 0x0601BA6F RID: 113263 RVA: 0x007993C4 File Offset: 0x007975C4
+	// Token: 0x060195F4 RID: 103924 RVA: 0x007C1B60 File Offset: 0x007BFD60
 	[NullableContext(1)]
 	public static string GetActionTypeName(EStareActionType type)
 	{

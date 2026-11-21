@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002059 RID: 8281
+	// Token: 0x02000687 RID: 1671
 	public sealed class FLGUIDrawableEvent_Quaternion_DynamicDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F457 RID: 128087 RVA: 0x002E6F6B File Offset: 0x002E516B
+		// Token: 0x060090AD RID: 37037 RVA: 0x000D9689 File Offset: 0x000D7889
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIDrawableEvent_Quaternion_DynamicDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F458 RID: 128088 RVA: 0x002E6F77 File Offset: 0x002E5177
+		// Token: 0x060090AE RID: 37038 RVA: 0x000D9695 File Offset: 0x000D7895
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIDrawableEvent_Quaternion_DynamicDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLGUIDrawableEvent_Quaternion_DynamicDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F459 RID: 128089 RVA: 0x002E6F9A File Offset: 0x002E519A
+		// Token: 0x060090AF RID: 37039 RVA: 0x000D96B8 File Offset: 0x000D78B8
 		public FLGUIDrawableEvent_Quaternion_DynamicDelegate()
 		{
 		}
 
-		// Token: 0x0601F45A RID: 128090 RVA: 0x002E6FA2 File Offset: 0x002E51A2
+		// Token: 0x060090B0 RID: 37040 RVA: 0x000D96C0 File Offset: 0x000D78C0
 		[NullableContext(2)]
 		public FLGUIDrawableEvent_Quaternion_DynamicDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F45B RID: 128091 RVA: 0x002E6FAC File Offset: 0x002E51AC
+		// Token: 0x060090B1 RID: 37041 RVA: 0x000D96CA File Offset: 0x000D78CA
 		public FLGUIDrawableEvent_Quaternion_DynamicDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F45C RID: 128092 RVA: 0x002E6FB7 File Offset: 0x002E51B7
+		// Token: 0x060090B2 RID: 37042 RVA: 0x000D96D5 File Offset: 0x000D78D5
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FQuat>) ?? ((Action<FQuat>)Delegate.CreateDelegate(typeof(Action<FQuat>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F45D RID: 128093 RVA: 0x002E6FE9 File Offset: 0x002E51E9
+		// Token: 0x060090B3 RID: 37043 RVA: 0x000D9707 File Offset: 0x000D7907
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FQuat> Callback)
 		{
 			if (FLGUIDrawableEvent_Quaternion_DynamicDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIDrawableEvent_Quaternion_DynamicDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F45E RID: 128094 RVA: 0x002E7024 File Offset: 0x002E5224
+		// Token: 0x060090B4 RID: 37044 RVA: 0x000D9744 File Offset: 0x000D7944
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(FQuat value)
 		{
 			FLGUIDrawableEvent_Quaternion_DynamicDelegate.__FLGUIDrawableEvent_Quaternion_DynamicDelegate_DelegateParams* ptr = stackalloc FLGUIDrawableEvent_Quaternion_DynamicDelegate.__FLGUIDrawableEvent_Quaternion_DynamicDelegate_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FLGUIDrawableEvent_Quaternion_DynamicDelegate.__FLGUIDrawableEvent_Quaternion_DynamicDelegate_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F45F RID: 128095 RVA: 0x002E7064 File Offset: 0x002E5264
+		// Token: 0x060090B5 RID: 37045 RVA: 0x000D9784 File Offset: 0x000D7984
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FQuat> action = target as Action<FQuat>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FLGUIDrawableEvent_Quaternion_DynamicDelegate.__FLGUIDrawableEvent_Quaternion_DynamicDelegate_DelegateParams*)__Parameters)->value);
 		}
 
-		// Token: 0x04010EA4 RID: 69284
+		// Token: 0x04003F2E RID: 16174
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010EA5 RID: 69285
+		// Token: 0x04003F2F RID: 16175
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIDrawableEvent_Quaternion_DynamicDelegate__DelegateSignature";
 
-		// Token: 0x04010EA6 RID: 69286
+		// Token: 0x04003F30 RID: 16176
 		private static int RegisterId;
 
-		// Token: 0x0200345E RID: 13406
+		// Token: 0x02000EA1 RID: 3745
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FLGUIDrawableEvent_Quaternion_DynamicDelegate_DelegateParams
+		private ref struct __FLGUIDrawableEvent_Quaternion_DynamicDelegate_DelegateParams
 		{
-			// Token: 0x04017441 RID: 95297
+			// Token: 0x04006250 RID: 25168
 			[FieldOffset(0)]
 			public FQuat value;
 		}
 
-		// Token: 0x0200345F RID: 13407
+		// Token: 0x02000EA2 RID: 3746
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017442 RID: 95298
+			// Token: 0x04006251 RID: 25169
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

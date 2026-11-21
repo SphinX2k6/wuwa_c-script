@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F40 RID: 12096
+// Token: 0x02002493 RID: 9363
 [NullableContext(1)]
 [Nullable(0)]
 public class ShieldEffect : BuffEffect
 {
-	// Token: 0x06019C12 RID: 105490 RVA: 0x006B65BC File Offset: 0x006B47BC
+	// Token: 0x0601751D RID: 95517 RVA: 0x006DC8DC File Offset: 0x006DAADC
 	public ShieldEffect(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C13 RID: 105491 RVA: 0x006B65CC File Offset: 0x006B47CC
+	// Token: 0x0601751E RID: 95518 RVA: 0x006DC8EC File Offset: 0x006DAAEC
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -21,14 +21,14 @@ public class ShieldEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C14 RID: 105492 RVA: 0x006B65F5 File Offset: 0x006B47F5
+	// Token: 0x0601751F RID: 95519 RVA: 0x006DC915 File Offset: 0x006DAB15
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C15 RID: 105493 RVA: 0x006B65F8 File Offset: 0x006B47F8
+	// Token: 0x06017520 RID: 95520 RVA: 0x006DC918 File Offset: 0x006DAB18
 	public override string GetDebugEffectString()
 	{
 		Entity exactOwnerEntity = base.ExactOwnerEntity;
@@ -41,6 +41,6 @@ public class ShieldEffect : BuffEffect
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C226 RID: 49702
+	// Token: 0x0400C5C8 RID: 50632
 	protected int ShieldTemplateId;
 }

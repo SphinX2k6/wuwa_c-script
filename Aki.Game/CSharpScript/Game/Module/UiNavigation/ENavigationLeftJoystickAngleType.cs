@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004941 RID: 18753
+	// Token: 0x020038B8 RID: 14520
 	public enum ENavigationLeftJoystickAngleType
 	{
-		// Token: 0x0401A43F RID: 107583
+		// Token: 0x04014CB2 RID: 85170
 		LeftDown = -143,
-		// Token: 0x0401A440 RID: 107584
+		// Token: 0x04014CB3 RID: 85171
 		RightDown = -37,
-		// Token: 0x0401A441 RID: 107585
+		// Token: 0x04014CB4 RID: 85172
 		RightUp = 37,
-		// Token: 0x0401A442 RID: 107586
+		// Token: 0x04014CB5 RID: 85173
 		LeftUp = 143
 	}
 }

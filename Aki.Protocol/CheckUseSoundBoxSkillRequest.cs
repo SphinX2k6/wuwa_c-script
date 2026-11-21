@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000286 RID: 646
+	// Token: 0x0200028B RID: 651
 	[NetMessage(EMessageId.CheckUseSoundBoxSkillRequest)]
 	public sealed class CheckUseSoundBoxSkillRequest : IMessage<CheckUseSoundBoxSkillRequest>, IMessage, IEquatable<CheckUseSoundBoxSkillRequest>, IDeepCloneable<CheckUseSoundBoxSkillRequest>, IBufferMessage
 	{
-		// Token: 0x0600438E RID: 17294 RVA: 0x000A5910 File Offset: 0x000A3B10
+		// Token: 0x06004435 RID: 17461 RVA: 0x000A75D8 File Offset: 0x000A57D8
 		[NullableContext(1)]
 		public static CheckUseSoundBoxSkillRequest Create()
 		{
 			return new CheckUseSoundBoxSkillRequest();
 		}
 
-		// Token: 0x17000B84 RID: 2948
-		// (get) Token: 0x0600438F RID: 17295 RVA: 0x000A5917 File Offset: 0x000A3B17
+		// Token: 0x17000BA4 RID: 2980
+		// (get) Token: 0x06004436 RID: 17462 RVA: 0x000A75DF File Offset: 0x000A57DF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000B85 RID: 2949
-		// (get) Token: 0x06004390 RID: 17296 RVA: 0x000A591A File Offset: 0x000A3B1A
+		// Token: 0x17000BA5 RID: 2981
+		// (get) Token: 0x06004437 RID: 17463 RVA: 0x000A75E2 File Offset: 0x000A57E2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004391 RID: 17297 RVA: 0x000A5921 File Offset: 0x000A3B21
+		// Token: 0x06004438 RID: 17464 RVA: 0x000A75E9 File Offset: 0x000A57E9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CheckUseSoundBoxSkillRequest()
 		{
 		}
 
-		// Token: 0x06004392 RID: 17298 RVA: 0x000A5929 File Offset: 0x000A3B29
+		// Token: 0x06004439 RID: 17465 RVA: 0x000A75F1 File Offset: 0x000A57F1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CheckUseSoundBoxSkillRequest(CheckUseSoundBoxSkillRequest other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06004393 RID: 17299 RVA: 0x000A5942 File Offset: 0x000A3B42
+		// Token: 0x0600443A RID: 17466 RVA: 0x000A760A File Offset: 0x000A580A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CheckUseSoundBoxSkillRequest Clone()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			return new CheckUseSoundBoxSkillRequest(this);
 		}
 
-		// Token: 0x06004394 RID: 17300 RVA: 0x000A594A File Offset: 0x000A3B4A
+		// Token: 0x0600443B RID: 17467 RVA: 0x000A7612 File Offset: 0x000A5812
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			return this.Equals(other as CheckUseSoundBoxSkillRequest);
 		}
 
-		// Token: 0x06004395 RID: 17301 RVA: 0x000A5958 File Offset: 0x000A3B58
+		// Token: 0x0600443C RID: 17468 RVA: 0x000A7620 File Offset: 0x000A5820
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CheckUseSoundBoxSkillRequest other)
@@ -81,7 +81,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x06004396 RID: 17302 RVA: 0x000A5978 File Offset: 0x000A3B78
+		// Token: 0x0600443D RID: 17469 RVA: 0x000A7640 File Offset: 0x000A5840
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004397 RID: 17303 RVA: 0x000A599E File Offset: 0x000A3B9E
+		// Token: 0x0600443E RID: 17470 RVA: 0x000A7666 File Offset: 0x000A5866
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -102,7 +102,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06004398 RID: 17304 RVA: 0x000A59AB File Offset: 0x000A3BAB
+		// Token: 0x0600443F RID: 17471 RVA: 0x000A7673 File Offset: 0x000A5873
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06004399 RID: 17305 RVA: 0x000A59B4 File Offset: 0x000A3BB4
+		// Token: 0x06004440 RID: 17472 RVA: 0x000A767C File Offset: 0x000A587C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -121,7 +121,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600439A RID: 17306 RVA: 0x000A59CC File Offset: 0x000A3BCC
+		// Token: 0x06004441 RID: 17473 RVA: 0x000A7694 File Offset: 0x000A5894
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600439B RID: 17307 RVA: 0x000A59F2 File Offset: 0x000A3BF2
+		// Token: 0x06004442 RID: 17474 RVA: 0x000A76BA File Offset: 0x000A58BA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CheckUseSoundBoxSkillRequest other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600439C RID: 17308 RVA: 0x000A5A0F File Offset: 0x000A3C0F
+		// Token: 0x06004443 RID: 17475 RVA: 0x000A76D7 File Offset: 0x000A58D7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600439D RID: 17309 RVA: 0x000A5A18 File Offset: 0x000A3C18
+		// Token: 0x06004444 RID: 17476 RVA: 0x000A76E0 File Offset: 0x000A58E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -170,7 +170,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002E5B RID: 11867
+		// Token: 0x04002EDF RID: 11999
 		private UnknownFieldSet _unknownFields;
 	}
 }

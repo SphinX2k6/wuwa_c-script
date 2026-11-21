@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001146 RID: 4422
+	// Token: 0x0200127C RID: 4732
 	public struct TrackMoonActivity : IFlatbufferObject
 	{
-		// Token: 0x17003B14 RID: 15124
-		// (get) Token: 0x0600E091 RID: 57489 RVA: 0x00331B71 File Offset: 0x0032FD71
+		// Token: 0x17003E78 RID: 15992
+		// (get) Token: 0x0600EDFF RID: 60927 RVA: 0x0035CFBD File Offset: 0x0035B1BD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E092 RID: 57490 RVA: 0x00331B7E File Offset: 0x0032FD7E
+		// Token: 0x0600EE00 RID: 60928 RVA: 0x0035CFCA File Offset: 0x0035B1CA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E093 RID: 57491 RVA: 0x00331B88 File Offset: 0x0032FD88
+		// Token: 0x0600EE01 RID: 60929 RVA: 0x0035CFD4 File Offset: 0x0035B1D4
 		public static TrackMoonActivity GetRootAsTrackMoonActivity(ByteBuffer _bb)
 		{
 			return TrackMoonActivity.GetRootAsTrackMoonActivity(_bb, default(TrackMoonActivity));
 		}
 
-		// Token: 0x0600E094 RID: 57492 RVA: 0x00331BA4 File Offset: 0x0032FDA4
+		// Token: 0x0600EE02 RID: 60930 RVA: 0x0035CFF0 File Offset: 0x0035B1F0
 		public static TrackMoonActivity GetRootAsTrackMoonActivity(ByteBuffer _bb, TrackMoonActivity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E095 RID: 57493 RVA: 0x00331BC1 File Offset: 0x0032FDC1
+		// Token: 0x0600EE03 RID: 60931 RVA: 0x0035D00D File Offset: 0x0035B20D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E096 RID: 57494 RVA: 0x00331BD0 File Offset: 0x0032FDD0
+		// Token: 0x0600EE04 RID: 60932 RVA: 0x0035D01C File Offset: 0x0035B21C
 		public TrackMoonActivity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003B15 RID: 15125
-		// (get) Token: 0x0600E097 RID: 57495 RVA: 0x00331BE0 File Offset: 0x0032FDE0
+		// Token: 0x17003E79 RID: 15993
+		// (get) Token: 0x0600EE05 RID: 60933 RVA: 0x0035D02C File Offset: 0x0035B22C
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B16 RID: 15126
-		// (get) Token: 0x0600E098 RID: 57496 RVA: 0x00331C1C File Offset: 0x0032FE1C
+		// Token: 0x17003E7A RID: 15994
+		// (get) Token: 0x0600EE06 RID: 60934 RVA: 0x0035D068 File Offset: 0x0035B268
 		public bool ActivityReward
 		{
 			get
@@ -75,8 +75,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B17 RID: 15127
-		// (get) Token: 0x0600E099 RID: 57497 RVA: 0x00331C5C File Offset: 0x0032FE5C
+		// Token: 0x17003E7B RID: 15995
+		// (get) Token: 0x0600EE07 RID: 60935 RVA: 0x0035D0A8 File Offset: 0x0035B2A8
 		public bool PermanentTarget
 		{
 			get
@@ -86,8 +86,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B18 RID: 15128
-		// (get) Token: 0x0600E09A RID: 57498 RVA: 0x00331C9C File Offset: 0x0032FE9C
+		// Token: 0x17003E7C RID: 15996
+		// (get) Token: 0x0600EE08 RID: 60936 RVA: 0x0035D0E8 File Offset: 0x0035B2E8
 		public int ActivityButtonType
 		{
 			get
@@ -101,7 +101,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E09B RID: 57499 RVA: 0x00331CDC File Offset: 0x0032FEDC
+		// Token: 0x0600EE09 RID: 60937 RVA: 0x0035D128 File Offset: 0x0035B328
 		public int RewardList(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -112,8 +112,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003B19 RID: 15129
-		// (get) Token: 0x0600E09C RID: 57500 RVA: 0x00331D1C File Offset: 0x0032FF1C
+		// Token: 0x17003E7D RID: 15997
+		// (get) Token: 0x0600EE0A RID: 60938 RVA: 0x0035D168 File Offset: 0x0035B368
 		public int RewardListLength
 		{
 			get
@@ -127,20 +127,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E09D RID: 57501 RVA: 0x00331D48 File Offset: 0x0032FF48
+		// Token: 0x0600EE0B RID: 60939 RVA: 0x0035D194 File Offset: 0x0035B394
 		public Span<int> GetRewardListBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x0600E09E RID: 57502 RVA: 0x00331D58 File Offset: 0x0032FF58
+		// Token: 0x0600EE0C RID: 60940 RVA: 0x0035D1A4 File Offset: 0x0035B3A4
 		public int[] GetRewardListArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17003B1A RID: 15130
-		// (get) Token: 0x0600E09F RID: 57503 RVA: 0x00331D70 File Offset: 0x0032FF70
+		// Token: 0x17003E7E RID: 15998
+		// (get) Token: 0x0600EE0D RID: 60941 RVA: 0x0035D1BC File Offset: 0x0035B3BC
 		public int FocusMarkId
 		{
 			get
@@ -154,8 +154,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B1B RID: 15131
-		// (get) Token: 0x0600E0A0 RID: 57504 RVA: 0x00331DB0 File Offset: 0x0032FFB0
+		// Token: 0x17003E7F RID: 15999
+		// (get) Token: 0x0600EE0E RID: 60942 RVA: 0x0035D1FC File Offset: 0x0035B3FC
 		public string StageQuestTips
 		{
 			get
@@ -169,20 +169,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E0A1 RID: 57505 RVA: 0x00331DE8 File Offset: 0x0032FFE8
+		// Token: 0x0600EE0F RID: 60943 RVA: 0x0035D234 File Offset: 0x0035B434
 		public Span<byte> GetStageQuestTipsBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600E0A2 RID: 57506 RVA: 0x00331DF8 File Offset: 0x0032FFF8
+		// Token: 0x0600EE10 RID: 60944 RVA: 0x0035D244 File Offset: 0x0035B444
 		public byte[] GetStageQuestTipsArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003B1C RID: 15132
-		// (get) Token: 0x0600E0A3 RID: 57507 RVA: 0x00331E10 File Offset: 0x00330010
+		// Token: 0x17003E80 RID: 16000
+		// (get) Token: 0x0600EE11 RID: 60945 RVA: 0x0035D25C File Offset: 0x0035B45C
 		public int StageQuestId
 		{
 			get
@@ -196,25 +196,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E0A4 RID: 57508 RVA: 0x00331E50 File Offset: 0x00330050
+		// Token: 0x0600EE12 RID: 60946 RVA: 0x0035D299 File Offset: 0x0035B499
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RewardListIter()或GetRewardListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RewardList()
+		public int[] RewardList()
 		{
-			TrackMoonActivity trackMoonActivity = this;
-			return trackMoonActivity.GetRewardListArray() ?? Array.Empty<int>();
+			return this.GetRewardListArray();
 		}
 
-		// Token: 0x0600E0A5 RID: 57509 RVA: 0x00331E74 File Offset: 0x00330074
+		// Token: 0x0600EE13 RID: 60947 RVA: 0x0035D2A1 File Offset: 0x0035B4A1
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RewardListIter()
+		public IEnumerable<int> RewardListIter()
 		{
 			TrackMoonActivity.<RewardListIter>d__30 <RewardListIter>d__ = new TrackMoonActivity.<RewardListIter>d__30(-2);
 			<RewardListIter>d__.<>3__<>4__this = this;
 			return <RewardListIter>d__;
 		}
 
-		// Token: 0x04005288 RID: 21128
+		// Token: 0x040058CB RID: 22731
 		private Table __p;
 	}
 }

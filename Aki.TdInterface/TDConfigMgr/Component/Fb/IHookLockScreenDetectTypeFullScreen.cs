@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B1A RID: 2842
+	// Token: 0x02000BE8 RID: 3048
 	public class IHookLockScreenDetectTypeFullScreen : IHookLockScreenDetectTypeBase
 	{
-		// Token: 0x0600419A RID: 16794 RVA: 0x000A850E File Offset: 0x000A670E
-		[NullableContext(1)]
+		// Token: 0x060045F0 RID: 17904 RVA: 0x000B253A File Offset: 0x000B073A
 		public static IHookLockScreenDetectTypeFullScreen Create(IHookLockScreenDetectTypeFullScreen? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001123 RID: 4387
-		// (get) Token: 0x0600419B RID: 16795 RVA: 0x000A852D File Offset: 0x000A672D
+		// Token: 0x1700121B RID: 4635
+		// (get) Token: 0x060045F1 RID: 17905 RVA: 0x000B2559 File Offset: 0x000B0759
 		public override EHookLockScreenDetectType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040024F9 RID: 9465
+		// Token: 0x0400273D RID: 10045
 		private IHookLockScreenDetectTypeFullScreen Instance;
 	}
 }

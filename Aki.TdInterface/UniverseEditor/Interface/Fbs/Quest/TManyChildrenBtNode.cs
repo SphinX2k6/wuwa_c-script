@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042E4 RID: 17124
+	// Token: 0x02004743 RID: 18243
 	public enum TManyChildrenBtNode : byte
 	{
-		// Token: 0x0400C024 RID: 49188
+		// Token: 0x0400CA3C RID: 51772
 		NONE,
-		// Token: 0x0400C025 RID: 49189
+		// Token: 0x0400CA3D RID: 51773
 		IParallelSelectBtNode,
-		// Token: 0x0400C026 RID: 49190
+		// Token: 0x0400CA3E RID: 51774
 		ISelectBtNode,
-		// Token: 0x0400C027 RID: 49191
+		// Token: 0x0400CA3F RID: 51775
 		ISequenceBtNode,
-		// Token: 0x0400C028 RID: 49192
+		// Token: 0x0400CA40 RID: 51776
 		IConditionSelectorBtNode
 	}
 }

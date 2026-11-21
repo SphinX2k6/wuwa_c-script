@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041F1 RID: 16881
+	// Token: 0x0200464A RID: 17994
 	public class ITrackCustomBoardOnBtLogicNodeT
 	{
-		// Token: 0x170077D0 RID: 30672
-		// (get) Token: 0x06018E78 RID: 102008 RVA: 0x003957C9 File Offset: 0x003939C9
-		// (set) Token: 0x06018E79 RID: 102009 RVA: 0x003957D1 File Offset: 0x003939D1
+		// Token: 0x17007DFE RID: 32254
+		// (get) Token: 0x0601A5D2 RID: 107986 RVA: 0x003C0D29 File Offset: 0x003BEF29
+		// (set) Token: 0x0601A5D3 RID: 107987 RVA: 0x003C0D31 File Offset: 0x003BEF31
 		public IFastReturnMapPosT FastReturnMapPos { get; set; }
 
-		// Token: 0x170077D1 RID: 30673
-		// (get) Token: 0x06018E7A RID: 102010 RVA: 0x003957DA File Offset: 0x003939DA
-		// (set) Token: 0x06018E7B RID: 102011 RVA: 0x003957E2 File Offset: 0x003939E2
+		// Token: 0x17007DFF RID: 32255
+		// (get) Token: 0x0601A5D4 RID: 107988 RVA: 0x003C0D3A File Offset: 0x003BEF3A
+		// (set) Token: 0x0601A5D5 RID: 107989 RVA: 0x003C0D42 File Offset: 0x003BEF42
 		public ISheriffAnomalyProgressBoardConfigT SheriffAnomalyProgressBoard { get; set; }
 
-		// Token: 0x170077D2 RID: 30674
-		// (get) Token: 0x06018E7C RID: 102012 RVA: 0x003957EB File Offset: 0x003939EB
-		// (set) Token: 0x06018E7D RID: 102013 RVA: 0x003957F3 File Offset: 0x003939F3
+		// Token: 0x17007E00 RID: 32256
+		// (get) Token: 0x0601A5D6 RID: 107990 RVA: 0x003C0D4B File Offset: 0x003BEF4B
+		// (set) Token: 0x0601A5D7 RID: 107991 RVA: 0x003C0D53 File Offset: 0x003BEF53
 		public ISheriffMainBoardConfigT SheriffMainBoard { get; set; }
 
-		// Token: 0x170077D3 RID: 30675
-		// (get) Token: 0x06018E7E RID: 102014 RVA: 0x003957FC File Offset: 0x003939FC
-		// (set) Token: 0x06018E7F RID: 102015 RVA: 0x00395804 File Offset: 0x00393A04
+		// Token: 0x17007E01 RID: 32257
+		// (get) Token: 0x0601A5D8 RID: 107992 RVA: 0x003C0D5C File Offset: 0x003BEF5C
+		// (set) Token: 0x0601A5D9 RID: 107993 RVA: 0x003C0D64 File Offset: 0x003BEF64
 		public ISheriffClueDetailBoardConfigT SheriffClueDetailBoard { get; set; }
 
-		// Token: 0x06018E80 RID: 102016 RVA: 0x0039580D File Offset: 0x00393A0D
+		// Token: 0x0601A5DA RID: 107994 RVA: 0x003C0D6D File Offset: 0x003BEF6D
 		public ITrackCustomBoardOnBtLogicNodeT()
 		{
 			this.FastReturnMapPos = null;

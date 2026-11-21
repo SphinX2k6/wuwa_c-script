@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FD6 RID: 4054
+	// Token: 0x02001102 RID: 4354
 	public class IKuroSimpleCombatKillMonsterSystemConfig_SetValue
 	{
-		// Token: 0x04003673 RID: 13939
+		// Token: 0x040039AB RID: 14763
 		public EEnableSystemType Type;
 	}
 }

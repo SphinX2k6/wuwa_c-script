@@ -5,10 +5,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x0200507B RID: 20603
+	// Token: 0x0200404B RID: 16459
 	public class PlotAvgCharacterMoveComponent
 	{
-		// Token: 0x06034CB6 RID: 216246 RVA: 0x00C7D98C File Offset: 0x00C7BB8C
+		// Token: 0x06029BAB RID: 170923 RVA: 0x00BCAD64 File Offset: 0x00BC8F64
 		public UniTask<bool> PlayCharacterMoveAsync([Nullable(1)] IPlotAvgMoveComponentPlayContext context)
 		{
 			PlotAvgCharacterMoveComponent.<PlayCharacterMoveAsync>d__7 <PlayCharacterMoveAsync>d__;
@@ -20,14 +20,14 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return <PlayCharacterMoveAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034CB7 RID: 216247 RVA: 0x00C7D9D7 File Offset: 0x00C7BBD7
+		// Token: 0x06029BAC RID: 170924 RVA: 0x00BCADAF File Offset: 0x00BC8FAF
 		public void StopCharacterMove()
 		{
 			this.ResetMove(false);
 			this.Tweener.KillTween();
 		}
 
-		// Token: 0x06034CB8 RID: 216248 RVA: 0x00C7D9EB File Offset: 0x00C7BBEB
+		// Token: 0x06029BAD RID: 170925 RVA: 0x00BCADC3 File Offset: 0x00BC8FC3
 		private void OnValueUpdate(float value)
 		{
 			IPlotAvgCharacterMove movingCharacter = this.MovingCharacter;
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			movingCharacter.SetPosition(value);
 		}
 
-		// Token: 0x06034CB9 RID: 216249 RVA: 0x00C7D9FE File Offset: 0x00C7BBFE
+		// Token: 0x06029BAE RID: 170926 RVA: 0x00BCADD6 File Offset: 0x00BC8FD6
 		private void OnMoveComplete()
 		{
 			this.ResetMove(true);
 		}
 
-		// Token: 0x06034CBA RID: 216250 RVA: 0x00C7DA08 File Offset: 0x00C7BC08
+		// Token: 0x06029BAF RID: 170927 RVA: 0x00BCADE0 File Offset: 0x00BC8FE0
 		private void ResetMove(bool bComplete)
 		{
 			this.IsMoving = false;
@@ -61,40 +61,40 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.MovingPromise = null;
 		}
 
-		// Token: 0x06034CBB RID: 216251 RVA: 0x00C7DA68 File Offset: 0x00C7BC68
+		// Token: 0x06029BB0 RID: 170928 RVA: 0x00BCAE40 File Offset: 0x00BC9040
 		public void Clear()
 		{
 			this.ResetMove(false);
 			this.Tweener.Destroy();
 		}
 
-		// Token: 0x06034CBC RID: 216252 RVA: 0x00C7DA7C File Offset: 0x00C7BC7C
+		// Token: 0x06029BB1 RID: 170929 RVA: 0x00BCAE54 File Offset: 0x00BC9054
 		public bool GetIsMoving()
 		{
 			return this.IsMoving;
 		}
 
-		// Token: 0x0401C214 RID: 115220
+		// Token: 0x04016C3F RID: 93247
 		[Nullable(2)]
 		private IPlotAvgCharacterMove MovingCharacter;
 
-		// Token: 0x0401C215 RID: 115221
+		// Token: 0x04016C40 RID: 93248
 		private bool IsMoving;
 
-		// Token: 0x0401C216 RID: 115222
+		// Token: 0x04016C41 RID: 93249
 		private float MoveDuration;
 
-		// Token: 0x0401C217 RID: 115223
+		// Token: 0x04016C42 RID: 93250
 		private float MoveStartPosition;
 
-		// Token: 0x0401C218 RID: 115224
+		// Token: 0x04016C43 RID: 93251
 		private float MoveEndPosition;
 
-		// Token: 0x0401C219 RID: 115225
+		// Token: 0x04016C44 RID: 93252
 		[Nullable(1)]
 		private readonly LguiFloatTween Tweener = new LguiFloatTween();
 
-		// Token: 0x0401C21A RID: 115226
+		// Token: 0x04016C45 RID: 93253
 		[Nullable(2)]
 		private CustomPromise<bool> MovingPromise;
 	}

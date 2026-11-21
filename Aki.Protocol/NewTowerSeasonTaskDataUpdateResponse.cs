@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000B4F RID: 2895
+	// Token: 0x02000B3E RID: 2878
 	[NetMessage(EMessageId.NewTowerSeasonTaskDataUpdateResponse)]
 	public sealed class NewTowerSeasonTaskDataUpdateResponse : IMessage<NewTowerSeasonTaskDataUpdateResponse>, IMessage, IEquatable<NewTowerSeasonTaskDataUpdateResponse>, IDeepCloneable<NewTowerSeasonTaskDataUpdateResponse>, IBufferMessage
 	{
-		// Token: 0x0600FB09 RID: 64265 RVA: 0x002495F2 File Offset: 0x002477F2
+		// Token: 0x0600F9EF RID: 63983 RVA: 0x002473DE File Offset: 0x002455DE
 		[NullableContext(1)]
 		public static NewTowerSeasonTaskDataUpdateResponse Create()
 		{
 			return new NewTowerSeasonTaskDataUpdateResponse();
 		}
 
-		// Token: 0x1700332E RID: 13102
-		// (get) Token: 0x0600FB0A RID: 64266 RVA: 0x002495F9 File Offset: 0x002477F9
+		// Token: 0x170032F0 RID: 13040
+		// (get) Token: 0x0600F9F0 RID: 63984 RVA: 0x002473E5 File Offset: 0x002455E5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700332F RID: 13103
-		// (get) Token: 0x0600FB0B RID: 64267 RVA: 0x002495FC File Offset: 0x002477FC
+		// Token: 0x170032F1 RID: 13041
+		// (get) Token: 0x0600F9F1 RID: 63985 RVA: 0x002473E8 File Offset: 0x002455E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FB0C RID: 64268 RVA: 0x00249603 File Offset: 0x00247803
+		// Token: 0x0600F9F2 RID: 63986 RVA: 0x002473EF File Offset: 0x002455EF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewTowerSeasonTaskDataUpdateResponse()
 		{
 		}
 
-		// Token: 0x0600FB0D RID: 64269 RVA: 0x00249616 File Offset: 0x00247816
+		// Token: 0x0600F9F3 RID: 63987 RVA: 0x00247402 File Offset: 0x00245602
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewTowerSeasonTaskDataUpdateResponse(NewTowerSeasonTaskDataUpdateResponse other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600FB0E RID: 64270 RVA: 0x00249640 File Offset: 0x00247840
+		// Token: 0x0600F9F4 RID: 63988 RVA: 0x0024742C File Offset: 0x0024562C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewTowerSeasonTaskDataUpdateResponse Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new NewTowerSeasonTaskDataUpdateResponse(this);
 		}
 
-		// Token: 0x17003330 RID: 13104
-		// (get) Token: 0x0600FB0F RID: 64271 RVA: 0x00249648 File Offset: 0x00247848
+		// Token: 0x170032F2 RID: 13042
+		// (get) Token: 0x0600F9F5 RID: 63989 RVA: 0x00247434 File Offset: 0x00245634
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<ActivityTask> SeasonTasks
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FB10 RID: 64272 RVA: 0x00249650 File Offset: 0x00247850
+		// Token: 0x0600F9F6 RID: 63990 RVA: 0x0024743C File Offset: 0x0024563C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as NewTowerSeasonTaskDataUpdateResponse);
 		}
 
-		// Token: 0x0600FB11 RID: 64273 RVA: 0x0024965E File Offset: 0x0024785E
+		// Token: 0x0600F9F7 RID: 63991 RVA: 0x0024744A File Offset: 0x0024564A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(NewTowerSeasonTaskDataUpdateResponse other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.seasonTasks_.Equals(other.seasonTasks_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600FB12 RID: 64274 RVA: 0x00249694 File Offset: 0x00247894
+		// Token: 0x0600F9F8 RID: 63992 RVA: 0x00247480 File Offset: 0x00245680
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FB13 RID: 64275 RVA: 0x002496C8 File Offset: 0x002478C8
+		// Token: 0x0600F9F9 RID: 63993 RVA: 0x002474B4 File Offset: 0x002456B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600FB14 RID: 64276 RVA: 0x002496D5 File Offset: 0x002478D5
+		// Token: 0x0600F9FA RID: 63994 RVA: 0x002474C1 File Offset: 0x002456C1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600FB15 RID: 64277 RVA: 0x002496DE File Offset: 0x002478DE
+		// Token: 0x0600F9FB RID: 63995 RVA: 0x002474CA File Offset: 0x002456CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FB16 RID: 64278 RVA: 0x00249708 File Offset: 0x00247908
+		// Token: 0x0600F9FC RID: 63996 RVA: 0x002474F4 File Offset: 0x002456F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FB17 RID: 64279 RVA: 0x00249741 File Offset: 0x00247941
+		// Token: 0x0600F9FD RID: 63997 RVA: 0x0024752D File Offset: 0x0024572D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(NewTowerSeasonTaskDataUpdateResponse other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600FB18 RID: 64280 RVA: 0x0024976F File Offset: 0x0024796F
+		// Token: 0x0600F9FE RID: 63998 RVA: 0x0024755B File Offset: 0x0024575B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600FB19 RID: 64281 RVA: 0x00249778 File Offset: 0x00247978
+		// Token: 0x0600F9FF RID: 63999 RVA: 0x00247564 File Offset: 0x00245764
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 90U)
+				if (num != 106U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006468 RID: 25704
+		// Token: 0x04006471 RID: 25713
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006469 RID: 25705
-		public const int SeasonTasksFieldNumber = 11;
+		// Token: 0x04006472 RID: 25714
+		public const int SeasonTasksFieldNumber = 13;
 
-		// Token: 0x0400646A RID: 25706
-		private static readonly FieldCodec<ActivityTask> _repeated_seasonTasks_codec = FieldCodec.ForMessage<ActivityTask>(90U, ActivityTask.Parser);
+		// Token: 0x04006473 RID: 25715
+		private static readonly FieldCodec<ActivityTask> _repeated_seasonTasks_codec = FieldCodec.ForMessage<ActivityTask>(106U, ActivityTask.Parser);
 
-		// Token: 0x0400646B RID: 25707
+		// Token: 0x04006474 RID: 25716
 		private readonly RepeatedField<ActivityTask> seasonTasks_ = new RepeatedField<ActivityTask>();
 	}
 }

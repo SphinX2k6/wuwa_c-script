@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067C7 RID: 26567
+	// Token: 0x02005717 RID: 22295
 	public readonly struct StarMatch
 	{
-		// Token: 0x06042296 RID: 270998 RVA: 0x0100B2AE File Offset: 0x010094AE
+		// Token: 0x06036DEC RID: 224748 RVA: 0x00F4C692 File Offset: 0x00F4A892
 		public StarMatch(int ownerUid, int starIndex, int satisfierUid)
 		{
 			this.OwnerUid = ownerUid;
@@ -13,13 +13,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SatisfierUid = satisfierUid;
 		}
 
-		// Token: 0x040228A8 RID: 141480
+		// Token: 0x0401D105 RID: 119045
 		public readonly int OwnerUid;
 
-		// Token: 0x040228A9 RID: 141481
+		// Token: 0x0401D106 RID: 119046
 		public readonly int StarIndex;
 
-		// Token: 0x040228AA RID: 141482
+		// Token: 0x0401D107 RID: 119047
 		public readonly int SatisfierUid;
 	}
 }

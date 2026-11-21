@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActivity
 {
-	// Token: 0x0200674A RID: 26442
+	// Token: 0x0200569A RID: 22170
 	internal enum EBgPrefabComponents
 	{
-		// Token: 0x04022604 RID: 140804
+		// Token: 0x0401CE5D RID: 118365
 		ItemMale,
-		// Token: 0x04022605 RID: 140805
+		// Token: 0x0401CE5E RID: 118366
 		ItemFemale
 	}
 }

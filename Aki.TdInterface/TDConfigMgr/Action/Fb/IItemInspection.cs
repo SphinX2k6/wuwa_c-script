@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002857 RID: 10327
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B2A RID: 11050
 	public class IItemInspection : IUiGame
 	{
-		// Token: 0x0600E4EC RID: 58604 RVA: 0x0021AE7E File Offset: 0x0021907E
+		// Token: 0x0600F311 RID: 62225 RVA: 0x00237CE2 File Offset: 0x00235EE2
 		public static IItemInspection Create(IItemInspection? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004600 RID: 17920
-		// (get) Token: 0x0600E4ED RID: 58605 RVA: 0x0021AE9D File Offset: 0x0021909D
+		// Token: 0x1700496B RID: 18795
+		// (get) Token: 0x0600F312 RID: 62226 RVA: 0x00237D01 File Offset: 0x00235F01
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004601 RID: 17921
-		// (get) Token: 0x0600E4EE RID: 58606 RVA: 0x0021AEAA File Offset: 0x002190AA
+		// Token: 0x1700496C RID: 18796
+		// (get) Token: 0x0600F313 RID: 62227 RVA: 0x00237D0E File Offset: 0x00235F0E
 		public virtual string PrefabPath
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004602 RID: 17922
-		// (get) Token: 0x0600E4EF RID: 58607 RVA: 0x0021AEB7 File Offset: 0x002190B7
+		// Token: 0x1700496D RID: 18797
+		// (get) Token: 0x0600F314 RID: 62228 RVA: 0x00237D1B File Offset: 0x00235F1B
 		public virtual float RotateSpeed
 		{
 			get
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004603 RID: 17923
-		// (get) Token: 0x0600E4F0 RID: 58608 RVA: 0x0021AEC4 File Offset: 0x002190C4
+		// Token: 0x1700496E RID: 18798
+		// (get) Token: 0x0600F315 RID: 62229 RVA: 0x00237D28 File Offset: 0x00235F28
 		public virtual ISequenceUnlockPoints InteractPointsConfig
 		{
 			get
@@ -68,8 +66,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004604 RID: 17924
-		// (get) Token: 0x0600E4F1 RID: 58609 RVA: 0x0021AEF8 File Offset: 0x002190F8
+		// Token: 0x1700496F RID: 18799
+		// (get) Token: 0x0600F316 RID: 62230 RVA: 0x00237D5C File Offset: 0x00235F5C
 		public virtual IConeRangeCheck RangeCheckConfig
 		{
 			get
@@ -84,8 +82,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004605 RID: 17925
-		// (get) Token: 0x0600E4F2 RID: 58610 RVA: 0x0021AF2C File Offset: 0x0021912C
+		// Token: 0x17004970 RID: 18800
+		// (get) Token: 0x0600F317 RID: 62231 RVA: 0x00237D90 File Offset: 0x00235F90
 		public virtual IAstrologyTextUiConfig TextUiConfig
 		{
 			get
@@ -100,8 +98,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004606 RID: 17926
-		// (get) Token: 0x0600E4F3 RID: 58611 RVA: 0x0021AF60 File Offset: 0x00219160
+		// Token: 0x17004971 RID: 18801
+		// (get) Token: 0x0600F318 RID: 62232 RVA: 0x00237DC4 File Offset: 0x00235FC4
 		public virtual bool? CanExit
 		{
 			get
@@ -114,8 +112,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004607 RID: 17927
-		// (get) Token: 0x0600E4F4 RID: 58612 RVA: 0x0021AF98 File Offset: 0x00219198
+		// Token: 0x17004972 RID: 18802
+		// (get) Token: 0x0600F319 RID: 62233 RVA: 0x00237DFC File Offset: 0x00235FFC
 		public virtual float? ItemOffsetDistance
 		{
 			get
@@ -128,8 +126,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004608 RID: 17928
-		// (get) Token: 0x0600E4F5 RID: 58613 RVA: 0x0021AFCE File Offset: 0x002191CE
+		// Token: 0x17004973 RID: 18803
+		// (get) Token: 0x0600F31A RID: 62234 RVA: 0x00237E32 File Offset: 0x00236032
 		[Nullable(2)]
 		public virtual IItemInspectFinishEffect ItemInteractFinishEffect
 		{
@@ -146,35 +144,35 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EA3 RID: 32419
+		// Token: 0x04008560 RID: 34144
 		private IItemInspection Instance;
 
-		// Token: 0x04007EA4 RID: 32420
+		// Token: 0x04008561 RID: 34145
 		[Nullable(2)]
 		private ISequenceUnlockPoints _InteractPointsConfigCache;
 
-		// Token: 0x04007EA5 RID: 32421
+		// Token: 0x04008562 RID: 34146
 		private bool _InteractPointsConfigInited;
 
-		// Token: 0x04007EA6 RID: 32422
+		// Token: 0x04008563 RID: 34147
 		[Nullable(2)]
 		private IConeRangeCheck _RangeCheckConfigCache;
 
-		// Token: 0x04007EA7 RID: 32423
+		// Token: 0x04008564 RID: 34148
 		private bool _RangeCheckConfigInited;
 
-		// Token: 0x04007EA8 RID: 32424
+		// Token: 0x04008565 RID: 34149
 		[Nullable(2)]
 		private IAstrologyTextUiConfig _TextUiConfigCache;
 
-		// Token: 0x04007EA9 RID: 32425
+		// Token: 0x04008566 RID: 34150
 		private bool _TextUiConfigInited;
 
-		// Token: 0x04007EAA RID: 32426
+		// Token: 0x04008567 RID: 34151
 		[Nullable(2)]
 		private IItemInspectFinishEffect _ItemInteractFinishEffectCache;
 
-		// Token: 0x04007EAB RID: 32427
+		// Token: 0x04008568 RID: 34152
 		private bool _ItemInteractFinishEffectInited;
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005312 RID: 21266
+	// Token: 0x02005898 RID: 22680
 	public enum IGraph3dEffectBase_Union : byte
 	{
-		// Token: 0x0400E4C7 RID: 58567
+		// Token: 0x0400F0F7 RID: 61687
 		NONE,
-		// Token: 0x0400E4C8 RID: 58568
+		// Token: 0x0400F0F8 RID: 61688
 		IGraph3dEffectBase,
-		// Token: 0x0400E4C9 RID: 58569
+		// Token: 0x0400F0F9 RID: 61689
 		IFireBoxFishEffect
 	}
 }

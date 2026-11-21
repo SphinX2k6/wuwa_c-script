@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004665 RID: 18021
+	// Token: 0x02003596 RID: 13718
 	public class UiDefine
 	{
-		// Token: 0x04018E55 RID: 101973
+		// Token: 0x040134AE RID: 79022
 		[StaticVariableRuleIgnore]
 		public static int UI_REQUEST_TIMEOUT = 10000;
 	}

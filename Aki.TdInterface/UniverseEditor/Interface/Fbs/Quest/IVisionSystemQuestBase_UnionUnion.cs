@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004272 RID: 17010
+	// Token: 0x020046CE RID: 18126
 	public class IVisionSystemQuestBase_UnionUnion
 	{
-		// Token: 0x170078BC RID: 30908
-		// (get) Token: 0x060192C5 RID: 103109 RVA: 0x0039E0D1 File Offset: 0x0039C2D1
-		// (set) Token: 0x060192C6 RID: 103110 RVA: 0x0039E0D9 File Offset: 0x0039C2D9
+		// Token: 0x17007EED RID: 32493
+		// (get) Token: 0x0601AA31 RID: 109105 RVA: 0x003C97A9 File Offset: 0x003C79A9
+		// (set) Token: 0x0601AA32 RID: 109106 RVA: 0x003C97B1 File Offset: 0x003C79B1
 		public IVisionSystemQuestBase_Union Type { get; set; }
 
-		// Token: 0x170078BD RID: 30909
-		// (get) Token: 0x060192C7 RID: 103111 RVA: 0x0039E0E2 File Offset: 0x0039C2E2
-		// (set) Token: 0x060192C8 RID: 103112 RVA: 0x0039E0EA File Offset: 0x0039C2EA
+		// Token: 0x17007EEE RID: 32494
+		// (get) Token: 0x0601AA33 RID: 109107 RVA: 0x003C97BA File Offset: 0x003C79BA
+		// (set) Token: 0x0601AA34 RID: 109108 RVA: 0x003C97C2 File Offset: 0x003C79C2
 		public object Value { get; set; }
 
-		// Token: 0x060192C9 RID: 103113 RVA: 0x0039E0F3 File Offset: 0x0039C2F3
+		// Token: 0x0601AA35 RID: 109109 RVA: 0x003C97CB File Offset: 0x003C79CB
 		public IVisionSystemQuestBase_UnionUnion()
 		{
 			this.Type = IVisionSystemQuestBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060192CA RID: 103114 RVA: 0x0039E109 File Offset: 0x0039C309
+		// Token: 0x0601AA36 RID: 109110 RVA: 0x003C97E1 File Offset: 0x003C79E1
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060192CB RID: 103115 RVA: 0x0039E11B File Offset: 0x0039C31B
+		// Token: 0x0601AA37 RID: 109111 RVA: 0x003C97F3 File Offset: 0x003C79F3
 		public IVisionSystemQuestBaseT AsIVisionSystemQuestBase()
 		{
 			return this.As<IVisionSystemQuestBaseT>();
 		}
 
-		// Token: 0x060192CC RID: 103116 RVA: 0x0039E123 File Offset: 0x0039C323
+		// Token: 0x0601AA38 RID: 109112 RVA: 0x003C97FB File Offset: 0x003C79FB
 		public static IVisionSystemQuestBase_UnionUnion FromIVisionSystemQuestBase(IVisionSystemQuestBaseT _ivisionsystemquestbase)
 		{
 			return new IVisionSystemQuestBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060192CD RID: 103117 RVA: 0x0039E138 File Offset: 0x0039C338
+		// Token: 0x0601AA39 RID: 109113 RVA: 0x003C9810 File Offset: 0x003C7A10
 		public IVisionSystemQuestTargetLevelT AsIVisionSystemQuestTargetLevel()
 		{
 			return this.As<IVisionSystemQuestTargetLevelT>();
 		}
 
-		// Token: 0x060192CE RID: 103118 RVA: 0x0039E140 File Offset: 0x0039C340
+		// Token: 0x0601AA3A RID: 109114 RVA: 0x003C9818 File Offset: 0x003C7A18
 		public static IVisionSystemQuestBase_UnionUnion FromIVisionSystemQuestTargetLevel(IVisionSystemQuestTargetLevelT _ivisionsystemquesttargetlevel)
 		{
 			return new IVisionSystemQuestBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060192CF RID: 103119 RVA: 0x0039E155 File Offset: 0x0039C355
+		// Token: 0x0601AA3B RID: 109115 RVA: 0x003C982D File Offset: 0x003C7A2D
 		public IVisionSystemQuestSetActivatedT AsIVisionSystemQuestSetActivated()
 		{
 			return this.As<IVisionSystemQuestSetActivatedT>();
 		}
 
-		// Token: 0x060192D0 RID: 103120 RVA: 0x0039E15D File Offset: 0x0039C35D
+		// Token: 0x0601AA3C RID: 109116 RVA: 0x003C9835 File Offset: 0x003C7A35
 		public static IVisionSystemQuestBase_UnionUnion FromIVisionSystemQuestSetActivated(IVisionSystemQuestSetActivatedT _ivisionsystemquestsetactivated)
 		{
 			return new IVisionSystemQuestBase_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060192D1 RID: 103121 RVA: 0x0039E172 File Offset: 0x0039C372
+		// Token: 0x0601AA3D RID: 109117 RVA: 0x003C984A File Offset: 0x003C7A4A
 		public IVisionSystemQuestDoIdentifyT AsIVisionSystemQuestDoIdentify()
 		{
 			return this.As<IVisionSystemQuestDoIdentifyT>();
 		}
 
-		// Token: 0x060192D2 RID: 103122 RVA: 0x0039E17A File Offset: 0x0039C37A
+		// Token: 0x0601AA3E RID: 109118 RVA: 0x003C9852 File Offset: 0x003C7A52
 		public static IVisionSystemQuestBase_UnionUnion FromIVisionSystemQuestDoIdentify(IVisionSystemQuestDoIdentifyT _ivisionsystemquestdoidentify)
 		{
 			return new IVisionSystemQuestBase_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060192D3 RID: 103123 RVA: 0x0039E190 File Offset: 0x0039C390
+		// Token: 0x0601AA3F RID: 109119 RVA: 0x003C9868 File Offset: 0x003C7A68
 		public static int Pack(FlatBufferBuilder builder, IVisionSystemQuestBase_UnionUnion _o)
 		{
 			switch (_o.Type)

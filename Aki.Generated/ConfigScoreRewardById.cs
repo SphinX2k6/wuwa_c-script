@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008FA RID: 2298
+	// Token: 0x02000945 RID: 2373
 	public class ConfigScoreRewardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060035EF RID: 13807 RVA: 0x0018A2AC File Offset: 0x001884AC
+		// Token: 0x060037B1 RID: 14257 RVA: 0x001974CC File Offset: 0x001956CC
 		static ConfigScoreRewardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigScoreRewardById.CreateStaticDefaultValue), new Action(ConfigScoreRewardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060035F0 RID: 13808 RVA: 0x0018A2CC File Offset: 0x001884CC
+		// Token: 0x060037B2 RID: 14258 RVA: 0x001974EC File Offset: 0x001956EC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigScoreRewardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060035F1 RID: 13809 RVA: 0x0018A34B File Offset: 0x0018854B
+		// Token: 0x060037B3 RID: 14259 RVA: 0x0019756B File Offset: 0x0019576B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigScoreRewardById.LogPair = null;
 			ConfigScoreRewardById.HandleId = 0;
 		}
 
-		// Token: 0x060035F2 RID: 13810 RVA: 0x0018A359 File Offset: 0x00188559
+		// Token: 0x060037B4 RID: 14260 RVA: 0x00197579 File Offset: 0x00195779
 		public static void Init()
 		{
 			ConfigScoreRewardById.HandleId = ConfigCommon.InitDataStatement(ConfigScoreRewardById.HandleId, "db_takeweeds.db", "select BinData from `ScoreReward` where Id=?");
 		}
 
-		// Token: 0x060035F3 RID: 13811 RVA: 0x0018A374 File Offset: 0x00188574
+		// Token: 0x060037B5 RID: 14261 RVA: 0x00197594 File Offset: 0x00195794
 		public static ScoreReward? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigScoreRewardById.HandleId, ConfigScoreRewardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ScoreReward?(rootAsScoreReward);
 		}
 
-		// Token: 0x04003EBC RID: 16060
+		// Token: 0x040040C9 RID: 16585
 		private const string DB = "db_takeweeds.db";
 
-		// Token: 0x04003EBD RID: 16061
+		// Token: 0x040040CA RID: 16586
 		private const string FILE = "g.割草活动.xlsx";
 
-		// Token: 0x04003EBE RID: 16062
+		// Token: 0x040040CB RID: 16587
 		private const string TABLE = "ScoreReward";
 
-		// Token: 0x04003EBF RID: 16063
+		// Token: 0x040040CC RID: 16588
 		private const string COMMAND = "select BinData from `ScoreReward` where Id=?";
 
-		// Token: 0x04003EC0 RID: 16064
+		// Token: 0x040040CD RID: 16589
 		private const string KEY_PREFIX = "ScoreRewardById";
 
-		// Token: 0x04003EC1 RID: 16065
+		// Token: 0x040040CE RID: 16590
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003EC2 RID: 16066
+		// Token: 0x040040CF RID: 16591
 		private static int HandleId;
 	}
 }

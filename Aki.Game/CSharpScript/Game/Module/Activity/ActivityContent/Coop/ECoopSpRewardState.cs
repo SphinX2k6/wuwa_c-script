@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068CE RID: 26830
+	// Token: 0x0200581E RID: 22558
 	public enum ECoopSpRewardState
 	{
-		// Token: 0x04022D4E RID: 142670
+		// Token: 0x0401D5AA RID: 120234
 		Lock,
-		// Token: 0x04022D4F RID: 142671
+		// Token: 0x0401D5AB RID: 120235
 		Reward,
-		// Token: 0x04022D50 RID: 142672
+		// Token: 0x0401D5AC RID: 120236
 		Done
 	}
 }

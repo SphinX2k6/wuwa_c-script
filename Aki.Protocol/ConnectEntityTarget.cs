@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020002D6 RID: 726
+	// Token: 0x020002DD RID: 733
 	public sealed class ConnectEntityTarget : IMessage<ConnectEntityTarget>, IMessage, IEquatable<ConnectEntityTarget>, IDeepCloneable<ConnectEntityTarget>, IBufferMessage
 	{
-		// Token: 0x06004A48 RID: 19016 RVA: 0x000B5850 File Offset: 0x000B3A50
+		// Token: 0x06004B21 RID: 19233 RVA: 0x000B7C38 File Offset: 0x000B5E38
 		[NullableContext(1)]
 		public static ConnectEntityTarget Create()
 		{
 			return new ConnectEntityTarget();
 		}
 
-		// Token: 0x17000D0A RID: 3338
-		// (get) Token: 0x06004A49 RID: 19017 RVA: 0x000B5857 File Offset: 0x000B3A57
+		// Token: 0x17000D37 RID: 3383
+		// (get) Token: 0x06004B22 RID: 19234 RVA: 0x000B7C3F File Offset: 0x000B5E3F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<ConnectEntityTarget> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D0B RID: 3339
-		// (get) Token: 0x06004A4A RID: 19018 RVA: 0x000B585E File Offset: 0x000B3A5E
+		// Token: 0x17000D38 RID: 3384
+		// (get) Token: 0x06004B23 RID: 19235 RVA: 0x000B7C46 File Offset: 0x000B5E46
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D0C RID: 3340
-		// (get) Token: 0x06004A4B RID: 19019 RVA: 0x000B5861 File Offset: 0x000B3A61
+		// Token: 0x17000D39 RID: 3385
+		// (get) Token: 0x06004B24 RID: 19236 RVA: 0x000B7C49 File Offset: 0x000B5E49
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004A4C RID: 19020 RVA: 0x000B5868 File Offset: 0x000B3A68
+		// Token: 0x06004B25 RID: 19237 RVA: 0x000B7C50 File Offset: 0x000B5E50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ConnectEntityTarget()
 		{
 		}
 
-		// Token: 0x06004A4D RID: 19021 RVA: 0x000B587B File Offset: 0x000B3A7B
+		// Token: 0x06004B26 RID: 19238 RVA: 0x000B7C63 File Offset: 0x000B5E63
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ConnectEntityTarget(ConnectEntityTarget other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06004A4E RID: 19022 RVA: 0x000B58B1 File Offset: 0x000B3AB1
+		// Token: 0x06004B27 RID: 19239 RVA: 0x000B7C99 File Offset: 0x000B5E99
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ConnectEntityTarget Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new ConnectEntityTarget(this);
 		}
 
-		// Token: 0x17000D0D RID: 3341
-		// (get) Token: 0x06004A4F RID: 19023 RVA: 0x000B58B9 File Offset: 0x000B3AB9
-		// (set) Token: 0x06004A50 RID: 19024 RVA: 0x000B58C1 File Offset: 0x000B3AC1
+		// Token: 0x17000D3A RID: 3386
+		// (get) Token: 0x06004B28 RID: 19240 RVA: 0x000B7CA1 File Offset: 0x000B5EA1
+		// (set) Token: 0x06004B29 RID: 19241 RVA: 0x000B7CA9 File Offset: 0x000B5EA9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long TargetId
@@ -96,8 +96,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D0E RID: 3342
-		// (get) Token: 0x06004A51 RID: 19025 RVA: 0x000B58CA File Offset: 0x000B3ACA
+		// Token: 0x17000D3B RID: 3387
+		// (get) Token: 0x06004B2A RID: 19242 RVA: 0x000B7CB2 File Offset: 0x000B5EB2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<long> ConnectPortalIds
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004A52 RID: 19026 RVA: 0x000B58D2 File Offset: 0x000B3AD2
+		// Token: 0x06004B2B RID: 19243 RVA: 0x000B7CBA File Offset: 0x000B5EBA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ConnectEntityTarget);
 		}
 
-		// Token: 0x06004A53 RID: 19027 RVA: 0x000B58E0 File Offset: 0x000B3AE0
+		// Token: 0x06004B2C RID: 19244 RVA: 0x000B7CC8 File Offset: 0x000B5EC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ConnectEntityTarget other)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.TargetId == other.TargetId && this.connectPortalIds_.Equals(other.connectPortalIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06004A54 RID: 19028 RVA: 0x000B5930 File Offset: 0x000B3B30
+		// Token: 0x06004B2D RID: 19245 RVA: 0x000B7D18 File Offset: 0x000B5F18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004A55 RID: 19029 RVA: 0x000B597D File Offset: 0x000B3B7D
+		// Token: 0x06004B2E RID: 19246 RVA: 0x000B7D65 File Offset: 0x000B5F65
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06004A56 RID: 19030 RVA: 0x000B598A File Offset: 0x000B3B8A
+		// Token: 0x06004B2F RID: 19247 RVA: 0x000B7D72 File Offset: 0x000B5F72
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06004A57 RID: 19031 RVA: 0x000B5994 File Offset: 0x000B3B94
+		// Token: 0x06004B30 RID: 19248 RVA: 0x000B7D7C File Offset: 0x000B5F7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004A58 RID: 19032 RVA: 0x000B59E4 File Offset: 0x000B3BE4
+		// Token: 0x06004B31 RID: 19249 RVA: 0x000B7DCC File Offset: 0x000B5FCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004A59 RID: 19033 RVA: 0x000B5A38 File Offset: 0x000B3C38
+		// Token: 0x06004B32 RID: 19250 RVA: 0x000B7E20 File Offset: 0x000B6020
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ConnectEntityTarget other)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06004A5A RID: 19034 RVA: 0x000B5A85 File Offset: 0x000B3C85
+		// Token: 0x06004B33 RID: 19251 RVA: 0x000B7E6D File Offset: 0x000B606D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06004A5B RID: 19035 RVA: 0x000B5A90 File Offset: 0x000B3C90
+		// Token: 0x06004B34 RID: 19252 RVA: 0x000B7E78 File Offset: 0x000B6078
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -248,25 +248,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003071 RID: 12401
+		// Token: 0x04003108 RID: 12552
 		private static readonly MessageParser<ConnectEntityTarget> _parser = new MessageParser<ConnectEntityTarget>(() => new ConnectEntityTarget());
 
-		// Token: 0x04003072 RID: 12402
+		// Token: 0x04003109 RID: 12553
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003073 RID: 12403
+		// Token: 0x0400310A RID: 12554
 		public const int TargetIdFieldNumber = 1;
 
-		// Token: 0x04003074 RID: 12404
+		// Token: 0x0400310B RID: 12555
 		private long targetId_;
 
-		// Token: 0x04003075 RID: 12405
+		// Token: 0x0400310C RID: 12556
 		public const int ConnectPortalIdsFieldNumber = 2;
 
-		// Token: 0x04003076 RID: 12406
+		// Token: 0x0400310D RID: 12557
 		private static readonly FieldCodec<long> _repeated_connectPortalIds_codec = FieldCodec.ForInt64(18U);
 
-		// Token: 0x04003077 RID: 12407
+		// Token: 0x0400310E RID: 12558
 		private readonly RepeatedField<long> connectPortalIds_ = new RepeatedField<long>();
 	}
 }

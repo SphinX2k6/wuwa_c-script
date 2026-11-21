@@ -3,45 +3,45 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D6F RID: 28015
+	// Token: 0x020074EA RID: 29930
 	public class IPostAkEventT
 	{
-		// Token: 0x1700D0FE RID: 53502
-		// (get) Token: 0x060317AC RID: 202668 RVA: 0x006B5645 File Offset: 0x006B3845
-		// (set) Token: 0x060317AD RID: 202669 RVA: 0x006B564D File Offset: 0x006B384D
+		// Token: 0x1700DC46 RID: 56390
+		// (get) Token: 0x060347A8 RID: 214952 RVA: 0x00710D2D File Offset: 0x0070EF2D
+		// (set) Token: 0x060347A9 RID: 214953 RVA: 0x00710D35 File Offset: 0x0070EF35
 		public TPostAkEventUnion EventConfig { get; set; }
 
-		// Token: 0x1700D0FF RID: 53503
-		// (get) Token: 0x060317AE RID: 202670 RVA: 0x006B5656 File Offset: 0x006B3856
-		// (set) Token: 0x060317AF RID: 202671 RVA: 0x006B565E File Offset: 0x006B385E
+		// Token: 0x1700DC47 RID: 56391
+		// (get) Token: 0x060347AA RID: 214954 RVA: 0x00710D3E File Offset: 0x0070EF3E
+		// (set) Token: 0x060347AB RID: 214955 RVA: 0x00710D46 File Offset: 0x0070EF46
 		public bool PersistWhenExitDungeon { get; set; }
 
-		// Token: 0x1700D100 RID: 53504
-		// (get) Token: 0x060317B0 RID: 202672 RVA: 0x006B5667 File Offset: 0x006B3867
-		// (set) Token: 0x060317B1 RID: 202673 RVA: 0x006B566F File Offset: 0x006B386F
+		// Token: 0x1700DC48 RID: 56392
+		// (get) Token: 0x060347AC RID: 214956 RVA: 0x00710D4F File Offset: 0x0070EF4F
+		// (set) Token: 0x060347AD RID: 214957 RVA: 0x00710D57 File Offset: 0x0070EF57
 		public EMusicEventType MusicEventType { get; set; }
 
-		// Token: 0x1700D101 RID: 53505
-		// (get) Token: 0x060317B2 RID: 202674 RVA: 0x006B5678 File Offset: 0x006B3878
-		// (set) Token: 0x060317B3 RID: 202675 RVA: 0x006B5680 File Offset: 0x006B3880
+		// Token: 0x1700DC49 RID: 56393
+		// (get) Token: 0x060347AE RID: 214958 RVA: 0x00710D60 File Offset: 0x0070EF60
+		// (set) Token: 0x060347AF RID: 214959 RVA: 0x00710D68 File Offset: 0x0070EF68
 		public bool IsBanVehicleRadio { get; set; }
 
-		// Token: 0x1700D102 RID: 53506
-		// (get) Token: 0x060317B4 RID: 202676 RVA: 0x006B5689 File Offset: 0x006B3889
-		// (set) Token: 0x060317B5 RID: 202677 RVA: 0x006B5691 File Offset: 0x006B3891
+		// Token: 0x1700DC4A RID: 56394
+		// (get) Token: 0x060347B0 RID: 214960 RVA: 0x00710D71 File Offset: 0x0070EF71
+		// (set) Token: 0x060347B1 RID: 214961 RVA: 0x00710D79 File Offset: 0x0070EF79
 		public float FadeOutTimeWhenFlowEnd { get; set; }
 
-		// Token: 0x1700D103 RID: 53507
-		// (get) Token: 0x060317B6 RID: 202678 RVA: 0x006B569A File Offset: 0x006B389A
-		// (set) Token: 0x060317B7 RID: 202679 RVA: 0x006B56A2 File Offset: 0x006B38A2
+		// Token: 0x1700DC4B RID: 56395
+		// (get) Token: 0x060347B2 RID: 214962 RVA: 0x00710D82 File Offset: 0x0070EF82
+		// (set) Token: 0x060347B3 RID: 214963 RVA: 0x00710D8A File Offset: 0x0070EF8A
 		public float DelayTime { get; set; }
 
-		// Token: 0x1700D104 RID: 53508
-		// (get) Token: 0x060317B8 RID: 202680 RVA: 0x006B56AB File Offset: 0x006B38AB
-		// (set) Token: 0x060317B9 RID: 202681 RVA: 0x006B56B3 File Offset: 0x006B38B3
+		// Token: 0x1700DC4C RID: 56396
+		// (get) Token: 0x060347B4 RID: 214964 RVA: 0x00710D93 File Offset: 0x0070EF93
+		// (set) Token: 0x060347B5 RID: 214965 RVA: 0x00710D9B File Offset: 0x0070EF9B
 		public byte NullMask { get; set; }
 
-		// Token: 0x060317BA RID: 202682 RVA: 0x006B56BC File Offset: 0x006B38BC
+		// Token: 0x060347B6 RID: 214966 RVA: 0x00710DA4 File Offset: 0x0070EFA4
 		public IPostAkEventT()
 		{
 			this.EventConfig = null;

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D1E RID: 3358
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E18 RID: 3608
 	public class ConnectorComponent : IComponentBase
 	{
-		// Token: 0x06004CA5 RID: 19621 RVA: 0x000BEE5B File Offset: 0x000BD05B
+		// Token: 0x060051BF RID: 20927 RVA: 0x000CA52F File Offset: 0x000C872F
 		public static ConnectorComponent Create(IConnectorComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001826 RID: 6182
-		// (get) Token: 0x06004CA6 RID: 19622 RVA: 0x000BEE7C File Offset: 0x000BD07C
+		// Token: 0x1700198A RID: 6538
+		// (get) Token: 0x060051C0 RID: 20928 RVA: 0x000CA550 File Offset: 0x000C8750
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001827 RID: 6183
-		// (get) Token: 0x06004CA7 RID: 19623 RVA: 0x000BEEB4 File Offset: 0x000BD0B4
+		// Token: 0x1700198B RID: 6539
+		// (get) Token: 0x060051C1 RID: 20929 RVA: 0x000CA588 File Offset: 0x000C8788
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001828 RID: 6184
-		// (get) Token: 0x06004CA8 RID: 19624 RVA: 0x000BEECA File Offset: 0x000BD0CA
+		// Token: 0x1700198C RID: 6540
+		// (get) Token: 0x060051C2 RID: 20930 RVA: 0x000CA59E File Offset: 0x000C879E
 		public virtual IConnectorLogicType LogicType
 		{
 			get
@@ -62,13 +59,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BE1 RID: 11233
+		// Token: 0x04002EA1 RID: 11937
 		private IConnectorComponent Instance;
 
-		// Token: 0x04002BE2 RID: 11234
+		// Token: 0x04002EA2 RID: 11938
 		private IConnectorLogicType _LogicTypeCache;
 
-		// Token: 0x04002BE3 RID: 11235
+		// Token: 0x04002EA3 RID: 11939
 		private bool _LogicTypeInited;
 	}
 }

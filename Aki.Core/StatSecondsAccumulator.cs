@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020000C4 RID: 196
+// Token: 0x020000C6 RID: 198
 [NullableContext(1)]
 [Nullable(0)]
 public class StatSecondsAccumulator : IStaticVariableResetter
 {
-	// Token: 0x0600060D RID: 1549 RVA: 0x00020B01 File Offset: 0x0001ED01
+	// Token: 0x0600064E RID: 1614 RVA: 0x0002102D File Offset: 0x0001F22D
 	static StatSecondsAccumulator()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(StatSecondsAccumulator.CreateStaticDefaultValue), new Action(StatSecondsAccumulator.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600060E RID: 1550 RVA: 0x00020B20 File Offset: 0x0001ED20
+	// Token: 0x0600064F RID: 1615 RVA: 0x0002104C File Offset: 0x0001F24C
 	private StatSecondsAccumulator(string name)
 	{
 		this.StatName = name;
 	}
 
-	// Token: 0x0600060F RID: 1551 RVA: 0x00020B3C File Offset: 0x0001ED3C
+	// Token: 0x06000650 RID: 1616 RVA: 0x00021068 File Offset: 0x0001F268
 	public static StatSecondsAccumulator Create(string nameIn, string desc = "", string group = "")
 	{
 		if (!CycleCounter.Instance.IsEnabled)
@@ -40,7 +40,7 @@ public class StatSecondsAccumulator : IStaticVariableResetter
 		return new StatSecondsAccumulator(text);
 	}
 
-	// Token: 0x06000610 RID: 1552 RVA: 0x00020BB0 File Offset: 0x0001EDB0
+	// Token: 0x06000651 RID: 1617 RVA: 0x000210DC File Offset: 0x0001F2DC
 	public void Start()
 	{
 		if (!CycleCounter.Instance.IsEnabled)
@@ -50,7 +50,7 @@ public class StatSecondsAccumulator : IStaticVariableResetter
 		KuroJsStatsLibrary.StartSimpleSeconds(this.StatName);
 	}
 
-	// Token: 0x06000611 RID: 1553 RVA: 0x00020BCA File Offset: 0x0001EDCA
+	// Token: 0x06000652 RID: 1618 RVA: 0x000210F6 File Offset: 0x0001F2F6
 	public void Stop()
 	{
 		if (!CycleCounter.Instance.IsEnabled)
@@ -60,21 +60,21 @@ public class StatSecondsAccumulator : IStaticVariableResetter
 		KuroJsStatsLibrary.StopSimpleSeconds(this.StatName);
 	}
 
-	// Token: 0x06000612 RID: 1554 RVA: 0x00020BE4 File Offset: 0x0001EDE4
+	// Token: 0x06000653 RID: 1619 RVA: 0x00021110 File Offset: 0x0001F310
 	public static void CreateStaticDefaultValue()
 	{
 		StatSecondsAccumulator.Empty = new StatSecondsAccumulator("");
 	}
 
-	// Token: 0x06000613 RID: 1555 RVA: 0x00020BF5 File Offset: 0x0001EDF5
+	// Token: 0x06000654 RID: 1620 RVA: 0x00021121 File Offset: 0x0001F321
 	public static void ResetStaticDefaultValue()
 	{
 		StatSecondsAccumulator.Empty = null;
 	}
 
-	// Token: 0x040004F1 RID: 1265
+	// Token: 0x040004FF RID: 1279
 	private readonly string StatName = "";
 
-	// Token: 0x040004F2 RID: 1266
+	// Token: 0x04000500 RID: 1280
 	private static StatSecondsAccumulator Empty;
 }

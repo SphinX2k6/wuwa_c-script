@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x02002415 RID: 9237
+// Token: 0x020018FA RID: 6394
 public interface IPhantomManagerConfigNewSettingInfo
 {
-	// Token: 0x170017E4 RID: 6116
-	// (get) Token: 0x060127DB RID: 75739
-	// (set) Token: 0x060127DC RID: 75740
+	// Token: 0x1700181E RID: 6174
+	// (get) Token: 0x0600FC91 RID: 64657
+	// (set) Token: 0x0600FC92 RID: 64658
 	int FetterId { get; set; }
 
-	// Token: 0x170017E5 RID: 6117
-	// (get) Token: 0x060127DD RID: 75741
-	// (set) Token: 0x060127DE RID: 75742
+	// Token: 0x1700181F RID: 6175
+	// (get) Token: 0x0600FC93 RID: 64659
+	// (set) Token: 0x0600FC94 RID: 64660
 	int Cost { get; set; }
 
-	// Token: 0x170017E6 RID: 6118
-	// (get) Token: 0x060127DF RID: 75743
-	// (set) Token: 0x060127E0 RID: 75744
+	// Token: 0x17001820 RID: 6176
+	// (get) Token: 0x0600FC95 RID: 64661
+	// (set) Token: 0x0600FC96 RID: 64662
 	int Count { get; set; }
 
-	// Token: 0x170017E7 RID: 6119
-	// (get) Token: 0x060127E1 RID: 75745
-	// (set) Token: 0x060127E2 RID: 75746
+	// Token: 0x17001821 RID: 6177
+	// (get) Token: 0x0600FC97 RID: 64663
+	// (set) Token: 0x0600FC98 RID: 64664
 	int ItemId { get; set; }
 
-	// Token: 0x170017E8 RID: 6120
-	// (get) Token: 0x060127E3 RID: 75747
-	// (set) Token: 0x060127E4 RID: 75748
+	// Token: 0x17001822 RID: 6178
+	// (get) Token: 0x0600FC99 RID: 64665
+	// (set) Token: 0x0600FC9A RID: 64666
 	bool IsEdit { get; set; }
 }

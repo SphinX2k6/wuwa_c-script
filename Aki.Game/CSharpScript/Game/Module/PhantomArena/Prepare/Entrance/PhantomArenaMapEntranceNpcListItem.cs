@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005174 RID: 20852
+	// Token: 0x02004144 RID: 16708
 	internal class PhantomArenaMapEntranceNpcListItem : GridProxyAbstract<int>
 	{
-		// Token: 0x060354F9 RID: 218361 RVA: 0x00CA0088 File Offset: 0x00C9E288
+		// Token: 0x0602A3F5 RID: 173045 RVA: 0x00BED604 File Offset: 0x00BEB804
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x060354FA RID: 218362 RVA: 0x00CA018C File Offset: 0x00C9E38C
+		// Token: 0x0602A3F6 RID: 173046 RVA: 0x00BED708 File Offset: 0x00BEB908
 		private void OnClickItem(EToggleState toggleState)
 		{
 			if (base.GetExtendToggle(0).GetToggleState() == EToggleState.ETT_UnChecked)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			scrollViewDelegate.SelectGridProxy(base.GridIndex, base.DisplayIndex, false);
 		}
 
-		// Token: 0x060354FB RID: 218363 RVA: 0x00CA01DC File Offset: 0x00C9E3DC
+		// Token: 0x0602A3F7 RID: 173047 RVA: 0x00BED758 File Offset: 0x00BEB958
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(delegate()
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			base.GetItem(7).SetUIActive(false);
 		}
 
-		// Token: 0x060354FC RID: 218364 RVA: 0x00CA0240 File Offset: 0x00C9E440
+		// Token: 0x0602A3F8 RID: 173048 RVA: 0x00BED7BC File Offset: 0x00BEB9BC
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.ChallengeId = data;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			base.TrySetTextureByPath(resourcePath, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x060354FD RID: 218365 RVA: 0x00CA03C6 File Offset: 0x00C9E5C6
+		// Token: 0x0602A3F9 RID: 173049 RVA: 0x00BED942 File Offset: 0x00BEBB42
 		public override void OnSelected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			extendToggle.SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x060354FE RID: 218366 RVA: 0x00CA03DE File Offset: 0x00C9E5DE
+		// Token: 0x0602A3FA RID: 173050 RVA: 0x00BED95A File Offset: 0x00BEBB5A
 		public override void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -138,52 +138,52 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x060354FF RID: 218367 RVA: 0x00CA03F6 File Offset: 0x00C9E5F6
+		// Token: 0x0602A3FB RID: 173051 RVA: 0x00BED972 File Offset: 0x00BEBB72
 		[NullableContext(1)]
 		public override object GetKey(int data, int displayIndex)
 		{
 			return data;
 		}
 
-		// Token: 0x0401C597 RID: 116119
+		// Token: 0x04016FCC RID: 94156
 		private int ChallengeId;
 
-		// Token: 0x0401C598 RID: 116120
+		// Token: 0x04016FCD RID: 94157
 		[Nullable(2)]
 		private UUIItem CurrentStateUi;
 
-		// Token: 0x0401C599 RID: 116121
+		// Token: 0x04016FCE RID: 94158
 		[Nullable(2)]
 		public Action<int> SelectCallBack;
 
-		// Token: 0x0200B2DC RID: 45788
+		// Token: 0x02009D16 RID: 40214
 		private static class EComponents
 		{
-			// Token: 0x04036311 RID: 221969
+			// Token: 0x04030D68 RID: 200040
 			public const int Toggle = 0;
 
-			// Token: 0x04036312 RID: 221970
+			// Token: 0x04030D69 RID: 200041
 			public const int TexNPC = 1;
 
-			// Token: 0x04036313 RID: 221971
+			// Token: 0x04030D6A RID: 200042
 			public const int PnlNor = 2;
 
-			// Token: 0x04036314 RID: 221972
+			// Token: 0x04030D6B RID: 200043
 			public const int TextNameNor = 3;
 
-			// Token: 0x04036315 RID: 221973
+			// Token: 0x04030D6C RID: 200044
 			public const int TextNum = 4;
 
-			// Token: 0x04036316 RID: 221974
+			// Token: 0x04030D6D RID: 200045
 			public const int PnlDone = 5;
 
-			// Token: 0x04036317 RID: 221975
+			// Token: 0x04030D6E RID: 200046
 			public const int TextNameDone = 6;
 
-			// Token: 0x04036318 RID: 221976
+			// Token: 0x04030D6F RID: 200047
 			public const int PnlLock = 7;
 
-			// Token: 0x04036319 RID: 221977
+			// Token: 0x04030D70 RID: 200048
 			public const int TextNameLock = 8;
 		}
 	}

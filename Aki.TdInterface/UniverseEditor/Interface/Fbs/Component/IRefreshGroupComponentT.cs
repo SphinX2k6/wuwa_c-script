@@ -3,40 +3,40 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200582A RID: 22570
+	// Token: 0x02005E31 RID: 24113
 	public class IRefreshGroupComponentT
 	{
-		// Token: 0x1700A89B RID: 43163
-		// (get) Token: 0x06025F65 RID: 155493 RVA: 0x0053C01C File Offset: 0x0053A21C
-		// (set) Token: 0x06025F66 RID: 155494 RVA: 0x0053C024 File Offset: 0x0053A224
+		// Token: 0x1700B1BF RID: 45503
+		// (get) Token: 0x06028485 RID: 164997 RVA: 0x005821A8 File Offset: 0x005803A8
+		// (set) Token: 0x06028486 RID: 164998 RVA: 0x005821B0 File Offset: 0x005803B0
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A89C RID: 43164
-		// (get) Token: 0x06025F67 RID: 155495 RVA: 0x0053C02D File Offset: 0x0053A22D
-		// (set) Token: 0x06025F68 RID: 155496 RVA: 0x0053C035 File Offset: 0x0053A235
+		// Token: 0x1700B1C0 RID: 45504
+		// (get) Token: 0x06028487 RID: 164999 RVA: 0x005821B9 File Offset: 0x005803B9
+		// (set) Token: 0x06028488 RID: 165000 RVA: 0x005821C1 File Offset: 0x005803C1
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x1700A89D RID: 43165
-		// (get) Token: 0x06025F69 RID: 155497 RVA: 0x0053C03E File Offset: 0x0053A23E
-		// (set) Token: 0x06025F6A RID: 155498 RVA: 0x0053C046 File Offset: 0x0053A246
+		// Token: 0x1700B1C1 RID: 45505
+		// (get) Token: 0x06028489 RID: 165001 RVA: 0x005821CA File Offset: 0x005803CA
+		// (set) Token: 0x0602848A RID: 165002 RVA: 0x005821D2 File Offset: 0x005803D2
 		public TRefreshContentUnion RefreshContent { get; set; }
 
-		// Token: 0x1700A89E RID: 43166
-		// (get) Token: 0x06025F6B RID: 155499 RVA: 0x0053C04F File Offset: 0x0053A24F
-		// (set) Token: 0x06025F6C RID: 155500 RVA: 0x0053C057 File Offset: 0x0053A257
+		// Token: 0x1700B1C2 RID: 45506
+		// (get) Token: 0x0602848B RID: 165003 RVA: 0x005821DB File Offset: 0x005803DB
+		// (set) Token: 0x0602848C RID: 165004 RVA: 0x005821E3 File Offset: 0x005803E3
 		public TRefreshRuleUnion RefreshRule { get; set; }
 
-		// Token: 0x1700A89F RID: 43167
-		// (get) Token: 0x06025F6D RID: 155501 RVA: 0x0053C060 File Offset: 0x0053A260
-		// (set) Token: 0x06025F6E RID: 155502 RVA: 0x0053C068 File Offset: 0x0053A268
+		// Token: 0x1700B1C3 RID: 45507
+		// (get) Token: 0x0602848D RID: 165005 RVA: 0x005821EC File Offset: 0x005803EC
+		// (set) Token: 0x0602848E RID: 165006 RVA: 0x005821F4 File Offset: 0x005803F4
 		public IStateChangeConfigT StateChangeConfig { get; set; }
 
-		// Token: 0x1700A8A0 RID: 43168
-		// (get) Token: 0x06025F6F RID: 155503 RVA: 0x0053C071 File Offset: 0x0053A271
-		// (set) Token: 0x06025F70 RID: 155504 RVA: 0x0053C079 File Offset: 0x0053A279
+		// Token: 0x1700B1C4 RID: 45508
+		// (get) Token: 0x0602848F RID: 165007 RVA: 0x005821FD File Offset: 0x005803FD
+		// (set) Token: 0x06028490 RID: 165008 RVA: 0x00582205 File Offset: 0x00580405
 		public byte NullMask { get; set; }
 
-		// Token: 0x06025F71 RID: 155505 RVA: 0x0053C082 File Offset: 0x0053A282
+		// Token: 0x06028491 RID: 165009 RVA: 0x0058220E File Offset: 0x0058040E
 		public IRefreshGroupComponentT()
 		{
 			this.Disabled = false;

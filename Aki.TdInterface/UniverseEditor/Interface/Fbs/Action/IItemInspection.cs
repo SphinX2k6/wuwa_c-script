@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069C9 RID: 27081
+	// Token: 0x02007079 RID: 28793
 	public struct IItemInspection : IFlatbufferObject
 	{
-		// Token: 0x1700C8DD RID: 51421
-		// (get) Token: 0x0602F52B RID: 193835 RVA: 0x00671D19 File Offset: 0x0066FF19
+		// Token: 0x1700D2DD RID: 53981
+		// (get) Token: 0x06031EEB RID: 204523 RVA: 0x006C2071 File Offset: 0x006C0271
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F52C RID: 193836 RVA: 0x00671D26 File Offset: 0x0066FF26
+		// Token: 0x06031EEC RID: 204524 RVA: 0x006C207E File Offset: 0x006C027E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F52D RID: 193837 RVA: 0x00671D30 File Offset: 0x0066FF30
+		// Token: 0x06031EED RID: 204525 RVA: 0x006C2088 File Offset: 0x006C0288
 		public static IItemInspection GetRootAsIItemInspection(ByteBuffer _bb)
 		{
 			return IItemInspection.GetRootAsIItemInspection(_bb, default(IItemInspection));
 		}
 
-		// Token: 0x0602F52E RID: 193838 RVA: 0x00671D4C File Offset: 0x0066FF4C
+		// Token: 0x06031EEE RID: 204526 RVA: 0x006C20A4 File Offset: 0x006C02A4
 		public static IItemInspection GetRootAsIItemInspection(ByteBuffer _bb, IItemInspection obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F52F RID: 193839 RVA: 0x00671D69 File Offset: 0x0066FF69
+		// Token: 0x06031EEF RID: 204527 RVA: 0x006C20C1 File Offset: 0x006C02C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F530 RID: 193840 RVA: 0x00671D78 File Offset: 0x0066FF78
+		// Token: 0x06031EF0 RID: 204528 RVA: 0x006C20D0 File Offset: 0x006C02D0
 		public IItemInspection __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C8DE RID: 51422
-		// (get) Token: 0x0602F531 RID: 193841 RVA: 0x00671D88 File Offset: 0x0066FF88
+		// Token: 0x1700D2DE RID: 53982
+		// (get) Token: 0x06031EF1 RID: 204529 RVA: 0x006C20E0 File Offset: 0x006C02E0
 		public ESimpleGameplayType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C8DF RID: 51423
-		// (get) Token: 0x0602F532 RID: 193842 RVA: 0x00671DC4 File Offset: 0x0066FFC4
+		// Token: 0x1700D2DF RID: 53983
+		// (get) Token: 0x06031EF2 RID: 204530 RVA: 0x006C211C File Offset: 0x006C031C
 		public string PrefabPath
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F533 RID: 193843 RVA: 0x00671DFB File Offset: 0x0066FFFB
+		// Token: 0x06031EF3 RID: 204531 RVA: 0x006C2153 File Offset: 0x006C0353
 		public Span<byte> GetPrefabPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602F534 RID: 193844 RVA: 0x00671E0A File Offset: 0x0067000A
+		// Token: 0x06031EF4 RID: 204532 RVA: 0x006C2162 File Offset: 0x006C0362
 		public byte[] GetPrefabPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700C8E0 RID: 51424
-		// (get) Token: 0x0602F535 RID: 193845 RVA: 0x00671E18 File Offset: 0x00670018
+		// Token: 0x1700D2E0 RID: 53984
+		// (get) Token: 0x06031EF5 RID: 204533 RVA: 0x006C2170 File Offset: 0x006C0370
 		public float RotateSpeed
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C8E1 RID: 51425
-		// (get) Token: 0x0602F536 RID: 193846 RVA: 0x00671E58 File Offset: 0x00670058
+		// Token: 0x1700D2E1 RID: 53985
+		// (get) Token: 0x06031EF6 RID: 204534 RVA: 0x006C21B0 File Offset: 0x006C03B0
 		public ISequenceUnlockPoints? InteractPointsConfig
 		{
 			get
@@ -119,8 +119,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C8E2 RID: 51426
-		// (get) Token: 0x0602F537 RID: 193847 RVA: 0x00671EB8 File Offset: 0x006700B8
+		// Token: 0x1700D2E2 RID: 53986
+		// (get) Token: 0x06031EF7 RID: 204535 RVA: 0x006C2210 File Offset: 0x006C0410
 		public IConeRangeCheck? RangeCheckConfig
 		{
 			get
@@ -134,8 +134,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C8E3 RID: 51427
-		// (get) Token: 0x0602F538 RID: 193848 RVA: 0x00671F18 File Offset: 0x00670118
+		// Token: 0x1700D2E3 RID: 53987
+		// (get) Token: 0x06031EF8 RID: 204536 RVA: 0x006C2270 File Offset: 0x006C0470
 		public IAstrologyTextUiConfig? TextUiConfig
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C8E4 RID: 51428
-		// (get) Token: 0x0602F539 RID: 193849 RVA: 0x00671F78 File Offset: 0x00670178
+		// Token: 0x1700D2E4 RID: 53988
+		// (get) Token: 0x06031EF9 RID: 204537 RVA: 0x006C22D0 File Offset: 0x006C04D0
 		public bool CanExit
 		{
 			get
@@ -160,8 +160,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C8E5 RID: 51429
-		// (get) Token: 0x0602F53A RID: 193850 RVA: 0x00671FB8 File Offset: 0x006701B8
+		// Token: 0x1700D2E5 RID: 53989
+		// (get) Token: 0x06031EFA RID: 204538 RVA: 0x006C2310 File Offset: 0x006C0510
 		public float ItemOffsetDistance
 		{
 			get
@@ -175,8 +175,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C8E6 RID: 51430
-		// (get) Token: 0x0602F53B RID: 193851 RVA: 0x00671FFC File Offset: 0x006701FC
+		// Token: 0x1700D2E6 RID: 53990
+		// (get) Token: 0x06031EFB RID: 204539 RVA: 0x006C2354 File Offset: 0x006C0554
 		public IItemInspectFinishEffect? ItemInteractFinishEffect
 		{
 			get
@@ -190,8 +190,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C8E7 RID: 51431
-		// (get) Token: 0x0602F53C RID: 193852 RVA: 0x0067205C File Offset: 0x0067025C
+		// Token: 0x1700D2E7 RID: 53991
+		// (get) Token: 0x06031EFC RID: 204540 RVA: 0x006C23B4 File Offset: 0x006C05B4
 		public byte NullMask
 		{
 			get
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F53D RID: 193853 RVA: 0x0067209C File Offset: 0x0067029C
+		// Token: 0x06031EFD RID: 204541 RVA: 0x006C23F4 File Offset: 0x006C05F4
 		public static Offset<IItemInspection> CreateIItemInspection(FlatBufferBuilder builder, ESimpleGameplayType Type = ESimpleGameplayType.Cipher, StringOffset PrefabPathOffset = default(StringOffset), float RotateSpeed = 0f, Offset<ISequenceUnlockPoints> InteractPointsConfigOffset = default(Offset<ISequenceUnlockPoints>), Offset<IConeRangeCheck> RangeCheckConfigOffset = default(Offset<IConeRangeCheck>), Offset<IAstrologyTextUiConfig> TextUiConfigOffset = default(Offset<IAstrologyTextUiConfig>), bool CanExit = false, float ItemOffsetDistance = 0f, Offset<IItemInspectFinishEffect> ItemInteractFinishEffectOffset = default(Offset<IItemInspectFinishEffect>), byte NullMask = 0)
 		{
 			builder.StartTable(10);
@@ -222,79 +222,79 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IItemInspection.EndIItemInspection(builder);
 		}
 
-		// Token: 0x0602F53E RID: 193854 RVA: 0x00672104 File Offset: 0x00670304
+		// Token: 0x06031EFE RID: 204542 RVA: 0x006C245C File Offset: 0x006C065C
 		public static void StartIItemInspection(FlatBufferBuilder builder)
 		{
 			builder.StartTable(10);
 		}
 
-		// Token: 0x0602F53F RID: 193855 RVA: 0x0067210E File Offset: 0x0067030E
+		// Token: 0x06031EFF RID: 204543 RVA: 0x006C2466 File Offset: 0x006C0666
 		public static void AddType(FlatBufferBuilder builder, ESimpleGameplayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602F540 RID: 193856 RVA: 0x00672119 File Offset: 0x00670319
+		// Token: 0x06031F00 RID: 204544 RVA: 0x006C2471 File Offset: 0x006C0671
 		public static void AddPrefabPath(FlatBufferBuilder builder, StringOffset prefabPathOffset)
 		{
 			builder.AddOffset(1, prefabPathOffset.Value, 0);
 		}
 
-		// Token: 0x0602F541 RID: 193857 RVA: 0x00672129 File Offset: 0x00670329
+		// Token: 0x06031F01 RID: 204545 RVA: 0x006C2481 File Offset: 0x006C0681
 		public static void AddRotateSpeed(FlatBufferBuilder builder, float rotateSpeed)
 		{
 			builder.AddFloat(2, rotateSpeed, 0.0);
 		}
 
-		// Token: 0x0602F542 RID: 193858 RVA: 0x0067213C File Offset: 0x0067033C
+		// Token: 0x06031F02 RID: 204546 RVA: 0x006C2494 File Offset: 0x006C0694
 		public static void AddInteractPointsConfig(FlatBufferBuilder builder, Offset<ISequenceUnlockPoints> interactPointsConfigOffset)
 		{
 			builder.AddOffset(3, interactPointsConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602F543 RID: 193859 RVA: 0x0067214C File Offset: 0x0067034C
+		// Token: 0x06031F03 RID: 204547 RVA: 0x006C24A4 File Offset: 0x006C06A4
 		public static void AddRangeCheckConfig(FlatBufferBuilder builder, Offset<IConeRangeCheck> rangeCheckConfigOffset)
 		{
 			builder.AddOffset(4, rangeCheckConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602F544 RID: 193860 RVA: 0x0067215C File Offset: 0x0067035C
+		// Token: 0x06031F04 RID: 204548 RVA: 0x006C24B4 File Offset: 0x006C06B4
 		public static void AddTextUiConfig(FlatBufferBuilder builder, Offset<IAstrologyTextUiConfig> textUiConfigOffset)
 		{
 			builder.AddOffset(5, textUiConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602F545 RID: 193861 RVA: 0x0067216C File Offset: 0x0067036C
+		// Token: 0x06031F05 RID: 204549 RVA: 0x006C24C4 File Offset: 0x006C06C4
 		public static void AddCanExit(FlatBufferBuilder builder, bool canExit)
 		{
 			builder.AddBool(6, canExit, false);
 		}
 
-		// Token: 0x0602F546 RID: 193862 RVA: 0x00672177 File Offset: 0x00670377
+		// Token: 0x06031F06 RID: 204550 RVA: 0x006C24CF File Offset: 0x006C06CF
 		public static void AddItemOffsetDistance(FlatBufferBuilder builder, float itemOffsetDistance)
 		{
 			builder.AddFloat(7, itemOffsetDistance, 0.0);
 		}
 
-		// Token: 0x0602F547 RID: 193863 RVA: 0x0067218A File Offset: 0x0067038A
+		// Token: 0x06031F07 RID: 204551 RVA: 0x006C24E2 File Offset: 0x006C06E2
 		public static void AddItemInteractFinishEffect(FlatBufferBuilder builder, Offset<IItemInspectFinishEffect> itemInteractFinishEffectOffset)
 		{
 			builder.AddOffset(8, itemInteractFinishEffectOffset.Value, 0);
 		}
 
-		// Token: 0x0602F548 RID: 193864 RVA: 0x0067219A File Offset: 0x0067039A
+		// Token: 0x06031F08 RID: 204552 RVA: 0x006C24F2 File Offset: 0x006C06F2
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(9, nullMask, 0);
 		}
 
-		// Token: 0x0602F549 RID: 193865 RVA: 0x006721A6 File Offset: 0x006703A6
+		// Token: 0x06031F09 RID: 204553 RVA: 0x006C24FE File Offset: 0x006C06FE
 		public static Offset<IItemInspection> EndIItemInspection(FlatBufferBuilder builder)
 		{
 			return new Offset<IItemInspection>(builder.EndTable());
 		}
 
-		// Token: 0x0602F54A RID: 193866 RVA: 0x006721B4 File Offset: 0x006703B4
+		// Token: 0x06031F0A RID: 204554 RVA: 0x006C250C File Offset: 0x006C070C
 		public IItemInspectionT UnPack()
 		{
 			IItemInspectionT itemInspectionT = new IItemInspectionT();
@@ -302,7 +302,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return itemInspectionT;
 		}
 
-		// Token: 0x0602F54B RID: 193867 RVA: 0x006721D0 File Offset: 0x006703D0
+		// Token: 0x06031F0B RID: 204555 RVA: 0x006C2528 File Offset: 0x006C0728
 		public void UnPackTo(IItemInspectionT _o)
 		{
 			_o.Type = this.Type;
@@ -317,7 +317,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602F54C RID: 193868 RVA: 0x006722E8 File Offset: 0x006704E8
+		// Token: 0x06031F0C RID: 204556 RVA: 0x006C2640 File Offset: 0x006C0840
 		public static Offset<IItemInspection> Pack(FlatBufferBuilder builder, IItemInspectionT _o)
 		{
 			if (_o == null)
@@ -332,7 +332,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IItemInspection.CreateIItemInspection(builder, _o.Type, prefabPathOffset, _o.RotateSpeed, interactPointsConfigOffset, rangeCheckConfigOffset, textUiConfigOffset, _o.CanExit, _o.ItemOffsetDistance, itemInteractFinishEffectOffset, _o.NullMask);
 		}
 
-		// Token: 0x0401117B RID: 70011
+		// Token: 0x04011FE5 RID: 73701
 		private Table __p;
 	}
 }

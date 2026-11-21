@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002EFA RID: 12026
+// Token: 0x0200244D RID: 9293
 public enum EAttributeConvertListenType
 {
-	// Token: 0x0400C0C5 RID: 49349
+	// Token: 0x0400C466 RID: 50278
 	DecreaseOnly,
-	// Token: 0x0400C0C6 RID: 49350
+	// Token: 0x0400C467 RID: 50279
 	IncreaseOnly,
-	// Token: 0x0400C0C7 RID: 49351
+	// Token: 0x0400C468 RID: 50280
 	All
 }

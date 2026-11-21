@@ -4,15 +4,15 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066B0 RID: 26288
+	// Token: 0x02005600 RID: 22016
 	[JsonConverter(typeof(EDropCatchGameplayLeftMsgTypeJsonConverter))]
 	[EnumExtensions]
 	public enum EDropCatchGameplayLeftMsgType
 	{
-		// Token: 0x040223FD RID: 140285
+		// Token: 0x0401CC56 RID: 117846
 		[EnumStringMember("Gameplay")]
 		Gameplay,
-		// Token: 0x040223FE RID: 140286
+		// Token: 0x0401CC57 RID: 117847
 		[EnumStringMember("DropItem")]
 		DropItem
 	}

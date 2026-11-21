@@ -7,40 +7,40 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004313 RID: 17171
+	// Token: 0x0200334D RID: 13133
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SFloatingMovementState.SFloatingMovementState")]
 	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 136)]
 	public class SFloatingMovementState : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C6B5 RID: 181941 RVA: 0x00A1F550 File Offset: 0x00A1D750
+		// Token: 0x060213AD RID: 136109 RVA: 0x0095C150 File Offset: 0x0095A350
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SFloatingMovementState._ScriptStructPtr != 0) ? SFloatingMovementState._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SFloatingMovementState.SFloatingMovementState", ref SFloatingMovementState._ScriptStructPtr);
 		}
 
-		// Token: 0x17006F29 RID: 28457
-		// (get) Token: 0x0602C6B6 RID: 181942 RVA: 0x00A1F574 File Offset: 0x00A1D774
-		// (set) Token: 0x0602C6B7 RID: 181943 RVA: 0x00A1F588 File Offset: 0x00A1D788
+		// Token: 0x17004341 RID: 17217
+		// (get) Token: 0x060213AE RID: 136110 RVA: 0x0095C174 File Offset: 0x0095A374
+		// (set) Token: 0x060213AF RID: 136111 RVA: 0x0095C188 File Offset: 0x0095A388
 		[Nullable(0)]
 		public unsafe TEnumAsByte<EFloatingMovementType> Mode
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_Mode);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_Mode) = value;
 			}
 		}
 
-		// Token: 0x17006F2A RID: 28458
-		// (get) Token: 0x0602C6B8 RID: 181944 RVA: 0x00A1F5A0 File Offset: 0x00A1D7A0
-		// (set) Token: 0x0602C6B9 RID: 181945 RVA: 0x00A1F5E3 File Offset: 0x00A1D7E3
+		// Token: 0x17004342 RID: 17218
+		// (get) Token: 0x060213B0 RID: 136112 RVA: 0x0095C1A0 File Offset: 0x0095A3A0
+		// (set) Token: 0x060213B1 RID: 136113 RVA: 0x0095C1E3 File Offset: 0x0095A3E3
 		public FGameplayTagContainer MovementTagList
 		{
 			get
@@ -49,19 +49,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				FGameplayTagContainer result;
 				if ((result = this._MovementTagList) == null)
 				{
-					result = (this._MovementTagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._MovementTagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_MovementTagList, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_1, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_MovementTagList, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006F2B RID: 28459
-		// (get) Token: 0x0602C6BA RID: 181946 RVA: 0x00A1F604 File Offset: 0x00A1D804
-		// (set) Token: 0x0602C6BB RID: 181947 RVA: 0x00A1F647 File Offset: 0x00A1D847
+		// Token: 0x17004343 RID: 17219
+		// (get) Token: 0x060213B2 RID: 136114 RVA: 0x0095C204 File Offset: 0x0095A404
+		// (set) Token: 0x060213B3 RID: 136115 RVA: 0x0095C247 File Offset: 0x0095A447
 		public FGameplayTagContainer BannedMovementTagList
 		{
 			get
@@ -70,19 +70,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				FGameplayTagContainer result;
 				if ((result = this._BannedMovementTagList) == null)
 				{
-					result = (this._BannedMovementTagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._BannedMovementTagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_BannedMovementTagList, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_2, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_BannedMovementTagList, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006F2C RID: 28460
-		// (get) Token: 0x0602C6BC RID: 181948 RVA: 0x00A1F668 File Offset: 0x00A1D868
-		// (set) Token: 0x0602C6BD RID: 181949 RVA: 0x00A1F6AB File Offset: 0x00A1D8AB
+		// Token: 0x17004344 RID: 17220
+		// (get) Token: 0x060213B4 RID: 136116 RVA: 0x0095C268 File Offset: 0x0095A468
+		// (set) Token: 0x060213B5 RID: 136117 RVA: 0x0095C2AB File Offset: 0x0095A4AB
 		public FGameplayTagContainer MoveTagList
 		{
 			get
@@ -91,19 +91,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				FGameplayTagContainer result;
 				if ((result = this._MoveTagList) == null)
 				{
-					result = (this._MoveTagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_3, base.MemoryOwner ?? this));
+					result = (this._MoveTagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_MoveTagList, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_3, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_MoveTagList, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006F2D RID: 28461
-		// (get) Token: 0x0602C6BE RID: 181950 RVA: 0x00A1F6CC File Offset: 0x00A1D8CC
-		// (set) Token: 0x0602C6BF RID: 181951 RVA: 0x00A1F70F File Offset: 0x00A1D90F
+		// Token: 0x17004345 RID: 17221
+		// (get) Token: 0x060213B6 RID: 136118 RVA: 0x0095C2CC File Offset: 0x0095A4CC
+		// (set) Token: 0x060213B7 RID: 136119 RVA: 0x0095C30F File Offset: 0x0095A50F
 		public FGameplayTagContainer StandTagList
 		{
 			get
@@ -112,94 +112,84 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				FGameplayTagContainer result;
 				if ((result = this._StandTagList) == null)
 				{
-					result = (this._StandTagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_4, base.MemoryOwner ?? this));
+					result = (this._StandTagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_StandTagList, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_4, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SFloatingMovementState.__PropertyOffset_StandTagList, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x0602C6C0 RID: 181952 RVA: 0x00A1F730 File Offset: 0x00A1D930
+		// Token: 0x060213B8 RID: 136120 RVA: 0x0095C330 File Offset: 0x0095A530
 		public SFloatingMovementState()
 		{
 		}
 
-		// Token: 0x0602C6C1 RID: 181953 RVA: 0x00A1F738 File Offset: 0x00A1D938
-		public SFloatingMovementState([Nullable(0)] TEnumAsByte<EFloatingMovementType> Mode, FGameplayTagContainer MovementTagList, FGameplayTagContainer BannedMovementTagList, FGameplayTagContainer MoveTagList, FGameplayTagContainer StandTagList)
-		{
-			this.Mode = Mode;
-			this.MovementTagList = MovementTagList;
-			this.BannedMovementTagList = BannedMovementTagList;
-			this.MoveTagList = MoveTagList;
-			this.StandTagList = StandTagList;
-		}
-
-		// Token: 0x0602C6C2 RID: 181954 RVA: 0x00A1F765 File Offset: 0x00A1D965
+		// Token: 0x060213B9 RID: 136121 RVA: 0x0095C338 File Offset: 0x0095A538
 		protected override IntPtr GetUStructPtr()
 		{
 			return SFloatingMovementState.StaticStruct();
 		}
 
-		// Token: 0x0602C6C3 RID: 181955 RVA: 0x00A1F771 File Offset: 0x00A1D971
+		// Token: 0x060213BA RID: 136122 RVA: 0x0095C344 File Offset: 0x0095A544
 		[NullableContext(2)]
 		public SFloatingMovementState(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C6C4 RID: 181956 RVA: 0x00A1F77B File Offset: 0x00A1D97B
+		// Token: 0x060213BB RID: 136123 RVA: 0x0095C34E File Offset: 0x0095A54E
 		public SFloatingMovementState(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C6C5 RID: 181957 RVA: 0x00A1F786 File Offset: 0x00A1D986
+		// Token: 0x060213BC RID: 136124 RVA: 0x0095C359 File Offset: 0x0095A559
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SFloatingMovementState(Pointer, false, true);
 		}
 
-		// Token: 0x0602C6C6 RID: 181958 RVA: 0x00A1F790 File Offset: 0x00A1D990
+		// Token: 0x060213BD RID: 136125 RVA: 0x0095C363 File Offset: 0x0095A563
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SFloatingMovementState(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040176B3 RID: 95923
+		// Token: 0x040122A9 RID: 74409
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SFloatingMovementState.SFloatingMovementState";
 
-		// Token: 0x040176B4 RID: 95924
+		// Token: 0x040122AA RID: 74410
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040176B5 RID: 95925
-		internal static int __PropertyOffset_0;
+		// Token: 0x040122AB RID: 74411
+		internal static int __PropertyOffset_Mode;
 
-		// Token: 0x040176B6 RID: 95926
-		internal static int __PropertyOffset_1;
+		// Token: 0x040122AC RID: 74412
+		internal static int __PropertyOffset_MovementTagList;
 
-		// Token: 0x040176B7 RID: 95927
+		// Token: 0x040122AD RID: 74413
 		[Nullable(2)]
 		private FGameplayTagContainer _MovementTagList;
 
-		// Token: 0x040176B8 RID: 95928
-		internal static int __PropertyOffset_2;
+		// Token: 0x040122AE RID: 74414
+		internal static int __PropertyOffset_BannedMovementTagList;
 
-		// Token: 0x040176B9 RID: 95929
+		// Token: 0x040122AF RID: 74415
 		[Nullable(2)]
 		private FGameplayTagContainer _BannedMovementTagList;
 
-		// Token: 0x040176BA RID: 95930
-		internal static int __PropertyOffset_3;
+		// Token: 0x040122B0 RID: 74416
+		internal static int __PropertyOffset_MoveTagList;
 
-		// Token: 0x040176BB RID: 95931
+		// Token: 0x040122B1 RID: 74417
 		[Nullable(2)]
 		private FGameplayTagContainer _MoveTagList;
 
-		// Token: 0x040176BC RID: 95932
-		internal static int __PropertyOffset_4;
+		// Token: 0x040122B2 RID: 74418
+		internal static int __PropertyOffset_StandTagList;
 
-		// Token: 0x040176BD RID: 95933
+		// Token: 0x040122B3 RID: 74419
 		[Nullable(2)]
 		private FGameplayTagContainer _StandTagList;
 	}

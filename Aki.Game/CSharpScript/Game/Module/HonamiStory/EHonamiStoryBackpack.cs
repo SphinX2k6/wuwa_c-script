@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x0200592D RID: 22829
+	// Token: 0x02004906 RID: 18694
 	public enum EHonamiStoryBackpack
 	{
-		// Token: 0x0401E3CC RID: 123852
+		// Token: 0x04018E69 RID: 101993
 		Inventory = 1,
-		// Token: 0x0401E3CD RID: 123853
+		// Token: 0x04018E6A RID: 101994
 		Backpack,
-		// Token: 0x0401E3CE RID: 123854
+		// Token: 0x04018E6B RID: 101995
 		PickUpBox,
-		// Token: 0x0401E3CF RID: 123855
+		// Token: 0x04018E6C RID: 101996
 		Player
 	}
 }

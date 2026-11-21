@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006833 RID: 26675
+	// Token: 0x02005783 RID: 22403
 	public class DangoBrawlRoleUnlockView : UiViewBase
 	{
-		// Token: 0x06042934 RID: 272692 RVA: 0x0102E6E2 File Offset: 0x0102C8E2
+		// Token: 0x06037488 RID: 226440 RVA: 0x00F6FC1E File Offset: 0x00F6DE1E
 		[NullableContext(1)]
 		public DangoBrawlRoleUnlockView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06042935 RID: 272693 RVA: 0x0102E6F8 File Offset: 0x0102C8F8
+		// Token: 0x06037489 RID: 226441 RVA: 0x00F6FC34 File Offset: 0x00F6DE34
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042936 RID: 272694 RVA: 0x0102E7E0 File Offset: 0x0102C9E0
+		// Token: 0x0603748A RID: 226442 RVA: 0x00F6FD1C File Offset: 0x00F6DF1C
 		protected override void OnStart()
 		{
 			DangoBrawlRoleUnlockViewOpenData dangoBrawlRoleUnlockViewOpenData = this.OpenParam as DangoBrawlRoleUnlockViewOpenData;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshView();
 		}
 
-		// Token: 0x06042937 RID: 272695 RVA: 0x0102E81A File Offset: 0x0102CA1A
+		// Token: 0x0603748B RID: 226443 RVA: 0x00F6FD56 File Offset: 0x00F6DF56
 		protected override void OnBeforeDestroy()
 		{
 			this.CancelLoadRoleSpine();
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onCloseCallback();
 		}
 
-		// Token: 0x06042938 RID: 272696 RVA: 0x0102E839 File Offset: 0x0102CA39
+		// Token: 0x0603748C RID: 226444 RVA: 0x00F6FD75 File Offset: 0x00F6DF75
 		private void RefreshView()
 		{
 			if (this.RoleId <= 0)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshRoleSpine(this.RoleId);
 		}
 
-		// Token: 0x06042939 RID: 272697 RVA: 0x0102E858 File Offset: 0x0102CA58
+		// Token: 0x0603748D RID: 226445 RVA: 0x00F6FD94 File Offset: 0x00F6DF94
 		private void RefreshOccupation()
 		{
 			DangoBrawlRole? roleConfigById = DangoBrawlConfig.Instance.GetRoleConfigById(this.RoleId);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), occupationConfigById.Value.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x0604293A RID: 272698 RVA: 0x0102E8F0 File Offset: 0x0102CAF0
+		// Token: 0x0603748E RID: 226446 RVA: 0x00F6FE2C File Offset: 0x00F6E02C
 		private void RefreshRoleSpine(int roleId)
 		{
 			DangoBrawlRoleUnlockView.<>c__DisplayClass13_0 CS$<>8__locals1 = new DangoBrawlRoleUnlockView.<>c__DisplayClass13_0();
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x0604293B RID: 272699 RVA: 0x0102E938 File Offset: 0x0102CB38
+		// Token: 0x0603748F RID: 226447 RVA: 0x00F6FE74 File Offset: 0x00F6E074
 		private UniTask RefreshRoleSpineAsync(int roleId)
 		{
 			DangoBrawlRoleUnlockView.<RefreshRoleSpineAsync>d__14 <RefreshRoleSpineAsync>d__;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <RefreshRoleSpineAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604293C RID: 272700 RVA: 0x0102E984 File Offset: 0x0102CB84
+		// Token: 0x06037490 RID: 226448 RVA: 0x00F6FEC0 File Offset: 0x00F6E0C0
 		private UniTask<bool> LoadRoleSpineAsync(int roleId)
 		{
 			DangoBrawlRoleUnlockView.<LoadRoleSpineAsync>d__15 <LoadRoleSpineAsync>d__;
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <LoadRoleSpineAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604293D RID: 272701 RVA: 0x0102E9CF File Offset: 0x0102CBCF
+		// Token: 0x06037491 RID: 226449 RVA: 0x00F6FF0B File Offset: 0x00F6E10B
 		private void CancelLoadRoleSpine()
 		{
 			LoadAsyncPromise<USpineAtlasAsset> spineAtlasPromise = this.SpineAtlasPromise;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SpineSkeletonDataPromise = null;
 		}
 
-		// Token: 0x0604293E RID: 272702 RVA: 0x0102EA04 File Offset: 0x0102CC04
+		// Token: 0x06037492 RID: 226450 RVA: 0x00F6FF40 File Offset: 0x00F6E140
 		[NullableContext(1)]
 		private void PlaySpineAnim(string anim)
 		{
@@ -172,27 +172,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			spine.SetAnimation(0, anim, true);
 		}
 
-		// Token: 0x0604293F RID: 272703 RVA: 0x0102EA40 File Offset: 0x0102CC40
+		// Token: 0x06037493 RID: 226451 RVA: 0x00F6FF7C File Offset: 0x00F6E17C
 		private void OnClickBtnMask()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04022AEB RID: 142059
+		// Token: 0x0401D348 RID: 119624
 		private int RoleId;
 
-		// Token: 0x04022AEC RID: 142060
+		// Token: 0x0401D349 RID: 119625
 		[Nullable(2)]
 		private Action OnCloseCallback;
 
-		// Token: 0x04022AED RID: 142061
+		// Token: 0x0401D34A RID: 119626
 		[Nullable(1)]
 		private string SpineAnim = "";
 
-		// Token: 0x04022AEE RID: 142062
+		// Token: 0x0401D34B RID: 119627
 		private bool IsLoading;
 
-		// Token: 0x04022AEF RID: 142063
+		// Token: 0x0401D34C RID: 119628
 		[Nullable(new byte[]
 		{
 			2,
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private LoadAsyncPromise<USpineAtlasAsset> SpineAtlasPromise;
 
-		// Token: 0x04022AF0 RID: 142064
+		// Token: 0x0401D34D RID: 119629
 		[Nullable(new byte[]
 		{
 			2,
@@ -208,16 +208,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private LoadAsyncPromise<USpineSkeletonDataAsset> SpineSkeletonDataPromise;
 
-		// Token: 0x0200C9E8 RID: 51688
+		// Token: 0x0200B3B4 RID: 46004
 		private enum EComponent
 		{
-			// Token: 0x0403D007 RID: 249863
+			// Token: 0x040378F1 RID: 227569
 			BtnMask,
-			// Token: 0x0403D008 RID: 249864
+			// Token: 0x040378F2 RID: 227570
 			UISpineActor,
-			// Token: 0x0403D009 RID: 249865
+			// Token: 0x040378F3 RID: 227571
 			TexType,
-			// Token: 0x0403D00A RID: 249866
+			// Token: 0x040378F4 RID: 227572
 			TxtType
 		}
 	}

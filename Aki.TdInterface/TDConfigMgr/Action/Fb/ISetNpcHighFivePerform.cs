@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A5E RID: 10846
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D4B RID: 11595
 	public class ISetNpcHighFivePerform : ISetNpcGroupPerformType
 	{
-		// Token: 0x0600EE90 RID: 61072 RVA: 0x0022B7BB File Offset: 0x002299BB
+		// Token: 0x0600FD28 RID: 64808 RVA: 0x0024916F File Offset: 0x0024736F
 		public static ISetNpcHighFivePerform Create(ISetNpcHighFivePerform? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B96 RID: 19350
-		// (get) Token: 0x0600EE91 RID: 61073 RVA: 0x0022B7DA File Offset: 0x002299DA
+		// Token: 0x17004F40 RID: 20288
+		// (get) Token: 0x0600FD29 RID: 64809 RVA: 0x0024918E File Offset: 0x0024738E
 		public override ENpcGroupPerformType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B97 RID: 19351
-		// (get) Token: 0x0600EE92 RID: 61074 RVA: 0x0022B7E7 File Offset: 0x002299E7
+		// Token: 0x17004F41 RID: 20289
+		// (get) Token: 0x0600FD2A RID: 64810 RVA: 0x0024919B File Offset: 0x0024739B
 		public virtual IPlayerInitiator Initiator
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B98 RID: 19352
-		// (get) Token: 0x0600EE93 RID: 61075 RVA: 0x0022B81B File Offset: 0x00229A1B
+		// Token: 0x17004F42 RID: 20290
+		// (get) Token: 0x0600FD2B RID: 64811 RVA: 0x002491CF File Offset: 0x002473CF
 		public virtual int Target
 		{
 			get
@@ -58,8 +56,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B99 RID: 19353
-		// (get) Token: 0x0600EE94 RID: 61076 RVA: 0x0022B828 File Offset: 0x00229A28
+		// Token: 0x17004F43 RID: 20291
+		// (get) Token: 0x0600FD2C RID: 64812 RVA: 0x002491DC File Offset: 0x002473DC
 		public virtual ENpcGroupPerformNpcType NpcType
 		{
 			get
@@ -68,14 +66,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400833E RID: 33598
+		// Token: 0x04008A31 RID: 35377
 		private ISetNpcHighFivePerform Instance;
 
-		// Token: 0x0400833F RID: 33599
+		// Token: 0x04008A32 RID: 35378
 		[Nullable(2)]
 		private IPlayerInitiator _InitiatorCache;
 
-		// Token: 0x04008340 RID: 33600
+		// Token: 0x04008A33 RID: 35379
 		private bool _InitiatorInited;
 	}
 }

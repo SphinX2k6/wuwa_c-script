@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F01 RID: 12033
+// Token: 0x02002454 RID: 9300
 [NullableContext(1)]
 [Nullable(0)]
 public static class ExtraEffectIdSets
 {
-	// Token: 0x0400C142 RID: 49474
+	// Token: 0x0400C4E4 RID: 50404
 	[StaticVariableRuleIgnore]
 	public static readonly HashSet<EExtraEffectId> initExecutionIds = new HashSet<EExtraEffectId>
 	{
@@ -15,7 +15,7 @@ public static class ExtraEffectIdSets
 		EExtraEffectId.QteExecution
 	};
 
-	// Token: 0x0400C143 RID: 49475
+	// Token: 0x0400C4E5 RID: 50405
 	[StaticVariableRuleIgnore]
 	public static readonly HashSet<EExtraEffectId> periodExecutionIds = new HashSet<EExtraEffectId>
 	{

@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000842 RID: 2114
+	// Token: 0x020008E5 RID: 2277
 	public class NavMeshComponent_SetValue
 	{
-		// Token: 0x04001E9C RID: 7836
+		// Token: 0x040020AB RID: 8363
 		public bool? Disabled;
 
-		// Token: 0x04001E9D RID: 7837
+		// Token: 0x040020AC RID: 8364
 		public bool? EdIsLocked;
 
-		// Token: 0x04001E9E RID: 7838
-		[Nullable(1)]
+		// Token: 0x040020AD RID: 8365
 		public INavMeshAkiEntitySource Source;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001713 RID: 5907
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001890 RID: 6288
 	public class ExitDungeon : ActionParams
 	{
-		// Token: 0x06007D27 RID: 32039 RVA: 0x0012C6B0 File Offset: 0x0012A8B0
+		// Token: 0x06008405 RID: 33797 RVA: 0x0013B75C File Offset: 0x0013995C
 		private ExitDungeon_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007D28 RID: 32040 RVA: 0x0012C6E8 File Offset: 0x0012A8E8
+		// Token: 0x06008406 RID: 33798 RVA: 0x0013B794 File Offset: 0x00139994
 		public static ExitDungeon Create([Nullable(2)] ExitDungeon instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D29 RID: 32041 RVA: 0x0012C6FB File Offset: 0x0012A8FB
+		// Token: 0x06008407 RID: 33799 RVA: 0x0013B7A7 File Offset: 0x001399A7
 		public static ExitDungeon CreateFromSetValue([Nullable(2)] ExitDungeon_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D2A RID: 32042 RVA: 0x0012C70E File Offset: 0x0012A90E
+		// Token: 0x06008408 RID: 33800 RVA: 0x0013B7BA File Offset: 0x001399BA
 		public ExitDungeon_SetValue ToSetValue()
 		{
 			return new ExitDungeon_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002946 RID: 10566
-		// (get) Token: 0x06007D2B RID: 32043 RVA: 0x0012C724 File Offset: 0x0012A924
-		// (set) Token: 0x06007D2C RID: 32044 RVA: 0x0012C75E File Offset: 0x0012A95E
+		// Token: 0x17002B31 RID: 11057
+		// (get) Token: 0x06008409 RID: 33801 RVA: 0x0013B7D0 File Offset: 0x001399D0
+		// (set) Token: 0x0600840A RID: 33802 RVA: 0x0013B80A File Offset: 0x00139A0A
 		public virtual bool? IsNeedSecondaryConfirmation
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004FE8 RID: 20456
+		// Token: 0x04005417 RID: 21527
 		[Nullable(2)]
 		protected new ExitDungeon FbInstance;
 
-		// Token: 0x04004FE9 RID: 20457
+		// Token: 0x04005418 RID: 21528
 		[Nullable(2)]
 		protected ExitDungeon_SetValue PocoInterface;
 	}

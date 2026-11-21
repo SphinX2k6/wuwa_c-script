@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EE0 RID: 7904
+// Token: 0x020013A2 RID: 5026
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryPermanentTaskView : UiViewBase
 {
-	// Token: 0x0600F337 RID: 62263 RVA: 0x003AA2B2 File Offset: 0x003A84B2
+	// Token: 0x0600C756 RID: 51030 RVA: 0x003B5DAE File Offset: 0x003B3FAE
 	public HonamiStoryPermanentTaskView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F338 RID: 62264 RVA: 0x003AA2BC File Offset: 0x003A84BC
+	// Token: 0x0600C757 RID: 51031 RVA: 0x003B5DB8 File Offset: 0x003B3FB8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -42,7 +42,7 @@ public class HonamiStoryPermanentTaskView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F339 RID: 62265 RVA: 0x003AA3AC File Offset: 0x003A85AC
+	// Token: 0x0600C758 RID: 51032 RVA: 0x003B5EA8 File Offset: 0x003B40A8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryPermanentTaskView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ public class HonamiStoryPermanentTaskView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F33A RID: 62266 RVA: 0x003AA3EF File Offset: 0x003A85EF
+	// Token: 0x0600C759 RID: 51033 RVA: 0x003B5EEB File Offset: 0x003B40EB
 	private HonamiStoryPermanentTaskItem CreateTaskItem()
 	{
 		return new HonamiStoryPermanentTaskItem
@@ -62,7 +62,7 @@ public class HonamiStoryPermanentTaskView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600F33B RID: 62267 RVA: 0x003AA408 File Offset: 0x003A8608
+	// Token: 0x0600C75A RID: 51034 RVA: 0x003B5F04 File Offset: 0x003B4104
 	private void RefreshTaskScroll()
 	{
 		new UiAsyncTask("RefreshProgress", delegate()
@@ -77,7 +77,7 @@ public class HonamiStoryPermanentTaskView : UiViewBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshActivityTab, this.ActivityData.Id);
 	}
 
-	// Token: 0x0600F33C RID: 62268 RVA: 0x003AA444 File Offset: 0x003A8644
+	// Token: 0x0600C75B RID: 51035 RVA: 0x003B5F40 File Offset: 0x003B4140
 	private UniTask RefreshTaskScrollAsync()
 	{
 		HonamiStoryPermanentTaskView.<RefreshTaskScrollAsync>d__10 <RefreshTaskScrollAsync>d__;
@@ -88,53 +88,53 @@ public class HonamiStoryPermanentTaskView : UiViewBase
 		return <RefreshTaskScrollAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F33D RID: 62269 RVA: 0x003AA488 File Offset: 0x003A8688
+	// Token: 0x0600C75C RID: 51036 RVA: 0x003B5F84 File Offset: 0x003B4184
 	private void OnClickGetTaskReward(int taskId)
 	{
 		List<int> permanentTaskIdsByState = this.ActivityData.GetPermanentTaskIdsByState(EActivityTaskState.FinishedAndUnclaimed);
 		HonamiStoryController.Instance.SendHonamiStoryPermanentTaskRewardRequest(permanentTaskIdsByState, new Action(this.RefreshTaskScroll));
 	}
 
-	// Token: 0x0600F33E RID: 62270 RVA: 0x003AA4B9 File Offset: 0x003A86B9
+	// Token: 0x0600C75D RID: 51037 RVA: 0x003B5FB5 File Offset: 0x003B41B5
 	private void OnClickHelpBtn()
 	{
 		HelpController.Instance.OpenHelpById(431);
 	}
 
-	// Token: 0x0600F33F RID: 62271 RVA: 0x003AA4CA File Offset: 0x003A86CA
+	// Token: 0x0600C75E RID: 51038 RVA: 0x003B5FC6 File Offset: 0x003B41C6
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x040070A7 RID: 28839
+	// Token: 0x04007188 RID: 29064
 	[Nullable(2)]
 	private HonamiStoryActivityData ActivityData;
 
-	// Token: 0x040070A8 RID: 28840
+	// Token: 0x04007189 RID: 29065
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040070A9 RID: 28841
+	// Token: 0x0400718A RID: 29066
 	private GenericScrollViewNew<HonamiStoryPermanentTaskItem, HonamiStoryPermanentTaskData> RewardScroll;
 
-	// Token: 0x040070AA RID: 28842
+	// Token: 0x0400718B RID: 29067
 	private HonamiStoryProfitPanel ProfitPanel;
 
-	// Token: 0x020084C9 RID: 33993
+	// Token: 0x0200764E RID: 30286
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B36A RID: 177002
+		// Token: 0x0402668E RID: 157326
 		CaptionItem,
-		// Token: 0x0402B36B RID: 177003
+		// Token: 0x0402668F RID: 157327
 		RewardItemScroll,
-		// Token: 0x0402B36C RID: 177004
+		// Token: 0x04026690 RID: 157328
 		PnlQuestItem,
-		// Token: 0x0402B36D RID: 177005
+		// Token: 0x04026691 RID: 157329
 		PnlEnterProfit,
-		// Token: 0x0402B36E RID: 177006
+		// Token: 0x04026692 RID: 157330
 		TxtBozaiTitle,
-		// Token: 0x0402B36F RID: 177007
+		// Token: 0x04026693 RID: 157331
 		TxtBozaiDesc
 	}
 }

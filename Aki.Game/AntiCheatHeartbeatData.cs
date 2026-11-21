@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x020016E9 RID: 5865
+// Token: 0x02000BA1 RID: 2977
 public class AntiCheatHeartbeatData : PlayerCommonLogData
 {
-	// Token: 0x04004BC2 RID: 19394
+	// Token: 0x04004C69 RID: 19561
 	public int i_exception_count;
 }

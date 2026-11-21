@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200641C RID: 25628
+	// Token: 0x0200539A RID: 21402
 	public class MotorFightTalentLine : UiPanelBase
 	{
-		// Token: 0x06040733 RID: 263987 RVA: 0x00F9864C File Offset: 0x00F9684C
+		// Token: 0x060353F4 RID: 218100 RVA: 0x00EDF5EC File Offset: 0x00EDD7EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040734 RID: 263988 RVA: 0x00F986B5 File Offset: 0x00F968B5
+		// Token: 0x060353F5 RID: 218101 RVA: 0x00EDF655 File Offset: 0x00EDD855
 		public void Refresh(bool isUnlock)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			sprite2.SetUIActive(!isUnlock);
 		}
 
-		// Token: 0x0200C647 RID: 50759
+		// Token: 0x0200B02E RID: 45102
 		private class EMotorFightTalentLineDefine
 		{
-			// Token: 0x0403BDCD RID: 245197
+			// Token: 0x0403672A RID: 223018
 			public const int SpriteLine = 0;
 
-			// Token: 0x0403BDCE RID: 245198
+			// Token: 0x0403672B RID: 223019
 			public const int SpriteDotLine = 1;
 		}
 	}

@@ -7,13 +7,13 @@ using CSharpScript.Game.Module.MonsterGroup;
 
 namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 {
-	// Token: 0x020070A0 RID: 28832
+	// Token: 0x02006305 RID: 25349
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class MonsterGroupEcologyController : ControllerBase
 	{
-		// Token: 0x06046406 RID: 287750 RVA: 0x011944E0 File Offset: 0x011926E0
+		// Token: 0x0603D4F4 RID: 251124 RVA: 0x011B754C File Offset: 0x011B574C
 		protected override bool OnClear()
 		{
 			this.PendingEcologyGroups.Clear();
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 			return true;
 		}
 
-		// Token: 0x06046407 RID: 287751 RVA: 0x011944FC File Offset: 0x011926FC
+		// Token: 0x0603D4F5 RID: 251125 RVA: 0x011B7568 File Offset: 0x011B5768
 		protected override void OnTick(float delta)
 		{
 			this.DeltaTime += delta;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 			}
 		}
 
-		// Token: 0x06046408 RID: 287752 RVA: 0x01194614 File Offset: 0x01192814
+		// Token: 0x0603D4F6 RID: 251126 RVA: 0x011B7680 File Offset: 0x011B5880
 		private void TryGenerateAllPendingGroups()
 		{
 			if (this.PendingEcologyGroups.Count == 0)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 			}
 		}
 
-		// Token: 0x06046409 RID: 287753 RVA: 0x011946CC File Offset: 0x011928CC
+		// Token: 0x0603D4F7 RID: 251127 RVA: 0x011B7738 File Offset: 0x011B5938
 		private void TryGeneratePendingGroup(int groupEntityId)
 		{
 			MonsterGroupEcologyModel instance = MonsterGroupEcologyModel.Instance;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 			}
 		}
 
-		// Token: 0x0604640A RID: 287754 RVA: 0x011947D4 File Offset: 0x011929D4
+		// Token: 0x0603D4F8 RID: 251128 RVA: 0x011B7840 File Offset: 0x011B5A40
 		public unsafe void RegisterMonsterPbDataId(int groupEntityId, Entity entity, int pbDataId, GroupAiComponent groupComp)
 		{
 			if (MonsterGroupEcologyModel.Instance == null)
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 			this.DeltaTime = 0f;
 		}
 
-		// Token: 0x0604640B RID: 287755 RVA: 0x011948C8 File Offset: 0x01192AC8
+		// Token: 0x0603D4F9 RID: 251129 RVA: 0x011B7934 File Offset: 0x011B5B34
 		public void RemoveEntityFromMonsterGroup(int entityId, int pbDataId)
 		{
 			int num;
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 			}
 		}
 
-		// Token: 0x0604640C RID: 287756 RVA: 0x01194940 File Offset: 0x01192B40
+		// Token: 0x0603D4FA RID: 251130 RVA: 0x011B79AC File Offset: 0x011B5BAC
 		public bool CheckEntityInMonsterGroup(int entityId)
 		{
 			int key;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 			return dictionary != null && dictionary.TryGetValue(key, out monsterGroupEcologyInfo) && monsterGroupEcologyInfo.GroupInfo.ContainsKey(entityId);
 		}
 
-		// Token: 0x0604640D RID: 287757 RVA: 0x01194990 File Offset: 0x01192B90
+		// Token: 0x0603D4FB RID: 251131 RVA: 0x011B79FC File Offset: 0x011B5BFC
 		[NullableContext(2)]
 		public MonsterEcologyInfo GetMonsterInfoByEntityId(int entityId)
 		{
@@ -234,8 +234,8 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 			return result;
 		}
 
-		// Token: 0x17009C2B RID: 39979
-		// (get) Token: 0x0604640E RID: 287758 RVA: 0x011949E3 File Offset: 0x01192BE3
+		// Token: 0x17007410 RID: 29712
+		// (get) Token: 0x0603D4FC RID: 251132 RVA: 0x011B7A4F File Offset: 0x011B5C4F
 		public static MonsterGroupEcologyController Instance
 		{
 			get
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 			}
 		}
 
-		// Token: 0x0604640F RID: 287759 RVA: 0x011949EA File Offset: 0x01192BEA
+		// Token: 0x0603D4FD RID: 251133 RVA: 0x011B7A56 File Offset: 0x011B5C56
 		public static MonsterGroupEcologyController GetOrCreateInstance()
 		{
 			if (MonsterGroupEcologyController._Instance == null)
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 			return MonsterGroupEcologyController._Instance;
 		}
 
-		// Token: 0x06046410 RID: 287760 RVA: 0x011949FE File Offset: 0x01192BFE
+		// Token: 0x0603D4FE RID: 251134 RVA: 0x011B7A6A File Offset: 0x011B5C6A
 		public static bool CreateInstance()
 		{
 			if (MonsterGroupEcologyController._Instance != null)
@@ -265,33 +265,33 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 			return true;
 		}
 
-		// Token: 0x06046411 RID: 287761 RVA: 0x01194A14 File Offset: 0x01192C14
+		// Token: 0x0603D4FF RID: 251135 RVA: 0x011B7A80 File Offset: 0x011B5C80
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06046412 RID: 287762 RVA: 0x01194A16 File Offset: 0x01192C16
+		// Token: 0x0603D500 RID: 251136 RVA: 0x011B7A82 File Offset: 0x011B5C82
 		public static void ResetStaticDefaultValue()
 		{
 			MonsterGroupEcologyController._Instance = null;
 		}
 
-		// Token: 0x06046413 RID: 287763 RVA: 0x01194A1E File Offset: 0x01192C1E
+		// Token: 0x0603D501 RID: 251137 RVA: 0x011B7A8A File Offset: 0x011B5C8A
 		static MonsterGroupEcologyController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MonsterGroupEcologyController.CreateStaticDefaultValue), new Action(MonsterGroupEcologyController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04024D00 RID: 150784
+		// Token: 0x04020852 RID: 133202
 		private float DeltaTime;
 
-		// Token: 0x04024D01 RID: 150785
+		// Token: 0x04020853 RID: 133203
 		private readonly Dictionary<int, IPendingEcologyGroup> PendingEcologyGroups = new Dictionary<int, IPendingEcologyGroup>();
 
-		// Token: 0x04024D02 RID: 150786
+		// Token: 0x04020854 RID: 133204
 		private readonly Dictionary<int, int> EntityIdToGroupId = new Dictionary<int, int>();
 
-		// Token: 0x04024D03 RID: 150787
+		// Token: 0x04020855 RID: 133205
 		[Nullable(2)]
 		private static MonsterGroupEcologyController _Instance;
 	}

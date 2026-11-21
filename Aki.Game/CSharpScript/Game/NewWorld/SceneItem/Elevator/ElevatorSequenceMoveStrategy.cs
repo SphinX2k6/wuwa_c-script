@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 {
-	// Token: 0x02007201 RID: 29185
+	// Token: 0x020062B6 RID: 25270
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ElevatorSequenceMoveStrategy : ElevatorMoveStrategyBase
 	{
-		// Token: 0x17009E19 RID: 40473
-		// (get) Token: 0x060476F8 RID: 292600 RVA: 0x0123070C File Offset: 0x0122E90C
+		// Token: 0x17007376 RID: 29558
+		// (get) Token: 0x0603D000 RID: 249856 RVA: 0x0118A2D0 File Offset: 0x011884D0
 		public bool IsInitializing
 		{
 			get
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x060476F9 RID: 292601 RVA: 0x01230714 File Offset: 0x0122E914
+		// Token: 0x0603D001 RID: 249857 RVA: 0x0118A2D8 File Offset: 0x011884D8
 		private void SeekSequenceTo(float timeInSeconds)
 		{
 			ALevelSequenceActor elevatorSequenceActor = this.ElevatorSequenceActor;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			});
 		}
 
-		// Token: 0x060476FA RID: 292602 RVA: 0x0123075C File Offset: 0x0122E95C
+		// Token: 0x0603D002 RID: 249858 RVA: 0x0118A320 File Offset: 0x01188520
 		private void PlaySequenceTo(float timeInSeconds)
 		{
 			ALevelSequenceActor elevatorSequenceActor = this.ElevatorSequenceActor;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			ulevelSequencePlayer.PlayToSeconds(timeInSeconds);
 		}
 
-		// Token: 0x060476FB RID: 292603 RVA: 0x01230788 File Offset: 0x0122E988
+		// Token: 0x0603D003 RID: 249859 RVA: 0x0118A34C File Offset: 0x0118854C
 		[NullableContext(2)]
 		private void DestroyAllSpawnedActors(ULevelSequencePlayer player)
 		{
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x060476FC RID: 292604 RVA: 0x012307D8 File Offset: 0x0122E9D8
+		// Token: 0x0603D004 RID: 249860 RVA: 0x0118A39C File Offset: 0x0118859C
 		private void TickSequenceMove(float deltaSeconds)
 		{
 			if (this.ElevatorSequenceActor == null || this.ElevatorSequence == null)
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.PlaySequenceTo(this.SeqPlayedTime);
 		}
 
-		// Token: 0x060476FD RID: 292605 RVA: 0x01230920 File Offset: 0x0122EB20
+		// Token: 0x0603D005 RID: 249861 RVA: 0x0118A4E4 File Offset: 0x011886E4
 		private void SequenceMoveFinish(Action onMoveArrived)
 		{
 			this.SeqPlayedTime = this.SeqTargetTime;
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			onMoveArrived();
 		}
 
-		// Token: 0x060476FE RID: 292606 RVA: 0x012309B0 File Offset: 0x0122EBB0
+		// Token: 0x0603D006 RID: 249862 RVA: 0x0118A574 File Offset: 0x01188774
 		private unsafe bool PlayElevatorSequence(string targetMark)
 		{
 			if (this.ElevatorSequenceActor == null || this.ElevatorSequence == null)
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return true;
 		}
 
-		// Token: 0x060476FF RID: 292607 RVA: 0x01230C4C File Offset: 0x0122EE4C
+		// Token: 0x0603D007 RID: 249863 RVA: 0x0118A810 File Offset: 0x01188A10
 		private float GetSequenceStartTime()
 		{
 			ALevelSequenceActor elevatorSequenceActor = this.ElevatorSequenceActor;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return ((float)startTime.Time.FrameNumber.Value + startTime.Time.SubFrame) * (float)startTime.Rate.Denominator / (float)startTime.Rate.Numerator;
 		}
 
-		// Token: 0x06047700 RID: 292608 RVA: 0x01230CBC File Offset: 0x0122EEBC
+		// Token: 0x0603D008 RID: 249864 RVA: 0x0118A880 File Offset: 0x01188A80
 		private float GetSequenceEndTime()
 		{
 			ALevelSequenceActor elevatorSequenceActor = this.ElevatorSequenceActor;
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return ((float)endTime.Time.FrameNumber.Value + endTime.Time.SubFrame) * (float)endTime.Rate.Denominator / (float)endTime.Rate.Numerator;
 		}
 
-		// Token: 0x06047701 RID: 292609 RVA: 0x01230D2C File Offset: 0x0122EF2C
+		// Token: 0x0603D009 RID: 249865 RVA: 0x0118A8F0 File Offset: 0x01188AF0
 		private void ApplySequenceCenterOffset()
 		{
 			if (this.ElevatorSequenceActor == null)
@@ -244,13 +244,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047702 RID: 292610 RVA: 0x01230DD1 File Offset: 0x0122EFD1
+		// Token: 0x0603D00A RID: 249866 RVA: 0x0118A995 File Offset: 0x01188B95
 		private bool IsSequenceTimeReached(float timeA, float timeB)
 		{
 			return MathF.Abs(timeA - timeB) <= 0.001f;
 		}
 
-		// Token: 0x06047703 RID: 292611 RVA: 0x01230DE8 File Offset: 0x0122EFE8
+		// Token: 0x0603D00B RID: 249867 RVA: 0x0118A9AC File Offset: 0x01188BAC
 		private void InitSequenceSkeletalMeshes()
 		{
 			this.SequenceSkeletalMeshes.Clear();
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047704 RID: 292612 RVA: 0x01230F14 File Offset: 0x0122F114
+		// Token: 0x0603D00C RID: 249868 RVA: 0x0118AAD8 File Offset: 0x01188CD8
 		private void EnterAnimTickState()
 		{
 			if (this.IsAnimTickOptimizeActive)
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047705 RID: 292613 RVA: 0x01230FA0 File Offset: 0x0122F1A0
+		// Token: 0x0603D00D RID: 249869 RVA: 0x0118AB64 File Offset: 0x01188D64
 		private void ExitAnimTickState()
 		{
 			if (!this.IsAnimTickOptimizeActive)
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.AnimTickOriginalOptions.Clear();
 		}
 
-		// Token: 0x06047706 RID: 292614 RVA: 0x0123102C File Offset: 0x0122F22C
+		// Token: 0x0603D00E RID: 249870 RVA: 0x0118ABF0 File Offset: 0x01188DF0
 		private void ReleaseElevatorSequenceActor()
 		{
 			this.ClearPendingRefActorReadyCallback();
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.ElevatorSequence = null;
 		}
 
-		// Token: 0x06047707 RID: 292615 RVA: 0x012310AC File Offset: 0x0122F2AC
+		// Token: 0x0603D00F RID: 249871 RVA: 0x0118AC70 File Offset: 0x01188E70
 		private unsafe void LoadSequenceAsync(Action<ULevelSequence> callback)
 		{
 			ElevatorSequenceMoveStrategy.<>c__DisplayClass31_0 CS$<>8__locals1 = new ElevatorSequenceMoveStrategy.<>c__DisplayClass31_0();
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06047708 RID: 292616 RVA: 0x01231164 File Offset: 0x0122F364
+		// Token: 0x0603D010 RID: 249872 RVA: 0x0118AD28 File Offset: 0x01188F28
 		private bool InitElevatorSequenceActor(ULevelSequence sequence)
 		{
 			if (this.ElevatorSequenceActor != null)
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return true;
 		}
 
-		// Token: 0x06047709 RID: 292617 RVA: 0x01231224 File Offset: 0x0122F424
+		// Token: 0x0603D011 RID: 249873 RVA: 0x0118ADE8 File Offset: 0x01188FE8
 		private void WaitRefActorsReady(Action onReady)
 		{
 			ElevatorSequenceMoveStrategy.<>c__DisplayClass33_0 CS$<>8__locals1 = new ElevatorSequenceMoveStrategy.<>c__DisplayClass33_0();
@@ -463,7 +463,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			CS$<>8__locals1.refComp.AddOnRefActorReadyCallback(this.PendingRefActorReadyCallback);
 		}
 
-		// Token: 0x0604770A RID: 292618 RVA: 0x01231312 File Offset: 0x0122F512
+		// Token: 0x0603D012 RID: 249874 RVA: 0x0118AED6 File Offset: 0x011890D6
 		private void ClearPendingRefActorReadyCallback()
 		{
 			if (this.PendingRefActorReadyCallback == null)
@@ -478,7 +478,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.PendingRefActorReadyCallback = null;
 		}
 
-		// Token: 0x0604770B RID: 292619 RVA: 0x01231348 File Offset: 0x0122F548
+		// Token: 0x0603D013 RID: 249875 RVA: 0x0118AF0C File Offset: 0x0118910C
 		private unsafe void InitFloorSeqMarkConfig()
 		{
 			this.FloorSeqMarks = new List<string>();
@@ -538,7 +538,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x0604770C RID: 292620 RVA: 0x012315E4 File Offset: 0x0122F7E4
+		// Token: 0x0603D014 RID: 249876 RVA: 0x0118B1A8 File Offset: 0x011893A8
 		[NullableContext(2)]
 		private unsafe void JumpElevatorSequenceToInitFloor(Action onComplete = null)
 		{
@@ -624,7 +624,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			onComplete2();
 		}
 
-		// Token: 0x0604770D RID: 292621 RVA: 0x012316C4 File Offset: 0x0122F8C4
+		// Token: 0x0603D015 RID: 249877 RVA: 0x0118B288 File Offset: 0x01189488
 		private unsafe void PrepareSequenceMove(int targetFloor, Action onReady)
 		{
 			if (string.IsNullOrEmpty(this.GetFloorMark(targetFloor)))
@@ -654,7 +654,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			});
 		}
 
-		// Token: 0x0604770E RID: 292622 RVA: 0x012317C0 File Offset: 0x0122F9C0
+		// Token: 0x0603D016 RID: 249878 RVA: 0x0118B384 File Offset: 0x01189584
 		public unsafe override bool OnBeforeEnterMoving()
 		{
 			int targetFloor = this.Ctx.TargetFloor;
@@ -676,13 +676,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return this.PlayElevatorSequence(floorMark);
 		}
 
-		// Token: 0x0604770F RID: 292623 RVA: 0x012318AA File Offset: 0x0122FAAA
+		// Token: 0x0603D017 RID: 249879 RVA: 0x0118B46E File Offset: 0x0118966E
 		public override void OnEnterMovePhase()
 		{
 			this.EnterAnimTickState();
 		}
 
-		// Token: 0x06047710 RID: 292624 RVA: 0x012318B2 File Offset: 0x0122FAB2
+		// Token: 0x0603D018 RID: 249880 RVA: 0x0118B476 File Offset: 0x01189676
 		[NullableContext(2)]
 		private string GetFloorMark(int floor)
 		{
@@ -693,7 +693,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return this.FloorSeqMarks[floor - 1];
 		}
 
-		// Token: 0x06047711 RID: 292625 RVA: 0x012318D8 File Offset: 0x0122FAD8
+		// Token: 0x0603D019 RID: 249881 RVA: 0x0118B49C File Offset: 0x0118969C
 		public override void InitFromConfig(LiftComponent config, ElevatorContext ctx, float _initLocationX, float _initLocationY, float _initLocationZ)
 		{
 			this.Ctx = ctx;
@@ -708,13 +708,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047712 RID: 292626 RVA: 0x01231933 File Offset: 0x0122FB33
+		// Token: 0x0603D01A RID: 249882 RVA: 0x0118B4F7 File Offset: 0x011896F7
 		public override void OnInit()
 		{
 			this.InitFloorSeqMarkConfig();
 		}
 
-		// Token: 0x06047713 RID: 292627 RVA: 0x0123193C File Offset: 0x0122FB3C
+		// Token: 0x0603D01B RID: 249883 RVA: 0x0118B500 File Offset: 0x01189700
 		public override void OnStart(Action tryStartAutoRun)
 		{
 			this.IsInitializingFlag = true;
@@ -725,7 +725,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			});
 		}
 
-		// Token: 0x06047714 RID: 292628 RVA: 0x01231976 File Offset: 0x0122FB76
+		// Token: 0x0603D01C RID: 249884 RVA: 0x0118B53A File Offset: 0x0118973A
 		public override void OnClear()
 		{
 			base.OnClear();
@@ -735,13 +735,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.ReleaseElevatorSequenceActor();
 		}
 
-		// Token: 0x06047715 RID: 292629 RVA: 0x0123199C File Offset: 0x0122FB9C
+		// Token: 0x0603D01D RID: 249885 RVA: 0x0118B560 File Offset: 0x01189760
 		public override void TickMove(float deltaSeconds)
 		{
 			this.TickSequenceMove(deltaSeconds);
 		}
 
-		// Token: 0x06047716 RID: 292630 RVA: 0x012319A5 File Offset: 0x0122FBA5
+		// Token: 0x0603D01E RID: 249886 RVA: 0x0118B569 File Offset: 0x01189769
 		public override void CheckAndFinishMove(Action onMoveArrived)
 		{
 			if (this.IsSequenceTimeReached(this.SeqPlayedTime, this.SeqTargetTime))
@@ -750,19 +750,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047717 RID: 292631 RVA: 0x012319C2 File Offset: 0x0122FBC2
+		// Token: 0x0603D01F RID: 249887 RVA: 0x0118B586 File Offset: 0x01189786
 		public override void PrepareMoveToFloor(Action onReady)
 		{
 			this.PrepareSequenceMove(this.Ctx.TargetFloor, onReady);
 		}
 
-		// Token: 0x06047718 RID: 292632 RVA: 0x012319D6 File Offset: 0x0122FBD6
+		// Token: 0x0603D020 RID: 249888 RVA: 0x0118B59A File Offset: 0x0118979A
 		public override int GetFloorCount()
 		{
 			return this.FloorSeqMarks.Count;
 		}
 
-		// Token: 0x06047719 RID: 292633 RVA: 0x012319E4 File Offset: 0x0122FBE4
+		// Token: 0x0603D021 RID: 249889 RVA: 0x0118B5A8 File Offset: 0x011897A8
 		public override float GetMoveDuration()
 		{
 			float num = MathF.Abs(this.SeqTargetTime - this.SeqPlayedTime);
@@ -773,14 +773,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return 1000f;
 		}
 
-		// Token: 0x0604771A RID: 292634 RVA: 0x01231A13 File Offset: 0x0122FC13
+		// Token: 0x0603D022 RID: 249890 RVA: 0x0118B5D7 File Offset: 0x011897D7
 		[NullableContext(2)]
 		public ALevelSequenceActor GetPlayingSequenceActor()
 		{
 			return this.ElevatorSequenceActor;
 		}
 
-		// Token: 0x0604771C RID: 292636 RVA: 0x01231A44 File Offset: 0x0122FC44
+		// Token: 0x0603D024 RID: 249892 RVA: 0x0118B608 File Offset: 0x01189808
 		[NullableContext(2)]
 		[CompilerGenerated]
 		internal static void <InitSequenceSkeletalMeshes>g__collectFromActor|27_0(UObject obj, ref ElevatorSequenceMoveStrategy.<>c__DisplayClass27_0 A_1)
@@ -804,40 +804,40 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x04025928 RID: 153896
+		// Token: 0x04020597 RID: 132503
 		private readonly Dictionary<USkeletalMeshComponent, EVisibilityBasedAnimTickOption> AnimTickOriginalOptions = new Dictionary<USkeletalMeshComponent, EVisibilityBasedAnimTickOption>();
 
-		// Token: 0x04025929 RID: 153897
+		// Token: 0x04020598 RID: 132504
 		private readonly List<USkeletalMeshComponent> SequenceSkeletalMeshes = new List<USkeletalMeshComponent>();
 
-		// Token: 0x0402592A RID: 153898
+		// Token: 0x04020599 RID: 132505
 		private float AnnularMoveTargetTime;
 
-		// Token: 0x0402592B RID: 153899
+		// Token: 0x0402059A RID: 132506
 		[Nullable(2)]
 		private ULevelSequence ElevatorSequence;
 
-		// Token: 0x0402592C RID: 153900
+		// Token: 0x0402059B RID: 132507
 		[Nullable(2)]
 		private ALevelSequenceActor ElevatorSequenceActor;
 
-		// Token: 0x0402592D RID: 153901
+		// Token: 0x0402059C RID: 132508
 		[Nullable(2)]
 		private ILiftFloorSeqMarkConfig FloorSeqMarkConfig;
 
-		// Token: 0x0402592E RID: 153902
+		// Token: 0x0402059D RID: 132509
 		private List<string> FloorSeqMarks = new List<string>();
 
-		// Token: 0x0402592F RID: 153903
+		// Token: 0x0402059E RID: 132510
 		private bool IsAnimTickOptimizeActive;
 
-		// Token: 0x04025930 RID: 153904
+		// Token: 0x0402059F RID: 132511
 		private bool IsAnnularMoving;
 
-		// Token: 0x04025931 RID: 153905
+		// Token: 0x040205A0 RID: 132512
 		private bool IsInitializingFlag;
 
-		// Token: 0x04025932 RID: 153906
+		// Token: 0x040205A1 RID: 132513
 		[Nullable(new byte[]
 		{
 			2,
@@ -846,16 +846,16 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 		})]
 		private Action<string, AActor> PendingRefActorReadyCallback;
 
-		// Token: 0x04025933 RID: 153907
+		// Token: 0x040205A2 RID: 132514
 		private float SeqAccumulatedTime;
 
-		// Token: 0x04025934 RID: 153908
+		// Token: 0x040205A3 RID: 132515
 		private float SeqPlayedTime;
 
-		// Token: 0x04025935 RID: 153909
+		// Token: 0x040205A4 RID: 132516
 		private float SeqTargetTime;
 
-		// Token: 0x04025936 RID: 153910
+		// Token: 0x040205A5 RID: 132517
 		private int SequenceLoadRequestId;
 	}
 }

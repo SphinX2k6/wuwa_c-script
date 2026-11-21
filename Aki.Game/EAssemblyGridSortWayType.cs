@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001873 RID: 6259
+// Token: 0x02000D2C RID: 3372
 public enum EAssemblyGridSortWayType
 {
-	// Token: 0x040052DF RID: 21215
+	// Token: 0x0400538A RID: 21386
 	ConfigId = 1,
-	// Token: 0x040052E0 RID: 21216
+	// Token: 0x0400538B RID: 21387
 	SortIndex,
-	// Token: 0x040052E1 RID: 21217
+	// Token: 0x0400538C RID: 21388
 	ConfigIdAscending,
-	// Token: 0x040052E2 RID: 21218
+	// Token: 0x0400538D RID: 21389
 	Quality,
-	// Token: 0x040052E3 RID: 21219
+	// Token: 0x0400538E RID: 21390
 	Count
 }

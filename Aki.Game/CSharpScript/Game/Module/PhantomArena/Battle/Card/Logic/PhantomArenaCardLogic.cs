@@ -11,68 +11,68 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 {
-	// Token: 0x020052C1 RID: 21185
+	// Token: 0x02004291 RID: 17041
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class PhantomArenaCardLogic
 	{
-		// Token: 0x0603630A RID: 221962 RVA: 0x00CD2065 File Offset: 0x00CD0265
+		// Token: 0x0602B205 RID: 176645 RVA: 0x00C1F78D File Offset: 0x00C1D98D
 		public PhantomArenaCardLogic(PhantomArenaCard card, PhantomArenaBattleProxy viewProxy)
 		{
 			this.Card = card;
 			this.ViewProxy = viewProxy;
 		}
 
-		// Token: 0x0603630B RID: 221963 RVA: 0x00CD207B File Offset: 0x00CD027B
+		// Token: 0x0602B206 RID: 176646 RVA: 0x00C1F7A3 File Offset: 0x00C1D9A3
 		public Tuple<bool, EPhantomCardSettingFailReason> CheckRecycleSettingConditionFromHead()
 		{
 			return this.OnCheckRecycleSettingConditionFromHead();
 		}
 
-		// Token: 0x0603630C RID: 221964 RVA: 0x00CD2083 File Offset: 0x00CD0283
+		// Token: 0x0602B207 RID: 176647 RVA: 0x00C1F7AB File Offset: 0x00C1D9AB
 		public Tuple<bool, EPhantomCardSettingFailReason> CheckRecycleSettingConditionFromFunctional()
 		{
 			return this.OnCheckRecycleSettingConditionFromFunctional();
 		}
 
-		// Token: 0x0603630D RID: 221965
+		// Token: 0x0602B208 RID: 176648
 		public abstract Tuple<bool, EPhantomCardSettingFailReason> CheckFunctionalSettingCondition(PhantomArenaCard oldCard);
 
-		// Token: 0x0603630E RID: 221966
+		// Token: 0x0602B209 RID: 176649
 		public abstract Tuple<bool, EPhantomCardSettingFailReason> CheckMonsterSettingCondition(PhantomArenaCard oldCard);
 
-		// Token: 0x0603630F RID: 221967
+		// Token: 0x0602B20A RID: 176650
 		protected abstract Tuple<bool, EPhantomCardSettingFailReason> OnCheckRecycleSettingConditionFromHead();
 
-		// Token: 0x06036310 RID: 221968
+		// Token: 0x0602B20B RID: 176651
 		protected abstract Tuple<bool, EPhantomCardSettingFailReason> OnCheckRecycleSettingConditionFromFunctional();
 
-		// Token: 0x06036311 RID: 221969 RVA: 0x00CD208B File Offset: 0x00CD028B
+		// Token: 0x0602B20C RID: 176652 RVA: 0x00C1F7B3 File Offset: 0x00C1D9B3
 		public void BeforeStart()
 		{
 			this.OnBeforeStart();
 		}
 
-		// Token: 0x06036312 RID: 221970 RVA: 0x00CD2093 File Offset: 0x00CD0293
+		// Token: 0x0602B20D RID: 176653 RVA: 0x00C1F7BB File Offset: 0x00C1D9BB
 		public virtual List<TCardComponentsRegisterInfoByResourceId> GetComponentsDataList()
 		{
 			return new List<TCardComponentsRegisterInfoByResourceId>();
 		}
 
-		// Token: 0x06036313 RID: 221971 RVA: 0x00CD209A File Offset: 0x00CD029A
+		// Token: 0x0602B20E RID: 176654 RVA: 0x00C1F7C2 File Offset: 0x00C1D9C2
 		public void Refresh(PhantomCardData data)
 		{
 			this.Card.Data = data;
 			this.OnRefresh();
 		}
 
-		// Token: 0x06036314 RID: 221972 RVA: 0x00CD20AE File Offset: 0x00CD02AE
+		// Token: 0x0602B20F RID: 176655 RVA: 0x00C1F7D6 File Offset: 0x00C1D9D6
 		public void SetSelectedState(bool value)
 		{
 			this.OnSetSelectedState(value);
 		}
 
-		// Token: 0x06036315 RID: 221973 RVA: 0x00CD20B8 File Offset: 0x00CD02B8
+		// Token: 0x0602B210 RID: 176656 RVA: 0x00C1F7E0 File Offset: 0x00C1D9E0
 		public UniTask RefreshEffect(int curEffectCount)
 		{
 			PhantomArenaCardLogic.<RefreshEffect>d__13 <RefreshEffect>d__;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			return <RefreshEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036316 RID: 221974 RVA: 0x00CD2104 File Offset: 0x00CD0304
+		// Token: 0x0602B211 RID: 176657 RVA: 0x00C1F82C File Offset: 0x00C1DA2C
 		public void TryFinishCurrentGuide()
 		{
 			PhantomArenaGuideCardSkillData phantomArenaGuideCardSkillData = new PhantomArenaGuideCardSkillData
@@ -97,34 +97,34 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			});
 		}
 
-		// Token: 0x06036317 RID: 221975 RVA: 0x00CD2148 File Offset: 0x00CD0348
+		// Token: 0x0602B212 RID: 176658 RVA: 0x00C1F870 File Offset: 0x00C1DA70
 		protected virtual void OnBeforeStart()
 		{
 		}
 
-		// Token: 0x06036318 RID: 221976 RVA: 0x00CD214A File Offset: 0x00CD034A
+		// Token: 0x0602B213 RID: 176659 RVA: 0x00C1F872 File Offset: 0x00C1DA72
 		protected virtual void OnRefresh()
 		{
 		}
 
-		// Token: 0x06036319 RID: 221977 RVA: 0x00CD214C File Offset: 0x00CD034C
+		// Token: 0x0602B214 RID: 176660 RVA: 0x00C1F874 File Offset: 0x00C1DA74
 		protected virtual void OnSetSelectedState(bool value)
 		{
 		}
 
-		// Token: 0x0603631A RID: 221978 RVA: 0x00CD214E File Offset: 0x00CD034E
+		// Token: 0x0602B215 RID: 176661 RVA: 0x00C1F876 File Offset: 0x00C1DA76
 		protected virtual UniTask OnRefreshEffect(int curEffectCount)
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0603631B RID: 221979 RVA: 0x00CD2155 File Offset: 0x00CD0355
+		// Token: 0x0602B216 RID: 176662 RVA: 0x00C1F87D File Offset: 0x00C1DA7D
 		protected void SkillBtnClick()
 		{
 			this.TriggerToolActiveSkill().Forget();
 		}
 
-		// Token: 0x0603631C RID: 221980 RVA: 0x00CD2164 File Offset: 0x00CD0364
+		// Token: 0x0602B217 RID: 176663 RVA: 0x00C1F88C File Offset: 0x00C1DA8C
 		private UniTask TriggerToolActiveSkill()
 		{
 			PhantomArenaCardLogic.<TriggerToolActiveSkill>d__20 <TriggerToolActiveSkill>d__;
@@ -135,10 +135,10 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			return <TriggerToolActiveSkill>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401CAAC RID: 117420
+		// Token: 0x040174E1 RID: 95457
 		protected PhantomArenaCard Card;
 
-		// Token: 0x0401CAAD RID: 117421
+		// Token: 0x040174E2 RID: 95458
 		protected PhantomArenaBattleProxy ViewProxy;
 	}
 }

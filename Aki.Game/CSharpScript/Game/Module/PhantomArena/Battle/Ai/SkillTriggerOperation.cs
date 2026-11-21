@@ -7,23 +7,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 {
-	// Token: 0x020052E6 RID: 21222
+	// Token: 0x020042B6 RID: 17078
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SkillTriggerOperation : NpcAiOperation
 	{
-		// Token: 0x17008308 RID: 33544
-		// (get) Token: 0x0603649A RID: 222362 RVA: 0x00CD785F File Offset: 0x00CD5A5F
-		// (set) Token: 0x0603649B RID: 222363 RVA: 0x00CD7867 File Offset: 0x00CD5A67
+		// Token: 0x170056C8 RID: 22216
+		// (get) Token: 0x0602B395 RID: 177045 RVA: 0x00C24F83 File Offset: 0x00C23183
+		// (set) Token: 0x0602B396 RID: 177046 RVA: 0x00C24F8B File Offset: 0x00C2318B
 		public PhantomBattleSkillTriggerInfo Info { get; private set; }
 
-		// Token: 0x0603649C RID: 222364 RVA: 0x00CD7870 File Offset: 0x00CD5A70
+		// Token: 0x0602B397 RID: 177047 RVA: 0x00C24F94 File Offset: 0x00C23194
 		public SkillTriggerOperation(PhantomBattleSkillTriggerInfo info)
 		{
 			this.Info = info;
 		}
 
-		// Token: 0x0603649D RID: 222365 RVA: 0x00CD7880 File Offset: 0x00CD5A80
+		// Token: 0x0602B398 RID: 177048 RVA: 0x00C24FA4 File Offset: 0x00C231A4
 		public override UniTask ExecuteAiOperation(PhantomArenaBattleProxy proxy)
 		{
 			SkillTriggerOperation.<ExecuteAiOperation>d__5 <ExecuteAiOperation>d__;

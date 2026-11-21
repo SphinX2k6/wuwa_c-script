@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072A6 RID: 29350
+	// Token: 0x02006425 RID: 25637
 	public enum ECameraCollisionLockType
 	{
-		// Token: 0x04025F4F RID: 155471
+		// Token: 0x04021222 RID: 135714
 		LevelEventDisableCameraCollision,
-		// Token: 0x04025F50 RID: 155472
+		// Token: 0x04021223 RID: 135715
 		LevelEventAdjustPlayerCamera
 	}
 }

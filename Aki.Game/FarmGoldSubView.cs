@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001263 RID: 4707
+// Token: 0x02000717 RID: 1815
 [NullableContext(2)]
 [Nullable(0)]
 public class FarmGoldSubView : ActivitySubViewBase
 {
-	// Token: 0x06008003 RID: 32771 RVA: 0x001B13C5 File Offset: 0x001AF5C5
+	// Token: 0x0600539A RID: 21402 RVA: 0x001BA095 File Offset: 0x001B8295
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class FarmGoldSubView : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06008004 RID: 32772 RVA: 0x001B1400 File Offset: 0x001AF600
+	// Token: 0x0600539B RID: 21403 RVA: 0x001BA0D0 File Offset: 0x001B82D0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FarmGoldSubView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -35,7 +35,7 @@ public class FarmGoldSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008005 RID: 32773 RVA: 0x001B1444 File Offset: 0x001AF644
+	// Token: 0x0600539C RID: 21404 RVA: 0x001BA114 File Offset: 0x001B8314
 	protected override void OnAddEventListener()
 	{
 		base.OnAddEventListener();
@@ -44,7 +44,7 @@ public class FarmGoldSubView : ActivitySubViewBase
 		EventSystem.Instance.Add<IActivityRewardViewData>(EEventName.RefreshCommonActivityRewardPopUpView, new Action<IActivityRewardViewData>(this.OnRefreshRewardPopUp));
 	}
 
-	// Token: 0x06008006 RID: 32774 RVA: 0x001B14AC File Offset: 0x001AF6AC
+	// Token: 0x0600539D RID: 21405 RVA: 0x001BA17C File Offset: 0x001B837C
 	protected override void OnRemoveEventListener()
 	{
 		base.OnRemoveEventListener();
@@ -53,19 +53,19 @@ public class FarmGoldSubView : ActivitySubViewBase
 		EventSystem.Instance.Remove<IActivityRewardViewData>(EEventName.RefreshCommonActivityRewardPopUpView, new Action<IActivityRewardViewData>(this.OnRefreshRewardPopUp));
 	}
 
-	// Token: 0x06008007 RID: 32775 RVA: 0x001B1513 File Offset: 0x001AF713
+	// Token: 0x0600539E RID: 21406 RVA: 0x001BA1E3 File Offset: 0x001B83E3
 	private void OnFarmGoldOrCommonRedDot(int id)
 	{
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06008008 RID: 32776 RVA: 0x001B151B File Offset: 0x001AF71B
+	// Token: 0x0600539F RID: 21407 RVA: 0x001BA1EB File Offset: 0x001B83EB
 	private void OnClickRewardButtonItem()
 	{
 		this.OnClickBtnReward();
 	}
 
-	// Token: 0x06008009 RID: 32777 RVA: 0x001B1523 File Offset: 0x001AF723
+	// Token: 0x060053A0 RID: 21408 RVA: 0x001BA1F3 File Offset: 0x001B83F3
 	private void OnClickBtnReward()
 	{
 		UiManager.Instance.OpenView(EUiViewName.ActivityRewardPopUpView, this.FarmGoldDataField.GetRewardPopUpViewData(), delegate(bool success, int viewId)
@@ -79,13 +79,13 @@ public class FarmGoldSubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0600800A RID: 32778 RVA: 0x001B155E File Offset: 0x001AF75E
+	// Token: 0x060053A1 RID: 21409 RVA: 0x001BA22E File Offset: 0x001B842E
 	protected override void OnStart()
 	{
 		this.FarmGoldDataField = (this.ActivityBaseData as FarmGoldData);
 	}
 
-	// Token: 0x0600800B RID: 32779 RVA: 0x001B1571 File Offset: 0x001AF771
+	// Token: 0x060053A2 RID: 21410 RVA: 0x001BA241 File Offset: 0x001B8441
 	protected override void OnBeforeShow()
 	{
 		this.UnBindFarmGoldRedDot();
@@ -99,7 +99,7 @@ public class FarmGoldSubView : ActivitySubViewBase
 		rewardButtonItem.BindRedDot(redDotName, (activityBaseData != null) ? activityBaseData.Id : 0);
 	}
 
-	// Token: 0x0600800C RID: 32780 RVA: 0x001B15A0 File Offset: 0x001AF7A0
+	// Token: 0x060053A3 RID: 21411 RVA: 0x001BA270 File Offset: 0x001B8470
 	protected override void OnRefreshView()
 	{
 		this.RefreshGoBtnText();
@@ -107,7 +107,7 @@ public class FarmGoldSubView : ActivitySubViewBase
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0600800D RID: 32781 RVA: 0x001B15B4 File Offset: 0x001AF7B4
+	// Token: 0x060053A4 RID: 21412 RVA: 0x001BA284 File Offset: 0x001B8484
 	private void RefreshGoBtnText()
 	{
 		if (this.ActivityBaseData.GetUnFinishPreGuideQuestId() > 0)
@@ -118,7 +118,7 @@ public class FarmGoldSubView : ActivitySubViewBase
 		this.InfoComponent.SetBtnText("PrefabTextItem_2701983798_Text", Array.Empty<object>());
 	}
 
-	// Token: 0x0600800E RID: 32782 RVA: 0x001B15F0 File Offset: 0x001AF7F0
+	// Token: 0x060053A5 RID: 21413 RVA: 0x001BA2C0 File Offset: 0x001B84C0
 	private void RefreshRewardButtonText()
 	{
 		FarmGoldData farmGoldDataField = this.FarmGoldDataField;
@@ -139,7 +139,7 @@ public class FarmGoldSubView : ActivitySubViewBase
 		rewardButtonItem.SetText(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x0600800F RID: 32783 RVA: 0x001B1679 File Offset: 0x001AF879
+	// Token: 0x060053A6 RID: 21414 RVA: 0x001BA349 File Offset: 0x001B8549
 	private void FunctionExecute(ActivityBaseData data)
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -158,7 +158,7 @@ public class FarmGoldSubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06008010 RID: 32784 RVA: 0x001B1698 File Offset: 0x001AF898
+	// Token: 0x060053A7 RID: 21415 RVA: 0x001BA368 File Offset: 0x001B8568
 	private void RefreshRedDot()
 	{
 		bool flag = this.FarmGoldDataField.EntranceRedDot();
@@ -166,7 +166,7 @@ public class FarmGoldSubView : ActivitySubViewBase
 		this.InfoComponent.SetFunctionRedDotVisible(preGuideQuestFinishState && flag);
 	}
 
-	// Token: 0x06008011 RID: 32785 RVA: 0x001B16CB File Offset: 0x001AF8CB
+	// Token: 0x060053A8 RID: 21416 RVA: 0x001BA39B File Offset: 0x001B859B
 	[NullableContext(1)]
 	private void OnRefreshRewardPopUp(IActivityRewardViewData data)
 	{
@@ -176,13 +176,13 @@ public class FarmGoldSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008012 RID: 32786 RVA: 0x001B16DB File Offset: 0x001AF8DB
+	// Token: 0x060053A9 RID: 21417 RVA: 0x001BA3AB File Offset: 0x001B85AB
 	protected override void OnBeforeHide()
 	{
 		this.UnBindFarmGoldRedDot();
 	}
 
-	// Token: 0x06008013 RID: 32787 RVA: 0x001B16E3 File Offset: 0x001AF8E3
+	// Token: 0x060053AA RID: 21418 RVA: 0x001BA3B3 File Offset: 0x001B85B3
 	private void UnBindFarmGoldRedDot()
 	{
 		ButtonItem rewardButtonItem = this.RewardButtonItem;
@@ -193,23 +193,23 @@ public class FarmGoldSubView : ActivitySubViewBase
 		rewardButtonItem.UnBindRedDot();
 	}
 
-	// Token: 0x04003A2B RID: 14891
+	// Token: 0x04003AC3 RID: 15043
 	private FarmGoldData FarmGoldDataField;
 
-	// Token: 0x04003A2C RID: 14892
+	// Token: 0x04003AC4 RID: 15044
 	private ActivitySubViewGeneralInfo InfoComponent;
 
-	// Token: 0x04003A2D RID: 14893
+	// Token: 0x04003AC5 RID: 15045
 	private ButtonItem RewardButtonItem;
 
-	// Token: 0x02007874 RID: 30836
+	// Token: 0x020069FF RID: 27135
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04027B08 RID: 162568
+		// Token: 0x04022E39 RID: 142905
 		public const int InfoItem = 0;
 
-		// Token: 0x04027B09 RID: 162569
+		// Token: 0x04022E3A RID: 142906
 		public const int RewardButton = 1;
 	}
 }

@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x02002926 RID: 10534
+// Token: 0x02001EA1 RID: 7841
 public enum ERouletteGridComponents
 {
-	// Token: 0x0400A1E3 RID: 41443
+	// Token: 0x0400A5CE RID: 42446
 	ItemToggle,
-	// Token: 0x0400A1E4 RID: 41444
+	// Token: 0x0400A5CF RID: 42447
 	SpriteAdd,
-	// Token: 0x0400A1E5 RID: 41445
+	// Token: 0x0400A5D0 RID: 42448
 	TextureIcon,
-	// Token: 0x0400A1E6 RID: 41446
+	// Token: 0x0400A5D1 RID: 42449
 	SpriteSelect,
-	// Token: 0x0400A1E7 RID: 41447
+	// Token: 0x0400A5D2 RID: 42450
 	TextureNone,
-	// Token: 0x0400A1E8 RID: 41448
+	// Token: 0x0400A5D3 RID: 42451
 	SpriteTransitionIcon,
-	// Token: 0x0400A1E9 RID: 41449
+	// Token: 0x0400A5D4 RID: 42452
 	SpriteIcon,
-	// Token: 0x0400A1EA RID: 41450
+	// Token: 0x0400A5D5 RID: 42453
 	PanelIcon,
-	// Token: 0x0400A1EB RID: 41451
+	// Token: 0x0400A5D6 RID: 42454
 	PanelIndex,
-	// Token: 0x0400A1EC RID: 41452
+	// Token: 0x0400A5D7 RID: 42455
 	TextIndex,
-	// Token: 0x0400A1ED RID: 41453
+	// Token: 0x0400A5D8 RID: 42456
 	TextNum,
-	// Token: 0x0400A1EE RID: 41454
+	// Token: 0x0400A5D9 RID: 42457
 	RedDot
 }

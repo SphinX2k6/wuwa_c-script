@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001BDB RID: 7131
+// Token: 0x0200109A RID: 4250
 [NullableContext(1)]
 [Nullable(0)]
 public class FormationDefine
 {
-	// Token: 0x0600D49B RID: 54427 RVA: 0x0030EFE4 File Offset: 0x0030D1E4
+	// Token: 0x0600A8AD RID: 43181 RVA: 0x0031A158 File Offset: 0x00318358
 	public static IRoleSlotDisplayData CreateEmptySlotDisplayData()
 	{
 		return new IRoleSlotDisplayData
@@ -28,37 +28,37 @@ public class FormationDefine
 		};
 	}
 
-	// Token: 0x04006122 RID: 24866
+	// Token: 0x040061F1 RID: 25073
 	public const int FORMATION_MAX_SLOT_COUNT = 3;
 
-	// Token: 0x04006123 RID: 24867
+	// Token: 0x040061F2 RID: 25074
 	public const string FORMATION_DEFAULT_NAME_TEXT_KEY = "PrefabTextItem_3608949261_Text";
 
-	// Token: 0x04006124 RID: 24868
+	// Token: 0x040061F3 RID: 25075
 	public const int DELAY_SHOW_LOADING_MS = 500;
 
-	// Token: 0x04006125 RID: 24869
+	// Token: 0x040061F4 RID: 25076
 	public const int AUTO_CLOSE_FORMATION_MS = 30000;
 
-	// Token: 0x04006126 RID: 24870
+	// Token: 0x040061F5 RID: 25077
 	public const int FORMATION_DRAG_START_SHOW_TIME_MS = 250;
 
-	// Token: 0x04006127 RID: 24871
+	// Token: 0x040061F6 RID: 25078
 	public const int FORMATION_DRAG_START_MOVE_TIME_MS = 750;
 
-	// Token: 0x04006128 RID: 24872
+	// Token: 0x040061F7 RID: 25079
 	public const int GAMEPAD_DRAG_OFFSET_X = 30;
 
-	// Token: 0x04006129 RID: 24873
+	// Token: 0x040061F8 RID: 25080
 	public const int GAMEPAD_DRAG_OFFSET_Z = -50;
 
-	// Token: 0x0400612A RID: 24874
+	// Token: 0x040061F9 RID: 25081
 	public const string SELF_ONLINE_INDEX_SPRITE = "SP_Online{0}PIcon_Self";
 
-	// Token: 0x0400612B RID: 24875
+	// Token: 0x040061FA RID: 25082
 	public const string OTHER_ONLINE_INDEX_SPRITE = "SP_Online{0}PIcon";
 
-	// Token: 0x0400612C RID: 24876
+	// Token: 0x040061FB RID: 25083
 	[StaticVariableRuleIgnore]
 	public static readonly string[] FormationIndexSprites = new string[]
 	{
@@ -84,7 +84,7 @@ public class FormationDefine
 		"SP_TeamNum20"
 	};
 
-	// Token: 0x0400612D RID: 24877
+	// Token: 0x040061FC RID: 25084
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<int, string> FormationPositionToCameraRecord = new Dictionary<int, string>
 	{

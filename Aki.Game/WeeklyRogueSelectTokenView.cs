@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D57 RID: 11607
+// Token: 0x020022B1 RID: 8881
 public class WeeklyRogueSelectTokenView : UiViewBase
 {
-	// Token: 0x06018645 RID: 99909 RVA: 0x00636096 File Offset: 0x00634296
+	// Token: 0x06015EE7 RID: 89831 RVA: 0x0065C0A6 File Offset: 0x0065A2A6
 	[NullableContext(1)]
 	public WeeklyRogueSelectTokenView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06018646 RID: 99910 RVA: 0x006360A0 File Offset: 0x006342A0
+	// Token: 0x06015EE8 RID: 89832 RVA: 0x0065C0B0 File Offset: 0x0065A2B0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class WeeklyRogueSelectTokenView : UiViewBase
 		};
 	}
 
-	// Token: 0x06018647 RID: 99911 RVA: 0x006361C0 File Offset: 0x006343C0
+	// Token: 0x06015EE9 RID: 89833 RVA: 0x0065C1D0 File Offset: 0x0065A3D0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyRogueSelectTokenView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -51,14 +51,14 @@ public class WeeklyRogueSelectTokenView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018648 RID: 99912 RVA: 0x00636204 File Offset: 0x00634404
+	// Token: 0x06015EEA RID: 89834 RVA: 0x0065C214 File Offset: 0x0065A414
 	protected override void OnBeforeShow()
 	{
 		EToggleState state = (WeeklyRogueModel.Instance.DescMode == EDescModel.SIMPLE) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(4).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x06018649 RID: 99913 RVA: 0x00636233 File Offset: 0x00634433
+	// Token: 0x06015EEB RID: 89835 RVA: 0x0065C243 File Offset: 0x0065A443
 	[NullableContext(1)]
 	private WeeklyRogueTokenItem CreateTokenItem()
 	{
@@ -68,7 +68,7 @@ public class WeeklyRogueSelectTokenView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601864A RID: 99914 RVA: 0x0063624C File Offset: 0x0063444C
+	// Token: 0x06015EEC RID: 89836 RVA: 0x0065C25C File Offset: 0x0065A45C
 	private void OnSelectChange(int? selectIndex)
 	{
 		if (selectIndex == null)
@@ -89,32 +89,32 @@ public class WeeklyRogueSelectTokenView : UiViewBase
 		base.GetButton(1).SetSelfInteractive(true);
 	}
 
-	// Token: 0x0601864B RID: 99915 RVA: 0x006362A7 File Offset: 0x006344A7
+	// Token: 0x06015EED RID: 89837 RVA: 0x0065C2B7 File Offset: 0x0065A4B7
 	private void OnBtnConfirm()
 	{
 		WeeklyRogueController.Instance.SelectOptionRequest(null);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601864C RID: 99916 RVA: 0x006362BB File Offset: 0x006344BB
+	// Token: 0x06015EEE RID: 89838 RVA: 0x0065C2CB File Offset: 0x0065A4CB
 	private void OnBtnBack()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601864D RID: 99917 RVA: 0x006362C4 File Offset: 0x006344C4
+	// Token: 0x06015EEF RID: 89839 RVA: 0x0065C2D4 File Offset: 0x0065A4D4
 	private void OnBtnInfo()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WeeklyRogueInfo, null, null);
 	}
 
-	// Token: 0x0601864E RID: 99918 RVA: 0x006362D7 File Offset: 0x006344D7
+	// Token: 0x06015EF0 RID: 89840 RVA: 0x0065C2E7 File Offset: 0x0065A4E7
 	private void OnToggleDesc(EToggleState toggleState)
 	{
 		WeeklyRogueModel.Instance.ChangeDescMode();
 	}
 
-	// Token: 0x0400B4F6 RID: 46326
+	// Token: 0x0400B86B RID: 47211
 	[Nullable(new byte[]
 	{
 		2,
@@ -123,26 +123,26 @@ public class WeeklyRogueSelectTokenView : UiViewBase
 	})]
 	private GenericLayout<WeeklyRogueTokenItem, RogueWeeklyEntry> TokenLayout;
 
-	// Token: 0x0400B4F7 RID: 46327
+	// Token: 0x0400B86C RID: 47212
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x020092F2 RID: 37618
+	// Token: 0x02008519 RID: 34073
 	private enum EWeeklyRogueSelectTokenDefine
 	{
-		// Token: 0x0402F7EA RID: 194538
+		// Token: 0x0402AE72 RID: 175730
 		Layout,
-		// Token: 0x0402F7EB RID: 194539
+		// Token: 0x0402AE73 RID: 175731
 		BtnConfirm,
-		// Token: 0x0402F7EC RID: 194540
+		// Token: 0x0402AE74 RID: 175732
 		BtnBack,
-		// Token: 0x0402F7ED RID: 194541
+		// Token: 0x0402AE75 RID: 175733
 		BtnInfo,
-		// Token: 0x0402F7EE RID: 194542
+		// Token: 0x0402AE76 RID: 175734
 		ToggleDesc,
-		// Token: 0x0402F7EF RID: 194543
+		// Token: 0x0402AE77 RID: 175735
 		TxtToggleDesc,
-		// Token: 0x0402F7F0 RID: 194544
+		// Token: 0x0402AE78 RID: 175736
 		CaptionItem
 	}
 }

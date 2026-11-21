@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200144F RID: 5199
+	// Token: 0x020015A7 RID: 5543
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ISaveConfig
 	{
-		// Token: 0x06007633 RID: 30259 RVA: 0x0011A572 File Offset: 0x00118772
-		[NullableContext(1)]
+		// Token: 0x06007CFD RID: 31997 RVA: 0x001290F6 File Offset: 0x001272F6
+		[NullableContext(0)]
 		public static ISaveConfig Create(ISaveConfig? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002768 RID: 10088
-		// (get) Token: 0x06007634 RID: 30260 RVA: 0x0011A594 File Offset: 0x00118794
+		// Token: 0x17002951 RID: 10577
+		// (get) Token: 0x06007CFE RID: 31998 RVA: 0x00129118 File Offset: 0x00127318
 		public virtual bool? IsTemp
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002769 RID: 10089
-		// (get) Token: 0x06007635 RID: 30261 RVA: 0x0011A5CC File Offset: 0x001187CC
+		// Token: 0x17002952 RID: 10578
+		// (get) Token: 0x06007CFF RID: 31999 RVA: 0x00129150 File Offset: 0x00127350
 		public virtual bool? EnableRollbackWhileSwitchOnlineMode
 		{
 			get
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700276A RID: 10090
-		// (get) Token: 0x06007636 RID: 30262 RVA: 0x0011A604 File Offset: 0x00118804
+		// Token: 0x17002953 RID: 10579
+		// (get) Token: 0x06007D00 RID: 32000 RVA: 0x00129188 File Offset: 0x00127388
 		public virtual bool? DisableRollbackWhileReconnect
 		{
 			get
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700276B RID: 10091
-		// (get) Token: 0x06007637 RID: 30263 RVA: 0x0011A63A File Offset: 0x0011883A
+		// Token: 0x17002954 RID: 10580
+		// (get) Token: 0x06007D01 RID: 32001 RVA: 0x001291BE File Offset: 0x001273BE
 		public virtual IPosRollbackConfig PosRollbackCfg
 		{
 			get
@@ -83,19 +83,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700276C RID: 10092
-		// (get) Token: 0x06007638 RID: 30264 RVA: 0x0011A670 File Offset: 0x00118870
+		// Token: 0x17002955 RID: 10581
+		// (get) Token: 0x06007D02 RID: 32002 RVA: 0x001291F4 File Offset: 0x001273F4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> EnterActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -118,19 +118,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700276D RID: 10093
-		// (get) Token: 0x06007639 RID: 30265 RVA: 0x0011A6EC File Offset: 0x001188EC
+		// Token: 0x17002956 RID: 10582
+		// (get) Token: 0x06007D03 RID: 32003 RVA: 0x00129270 File Offset: 0x00127470
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IInitConditionActions> InitConditionActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -153,35 +153,35 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040044A3 RID: 17571
+		// Token: 0x0400483B RID: 18491
 		private ISaveConfig Instance;
 
-		// Token: 0x040044A4 RID: 17572
+		// Token: 0x0400483C RID: 18492
 		private IPosRollbackConfig _PosRollbackCfgCache;
 
-		// Token: 0x040044A5 RID: 17573
+		// Token: 0x0400483D RID: 18493
 		private bool _PosRollbackCfgInited;
 
-		// Token: 0x040044A6 RID: 17574
+		// Token: 0x0400483E RID: 18494
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _EnterActionsCache;
 
-		// Token: 0x040044A7 RID: 17575
+		// Token: 0x0400483F RID: 18495
 		private bool _EnterActionsInited;
 
-		// Token: 0x040044A8 RID: 17576
+		// Token: 0x04004840 RID: 18496
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IInitConditionActions> _InitConditionActionsCache;
 
-		// Token: 0x040044A9 RID: 17577
+		// Token: 0x04004841 RID: 18497
 		private bool _InitConditionActionsInited;
 	}
 }

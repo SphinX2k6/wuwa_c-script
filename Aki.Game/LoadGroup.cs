@@ -4,22 +4,22 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x0200353C RID: 13628
+// Token: 0x02002AB1 RID: 10929
 [NullableContext(1)]
 [Nullable(0)]
 public class LoadGroup
 {
-	// Token: 0x17002978 RID: 10616
-	// (get) Token: 0x0601DF02 RID: 122626 RVA: 0x00863B83 File Offset: 0x00861D83
+	// Token: 0x17002D11 RID: 11537
+	// (get) Token: 0x0601BC2A RID: 113706 RVA: 0x0088B7BB File Offset: 0x008899BB
 	public string Name { get; }
 
-	// Token: 0x0601DF03 RID: 122627 RVA: 0x00863B8B File Offset: 0x00861D8B
+	// Token: 0x0601BC2B RID: 113707 RVA: 0x0088B7C3 File Offset: 0x008899C3
 	public LoadGroup(string name)
 	{
 		this.Name = name;
 	}
 
-	// Token: 0x0601DF04 RID: 122628 RVA: 0x00863BB0 File Offset: 0x00861DB0
+	// Token: 0x0601BC2C RID: 113708 RVA: 0x0088B7E8 File Offset: 0x008899E8
 	[NullableContext(0)]
 	public UniTask<bool> Run()
 	{
@@ -31,7 +31,7 @@ public class LoadGroup
 		return <Run>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DF05 RID: 122629 RVA: 0x00863BF3 File Offset: 0x00861DF3
+	// Token: 0x0601BC2D RID: 113709 RVA: 0x0088B82B File Offset: 0x00889A2B
 	[NullableContext(2)]
 	public bool Add([Nullable(1)] string name, Func<bool> beforeHandle, [Nullable(new byte[]
 	{
@@ -43,7 +43,7 @@ public class LoadGroup
 		return true;
 	}
 
-	// Token: 0x0400EB26 RID: 60198
+	// Token: 0x0400EFE3 RID: 61411
 	[Nullable(new byte[]
 	{
 		1,
@@ -51,7 +51,7 @@ public class LoadGroup
 	})]
 	private readonly List<UniTask<bool>> Promises = new List<UniTask<bool>>();
 
-	// Token: 0x0400EB27 RID: 60199
+	// Token: 0x0400EFE4 RID: 61412
 	[Nullable(new byte[]
 	{
 		1,

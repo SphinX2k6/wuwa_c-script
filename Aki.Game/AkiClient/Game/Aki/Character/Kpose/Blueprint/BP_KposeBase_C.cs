@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 {
-	// Token: 0x02004256 RID: 16982
+	// Token: 0x020032CB RID: 13003
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/Kpose/Blueprint/BP_KposeBase.BP_KposeBase_C")]
 	[UnrealStructLayout(1816, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1816)]
 	public class BP_KposeBase_C : AKuroEditorTickActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602BFF3 RID: 180211 RVA: 0x00A114B7 File Offset: 0x00A0F6B7
+		// Token: 0x06020EFB RID: 134907 RVA: 0x00952E59 File Offset: 0x00951059
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_KposeBase_C._ClassPtr == IntPtr.Zero)
@@ -25,190 +25,85 @@ namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 			return BP_KposeBase_C._ClassPtr;
 		}
 
-		// Token: 0x0602BFF4 RID: 180212 RVA: 0x00A114DC File Offset: 0x00A0F6DC
+		// Token: 0x06020EFC RID: 134908 RVA: 0x00952E80 File Offset: 0x00951080
 		public BP_KposeBase_C() : this(BuiltinUtils.AllocNativeUObject(BP_KposeBase_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602BFF5 RID: 180213 RVA: 0x00A11504 File Offset: 0x00A0F704
+		// Token: 0x06020EFD RID: 134909 RVA: 0x00952EA8 File Offset: 0x009510A8
 		public BP_KposeBase_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_KposeBase_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006D3D RID: 27965
-		// (get) Token: 0x0602BFF6 RID: 180214 RVA: 0x00A11537 File Offset: 0x00A0F737
-		// (set) Token: 0x0602BFF7 RID: 180215 RVA: 0x00A1154B File Offset: 0x00A0F74B
+		// Token: 0x170041D6 RID: 16854
+		// (get) Token: 0x06020EFE RID: 134910 RVA: 0x00952EDB File Offset: 0x009510DB
+		// (set) Token: 0x06020EFF RID: 134911 RVA: 0x00952EEF File Offset: 0x009510EF
 		[Nullable(2)]
 		public unsafe UKuroPostProcessComponent KuroPostProcess
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroPostProcessComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroPostProcessComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_KuroPostProcess);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_KuroPostProcess, value);
 			}
 		}
 
-		// Token: 0x17006D3E RID: 27966
-		// (get) Token: 0x0602BFF8 RID: 180216 RVA: 0x00A11560 File Offset: 0x00A0F760
-		// (set) Token: 0x0602BFF9 RID: 180217 RVA: 0x00A11574 File Offset: 0x00A0F774
+		// Token: 0x170041D7 RID: 16855
+		// (get) Token: 0x06020F00 RID: 134912 RVA: 0x00952F04 File Offset: 0x00951104
+		// (set) Token: 0x06020F01 RID: 134913 RVA: 0x00952F18 File Offset: 0x00951118
 		[Nullable(2)]
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17006D3F RID: 27967
-		// (get) Token: 0x0602BFFA RID: 180218 RVA: 0x00A1158C File Offset: 0x00A0F78C
-		// (set) Token: 0x0602BFFB RID: 180219 RVA: 0x00A115C5 File Offset: 0x00A0F7C5
-		public TArray<SKposeEffect> PermanentEffects
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<SKposeEffect> result;
-				if ((result = this._PermanentEffects) == null)
-				{
-					result = (this._PermanentEffects = new TArray<SKposeEffect>(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_3, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.PermanentEffects.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17006D40 RID: 27968
-		// (get) Token: 0x0602BFFC RID: 180220 RVA: 0x00A115D4 File Offset: 0x00A0F7D4
-		// (set) Token: 0x0602BFFD RID: 180221 RVA: 0x00A1160D File Offset: 0x00A0F80D
-		public TArray<SKposeEffect> EffectsOnEnd
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<SKposeEffect> result;
-				if ((result = this._EffectsOnEnd) == null)
-				{
-					result = (this._EffectsOnEnd = new TArray<SKposeEffect>(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_4, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.EffectsOnEnd.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17006D41 RID: 27969
-		// (get) Token: 0x0602BFFE RID: 180222 RVA: 0x00A1161C File Offset: 0x00A0F81C
-		// (set) Token: 0x0602BFFF RID: 180223 RVA: 0x00A11655 File Offset: 0x00A0F855
-		public TArray<SKposeEffect> EffectsOnStart
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<SKposeEffect> result;
-				if ((result = this._EffectsOnStart) == null)
-				{
-					result = (this._EffectsOnStart = new TArray<SKposeEffect>(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_5, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.EffectsOnStart.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17006D42 RID: 27970
-		// (get) Token: 0x0602C000 RID: 180224 RVA: 0x00A11664 File Offset: 0x00A0F864
-		// (set) Token: 0x0602C001 RID: 180225 RVA: 0x00A1169D File Offset: 0x00A0F89D
-		public TArray<FKuroRainMaterialFloatParameter> FloatParameterCurves
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FKuroRainMaterialFloatParameter> result;
-				if ((result = this._FloatParameterCurves) == null)
-				{
-					result = (this._FloatParameterCurves = new TArray<FKuroRainMaterialFloatParameter>(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_6, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.FloatParameterCurves.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17006D43 RID: 27971
-		// (get) Token: 0x0602C002 RID: 180226 RVA: 0x00A116AC File Offset: 0x00A0F8AC
-		// (set) Token: 0x0602C003 RID: 180227 RVA: 0x00A116E5 File Offset: 0x00A0F8E5
-		public TArray<FKuroRainMaterialColorParameter> ColorParameterCurves
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FKuroRainMaterialColorParameter> result;
-				if ((result = this._ColorParameterCurves) == null)
-				{
-					result = (this._ColorParameterCurves = new TArray<FKuroRainMaterialColorParameter>(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_7, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ColorParameterCurves.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17006D44 RID: 27972
-		// (get) Token: 0x0602C004 RID: 180228 RVA: 0x00A116F3 File Offset: 0x00A0F8F3
-		// (set) Token: 0x0602C005 RID: 180229 RVA: 0x00A11703 File Offset: 0x00A0F903
+		// Token: 0x170041D8 RID: 16856
+		// (get) Token: 0x06020F02 RID: 134914 RVA: 0x00952F2D File Offset: 0x0095112D
+		// (set) Token: 0x06020F03 RID: 134915 RVA: 0x00952F3D File Offset: 0x0095113D
 		public unsafe bool IsInEditor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_8) != 0;
+				return *(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_IsInEditor) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_8) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_IsInEditor) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006D45 RID: 27973
-		// (get) Token: 0x0602C006 RID: 180230 RVA: 0x00A11714 File Offset: 0x00A0F914
-		// (set) Token: 0x0602C007 RID: 180231 RVA: 0x00A11724 File Offset: 0x00A0F924
+		// Token: 0x170041D9 RID: 16857
+		// (get) Token: 0x06020F04 RID: 134916 RVA: 0x00952F4E File Offset: 0x0095114E
+		// (set) Token: 0x06020F05 RID: 134917 RVA: 0x00952F5E File Offset: 0x0095115E
 		public unsafe float MaterialPlayTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_MaterialPlayTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_MaterialPlayTime) = value;
 			}
 		}
 
-		// Token: 0x17006D46 RID: 27974
-		// (get) Token: 0x0602C008 RID: 180232 RVA: 0x00A11738 File Offset: 0x00A0F938
-		// (set) Token: 0x0602C009 RID: 180233 RVA: 0x00A11771 File Offset: 0x00A0F971
+		// Token: 0x170041DA RID: 16858
+		// (get) Token: 0x06020F06 RID: 134918 RVA: 0x00952F70 File Offset: 0x00951170
+		// (set) Token: 0x06020F07 RID: 134919 RVA: 0x00952FA9 File Offset: 0x009511A9
 		public TArray<int> CachedHandles
 		{
 			get
@@ -217,7 +112,7 @@ namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 				TArray<int> result;
 				if ((result = this._CachedHandles) == null)
 				{
-					result = (this._CachedHandles = new TArray<int>(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_10, this));
+					result = (this._CachedHandles = new TArray<int>(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_CachedHandles, this));
 				}
 				return result;
 			}
@@ -227,9 +122,9 @@ namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 			}
 		}
 
-		// Token: 0x17006D47 RID: 27975
-		// (get) Token: 0x0602C00A RID: 180234 RVA: 0x00A11780 File Offset: 0x00A0F980
-		// (set) Token: 0x0602C00B RID: 180235 RVA: 0x00A117B9 File Offset: 0x00A0F9B9
+		// Token: 0x170041DB RID: 16859
+		// (get) Token: 0x06020F08 RID: 134920 RVA: 0x00952FB8 File Offset: 0x009511B8
+		// (set) Token: 0x06020F09 RID: 134921 RVA: 0x00952FF1 File Offset: 0x009511F1
 		public TArray<UMaterialInstanceDynamic> DynamicMaterials
 		{
 			get
@@ -238,7 +133,7 @@ namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 				TArray<UMaterialInstanceDynamic> result;
 				if ((result = this._DynamicMaterials) == null)
 				{
-					result = (this._DynamicMaterials = new TArray<UMaterialInstanceDynamic>(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_11, this));
+					result = (this._DynamicMaterials = new TArray<UMaterialInstanceDynamic>(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_DynamicMaterials, this));
 				}
 				return result;
 			}
@@ -248,24 +143,24 @@ namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 			}
 		}
 
-		// Token: 0x17006D48 RID: 27976
-		// (get) Token: 0x0602C00C RID: 180236 RVA: 0x00A117C7 File Offset: 0x00A0F9C7
-		// (set) Token: 0x0602C00D RID: 180237 RVA: 0x00A117D7 File Offset: 0x00A0F9D7
+		// Token: 0x170041DC RID: 16860
+		// (get) Token: 0x06020F0A RID: 134922 RVA: 0x00952FFF File Offset: 0x009511FF
+		// (set) Token: 0x06020F0B RID: 134923 RVA: 0x0095300F File Offset: 0x0095120F
 		public unsafe float PassTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_PassTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_PassTime) = value;
 			}
 		}
 
-		// Token: 0x17006D49 RID: 27977
-		// (get) Token: 0x0602C00E RID: 180238 RVA: 0x00A117E8 File Offset: 0x00A0F9E8
-		// (set) Token: 0x0602C00F RID: 180239 RVA: 0x00A11821 File Offset: 0x00A0FA21
+		// Token: 0x170041DD RID: 16861
+		// (get) Token: 0x06020F0C RID: 134924 RVA: 0x00953020 File Offset: 0x00951220
+		// (set) Token: 0x06020F0D RID: 134925 RVA: 0x00953059 File Offset: 0x00951259
 		public TMap<FName, float> TempFloatValue
 		{
 			get
@@ -274,7 +169,7 @@ namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 				TMap<FName, float> result;
 				if ((result = this._TempFloatValue) == null)
 				{
-					result = (this._TempFloatValue = new TMap<FName, float>(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_13, this));
+					result = (this._TempFloatValue = new TMap<FName, float>(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_TempFloatValue, this));
 				}
 				return result;
 			}
@@ -284,9 +179,9 @@ namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 			}
 		}
 
-		// Token: 0x17006D4A RID: 27978
-		// (get) Token: 0x0602C010 RID: 180240 RVA: 0x00A11830 File Offset: 0x00A0FA30
-		// (set) Token: 0x0602C011 RID: 180241 RVA: 0x00A11869 File Offset: 0x00A0FA69
+		// Token: 0x170041DE RID: 16862
+		// (get) Token: 0x06020F0E RID: 134926 RVA: 0x00953068 File Offset: 0x00951268
+		// (set) Token: 0x06020F0F RID: 134927 RVA: 0x009530A1 File Offset: 0x009512A1
 		public TMap<FName, FLinearColor> TempColorValue
 		{
 			get
@@ -295,7 +190,7 @@ namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 				TMap<FName, FLinearColor> result;
 				if ((result = this._TempColorValue) == null)
 				{
-					result = (this._TempColorValue = new TMap<FName, FLinearColor>(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_14, this));
+					result = (this._TempColorValue = new TMap<FName, FLinearColor>(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_TempColorValue, this));
 				}
 				return result;
 			}
@@ -305,158 +200,110 @@ namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 			}
 		}
 
-		// Token: 0x17006D4B RID: 27979
-		// (get) Token: 0x0602C012 RID: 180242 RVA: 0x00A11877 File Offset: 0x00A0FA77
-		// (set) Token: 0x0602C013 RID: 180243 RVA: 0x00A11887 File Offset: 0x00A0FA87
+		// Token: 0x170041DF RID: 16863
+		// (get) Token: 0x06020F10 RID: 134928 RVA: 0x009530AF File Offset: 0x009512AF
+		// (set) Token: 0x06020F11 RID: 134929 RVA: 0x009530BF File Offset: 0x009512BF
 		public unsafe float TimeNormalized
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_TimeNormalized);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_TimeNormalized) = value;
 			}
 		}
 
-		// Token: 0x17006D4C RID: 27980
-		// (get) Token: 0x0602C014 RID: 180244 RVA: 0x00A11898 File Offset: 0x00A0FA98
-		// (set) Token: 0x0602C015 RID: 180245 RVA: 0x00A118AC File Offset: 0x00A0FAAC
+		// Token: 0x170041E0 RID: 16864
+		// (get) Token: 0x06020F12 RID: 134930 RVA: 0x009530D0 File Offset: 0x009512D0
+		// (set) Token: 0x06020F13 RID: 134931 RVA: 0x009530E4 File Offset: 0x009512E4
 		[Nullable(2)]
 		public unsafe UStaticMesh PlatformStaticMesh
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMesh>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_16);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMesh>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_PlatformStaticMesh);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_16, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_PlatformStaticMesh, value);
 			}
 		}
 
-		// Token: 0x17006D4D RID: 27981
-		// (get) Token: 0x0602C016 RID: 180246 RVA: 0x00A118C1 File Offset: 0x00A0FAC1
-		// (set) Token: 0x0602C017 RID: 180247 RVA: 0x00A118D5 File Offset: 0x00A0FAD5
-		[Nullable(0)]
-		public unsafe TEnumAsByte<BP_Enum_PlatformSize> Size
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_17);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_17) = value;
-			}
-		}
-
-		// Token: 0x17006D4E RID: 27982
-		// (get) Token: 0x0602C018 RID: 180248 RVA: 0x00A118EA File Offset: 0x00A0FAEA
-		// (set) Token: 0x0602C019 RID: 180249 RVA: 0x00A118FE File Offset: 0x00A0FAFE
+		// Token: 0x170041E1 RID: 16865
+		// (get) Token: 0x06020F14 RID: 134932 RVA: 0x009530F9 File Offset: 0x009512F9
+		// (set) Token: 0x06020F15 RID: 134933 RVA: 0x0095310D File Offset: 0x0095130D
 		public unsafe string MaterialPrefix1_不可修改_
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_KposeBase_C.__PropertyOffset_18)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_KposeBase_C.__PropertyOffset_MaterialPrefix1_不可修改_)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_KposeBase_C.__PropertyOffset_18)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_KposeBase_C.__PropertyOffset_MaterialPrefix1_不可修改_)), value);
 			}
 		}
 
-		// Token: 0x17006D4F RID: 27983
-		// (get) Token: 0x0602C01A RID: 180250 RVA: 0x00A11913 File Offset: 0x00A0FB13
-		// (set) Token: 0x0602C01B RID: 180251 RVA: 0x00A11923 File Offset: 0x00A0FB23
+		// Token: 0x170041E2 RID: 16866
+		// (get) Token: 0x06020F16 RID: 134934 RVA: 0x00953122 File Offset: 0x00951322
+		// (set) Token: 0x06020F17 RID: 134935 RVA: 0x00953132 File Offset: 0x00951332
 		public unsafe int CameraArmLength
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_19);
+				return *(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_CameraArmLength);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_19) = value;
+				*(base.NativePtr + (IntPtr)BP_KposeBase_C.__PropertyOffset_CameraArmLength) = value;
 			}
 		}
 
-		// Token: 0x17006D50 RID: 27984
-		// (get) Token: 0x0602C01C RID: 180252 RVA: 0x00A11934 File Offset: 0x00A0FB34
-		// (set) Token: 0x0602C01D RID: 180253 RVA: 0x00A11948 File Offset: 0x00A0FB48
+		// Token: 0x170041E3 RID: 16867
+		// (get) Token: 0x06020F18 RID: 134936 RVA: 0x00953143 File Offset: 0x00951343
+		// (set) Token: 0x06020F19 RID: 134937 RVA: 0x00953157 File Offset: 0x00951357
 		[Nullable(2)]
 		public unsafe UKuroWeatherDataAsset DA_UIWeather
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroWeatherDataAsset>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_20);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroWeatherDataAsset>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_DA_UIWeather);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_20, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KposeBase_C.__PropertyOffset_DA_UIWeather, value);
 			}
 		}
 
-		// Token: 0x0602C01E RID: 180254 RVA: 0x00A1195D File Offset: 0x00A0FB5D
+		// Token: 0x06020F1A RID: 134938 RVA: 0x0095316C File Offset: 0x0095136C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void ChangePlatform()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KposeBase_C.__ChangePlatform_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C01F RID: 180255 RVA: 0x00A11971 File Offset: 0x00A0FB71
+		// Token: 0x06020F1B RID: 134939 RVA: 0x00953180 File Offset: 0x00951380
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void PlayEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KposeBase_C.__PlayEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C020 RID: 180256 RVA: 0x00A11985 File Offset: 0x00A0FB85
+		// Token: 0x06020F1C RID: 134940 RVA: 0x00953194 File Offset: 0x00951394
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void PlayStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KposeBase_C.__PlayStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C021 RID: 180257 RVA: 0x00A1199C File Offset: 0x00A0FB9C
+		// Token: 0x06020F1D RID: 134941 RVA: 0x009531A8 File Offset: 0x009513A8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void PlayKposeEffects([Nullable(new byte[]
-		{
-			2,
-			1
-		})] ref TArray<SKposeEffect> Data, float AutoScale)
-		{
-			BP_KposeBase_C.__PlayKposeEffects_FunctionParams* ptr = stackalloc BP_KposeBase_C.__PlayKposeEffects_FunctionParams[(UIntPtr)367] + 15L / (long)sizeof(BP_KposeBase_C.__PlayKposeEffects_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_KposeBase_C.__PlayKposeEffects_NativeFunctionPtr, (void*)ptr, 1);
-			TArray<SKposeEffect> tarray = Data;
-			if (tarray != null)
-			{
-				tarray.MoveTo(&ptr->Data);
-			}
-			ptr->AutoScale = AutoScale;
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KposeBase_C.__PlayKposeEffects_NativeFunctionPtr, (void*)ptr);
-			TArray<SKposeEffect> tarray2 = Data;
-			if (tarray2 != null)
-			{
-				tarray2.MoveAssign(&ptr->Data);
-			}
-			UnrealReflectionUtils.DestroyStruct(BP_KposeBase_C.__PlayKposeEffects_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x0602C022 RID: 180258 RVA: 0x00A11A20 File Offset: 0x00A0FC20
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void PlayEffect(TSoftObjectPtr<UEffectModelBase> EffectData, [Nullable(2)] USkeletalMeshComponent Component, FName AttachSocket, FTransform Transform)
 		{
 			BP_KposeBase_C.__PlayEffect_FunctionParams* ptr = stackalloc BP_KposeBase_C.__PlayEffect_FunctionParams[(UIntPtr)239] + 15L / (long)sizeof(BP_KposeBase_C.__PlayEffect_FunctionParams) & -16L;
@@ -472,65 +319,57 @@ namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 			UnrealReflectionUtils.DestroyStruct(BP_KposeBase_C.__PlayEffect_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602C023 RID: 180259 RVA: 0x00A11AB4 File Offset: 0x00A0FCB4
+		// Token: 0x06020F1E RID: 134942 RVA: 0x0095323C File Offset: 0x0095143C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void StopEffects()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KposeBase_C.__StopEffects_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C024 RID: 180260 RVA: 0x00A11AC8 File Offset: 0x00A0FCC8
+		// Token: 0x06020F1F RID: 134943 RVA: 0x00953250 File Offset: 0x00951450
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KposeBase_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C025 RID: 180261 RVA: 0x00A11ADC File Offset: 0x00A0FCDC
+		// Token: 0x06020F20 RID: 134944 RVA: 0x00953264 File Offset: 0x00951464
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KposeBase_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KposeBase_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C026 RID: 180262 RVA: 0x00A11AF1 File Offset: 0x00A0FCF1
+		// Token: 0x06020F21 RID: 134945 RVA: 0x00953278 File Offset: 0x00951478
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KposeBase_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C027 RID: 180263 RVA: 0x00A11B05 File Offset: 0x00A0FD05
+		// Token: 0x06020F22 RID: 134946 RVA: 0x0095328C File Offset: 0x0095148C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KposeBase_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KposeBase_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C028 RID: 180264 RVA: 0x00A11B1A File Offset: 0x00A0FD1A
+		// Token: 0x06020F23 RID: 134947 RVA: 0x009532A0 File Offset: 0x009514A0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void EditorInit()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KposeBase_C.__EditorInit_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C029 RID: 180265 RVA: 0x00A11B2E File Offset: 0x00A0FD2E
+		// Token: 0x06020F24 RID: 134948 RVA: 0x009532B4 File Offset: 0x009514B4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void EditorInit_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KposeBase_C.__EditorInit_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KposeBase_C.__EditorInit_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602C02A RID: 180266 RVA: 0x00A11B44 File Offset: 0x00A0FD44
+		// Token: 0x06020F25 RID: 134949 RVA: 0x009532C8 File Offset: 0x009514C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveEndPlay(EEndPlayReason EndPlayReason)
 		{
 			BP_KposeBase_C.__ReceiveEndPlay_FunctionParams* ptr = stackalloc BP_KposeBase_C.__ReceiveEndPlay_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_KposeBase_C.__ReceiveEndPlay_FunctionParams) & -16L;
@@ -539,20 +378,18 @@ namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KposeBase_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C02B RID: 180267 RVA: 0x00A11B90 File Offset: 0x00A0FD90
+		// Token: 0x06020F26 RID: 134950 RVA: 0x00953314 File Offset: 0x00951514
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveEndPlay_Implementation(EEndPlayReason EndPlayReason)
 		{
 			BP_KposeBase_C.__ReceiveEndPlay_FunctionParams* ptr = stackalloc BP_KposeBase_C.__ReceiveEndPlay_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_KposeBase_C.__ReceiveEndPlay_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_KposeBase_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->EndPlayReason = EndPlayReason;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KposeBase_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KposeBase_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C02C RID: 180268 RVA: 0x00A11BDC File Offset: 0x00A0FDDC
+		// Token: 0x06020F27 RID: 134951 RVA: 0x00953360 File Offset: 0x00951560
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_KposeBase_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_KposeBase_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_KposeBase_C.__ReceiveTick_FunctionParams) & -16L;
@@ -561,109 +398,53 @@ namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KposeBase_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C02D RID: 180269 RVA: 0x00A11C24 File Offset: 0x00A0FE24
+		// Token: 0x06020F28 RID: 134952 RVA: 0x009533A8 File Offset: 0x009515A8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_KposeBase_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_KposeBase_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_KposeBase_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_KposeBase_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KposeBase_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KposeBase_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602C02E RID: 180270 RVA: 0x00A11C6B File Offset: 0x00A0FE6B
+		// Token: 0x06020F29 RID: 134953 RVA: 0x009533EE File Offset: 0x009515EE
 		protected BP_KposeBase_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04016FB1 RID: 94129
+		// Token: 0x04011D72 RID: 73074
 		public new const string __ObjectPath = "/Game/Aki/Character/Kpose/Blueprint/BP_KposeBase.BP_KposeBase_C";
 
-		// Token: 0x04016FB2 RID: 94130
+		// Token: 0x04011D73 RID: 73075
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04016FB3 RID: 94131
+		// Token: 0x04011D74 RID: 73076
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04016FB4 RID: 94132
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011D75 RID: 73077
+		internal static int __PropertyOffset_KuroPostProcess;
 
-		// Token: 0x04016FB5 RID: 94133
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011D76 RID: 73078
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x04016FB6 RID: 94134
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011D77 RID: 73079
+		internal static int __PropertyOffset_IsInEditor;
 
-		// Token: 0x04016FB7 RID: 94135
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<SKposeEffect> _PermanentEffects;
+		// Token: 0x04011D78 RID: 73080
+		internal static int __PropertyOffset_MaterialPlayTime;
 
-		// Token: 0x04016FB8 RID: 94136
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011D79 RID: 73081
+		internal static int __PropertyOffset_CachedHandles;
 
-		// Token: 0x04016FB9 RID: 94137
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<SKposeEffect> _EffectsOnEnd;
-
-		// Token: 0x04016FBA RID: 94138
-		internal static int __PropertyOffset_5;
-
-		// Token: 0x04016FBB RID: 94139
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<SKposeEffect> _EffectsOnStart;
-
-		// Token: 0x04016FBC RID: 94140
-		internal static int __PropertyOffset_6;
-
-		// Token: 0x04016FBD RID: 94141
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FKuroRainMaterialFloatParameter> _FloatParameterCurves;
-
-		// Token: 0x04016FBE RID: 94142
-		internal static int __PropertyOffset_7;
-
-		// Token: 0x04016FBF RID: 94143
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FKuroRainMaterialColorParameter> _ColorParameterCurves;
-
-		// Token: 0x04016FC0 RID: 94144
-		internal static int __PropertyOffset_8;
-
-		// Token: 0x04016FC1 RID: 94145
-		internal static int __PropertyOffset_9;
-
-		// Token: 0x04016FC2 RID: 94146
-		internal static int __PropertyOffset_10;
-
-		// Token: 0x04016FC3 RID: 94147
+		// Token: 0x04011D7A RID: 73082
 		[Nullable(2)]
 		private TArray<int> _CachedHandles;
 
-		// Token: 0x04016FC4 RID: 94148
-		internal static int __PropertyOffset_11;
+		// Token: 0x04011D7B RID: 73083
+		internal static int __PropertyOffset_DynamicMaterials;
 
-		// Token: 0x04016FC5 RID: 94149
+		// Token: 0x04011D7C RID: 73084
 		[Nullable(new byte[]
 		{
 			2,
@@ -671,130 +452,109 @@ namespace AkiClient.Game.Aki.Character.Kpose.Blueprint
 		})]
 		private TArray<UMaterialInstanceDynamic> _DynamicMaterials;
 
-		// Token: 0x04016FC6 RID: 94150
-		internal static int __PropertyOffset_12;
+		// Token: 0x04011D7D RID: 73085
+		internal static int __PropertyOffset_PassTime;
 
-		// Token: 0x04016FC7 RID: 94151
-		internal static int __PropertyOffset_13;
+		// Token: 0x04011D7E RID: 73086
+		internal static int __PropertyOffset_TempFloatValue;
 
-		// Token: 0x04016FC8 RID: 94152
+		// Token: 0x04011D7F RID: 73087
 		[Nullable(2)]
 		private TMap<FName, float> _TempFloatValue;
 
-		// Token: 0x04016FC9 RID: 94153
-		internal static int __PropertyOffset_14;
+		// Token: 0x04011D80 RID: 73088
+		internal static int __PropertyOffset_TempColorValue;
 
-		// Token: 0x04016FCA RID: 94154
+		// Token: 0x04011D81 RID: 73089
 		[Nullable(2)]
 		private TMap<FName, FLinearColor> _TempColorValue;
 
-		// Token: 0x04016FCB RID: 94155
-		internal static int __PropertyOffset_15;
+		// Token: 0x04011D82 RID: 73090
+		internal static int __PropertyOffset_TimeNormalized;
 
-		// Token: 0x04016FCC RID: 94156
-		internal static int __PropertyOffset_16;
+		// Token: 0x04011D83 RID: 73091
+		internal static int __PropertyOffset_PlatformStaticMesh;
 
-		// Token: 0x04016FCD RID: 94157
-		internal static int __PropertyOffset_17;
+		// Token: 0x04011D84 RID: 73092
+		internal static int __PropertyOffset_MaterialPrefix1_不可修改_;
 
-		// Token: 0x04016FCE RID: 94158
-		internal static int __PropertyOffset_18;
+		// Token: 0x04011D85 RID: 73093
+		internal static int __PropertyOffset_CameraArmLength;
 
-		// Token: 0x04016FCF RID: 94159
-		internal static int __PropertyOffset_19;
+		// Token: 0x04011D86 RID: 73094
+		internal static int __PropertyOffset_DA_UIWeather;
 
-		// Token: 0x04016FD0 RID: 94160
-		internal static int __PropertyOffset_20;
-
-		// Token: 0x04016FD1 RID: 94161
+		// Token: 0x04011D87 RID: 73095
 		private static IntPtr __ChangePlatform_NativeFunctionPtr;
 
-		// Token: 0x04016FD2 RID: 94162
+		// Token: 0x04011D88 RID: 73096
 		private static IntPtr __PlayEnd_NativeFunctionPtr;
 
-		// Token: 0x04016FD3 RID: 94163
+		// Token: 0x04011D89 RID: 73097
 		private static IntPtr __PlayStart_NativeFunctionPtr;
 
-		// Token: 0x04016FD4 RID: 94164
-		private static IntPtr __PlayKposeEffects_NativeFunctionPtr;
-
-		// Token: 0x04016FD5 RID: 94165
+		// Token: 0x04011D8A RID: 73098
 		private static IntPtr __PlayEffect_NativeFunctionPtr;
 
-		// Token: 0x04016FD6 RID: 94166
+		// Token: 0x04011D8B RID: 73099
 		private static IntPtr __StopEffects_NativeFunctionPtr;
 
-		// Token: 0x04016FD7 RID: 94167
+		// Token: 0x04011D8C RID: 73100
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x04016FD8 RID: 94168
+		// Token: 0x04011D8D RID: 73101
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x04016FD9 RID: 94169
+		// Token: 0x04011D8E RID: 73102
 		private static IntPtr __EditorInit_NativeFunctionPtr;
 
-		// Token: 0x04016FDA RID: 94170
+		// Token: 0x04011D8F RID: 73103
 		private static IntPtr __ReceiveEndPlay_NativeFunctionPtr;
 
-		// Token: 0x04016FDB RID: 94171
+		// Token: 0x04011D90 RID: 73104
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x0200A5AE RID: 42414
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 352)]
-		protected ref struct __PlayKposeEffects_FunctionParams
-		{
-			// Token: 0x04032442 RID: 205890
-			[FieldOffset(0)]
-			public byte Data;
-
-			// Token: 0x04032443 RID: 205891
-			[FieldOffset(16)]
-			public float AutoScale;
-		}
-
-		// Token: 0x0200A5AF RID: 42415
+		// Token: 0x02008FEB RID: 36843
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 224)]
 		protected ref struct __PlayEffect_FunctionParams
 		{
-			// Token: 0x04032444 RID: 205892
+			// Token: 0x0402CD9A RID: 183706
 			[FieldOffset(0)]
 			public byte EffectData;
 
-			// Token: 0x04032445 RID: 205893
+			// Token: 0x0402CD9B RID: 183707
 			[FieldOffset(48)]
 			public IntPtr Component;
 
-			// Token: 0x04032446 RID: 205894
+			// Token: 0x0402CD9C RID: 183708
 			[FieldOffset(56)]
 			public FName AttachSocket;
 
-			// Token: 0x04032447 RID: 205895
+			// Token: 0x0402CD9D RID: 183709
 			[FieldOffset(80)]
 			public FTransform Transform;
 		}
 
-		// Token: 0x0200A5B0 RID: 42416
+		// Token: 0x02008FEC RID: 36844
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected new ref struct __ReceiveEndPlay_FunctionParams
 		{
-			// Token: 0x04032448 RID: 205896
+			// Token: 0x0402CD9E RID: 183710
 			[FieldOffset(0)]
 			public TEnumAsByte<EEndPlayReason> EndPlayReason;
 		}
 
-		// Token: 0x0200A5B1 RID: 42417
+		// Token: 0x02008FED RID: 36845
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x04032449 RID: 205897
+			// Token: 0x0402CD9F RID: 183711
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

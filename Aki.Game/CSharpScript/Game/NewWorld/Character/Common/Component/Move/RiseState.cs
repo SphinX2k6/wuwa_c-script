@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070E1 RID: 28897
+	// Token: 0x02006391 RID: 25489
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class RiseState : FloatingBaseState
 	{
-		// Token: 0x06046859 RID: 288857 RVA: 0x011B91E2 File Offset: 0x011B73E2
+		// Token: 0x0603DC46 RID: 252998 RVA: 0x011E88B7 File Offset: 0x011E6AB7
 		public RiseState(CharacterFloatingComponent owner, EFloatingMovementType state, [Nullable(new byte[]
 		{
 			2,
@@ -19,44 +19,44 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 		{
 		}
 
-		// Token: 0x0604685A RID: 288858 RVA: 0x011B91ED File Offset: 0x011B73ED
+		// Token: 0x0603DC47 RID: 252999 RVA: 0x011E88C2 File Offset: 0x011E6AC2
 		protected override void OnEnterInternal()
 		{
 			base.OnEnterInternal();
 			this.Owner.CheckGround();
 		}
 
-		// Token: 0x0604685B RID: 288859 RVA: 0x011B9200 File Offset: 0x011B7400
+		// Token: 0x0603DC48 RID: 253000 RVA: 0x011E88D5 File Offset: 0x011E6AD5
 		protected override ECharMoveState GetMoveState()
 		{
 			return ECharMoveState.Rise;
 		}
 
-		// Token: 0x0604685C RID: 288860 RVA: 0x011B9204 File Offset: 0x011B7404
+		// Token: 0x0603DC49 RID: 253001 RVA: 0x011E88D9 File Offset: 0x011E6AD9
 		protected override List<int> GetInStateConfigTagList()
 		{
 			return this.Owner.Config.RiseMoveModeConfig.MovementTagList;
 		}
 
-		// Token: 0x0604685D RID: 288861 RVA: 0x011B921B File Offset: 0x011B741B
+		// Token: 0x0603DC4A RID: 253002 RVA: 0x011E88F0 File Offset: 0x011E6AF0
 		protected override List<int> GetBannedStateConfigTagList()
 		{
 			return this.Owner.Config.RiseMoveModeConfig.BannedMovementTagList;
 		}
 
-		// Token: 0x0604685E RID: 288862 RVA: 0x011B9232 File Offset: 0x011B7432
+		// Token: 0x0603DC4B RID: 253003 RVA: 0x011E8907 File Offset: 0x011E6B07
 		protected override List<int> GetMoveConfigTagList()
 		{
 			return this.Owner.Config.RiseMoveModeConfig.MoveTagList;
 		}
 
-		// Token: 0x0604685F RID: 288863 RVA: 0x011B9249 File Offset: 0x011B7449
+		// Token: 0x0603DC4C RID: 253004 RVA: 0x011E891E File Offset: 0x011E6B1E
 		protected override List<int> GetStandConfigTagList()
 		{
 			return this.Owner.Config.RiseMoveModeConfig.StandTagList;
 		}
 
-		// Token: 0x06046860 RID: 288864 RVA: 0x011B9260 File Offset: 0x011B7460
+		// Token: 0x0603DC4D RID: 253005 RVA: 0x011E8935 File Offset: 0x011E6B35
 		protected override void OnUpdate(float deltaSeconds)
 		{
 			if (!this.CanContinueState())
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			base.OnUpdate(deltaSeconds);
 		}
 
-		// Token: 0x06046861 RID: 288865 RVA: 0x011B9288 File Offset: 0x011B7488
+		// Token: 0x0603DC4E RID: 253006 RVA: 0x011E895C File Offset: 0x011E6B5C
 		protected override void UpdateActorLocation(float deltaSeconds)
 		{
 			this.Owner.UpdateMove(deltaSeconds, this.Owner.MoveDelta);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046862 RID: 288866 RVA: 0x011B934E File Offset: 0x011B754E
+		// Token: 0x0603DC4F RID: 253007 RVA: 0x011E8A22 File Offset: 0x011E6C22
 		protected override void PostUpdate()
 		{
 			if (this.Owner.DetectCeiling() != null)

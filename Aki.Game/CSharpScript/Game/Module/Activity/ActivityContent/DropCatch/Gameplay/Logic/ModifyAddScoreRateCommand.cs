@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006724 RID: 26404
+	// Token: 0x02005674 RID: 22132
 	public class ModifyAddScoreRateCommand : IDropCatchCommand
 	{
-		// Token: 0x06041EA6 RID: 269990 RVA: 0x00FFCE34 File Offset: 0x00FFB034
+		// Token: 0x060369F2 RID: 223730 RVA: 0x00F3E200 File Offset: 0x00F3C400
 		[NullableContext(1)]
 		public void Execute(ICommandContext context, [Nullable(2)] object @params)
 		{

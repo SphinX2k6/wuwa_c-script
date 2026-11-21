@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006C06 RID: 27654
+	// Token: 0x02005D7F RID: 23935
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemPhotographView : OpenSystemBase
 	{
-		// Token: 0x06044426 RID: 279590 RVA: 0x010D205E File Offset: 0x010D025E
+		// Token: 0x0603A57E RID: 238974 RVA: 0x0107BFB2 File Offset: 0x0107A1B2
 		public OpenSystemPhotographView(LevelEventOpenSystem eventBase) : base(eventBase)
 		{
 		}
 
-		// Token: 0x06044427 RID: 279591 RVA: 0x010D2068 File Offset: 0x010D0268
+		// Token: 0x0603A57F RID: 238975 RVA: 0x0107BFBC File Offset: 0x0107A1BC
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return <ExecuteOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044428 RID: 279592 RVA: 0x010D20AB File Offset: 0x010D02AB
+		// Token: 0x0603A580 RID: 238976 RVA: 0x0107BFFF File Offset: 0x0107A1FF
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{

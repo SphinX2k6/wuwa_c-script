@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040E6 RID: 16614
+	// Token: 0x02004527 RID: 17703
 	public class IRoleTowerSystemVarT
 	{
-		// Token: 0x1700751E RID: 29982
-		// (get) Token: 0x06018367 RID: 99175 RVA: 0x0037CA0F File Offset: 0x0037AC0F
-		// (set) Token: 0x06018368 RID: 99176 RVA: 0x0037CA17 File Offset: 0x0037AC17
+		// Token: 0x17007B24 RID: 31524
+		// (get) Token: 0x06019A08 RID: 104968 RVA: 0x003A695F File Offset: 0x003A4B5F
+		// (set) Token: 0x06019A09 RID: 104969 RVA: 0x003A6967 File Offset: 0x003A4B67
 		public ERoleTowerSystemVarType VarType { get; set; }
 
-		// Token: 0x1700751F RID: 29983
-		// (get) Token: 0x06018369 RID: 99177 RVA: 0x0037CA20 File Offset: 0x0037AC20
-		// (set) Token: 0x0601836A RID: 99178 RVA: 0x0037CA28 File Offset: 0x0037AC28
+		// Token: 0x17007B25 RID: 31525
+		// (get) Token: 0x06019A0A RID: 104970 RVA: 0x003A6970 File Offset: 0x003A4B70
+		// (set) Token: 0x06019A0B RID: 104971 RVA: 0x003A6978 File Offset: 0x003A4B78
 		public TVarRefUnion VarRef { get; set; }
 
-		// Token: 0x0601836B RID: 99179 RVA: 0x0037CA31 File Offset: 0x0037AC31
+		// Token: 0x06019A0C RID: 104972 RVA: 0x003A6981 File Offset: 0x003A4B81
 		public IRoleTowerSystemVarT()
 		{
 			this.VarType = ERoleTowerSystemVarType.Batch;

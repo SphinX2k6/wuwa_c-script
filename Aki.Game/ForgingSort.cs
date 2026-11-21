@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Manufacture.Forging;
 
-// Token: 0x02001888 RID: 6280
+// Token: 0x02000D41 RID: 3393
 [NullableContext(1)]
 [Nullable(0)]
 public class ForgingSort : CommonSort<EForgingSortWayType>
 {
-	// Token: 0x0600B7F9 RID: 47097 RVA: 0x0029A5A4 File Offset: 0x002987A4
+	// Token: 0x06008BE2 RID: 35810 RVA: 0x002A4CBC File Offset: 0x002A2EBC
 	private int SortMake(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -48,7 +48,7 @@ public class ForgingSort : CommonSort<EForgingSortWayType>
 		}
 	}
 
-	// Token: 0x0600B7FA RID: 47098 RVA: 0x0029A670 File Offset: 0x00298870
+	// Token: 0x06008BE3 RID: 35811 RVA: 0x002A4D88 File Offset: 0x002A2F88
 	private int SortType(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -72,7 +72,7 @@ public class ForgingSort : CommonSort<EForgingSortWayType>
 		return weaponForgingData.SortId - weaponForgingData2.SortId;
 	}
 
-	// Token: 0x0600B7FB RID: 47099 RVA: 0x0029A6C8 File Offset: 0x002988C8
+	// Token: 0x06008BE4 RID: 35812 RVA: 0x002A4DE0 File Offset: 0x002A2FE0
 	private int SortId(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -96,7 +96,7 @@ public class ForgingSort : CommonSort<EForgingSortWayType>
 		return weaponForgingData.SortId - weaponForgingData2.SortId;
 	}
 
-	// Token: 0x0600B7FC RID: 47100 RVA: 0x0029A720 File Offset: 0x00298920
+	// Token: 0x06008BE5 RID: 35813 RVA: 0x002A4E38 File Offset: 0x002A3038
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(EForgingSortWayType.Make, new TSortResult(this.SortMake));

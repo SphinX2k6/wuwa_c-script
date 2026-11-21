@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002090 RID: 8336
+// Token: 0x02001563 RID: 5475
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class LoginConfig : ConfigBase
 {
-	// Token: 0x0601066C RID: 67180 RVA: 0x003FF897 File Offset: 0x003FDA97
+	// Token: 0x0600DAD4 RID: 56020 RVA: 0x0040BCDF File Offset: 0x00409EDF
 	[NullableContext(2)]
 	public IReadOnlyList<InstanceDungeon> GetAllInstanceDungeon()
 	{
 		return ConfigInstanceDungeonAll.GetConfigList(true);
 	}
 
-	// Token: 0x0601066D RID: 67181 RVA: 0x003FF89F File Offset: 0x003FDA9F
+	// Token: 0x0600DAD5 RID: 56021 RVA: 0x0040BCE7 File Offset: 0x00409EE7
 	public string GetInstanceDungeonNameById(string id)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(id, null) ?? "";
 	}
 
-	// Token: 0x0601066E RID: 67182 RVA: 0x003FF8B4 File Offset: 0x003FDAB4
+	// Token: 0x0600DAD6 RID: 56022 RVA: 0x0040BCFC File Offset: 0x00409EFC
 	public int? GetLoginFailResetTime()
 	{
 		int? intConfig = ConfigCommonParamById.GetIntConfig("login_fail_reset_time");
@@ -40,7 +40,7 @@ public class LoginConfig : ConfigBase
 		return intConfig;
 	}
 
-	// Token: 0x0601066F RID: 67183 RVA: 0x003FF910 File Offset: 0x003FDB10
+	// Token: 0x0600DAD7 RID: 56023 RVA: 0x0040BD58 File Offset: 0x00409F58
 	public int GetLoginFailParam(int loginFailCount)
 	{
 		string stringConfig = ConfigCommonParamById.GetStringConfig("login_fail_params");
@@ -78,58 +78,58 @@ public class LoginConfig : ConfigBase
 		return result;
 	}
 
-	// Token: 0x06010670 RID: 67184 RVA: 0x003FF9E0 File Offset: 0x003FDBE0
+	// Token: 0x0600DAD8 RID: 56024 RVA: 0x0040BE28 File Offset: 0x0040A028
 	public int? GetDefaultSingleMapId()
 	{
 		return ConfigCommonParamById.GetIntConfig("default_single_map_id");
 	}
 
-	// Token: 0x06010671 RID: 67185 RVA: 0x003FF9EC File Offset: 0x003FDBEC
+	// Token: 0x0600DAD9 RID: 56025 RVA: 0x0040BE34 File Offset: 0x0040A034
 	public int? GetDefaultMultiMapId()
 	{
 		return ConfigCommonParamById.GetIntConfig("default_multi_map_id");
 	}
 
-	// Token: 0x06010672 RID: 67186 RVA: 0x003FF9F8 File Offset: 0x003FDBF8
+	// Token: 0x0600DADA RID: 56026 RVA: 0x0040BE40 File Offset: 0x0040A040
 	public int? GetSdkReloginTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("sdk_relogin_time");
 	}
 
-	// Token: 0x06010673 RID: 67187 RVA: 0x003FFA04 File Offset: 0x003FDC04
+	// Token: 0x0600DADB RID: 56027 RVA: 0x0040BE4C File Offset: 0x0040A04C
 	[NullableContext(2)]
 	public string GetDevLoginServerIp()
 	{
 		return ConfigCommonParamById.GetStringConfig("dev_sdk_loginserver_ip");
 	}
 
-	// Token: 0x06010674 RID: 67188 RVA: 0x003FFA10 File Offset: 0x003FDC10
+	// Token: 0x0600DADC RID: 56028 RVA: 0x0040BE58 File Offset: 0x0040A058
 	[NullableContext(2)]
 	public string GetMainlineLoginServerIp()
 	{
 		return ConfigCommonParamById.GetStringConfig("mainline_sdk_loginserver_ip");
 	}
 
-	// Token: 0x06010675 RID: 67189 RVA: 0x003FFA1C File Offset: 0x003FDC1C
+	// Token: 0x0600DADD RID: 56029 RVA: 0x0040BE64 File Offset: 0x0040A064
 	public string[] GetLoginViewNoExitButtonPackageIdList()
 	{
 		return ConfigCommonParamById.GetStringConfig("LoginViewNoShowExitButtonPackageIdList").Split(',', StringSplitOptions.None);
 	}
 
-	// Token: 0x06010676 RID: 67190 RVA: 0x003FFA30 File Offset: 0x003FDC30
+	// Token: 0x0600DADE RID: 56030 RVA: 0x0040BE78 File Offset: 0x0040A078
 	public string[] GetLoginViewNoAccountButtonPackageIdList()
 	{
 		return ConfigCommonParamById.GetStringConfig("LoginViewNoAccountButtonPackageIdList").Split(',', StringSplitOptions.None);
 	}
 
-	// Token: 0x06010677 RID: 67191 RVA: 0x003FFA44 File Offset: 0x003FDC44
+	// Token: 0x0600DADF RID: 56031 RVA: 0x0040BE8C File Offset: 0x0040A08C
 	public ServerLimit? GetServerLimitConfig(string region)
 	{
 		return ConfigServerLimitById.GetConfig(region, true);
 	}
 
-	// Token: 0x17001447 RID: 5191
-	// (get) Token: 0x06010678 RID: 67192 RVA: 0x003FFA4D File Offset: 0x003FDC4D
+	// Token: 0x17001474 RID: 5236
+	// (get) Token: 0x0600DAE0 RID: 56032 RVA: 0x0040BE95 File Offset: 0x0040A095
 	public static LoginConfig Instance
 	{
 		get
@@ -138,7 +138,7 @@ public class LoginConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06010679 RID: 67193 RVA: 0x003FFA54 File Offset: 0x003FDC54
+	// Token: 0x0600DAE1 RID: 56033 RVA: 0x0040BE9C File Offset: 0x0040A09C
 	public static LoginConfig GetOrCreateInstance()
 	{
 		if (LoginConfig._Instance == null)
@@ -148,7 +148,7 @@ public class LoginConfig : ConfigBase
 		return LoginConfig._Instance;
 	}
 
-	// Token: 0x0601067A RID: 67194 RVA: 0x003FFA68 File Offset: 0x003FDC68
+	// Token: 0x0600DAE2 RID: 56034 RVA: 0x0040BEB0 File Offset: 0x0040A0B0
 	public static bool CreateInstance()
 	{
 		if (LoginConfig._Instance != null)
@@ -159,24 +159,24 @@ public class LoginConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601067B RID: 67195 RVA: 0x003FFA7E File Offset: 0x003FDC7E
+	// Token: 0x0600DAE3 RID: 56035 RVA: 0x0040BEC6 File Offset: 0x0040A0C6
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601067C RID: 67196 RVA: 0x003FFA80 File Offset: 0x003FDC80
+	// Token: 0x0600DAE4 RID: 56036 RVA: 0x0040BEC8 File Offset: 0x0040A0C8
 	public static void ResetStaticDefaultValue()
 	{
 		LoginConfig._Instance = null;
 	}
 
-	// Token: 0x0601067D RID: 67197 RVA: 0x003FFA88 File Offset: 0x003FDC88
+	// Token: 0x0600DAE5 RID: 56037 RVA: 0x0040BED0 File Offset: 0x0040A0D0
 	static LoginConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LoginConfig.CreateStaticDefaultValue), new Action(LoginConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007937 RID: 31031
+	// Token: 0x04007A20 RID: 31264
 	[Nullable(2)]
 	private static LoginConfig _Instance;
 }

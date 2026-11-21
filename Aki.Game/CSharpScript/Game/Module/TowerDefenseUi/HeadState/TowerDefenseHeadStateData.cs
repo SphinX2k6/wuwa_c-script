@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 {
-	// Token: 0x02004AFD RID: 19197
+	// Token: 0x02003AA5 RID: 15013
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseHeadStateData
 	{
-		// Token: 0x06031B70 RID: 203632 RVA: 0x00B8B937 File Offset: 0x00B89B37
+		// Token: 0x06026900 RID: 157952 RVA: 0x00ACF993 File Offset: 0x00ACDB93
 		public bool UpdateHp(int hp, int maxHp, int shield)
 		{
 			if (this.Hp == hp && this.MaxHp == maxHp && this.Shield == shield)
@@ -22,30 +22,30 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			return true;
 		}
 
-		// Token: 0x06031B71 RID: 203633 RVA: 0x00B8B96C File Offset: 0x00B89B6C
+		// Token: 0x06026901 RID: 157953 RVA: 0x00ACF9C8 File Offset: 0x00ACDBC8
 		public void UpdatePosition(Vector position)
 		{
 			this.Position.FromUeVector(position);
 		}
 
-		// Token: 0x06031B72 RID: 203634 RVA: 0x00B8B97A File Offset: 0x00B89B7A
+		// Token: 0x06026902 RID: 157954 RVA: 0x00ACF9D6 File Offset: 0x00ACDBD6
 		public void RefreshDistance(Vector cameraLocation)
 		{
 			this.DistanceSquared = Vector.DistSquared(this.Position, cameraLocation);
 		}
 
-		// Token: 0x06031B73 RID: 203635 RVA: 0x00B8B98E File Offset: 0x00B89B8E
+		// Token: 0x06026903 RID: 157955 RVA: 0x00ACF9EA File Offset: 0x00ACDBEA
 		public void Destroy()
 		{
 		}
 
-		// Token: 0x06031B74 RID: 203636 RVA: 0x00B8B990 File Offset: 0x00B89B90
+		// Token: 0x06026904 RID: 157956 RVA: 0x00ACF9EC File Offset: 0x00ACDBEC
 		public void SetVisible(bool visible)
 		{
 			this.Visible = visible;
 		}
 
-		// Token: 0x06031B75 RID: 203637 RVA: 0x00B8B99C File Offset: 0x00B89B9C
+		// Token: 0x06026905 RID: 157957 RVA: 0x00ACF9F8 File Offset: 0x00ACDBF8
 		public void RefreshHpAndShield()
 		{
 			if (this.MaxHp <= 0)
@@ -58,14 +58,14 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			this.ShieldPercent = (float)this.Shield / (float)this.MaxHp;
 		}
 
-		// Token: 0x06031B76 RID: 203638 RVA: 0x00B8B9F3 File Offset: 0x00B89BF3
+		// Token: 0x06026906 RID: 157958 RVA: 0x00ACFA4F File Offset: 0x00ACDC4F
 		public void Tick(float delta)
 		{
 			this.RefreshHpBuffer(delta);
 			this.RefreshScale();
 		}
 
-		// Token: 0x06031B77 RID: 203639 RVA: 0x00B8BA04 File Offset: 0x00B89C04
+		// Token: 0x06026907 RID: 157959 RVA: 0x00ACFA60 File Offset: 0x00ACDC60
 		private void RefreshScale()
 		{
 			float floatValue = this.ScaleCurve.GetFloatValue((float)this.DistanceSquared);
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			this.ActorScale.Z = (double)floatValue;
 		}
 
-		// Token: 0x06031B78 RID: 203640 RVA: 0x00B8BA4C File Offset: 0x00B89C4C
+		// Token: 0x06026908 RID: 157960 RVA: 0x00ACFAA8 File Offset: 0x00ACDCA8
 		private void RefreshHpBuffer(float delta)
 		{
 			if (this.HpBufferPercent == this.HpPercent)
@@ -93,44 +93,44 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			}
 		}
 
-		// Token: 0x0401A8BA RID: 108730
+		// Token: 0x0401520C RID: 86540
 		private const float HP_BUFFER_SPEED = 0.001f;
 
-		// Token: 0x0401A8BB RID: 108731
+		// Token: 0x0401520D RID: 86541
 		public int EntityId;
 
-		// Token: 0x0401A8BC RID: 108732
+		// Token: 0x0401520E RID: 86542
 		public Vector Position = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401A8BD RID: 108733
+		// Token: 0x0401520F RID: 86543
 		public int MaxHp;
 
-		// Token: 0x0401A8BE RID: 108734
+		// Token: 0x04015210 RID: 86544
 		public int Hp;
 
-		// Token: 0x0401A8BF RID: 108735
+		// Token: 0x04015211 RID: 86545
 		public int Shield;
 
-		// Token: 0x0401A8C0 RID: 108736
+		// Token: 0x04015212 RID: 86546
 		public double DistanceSquared;
 
-		// Token: 0x0401A8C1 RID: 108737
+		// Token: 0x04015213 RID: 86547
 		[Nullable(2)]
 		public UCurveFloat ScaleCurve;
 
-		// Token: 0x0401A8C2 RID: 108738
+		// Token: 0x04015214 RID: 86548
 		public bool Visible;
 
-		// Token: 0x0401A8C3 RID: 108739
+		// Token: 0x04015215 RID: 86549
 		public float HpPercent;
 
-		// Token: 0x0401A8C4 RID: 108740
+		// Token: 0x04015216 RID: 86550
 		public float HpBufferPercent;
 
-		// Token: 0x0401A8C5 RID: 108741
+		// Token: 0x04015217 RID: 86551
 		public float ShieldPercent;
 
-		// Token: 0x0401A8C6 RID: 108742
+		// Token: 0x04015218 RID: 86552
 		public readonly Vector ActorScale = Vector.Create();
 	}
 }

@@ -4,32 +4,32 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.BinTest
 {
-	// Token: 0x02006F41 RID: 28481
+	// Token: 0x020060C2 RID: 24770
 	public class BinSet
 	{
-		// Token: 0x0402422E RID: 148014
+		// Token: 0x0401F4E3 RID: 128227
 		public int BinNum;
 
-		// Token: 0x0402422F RID: 148015
+		// Token: 0x0401F4E4 RID: 128228
 		public double MinX;
 
-		// Token: 0x04024230 RID: 148016
+		// Token: 0x0401F4E5 RID: 128229
 		public double MaxX;
 
-		// Token: 0x04024231 RID: 148017
+		// Token: 0x0401F4E6 RID: 128230
 		public double MaxY;
 
-		// Token: 0x04024232 RID: 148018
+		// Token: 0x0401F4E7 RID: 128231
 		public double DeltaY;
 
-		// Token: 0x04024233 RID: 148019
+		// Token: 0x0401F4E8 RID: 128232
 		public double ReciprocalDeltaY;
 
-		// Token: 0x04024234 RID: 148020
+		// Token: 0x0401F4E9 RID: 128233
 		[Nullable(1)]
 		public List<Bin> Bins = new List<Bin>();
 
-		// Token: 0x04024235 RID: 148021
+		// Token: 0x0401F4EA RID: 128234
 		public double MinY;
 	}
 }

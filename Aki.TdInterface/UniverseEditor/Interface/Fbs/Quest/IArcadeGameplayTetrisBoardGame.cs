@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D0A RID: 15626
+	// Token: 0x02004121 RID: 16673
 	public struct IArcadeGameplayTetrisBoardGame : IFlatbufferObject
 	{
-		// Token: 0x17006B33 RID: 27443
-		// (get) Token: 0x060158D9 RID: 88281 RVA: 0x0031D27A File Offset: 0x0031B47A
+		// Token: 0x170070ED RID: 28909
+		// (get) Token: 0x06016E11 RID: 93713 RVA: 0x003444F2 File Offset: 0x003426F2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060158DA RID: 88282 RVA: 0x0031D287 File Offset: 0x0031B487
+		// Token: 0x06016E12 RID: 93714 RVA: 0x003444FF File Offset: 0x003426FF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060158DB RID: 88283 RVA: 0x0031D290 File Offset: 0x0031B490
+		// Token: 0x06016E13 RID: 93715 RVA: 0x00344508 File Offset: 0x00342708
 		public static IArcadeGameplayTetrisBoardGame GetRootAsIArcadeGameplayTetrisBoardGame(ByteBuffer _bb)
 		{
 			return IArcadeGameplayTetrisBoardGame.GetRootAsIArcadeGameplayTetrisBoardGame(_bb, default(IArcadeGameplayTetrisBoardGame));
 		}
 
-		// Token: 0x060158DC RID: 88284 RVA: 0x0031D2AC File Offset: 0x0031B4AC
+		// Token: 0x06016E14 RID: 93716 RVA: 0x00344524 File Offset: 0x00342724
 		public static IArcadeGameplayTetrisBoardGame GetRootAsIArcadeGameplayTetrisBoardGame(ByteBuffer _bb, IArcadeGameplayTetrisBoardGame obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060158DD RID: 88285 RVA: 0x0031D2C9 File Offset: 0x0031B4C9
+		// Token: 0x06016E15 RID: 93717 RVA: 0x00344541 File Offset: 0x00342741
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060158DE RID: 88286 RVA: 0x0031D2D8 File Offset: 0x0031B4D8
+		// Token: 0x06016E16 RID: 93718 RVA: 0x00344550 File Offset: 0x00342750
 		public IArcadeGameplayTetrisBoardGame __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006B34 RID: 27444
-		// (get) Token: 0x060158DF RID: 88287 RVA: 0x0031D2E8 File Offset: 0x0031B4E8
+		// Token: 0x170070EE RID: 28910
+		// (get) Token: 0x06016E17 RID: 93719 RVA: 0x00344560 File Offset: 0x00342760
 		public EArcadeGameplayType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006B35 RID: 27445
-		// (get) Token: 0x060158E0 RID: 88288 RVA: 0x0031D324 File Offset: 0x0031B524
+		// Token: 0x170070EF RID: 28911
+		// (get) Token: 0x06016E18 RID: 93720 RVA: 0x0034459C File Offset: 0x0034279C
 		public int LevelId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060158E1 RID: 88289 RVA: 0x0031D360 File Offset: 0x0031B560
+		// Token: 0x06016E19 RID: 93721 RVA: 0x003445D8 File Offset: 0x003427D8
 		public static Offset<IArcadeGameplayTetrisBoardGame> CreateIArcadeGameplayTetrisBoardGame(FlatBufferBuilder builder, EArcadeGameplayType Type = EArcadeGameplayType.DropCatch, int LevelId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IArcadeGameplayTetrisBoardGame.EndIArcadeGameplayTetrisBoardGame(builder);
 		}
 
-		// Token: 0x060158E2 RID: 88290 RVA: 0x0031D37D File Offset: 0x0031B57D
+		// Token: 0x06016E1A RID: 93722 RVA: 0x003445F5 File Offset: 0x003427F5
 		public static void StartIArcadeGameplayTetrisBoardGame(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060158E3 RID: 88291 RVA: 0x0031D386 File Offset: 0x0031B586
+		// Token: 0x06016E1B RID: 93723 RVA: 0x003445FE File Offset: 0x003427FE
 		public static void AddType(FlatBufferBuilder builder, EArcadeGameplayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060158E4 RID: 88292 RVA: 0x0031D391 File Offset: 0x0031B591
+		// Token: 0x06016E1C RID: 93724 RVA: 0x00344609 File Offset: 0x00342809
 		public static void AddLevelId(FlatBufferBuilder builder, int levelId)
 		{
 			builder.AddInt(1, levelId, 0);
 		}
 
-		// Token: 0x060158E5 RID: 88293 RVA: 0x0031D39C File Offset: 0x0031B59C
+		// Token: 0x06016E1D RID: 93725 RVA: 0x00344614 File Offset: 0x00342814
 		public static Offset<IArcadeGameplayTetrisBoardGame> EndIArcadeGameplayTetrisBoardGame(FlatBufferBuilder builder)
 		{
 			return new Offset<IArcadeGameplayTetrisBoardGame>(builder.EndTable());
 		}
 
-		// Token: 0x060158E6 RID: 88294 RVA: 0x0031D3AC File Offset: 0x0031B5AC
+		// Token: 0x06016E1E RID: 93726 RVA: 0x00344624 File Offset: 0x00342824
 		public IArcadeGameplayTetrisBoardGameT UnPack()
 		{
 			IArcadeGameplayTetrisBoardGameT arcadeGameplayTetrisBoardGameT = new IArcadeGameplayTetrisBoardGameT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return arcadeGameplayTetrisBoardGameT;
 		}
 
-		// Token: 0x060158E7 RID: 88295 RVA: 0x0031D3C7 File Offset: 0x0031B5C7
+		// Token: 0x06016E1F RID: 93727 RVA: 0x0034463F File Offset: 0x0034283F
 		public void UnPackTo(IArcadeGameplayTetrisBoardGameT _o)
 		{
 			_o.Type = this.Type;
 			_o.LevelId = this.LevelId;
 		}
 
-		// Token: 0x060158E8 RID: 88296 RVA: 0x0031D3E4 File Offset: 0x0031B5E4
+		// Token: 0x06016E20 RID: 93728 RVA: 0x0034465C File Offset: 0x0034285C
 		public static Offset<IArcadeGameplayTetrisBoardGame> Pack(FlatBufferBuilder builder, IArcadeGameplayTetrisBoardGameT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IArcadeGameplayTetrisBoardGame.CreateIArcadeGameplayTetrisBoardGame(builder, _o.Type, _o.LevelId);
 		}
 
-		// Token: 0x0400B5BE RID: 46526
+		// Token: 0x0400BF6B RID: 49003
 		private Table __p;
 	}
 }

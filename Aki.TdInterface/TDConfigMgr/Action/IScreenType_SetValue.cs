@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DEB RID: 7659
+	// Token: 0x0200201E RID: 8222
 	public class IScreenType_SetValue
 	{
-		// Token: 0x0400623A RID: 25146
+		// Token: 0x04006811 RID: 26641
 		public EScreenType Type;
 	}
 }

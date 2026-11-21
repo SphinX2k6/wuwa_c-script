@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x0200542A RID: 21546
+	// Token: 0x0200440D RID: 17421
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MenuDetailPopViewItemView
 	{
-		// Token: 0x060370AB RID: 225451 RVA: 0x00D0B2CF File Offset: 0x00D094CF
+		// Token: 0x0602BFF4 RID: 180212 RVA: 0x00C5A6EF File Offset: 0x00C588EF
 		public MenuDetailPopViewItemView(UUIText textComponent, UUITexture textureComponent, [Nullable(1)] Action<string, UUITexture> setTextureHandler)
 		{
 			this.TextComponent = textComponent;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.SetTextureHandler = setTextureHandler;
 		}
 
-		// Token: 0x060370AC RID: 225452 RVA: 0x00D0B2F4 File Offset: 0x00D094F4
+		// Token: 0x0602BFF5 RID: 180213 RVA: 0x00C5A714 File Offset: 0x00C58914
 		[NullableContext(1)]
 		public void RefreshByData(MenuDetailPopItemData data)
 		{
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x060370AD RID: 225453 RVA: 0x00D0B415 File Offset: 0x00D09615
+		// Token: 0x0602BFF6 RID: 180214 RVA: 0x00C5A835 File Offset: 0x00C58A35
 		public void Clear()
 		{
 			MediaPlayer mediaPlayer = this.MediaPlayer;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.CancelLoad();
 		}
 
-		// Token: 0x060370AE RID: 225454 RVA: 0x00D0B438 File Offset: 0x00D09638
+		// Token: 0x0602BFF7 RID: 180215 RVA: 0x00C5A858 File Offset: 0x00C58A58
 		private UniTask LoadMaterial()
 		{
 			MenuDetailPopViewItemView.<LoadMaterial>d__9 <LoadMaterial>d__;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return <LoadMaterial>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060370AF RID: 225455 RVA: 0x00D0B47B File Offset: 0x00D0967B
+		// Token: 0x0602BFF8 RID: 180216 RVA: 0x00C5A89B File Offset: 0x00C58A9B
 		private void CancelLoad()
 		{
 			if (this.HandleId != -1)
@@ -96,24 +96,24 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x0401D0B8 RID: 118968
+		// Token: 0x04017B51 RID: 97105
 		[Nullable(1)]
 		private const string VIDEO_NAME = "MenuDetailPopViewItemPanel";
 
-		// Token: 0x0401D0B9 RID: 118969
+		// Token: 0x04017B52 RID: 97106
 		private readonly UUIText TextComponent;
 
-		// Token: 0x0401D0BA RID: 118970
+		// Token: 0x04017B53 RID: 97107
 		private readonly UUITexture TextureComponent;
 
-		// Token: 0x0401D0BB RID: 118971
+		// Token: 0x04017B54 RID: 97108
 		[Nullable(1)]
 		private readonly Action<string, UUITexture> SetTextureHandler;
 
-		// Token: 0x0401D0BC RID: 118972
+		// Token: 0x04017B55 RID: 97109
 		private MediaPlayer MediaPlayer;
 
-		// Token: 0x0401D0BD RID: 118973
+		// Token: 0x04017B56 RID: 97110
 		private int HandleId = -1;
 	}
 }

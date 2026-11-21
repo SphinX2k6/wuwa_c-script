@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000036 RID: 54
+	// Token: 0x0200001B RID: 27
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Pack = 16, Size = 16)]
 	public ref struct FPlaneView
 	{
-		// Token: 0x040000D8 RID: 216
+		// Token: 0x04000091 RID: 145
 		[FieldOffset(0)]
 		public FVector V;
 	}

@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 {
-	// Token: 0x02006320 RID: 25376
+	// Token: 0x0200529E RID: 21150
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballPlotOptionItemData : IPinballPlotOptionItemData
 	{
-		// Token: 0x170092E9 RID: 37609
-		// (get) Token: 0x0603FD63 RID: 261475 RVA: 0x00F71A91 File Offset: 0x00F6FC91
-		// (set) Token: 0x0603FD64 RID: 261476 RVA: 0x00F71A99 File Offset: 0x00F6FC99
+		// Token: 0x1700664B RID: 26187
+		// (get) Token: 0x06034A24 RID: 215588 RVA: 0x00EB89ED File Offset: 0x00EB6BED
+		// (set) Token: 0x06034A25 RID: 215589 RVA: 0x00EB89F5 File Offset: 0x00EB6BF5
 		public int OptionIndex { get; set; }
 
-		// Token: 0x170092EA RID: 37610
-		// (get) Token: 0x0603FD65 RID: 261477 RVA: 0x00F71AA2 File Offset: 0x00F6FCA2
-		// (set) Token: 0x0603FD66 RID: 261478 RVA: 0x00F71AAA File Offset: 0x00F6FCAA
+		// Token: 0x1700664C RID: 26188
+		// (get) Token: 0x06034A26 RID: 215590 RVA: 0x00EB89FE File Offset: 0x00EB6BFE
+		// (set) Token: 0x06034A27 RID: 215591 RVA: 0x00EB8A06 File Offset: 0x00EB6C06
 		public TableTextArgNew OptionText { get; set; }
 
-		// Token: 0x170092EB RID: 37611
-		// (get) Token: 0x0603FD67 RID: 261479 RVA: 0x00F71AB3 File Offset: 0x00F6FCB3
-		// (set) Token: 0x0603FD68 RID: 261480 RVA: 0x00F71ABB File Offset: 0x00F6FCBB
+		// Token: 0x1700664D RID: 26189
+		// (get) Token: 0x06034A28 RID: 215592 RVA: 0x00EB8A0F File Offset: 0x00EB6C0F
+		// (set) Token: 0x06034A29 RID: 215593 RVA: 0x00EB8A17 File Offset: 0x00EB6C17
 		public Action<int> OptionDelegate { get; set; }
 	}
 }

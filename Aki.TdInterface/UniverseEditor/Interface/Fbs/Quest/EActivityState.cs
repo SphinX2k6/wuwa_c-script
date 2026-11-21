@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003C8B RID: 15499
+	// Token: 0x0200409D RID: 16541
 	public enum EActivityState : byte
 	{
-		// Token: 0x0400B2F9 RID: 45817
+		// Token: 0x0400BC90 RID: 48272
 		BeforeOpen,
-		// Token: 0x0400B2FA RID: 45818
+		// Token: 0x0400BC91 RID: 48273
 		Open,
-		// Token: 0x0400B2FB RID: 45819
+		// Token: 0x0400BC92 RID: 48274
 		Close
 	}
 }

@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action.Fb;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C69 RID: 3177
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D48 RID: 3400
 	public class ISceneActorRefGroup
 	{
-		// Token: 0x060048D6 RID: 18646 RVA: 0x000B6DED File Offset: 0x000B4FED
+		// Token: 0x06004D75 RID: 19829 RVA: 0x000C15F1 File Offset: 0x000BF7F1
 		public static ISceneActorRefGroup Create(ISceneActorRefGroup? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015C1 RID: 5569
-		// (get) Token: 0x060048D7 RID: 18647 RVA: 0x000B6E0C File Offset: 0x000B500C
+		// Token: 0x170016E0 RID: 5856
+		// (get) Token: 0x06004D76 RID: 19830 RVA: 0x000C1610 File Offset: 0x000BF810
 		public virtual string EntityState
 		{
 			get
@@ -34,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015C2 RID: 5570
-		// (get) Token: 0x060048D8 RID: 18648 RVA: 0x000B6E1C File Offset: 0x000B501C
+		// Token: 0x170016E1 RID: 5857
+		// (get) Token: 0x06004D77 RID: 19831 RVA: 0x000C1620 File Offset: 0x000BF820
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -55,13 +52,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002986 RID: 10630
+		// Token: 0x04002BF3 RID: 11251
 		private ISceneActorRefGroup Instance;
 
-		// Token: 0x04002987 RID: 10631
+		// Token: 0x04002BF4 RID: 11252
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002988 RID: 10632
+		// Token: 0x04002BF5 RID: 11253
 		private bool _ActionsInited;
 	}
 }

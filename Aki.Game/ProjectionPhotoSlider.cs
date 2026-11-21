@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x02000EEB RID: 3819
+// Token: 0x020003A0 RID: 928
 [NullableContext(1)]
 [Nullable(0)]
 public class ProjectionPhotoSlider : UiPanelBase
 {
-	// Token: 0x06005FBD RID: 24509 RVA: 0x0011EE38 File Offset: 0x0011D038
+	// Token: 0x06003353 RID: 13139 RVA: 0x00126C90 File Offset: 0x00124E90
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class ProjectionPhotoSlider : UiPanelBase
 		};
 	}
 
-	// Token: 0x06005FBE RID: 24510 RVA: 0x0011EF00 File Offset: 0x0011D100
+	// Token: 0x06003354 RID: 13140 RVA: 0x00126D58 File Offset: 0x00124F58
 	protected override UniTask OnBeforeStartAsync()
 	{
 		UUIItem rootItem = this.RootItem;
@@ -104,7 +104,7 @@ public class ProjectionPhotoSlider : UiPanelBase
 		return base.OnBeforeStartAsync();
 	}
 
-	// Token: 0x06005FBF RID: 24511 RVA: 0x0011F10E File Offset: 0x0011D30E
+	// Token: 0x06003355 RID: 13141 RVA: 0x00126F66 File Offset: 0x00125166
 	protected override void OnAfterShow()
 	{
 		if (this.RootItem != null)
@@ -113,7 +113,7 @@ public class ProjectionPhotoSlider : UiPanelBase
 		}
 	}
 
-	// Token: 0x06005FC0 RID: 24512 RVA: 0x0011F124 File Offset: 0x0011D324
+	// Token: 0x06003356 RID: 13142 RVA: 0x00126F7C File Offset: 0x0012517C
 	protected override void OnBeforeDestroy()
 	{
 		if (this.rootSlider != null)
@@ -142,7 +142,7 @@ public class ProjectionPhotoSlider : UiPanelBase
 		this.sequencePlayer = null;
 	}
 
-	// Token: 0x06005FC1 RID: 24513 RVA: 0x0011F1DE File Offset: 0x0011D3DE
+	// Token: 0x06003357 RID: 13143 RVA: 0x00127036 File Offset: 0x00125236
 	public void SetConfig(float originValue, float targetValue, float sliderTolerance, bool isHorizontal)
 	{
 		this.originValue = originValue;
@@ -151,7 +151,7 @@ public class ProjectionPhotoSlider : UiPanelBase
 		this.isHorizontal = isHorizontal;
 	}
 
-	// Token: 0x06005FC2 RID: 24514 RVA: 0x0011F200 File Offset: 0x0011D400
+	// Token: 0x06003358 RID: 13144 RVA: 0x00127058 File Offset: 0x00125258
 	private void OnValueChange(float value)
 	{
 		if (this.valueFirstChange && this.isHorizontal)
@@ -185,13 +185,13 @@ public class ProjectionPhotoSlider : UiPanelBase
 		}
 	}
 
-	// Token: 0x06005FC3 RID: 24515 RVA: 0x0011F2FA File Offset: 0x0011D4FA
+	// Token: 0x06003359 RID: 13145 RVA: 0x00127152 File Offset: 0x00125352
 	private void OnPointUp(ULGUIPointerEventData eventData)
 	{
 		this.FinishEffect();
 	}
 
-	// Token: 0x06005FC4 RID: 24516 RVA: 0x0011F304 File Offset: 0x0011D504
+	// Token: 0x0600335A RID: 13146 RVA: 0x0012715C File Offset: 0x0012535C
 	private void OnProjectionPhotoFinishDrag()
 	{
 		if (!this.IsDisabled() && this.RootItem != null)
@@ -208,7 +208,7 @@ public class ProjectionPhotoSlider : UiPanelBase
 		}
 	}
 
-	// Token: 0x06005FC5 RID: 24517 RVA: 0x0011F38C File Offset: 0x0011D58C
+	// Token: 0x0600335B RID: 13147 RVA: 0x001271E4 File Offset: 0x001253E4
 	private void PlayRangeSequence(bool isFinish)
 	{
 		LevelSequencePlayer levelSequencePlayer = this.sequencePlayer;
@@ -224,7 +224,7 @@ public class ProjectionPhotoSlider : UiPanelBase
 		levelSequencePlayer2.PlayLevelSequenceByName(isFinish ? "On" : "Off", false, null, false);
 	}
 
-	// Token: 0x06005FC6 RID: 24518 RVA: 0x0011F3D8 File Offset: 0x0011D5D8
+	// Token: 0x0600335C RID: 13148 RVA: 0x00127230 File Offset: 0x00125430
 	private void FinishEffect()
 	{
 		EventSystem.Instance.Emit(EEventName.OnProjectionPhotoSliderEndDrag);
@@ -273,7 +273,7 @@ public class ProjectionPhotoSlider : UiPanelBase
 		}
 	}
 
-	// Token: 0x06005FC7 RID: 24519 RVA: 0x0011F4A8 File Offset: 0x0011D6A8
+	// Token: 0x0600335D RID: 13149 RVA: 0x00127300 File Offset: 0x00125500
 	private void OnAxisInput(string axisName, float value, InputIdentification _)
 	{
 		if (!base.GetActive())
@@ -303,7 +303,7 @@ public class ProjectionPhotoSlider : UiPanelBase
 		}
 	}
 
-	// Token: 0x06005FC8 RID: 24520 RVA: 0x0011F550 File Offset: 0x0011D750
+	// Token: 0x0600335E RID: 13150 RVA: 0x001273A8 File Offset: 0x001255A8
 	private float GetSliderTrackWidth()
 	{
 		UUIItem sliderTrackUiItem = this.GetSliderTrackUiItem();
@@ -315,7 +315,7 @@ public class ProjectionPhotoSlider : UiPanelBase
 		return num;
 	}
 
-	// Token: 0x06005FC9 RID: 24521 RVA: 0x0011F584 File Offset: 0x0011D784
+	// Token: 0x0600335F RID: 13151 RVA: 0x001273DC File Offset: 0x001255DC
 	[NullableContext(2)]
 	private UUIItem GetSliderTrackUiItem()
 	{
@@ -341,7 +341,7 @@ public class ProjectionPhotoSlider : UiPanelBase
 		return base.GetItem(1);
 	}
 
-	// Token: 0x06005FCA RID: 24522 RVA: 0x0011F5E4 File Offset: 0x0011D7E4
+	// Token: 0x06003360 RID: 13152 RVA: 0x0012743C File Offset: 0x0012563C
 	private void ApplyNiaRangeAnchorByTarget()
 	{
 		if (this.IsDisabled() || this.niaRange == null)
@@ -359,7 +359,7 @@ public class ProjectionPhotoSlider : UiPanelBase
 		this.niaRange.SetAnchorOffset(new FVector2D(inX, anchorOffset.Y));
 	}
 
-	// Token: 0x06005FCB RID: 24523 RVA: 0x0011F668 File Offset: 0x0011D868
+	// Token: 0x06003361 RID: 13153 RVA: 0x001274C0 File Offset: 0x001256C0
 	private void UpdateIndicatorChangeColor()
 	{
 		bool flag = !this.finishFlag;
@@ -381,13 +381,13 @@ public class ProjectionPhotoSlider : UiPanelBase
 		uuisprite2.SetChangeColor(bUseChangeColor2, fcolor);
 	}
 
-	// Token: 0x06005FCC RID: 24524 RVA: 0x0011F6C8 File Offset: 0x0011D8C8
+	// Token: 0x06003362 RID: 13154 RVA: 0x00127520 File Offset: 0x00125720
 	private bool IsDisabled()
 	{
 		return this.originValue == -1f && this.targetValue == -1f;
 	}
 
-	// Token: 0x06005FCD RID: 24525 RVA: 0x0011F6E6 File Offset: 0x0011D8E6
+	// Token: 0x06003363 RID: 13155 RVA: 0x0012753E File Offset: 0x0012573E
 	private float GetSliderOffsetValue(float value)
 	{
 		if (!this.isHorizontal)
@@ -397,20 +397,20 @@ public class ProjectionPhotoSlider : UiPanelBase
 		return value;
 	}
 
-	// Token: 0x06005FCE RID: 24526 RVA: 0x0011F700 File Offset: 0x0011D900
+	// Token: 0x06003364 RID: 13156 RVA: 0x00127558 File Offset: 0x00125758
 	private float GetNormalizedDistance(float value, float targetValue)
 	{
 		float num = Math.Max(targetValue, 1f - targetValue);
 		return Math.Min(Math.Abs(value - targetValue) / num, 1f);
 	}
 
-	// Token: 0x06005FCF RID: 24527 RVA: 0x0011F72F File Offset: 0x0011D92F
+	// Token: 0x06003365 RID: 13157 RVA: 0x00127587 File Offset: 0x00125787
 	public bool IsFinish()
 	{
 		return this.IsDisabled() || this.finishFlag;
 	}
 
-	// Token: 0x06005FD1 RID: 24529 RVA: 0x0011F749 File Offset: 0x0011D949
+	// Token: 0x06003367 RID: 13159 RVA: 0x001275A1 File Offset: 0x001257A1
 	[NullableContext(2)]
 	[CompilerGenerated]
 	internal static UUIItem <GetSliderTrackUiItem>g__TryItem|33_0(UUIItem item)
@@ -422,86 +422,86 @@ public class ProjectionPhotoSlider : UiPanelBase
 		return item;
 	}
 
-	// Token: 0x04002B62 RID: 11106
+	// Token: 0x04002BFB RID: 11259
 	private const float VerticalOffsetMin = 0.45f;
 
-	// Token: 0x04002B63 RID: 11107
+	// Token: 0x04002BFC RID: 11260
 	private const string RIGHT_RANGE_AUDIO_EVENT = "play_interact_camera_ui_slider_flash";
 
-	// Token: 0x04002B64 RID: 11108
+	// Token: 0x04002BFD RID: 11261
 	private float originValue;
 
-	// Token: 0x04002B65 RID: 11109
+	// Token: 0x04002BFE RID: 11262
 	private float targetValue;
 
-	// Token: 0x04002B66 RID: 11110
+	// Token: 0x04002BFF RID: 11263
 	private float sliderTolerance;
 
-	// Token: 0x04002B67 RID: 11111
+	// Token: 0x04002C00 RID: 11264
 	private bool isHorizontal;
 
-	// Token: 0x04002B68 RID: 11112
+	// Token: 0x04002C01 RID: 11265
 	private bool finishFlag;
 
-	// Token: 0x04002B69 RID: 11113
+	// Token: 0x04002C02 RID: 11266
 	private bool valueFirstChange;
 
-	// Token: 0x04002B6A RID: 11114
+	// Token: 0x04002C03 RID: 11267
 	private bool isAxisInput;
 
-	// Token: 0x04002B6B RID: 11115
+	// Token: 0x04002C04 RID: 11268
 	private bool wasAxisInput;
 
-	// Token: 0x04002B6C RID: 11116
+	// Token: 0x04002C05 RID: 11269
 	private bool uiIncreaseAxisInput;
 
-	// Token: 0x04002B6D RID: 11117
+	// Token: 0x04002C06 RID: 11270
 	private bool uiReduceAxisInput;
 
-	// Token: 0x04002B6E RID: 11118
+	// Token: 0x04002C07 RID: 11271
 	[Nullable(2)]
 	private LevelSequencePlayer sequencePlayer;
 
-	// Token: 0x04002B6F RID: 11119
+	// Token: 0x04002C08 RID: 11272
 	private UUISliderComponent rootSlider;
 
-	// Token: 0x04002B70 RID: 11120
+	// Token: 0x04002C09 RID: 11273
 	private UUINiagara niaBgPoint;
 
-	// Token: 0x04002B71 RID: 11121
+	// Token: 0x04002C0A RID: 11274
 	private UUINiagara niaGlow;
 
-	// Token: 0x04002B72 RID: 11122
+	// Token: 0x04002C0B RID: 11275
 	private UUINiagara niaRange;
 
-	// Token: 0x04002B73 RID: 11123
+	// Token: 0x04002C0C RID: 11276
 	private UUIItem itemConfirm;
 
-	// Token: 0x04002B74 RID: 11124
+	// Token: 0x04002C0D RID: 11277
 	private UUISprite cursorSprite;
 
-	// Token: 0x04002B75 RID: 11125
+	// Token: 0x04002C0E RID: 11278
 	private UUISprite pointLineSprite;
 
-	// Token: 0x0200754D RID: 30029
+	// Token: 0x020066E1 RID: 26337
 	[NullableContext(0)]
 	private enum EViewComponent
 	{
-		// Token: 0x04026C97 RID: 158871
+		// Token: 0x04021FE2 RID: 139234
 		NiaBgPoint,
-		// Token: 0x04026C98 RID: 158872
+		// Token: 0x04021FE3 RID: 139235
 		PnlHandle,
-		// Token: 0x04026C99 RID: 158873
+		// Token: 0x04021FE4 RID: 139236
 		SprCursor,
-		// Token: 0x04026C9A RID: 158874
+		// Token: 0x04021FE5 RID: 139237
 		SprPointLine,
-		// Token: 0x04026C9B RID: 158875
+		// Token: 0x04021FE6 RID: 139238
 		SprConfirm,
-		// Token: 0x04026C9C RID: 158876
+		// Token: 0x04021FE7 RID: 139239
 		NiaGlow,
-		// Token: 0x04026C9D RID: 158877
+		// Token: 0x04021FE8 RID: 139240
 		NiaCalibration,
-		// Token: 0x04026C9E RID: 158878
+		// Token: 0x04021FE9 RID: 139241
 		NiaRange
 	}
 }

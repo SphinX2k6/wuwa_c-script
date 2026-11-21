@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004E1 RID: 1249
+	// Token: 0x0200053A RID: 1338
 	public class IMechascoutDragInstant_SetValue
 	{
-		// Token: 0x040012A4 RID: 4772
+		// Token: 0x040013C6 RID: 5062
 		public EMechascoutDragType Type;
 	}
 }

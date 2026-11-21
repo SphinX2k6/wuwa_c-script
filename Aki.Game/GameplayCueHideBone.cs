@@ -1,22 +1,22 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02002FC2 RID: 12226
+// Token: 0x02002516 RID: 9494
 public class GameplayCueHideBone : GameplayCueBase
 {
-	// Token: 0x06019EBC RID: 106172 RVA: 0x006C7DBB File Offset: 0x006C5FBB
+	// Token: 0x060177CE RID: 96206 RVA: 0x006EE687 File Offset: 0x006EC887
 	protected override void OnCreate()
 	{
 		this.HideBone(true);
 	}
 
-	// Token: 0x06019EBD RID: 106173 RVA: 0x006C7DC4 File Offset: 0x006C5FC4
+	// Token: 0x060177CF RID: 96207 RVA: 0x006EE690 File Offset: 0x006EC890
 	protected override void OnDestroy()
 	{
 		this.HideBone(false);
 	}
 
-	// Token: 0x06019EBE RID: 106174 RVA: 0x006C7DD0 File Offset: 0x006C5FD0
+	// Token: 0x060177D0 RID: 96208 RVA: 0x006EE69C File Offset: 0x006EC89C
 	private void HideBone(bool bStart)
 	{
 		FName value = FNameUtil.GetDynamicFName(this.CueConfig.Parameters(0)).Value;

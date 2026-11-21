@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Core.Fight;
 using UnrealEngine;
 
-// Token: 0x02002DC5 RID: 11717
+// Token: 0x0200231F RID: 8991
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -13,14 +13,14 @@ using UnrealEngine;
 })]
 public class BulletLogicAdditiveAccelerateController : BulletLogicController<LogicDataAdditiveAccelerate, object>
 {
-	// Token: 0x060189EF RID: 100847 RVA: 0x0064B4DF File Offset: 0x006496DF
+	// Token: 0x06016297 RID: 90775 RVA: 0x006712C3 File Offset: 0x0066F4C3
 	[NullableContext(1)]
 	public BulletLogicAdditiveAccelerateController(LogicDataAdditiveAccelerate bulletLogicBase, Entity bullet) : base(bulletLogicBase, bullet)
 	{
 		this.BulletInfo = (bullet as BulletEntity).GetBulletInfo();
 	}
 
-	// Token: 0x060189F0 RID: 100848 RVA: 0x0064B4FC File Offset: 0x006496FC
+	// Token: 0x06016298 RID: 90776 RVA: 0x006712E0 File Offset: 0x0066F4E0
 	public override void BulletLogicAction(object param = null)
 	{
 		LogicDataAdditiveAccelerate logicController = this.LogicController;
@@ -53,6 +53,6 @@ public class BulletLogicAdditiveAccelerateController : BulletLogicController<Log
 		moveInfo.AdditiveAccelerate.FromUeVector(moveInfo.BaseAdditiveAccelerate);
 	}
 
-	// Token: 0x0400B73E RID: 46910
+	// Token: 0x0400BAB9 RID: 47801
 	private readonly BulletInfo BulletInfo;
 }

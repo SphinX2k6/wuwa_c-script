@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200300D RID: 12301
+// Token: 0x02002563 RID: 9571
 public enum ESetRotationPriority
 {
-	// Token: 0x0400C581 RID: 50561
+	// Token: 0x0400C94E RID: 51534
 	Movement,
-	// Token: 0x0400C582 RID: 50562
+	// Token: 0x0400C94F RID: 51535
 	Skill,
-	// Token: 0x0400C583 RID: 50563
+	// Token: 0x0400C950 RID: 51536
 	Anim
 }

@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Actor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F2B RID: 28459
+	// Token: 0x020076B2 RID: 30386
 	public class ISceneActorProjection3dTo2dEventT
 	{
-		// Token: 0x1700D388 RID: 54152
-		// (get) Token: 0x06032479 RID: 205945 RVA: 0x006CA8F0 File Offset: 0x006C8AF0
-		// (set) Token: 0x0603247A RID: 205946 RVA: 0x006CA8F8 File Offset: 0x006C8AF8
+		// Token: 0x1700DEE4 RID: 57060
+		// (get) Token: 0x060354D1 RID: 218321 RVA: 0x00726858 File Offset: 0x00724A58
+		// (set) Token: 0x060354D2 RID: 218322 RVA: 0x00726860 File Offset: 0x00724A60
 		public ESceneActorEventType Type { get; set; }
 
-		// Token: 0x1700D389 RID: 54153
-		// (get) Token: 0x0603247B RID: 205947 RVA: 0x006CA901 File Offset: 0x006C8B01
-		// (set) Token: 0x0603247C RID: 205948 RVA: 0x006CA909 File Offset: 0x006C8B09
+		// Token: 0x1700DEE5 RID: 57061
+		// (get) Token: 0x060354D3 RID: 218323 RVA: 0x00726869 File Offset: 0x00724A69
+		// (set) Token: 0x060354D4 RID: 218324 RVA: 0x00726871 File Offset: 0x00724A71
 		public IActorRefT BpActor { get; set; }
 
-		// Token: 0x1700D38A RID: 54154
-		// (get) Token: 0x0603247D RID: 205949 RVA: 0x006CA912 File Offset: 0x006C8B12
-		// (set) Token: 0x0603247E RID: 205950 RVA: 0x006CA91A File Offset: 0x006C8B1A
+		// Token: 0x1700DEE6 RID: 57062
+		// (get) Token: 0x060354D5 RID: 218325 RVA: 0x0072687A File Offset: 0x00724A7A
+		// (set) Token: 0x060354D6 RID: 218326 RVA: 0x00726882 File Offset: 0x00724A82
 		public IActorRefT PPVolume { get; set; }
 
-		// Token: 0x0603247F RID: 205951 RVA: 0x006CA923 File Offset: 0x006C8B23
+		// Token: 0x060354D7 RID: 218327 RVA: 0x0072688B File Offset: 0x00724A8B
 		public ISceneActorProjection3dTo2dEventT()
 		{
 			this.Type = ESceneActorEventType.PlayMusicPlants;

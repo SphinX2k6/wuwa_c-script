@@ -7,7 +7,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000025 RID: 37
+	// Token: 0x0200000A RID: 10
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(4, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 4)]
@@ -15,13 +15,13 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 4)]
 	public struct FColor : IEquatable<FColor>, IEqualityOperators<FColor, FColor, bool>, IUnrealScriptStruct
 	{
-		// Token: 0x0600013C RID: 316 RVA: 0x00006B58 File Offset: 0x00004D58
+		// Token: 0x060000C1 RID: 193 RVA: 0x000033C4 File Offset: 0x000015C4
 		public unsafe readonly uint DWColor()
 		{
 			return *this.Dummy;
 		}
 
-		// Token: 0x0600013D RID: 317 RVA: 0x00006B61 File Offset: 0x00004D61
+		// Token: 0x060000C2 RID: 194 RVA: 0x000033CD File Offset: 0x000015CD
 		public FColor()
 		{
 			this.B = 0;
@@ -30,7 +30,7 @@ namespace UnrealEngine
 			this.A = 0;
 		}
 
-		// Token: 0x0600013E RID: 318 RVA: 0x00006B7F File Offset: 0x00004D7F
+		// Token: 0x060000C3 RID: 195 RVA: 0x000033EB File Offset: 0x000015EB
 		public FColor(byte r, byte g, byte b, byte a = 255)
 		{
 			this.B = b;
@@ -39,7 +39,7 @@ namespace UnrealEngine
 			this.A = a;
 		}
 
-		// Token: 0x0600013F RID: 319 RVA: 0x00006B9E File Offset: 0x00004D9E
+		// Token: 0x060000C4 RID: 196 RVA: 0x0000340A File Offset: 0x0000160A
 		public unsafe FColor(uint color)
 		{
 			this.B = 0;
@@ -49,8 +49,8 @@ namespace UnrealEngine
 			*this.Dummy = color;
 		}
 
-		// Token: 0x17000002 RID: 2
-		// (get) Token: 0x06000140 RID: 320 RVA: 0x00006BC4 File Offset: 0x00004DC4
+		// Token: 0x17000001 RID: 1
+		// (get) Token: 0x060000C5 RID: 197 RVA: 0x00003430 File Offset: 0x00001630
 		public readonly ref uint Dummy
 		{
 			[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -60,13 +60,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000141 RID: 321 RVA: 0x00006BD1 File Offset: 0x00004DD1
+		// Token: 0x060000C6 RID: 198 RVA: 0x0000343D File Offset: 0x0000163D
 		public readonly bool Equals(FColor other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06000142 RID: 322 RVA: 0x00006BE0 File Offset: 0x00004DE0
+		// Token: 0x060000C7 RID: 199 RVA: 0x0000344C File Offset: 0x0000164C
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -78,13 +78,13 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06000143 RID: 323 RVA: 0x00006C0A File Offset: 0x00004E0A
+		// Token: 0x060000C8 RID: 200 RVA: 0x00003476 File Offset: 0x00001676
 		public override readonly int GetHashCode()
 		{
 			return HashCode.Combine<byte, byte, byte, byte>(this.R, this.G, this.B, this.A);
 		}
 
-		// Token: 0x06000144 RID: 324 RVA: 0x00006C2C File Offset: 0x00004E2C
+		// Token: 0x060000C9 RID: 201 RVA: 0x00003498 File Offset: 0x00001698
 		[NullableContext(1)]
 		public override readonly string ToString()
 		{
@@ -101,7 +101,7 @@ namespace UnrealEngine
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06000145 RID: 325 RVA: 0x00006CBC File Offset: 0x00004EBC
+		// Token: 0x060000CA RID: 202 RVA: 0x00003528 File Offset: 0x00001728
 		[NullableContext(1)]
 		public readonly string ToHex()
 		{
@@ -113,71 +113,71 @@ namespace UnrealEngine
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06000146 RID: 326 RVA: 0x00006D21 File Offset: 0x00004F21
+		// Token: 0x060000CB RID: 203 RVA: 0x0000358D File Offset: 0x0000178D
 		public unsafe static bool operator ==(FColor left, FColor right)
 		{
 			return *left.Dummy == *right.Dummy;
 		}
 
-		// Token: 0x06000147 RID: 327 RVA: 0x00006D35 File Offset: 0x00004F35
+		// Token: 0x060000CC RID: 204 RVA: 0x000035A1 File Offset: 0x000017A1
 		public unsafe static bool operator !=(FColor left, FColor right)
 		{
 			return *left.Dummy != *right.Dummy;
 		}
 
-		// Token: 0x06000148 RID: 328
+		// Token: 0x060000CD RID: 205
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FColor Internal_FromHex(in FCSharpStringView str);
 
-		// Token: 0x06000149 RID: 329
+		// Token: 0x060000CE RID: 206
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_MakeRandomColor(out FColor result);
 
-		// Token: 0x0600014A RID: 330
+		// Token: 0x060000CF RID: 207
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FColor Internal_MakeRedToGreenColorFromScalar(float f);
 
-		// Token: 0x0600014B RID: 331
+		// Token: 0x060000D0 RID: 208
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FColor Internal_MakeFromColorTemperature(float f);
 
-		// Token: 0x0600014C RID: 332
+		// Token: 0x060000D1 RID: 209
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_Add(ref FColor a, in FColor b);
 
-		// Token: 0x0600014D RID: 333
+		// Token: 0x060000D2 RID: 210
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FLinearColor Internal_FromRGBE(in FColor a);
 
-		// Token: 0x0600014E RID: 334
+		// Token: 0x060000D3 RID: 211
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FColor Internal_WithAlpha(in FColor a, byte alpha);
 
-		// Token: 0x0600014F RID: 335
+		// Token: 0x060000D4 RID: 212
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FLinearColor Internal_ReinterpretAsLinear(in FColor a);
 
-		// Token: 0x06000150 RID: 336
+		// Token: 0x060000D5 RID: 213
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern uint Internal_ToPackedARGB(in FColor a);
 
-		// Token: 0x06000151 RID: 337
+		// Token: 0x060000D6 RID: 214
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern uint Internal_ToPackedABGR(in FColor a);
 
-		// Token: 0x06000152 RID: 338
+		// Token: 0x060000D7 RID: 215
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern uint Internal_ToPackedRGBA(in FColor a);
 
-		// Token: 0x06000153 RID: 339
+		// Token: 0x060000D8 RID: 216
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern uint Internal_ToPackedBGRA(in FColor a);
 
-		// Token: 0x06000154 RID: 340
+		// Token: 0x060000D9 RID: 217
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_InitFromString(ref FColor a, in FCSharpStringView b);
 
-		// Token: 0x06000155 RID: 341 RVA: 0x00006D4C File Offset: 0x00004F4C
+		// Token: 0x060000DA RID: 218 RVA: 0x000035B8 File Offset: 0x000017B8
 		[NullableContext(2)]
 		public unsafe static FColor FromHex(string hexStr)
 		{
@@ -201,7 +201,7 @@ namespace UnrealEngine
 			return FColor.Internal_FromHex(fcsharpStringView);
 		}
 
-		// Token: 0x06000156 RID: 342 RVA: 0x00006D94 File Offset: 0x00004F94
+		// Token: 0x060000DB RID: 219 RVA: 0x00003600 File Offset: 0x00001800
 		public static FColor MakeRandomColor()
 		{
 			FColor result;
@@ -209,19 +209,19 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06000157 RID: 343 RVA: 0x00006DA9 File Offset: 0x00004FA9
+		// Token: 0x060000DC RID: 220 RVA: 0x00003615 File Offset: 0x00001815
 		public static FColor MakeRedToGreenColorFromScalar(float scalar)
 		{
 			return FColor.Internal_MakeRedToGreenColorFromScalar(scalar);
 		}
 
-		// Token: 0x06000158 RID: 344 RVA: 0x00006DB1 File Offset: 0x00004FB1
+		// Token: 0x060000DD RID: 221 RVA: 0x0000361D File Offset: 0x0000181D
 		public static FColor MakeFromColorTemperature(float temp)
 		{
 			return FColor.Internal_MakeFromColorTemperature(temp);
 		}
 
-		// Token: 0x06000159 RID: 345 RVA: 0x00006DBC File Offset: 0x00004FBC
+		// Token: 0x060000DE RID: 222 RVA: 0x00003628 File Offset: 0x00001828
 		public unsafe static FColor operator +(FColor a, in FColor b)
 		{
 			fixed (FColor* ptr = &b)
@@ -231,7 +231,7 @@ namespace UnrealEngine
 			return a;
 		}
 
-		// Token: 0x0600015A RID: 346 RVA: 0x00006DDC File Offset: 0x00004FDC
+		// Token: 0x060000DF RID: 223 RVA: 0x00003648 File Offset: 0x00001848
 		public unsafe readonly FLinearColor FromRGBE()
 		{
 			fixed (FColor* ptr = &this)
@@ -240,7 +240,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600015B RID: 347 RVA: 0x00006DF4 File Offset: 0x00004FF4
+		// Token: 0x060000E0 RID: 224 RVA: 0x00003660 File Offset: 0x00001860
 		public unsafe readonly FColor WithAlpha(byte alpha)
 		{
 			fixed (FColor* ptr = &this)
@@ -249,7 +249,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600015C RID: 348 RVA: 0x00006E0C File Offset: 0x0000500C
+		// Token: 0x060000E1 RID: 225 RVA: 0x00003678 File Offset: 0x00001878
 		public unsafe readonly FLinearColor ReinterpretAsLinear()
 		{
 			fixed (FColor* ptr = &this)
@@ -258,7 +258,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600015D RID: 349 RVA: 0x00006E24 File Offset: 0x00005024
+		// Token: 0x060000E2 RID: 226 RVA: 0x00003690 File Offset: 0x00001890
 		public unsafe readonly uint ToPackedARGB()
 		{
 			fixed (FColor* ptr = &this)
@@ -267,7 +267,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600015E RID: 350 RVA: 0x00006E3C File Offset: 0x0000503C
+		// Token: 0x060000E3 RID: 227 RVA: 0x000036A8 File Offset: 0x000018A8
 		public unsafe readonly uint ToPackedABGR()
 		{
 			fixed (FColor* ptr = &this)
@@ -276,7 +276,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600015F RID: 351 RVA: 0x00006E54 File Offset: 0x00005054
+		// Token: 0x060000E4 RID: 228 RVA: 0x000036C0 File Offset: 0x000018C0
 		public unsafe readonly uint ToPackedRGBA()
 		{
 			fixed (FColor* ptr = &this)
@@ -285,7 +285,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000160 RID: 352 RVA: 0x00006E6C File Offset: 0x0000506C
+		// Token: 0x060000E5 RID: 229 RVA: 0x000036D8 File Offset: 0x000018D8
 		public unsafe readonly uint ToPackedBGRA()
 		{
 			fixed (FColor* ptr = &this)
@@ -294,7 +294,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000161 RID: 353 RVA: 0x00006E84 File Offset: 0x00005084
+		// Token: 0x060000E6 RID: 230 RVA: 0x000036F0 File Offset: 0x000018F0
 		[NullableContext(2)]
 		public unsafe bool InitFromString(string str)
 		{
@@ -324,74 +324,74 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000162 RID: 354 RVA: 0x00006EED File Offset: 0x000050ED
+		// Token: 0x060000E7 RID: 231 RVA: 0x00003759 File Offset: 0x00001959
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FColor._ScriptStructPtr != 0) ? FColor._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.Color", ref FColor._ScriptStructPtr);
 		}
 
-		// Token: 0x0400006D RID: 109
+		// Token: 0x04000026 RID: 38
 		[FieldOffset(0)]
 		public byte B;
 
-		// Token: 0x0400006E RID: 110
+		// Token: 0x04000027 RID: 39
 		[FieldOffset(1)]
 		public byte G;
 
-		// Token: 0x0400006F RID: 111
+		// Token: 0x04000028 RID: 40
 		[FieldOffset(2)]
 		public byte R;
 
-		// Token: 0x04000070 RID: 112
+		// Token: 0x04000029 RID: 41
 		[FieldOffset(3)]
 		public byte A;
 
-		// Token: 0x04000071 RID: 113
+		// Token: 0x0400002A RID: 42
 		public static readonly FColor White = new FColor(byte.MaxValue, byte.MaxValue, byte.MaxValue, byte.MaxValue);
 
-		// Token: 0x04000072 RID: 114
+		// Token: 0x0400002B RID: 43
 		public static readonly FColor Black = new FColor(0, 0, 0, byte.MaxValue);
 
-		// Token: 0x04000073 RID: 115
+		// Token: 0x0400002C RID: 44
 		public static readonly FColor Transparent = new FColor(0, 0, 0, 0);
 
-		// Token: 0x04000074 RID: 116
+		// Token: 0x0400002D RID: 45
 		public static readonly FColor Red = new FColor(byte.MaxValue, 0, 0, byte.MaxValue);
 
-		// Token: 0x04000075 RID: 117
+		// Token: 0x0400002E RID: 46
 		public static readonly FColor Green = new FColor(0, byte.MaxValue, 0, byte.MaxValue);
 
-		// Token: 0x04000076 RID: 118
+		// Token: 0x0400002F RID: 47
 		public static readonly FColor Blue = new FColor(0, 0, byte.MaxValue, byte.MaxValue);
 
-		// Token: 0x04000077 RID: 119
+		// Token: 0x04000030 RID: 48
 		public static readonly FColor Yellow = new FColor(byte.MaxValue, byte.MaxValue, 0, byte.MaxValue);
 
-		// Token: 0x04000078 RID: 120
+		// Token: 0x04000031 RID: 49
 		public static readonly FColor Cyan = new FColor(0, byte.MaxValue, byte.MaxValue, byte.MaxValue);
 
-		// Token: 0x04000079 RID: 121
+		// Token: 0x04000032 RID: 50
 		public static readonly FColor Magenta = new FColor(byte.MaxValue, 0, byte.MaxValue, byte.MaxValue);
 
-		// Token: 0x0400007A RID: 122
+		// Token: 0x04000033 RID: 51
 		public static readonly FColor Orange = new FColor(243, 156, 18, byte.MaxValue);
 
-		// Token: 0x0400007B RID: 123
+		// Token: 0x04000034 RID: 52
 		public static readonly FColor Purple = new FColor(169, 7, 228, byte.MaxValue);
 
-		// Token: 0x0400007C RID: 124
+		// Token: 0x04000035 RID: 53
 		public static readonly FColor Turquoise = new FColor(26, 188, 156, byte.MaxValue);
 
-		// Token: 0x0400007D RID: 125
+		// Token: 0x04000036 RID: 54
 		public static readonly FColor Silver = new FColor(189, 195, 199, byte.MaxValue);
 
-		// Token: 0x0400007E RID: 126
+		// Token: 0x04000037 RID: 55
 		public static readonly FColor Emerald = new FColor(46, 204, 113, byte.MaxValue);
 
-		// Token: 0x0400007F RID: 127
+		// Token: 0x04000038 RID: 56
 		public const string __ObjectPath = "/Script/CoreUObject.Color";
 
-		// Token: 0x04000080 RID: 128
+		// Token: 0x04000039 RID: 57
 		private static IntPtr _ScriptStructPtr;
 	}
 }

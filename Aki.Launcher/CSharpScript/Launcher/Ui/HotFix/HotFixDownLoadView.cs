@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Ui.HotFix
 {
-	// Token: 0x020000CE RID: 206
+	// Token: 0x020000D1 RID: 209
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HotFixDownLoadView : LaunchComponentsAction
 	{
-		// Token: 0x060006BD RID: 1725 RVA: 0x000389E8 File Offset: 0x00036BE8
+		// Token: 0x060006D9 RID: 1753 RVA: 0x0003A518 File Offset: 0x00038718
 		protected override void OnStart()
 		{
 			HotFixBtnUiItem hotFixBtnUiItem = base.AttachElement<HotFixBtnUiItem>(8);
@@ -85,7 +85,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			this.InitResTierItems();
 		}
 
-		// Token: 0x060006BE RID: 1726 RVA: 0x00038A88 File Offset: 0x00036C88
+		// Token: 0x060006DA RID: 1754 RVA: 0x0003A5B8 File Offset: 0x000387B8
 		private void InitResTierItems()
 		{
 			int[] array = new int[]
@@ -140,7 +140,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			}
 		}
 
-		// Token: 0x060006BF RID: 1727 RVA: 0x00038BC0 File Offset: 0x00036DC0
+		// Token: 0x060006DB RID: 1755 RVA: 0x0003A6F0 File Offset: 0x000388F0
 		private int GetDefaultSelectedIndex()
 		{
 			List<ETier> list = new List<ETier>(HotFixManager.GetSupportedResourceQualityTiers());
@@ -171,7 +171,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return num3;
 		}
 
-		// Token: 0x060006C0 RID: 1728 RVA: 0x00038C34 File Offset: 0x00036E34
+		// Token: 0x060006DC RID: 1756 RVA: 0x0003A764 File Offset: 0x00038964
 		private void OnClickResTierItemToggle(ETier tier, UUIExtendToggle toggle)
 		{
 			UUIExtendToggle currentSelectResTierToggle = this.CurrentSelectResTierToggle;
@@ -194,7 +194,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			}
 		}
 
-		// Token: 0x060006C1 RID: 1729 RVA: 0x00038CB4 File Offset: 0x00036EB4
+		// Token: 0x060006DD RID: 1757 RVA: 0x0003A7E4 File Offset: 0x000389E4
 		protected override void OnHide()
 		{
 			HotPatchInputManager.Instance.UnRegisterInputAxis("手柄右摇杆垂直方向", new TInputAxis(this.InputAxis));
@@ -204,7 +204,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			HotPatchInputManager.Instance.UnRegisterInputAction("手柄左边下键", new TInputAction(this.InputAction));
 		}
 
-		// Token: 0x060006C2 RID: 1730 RVA: 0x00038D48 File Offset: 0x00036F48
+		// Token: 0x060006DE RID: 1758 RVA: 0x0003A878 File Offset: 0x00038A78
 		protected override void OnShow()
 		{
 			if (!this.HasCapturedClearResourceQualityTier)
@@ -254,7 +254,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			LauncherStorageLib.Instance.DeleteDeviceSaved(ELauncherStorageDeviceKey.TargetResourceQualityTier);
 		}
 
-		// Token: 0x060006C3 RID: 1731 RVA: 0x00038EF8 File Offset: 0x000370F8
+		// Token: 0x060006DF RID: 1759 RVA: 0x0003AA28 File Offset: 0x00038C28
 		private void OnClickToggle(int tabIndex, UUIExtendToggle toggle)
 		{
 			UUIExtendToggle currentSelectToggle = this.CurrentSelectToggle;
@@ -266,7 +266,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			this.RefreshTabContent(tabIndex);
 		}
 
-		// Token: 0x060006C4 RID: 1732 RVA: 0x00038F20 File Offset: 0x00037120
+		// Token: 0x060006E0 RID: 1760 RVA: 0x0003AA50 File Offset: 0x00038C50
 		private void RefreshTabContent(int tabIndex)
 		{
 			this.SelectTabIndex = tabIndex;
@@ -309,7 +309,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			this.RefreshRightBtnText();
 		}
 
-		// Token: 0x060006C5 RID: 1733 RVA: 0x0003907C File Offset: 0x0003727C
+		// Token: 0x060006E1 RID: 1761 RVA: 0x0003ABAC File Offset: 0x00038DAC
 		public void SetFreeSpaceTipsPopActive(bool value)
 		{
 			Action<bool> setFreeSpaceTipsPopActiveCallBack = this.SetFreeSpaceTipsPopActiveCallBack;
@@ -323,7 +323,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			instance.Info(message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x060006C6 RID: 1734 RVA: 0x000390C3 File Offset: 0x000372C3
+		// Token: 0x060006E2 RID: 1762 RVA: 0x0003ABF3 File Offset: 0x00038DF3
 		private void InputAxis(float value, string axisName)
 		{
 			if (value == 0f)
@@ -336,7 +336,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			}
 		}
 
-		// Token: 0x060006C7 RID: 1735 RVA: 0x000390F0 File Offset: 0x000372F0
+		// Token: 0x060006E3 RID: 1763 RVA: 0x0003AC20 File Offset: 0x00038E20
 		private void InputAction(bool bPress, string actionName)
 		{
 			if (!bPress)
@@ -353,25 +353,25 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			}
 		}
 
-		// Token: 0x060006C8 RID: 1736 RVA: 0x00039141 File Offset: 0x00037341
+		// Token: 0x060006E4 RID: 1764 RVA: 0x0003AC71 File Offset: 0x00038E71
 		private void FocusPrev()
 		{
 			this.SelectTabIndexToggle(Math.Max(0, this.SelectTabIndex - 1 - 1));
 		}
 
-		// Token: 0x060006C9 RID: 1737 RVA: 0x00039159 File Offset: 0x00037359
+		// Token: 0x060006E5 RID: 1765 RVA: 0x0003AC89 File Offset: 0x00038E89
 		private void FocusNext()
 		{
 			this.SelectTabIndexToggle(Math.Min(1, this.SelectTabIndex - 1 + 1));
 		}
 
-		// Token: 0x060006CA RID: 1738 RVA: 0x00039171 File Offset: 0x00037371
+		// Token: 0x060006E6 RID: 1766 RVA: 0x0003ACA1 File Offset: 0x00038EA1
 		private void SelectTabIndexToggle(int index)
 		{
 			((HotFixDownLoadTabItem)this.HotFixTabLayout.GetLayoutItemByIndex(index)).Select();
 		}
 
-		// Token: 0x060006CB RID: 1739 RVA: 0x0003918C File Offset: 0x0003738C
+		// Token: 0x060006E7 RID: 1767 RVA: 0x0003ACBC File Offset: 0x00038EBC
 		private static ETier? GetSelectTier()
 		{
 			if (HotFixManager.SelectResourceQualityTier == ETier.None)
@@ -381,13 +381,13 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return new ETier?(HotFixManager.SelectResourceQualityTier);
 		}
 
-		// Token: 0x060006CC RID: 1740 RVA: 0x000391B4 File Offset: 0x000373B4
+		// Token: 0x060006E8 RID: 1768 RVA: 0x0003ACE4 File Offset: 0x00038EE4
 		public ETier? GetClearResourceQualityTier()
 		{
 			return this.ClearResourceQualityTier;
 		}
 
-		// Token: 0x060006CD RID: 1741 RVA: 0x000391BC File Offset: 0x000373BC
+		// Token: 0x060006E9 RID: 1769 RVA: 0x0003ACEC File Offset: 0x00038EEC
 		private long GetClearSpaceByCapturedTier()
 		{
 			if (this.ClearResourceQualityTier != null)
@@ -406,7 +406,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return HotFixManager.GetAllCanClearSpace();
 		}
 
-		// Token: 0x060006CE RID: 1742 RVA: 0x00039228 File Offset: 0x00037428
+		// Token: 0x060006EA RID: 1770 RVA: 0x0003AD58 File Offset: 0x00038F58
 		private void RefreshRightBtnText()
 		{
 			HotFixBtnUiItem element = base.GetElement<HotFixBtnUiItem>(8);
@@ -421,13 +421,13 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			element.SetText("Download_DownLoadBtnText", Array.Empty<string>());
 		}
 
-		// Token: 0x0400040F RID: 1039
+		// Token: 0x0400043E RID: 1086
 		private const long MB_SIZE = 1048576L;
 
-		// Token: 0x04000410 RID: 1040
+		// Token: 0x0400043F RID: 1087
 		private int SelectTabIndex = -1;
 
-		// Token: 0x04000411 RID: 1041
+		// Token: 0x04000440 RID: 1088
 		[Nullable(new byte[]
 		{
 			2,
@@ -436,79 +436,79 @@ namespace CSharpScript.Launcher.Ui.HotFix
 		})]
 		private HotFixLayout<HotFixDownLoadTabItem, IHotFixDownLoadTabItemData> HotFixTabLayout;
 
-		// Token: 0x04000412 RID: 1042
+		// Token: 0x04000441 RID: 1089
 		[Nullable(2)]
 		private UUIExtendToggle CurrentSelectToggle;
 
-		// Token: 0x04000413 RID: 1043
+		// Token: 0x04000442 RID: 1090
 		[Nullable(2)]
 		private UUIExtendToggle CurrentSelectResTierToggle;
 
-		// Token: 0x04000414 RID: 1044
+		// Token: 0x04000443 RID: 1091
 		private bool HasCapturedClearResourceQualityTier;
 
-		// Token: 0x04000415 RID: 1045
+		// Token: 0x04000444 RID: 1092
 		private ETier? ClearResourceQualityTier;
 
-		// Token: 0x04000416 RID: 1046
+		// Token: 0x04000445 RID: 1093
 		private readonly List<HotFixResTierItem> ResTierItems = new List<HotFixResTierItem>();
 
-		// Token: 0x04000417 RID: 1047
+		// Token: 0x04000446 RID: 1094
 		[Nullable(2)]
 		public Action<bool> SetFreeSpaceTipsPopActiveCallBack;
 
-		// Token: 0x04000418 RID: 1048
+		// Token: 0x04000447 RID: 1095
 		[Nullable(2)]
 		public Action<bool, Action> SetClearSubPackagePopActiveCallBack;
 
-		// Token: 0x04000419 RID: 1049
+		// Token: 0x04000448 RID: 1096
 		[Nullable(2)]
 		public Action<EResUpdateType, ETier, ETier> ShowChangeTierPopupCallBack;
 
-		// Token: 0x02000366 RID: 870
+		// Token: 0x02000371 RID: 881
 		[NullableContext(0)]
 		private static class EComponentDefine
 		{
-			// Token: 0x04001176 RID: 4470
+			// Token: 0x040011D8 RID: 4568
 			public const int LayoutItem = 0;
 
-			// Token: 0x04001177 RID: 4471
+			// Token: 0x040011D9 RID: 4569
 			public const int TabLayout = 1;
 
-			// Token: 0x04001178 RID: 4472
+			// Token: 0x040011DA RID: 4570
 			public const int TitleText = 2;
 
-			// Token: 0x04001179 RID: 4473
+			// Token: 0x040011DB RID: 4571
 			public const int DesText = 3;
 
-			// Token: 0x0400117A RID: 4474
+			// Token: 0x040011DC RID: 4572
 			public const int MemoryText = 4;
 
-			// Token: 0x0400117B RID: 4475
+			// Token: 0x040011DD RID: 4573
 			public const int DownLoadBar = 5;
 
-			// Token: 0x0400117C RID: 4476
+			// Token: 0x040011DE RID: 4574
 			public const int DownLoadBarTexture = 6;
 
-			// Token: 0x0400117D RID: 4477
+			// Token: 0x040011DF RID: 4575
 			public const int SpeedText = 7;
 
-			// Token: 0x0400117E RID: 4478
+			// Token: 0x040011E0 RID: 4576
 			public const int RightBtnItem = 8;
 
-			// Token: 0x0400117F RID: 4479
+			// Token: 0x040011E1 RID: 4577
 			public const int LeftBtnItem = 9;
 
-			// Token: 0x04001180 RID: 4480
+			// Token: 0x040011E2 RID: 4578
 			public const int MainTitleText = 11;
 
-			// Token: 0x04001181 RID: 4481
+			// Token: 0x040011E3 RID: 4579
 			public const int ScrollView = 12;
 
-			// Token: 0x04001182 RID: 4482
+			// Token: 0x040011E4 RID: 4580
 			public const int ResTierItem0 = 13;
 
-			// Token: 0x04001183 RID: 4483
+			// Token: 0x040011E5 RID: 4581
 			public const int ResTierItem1 = 14;
 		}
 	}

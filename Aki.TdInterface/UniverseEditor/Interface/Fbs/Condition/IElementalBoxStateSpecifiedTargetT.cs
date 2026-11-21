@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C08 RID: 19464
+	// Token: 0x020050F5 RID: 20725
 	public class IElementalBoxStateSpecifiedTargetT
 	{
-		// Token: 0x17008D65 RID: 36197
-		// (get) Token: 0x0601ED3B RID: 126267 RVA: 0x00451191 File Offset: 0x0044F391
-		// (set) Token: 0x0601ED3C RID: 126268 RVA: 0x00451199 File Offset: 0x0044F399
+		// Token: 0x17009489 RID: 38025
+		// (get) Token: 0x06020921 RID: 133409 RVA: 0x004847F9 File Offset: 0x004829F9
+		// (set) Token: 0x06020922 RID: 133410 RVA: 0x00484801 File Offset: 0x00482A01
 		public EElementalBoxStateTargetType Type { get; set; }
 
-		// Token: 0x17008D66 RID: 36198
-		// (get) Token: 0x0601ED3D RID: 126269 RVA: 0x004511A2 File Offset: 0x0044F3A2
-		// (set) Token: 0x0601ED3E RID: 126270 RVA: 0x004511AA File Offset: 0x0044F3AA
+		// Token: 0x1700948A RID: 38026
+		// (get) Token: 0x06020923 RID: 133411 RVA: 0x0048480A File Offset: 0x00482A0A
+		// (set) Token: 0x06020924 RID: 133412 RVA: 0x00484812 File Offset: 0x00482A12
 		public int ElementalBoxId { get; set; }
 
-		// Token: 0x17008D67 RID: 36199
-		// (get) Token: 0x0601ED3F RID: 126271 RVA: 0x004511B3 File Offset: 0x0044F3B3
-		// (set) Token: 0x0601ED40 RID: 126272 RVA: 0x004511BB File Offset: 0x0044F3BB
+		// Token: 0x1700948B RID: 38027
+		// (get) Token: 0x06020925 RID: 133413 RVA: 0x0048481B File Offset: 0x00482A1B
+		// (set) Token: 0x06020926 RID: 133414 RVA: 0x00484823 File Offset: 0x00482A23
 		public string State { get; set; }
 
-		// Token: 0x0601ED41 RID: 126273 RVA: 0x004511C4 File Offset: 0x0044F3C4
+		// Token: 0x06020927 RID: 133415 RVA: 0x0048482C File Offset: 0x00482A2C
 		public IElementalBoxStateSpecifiedTargetT()
 		{
 			this.Type = EElementalBoxStateTargetType.Player;

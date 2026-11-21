@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200174D RID: 5965
+// Token: 0x02000C06 RID: 3078
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 {
-	// Token: 0x0600AC7A RID: 44154 RVA: 0x0026AF08 File Offset: 0x00269108
+	// Token: 0x06008061 RID: 32865 RVA: 0x00275350 File Offset: 0x00273550
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 		};
 	}
 
-	// Token: 0x0600AC7B RID: 44155 RVA: 0x0026B009 File Offset: 0x00269209
+	// Token: 0x06008062 RID: 32866 RVA: 0x00275451 File Offset: 0x00273651
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		CalabashAttributeData data = this.Data;
@@ -51,7 +51,7 @@ internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 		clickCallBack(this.Data);
 	}
 
-	// Token: 0x0600AC7C RID: 44156 RVA: 0x0026B02C File Offset: 0x0026922C
+	// Token: 0x06008063 RID: 32867 RVA: 0x00275474 File Offset: 0x00273674
 	protected override void OnStart()
 	{
 		base.GetVerticalLayout(7).RootUIComp.Get().SetUIActive(false);
@@ -59,13 +59,13 @@ internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 		this.TargetLayout = new GenericLayout<CalabashAttributeContentItem, CalabashAttributeContentData>(base.GetVerticalLayout(7), new Func<CalabashAttributeContentItem>(this.InitItem), null, false, true);
 	}
 
-	// Token: 0x0600AC7D RID: 44157 RVA: 0x0026B085 File Offset: 0x00269285
+	// Token: 0x06008064 RID: 32868 RVA: 0x002754CD File Offset: 0x002736CD
 	private CalabashAttributeContentItem InitItem()
 	{
 		return new CalabashAttributeContentItem();
 	}
 
-	// Token: 0x0600AC7E RID: 44158 RVA: 0x0026B08C File Offset: 0x0026928C
+	// Token: 0x06008065 RID: 32869 RVA: 0x002754D4 File Offset: 0x002736D4
 	private void ShowBasicAbsorptionInfo(CalabashAttributeData data)
 	{
 		UUIItem item = base.GetItem(3);
@@ -87,7 +87,7 @@ internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x0600AC7F RID: 44159 RVA: 0x0026B0F4 File Offset: 0x002692F4
+	// Token: 0x06008066 RID: 32870 RVA: 0x0027553C File Offset: 0x0027373C
 	private void ShowUpAbsorptionInfo(CalabashAttributeData data)
 	{
 		UUIItem item = base.GetItem(3);
@@ -134,7 +134,7 @@ internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 		targetLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600AC80 RID: 44160 RVA: 0x0026B240 File Offset: 0x00269440
+	// Token: 0x06008067 RID: 32871 RVA: 0x00275688 File Offset: 0x00273888
 	private void ShowLowCostUpAbsorptionInfo(CalabashAttributeData data)
 	{
 		UUIItem item = base.GetItem(3);
@@ -181,7 +181,7 @@ internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 		targetLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600AC81 RID: 44161 RVA: 0x0026B398 File Offset: 0x00269598
+	// Token: 0x06008068 RID: 32872 RVA: 0x002757E0 File Offset: 0x002739E0
 	private void ShowMaxCostInfo(CalabashAttributeData data)
 	{
 		UUIItem item = base.GetItem(3);
@@ -207,7 +207,7 @@ internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x0600AC82 RID: 44162 RVA: 0x0026B3FC File Offset: 0x002695FC
+	// Token: 0x06008069 RID: 32873 RVA: 0x00275844 File Offset: 0x00273A44
 	private void ShowMaxQualityInfo(CalabashAttributeData data)
 	{
 		UUIItem item = base.GetItem(3);
@@ -254,7 +254,7 @@ internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 		targetLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600AC83 RID: 44163 RVA: 0x0026B52C File Offset: 0x0026972C
+	// Token: 0x0600806A RID: 32874 RVA: 0x00275974 File Offset: 0x00273B74
 	private void RefreshLayoutItemShowState()
 	{
 		CalabashAttributeData data = this.Data;
@@ -280,7 +280,7 @@ internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 		}
 	}
 
-	// Token: 0x0600AC84 RID: 44164 RVA: 0x0026B57C File Offset: 0x0026977C
+	// Token: 0x0600806B RID: 32875 RVA: 0x002759C4 File Offset: 0x00273BC4
 	public override void Refresh(CalabashAttributeData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -317,7 +317,7 @@ internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 		}
 	}
 
-	// Token: 0x0600AC85 RID: 44165 RVA: 0x0026B658 File Offset: 0x00269858
+	// Token: 0x0600806C RID: 32876 RVA: 0x00275AA0 File Offset: 0x00273CA0
 	private void RefreshToggleRaycastActive(bool boolValue)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -328,7 +328,7 @@ internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 		extendToggle.RootUIComp.Get().SetRaycastTarget(boolValue);
 	}
 
-	// Token: 0x0600AC86 RID: 44166 RVA: 0x0026B684 File Offset: 0x00269884
+	// Token: 0x0600806D RID: 32877 RVA: 0x00275ACC File Offset: 0x00273CCC
 	private void PlaySequenceBySelectState(bool state)
 	{
 		string sequenceName = state ? "Show" : "Hide";
@@ -340,7 +340,7 @@ internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 		sequencePlayer.PlaySequencePurely(sequenceName, false, false, null, null, false);
 	}
 
-	// Token: 0x04004E6E RID: 20078
+	// Token: 0x04004F17 RID: 20247
 	[Nullable(new byte[]
 	{
 		2,
@@ -349,14 +349,14 @@ internal class CalabashAttributeItem : GridProxyAbstract<CalabashAttributeData>
 	})]
 	private GenericLayout<CalabashAttributeContentItem, CalabashAttributeContentData> TargetLayout;
 
-	// Token: 0x04004E6F RID: 20079
+	// Token: 0x04004F18 RID: 20248
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04004E70 RID: 20080
+	// Token: 0x04004F19 RID: 20249
 	[Nullable(2)]
 	private CalabashAttributeData Data;
 
-	// Token: 0x04004E71 RID: 20081
+	// Token: 0x04004F1A RID: 20250
 	private bool CurrentSelectState;
 }

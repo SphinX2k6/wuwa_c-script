@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073C8 RID: 29640
+	// Token: 0x02007BAF RID: 31663
 	public class ITetrisGameCompleteT
 	{
 	}

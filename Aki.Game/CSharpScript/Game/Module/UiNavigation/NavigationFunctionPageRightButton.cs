@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200490E RID: 18702
+	// Token: 0x02003885 RID: 14469
 	public class NavigationFunctionPageRightButton : NavigationButton
 	{
-		// Token: 0x06030E2A RID: 200234 RVA: 0x00B5A2F7 File Offset: 0x00B584F7
+		// Token: 0x06025957 RID: 153943 RVA: 0x00A95167 File Offset: 0x00A93367
 		[NullableContext(1)]
 		public NavigationFunctionPageRightButton(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030E2B RID: 200235 RVA: 0x00B5A304 File Offset: 0x00B58504
+		// Token: 0x06025958 RID: 153944 RVA: 0x00A95174 File Offset: 0x00A93374
 		protected override void OnButtonClick()
 		{
 			SpecialPanelHandleBase panelHandle = this.PanelHandle;

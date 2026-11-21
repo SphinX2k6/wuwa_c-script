@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.WorldMap;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BC9 RID: 19401
+	// Token: 0x02003B73 RID: 15219
 	public class SkipToExploreAreaDetailView : SkipTask
 	{
-		// Token: 0x06032321 RID: 205601 RVA: 0x00BAA2E8 File Offset: 0x00BA84E8
+		// Token: 0x060270B2 RID: 159922 RVA: 0x00AEE5A0 File Offset: 0x00AEC7A0
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

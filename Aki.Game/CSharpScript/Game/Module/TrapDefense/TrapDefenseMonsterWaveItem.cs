@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AC6 RID: 19142
+	// Token: 0x02003A6E RID: 14958
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseMonsterWaveItem : GridProxyAbstract<TrapDefenseMonsterWaveData>, IDynamicScrollItem<TrapDefenseMonsterWaveData>
 	{
-		// Token: 0x06031970 RID: 203120 RVA: 0x00B7FD50 File Offset: 0x00B7DF50
+		// Token: 0x06026700 RID: 157440 RVA: 0x00AC3D04 File Offset: 0x00AC1F04
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031971 RID: 203121 RVA: 0x00B7FF2C File Offset: 0x00B7E12C
+		// Token: 0x06026701 RID: 157441 RVA: 0x00AC3EE0 File Offset: 0x00AC20E0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseMonsterWaveItem.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031972 RID: 203122 RVA: 0x00B7FF70 File Offset: 0x00B7E170
+		// Token: 0x06026702 RID: 157442 RVA: 0x00AC3F24 File Offset: 0x00AC2124
 		public override UniTask RefreshAsync(TrapDefenseMonsterWaveData data, bool isSelected, int gridIndex)
 		{
 			TrapDefenseMonsterWaveItem.<RefreshAsync>d__9 <RefreshAsync>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031973 RID: 203123 RVA: 0x00B7FFBB File Offset: 0x00B7E1BB
+		// Token: 0x06026703 RID: 157443 RVA: 0x00AC3F6F File Offset: 0x00AC216F
 		public TrapDefenseMonsterItem CreateItemMonster()
 		{
 			return new TrapDefenseMonsterItem(true)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x06031974 RID: 203124 RVA: 0x00B7FFE7 File Offset: 0x00B7E1E7
+		// Token: 0x06026704 RID: 157444 RVA: 0x00AC3F9B File Offset: 0x00AC219B
 		public override void OnSelected(bool isSelected)
 		{
 			if (!this.IsFireForBuffClick)
@@ -96,13 +96,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031975 RID: 203125 RVA: 0x00B80009 File Offset: 0x00B7E209
+		// Token: 0x06026705 RID: 157445 RVA: 0x00AC3FBD File Offset: 0x00AC21BD
 		public override void OnDeselected(bool isSelected)
 		{
 			this.LayoutMonster.DeselectCurrentGridProxy();
 		}
 
-		// Token: 0x06031976 RID: 203126 RVA: 0x00B80018 File Offset: 0x00B7E218
+		// Token: 0x06026706 RID: 157446 RVA: 0x00AC3FCC File Offset: 0x00AC21CC
 		private void OnSelectMonsterItem(TrapDefenseMonsterData data)
 		{
 			this.IsFireForBuffClick = true;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.IsFireForBuffClick = false;
 		}
 
-		// Token: 0x06031977 RID: 203127 RVA: 0x00B8006C File Offset: 0x00B7E26C
+		// Token: 0x06026707 RID: 157447 RVA: 0x00AC4020 File Offset: 0x00AC2220
 		public string GetMonsterInTheWaveShowNum(TrapDefenseMonsterData data)
 		{
 			int monsterNum = this.ItemData.GetMonsterNum(data);
@@ -138,14 +138,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return multiText;
 		}
 
-		// Token: 0x06031978 RID: 203128 RVA: 0x00B800CC File Offset: 0x00B7E2CC
+		// Token: 0x06026708 RID: 157448 RVA: 0x00AC4080 File Offset: 0x00AC2280
 		public AUIBaseActor GetUsingItem(TrapDefenseMonsterWaveData data)
 		{
 			UUIItem item = base.GetItem(10);
 			return ((item != null) ? item.GetOwner() : null) as AUIBaseActor;
 		}
 
-		// Token: 0x06031979 RID: 203129 RVA: 0x00B800E8 File Offset: 0x00B7E2E8
+		// Token: 0x06026709 RID: 157449 RVA: 0x00AC409C File Offset: 0x00AC229C
 		public void Update(TrapDefenseMonsterWaveData data, int index)
 		{
 			if (this.ItemData == data)
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.LayoutMonster.RefreshByData(monsterDataList, new Action(this.UpdateSelectState), true);
 		}
 
-		// Token: 0x0603197A RID: 203130 RVA: 0x00B80265 File Offset: 0x00B7E465
+		// Token: 0x0602670A RID: 157450 RVA: 0x00AC4219 File Offset: 0x00AC2419
 		public void UpdateSelectState()
 		{
 			GenericLayout<TrapDefenseMonsterItem, TrapDefenseMonsterData> layoutMonster = this.LayoutMonster;
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			});
 		}
 
-		// Token: 0x0603197B RID: 203131 RVA: 0x00B80288 File Offset: 0x00B7E488
+		// Token: 0x0602670B RID: 157451 RVA: 0x00AC423C File Offset: 0x00AC243C
 		public UniTask Init(UUIItem actor)
 		{
 			TrapDefenseMonsterWaveItem.<Init>d__18 <Init>d__;
@@ -246,30 +246,30 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603197C RID: 203132 RVA: 0x00B802D3 File Offset: 0x00B7E4D3
+		// Token: 0x0602670C RID: 157452 RVA: 0x00AC4287 File Offset: 0x00AC2487
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0401A7F3 RID: 108531
+		// Token: 0x04015145 RID: 86341
 		public TrapDefenseMonsterWaveData ItemData;
 
-		// Token: 0x0401A7F4 RID: 108532
+		// Token: 0x04015146 RID: 86342
 		public Action<TrapDefenseMonsterWaveData> ClickCallBack;
 
-		// Token: 0x0401A7F5 RID: 108533
+		// Token: 0x04015147 RID: 86343
 		public Action<TrapDefenseMonsterData, TrapDefenseMonsterWaveData> OnSelectMonsterCallBack;
 
-		// Token: 0x0401A7F6 RID: 108534
+		// Token: 0x04015148 RID: 86344
 		public GenericLayout<TrapDefenseMonsterItem, TrapDefenseMonsterData> LayoutMonster;
 
-		// Token: 0x0401A7F7 RID: 108535
+		// Token: 0x04015149 RID: 86345
 		public TrapDefenseMonsterEndlessWaveItem EndlessItem;
 
-		// Token: 0x0401A7F8 RID: 108536
+		// Token: 0x0401514A RID: 86346
 		public int LastSelectMonsterIndex = -1;
 
-		// Token: 0x0401A7F9 RID: 108537
+		// Token: 0x0401514B RID: 86347
 		public bool IsFireForBuffClick;
 	}
 }

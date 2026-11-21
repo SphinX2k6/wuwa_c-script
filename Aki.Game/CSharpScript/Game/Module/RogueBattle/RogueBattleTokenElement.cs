@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EB4 RID: 20148
+	// Token: 0x02003E7D RID: 15997
 	public class RogueBattleTokenElement : GridProxyAbstract<int>
 	{
-		// Token: 0x06033BF9 RID: 211961 RVA: 0x00C1FD24 File Offset: 0x00C1DF24
+		// Token: 0x06028A64 RID: 166500 RVA: 0x00B6923C File Offset: 0x00B6743C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033BFA RID: 211962 RVA: 0x00C1FD60 File Offset: 0x00C1DF60
+		// Token: 0x06028A65 RID: 166501 RVA: 0x00B69278 File Offset: 0x00B67478
 		public override void Refresh(int elementId, bool isSelected, int gridIndex)
 		{
 			ElementInfo? elementConfig = CommonConfig.Instance.GetElementConfig(elementId);

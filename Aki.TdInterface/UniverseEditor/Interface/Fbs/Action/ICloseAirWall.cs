@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006412 RID: 25618
+	// Token: 0x02006A92 RID: 27282
 	public struct ICloseAirWall : IFlatbufferObject
 	{
-		// Token: 0x1700BEC3 RID: 48835
-		// (get) Token: 0x0602C53B RID: 181563 RVA: 0x00615750 File Offset: 0x00613950
+		// Token: 0x1700C85D RID: 51293
+		// (get) Token: 0x0602ED11 RID: 191761 RVA: 0x006615DC File Offset: 0x0065F7DC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C53C RID: 181564 RVA: 0x0061575D File Offset: 0x0061395D
+		// Token: 0x0602ED12 RID: 191762 RVA: 0x006615E9 File Offset: 0x0065F7E9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C53D RID: 181565 RVA: 0x00615764 File Offset: 0x00613964
+		// Token: 0x0602ED13 RID: 191763 RVA: 0x006615F0 File Offset: 0x0065F7F0
 		public static ICloseAirWall GetRootAsICloseAirWall(ByteBuffer _bb)
 		{
 			return ICloseAirWall.GetRootAsICloseAirWall(_bb, default(ICloseAirWall));
 		}
 
-		// Token: 0x0602C53E RID: 181566 RVA: 0x00615780 File Offset: 0x00613980
+		// Token: 0x0602ED14 RID: 191764 RVA: 0x0066160C File Offset: 0x0065F80C
 		public static ICloseAirWall GetRootAsICloseAirWall(ByteBuffer _bb, ICloseAirWall obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C53F RID: 181567 RVA: 0x0061579D File Offset: 0x0061399D
+		// Token: 0x0602ED15 RID: 191765 RVA: 0x00661629 File Offset: 0x0065F829
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C540 RID: 181568 RVA: 0x006157AC File Offset: 0x006139AC
+		// Token: 0x0602ED16 RID: 191766 RVA: 0x00661638 File Offset: 0x0065F838
 		public ICloseAirWall __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BEC4 RID: 48836
-		// (get) Token: 0x0602C541 RID: 181569 RVA: 0x006157BC File Offset: 0x006139BC
+		// Token: 0x1700C85E RID: 51294
+		// (get) Token: 0x0602ED17 RID: 191767 RVA: 0x00661648 File Offset: 0x0065F848
 		public EToggleAirWall Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C542 RID: 181570 RVA: 0x006157F8 File Offset: 0x006139F8
+		// Token: 0x0602ED18 RID: 191768 RVA: 0x00661684 File Offset: 0x0065F884
 		public static Offset<ICloseAirWall> CreateICloseAirWall(FlatBufferBuilder builder, EToggleAirWall Type = EToggleAirWall.Open)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICloseAirWall.EndICloseAirWall(builder);
 		}
 
-		// Token: 0x0602C543 RID: 181571 RVA: 0x0061580E File Offset: 0x00613A0E
+		// Token: 0x0602ED19 RID: 191769 RVA: 0x0066169A File Offset: 0x0065F89A
 		public static void StartICloseAirWall(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602C544 RID: 181572 RVA: 0x00615817 File Offset: 0x00613A17
+		// Token: 0x0602ED1A RID: 191770 RVA: 0x006616A3 File Offset: 0x0065F8A3
 		public static void AddType(FlatBufferBuilder builder, EToggleAirWall type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602C545 RID: 181573 RVA: 0x00615822 File Offset: 0x00613A22
+		// Token: 0x0602ED1B RID: 191771 RVA: 0x006616AE File Offset: 0x0065F8AE
 		public static Offset<ICloseAirWall> EndICloseAirWall(FlatBufferBuilder builder)
 		{
 			return new Offset<ICloseAirWall>(builder.EndTable());
 		}
 
-		// Token: 0x0602C546 RID: 181574 RVA: 0x00615830 File Offset: 0x00613A30
+		// Token: 0x0602ED1C RID: 191772 RVA: 0x006616BC File Offset: 0x0065F8BC
 		public ICloseAirWallT UnPack()
 		{
 			ICloseAirWallT closeAirWallT = new ICloseAirWallT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return closeAirWallT;
 		}
 
-		// Token: 0x0602C547 RID: 181575 RVA: 0x0061584B File Offset: 0x00613A4B
+		// Token: 0x0602ED1D RID: 191773 RVA: 0x006616D7 File Offset: 0x0065F8D7
 		public void UnPackTo(ICloseAirWallT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602C548 RID: 181576 RVA: 0x0061585C File Offset: 0x00613A5C
+		// Token: 0x0602ED1E RID: 191774 RVA: 0x006616E8 File Offset: 0x0065F8E8
 		public static Offset<ICloseAirWall> Pack(FlatBufferBuilder builder, ICloseAirWallT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICloseAirWall.CreateICloseAirWall(builder, _o.Type);
 		}
 
-		// Token: 0x04010A01 RID: 68097
+		// Token: 0x04011827 RID: 71719
 		private Table __p;
 	}
 }

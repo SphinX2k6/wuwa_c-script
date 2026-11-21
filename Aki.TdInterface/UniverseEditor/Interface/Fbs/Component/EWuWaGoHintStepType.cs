@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E3F RID: 20031
+	// Token: 0x02005350 RID: 21328
 	public enum EWuWaGoHintStepType : byte
 	{
-		// Token: 0x0400DBD5 RID: 56277
+		// Token: 0x0400E74F RID: 59215
 		Move,
-		// Token: 0x0400DBD6 RID: 56278
+		// Token: 0x0400E750 RID: 59216
 		Interact
 	}
 }

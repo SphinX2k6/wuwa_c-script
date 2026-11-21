@@ -3,35 +3,35 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.AutoAttach
 {
-	// Token: 0x02005E7E RID: 24190
+	// Token: 0x02004E63 RID: 20067
 	[NullableContext(2)]
 	public interface IAutoAttachBaseView<T>
 	{
-		// Token: 0x0603D86F RID: 252015
+		// Token: 0x060327FF RID: 206847
 		int GetDataLength();
 
-		// Token: 0x0603D870 RID: 252016
+		// Token: 0x06032800 RID: 206848
 		int GetShowItemNum();
 
-		// Token: 0x0603D871 RID: 252017
+		// Token: 0x06032801 RID: 206849
 		float GetItemSize();
 
-		// Token: 0x0603D872 RID: 252018
+		// Token: 0x06032802 RID: 206850
 		float GetGap();
 
-		// Token: 0x0603D873 RID: 252019
+		// Token: 0x06032803 RID: 206851
 		bool GetIfCircle();
 
-		// Token: 0x0603D874 RID: 252020
+		// Token: 0x06032804 RID: 206852
 		float GetViewSize();
 
-		// Token: 0x0603D875 RID: 252021
+		// Token: 0x06032805 RID: 206853
 		EAttachDirection? GetCurrentMoveDirection();
 
-		// Token: 0x0603D876 RID: 252022
+		// Token: 0x06032806 RID: 206854
 		float GetTrueBoundary();
 
-		// Token: 0x0603D877 RID: 252023
+		// Token: 0x06032807 RID: 206855
 		int GetCurrentSelectIndex();
 	}
 }

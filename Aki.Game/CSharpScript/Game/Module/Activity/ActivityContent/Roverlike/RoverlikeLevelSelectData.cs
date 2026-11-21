@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060DE RID: 24798
+	// Token: 0x0200505C RID: 20572
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeLevelSelectData
 	{
-		// Token: 0x0603EB16 RID: 256790 RVA: 0x00F248B0 File Offset: 0x00F22AB0
+		// Token: 0x060337DA RID: 210906 RVA: 0x00E6B6A4 File Offset: 0x00E698A4
 		public int GetSelectedRoleTypeId(int instId)
 		{
 			int result;
@@ -24,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return result;
 		}
 
-		// Token: 0x0603EB17 RID: 256791 RVA: 0x00F248D0 File Offset: 0x00F22AD0
+		// Token: 0x060337DB RID: 210907 RVA: 0x00E6B6C4 File Offset: 0x00E698C4
 		public void SetSelectedRoleTypeId(int instId, int roleTypeId)
 		{
 			if (instId > 0)
@@ -33,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EB18 RID: 256792 RVA: 0x00F248E3 File Offset: 0x00F22AE3
+		// Token: 0x060337DC RID: 210908 RVA: 0x00E6B6D7 File Offset: 0x00E698D7
 		public void Reset()
 		{
 			this.LastSelectedInstId = 0;
@@ -41,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SelectedRoleTypeByInst.Clear();
 		}
 
-		// Token: 0x0603EB19 RID: 256793 RVA: 0x00F24904 File Offset: 0x00F22B04
+		// Token: 0x060337DD RID: 210909 RVA: 0x00E6B6F8 File Offset: 0x00E698F8
 		public void PhraseEx(int activityId, RoverRogueActivityData roverData)
 		{
 			this.ActivityId = activityId;
@@ -50,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.UpdateEntries(roverData.InsInfoList);
 		}
 
-		// Token: 0x0603EB1A RID: 256794 RVA: 0x00F24940 File Offset: 0x00F22B40
+		// Token: 0x060337DE RID: 210910 RVA: 0x00E6B734 File Offset: 0x00E69934
 		public void UpdateEntries(IReadOnlyList<RoverRogueInsEntry> entries)
 		{
 			if (entries.Count <= 0)
@@ -64,14 +63,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			EventSystem.Instance.Emit(EEventName.RoverlikeLevelInfoUpdate);
 		}
 
-		// Token: 0x0603EB1B RID: 256795 RVA: 0x00F249B0 File Offset: 0x00F22BB0
+		// Token: 0x060337DF RID: 210911 RVA: 0x00E6B7A4 File Offset: 0x00E699A4
 		public bool IsUnlocked(int instId)
 		{
 			RoverRogueInsEntry roverRogueInsEntry;
 			return this.EntryById.TryGetValue(instId, out roverRogueInsEntry) && roverRogueInsEntry.Unlocked;
 		}
 
-		// Token: 0x0603EB1C RID: 256796 RVA: 0x00F249D8 File Offset: 0x00F22BD8
+		// Token: 0x060337E0 RID: 210912 RVA: 0x00E6B7CC File Offset: 0x00E699CC
 		public List<int> GetUnlockedInsIdList()
 		{
 			List<int> list = new List<int>();
@@ -85,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list;
 		}
 
-		// Token: 0x0603EB1D RID: 256797 RVA: 0x00F24A48 File Offset: 0x00F22C48
+		// Token: 0x060337E1 RID: 210913 RVA: 0x00E6B83C File Offset: 0x00E69A3C
 		public bool IsPassed(int instId)
 		{
 			RoverRogueInsEntry roverRogueInsEntry;
@@ -96,14 +95,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return this.IsGradePassed(null);
 		}
 
-		// Token: 0x0603EB1E RID: 256798 RVA: 0x00F24A86 File Offset: 0x00F22C86
+		// Token: 0x060337E2 RID: 210914 RVA: 0x00E6B87C File Offset: 0x00E69A7C
 		public List<RoverlikeLevelSelectItemData> GetItemDataList()
 		{
-			return (from cfg in this.GetSortedConfigs()
-			select this.BuildItemData(cfg.InstId)).ToList<RoverlikeLevelSelectItemData>();
+			List<RoverlikeLevelSelectItemData> list = new List<RoverlikeLevelSelectItemData>();
+			foreach (RoverRogueIns roverRogueIns in this.GetSortedConfigs())
+			{
+				list.Add(this.BuildItemData(roverRogueIns.InstId));
+			}
+			return list;
 		}
 
-		// Token: 0x0603EB1F RID: 256799 RVA: 0x00F24AA4 File Offset: 0x00F22CA4
+		// Token: 0x060337E3 RID: 210915 RVA: 0x00E6B8E4 File Offset: 0x00E69AE4
 		[NullableContext(2)]
 		public RoverlikeLevelSelectItemData GetItemData(int instId)
 		{
@@ -114,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return this.BuildItemData(instId);
 		}
 
-		// Token: 0x0603EB20 RID: 256800 RVA: 0x00F24AD0 File Offset: 0x00F22CD0
+		// Token: 0x060337E4 RID: 210916 RVA: 0x00E6B910 File Offset: 0x00E69B10
 		public int GetDefaultSelectInstId()
 		{
 			List<RoverRogueIns> sortedConfigs = this.GetSortedConfigs();
@@ -141,7 +144,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return num;
 		}
 
-		// Token: 0x0603EB21 RID: 256801 RVA: 0x00F24B80 File Offset: 0x00F22D80
+		// Token: 0x060337E5 RID: 210917 RVA: 0x00E6B9C0 File Offset: 0x00E69BC0
 		public int GetMaxLevelSortId()
 		{
 			List<RoverRogueIns> sortedConfigs = this.GetSortedConfigs();
@@ -152,7 +155,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return sortedConfigs[sortedConfigs.Count - 1].SortId;
 		}
 
-		// Token: 0x0603EB22 RID: 256802 RVA: 0x00F24BB4 File Offset: 0x00F22DB4
+		// Token: 0x060337E6 RID: 210918 RVA: 0x00E6B9F4 File Offset: 0x00E69BF4
 		private RoverlikeLevelSelectItemData BuildItemData(int instId)
 		{
 			RoverRogueInsEntry roverRogueInsEntry;
@@ -165,41 +168,46 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			};
 		}
 
-		// Token: 0x0603EB23 RID: 256803 RVA: 0x00F24C14 File Offset: 0x00F22E14
+		// Token: 0x060337E7 RID: 210919 RVA: 0x00E6BA54 File Offset: 0x00E69C54
 		private List<RoverRogueIns> GetSortedConfigs()
 		{
-			List<RoverRogueIns> list = (from cfg in RoverlikeConfig.Instance.GetInsConfigList() ?? new List<RoverRogueIns>()
-			where this.ActivityId <= 0 || cfg.ActivityId == this.ActivityId
-			select cfg).ToList<RoverRogueIns>();
+			List<RoverRogueIns> list = new List<RoverRogueIns>();
+			foreach (RoverRogueIns item in (RoverlikeConfig.Instance.GetInsConfigList() ?? new List<RoverRogueIns>()))
+			{
+				if (this.ActivityId <= 0 || item.ActivityId == this.ActivityId)
+				{
+					list.Add(item);
+				}
+			}
 			list.Sort((RoverRogueIns a, RoverRogueIns b) => a.SortId - b.SortId);
 			return list;
 		}
 
-		// Token: 0x0603EB24 RID: 256804 RVA: 0x00F24C6F File Offset: 0x00F22E6F
+		// Token: 0x060337E8 RID: 210920 RVA: 0x00E6BAF4 File Offset: 0x00E69CF4
 		private bool IsGradePassed(RoverRogueGrade? grade)
 		{
 			return grade != null && grade.Value > RoverRogueGrade.B;
 		}
 
-		// Token: 0x04020C62 RID: 134242
+		// Token: 0x0401B58F RID: 112015
 		public int ActivityId;
 
-		// Token: 0x04020C63 RID: 134243
+		// Token: 0x0401B590 RID: 112016
 		public int LastSelectedInstId;
 
-		// Token: 0x04020C64 RID: 134244
+		// Token: 0x0401B591 RID: 112017
 		public bool LastEnterPassed = true;
 
-		// Token: 0x04020C65 RID: 134245
+		// Token: 0x0401B592 RID: 112018
 		public int SelectedLootId;
 
-		// Token: 0x04020C66 RID: 134246
+		// Token: 0x0401B593 RID: 112019
 		public int SelectedLootLv;
 
-		// Token: 0x04020C67 RID: 134247
+		// Token: 0x0401B594 RID: 112020
 		private readonly Dictionary<int, RoverRogueInsEntry> EntryById = new Dictionary<int, RoverRogueInsEntry>();
 
-		// Token: 0x04020C68 RID: 134248
+		// Token: 0x0401B595 RID: 112021
 		private readonly Dictionary<int, int> SelectedRoleTypeByInst = new Dictionary<int, int>();
 	}
 }

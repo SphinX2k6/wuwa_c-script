@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A32 RID: 2610
+	// Token: 0x02000AF7 RID: 2807
 	public static class ETeleCtrlTriggerTypeExtensions
 	{
-		// Token: 0x06003992 RID: 14738 RVA: 0x00094A34 File Offset: 0x00092C34
+		// Token: 0x06003D6A RID: 15722 RVA: 0x0009D368 File Offset: 0x0009B568
 		public static string ToEnumString(this ETeleCtrlTriggerType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003993 RID: 14739 RVA: 0x00094A6C File Offset: 0x00092C6C
+		// Token: 0x06003D6B RID: 15723 RVA: 0x0009D3A0 File Offset: 0x0009B5A0
 		public static ETeleCtrlTriggerType FromString(string name)
 		{
 			ETeleCtrlTriggerType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003994 RID: 14740 RVA: 0x00094A95 File Offset: 0x00092C95
+		// Token: 0x06003D6C RID: 15724 RVA: 0x0009D3C9 File Offset: 0x0009B5C9
 		public static bool TryFromString(string name, out ETeleCtrlTriggerType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003995 RID: 14741 RVA: 0x00094ACE File Offset: 0x00092CCE
+		// Token: 0x06003D6D RID: 15725 RVA: 0x0009D402 File Offset: 0x0009B602
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003996 RID: 14742 RVA: 0x00094AE6 File Offset: 0x00092CE6
+		// Token: 0x06003D6E RID: 15726 RVA: 0x0009D41A File Offset: 0x0009B61A
 		public static ETeleCtrlTriggerType[] GetValues()
 		{
 			return new ETeleCtrlTriggerType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003997 RID: 14743 RVA: 0x00094AF2 File Offset: 0x00092CF2
+		// Token: 0x06003D6F RID: 15727 RVA: 0x0009D426 File Offset: 0x0009B626
 		public static string[] GetNames()
 		{
 			return new string[]

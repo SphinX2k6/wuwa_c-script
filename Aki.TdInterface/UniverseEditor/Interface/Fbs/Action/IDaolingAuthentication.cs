@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006534 RID: 25908
+	// Token: 0x02006BA2 RID: 27554
 	public struct IDaolingAuthentication : IFlatbufferObject
 	{
-		// Token: 0x1700C098 RID: 49304
-		// (get) Token: 0x0602CF1B RID: 184091 RVA: 0x0062BD6A File Offset: 0x00629F6A
+		// Token: 0x1700CA2A RID: 51754
+		// (get) Token: 0x0602F6B9 RID: 194233 RVA: 0x00678216 File Offset: 0x00676416
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CF1C RID: 184092 RVA: 0x0062BD77 File Offset: 0x00629F77
+		// Token: 0x0602F6BA RID: 194234 RVA: 0x00678223 File Offset: 0x00676423
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CF1D RID: 184093 RVA: 0x0062BD80 File Offset: 0x00629F80
+		// Token: 0x0602F6BB RID: 194235 RVA: 0x0067822C File Offset: 0x0067642C
 		public static IDaolingAuthentication GetRootAsIDaolingAuthentication(ByteBuffer _bb)
 		{
 			return IDaolingAuthentication.GetRootAsIDaolingAuthentication(_bb, default(IDaolingAuthentication));
 		}
 
-		// Token: 0x0602CF1E RID: 184094 RVA: 0x0062BD9C File Offset: 0x00629F9C
+		// Token: 0x0602F6BC RID: 194236 RVA: 0x00678248 File Offset: 0x00676448
 		public static IDaolingAuthentication GetRootAsIDaolingAuthentication(ByteBuffer _bb, IDaolingAuthentication obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CF1F RID: 184095 RVA: 0x0062BDB9 File Offset: 0x00629FB9
+		// Token: 0x0602F6BD RID: 194237 RVA: 0x00678265 File Offset: 0x00676465
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CF20 RID: 184096 RVA: 0x0062BDC8 File Offset: 0x00629FC8
+		// Token: 0x0602F6BE RID: 194238 RVA: 0x00678274 File Offset: 0x00676474
 		public IDaolingAuthentication __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C099 RID: 49305
-		// (get) Token: 0x0602CF21 RID: 184097 RVA: 0x0062BDD8 File Offset: 0x00629FD8
+		// Token: 0x1700CA2B RID: 51755
+		// (get) Token: 0x0602F6BF RID: 194239 RVA: 0x00678284 File Offset: 0x00676484
 		public ESimpleGameplayType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CF22 RID: 184098 RVA: 0x0062BE14 File Offset: 0x0062A014
+		// Token: 0x0602F6C0 RID: 194240 RVA: 0x006782C0 File Offset: 0x006764C0
 		public static Offset<IDaolingAuthentication> CreateIDaolingAuthentication(FlatBufferBuilder builder, ESimpleGameplayType Type = ESimpleGameplayType.Cipher)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDaolingAuthentication.EndIDaolingAuthentication(builder);
 		}
 
-		// Token: 0x0602CF23 RID: 184099 RVA: 0x0062BE2A File Offset: 0x0062A02A
+		// Token: 0x0602F6C1 RID: 194241 RVA: 0x006782D6 File Offset: 0x006764D6
 		public static void StartIDaolingAuthentication(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602CF24 RID: 184100 RVA: 0x0062BE33 File Offset: 0x0062A033
+		// Token: 0x0602F6C2 RID: 194242 RVA: 0x006782DF File Offset: 0x006764DF
 		public static void AddType(FlatBufferBuilder builder, ESimpleGameplayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CF25 RID: 184101 RVA: 0x0062BE3E File Offset: 0x0062A03E
+		// Token: 0x0602F6C3 RID: 194243 RVA: 0x006782EA File Offset: 0x006764EA
 		public static Offset<IDaolingAuthentication> EndIDaolingAuthentication(FlatBufferBuilder builder)
 		{
 			return new Offset<IDaolingAuthentication>(builder.EndTable());
 		}
 
-		// Token: 0x0602CF26 RID: 184102 RVA: 0x0062BE4C File Offset: 0x0062A04C
+		// Token: 0x0602F6C4 RID: 194244 RVA: 0x006782F8 File Offset: 0x006764F8
 		public IDaolingAuthenticationT UnPack()
 		{
 			IDaolingAuthenticationT daolingAuthenticationT = new IDaolingAuthenticationT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return daolingAuthenticationT;
 		}
 
-		// Token: 0x0602CF27 RID: 184103 RVA: 0x0062BE67 File Offset: 0x0062A067
+		// Token: 0x0602F6C5 RID: 194245 RVA: 0x00678313 File Offset: 0x00676513
 		public void UnPackTo(IDaolingAuthenticationT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602CF28 RID: 184104 RVA: 0x0062BE78 File Offset: 0x0062A078
+		// Token: 0x0602F6C6 RID: 194246 RVA: 0x00678324 File Offset: 0x00676524
 		public static Offset<IDaolingAuthentication> Pack(FlatBufferBuilder builder, IDaolingAuthenticationT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDaolingAuthentication.CreateIDaolingAuthentication(builder, _o.Type);
 		}
 
-		// Token: 0x04010B7C RID: 68476
+		// Token: 0x04011995 RID: 72085
 		private Table __p;
 	}
 }

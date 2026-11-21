@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057BF RID: 22463
+	// Token: 0x02004796 RID: 18326
 	public class ExploreLevelRewardInfo : RewardInfo, IExploreLevelRewardInfo, IRewardInfo
 	{
-		// Token: 0x17008980 RID: 35200
-		// (get) Token: 0x06039203 RID: 233987 RVA: 0x00D8FF53 File Offset: 0x00D8E153
-		// (set) Token: 0x06039204 RID: 233988 RVA: 0x00D8FF5B File Offset: 0x00D8E15B
+		// Token: 0x17005D48 RID: 23880
+		// (get) Token: 0x0602E113 RID: 188691 RVA: 0x00CDED8B File Offset: 0x00CDCF8B
+		// (set) Token: 0x0602E114 RID: 188692 RVA: 0x00CDED93 File Offset: 0x00CDCF93
 		public int CurrentExploreLevel { get; set; }
 
-		// Token: 0x17008981 RID: 35201
-		// (get) Token: 0x06039205 RID: 233989 RVA: 0x00D8FF64 File Offset: 0x00D8E164
-		// (set) Token: 0x06039206 RID: 233990 RVA: 0x00D8FF6C File Offset: 0x00D8E16C
+		// Token: 0x17005D49 RID: 23881
+		// (get) Token: 0x0602E115 RID: 188693 RVA: 0x00CDED9C File Offset: 0x00CDCF9C
+		// (set) Token: 0x0602E116 RID: 188694 RVA: 0x00CDEDA4 File Offset: 0x00CDCFA4
 		public int TargetExploreLevel { get; set; }
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D7A RID: 19834
+	// Token: 0x02005279 RID: 21113
 	public enum ECaptureStateType : byte
 	{
-		// Token: 0x0400D825 RID: 55333
+		// Token: 0x0400E35F RID: 58207
 		Default,
-		// Token: 0x0400D826 RID: 55334
+		// Token: 0x0400E360 RID: 58208
 		AllType
 	}
 }

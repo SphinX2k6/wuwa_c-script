@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x020046E7 RID: 18151
+	// Token: 0x02004B4F RID: 19279
 	public enum ERunningTreeType : byte
 	{
-		// Token: 0x0400C976 RID: 51574
+		// Token: 0x0400D3A5 RID: 54181
 		Inactive,
-		// Token: 0x0400C977 RID: 51575
+		// Token: 0x0400D3A6 RID: 54182
 		Running,
-		// Token: 0x0400C978 RID: 51576
+		// Token: 0x0400D3A7 RID: 54183
 		Completed,
-		// Token: 0x0400C979 RID: 51577
+		// Token: 0x0400D3A8 RID: 54184
 		Occupied,
-		// Token: 0x0400C97A RID: 51578
+		// Token: 0x0400D3A9 RID: 54185
 		Hidden,
-		// Token: 0x0400C97B RID: 51579
+		// Token: 0x0400D3AA RID: 54186
 		Suspended,
-		// Token: 0x0400C97C RID: 51580
+		// Token: 0x0400D3AB RID: 54187
 		Ready
 	}
 }

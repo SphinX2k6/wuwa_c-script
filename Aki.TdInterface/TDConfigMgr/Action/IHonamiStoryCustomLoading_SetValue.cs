@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B16 RID: 6934
+	// Token: 0x02001CC5 RID: 7365
 	public class IHonamiStoryCustomLoading_SetValue
 	{
-		// Token: 0x04005B05 RID: 23301
+		// Token: 0x04005FA3 RID: 24483
 		public ESpecialCustomLoadingType Type;
 
-		// Token: 0x04005B06 RID: 23302
+		// Token: 0x04005FA4 RID: 24484
 		public int LoadingId;
 	}
 }

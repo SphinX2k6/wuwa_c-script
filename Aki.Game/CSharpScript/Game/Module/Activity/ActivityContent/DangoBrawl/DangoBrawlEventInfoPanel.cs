@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006814 RID: 26644
+	// Token: 0x02005764 RID: 22372
 	public class DangoBrawlEventInfoPanel : UiPanelBase
 	{
-		// Token: 0x0604278A RID: 272266 RVA: 0x01025F48 File Offset: 0x01024148
+		// Token: 0x060372DF RID: 226015 RVA: 0x00F6748C File Offset: 0x00F6568C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604278B RID: 272267 RVA: 0x01026030 File Offset: 0x01024230
+		// Token: 0x060372E0 RID: 226016 RVA: 0x00F67574 File Offset: 0x00F65774
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlEventInfoPanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604278C RID: 272268 RVA: 0x01026074 File Offset: 0x01024274
+		// Token: 0x060372E1 RID: 226017 RVA: 0x00F675B8 File Offset: 0x00F657B8
 		protected override void OnBeforeDestroy()
 		{
 			this.CancelHoverTipsHideTimer();
@@ -68,9 +68,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0604278D RID: 272269 RVA: 0x010260C4 File Offset: 0x010242C4
+		// Token: 0x060372E2 RID: 226018 RVA: 0x00F67608 File Offset: 0x00F65808
 		[NullableContext(1)]
-		public UniTask Refresh(int[] eventIds)
+		public UniTask Refresh(IReadOnlyList<int> eventIds)
 		{
 			DangoBrawlEventInfoPanel.<Refresh>d__8 <Refresh>d__;
 			<Refresh>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <Refresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604278E RID: 272270 RVA: 0x01026110 File Offset: 0x01024310
+		// Token: 0x060372E3 RID: 226019 RVA: 0x00F67654 File Offset: 0x00F65854
 		public FVector? GetLatestEventIconAbsPos(int selectedEventId, out int iconIndex)
 		{
 			iconIndex = -1;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return null;
 		}
 
-		// Token: 0x0604278F RID: 272271 RVA: 0x010261A3 File Offset: 0x010243A3
+		// Token: 0x060372E4 RID: 226020 RVA: 0x00F676E7 File Offset: 0x00F658E7
 		public void HideTips()
 		{
 			this.CancelHoverTipsHideTimer();
@@ -132,13 +132,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042790 RID: 272272 RVA: 0x010261D1 File Offset: 0x010243D1
+		// Token: 0x060372E5 RID: 226021 RVA: 0x00F67715 File Offset: 0x00F65915
 		private static bool CanHoverTips()
 		{
 			return !Info.Instance.IsMobileInputModel();
 		}
 
-		// Token: 0x06042791 RID: 272273 RVA: 0x010261E0 File Offset: 0x010243E0
+		// Token: 0x060372E6 RID: 226022 RVA: 0x00F67724 File Offset: 0x00F65924
 		private void OnPointEnter()
 		{
 			if (!DangoBrawlEventInfoPanel.CanHoverTips() || this.IsLocked)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			eventTips.Show(false);
 		}
 
-		// Token: 0x06042792 RID: 272274 RVA: 0x01026209 File Offset: 0x01024409
+		// Token: 0x060372E7 RID: 226023 RVA: 0x00F6774D File Offset: 0x00F6594D
 		private void OnPointExit()
 		{
 			if (!DangoBrawlEventInfoPanel.CanHoverTips() || this.IsLocked)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ScheduleHideHoverTips();
 		}
 
-		// Token: 0x06042793 RID: 272275 RVA: 0x01026221 File Offset: 0x01024421
+		// Token: 0x060372E8 RID: 226024 RVA: 0x00F67765 File Offset: 0x00F65965
 		private void ScheduleHideHoverTips()
 		{
 			this.CancelHoverTipsHideTimer();
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}, 50f, null, null, true, 1f);
 		}
 
-		// Token: 0x06042794 RID: 272276 RVA: 0x01026252 File Offset: 0x01024452
+		// Token: 0x060372E9 RID: 226025 RVA: 0x00F67796 File Offset: 0x00F65996
 		private void CancelHoverTipsHideTimer()
 		{
 			TimerHandle hoverTipsHideTimer = this.HoverTipsHideTimer;
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.HoverTipsHideTimer = null;
 		}
 
-		// Token: 0x06042795 RID: 272277 RVA: 0x0102626D File Offset: 0x0102446D
+		// Token: 0x060372EA RID: 226026 RVA: 0x00F677B1 File Offset: 0x00F659B1
 		private void OnBtnClickEventInfo()
 		{
 			this.CancelHoverTipsHideTimer();
@@ -222,38 +222,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042796 RID: 272278 RVA: 0x010262AD File Offset: 0x010244AD
+		// Token: 0x060372EB RID: 226027 RVA: 0x00F677F1 File Offset: 0x00F659F1
 		private void OnEventTipsClosed()
 		{
 			this.IsLocked = false;
 			this.CancelHoverTipsHideTimer();
 		}
 
-		// Token: 0x04022A38 RID: 141880
+		// Token: 0x0401D295 RID: 119445
 		[Nullable(2)]
 		private DangoBrawlEventTips EventTips;
 
-		// Token: 0x04022A39 RID: 141881
+		// Token: 0x0401D296 RID: 119446
 		private bool IsLocked;
 
-		// Token: 0x04022A3A RID: 141882
+		// Token: 0x0401D297 RID: 119447
 		[Nullable(2)]
 		private TimerHandle HoverTipsHideTimer;
 
-		// Token: 0x04022A3B RID: 141883
+		// Token: 0x0401D298 RID: 119448
 		[Nullable(1)]
 		private readonly List<int> ShowingEventIds = new List<int>();
 
-		// Token: 0x0200C9A0 RID: 51616
+		// Token: 0x0200B36D RID: 45933
 		private enum EComponents
 		{
-			// Token: 0x0403CE5C RID: 249436
+			// Token: 0x04037749 RID: 227145
 			BtnEventInfo,
-			// Token: 0x0403CE5D RID: 249437
+			// Token: 0x0403774A RID: 227146
 			TexIconEvent1,
-			// Token: 0x0403CE5E RID: 249438
+			// Token: 0x0403774B RID: 227147
 			TexIconEvent2,
-			// Token: 0x0403CE5F RID: 249439
+			// Token: 0x0403774C RID: 227148
 			EventTipsItem
 		}
 	}

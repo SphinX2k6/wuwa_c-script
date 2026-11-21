@@ -13,13 +13,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x020032DE RID: 13022
+// Token: 0x02002850 RID: 10320
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class VehicleController : ControllerBase
 {
-	// Token: 0x0601C516 RID: 115990 RVA: 0x007E8E0C File Offset: 0x007E700C
+	// Token: 0x0601A1BC RID: 106940 RVA: 0x0080F594 File Offset: 0x0080D794
 	protected override bool OnInit()
 	{
 		this.MotorCreateQueue = new Queue<bool>(4);
@@ -42,7 +42,7 @@ public class VehicleController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601C517 RID: 115991 RVA: 0x007E8FE8 File Offset: 0x007E71E8
+	// Token: 0x0601A1BD RID: 106941 RVA: 0x0080F770 File Offset: 0x0080D970
 	protected override void OnTick(float delta)
 	{
 		if (this.VehicleMoveComp == null)
@@ -57,7 +57,7 @@ public class VehicleController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C518 RID: 115992 RVA: 0x007E903C File Offset: 0x007E723C
+	// Token: 0x0601A1BE RID: 106942 RVA: 0x0080F7C4 File Offset: 0x0080D9C4
 	protected override bool OnClear()
 	{
 		Queue<bool> motorCreateQueue = this.MotorCreateQueue;
@@ -85,7 +85,7 @@ public class VehicleController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601C519 RID: 115993 RVA: 0x007E91DC File Offset: 0x007E73DC
+	// Token: 0x0601A1BF RID: 106943 RVA: 0x0080F964 File Offset: 0x0080DB64
 	[NullableContext(2)]
 	private unsafe void VehicleUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -208,7 +208,7 @@ public class VehicleController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C51A RID: 115994 RVA: 0x007E9688 File Offset: 0x007E7888
+	// Token: 0x0601A1C0 RID: 106944 RVA: 0x0080FE10 File Offset: 0x0080E010
 	[CombatListen(ENotifyMessageId.MotorSummonAndRideNotify, true, false)]
 	public unsafe static void MotorSummonAndRideNotify(Entity entity, MotorSummonAndRideNotify data, [Nullable(2)] CombatCommon combatCommon = null)
 	{
@@ -425,7 +425,7 @@ public class VehicleController : ControllerBase
 		}, null, null);
 	}
 
-	// Token: 0x0601C51B RID: 115995 RVA: 0x007E9BEC File Offset: 0x007E7DEC
+	// Token: 0x0601A1C1 RID: 106945 RVA: 0x00810374 File Offset: 0x0080E574
 	[NullableContext(2)]
 	private void VehicleUpdateEntityNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -439,7 +439,7 @@ public class VehicleController : ControllerBase
 		});
 	}
 
-	// Token: 0x0601C51C RID: 115996 RVA: 0x007E9C64 File Offset: 0x007E7E64
+	// Token: 0x0601A1C2 RID: 106946 RVA: 0x008103EC File Offset: 0x0080E5EC
 	public void VehicleUpdateEntity(EntityVehicleInfo info)
 	{
 		VehicleModel instance = VehicleModel.Instance;
@@ -479,7 +479,7 @@ public class VehicleController : ControllerBase
 		this.UpdateVehiclePerform(vehiclePassengerInfo, false, false);
 	}
 
-	// Token: 0x0601C51D RID: 115997 RVA: 0x007E9CFC File Offset: 0x007E7EFC
+	// Token: 0x0601A1C3 RID: 106947 RVA: 0x00810484 File Offset: 0x0080E684
 	public bool CheckMotorAllowed(bool checkDisableMotorcycleTag = true)
 	{
 		if (!FunctionModel.Instance.IsOpen(EFunctionType.MotorDevelop))
@@ -497,7 +497,7 @@ public class VehicleController : ControllerBase
 		return playerTagComponent != null && playerTagComponent.HasTag(this.enableMotorcycleTagId) && (!checkDisableMotorcycleTag || !playerTagComponent.HasTag(this.disableMotorcycleTagId));
 	}
 
-	// Token: 0x0601C51E RID: 115998 RVA: 0x007E9D9C File Offset: 0x007E7F9C
+	// Token: 0x0601A1C4 RID: 106948 RVA: 0x00810524 File Offset: 0x0080E724
 	private void UpdateVehiclePerform(VehiclePassengerInfo context, bool sync = false, bool byChangeRole = false)
 	{
 		Entity passengerEntity = context.PassengerEntity;
@@ -532,7 +532,7 @@ public class VehicleController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C51F RID: 115999 RVA: 0x007E9E44 File Offset: 0x007E8044
+	// Token: 0x0601A1C5 RID: 106949 RVA: 0x008105CC File Offset: 0x0080E7CC
 	public UniTask UpdatePlayerVehiclePerform()
 	{
 		VehicleController.<UpdatePlayerVehiclePerform>d__20 <UpdatePlayerVehiclePerform>d__;
@@ -543,7 +543,7 @@ public class VehicleController : ControllerBase
 		return <UpdatePlayerVehiclePerform>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601C520 RID: 116000 RVA: 0x007E9E88 File Offset: 0x007E8088
+	// Token: 0x0601A1C6 RID: 106950 RVA: 0x00810610 File Offset: 0x0080E810
 	public unsafe void OnCharacterEnable(Entity entity)
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -609,7 +609,7 @@ public class VehicleController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C521 RID: 116001 RVA: 0x007EA098 File Offset: 0x007E8298
+	// Token: 0x0601A1C7 RID: 106951 RVA: 0x00810820 File Offset: 0x0080EA20
 	public unsafe void OnVehicleEnable(Entity entity)
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -660,7 +660,7 @@ public class VehicleController : ControllerBase
 		instance4.Emit<Entity>(EEventName.OnVehicleActivate, entity);
 	}
 
-	// Token: 0x0601C522 RID: 116002 RVA: 0x007EA1F0 File Offset: 0x007E83F0
+	// Token: 0x0601A1C8 RID: 106952 RVA: 0x00810978 File Offset: 0x0080EB78
 	private void UpdateGameBudget(bool bEnter, VehiclePassengerInfo info)
 	{
 		Info instance = Info.Instance;
@@ -688,7 +688,7 @@ public class VehicleController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C523 RID: 116003 RVA: 0x007EA27E File Offset: 0x007E847E
+	// Token: 0x0601A1C9 RID: 106953 RVA: 0x00810A06 File Offset: 0x0080EC06
 	private void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		this.TryEnterRideSharingMode(info);
@@ -696,7 +696,7 @@ public class VehicleController : ControllerBase
 		this.UpdateGameBudget(true, info);
 	}
 
-	// Token: 0x0601C524 RID: 116004 RVA: 0x007EA296 File Offset: 0x007E8496
+	// Token: 0x0601A1CA RID: 106954 RVA: 0x00810A1E File Offset: 0x0080EC1E
 	private void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		this.TryExitRideSharingMode(info);
@@ -704,7 +704,7 @@ public class VehicleController : ControllerBase
 		this.UpdateGameBudget(false, info);
 	}
 
-	// Token: 0x0601C525 RID: 116005 RVA: 0x007EA2B0 File Offset: 0x007E84B0
+	// Token: 0x0601A1CB RID: 106955 RVA: 0x00810A38 File Offset: 0x0080EC38
 	private void SendVehiclePerformFinishRequest(VehiclePassengerInfo context)
 	{
 		CreatureDataComponent component = context.VehicleEntity.GetComponent<CreatureDataComponent>();
@@ -713,7 +713,7 @@ public class VehicleController : ControllerBase
 		Net.Instance.Call(ERequestMessageId.VehicleFinishRequest, vehicleFinishRequest, null, 0);
 	}
 
-	// Token: 0x0601C526 RID: 116006 RVA: 0x007EA2F8 File Offset: 0x007E84F8
+	// Token: 0x0601A1CC RID: 106956 RVA: 0x00810A80 File Offset: 0x0080EC80
 	private unsafe void TryEnterRideSharingMode(VehiclePassengerInfo info)
 	{
 		if (!this.CanResponseRideSharingModeChange(info))
@@ -740,14 +740,14 @@ public class VehicleController : ControllerBase
 		this.EnterRideSharingMode(info);
 	}
 
-	// Token: 0x0601C527 RID: 116007 RVA: 0x007EA408 File Offset: 0x007E8608
+	// Token: 0x0601A1CD RID: 106957 RVA: 0x00810B90 File Offset: 0x0080ED90
 	private void EnterRideSharingMode(VehiclePassengerInfo info)
 	{
 		VehicleModel.Instance.IsReadyRiderSharing = true;
 		EventSystem.Instance.Emit<VehiclePassengerInfo>(EEventName.OnEnterVehicleRideSharing, info);
 	}
 
-	// Token: 0x0601C528 RID: 116008 RVA: 0x007EA428 File Offset: 0x007E8628
+	// Token: 0x0601A1CE RID: 106958 RVA: 0x00810BB0 File Offset: 0x0080EDB0
 	private unsafe void TryExitRideSharingMode(VehiclePassengerInfo info)
 	{
 		if (!this.CanResponseRideSharingModeChange(info))
@@ -773,7 +773,7 @@ public class VehicleController : ControllerBase
 		this.ExitRideSharingMode(info);
 	}
 
-	// Token: 0x0601C529 RID: 116009 RVA: 0x007EA538 File Offset: 0x007E8738
+	// Token: 0x0601A1CF RID: 106959 RVA: 0x00810CC0 File Offset: 0x0080EEC0
 	private void ExitRideSharingMode(VehiclePassengerInfo info)
 	{
 		EventSystem.Instance.Emit<VehiclePassengerInfo>(EEventName.OnLeaveVehicleRideSharing, info);
@@ -785,13 +785,13 @@ public class VehicleController : ControllerBase
 		VehicleModel.Instance.IsReadyRiderSharing = false;
 	}
 
-	// Token: 0x0601C52A RID: 116010 RVA: 0x007EA585 File Offset: 0x007E8785
+	// Token: 0x0601A1D0 RID: 106960 RVA: 0x00810D0D File Offset: 0x0080EF0D
 	private bool CanResponseRideSharingModeChange(VehiclePassengerInfo info)
 	{
 		return info.IsRolePassenger(true) && info.VehicleEntity.GetComponent<BaseVehiclePerformComponent>() != null && this.CheckVehicleTypeForRideSharing(info);
 	}
 
-	// Token: 0x0601C52B RID: 116011 RVA: 0x007EA5AC File Offset: 0x007E87AC
+	// Token: 0x0601A1D1 RID: 106961 RVA: 0x00810D34 File Offset: 0x0080EF34
 	private bool CheckVehicleTypeForRideSharing(VehiclePassengerInfo info)
 	{
 		switch (info.VehicleType)
@@ -807,7 +807,7 @@ public class VehicleController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x0601C52C RID: 116012 RVA: 0x007EA5F8 File Offset: 0x007E87F8
+	// Token: 0x0601A1D2 RID: 106962 RVA: 0x00810D80 File Offset: 0x0080EF80
 	private unsafe void OnChangeVehicleRideSharing(int roleId, int seat)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -862,7 +862,7 @@ public class VehicleController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0601C52D RID: 116013 RVA: 0x007EA6F4 File Offset: 0x007E88F4
+	// Token: 0x0601A1D3 RID: 106963 RVA: 0x00810E7C File Offset: 0x0080F07C
 	private unsafe void OnRemoveVehicleRideSharing(int roleId, int seatId)
 	{
 		VehicleModel instance = VehicleModel.Instance;
@@ -898,7 +898,7 @@ public class VehicleController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0601C52E RID: 116014 RVA: 0x007EA7A8 File Offset: 0x007E89A8
+	// Token: 0x0601A1D4 RID: 106964 RVA: 0x00810F30 File Offset: 0x0080F130
 	[NullableContext(2)]
 	private void VehiclePassengerUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -922,7 +922,7 @@ public class VehicleController : ControllerBase
 		VehicleModel.Instance.RideSharingInfoMap.Remove(vehiclePassengerUpdateNotify.SeatId);
 	}
 
-	// Token: 0x0601C52F RID: 116015 RVA: 0x007EA878 File Offset: 0x007E8A78
+	// Token: 0x0601A1D5 RID: 106965 RVA: 0x00811000 File Offset: 0x0080F200
 	[NullableContext(2)]
 	private void VehicleShareNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -941,7 +941,7 @@ public class VehicleController : ControllerBase
 		EventSystem.Instance.Emit<VehicleShareNotify>(EEventName.OnSpecialVehicleShareNotify, vehicleShareNotify);
 	}
 
-	// Token: 0x0601C530 RID: 116016 RVA: 0x007EA8EC File Offset: 0x007E8AEC
+	// Token: 0x0601A1D6 RID: 106966 RVA: 0x00811074 File Offset: 0x0080F274
 	[NullableContext(2)]
 	private void MotorOutlookChange(IMessage msg, Net.CallbackStatus status)
 	{
@@ -964,7 +964,7 @@ public class VehicleController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C531 RID: 116017 RVA: 0x007EA944 File Offset: 0x007E8B44
+	// Token: 0x0601A1D7 RID: 106967 RVA: 0x008110CC File Offset: 0x0080F2CC
 	[NullableContext(2)]
 	private void SwitchPositionStateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -994,11 +994,11 @@ public class VehicleController : ControllerBase
 		MotorcycleMoveComponent component2 = worldEntity2.GetComponent<MotorcycleMoveComponent>();
 		if (component2 != null)
 		{
-			component2.SetMotorSubState((EMotorSubState)motorPositionStateNotify.PositionState);
+			component2.SetMotorSubState((EMotorSubState)motorPositionStateNotify.PositionState, ESetMotorSubStateSource.ServerNotify);
 		}
 	}
 
-	// Token: 0x0601C532 RID: 116018 RVA: 0x007EA9BC File Offset: 0x007E8BBC
+	// Token: 0x0601A1D8 RID: 106968 RVA: 0x00811144 File Offset: 0x0080F344
 	public void SetRideSharingEnable(bool enable)
 	{
 		if (VehicleModel.Instance.IsForbidRiderSharing != enable)
@@ -1045,7 +1045,7 @@ public class VehicleController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C533 RID: 116019 RVA: 0x007EAA60 File Offset: 0x007E8C60
+	// Token: 0x0601A1D9 RID: 106969 RVA: 0x008111E8 File Offset: 0x0080F3E8
 	private unsafe void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		CreatureDataComponent component = newEntity.Entity.GetComponent<CreatureDataComponent>();
@@ -1090,7 +1090,7 @@ public class VehicleController : ControllerBase
 		this.ChangeRoleEntityOnVehicle(newEntity);
 	}
 
-	// Token: 0x0601C534 RID: 116020 RVA: 0x007EABA0 File Offset: 0x007E8DA0
+	// Token: 0x0601A1DA RID: 106970 RVA: 0x00811328 File Offset: 0x0080F528
 	private void OnOtherChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		CreatureDataComponent component = newEntity.Entity.GetComponent<CreatureDataComponent>();
@@ -1109,7 +1109,7 @@ public class VehicleController : ControllerBase
 		this.ChangeRoleEntityOnVehicle(newEntity);
 	}
 
-	// Token: 0x0601C535 RID: 116021 RVA: 0x007EAC1C File Offset: 0x007E8E1C
+	// Token: 0x0601A1DB RID: 106971 RVA: 0x008113A4 File Offset: 0x0080F5A4
 	private void ChangeRoleEntityOnVehicle(EntityHandle newEntity)
 	{
 		CreatureDataComponent component = newEntity.Entity.GetComponent<CreatureDataComponent>();
@@ -1161,7 +1161,7 @@ public class VehicleController : ControllerBase
 		this.UpdateVehiclePerform(vehiclePassengerInfo2, false, true);
 	}
 
-	// Token: 0x0601C536 RID: 116022 RVA: 0x007EAD4C File Offset: 0x007E8F4C
+	// Token: 0x0601A1DC RID: 106972 RVA: 0x008114D4 File Offset: 0x0080F6D4
 	private void RegisterDriveAudioEvent(VehiclePassengerInfo info)
 	{
 		if (!info.IsDriver || !info.IsRolePassenger(true))
@@ -1186,7 +1186,7 @@ public class VehicleController : ControllerBase
 		GameAudioModel.Instance.RegisterFishingAudioEvent();
 	}
 
-	// Token: 0x0601C537 RID: 116023 RVA: 0x007EADB0 File Offset: 0x007E8FB0
+	// Token: 0x0601A1DD RID: 106973 RVA: 0x00811538 File Offset: 0x0080F738
 	private void RemoveDriveAudioEvent(VehiclePassengerInfo info)
 	{
 		if (!info.IsDriver || !info.IsRolePassenger(true))
@@ -1208,7 +1208,7 @@ public class VehicleController : ControllerBase
 		GameAudioModel.Instance.RemoveFishingAudioEvent();
 	}
 
-	// Token: 0x0601C538 RID: 116024 RVA: 0x007EAE05 File Offset: 0x007E9005
+	// Token: 0x0601A1DE RID: 106974 RVA: 0x0081158D File Offset: 0x0080F78D
 	public ExitVehicleType ToServerExitVehicleType(ELeaveVehicleType type)
 	{
 		switch (type)
@@ -1226,7 +1226,7 @@ public class VehicleController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C539 RID: 116025 RVA: 0x007EAE2A File Offset: 0x007E902A
+	// Token: 0x0601A1DF RID: 106975 RVA: 0x008115B2 File Offset: 0x0080F7B2
 	private ELeaveVehicleType FromServerExitVehicleType(ExitVehicleType type)
 	{
 		switch (type)
@@ -1244,7 +1244,7 @@ public class VehicleController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C53A RID: 116026 RVA: 0x007EAE4F File Offset: 0x007E904F
+	// Token: 0x0601A1E0 RID: 106976 RVA: 0x008115D7 File Offset: 0x0080F7D7
 	[NullableContext(2)]
 	private EntityHandle TryGetEntityIgnoreRemoveState(long creatureId)
 	{
@@ -1266,7 +1266,7 @@ public class VehicleController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x0601C53B RID: 116027 RVA: 0x007EAE90 File Offset: 0x007E9090
+	// Token: 0x0601A1E1 RID: 106977 RVA: 0x00811618 File Offset: 0x0080F818
 	private UniTask AsyncMotorCreateRequest(bool isCreate)
 	{
 		VehicleController.<AsyncMotorCreateRequest>d__48 <AsyncMotorCreateRequest>d__;
@@ -1278,7 +1278,7 @@ public class VehicleController : ControllerBase
 		return <AsyncMotorCreateRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601C53C RID: 116028 RVA: 0x007EAEDB File Offset: 0x007E90DB
+	// Token: 0x0601A1E2 RID: 106978 RVA: 0x00811663 File Offset: 0x0080F863
 	private void UpdateVehicleFunctionOpen(EFunctionType id, bool isOpen)
 	{
 		if (id != EFunctionType.MotorDevelop)
@@ -1292,7 +1292,7 @@ public class VehicleController : ControllerBase
 		this.AsyncMotorCreateRequest(isOpen).Forget();
 	}
 
-	// Token: 0x0601C53D RID: 116029 RVA: 0x007EAF01 File Offset: 0x007E9101
+	// Token: 0x0601A1E3 RID: 106979 RVA: 0x00811689 File Offset: 0x0080F889
 	private void OnEnableMotorcycleTagChanged(int gameplayTagId, bool tagExist)
 	{
 		if (gameplayTagId != this.enableMotorcycleTagId)
@@ -1302,7 +1302,7 @@ public class VehicleController : ControllerBase
 		this.AsyncMotorCreateRequest(tagExist).Forget();
 	}
 
-	// Token: 0x0601C53E RID: 116030 RVA: 0x007EAF1C File Offset: 0x007E911C
+	// Token: 0x0601A1E4 RID: 106980 RVA: 0x008116A4 File Offset: 0x0080F8A4
 	private void TryLeaveVehicle(EVehicleType vehicleType, string reason = "")
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -1344,7 +1344,7 @@ public class VehicleController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C53F RID: 116031 RVA: 0x007EAFAB File Offset: 0x007E91AB
+	// Token: 0x0601A1E5 RID: 106981 RVA: 0x00811733 File Offset: 0x0080F933
 	private void OnPlayerEntityStarted(int playerId, Entity playerEntity)
 	{
 		if (CreatureModel.Instance.GetPlayerId() != playerId)
@@ -1359,7 +1359,7 @@ public class VehicleController : ControllerBase
 		playerTagComponent.AddTagAddOrRemoveListener(this.enableMotorcycleTagId, new BaseTagComponent.TTagSwitchedCallback(this.OnEnableMotorcycleTagChanged), null);
 	}
 
-	// Token: 0x0601C540 RID: 116032 RVA: 0x007EAFDE File Offset: 0x007E91DE
+	// Token: 0x0601A1E6 RID: 106982 RVA: 0x00811766 File Offset: 0x0080F966
 	private void OnPlayerEntityEnded(int playerId, Entity playerEntity)
 	{
 		if (CreatureModel.Instance.GetPlayerId() != playerId)
@@ -1374,8 +1374,8 @@ public class VehicleController : ControllerBase
 		playerTagComponent.RemoveTagAddOrRemoveListener(this.enableMotorcycleTagId, new BaseTagComponent.TTagSwitchedCallback(this.OnEnableMotorcycleTagChanged));
 	}
 
-	// Token: 0x1700273D RID: 10045
-	// (get) Token: 0x0601C541 RID: 116033 RVA: 0x007EB010 File Offset: 0x007E9210
+	// Token: 0x17002A8E RID: 10894
+	// (get) Token: 0x0601A1E7 RID: 106983 RVA: 0x00811798 File Offset: 0x0080F998
 	public static VehicleController Instance
 	{
 		get
@@ -1384,7 +1384,7 @@ public class VehicleController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C542 RID: 116034 RVA: 0x007EB017 File Offset: 0x007E9217
+	// Token: 0x0601A1E8 RID: 106984 RVA: 0x0081179F File Offset: 0x0080F99F
 	public static VehicleController GetOrCreateInstance()
 	{
 		if (VehicleController._Instance == null)
@@ -1394,7 +1394,7 @@ public class VehicleController : ControllerBase
 		return VehicleController._Instance;
 	}
 
-	// Token: 0x0601C543 RID: 116035 RVA: 0x007EB02B File Offset: 0x007E922B
+	// Token: 0x0601A1E9 RID: 106985 RVA: 0x008117B3 File Offset: 0x0080F9B3
 	public static bool CreateInstance()
 	{
 		if (VehicleController._Instance != null)
@@ -1405,60 +1405,60 @@ public class VehicleController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601C544 RID: 116036 RVA: 0x007EB041 File Offset: 0x007E9241
+	// Token: 0x0601A1EA RID: 106986 RVA: 0x008117C9 File Offset: 0x0080F9C9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601C545 RID: 116037 RVA: 0x007EB043 File Offset: 0x007E9243
+	// Token: 0x0601A1EB RID: 106987 RVA: 0x008117CB File Offset: 0x0080F9CB
 	public static void ResetStaticDefaultValue()
 	{
 		VehicleController._Instance = null;
 	}
 
-	// Token: 0x0601C546 RID: 116038 RVA: 0x007EB04B File Offset: 0x007E924B
+	// Token: 0x0601A1EC RID: 106988 RVA: 0x008117D3 File Offset: 0x0080F9D3
 	static VehicleController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(VehicleController.CreateStaticDefaultValue), new Action(VehicleController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E05E RID: 57438
+	// Token: 0x0400E509 RID: 58633
 	private const int WAIT_ENTITY_CREATE_TIMEOUT = 60000;
 
-	// Token: 0x0400E05F RID: 57439
+	// Token: 0x0400E50A RID: 58634
 	private const int CHECK_DRIVE_INFO_INTERVAL = 500;
 
-	// Token: 0x0400E060 RID: 57440
+	// Token: 0x0400E50B RID: 58635
 	private int enableMotorcycleTagId = GameplayTagDefine.EGameplayTagId["角色.Common.探索技能.准用摩托"];
 
-	// Token: 0x0400E061 RID: 57441
+	// Token: 0x0400E50C RID: 58636
 	private int disableMotorcycleTagId = GameplayTagDefine.EGameplayTagId["角色.Common.探索技能.禁用摩托"];
 
-	// Token: 0x0400E062 RID: 57442
+	// Token: 0x0400E50D RID: 58637
 	private const int MIN_UPDATE_FIFO_BUDGET_TIME_IN_MOTORCYCLE = 6;
 
-	// Token: 0x0400E063 RID: 57443
+	// Token: 0x0400E50E RID: 58638
 	private const int SOURCE_MIN_UPDATE_FIFO_BUDGET_TIME = 3;
 
-	// Token: 0x0400E064 RID: 57444
+	// Token: 0x0400E50F RID: 58639
 	private float DeltaTime;
 
-	// Token: 0x0400E065 RID: 57445
+	// Token: 0x0400E510 RID: 58640
 	[Nullable(2)]
 	private VehicleMoveComponent VehicleMoveComp;
 
-	// Token: 0x0400E066 RID: 57446
+	// Token: 0x0400E511 RID: 58641
 	[Nullable(2)]
 	private GameModePromise WaitUpdatePlayerPromise;
 
-	// Token: 0x0400E067 RID: 57447
+	// Token: 0x0400E512 RID: 58642
 	[Nullable(2)]
 	private Queue<bool> MotorCreateQueue;
 
-	// Token: 0x0400E068 RID: 57448
+	// Token: 0x0400E513 RID: 58643
 	private bool MotorCreateRequesting;
 
-	// Token: 0x0400E069 RID: 57449
+	// Token: 0x0400E514 RID: 58644
 	[Nullable(2)]
 	private static VehicleController _Instance;
 }

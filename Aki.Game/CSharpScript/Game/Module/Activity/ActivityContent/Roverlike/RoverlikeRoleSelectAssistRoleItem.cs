@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006177 RID: 24951
+	// Token: 0x020050F5 RID: 20725
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeRoleSelectAssistRoleItem : GridProxyAbstract<RoverlikeRoleSelectAssistRoleItemData>
 	{
-		// Token: 0x0603F128 RID: 258344 RVA: 0x00F3DC7C File Offset: 0x00F3BE7C
+		// Token: 0x06033DE8 RID: 212456 RVA: 0x00E84B44 File Offset: 0x00E82D44
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F129 RID: 258345 RVA: 0x00F3DCC4 File Offset: 0x00F3BEC4
+		// Token: 0x06033DE9 RID: 212457 RVA: 0x00E84B8C File Offset: 0x00E82D8C
 		public override void Refresh(RoverlikeRoleSelectAssistRoleItemData data, bool isSelected, int gridIndex)
 		{
 			RoverRogueBlessRole? blessRoleConfig = RoverlikeConfig.Instance.GetBlessRoleConfig(data.BlessRoleId);
@@ -40,17 +40,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F12A RID: 258346 RVA: 0x00F3DD2C File Offset: 0x00F3BF2C
+		// Token: 0x06033DEA RID: 212458 RVA: 0x00E84BF4 File Offset: 0x00E82DF4
 		public override object GetKey(RoverlikeRoleSelectAssistRoleItemData data, int gridIndex)
 		{
 			return data.BlessRoleId;
 		}
 
-		// Token: 0x0200C3E2 RID: 50146
+		// Token: 0x0200ADC9 RID: 44489
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B1BF RID: 242111
+			// Token: 0x04035B20 RID: 219936
 			public const int TexRole = 0;
 		}
 	}

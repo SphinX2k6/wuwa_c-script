@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay
 {
-	// Token: 0x0200483E RID: 18494
+	// Token: 0x0200376F RID: 14191
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MapMoraleLvItemData : IMapMoraleLvItemData
 	{
-		// Token: 0x17007902 RID: 30978
-		// (get) Token: 0x06030665 RID: 198245 RVA: 0x00B3C33B File Offset: 0x00B3A53B
-		// (set) Token: 0x06030666 RID: 198246 RVA: 0x00B3C343 File Offset: 0x00B3A543
+		// Token: 0x17004BBF RID: 19391
+		// (get) Token: 0x06024E35 RID: 151093 RVA: 0x00A6C523 File Offset: 0x00A6A723
+		// (set) Token: 0x06024E36 RID: 151094 RVA: 0x00A6C52B File Offset: 0x00A6A72B
 		[Nullable(1)]
 		public string TitleId { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x17007903 RID: 30979
-		// (get) Token: 0x06030667 RID: 198247 RVA: 0x00B3C34C File Offset: 0x00B3A54C
-		// (set) Token: 0x06030668 RID: 198248 RVA: 0x00B3C354 File Offset: 0x00B3A554
+		// Token: 0x17004BC0 RID: 19392
+		// (get) Token: 0x06024E37 RID: 151095 RVA: 0x00A6C534 File Offset: 0x00A6A734
+		// (set) Token: 0x06024E38 RID: 151096 RVA: 0x00A6C53C File Offset: 0x00A6A73C
 		public int Lv { get; set; }
 
-		// Token: 0x17007904 RID: 30980
-		// (get) Token: 0x06030669 RID: 198249 RVA: 0x00B3C35D File Offset: 0x00B3A55D
-		// (set) Token: 0x0603066A RID: 198250 RVA: 0x00B3C365 File Offset: 0x00B3A565
+		// Token: 0x17004BC1 RID: 19393
+		// (get) Token: 0x06024E39 RID: 151097 RVA: 0x00A6C545 File Offset: 0x00A6A745
+		// (set) Token: 0x06024E3A RID: 151098 RVA: 0x00A6C54D File Offset: 0x00A6A74D
 		public string LvColor { get; set; }
 
-		// Token: 0x17007905 RID: 30981
-		// (get) Token: 0x0603066B RID: 198251 RVA: 0x00B3C36E File Offset: 0x00B3A56E
-		// (set) Token: 0x0603066C RID: 198252 RVA: 0x00B3C376 File Offset: 0x00B3A576
+		// Token: 0x17004BC2 RID: 19394
+		// (get) Token: 0x06024E3B RID: 151099 RVA: 0x00A6C556 File Offset: 0x00A6A756
+		// (set) Token: 0x06024E3C RID: 151100 RVA: 0x00A6C55E File Offset: 0x00A6A75E
 		public string BgColor { get; set; }
 	}
 }

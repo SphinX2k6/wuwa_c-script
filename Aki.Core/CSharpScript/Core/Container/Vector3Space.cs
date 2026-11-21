@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Core.Container
 {
-	// Token: 0x02000150 RID: 336
+	// Token: 0x02000154 RID: 340
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Vector3Space : IGraphSpace<Vector>
 	{
-		// Token: 0x06000BAA RID: 2986 RVA: 0x00037959 File Offset: 0x00035B59
+		// Token: 0x06000C06 RID: 3078 RVA: 0x00038529 File Offset: 0x00036729
 		public double DistSquared(Vector a, Vector b)
 		{
 			return Vector.DistSquared(a, b);
 		}
 
-		// Token: 0x06000BAB RID: 2987 RVA: 0x00037964 File Offset: 0x00035B64
+		// Token: 0x06000C07 RID: 3079 RVA: 0x00038534 File Offset: 0x00036734
 		public double DistSquaredPointToSegment(Vector point, Vector segmentStart, Vector segmentEnd)
 		{
 			double num = segmentEnd.X - segmentStart.X;

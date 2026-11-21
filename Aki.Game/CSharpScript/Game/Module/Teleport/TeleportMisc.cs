@@ -9,12 +9,12 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Teleport
 {
-	// Token: 0x02004B6B RID: 19307
+	// Token: 0x02003B15 RID: 15125
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TeleportMisc
 	{
-		// Token: 0x06031FF2 RID: 204786 RVA: 0x00B9BC70 File Offset: 0x00B99E70
+		// Token: 0x06026D88 RID: 159112 RVA: 0x00ADFF40 File Offset: 0x00ADE140
 		public static void SendTeleportTransferRequest(int markConfigId)
 		{
 			if (TeleportMisc.ShowTeleportConfirmBox(delegate
@@ -30,10 +30,16 @@ namespace CSharpScript.Game.Module.Teleport
 			TeleportMisc.SendTeleportTransferRequestPurely(markConfigId, null);
 		}
 
-		// Token: 0x06031FF3 RID: 204787 RVA: 0x00B9BCAC File Offset: 0x00B99EAC
-		private static void SendTeleportTransferRequestPurely(int markConfigId, Action onSuccess = null)
+		// Token: 0x06026D89 RID: 159113 RVA: 0x00ADFF7C File Offset: 0x00ADE17C
+		private unsafe static void SendTeleportTransferRequestPurely(int markConfigId, Action onSuccess = null)
 		{
 			LoadingModel.Instance.TargetTeleportId = markConfigId;
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.TeleportMisc;
+			ELogAuthor author = ELogAuthor.CK;
+			string message = "传送: 发送传送点传送请求";
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("teleportId", markConfigId);
+			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			TeleportTransferRequest teleportTransferRequest = TeleportTransferRequest.Create();
 			teleportTransferRequest.Id = markConfigId;
 			Net.Instance.Call(ERequestMessageId.TeleportTransferRequest, teleportTransferRequest, delegate(IMessage msg, Net.CallbackStatus _)
@@ -49,6 +55,14 @@ namespace CSharpScript.Game.Module.Teleport
 				}
 				if (teleportTransferResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
+					Log instance2 = Log.Instance;
+					ELogModule module2 = ELogModule.TeleportMisc;
+					ELogAuthor author2 = ELogAuthor.CK;
+					string message2 = "传送: 传送点传送请求失败";
+					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("teleportId", markConfigId);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("errorCode", teleportTransferResponse.ErrorCode);
+					instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 					if (teleportTransferResponse.ErrorCode != Aki.Protocol.ErrorCode.ErrSceneBlockSplitNotBlock)
 					{
 						ErrorCodeController.Instance.OpenErrorCodeTipView(teleportTransferResponse.ErrorCode, EResponseMessageId.TeleportTransferResponse, null, true, true);
@@ -64,7 +78,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}, 0);
 		}
 
-		// Token: 0x06031FF4 RID: 204788 RVA: 0x00B9BCFC File Offset: 0x00B99EFC
+		// Token: 0x06026D8A RID: 159114 RVA: 0x00AE0010 File Offset: 0x00ADE210
 		public static bool ShowTeleportConfirmBox(Action confirmCallBack = null)
 		{
 			if (confirmCallBack == null)
@@ -92,13 +106,19 @@ namespace CSharpScript.Game.Module.Teleport
 			return false;
 		}
 
-		// Token: 0x06031FF5 RID: 204789 RVA: 0x00B9BDA8 File Offset: 0x00B99FA8
-		public static void SendTeleportTransferRequestByEntityId(int instEntityTeleportId)
+		// Token: 0x06026D8B RID: 159115 RVA: 0x00AE00BC File Offset: 0x00ADE2BC
+		public unsafe static void SendTeleportTransferRequestByEntityId(int instEntityTeleportId)
 		{
-			InstEntityTeleporter value = MapConfig.Instance.GetInstEntityTeleportConfigById(instEntityTeleportId).Value;
+			InstEntityTeleporter config = MapConfig.Instance.GetInstEntityTeleportConfigById(instEntityTeleportId).Value;
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.TeleportMisc;
+			ELogAuthor author = ELogAuthor.CK;
+			string message = "传送: 发送实体传送请求";
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("instEntityTeleportId", instEntityTeleportId);
+			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			InstEntityTeleportRequest instEntityTeleportRequest = InstEntityTeleportRequest.Create();
-			instEntityTeleportRequest.InstId = value.InstId;
-			instEntityTeleportRequest.EntityConfigId = value.EntityConfigId;
+			instEntityTeleportRequest.InstId = config.InstId;
+			instEntityTeleportRequest.EntityConfigId = config.EntityConfigId;
 			Net.Instance.Call(ERequestMessageId.InstEntityTeleportRequest, instEntityTeleportRequest, delegate(IMessage msg, Net.CallbackStatus _)
 			{
 				InstEntityTeleportResponse instEntityTeleportResponse = (InstEntityTeleportResponse)msg;
@@ -112,12 +132,22 @@ namespace CSharpScript.Game.Module.Teleport
 				}
 				if (instEntityTeleportResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
+					Log instance2 = Log.Instance;
+					ELogModule module2 = ELogModule.TeleportMisc;
+					ELogAuthor author2 = ELogAuthor.CK;
+					string message2 = "传送: 实体传送请求失败";
+					<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray4<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("instEntityTeleportId", instEntityTeleportId);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("instId", config.InstId);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("entityConfigId", config.EntityConfigId);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("errorCode", instEntityTeleportResponse.ErrorCode);
+					instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 					ErrorCodeController.Instance.OpenErrorCodeTipView(instEntityTeleportResponse.ErrorCode, EResponseMessageId.InstEntityTeleportResponse, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x06031FF6 RID: 204790 RVA: 0x00B9BE1C File Offset: 0x00B9A01C
+		// Token: 0x06026D8C RID: 159116 RVA: 0x00AE0170 File Offset: 0x00ADE370
 		[NullableContext(1)]
 		public unsafe static bool BackToGameIfTargetPositionInvalid(global::Vector position, string reason)
 		{

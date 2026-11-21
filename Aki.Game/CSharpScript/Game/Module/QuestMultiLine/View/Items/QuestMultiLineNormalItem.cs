@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FBC RID: 20412
+	// Token: 0x02003F85 RID: 16261
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestMultiLineNormalItem : UiPanelBase
 	{
-		// Token: 0x060343F8 RID: 214008 RVA: 0x00C44878 File Offset: 0x00C42A78
+		// Token: 0x06029266 RID: 168550 RVA: 0x00B8E030 File Offset: 0x00B8C230
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			};
 		}
 
-		// Token: 0x060343F9 RID: 214009 RVA: 0x00C4490C File Offset: 0x00C42B0C
+		// Token: 0x06029267 RID: 168551 RVA: 0x00B8E0C4 File Offset: 0x00B8C2C4
 		public void RefreshItem(QuestMultiLineBranchData branchData)
 		{
 			if (branchData == null)
@@ -45,19 +45,19 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), branchData.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x060343FA RID: 214010 RVA: 0x00C44999 File Offset: 0x00C42B99
+		// Token: 0x06029268 RID: 168552 RVA: 0x00B8E151 File Offset: 0x00B8C351
 		public void SetClickFunction(Action<int> clickFunction)
 		{
 			this.ClickFunction = clickFunction;
 		}
 
-		// Token: 0x060343FB RID: 214011 RVA: 0x00C449A2 File Offset: 0x00C42BA2
+		// Token: 0x06029269 RID: 168553 RVA: 0x00B8E15A File Offset: 0x00B8C35A
 		public void ResetFinishIcon()
 		{
 			base.GetItem(1).SetUIActive(false);
 		}
 
-		// Token: 0x060343FC RID: 214012 RVA: 0x00C449B1 File Offset: 0x00C42BB1
+		// Token: 0x0602926A RID: 168554 RVA: 0x00B8E169 File Offset: 0x00B8C369
 		private void OnClick()
 		{
 			QuestMultiLineBranchData branchData = this.BranchData;
@@ -73,11 +73,11 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			clickFunction(this.BranchData.BranchId);
 		}
 
-		// Token: 0x0401BC8B RID: 113803
+		// Token: 0x04016660 RID: 91744
 		[Nullable(2)]
 		private Action<int> ClickFunction;
 
-		// Token: 0x0401BC8C RID: 113804
+		// Token: 0x04016661 RID: 91745
 		[Nullable(2)]
 		private QuestMultiLineBranchData BranchData;
 	}

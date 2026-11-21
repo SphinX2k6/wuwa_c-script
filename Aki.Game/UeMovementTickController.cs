@@ -1,55 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using UnrealEngine;
 
-// Token: 0x0200327E RID: 12926
+// Token: 0x020027EE RID: 10222
 [NullableContext(1)]
 [Nullable(0)]
 public class UeMovementTickController : IStaticVariableResetter
 {
-	// Token: 0x0601BF72 RID: 114546 RVA: 0x007C3CB4 File Offset: 0x007C1EB4
+	// Token: 0x06019B62 RID: 105314 RVA: 0x007EB070 File Offset: 0x007E9270
 	static UeMovementTickController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UeMovementTickController.CreateStaticDefaultValue), new Action(UeMovementTickController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17002699 RID: 9881
-	// (get) Token: 0x0601BF73 RID: 114547 RVA: 0x007C3CD3 File Offset: 0x007C1ED3
-	// (set) Token: 0x0601BF74 RID: 114548 RVA: 0x007C3CDA File Offset: 0x007C1EDA
-	[StaticVariableRuleIgnore]
-	public static bool MovementPredictMode
-	{
-		get
-		{
-			return UeMovementTickController.MovementPredictModeInternal;
-		}
-		set
-		{
-			if (UeMovementTickController.MovementPredictModeInternal == value)
-			{
-				return;
-			}
-			UeMovementTickController.MovementPredictModeInternal = value;
-			if (value)
-			{
-				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "a.EnableKuroPredictMotion 3", null);
-			}
-			else
-			{
-				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "a.EnableKuroPredictMotion 0", null);
-			}
-			UeSkeletalTickController.NotifyMovementPredictModeChanged(value);
-		}
-	}
-
-	// Token: 0x0601BF75 RID: 114549 RVA: 0x007C3D16 File Offset: 0x007C1F16
+	// Token: 0x06019B63 RID: 105315 RVA: 0x007EB08F File Offset: 0x007E928F
 	public static void SetTickManageMode(EMovementManageMode mode)
 	{
 		UeMovementTickController.ManageMode = mode;
 	}
 
-	// Token: 0x0601BF76 RID: 114550 RVA: 0x007C3D1E File Offset: 0x007C1F1E
+	// Token: 0x06019B64 RID: 105316 RVA: 0x007EB097 File Offset: 0x007E9297
 	public static void AddManager(IUeMovementComp manager, int priority)
 	{
 		while (UeMovementTickController.Managers.Count <= priority)
@@ -59,7 +29,7 @@ public class UeMovementTickController : IStaticVariableResetter
 		UeMovementTickController.Managers[priority].Add(manager);
 	}
 
-	// Token: 0x0601BF77 RID: 114551 RVA: 0x007C3D50 File Offset: 0x007C1F50
+	// Token: 0x06019B65 RID: 105317 RVA: 0x007EB0C9 File Offset: 0x007E92C9
 	public static void DeleteManager(IUeMovementComp manager, int priority)
 	{
 		while (UeMovementTickController.Managers.Count <= priority)
@@ -69,13 +39,13 @@ public class UeMovementTickController : IStaticVariableResetter
 		UeMovementTickController.Managers[priority].Remove(manager);
 	}
 
-	// Token: 0x0601BF78 RID: 114552 RVA: 0x007C3D82 File Offset: 0x007C1F82
+	// Token: 0x06019B66 RID: 105318 RVA: 0x007EB0FB File Offset: 0x007E92FB
 	public static bool CanTickManager(IUeMovementComp manager)
 	{
 		return (UeMovementTickController.ManageMode == EMovementManageMode.Default && manager.CanTickDefault()) || (UeMovementTickController.ManageMode == EMovementManageMode.TickWithDistance && manager.CanTickWithDistance());
 	}
 
-	// Token: 0x0601BF79 RID: 114553 RVA: 0x007C3DA8 File Offset: 0x007C1FA8
+	// Token: 0x06019B67 RID: 105319 RVA: 0x007EB120 File Offset: 0x007E9320
 	public static void TickManagersPriority1(float delta)
 	{
 		if (UeMovementTickController.ManageMode == EMovementManageMode.None)
@@ -83,7 +53,7 @@ public class UeMovementTickController : IStaticVariableResetter
 			return;
 		}
 		UeMovementTickController.PreTickedManagers.Clear();
-		if (!UeSkeletalTickController.EnabledNewSkelTickTiming)
+		if (!UeTickManageDefine.EnabledNewSkelTickTiming)
 		{
 			for (int i = UeMovementTickController.Managers.Count - 1; i >= 0; i--)
 			{
@@ -150,7 +120,7 @@ public class UeMovementTickController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BF7A RID: 114554 RVA: 0x007C4004 File Offset: 0x007C2204
+	// Token: 0x06019B68 RID: 105320 RVA: 0x007EB37C File Offset: 0x007E957C
 	public static void TickManagers()
 	{
 		foreach (IUeMovementComp ueMovementComp in UeMovementTickController.PreTickedManagers)
@@ -160,53 +130,28 @@ public class UeMovementTickController : IStaticVariableResetter
 		UeMovementTickController.PreTickedManagers.Clear();
 	}
 
-	// Token: 0x1700269A RID: 9882
-	// (get) Token: 0x0601BF7B RID: 114555 RVA: 0x007C4060 File Offset: 0x007C2260
-	// (set) Token: 0x0601BF7C RID: 114556 RVA: 0x007C4067 File Offset: 0x007C2267
-	[StaticVariableRuleIgnore]
-	public static bool EnabledMovementParallel
-	{
-		get
-		{
-			return UeMovementTickController.EnabledMovementParallelInternal;
-		}
-		set
-		{
-			UeMovementTickController.EnabledMovementParallelInternal = value;
-		}
-	}
-
-	// Token: 0x0601BF7D RID: 114557 RVA: 0x007C406F File Offset: 0x007C226F
+	// Token: 0x06019B69 RID: 105321 RVA: 0x007EB3D8 File Offset: 0x007E95D8
 	public static void CreateStaticDefaultValue()
 	{
-		UeMovementTickController.EnabledMovementParallelInternal = true;
 		UeMovementTickController.Managers = new List<HashSet<IUeMovementComp>>();
 		UeMovementTickController.PreTickedManagers = new List<IUeMovementComp>();
 		UeMovementTickController.ManageMode = EMovementManageMode.Default;
 	}
 
-	// Token: 0x0601BF7E RID: 114558 RVA: 0x007C4091 File Offset: 0x007C2291
+	// Token: 0x06019B6A RID: 105322 RVA: 0x007EB3F4 File Offset: 0x007E95F4
 	public static void ResetStaticDefaultValue()
 	{
-		UeMovementTickController.EnabledMovementParallelInternal = false;
 		UeMovementTickController.Managers = null;
 		UeMovementTickController.PreTickedManagers = null;
 		UeMovementTickController.ManageMode = EMovementManageMode.Default;
 	}
 
-	// Token: 0x0400DCF2 RID: 56562
+	// Token: 0x0400E194 RID: 57748
 	protected static List<HashSet<IUeMovementComp>> Managers;
 
-	// Token: 0x0400DCF3 RID: 56563
+	// Token: 0x0400E195 RID: 57749
 	protected static List<IUeMovementComp> PreTickedManagers;
 
-	// Token: 0x0400DCF4 RID: 56564
+	// Token: 0x0400E196 RID: 57750
 	protected static EMovementManageMode ManageMode;
-
-	// Token: 0x0400DCF5 RID: 56565
-	[StaticVariableRuleIgnore]
-	protected static bool MovementPredictModeInternal;
-
-	// Token: 0x0400DCF6 RID: 56566
-	private static bool EnabledMovementParallelInternal;
 }

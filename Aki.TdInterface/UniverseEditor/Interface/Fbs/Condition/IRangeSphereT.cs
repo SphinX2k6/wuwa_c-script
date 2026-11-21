@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CAD RID: 19629
+	// Token: 0x020051A6 RID: 20902
 	public class IRangeSphereT
 	{
-		// Token: 0x17008E87 RID: 36487
-		// (get) Token: 0x0601F251 RID: 127569 RVA: 0x00459A55 File Offset: 0x00457C55
-		// (set) Token: 0x0601F252 RID: 127570 RVA: 0x00459A5D File Offset: 0x00457C5D
+		// Token: 0x170095B5 RID: 38325
+		// (get) Token: 0x06020E73 RID: 134771 RVA: 0x0048D5A5 File Offset: 0x0048B7A5
+		// (set) Token: 0x06020E74 RID: 134772 RVA: 0x0048D5AD File Offset: 0x0048B7AD
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008E88 RID: 36488
-		// (get) Token: 0x0601F253 RID: 127571 RVA: 0x00459A66 File Offset: 0x00457C66
-		// (set) Token: 0x0601F254 RID: 127572 RVA: 0x00459A6E File Offset: 0x00457C6E
+		// Token: 0x170095B6 RID: 38326
+		// (get) Token: 0x06020E75 RID: 134773 RVA: 0x0048D5B6 File Offset: 0x0048B7B6
+		// (set) Token: 0x06020E76 RID: 134774 RVA: 0x0048D5BE File Offset: 0x0048B7BE
 		public IVectorInfoT Center { get; set; }
 
-		// Token: 0x17008E89 RID: 36489
-		// (get) Token: 0x0601F255 RID: 127573 RVA: 0x00459A77 File Offset: 0x00457C77
-		// (set) Token: 0x0601F256 RID: 127574 RVA: 0x00459A7F File Offset: 0x00457C7F
+		// Token: 0x170095B7 RID: 38327
+		// (get) Token: 0x06020E77 RID: 134775 RVA: 0x0048D5C7 File Offset: 0x0048B7C7
+		// (set) Token: 0x06020E78 RID: 134776 RVA: 0x0048D5CF File Offset: 0x0048B7CF
 		public int Radius { get; set; }
 
-		// Token: 0x17008E8A RID: 36490
-		// (get) Token: 0x0601F257 RID: 127575 RVA: 0x00459A88 File Offset: 0x00457C88
-		// (set) Token: 0x0601F258 RID: 127576 RVA: 0x00459A90 File Offset: 0x00457C90
+		// Token: 0x170095B8 RID: 38328
+		// (get) Token: 0x06020E79 RID: 134777 RVA: 0x0048D5D8 File Offset: 0x0048B7D8
+		// (set) Token: 0x06020E7A RID: 134778 RVA: 0x0048D5E0 File Offset: 0x0048B7E0
 		public TOnlinePlayerConditionTargetUnion OnlinePlayerConditionTargetOption { get; set; }
 
-		// Token: 0x17008E8B RID: 36491
-		// (get) Token: 0x0601F259 RID: 127577 RVA: 0x00459A99 File Offset: 0x00457C99
-		// (set) Token: 0x0601F25A RID: 127578 RVA: 0x00459AA1 File Offset: 0x00457CA1
+		// Token: 0x170095B9 RID: 38329
+		// (get) Token: 0x06020E7B RID: 134779 RVA: 0x0048D5E9 File Offset: 0x0048B7E9
+		// (set) Token: 0x06020E7C RID: 134780 RVA: 0x0048D5F1 File Offset: 0x0048B7F1
 		public List<int> RangeEntities { get; set; }
 
-		// Token: 0x17008E8C RID: 36492
-		// (get) Token: 0x0601F25B RID: 127579 RVA: 0x00459AAA File Offset: 0x00457CAA
-		// (set) Token: 0x0601F25C RID: 127580 RVA: 0x00459AB2 File Offset: 0x00457CB2
+		// Token: 0x170095BA RID: 38330
+		// (get) Token: 0x06020E7D RID: 134781 RVA: 0x0048D5FA File Offset: 0x0048B7FA
+		// (set) Token: 0x06020E7E RID: 134782 RVA: 0x0048D602 File Offset: 0x0048B802
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601F25D RID: 127581 RVA: 0x00459ABB File Offset: 0x00457CBB
+		// Token: 0x06020E7F RID: 134783 RVA: 0x0048D60B File Offset: 0x0048B80B
 		public IRangeSphereT()
 		{
 			this.Type = ECondition.CompareVar;

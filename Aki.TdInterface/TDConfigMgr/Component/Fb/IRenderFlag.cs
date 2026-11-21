@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CFB RID: 3323
+	// Token: 0x02000DF3 RID: 3571
 	public class IRenderFlag
 	{
-		// Token: 0x06004BDF RID: 19423 RVA: 0x000BD499 File Offset: 0x000BB699
-		[NullableContext(1)]
+		// Token: 0x060050ED RID: 20717 RVA: 0x000C89C9 File Offset: 0x000C6BC9
 		public static IRenderFlag Create(IRenderFlag? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017A6 RID: 6054
-		// (get) Token: 0x06004BE0 RID: 19424 RVA: 0x000BD4B8 File Offset: 0x000BB6B8
+		// Token: 0x17001902 RID: 6402
+		// (get) Token: 0x060050EE RID: 20718 RVA: 0x000C89E8 File Offset: 0x000C6BE8
 		public virtual ERenderFlagType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017A7 RID: 6055
-		// (get) Token: 0x06004BE1 RID: 19425 RVA: 0x000BD4C5 File Offset: 0x000BB6C5
+		// Token: 0x17001903 RID: 6403
+		// (get) Token: 0x060050EF RID: 20719 RVA: 0x000C89F5 File Offset: 0x000C6BF5
 		public virtual bool Enable
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B5E RID: 11102
+		// Token: 0x04002E18 RID: 11800
 		private IRenderFlag Instance;
 	}
 }

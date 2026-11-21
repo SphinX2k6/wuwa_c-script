@@ -10,14 +10,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.NPC.RoleNPC
 {
-	// Token: 0x0200418F RID: 16783
+	// Token: 0x020032B1 RID: 12977
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/NPC/RoleNPC/ABP_BaseRoleNPC.ABP_BaseRoleNPC_C")]
-	[UnrealStructLayout(56672, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 56668)]
+	[UnrealStructLayout(56720, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 56716)]
 	public class ABP_BaseRoleNPC_C : UKuroAnimInstanceChar, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602B792 RID: 178066 RVA: 0x00A01C7F File Offset: 0x009FFE7F
+		// Token: 0x06020A99 RID: 133785 RVA: 0x0094C3D3 File Offset: 0x0094A5D3
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (ABP_BaseRoleNPC_C._ClassPtr == IntPtr.Zero)
@@ -27,1987 +27,1762 @@ namespace AkiClient.Game.Aki.Character.NPC.RoleNPC
 			return ABP_BaseRoleNPC_C._ClassPtr;
 		}
 
-		// Token: 0x0602B793 RID: 178067 RVA: 0x00A01CA4 File Offset: 0x009FFEA4
+		// Token: 0x06020A9A RID: 133786 RVA: 0x0094C3F8 File Offset: 0x0094A5F8
 		public ABP_BaseRoleNPC_C() : this(BuiltinUtils.AllocNativeUObject(ABP_BaseRoleNPC_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602B794 RID: 178068 RVA: 0x00A01CCC File Offset: 0x009FFECC
+		// Token: 0x06020A9B RID: 133787 RVA: 0x0094C420 File Offset: 0x0094A620
 		[NullableContext(1)]
 		public ABP_BaseRoleNPC_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ABP_BaseRoleNPC_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006B4F RID: 27471
-		// (get) Token: 0x0602B795 RID: 178069 RVA: 0x00A01CFF File Offset: 0x009FFEFF
-		// (set) Token: 0x0602B796 RID: 178070 RVA: 0x00A01D13 File Offset: 0x009FFF13
+		// Token: 0x17004052 RID: 16466
+		// (get) Token: 0x06020A9C RID: 133788 RVA: 0x0094C453 File Offset: 0x0094A653
+		// (set) Token: 0x06020A9D RID: 133789 RVA: 0x0094C467 File Offset: 0x0094A667
 		public unsafe TsBaseCharacter 角色蓝图
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<TsBaseCharacter>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_365);
+				return BuiltinUtils.ObjectPropertyGetter<TsBaseCharacter>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_角色蓝图);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_365, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_角色蓝图, value);
 			}
 		}
 
-		// Token: 0x17006B50 RID: 27472
-		// (get) Token: 0x0602B797 RID: 178071 RVA: 0x00A01D28 File Offset: 0x009FFF28
-		// (set) Token: 0x0602B798 RID: 178072 RVA: 0x00A01D38 File Offset: 0x009FFF38
+		// Token: 0x17004053 RID: 16467
+		// (get) Token: 0x06020A9E RID: 133790 RVA: 0x0094C47C File Offset: 0x0094A67C
+		// (set) Token: 0x06020A9F RID: 133791 RVA: 0x0094C48C File Offset: 0x0094A68C
 		public unsafe float DeltaTimeX
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_366);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_DeltaTimeX);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_366) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_DeltaTimeX) = value;
 			}
 		}
 
-		// Token: 0x17006B51 RID: 27473
-		// (get) Token: 0x0602B799 RID: 178073 RVA: 0x00A01D49 File Offset: 0x009FFF49
-		// (set) Token: 0x0602B79A RID: 178074 RVA: 0x00A01D5D File Offset: 0x009FFF5D
+		// Token: 0x17004054 RID: 16468
+		// (get) Token: 0x06020AA0 RID: 133792 RVA: 0x0094C49D File Offset: 0x0094A69D
+		// (set) Token: 0x06020AA1 RID: 133793 RVA: 0x0094C4B1 File Offset: 0x0094A6B1
 		public unsafe FVector 速度向量
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_367);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_速度向量);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_367) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_速度向量) = value;
 			}
 		}
 
-		// Token: 0x17006B52 RID: 27474
-		// (get) Token: 0x0602B79B RID: 178075 RVA: 0x00A01D72 File Offset: 0x009FFF72
-		// (set) Token: 0x0602B79C RID: 178076 RVA: 0x00A01D86 File Offset: 0x009FFF86
+		// Token: 0x17004055 RID: 16469
+		// (get) Token: 0x06020AA2 RID: 133794 RVA: 0x0094C4C6 File Offset: 0x0094A6C6
+		// (set) Token: 0x06020AA3 RID: 133795 RVA: 0x0094C4DA File Offset: 0x0094A6DA
 		public unsafe FVector 加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_368);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_368) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_加速度) = value;
 			}
 		}
 
-		// Token: 0x17006B53 RID: 27475
-		// (get) Token: 0x0602B79D RID: 178077 RVA: 0x00A01D9B File Offset: 0x009FFF9B
-		// (set) Token: 0x0602B79E RID: 178078 RVA: 0x00A01DAF File Offset: 0x009FFFAF
+		// Token: 0x17004056 RID: 16470
+		// (get) Token: 0x06020AA4 RID: 133796 RVA: 0x0094C4EF File Offset: 0x0094A6EF
+		// (set) Token: 0x06020AA5 RID: 133797 RVA: 0x0094C503 File Offset: 0x0094A703
 		public unsafe FVector 移动输入向量
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_369);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_移动输入向量);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_369) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_移动输入向量) = value;
 			}
 		}
 
-		// Token: 0x17006B54 RID: 27476
-		// (get) Token: 0x0602B79F RID: 178079 RVA: 0x00A01DC4 File Offset: 0x009FFFC4
-		// (set) Token: 0x0602B7A0 RID: 178080 RVA: 0x00A01DD4 File Offset: 0x009FFFD4
+		// Token: 0x17004057 RID: 16471
+		// (get) Token: 0x06020AA6 RID: 133798 RVA: 0x0094C518 File Offset: 0x0094A718
+		// (set) Token: 0x06020AA7 RID: 133799 RVA: 0x0094C528 File Offset: 0x0094A728
 		public unsafe bool 是否正在移动
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_370) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_是否正在移动) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_370) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_是否正在移动) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B55 RID: 27477
-		// (get) Token: 0x0602B7A1 RID: 178081 RVA: 0x00A01DE5 File Offset: 0x009FFFE5
-		// (set) Token: 0x0602B7A2 RID: 178082 RVA: 0x00A01DF5 File Offset: 0x009FFFF5
+		// Token: 0x17004058 RID: 16472
+		// (get) Token: 0x06020AA8 RID: 133800 RVA: 0x0094C539 File Offset: 0x0094A739
+		// (set) Token: 0x06020AA9 RID: 133801 RVA: 0x0094C549 File Offset: 0x0094A749
 		public unsafe bool 是否有移动输入
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_371) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_是否有移动输入) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_371) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_是否有移动输入) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B56 RID: 27478
-		// (get) Token: 0x0602B7A3 RID: 178083 RVA: 0x00A01E06 File Offset: 0x00A00006
-		// (set) Token: 0x0602B7A4 RID: 178084 RVA: 0x00A01E16 File Offset: 0x00A00016
+		// Token: 0x17004059 RID: 16473
+		// (get) Token: 0x06020AAA RID: 133802 RVA: 0x0094C55A File Offset: 0x0094A75A
+		// (set) Token: 0x06020AAB RID: 133803 RVA: 0x0094C56A File Offset: 0x0094A76A
 		public unsafe float 速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_372);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_372) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_速度) = value;
 			}
 		}
 
-		// Token: 0x17006B57 RID: 27479
-		// (get) Token: 0x0602B7A5 RID: 178085 RVA: 0x00A01E27 File Offset: 0x00A00027
-		// (set) Token: 0x0602B7A6 RID: 178086 RVA: 0x00A01E3B File Offset: 0x00A0003B
+		// Token: 0x1700405A RID: 16474
+		// (get) Token: 0x06020AAC RID: 133804 RVA: 0x0094C57B File Offset: 0x0094A77B
+		// (set) Token: 0x06020AAD RID: 133805 RVA: 0x0094C58F File Offset: 0x0094A78F
 		public unsafe FRotator 瞄准旋转
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_373);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_瞄准旋转);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_373) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_瞄准旋转) = value;
 			}
 		}
 
-		// Token: 0x17006B58 RID: 27480
-		// (get) Token: 0x0602B7A7 RID: 178087 RVA: 0x00A01E50 File Offset: 0x00A00050
-		// (set) Token: 0x0602B7A8 RID: 178088 RVA: 0x00A01E60 File Offset: 0x00A00060
+		// Token: 0x1700405B RID: 16475
+		// (get) Token: 0x06020AAE RID: 133806 RVA: 0x0094C5A4 File Offset: 0x0094A7A4
+		// (set) Token: 0x06020AAF RID: 133807 RVA: 0x0094C5B4 File Offset: 0x0094A7B4
 		public unsafe bool 是否将要移动
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_374) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_是否将要移动) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_374) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_是否将要移动) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B59 RID: 27481
-		// (get) Token: 0x0602B7A9 RID: 178089 RVA: 0x00A01E71 File Offset: 0x00A00071
-		// (set) Token: 0x0602B7AA RID: 178090 RVA: 0x00A01E81 File Offset: 0x00A00081
+		// Token: 0x1700405C RID: 16476
+		// (get) Token: 0x06020AB0 RID: 133808 RVA: 0x0094C5C5 File Offset: 0x0094A7C5
+		// (set) Token: 0x06020AB1 RID: 133809 RVA: 0x0094C5D5 File Offset: 0x0094A7D5
 		public unsafe bool 正在旋转
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_375) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_正在旋转) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_375) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_正在旋转) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B5A RID: 27482
-		// (get) Token: 0x0602B7AB RID: 178091 RVA: 0x00A01E92 File Offset: 0x00A00092
-		// (set) Token: 0x0602B7AC RID: 178092 RVA: 0x00A01EA2 File Offset: 0x00A000A2
+		// Token: 0x1700405D RID: 16477
+		// (get) Token: 0x06020AB2 RID: 133810 RVA: 0x0094C5E6 File Offset: 0x0094A7E6
+		// (set) Token: 0x06020AB3 RID: 133811 RVA: 0x0094C5F6 File Offset: 0x0094A7F6
 		public unsafe float 旋转速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_376);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_旋转速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_376) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_旋转速度) = value;
 			}
 		}
 
-		// Token: 0x17006B5B RID: 27483
-		// (get) Token: 0x0602B7AD RID: 178093 RVA: 0x00A01EB3 File Offset: 0x00A000B3
-		// (set) Token: 0x0602B7AE RID: 178094 RVA: 0x00A01EC3 File Offset: 0x00A000C3
+		// Token: 0x1700405E RID: 16478
+		// (get) Token: 0x06020AB4 RID: 133812 RVA: 0x0094C607 File Offset: 0x0094A807
+		// (set) Token: 0x06020AB5 RID: 133813 RVA: 0x0094C617 File Offset: 0x0094A817
 		public unsafe float 旋转混合
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_377);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_旋转混合);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_377) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_旋转混合) = value;
 			}
 		}
 
-		// Token: 0x17006B5C RID: 27484
-		// (get) Token: 0x0602B7AF RID: 178095 RVA: 0x00A01ED4 File Offset: 0x00A000D4
-		// (set) Token: 0x0602B7B0 RID: 178096 RVA: 0x00A01EE8 File Offset: 0x00A000E8
+		// Token: 0x1700405F RID: 16479
+		// (get) Token: 0x06020AB6 RID: 133814 RVA: 0x0094C628 File Offset: 0x0094A828
+		// (set) Token: 0x06020AB7 RID: 133815 RVA: 0x0094C63C File Offset: 0x0094A83C
 		public unsafe FVeloctiyBlend 速度混合
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_378);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_速度混合);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_378) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_速度混合) = value;
 			}
 		}
 
-		// Token: 0x17006B5D RID: 27485
-		// (get) Token: 0x0602B7B1 RID: 178097 RVA: 0x00A01EFD File Offset: 0x00A000FD
-		// (set) Token: 0x0602B7B2 RID: 178098 RVA: 0x00A01F11 File Offset: 0x00A00111
+		// Token: 0x17004060 RID: 16480
+		// (get) Token: 0x06020AB8 RID: 133816 RVA: 0x0094C651 File Offset: 0x0094A851
+		// (set) Token: 0x06020AB9 RID: 133817 RVA: 0x0094C665 File Offset: 0x0094A865
 		public unsafe FVector 相对加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_379);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_相对加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_379) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_相对加速度) = value;
 			}
 		}
 
-		// Token: 0x17006B5E RID: 27486
-		// (get) Token: 0x0602B7B3 RID: 178099 RVA: 0x00A01F28 File Offset: 0x00A00128
-		// (set) Token: 0x0602B7B4 RID: 178100 RVA: 0x00A01F61 File Offset: 0x00A00161
-		[Nullable(1)]
-		public FLeanAmount 倾斜量
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FLeanAmount result;
-				if ((result = this._倾斜量) == null)
-				{
-					result = (this._倾斜量 = new FLeanAmount(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_380, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLeanAmount.StaticStruct(), base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_380, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17006B5F RID: 27487
-		// (get) Token: 0x0602B7B5 RID: 178101 RVA: 0x00A01F82 File Offset: 0x00A00182
-		// (set) Token: 0x0602B7B6 RID: 178102 RVA: 0x00A01F92 File Offset: 0x00A00192
+		// Token: 0x17004061 RID: 16481
+		// (get) Token: 0x06020ABA RID: 133818 RVA: 0x0094C67A File Offset: 0x0094A87A
+		// (set) Token: 0x06020ABB RID: 133819 RVA: 0x0094C68A File Offset: 0x0094A88A
 		public unsafe float 地上倾斜量平滑速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_381);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_地上倾斜量平滑速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_381) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_地上倾斜量平滑速度) = value;
 			}
 		}
 
-		// Token: 0x17006B60 RID: 27488
-		// (get) Token: 0x0602B7B7 RID: 178103 RVA: 0x00A01FA3 File Offset: 0x00A001A3
-		// (set) Token: 0x0602B7B8 RID: 178104 RVA: 0x00A01FB7 File Offset: 0x00A001B7
+		// Token: 0x17004062 RID: 16482
+		// (get) Token: 0x06020ABC RID: 133820 RVA: 0x0094C69B File Offset: 0x0094A89B
+		// (set) Token: 0x06020ABD RID: 133821 RVA: 0x0094C6AF File Offset: 0x0094A8AF
 		[Nullable(0)]
 		public unsafe TEnumAsByte<EMovementDirection> 移动方向
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_382);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_移动方向);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_382) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_移动方向) = value;
 			}
 		}
 
-		// Token: 0x17006B61 RID: 27489
-		// (get) Token: 0x0602B7B9 RID: 178105 RVA: 0x00A01FCC File Offset: 0x00A001CC
-		// (set) Token: 0x0602B7BA RID: 178106 RVA: 0x00A01FDC File Offset: 0x00A001DC
+		// Token: 0x17004063 RID: 16483
+		// (get) Token: 0x06020ABE RID: 133822 RVA: 0x0094C6C4 File Offset: 0x0094A8C4
+		// (set) Token: 0x06020ABF RID: 133823 RVA: 0x0094C6D4 File Offset: 0x0094A8D4
 		public unsafe float 站立播放速率
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_383);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_站立播放速率);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_383) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_站立播放速率) = value;
 			}
 		}
 
-		// Token: 0x17006B62 RID: 27490
-		// (get) Token: 0x0602B7BB RID: 178107 RVA: 0x00A01FED File Offset: 0x00A001ED
-		// (set) Token: 0x0602B7BC RID: 178108 RVA: 0x00A01FFD File Offset: 0x00A001FD
+		// Token: 0x17004064 RID: 16484
+		// (get) Token: 0x06020AC0 RID: 133824 RVA: 0x0094C6E5 File Offset: 0x0094A8E5
+		// (set) Token: 0x06020AC1 RID: 133825 RVA: 0x0094C6F5 File Offset: 0x0094A8F5
 		public unsafe float 走跑混合
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_384);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_走跑混合);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_384) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_走跑混合) = value;
 			}
 		}
 
-		// Token: 0x17006B63 RID: 27491
-		// (get) Token: 0x0602B7BD RID: 178109 RVA: 0x00A0200E File Offset: 0x00A0020E
-		// (set) Token: 0x0602B7BE RID: 178110 RVA: 0x00A02022 File Offset: 0x00A00222
+		// Token: 0x17004065 RID: 16485
+		// (get) Token: 0x06020AC2 RID: 133826 RVA: 0x0094C706 File Offset: 0x0094A906
+		// (set) Token: 0x06020AC3 RID: 133827 RVA: 0x0094C71A File Offset: 0x0094A91A
 		public unsafe UCurveFloat 站立走步幅混合曲线
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_385);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_站立走步幅混合曲线);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_385, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_站立走步幅混合曲线, value);
 			}
 		}
 
-		// Token: 0x17006B64 RID: 27492
-		// (get) Token: 0x0602B7BF RID: 178111 RVA: 0x00A02037 File Offset: 0x00A00237
-		// (set) Token: 0x0602B7C0 RID: 178112 RVA: 0x00A0204B File Offset: 0x00A0024B
+		// Token: 0x17004066 RID: 16486
+		// (get) Token: 0x06020AC4 RID: 133828 RVA: 0x0094C72F File Offset: 0x0094A92F
+		// (set) Token: 0x06020AC5 RID: 133829 RVA: 0x0094C743 File Offset: 0x0094A943
 		public unsafe UCurveFloat 站立跑步幅混合曲线
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_386);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_站立跑步幅混合曲线);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_386, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_站立跑步幅混合曲线, value);
 			}
 		}
 
-		// Token: 0x17006B65 RID: 27493
-		// (get) Token: 0x0602B7C1 RID: 178113 RVA: 0x00A02060 File Offset: 0x00A00260
-		// (set) Token: 0x0602B7C2 RID: 178114 RVA: 0x00A02070 File Offset: 0x00A00270
+		// Token: 0x17004067 RID: 16487
+		// (get) Token: 0x06020AC6 RID: 133830 RVA: 0x0094C758 File Offset: 0x0094A958
+		// (set) Token: 0x06020AC7 RID: 133831 RVA: 0x0094C768 File Offset: 0x0094A968
 		public unsafe float 步幅混合
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_387);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_步幅混合);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_387) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_步幅混合) = value;
 			}
 		}
 
-		// Token: 0x17006B66 RID: 27494
-		// (get) Token: 0x0602B7C3 RID: 178115 RVA: 0x00A02081 File Offset: 0x00A00281
-		// (set) Token: 0x0602B7C4 RID: 178116 RVA: 0x00A02091 File Offset: 0x00A00291
+		// Token: 0x17004068 RID: 16488
+		// (get) Token: 0x06020AC8 RID: 133832 RVA: 0x0094C779 File Offset: 0x0094A979
+		// (set) Token: 0x06020AC9 RID: 133833 RVA: 0x0094C789 File Offset: 0x0094A989
 		public unsafe float 动画行走速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_388);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_动画行走速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_388) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_动画行走速度) = value;
 			}
 		}
 
-		// Token: 0x17006B67 RID: 27495
-		// (get) Token: 0x0602B7C5 RID: 178117 RVA: 0x00A020A2 File Offset: 0x00A002A2
-		// (set) Token: 0x0602B7C6 RID: 178118 RVA: 0x00A020B2 File Offset: 0x00A002B2
+		// Token: 0x17004069 RID: 16489
+		// (get) Token: 0x06020ACA RID: 133834 RVA: 0x0094C79A File Offset: 0x0094A99A
+		// (set) Token: 0x06020ACB RID: 133835 RVA: 0x0094C7AA File Offset: 0x0094A9AA
 		public unsafe float 动画跑步速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_389);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_动画跑步速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_389) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_动画跑步速度) = value;
 			}
 		}
 
-		// Token: 0x17006B68 RID: 27496
-		// (get) Token: 0x0602B7C7 RID: 178119 RVA: 0x00A020C3 File Offset: 0x00A002C3
-		// (set) Token: 0x0602B7C8 RID: 178120 RVA: 0x00A020D3 File Offset: 0x00A002D3
+		// Token: 0x1700406A RID: 16490
+		// (get) Token: 0x06020ACC RID: 133836 RVA: 0x0094C7BB File Offset: 0x0094A9BB
+		// (set) Token: 0x06020ACD RID: 133837 RVA: 0x0094C7CB File Offset: 0x0094A9CB
 		public unsafe float 动画疾跑速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_390);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_动画疾跑速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_390) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_动画疾跑速度) = value;
 			}
 		}
 
-		// Token: 0x17006B69 RID: 27497
-		// (get) Token: 0x0602B7C9 RID: 178121 RVA: 0x00A020E4 File Offset: 0x00A002E4
-		// (set) Token: 0x0602B7CA RID: 178122 RVA: 0x00A020F8 File Offset: 0x00A002F8
+		// Token: 0x1700406B RID: 16491
+		// (get) Token: 0x06020ACE RID: 133838 RVA: 0x0094C7DC File Offset: 0x0094A9DC
+		// (set) Token: 0x06020ACF RID: 133839 RVA: 0x0094C7F0 File Offset: 0x0094A9F0
 		public unsafe UCurveFloat RelativeSpeedBlendCurve
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_391);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_RelativeSpeedBlendCurve);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_391, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_RelativeSpeedBlendCurve, value);
 			}
 		}
 
-		// Token: 0x17006B6A RID: 27498
-		// (get) Token: 0x0602B7CB RID: 178123 RVA: 0x00A0210D File Offset: 0x00A0030D
-		// (set) Token: 0x0602B7CC RID: 178124 RVA: 0x00A02121 File Offset: 0x00A00321
+		// Token: 0x1700406C RID: 16492
+		// (get) Token: 0x06020AD0 RID: 133840 RVA: 0x0094C805 File Offset: 0x0094AA05
+		// (set) Token: 0x06020AD1 RID: 133841 RVA: 0x0094C819 File Offset: 0x0094AA19
 		public unsafe FVector 整体偏移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_392);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_整体偏移);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_392) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_整体偏移) = value;
 			}
 		}
 
-		// Token: 0x17006B6B RID: 27499
-		// (get) Token: 0x0602B7CD RID: 178125 RVA: 0x00A02136 File Offset: 0x00A00336
-		// (set) Token: 0x0602B7CE RID: 178126 RVA: 0x00A0214A File Offset: 0x00A0034A
+		// Token: 0x1700406D RID: 16493
+		// (get) Token: 0x06020AD2 RID: 133842 RVA: 0x0094C82E File Offset: 0x0094AA2E
+		// (set) Token: 0x06020AD3 RID: 133843 RVA: 0x0094C842 File Offset: 0x0094AA42
 		public unsafe USkeletalMeshComponent 角色Mesh
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_393);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_角色Mesh);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_393, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_角色Mesh, value);
 			}
 		}
 
-		// Token: 0x17006B6C RID: 27500
-		// (get) Token: 0x0602B7CF RID: 178127 RVA: 0x00A0215F File Offset: 0x00A0035F
-		// (set) Token: 0x0602B7D0 RID: 178128 RVA: 0x00A02173 File Offset: 0x00A00373
+		// Token: 0x1700406E RID: 16494
+		// (get) Token: 0x06020AD4 RID: 133844 RVA: 0x0094C857 File Offset: 0x0094AA57
+		// (set) Token: 0x06020AD5 RID: 133845 RVA: 0x0094C86B File Offset: 0x0094AA6B
 		public unsafe FVector 整体偏移_实际使用_
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_394);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_整体偏移_实际使用_);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_394) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_整体偏移_实际使用_) = value;
 			}
 		}
 
-		// Token: 0x17006B6D RID: 27501
-		// (get) Token: 0x0602B7D1 RID: 178129 RVA: 0x00A02188 File Offset: 0x00A00388
-		// (set) Token: 0x0602B7D2 RID: 178130 RVA: 0x00A0219C File Offset: 0x00A0039C
+		// Token: 0x1700406F RID: 16495
+		// (get) Token: 0x06020AD6 RID: 133846 RVA: 0x0094C880 File Offset: 0x0094AA80
+		// (set) Token: 0x06020AD7 RID: 133847 RVA: 0x0094C894 File Offset: 0x0094AA94
 		public unsafe FVector 上一帧模型位置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_395);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_上一帧模型位置);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_395) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_上一帧模型位置) = value;
 			}
 		}
 
-		// Token: 0x17006B6E RID: 27502
-		// (get) Token: 0x0602B7D3 RID: 178131 RVA: 0x00A021B1 File Offset: 0x00A003B1
-		// (set) Token: 0x0602B7D4 RID: 178132 RVA: 0x00A021C1 File Offset: 0x00A003C1
+		// Token: 0x17004070 RID: 16496
+		// (get) Token: 0x06020AD8 RID: 133848 RVA: 0x0094C8A9 File Offset: 0x0094AAA9
+		// (set) Token: 0x06020AD9 RID: 133849 RVA: 0x0094C8B9 File Offset: 0x0094AAB9
 		public unsafe bool IsAutonomousProxy
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_396) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_IsAutonomousProxy) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_396) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_IsAutonomousProxy) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B6F RID: 27503
-		// (get) Token: 0x0602B7D5 RID: 178133 RVA: 0x00A021D2 File Offset: 0x00A003D2
-		// (set) Token: 0x0602B7D6 RID: 178134 RVA: 0x00A021E2 File Offset: 0x00A003E2
+		// Token: 0x17004071 RID: 16497
+		// (get) Token: 0x06020ADA RID: 133850 RVA: 0x0094C8CA File Offset: 0x0094AACA
+		// (set) Token: 0x06020ADB RID: 133851 RVA: 0x0094C8DA File Offset: 0x0094AADA
 		public unsafe float 瞄准面向
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_397);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_瞄准面向);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_397) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_瞄准面向) = value;
 			}
 		}
 
-		// Token: 0x17006B70 RID: 27504
-		// (get) Token: 0x0602B7D7 RID: 178135 RVA: 0x00A021F3 File Offset: 0x00A003F3
-		// (set) Token: 0x0602B7D8 RID: 178136 RVA: 0x00A02203 File Offset: 0x00A00403
+		// Token: 0x17004072 RID: 16498
+		// (get) Token: 0x06020ADC RID: 133852 RVA: 0x0094C8EB File Offset: 0x0094AAEB
+		// (set) Token: 0x06020ADD RID: 133853 RVA: 0x0094C8FB File Offset: 0x0094AAFB
 		public unsafe float 瞄准仰角
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_398);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_瞄准仰角);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_398) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_瞄准仰角) = value;
 			}
 		}
 
-		// Token: 0x17006B71 RID: 27505
-		// (get) Token: 0x0602B7D9 RID: 178137 RVA: 0x00A02214 File Offset: 0x00A00414
-		// (set) Token: 0x0602B7DA RID: 178138 RVA: 0x00A02224 File Offset: 0x00A00424
+		// Token: 0x17004073 RID: 16499
+		// (get) Token: 0x06020ADE RID: 133854 RVA: 0x0094C90C File Offset: 0x0094AB0C
+		// (set) Token: 0x06020ADF RID: 133855 RVA: 0x0094C91C File Offset: 0x0094AB1C
 		public unsafe float 当前坡度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_399);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_当前坡度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_399) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_当前坡度) = value;
 			}
 		}
 
-		// Token: 0x17006B72 RID: 27506
-		// (get) Token: 0x0602B7DB RID: 178139 RVA: 0x00A02235 File Offset: 0x00A00435
-		// (set) Token: 0x0602B7DC RID: 178140 RVA: 0x00A02245 File Offset: 0x00A00445
+		// Token: 0x17004074 RID: 16500
+		// (get) Token: 0x06020AE0 RID: 133856 RVA: 0x0094C92D File Offset: 0x0094AB2D
+		// (set) Token: 0x06020AE1 RID: 133857 RVA: 0x0094C93D File Offset: 0x0094AB3D
 		public unsafe float 视线修正Alpha
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_400);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_视线修正Alpha);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_400) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_视线修正Alpha) = value;
 			}
 		}
 
-		// Token: 0x17006B73 RID: 27507
-		// (get) Token: 0x0602B7DD RID: 178141 RVA: 0x00A02256 File Offset: 0x00A00456
-		// (set) Token: 0x0602B7DE RID: 178142 RVA: 0x00A0226A File Offset: 0x00A0046A
+		// Token: 0x17004075 RID: 16501
+		// (get) Token: 0x06020AE2 RID: 133858 RVA: 0x0094C94E File Offset: 0x0094AB4E
+		// (set) Token: 0x06020AE3 RID: 133859 RVA: 0x0094C962 File Offset: 0x0094AB62
 		public unsafe FVector 看向位置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_401);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_看向位置);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_401) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_看向位置) = value;
 			}
 		}
 
-		// Token: 0x17006B74 RID: 27508
-		// (get) Token: 0x0602B7DF RID: 178143 RVA: 0x00A0227F File Offset: 0x00A0047F
-		// (set) Token: 0x0602B7E0 RID: 178144 RVA: 0x00A0228F File Offset: 0x00A0048F
+		// Token: 0x17004076 RID: 16502
+		// (get) Token: 0x06020AE4 RID: 133860 RVA: 0x0094C977 File Offset: 0x0094AB77
+		// (set) Token: 0x06020AE5 RID: 133861 RVA: 0x0094C987 File Offset: 0x0094AB87
 		public unsafe float CachePercent_LR
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_402);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CachePercent_LR);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_402) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CachePercent_LR) = value;
 			}
 		}
 
-		// Token: 0x17006B75 RID: 27509
-		// (get) Token: 0x0602B7E1 RID: 178145 RVA: 0x00A022A0 File Offset: 0x00A004A0
-		// (set) Token: 0x0602B7E2 RID: 178146 RVA: 0x00A022B0 File Offset: 0x00A004B0
+		// Token: 0x17004077 RID: 16503
+		// (get) Token: 0x06020AE6 RID: 133862 RVA: 0x0094C998 File Offset: 0x0094AB98
+		// (set) Token: 0x06020AE7 RID: 133863 RVA: 0x0094C9A8 File Offset: 0x0094ABA8
 		public unsafe float CachePercent_FB
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_403);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CachePercent_FB);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_403) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CachePercent_FB) = value;
 			}
 		}
 
-		// Token: 0x17006B76 RID: 27510
-		// (get) Token: 0x0602B7E3 RID: 178147 RVA: 0x00A022C1 File Offset: 0x00A004C1
-		// (set) Token: 0x0602B7E4 RID: 178148 RVA: 0x00A022D5 File Offset: 0x00A004D5
+		// Token: 0x17004078 RID: 16504
+		// (get) Token: 0x06020AE8 RID: 133864 RVA: 0x0094C9B9 File Offset: 0x0094ABB9
+		// (set) Token: 0x06020AE9 RID: 133865 RVA: 0x0094C9CD File Offset: 0x0094ABCD
 		public unsafe FVector 角色向前向量
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_404);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_角色向前向量);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_404) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_角色向前向量) = value;
 			}
 		}
 
-		// Token: 0x17006B77 RID: 27511
-		// (get) Token: 0x0602B7E5 RID: 178149 RVA: 0x00A022EA File Offset: 0x00A004EA
-		// (set) Token: 0x0602B7E6 RID: 178150 RVA: 0x00A022FE File Offset: 0x00A004FE
+		// Token: 0x17004079 RID: 16505
+		// (get) Token: 0x06020AEA RID: 133866 RVA: 0x0094C9E2 File Offset: 0x0094ABE2
+		// (set) Token: 0x06020AEB RID: 133867 RVA: 0x0094C9F6 File Offset: 0x0094ABF6
 		public unsafe FVector 外部方向输入
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_405);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_外部方向输入);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_405) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_外部方向输入) = value;
 			}
 		}
 
-		// Token: 0x17006B78 RID: 27512
-		// (get) Token: 0x0602B7E7 RID: 178151 RVA: 0x00A02313 File Offset: 0x00A00513
-		// (set) Token: 0x0602B7E8 RID: 178152 RVA: 0x00A02323 File Offset: 0x00A00523
+		// Token: 0x1700407A RID: 16506
+		// (get) Token: 0x06020AEC RID: 133868 RVA: 0x0094CA0B File Offset: 0x0094AC0B
+		// (set) Token: 0x06020AED RID: 133869 RVA: 0x0094CA1B File Offset: 0x0094AC1B
 		public unsafe bool 是否需要原地转身
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_406) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_是否需要原地转身) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_406) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_是否需要原地转身) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B79 RID: 27513
-		// (get) Token: 0x0602B7E9 RID: 178153 RVA: 0x00A02334 File Offset: 0x00A00534
-		// (set) Token: 0x0602B7EA RID: 178154 RVA: 0x00A02344 File Offset: 0x00A00544
+		// Token: 0x1700407B RID: 16507
+		// (get) Token: 0x06020AEE RID: 133870 RVA: 0x0094CA2C File Offset: 0x0094AC2C
+		// (set) Token: 0x06020AEF RID: 133871 RVA: 0x0094CA3C File Offset: 0x0094AC3C
 		public unsafe bool 右转
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_407) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_右转) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_407) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_右转) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B7A RID: 27514
-		// (get) Token: 0x0602B7EB RID: 178155 RVA: 0x00A02355 File Offset: 0x00A00555
-		// (set) Token: 0x0602B7EC RID: 178156 RVA: 0x00A02365 File Offset: 0x00A00565
+		// Token: 0x1700407C RID: 16508
+		// (get) Token: 0x06020AF0 RID: 133872 RVA: 0x0094CA4D File Offset: 0x0094AC4D
+		// (set) Token: 0x06020AF1 RID: 133873 RVA: 0x0094CA5D File Offset: 0x0094AC5D
 		public unsafe bool 状态_跑停
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_408) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_跑停) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_408) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_跑停) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B7B RID: 27515
-		// (get) Token: 0x0602B7ED RID: 178157 RVA: 0x00A02376 File Offset: 0x00A00576
-		// (set) Token: 0x0602B7EE RID: 178158 RVA: 0x00A02386 File Offset: 0x00A00586
+		// Token: 0x1700407D RID: 16509
+		// (get) Token: 0x06020AF2 RID: 133874 RVA: 0x0094CA6E File Offset: 0x0094AC6E
+		// (set) Token: 0x06020AF3 RID: 133875 RVA: 0x0094CA7E File Offset: 0x0094AC7E
 		public unsafe bool 状态_跑停_RunStop
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_409) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_跑停_RunStop) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_409) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_跑停_RunStop) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B7C RID: 27516
-		// (get) Token: 0x0602B7EF RID: 178159 RVA: 0x00A02397 File Offset: 0x00A00597
-		// (set) Token: 0x0602B7F0 RID: 178160 RVA: 0x00A023A7 File Offset: 0x00A005A7
+		// Token: 0x1700407E RID: 16510
+		// (get) Token: 0x06020AF4 RID: 133876 RVA: 0x0094CA8F File Offset: 0x0094AC8F
+		// (set) Token: 0x06020AF5 RID: 133877 RVA: 0x0094CA9F File Offset: 0x0094AC9F
 		public unsafe bool 状态_跑停_SprintStop
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_410) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_跑停_SprintStop) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_410) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_跑停_SprintStop) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B7D RID: 27517
-		// (get) Token: 0x0602B7F1 RID: 178161 RVA: 0x00A023B8 File Offset: 0x00A005B8
-		// (set) Token: 0x0602B7F2 RID: 178162 RVA: 0x00A023C8 File Offset: 0x00A005C8
+		// Token: 0x1700407F RID: 16511
+		// (get) Token: 0x06020AF6 RID: 133878 RVA: 0x0094CAB0 File Offset: 0x0094ACB0
+		// (set) Token: 0x06020AF7 RID: 133879 RVA: 0x0094CAC0 File Offset: 0x0094ACC0
 		public unsafe bool 状态_跑停_WalkStop
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_411) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_跑停_WalkStop) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_411) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_跑停_WalkStop) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B7E RID: 27518
-		// (get) Token: 0x0602B7F3 RID: 178163 RVA: 0x00A023D9 File Offset: 0x00A005D9
-		// (set) Token: 0x0602B7F4 RID: 178164 RVA: 0x00A023E9 File Offset: 0x00A005E9
+		// Token: 0x17004080 RID: 16512
+		// (get) Token: 0x06020AF8 RID: 133880 RVA: 0x0094CAD1 File Offset: 0x0094ACD1
+		// (set) Token: 0x06020AF9 RID: 133881 RVA: 0x0094CAE1 File Offset: 0x0094ACE1
 		public unsafe bool 状态_地面_Sprint
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_412) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_地面_Sprint) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_412) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_地面_Sprint) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B7F RID: 27519
-		// (get) Token: 0x0602B7F5 RID: 178165 RVA: 0x00A023FA File Offset: 0x00A005FA
-		// (set) Token: 0x0602B7F6 RID: 178166 RVA: 0x00A0240A File Offset: 0x00A0060A
+		// Token: 0x17004081 RID: 16513
+		// (get) Token: 0x06020AFA RID: 133882 RVA: 0x0094CAF2 File Offset: 0x0094ACF2
+		// (set) Token: 0x06020AFB RID: 133883 RVA: 0x0094CB02 File Offset: 0x0094AD02
 		public unsafe bool 状态_地面_Walk
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_413) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_地面_Walk) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_413) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_地面_Walk) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B80 RID: 27520
-		// (get) Token: 0x0602B7F7 RID: 178167 RVA: 0x00A0241B File Offset: 0x00A0061B
-		// (set) Token: 0x0602B7F8 RID: 178168 RVA: 0x00A0242B File Offset: 0x00A0062B
+		// Token: 0x17004082 RID: 16514
+		// (get) Token: 0x06020AFC RID: 133884 RVA: 0x0094CB13 File Offset: 0x0094AD13
+		// (set) Token: 0x06020AFD RID: 133885 RVA: 0x0094CB23 File Offset: 0x0094AD23
 		public unsafe bool 状态_地面_Run
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_414) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_地面_Run) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_414) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_地面_Run) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B81 RID: 27521
-		// (get) Token: 0x0602B7F9 RID: 178169 RVA: 0x00A0243C File Offset: 0x00A0063C
-		// (set) Token: 0x0602B7FA RID: 178170 RVA: 0x00A0244C File Offset: 0x00A0064C
+		// Token: 0x17004083 RID: 16515
+		// (get) Token: 0x06020AFE RID: 133886 RVA: 0x0094CB34 File Offset: 0x0094AD34
+		// (set) Token: 0x06020AFF RID: 133887 RVA: 0x0094CB44 File Offset: 0x0094AD44
 		public unsafe bool 状态_牵手_牵手中
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_415) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_牵手_牵手中) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_415) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_牵手_牵手中) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B82 RID: 27522
-		// (get) Token: 0x0602B7FB RID: 178171 RVA: 0x00A0245D File Offset: 0x00A0065D
-		// (set) Token: 0x0602B7FC RID: 178172 RVA: 0x00A0246D File Offset: 0x00A0066D
+		// Token: 0x17004084 RID: 16516
+		// (get) Token: 0x06020B00 RID: 133888 RVA: 0x0094CB55 File Offset: 0x0094AD55
+		// (set) Token: 0x06020B01 RID: 133889 RVA: 0x0094CB65 File Offset: 0x0094AD65
 		public unsafe bool 状态_牵手_被牵手中
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_416) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_牵手_被牵手中) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_416) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_牵手_被牵手中) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B83 RID: 27523
-		// (get) Token: 0x0602B7FD RID: 178173 RVA: 0x00A0247E File Offset: 0x00A0067E
-		// (set) Token: 0x0602B7FE RID: 178174 RVA: 0x00A0248E File Offset: 0x00A0068E
+		// Token: 0x17004085 RID: 16517
+		// (get) Token: 0x06020B02 RID: 133890 RVA: 0x0094CB76 File Offset: 0x0094AD76
+		// (set) Token: 0x06020B03 RID: 133891 RVA: 0x0094CB86 File Offset: 0x0094AD86
 		public unsafe bool 状态_牵手_范围内
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_417) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_牵手_范围内) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_417) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_牵手_范围内) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B84 RID: 27524
-		// (get) Token: 0x0602B7FF RID: 178175 RVA: 0x00A0249F File Offset: 0x00A0069F
-		// (set) Token: 0x0602B800 RID: 178176 RVA: 0x00A024AF File Offset: 0x00A006AF
+		// Token: 0x17004086 RID: 16518
+		// (get) Token: 0x06020B04 RID: 133892 RVA: 0x0094CB97 File Offset: 0x0094AD97
+		// (set) Token: 0x06020B05 RID: 133893 RVA: 0x0094CBA7 File Offset: 0x0094ADA7
 		public unsafe bool 状态_牵手_接受邀请中
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_418) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_牵手_接受邀请中) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_418) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_牵手_接受邀请中) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B85 RID: 27525
-		// (get) Token: 0x0602B801 RID: 178177 RVA: 0x00A024C0 File Offset: 0x00A006C0
-		// (set) Token: 0x0602B802 RID: 178178 RVA: 0x00A024D4 File Offset: 0x00A006D4
+		// Token: 0x17004087 RID: 16519
+		// (get) Token: 0x06020B06 RID: 133894 RVA: 0x0094CBB8 File Offset: 0x0094ADB8
+		// (set) Token: 0x06020B07 RID: 133895 RVA: 0x0094CBCC File Offset: 0x0094ADCC
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECharState> CharMoveState
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_419);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CharMoveState);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_419) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CharMoveState) = value;
 			}
 		}
 
-		// Token: 0x17006B86 RID: 27526
-		// (get) Token: 0x0602B803 RID: 178179 RVA: 0x00A024E9 File Offset: 0x00A006E9
-		// (set) Token: 0x0602B804 RID: 178180 RVA: 0x00A024F9 File Offset: 0x00A006F9
+		// Token: 0x17004088 RID: 16520
+		// (get) Token: 0x06020B08 RID: 133896 RVA: 0x0094CBE1 File Offset: 0x0094ADE1
+		// (set) Token: 0x06020B09 RID: 133897 RVA: 0x0094CBF1 File Offset: 0x0094ADF1
 		public unsafe float ExpresionAlpha
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_420);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_ExpresionAlpha);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_420) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_ExpresionAlpha) = value;
 			}
 		}
 
-		// Token: 0x17006B87 RID: 27527
-		// (get) Token: 0x0602B805 RID: 178181 RVA: 0x00A0250A File Offset: 0x00A0070A
-		// (set) Token: 0x0602B806 RID: 178182 RVA: 0x00A0251A File Offset: 0x00A0071A
+		// Token: 0x17004089 RID: 16521
+		// (get) Token: 0x06020B0A RID: 133898 RVA: 0x0094CC02 File Offset: 0x0094AE02
+		// (set) Token: 0x06020B0B RID: 133899 RVA: 0x0094CC12 File Offset: 0x0094AE12
 		public unsafe float RandomEpresionEndTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_421);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_RandomEpresionEndTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_421) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_RandomEpresionEndTime) = value;
 			}
 		}
 
-		// Token: 0x17006B88 RID: 27528
-		// (get) Token: 0x0602B807 RID: 178183 RVA: 0x00A0252B File Offset: 0x00A0072B
-		// (set) Token: 0x0602B808 RID: 178184 RVA: 0x00A0253B File Offset: 0x00A0073B
+		// Token: 0x1700408A RID: 16522
+		// (get) Token: 0x06020B0C RID: 133900 RVA: 0x0094CC23 File Offset: 0x0094AE23
+		// (set) Token: 0x06020B0D RID: 133901 RVA: 0x0094CC33 File Offset: 0x0094AE33
 		public unsafe float 眨眼动画时长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_422);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_眨眼动画时长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_422) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_眨眼动画时长) = value;
 			}
 		}
 
-		// Token: 0x17006B89 RID: 27529
-		// (get) Token: 0x0602B809 RID: 178185 RVA: 0x00A0254C File Offset: 0x00A0074C
-		// (set) Token: 0x0602B80A RID: 178186 RVA: 0x00A0255C File Offset: 0x00A0075C
+		// Token: 0x1700408B RID: 16523
+		// (get) Token: 0x06020B0E RID: 133902 RVA: 0x0094CC44 File Offset: 0x0094AE44
+		// (set) Token: 0x06020B0F RID: 133903 RVA: 0x0094CC54 File Offset: 0x0094AE54
 		public unsafe float 此轮眨眼动画总时长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_423);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_此轮眨眼动画总时长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_423) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_此轮眨眼动画总时长) = value;
 			}
 		}
 
-		// Token: 0x17006B8A RID: 27530
-		// (get) Token: 0x0602B80B RID: 178187 RVA: 0x00A0256D File Offset: 0x00A0076D
-		// (set) Token: 0x0602B80C RID: 178188 RVA: 0x00A02581 File Offset: 0x00A00781
+		// Token: 0x1700408C RID: 16524
+		// (get) Token: 0x06020B10 RID: 133904 RVA: 0x0094CC65 File Offset: 0x0094AE65
+		// (set) Token: 0x06020B11 RID: 133905 RVA: 0x0094CC79 File Offset: 0x0094AE79
 		public unsafe FRotator 角色旋转
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_424);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_角色旋转);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_424) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_角色旋转) = value;
 			}
 		}
 
-		// Token: 0x17006B8B RID: 27531
-		// (get) Token: 0x0602B80D RID: 178189 RVA: 0x00A02596 File Offset: 0x00A00796
-		// (set) Token: 0x0602B80E RID: 178190 RVA: 0x00A025A6 File Offset: 0x00A007A6
+		// Token: 0x1700408D RID: 16525
+		// (get) Token: 0x06020B12 RID: 133906 RVA: 0x0094CC8E File Offset: 0x0094AE8E
+		// (set) Token: 0x06020B13 RID: 133907 RVA: 0x0094CC9E File Offset: 0x0094AE9E
 		public unsafe float 原地旋转偏差角
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_425);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_原地旋转偏差角);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_425) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_原地旋转偏差角) = value;
 			}
 		}
 
-		// Token: 0x17006B8C RID: 27532
-		// (get) Token: 0x0602B80F RID: 178191 RVA: 0x00A025B7 File Offset: 0x00A007B7
-		// (set) Token: 0x0602B810 RID: 178192 RVA: 0x00A025C7 File Offset: 0x00A007C7
+		// Token: 0x1700408E RID: 16526
+		// (get) Token: 0x06020B14 RID: 133908 RVA: 0x0094CCAF File Offset: 0x0094AEAF
+		// (set) Token: 0x06020B15 RID: 133909 RVA: 0x0094CCBF File Offset: 0x0094AEBF
 		public unsafe bool 移动时是否有阻挡
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_426) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_移动时是否有阻挡) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_426) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_移动时是否有阻挡) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B8D RID: 27533
-		// (get) Token: 0x0602B811 RID: 178193 RVA: 0x00A025D8 File Offset: 0x00A007D8
-		// (set) Token: 0x0602B812 RID: 178194 RVA: 0x00A025E8 File Offset: 0x00A007E8
+		// Token: 0x1700408F RID: 16527
+		// (get) Token: 0x06020B16 RID: 133910 RVA: 0x0094CCD0 File Offset: 0x0094AED0
+		// (set) Token: 0x06020B17 RID: 133911 RVA: 0x0094CCE0 File Offset: 0x0094AEE0
 		public unsafe float TimeSeconds
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_427);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_TimeSeconds);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_427) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_TimeSeconds) = value;
 			}
 		}
 
-		// Token: 0x17006B8E RID: 27534
-		// (get) Token: 0x0602B813 RID: 178195 RVA: 0x00A025F9 File Offset: 0x00A007F9
-		// (set) Token: 0x0602B814 RID: 178196 RVA: 0x00A02609 File Offset: 0x00A00809
+		// Token: 0x17004090 RID: 16528
+		// (get) Token: 0x06020B18 RID: 133912 RVA: 0x0094CCF1 File Offset: 0x0094AEF1
+		// (set) Token: 0x06020B19 RID: 133913 RVA: 0x0094CD01 File Offset: 0x0094AF01
 		public unsafe float InSequenceAlpha
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_428);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_InSequenceAlpha);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_428) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_InSequenceAlpha) = value;
 			}
 		}
 
-		// Token: 0x17006B8F RID: 27535
-		// (get) Token: 0x0602B815 RID: 178197 RVA: 0x00A0261A File Offset: 0x00A0081A
-		// (set) Token: 0x0602B816 RID: 178198 RVA: 0x00A0262E File Offset: 0x00A0082E
+		// Token: 0x17004091 RID: 16529
+		// (get) Token: 0x06020B1A RID: 133914 RVA: 0x0094CD12 File Offset: 0x0094AF12
+		// (set) Token: 0x06020B1B RID: 133915 RVA: 0x0094CD26 File Offset: 0x0094AF26
 		public unsafe FVector 缓存角色位置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_429);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_缓存角色位置);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_429) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_缓存角色位置) = value;
 			}
 		}
 
-		// Token: 0x17006B90 RID: 27536
-		// (get) Token: 0x0602B817 RID: 178199 RVA: 0x00A02643 File Offset: 0x00A00843
-		// (set) Token: 0x0602B818 RID: 178200 RVA: 0x00A02657 File Offset: 0x00A00857
+		// Token: 0x17004092 RID: 16530
+		// (get) Token: 0x06020B1C RID: 133916 RVA: 0x0094CD3B File Offset: 0x0094AF3B
+		// (set) Token: 0x06020B1D RID: 133917 RVA: 0x0094CD4F File Offset: 0x0094AF4F
 		public unsafe UCurveFloat AngelToStepLength
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_430);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_AngelToStepLength);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_430, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_AngelToStepLength, value);
 			}
 		}
 
-		// Token: 0x17006B91 RID: 27537
-		// (get) Token: 0x0602B819 RID: 178201 RVA: 0x00A0266C File Offset: 0x00A0086C
-		// (set) Token: 0x0602B81A RID: 178202 RVA: 0x00A02680 File Offset: 0x00A00880
+		// Token: 0x17004093 RID: 16531
+		// (get) Token: 0x06020B1E RID: 133918 RVA: 0x0094CD64 File Offset: 0x0094AF64
+		// (set) Token: 0x06020B1F RID: 133919 RVA: 0x0094CD78 File Offset: 0x0094AF78
 		public unsafe UCurveFloat Angle_to_Step_Frequency
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_431);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_Angle_to_Step_Frequency);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_431, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_Angle_to_Step_Frequency, value);
 			}
 		}
 
-		// Token: 0x17006B92 RID: 27538
-		// (get) Token: 0x0602B81B RID: 178203 RVA: 0x00A02695 File Offset: 0x00A00895
-		// (set) Token: 0x0602B81C RID: 178204 RVA: 0x00A026A9 File Offset: 0x00A008A9
+		// Token: 0x17004094 RID: 16532
+		// (get) Token: 0x06020B20 RID: 133920 RVA: 0x0094CD8D File Offset: 0x0094AF8D
+		// (set) Token: 0x06020B21 RID: 133921 RVA: 0x0094CDA1 File Offset: 0x0094AFA1
 		public unsafe FRotator 综合旋转
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_432);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_综合旋转);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_432) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_综合旋转) = value;
 			}
 		}
 
-		// Token: 0x17006B93 RID: 27539
-		// (get) Token: 0x0602B81D RID: 178205 RVA: 0x00A026BE File Offset: 0x00A008BE
-		// (set) Token: 0x0602B81E RID: 178206 RVA: 0x00A026D2 File Offset: 0x00A008D2
+		// Token: 0x17004095 RID: 16533
+		// (get) Token: 0x06020B22 RID: 133922 RVA: 0x0094CDB6 File Offset: 0x0094AFB6
+		// (set) Token: 0x06020B23 RID: 133923 RVA: 0x0094CDCA File Offset: 0x0094AFCA
 		public unsafe FVector 上一帧位置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_433);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_上一帧位置);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_433) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_上一帧位置) = value;
 			}
 		}
 
-		// Token: 0x17006B94 RID: 27540
-		// (get) Token: 0x0602B81F RID: 178207 RVA: 0x00A026E7 File Offset: 0x00A008E7
-		// (set) Token: 0x0602B820 RID: 178208 RVA: 0x00A026F7 File Offset: 0x00A008F7
+		// Token: 0x17004096 RID: 16534
+		// (get) Token: 0x06020B24 RID: 133924 RVA: 0x0094CDDF File Offset: 0x0094AFDF
+		// (set) Token: 0x06020B25 RID: 133925 RVA: 0x0094CDEF File Offset: 0x0094AFEF
 		public unsafe float 角色位移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_434);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_角色位移);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_434) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_角色位移) = value;
 			}
 		}
 
-		// Token: 0x17006B95 RID: 27541
-		// (get) Token: 0x0602B821 RID: 178209 RVA: 0x00A02708 File Offset: 0x00A00908
-		// (set) Token: 0x0602B822 RID: 178210 RVA: 0x00A02718 File Offset: 0x00A00918
+		// Token: 0x17004097 RID: 16535
+		// (get) Token: 0x06020B26 RID: 133926 RVA: 0x0094CE00 File Offset: 0x0094B000
+		// (set) Token: 0x06020B27 RID: 133927 RVA: 0x0094CE10 File Offset: 0x0094B010
 		public unsafe bool 眨眼中
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_435) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_眨眼中) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_435) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_眨眼中) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B96 RID: 27542
-		// (get) Token: 0x0602B823 RID: 178211 RVA: 0x00A02729 File Offset: 0x00A00929
-		// (set) Token: 0x0602B824 RID: 178212 RVA: 0x00A02739 File Offset: 0x00A00939
+		// Token: 0x17004098 RID: 16536
+		// (get) Token: 0x06020B28 RID: 133928 RVA: 0x0094CE21 File Offset: 0x0094B021
+		// (set) Token: 0x06020B29 RID: 133929 RVA: 0x0094CE31 File Offset: 0x0094B031
 		public unsafe int 身高
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_436);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_身高);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_436) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_身高) = value;
 			}
 		}
 
-		// Token: 0x17006B97 RID: 27543
-		// (get) Token: 0x0602B825 RID: 178213 RVA: 0x00A0274A File Offset: 0x00A0094A
-		// (set) Token: 0x0602B826 RID: 178214 RVA: 0x00A0275A File Offset: 0x00A0095A
+		// Token: 0x17004099 RID: 16537
+		// (get) Token: 0x06020B2A RID: 133930 RVA: 0x0094CE42 File Offset: 0x0094B042
+		// (set) Token: 0x06020B2B RID: 133931 RVA: 0x0094CE52 File Offset: 0x0094B052
 		public unsafe bool bComponentStart
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_437) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_bComponentStart) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_437) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_bComponentStart) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B98 RID: 27544
-		// (get) Token: 0x0602B827 RID: 178215 RVA: 0x00A0276B File Offset: 0x00A0096B
-		// (set) Token: 0x0602B828 RID: 178216 RVA: 0x00A0277F File Offset: 0x00A0097F
+		// Token: 0x1700409A RID: 16538
+		// (get) Token: 0x06020B2C RID: 133932 RVA: 0x0094CE63 File Offset: 0x0094B063
+		// (set) Token: 0x06020B2D RID: 133933 RVA: 0x0094CE77 File Offset: 0x0094B077
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECharParentMoveState> CharPositionState
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_438);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CharPositionState);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_438) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CharPositionState) = value;
 			}
 		}
 
-		// Token: 0x17006B99 RID: 27545
-		// (get) Token: 0x0602B829 RID: 178217 RVA: 0x00A02794 File Offset: 0x00A00994
-		// (set) Token: 0x0602B82A RID: 178218 RVA: 0x00A027A8 File Offset: 0x00A009A8
+		// Token: 0x1700409B RID: 16539
+		// (get) Token: 0x06020B2E RID: 133934 RVA: 0x0094CE8C File Offset: 0x0094B08C
+		// (set) Token: 0x06020B2F RID: 133935 RVA: 0x0094CEA0 File Offset: 0x0094B0A0
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECharViewDirectionState> CharCameraState
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_439);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CharCameraState);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_439) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CharCameraState) = value;
 			}
 		}
 
-		// Token: 0x17006B9A RID: 27546
-		// (get) Token: 0x0602B82B RID: 178219 RVA: 0x00A027BD File Offset: 0x00A009BD
-		// (set) Token: 0x0602B82C RID: 178220 RVA: 0x00A027D1 File Offset: 0x00A009D1
-		[Nullable(0)]
-		public unsafe TEnumAsByte<ESwim> 泳态
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_440);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_440) = value;
-			}
-		}
-
-		// Token: 0x17006B9B RID: 27547
-		// (get) Token: 0x0602B82D RID: 178221 RVA: 0x00A027E6 File Offset: 0x00A009E6
-		// (set) Token: 0x0602B82E RID: 178222 RVA: 0x00A027FA File Offset: 0x00A009FA
+		// Token: 0x1700409C RID: 16540
+		// (get) Token: 0x06020B30 RID: 133936 RVA: 0x0094CEB5 File Offset: 0x0094B0B5
+		// (set) Token: 0x06020B31 RID: 133937 RVA: 0x0094CEC9 File Offset: 0x0094B0C9
 		public unsafe BP_ABPLogicParams_C Ts逻辑变量集
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<BP_ABPLogicParams_C>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_441);
+				return BuiltinUtils.ObjectPropertyGetter<BP_ABPLogicParams_C>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_Ts逻辑变量集);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_441, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_BaseRoleNPC_C.__PropertyOffset_Ts逻辑变量集, value);
 			}
 		}
 
-		// Token: 0x17006B9C RID: 27548
-		// (get) Token: 0x0602B82F RID: 178223 RVA: 0x00A0280F File Offset: 0x00A00A0F
-		// (set) Token: 0x0602B830 RID: 178224 RVA: 0x00A0281F File Offset: 0x00A00A1F
+		// Token: 0x1700409D RID: 16541
+		// (get) Token: 0x06020B32 RID: 133938 RVA: 0x0094CEDE File Offset: 0x0094B0DE
+		// (set) Token: 0x06020B33 RID: 133939 RVA: 0x0094CEEE File Offset: 0x0094B0EE
 		public unsafe bool 不进行_IK_Lerp
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_442) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_不进行_IK_Lerp) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_442) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_不进行_IK_Lerp) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B9D RID: 27549
-		// (get) Token: 0x0602B831 RID: 178225 RVA: 0x00A02830 File Offset: 0x00A00A30
-		// (set) Token: 0x0602B832 RID: 178226 RVA: 0x00A02840 File Offset: 0x00A00A40
+		// Token: 0x1700409E RID: 16542
+		// (get) Token: 0x06020B34 RID: 133940 RVA: 0x0094CEFF File Offset: 0x0094B0FF
+		// (set) Token: 0x06020B35 RID: 133941 RVA: 0x0094CF0F File Offset: 0x0094B10F
 		public unsafe KuroHumanIKMode IK模式
 		{
 			get
 			{
-				return (KuroHumanIKMode)(*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_443));
+				return (KuroHumanIKMode)(*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_IK模式));
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_443) = (byte)value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_IK模式) = (byte)value;
 			}
 		}
 
-		// Token: 0x17006B9E RID: 27550
-		// (get) Token: 0x0602B833 RID: 178227 RVA: 0x00A02851 File Offset: 0x00A00A51
-		// (set) Token: 0x0602B834 RID: 178228 RVA: 0x00A02861 File Offset: 0x00A00A61
+		// Token: 0x1700409F RID: 16543
+		// (get) Token: 0x06020B36 RID: 133942 RVA: 0x0094CF20 File Offset: 0x0094B120
+		// (set) Token: 0x06020B37 RID: 133943 RVA: 0x0094CF30 File Offset: 0x0094B130
 		public unsafe bool 使用混合空间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_444) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_使用混合空间) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_444) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_使用混合空间) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006B9F RID: 27551
-		// (get) Token: 0x0602B835 RID: 178229 RVA: 0x00A02872 File Offset: 0x00A00A72
-		// (set) Token: 0x0602B836 RID: 178230 RVA: 0x00A02886 File Offset: 0x00A00A86
+		// Token: 0x170040A0 RID: 16544
+		// (get) Token: 0x06020B38 RID: 133944 RVA: 0x0094CF41 File Offset: 0x0094B141
+		// (set) Token: 0x06020B39 RID: 133945 RVA: 0x0094CF55 File Offset: 0x0094B155
 		public unsafe FVector2D 看向角度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_445);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_看向角度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_445) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_看向角度) = value;
 			}
 		}
 
-		// Token: 0x17006BA0 RID: 27552
-		// (get) Token: 0x0602B837 RID: 178231 RVA: 0x00A0289B File Offset: 0x00A00A9B
-		// (set) Token: 0x0602B838 RID: 178232 RVA: 0x00A028AF File Offset: 0x00A00AAF
+		// Token: 0x170040A1 RID: 16545
+		// (get) Token: 0x06020B3A RID: 133946 RVA: 0x0094CF6A File Offset: 0x0094B16A
+		// (set) Token: 0x06020B3B RID: 133947 RVA: 0x0094CF7E File Offset: 0x0094B17E
 		public unsafe FVector4 VehicleCollisionMix
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_446);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_VehicleCollisionMix);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_446) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_VehicleCollisionMix) = value;
 			}
 		}
 
-		// Token: 0x17006BA1 RID: 27553
-		// (get) Token: 0x0602B839 RID: 178233 RVA: 0x00A028C4 File Offset: 0x00A00AC4
-		// (set) Token: 0x0602B83A RID: 178234 RVA: 0x00A028D4 File Offset: 0x00A00AD4
+		// Token: 0x170040A2 RID: 16546
+		// (get) Token: 0x06020B3C RID: 133948 RVA: 0x0094CF93 File Offset: 0x0094B193
+		// (set) Token: 0x06020B3D RID: 133949 RVA: 0x0094CFA3 File Offset: 0x0094B1A3
 		public unsafe bool IsVehicleImpact
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_447) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_IsVehicleImpact) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_447) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_IsVehicleImpact) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006BA2 RID: 27554
-		// (get) Token: 0x0602B83B RID: 178235 RVA: 0x00A028E5 File Offset: 0x00A00AE5
-		// (set) Token: 0x0602B83C RID: 178236 RVA: 0x00A028F9 File Offset: 0x00A00AF9
+		// Token: 0x170040A3 RID: 16547
+		// (get) Token: 0x06020B3E RID: 133950 RVA: 0x0094CFB4 File Offset: 0x0094B1B4
+		// (set) Token: 0x06020B3F RID: 133951 RVA: 0x0094CFC8 File Offset: 0x0094B1C8
 		public unsafe FRotator VehicleSeatRot
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_448);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_VehicleSeatRot);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_448) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_VehicleSeatRot) = value;
 			}
 		}
 
-		// Token: 0x17006BA3 RID: 27555
-		// (get) Token: 0x0602B83D RID: 178237 RVA: 0x00A0290E File Offset: 0x00A00B0E
-		// (set) Token: 0x0602B83E RID: 178238 RVA: 0x00A0291E File Offset: 0x00A00B1E
+		// Token: 0x170040A4 RID: 16548
+		// (get) Token: 0x06020B40 RID: 133952 RVA: 0x0094CFDD File Offset: 0x0094B1DD
+		// (set) Token: 0x06020B41 RID: 133953 RVA: 0x0094CFED File Offset: 0x0094B1ED
 		public unsafe float VehicleCollisionAngle
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_449);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_VehicleCollisionAngle);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_449) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_VehicleCollisionAngle) = value;
 			}
 		}
 
-		// Token: 0x17006BA4 RID: 27556
-		// (get) Token: 0x0602B83F RID: 178239 RVA: 0x00A0292F File Offset: 0x00A00B2F
-		// (set) Token: 0x0602B840 RID: 178240 RVA: 0x00A0293F File Offset: 0x00A00B3F
+		// Token: 0x170040A5 RID: 16549
+		// (get) Token: 0x06020B42 RID: 133954 RVA: 0x0094CFFE File Offset: 0x0094B1FE
+		// (set) Token: 0x06020B43 RID: 133955 RVA: 0x0094D00E File Offset: 0x0094B20E
 		public unsafe float VehicleCollisionStrength
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_450);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_VehicleCollisionStrength);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_450) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_VehicleCollisionStrength) = value;
 			}
 		}
 
-		// Token: 0x17006BA5 RID: 27557
-		// (get) Token: 0x0602B841 RID: 178241 RVA: 0x00A02950 File Offset: 0x00A00B50
-		// (set) Token: 0x0602B842 RID: 178242 RVA: 0x00A02960 File Offset: 0x00A00B60
+		// Token: 0x170040A6 RID: 16550
+		// (get) Token: 0x06020B44 RID: 133956 RVA: 0x0094D01F File Offset: 0x0094B21F
+		// (set) Token: 0x06020B45 RID: 133957 RVA: 0x0094D02F File Offset: 0x0094B22F
 		public unsafe float VehicleCollisionAlpha
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_451);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_VehicleCollisionAlpha);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_451) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_VehicleCollisionAlpha) = value;
 			}
 		}
 
-		// Token: 0x17006BA6 RID: 27558
-		// (get) Token: 0x0602B843 RID: 178243 RVA: 0x00A02971 File Offset: 0x00A00B71
-		// (set) Token: 0x0602B844 RID: 178244 RVA: 0x00A02981 File Offset: 0x00A00B81
+		// Token: 0x170040A7 RID: 16551
+		// (get) Token: 0x06020B46 RID: 133958 RVA: 0x0094D040 File Offset: 0x0094B240
+		// (set) Token: 0x06020B47 RID: 133959 RVA: 0x0094D050 File Offset: 0x0094B250
 		public unsafe bool SuddenMoveTrigger
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_452) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_SuddenMoveTrigger) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_452) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_SuddenMoveTrigger) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006BA7 RID: 27559
-		// (get) Token: 0x0602B845 RID: 178245 RVA: 0x00A02992 File Offset: 0x00A00B92
-		// (set) Token: 0x0602B846 RID: 178246 RVA: 0x00A029A6 File Offset: 0x00A00BA6
+		// Token: 0x170040A8 RID: 16552
+		// (get) Token: 0x06020B48 RID: 133960 RVA: 0x0094D061 File Offset: 0x0094B261
+		// (set) Token: 0x06020B49 RID: 133961 RVA: 0x0094D075 File Offset: 0x0094B275
 		public unsafe FVector4 VehicleSuddenMoveMix
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_453);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_VehicleSuddenMoveMix);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_453) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_VehicleSuddenMoveMix) = value;
 			}
 		}
 
-		// Token: 0x17006BA8 RID: 27560
-		// (get) Token: 0x0602B847 RID: 178247 RVA: 0x00A029BB File Offset: 0x00A00BBB
-		// (set) Token: 0x0602B848 RID: 178248 RVA: 0x00A029CB File Offset: 0x00A00BCB
+		// Token: 0x170040A9 RID: 16553
+		// (get) Token: 0x06020B4A RID: 133962 RVA: 0x0094D08A File Offset: 0x0094B28A
+		// (set) Token: 0x06020B4B RID: 133963 RVA: 0x0094D09A File Offset: 0x0094B29A
 		public unsafe float CurForwardSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_454);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CurForwardSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_454) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CurForwardSpeed) = value;
 			}
 		}
 
-		// Token: 0x17006BA9 RID: 27561
-		// (get) Token: 0x0602B849 RID: 178249 RVA: 0x00A029DC File Offset: 0x00A00BDC
-		// (set) Token: 0x0602B84A RID: 178250 RVA: 0x00A029EC File Offset: 0x00A00BEC
+		// Token: 0x170040AA RID: 16554
+		// (get) Token: 0x06020B4C RID: 133964 RVA: 0x0094D0AB File Offset: 0x0094B2AB
+		// (set) Token: 0x06020B4D RID: 133965 RVA: 0x0094D0BB File Offset: 0x0094B2BB
 		public unsafe float LastForwardSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_455);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_LastForwardSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_455) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_LastForwardSpeed) = value;
 			}
 		}
 
-		// Token: 0x17006BAA RID: 27562
-		// (get) Token: 0x0602B84B RID: 178251 RVA: 0x00A029FD File Offset: 0x00A00BFD
-		// (set) Token: 0x0602B84C RID: 178252 RVA: 0x00A02A0D File Offset: 0x00A00C0D
+		// Token: 0x170040AB RID: 16555
+		// (get) Token: 0x06020B4E RID: 133966 RVA: 0x0094D0CC File Offset: 0x0094B2CC
+		// (set) Token: 0x06020B4F RID: 133967 RVA: 0x0094D0DC File Offset: 0x0094B2DC
 		public unsafe float CurSeatRoll
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_456);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CurSeatRoll);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_456) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_CurSeatRoll) = value;
 			}
 		}
 
-		// Token: 0x17006BAB RID: 27563
-		// (get) Token: 0x0602B84D RID: 178253 RVA: 0x00A02A1E File Offset: 0x00A00C1E
-		// (set) Token: 0x0602B84E RID: 178254 RVA: 0x00A02A2E File Offset: 0x00A00C2E
+		// Token: 0x170040AC RID: 16556
+		// (get) Token: 0x06020B50 RID: 133968 RVA: 0x0094D0ED File Offset: 0x0094B2ED
+		// (set) Token: 0x06020B51 RID: 133969 RVA: 0x0094D0FD File Offset: 0x0094B2FD
 		public unsafe float SuddenMoveCd
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_457);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_SuddenMoveCd);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_457) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_SuddenMoveCd) = value;
 			}
 		}
 
-		// Token: 0x17006BAC RID: 27564
-		// (get) Token: 0x0602B84F RID: 178255 RVA: 0x00A02A3F File Offset: 0x00A00C3F
-		// (set) Token: 0x0602B850 RID: 178256 RVA: 0x00A02A4F File Offset: 0x00A00C4F
+		// Token: 0x170040AD RID: 16557
+		// (get) Token: 0x06020B52 RID: 133970 RVA: 0x0094D10E File Offset: 0x0094B30E
+		// (set) Token: 0x06020B53 RID: 133971 RVA: 0x0094D11E File Offset: 0x0094B31E
 		public unsafe bool SuddenStopTrigger
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_458) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_SuddenStopTrigger) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_458) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_SuddenStopTrigger) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006BAD RID: 27565
-		// (get) Token: 0x0602B851 RID: 178257 RVA: 0x00A02A60 File Offset: 0x00A00C60
-		// (set) Token: 0x0602B852 RID: 178258 RVA: 0x00A02A70 File Offset: 0x00A00C70
+		// Token: 0x170040AE RID: 16558
+		// (get) Token: 0x06020B54 RID: 133972 RVA: 0x0094D12F File Offset: 0x0094B32F
+		// (set) Token: 0x06020B55 RID: 133973 RVA: 0x0094D13F File Offset: 0x0094B33F
 		public unsafe float LastSeatRoll
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_459);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_LastSeatRoll);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_459) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_LastSeatRoll) = value;
 			}
 		}
 
-		// Token: 0x17006BAE RID: 27566
-		// (get) Token: 0x0602B853 RID: 178259 RVA: 0x00A02A81 File Offset: 0x00A00C81
-		// (set) Token: 0x0602B854 RID: 178260 RVA: 0x00A02A91 File Offset: 0x00A00C91
+		// Token: 0x170040AF RID: 16559
+		// (get) Token: 0x06020B56 RID: 133974 RVA: 0x0094D150 File Offset: 0x0094B350
+		// (set) Token: 0x06020B57 RID: 133975 RVA: 0x0094D160 File Offset: 0x0094B360
 		public unsafe bool EnableSwitchPose
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_460) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_EnableSwitchPose) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_460) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_EnableSwitchPose) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006BAF RID: 27567
-		// (get) Token: 0x0602B855 RID: 178261 RVA: 0x00A02AA4 File Offset: 0x00A00CA4
-		// (set) Token: 0x0602B856 RID: 178262 RVA: 0x00A02ADD File Offset: 0x00A00CDD
-		[Nullable(1)]
-		public FPoseSnapshot CachePose
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FPoseSnapshot result;
-				if ((result = this._CachePose) == null)
-				{
-					result = (this._CachePose = new FPoseSnapshot(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_461, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseSnapshot.StaticStruct(), base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_461, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17006BB0 RID: 27568
-		// (get) Token: 0x0602B857 RID: 178263 RVA: 0x00A02AFE File Offset: 0x00A00CFE
-		// (set) Token: 0x0602B858 RID: 178264 RVA: 0x00A02B0E File Offset: 0x00A00D0E
+		// Token: 0x170040B0 RID: 16560
+		// (get) Token: 0x06020B58 RID: 133976 RVA: 0x0094D171 File Offset: 0x0094B371
+		// (set) Token: 0x06020B59 RID: 133977 RVA: 0x0094D181 File Offset: 0x0094B381
 		public unsafe float SwitchPoseTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_462);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_SwitchPoseTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_462) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_SwitchPoseTime) = value;
 			}
 		}
 
-		// Token: 0x17006BB1 RID: 27569
-		// (get) Token: 0x0602B859 RID: 178265 RVA: 0x00A02B1F File Offset: 0x00A00D1F
-		// (set) Token: 0x0602B85A RID: 178266 RVA: 0x00A02B2F File Offset: 0x00A00D2F
+		// Token: 0x170040B1 RID: 16561
+		// (get) Token: 0x06020B5A RID: 133978 RVA: 0x0094D192 File Offset: 0x0094B392
+		// (set) Token: 0x06020B5B RID: 133979 RVA: 0x0094D1A2 File Offset: 0x0094B3A2
 		public unsafe bool IsInPlotBlend
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_463) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_IsInPlotBlend) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_463) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_IsInPlotBlend) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006BB2 RID: 27570
-		// (get) Token: 0x0602B85B RID: 178267 RVA: 0x00A02B40 File Offset: 0x00A00D40
-		// (set) Token: 0x0602B85C RID: 178268 RVA: 0x00A02B50 File Offset: 0x00A00D50
+		// Token: 0x170040B2 RID: 16562
+		// (get) Token: 0x06020B5C RID: 133980 RVA: 0x0094D1B3 File Offset: 0x0094B3B3
+		// (set) Token: 0x06020B5D RID: 133981 RVA: 0x0094D1C3 File Offset: 0x0094B3C3
 		public unsafe bool 状态_叠加层_手臂叠加层左手
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_464) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_叠加层_手臂叠加层左手) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_464) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_叠加层_手臂叠加层左手) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006BB3 RID: 27571
-		// (get) Token: 0x0602B85D RID: 178269 RVA: 0x00A02B61 File Offset: 0x00A00D61
-		// (set) Token: 0x0602B85E RID: 178270 RVA: 0x00A02B71 File Offset: 0x00A00D71
+		// Token: 0x170040B3 RID: 16563
+		// (get) Token: 0x06020B5E RID: 133982 RVA: 0x0094D1D4 File Offset: 0x0094B3D4
+		// (set) Token: 0x06020B5F RID: 133983 RVA: 0x0094D1E4 File Offset: 0x0094B3E4
 		public unsafe bool 状态_叠加层_手臂叠加层右手
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_465) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_叠加层_手臂叠加层右手) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_465) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_叠加层_手臂叠加层右手) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006BB4 RID: 27572
-		// (get) Token: 0x0602B85F RID: 178271 RVA: 0x00A02B82 File Offset: 0x00A00D82
-		// (set) Token: 0x0602B860 RID: 178272 RVA: 0x00A02B92 File Offset: 0x00A00D92
+		// Token: 0x170040B4 RID: 16564
+		// (get) Token: 0x06020B60 RID: 133984 RVA: 0x0094D1F5 File Offset: 0x0094B3F5
+		// (set) Token: 0x06020B61 RID: 133985 RVA: 0x0094D205 File Offset: 0x0094B405
 		public unsafe bool 状态_叠加层_下半身通用融合
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_466) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_叠加层_下半身通用融合) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_466) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_叠加层_下半身通用融合) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006BB5 RID: 27573
-		// (get) Token: 0x0602B861 RID: 178273 RVA: 0x00A02BA3 File Offset: 0x00A00DA3
-		// (set) Token: 0x0602B862 RID: 178274 RVA: 0x00A02BB3 File Offset: 0x00A00DB3
+		// Token: 0x170040B5 RID: 16565
+		// (get) Token: 0x06020B62 RID: 133986 RVA: 0x0094D216 File Offset: 0x0094B416
+		// (set) Token: 0x06020B63 RID: 133987 RVA: 0x0094D226 File Offset: 0x0094B426
 		public unsafe float 站立叠加倾斜量
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_467);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_站立叠加倾斜量);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_467) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_站立叠加倾斜量) = value;
 			}
 		}
 
-		// Token: 0x17006BB6 RID: 27574
-		// (get) Token: 0x0602B863 RID: 178275 RVA: 0x00A02BC4 File Offset: 0x00A00DC4
-		// (set) Token: 0x0602B864 RID: 178276 RVA: 0x00A02BD4 File Offset: 0x00A00DD4
+		// Token: 0x170040B6 RID: 16566
+		// (get) Token: 0x06020B64 RID: 133988 RVA: 0x0094D237 File Offset: 0x0094B437
+		// (set) Token: 0x06020B65 RID: 133989 RVA: 0x0094D247 File Offset: 0x0094B447
 		public unsafe bool 是否待机表演
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_468) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_是否待机表演) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_468) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_是否待机表演) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006BB7 RID: 27575
-		// (get) Token: 0x0602B865 RID: 178277 RVA: 0x00A02BE5 File Offset: 0x00A00DE5
-		// (set) Token: 0x0602B866 RID: 178278 RVA: 0x00A02BF5 File Offset: 0x00A00DF5
+		// Token: 0x170040B7 RID: 16567
+		// (get) Token: 0x06020B66 RID: 133990 RVA: 0x0094D258 File Offset: 0x0094B458
+		// (set) Token: 0x06020B67 RID: 133991 RVA: 0x0094D268 File Offset: 0x0094B468
 		public unsafe float 待机表演间隔
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_469);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_待机表演间隔);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_469) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_待机表演间隔) = value;
 			}
 		}
 
-		// Token: 0x17006BB8 RID: 27576
-		// (get) Token: 0x0602B867 RID: 178279 RVA: 0x00A02C06 File Offset: 0x00A00E06
-		// (set) Token: 0x0602B868 RID: 178280 RVA: 0x00A02C16 File Offset: 0x00A00E16
+		// Token: 0x170040B8 RID: 16568
+		// (get) Token: 0x06020B68 RID: 133992 RVA: 0x0094D279 File Offset: 0x0094B479
+		// (set) Token: 0x06020B69 RID: 133993 RVA: 0x0094D289 File Offset: 0x0094B489
 		public unsafe float 当前待机表演计时
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_470);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_当前待机表演计时);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_470) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_当前待机表演计时) = value;
 			}
 		}
 
-		// Token: 0x17006BB9 RID: 27577
-		// (get) Token: 0x0602B869 RID: 178281 RVA: 0x00A02C27 File Offset: 0x00A00E27
-		// (set) Token: 0x0602B86A RID: 178282 RVA: 0x00A02C37 File Offset: 0x00A00E37
+		// Token: 0x170040B9 RID: 16569
+		// (get) Token: 0x06020B6A RID: 133994 RVA: 0x0094D29A File Offset: 0x0094B49A
+		// (set) Token: 0x06020B6B RID: 133995 RVA: 0x0094D2AA File Offset: 0x0094B4AA
 		public unsafe bool 禁用眨眼
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_471) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_禁用眨眼) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_471) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_禁用眨眼) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006BBA RID: 27578
-		// (get) Token: 0x0602B86B RID: 178283 RVA: 0x00A02C48 File Offset: 0x00A00E48
-		// (set) Token: 0x0602B86C RID: 178284 RVA: 0x00A02C58 File Offset: 0x00A00E58
+		// Token: 0x170040BA RID: 16570
+		// (get) Token: 0x06020B6C RID: 133996 RVA: 0x0094D2BB File Offset: 0x0094B4BB
+		// (set) Token: 0x06020B6D RID: 133997 RVA: 0x0094D2CB File Offset: 0x0094B4CB
 		public unsafe bool 状态_乘坐载具
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_472) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_乘坐载具) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_472) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_乘坐载具) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006BBB RID: 27579
-		// (get) Token: 0x0602B86D RID: 178285 RVA: 0x00A02C69 File Offset: 0x00A00E69
-		// (set) Token: 0x0602B86E RID: 178286 RVA: 0x00A02C79 File Offset: 0x00A00E79
+		// Token: 0x170040BB RID: 16571
+		// (get) Token: 0x06020B6E RID: 133998 RVA: 0x0094D2DC File Offset: 0x0094B4DC
+		// (set) Token: 0x06020B6F RID: 133999 RVA: 0x0094D2EC File Offset: 0x0094B4EC
 		public unsafe bool 状态_地区运动模式
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_473) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_地区运动模式) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_473) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_状态_地区运动模式) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006BBC RID: 27580
-		// (get) Token: 0x0602B86F RID: 178287 RVA: 0x00A02C8A File Offset: 0x00A00E8A
-		// (set) Token: 0x0602B870 RID: 178288 RVA: 0x00A02C9A File Offset: 0x00A00E9A
+		// Token: 0x170040BC RID: 16572
+		// (get) Token: 0x06020B70 RID: 134000 RVA: 0x0094D2FD File Offset: 0x0094B4FD
+		// (set) Token: 0x06020B71 RID: 134001 RVA: 0x0094D30D File Offset: 0x0094B50D
 		public unsafe bool 眨眼曲线覆盖蒙太奇
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_474) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_眨眼曲线覆盖蒙太奇) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_474) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRoleNPC_C.__PropertyOffset_眨眼曲线覆盖蒙太奇) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602B871 RID: 178289 RVA: 0x00A02CAC File Offset: 0x00A00EAC
+		// Token: 0x06020B72 RID: 134002 RVA: 0x0094D31E File Offset: 0x0094B51E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void 骨骼混合叠加层(FPoseLink BaseLayer, FPoseLink OverlayLayer, FPoseLink BasePose, ref FPoseLink 骨骼混合叠加层)
-		{
-			ABP_BaseRoleNPC_C.__骨骼混合叠加层_FunctionParams* ptr = stackalloc ABP_BaseRoleNPC_C.__骨骼混合叠加层_FunctionParams[(UIntPtr)111] + 15L / (long)sizeof(ABP_BaseRoleNPC_C.__骨骼混合叠加层_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_BaseRoleNPC_C.__骨骼混合叠加层_NativeFunctionPtr, (void*)ptr, 1);
-			if (BaseLayer != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->BaseLayer, BaseLayer.NativePtr, 1, false);
-			}
-			if (OverlayLayer != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->OverlayLayer, OverlayLayer.NativePtr, 1, false);
-			}
-			if (BasePose != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->BasePose, BasePose.NativePtr, 1, false);
-			}
-			if (骨骼混合叠加层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->骨骼混合叠加层, 骨骼混合叠加层.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__骨骼混合叠加层_NativeFunctionPtr, (void*)ptr);
-			if (骨骼混合叠加层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), 骨骼混合叠加层.NativePtr, &ptr->骨骼混合叠加层, 1, false);
-			}
-		}
-
-		// Token: 0x0602B872 RID: 178290 RVA: 0x00A02DA0 File Offset: 0x00A00FA0
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void 基础姿势层(ref FPoseLink 基础姿势层)
-		{
-			ABP_BaseRoleNPC_C.__基础姿势层_FunctionParams* ptr = stackalloc ABP_BaseRoleNPC_C.__基础姿势层_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(ABP_BaseRoleNPC_C.__基础姿势层_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_BaseRoleNPC_C.__基础姿势层_NativeFunctionPtr, (void*)ptr, 1);
-			if (基础姿势层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->基础姿势层, 基础姿势层.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__基础姿势层_NativeFunctionPtr, (void*)ptr);
-			if (基础姿势层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), 基础姿势层.NativePtr, &ptr->基础姿势层, 1, false);
-			}
-		}
-
-		// Token: 0x0602B873 RID: 178291 RVA: 0x00A02E28 File Offset: 0x00A01028
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void 混合层(FPoseLink 基础层输入, FPoseLink 叠加层输入, FPoseLink 姿势层输入, FPoseLink 手臂叠加层输入, ref FPoseLink 混合层)
-		{
-			ABP_BaseRoleNPC_C.__混合层_FunctionParams* ptr = stackalloc ABP_BaseRoleNPC_C.__混合层_FunctionParams[(UIntPtr)135] + 15L / (long)sizeof(ABP_BaseRoleNPC_C.__混合层_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_BaseRoleNPC_C.__混合层_NativeFunctionPtr, (void*)ptr, 1);
-			if (基础层输入 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->基础层输入, 基础层输入.NativePtr, 1, false);
-			}
-			if (叠加层输入 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->叠加层输入, 叠加层输入.NativePtr, 1, false);
-			}
-			if (姿势层输入 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->姿势层输入, 姿势层输入.NativePtr, 1, false);
-			}
-			if (手臂叠加层输入 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->手臂叠加层输入, 手臂叠加层输入.NativePtr, 1, false);
-			}
-			if (混合层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->混合层, 混合层.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__混合层_NativeFunctionPtr, (void*)ptr);
-			if (混合层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), 混合层.NativePtr, &ptr->混合层, 1, false);
-			}
-		}
-
-		// Token: 0x0602B874 RID: 178292 RVA: 0x00A02F40 File Offset: 0x00A01140
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void 手臂叠加层(ref FPoseLink 手臂叠加层)
-		{
-			ABP_BaseRoleNPC_C.__手臂叠加层_FunctionParams* ptr = stackalloc ABP_BaseRoleNPC_C.__手臂叠加层_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(ABP_BaseRoleNPC_C.__手臂叠加层_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_BaseRoleNPC_C.__手臂叠加层_NativeFunctionPtr, (void*)ptr, 1);
-			if (手臂叠加层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->手臂叠加层, 手臂叠加层.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__手臂叠加层_NativeFunctionPtr, (void*)ptr);
-			if (手臂叠加层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), 手臂叠加层.NativePtr, &ptr->手臂叠加层, 1, false);
-			}
-		}
-
-		// Token: 0x0602B875 RID: 178293 RVA: 0x00A02FC8 File Offset: 0x00A011C8
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void 叠加层(ref FPoseLink 叠加层)
-		{
-			ABP_BaseRoleNPC_C.__叠加层_FunctionParams* ptr = stackalloc ABP_BaseRoleNPC_C.__叠加层_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(ABP_BaseRoleNPC_C.__叠加层_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_BaseRoleNPC_C.__叠加层_NativeFunctionPtr, (void*)ptr, 1);
-			if (叠加层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->叠加层, 叠加层.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__叠加层_NativeFunctionPtr, (void*)ptr);
-			if (叠加层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), 叠加层.NativePtr, &ptr->叠加层, 1, false);
-			}
-		}
-
-		// Token: 0x0602B876 RID: 178294 RVA: 0x00A03050 File Offset: 0x00A01250
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void AnimGraph(FPoseLink 地区运动模式, ref FPoseLink AnimGraph)
-		{
-			ABP_BaseRoleNPC_C.__AnimGraph_FunctionParams* ptr = stackalloc ABP_BaseRoleNPC_C.__AnimGraph_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(ABP_BaseRoleNPC_C.__AnimGraph_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_BaseRoleNPC_C.__AnimGraph_NativeFunctionPtr, (void*)ptr, 1);
-			if (地区运动模式 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->地区运动模式, 地区运动模式.NativePtr, 1, false);
-			}
-			if (AnimGraph != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->AnimGraph, AnimGraph.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__AnimGraph_NativeFunctionPtr, (void*)ptr);
-			if (AnimGraph != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), AnimGraph.NativePtr, &ptr->AnimGraph, 1, false);
-			}
-		}
-
-		// Token: 0x0602B877 RID: 178295 RVA: 0x00A030F9 File Offset: 0x00A012F9
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 重置坐下待机计时()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__重置坐下待机计时_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B878 RID: 178296 RVA: 0x00A0310D File Offset: 0x00A0130D
+		// Token: 0x06020B73 RID: 134003 RVA: 0x0094D332 File Offset: 0x0094B532
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新坐下待机计时()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新坐下待机计时_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B879 RID: 178297 RVA: 0x00A03121 File Offset: 0x00A01321
+		// Token: 0x06020B74 RID: 134004 RVA: 0x0094D346 File Offset: 0x0094B546
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新牵手组件参数()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新牵手组件参数_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B87A RID: 178298 RVA: 0x00A03135 File Offset: 0x00A01335
+		// Token: 0x06020B75 RID: 134005 RVA: 0x0094D35A File Offset: 0x0094B55A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新载具信息()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新载具信息_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B87B RID: 178299 RVA: 0x00A03149 File Offset: 0x00A01349
+		// Token: 0x06020B76 RID: 134006 RVA: 0x0094D36E File Offset: 0x0094B56E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 初始化身高()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__初始化身高_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B87C RID: 178300 RVA: 0x00A0315D File Offset: 0x00A0135D
+		// Token: 0x06020B77 RID: 134007 RVA: 0x0094D382 File Offset: 0x0094B582
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 组件参数动画蓝图初始化绑定()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__组件参数动画蓝图初始化绑定_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B87D RID: 178301 RVA: 0x00A03171 File Offset: 0x00A01371
+		// Token: 0x06020B78 RID: 134008 RVA: 0x0094D396 File Offset: 0x0094B596
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 绑定组件参数()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__绑定组件参数_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B87E RID: 178302 RVA: 0x00A03185 File Offset: 0x00A01385
+		// Token: 0x06020B79 RID: 134009 RVA: 0x0094D3AA File Offset: 0x0094B5AA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新移动信息()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新移动信息_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B87F RID: 178303 RVA: 0x00A03199 File Offset: 0x00A01399
+		// Token: 0x06020B7A RID: 134010 RVA: 0x0094D3BE File Offset: 0x0094B5BE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新角色信息()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新角色信息_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B880 RID: 178304 RVA: 0x00A031AD File Offset: 0x00A013AD
+		// Token: 0x06020B7B RID: 134011 RVA: 0x0094D3D2 File Offset: 0x0094B5D2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新状态参数信息()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新状态参数信息_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B881 RID: 178305 RVA: 0x00A031C1 File Offset: 0x00A013C1
+		// Token: 0x06020B7C RID: 134012 RVA: 0x0094D3E6 File Offset: 0x0094B5E6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 切换地面移动模式时高度补差()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__切换地面移动模式时高度补差_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B882 RID: 178306 RVA: 0x00A031D5 File Offset: 0x00A013D5
+		// Token: 0x06020B7D RID: 134013 RVA: 0x0094D3FA File Offset: 0x0094B5FA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新上传()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新上传_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B883 RID: 178307 RVA: 0x00A031E9 File Offset: 0x00A013E9
+		// Token: 0x06020B7E RID: 134014 RVA: 0x0094D40E File Offset: 0x0094B60E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新时间参数()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新时间参数_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B884 RID: 178308 RVA: 0x00A031FD File Offset: 0x00A013FD
+		// Token: 0x06020B7F RID: 134015 RVA: 0x0094D422 File Offset: 0x0094B622
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新网络参数()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新网络参数_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B885 RID: 178309 RVA: 0x00A03211 File Offset: 0x00A01411
+		// Token: 0x06020B80 RID: 134016 RVA: 0x0094D436 File Offset: 0x0094B636
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新动画组件参数()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新动画组件参数_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B886 RID: 178310 RVA: 0x00A03225 File Offset: 0x00A01425
+		// Token: 0x06020B81 RID: 134017 RVA: 0x0094D44A File Offset: 0x0094B64A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新移动组件参数()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新移动组件参数_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B887 RID: 178311 RVA: 0x00A03239 File Offset: 0x00A01439
+		// Token: 0x06020B82 RID: 134018 RVA: 0x0094D45E File Offset: 0x0094B65E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新随机表演()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新随机表演_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B888 RID: 178312 RVA: 0x00A0324D File Offset: 0x00A0144D
+		// Token: 0x06020B83 RID: 134019 RVA: 0x0094D472 File Offset: 0x0094B672
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新角色状态()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新角色状态_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B889 RID: 178313 RVA: 0x00A03264 File Offset: 0x00A01464
+		// Token: 0x06020B84 RID: 134020 RVA: 0x0094D488 File Offset: 0x0094B688
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 设置头部转向状态(SightLockMode SightMode)
 		{
 			ABP_BaseRoleNPC_C.__设置头部转向状态_FunctionParams* ptr = stackalloc ABP_BaseRoleNPC_C.__设置头部转向状态_FunctionParams[(UIntPtr)17] + 15L / (long)sizeof(ABP_BaseRoleNPC_C.__设置头部转向状态_FunctionParams) & -16L;
@@ -2016,9 +1791,8 @@ namespace AkiClient.Game.Aki.Character.NPC.RoleNPC
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__设置头部转向状态_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602B88A RID: 178314 RVA: 0x00A032AC File Offset: 0x00A014AC
+		// Token: 0x06020B85 RID: 134021 RVA: 0x0094D4D0 File Offset: 0x0094B6D0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void 更新头部转向(FRotator NewParam)
 		{
 			ABP_BaseRoleNPC_C.__更新头部转向_FunctionParams* ptr = stackalloc ABP_BaseRoleNPC_C.__更新头部转向_FunctionParams[(UIntPtr)103] + 15L / (long)sizeof(ABP_BaseRoleNPC_C.__更新头部转向_FunctionParams) & -16L;
@@ -2027,33 +1801,29 @@ namespace AkiClient.Game.Aki.Character.NPC.RoleNPC
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新头部转向_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602B88B RID: 178315 RVA: 0x00A032F2 File Offset: 0x00A014F2
+		// Token: 0x06020B86 RID: 134022 RVA: 0x0094D516 File Offset: 0x0094B716
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新_IK信息()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新_IK信息_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B88C RID: 178316 RVA: 0x00A03306 File Offset: 0x00A01506
+		// Token: 0x06020B87 RID: 134023 RVA: 0x0094D52A File Offset: 0x0094B72A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 原地旋转检查()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__原地旋转检查_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B88D RID: 178317 RVA: 0x00A0331A File Offset: 0x00A0151A
+		// Token: 0x06020B88 RID: 134024 RVA: 0x0094D53E File Offset: 0x0094B73E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新旋转信息()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__更新旋转信息_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B88E RID: 178318 RVA: 0x00A03330 File Offset: 0x00A01530
+		// Token: 0x06020B89 RID: 134025 RVA: 0x0094D554 File Offset: 0x0094B754
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual bool 是否需要移动()
 		{
 			ABP_BaseRoleNPC_C.__是否需要移动_FunctionParams* ptr = stackalloc ABP_BaseRoleNPC_C.__是否需要移动_FunctionParams[(UIntPtr)21] + 15L / (long)sizeof(ABP_BaseRoleNPC_C.__是否需要移动_FunctionParams) & -16L;
@@ -2062,9 +1832,8 @@ namespace AkiClient.Game.Aki.Character.NPC.RoleNPC
 			return ptr->__Result;
 		}
 
-		// Token: 0x0602B88F RID: 178319 RVA: 0x00A03378 File Offset: 0x00A01578
+		// Token: 0x06020B8A RID: 134026 RVA: 0x0094D59C File Offset: 0x0094B79C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void BlueprintUpdateAnimation(float DeltaTimeX)
 		{
 			ABP_BaseRoleNPC_C.__BlueprintUpdateAnimation_FunctionParams* ptr = stackalloc ABP_BaseRoleNPC_C.__BlueprintUpdateAnimation_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_BaseRoleNPC_C.__BlueprintUpdateAnimation_FunctionParams) & -16L;
@@ -2073,66 +1842,46 @@ namespace AkiClient.Game.Aki.Character.NPC.RoleNPC
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602B890 RID: 178320 RVA: 0x00A033C0 File Offset: 0x00A015C0
+		// Token: 0x06020B8B RID: 134027 RVA: 0x0094D5E4 File Offset: 0x0094B7E4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void BlueprintUpdateAnimation_Implementation(float DeltaTimeX)
 		{
 			ABP_BaseRoleNPC_C.__BlueprintUpdateAnimation_FunctionParams* ptr = stackalloc ABP_BaseRoleNPC_C.__BlueprintUpdateAnimation_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_BaseRoleNPC_C.__BlueprintUpdateAnimation_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ABP_BaseRoleNPC_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaTimeX = DeltaTimeX;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602B891 RID: 178321 RVA: 0x00A03407 File Offset: 0x00A01607
+		// Token: 0x06020B8C RID: 134028 RVA: 0x0094D62A File Offset: 0x0094B82A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void BlueprintInitializeAnimation()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__BlueprintInitializeAnimation_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B892 RID: 178322 RVA: 0x00A0341B File Offset: 0x00A0161B
+		// Token: 0x06020B8D RID: 134029 RVA: 0x0094D63E File Offset: 0x0094B83E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void BlueprintInitializeAnimation_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__BlueprintInitializeAnimation_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__BlueprintInitializeAnimation_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B893 RID: 178323 RVA: 0x00A03430 File Offset: 0x00A01630
+		// Token: 0x06020B8E RID: 134030 RVA: 0x0094D652 File Offset: 0x0094B852
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void 播放动画(SDynamicMontageParams 播放动画)
-		{
-			ABP_BaseRoleNPC_C.__播放动画_FunctionParams* ptr = stackalloc ABP_BaseRoleNPC_C.__播放动画_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(ABP_BaseRoleNPC_C.__播放动画_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_BaseRoleNPC_C.__播放动画_NativeFunctionPtr, (void*)ptr, 1);
-			if (播放动画 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(SDynamicMontageParams.StaticStruct(), &ptr->播放动画, 播放动画.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__播放动画_NativeFunctionPtr, (void*)ptr);
-		}
-
-		// Token: 0x0602B894 RID: 178324 RVA: 0x00A03491 File Offset: 0x00A01691
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void OnComponentStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__OnComponentStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B895 RID: 178325 RVA: 0x00A034A5 File Offset: 0x00A016A5
+		// Token: 0x06020B8F RID: 134031 RVA: 0x0094D666 File Offset: 0x0094B866
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void OnComponentStart_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__OnComponentStart_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__OnComponentStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B896 RID: 178326 RVA: 0x00A034BC File Offset: 0x00A016BC
+		// Token: 0x06020B90 RID: 134032 RVA: 0x0094D67C File Offset: 0x0094B87C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void MovementChanged(ACharacter Character, EMovementMode PrevMovementMode, byte PreviousCustomMode)
 		{
 			ABP_BaseRoleNPC_C.__MovementChanged_FunctionParams* ptr = stackalloc ABP_BaseRoleNPC_C.__MovementChanged_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(ABP_BaseRoleNPC_C.__MovementChanged_FunctionParams) & -16L;
@@ -2143,652 +1892,505 @@ namespace AkiClient.Game.Aki.Character.NPC.RoleNPC
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__MovementChanged_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602B897 RID: 178327 RVA: 0x00A03524 File Offset: 0x00A01724
+		// Token: 0x06020B91 RID: 134033 RVA: 0x0094D6E4 File Offset: 0x0094B8E4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void PlotBlendIn()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__PlotBlendIn_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B898 RID: 178328 RVA: 0x00A03538 File Offset: 0x00A01738
+		// Token: 0x06020B92 RID: 134034 RVA: 0x0094D6F8 File Offset: 0x0094B8F8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void NoExpose()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRoleNPC_C.__NoExpose_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602B899 RID: 178329 RVA: 0x00A0354C File Offset: 0x00A0174C
+		// Token: 0x06020B93 RID: 134035 RVA: 0x0094D70C File Offset: 0x0094B90C
 		protected ABP_BaseRoleNPC_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04016A15 RID: 92693
+		// Token: 0x04011AA8 RID: 72360
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/NPC/RoleNPC/ABP_BaseRoleNPC.ABP_BaseRoleNPC_C";
 
-		// Token: 0x04016A16 RID: 92694
+		// Token: 0x04011AA9 RID: 72361
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04016A17 RID: 92695
+		// Token: 0x04011AAA RID: 72362
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04016A18 RID: 92696
-		internal static int __PropertyOffset_365;
+		// Token: 0x04011AAB RID: 72363
+		internal static int __PropertyOffset_角色蓝图;
 
-		// Token: 0x04016A19 RID: 92697
-		internal static int __PropertyOffset_366;
+		// Token: 0x04011AAC RID: 72364
+		internal static int __PropertyOffset_DeltaTimeX;
 
-		// Token: 0x04016A1A RID: 92698
-		internal static int __PropertyOffset_367;
+		// Token: 0x04011AAD RID: 72365
+		internal static int __PropertyOffset_速度向量;
 
-		// Token: 0x04016A1B RID: 92699
-		internal static int __PropertyOffset_368;
+		// Token: 0x04011AAE RID: 72366
+		internal static int __PropertyOffset_加速度;
 
-		// Token: 0x04016A1C RID: 92700
-		internal static int __PropertyOffset_369;
+		// Token: 0x04011AAF RID: 72367
+		internal static int __PropertyOffset_移动输入向量;
 
-		// Token: 0x04016A1D RID: 92701
-		internal static int __PropertyOffset_370;
+		// Token: 0x04011AB0 RID: 72368
+		internal static int __PropertyOffset_是否正在移动;
 
-		// Token: 0x04016A1E RID: 92702
-		internal static int __PropertyOffset_371;
+		// Token: 0x04011AB1 RID: 72369
+		internal static int __PropertyOffset_是否有移动输入;
 
-		// Token: 0x04016A1F RID: 92703
-		internal static int __PropertyOffset_372;
+		// Token: 0x04011AB2 RID: 72370
+		internal static int __PropertyOffset_速度;
 
-		// Token: 0x04016A20 RID: 92704
-		internal static int __PropertyOffset_373;
+		// Token: 0x04011AB3 RID: 72371
+		internal static int __PropertyOffset_瞄准旋转;
 
-		// Token: 0x04016A21 RID: 92705
-		internal static int __PropertyOffset_374;
+		// Token: 0x04011AB4 RID: 72372
+		internal static int __PropertyOffset_是否将要移动;
 
-		// Token: 0x04016A22 RID: 92706
-		internal static int __PropertyOffset_375;
+		// Token: 0x04011AB5 RID: 72373
+		internal static int __PropertyOffset_正在旋转;
 
-		// Token: 0x04016A23 RID: 92707
-		internal static int __PropertyOffset_376;
+		// Token: 0x04011AB6 RID: 72374
+		internal static int __PropertyOffset_旋转速度;
 
-		// Token: 0x04016A24 RID: 92708
-		internal static int __PropertyOffset_377;
+		// Token: 0x04011AB7 RID: 72375
+		internal static int __PropertyOffset_旋转混合;
 
-		// Token: 0x04016A25 RID: 92709
-		internal static int __PropertyOffset_378;
+		// Token: 0x04011AB8 RID: 72376
+		internal static int __PropertyOffset_速度混合;
 
-		// Token: 0x04016A26 RID: 92710
-		internal static int __PropertyOffset_379;
+		// Token: 0x04011AB9 RID: 72377
+		internal static int __PropertyOffset_相对加速度;
 
-		// Token: 0x04016A27 RID: 92711
-		internal static int __PropertyOffset_380;
+		// Token: 0x04011ABA RID: 72378
+		internal static int __PropertyOffset_地上倾斜量平滑速度;
 
-		// Token: 0x04016A28 RID: 92712
-		private FLeanAmount _倾斜量;
+		// Token: 0x04011ABB RID: 72379
+		internal static int __PropertyOffset_移动方向;
 
-		// Token: 0x04016A29 RID: 92713
-		internal static int __PropertyOffset_381;
+		// Token: 0x04011ABC RID: 72380
+		internal static int __PropertyOffset_站立播放速率;
 
-		// Token: 0x04016A2A RID: 92714
-		internal static int __PropertyOffset_382;
+		// Token: 0x04011ABD RID: 72381
+		internal static int __PropertyOffset_走跑混合;
 
-		// Token: 0x04016A2B RID: 92715
-		internal static int __PropertyOffset_383;
+		// Token: 0x04011ABE RID: 72382
+		internal static int __PropertyOffset_站立走步幅混合曲线;
 
-		// Token: 0x04016A2C RID: 92716
-		internal static int __PropertyOffset_384;
+		// Token: 0x04011ABF RID: 72383
+		internal static int __PropertyOffset_站立跑步幅混合曲线;
 
-		// Token: 0x04016A2D RID: 92717
-		internal static int __PropertyOffset_385;
+		// Token: 0x04011AC0 RID: 72384
+		internal static int __PropertyOffset_步幅混合;
 
-		// Token: 0x04016A2E RID: 92718
-		internal static int __PropertyOffset_386;
+		// Token: 0x04011AC1 RID: 72385
+		internal static int __PropertyOffset_动画行走速度;
 
-		// Token: 0x04016A2F RID: 92719
-		internal static int __PropertyOffset_387;
+		// Token: 0x04011AC2 RID: 72386
+		internal static int __PropertyOffset_动画跑步速度;
 
-		// Token: 0x04016A30 RID: 92720
-		internal static int __PropertyOffset_388;
+		// Token: 0x04011AC3 RID: 72387
+		internal static int __PropertyOffset_动画疾跑速度;
 
-		// Token: 0x04016A31 RID: 92721
-		internal static int __PropertyOffset_389;
+		// Token: 0x04011AC4 RID: 72388
+		internal static int __PropertyOffset_RelativeSpeedBlendCurve;
 
-		// Token: 0x04016A32 RID: 92722
-		internal static int __PropertyOffset_390;
+		// Token: 0x04011AC5 RID: 72389
+		internal static int __PropertyOffset_整体偏移;
 
-		// Token: 0x04016A33 RID: 92723
-		internal static int __PropertyOffset_391;
+		// Token: 0x04011AC6 RID: 72390
+		internal static int __PropertyOffset_角色Mesh;
 
-		// Token: 0x04016A34 RID: 92724
-		internal static int __PropertyOffset_392;
+		// Token: 0x04011AC7 RID: 72391
+		internal static int __PropertyOffset_整体偏移_实际使用_;
 
-		// Token: 0x04016A35 RID: 92725
-		internal static int __PropertyOffset_393;
+		// Token: 0x04011AC8 RID: 72392
+		internal static int __PropertyOffset_上一帧模型位置;
 
-		// Token: 0x04016A36 RID: 92726
-		internal static int __PropertyOffset_394;
+		// Token: 0x04011AC9 RID: 72393
+		internal static int __PropertyOffset_IsAutonomousProxy;
 
-		// Token: 0x04016A37 RID: 92727
-		internal static int __PropertyOffset_395;
+		// Token: 0x04011ACA RID: 72394
+		internal static int __PropertyOffset_瞄准面向;
 
-		// Token: 0x04016A38 RID: 92728
-		internal static int __PropertyOffset_396;
+		// Token: 0x04011ACB RID: 72395
+		internal static int __PropertyOffset_瞄准仰角;
 
-		// Token: 0x04016A39 RID: 92729
-		internal static int __PropertyOffset_397;
+		// Token: 0x04011ACC RID: 72396
+		internal static int __PropertyOffset_当前坡度;
 
-		// Token: 0x04016A3A RID: 92730
-		internal static int __PropertyOffset_398;
+		// Token: 0x04011ACD RID: 72397
+		internal static int __PropertyOffset_视线修正Alpha;
 
-		// Token: 0x04016A3B RID: 92731
-		internal static int __PropertyOffset_399;
+		// Token: 0x04011ACE RID: 72398
+		internal static int __PropertyOffset_看向位置;
 
-		// Token: 0x04016A3C RID: 92732
-		internal static int __PropertyOffset_400;
+		// Token: 0x04011ACF RID: 72399
+		internal static int __PropertyOffset_CachePercent_LR;
 
-		// Token: 0x04016A3D RID: 92733
-		internal static int __PropertyOffset_401;
+		// Token: 0x04011AD0 RID: 72400
+		internal static int __PropertyOffset_CachePercent_FB;
 
-		// Token: 0x04016A3E RID: 92734
-		internal static int __PropertyOffset_402;
+		// Token: 0x04011AD1 RID: 72401
+		internal static int __PropertyOffset_角色向前向量;
 
-		// Token: 0x04016A3F RID: 92735
-		internal static int __PropertyOffset_403;
+		// Token: 0x04011AD2 RID: 72402
+		internal static int __PropertyOffset_外部方向输入;
 
-		// Token: 0x04016A40 RID: 92736
-		internal static int __PropertyOffset_404;
+		// Token: 0x04011AD3 RID: 72403
+		internal static int __PropertyOffset_是否需要原地转身;
 
-		// Token: 0x04016A41 RID: 92737
-		internal static int __PropertyOffset_405;
+		// Token: 0x04011AD4 RID: 72404
+		internal static int __PropertyOffset_右转;
 
-		// Token: 0x04016A42 RID: 92738
-		internal static int __PropertyOffset_406;
+		// Token: 0x04011AD5 RID: 72405
+		internal static int __PropertyOffset_状态_跑停;
 
-		// Token: 0x04016A43 RID: 92739
-		internal static int __PropertyOffset_407;
+		// Token: 0x04011AD6 RID: 72406
+		internal static int __PropertyOffset_状态_跑停_RunStop;
 
-		// Token: 0x04016A44 RID: 92740
-		internal static int __PropertyOffset_408;
+		// Token: 0x04011AD7 RID: 72407
+		internal static int __PropertyOffset_状态_跑停_SprintStop;
 
-		// Token: 0x04016A45 RID: 92741
-		internal static int __PropertyOffset_409;
+		// Token: 0x04011AD8 RID: 72408
+		internal static int __PropertyOffset_状态_跑停_WalkStop;
 
-		// Token: 0x04016A46 RID: 92742
-		internal static int __PropertyOffset_410;
+		// Token: 0x04011AD9 RID: 72409
+		internal static int __PropertyOffset_状态_地面_Sprint;
 
-		// Token: 0x04016A47 RID: 92743
-		internal static int __PropertyOffset_411;
+		// Token: 0x04011ADA RID: 72410
+		internal static int __PropertyOffset_状态_地面_Walk;
 
-		// Token: 0x04016A48 RID: 92744
-		internal static int __PropertyOffset_412;
+		// Token: 0x04011ADB RID: 72411
+		internal static int __PropertyOffset_状态_地面_Run;
 
-		// Token: 0x04016A49 RID: 92745
-		internal static int __PropertyOffset_413;
+		// Token: 0x04011ADC RID: 72412
+		internal static int __PropertyOffset_状态_牵手_牵手中;
 
-		// Token: 0x04016A4A RID: 92746
-		internal static int __PropertyOffset_414;
+		// Token: 0x04011ADD RID: 72413
+		internal static int __PropertyOffset_状态_牵手_被牵手中;
 
-		// Token: 0x04016A4B RID: 92747
-		internal static int __PropertyOffset_415;
+		// Token: 0x04011ADE RID: 72414
+		internal static int __PropertyOffset_状态_牵手_范围内;
 
-		// Token: 0x04016A4C RID: 92748
-		internal static int __PropertyOffset_416;
+		// Token: 0x04011ADF RID: 72415
+		internal static int __PropertyOffset_状态_牵手_接受邀请中;
 
-		// Token: 0x04016A4D RID: 92749
-		internal static int __PropertyOffset_417;
+		// Token: 0x04011AE0 RID: 72416
+		internal static int __PropertyOffset_CharMoveState;
 
-		// Token: 0x04016A4E RID: 92750
-		internal static int __PropertyOffset_418;
+		// Token: 0x04011AE1 RID: 72417
+		internal static int __PropertyOffset_ExpresionAlpha;
 
-		// Token: 0x04016A4F RID: 92751
-		internal static int __PropertyOffset_419;
+		// Token: 0x04011AE2 RID: 72418
+		internal static int __PropertyOffset_RandomEpresionEndTime;
 
-		// Token: 0x04016A50 RID: 92752
-		internal static int __PropertyOffset_420;
+		// Token: 0x04011AE3 RID: 72419
+		internal static int __PropertyOffset_眨眼动画时长;
 
-		// Token: 0x04016A51 RID: 92753
-		internal static int __PropertyOffset_421;
+		// Token: 0x04011AE4 RID: 72420
+		internal static int __PropertyOffset_此轮眨眼动画总时长;
 
-		// Token: 0x04016A52 RID: 92754
-		internal static int __PropertyOffset_422;
+		// Token: 0x04011AE5 RID: 72421
+		internal static int __PropertyOffset_角色旋转;
 
-		// Token: 0x04016A53 RID: 92755
-		internal static int __PropertyOffset_423;
+		// Token: 0x04011AE6 RID: 72422
+		internal static int __PropertyOffset_原地旋转偏差角;
 
-		// Token: 0x04016A54 RID: 92756
-		internal static int __PropertyOffset_424;
+		// Token: 0x04011AE7 RID: 72423
+		internal static int __PropertyOffset_移动时是否有阻挡;
 
-		// Token: 0x04016A55 RID: 92757
-		internal static int __PropertyOffset_425;
+		// Token: 0x04011AE8 RID: 72424
+		internal static int __PropertyOffset_TimeSeconds;
 
-		// Token: 0x04016A56 RID: 92758
-		internal static int __PropertyOffset_426;
+		// Token: 0x04011AE9 RID: 72425
+		internal static int __PropertyOffset_InSequenceAlpha;
 
-		// Token: 0x04016A57 RID: 92759
-		internal static int __PropertyOffset_427;
+		// Token: 0x04011AEA RID: 72426
+		internal static int __PropertyOffset_缓存角色位置;
 
-		// Token: 0x04016A58 RID: 92760
-		internal static int __PropertyOffset_428;
+		// Token: 0x04011AEB RID: 72427
+		internal static int __PropertyOffset_AngelToStepLength;
 
-		// Token: 0x04016A59 RID: 92761
-		internal static int __PropertyOffset_429;
+		// Token: 0x04011AEC RID: 72428
+		internal static int __PropertyOffset_Angle_to_Step_Frequency;
 
-		// Token: 0x04016A5A RID: 92762
-		internal static int __PropertyOffset_430;
+		// Token: 0x04011AED RID: 72429
+		internal static int __PropertyOffset_综合旋转;
 
-		// Token: 0x04016A5B RID: 92763
-		internal static int __PropertyOffset_431;
+		// Token: 0x04011AEE RID: 72430
+		internal static int __PropertyOffset_上一帧位置;
 
-		// Token: 0x04016A5C RID: 92764
-		internal static int __PropertyOffset_432;
+		// Token: 0x04011AEF RID: 72431
+		internal static int __PropertyOffset_角色位移;
 
-		// Token: 0x04016A5D RID: 92765
-		internal static int __PropertyOffset_433;
+		// Token: 0x04011AF0 RID: 72432
+		internal static int __PropertyOffset_眨眼中;
 
-		// Token: 0x04016A5E RID: 92766
-		internal static int __PropertyOffset_434;
+		// Token: 0x04011AF1 RID: 72433
+		internal static int __PropertyOffset_身高;
 
-		// Token: 0x04016A5F RID: 92767
-		internal static int __PropertyOffset_435;
+		// Token: 0x04011AF2 RID: 72434
+		internal static int __PropertyOffset_bComponentStart;
 
-		// Token: 0x04016A60 RID: 92768
-		internal static int __PropertyOffset_436;
+		// Token: 0x04011AF3 RID: 72435
+		internal static int __PropertyOffset_CharPositionState;
 
-		// Token: 0x04016A61 RID: 92769
-		internal static int __PropertyOffset_437;
+		// Token: 0x04011AF4 RID: 72436
+		internal static int __PropertyOffset_CharCameraState;
 
-		// Token: 0x04016A62 RID: 92770
-		internal static int __PropertyOffset_438;
+		// Token: 0x04011AF5 RID: 72437
+		internal static int __PropertyOffset_Ts逻辑变量集;
 
-		// Token: 0x04016A63 RID: 92771
-		internal static int __PropertyOffset_439;
+		// Token: 0x04011AF6 RID: 72438
+		internal static int __PropertyOffset_不进行_IK_Lerp;
 
-		// Token: 0x04016A64 RID: 92772
-		internal static int __PropertyOffset_440;
+		// Token: 0x04011AF7 RID: 72439
+		internal static int __PropertyOffset_IK模式;
 
-		// Token: 0x04016A65 RID: 92773
-		internal static int __PropertyOffset_441;
+		// Token: 0x04011AF8 RID: 72440
+		internal static int __PropertyOffset_使用混合空间;
 
-		// Token: 0x04016A66 RID: 92774
-		internal static int __PropertyOffset_442;
+		// Token: 0x04011AF9 RID: 72441
+		internal static int __PropertyOffset_看向角度;
 
-		// Token: 0x04016A67 RID: 92775
-		internal static int __PropertyOffset_443;
+		// Token: 0x04011AFA RID: 72442
+		internal static int __PropertyOffset_VehicleCollisionMix;
 
-		// Token: 0x04016A68 RID: 92776
-		internal static int __PropertyOffset_444;
+		// Token: 0x04011AFB RID: 72443
+		internal static int __PropertyOffset_IsVehicleImpact;
 
-		// Token: 0x04016A69 RID: 92777
-		internal static int __PropertyOffset_445;
+		// Token: 0x04011AFC RID: 72444
+		internal static int __PropertyOffset_VehicleSeatRot;
 
-		// Token: 0x04016A6A RID: 92778
-		internal static int __PropertyOffset_446;
+		// Token: 0x04011AFD RID: 72445
+		internal static int __PropertyOffset_VehicleCollisionAngle;
 
-		// Token: 0x04016A6B RID: 92779
-		internal static int __PropertyOffset_447;
+		// Token: 0x04011AFE RID: 72446
+		internal static int __PropertyOffset_VehicleCollisionStrength;
 
-		// Token: 0x04016A6C RID: 92780
-		internal static int __PropertyOffset_448;
+		// Token: 0x04011AFF RID: 72447
+		internal static int __PropertyOffset_VehicleCollisionAlpha;
 
-		// Token: 0x04016A6D RID: 92781
-		internal static int __PropertyOffset_449;
+		// Token: 0x04011B00 RID: 72448
+		internal static int __PropertyOffset_SuddenMoveTrigger;
 
-		// Token: 0x04016A6E RID: 92782
-		internal static int __PropertyOffset_450;
+		// Token: 0x04011B01 RID: 72449
+		internal static int __PropertyOffset_VehicleSuddenMoveMix;
 
-		// Token: 0x04016A6F RID: 92783
-		internal static int __PropertyOffset_451;
+		// Token: 0x04011B02 RID: 72450
+		internal static int __PropertyOffset_CurForwardSpeed;
 
-		// Token: 0x04016A70 RID: 92784
-		internal static int __PropertyOffset_452;
+		// Token: 0x04011B03 RID: 72451
+		internal static int __PropertyOffset_LastForwardSpeed;
 
-		// Token: 0x04016A71 RID: 92785
-		internal static int __PropertyOffset_453;
+		// Token: 0x04011B04 RID: 72452
+		internal static int __PropertyOffset_CurSeatRoll;
 
-		// Token: 0x04016A72 RID: 92786
-		internal static int __PropertyOffset_454;
+		// Token: 0x04011B05 RID: 72453
+		internal static int __PropertyOffset_SuddenMoveCd;
 
-		// Token: 0x04016A73 RID: 92787
-		internal static int __PropertyOffset_455;
+		// Token: 0x04011B06 RID: 72454
+		internal static int __PropertyOffset_SuddenStopTrigger;
 
-		// Token: 0x04016A74 RID: 92788
-		internal static int __PropertyOffset_456;
+		// Token: 0x04011B07 RID: 72455
+		internal static int __PropertyOffset_LastSeatRoll;
 
-		// Token: 0x04016A75 RID: 92789
-		internal static int __PropertyOffset_457;
+		// Token: 0x04011B08 RID: 72456
+		internal static int __PropertyOffset_EnableSwitchPose;
 
-		// Token: 0x04016A76 RID: 92790
-		internal static int __PropertyOffset_458;
+		// Token: 0x04011B09 RID: 72457
+		internal static int __PropertyOffset_SwitchPoseTime;
 
-		// Token: 0x04016A77 RID: 92791
-		internal static int __PropertyOffset_459;
+		// Token: 0x04011B0A RID: 72458
+		internal static int __PropertyOffset_IsInPlotBlend;
 
-		// Token: 0x04016A78 RID: 92792
-		internal static int __PropertyOffset_460;
+		// Token: 0x04011B0B RID: 72459
+		internal static int __PropertyOffset_状态_叠加层_手臂叠加层左手;
 
-		// Token: 0x04016A79 RID: 92793
-		internal static int __PropertyOffset_461;
+		// Token: 0x04011B0C RID: 72460
+		internal static int __PropertyOffset_状态_叠加层_手臂叠加层右手;
 
-		// Token: 0x04016A7A RID: 92794
-		private FPoseSnapshot _CachePose;
+		// Token: 0x04011B0D RID: 72461
+		internal static int __PropertyOffset_状态_叠加层_下半身通用融合;
 
-		// Token: 0x04016A7B RID: 92795
-		internal static int __PropertyOffset_462;
+		// Token: 0x04011B0E RID: 72462
+		internal static int __PropertyOffset_站立叠加倾斜量;
 
-		// Token: 0x04016A7C RID: 92796
-		internal static int __PropertyOffset_463;
+		// Token: 0x04011B0F RID: 72463
+		internal static int __PropertyOffset_是否待机表演;
 
-		// Token: 0x04016A7D RID: 92797
-		internal static int __PropertyOffset_464;
+		// Token: 0x04011B10 RID: 72464
+		internal static int __PropertyOffset_待机表演间隔;
 
-		// Token: 0x04016A7E RID: 92798
-		internal static int __PropertyOffset_465;
+		// Token: 0x04011B11 RID: 72465
+		internal static int __PropertyOffset_当前待机表演计时;
 
-		// Token: 0x04016A7F RID: 92799
-		internal static int __PropertyOffset_466;
+		// Token: 0x04011B12 RID: 72466
+		internal static int __PropertyOffset_禁用眨眼;
 
-		// Token: 0x04016A80 RID: 92800
-		internal static int __PropertyOffset_467;
+		// Token: 0x04011B13 RID: 72467
+		internal static int __PropertyOffset_状态_乘坐载具;
 
-		// Token: 0x04016A81 RID: 92801
-		internal static int __PropertyOffset_468;
+		// Token: 0x04011B14 RID: 72468
+		internal static int __PropertyOffset_状态_地区运动模式;
 
-		// Token: 0x04016A82 RID: 92802
-		internal static int __PropertyOffset_469;
+		// Token: 0x04011B15 RID: 72469
+		internal static int __PropertyOffset_眨眼曲线覆盖蒙太奇;
 
-		// Token: 0x04016A83 RID: 92803
-		internal static int __PropertyOffset_470;
-
-		// Token: 0x04016A84 RID: 92804
-		internal static int __PropertyOffset_471;
-
-		// Token: 0x04016A85 RID: 92805
-		internal static int __PropertyOffset_472;
-
-		// Token: 0x04016A86 RID: 92806
-		internal static int __PropertyOffset_473;
-
-		// Token: 0x04016A87 RID: 92807
-		internal static int __PropertyOffset_474;
-
-		// Token: 0x04016A88 RID: 92808
-		private static IntPtr __骨骼混合叠加层_NativeFunctionPtr;
-
-		// Token: 0x04016A89 RID: 92809
-		private static IntPtr __基础姿势层_NativeFunctionPtr;
-
-		// Token: 0x04016A8A RID: 92810
-		private static IntPtr __混合层_NativeFunctionPtr;
-
-		// Token: 0x04016A8B RID: 92811
-		private static IntPtr __手臂叠加层_NativeFunctionPtr;
-
-		// Token: 0x04016A8C RID: 92812
-		private static IntPtr __叠加层_NativeFunctionPtr;
-
-		// Token: 0x04016A8D RID: 92813
-		private static IntPtr __AnimGraph_NativeFunctionPtr;
-
-		// Token: 0x04016A8E RID: 92814
+		// Token: 0x04011B16 RID: 72470
 		private static IntPtr __重置坐下待机计时_NativeFunctionPtr;
 
-		// Token: 0x04016A8F RID: 92815
+		// Token: 0x04011B17 RID: 72471
 		private static IntPtr __更新坐下待机计时_NativeFunctionPtr;
 
-		// Token: 0x04016A90 RID: 92816
+		// Token: 0x04011B18 RID: 72472
 		private static IntPtr __更新牵手组件参数_NativeFunctionPtr;
 
-		// Token: 0x04016A91 RID: 92817
+		// Token: 0x04011B19 RID: 72473
 		private static IntPtr __更新载具信息_NativeFunctionPtr;
 
-		// Token: 0x04016A92 RID: 92818
+		// Token: 0x04011B1A RID: 72474
 		private static IntPtr __初始化身高_NativeFunctionPtr;
 
-		// Token: 0x04016A93 RID: 92819
+		// Token: 0x04011B1B RID: 72475
 		private static IntPtr __组件参数动画蓝图初始化绑定_NativeFunctionPtr;
 
-		// Token: 0x04016A94 RID: 92820
+		// Token: 0x04011B1C RID: 72476
 		private static IntPtr __绑定组件参数_NativeFunctionPtr;
 
-		// Token: 0x04016A95 RID: 92821
+		// Token: 0x04011B1D RID: 72477
 		private static IntPtr __更新移动信息_NativeFunctionPtr;
 
-		// Token: 0x04016A96 RID: 92822
+		// Token: 0x04011B1E RID: 72478
 		private static IntPtr __更新角色信息_NativeFunctionPtr;
 
-		// Token: 0x04016A97 RID: 92823
+		// Token: 0x04011B1F RID: 72479
 		private static IntPtr __更新状态参数信息_NativeFunctionPtr;
 
-		// Token: 0x04016A98 RID: 92824
+		// Token: 0x04011B20 RID: 72480
 		private static IntPtr __切换地面移动模式时高度补差_NativeFunctionPtr;
 
-		// Token: 0x04016A99 RID: 92825
+		// Token: 0x04011B21 RID: 72481
 		private static IntPtr __更新上传_NativeFunctionPtr;
 
-		// Token: 0x04016A9A RID: 92826
+		// Token: 0x04011B22 RID: 72482
 		private static IntPtr __更新时间参数_NativeFunctionPtr;
 
-		// Token: 0x04016A9B RID: 92827
+		// Token: 0x04011B23 RID: 72483
 		private static IntPtr __更新网络参数_NativeFunctionPtr;
 
-		// Token: 0x04016A9C RID: 92828
+		// Token: 0x04011B24 RID: 72484
 		private static IntPtr __更新动画组件参数_NativeFunctionPtr;
 
-		// Token: 0x04016A9D RID: 92829
+		// Token: 0x04011B25 RID: 72485
 		private static IntPtr __更新移动组件参数_NativeFunctionPtr;
 
-		// Token: 0x04016A9E RID: 92830
+		// Token: 0x04011B26 RID: 72486
 		private static IntPtr __更新随机表演_NativeFunctionPtr;
 
-		// Token: 0x04016A9F RID: 92831
+		// Token: 0x04011B27 RID: 72487
 		private static IntPtr __更新角色状态_NativeFunctionPtr;
 
-		// Token: 0x04016AA0 RID: 92832
+		// Token: 0x04011B28 RID: 72488
 		private static IntPtr __设置头部转向状态_NativeFunctionPtr;
 
-		// Token: 0x04016AA1 RID: 92833
+		// Token: 0x04011B29 RID: 72489
 		private static IntPtr __更新头部转向_NativeFunctionPtr;
 
-		// Token: 0x04016AA2 RID: 92834
+		// Token: 0x04011B2A RID: 72490
 		private static IntPtr __更新_IK信息_NativeFunctionPtr;
 
-		// Token: 0x04016AA3 RID: 92835
+		// Token: 0x04011B2B RID: 72491
 		private static IntPtr __原地旋转检查_NativeFunctionPtr;
 
-		// Token: 0x04016AA4 RID: 92836
+		// Token: 0x04011B2C RID: 72492
 		private static IntPtr __更新旋转信息_NativeFunctionPtr;
 
-		// Token: 0x04016AA5 RID: 92837
+		// Token: 0x04011B2D RID: 72493
 		private static IntPtr __是否需要移动_NativeFunctionPtr;
 
-		// Token: 0x04016AA6 RID: 92838
+		// Token: 0x04011B2E RID: 72494
 		private static IntPtr __BlueprintUpdateAnimation_NativeFunctionPtr;
 
-		// Token: 0x04016AA7 RID: 92839
+		// Token: 0x04011B2F RID: 72495
 		private static IntPtr __BlueprintInitializeAnimation_NativeFunctionPtr;
 
-		// Token: 0x04016AA8 RID: 92840
-		private static IntPtr __播放动画_NativeFunctionPtr;
-
-		// Token: 0x04016AA9 RID: 92841
+		// Token: 0x04011B30 RID: 72496
 		private static IntPtr __OnComponentStart_NativeFunctionPtr;
 
-		// Token: 0x04016AAA RID: 92842
+		// Token: 0x04011B31 RID: 72497
 		private static IntPtr __MovementChanged_NativeFunctionPtr;
 
-		// Token: 0x04016AAB RID: 92843
+		// Token: 0x04011B32 RID: 72498
 		private static IntPtr __PlotBlendIn_NativeFunctionPtr;
 
-		// Token: 0x04016AAC RID: 92844
+		// Token: 0x04011B33 RID: 72499
 		private static IntPtr __NoExpose_NativeFunctionPtr;
 
-		// Token: 0x0200A535 RID: 42293
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 96)]
-		protected ref struct __骨骼混合叠加层_FunctionParams
-		{
-			// Token: 0x040323A6 RID: 205734
-			[FieldOffset(0)]
-			public byte BaseLayer;
-
-			// Token: 0x040323A7 RID: 205735
-			[FieldOffset(24)]
-			public byte OverlayLayer;
-
-			// Token: 0x040323A8 RID: 205736
-			[FieldOffset(48)]
-			public byte BasePose;
-
-			// Token: 0x040323A9 RID: 205737
-			[FieldOffset(72)]
-			public byte 骨骼混合叠加层;
-		}
-
-		// Token: 0x0200A536 RID: 42294
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __基础姿势层_FunctionParams
-		{
-			// Token: 0x040323AA RID: 205738
-			[FieldOffset(0)]
-			public byte 基础姿势层;
-		}
-
-		// Token: 0x0200A537 RID: 42295
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 120)]
-		protected ref struct __混合层_FunctionParams
-		{
-			// Token: 0x040323AB RID: 205739
-			[FieldOffset(0)]
-			public byte 基础层输入;
-
-			// Token: 0x040323AC RID: 205740
-			[FieldOffset(24)]
-			public byte 叠加层输入;
-
-			// Token: 0x040323AD RID: 205741
-			[FieldOffset(48)]
-			public byte 姿势层输入;
-
-			// Token: 0x040323AE RID: 205742
-			[FieldOffset(72)]
-			public byte 手臂叠加层输入;
-
-			// Token: 0x040323AF RID: 205743
-			[FieldOffset(96)]
-			public byte 混合层;
-		}
-
-		// Token: 0x0200A538 RID: 42296
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __手臂叠加层_FunctionParams
-		{
-			// Token: 0x040323B0 RID: 205744
-			[FieldOffset(0)]
-			public byte 手臂叠加层;
-		}
-
-		// Token: 0x0200A539 RID: 42297
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __叠加层_FunctionParams
-		{
-			// Token: 0x040323B1 RID: 205745
-			[FieldOffset(0)]
-			public byte 叠加层;
-		}
-
-		// Token: 0x0200A53A RID: 42298
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 48)]
-		protected ref struct __AnimGraph_FunctionParams
-		{
-			// Token: 0x040323B2 RID: 205746
-			[FieldOffset(0)]
-			public byte 地区运动模式;
-
-			// Token: 0x040323B3 RID: 205747
-			[FieldOffset(24)]
-			public byte AnimGraph;
-		}
-
-		// Token: 0x0200A53B RID: 42299
+		// Token: 0x02008FA5 RID: 36773
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 2)]
 		protected ref struct __设置头部转向状态_FunctionParams
 		{
-			// Token: 0x040323B4 RID: 205748
+			// Token: 0x0402CD47 RID: 183623
 			[FieldOffset(0)]
 			public SightLockMode SightMode;
 		}
 
-		// Token: 0x0200A53C RID: 42300
+		// Token: 0x02008FA6 RID: 36774
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 88)]
 		protected ref struct __更新头部转向_FunctionParams
 		{
-			// Token: 0x040323B5 RID: 205749
+			// Token: 0x0402CD48 RID: 183624
 			[FieldOffset(0)]
 			public FRotator NewParam;
 		}
 
-		// Token: 0x0200A53D RID: 42301
+		// Token: 0x02008FA7 RID: 36775
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 6)]
 		protected ref struct __是否需要移动_FunctionParams
 		{
-			// Token: 0x040323B6 RID: 205750
+			// Token: 0x0402CD49 RID: 183625
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200A53E RID: 42302
+		// Token: 0x02008FA8 RID: 36776
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __BlueprintUpdateAnimation_FunctionParams
 		{
-			// Token: 0x040323B7 RID: 205751
+			// Token: 0x0402CD4A RID: 183626
 			[FieldOffset(0)]
 			public float DeltaTimeX;
 		}
 
-		// Token: 0x0200A53F RID: 42303
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __播放动画_FunctionParams
-		{
-			// Token: 0x040323B8 RID: 205752
-			[FieldOffset(0)]
-			public byte 播放动画;
-		}
-
-		// Token: 0x0200A540 RID: 42304
+		// Token: 0x02008FA9 RID: 36777
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __MovementChanged_FunctionParams
 		{
-			// Token: 0x040323B9 RID: 205753
+			// Token: 0x0402CD4B RID: 183627
 			[FieldOffset(0)]
 			public IntPtr Character;
 
-			// Token: 0x040323BA RID: 205754
+			// Token: 0x0402CD4C RID: 183628
 			[FieldOffset(8)]
 			public TEnumAsByte<EMovementMode> PrevMovementMode;
 
-			// Token: 0x040323BB RID: 205755
+			// Token: 0x0402CD4D RID: 183629
 			[FieldOffset(9)]
 			public byte PreviousCustomMode;
 		}

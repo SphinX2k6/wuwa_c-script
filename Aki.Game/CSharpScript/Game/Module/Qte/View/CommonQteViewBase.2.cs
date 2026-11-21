@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Qte;
 using CSharpScript.Core.Common;
@@ -11,23 +10,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Qte.View
 {
-	// Token: 0x02004FD2 RID: 20434
+	// Token: 0x02003F9B RID: 16283
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class CommonQteViewBase<[Nullable(0)] TContextType> : CommonQteViewBase where TContextType : CommonQteContextBase
 	{
-		// Token: 0x0603448B RID: 214155 RVA: 0x00C46F3D File Offset: 0x00C4513D
+		// Token: 0x060292F9 RID: 168697 RVA: 0x00B906F5 File Offset: 0x00B8E8F5
 		protected CommonQteViewBase(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603448C RID: 214156 RVA: 0x00C46F58 File Offset: 0x00C45158
+		// Token: 0x060292FA RID: 168698 RVA: 0x00B90710 File Offset: 0x00B8E910
 		protected override void OnRegisterComponent()
 		{
 			this.IsMobile = Info.Instance.IsInTouch();
 		}
 
-		// Token: 0x0603448D RID: 214157 RVA: 0x00C46F6C File Offset: 0x00C4516C
+		// Token: 0x060292FB RID: 168699 RVA: 0x00B90724 File Offset: 0x00B8E924
 		protected override void OnStart()
 		{
 			UUIItem floatUnit = UiLayer.Instance.GetFloatUnit(ELayerType.BattleFloat, 2);
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			}
 		}
 
-		// Token: 0x0603448E RID: 214158 RVA: 0x00C46F94 File Offset: 0x00C45194
+		// Token: 0x060292FC RID: 168700 RVA: 0x00B9074C File Offset: 0x00B8E94C
 		protected override void OnBeforeDestroy()
 		{
 			this.UnbindEvents();
@@ -55,7 +54,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			this.QteAction = "";
 		}
 
-		// Token: 0x0603448F RID: 214159 RVA: 0x00C47008 File Offset: 0x00C45208
+		// Token: 0x060292FD RID: 168701 RVA: 0x00B907C0 File Offset: 0x00B8E9C0
 		protected void BindAction()
 		{
 			if (this.HasBindAction)
@@ -74,7 +73,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			this.OnBindAction();
 		}
 
-		// Token: 0x06034490 RID: 214160 RVA: 0x00C47094 File Offset: 0x00C45294
+		// Token: 0x060292FE RID: 168702 RVA: 0x00B9084C File Offset: 0x00B8EA4C
 		protected void UnbindAction()
 		{
 			if (!this.HasBindAction)
@@ -93,23 +92,23 @@ namespace CSharpScript.Game.Module.Qte.View
 			this.OnUnbindAction();
 		}
 
-		// Token: 0x06034491 RID: 214161 RVA: 0x00C4711D File Offset: 0x00C4531D
+		// Token: 0x060292FF RID: 168703 RVA: 0x00B908D5 File Offset: 0x00B8EAD5
 		protected virtual void OnBindAction()
 		{
 		}
 
-		// Token: 0x06034492 RID: 214162 RVA: 0x00C4711F File Offset: 0x00C4531F
+		// Token: 0x06029300 RID: 168704 RVA: 0x00B908D7 File Offset: 0x00B8EAD7
 		protected virtual void OnUnbindAction()
 		{
 		}
 
-		// Token: 0x06034493 RID: 214163 RVA: 0x00C47121 File Offset: 0x00C45321
+		// Token: 0x06029301 RID: 168705 RVA: 0x00B908D9 File Offset: 0x00B8EAD9
 		protected virtual bool IsUseBaseAction()
 		{
 			return true;
 		}
 
-		// Token: 0x06034494 RID: 214164 RVA: 0x00C47124 File Offset: 0x00C45324
+		// Token: 0x06029302 RID: 168706 RVA: 0x00B908DC File Offset: 0x00B8EADC
 		protected void OnInputCallback(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (!this.IsValidInput())
@@ -127,7 +126,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			}
 		}
 
-		// Token: 0x06034495 RID: 214165 RVA: 0x00C47144 File Offset: 0x00C45344
+		// Token: 0x06029303 RID: 168707 RVA: 0x00B908FC File Offset: 0x00B8EAFC
 		private void OnInputInteract(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (Info.Instance.IsInGamepad())
@@ -165,37 +164,37 @@ namespace CSharpScript.Game.Module.Qte.View
 			}
 		}
 
-		// Token: 0x06034496 RID: 214166 RVA: 0x00C471F6 File Offset: 0x00C453F6
+		// Token: 0x06029304 RID: 168708 RVA: 0x00B909AE File Offset: 0x00B8EBAE
 		protected virtual void OnInputPress()
 		{
 		}
 
-		// Token: 0x06034497 RID: 214167 RVA: 0x00C471F8 File Offset: 0x00C453F8
+		// Token: 0x06029305 RID: 168709 RVA: 0x00B909B0 File Offset: 0x00B8EBB0
 		protected virtual void OnInputRelease()
 		{
 		}
 
-		// Token: 0x06034498 RID: 214168 RVA: 0x00C471FA File Offset: 0x00C453FA
+		// Token: 0x06029306 RID: 168710 RVA: 0x00B909B2 File Offset: 0x00B8EBB2
 		public override void OnInputTest()
 		{
 			this.OnInputPress();
 		}
 
-		// Token: 0x06034499 RID: 214169 RVA: 0x00C47202 File Offset: 0x00C45402
+		// Token: 0x06029307 RID: 168711 RVA: 0x00B909BA File Offset: 0x00B8EBBA
 		protected override void OnAfterShow()
 		{
 			base.OnAfterShow();
 			this.ResumeQte(false);
 		}
 
-		// Token: 0x0603449A RID: 214170 RVA: 0x00C47211 File Offset: 0x00C45411
+		// Token: 0x06029308 RID: 168712 RVA: 0x00B909C9 File Offset: 0x00B8EBC9
 		protected override void OnBeforeHide()
 		{
 			base.OnBeforeHide();
 			this.PauseQte();
 		}
 
-		// Token: 0x0603449B RID: 214171 RVA: 0x00C47220 File Offset: 0x00C45420
+		// Token: 0x06029309 RID: 168713 RVA: 0x00B909D8 File Offset: 0x00B8EBD8
 		private void BindEvents()
 		{
 			if (this.IsBindEvents)
@@ -209,7 +208,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			EventSystem.Instance.Add(EEventName.CommonQteEnd, new Action<int?>(this.OnCommonQteEnd));
 		}
 
-		// Token: 0x0603449C RID: 214172 RVA: 0x00C472B0 File Offset: 0x00C454B0
+		// Token: 0x0602930A RID: 168714 RVA: 0x00B90A68 File Offset: 0x00B8EC68
 		private void UnbindEvents()
 		{
 			if (!this.IsBindEvents)
@@ -223,7 +222,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			EventSystem.Instance.Remove(EEventName.CommonQteEnd, new Action<int?>(this.OnCommonQteEnd));
 		}
 
-		// Token: 0x0603449D RID: 214173 RVA: 0x00C47340 File Offset: 0x00C45540
+		// Token: 0x0602930B RID: 168715 RVA: 0x00B90AF8 File Offset: 0x00B8ECF8
 		private void OnCommonQteEnd(int? handleId)
 		{
 			int qteHandle = this.QteHandle;
@@ -235,7 +234,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			this.HandleQteEnd();
 		}
 
-		// Token: 0x0603449E RID: 214174 RVA: 0x00C47370 File Offset: 0x00C45570
+		// Token: 0x0602930C RID: 168716 RVA: 0x00B90B28 File Offset: 0x00B8ED28
 		private void OnBattleUiVisibleChanged()
 		{
 			if (this.CommonQteContext == null)
@@ -255,7 +254,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			}
 		}
 
-		// Token: 0x0603449F RID: 214175 RVA: 0x00C473D5 File Offset: 0x00C455D5
+		// Token: 0x0602930D RID: 168717 RVA: 0x00B90B8D File Offset: 0x00B8ED8D
 		private void OnTriggerUiTimeDilation()
 		{
 			if (this.IsQteEnd)
@@ -274,7 +273,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			this.ResumeQte(true);
 		}
 
-		// Token: 0x060344A0 RID: 214176 RVA: 0x00C4740C File Offset: 0x00C4560C
+		// Token: 0x0602930E RID: 168718 RVA: 0x00B90BC4 File Offset: 0x00B8EDC4
 		protected void PauseQte()
 		{
 			if (this.IsQtePause || this.IsQteEnd)
@@ -288,7 +287,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			}
 		}
 
-		// Token: 0x060344A1 RID: 214177 RVA: 0x00C47434 File Offset: 0x00C45634
+		// Token: 0x0602930F RID: 168719 RVA: 0x00B90BEC File Offset: 0x00B8EDEC
 		protected void ResumeQte(bool delay = false)
 		{
 			if (!this.IsQtePause || this.IsQteEnd)
@@ -315,7 +314,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			}
 		}
 
-		// Token: 0x060344A2 RID: 214178 RVA: 0x00C47484 File Offset: 0x00C45684
+		// Token: 0x06029310 RID: 168720 RVA: 0x00B90C3C File Offset: 0x00B8EE3C
 		protected virtual void OnQtePause()
 		{
 			this.UnbindAction();
@@ -325,7 +324,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			}
 		}
 
-		// Token: 0x060344A3 RID: 214179 RVA: 0x00C474B4 File Offset: 0x00C456B4
+		// Token: 0x06029311 RID: 168721 RVA: 0x00B90C6C File Offset: 0x00B8EE6C
 		protected virtual void OnQteResume()
 		{
 			if (this.IsQteActive)
@@ -342,7 +341,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			}
 		}
 
-		// Token: 0x060344A4 RID: 214180 RVA: 0x00C47504 File Offset: 0x00C45704
+		// Token: 0x06029312 RID: 168722 RVA: 0x00B90CBC File Offset: 0x00B8EEBC
 		protected void HandleQteEnd()
 		{
 			if (this.IsQteEnd)
@@ -354,18 +353,18 @@ namespace CSharpScript.Game.Module.Qte.View
 			this.UnbindAction();
 		}
 
-		// Token: 0x060344A5 RID: 214181 RVA: 0x00C47522 File Offset: 0x00C45722
+		// Token: 0x06029313 RID: 168723 RVA: 0x00B90CDA File Offset: 0x00B8EEDA
 		protected virtual void OnHandleQteEnd()
 		{
 		}
 
-		// Token: 0x060344A6 RID: 214182 RVA: 0x00C47524 File Offset: 0x00C45724
+		// Token: 0x06029314 RID: 168724 RVA: 0x00B90CDC File Offset: 0x00B8EEDC
 		protected bool IsValidInput()
 		{
 			return this.IsQteInteractive && !this.IsQteEnd && !this.IsQtePause;
 		}
 
-		// Token: 0x060344A7 RID: 214183 RVA: 0x00C47544 File Offset: 0x00C45744
+		// Token: 0x06029315 RID: 168725 RVA: 0x00B90CFC File Offset: 0x00B8EEFC
 		public override void SetQteContext(CommonQteContextBase context)
 		{
 			if (!this.IsContextMatched(context))
@@ -395,50 +394,68 @@ namespace CSharpScript.Game.Module.Qte.View
 			this.PlayQteStart();
 		}
 
-		// Token: 0x060344A8 RID: 214184 RVA: 0x00C47600 File Offset: 0x00C45800
+		// Token: 0x06029316 RID: 168726 RVA: 0x00B90DB8 File Offset: 0x00B8EFB8
 		private void ApplyBaseUiConfig(object uiConfig)
 		{
-			Type type = uiConfig.GetType();
-			PropertyInfo property = type.GetProperty("InteractiveTiming");
-			if (property != null)
+			SCommonQte_SingleClick scommonQte_SingleClick = uiConfig as SCommonQte_SingleClick;
+			bool flag;
+			if (scommonQte_SingleClick == null)
 			{
-				object value = property.GetValue(uiConfig);
-				if (value is TEnumAsByte<ECommonQteInteractiveTiming>)
+				SCommonQte_ContinuousClick scommonQte_ContinuousClick = uiConfig as SCommonQte_ContinuousClick;
+				if (scommonQte_ContinuousClick == null)
 				{
-					TEnumAsByte<ECommonQteInteractiveTiming> left = (TEnumAsByte<ECommonQteInteractiveTiming>)value;
-					this.IsQteInteractive = (left == ECommonQteInteractiveTiming.始终);
+					SCommonQte_LongPress scommonQte_LongPress = uiConfig as SCommonQte_LongPress;
+					if (scommonQte_LongPress == null)
+					{
+						SCommonQte_Drag scommonQte_Drag = uiConfig as SCommonQte_Drag;
+						flag = (scommonQte_Drag != null && scommonQte_Drag.InteractiveTiming == ECommonQteInteractiveTiming.始终);
+					}
+					else
+					{
+						flag = (scommonQte_LongPress.InteractiveTiming == ECommonQteInteractiveTiming.始终);
+					}
+				}
+				else
+				{
+					flag = (scommonQte_ContinuousClick.InteractiveTiming == ECommonQteInteractiveTiming.始终);
 				}
 			}
-			PropertyInfo property2 = type.GetProperty("IsShowBorder");
-			if (property2 != null)
+			else
 			{
-				object value2 = property2.GetValue(uiConfig);
-				if (value2 is bool)
-				{
-					bool isShowBorder = (bool)value2;
-					this.IsShowBorder = isShowBorder;
-				}
+				flag = (scommonQte_SingleClick.InteractiveTiming == ECommonQteInteractiveTiming.始终);
 			}
+			this.IsQteInteractive = flag;
+			SCommonQte_SingleClick scommonQte_SingleClick2 = uiConfig as SCommonQte_SingleClick;
+			if (scommonQte_SingleClick2 == null)
+			{
+				SCommonQte_ContinuousClick scommonQte_ContinuousClick2 = uiConfig as SCommonQte_ContinuousClick;
+				flag = (scommonQte_ContinuousClick2 != null && scommonQte_ContinuousClick2.IsShowBorder);
+			}
+			else
+			{
+				flag = scommonQte_SingleClick2.IsShowBorder;
+			}
+			this.IsShowBorder = flag;
 		}
 
-		// Token: 0x060344A9 RID: 214185 RVA: 0x00C47688 File Offset: 0x00C45888
+		// Token: 0x06029317 RID: 168727 RVA: 0x00B90E89 File Offset: 0x00B8F089
 		protected virtual bool IsContextMatched(CommonQteContextBase context)
 		{
 			return context is TContextType;
 		}
 
-		// Token: 0x060344AA RID: 214186 RVA: 0x00C47693 File Offset: 0x00C45893
+		// Token: 0x06029318 RID: 168728 RVA: 0x00B90E94 File Offset: 0x00B8F094
 		protected virtual void OnRefreshActionUi(string action)
 		{
 		}
 
-		// Token: 0x060344AB RID: 214187 RVA: 0x00C47695 File Offset: 0x00C45895
+		// Token: 0x06029319 RID: 168729 RVA: 0x00B90E96 File Offset: 0x00B8F096
 		[NullableContext(2)]
 		protected virtual void TryApplyQteUiConfig(object uiConfig)
 		{
 		}
 
-		// Token: 0x060344AC RID: 214188 RVA: 0x00C47698 File Offset: 0x00C45898
+		// Token: 0x0602931A RID: 168730 RVA: 0x00B90E98 File Offset: 0x00B8F098
 		protected virtual void TryApplyQteIcon(CommonQteContextBase context)
 		{
 			IQteResource resource = context.Resource;
@@ -449,12 +466,12 @@ namespace CSharpScript.Game.Module.Qte.View
 			}
 		}
 
-		// Token: 0x060344AD RID: 214189 RVA: 0x00C476C2 File Offset: 0x00C458C2
+		// Token: 0x0602931B RID: 168731 RVA: 0x00B90EC2 File Offset: 0x00B8F0C2
 		protected virtual void OnRefreshIcon(ULGUITexturePackerSpriteData sprite)
 		{
 		}
 
-		// Token: 0x060344AE RID: 214190 RVA: 0x00C476C4 File Offset: 0x00C458C4
+		// Token: 0x0602931C RID: 168732 RVA: 0x00B90EC4 File Offset: 0x00B8F0C4
 		protected void SetQteActive(CommonQteContextBase context)
 		{
 			this.IsQteActive = true;
@@ -498,7 +515,7 @@ namespace CSharpScript.Game.Module.Qte.View
 			}
 		}
 
-		// Token: 0x060344AF RID: 214191 RVA: 0x00C477B4 File Offset: 0x00C459B4
+		// Token: 0x0602931D RID: 168733 RVA: 0x00B90FB4 File Offset: 0x00B8F1B4
 		public unsafe override void PlayQteStart()
 		{
 			Log.Instance.Info(ELogModule.CommonQte, ELogAuthor.WWJ, "[CommonQteViewBase] PlayQteStart", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -525,12 +542,12 @@ namespace CSharpScript.Game.Module.Qte.View
 			CommonQteController.Instance.SetExpiredTimer(this.CommonQteContext);
 		}
 
-		// Token: 0x060344B0 RID: 214192 RVA: 0x00C47921 File Offset: 0x00C45B21
+		// Token: 0x0602931E RID: 168734 RVA: 0x00B91121 File Offset: 0x00B8F321
 		protected virtual void OnPlayQteStart()
 		{
 		}
 
-		// Token: 0x060344B1 RID: 214193 RVA: 0x00C47924 File Offset: 0x00C45B24
+		// Token: 0x0602931F RID: 168735 RVA: 0x00B91124 File Offset: 0x00B8F324
 		protected override void OnTick(float delta)
 		{
 			if (!this.IsQteStart || this.IsQteEnd || this.IsQtePause)
@@ -554,57 +571,57 @@ namespace CSharpScript.Game.Module.Qte.View
 			}
 		}
 
-		// Token: 0x060344B2 RID: 214194 RVA: 0x00C479AE File Offset: 0x00C45BAE
+		// Token: 0x06029320 RID: 168736 RVA: 0x00B911AE File Offset: 0x00B8F3AE
 		protected virtual void OnTickQteView(float delta)
 		{
 		}
 
-		// Token: 0x060344B3 RID: 214195 RVA: 0x00C479B0 File Offset: 0x00C45BB0
+		// Token: 0x06029321 RID: 168737 RVA: 0x00B911B0 File Offset: 0x00B8F3B0
 		protected virtual void RefreshUiOffset()
 		{
 		}
 
-		// Token: 0x0401BCF1 RID: 113905
+		// Token: 0x040166C6 RID: 91846
 		protected bool IsMobile;
 
-		// Token: 0x0401BCF2 RID: 113906
+		// Token: 0x040166C7 RID: 91847
 		protected bool IsQteActive;
 
-		// Token: 0x0401BCF3 RID: 113907
+		// Token: 0x040166C8 RID: 91848
 		protected bool IsQtePlayStart;
 
-		// Token: 0x0401BCF4 RID: 113908
+		// Token: 0x040166C9 RID: 91849
 		protected bool IsQteStart;
 
-		// Token: 0x0401BCF5 RID: 113909
+		// Token: 0x040166CA RID: 91850
 		protected bool IsQteEnd;
 
-		// Token: 0x0401BCF6 RID: 113910
+		// Token: 0x040166CB RID: 91851
 		protected bool IsQteInteractive;
 
-		// Token: 0x0401BCF7 RID: 113911
+		// Token: 0x040166CC RID: 91852
 		protected bool IsQtePause;
 
-		// Token: 0x0401BCF8 RID: 113912
+		// Token: 0x040166CD RID: 91853
 		protected bool HasBindAction;
 
-		// Token: 0x0401BCF9 RID: 113913
+		// Token: 0x040166CE RID: 91854
 		protected string QteAction = "";
 
-		// Token: 0x0401BCFA RID: 113914
+		// Token: 0x040166CF RID: 91855
 		protected int QteHandle = -1;
 
-		// Token: 0x0401BCFB RID: 113915
+		// Token: 0x040166D0 RID: 91856
 		[Nullable(2)]
 		protected TContextType CommonQteContext;
 
-		// Token: 0x0401BCFC RID: 113916
+		// Token: 0x040166D1 RID: 91857
 		protected float LoopDuration;
 
-		// Token: 0x0401BCFD RID: 113917
+		// Token: 0x040166D2 RID: 91858
 		protected bool IsShowBorder;
 
-		// Token: 0x0401BCFE RID: 113918
+		// Token: 0x040166D3 RID: 91859
 		protected bool IsBindEvents;
 	}
 }

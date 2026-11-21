@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E8C RID: 3724
+	// Token: 0x02000F71 RID: 3953
 	public struct NewTowerLevel : IFlatbufferObject
 	{
-		// Token: 0x17002345 RID: 9029
-		// (get) Token: 0x06009F31 RID: 40753 RVA: 0x0029DC6E File Offset: 0x0029BE6E
+		// Token: 0x170023AA RID: 9130
+		// (get) Token: 0x0600A551 RID: 42321 RVA: 0x002BB24A File Offset: 0x002B944A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009F32 RID: 40754 RVA: 0x0029DC7B File Offset: 0x0029BE7B
+		// Token: 0x0600A552 RID: 42322 RVA: 0x002BB257 File Offset: 0x002B9457
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009F33 RID: 40755 RVA: 0x0029DC84 File Offset: 0x0029BE84
+		// Token: 0x0600A553 RID: 42323 RVA: 0x002BB260 File Offset: 0x002B9460
 		public static NewTowerLevel GetRootAsNewTowerLevel(ByteBuffer _bb)
 		{
 			return NewTowerLevel.GetRootAsNewTowerLevel(_bb, default(NewTowerLevel));
 		}
 
-		// Token: 0x06009F34 RID: 40756 RVA: 0x0029DCA0 File Offset: 0x0029BEA0
+		// Token: 0x0600A554 RID: 42324 RVA: 0x002BB27C File Offset: 0x002B947C
 		public static NewTowerLevel GetRootAsNewTowerLevel(ByteBuffer _bb, NewTowerLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009F35 RID: 40757 RVA: 0x0029DCBD File Offset: 0x0029BEBD
+		// Token: 0x0600A555 RID: 42325 RVA: 0x002BB299 File Offset: 0x002B9499
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009F36 RID: 40758 RVA: 0x0029DCCC File Offset: 0x0029BECC
+		// Token: 0x0600A556 RID: 42326 RVA: 0x002BB2A8 File Offset: 0x002B94A8
 		public NewTowerLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002346 RID: 9030
-		// (get) Token: 0x06009F37 RID: 40759 RVA: 0x0029DCDC File Offset: 0x0029BEDC
+		// Token: 0x170023AB RID: 9131
+		// (get) Token: 0x0600A557 RID: 42327 RVA: 0x002BB2B8 File Offset: 0x002B94B8
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002347 RID: 9031
-		// (get) Token: 0x06009F38 RID: 40760 RVA: 0x0029DD18 File Offset: 0x0029BF18
+		// Token: 0x170023AC RID: 9132
+		// (get) Token: 0x0600A558 RID: 42328 RVA: 0x002BB2F4 File Offset: 0x002B94F4
 		public int Param
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002348 RID: 9032
-		// (get) Token: 0x06009F39 RID: 40761 RVA: 0x0029DD54 File Offset: 0x0029BF54
+		// Token: 0x170023AD RID: 9133
+		// (get) Token: 0x0600A559 RID: 42329 RVA: 0x002BB330 File Offset: 0x002B9530
 		public int InstId
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002349 RID: 9033
-		// (get) Token: 0x06009F3A RID: 40762 RVA: 0x0029DD90 File Offset: 0x0029BF90
+		// Token: 0x170023AE RID: 9134
+		// (get) Token: 0x0600A55A RID: 42330 RVA: 0x002BB36C File Offset: 0x002B956C
 		public int Cond
 		{
 			get
@@ -111,8 +111,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700234A RID: 9034
-		// (get) Token: 0x06009F3B RID: 40763 RVA: 0x0029DDD0 File Offset: 0x0029BFD0
+		// Token: 0x170023AF RID: 9135
+		// (get) Token: 0x0600A55B RID: 42331 RVA: 0x002BB3AC File Offset: 0x002B95AC
 		public int MaxLoopCount
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700234B RID: 9035
-		// (get) Token: 0x06009F3C RID: 40764 RVA: 0x0029DE10 File Offset: 0x0029C010
+		// Token: 0x170023B0 RID: 9136
+		// (get) Token: 0x0600A55C RID: 42332 RVA: 0x002BB3EC File Offset: 0x002B95EC
 		public int TeamLimit
 		{
 			get
@@ -141,8 +141,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700234C RID: 9036
-		// (get) Token: 0x06009F3D RID: 40765 RVA: 0x0029DE50 File Offset: 0x0029C050
+		// Token: 0x170023B1 RID: 9137
+		// (get) Token: 0x0600A55D RID: 42333 RVA: 0x002BB42C File Offset: 0x002B962C
 		public int Diff
 		{
 			get
@@ -156,7 +156,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009F3E RID: 40766 RVA: 0x0029DE90 File Offset: 0x0029C090
+		// Token: 0x0600A55E RID: 42334 RVA: 0x002BB46C File Offset: 0x002B966C
 		public int NewTowerBuffs(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -167,8 +167,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700234D RID: 9037
-		// (get) Token: 0x06009F3F RID: 40767 RVA: 0x0029DED0 File Offset: 0x0029C0D0
+		// Token: 0x170023B2 RID: 9138
+		// (get) Token: 0x0600A55F RID: 42335 RVA: 0x002BB4AC File Offset: 0x002B96AC
 		public int NewTowerBuffsLength
 		{
 			get
@@ -182,20 +182,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009F40 RID: 40768 RVA: 0x0029DEFC File Offset: 0x0029C0FC
+		// Token: 0x0600A560 RID: 42336 RVA: 0x002BB4D8 File Offset: 0x002B96D8
 		public Span<int> GetNewTowerBuffsBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x06009F41 RID: 40769 RVA: 0x0029DF0C File Offset: 0x0029C10C
+		// Token: 0x0600A561 RID: 42337 RVA: 0x002BB4E8 File Offset: 0x002B96E8
 		public int[] GetNewTowerBuffsArray()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x1700234E RID: 9038
-		// (get) Token: 0x06009F42 RID: 40770 RVA: 0x0029DF24 File Offset: 0x0029C124
+		// Token: 0x170023B3 RID: 9139
+		// (get) Token: 0x0600A562 RID: 42338 RVA: 0x002BB500 File Offset: 0x002B9700
 		public int NewTowerBuffCount
 		{
 			get
@@ -209,7 +209,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009F43 RID: 40771 RVA: 0x0029DF64 File Offset: 0x0029C164
+		// Token: 0x0600A563 RID: 42339 RVA: 0x002BB540 File Offset: 0x002B9740
 		public DicIntInt? ScoreLevelRule(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -220,8 +220,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700234F RID: 9039
-		// (get) Token: 0x06009F44 RID: 40772 RVA: 0x0029DFC8 File Offset: 0x0029C1C8
+		// Token: 0x170023B4 RID: 9140
+		// (get) Token: 0x0600A564 RID: 42340 RVA: 0x002BB5A4 File Offset: 0x002B97A4
 		public int ScoreLevelRuleLength
 		{
 			get
@@ -235,42 +235,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009F45 RID: 40773 RVA: 0x0029DFF4 File Offset: 0x0029C1F4
+		// Token: 0x0600A565 RID: 42341 RVA: 0x002BB5D0 File Offset: 0x002B97D0
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用NewTowerBuffsIter()或GetNewTowerBuffsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] NewTowerBuffs()
+		public int[] NewTowerBuffs()
 		{
-			NewTowerLevel newTowerLevel = this;
-			return newTowerLevel.GetNewTowerBuffsArray() ?? Array.Empty<int>();
+			return this.GetNewTowerBuffsArray();
 		}
 
-		// Token: 0x06009F46 RID: 40774 RVA: 0x0029E018 File Offset: 0x0029C218
+		// Token: 0x0600A566 RID: 42342 RVA: 0x002BB5D8 File Offset: 0x002B97D8
 		[NullableContext(1)]
-		public readonly IEnumerable<int> NewTowerBuffsIter()
+		public IEnumerable<int> NewTowerBuffsIter()
 		{
 			NewTowerLevel.<NewTowerBuffsIter>d__33 <NewTowerBuffsIter>d__ = new NewTowerLevel.<NewTowerBuffsIter>d__33(-2);
 			<NewTowerBuffsIter>d__.<>3__<>4__this = this;
 			return <NewTowerBuffsIter>d__;
 		}
 
-		// Token: 0x06009F47 RID: 40775 RVA: 0x0029E030 File Offset: 0x0029C230
+		// Token: 0x0600A567 RID: 42343 RVA: 0x002BB5F0 File Offset: 0x002B97F0
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用ScoreLevelRuleFrozenDict()缓存字典，遍历请使用ScoreLevelRuleIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> ScoreLevelRule()
+		public Dictionary<int, int> ScoreLevelRule()
 		{
 			return this.ScoreLevelRuleIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06009F48 RID: 40776 RVA: 0x0029E086 File Offset: 0x0029C286
+		// Token: 0x0600A568 RID: 42344 RVA: 0x002BB646 File Offset: 0x002B9846
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> ScoreLevelRuleIter()
+		public IEnumerable<DicIntInt> ScoreLevelRuleIter()
 		{
 			NewTowerLevel.<ScoreLevelRuleIter>d__35 <ScoreLevelRuleIter>d__ = new NewTowerLevel.<ScoreLevelRuleIter>d__35(-2);
 			<ScoreLevelRuleIter>d__.<>3__<>4__this = this;
 			return <ScoreLevelRuleIter>d__;
 		}
 
-		// Token: 0x06009F49 RID: 40777 RVA: 0x0029E09C File Offset: 0x0029C29C
+		// Token: 0x0600A569 RID: 42345 RVA: 0x002BB65C File Offset: 0x002B985C
 		public int? GetScoreLevelRule(int key)
 		{
 			this.EnsureScoreLevelRuleCacheIfNeeded();
@@ -282,7 +279,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06009F4A RID: 40778 RVA: 0x0029E0D0 File Offset: 0x0029C2D0
+		// Token: 0x0600A56A RID: 42346 RVA: 0x002BB690 File Offset: 0x002B9890
 		private void EnsureScoreLevelRuleCacheIfNeeded()
 		{
 			if (this.ScoreLevelRuleCache != null)
@@ -292,18 +289,18 @@ namespace Aki.Config
 			this.ScoreLevelRuleCache = this.ScoreLevelRuleIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06009F4B RID: 40779 RVA: 0x0029E136 File Offset: 0x0029C336
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetScoreLevelRuleFrozenDict(int key)
+		// Token: 0x0600A56B RID: 42347 RVA: 0x002BB6F6 File Offset: 0x002B98F6
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetScoreLevelRuleFrozenDict()
 		{
 			this.EnsureScoreLevelRuleCacheIfNeeded();
 			return this.ScoreLevelRuleCache;
 		}
 
-		// Token: 0x04004F3A RID: 20282
+		// Token: 0x0400551F RID: 21791
 		private Table __p;
 
-		// Token: 0x04004F3B RID: 20283
+		// Token: 0x04005520 RID: 21792
 		[Nullable(2)]
 		private FrozenDictionary<int, int> ScoreLevelRuleCache;
 	}

@@ -2,142 +2,142 @@
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001537 RID: 5431
+	// Token: 0x020015AD RID: 5549
 	public enum ECombatRequestDataMessage
 	{
-		// Token: 0x0400A42B RID: 42027
-		CreateBulletRequest = 16833,
-		// Token: 0x0400A42C RID: 42028
-		DestroyBulletRequest = 26218,
-		// Token: 0x0400A42D RID: 42029
-		DamageExecuteRequest = 22022,
-		// Token: 0x0400A42E RID: 42030
-		ApplyGameplayEffectRequest = 22973,
-		// Token: 0x0400A42F RID: 42031
-		RemoveGameplayEffectRequest = 19884,
-		// Token: 0x0400A430 RID: 42032
-		HitRequest = 15093,
-		// Token: 0x0400A431 RID: 42033
-		HitEndRequest = 25554,
-		// Token: 0x0400A432 RID: 42034
-		SkillRequest = 29518,
-		// Token: 0x0400A433 RID: 42035
-		UseSkillRequest = 21005,
-		// Token: 0x0400A434 RID: 42036
-		EndSkillRequest = 24580,
-		// Token: 0x0400A435 RID: 42037
-		PartUpdateRequest = 23337,
-		// Token: 0x0400A436 RID: 42038
-		MaterialRequest = 18588,
-		// Token: 0x0400A437 RID: 42039
-		GameplayCueRequest = 20103,
-		// Token: 0x0400A438 RID: 42040
-		EntityIsVisibleRequest = 24121,
-		// Token: 0x0400A439 RID: 42041
-		SwitchCharacterStateRequest = 27567,
-		// Token: 0x0400A43A RID: 42042
-		LogicStateInitRequest = 26172,
-		// Token: 0x0400A43B RID: 42043
-		SwitchLogicStateRequest = 18438,
-		// Token: 0x0400A43C RID: 42044
-		AnimationStateChangedRequest = 26812,
-		// Token: 0x0400A43D RID: 42045
-		AnimationStateInitRequest = 16475,
-		// Token: 0x0400A43E RID: 42046
-		ModifyBulletParamsRequest = 16767,
-		// Token: 0x0400A43F RID: 42047
-		DrownRequest = 18070,
-		// Token: 0x0400A440 RID: 42048
-		OrderApplyBuffRequest = 21800,
-		// Token: 0x0400A441 RID: 42049
-		OrderRemoveBuffRequest = 29255,
-		// Token: 0x0400A442 RID: 42050
-		ActivateBuffRequest = 17149,
-		// Token: 0x0400A443 RID: 42051
-		OrderRemoveBuffByTagsRequest = 22742,
-		// Token: 0x0400A444 RID: 42052
-		AiInformationRequest = 27094,
-		// Token: 0x0400A445 RID: 42053
-		ToughCalcExtraRatioChangeRequest = 23954,
-		// Token: 0x0400A446 RID: 42054
-		BattleStateChangeRequest = 19661,
-		// Token: 0x0400A447 RID: 42055
-		AnimationGameplayTagRequest = 25863,
-		// Token: 0x0400A448 RID: 42056
-		BoneVisibleChangeRequest = 20124,
-		// Token: 0x0400A449 RID: 42057
-		AiBlackboardsRequest = 17413,
-		// Token: 0x0400A44A RID: 42058
-		AiBlackboardCdRequest = 28767,
-		// Token: 0x0400A44B RID: 42059
-		AiHateRequest = 27946,
-		// Token: 0x0400A44C RID: 42060
-		MonsterBoomRequest = 27664,
-		// Token: 0x0400A44D RID: 42061
-		CaughtRequest = 21766,
-		// Token: 0x0400A44E RID: 42062
-		EntityStaticHookMoveRequest = 18356,
-		// Token: 0x0400A44F RID: 42063
-		ChangeStateRequest = 25799,
-		// Token: 0x0400A450 RID: 42064
-		ChangeStateConfirmRequest = 27052,
-		// Token: 0x0400A451 RID: 42065
-		FsmConditionPassRequest = 22886,
-		// Token: 0x0400A452 RID: 42066
-		BuffStackCountRequest = 19820,
-		// Token: 0x0400A453 RID: 42067
-		ANStartRequest = 23064,
-		// Token: 0x0400A454 RID: 42068
-		UseSkillFailRequest = 22140,
-		// Token: 0x0400A455 RID: 42069
-		EnterViewDirectionRequest = 18587,
-		// Token: 0x0400A456 RID: 42070
-		ExitViewDirectionRequest = 25488,
-		// Token: 0x0400A457 RID: 42071
-		PassiveSkillAddRequest = 23740,
-		// Token: 0x0400A458 RID: 42072
-		InterruptSkillInDelayRequest = 17561,
-		// Token: 0x0400A459 RID: 42073
-		TriggerExitSkillRequest = 29898,
-		// Token: 0x0400A45A RID: 42074
-		ActorVisibleRequest = 20487,
-		// Token: 0x0400A45B RID: 42075
-		BuffEffectRequest = 22540,
-		// Token: 0x0400A45C RID: 42076
-		FragileChangeRequest = 29703,
-		// Token: 0x0400A45D RID: 42077
-		RTimeStopRequest = 17578,
-		// Token: 0x0400A45E RID: 42078
-		DrownEndTeleportRequest = 20649,
-		// Token: 0x0400A45F RID: 42079
-		MonsterDrownRequest = 21217,
-		// Token: 0x0400A460 RID: 42080
-		PassiveSkillRemoveRequest = 21925,
-		// Token: 0x0400A461 RID: 42081
-		RTimeStopInstRequest = 21786,
-		// Token: 0x0400A462 RID: 42082
-		FsmStateBehaviorRequest = 15369,
-		// Token: 0x0400A463 RID: 42083
-		FsmPlayMontageRequest = 25452,
-		// Token: 0x0400A464 RID: 42084
-		RTimeStopAnimRequest = 28204,
-		// Token: 0x0400A465 RID: 42085
-		SwitchRoleRequest = 20789,
-		// Token: 0x0400A466 RID: 42086
-		GameplayTagRequest = 25844,
-		// Token: 0x0400A467 RID: 42087
-		ExecuteQteRequest = 29269,
-		// Token: 0x0400A468 RID: 42088
-		CombineEntitiesRequest = 19641,
-		// Token: 0x0400A469 RID: 42089
-		DissolveCombineRelationRequest = 21623,
-		// Token: 0x0400A46A RID: 42090
-		ClientCurrentRoleReportRequest = 27281,
-		// Token: 0x0400A46B RID: 42091
-		GaSwitchCommonEnemyProCampRequest = 17625,
-		// Token: 0x0400A46C RID: 42092
-		ChangeSummonEntityStateRequest = 26759,
-		// Token: 0x0400A46D RID: 42093
-		CombatMaxCaseMessageRequest = 22467
+		// Token: 0x0400A888 RID: 43144
+		CreateBulletRequest = 18246,
+		// Token: 0x0400A889 RID: 43145
+		DestroyBulletRequest = 27103,
+		// Token: 0x0400A88A RID: 43146
+		DamageExecuteRequest = 18654,
+		// Token: 0x0400A88B RID: 43147
+		ApplyGameplayEffectRequest = 26992,
+		// Token: 0x0400A88C RID: 43148
+		RemoveGameplayEffectRequest = 15998,
+		// Token: 0x0400A88D RID: 43149
+		HitRequest = 17489,
+		// Token: 0x0400A88E RID: 43150
+		HitEndRequest = 19130,
+		// Token: 0x0400A88F RID: 43151
+		SkillRequest = 28732,
+		// Token: 0x0400A890 RID: 43152
+		UseSkillRequest = 15873,
+		// Token: 0x0400A891 RID: 43153
+		EndSkillRequest = 26657,
+		// Token: 0x0400A892 RID: 43154
+		PartUpdateRequest = 22158,
+		// Token: 0x0400A893 RID: 43155
+		MaterialRequest = 17530,
+		// Token: 0x0400A894 RID: 43156
+		GameplayCueRequest = 20852,
+		// Token: 0x0400A895 RID: 43157
+		EntityIsVisibleRequest = 26500,
+		// Token: 0x0400A896 RID: 43158
+		SwitchCharacterStateRequest = 26359,
+		// Token: 0x0400A897 RID: 43159
+		LogicStateInitRequest = 18260,
+		// Token: 0x0400A898 RID: 43160
+		SwitchLogicStateRequest = 17062,
+		// Token: 0x0400A899 RID: 43161
+		AnimationStateChangedRequest = 17015,
+		// Token: 0x0400A89A RID: 43162
+		AnimationStateInitRequest = 29999,
+		// Token: 0x0400A89B RID: 43163
+		ModifyBulletParamsRequest = 29414,
+		// Token: 0x0400A89C RID: 43164
+		DrownRequest = 25778,
+		// Token: 0x0400A89D RID: 43165
+		OrderApplyBuffRequest = 21297,
+		// Token: 0x0400A89E RID: 43166
+		OrderRemoveBuffRequest = 26903,
+		// Token: 0x0400A89F RID: 43167
+		ActivateBuffRequest = 27416,
+		// Token: 0x0400A8A0 RID: 43168
+		OrderRemoveBuffByTagsRequest = 20210,
+		// Token: 0x0400A8A1 RID: 43169
+		AiInformationRequest = 18681,
+		// Token: 0x0400A8A2 RID: 43170
+		ToughCalcExtraRatioChangeRequest = 25451,
+		// Token: 0x0400A8A3 RID: 43171
+		BattleStateChangeRequest = 19982,
+		// Token: 0x0400A8A4 RID: 43172
+		AnimationGameplayTagRequest = 20782,
+		// Token: 0x0400A8A5 RID: 43173
+		BoneVisibleChangeRequest = 18467,
+		// Token: 0x0400A8A6 RID: 43174
+		AiBlackboardsRequest = 22558,
+		// Token: 0x0400A8A7 RID: 43175
+		AiBlackboardCdRequest = 15625,
+		// Token: 0x0400A8A8 RID: 43176
+		AiHateRequest = 27610,
+		// Token: 0x0400A8A9 RID: 43177
+		MonsterBoomRequest = 17163,
+		// Token: 0x0400A8AA RID: 43178
+		CaughtRequest = 17706,
+		// Token: 0x0400A8AB RID: 43179
+		EntityStaticHookMoveRequest = 23825,
+		// Token: 0x0400A8AC RID: 43180
+		ChangeStateRequest = 20524,
+		// Token: 0x0400A8AD RID: 43181
+		ChangeStateConfirmRequest = 17371,
+		// Token: 0x0400A8AE RID: 43182
+		FsmConditionPassRequest = 21831,
+		// Token: 0x0400A8AF RID: 43183
+		BuffStackCountRequest = 24150,
+		// Token: 0x0400A8B0 RID: 43184
+		ANStartRequest = 25509,
+		// Token: 0x0400A8B1 RID: 43185
+		UseSkillFailRequest = 15861,
+		// Token: 0x0400A8B2 RID: 43186
+		EnterViewDirectionRequest = 25151,
+		// Token: 0x0400A8B3 RID: 43187
+		ExitViewDirectionRequest = 16245,
+		// Token: 0x0400A8B4 RID: 43188
+		PassiveSkillAddRequest = 17475,
+		// Token: 0x0400A8B5 RID: 43189
+		InterruptSkillInDelayRequest = 24013,
+		// Token: 0x0400A8B6 RID: 43190
+		TriggerExitSkillRequest = 23172,
+		// Token: 0x0400A8B7 RID: 43191
+		ActorVisibleRequest = 17594,
+		// Token: 0x0400A8B8 RID: 43192
+		BuffEffectRequest = 22402,
+		// Token: 0x0400A8B9 RID: 43193
+		FragileChangeRequest = 22818,
+		// Token: 0x0400A8BA RID: 43194
+		RTimeStopRequest = 16580,
+		// Token: 0x0400A8BB RID: 43195
+		DrownEndTeleportRequest = 21245,
+		// Token: 0x0400A8BC RID: 43196
+		MonsterDrownRequest = 20753,
+		// Token: 0x0400A8BD RID: 43197
+		PassiveSkillRemoveRequest = 20977,
+		// Token: 0x0400A8BE RID: 43198
+		RTimeStopInstRequest = 18157,
+		// Token: 0x0400A8BF RID: 43199
+		FsmStateBehaviorRequest = 23005,
+		// Token: 0x0400A8C0 RID: 43200
+		FsmPlayMontageRequest = 25815,
+		// Token: 0x0400A8C1 RID: 43201
+		RTimeStopAnimRequest = 28674,
+		// Token: 0x0400A8C2 RID: 43202
+		SwitchRoleRequest = 27457,
+		// Token: 0x0400A8C3 RID: 43203
+		GameplayTagRequest = 17502,
+		// Token: 0x0400A8C4 RID: 43204
+		ExecuteQteRequest = 25206,
+		// Token: 0x0400A8C5 RID: 43205
+		CombineEntitiesRequest = 28910,
+		// Token: 0x0400A8C6 RID: 43206
+		DissolveCombineRelationRequest = 20585,
+		// Token: 0x0400A8C7 RID: 43207
+		ClientCurrentRoleReportRequest = 19037,
+		// Token: 0x0400A8C8 RID: 43208
+		GaSwitchCommonEnemyProCampRequest = 18387,
+		// Token: 0x0400A8C9 RID: 43209
+		ChangeSummonEntityStateRequest = 23569,
+		// Token: 0x0400A8CA RID: 43210
+		CombatMaxCaseMessageRequest = 28528
 	}
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020013ED RID: 5101
+// Token: 0x020008A1 RID: 2209
 public enum EPinballLevelPassStatus
 {
-	// Token: 0x04003FBB RID: 16315
+	// Token: 0x04004053 RID: 16467
 	Perfect,
-	// Token: 0x04003FBC RID: 16316
+	// Token: 0x04004054 RID: 16468
 	Finished,
-	// Token: 0x04003FBD RID: 16317
+	// Token: 0x04004055 RID: 16469
 	Unfinished
 }

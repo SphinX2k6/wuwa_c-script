@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A95 RID: 2709
+	// Token: 0x02000B5F RID: 2911
 	public class IAiAlertSystemConfig
 	{
-		// Token: 0x06003E4B RID: 15947 RVA: 0x0009F74F File Offset: 0x0009D94F
-		[NullableContext(1)]
+		// Token: 0x06004274 RID: 17012 RVA: 0x000A8D07 File Offset: 0x000A6F07
 		public static IAiAlertSystemConfig Create(IAiAlertSystemConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000EDE RID: 3806
-		// (get) Token: 0x06003E4C RID: 15948 RVA: 0x0009F76E File Offset: 0x0009D96E
+		// Token: 0x17000FB1 RID: 4017
+		// (get) Token: 0x06004275 RID: 17013 RVA: 0x000A8D26 File Offset: 0x000A6F26
 		public virtual int AreaId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EDF RID: 3807
-		// (get) Token: 0x06003E4D RID: 15949 RVA: 0x0009F77C File Offset: 0x0009D97C
+		// Token: 0x17000FB2 RID: 4018
+		// (get) Token: 0x06004276 RID: 17014 RVA: 0x000A8D34 File Offset: 0x000A6F34
 		public virtual float? PlayerHatredDeltaValue
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022B2 RID: 8882
+		// Token: 0x040024CE RID: 9422
 		private IAiAlertSystemConfig Instance;
 	}
 }

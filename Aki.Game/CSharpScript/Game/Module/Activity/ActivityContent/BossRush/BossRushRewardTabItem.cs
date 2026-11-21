@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x0200690A RID: 26890
+	// Token: 0x0200585A RID: 22618
 	internal class BossRushRewardTabItem : GridProxyAbstract<BossRushTaskTab>
 	{
-		// Token: 0x060430DC RID: 274652 RVA: 0x01056512 File Offset: 0x01054712
+		// Token: 0x06037C34 RID: 228404 RVA: 0x00F97B46 File Offset: 0x00F95D46
 		[NullableContext(1)]
 		public void SetClickCallBack(Action<BossRushRewardTabItem> callback)
 		{
 			this.ClickCallBack = callback;
 		}
 
-		// Token: 0x060430DD RID: 274653 RVA: 0x0105651C File Offset: 0x0105471C
+		// Token: 0x06037C35 RID: 228405 RVA: 0x00F97B50 File Offset: 0x00F95D50
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060430DE RID: 274654 RVA: 0x01056604 File Offset: 0x01054804
+		// Token: 0x06037C36 RID: 228406 RVA: 0x00F97C38 File Offset: 0x00F95E38
 		public override void Refresh(BossRushTaskTab data, bool isSelected, int gridIndex)
 		{
 			this.Tab = data;
@@ -66,14 +66,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x060430DF RID: 274655 RVA: 0x0105668C File Offset: 0x0105488C
+		// Token: 0x06037C37 RID: 228407 RVA: 0x00F97CC0 File Offset: 0x00F95EC0
 		public void RefreshRedDot()
 		{
 			bool tabRedDotState = (ActivityModel.Instance.GetActivityById(this.Tab.ActivityId) as BossRushData).GetTabRedDotState(this.Tab.TabId);
 			this.SetRedDotActive(tabRedDotState);
 		}
 
-		// Token: 0x060430E0 RID: 274656 RVA: 0x010566CB File Offset: 0x010548CB
+		// Token: 0x06037C38 RID: 228408 RVA: 0x00F97CFF File Offset: 0x00F95EFF
 		private void OnClickToggle(EToggleState state)
 		{
 			Action<BossRushRewardTabItem> clickCallBack = this.ClickCallBack;
@@ -84,19 +84,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			clickCallBack(this);
 		}
 
-		// Token: 0x060430E1 RID: 274657 RVA: 0x010566DE File Offset: 0x010548DE
+		// Token: 0x06037C39 RID: 228409 RVA: 0x00F97D12 File Offset: 0x00F95F12
 		public void SetToggleUnCheck()
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060430E2 RID: 274658 RVA: 0x010566F1 File Offset: 0x010548F1
+		// Token: 0x06037C3A RID: 228410 RVA: 0x00F97D25 File Offset: 0x00F95F25
 		public BossRushTaskTab GetTab()
 		{
 			return this.Tab;
 		}
 
-		// Token: 0x060430E3 RID: 274659 RVA: 0x010566F9 File Offset: 0x010548F9
+		// Token: 0x06037C3B RID: 228411 RVA: 0x00F97D2D File Offset: 0x00F95F2D
 		public void SetRedDotActive(bool isShow)
 		{
 			UUIItem item = base.GetItem(3);
@@ -107,26 +107,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			item.SetUIActive(isShow);
 		}
 
-		// Token: 0x04022E83 RID: 142979
+		// Token: 0x0401D6DF RID: 120543
 		private BossRushTaskTab Tab;
 
-		// Token: 0x04022E84 RID: 142980
+		// Token: 0x0401D6E0 RID: 120544
 		[Nullable(1)]
 		public Action<BossRushRewardTabItem> ClickCallBack;
 
-		// Token: 0x0200CABA RID: 51898
+		// Token: 0x0200B482 RID: 46210
 		public class EBossRushRewardTabItemComponent
 		{
-			// Token: 0x0403D44D RID: 250957
+			// Token: 0x04037D27 RID: 228647
 			public const int Toggle = 0;
 
-			// Token: 0x0403D44E RID: 250958
+			// Token: 0x04037D28 RID: 228648
 			public const int Text = 1;
 
-			// Token: 0x0403D44F RID: 250959
+			// Token: 0x04037D29 RID: 228649
 			public const int Texture = 2;
 
-			// Token: 0x0403D450 RID: 250960
+			// Token: 0x04037D2A RID: 228650
 			public const int RedDotItem = 3;
 		}
 	}

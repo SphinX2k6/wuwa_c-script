@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Plot;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F89 RID: 28553
+	// Token: 0x0200610A RID: 24842
 	public class LevelFlowFadeOutScreen : LevelFlowActionBase
 	{
-		// Token: 0x0604570A RID: 284426 RVA: 0x01138221 File Offset: 0x01136421
+		// Token: 0x0603B8B8 RID: 243896 RVA: 0x010E2025 File Offset: 0x010E0225
 		[NullableContext(1)]
 		public LevelFlowFadeOutScreen Init(FadeOutScreen inParams)
 		{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x0604570B RID: 284427 RVA: 0x0113822C File Offset: 0x0113642C
+		// Token: 0x0603B8B9 RID: 243897 RVA: 0x010E2030 File Offset: 0x010E0230
 		protected override void OnExecute()
 		{
 			FadeBackgroundController.Instance.CloseFadeBackground();
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.CloseLoading(reason, context, callback, (ease != null) ? new float?(ease.Duration) : null);
 		}
 
-		// Token: 0x0604570C RID: 284428 RVA: 0x011382F6 File Offset: 0x011364F6
+		// Token: 0x0603B8BA RID: 243898 RVA: 0x010E20FA File Offset: 0x010E02FA
 		private void OnFadeComplete()
 		{
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x040243BB RID: 148411
+		// Token: 0x0401F670 RID: 128624
 		[Nullable(2)]
 		private FadeOutScreen InParams;
 	}

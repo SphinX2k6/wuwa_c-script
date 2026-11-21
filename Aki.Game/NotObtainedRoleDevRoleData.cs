@@ -4,36 +4,36 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02002815 RID: 10261
+// Token: 0x02001D90 RID: 7568
 [NullableContext(1)]
 [Nullable(0)]
 public class NotObtainedRoleDevRoleData : RoleDevRoleViewItemDataBase
 {
-	// Token: 0x06015137 RID: 86327 RVA: 0x00556341 File Offset: 0x00554541
+	// Token: 0x06012B37 RID: 76599 RVA: 0x00581141 File Offset: 0x0057F341
 	protected override void InitByRoleType(int roleId)
 	{
 		this.InitDetailItemData();
 	}
 
-	// Token: 0x06015138 RID: 86328 RVA: 0x00556349 File Offset: 0x00554549
+	// Token: 0x06012B38 RID: 76600 RVA: 0x00581149 File Offset: 0x0057F349
 	private void InitDetailItemData()
 	{
 		this.DetailItemDataInternal.InitByRoleId(base.RoleId);
 	}
 
-	// Token: 0x06015139 RID: 86329 RVA: 0x0055635C File Offset: 0x0055455C
+	// Token: 0x06012B39 RID: 76601 RVA: 0x0058115C File Offset: 0x0057F35C
 	protected override int GetRoleLevel()
 	{
 		return 1;
 	}
 
-	// Token: 0x0601513A RID: 86330 RVA: 0x0055635F File Offset: 0x0055455F
+	// Token: 0x06012B3A RID: 76602 RVA: 0x0058115F File Offset: 0x0057F35F
 	protected override int GetRoleBreachLevel()
 	{
 		return 0;
 	}
 
-	// Token: 0x0601513B RID: 86331 RVA: 0x00556364 File Offset: 0x00554564
+	// Token: 0x06012B3B RID: 76603 RVA: 0x00581164 File Offset: 0x0057F364
 	protected override int GetRoleGoalUpgradeLevel()
 	{
 		RoleDevCultivateProject? cultivateProject = RoleDevUtils.GetCultivateProject(base.RoleId);
@@ -44,7 +44,7 @@ public class NotObtainedRoleDevRoleData : RoleDevRoleViewItemDataBase
 		return cultivateProject.Value.RoleLevel;
 	}
 
-	// Token: 0x0601513C RID: 86332 RVA: 0x00556398 File Offset: 0x00554598
+	// Token: 0x06012B3C RID: 76604 RVA: 0x00581198 File Offset: 0x0057F398
 	protected override int GetRoleGoalBreakLevel()
 	{
 		RoleDevCultivateProject? cultivateProject = RoleDevUtils.GetCultivateProject(base.RoleId);
@@ -55,19 +55,19 @@ public class NotObtainedRoleDevRoleData : RoleDevRoleViewItemDataBase
 		return cultivateProject.Value.RoleBreachLevel;
 	}
 
-	// Token: 0x0601513D RID: 86333 RVA: 0x005563CB File Offset: 0x005545CB
+	// Token: 0x06012B3D RID: 76605 RVA: 0x005811CB File Offset: 0x0057F3CB
 	protected override int GetMaxLevel()
 	{
 		return 0;
 	}
 
-	// Token: 0x0601513E RID: 86334 RVA: 0x005563CE File Offset: 0x005545CE
+	// Token: 0x06012B3E RID: 76606 RVA: 0x005811CE File Offset: 0x0057F3CE
 	protected override List<IRoleDevDetailItemData> GetDetailItems()
 	{
 		return this.DetailItemDataInternal.DetailItems;
 	}
 
-	// Token: 0x0601513F RID: 86335 RVA: 0x005563DC File Offset: 0x005545DC
+	// Token: 0x06012B3F RID: 76607 RVA: 0x005811DC File Offset: 0x0057F3DC
 	protected override string GetRoleName()
 	{
 		RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(base.RoleId);
@@ -78,25 +78,25 @@ public class NotObtainedRoleDevRoleData : RoleDevRoleViewItemDataBase
 		return ConfigMultiTextLang.GetLocalTextNew(roleConfig.Value.Name, null) ?? "";
 	}
 
-	// Token: 0x06015140 RID: 86336 RVA: 0x00556427 File Offset: 0x00554627
+	// Token: 0x06012B40 RID: 76608 RVA: 0x00581227 File Offset: 0x0057F427
 	protected override bool GetIsCanUpgrade()
 	{
 		return true;
 	}
 
-	// Token: 0x06015141 RID: 86337 RVA: 0x0055642A File Offset: 0x0055462A
+	// Token: 0x06012B41 RID: 76609 RVA: 0x0058122A File Offset: 0x0057F42A
 	protected override bool GetIsCanBreach()
 	{
 		return true;
 	}
 
-	// Token: 0x06015142 RID: 86338 RVA: 0x0055642D File Offset: 0x0055462D
+	// Token: 0x06012B42 RID: 76610 RVA: 0x0058122D File Offset: 0x0057F42D
 	protected override bool GetIsCall()
 	{
 		return RoleDevUtils.IsHotRole(base.RoleId) && RoleDevUtils.GetRoleGachaIds(base.RoleId).Length != 0;
 	}
 
-	// Token: 0x06015143 RID: 86339 RVA: 0x00556450 File Offset: 0x00554650
+	// Token: 0x06012B43 RID: 76611 RVA: 0x00581250 File Offset: 0x0057F450
 	protected override int GetGachaId()
 	{
 		if (!RoleDevUtils.IsHotRole(base.RoleId))
@@ -111,14 +111,14 @@ public class NotObtainedRoleDevRoleData : RoleDevRoleViewItemDataBase
 		return roleGachaIds[0];
 	}
 
-	// Token: 0x06015144 RID: 86340 RVA: 0x00556481 File Offset: 0x00554681
+	// Token: 0x06012B44 RID: 76612 RVA: 0x00581281 File Offset: 0x0057F481
 	protected override bool GetIsForecast()
 	{
 		return false;
 	}
 
-	// Token: 0x17001BD8 RID: 7128
-	// (get) Token: 0x06015145 RID: 86341 RVA: 0x00556484 File Offset: 0x00554684
+	// Token: 0x17001C30 RID: 7216
+	// (get) Token: 0x06012B45 RID: 76613 RVA: 0x00581284 File Offset: 0x0057F484
 	public NotObtainedRoleDevRoleDetailItemData DetailItemData
 	{
 		get
@@ -127,6 +127,6 @@ public class NotObtainedRoleDevRoleData : RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x04009E36 RID: 40502
+	// Token: 0x0400A21F RID: 41503
 	private readonly NotObtainedRoleDevRoleDetailItemData DetailItemDataInternal = new NotObtainedRoleDevRoleDetailItemData();
 }

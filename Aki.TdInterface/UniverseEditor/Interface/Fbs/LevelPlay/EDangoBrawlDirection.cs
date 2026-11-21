@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200441B RID: 17435
+	// Token: 0x02004883 RID: 18563
 	public enum EDangoBrawlDirection : byte
 	{
-		// Token: 0x0400C37A RID: 50042
+		// Token: 0x0400CDA7 RID: 52647
 		Up,
-		// Token: 0x0400C37B RID: 50043
+		// Token: 0x0400CDA8 RID: 52648
 		Right,
-		// Token: 0x0400C37C RID: 50044
+		// Token: 0x0400CDA9 RID: 52649
 		Down,
-		// Token: 0x0400C37D RID: 50045
+		// Token: 0x0400CDAA RID: 52650
 		Left
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200685B RID: 26715
+	// Token: 0x02006EF0 RID: 28400
 	public struct IFoxPickUp : IFlatbufferObject
 	{
-		// Token: 0x1700C669 RID: 50793
-		// (get) Token: 0x0602E945 RID: 190789 RVA: 0x0065AA40 File Offset: 0x00658C40
+		// Token: 0x1700D03D RID: 53309
+		// (get) Token: 0x0603122B RID: 201259 RVA: 0x006A92AC File Offset: 0x006A74AC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E946 RID: 190790 RVA: 0x0065AA4D File Offset: 0x00658C4D
+		// Token: 0x0603122C RID: 201260 RVA: 0x006A92B9 File Offset: 0x006A74B9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E947 RID: 190791 RVA: 0x0065AA54 File Offset: 0x00658C54
+		// Token: 0x0603122D RID: 201261 RVA: 0x006A92C0 File Offset: 0x006A74C0
 		public static IFoxPickUp GetRootAsIFoxPickUp(ByteBuffer _bb)
 		{
 			return IFoxPickUp.GetRootAsIFoxPickUp(_bb, default(IFoxPickUp));
 		}
 
-		// Token: 0x0602E948 RID: 190792 RVA: 0x0065AA70 File Offset: 0x00658C70
+		// Token: 0x0603122E RID: 201262 RVA: 0x006A92DC File Offset: 0x006A74DC
 		public static IFoxPickUp GetRootAsIFoxPickUp(ByteBuffer _bb, IFoxPickUp obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E949 RID: 190793 RVA: 0x0065AA8D File Offset: 0x00658C8D
+		// Token: 0x0603122F RID: 201263 RVA: 0x006A92F9 File Offset: 0x006A74F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E94A RID: 190794 RVA: 0x0065AA9C File Offset: 0x00658C9C
+		// Token: 0x06031230 RID: 201264 RVA: 0x006A9308 File Offset: 0x006A7508
 		public IFoxPickUp __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C66A RID: 50794
-		// (get) Token: 0x0602E94B RID: 190795 RVA: 0x0065AAAC File Offset: 0x00658CAC
+		// Token: 0x1700D03E RID: 53310
+		// (get) Token: 0x06031231 RID: 201265 RVA: 0x006A9318 File Offset: 0x006A7518
 		public ELeisureInteract Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C66B RID: 50795
-		// (get) Token: 0x0602E94C RID: 190796 RVA: 0x0065AAE8 File Offset: 0x00658CE8
+		// Token: 0x1700D03F RID: 53311
+		// (get) Token: 0x06031232 RID: 201266 RVA: 0x006A9354 File Offset: 0x006A7554
 		public int DataTableIndex
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C66C RID: 50796
-		// (get) Token: 0x0602E94D RID: 190797 RVA: 0x0065AB24 File Offset: 0x00658D24
+		// Token: 0x1700D040 RID: 53312
+		// (get) Token: 0x06031233 RID: 201267 RVA: 0x006A9390 File Offset: 0x006A7590
 		public bool MouthOpen
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C66D RID: 50797
-		// (get) Token: 0x0602E94E RID: 190798 RVA: 0x0065AB64 File Offset: 0x00658D64
+		// Token: 0x1700D041 RID: 53313
+		// (get) Token: 0x06031234 RID: 201268 RVA: 0x006A93D0 File Offset: 0x006A75D0
 		public byte NullMask
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E94F RID: 190799 RVA: 0x0065ABA1 File Offset: 0x00658DA1
+		// Token: 0x06031235 RID: 201269 RVA: 0x006A940D File Offset: 0x006A760D
 		public static Offset<IFoxPickUp> CreateIFoxPickUp(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill, int DataTableIndex = 0, bool MouthOpen = false, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -114,43 +114,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFoxPickUp.EndIFoxPickUp(builder);
 		}
 
-		// Token: 0x0602E950 RID: 190800 RVA: 0x0065ABCD File Offset: 0x00658DCD
+		// Token: 0x06031236 RID: 201270 RVA: 0x006A9439 File Offset: 0x006A7639
 		public static void StartIFoxPickUp(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602E951 RID: 190801 RVA: 0x0065ABD6 File Offset: 0x00658DD6
+		// Token: 0x06031237 RID: 201271 RVA: 0x006A9442 File Offset: 0x006A7642
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E952 RID: 190802 RVA: 0x0065ABE1 File Offset: 0x00658DE1
+		// Token: 0x06031238 RID: 201272 RVA: 0x006A944D File Offset: 0x006A764D
 		public static void AddDataTableIndex(FlatBufferBuilder builder, int dataTableIndex)
 		{
 			builder.AddInt(1, dataTableIndex, 0);
 		}
 
-		// Token: 0x0602E953 RID: 190803 RVA: 0x0065ABEC File Offset: 0x00658DEC
+		// Token: 0x06031239 RID: 201273 RVA: 0x006A9458 File Offset: 0x006A7658
 		public static void AddMouthOpen(FlatBufferBuilder builder, bool mouthOpen)
 		{
 			builder.AddBool(2, mouthOpen, false);
 		}
 
-		// Token: 0x0602E954 RID: 190804 RVA: 0x0065ABF7 File Offset: 0x00658DF7
+		// Token: 0x0603123A RID: 201274 RVA: 0x006A9463 File Offset: 0x006A7663
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0602E955 RID: 190805 RVA: 0x0065AC02 File Offset: 0x00658E02
+		// Token: 0x0603123B RID: 201275 RVA: 0x006A946E File Offset: 0x006A766E
 		public static Offset<IFoxPickUp> EndIFoxPickUp(FlatBufferBuilder builder)
 		{
 			return new Offset<IFoxPickUp>(builder.EndTable());
 		}
 
-		// Token: 0x0602E956 RID: 190806 RVA: 0x0065AC10 File Offset: 0x00658E10
+		// Token: 0x0603123C RID: 201276 RVA: 0x006A947C File Offset: 0x006A767C
 		public IFoxPickUpT UnPack()
 		{
 			IFoxPickUpT foxPickUpT = new IFoxPickUpT();
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return foxPickUpT;
 		}
 
-		// Token: 0x0602E957 RID: 190807 RVA: 0x0065AC2B File Offset: 0x00658E2B
+		// Token: 0x0603123D RID: 201277 RVA: 0x006A9497 File Offset: 0x006A7697
 		public void UnPackTo(IFoxPickUpT _o)
 		{
 			_o.Type = this.Type;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602E958 RID: 190808 RVA: 0x0065AC60 File Offset: 0x00658E60
+		// Token: 0x0603123E RID: 201278 RVA: 0x006A94CC File Offset: 0x006A76CC
 		public static Offset<IFoxPickUp> Pack(FlatBufferBuilder builder, IFoxPickUpT _o)
 		{
 			if (_o == null)
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFoxPickUp.CreateIFoxPickUp(builder, _o.Type, _o.DataTableIndex, _o.MouthOpen, _o.NullMask);
 		}
 
-		// Token: 0x04010FA6 RID: 69542
+		// Token: 0x04011DF0 RID: 73200
 		private Table __p;
 	}
 }

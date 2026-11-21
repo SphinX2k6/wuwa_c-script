@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Overview
 {
-	// Token: 0x02005754 RID: 22356
+	// Token: 0x0200472B RID: 18219
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,13 +12,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 	})]
 	internal class OverviewEmptyGridData : MultiTemplateGridDataBase<int, EmptyGrid>
 	{
-		// Token: 0x06038D11 RID: 232721 RVA: 0x00D7E846 File Offset: 0x00D7CA46
+		// Token: 0x0602DC21 RID: 187425 RVA: 0x00CCD226 File Offset: 0x00CCB426
 		public override int GetTemplateIndex()
 		{
 			return 2;
 		}
 
-		// Token: 0x06038D12 RID: 232722 RVA: 0x00D7E849 File Offset: 0x00D7CA49
+		// Token: 0x0602DC22 RID: 187426 RVA: 0x00CCD229 File Offset: 0x00CCB429
 		public override EmptyGrid CreateProxy()
 		{
 			return new EmptyGrid();

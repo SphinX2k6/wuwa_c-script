@@ -3,38 +3,38 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MechanismTimeline
 {
-	// Token: 0x0200547D RID: 21629
+	// Token: 0x02004460 RID: 17504
 	[NullableContext(1)]
 	public interface IEventData
 	{
-		// Token: 0x1700845C RID: 33884
-		// (get) Token: 0x060372FB RID: 226043
-		// (set) Token: 0x060372FC RID: 226044
+		// Token: 0x17005828 RID: 22568
+		// (get) Token: 0x0602C244 RID: 180804
+		// (set) Token: 0x0602C245 RID: 180805
 		string EventName { get; set; }
 
-		// Token: 0x1700845D RID: 33885
-		// (get) Token: 0x060372FD RID: 226045
-		// (set) Token: 0x060372FE RID: 226046
+		// Token: 0x17005829 RID: 22569
+		// (get) Token: 0x0602C246 RID: 180806
+		// (set) Token: 0x0602C247 RID: 180807
 		string EventType { get; set; }
 
-		// Token: 0x1700845E RID: 33886
-		// (get) Token: 0x060372FF RID: 226047
-		// (set) Token: 0x06037300 RID: 226048
+		// Token: 0x1700582A RID: 22570
+		// (get) Token: 0x0602C248 RID: 180808
+		// (set) Token: 0x0602C249 RID: 180809
 		bool IsAnimNotifyState { get; set; }
 
-		// Token: 0x1700845F RID: 33887
-		// (get) Token: 0x06037301 RID: 226049
-		// (set) Token: 0x06037302 RID: 226050
+		// Token: 0x1700582B RID: 22571
+		// (get) Token: 0x0602C24A RID: 180810
+		// (set) Token: 0x0602C24B RID: 180811
 		int StartFrame { get; set; }
 
-		// Token: 0x17008460 RID: 33888
-		// (get) Token: 0x06037303 RID: 226051
-		// (set) Token: 0x06037304 RID: 226052
+		// Token: 0x1700582C RID: 22572
+		// (get) Token: 0x0602C24C RID: 180812
+		// (set) Token: 0x0602C24D RID: 180813
 		int EndFrame { get; set; }
 
-		// Token: 0x17008461 RID: 33889
-		// (get) Token: 0x06037305 RID: 226053
-		// (set) Token: 0x06037306 RID: 226054
+		// Token: 0x1700582D RID: 22573
+		// (get) Token: 0x0602C24E RID: 180814
+		// (set) Token: 0x0602C24F RID: 180815
 		int RowIndex { get; set; }
 	}
 }

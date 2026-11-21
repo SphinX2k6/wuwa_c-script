@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x02000067 RID: 103
+	// Token: 0x02000069 RID: 105
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LauncherAudio : Singleton
 	{
-		// Token: 0x060002AE RID: 686 RVA: 0x0000DDDC File Offset: 0x0000BFDC
+		// Token: 0x060002B0 RID: 688 RVA: 0x0000E188 File Offset: 0x0000C388
 		public void Init()
 		{
 			UAkGameplayStatics.ClearSoundBanksAndMedia();
@@ -20,7 +20,7 @@ namespace CSharpScript.Launcher.Util
 			UAkGameplayStatics.ReloadAudioAssetData();
 		}
 
-		// Token: 0x060002AF RID: 687 RVA: 0x0000DDF4 File Offset: 0x0000BFF4
+		// Token: 0x060002B1 RID: 689 RVA: 0x0000E1A0 File Offset: 0x0000C3A0
 		public void InitIosAuditPackage()
 		{
 			if (this.IsInit)
@@ -51,7 +51,7 @@ namespace CSharpScript.Launcher.Util
 			this.IsInit = true;
 		}
 
-		// Token: 0x060002B0 RID: 688 RVA: 0x0000DE94 File Offset: 0x0000C094
+		// Token: 0x060002B2 RID: 690 RVA: 0x0000E240 File Offset: 0x0000C440
 		private void OnEventsLoaded()
 		{
 			if (this.PauseAudioEvent != null && this.ResumeAudioEvent != null)
@@ -63,7 +63,7 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x060002B1 RID: 689 RVA: 0x0000DEE4 File Offset: 0x0000C0E4
+		// Token: 0x060002B3 RID: 691 RVA: 0x0000E290 File Offset: 0x0000C490
 		public void Destroy()
 		{
 			if (!this.IsInit)
@@ -80,7 +80,7 @@ namespace CSharpScript.Launcher.Util
 			this.IsInit = false;
 		}
 
-		// Token: 0x060002B2 RID: 690 RVA: 0x0000DF40 File Offset: 0x0000C140
+		// Token: 0x060002B4 RID: 692 RVA: 0x0000E2EC File Offset: 0x0000C4EC
 		private void OnAudioPause()
 		{
 			if (this.PauseAudioEvent != null)
@@ -101,7 +101,7 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x060002B3 RID: 691 RVA: 0x0000DFBC File Offset: 0x0000C1BC
+		// Token: 0x060002B5 RID: 693 RVA: 0x0000E368 File Offset: 0x0000C568
 		private void OnAudioResume()
 		{
 			if (this.ResumeAudioEvent != null)
@@ -125,7 +125,7 @@ namespace CSharpScript.Launcher.Util
 		}
 
 		// Token: 0x17000042 RID: 66
-		// (get) Token: 0x060002B4 RID: 692 RVA: 0x0000E048 File Offset: 0x0000C248
+		// (get) Token: 0x060002B6 RID: 694 RVA: 0x0000E3F4 File Offset: 0x0000C5F4
 		public static LauncherAudio Instance
 		{
 			get
@@ -139,12 +139,12 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x060002B5 RID: 693 RVA: 0x0000E06B File Offset: 0x0000C26B
+		// Token: 0x060002B7 RID: 695 RVA: 0x0000E417 File Offset: 0x0000C617
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060002B6 RID: 694 RVA: 0x0000E06D File Offset: 0x0000C26D
+		// Token: 0x060002B8 RID: 696 RVA: 0x0000E419 File Offset: 0x0000C619
 		public static void ResetStaticDefaultValue()
 		{
 			LauncherAudio instance = LauncherAudio._instance;
@@ -155,33 +155,33 @@ namespace CSharpScript.Launcher.Util
 			LauncherAudio._instance = null;
 		}
 
-		// Token: 0x060002B7 RID: 695 RVA: 0x0000E086 File Offset: 0x0000C286
+		// Token: 0x060002B9 RID: 697 RVA: 0x0000E432 File Offset: 0x0000C632
 		static LauncherAudio()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LauncherAudio.CreateStaticDefaultValue), new Action(LauncherAudio.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040001B2 RID: 434
+		// Token: 0x040001D9 RID: 473
 		private const string PAUSE_AUDIO_EVENT = "/Game/Aki/WwiseAudio/Events/pause_all_wwise_audio.pause_all_wwise_audio";
 
-		// Token: 0x040001B3 RID: 435
+		// Token: 0x040001DA RID: 474
 		private const string RESUME_AUDIO_EVENT = "/Game/Aki/WwiseAudio/Events/resume_all_wwise_audio.resume_all_wwise_audio";
 
-		// Token: 0x040001B4 RID: 436
+		// Token: 0x040001DB RID: 475
 		[Nullable(2)]
 		private UAkAudioEvent PauseAudioEvent;
 
-		// Token: 0x040001B5 RID: 437
+		// Token: 0x040001DC RID: 476
 		[Nullable(2)]
 		private UAkAudioEvent ResumeAudioEvent;
 
-		// Token: 0x040001B6 RID: 438
+		// Token: 0x040001DD RID: 477
 		private bool IsInit;
 
-		// Token: 0x040001B7 RID: 439
+		// Token: 0x040001DE RID: 478
 		private bool? IsPaused;
 
-		// Token: 0x040001B8 RID: 440
+		// Token: 0x040001DF RID: 479
 		[Nullable(2)]
 		private static LauncherAudio _instance;
 	}

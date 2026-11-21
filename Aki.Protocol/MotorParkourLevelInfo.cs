@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000A94 RID: 2708
+	// Token: 0x02000A83 RID: 2691
 	public sealed class MotorParkourLevelInfo : IMessage<MotorParkourLevelInfo>, IMessage, IEquatable<MotorParkourLevelInfo>, IDeepCloneable<MotorParkourLevelInfo>, IBufferMessage
 	{
-		// Token: 0x0600EBCF RID: 60367 RVA: 0x00226CBC File Offset: 0x00224EBC
+		// Token: 0x0600EAB5 RID: 60085 RVA: 0x00224AC0 File Offset: 0x00222CC0
 		[NullableContext(1)]
 		public static MotorParkourLevelInfo Create()
 		{
 			return new MotorParkourLevelInfo();
 		}
 
-		// Token: 0x17002FE0 RID: 12256
-		// (get) Token: 0x0600EBD0 RID: 60368 RVA: 0x00226CC3 File Offset: 0x00224EC3
+		// Token: 0x17002FA2 RID: 12194
+		// (get) Token: 0x0600EAB6 RID: 60086 RVA: 0x00224AC7 File Offset: 0x00222CC7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<MotorParkourLevelInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002FE1 RID: 12257
-		// (get) Token: 0x0600EBD1 RID: 60369 RVA: 0x00226CCA File Offset: 0x00224ECA
+		// Token: 0x17002FA3 RID: 12195
+		// (get) Token: 0x0600EAB7 RID: 60087 RVA: 0x00224ACE File Offset: 0x00222CCE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002FE2 RID: 12258
-		// (get) Token: 0x0600EBD2 RID: 60370 RVA: 0x00226CCD File Offset: 0x00224ECD
+		// Token: 0x17002FA4 RID: 12196
+		// (get) Token: 0x0600EAB8 RID: 60088 RVA: 0x00224AD1 File Offset: 0x00222CD1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600EBD3 RID: 60371 RVA: 0x00226CD4 File Offset: 0x00224ED4
+		// Token: 0x0600EAB9 RID: 60089 RVA: 0x00224AD8 File Offset: 0x00222CD8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorParkourLevelInfo()
 		{
 		}
 
-		// Token: 0x0600EBD4 RID: 60372 RVA: 0x00226CE8 File Offset: 0x00224EE8
+		// Token: 0x0600EABA RID: 60090 RVA: 0x00224AEC File Offset: 0x00222CEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorParkourLevelInfo(MotorParkourLevelInfo other) : this()
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600EBD5 RID: 60373 RVA: 0x00226D41 File Offset: 0x00224F41
+		// Token: 0x0600EABB RID: 60091 RVA: 0x00224B45 File Offset: 0x00222D45
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorParkourLevelInfo Clone()
@@ -81,9 +81,9 @@ namespace Aki.Protocol
 			return new MotorParkourLevelInfo(this);
 		}
 
-		// Token: 0x17002FE3 RID: 12259
-		// (get) Token: 0x0600EBD6 RID: 60374 RVA: 0x00226D49 File Offset: 0x00224F49
-		// (set) Token: 0x0600EBD7 RID: 60375 RVA: 0x00226D51 File Offset: 0x00224F51
+		// Token: 0x17002FA5 RID: 12197
+		// (get) Token: 0x0600EABC RID: 60092 RVA: 0x00224B4D File Offset: 0x00222D4D
+		// (set) Token: 0x0600EABD RID: 60093 RVA: 0x00224B55 File Offset: 0x00222D55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MotorParkourId
@@ -98,8 +98,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002FE4 RID: 12260
-		// (get) Token: 0x0600EBD8 RID: 60376 RVA: 0x00226D5A File Offset: 0x00224F5A
+		// Token: 0x17002FA6 RID: 12198
+		// (get) Token: 0x0600EABE RID: 60094 RVA: 0x00224B5E File Offset: 0x00222D5E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<MotorParkourRewardState> RewardStates
@@ -110,9 +110,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002FE5 RID: 12261
-		// (get) Token: 0x0600EBD9 RID: 60377 RVA: 0x00226D62 File Offset: 0x00224F62
-		// (set) Token: 0x0600EBDA RID: 60378 RVA: 0x00226D6A File Offset: 0x00224F6A
+		// Token: 0x17002FA7 RID: 12199
+		// (get) Token: 0x0600EABF RID: 60095 RVA: 0x00224B66 File Offset: 0x00222D66
+		// (set) Token: 0x0600EAC0 RID: 60096 RVA: 0x00224B6E File Offset: 0x00222D6E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long UnlockTime
@@ -127,9 +127,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002FE6 RID: 12262
-		// (get) Token: 0x0600EBDB RID: 60379 RVA: 0x00226D73 File Offset: 0x00224F73
-		// (set) Token: 0x0600EBDC RID: 60380 RVA: 0x00226D7B File Offset: 0x00224F7B
+		// Token: 0x17002FA8 RID: 12200
+		// (get) Token: 0x0600EAC1 RID: 60097 RVA: 0x00224B77 File Offset: 0x00222D77
+		// (set) Token: 0x0600EAC2 RID: 60098 RVA: 0x00224B7F File Offset: 0x00222D7F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int BestPassTime
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600EBDD RID: 60381 RVA: 0x00226D84 File Offset: 0x00224F84
+		// Token: 0x0600EAC3 RID: 60099 RVA: 0x00224B88 File Offset: 0x00222D88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MotorParkourLevelInfo);
 		}
 
-		// Token: 0x0600EBDE RID: 60382 RVA: 0x00226D94 File Offset: 0x00224F94
+		// Token: 0x0600EAC4 RID: 60100 RVA: 0x00224B98 File Offset: 0x00222D98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MotorParkourLevelInfo other)
@@ -160,7 +160,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.MotorParkourId == other.MotorParkourId && this.rewardStates_.Equals(other.rewardStates_) && this.UnlockTime == other.UnlockTime && this.BestPassTime == other.BestPassTime && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600EBDF RID: 60383 RVA: 0x00226E04 File Offset: 0x00225004
+		// Token: 0x0600EAC5 RID: 60101 RVA: 0x00224C08 File Offset: 0x00222E08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600EBE0 RID: 60384 RVA: 0x00226E83 File Offset: 0x00225083
+		// Token: 0x0600EAC6 RID: 60102 RVA: 0x00224C87 File Offset: 0x00222E87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -194,7 +194,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600EBE1 RID: 60385 RVA: 0x00226E90 File Offset: 0x00225090
+		// Token: 0x0600EAC7 RID: 60103 RVA: 0x00224C94 File Offset: 0x00222E94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600EBE2 RID: 60386 RVA: 0x00226E9C File Offset: 0x0022509C
+		// Token: 0x0600EAC8 RID: 60104 RVA: 0x00224CA0 File Offset: 0x00222EA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600EBE3 RID: 60387 RVA: 0x00226F24 File Offset: 0x00225124
+		// Token: 0x0600EAC9 RID: 60105 RVA: 0x00224D28 File Offset: 0x00222F28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -255,7 +255,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600EBE4 RID: 60388 RVA: 0x00226FA8 File Offset: 0x002251A8
+		// Token: 0x0600EACA RID: 60106 RVA: 0x00224DAC File Offset: 0x00222FAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MotorParkourLevelInfo other)
@@ -280,7 +280,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600EBE5 RID: 60389 RVA: 0x0022701D File Offset: 0x0022521D
+		// Token: 0x0600EACB RID: 60107 RVA: 0x00224E21 File Offset: 0x00223021
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -288,7 +288,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600EBE6 RID: 60390 RVA: 0x00227028 File Offset: 0x00225228
+		// Token: 0x0600EACC RID: 60108 RVA: 0x00224E2C File Offset: 0x0022302C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -336,37 +336,37 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005FA7 RID: 24487
+		// Token: 0x04005FB0 RID: 24496
 		private static readonly MessageParser<MotorParkourLevelInfo> _parser = new MessageParser<MotorParkourLevelInfo>(() => new MotorParkourLevelInfo());
 
-		// Token: 0x04005FA8 RID: 24488
+		// Token: 0x04005FB1 RID: 24497
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005FA9 RID: 24489
+		// Token: 0x04005FB2 RID: 24498
 		public const int MotorParkourIdFieldNumber = 1;
 
-		// Token: 0x04005FAA RID: 24490
+		// Token: 0x04005FB3 RID: 24499
 		private int motorParkourId_;
 
-		// Token: 0x04005FAB RID: 24491
+		// Token: 0x04005FB4 RID: 24500
 		public const int RewardStatesFieldNumber = 2;
 
-		// Token: 0x04005FAC RID: 24492
+		// Token: 0x04005FB5 RID: 24501
 		private static readonly FieldCodec<MotorParkourRewardState> _repeated_rewardStates_codec = FieldCodec.ForEnum<MotorParkourRewardState>(18U, (MotorParkourRewardState x) => (int)x, (int x) => (MotorParkourRewardState)x);
 
-		// Token: 0x04005FAD RID: 24493
+		// Token: 0x04005FB6 RID: 24502
 		private readonly RepeatedField<MotorParkourRewardState> rewardStates_ = new RepeatedField<MotorParkourRewardState>();
 
-		// Token: 0x04005FAE RID: 24494
+		// Token: 0x04005FB7 RID: 24503
 		public const int UnlockTimeFieldNumber = 3;
 
-		// Token: 0x04005FAF RID: 24495
+		// Token: 0x04005FB8 RID: 24504
 		private long unlockTime_;
 
-		// Token: 0x04005FB0 RID: 24496
+		// Token: 0x04005FB9 RID: 24505
 		public const int BestPassTimeFieldNumber = 4;
 
-		// Token: 0x04005FB1 RID: 24497
+		// Token: 0x04005FBA RID: 24506
 		private int bestPassTime_;
 	}
 }

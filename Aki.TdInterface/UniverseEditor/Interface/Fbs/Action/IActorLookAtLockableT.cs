@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060E1 RID: 24801
+	// Token: 0x02006743 RID: 26435
 	public class IActorLookAtLockableT
 	{
-		// Token: 0x1700B6C6 RID: 46790
-		// (get) Token: 0x0602A5D2 RID: 173522 RVA: 0x005D695A File Offset: 0x005D4B5A
-		// (set) Token: 0x0602A5D3 RID: 173523 RVA: 0x005D6962 File Offset: 0x005D4B62
+		// Token: 0x1700C031 RID: 49201
+		// (get) Token: 0x0602CCB3 RID: 183475 RVA: 0x00620902 File Offset: 0x0061EB02
+		// (set) Token: 0x0602CCB4 RID: 183476 RVA: 0x0062090A File Offset: 0x0061EB0A
 		public EActorLookAtMode Type { get; set; }
 
-		// Token: 0x1700B6C7 RID: 46791
-		// (get) Token: 0x0602A5D4 RID: 173524 RVA: 0x005D696B File Offset: 0x005D4B6B
-		// (set) Token: 0x0602A5D5 RID: 173525 RVA: 0x005D6973 File Offset: 0x005D4B73
+		// Token: 0x1700C032 RID: 49202
+		// (get) Token: 0x0602CCB5 RID: 183477 RVA: 0x00620913 File Offset: 0x0061EB13
+		// (set) Token: 0x0602CCB6 RID: 183478 RVA: 0x0062091B File Offset: 0x0061EB1B
 		public bool Lock { get; set; }
 
-		// Token: 0x1700B6C8 RID: 46792
-		// (get) Token: 0x0602A5D6 RID: 173526 RVA: 0x005D697C File Offset: 0x005D4B7C
-		// (set) Token: 0x0602A5D7 RID: 173527 RVA: 0x005D6984 File Offset: 0x005D4B84
+		// Token: 0x1700C033 RID: 49203
+		// (get) Token: 0x0602CCB7 RID: 183479 RVA: 0x00620924 File Offset: 0x0061EB24
+		// (set) Token: 0x0602CCB8 RID: 183480 RVA: 0x0062092C File Offset: 0x0061EB2C
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602A5D8 RID: 173528 RVA: 0x005D698D File Offset: 0x005D4B8D
+		// Token: 0x0602CCB9 RID: 183481 RVA: 0x00620935 File Offset: 0x0061EB35
 		public IActorLookAtLockableT()
 		{
 			this.Type = EActorLookAtMode.Talker;

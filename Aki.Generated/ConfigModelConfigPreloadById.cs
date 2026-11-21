@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000544 RID: 1348
+	// Token: 0x0200055A RID: 1370
 	public class ConfigModelConfigPreloadById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001FA5 RID: 8101 RVA: 0x0010C387 File Offset: 0x0010A587
+		// Token: 0x06002029 RID: 8233 RVA: 0x00112ADB File Offset: 0x00110CDB
 		static ConfigModelConfigPreloadById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigModelConfigPreloadById.CreateStaticDefaultValue), new Action(ConfigModelConfigPreloadById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001FA6 RID: 8102 RVA: 0x0010C3A8 File Offset: 0x0010A5A8
+		// Token: 0x0600202A RID: 8234 RVA: 0x00112AFC File Offset: 0x00110CFC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigModelConfigPreloadById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001FA7 RID: 8103 RVA: 0x0010C427 File Offset: 0x0010A627
+		// Token: 0x0600202B RID: 8235 RVA: 0x00112B7B File Offset: 0x00110D7B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigModelConfigPreloadById.LogPair = null;
 			ConfigModelConfigPreloadById.HandleId = 0;
 		}
 
-		// Token: 0x06001FA8 RID: 8104 RVA: 0x0010C435 File Offset: 0x0010A635
+		// Token: 0x0600202C RID: 8236 RVA: 0x00112B89 File Offset: 0x00110D89
 		public static void Init()
 		{
 			ConfigModelConfigPreloadById.HandleId = ConfigCommon.InitDataStatement(ConfigModelConfigPreloadById.HandleId, "db_model_config_preload.db", "select BinData from `ModelConfigPreload` where Id=?");
 		}
 
-		// Token: 0x06001FA9 RID: 8105 RVA: 0x0010C450 File Offset: 0x0010A650
+		// Token: 0x0600202D RID: 8237 RVA: 0x00112BA4 File Offset: 0x00110DA4
 		public static ModelConfigPreload? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigModelConfigPreloadById.HandleId, ConfigModelConfigPreloadById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ModelConfigPreload?(rootAsModelConfigPreload);
 		}
 
-		// Token: 0x040024C0 RID: 9408
+		// Token: 0x0400255A RID: 9562
 		private const string DB = "db_model_config_preload.db";
 
-		// Token: 0x040024C1 RID: 9409
+		// Token: 0x0400255B RID: 9563
 		private const string FILE = "Preload/ModelConfigPreload.csv";
 
-		// Token: 0x040024C2 RID: 9410
+		// Token: 0x0400255C RID: 9564
 		private const string TABLE = "ModelConfigPreload";
 
-		// Token: 0x040024C3 RID: 9411
+		// Token: 0x0400255D RID: 9565
 		private const string COMMAND = "select BinData from `ModelConfigPreload` where Id=?";
 
-		// Token: 0x040024C4 RID: 9412
+		// Token: 0x0400255E RID: 9566
 		private const string KEY_PREFIX = "ModelConfigPreloadById";
 
-		// Token: 0x040024C5 RID: 9413
+		// Token: 0x0400255F RID: 9567
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040024C6 RID: 9414
+		// Token: 0x04002560 RID: 9568
 		private static int HandleId;
 	}
 }

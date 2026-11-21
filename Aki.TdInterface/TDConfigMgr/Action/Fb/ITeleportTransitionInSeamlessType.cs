@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026A4 RID: 9892
+	// Token: 0x02002967 RID: 10599
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITeleportTransitionInSeamlessType : ITeleportTransitionType
 	{
-		// Token: 0x0600DD60 RID: 56672 RVA: 0x0020E336 File Offset: 0x0020C536
-		[NullableContext(1)]
+		// Token: 0x0600EB37 RID: 60215 RVA: 0x0022AAD6 File Offset: 0x00228CD6
+		[NullableContext(0)]
 		public static ITeleportTransitionInSeamlessType Create(ITeleportTransitionInSeamlessType? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041DA RID: 16858
-		// (get) Token: 0x0600DD61 RID: 56673 RVA: 0x0020E355 File Offset: 0x0020C555
+		// Token: 0x17004517 RID: 17687
+		// (get) Token: 0x0600EB38 RID: 60216 RVA: 0x0022AAF5 File Offset: 0x00228CF5
 		public override ETeleportTransitionType Type
 		{
 			get
@@ -34,20 +34,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041DB RID: 16859
-		// (get) Token: 0x0600DD62 RID: 56674 RVA: 0x0020E362 File Offset: 0x0020C562
-		[Nullable(1)]
+		// Token: 0x17004518 RID: 17688
+		// (get) Token: 0x0600EB39 RID: 60217 RVA: 0x0022AB02 File Offset: 0x00228D02
+		[Nullable(0)]
 		public virtual string EffectDaPath
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.EffectDaPath;
 			}
 		}
 
-		// Token: 0x170041DC RID: 16860
-		// (get) Token: 0x0600DD63 RID: 56675 RVA: 0x0020E36F File Offset: 0x0020C56F
+		// Token: 0x17004519 RID: 17689
+		// (get) Token: 0x0600EB3A RID: 60218 RVA: 0x0022AB0F File Offset: 0x00228D0F
 		public virtual float LeastTime
 		{
 			get
@@ -56,8 +56,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041DD RID: 16861
-		// (get) Token: 0x0600DD64 RID: 56676 RVA: 0x0020E37C File Offset: 0x0020C57C
+		// Token: 0x1700451A RID: 17690
+		// (get) Token: 0x0600EB3B RID: 60219 RVA: 0x0022AB1C File Offset: 0x00228D1C
 		public virtual float EffectExpandTime
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041DE RID: 16862
-		// (get) Token: 0x0600DD65 RID: 56677 RVA: 0x0020E389 File Offset: 0x0020C589
+		// Token: 0x1700451B RID: 17691
+		// (get) Token: 0x0600EB3C RID: 60220 RVA: 0x0022AB29 File Offset: 0x00228D29
 		public virtual float EffectCollapseTime
 		{
 			get
@@ -76,8 +76,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041DF RID: 16863
-		// (get) Token: 0x0600DD66 RID: 56678 RVA: 0x0020E396 File Offset: 0x0020C596
+		// Token: 0x1700451C RID: 17692
+		// (get) Token: 0x0600EB3D RID: 60221 RVA: 0x0022AB36 File Offset: 0x00228D36
 		public virtual string SceneEffectDaPath
 		{
 			get
@@ -86,8 +86,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041E0 RID: 16864
-		// (get) Token: 0x0600DD67 RID: 56679 RVA: 0x0020E3A3 File Offset: 0x0020C5A3
+		// Token: 0x1700451D RID: 17693
+		// (get) Token: 0x0600EB3E RID: 60222 RVA: 0x0022AB43 File Offset: 0x00228D43
 		public virtual string TransitionWeatherDaPath
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041E1 RID: 16865
-		// (get) Token: 0x0600DD68 RID: 56680 RVA: 0x0020E3B0 File Offset: 0x0020C5B0
+		// Token: 0x1700451E RID: 17694
+		// (get) Token: 0x0600EB3F RID: 60223 RVA: 0x0022AB50 File Offset: 0x00228D50
 		public virtual IFloorSettings FloorSettings
 		{
 			get
@@ -112,8 +112,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041E2 RID: 16866
-		// (get) Token: 0x0600DD69 RID: 56681 RVA: 0x0020E3E4 File Offset: 0x0020C5E4
+		// Token: 0x1700451F RID: 17695
+		// (get) Token: 0x0600EB40 RID: 60224 RVA: 0x0022AB84 File Offset: 0x00228D84
 		public virtual bool? IsTeleportInPlace
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041E3 RID: 16867
-		// (get) Token: 0x0600DD6A RID: 56682 RVA: 0x0020E41C File Offset: 0x0020C61C
+		// Token: 0x17004520 RID: 17696
+		// (get) Token: 0x0600EB41 RID: 60225 RVA: 0x0022ABBC File Offset: 0x00228DBC
 		public virtual List<EKeepMovementState> KeepMovementStates
 		{
 			get
@@ -151,8 +151,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041E4 RID: 16868
-		// (get) Token: 0x0600DD6B RID: 56683 RVA: 0x0020E491 File Offset: 0x0020C691
+		// Token: 0x17004521 RID: 17697
+		// (get) Token: 0x0600EB42 RID: 60226 RVA: 0x0022AC31 File Offset: 0x00228E31
 		public virtual ISeamlessTeleportFinishConfig SeamlessTeleportFinishConfig
 		{
 			get
@@ -167,8 +167,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041E5 RID: 16869
-		// (get) Token: 0x0600DD6C RID: 56684 RVA: 0x0020E4C8 File Offset: 0x0020C6C8
+		// Token: 0x17004522 RID: 17698
+		// (get) Token: 0x0600EB43 RID: 60227 RVA: 0x0022AC68 File Offset: 0x00228E68
 		public virtual bool? IsNormalStreamingLoad
 		{
 			get
@@ -181,25 +181,25 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AF4 RID: 31476
+		// Token: 0x04008191 RID: 33169
 		private ITeleportTransitionInSeamlessType Instance;
 
-		// Token: 0x04007AF5 RID: 31477
+		// Token: 0x04008192 RID: 33170
 		private IFloorSettings _FloorSettingsCache;
 
-		// Token: 0x04007AF6 RID: 31478
+		// Token: 0x04008193 RID: 33171
 		private bool _FloorSettingsInited;
 
-		// Token: 0x04007AF7 RID: 31479
+		// Token: 0x04008194 RID: 33172
 		private List<EKeepMovementState> _KeepMovementStatesCache;
 
-		// Token: 0x04007AF8 RID: 31480
+		// Token: 0x04008195 RID: 33173
 		private bool _KeepMovementStatesInited;
 
-		// Token: 0x04007AF9 RID: 31481
+		// Token: 0x04008196 RID: 33174
 		private ISeamlessTeleportFinishConfig _SeamlessTeleportFinishConfigCache;
 
-		// Token: 0x04007AFA RID: 31482
+		// Token: 0x04008197 RID: 33175
 		private bool _SeamlessTeleportFinishConfigInited;
 	}
 }

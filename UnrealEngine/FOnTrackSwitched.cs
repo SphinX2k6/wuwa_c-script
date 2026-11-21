@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C6D RID: 7277
+	// Token: 0x02000513 RID: 1299
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnTrackSwitched : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C36C RID: 115564 RVA: 0x002998F2 File Offset: 0x00297AF2
+		// Token: 0x06007968 RID: 31080 RVA: 0x000B22CA File Offset: 0x000B04CA
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnTrackSwitched.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C36D RID: 115565 RVA: 0x002998FE File Offset: 0x00297AFE
+		// Token: 0x06007969 RID: 31081 RVA: 0x000B22D6 File Offset: 0x000B04D6
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnTrackSwitched._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnTrackSwitched._FunctionPtr;
 		}
 
-		// Token: 0x0601C36E RID: 115566 RVA: 0x00299921 File Offset: 0x00297B21
+		// Token: 0x0600796A RID: 31082 RVA: 0x000B22F9 File Offset: 0x000B04F9
 		public FOnTrackSwitched()
 		{
 		}
 
-		// Token: 0x0601C36F RID: 115567 RVA: 0x00299929 File Offset: 0x00297B29
+		// Token: 0x0600796B RID: 31083 RVA: 0x000B2301 File Offset: 0x000B0501
 		[NullableContext(2)]
 		public FOnTrackSwitched(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C370 RID: 115568 RVA: 0x00299933 File Offset: 0x00297B33
+		// Token: 0x0600796C RID: 31084 RVA: 0x000B230B File Offset: 0x000B050B
 		public FOnTrackSwitched(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C371 RID: 115569 RVA: 0x0029993E File Offset: 0x00297B3E
+		// Token: 0x0600796D RID: 31085 RVA: 0x000B2316 File Offset: 0x000B0516
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int, int>) ?? ((Action<int, int>)Delegate.CreateDelegate(typeof(Action<int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C372 RID: 115570 RVA: 0x00299970 File Offset: 0x00297B70
+		// Token: 0x0600796E RID: 31086 RVA: 0x000B2348 File Offset: 0x000B0548
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<int, int> Callback)
 		{
 			if (FOnTrackSwitched.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FOnTrackSwitched.RegisterId);
 		}
 
-		// Token: 0x0601C373 RID: 115571 RVA: 0x002999AA File Offset: 0x00297BAA
+		// Token: 0x0600796F RID: 31087 RVA: 0x000B2382 File Offset: 0x000B0582
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<int, int> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C374 RID: 115572 RVA: 0x002999B4 File Offset: 0x00297BB4
+		// Token: 0x06007970 RID: 31088 RVA: 0x000B238C File Offset: 0x000B058C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int NewTrackIndex, int OldTrackIndex)
 		{
 			FOnTrackSwitched.__FOnTrackSwitched_DelegateParams* ptr = stackalloc FOnTrackSwitched.__FOnTrackSwitched_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnTrackSwitched.__FOnTrackSwitched_DelegateParams) & -16L;
@@ -87,10 +84,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601C375 RID: 115573 RVA: 0x002999F8 File Offset: 0x00297BF8
+		// Token: 0x06007971 RID: 31089 RVA: 0x000B23D0 File Offset: 0x000B05D0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, int> action = target as Action<int, int>;
@@ -101,35 +97,35 @@ namespace UnrealEngine
 			action(((FOnTrackSwitched.__FOnTrackSwitched_DelegateParams*)__Parameters)->NewTrackIndex, ((FOnTrackSwitched.__FOnTrackSwitched_DelegateParams*)__Parameters)->OldTrackIndex);
 		}
 
-		// Token: 0x0400F2CB RID: 62155
+		// Token: 0x04003396 RID: 13206
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F2CC RID: 62156
+		// Token: 0x04003397 RID: 13207
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRhythmGame.OnTrackSwitched__DelegateSignature";
 
-		// Token: 0x0400F2CD RID: 62157
+		// Token: 0x04003398 RID: 13208
 		private static int RegisterId;
 
-		// Token: 0x02003207 RID: 12807
+		// Token: 0x02000C7C RID: 3196
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnTrackSwitched_DelegateParams
+		private ref struct __FOnTrackSwitched_DelegateParams
 		{
-			// Token: 0x04017069 RID: 94313
+			// Token: 0x04005EDD RID: 24285
 			[FieldOffset(0)]
 			public int NewTrackIndex;
 
-			// Token: 0x0401706A RID: 94314
+			// Token: 0x04005EDE RID: 24286
 			[FieldOffset(4)]
 			public int OldTrackIndex;
 		}
 
-		// Token: 0x02003208 RID: 12808
+		// Token: 0x02000C7D RID: 3197
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401706B RID: 94315
+			// Token: 0x04005EDF RID: 24287
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant.Activity
 {
-	// Token: 0x02005990 RID: 22928
+	// Token: 0x02004969 RID: 18793
 	public class GiantActivitySubView : ActivitySubViewBase
 	{
-		// Token: 0x0603A2DF RID: 238303 RVA: 0x00DD41D0 File Offset: 0x00DD23D0
+		// Token: 0x0602F205 RID: 193029 RVA: 0x00D23660 File Offset: 0x00D21860
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A2E0 RID: 238304 RVA: 0x00DD427C File Offset: 0x00DD247C
+		// Token: 0x0602F206 RID: 193030 RVA: 0x00D2370C File Offset: 0x00D2190C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GiantActivitySubView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A2E1 RID: 238305 RVA: 0x00DD42BF File Offset: 0x00DD24BF
+		// Token: 0x0602F207 RID: 193031 RVA: 0x00D2374F File Offset: 0x00D2194F
 		private void OnEnterButtonClick()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -62,19 +62,19 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			});
 		}
 
-		// Token: 0x0603A2E2 RID: 238306 RVA: 0x00DD42DD File Offset: 0x00DD24DD
+		// Token: 0x0602F208 RID: 193032 RVA: 0x00D2376D File Offset: 0x00D2196D
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotDirty));
 		}
 
-		// Token: 0x0603A2E3 RID: 238307 RVA: 0x00DD42FB File Offset: 0x00DD24FB
+		// Token: 0x0602F209 RID: 193033 RVA: 0x00D2378B File Offset: 0x00D2198B
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotDirty));
 		}
 
-		// Token: 0x0603A2E4 RID: 238308 RVA: 0x00DD431C File Offset: 0x00DD251C
+		// Token: 0x0602F20A RID: 193034 RVA: 0x00D237AC File Offset: 0x00D219AC
 		private void OnRedDotDirty(int activityId)
 		{
 			ActivityBaseData activityBaseData = this.ActivityBaseData;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			}
 		}
 
-		// Token: 0x0603A2E5 RID: 238309 RVA: 0x00DD4370 File Offset: 0x00DD2570
+		// Token: 0x0602F20B RID: 193035 RVA: 0x00D23800 File Offset: 0x00D21A00
 		protected override void OnRefreshView()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			this.RefreshProgress();
 		}
 
-		// Token: 0x0603A2E6 RID: 238310 RVA: 0x00DD4414 File Offset: 0x00DD2614
+		// Token: 0x0602F20C RID: 193036 RVA: 0x00D238A4 File Offset: 0x00D21AA4
 		private void RefreshProgress()
 		{
 			bool preGuideQuestFinishState = this.ActivityBaseData.GetPreGuideQuestFinishState();
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			text2.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603A2E7 RID: 238311 RVA: 0x00DD44C4 File Offset: 0x00DD26C4
+		// Token: 0x0602F20D RID: 193037 RVA: 0x00D23954 File Offset: 0x00D21B54
 		protected override void OnTimer(float gap)
 		{
 			ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -156,23 +156,23 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			infoPanel.SetTimer(item, item2);
 		}
 
-		// Token: 0x0401E5A1 RID: 124321
+		// Token: 0x0401903F RID: 102463
 		[Nullable(2)]
 		private GiantActivityInfoPanel InfoPanel;
 
-		// Token: 0x0200BC12 RID: 48146
+		// Token: 0x0200A61D RID: 42525
 		private class EComponent
 		{
-			// Token: 0x04038C46 RID: 232518
+			// Token: 0x04033615 RID: 210453
 			public const int ComActivityInfo = 0;
 
-			// Token: 0x04038C47 RID: 232519
+			// Token: 0x04033616 RID: 210454
 			public const int PnlProgress = 1;
 
-			// Token: 0x04038C48 RID: 232520
+			// Token: 0x04033617 RID: 210455
 			public const int TxtValue01 = 2;
 
-			// Token: 0x04038C49 RID: 232521
+			// Token: 0x04033618 RID: 210456
 			public const int TxtValue02 = 3;
 		}
 	}

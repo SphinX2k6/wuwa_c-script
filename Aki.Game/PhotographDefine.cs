@@ -3,91 +3,91 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002586 RID: 9606
+// Token: 0x02001A71 RID: 6769
 public class PhotographDefine
 {
-	// Token: 0x04009297 RID: 37527
+	// Token: 0x040093EF RID: 37871
 	public const int DEFAULT_FOV = 60;
 
-	// Token: 0x04009298 RID: 37528
+	// Token: 0x040093F0 RID: 37872
 	public const int MIN_FOV = 30;
 
-	// Token: 0x04009299 RID: 37529
+	// Token: 0x040093F1 RID: 37873
 	public const int MAX_FOV = 90;
 
-	// Token: 0x0400929A RID: 37530
+	// Token: 0x040093F2 RID: 37874
 	public const int MAX_DISTANCE_VALUE = 9999999;
 
-	// Token: 0x0400929B RID: 37531
+	// Token: 0x040093F3 RID: 37875
 	public const int DEFAULT_FILTER_CONFIGID = 1;
 
-	// Token: 0x0400929C RID: 37532
+	// Token: 0x040093F4 RID: 37876
 	public const int FILTER_MIN_STRENGTH = 0;
 
-	// Token: 0x0400929D RID: 37533
+	// Token: 0x040093F5 RID: 37877
 	public const int FILTER_MAX_STREGNTH = 100;
 
-	// Token: 0x0400929E RID: 37534
+	// Token: 0x040093F6 RID: 37878
 	public const int FILTER_DEFAULT_STRENGTH = 100;
 
-	// Token: 0x0400929F RID: 37535
+	// Token: 0x040093F7 RID: 37879
 	public const int DEFAULT_PHOTO_LIGHT_ID = 1;
 
-	// Token: 0x040092A0 RID: 37536
+	// Token: 0x040093F8 RID: 37880
 	public const int ENV_TIME_MIN = 0;
 
-	// Token: 0x040092A1 RID: 37537
+	// Token: 0x040093F9 RID: 37881
 	public const int ENV_TIME_MAX = 24;
 
-	// Token: 0x040092A2 RID: 37538
+	// Token: 0x040093FA RID: 37882
 	public const int DEFAULT_MANUAL_FOCUS_DISTANCE = 300;
 
-	// Token: 0x040092A3 RID: 37539
+	// Token: 0x040093FB RID: 37883
 	public const int DEFAULT_FOCAL_LENTGH = 35;
 
-	// Token: 0x040092A4 RID: 37540
+	// Token: 0x040093FC RID: 37884
 	public const int DEFAULT_APERTURE = 0;
 
-	// Token: 0x040092A5 RID: 37541
+	// Token: 0x040093FD RID: 37885
 	public const int MIN_TOUCH_MOVE_DIFFERENCE = -50000;
 
-	// Token: 0x040092A6 RID: 37542
+	// Token: 0x040093FE RID: 37886
 	public const int MAX_TOUCH_MOVE_DIFFERENCE = 50000;
 
-	// Token: 0x040092A7 RID: 37543
-	public static readonly FName SPAWN_SOCKET_NAME = new FName("HitCase");
+	// Token: 0x040093FF RID: 37887
+	public static readonly FName SPAWN_SOCKET_NAME = new FName("CameraPosition");
 
-	// Token: 0x040092A8 RID: 37544
+	// Token: 0x04009400 RID: 37888
 	public const float SCREEN_SHOT_TEXTURE_SCALE = 1.5f;
 
-	// Token: 0x040092A9 RID: 37545
+	// Token: 0x04009401 RID: 37889
 	public const int MAX_HIGH_RES_MULTIPLIER = 4;
 
-	// Token: 0x040092AA RID: 37546
+	// Token: 0x04009402 RID: 37890
 	public const int MIN_HIGH_RES_MULTIPLIER = 1;
 
-	// Token: 0x040092AB RID: 37547
+	// Token: 0x04009403 RID: 37891
 	public const int MAX_LOD_BIAS = -7;
 
-	// Token: 0x040092AC RID: 37548
+	// Token: 0x04009404 RID: 37892
 	public const int DEFAULT_LOD_BIAS = 0;
 
-	// Token: 0x040092AD RID: 37549
+	// Token: 0x04009405 RID: 37893
 	public const int FIRST_SHARE_DROP_ID = 90005;
 
-	// Token: 0x040092AE RID: 37550
+	// Token: 0x04009406 RID: 37894
 	public const float PHOTOGRAPH_CAMERA_BLEND_OUT = 0.5f;
 
-	// Token: 0x040092AF RID: 37551
+	// Token: 0x04009407 RID: 37895
 	public static readonly FName ignoreTouchTag = new FName("IgnoreTouch");
 
-	// Token: 0x040092B0 RID: 37552
+	// Token: 0x04009408 RID: 37896
 	public const int DEFAULT_SHARE_WIDTH = 1750;
 
-	// Token: 0x040092B1 RID: 37553
+	// Token: 0x04009409 RID: 37897
 	public const int DEFAULT_SHARE_HEIGHT = 986;
 
-	// Token: 0x040092B2 RID: 37554
+	// Token: 0x0400940A RID: 37898
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<EPhotoTabType, Func<PhotoDetailPanelBase>> PhotoTabDetailPanelMap = new Dictionary<EPhotoTabType, Func<PhotoDetailPanelBase>>

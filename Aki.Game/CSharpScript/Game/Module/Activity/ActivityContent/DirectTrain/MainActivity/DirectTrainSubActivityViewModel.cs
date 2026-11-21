@@ -9,12 +9,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActivity
 {
-	// Token: 0x02006753 RID: 26451
+	// Token: 0x020056A3 RID: 22179
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DirectTrainSubActivityViewModel
 	{
-		// Token: 0x06042039 RID: 270393 RVA: 0x01003710 File Offset: 0x01001910
+		// Token: 0x06036B8B RID: 224139 RVA: 0x00F44B4C File Offset: 0x00F42D4C
 		public void LoadConfig(IDirectTrainSubActivityCache cache)
 		{
 			this.SubActivityId = cache.Id;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			}
 		}
 
-		// Token: 0x0604203A RID: 270394 RVA: 0x010039A0 File Offset: 0x01001BA0
+		// Token: 0x06036B8C RID: 224140 RVA: 0x00F44DDC File Offset: 0x00F42FDC
 		public void MarkGotoRedDotDisplayed()
 		{
 			ActivityModel instance = ActivityModel.Instance;
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			}
 		}
 
-		// Token: 0x0604203B RID: 270395 RVA: 0x010039D4 File Offset: 0x01001BD4
+		// Token: 0x06036B8D RID: 224141 RVA: 0x00F44E10 File Offset: 0x00F43010
 		public bool HasSubPackage()
 		{
 			return SubPackageDownLoadModel.Instance.CheckActivityTeleportHaveSubPackage(this.SubActivityId);
 		}
 
-		// Token: 0x0604203C RID: 270396 RVA: 0x010039E8 File Offset: 0x01001BE8
+		// Token: 0x06036B8E RID: 224142 RVA: 0x00F44E24 File Offset: 0x00F43024
 		public void OpenConditionView()
 		{
 			ActivityModel instance = ActivityModel.Instance;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			UiManager.Instance.OpenView(EUiViewName.CommonConditionView, param, null);
 		}
 
-		// Token: 0x0604203D RID: 270397 RVA: 0x01003A98 File Offset: 0x01001C98
+		// Token: 0x06036B8F RID: 224143 RVA: 0x00F44ED4 File Offset: 0x00F430D4
 		public void OpenSubPackageDownLoadConfirm()
 		{
 			ActivityModel instance = ActivityModel.Instance;
@@ -138,38 +138,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			SubPackageDownLoadModel.Instance.OpenSubPackageDownLoadConfirmBySubPackageIds(activity.Value.AreaTips, new List<int>(activity.Value.GetDownLoadSubPackageListArray()));
 		}
 
-		// Token: 0x0604203E RID: 270398 RVA: 0x01003BA8 File Offset: 0x01001DA8
+		// Token: 0x06036B90 RID: 224144 RVA: 0x00F44FE4 File Offset: 0x00F431E4
 		public bool IsRecommendQuestUnfinished()
 		{
 			int recommendQuestId = ActivityDirectTrainModel.Instance.GetRecommendQuestId(this.SubActivityId);
 			return !QuestNewModel.Instance.CheckQuestFinished(recommendQuestId);
 		}
 
-		// Token: 0x0604203F RID: 270399 RVA: 0x01003BD4 File Offset: 0x01001DD4
+		// Token: 0x06036B91 RID: 224145 RVA: 0x00F45010 File Offset: 0x00F43210
 		public int GetSkipQuestId()
 		{
 			return ActivityDirectTrainModel.Instance.GetSkipQuestId(this.SubActivityId);
 		}
 
-		// Token: 0x06042040 RID: 270400 RVA: 0x01003BE6 File Offset: 0x01001DE6
+		// Token: 0x06036B92 RID: 224146 RVA: 0x00F45022 File Offset: 0x00F43222
 		public EQuestState GetSkipQuestState()
 		{
 			return QuestNewModel.Instance.GetQuestState(this.GetSkipQuestId());
 		}
 
-		// Token: 0x06042041 RID: 270401 RVA: 0x01003BF8 File Offset: 0x01001DF8
+		// Token: 0x06036B93 RID: 224147 RVA: 0x00F45034 File Offset: 0x00F43234
 		public int? GetRecommendQuestLinkId()
 		{
 			return ActivityDirectTrainHelper.GetRecommendQuestLinkId(this.SubActivityId);
 		}
 
-		// Token: 0x06042042 RID: 270402 RVA: 0x01003C05 File Offset: 0x01001E05
+		// Token: 0x06036B94 RID: 224148 RVA: 0x00F45041 File Offset: 0x00F43241
 		public void RequestThroughTrain(TActivityDirectTrainCallBack callBack)
 		{
 			ActivityDirectTrainHelper.RequestThroughTrain(this.SubActivityId, callBack);
 		}
 
-		// Token: 0x06042043 RID: 270403 RVA: 0x01003C14 File Offset: 0x01001E14
+		// Token: 0x06036B95 RID: 224149 RVA: 0x00F45050 File Offset: 0x00F43250
 		public void ReportOpenModule()
 		{
 			int skipQuestId = ActivityDirectTrainModel.Instance.GetSkipQuestId(this.SubActivityId);
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			LogReportController.Instance.LogReport(directTrainOpenModuleLogEvent);
 		}
 
-		// Token: 0x06042044 RID: 270404 RVA: 0x01003C88 File Offset: 0x01001E88
+		// Token: 0x06036B96 RID: 224150 RVA: 0x00F450C4 File Offset: 0x00F432C4
 		public void ReportGotoQuest()
 		{
 			int skipQuestId = ActivityDirectTrainModel.Instance.GetSkipQuestId(this.SubActivityId);
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			LogReportController.Instance.LogReport(directTrainGotoQuestLogEvent);
 		}
 
-		// Token: 0x06042045 RID: 270405 RVA: 0x01003CEC File Offset: 0x01001EEC
+		// Token: 0x06036B97 RID: 224151 RVA: 0x00F45128 File Offset: 0x00F43328
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -229,55 +229,55 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			return new ValueTuple<bool, string>(true, null);
 		}
 
-		// Token: 0x04022621 RID: 140833
+		// Token: 0x0401CE7A RID: 118394
 		public int SubActivityId;
 
-		// Token: 0x04022622 RID: 140834
+		// Token: 0x0401CE7B RID: 118395
 		public int MainActivityId;
 
-		// Token: 0x04022623 RID: 140835
+		// Token: 0x0401CE7C RID: 118396
 		public bool IsUnLock;
 
-		// Token: 0x04022624 RID: 140836
+		// Token: 0x0401CE7D RID: 118397
 		public bool IsFinish;
 
-		// Token: 0x04022625 RID: 140837
+		// Token: 0x0401CE7E RID: 118398
 		public bool InShowTime;
 
-		// Token: 0x04022626 RID: 140838
+		// Token: 0x0401CE7F RID: 118399
 		public bool IsUnRead;
 
-		// Token: 0x04022627 RID: 140839
+		// Token: 0x0401CE80 RID: 118400
 		public string VersionTitle = "";
 
-		// Token: 0x04022628 RID: 140840
+		// Token: 0x0401CE81 RID: 118401
 		public string Name = "";
 
-		// Token: 0x04022629 RID: 140841
+		// Token: 0x0401CE82 RID: 118402
 		public bool ShowRecommend;
 
-		// Token: 0x0402262A RID: 140842
+		// Token: 0x0401CE83 RID: 118403
 		public string EntryPicPath = "";
 
-		// Token: 0x0402262B RID: 140843
+		// Token: 0x0401CE84 RID: 118404
 		public string BgPrefabResourceId = "";
 
-		// Token: 0x0402262C RID: 140844
+		// Token: 0x0401CE85 RID: 118405
 		public string SubTitle = "";
 
-		// Token: 0x0402262D RID: 140845
+		// Token: 0x0401CE86 RID: 118406
 		public int ConditionGroupId;
 
-		// Token: 0x0402262E RID: 140846
+		// Token: 0x0401CE87 RID: 118407
 		public int HelpId;
 
-		// Token: 0x0402262F RID: 140847
+		// Token: 0x0401CE88 RID: 118408
 		public string ButtonText = "";
 
-		// Token: 0x04022630 RID: 140848
+		// Token: 0x0401CE89 RID: 118409
 		public bool OpenQuestViewOnConfirm;
 
-		// Token: 0x04022631 RID: 140849
+		// Token: 0x0401CE8A RID: 118410
 		public readonly List<IHighlightTabData> HighlightList = new List<IHighlightTabData>();
 	}
 }

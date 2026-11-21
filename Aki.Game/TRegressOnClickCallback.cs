@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x02001467 RID: 5223
-// (Invoke) Token: 0x0600937D RID: 37757
+// Token: 0x0200091B RID: 2331
+// (Invoke) Token: 0x06006712 RID: 26386
 public delegate void TRegressOnClickCallback();

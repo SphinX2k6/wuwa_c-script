@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026E9 RID: 9961
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029AD RID: 10669
 	public class ISendBattleEventsForMonsterSummon : IExecBattleActionType
 	{
-		// Token: 0x0600DE7E RID: 56958 RVA: 0x00210212 File Offset: 0x0020E412
+		// Token: 0x0600EC5A RID: 60506 RVA: 0x0022CA52 File Offset: 0x0022AC52
 		public static ISendBattleEventsForMonsterSummon Create(ISendBattleEventsForMonsterSummon? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700426E RID: 17006
-		// (get) Token: 0x0600DE7F RID: 56959 RVA: 0x00210231 File Offset: 0x0020E431
+		// Token: 0x170045AE RID: 17838
+		// (get) Token: 0x0600EC5B RID: 60507 RVA: 0x0022CA71 File Offset: 0x0022AC71
 		public override EExecBattleActionType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700426F RID: 17007
-		// (get) Token: 0x0600DE80 RID: 56960 RVA: 0x00210240 File Offset: 0x0020E440
+		// Token: 0x170045AF RID: 17839
+		// (get) Token: 0x0600EC5C RID: 60508 RVA: 0x0022CA80 File Offset: 0x0022AC80
 		public virtual List<ISendBattleEventsForMonsterSummonConfig> Configs
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B7F RID: 31615
+		// Token: 0x0400821F RID: 33311
 		private ISendBattleEventsForMonsterSummon Instance;
 
-		// Token: 0x04007B80 RID: 31616
+		// Token: 0x04008220 RID: 33312
 		private List<ISendBattleEventsForMonsterSummonConfig> _ConfigsCache;
 
-		// Token: 0x04007B81 RID: 31617
+		// Token: 0x04008221 RID: 33313
 		private bool _ConfigsInited;
 	}
 }

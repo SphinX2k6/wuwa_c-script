@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200221A RID: 8730
+// Token: 0x020016FE RID: 5886
 [NullableContext(1)]
 [Nullable(0)]
 public class PreDownloadView : UiViewBase, IPreDownloadUiEvent
 {
-	// Token: 0x06011039 RID: 69689 RVA: 0x00425B95 File Offset: 0x00423D95
+	// Token: 0x0600E4CF RID: 58575 RVA: 0x00432725 File Offset: 0x00430925
 	public PreDownloadView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601103A RID: 69690 RVA: 0x00425BC0 File Offset: 0x00423DC0
+	// Token: 0x0600E4D0 RID: 58576 RVA: 0x00432750 File Offset: 0x00430950
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -54,7 +54,7 @@ public class PreDownloadView : UiViewBase, IPreDownloadUiEvent
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601103B RID: 69691 RVA: 0x00425D50 File Offset: 0x00423F50
+	// Token: 0x0600E4D1 RID: 58577 RVA: 0x004328E0 File Offset: 0x00430AE0
 	protected override void OnStart()
 	{
 		string resourcePath = UiResourceConfig.Instance.GetResourcePath("T_PreDownloadBg");
@@ -62,14 +62,14 @@ public class PreDownloadView : UiViewBase, IPreDownloadUiEvent
 		PreDownloadManager.Get().SetView(this);
 	}
 
-	// Token: 0x0601103C RID: 69692 RVA: 0x00425D90 File Offset: 0x00423F90
+	// Token: 0x0600E4D2 RID: 58578 RVA: 0x00432920 File Offset: 0x00430B20
 	protected override void OnBeforeShow()
 	{
 		this.LastClickTime = 0.0;
 		this.InitDownloadShow();
 	}
 
-	// Token: 0x0601103D RID: 69693 RVA: 0x00425DA7 File Offset: 0x00423FA7
+	// Token: 0x0600E4D3 RID: 58579 RVA: 0x00432937 File Offset: 0x00430B37
 	protected override void OnAfterShow()
 	{
 		if (!PreDownloadManager.Get().IsDownloading())
@@ -87,25 +87,25 @@ public class PreDownloadView : UiViewBase, IPreDownloadUiEvent
 		}
 	}
 
-	// Token: 0x0601103E RID: 69694 RVA: 0x00425DE5 File Offset: 0x00423FE5
+	// Token: 0x0600E4D4 RID: 58580 RVA: 0x00432975 File Offset: 0x00430B75
 	protected override void OnBeforeDestroy()
 	{
 		PreDownloadModel.Instance.ClearView();
 	}
 
-	// Token: 0x0601103F RID: 69695 RVA: 0x00425DF1 File Offset: 0x00423FF1
+	// Token: 0x0600E4D5 RID: 58581 RVA: 0x00432981 File Offset: 0x00430B81
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.PreDownloadStateUpdate, new Action(this.OnStateUpdate));
 	}
 
-	// Token: 0x06011040 RID: 69696 RVA: 0x00425E0F File Offset: 0x0042400F
+	// Token: 0x0600E4D6 RID: 58582 RVA: 0x0043299F File Offset: 0x00430B9F
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.PreDownloadStateUpdate, new Action(this.OnStateUpdate));
 	}
 
-	// Token: 0x06011041 RID: 69697 RVA: 0x00425E30 File Offset: 0x00424030
+	// Token: 0x0600E4D7 RID: 58583 RVA: 0x004329C0 File Offset: 0x00430BC0
 	public UniTask UpdatePatchDownProgress(bool bNeedWait, float rate, string fileName, string speedText, string sizeCurrent, string sizeTotal)
 	{
 		PreDownloadView.<UpdatePatchDownProgress>d__15 <UpdatePatchDownProgress>d__;
@@ -122,7 +122,7 @@ public class PreDownloadView : UiViewBase, IPreDownloadUiEvent
 		return <UpdatePatchDownProgress>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011042 RID: 69698 RVA: 0x00425EA8 File Offset: 0x004240A8
+	// Token: 0x0600E4D8 RID: 58584 RVA: 0x00432A38 File Offset: 0x00430C38
 	public UniTask BinPatchProgress(bool bNeedWait, float rate, string textId, params string[] args)
 	{
 		PreDownloadView.<BinPatchProgress>d__16 <BinPatchProgress>d__;
@@ -137,7 +137,7 @@ public class PreDownloadView : UiViewBase, IPreDownloadUiEvent
 		return <BinPatchProgress>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011043 RID: 69699 RVA: 0x00425F0C File Offset: 0x0042410C
+	// Token: 0x0600E4D9 RID: 58585 RVA: 0x00432A9C File Offset: 0x00430C9C
 	[return: Nullable(0)]
 	public UniTask<bool> ShowDialog(bool bSelect, string titleId, string contentId, string leftId, string rightId, string middleId, params string[] contentArgs)
 	{
@@ -154,7 +154,7 @@ public class PreDownloadView : UiViewBase, IPreDownloadUiEvent
 		return <ShowDialog>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011044 RID: 69700 RVA: 0x00425F7C File Offset: 0x0042417C
+	// Token: 0x0600E4DA RID: 58586 RVA: 0x00432B0C File Offset: 0x00430D0C
 	private void OnClickClose()
 	{
 		if (!PreDownloadManager.Get().IsDownloading())
@@ -167,7 +167,7 @@ public class PreDownloadView : UiViewBase, IPreDownloadUiEvent
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06011045 RID: 69701 RVA: 0x00425FD0 File Offset: 0x004241D0
+	// Token: 0x0600E4DB RID: 58587 RVA: 0x00432B60 File Offset: 0x00430D60
 	private void OnClickFunc()
 	{
 		if (PreDownloadManager.Get().IsComplete())
@@ -182,13 +182,13 @@ public class PreDownloadView : UiViewBase, IPreDownloadUiEvent
 		}
 	}
 
-	// Token: 0x06011046 RID: 69702 RVA: 0x00426030 File Offset: 0x00424230
+	// Token: 0x0600E4DC RID: 58588 RVA: 0x00432BC0 File Offset: 0x00430DC0
 	private void OnStateUpdate()
 	{
 		this.OnStateUpdate(false);
 	}
 
-	// Token: 0x06011047 RID: 69703 RVA: 0x0042603C File Offset: 0x0042423C
+	// Token: 0x0600E4DD RID: 58589 RVA: 0x00432BCC File Offset: 0x00430DCC
 	private unsafe void OnStateUpdate(bool isInit = false)
 	{
 		IPreDownload preDownload = PreDownloadManager.Get();
@@ -236,7 +236,7 @@ public class PreDownloadView : UiViewBase, IPreDownloadUiEvent
 		}
 	}
 
-	// Token: 0x06011048 RID: 69704 RVA: 0x00426198 File Offset: 0x00424398
+	// Token: 0x0600E4DE RID: 58590 RVA: 0x00432D28 File Offset: 0x00430F28
 	private void InitDownloadShow()
 	{
 		this.OnStateUpdate(true);
@@ -300,50 +300,50 @@ public class PreDownloadView : UiViewBase, IPreDownloadUiEvent
 		}
 	}
 
-	// Token: 0x06011049 RID: 69705 RVA: 0x00426317 File Offset: 0x00424517
+	// Token: 0x0600E4DF RID: 58591 RVA: 0x00432EA7 File Offset: 0x004310A7
 	[CompilerGenerated]
 	internal static void <OnClickClose>g__ConfirmFunc|18_0()
 	{
 		PreDownloadController.Instance.ClosePreDownloadView();
 	}
 
-	// Token: 0x04008187 RID: 33159
+	// Token: 0x040082C5 RID: 33477
 	private const int BTN_INTERVAL = 1000;
 
-	// Token: 0x04008188 RID: 33160
+	// Token: 0x040082C6 RID: 33478
 	private double LastClickTime;
 
-	// Token: 0x04008189 RID: 33161
+	// Token: 0x040082C7 RID: 33479
 	private float RateCount;
 
-	// Token: 0x0400818A RID: 33162
+	// Token: 0x040082C8 RID: 33480
 	private string FileName = "";
 
-	// Token: 0x0400818B RID: 33163
+	// Token: 0x040082C9 RID: 33481
 	private string SizeCurrent = "";
 
-	// Token: 0x0400818C RID: 33164
+	// Token: 0x040082CA RID: 33482
 	private string SizeTotal = "";
 
-	// Token: 0x0200874F RID: 34639
+	// Token: 0x020078D8 RID: 30936
 	[NullableContext(0)]
 	private enum EChildComponentType
 	{
-		// Token: 0x0402BFC4 RID: 180164
+		// Token: 0x040272DC RID: 160476
 		CloseBtn,
-		// Token: 0x0402BFC5 RID: 180165
+		// Token: 0x040272DD RID: 160477
 		FuncBtn,
-		// Token: 0x0402BFC6 RID: 180166
+		// Token: 0x040272DE RID: 160478
 		ProgressBar,
-		// Token: 0x0402BFC7 RID: 180167
+		// Token: 0x040272DF RID: 160479
 		TextNumber,
-		// Token: 0x0402BFC8 RID: 180168
+		// Token: 0x040272E0 RID: 160480
 		TextPatch,
-		// Token: 0x0402BFC9 RID: 180169
+		// Token: 0x040272E1 RID: 160481
 		PreviewTex,
-		// Token: 0x0402BFCA RID: 180170
+		// Token: 0x040272E2 RID: 160482
 		TextProgress,
-		// Token: 0x0402BFCB RID: 180171
+		// Token: 0x040272E3 RID: 160483
 		FuncBtnTxt
 	}
 }

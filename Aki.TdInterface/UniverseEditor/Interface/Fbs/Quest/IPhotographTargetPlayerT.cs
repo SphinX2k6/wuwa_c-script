@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F93 RID: 16275
+	// Token: 0x020043D4 RID: 17364
 	public class IPhotographTargetPlayerT
 	{
-		// Token: 0x1700719E RID: 29086
-		// (get) Token: 0x060173F4 RID: 95220 RVA: 0x0035A6E5 File Offset: 0x003588E5
-		// (set) Token: 0x060173F5 RID: 95221 RVA: 0x0035A6ED File Offset: 0x003588ED
+		// Token: 0x1700779C RID: 30620
+		// (get) Token: 0x06018A83 RID: 100995 RVA: 0x003842FD File Offset: 0x003824FD
+		// (set) Token: 0x06018A84 RID: 100996 RVA: 0x00384305 File Offset: 0x00382505
 		public EPhotographTargetType Type { get; set; }
 
-		// Token: 0x1700719F RID: 29087
-		// (get) Token: 0x060173F6 RID: 95222 RVA: 0x0035A6F6 File Offset: 0x003588F6
-		// (set) Token: 0x060173F7 RID: 95223 RVA: 0x0035A6FE File Offset: 0x003588FE
+		// Token: 0x1700779D RID: 30621
+		// (get) Token: 0x06018A85 RID: 100997 RVA: 0x0038430E File Offset: 0x0038250E
+		// (set) Token: 0x06018A86 RID: 100998 RVA: 0x00384316 File Offset: 0x00382516
 		public int RoleId { get; set; }
 
-		// Token: 0x170071A0 RID: 29088
-		// (get) Token: 0x060173F8 RID: 95224 RVA: 0x0035A707 File Offset: 0x00358907
-		// (set) Token: 0x060173F9 RID: 95225 RVA: 0x0035A70F File Offset: 0x0035890F
+		// Token: 0x1700779E RID: 30622
+		// (get) Token: 0x06018A87 RID: 100999 RVA: 0x0038431F File Offset: 0x0038251F
+		// (set) Token: 0x06018A88 RID: 101000 RVA: 0x00384327 File Offset: 0x00382527
 		public EOnCameraCheckType OnCameraCheckType { get; set; }
 
-		// Token: 0x170071A1 RID: 29089
-		// (get) Token: 0x060173FA RID: 95226 RVA: 0x0035A718 File Offset: 0x00358918
-		// (set) Token: 0x060173FB RID: 95227 RVA: 0x0035A720 File Offset: 0x00358920
+		// Token: 0x1700779F RID: 30623
+		// (get) Token: 0x06018A89 RID: 101001 RVA: 0x00384330 File Offset: 0x00382530
+		// (set) Token: 0x06018A8A RID: 101002 RVA: 0x00384338 File Offset: 0x00382538
 		public IConditionGroupT CommonCondition { get; set; }
 
-		// Token: 0x170071A2 RID: 29090
-		// (get) Token: 0x060173FC RID: 95228 RVA: 0x0035A729 File Offset: 0x00358929
-		// (set) Token: 0x060173FD RID: 95229 RVA: 0x0035A731 File Offset: 0x00358931
+		// Token: 0x170077A0 RID: 30624
+		// (get) Token: 0x06018A8B RID: 101003 RVA: 0x00384341 File Offset: 0x00382541
+		// (set) Token: 0x06018A8C RID: 101004 RVA: 0x00384349 File Offset: 0x00382549
 		public byte NullMask { get; set; }
 
-		// Token: 0x060173FE RID: 95230 RVA: 0x0035A73A File Offset: 0x0035893A
+		// Token: 0x06018A8D RID: 101005 RVA: 0x00384352 File Offset: 0x00382552
 		public IPhotographTargetPlayerT()
 		{
 			this.Type = EPhotographTargetType.Player;

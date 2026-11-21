@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005507 RID: 21767
+	// Token: 0x02005A8D RID: 23181
 	public class ILiftMoveCurveT
 	{
-		// Token: 0x1700A0B5 RID: 41141
-		// (get) Token: 0x06023F37 RID: 147255 RVA: 0x004F8493 File Offset: 0x004F6693
-		// (set) Token: 0x06023F38 RID: 147256 RVA: 0x004F849B File Offset: 0x004F669B
+		// Token: 0x1700A8EF RID: 43247
+		// (get) Token: 0x06025FF1 RID: 155633 RVA: 0x005355B7 File Offset: 0x005337B7
+		// (set) Token: 0x06025FF2 RID: 155634 RVA: 0x005355BF File Offset: 0x005337BF
 		public string Curve { get; set; }
 
-		// Token: 0x1700A0B6 RID: 41142
-		// (get) Token: 0x06023F39 RID: 147257 RVA: 0x004F84A4 File Offset: 0x004F66A4
-		// (set) Token: 0x06023F3A RID: 147258 RVA: 0x004F84AC File Offset: 0x004F66AC
+		// Token: 0x1700A8F0 RID: 43248
+		// (get) Token: 0x06025FF3 RID: 155635 RVA: 0x005355C8 File Offset: 0x005337C8
+		// (set) Token: 0x06025FF4 RID: 155636 RVA: 0x005355D0 File Offset: 0x005337D0
 		public float Time { get; set; }
 
-		// Token: 0x06023F3B RID: 147259 RVA: 0x004F84B5 File Offset: 0x004F66B5
+		// Token: 0x06025FF5 RID: 155637 RVA: 0x005355D9 File Offset: 0x005337D9
 		public ILiftMoveCurveT()
 		{
 			this.Curve = null;

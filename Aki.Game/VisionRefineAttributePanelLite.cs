@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001766 RID: 5990
+// Token: 0x02000C1F RID: 3103
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionRefineAttributePanelLite : UiPanelBase
 {
-	// Token: 0x0600AD8F RID: 44431 RVA: 0x002710E4 File Offset: 0x0026F2E4
+	// Token: 0x06008176 RID: 33142 RVA: 0x0027B5A4 File Offset: 0x002797A4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class VisionRefineAttributePanelLite : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600AD90 RID: 44432 RVA: 0x0027114C File Offset: 0x0026F34C
+	// Token: 0x06008177 RID: 33143 RVA: 0x0027B60C File Offset: 0x0027980C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionRefineAttributePanelLite.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -36,20 +36,20 @@ public class VisionRefineAttributePanelLite : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AD91 RID: 44433 RVA: 0x0027118F File Offset: 0x0026F38F
+	// Token: 0x06008178 RID: 33144 RVA: 0x0027B64F File Offset: 0x0027984F
 	public void RefreshItemSwitch(IRefineAttrItemData data)
 	{
 		this.ItemMainNew.RefreshUi(data);
 	}
 
-	// Token: 0x0600AD92 RID: 44434 RVA: 0x0027119D File Offset: 0x0026F39D
+	// Token: 0x06008179 RID: 33145 RVA: 0x0027B65D File Offset: 0x0027985D
 	[NullableContext(1)]
 	public void RefreshTitle(string textId)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, Array.Empty<object>());
 	}
 
-	// Token: 0x0600AD93 RID: 44435 RVA: 0x002711B6 File Offset: 0x0026F3B6
+	// Token: 0x0600817A RID: 33146 RVA: 0x0027B676 File Offset: 0x00279876
 	public void RefreshInteractive(bool active)
 	{
 		UUIButtonComponent button = base.GetButton(1);
@@ -60,14 +60,14 @@ public class VisionRefineAttributePanelLite : UiPanelBase
 		button.SetSelfInteractive(active);
 	}
 
-	// Token: 0x0600AD94 RID: 44436 RVA: 0x002711CA File Offset: 0x0026F3CA
+	// Token: 0x0600817B RID: 33147 RVA: 0x0027B68A File Offset: 0x0027988A
 	[NullableContext(1)]
 	public void BindClickCallBack(Action callback)
 	{
 		this.OnClickCallBack = callback;
 	}
 
-	// Token: 0x0600AD95 RID: 44437 RVA: 0x002711D3 File Offset: 0x0026F3D3
+	// Token: 0x0600817C RID: 33148 RVA: 0x0027B693 File Offset: 0x00279893
 	private void OnClickMainNew()
 	{
 		if (this.OnClickCallBack != null)
@@ -76,19 +76,19 @@ public class VisionRefineAttributePanelLite : UiPanelBase
 		}
 	}
 
-	// Token: 0x04004EE6 RID: 20198
+	// Token: 0x04004F90 RID: 20368
 	private AttributeSelectItem ItemMainNew;
 
-	// Token: 0x04004EE7 RID: 20199
+	// Token: 0x04004F91 RID: 20369
 	private Action OnClickCallBack;
 
-	// Token: 0x02007D58 RID: 32088
+	// Token: 0x02006EDE RID: 28382
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x040290B8 RID: 168120
+		// Token: 0x040243E3 RID: 148451
 		TextTips,
-		// Token: 0x040290B9 RID: 168121
+		// Token: 0x040243E4 RID: 148452
 		ItemMainNew
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200283F RID: 10303
+	// Token: 0x02002B12 RID: 11026
 	public class IDollGrab : IUiGame
 	{
-		// Token: 0x0600E46D RID: 58477 RVA: 0x00219F8C File Offset: 0x0021818C
-		[NullableContext(1)]
+		// Token: 0x0600F292 RID: 62098 RVA: 0x00236DF0 File Offset: 0x00234FF0
 		public static IDollGrab Create(IDollGrab? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045B1 RID: 17841
-		// (get) Token: 0x0600E46E RID: 58478 RVA: 0x00219FAB File Offset: 0x002181AB
+		// Token: 0x1700491C RID: 18716
+		// (get) Token: 0x0600F293 RID: 62099 RVA: 0x00236E0F File Offset: 0x0023500F
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045B2 RID: 17842
-		// (get) Token: 0x0600E46F RID: 58479 RVA: 0x00219FB8 File Offset: 0x002181B8
+		// Token: 0x1700491D RID: 18717
+		// (get) Token: 0x0600F294 RID: 62100 RVA: 0x00236E1C File Offset: 0x0023501C
 		public virtual int TargetDollGrabMachineId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E65 RID: 32357
+		// Token: 0x04008522 RID: 34082
 		private IDollGrab Instance;
 	}
 }

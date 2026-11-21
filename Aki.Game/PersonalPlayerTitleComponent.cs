@@ -11,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023DA RID: 9178
+// Token: 0x020018BF RID: 6335
 [NullableContext(1)]
 [Nullable(0)]
 public class PersonalPlayerTitleComponent : UiPanelBase
 {
-	// Token: 0x0601258E RID: 75150 RVA: 0x00485450 File Offset: 0x00483650
+	// Token: 0x0600FA40 RID: 64064 RVA: 0x0049295C File Offset: 0x00490B5C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class PersonalPlayerTitleComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601258F RID: 75151 RVA: 0x00485598 File Offset: 0x00483798
+	// Token: 0x0600FA41 RID: 64065 RVA: 0x00492AA4 File Offset: 0x00490CA4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PersonalPlayerTitleComponent.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ public class PersonalPlayerTitleComponent : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012590 RID: 75152 RVA: 0x004855DC File Offset: 0x004837DC
+	// Token: 0x0600FA42 RID: 64066 RVA: 0x00492AE8 File Offset: 0x00490CE8
 	protected override UniTask OnBeforeShowAsyncImplement()
 	{
 		PersonalPlayerTitleComponent.<OnBeforeShowAsyncImplement>d__9 <OnBeforeShowAsyncImplement>d__;
@@ -62,44 +62,44 @@ public class PersonalPlayerTitleComponent : UiPanelBase
 		return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012591 RID: 75153 RVA: 0x0048561F File Offset: 0x0048381F
+	// Token: 0x0600FA43 RID: 64067 RVA: 0x00492B2B File Offset: 0x00490D2B
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEventListener();
 	}
 
-	// Token: 0x06012592 RID: 75154 RVA: 0x00485627 File Offset: 0x00483827
+	// Token: 0x0600FA44 RID: 64068 RVA: 0x00492B33 File Offset: 0x00490D33
 	protected void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnPlayerTitleChange, new Action(this.OnPlayerTitleChange));
 	}
 
-	// Token: 0x06012593 RID: 75155 RVA: 0x00485645 File Offset: 0x00483845
+	// Token: 0x0600FA45 RID: 64069 RVA: 0x00492B51 File Offset: 0x00490D51
 	protected void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPlayerTitleChange, new Action(this.OnPlayerTitleChange));
 	}
 
-	// Token: 0x06012594 RID: 75156 RVA: 0x00485663 File Offset: 0x00483863
+	// Token: 0x0600FA46 RID: 64070 RVA: 0x00492B6F File Offset: 0x00490D6F
 	public void SetPersonalInfoData(PersonalInfoData personalInfoData)
 	{
 		this.PersonalInfoData = personalInfoData;
 	}
 
-	// Token: 0x06012595 RID: 75157 RVA: 0x0048566C File Offset: 0x0048386C
+	// Token: 0x0600FA47 RID: 64071 RVA: 0x00492B78 File Offset: 0x00490D78
 	public void SetRefreshConfirmBtn(Action<bool, bool> refreshConfirmBtn)
 	{
 		this.RefreshConfirmBtn = refreshConfirmBtn;
 	}
 
-	// Token: 0x06012596 RID: 75158 RVA: 0x00485675 File Offset: 0x00483875
+	// Token: 0x0600FA48 RID: 64072 RVA: 0x00492B81 File Offset: 0x00490D81
 	private void OnPlayerTitleChange()
 	{
 		this.RefreshScrollView();
 		this.RefreshConfirmBtnState();
 	}
 
-	// Token: 0x06012597 RID: 75159 RVA: 0x00485683 File Offset: 0x00483883
+	// Token: 0x0600FA49 RID: 64073 RVA: 0x00492B8F File Offset: 0x00490D8F
 	private PersonalPlayerTitleItem CreatePlayerTitleItem()
 	{
 		PersonalPlayerTitleItem personalPlayerTitleItem = new PersonalPlayerTitleItem();
@@ -107,7 +107,7 @@ public class PersonalPlayerTitleComponent : UiPanelBase
 		return personalPlayerTitleItem;
 	}
 
-	// Token: 0x06012598 RID: 75160 RVA: 0x0048569C File Offset: 0x0048389C
+	// Token: 0x0600FA4A RID: 64074 RVA: 0x00492BA8 File Offset: 0x00490DA8
 	private void PlayerTitleItemToggleClick(int gridIndex, PersonalPlayerTitleData playerTitleData)
 	{
 		this.CurPersonalPlayerTitleData = playerTitleData;
@@ -115,7 +115,7 @@ public class PersonalPlayerTitleComponent : UiPanelBase
 		this.ScrollView.SelectGridProxy(gridIndex, false);
 	}
 
-	// Token: 0x06012599 RID: 75161 RVA: 0x004856B8 File Offset: 0x004838B8
+	// Token: 0x0600FA4B RID: 64075 RVA: 0x00492BC4 File Offset: 0x00490DC4
 	protected void RefreshPlayerTitleInfo()
 	{
 		UUIItem item = base.GetItem(7);
@@ -182,7 +182,7 @@ public class PersonalPlayerTitleComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601259A RID: 75162 RVA: 0x00485948 File Offset: 0x00483B48
+	// Token: 0x0600FA4C RID: 64076 RVA: 0x00492E54 File Offset: 0x00491054
 	public void RefreshScrollView()
 	{
 		List<PersonalPlayerTitleData> sortedList = this.GetSortedList();
@@ -204,7 +204,7 @@ public class PersonalPlayerTitleComponent : UiPanelBase
 		UiNavigationNewController.Instance.SetNavigationFocusForView(this.ScrollView.GetGrid(num), true, false, false);
 	}
 
-	// Token: 0x0601259B RID: 75163 RVA: 0x00485A04 File Offset: 0x00483C04
+	// Token: 0x0600FA4D RID: 64077 RVA: 0x00492F10 File Offset: 0x00491110
 	public void RefreshConfirmBtnState()
 	{
 		int? curPlayerTitleId = this.PersonalInfoData.CurPlayerTitleId;
@@ -219,7 +219,7 @@ public class PersonalPlayerTitleComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601259C RID: 75164 RVA: 0x00485A60 File Offset: 0x00483C60
+	// Token: 0x0600FA4E RID: 64078 RVA: 0x00492F6C File Offset: 0x0049116C
 	private List<PersonalPlayerTitleData> GetSortedList()
 	{
 		List<PersonalPlayerTitleData> list = new List<PersonalPlayerTitleData>(PersonalModel.Instance.GetPlayerTitleList());
@@ -246,7 +246,7 @@ public class PersonalPlayerTitleComponent : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x0601259D RID: 75165 RVA: 0x00485ADC File Offset: 0x00483CDC
+	// Token: 0x0600FA4F RID: 64079 RVA: 0x00492FE8 File Offset: 0x004911E8
 	public void OnClickConfirm(int _)
 	{
 		if (this.CurPersonalPlayerTitleData.IsExpired())
@@ -263,13 +263,13 @@ public class PersonalPlayerTitleComponent : UiPanelBase
 		PersonalController.Instance.SendChangePlayerTitleRequest(num);
 	}
 
-	// Token: 0x0601259E RID: 75166 RVA: 0x00485B32 File Offset: 0x00483D32
+	// Token: 0x0600FA50 RID: 64080 RVA: 0x0049303E File Offset: 0x0049123E
 	private void OnClickTitlePreviewBtn()
 	{
 		ItemController.Instance.OpenTitleTipsByItemId(this.CurPersonalPlayerTitleData.PlayerTitleId);
 	}
 
-	// Token: 0x04008AC9 RID: 35529
+	// Token: 0x04008C10 RID: 35856
 	[Nullable(new byte[]
 	{
 		2,
@@ -278,52 +278,52 @@ public class PersonalPlayerTitleComponent : UiPanelBase
 	})]
 	private LoopScrollView<PersonalPlayerTitleItem, PersonalPlayerTitleData> ScrollView;
 
-	// Token: 0x04008ACA RID: 35530
+	// Token: 0x04008C11 RID: 35857
 	[Nullable(2)]
 	private PersonalPlayerTitleData CurPersonalPlayerTitleData;
 
-	// Token: 0x04008ACB RID: 35531
+	// Token: 0x04008C12 RID: 35858
 	[Nullable(2)]
 	private PersonalInfoData PersonalInfoData;
 
-	// Token: 0x04008ACC RID: 35532
+	// Token: 0x04008C13 RID: 35859
 	[Nullable(2)]
 	private PersonalPlayerTitleMiniPreView MiniTitlePreView;
 
-	// Token: 0x04008ACD RID: 35533
+	// Token: 0x04008C14 RID: 35860
 	[Nullable(2)]
 	private Action<bool, bool> RefreshConfirmBtn;
 
-	// Token: 0x04008ACE RID: 35534
+	// Token: 0x04008C15 RID: 35861
 	private int? LastLogTitleId = new int?(-1);
 
-	// Token: 0x0200897C RID: 35196
+	// Token: 0x02007B05 RID: 31493
 	[NullableContext(0)]
 	private enum EPersonalTitleComponentDefine
 	{
-		// Token: 0x0402CACE RID: 182990
+		// Token: 0x04027DE9 RID: 163305
 		ScrollView,
-		// Token: 0x0402CACF RID: 182991
+		// Token: 0x04027DEA RID: 163306
 		PersonalTitleItem,
-		// Token: 0x0402CAD0 RID: 182992
+		// Token: 0x04027DEB RID: 163307
 		TxtName,
-		// Token: 0x0402CAD1 RID: 182993
+		// Token: 0x04027DEC RID: 163308
 		TxtDetail,
-		// Token: 0x0402CAD2 RID: 182994
+		// Token: 0x04027DED RID: 163309
 		TxtDescription,
-		// Token: 0x0402CAD3 RID: 182995
+		// Token: 0x04027DEE RID: 163310
 		TxtAccess,
-		// Token: 0x0402CAD4 RID: 182996
+		// Token: 0x04027DEF RID: 163311
 		TxtAccessTime,
-		// Token: 0x0402CAD5 RID: 182997
+		// Token: 0x04027DF0 RID: 163312
 		PanelRight,
-		// Token: 0x0402CAD6 RID: 182998
+		// Token: 0x04027DF1 RID: 163313
 		PanelAccess,
-		// Token: 0x0402CAD7 RID: 182999
+		// Token: 0x04027DF2 RID: 163314
 		PanelCard,
-		// Token: 0x0402CAD8 RID: 183000
+		// Token: 0x04027DF3 RID: 163315
 		TitlePreviewBtn,
-		// Token: 0x0402CAD9 RID: 183001
+		// Token: 0x04027DF4 RID: 163316
 		TxtTimeLimit
 	}
 }

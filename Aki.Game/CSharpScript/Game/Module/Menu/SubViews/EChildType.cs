@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005433 RID: 21555
+	// Token: 0x02004416 RID: 17430
 	public class EChildType
 	{
-		// Token: 0x0401D0C4 RID: 118980
+		// Token: 0x04017B5D RID: 97117
 		public const int TitleText = 0;
 
-		// Token: 0x0401D0C5 RID: 118981
+		// Token: 0x04017B5E RID: 97118
 		public const int ButtonA = 1;
 
-		// Token: 0x0401D0C6 RID: 118982
+		// Token: 0x04017B5F RID: 97119
 		public const int ButtonB = 2;
 
-		// Token: 0x0401D0C7 RID: 118983
+		// Token: 0x04017B60 RID: 97120
 		public const int ButtonC = 3;
 
-		// Token: 0x0401D0C8 RID: 118984
+		// Token: 0x04017B61 RID: 97121
 		public const int ButtonD = 4;
 	}
 }

@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Kurotato;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001CB5 RID: 7349
+// Token: 0x02001177 RID: 4471
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 internal class KurotatoAttrChangeItem : GridProxyAbstract<IKurotatoAttrChangeData>
 {
-	// Token: 0x0600DE0D RID: 56845 RVA: 0x0033E7D7 File Offset: 0x0033C9D7
+	// Token: 0x0600B22A RID: 45610 RVA: 0x0034A213 File Offset: 0x00348413
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ internal class KurotatoAttrChangeItem : GridProxyAbstract<IKurotatoAttrChangeDat
 		};
 	}
 
-	// Token: 0x0600DE0E RID: 56846 RVA: 0x0033E810 File Offset: 0x0033CA10
+	// Token: 0x0600B22B RID: 45611 RVA: 0x0034A24C File Offset: 0x0034844C
 	[NullableContext(1)]
 	public override void Refresh(IKurotatoAttrChangeData data, bool isSelected, int gridIndex)
 	{
@@ -31,13 +31,13 @@ internal class KurotatoAttrChangeItem : GridProxyAbstract<IKurotatoAttrChangeDat
 		base.SetTextureByPath(data.IconPath, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x0200829D RID: 33437
+	// Token: 0x02007427 RID: 29735
 	private static class EAttrItemComp
 	{
-		// Token: 0x0402A9B8 RID: 174520
+		// Token: 0x04025CE3 RID: 154851
 		public const int TextAttr = 0;
 
-		// Token: 0x0402A9B9 RID: 174521
+		// Token: 0x04025CE4 RID: 154852
 		public const int TextureIcon = 1;
 	}
 }

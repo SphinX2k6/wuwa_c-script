@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200331B RID: 13083
+// Token: 0x0200288D RID: 10381
 [NullableContext(1)]
 [Nullable(0)]
 public class PlotAssetExtra
 {
-	// Token: 0x0601C7F6 RID: 116726 RVA: 0x007FE6ED File Offset: 0x007FC8ED
+	// Token: 0x0601A4EF RID: 107759 RVA: 0x00824C59 File Offset: 0x00822E59
 	public PlotAssetExtra(string plotId)
 	{
 	}
 
-	// Token: 0x0400E268 RID: 57960
+	// Token: 0x0400E719 RID: 59161
 	public readonly string PlotId = plotId;
 
-	// Token: 0x0400E269 RID: 57961
+	// Token: 0x0400E71A RID: 59162
 	[Nullable(2)]
 	public string VideoPath;
 
-	// Token: 0x0400E26A RID: 57962
+	// Token: 0x0400E71B RID: 59163
 	public List<int> QteIds = new List<int>();
 }

@@ -7,56 +7,56 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare
 {
-	// Token: 0x02005141 RID: 20801
+	// Token: 0x02004111 RID: 16657
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaChildViewBase : UiPanelBase, GuideDefine.ICustomTabViewForGuide
 	{
-		// Token: 0x170080A0 RID: 32928
-		// (get) Token: 0x06035233 RID: 217651 RVA: 0x00C98605 File Offset: 0x00C96805
-		// (set) Token: 0x06035234 RID: 217652 RVA: 0x00C9860D File Offset: 0x00C9680D
+		// Token: 0x17005460 RID: 21600
+		// (get) Token: 0x0602A12F RID: 172335 RVA: 0x00BE5B05 File Offset: 0x00BE3D05
+		// (set) Token: 0x0602A130 RID: 172336 RVA: 0x00BE5B0D File Offset: 0x00BE3D0D
 		public EPhantomArenaChildViewName? ViewName { get; set; }
 
-		// Token: 0x170080A1 RID: 32929
-		// (get) Token: 0x06035235 RID: 217653 RVA: 0x00C98616 File Offset: 0x00C96816
-		// (set) Token: 0x06035236 RID: 217654 RVA: 0x00C9861E File Offset: 0x00C9681E
+		// Token: 0x17005461 RID: 21601
+		// (get) Token: 0x0602A131 RID: 172337 RVA: 0x00BE5B16 File Offset: 0x00BE3D16
+		// (set) Token: 0x0602A132 RID: 172338 RVA: 0x00BE5B1E File Offset: 0x00BE3D1E
 		public int ActivityId { get; set; }
 
-		// Token: 0x06035237 RID: 217655 RVA: 0x00C98627 File Offset: 0x00C96827
+		// Token: 0x0602A133 RID: 172339 RVA: 0x00BE5B27 File Offset: 0x00BE3D27
 		protected virtual void OnAddEventListener()
 		{
 		}
 
-		// Token: 0x06035238 RID: 217656 RVA: 0x00C98629 File Offset: 0x00C96829
+		// Token: 0x0602A134 RID: 172340 RVA: 0x00BE5B29 File Offset: 0x00BE3D29
 		protected virtual UniTask OnPlayingStartSequenceAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x06035239 RID: 217657 RVA: 0x00C98630 File Offset: 0x00C96830
+		// Token: 0x0602A135 RID: 172341 RVA: 0x00BE5B30 File Offset: 0x00BE3D30
 		protected virtual UniTask OnPlayingShowSequenceAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0603523A RID: 217658 RVA: 0x00C98637 File Offset: 0x00C96837
+		// Token: 0x0602A136 RID: 172342 RVA: 0x00BE5B37 File Offset: 0x00BE3D37
 		protected virtual UniTask OnPlayingHideSequenceAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0603523B RID: 217659 RVA: 0x00C9863E File Offset: 0x00C9683E
+		// Token: 0x0602A137 RID: 172343 RVA: 0x00BE5B3E File Offset: 0x00BE3D3E
 		protected virtual UniTask OnPlayingCloseSequenceAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0603523C RID: 217660 RVA: 0x00C98645 File Offset: 0x00C96845
+		// Token: 0x0602A138 RID: 172344 RVA: 0x00BE5B45 File Offset: 0x00BE3D45
 		protected virtual void OnRemoveEventListener()
 		{
 		}
 
-		// Token: 0x0603523D RID: 217661 RVA: 0x00C98647 File Offset: 0x00C96847
+		// Token: 0x0602A139 RID: 172345 RVA: 0x00BE5B47 File Offset: 0x00BE3D47
 		protected override void OnStartImplement()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -64,13 +64,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			EventSystem.Instance.Emit<string>(EEventName.OnPhantomArenaChildViewOpen, this.GetViewName());
 		}
 
-		// Token: 0x0603523E RID: 217662 RVA: 0x00C98677 File Offset: 0x00C96877
+		// Token: 0x0602A13A RID: 172346 RVA: 0x00BE5B77 File Offset: 0x00BE3D77
 		protected override void OnBeforeShowImplement()
 		{
 			this.OnAddEventListener();
 		}
 
-		// Token: 0x0603523F RID: 217663 RVA: 0x00C98680 File Offset: 0x00C96880
+		// Token: 0x0602A13B RID: 172347 RVA: 0x00BE5B80 File Offset: 0x00BE3D80
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			PhantomArenaChildViewBase.<OnShowAsyncImplementImplement>d__20 <OnShowAsyncImplementImplement>d__;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035240 RID: 217664 RVA: 0x00C986C4 File Offset: 0x00C968C4
+		// Token: 0x0602A13C RID: 172348 RVA: 0x00BE5BC4 File Offset: 0x00BE3DC4
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			PhantomArenaChildViewBase.<OnHideAsyncImplementImplement>d__21 <OnHideAsyncImplementImplement>d__;
@@ -92,19 +92,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035241 RID: 217665 RVA: 0x00C98707 File Offset: 0x00C96907
+		// Token: 0x0602A13D RID: 172349 RVA: 0x00BE5C07 File Offset: 0x00BE3E07
 		protected override void OnAfterHideImplement()
 		{
 			this.OnRemoveEventListener();
 		}
 
-		// Token: 0x06035242 RID: 217666 RVA: 0x00C9870F File Offset: 0x00C9690F
+		// Token: 0x0602A13E RID: 172350 RVA: 0x00BE5C0F File Offset: 0x00BE3E0F
 		public void OpenChildView(EPhantomArenaChildViewName viewName)
 		{
 			this.RootView.OpenChildView(viewName);
 		}
 
-		// Token: 0x06035243 RID: 217667 RVA: 0x00C98720 File Offset: 0x00C96920
+		// Token: 0x0602A13F RID: 172351 RVA: 0x00BE5C20 File Offset: 0x00BE3E20
 		public UniTask OpenChildViewAsync(EPhantomArenaChildViewName viewName)
 		{
 			PhantomArenaChildViewBase.<OpenChildViewAsync>d__24 <OpenChildViewAsync>d__;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <OpenChildViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035244 RID: 217668 RVA: 0x00C9876C File Offset: 0x00C9696C
+		// Token: 0x0602A140 RID: 172352 RVA: 0x00BE5C6C File Offset: 0x00BE3E6C
 		[NullableContext(0)]
 		public override UniTask<bool> CloseMeAsync()
 		{
@@ -128,35 +128,35 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <CloseMeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035245 RID: 217669 RVA: 0x00C987AF File Offset: 0x00C969AF
+		// Token: 0x0602A141 RID: 172353 RVA: 0x00BE5CAF File Offset: 0x00BE3EAF
 		public void CloseMe()
 		{
 			this.RootView.CloseCurChildView();
 		}
 
-		// Token: 0x06035246 RID: 217670 RVA: 0x00C987BC File Offset: 0x00C969BC
+		// Token: 0x0602A142 RID: 172354 RVA: 0x00BE5CBC File Offset: 0x00BE3EBC
 		public string GetViewName()
 		{
 			EPhantomArenaChildViewName? ephantomArenaChildViewName;
 			return ((this.ViewName != null) ? ephantomArenaChildViewName.GetValueOrDefault().ToString() : null) ?? "";
 		}
 
-		// Token: 0x06035247 RID: 217671 RVA: 0x00C987FA File Offset: 0x00C969FA
+		// Token: 0x0602A143 RID: 172355 RVA: 0x00BE5CFA File Offset: 0x00BE3EFA
 		public void BackToLastView()
 		{
 			this.RootView.Back();
 		}
 
-		// Token: 0x0401C4F0 RID: 115952
+		// Token: 0x04016F25 RID: 93989
 		public IPhantomArenaRootViewBase RootView;
 
-		// Token: 0x0401C4F1 RID: 115953
+		// Token: 0x04016F26 RID: 93990
 		public IPhantomArenaTabViewModelBase ViewModel;
 
-		// Token: 0x0401C4F4 RID: 115956
+		// Token: 0x04016F29 RID: 93993
 		protected UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0401C4F5 RID: 115957
+		// Token: 0x04016F2A RID: 93994
 		private bool FirstShow = true;
 	}
 }

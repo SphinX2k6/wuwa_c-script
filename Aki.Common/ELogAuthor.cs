@@ -198,47 +198,53 @@ public enum ELogAuthor
 	// Token: 0x04000094 RID: 148
 	TZJ,
 	// Token: 0x04000095 RID: 149
-	HMQ,
-	// Token: 0x04000096 RID: 150
 	HWR,
-	// Token: 0x04000097 RID: 151
+	// Token: 0x04000096 RID: 150
 	LJS,
-	// Token: 0x04000098 RID: 152
+	// Token: 0x04000097 RID: 151
 	SZH,
-	// Token: 0x04000099 RID: 153
+	// Token: 0x04000098 RID: 152
 	SWC,
-	// Token: 0x0400009A RID: 154
+	// Token: 0x04000099 RID: 153
 	WRY,
-	// Token: 0x0400009B RID: 155
+	// Token: 0x0400009A RID: 154
 	TSL,
-	// Token: 0x0400009C RID: 156
+	// Token: 0x0400009B RID: 155
 	GHY,
-	// Token: 0x0400009D RID: 157
+	// Token: 0x0400009C RID: 156
 	ZJL,
-	// Token: 0x0400009E RID: 158
+	// Token: 0x0400009D RID: 157
 	HF,
-	// Token: 0x0400009F RID: 159
+	// Token: 0x0400009E RID: 158
 	CCJ,
-	// Token: 0x040000A0 RID: 160
+	// Token: 0x0400009F RID: 159
 	LSH,
-	// Token: 0x040000A1 RID: 161
+	// Token: 0x040000A0 RID: 160
 	SYB,
-	// Token: 0x040000A2 RID: 162
+	// Token: 0x040000A1 RID: 161
 	LY,
-	// Token: 0x040000A3 RID: 163
+	// Token: 0x040000A2 RID: 162
 	BLZ,
-	// Token: 0x040000A4 RID: 164
+	// Token: 0x040000A3 RID: 163
 	JYT,
-	// Token: 0x040000A5 RID: 165
+	// Token: 0x040000A4 RID: 164
 	SQW,
-	// Token: 0x040000A6 RID: 166
+	// Token: 0x040000A5 RID: 165
 	HHJ,
-	// Token: 0x040000A7 RID: 167
+	// Token: 0x040000A6 RID: 166
 	HYJ,
-	// Token: 0x040000A8 RID: 168
+	// Token: 0x040000A7 RID: 167
 	SZL,
-	// Token: 0x040000A9 RID: 169
+	// Token: 0x040000A8 RID: 168
 	YY,
+	// Token: 0x040000A9 RID: 169
+	ZHZ,
 	// Token: 0x040000AA RID: 170
-	LJK
+	HMQ,
+	// Token: 0x040000AB RID: 171
+	LJK,
+	// Token: 0x040000AC RID: 172
+	TZD,
+	// Token: 0x040000AD RID: 173
+	LYT
 }

@@ -4,34 +4,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F3A RID: 24378
+	// Token: 0x02004F21 RID: 20257
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WheelTowerPopupData : IWheelTowerPopupData
 	{
-		// Token: 0x17008F59 RID: 36697
-		// (get) Token: 0x0603DED8 RID: 253656 RVA: 0x00EF584C File Offset: 0x00EF3A4C
-		// (set) Token: 0x0603DED9 RID: 253657 RVA: 0x00EF5854 File Offset: 0x00EF3A54
+		// Token: 0x1700632B RID: 25387
+		// (get) Token: 0x06032E73 RID: 208499 RVA: 0x00E47578 File Offset: 0x00E45778
+		// (set) Token: 0x06032E74 RID: 208500 RVA: 0x00E47580 File Offset: 0x00E45780
 		public int TotalScore { get; set; }
 
-		// Token: 0x17008F5A RID: 36698
-		// (get) Token: 0x0603DEDA RID: 253658 RVA: 0x00EF585D File Offset: 0x00EF3A5D
-		// (set) Token: 0x0603DEDB RID: 253659 RVA: 0x00EF5865 File Offset: 0x00EF3A65
+		// Token: 0x1700632C RID: 25388
+		// (get) Token: 0x06032E75 RID: 208501 RVA: 0x00E47589 File Offset: 0x00E45789
+		// (set) Token: 0x06032E76 RID: 208502 RVA: 0x00E47591 File Offset: 0x00E45791
 		public int RoundScore { get; set; }
 
-		// Token: 0x17008F5B RID: 36699
-		// (get) Token: 0x0603DEDC RID: 253660 RVA: 0x00EF586E File Offset: 0x00EF3A6E
-		// (set) Token: 0x0603DEDD RID: 253661 RVA: 0x00EF5876 File Offset: 0x00EF3A76
+		// Token: 0x1700632D RID: 25389
+		// (get) Token: 0x06032E77 RID: 208503 RVA: 0x00E4759A File Offset: 0x00E4579A
+		// (set) Token: 0x06032E78 RID: 208504 RVA: 0x00E475A2 File Offset: 0x00E457A2
 		public int ScoreRecord { get; set; }
 
-		// Token: 0x17008F5C RID: 36700
-		// (get) Token: 0x0603DEDE RID: 253662 RVA: 0x00EF587F File Offset: 0x00EF3A7F
-		// (set) Token: 0x0603DEDF RID: 253663 RVA: 0x00EF5887 File Offset: 0x00EF3A87
+		// Token: 0x1700632E RID: 25390
+		// (get) Token: 0x06032E79 RID: 208505 RVA: 0x00E475AB File Offset: 0x00E457AB
+		// (set) Token: 0x06032E7A RID: 208506 RVA: 0x00E475B3 File Offset: 0x00E457B3
 		public List<int> TeamRoleIdList { get; set; } = new List<int>();
 
-		// Token: 0x17008F5D RID: 36701
-		// (get) Token: 0x0603DEE0 RID: 253664 RVA: 0x00EF5890 File Offset: 0x00EF3A90
-		// (set) Token: 0x0603DEE1 RID: 253665 RVA: 0x00EF5898 File Offset: 0x00EF3A98
+		// Token: 0x1700632F RID: 25391
+		// (get) Token: 0x06032E7B RID: 208507 RVA: 0x00E475BC File Offset: 0x00E457BC
+		// (set) Token: 0x06032E7C RID: 208508 RVA: 0x00E475C4 File Offset: 0x00E457C4
 		public int BuffId { get; set; }
 	}
 }

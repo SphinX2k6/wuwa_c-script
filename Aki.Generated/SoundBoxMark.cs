@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010D9 RID: 4313
+	// Token: 0x0200120F RID: 4623
 	public struct SoundBoxMark : IFlatbufferObject
 	{
-		// Token: 0x170037A3 RID: 14243
-		// (get) Token: 0x0600D772 RID: 55154 RVA: 0x0031D06D File Offset: 0x0031B26D
+		// Token: 0x17003AF9 RID: 15097
+		// (get) Token: 0x0600E4BD RID: 58557 RVA: 0x00348701 File Offset: 0x00346901
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D773 RID: 55155 RVA: 0x0031D07A File Offset: 0x0031B27A
+		// Token: 0x0600E4BE RID: 58558 RVA: 0x0034870E File Offset: 0x0034690E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D774 RID: 55156 RVA: 0x0031D084 File Offset: 0x0031B284
+		// Token: 0x0600E4BF RID: 58559 RVA: 0x00348718 File Offset: 0x00346918
 		public static SoundBoxMark GetRootAsSoundBoxMark(ByteBuffer _bb)
 		{
 			return SoundBoxMark.GetRootAsSoundBoxMark(_bb, default(SoundBoxMark));
 		}
 
-		// Token: 0x0600D775 RID: 55157 RVA: 0x0031D0A0 File Offset: 0x0031B2A0
+		// Token: 0x0600E4C0 RID: 58560 RVA: 0x00348734 File Offset: 0x00346934
 		public static SoundBoxMark GetRootAsSoundBoxMark(ByteBuffer _bb, SoundBoxMark obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D776 RID: 55158 RVA: 0x0031D0BD File Offset: 0x0031B2BD
+		// Token: 0x0600E4C1 RID: 58561 RVA: 0x00348751 File Offset: 0x00346951
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D777 RID: 55159 RVA: 0x0031D0CC File Offset: 0x0031B2CC
+		// Token: 0x0600E4C2 RID: 58562 RVA: 0x00348760 File Offset: 0x00346960
 		public SoundBoxMark __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170037A4 RID: 14244
-		// (get) Token: 0x0600D778 RID: 55160 RVA: 0x0031D0DC File Offset: 0x0031B2DC
+		// Token: 0x17003AFA RID: 15098
+		// (get) Token: 0x0600E4C3 RID: 58563 RVA: 0x00348770 File Offset: 0x00346970
 		public int MarkId
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170037A5 RID: 14245
-		// (get) Token: 0x0600D779 RID: 55161 RVA: 0x0031D118 File Offset: 0x0031B318
+		// Token: 0x17003AFB RID: 15099
+		// (get) Token: 0x0600E4C4 RID: 58564 RVA: 0x003487AC File Offset: 0x003469AC
 		public string MarkPic
 		{
 			get
@@ -79,20 +79,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D77A RID: 55162 RVA: 0x0031D14F File Offset: 0x0031B34F
+		// Token: 0x0600E4C5 RID: 58565 RVA: 0x003487E3 File Offset: 0x003469E3
 		public Span<byte> GetMarkPicBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600D77B RID: 55163 RVA: 0x0031D15E File Offset: 0x0031B35E
+		// Token: 0x0600E4C6 RID: 58566 RVA: 0x003487F2 File Offset: 0x003469F2
 		public byte[] GetMarkPicArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170037A6 RID: 14246
-		// (get) Token: 0x0600D77C RID: 55164 RVA: 0x0031D178 File Offset: 0x0031B378
+		// Token: 0x17003AFC RID: 15100
+		// (get) Token: 0x0600E4C7 RID: 58567 RVA: 0x0034880C File Offset: 0x00346A0C
 		public string MarkTitle
 		{
 			get
@@ -106,20 +106,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D77D RID: 55165 RVA: 0x0031D1AF File Offset: 0x0031B3AF
+		// Token: 0x0600E4C8 RID: 58568 RVA: 0x00348843 File Offset: 0x00346A43
 		public Span<byte> GetMarkTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600D77E RID: 55166 RVA: 0x0031D1BE File Offset: 0x0031B3BE
+		// Token: 0x0600E4C9 RID: 58569 RVA: 0x00348852 File Offset: 0x00346A52
 		public byte[] GetMarkTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170037A7 RID: 14247
-		// (get) Token: 0x0600D77F RID: 55167 RVA: 0x0031D1D8 File Offset: 0x0031B3D8
+		// Token: 0x17003AFD RID: 15101
+		// (get) Token: 0x0600E4CA RID: 58570 RVA: 0x0034886C File Offset: 0x00346A6C
 		public string MarkDesc
 		{
 			get
@@ -133,20 +133,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D780 RID: 55168 RVA: 0x0031D210 File Offset: 0x0031B410
+		// Token: 0x0600E4CB RID: 58571 RVA: 0x003488A4 File Offset: 0x00346AA4
 		public Span<byte> GetMarkDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600D781 RID: 55169 RVA: 0x0031D220 File Offset: 0x0031B420
+		// Token: 0x0600E4CC RID: 58572 RVA: 0x003488B4 File Offset: 0x00346AB4
 		public byte[] GetMarkDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170037A8 RID: 14248
-		// (get) Token: 0x0600D782 RID: 55170 RVA: 0x0031D238 File Offset: 0x0031B438
+		// Token: 0x17003AFE RID: 15102
+		// (get) Token: 0x0600E4CD RID: 58573 RVA: 0x003488CC File Offset: 0x00346ACC
 		public int ShowPriority
 		{
 			get
@@ -160,7 +160,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D783 RID: 55171 RVA: 0x0031D278 File Offset: 0x0031B478
+		// Token: 0x0600E4CE RID: 58574 RVA: 0x0034890C File Offset: 0x00346B0C
 		public int ShowRange(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -171,8 +171,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170037A9 RID: 14249
-		// (get) Token: 0x0600D784 RID: 55172 RVA: 0x0031D2B8 File Offset: 0x0031B4B8
+		// Token: 0x17003AFF RID: 15103
+		// (get) Token: 0x0600E4CF RID: 58575 RVA: 0x0034894C File Offset: 0x00346B4C
 		public int ShowRangeLength
 		{
 			get
@@ -186,20 +186,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D785 RID: 55173 RVA: 0x0031D2E4 File Offset: 0x0031B4E4
+		// Token: 0x0600E4D0 RID: 58576 RVA: 0x00348978 File Offset: 0x00346B78
 		public Span<int> GetShowRangeBytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x0600D786 RID: 55174 RVA: 0x0031D2F4 File Offset: 0x0031B4F4
+		// Token: 0x0600E4D1 RID: 58577 RVA: 0x00348988 File Offset: 0x00346B88
 		public int[] GetShowRangeArray()
 		{
 			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170037AA RID: 14250
-		// (get) Token: 0x0600D787 RID: 55175 RVA: 0x0031D30C File Offset: 0x0031B50C
+		// Token: 0x17003B00 RID: 15104
+		// (get) Token: 0x0600E4D2 RID: 58578 RVA: 0x003489A0 File Offset: 0x00346BA0
 		public float Scale
 		{
 			get
@@ -213,25 +213,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D788 RID: 55176 RVA: 0x0031D350 File Offset: 0x0031B550
+		// Token: 0x0600E4D3 RID: 58579 RVA: 0x003489E1 File Offset: 0x00346BE1
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ShowRangeIter()或GetShowRangeBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ShowRange()
+		public int[] ShowRange()
 		{
-			SoundBoxMark soundBoxMark = this;
-			return soundBoxMark.GetShowRangeArray() ?? Array.Empty<int>();
+			return this.GetShowRangeArray();
 		}
 
-		// Token: 0x0600D789 RID: 55177 RVA: 0x0031D374 File Offset: 0x0031B574
+		// Token: 0x0600E4D4 RID: 58580 RVA: 0x003489E9 File Offset: 0x00346BE9
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ShowRangeIter()
+		public IEnumerable<int> ShowRangeIter()
 		{
 			SoundBoxMark.<ShowRangeIter>d__32 <ShowRangeIter>d__ = new SoundBoxMark.<ShowRangeIter>d__32(-2);
 			<ShowRangeIter>d__.<>3__<>4__this = this;
 			return <ShowRangeIter>d__;
 		}
 
-		// Token: 0x0400520C RID: 21004
+		// Token: 0x0400584F RID: 22607
 		private Table __p;
 	}
 }

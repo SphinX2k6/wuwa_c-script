@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043C5 RID: 17349
+	// Token: 0x02004827 RID: 18471
 	public struct IScreenResourceOccupationData : IFlatbufferObject
 	{
-		// Token: 0x17007AAD RID: 31405
-		// (get) Token: 0x06019DE0 RID: 105952 RVA: 0x003B3D56 File Offset: 0x003B1F56
+		// Token: 0x170080E4 RID: 32996
+		// (get) Token: 0x0601B57B RID: 111995 RVA: 0x003DF9EE File Offset: 0x003DDBEE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x06019DE1 RID: 105953 RVA: 0x003B3D63 File Offset: 0x003B1F63
+		// Token: 0x0601B57C RID: 111996 RVA: 0x003DF9FB File Offset: 0x003DDBFB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019DE2 RID: 105954 RVA: 0x003B3D6C File Offset: 0x003B1F6C
+		// Token: 0x0601B57D RID: 111997 RVA: 0x003DFA04 File Offset: 0x003DDC04
 		public static IScreenResourceOccupationData GetRootAsIScreenResourceOccupationData(ByteBuffer _bb)
 		{
 			return IScreenResourceOccupationData.GetRootAsIScreenResourceOccupationData(_bb, default(IScreenResourceOccupationData));
 		}
 
-		// Token: 0x06019DE3 RID: 105955 RVA: 0x003B3D88 File Offset: 0x003B1F88
+		// Token: 0x0601B57E RID: 111998 RVA: 0x003DFA20 File Offset: 0x003DDC20
 		public static IScreenResourceOccupationData GetRootAsIScreenResourceOccupationData(ByteBuffer _bb, IScreenResourceOccupationData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019DE4 RID: 105956 RVA: 0x003B3DA5 File Offset: 0x003B1FA5
+		// Token: 0x0601B57F RID: 111999 RVA: 0x003DFA3D File Offset: 0x003DDC3D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019DE5 RID: 105957 RVA: 0x003B3DB4 File Offset: 0x003B1FB4
+		// Token: 0x0601B580 RID: 112000 RVA: 0x003DFA4C File Offset: 0x003DDC4C
 		public IScreenResourceOccupationData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007AAE RID: 31406
-		// (get) Token: 0x06019DE6 RID: 105958 RVA: 0x003B3DC4 File Offset: 0x003B1FC4
+		// Token: 0x170080E5 RID: 32997
+		// (get) Token: 0x0601B581 RID: 112001 RVA: 0x003DFA5C File Offset: 0x003DDC5C
 		public EOccupationType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x06019DE7 RID: 105959 RVA: 0x003B3E00 File Offset: 0x003B2000
+		// Token: 0x0601B582 RID: 112002 RVA: 0x003DFA98 File Offset: 0x003DDC98
 		public static Offset<IScreenResourceOccupationData> CreateIScreenResourceOccupationData(FlatBufferBuilder builder, EOccupationType Type = EOccupationType.Npc)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return IScreenResourceOccupationData.EndIScreenResourceOccupationData(builder);
 		}
 
-		// Token: 0x06019DE8 RID: 105960 RVA: 0x003B3E16 File Offset: 0x003B2016
+		// Token: 0x0601B583 RID: 112003 RVA: 0x003DFAAE File Offset: 0x003DDCAE
 		public static void StartIScreenResourceOccupationData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06019DE9 RID: 105961 RVA: 0x003B3E1F File Offset: 0x003B201F
+		// Token: 0x0601B584 RID: 112004 RVA: 0x003DFAB7 File Offset: 0x003DDCB7
 		public static void AddType(FlatBufferBuilder builder, EOccupationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06019DEA RID: 105962 RVA: 0x003B3E2A File Offset: 0x003B202A
+		// Token: 0x0601B585 RID: 112005 RVA: 0x003DFAC2 File Offset: 0x003DDCC2
 		public static Offset<IScreenResourceOccupationData> EndIScreenResourceOccupationData(FlatBufferBuilder builder)
 		{
 			return new Offset<IScreenResourceOccupationData>(builder.EndTable());
 		}
 
-		// Token: 0x06019DEB RID: 105963 RVA: 0x003B3E38 File Offset: 0x003B2038
+		// Token: 0x0601B586 RID: 112006 RVA: 0x003DFAD0 File Offset: 0x003DDCD0
 		public IScreenResourceOccupationDataT UnPack()
 		{
 			IScreenResourceOccupationDataT screenResourceOccupationDataT = new IScreenResourceOccupationDataT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return screenResourceOccupationDataT;
 		}
 
-		// Token: 0x06019DEC RID: 105964 RVA: 0x003B3E53 File Offset: 0x003B2053
+		// Token: 0x0601B587 RID: 112007 RVA: 0x003DFAEB File Offset: 0x003DDCEB
 		public void UnPackTo(IScreenResourceOccupationDataT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06019DED RID: 105965 RVA: 0x003B3E64 File Offset: 0x003B2064
+		// Token: 0x0601B588 RID: 112008 RVA: 0x003DFAFC File Offset: 0x003DDCFC
 		public static Offset<IScreenResourceOccupationData> Pack(FlatBufferBuilder builder, IScreenResourceOccupationDataT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return IScreenResourceOccupationData.CreateIScreenResourceOccupationData(builder, _o.Type);
 		}
 
-		// Token: 0x0400C212 RID: 49682
+		// Token: 0x0400CC33 RID: 52275
 		private Table __p;
 	}
 }

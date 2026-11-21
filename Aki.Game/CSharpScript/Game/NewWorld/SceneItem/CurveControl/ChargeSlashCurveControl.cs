@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.CurveControl
 {
-	// Token: 0x0200720A RID: 29194
+	// Token: 0x020062BF RID: 25279
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ChargeSlashCurveControl : CurveControlBase
 	{
-		// Token: 0x06047784 RID: 292740 RVA: 0x012341DC File Offset: 0x012323DC
+		// Token: 0x0603D095 RID: 250005 RVA: 0x0118DC6C File Offset: 0x0118BE6C
 		[NullableContext(1)]
 		protected override void OnInit(CurveControlComponent config)
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.CurveControl
 			}
 		}
 
-		// Token: 0x06047785 RID: 292741 RVA: 0x01234287 File Offset: 0x01232487
+		// Token: 0x0603D096 RID: 250006 RVA: 0x0118DD17 File Offset: 0x0118BF17
 		protected override void OnStart()
 		{
 			this.StartLoc.DeepCopy(this.ActorComp.ActorLocationProxy);
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.CurveControl
 			this.StartRebornMaterial = false;
 		}
 
-		// Token: 0x06047786 RID: 292742 RVA: 0x012342B4 File Offset: 0x012324B4
+		// Token: 0x0603D097 RID: 250007 RVA: 0x0118DD44 File Offset: 0x0118BF44
 		protected override void TickStartStage()
 		{
 			if (this.RiseCurve == null)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.CurveControl
 			this.ActorComp.SetActorLocation(vector.ToUeVector(false), "ChargeSlashCurveControl.StartStage", true);
 		}
 
-		// Token: 0x06047787 RID: 292743 RVA: 0x012343D8 File Offset: 0x012325D8
+		// Token: 0x0603D098 RID: 250008 RVA: 0x0118DE68 File Offset: 0x0118C068
 		protected override void TickEndStage()
 		{
 			if (this.CurTime <= this.StartTime + this.LoopTime || this.StopRaiseMaterial)
@@ -124,29 +124,29 @@ namespace CSharpScript.Game.NewWorld.SceneItem.CurveControl
 			tagComp2.RemoveTag(new int?(CurveControlDefine.RaisePerformanceTagId));
 		}
 
-		// Token: 0x04025976 RID: 153974
+		// Token: 0x040205E5 RID: 132581
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025977 RID: 153975
+		// Token: 0x040205E6 RID: 132582
 		private LevelTagComponent TagComp;
 
-		// Token: 0x04025978 RID: 153976
+		// Token: 0x040205E7 RID: 132583
 		[Nullable(1)]
 		private readonly Vector StartLoc = Vector.Create();
 
-		// Token: 0x04025979 RID: 153977
+		// Token: 0x040205E8 RID: 132584
 		private float RiseHeight;
 
-		// Token: 0x0402597A RID: 153978
+		// Token: 0x040205E9 RID: 132585
 		private UCurveFloat RiseCurve;
 
-		// Token: 0x0402597B RID: 153979
+		// Token: 0x040205EA RID: 132586
 		private bool StartRaiseMaterial;
 
-		// Token: 0x0402597C RID: 153980
+		// Token: 0x040205EB RID: 132587
 		private bool StopRaiseMaterial;
 
-		// Token: 0x0402597D RID: 153981
+		// Token: 0x040205EC RID: 132588
 		private bool StartRebornMaterial;
 	}
 }

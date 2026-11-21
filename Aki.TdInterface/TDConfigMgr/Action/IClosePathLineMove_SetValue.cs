@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018E1 RID: 6369
+	// Token: 0x02001A6E RID: 6766
 	public class IClosePathLineMove_SetValue
 	{
-		// Token: 0x040055BA RID: 21946
+		// Token: 0x04005A0D RID: 23053
 		public ESplineMovePattern Type;
 
-		// Token: 0x040055BB RID: 21947
+		// Token: 0x04005A0E RID: 23054
 		public float? GravitySwitchAngularVelocity;
 	}
 }

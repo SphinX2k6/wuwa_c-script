@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 {
-	// Token: 0x0200544D RID: 21581
+	// Token: 0x02004430 RID: 17456
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 	})]
 	public class EyeProtectSliderItem : GridProxyAbstract<EyeProtectSliderData>
 	{
-		// Token: 0x06037195 RID: 225685 RVA: 0x00D0F460 File Offset: 0x00D0D660
+		// Token: 0x0602C0DE RID: 180446 RVA: 0x00C5E878 File Offset: 0x00C5CA78
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,13 +28,13 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			};
 		}
 
-		// Token: 0x06037196 RID: 225686 RVA: 0x00D0F4E6 File Offset: 0x00D0D6E6
+		// Token: 0x0602C0DF RID: 180447 RVA: 0x00C5E8FE File Offset: 0x00C5CAFE
 		protected override void OnStart()
 		{
 			base.GetSlider(1).OnValueChangeCb.Bind(new Action<float>(this.OnSliderValueChange));
 		}
 
-		// Token: 0x06037197 RID: 225687 RVA: 0x00D0F508 File Offset: 0x00D0D708
+		// Token: 0x0602C0E0 RID: 180448 RVA: 0x00C5E920 File Offset: 0x00C5CB20
 		public override void Refresh(EyeProtectSliderData data, bool isSelected, int gridIndex)
 		{
 			UUISliderComponent slider = base.GetSlider(1);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			base.GetText(0).SetText(sliderDisplayValue.ToString() + str, true);
 		}
 
-		// Token: 0x06037198 RID: 225688 RVA: 0x00D0F5B0 File Offset: 0x00D0D7B0
+		// Token: 0x0602C0E1 RID: 180449 RVA: 0x00C5E9C8 File Offset: 0x00C5CBC8
 		private void Init(EyeProtectSliderData data)
 		{
 			if (this.Data != null)
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			}
 		}
 
-		// Token: 0x06037199 RID: 225689 RVA: 0x00D0F604 File Offset: 0x00D0D804
+		// Token: 0x0602C0E2 RID: 180450 RVA: 0x00C5EA1C File Offset: 0x00C5CC1C
 		private void OnSliderValueChange(float value)
 		{
 			if (this.Data == null)
@@ -77,30 +77,30 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			base.GetText(0).SetText(sliderDisplayValue.ToString() + str, true);
 		}
 
-		// Token: 0x0401D11C RID: 119068
+		// Token: 0x04017BB5 RID: 97205
 		[Nullable(2)]
 		protected EyeProtectSliderData Data;
 
-		// Token: 0x0401D11D RID: 119069
+		// Token: 0x04017BB6 RID: 97206
 		protected bool IsTemp;
 
-		// Token: 0x0200B6C7 RID: 46791
+		// Token: 0x0200A0FF RID: 41215
 		[NullableContext(0)]
 		public class ESliderComponent
 		{
-			// Token: 0x040375FB RID: 226811
+			// Token: 0x04032050 RID: 204880
 			public const int NumText = 0;
 
-			// Token: 0x040375FC RID: 226812
+			// Token: 0x04032051 RID: 204881
 			public const int Slider = 1;
 
-			// Token: 0x040375FD RID: 226813
+			// Token: 0x04032052 RID: 204882
 			public const int TitleText = 2;
 
-			// Token: 0x040375FE RID: 226814
+			// Token: 0x04032053 RID: 204883
 			public const int TemperatureBg = 3;
 
-			// Token: 0x040375FF RID: 226815
+			// Token: 0x04032054 RID: 204884
 			public const int FillArea = 4;
 		}
 	}

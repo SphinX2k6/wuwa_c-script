@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Cook;
 
-// Token: 0x02001883 RID: 6275
+// Token: 0x02000D3C RID: 3388
 [NullableContext(1)]
 [Nullable(0)]
 public class CookSort : CommonSort<ECookSortWayType>
 {
-	// Token: 0x0600B7E3 RID: 47075 RVA: 0x00299F80 File Offset: 0x00298180
+	// Token: 0x06008BCC RID: 35788 RVA: 0x002A4698 File Offset: 0x002A2898
 	private int SortMenu(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -23,7 +23,7 @@ public class CookSort : CommonSort<ECookSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B7E4 RID: 47076 RVA: 0x00299FC0 File Offset: 0x002981C0
+	// Token: 0x06008BCD RID: 35789 RVA: 0x002A46D8 File Offset: 0x002A28D8
 	private int SortMake(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -56,7 +56,7 @@ public class CookSort : CommonSort<ECookSortWayType>
 		}
 	}
 
-	// Token: 0x0600B7E5 RID: 47077 RVA: 0x0029A024 File Offset: 0x00298224
+	// Token: 0x06008BCE RID: 35790 RVA: 0x002A473C File Offset: 0x002A293C
 	private int SortMakeMachining(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -81,7 +81,7 @@ public class CookSort : CommonSort<ECookSortWayType>
 		return isAscending ? num : (num * -1);
 	}
 
-	// Token: 0x0600B7E6 RID: 47078 RVA: 0x0029A080 File Offset: 0x00298280
+	// Token: 0x06008BCF RID: 35791 RVA: 0x002A4798 File Offset: 0x002A2998
 	private int SortQuality(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -97,7 +97,7 @@ public class CookSort : CommonSort<ECookSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B7E7 RID: 47079 RVA: 0x0029A0C0 File Offset: 0x002982C0
+	// Token: 0x06008BD0 RID: 35792 RVA: 0x002A47D8 File Offset: 0x002A29D8
 	private int SortItemId(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -113,7 +113,7 @@ public class CookSort : CommonSort<ECookSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B7E8 RID: 47080 RVA: 0x0029A0F8 File Offset: 0x002982F8
+	// Token: 0x06008BD1 RID: 35793 RVA: 0x002A4810 File Offset: 0x002A2A10
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(ECookSortWayType.Menu, new TSortResult(this.SortMenu));

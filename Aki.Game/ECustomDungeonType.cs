@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001260 RID: 4704
+// Token: 0x02000714 RID: 1812
 public enum ECustomDungeonType
 {
-	// Token: 0x04003A24 RID: 14884
+	// Token: 0x04003ABC RID: 15036
 	Exp = 1,
-	// Token: 0x04003A25 RID: 14885
+	// Token: 0x04003ABD RID: 15037
 	Material,
-	// Token: 0x04003A26 RID: 14886
+	// Token: 0x04003ABE RID: 15038
 	Sound = 6
 }

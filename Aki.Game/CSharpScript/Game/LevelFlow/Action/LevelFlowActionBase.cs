@@ -5,29 +5,29 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F79 RID: 28537
+	// Token: 0x020060FA RID: 24826
 	public class LevelFlowActionBase : IStaticVariableResetter
 	{
-		// Token: 0x060456A7 RID: 284327 RVA: 0x01134E57 File Offset: 0x01133057
+		// Token: 0x0603B855 RID: 243797 RVA: 0x010DEC5B File Offset: 0x010DCE5B
 		static LevelFlowActionBase()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelFlowActionBase.CreateStaticDefaultValue), new Action(LevelFlowActionBase.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060456A8 RID: 284328 RVA: 0x01134E76 File Offset: 0x01133076
+		// Token: 0x0603B856 RID: 243798 RVA: 0x010DEC7A File Offset: 0x010DCE7A
 		public LevelFlowActionBase()
 		{
 			this.ActionId = LevelFlowActionBase.SelfIncrementId++;
 		}
 
-		// Token: 0x060456A9 RID: 284329 RVA: 0x01134E91 File Offset: 0x01133091
+		// Token: 0x0603B857 RID: 243799 RVA: 0x010DEC95 File Offset: 0x010DCE95
 		[NullableContext(1)]
 		public void BindCompleteCallBack(Action<LevelFlowActionBase, bool> completeCallBack)
 		{
 			this.CompleteCallBack = completeCallBack;
 		}
 
-		// Token: 0x060456AA RID: 284330 RVA: 0x01134E9A File Offset: 0x0113309A
+		// Token: 0x0603B858 RID: 243800 RVA: 0x010DEC9E File Offset: 0x010DCE9E
 		public void Execute()
 		{
 			this.IsExecute = true;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			this.OnExecute();
 		}
 
-		// Token: 0x060456AB RID: 284331 RVA: 0x01134EB8 File Offset: 0x011330B8
+		// Token: 0x0603B859 RID: 243801 RVA: 0x010DECBC File Offset: 0x010DCEBC
 		public unsafe void FinishExecute(bool isSuccess)
 		{
 			if (!this.IsExecute)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			this.CompleteCallBack = null;
 		}
 
-		// Token: 0x060456AC RID: 284332 RVA: 0x01134F83 File Offset: 0x01133183
+		// Token: 0x0603B85A RID: 243802 RVA: 0x010DED87 File Offset: 0x010DCF87
 		public void Tick(float deltaTime)
 		{
 			if (!this.IsExecute)
@@ -73,14 +73,14 @@ namespace CSharpScript.Game.LevelFlow.Action
 			this.OnTick(deltaTime);
 		}
 
-		// Token: 0x060456AD RID: 284333 RVA: 0x01134F95 File Offset: 0x01133195
+		// Token: 0x0603B85B RID: 243803 RVA: 0x010DED99 File Offset: 0x010DCF99
 		public void Reset()
 		{
 			this.IsExecute = false;
 			this.OnReset();
 		}
 
-		// Token: 0x060456AE RID: 284334 RVA: 0x01134FA4 File Offset: 0x011331A4
+		// Token: 0x0603B85C RID: 243804 RVA: 0x010DEDA8 File Offset: 0x010DCFA8
 		protected unsafe void CreateWaitEntityTask([Nullable(new byte[]
 		{
 			0,
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x060456AF RID: 284335 RVA: 0x011350DC File Offset: 0x011332DC
+		// Token: 0x0603B85D RID: 243805 RVA: 0x010DEEE0 File Offset: 0x010DD0E0
 		protected unsafe void CreateWaitEntityTaskBigInt([Nullable(new byte[]
 		{
 			0,
@@ -203,42 +203,42 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x060456B0 RID: 284336 RVA: 0x011351F6 File Offset: 0x011333F6
+		// Token: 0x0603B85E RID: 243806 RVA: 0x010DEFFA File Offset: 0x010DD1FA
 		protected virtual void OnExecute()
 		{
 		}
 
-		// Token: 0x060456B1 RID: 284337 RVA: 0x011351F8 File Offset: 0x011333F8
+		// Token: 0x0603B85F RID: 243807 RVA: 0x010DEFFC File Offset: 0x010DD1FC
 		protected virtual void OnAddEventListener()
 		{
 		}
 
-		// Token: 0x060456B2 RID: 284338 RVA: 0x011351FA File Offset: 0x011333FA
+		// Token: 0x0603B860 RID: 243808 RVA: 0x010DEFFE File Offset: 0x010DD1FE
 		protected virtual void OnTick(float deltaTime)
 		{
 		}
 
-		// Token: 0x060456B3 RID: 284339 RVA: 0x011351FC File Offset: 0x011333FC
+		// Token: 0x0603B861 RID: 243809 RVA: 0x010DF000 File Offset: 0x010DD200
 		protected virtual void ExecuteWhenEntitiesReady()
 		{
 		}
 
-		// Token: 0x060456B4 RID: 284340 RVA: 0x011351FE File Offset: 0x011333FE
+		// Token: 0x0603B862 RID: 243810 RVA: 0x010DF002 File Offset: 0x010DD202
 		protected virtual void OnRemoveEventListener()
 		{
 		}
 
-		// Token: 0x060456B5 RID: 284341 RVA: 0x01135200 File Offset: 0x01133400
+		// Token: 0x0603B863 RID: 243811 RVA: 0x010DF004 File Offset: 0x010DD204
 		protected virtual void OnComplete(bool isSuccess)
 		{
 		}
 
-		// Token: 0x060456B6 RID: 284342 RVA: 0x01135202 File Offset: 0x01133402
+		// Token: 0x0603B864 RID: 243812 RVA: 0x010DF006 File Offset: 0x010DD206
 		protected virtual void OnReset()
 		{
 		}
 
-		// Token: 0x060456B7 RID: 284343 RVA: 0x01135204 File Offset: 0x01133404
+		// Token: 0x0603B865 RID: 243813 RVA: 0x010DF008 File Offset: 0x010DD208
 		protected unsafe virtual void LogExecuteInfo()
 		{
 			Log instance = Log.Instance;
@@ -251,28 +251,28 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x060456B8 RID: 284344 RVA: 0x0113527B File Offset: 0x0113347B
+		// Token: 0x0603B866 RID: 243814 RVA: 0x010DF07F File Offset: 0x010DD27F
 		public static void CreateStaticDefaultValue()
 		{
 			LevelFlowActionBase.SelfIncrementId = 0;
 		}
 
-		// Token: 0x060456B9 RID: 284345 RVA: 0x01135283 File Offset: 0x01133483
+		// Token: 0x0603B867 RID: 243815 RVA: 0x010DF087 File Offset: 0x010DD287
 		public static void ResetStaticDefaultValue()
 		{
 			LevelFlowActionBase.SelfIncrementId = 0;
 		}
 
-		// Token: 0x04024394 RID: 148372
+		// Token: 0x0401F649 RID: 128585
 		public readonly int ActionId;
 
-		// Token: 0x04024395 RID: 148373
+		// Token: 0x0401F64A RID: 128586
 		private static int SelfIncrementId;
 
-		// Token: 0x04024396 RID: 148374
+		// Token: 0x0401F64B RID: 128587
 		private bool IsExecute;
 
-		// Token: 0x04024397 RID: 148375
+		// Token: 0x0401F64C RID: 128588
 		[Nullable(new byte[]
 		{
 			2,
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 		})]
 		private Action<LevelFlowActionBase, bool> CompleteCallBack;
 
-		// Token: 0x04024398 RID: 148376
+		// Token: 0x0401F64D RID: 128589
 		private const int EACH_WAIT_ENTITY_OVER_TIME = 30000;
 	}
 }

@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 {
-	// Token: 0x02006645 RID: 26181
+	// Token: 0x020055C3 RID: 21955
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FeiXuePreheatMainView : UiViewBase
 	{
-		// Token: 0x060419BE RID: 268734 RVA: 0x00FE98C4 File Offset: 0x00FE7AC4
+		// Token: 0x06036683 RID: 222851 RVA: 0x00F3097C File Offset: 0x00F2EB7C
 		[NullableContext(1)]
 		public FeiXuePreheatMainView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060419BF RID: 268735 RVA: 0x00FE9954 File Offset: 0x00FE7B54
+		// Token: 0x06036684 RID: 222852 RVA: 0x00F30A0C File Offset: 0x00F2EC0C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -64,13 +64,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			};
 		}
 
-		// Token: 0x060419C0 RID: 268736 RVA: 0x00FE9C69 File Offset: 0x00FE7E69
+		// Token: 0x06036685 RID: 222853 RVA: 0x00F30D21 File Offset: 0x00F2EF21
 		protected override void OnBeforeShow()
 		{
 			this.UiViewSequence.HideSequenceName = "HideView_01";
 		}
 
-		// Token: 0x060419C1 RID: 268737 RVA: 0x00FE9C7C File Offset: 0x00FE7E7C
+		// Token: 0x06036686 RID: 222854 RVA: 0x00F30D34 File Offset: 0x00F2EF34
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FeiXuePreheatMainView.<OnBeforeStartAsync>d__26 <OnBeforeStartAsync>d__;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060419C2 RID: 268738 RVA: 0x00FE9CC0 File Offset: 0x00FE7EC0
+		// Token: 0x06036687 RID: 222855 RVA: 0x00F30D78 File Offset: 0x00F2EF78
 		protected override void OnStart()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -99,13 +99,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x060419C3 RID: 268739 RVA: 0x00FE9D6C File Offset: 0x00FE7F6C
+		// Token: 0x06036688 RID: 222856 RVA: 0x00F30E24 File Offset: 0x00F2F024
 		protected override void OnAfterPlayStartSequence()
 		{
 			this.PlayQuestSequence();
 		}
 
-		// Token: 0x060419C4 RID: 268740 RVA: 0x00FE9D78 File Offset: 0x00FE7F78
+		// Token: 0x06036689 RID: 222857 RVA: 0x00F30E30 File Offset: 0x00F2F030
 		private UniTask PlayQuestSequence()
 		{
 			FeiXuePreheatMainView.<PlayQuestSequence>d__29 <PlayQuestSequence>d__;
@@ -116,13 +116,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return <PlayQuestSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060419C5 RID: 268741 RVA: 0x00FE9DBB File Offset: 0x00FE7FBB
+		// Token: 0x0603668A RID: 222858 RVA: 0x00F30E73 File Offset: 0x00F2F073
 		[NullableContext(1)]
 		private void OnPlaySequenceEvent(string sequenceName, string eventName)
 		{
 		}
 
-		// Token: 0x060419C6 RID: 268742 RVA: 0x00FE9DC0 File Offset: 0x00FE7FC0
+		// Token: 0x0603668B RID: 222859 RVA: 0x00F30E78 File Offset: 0x00F2F078
 		private UniTask PlayAllDoneAnimation()
 		{
 			FeiXuePreheatMainView.<PlayAllDoneAnimation>d__31 <PlayAllDoneAnimation>d__;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return <PlayAllDoneAnimation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060419C7 RID: 268743 RVA: 0x00FE9E03 File Offset: 0x00FE8003
+		// Token: 0x0603668C RID: 222860 RVA: 0x00F30EBB File Offset: 0x00F2F0BB
 		[NullableContext(1)]
 		private string GetSequenceTypeByIndex(int index)
 		{
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return this.SequenceTypeMapping[index];
 		}
 
-		// Token: 0x060419C8 RID: 268744 RVA: 0x00FE9E28 File Offset: 0x00FE8028
+		// Token: 0x0603668D RID: 222861 RVA: 0x00F30EE0 File Offset: 0x00F2F0E0
 		private UniTask PlayDoneAnimationByIndex(int index)
 		{
 			FeiXuePreheatMainView.<PlayDoneAnimationByIndex>d__33 <PlayDoneAnimationByIndex>d__;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return <PlayDoneAnimationByIndex>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060419C9 RID: 268745 RVA: 0x00FE9E74 File Offset: 0x00FE8074
+		// Token: 0x0603668E RID: 222862 RVA: 0x00F30F2C File Offset: 0x00F2F12C
 		private UniTask PlaySearchInAnimationByIndex(int index)
 		{
 			FeiXuePreheatMainView.<PlaySearchInAnimationByIndex>d__34 <PlaySearchInAnimationByIndex>d__;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return <PlaySearchInAnimationByIndex>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060419CA RID: 268746 RVA: 0x00FE9EC0 File Offset: 0x00FE80C0
+		// Token: 0x0603668F RID: 222863 RVA: 0x00F30F78 File Offset: 0x00F2F178
 		private UniTask PlaySearchingLoopAnimationByIndex(int index)
 		{
 			FeiXuePreheatMainView.<PlaySearchingLoopAnimationByIndex>d__35 <PlaySearchingLoopAnimationByIndex>d__;
@@ -180,13 +180,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return <PlaySearchingLoopAnimationByIndex>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060419CB RID: 268747 RVA: 0x00FE9F0B File Offset: 0x00FE810B
+		// Token: 0x06036690 RID: 222864 RVA: 0x00F30FC3 File Offset: 0x00F2F1C3
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x060419CC RID: 268748 RVA: 0x00FE9F29 File Offset: 0x00FE8129
+		// Token: 0x06036691 RID: 222865 RVA: 0x00F30FE1 File Offset: 0x00F2F1E1
 		private void OnRefreshCommonActivityRedDot(int id)
 		{
 			if (this.ActivityData == null)
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			this.RefreshCompleteShow();
 		}
 
-		// Token: 0x060419CD RID: 268749 RVA: 0x00FE9F50 File Offset: 0x00FE8150
+		// Token: 0x06036692 RID: 222866 RVA: 0x00F31008 File Offset: 0x00F2F208
 		private void RefreshTaskItemView()
 		{
 			List<FeiXuePreheatTaskData> taskDataList = this.ActivityData.GetTaskDataList();
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			this.RefreshRightShow(taskDataList);
 		}
 
-		// Token: 0x060419CE RID: 268750 RVA: 0x00FE9F80 File Offset: 0x00FE8180
+		// Token: 0x06036693 RID: 222867 RVA: 0x00F31038 File Offset: 0x00F2F238
 		[NullableContext(1)]
 		private void RefreshLeftShow(List<FeiXuePreheatTaskData> dataList)
 		{
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			}
 		}
 
-		// Token: 0x060419CF RID: 268751 RVA: 0x00FEA088 File Offset: 0x00FE8288
+		// Token: 0x06036694 RID: 222868 RVA: 0x00F31140 File Offset: 0x00F2F340
 		[NullableContext(1)]
 		private void RefreshMiddleShow(List<FeiXuePreheatTaskData> dataList)
 		{
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			}
 		}
 
-		// Token: 0x060419D0 RID: 268752 RVA: 0x00FEA11C File Offset: 0x00FE831C
+		// Token: 0x06036695 RID: 222869 RVA: 0x00F311D4 File Offset: 0x00F2F3D4
 		[NullableContext(1)]
 		private void RefreshRightShow(List<FeiXuePreheatTaskData> dataList)
 		{
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			}
 		}
 
-		// Token: 0x060419D1 RID: 268753 RVA: 0x00FEA1D4 File Offset: 0x00FE83D4
+		// Token: 0x06036696 RID: 222870 RVA: 0x00F3128C File Offset: 0x00F2F48C
 		private void RefreshCompleteShow()
 		{
 			bool flag = this.ActivityData.IsAllTaskDone();
@@ -326,102 +326,102 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			base.GetItem(28).SetUIActive(!flag2);
 		}
 
-		// Token: 0x060419D2 RID: 268754 RVA: 0x00FEA2F9 File Offset: 0x00FE84F9
+		// Token: 0x06036697 RID: 222871 RVA: 0x00F313B1 File Offset: 0x00F2F5B1
 		private void OnClickRewardButton()
 		{
 			UiManager.Instance.OpenView(EUiViewName.FeiXuePreheatRewardView, this.ActivityData, null);
 		}
 
-		// Token: 0x060419D3 RID: 268755 RVA: 0x00FEA311 File Offset: 0x00FE8511
+		// Token: 0x06036698 RID: 222872 RVA: 0x00F313C9 File Offset: 0x00F2F5C9
 		private void OnCloseButtonClicked()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060419D4 RID: 268756 RVA: 0x00FEA31C File Offset: 0x00FE851C
+		// Token: 0x06036699 RID: 222873 RVA: 0x00F313D4 File Offset: 0x00F2F5D4
 		private void OnBtnHelpBtn()
 		{
 			int helpId = this.ActivityData.GetHelpId();
 			HelpController.Instance.OpenHelpById(helpId);
 		}
 
-		// Token: 0x060419D5 RID: 268757 RVA: 0x00FEA340 File Offset: 0x00FE8540
+		// Token: 0x0603669A RID: 222874 RVA: 0x00F313F8 File Offset: 0x00F2F5F8
 		private void OnClickCheckDetailButton()
 		{
 			this.UiViewSequence.HideSequenceName = "HideView_02";
-			InfoDisplayController.Instance.OpenInfoDisplay(71600010, null, null, false, null);
+			InfoDisplayController.Instance.OpenInfoDisplay(71600010, null, null, false, null, null);
 		}
 
-		// Token: 0x0402224B RID: 139851
+		// Token: 0x0401CB7C RID: 117628
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0402224C RID: 139852
+		// Token: 0x0401CB7D RID: 117629
 		private FeiXueGoBtnItem BtnGo;
 
-		// Token: 0x0402224D RID: 139853
+		// Token: 0x0401CB7E RID: 117630
 		private FeiXueCheckDetailItem FeiXueCheckDetailItem;
 
-		// Token: 0x0402224E RID: 139854
+		// Token: 0x0401CB7F RID: 117631
 		private FeiXueDayLeftPanel PanelDay1L;
 
-		// Token: 0x0402224F RID: 139855
+		// Token: 0x0401CB80 RID: 117632
 		private FeiXueDayLeftPanel PanelDay2L;
 
-		// Token: 0x04022250 RID: 139856
+		// Token: 0x0401CB81 RID: 117633
 		private FeiXueDayLeftPanel PanelDay3L;
 
-		// Token: 0x04022251 RID: 139857
+		// Token: 0x0401CB82 RID: 117634
 		private FeiXueDayLeftPanel PanelDay4L;
 
-		// Token: 0x04022252 RID: 139858
+		// Token: 0x0401CB83 RID: 117635
 		private FeiXueDayLeftPanel PanelDay5L;
 
-		// Token: 0x04022253 RID: 139859
+		// Token: 0x0401CB84 RID: 117636
 		private FeiXueDayLeftPanel PanelDay6L;
 
-		// Token: 0x04022254 RID: 139860
+		// Token: 0x0401CB85 RID: 117637
 		private FeiXueDayLeftPanel PanelDay7L;
 
-		// Token: 0x04022255 RID: 139861
+		// Token: 0x0401CB86 RID: 117638
 		private FeiXueDayRightPanel PanelDay1R;
 
-		// Token: 0x04022256 RID: 139862
+		// Token: 0x0401CB87 RID: 117639
 		private FeiXueDayRightPanel PanelDay2R;
 
-		// Token: 0x04022257 RID: 139863
+		// Token: 0x0401CB88 RID: 117640
 		private FeiXueDayRightPanel PanelDay3R;
 
-		// Token: 0x04022258 RID: 139864
+		// Token: 0x0401CB89 RID: 117641
 		private FeiXueDayRightPanel PanelDay4R;
 
-		// Token: 0x04022259 RID: 139865
+		// Token: 0x0401CB8A RID: 117642
 		private FeiXueDayRightPanel PanelDay5R;
 
-		// Token: 0x0402225A RID: 139866
+		// Token: 0x0401CB8B RID: 117643
 		private FeiXueDayRightPanel PanelDay6R;
 
-		// Token: 0x0402225B RID: 139867
+		// Token: 0x0401CB8C RID: 117644
 		private FeiXueDayRightPanel PanelDay7R;
 
-		// Token: 0x0402225C RID: 139868
+		// Token: 0x0401CB8D RID: 117645
 		[Nullable(1)]
 		private List<FeiXueDayLeftPanel> PanelDayLeftList = new List<FeiXueDayLeftPanel>();
 
-		// Token: 0x0402225D RID: 139869
+		// Token: 0x0401CB8E RID: 117646
 		[Nullable(1)]
 		private List<UUISprite> PanelDayMiddleList = new List<UUISprite>();
 
-		// Token: 0x0402225E RID: 139870
+		// Token: 0x0401CB8F RID: 117647
 		[Nullable(1)]
 		private List<FeiXueDayRightPanel> PanelDayRightList = new List<FeiXueDayRightPanel>();
 
-		// Token: 0x0402225F RID: 139871
+		// Token: 0x0401CB90 RID: 117648
 		private ActivityFeiXuePreheatData ActivityData;
 
-		// Token: 0x04022260 RID: 139872
+		// Token: 0x0401CB91 RID: 117649
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04022261 RID: 139873
+		// Token: 0x0401CB92 RID: 117650
 		[Nullable(1)]
 		private readonly List<string> SequenceTypeMapping = new List<string>
 		{

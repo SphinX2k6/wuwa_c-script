@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020010B5 RID: 4277
+// Token: 0x02000569 RID: 1385
 public class TaskStateToRewardStateResolver : IStaticVariableResetter
 {
-	// Token: 0x06006F4B RID: 28491 RVA: 0x0016B6CB File Offset: 0x001698CB
+	// Token: 0x060042E1 RID: 17121 RVA: 0x00174043 File Offset: 0x00172243
 	static TaskStateToRewardStateResolver()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TaskStateToRewardStateResolver.CreateStaticDefaultValue), new Action(TaskStateToRewardStateResolver.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06006F4C RID: 28492 RVA: 0x0016B6EA File Offset: 0x001698EA
+	// Token: 0x060042E2 RID: 17122 RVA: 0x00174062 File Offset: 0x00172262
 	public static void CreateStaticDefaultValue()
 	{
 		TaskStateToRewardStateResolver.Value = new Dictionary<EActivityTaskState, EActivityRewardState>
@@ -31,13 +31,13 @@ public class TaskStateToRewardStateResolver : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06006F4D RID: 28493 RVA: 0x0016B70E File Offset: 0x0016990E
+	// Token: 0x060042E3 RID: 17123 RVA: 0x00174086 File Offset: 0x00172286
 	public static void ResetStaticDefaultValue()
 	{
 		TaskStateToRewardStateResolver.Value = null;
 	}
 
-	// Token: 0x040033C7 RID: 13255
+	// Token: 0x04003460 RID: 13408
 	[Nullable(1)]
 	public static Dictionary<EActivityTaskState, EActivityRewardState> Value;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001274 RID: 4724
+	// Token: 0x020013B4 RID: 5044
 	public static class ERangeLimitingPriorityExtensions
 	{
-		// Token: 0x06006AB1 RID: 27313 RVA: 0x000FFE78 File Offset: 0x000FE078
+		// Token: 0x06007104 RID: 28932 RVA: 0x0010DAA4 File Offset: 0x0010BCA4
 		public static string ToEnumString(this ERangeLimitingPriority value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006AB2 RID: 27314 RVA: 0x000FFEB0 File Offset: 0x000FE0B0
+		// Token: 0x06007105 RID: 28933 RVA: 0x0010DADC File Offset: 0x0010BCDC
 		public static ERangeLimitingPriority FromString(string name)
 		{
 			ERangeLimitingPriority result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006AB3 RID: 27315 RVA: 0x000FFED9 File Offset: 0x000FE0D9
+		// Token: 0x06007106 RID: 28934 RVA: 0x0010DB05 File Offset: 0x0010BD05
 		public static bool TryFromString(string name, out ERangeLimitingPriority value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006AB4 RID: 27316 RVA: 0x000FFF12 File Offset: 0x000FE112
+		// Token: 0x06007107 RID: 28935 RVA: 0x0010DB3E File Offset: 0x0010BD3E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006AB5 RID: 27317 RVA: 0x000FFF2A File Offset: 0x000FE12A
+		// Token: 0x06007108 RID: 28936 RVA: 0x0010DB56 File Offset: 0x0010BD56
 		public static ERangeLimitingPriority[] GetValues()
 		{
 			return new ERangeLimitingPriority[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006AB6 RID: 27318 RVA: 0x000FFF36 File Offset: 0x000FE136
+		// Token: 0x06007109 RID: 28937 RVA: 0x0010DB62 File Offset: 0x0010BD62
 		public static string[] GetNames()
 		{
 			return new string[]

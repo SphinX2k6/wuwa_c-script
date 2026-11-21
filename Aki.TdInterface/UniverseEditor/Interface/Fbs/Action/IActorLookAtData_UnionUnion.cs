@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060D8 RID: 24792
+	// Token: 0x0200673A RID: 26426
 	public class IActorLookAtData_UnionUnion
 	{
-		// Token: 0x1700B6B0 RID: 46768
-		// (get) Token: 0x0602A56E RID: 173422 RVA: 0x005D5EE1 File Offset: 0x005D40E1
-		// (set) Token: 0x0602A56F RID: 173423 RVA: 0x005D5EE9 File Offset: 0x005D40E9
+		// Token: 0x1700C01B RID: 49179
+		// (get) Token: 0x0602CC4F RID: 183375 RVA: 0x0061FE89 File Offset: 0x0061E089
+		// (set) Token: 0x0602CC50 RID: 183376 RVA: 0x0061FE91 File Offset: 0x0061E091
 		public IActorLookAtData_Union Type { get; set; }
 
-		// Token: 0x1700B6B1 RID: 46769
-		// (get) Token: 0x0602A570 RID: 173424 RVA: 0x005D5EF2 File Offset: 0x005D40F2
-		// (set) Token: 0x0602A571 RID: 173425 RVA: 0x005D5EFA File Offset: 0x005D40FA
+		// Token: 0x1700C01C RID: 49180
+		// (get) Token: 0x0602CC51 RID: 183377 RVA: 0x0061FE9A File Offset: 0x0061E09A
+		// (set) Token: 0x0602CC52 RID: 183378 RVA: 0x0061FEA2 File Offset: 0x0061E0A2
 		public object Value { get; set; }
 
-		// Token: 0x0602A572 RID: 173426 RVA: 0x005D5F03 File Offset: 0x005D4103
+		// Token: 0x0602CC53 RID: 183379 RVA: 0x0061FEAB File Offset: 0x0061E0AB
 		public IActorLookAtData_UnionUnion()
 		{
 			this.Type = IActorLookAtData_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602A573 RID: 173427 RVA: 0x005D5F19 File Offset: 0x005D4119
+		// Token: 0x0602CC54 RID: 183380 RVA: 0x0061FEC1 File Offset: 0x0061E0C1
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602A574 RID: 173428 RVA: 0x005D5F2B File Offset: 0x005D412B
+		// Token: 0x0602CC55 RID: 183381 RVA: 0x0061FED3 File Offset: 0x0061E0D3
 		public IActorLookAtDataT AsIActorLookAtData()
 		{
 			return this.As<IActorLookAtDataT>();
 		}
 
-		// Token: 0x0602A575 RID: 173429 RVA: 0x005D5F33 File Offset: 0x005D4133
+		// Token: 0x0602CC56 RID: 183382 RVA: 0x0061FEDB File Offset: 0x0061E0DB
 		public static IActorLookAtData_UnionUnion FromIActorLookAtData(IActorLookAtDataT _iactorlookatdata)
 		{
 			return new IActorLookAtData_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A576 RID: 173430 RVA: 0x005D5F48 File Offset: 0x005D4148
+		// Token: 0x0602CC57 RID: 183383 RVA: 0x0061FEF0 File Offset: 0x0061E0F0
 		public IActorLookAtLockableT AsIActorLookAtLockable()
 		{
 			return this.As<IActorLookAtLockableT>();
 		}
 
-		// Token: 0x0602A577 RID: 173431 RVA: 0x005D5F50 File Offset: 0x005D4150
+		// Token: 0x0602CC58 RID: 183384 RVA: 0x0061FEF8 File Offset: 0x0061E0F8
 		public static IActorLookAtData_UnionUnion FromIActorLookAtLockable(IActorLookAtLockableT _iactorlookatlockable)
 		{
 			return new IActorLookAtData_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A578 RID: 173432 RVA: 0x005D5F65 File Offset: 0x005D4165
+		// Token: 0x0602CC59 RID: 183385 RVA: 0x0061FF0D File Offset: 0x0061E10D
 		public IActorLookAtTalkerDataT AsIActorLookAtTalkerData()
 		{
 			return this.As<IActorLookAtTalkerDataT>();
 		}
 
-		// Token: 0x0602A579 RID: 173433 RVA: 0x005D5F6D File Offset: 0x005D416D
+		// Token: 0x0602CC5A RID: 183386 RVA: 0x0061FF15 File Offset: 0x0061E115
 		public static IActorLookAtData_UnionUnion FromIActorLookAtTalkerData(IActorLookAtTalkerDataT _iactorlookattalkerdata)
 		{
 			return new IActorLookAtData_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A57A RID: 173434 RVA: 0x005D5F82 File Offset: 0x005D4182
+		// Token: 0x0602CC5B RID: 183387 RVA: 0x0061FF2A File Offset: 0x0061E12A
 		public IActorLookAtEmptyDataT AsIActorLookAtEmptyData()
 		{
 			return this.As<IActorLookAtEmptyDataT>();
 		}
 
-		// Token: 0x0602A57B RID: 173435 RVA: 0x005D5F8A File Offset: 0x005D418A
+		// Token: 0x0602CC5C RID: 183388 RVA: 0x0061FF32 File Offset: 0x0061E132
 		public static IActorLookAtData_UnionUnion FromIActorLookAtEmptyData(IActorLookAtEmptyDataT _iactorlookatemptydata)
 		{
 			return new IActorLookAtData_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A57C RID: 173436 RVA: 0x005D5F9F File Offset: 0x005D419F
+		// Token: 0x0602CC5D RID: 183389 RVA: 0x0061FF47 File Offset: 0x0061E147
 		public IActorLookAtEntityDataT AsIActorLookAtEntityData()
 		{
 			return this.As<IActorLookAtEntityDataT>();
 		}
 
-		// Token: 0x0602A57D RID: 173437 RVA: 0x005D5FA7 File Offset: 0x005D41A7
+		// Token: 0x0602CC5E RID: 183390 RVA: 0x0061FF4F File Offset: 0x0061E14F
 		public static IActorLookAtData_UnionUnion FromIActorLookAtEntityData(IActorLookAtEntityDataT _iactorlookatentitydata)
 		{
 			return new IActorLookAtData_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A57E RID: 173438 RVA: 0x005D5FBC File Offset: 0x005D41BC
+		// Token: 0x0602CC5F RID: 183391 RVA: 0x0061FF64 File Offset: 0x0061E164
 		public IActorLookAtPositionDataT AsIActorLookAtPositionData()
 		{
 			return this.As<IActorLookAtPositionDataT>();
 		}
 
-		// Token: 0x0602A57F RID: 173439 RVA: 0x005D5FC4 File Offset: 0x005D41C4
+		// Token: 0x0602CC60 RID: 183392 RVA: 0x0061FF6C File Offset: 0x0061E16C
 		public static IActorLookAtData_UnionUnion FromIActorLookAtPositionData(IActorLookAtPositionDataT _iactorlookatpositiondata)
 		{
 			return new IActorLookAtData_UnionUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A580 RID: 173440 RVA: 0x005D5FD9 File Offset: 0x005D41D9
+		// Token: 0x0602CC61 RID: 183393 RVA: 0x0061FF81 File Offset: 0x0061E181
 		public IActorLookAtPlayerDataT AsIActorLookAtPlayerData()
 		{
 			return this.As<IActorLookAtPlayerDataT>();
 		}
 
-		// Token: 0x0602A581 RID: 173441 RVA: 0x005D5FE1 File Offset: 0x005D41E1
+		// Token: 0x0602CC62 RID: 183394 RVA: 0x0061FF89 File Offset: 0x0061E189
 		public static IActorLookAtData_UnionUnion FromIActorLookAtPlayerData(IActorLookAtPlayerDataT _iactorlookatplayerdata)
 		{
 			return new IActorLookAtData_UnionUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A582 RID: 173442 RVA: 0x005D5FF6 File Offset: 0x005D41F6
+		// Token: 0x0602CC63 RID: 183395 RVA: 0x0061FF9E File Offset: 0x0061E19E
 		public IActorLookAtOtherActorT AsIActorLookAtOtherActor()
 		{
 			return this.As<IActorLookAtOtherActorT>();
 		}
 
-		// Token: 0x0602A583 RID: 173443 RVA: 0x005D5FFE File Offset: 0x005D41FE
+		// Token: 0x0602CC64 RID: 183396 RVA: 0x0061FFA6 File Offset: 0x0061E1A6
 		public static IActorLookAtData_UnionUnion FromIActorLookAtOtherActor(IActorLookAtOtherActorT _iactorlookatotheractor)
 		{
 			return new IActorLookAtData_UnionUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A584 RID: 173444 RVA: 0x005D6013 File Offset: 0x005D4213
+		// Token: 0x0602CC65 RID: 183397 RVA: 0x0061FFBB File Offset: 0x0061E1BB
 		public IActorLookAtUnLockT AsIActorLookAtUnLock()
 		{
 			return this.As<IActorLookAtUnLockT>();
 		}
 
-		// Token: 0x0602A585 RID: 173445 RVA: 0x005D601B File Offset: 0x005D421B
+		// Token: 0x0602CC66 RID: 183398 RVA: 0x0061FFC3 File Offset: 0x0061E1C3
 		public static IActorLookAtData_UnionUnion FromIActorLookAtUnLock(IActorLookAtUnLockT _iactorlookatunlock)
 		{
 			return new IActorLookAtData_UnionUnion
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A586 RID: 173446 RVA: 0x005D6034 File Offset: 0x005D4234
+		// Token: 0x0602CC67 RID: 183399 RVA: 0x0061FFDC File Offset: 0x0061E1DC
 		public static int Pack(FlatBufferBuilder builder, IActorLookAtData_UnionUnion _o)
 		{
 			switch (_o.Type)

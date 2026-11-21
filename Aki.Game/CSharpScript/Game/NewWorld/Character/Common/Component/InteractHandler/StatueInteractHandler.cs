@@ -5,16 +5,16 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 {
-	// Token: 0x02007117 RID: 28951
+	// Token: 0x02006345 RID: 25413
 	public class StatueInteractHandler : ManipulateInteractHandlerBase
 	{
-		// Token: 0x06046ADC RID: 289500 RVA: 0x011CB29D File Offset: 0x011C949D
+		// Token: 0x0603D921 RID: 252193 RVA: 0x011D40A1 File Offset: 0x011D22A1
 		[NullableContext(1)]
 		public StatueInteractHandler(IManipulateInteractContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06046ADD RID: 289501 RVA: 0x011CB2A8 File Offset: 0x011C94A8
+		// Token: 0x0603D922 RID: 252194 RVA: 0x011D40AC File Offset: 0x011D22AC
 		public override bool Start()
 		{
 			this.Context.SelectedTargetInternal = (this.Context.ChooseTargetOnStartSkill ?? this.Context.BestTargetInternal);
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			return true;
 		}
 
-		// Token: 0x06046ADE RID: 289502 RVA: 0x011CB314 File Offset: 0x011C9514
+		// Token: 0x0603D923 RID: 252195 RVA: 0x011D4118 File Offset: 0x011D2318
 		public override void End()
 		{
 			SceneItemExploreInteractComponent curTarget = this.Context.SelectedTargetInternal;

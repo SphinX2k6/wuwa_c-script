@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200225A RID: 8794
+	// Token: 0x0200074D RID: 1869
 	public sealed class FLTweenVector4SetterDynamic : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060216B9 RID: 136889 RVA: 0x0031428A File Offset: 0x0031248A
+		// Token: 0x0600A2F0 RID: 41712 RVA: 0x000F0CF2 File Offset: 0x000EEEF2
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLTweenVector4SetterDynamic.StaticFunctionPtr();
 		}
 
-		// Token: 0x060216BA RID: 136890 RVA: 0x00314296 File Offset: 0x00312496
+		// Token: 0x0600A2F1 RID: 41713 RVA: 0x000F0CFE File Offset: 0x000EEEFE
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLTweenVector4SetterDynamic._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLTweenVector4SetterDynamic._FunctionPtr;
 		}
 
-		// Token: 0x060216BB RID: 136891 RVA: 0x003142B9 File Offset: 0x003124B9
+		// Token: 0x0600A2F2 RID: 41714 RVA: 0x000F0D21 File Offset: 0x000EEF21
 		public FLTweenVector4SetterDynamic()
 		{
 		}
 
-		// Token: 0x060216BC RID: 136892 RVA: 0x003142C1 File Offset: 0x003124C1
+		// Token: 0x0600A2F3 RID: 41715 RVA: 0x000F0D29 File Offset: 0x000EEF29
 		[NullableContext(2)]
 		public FLTweenVector4SetterDynamic(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060216BD RID: 136893 RVA: 0x003142CB File Offset: 0x003124CB
+		// Token: 0x0600A2F4 RID: 41716 RVA: 0x000F0D33 File Offset: 0x000EEF33
 		public FLTweenVector4SetterDynamic(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060216BE RID: 136894 RVA: 0x003142D6 File Offset: 0x003124D6
+		// Token: 0x0600A2F5 RID: 41717 RVA: 0x000F0D3E File Offset: 0x000EEF3E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FVector4>) ?? ((Action<FVector4>)Delegate.CreateDelegate(typeof(Action<FVector4>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060216BF RID: 136895 RVA: 0x00314308 File Offset: 0x00312508
+		// Token: 0x0600A2F6 RID: 41718 RVA: 0x000F0D70 File Offset: 0x000EEF70
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FVector4> Callback)
 		{
 			if (FLTweenVector4SetterDynamic.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FLTweenVector4SetterDynamic.RegisterId);
 		}
 
-		// Token: 0x060216C0 RID: 136896 RVA: 0x00314344 File Offset: 0x00312544
+		// Token: 0x0600A2F7 RID: 41719 RVA: 0x000F0DAC File Offset: 0x000EEFAC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(in FVector4 value)
 		{
 			FLTweenVector4SetterDynamic.__FLTweenVector4SetterDynamic_DelegateParams* ptr = stackalloc FLTweenVector4SetterDynamic.__FLTweenVector4SetterDynamic_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FLTweenVector4SetterDynamic.__FLTweenVector4SetterDynamic_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x060216C1 RID: 136897 RVA: 0x00314388 File Offset: 0x00312588
+		// Token: 0x0600A2F8 RID: 41720 RVA: 0x000F0DF0 File Offset: 0x000EEFF0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FVector4> action = target as Action<FVector4>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FLTweenVector4SetterDynamic.__FLTweenVector4SetterDynamic_DelegateParams*)__Parameters)->value);
 		}
 
-		// Token: 0x04011CF6 RID: 72950
+		// Token: 0x040045AC RID: 17836
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04011CF7 RID: 72951
+		// Token: 0x040045AD RID: 17837
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LTween.LTweenVector4SetterDynamic__DelegateSignature";
 
-		// Token: 0x04011CF8 RID: 72952
+		// Token: 0x040045AE RID: 17838
 		private static int RegisterId;
 
-		// Token: 0x0200351D RID: 13597
+		// Token: 0x02000F3A RID: 3898
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FLTweenVector4SetterDynamic_DelegateParams
+		private ref struct __FLTweenVector4SetterDynamic_DelegateParams
 		{
-			// Token: 0x0401754F RID: 95567
+			// Token: 0x0400630E RID: 25358
 			[FieldOffset(0)]
 			public FVector4 value;
 		}
 
-		// Token: 0x0200351E RID: 13598
+		// Token: 0x02000F3B RID: 3899
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017550 RID: 95568
+			// Token: 0x0400630F RID: 25359
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CF0 RID: 23792
+	// Token: 0x02004CD2 RID: 19666
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BattleSkillSecondCdItem : UiPanelBase
 	{
-		// Token: 0x0603C3F7 RID: 246775 RVA: 0x00E6C24E File Offset: 0x00E6A44E
+		// Token: 0x0603134D RID: 201549 RVA: 0x00DBC802 File Offset: 0x00DBAA02
 		public void SetIndex(int index)
 		{
 			this.Index = index;
 		}
 
-		// Token: 0x0603C3F8 RID: 246776 RVA: 0x00E6C258 File Offset: 0x00E6A458
+		// Token: 0x0603134E RID: 201550 RVA: 0x00DBC80C File Offset: 0x00DBAA0C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C3F9 RID: 246777 RVA: 0x00E6C2A0 File Offset: 0x00E6A4A0
+		// Token: 0x0603134F RID: 201551 RVA: 0x00DBC854 File Offset: 0x00DBAA54
 		protected override void OnStart()
 		{
 			this.CoolDownBarUiSprite = base.GetSprite(0);
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rootItem.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x0603C3FA RID: 246778 RVA: 0x00E6C2E8 File Offset: 0x00E6A4E8
+		// Token: 0x06031350 RID: 201552 RVA: 0x00DBC89C File Offset: 0x00DBAA9C
 		public void RefreshSkillCoolDown(SkillButtonData skillButtonData)
 		{
 			this.SkillButtonData = skillButtonData;
@@ -69,13 +69,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TryRefreshCommonSkillCoolDown();
 		}
 
-		// Token: 0x0603C3FB RID: 246779 RVA: 0x00E6C351 File Offset: 0x00E6A551
+		// Token: 0x06031351 RID: 201553 RVA: 0x00DBC905 File Offset: 0x00DBAB05
 		public void Tick(float delta)
 		{
 			this.TickSkillCoolDown(delta);
 		}
 
-		// Token: 0x0603C3FC RID: 246780 RVA: 0x00E6C35A File Offset: 0x00E6A55A
+		// Token: 0x06031352 RID: 201554 RVA: 0x00DBC90E File Offset: 0x00DBAB0E
 		private void PlayCommonCd(float remainingCoolDown, float totalCoolDown)
 		{
 			this.CurrentCoolDownTime = 0f;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C3FD RID: 246781 RVA: 0x00E6C393 File Offset: 0x00E6A593
+		// Token: 0x06031353 RID: 201555 RVA: 0x00DBC947 File Offset: 0x00DBAB47
 		private void FinishSkillCoolDown()
 		{
 			if (base.IsShowOrShowing)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurrentCoolDownTime = 0f;
 		}
 
-		// Token: 0x0603C3FE RID: 246782 RVA: 0x00E6C3B0 File Offset: 0x00E6A5B0
+		// Token: 0x06031354 RID: 201556 RVA: 0x00DBC964 File Offset: 0x00DBAB64
 		private void TickSkillCoolDown(float delta)
 		{
 			if (this.CurrentCoolDownTime <= 0f || this.TotalCoolDownTime <= 0f || this.CoolDownBarUiSprite == null)
@@ -126,14 +126,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CoolDownBarUiSprite.SetFillAmount(num);
 		}
 
-		// Token: 0x0603C3FF RID: 246783 RVA: 0x00E6C47A File Offset: 0x00E6A67A
+		// Token: 0x06031355 RID: 201557 RVA: 0x00DBCA2E File Offset: 0x00DBAC2E
 		private bool IsSkillInItemUseBuffCd()
 		{
 			SkillButtonData skillButtonData = this.SkillButtonData;
 			return skillButtonData != null && skillButtonData.GetButtonType() == ESkillButtonType.幻象1 && this.SkillButtonData.IsSkillInItemUseBuffCd();
 		}
 
-		// Token: 0x0603C400 RID: 246784 RVA: 0x00E6C4A4 File Offset: 0x00E6A6A4
+		// Token: 0x06031356 RID: 201558 RVA: 0x00DBCA58 File Offset: 0x00DBAC58
 		private bool TryRefreshItemUseBuffCd()
 		{
 			ValueTuple<double, double> equippedItemUsingBuffCd = this.SkillButtonData.GetEquippedItemUsingBuffCd();
@@ -147,14 +147,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603C401 RID: 246785 RVA: 0x00E6C4E2 File Offset: 0x00E6A6E2
+		// Token: 0x06031357 RID: 201559 RVA: 0x00DBCA96 File Offset: 0x00DBAC96
 		private bool IsSkillInItemUseSkillCd()
 		{
 			SkillButtonData skillButtonData = this.SkillButtonData;
 			return skillButtonData != null && skillButtonData.GetButtonType() == ESkillButtonType.幻象1 && this.SkillButtonData.IsSkillInItemUseSkillCd();
 		}
 
-		// Token: 0x0603C402 RID: 246786 RVA: 0x00E6C50C File Offset: 0x00E6A70C
+		// Token: 0x06031358 RID: 201560 RVA: 0x00DBCAC0 File Offset: 0x00DBACC0
 		private bool TryRefreshItemUseSkillCd()
 		{
 			ValueTuple<double, double> equippedItemUsingSkillCd = this.SkillButtonData.GetEquippedItemUsingSkillCd();
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603C403 RID: 246787 RVA: 0x00E6C54C File Offset: 0x00E6A74C
+		// Token: 0x06031359 RID: 201561 RVA: 0x00DBCB00 File Offset: 0x00DBAD00
 		private bool TryRefreshMultiSkillCoolDown()
 		{
 			MultiSkillInfo multiSkillInfo = this.SkillButtonData.GetMultiSkillInfo();
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603C404 RID: 246788 RVA: 0x00E6C5B8 File Offset: 0x00E6A7B8
+		// Token: 0x0603135A RID: 201562 RVA: 0x00DBCB6C File Offset: 0x00DBAD6C
 		private void TryRefreshCommonSkillCoolDown()
 		{
 			GroupSkillCdInfo groupSkillCdInfo = this.SkillButtonData.GetGroupSkillCdInfo();
@@ -207,32 +207,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayCommonCd(curRemainingCd, curMaxCd);
 		}
 
-		// Token: 0x0401F655 RID: 128597
+		// Token: 0x0401A10E RID: 106766
 		private const float AMOUNT_START = 0.3f;
 
-		// Token: 0x0401F656 RID: 128598
+		// Token: 0x0401A10F RID: 106767
 		private const float AMOUNT_SCALE = 0.4f;
 
-		// Token: 0x0401F657 RID: 128599
+		// Token: 0x0401A110 RID: 106768
 		private int Index;
 
-		// Token: 0x0401F658 RID: 128600
+		// Token: 0x0401A111 RID: 106769
 		private SkillButtonData SkillButtonData;
 
-		// Token: 0x0401F659 RID: 128601
+		// Token: 0x0401A112 RID: 106770
 		private UUISprite CoolDownBarUiSprite;
 
-		// Token: 0x0401F65A RID: 128602
+		// Token: 0x0401A113 RID: 106771
 		private float CurrentCoolDownTime;
 
-		// Token: 0x0401F65B RID: 128603
+		// Token: 0x0401A114 RID: 106772
 		private float TotalCoolDownTime;
 
-		// Token: 0x0200BF4F RID: 48975
+		// Token: 0x0200A955 RID: 43349
 		[NullableContext(0)]
 		private enum EBattleSkillItem
 		{
-			// Token: 0x04039B32 RID: 236338
+			// Token: 0x040344F4 RID: 214260
 			CoolDownBarSprite
 		}
 	}

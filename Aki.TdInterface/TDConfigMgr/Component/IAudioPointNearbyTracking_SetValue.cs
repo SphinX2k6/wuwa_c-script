@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001DA RID: 474
+	// Token: 0x02000201 RID: 513
 	public class IAudioPointNearbyTracking_SetValue
 	{
-		// Token: 0x040008B3 RID: 2227
+		// Token: 0x0400093A RID: 2362
 		public ENearbyTrackingType Type;
 
-		// Token: 0x040008B4 RID: 2228
+		// Token: 0x0400093B RID: 2363
 		public int NearRadius;
 
-		// Token: 0x040008B5 RID: 2229
+		// Token: 0x0400093C RID: 2364
 		public int MiddleRadius;
 
-		// Token: 0x040008B6 RID: 2230
+		// Token: 0x0400093D RID: 2365
 		public int FarRadius;
 	}
 }

@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A2E RID: 18990
+	// Token: 0x020039D6 RID: 14806
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseMonsterTypeData
 	{
-		// Token: 0x060314E8 RID: 201960 RVA: 0x00B70061 File Offset: 0x00B6E261
+		// Token: 0x06026278 RID: 156280 RVA: 0x00AB3FB1 File Offset: 0x00AB21B1
 		public static TrapDefenseMonsterTypeData Create(TrapDefenseMonsterRisk config)
 		{
 			TrapDefenseMonsterTypeData trapDefenseMonsterTypeData = new TrapDefenseMonsterTypeData(config.Id);
@@ -19,18 +19,18 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseMonsterTypeData;
 		}
 
-		// Token: 0x060314E9 RID: 201961 RVA: 0x00B7007C File Offset: 0x00B6E27C
+		// Token: 0x06026279 RID: 156281 RVA: 0x00AB3FCC File Offset: 0x00AB21CC
 		private TrapDefenseMonsterTypeData(int id)
 		{
 			this.Id = id;
 		}
 
-		// Token: 0x060314EA RID: 201962 RVA: 0x00B70096 File Offset: 0x00B6E296
+		// Token: 0x0602627A RID: 156282 RVA: 0x00AB3FE6 File Offset: 0x00AB21E6
 		private void Init()
 		{
 		}
 
-		// Token: 0x060314EB RID: 201963 RVA: 0x00B70098 File Offset: 0x00B6E298
+		// Token: 0x0602627B RID: 156283 RVA: 0x00AB3FE8 File Offset: 0x00AB21E8
 		public List<TrapDefenseMonsterData> GetMonsterDataList(bool showInInstance = true)
 		{
 			if (this.MonsterDataList.Count <= 0)
@@ -73,13 +73,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.MonsterDataList;
 		}
 
-		// Token: 0x0401A5AB RID: 107947
+		// Token: 0x04014F00 RID: 85760
 		public int Id;
 
-		// Token: 0x0401A5AC RID: 107948
+		// Token: 0x04014F01 RID: 85761
 		public TrapDefenseMonsterRisk Config;
 
-		// Token: 0x0401A5AD RID: 107949
+		// Token: 0x04014F02 RID: 85762
 		private List<TrapDefenseMonsterData> MonsterDataList = new List<TrapDefenseMonsterData>();
 	}
 }

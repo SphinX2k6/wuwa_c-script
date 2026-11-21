@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x02006708 RID: 26376
+	// Token: 0x02005658 RID: 22104
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DropCatchGameplayRoleFxView : UiPanelBase
 	{
-		// Token: 0x06041E13 RID: 269843 RVA: 0x00FFA4E0 File Offset: 0x00FF86E0
+		// Token: 0x0603695F RID: 223583 RVA: 0x00F3B8D4 File Offset: 0x00F39AD4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,14 +23,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			};
 		}
 
-		// Token: 0x06041E14 RID: 269844 RVA: 0x00FFA550 File Offset: 0x00FF8750
+		// Token: 0x06036960 RID: 223584 RVA: 0x00F3B944 File Offset: 0x00F39B44
 		protected override void OnStart()
 		{
 			this.ResetView();
 			this.Delegate = DelegateUtils.ToManualReleaseDelegate<FLTweenFloatSetterDynamic>(new Action<float>(this.OnTweenUpdate));
 		}
 
-		// Token: 0x06041E15 RID: 269845 RVA: 0x00FFA56F File Offset: 0x00FF876F
+		// Token: 0x06036961 RID: 223585 RVA: 0x00F3B963 File Offset: 0x00F39B63
 		public void PlayShield()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(0);
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.PlayShieldTween(0f, 1f, this.TWEENTIME, LTweenEase.InOutSine, null);
 		}
 
-		// Token: 0x06041E16 RID: 269846 RVA: 0x00FFA59D File Offset: 0x00FF879D
+		// Token: 0x06036962 RID: 223586 RVA: 0x00F3B991 File Offset: 0x00F39B91
 		public void PlayAdd()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(1);
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			uiNiagara2.ActivateSystem(true);
 		}
 
-		// Token: 0x06041E17 RID: 269847 RVA: 0x00FFA5C4 File Offset: 0x00FF87C4
+		// Token: 0x06036963 RID: 223587 RVA: 0x00F3B9B8 File Offset: 0x00F39BB8
 		public void PlayShieldEnd()
 		{
 			this.PlayShieldTween(1f, 0f, this.TWEENTIME, LTweenEase.InOutSine, delegate
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			});
 		}
 
-		// Token: 0x06041E18 RID: 269848 RVA: 0x00FFA5EA File Offset: 0x00FF87EA
+		// Token: 0x06036964 RID: 223588 RVA: 0x00F3B9DE File Offset: 0x00F39BDE
 		public void PlaySpeedUp()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(3);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			uiNiagara2.ActivateSystem(true);
 		}
 
-		// Token: 0x06041E19 RID: 269849 RVA: 0x00FFA611 File Offset: 0x00FF8811
+		// Token: 0x06036965 RID: 223589 RVA: 0x00F3BA05 File Offset: 0x00F39C05
 		public void HideSpeedUp()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(3);
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			uiNiagara.SetUIActive(false);
 		}
 
-		// Token: 0x06041E1A RID: 269850 RVA: 0x00FFA625 File Offset: 0x00FF8825
+		// Token: 0x06036966 RID: 223590 RVA: 0x00F3BA19 File Offset: 0x00F39C19
 		private void OnTweenUpdate(float value)
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(0);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			uiNiagara.SetNiagaraVarFloat("Dissolve", value);
 		}
 
-		// Token: 0x06041E1B RID: 269851 RVA: 0x00FFA640 File Offset: 0x00FF8840
+		// Token: 0x06036967 RID: 223591 RVA: 0x00F3BA34 File Offset: 0x00F39C34
 		private void PlayShieldTween(float startValue, float endValue, float tweenTime, LTweenEase tweenEase, Action callback = null)
 		{
 			this.KillTweener();
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			});
 		}
 
-		// Token: 0x06041E1C RID: 269852 RVA: 0x00FFA69D File Offset: 0x00FF889D
+		// Token: 0x06036968 RID: 223592 RVA: 0x00F3BA91 File Offset: 0x00F39C91
 		private void KillTweener()
 		{
 			if (this.Tweener != null)
@@ -135,14 +135,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			}
 		}
 
-		// Token: 0x06041E1D RID: 269853 RVA: 0x00FFA6BA File Offset: 0x00FF88BA
+		// Token: 0x06036969 RID: 223593 RVA: 0x00F3BAAE File Offset: 0x00F39CAE
 		protected override void OnBeforeDestroy()
 		{
 			this.KillTweener();
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<float>(this.OnTweenUpdate));
 		}
 
-		// Token: 0x06041E1E RID: 269854 RVA: 0x00FFA6D4 File Offset: 0x00FF88D4
+		// Token: 0x0603696A RID: 223594 RVA: 0x00F3BAC8 File Offset: 0x00F39CC8
 		public void ResetView()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(0);
@@ -168,13 +168,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			uiNiagara4.SetUIActive(false);
 		}
 
-		// Token: 0x04022527 RID: 140583
+		// Token: 0x0401CD80 RID: 118144
 		private readonly float TWEENTIME = 0.4f;
 
-		// Token: 0x04022528 RID: 140584
+		// Token: 0x0401CD81 RID: 118145
 		private ULTweener Tweener;
 
-		// Token: 0x04022529 RID: 140585
+		// Token: 0x0401CD82 RID: 118146
 		private FLTweenFloatSetterDynamic Delegate;
 	}
 }

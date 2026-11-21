@@ -2,28 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007743 RID: 30531
+	// Token: 0x02007F6C RID: 32620
 	public enum TOpenSystemBoardWithReturn : byte
 	{
-		// Token: 0x04012887 RID: 75911
+		// Token: 0x0401391C RID: 80156
 		NONE,
-		// Token: 0x04012888 RID: 75912
+		// Token: 0x0401391D RID: 80157
 		IOpenConfirmBox2WithReturn,
-		// Token: 0x04012889 RID: 75913
+		// Token: 0x0401391E RID: 80158
 		IOpenConfirmBoxWithReturn,
-		// Token: 0x0401288A RID: 75914
+		// Token: 0x0401391F RID: 80159
 		IOpenFishingItemDeliveryWithReturn,
-		// Token: 0x0401288B RID: 75915
+		// Token: 0x04013920 RID: 80160
 		IOpenGiantDeliveryWithReturn,
-		// Token: 0x0401288C RID: 75916
+		// Token: 0x04013921 RID: 80161
 		IOpenGreatSwordChallengeResult,
-		// Token: 0x0401288D RID: 75917
+		// Token: 0x04013922 RID: 80162
 		IOpenInfrastructureItemDeliveryWithReturn,
-		// Token: 0x0401288E RID: 75918
+		// Token: 0x04013923 RID: 80163
+		IOpenMechaStuntTrackChallengeResultWithReturn,
+		// Token: 0x04013924 RID: 80164
 		IOpenMotorRaceChallengeResultWithReturn,
-		// Token: 0x0401288F RID: 75919
+		// Token: 0x04013925 RID: 80165
 		IOpenSoaringChallengeResultWithReturn,
-		// Token: 0x04012890 RID: 75920
+		// Token: 0x04013926 RID: 80166
 		IOpenVillageInfrDeliveryWithReturn
 	}
 }

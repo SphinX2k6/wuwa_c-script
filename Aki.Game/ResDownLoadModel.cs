@@ -5,13 +5,13 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Launcher.DiffPatch.Update;
 using CSharpScript.Launcher.Update;
 
-// Token: 0x0200275E RID: 10078
+// Token: 0x02001C49 RID: 7241
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ResDownLoadModel : ModelBase
 {
-	// Token: 0x06014AB9 RID: 84665 RVA: 0x0053A8E2 File Offset: 0x00538AE2
+	// Token: 0x06011F9C RID: 73628 RVA: 0x00549776 File Offset: 0x00547976
 	protected override bool OnInit()
 	{
 		VideoUpdateManager.Instance.GetVideoUpdater(EVideoResSizeType.LoginPrepare).SetDownLoadStateChangeCallBack(new Action<EVideoDownloadStatus>(this.OnDownLoadStateChange));
@@ -19,14 +19,14 @@ public class ResDownLoadModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06014ABA RID: 84666 RVA: 0x0053A91D File Offset: 0x00538B1D
+	// Token: 0x06011F9D RID: 73629 RVA: 0x005497B1 File Offset: 0x005479B1
 	protected override bool OnClear()
 	{
 		this.ResSizeType = null;
 		return true;
 	}
 
-	// Token: 0x06014ABB RID: 84667 RVA: 0x0053A92C File Offset: 0x00538B2C
+	// Token: 0x06011F9E RID: 73630 RVA: 0x005497C0 File Offset: 0x005479C0
 	public void OnDownLoadStateChange(EVideoDownloadStatus state)
 	{
 		if (state == EVideoDownloadStatus.Done)
@@ -54,7 +54,7 @@ public class ResDownLoadModel : ModelBase
 		EventSystem.Instance.Emit<EVideoDownloadStatus>(EEventName.ResDownLoadStateRefresh, state);
 	}
 
-	// Token: 0x06014ABC RID: 84668 RVA: 0x0053A9F7 File Offset: 0x00538BF7
+	// Token: 0x06011F9F RID: 73631 RVA: 0x0054988B File Offset: 0x00547A8B
 	public void OnDownLoadFailed(bool noFreeSize)
 	{
 		if (noFreeSize)
@@ -63,7 +63,7 @@ public class ResDownLoadModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014ABD RID: 84669 RVA: 0x0053AA10 File Offset: 0x00538C10
+	// Token: 0x06011FA0 RID: 73632 RVA: 0x005498A4 File Offset: 0x00547AA4
 	[NullableContext(0)]
 	public ValueTuple<float, EVideoDownloadStatus> DownLoadPercentage()
 	{
@@ -99,15 +99,15 @@ public class ResDownLoadModel : ModelBase
 		return new ValueTuple<float, EVideoDownloadStatus>(videoResSavedSize / (float)videoResSize, videoUpdater.GetDownLoadState());
 	}
 
-	// Token: 0x06014ABE RID: 84670 RVA: 0x0053AB1C File Offset: 0x00538D1C
+	// Token: 0x06011FA1 RID: 73633 RVA: 0x005499B0 File Offset: 0x00547BB0
 	public bool NeedShowBattleViewButton()
 	{
 		QuestResourceModel.Instance.CalcPrepareResource();
 		return (PlayerInfoModel.Instance.GetPlayerGender() == EPlayerGender.Male && VideoResUpdate.Instance.GetVideoResSize(EVideoResSizeType.MalePrepare) != VideoResUpdate.Instance.GetVideoResSavedSize(EVideoResSizeType.MalePrepare)) || (PlayerInfoModel.Instance.GetPlayerGender() == EPlayerGender.Female && VideoResUpdate.Instance.GetVideoResSize(EVideoResSizeType.FemalePrepare) != VideoResUpdate.Instance.GetVideoResSavedSize(EVideoResSizeType.FemalePrepare)) || VideoResUpdate.Instance.GetIsResPakDownloading(EVideoResSizeType.MalePrepare) || VideoResUpdate.Instance.GetIsResPakDownloading(EVideoResSizeType.FemalePrepare) || VideoUpdateManager.Instance.GetVideoUpdater(EVideoResSizeType.FemalePrepare).GetDownLoadState() == EVideoDownloadStatus.Downloading || VideoUpdateManager.Instance.GetVideoUpdater(EVideoResSizeType.MalePrepare).GetDownLoadState() == EVideoDownloadStatus.Downloading;
 	}
 
-	// Token: 0x17001B12 RID: 6930
-	// (get) Token: 0x06014ABF RID: 84671 RVA: 0x0053ABC9 File Offset: 0x00538DC9
+	// Token: 0x17001B4B RID: 6987
+	// (get) Token: 0x06011FA2 RID: 73634 RVA: 0x00549A5D File Offset: 0x00547C5D
 	public static ResDownLoadModel Instance
 	{
 		get
@@ -116,7 +116,7 @@ public class ResDownLoadModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014AC0 RID: 84672 RVA: 0x0053ABD0 File Offset: 0x00538DD0
+	// Token: 0x06011FA3 RID: 73635 RVA: 0x00549A64 File Offset: 0x00547C64
 	public static ResDownLoadModel GetOrCreateInstance()
 	{
 		if (ResDownLoadModel._Instance == null)
@@ -126,7 +126,7 @@ public class ResDownLoadModel : ModelBase
 		return ResDownLoadModel._Instance;
 	}
 
-	// Token: 0x06014AC1 RID: 84673 RVA: 0x0053ABE4 File Offset: 0x00538DE4
+	// Token: 0x06011FA4 RID: 73636 RVA: 0x00549A78 File Offset: 0x00547C78
 	public static bool CreateInstance()
 	{
 		if (ResDownLoadModel._Instance != null)
@@ -137,30 +137,30 @@ public class ResDownLoadModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06014AC2 RID: 84674 RVA: 0x0053ABFA File Offset: 0x00538DFA
+	// Token: 0x06011FA5 RID: 73637 RVA: 0x00549A8E File Offset: 0x00547C8E
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06014AC3 RID: 84675 RVA: 0x0053ABFC File Offset: 0x00538DFC
+	// Token: 0x06011FA6 RID: 73638 RVA: 0x00549A90 File Offset: 0x00547C90
 	public static void ResetStaticDefaultValue()
 	{
 		ResDownLoadModel._Instance = null;
 	}
 
-	// Token: 0x06014AC4 RID: 84676 RVA: 0x0053AC04 File Offset: 0x00538E04
+	// Token: 0x06011FA7 RID: 73639 RVA: 0x00549A98 File Offset: 0x00547C98
 	static ResDownLoadModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ResDownLoadModel.CreateStaticDefaultValue), new Action(ResDownLoadModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009B59 RID: 39769
+	// Token: 0x04009CB2 RID: 40114
 	public int CurrentDownLoadVideo = -1;
 
-	// Token: 0x04009B5A RID: 39770
+	// Token: 0x04009CB3 RID: 40115
 	private EVideoResSizeType? ResSizeType;
 
-	// Token: 0x04009B5B RID: 39771
+	// Token: 0x04009CB4 RID: 40116
 	[Nullable(2)]
 	private static ResDownLoadModel _Instance;
 }

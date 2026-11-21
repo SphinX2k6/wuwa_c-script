@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A43 RID: 14915
+	// Token: 0x02003E1E RID: 15902
 	public class IBvbCardFilterGroupT
 	{
-		// Token: 0x17006637 RID: 26167
-		// (get) Token: 0x0601431A RID: 82714 RVA: 0x002F3BDF File Offset: 0x002F1DDF
-		// (set) Token: 0x0601431B RID: 82715 RVA: 0x002F3BE7 File Offset: 0x002F1DE7
+		// Token: 0x17006B67 RID: 27495
+		// (get) Token: 0x06015636 RID: 87606 RVA: 0x00316DCB File Offset: 0x00314FCB
+		// (set) Token: 0x06015637 RID: 87607 RVA: 0x00316DD3 File Offset: 0x00314FD3
 		public EVarConditionType GroupType { get; set; }
 
-		// Token: 0x17006638 RID: 26168
-		// (get) Token: 0x0601431C RID: 82716 RVA: 0x002F3BF0 File Offset: 0x002F1DF0
-		// (set) Token: 0x0601431D RID: 82717 RVA: 0x002F3BF8 File Offset: 0x002F1DF8
+		// Token: 0x17006B68 RID: 27496
+		// (get) Token: 0x06015638 RID: 87608 RVA: 0x00316DDC File Offset: 0x00314FDC
+		// (set) Token: 0x06015639 RID: 87609 RVA: 0x00316DE4 File Offset: 0x00314FE4
 		public List<IBvbCardFilterBase_UnionUnion> Conditions { get; set; }
 
-		// Token: 0x0601431E RID: 82718 RVA: 0x002F3C01 File Offset: 0x002F1E01
+		// Token: 0x0601563A RID: 87610 RVA: 0x00316DED File Offset: 0x00314FED
 		public IBvbCardFilterGroupT()
 		{
 			this.GroupType = EVarConditionType.All;

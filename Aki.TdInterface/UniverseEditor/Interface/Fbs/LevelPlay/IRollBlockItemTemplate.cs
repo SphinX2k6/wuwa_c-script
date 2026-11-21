@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200459F RID: 17823
+	// Token: 0x02004A07 RID: 18951
 	public struct IRollBlockItemTemplate : IFlatbufferObject
 	{
-		// Token: 0x17007EA1 RID: 32417
-		// (get) Token: 0x0601AEDD RID: 110301 RVA: 0x003D75BE File Offset: 0x003D57BE
+		// Token: 0x170084E2 RID: 34018
+		// (get) Token: 0x0601C6B2 RID: 116402 RVA: 0x0040385A File Offset: 0x00401A5A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AEDE RID: 110302 RVA: 0x003D75CB File Offset: 0x003D57CB
+		// Token: 0x0601C6B3 RID: 116403 RVA: 0x00403867 File Offset: 0x00401A67
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601AEDF RID: 110303 RVA: 0x003D75D4 File Offset: 0x003D57D4
+		// Token: 0x0601C6B4 RID: 116404 RVA: 0x00403870 File Offset: 0x00401A70
 		public static IRollBlockItemTemplate GetRootAsIRollBlockItemTemplate(ByteBuffer _bb)
 		{
 			return IRollBlockItemTemplate.GetRootAsIRollBlockItemTemplate(_bb, default(IRollBlockItemTemplate));
 		}
 
-		// Token: 0x0601AEE0 RID: 110304 RVA: 0x003D75F0 File Offset: 0x003D57F0
+		// Token: 0x0601C6B5 RID: 116405 RVA: 0x0040388C File Offset: 0x00401A8C
 		public static IRollBlockItemTemplate GetRootAsIRollBlockItemTemplate(ByteBuffer _bb, IRollBlockItemTemplate obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601AEE1 RID: 110305 RVA: 0x003D760D File Offset: 0x003D580D
+		// Token: 0x0601C6B6 RID: 116406 RVA: 0x004038A9 File Offset: 0x00401AA9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601AEE2 RID: 110306 RVA: 0x003D761C File Offset: 0x003D581C
+		// Token: 0x0601C6B7 RID: 116407 RVA: 0x004038B8 File Offset: 0x00401AB8
 		public IRollBlockItemTemplate __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007EA2 RID: 32418
-		// (get) Token: 0x0601AEE3 RID: 110307 RVA: 0x003D762C File Offset: 0x003D582C
+		// Token: 0x170084E3 RID: 34019
+		// (get) Token: 0x0601C6B8 RID: 116408 RVA: 0x004038C8 File Offset: 0x00401AC8
 		public ERollBlockItemType ItemType
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007EA3 RID: 32419
-		// (get) Token: 0x0601AEE4 RID: 110308 RVA: 0x003D7668 File Offset: 0x003D5868
+		// Token: 0x170084E4 RID: 34020
+		// (get) Token: 0x0601C6B9 RID: 116409 RVA: 0x00403904 File Offset: 0x00401B04
 		public string TemplateId
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AEE5 RID: 110309 RVA: 0x003D769F File Offset: 0x003D589F
+		// Token: 0x0601C6BA RID: 116410 RVA: 0x0040393B File Offset: 0x00401B3B
 		public Span<byte> GetTemplateIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601AEE6 RID: 110310 RVA: 0x003D76AE File Offset: 0x003D58AE
+		// Token: 0x0601C6BB RID: 116411 RVA: 0x0040394A File Offset: 0x00401B4A
 		public byte[] GetTemplateIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601AEE7 RID: 110311 RVA: 0x003D76BC File Offset: 0x003D58BC
+		// Token: 0x0601C6BC RID: 116412 RVA: 0x00403958 File Offset: 0x00401B58
 		public static Offset<IRollBlockItemTemplate> CreateIRollBlockItemTemplate(FlatBufferBuilder builder, ERollBlockItemType ItemType = ERollBlockItemType.BreakableObstacle, StringOffset TemplateIdOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IRollBlockItemTemplate.EndIRollBlockItemTemplate(builder);
 		}
 
-		// Token: 0x0601AEE8 RID: 110312 RVA: 0x003D76D9 File Offset: 0x003D58D9
+		// Token: 0x0601C6BD RID: 116413 RVA: 0x00403975 File Offset: 0x00401B75
 		public static void StartIRollBlockItemTemplate(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601AEE9 RID: 110313 RVA: 0x003D76E2 File Offset: 0x003D58E2
+		// Token: 0x0601C6BE RID: 116414 RVA: 0x0040397E File Offset: 0x00401B7E
 		public static void AddItemType(FlatBufferBuilder builder, ERollBlockItemType itemType)
 		{
 			builder.AddByte(0, (byte)itemType, 0);
 		}
 
-		// Token: 0x0601AEEA RID: 110314 RVA: 0x003D76ED File Offset: 0x003D58ED
+		// Token: 0x0601C6BF RID: 116415 RVA: 0x00403989 File Offset: 0x00401B89
 		public static void AddTemplateId(FlatBufferBuilder builder, StringOffset templateIdOffset)
 		{
 			builder.AddOffset(1, templateIdOffset.Value, 0);
 		}
 
-		// Token: 0x0601AEEB RID: 110315 RVA: 0x003D76FD File Offset: 0x003D58FD
+		// Token: 0x0601C6C0 RID: 116416 RVA: 0x00403999 File Offset: 0x00401B99
 		public static Offset<IRollBlockItemTemplate> EndIRollBlockItemTemplate(FlatBufferBuilder builder)
 		{
 			return new Offset<IRollBlockItemTemplate>(builder.EndTable());
 		}
 
-		// Token: 0x0601AEEC RID: 110316 RVA: 0x003D770C File Offset: 0x003D590C
+		// Token: 0x0601C6C1 RID: 116417 RVA: 0x004039A8 File Offset: 0x00401BA8
 		public IRollBlockItemTemplateT UnPack()
 		{
 			IRollBlockItemTemplateT rollBlockItemTemplateT = new IRollBlockItemTemplateT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return rollBlockItemTemplateT;
 		}
 
-		// Token: 0x0601AEED RID: 110317 RVA: 0x003D7727 File Offset: 0x003D5927
+		// Token: 0x0601C6C2 RID: 116418 RVA: 0x004039C3 File Offset: 0x00401BC3
 		public void UnPackTo(IRollBlockItemTemplateT _o)
 		{
 			_o.ItemType = this.ItemType;
 			_o.TemplateId = this.TemplateId;
 		}
 
-		// Token: 0x0601AEEE RID: 110318 RVA: 0x003D7744 File Offset: 0x003D5944
+		// Token: 0x0601C6C3 RID: 116419 RVA: 0x004039E0 File Offset: 0x00401BE0
 		public static Offset<IRollBlockItemTemplate> Pack(FlatBufferBuilder builder, IRollBlockItemTemplateT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IRollBlockItemTemplate.CreateIRollBlockItemTemplate(builder, _o.ItemType, templateIdOffset);
 		}
 
-		// Token: 0x0400C661 RID: 50785
+		// Token: 0x0400D090 RID: 53392
 		private Table __p;
 	}
 }

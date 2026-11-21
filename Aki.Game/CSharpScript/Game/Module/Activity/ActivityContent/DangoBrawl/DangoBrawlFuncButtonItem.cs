@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006822 RID: 26658
+	// Token: 0x02005772 RID: 22386
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlFuncButtonItem : UiPanelBase
 	{
-		// Token: 0x0604285C RID: 272476 RVA: 0x0102A61C File Offset: 0x0102881C
+		// Token: 0x060373B0 RID: 226224 RVA: 0x00F6BB58 File Offset: 0x00F69D58
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -33,19 +33,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604285D RID: 272477 RVA: 0x0102A6C2 File Offset: 0x010288C2
+		// Token: 0x060373B1 RID: 226225 RVA: 0x00F6BBFE File Offset: 0x00F69DFE
 		public void SetOnClick(Action onClick)
 		{
 			this.OnClickInternal = onClick;
 		}
 
-		// Token: 0x0604285E RID: 272478 RVA: 0x0102A6CB File Offset: 0x010288CB
+		// Token: 0x060373B2 RID: 226226 RVA: 0x00F6BC07 File Offset: 0x00F69E07
 		public void SetFunctionId(int functionId)
 		{
 			this.FunctionId = functionId;
 		}
 
-		// Token: 0x0604285F RID: 272479 RVA: 0x0102A6D4 File Offset: 0x010288D4
+		// Token: 0x060373B3 RID: 226227 RVA: 0x00F6BC10 File Offset: 0x00F69E10
 		public void SetButtonState()
 		{
 			if (this.FunctionId <= 0)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.SetUiActive(FunctionModel.Instance.IsOpen(this.FunctionId));
 		}
 
-		// Token: 0x06042860 RID: 272480 RVA: 0x0102A6FD File Offset: 0x010288FD
+		// Token: 0x060373B4 RID: 226228 RVA: 0x00F6BC39 File Offset: 0x00F69E39
 		public void SetRedDotVisible(bool value)
 		{
 			UUIItem item = base.GetItem(0);
@@ -67,37 +67,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item.SetUIActive(value);
 		}
 
-		// Token: 0x06042861 RID: 272481 RVA: 0x0102A711 File Offset: 0x01028911
+		// Token: 0x060373B5 RID: 226229 RVA: 0x00F6BC4D File Offset: 0x00F69E4D
 		public void BindRedDot(object _, int? __ = null)
 		{
 		}
 
-		// Token: 0x06042862 RID: 272482 RVA: 0x0102A713 File Offset: 0x01028913
+		// Token: 0x060373B6 RID: 226230 RVA: 0x00F6BC4F File Offset: 0x00F69E4F
 		public void UnBindRedDot()
 		{
 		}
 
-		// Token: 0x06042863 RID: 272483 RVA: 0x0102A715 File Offset: 0x01028915
+		// Token: 0x060373B7 RID: 226231 RVA: 0x00F6BC51 File Offset: 0x00F69E51
 		private void OnClick()
 		{
 			this.OnClickInternal();
 		}
 
-		// Token: 0x04022A9B RID: 141979
+		// Token: 0x0401D2F8 RID: 119544
 		private int FunctionId;
 
-		// Token: 0x04022A9C RID: 141980
+		// Token: 0x0401D2F9 RID: 119545
 		private Action OnClickInternal = delegate()
 		{
 		};
 
-		// Token: 0x0200C9BE RID: 51646
+		// Token: 0x0200B38A RID: 45962
 		[NullableContext(0)]
 		private enum EComponentDefine
 		{
-			// Token: 0x0403CF2E RID: 249646
+			// Token: 0x04037818 RID: 227352
 			RedDot,
-			// Token: 0x0403CF2F RID: 249647
+			// Token: 0x04037819 RID: 227353
 			Btn
 		}
 	}

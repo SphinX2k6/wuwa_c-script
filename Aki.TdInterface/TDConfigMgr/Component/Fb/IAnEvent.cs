@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DA8 RID: 3496
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EA4 RID: 3748
 	public class IAnEvent : ISceneItemSeqEventCbType
 	{
-		// Token: 0x06004F71 RID: 20337 RVA: 0x000C4C2C File Offset: 0x000C2E2C
+		// Token: 0x06005496 RID: 21654 RVA: 0x000D047C File Offset: 0x000CE67C
 		public static IAnEvent Create(IAnEvent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019DE RID: 6622
-		// (get) Token: 0x06004F72 RID: 20338 RVA: 0x000C4C4B File Offset: 0x000C2E4B
+		// Token: 0x17001B49 RID: 6985
+		// (get) Token: 0x06005497 RID: 21655 RVA: 0x000D049B File Offset: 0x000CE69B
 		public override ESceneItemSeqEventCbType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019DF RID: 6623
-		// (get) Token: 0x06004F73 RID: 20339 RVA: 0x000C4C58 File Offset: 0x000C2E58
+		// Token: 0x17001B4A RID: 6986
+		// (get) Token: 0x06005498 RID: 21656 RVA: 0x000D04A8 File Offset: 0x000CE6A8
 		public override string EventName
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019E0 RID: 6624
-		// (get) Token: 0x06004F74 RID: 20340 RVA: 0x000C4C65 File Offset: 0x000C2E65
+		// Token: 0x17001B4B RID: 6987
+		// (get) Token: 0x06005499 RID: 21657 RVA: 0x000D04B5 File Offset: 0x000CE6B5
 		public override ActionInfo Action
 		{
 			get
@@ -59,14 +57,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D95 RID: 11669
+		// Token: 0x0400305B RID: 12379
 		private IAnEvent Instance;
 
-		// Token: 0x04002D96 RID: 11670
+		// Token: 0x0400305C RID: 12380
 		[Nullable(2)]
 		private ActionInfo _ActionCache;
 
-		// Token: 0x04002D97 RID: 11671
+		// Token: 0x0400305D RID: 12381
 		private bool _ActionInited;
 	}
 }

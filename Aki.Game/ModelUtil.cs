@@ -4,17 +4,17 @@ using AkiClient.Game.Aki.Data.Entity.Struct;
 using AkiClient.Game.Aki.Data.UiModel.Struct;
 using UnrealEngine;
 
-// Token: 0x020034C5 RID: 13509
+// Token: 0x02002A39 RID: 10809
 public static class ModelUtil
 {
-	// Token: 0x0601D6DA RID: 120538 RVA: 0x008363AB File Offset: 0x008345AB
+	// Token: 0x0601B3D9 RID: 111577 RVA: 0x0085D853 File Offset: 0x0085BA53
 	[NullableContext(2)]
 	public static SModelConfig GetModelConfig(int modelId)
 	{
 		return DataTableUtil.GetDataTableRowFromName<SModelConfig>(EDataTable.ModelConfig, modelId.ToString());
 	}
 
-	// Token: 0x0601D6DB RID: 120539 RVA: 0x008363BA File Offset: 0x008345BA
+	// Token: 0x0601B3DA RID: 111578 RVA: 0x0085D862 File Offset: 0x0085BA62
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public static SUiModelRotateSetting GetUiModelRotateSettings(string rowName)
@@ -22,7 +22,7 @@ public static class ModelUtil
 		return DataTableUtil.GetDataTableRowFromName<SUiModelRotateSetting>(EDataTable.UiModelRotateSettings, rowName);
 	}
 
-	// Token: 0x0601D6DC RID: 120540 RVA: 0x008363C4 File Offset: 0x008345C4
+	// Token: 0x0601B3DB RID: 111579 RVA: 0x0085D86C File Offset: 0x0085BA6C
 	[return: Nullable(new byte[]
 	{
 		2,

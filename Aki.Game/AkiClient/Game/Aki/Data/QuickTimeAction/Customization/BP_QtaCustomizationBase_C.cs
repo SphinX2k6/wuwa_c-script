@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.QuickTimeAction.Customization
 {
-	// Token: 0x02003EB6 RID: 16054
+	// Token: 0x02003183 RID: 12675
 	[UnrealObjectPath("/Game/Aki/Data/QuickTimeAction/Customization/BP_QtaCustomizationBase.BP_QtaCustomizationBase_C")]
 	[UnrealStructLayout(80, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 80)]
 	public class BP_QtaCustomizationBase_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060289AE RID: 166318 RVA: 0x009B04BB File Offset: 0x009AE6BB
+		// Token: 0x0601F44C RID: 128076 RVA: 0x0092A029 File Offset: 0x00928229
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_QtaCustomizationBase_C._ClassPtr == IntPtr.Zero)
@@ -22,30 +22,30 @@ namespace AkiClient.Game.Aki.Data.QuickTimeAction.Customization
 			return BP_QtaCustomizationBase_C._ClassPtr;
 		}
 
-		// Token: 0x060289AF RID: 166319 RVA: 0x009B04E0 File Offset: 0x009AE6E0
+		// Token: 0x0601F44D RID: 128077 RVA: 0x0092A050 File Offset: 0x00928250
 		public BP_QtaCustomizationBase_C() : this(BuiltinUtils.AllocNativeUObject(BP_QtaCustomizationBase_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060289B0 RID: 166320 RVA: 0x009B0508 File Offset: 0x009AE708
+		// Token: 0x0601F44E RID: 128078 RVA: 0x0092A078 File Offset: 0x00928278
 		[NullableContext(1)]
 		public BP_QtaCustomizationBase_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_QtaCustomizationBase_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x060289B1 RID: 166321 RVA: 0x009B053B File Offset: 0x009AE73B
+		// Token: 0x0601F44F RID: 128079 RVA: 0x0092A0AB File Offset: 0x009282AB
 		protected BP_QtaCustomizationBase_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014B90 RID: 84880
+		// Token: 0x04010BB8 RID: 68536
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Data/QuickTimeAction/Customization/BP_QtaCustomizationBase.BP_QtaCustomizationBase_C";
 
-		// Token: 0x04014B91 RID: 84881
+		// Token: 0x04010BB9 RID: 68537
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014B92 RID: 84882
+		// Token: 0x04010BBA RID: 68538
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

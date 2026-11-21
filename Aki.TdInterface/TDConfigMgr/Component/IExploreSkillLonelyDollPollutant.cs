@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000352 RID: 850
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200039B RID: 923
 	public class IExploreSkillLonelyDollPollutant : IExploreSkillInteractType
 	{
-		// Token: 0x060010DD RID: 4317 RVA: 0x00039E18 File Offset: 0x00038018
+		// Token: 0x06001221 RID: 4641 RVA: 0x0003D0FC File Offset: 0x0003B2FC
 		private IExploreSkillLonelyDollPollutant_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060010DE RID: 4318 RVA: 0x00039E50 File Offset: 0x00038050
+		// Token: 0x06001222 RID: 4642 RVA: 0x0003D134 File Offset: 0x0003B334
 		public static IExploreSkillLonelyDollPollutant Create([Nullable(2)] IExploreSkillLonelyDollPollutant instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060010DF RID: 4319 RVA: 0x00039E63 File Offset: 0x00038063
+		// Token: 0x06001223 RID: 4643 RVA: 0x0003D147 File Offset: 0x0003B347
 		public static IExploreSkillLonelyDollPollutant CreateFromSetValue([Nullable(2)] IExploreSkillLonelyDollPollutant_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060010E0 RID: 4320 RVA: 0x00039E76 File Offset: 0x00038076
+		// Token: 0x06001224 RID: 4644 RVA: 0x0003D15A File Offset: 0x0003B35A
 		public new IExploreSkillLonelyDollPollutant_SetValue ToSetValue()
 		{
 			return new IExploreSkillLonelyDollPollutant_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004D1 RID: 1233
-		// (get) Token: 0x060010E1 RID: 4321 RVA: 0x00039E89 File Offset: 0x00038089
-		// (set) Token: 0x060010E2 RID: 4322 RVA: 0x00039EB4 File Offset: 0x000380B4
+		// Token: 0x17000525 RID: 1317
+		// (get) Token: 0x06001225 RID: 4645 RVA: 0x0003D16D File Offset: 0x0003B36D
+		// (set) Token: 0x06001226 RID: 4646 RVA: 0x0003D198 File Offset: 0x0003B398
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E10 RID: 3600
+		// Token: 0x04000F07 RID: 3847
 		[Nullable(2)]
 		protected new IExploreSkillLonelyDollPollutant FbInstance;
 
-		// Token: 0x04000E11 RID: 3601
+		// Token: 0x04000F08 RID: 3848
 		[Nullable(2)]
 		protected new IExploreSkillLonelyDollPollutant_SetValue PocoInterface;
 	}

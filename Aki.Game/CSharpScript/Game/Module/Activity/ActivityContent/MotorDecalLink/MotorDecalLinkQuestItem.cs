@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 {
-	// Token: 0x0200643E RID: 25662
+	// Token: 0x020053BC RID: 21436
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 	})]
 	public class MotorDecalLinkQuestItem : GridProxyAbstract<MotorDecalLinkQuestViewModel>
 	{
-		// Token: 0x06040822 RID: 264226 RVA: 0x00F9D5FC File Offset: 0x00F9B7FC
+		// Token: 0x060354E3 RID: 218339 RVA: 0x00EE4578 File Offset: 0x00EE2778
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,20 +41,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			};
 		}
 
-		// Token: 0x06040823 RID: 264227 RVA: 0x00F9D6FF File Offset: 0x00F9B8FF
+		// Token: 0x060354E4 RID: 218340 RVA: 0x00EE467B File Offset: 0x00EE287B
 		protected override void OnStart()
 		{
 			this.RewardScrollView = new GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData>(base.GetScrollViewWithScrollbar(6), new Func<ActivitySmallItemGrid>(this.InitRewardGridItem), null, false, null);
 			base.GetItem(4).SetUIActive(false);
 		}
 
-		// Token: 0x06040824 RID: 264228 RVA: 0x00F9D72F File Offset: 0x00F9B92F
+		// Token: 0x060354E5 RID: 218341 RVA: 0x00EE46AB File Offset: 0x00EE28AB
 		private ActivitySmallItemGrid InitRewardGridItem()
 		{
 			return new ActivitySmallItemGrid();
 		}
 
-		// Token: 0x06040825 RID: 264229 RVA: 0x00F9D738 File Offset: 0x00F9B938
+		// Token: 0x060354E6 RID: 218342 RVA: 0x00EE46B4 File Offset: 0x00EE28B4
 		private void OnClickReceive()
 		{
 			MotorDecalLinkUtil.Debug("OnClickReceive", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}).Forget();
 		}
 
-		// Token: 0x06040826 RID: 264230 RVA: 0x00F9D7B0 File Offset: 0x00F9B9B0
+		// Token: 0x060354E7 RID: 218343 RVA: 0x00EE472C File Offset: 0x00EE292C
 		private void OnClickSkip()
 		{
 			MotorDecalLinkQuestViewModel currentQuestViewModel = this.CurrentQuestViewModel;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}
 		}
 
-		// Token: 0x06040827 RID: 264231 RVA: 0x00F9D81C File Offset: 0x00F9BA1C
+		// Token: 0x060354E8 RID: 218344 RVA: 0x00EE4798 File Offset: 0x00EE2998
 		public override void Refresh(MotorDecalLinkQuestViewModel questViewModel, bool isSelected, int gridIndex)
 		{
 			this.CurrentQuestViewModel = questViewModel;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			this.RefreshButtonState(motorDecalQuestState);
 		}
 
-		// Token: 0x06040828 RID: 264232 RVA: 0x00F9D84C File Offset: 0x00F9BA4C
+		// Token: 0x060354E9 RID: 218345 RVA: 0x00EE47C8 File Offset: 0x00EE29C8
 		private void RefreshRewardPreview()
 		{
 			MotorDecalLinkQuestViewModel currentQuestViewModel = this.CurrentQuestViewModel;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			rewardScrollView.RefreshByData(rewardGridDataList, null, false);
 		}
 
-		// Token: 0x06040829 RID: 264233 RVA: 0x00F9D890 File Offset: 0x00F9BA90
+		// Token: 0x060354EA RID: 218346 RVA: 0x00EE480C File Offset: 0x00EE2A0C
 		private List<IItemGridData> GetRewardGridDataList(Dictionary<int, int> rewardInfo, bool hasClaimed)
 		{
 			List<IItemGridData> list = new List<IItemGridData>();
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			return list;
 		}
 
-		// Token: 0x0604082A RID: 264234 RVA: 0x00F9D914 File Offset: 0x00F9BB14
+		// Token: 0x060354EB RID: 218347 RVA: 0x00EE4890 File Offset: 0x00EE2A90
 		private void RefreshQuestInfo(MotorDecalLinkQuestViewModel questViewModel)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), questViewModel.TaskName, Array.Empty<object>());
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}));
 		}
 
-		// Token: 0x0604082B RID: 264235 RVA: 0x00F9D9A0 File Offset: 0x00F9BBA0
+		// Token: 0x060354EC RID: 218348 RVA: 0x00EE491C File Offset: 0x00EE2B1C
 		private void RefreshButtonState(EMotorDecalQuestState state)
 		{
 			UUIItem item = base.GetItem(2);
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			button2.RootUIComp.Get().SetUIActive(state == EMotorDecalQuestState.ProgressCanSkip);
 		}
 
-		// Token: 0x0604082C RID: 264236 RVA: 0x00F9DA08 File Offset: 0x00F9BC08
+		// Token: 0x060354ED RID: 218349 RVA: 0x00EE4984 File Offset: 0x00EE2B84
 		private EMotorDecalQuestState GetMotorDecalQuestState(MotorDecalLinkQuestViewModel questViewModel)
 		{
 			if (questViewModel.Status == EActivityTaskState.FinishedAndUnclaimed)
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			return EMotorDecalQuestState.Progress;
 		}
 
-		// Token: 0x040218BA RID: 137402
+		// Token: 0x0401C1E9 RID: 115177
 		[Nullable(new byte[]
 		{
 			2,
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 		})]
 		private GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData> RewardScrollView;
 
-		// Token: 0x040218BB RID: 137403
+		// Token: 0x0401C1EA RID: 115178
 		[Nullable(2)]
 		private MotorDecalLinkQuestViewModel CurrentQuestViewModel;
 	}

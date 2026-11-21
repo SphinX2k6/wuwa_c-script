@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006838 RID: 26680
+	// Token: 0x02006EBE RID: 28350
 	public class IFocusObjectT
 	{
-		// Token: 0x1700C633 RID: 50739
-		// (get) Token: 0x0602E849 RID: 190537 RVA: 0x00658FD7 File Offset: 0x006571D7
-		// (set) Token: 0x0602E84A RID: 190538 RVA: 0x00658FDF File Offset: 0x006571DF
+		// Token: 0x1700CFF7 RID: 53239
+		// (get) Token: 0x060310D1 RID: 200913 RVA: 0x006A6F17 File Offset: 0x006A5117
+		// (set) Token: 0x060310D2 RID: 200914 RVA: 0x006A6F1F File Offset: 0x006A511F
 		public IFocusObjectRotationConfigT RotationConfig { get; set; }
 
-		// Token: 0x1700C634 RID: 50740
-		// (get) Token: 0x0602E84B RID: 190539 RVA: 0x00658FE8 File Offset: 0x006571E8
-		// (set) Token: 0x0602E84C RID: 190540 RVA: 0x00658FF0 File Offset: 0x006571F0
+		// Token: 0x1700CFF8 RID: 53240
+		// (get) Token: 0x060310D3 RID: 200915 RVA: 0x006A6F28 File Offset: 0x006A5128
+		// (set) Token: 0x060310D4 RID: 200916 RVA: 0x006A6F30 File Offset: 0x006A5130
 		public IFocusObjectCameraConfigT CameraConfig { get; set; }
 
-		// Token: 0x1700C635 RID: 50741
-		// (get) Token: 0x0602E84D RID: 190541 RVA: 0x00658FF9 File Offset: 0x006571F9
-		// (set) Token: 0x0602E84E RID: 190542 RVA: 0x00659001 File Offset: 0x00657201
+		// Token: 0x1700CFF9 RID: 53241
+		// (get) Token: 0x060310D5 RID: 200917 RVA: 0x006A6F39 File Offset: 0x006A5139
+		// (set) Token: 0x060310D6 RID: 200918 RVA: 0x006A6F41 File Offset: 0x006A5141
 		public int LeaveIndex { get; set; }
 
-		// Token: 0x1700C636 RID: 50742
-		// (get) Token: 0x0602E84F RID: 190543 RVA: 0x0065900A File Offset: 0x0065720A
-		// (set) Token: 0x0602E850 RID: 190544 RVA: 0x00659012 File Offset: 0x00657212
+		// Token: 0x1700CFFA RID: 53242
+		// (get) Token: 0x060310D7 RID: 200919 RVA: 0x006A6F4A File Offset: 0x006A514A
+		// (set) Token: 0x060310D8 RID: 200920 RVA: 0x006A6F52 File Offset: 0x006A5152
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602E851 RID: 190545 RVA: 0x0065901B File Offset: 0x0065721B
+		// Token: 0x060310D9 RID: 200921 RVA: 0x006A6F5B File Offset: 0x006A515B
 		public IFocusObjectT()
 		{
 			this.RotationConfig = null;

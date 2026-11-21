@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200091D RID: 2333
+	// Token: 0x0200019F RID: 415
 	[UnrealObjectPath("/Script/Engine.CapsuleComponent")]
 	[UnrealStructLayout(1600, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1600)]
 	public class UCapsuleComponent : UShapeComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06008096 RID: 32918 RVA: 0x000B8740 File Offset: 0x000B6940
+		// Token: 0x06001BF8 RID: 7160 RVA: 0x000297E6 File Offset: 0x000279E6
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UCapsuleComponent._ClassPtr;
 		}
 
-		// Token: 0x06008097 RID: 32919 RVA: 0x000B874C File Offset: 0x000B694C
+		// Token: 0x06001BF9 RID: 7161 RVA: 0x000297F4 File Offset: 0x000279F4
 		public UCapsuleComponent() : this(BuiltinUtils.AllocNativeUObject(UCapsuleComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06008098 RID: 32920 RVA: 0x000B8774 File Offset: 0x000B6974
+		// Token: 0x06001BFA RID: 7162 RVA: 0x0002981C File Offset: 0x00027A1C
 		[NullableContext(1)]
 		public UCapsuleComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UCapsuleComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17001E39 RID: 7737
-		// (get) Token: 0x06008099 RID: 32921 RVA: 0x000B87A7 File Offset: 0x000B69A7
-		// (set) Token: 0x0600809A RID: 32922 RVA: 0x000B87B7 File Offset: 0x000B69B7
+		// Token: 0x1700036B RID: 875
+		// (get) Token: 0x06001BFB RID: 7163 RVA: 0x0002984F File Offset: 0x00027A4F
+		// (set) Token: 0x06001BFC RID: 7164 RVA: 0x0002985F File Offset: 0x00027A5F
 		public unsafe float CapsuleHalfHeight
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001E3A RID: 7738
-		// (get) Token: 0x0600809B RID: 32923 RVA: 0x000B87C8 File Offset: 0x000B69C8
-		// (set) Token: 0x0600809C RID: 32924 RVA: 0x000B87D8 File Offset: 0x000B69D8
+		// Token: 0x1700036C RID: 876
+		// (get) Token: 0x06001BFD RID: 7165 RVA: 0x00029870 File Offset: 0x00027A70
+		// (set) Token: 0x06001BFE RID: 7166 RVA: 0x00029880 File Offset: 0x00027A80
 		public unsafe float CapsuleRadius
 		{
 			get
@@ -58,25 +58,25 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600809D RID: 32925 RVA: 0x000B87E9 File Offset: 0x000B69E9
+		// Token: 0x06001BFF RID: 7167 RVA: 0x00029891 File Offset: 0x00027A91
 		public void SetCapsuleSize(float InRadius, float InHalfHeight, bool bUpdateOverlaps = true)
 		{
 			UCapsuleComponent.__SetCapsuleSize_Internal(base.NativePtr, InRadius, InHalfHeight, bUpdateOverlaps);
 		}
 
-		// Token: 0x0600809E RID: 32926 RVA: 0x000B87F9 File Offset: 0x000B69F9
+		// Token: 0x06001C00 RID: 7168 RVA: 0x000298A1 File Offset: 0x00027AA1
 		public void SetCapsuleRadius(float Radius, bool bUpdateOverlaps = true)
 		{
 			UCapsuleComponent.__SetCapsuleRadius_Internal(base.NativePtr, Radius, bUpdateOverlaps);
 		}
 
-		// Token: 0x0600809F RID: 32927 RVA: 0x000B8808 File Offset: 0x000B6A08
+		// Token: 0x06001C01 RID: 7169 RVA: 0x000298B0 File Offset: 0x00027AB0
 		public void SetCapsuleHalfHeight(float HalfHeight, bool bUpdateOverlaps = true)
 		{
 			UCapsuleComponent.__SetCapsuleHalfHeight_Internal(base.NativePtr, HalfHeight, bUpdateOverlaps);
 		}
 
-		// Token: 0x060080A0 RID: 32928 RVA: 0x000B8818 File Offset: 0x000B6A18
+		// Token: 0x06001C02 RID: 7170 RVA: 0x000298C0 File Offset: 0x00027AC0
 		public unsafe void GetUnscaledCapsuleSize_WithoutHemisphere(ref float OutRadius, ref float OutHalfHeightWithoutHemisphere)
 		{
 			fixed (float* ptr = &OutRadius)
@@ -91,7 +91,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060080A1 RID: 32929 RVA: 0x000B8844 File Offset: 0x000B6A44
+		// Token: 0x06001C03 RID: 7171 RVA: 0x000298EC File Offset: 0x00027AEC
 		public unsafe void GetUnscaledCapsuleSize(ref float OutRadius, ref float OutHalfHeight)
 		{
 			fixed (float* ptr = &OutRadius)
@@ -106,31 +106,31 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060080A2 RID: 32930 RVA: 0x000B886E File Offset: 0x000B6A6E
+		// Token: 0x06001C04 RID: 7172 RVA: 0x00029916 File Offset: 0x00027B16
 		public float GetUnscaledCapsuleRadius()
 		{
 			return UCapsuleComponent.__GetUnscaledCapsuleRadius_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060080A3 RID: 32931 RVA: 0x000B887B File Offset: 0x000B6A7B
+		// Token: 0x06001C05 RID: 7173 RVA: 0x00029923 File Offset: 0x00027B23
 		public float GetUnscaledCapsuleHalfHeight_WithoutHemisphere()
 		{
 			return UCapsuleComponent.__GetUnscaledCapsuleHalfHeight_WithoutHemisphere_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060080A4 RID: 32932 RVA: 0x000B8888 File Offset: 0x000B6A88
+		// Token: 0x06001C06 RID: 7174 RVA: 0x00029930 File Offset: 0x00027B30
 		public float GetUnscaledCapsuleHalfHeight()
 		{
 			return UCapsuleComponent.__GetUnscaledCapsuleHalfHeight_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060080A5 RID: 32933 RVA: 0x000B8895 File Offset: 0x000B6A95
+		// Token: 0x06001C07 RID: 7175 RVA: 0x0002993D File Offset: 0x00027B3D
 		public float GetShapeScale()
 		{
 			return UCapsuleComponent.__GetShapeScale_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060080A6 RID: 32934 RVA: 0x000B88A4 File Offset: 0x000B6AA4
+		// Token: 0x06001C08 RID: 7176 RVA: 0x0002994C File Offset: 0x00027B4C
 		public unsafe void GetScaledCapsuleSize_WithoutHemisphere(ref float OutRadius, ref float OutHalfHeightWithoutHemisphere)
 		{
 			fixed (float* ptr = &OutRadius)
@@ -145,7 +145,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060080A7 RID: 32935 RVA: 0x000B88D0 File Offset: 0x000B6AD0
+		// Token: 0x06001C09 RID: 7177 RVA: 0x00029978 File Offset: 0x00027B78
 		public unsafe void GetScaledCapsuleSize(ref float OutRadius, ref float OutHalfHeight)
 		{
 			fixed (float* ptr = &OutRadius)
@@ -160,115 +160,115 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060080A8 RID: 32936 RVA: 0x000B88FA File Offset: 0x000B6AFA
+		// Token: 0x06001C0A RID: 7178 RVA: 0x000299A2 File Offset: 0x00027BA2
 		public float GetScaledCapsuleRadius()
 		{
 			return UCapsuleComponent.__GetScaledCapsuleRadius_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060080A9 RID: 32937 RVA: 0x000B8907 File Offset: 0x000B6B07
+		// Token: 0x06001C0B RID: 7179 RVA: 0x000299AF File Offset: 0x00027BAF
 		public float GetScaledCapsuleHalfHeight_WithoutHemisphere()
 		{
 			return UCapsuleComponent.__GetScaledCapsuleHalfHeight_WithoutHemisphere_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060080AA RID: 32938 RVA: 0x000B8914 File Offset: 0x000B6B14
+		// Token: 0x06001C0C RID: 7180 RVA: 0x000299BC File Offset: 0x00027BBC
 		public float GetScaledCapsuleHalfHeight()
 		{
 			return UCapsuleComponent.__GetScaledCapsuleHalfHeight_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060080AB RID: 32939 RVA: 0x000B8921 File Offset: 0x000B6B21
+		// Token: 0x06001C0D RID: 7181 RVA: 0x000299C9 File Offset: 0x00027BC9
 		public double D_GetScaledCapsuleHalfHeight()
 		{
 			return UCapsuleComponent.__D_GetScaledCapsuleHalfHeight_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060080AC RID: 32940
+		// Token: 0x06001C0E RID: 7182
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCapsuleSize_Internal(IntPtr @this, float InRadius, float InHalfHeight, bool bUpdateOverlaps);
 
-		// Token: 0x060080AD RID: 32941
+		// Token: 0x06001C0F RID: 7183
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCapsuleRadius_Internal(IntPtr @this, float Radius, bool bUpdateOverlaps);
 
-		// Token: 0x060080AE RID: 32942
+		// Token: 0x06001C10 RID: 7184
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCapsuleHalfHeight_Internal(IntPtr @this, float HalfHeight, bool bUpdateOverlaps);
 
-		// Token: 0x060080AF RID: 32943
+		// Token: 0x06001C11 RID: 7185
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetUnscaledCapsuleSize_WithoutHemisphere_Internal(IntPtr @this, ref float OutRadius, ref float OutHalfHeightWithoutHemisphere);
 
-		// Token: 0x060080B0 RID: 32944
+		// Token: 0x06001C12 RID: 7186
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetUnscaledCapsuleSize_Internal(IntPtr @this, ref float OutRadius, ref float OutHalfHeight);
 
-		// Token: 0x060080B1 RID: 32945
+		// Token: 0x06001C13 RID: 7187
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetUnscaledCapsuleRadius_Internal(IntPtr @this);
 
-		// Token: 0x060080B2 RID: 32946
+		// Token: 0x06001C14 RID: 7188
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetUnscaledCapsuleHalfHeight_WithoutHemisphere_Internal(IntPtr @this);
 
-		// Token: 0x060080B3 RID: 32947
+		// Token: 0x06001C15 RID: 7189
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetUnscaledCapsuleHalfHeight_Internal(IntPtr @this);
 
-		// Token: 0x060080B4 RID: 32948
+		// Token: 0x06001C16 RID: 7190
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetShapeScale_Internal(IntPtr @this);
 
-		// Token: 0x060080B5 RID: 32949
+		// Token: 0x06001C17 RID: 7191
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetScaledCapsuleSize_WithoutHemisphere_Internal(IntPtr @this, ref float OutRadius, ref float OutHalfHeightWithoutHemisphere);
 
-		// Token: 0x060080B6 RID: 32950
+		// Token: 0x06001C18 RID: 7192
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetScaledCapsuleSize_Internal(IntPtr @this, ref float OutRadius, ref float OutHalfHeight);
 
-		// Token: 0x060080B7 RID: 32951
+		// Token: 0x06001C19 RID: 7193
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetScaledCapsuleRadius_Internal(IntPtr @this);
 
-		// Token: 0x060080B8 RID: 32952
+		// Token: 0x06001C1A RID: 7194
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetScaledCapsuleHalfHeight_WithoutHemisphere_Internal(IntPtr @this);
 
-		// Token: 0x060080B9 RID: 32953
+		// Token: 0x06001C1B RID: 7195
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetScaledCapsuleHalfHeight_Internal(IntPtr @this);
 
-		// Token: 0x060080BA RID: 32954
+		// Token: 0x06001C1C RID: 7196
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern double __D_GetScaledCapsuleHalfHeight_Internal(IntPtr @this);
 
-		// Token: 0x060080BB RID: 32955 RVA: 0x000B892E File Offset: 0x000B6B2E
+		// Token: 0x06001C1D RID: 7197 RVA: 0x000299D6 File Offset: 0x00027BD6
 		static UCapsuleComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.CapsuleComponent");
 		}
 
-		// Token: 0x060080BC RID: 32956 RVA: 0x000B893C File Offset: 0x000B6B3C
+		// Token: 0x06001C1E RID: 7198 RVA: 0x000299E4 File Offset: 0x00027BE4
 		protected UCapsuleComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003D8F RID: 15759
+		// Token: 0x0400091E RID: 2334
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.CapsuleComponent";
 
-		// Token: 0x04003D90 RID: 15760
+		// Token: 0x0400091F RID: 2335
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04003D91 RID: 15761
+		// Token: 0x04000920 RID: 2336
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04003D92 RID: 15762
+		// Token: 0x04000921 RID: 2337
 		internal static int __PropertyOffset_CapsuleHalfHeight;
 
-		// Token: 0x04003D93 RID: 15763
+		// Token: 0x04000922 RID: 2338
 		internal static int __PropertyOffset_CapsuleRadius;
 	}
 }

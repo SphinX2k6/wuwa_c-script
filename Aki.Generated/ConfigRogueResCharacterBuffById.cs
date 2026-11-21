@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000837 RID: 2103
+	// Token: 0x02000853 RID: 2131
 	public class ConfigRogueResCharacterBuffById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600315C RID: 12636 RVA: 0x00170780 File Offset: 0x0016E980
+		// Token: 0x06003204 RID: 12804 RVA: 0x00177A68 File Offset: 0x00175C68
 		static ConfigRogueResCharacterBuffById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueResCharacterBuffById.CreateStaticDefaultValue), new Action(ConfigRogueResCharacterBuffById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600315D RID: 12637 RVA: 0x001707A0 File Offset: 0x0016E9A0
+		// Token: 0x06003205 RID: 12805 RVA: 0x00177A88 File Offset: 0x00175C88
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueResCharacterBuffById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600315E RID: 12638 RVA: 0x0017081F File Offset: 0x0016EA1F
+		// Token: 0x06003206 RID: 12806 RVA: 0x00177B07 File Offset: 0x00175D07
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueResCharacterBuffById.LogPair = null;
 			ConfigRogueResCharacterBuffById.HandleId = 0;
 		}
 
-		// Token: 0x0600315F RID: 12639 RVA: 0x0017082D File Offset: 0x0016EA2D
+		// Token: 0x06003207 RID: 12807 RVA: 0x00177B15 File Offset: 0x00175D15
 		public static void Init()
 		{
 			ConfigRogueResCharacterBuffById.HandleId = ConfigCommon.InitDataStatement(ConfigRogueResCharacterBuffById.HandleId, "db_permanentrogue.db", "select BinData from `RogueResCharacterBuff` where Id=?");
 		}
 
-		// Token: 0x06003160 RID: 12640 RVA: 0x00170848 File Offset: 0x0016EA48
+		// Token: 0x06003208 RID: 12808 RVA: 0x00177B30 File Offset: 0x00175D30
 		public static RogueResCharacterBuff? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRogueResCharacterBuffById.HandleId, ConfigRogueResCharacterBuffById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RogueResCharacterBuff?(rootAsRogueResCharacterBuff);
 		}
 
-		// Token: 0x04003967 RID: 14695
+		// Token: 0x04003A2B RID: 14891
 		private const string DB = "db_permanentrogue.db";
 
-		// Token: 0x04003968 RID: 14696
+		// Token: 0x04003A2C RID: 14892
 		private const string FILE = "c.常驻肉鸽.xlsx";
 
-		// Token: 0x04003969 RID: 14697
+		// Token: 0x04003A2D RID: 14893
 		private const string TABLE = "RogueResCharacterBuff";
 
-		// Token: 0x0400396A RID: 14698
+		// Token: 0x04003A2E RID: 14894
 		private const string COMMAND = "select BinData from `RogueResCharacterBuff` where Id=?";
 
-		// Token: 0x0400396B RID: 14699
+		// Token: 0x04003A2F RID: 14895
 		private const string KEY_PREFIX = "RogueResCharacterBuffById";
 
-		// Token: 0x0400396C RID: 14700
+		// Token: 0x04003A30 RID: 14896
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400396D RID: 14701
+		// Token: 0x04003A31 RID: 14897
 		private static int HandleId;
 	}
 }

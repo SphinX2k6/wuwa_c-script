@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B29 RID: 19241
+	// Token: 0x02003AD1 RID: 15057
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 	})]
 	public class TowerDefenseRankOnlineItem : GridProxyAbstract<ITowerDefenseRankPlayerName>
 	{
-		// Token: 0x06031D5A RID: 204122 RVA: 0x00B91BBC File Offset: 0x00B8FDBC
+		// Token: 0x06026AEA RID: 158442 RVA: 0x00AD5C20 File Offset: 0x00AD3E20
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031D5B RID: 204123 RVA: 0x00B91C28 File Offset: 0x00B8FE28
+		// Token: 0x06026AEB RID: 158443 RVA: 0x00AD5C8C File Offset: 0x00AD3E8C
 		private void RefreshName()
 		{
 			UUIText text = base.GetText(1);
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			text.SetText(playerName, true);
 		}
 
-		// Token: 0x06031D5C RID: 204124 RVA: 0x00B91C70 File Offset: 0x00B8FE70
+		// Token: 0x06026AEC RID: 158444 RVA: 0x00AD5CD4 File Offset: 0x00AD3ED4
 		private void RefreshPosTexture()
 		{
 			UUITexture texture = base.GetTexture(0);
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			base.SetTextureByPath(resourcePath, texture, null, null);
 		}
 
-		// Token: 0x06031D5D RID: 204125 RVA: 0x00B91CB4 File Offset: 0x00B8FEB4
+		// Token: 0x06026AED RID: 158445 RVA: 0x00AD5D18 File Offset: 0x00AD3F18
 		public override void Refresh(ITowerDefenseRankPlayerName data, bool isSelected, int gridIndex)
 		{
 			this.PlayerName = data;
@@ -60,17 +60,17 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshPosTexture();
 		}
 
-		// Token: 0x0401A97E RID: 108926
+		// Token: 0x040152D0 RID: 86736
 		private ITowerDefenseRankPlayerName PlayerName;
 
-		// Token: 0x0200ACB9 RID: 44217
+		// Token: 0x020096D9 RID: 38617
 		[NullableContext(0)]
 		private class EOnlineItemComponent
 		{
-			// Token: 0x040347A0 RID: 214944
+			// Token: 0x0402F151 RID: 192849
 			public const int PosTexture = 0;
 
-			// Token: 0x040347A1 RID: 214945
+			// Token: 0x0402F152 RID: 192850
 			public const int Name = 1;
 		}
 	}

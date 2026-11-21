@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200115B RID: 4443
+	// Token: 0x02001291 RID: 4753
 	public struct TrapDefenseBdGroup : IFlatbufferObject
 	{
-		// Token: 0x17003BE4 RID: 15332
-		// (get) Token: 0x0600E2D4 RID: 58068 RVA: 0x00336EA1 File Offset: 0x003350A1
+		// Token: 0x17003F48 RID: 16200
+		// (get) Token: 0x0600F042 RID: 61506 RVA: 0x00361FD0 File Offset: 0x003601D0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E2D5 RID: 58069 RVA: 0x00336EAE File Offset: 0x003350AE
+		// Token: 0x0600F043 RID: 61507 RVA: 0x00361FDD File Offset: 0x003601DD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E2D6 RID: 58070 RVA: 0x00336EB8 File Offset: 0x003350B8
+		// Token: 0x0600F044 RID: 61508 RVA: 0x00361FE4 File Offset: 0x003601E4
 		public static TrapDefenseBdGroup GetRootAsTrapDefenseBdGroup(ByteBuffer _bb)
 		{
 			return TrapDefenseBdGroup.GetRootAsTrapDefenseBdGroup(_bb, default(TrapDefenseBdGroup));
 		}
 
-		// Token: 0x0600E2D7 RID: 58071 RVA: 0x00336ED4 File Offset: 0x003350D4
+		// Token: 0x0600F045 RID: 61509 RVA: 0x00362000 File Offset: 0x00360200
 		public static TrapDefenseBdGroup GetRootAsTrapDefenseBdGroup(ByteBuffer _bb, TrapDefenseBdGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E2D8 RID: 58072 RVA: 0x00336EF1 File Offset: 0x003350F1
+		// Token: 0x0600F046 RID: 61510 RVA: 0x0036201D File Offset: 0x0036021D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E2D9 RID: 58073 RVA: 0x00336F00 File Offset: 0x00335100
+		// Token: 0x0600F047 RID: 61511 RVA: 0x0036202C File Offset: 0x0036022C
 		public TrapDefenseBdGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003BE5 RID: 15333
-		// (get) Token: 0x0600E2DA RID: 58074 RVA: 0x00336F10 File Offset: 0x00335110
+		// Token: 0x17003F49 RID: 16201
+		// (get) Token: 0x0600F048 RID: 61512 RVA: 0x0036203C File Offset: 0x0036023C
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003BE6 RID: 15334
-		// (get) Token: 0x0600E2DB RID: 58075 RVA: 0x00336F4C File Offset: 0x0033514C
+		// Token: 0x17003F4A RID: 16202
+		// (get) Token: 0x0600F049 RID: 61513 RVA: 0x00362078 File Offset: 0x00360278
 		public int BelongBd
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003BE7 RID: 15335
-		// (get) Token: 0x0600E2DC RID: 58076 RVA: 0x00336F88 File Offset: 0x00335188
+		// Token: 0x17003F4B RID: 16203
+		// (get) Token: 0x0600F04A RID: 61514 RVA: 0x003620B4 File Offset: 0x003602B4
 		public int ShopPrice
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003BE8 RID: 15336
-		// (get) Token: 0x0600E2DD RID: 58077 RVA: 0x00336FC8 File Offset: 0x003351C8
+		// Token: 0x17003F4C RID: 16204
+		// (get) Token: 0x0600F04B RID: 61515 RVA: 0x003620F4 File Offset: 0x003602F4
 		public int Quality
 		{
 			get
@@ -109,7 +109,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E2DE RID: 58078 RVA: 0x00337008 File Offset: 0x00335208
+		// Token: 0x0600F04C RID: 61516 RVA: 0x00362134 File Offset: 0x00360334
 		public int PreorderBdGroupIds(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -120,8 +120,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003BE9 RID: 15337
-		// (get) Token: 0x0600E2DF RID: 58079 RVA: 0x00337048 File Offset: 0x00335248
+		// Token: 0x17003F4D RID: 16205
+		// (get) Token: 0x0600F04D RID: 61517 RVA: 0x00362174 File Offset: 0x00360374
 		public int PreorderBdGroupIdsLength
 		{
 			get
@@ -135,37 +135,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E2E0 RID: 58080 RVA: 0x00337074 File Offset: 0x00335274
+		// Token: 0x0600F04E RID: 61518 RVA: 0x003621A0 File Offset: 0x003603A0
 		public Span<int> GetPreorderBdGroupIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x0600E2E1 RID: 58081 RVA: 0x00337084 File Offset: 0x00335284
+		// Token: 0x0600F04F RID: 61519 RVA: 0x003621B0 File Offset: 0x003603B0
 		public int[] GetPreorderBdGroupIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600E2E2 RID: 58082 RVA: 0x0033709C File Offset: 0x0033529C
+		// Token: 0x0600F050 RID: 61520 RVA: 0x003621C8 File Offset: 0x003603C8
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PreorderBdGroupIdsIter()或GetPreorderBdGroupIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PreorderBdGroupIds()
+		public int[] PreorderBdGroupIds()
 		{
-			TrapDefenseBdGroup trapDefenseBdGroup = this;
-			return trapDefenseBdGroup.GetPreorderBdGroupIdsArray() ?? Array.Empty<int>();
+			return this.GetPreorderBdGroupIdsArray();
 		}
 
-		// Token: 0x0600E2E3 RID: 58083 RVA: 0x003370C0 File Offset: 0x003352C0
+		// Token: 0x0600F051 RID: 61521 RVA: 0x003621D0 File Offset: 0x003603D0
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PreorderBdGroupIdsIter()
+		public IEnumerable<int> PreorderBdGroupIdsIter()
 		{
 			TrapDefenseBdGroup.<PreorderBdGroupIdsIter>d__22 <PreorderBdGroupIdsIter>d__ = new TrapDefenseBdGroup.<PreorderBdGroupIdsIter>d__22(-2);
 			<PreorderBdGroupIdsIter>d__.<>3__<>4__this = this;
 			return <PreorderBdGroupIdsIter>d__;
 		}
 
-		// Token: 0x040052A0 RID: 21152
+		// Token: 0x040058E3 RID: 22755
 		private Table __p;
 	}
 }

@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020025B4 RID: 9652
+// Token: 0x02001A9F RID: 6815
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class FightPhotoConditionItem : GridProxyAbstract<FightPhotoConditionData>
 {
-	// Token: 0x06013918 RID: 80152 RVA: 0x004E4550 File Offset: 0x004E2750
+	// Token: 0x06010DF8 RID: 69112 RVA: 0x004F3150 File Offset: 0x004F1350
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,13 +25,13 @@ public class FightPhotoConditionItem : GridProxyAbstract<FightPhotoConditionData
 		};
 	}
 
-	// Token: 0x06013919 RID: 80153 RVA: 0x004E45AA File Offset: 0x004E27AA
+	// Token: 0x06010DF9 RID: 69113 RVA: 0x004F31AA File Offset: 0x004F13AA
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add(EEventName.OnChangeFightPhotoOption, new Action(this.OnChangeFightPhotoOption));
 	}
 
-	// Token: 0x0601391A RID: 80154 RVA: 0x004E45C8 File Offset: 0x004E27C8
+	// Token: 0x06010DFA RID: 69114 RVA: 0x004F31C8 File Offset: 0x004F13C8
 	[NullableContext(1)]
 	public override void Refresh(FightPhotoConditionData data, bool isSelected, int gridIndex)
 	{
@@ -40,7 +40,7 @@ public class FightPhotoConditionItem : GridProxyAbstract<FightPhotoConditionData
 		this.RefreshConditionStatus();
 	}
 
-	// Token: 0x0601391B RID: 80155 RVA: 0x004E45F8 File Offset: 0x004E27F8
+	// Token: 0x06010DFB RID: 69115 RVA: 0x004F31F8 File Offset: 0x004F13F8
 	public void RefreshConditionStatus()
 	{
 		FightPhotoModel instance = FightPhotoModel.Instance;
@@ -67,29 +67,29 @@ public class FightPhotoConditionItem : GridProxyAbstract<FightPhotoConditionData
 		texture.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0601391C RID: 80156 RVA: 0x004E4685 File Offset: 0x004E2885
+	// Token: 0x06010DFC RID: 69116 RVA: 0x004F3285 File Offset: 0x004F1485
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.OnChangeFightPhotoOption, new Action(this.OnChangeFightPhotoOption));
 	}
 
-	// Token: 0x0601391D RID: 80157 RVA: 0x004E46A3 File Offset: 0x004E28A3
+	// Token: 0x06010DFD RID: 69117 RVA: 0x004F32A3 File Offset: 0x004F14A3
 	private void OnChangeFightPhotoOption()
 	{
 		this.RefreshConditionStatus();
 	}
 
-	// Token: 0x040093BD RID: 37821
+	// Token: 0x04009513 RID: 38163
 	private EFightPhotoConditionType ConditionType;
 
-	// Token: 0x02008BB8 RID: 35768
+	// Token: 0x02007D40 RID: 32064
 	private enum EComponents
 	{
-		// Token: 0x0402D5A2 RID: 185762
+		// Token: 0x040288B7 RID: 166071
 		SpriteFinish,
-		// Token: 0x0402D5A3 RID: 185763
+		// Token: 0x040288B8 RID: 166072
 		TextDescription,
-		// Token: 0x0402D5A4 RID: 185764
+		// Token: 0x040288B9 RID: 166073
 		TextureFinishBg
 	}
 }

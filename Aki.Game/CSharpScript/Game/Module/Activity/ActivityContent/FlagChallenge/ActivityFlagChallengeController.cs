@@ -11,25 +11,25 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 {
-	// Token: 0x02006576 RID: 25974
+	// Token: 0x020054F4 RID: 21748
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ActivityFlagChallengeController : ActivityControllerBase
 	{
-		// Token: 0x06041191 RID: 266641 RVA: 0x00FC7084 File Offset: 0x00FC5284
+		// Token: 0x06035E56 RID: 220758 RVA: 0x00F0E068 File Offset: 0x00F0C268
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 		}
 
-		// Token: 0x06041192 RID: 266642 RVA: 0x00FC70A2 File Offset: 0x00FC52A2
+		// Token: 0x06035E57 RID: 220759 RVA: 0x00F0E086 File Offset: 0x00F0C286
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 		}
 
-		// Token: 0x06041193 RID: 266643 RVA: 0x00FC70C0 File Offset: 0x00FC52C0
+		// Token: 0x06035E58 RID: 220760 RVA: 0x00F0E0A4 File Offset: 0x00F0C2A4
 		[NullableContext(0)]
 		protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 		{
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			return <OnOpenSubView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041194 RID: 266644 RVA: 0x00FC710C File Offset: 0x00FC530C
+		// Token: 0x06035E59 RID: 220761 RVA: 0x00F0E0F0 File Offset: 0x00F0C2F0
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 			if (!data.GetPreGuideQuestFinishState())
@@ -54,26 +54,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			FlagChallengeController.Instance.OpenFlagChallengeMainView(data.Id, null);
 		}
 
-		// Token: 0x06041195 RID: 266645 RVA: 0x00FC7158 File Offset: 0x00FC5358
+		// Token: 0x06035E5A RID: 220762 RVA: 0x00F0E13C File Offset: 0x00F0C33C
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_FlagChallengeMain";
 		}
 
-		// Token: 0x06041196 RID: 266646 RVA: 0x00FC715F File Offset: 0x00FC535F
+		// Token: 0x06035E5B RID: 220763 RVA: 0x00F0E143 File Offset: 0x00F0C343
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new ActivityFlagChallengeSubView();
 		}
 
-		// Token: 0x06041197 RID: 266647 RVA: 0x00FC7166 File Offset: 0x00FC5366
+		// Token: 0x06035E5C RID: 220764 RVA: 0x00F0E14A File Offset: 0x00F0C34A
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			this.Data = new ActivityFlagChallengeData();
 			return this.Data;
 		}
 
-		// Token: 0x06041198 RID: 266648 RVA: 0x00FC717C File Offset: 0x00FC537C
+		// Token: 0x06035E5D RID: 220765 RVA: 0x00F0E160 File Offset: 0x00F0C360
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			foreach (EUiViewName viewName in new List<EUiViewName>
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			return false;
 		}
 
-		// Token: 0x06041199 RID: 266649 RVA: 0x00FC71F4 File Offset: 0x00FC53F4
+		// Token: 0x06035E5E RID: 220766 RVA: 0x00F0E1D8 File Offset: 0x00F0C3D8
 		private void OnWorldDone()
 		{
 			if (!FlagChallengeBattleModel.Instance.IsNeedShowMainView)
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			this.AddMainViewSplashTask();
 		}
 
-		// Token: 0x0604119A RID: 266650 RVA: 0x00FC722C File Offset: 0x00FC542C
+		// Token: 0x06035E5F RID: 220767 RVA: 0x00F0E210 File Offset: 0x00F0C410
 		private void AddMainViewSplashTask()
 		{
 			if (this.Data == null)
@@ -119,8 +119,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			SplashScreenController.Instance.PushSplashScreenTask(splashScreenTask, false);
 		}
 
-		// Token: 0x1700954B RID: 38219
-		// (get) Token: 0x0604119B RID: 266651 RVA: 0x00FC7262 File Offset: 0x00FC5462
+		// Token: 0x170068AD RID: 26797
+		// (get) Token: 0x06035E60 RID: 220768 RVA: 0x00F0E246 File Offset: 0x00F0C446
 		public static ActivityFlagChallengeController Instance
 		{
 			get
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			}
 		}
 
-		// Token: 0x0604119C RID: 266652 RVA: 0x00FC7269 File Offset: 0x00FC5469
+		// Token: 0x06035E61 RID: 220769 RVA: 0x00F0E24D File Offset: 0x00F0C44D
 		public static ActivityFlagChallengeController GetOrCreateInstance()
 		{
 			if (ActivityFlagChallengeController._Instance == null)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			return ActivityFlagChallengeController._Instance;
 		}
 
-		// Token: 0x0604119D RID: 266653 RVA: 0x00FC727D File Offset: 0x00FC547D
+		// Token: 0x06035E62 RID: 220770 RVA: 0x00F0E261 File Offset: 0x00F0C461
 		public static bool CreateInstance()
 		{
 			if (ActivityFlagChallengeController._Instance != null)
@@ -150,28 +150,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			return true;
 		}
 
-		// Token: 0x0604119E RID: 266654 RVA: 0x00FC7293 File Offset: 0x00FC5493
+		// Token: 0x06035E63 RID: 220771 RVA: 0x00F0E277 File Offset: 0x00F0C477
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604119F RID: 266655 RVA: 0x00FC7295 File Offset: 0x00FC5495
+		// Token: 0x06035E64 RID: 220772 RVA: 0x00F0E279 File Offset: 0x00F0C479
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityFlagChallengeController._Instance = null;
 		}
 
-		// Token: 0x060411A0 RID: 266656 RVA: 0x00FC729D File Offset: 0x00FC549D
+		// Token: 0x06035E65 RID: 220773 RVA: 0x00F0E281 File Offset: 0x00F0C481
 		static ActivityFlagChallengeController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityFlagChallengeController.CreateStaticDefaultValue), new Action(ActivityFlagChallengeController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04021EAF RID: 138927
+		// Token: 0x0401C7E0 RID: 116704
 		[Nullable(2)]
 		public ActivityFlagChallengeData Data;
 
-		// Token: 0x04021EB0 RID: 138928
+		// Token: 0x0401C7E1 RID: 116705
 		[Nullable(2)]
 		private static ActivityFlagChallengeController _Instance;
 	}

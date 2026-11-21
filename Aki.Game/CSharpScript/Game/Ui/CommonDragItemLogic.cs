@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004646 RID: 17990
+	// Token: 0x02003577 RID: 13687
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CommonDragItemLogic<[Nullable(0)] TItem, [Nullable(1)] TData> where TItem : CommonDragLogicDataItem<TData> where TData : class
 	{
-		// Token: 0x0602E6A0 RID: 190112 RVA: 0x00AB98CC File Offset: 0x00AB7ACC
+		// Token: 0x06022DEA RID: 142826 RVA: 0x009E6EFC File Offset: 0x009E50FC
 		[NullableContext(1)]
 		public CommonDragItemLogic(UUIItem normalParent, UUIDraggableComponent dragComponent, int index, Func<TItem> delegateCreateFunction)
 		{
@@ -37,21 +37,21 @@ namespace CSharpScript.Game.Ui
 			this.Delegate.SetCurrentIndex(index);
 		}
 
-		// Token: 0x0602E6A1 RID: 190113 RVA: 0x00AB9ADD File Offset: 0x00AB7CDD
+		// Token: 0x06022DEB RID: 142827 RVA: 0x009E710D File Offset: 0x009E530D
 		[NullableContext(1)]
 		public UUIItem GetNormalParent()
 		{
 			return this.NormalParent;
 		}
 
-		// Token: 0x0602E6A2 RID: 190114 RVA: 0x00AB9AE5 File Offset: 0x00AB7CE5
+		// Token: 0x06022DEC RID: 142828 RVA: 0x009E7115 File Offset: 0x009E5315
 		[NullableContext(1)]
 		public TItem GetItem()
 		{
 			return this.Delegate;
 		}
 
-		// Token: 0x0602E6A3 RID: 190115 RVA: 0x00AB9AF0 File Offset: 0x00AB7CF0
+		// Token: 0x06022DED RID: 142829 RVA: 0x009E7120 File Offset: 0x009E5320
 		public void SetActive(bool state)
 		{
 			UUIDraggableComponent dragComponent = this.DragComponent;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Ui
 			dragComponent.RootUIComp.Get().SetUIActive(state);
 		}
 
-		// Token: 0x0602E6A4 RID: 190116 RVA: 0x00AB9B1C File Offset: 0x00AB7D1C
+		// Token: 0x06022DEE RID: 142830 RVA: 0x009E714C File Offset: 0x009E534C
 		[NullableContext(1)]
 		public void SetScrollViewItem(UUIItem scrollView)
 		{
@@ -80,13 +80,13 @@ namespace CSharpScript.Game.Ui
 			this.ScrollViewBounceY.Y = (double)num5;
 		}
 
-		// Token: 0x0602E6A5 RID: 190117 RVA: 0x00AB9BC3 File Offset: 0x00AB7DC3
+		// Token: 0x06022DEF RID: 142831 RVA: 0x009E71F3 File Offset: 0x009E53F3
 		public void Refresh(TData data)
 		{
 			this.Delegate.SetCurrentData(data);
 		}
 
-		// Token: 0x0602E6A6 RID: 190118 RVA: 0x00AB9BD6 File Offset: 0x00AB7DD6
+		// Token: 0x06022DF0 RID: 142832 RVA: 0x009E7206 File Offset: 0x009E5406
 		public void StartClickCheckTimer()
 		{
 			this.ClearFingerTick();
@@ -100,26 +100,26 @@ namespace CSharpScript.Game.Ui
 			}, "DragTick", ETickingGroup.TG_PrePhysics, true, 0, true).Id;
 		}
 
-		// Token: 0x0602E6A7 RID: 190119 RVA: 0x00AB9C08 File Offset: 0x00AB7E08
+		// Token: 0x06022DF1 RID: 142833 RVA: 0x009E7238 File Offset: 0x009E5438
 		public Vector2D GetAnimationTargetPos()
 		{
 			return this.AnimationTargetPosition;
 		}
 
-		// Token: 0x0602E6A8 RID: 190120 RVA: 0x00AB9C10 File Offset: 0x00AB7E10
+		// Token: 0x06022DF2 RID: 142834 RVA: 0x009E7240 File Offset: 0x009E5440
 		public void SetDragItemHierarchyMax()
 		{
 			this.DragItem.SetAsLastHierarchy();
 			this.Canvas.SetSortOrder(101, true);
 		}
 
-		// Token: 0x0602E6A9 RID: 190121 RVA: 0x00AB9C2B File Offset: 0x00AB7E2B
+		// Token: 0x06022DF3 RID: 142835 RVA: 0x009E725B File Offset: 0x009E545B
 		public TData GetCurrentData()
 		{
 			return this.Delegate.GetCurrentData();
 		}
 
-		// Token: 0x0602E6AA RID: 190122 RVA: 0x00AB9C40 File Offset: 0x00AB7E40
+		// Token: 0x06022DF4 RID: 142836 RVA: 0x009E7270 File Offset: 0x009E5470
 		public void CacheStartDragPosition()
 		{
 			FVector lguispaceAbsolutePosition = this.DragComponent.RootUIComp.Get().GetLGUISpaceAbsolutePosition();
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Ui
 			this.AnimationTargetPosition = new Vector2D((double)lguispaceAbsolutePosition.X, (double)lguispaceAbsolutePosition.Y);
 		}
 
-		// Token: 0x0602E6AB RID: 190123 RVA: 0x00AB9CB4 File Offset: 0x00AB7EB4
+		// Token: 0x06022DF5 RID: 142837 RVA: 0x009E72E4 File Offset: 0x009E54E4
 		private void BackDragItemToNormalParent()
 		{
 			this.DragComponent.RootUIComp.Get().SetAnchorAlign(UIAnchorHorizontalAlign.Stretch, UIAnchorVerticalAlign.Stretch);
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Ui
 			this.DragComponent.RootUIComp.Get().SetBubbleUpToParent(true);
 		}
 
-		// Token: 0x0602E6AC RID: 190124 RVA: 0x00AB9D78 File Offset: 0x00AB7F78
+		// Token: 0x06022DF6 RID: 142838 RVA: 0x009E73A8 File Offset: 0x009E55A8
 		public void StartDragState()
 		{
 			this.CacheStartDragPosition();
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Ui
 			this.DragComponent.RootUIComp.Get().SetBubbleUpToParent(false);
 		}
 
-		// Token: 0x0602E6AD RID: 190125 RVA: 0x00AB9DE8 File Offset: 0x00AB7FE8
+		// Token: 0x06022DF7 RID: 142839 RVA: 0x009E7418 File Offset: 0x009E5618
 		public void ResetPosition()
 		{
 			this.LevelSequencePlayer.StopSequenceByKey("Drag", false, true);
@@ -173,18 +173,18 @@ namespace CSharpScript.Game.Ui
 			this.DragState = false;
 		}
 
-		// Token: 0x0602E6AE RID: 190126 RVA: 0x00AB9E5D File Offset: 0x00AB805D
+		// Token: 0x06022DF8 RID: 142840 RVA: 0x009E748D File Offset: 0x009E568D
 		public virtual void SetToTargetParentAndSetStretch(UUIItem targetItem)
 		{
 		}
 
-		// Token: 0x0602E6AF RID: 190127 RVA: 0x00AB9E5F File Offset: 0x00AB805F
+		// Token: 0x06022DF9 RID: 142841 RVA: 0x009E748F File Offset: 0x009E568F
 		public void SetToNormalParent()
 		{
 			this.SetToTargetParentAndSetStretch(this.MovingParent);
 		}
 
-		// Token: 0x0602E6B0 RID: 190128 RVA: 0x00AB9E6D File Offset: 0x00AB806D
+		// Token: 0x06022DFA RID: 142842 RVA: 0x009E749D File Offset: 0x009E569D
 		public void SetDragSuccessCallBack([Nullable(new byte[]
 		{
 			1,
@@ -195,84 +195,84 @@ namespace CSharpScript.Game.Ui
 			this.OnDragEndFunction = onFunction;
 		}
 
-		// Token: 0x0602E6B1 RID: 190129 RVA: 0x00AB9E76 File Offset: 0x00AB8076
+		// Token: 0x06022DFB RID: 142843 RVA: 0x009E74A6 File Offset: 0x009E56A6
 		[NullableContext(1)]
 		public void SetMoveToScrollViewCallBack(Action<int> callBack)
 		{
 			this.OnMoveToScrollViewCallBack = callBack;
 		}
 
-		// Token: 0x0602E6B2 RID: 190130 RVA: 0x00AB9E7F File Offset: 0x00AB807F
+		// Token: 0x06022DFC RID: 142844 RVA: 0x009E74AF File Offset: 0x009E56AF
 		[NullableContext(1)]
 		public void SetRemoveFromScrollViewCallBack(Action<int> callBack)
 		{
 			this.OnRemoveFromScrollViewCallBack = callBack;
 		}
 
-		// Token: 0x0602E6B3 RID: 190131 RVA: 0x00AB9E88 File Offset: 0x00AB8088
+		// Token: 0x06022DFD RID: 142845 RVA: 0x009E74B8 File Offset: 0x009E56B8
 		[NullableContext(1)]
 		public void SetEndDragWhenOnScrollViewCallBack(Action<int, TData> callBack)
 		{
 			this.OnEndDragWhenOnScrollViewCallBack = callBack;
 		}
 
-		// Token: 0x0602E6B4 RID: 190132 RVA: 0x00AB9E91 File Offset: 0x00AB8091
+		// Token: 0x06022DFE RID: 142846 RVA: 0x009E74C1 File Offset: 0x009E56C1
 		[NullableContext(1)]
 		public void SetOnUnOverlayCallBack(Action<int> callBack)
 		{
 			this.Delegate.SetOnUnOverlayCallBack(callBack);
 		}
 
-		// Token: 0x0602E6B5 RID: 190133 RVA: 0x00AB9EA4 File Offset: 0x00AB80A4
+		// Token: 0x06022DFF RID: 142847 RVA: 0x009E74D4 File Offset: 0x009E56D4
 		[NullableContext(1)]
 		public void SetOnOverlayCallBack(Action<int> callBack)
 		{
 			this.Delegate.SetOnOverlayCallBack(callBack);
 		}
 
-		// Token: 0x0602E6B6 RID: 190134 RVA: 0x00AB9EB7 File Offset: 0x00AB80B7
+		// Token: 0x06022E00 RID: 142848 RVA: 0x009E74E7 File Offset: 0x009E56E7
 		[NullableContext(1)]
 		public void SetPointerDownCallBack(Action<int> dragEvent)
 		{
 			this.OnPointerDownCallBack = dragEvent;
 		}
 
-		// Token: 0x0602E6B7 RID: 190135 RVA: 0x00AB9EC0 File Offset: 0x00AB80C0
+		// Token: 0x06022E01 RID: 142849 RVA: 0x009E74F0 File Offset: 0x009E56F0
 		[NullableContext(1)]
 		public void SetOnDragAnimationStartFunction(Action<int> onFunction)
 		{
 			this.OnDragAnimationStartFunction = onFunction;
 		}
 
-		// Token: 0x0602E6B8 RID: 190136 RVA: 0x00AB9EC9 File Offset: 0x00AB80C9
+		// Token: 0x06022E02 RID: 142850 RVA: 0x009E74F9 File Offset: 0x009E56F9
 		[NullableContext(1)]
 		public void SetOnDragAnimationEndFunction(Action<int> onFunction)
 		{
 			this.OnDragAnimationEndFunction = onFunction;
 		}
 
-		// Token: 0x0602E6B9 RID: 190137 RVA: 0x00AB9ED2 File Offset: 0x00AB80D2
+		// Token: 0x06022E03 RID: 142851 RVA: 0x009E7502 File Offset: 0x009E5702
 		[NullableContext(1)]
 		public void SetOnClickCallBack(Action<int> onFunction)
 		{
 			this.ClickFunction = onFunction;
 		}
 
-		// Token: 0x0602E6BA RID: 190138 RVA: 0x00AB9EDB File Offset: 0x00AB80DB
+		// Token: 0x06022E04 RID: 142852 RVA: 0x009E750B File Offset: 0x009E570B
 		[NullableContext(1)]
 		public void SetOnClickFailCallBack(Action<int> onFunction)
 		{
 			this.ClickFailFunction = onFunction;
 		}
 
-		// Token: 0x0602E6BB RID: 190139 RVA: 0x00AB9EE4 File Offset: 0x00AB80E4
+		// Token: 0x06022E05 RID: 142853 RVA: 0x009E7514 File Offset: 0x009E5714
 		[NullableContext(1)]
 		public void SetOnBeginDragCall(Action<int> onFunction)
 		{
 			this.OnBeginDragFunction = onFunction;
 		}
 
-		// Token: 0x0602E6BC RID: 190140 RVA: 0x00AB9EF0 File Offset: 0x00AB80F0
+		// Token: 0x06022E06 RID: 142854 RVA: 0x009E7520 File Offset: 0x009E5720
 		[NullableContext(1)]
 		public void SetDragCheckItem(List<CommonDragItemLogic<TItem, TData>> itemList)
 		{
@@ -284,13 +284,13 @@ namespace CSharpScript.Game.Ui
 			this.CheckList = list;
 		}
 
-		// Token: 0x0602E6BD RID: 190141 RVA: 0x00AB9F50 File Offset: 0x00AB8150
+		// Token: 0x06022E07 RID: 142855 RVA: 0x009E7580 File Offset: 0x009E5780
 		public int GetCurrentIndex()
 		{
 			return this.Index;
 		}
 
-		// Token: 0x0602E6BE RID: 190142 RVA: 0x00AB9F58 File Offset: 0x00AB8158
+		// Token: 0x06022E08 RID: 142856 RVA: 0x009E7588 File Offset: 0x009E5788
 		public void TickCheckDrag()
 		{
 			if (this.MoveParentDelay <= 1f)
@@ -302,19 +302,19 @@ namespace CSharpScript.Game.Ui
 			this.CheckOnDrag();
 		}
 
-		// Token: 0x0602E6BF RID: 190143 RVA: 0x00AB9F86 File Offset: 0x00AB8186
+		// Token: 0x06022E09 RID: 142857 RVA: 0x009E75B6 File Offset: 0x009E57B6
 		public void ClearStayingItem()
 		{
 			this.CurrentStaying = default(TItem);
 		}
 
-		// Token: 0x0602E6C0 RID: 190144 RVA: 0x00AB9F94 File Offset: 0x00AB8194
+		// Token: 0x06022E0A RID: 142858 RVA: 0x009E75C4 File Offset: 0x009E57C4
 		public TItem GetStayingItem()
 		{
 			return this.CurrentStaying;
 		}
 
-		// Token: 0x0602E6C1 RID: 190145 RVA: 0x00AB9F9C File Offset: 0x00AB819C
+		// Token: 0x06022E0B RID: 142859 RVA: 0x009E75CC File Offset: 0x009E57CC
 		public void SetItemToPointerPosition()
 		{
 			if (!this.DragState)
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.Ui
 			uuiitem.SetLGUISpaceAbsolutePosition(fvector);
 		}
 
-		// Token: 0x0602E6C2 RID: 190146 RVA: 0x00ABA0B4 File Offset: 0x00AB82B4
+		// Token: 0x06022E0C RID: 142860 RVA: 0x009E76E4 File Offset: 0x009E58E4
 		private void OnPointerDown(ULGUIPointerEventData eventData)
 		{
 			if (!this.Delegate.CheckIfCanDrag() || this.DragState)
@@ -372,7 +372,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E6C3 RID: 190147 RVA: 0x00ABA178 File Offset: 0x00AB8378
+		// Token: 0x06022E0D RID: 142861 RVA: 0x009E77A8 File Offset: 0x009E59A8
 		private void OnPointUp(ULGUIPointerEventData eventData)
 		{
 			this.ClearTick();
@@ -398,7 +398,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E6C4 RID: 190148 RVA: 0x00ABA20A File Offset: 0x00AB840A
+		// Token: 0x06022E0E RID: 142862 RVA: 0x009E783A File Offset: 0x009E5A3A
 		private void ClearFingerTick()
 		{
 			if (this.CurrentCheckFingerTick != -1)
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E6C5 RID: 190149 RVA: 0x00ABA230 File Offset: 0x00AB8430
+		// Token: 0x06022E0F RID: 142863 RVA: 0x009E7860 File Offset: 0x009E5A60
 		private void OnDrag(ULGUIPointerEventData eventData)
 		{
 			if (!this.Delegate.CheckIfCurrentDragIndex(this.Index))
@@ -427,7 +427,7 @@ namespace CSharpScript.Game.Ui
 			this.TickCheckDrag();
 		}
 
-		// Token: 0x0602E6C6 RID: 190150 RVA: 0x00ABA294 File Offset: 0x00AB8494
+		// Token: 0x06022E10 RID: 142864 RVA: 0x009E78C4 File Offset: 0x009E5AC4
 		private void OnDragBegin(ULGUIPointerEventData eventData)
 		{
 			if (!this.Delegate.CheckIfCurrentDragIndex(this.Index))
@@ -444,7 +444,7 @@ namespace CSharpScript.Game.Ui
 			this.IfBeginDrag = true;
 		}
 
-		// Token: 0x0602E6C7 RID: 190151 RVA: 0x00ABA2FC File Offset: 0x00AB84FC
+		// Token: 0x06022E11 RID: 142865 RVA: 0x009E792C File Offset: 0x009E5B2C
 		private void OnDragEnd(ULGUIPointerEventData eventData)
 		{
 			if (this.Delegate.GetCurrentData() == null)
@@ -480,13 +480,13 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E6C8 RID: 190152 RVA: 0x00ABA3B9 File Offset: 0x00AB85B9
+		// Token: 0x06022E12 RID: 142866 RVA: 0x009E79E9 File Offset: 0x009E5BE9
 		public bool CheckAndGetCurrentClickState()
 		{
 			return this.CurrentClickState;
 		}
 
-		// Token: 0x0602E6C9 RID: 190153 RVA: 0x00ABA3C1 File Offset: 0x00AB85C1
+		// Token: 0x06022E13 RID: 142867 RVA: 0x009E79F1 File Offset: 0x009E5BF1
 		private void ClearTick()
 		{
 			if (this.CurrentTick != -1)
@@ -496,7 +496,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E6CA RID: 190154 RVA: 0x00ABA3E4 File Offset: 0x00AB85E4
+		// Token: 0x06022E14 RID: 142868 RVA: 0x009E7A14 File Offset: 0x009E5C14
 		private int GetCurrentFingerNum()
 		{
 			bool flag = LguiEventSystemManager.Instance.IsPressComponentIsValid(0);
@@ -513,7 +513,7 @@ namespace CSharpScript.Game.Ui
 			return num;
 		}
 
-		// Token: 0x0602E6CB RID: 190155 RVA: 0x00ABA418 File Offset: 0x00AB8618
+		// Token: 0x06022E15 RID: 142869 RVA: 0x009E7A48 File Offset: 0x009E5C48
 		[NullableContext(1)]
 		private void FinishSequenceEvent(string sequenceName)
 		{
@@ -529,7 +529,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E6CC RID: 190156 RVA: 0x00ABA44C File Offset: 0x00AB864C
+		// Token: 0x06022E16 RID: 142870 RVA: 0x009E7A7C File Offset: 0x009E5C7C
 		public void DoCeaseSequence()
 		{
 			this.CeaseFailAnimationState = false;
@@ -537,13 +537,13 @@ namespace CSharpScript.Game.Ui
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Cease", false, null, false);
 		}
 
-		// Token: 0x0602E6CD RID: 190157 RVA: 0x00ABA486 File Offset: 0x00AB8686
+		// Token: 0x06022E17 RID: 142871 RVA: 0x009E7AB6 File Offset: 0x009E5CB6
 		public CustomPromise<bool> GetCeaseAnimationPromise()
 		{
 			return this.CeaseAnimationPromise;
 		}
 
-		// Token: 0x0602E6CE RID: 190158 RVA: 0x00ABA490 File Offset: 0x00AB8690
+		// Token: 0x06022E18 RID: 142872 RVA: 0x009E7AC0 File Offset: 0x009E5CC0
 		private void TryDoCeaseFailSequence()
 		{
 			if (this.CeaseFailAnimationState)
@@ -558,7 +558,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E6CF RID: 190159 RVA: 0x00ABA4D8 File Offset: 0x00AB86D8
+		// Token: 0x06022E19 RID: 142873 RVA: 0x009E7B08 File Offset: 0x009E5D08
 		private void DoDragSequence()
 		{
 			this.TickCheckDrag();
@@ -572,7 +572,7 @@ namespace CSharpScript.Game.Ui
 			onDragAnimationStartFunction(this.GetCurrentIndex());
 		}
 
-		// Token: 0x0602E6D0 RID: 190160 RVA: 0x00ABA524 File Offset: 0x00AB8724
+		// Token: 0x06022E1A RID: 142874 RVA: 0x009E7B54 File Offset: 0x009E5D54
 		private void CheckTimeForDoDrag()
 		{
 			if (this.GetCurrentFingerNum() >= 2 || this.GetCurrentFingerNum() == 0)
@@ -603,7 +603,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E6D1 RID: 190161 RVA: 0x00ABA5C4 File Offset: 0x00AB87C4
+		// Token: 0x06022E1B RID: 142875 RVA: 0x009E7BF4 File Offset: 0x009E5DF4
 		private bool TryDoClick(bool force = false)
 		{
 			if (force || this.CheckInClickableTime())
@@ -626,19 +626,19 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602E6D2 RID: 190162 RVA: 0x00ABA62B File Offset: 0x00AB882B
+		// Token: 0x06022E1C RID: 142876 RVA: 0x009E7C5B File Offset: 0x009E5E5B
 		private bool CheckInClickGap()
 		{
 			return Info.Instance.IsInGamepad() || TimeUtil.Instance.GetServerTime() - this.LastClickTime > 0.10000000149011612;
 		}
 
-		// Token: 0x0602E6D3 RID: 190163 RVA: 0x00ABA657 File Offset: 0x00AB8857
+		// Token: 0x06022E1D RID: 142877 RVA: 0x009E7C87 File Offset: 0x009E5E87
 		private bool CheckInClickableTime()
 		{
 			return this.CurrentRunningTime < this.Delegate.GetClickTime() && this.CheckInClickGap();
 		}
 
-		// Token: 0x0602E6D4 RID: 190164 RVA: 0x00ABA67C File Offset: 0x00AB887C
+		// Token: 0x06022E1E RID: 142878 RVA: 0x009E7CAC File Offset: 0x009E5EAC
 		private void CheckOnDrag()
 		{
 			List<CommonDragLogicDataItem<TData>> newOverlayTmp = new List<CommonDragLogicDataItem<TData>>();
@@ -700,14 +700,14 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E6D5 RID: 190165 RVA: 0x00ABA7B8 File Offset: 0x00AB89B8
+		// Token: 0x06022E1F RID: 142879 RVA: 0x009E7DE8 File Offset: 0x009E5FE8
 		[NullableContext(0)]
 		public ValueTuple<float, float> GetMiddlePosition()
 		{
 			return new ValueTuple<float, float>(this.DragComponent.RootUIComp.Get().GetLGUISpaceCenterAbsolutePosition().X, this.DragComponent.RootUIComp.Get().GetLGUISpaceCenterAbsolutePosition().Y);
 		}
 
-		// Token: 0x0602E6D6 RID: 190166 RVA: 0x00ABA804 File Offset: 0x00AB8A04
+		// Token: 0x06022E20 RID: 142880 RVA: 0x009E7E34 File Offset: 0x009E6034
 		[NullableContext(1)]
 		public void SetDragComponentToTargetPositionParam(Vector2D targetVec)
 		{
@@ -719,7 +719,7 @@ namespace CSharpScript.Game.Ui
 			this.AnimationStartPos.Y = (double)lguispaceAbsolutePosition.Y;
 		}
 
-		// Token: 0x0602E6D7 RID: 190167 RVA: 0x00ABA86C File Offset: 0x00AB8A6C
+		// Token: 0x06022E21 RID: 142881 RVA: 0x009E7E9C File Offset: 0x009E609C
 		public UniTask TickDoCeaseAnimation(float currentProgress)
 		{
 			CommonDragItemLogic<TItem, TData>.<TickDoCeaseAnimation>d__102 <TickDoCeaseAnimation>d__;
@@ -731,28 +731,28 @@ namespace CSharpScript.Game.Ui
 			return <TickDoCeaseAnimation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E6D8 RID: 190168 RVA: 0x00ABA8B7 File Offset: 0x00AB8AB7
+		// Token: 0x06022E22 RID: 142882 RVA: 0x009E7EE7 File Offset: 0x009E60E7
 		public void SetMovingState(bool state)
 		{
 			this.MovingState = state;
 		}
 
-		// Token: 0x04018DE2 RID: 101858
+		// Token: 0x0401343B RID: 78907
 		public CustomPromise<bool> CeaseAnimationPromise;
 
-		// Token: 0x04018DE3 RID: 101859
+		// Token: 0x0401343C RID: 78908
 		private readonly TItem Delegate;
 
-		// Token: 0x04018DE4 RID: 101860
+		// Token: 0x0401343D RID: 78909
 		private readonly UUIDraggableComponent DragComponent;
 
-		// Token: 0x04018DE5 RID: 101861
+		// Token: 0x0401343E RID: 78910
 		private readonly int Index = -1;
 
-		// Token: 0x04018DE6 RID: 101862
+		// Token: 0x0401343F RID: 78911
 		protected Action<int> OnPointerDownCallBack;
 
-		// Token: 0x04018DE7 RID: 101863
+		// Token: 0x04013440 RID: 78912
 		[Nullable(new byte[]
 		{
 			2,
@@ -760,28 +760,28 @@ namespace CSharpScript.Game.Ui
 		})]
 		protected Action<int, TData> OnEndDragWhenOnScrollViewCallBack;
 
-		// Token: 0x04018DE8 RID: 101864
+		// Token: 0x04013441 RID: 78913
 		protected Action<int> OnMoveToScrollViewCallBack;
 
-		// Token: 0x04018DE9 RID: 101865
+		// Token: 0x04013442 RID: 78914
 		protected Action<int> OnRemoveFromScrollViewCallBack;
 
-		// Token: 0x04018DEA RID: 101866
+		// Token: 0x04013443 RID: 78915
 		protected Action<int> ClickFunction;
 
-		// Token: 0x04018DEB RID: 101867
+		// Token: 0x04013444 RID: 78916
 		protected Action<int> ClickFailFunction;
 
-		// Token: 0x04018DEC RID: 101868
+		// Token: 0x04013445 RID: 78917
 		protected Action<int> OnBeginDragFunction;
 
-		// Token: 0x04018DED RID: 101869
+		// Token: 0x04013446 RID: 78918
 		protected Action<int> OnDragAnimationStartFunction;
 
-		// Token: 0x04018DEE RID: 101870
+		// Token: 0x04013447 RID: 78919
 		protected Action<int> OnDragAnimationEndFunction;
 
-		// Token: 0x04018DEF RID: 101871
+		// Token: 0x04013448 RID: 78920
 		[Nullable(new byte[]
 		{
 			2,
@@ -790,38 +790,38 @@ namespace CSharpScript.Game.Ui
 		})]
 		protected Action<TItem, TItem, bool> OnDragEndFunction;
 
-		// Token: 0x04018DF0 RID: 101872
+		// Token: 0x04013449 RID: 78921
 		private ULGUIPointerEventData CurrentMoveData;
 
-		// Token: 0x04018DF1 RID: 101873
+		// Token: 0x0401344A RID: 78922
 		private bool CurrentClickState;
 
-		// Token: 0x04018DF2 RID: 101874
+		// Token: 0x0401344B RID: 78923
 		private float CurrentRunningTime;
 
-		// Token: 0x04018DF3 RID: 101875
+		// Token: 0x0401344C RID: 78924
 		private bool IfDragMove;
 
-		// Token: 0x04018DF4 RID: 101876
+		// Token: 0x0401344D RID: 78925
 		private bool PlayDragSequenceState;
 
-		// Token: 0x04018DF5 RID: 101877
+		// Token: 0x0401344E RID: 78926
 		private int CurrentTick = -1;
 
-		// Token: 0x04018DF6 RID: 101878
+		// Token: 0x0401344F RID: 78927
 		private bool IfBeginDrag;
 
-		// Token: 0x04018DF7 RID: 101879
+		// Token: 0x04013450 RID: 78928
 		private int CurrentCheckFingerTick = -1;
 
-		// Token: 0x04018DF8 RID: 101880
+		// Token: 0x04013451 RID: 78929
 		private double LastClickTime;
 
-		// Token: 0x04018DF9 RID: 101881
+		// Token: 0x04013452 RID: 78930
 		[Nullable(1)]
 		private readonly Vector StaticBeginVector = Vector.Create();
 
-		// Token: 0x04018DFA RID: 101882
+		// Token: 0x04013453 RID: 78931
 		[Nullable(new byte[]
 		{
 			2,
@@ -829,74 +829,74 @@ namespace CSharpScript.Game.Ui
 		})]
 		protected List<TItem> CheckList;
 
-		// Token: 0x04018DFB RID: 101883
+		// Token: 0x04013454 RID: 78932
 		protected TItem CurrentStaying;
 
-		// Token: 0x04018DFC RID: 101884
+		// Token: 0x04013455 RID: 78933
 		private bool CeaseFailAnimationState;
 
-		// Token: 0x04018DFD RID: 101885
+		// Token: 0x04013456 RID: 78934
 		private bool DragState;
 
-		// Token: 0x04018DFE RID: 101886
+		// Token: 0x04013457 RID: 78935
 		private readonly LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04018DFF RID: 101887
+		// Token: 0x04013458 RID: 78936
 		private float MoveParentDelay;
 
-		// Token: 0x04018E00 RID: 101888
+		// Token: 0x04013459 RID: 78937
 		private Vector2D StartPosition;
 
-		// Token: 0x04018E01 RID: 101889
+		// Token: 0x0401345A RID: 78938
 		private Vector2D AnimationTargetPosition;
 
-		// Token: 0x04018E02 RID: 101890
+		// Token: 0x0401345B RID: 78939
 		private readonly UUIItem MovingParent;
 
-		// Token: 0x04018E03 RID: 101891
+		// Token: 0x0401345C RID: 78940
 		private readonly UUIItem NormalParent;
 
-		// Token: 0x04018E04 RID: 101892
+		// Token: 0x0401345D RID: 78941
 		private readonly FVector2D? StretchVector;
 
-		// Token: 0x04018E05 RID: 101893
+		// Token: 0x0401345E RID: 78942
 		private readonly UUIItem DragItem;
 
-		// Token: 0x04018E06 RID: 101894
+		// Token: 0x0401345F RID: 78943
 		[Nullable(1)]
 		private readonly Vector2D ScrollViewBounceX = new Vector2D(0.0, 0.0);
 
-		// Token: 0x04018E07 RID: 101895
+		// Token: 0x04013460 RID: 78944
 		[Nullable(1)]
 		private readonly Vector2D ScrollViewBounceY = new Vector2D(0.0, 0.0);
 
-		// Token: 0x04018E08 RID: 101896
+		// Token: 0x04013461 RID: 78945
 		private bool IfStayInScrollView;
 
-		// Token: 0x04018E09 RID: 101897
+		// Token: 0x04013462 RID: 78946
 		[Nullable(1)]
 		private readonly Vector2D CurrentAnimationTargetPos = new Vector2D(0.0, 0.0);
 
-		// Token: 0x04018E0A RID: 101898
+		// Token: 0x04013463 RID: 78947
 		private bool CeaseState;
 
-		// Token: 0x04018E0B RID: 101899
+		// Token: 0x04013464 RID: 78948
 		[Nullable(1)]
 		private readonly Vector2D AnimationStartPos = new Vector2D(0.0, 0.0);
 
-		// Token: 0x04018E0C RID: 101900
+		// Token: 0x04013465 RID: 78949
 		private bool MovingState;
 
-		// Token: 0x04018E0D RID: 101901
+		// Token: 0x04013466 RID: 78950
 		private readonly ULGUICanvas Canvas;
 
-		// Token: 0x04018E0E RID: 101902
+		// Token: 0x04013467 RID: 78951
 		private const float CLICKCALLGAP = 0.1f;
 
-		// Token: 0x04018E0F RID: 101903
+		// Token: 0x04013468 RID: 78952
 		private const int MOVEPARENTDELAYTIME = 1;
 
-		// Token: 0x04018E10 RID: 101904
+		// Token: 0x04013469 RID: 78953
 		private const int HEIGHTCANVASSORT = 100;
 	}
 }

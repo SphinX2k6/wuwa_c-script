@@ -3,21 +3,21 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 {
-	// Token: 0x02007045 RID: 28741
+	// Token: 0x020061C6 RID: 25030
 	[EnumExtensions]
 	public enum EMotorcycleRailMoveDataType
 	{
-		// Token: 0x040249BF RID: 149951
+		// Token: 0x0401FC75 RID: 130165
 		AccelerateAlongRail,
-		// Token: 0x040249C0 RID: 149952
+		// Token: 0x0401FC76 RID: 130166
 		JumpToRail,
-		// Token: 0x040249C1 RID: 149953
+		// Token: 0x0401FC77 RID: 130167
 		SwitchRail,
-		// Token: 0x040249C2 RID: 149954
+		// Token: 0x0401FC78 RID: 130168
 		JumpAlongRail,
-		// Token: 0x040249C3 RID: 149955
+		// Token: 0x0401FC79 RID: 130169
 		SimpleMoveToRail,
-		// Token: 0x040249C4 RID: 149956
+		// Token: 0x0401FC7A RID: 130170
 		JumpFromRail
 	}
 }

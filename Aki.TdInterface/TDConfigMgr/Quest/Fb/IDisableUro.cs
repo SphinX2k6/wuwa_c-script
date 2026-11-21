@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012F5 RID: 4853
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001445 RID: 5189
 	public class IDisableUro : ILogicProgramSpecialProcessOperation
 	{
-		// Token: 0x06006EB7 RID: 28343 RVA: 0x0010B65C File Offset: 0x0010985C
+		// Token: 0x06007557 RID: 30039 RVA: 0x00119BC7 File Offset: 0x00117DC7
 		public static IDisableUro Create(IDisableUro? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170022A0 RID: 8864
-		// (get) Token: 0x06006EB8 RID: 28344 RVA: 0x0010B67B File Offset: 0x0010987B
+		// Token: 0x1700246F RID: 9327
+		// (get) Token: 0x06007558 RID: 30040 RVA: 0x00119BE6 File Offset: 0x00117DE6
 		public override ELogicProgramSpecialProcess Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022A1 RID: 8865
-		// (get) Token: 0x06006EB9 RID: 28345 RVA: 0x0010B688 File Offset: 0x00109888
+		// Token: 0x17002470 RID: 9328
+		// (get) Token: 0x06007559 RID: 30041 RVA: 0x00119BF4 File Offset: 0x00117DF4
 		public virtual List<int> EntityIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F75 RID: 16245
+		// Token: 0x040042F1 RID: 17137
 		private IDisableUro Instance;
 
-		// Token: 0x04003F76 RID: 16246
+		// Token: 0x040042F2 RID: 17138
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04003F77 RID: 16247
+		// Token: 0x040042F3 RID: 17139
 		private bool _EntityIdsInited;
 	}
 }

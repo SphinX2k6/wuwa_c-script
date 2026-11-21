@@ -9,15 +9,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 {
-	// Token: 0x0200709C RID: 28828
+	// Token: 0x02006301 RID: 25345
 	[NullableContext(2)]
 	[Nullable(0)]
-	public class NpcTimetableComponent : EntityComponent, IComponentDependency
+	public class NpcTimetableComponent : EntityComponent
 	{
-		// Token: 0x17009C26 RID: 39974
-		// (get) Token: 0x060463E5 RID: 287717 RVA: 0x01193605 File Offset: 0x01191805
+		// Token: 0x17007408 RID: 29704
+		// (get) Token: 0x0603D4D0 RID: 251088 RVA: 0x011B6711 File Offset: 0x011B4911
 		[Nullable(1)]
-		public static Type[] Dependencies
+		public override Type[] Dependencies
 		{
 			[NullableContext(1)]
 			get
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			}
 		}
 
-		// Token: 0x060463E6 RID: 287718 RVA: 0x01193628 File Offset: 0x01191828
+		// Token: 0x0603D4D1 RID: 251089 RVA: 0x011B6734 File Offset: 0x011B4934
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			return true;
 		}
 
-		// Token: 0x060463E7 RID: 287719 RVA: 0x01193650 File Offset: 0x01191850
+		// Token: 0x0603D4D2 RID: 251090 RVA: 0x011B675C File Offset: 0x011B495C
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.CheckGetComponent<CharacterActorComponent>();
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			return true;
 		}
 
-		// Token: 0x060463E8 RID: 287720 RVA: 0x011936A8 File Offset: 0x011918A8
+		// Token: 0x0603D4D3 RID: 251091 RVA: 0x011B67B4 File Offset: 0x011B49B4
 		protected override void OnActivate()
 		{
 			TimetableConfigData timeScheduleByCreatureId = NpcTimetableController.Instance.GetTimeScheduleByCreatureId(this.CreatureId);
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			this.SwitchTimetable(timeScheduleByCreatureId, "Activate", false);
 		}
 
-		// Token: 0x060463E9 RID: 287721 RVA: 0x011936D7 File Offset: 0x011918D7
+		// Token: 0x0603D4D4 RID: 251092 RVA: 0x011B67E3 File Offset: 0x011B49E3
 		protected override bool OnClear()
 		{
 			this.RemoveEvents();
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			return true;
 		}
 
-		// Token: 0x060463EA RID: 287722 RVA: 0x01193700 File Offset: 0x01191900
+		// Token: 0x0603D4D5 RID: 251093 RVA: 0x011B680C File Offset: 0x011B4A0C
 		protected void AddEvents()
 		{
 			if (this.IsEventAdded)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			EventSystem.Instance.AddWithTarget(base.Entity, EEventName.OnPatrolStop, new Action<int>(this.OnPatrolPauseOrStop));
 		}
 
-		// Token: 0x060463EB RID: 287723 RVA: 0x0119380C File Offset: 0x01191A0C
+		// Token: 0x0603D4D6 RID: 251094 RVA: 0x011B6918 File Offset: 0x011B4B18
 		protected void RemoveEvents()
 		{
 			if (!this.IsEventAdded)
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.OnPatrolStop, new Action<int>(this.OnPatrolPauseOrStop));
 		}
 
-		// Token: 0x060463EC RID: 287724 RVA: 0x01193918 File Offset: 0x01191B18
+		// Token: 0x0603D4D7 RID: 251095 RVA: 0x011B6A24 File Offset: 0x011B4C24
 		protected unsafe void OnRunBehaviorTree()
 		{
 			bool flag = this.TryLoadTimetableSavedData();
@@ -141,21 +141,21 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			this.IsBehaviorTreeRunning = true;
 		}
 
-		// Token: 0x060463ED RID: 287725 RVA: 0x01193A0F File Offset: 0x01191C0F
+		// Token: 0x0603D4D8 RID: 251096 RVA: 0x011B6B1B File Offset: 0x011B4D1B
 		protected void OnBeforeAiDisable()
 		{
 			this.TrySaveTimetableSavedData();
 			this.IsBehaviorTreeRunning = false;
 		}
 
-		// Token: 0x060463EE RID: 287726 RVA: 0x01193A1F File Offset: 0x01191C1F
+		// Token: 0x0603D4D9 RID: 251097 RVA: 0x011B6B2B File Offset: 0x011B4D2B
 		protected void OnAiEnable()
 		{
 			this.LastSavedData = null;
 			this.IsBehaviorTreeRunning = true;
 		}
 
-		// Token: 0x060463EF RID: 287727 RVA: 0x01193A2F File Offset: 0x01191C2F
+		// Token: 0x0603D4DA RID: 251098 RVA: 0x011B6B3B File Offset: 0x011B4D3B
 		protected void OnPatrolStartOrResume(int splineId)
 		{
 			if (this.IsBehaviorTreeRunning)
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			this.LastSavedPatrolIsAiSpline = false;
 		}
 
-		// Token: 0x060463F0 RID: 287728 RVA: 0x01193A48 File Offset: 0x01191C48
+		// Token: 0x0603D4DB RID: 251099 RVA: 0x011B6B54 File Offset: 0x011B4D54
 		protected void OnPatrolPauseOrStop(int splineId)
 		{
 			if (this.IsBehaviorTreeRunning)
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			this.LastSavedPatrolIsAiSpline = false;
 		}
 
-		// Token: 0x060463F1 RID: 287729 RVA: 0x01193A98 File Offset: 0x01191C98
+		// Token: 0x0603D4DC RID: 251100 RVA: 0x011B6BA4 File Offset: 0x011B4DA4
 		protected bool TrySaveTimetableSavedData()
 		{
 			if (this.CurTimetableData == null)
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			return true;
 		}
 
-		// Token: 0x060463F2 RID: 287730 RVA: 0x01193BB4 File Offset: 0x01191DB4
+		// Token: 0x0603D4DD RID: 251101 RVA: 0x011B6CC0 File Offset: 0x011B4EC0
 		public bool CanLoadTimetableSavedData()
 		{
 			if (this.CurTimetableData == null)
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			return timetableSavedData != null && timetableSavedData.IsValid() && !(timetableSavedData.BehaviorTreeData.Path != this.AiComp.CurrentAiBehaviorTree);
 		}
 
-		// Token: 0x060463F3 RID: 287731 RVA: 0x01193C68 File Offset: 0x01191E68
+		// Token: 0x0603D4DE RID: 251102 RVA: 0x011B6D74 File Offset: 0x011B4F74
 		protected bool TryLoadTimetableSavedData()
 		{
 			if (!this.CanLoadTimetableSavedData())
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			return true;
 		}
 
-		// Token: 0x060463F4 RID: 287732 RVA: 0x01193CCC File Offset: 0x01191ECC
+		// Token: 0x0603D4DF RID: 251103 RVA: 0x011B6DD8 File Offset: 0x011B4FD8
 		[NullableContext(1)]
 		protected void LoadBehaviorSavedData(BehaviorTreeSavedData savedData)
 		{
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			}
 		}
 
-		// Token: 0x060463F5 RID: 287733 RVA: 0x01193D24 File Offset: 0x01191F24
+		// Token: 0x0603D4E0 RID: 251104 RVA: 0x011B6E30 File Offset: 0x011B5030
 		protected void SendTimetableSavedDataToExternal()
 		{
 			if (this.CurTimetableData == null)
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			}
 		}
 
-		// Token: 0x060463F6 RID: 287734 RVA: 0x01193E34 File Offset: 0x01192034
+		// Token: 0x0603D4E1 RID: 251105 RVA: 0x011B6F40 File Offset: 0x011B5140
 		[NullableContext(1)]
 		public void SwitchTimetable(TimetableConfigData timetableData, string reason = "", bool bDelay = false)
 		{
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			}, randomFloatNumber, null, null, true, 1f);
 		}
 
-		// Token: 0x060463F7 RID: 287735 RVA: 0x01193ED0 File Offset: 0x011920D0
+		// Token: 0x0603D4E2 RID: 251106 RVA: 0x011B6FDC File Offset: 0x011B51DC
 		[NullableContext(1)]
 		protected void SwitchTimetableInternal(TimetableConfigData timetableData)
 		{
@@ -460,7 +460,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			}
 		}
 
-		// Token: 0x060463F8 RID: 287736 RVA: 0x01194070 File Offset: 0x01192270
+		// Token: 0x0603D4E3 RID: 251107 RVA: 0x011B717C File Offset: 0x011B537C
 		[NullableContext(1)]
 		public void StopTimetable(string reason = "", bool bDelay = false)
 		{
@@ -488,7 +488,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			}, randomFloatNumber, null, null, true, 1f);
 		}
 
-		// Token: 0x060463F9 RID: 287737 RVA: 0x011940FC File Offset: 0x011922FC
+		// Token: 0x0603D4E4 RID: 251108 RVA: 0x011B7208 File Offset: 0x011B5408
 		private unsafe void StopTimetableInternal()
 		{
 			EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.OnNpcStopTimetable);
@@ -527,7 +527,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 			}
 		}
 
-		// Token: 0x060463FA RID: 287738 RVA: 0x0119422C File Offset: 0x0119242C
+		// Token: 0x0603D4E5 RID: 251109 RVA: 0x011B7338 File Offset: 0x011B5538
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -536,155 +536,146 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Component
 				return false;
 			}
 			NpcTimetableComponent npcTimetableComponent = (NpcTimetableComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (npcTimetableComponent.ActorComp == null)
 			{
-				if (npcTimetableComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("AiComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (npcTimetableComponent.AiComp == null)
-				{
-					this.AiComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAiComponent>(this.AiComp), "AiComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PatrolComp"))
+			if (npcTimetableComponent.AiComp == null)
 			{
-				if (npcTimetableComponent.PatrolComp == null)
-				{
-					this.PatrolComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterPatrolComponent>(this.PatrolComp), "PatrolComp"))
-				{
-					return false;
-				}
+				this.AiComp = null;
 			}
-			if (base.CanResetComponentProperty("PerformComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AiComp), "AiComp"))
 			{
-				if (npcTimetableComponent.PerformComp == null)
-				{
-					this.PerformComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BasePerformComponent>(this.PerformComp), "PerformComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsEventAdded"))
+			if (npcTimetableComponent.PatrolComp == null)
 			{
-				this.IsEventAdded = npcTimetableComponent.IsEventAdded;
+				this.PatrolComp = null;
 			}
-			if (base.CanResetComponentProperty("CreatureId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PatrolComp), "PatrolComp"))
 			{
-				this.CreatureId = npcTimetableComponent.CreatureId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsBehaviorTreeRunning"))
+			if (npcTimetableComponent.PerformComp == null)
 			{
-				this.IsBehaviorTreeRunning = npcTimetableComponent.IsBehaviorTreeRunning;
+				this.PerformComp = null;
 			}
-			if (base.CanResetComponentProperty("CurTimetableData"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformComp), "PerformComp"))
 			{
-				if (npcTimetableComponent.CurTimetableData == null)
-				{
-					this.CurTimetableData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimetableConfigData>(this.CurTimetableData), "CurTimetableData"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurrentSelectedBTPath"))
+			this.IsEventAdded = npcTimetableComponent.IsEventAdded;
+			this.CreatureId = npcTimetableComponent.CreatureId;
+			this.IsBehaviorTreeRunning = npcTimetableComponent.IsBehaviorTreeRunning;
+			if (npcTimetableComponent.CurTimetableData == null)
 			{
-				this.CurrentSelectedBTPath = npcTimetableComponent.CurrentSelectedBTPath;
+				this.CurTimetableData = null;
 			}
-			if (base.CanResetComponentProperty("DelaySwitchHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurTimetableData), "CurTimetableData"))
 			{
-				if (npcTimetableComponent.DelaySwitchHandle == null)
-				{
-					this.DelaySwitchHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DelaySwitchHandle), "DelaySwitchHandle"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LastSavedData"))
+			this.CurrentSelectedBTPath = npcTimetableComponent.CurrentSelectedBTPath;
+			if (npcTimetableComponent.DelaySwitchHandle == null)
 			{
-				if (npcTimetableComponent.LastSavedData == null)
-				{
-					this.LastSavedData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimetableSavedData>(this.LastSavedData), "LastSavedData"))
-				{
-					return false;
-				}
+				this.DelaySwitchHandle = null;
 			}
-			if (base.CanResetComponentProperty("LastSavedPatrolData"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelaySwitchHandle), "DelaySwitchHandle"))
 			{
-				if (npcTimetableComponent.LastSavedPatrolData == null)
-				{
-					this.LastSavedPatrolData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PatrolSavedData>(this.LastSavedPatrolData), "LastSavedPatrolData"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LastSavedPatrolIsAiSpline"))
+			if (npcTimetableComponent.LastSavedData == null)
 			{
-				this.LastSavedPatrolIsAiSpline = npcTimetableComponent.LastSavedPatrolIsAiSpline;
+				this.LastSavedData = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastSavedData), "LastSavedData"))
+			{
+				return false;
+			}
+			if (npcTimetableComponent.LastSavedPatrolData == null)
+			{
+				this.LastSavedPatrolData = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastSavedPatrolData), "LastSavedPatrolData"))
+			{
+				return false;
+			}
+			this.LastSavedPatrolIsAiSpline = npcTimetableComponent.LastSavedPatrolIsAiSpline;
 			return true;
 		}
 
-		// Token: 0x04024CF0 RID: 150768
+		// Token: 0x17007409 RID: 29705
+		// (get) Token: 0x0603D4E6 RID: 251110 RVA: 0x011B74EC File Offset: 0x011B56EC
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700740A RID: 29706
+		// (get) Token: 0x0603D4E7 RID: 251111 RVA: 0x011B74EF File Offset: 0x011B56EF
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700740B RID: 29707
+		// (get) Token: 0x0603D4E8 RID: 251112 RVA: 0x011B74F2 File Offset: 0x011B56F2
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020842 RID: 133186
 		protected CharacterActorComponent ActorComp;
 
-		// Token: 0x04024CF1 RID: 150769
+		// Token: 0x04020843 RID: 133187
 		protected CharacterAiComponent AiComp;
 
-		// Token: 0x04024CF2 RID: 150770
+		// Token: 0x04020844 RID: 133188
 		protected CharacterPatrolComponent PatrolComp;
 
-		// Token: 0x04024CF3 RID: 150771
+		// Token: 0x04020845 RID: 133189
 		protected BasePerformComponent PerformComp;
 
-		// Token: 0x04024CF4 RID: 150772
+		// Token: 0x04020846 RID: 133190
 		protected bool IsEventAdded;
 
-		// Token: 0x04024CF5 RID: 150773
+		// Token: 0x04020847 RID: 133191
 		protected long CreatureId;
 
-		// Token: 0x04024CF6 RID: 150774
+		// Token: 0x04020848 RID: 133192
 		protected bool IsBehaviorTreeRunning;
 
-		// Token: 0x04024CF7 RID: 150775
+		// Token: 0x04020849 RID: 133193
 		protected TimetableConfigData CurTimetableData;
 
-		// Token: 0x04024CF8 RID: 150776
+		// Token: 0x0402084A RID: 133194
 		[Nullable(1)]
 		protected string CurrentSelectedBTPath = "";
 
-		// Token: 0x04024CF9 RID: 150777
+		// Token: 0x0402084B RID: 133195
 		protected TimerHandle DelaySwitchHandle;
 
-		// Token: 0x04024CFA RID: 150778
+		// Token: 0x0402084C RID: 133196
 		protected TimetableSavedData LastSavedData;
 
-		// Token: 0x04024CFB RID: 150779
+		// Token: 0x0402084D RID: 133197
 		protected PatrolSavedData LastSavedPatrolData;
 
-		// Token: 0x04024CFC RID: 150780
+		// Token: 0x0402084E RID: 133198
 		protected bool LastSavedPatrolIsAiSpline;
 	}
 }

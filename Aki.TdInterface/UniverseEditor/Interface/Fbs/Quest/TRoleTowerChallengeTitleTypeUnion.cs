@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004309 RID: 17161
+	// Token: 0x02004768 RID: 18280
 	public class TRoleTowerChallengeTitleTypeUnion
 	{
-		// Token: 0x17007968 RID: 31080
-		// (get) Token: 0x06019735 RID: 104245 RVA: 0x003A5DCA File Offset: 0x003A3FCA
-		// (set) Token: 0x06019736 RID: 104246 RVA: 0x003A5DD2 File Offset: 0x003A3FD2
+		// Token: 0x17007F9B RID: 32667
+		// (get) Token: 0x0601AEB7 RID: 110263 RVA: 0x003D16FA File Offset: 0x003CF8FA
+		// (set) Token: 0x0601AEB8 RID: 110264 RVA: 0x003D1702 File Offset: 0x003CF902
 		public TRoleTowerChallengeTitleType Type { get; set; }
 
-		// Token: 0x17007969 RID: 31081
-		// (get) Token: 0x06019737 RID: 104247 RVA: 0x003A5DDB File Offset: 0x003A3FDB
-		// (set) Token: 0x06019738 RID: 104248 RVA: 0x003A5DE3 File Offset: 0x003A3FE3
+		// Token: 0x17007F9C RID: 32668
+		// (get) Token: 0x0601AEB9 RID: 110265 RVA: 0x003D170B File Offset: 0x003CF90B
+		// (set) Token: 0x0601AEBA RID: 110266 RVA: 0x003D1713 File Offset: 0x003CF913
 		public object Value { get; set; }
 
-		// Token: 0x06019739 RID: 104249 RVA: 0x003A5DEC File Offset: 0x003A3FEC
+		// Token: 0x0601AEBB RID: 110267 RVA: 0x003D171C File Offset: 0x003CF91C
 		public TRoleTowerChallengeTitleTypeUnion()
 		{
 			this.Type = TRoleTowerChallengeTitleType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601973A RID: 104250 RVA: 0x003A5E02 File Offset: 0x003A4002
+		// Token: 0x0601AEBC RID: 110268 RVA: 0x003D1732 File Offset: 0x003CF932
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601973B RID: 104251 RVA: 0x003A5E14 File Offset: 0x003A4014
+		// Token: 0x0601AEBD RID: 110269 RVA: 0x003D1744 File Offset: 0x003CF944
 		public IRoleTowerChallengeTitleCurrentFloorT AsIRoleTowerChallengeTitleCurrentFloor()
 		{
 			return this.As<IRoleTowerChallengeTitleCurrentFloorT>();
 		}
 
-		// Token: 0x0601973C RID: 104252 RVA: 0x003A5E1C File Offset: 0x003A401C
+		// Token: 0x0601AEBE RID: 110270 RVA: 0x003D174C File Offset: 0x003CF94C
 		public static TRoleTowerChallengeTitleTypeUnion FromIRoleTowerChallengeTitleCurrentFloor(IRoleTowerChallengeTitleCurrentFloorT _iroletowerchallengetitlecurrentfloor)
 		{
 			return new TRoleTowerChallengeTitleTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601973D RID: 104253 RVA: 0x003A5E31 File Offset: 0x003A4031
+		// Token: 0x0601AEBF RID: 110271 RVA: 0x003D1761 File Offset: 0x003CF961
 		public IRoleTowerChallengeTitleKillProgressT AsIRoleTowerChallengeTitleKillProgress()
 		{
 			return this.As<IRoleTowerChallengeTitleKillProgressT>();
 		}
 
-		// Token: 0x0601973E RID: 104254 RVA: 0x003A5E39 File Offset: 0x003A4039
+		// Token: 0x0601AEC0 RID: 110272 RVA: 0x003D1769 File Offset: 0x003CF969
 		public static TRoleTowerChallengeTitleTypeUnion FromIRoleTowerChallengeTitleKillProgress(IRoleTowerChallengeTitleKillProgressT _iroletowerchallengetitlekillprogress)
 		{
 			return new TRoleTowerChallengeTitleTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601973F RID: 104255 RVA: 0x003A5E4E File Offset: 0x003A404E
+		// Token: 0x0601AEC1 RID: 110273 RVA: 0x003D177E File Offset: 0x003CF97E
 		public IRoleTowerChallengeTitlePhantomExpT AsIRoleTowerChallengeTitlePhantomExp()
 		{
 			return this.As<IRoleTowerChallengeTitlePhantomExpT>();
 		}
 
-		// Token: 0x06019740 RID: 104256 RVA: 0x003A5E56 File Offset: 0x003A4056
+		// Token: 0x0601AEC2 RID: 110274 RVA: 0x003D1786 File Offset: 0x003CF986
 		public static TRoleTowerChallengeTitleTypeUnion FromIRoleTowerChallengeTitlePhantomExp(IRoleTowerChallengeTitlePhantomExpT _iroletowerchallengetitlephantomexp)
 		{
 			return new TRoleTowerChallengeTitleTypeUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019741 RID: 104257 RVA: 0x003A5E6C File Offset: 0x003A406C
+		// Token: 0x0601AEC3 RID: 110275 RVA: 0x003D179C File Offset: 0x003CF99C
 		public static int Pack(FlatBufferBuilder builder, TRoleTowerChallengeTitleTypeUnion _o)
 		{
 			switch (_o.Type)

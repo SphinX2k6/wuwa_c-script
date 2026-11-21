@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x0200571A RID: 22298
+	// Token: 0x020046F1 RID: 18161
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class KurotatoUtil
 	{
-		// Token: 0x06038B0F RID: 232207 RVA: 0x00D728B0 File Offset: 0x00D70AB0
+		// Token: 0x0602DA1E RID: 186910 RVA: 0x00CC0E90 File Offset: 0x00CBF090
 		public static string GetEffectDescription(IReadOnlyList<int> effectIdList)
 		{
 			List<string> list = new List<string>();
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return string.Join("\n", list);
 		}
 
-		// Token: 0x06038B10 RID: 232208 RVA: 0x00D72924 File Offset: 0x00D70B24
+		// Token: 0x0602DA1F RID: 186911 RVA: 0x00CC0F04 File Offset: 0x00CBF104
 		public static List<string> GetEffectDescriptionLines(IReadOnlyList<int> effectIdList)
 		{
 			List<string> list = new List<string>();
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return list;
 		}
 
-		// Token: 0x06038B11 RID: 232209 RVA: 0x00D72990 File Offset: 0x00D70B90
+		// Token: 0x0602DA20 RID: 186912 RVA: 0x00CC0F70 File Offset: 0x00CBF170
 		public static string GetPropertyShowValue(int propertyId, float value)
 		{
 			KurotatoProperty value2 = KurotatoConfig.Instance.GetPropertyById(propertyId).Value;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return KurotatoUtil.<GetPropertyShowValue>g__CeilToPrecision|2_0(value, ref CS$<>8__locals1);
 		}
 
-		// Token: 0x06038B12 RID: 232210 RVA: 0x00D72A30 File Offset: 0x00D70C30
+		// Token: 0x0602DA21 RID: 186913 RVA: 0x00CC1010 File Offset: 0x00CBF210
 		public static void SetAttrValueColor(UUIText text, float value, float? baseValue)
 		{
 			if (baseValue != null && value > baseValue.Value)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			text.SetColor(FColor.FromHex("#ffffff"));
 		}
 
-		// Token: 0x06038B13 RID: 232211 RVA: 0x00D72A95 File Offset: 0x00D70C95
+		// Token: 0x0602DA22 RID: 186914 RVA: 0x00CC1075 File Offset: 0x00CBF275
 		public static void ApplyAttrColor(UUIText text, float rawValue, float? baseValue, bool isLocked)
 		{
 			if (isLocked)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			KurotatoUtil.SetAttrValueColor(text, rawValue, baseValue);
 		}
 
-		// Token: 0x06038B14 RID: 232212 RVA: 0x00D72AB4 File Offset: 0x00D70CB4
+		// Token: 0x0602DA23 RID: 186915 RVA: 0x00CC1094 File Offset: 0x00CBF294
 		public static string WrapAttrValueColor(string valueStr, float currentValue, float baseValue)
 		{
 			if (currentValue > baseValue)
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return valueStr;
 		}
 
-		// Token: 0x06038B15 RID: 232213 RVA: 0x00D72B60 File Offset: 0x00D70D60
+		// Token: 0x0602DA24 RID: 186916 RVA: 0x00CC1140 File Offset: 0x00CBF340
 		public static List<IKurotatoAttrDisplay> GetItemAttrDisplayList(IReadOnlyList<int> effectIdList, bool colorCompare = false, bool showName = true, bool colorBySign = false)
 		{
 			List<IKurotatoAttrDisplay> list = new List<IKurotatoAttrDisplay>();
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return list;
 		}
 
-		// Token: 0x06038B16 RID: 232214 RVA: 0x00D72D14 File Offset: 0x00D70F14
+		// Token: 0x0602DA25 RID: 186917 RVA: 0x00CC12F4 File Offset: 0x00CBF4F4
 		private static string GetItemAttrValueStr(float amount, string showValue, bool colorBySign)
 		{
 			if (!colorBySign)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return showValue;
 		}
 
-		// Token: 0x06038B17 RID: 232215 RVA: 0x00D72DE4 File Offset: 0x00D70FE4
+		// Token: 0x0602DA26 RID: 186918 RVA: 0x00CC13C4 File Offset: 0x00CBF5C4
 		public static List<IKurotatoAttrDisplay> GetItemAttrPreviewList(IReadOnlyList<int> effectIdList)
 		{
 			List<IKurotatoAttrDisplay> list = new List<IKurotatoAttrDisplay>();
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return list;
 		}
 
-		// Token: 0x06038B18 RID: 232216 RVA: 0x00D72E70 File Offset: 0x00D71070
+		// Token: 0x0602DA27 RID: 186919 RVA: 0x00CC1450 File Offset: 0x00CBF650
 		private static string WrapPreviewSignColor(string signedValueStr)
 		{
 			string value = signedValueStr.StartsWith("-") ? "#f53864" : "#31dea7";
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06038B19 RID: 232217 RVA: 0x00D72EDC File Offset: 0x00D710DC
+		// Token: 0x0602DA28 RID: 186920 RVA: 0x00CC14BC File Offset: 0x00CBF6BC
 		[return: TupleElementNames(new string[]
 		{
 			"PropertyId",
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return list;
 		}
 
-		// Token: 0x06038B1A RID: 232218 RVA: 0x00D72FEC File Offset: 0x00D711EC
+		// Token: 0x0602DA29 RID: 186921 RVA: 0x00CC15CC File Offset: 0x00CBF7CC
 		public static string GetCardDesc(string desc, IReadOnlyList<string> descParams, int weaponId = 0, int weaponIncId = 0, bool colorCompare = false)
 		{
 			if (string.IsNullOrEmpty(desc))
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return StringUtils.Format(inString, list.ToArray());
 		}
 
-		// Token: 0x06038B1B RID: 232219 RVA: 0x00D73258 File Offset: 0x00D71458
+		// Token: 0x0602DA2A RID: 186922 RVA: 0x00CC1838 File Offset: 0x00CBFA38
 		public static List<IKurotatoAttrDisplay> GetWeaponPropertyDisplayList(IReadOnlyList<int> showPropertyIds, int weaponId, int weaponIncId = 0)
 		{
 			List<IKurotatoAttrDisplay> list = new List<IKurotatoAttrDisplay>();
@@ -362,7 +362,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return list;
 		}
 
-		// Token: 0x06038B1C RID: 232220 RVA: 0x00D733E4 File Offset: 0x00D715E4
+		// Token: 0x0602DA2B RID: 186923 RVA: 0x00CC19C4 File Offset: 0x00CBFBC4
 		private static bool ShouldHideWeaponPropertyByFormulaZero(int propertyId, IReadOnlyList<string> descParams, int weaponId, int weaponIncId)
 		{
 			if (propertyId - 139 > 1 && propertyId != 151)
@@ -377,7 +377,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return !string.IsNullOrEmpty(text) && text.StartsWith("GS") && KurotatoFormulaUtil.GetFormulaResult(int.Parse(text.Substring(2)), weaponId, weaponIncId) == 0f;
 		}
 
-		// Token: 0x06038B1D RID: 232221 RVA: 0x00D73449 File Offset: 0x00D71649
+		// Token: 0x0602DA2C RID: 186924 RVA: 0x00CC1A29 File Offset: 0x00CBFC29
 		private static string GetWeaponTypeDescSuffixByWeaponType(EKurotatoWeaponType weaponGroupType)
 		{
 			if (weaponGroupType == EKurotatoWeaponType.Melee)
@@ -391,7 +391,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return ConfigMultiTextLang.GetLocalTextNew("KurotatoWeaponType_2", null) ?? "";
 		}
 
-		// Token: 0x06038B1E RID: 232222 RVA: 0x00D73484 File Offset: 0x00D71684
+		// Token: 0x0602DA2D RID: 186925 RVA: 0x00CC1A64 File Offset: 0x00CBFC64
 		private static string ParseParamValue(string param, string key)
 		{
 			if (string.IsNullOrEmpty(param))
@@ -406,7 +406,7 @@ namespace CSharpScript.Game.Module.Kurotato
 			return "";
 		}
 
-		// Token: 0x06038B1F RID: 232223 RVA: 0x00D734C8 File Offset: 0x00D716C8
+		// Token: 0x0602DA2E RID: 186926 RVA: 0x00CC1AA8 File Offset: 0x00CBFCA8
 		[CompilerGenerated]
 		internal static string <GetPropertyShowValue>g__CeilToPrecision|2_0(float n, ref KurotatoUtil.<>c__DisplayClass2_0 A_1)
 		{

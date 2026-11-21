@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{37600991-511A-49CC-9A91-B04AB32BBB60}</ProjectGuid>
+    <ProjectGuid>{03A230D2-6EEE-4B35-BE86-5EB1E30E8F98}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Aki.Protocol</RootNamespace>
@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,20 +32,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Google.Protobuf">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Google.Protobuf.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="UnrealEngine">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\UnrealEngine.dll</HintPath>
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\Google.Protobuf.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +105,7 @@
     <Compile Include="AcceptEntrustResponse.cs" />
     <Compile Include="AcceptFocusWaitQuestRequest.cs" />
     <Compile Include="AcceptFocusWaitQuestResponse.cs" />
+    <Compile Include="AccessForceClosedAreaNotify.cs" />
     <Compile Include="AccessPasserbyNpcSpawnerRequest.cs" />
     <Compile Include="AccessPasserbyNpcSpawnerResponse.cs" />
     <Compile Include="AccessPathConfig.cs" />
@@ -296,7 +290,6 @@
     <Compile Include="AlertArea.cs" />
     <Compile Include="AlertAreaNotify.cs" />
     <Compile Include="AllApplyJoinNotify.cs" />
-    <Compile Include="AllDarkTideMapMarkNotify.cs" />
     <Compile Include="AnimalCollectComponentPb.cs" />
     <Compile Include="AnimalCollectStateNotify.cs" />
     <Compile Include="AnimalCollectStateType.cs" />
@@ -342,6 +335,8 @@
     <Compile Include="ApplyRechallengeReason.cs" />
     <Compile Include="ApplyRechallengeRequest.cs" />
     <Compile Include="ApplyRechallengeResponse.cs" />
+    <Compile Include="ApplySceneClientEntityIncIdRequest.cs" />
+    <Compile Include="ApplySceneClientEntityIncIdResponse.cs" />
     <Compile Include="ArchiveType.cs" />
     <Compile Include="AreaExploreInfo.cs" />
     <Compile Include="AreaInfo.cs" />
@@ -370,6 +365,7 @@
     <Compile Include="AttachMarkInfo.cs" />
     <Compile Include="AttachTargetEntityInfo.cs" />
     <Compile Include="AttachTargetType.cs" />
+    <Compile Include="AttrChangeSyncDataPb.cs" />
     <Compile Include="AttributeChangedNotify.cs" />
     <Compile Include="AttributeChangedRequest.cs" />
     <Compile Include="AttributeChangedResponse.cs" />
@@ -495,6 +491,7 @@
     <Compile Include="BeControlledThrowResponse.cs" />
     <Compile Include="BeforeHitInformation.cs" />
     <Compile Include="BeforeHitPush.cs" />
+    <Compile Include="BehaveSyncDataPb.cs" />
     <Compile Include="BehaviorTreeCtxPb.cs" />
     <Compile Include="BehaviorTreeDeleteNotify.cs" />
     <Compile Include="BehaviorTreeInfoNotify.cs" />
@@ -589,6 +586,7 @@
     <Compile Include="BtGiveUpResponse.cs" />
     <Compile Include="BtObjYuXueModeInfo.cs" />
     <Compile Include="BtRangeFailWarningNotify.cs" />
+    <Compile Include="BtRollbackInfo.cs" />
     <Compile Include="BtRollbackInfoNotify.cs" />
     <Compile Include="BtRollbackNotify.cs" />
     <Compile Include="BtRollbackRequest.cs" />
@@ -780,6 +778,7 @@
     <Compile Include="ClientCurrentRoleReportResponse.cs" />
     <Compile Include="ClientDataComponentPb.cs" />
     <Compile Include="ClientDeviceLevel.cs" />
+    <Compile Include="ClientEntityInfoPb.cs" />
     <Compile Include="ClientPullResourcePackageRequest.cs" />
     <Compile Include="ClientPullResourcePackageResponse.cs" />
     <Compile Include="ClientStepState.cs" />
@@ -838,6 +837,7 @@
     <Compile Include="CommonUiSettingNotify.cs" />
     <Compile Include="CompleteInstProgress.cs" />
     <Compile Include="CompleteMarkNotify.cs" />
+    <Compile Include="CompleteQuestSyncDataPb.cs" />
     <Compile Include="CompositionConditionEnterActionCtxPb.cs" />
     <Compile Include="CompositionEnterActionCtxPb.cs" />
     <Compile Include="ConcomitantsComponentPb.cs" />
@@ -904,6 +904,7 @@
     <Compile Include="CoopSpRewardRequest.cs" />
     <Compile Include="CoopSpRewardResponse.cs" />
     <Compile Include="CoopTaskCompleteInfo.cs" />
+    <Compile Include="CopyUserLoginMode.cs" />
     <Compile Include="CorniceChallengeEndNotify.cs" />
     <Compile Include="CorniceChallengeTransRequest.cs" />
     <Compile Include="CorniceChallengeTransResponse.cs" />
@@ -952,6 +953,7 @@
     <Compile Include="DamageExecuteNotify.cs" />
     <Compile Include="DamageExecuteRequest.cs" />
     <Compile Include="DamageExecuteResponse.cs" />
+    <Compile Include="DamageShowNotify.cs" />
     <Compile Include="DamageSourceType.cs" />
     <Compile Include="DangoBrawlActivityInfo.cs" />
     <Compile Include="DangoBrawlActivityLimitCoinUpdateNotify.cs" />
@@ -1062,42 +1064,7 @@
     <Compile Include="DangoMonopolyTaskUpdateNotify.cs" />
     <Compile Include="DarkCoastInfoRequest.cs" />
     <Compile Include="DarkCoastInfoResponse.cs" />
-    <Compile Include="DarkTideBagInfo.cs" />
-    <Compile Include="DarkTideBagItemCtx.cs" />
-    <Compile Include="DarkTideBagItemPb.cs" />
-    <Compile Include="DarkTideBagSortRequest.cs" />
-    <Compile Include="DarkTideBagSortResponse.cs" />
-    <Compile Include="DarkTideBagUpdateNotify.cs" />
-    <Compile Include="DarkTideBagWeaponCtx.cs" />
-    <Compile Include="DarkTideComponentPb.cs" />
-    <Compile Include="DarkTideDiscardItemRequest.cs" />
-    <Compile Include="DarkTideDiscardItemResponse.cs" />
-    <Compile Include="DarkTideDropEntityComponentPb.cs" />
-    <Compile Include="DarkTideDropItemEntityCtx.cs" />
-    <Compile Include="DarkTideDropWeaponEntityCtx.cs" />
     <Compile Include="DarkTideEnterCtx.cs" />
-    <Compile Include="DarkTideExtraBagSyncNotify.cs" />
-    <Compile Include="DarkTideItemMarkPb.cs" />
-    <Compile Include="DarkTideItemMarkRequest.cs" />
-    <Compile Include="DarkTideItemMarkResponse.cs" />
-    <Compile Include="DarkTideItemMarkUpdateNotify.cs" />
-    <Compile Include="DarkTideItemType.cs" />
-    <Compile Include="DarkTideMapMarkChangeType.cs" />
-    <Compile Include="DarkTideMapMarkMarkState.cs" />
-    <Compile Include="DarkTideMapMarkRequest.cs" />
-    <Compile Include="DarkTideMapMarkResponse.cs" />
-    <Compile Include="DarkTideMapMarkType.cs" />
-    <Compile Include="DarkTideMapMarkUpdateNotify.cs" />
-    <Compile Include="DarkTideMarkInfo.cs" />
-    <Compile Include="DarkTideNormalItemPb.cs" />
-    <Compile Include="DarkTidePickUpItemRequest.cs" />
-    <Compile Include="DarkTidePickUpItemResponse.cs" />
-    <Compile Include="DarkTidePlayerInfoPb.cs" />
-    <Compile Include="DarkTidePoisonCircleDayInitNotify.cs" />
-    <Compile Include="DarkTidePoisonCircleStartShrinkNotify.cs" />
-    <Compile Include="DarkTidePoisonCircleStopShrinkNotify.cs" />
-    <Compile Include="DarkTideSwitchVisionRequest.cs" />
-    <Compile Include="DarkTideSwitchVisionResponse.cs" />
     <Compile Include="DeadeyeShootHitRequest.cs" />
     <Compile Include="DeadeyeShootHitResponse.cs" />
     <Compile Include="Debug\CheatInputRequest.cs" />
@@ -1471,6 +1438,7 @@
     <Compile Include="EventOption.cs" />
     <Compile Include="EventPlotInfo.cs" />
     <Compile Include="EvolveView.cs" />
+    <Compile Include="ExamFinishSyncDataPb.cs" />
     <Compile Include="ExchangeRewardInfoNotify.cs" />
     <Compile Include="ExchangeRewardInfoRequest.cs" />
     <Compile Include="ExchangeRewardInfoResponse.cs" />
@@ -1531,6 +1499,7 @@
     <Compile Include="FailedNodeActionCtxPb.cs" />
     <Compile Include="FailedNodeStatus.cs" />
     <Compile Include="FailReason.cs" />
+    <Compile Include="FailRollbackData.cs" />
     <Compile Include="FallbackViewOp.cs" />
     <Compile Include="FallFinishNotify.cs" />
     <Compile Include="FanComponentPb.cs" />
@@ -1806,6 +1775,7 @@
     <Compile Include="FollowTrackResponse.cs" />
     <Compile Include="FoodProcessRequest.cs" />
     <Compile Include="FoodProcessResponse.cs" />
+    <Compile Include="ForceClosedRollbackData.cs" />
     <Compile Include="ForgeFormulaUnlockRequest.cs" />
     <Compile Include="ForgeFormulaUnlockResponse.cs" />
     <Compile Include="ForgeInfoRequest.cs" />
@@ -2387,11 +2357,13 @@
     <Compile Include="InviteRechallengeRequest.cs" />
     <Compile Include="InviteRechallengeResponse.cs" />
     <Compile Include="IProto_NormalItem.cs" />
+    <Compile Include="ItemChangeSyncDataPb.cs" />
     <Compile Include="ItemData.cs" />
     <Compile Include="ItemDecomposePreviewRequest.cs" />
     <Compile Include="ItemDecomposePreviewResponse.cs" />
     <Compile Include="ItemDecomposeRequest.cs" />
     <Compile Include="ItemDecomposeResponse.cs" />
+    <Compile Include="ItemDeltaPb.cs" />
     <Compile Include="ItemDict.cs" />
     <Compile Include="ItemDisuseRequest.cs" />
     <Compile Include="ItemDisuseResponse.cs" />
@@ -2420,6 +2392,7 @@
     <Compile Include="JigsawFoundationMatchedConditionActionCtxPb.cs" />
     <Compile Include="JigsawFoundationUnMatchedActionCtxPb.cs" />
     <Compile Include="JinzhouFlyData.cs" />
+    <Compile Include="JoinInfluenceSyncDataPb.cs" />
     <Compile Include="JoinSceneNotify.cs" />
     <Compile Include="JoinSceneNotifyConfirmRequest.cs" />
     <Compile Include="JoinSceneNotifyConfirmResponse.cs" />
@@ -2569,7 +2542,6 @@
     <Compile Include="LeaveMatchTeamRequest.cs" />
     <Compile Include="LeaveMatchTeamResponse.cs" />
     <Compile Include="LeaveQuestRecallNotify.cs" />
-    <Compile Include="LeaveReason.cs" />
     <Compile Include="LeaveSceneNotify.cs" />
     <Compile Include="LeaveWorldTeamRequest.cs" />
     <Compile Include="LeaveWorldTeamResponse.cs" />
@@ -3226,6 +3198,7 @@
     <Compile Include="NormalLevel.cs" />
     <Compile Include="NormalMonsterManualInfoRequest.cs" />
     <Compile Include="NormalMonsterManualInfoResponse.cs" />
+    <Compile Include="NpcFavorChangeSyncDataPb.cs" />
     <Compile Include="NpcPb.cs" />
     <Compile Include="NpcPerformComponentPb.cs" />
     <Compile Include="NpcPhantomBattleAreaLockEffectCtx.cs" />
@@ -3861,13 +3834,13 @@
     <Compile Include="PlayFlowChildQuestNodeCtxPb.cs" />
     <Compile Include="PlayInstShareFirstInfo.cs" />
     <Compile Include="PlayInstShareFirstInfoNotify.cs" />
-    <Compile Include="PoisonCircleSnapshotInfo.cs" />
     <Compile Include="PollutedGridPbData.cs" />
     <Compile Include="PolluteGridCellRequest.cs" />
     <Compile Include="PolluteGridCellResponse.cs" />
     <Compile Include="PopularEntrie.cs" />
     <Compile Include="PortalReplaceNotify.cs" />
     <Compile Include="PositionAndRotate.cs" />
+    <Compile Include="PostAkEventNotify.cs" />
     <Compile Include="PreheatSignActivityInfo.cs" />
     <Compile Include="PreheatSignNodeInfo.cs" />
     <Compile Include="PreheatSignRewardRequest.cs" />
@@ -4664,6 +4637,84 @@
     <Compile Include="RoleSkinTrialUiEndPush.cs" />
     <Compile Include="RoleSkinUpdateNotify.cs" />
     <Compile Include="RoleTeachEnterCtx.cs" />
+    <Compile Include="RoleTowerActivityData.cs" />
+    <Compile Include="RoleTowerAssistRoleInfo.cs" />
+    <Compile Include="RoleTowerAttributeQueryRequest.cs" />
+    <Compile Include="RoleTowerAttributeQueryResponse.cs" />
+    <Compile Include="RoleTowerBattleStepPbData.cs" />
+    <Compile Include="RoleTowerBestRecord.cs" />
+    <Compile Include="RoleTowerChallengeInfo.cs" />
+    <Compile Include="RoleTowerChallengeSaveBrief.cs" />
+    <Compile Include="RoleTowerChallengeSettleInfo.cs" />
+    <Compile Include="RoleTowerChallengeSettleNotify.cs" />
+    <Compile Include="RoleTowerChallengeSettleRequest.cs" />
+    <Compile Include="RoleTowerChallengeSettleResponse.cs" />
+    <Compile Include="RoleTowerChallengeUpdateNotify.cs" />
+    <Compile Include="RoleTowerConsumeItemRequest.cs" />
+    <Compile Include="RoleTowerConsumeItemResponse.cs" />
+    <Compile Include="RoleTowerCtx.cs" />
+    <Compile Include="RoleTowerDieNotify.cs" />
+    <Compile Include="RoleTowerFloorBranchInfo.cs" />
+    <Compile Include="RoleTowerFloorInfo.cs" />
+    <Compile Include="RoleTowerFloorRecord.cs" />
+    <Compile Include="RoleTowerFloorSettleNotify.cs" />
+    <Compile Include="RoleTowerFloorType.cs" />
+    <Compile Include="RoleTowerInstParam.cs" />
+    <Compile Include="RoleTowerItemUpdateNotify.cs" />
+    <Compile Include="RoleTowerLoadSubLevelStepPbData.cs" />
+    <Compile Include="RoleTowerPhantomAddAttr.cs" />
+    <Compile Include="RoleTowerPhantomAddAttrsRequest.cs" />
+    <Compile Include="RoleTowerPhantomAddAttrsResponse.cs" />
+    <Compile Include="RoleTowerPhantomAddAttrsUpdateNotify.cs" />
+    <Compile Include="RoleTowerPhantomAttributeInfo.cs" />
+    <Compile Include="RoleTowerPhantomInfo.cs" />
+    <Compile Include="RoleTowerPrepareInfo.cs" />
+    <Compile Include="RoleTowerPrepareSelection.cs" />
+    <Compile Include="RoleTowerPrepareStepPbData.cs" />
+    <Compile Include="RoleTowerRankEntry.cs" />
+    <Compile Include="RoleTowerRankInfo.cs" />
+    <Compile Include="RoleTowerRankRangeTable.cs" />
+    <Compile Include="RoleTowerRankRequest.cs" />
+    <Compile Include="RoleTowerRankResponse.cs" />
+    <Compile Include="RoleTowerRankRewardReceiveRequest.cs" />
+    <Compile Include="RoleTowerRankRewardReceiveResponse.cs" />
+    <Compile Include="RoleTowerRankScoreRange.cs" />
+    <Compile Include="RoleTowerRankType.cs" />
+    <Compile Include="RoleTowerRewardTaskReceiveRequest.cs" />
+    <Compile Include="RoleTowerRewardTaskReceiveResponse.cs" />
+    <Compile Include="RoleTowerRewardTaskUpdateNotify.cs" />
+    <Compile Include="RoleTowerRoleAttributeInfo.cs" />
+    <Compile Include="RoleTowerRoleBrief.cs" />
+    <Compile Include="RoleTowerRoleEnergyInfo.cs" />
+    <Compile Include="RoleTowerRoleSnapshot.cs" />
+    <Compile Include="RoleTowerSaveDeleteRequest.cs" />
+    <Compile Include="RoleTowerSaveDeleteResponse.cs" />
+    <Compile Include="RoleTowerScoreRewardReceiveRequest.cs" />
+    <Compile Include="RoleTowerScoreRewardReceiveResponse.cs" />
+    <Compile Include="RoleTowerScoreTaskUpdateNotify.cs" />
+    <Compile Include="RoleTowerScoreUpdateNotify.cs" />
+    <Compile Include="RoleTowerSettleReason.cs" />
+    <Compile Include="RoleTowerSettleStepPbData.cs" />
+    <Compile Include="RoleTowerStageInfo.cs" />
+    <Compile Include="RoleTowerStageRecord.cs" />
+    <Compile Include="RoleTowerStageRetryRequest.cs" />
+    <Compile Include="RoleTowerStageRetryResponse.cs" />
+    <Compile Include="RoleTowerStageSettleInfo.cs" />
+    <Compile Include="RoleTowerStageSettleRequest.cs" />
+    <Compile Include="RoleTowerStageSettleResponse.cs" />
+    <Compile Include="RoleTowerStageState.cs" />
+    <Compile Include="RoleTowerStepAdvanceRequest.cs" />
+    <Compile Include="RoleTowerStepAdvanceResponse.cs" />
+    <Compile Include="RoleTowerStepUpdateNotify.cs" />
+    <Compile Include="RoleTowerTeamUpgradeStepPbData.cs" />
+    <Compile Include="RoleTowerTimerData.cs" />
+    <Compile Include="RoleTowerTimerDataUpdateNotify.cs" />
+    <Compile Include="RoleTowerTimerDurationUpdateNotify.cs" />
+    <Compile Include="RoleTowerTokenCount.cs" />
+    <Compile Include="RoleTowerTokenInfo.cs" />
+    <Compile Include="RoleTowerTokenPanelInfo.cs" />
+    <Compile Include="RoleTowerTokenUpdateNotify.cs" />
+    <Compile Include="RoleTowerUnlockTokenUpdateNotify.cs" />
     <Compile Include="RoleTrainRequest.cs" />
     <Compile Include="RoleTrainResponse.cs" />
     <Compile Include="RoleTrialCloseNotify.cs" />
@@ -4965,6 +5016,7 @@
     <Compile Include="SettingInputType.cs" />
     <Compile Include="SettingNotify.cs" />
     <Compile Include="SettleInfo.cs" />
+    <Compile Include="SettleStepPbData.cs" />
     <Compile Include="ShareRideMode.cs" />
     <Compile Include="SheriffAnomalyInfo.cs" />
     <Compile Include="SheriffAnomalyInfoUpdateNotify.cs" />
@@ -4981,6 +5033,7 @@
     <Compile Include="ShopBuyNotify.cs" />
     <Compile Include="ShopBuyRequest.cs" />
     <Compile Include="ShopBuyResponse.cs" />
+    <Compile Include="ShopBuySyncDataPb.cs" />
     <Compile Include="ShopInfo.cs" />
     <Compile Include="ShopInfoNotify.cs" />
     <Compile Include="ShopInfoRequest.cs" />
@@ -5053,6 +5106,7 @@
     <Compile Include="SingleProcessedFoodFormulaInfo.cs" />
     <Compile Include="SitChairRequest.cs" />
     <Compile Include="SitChairResponse.cs" />
+    <Compile Include="SkillAvatarComponentPb.cs" />
     <Compile Include="SkillCdGroupInfo.cs" />
     <Compile Include="SkillCdInfo.cs" />
     <Compile Include="SkillComponentPb.cs" />
@@ -5103,6 +5157,62 @@
     <Compile Include="SneakTimeResponse.cs" />
     <Compile Include="SoaringChallengeData.cs" />
     <Compile Include="SoarLevelPlayInfo.cs" />
+    <Compile Include="SolarSchoolActivityPb.cs" />
+    <Compile Include="SolarSchoolAttrPb.cs" />
+    <Compile Include="SolarSchoolAttrType.cs" />
+    <Compile Include="SolarSchoolAvgDataPb.cs" />
+    <Compile Include="SolarSchoolBatchSyncData.cs" />
+    <Compile Include="SolarSchoolBatchSyncRequest.cs" />
+    <Compile Include="SolarSchoolBatchSyncResponse.cs" />
+    <Compile Include="SolarSchoolBehaviorCountPb.cs" />
+    <Compile Include="SolarSchoolBehaviorType.cs" />
+    <Compile Include="SolarSchoolCharacterDataPb.cs" />
+    <Compile Include="SolarSchoolExamDataPb.cs" />
+    <Compile Include="SolarSchoolExamResult.cs" />
+    <Compile Include="SolarSchoolFlowPb.cs" />
+    <Compile Include="SolarSchoolGalleryPb.cs" />
+    <Compile Include="SolarSchoolGalleryUpdateNotify.cs" />
+    <Compile Include="SolarSchoolIdCountPb.cs" />
+    <Compile Include="SolarSchoolInfluenceLevelPb.cs" />
+    <Compile Include="SolarSchoolInventoryDataPb.cs" />
+    <Compile Include="SolarSchoolItemType.cs" />
+    <Compile Include="SolarSchoolLoadRequest.cs" />
+    <Compile Include="SolarSchoolLoadResponse.cs" />
+    <Compile Include="SolarSchoolLocationDataPb.cs" />
+    <Compile Include="SolarSchoolNpcPb.cs" />
+    <Compile Include="SolarSchoolOneKeyGalleryRewardRequest.cs" />
+    <Compile Include="SolarSchoolOneKeyGalleryRewardResponse.cs" />
+    <Compile Include="SolarSchoolOneKeyRewardRequest.cs" />
+    <Compile Include="SolarSchoolOneKeyRewardResponse.cs" />
+    <Compile Include="SolarSchoolOneQuestPb.cs" />
+    <Compile Include="SolarSchoolOneQuestRewardPb.cs" />
+    <Compile Include="SolarSchoolPlayerDataPb.cs" />
+    <Compile Include="SolarSchoolQuestDataPb.cs" />
+    <Compile Include="SolarSchoolReachEndingRequest.cs" />
+    <Compile Include="SolarSchoolReachEndingResponse.cs" />
+    <Compile Include="SolarSchoolSaveGamePb.cs" />
+    <Compile Include="SolarSchoolSavePb.cs" />
+    <Compile Include="SolarSchoolSavePreviewPb.cs" />
+    <Compile Include="SolarSchoolSaveReason.cs" />
+    <Compile Include="SolarSchoolSaveRequest.cs" />
+    <Compile Include="SolarSchoolSaveResponse.cs" />
+    <Compile Include="SolarSchoolScheduleDataPb.cs" />
+    <Compile Include="SolarSchoolSetFlowRequest.cs" />
+    <Compile Include="SolarSchoolSetFlowResponse.cs" />
+    <Compile Include="SolarSchoolShopDataPb.cs" />
+    <Compile Include="SolarSchoolShopGoodsBuyDataPb.cs" />
+    <Compile Include="SolarSchoolShopRuntimeDataPb.cs" />
+    <Compile Include="SolarSchoolSlotCellPb.cs" />
+    <Compile Include="SolarSchoolSpecialBehaveStatus.cs" />
+    <Compile Include="SolarSchoolSummaryDataPb.cs" />
+    <Compile Include="SolarSchoolSummaryRecordDataPb.cs" />
+    <Compile Include="SolarSchoolTaskProgressRewardRequest.cs" />
+    <Compile Include="SolarSchoolTaskProgressRewardResponse.cs" />
+    <Compile Include="SolarSchoolTaskType.cs" />
+    <Compile Include="SolarSchoolTaskTypePb.cs" />
+    <Compile Include="SolarSchoolTaskUpdateNotify.cs" />
+    <Compile Include="SolarSchoolTimeDataPb.cs" />
+    <Compile Include="SolarSchoolWeekSchedulePb.cs" />
     <Compile Include="SourceRefPb.cs" />
     <Compile Include="SourceType.cs" />
     <Compile Include="SpawnerEntityInfo.cs" />
@@ -5275,8 +5385,6 @@
     <Compile Include="SwitchCharacterStatePush.cs" />
     <Compile Include="SwitchCharacterStateRequest.cs" />
     <Compile Include="SwitchCharacterStateResponse.cs" />
-    <Compile Include="SwitchDarkTideWeaponPush.cs" />
-    <Compile Include="SwitchDarkTideWeaponSlotNotify.cs" />
     <Compile Include="SwitchLogicStateNotify.cs" />
     <Compile Include="SwitchLogicStatePush.cs" />
     <Compile Include="SwitchLogicStateRequest.cs" />
@@ -5329,6 +5437,12 @@
     <Compile Include="TeamParkourRewardResponse.cs" />
     <Compile Include="TeamParkourSettleNotify.cs" />
     <Compile Include="TeamParkourTaskNotify.cs" />
+    <Compile Include="TeamRecommendInfo.cs" />
+    <Compile Include="TeamRecommendRequest.cs" />
+    <Compile Include="TeamRecommendResponse.cs" />
+    <Compile Include="TeamRecommendRole.cs" />
+    <Compile Include="TeamRecommendRoleInfo.cs" />
+    <Compile Include="TeamRecommendTeammate.cs" />
     <Compile Include="TeamTeleportStartNotify.cs" />
     <Compile Include="TeamType.cs" />
     <Compile Include="TeleportDataRequest.cs" />
@@ -5694,6 +5808,7 @@
     <Compile Include="UnlockMapBlockNotify.cs" />
     <Compile Include="UnlockMarkNotify.cs" />
     <Compile Include="UnlockMultiMapNotify.cs" />
+    <Compile Include="UnlockNpcSyncDataPb.cs" />
     <Compile Include="UnOpenedAreaPullbackRequest.cs" />
     <Compile Include="UnOpenedAreaPullbackResponse.cs" />
     <Compile Include="UpdateChildQuestNodeStatusNotify.cs" />
@@ -5711,6 +5826,8 @@
     <Compile Include="UpdateNodeProgressNotify.cs" />
     <Compile Include="UpdateNodeStatusNotify.cs" />
     <Compile Include="UpdateOwnerMingSuGenNotify.cs" />
+    <Compile Include="UpdatePhantomEquipGroupRequest.cs" />
+    <Compile Include="UpdatePhantomEquipGroupResponse.cs" />
     <Compile Include="UpdatePlayerAllFightRoleNotify.cs" />
     <Compile Include="UpdatePlayerPassiveSkillRequest.cs" />
     <Compile Include="UpdatePlayerPassiveSkillResponse.cs" />
@@ -5869,6 +5986,20 @@
     <Compile Include="ZitherPlayNotePush.cs" />
     <Compile Include="ZitherPlayStateRequest.cs" />
     <Compile Include="ZitherPlayStateResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\System.Collections\System.Collections.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8FA0}</Project>
+      <Name>System.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Runtime\System.Runtime.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8FA2}</Project>
+      <Name>System.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnrealEngine\UnrealEngine.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8FA4}</Project>
+      <Name>UnrealEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

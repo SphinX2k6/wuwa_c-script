@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200228C RID: 8844
+	// Token: 0x020024F9 RID: 9465
 	public class EActorFaceExpressionTypeJsonConverter : JsonConverter<EActorFaceExpressionType>
 	{
-		// Token: 0x0600C1F6 RID: 49654 RVA: 0x001C5200 File Offset: 0x001C3400
+		// Token: 0x0600CDBC RID: 52668 RVA: 0x001DCEF4 File Offset: 0x001DB0F4
 		public override EActorFaceExpressionType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EActorFaceExpressionTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C1F7 RID: 49655 RVA: 0x001C5224 File Offset: 0x001C3424
+		// Token: 0x0600CDBD RID: 52669 RVA: 0x001DCF18 File Offset: 0x001DB118
 		public override void Write(Utf8JsonWriter writer, EActorFaceExpressionType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008C6 RID: 2246
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000969 RID: 2409
 	public class TimeStopComponent : IComponentBase
 	{
-		// Token: 0x0600328F RID: 12943 RVA: 0x00081A80 File Offset: 0x0007FC80
+		// Token: 0x060035CB RID: 13771 RVA: 0x00088F68 File Offset: 0x00087168
 		private TimeStopComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003290 RID: 12944 RVA: 0x00081AB8 File Offset: 0x0007FCB8
+		// Token: 0x060035CC RID: 13772 RVA: 0x00088FA0 File Offset: 0x000871A0
 		public static TimeStopComponent Create([Nullable(2)] TimeStopComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003291 RID: 12945 RVA: 0x00081ACB File Offset: 0x0007FCCB
+		// Token: 0x060035CD RID: 13773 RVA: 0x00088FB3 File Offset: 0x000871B3
 		public static TimeStopComponent CreateFromSetValue([Nullable(2)] TimeStopComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003292 RID: 12946 RVA: 0x00081AE0 File Offset: 0x0007FCE0
+		// Token: 0x060035CE RID: 13774 RVA: 0x00088FC8 File Offset: 0x000871C8
 		public new TimeStopComponent_SetValue ToSetValue()
 		{
 			return new TimeStopComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D86 RID: 3462
-		// (get) Token: 0x06003293 RID: 12947 RVA: 0x00081B30 File Offset: 0x0007FD30
-		// (set) Token: 0x06003294 RID: 12948 RVA: 0x00081B6A File Offset: 0x0007FD6A
+		// Token: 0x17000E4F RID: 3663
+		// (get) Token: 0x060035CF RID: 13775 RVA: 0x00089018 File Offset: 0x00087218
+		// (set) Token: 0x060035D0 RID: 13776 RVA: 0x00089052 File Offset: 0x00087252
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D87 RID: 3463
-		// (get) Token: 0x06003295 RID: 12949 RVA: 0x00081B78 File Offset: 0x0007FD78
-		// (set) Token: 0x06003296 RID: 12950 RVA: 0x00081BA2 File Offset: 0x0007FDA2
+		// Token: 0x17000E50 RID: 3664
+		// (get) Token: 0x060035D1 RID: 13777 RVA: 0x00089060 File Offset: 0x00087260
+		// (set) Token: 0x060035D2 RID: 13778 RVA: 0x0008908A File Offset: 0x0008728A
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D88 RID: 3464
-		// (get) Token: 0x06003297 RID: 12951 RVA: 0x00081BB0 File Offset: 0x0007FDB0
-		// (set) Token: 0x06003298 RID: 12952 RVA: 0x00081BDB File Offset: 0x0007FDDB
+		// Token: 0x17000E51 RID: 3665
+		// (get) Token: 0x060035D3 RID: 13779 RVA: 0x00089098 File Offset: 0x00087298
+		// (set) Token: 0x060035D4 RID: 13780 RVA: 0x000890C3 File Offset: 0x000872C3
 		public virtual string ActiveState
 		{
 			get
@@ -129,9 +127,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D89 RID: 3465
-		// (get) Token: 0x06003299 RID: 12953 RVA: 0x00081BE9 File Offset: 0x0007FDE9
-		// (set) Token: 0x0600329A RID: 12954 RVA: 0x00081C14 File Offset: 0x0007FE14
+		// Token: 0x17000E52 RID: 3666
+		// (get) Token: 0x060035D5 RID: 13781 RVA: 0x000890D1 File Offset: 0x000872D1
+		// (set) Token: 0x060035D6 RID: 13782 RVA: 0x000890FC File Offset: 0x000872FC
 		public virtual int StopTime
 		{
 			get
@@ -152,9 +150,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D8A RID: 3466
-		// (get) Token: 0x0600329B RID: 12955 RVA: 0x00081C24 File Offset: 0x0007FE24
-		// (set) Token: 0x0600329C RID: 12956 RVA: 0x00081C85 File Offset: 0x0007FE85
+		// Token: 0x17000E53 RID: 3667
+		// (get) Token: 0x060035D7 RID: 13783 RVA: 0x0008910C File Offset: 0x0008730C
+		// (set) Token: 0x060035D8 RID: 13784 RVA: 0x0008916D File Offset: 0x0008736D
 		public virtual ITimeStopTarget Target
 		{
 			get
@@ -182,18 +180,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400212D RID: 8493
+		// Token: 0x0400233F RID: 9023
 		[Nullable(2)]
 		protected new TimeStopComponent FbInstance;
 
-		// Token: 0x0400212E RID: 8494
+		// Token: 0x04002340 RID: 9024
 		[Nullable(2)]
 		protected new TimeStopComponent_SetValue PocoInterface;
 
-		// Token: 0x0400212F RID: 8495
+		// Token: 0x04002341 RID: 9025
 		private ITimeStopTarget _TargetCache;
 
-		// Token: 0x04002130 RID: 8496
+		// Token: 0x04002342 RID: 9026
 		private bool _TargetInited;
 	}
 }

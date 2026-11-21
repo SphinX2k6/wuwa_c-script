@@ -6,28 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200248A RID: 9354
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000796 RID: 1942
 	[UnrealObjectPath("/Script/NavigationSystem.NavigationData")]
 	[UnrealStructLayout(1632, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1632)]
-	public abstract class ANavigationData : AActor, IUnrealUObject, IUnrealObject, INavigationDataInterface, IUnrealNativeInterface, IUnrealInterface
+	public abstract class ANavigationData : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06022FAD RID: 143277 RVA: 0x0033B6AD File Offset: 0x003398AD
+		// Token: 0x0600A7A2 RID: 42914 RVA: 0x000F76DE File Offset: 0x000F58DE
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ANavigationData._ClassPtr;
 		}
 
-		// Token: 0x06022FAE RID: 143278 RVA: 0x0033B6B9 File Offset: 0x003398B9
-		int INavigationDataInterface.InterfaceOffset()
-		{
-			return ANavigationData.__InterfaceOffset_INavigationDataInterface;
-		}
-
-		// Token: 0x17008659 RID: 34393
-		// (get) Token: 0x06022FAF RID: 143279 RVA: 0x0033B6C0 File Offset: 0x003398C0
-		// (set) Token: 0x06022FB0 RID: 143280 RVA: 0x0033B6D4 File Offset: 0x003398D4
+		// Token: 0x17001F2A RID: 7978
+		// (get) Token: 0x0600A7A3 RID: 42915 RVA: 0x000F76EA File Offset: 0x000F58EA
+		// (set) Token: 0x0600A7A4 RID: 42916 RVA: 0x000F76FE File Offset: 0x000F58FE
 		[Nullable(2)]
 		public unsafe UPrimitiveComponent RenderingComp
 		{
@@ -43,30 +35,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700865A RID: 34394
-		// (get) Token: 0x06022FB1 RID: 143281 RVA: 0x0033B6EC File Offset: 0x003398EC
-		// (set) Token: 0x06022FB2 RID: 143282 RVA: 0x0033B725 File Offset: 0x00339925
-		public FNavDataConfig NavDataConfig
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FNavDataConfig result;
-				if ((result = this._NavDataConfig) == null)
-				{
-					result = (this._NavDataConfig = new FNavDataConfig(base.NativePtr + (IntPtr)ANavigationData.__PropertyOffset_NavDataConfig, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FNavDataConfig.StaticStruct(), base.NativePtr + (IntPtr)ANavigationData.__PropertyOffset_NavDataConfig, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x1700865B RID: 34395
-		// (get) Token: 0x06022FB3 RID: 143283 RVA: 0x0033B746 File Offset: 0x00339946
-		// (set) Token: 0x06022FB4 RID: 143284 RVA: 0x0033B75F File Offset: 0x0033995F
+		// Token: 0x17001F2B RID: 7979
+		// (get) Token: 0x0600A7A5 RID: 42917 RVA: 0x000F7713 File Offset: 0x000F5913
+		// (set) Token: 0x0600A7A6 RID: 42918 RVA: 0x000F772C File Offset: 0x000F592C
 		public unsafe bool bEnableDrawing
 		{
 			get
@@ -79,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700865C RID: 34396
-		// (get) Token: 0x06022FB5 RID: 143285 RVA: 0x0033B78F File Offset: 0x0033998F
-		// (set) Token: 0x06022FB6 RID: 143286 RVA: 0x0033B7A8 File Offset: 0x003399A8
+		// Token: 0x17001F2C RID: 7980
+		// (get) Token: 0x0600A7A7 RID: 42919 RVA: 0x000F775C File Offset: 0x000F595C
+		// (set) Token: 0x0600A7A8 RID: 42920 RVA: 0x000F7775 File Offset: 0x000F5975
 		public unsafe bool bForceRebuildOnLoad
 		{
 			get
@@ -94,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700865D RID: 34397
-		// (get) Token: 0x06022FB7 RID: 143287 RVA: 0x0033B7D8 File Offset: 0x003399D8
-		// (set) Token: 0x06022FB8 RID: 143288 RVA: 0x0033B7F1 File Offset: 0x003399F1
+		// Token: 0x17001F2D RID: 7981
+		// (get) Token: 0x0600A7A9 RID: 42921 RVA: 0x000F77A5 File Offset: 0x000F59A5
+		// (set) Token: 0x0600A7AA RID: 42922 RVA: 0x000F77BE File Offset: 0x000F59BE
 		public unsafe bool bAutoDestroyWhenNoNavigation
 		{
 			get
@@ -109,9 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700865E RID: 34398
-		// (get) Token: 0x06022FB9 RID: 143289 RVA: 0x0033B821 File Offset: 0x00339A21
-		// (set) Token: 0x06022FBA RID: 143290 RVA: 0x0033B83A File Offset: 0x00339A3A
+		// Token: 0x17001F2E RID: 7982
+		// (get) Token: 0x0600A7AB RID: 42923 RVA: 0x000F77EE File Offset: 0x000F59EE
+		// (set) Token: 0x0600A7AC RID: 42924 RVA: 0x000F7807 File Offset: 0x000F5A07
 		public unsafe bool bCanBeMainNavData
 		{
 			get
@@ -124,9 +95,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700865F RID: 34399
-		// (get) Token: 0x06022FBB RID: 143291 RVA: 0x0033B86A File Offset: 0x00339A6A
-		// (set) Token: 0x06022FBC RID: 143292 RVA: 0x0033B883 File Offset: 0x00339A83
+		// Token: 0x17001F2F RID: 7983
+		// (get) Token: 0x0600A7AD RID: 42925 RVA: 0x000F7837 File Offset: 0x000F5A37
+		// (set) Token: 0x0600A7AE RID: 42926 RVA: 0x000F7850 File Offset: 0x000F5A50
 		public unsafe bool bCanSpawnOnRebuild
 		{
 			get
@@ -139,9 +110,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008660 RID: 34400
-		// (get) Token: 0x06022FBD RID: 143293 RVA: 0x0033B8B3 File Offset: 0x00339AB3
-		// (set) Token: 0x06022FBE RID: 143294 RVA: 0x0033B8CC File Offset: 0x00339ACC
+		// Token: 0x17001F30 RID: 7984
+		// (get) Token: 0x0600A7AF RID: 42927 RVA: 0x000F7880 File Offset: 0x000F5A80
+		// (set) Token: 0x0600A7B0 RID: 42928 RVA: 0x000F7899 File Offset: 0x000F5A99
 		public unsafe bool bRebuildAtRuntime_DEPRECATED
 		{
 			get
@@ -154,24 +125,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008661 RID: 34401
-		// (get) Token: 0x06022FBF RID: 143295 RVA: 0x0033B8FC File Offset: 0x00339AFC
-		// (set) Token: 0x06022FC0 RID: 143296 RVA: 0x0033B90C File Offset: 0x00339B0C
-		public unsafe ERuntimeGenerationType RuntimeGeneration
-		{
-			get
-			{
-				return (ERuntimeGenerationType)(*(base.NativePtr + (IntPtr)ANavigationData.__PropertyOffset_RuntimeGeneration));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)ANavigationData.__PropertyOffset_RuntimeGeneration) = (byte)value;
-			}
-		}
-
-		// Token: 0x17008662 RID: 34402
-		// (get) Token: 0x06022FC1 RID: 143297 RVA: 0x0033B91D File Offset: 0x00339B1D
-		// (set) Token: 0x06022FC2 RID: 143298 RVA: 0x0033B92D File Offset: 0x00339B2D
+		// Token: 0x17001F31 RID: 7985
+		// (get) Token: 0x0600A7B1 RID: 42929 RVA: 0x000F78C9 File Offset: 0x000F5AC9
+		// (set) Token: 0x0600A7B2 RID: 42930 RVA: 0x000F78D9 File Offset: 0x000F5AD9
 		public unsafe float ObservedPathsTickInterval
 		{
 			get
@@ -184,9 +140,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008663 RID: 34403
-		// (get) Token: 0x06022FC3 RID: 143299 RVA: 0x0033B93E File Offset: 0x00339B3E
-		// (set) Token: 0x06022FC4 RID: 143300 RVA: 0x0033B94E File Offset: 0x00339B4E
+		// Token: 0x17001F32 RID: 7986
+		// (get) Token: 0x0600A7B3 RID: 42931 RVA: 0x000F78EA File Offset: 0x000F5AEA
+		// (set) Token: 0x0600A7B4 RID: 42932 RVA: 0x000F78FA File Offset: 0x000F5AFA
 		public unsafe uint DataVersion
 		{
 			get
@@ -199,119 +155,75 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008664 RID: 34404
-		// (get) Token: 0x06022FC5 RID: 143301 RVA: 0x0033B960 File Offset: 0x00339B60
-		// (set) Token: 0x06022FC6 RID: 143302 RVA: 0x0033B999 File Offset: 0x00339B99
-		public TArray<FSupportedAreaData> SupportedAreas
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FSupportedAreaData> result;
-				if ((result = this._SupportedAreas) == null)
-				{
-					result = (this._SupportedAreas = new TArray<FSupportedAreaData>(base.NativePtr + (IntPtr)ANavigationData.__PropertyOffset_SupportedAreas, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.SupportedAreas.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x06022FC7 RID: 143303 RVA: 0x0033B9A7 File Offset: 0x00339BA7
+		// Token: 0x0600A7B5 RID: 42933 RVA: 0x000F790B File Offset: 0x000F5B0B
 		static ANavigationData()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/NavigationSystem.NavigationData");
 		}
 
-		// Token: 0x06022FC8 RID: 143304 RVA: 0x0033B9B8 File Offset: 0x00339BB8
+		// Token: 0x0600A7B6 RID: 42934 RVA: 0x000F791C File Offset: 0x000F5B1C
 		protected ANavigationData() : this(BuiltinUtils.AllocNativeUObject(ANavigationData.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06022FC9 RID: 143305 RVA: 0x0033B9E0 File Offset: 0x00339BE0
+		// Token: 0x0600A7B7 RID: 42935 RVA: 0x000F7944 File Offset: 0x000F5B44
 		protected ANavigationData(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04012AD9 RID: 76505
-		internal static int __InterfaceOffset_INavigationDataInterface;
-
-		// Token: 0x04012ADA RID: 76506
+		// Token: 0x040047D2 RID: 18386
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/NavigationSystem.NavigationData";
 
-		// Token: 0x04012ADB RID: 76507
+		// Token: 0x040047D3 RID: 18387
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04012ADC RID: 76508
+		// Token: 0x040047D4 RID: 18388
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04012ADD RID: 76509
+		// Token: 0x040047D5 RID: 18389
 		internal static int __PropertyOffset_RenderingComp;
 
-		// Token: 0x04012ADE RID: 76510
-		internal static int __PropertyOffset_NavDataConfig;
-
-		// Token: 0x04012ADF RID: 76511
-		[Nullable(2)]
-		private FNavDataConfig _NavDataConfig;
-
-		// Token: 0x04012AE0 RID: 76512
+		// Token: 0x040047D6 RID: 18390
 		internal static int __PropertyOffset_bEnableDrawing;
 
-		// Token: 0x04012AE1 RID: 76513
+		// Token: 0x040047D7 RID: 18391
 		internal static byte __PropertyMask_bEnableDrawing;
 
-		// Token: 0x04012AE2 RID: 76514
+		// Token: 0x040047D8 RID: 18392
 		internal static int __PropertyOffset_bForceRebuildOnLoad;
 
-		// Token: 0x04012AE3 RID: 76515
+		// Token: 0x040047D9 RID: 18393
 		internal static byte __PropertyMask_bForceRebuildOnLoad;
 
-		// Token: 0x04012AE4 RID: 76516
+		// Token: 0x040047DA RID: 18394
 		internal static int __PropertyOffset_bAutoDestroyWhenNoNavigation;
 
-		// Token: 0x04012AE5 RID: 76517
+		// Token: 0x040047DB RID: 18395
 		internal static byte __PropertyMask_bAutoDestroyWhenNoNavigation;
 
-		// Token: 0x04012AE6 RID: 76518
+		// Token: 0x040047DC RID: 18396
 		internal static int __PropertyOffset_bCanBeMainNavData;
 
-		// Token: 0x04012AE7 RID: 76519
+		// Token: 0x040047DD RID: 18397
 		internal static byte __PropertyMask_bCanBeMainNavData;
 
-		// Token: 0x04012AE8 RID: 76520
+		// Token: 0x040047DE RID: 18398
 		internal static int __PropertyOffset_bCanSpawnOnRebuild;
 
-		// Token: 0x04012AE9 RID: 76521
+		// Token: 0x040047DF RID: 18399
 		internal static byte __PropertyMask_bCanSpawnOnRebuild;
 
-		// Token: 0x04012AEA RID: 76522
+		// Token: 0x040047E0 RID: 18400
 		internal static int __PropertyOffset_bRebuildAtRuntime_DEPRECATED;
 
-		// Token: 0x04012AEB RID: 76523
+		// Token: 0x040047E1 RID: 18401
 		internal static byte __PropertyMask_bRebuildAtRuntime_DEPRECATED;
 
-		// Token: 0x04012AEC RID: 76524
-		internal static int __PropertyOffset_RuntimeGeneration;
-
-		// Token: 0x04012AED RID: 76525
+		// Token: 0x040047E2 RID: 18402
 		internal static int __PropertyOffset_ObservedPathsTickInterval;
 
-		// Token: 0x04012AEE RID: 76526
+		// Token: 0x040047E3 RID: 18403
 		internal static int __PropertyOffset_DataVersion;
-
-		// Token: 0x04012AEF RID: 76527
-		internal static int __PropertyOffset_SupportedAreas;
-
-		// Token: 0x04012AF0 RID: 76528
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FSupportedAreaData> _SupportedAreas;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000548 RID: 1352
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005AF RID: 1455
 	public class InhalationAbilityComponent : IComponentBase
 	{
-		// Token: 0x06001BA4 RID: 7076 RVA: 0x0004FC04 File Offset: 0x0004DE04
+		// Token: 0x06001DA0 RID: 7584 RVA: 0x000549C0 File Offset: 0x00052BC0
 		private InhalationAbilityComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001BA5 RID: 7077 RVA: 0x0004FC3C File Offset: 0x0004DE3C
+		// Token: 0x06001DA1 RID: 7585 RVA: 0x000549F8 File Offset: 0x00052BF8
 		public static InhalationAbilityComponent Create([Nullable(2)] InhalationAbilityComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BA6 RID: 7078 RVA: 0x0004FC4F File Offset: 0x0004DE4F
+		// Token: 0x06001DA2 RID: 7586 RVA: 0x00054A0B File Offset: 0x00052C0B
 		public static InhalationAbilityComponent CreateFromSetValue([Nullable(2)] InhalationAbilityComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BA7 RID: 7079 RVA: 0x0004FC62 File Offset: 0x0004DE62
+		// Token: 0x06001DA3 RID: 7587 RVA: 0x00054A1E File Offset: 0x00052C1E
 		public new InhalationAbilityComponent_SetValue ToSetValue()
 		{
 			return new InhalationAbilityComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000745 RID: 1861
-		// (get) Token: 0x06001BA8 RID: 7080 RVA: 0x0004FC90 File Offset: 0x0004DE90
-		// (set) Token: 0x06001BA9 RID: 7081 RVA: 0x0004FCCA File Offset: 0x0004DECA
+		// Token: 0x170007C8 RID: 1992
+		// (get) Token: 0x06001DA4 RID: 7588 RVA: 0x00054A4C File Offset: 0x00052C4C
+		// (set) Token: 0x06001DA5 RID: 7589 RVA: 0x00054A86 File Offset: 0x00052C86
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000746 RID: 1862
-		// (get) Token: 0x06001BAA RID: 7082 RVA: 0x0004FCD8 File Offset: 0x0004DED8
-		// (set) Token: 0x06001BAB RID: 7083 RVA: 0x0004FD02 File Offset: 0x0004DF02
+		// Token: 0x170007C9 RID: 1993
+		// (get) Token: 0x06001DA6 RID: 7590 RVA: 0x00054A94 File Offset: 0x00052C94
+		// (set) Token: 0x06001DA7 RID: 7591 RVA: 0x00054ABE File Offset: 0x00052CBE
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000747 RID: 1863
-		// (get) Token: 0x06001BAC RID: 7084 RVA: 0x0004FD10 File Offset: 0x0004DF10
-		// (set) Token: 0x06001BAD RID: 7085 RVA: 0x0004FDA3 File Offset: 0x0004DFA3
+		// Token: 0x170007CA RID: 1994
+		// (get) Token: 0x06001DA8 RID: 7592 RVA: 0x00054ACC File Offset: 0x00052CCC
+		// (set) Token: 0x06001DA9 RID: 7593 RVA: 0x00054B5F File Offset: 0x00052D5F
 		public virtual List<IInhalationConfig> InhalationConfigs
 		{
 			get
@@ -143,18 +141,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040013DD RID: 5085
+		// Token: 0x04001547 RID: 5447
 		[Nullable(2)]
 		protected new InhalationAbilityComponent FbInstance;
 
-		// Token: 0x040013DE RID: 5086
+		// Token: 0x04001548 RID: 5448
 		[Nullable(2)]
 		protected new InhalationAbilityComponent_SetValue PocoInterface;
 
-		// Token: 0x040013DF RID: 5087
+		// Token: 0x04001549 RID: 5449
 		private List<IInhalationConfig> _InhalationConfigsCache;
 
-		// Token: 0x040013E0 RID: 5088
+		// Token: 0x0400154A RID: 5450
 		private bool _InhalationConfigsInited;
 	}
 }

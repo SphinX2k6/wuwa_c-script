@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010C0 RID: 4288
+	// Token: 0x020011BB RID: 4539
 	public struct SkillGameplayButton : IFlatbufferObject
 	{
-		// Token: 0x170036CC RID: 14028
-		// (get) Token: 0x0600D500 RID: 54528 RVA: 0x00317356 File Offset: 0x00315556
+		// Token: 0x170037DD RID: 14301
+		// (get) Token: 0x0600DCDD RID: 56541 RVA: 0x00336516 File Offset: 0x00334716
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D501 RID: 54529 RVA: 0x00317363 File Offset: 0x00315563
+		// Token: 0x0600DCDE RID: 56542 RVA: 0x00336523 File Offset: 0x00334723
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D502 RID: 54530 RVA: 0x0031736C File Offset: 0x0031556C
+		// Token: 0x0600DCDF RID: 56543 RVA: 0x0033652C File Offset: 0x0033472C
 		public static SkillGameplayButton GetRootAsSkillGameplayButton(ByteBuffer _bb)
 		{
 			return SkillGameplayButton.GetRootAsSkillGameplayButton(_bb, default(SkillGameplayButton));
 		}
 
-		// Token: 0x0600D503 RID: 54531 RVA: 0x00317388 File Offset: 0x00315588
+		// Token: 0x0600DCE0 RID: 56544 RVA: 0x00336548 File Offset: 0x00334748
 		public static SkillGameplayButton GetRootAsSkillGameplayButton(ByteBuffer _bb, SkillGameplayButton obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D504 RID: 54532 RVA: 0x003173A5 File Offset: 0x003155A5
+		// Token: 0x0600DCE1 RID: 56545 RVA: 0x00336565 File Offset: 0x00334765
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D505 RID: 54533 RVA: 0x003173B4 File Offset: 0x003155B4
+		// Token: 0x0600DCE2 RID: 56546 RVA: 0x00336574 File Offset: 0x00334774
 		public SkillGameplayButton __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170036CD RID: 14029
-		// (get) Token: 0x0600D506 RID: 54534 RVA: 0x003173C4 File Offset: 0x003155C4
+		// Token: 0x170037DE RID: 14302
+		// (get) Token: 0x0600DCE3 RID: 56547 RVA: 0x00336584 File Offset: 0x00334784
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170036CE RID: 14030
-		// (get) Token: 0x0600D507 RID: 54535 RVA: 0x00317400 File Offset: 0x00315600
+		// Token: 0x170037DF RID: 14303
+		// (get) Token: 0x0600DCE4 RID: 56548 RVA: 0x003365C0 File Offset: 0x003347C0
 		public int GameplayType
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170036CF RID: 14031
-		// (get) Token: 0x0600D508 RID: 54536 RVA: 0x0031743C File Offset: 0x0031563C
+		// Token: 0x170037E0 RID: 14304
+		// (get) Token: 0x0600DCE5 RID: 56549 RVA: 0x003365FC File Offset: 0x003347FC
 		public string ActionName
 		{
 			get
@@ -94,20 +94,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D509 RID: 54537 RVA: 0x00317473 File Offset: 0x00315673
+		// Token: 0x0600DCE6 RID: 56550 RVA: 0x00336633 File Offset: 0x00334833
 		public Span<byte> GetActionNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600D50A RID: 54538 RVA: 0x00317482 File Offset: 0x00315682
+		// Token: 0x0600DCE7 RID: 56551 RVA: 0x00336642 File Offset: 0x00334842
 		public byte[] GetActionNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170036D0 RID: 14032
-		// (get) Token: 0x0600D50B RID: 54539 RVA: 0x0031749C File Offset: 0x0031569C
+		// Token: 0x170037E1 RID: 14305
+		// (get) Token: 0x0600DCE8 RID: 56552 RVA: 0x0033665C File Offset: 0x0033485C
 		public string Name
 		{
 			get
@@ -121,20 +121,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D50C RID: 54540 RVA: 0x003174D4 File Offset: 0x003156D4
+		// Token: 0x0600DCE9 RID: 56553 RVA: 0x00336694 File Offset: 0x00334894
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600D50D RID: 54541 RVA: 0x003174E4 File Offset: 0x003156E4
+		// Token: 0x0600DCEA RID: 56554 RVA: 0x003366A4 File Offset: 0x003348A4
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170036D1 RID: 14033
-		// (get) Token: 0x0600D50E RID: 54542 RVA: 0x003174FC File Offset: 0x003156FC
+		// Token: 0x170037E2 RID: 14306
+		// (get) Token: 0x0600DCEB RID: 56555 RVA: 0x003366BC File Offset: 0x003348BC
 		public int ButtonType
 		{
 			get
@@ -148,8 +148,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170036D2 RID: 14034
-		// (get) Token: 0x0600D50F RID: 54543 RVA: 0x0031753C File Offset: 0x0031573C
+		// Token: 0x170037E3 RID: 14307
+		// (get) Token: 0x0600DCEC RID: 56556 RVA: 0x003366FC File Offset: 0x003348FC
 		public int ActionType
 		{
 			get
@@ -163,8 +163,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170036D3 RID: 14035
-		// (get) Token: 0x0600D510 RID: 54544 RVA: 0x0031757C File Offset: 0x0031577C
+		// Token: 0x170037E4 RID: 14308
+		// (get) Token: 0x0600DCED RID: 56557 RVA: 0x0033673C File Offset: 0x0033493C
 		public string SkillIcon
 		{
 			get
@@ -178,19 +178,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D511 RID: 54545 RVA: 0x003175B4 File Offset: 0x003157B4
+		// Token: 0x0600DCEE RID: 56558 RVA: 0x00336774 File Offset: 0x00334974
 		public Span<byte> GetSkillIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600D512 RID: 54546 RVA: 0x003175C4 File Offset: 0x003157C4
+		// Token: 0x0600DCEF RID: 56559 RVA: 0x00336784 File Offset: 0x00334984
 		public byte[] GetSkillIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600D513 RID: 54547 RVA: 0x003175DC File Offset: 0x003157DC
+		// Token: 0x0600DCF0 RID: 56560 RVA: 0x0033679C File Offset: 0x0033499C
 		public int SkillIconTags(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -201,8 +201,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170036D4 RID: 14036
-		// (get) Token: 0x0600D514 RID: 54548 RVA: 0x0031761C File Offset: 0x0031581C
+		// Token: 0x170037E5 RID: 14309
+		// (get) Token: 0x0600DCF1 RID: 56561 RVA: 0x003367DC File Offset: 0x003349DC
 		public int SkillIconTagsLength
 		{
 			get
@@ -216,20 +216,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D515 RID: 54549 RVA: 0x00317648 File Offset: 0x00315848
+		// Token: 0x0600DCF2 RID: 56562 RVA: 0x00336808 File Offset: 0x00334A08
 		public Span<int> GetSkillIconTagsBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x0600D516 RID: 54550 RVA: 0x00317658 File Offset: 0x00315858
+		// Token: 0x0600DCF3 RID: 56563 RVA: 0x00336818 File Offset: 0x00334A18
 		public int[] GetSkillIconTagsArray()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170036D5 RID: 14037
-		// (get) Token: 0x0600D517 RID: 54551 RVA: 0x00317670 File Offset: 0x00315870
+		// Token: 0x170037E6 RID: 14310
+		// (get) Token: 0x0600DCF4 RID: 56564 RVA: 0x00336830 File Offset: 0x00334A30
 		public bool IsLongPressControlCamera
 		{
 			get
@@ -239,8 +239,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170036D6 RID: 14038
-		// (get) Token: 0x0600D518 RID: 54552 RVA: 0x003176B0 File Offset: 0x003158B0
+		// Token: 0x170037E7 RID: 14311
+		// (get) Token: 0x0600DCF5 RID: 56565 RVA: 0x00336870 File Offset: 0x00334A70
 		public int LongPressTime
 		{
 			get
@@ -254,8 +254,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170036D7 RID: 14039
-		// (get) Token: 0x0600D519 RID: 54553 RVA: 0x003176F0 File Offset: 0x003158F0
+		// Token: 0x170037E8 RID: 14312
+		// (get) Token: 0x0600DCF6 RID: 56566 RVA: 0x003368B0 File Offset: 0x00334AB0
 		public int RoleId
 		{
 			get
@@ -269,25 +269,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D51A RID: 54554 RVA: 0x00317730 File Offset: 0x00315930
+		// Token: 0x0600DCF7 RID: 56567 RVA: 0x003368ED File Offset: 0x00334AED
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SkillIconTagsIter()或GetSkillIconTagsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SkillIconTags()
+		public int[] SkillIconTags()
 		{
-			SkillGameplayButton skillGameplayButton = this;
-			return skillGameplayButton.GetSkillIconTagsArray() ?? Array.Empty<int>();
+			return this.GetSkillIconTagsArray();
 		}
 
-		// Token: 0x0600D51B RID: 54555 RVA: 0x00317754 File Offset: 0x00315954
+		// Token: 0x0600DCF8 RID: 56568 RVA: 0x003368F5 File Offset: 0x00334AF5
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SkillIconTagsIter()
+		public IEnumerable<int> SkillIconTagsIter()
 		{
 			SkillGameplayButton.<SkillIconTagsIter>d__40 <SkillIconTagsIter>d__ = new SkillGameplayButton.<SkillIconTagsIter>d__40(-2);
 			<SkillIconTagsIter>d__.<>3__<>4__this = this;
 			return <SkillIconTagsIter>d__;
 		}
 
-		// Token: 0x040051E9 RID: 20969
+		// Token: 0x040057E8 RID: 22504
 		private Table __p;
 	}
 }

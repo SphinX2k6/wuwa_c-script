@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029EE RID: 10734
+	// Token: 0x02002CDB RID: 11483
 	public class IDisableAlertAreaCondition
 	{
-		// Token: 0x0600ED02 RID: 60674 RVA: 0x00229595 File Offset: 0x00227795
-		[NullableContext(1)]
+		// Token: 0x0600FB99 RID: 64409 RVA: 0x00246F19 File Offset: 0x00245119
 		public static IDisableAlertAreaCondition Create(IDisableAlertAreaCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AE8 RID: 19176
-		// (get) Token: 0x0600ED03 RID: 60675 RVA: 0x002295B4 File Offset: 0x002277B4
+		// Token: 0x17004E91 RID: 20113
+		// (get) Token: 0x0600FB9A RID: 64410 RVA: 0x00246F38 File Offset: 0x00245138
 		public virtual EDisableAlertAreaCondition Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008286 RID: 33414
+		// Token: 0x04008977 RID: 35191
 		private IDisableAlertAreaCondition Instance;
 	}
 }

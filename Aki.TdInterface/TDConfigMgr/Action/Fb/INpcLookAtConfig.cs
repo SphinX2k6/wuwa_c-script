@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A6E RID: 10862
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D62 RID: 11618
 	public class INpcLookAtConfig
 	{
-		// Token: 0x0600EEDB RID: 61147 RVA: 0x0022BFBE File Offset: 0x0022A1BE
+		// Token: 0x0600FD91 RID: 64913 RVA: 0x00249CCA File Offset: 0x00247ECA
 		public static INpcLookAtConfig Create(INpcLookAtConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BC1 RID: 19393
-		// (get) Token: 0x0600EEDC RID: 61148 RVA: 0x0022BFDD File Offset: 0x0022A1DD
+		// Token: 0x17004F7B RID: 20347
+		// (get) Token: 0x0600FD92 RID: 64914 RVA: 0x00249CE9 File Offset: 0x00247EE9
 		public virtual INpcLookAtTypeBase Target
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BC2 RID: 19394
-		// (get) Token: 0x0600EEDD RID: 61149 RVA: 0x0022C00C File Offset: 0x0022A20C
+		// Token: 0x17004F7C RID: 20348
+		// (get) Token: 0x0600FD93 RID: 64915 RVA: 0x00249D18 File Offset: 0x00247F18
 		public virtual bool? IsKeepOverAngle
 		{
 			get
@@ -52,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BC3 RID: 19395
-		// (get) Token: 0x0600EEDE RID: 61150 RVA: 0x0022C042 File Offset: 0x0022A242
+		// Token: 0x17004F7D RID: 20349
+		// (get) Token: 0x0600FD94 RID: 64916 RVA: 0x00249D4E File Offset: 0x00247F4E
 		public virtual float MaxDistance
 		{
 			get
@@ -62,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BC4 RID: 19396
-		// (get) Token: 0x0600EEDF RID: 61151 RVA: 0x0022C04F File Offset: 0x0022A24F
+		// Token: 0x17004F7E RID: 20350
+		// (get) Token: 0x0600FD95 RID: 64917 RVA: 0x00249D5B File Offset: 0x00247F5B
 		public virtual float MaxAngle
 		{
 			get
@@ -72,13 +69,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008366 RID: 33638
+		// Token: 0x04008A6A RID: 35434
 		private INpcLookAtConfig Instance;
 
-		// Token: 0x04008367 RID: 33639
+		// Token: 0x04008A6B RID: 35435
 		private INpcLookAtTypeBase _TargetCache;
 
-		// Token: 0x04008368 RID: 33640
+		// Token: 0x04008A6C RID: 35436
 		private bool _TargetInited;
 	}
 }

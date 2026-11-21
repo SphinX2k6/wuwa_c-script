@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001007 RID: 4103
+// Token: 0x020004BB RID: 1211
 [NullableContext(1)]
 [Nullable(0)]
 public class GolemHackingGameView : UiTickViewBase
 {
-	// Token: 0x06006934 RID: 26932 RVA: 0x0014F3EC File Offset: 0x0014D5EC
+	// Token: 0x06003CC9 RID: 15561 RVA: 0x00157D14 File Offset: 0x00155F14
 	public GolemHackingGameView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06006935 RID: 26933 RVA: 0x0014F3F8 File Offset: 0x0014D5F8
+	// Token: 0x06003CCA RID: 15562 RVA: 0x00157D20 File Offset: 0x00155F20
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -34,7 +34,7 @@ public class GolemHackingGameView : UiTickViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06006936 RID: 26934 RVA: 0x0014F484 File Offset: 0x0014D684
+	// Token: 0x06003CCB RID: 15563 RVA: 0x00157DAC File Offset: 0x00155FAC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GolemHackingGameView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class GolemHackingGameView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006937 RID: 26935 RVA: 0x0014F4C8 File Offset: 0x0014D6C8
+	// Token: 0x06003CCC RID: 15564 RVA: 0x00157DF0 File Offset: 0x00155FF0
 	protected override void OnBeforeDestroy()
 	{
 		if (this.ActivityData != null)
@@ -54,19 +54,19 @@ public class GolemHackingGameView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06006938 RID: 26936 RVA: 0x0014F4F1 File Offset: 0x0014D6F1
+	// Token: 0x06003CCD RID: 15565 RVA: 0x00157E19 File Offset: 0x00156019
 	protected override void OnAfterShow()
 	{
 		this.Proxy.SetCanInteractive(true);
 	}
 
-	// Token: 0x06006939 RID: 26937 RVA: 0x0014F4FF File Offset: 0x0014D6FF
+	// Token: 0x06003CCE RID: 15566 RVA: 0x00157E27 File Offset: 0x00156027
 	protected override void OnTick(float delta)
 	{
 		this.MatrixPanel.OnTick(delta);
 	}
 
-	// Token: 0x0600693A RID: 26938 RVA: 0x0014F510 File Offset: 0x0014D710
+	// Token: 0x06003CCF RID: 15567 RVA: 0x00157E38 File Offset: 0x00156038
 	private void OnClickedClose()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(this.IsMainLevel ? EConfirmBoxConfigId.GolemHackingMainLevelExitConfirm : EConfirmBoxConfigId.GolemHackingNormalLevelExitConfirm);
@@ -95,14 +95,14 @@ public class GolemHackingGameView : UiTickViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600693B RID: 26939 RVA: 0x0014F582 File Offset: 0x0014D782
+	// Token: 0x06003CD0 RID: 15568 RVA: 0x00157EAA File Offset: 0x001560AA
 	private void OnSuccessCallback()
 	{
 		this.CloseCallback(true);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600693C RID: 26940 RVA: 0x0014F598 File Offset: 0x0014D798
+	// Token: 0x06003CD1 RID: 15569 RVA: 0x00157EC0 File Offset: 0x001560C0
 	private void OpenLogReport()
 	{
 		GolemHackingController instance = GolemHackingController.Instance;
@@ -123,7 +123,7 @@ public class GolemHackingGameView : UiTickViewBase
 		LogReportController.Instance.LogReport(golemHackingStartEvent);
 	}
 
-	// Token: 0x0600693D RID: 26941 RVA: 0x0014F628 File Offset: 0x0014D828
+	// Token: 0x06003CD2 RID: 15570 RVA: 0x00157F50 File Offset: 0x00156150
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -196,49 +196,49 @@ public class GolemHackingGameView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600693E RID: 26942 RVA: 0x0014F778 File Offset: 0x0014D978
+	// Token: 0x06003CD3 RID: 15571 RVA: 0x001580A0 File Offset: 0x001562A0
 	public int GetConfigId()
 	{
 		return this.ConfigId;
 	}
 
-	// Token: 0x04003074 RID: 12404
+	// Token: 0x0400310D RID: 12557
 	private const int HELP_ID = 577;
 
-	// Token: 0x04003075 RID: 12405
+	// Token: 0x0400310E RID: 12558
 	protected Action<bool> CloseCallback;
 
-	// Token: 0x04003076 RID: 12406
+	// Token: 0x0400310F RID: 12559
 	protected PopupCaptionItem Caption;
 
-	// Token: 0x04003077 RID: 12407
+	// Token: 0x04003110 RID: 12560
 	protected GolemHackingGameProxy Proxy;
 
-	// Token: 0x04003078 RID: 12408
+	// Token: 0x04003111 RID: 12561
 	protected GolemHackingMatrixPanel MatrixPanel;
 
-	// Token: 0x04003079 RID: 12409
+	// Token: 0x04003112 RID: 12562
 	protected GolemHackingCodePanel HackingPanel;
 
-	// Token: 0x0400307A RID: 12410
+	// Token: 0x04003113 RID: 12563
 	protected bool IsMainLevel;
 
-	// Token: 0x0400307B RID: 12411
+	// Token: 0x04003114 RID: 12564
 	protected int ConfigId;
 
-	// Token: 0x0400307C RID: 12412
+	// Token: 0x04003115 RID: 12565
 	[Nullable(2)]
 	protected GolemHackingActivityData ActivityData;
 
-	// Token: 0x020075FF RID: 30207
+	// Token: 0x02006793 RID: 26515
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x04026FC2 RID: 159682
+		// Token: 0x0402230D RID: 140045
 		CaptionItem,
-		// Token: 0x04026FC3 RID: 159683
+		// Token: 0x0402230E RID: 140046
 		MatrixPanel,
-		// Token: 0x04026FC4 RID: 159684
+		// Token: 0x0402230F RID: 140047
 		HackingPanel
 	}
 }

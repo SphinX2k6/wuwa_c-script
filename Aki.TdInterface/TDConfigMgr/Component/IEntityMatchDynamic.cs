@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000329 RID: 809
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000370 RID: 880
 	public class IEntityMatchDynamic : IEntityMatchConfig
 	{
-		// Token: 0x06000FE8 RID: 4072 RVA: 0x00037B6C File Offset: 0x00035D6C
+		// Token: 0x0600111A RID: 4378 RVA: 0x0003AB38 File Offset: 0x00038D38
 		private IEntityMatchDynamic_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000FE9 RID: 4073 RVA: 0x00037BA4 File Offset: 0x00035DA4
+		// Token: 0x0600111B RID: 4379 RVA: 0x0003AB70 File Offset: 0x00038D70
 		public static IEntityMatchDynamic Create([Nullable(2)] IEntityMatchDynamic instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FEA RID: 4074 RVA: 0x00037BB7 File Offset: 0x00035DB7
+		// Token: 0x0600111C RID: 4380 RVA: 0x0003AB83 File Offset: 0x00038D83
 		public static IEntityMatchDynamic CreateFromSetValue([Nullable(2)] IEntityMatchDynamic_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FEB RID: 4075 RVA: 0x00037BCA File Offset: 0x00035DCA
+		// Token: 0x0600111D RID: 4381 RVA: 0x0003AB96 File Offset: 0x00038D96
 		public new IEntityMatchDynamic_SetValue ToSetValue()
 		{
 			return new IEntityMatchDynamic_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000493 RID: 1171
-		// (get) Token: 0x06000FEC RID: 4076 RVA: 0x00037BE9 File Offset: 0x00035DE9
-		// (set) Token: 0x06000FED RID: 4077 RVA: 0x00037C14 File Offset: 0x00035E14
+		// Token: 0x170004E1 RID: 1249
+		// (get) Token: 0x0600111E RID: 4382 RVA: 0x0003ABB5 File Offset: 0x00038DB5
+		// (set) Token: 0x0600111F RID: 4383 RVA: 0x0003ABE0 File Offset: 0x00038DE0
 		public override EEntityMatchType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000494 RID: 1172
-		// (get) Token: 0x06000FEE RID: 4078 RVA: 0x00037C24 File Offset: 0x00035E24
-		// (set) Token: 0x06000FEF RID: 4079 RVA: 0x00037CB7 File Offset: 0x00035EB7
+		// Token: 0x170004E2 RID: 1250
+		// (get) Token: 0x06001120 RID: 4384 RVA: 0x0003ABF0 File Offset: 0x00038DF0
+		// (set) Token: 0x06001121 RID: 4385 RVA: 0x0003AC83 File Offset: 0x00038E83
 		public virtual List<IDynamicEntityMatch> MatchEntity
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D7E RID: 3454
+		// Token: 0x04000E69 RID: 3689
 		[Nullable(2)]
 		protected new IEntityMatchDynamic FbInstance;
 
-		// Token: 0x04000D7F RID: 3455
+		// Token: 0x04000E6A RID: 3690
 		[Nullable(2)]
 		protected new IEntityMatchDynamic_SetValue PocoInterface;
 
-		// Token: 0x04000D80 RID: 3456
+		// Token: 0x04000E6B RID: 3691
 		private List<IDynamicEntityMatch> _MatchEntityCache;
 
-		// Token: 0x04000D81 RID: 3457
+		// Token: 0x04000E6C RID: 3692
 		private bool _MatchEntityInited;
 	}
 }

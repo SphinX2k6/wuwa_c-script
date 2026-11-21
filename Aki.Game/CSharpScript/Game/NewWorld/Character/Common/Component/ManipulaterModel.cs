@@ -6,42 +6,42 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070CA RID: 28874
+	// Token: 0x0200632E RID: 25390
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ManipulaterModel : ModelBase
 	{
-		// Token: 0x06046743 RID: 288579 RVA: 0x011B0512 File Offset: 0x011AE712
+		// Token: 0x0603D837 RID: 251959 RVA: 0x011CF88E File Offset: 0x011CDA8E
 		public void SetManipulateMode(ManipulaterModel.EManipulaterMode mode)
 		{
 			this.ManipulateMode = mode;
 		}
 
-		// Token: 0x06046744 RID: 288580 RVA: 0x011B051B File Offset: 0x011AE71B
+		// Token: 0x0603D838 RID: 251960 RVA: 0x011CF897 File Offset: 0x011CDA97
 		public ManipulaterModel.EManipulaterMode GetManipulateMode()
 		{
 			return this.ManipulateMode;
 		}
 
-		// Token: 0x06046745 RID: 288581 RVA: 0x011B0523 File Offset: 0x011AE723
+		// Token: 0x0603D839 RID: 251961 RVA: 0x011CF89F File Offset: 0x011CDA9F
 		public void SetTargetPartLocation(Vector offset)
 		{
 			this.TargetPartLocation = offset;
 		}
 
-		// Token: 0x06046746 RID: 288582 RVA: 0x011B052C File Offset: 0x011AE72C
+		// Token: 0x0603D83A RID: 251962 RVA: 0x011CF8A8 File Offset: 0x011CDAA8
 		public Vector GetTargetPartLocation()
 		{
 			return this.TargetPartLocation;
 		}
 
-		// Token: 0x06046747 RID: 288583 RVA: 0x011B0534 File Offset: 0x011AE734
+		// Token: 0x0603D83B RID: 251963 RVA: 0x011CF8B0 File Offset: 0x011CDAB0
 		public bool NeedShowLandTips()
 		{
 			return this.ShowLandTipsCount > 0;
 		}
 
-		// Token: 0x06046748 RID: 288584 RVA: 0x011B0540 File Offset: 0x011AE740
+		// Token: 0x0603D83C RID: 251964 RVA: 0x011CF8BC File Offset: 0x011CDABC
 		public void AddShowLandTipsCount(Entity entity)
 		{
 			if (this.InRangeShowLandTipsEntity.Contains(entity))
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.InRangeShowLandTipsEntity.Add(entity);
 		}
 
-		// Token: 0x06046749 RID: 288585 RVA: 0x011B0590 File Offset: 0x011AE790
+		// Token: 0x0603D83D RID: 251965 RVA: 0x011CF90C File Offset: 0x011CDB0C
 		public void RemoveShowLandTipsCount(Entity entity)
 		{
 			if (!this.InRangeShowLandTipsEntity.Contains(entity) || this.ShowLandTipsCount == 0)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604674A RID: 288586 RVA: 0x011B05E8 File Offset: 0x011AE7E8
+		// Token: 0x0603D83E RID: 251966 RVA: 0x011CF964 File Offset: 0x011CDB64
 		public TArray<FVectorDouble> GetProjectilePath()
 		{
 			if (this.ProjectilePath == null)
@@ -81,13 +81,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return this.ProjectilePath;
 		}
 
-		// Token: 0x0604674B RID: 288587 RVA: 0x011B0603 File Offset: 0x011AE803
+		// Token: 0x0603D83F RID: 251967 RVA: 0x011CF97F File Offset: 0x011CDB7F
 		public void SetProjectilePath(TArray<FVectorDouble> path)
 		{
 			this.ProjectilePath = path;
 		}
 
-		// Token: 0x0604674C RID: 288588 RVA: 0x011B060C File Offset: 0x011AE80C
+		// Token: 0x0603D840 RID: 251968 RVA: 0x011CF988 File Offset: 0x011CDB88
 		public TArray<FVectorDouble> GetAfterPortalProjectilePath()
 		{
 			if (this.AfterPortalProjectilePath == null)
@@ -97,27 +97,27 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return this.AfterPortalProjectilePath;
 		}
 
-		// Token: 0x0604674D RID: 288589 RVA: 0x011B0627 File Offset: 0x011AE827
+		// Token: 0x0603D841 RID: 251969 RVA: 0x011CF9A3 File Offset: 0x011CDBA3
 		[NullableContext(2)]
 		public void SetAfterPortalProjectilePath(TArray<FVectorDouble> path)
 		{
 			this.AfterPortalProjectilePath = path;
 		}
 
-		// Token: 0x0604674E RID: 288590 RVA: 0x011B0630 File Offset: 0x011AE830
+		// Token: 0x0603D842 RID: 251970 RVA: 0x011CF9AC File Offset: 0x011CDBAC
 		public FVectorDouble? GetAfterPortalStartPosition()
 		{
 			return this.AfterPortalStartPosition;
 		}
 
-		// Token: 0x0604674F RID: 288591 RVA: 0x011B0638 File Offset: 0x011AE838
+		// Token: 0x0603D843 RID: 251971 RVA: 0x011CF9B4 File Offset: 0x011CDBB4
 		public void SetAfterPortalStartPosition(FVectorDouble? position)
 		{
 			this.AfterPortalStartPosition = position;
 		}
 
-		// Token: 0x17009CAA RID: 40106
-		// (get) Token: 0x06046750 RID: 288592 RVA: 0x011B0641 File Offset: 0x011AE841
+		// Token: 0x170074BB RID: 29883
+		// (get) Token: 0x0603D844 RID: 251972 RVA: 0x011CF9BD File Offset: 0x011CDBBD
 		public static ManipulaterModel Instance
 		{
 			get
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046751 RID: 288593 RVA: 0x011B0648 File Offset: 0x011AE848
+		// Token: 0x0603D845 RID: 251973 RVA: 0x011CF9C4 File Offset: 0x011CDBC4
 		public static ManipulaterModel GetOrCreateInstance()
 		{
 			if (ManipulaterModel._Instance == null)
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return ManipulaterModel._Instance;
 		}
 
-		// Token: 0x06046752 RID: 288594 RVA: 0x011B065C File Offset: 0x011AE85C
+		// Token: 0x0603D846 RID: 251974 RVA: 0x011CF9D8 File Offset: 0x011CDBD8
 		public static bool CreateInstance()
 		{
 			if (ManipulaterModel._Instance != null)
@@ -147,61 +147,61 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046753 RID: 288595 RVA: 0x011B0672 File Offset: 0x011AE872
+		// Token: 0x0603D847 RID: 251975 RVA: 0x011CF9EE File Offset: 0x011CDBEE
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06046754 RID: 288596 RVA: 0x011B0674 File Offset: 0x011AE874
+		// Token: 0x0603D848 RID: 251976 RVA: 0x011CF9F0 File Offset: 0x011CDBF0
 		public static void ResetStaticDefaultValue()
 		{
 			ManipulaterModel._Instance = null;
 		}
 
-		// Token: 0x06046755 RID: 288597 RVA: 0x011B067C File Offset: 0x011AE87C
+		// Token: 0x0603D849 RID: 251977 RVA: 0x011CF9F8 File Offset: 0x011CDBF8
 		static ManipulaterModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ManipulaterModel.CreateStaticDefaultValue), new Action(ManipulaterModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04024EB5 RID: 151221
+		// Token: 0x040209F4 RID: 133620
 		private ManipulaterModel.EManipulaterMode ManipulateMode;
 
-		// Token: 0x04024EB6 RID: 151222
+		// Token: 0x040209F5 RID: 133621
 		private Vector TargetPartLocation = Vector.ZeroVectorProxy;
 
-		// Token: 0x04024EB7 RID: 151223
+		// Token: 0x040209F6 RID: 133622
 		[Nullable(2)]
 		public Vector ExitHoldingStateCameraLocation;
 
-		// Token: 0x04024EB8 RID: 151224
+		// Token: 0x040209F7 RID: 133623
 		private int ShowLandTipsCount;
 
-		// Token: 0x04024EB9 RID: 151225
+		// Token: 0x040209F8 RID: 133624
 		private readonly HashSet<Entity> InRangeShowLandTipsEntity = new HashSet<Entity>();
 
-		// Token: 0x04024EBA RID: 151226
+		// Token: 0x040209F9 RID: 133625
 		[Nullable(2)]
 		private TArray<FVectorDouble> ProjectilePath;
 
-		// Token: 0x04024EBB RID: 151227
+		// Token: 0x040209FA RID: 133626
 		[Nullable(2)]
 		private TArray<FVectorDouble> AfterPortalProjectilePath;
 
-		// Token: 0x04024EBC RID: 151228
+		// Token: 0x040209FB RID: 133627
 		private FVectorDouble? AfterPortalStartPosition;
 
-		// Token: 0x04024EBD RID: 151229
+		// Token: 0x040209FC RID: 133628
 		[Nullable(2)]
 		private static ManipulaterModel _Instance;
 
-		// Token: 0x0200CE6B RID: 52843
+		// Token: 0x0200BB40 RID: 47936
 		[NullableContext(0)]
 		public enum EManipulaterMode
 		{
-			// Token: 0x0403E244 RID: 254532
+			// Token: 0x04039978 RID: 235896
 			BigWorld,
-			// Token: 0x0403E245 RID: 254533
+			// Token: 0x04039979 RID: 235897
 			Boss
 		}
 	}

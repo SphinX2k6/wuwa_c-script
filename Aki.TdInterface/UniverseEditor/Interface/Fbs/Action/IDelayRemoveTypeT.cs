@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006562 RID: 25954
+	// Token: 0x02006BD3 RID: 27603
 	public class IDelayRemoveTypeT
 	{
-		// Token: 0x1700C0E1 RID: 49377
-		// (get) Token: 0x0602D07E RID: 184446 RVA: 0x0062E016 File Offset: 0x0062C216
-		// (set) Token: 0x0602D07F RID: 184447 RVA: 0x0062E01E File Offset: 0x0062C21E
+		// Token: 0x1700CA7C RID: 51836
+		// (get) Token: 0x0602F83A RID: 194618 RVA: 0x0067A7DA File Offset: 0x006789DA
+		// (set) Token: 0x0602F83B RID: 194619 RVA: 0x0067A7E2 File Offset: 0x006789E2
 		public EDelayRemoveType Type { get; set; }
 
-		// Token: 0x0602D080 RID: 184448 RVA: 0x0062E027 File Offset: 0x0062C227
+		// Token: 0x0602F83C RID: 194620 RVA: 0x0067A7EB File Offset: 0x006789EB
 		public IDelayRemoveTypeT()
 		{
 			this.Type = EDelayRemoveType.DelayRemoveAfterSkillFinish;

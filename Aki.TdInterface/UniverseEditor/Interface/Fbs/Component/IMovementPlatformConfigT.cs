@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055DC RID: 21980
+	// Token: 0x02005B7A RID: 23418
 	public class IMovementPlatformConfigT
 	{
-		// Token: 0x1700A29D RID: 41629
-		// (get) Token: 0x06024745 RID: 149317 RVA: 0x005083C1 File Offset: 0x005065C1
-		// (set) Token: 0x06024746 RID: 149318 RVA: 0x005083C9 File Offset: 0x005065C9
+		// Token: 0x1700AB25 RID: 43813
+		// (get) Token: 0x06026952 RID: 158034 RVA: 0x00548939 File Offset: 0x00546B39
+		// (set) Token: 0x06026953 RID: 158035 RVA: 0x00548941 File Offset: 0x00546B41
 		public List<int> PlayerAttachTags { get; set; }
 
-		// Token: 0x1700A29E RID: 41630
-		// (get) Token: 0x06024747 RID: 149319 RVA: 0x005083D2 File Offset: 0x005065D2
-		// (set) Token: 0x06024748 RID: 149320 RVA: 0x005083DA File Offset: 0x005065DA
+		// Token: 0x1700AB26 RID: 43814
+		// (get) Token: 0x06026954 RID: 158036 RVA: 0x0054894A File Offset: 0x00546B4A
+		// (set) Token: 0x06026955 RID: 158037 RVA: 0x00548952 File Offset: 0x00546B52
 		public int SafePointId { get; set; }
 
-		// Token: 0x1700A29F RID: 41631
-		// (get) Token: 0x06024749 RID: 149321 RVA: 0x005083E3 File Offset: 0x005065E3
-		// (set) Token: 0x0602474A RID: 149322 RVA: 0x005083EB File Offset: 0x005065EB
+		// Token: 0x1700AB27 RID: 43815
+		// (get) Token: 0x06026956 RID: 158038 RVA: 0x0054895B File Offset: 0x00546B5B
+		// (set) Token: 0x06026957 RID: 158039 RVA: 0x00548963 File Offset: 0x00546B63
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602474B RID: 149323 RVA: 0x005083F4 File Offset: 0x005065F4
+		// Token: 0x06026958 RID: 158040 RVA: 0x0054896C File Offset: 0x00546B6C
 		public IMovementPlatformConfigT()
 		{
 			this.PlayerAttachTags = null;

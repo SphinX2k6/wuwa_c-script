@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EF6 RID: 7926
+	// Token: 0x0200212F RID: 8495
 	public class ISuperCatapult_SetValue
 	{
-		// Token: 0x040064D5 RID: 25813
+		// Token: 0x04006AC4 RID: 27332
 		public ELeisureInteract Type;
 
-		// Token: 0x040064D6 RID: 25814
-		[Nullable(1)]
+		// Token: 0x04006AC5 RID: 27333
 		public ICatapultParam Param;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BEF RID: 19439
+	// Token: 0x020050DC RID: 20700
 	public struct ICountDangoOverTargetLevel : IFlatbufferObject
 	{
-		// Token: 0x17008D31 RID: 36145
-		// (get) Token: 0x0601EC59 RID: 126041 RVA: 0x0044FA10 File Offset: 0x0044DC10
+		// Token: 0x17009455 RID: 37973
+		// (get) Token: 0x0602083F RID: 133183 RVA: 0x00483078 File Offset: 0x00481278
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EC5A RID: 126042 RVA: 0x0044FA1D File Offset: 0x0044DC1D
+		// Token: 0x06020840 RID: 133184 RVA: 0x00483085 File Offset: 0x00481285
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601EC5B RID: 126043 RVA: 0x0044FA24 File Offset: 0x0044DC24
+		// Token: 0x06020841 RID: 133185 RVA: 0x0048308C File Offset: 0x0048128C
 		public static ICountDangoOverTargetLevel GetRootAsICountDangoOverTargetLevel(ByteBuffer _bb)
 		{
 			return ICountDangoOverTargetLevel.GetRootAsICountDangoOverTargetLevel(_bb, default(ICountDangoOverTargetLevel));
 		}
 
-		// Token: 0x0601EC5C RID: 126044 RVA: 0x0044FA40 File Offset: 0x0044DC40
+		// Token: 0x06020842 RID: 133186 RVA: 0x004830A8 File Offset: 0x004812A8
 		public static ICountDangoOverTargetLevel GetRootAsICountDangoOverTargetLevel(ByteBuffer _bb, ICountDangoOverTargetLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601EC5D RID: 126045 RVA: 0x0044FA5D File Offset: 0x0044DC5D
+		// Token: 0x06020843 RID: 133187 RVA: 0x004830C5 File Offset: 0x004812C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601EC5E RID: 126046 RVA: 0x0044FA6C File Offset: 0x0044DC6C
+		// Token: 0x06020844 RID: 133188 RVA: 0x004830D4 File Offset: 0x004812D4
 		public ICountDangoOverTargetLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008D32 RID: 36146
-		// (get) Token: 0x0601EC5F RID: 126047 RVA: 0x0044FA7C File Offset: 0x0044DC7C
+		// Token: 0x17009456 RID: 37974
+		// (get) Token: 0x06020845 RID: 133189 RVA: 0x004830E4 File Offset: 0x004812E4
 		public ECheckDangoCultivationProgressType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008D33 RID: 36147
-		// (get) Token: 0x0601EC60 RID: 126048 RVA: 0x0044FAB8 File Offset: 0x0044DCB8
+		// Token: 0x17009457 RID: 37975
+		// (get) Token: 0x06020846 RID: 133190 RVA: 0x00483120 File Offset: 0x00481320
 		public int TargetNumber
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008D34 RID: 36148
-		// (get) Token: 0x0601EC61 RID: 126049 RVA: 0x0044FAF4 File Offset: 0x0044DCF4
+		// Token: 0x17009458 RID: 37976
+		// (get) Token: 0x06020847 RID: 133191 RVA: 0x0048315C File Offset: 0x0048135C
 		public int TargetLevel
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EC62 RID: 126050 RVA: 0x0044FB30 File Offset: 0x0044DD30
+		// Token: 0x06020848 RID: 133192 RVA: 0x00483198 File Offset: 0x00481398
 		public static Offset<ICountDangoOverTargetLevel> CreateICountDangoOverTargetLevel(FlatBufferBuilder builder, ECheckDangoCultivationProgressType Type = ECheckDangoCultivationProgressType.CountDangoOverTargetLevel, int TargetNumber = 0, int TargetLevel = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICountDangoOverTargetLevel.EndICountDangoOverTargetLevel(builder);
 		}
 
-		// Token: 0x0601EC63 RID: 126051 RVA: 0x0044FB54 File Offset: 0x0044DD54
+		// Token: 0x06020849 RID: 133193 RVA: 0x004831BC File Offset: 0x004813BC
 		public static void StartICountDangoOverTargetLevel(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601EC64 RID: 126052 RVA: 0x0044FB5D File Offset: 0x0044DD5D
+		// Token: 0x0602084A RID: 133194 RVA: 0x004831C5 File Offset: 0x004813C5
 		public static void AddType(FlatBufferBuilder builder, ECheckDangoCultivationProgressType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601EC65 RID: 126053 RVA: 0x0044FB68 File Offset: 0x0044DD68
+		// Token: 0x0602084B RID: 133195 RVA: 0x004831D0 File Offset: 0x004813D0
 		public static void AddTargetNumber(FlatBufferBuilder builder, int targetNumber)
 		{
 			builder.AddInt(1, targetNumber, 0);
 		}
 
-		// Token: 0x0601EC66 RID: 126054 RVA: 0x0044FB73 File Offset: 0x0044DD73
+		// Token: 0x0602084C RID: 133196 RVA: 0x004831DB File Offset: 0x004813DB
 		public static void AddTargetLevel(FlatBufferBuilder builder, int targetLevel)
 		{
 			builder.AddInt(2, targetLevel, 0);
 		}
 
-		// Token: 0x0601EC67 RID: 126055 RVA: 0x0044FB7E File Offset: 0x0044DD7E
+		// Token: 0x0602084D RID: 133197 RVA: 0x004831E6 File Offset: 0x004813E6
 		public static Offset<ICountDangoOverTargetLevel> EndICountDangoOverTargetLevel(FlatBufferBuilder builder)
 		{
 			return new Offset<ICountDangoOverTargetLevel>(builder.EndTable());
 		}
 
-		// Token: 0x0601EC68 RID: 126056 RVA: 0x0044FB8C File Offset: 0x0044DD8C
+		// Token: 0x0602084E RID: 133198 RVA: 0x004831F4 File Offset: 0x004813F4
 		public ICountDangoOverTargetLevelT UnPack()
 		{
 			ICountDangoOverTargetLevelT countDangoOverTargetLevelT = new ICountDangoOverTargetLevelT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return countDangoOverTargetLevelT;
 		}
 
-		// Token: 0x0601EC69 RID: 126057 RVA: 0x0044FBA7 File Offset: 0x0044DDA7
+		// Token: 0x0602084F RID: 133199 RVA: 0x0048320F File Offset: 0x0048140F
 		public void UnPackTo(ICountDangoOverTargetLevelT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.TargetLevel = this.TargetLevel;
 		}
 
-		// Token: 0x0601EC6A RID: 126058 RVA: 0x0044FBD0 File Offset: 0x0044DDD0
+		// Token: 0x06020850 RID: 133200 RVA: 0x00483238 File Offset: 0x00481438
 		public static Offset<ICountDangoOverTargetLevel> Pack(FlatBufferBuilder builder, ICountDangoOverTargetLevelT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICountDangoOverTargetLevel.CreateICountDangoOverTargetLevel(builder, _o.Type, _o.TargetNumber, _o.TargetLevel);
 		}
 
-		// Token: 0x0400D579 RID: 54649
+		// Token: 0x0400E090 RID: 57488
 		private Table __p;
 	}
 }

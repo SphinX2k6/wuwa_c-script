@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CE2 RID: 7394
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EF1 RID: 7921
 	public class IPhoneRecordActionConfig
 	{
-		// Token: 0x06009EB5 RID: 40629 RVA: 0x0016AD94 File Offset: 0x00168F94
+		// Token: 0x0600A895 RID: 43157 RVA: 0x0017EFF4 File Offset: 0x0017D1F4
 		private IPhoneRecordActionConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009EB6 RID: 40630 RVA: 0x0016ADCC File Offset: 0x00168FCC
+		// Token: 0x0600A896 RID: 43158 RVA: 0x0017F02C File Offset: 0x0017D22C
 		public static IPhoneRecordActionConfig Create([Nullable(2)] IPhoneRecordActionConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009EB7 RID: 40631 RVA: 0x0016ADDF File Offset: 0x00168FDF
+		// Token: 0x0600A897 RID: 43159 RVA: 0x0017F03F File Offset: 0x0017D23F
 		public static IPhoneRecordActionConfig CreateFromSetValue([Nullable(2)] IPhoneRecordActionConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009EB8 RID: 40632 RVA: 0x0016ADF2 File Offset: 0x00168FF2
+		// Token: 0x0600A898 RID: 43160 RVA: 0x0017F052 File Offset: 0x0017D252
 		public IPhoneRecordActionConfig_SetValue ToSetValue()
 		{
 			return new IPhoneRecordActionConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700315E RID: 12638
-		// (get) Token: 0x06009EB9 RID: 40633 RVA: 0x0016AE14 File Offset: 0x00169014
-		// (set) Token: 0x06009EBA RID: 40634 RVA: 0x0016AE4E File Offset: 0x0016904E
+		// Token: 0x170033EF RID: 13295
+		// (get) Token: 0x0600A899 RID: 43161 RVA: 0x0017F074 File Offset: 0x0017D274
+		// (set) Token: 0x0600A89A RID: 43162 RVA: 0x0017F0AE File Offset: 0x0017D2AE
 		public virtual int? PhoneMessageId
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700315F RID: 12639
-		// (get) Token: 0x06009EBB RID: 40635 RVA: 0x0016AE5C File Offset: 0x0016905C
-		// (set) Token: 0x06009EBC RID: 40636 RVA: 0x0016AE96 File Offset: 0x00169096
+		// Token: 0x170033F0 RID: 13296
+		// (get) Token: 0x0600A89B RID: 43163 RVA: 0x0017F0BC File Offset: 0x0017D2BC
+		// (set) Token: 0x0600A89C RID: 43164 RVA: 0x0017F0F6 File Offset: 0x0017D2F6
 		public virtual int? DialogProgress
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005FDF RID: 24543
+		// Token: 0x04006552 RID: 25938
 		[Nullable(2)]
 		protected IPhoneRecordActionConfig FbInstance;
 
-		// Token: 0x04005FE0 RID: 24544
+		// Token: 0x04006553 RID: 25939
 		[Nullable(2)]
 		protected IPhoneRecordActionConfig_SetValue PocoInterface;
 	}

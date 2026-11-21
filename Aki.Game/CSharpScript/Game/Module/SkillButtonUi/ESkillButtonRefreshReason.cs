@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C00 RID: 19456
+	// Token: 0x02003BB1 RID: 15281
 	public enum ESkillButtonRefreshReason
 	{
-		// Token: 0x0401AC26 RID: 109606
+		// Token: 0x04015580 RID: 87424
 		ChangePlatformType,
-		// Token: 0x0401AC27 RID: 109607
+		// Token: 0x04015581 RID: 87425
 		ChangeRole,
-		// Token: 0x0401AC28 RID: 109608
+		// Token: 0x04015582 RID: 87426
 		VehicleEntityOrLeave,
-		// Token: 0x0401AC29 RID: 109609
+		// Token: 0x04015583 RID: 87427
 		FollowerEntityCreateOrClear,
-		// Token: 0x0401AC2A RID: 109610
+		// Token: 0x04015584 RID: 87428
 		GamepadRefreshKeyAction,
-		// Token: 0x0401AC2B RID: 109611
+		// Token: 0x04015585 RID: 87429
 		GamepadRefreshAimState,
-		// Token: 0x0401AC2C RID: 109612
+		// Token: 0x04015586 RID: 87430
 		None
 	}
 }

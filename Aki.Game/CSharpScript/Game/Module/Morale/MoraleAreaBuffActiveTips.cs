@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x02005397 RID: 21399
+	// Token: 0x0200437A RID: 17274
 	public class MoraleAreaBuffActiveTips : UiTickViewBase
 	{
-		// Token: 0x06036ABF RID: 223935 RVA: 0x00CF04C5 File Offset: 0x00CEE6C5
+		// Token: 0x0602BA05 RID: 178693 RVA: 0x00C3F56D File Offset: 0x00C3D76D
 		[NullableContext(1)]
 		public MoraleAreaBuffActiveTips(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036AC0 RID: 223936 RVA: 0x00CF04D0 File Offset: 0x00CEE6D0
+		// Token: 0x0602BA06 RID: 178694 RVA: 0x00C3F578 File Offset: 0x00C3D778
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -48,12 +48,12 @@ namespace CSharpScript.Game.Module.Morale
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06036AC1 RID: 223937 RVA: 0x00CF0666 File Offset: 0x00CEE866
+		// Token: 0x0602BA07 RID: 178695 RVA: 0x00C3F70E File Offset: 0x00C3D90E
 		private void InitDataParam()
 		{
 		}
 
-		// Token: 0x06036AC2 RID: 223938 RVA: 0x00CF0668 File Offset: 0x00CEE868
+		// Token: 0x0602BA08 RID: 178696 RVA: 0x00C3F710 File Offset: 0x00C3D910
 		protected override void OnStart()
 		{
 			this.InitDataParam();
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.Morale
 			item3.SetUIActive(false);
 		}
 
-		// Token: 0x06036AC3 RID: 223939 RVA: 0x00CF06A8 File Offset: 0x00CEE8A8
+		// Token: 0x0602BA09 RID: 178697 RVA: 0x00C3F750 File Offset: 0x00C3D950
 		protected override void OnBeforeShow()
 		{
 			this.UpdateData();
 		}
 
-		// Token: 0x06036AC4 RID: 223940 RVA: 0x00CF06B0 File Offset: 0x00CEE8B0
+		// Token: 0x0602BA0A RID: 178698 RVA: 0x00C3F758 File Offset: 0x00C3D958
 		public void UpdateData()
 		{
 			this.TipCountDown = (float)MoraleConfig.Instance.GetMoraleBuffShowTime();
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Morale
 			base.GetText(2).ShowTextNew(((moraleAreaBuffActiveTipsParams != null) ? moraleAreaBuffActiveTipsParams.DescKey : null) ?? "not desc key");
 		}
 
-		// Token: 0x06036AC5 RID: 223941 RVA: 0x00CF071C File Offset: 0x00CEE91C
+		// Token: 0x0602BA0B RID: 178699 RVA: 0x00C3F7C4 File Offset: 0x00C3D9C4
 		protected override void OnTick(float delta)
 		{
 			if (this.TipCountDown <= 0f)
@@ -104,33 +104,33 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x0401CE15 RID: 118293
+		// Token: 0x040178AD RID: 96429
 		public float TipCountDown;
 
-		// Token: 0x0200B601 RID: 46593
+		// Token: 0x0200A039 RID: 41017
 		private enum EChildType
 		{
-			// Token: 0x0403720D RID: 225805
+			// Token: 0x04031C62 RID: 203874
 			TextTitle = 1,
-			// Token: 0x0403720E RID: 225806
+			// Token: 0x04031C63 RID: 203875
 			TextDes,
-			// Token: 0x0403720F RID: 225807
+			// Token: 0x04031C64 RID: 203876
 			PanelHaveTitle,
-			// Token: 0x04037210 RID: 225808
+			// Token: 0x04031C65 RID: 203877
 			PanelNoTitle,
-			// Token: 0x04037211 RID: 225809
+			// Token: 0x04031C66 RID: 203878
 			ItemTagNew,
-			// Token: 0x04037212 RID: 225810
+			// Token: 0x04031C67 RID: 203879
 			SpriteTagBg,
-			// Token: 0x04037213 RID: 225811
+			// Token: 0x04031C68 RID: 203880
 			PanelClockIcon,
-			// Token: 0x04037214 RID: 225812
+			// Token: 0x04031C69 RID: 203881
 			TxtNew,
-			// Token: 0x04037215 RID: 225813
+			// Token: 0x04031C6A RID: 203882
 			ItemCheck,
-			// Token: 0x04037216 RID: 225814
+			// Token: 0x04031C6B RID: 203883
 			ItemInvalid,
-			// Token: 0x04037217 RID: 225815
+			// Token: 0x04031C6C RID: 203884
 			ItemInvalidLine
 		}
 	}

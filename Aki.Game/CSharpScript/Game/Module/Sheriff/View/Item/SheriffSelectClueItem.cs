@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C71 RID: 19569
+	// Token: 0x02003C22 RID: 15394
 	public class SheriffSelectClueItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06032947 RID: 207175 RVA: 0x00BCA27C File Offset: 0x00BC847C
+		// Token: 0x060276FA RID: 161530 RVA: 0x00B0EEE0 File Offset: 0x00B0D0E0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032948 RID: 207176 RVA: 0x00BCA2C4 File Offset: 0x00BC84C4
+		// Token: 0x060276FB RID: 161531 RVA: 0x00B0EF28 File Offset: 0x00B0D128
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			int? curId = this.CurId;
@@ -48,13 +48,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}
 		}
 
-		// Token: 0x0401AEA2 RID: 110242
+		// Token: 0x040157FF RID: 88063
 		protected int? CurId;
 
-		// Token: 0x0200AE24 RID: 44580
+		// Token: 0x02009842 RID: 38978
 		private static class ESelectClueItem
 		{
-			// Token: 0x04034E34 RID: 216628
+			// Token: 0x0402F7D9 RID: 194521
 			public const int TexIcon = 0;
 		}
 	}

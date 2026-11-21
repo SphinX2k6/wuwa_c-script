@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B32 RID: 6962
+	// Token: 0x02001CE1 RID: 7393
 	public class IInfrastructureItemDeliveryRoadBuild_SetValue
 	{
-		// Token: 0x04005B3B RID: 23355
+		// Token: 0x04005FD9 RID: 24537
 		public EInfrastructureItemDeliveryType Type;
 
-		// Token: 0x04005B3C RID: 23356
+		// Token: 0x04005FDA RID: 24538
 		public int Id;
 	}
 }

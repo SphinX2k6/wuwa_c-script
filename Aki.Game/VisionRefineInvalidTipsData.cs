@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200176C RID: 5996
+// Token: 0x02000C25 RID: 3109
 public class VisionRefineInvalidTipsData
 {
-	// Token: 0x04004F02 RID: 20226
+	// Token: 0x04004FAC RID: 20396
 	[Nullable(2)]
 	public string LockDescriptionTextId;
 
-	// Token: 0x04004F03 RID: 20227
+	// Token: 0x04004FAD RID: 20397
 	[Nullable(new byte[]
 	{
 		2,

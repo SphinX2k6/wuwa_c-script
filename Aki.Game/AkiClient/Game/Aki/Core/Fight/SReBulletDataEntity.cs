@@ -8,7 +8,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Core.Fight
 {
-	// Token: 0x02004011 RID: 16401
+	// Token: 0x02003272 RID: 12914
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(8, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 5)]
@@ -16,32 +16,32 @@ namespace AkiClient.Game.Aki.Core.Fight
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 8)]
 	public struct SReBulletDataEntity : IEqualityOperators<SReBulletDataEntity, SReBulletDataEntity, bool>, IEquatable<SReBulletDataEntity>, IUnrealScriptStruct
 	{
-		// Token: 0x0602A058 RID: 172120 RVA: 0x009D383B File Offset: 0x009D1A3B
+		// Token: 0x06020409 RID: 132105 RVA: 0x009410D0 File Offset: 0x0093F2D0
 		public SReBulletDataEntity(int 实体ID, bool 是否随子弹销毁而销毁)
 		{
 			this.实体ID = 实体ID;
 			this.是否随子弹销毁而销毁 = 是否随子弹销毁而销毁;
 		}
 
-		// Token: 0x0602A059 RID: 172121 RVA: 0x009D384B File Offset: 0x009D1A4B
+		// Token: 0x0602040A RID: 132106 RVA: 0x009410E0 File Offset: 0x0093F2E0
 		public static bool operator ==(SReBulletDataEntity left, SReBulletDataEntity right)
 		{
 			return left.实体ID == right.实体ID && left.是否随子弹销毁而销毁 == right.是否随子弹销毁而销毁;
 		}
 
-		// Token: 0x0602A05A RID: 172122 RVA: 0x009D386B File Offset: 0x009D1A6B
+		// Token: 0x0602040B RID: 132107 RVA: 0x00941100 File Offset: 0x0093F300
 		public static bool operator !=(SReBulletDataEntity left, SReBulletDataEntity right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x0602A05B RID: 172123 RVA: 0x009D3877 File Offset: 0x009D1A77
+		// Token: 0x0602040C RID: 132108 RVA: 0x0094110C File Offset: 0x0093F30C
 		public bool Equals(SReBulletDataEntity other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x0602A05C RID: 172124 RVA: 0x009D3888 File Offset: 0x009D1A88
+		// Token: 0x0602040D RID: 132109 RVA: 0x0094111C File Offset: 0x0093F31C
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -53,30 +53,30 @@ namespace AkiClient.Game.Aki.Core.Fight
 			return false;
 		}
 
-		// Token: 0x0602A05D RID: 172125 RVA: 0x009D38AD File Offset: 0x009D1AAD
+		// Token: 0x0602040E RID: 132110 RVA: 0x00941141 File Offset: 0x0093F341
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<int, bool>(this.实体ID, this.是否随子弹销毁而销毁);
 		}
 
-		// Token: 0x0602A05E RID: 172126 RVA: 0x009D38C0 File Offset: 0x009D1AC0
+		// Token: 0x0602040F RID: 132111 RVA: 0x00941154 File Offset: 0x0093F354
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SReBulletDataEntity._ScriptStructPtr != 0) ? SReBulletDataEntity._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Core/Fight/SReBulletDataEntity.SReBulletDataEntity", ref SReBulletDataEntity._ScriptStructPtr);
 		}
 
-		// Token: 0x04015A3B RID: 88635
+		// Token: 0x0401168E RID: 71310
 		[FieldOffset(0)]
 		public int 实体ID;
 
-		// Token: 0x04015A3C RID: 88636
+		// Token: 0x0401168F RID: 71311
 		[FieldOffset(4)]
 		public bool 是否随子弹销毁而销毁;
 
-		// Token: 0x04015A3D RID: 88637
+		// Token: 0x04011690 RID: 71312
 		public const string __ObjectPath = "/Game/Aki/Core/Fight/SReBulletDataEntity.SReBulletDataEntity";
 
-		// Token: 0x04015A3E RID: 88638
+		// Token: 0x04011691 RID: 71313
 		private static IntPtr _ScriptStructPtr;
 	}
 }

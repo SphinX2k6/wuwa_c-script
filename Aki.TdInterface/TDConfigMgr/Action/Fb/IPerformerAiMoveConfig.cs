@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200298C RID: 10636
+	// Token: 0x02002C73 RID: 11379
 	public class IPerformerAiMoveConfig
 	{
-		// Token: 0x0600EB86 RID: 60294 RVA: 0x00227282 File Offset: 0x00225482
-		[NullableContext(1)]
+		// Token: 0x0600FA04 RID: 64004 RVA: 0x00244A0E File Offset: 0x00242C0E
 		public static IPerformerAiMoveConfig Create(IPerformerAiMoveConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A30 RID: 18992
-		// (get) Token: 0x0600EB87 RID: 60295 RVA: 0x002272A1 File Offset: 0x002254A1
+		// Token: 0x17004DCC RID: 19916
+		// (get) Token: 0x0600FA05 RID: 64005 RVA: 0x00244A2D File Offset: 0x00242C2D
 		public virtual EPerformerAiMoveToType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081B6 RID: 33206
+		// Token: 0x0400889B RID: 34971
 		private IPerformerAiMoveConfig Instance;
 	}
 }

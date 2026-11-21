@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200607B RID: 24699
+	// Token: 0x020066DD RID: 26333
 	public class IActionFunctionalConfigItemT
 	{
-		// Token: 0x1700B606 RID: 46598
-		// (get) Token: 0x06029D50 RID: 171344 RVA: 0x005BD246 File Offset: 0x005BB446
-		// (set) Token: 0x06029D51 RID: 171345 RVA: 0x005BD24E File Offset: 0x005BB44E
+		// Token: 0x1700BF71 RID: 49009
+		// (get) Token: 0x0602C404 RID: 181252 RVA: 0x0060672A File Offset: 0x0060492A
+		// (set) Token: 0x0602C405 RID: 181253 RVA: 0x00606732 File Offset: 0x00604932
 		public EOnlineParticipateRule OnlineParticipateRule { get; set; }
 
-		// Token: 0x1700B607 RID: 46599
-		// (get) Token: 0x06029D52 RID: 171346 RVA: 0x005BD257 File Offset: 0x005BB457
-		// (set) Token: 0x06029D53 RID: 171347 RVA: 0x005BD25F File Offset: 0x005BB45F
+		// Token: 0x1700BF72 RID: 49010
+		// (get) Token: 0x0602C406 RID: 181254 RVA: 0x0060673B File Offset: 0x0060493B
+		// (set) Token: 0x0602C407 RID: 181255 RVA: 0x00606743 File Offset: 0x00604943
 		public bool IsDetectScreenOccupation { get; set; }
 
-		// Token: 0x1700B608 RID: 46600
-		// (get) Token: 0x06029D54 RID: 171348 RVA: 0x005BD268 File Offset: 0x005BB468
-		// (set) Token: 0x06029D55 RID: 171349 RVA: 0x005BD270 File Offset: 0x005BB470
+		// Token: 0x1700BF73 RID: 49011
+		// (get) Token: 0x0602C408 RID: 181256 RVA: 0x0060674C File Offset: 0x0060494C
+		// (set) Token: 0x0602C409 RID: 181257 RVA: 0x00606754 File Offset: 0x00604954
 		public bool IsWithResultOnly { get; set; }
 
-		// Token: 0x1700B609 RID: 46601
-		// (get) Token: 0x06029D56 RID: 171350 RVA: 0x005BD279 File Offset: 0x005BB479
-		// (set) Token: 0x06029D57 RID: 171351 RVA: 0x005BD281 File Offset: 0x005BB481
+		// Token: 0x1700BF74 RID: 49012
+		// (get) Token: 0x0602C40A RID: 181258 RVA: 0x0060675D File Offset: 0x0060495D
+		// (set) Token: 0x0602C40B RID: 181259 RVA: 0x00606765 File Offset: 0x00604965
 		public bool IsOperatePlayer { get; set; }
 
-		// Token: 0x1700B60A RID: 46602
-		// (get) Token: 0x06029D58 RID: 171352 RVA: 0x005BD28A File Offset: 0x005BB48A
-		// (set) Token: 0x06029D59 RID: 171353 RVA: 0x005BD292 File Offset: 0x005BB492
+		// Token: 0x1700BF75 RID: 49013
+		// (get) Token: 0x0602C40C RID: 181260 RVA: 0x0060676E File Offset: 0x0060496E
+		// (set) Token: 0x0602C40D RID: 181261 RVA: 0x00606776 File Offset: 0x00604976
 		public byte NullMask { get; set; }
 
-		// Token: 0x06029D5A RID: 171354 RVA: 0x005BD29B File Offset: 0x005BB49B
+		// Token: 0x0602C40E RID: 181262 RVA: 0x0060677F File Offset: 0x0060497F
 		public IActionFunctionalConfigItemT()
 		{
 			this.OnlineParticipateRule = EOnlineParticipateRule.AnyPlayer;

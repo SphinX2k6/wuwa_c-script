@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DB0 RID: 15792
+	// Token: 0x020041C7 RID: 16839
 	public class IConditionReturnPosT
 	{
-		// Token: 0x17006CB4 RID: 27828
-		// (get) Token: 0x06015F86 RID: 89990 RVA: 0x0032C33F File Offset: 0x0032A53F
-		// (set) Token: 0x06015F87 RID: 89991 RVA: 0x0032C347 File Offset: 0x0032A547
+		// Token: 0x1700726E RID: 29294
+		// (get) Token: 0x060174BE RID: 95422 RVA: 0x0035366B File Offset: 0x0035186B
+		// (set) Token: 0x060174BF RID: 95423 RVA: 0x00353673 File Offset: 0x00351873
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17006CB5 RID: 27829
-		// (get) Token: 0x06015F88 RID: 89992 RVA: 0x0032C350 File Offset: 0x0032A550
-		// (set) Token: 0x06015F89 RID: 89993 RVA: 0x0032C358 File Offset: 0x0032A558
+		// Token: 0x1700726F RID: 29295
+		// (get) Token: 0x060174C0 RID: 95424 RVA: 0x0035367C File Offset: 0x0035187C
+		// (set) Token: 0x060174C1 RID: 95425 RVA: 0x00353684 File Offset: 0x00351884
 		public TFastReturnPosUnion Pos { get; set; }
 
-		// Token: 0x06015F8A RID: 89994 RVA: 0x0032C361 File Offset: 0x0032A561
+		// Token: 0x060174C2 RID: 95426 RVA: 0x0035368D File Offset: 0x0035188D
 		public IConditionReturnPosT()
 		{
 			this.Condition = null;

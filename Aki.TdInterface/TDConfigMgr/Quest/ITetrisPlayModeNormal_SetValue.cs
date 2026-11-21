@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001199 RID: 4505
+	// Token: 0x020012D3 RID: 4819
 	public class ITetrisPlayModeNormal_SetValue
 	{
-		// Token: 0x04003D61 RID: 15713
+		// Token: 0x040040C9 RID: 16585
 		public ETetrisPlayMode Type;
 
-		// Token: 0x04003D62 RID: 15714
+		// Token: 0x040040CA RID: 16586
 		public int Time;
 	}
 }

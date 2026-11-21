@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007497 RID: 29847
+	// Token: 0x02007C8A RID: 31882
 	public class ITuningStandBubbleConfigT
 	{
-		// Token: 0x1700E2A4 RID: 58020
-		// (get) Token: 0x06036416 RID: 222230 RVA: 0x007602BF File Offset: 0x0075E4BF
-		// (set) Token: 0x06036417 RID: 222231 RVA: 0x007602C7 File Offset: 0x0075E4C7
+		// Token: 0x1700EEC3 RID: 61123
+		// (get) Token: 0x06039803 RID: 235523 RVA: 0x007C307B File Offset: 0x007C127B
+		// (set) Token: 0x06039804 RID: 235524 RVA: 0x007C3083 File Offset: 0x007C1283
 		public ETuningStandBubbleTriggerType TriggerType { get; set; }
 
-		// Token: 0x1700E2A5 RID: 58021
-		// (get) Token: 0x06036418 RID: 222232 RVA: 0x007602D0 File Offset: 0x0075E4D0
-		// (set) Token: 0x06036419 RID: 222233 RVA: 0x007602D8 File Offset: 0x0075E4D8
+		// Token: 0x1700EEC4 RID: 61124
+		// (get) Token: 0x06039805 RID: 235525 RVA: 0x007C308C File Offset: 0x007C128C
+		// (set) Token: 0x06039806 RID: 235526 RVA: 0x007C3094 File Offset: 0x007C1294
 		public IPlayFlowT Flow { get; set; }
 
-		// Token: 0x0603641A RID: 222234 RVA: 0x007602E1 File Offset: 0x0075E4E1
+		// Token: 0x06039807 RID: 235527 RVA: 0x007C309D File Offset: 0x007C129D
 		public ITuningStandBubbleConfigT()
 		{
 			this.TriggerType = ETuningStandBubbleTriggerType.Enter;

@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011C8 RID: 4552
+	// Token: 0x020012FE RID: 4862
 	public struct GameplayTagArray : IFlatbufferObject
 	{
-		// Token: 0x17003EE6 RID: 16102
-		// (get) Token: 0x0600EA75 RID: 60021 RVA: 0x0034817C File Offset: 0x0034637C
+		// Token: 0x1700424B RID: 16971
+		// (get) Token: 0x0600F7E6 RID: 63462 RVA: 0x00372DE8 File Offset: 0x00370FE8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,38 +19,38 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EA76 RID: 60022 RVA: 0x00348189 File Offset: 0x00346389
+		// Token: 0x0600F7E7 RID: 63463 RVA: 0x00372DF5 File Offset: 0x00370FF5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EA77 RID: 60023 RVA: 0x00348190 File Offset: 0x00346390
+		// Token: 0x0600F7E8 RID: 63464 RVA: 0x00372DFC File Offset: 0x00370FFC
 		public static GameplayTagArray GetRootAsGameplayTagArray(ByteBuffer _bb)
 		{
 			return GameplayTagArray.GetRootAsGameplayTagArray(_bb, default(GameplayTagArray));
 		}
 
-		// Token: 0x0600EA78 RID: 60024 RVA: 0x003481AC File Offset: 0x003463AC
+		// Token: 0x0600F7E9 RID: 63465 RVA: 0x00372E18 File Offset: 0x00371018
 		public static GameplayTagArray GetRootAsGameplayTagArray(ByteBuffer _bb, GameplayTagArray obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EA79 RID: 60025 RVA: 0x003481C9 File Offset: 0x003463C9
+		// Token: 0x0600F7EA RID: 63466 RVA: 0x00372E35 File Offset: 0x00371035
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EA7A RID: 60026 RVA: 0x003481D8 File Offset: 0x003463D8
+		// Token: 0x0600F7EB RID: 63467 RVA: 0x00372E44 File Offset: 0x00371044
 		public GameplayTagArray __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0600EA7B RID: 60027 RVA: 0x003481E8 File Offset: 0x003463E8
+		// Token: 0x0600F7EC RID: 63468 RVA: 0x00372E54 File Offset: 0x00371054
 		public string ArrayString(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -61,8 +61,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003EE7 RID: 16103
-		// (get) Token: 0x0600EA7C RID: 60028 RVA: 0x00348224 File Offset: 0x00346424
+		// Token: 0x1700424C RID: 16972
+		// (get) Token: 0x0600F7ED RID: 63469 RVA: 0x00372E90 File Offset: 0x00371090
 		public int ArrayStringLength
 		{
 			get
@@ -76,24 +76,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EA7D RID: 60029 RVA: 0x0034824F File Offset: 0x0034644F
+		// Token: 0x0600F7EE RID: 63470 RVA: 0x00372EBB File Offset: 0x003710BB
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ArrayStringIter()或GetArrayStringBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] ArrayString()
+		public string[] ArrayString()
 		{
 			return this.ArrayStringIter().ToArray<string>();
 		}
 
-		// Token: 0x0600EA7E RID: 60030 RVA: 0x0034825C File Offset: 0x0034645C
+		// Token: 0x0600F7EF RID: 63471 RVA: 0x00372EC8 File Offset: 0x003710C8
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ArrayStringIter()
+		public IEnumerable<string> ArrayStringIter()
 		{
 			GameplayTagArray.<ArrayStringIter>d__12 <ArrayStringIter>d__ = new GameplayTagArray.<ArrayStringIter>d__12(-2);
 			<ArrayStringIter>d__.<>3__<>4__this = this;
 			return <ArrayStringIter>d__;
 		}
 
-		// Token: 0x0400532B RID: 21291
+		// Token: 0x0400596E RID: 22894
 		private Table __p;
 	}
 }

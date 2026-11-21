@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B77 RID: 2935
+	// Token: 0x02000C45 RID: 3141
 	public class ISpawnMonsterStartCondition
 	{
-		// Token: 0x060043A1 RID: 17313 RVA: 0x000AC517 File Offset: 0x000AA717
-		[NullableContext(1)]
+		// Token: 0x060047FA RID: 18426 RVA: 0x000B65DB File Offset: 0x000B47DB
 		public static ISpawnMonsterStartCondition Create(ISpawnMonsterStartCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001270 RID: 4720
-		// (get) Token: 0x060043A2 RID: 17314 RVA: 0x000AC536 File Offset: 0x000AA736
+		// Token: 0x1700136B RID: 4971
+		// (get) Token: 0x060047FB RID: 18427 RVA: 0x000B65FA File Offset: 0x000B47FA
 		public virtual ESpawnMonsterStartCondition Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002628 RID: 9768
+		// Token: 0x04002870 RID: 10352
 		private ISpawnMonsterStartCondition Instance;
 	}
 }

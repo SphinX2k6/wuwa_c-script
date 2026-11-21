@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002355 RID: 9045
+// Token: 0x0200183A RID: 6202
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class PayShopConfig : ConfigBase
 {
-	// Token: 0x06012035 RID: 73781 RVA: 0x0046AC61 File Offset: 0x00468E61
+	// Token: 0x0600F4E5 RID: 62693 RVA: 0x00477D1D File Offset: 0x00475F1D
 	public string GetPayShopGoodsLocalText(string textId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(textId, null);
 	}
 
-	// Token: 0x06012036 RID: 73782 RVA: 0x0046AC6C File Offset: 0x00468E6C
+	// Token: 0x0600F4E6 RID: 62694 RVA: 0x00477D28 File Offset: 0x00475F28
 	public PayShop GetPayShopConfig(int payShopId)
 	{
 		PayShop? config = ConfigPayShopById.GetConfig(payShopId, true);
@@ -31,7 +31,7 @@ public class PayShopConfig : ConfigBase
 		return config.Value;
 	}
 
-	// Token: 0x06012037 RID: 73783 RVA: 0x0046ACC0 File Offset: 0x00468EC0
+	// Token: 0x0600F4E7 RID: 62695 RVA: 0x00477D7C File Offset: 0x00475F7C
 	public PayShopDirectGoods GetPayShopDirectGoods(int goodsId)
 	{
 		PayShopDirectGoods? config = ConfigPayShopDirectGoodsByGoodsId.GetConfig(goodsId, true);
@@ -47,7 +47,7 @@ public class PayShopConfig : ConfigBase
 		return config.Value;
 	}
 
-	// Token: 0x06012038 RID: 73784 RVA: 0x0046AD14 File Offset: 0x00468F14
+	// Token: 0x0600F4E8 RID: 62696 RVA: 0x00477DD0 File Offset: 0x00475FD0
 	public PayShopCondition GetPayShopCondition(int conditionId)
 	{
 		PayShopCondition? config = ConfigPayShopConditionById.GetConfig(conditionId, true);
@@ -63,13 +63,13 @@ public class PayShopConfig : ConfigBase
 		return config.Value;
 	}
 
-	// Token: 0x06012039 RID: 73785 RVA: 0x0046AD65 File Offset: 0x00468F65
+	// Token: 0x0600F4E9 RID: 62697 RVA: 0x00477E21 File Offset: 0x00476021
 	public string GetPayShopConditionLocalText(string textId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(textId, null);
 	}
 
-	// Token: 0x0601203A RID: 73786 RVA: 0x0046AD70 File Offset: 0x00468F70
+	// Token: 0x0600F4EA RID: 62698 RVA: 0x00477E2C File Offset: 0x0047602C
 	public string GetShopDiscountLabel(int type)
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(18, 1);
@@ -78,62 +78,62 @@ public class PayShopConfig : ConfigBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0601203B RID: 73787 RVA: 0x0046ADA4 File Offset: 0x00468FA4
+	// Token: 0x0600F4EB RID: 62699 RVA: 0x00477E60 File Offset: 0x00476060
 	public int GetMonthCardShopId()
 	{
 		return ConfigCommonParamById.GetIntConfig("MonthCardPayItemId").Value;
 	}
 
-	// Token: 0x0601203C RID: 73788 RVA: 0x0046ADC4 File Offset: 0x00468FC4
+	// Token: 0x0600F4EC RID: 62700 RVA: 0x00477E80 File Offset: 0x00476080
 	public int GetMonthCardRewardId()
 	{
 		return ConfigCommonParamById.GetIntConfig("MonthCardRewardId").Value;
 	}
 
-	// Token: 0x0601203D RID: 73789 RVA: 0x0046ADE3 File Offset: 0x00468FE3
+	// Token: 0x0600F4ED RID: 62701 RVA: 0x00477E9F File Offset: 0x0047609F
 	public IReadOnlyList<int> GetRecommendRoleSkinIdList()
 	{
 		return ConfigCommonParamById.GetIntArrayConfig("RecommendRoleSkinId");
 	}
 
-	// Token: 0x0601203E RID: 73790 RVA: 0x0046ADF0 File Offset: 0x00468FF0
+	// Token: 0x0600F4EE RID: 62702 RVA: 0x00477EAC File Offset: 0x004760AC
 	public PayShopRecommend GetRecommendDataById(int id)
 	{
 		return ConfigPayShopRecommendById.GetConfig(id, true).Value;
 	}
 
-	// Token: 0x0601203F RID: 73791 RVA: 0x0046AE0C File Offset: 0x0046900C
+	// Token: 0x0600F4EF RID: 62703 RVA: 0x00477EC8 File Offset: 0x004760C8
 	public int GetBuySkinDetailWeaponCameraId()
 	{
 		return ConfigCommonParamById.GetIntConfig("BuySkinDetailWeaponCameraId").Value;
 	}
 
-	// Token: 0x06012040 RID: 73792 RVA: 0x0046AE2C File Offset: 0x0046902C
+	// Token: 0x0600F4F0 RID: 62704 RVA: 0x00477EE8 File Offset: 0x004760E8
 	public int GetBuySkinDetailRoleCameraId()
 	{
 		return ConfigCommonParamById.GetIntConfig("BuySkinDetailRoleCameraId").Value;
 	}
 
-	// Token: 0x06012041 RID: 73793 RVA: 0x0046AE4B File Offset: 0x0046904B
+	// Token: 0x0600F4F1 RID: 62705 RVA: 0x00477F07 File Offset: 0x00476107
 	public string GetBuySkinDetailRoleCameraConfigId()
 	{
 		return ConfigCommonParamById.GetStringConfig("BuySkinDetailRoleCameraConfigId");
 	}
 
-	// Token: 0x06012042 RID: 73794 RVA: 0x0046AE57 File Offset: 0x00469057
+	// Token: 0x0600F4F2 RID: 62706 RVA: 0x00477F13 File Offset: 0x00476113
 	public string GetBuySkinDetailWeaponCameraConfigId()
 	{
 		return ConfigCommonParamById.GetStringConfig("BuySkinDetailWeaponCameraConfigId");
 	}
 
-	// Token: 0x06012043 RID: 73795 RVA: 0x0046AE64 File Offset: 0x00469064
+	// Token: 0x0600F4F3 RID: 62707 RVA: 0x00477F20 File Offset: 0x00476120
 	public int GetPreviewPayGiftItemTemplateId()
 	{
 		return ConfigCommonParamById.GetIntConfig("PayGiftTemplateId").Value;
 	}
 
-	// Token: 0x1700178E RID: 6030
-	// (get) Token: 0x06012044 RID: 73796 RVA: 0x0046AE83 File Offset: 0x00469083
+	// Token: 0x170017C8 RID: 6088
+	// (get) Token: 0x0600F4F4 RID: 62708 RVA: 0x00477F3F File Offset: 0x0047613F
 	public static PayShopConfig Instance
 	{
 		get
@@ -142,7 +142,7 @@ public class PayShopConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06012045 RID: 73797 RVA: 0x0046AE8A File Offset: 0x0046908A
+	// Token: 0x0600F4F5 RID: 62709 RVA: 0x00477F46 File Offset: 0x00476146
 	public static PayShopConfig GetOrCreateInstance()
 	{
 		if (PayShopConfig._Instance == null)
@@ -152,7 +152,7 @@ public class PayShopConfig : ConfigBase
 		return PayShopConfig._Instance;
 	}
 
-	// Token: 0x06012046 RID: 73798 RVA: 0x0046AE9E File Offset: 0x0046909E
+	// Token: 0x0600F4F6 RID: 62710 RVA: 0x00477F5A File Offset: 0x0047615A
 	public static bool CreateInstance()
 	{
 		if (PayShopConfig._Instance != null)
@@ -163,24 +163,24 @@ public class PayShopConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06012047 RID: 73799 RVA: 0x0046AEB4 File Offset: 0x004690B4
+	// Token: 0x0600F4F7 RID: 62711 RVA: 0x00477F70 File Offset: 0x00476170
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06012048 RID: 73800 RVA: 0x0046AEB6 File Offset: 0x004690B6
+	// Token: 0x0600F4F8 RID: 62712 RVA: 0x00477F72 File Offset: 0x00476172
 	public static void ResetStaticDefaultValue()
 	{
 		PayShopConfig._Instance = null;
 	}
 
-	// Token: 0x06012049 RID: 73801 RVA: 0x0046AEBE File Offset: 0x004690BE
+	// Token: 0x0600F4F9 RID: 62713 RVA: 0x00477F7A File Offset: 0x0047617A
 	static PayShopConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PayShopConfig.CreateStaticDefaultValue), new Action(PayShopConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008807 RID: 34823
+	// Token: 0x0400894A RID: 35146
 	[Nullable(2)]
 	private static PayShopConfig _Instance;
 }

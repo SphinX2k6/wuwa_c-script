@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200072D RID: 1837
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007CE RID: 1998
 	public class IStreamingWaitConfig
 	{
-		// Token: 0x060027A9 RID: 10153 RVA: 0x000696D0 File Offset: 0x000678D0
+		// Token: 0x06002ACD RID: 10957 RVA: 0x00070878 File Offset: 0x0006EA78
 		private IStreamingWaitConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060027AA RID: 10154 RVA: 0x00069708 File Offset: 0x00067908
+		// Token: 0x06002ACE RID: 10958 RVA: 0x000708B0 File Offset: 0x0006EAB0
 		public static IStreamingWaitConfig Create([Nullable(2)] IStreamingWaitConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027AB RID: 10155 RVA: 0x0006971B File Offset: 0x0006791B
+		// Token: 0x06002ACF RID: 10959 RVA: 0x000708C3 File Offset: 0x0006EAC3
 		public static IStreamingWaitConfig CreateFromSetValue([Nullable(2)] IStreamingWaitConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027AC RID: 10156 RVA: 0x0006972E File Offset: 0x0006792E
+		// Token: 0x06002AD0 RID: 10960 RVA: 0x000708D6 File Offset: 0x0006EAD6
 		public IStreamingWaitConfig_SetValue ToSetValue()
 		{
 			return new IStreamingWaitConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A71 RID: 2673
-		// (get) Token: 0x060027AD RID: 10157 RVA: 0x0006974D File Offset: 0x0006794D
-		// (set) Token: 0x060027AE RID: 10158 RVA: 0x0006977C File Offset: 0x0006797C
+		// Token: 0x17000B31 RID: 2865
+		// (get) Token: 0x06002AD1 RID: 10961 RVA: 0x000708F5 File Offset: 0x0006EAF5
+		// (set) Token: 0x06002AD2 RID: 10962 RVA: 0x00070924 File Offset: 0x0006EB24
 		public virtual float MinWaitStreamDuration
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A72 RID: 2674
-		// (get) Token: 0x060027AF RID: 10159 RVA: 0x0006978A File Offset: 0x0006798A
-		// (set) Token: 0x060027B0 RID: 10160 RVA: 0x000697B9 File Offset: 0x000679B9
+		// Token: 0x17000B32 RID: 2866
+		// (get) Token: 0x06002AD3 RID: 10963 RVA: 0x00070932 File Offset: 0x0006EB32
+		// (set) Token: 0x06002AD4 RID: 10964 RVA: 0x00070961 File Offset: 0x0006EB61
 		public virtual float MaxWaitStreamDuration
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001ABF RID: 6847
+		// Token: 0x04001CC4 RID: 7364
 		[Nullable(2)]
 		protected IStreamingWaitConfig FbInstance;
 
-		// Token: 0x04001AC0 RID: 6848
+		// Token: 0x04001CC5 RID: 7365
 		[Nullable(2)]
 		protected IStreamingWaitConfig_SetValue PocoInterface;
 	}

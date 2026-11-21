@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029DB RID: 10715
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CC8 RID: 11464
 	public class IOpenLevelQte : IOpenQteConfig
 	{
-		// Token: 0x0600ECBD RID: 60605 RVA: 0x00228F11 File Offset: 0x00227111
+		// Token: 0x0600FB54 RID: 64340 RVA: 0x00246895 File Offset: 0x00244A95
 		public static IOpenLevelQte Create(IOpenLevelQte? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AC9 RID: 19145
-		// (get) Token: 0x0600ECBE RID: 60606 RVA: 0x00228F30 File Offset: 0x00227130
+		// Token: 0x17004E72 RID: 20082
+		// (get) Token: 0x0600FB55 RID: 64341 RVA: 0x002468B4 File Offset: 0x00244AB4
 		public override EOpenQteType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004ACA RID: 19146
-		// (get) Token: 0x0600ECBF RID: 60607 RVA: 0x00228F3D File Offset: 0x0022713D
+		// Token: 0x17004E73 RID: 20083
+		// (get) Token: 0x0600FB56 RID: 64342 RVA: 0x002468C1 File Offset: 0x00244AC1
 		public virtual ITargetEntityType LevelQteEntity
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400825F RID: 33375
+		// Token: 0x04008950 RID: 35152
 		private IOpenLevelQte Instance;
 
-		// Token: 0x04008260 RID: 33376
+		// Token: 0x04008951 RID: 35153
 		private ITargetEntityType _LevelQteEntityCache;
 
-		// Token: 0x04008261 RID: 33377
+		// Token: 0x04008952 RID: 35154
 		private bool _LevelQteEntityInited;
 	}
 }

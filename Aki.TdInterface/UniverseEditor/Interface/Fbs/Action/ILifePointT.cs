@@ -3,45 +3,45 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069F7 RID: 27127
+	// Token: 0x020070A7 RID: 28839
 	public class ILifePointT
 	{
-		// Token: 0x1700C944 RID: 51524
-		// (get) Token: 0x0602F76D RID: 194413 RVA: 0x00676EFB File Offset: 0x006750FB
-		// (set) Token: 0x0602F76E RID: 194414 RVA: 0x00676F03 File Offset: 0x00675103
+		// Token: 0x1700D344 RID: 54084
+		// (get) Token: 0x0603212D RID: 205101 RVA: 0x006C7253 File Offset: 0x006C5453
+		// (set) Token: 0x0603212E RID: 205102 RVA: 0x006C725B File Offset: 0x006C545B
 		public ESimpleGameplayType Type { get; set; }
 
-		// Token: 0x1700C945 RID: 51525
-		// (get) Token: 0x0602F76F RID: 194415 RVA: 0x00676F0C File Offset: 0x0067510C
-		// (set) Token: 0x0602F770 RID: 194416 RVA: 0x00676F14 File Offset: 0x00675114
+		// Token: 0x1700D345 RID: 54085
+		// (get) Token: 0x0603212F RID: 205103 RVA: 0x006C7264 File Offset: 0x006C5464
+		// (set) Token: 0x06032130 RID: 205104 RVA: 0x006C726C File Offset: 0x006C546C
 		public ILifePointColorBoardT ColorBoard { get; set; }
 
-		// Token: 0x1700C946 RID: 51526
-		// (get) Token: 0x0602F771 RID: 194417 RVA: 0x00676F1D File Offset: 0x0067511D
-		// (set) Token: 0x0602F772 RID: 194418 RVA: 0x00676F25 File Offset: 0x00675125
+		// Token: 0x1700D346 RID: 54086
+		// (get) Token: 0x06032131 RID: 205105 RVA: 0x006C7275 File Offset: 0x006C5475
+		// (set) Token: 0x06032132 RID: 205106 RVA: 0x006C727D File Offset: 0x006C547D
 		public int StepLimit { get; set; }
 
-		// Token: 0x1700C947 RID: 51527
-		// (get) Token: 0x0602F773 RID: 194419 RVA: 0x00676F2E File Offset: 0x0067512E
-		// (set) Token: 0x0602F774 RID: 194420 RVA: 0x00676F36 File Offset: 0x00675136
+		// Token: 0x1700D347 RID: 54087
+		// (get) Token: 0x06032133 RID: 205107 RVA: 0x006C7286 File Offset: 0x006C5486
+		// (set) Token: 0x06032134 RID: 205108 RVA: 0x006C728E File Offset: 0x006C548E
 		public string TidDesc { get; set; }
 
-		// Token: 0x1700C948 RID: 51528
-		// (get) Token: 0x0602F775 RID: 194421 RVA: 0x00676F3F File Offset: 0x0067513F
-		// (set) Token: 0x0602F776 RID: 194422 RVA: 0x00676F47 File Offset: 0x00675147
+		// Token: 0x1700D348 RID: 54088
+		// (get) Token: 0x06032135 RID: 205109 RVA: 0x006C7297 File Offset: 0x006C5497
+		// (set) Token: 0x06032136 RID: 205110 RVA: 0x006C729F File Offset: 0x006C549F
 		public List<ILifePointMaxStepRewardRuleItemT> MaxStepRewardRule { get; set; }
 
-		// Token: 0x1700C949 RID: 51529
-		// (get) Token: 0x0602F777 RID: 194423 RVA: 0x00676F50 File Offset: 0x00675150
-		// (set) Token: 0x0602F778 RID: 194424 RVA: 0x00676F58 File Offset: 0x00675158
+		// Token: 0x1700D349 RID: 54089
+		// (get) Token: 0x06032137 RID: 205111 RVA: 0x006C72A8 File Offset: 0x006C54A8
+		// (set) Token: 0x06032138 RID: 205112 RVA: 0x006C72B0 File Offset: 0x006C54B0
 		public bool CloseUiAfterCompletion { get; set; }
 
-		// Token: 0x1700C94A RID: 51530
-		// (get) Token: 0x0602F779 RID: 194425 RVA: 0x00676F61 File Offset: 0x00675161
-		// (set) Token: 0x0602F77A RID: 194426 RVA: 0x00676F69 File Offset: 0x00675169
+		// Token: 0x1700D34A RID: 54090
+		// (get) Token: 0x06032139 RID: 205113 RVA: 0x006C72B9 File Offset: 0x006C54B9
+		// (set) Token: 0x0603213A RID: 205114 RVA: 0x006C72C1 File Offset: 0x006C54C1
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602F77B RID: 194427 RVA: 0x00676F72 File Offset: 0x00675172
+		// Token: 0x0603213B RID: 205115 RVA: 0x006C72CA File Offset: 0x006C54CA
 		public ILifePointT()
 		{
 			this.Type = ESimpleGameplayType.Cipher;

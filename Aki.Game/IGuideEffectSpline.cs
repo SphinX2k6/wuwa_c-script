@@ -2,22 +2,22 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000EDA RID: 3802
+// Token: 0x0200038F RID: 911
 [NullableContext(1)]
 public interface IGuideEffectSpline
 {
-	// Token: 0x17000744 RID: 1860
-	// (get) Token: 0x06005EDC RID: 24284
-	// (set) Token: 0x06005EDD RID: 24285
+	// Token: 0x17000768 RID: 1896
+	// (get) Token: 0x06003273 RID: 12915
+	// (set) Token: 0x06003274 RID: 12916
 	int EffectHandle { get; set; }
 
-	// Token: 0x17000745 RID: 1861
-	// (get) Token: 0x06005EDE RID: 24286
-	// (set) Token: 0x06005EDF RID: 24287
+	// Token: 0x17000769 RID: 1897
+	// (get) Token: 0x06003275 RID: 12917
+	// (set) Token: 0x06003276 RID: 12918
 	AActor SplineActor { get; set; }
 
-	// Token: 0x17000746 RID: 1862
-	// (get) Token: 0x06005EE0 RID: 24288
-	// (set) Token: 0x06005EE1 RID: 24289
+	// Token: 0x1700076A RID: 1898
+	// (get) Token: 0x06003277 RID: 12919
+	// (set) Token: 0x06003278 RID: 12920
 	USplineComponent SplineComp { get; set; }
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200221A RID: 8730
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002485 RID: 9349
 	public class StartMotorCruise : ActionParams
 	{
-		// Token: 0x0600BFAA RID: 49066 RVA: 0x001B8964 File Offset: 0x001B6B64
+		// Token: 0x0600CB68 RID: 52072 RVA: 0x001D0030 File Offset: 0x001CE230
 		private StartMotorCruise_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BFAB RID: 49067 RVA: 0x001B899C File Offset: 0x001B6B9C
+		// Token: 0x0600CB69 RID: 52073 RVA: 0x001D0068 File Offset: 0x001CE268
 		public static StartMotorCruise Create([Nullable(2)] StartMotorCruise instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFAC RID: 49068 RVA: 0x001B89AF File Offset: 0x001B6BAF
+		// Token: 0x0600CB6A RID: 52074 RVA: 0x001D007B File Offset: 0x001CE27B
 		public static StartMotorCruise CreateFromSetValue([Nullable(2)] StartMotorCruise_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFAD RID: 49069 RVA: 0x001B89C2 File Offset: 0x001B6BC2
+		// Token: 0x0600CB6B RID: 52075 RVA: 0x001D008E File Offset: 0x001CE28E
 		public StartMotorCruise_SetValue ToSetValue()
 		{
 			return new StartMotorCruise_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A12 RID: 14866
-		// (get) Token: 0x0600BFAE RID: 49070 RVA: 0x001B89F0 File Offset: 0x001B6BF0
-		// (set) Token: 0x0600BFAF RID: 49071 RVA: 0x001B8A51 File Offset: 0x001B6C51
+		// Token: 0x17003D08 RID: 15624
+		// (get) Token: 0x0600CB6C RID: 52076 RVA: 0x001D00BC File Offset: 0x001CE2BC
+		// (set) Token: 0x0600CB6D RID: 52077 RVA: 0x001D011D File Offset: 0x001CE31D
 		public virtual ISplineWayPoint StartPoint
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A13 RID: 14867
-		// (get) Token: 0x0600BFB0 RID: 49072 RVA: 0x001B8A68 File Offset: 0x001B6C68
-		// (set) Token: 0x0600BFB1 RID: 49073 RVA: 0x001B8AC9 File Offset: 0x001B6CC9
+		// Token: 0x17003D09 RID: 15625
+		// (get) Token: 0x0600CB6E RID: 52078 RVA: 0x001D0134 File Offset: 0x001CE334
+		// (set) Token: 0x0600CB6F RID: 52079 RVA: 0x001D0195 File Offset: 0x001CE395
 		public virtual ISplineWayPoint EndPoint
 		{
 			get
@@ -121,9 +119,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A14 RID: 14868
-		// (get) Token: 0x0600BFB2 RID: 49074 RVA: 0x001B8ADE File Offset: 0x001B6CDE
-		// (set) Token: 0x0600BFB3 RID: 49075 RVA: 0x001B8B09 File Offset: 0x001B6D09
+		// Token: 0x17003D0A RID: 15626
+		// (get) Token: 0x0600CB70 RID: 52080 RVA: 0x001D01AA File Offset: 0x001CE3AA
+		// (set) Token: 0x0600CB71 RID: 52081 RVA: 0x001D01D5 File Offset: 0x001CE3D5
 		public virtual bool AllowSkip
 		{
 			get
@@ -140,24 +138,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007248 RID: 29256
+		// Token: 0x04007892 RID: 30866
 		[Nullable(2)]
 		protected new StartMotorCruise FbInstance;
 
-		// Token: 0x04007249 RID: 29257
+		// Token: 0x04007893 RID: 30867
 		[Nullable(2)]
 		protected StartMotorCruise_SetValue PocoInterface;
 
-		// Token: 0x0400724A RID: 29258
+		// Token: 0x04007894 RID: 30868
 		private ISplineWayPoint _StartPointCache;
 
-		// Token: 0x0400724B RID: 29259
+		// Token: 0x04007895 RID: 30869
 		private bool _StartPointInited;
 
-		// Token: 0x0400724C RID: 29260
+		// Token: 0x04007896 RID: 30870
 		private ISplineWayPoint _EndPointCache;
 
-		// Token: 0x0400724D RID: 29261
+		// Token: 0x04007897 RID: 30871
 		private bool _EndPointInited;
 	}
 }

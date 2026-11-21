@@ -7,15 +7,15 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AF5 RID: 27381
+	// Token: 0x02005C6D RID: 23661
 	public class LevelEventAdjustTodTime : LevelEventBase
 	{
-		// Token: 0x06044012 RID: 278546 RVA: 0x010B1D6D File Offset: 0x010AFF6D
+		// Token: 0x0603A164 RID: 237924 RVA: 0x0105B5E9 File Offset: 0x010597E9
 		public LevelEventAdjustTodTime(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044013 RID: 278547 RVA: 0x010B1D78 File Offset: 0x010AFF78
+		// Token: 0x0603A165 RID: 237925 RVA: 0x0105B5F4 File Offset: 0x010597F4
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

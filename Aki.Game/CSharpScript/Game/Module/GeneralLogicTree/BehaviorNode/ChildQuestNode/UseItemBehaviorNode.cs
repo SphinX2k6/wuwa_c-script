@@ -5,17 +5,17 @@ using Aki.TDConfigMgr.Quest;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059E7 RID: 23015
+	// Token: 0x020049C0 RID: 18880
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UseItemBehaviorNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A52F RID: 238895 RVA: 0x00DDF51D File Offset: 0x00DDD71D
+		// Token: 0x0602F456 RID: 193622 RVA: 0x00D2ED89 File Offset: 0x00D2CF89
 		public UseItemBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A530 RID: 238896 RVA: 0x00DDF528 File Offset: 0x00DDD728
+		// Token: 0x0602F457 RID: 193623 RVA: 0x00D2ED94 File Offset: 0x00D2CF94
 		protected override bool OnCreate(IBtNode config)
 		{
 			IChildQuestBtNode childQuestBtNode = config as IChildQuestBtNode;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A531 RID: 238897 RVA: 0x00DDF565 File Offset: 0x00DDD765
+		// Token: 0x0602F458 RID: 193624 RVA: 0x00D2EDD1 File Offset: 0x00D2CFD1
 		protected override bool OnUpdateProgress(ChildQuestNodeProgress progress)
 		{
 			if (progress.UseItem == null)
@@ -46,14 +46,14 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A532 RID: 238898 RVA: 0x00DDF580 File Offset: 0x00DDD780
+		// Token: 0x0602F459 RID: 193625 RVA: 0x00D2EDEC File Offset: 0x00D2CFEC
 		public override string GetProgress()
 		{
 			UseItemProgress progress = this.Progress;
 			return ((progress != null) ? progress.Count.ToString() : null) ?? "0";
 		}
 
-		// Token: 0x0401E685 RID: 124549
+		// Token: 0x04019124 RID: 102692
 		[Nullable(2)]
 		private UseItemProgress Progress;
 	}

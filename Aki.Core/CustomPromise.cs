@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 public class CustomPromise
 {
 	// Token: 0x1700000F RID: 15
-	// (get) Token: 0x060000E9 RID: 233 RVA: 0x000075BC File Offset: 0x000057BC
+	// (get) Token: 0x060000EB RID: 235 RVA: 0x00007334 File Offset: 0x00005534
 	public UniTask Promise
 	{
 		get
@@ -19,7 +19,7 @@ public class CustomPromise
 		}
 	}
 
-	// Token: 0x060000EA RID: 234 RVA: 0x000075D7 File Offset: 0x000057D7
+	// Token: 0x060000EC RID: 236 RVA: 0x0000734F File Offset: 0x0000554F
 	public void SetResult()
 	{
 		if (this.State != EPromiseState.Pending)
@@ -32,7 +32,7 @@ public class CustomPromise
 	}
 
 	// Token: 0x17000010 RID: 16
-	// (get) Token: 0x060000EB RID: 235 RVA: 0x000075FB File Offset: 0x000057FB
+	// (get) Token: 0x060000ED RID: 237 RVA: 0x00007373 File Offset: 0x00005573
 	public bool IsFulfilled
 	{
 		get
@@ -42,7 +42,7 @@ public class CustomPromise
 	}
 
 	// Token: 0x17000011 RID: 17
-	// (get) Token: 0x060000EC RID: 236 RVA: 0x00007606 File Offset: 0x00005806
+	// (get) Token: 0x060000EE RID: 238 RVA: 0x0000737E File Offset: 0x0000557E
 	public bool IsPending
 	{
 		get
@@ -51,13 +51,13 @@ public class CustomPromise
 		}
 	}
 
-	// Token: 0x040000C4 RID: 196
+	// Token: 0x040000C5 RID: 197
 	[Nullable(1)]
 	private readonly AkiUniTask Tcs = new AkiUniTask();
 
-	// Token: 0x040000C5 RID: 197
+	// Token: 0x040000C6 RID: 198
 	private EPromiseState State;
 
-	// Token: 0x040000C6 RID: 198
+	// Token: 0x040000C7 RID: 199
 	private bool HasResult;
 }

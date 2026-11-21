@@ -2,24 +2,24 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CDC RID: 15580
+	// Token: 0x020040F3 RID: 16627
 	public enum ETimerUiType : byte
 	{
-		// Token: 0x0400B53B RID: 46395
+		// Token: 0x0400BEE8 RID: 48872
 		Default,
-		// Token: 0x0400B53C RID: 46396
+		// Token: 0x0400BEE9 RID: 48873
 		CountDownChallengeBlackCoast,
-		// Token: 0x0400B53D RID: 46397
+		// Token: 0x0400BEEA RID: 48874
 		HideUi,
-		// Token: 0x0400B53E RID: 46398
+		// Token: 0x0400BEEB RID: 48875
 		CountDownChallengeSlashAndTower,
-		// Token: 0x0400B53F RID: 46399
+		// Token: 0x0400BEEC RID: 48876
 		GreatSwordChallenge,
-		// Token: 0x0400B540 RID: 46400
+		// Token: 0x0400BEED RID: 48877
 		StoveCoreFall,
-		// Token: 0x0400B541 RID: 46401
+		// Token: 0x0400BEEE RID: 48878
 		RebeccaChallenge,
-		// Token: 0x0400B542 RID: 46402
-		DarkTideShrinkCountDown
+		// Token: 0x0400BEEF RID: 48879
+		MechaStuntTrack = 8
 	}
 }

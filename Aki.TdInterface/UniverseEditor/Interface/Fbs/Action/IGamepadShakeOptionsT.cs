@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006877 RID: 26743
+	// Token: 0x02006F18 RID: 28440
 	public class IGamepadShakeOptionsT
 	{
-		// Token: 0x1700C6A2 RID: 50850
-		// (get) Token: 0x0602EA47 RID: 191047 RVA: 0x0065C69B File Offset: 0x0065A89B
-		// (set) Token: 0x0602EA48 RID: 191048 RVA: 0x0065C6A3 File Offset: 0x0065A8A3
+		// Token: 0x1700D088 RID: 53384
+		// (get) Token: 0x06031381 RID: 201601 RVA: 0x006AB71B File Offset: 0x006A991B
+		// (set) Token: 0x06031382 RID: 201602 RVA: 0x006AB723 File Offset: 0x006A9923
 		public string KuroForceFeedbackEffect { get; set; }
 
-		// Token: 0x1700C6A3 RID: 50851
-		// (get) Token: 0x0602EA49 RID: 191049 RVA: 0x0065C6AC File Offset: 0x0065A8AC
-		// (set) Token: 0x0602EA4A RID: 191050 RVA: 0x0065C6B4 File Offset: 0x0065A8B4
+		// Token: 0x1700D089 RID: 53385
+		// (get) Token: 0x06031383 RID: 201603 RVA: 0x006AB72C File Offset: 0x006A992C
+		// (set) Token: 0x06031384 RID: 201604 RVA: 0x006AB734 File Offset: 0x006A9934
 		public TGamepadShakeConfigUnion GamepadShakeConfig { get; set; }
 
-		// Token: 0x0602EA4B RID: 191051 RVA: 0x0065C6BD File Offset: 0x0065A8BD
+		// Token: 0x06031385 RID: 201605 RVA: 0x006AB73D File Offset: 0x006A993D
 		public IGamepadShakeOptionsT()
 		{
 			this.KuroForceFeedbackEffect = null;

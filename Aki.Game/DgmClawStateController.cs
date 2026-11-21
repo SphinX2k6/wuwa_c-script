@@ -6,13 +6,13 @@ using CSharpScript.Game.LevelGamePlay.DollGrabMachine;
 using CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawState;
 using UnrealEngine;
 
-// Token: 0x02000EDD RID: 3805
+// Token: 0x02000392 RID: 914
 [NullableContext(2)]
 [Nullable(0)]
 public class DgmClawStateController
 {
-	// Token: 0x1700074C RID: 1868
-	// (get) Token: 0x06005EF1 RID: 24305 RVA: 0x0011B128 File Offset: 0x00119328
+	// Token: 0x1700076F RID: 1903
+	// (get) Token: 0x06003287 RID: 12935 RVA: 0x00122E64 File Offset: 0x00121064
 	public AKuroLevelSequenceActor ClawAnimSeqActor
 	{
 		get
@@ -21,7 +21,7 @@ public class DgmClawStateController
 		}
 	}
 
-	// Token: 0x06005EF2 RID: 24306 RVA: 0x0011B130 File Offset: 0x00119330
+	// Token: 0x06003288 RID: 12936 RVA: 0x00122E6C File Offset: 0x0012106C
 	[NullableContext(1)]
 	public DgmClawStateController(SceneItemDollGrabMachineComponent owner, AActor clawActor, AActor clawRootCtrlActor, AActor clawChainActor, FTransformDouble clawTransform)
 	{
@@ -36,7 +36,7 @@ public class DgmClawStateController
 		EventSystem.Instance.AddWithTarget(this.Owner.Entity, EEventName.OnDollGrabMachineClawStateEnd, new Action(this.OnStateExit));
 	}
 
-	// Token: 0x06005EF3 RID: 24307 RVA: 0x0011B21C File Offset: 0x0011941C
+	// Token: 0x06003289 RID: 12937 RVA: 0x00122F58 File Offset: 0x00121158
 	public void Init()
 	{
 		foreach (FName key in this.ClawActorInternal.Tags)
@@ -67,7 +67,7 @@ public class DgmClawStateController
 		}
 	}
 
-	// Token: 0x06005EF4 RID: 24308 RVA: 0x0011B350 File Offset: 0x00119550
+	// Token: 0x0600328A RID: 12938 RVA: 0x00123094 File Offset: 0x00121294
 	public void Dispose()
 	{
 		EventSystem.Instance.RemoveWithTarget(this.Owner.Entity, EEventName.OnDollGrabMachineClawStateEnd, new Action(this.OnStateExit));
@@ -80,7 +80,7 @@ public class DgmClawStateController
 		this.ClawPartActorList.Clear();
 	}
 
-	// Token: 0x06005EF5 RID: 24309 RVA: 0x0011B3D0 File Offset: 0x001195D0
+	// Token: 0x0600328B RID: 12939 RVA: 0x00123114 File Offset: 0x00121314
 	public void SetTargetState(EDollGrabMachineClawState targetState)
 	{
 		DgmClawBaseMoveState currentStateInternal = this.CurrentStateInternal;
@@ -101,7 +101,7 @@ public class DgmClawStateController
 		this.ChangeState();
 	}
 
-	// Token: 0x06005EF6 RID: 24310 RVA: 0x0011B44C File Offset: 0x0011964C
+	// Token: 0x0600328C RID: 12940 RVA: 0x00123190 File Offset: 0x00121390
 	public void ChangeState()
 	{
 		if (this.TargetStateList.Count == 0)
@@ -176,14 +176,14 @@ public class DgmClawStateController
 		}
 	}
 
-	// Token: 0x06005EF7 RID: 24311 RVA: 0x0011B60D File Offset: 0x0011980D
+	// Token: 0x0600328D RID: 12941 RVA: 0x00123351 File Offset: 0x00121551
 	private void OnStateExit()
 	{
 		this.ChangeState();
 	}
 
-	// Token: 0x1700074D RID: 1869
-	// (get) Token: 0x06005EF8 RID: 24312 RVA: 0x0011B615 File Offset: 0x00119815
+	// Token: 0x17000770 RID: 1904
+	// (get) Token: 0x0600328E RID: 12942 RVA: 0x00123359 File Offset: 0x00121559
 	public EDollGrabMachineClawState? LastState
 	{
 		get
@@ -192,8 +192,8 @@ public class DgmClawStateController
 		}
 	}
 
-	// Token: 0x1700074E RID: 1870
-	// (get) Token: 0x06005EF9 RID: 24313 RVA: 0x0011B61D File Offset: 0x0011981D
+	// Token: 0x17000771 RID: 1905
+	// (get) Token: 0x0600328F RID: 12943 RVA: 0x00123361 File Offset: 0x00121561
 	public DgmClawBaseMoveState CurrentState
 	{
 		get
@@ -202,7 +202,7 @@ public class DgmClawStateController
 		}
 	}
 
-	// Token: 0x06005EFA RID: 24314 RVA: 0x0011B628 File Offset: 0x00119828
+	// Token: 0x06003290 RID: 12944 RVA: 0x0012336C File Offset: 0x0012156C
 	[NullableContext(1)]
 	private void CollectClawPart(AActor actor)
 	{
@@ -223,55 +223,55 @@ public class DgmClawStateController
 		}
 	}
 
-	// Token: 0x06005EFB RID: 24315 RVA: 0x0011B6EC File Offset: 0x001198EC
+	// Token: 0x06003291 RID: 12945 RVA: 0x0012343C File Offset: 0x0012163C
 	[NullableContext(1)]
 	public bool CheckActorInClawPart(AActor actor)
 	{
 		return this.ClawPartActorList.Contains(actor);
 	}
 
-	// Token: 0x04002B1C RID: 11036
+	// Token: 0x04002BB6 RID: 11190
 	private SceneItemDollGrabMachineComponent Owner;
 
-	// Token: 0x04002B1D RID: 11037
+	// Token: 0x04002BB7 RID: 11191
 	private DgmClawBaseMoveState CurrentStateInternal;
 
-	// Token: 0x04002B1E RID: 11038
+	// Token: 0x04002BB8 RID: 11192
 	private EDollGrabMachineClawState? LastStateInternal;
 
-	// Token: 0x04002B1F RID: 11039
+	// Token: 0x04002BB9 RID: 11193
 	[Nullable(1)]
 	private readonly List<EDollGrabMachineClawState> TargetStateList = new List<EDollGrabMachineClawState>();
 
-	// Token: 0x04002B20 RID: 11040
+	// Token: 0x04002BBA RID: 11194
 	private DgmClawIdleState IdleState;
 
-	// Token: 0x04002B21 RID: 11041
+	// Token: 0x04002BBB RID: 11195
 	private DgmClawMovingDownState MovingDownState;
 
-	// Token: 0x04002B22 RID: 11042
+	// Token: 0x04002BBC RID: 11196
 	private DgmClawMovingUpState MovingUpState;
 
-	// Token: 0x04002B23 RID: 11043
+	// Token: 0x04002BBD RID: 11197
 	private DgmClawGrabState GrabState;
 
-	// Token: 0x04002B24 RID: 11044
+	// Token: 0x04002BBE RID: 11198
 	private DgmClawReleaseState ReleaseState;
 
-	// Token: 0x04002B25 RID: 11045
+	// Token: 0x04002BBF RID: 11199
 	private DgmClawResetState ResetState;
 
-	// Token: 0x04002B26 RID: 11046
+	// Token: 0x04002BC0 RID: 11200
 	private AActor ClawActorInternal;
 
-	// Token: 0x04002B27 RID: 11047
+	// Token: 0x04002BC1 RID: 11201
 	[Nullable(1)]
 	private Dictionary<FName, AActor> ClawPartMap = new Dictionary<FName, AActor>();
 
-	// Token: 0x04002B28 RID: 11048
+	// Token: 0x04002BC2 RID: 11202
 	[Nullable(1)]
 	private readonly List<AActor> ClawPartActorList = new List<AActor>();
 
-	// Token: 0x04002B29 RID: 11049
+	// Token: 0x04002BC3 RID: 11203
 	private AKuroLevelSequenceActor ClawAnimSeqActorInternal;
 }

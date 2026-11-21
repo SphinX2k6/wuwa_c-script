@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200550D RID: 21773
+	// Token: 0x02005A93 RID: 23187
 	public class ILockConfigT
 	{
-		// Token: 0x1700A0C4 RID: 41156
-		// (get) Token: 0x06023F6D RID: 147309 RVA: 0x004F8A9A File Offset: 0x004F6C9A
-		// (set) Token: 0x06023F6E RID: 147310 RVA: 0x004F8AA2 File Offset: 0x004F6CA2
+		// Token: 0x1700A8FE RID: 43262
+		// (get) Token: 0x06026027 RID: 155687 RVA: 0x00535BBE File Offset: 0x00533DBE
+		// (set) Token: 0x06026028 RID: 155688 RVA: 0x00535BC6 File Offset: 0x00533DC6
 		public bool IsInitLock { get; set; }
 
-		// Token: 0x1700A0C5 RID: 41157
-		// (get) Token: 0x06023F6F RID: 147311 RVA: 0x004F8AAB File Offset: 0x004F6CAB
-		// (set) Token: 0x06023F70 RID: 147312 RVA: 0x004F8AB3 File Offset: 0x004F6CB3
+		// Token: 0x1700A8FF RID: 43263
+		// (get) Token: 0x06026029 RID: 155689 RVA: 0x00535BCF File Offset: 0x00533DCF
+		// (set) Token: 0x0602602A RID: 155690 RVA: 0x00535BD7 File Offset: 0x00533DD7
 		public ELockType LockType { get; set; }
 
-		// Token: 0x1700A0C6 RID: 41158
-		// (get) Token: 0x06023F71 RID: 147313 RVA: 0x004F8ABC File Offset: 0x004F6CBC
-		// (set) Token: 0x06023F72 RID: 147314 RVA: 0x004F8AC4 File Offset: 0x004F6CC4
+		// Token: 0x1700A900 RID: 43264
+		// (get) Token: 0x0602602B RID: 155691 RVA: 0x00535BE0 File Offset: 0x00533DE0
+		// (set) Token: 0x0602602C RID: 155692 RVA: 0x00535BE8 File Offset: 0x00533DE8
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023F73 RID: 147315 RVA: 0x004F8ACD File Offset: 0x004F6CCD
+		// Token: 0x0602602D RID: 155693 RVA: 0x00535BF1 File Offset: 0x00533DF1
 		public ILockConfigT()
 		{
 			this.IsInitLock = false;

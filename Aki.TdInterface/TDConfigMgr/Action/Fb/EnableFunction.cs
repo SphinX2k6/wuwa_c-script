@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002931 RID: 10545
+	// Token: 0x02002C0D RID: 11277
 	public class EnableFunction : ActionParams
 	{
-		// Token: 0x0600E9F4 RID: 59892 RVA: 0x00224653 File Offset: 0x00222853
-		[NullableContext(1)]
+		// Token: 0x0600F846 RID: 63558 RVA: 0x002419AB File Offset: 0x0023FBAB
 		public static EnableFunction Create(IEnableFunction? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004954 RID: 18772
-		// (get) Token: 0x0600E9F5 RID: 59893 RVA: 0x00224672 File Offset: 0x00222872
+		// Token: 0x17004CDA RID: 19674
+		// (get) Token: 0x0600F847 RID: 63559 RVA: 0x002419CA File Offset: 0x0023FBCA
 		public virtual EEnableFunctionType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400810B RID: 33035
+		// Token: 0x040087D9 RID: 34777
 		private IEnableFunction Instance;
 	}
 }

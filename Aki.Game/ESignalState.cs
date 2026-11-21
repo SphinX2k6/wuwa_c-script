@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002A0A RID: 10762
+// Token: 0x02001F85 RID: 8069
 public enum ESignalState
 {
-	// Token: 0x0400A619 RID: 42521
+	// Token: 0x0400AA03 RID: 43523
 	NotReach,
-	// Token: 0x0400A61A RID: 42522
+	// Token: 0x0400AA04 RID: 43524
 	Catching,
-	// Token: 0x0400A61B RID: 42523
+	// Token: 0x0400AA05 RID: 43525
 	CatchSuccess,
-	// Token: 0x0400A61C RID: 42524
+	// Token: 0x0400AA06 RID: 43526
 	CatchFailed
 }

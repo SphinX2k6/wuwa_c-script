@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001936 RID: 6454
+// Token: 0x02000DF2 RID: 3570
 public class MediumItemGridSpriteIconComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BCC5 RID: 48325 RVA: 0x002AB6C4 File Offset: 0x002A98C4
+	// Token: 0x060090C0 RID: 37056 RVA: 0x002B6190 File Offset: 0x002B4390
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -19,14 +19,14 @@ public class MediumItemGridSpriteIconComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BCC6 RID: 48326 RVA: 0x002AB70C File Offset: 0x002A990C
+	// Token: 0x060090C1 RID: 37057 RVA: 0x002B61D8 File Offset: 0x002B43D8
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemSprite";
 	}
 
-	// Token: 0x0600BCC7 RID: 48327 RVA: 0x002AB714 File Offset: 0x002A9914
+	// Token: 0x060090C2 RID: 37058 RVA: 0x002B61E0 File Offset: 0x002B43E0
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -41,10 +41,10 @@ public class MediumItemGridSpriteIconComponent : MediumItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x02007E9B RID: 32411
+	// Token: 0x02007028 RID: 28712
 	private class EChildType
 	{
-		// Token: 0x04029679 RID: 169593
+		// Token: 0x040249B1 RID: 149937
 		public const int SpriteIcon = 0;
 	}
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02000EFB RID: 3835
+// Token: 0x020003B0 RID: 944
 public interface ISpeedModifier
 {
-	// Token: 0x17000767 RID: 1895
-	// (get) Token: 0x06006038 RID: 24632
-	// (set) Token: 0x06006039 RID: 24633
+	// Token: 0x17000789 RID: 1929
+	// (get) Token: 0x060033D0 RID: 13264
+	// (set) Token: 0x060033D1 RID: 13265
 	EModifierType Type { get; set; }
 
-	// Token: 0x17000768 RID: 1896
-	// (get) Token: 0x0600603A RID: 24634
-	// (set) Token: 0x0600603B RID: 24635
+	// Token: 0x1700078A RID: 1930
+	// (get) Token: 0x060033D2 RID: 13266
+	// (set) Token: 0x060033D3 RID: 13267
 	float Value { get; set; }
 
-	// Token: 0x17000769 RID: 1897
-	// (get) Token: 0x0600603C RID: 24636
-	// (set) Token: 0x0600603D RID: 24637
+	// Token: 0x1700078B RID: 1931
+	// (get) Token: 0x060033D4 RID: 13268
+	// (set) Token: 0x060033D5 RID: 13269
 	int Priority { get; set; }
 }

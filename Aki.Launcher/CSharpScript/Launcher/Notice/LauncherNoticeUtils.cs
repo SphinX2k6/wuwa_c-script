@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Notice
 {
-	// Token: 0x020001A7 RID: 423
+	// Token: 0x020001AB RID: 427
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LauncherNoticeUtils : Singleton
 	{
-		// Token: 0x06000BA0 RID: 2976 RVA: 0x00049480 File Offset: 0x00047680
+		// Token: 0x06000BD7 RID: 3031 RVA: 0x0004BC70 File Offset: 0x00049E70
 		[NullableContext(2)]
 		public void OpenNotice(string logMsg = null)
 		{
@@ -39,25 +39,25 @@ namespace CSharpScript.Launcher.Notice
 			this.HasNoticeAutoOpened = true;
 		}
 
-		// Token: 0x06000BA1 RID: 2977 RVA: 0x000494F6 File Offset: 0x000476F6
+		// Token: 0x06000BD8 RID: 3032 RVA: 0x0004BCE6 File Offset: 0x00049EE6
 		public void CloseNotice(string reason)
 		{
 			LauncherSdk.Get().CloseWebView(reason);
 		}
 
-		// Token: 0x06000BA2 RID: 2978 RVA: 0x00049503 File Offset: 0x00047703
+		// Token: 0x06000BD9 RID: 3033 RVA: 0x0004BCF3 File Offset: 0x00049EF3
 		public void OpenNoticeByUser()
 		{
 			this.OpenNoticeImp();
 		}
 
-		// Token: 0x06000BA3 RID: 2979 RVA: 0x0004950C File Offset: 0x0004770C
+		// Token: 0x06000BDA RID: 3034 RVA: 0x0004BCFC File Offset: 0x00049EFC
 		public bool CheckGrayBoxHit()
 		{
 			return true;
 		}
 
-		// Token: 0x06000BA4 RID: 2980 RVA: 0x0004951C File Offset: 0x0004771C
+		// Token: 0x06000BDB RID: 3035 RVA: 0x0004BD0C File Offset: 0x00049F0C
 		private void OpenNoticeImp()
 		{
 			if (!this.CheckGrayBoxHit())
@@ -90,7 +90,7 @@ namespace CSharpScript.Launcher.Notice
 			PlatformSdkManagerNew.Instance.GetPlatformSdk().OpenExternalUrl(noticeUrl);
 		}
 
-		// Token: 0x06000BA5 RID: 2981 RVA: 0x000495E0 File Offset: 0x000477E0
+		// Token: 0x06000BDC RID: 3036 RVA: 0x0004BDD0 File Offset: 0x00049FD0
 		private void SdkOpenNotice(string url)
 		{
 			LauncherSdkBase launcherSdkBase = LauncherSdk.Get();
@@ -98,7 +98,7 @@ namespace CSharpScript.Launcher.Notice
 			launcherSdkBase.OpenUrl("", url, true, true, true, "Default");
 		}
 
-		// Token: 0x06000BA6 RID: 2982 RVA: 0x00049600 File Offset: 0x00047800
+		// Token: 0x06000BDD RID: 3037 RVA: 0x0004BDF0 File Offset: 0x00049FF0
 		public string GetNoticeUrl()
 		{
 			string noticePreUrl = this.GetNoticePreUrl();
@@ -134,19 +134,19 @@ namespace CSharpScript.Launcher.Notice
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06000BA7 RID: 2983 RVA: 0x00049746 File Offset: 0x00047946
+		// Token: 0x06000BDE RID: 3038 RVA: 0x0004BF36 File Offset: 0x0004A136
 		private bool CanUseSdk()
 		{
 			return !PlatformSdkManagerNew.Instance.IsSdkOn && UKuroStaticLibrary.IsModuleLoaded("KuroSDK") && BaseConfigController.Instance.GetPublicValue("UseSDK") == "1";
 		}
 
-		// Token: 0x06000BA8 RID: 2984 RVA: 0x0004977B File Offset: 0x0004797B
+		// Token: 0x06000BDF RID: 3039 RVA: 0x0004BF6B File Offset: 0x0004A16B
 		private bool IsGlobalSdk()
 		{
 			return BaseConfigController.Instance.GetPublicValue("SdkArea") != "CN";
 		}
 
-		// Token: 0x06000BA9 RID: 2985 RVA: 0x00049796 File Offset: 0x00047996
+		// Token: 0x06000BE0 RID: 3040 RVA: 0x0004BF86 File Offset: 0x0004A186
 		private string GetDefaultServerId()
 		{
 			if (!this.IsGlobalSdk())
@@ -156,7 +156,7 @@ namespace CSharpScript.Launcher.Notice
 			return "86d52186155b148b5c138ceb41be9650";
 		}
 
-		// Token: 0x06000BAA RID: 2986 RVA: 0x000497AC File Offset: 0x000479AC
+		// Token: 0x06000BE1 RID: 3041 RVA: 0x0004BF9C File Offset: 0x0004A19C
 		private string GetServerId()
 		{
 			EntryJson cdnReturnConfigInfo = BaseConfigController.Instance.GetCdnReturnConfigInfo();
@@ -168,7 +168,7 @@ namespace CSharpScript.Launcher.Notice
 			return list[0].id ?? this.GetDefaultServerId();
 		}
 
-		// Token: 0x06000BAB RID: 2987 RVA: 0x000497F8 File Offset: 0x000479F8
+		// Token: 0x06000BE2 RID: 3042 RVA: 0x0004BFE8 File Offset: 0x0004A1E8
 		private string GetGameId()
 		{
 			if (!this.IsGlobalSdk())
@@ -178,7 +178,7 @@ namespace CSharpScript.Launcher.Notice
 			return "G153";
 		}
 
-		// Token: 0x06000BAC RID: 2988 RVA: 0x0004980D File Offset: 0x00047A0D
+		// Token: 0x06000BE3 RID: 3043 RVA: 0x0004BFFD File Offset: 0x0004A1FD
 		private string GetNoticePreUrl()
 		{
 			if (!this.IsGlobalSdk())
@@ -188,7 +188,7 @@ namespace CSharpScript.Launcher.Notice
 			return "https://aki-gm-resources-oversea.aki-game.net/aki/announcement/index.html";
 		}
 
-		// Token: 0x06000BAD RID: 2989 RVA: 0x00049822 File Offset: 0x00047A22
+		// Token: 0x06000BE4 RID: 3044 RVA: 0x0004C012 File Offset: 0x0004A212
 		private string GetDeviceId()
 		{
 			if (PlatformSdkManagerNew.Instance.IsSdkOn)
@@ -202,7 +202,7 @@ namespace CSharpScript.Launcher.Notice
 			return "";
 		}
 
-		// Token: 0x06000BAE RID: 2990 RVA: 0x00049861 File Offset: 0x00047A61
+		// Token: 0x06000BE5 RID: 3045 RVA: 0x0004C051 File Offset: 0x0004A251
 		private string GetChannelId()
 		{
 			if (PlatformSdkManagerNew.Instance.IsSdkOn)
@@ -216,7 +216,7 @@ namespace CSharpScript.Launcher.Notice
 			return "";
 		}
 
-		// Token: 0x06000BAF RID: 2991 RVA: 0x00049898 File Offset: 0x00047A98
+		// Token: 0x06000BE6 RID: 3046 RVA: 0x0004C088 File Offset: 0x0004A288
 		private string GetPlatformStr()
 		{
 			if (Platform.Instance.IsAndroidPlatform())
@@ -250,8 +250,8 @@ namespace CSharpScript.Launcher.Notice
 			return "PC";
 		}
 
-		// Token: 0x1700011C RID: 284
-		// (get) Token: 0x06000BB0 RID: 2992 RVA: 0x00049928 File Offset: 0x00047B28
+		// Token: 0x17000122 RID: 290
+		// (get) Token: 0x06000BE7 RID: 3047 RVA: 0x0004C118 File Offset: 0x0004A318
 		public static LauncherNoticeUtils Instance
 		{
 			get
@@ -265,12 +265,12 @@ namespace CSharpScript.Launcher.Notice
 			}
 		}
 
-		// Token: 0x06000BB1 RID: 2993 RVA: 0x0004994B File Offset: 0x00047B4B
+		// Token: 0x06000BE8 RID: 3048 RVA: 0x0004C13B File Offset: 0x0004A33B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000BB2 RID: 2994 RVA: 0x0004994D File Offset: 0x00047B4D
+		// Token: 0x06000BE9 RID: 3049 RVA: 0x0004C13D File Offset: 0x0004A33D
 		public static void ResetStaticDefaultValue()
 		{
 			LauncherNoticeUtils instance = LauncherNoticeUtils._instance;
@@ -281,19 +281,19 @@ namespace CSharpScript.Launcher.Notice
 			LauncherNoticeUtils._instance = null;
 		}
 
-		// Token: 0x06000BB3 RID: 2995 RVA: 0x00049966 File Offset: 0x00047B66
+		// Token: 0x06000BEA RID: 3050 RVA: 0x0004C156 File Offset: 0x0004A356
 		static LauncherNoticeUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LauncherNoticeUtils.CreateStaticDefaultValue), new Action(LauncherNoticeUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0400074A RID: 1866
+		// Token: 0x04000787 RID: 1927
 		public bool HasNoticeAutoOpened;
 
-		// Token: 0x0400074B RID: 1867
+		// Token: 0x04000788 RID: 1928
 		public int NoticeOpenDownloadSizeThreshold = 500;
 
-		// Token: 0x0400074C RID: 1868
+		// Token: 0x04000789 RID: 1929
 		[Nullable(2)]
 		private static LauncherNoticeUtils _instance;
 	}

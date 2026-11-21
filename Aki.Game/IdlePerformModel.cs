@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001F74 RID: 8052
+// Token: 0x02001436 RID: 5174
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class IdlePerformModel : ModelBase
 {
-	// Token: 0x0600F9BC RID: 63932 RVA: 0x003C861F File Offset: 0x003C681F
+	// Token: 0x0600CDDB RID: 52699 RVA: 0x003D410B File Offset: 0x003D230B
 	public void AccumulateIdleTime(float delta)
 	{
 		if (delta <= 0f)
@@ -18,25 +18,25 @@ public class IdlePerformModel : ModelBase
 		this.IdleTimeInternal += delta;
 	}
 
-	// Token: 0x0600F9BD RID: 63933 RVA: 0x003C8638 File Offset: 0x003C6838
+	// Token: 0x0600CDDC RID: 52700 RVA: 0x003D4124 File Offset: 0x003D2324
 	public void ResetIdleTime()
 	{
 		this.IdleTimeInternal = 0f;
 	}
 
-	// Token: 0x0600F9BE RID: 63934 RVA: 0x003C8645 File Offset: 0x003C6845
+	// Token: 0x0600CDDD RID: 52701 RVA: 0x003D4131 File Offset: 0x003D2331
 	public float GetIdleTime()
 	{
 		return this.IdleTimeInternal;
 	}
 
-	// Token: 0x0600F9BF RID: 63935 RVA: 0x003C864D File Offset: 0x003C684D
+	// Token: 0x0600CDDE RID: 52702 RVA: 0x003D4139 File Offset: 0x003D2339
 	public bool IsIdle()
 	{
 		return this.IdleTimeInternal > 0f;
 	}
 
-	// Token: 0x0600F9C0 RID: 63936 RVA: 0x003C865C File Offset: 0x003C685C
+	// Token: 0x0600CDDF RID: 52703 RVA: 0x003D4148 File Offset: 0x003D2348
 	protected override bool OnInit()
 	{
 		this.IdleTimeInternal = 0f;
@@ -46,7 +46,7 @@ public class IdlePerformModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600F9C1 RID: 63937 RVA: 0x003C868B File Offset: 0x003C688B
+	// Token: 0x0600CDE0 RID: 52704 RVA: 0x003D4177 File Offset: 0x003D2377
 	protected override bool OnClear()
 	{
 		this.IdleTimeInternal = 0f;
@@ -56,7 +56,7 @@ public class IdlePerformModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600F9C2 RID: 63938 RVA: 0x003C86BA File Offset: 0x003C68BA
+	// Token: 0x0600CDE1 RID: 52705 RVA: 0x003D41A6 File Offset: 0x003D23A6
 	public void OnTick(float delta)
 	{
 		if (delta <= 0f)
@@ -69,7 +69,7 @@ public class IdlePerformModel : ModelBase
 		this.TickAiSearchWanderPointData();
 	}
 
-	// Token: 0x0600F9C3 RID: 63939 RVA: 0x003C86E0 File Offset: 0x003C68E0
+	// Token: 0x0600CDE2 RID: 52706 RVA: 0x003D41CC File Offset: 0x003D23CC
 	public void StartGazeAwarenessCheckByEntityId(int entityId, float awarenessAngle, float awarenessDistance, float awarenessHeight, float playerGazeAngle, bool enableDebugDraw = false)
 	{
 		if (this.GazeAwarenessDataMap.ContainsKey(entityId))
@@ -88,7 +88,7 @@ public class IdlePerformModel : ModelBase
 		this.GazeAwarenessDataMap[entityId] = value;
 	}
 
-	// Token: 0x0600F9C4 RID: 63940 RVA: 0x003C8760 File Offset: 0x003C6960
+	// Token: 0x0600CDE3 RID: 52707 RVA: 0x003D424C File Offset: 0x003D244C
 	public void StopGazeAwarenessCheckByEntityId(int entityId)
 	{
 		if (!this.GazeAwarenessDataMap.ContainsKey(entityId))
@@ -106,7 +106,7 @@ public class IdlePerformModel : ModelBase
 		this.GazeAwarenessDataMap.Remove(entityId);
 	}
 
-	// Token: 0x0600F9C5 RID: 63941 RVA: 0x003C87D4 File Offset: 0x003C69D4
+	// Token: 0x0600CDE4 RID: 52708 RVA: 0x003D42C0 File Offset: 0x003D24C0
 	public bool CheckGazeAwarenessByEntityId(int entityId, float time)
 	{
 		IdleGazeAwarenessData idleGazeAwarenessData;
@@ -125,7 +125,7 @@ public class IdlePerformModel : ModelBase
 		return idleGazeAwarenessData.CheckPlayerGazeTime(time);
 	}
 
-	// Token: 0x0600F9C6 RID: 63942 RVA: 0x003C8844 File Offset: 0x003C6A44
+	// Token: 0x0600CDE5 RID: 52709 RVA: 0x003D4330 File Offset: 0x003D2530
 	public void AccumulatePlayerGazeTime(float delta)
 	{
 		if (delta <= 0f)
@@ -138,7 +138,7 @@ public class IdlePerformModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600F9C7 RID: 63943 RVA: 0x003C88A4 File Offset: 0x003C6AA4
+	// Token: 0x0600CDE6 RID: 52710 RVA: 0x003D4390 File Offset: 0x003D2590
 	public void TickAiNoMoveData()
 	{
 		List<int> list = null;
@@ -162,7 +162,7 @@ public class IdlePerformModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600F9C8 RID: 63944 RVA: 0x003C895C File Offset: 0x003C6B5C
+	// Token: 0x0600CDE7 RID: 52711 RVA: 0x003D4448 File Offset: 0x003D2648
 	internal AiNoMoveData GetOrCreateAiNoMoveData(int entityId)
 	{
 		AiNoMoveData aiNoMoveData;
@@ -175,7 +175,7 @@ public class IdlePerformModel : ModelBase
 		return aiNoMoveData;
 	}
 
-	// Token: 0x0600F9C9 RID: 63945 RVA: 0x003C8998 File Offset: 0x003C6B98
+	// Token: 0x0600CDE8 RID: 52712 RVA: 0x003D4484 File Offset: 0x003D2684
 	public void ResetAiNoMoveTime(int entityId)
 	{
 		AiNoMoveData aiNoMoveData;
@@ -192,7 +192,7 @@ public class IdlePerformModel : ModelBase
 		aiNoMoveData.ResetTime();
 	}
 
-	// Token: 0x0600F9CA RID: 63946 RVA: 0x003C89E8 File Offset: 0x003C6BE8
+	// Token: 0x0600CDE9 RID: 52713 RVA: 0x003D44D4 File Offset: 0x003D26D4
 	public bool CheckAiNoMoveTime(int entityId, float timeMs, EAiNoMoveResetCondition resetConditionMask = EAiNoMoveResetCondition.None)
 	{
 		AiNoMoveData orCreateAiNoMoveData = this.GetOrCreateAiNoMoveData(entityId);
@@ -200,7 +200,7 @@ public class IdlePerformModel : ModelBase
 		return orCreateAiNoMoveData.GetNoMoveTime() >= (double)timeMs;
 	}
 
-	// Token: 0x0600F9CB RID: 63947 RVA: 0x003C8A04 File Offset: 0x003C6C04
+	// Token: 0x0600CDEA RID: 52714 RVA: 0x003D44F0 File Offset: 0x003D26F0
 	public void TickAiSearchWanderPointData()
 	{
 		List<int> list = null;
@@ -231,7 +231,7 @@ public class IdlePerformModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600F9CC RID: 63948 RVA: 0x003C8AF8 File Offset: 0x003C6CF8
+	// Token: 0x0600CDEB RID: 52715 RVA: 0x003D45E4 File Offset: 0x003D27E4
 	public void AddAiSearchedWanderPointId(int entityId, int wanderPointId)
 	{
 		AiSearchWanderPointData aiSearchWanderPointData;
@@ -243,7 +243,7 @@ public class IdlePerformModel : ModelBase
 		aiSearchWanderPointData.AddSearchedWanderPointId(wanderPointId);
 	}
 
-	// Token: 0x0600F9CD RID: 63949 RVA: 0x003C8B30 File Offset: 0x003C6D30
+	// Token: 0x0600CDEC RID: 52716 RVA: 0x003D461C File Offset: 0x003D281C
 	public void ClearAiSearchedWanderPointIdSet(int entityId)
 	{
 		AiSearchWanderPointData aiSearchWanderPointData;
@@ -260,15 +260,15 @@ public class IdlePerformModel : ModelBase
 		aiSearchWanderPointData.ClearSearchedWanderPointIdSet();
 	}
 
-	// Token: 0x0600F9CE RID: 63950 RVA: 0x003C8B80 File Offset: 0x003C6D80
+	// Token: 0x0600CDED RID: 52717 RVA: 0x003D466C File Offset: 0x003D286C
 	public bool HasAiSearchedWanderPointId(int entityId, int wanderPointId)
 	{
 		AiSearchWanderPointData aiSearchWanderPointData;
 		return this.AiSearchWanderPointDataMap.TryGetValue(entityId, out aiSearchWanderPointData) && aiSearchWanderPointData.HasSearchedWanderPointId(wanderPointId);
 	}
 
-	// Token: 0x1700133A RID: 4922
-	// (get) Token: 0x0600F9CF RID: 63951 RVA: 0x003C8BA6 File Offset: 0x003C6DA6
+	// Token: 0x17001364 RID: 4964
+	// (get) Token: 0x0600CDEE RID: 52718 RVA: 0x003D4692 File Offset: 0x003D2892
 	public static IdlePerformModel Instance
 	{
 		get
@@ -277,7 +277,7 @@ public class IdlePerformModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600F9D0 RID: 63952 RVA: 0x003C8BAD File Offset: 0x003C6DAD
+	// Token: 0x0600CDEF RID: 52719 RVA: 0x003D4699 File Offset: 0x003D2899
 	public static IdlePerformModel GetOrCreateInstance()
 	{
 		if (IdlePerformModel._Instance == null)
@@ -287,7 +287,7 @@ public class IdlePerformModel : ModelBase
 		return IdlePerformModel._Instance;
 	}
 
-	// Token: 0x0600F9D1 RID: 63953 RVA: 0x003C8BC1 File Offset: 0x003C6DC1
+	// Token: 0x0600CDF0 RID: 52720 RVA: 0x003D46AD File Offset: 0x003D28AD
 	public static bool CreateInstance()
 	{
 		if (IdlePerformModel._Instance != null)
@@ -298,36 +298,36 @@ public class IdlePerformModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600F9D2 RID: 63954 RVA: 0x003C8BD7 File Offset: 0x003C6DD7
+	// Token: 0x0600CDF1 RID: 52721 RVA: 0x003D46C3 File Offset: 0x003D28C3
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600F9D3 RID: 63955 RVA: 0x003C8BD9 File Offset: 0x003C6DD9
+	// Token: 0x0600CDF2 RID: 52722 RVA: 0x003D46C5 File Offset: 0x003D28C5
 	public static void ResetStaticDefaultValue()
 	{
 		IdlePerformModel._Instance = null;
 	}
 
-	// Token: 0x0600F9D4 RID: 63956 RVA: 0x003C8BE1 File Offset: 0x003C6DE1
+	// Token: 0x0600CDF3 RID: 52723 RVA: 0x003D46CD File Offset: 0x003D28CD
 	static IdlePerformModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(IdlePerformModel.CreateStaticDefaultValue), new Action(IdlePerformModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007472 RID: 29810
+	// Token: 0x04007553 RID: 30035
 	private float IdleTimeInternal;
 
-	// Token: 0x04007473 RID: 29811
+	// Token: 0x04007554 RID: 30036
 	private Dictionary<int, IdleGazeAwarenessData> GazeAwarenessDataMap = new Dictionary<int, IdleGazeAwarenessData>();
 
-	// Token: 0x04007474 RID: 29812
+	// Token: 0x04007555 RID: 30037
 	private Dictionary<int, AiNoMoveData> AiNoMoveDataMap = new Dictionary<int, AiNoMoveData>();
 
-	// Token: 0x04007475 RID: 29813
+	// Token: 0x04007556 RID: 30038
 	private Dictionary<int, AiSearchWanderPointData> AiSearchWanderPointDataMap = new Dictionary<int, AiSearchWanderPointData>();
 
-	// Token: 0x04007476 RID: 29814
+	// Token: 0x04007557 RID: 30039
 	[Nullable(2)]
 	private static IdlePerformModel _Instance;
 }

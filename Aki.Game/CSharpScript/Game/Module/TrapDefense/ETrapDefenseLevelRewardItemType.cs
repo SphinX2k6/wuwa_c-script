@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A6C RID: 19052
+	// Token: 0x02003A14 RID: 14868
 	public enum ETrapDefenseLevelRewardItemType
 	{
-		// Token: 0x0401A686 RID: 108166
+		// Token: 0x04014FD8 RID: 85976
 		Talent,
-		// Token: 0x0401A687 RID: 108167
+		// Token: 0x04014FD9 RID: 85977
 		Machine,
-		// Token: 0x0401A688 RID: 108168
+		// Token: 0x04014FDA RID: 85978
 		BdBuff
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AB0 RID: 27312
+	// Token: 0x020071DB RID: 29147
 	public class IModifyActorMaterialParamBySplineProgressConfig_UnionUnion
 	{
-		// Token: 0x1700CAAA RID: 51882
-		// (get) Token: 0x0602FDC2 RID: 196034 RVA: 0x00682C32 File Offset: 0x00680E32
-		// (set) Token: 0x0602FDC3 RID: 196035 RVA: 0x00682C3A File Offset: 0x00680E3A
+		// Token: 0x1700D564 RID: 54628
+		// (get) Token: 0x06032B2E RID: 207662 RVA: 0x006D9478 File Offset: 0x006D7678
+		// (set) Token: 0x06032B2F RID: 207663 RVA: 0x006D9480 File Offset: 0x006D7680
 		public IModifyActorMaterialParamBySplineProgressConfig_Union Type { get; set; }
 
-		// Token: 0x1700CAAB RID: 51883
-		// (get) Token: 0x0602FDC4 RID: 196036 RVA: 0x00682C43 File Offset: 0x00680E43
-		// (set) Token: 0x0602FDC5 RID: 196037 RVA: 0x00682C4B File Offset: 0x00680E4B
+		// Token: 0x1700D565 RID: 54629
+		// (get) Token: 0x06032B30 RID: 207664 RVA: 0x006D9489 File Offset: 0x006D7689
+		// (set) Token: 0x06032B31 RID: 207665 RVA: 0x006D9491 File Offset: 0x006D7691
 		public object Value { get; set; }
 
-		// Token: 0x0602FDC6 RID: 196038 RVA: 0x00682C54 File Offset: 0x00680E54
+		// Token: 0x06032B32 RID: 207666 RVA: 0x006D949A File Offset: 0x006D769A
 		public IModifyActorMaterialParamBySplineProgressConfig_UnionUnion()
 		{
 			this.Type = IModifyActorMaterialParamBySplineProgressConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602FDC7 RID: 196039 RVA: 0x00682C6A File Offset: 0x00680E6A
+		// Token: 0x06032B33 RID: 207667 RVA: 0x006D94B0 File Offset: 0x006D76B0
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602FDC8 RID: 196040 RVA: 0x00682C7C File Offset: 0x00680E7C
+		// Token: 0x06032B34 RID: 207668 RVA: 0x006D94C2 File Offset: 0x006D76C2
 		public IModifyActorMaterialParamBySplineProgressConfigT AsIModifyActorMaterialParamBySplineProgressConfig()
 		{
 			return this.As<IModifyActorMaterialParamBySplineProgressConfigT>();
 		}
 
-		// Token: 0x0602FDC9 RID: 196041 RVA: 0x00682C84 File Offset: 0x00680E84
+		// Token: 0x06032B35 RID: 207669 RVA: 0x006D94CA File Offset: 0x006D76CA
 		public static IModifyActorMaterialParamBySplineProgressConfig_UnionUnion FromIModifyActorMaterialParamBySplineProgressConfig(IModifyActorMaterialParamBySplineProgressConfigT _imodifyactormaterialparambysplineprogressconfig)
 		{
 			return new IModifyActorMaterialParamBySplineProgressConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FDCA RID: 196042 RVA: 0x00682C99 File Offset: 0x00680E99
+		// Token: 0x06032B36 RID: 207670 RVA: 0x006D94DF File Offset: 0x006D76DF
 		public IModifyActorMaterialParamBySplineProgressEnterSplineT AsIModifyActorMaterialParamBySplineProgressEnterSpline()
 		{
 			return this.As<IModifyActorMaterialParamBySplineProgressEnterSplineT>();
 		}
 
-		// Token: 0x0602FDCB RID: 196043 RVA: 0x00682CA1 File Offset: 0x00680EA1
+		// Token: 0x06032B37 RID: 207671 RVA: 0x006D94E7 File Offset: 0x006D76E7
 		public static IModifyActorMaterialParamBySplineProgressConfig_UnionUnion FromIModifyActorMaterialParamBySplineProgressEnterSpline(IModifyActorMaterialParamBySplineProgressEnterSplineT _imodifyactormaterialparambysplineprogressenterspline)
 		{
 			return new IModifyActorMaterialParamBySplineProgressConfig_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FDCC RID: 196044 RVA: 0x00682CB6 File Offset: 0x00680EB6
+		// Token: 0x06032B38 RID: 207672 RVA: 0x006D94FC File Offset: 0x006D76FC
 		public IModifyActorMaterialParamBySplineProgressExitSplineT AsIModifyActorMaterialParamBySplineProgressExitSpline()
 		{
 			return this.As<IModifyActorMaterialParamBySplineProgressExitSplineT>();
 		}
 
-		// Token: 0x0602FDCD RID: 196045 RVA: 0x00682CBE File Offset: 0x00680EBE
+		// Token: 0x06032B39 RID: 207673 RVA: 0x006D9504 File Offset: 0x006D7704
 		public static IModifyActorMaterialParamBySplineProgressConfig_UnionUnion FromIModifyActorMaterialParamBySplineProgressExitSpline(IModifyActorMaterialParamBySplineProgressExitSplineT _imodifyactormaterialparambysplineprogressexitspline)
 		{
 			return new IModifyActorMaterialParamBySplineProgressConfig_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FDCE RID: 196046 RVA: 0x00682CD4 File Offset: 0x00680ED4
+		// Token: 0x06032B3A RID: 207674 RVA: 0x006D951C File Offset: 0x006D771C
 		public static int Pack(FlatBufferBuilder builder, IModifyActorMaterialParamBySplineProgressConfig_UnionUnion _o)
 		{
 			switch (_o.Type)

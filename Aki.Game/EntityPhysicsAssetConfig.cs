@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200312C RID: 12588
+// Token: 0x02002687 RID: 9863
 [NullableContext(1)]
 [Nullable(0)]
 public class EntityPhysicsAssetConfig : ConfigBase
 {
-	// Token: 0x0601B0AF RID: 110767 RVA: 0x00756ED0 File Offset: 0x007550D0
+	// Token: 0x06018B0A RID: 101130 RVA: 0x0077CF3C File Offset: 0x0077B13C
 	public PhysicsAssetConfig? GetPhysicsAssetConfigByRoleBody(string height)
 	{
 		PhysicsAssetConfig? config = ConfigPhysicsAssetConfigByIdWithDefaultId.GetConfig("0", height, height, height, true);
@@ -33,8 +33,8 @@ public class EntityPhysicsAssetConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x17002570 RID: 9584
-	// (get) Token: 0x0601B0B0 RID: 110768 RVA: 0x00756F6E File Offset: 0x0075516E
+	// Token: 0x1700271B RID: 10011
+	// (get) Token: 0x06018B0B RID: 101131 RVA: 0x0077CFDA File Offset: 0x0077B1DA
 	public static EntityPhysicsAssetConfig Instance
 	{
 		get
@@ -43,7 +43,7 @@ public class EntityPhysicsAssetConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601B0B1 RID: 110769 RVA: 0x00756F75 File Offset: 0x00755175
+	// Token: 0x06018B0C RID: 101132 RVA: 0x0077CFE1 File Offset: 0x0077B1E1
 	public static EntityPhysicsAssetConfig GetOrCreateInstance()
 	{
 		if (EntityPhysicsAssetConfig._Instance == null)
@@ -53,7 +53,7 @@ public class EntityPhysicsAssetConfig : ConfigBase
 		return EntityPhysicsAssetConfig._Instance;
 	}
 
-	// Token: 0x0601B0B2 RID: 110770 RVA: 0x00756F89 File Offset: 0x00755189
+	// Token: 0x06018B0D RID: 101133 RVA: 0x0077CFF5 File Offset: 0x0077B1F5
 	public static bool CreateInstance()
 	{
 		if (EntityPhysicsAssetConfig._Instance != null)
@@ -64,27 +64,27 @@ public class EntityPhysicsAssetConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601B0B3 RID: 110771 RVA: 0x00756F9F File Offset: 0x0075519F
+	// Token: 0x06018B0E RID: 101134 RVA: 0x0077D00B File Offset: 0x0077B20B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601B0B4 RID: 110772 RVA: 0x00756FA1 File Offset: 0x007551A1
+	// Token: 0x06018B0F RID: 101135 RVA: 0x0077D00D File Offset: 0x0077B20D
 	public static void ResetStaticDefaultValue()
 	{
 		EntityPhysicsAssetConfig._Instance = null;
 	}
 
-	// Token: 0x0601B0B5 RID: 110773 RVA: 0x00756FA9 File Offset: 0x007551A9
+	// Token: 0x06018B10 RID: 101136 RVA: 0x0077D015 File Offset: 0x0077B215
 	static EntityPhysicsAssetConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(EntityPhysicsAssetConfig.CreateStaticDefaultValue), new Action(EntityPhysicsAssetConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400D24C RID: 53836
+	// Token: 0x0400D66E RID: 54894
 	private const string DEFAULT_DB_ID = "0";
 
-	// Token: 0x0400D24D RID: 53837
+	// Token: 0x0400D66F RID: 54895
 	[Nullable(2)]
 	private static EntityPhysicsAssetConfig _Instance;
 }

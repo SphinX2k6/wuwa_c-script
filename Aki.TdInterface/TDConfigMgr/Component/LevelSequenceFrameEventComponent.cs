@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000829 RID: 2089
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008CC RID: 2252
 	public class LevelSequenceFrameEventComponent : IComponentBase
 	{
-		// Token: 0x06002D79 RID: 11641 RVA: 0x00075CAC File Offset: 0x00073EAC
+		// Token: 0x060030A9 RID: 12457 RVA: 0x0007D010 File Offset: 0x0007B210
 		private LevelSequenceFrameEventComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002D7A RID: 11642 RVA: 0x00075CE4 File Offset: 0x00073EE4
+		// Token: 0x060030AA RID: 12458 RVA: 0x0007D048 File Offset: 0x0007B248
 		public static LevelSequenceFrameEventComponent Create([Nullable(2)] LevelSequenceFrameEventComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002D7B RID: 11643 RVA: 0x00075CF7 File Offset: 0x00073EF7
+		// Token: 0x060030AB RID: 12459 RVA: 0x0007D05B File Offset: 0x0007B25B
 		public static LevelSequenceFrameEventComponent CreateFromSetValue([Nullable(2)] LevelSequenceFrameEventComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002D7C RID: 11644 RVA: 0x00075D0A File Offset: 0x00073F0A
+		// Token: 0x060030AC RID: 12460 RVA: 0x0007D06E File Offset: 0x0007B26E
 		public new LevelSequenceFrameEventComponent_SetValue ToSetValue()
 		{
 			return new LevelSequenceFrameEventComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BE2 RID: 3042
-		// (get) Token: 0x06002D7D RID: 11645 RVA: 0x00075D44 File Offset: 0x00073F44
-		// (set) Token: 0x06002D7E RID: 11646 RVA: 0x00075D7E File Offset: 0x00073F7E
+		// Token: 0x17000CA5 RID: 3237
+		// (get) Token: 0x060030AD RID: 12461 RVA: 0x0007D0A8 File Offset: 0x0007B2A8
+		// (set) Token: 0x060030AE RID: 12462 RVA: 0x0007D0E2 File Offset: 0x0007B2E2
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BE3 RID: 3043
-		// (get) Token: 0x06002D7F RID: 11647 RVA: 0x00075D8C File Offset: 0x00073F8C
-		// (set) Token: 0x06002D80 RID: 11648 RVA: 0x00075DB6 File Offset: 0x00073FB6
+		// Token: 0x17000CA6 RID: 3238
+		// (get) Token: 0x060030AF RID: 12463 RVA: 0x0007D0F0 File Offset: 0x0007B2F0
+		// (set) Token: 0x060030B0 RID: 12464 RVA: 0x0007D11A File Offset: 0x0007B31A
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BE4 RID: 3044
-		// (get) Token: 0x06002D81 RID: 11649 RVA: 0x00075DC4 File Offset: 0x00073FC4
-		// (set) Token: 0x06002D82 RID: 11650 RVA: 0x00075E57 File Offset: 0x00074057
+		// Token: 0x17000CA7 RID: 3239
+		// (get) Token: 0x060030B1 RID: 12465 RVA: 0x0007D128 File Offset: 0x0007B328
+		// (set) Token: 0x060030B2 RID: 12466 RVA: 0x0007D1BB File Offset: 0x0007B3BB
 		public virtual List<ILevelSequenceSectionInfo> ForwardSections
 		{
 			get
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BE5 RID: 3045
-		// (get) Token: 0x06002D83 RID: 11651 RVA: 0x00075E6C File Offset: 0x0007406C
-		// (set) Token: 0x06002D84 RID: 11652 RVA: 0x00075EFF File Offset: 0x000740FF
+		// Token: 0x17000CA8 RID: 3240
+		// (get) Token: 0x060030B3 RID: 12467 RVA: 0x0007D1D0 File Offset: 0x0007B3D0
+		// (set) Token: 0x060030B4 RID: 12468 RVA: 0x0007D263 File Offset: 0x0007B463
 		public virtual List<ILevelSequenceSectionInfo> BackWardSections
 		{
 			get
@@ -182,24 +180,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001E18 RID: 7704
+		// Token: 0x04002024 RID: 8228
 		[Nullable(2)]
 		protected new LevelSequenceFrameEventComponent FbInstance;
 
-		// Token: 0x04001E19 RID: 7705
+		// Token: 0x04002025 RID: 8229
 		[Nullable(2)]
 		protected new LevelSequenceFrameEventComponent_SetValue PocoInterface;
 
-		// Token: 0x04001E1A RID: 7706
+		// Token: 0x04002026 RID: 8230
 		private List<ILevelSequenceSectionInfo> _ForwardSectionsCache;
 
-		// Token: 0x04001E1B RID: 7707
+		// Token: 0x04002027 RID: 8231
 		private bool _ForwardSectionsInited;
 
-		// Token: 0x04001E1C RID: 7708
+		// Token: 0x04002028 RID: 8232
 		private List<ILevelSequenceSectionInfo> _BackWardSectionsCache;
 
-		// Token: 0x04001E1D RID: 7709
+		// Token: 0x04002029 RID: 8233
 		private bool _BackWardSectionsInited;
 	}
 }

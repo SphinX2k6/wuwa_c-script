@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026DE RID: 9950
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029A2 RID: 10658
 	public class INotifyMonsterPerception : ISendBattleStateType
 	{
-		// Token: 0x0600DE4D RID: 56909 RVA: 0x0020FBB0 File Offset: 0x0020DDB0
+		// Token: 0x0600EC29 RID: 60457 RVA: 0x0022C3F0 File Offset: 0x0022A5F0
 		public static INotifyMonsterPerception Create(INotifyMonsterPerception? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004253 RID: 16979
-		// (get) Token: 0x0600DE4E RID: 56910 RVA: 0x0020FBCF File Offset: 0x0020DDCF
+		// Token: 0x17004593 RID: 17811
+		// (get) Token: 0x0600EC2A RID: 60458 RVA: 0x0022C40F File Offset: 0x0022A60F
 		public override ESetBattleStateType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004254 RID: 16980
-		// (get) Token: 0x0600DE4F RID: 56911 RVA: 0x0020FBDC File Offset: 0x0020DDDC
+		// Token: 0x17004594 RID: 17812
+		// (get) Token: 0x0600EC2B RID: 60459 RVA: 0x0022C41C File Offset: 0x0022A61C
 		public virtual List<int> EntityIds
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004255 RID: 16981
-		// (get) Token: 0x0600DE50 RID: 56912 RVA: 0x0020FC40 File Offset: 0x0020DE40
+		// Token: 0x17004595 RID: 17813
+		// (get) Token: 0x0600EC2C RID: 60460 RVA: 0x0022C480 File Offset: 0x0022A680
 		public virtual IBattleStatePerceptionBehaviorType PerceptionBehaviorOption
 		{
 			get
@@ -70,19 +67,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B66 RID: 31590
+		// Token: 0x04008206 RID: 33286
 		private INotifyMonsterPerception Instance;
 
-		// Token: 0x04007B67 RID: 31591
+		// Token: 0x04008207 RID: 33287
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007B68 RID: 31592
+		// Token: 0x04008208 RID: 33288
 		private bool _EntityIdsInited;
 
-		// Token: 0x04007B69 RID: 31593
+		// Token: 0x04008209 RID: 33289
 		private IBattleStatePerceptionBehaviorType _PerceptionBehaviorOptionCache;
 
-		// Token: 0x04007B6A RID: 31594
+		// Token: 0x0400820A RID: 33290
 		private bool _PerceptionBehaviorOptionInited;
 	}
 }

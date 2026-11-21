@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000681 RID: 1665
+	// Token: 0x02000720 RID: 1824
 	public class IRenderSpecifiedRangeType_SetValue
 	{
-		// Token: 0x0400189C RID: 6300
+		// Token: 0x04001A95 RID: 6805
 		public ERenderSpecifiedRangeType Type;
 	}
 }

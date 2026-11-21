@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200400D RID: 16397
+	// Token: 0x0200444E RID: 17486
 	public struct IQuestRecallData : IFlatbufferObject
 	{
-		// Token: 0x17007336 RID: 29494
-		// (get) Token: 0x06017A9E RID: 96926 RVA: 0x00369CD8 File Offset: 0x00367ED8
+		// Token: 0x17007938 RID: 31032
+		// (get) Token: 0x06019137 RID: 102711 RVA: 0x00393ACC File Offset: 0x00391CCC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017A9F RID: 96927 RVA: 0x00369CE5 File Offset: 0x00367EE5
+		// Token: 0x06019138 RID: 102712 RVA: 0x00393AD9 File Offset: 0x00391CD9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017AA0 RID: 96928 RVA: 0x00369CEC File Offset: 0x00367EEC
+		// Token: 0x06019139 RID: 102713 RVA: 0x00393AE0 File Offset: 0x00391CE0
 		public static IQuestRecallData GetRootAsIQuestRecallData(ByteBuffer _bb)
 		{
 			return IQuestRecallData.GetRootAsIQuestRecallData(_bb, default(IQuestRecallData));
 		}
 
-		// Token: 0x06017AA1 RID: 96929 RVA: 0x00369D08 File Offset: 0x00367F08
+		// Token: 0x0601913A RID: 102714 RVA: 0x00393AFC File Offset: 0x00391CFC
 		public static IQuestRecallData GetRootAsIQuestRecallData(ByteBuffer _bb, IQuestRecallData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017AA2 RID: 96930 RVA: 0x00369D25 File Offset: 0x00367F25
+		// Token: 0x0601913B RID: 102715 RVA: 0x00393B19 File Offset: 0x00391D19
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017AA3 RID: 96931 RVA: 0x00369D34 File Offset: 0x00367F34
+		// Token: 0x0601913C RID: 102716 RVA: 0x00393B28 File Offset: 0x00391D28
 		public IQuestRecallData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007337 RID: 29495
-		// (get) Token: 0x06017AA4 RID: 96932 RVA: 0x00369D44 File Offset: 0x00367F44
+		// Token: 0x17007939 RID: 31033
+		// (get) Token: 0x0601913D RID: 102717 RVA: 0x00393B38 File Offset: 0x00391D38
 		public ERecallDataType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007338 RID: 29496
-		// (get) Token: 0x06017AA5 RID: 96933 RVA: 0x00369D80 File Offset: 0x00367F80
+		// Token: 0x1700793A RID: 31034
+		// (get) Token: 0x0601913E RID: 102718 RVA: 0x00393B74 File Offset: 0x00391D74
 		public int Id
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007339 RID: 29497
-		// (get) Token: 0x06017AA6 RID: 96934 RVA: 0x00369DBC File Offset: 0x00367FBC
+		// Token: 0x1700793B RID: 31035
+		// (get) Token: 0x0601913F RID: 102719 RVA: 0x00393BB0 File Offset: 0x00391DB0
 		public IQuestRecallConfig? RecallConfig
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017AA7 RID: 96935 RVA: 0x00369E19 File Offset: 0x00368019
+		// Token: 0x06019140 RID: 102720 RVA: 0x00393C0D File Offset: 0x00391E0D
 		public static Offset<IQuestRecallData> CreateIQuestRecallData(FlatBufferBuilder builder, ERecallDataType Type = ERecallDataType.LevelPlay, int Id = 0, Offset<IQuestRecallConfig> RecallConfigOffset = default(Offset<IQuestRecallConfig>))
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestRecallData.EndIQuestRecallData(builder);
 		}
 
-		// Token: 0x06017AA8 RID: 96936 RVA: 0x00369E3D File Offset: 0x0036803D
+		// Token: 0x06019141 RID: 102721 RVA: 0x00393C31 File Offset: 0x00391E31
 		public static void StartIQuestRecallData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06017AA9 RID: 96937 RVA: 0x00369E46 File Offset: 0x00368046
+		// Token: 0x06019142 RID: 102722 RVA: 0x00393C3A File Offset: 0x00391E3A
 		public static void AddType(FlatBufferBuilder builder, ERecallDataType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017AAA RID: 96938 RVA: 0x00369E51 File Offset: 0x00368051
+		// Token: 0x06019143 RID: 102723 RVA: 0x00393C45 File Offset: 0x00391E45
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06017AAB RID: 96939 RVA: 0x00369E5C File Offset: 0x0036805C
+		// Token: 0x06019144 RID: 102724 RVA: 0x00393C50 File Offset: 0x00391E50
 		public static void AddRecallConfig(FlatBufferBuilder builder, Offset<IQuestRecallConfig> recallConfigOffset)
 		{
 			builder.AddOffset(2, recallConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06017AAC RID: 96940 RVA: 0x00369E6C File Offset: 0x0036806C
+		// Token: 0x06019145 RID: 102725 RVA: 0x00393C60 File Offset: 0x00391E60
 		public static Offset<IQuestRecallData> EndIQuestRecallData(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestRecallData>(builder.EndTable());
 		}
 
-		// Token: 0x06017AAD RID: 96941 RVA: 0x00369E7C File Offset: 0x0036807C
+		// Token: 0x06019146 RID: 102726 RVA: 0x00393C70 File Offset: 0x00391E70
 		public IQuestRecallDataT UnPack()
 		{
 			IQuestRecallDataT questRecallDataT = new IQuestRecallDataT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return questRecallDataT;
 		}
 
-		// Token: 0x06017AAE RID: 96942 RVA: 0x00369E98 File Offset: 0x00368098
+		// Token: 0x06019147 RID: 102727 RVA: 0x00393C8C File Offset: 0x00391E8C
 		public void UnPackTo(IQuestRecallDataT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.RecallConfig = ((this.RecallConfig != null) ? this.RecallConfig.Value.UnPack() : null);
 		}
 
-		// Token: 0x06017AAF RID: 96943 RVA: 0x00369EEC File Offset: 0x003680EC
+		// Token: 0x06019148 RID: 102728 RVA: 0x00393CE0 File Offset: 0x00391EE0
 		public static Offset<IQuestRecallData> Pack(FlatBufferBuilder builder, IQuestRecallDataT _o)
 		{
 			if (_o == null)
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestRecallData.CreateIQuestRecallData(builder, _o.Type, _o.Id, recallConfigOffset);
 		}
 
-		// Token: 0x0400BB27 RID: 47911
+		// Token: 0x0400C50E RID: 50446
 		private Table __p;
 	}
 }

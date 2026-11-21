@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DFD RID: 24061
+	// Token: 0x02004DE2 RID: 19938
 	public class SpecialEnergyBarRuibeikaDot : UiPanelBase
 	{
-		// Token: 0x0603D2BF RID: 250559 RVA: 0x00EBBB8F File Offset: 0x00EB9D8F
+		// Token: 0x0603224E RID: 205390 RVA: 0x00E0D0DB File Offset: 0x00E0B2DB
 		public SpecialEnergyBarRuibeikaDot(int mode = 0)
 		{
 			this.Mode = mode;
 		}
 
-		// Token: 0x0603D2C0 RID: 250560 RVA: 0x00EBBBAC File Offset: 0x00EB9DAC
+		// Token: 0x0603224F RID: 205391 RVA: 0x00E0D0F8 File Offset: 0x00E0B2F8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D2C1 RID: 250561 RVA: 0x00EBBC3C File Offset: 0x00EB9E3C
+		// Token: 0x06032250 RID: 205392 RVA: 0x00E0D188 File Offset: 0x00E0B388
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D2C2 RID: 250562 RVA: 0x00EBBC94 File Offset: 0x00EB9E94
+		// Token: 0x06032251 RID: 205393 RVA: 0x00E0D1E0 File Offset: 0x00E0B3E0
 		public void SetVisible(bool b, bool gun, bool force = false)
 		{
 			if (this.IsVisible == b && !force)
@@ -76,35 +76,35 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsVisible = b;
 		}
 
-		// Token: 0x0603D2C3 RID: 250563 RVA: 0x00EBBD02 File Offset: 0x00EB9F02
+		// Token: 0x06032252 RID: 205394 RVA: 0x00E0D24E File Offset: 0x00E0B44E
 		public float GetAniUseDuration()
 		{
 			return this.TweenAnimPlayer.GetDuration(1);
 		}
 
-		// Token: 0x0401FE4C RID: 130636
+		// Token: 0x0401A913 RID: 108819
 		[Nullable(1)]
 		private readonly BattleUiTweenAnimPlayer TweenAnimPlayer = new BattleUiTweenAnimPlayer();
 
-		// Token: 0x0401FE4D RID: 130637
+		// Token: 0x0401A914 RID: 108820
 		public int Mode;
 
-		// Token: 0x0401FE4E RID: 130638
+		// Token: 0x0401A915 RID: 108821
 		public int Index;
 
-		// Token: 0x0401FE4F RID: 130639
+		// Token: 0x0401A916 RID: 108822
 		private bool IsVisible;
 
-		// Token: 0x0200C149 RID: 49481
+		// Token: 0x0200AB58 RID: 43864
 		private class EDotChildType
 		{
-			// Token: 0x0403A623 RID: 239139
+			// Token: 0x04035015 RID: 217109
 			public const int AniBrightG = 0;
 
-			// Token: 0x0403A624 RID: 239140
+			// Token: 0x04035016 RID: 217110
 			public const int AniUse = 1;
 
-			// Token: 0x0403A625 RID: 239141
+			// Token: 0x04035017 RID: 217111
 			public const int AniBrightR = 2;
 		}
 	}

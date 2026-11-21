@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006414 RID: 25620
+	// Token: 0x02005392 RID: 21394
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 	})]
 	public class MotorFightLevelItem : GridProxyAbstract<MotorFightLevelData>
 	{
-		// Token: 0x060406F8 RID: 263928 RVA: 0x00F96840 File Offset: 0x00F94A40
+		// Token: 0x060353B9 RID: 218041 RVA: 0x00EDD7E0 File Offset: 0x00EDB9E0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 19;
@@ -74,13 +74,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060406F9 RID: 263929 RVA: 0x00F96B22 File Offset: 0x00F94D22
+		// Token: 0x060353BA RID: 218042 RVA: 0x00EDDAC2 File Offset: 0x00EDBCC2
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x060406FA RID: 263930 RVA: 0x00F96B38 File Offset: 0x00F94D38
+		// Token: 0x060353BB RID: 218043 RVA: 0x00EDDAD8 File Offset: 0x00EDBCD8
 		[NullableContext(1)]
 		public override void Refresh(MotorFightLevelData data, bool isSelected, int gridIndex)
 		{
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.RemoveTimer();
 		}
 
-		// Token: 0x060406FB RID: 263931 RVA: 0x00F96DEC File Offset: 0x00F94FEC
+		// Token: 0x060353BC RID: 218044 RVA: 0x00EDDD8C File Offset: 0x00EDBF8C
 		private void RefreshUnlockText()
 		{
 			if (!this.LevelData.IsUnLock)
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x060406FC RID: 263932 RVA: 0x00F96E67 File Offset: 0x00F95067
+		// Token: 0x060353BD RID: 218045 RVA: 0x00EDDE07 File Offset: 0x00EDC007
 		private int GetIndex(int offset)
 		{
 			if (offset == 0)
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return 14;
 		}
 
-		// Token: 0x060406FD RID: 263933 RVA: 0x00F96E78 File Offset: 0x00F95078
+		// Token: 0x060353BE RID: 218046 RVA: 0x00EDDE18 File Offset: 0x00EDC018
 		private void PlaySequence()
 		{
 			if (this.LevelData.HasLevelRedDot || this.LevelData.IsFinished)
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x060406FE RID: 263934 RVA: 0x00F96ED5 File Offset: 0x00F950D5
+		// Token: 0x060353BF RID: 218047 RVA: 0x00EDDE75 File Offset: 0x00EDC075
 		private void UpdateUnlock()
 		{
 			if (this.LevelData != null && this.LevelData.IsUnLock)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x060406FF RID: 263935 RVA: 0x00F96EFA File Offset: 0x00F950FA
+		// Token: 0x060353C0 RID: 218048 RVA: 0x00EDDE9A File Offset: 0x00EDC09A
 		private void AddTimer()
 		{
 			this.RemoveTimer();
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}, (float)TimeUtil.Instance.InverseMillisecond, 1f, null, null, true);
 		}
 
-		// Token: 0x06040700 RID: 263936 RVA: 0x00F96F31 File Offset: 0x00F95131
+		// Token: 0x060353C1 RID: 218049 RVA: 0x00EDDED1 File Offset: 0x00EDC0D1
 		private void RemoveTimer()
 		{
 			if (this.TimerHandle != null)
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040701 RID: 263937 RVA: 0x00F96F53 File Offset: 0x00F95153
+		// Token: 0x060353C2 RID: 218050 RVA: 0x00EDDEF3 File Offset: 0x00EDC0F3
 		protected override void OnBeforeDestroy()
 		{
 			if (this.LevelSequencePlayer != null)
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040702 RID: 263938 RVA: 0x00F96F70 File Offset: 0x00F95170
+		// Token: 0x060353C3 RID: 218051 RVA: 0x00EDDF10 File Offset: 0x00EDC110
 		private void OnButtonClick()
 		{
 			if (!this.LevelData.IsUnLock)
@@ -299,84 +299,84 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040703 RID: 263939 RVA: 0x00F97073 File Offset: 0x00F95273
+		// Token: 0x060353C4 RID: 218052 RVA: 0x00EDE013 File Offset: 0x00EDC213
 		public UUIItem GetNavigationItem()
 		{
 			return base.GetItem(18);
 		}
 
-		// Token: 0x0402180B RID: 137227
+		// Token: 0x0401C13A RID: 115002
 		[Nullable(1)]
 		public const string MOTOR_FIGHT_LOCK_LEVEL_TEXTURE_PATH = "/Game/Aki/UI/UIResources/UiActivity/Image/Activity31/MotorcycleBattle/Level/T_MotorcycleLevelLock.T_MotorcycleLevelLock";
 
-		// Token: 0x0402180C RID: 137228
+		// Token: 0x0401C13B RID: 115003
 		private MotorFightLevelData LevelData;
 
-		// Token: 0x0402180D RID: 137229
+		// Token: 0x0401C13C RID: 115004
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0402180E RID: 137230
+		// Token: 0x0401C13D RID: 115005
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200C638 RID: 50744
+		// Token: 0x0200B01F RID: 45087
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403BD76 RID: 245110
+			// Token: 0x040366D3 RID: 222931
 			public const int BtnRoot = 0;
 
-			// Token: 0x0403BD77 RID: 245111
+			// Token: 0x040366D4 RID: 222932
 			public const int TextureHold = 1;
 
-			// Token: 0x0403BD78 RID: 245112
+			// Token: 0x040366D5 RID: 222933
 			public const int TextureMask = 2;
 
-			// Token: 0x0403BD79 RID: 245113
+			// Token: 0x040366D6 RID: 222934
 			public const int TextureLight = 3;
 
-			// Token: 0x0403BD7A RID: 245114
+			// Token: 0x040366D7 RID: 222935
 			public const int TextureBg = 4;
 
-			// Token: 0x0403BD7B RID: 245115
+			// Token: 0x040366D8 RID: 222936
 			public const int TextureLevel = 5;
 
-			// Token: 0x0403BD7C RID: 245116
+			// Token: 0x040366D9 RID: 222937
 			public const int TextureTitle = 6;
 
-			// Token: 0x0403BD7D RID: 245117
+			// Token: 0x040366DA RID: 222938
 			public const int ArtText = 7;
 
-			// Token: 0x0403BD7E RID: 245118
+			// Token: 0x040366DB RID: 222939
 			public const int SpriteEndLess = 8;
 
-			// Token: 0x0403BD7F RID: 245119
+			// Token: 0x040366DC RID: 222940
 			public const int ItemLockPanel = 9;
 
-			// Token: 0x0403BD80 RID: 245120
+			// Token: 0x040366DD RID: 222941
 			public const int ItemNewPanel = 10;
 
-			// Token: 0x0403BD81 RID: 245121
+			// Token: 0x040366DE RID: 222942
 			public const int ItemFinishPanel = 11;
 
-			// Token: 0x0403BD82 RID: 245122
+			// Token: 0x040366DF RID: 222943
 			public const int TextureLineCenter = 12;
 
-			// Token: 0x0403BD83 RID: 245123
+			// Token: 0x040366E0 RID: 222944
 			public const int TextureLineDown = 13;
 
-			// Token: 0x0403BD84 RID: 245124
+			// Token: 0x040366E1 RID: 222945
 			public const int TextureLineUp = 14;
 
-			// Token: 0x0403BD85 RID: 245125
+			// Token: 0x040366E2 RID: 222946
 			public const int TextUnlock = 15;
 
-			// Token: 0x0403BD86 RID: 245126
+			// Token: 0x040366E3 RID: 222947
 			public const int ItemBestScorePanel = 16;
 
-			// Token: 0x0403BD87 RID: 245127
+			// Token: 0x040366E4 RID: 222948
 			public const int TextBestScore = 17;
 
-			// Token: 0x0403BD88 RID: 245128
+			// Token: 0x040366E5 RID: 222949
 			public const int ItemNavigation = 18;
 		}
 	}

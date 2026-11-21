@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000420 RID: 1056
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000479 RID: 1145
 	public class IHitLogicChangeByPartHit : IHitLogicType
 	{
-		// Token: 0x0600154F RID: 5455 RVA: 0x00042F58 File Offset: 0x00041158
+		// Token: 0x060016E9 RID: 5865 RVA: 0x00046CA0 File Offset: 0x00044EA0
 		private IHitLogicChangeByPartHit_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001550 RID: 5456 RVA: 0x00042F90 File Offset: 0x00041190
+		// Token: 0x060016EA RID: 5866 RVA: 0x00046CD8 File Offset: 0x00044ED8
 		public static IHitLogicChangeByPartHit Create([Nullable(2)] IHitLogicChangeByPartHit instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001551 RID: 5457 RVA: 0x00042FA3 File Offset: 0x000411A3
+		// Token: 0x060016EB RID: 5867 RVA: 0x00046CEB File Offset: 0x00044EEB
 		public static IHitLogicChangeByPartHit CreateFromSetValue([Nullable(2)] IHitLogicChangeByPartHit_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001552 RID: 5458 RVA: 0x00042FB6 File Offset: 0x000411B6
+		// Token: 0x060016EC RID: 5868 RVA: 0x00046CFE File Offset: 0x00044EFE
 		public new IHitLogicChangeByPartHit_SetValue ToSetValue()
 		{
 			return new IHitLogicChangeByPartHit_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005D5 RID: 1493
-		// (get) Token: 0x06001553 RID: 5459 RVA: 0x00042FD5 File Offset: 0x000411D5
-		// (set) Token: 0x06001554 RID: 5460 RVA: 0x00043000 File Offset: 0x00041200
+		// Token: 0x1700063C RID: 1596
+		// (get) Token: 0x060016ED RID: 5869 RVA: 0x00046D1D File Offset: 0x00044F1D
+		// (set) Token: 0x060016EE RID: 5870 RVA: 0x00046D48 File Offset: 0x00044F48
 		public override EHitLogicType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005D6 RID: 1494
-		// (get) Token: 0x06001555 RID: 5461 RVA: 0x00043010 File Offset: 0x00041210
-		// (set) Token: 0x06001556 RID: 5462 RVA: 0x000430A3 File Offset: 0x000412A3
+		// Token: 0x1700063D RID: 1597
+		// (get) Token: 0x060016EF RID: 5871 RVA: 0x00046D58 File Offset: 0x00044F58
+		// (set) Token: 0x060016F0 RID: 5872 RVA: 0x00046DEB File Offset: 0x00044FEB
 		public virtual List<IPartHitConfig> PartHitConfig
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001084 RID: 4228
+		// Token: 0x040011A6 RID: 4518
 		[Nullable(2)]
 		protected new IHitLogicChangeByPartHit FbInstance;
 
-		// Token: 0x04001085 RID: 4229
+		// Token: 0x040011A7 RID: 4519
 		[Nullable(2)]
 		protected new IHitLogicChangeByPartHit_SetValue PocoInterface;
 
-		// Token: 0x04001086 RID: 4230
+		// Token: 0x040011A8 RID: 4520
 		private List<IPartHitConfig> _PartHitConfigCache;
 
-		// Token: 0x04001087 RID: 4231
+		// Token: 0x040011A9 RID: 4521
 		private bool _PartHitConfigInited;
 	}
 }

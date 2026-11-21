@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002A55 RID: 10837
+// Token: 0x02001FD0 RID: 8144
 public enum EFlySkinViewData
 {
-	// Token: 0x0400A794 RID: 42900
+	// Token: 0x0400AB98 RID: 43928
 	GridDataList,
-	// Token: 0x0400A795 RID: 42901
+	// Token: 0x0400AB99 RID: 43929
 	SelectedTab,
-	// Token: 0x0400A796 RID: 42902
+	// Token: 0x0400AB9A RID: 43930
 	SelectedGridIndex
 }

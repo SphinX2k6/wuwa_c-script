@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.PhantomArena.Battle.Model;
@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 {
-	// Token: 0x0200527E RID: 21118
+	// Token: 0x0200424E RID: 16974
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBuffEffectManager
 	{
-		// Token: 0x0603602A RID: 221226 RVA: 0x00CC80A8 File Offset: 0x00CC62A8
+		// Token: 0x0602AF25 RID: 175909 RVA: 0x00C157A8 File Offset: 0x00C139A8
 		public PhantomArenaBuffEffectManager(PhantomArenaBattleProxy proxy)
 		{
 			this.Proxy = proxy;
 		}
 
-		// Token: 0x0603602B RID: 221227 RVA: 0x00CC80B8 File Offset: 0x00CC62B8
+		// Token: 0x0602AF26 RID: 175910 RVA: 0x00C157B8 File Offset: 0x00C139B8
 		public UniTask ShowSkillEffect()
 		{
 			PhantomArenaBuffEffectManager.<ShowSkillEffect>d__2 <ShowSkillEffect>d__;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <ShowSkillEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603602C RID: 221228 RVA: 0x00CC80FC File Offset: 0x00CC62FC
+		// Token: 0x0602AF27 RID: 175911 RVA: 0x00C157FC File Offset: 0x00C139FC
 		public UniTask TriggerSkillEffectByNpc(IBuffEffectData effectData)
 		{
 			PhantomArenaBuffEffectManager.<TriggerSkillEffectByNpc>d__3 <TriggerSkillEffectByNpc>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <TriggerSkillEffectByNpc>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603602D RID: 221229 RVA: 0x00CC8148 File Offset: 0x00CC6348
+		// Token: 0x0602AF28 RID: 175912 RVA: 0x00C15848 File Offset: 0x00C13A48
 		private UniTask ExecuteEffectContext(IBuffEffectData effectData)
 		{
 			PhantomArenaBuffEffectManager.<ExecuteEffectContext>d__4 <ExecuteEffectContext>d__;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <ExecuteEffectContext>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603602E RID: 221230 RVA: 0x00CC8194 File Offset: 0x00CC6394
+		// Token: 0x0602AF29 RID: 175913 RVA: 0x00C15894 File Offset: 0x00C13A94
 		private UniTask PhantomBattleDealEffectContext(IBuffEffectData info)
 		{
 			PhantomArenaBuffEffectManager.<PhantomBattleDealEffectContext>d__5 <PhantomBattleDealEffectContext>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <PhantomBattleDealEffectContext>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603602F RID: 221231 RVA: 0x00CC81E0 File Offset: 0x00CC63E0
+		// Token: 0x0602AF2A RID: 175914 RVA: 0x00C158E0 File Offset: 0x00C13AE0
 		private UniTask NpcPhantomBattleDealEffectContext(IBuffEffectData info)
 		{
 			PhantomArenaBuffEffectManager.<NpcPhantomBattleDealEffectContext>d__6 <NpcPhantomBattleDealEffectContext>d__;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <NpcPhantomBattleDealEffectContext>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036030 RID: 221232 RVA: 0x00CC822C File Offset: 0x00CC642C
+		// Token: 0x0602AF2B RID: 175915 RVA: 0x00C1592C File Offset: 0x00C13B2C
 		private UniTask PhantomBattleAddBuffEffectContext(IBuffEffectData info)
 		{
 			PhantomBattleEffectResultInfo effect = info.Effect;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x06036031 RID: 221233 RVA: 0x00CC8280 File Offset: 0x00CC6480
+		// Token: 0x0602AF2C RID: 175916 RVA: 0x00C15980 File Offset: 0x00C13B80
 		private UniTask PhantomBattleCardSelectEffectContext(IBuffEffectData info)
 		{
 			PhantomBattleEffectResultInfo effect = info.Effect;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x06036032 RID: 221234 RVA: 0x00CC82D4 File Offset: 0x00CC64D4
+		// Token: 0x0602AF2D RID: 175917 RVA: 0x00C159D4 File Offset: 0x00C13BD4
 		private UniTask NpcPhantomBattleCardSelectEffectContext(IBuffEffectData info)
 		{
 			PhantomArenaBuffEffectManager.<NpcPhantomBattleCardSelectEffectContext>d__9 <NpcPhantomBattleCardSelectEffectContext>d__;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <NpcPhantomBattleCardSelectEffectContext>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036033 RID: 221235 RVA: 0x00CC8320 File Offset: 0x00CC6520
+		// Token: 0x0602AF2E RID: 175918 RVA: 0x00C15A20 File Offset: 0x00C13C20
 		private UniTask PhantomBattleCopyCardEffectContext(IBuffEffectData info)
 		{
 			PhantomArenaBuffEffectManager.<PhantomBattleCopyCardEffectContext>d__10 <PhantomBattleCopyCardEffectContext>d__;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <PhantomBattleCopyCardEffectContext>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036034 RID: 221236 RVA: 0x00CC836C File Offset: 0x00CC656C
+		// Token: 0x0602AF2F RID: 175919 RVA: 0x00C15A6C File Offset: 0x00C13C6C
 		private UniTask PhantomBattleDestroyCardEffectContext(IBuffEffectData info)
 		{
 			PhantomArenaBuffEffectManager.<PhantomBattleDestroyCardEffectContext>d__11 <PhantomBattleDestroyCardEffectContext>d__;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <PhantomBattleDestroyCardEffectContext>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036035 RID: 221237 RVA: 0x00CC83B8 File Offset: 0x00CC65B8
+		// Token: 0x0602AF30 RID: 175920 RVA: 0x00C15AB8 File Offset: 0x00C13CB8
 		private UniTask PhantomBattleTakeTargetAttrEffectContext(IBuffEffectData info)
 		{
 			PhantomBattleEffectResultInfo effect = info.Effect;
@@ -147,17 +147,21 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 				Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "触发获取目标属性效果", default(ReadOnlySpan<ValueTuple<string, object>>));
 				if (info.Effect.PhantomBattleTakeTargetAttrEffectCtx.Camp == PhantomBattleEffectCardCamp.GamerFighterPlayer)
 				{
-					PhantomArenaBattleModel.Instance.OwnData.RefreshCardAttr(info.Effect.PhantomBattleTakeTargetAttrEffectCtx.TargetUid, info.Effect.PhantomBattleTakeTargetAttrEffectCtx.TakeAttrInfo.BattleStatus.ToDictionary<int, int>());
+					PhantomArenaOwnData ownData = PhantomArenaBattleModel.Instance.OwnData;
+					NpcPhantomBattleCardAttrInfo takeAttrInfo = info.Effect.PhantomBattleTakeTargetAttrEffectCtx.TakeAttrInfo;
+					ownData.RefreshCardAttr(info.Effect.PhantomBattleTakeTargetAttrEffectCtx.TargetUid, new Dictionary<int, int>(takeAttrInfo.BattleStatus));
 				}
 				else if (info.Effect.PhantomBattleTakeTargetAttrEffectCtx.Camp == PhantomBattleEffectCardCamp.GamerFighterNpc)
 				{
-					PhantomArenaBattleModel.Instance.OpponentData.RefreshCardAttr(info.Effect.PhantomBattleTakeTargetAttrEffectCtx.TargetUid, info.Effect.PhantomBattleTakeTargetAttrEffectCtx.TakeAttrInfo.BattleStatus.ToDictionary<int, int>());
+					PhantomArenaOpponentData opponentData = PhantomArenaBattleModel.Instance.OpponentData;
+					NpcPhantomBattleCardAttrInfo takeAttrInfo2 = info.Effect.PhantomBattleTakeTargetAttrEffectCtx.TakeAttrInfo;
+					opponentData.RefreshCardAttr(info.Effect.PhantomBattleTakeTargetAttrEffectCtx.TargetUid, new Dictionary<int, int>(takeAttrInfo2.BattleStatus));
 				}
 			}
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x06036036 RID: 221238 RVA: 0x00CC849C File Offset: 0x00CC669C
+		// Token: 0x0602AF31 RID: 175921 RVA: 0x00C15BA0 File Offset: 0x00C13DA0
 		private UniTask PhantomBattleCallCardEffectContext(IBuffEffectData info)
 		{
 			PhantomArenaBuffEffectManager.<PhantomBattleCallCardEffectContext>d__13 <PhantomBattleCallCardEffectContext>d__;
@@ -169,7 +173,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <PhantomBattleCallCardEffectContext>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036037 RID: 221239 RVA: 0x00CC84E8 File Offset: 0x00CC66E8
+		// Token: 0x0602AF32 RID: 175922 RVA: 0x00C15BEC File Offset: 0x00C13DEC
 		private UniTask HandleNpcFieldSealEffect(NpcPhantomBattleAreaLockEffectCtx effectContext)
 		{
 			PhantomArenaBuffEffectManager.<HandleNpcFieldSealEffect>d__14 <HandleNpcFieldSealEffect>d__;
@@ -181,7 +185,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <HandleNpcFieldSealEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036038 RID: 221240 RVA: 0x00CC8534 File Offset: 0x00CC6734
+		// Token: 0x0602AF33 RID: 175923 RVA: 0x00C15C38 File Offset: 0x00C13E38
 		private UniTask HandleOwnFieldSealEffect(NpcPhantomBattleAreaLockEffectCtx context)
 		{
 			PhantomArenaBuffEffectManager.<HandleOwnFieldSealEffect>d__15 <HandleOwnFieldSealEffect>d__;
@@ -193,7 +197,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <HandleOwnFieldSealEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036039 RID: 221241 RVA: 0x00CC8580 File Offset: 0x00CC6780
+		// Token: 0x0602AF34 RID: 175924 RVA: 0x00C15C84 File Offset: 0x00C13E84
 		private UniTask NpcPhantomBattleAreaLockEffectContext(IBuffEffectData info)
 		{
 			PhantomArenaBuffEffectManager.<NpcPhantomBattleAreaLockEffectContext>d__16 <NpcPhantomBattleAreaLockEffectContext>d__;
@@ -205,7 +209,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <NpcPhantomBattleAreaLockEffectContext>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603603A RID: 221242 RVA: 0x00CC85CC File Offset: 0x00CC67CC
+		// Token: 0x0602AF35 RID: 175925 RVA: 0x00C15CD0 File Offset: 0x00C13ED0
 		private UniTask PhantomBattleDirectDamage(IBuffEffectData info)
 		{
 			PhantomArenaBuffEffectManager.<PhantomBattleDirectDamage>d__17 <PhantomBattleDirectDamage>d__;
@@ -217,7 +221,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <PhantomBattleDirectDamage>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603603B RID: 221243 RVA: 0x00CC8618 File Offset: 0x00CC6818
+		// Token: 0x0602AF36 RID: 175926 RVA: 0x00C15D1C File Offset: 0x00C13F1C
 		private UniTask PhantomBattleReconstruct(IBuffEffectData info)
 		{
 			PhantomArenaBuffEffectManager.<PhantomBattleReconstruct>d__18 <PhantomBattleReconstruct>d__;
@@ -229,7 +233,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.BuffEffect
 			return <PhantomBattleReconstruct>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401C99A RID: 117146
+		// Token: 0x040173CF RID: 95183
 		public PhantomArenaBattleProxy Proxy;
 	}
 }

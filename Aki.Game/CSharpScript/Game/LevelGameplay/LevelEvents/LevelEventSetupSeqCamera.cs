@@ -8,15 +8,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B81 RID: 27521
+	// Token: 0x02005CF9 RID: 23801
 	public class LevelEventSetupSeqCamera : LevelEventBase
 	{
-		// Token: 0x0604426C RID: 279148 RVA: 0x010CAAED File Offset: 0x010C8CED
+		// Token: 0x0603A3BE RID: 238526 RVA: 0x01074785 File Offset: 0x01072985
 		public LevelEventSetupSeqCamera(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604426D RID: 279149 RVA: 0x010CAAF8 File Offset: 0x010C8CF8
+		// Token: 0x0603A3BF RID: 238527 RVA: 0x01074790 File Offset: 0x01072990
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

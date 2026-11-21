@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000F56 RID: 3926
+// Token: 0x0200040B RID: 1035
 public class DrinksBubbleItem : UiPanelBase
 {
-	// Token: 0x06006471 RID: 25713 RVA: 0x0013DAA2 File Offset: 0x0013BCA2
+	// Token: 0x06003809 RID: 14345 RVA: 0x0014633E File Offset: 0x0014453E
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,13 +16,13 @@ public class DrinksBubbleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006472 RID: 25714 RVA: 0x0013DAC5 File Offset: 0x0013BCC5
+	// Token: 0x0600380A RID: 14346 RVA: 0x00146361 File Offset: 0x00144561
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06006473 RID: 25715 RVA: 0x0013DAD8 File Offset: 0x0013BCD8
+	// Token: 0x0600380B RID: 14347 RVA: 0x00146374 File Offset: 0x00144574
 	public void SetIsVisible(bool value, bool isEnd = false)
 	{
 		bool flag = base.IsUiActiveInHierarchy();
@@ -48,7 +48,7 @@ public class DrinksBubbleItem : UiPanelBase
 		sequencePlayer3.PlayLevelSequenceByName(value ? "Start" : "Close", false, null, false);
 	}
 
-	// Token: 0x06006474 RID: 25716 RVA: 0x0013DB58 File Offset: 0x0013BD58
+	// Token: 0x0600380C RID: 14348 RVA: 0x001463F4 File Offset: 0x001445F4
 	public void Update(bool isBatching, int id)
 	{
 		string path;
@@ -63,14 +63,14 @@ public class DrinksBubbleItem : UiPanelBase
 		base.SetTextureByPath(path, base.GetTexture(0), null, null);
 	}
 
-	// Token: 0x04002D9C RID: 11676
+	// Token: 0x04002E35 RID: 11829
 	[Nullable(2)]
 	protected LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x020075A1 RID: 30113
+	// Token: 0x02006735 RID: 26421
 	private static class EBubble
 	{
-		// Token: 0x04026E2A RID: 159274
+		// Token: 0x04022175 RID: 139637
 		public const int Icon = 0;
 	}
 }

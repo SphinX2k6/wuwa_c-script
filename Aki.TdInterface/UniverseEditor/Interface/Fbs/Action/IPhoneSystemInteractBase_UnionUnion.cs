@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CB2 RID: 27826
+	// Token: 0x02007428 RID: 29736
 	public class IPhoneSystemInteractBase_UnionUnion
 	{
-		// Token: 0x1700CF2A RID: 53034
-		// (get) Token: 0x0603108D RID: 200845 RVA: 0x006A7C2D File Offset: 0x006A5E2D
-		// (set) Token: 0x0603108E RID: 200846 RVA: 0x006A7C35 File Offset: 0x006A5E35
+		// Token: 0x1700DA67 RID: 55911
+		// (get) Token: 0x06034064 RID: 213092 RVA: 0x00702E61 File Offset: 0x00701061
+		// (set) Token: 0x06034065 RID: 213093 RVA: 0x00702E69 File Offset: 0x00701069
 		public IPhoneSystemInteractBase_Union Type { get; set; }
 
-		// Token: 0x1700CF2B RID: 53035
-		// (get) Token: 0x0603108F RID: 200847 RVA: 0x006A7C3E File Offset: 0x006A5E3E
-		// (set) Token: 0x06031090 RID: 200848 RVA: 0x006A7C46 File Offset: 0x006A5E46
+		// Token: 0x1700DA68 RID: 55912
+		// (get) Token: 0x06034066 RID: 213094 RVA: 0x00702E72 File Offset: 0x00701072
+		// (set) Token: 0x06034067 RID: 213095 RVA: 0x00702E7A File Offset: 0x0070107A
 		public object Value { get; set; }
 
-		// Token: 0x06031091 RID: 200849 RVA: 0x006A7C4F File Offset: 0x006A5E4F
+		// Token: 0x06034068 RID: 213096 RVA: 0x00702E83 File Offset: 0x00701083
 		public IPhoneSystemInteractBase_UnionUnion()
 		{
 			this.Type = IPhoneSystemInteractBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06031092 RID: 200850 RVA: 0x006A7C65 File Offset: 0x006A5E65
+		// Token: 0x06034069 RID: 213097 RVA: 0x00702E99 File Offset: 0x00701099
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06031093 RID: 200851 RVA: 0x006A7C77 File Offset: 0x006A5E77
+		// Token: 0x0603406A RID: 213098 RVA: 0x00702EAB File Offset: 0x007010AB
 		public IPhoneSystemInteractBaseT AsIPhoneSystemInteractBase()
 		{
 			return this.As<IPhoneSystemInteractBaseT>();
 		}
 
-		// Token: 0x06031094 RID: 200852 RVA: 0x006A7C7F File Offset: 0x006A5E7F
+		// Token: 0x0603406B RID: 213099 RVA: 0x00702EB3 File Offset: 0x007010B3
 		public static IPhoneSystemInteractBase_UnionUnion FromIPhoneSystemInteractBase(IPhoneSystemInteractBaseT _iphonesysteminteractbase)
 		{
 			return new IPhoneSystemInteractBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031095 RID: 200853 RVA: 0x006A7C94 File Offset: 0x006A5E94
+		// Token: 0x0603406C RID: 213100 RVA: 0x00702EC8 File Offset: 0x007010C8
 		public ISendPhoneMessageT AsISendPhoneMessage()
 		{
 			return this.As<ISendPhoneMessageT>();
 		}
 
-		// Token: 0x06031096 RID: 200854 RVA: 0x006A7C9C File Offset: 0x006A5E9C
+		// Token: 0x0603406D RID: 213101 RVA: 0x00702ED0 File Offset: 0x007010D0
 		public static IPhoneSystemInteractBase_UnionUnion FromISendPhoneMessage(ISendPhoneMessageT _isendphonemessage)
 		{
 			return new IPhoneSystemInteractBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031097 RID: 200855 RVA: 0x006A7CB1 File Offset: 0x006A5EB1
+		// Token: 0x0603406E RID: 213102 RVA: 0x00702EE5 File Offset: 0x007010E5
 		public IDeletePhoneMessageT AsIDeletePhoneMessage()
 		{
 			return this.As<IDeletePhoneMessageT>();
 		}
 
-		// Token: 0x06031098 RID: 200856 RVA: 0x006A7CB9 File Offset: 0x006A5EB9
+		// Token: 0x0603406F RID: 213103 RVA: 0x00702EED File Offset: 0x007010ED
 		public static IPhoneSystemInteractBase_UnionUnion FromIDeletePhoneMessage(IDeletePhoneMessageT _ideletephonemessage)
 		{
 			return new IPhoneSystemInteractBase_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031099 RID: 200857 RVA: 0x006A7CCE File Offset: 0x006A5ECE
+		// Token: 0x06034070 RID: 213104 RVA: 0x00702F02 File Offset: 0x00701102
 		public IOpenPhoneMessageBoardT AsIOpenPhoneMessageBoard()
 		{
 			return this.As<IOpenPhoneMessageBoardT>();
 		}
 
-		// Token: 0x0603109A RID: 200858 RVA: 0x006A7CD6 File Offset: 0x006A5ED6
+		// Token: 0x06034071 RID: 213105 RVA: 0x00702F0A File Offset: 0x0070110A
 		public static IPhoneSystemInteractBase_UnionUnion FromIOpenPhoneMessageBoard(IOpenPhoneMessageBoardT _iopenphonemessageboard)
 		{
 			return new IPhoneSystemInteractBase_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603109B RID: 200859 RVA: 0x006A7CEB File Offset: 0x006A5EEB
+		// Token: 0x06034072 RID: 213106 RVA: 0x00702F1F File Offset: 0x0070111F
 		public IFlowOpenPhoneMessageT AsIFlowOpenPhoneMessage()
 		{
 			return this.As<IFlowOpenPhoneMessageT>();
 		}
 
-		// Token: 0x0603109C RID: 200860 RVA: 0x006A7CF3 File Offset: 0x006A5EF3
+		// Token: 0x06034073 RID: 213107 RVA: 0x00702F27 File Offset: 0x00701127
 		public static IPhoneSystemInteractBase_UnionUnion FromIFlowOpenPhoneMessage(IFlowOpenPhoneMessageT _iflowopenphonemessage)
 		{
 			return new IPhoneSystemInteractBase_UnionUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603109D RID: 200861 RVA: 0x006A7D08 File Offset: 0x006A5F08
+		// Token: 0x06034074 RID: 213108 RVA: 0x00702F3C File Offset: 0x0070113C
 		public static int Pack(FlatBufferBuilder builder, IPhoneSystemInteractBase_UnionUnion _o)
 		{
 			switch (_o.Type)

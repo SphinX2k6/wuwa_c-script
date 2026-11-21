@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Aki.Protocol.CombatMessage;
-using CSharpScript.Core.Common;
-using CSharpScript.Launcher.ThinkDataReport;
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x02004549 RID: 17737
+	// Token: 0x02003471 RID: 13425
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class CombatDebugController : ControllerBase
 	{
-		// Token: 0x0602DD6D RID: 187757 RVA: 0x00A89BE8 File Offset: 0x00A87DE8
+		// Token: 0x0602244F RID: 140367 RVA: 0x009B531C File Offset: 0x009B351C
 		[NullableContext(2)]
 		public void CombatInfoMessage(CombatLog.EDebugModule flag, EMessageId messageName, CombatCommon combatCommon = null)
 		{
@@ -56,7 +54,7 @@ namespace CSharpScript.Game.Utils
 			Log.Instance.Info(ELogModule.CombatInfo, ELogAuthor.WCL, message2, default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602DD6E RID: 187758 RVA: 0x00A89D34 File Offset: 0x00A87F34
+		// Token: 0x06022450 RID: 140368 RVA: 0x009B5468 File Offset: 0x009B3668
 		[NullableContext(2)]
 		public void CombatContextInfoMessage(CombatLog.EDebugModule flag, EMessageId messageName, CombatRequestData requestData = null)
 		{
@@ -95,24 +93,19 @@ namespace CSharpScript.Game.Utils
 			}
 		}
 
-		// Token: 0x0602DD6F RID: 187759 RVA: 0x00A89E78 File Offset: 0x00A88078
+		// Token: 0x06022451 RID: 140369 RVA: 0x009B55AC File Offset: 0x009B37AC
 		public void DataReport(string eventName, string data)
 		{
-			if (!Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				return;
-			}
-			ThinkDataLaunchReporter.Instance.Report(eventName, data);
 		}
 
-		// Token: 0x0602DD70 RID: 187760 RVA: 0x00A89E93 File Offset: 0x00A88093
+		// Token: 0x06022452 RID: 140370 RVA: 0x009B55AE File Offset: 0x009B37AE
 		public string FilterCmd(string script)
 		{
 			this.ScriptHelper.Init();
 			return this.ScriptHelper.FilterCmd(script);
 		}
 
-		// Token: 0x0602DD71 RID: 187761 RVA: 0x00A89EAC File Offset: 0x00A880AC
+		// Token: 0x06022453 RID: 140371 RVA: 0x009B55C8 File Offset: 0x009B37C8
 		private void RefreshPlayerServerDebugInfo()
 		{
 			if (this.DebugEntityId == 0)
@@ -134,7 +127,7 @@ namespace CSharpScript.Game.Utils
 			characterGasDebugComponent.ServerDebugInfoRequest();
 		}
 
-		// Token: 0x0602DD72 RID: 187762 RVA: 0x00A89F04 File Offset: 0x00A88104
+		// Token: 0x06022454 RID: 140372 RVA: 0x009B5620 File Offset: 0x009B3820
 		public void RefreshServerDebugInfo()
 		{
 			if (this.DebugEntityId == 0)
@@ -155,8 +148,8 @@ namespace CSharpScript.Game.Utils
 			this.RefreshPlayerServerDebugInfo();
 		}
 
-		// Token: 0x17007550 RID: 30032
-		// (get) Token: 0x0602DD73 RID: 187763 RVA: 0x00A89F76 File Offset: 0x00A88176
+		// Token: 0x17004807 RID: 18439
+		// (get) Token: 0x06022455 RID: 140373 RVA: 0x009B5692 File Offset: 0x009B3892
 		public static CombatDebugController Instance
 		{
 			get
@@ -165,7 +158,7 @@ namespace CSharpScript.Game.Utils
 			}
 		}
 
-		// Token: 0x0602DD74 RID: 187764 RVA: 0x00A89F7D File Offset: 0x00A8817D
+		// Token: 0x06022456 RID: 140374 RVA: 0x009B5699 File Offset: 0x009B3899
 		public static CombatDebugController GetOrCreateInstance()
 		{
 			if (CombatDebugController._Instance == null)
@@ -175,7 +168,7 @@ namespace CSharpScript.Game.Utils
 			return CombatDebugController._Instance;
 		}
 
-		// Token: 0x0602DD75 RID: 187765 RVA: 0x00A89F91 File Offset: 0x00A88191
+		// Token: 0x06022457 RID: 140375 RVA: 0x009B56AD File Offset: 0x009B38AD
 		public static bool CreateInstance()
 		{
 			if (CombatDebugController._Instance != null)
@@ -186,24 +179,24 @@ namespace CSharpScript.Game.Utils
 			return true;
 		}
 
-		// Token: 0x0602DD76 RID: 187766 RVA: 0x00A89FA7 File Offset: 0x00A881A7
+		// Token: 0x06022458 RID: 140376 RVA: 0x009B56C3 File Offset: 0x009B38C3
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DD77 RID: 187767 RVA: 0x00A89FA9 File Offset: 0x00A881A9
+		// Token: 0x06022459 RID: 140377 RVA: 0x009B56C5 File Offset: 0x009B38C5
 		public static void ResetStaticDefaultValue()
 		{
 			CombatDebugController._Instance = null;
 		}
 
-		// Token: 0x0602DD78 RID: 187768 RVA: 0x00A89FB1 File Offset: 0x00A881B1
+		// Token: 0x0602245A RID: 140378 RVA: 0x009B56CD File Offset: 0x009B38CD
 		static CombatDebugController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CombatDebugController.CreateStaticDefaultValue), new Action(CombatDebugController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602DD79 RID: 187769 RVA: 0x00A89FD0 File Offset: 0x00A881D0
+		// Token: 0x0602245B RID: 140379 RVA: 0x009B56EC File Offset: 0x009B38EC
 		public CombatDebugController()
 		{
 			Dictionary<EMessageId, bool> dictionary = new Dictionary<EMessageId, bool>();
@@ -242,25 +235,25 @@ namespace CSharpScript.Game.Utils
 			base..ctor();
 		}
 
-		// Token: 0x0401879A RID: 100250
+		// Token: 0x04012DD4 RID: 77268
 		public int DebugEntityId;
 
-		// Token: 0x0401879B RID: 100251
+		// Token: 0x04012DD5 RID: 77269
 		public const int REFRESH_SERVER_INFO_PERIOD = 300;
 
-		// Token: 0x0401879C RID: 100252
+		// Token: 0x04012DD6 RID: 77270
 		public readonly CombatScriptHelper ScriptHelper = new CombatScriptHelper();
 
-		// Token: 0x0401879D RID: 100253
+		// Token: 0x04012DD7 RID: 77271
 		private readonly Dictionary<EMessageId, bool> LogMessageWhiteMap;
 
-		// Token: 0x0401879E RID: 100254
+		// Token: 0x04012DD8 RID: 77272
 		private double RequestTimeStamp;
 
-		// Token: 0x0401879F RID: 100255
+		// Token: 0x04012DD9 RID: 77273
 		private readonly Dictionary<EAttributeType, string> AttributeNameCache;
 
-		// Token: 0x040187A0 RID: 100256
+		// Token: 0x04012DDA RID: 77274
 		[Nullable(2)]
 		private static CombatDebugController _Instance;
 	}

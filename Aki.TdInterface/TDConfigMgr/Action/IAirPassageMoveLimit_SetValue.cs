@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017CF RID: 6095
+	// Token: 0x02001956 RID: 6486
 	public class IAirPassageMoveLimit_SetValue
 	{
-		// Token: 0x0400532C RID: 21292
+		// Token: 0x04005770 RID: 22384
 		public float DirectionAngleLimit;
 
-		// Token: 0x0400532D RID: 21293
+		// Token: 0x04005771 RID: 22385
 		public float EdgeLimitCurveFactor;
 	}
 }

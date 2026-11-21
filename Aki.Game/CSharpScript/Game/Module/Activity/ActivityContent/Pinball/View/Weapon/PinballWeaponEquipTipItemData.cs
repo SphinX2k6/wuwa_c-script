@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 {
-	// Token: 0x020062DE RID: 25310
+	// Token: 0x0200525C RID: 21084
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballWeaponEquipTipItemData : IPinballWeaponEquipTipItemData
 	{
-		// Token: 0x17009299 RID: 37529
-		// (get) Token: 0x0603FAED RID: 260845 RVA: 0x00F68812 File Offset: 0x00F66A12
-		// (set) Token: 0x0603FAEE RID: 260846 RVA: 0x00F6881A File Offset: 0x00F66A1A
+		// Token: 0x170065FB RID: 26107
+		// (get) Token: 0x060347AE RID: 214958 RVA: 0x00EAF76E File Offset: 0x00EAD96E
+		// (set) Token: 0x060347AF RID: 214959 RVA: 0x00EAF776 File Offset: 0x00EAD976
 		public PinballWeaponData WeaponData { get; set; }
 
-		// Token: 0x1700929A RID: 37530
-		// (get) Token: 0x0603FAEF RID: 260847 RVA: 0x00F68823 File Offset: 0x00F66A23
-		// (set) Token: 0x0603FAF0 RID: 260848 RVA: 0x00F6882B File Offset: 0x00F66A2B
+		// Token: 0x170065FC RID: 26108
+		// (get) Token: 0x060347B0 RID: 214960 RVA: 0x00EAF77F File Offset: 0x00EAD97F
+		// (set) Token: 0x060347B1 RID: 214961 RVA: 0x00EAF787 File Offset: 0x00EAD987
 		public bool ShowButton { get; set; }
 
-		// Token: 0x1700929B RID: 37531
-		// (get) Token: 0x0603FAF1 RID: 260849 RVA: 0x00F68834 File Offset: 0x00F66A34
-		// (set) Token: 0x0603FAF2 RID: 260850 RVA: 0x00F6883C File Offset: 0x00F66A3C
+		// Token: 0x170065FD RID: 26109
+		// (get) Token: 0x060347B2 RID: 214962 RVA: 0x00EAF790 File Offset: 0x00EAD990
+		// (set) Token: 0x060347B3 RID: 214963 RVA: 0x00EAF798 File Offset: 0x00EAD998
 		public EPinballWeaponEquipState State { get; set; }
 
-		// Token: 0x1700929C RID: 37532
-		// (get) Token: 0x0603FAF3 RID: 260851 RVA: 0x00F68845 File Offset: 0x00F66A45
-		// (set) Token: 0x0603FAF4 RID: 260852 RVA: 0x00F6884D File Offset: 0x00F66A4D
+		// Token: 0x170065FE RID: 26110
+		// (get) Token: 0x060347B4 RID: 214964 RVA: 0x00EAF7A1 File Offset: 0x00EAD9A1
+		// (set) Token: 0x060347B5 RID: 214965 RVA: 0x00EAF7A9 File Offset: 0x00EAD9A9
 		public Action ConfirmDelegate { get; set; }
 	}
 }

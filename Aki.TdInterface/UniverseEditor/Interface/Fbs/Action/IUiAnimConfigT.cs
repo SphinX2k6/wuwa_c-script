@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200749D RID: 29853
+	// Token: 0x02007C93 RID: 31891
 	public class IUiAnimConfigT
 	{
-		// Token: 0x1700E2AC RID: 58028
-		// (get) Token: 0x0603644A RID: 222282 RVA: 0x0076084E File Offset: 0x0075EA4E
-		// (set) Token: 0x0603644B RID: 222283 RVA: 0x00760856 File Offset: 0x0075EA56
+		// Token: 0x1700EED0 RID: 61136
+		// (get) Token: 0x0603984D RID: 235597 RVA: 0x007C380A File Offset: 0x007C1A0A
+		// (set) Token: 0x0603984E RID: 235598 RVA: 0x007C3812 File Offset: 0x007C1A12
 		public string UiStartAnimName { get; set; }
 
-		// Token: 0x1700E2AD RID: 58029
-		// (get) Token: 0x0603644C RID: 222284 RVA: 0x0076085F File Offset: 0x0075EA5F
-		// (set) Token: 0x0603644D RID: 222285 RVA: 0x00760867 File Offset: 0x0075EA67
+		// Token: 0x1700EED1 RID: 61137
+		// (get) Token: 0x0603984F RID: 235599 RVA: 0x007C381B File Offset: 0x007C1A1B
+		// (set) Token: 0x06039850 RID: 235600 RVA: 0x007C3823 File Offset: 0x007C1A23
 		public string UiEndAnimName { get; set; }
 
-		// Token: 0x0603644E RID: 222286 RVA: 0x00760870 File Offset: 0x0075EA70
+		// Token: 0x06039851 RID: 235601 RVA: 0x007C382C File Offset: 0x007C1A2C
 		public IUiAnimConfigT()
 		{
 			this.UiStartAnimName = null;

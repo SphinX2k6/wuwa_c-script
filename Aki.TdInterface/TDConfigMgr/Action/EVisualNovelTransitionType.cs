@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001703 RID: 5891
+	// Token: 0x02001881 RID: 6273
 	[EnumExtensions]
 	public enum EVisualNovelTransitionType
 	{
-		// Token: 0x04004FC9 RID: 20425
+		// Token: 0x040053FC RID: 21500
 		Location,
-		// Token: 0x04004FCA RID: 20426
+		// Token: 0x040053FD RID: 21501
 		Time
 	}
 }

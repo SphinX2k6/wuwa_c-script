@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007511 RID: 29969
+	// Token: 0x02007D07 RID: 32007
 	public struct IVehicleEnterPathMove : IFlatbufferObject
 	{
-		// Token: 0x1700E368 RID: 58216
-		// (get) Token: 0x06036804 RID: 223236 RVA: 0x0076739C File Offset: 0x0076559C
+		// Token: 0x1700EF92 RID: 61330
+		// (get) Token: 0x06039C19 RID: 236569 RVA: 0x007CA5EC File Offset: 0x007C87EC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036805 RID: 223237 RVA: 0x007673A9 File Offset: 0x007655A9
+		// Token: 0x06039C1A RID: 236570 RVA: 0x007CA5F9 File Offset: 0x007C87F9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036806 RID: 223238 RVA: 0x007673B0 File Offset: 0x007655B0
+		// Token: 0x06039C1B RID: 236571 RVA: 0x007CA600 File Offset: 0x007C8800
 		public static IVehicleEnterPathMove GetRootAsIVehicleEnterPathMove(ByteBuffer _bb)
 		{
 			return IVehicleEnterPathMove.GetRootAsIVehicleEnterPathMove(_bb, default(IVehicleEnterPathMove));
 		}
 
-		// Token: 0x06036807 RID: 223239 RVA: 0x007673CC File Offset: 0x007655CC
+		// Token: 0x06039C1C RID: 236572 RVA: 0x007CA61C File Offset: 0x007C881C
 		public static IVehicleEnterPathMove GetRootAsIVehicleEnterPathMove(ByteBuffer _bb, IVehicleEnterPathMove obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036808 RID: 223240 RVA: 0x007673E9 File Offset: 0x007655E9
+		// Token: 0x06039C1D RID: 236573 RVA: 0x007CA639 File Offset: 0x007C8839
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036809 RID: 223241 RVA: 0x007673F8 File Offset: 0x007655F8
+		// Token: 0x06039C1E RID: 236574 RVA: 0x007CA648 File Offset: 0x007C8848
 		public IVehicleEnterPathMove __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E369 RID: 58217
-		// (get) Token: 0x0603680A RID: 223242 RVA: 0x00767408 File Offset: 0x00765608
+		// Token: 0x1700EF93 RID: 61331
+		// (get) Token: 0x06039C1F RID: 236575 RVA: 0x007CA658 File Offset: 0x007C8858
 		public EVehicleControlType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E36A RID: 58218
-		// (get) Token: 0x0603680B RID: 223243 RVA: 0x00767444 File Offset: 0x00765644
+		// Token: 0x1700EF94 RID: 61332
+		// (get) Token: 0x06039C20 RID: 236576 RVA: 0x007CA694 File Offset: 0x007C8894
 		public IVehicleCruisingParams? ControlParams
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E36B RID: 58219
-		// (get) Token: 0x0603680C RID: 223244 RVA: 0x007674A4 File Offset: 0x007656A4
+		// Token: 0x1700EF95 RID: 61333
+		// (get) Token: 0x06039C21 RID: 236577 RVA: 0x007CA6F4 File Offset: 0x007C88F4
 		public TSplineMovePattern PatternType
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603680D RID: 223245 RVA: 0x007674E0 File Offset: 0x007656E0
+		// Token: 0x06039C22 RID: 236578 RVA: 0x007CA730 File Offset: 0x007C8930
 		public TTable? Pattern<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -103,43 +103,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0603680E RID: 223246 RVA: 0x00767528 File Offset: 0x00765728
+		// Token: 0x06039C23 RID: 236579 RVA: 0x007CA778 File Offset: 0x007C8978
 		public IAirPassageMove PatternAsIAirPassageMove()
 		{
 			return this.Pattern<IAirPassageMove>().Value;
 		}
 
-		// Token: 0x0603680F RID: 223247 RVA: 0x00767544 File Offset: 0x00765744
+		// Token: 0x06039C24 RID: 236580 RVA: 0x007CA794 File Offset: 0x007C8994
 		public IMechaAirPassageMove PatternAsIMechaAirPassageMove()
 		{
 			return this.Pattern<IMechaAirPassageMove>().Value;
 		}
 
-		// Token: 0x06036810 RID: 223248 RVA: 0x00767560 File Offset: 0x00765760
+		// Token: 0x06039C25 RID: 236581 RVA: 0x007CA7B0 File Offset: 0x007C89B0
 		public IMotorcycleTrack PatternAsIMotorcycleTrack()
 		{
 			return this.Pattern<IMotorcycleTrack>().Value;
 		}
 
-		// Token: 0x06036811 RID: 223249 RVA: 0x0076757C File Offset: 0x0076577C
+		// Token: 0x06039C26 RID: 236582 RVA: 0x007CA7CC File Offset: 0x007C89CC
 		public IPathLineMove PatternAsIPathLineMove()
 		{
 			return this.Pattern<IPathLineMove>().Value;
 		}
 
-		// Token: 0x06036812 RID: 223250 RVA: 0x00767598 File Offset: 0x00765798
+		// Token: 0x06039C27 RID: 236583 RVA: 0x007CA7E8 File Offset: 0x007C89E8
+		public IPetalGrabMove PatternAsIPetalGrabMove()
+		{
+			return this.Pattern<IPetalGrabMove>().Value;
+		}
+
+		// Token: 0x06039C28 RID: 236584 RVA: 0x007CA804 File Offset: 0x007C8A04
 		public IRacingTrackMove PatternAsIRacingTrackMove()
 		{
 			return this.Pattern<IRacingTrackMove>().Value;
 		}
 
-		// Token: 0x06036813 RID: 223251 RVA: 0x007675B4 File Offset: 0x007657B4
+		// Token: 0x06039C29 RID: 236585 RVA: 0x007CA820 File Offset: 0x007C8A20
 		public ISlideTrackMove PatternAsISlideTrackMove()
 		{
 			return this.Pattern<ISlideTrackMove>().Value;
 		}
 
-		// Token: 0x06036814 RID: 223252 RVA: 0x007675CF File Offset: 0x007657CF
+		// Token: 0x06039C2A RID: 236586 RVA: 0x007CA83B File Offset: 0x007C8A3B
 		public static Offset<IVehicleEnterPathMove> CreateIVehicleEnterPathMove(FlatBufferBuilder builder, EVehicleControlType Type = EVehicleControlType.EnterPathMoving, Offset<IVehicleCruisingParams> ControlParamsOffset = default(Offset<IVehicleCruisingParams>), TSplineMovePattern Pattern_type = TSplineMovePattern.NONE, int PatternOffset = 0)
 		{
 			builder.StartTable(4);
@@ -150,43 +156,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVehicleEnterPathMove.EndIVehicleEnterPathMove(builder);
 		}
 
-		// Token: 0x06036815 RID: 223253 RVA: 0x007675FB File Offset: 0x007657FB
+		// Token: 0x06039C2B RID: 236587 RVA: 0x007CA867 File Offset: 0x007C8A67
 		public static void StartIVehicleEnterPathMove(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06036816 RID: 223254 RVA: 0x00767604 File Offset: 0x00765804
+		// Token: 0x06039C2C RID: 236588 RVA: 0x007CA870 File Offset: 0x007C8A70
 		public static void AddType(FlatBufferBuilder builder, EVehicleControlType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036817 RID: 223255 RVA: 0x0076760F File Offset: 0x0076580F
+		// Token: 0x06039C2D RID: 236589 RVA: 0x007CA87B File Offset: 0x007C8A7B
 		public static void AddControlParams(FlatBufferBuilder builder, Offset<IVehicleCruisingParams> controlParamsOffset)
 		{
 			builder.AddOffset(1, controlParamsOffset.Value, 0);
 		}
 
-		// Token: 0x06036818 RID: 223256 RVA: 0x0076761F File Offset: 0x0076581F
+		// Token: 0x06039C2E RID: 236590 RVA: 0x007CA88B File Offset: 0x007C8A8B
 		public static void AddPatternType(FlatBufferBuilder builder, TSplineMovePattern patternType)
 		{
 			builder.AddByte(2, (byte)patternType, 0);
 		}
 
-		// Token: 0x06036819 RID: 223257 RVA: 0x0076762A File Offset: 0x0076582A
+		// Token: 0x06039C2F RID: 236591 RVA: 0x007CA896 File Offset: 0x007C8A96
 		public static void AddPattern(FlatBufferBuilder builder, int patternOffset)
 		{
 			builder.AddOffset(3, patternOffset, 0);
 		}
 
-		// Token: 0x0603681A RID: 223258 RVA: 0x00767635 File Offset: 0x00765835
+		// Token: 0x06039C30 RID: 236592 RVA: 0x007CA8A1 File Offset: 0x007C8AA1
 		public static Offset<IVehicleEnterPathMove> EndIVehicleEnterPathMove(FlatBufferBuilder builder)
 		{
 			return new Offset<IVehicleEnterPathMove>(builder.EndTable());
 		}
 
-		// Token: 0x0603681B RID: 223259 RVA: 0x00767644 File Offset: 0x00765844
+		// Token: 0x06039C31 RID: 236593 RVA: 0x007CA8B0 File Offset: 0x007C8AB0
 		public IVehicleEnterPathMoveT UnPack()
 		{
 			IVehicleEnterPathMoveT vehicleEnterPathMoveT = new IVehicleEnterPathMoveT();
@@ -194,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return vehicleEnterPathMoveT;
 		}
 
-		// Token: 0x0603681C RID: 223260 RVA: 0x00767660 File Offset: 0x00765860
+		// Token: 0x06039C32 RID: 236594 RVA: 0x007CA8CC File Offset: 0x007C8ACC
 		public void UnPackTo(IVehicleEnterPathMoveT _o)
 		{
 			_o.Type = this.Type;
@@ -215,6 +221,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			case TSplineMovePattern.IPathLineMove:
 				_o.Pattern.Value = ((this.Pattern<IPathLineMove>() != null) ? this.Pattern<IPathLineMove>().Value.UnPack() : null);
 				return;
+			case TSplineMovePattern.IPetalGrabMove:
+				_o.Pattern.Value = ((this.Pattern<IPetalGrabMove>() != null) ? this.Pattern<IPetalGrabMove>().Value.UnPack() : null);
+				return;
 			case TSplineMovePattern.IRacingTrackMove:
 				_o.Pattern.Value = ((this.Pattern<IRacingTrackMove>() != null) ? this.Pattern<IRacingTrackMove>().Value.UnPack() : null);
 				return;
@@ -226,7 +235,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603681D RID: 223261 RVA: 0x0076783C File Offset: 0x00765A3C
+		// Token: 0x06039C33 RID: 236595 RVA: 0x007CAAE4 File Offset: 0x007C8CE4
 		public static Offset<IVehicleEnterPathMove> Pack(FlatBufferBuilder builder, IVehicleEnterPathMoveT _o)
 		{
 			if (_o == null)
@@ -239,7 +248,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVehicleEnterPathMove.CreateIVehicleEnterPathMove(builder, _o.Type, controlParamsOffset, pattern_type, patternOffset);
 		}
 
-		// Token: 0x040123FE RID: 74750
+		// Token: 0x0401342F RID: 78895
 		private Table __p;
 	}
 }

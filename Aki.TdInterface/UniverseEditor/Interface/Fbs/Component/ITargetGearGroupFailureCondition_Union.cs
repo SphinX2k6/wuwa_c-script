@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A31 RID: 23089
+	// Token: 0x0200603E RID: 24638
 	public enum ITargetGearGroupFailureCondition_Union : byte
 	{
-		// Token: 0x0400F099 RID: 61593
+		// Token: 0x0400FD90 RID: 64912
 		NONE,
-		// Token: 0x0400F09A RID: 61594
+		// Token: 0x0400FD91 RID: 64913
 		ITargetGearGroupFailureCondition,
-		// Token: 0x0400F09B RID: 61595
+		// Token: 0x0400FD92 RID: 64914
 		IFailureConditionArbitraryState,
-		// Token: 0x0400F09C RID: 61596
+		// Token: 0x0400FD93 RID: 64915
 		IFailureConditionSequentialState,
-		// Token: 0x0400F09D RID: 61597
+		// Token: 0x0400FD94 RID: 64916
 		IFailureConditionHitTargetEntity
 	}
 }

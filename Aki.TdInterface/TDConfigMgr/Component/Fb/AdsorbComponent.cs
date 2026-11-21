@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B74 RID: 2932
+	// Token: 0x02000C42 RID: 3138
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AdsorbComponent : IComponentBase
 	{
-		// Token: 0x0600438D RID: 17293 RVA: 0x000AC2C2 File Offset: 0x000AA4C2
-		[NullableContext(1)]
+		// Token: 0x060047E6 RID: 18406 RVA: 0x000B6386 File Offset: 0x000B4586
+		[NullableContext(0)]
 		public static AdsorbComponent Create(IAdsorbComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001262 RID: 4706
-		// (get) Token: 0x0600438E RID: 17294 RVA: 0x000AC2E4 File Offset: 0x000AA4E4
+		// Token: 0x1700135D RID: 4957
+		// (get) Token: 0x060047E7 RID: 18407 RVA: 0x000B63A8 File Offset: 0x000B45A8
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001263 RID: 4707
-		// (get) Token: 0x0600438F RID: 17295 RVA: 0x000AC31C File Offset: 0x000AA51C
+		// Token: 0x1700135E RID: 4958
+		// (get) Token: 0x060047E8 RID: 18408 RVA: 0x000B63E0 File Offset: 0x000B45E0
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001264 RID: 4708
-		// (get) Token: 0x06004390 RID: 17296 RVA: 0x000AC332 File Offset: 0x000AA532
+		// Token: 0x1700135F RID: 4959
+		// (get) Token: 0x060047E9 RID: 18409 RVA: 0x000B63F6 File Offset: 0x000B45F6
 		public virtual float Range
 		{
 			get
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001265 RID: 4709
-		// (get) Token: 0x06004391 RID: 17297 RVA: 0x000AC33F File Offset: 0x000AA53F
+		// Token: 0x17001360 RID: 4960
+		// (get) Token: 0x060047EA RID: 18410 RVA: 0x000B6403 File Offset: 0x000B4603
 		public virtual float StartVelocity
 		{
 			get
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001266 RID: 4710
-		// (get) Token: 0x06004392 RID: 17298 RVA: 0x000AC34C File Offset: 0x000AA54C
+		// Token: 0x17001361 RID: 4961
+		// (get) Token: 0x060047EB RID: 18411 RVA: 0x000B6410 File Offset: 0x000B4610
 		public virtual float Acceleration
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001267 RID: 4711
-		// (get) Token: 0x06004393 RID: 17299 RVA: 0x000AC359 File Offset: 0x000AA559
+		// Token: 0x17001362 RID: 4962
+		// (get) Token: 0x060047EC RID: 18412 RVA: 0x000B641D File Offset: 0x000B461D
 		public virtual IEntityState ActiveStateCondition
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001268 RID: 4712
-		// (get) Token: 0x06004394 RID: 17300 RVA: 0x000AC38D File Offset: 0x000AA58D
+		// Token: 0x17001363 RID: 4963
+		// (get) Token: 0x060047ED RID: 18413 RVA: 0x000B6451 File Offset: 0x000B4651
 		public virtual int AdsorbLimitedTime
 		{
 			get
@@ -103,13 +103,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400261B RID: 9755
+		// Token: 0x04002863 RID: 10339
 		private IAdsorbComponent Instance;
 
-		// Token: 0x0400261C RID: 9756
+		// Token: 0x04002864 RID: 10340
 		private IEntityState _ActiveStateConditionCache;
 
-		// Token: 0x0400261D RID: 9757
+		// Token: 0x04002865 RID: 10341
 		private bool _ActiveStateConditionInited;
 	}
 }

@@ -2,48 +2,48 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006066 RID: 24678
+	// Token: 0x02004FE4 RID: 20452
 	internal enum <SpringManorQuestView>FD27D6EB36C2E4CAB667723387ED91C225109FEE2840AAE284CD649FA397FC335__EComp
 	{
-		// Token: 0x040209F8 RID: 133624
+		// Token: 0x0401B325 RID: 111397
 		Caption,
-		// Token: 0x040209F9 RID: 133625
+		// Token: 0x0401B326 RID: 111398
 		EmptyPanel,
-		// Token: 0x040209FA RID: 133626
+		// Token: 0x0401B327 RID: 111399
 		ContentPanel,
-		// Token: 0x040209FB RID: 133627
+		// Token: 0x0401B328 RID: 111400
 		MainQuestItem,
-		// Token: 0x040209FC RID: 133628
+		// Token: 0x0401B329 RID: 111401
 		SecQuestLayout,
-		// Token: 0x040209FD RID: 133629
+		// Token: 0x0401B32A RID: 111402
 		SecQuestItem,
-		// Token: 0x040209FE RID: 133630
+		// Token: 0x0401B32B RID: 111403
 		QuestName,
-		// Token: 0x040209FF RID: 133631
+		// Token: 0x0401B32C RID: 111404
 		QuestStepDesc,
-		// Token: 0x04020A00 RID: 133632
+		// Token: 0x0401B32D RID: 111405
 		Distance,
-		// Token: 0x04020A01 RID: 133633
+		// Token: 0x0401B32E RID: 111406
 		QuestDesc,
-		// Token: 0x04020A02 RID: 133634
+		// Token: 0x0401B32F RID: 111407
 		RewardScroll,
-		// Token: 0x04020A03 RID: 133635
+		// Token: 0x0401B330 RID: 111408
 		RewardScrollContent,
-		// Token: 0x04020A04 RID: 133636
+		// Token: 0x0401B331 RID: 111409
 		RewardItem,
-		// Token: 0x04020A05 RID: 133637
+		// Token: 0x0401B332 RID: 111410
 		WarningTips,
-		// Token: 0x04020A06 RID: 133638
+		// Token: 0x0401B333 RID: 111411
 		BtnL,
-		// Token: 0x04020A07 RID: 133639
+		// Token: 0x0401B334 RID: 111412
 		BtnR,
-		// Token: 0x04020A08 RID: 133640
+		// Token: 0x0401B335 RID: 111413
 		StepItem,
-		// Token: 0x04020A09 RID: 133641
+		// Token: 0x0401B336 RID: 111414
 		ButtonRoot,
-		// Token: 0x04020A0A RID: 133642
+		// Token: 0x0401B337 RID: 111415
 		QuestLine,
-		// Token: 0x04020A0B RID: 133643
+		// Token: 0x0401B338 RID: 111416
 		MainQuestLayout
 	}
 }

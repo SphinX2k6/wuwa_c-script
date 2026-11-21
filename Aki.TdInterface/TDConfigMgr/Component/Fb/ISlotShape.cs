@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DCC RID: 3532
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EC8 RID: 3784
 	public class ISlotShape
 	{
-		// Token: 0x06005024 RID: 20516 RVA: 0x000C6112 File Offset: 0x000C4312
+		// Token: 0x06005549 RID: 21833 RVA: 0x000D1962 File Offset: 0x000CFB62
 		public static ISlotShape Create(ISlotShape? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A49 RID: 6729
-		// (get) Token: 0x06005025 RID: 20517 RVA: 0x000C6131 File Offset: 0x000C4331
+		// Token: 0x17001BB4 RID: 7092
+		// (get) Token: 0x0600554A RID: 21834 RVA: 0x000D1981 File Offset: 0x000CFB81
 		public virtual VectorInfo Center
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A4A RID: 6730
-		// (get) Token: 0x06005026 RID: 20518 RVA: 0x000C6165 File Offset: 0x000C4365
+		// Token: 0x17001BB5 RID: 7093
+		// (get) Token: 0x0600554B RID: 21835 RVA: 0x000D19B5 File Offset: 0x000CFBB5
 		public virtual VectorInfo Size
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A4B RID: 6731
-		// (get) Token: 0x06005027 RID: 20519 RVA: 0x000C6199 File Offset: 0x000C4399
+		// Token: 0x17001BB6 RID: 7094
+		// (get) Token: 0x0600554C RID: 21836 RVA: 0x000D19E9 File Offset: 0x000CFBE9
 		[Nullable(2)]
 		public virtual VectorInfo Rotator
 		{
@@ -73,28 +71,28 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DF5 RID: 11765
+		// Token: 0x040030BB RID: 12475
 		private ISlotShape Instance;
 
-		// Token: 0x04002DF6 RID: 11766
+		// Token: 0x040030BC RID: 12476
 		[Nullable(2)]
 		private VectorInfo _CenterCache;
 
-		// Token: 0x04002DF7 RID: 11767
+		// Token: 0x040030BD RID: 12477
 		private bool _CenterInited;
 
-		// Token: 0x04002DF8 RID: 11768
+		// Token: 0x040030BE RID: 12478
 		[Nullable(2)]
 		private VectorInfo _SizeCache;
 
-		// Token: 0x04002DF9 RID: 11769
+		// Token: 0x040030BF RID: 12479
 		private bool _SizeInited;
 
-		// Token: 0x04002DFA RID: 11770
+		// Token: 0x040030C0 RID: 12480
 		[Nullable(2)]
 		private VectorInfo _RotatorCache;
 
-		// Token: 0x04002DFB RID: 11771
+		// Token: 0x040030C1 RID: 12481
 		private bool _RotatorInited;
 	}
 }

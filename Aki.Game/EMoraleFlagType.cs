@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002224 RID: 8740
+// Token: 0x02001708 RID: 5896
 public enum EMoraleFlagType
 {
-	// Token: 0x040081D8 RID: 33240
+	// Token: 0x04008316 RID: 33558
 	Small,
-	// Token: 0x040081D9 RID: 33241
+	// Token: 0x04008317 RID: 33559
 	Big,
-	// Token: 0x040081DA RID: 33242
+	// Token: 0x04008318 RID: 33560
 	HighDifficulty
 }

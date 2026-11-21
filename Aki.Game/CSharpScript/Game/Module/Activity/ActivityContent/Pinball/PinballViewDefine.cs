@@ -6,16 +6,16 @@ using CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 {
-	// Token: 0x020062CC RID: 25292
+	// Token: 0x0200524A RID: 21066
 	public class PinballViewDefine : IStaticVariableResetter
 	{
-		// Token: 0x0603FA51 RID: 260689 RVA: 0x00F65AFC File Offset: 0x00F63CFC
+		// Token: 0x06034712 RID: 214802 RVA: 0x00EACA58 File Offset: 0x00EAAC58
 		static PinballViewDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PinballViewDefine.CreateStaticDefaultValue), new Action(PinballViewDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603FA52 RID: 260690 RVA: 0x00F65B1C File Offset: 0x00F63D1C
+		// Token: 0x06034713 RID: 214803 RVA: 0x00EACA78 File Offset: 0x00EAAC78
 		public static void CreateStaticDefaultValue()
 		{
 			Dictionary<string, ValueTuple<Func<PinballMainChildViewBase>, string>> dictionary = new Dictionary<string, ValueTuple<Func<PinballMainChildViewBase>, string>>();
@@ -26,13 +26,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			PinballViewDefine.pinballMainChildViewCreateInfo = dictionary;
 		}
 
-		// Token: 0x0603FA53 RID: 260691 RVA: 0x00F65C03 File Offset: 0x00F63E03
+		// Token: 0x06034714 RID: 214804 RVA: 0x00EACB5F File Offset: 0x00EAAD5F
 		public static void ResetStaticDefaultValue()
 		{
 			PinballViewDefine.pinballMainChildViewCreateInfo = null;
 		}
 
-		// Token: 0x04021429 RID: 136233
+		// Token: 0x0401BD58 RID: 114008
 		[Nullable(new byte[]
 		{
 			2,

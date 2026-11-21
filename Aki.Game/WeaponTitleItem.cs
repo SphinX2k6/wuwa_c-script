@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x020016A8 RID: 5800
+// Token: 0x02000B60 RID: 2912
 public class WeaponTitleItem : TitleItemBase<int>
 {
-	// Token: 0x0600A57D RID: 42365 RVA: 0x0024FDFF File Offset: 0x0024DFFF
+	// Token: 0x0600795D RID: 31069 RVA: 0x0025A213 File Offset: 0x00258413
 	[NullableContext(1)]
 	public WeaponTitleItem(UUIItem uiItem) : base(uiItem)
 	{
 	}
 
-	// Token: 0x0600A57E RID: 42366 RVA: 0x0024FE08 File Offset: 0x0024E008
+	// Token: 0x0600795E RID: 31070 RVA: 0x0025A21C File Offset: 0x0025841C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -28,7 +28,7 @@ public class WeaponTitleItem : TitleItemBase<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A57F RID: 42367 RVA: 0x0024FE74 File Offset: 0x0024E074
+	// Token: 0x0600795F RID: 31071 RVA: 0x0025A288 File Offset: 0x00258488
 	[NullableContext(1)]
 	public override void ShowTemp(int data, DropDownItemBase<int> selectedItemObj)
 	{
@@ -63,12 +63,12 @@ public class WeaponTitleItem : TitleItemBase<int>
 		base.GetText(0).SetText(newText, true);
 	}
 
-	// Token: 0x02007C80 RID: 31872
+	// Token: 0x02006E05 RID: 28165
 	private enum EComponent
 	{
-		// Token: 0x04028D91 RID: 167313
+		// Token: 0x040240BA RID: 147642
 		TxtOption,
-		// Token: 0x04028D92 RID: 167314
+		// Token: 0x040240BB RID: 147643
 		WeaponTexture
 	}
 }

@@ -6,13 +6,13 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002C94 RID: 11412
+// Token: 0x020021ED RID: 8685
 [NullableContext(1)]
 [Nullable(0)]
 public class UiModelRenderingMaterialComponent : UiModelComponentBase
 {
-	// Token: 0x17002032 RID: 8242
-	// (get) Token: 0x06017DA9 RID: 97705 RVA: 0x00610C1C File Offset: 0x0060EE1C
+	// Token: 0x17002083 RID: 8323
+	// (get) Token: 0x0601561D RID: 87581 RVA: 0x006367BC File Offset: 0x006349BC
 	private int MaterialId
 	{
 		get
@@ -23,20 +23,20 @@ public class UiModelRenderingMaterialComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017DAA RID: 97706 RVA: 0x00610C3A File Offset: 0x0060EE3A
+	// Token: 0x0601561E RID: 87582 RVA: 0x006367DA File Offset: 0x006349DA
 	protected override void OnInit()
 	{
 		this.ActorComponent = base.Owner.CheckGetComponent<UiModelActorComponent>();
 		this.UiModelDataComponent = base.Owner.CheckGetComponent<UiModelDataComponent>();
 	}
 
-	// Token: 0x06017DAB RID: 97707 RVA: 0x00610C5E File Offset: 0x0060EE5E
+	// Token: 0x0601561F RID: 87583 RVA: 0x006367FE File Offset: 0x006349FE
 	protected override void OnStart()
 	{
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnModelLoadComplete));
 	}
 
-	// Token: 0x06017DAC RID: 97708 RVA: 0x00610C84 File Offset: 0x0060EE84
+	// Token: 0x06015620 RID: 87584 RVA: 0x00636824 File Offset: 0x00634A24
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnModelLoadComplete));
@@ -57,7 +57,7 @@ public class UiModelRenderingMaterialComponent : UiModelComponentBase
 		charRenderingComponent.ResetAllRenderingState();
 	}
 
-	// Token: 0x06017DAD RID: 97709 RVA: 0x00610D30 File Offset: 0x0060EF30
+	// Token: 0x06015621 RID: 87585 RVA: 0x006368D0 File Offset: 0x00634AD0
 	public int SetRenderingMaterial(string effectId)
 	{
 		int materialId = this.MaterialId;
@@ -73,7 +73,7 @@ public class UiModelRenderingMaterialComponent : UiModelComponentBase
 		return materialId;
 	}
 
-	// Token: 0x06017DAE RID: 97710 RVA: 0x00610D80 File Offset: 0x0060EF80
+	// Token: 0x06015622 RID: 87586 RVA: 0x00636920 File Offset: 0x00634B20
 	public int AddRenderingMaterialByPath(string path)
 	{
 		int materialId = this.MaterialId;
@@ -89,7 +89,7 @@ public class UiModelRenderingMaterialComponent : UiModelComponentBase
 		return materialId;
 	}
 
-	// Token: 0x06017DAF RID: 97711 RVA: 0x00610DD0 File Offset: 0x0060EFD0
+	// Token: 0x06015623 RID: 87587 RVA: 0x00636970 File Offset: 0x00634B70
 	public int AddRenderingMaterialByData(PD_CharacterControllerData_C data)
 	{
 		int materialId = this.MaterialId;
@@ -105,7 +105,7 @@ public class UiModelRenderingMaterialComponent : UiModelComponentBase
 		return materialId;
 	}
 
-	// Token: 0x06017DB0 RID: 97712 RVA: 0x00610E20 File Offset: 0x0060F020
+	// Token: 0x06015624 RID: 87588 RVA: 0x006369C0 File Offset: 0x00634BC0
 	public int AddRenderingMaterialWithAnimObject(PD_CharacterControllerData_C data, USkeletalMeshComponent meshComp)
 	{
 		int materialId = this.MaterialId;
@@ -123,7 +123,7 @@ public class UiModelRenderingMaterialComponent : UiModelComponentBase
 		return materialId;
 	}
 
-	// Token: 0x06017DB1 RID: 97713 RVA: 0x00610E84 File Offset: 0x0060F084
+	// Token: 0x06015625 RID: 87589 RVA: 0x00636A24 File Offset: 0x00634C24
 	public int AddRenderingMaterialGroup(PD_CharacterControllerDataGroup_C data)
 	{
 		int materialId = this.MaterialId;
@@ -140,7 +140,7 @@ public class UiModelRenderingMaterialComponent : UiModelComponentBase
 		return materialId;
 	}
 
-	// Token: 0x06017DB2 RID: 97714 RVA: 0x00610EE0 File Offset: 0x0060F0E0
+	// Token: 0x06015626 RID: 87590 RVA: 0x00636A80 File Offset: 0x00634C80
 	private void Execute()
 	{
 		UiModelDataComponent uiModelDataComponent = this.UiModelDataComponent;
@@ -154,7 +154,7 @@ public class UiModelRenderingMaterialComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017DB3 RID: 97715 RVA: 0x00610F58 File Offset: 0x0060F158
+	// Token: 0x06015627 RID: 87591 RVA: 0x00636AF8 File Offset: 0x00634CF8
 	private void AddRenderingMaterialById(int materialId)
 	{
 		UiModelRenderingMaterialComponent.<>c__DisplayClass16_0 CS$<>8__locals1 = new UiModelRenderingMaterialComponent.<>c__DisplayClass16_0();
@@ -190,7 +190,7 @@ public class UiModelRenderingMaterialComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017DB4 RID: 97716 RVA: 0x00611130 File Offset: 0x0060F330
+	// Token: 0x06015628 RID: 87592 RVA: 0x00636CD0 File Offset: 0x00634ED0
 	public void RemoveRenderingMaterial(int materialId)
 	{
 		IMaterialHandle materialHandle;
@@ -223,7 +223,7 @@ public class UiModelRenderingMaterialComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017DB5 RID: 97717 RVA: 0x006111DC File Offset: 0x0060F3DC
+	// Token: 0x06015629 RID: 87593 RVA: 0x00636D7C File Offset: 0x00634F7C
 	public void RemoveRenderingMaterialWithEnding(int materialId)
 	{
 		IMaterialHandle materialHandle;
@@ -253,26 +253,26 @@ public class UiModelRenderingMaterialComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017DB6 RID: 97718 RVA: 0x00611270 File Offset: 0x0060F470
+	// Token: 0x0601562A RID: 87594 RVA: 0x00636E10 File Offset: 0x00635010
 	public void OnModelLoadComplete()
 	{
 		this.Execute();
 	}
 
-	// Token: 0x0400B1D5 RID: 45525
+	// Token: 0x0400B540 RID: 46400
 	[Nullable(2)]
 	public UiModelActorComponent ActorComponent;
 
-	// Token: 0x0400B1D6 RID: 45526
+	// Token: 0x0400B541 RID: 46401
 	[Nullable(2)]
 	public UiModelDataComponent UiModelDataComponent;
 
-	// Token: 0x0400B1D7 RID: 45527
+	// Token: 0x0400B542 RID: 46402
 	private readonly Dictionary<int, IMaterialHandle> MaterialMap = new Dictionary<int, IMaterialHandle>();
 
-	// Token: 0x0400B1D8 RID: 45528
+	// Token: 0x0400B543 RID: 46403
 	private int StartIndex;
 
-	// Token: 0x0400B1D9 RID: 45529
+	// Token: 0x0400B544 RID: 46404
 	private readonly HashSet<int> MaterialToAdd = new HashSet<int>();
 }

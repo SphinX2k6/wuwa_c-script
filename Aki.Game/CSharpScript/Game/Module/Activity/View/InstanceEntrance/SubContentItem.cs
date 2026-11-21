@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F18 RID: 24344
+	// Token: 0x02004EFF RID: 20223
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class SubContentItem : UiPanelBase
 	{
-		// Token: 0x0603DD8A RID: 253322 RVA: 0x00EF2AF4 File Offset: 0x00EF0CF4
+		// Token: 0x06032D25 RID: 208165 RVA: 0x00E447FC File Offset: 0x00E429FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DD8B RID: 253323 RVA: 0x00EF2C00 File Offset: 0x00EF0E00
+		// Token: 0x06032D26 RID: 208166 RVA: 0x00E44908 File Offset: 0x00E42B08
 		public void RefreshView(ActivityEntranceItemData data)
 		{
 			this.ItemData = data;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.RefreshDescText(this.ItemData);
 		}
 
-		// Token: 0x0603DD8C RID: 253324 RVA: 0x00EF2C50 File Offset: 0x00EF0E50
+		// Token: 0x06032D27 RID: 208167 RVA: 0x00E44958 File Offset: 0x00E42B58
 		private void RefreshToggleState(ActivityEntranceItemData data)
 		{
 			bool selectState = data.GetSelectState();
@@ -62,21 +62,21 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			extendToggle.SetToggleStateForce(selectState ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603DD8D RID: 253325 RVA: 0x00EF2C80 File Offset: 0x00EF0E80
+		// Token: 0x06032D28 RID: 208168 RVA: 0x00E44988 File Offset: 0x00E42B88
 		private void RefreshLockItem(ActivityEntranceItemData data)
 		{
 			bool lockState = data.GetLockState();
 			base.GetItem(3).SetUIActive(lockState);
 		}
 
-		// Token: 0x0603DD8E RID: 253326 RVA: 0x00EF2CA4 File Offset: 0x00EF0EA4
+		// Token: 0x06032D29 RID: 208169 RVA: 0x00E449AC File Offset: 0x00E42BAC
 		private void RefreshFinishItem(ActivityEntranceItemData data)
 		{
 			bool finishState = data.GetFinishState();
 			base.GetItem(4).SetUIActive(finishState);
 		}
 
-		// Token: 0x0603DD8F RID: 253327 RVA: 0x00EF2CC8 File Offset: 0x00EF0EC8
+		// Token: 0x06032D2A RID: 208170 RVA: 0x00E449D0 File Offset: 0x00E42BD0
 		private void RefreshDifficultIcon(ActivityEntranceItemData data)
 		{
 			string instanceDifficultIconPath = data.GetInstanceDifficultIconPath();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			base.SetTextureByPath(instanceDifficultIconPath, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x0603DD90 RID: 253328 RVA: 0x00EF2CF8 File Offset: 0x00EF0EF8
+		// Token: 0x06032D2B RID: 208171 RVA: 0x00E44A00 File Offset: 0x00E42C00
 		private void RefreshDescText(ActivityEntranceItemData data)
 		{
 			if (data.GetLockState())
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			}
 		}
 
-		// Token: 0x0603DD91 RID: 253329 RVA: 0x00EF2D42 File Offset: 0x00EF0F42
+		// Token: 0x06032D2C RID: 208172 RVA: 0x00E44A4A File Offset: 0x00E42C4A
 		public void OnClickExtendToggle(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -128,23 +128,23 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			}
 		}
 
-		// Token: 0x040204D9 RID: 132313
+		// Token: 0x0401AFAB RID: 110507
 		[Nullable(2)]
 		private ActivityEntranceItemData ItemData;
 
-		// Token: 0x0200C24F RID: 49743
+		// Token: 0x0200AC5C RID: 44124
 		[NullableContext(0)]
 		private enum ESubContentComponent
 		{
-			// Token: 0x0403AB33 RID: 240435
+			// Token: 0x04035525 RID: 218405
 			Toggle,
-			// Token: 0x0403AB34 RID: 240436
+			// Token: 0x04035526 RID: 218406
 			IconTexture,
-			// Token: 0x0403AB35 RID: 240437
+			// Token: 0x04035527 RID: 218407
 			DescText,
-			// Token: 0x0403AB36 RID: 240438
+			// Token: 0x04035528 RID: 218408
 			LockItem,
-			// Token: 0x0403AB37 RID: 240439
+			// Token: 0x04035529 RID: 218409
 			FinishItem
 		}
 	}

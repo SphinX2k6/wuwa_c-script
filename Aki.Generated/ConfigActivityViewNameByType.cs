@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000059 RID: 89
+	// Token: 0x02000061 RID: 97
 	public class ConfigActivityViewNameByType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000216 RID: 534 RVA: 0x00065830 File Offset: 0x00063A30
+		// Token: 0x06000246 RID: 582 RVA: 0x0006A0E4 File Offset: 0x000682E4
 		static ConfigActivityViewNameByType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigActivityViewNameByType.CreateStaticDefaultValue), new Action(ConfigActivityViewNameByType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000217 RID: 535 RVA: 0x00065850 File Offset: 0x00063A50
+		// Token: 0x06000247 RID: 583 RVA: 0x0006A104 File Offset: 0x00068304
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigActivityViewNameByType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000218 RID: 536 RVA: 0x000658CF File Offset: 0x00063ACF
+		// Token: 0x06000248 RID: 584 RVA: 0x0006A183 File Offset: 0x00068383
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigActivityViewNameByType.LogPair = null;
 			ConfigActivityViewNameByType.HandleId = 0;
 		}
 
-		// Token: 0x06000219 RID: 537 RVA: 0x000658DD File Offset: 0x00063ADD
+		// Token: 0x06000249 RID: 585 RVA: 0x0006A191 File Offset: 0x00068391
 		public static void Init()
 		{
 			ConfigActivityViewNameByType.HandleId = ConfigCommon.InitDataStatement(ConfigActivityViewNameByType.HandleId, "db_activity.db", "select BinData from `ActivityViewName` where Type=?");
 		}
 
-		// Token: 0x0600021A RID: 538 RVA: 0x000658F8 File Offset: 0x00063AF8
+		// Token: 0x0600024A RID: 586 RVA: 0x0006A1AC File Offset: 0x000683AC
 		[NullableContext(2)]
 		public static IReadOnlyList<ActivityViewName> GetConfigList(int p0Type, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000253 RID: 595
+		// Token: 0x0400028B RID: 651
 		private const string DB = "db_activity.db";
 
-		// Token: 0x04000254 RID: 596
+		// Token: 0x0400028C RID: 652
 		private const string FILE = "h.活动.xlsx";
 
-		// Token: 0x04000255 RID: 597
+		// Token: 0x0400028D RID: 653
 		private const string TABLE = "ActivityViewName";
 
-		// Token: 0x04000256 RID: 598
+		// Token: 0x0400028E RID: 654
 		private const string COMMAND = "select BinData from `ActivityViewName` where Type=?";
 
-		// Token: 0x04000257 RID: 599
+		// Token: 0x0400028F RID: 655
 		private const string KEY_PREFIX = "ActivityViewNameByType";
 
-		// Token: 0x04000258 RID: 600
+		// Token: 0x04000290 RID: 656
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000259 RID: 601
+		// Token: 0x04000291 RID: 657
 		private static int HandleId;
 	}
 }

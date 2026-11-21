@@ -18,7 +18,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 {
-	// Token: 0x02004758 RID: 18264
+	// Token: 0x02003689 RID: 13961
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 	[Controller(0)]
 	public class MainControlRoleController : WuWaGoRoleController<WuWaGoRole>
 	{
-		// Token: 0x0602FBCC RID: 195532 RVA: 0x00B0ECA4 File Offset: 0x00B0CEA4
+		// Token: 0x06024396 RID: 148374 RVA: 0x00A3EC64 File Offset: 0x00A3CE64
 		public MainControlRoleController(WuWaGoRole role, WuWaGoGameData gameData, WuWaGoGameModeBase gameMode) : base(role, gameData, gameMode)
 		{
 			this.MoveCapability = new MoveCapability(role);
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.ScreenTrace.Activate();
 		}
 
-		// Token: 0x0602FBCD RID: 195533 RVA: 0x00B0ED5E File Offset: 0x00B0CF5E
+		// Token: 0x06024397 RID: 148375 RVA: 0x00A3ED1E File Offset: 0x00A3CF1E
 		protected override bool OnCreate()
 		{
 			if (!base.OnCreate())
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return true;
 		}
 
-		// Token: 0x0602FBCE RID: 195534 RVA: 0x00B0ED84 File Offset: 0x00B0CF84
+		// Token: 0x06024398 RID: 148376 RVA: 0x00A3ED44 File Offset: 0x00A3CF44
 		protected override void OnDestroy()
 		{
 			this.Role.RemoveStandGridChangedListener(new WuWaGoRoleStandGridChangedListener(this.HandleStandGridChanged));
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			base.OnDestroy();
 		}
 
-		// Token: 0x0602FBCF RID: 195535 RVA: 0x00B0EE6C File Offset: 0x00B0D06C
+		// Token: 0x06024399 RID: 148377 RVA: 0x00A3EE2C File Offset: 0x00A3D02C
 		protected override UniTask OnExecuteAction()
 		{
 			MainControlRoleController.<OnExecuteAction>d__29 <OnExecuteAction>d__;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <OnExecuteAction>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FBD0 RID: 195536 RVA: 0x00B0EEB0 File Offset: 0x00B0D0B0
+		// Token: 0x0602439A RID: 148378 RVA: 0x00A3EE70 File Offset: 0x00A3D070
 		protected override UniTask OnBeforeAttack(WuWaGoGrid targetGrid)
 		{
 			MainControlRoleController.<OnBeforeAttack>d__30 <OnBeforeAttack>d__;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <OnBeforeAttack>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FBD1 RID: 195537 RVA: 0x00B0EEFC File Offset: 0x00B0D0FC
+		// Token: 0x0602439B RID: 148379 RVA: 0x00A3EEBC File Offset: 0x00A3D0BC
 		private void FinishExecuteAction()
 		{
 			CustomPromise<UniTaskVoid> waitActionFinishPromise = this.WaitActionFinishPromise;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			waitActionFinishPromise.SetResult(default(UniTaskVoid));
 		}
 
-		// Token: 0x0602FBD2 RID: 195538 RVA: 0x00B0EF22 File Offset: 0x00B0D122
+		// Token: 0x0602439C RID: 148380 RVA: 0x00A3EEE2 File Offset: 0x00A3D0E2
 		[NullableContext(2)]
 		private void HandleStandGridChanged([Nullable(1)] WuWaGoRole role, WuWaGoGrid prevGrid, WuWaGoGrid currentGrid)
 		{
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.CheckArriveEndPoint(currentGrid);
 		}
 
-		// Token: 0x0602FBD3 RID: 195539 RVA: 0x00B0EF34 File Offset: 0x00B0D134
+		// Token: 0x0602439D RID: 148381 RVA: 0x00A3EEF4 File Offset: 0x00A3D0F4
 		[NullableContext(2)]
 		private void RefreshProgress(WuWaGoGrid currentGrid)
 		{
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			EventSystem.Instance.Emit<int, int>(EEventName.OnWuWaGoProgressUpdate, gameData.VisitedProgressGridIds.Count, progressTotalGridCount);
 		}
 
-		// Token: 0x0602FBD4 RID: 195540 RVA: 0x00B0EFDC File Offset: 0x00B0D1DC
+		// Token: 0x0602439E RID: 148382 RVA: 0x00A3EF9C File Offset: 0x00A3D19C
 		[NullableContext(2)]
 		private void CheckArriveEndPoint(WuWaGoGrid currentGrid)
 		{
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			WuWaGoController.Instance.EndGameplay(true);
 		}
 
-		// Token: 0x0602FBD5 RID: 195541 RVA: 0x00B0F014 File Offset: 0x00B0D214
+		// Token: 0x0602439F RID: 148383 RVA: 0x00A3EFD4 File Offset: 0x00A3D1D4
 		private void SetInputAccepting(bool accept)
 		{
 			if (this.IsAcceptingInput == accept)
@@ -184,13 +184,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.RefreshInteractionAvailable();
 		}
 
-		// Token: 0x0602FBD6 RID: 195542 RVA: 0x00B0F13A File Offset: 0x00B0D33A
+		// Token: 0x060243A0 RID: 148384 RVA: 0x00A3F0FA File Offset: 0x00A3D2FA
 		public void SetInputAcceptingFromExternal(bool accept)
 		{
 			this.SetInputAccepting(accept);
 		}
 
-		// Token: 0x0602FBD7 RID: 195543 RVA: 0x00B0F144 File Offset: 0x00B0D344
+		// Token: 0x060243A1 RID: 148385 RVA: 0x00A3F104 File Offset: 0x00A3D304
 		private void OnUserPickScreen(int screenX, int screenY)
 		{
 			if (this.GameMode.IsRollbackRestoring)
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.ExecuteOnGrid(wuWaGoGrid);
 		}
 
-		// Token: 0x0602FBD8 RID: 195544 RVA: 0x00B0F174 File Offset: 0x00B0D374
+		// Token: 0x060243A2 RID: 148386 RVA: 0x00A3F134 File Offset: 0x00A3D334
 		private void OnUserPreviewScreen(int screenX, int screenY)
 		{
 			if (this.GameMode.IsRollbackRestoring)
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.UpdateRedArrowHoverEffect(grid);
 		}
 
-		// Token: 0x0602FBD9 RID: 195545 RVA: 0x00B0F1B8 File Offset: 0x00B0D3B8
+		// Token: 0x060243A3 RID: 148387 RVA: 0x00A3F178 File Offset: 0x00A3D378
 		private void OnUserPickDirection(double dx, double dy)
 		{
 			if (this.GameMode.IsRollbackRestoring)
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.ExecuteOnGrid(wuWaGoGrid);
 		}
 
-		// Token: 0x0602FBDA RID: 195546 RVA: 0x00B0F24C File Offset: 0x00B0D44C
+		// Token: 0x060243A4 RID: 148388 RVA: 0x00A3F20C File Offset: 0x00A3D40C
 		private void OnUserUseInteraction()
 		{
 			if (this.GameMode.IsRollbackRestoring)
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.RunInteraction(gridById);
 		}
 
-		// Token: 0x0602FBDB RID: 195547 RVA: 0x00B0F294 File Offset: 0x00B0D494
+		// Token: 0x060243A5 RID: 148389 RVA: 0x00A3F254 File Offset: 0x00A3D454
 		private UniTask ExecuteOnGrid(WuWaGoGrid grid)
 		{
 			MainControlRoleController.<ExecuteOnGrid>d__41 <ExecuteOnGrid>d__;
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <ExecuteOnGrid>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FBDC RID: 195548 RVA: 0x00B0F2E0 File Offset: 0x00B0D4E0
+		// Token: 0x060243A6 RID: 148390 RVA: 0x00A3F2A0 File Offset: 0x00A3D4A0
 		private UniTask RunPlayerInputAction([Nullable(new byte[]
 		{
 			1,
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <RunPlayerInputAction>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FBDD RID: 195549 RVA: 0x00B0F32C File Offset: 0x00B0D52C
+		// Token: 0x060243A7 RID: 148391 RVA: 0x00A3F2EC File Offset: 0x00A3D4EC
 		[NullableContext(0)]
 		private UniTask<EPlayerInputActionResult> ExecuteActionImp([Nullable(1)] WuWaGoGrid hitGrid)
 		{
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <ExecuteActionImp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FBDE RID: 195550 RVA: 0x00B0F378 File Offset: 0x00B0D578
+		// Token: 0x060243A8 RID: 148392 RVA: 0x00A3F338 File Offset: 0x00A3D538
 		[NullableContext(0)]
 		private UniTask<bool> TryHandleClimb([Nullable(1)] WuWaGoGrid hitGrid)
 		{
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <TryHandleClimb>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FBDF RID: 195551 RVA: 0x00B0F3C4 File Offset: 0x00B0D5C4
+		// Token: 0x060243A9 RID: 148393 RVA: 0x00A3F384 File Offset: 0x00A3D584
 		private UniTask RunInteraction(WuWaGoGrid grid)
 		{
 			MainControlRoleController.<RunInteraction>d__45 <RunInteraction>d__;
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <RunInteraction>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FBE0 RID: 195552 RVA: 0x00B0F410 File Offset: 0x00B0D610
+		// Token: 0x060243AA RID: 148394 RVA: 0x00A3F3D0 File Offset: 0x00A3D5D0
 		public UniTask PlayHintMoveAsync(Vector targetCoordinate)
 		{
 			MainControlRoleController.<PlayHintMoveAsync>d__46 <PlayHintMoveAsync>d__;
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <PlayHintMoveAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FBE1 RID: 195553 RVA: 0x00B0F45C File Offset: 0x00B0D65C
+		// Token: 0x060243AB RID: 148395 RVA: 0x00A3F41C File Offset: 0x00A3D61C
 		public UniTask PlayHintInteractAsync()
 		{
 			MainControlRoleController.<PlayHintInteractAsync>d__47 <PlayHintInteractAsync>d__;
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <PlayHintInteractAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FBE2 RID: 195554 RVA: 0x00B0F4A0 File Offset: 0x00B0D6A0
+		// Token: 0x060243AC RID: 148396 RVA: 0x00A3F460 File Offset: 0x00A3D660
 		private UniTask PlayPullRodInteractMontage(WuWaGoPullRodEntity pullRodEntity)
 		{
 			MainControlRoleController.<PlayPullRodInteractMontage>d__48 <PlayPullRodInteractMontage>d__;
@@ -361,7 +361,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <PlayPullRodInteractMontage>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FBE3 RID: 195555 RVA: 0x00B0F4EC File Offset: 0x00B0D6EC
+		// Token: 0x060243AD RID: 148397 RVA: 0x00A3F4AC File Offset: 0x00A3D6AC
 		private void StopPullRodInteractMontage(string reason)
 		{
 			UAnimMontage playingPullRodMontage = this.PlayingPullRodMontage;
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			actorAnimInstance.Montage_Stop(MainControlRoleController.PullRodMontageBlendOutTime, playingPullRodMontage);
 		}
 
-		// Token: 0x0602FBE4 RID: 195556 RVA: 0x00B0F540 File Offset: 0x00B0D740
+		// Token: 0x060243AE RID: 148398 RVA: 0x00A3F500 File Offset: 0x00A3D700
 		private void RefreshInteractionAvailable()
 		{
 			bool flag = this.ComputeInteractionAvailable();
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			EventSystem.Instance.Emit<bool>(EEventName.OnWuWaGoInteractionAvailable, flag);
 		}
 
-		// Token: 0x0602FBE5 RID: 195557 RVA: 0x00B0F578 File Offset: 0x00B0D778
+		// Token: 0x060243AF RID: 148399 RVA: 0x00A3F538 File Offset: 0x00A3D738
 		private bool ComputeInteractionAvailable()
 		{
 			if (!this.IsAcceptingInput)
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return gridById != null && this.IsPullRodGrid(gridById);
 		}
 
-		// Token: 0x0602FBE6 RID: 195558 RVA: 0x00B0F5B4 File Offset: 0x00B0D7B4
+		// Token: 0x060243B0 RID: 148400 RVA: 0x00A3F574 File Offset: 0x00A3D774
 		[NullableContext(2)]
 		private WuWaGoGrid RaycastToLinkGrid(int screenX, int screenY)
 		{
@@ -449,7 +449,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return null;
 		}
 
-		// Token: 0x0602FBE7 RID: 195559 RVA: 0x00B0F71C File Offset: 0x00B0D91C
+		// Token: 0x060243B1 RID: 148401 RVA: 0x00A3F6DC File Offset: 0x00A3D8DC
 		[return: Nullable(2)]
 		private WuWaGoGrid FindLinkGridByDirection(double dx, double dy, WuWaGoGrid standGrid)
 		{
@@ -503,7 +503,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return result;
 		}
 
-		// Token: 0x0602FBE8 RID: 195560 RVA: 0x00B0F8AC File Offset: 0x00B0DAAC
+		// Token: 0x060243B2 RID: 148402 RVA: 0x00A3F86C File Offset: 0x00A3DA6C
 		[return: TupleElementNames(new string[]
 		{
 			"X",
@@ -526,7 +526,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return new ValueTuple<float, float>?(new ValueTuple<float, float>(fvector2D.X, fvector2D.Y));
 		}
 
-		// Token: 0x0602FBE9 RID: 195561 RVA: 0x00B0F914 File Offset: 0x00B0DB14
+		// Token: 0x060243B3 RID: 148403 RVA: 0x00A3F8D4 File Offset: 0x00A3DAD4
 		[NullableContext(2)]
 		private AActor GetGameplayEntityRootActor(AActor actor)
 		{
@@ -547,13 +547,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return attachParentActor;
 		}
 
-		// Token: 0x0602FBEA RID: 195562 RVA: 0x00B0F952 File Offset: 0x00B0DB52
+		// Token: 0x060243B4 RID: 148404 RVA: 0x00A3F912 File Offset: 0x00A3DB12
 		private bool IsGameplayEntityActor(AActor actor)
 		{
 			return this.GetGameplayEntityRootActor(actor) != null;
 		}
 
-		// Token: 0x0602FBEB RID: 195563 RVA: 0x00B0F95E File Offset: 0x00B0DB5E
+		// Token: 0x060243B5 RID: 148405 RVA: 0x00A3F91E File Offset: 0x00A3DB1E
 		[NullableContext(2)]
 		private void UpdateGridHoverEffect(WuWaGoGrid grid)
 		{
@@ -570,7 +570,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.PlayGridHoverEffect(grid);
 		}
 
-		// Token: 0x0602FBEC RID: 195564 RVA: 0x00B0F984 File Offset: 0x00B0DB84
+		// Token: 0x060243B6 RID: 148406 RVA: 0x00A3F944 File Offset: 0x00A3DB44
 		private UniTask PlayGridHoverEffect(WuWaGoGrid grid)
 		{
 			MainControlRoleController.<PlayGridHoverEffect>d__58 <PlayGridHoverEffect>d__;
@@ -582,7 +582,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <PlayGridHoverEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FBED RID: 195565 RVA: 0x00B0F9D0 File Offset: 0x00B0DBD0
+		// Token: 0x060243B7 RID: 148407 RVA: 0x00A3F990 File Offset: 0x00A3DB90
 		private void ClearGridHoverEffect(bool immediately)
 		{
 			this.HoverEffectRequestSeq++;
@@ -594,7 +594,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.HoverGrid = null;
 		}
 
-		// Token: 0x0602FBEE RID: 195566 RVA: 0x00B0FA2C File Offset: 0x00B0DC2C
+		// Token: 0x060243B8 RID: 148408 RVA: 0x00A3F9EC File Offset: 0x00A3DBEC
 		[NullableContext(2)]
 		private void UpdateRedArrowHoverEffect(WuWaGoGrid grid)
 		{
@@ -612,7 +612,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.PlayRedArrowEffect(canAttackMonsterOnGrid);
 		}
 
-		// Token: 0x0602FBEF RID: 195567 RVA: 0x00B0FA68 File Offset: 0x00B0DC68
+		// Token: 0x060243B9 RID: 148409 RVA: 0x00A3FA28 File Offset: 0x00A3DC28
 		private UniTask PlayRedArrowEffect(WuWaGoRole monster)
 		{
 			MainControlRoleController.<PlayRedArrowEffect>d__61 <PlayRedArrowEffect>d__;
@@ -624,7 +624,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <PlayRedArrowEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FBF0 RID: 195568 RVA: 0x00B0FAB4 File Offset: 0x00B0DCB4
+		// Token: 0x060243BA RID: 148410 RVA: 0x00A3FA74 File Offset: 0x00A3DC74
 		private void ClearRedArrowEffect(bool immediately)
 		{
 			this.RedArrowEffectRequestSeq++;
@@ -636,14 +636,14 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.RedArrowHoverMonster = null;
 		}
 
-		// Token: 0x0602FBF1 RID: 195569 RVA: 0x00B0FB0F File Offset: 0x00B0DD0F
+		// Token: 0x060243BB RID: 148411 RVA: 0x00A3FACF File Offset: 0x00A3DCCF
 		private void ClearAllHoverEffects(bool immediately)
 		{
 			this.ClearGridHoverEffect(immediately);
 			this.ClearRedArrowEffect(immediately);
 		}
 
-		// Token: 0x0602FBF2 RID: 195570 RVA: 0x00B0FB20 File Offset: 0x00B0DD20
+		// Token: 0x060243BC RID: 148412 RVA: 0x00A3FAE0 File Offset: 0x00A3DCE0
 		[NullableContext(2)]
 		private WuWaGoRole GetCanAttackMonsterOnGrid(WuWaGoGrid grid)
 		{
@@ -663,7 +663,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return hostileRoleOnGrid;
 		}
 
-		// Token: 0x0602FBF3 RID: 195571 RVA: 0x00B0FB54 File Offset: 0x00B0DD54
+		// Token: 0x060243BD RID: 148413 RVA: 0x00A3FB14 File Offset: 0x00A3DD14
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -697,7 +697,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return list;
 		}
 
-		// Token: 0x0602FBF4 RID: 195572 RVA: 0x00B0FC34 File Offset: 0x00B0DE34
+		// Token: 0x060243BE RID: 148414 RVA: 0x00A3FBF4 File Offset: 0x00A3DDF4
 		private UniTask ShowLinkGrids()
 		{
 			MainControlRoleController.<ShowLinkGrids>d__66 <ShowLinkGrids>d__;
@@ -708,7 +708,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <ShowLinkGrids>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FBF5 RID: 195573 RVA: 0x00B0FC78 File Offset: 0x00B0DE78
+		// Token: 0x060243BF RID: 148415 RVA: 0x00A3FC38 File Offset: 0x00A3DE38
 		private void HideAllLinkGrid()
 		{
 			foreach (AActor aactor in this.CanMoveTipsApplique)
@@ -720,7 +720,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			}
 		}
 
-		// Token: 0x0602FBF6 RID: 195574 RVA: 0x00B0FCD4 File Offset: 0x00B0DED4
+		// Token: 0x060243C0 RID: 148416 RVA: 0x00A3FC94 File Offset: 0x00A3DE94
 		private Rotator CalcCanMoveTipsAppliqueWorldRotator(WuWaGoGrid grid, WuWaGoGrid curStandGrid, Transform originTransform, Rotator @out)
 		{
 			WuWaGoUtil.GetWorldPositionByCoordinate(originTransform, grid.Coordinate, this.TipsTargetWorldTemp);
@@ -758,7 +758,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return @out;
 		}
 
-		// Token: 0x0602FBF7 RID: 195575 RVA: 0x00B0FE8C File Offset: 0x00B0E08C
+		// Token: 0x060243C1 RID: 148417 RVA: 0x00A3FE4C File Offset: 0x00A3E04C
 		public override void OnRollbackRestore()
 		{
 			base.OnRollbackRestore();
@@ -782,7 +782,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.WaitActionFinishPromise = null;
 		}
 
-		// Token: 0x0602FBF8 RID: 195576 RVA: 0x00B0FF00 File Offset: 0x00B0E100
+		// Token: 0x060243C2 RID: 148418 RVA: 0x00A3FEC0 File Offset: 0x00A3E0C0
 		[return: Nullable(2)]
 		private WuWaGoPullRodEntity FindPullRodEntity(WuWaGoGrid grid)
 		{
@@ -794,23 +794,23 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return wuWaGoPullRodEntity;
 		}
 
-		// Token: 0x0602FBF9 RID: 195577 RVA: 0x00B0FF2A File Offset: 0x00B0E12A
+		// Token: 0x060243C3 RID: 148419 RVA: 0x00A3FEEA File Offset: 0x00A3E0EA
 		private bool IsPullRodGrid(WuWaGoGrid grid)
 		{
 			return WuWaGoModel.Instance.GameData.GetGameplayEntityByGrid(grid, EWuWaGoEntityType.PullRod) is WuWaGoPullRodEntity;
 		}
 
-		// Token: 0x04019C28 RID: 105512
+		// Token: 0x040142D8 RID: 82648
 		private readonly MoveCapability MoveCapability;
 
-		// Token: 0x04019C29 RID: 105513
+		// Token: 0x040142D9 RID: 82649
 		private readonly ClimbCapability ClimbCapability;
 
-		// Token: 0x04019C2A RID: 105514
+		// Token: 0x040142DA RID: 82650
 		[Nullable(2)]
 		private CustomPromise<UniTaskVoid> WaitActionFinishPromise;
 
-		// Token: 0x04019C2B RID: 105515
+		// Token: 0x040142DB RID: 82651
 		[Nullable(new byte[]
 		{
 			2,
@@ -818,75 +818,75 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 		})]
 		private List<WuWaGoGrid> LinkGrids;
 
-		// Token: 0x04019C2C RID: 105516
+		// Token: 0x040142DC RID: 82652
 		private bool IsAcceptingInput;
 
-		// Token: 0x04019C2D RID: 105517
+		// Token: 0x040142DD RID: 82653
 		private bool LastEmittedInteractionAvailable;
 
-		// Token: 0x04019C2E RID: 105518
+		// Token: 0x040142DE RID: 82654
 		[Nullable(2)]
 		private ScreenPositionTraceCapability ScreenTrace;
 
-		// Token: 0x04019C2F RID: 105519
+		// Token: 0x040142DF RID: 82655
 		private UKuroHitResult KuroHitResult = new UKuroHitResult();
 
-		// Token: 0x04019C30 RID: 105520
+		// Token: 0x040142E0 RID: 82656
 		private readonly Vector ScratchScreenPos = Vector.Create();
 
-		// Token: 0x04019C31 RID: 105521
+		// Token: 0x040142E1 RID: 82657
 		private readonly Vector HitActorCoordinate = Vector.Create();
 
-		// Token: 0x04019C32 RID: 105522
+		// Token: 0x040142E2 RID: 82658
 		[StaticVariableRuleIgnore]
 		private static readonly Rotator WorldRotationTemp = Rotator.Create();
 
-		// Token: 0x04019C33 RID: 105523
+		// Token: 0x040142E3 RID: 82659
 		[StaticVariableRuleIgnore]
 		private static readonly Rotator LocalRotationTemp = Rotator.Create();
 
-		// Token: 0x04019C34 RID: 105524
+		// Token: 0x040142E4 RID: 82660
 		[Nullable(2)]
 		private WuWaGoGrid HoverGrid;
 
-		// Token: 0x04019C35 RID: 105525
+		// Token: 0x040142E5 RID: 82661
 		private int HoverEffectHandle;
 
-		// Token: 0x04019C36 RID: 105526
+		// Token: 0x040142E6 RID: 82662
 		private int HoverEffectRequestSeq;
 
-		// Token: 0x04019C37 RID: 105527
+		// Token: 0x040142E7 RID: 82663
 		[Nullable(2)]
 		private WuWaGoRole RedArrowHoverMonster;
 
-		// Token: 0x04019C38 RID: 105528
+		// Token: 0x040142E8 RID: 82664
 		private int RedArrowEffectHandle;
 
-		// Token: 0x04019C39 RID: 105529
+		// Token: 0x040142E9 RID: 82665
 		private int RedArrowEffectRequestSeq;
 
-		// Token: 0x04019C3A RID: 105530
+		// Token: 0x040142EA RID: 82666
 		private readonly List<AActor> CanMoveTipsApplique = new List<AActor>();
 
-		// Token: 0x04019C3B RID: 105531
+		// Token: 0x040142EB RID: 82667
 		private readonly Vector TipsForwardTemp = Vector.Create();
 
-		// Token: 0x04019C3C RID: 105532
+		// Token: 0x040142EC RID: 82668
 		private readonly Vector TipsNormalLocalTemp = Vector.Create();
 
-		// Token: 0x04019C3D RID: 105533
+		// Token: 0x040142ED RID: 82669
 		private readonly Vector TipsNormalWorldTemp = Vector.Create();
 
-		// Token: 0x04019C3E RID: 105534
+		// Token: 0x040142EE RID: 82670
 		private readonly Vector TipsTargetWorldTemp = Vector.Create();
 
-		// Token: 0x04019C3F RID: 105535
+		// Token: 0x040142EF RID: 82671
 		private readonly Vector TipsSelfWorldTemp = Vector.Create();
 
-		// Token: 0x04019C40 RID: 105536
+		// Token: 0x040142F0 RID: 82672
 		private static readonly float PullRodMontageBlendOutTime = 0.1f;
 
-		// Token: 0x04019C41 RID: 105537
+		// Token: 0x040142F1 RID: 82673
 		[Nullable(2)]
 		private UAnimMontage PlayingPullRodMontage;
 	}

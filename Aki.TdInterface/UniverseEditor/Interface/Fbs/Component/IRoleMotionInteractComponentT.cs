@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200587A RID: 22650
+	// Token: 0x02005E87 RID: 24199
 	public class IRoleMotionInteractComponentT
 	{
-		// Token: 0x1700A96A RID: 43370
-		// (get) Token: 0x060262AA RID: 156330 RVA: 0x00543209 File Offset: 0x00541409
-		// (set) Token: 0x060262AB RID: 156331 RVA: 0x00543211 File Offset: 0x00541411
+		// Token: 0x1700B29A RID: 45722
+		// (get) Token: 0x0602880C RID: 165900 RVA: 0x00589D55 File Offset: 0x00587F55
+		// (set) Token: 0x0602880D RID: 165901 RVA: 0x00589D5D File Offset: 0x00587F5D
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A96B RID: 43371
-		// (get) Token: 0x060262AC RID: 156332 RVA: 0x0054321A File Offset: 0x0054141A
-		// (set) Token: 0x060262AD RID: 156333 RVA: 0x00543222 File Offset: 0x00541422
+		// Token: 0x1700B29B RID: 45723
+		// (get) Token: 0x0602880E RID: 165902 RVA: 0x00589D66 File Offset: 0x00587F66
+		// (set) Token: 0x0602880F RID: 165903 RVA: 0x00589D6E File Offset: 0x00587F6E
 		public IPetalGrabRoleMotionInteractT MotionInteractConfig { get; set; }
 
-		// Token: 0x1700A96C RID: 43372
-		// (get) Token: 0x060262AE RID: 156334 RVA: 0x0054322B File Offset: 0x0054142B
-		// (set) Token: 0x060262AF RID: 156335 RVA: 0x00543233 File Offset: 0x00541433
+		// Token: 0x1700B29C RID: 45724
+		// (get) Token: 0x06028810 RID: 165904 RVA: 0x00589D77 File Offset: 0x00587F77
+		// (set) Token: 0x06028811 RID: 165905 RVA: 0x00589D7F File Offset: 0x00587F7F
 		public byte NullMask { get; set; }
 
-		// Token: 0x060262B0 RID: 156336 RVA: 0x0054323C File Offset: 0x0054143C
+		// Token: 0x06028812 RID: 165906 RVA: 0x00589D88 File Offset: 0x00587F88
 		public IRoleMotionInteractComponentT()
 		{
 			this.Disabled = false;

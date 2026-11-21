@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D9F RID: 7583
+// Token: 0x02001261 RID: 4705
 public class FlySettlementView : UiViewBase
 {
-	// Token: 0x0600E631 RID: 58929 RVA: 0x003640E3 File Offset: 0x003622E3
+	// Token: 0x0600BA4F RID: 47695 RVA: 0x0036FD43 File Offset: 0x0036DF43
 	[NullableContext(1)]
 	public FlySettlementView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E632 RID: 58930 RVA: 0x003640F4 File Offset: 0x003622F4
+	// Token: 0x0600BA50 RID: 47696 RVA: 0x0036FD54 File Offset: 0x0036DF54
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -45,7 +45,7 @@ public class FlySettlementView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600E633 RID: 58931 RVA: 0x00364244 File Offset: 0x00362444
+	// Token: 0x0600BA51 RID: 47697 RVA: 0x0036FEA4 File Offset: 0x0036E0A4
 	protected override void OnStart()
 	{
 		FlySettlementViewParams flySettlementViewParams = this.OpenParam as FlySettlementViewParams;
@@ -85,57 +85,57 @@ public class FlySettlementView : UiViewBase
 		text2.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600E634 RID: 58932 RVA: 0x00364317 File Offset: 0x00362517
+	// Token: 0x0600BA52 RID: 47698 RVA: 0x0036FF77 File Offset: 0x0036E177
 	protected override void OnAfterDestroy()
 	{
 		this.OnCloseView(this.Result, this.IncId);
 	}
 
-	// Token: 0x0600E635 RID: 58933 RVA: 0x0036432B File Offset: 0x0036252B
+	// Token: 0x0600BA53 RID: 47699 RVA: 0x0036FF8B File Offset: 0x0036E18B
 	private void OnClickChallengeAgain()
 	{
 		this.Result = 1;
 		UiManager.Instance.CloseView(this.ViewInfo.Name, null);
 	}
 
-	// Token: 0x0600E636 RID: 58934 RVA: 0x0036434A File Offset: 0x0036254A
+	// Token: 0x0600BA54 RID: 47700 RVA: 0x0036FFAA File Offset: 0x0036E1AA
 	private void OnClickConfirm()
 	{
 		this.Result = 0;
 		UiManager.Instance.CloseView(this.ViewInfo.Name, null);
 	}
 
-	// Token: 0x0600E637 RID: 58935 RVA: 0x00364369 File Offset: 0x00362569
+	// Token: 0x0600BA55 RID: 47701 RVA: 0x0036FFC9 File Offset: 0x0036E1C9
 	private void OnCloseView(int result, int incId)
 	{
 		GeneralLogicTreeController.Instance.OpenSystemBoardResultRequest(result, incId);
 	}
 
-	// Token: 0x04006A88 RID: 27272
+	// Token: 0x04006B69 RID: 27497
 	private int Result;
 
-	// Token: 0x04006A89 RID: 27273
+	// Token: 0x04006B6A RID: 27498
 	private int IncId = -1;
 
-	// Token: 0x0200837C RID: 33660
+	// Token: 0x02007504 RID: 29956
 	private static class EViewComponent
 	{
-		// Token: 0x0402AD93 RID: 175507
+		// Token: 0x040260B9 RID: 155833
 		public const int ChallengeAgainBtn = 0;
 
-		// Token: 0x0402AD94 RID: 175508
+		// Token: 0x040260BA RID: 155834
 		public const int TexScore = 1;
 
-		// Token: 0x0402AD95 RID: 175509
+		// Token: 0x040260BB RID: 155835
 		public const int TxtNum = 2;
 
-		// Token: 0x0402AD96 RID: 175510
+		// Token: 0x040260BC RID: 155836
 		public const int ConfirmBtn = 3;
 
-		// Token: 0x0402AD97 RID: 175511
+		// Token: 0x040260BD RID: 155837
 		public const int NewRecordTexture = 4;
 
-		// Token: 0x0402AD98 RID: 175512
+		// Token: 0x040260BE RID: 155838
 		public const int NewRecordText = 5;
 	}
 }

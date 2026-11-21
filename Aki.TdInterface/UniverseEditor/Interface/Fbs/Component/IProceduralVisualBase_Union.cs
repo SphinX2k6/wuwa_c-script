@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005793 RID: 22419
+	// Token: 0x02005D9A RID: 23962
 	public enum IProceduralVisualBase_Union : byte
 	{
-		// Token: 0x0400EC45 RID: 60485
+		// Token: 0x0400F930 RID: 63792
 		NONE,
-		// Token: 0x0400EC46 RID: 60486
+		// Token: 0x0400F931 RID: 63793
 		IProceduralVisualBase,
-		// Token: 0x0400EC47 RID: 60487
+		// Token: 0x0400F932 RID: 63794
 		IProceduralVisualLookAt,
-		// Token: 0x0400EC48 RID: 60488
+		// Token: 0x0400F933 RID: 63795
 		ISearchlightRotate
 	}
 }

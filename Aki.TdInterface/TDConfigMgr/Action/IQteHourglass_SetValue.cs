@@ -4,21 +4,21 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D7B RID: 7547
+	// Token: 0x02001F8C RID: 8076
 	public class IQteHourglass_SetValue
 	{
-		// Token: 0x04006143 RID: 24899
+		// Token: 0x040066BF RID: 26303
 		public ESimpleGameplayType Type;
 
-		// Token: 0x04006144 RID: 24900
+		// Token: 0x040066C0 RID: 26304
 		[Nullable(2)]
 		public List<int> QteIds;
 
-		// Token: 0x04006145 RID: 24901
+		// Token: 0x040066C1 RID: 26305
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IQteHourglassConfig> QteConfigs;
 	}

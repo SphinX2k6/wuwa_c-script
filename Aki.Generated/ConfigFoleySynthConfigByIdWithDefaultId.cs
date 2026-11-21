@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000348 RID: 840
+	// Token: 0x0200035D RID: 861
 	public class ConfigFoleySynthConfigByIdWithDefaultId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060013B5 RID: 5045 RVA: 0x000C8D6C File Offset: 0x000C6F6C
+		// Token: 0x06001433 RID: 5171 RVA: 0x000CF278 File Offset: 0x000CD478
 		static ConfigFoleySynthConfigByIdWithDefaultId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFoleySynthConfigByIdWithDefaultId.CreateStaticDefaultValue), new Action(ConfigFoleySynthConfigByIdWithDefaultId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060013B6 RID: 5046 RVA: 0x000C8D8C File Offset: 0x000C6F8C
+		// Token: 0x06001434 RID: 5172 RVA: 0x000CF298 File Offset: 0x000CD498
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFoleySynthConfigByIdWithDefaultId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060013B7 RID: 5047 RVA: 0x000C8E0B File Offset: 0x000C700B
+		// Token: 0x06001435 RID: 5173 RVA: 0x000CF317 File Offset: 0x000CD517
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFoleySynthConfigByIdWithDefaultId.LogPair = null;
 			ConfigFoleySynthConfigByIdWithDefaultId.HandleId = 0;
 		}
 
-		// Token: 0x060013B8 RID: 5048 RVA: 0x000C8E19 File Offset: 0x000C7019
+		// Token: 0x06001436 RID: 5174 RVA: 0x000CF325 File Offset: 0x000CD525
 		public static void Init()
 		{
 			ConfigFoleySynthConfigByIdWithDefaultId.HandleId = ConfigCommon.InitDataStatement(ConfigFoleySynthConfigByIdWithDefaultId.HandleId, "db_entity_audio.db", "select BinData from `FoleySynthConfig` where id = ? AND (SELECT count() from `FoleySynthConfig` WHERE id = ?) <= 0 OR id = ? AND (SELECT count(0) from `FoleySynthConfig` WHERE id = ?) >0;");
 		}
 
-		// Token: 0x060013B9 RID: 5049 RVA: 0x000C8E34 File Offset: 0x000C7034
+		// Token: 0x06001437 RID: 5175 RVA: 0x000CF340 File Offset: 0x000CD540
 		public static FoleySynthConfig? GetConfig(int p0Id, int p1Id, int p2Id, int p3Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFoleySynthConfigByIdWithDefaultId.HandleId, ConfigFoleySynthConfigByIdWithDefaultId.LogPair))
@@ -103,22 +103,22 @@ namespace Aki.Config
 			return new FoleySynthConfig?(rootAsFoleySynthConfig);
 		}
 
-		// Token: 0x040016DC RID: 5852
+		// Token: 0x0400176F RID: 5999
 		private const string DB = "db_entity_audio.db";
 
-		// Token: 0x040016DD RID: 5853
+		// Token: 0x04001770 RID: 6000
 		private const string FILE = "y.音频组件配置.xlsx";
 
-		// Token: 0x040016DE RID: 5854
+		// Token: 0x04001771 RID: 6001
 		private const string TABLE = "FoleySynthConfig";
 
-		// Token: 0x040016DF RID: 5855
+		// Token: 0x04001772 RID: 6002
 		private const string COMMAND = "select BinData from `FoleySynthConfig` where id = ? AND (SELECT count() from `FoleySynthConfig` WHERE id = ?) <= 0 OR id = ? AND (SELECT count(0) from `FoleySynthConfig` WHERE id = ?) >0;";
 
-		// Token: 0x040016E0 RID: 5856
+		// Token: 0x04001773 RID: 6003
 		private const string KEY_PREFIX = "FoleySynthConfigByIdWithDefaultId";
 
-		// Token: 0x040016E1 RID: 5857
+		// Token: 0x04001774 RID: 6004
 		[Nullable(new byte[]
 		{
 			2,
@@ -128,7 +128,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040016E2 RID: 5858
+		// Token: 0x04001775 RID: 6005
 		private static int HandleId;
 	}
 }

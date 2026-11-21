@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064D8 RID: 25816
+	// Token: 0x02006B43 RID: 27459
 	public class IControlTrackingOtherT
 	{
-		// Token: 0x1700C01A RID: 49178
-		// (get) Token: 0x0602CC8E RID: 183438 RVA: 0x006278B7 File Offset: 0x00625AB7
-		// (set) Token: 0x0602CC8F RID: 183439 RVA: 0x006278BF File Offset: 0x00625ABF
+		// Token: 0x1700C9A7 RID: 51623
+		// (get) Token: 0x0602F412 RID: 193554 RVA: 0x006739DF File Offset: 0x00671BDF
+		// (set) Token: 0x0602F413 RID: 193555 RVA: 0x006739E7 File Offset: 0x00671BE7
 		public EControlTrackingType Type { get; set; }
 
-		// Token: 0x1700C01B RID: 49179
-		// (get) Token: 0x0602CC90 RID: 183440 RVA: 0x006278C8 File Offset: 0x00625AC8
-		// (set) Token: 0x0602CC91 RID: 183441 RVA: 0x006278D0 File Offset: 0x00625AD0
+		// Token: 0x1700C9A8 RID: 51624
+		// (get) Token: 0x0602F414 RID: 193556 RVA: 0x006739F0 File Offset: 0x00671BF0
+		// (set) Token: 0x0602F415 RID: 193557 RVA: 0x006739F8 File Offset: 0x00671BF8
 		public List<int> Entities { get; set; }
 
-		// Token: 0x0602CC92 RID: 183442 RVA: 0x006278D9 File Offset: 0x00625AD9
+		// Token: 0x0602F416 RID: 193558 RVA: 0x00673A01 File Offset: 0x00671C01
 		public IControlTrackingOtherT()
 		{
 			this.Type = EControlTrackingType.Self;

@@ -2,24 +2,24 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B4D RID: 15181
+	// Token: 0x02003F4F RID: 16207
 	public enum TBvbCardFilter : byte
 	{
-		// Token: 0x0400B036 RID: 45110
+		// Token: 0x0400B9A3 RID: 47523
 		NONE,
-		// Token: 0x0400B037 RID: 45111
+		// Token: 0x0400B9A4 RID: 47524
 		IBvbCardFilterCheckHasBattleFactor,
-		// Token: 0x0400B038 RID: 45112
+		// Token: 0x0400B9A5 RID: 47525
 		IBvbCardFilterCheckHasOptimalFactor,
-		// Token: 0x0400B039 RID: 45113
+		// Token: 0x0400B9A6 RID: 47526
 		IBvbCardFilterCheckIsCapableToEvolve,
-		// Token: 0x0400B03A RID: 45114
+		// Token: 0x0400B9A7 RID: 47527
 		IBvbCardFilterCheckIsCore,
-		// Token: 0x0400B03B RID: 45115
+		// Token: 0x0400B9A8 RID: 47528
 		IBvbCardFilterCompareActiveSkillTag,
-		// Token: 0x0400B03C RID: 45116
+		// Token: 0x0400B9A9 RID: 47529
 		IBvbCardFilterCompareCardType,
-		// Token: 0x0400B03D RID: 45117
+		// Token: 0x0400B9AA RID: 47530
 		IBvbCardFilterCompareCost
 	}
 }

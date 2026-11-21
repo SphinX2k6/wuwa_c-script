@@ -5,17 +5,17 @@ using System.Runtime.InteropServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x020018EE RID: 6382
+// Token: 0x02000DA7 RID: 3495
 public class ItemTipsCharacterComponent : TipsBaseSubComponent
 {
-	// Token: 0x0600BB08 RID: 47880 RVA: 0x002A58DC File Offset: 0x002A3ADC
+	// Token: 0x06008EF2 RID: 36594 RVA: 0x002B004C File Offset: 0x002AE24C
 	[NullableContext(1)]
 	public ItemTipsCharacterComponent(UUIItem rootUiItem) : base(rootUiItem)
 	{
 		base.CreateThenShowByResourceIdAsync("UiItem_TipsRole", rootUiItem, false);
 	}
 
-	// Token: 0x0600BB09 RID: 47881 RVA: 0x002A58F4 File Offset: 0x002A3AF4
+	// Token: 0x06008EF3 RID: 36595 RVA: 0x002B0064 File Offset: 0x002AE264
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -33,13 +33,13 @@ public class ItemTipsCharacterComponent : TipsBaseSubComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BB0A RID: 47882 RVA: 0x002A599F File Offset: 0x002A3B9F
+	// Token: 0x06008EF4 RID: 36596 RVA: 0x002B010F File Offset: 0x002AE30F
 	protected override void OnStart()
 	{
 		base.GetItem(3).SetUIActive(false);
 	}
 
-	// Token: 0x0600BB0B RID: 47883 RVA: 0x002A59AE File Offset: 0x002A3BAE
+	// Token: 0x06008EF5 RID: 36597 RVA: 0x002B011E File Offset: 0x002AE31E
 	protected override void OnBeforeDestroy()
 	{
 		if (this.Data != null)
@@ -49,7 +49,7 @@ public class ItemTipsCharacterComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600BB0C RID: 47884 RVA: 0x002A59CC File Offset: 0x002A3BCC
+	// Token: 0x06008EF6 RID: 36598 RVA: 0x002B013C File Offset: 0x002AE33C
 	[NullableContext(1)]
 	public override void Refresh(ItemTipsData data)
 	{
@@ -73,23 +73,23 @@ public class ItemTipsCharacterComponent : TipsBaseSubComponent
 		action();
 	}
 
-	// Token: 0x040054F3 RID: 21747
+	// Token: 0x0400559E RID: 21918
 	[Nullable(2)]
 	private TipsCharacterData Data;
 
-	// Token: 0x02007E62 RID: 32354
+	// Token: 0x02006FE9 RID: 28649
 	private class EChildType
 	{
-		// Token: 0x040295AF RID: 169391
+		// Token: 0x040248DC RID: 149724
 		public const int ElementText = 0;
 
-		// Token: 0x040295B0 RID: 169392
+		// Token: 0x040248DD RID: 149725
 		public const int ElementTexture = 1;
 
-		// Token: 0x040295B1 RID: 169393
+		// Token: 0x040248DE RID: 149726
 		public const int BackgroundText = 2;
 
-		// Token: 0x040295B2 RID: 169394
+		// Token: 0x040248DF RID: 149727
 		public const int GetWayItem = 3;
 	}
 }

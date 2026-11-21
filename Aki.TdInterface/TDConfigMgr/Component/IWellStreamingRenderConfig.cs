@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007DF RID: 2015
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000882 RID: 2178
 	public class IWellStreamingRenderConfig
 	{
-		// Token: 0x06002BC5 RID: 11205 RVA: 0x00072088 File Offset: 0x00070288
+		// Token: 0x06002EF5 RID: 12021 RVA: 0x000793EC File Offset: 0x000775EC
 		private IWellStreamingRenderConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002BC6 RID: 11206 RVA: 0x000720C0 File Offset: 0x000702C0
+		// Token: 0x06002EF6 RID: 12022 RVA: 0x00079424 File Offset: 0x00077624
 		public static IWellStreamingRenderConfig Create([Nullable(2)] IWellStreamingRenderConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002BC7 RID: 11207 RVA: 0x000720D3 File Offset: 0x000702D3
+		// Token: 0x06002EF7 RID: 12023 RVA: 0x00079437 File Offset: 0x00077637
 		public static IWellStreamingRenderConfig CreateFromSetValue([Nullable(2)] IWellStreamingRenderConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002BC8 RID: 11208 RVA: 0x000720E6 File Offset: 0x000702E6
+		// Token: 0x06002EF8 RID: 12024 RVA: 0x0007944A File Offset: 0x0007764A
 		public IWellStreamingRenderConfig_SetValue ToSetValue()
 		{
 			return new IWellStreamingRenderConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B77 RID: 2935
-		// (get) Token: 0x06002BC9 RID: 11209 RVA: 0x00072108 File Offset: 0x00070308
-		// (set) Token: 0x06002BCA RID: 11210 RVA: 0x00072169 File Offset: 0x00070369
+		// Token: 0x17000C3A RID: 3130
+		// (get) Token: 0x06002EF9 RID: 12025 RVA: 0x0007946C File Offset: 0x0007766C
+		// (set) Token: 0x06002EFA RID: 12026 RVA: 0x000794CD File Offset: 0x000776CD
 		public virtual IWellStreamingRenderSelfConfig SelfConfig
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B78 RID: 2936
-		// (get) Token: 0x06002BCB RID: 11211 RVA: 0x00072180 File Offset: 0x00070380
-		// (set) Token: 0x06002BCC RID: 11212 RVA: 0x000721E1 File Offset: 0x000703E1
+		// Token: 0x17000C3B RID: 3131
+		// (get) Token: 0x06002EFB RID: 12027 RVA: 0x000794E4 File Offset: 0x000776E4
+		// (set) Token: 0x06002EFC RID: 12028 RVA: 0x00079545 File Offset: 0x00077745
 		public virtual IWellStreamingRenderPointConfig AsStreamPointConfig
 		{
 			get
@@ -120,24 +118,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D09 RID: 7433
+		// Token: 0x04001F15 RID: 7957
 		[Nullable(2)]
 		protected IWellStreamingRenderConfig FbInstance;
 
-		// Token: 0x04001D0A RID: 7434
+		// Token: 0x04001F16 RID: 7958
 		[Nullable(2)]
 		protected IWellStreamingRenderConfig_SetValue PocoInterface;
 
-		// Token: 0x04001D0B RID: 7435
+		// Token: 0x04001F17 RID: 7959
 		private IWellStreamingRenderSelfConfig _SelfConfigCache;
 
-		// Token: 0x04001D0C RID: 7436
+		// Token: 0x04001F18 RID: 7960
 		private bool _SelfConfigInited;
 
-		// Token: 0x04001D0D RID: 7437
+		// Token: 0x04001F19 RID: 7961
 		private IWellStreamingRenderPointConfig _AsStreamPointConfigCache;
 
-		// Token: 0x04001D0E RID: 7438
+		// Token: 0x04001F1A RID: 7962
 		private bool _AsStreamPointConfigInited;
 	}
 }

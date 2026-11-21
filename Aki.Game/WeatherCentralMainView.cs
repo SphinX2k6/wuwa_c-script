@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -18,17 +17,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D20 RID: 11552
+// Token: 0x0200227A RID: 8826
 [NullableContext(1)]
 [Nullable(0)]
 public class WeatherCentralMainView : UiViewBase
 {
-	// Token: 0x060184A3 RID: 99491 RVA: 0x0062E7FE File Offset: 0x0062C9FE
+	// Token: 0x06015D44 RID: 89412 RVA: 0x006547F2 File Offset: 0x006529F2
 	public WeatherCentralMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060184A4 RID: 99492 RVA: 0x0062E810 File Offset: 0x0062CA10
+	// Token: 0x06015D45 RID: 89413 RVA: 0x00654804 File Offset: 0x00652A04
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -54,7 +53,7 @@ public class WeatherCentralMainView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060184A5 RID: 99493 RVA: 0x0062E940 File Offset: 0x0062CB40
+	// Token: 0x06015D46 RID: 89414 RVA: 0x00654934 File Offset: 0x00652B34
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeatherCentralMainView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -65,7 +64,7 @@ public class WeatherCentralMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060184A6 RID: 99494 RVA: 0x0062E984 File Offset: 0x0062CB84
+	// Token: 0x06015D47 RID: 89415 RVA: 0x00654978 File Offset: 0x00652B78
 	protected override void OnStart()
 	{
 		PopupCaptionItem caption = this.Caption;
@@ -73,7 +72,7 @@ public class WeatherCentralMainView : UiViewBase
 		{
 			caption.SetCloseCallBack(delegate
 			{
-				this.CloseMe(null);
+				base.CloseMe(null);
 			});
 		}
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(7);
@@ -98,40 +97,45 @@ public class WeatherCentralMainView : UiViewBase
 			this.RightItems.Add(weatherToggleItem2.GetRootItem());
 		}
 		int index = 0;
-		IEnumerable<WeatherSwitch> weatherSwitchConfigAll = WeatherModuleConfig.Instance.GetWeatherSwitchConfigAll();
-		int? configId = this.OpenParam as int?;
-		if (configId == null)
+		IReadOnlyList<WeatherSwitch> weatherSwitchConfigAll = WeatherModuleConfig.Instance.GetWeatherSwitchConfigAll();
+		int? num = this.OpenParam as int?;
+		if (num == null)
 		{
 			int currentWeatherId = WeatherModel.Instance.CurrentWeatherId;
-			configId = new int?(WeatherModel.Instance.GetSwitchConfigIdByWeatherId(currentWeatherId));
+			num = new int?(WeatherModel.Instance.GetSwitchConfigIdByWeatherId(currentWeatherId));
 		}
-		int num = weatherSwitchConfigAll.ToList<WeatherSwitch>().FindIndex(delegate(WeatherSwitch item)
+		int num2 = -1;
+		for (int i = 0; i < weatherSwitchConfigAll.Count; i++)
 		{
-			int id = item.Id;
-			int? configId = configId;
-			return id == configId.GetValueOrDefault() & configId != null;
-		});
-		if (num >= 0)
+			int id = weatherSwitchConfigAll[i].Id;
+			int? num3 = num;
+			if (id == num3.GetValueOrDefault() & num3 != null)
+			{
+				num2 = i;
+				break;
+			}
+		}
+		if (num2 >= 0)
 		{
-			index = num;
+			index = num2;
 		}
 		this.SelectToggle(index);
 		this.OnRedDotUpdate();
 	}
 
-	// Token: 0x060184A7 RID: 99495 RVA: 0x0062EB44 File Offset: 0x0062CD44
+	// Token: 0x06015D48 RID: 89416 RVA: 0x00654B50 File Offset: 0x00652D50
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnWeatherCentralRedDotUpdate, new Action(this.OnRedDotUpdate));
 	}
 
-	// Token: 0x060184A8 RID: 99496 RVA: 0x0062EB62 File Offset: 0x0062CD62
+	// Token: 0x06015D49 RID: 89417 RVA: 0x00654B6E File Offset: 0x00652D6E
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnWeatherCentralRedDotUpdate, new Action(this.OnRedDotUpdate));
 	}
 
-	// Token: 0x060184A9 RID: 99497 RVA: 0x0062EB80 File Offset: 0x0062CD80
+	// Token: 0x06015D4A RID: 89418 RVA: 0x00654B8C File Offset: 0x00652D8C
 	private void SelectToggle(int index)
 	{
 		if (index % 2 == 0)
@@ -155,24 +159,24 @@ public class WeatherCentralMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x060184AA RID: 99498 RVA: 0x0062EBD0 File Offset: 0x0062CDD0
+	// Token: 0x06015D4B RID: 89419 RVA: 0x00654BDC File Offset: 0x00652DDC
 	private void OnRedDotUpdate()
 	{
 		GenericLayout<WeatherToggleItem, IWeatherToggleData> listLeft = this.ListLeft;
 		IEnumerable<WeatherToggleItem> enumerable = (listLeft != null) ? listLeft.GetLayoutItemList() : null;
-		foreach (WeatherToggleItem weatherToggleItem in (enumerable ?? Enumerable.Empty<WeatherToggleItem>()))
+		foreach (WeatherToggleItem weatherToggleItem in (enumerable ?? Array.Empty<WeatherToggleItem>()))
 		{
 			weatherToggleItem.RefreshRedDot();
 		}
 		GenericLayout<WeatherToggleItem, IWeatherToggleData> listRight = this.ListRight;
 		enumerable = ((listRight != null) ? listRight.GetLayoutItemList() : null);
-		foreach (WeatherToggleItem weatherToggleItem2 in (enumerable ?? Enumerable.Empty<WeatherToggleItem>()))
+		foreach (WeatherToggleItem weatherToggleItem2 in (enumerable ?? Array.Empty<WeatherToggleItem>()))
 		{
 			weatherToggleItem2.RefreshRedDot();
 		}
 	}
 
-	// Token: 0x060184AB RID: 99499 RVA: 0x0062EC84 File Offset: 0x0062CE84
+	// Token: 0x06015D4C RID: 89420 RVA: 0x00654C90 File Offset: 0x00652E90
 	private UniTask InitializeWeatherToggleList()
 	{
 		WeatherCentralMainView.<InitializeWeatherToggleList>d__17 <InitializeWeatherToggleList>d__;
@@ -183,7 +187,7 @@ public class WeatherCentralMainView : UiViewBase
 		return <InitializeWeatherToggleList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060184AC RID: 99500 RVA: 0x0062ECC8 File Offset: 0x0062CEC8
+	// Token: 0x06015D4D RID: 89421 RVA: 0x00654CD4 File Offset: 0x00652ED4
 	private WeatherToggleItem CreateLeftWeatherToggleItem()
 	{
 		WeatherToggleItem item = new WeatherToggleItem();
@@ -195,7 +199,7 @@ public class WeatherCentralMainView : UiViewBase
 		return item;
 	}
 
-	// Token: 0x060184AD RID: 99501 RVA: 0x0062ED24 File Offset: 0x0062CF24
+	// Token: 0x06015D4E RID: 89422 RVA: 0x00654D30 File Offset: 0x00652F30
 	private WeatherToggleItem CreateRightWeatherToggleItem()
 	{
 		WeatherToggleItem item = new WeatherToggleItem();
@@ -207,7 +211,7 @@ public class WeatherCentralMainView : UiViewBase
 		return item;
 	}
 
-	// Token: 0x060184AE RID: 99502 RVA: 0x0062ED80 File Offset: 0x0062CF80
+	// Token: 0x06015D4F RID: 89423 RVA: 0x00654D8C File Offset: 0x00652F8C
 	private void OnClickConfirm()
 	{
 		if (this.SelectedConfigId < 0)
@@ -274,7 +278,7 @@ public class WeatherCentralMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x060184AF RID: 99503 RVA: 0x0062EF54 File Offset: 0x0062D154
+	// Token: 0x06015D50 RID: 89424 RVA: 0x00654F60 File Offset: 0x00653160
 	private void ClickConfirm(int levelOneAreaId)
 	{
 		UiManager.Instance.ResetToBattleView(null);
@@ -290,7 +294,7 @@ public class WeatherCentralMainView : UiViewBase
 		WeatherModel.Instance.ObservatoryModule.AccelerateTime(levelOneAreaId, accelerateWeatherTime, new Action(this.OnAllSequencePlayCompleted), new Action(this.OnAccelerateTimeFinished));
 	}
 
-	// Token: 0x060184B0 RID: 99504 RVA: 0x0062F004 File Offset: 0x0062D204
+	// Token: 0x06015D51 RID: 89425 RVA: 0x00655010 File Offset: 0x00653210
 	private void OnAccelerateTimeFinished()
 	{
 		WeatherModel instance = WeatherModel.Instance;
@@ -302,13 +306,13 @@ public class WeatherCentralMainView : UiViewBase
 		TimeOfDayController.Instance.AdjustTime(second, SceneDateUpdateReason.PlayerOperate, 0U, true);
 	}
 
-	// Token: 0x060184B1 RID: 99505 RVA: 0x0062F03F File Offset: 0x0062D23F
+	// Token: 0x06015D52 RID: 89426 RVA: 0x0065504B File Offset: 0x0065324B
 	private void OnAllSequencePlayCompleted()
 	{
 		WeatherController.Instance.RequestSwitchWeather(this.SelectedConfigId).Forget();
 	}
 
-	// Token: 0x060184B2 RID: 99506 RVA: 0x0062F058 File Offset: 0x0062D258
+	// Token: 0x06015D53 RID: 89427 RVA: 0x00655064 File Offset: 0x00653264
 	private void OnToggleClick(bool isLeftSide, WeatherToggleItem item)
 	{
 		if (isLeftSide)
@@ -349,7 +353,7 @@ public class WeatherCentralMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x060184B3 RID: 99507 RVA: 0x0062F101 File Offset: 0x0062D301
+	// Token: 0x06015D54 RID: 89428 RVA: 0x0065510D File Offset: 0x0065330D
 	private bool CanExecuteChange(bool isLeftSide, int index)
 	{
 		if (isLeftSide)
@@ -361,7 +365,7 @@ public class WeatherCentralMainView : UiViewBase
 		return listRight == null || listRight.GetSelectedGridIndex() != index;
 	}
 
-	// Token: 0x060184B4 RID: 99508 RVA: 0x0062F138 File Offset: 0x0062D338
+	// Token: 0x06015D55 RID: 89429 RVA: 0x00655144 File Offset: 0x00653344
 	private void OnScrollValueChange(FVector2D inVector)
 	{
 		float num = 0.1f;
@@ -382,7 +386,7 @@ public class WeatherCentralMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x060184B5 RID: 99509 RVA: 0x0062F244 File Offset: 0x0062D444
+	// Token: 0x06015D56 RID: 89430 RVA: 0x00655250 File Offset: 0x00653450
 	private float[] CalculateCircularOffsets(List<UUIItem> items, float centerY, float radius)
 	{
 		List<float> list = new List<float>();
@@ -395,7 +399,7 @@ public class WeatherCentralMainView : UiViewBase
 		return list.ToArray();
 	}
 
-	// Token: 0x060184B6 RID: 99510 RVA: 0x0062F2CC File Offset: 0x0062D4CC
+	// Token: 0x06015D57 RID: 89431 RVA: 0x006552D8 File Offset: 0x006534D8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -428,11 +432,11 @@ public class WeatherCentralMainView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x0400B460 RID: 46176
+	// Token: 0x0400B7D5 RID: 47061
 	[Nullable(2)]
 	private PopupCaptionItem Caption;
 
-	// Token: 0x0400B461 RID: 46177
+	// Token: 0x0400B7D6 RID: 47062
 	[Nullable(new byte[]
 	{
 		2,
@@ -441,7 +445,7 @@ public class WeatherCentralMainView : UiViewBase
 	})]
 	private GenericLayout<WeatherToggleItem, IWeatherToggleData> ListLeft;
 
-	// Token: 0x0400B462 RID: 46178
+	// Token: 0x0400B7D7 RID: 47063
 	[Nullable(new byte[]
 	{
 		2,
@@ -450,15 +454,15 @@ public class WeatherCentralMainView : UiViewBase
 	})]
 	private GenericLayout<WeatherToggleItem, IWeatherToggleData> ListRight;
 
-	// Token: 0x0400B463 RID: 46179
+	// Token: 0x0400B7D8 RID: 47064
 	[Nullable(2)]
 	private WeatherCentralBottomItem BottomItem;
 
-	// Token: 0x0400B464 RID: 46180
+	// Token: 0x0400B7D9 RID: 47065
 	[Nullable(2)]
 	private UUIItem CircleItem;
 
-	// Token: 0x0400B465 RID: 46181
+	// Token: 0x0400B7DA RID: 47066
 	[Nullable(new byte[]
 	{
 		2,
@@ -466,7 +470,7 @@ public class WeatherCentralMainView : UiViewBase
 	})]
 	private List<UUIItem> LeftItems;
 
-	// Token: 0x0400B466 RID: 46182
+	// Token: 0x0400B7DB RID: 47067
 	[Nullable(new byte[]
 	{
 		2,
@@ -474,9 +478,9 @@ public class WeatherCentralMainView : UiViewBase
 	})]
 	private List<UUIItem> RightItems;
 
-	// Token: 0x0400B467 RID: 46183
+	// Token: 0x0400B7DC RID: 47068
 	private int SelectedConfigId = -1;
 
-	// Token: 0x0400B468 RID: 46184
+	// Token: 0x0400B7DD RID: 47069
 	private const int MAX_TOGGLE_COUNT = 8;
 }

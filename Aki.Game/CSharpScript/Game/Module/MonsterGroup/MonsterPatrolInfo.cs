@@ -8,32 +8,32 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MonsterGroup
 {
-	// Token: 0x020053C7 RID: 21447
+	// Token: 0x020043AA RID: 17322
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MonsterPatrolInfo : IStaticVariableResetter
 	{
-		// Token: 0x06036CBB RID: 224443 RVA: 0x00CF844E File Offset: 0x00CF664E
+		// Token: 0x0602BC01 RID: 179201 RVA: 0x00C474F6 File Offset: 0x00C456F6
 		static MonsterPatrolInfo()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MonsterPatrolInfo.CreateStaticDefaultValue), new Action(MonsterPatrolInfo.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06036CBC RID: 224444 RVA: 0x00CF846D File Offset: 0x00CF666D
+		// Token: 0x0602BC02 RID: 179202 RVA: 0x00C47515 File Offset: 0x00C45715
 		public static void CreateStaticDefaultValue()
 		{
 			MonsterPatrolInfo.CacheTrans = Transform.Create();
 		}
 
-		// Token: 0x06036CBD RID: 224445 RVA: 0x00CF8479 File Offset: 0x00CF6679
+		// Token: 0x0602BC03 RID: 179203 RVA: 0x00C47521 File Offset: 0x00C45721
 		public static void ResetStaticDefaultValue()
 		{
 			MonsterPatrolInfo.CacheTrans = null;
 		}
 
-		// Token: 0x170083BB RID: 33723
-		// (get) Token: 0x06036CBE RID: 224446 RVA: 0x00CF8481 File Offset: 0x00CF6681
-		// (set) Token: 0x06036CBF RID: 224447 RVA: 0x00CF8489 File Offset: 0x00CF6689
+		// Token: 0x17005787 RID: 22407
+		// (get) Token: 0x0602BC04 RID: 179204 RVA: 0x00C47529 File Offset: 0x00C45729
+		// (set) Token: 0x0602BC05 RID: 179205 RVA: 0x00C47531 File Offset: 0x00C45731
 		public EGroupPatrolState GroupPatrolState
 		{
 			get
@@ -50,8 +50,8 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x170083BC RID: 33724
-		// (get) Token: 0x06036CC0 RID: 224448 RVA: 0x00CF849C File Offset: 0x00CF669C
+		// Token: 0x17005788 RID: 22408
+		// (get) Token: 0x0602BC06 RID: 179206 RVA: 0x00C47544 File Offset: 0x00C45744
 		public EGroupPatrolMemberRole GroupPatrolRole
 		{
 			get
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CC1 RID: 224449 RVA: 0x00CF84AC File Offset: 0x00CF66AC
+		// Token: 0x0602BC07 RID: 179207 RVA: 0x00C47554 File Offset: 0x00C45754
 		public MonsterPatrolInfo(int id, CharacterActorComponent actorComp, MonsterGroupInfo group)
 		{
 			this.PbDataId = id;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			};
 		}
 
-		// Token: 0x06036CC2 RID: 224450 RVA: 0x00CF853C File Offset: 0x00CF673C
+		// Token: 0x0602BC08 RID: 179208 RVA: 0x00C475E4 File Offset: 0x00C457E4
 		public void ResetRelativeLocation()
 		{
 			IEntityData entityData = CreatureModel.Instance.GetEntityData(new int?(this.PbDataId), null);
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			relativeLocation.Set(inX, inY, (double)num2.GetValueOrDefault());
 		}
 
-		// Token: 0x06036CC3 RID: 224451 RVA: 0x00CF8615 File Offset: 0x00CF6815
+		// Token: 0x0602BC09 RID: 179209 RVA: 0x00C476BD File Offset: 0x00C458BD
 		public void SetIsCaptain(string reason)
 		{
 			BaseGroupAiComponent groupAiComp = this.GroupAiComp;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.IsCaptain = true;
 		}
 
-		// Token: 0x06036CC4 RID: 224452 RVA: 0x00CF8634 File Offset: 0x00CF6834
+		// Token: 0x0602BC0A RID: 179210 RVA: 0x00C476DC File Offset: 0x00C458DC
 		public void CalculateRelativeLocation(Vector loc, Quat rot)
 		{
 			if (this.IsCaptain)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.RelativeLocation.Z = 0.0;
 		}
 
-		// Token: 0x06036CC5 RID: 224453 RVA: 0x00CF8688 File Offset: 0x00CF6888
+		// Token: 0x0602BC0B RID: 179211 RVA: 0x00C47730 File Offset: 0x00C45930
 		public void SetPauseLocation(Vector vec, [Nullable(2)] string context = null)
 		{
 			this.PauseLocation.DeepCopy(vec);
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CC6 RID: 224454 RVA: 0x00CF86DC File Offset: 0x00CF68DC
+		// Token: 0x0602BC0C RID: 179212 RVA: 0x00C47784 File Offset: 0x00C45984
 		private string GroupPatrolStateToString(EGroupPatrolState state)
 		{
 			switch (state)
@@ -179,46 +179,46 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x0401CEBD RID: 118461
+		// Token: 0x04017955 RID: 96597
 		public int PbDataId;
 
-		// Token: 0x0401CEBE RID: 118462
+		// Token: 0x04017956 RID: 96598
 		public int EntityId;
 
-		// Token: 0x0401CEBF RID: 118463
+		// Token: 0x04017957 RID: 96599
 		public bool IsCaptain;
 
-		// Token: 0x0401CEC0 RID: 118464
+		// Token: 0x04017958 RID: 96600
 		public Vector PauseLocation = Vector.Create();
 
-		// Token: 0x0401CEC1 RID: 118465
+		// Token: 0x04017959 RID: 96601
 		public Vector PauseDirection = Vector.Create();
 
-		// Token: 0x0401CEC2 RID: 118466
+		// Token: 0x0401795A RID: 96602
 		public Vector RelativeLocation = Vector.Create();
 
-		// Token: 0x0401CEC3 RID: 118467
+		// Token: 0x0401795B RID: 96603
 		public readonly HashSet<int> PatrolMoveIgnoreEntityIds = new HashSet<int>();
 
-		// Token: 0x0401CEC4 RID: 118468
+		// Token: 0x0401795C RID: 96604
 		[Nullable(2)]
 		public MonsterGroupInfo Group;
 
-		// Token: 0x0401CEC5 RID: 118469
+		// Token: 0x0401795D RID: 96605
 		public readonly Func<Vector> GetPatrolTargetPosition;
 
-		// Token: 0x0401CEC6 RID: 118470
+		// Token: 0x0401795E RID: 96606
 		[Nullable(2)]
 		public CharacterActorComponent ActorComp;
 
-		// Token: 0x0401CEC7 RID: 118471
+		// Token: 0x0401795F RID: 96607
 		[Nullable(2)]
 		public BaseGroupAiComponent GroupAiComp;
 
-		// Token: 0x0401CEC8 RID: 118472
+		// Token: 0x04017960 RID: 96608
 		private EGroupPatrolState GroupPatrolStateInternal;
 
-		// Token: 0x0401CEC9 RID: 118473
+		// Token: 0x04017961 RID: 96609
 		private static Transform CacheTrans;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001958 RID: 6488
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AE3 RID: 6883
 	public class ICustomShowUi
 	{
-		// Token: 0x06008AFD RID: 35581 RVA: 0x00147004 File Offset: 0x00145204
+		// Token: 0x06009231 RID: 37425 RVA: 0x00156A00 File Offset: 0x00154C00
 		private ICustomShowUi_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008AFE RID: 35582 RVA: 0x0014703C File Offset: 0x0014523C
+		// Token: 0x06009232 RID: 37426 RVA: 0x00156A38 File Offset: 0x00154C38
 		public static ICustomShowUi Create([Nullable(2)] ICustomShowUi instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008AFF RID: 35583 RVA: 0x0014704F File Offset: 0x0014524F
+		// Token: 0x06009233 RID: 37427 RVA: 0x00156A4B File Offset: 0x00154C4B
 		public static ICustomShowUi CreateFromSetValue([Nullable(2)] ICustomShowUi_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B00 RID: 35584 RVA: 0x00147062 File Offset: 0x00145262
+		// Token: 0x06009234 RID: 37428 RVA: 0x00156A5E File Offset: 0x00154C5E
 		public ICustomShowUi_SetValue ToSetValue()
 		{
 			return new ICustomShowUi_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CCF RID: 11471
-		// (get) Token: 0x06008B01 RID: 35585 RVA: 0x00147084 File Offset: 0x00145284
-		// (set) Token: 0x06008B02 RID: 35586 RVA: 0x001470E5 File Offset: 0x001452E5
+		// Token: 0x17002ED0 RID: 11984
+		// (get) Token: 0x06009235 RID: 37429 RVA: 0x00156A80 File Offset: 0x00154C80
+		// (set) Token: 0x06009236 RID: 37430 RVA: 0x00156AE1 File Offset: 0x00154CE1
 		[Nullable(2)]
 		public virtual ICustomScreenTextSetting TextSetting
 		{
@@ -93,9 +91,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CD0 RID: 11472
-		// (get) Token: 0x06008B03 RID: 35587 RVA: 0x001470FC File Offset: 0x001452FC
-		// (set) Token: 0x06008B04 RID: 35588 RVA: 0x00147136 File Offset: 0x00145336
+		// Token: 0x17002ED1 RID: 11985
+		// (get) Token: 0x06009237 RID: 37431 RVA: 0x00156AF8 File Offset: 0x00154CF8
+		// (set) Token: 0x06009238 RID: 37432 RVA: 0x00156B32 File Offset: 0x00154D32
 		public virtual bool? IsHideCircle
 		{
 			get
@@ -117,18 +115,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040056C4 RID: 22212
+		// Token: 0x04005B17 RID: 23319
 		[Nullable(2)]
 		protected ICustomShowUi FbInstance;
 
-		// Token: 0x040056C5 RID: 22213
+		// Token: 0x04005B18 RID: 23320
 		[Nullable(2)]
 		protected ICustomShowUi_SetValue PocoInterface;
 
-		// Token: 0x040056C6 RID: 22214
+		// Token: 0x04005B19 RID: 23321
 		private ICustomScreenTextSetting _TextSettingCache;
 
-		// Token: 0x040056C7 RID: 22215
+		// Token: 0x04005B1A RID: 23322
 		private bool _TextSettingInited;
 	}
 }

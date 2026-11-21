@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D6B RID: 23915
+	// Token: 0x02004D4D RID: 19789
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MissionPanelStep : StepBaseItem
 	{
-		// Token: 0x0603CB92 RID: 248722 RVA: 0x00E94CC5 File Offset: 0x00E92EC5
+		// Token: 0x06031AEE RID: 203502 RVA: 0x00DE550D File Offset: 0x00DE370D
 		public MissionPanelStep(EMissionItemView viewId, int stepId) : base(viewId, stepId)
 		{
 		}
 
-		// Token: 0x0603CB93 RID: 248723 RVA: 0x00E94CDA File Offset: 0x00E92EDA
+		// Token: 0x06031AEF RID: 203503 RVA: 0x00DE5522 File Offset: 0x00DE3722
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(3, typeof(UUIItem)));
 		}
 
-		// Token: 0x0603CB94 RID: 248724 RVA: 0x00E94D18 File Offset: 0x00E92F18
+		// Token: 0x06031AF0 RID: 203504 RVA: 0x00DE5560 File Offset: 0x00DE3760
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MissionPanelStep.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB95 RID: 248725 RVA: 0x00E94D5C File Offset: 0x00E92F5C
+		// Token: 0x06031AF1 RID: 203505 RVA: 0x00DE55A4 File Offset: 0x00DE37A4
 		protected override void OnBeforeDestroy()
 		{
 			if (this.ChildSteps != null)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TitleSequencePlayer = null;
 		}
 
-		// Token: 0x0603CB96 RID: 248726 RVA: 0x00E94DD0 File Offset: 0x00E92FD0
+		// Token: 0x06031AF2 RID: 203506 RVA: 0x00DE5618 File Offset: 0x00DE3818
 		protected override void OnAfterShow()
 		{
 			this.TitleSequencePlayer.ResumeSequence();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB97 RID: 248727 RVA: 0x00E94E2C File Offset: 0x00E9302C
+		// Token: 0x06031AF3 RID: 203507 RVA: 0x00DE5674 File Offset: 0x00DE3874
 		protected override void OnAfterHide()
 		{
 			this.TitleSequencePlayer.PauseSequence();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB98 RID: 248728 RVA: 0x00E94E88 File Offset: 0x00E93088
+		// Token: 0x06031AF4 RID: 203508 RVA: 0x00DE56D0 File Offset: 0x00DE38D0
 		public override void OnTick(float delta)
 		{
 			if (!base.IsShowOrShowing)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB99 RID: 248729 RVA: 0x00E94EEC File Offset: 0x00E930EC
+		// Token: 0x06031AF5 RID: 203509 RVA: 0x00DE5734 File Offset: 0x00DE3934
 		public void Update()
 		{
 			base.UpdateByConfig();
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB9A RID: 248730 RVA: 0x00E94F40 File Offset: 0x00E93140
+		// Token: 0x06031AF6 RID: 203510 RVA: 0x00DE5788 File Offset: 0x00DE3988
 		public UniTask StartShow(IMissionItemViewShowData showData, bool bSkipAnim)
 		{
 			MissionPanelStep.<StartShow>d__13 <StartShow>d__;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <StartShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB9B RID: 248731 RVA: 0x00E94F94 File Offset: 0x00E93194
+		// Token: 0x06031AF7 RID: 203511 RVA: 0x00DE57DC File Offset: 0x00DE39DC
 		public override UniTask OnReset()
 		{
 			MissionPanelStep.<OnReset>d__14 <OnReset>d__;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnReset>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB9C RID: 248732 RVA: 0x00E94FD8 File Offset: 0x00E931D8
+		// Token: 0x06031AF8 RID: 203512 RVA: 0x00DE5820 File Offset: 0x00DE3A20
 		public UniTask ExecuteSequenceOnUpdate(IMissionItemViewShowData showData, Action<IMissionItemViewShowData> updateParentData, bool bSkipAnim)
 		{
 			MissionPanelStep.<ExecuteSequenceOnUpdate>d__15 <ExecuteSequenceOnUpdate>d__;
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <ExecuteSequenceOnUpdate>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB9D RID: 248733 RVA: 0x00E95034 File Offset: 0x00E93234
+		// Token: 0x06031AF9 RID: 203513 RVA: 0x00DE587C File Offset: 0x00DE3A7C
 		private UniTask PlayStartSequence(bool bSkipAnim)
 		{
 			MissionPanelStep.<PlayStartSequence>d__16 <PlayStartSequence>d__;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <PlayStartSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB9E RID: 248734 RVA: 0x00E95080 File Offset: 0x00E93280
+		// Token: 0x06031AFA RID: 203514 RVA: 0x00DE58C8 File Offset: 0x00DE3AC8
 		[NullableContext(0)]
 		private UniTask<bool> PlayCloseSequence(bool bSkipAnim)
 		{
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <PlayCloseSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CB9F RID: 248735 RVA: 0x00E950CC File Offset: 0x00E932CC
+		// Token: 0x06031AFB RID: 203515 RVA: 0x00DE5914 File Offset: 0x00DE3B14
 		private UniTask PlayChildStepStartSequence(bool bSkipAnim)
 		{
 			MissionPanelStep.<PlayChildStepStartSequence>d__18 <PlayChildStepStartSequence>d__;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <PlayChildStepStartSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CBA0 RID: 248736 RVA: 0x00E95118 File Offset: 0x00E93318
+		// Token: 0x06031AFC RID: 203516 RVA: 0x00DE5960 File Offset: 0x00DE3B60
 		private UniTask PlayAllChildStepCloseSequence([Nullable(new byte[]
 		{
 			2,
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <PlayAllChildStepCloseSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CBA1 RID: 248737 RVA: 0x00E9516C File Offset: 0x00E9336C
+		// Token: 0x06031AFD RID: 203517 RVA: 0x00DE59B4 File Offset: 0x00DE3BB4
 		private void OnSequenceClose(string sequenceName)
 		{
 			if (sequenceName == "Start")
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CBA2 RID: 248738 RVA: 0x00E951E4 File Offset: 0x00E933E4
+		// Token: 0x06031AFE RID: 203518 RVA: 0x00DE5A2C File Offset: 0x00DE3C2C
 		private UniTask UpdateSelfData(IMissionItemViewShowData showData)
 		{
 			MissionPanelStep.<UpdateSelfData>d__21 <UpdateSelfData>d__;
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <UpdateSelfData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CBA3 RID: 248739 RVA: 0x00E95230 File Offset: 0x00E93430
+		// Token: 0x06031AFF RID: 203519 RVA: 0x00DE5A78 File Offset: 0x00DE3C78
 		private UniTask UpdateChildSteps()
 		{
 			MissionPanelStep.<UpdateChildSteps>d__22 <UpdateChildSteps>d__;
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <UpdateChildSteps>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CBA4 RID: 248740 RVA: 0x00E95274 File Offset: 0x00E93474
+		// Token: 0x06031B00 RID: 203520 RVA: 0x00DE5ABC File Offset: 0x00DE3CBC
 		private UniTask DisableAllChildSteps()
 		{
 			MissionPanelStep.<DisableAllChildSteps>d__23 <DisableAllChildSteps>d__;
@@ -250,13 +250,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <DisableAllChildSteps>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CBA5 RID: 248741 RVA: 0x00E952B7 File Offset: 0x00E934B7
+		// Token: 0x06031B01 RID: 203521 RVA: 0x00DE5AFF File Offset: 0x00DE3CFF
 		public override bool CheckVisible()
 		{
 			return this.Config != null && !string.IsNullOrEmpty(PublicUtil.Instance.GetConfigTextByKey(this.Config.TidTitle)) && base.CheckVisible();
 		}
 
-		// Token: 0x0603CBA6 RID: 248742 RVA: 0x00E952E8 File Offset: 0x00E934E8
+		// Token: 0x06031B02 RID: 203522 RVA: 0x00DE5B30 File Offset: 0x00DE3D30
 		private bool CheckCurrentFinished()
 		{
 			BehaviorTreeViewShowData behaviorTreeViewShowData = this.ShowData as BehaviorTreeViewShowData;
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603CBA7 RID: 248743 RVA: 0x00E95364 File Offset: 0x00E93564
+		// Token: 0x06031B03 RID: 203523 RVA: 0x00DE5BAC File Offset: 0x00DE3DAC
 		public UniTask ChildStepConditionIndexChange(int stepId, int? curConditionTextIndex)
 		{
 			MissionPanelStep.<ChildStepConditionIndexChange>d__26 <ChildStepConditionIndexChange>d__;
@@ -299,28 +299,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <ChildStepConditionIndexChange>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401FA10 RID: 129552
+		// Token: 0x0401A4C8 RID: 107720
 		private readonly List<MissionPanelChildStep> ChildSteps = new List<MissionPanelChildStep>();
 
-		// Token: 0x0401FA11 RID: 129553
+		// Token: 0x0401A4C9 RID: 107721
 		[Nullable(2)]
 		protected LevelSequencePlayer TitleSequencePlayer;
 
-		// Token: 0x0401FA12 RID: 129554
+		// Token: 0x0401A4CA RID: 107722
 		[Nullable(2)]
 		private CustomPromise<bool> TitleSequenceStartPromise;
 
-		// Token: 0x0401FA13 RID: 129555
+		// Token: 0x0401A4CB RID: 107723
 		[Nullable(2)]
 		private CustomPromise<bool> TitleSequenceClosePromise;
 
-		// Token: 0x0200C023 RID: 49187
+		// Token: 0x0200AA29 RID: 43561
 		[NullableContext(0)]
 		private enum EChildComponent
 		{
-			// Token: 0x04039FA5 RID: 237477
+			// Token: 0x04034968 RID: 215400
 			ChildStep = 2,
-			// Token: 0x04039FA6 RID: 237478
+			// Token: 0x04034969 RID: 215401
 			TitleNode
 		}
 	}

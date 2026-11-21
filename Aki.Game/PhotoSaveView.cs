@@ -18,17 +18,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x020025DC RID: 9692
+// Token: 0x02001AC7 RID: 6855
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoSaveView : UiViewBase
 {
-	// Token: 0x06013B03 RID: 80643 RVA: 0x004EDF84 File Offset: 0x004EC184
+	// Token: 0x06010FE3 RID: 69603 RVA: 0x004FCBE0 File Offset: 0x004FADE0
 	public PhotoSaveView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06013B04 RID: 80644 RVA: 0x004EDFA8 File Offset: 0x004EC1A8
+	// Token: 0x06010FE4 RID: 69604 RVA: 0x004FCC04 File Offset: 0x004FAE04
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -83,18 +83,18 @@ public class PhotoSaveView : UiViewBase
 		};
 	}
 
-	// Token: 0x06013B05 RID: 80645 RVA: 0x004EE3C0 File Offset: 0x004EC5C0
+	// Token: 0x06010FE5 RID: 69605 RVA: 0x004FD01C File Offset: 0x004FB21C
 	protected override UniTask OnBeforeStartAsync()
 	{
-		PhotoSaveView.<OnBeforeStartAsync>d__31 <OnBeforeStartAsync>d__;
+		PhotoSaveView.<OnBeforeStartAsync>d__32 <OnBeforeStartAsync>d__;
 		<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<OnBeforeStartAsync>d__.<>4__this = this;
 		<OnBeforeStartAsync>d__.<>1__state = -1;
-		<OnBeforeStartAsync>d__.<>t__builder.Start<PhotoSaveView.<OnBeforeStartAsync>d__31>(ref <OnBeforeStartAsync>d__);
+		<OnBeforeStartAsync>d__.<>t__builder.Start<PhotoSaveView.<OnBeforeStartAsync>d__32>(ref <OnBeforeStartAsync>d__);
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B06 RID: 80646 RVA: 0x004EE403 File Offset: 0x004EC603
+	// Token: 0x06010FE6 RID: 69606 RVA: 0x004FD05F File Offset: 0x004FB25F
 	private PhotoShareBtnItem InitShareBtn()
 	{
 		PhotoShareBtnItem photoShareBtnItem = new PhotoShareBtnItem();
@@ -102,7 +102,7 @@ public class PhotoSaveView : UiViewBase
 		return photoShareBtnItem;
 	}
 
-	// Token: 0x06013B07 RID: 80647 RVA: 0x004EE41C File Offset: 0x004EC61C
+	// Token: 0x06010FE7 RID: 69607 RVA: 0x004FD078 File Offset: 0x004FB278
 	private GachaShareSwitchItem InitGachaShareSwitchItem()
 	{
 		GachaShareSwitchItem gachaShareSwitchItem = new GachaShareSwitchItem();
@@ -110,7 +110,7 @@ public class PhotoSaveView : UiViewBase
 		return gachaShareSwitchItem;
 	}
 
-	// Token: 0x06013B08 RID: 80648 RVA: 0x004EE438 File Offset: 0x004EC638
+	// Token: 0x06010FE8 RID: 69608 RVA: 0x004FD094 File Offset: 0x004FB294
 	private void OnClickGachaSwitchItem(GachaShareSwitchData switchData, int gridIndex)
 	{
 		GenericLayout<GachaShareSwitchItem, GachaShareSwitchData> gachaSwitchLayout = this.GachaSwitchLayout;
@@ -146,7 +146,7 @@ public class PhotoSaveView : UiViewBase
 		this.SetGachaExtraType(flag, gachaInfo);
 	}
 
-	// Token: 0x06013B09 RID: 80649 RVA: 0x004EE4F0 File Offset: 0x004EC6F0
+	// Token: 0x06010FE9 RID: 69609 RVA: 0x004FD14C File Offset: 0x004FB34C
 	private void SetGachaExtraType(bool isSingle, GachaResult gachaInfo)
 	{
 		InventoryDefine.EItemDataType itemIdType = GachaConfig.Instance.GetItemIdType(gachaInfo.Proto_GachaReward.ItemId);
@@ -162,44 +162,44 @@ public class PhotoSaveView : UiViewBase
 		this.ShareReportExtraType = shareReportExtraType;
 	}
 
-	// Token: 0x06013B0A RID: 80650 RVA: 0x004EE538 File Offset: 0x004EC738
+	// Token: 0x06010FEA RID: 69610 RVA: 0x004FD194 File Offset: 0x004FB394
 	private UniTask RefreshGachaView(IReadOnlyList<GachaResult> gachaInfos)
 	{
-		PhotoSaveView.<RefreshGachaView>d__36 <RefreshGachaView>d__;
+		PhotoSaveView.<RefreshGachaView>d__37 <RefreshGachaView>d__;
 		<RefreshGachaView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<RefreshGachaView>d__.<>4__this = this;
 		<RefreshGachaView>d__.gachaInfos = gachaInfos;
 		<RefreshGachaView>d__.<>1__state = -1;
-		<RefreshGachaView>d__.<>t__builder.Start<PhotoSaveView.<RefreshGachaView>d__36>(ref <RefreshGachaView>d__);
+		<RefreshGachaView>d__.<>t__builder.Start<PhotoSaveView.<RefreshGachaView>d__37>(ref <RefreshGachaView>d__);
 		return <RefreshGachaView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B0B RID: 80651 RVA: 0x004EE584 File Offset: 0x004EC784
+	// Token: 0x06010FEB RID: 69611 RVA: 0x004FD1E0 File Offset: 0x004FB3E0
 	[NullableContext(2)]
 	private UniTask RefreshOneGachaView(GachaResult gachaInfo)
 	{
-		PhotoSaveView.<RefreshOneGachaView>d__37 <RefreshOneGachaView>d__;
+		PhotoSaveView.<RefreshOneGachaView>d__38 <RefreshOneGachaView>d__;
 		<RefreshOneGachaView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<RefreshOneGachaView>d__.<>4__this = this;
 		<RefreshOneGachaView>d__.gachaInfo = gachaInfo;
 		<RefreshOneGachaView>d__.<>1__state = -1;
-		<RefreshOneGachaView>d__.<>t__builder.Start<PhotoSaveView.<RefreshOneGachaView>d__37>(ref <RefreshOneGachaView>d__);
+		<RefreshOneGachaView>d__.<>t__builder.Start<PhotoSaveView.<RefreshOneGachaView>d__38>(ref <RefreshOneGachaView>d__);
 		return <RefreshOneGachaView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B0C RID: 80652 RVA: 0x004EE5D0 File Offset: 0x004EC7D0
+	// Token: 0x06010FEC RID: 69612 RVA: 0x004FD22C File Offset: 0x004FB42C
 	private UniTask RefreshTenGachaView(IReadOnlyList<GachaResult> gachaInfos)
 	{
-		PhotoSaveView.<RefreshTenGachaView>d__38 <RefreshTenGachaView>d__;
+		PhotoSaveView.<RefreshTenGachaView>d__39 <RefreshTenGachaView>d__;
 		<RefreshTenGachaView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<RefreshTenGachaView>d__.<>4__this = this;
 		<RefreshTenGachaView>d__.gachaInfos = gachaInfos;
 		<RefreshTenGachaView>d__.<>1__state = -1;
-		<RefreshTenGachaView>d__.<>t__builder.Start<PhotoSaveView.<RefreshTenGachaView>d__38>(ref <RefreshTenGachaView>d__);
+		<RefreshTenGachaView>d__.<>t__builder.Start<PhotoSaveView.<RefreshTenGachaView>d__39>(ref <RefreshTenGachaView>d__);
 		return <RefreshTenGachaView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B0D RID: 80653 RVA: 0x004EE61B File Offset: 0x004EC81B
+	// Token: 0x06010FED RID: 69613 RVA: 0x004FD277 File Offset: 0x004FB477
 	private IReadOnlyList<GachaResult> GetSortTenGachaInfos(IReadOnlyList<GachaResult> gachaInfos)
 	{
 		List<GachaResult> list = new List<GachaResult>(gachaInfos);
@@ -215,121 +215,121 @@ public class PhotoSaveView : UiViewBase
 			int num2 = (itemConfigData2 != null) ? itemConfigData2.QualityId : 0;
 			if (num == num2)
 			{
-				int num3 = PhotoSaveView.<GetSortTenGachaInfos>g__RevertType|39_0(GachaConfig.Instance.GetItemIdType(a.Proto_GachaReward.ItemId));
-				return PhotoSaveView.<GetSortTenGachaInfos>g__RevertType|39_0(GachaConfig.Instance.GetItemIdType(b.Proto_GachaReward.ItemId)) - num3;
+				int num3 = PhotoSaveView.<GetSortTenGachaInfos>g__RevertType|40_0(GachaConfig.Instance.GetItemIdType(a.Proto_GachaReward.ItemId));
+				return PhotoSaveView.<GetSortTenGachaInfos>g__RevertType|40_0(GachaConfig.Instance.GetItemIdType(b.Proto_GachaReward.ItemId)) - num3;
 			}
 			return num2 - num;
 		});
 		return list;
 	}
 
-	// Token: 0x06013B0E RID: 80654 RVA: 0x004EE648 File Offset: 0x004EC848
+	// Token: 0x06010FEE RID: 69614 RVA: 0x004FD2A4 File Offset: 0x004FB4A4
 	private UniTask InitFragmentMemorySubView(FragmentMemoryCollectData data)
 	{
-		PhotoSaveView.<InitFragmentMemorySubView>d__40 <InitFragmentMemorySubView>d__;
+		PhotoSaveView.<InitFragmentMemorySubView>d__41 <InitFragmentMemorySubView>d__;
 		<InitFragmentMemorySubView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<InitFragmentMemorySubView>d__.<>4__this = this;
 		<InitFragmentMemorySubView>d__.data = data;
 		<InitFragmentMemorySubView>d__.<>1__state = -1;
-		<InitFragmentMemorySubView>d__.<>t__builder.Start<PhotoSaveView.<InitFragmentMemorySubView>d__40>(ref <InitFragmentMemorySubView>d__);
+		<InitFragmentMemorySubView>d__.<>t__builder.Start<PhotoSaveView.<InitFragmentMemorySubView>d__41>(ref <InitFragmentMemorySubView>d__);
 		return <InitFragmentMemorySubView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B0F RID: 80655 RVA: 0x004EE694 File Offset: 0x004EC894
+	// Token: 0x06010FEF RID: 69615 RVA: 0x004FD2F0 File Offset: 0x004FB4F0
 	private UniTask InitRoleSkinSubView(RoleSkinData data)
 	{
-		PhotoSaveView.<InitRoleSkinSubView>d__41 <InitRoleSkinSubView>d__;
+		PhotoSaveView.<InitRoleSkinSubView>d__42 <InitRoleSkinSubView>d__;
 		<InitRoleSkinSubView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<InitRoleSkinSubView>d__.<>4__this = this;
 		<InitRoleSkinSubView>d__.data = data;
 		<InitRoleSkinSubView>d__.<>1__state = -1;
-		<InitRoleSkinSubView>d__.<>t__builder.Start<PhotoSaveView.<InitRoleSkinSubView>d__41>(ref <InitRoleSkinSubView>d__);
+		<InitRoleSkinSubView>d__.<>t__builder.Start<PhotoSaveView.<InitRoleSkinSubView>d__42>(ref <InitRoleSkinSubView>d__);
 		return <InitRoleSkinSubView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B10 RID: 80656 RVA: 0x004EE6E0 File Offset: 0x004EC8E0
+	// Token: 0x06010FF0 RID: 69616 RVA: 0x004FD33C File Offset: 0x004FB53C
 	private UniTask InitWheelTowerSettlementShareView(IWheelTowerSettlementViewData data)
 	{
-		PhotoSaveView.<InitWheelTowerSettlementShareView>d__42 <InitWheelTowerSettlementShareView>d__;
+		PhotoSaveView.<InitWheelTowerSettlementShareView>d__43 <InitWheelTowerSettlementShareView>d__;
 		<InitWheelTowerSettlementShareView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<InitWheelTowerSettlementShareView>d__.<>4__this = this;
 		<InitWheelTowerSettlementShareView>d__.data = data;
 		<InitWheelTowerSettlementShareView>d__.<>1__state = -1;
-		<InitWheelTowerSettlementShareView>d__.<>t__builder.Start<PhotoSaveView.<InitWheelTowerSettlementShareView>d__42>(ref <InitWheelTowerSettlementShareView>d__);
+		<InitWheelTowerSettlementShareView>d__.<>t__builder.Start<PhotoSaveView.<InitWheelTowerSettlementShareView>d__43>(ref <InitWheelTowerSettlementShareView>d__);
 		return <InitWheelTowerSettlementShareView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B11 RID: 80657 RVA: 0x004EE72C File Offset: 0x004EC92C
+	// Token: 0x06010FF1 RID: 69617 RVA: 0x004FD388 File Offset: 0x004FB588
 	private UniTask InitWheelTowerTotalScoreView()
 	{
-		PhotoSaveView.<InitWheelTowerTotalScoreView>d__43 <InitWheelTowerTotalScoreView>d__;
+		PhotoSaveView.<InitWheelTowerTotalScoreView>d__44 <InitWheelTowerTotalScoreView>d__;
 		<InitWheelTowerTotalScoreView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<InitWheelTowerTotalScoreView>d__.<>4__this = this;
 		<InitWheelTowerTotalScoreView>d__.<>1__state = -1;
-		<InitWheelTowerTotalScoreView>d__.<>t__builder.Start<PhotoSaveView.<InitWheelTowerTotalScoreView>d__43>(ref <InitWheelTowerTotalScoreView>d__);
+		<InitWheelTowerTotalScoreView>d__.<>t__builder.Start<PhotoSaveView.<InitWheelTowerTotalScoreView>d__44>(ref <InitWheelTowerTotalScoreView>d__);
 		return <InitWheelTowerTotalScoreView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B12 RID: 80658 RVA: 0x004EE770 File Offset: 0x004EC970
+	// Token: 0x06010FF2 RID: 69618 RVA: 0x004FD3CC File Offset: 0x004FB5CC
 	private UniTask InitChallengeRecordShareView(ShipTowerRecordShareData data)
 	{
-		PhotoSaveView.<InitChallengeRecordShareView>d__44 <InitChallengeRecordShareView>d__;
+		PhotoSaveView.<InitChallengeRecordShareView>d__45 <InitChallengeRecordShareView>d__;
 		<InitChallengeRecordShareView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<InitChallengeRecordShareView>d__.<>4__this = this;
 		<InitChallengeRecordShareView>d__.data = data;
 		<InitChallengeRecordShareView>d__.<>1__state = -1;
-		<InitChallengeRecordShareView>d__.<>t__builder.Start<PhotoSaveView.<InitChallengeRecordShareView>d__44>(ref <InitChallengeRecordShareView>d__);
+		<InitChallengeRecordShareView>d__.<>t__builder.Start<PhotoSaveView.<InitChallengeRecordShareView>d__45>(ref <InitChallengeRecordShareView>d__);
 		return <InitChallengeRecordShareView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B13 RID: 80659 RVA: 0x004EE7BC File Offset: 0x004EC9BC
+	// Token: 0x06010FF3 RID: 69619 RVA: 0x004FD418 File Offset: 0x004FB618
 	private UniTask InitHandBookPhotoShareView(HandBookPhotoData data)
 	{
-		PhotoSaveView.<InitHandBookPhotoShareView>d__45 <InitHandBookPhotoShareView>d__;
+		PhotoSaveView.<InitHandBookPhotoShareView>d__46 <InitHandBookPhotoShareView>d__;
 		<InitHandBookPhotoShareView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<InitHandBookPhotoShareView>d__.<>4__this = this;
 		<InitHandBookPhotoShareView>d__.data = data;
 		<InitHandBookPhotoShareView>d__.<>1__state = -1;
-		<InitHandBookPhotoShareView>d__.<>t__builder.Start<PhotoSaveView.<InitHandBookPhotoShareView>d__45>(ref <InitHandBookPhotoShareView>d__);
+		<InitHandBookPhotoShareView>d__.<>t__builder.Start<PhotoSaveView.<InitHandBookPhotoShareView>d__46>(ref <InitHandBookPhotoShareView>d__);
 		return <InitHandBookPhotoShareView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B14 RID: 80660 RVA: 0x004EE808 File Offset: 0x004ECA08
+	// Token: 0x06010FF4 RID: 69620 RVA: 0x004FD464 File Offset: 0x004FB664
 	private UniTask InitTowerVariationShareView()
 	{
-		PhotoSaveView.<InitTowerVariationShareView>d__46 <InitTowerVariationShareView>d__;
+		PhotoSaveView.<InitTowerVariationShareView>d__47 <InitTowerVariationShareView>d__;
 		<InitTowerVariationShareView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<InitTowerVariationShareView>d__.<>4__this = this;
 		<InitTowerVariationShareView>d__.<>1__state = -1;
-		<InitTowerVariationShareView>d__.<>t__builder.Start<PhotoSaveView.<InitTowerVariationShareView>d__46>(ref <InitTowerVariationShareView>d__);
+		<InitTowerVariationShareView>d__.<>t__builder.Start<PhotoSaveView.<InitTowerVariationShareView>d__47>(ref <InitTowerVariationShareView>d__);
 		return <InitTowerVariationShareView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B15 RID: 80661 RVA: 0x004EE84C File Offset: 0x004ECA4C
+	// Token: 0x06010FF5 RID: 69621 RVA: 0x004FD4A8 File Offset: 0x004FB6A8
 	private UniTask InitVersionPreheatSubView(VersionPreheatShareData data)
 	{
-		PhotoSaveView.<InitVersionPreheatSubView>d__47 <InitVersionPreheatSubView>d__;
+		PhotoSaveView.<InitVersionPreheatSubView>d__48 <InitVersionPreheatSubView>d__;
 		<InitVersionPreheatSubView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<InitVersionPreheatSubView>d__.<>4__this = this;
 		<InitVersionPreheatSubView>d__.data = data;
 		<InitVersionPreheatSubView>d__.<>1__state = -1;
-		<InitVersionPreheatSubView>d__.<>t__builder.Start<PhotoSaveView.<InitVersionPreheatSubView>d__47>(ref <InitVersionPreheatSubView>d__);
+		<InitVersionPreheatSubView>d__.<>t__builder.Start<PhotoSaveView.<InitVersionPreheatSubView>d__48>(ref <InitVersionPreheatSubView>d__);
 		return <InitVersionPreheatSubView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B16 RID: 80662 RVA: 0x004EE898 File Offset: 0x004ECA98
+	// Token: 0x06010FF6 RID: 69622 RVA: 0x004FD4F4 File Offset: 0x004FB6F4
 	private UniTask InitSpring25SubView(Spring25ShareData data)
 	{
-		PhotoSaveView.<InitSpring25SubView>d__48 <InitSpring25SubView>d__;
+		PhotoSaveView.<InitSpring25SubView>d__49 <InitSpring25SubView>d__;
 		<InitSpring25SubView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<InitSpring25SubView>d__.<>4__this = this;
 		<InitSpring25SubView>d__.data = data;
 		<InitSpring25SubView>d__.<>1__state = -1;
-		<InitSpring25SubView>d__.<>t__builder.Start<PhotoSaveView.<InitSpring25SubView>d__48>(ref <InitSpring25SubView>d__);
+		<InitSpring25SubView>d__.<>t__builder.Start<PhotoSaveView.<InitSpring25SubView>d__49>(ref <InitSpring25SubView>d__);
 		return <InitSpring25SubView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B17 RID: 80663 RVA: 0x004EE8E4 File Offset: 0x004ECAE4
+	// Token: 0x06010FF7 RID: 69623 RVA: 0x004FD540 File Offset: 0x004FB740
 	private void RefreshPhotoPanel()
 	{
 		base.GetItem(14).SetUIActive(true);
@@ -370,7 +370,7 @@ public class PhotoSaveView : UiViewBase
 		this.RefreshSaveBtn();
 	}
 
-	// Token: 0x06013B18 RID: 80664 RVA: 0x004EE9FC File Offset: 0x004ECBFC
+	// Token: 0x06010FF8 RID: 69624 RVA: 0x004FD658 File Offset: 0x004FB858
 	private void RefreshLandscapePanel(HandBookPhotoData data)
 	{
 		base.GetItem(14).SetUIActive(false);
@@ -406,7 +406,7 @@ public class PhotoSaveView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013B19 RID: 80665 RVA: 0x004EEB78 File Offset: 0x004ECD78
+	// Token: 0x06010FF9 RID: 69625 RVA: 0x004FD7D4 File Offset: 0x004FB9D4
 	private void RefreshFullScreenPhotoPanel(bool isProcess)
 	{
 		UUIItem item = base.GetItem(14);
@@ -431,7 +431,7 @@ public class PhotoSaveView : UiViewBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnPreparePhotoScreenShot, true);
 	}
 
-	// Token: 0x06013B1A RID: 80666 RVA: 0x004EEC6C File Offset: 0x004ECE6C
+	// Token: 0x06010FFA RID: 69626 RVA: 0x004FD8C8 File Offset: 0x004FBAC8
 	private void RefreshMarkItem(bool isProcess)
 	{
 		if (isProcess)
@@ -456,7 +456,7 @@ public class PhotoSaveView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013B1B RID: 80667 RVA: 0x004EECA4 File Offset: 0x004ECEA4
+	// Token: 0x06010FFB RID: 69627 RVA: 0x004FD900 File Offset: 0x004FBB00
 	private void RefreshPhotoPanelByUiDirectly()
 	{
 		base.GetItem(14).SetUIActive(true);
@@ -482,13 +482,13 @@ public class PhotoSaveView : UiViewBase
 		this.RefreshSaveBtn();
 	}
 
-	// Token: 0x06013B1C RID: 80668 RVA: 0x004EED5C File Offset: 0x004ECF5C
+	// Token: 0x06010FFC RID: 69628 RVA: 0x004FD9B8 File Offset: 0x004FBBB8
 	private bool GetIfShareBtnCanShow()
 	{
 		return !BaseConfigController.Instance.GetIosAuditFirstDownloadTip();
 	}
 
-	// Token: 0x06013B1D RID: 80669 RVA: 0x004EED70 File Offset: 0x004ECF70
+	// Token: 0x06010FFD RID: 69629 RVA: 0x004FD9CC File Offset: 0x004FBBCC
 	private void RefreshSaveBtn()
 	{
 		bool flag = PhotographController.Instance.CheckHasSpecifiedFeatureForSave();
@@ -501,7 +501,7 @@ public class PhotoSaveView : UiViewBase
 		button.RootUIComp.Get().SetUIActive(!flag2 && !flag);
 	}
 
-	// Token: 0x06013B1E RID: 80670 RVA: 0x004EEDBC File Offset: 0x004ECFBC
+	// Token: 0x06010FFE RID: 69630 RVA: 0x004FDA18 File Offset: 0x004FBC18
 	private void RefreshShareBtn()
 	{
 		base.GetItem(31).SetUIActive(true);
@@ -513,7 +513,7 @@ public class PhotoSaveView : UiViewBase
 		base.GetItem(30).SetUIActive(openedShareIds.Count > 0);
 	}
 
-	// Token: 0x06013B1F RID: 80671 RVA: 0x004EEE64 File Offset: 0x004ED064
+	// Token: 0x06010FFF RID: 69631 RVA: 0x004FDAC0 File Offset: 0x004FBCC0
 	private void RefreshRetakeBtn()
 	{
 		base.GetItem(31).SetUIActive(false);
@@ -522,7 +522,7 @@ public class PhotoSaveView : UiViewBase
 		base.GetHorizontalLayout(5).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x06013B20 RID: 80672 RVA: 0x004EEEC4 File Offset: 0x004ED0C4
+	// Token: 0x06011000 RID: 69632 RVA: 0x004FDB20 File Offset: 0x004FBD20
 	private void RefreshBtnEmpty()
 	{
 		base.GetItem(30).SetUIActive(false);
@@ -530,7 +530,7 @@ public class PhotoSaveView : UiViewBase
 		base.GetHorizontalLayout(5).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x06013B21 RID: 80673 RVA: 0x004EEF14 File Offset: 0x004ED114
+	// Token: 0x06011001 RID: 69633 RVA: 0x004FDB70 File Offset: 0x004FBD70
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnEntityCameraFinished, new Action<bool>(this.EntityCameraFinished));
@@ -538,7 +538,7 @@ public class PhotoSaveView : UiViewBase
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.OpenView, new Action<EUiViewName, int>(this.OnOpenView));
 	}
 
-	// Token: 0x06013B22 RID: 80674 RVA: 0x004EEF74 File Offset: 0x004ED174
+	// Token: 0x06011002 RID: 69634 RVA: 0x004FDBD0 File Offset: 0x004FBDD0
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnEntityCameraFinished, new Action<bool>(this.EntityCameraFinished));
@@ -546,7 +546,7 @@ public class PhotoSaveView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OpenView, new Action<EUiViewName, int>(this.OnOpenView));
 	}
 
-	// Token: 0x06013B23 RID: 80675 RVA: 0x004EEFD1 File Offset: 0x004ED1D1
+	// Token: 0x06011003 RID: 69635 RVA: 0x004FDC2D File Offset: 0x004FBE2D
 	protected override void OnAfterShow()
 	{
 		if (this.CaptureFullScene)
@@ -564,20 +564,21 @@ public class PhotoSaveView : UiViewBase
 		this.PlayScreenShotSequence();
 	}
 
-	// Token: 0x06013B24 RID: 80676 RVA: 0x004EF00C File Offset: 0x004ED20C
+	// Token: 0x06011004 RID: 69636 RVA: 0x004FDC68 File Offset: 0x004FBE68
 	private UniTask OnAfterShowPrepareFullScreenAsync()
 	{
-		PhotoSaveView.<OnAfterShowPrepareFullScreenAsync>d__62 <OnAfterShowPrepareFullScreenAsync>d__;
+		PhotoSaveView.<OnAfterShowPrepareFullScreenAsync>d__63 <OnAfterShowPrepareFullScreenAsync>d__;
 		<OnAfterShowPrepareFullScreenAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<OnAfterShowPrepareFullScreenAsync>d__.<>4__this = this;
 		<OnAfterShowPrepareFullScreenAsync>d__.<>1__state = -1;
-		<OnAfterShowPrepareFullScreenAsync>d__.<>t__builder.Start<PhotoSaveView.<OnAfterShowPrepareFullScreenAsync>d__62>(ref <OnAfterShowPrepareFullScreenAsync>d__);
+		<OnAfterShowPrepareFullScreenAsync>d__.<>t__builder.Start<PhotoSaveView.<OnAfterShowPrepareFullScreenAsync>d__63>(ref <OnAfterShowPrepareFullScreenAsync>d__);
 		return <OnAfterShowPrepareFullScreenAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B25 RID: 80677 RVA: 0x004EF04F File Offset: 0x004ED24F
+	// Token: 0x06011005 RID: 69637 RVA: 0x004FDCAB File Offset: 0x004FBEAB
 	protected override void OnBeforeDestroy()
 	{
+		this.RestorePhotographUiAfterCapture();
 		UKuroRenderingRuntimeBPPluginBPLibrary.ReleaseGetSceneColorShotBefore();
 		GenericLayout<PhotoShareBtnItem, EChannelShare> shareBtnLayout = this.ShareBtnLayout;
 		if (shareBtnLayout != null)
@@ -588,7 +589,7 @@ public class PhotoSaveView : UiViewBase
 		this.Reset();
 	}
 
-	// Token: 0x06013B26 RID: 80678 RVA: 0x004EF074 File Offset: 0x004ED274
+	// Token: 0x06011006 RID: 69638 RVA: 0x004FDCD8 File Offset: 0x004FBED8
 	private float[] GetCaptureRange()
 	{
 		UUIItem item = base.GetItem(this.IsPhoto ? 11 : 23);
@@ -609,7 +610,7 @@ public class PhotoSaveView : UiViewBase
 		};
 	}
 
-	// Token: 0x06013B27 RID: 80679 RVA: 0x004EF154 File Offset: 0x004ED354
+	// Token: 0x06011007 RID: 69639 RVA: 0x004FDDB8 File Offset: 0x004FBFB8
 	private void PlayScreenShotSequence()
 	{
 		UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -620,7 +621,7 @@ public class PhotoSaveView : UiViewBase
 		uiViewSequence.PlaySequence("ScreenShot", false, null);
 	}
 
-	// Token: 0x06013B28 RID: 80680 RVA: 0x004EF180 File Offset: 0x004ED380
+	// Token: 0x06011008 RID: 69640 RVA: 0x004FDDE4 File Offset: 0x004FBFE4
 	private unsafe void OnClickShareBtn(EChannelShare channel, int shareConfigId)
 	{
 		Log.Instance.Info(ELogModule.Photo, ELogAuthor.BB, "点击分享截图按钮", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -642,7 +643,7 @@ public class PhotoSaveView : UiViewBase
 		}, null, null);
 	}
 
-	// Token: 0x06013B29 RID: 80681 RVA: 0x004EF1DC File Offset: 0x004ED3DC
+	// Token: 0x06011009 RID: 69641 RVA: 0x004FDE40 File Offset: 0x004FC040
 	private void OnClickedConfirmButton()
 	{
 		Log.Instance.Info(ELogModule.Photo, ELogAuthor.BB, "点击保存截图按钮", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -672,7 +673,7 @@ public class PhotoSaveView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06013B2A RID: 80682 RVA: 0x004EF289 File Offset: 0x004ED489
+	// Token: 0x0601100A RID: 69642 RVA: 0x004FDEED File Offset: 0x004FC0ED
 	private void OnRequestPermissionCallback(bool isAllowed)
 	{
 		if (isAllowed)
@@ -683,7 +684,7 @@ public class PhotoSaveView : UiViewBase
 		this.OnPhotoPermissionDenied();
 	}
 
-	// Token: 0x06013B2B RID: 80683 RVA: 0x004EF2B8 File Offset: 0x004ED4B8
+	// Token: 0x0601100B RID: 69643 RVA: 0x004FDF1C File Offset: 0x004FC11C
 	private void OnPhotoPermissionDenied()
 	{
 		ESourcePlatformType platformType = Info.Instance.PlatformType;
@@ -704,14 +705,14 @@ public class PhotoSaveView : UiViewBase
 		GenericPromptController.Instance.ShowPromptByCode("Privilege_album_Android", Array.Empty<object>());
 	}
 
-	// Token: 0x06013B2C RID: 80684 RVA: 0x004EF31C File Offset: 0x004ED51C
+	// Token: 0x0601100C RID: 69644 RVA: 0x004FDF80 File Offset: 0x004FC180
 	private string GetPhotoName()
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
 		return TimeUtil.Instance.DateFormatString2(serverTime) + ".png";
 	}
 
-	// Token: 0x06013B2D RID: 80685 RVA: 0x004EF34C File Offset: 0x004ED54C
+	// Token: 0x0601100D RID: 69645 RVA: 0x004FDFB0 File Offset: 0x004FC1B0
 	private void PrepareScreenShot(bool isFirst, Action onPrepareFinish)
 	{
 		float[] captureRange = this.GetCaptureRange();
@@ -741,7 +742,7 @@ public class PhotoSaveView : UiViewBase
 		ugameScreenshotTask.TakeScreenshot();
 	}
 
-	// Token: 0x06013B2E RID: 80686 RVA: 0x004EF3E0 File Offset: 0x004ED5E0
+	// Token: 0x0601100E RID: 69646 RVA: 0x004FE044 File Offset: 0x004FC244
 	[NullableContext(2)]
 	private void TakeScreenshot(bool isSaveFile, [Nullable(new byte[]
 	{
@@ -749,6 +750,11 @@ public class PhotoSaveView : UiViewBase
 		2
 	})] Action<int, int, TArray<FColor>> onTakeScreenShotCallback, Action<bool> onIOSPhotoLibraryAuthorizationCompleted = null, FOnTakeScreenshotCompressed.FOnTakeScreenshotCompressed_ScriptDelegate onPhotoCompressed = null)
 	{
+		bool pngOnly = isSaveFile && Info.Instance.PlatformType == ESourcePlatformType.PS5;
+		if (pngOnly)
+		{
+			onPhotoCompressed = new FOnTakeScreenshotCompressed.FOnTakeScreenshotCompressed_ScriptDelegate(this.OnPhotoCompressed);
+		}
 		string photoName = this.GetPhotoName();
 		this.RelativeShotPath = this.GetRelativeShotPath(photoName);
 		string storagePath = UBlueprintPathsLibrary.ProjectUserDir() + this.RelativeShotPath;
@@ -764,7 +770,7 @@ public class PhotoSaveView : UiViewBase
 			ULGUIBPLibrary.ResetGlobalBlurUIItem(GlobalData.GameInstance.GetWorld());
 			EventSystem.Instance.Emit<bool, bool>(EEventName.OnPhotographViewCaptureMode, true, this.IsShowPlayerName);
 			EventSystem.Instance.Emit<bool>(EEventName.OnPreparePhotoScreenShot, false);
-			Action restorePhotographUi = delegate()
+			this.RestoreCaptureUi = delegate()
 			{
 				EventSystem.Instance.Emit<bool, bool>(EEventName.OnPhotographViewCaptureMode, false, false);
 				EventSystem.Instance.Emit<bool>(EEventName.OnPreparePhotoScreenShot, true);
@@ -772,6 +778,11 @@ public class PhotoSaveView : UiViewBase
 			Action<int, int, TArray<FColor>> <>9__2;
 			TimerSystem.GameplayTimeInstance.Next(delegate(float _)
 			{
+				if (this.IsDestroyOrDestroying)
+				{
+					this.RestorePhotographUiAfterCapture();
+					return;
+				}
 				PhotoSaveView <>4__this = this;
 				string storagePath = storagePath;
 				int minX = 0;
@@ -784,18 +795,25 @@ public class PhotoSaveView : UiViewBase
 				int multiplierScale = multiplierScale;
 				bool isHighRes = true;
 				Action<int, int, TArray<FColor>> onCaptured;
-				if ((onCaptured = <>9__2) == null)
+				if (!pngOnly)
 				{
-					onCaptured = (<>9__2 = delegate(int w, int h, TArray<FColor> c)
+					if ((onCaptured = <>9__2) == null)
 					{
-						restorePhotographUi();
-						onTakeScreenShotCallback(w, h, c);
-					});
+						onCaptured = (<>9__2 = delegate(int w, int h, TArray<FColor> c)
+						{
+							this.RestorePhotographUiAfterCapture();
+							onTakeScreenShotCallback(w, h, c);
+						});
+					}
+				}
+				else
+				{
+					onCaptured = null;
 				}
 				if (!<>4__this.RunScreenShot(storagePath, minX, minY, maxX, maxY, isSaveFile2, viewportSize, multiplierScale, isHighRes, onCaptured, onIOSPhotoLibraryAuthorizationCompleted, onPhotoCompressed))
 				{
-					Log.Instance.Error(ELogModule.Photo, ELogAuthor.CXJ, "延迟场景截图：PrepareTakeScreenshot 返回 undefined", default(ReadOnlySpan<ValueTuple<string, object>>));
-					restorePhotographUi();
+					Log.Instance.Error(ELogModule.Photo, ELogAuthor.CXJ, "延迟场景截图：截图任务启动失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+					this.RestorePhotographUiAfterCapture();
 					UUIItem rootItem2 = this.GetRootItem();
 					if (rootItem2 != null)
 					{
@@ -807,26 +825,37 @@ public class PhotoSaveView : UiViewBase
 			return;
 		}
 		float[] captureRange = this.GetCaptureRange();
-		this.RunScreenShot(storagePath, (int)captureRange[0], (int)captureRange[1], (int)captureRange[2], (int)captureRange[3], isSaveFile, viewportSize, multiplierScale, false, onTakeScreenShotCallback, onIOSPhotoLibraryAuthorizationCompleted, onPhotoCompressed);
+		this.RunScreenShot(storagePath, (int)captureRange[0], (int)captureRange[1], (int)captureRange[2], (int)captureRange[3], isSaveFile, viewportSize, multiplierScale, false, pngOnly ? null : onTakeScreenShotCallback, onIOSPhotoLibraryAuthorizationCompleted, onPhotoCompressed);
 	}
 
-	// Token: 0x06013B2F RID: 80687 RVA: 0x004EF548 File Offset: 0x004ED748
-	[NullableContext(2)]
-	private bool RunScreenShot([Nullable(1)] string storagePath, int minX, int minY, int maxX, int maxY, bool isSaveFile, FVector2D viewportSize, int multiplierScale, bool isHighRes, [Nullable(new byte[]
+	// Token: 0x0601100F RID: 69647 RVA: 0x004FE1ED File Offset: 0x004FC3ED
+	private void RestorePhotographUiAfterCapture()
 	{
-		1,
-		2
-	})] Action<int, int, TArray<FColor>> onCaptured, Action<bool> onIOSPhotoLibraryAuthorizationCompleted = null, FOnTakeScreenshotCompressed.FOnTakeScreenshotCompressed_ScriptDelegate onPhotoCompressed = null)
+		Action restoreCaptureUi = this.RestoreCaptureUi;
+		this.RestoreCaptureUi = null;
+		if (restoreCaptureUi == null)
+		{
+			return;
+		}
+		restoreCaptureUi();
+	}
+
+	// Token: 0x06011010 RID: 69648 RVA: 0x004FE208 File Offset: 0x004FC408
+	[NullableContext(2)]
+	private bool RunScreenShot([Nullable(1)] string storagePath, int minX, int minY, int maxX, int maxY, bool isSaveFile, FVector2D viewportSize, int multiplierScale, bool isHighRes, Action<int, int, TArray<FColor>> onCaptured, Action<bool> onIOSPhotoLibraryAuthorizationCompleted = null, FOnTakeScreenshotCompressed.FOnTakeScreenshotCompressed_ScriptDelegate onPhotoCompressed = null)
 	{
 		UGameScreenshotTask ugameScreenshotTask = ScreenShotManager.PrepareTakeScreenshot(storagePath, (float)minX, (float)minY, (float)maxX, (float)maxY, isSaveFile, viewportSize.X, viewportSize.Y, multiplierScale);
 		if (ugameScreenshotTask == null)
 		{
 			return false;
 		}
-		ugameScreenshotTask.OnTakeScreenshotCapturedDelegate.Add(delegate(int w, int h, in TArray<FColor> c)
+		if (onCaptured != null)
 		{
-			onCaptured(w, h, c);
-		});
+			ugameScreenshotTask.OnTakeScreenshotCapturedDelegate.Add(delegate(int w, int h, in TArray<FColor> c)
+			{
+				onCaptured(w, h, c);
+			});
+		}
 		if (onIOSPhotoLibraryAuthorizationCompleted != null)
 		{
 			ugameScreenshotTask.OnIOSPhotoLibraryAuthorizationCompletedDelegate.Add(onIOSPhotoLibraryAuthorizationCompleted);
@@ -835,18 +864,15 @@ public class PhotoSaveView : UiViewBase
 		{
 			ugameScreenshotTask.OnTakeScreenshotCompressedDelegate.Add(onPhotoCompressed);
 		}
-		if (isHighRes)
+		bool flag = isHighRes ? ugameScreenshotTask.TakeScreenshotHighRes(multiplierScale) : ugameScreenshotTask.TakeScreenshot();
+		if (!flag)
 		{
-			ugameScreenshotTask.TakeScreenshotHighRes(multiplierScale);
+			ScreenShotManager.ResetScreenShot();
 		}
-		else
-		{
-			ugameScreenshotTask.TakeScreenshot();
-		}
-		return true;
+		return flag;
 	}
 
-	// Token: 0x06013B30 RID: 80688 RVA: 0x004EF5DC File Offset: 0x004ED7DC
+	// Token: 0x06011011 RID: 69649 RVA: 0x004FE2A8 File Offset: 0x004FC4A8
 	private int GetSafeMultiplierScale(FVector2D viewportSize)
 	{
 		Dictionary<int, int> dictionary = LocalStorage.GetGlobal<Dictionary<int, int>>(ELocalStorageGlobalKey.PhotographSetupOption, null) ?? new Dictionary<int, int>();
@@ -869,7 +895,7 @@ public class PhotoSaveView : UiViewBase
 		return num2;
 	}
 
-	// Token: 0x06013B31 RID: 80689 RVA: 0x004EF6E4 File Offset: 0x004ED8E4
+	// Token: 0x06011012 RID: 69650 RVA: 0x004FE3B0 File Offset: 0x004FC5B0
 	[NullableContext(2)]
 	private unsafe void OnTakePhoto(int width, int height, TArray<FColor> colors)
 	{
@@ -981,19 +1007,37 @@ public class PhotoSaveView : UiViewBase
 		this.ClosePhotoSaveView();
 	}
 
-	// Token: 0x06013B32 RID: 80690 RVA: 0x004EFABC File Offset: 0x004EDCBC
+	// Token: 0x06011013 RID: 69651 RVA: 0x004FE788 File Offset: 0x004FC988
 	[NullableContext(2)]
 	private void OnPhotoCompressed(in TArray<byte> compressedBitmap)
 	{
 		Log.Instance.Info(ELogModule.Photo, ELogAuthor.BB, "PS Test OnPhotoCompressed", default(ReadOnlySpan<ValueTuple<string, object>>));
 		if (Info.Instance.PlatformType == ESourcePlatformType.PS5)
 		{
-			string photoName = this.GetPhotoName();
-			UGameplayStatics.ExportPngPhotoFromData(compressedBitmap, photoName);
+			try
+			{
+				string photoName = this.GetPhotoName();
+				UGameplayStatics.ExportPngPhotoFromData(compressedBitmap, photoName);
+			}
+			finally
+			{
+				this.FinishPs5PhotoNextFrameAsync().Forget();
+			}
 		}
 	}
 
-	// Token: 0x06013B33 RID: 80691 RVA: 0x004EFB04 File Offset: 0x004EDD04
+	// Token: 0x06011014 RID: 69652 RVA: 0x004FE7F0 File Offset: 0x004FC9F0
+	private UniTask FinishPs5PhotoNextFrameAsync()
+	{
+		PhotoSaveView.<FinishPs5PhotoNextFrameAsync>d__79 <FinishPs5PhotoNextFrameAsync>d__;
+		<FinishPs5PhotoNextFrameAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+		<FinishPs5PhotoNextFrameAsync>d__.<>4__this = this;
+		<FinishPs5PhotoNextFrameAsync>d__.<>1__state = -1;
+		<FinishPs5PhotoNextFrameAsync>d__.<>t__builder.Start<PhotoSaveView.<FinishPs5PhotoNextFrameAsync>d__79>(ref <FinishPs5PhotoNextFrameAsync>d__);
+		return <FinishPs5PhotoNextFrameAsync>d__.<>t__builder.Task;
+	}
+
+	// Token: 0x06011015 RID: 69653 RVA: 0x004FE834 File Offset: 0x004FCA34
 	private unsafe void OnIOSPhotoLibraryAuthorizationCompleted(bool isGranted)
 	{
 		Log instance = Log.Instance;
@@ -1024,7 +1068,7 @@ public class PhotoSaveView : UiViewBase
 		this.ClosePhotoSaveView();
 	}
 
-	// Token: 0x06013B34 RID: 80692 RVA: 0x004EFC2F File Offset: 0x004EDE2F
+	// Token: 0x06011016 RID: 69654 RVA: 0x004FE95F File Offset: 0x004FCB5F
 	private void ClosePhotoSaveView()
 	{
 		if (PhotographController.Instance.CheckIfInEntityCamera())
@@ -1036,13 +1080,13 @@ public class PhotoSaveView : UiViewBase
 		UiManager.Instance.CloseView(EUiViewName.PhotoSaveView, null);
 	}
 
-	// Token: 0x06013B35 RID: 80693 RVA: 0x004EFC6A File Offset: 0x004EDE6A
+	// Token: 0x06011017 RID: 69655 RVA: 0x004FE99A File Offset: 0x004FCB9A
 	private string GetRelativeShotPath(string photoName)
 	{
 		return PhotographModel.Instance.SavePath + photoName;
 	}
 
-	// Token: 0x06013B36 RID: 80694 RVA: 0x004EFC7C File Offset: 0x004EDE7C
+	// Token: 0x06011018 RID: 69656 RVA: 0x004FE9AC File Offset: 0x004FCBAC
 	private void OnClickedCloseButton()
 	{
 		if (!this.IsPhoto)
@@ -1053,7 +1097,7 @@ public class PhotoSaveView : UiViewBase
 		this.ClosePhotoSaveView();
 	}
 
-	// Token: 0x06013B37 RID: 80695 RVA: 0x004EFC94 File Offset: 0x004EDE94
+	// Token: 0x06011019 RID: 69657 RVA: 0x004FE9C4 File Offset: 0x004FCBC4
 	private void OnClickRetake()
 	{
 		PhotographController.Instance.ResetShotStateForRetake();
@@ -1061,7 +1105,7 @@ public class PhotoSaveView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06013B38 RID: 80696 RVA: 0x004EFCB3 File Offset: 0x004EDEB3
+	// Token: 0x0601101A RID: 69658 RVA: 0x004FE9E3 File Offset: 0x004FCBE3
 	private void OnClickPersonalInfoShow(EToggleState toggleState)
 	{
 		LocalStorage.SetGlobal<bool>(ELocalStorageGlobalKey.PhotoAndShareShowPlayerName, toggleState == EToggleState.ETT_Checked);
@@ -1074,7 +1118,7 @@ public class PhotoSaveView : UiViewBase
 		EventSystem.Instance.Emit(EEventName.OnPhotoSaveViewPersonalInfoShowRefresh);
 	}
 
-	// Token: 0x06013B39 RID: 80697 RVA: 0x004EFCF0 File Offset: 0x004EDEF0
+	// Token: 0x0601101B RID: 69659 RVA: 0x004FEA20 File Offset: 0x004FCC20
 	private void EntityCameraFinished(bool judgement)
 	{
 		if (!PhotographController.Instance.CheckIfInMission())
@@ -1100,7 +1144,7 @@ public class PhotoSaveView : UiViewBase
 		this.RefreshRetakeBtn();
 	}
 
-	// Token: 0x06013B3A RID: 80698 RVA: 0x004EFDCC File Offset: 0x004EDFCC
+	// Token: 0x0601101C RID: 69660 RVA: 0x004FEAFC File Offset: 0x004FCCFC
 	private void RefreshFirstShare()
 	{
 		bool flag = !PhotographController.Instance.CheckIfInEntityCamera() && ChannelModel.Instance.CouldGetShareReward(this.ShareActionId);
@@ -1135,7 +1179,7 @@ public class PhotoSaveView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013B3B RID: 80699 RVA: 0x004EFF24 File Offset: 0x004EE124
+	// Token: 0x0601101D RID: 69661 RVA: 0x004FEC54 File Offset: 0x004FCE54
 	private void OnOpenView(EUiViewName viewName, int viewId)
 	{
 		if (viewName == EUiViewName.PhotoSaveView || viewName == EUiViewName.NetWorkMaskView || viewName == EUiViewName.ConfirmBoxView)
@@ -1145,7 +1189,7 @@ public class PhotoSaveView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06013B3C RID: 80700 RVA: 0x004EFF58 File Offset: 0x004EE158
+	// Token: 0x0601101E RID: 69662 RVA: 0x004FEC88 File Offset: 0x004FCE88
 	private void Reset()
 	{
 		this.CurrentTakeWidth = 0;
@@ -1161,31 +1205,31 @@ public class PhotoSaveView : UiViewBase
 		ScreenShotManager.ResetScreenShot();
 	}
 
-	// Token: 0x06013B3D RID: 80701 RVA: 0x004EFFC4 File Offset: 0x004EE1C4
+	// Token: 0x0601101F RID: 69663 RVA: 0x004FECF4 File Offset: 0x004FCEF4
 	private UniTask WaitForNextTick()
 	{
-		PhotoSaveView.<WaitForNextTick>d__87 <WaitForNextTick>d__;
+		PhotoSaveView.<WaitForNextTick>d__90 <WaitForNextTick>d__;
 		<WaitForNextTick>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<WaitForNextTick>d__.<>1__state = -1;
-		<WaitForNextTick>d__.<>t__builder.Start<PhotoSaveView.<WaitForNextTick>d__87>(ref <WaitForNextTick>d__);
+		<WaitForNextTick>d__.<>t__builder.Start<PhotoSaveView.<WaitForNextTick>d__90>(ref <WaitForNextTick>d__);
 		return <WaitForNextTick>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B3E RID: 80702 RVA: 0x004F0000 File Offset: 0x004EE200
+	// Token: 0x06011020 RID: 69664 RVA: 0x004FED30 File Offset: 0x004FCF30
 	private UniTask PrepareScreenShotAsync(bool isFirst)
 	{
-		PhotoSaveView.<PrepareScreenShotAsync>d__88 <PrepareScreenShotAsync>d__;
+		PhotoSaveView.<PrepareScreenShotAsync>d__91 <PrepareScreenShotAsync>d__;
 		<PrepareScreenShotAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<PrepareScreenShotAsync>d__.<>4__this = this;
 		<PrepareScreenShotAsync>d__.isFirst = isFirst;
 		<PrepareScreenShotAsync>d__.<>1__state = -1;
-		<PrepareScreenShotAsync>d__.<>t__builder.Start<PhotoSaveView.<PrepareScreenShotAsync>d__88>(ref <PrepareScreenShotAsync>d__);
+		<PrepareScreenShotAsync>d__.<>t__builder.Start<PhotoSaveView.<PrepareScreenShotAsync>d__91>(ref <PrepareScreenShotAsync>d__);
 		return <PrepareScreenShotAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013B3F RID: 80703 RVA: 0x004F004B File Offset: 0x004EE24B
+	// Token: 0x06011021 RID: 69665 RVA: 0x004FED7B File Offset: 0x004FCF7B
 	[CompilerGenerated]
-	internal static int <GetSortTenGachaInfos>g__RevertType|39_0(InventoryDefine.EItemDataType type)
+	internal static int <GetSortTenGachaInfos>g__RevertType|40_0(InventoryDefine.EItemDataType type)
 	{
 		switch (type)
 		{
@@ -1197,7 +1241,7 @@ public class PhotoSaveView : UiViewBase
 		return 0;
 	}
 
-	// Token: 0x0400944E RID: 37966
+	// Token: 0x040095A4 RID: 38308
 	[Nullable(new byte[]
 	{
 		2,
@@ -1205,7 +1249,7 @@ public class PhotoSaveView : UiViewBase
 	})]
 	private GenericLayout<PhotoShareBtnItem, EChannelShare> ShareBtnLayout;
 
-	// Token: 0x0400944F RID: 37967
+	// Token: 0x040095A5 RID: 38309
 	[Nullable(new byte[]
 	{
 		2,
@@ -1214,178 +1258,182 @@ public class PhotoSaveView : UiViewBase
 	})]
 	private GenericLayout<GachaShareSwitchItem, GachaShareSwitchData> GachaSwitchLayout;
 
-	// Token: 0x04009450 RID: 37968
+	// Token: 0x040095A6 RID: 38310
 	private bool IsPhoto = true;
 
-	// Token: 0x04009451 RID: 37969
+	// Token: 0x040095A7 RID: 38311
 	private bool PrepareFullScreenShot;
 
-	// Token: 0x04009452 RID: 37970
+	// Token: 0x040095A8 RID: 38312
 	private bool CaptureFullScene;
 
-	// Token: 0x04009453 RID: 37971
+	// Token: 0x040095A9 RID: 38313
 	private string RelativeShotPath = "";
 
-	// Token: 0x04009454 RID: 37972
+	// Token: 0x040095AA RID: 38314
 	[Nullable(2)]
 	private PhotoSaveMarkItem MarkItem;
 
-	// Token: 0x04009455 RID: 37973
+	// Token: 0x040095AB RID: 38315
 	[Nullable(2)]
 	private GachaShareOnePanel GachaView;
 
-	// Token: 0x04009456 RID: 37974
+	// Token: 0x040095AC RID: 38316
 	[Nullable(2)]
 	private GachaShareTenPanel GachaViewTen;
 
-	// Token: 0x04009457 RID: 37975
+	// Token: 0x040095AD RID: 38317
 	[Nullable(2)]
 	private FragmentMemoryShareView FragmentMemoryShareViewRef;
 
-	// Token: 0x04009458 RID: 37976
+	// Token: 0x040095AE RID: 38318
 	[Nullable(2)]
 	private RoleSkinShareView RoleSkinShareView;
 
-	// Token: 0x04009459 RID: 37977
+	// Token: 0x040095AF RID: 38319
 	[Nullable(2)]
 	private VersionPreheatSharePanel VersionPreheatView;
 
-	// Token: 0x0400945A RID: 37978
+	// Token: 0x040095B0 RID: 38320
 	[Nullable(2)]
 	private Spring25SharePanel Spring25View;
 
-	// Token: 0x0400945B RID: 37979
+	// Token: 0x040095B1 RID: 38321
 	[Nullable(2)]
 	private HandBookPhotoShareView HandBookPhotoShareView;
 
-	// Token: 0x0400945C RID: 37980
+	// Token: 0x040095B2 RID: 38322
 	[Nullable(2)]
 	private TowerVariationShareView TowerVariationShareView;
 
-	// Token: 0x0400945D RID: 37981
+	// Token: 0x040095B3 RID: 38323
 	private WheelTowerTotalScoreSharePanel WheelTowerTotalScoreView;
 
-	// Token: 0x0400945E RID: 37982
+	// Token: 0x040095B4 RID: 38324
 	private WheelTowerSettlementShareView WheelTowerSettlementShareView;
 
-	// Token: 0x0400945F RID: 37983
+	// Token: 0x040095B5 RID: 38325
 	private ShipTowerSharePanel ChallengeRecordShareView;
 
-	// Token: 0x04009460 RID: 37984
+	// Token: 0x040095B6 RID: 38326
 	private EShareActionId ShareActionId = EShareActionId.Photo;
 
-	// Token: 0x04009461 RID: 37985
+	// Token: 0x040095B7 RID: 38327
 	private EShareReportExtraType ShareReportExtraType;
 
-	// Token: 0x04009462 RID: 37986
+	// Token: 0x040095B8 RID: 38328
 	private int CurrentTakeWidth;
 
-	// Token: 0x04009463 RID: 37987
+	// Token: 0x040095B9 RID: 38329
 	private int CurrentTakeHeight;
 
-	// Token: 0x04009464 RID: 37988
+	// Token: 0x040095BA RID: 38330
 	[Nullable(2)]
 	private TArray<FColor> CurrentTakeColors;
 
-	// Token: 0x04009465 RID: 37989
+	// Token: 0x040095BB RID: 38331
 	private int CurrentWatermarkTakeWidth;
 
-	// Token: 0x04009466 RID: 37990
+	// Token: 0x040095BC RID: 38332
 	private int CurrentWatermarkTakeHeight;
 
-	// Token: 0x04009467 RID: 37991
+	// Token: 0x040095BD RID: 38333
 	[Nullable(2)]
 	private TArray<FColor> CurrentWatermarkTakeColors;
 
-	// Token: 0x04009468 RID: 37992
+	// Token: 0x040095BE RID: 38334
 	private FVector? PanelItemOriginalScale;
 
-	// Token: 0x04009469 RID: 37993
+	// Token: 0x040095BF RID: 38335
 	private bool IsShowPlayerName;
 
-	// Token: 0x02008BFC RID: 35836
+	// Token: 0x040095C0 RID: 38336
+	[Nullable(2)]
+	private Action RestoreCaptureUi;
+
+	// Token: 0x02007D84 RID: 32132
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402D71C RID: 186140
+		// Token: 0x04028A31 RID: 166449
 		PhotoTexture,
-		// Token: 0x0402D71D RID: 186141
+		// Token: 0x04028A32 RID: 166450
 		PhotoFrameItem,
-		// Token: 0x0402D71E RID: 186142
+		// Token: 0x04028A33 RID: 166451
 		CloseButton,
-		// Token: 0x0402D71F RID: 186143
+		// Token: 0x04028A34 RID: 166452
 		BlackBgSprite,
-		// Token: 0x0402D720 RID: 186144
+		// Token: 0x04028A35 RID: 166453
 		BtnParent,
-		// Token: 0x0402D721 RID: 186145
+		// Token: 0x04028A36 RID: 166454
 		ShareBtnLayout,
-		// Token: 0x0402D722 RID: 186146
+		// Token: 0x04028A37 RID: 166455
 		SaveButton,
-		// Token: 0x0402D723 RID: 186147
+		// Token: 0x04028A38 RID: 166456
 		PnlTips,
-		// Token: 0x0402D724 RID: 186148
+		// Token: 0x04028A39 RID: 166457
 		SprCross,
-		// Token: 0x0402D725 RID: 186149
+		// Token: 0x04028A3A RID: 166458
 		SprTick,
-		// Token: 0x0402D726 RID: 186150
+		// Token: 0x04028A3B RID: 166459
 		TxtConditions,
-		// Token: 0x0402D727 RID: 186151
+		// Token: 0x04028A3C RID: 166460
 		MinItemPhoto,
-		// Token: 0x0402D728 RID: 186152
+		// Token: 0x04028A3D RID: 166461
 		MaxItemPhoto,
-		// Token: 0x0402D729 RID: 186153
+		// Token: 0x04028A3E RID: 166462
 		PhotoItem,
-		// Token: 0x0402D72A RID: 186154
+		// Token: 0x04028A3F RID: 166463
 		PhotoPanel,
-		// Token: 0x0402D72B RID: 186155
+		// Token: 0x04028A40 RID: 166464
 		LandscapePanel,
-		// Token: 0x0402D72C RID: 186156
+		// Token: 0x04028A41 RID: 166465
 		TypeText,
-		// Token: 0x0402D72D RID: 186157
+		// Token: 0x04028A42 RID: 166466
 		NameText,
-		// Token: 0x0402D72E RID: 186158
+		// Token: 0x04028A43 RID: 166467
 		DateText,
-		// Token: 0x0402D72F RID: 186159
+		// Token: 0x04028A44 RID: 166468
 		LandscapeTexture,
-		// Token: 0x0402D730 RID: 186160
+		// Token: 0x04028A45 RID: 166469
 		DescriptionText,
-		// Token: 0x0402D731 RID: 186161
+		// Token: 0x04028A46 RID: 166470
 		MarkItemPhoto,
-		// Token: 0x0402D732 RID: 186162
+		// Token: 0x04028A47 RID: 166471
 		MarkItemLandscape,
-		// Token: 0x0402D733 RID: 186163
+		// Token: 0x04028A48 RID: 166472
 		MinItemLandscape,
-		// Token: 0x0402D734 RID: 186164
+		// Token: 0x04028A49 RID: 166473
 		MaxItemLandscape,
-		// Token: 0x0402D735 RID: 186165
+		// Token: 0x04028A4A RID: 166474
 		TxtCostPhoto,
-		// Token: 0x0402D736 RID: 186166
+		// Token: 0x04028A4B RID: 166475
 		TxtCostLandscape,
-		// Token: 0x0402D737 RID: 186167
+		// Token: 0x04028A4C RID: 166476
 		FirstPhoto,
-		// Token: 0x0402D738 RID: 186168
+		// Token: 0x04028A4D RID: 166477
 		FirstLandscape,
-		// Token: 0x0402D739 RID: 186169
+		// Token: 0x04028A4E RID: 166478
 		RetakeButton,
-		// Token: 0x0402D73A RID: 186170
+		// Token: 0x04028A4F RID: 166479
 		LineParent,
-		// Token: 0x0402D73B RID: 186171
+		// Token: 0x04028A50 RID: 166480
 		LineItem,
-		// Token: 0x0402D73C RID: 186172
+		// Token: 0x04028A51 RID: 166481
 		TextureCostPhoto,
-		// Token: 0x0402D73D RID: 186173
+		// Token: 0x04028A52 RID: 166482
 		TextureCostLandscape,
-		// Token: 0x0402D73E RID: 186174
+		// Token: 0x04028A53 RID: 166483
 		PersonalInfoTogglePhoto,
-		// Token: 0x0402D73F RID: 186175
+		// Token: 0x04028A54 RID: 166484
 		PersonalInfoToggleLandscape,
-		// Token: 0x0402D740 RID: 186176
+		// Token: 0x04028A55 RID: 166485
 		SubViewRoot,
-		// Token: 0x0402D741 RID: 186177
+		// Token: 0x04028A56 RID: 166486
 		ExternalTexture,
-		// Token: 0x0402D742 RID: 186178
+		// Token: 0x04028A57 RID: 166487
 		GachaSwitchLayout,
-		// Token: 0x0402D743 RID: 186179
+		// Token: 0x04028A58 RID: 166488
 		GachaSwitchItem
 	}
 }

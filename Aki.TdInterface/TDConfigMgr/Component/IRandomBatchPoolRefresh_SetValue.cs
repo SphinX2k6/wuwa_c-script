@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200064B RID: 1611
+	// Token: 0x020006E8 RID: 1768
 	public class IRandomBatchPoolRefresh_SetValue
 	{
-		// Token: 0x040017F7 RID: 6135
+		// Token: 0x040019E9 RID: 6633
 		public EEntityBatchRefreshMode Type;
 
-		// Token: 0x040017F8 RID: 6136
-		[Nullable(1)]
+		// Token: 0x040019EA RID: 6634
 		public List<IEntityListBatch> EntityBatches;
 
-		// Token: 0x040017F9 RID: 6137
+		// Token: 0x040019EB RID: 6635
 		public bool? IsRestartAfterAllBatchesFinished;
 	}
 }

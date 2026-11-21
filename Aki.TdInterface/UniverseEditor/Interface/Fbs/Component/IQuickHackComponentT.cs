@@ -4,45 +4,45 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057CA RID: 22474
+	// Token: 0x02005DD1 RID: 24017
 	public class IQuickHackComponentT
 	{
-		// Token: 0x1700A7C2 RID: 42946
-		// (get) Token: 0x06025BA0 RID: 154528 RVA: 0x00533F5B File Offset: 0x0053215B
-		// (set) Token: 0x06025BA1 RID: 154529 RVA: 0x00533F63 File Offset: 0x00532163
+		// Token: 0x1700B0E6 RID: 45286
+		// (get) Token: 0x060280C0 RID: 164032 RVA: 0x0057A0E7 File Offset: 0x005782E7
+		// (set) Token: 0x060280C1 RID: 164033 RVA: 0x0057A0EF File Offset: 0x005782EF
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A7C3 RID: 42947
-		// (get) Token: 0x06025BA2 RID: 154530 RVA: 0x00533F6C File Offset: 0x0053216C
-		// (set) Token: 0x06025BA3 RID: 154531 RVA: 0x00533F74 File Offset: 0x00532174
+		// Token: 0x1700B0E7 RID: 45287
+		// (get) Token: 0x060280C2 RID: 164034 RVA: 0x0057A0F8 File Offset: 0x005782F8
+		// (set) Token: 0x060280C3 RID: 164035 RVA: 0x0057A100 File Offset: 0x00578300
 		public float Time { get; set; }
 
-		// Token: 0x1700A7C4 RID: 42948
-		// (get) Token: 0x06025BA4 RID: 154532 RVA: 0x00533F7D File Offset: 0x0053217D
-		// (set) Token: 0x06025BA5 RID: 154533 RVA: 0x00533F85 File Offset: 0x00532185
+		// Token: 0x1700B0E8 RID: 45288
+		// (get) Token: 0x060280C4 RID: 164036 RVA: 0x0057A109 File Offset: 0x00578309
+		// (set) Token: 0x060280C5 RID: 164037 RVA: 0x0057A111 File Offset: 0x00578311
 		public IVectorInfoT IconOffset { get; set; }
 
-		// Token: 0x1700A7C5 RID: 42949
-		// (get) Token: 0x06025BA6 RID: 154534 RVA: 0x00533F8E File Offset: 0x0053218E
-		// (set) Token: 0x06025BA7 RID: 154535 RVA: 0x00533F96 File Offset: 0x00532196
+		// Token: 0x1700B0E9 RID: 45289
+		// (get) Token: 0x060280C6 RID: 164038 RVA: 0x0057A11A File Offset: 0x0057831A
+		// (set) Token: 0x060280C7 RID: 164039 RVA: 0x0057A122 File Offset: 0x00578322
 		public List<IQuickHackSkillT> Skills { get; set; }
 
-		// Token: 0x1700A7C6 RID: 42950
-		// (get) Token: 0x06025BA8 RID: 154536 RVA: 0x00533F9F File Offset: 0x0053219F
-		// (set) Token: 0x06025BA9 RID: 154537 RVA: 0x00533FA7 File Offset: 0x005321A7
+		// Token: 0x1700B0EA RID: 45290
+		// (get) Token: 0x060280C8 RID: 164040 RVA: 0x0057A12B File Offset: 0x0057832B
+		// (set) Token: 0x060280C9 RID: 164041 RVA: 0x0057A133 File Offset: 0x00578333
 		public EQuickHackAutoCloseType AutoClose { get; set; }
 
-		// Token: 0x1700A7C7 RID: 42951
-		// (get) Token: 0x06025BAA RID: 154538 RVA: 0x00533FB0 File Offset: 0x005321B0
-		// (set) Token: 0x06025BAB RID: 154539 RVA: 0x00533FB8 File Offset: 0x005321B8
+		// Token: 0x1700B0EB RID: 45291
+		// (get) Token: 0x060280CA RID: 164042 RVA: 0x0057A13C File Offset: 0x0057833C
+		// (set) Token: 0x060280CB RID: 164043 RVA: 0x0057A144 File Offset: 0x00578344
 		public IQuickHackLinkEffectT LinkEffect { get; set; }
 
-		// Token: 0x1700A7C8 RID: 42952
-		// (get) Token: 0x06025BAC RID: 154540 RVA: 0x00533FC1 File Offset: 0x005321C1
-		// (set) Token: 0x06025BAD RID: 154541 RVA: 0x00533FC9 File Offset: 0x005321C9
+		// Token: 0x1700B0EC RID: 45292
+		// (get) Token: 0x060280CC RID: 164044 RVA: 0x0057A14D File Offset: 0x0057834D
+		// (set) Token: 0x060280CD RID: 164045 RVA: 0x0057A155 File Offset: 0x00578355
 		public byte NullMask { get; set; }
 
-		// Token: 0x06025BAE RID: 154542 RVA: 0x00533FD2 File Offset: 0x005321D2
+		// Token: 0x060280CE RID: 164046 RVA: 0x0057A15E File Offset: 0x0057835E
 		public IQuickHackComponentT()
 		{
 			this.Disabled = false;

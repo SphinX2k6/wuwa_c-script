@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002478 RID: 9336
+// Token: 0x0200195D RID: 6493
 internal enum EPhantomGridTitleComponent
 {
-	// Token: 0x04008D29 RID: 36137
+	// Token: 0x04008E70 RID: 36464
 	TxtTitle,
-	// Token: 0x04008D2A RID: 36138
+	// Token: 0x04008E71 RID: 36465
 	BtnFunction
 }

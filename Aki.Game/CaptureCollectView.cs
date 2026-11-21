@@ -17,18 +17,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002556 RID: 9558
+// Token: 0x02001A41 RID: 6721
 [NullableContext(2)]
 [Nullable(0)]
 public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 {
-	// Token: 0x0601342F RID: 78895 RVA: 0x004CA3AC File Offset: 0x004C85AC
+	// Token: 0x0601090F RID: 67855 RVA: 0x004D8F2C File Offset: 0x004D712C
 	[NullableContext(1)]
 	public CaptureCollectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06013430 RID: 78896 RVA: 0x004CA418 File Offset: 0x004C8618
+	// Token: 0x06010910 RID: 67856 RVA: 0x004D8F98 File Offset: 0x004D7198
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -56,7 +56,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		};
 	}
 
-	// Token: 0x06013431 RID: 78897 RVA: 0x004CA5C0 File Offset: 0x004C87C0
+	// Token: 0x06010911 RID: 67857 RVA: 0x004D9140 File Offset: 0x004D7340
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CaptureCollectView.<OnBeforeStartAsync>d__24 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013432 RID: 78898 RVA: 0x004CA603 File Offset: 0x004C8803
+	// Token: 0x06010912 RID: 67858 RVA: 0x004D9183 File Offset: 0x004D7383
 	protected override void OnStart()
 	{
 		this.SetLodBias(-7);
@@ -83,7 +83,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		}
 	}
 
-	// Token: 0x06013433 RID: 78899 RVA: 0x004CA632 File Offset: 0x004C8832
+	// Token: 0x06010913 RID: 67859 RVA: 0x004D91B2 File Offset: 0x004D73B2
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveChangeFovTimer();
@@ -93,7 +93,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		UKuroSequencePerformanceManager.CloseKuroPerformanceMode();
 	}
 
-	// Token: 0x06013434 RID: 78900 RVA: 0x004CA65C File Offset: 0x004C885C
+	// Token: 0x06010914 RID: 67860 RVA: 0x004D91DC File Offset: 0x004D73DC
 	protected override void OnAfterDestroy()
 	{
 		this.SetLodBias(0);
@@ -109,7 +109,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		}
 	}
 
-	// Token: 0x06013435 RID: 78901 RVA: 0x004CA6B0 File Offset: 0x004C88B0
+	// Token: 0x06010915 RID: 67861 RVA: 0x004D9230 File Offset: 0x004D7430
 	protected override UniTask OnPlayingStartSequenceAsync()
 	{
 		CaptureCollectView.<OnPlayingStartSequenceAsync>d__28 <OnPlayingStartSequenceAsync>d__;
@@ -120,7 +120,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013436 RID: 78902 RVA: 0x004CA6F4 File Offset: 0x004C88F4
+	// Token: 0x06010916 RID: 67862 RVA: 0x004D9274 File Offset: 0x004D7474
 	protected override UniTask OnPlayingHideSequenceAsync()
 	{
 		CaptureCollectView.<OnPlayingHideSequenceAsync>d__29 <OnPlayingHideSequenceAsync>d__;
@@ -131,7 +131,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		return <OnPlayingHideSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013437 RID: 78903 RVA: 0x004CA738 File Offset: 0x004C8938
+	// Token: 0x06010917 RID: 67863 RVA: 0x004D92B8 File Offset: 0x004D74B8
 	protected override UniTask OnPlayingCloseSequenceAsync()
 	{
 		CaptureCollectView.<OnPlayingCloseSequenceAsync>d__30 <OnPlayingCloseSequenceAsync>d__;
@@ -142,7 +142,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013438 RID: 78904 RVA: 0x004CA77C File Offset: 0x004C897C
+	// Token: 0x06010918 RID: 67864 RVA: 0x004D92FC File Offset: 0x004D74FC
 	private void SetLodBias(int lodBias)
 	{
 		SceneTeamModel instance = SceneTeamModel.Instance;
@@ -168,7 +168,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		}
 	}
 
-	// Token: 0x06013439 RID: 78905 RVA: 0x004CA7C4 File Offset: 0x004C89C4
+	// Token: 0x06010919 RID: 67865 RVA: 0x004D9344 File Offset: 0x004D7544
 	protected override void OnAddEventListener()
 	{
 		UUIButtonComponent button = base.GetButton(4);
@@ -200,7 +200,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		EventSystem.Instance.Add(EEventName.OnScreenShotDone, new Action(this.OnScreenShotDone));
 	}
 
-	// Token: 0x0601343A RID: 78906 RVA: 0x004CA9A4 File Offset: 0x004C8BA4
+	// Token: 0x0601091A RID: 67866 RVA: 0x004D9524 File Offset: 0x004D7724
 	protected override void OnRemoveEventListener()
 	{
 		UUIButtonComponent button = base.GetButton(4);
@@ -232,7 +232,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		EventSystem.Instance.Remove(EEventName.OnScreenShotDone, new Action(this.OnScreenShotDone));
 	}
 
-	// Token: 0x0601343B RID: 78907 RVA: 0x004CAAF4 File Offset: 0x004C8CF4
+	// Token: 0x0601091B RID: 67867 RVA: 0x004D9674 File Offset: 0x004D7874
 	[NullableContext(1)]
 	private void OnInputWheelAxis(string name, float value, InputIdentification inputIdentification)
 	{
@@ -243,7 +243,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		}
 	}
 
-	// Token: 0x0601343C RID: 78908 RVA: 0x004CAB1A File Offset: 0x004C8D1A
+	// Token: 0x0601091C RID: 67868 RVA: 0x004D969A File Offset: 0x004D789A
 	[NullableContext(1)]
 	private void OnInputUiIncrease(string axisName, float value, InputIdentification _)
 	{
@@ -254,7 +254,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		this.ChangeFov(-value * this.CameraZoomSpeed);
 	}
 
-	// Token: 0x0601343D RID: 78909 RVA: 0x004CAB40 File Offset: 0x004C8D40
+	// Token: 0x0601091D RID: 67869 RVA: 0x004D96C0 File Offset: 0x004D78C0
 	[NullableContext(1)]
 	private void OnInputUiReduce(string axisName, float value, InputIdentification _)
 	{
@@ -265,13 +265,13 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		this.ChangeFov(-value * this.CameraZoomSpeed);
 	}
 
-	// Token: 0x0601343E RID: 78910 RVA: 0x004CAB66 File Offset: 0x004C8D66
+	// Token: 0x0601091E RID: 67870 RVA: 0x004D96E6 File Offset: 0x004D78E6
 	protected override void OnBeforeCreate()
 	{
 		PhotographQuickController.Instance.InitHandlerForCaptureCollect();
 	}
 
-	// Token: 0x0601343F RID: 78911 RVA: 0x004CAB74 File Offset: 0x004C8D74
+	// Token: 0x0601091F RID: 67871 RVA: 0x004D96F4 File Offset: 0x004D78F4
 	protected override void OnBeforeShow()
 	{
 		base.GetItem(10).SetUIActive(this.IsFilterEnabled);
@@ -295,7 +295,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		this.EnableTipsItem(true);
 	}
 
-	// Token: 0x06013440 RID: 78912 RVA: 0x004CAC14 File Offset: 0x004C8E14
+	// Token: 0x06010920 RID: 67872 RVA: 0x004D9794 File Offset: 0x004D7994
 	protected override void OnAfterHide()
 	{
 		this.SetUiProhibitRefresh(false);
@@ -317,7 +317,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		}
 	}
 
-	// Token: 0x06013441 RID: 78913 RVA: 0x004CAC88 File Offset: 0x004C8E88
+	// Token: 0x06010921 RID: 67873 RVA: 0x004D9808 File Offset: 0x004D7A08
 	private void SetUiProhibitRefresh(bool reg)
 	{
 		if (reg)
@@ -328,13 +328,13 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		UiProhibitFightInputCenter.Instance.UnRegisterExtraRefreshData(this.ViewInfo.Name);
 	}
 
-	// Token: 0x06013442 RID: 78914 RVA: 0x004CACC3 File Offset: 0x004C8EC3
+	// Token: 0x06010922 RID: 67874 RVA: 0x004D9843 File Offset: 0x004D7A43
 	public bool CheckCondition()
 	{
 		return true;
 	}
 
-	// Token: 0x06013443 RID: 78915 RVA: 0x004CACC6 File Offset: 0x004C8EC6
+	// Token: 0x06010923 RID: 67875 RVA: 0x004D9846 File Offset: 0x004D7A46
 	[NullableContext(1)]
 	public string[] GetDistributeTags()
 	{
@@ -350,7 +350,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		};
 	}
 
-	// Token: 0x06013444 RID: 78916 RVA: 0x004CAD06 File Offset: 0x004C8F06
+	// Token: 0x06010924 RID: 67876 RVA: 0x004D9886 File Offset: 0x004D7A86
 	[NullableContext(1)]
 	private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification _)
 	{
@@ -360,7 +360,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		}
 	}
 
-	// Token: 0x06013445 RID: 78917 RVA: 0x004CAD20 File Offset: 0x004C8F20
+	// Token: 0x06010925 RID: 67877 RVA: 0x004D98A0 File Offset: 0x004D7AA0
 	private void TouchMoved(int touchId)
 	{
 		if (PhotographQuickController.Instance.Model.GetHandler() == null)
@@ -386,7 +386,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		this.ChangeFov(changeValue);
 	}
 
-	// Token: 0x06013446 RID: 78918 RVA: 0x004CADCB File Offset: 0x004C8FCB
+	// Token: 0x06010926 RID: 67878 RVA: 0x004D994B File Offset: 0x004D7B4B
 	private void SetVisibleMode(bool bVisible)
 	{
 		if (this.VisibleMode == bVisible)
@@ -397,20 +397,20 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		LoadingModel.Instance.IsShowUidView = this.VisibleMode;
 	}
 
-	// Token: 0x06013447 RID: 78919 RVA: 0x004CADEE File Offset: 0x004C8FEE
+	// Token: 0x06010927 RID: 67879 RVA: 0x004D996E File Offset: 0x004D7B6E
 	private void OnPhotographSetVisible()
 	{
 		this.SetVisibleMode(true);
 	}
 
-	// Token: 0x06013448 RID: 78920 RVA: 0x004CADF8 File Offset: 0x004C8FF8
+	// Token: 0x06010928 RID: 67880 RVA: 0x004D9978 File Offset: 0x004D7B78
 	private void OnSetFov(float value)
 	{
 		float fov = MathUtils.Instance.RangeClamp(value, this.MinFov, this.MaxFov, this.MaxFov, this.MinFov);
 		PhotographQuickController.Instance.SetFov(fov);
 	}
 
-	// Token: 0x06013449 RID: 78921 RVA: 0x004CAE34 File Offset: 0x004C9034
+	// Token: 0x06010929 RID: 67881 RVA: 0x004D99B4 File Offset: 0x004D7BB4
 	private void OnDragMoved(ULGUIPointerEventData eventData)
 	{
 		if (eventData == null)
@@ -438,7 +438,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		this.LastMoveVector = new FVector?(pointerPosition);
 	}
 
-	// Token: 0x0601344A RID: 78922 RVA: 0x004CAEDC File Offset: 0x004C90DC
+	// Token: 0x0601092A RID: 67882 RVA: 0x004D9A5C File Offset: 0x004D7C5C
 	private void OnDragBegin(ULGUIPointerEventData _)
 	{
 		this.InDragMove = false;
@@ -450,7 +450,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		handler.ClearInput();
 	}
 
-	// Token: 0x0601344B RID: 78923 RVA: 0x004CAEFE File Offset: 0x004C90FE
+	// Token: 0x0601092B RID: 67883 RVA: 0x004D9A7E File Offset: 0x004D7C7E
 	private void OnDragEnded(ULGUIPointerEventData _)
 	{
 		this.LastMoveVector = null;
@@ -466,33 +466,33 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		handler.ClearInput();
 	}
 
-	// Token: 0x0601344C RID: 78924 RVA: 0x004CAF34 File Offset: 0x004C9134
+	// Token: 0x0601092C RID: 67884 RVA: 0x004D9AB4 File Offset: 0x004D7CB4
 	private void OnPressAddButton()
 	{
 		this.RemoveChangeFovTimer();
 		this.ChangeFovTimerId = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnAddFov), 100f, 1f, null, null, true);
 	}
 
-	// Token: 0x0601344D RID: 78925 RVA: 0x004CAF65 File Offset: 0x004C9165
+	// Token: 0x0601092D RID: 67885 RVA: 0x004D9AE5 File Offset: 0x004D7CE5
 	private void OnReleaseAddButton()
 	{
 		this.RemoveChangeFovTimer();
 	}
 
-	// Token: 0x0601344E RID: 78926 RVA: 0x004CAF6D File Offset: 0x004C916D
+	// Token: 0x0601092E RID: 67886 RVA: 0x004D9AED File Offset: 0x004D7CED
 	private void OnPressReduceButton()
 	{
 		this.RemoveChangeFovTimer();
 		this.ChangeFovTimerId = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnReduceFov), 100f, 1f, null, null, true);
 	}
 
-	// Token: 0x0601344F RID: 78927 RVA: 0x004CAF9E File Offset: 0x004C919E
+	// Token: 0x0601092F RID: 67887 RVA: 0x004D9B1E File Offset: 0x004D7D1E
 	private void OnReleaseReduceButton()
 	{
 		this.RemoveChangeFovTimer();
 	}
 
-	// Token: 0x06013450 RID: 78928 RVA: 0x004CAFA6 File Offset: 0x004C91A6
+	// Token: 0x06010930 RID: 67888 RVA: 0x004D9B26 File Offset: 0x004D7D26
 	private void RemoveChangeFovTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.ChangeFovTimerId))
@@ -502,31 +502,31 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		}
 	}
 
-	// Token: 0x06013451 RID: 78929 RVA: 0x004CAFD2 File Offset: 0x004C91D2
+	// Token: 0x06010931 RID: 67889 RVA: 0x004D9B52 File Offset: 0x004D7D52
 	private void OnAddFov(float _)
 	{
 		this.ChangeFov(1f);
 	}
 
-	// Token: 0x06013452 RID: 78930 RVA: 0x004CAFDF File Offset: 0x004C91DF
+	// Token: 0x06010932 RID: 67890 RVA: 0x004D9B5F File Offset: 0x004D7D5F
 	private void OnReduceFov(float _)
 	{
 		this.ChangeFov(-1f);
 	}
 
-	// Token: 0x06013453 RID: 78931 RVA: 0x004CAFEC File Offset: 0x004C91EC
+	// Token: 0x06010933 RID: 67891 RVA: 0x004D9B6C File Offset: 0x004D7D6C
 	private void OnAddButtonButtonClicked()
 	{
 		this.ChangeFov(1f);
 	}
 
-	// Token: 0x06013454 RID: 78932 RVA: 0x004CAFF9 File Offset: 0x004C91F9
+	// Token: 0x06010934 RID: 67892 RVA: 0x004D9B79 File Offset: 0x004D7D79
 	private void OnReduceButtonClicked()
 	{
 		this.ChangeFov(-1f);
 	}
 
-	// Token: 0x06013455 RID: 78933 RVA: 0x004CB008 File Offset: 0x004C9208
+	// Token: 0x06010935 RID: 67893 RVA: 0x004D9B88 File Offset: 0x004D7D88
 	private void RefreshFov()
 	{
 		UUISliderComponent slider = base.GetSlider(5);
@@ -543,7 +543,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		handler.SetFov(cameraInitializeFov);
 	}
 
-	// Token: 0x06013456 RID: 78934 RVA: 0x004CB088 File Offset: 0x004C9288
+	// Token: 0x06010936 RID: 67894 RVA: 0x004D9C08 File Offset: 0x004D7E08
 	private void ChangeFov(float changeValue)
 	{
 		UUISliderComponent slider = base.GetSlider(5);
@@ -551,7 +551,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		slider.SetValue(inValue, true);
 	}
 
-	// Token: 0x06013457 RID: 78935 RVA: 0x004CB0AC File Offset: 0x004C92AC
+	// Token: 0x06010937 RID: 67895 RVA: 0x004D9C2C File Offset: 0x004D7E2C
 	private void OnCloseButtonClick()
 	{
 		if (this.PhotographStart)
@@ -571,14 +571,14 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06013458 RID: 78936 RVA: 0x004CB10A File Offset: 0x004C930A
+	// Token: 0x06010938 RID: 67896 RVA: 0x004D9C8A File Offset: 0x004D7E8A
 	private void UpdateSaveToggle(bool state)
 	{
 		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ShouldSaveCaptureCollectFlag, state);
 		this.ShouldSavePhoto = state;
 	}
 
-	// Token: 0x06013459 RID: 78937 RVA: 0x004CB120 File Offset: 0x004C9320
+	// Token: 0x06010939 RID: 67897 RVA: 0x004D9CA0 File Offset: 0x004D7EA0
 	private void OnPhotographButtonClicked()
 	{
 		if (this.PhotographStart || !base.IsShowOrShowing)
@@ -606,7 +606,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		this.QuickShotDone();
 	}
 
-	// Token: 0x0601345A RID: 78938 RVA: 0x004CB1A8 File Offset: 0x004C93A8
+	// Token: 0x0601093A RID: 67898 RVA: 0x004D9D28 File Offset: 0x004D7F28
 	private UniTask QuickShotDone()
 	{
 		CaptureCollectView.<QuickShotDone>d__65 <QuickShotDone>d__;
@@ -617,7 +617,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		return <QuickShotDone>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601345B RID: 78939 RVA: 0x004CB1EB File Offset: 0x004C93EB
+	// Token: 0x0601093B RID: 67899 RVA: 0x004D9D6B File Offset: 0x004D7F6B
 	private void OnScreenShotDone()
 	{
 		this.DelayTimer = TimerSystem.Instance.Delay(delegate(float _)
@@ -627,7 +627,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		}, 50f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601345C RID: 78940 RVA: 0x004CB216 File Offset: 0x004C9416
+	// Token: 0x0601093C RID: 67900 RVA: 0x004D9D96 File Offset: 0x004D7F96
 	private void EndView()
 	{
 		SceneItemCaptureController.Instance.CollectItemsInViewport();
@@ -640,7 +640,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601345D RID: 78941 RVA: 0x004CB243 File Offset: 0x004C9443
+	// Token: 0x0601093D RID: 67901 RVA: 0x004D9DC3 File Offset: 0x004D7FC3
 	private void RemoveDelayTimer()
 	{
 		if (this.DelayTimer == null)
@@ -651,13 +651,13 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		this.DelayTimer = null;
 	}
 
-	// Token: 0x0601345E RID: 78942 RVA: 0x004CB266 File Offset: 0x004C9466
+	// Token: 0x0601093E RID: 67902 RVA: 0x004D9DE6 File Offset: 0x004D7FE6
 	public void SetQtaParam(QtaViewParam qtaParam)
 	{
 		this.QtaViewHandler = new QtaViewHandler(qtaParam);
 	}
 
-	// Token: 0x0601345F RID: 78943 RVA: 0x004CB274 File Offset: 0x004C9474
+	// Token: 0x0601093F RID: 67903 RVA: 0x004D9DF4 File Offset: 0x004D7FF4
 	private void EnableTipsItem(bool b)
 	{
 		BattleUiModel.Instance.ChildViewData.SetChildVisible(EBattleUiVisibleReason.SpecialSkill, EBattleUiChild.InteractionHint, !b, true, 0);
@@ -671,7 +671,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		EventSystem.Instance.Emit(EEventName.InteractionViewUpdate);
 	}
 
-	// Token: 0x06013460 RID: 78944 RVA: 0x004CB2EC File Offset: 0x004C94EC
+	// Token: 0x06010940 RID: 67904 RVA: 0x004D9E6C File Offset: 0x004D806C
 	private void OnFilterButtonClicked()
 	{
 		if (!base.IsShowOrShowing)
@@ -690,7 +690,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		}
 	}
 
-	// Token: 0x06013461 RID: 78945 RVA: 0x004CB368 File Offset: 0x004C9568
+	// Token: 0x06010941 RID: 67905 RVA: 0x004D9EE8 File Offset: 0x004D80E8
 	private void InitFilterFx()
 	{
 		this.BpFilterFx = ActorSystem.Instance.Get<BP_PhotoCutFilterPostProcess_C>(BP_PhotoCutFilterPostProcess_C.StaticClass(), MathUtils.Instance.DefaultTransformDouble, null, true);
@@ -706,7 +706,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		}
 	}
 
-	// Token: 0x06013462 RID: 78946 RVA: 0x004CB3D8 File Offset: 0x004C95D8
+	// Token: 0x06010942 RID: 67906 RVA: 0x004D9F58 File Offset: 0x004D8158
 	private void EnableFilterFx(bool b)
 	{
 		this.IsFilterEnabled = b;
@@ -726,7 +726,7 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		this.BpFilterFx.SwitchScreenUV();
 	}
 
-	// Token: 0x06013463 RID: 78947 RVA: 0x004CB46C File Offset: 0x004C966C
+	// Token: 0x06010943 RID: 67907 RVA: 0x004D9FEC File Offset: 0x004D81EC
 	private void SetupRangeFilterFx()
 	{
 		if (this.BpFilterFx == null)
@@ -747,47 +747,47 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 		this.BpFilterFx.DelayToFadeOut();
 	}
 
-	// Token: 0x0400915C RID: 37212
+	// Token: 0x040092B5 RID: 37557
 	private const int CHANGE_FOV_INTERVAL = 100;
 
-	// Token: 0x0400915D RID: 37213
+	// Token: 0x040092B6 RID: 37558
 	private TimerHandle ChangeFovTimerId;
 
-	// Token: 0x0400915E RID: 37214
+	// Token: 0x040092B7 RID: 37559
 	private FVector? LastMoveVector;
 
-	// Token: 0x0400915F RID: 37215
+	// Token: 0x040092B8 RID: 37560
 	private float ControlCameraRate;
 
-	// Token: 0x04009160 RID: 37216
+	// Token: 0x040092B9 RID: 37561
 	private bool InDragMove;
 
-	// Token: 0x04009161 RID: 37217
+	// Token: 0x040092BA RID: 37562
 	private bool VisibleMode = true;
 
-	// Token: 0x04009162 RID: 37218
+	// Token: 0x040092BB RID: 37563
 	private float MinFov = 30f;
 
-	// Token: 0x04009163 RID: 37219
+	// Token: 0x040092BC RID: 37564
 	private float MaxFov = 90f;
 
-	// Token: 0x04009164 RID: 37220
+	// Token: 0x040092BD RID: 37565
 	private float CameraZoomSpeed = 1f;
 
-	// Token: 0x04009165 RID: 37221
+	// Token: 0x040092BE RID: 37566
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04009166 RID: 37222
+	// Token: 0x040092BF RID: 37567
 	[Nullable(1)]
 	private readonly PopupCaptionToggleItem ToggleTabItem = new PopupCaptionToggleItem();
 
-	// Token: 0x04009167 RID: 37223
+	// Token: 0x040092C0 RID: 37568
 	private bool PhotographStart;
 
-	// Token: 0x04009168 RID: 37224
+	// Token: 0x040092C1 RID: 37569
 	private BP_PhotoCutFilterPostProcess_C BpFilterFx;
 
-	// Token: 0x04009169 RID: 37225
+	// Token: 0x040092C2 RID: 37570
 	[Nullable(new byte[]
 	{
 		2,
@@ -796,72 +796,72 @@ public class CaptureCollectView : UiViewBase, IQtaView, IUiProhibitRefreshData
 	[StaticVariableRuleIgnore]
 	private static WeakReference<BP_PhotoCutFilterPostProcess_C> WeakRefLastBpFilterFx;
 
-	// Token: 0x0400916A RID: 37226
+	// Token: 0x040092C3 RID: 37571
 	private bool ShouldSavePhoto;
 
-	// Token: 0x0400916B RID: 37227
+	// Token: 0x040092C4 RID: 37572
 	private QtaViewHandler QtaViewHandler;
 
-	// Token: 0x0400916C RID: 37228
+	// Token: 0x040092C5 RID: 37573
 	[Nullable(1)]
 	protected BattleUiTweenAnimPlayer TweenAnimPlayer = new BattleUiTweenAnimPlayer();
 
-	// Token: 0x0400916D RID: 37229
+	// Token: 0x040092C6 RID: 37574
 	private bool IsFilterEnabled;
 
-	// Token: 0x0400916E RID: 37230
+	// Token: 0x040092C7 RID: 37575
 	private double LastTime;
 
-	// Token: 0x0400916F RID: 37231
+	// Token: 0x040092C8 RID: 37576
 	private readonly FName MatParam1 = new FName("CameraClipMaskInt");
 
-	// Token: 0x04009170 RID: 37232
+	// Token: 0x040092C9 RID: 37577
 	private int CameraClipMaskIntOrg = -1;
 
-	// Token: 0x04009171 RID: 37233
+	// Token: 0x040092CA RID: 37578
 	private TimerHandle DelayTimer;
 
-	// Token: 0x02008B17 RID: 35607
+	// Token: 0x02007C9D RID: 31901
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402D28A RID: 184970
+		// Token: 0x04028599 RID: 165273
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402D28B RID: 184971
+		// Token: 0x0402859A RID: 165274
 		public const int ToggleSaveItem = 1;
 
-		// Token: 0x0402D28C RID: 184972
+		// Token: 0x0402859B RID: 165275
 		public const int PhotographButton = 2;
 
-		// Token: 0x0402D28D RID: 184973
+		// Token: 0x0402859C RID: 165276
 		public const int FilterButton = 3;
 
-		// Token: 0x0402D28E RID: 184974
+		// Token: 0x0402859D RID: 165277
 		public const int AddButton = 4;
 
-		// Token: 0x0402D28F RID: 184975
+		// Token: 0x0402859E RID: 165278
 		public const int CameraFovSlider = 5;
 
-		// Token: 0x0402D290 RID: 184976
+		// Token: 0x0402859F RID: 165279
 		public const int ReduceButton = 6;
 
-		// Token: 0x0402D291 RID: 184977
+		// Token: 0x040285A0 RID: 165280
 		public const int ControlScreenDraggable = 7;
 
-		// Token: 0x0402D292 RID: 184978
+		// Token: 0x040285A1 RID: 165281
 		public const int AniIn = 8;
 
-		// Token: 0x0402D293 RID: 184979
+		// Token: 0x040285A2 RID: 165282
 		public const int AniOut = 9;
 
-		// Token: 0x0402D294 RID: 184980
+		// Token: 0x040285A3 RID: 165283
 		public const int FilterIcon1 = 10;
 
-		// Token: 0x0402D295 RID: 184981
+		// Token: 0x040285A4 RID: 165284
 		public const int FilterIcon2 = 11;
 
-		// Token: 0x0402D296 RID: 184982
+		// Token: 0x040285A5 RID: 165285
 		public const int AniPhotoTake = 12;
 	}
 }

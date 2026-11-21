@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C01 RID: 3073
+	// Token: 0x02000CD1 RID: 3281
 	public class DungeonEntryComponent : IComponentBase
 	{
-		// Token: 0x06004695 RID: 18069 RVA: 0x000B240F File Offset: 0x000B060F
-		[NullableContext(1)]
+		// Token: 0x06004AF8 RID: 19192 RVA: 0x000BC5DB File Offset: 0x000BA7DB
 		public static DungeonEntryComponent Create(IDungeonEntryComponent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001450 RID: 5200
-		// (get) Token: 0x06004696 RID: 18070 RVA: 0x000B2430 File Offset: 0x000B0630
+		// Token: 0x17001551 RID: 5457
+		// (get) Token: 0x06004AF9 RID: 19193 RVA: 0x000BC5FC File Offset: 0x000BA7FC
 		public override bool? Disabled
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001451 RID: 5201
-		// (get) Token: 0x06004697 RID: 18071 RVA: 0x000B2468 File Offset: 0x000B0668
+		// Token: 0x17001552 RID: 5458
+		// (get) Token: 0x06004AFA RID: 19194 RVA: 0x000BC634 File Offset: 0x000BA834
 		public override bool? EdIsLocked
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002826 RID: 10278
+		// Token: 0x04002A72 RID: 10866
 		private IDungeonEntryComponent Instance;
 	}
 }

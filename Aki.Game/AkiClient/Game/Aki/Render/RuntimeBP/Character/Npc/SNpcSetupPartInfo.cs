@@ -6,22 +6,22 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 {
-	// Token: 0x02003E06 RID: 15878
+	// Token: 0x02003123 RID: 12579
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Character/Npc/SNpcSetupPartInfo.SNpcSetupPartInfo")]
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class SNpcSetupPartInfo : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06027B95 RID: 162709 RVA: 0x00999B82 File Offset: 0x00997D82
+		// Token: 0x0601EDE2 RID: 126434 RVA: 0x0091FEFF File Offset: 0x0091E0FF
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SNpcSetupPartInfo._ScriptStructPtr != 0) ? SNpcSetupPartInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Render/RuntimeBP/Character/Npc/SNpcSetupPartInfo.SNpcSetupPartInfo", ref SNpcSetupPartInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x170059A8 RID: 22952
-		// (get) Token: 0x06027B96 RID: 162710 RVA: 0x00999BA8 File Offset: 0x00997DA8
-		// (set) Token: 0x06027B97 RID: 162711 RVA: 0x00999BEB File Offset: 0x00997DEB
+		// Token: 0x170035FE RID: 13822
+		// (get) Token: 0x0601EDE3 RID: 126435 RVA: 0x0091FF24 File Offset: 0x0091E124
+		// (set) Token: 0x0601EDE4 RID: 126436 RVA: 0x0091FF67 File Offset: 0x0091E167
 		public TArray<USkeletalMeshComponent> SkeletalMeshComponents
 		{
 			get
@@ -30,7 +30,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 				TArray<USkeletalMeshComponent> result;
 				if ((result = this._SkeletalMeshComponents) == null)
 				{
-					result = (this._SkeletalMeshComponents = new TArray<USkeletalMeshComponent>(base.NativePtr + (IntPtr)SNpcSetupPartInfo.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._SkeletalMeshComponents = new TArray<USkeletalMeshComponent>(base.NativePtr + (IntPtr)SNpcSetupPartInfo.__PropertyOffset_SkeletalMeshComponents, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -40,56 +40,50 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc
 			}
 		}
 
-		// Token: 0x06027B98 RID: 162712 RVA: 0x00999BF9 File Offset: 0x00997DF9
+		// Token: 0x0601EDE5 RID: 126437 RVA: 0x0091FF75 File Offset: 0x0091E175
 		public SNpcSetupPartInfo()
 		{
 		}
 
-		// Token: 0x06027B99 RID: 162713 RVA: 0x00999C01 File Offset: 0x00997E01
-		public SNpcSetupPartInfo(TArray<USkeletalMeshComponent> SkeletalMeshComponents)
-		{
-			this.SkeletalMeshComponents = SkeletalMeshComponents;
-		}
-
-		// Token: 0x06027B9A RID: 162714 RVA: 0x00999C10 File Offset: 0x00997E10
+		// Token: 0x0601EDE6 RID: 126438 RVA: 0x0091FF7D File Offset: 0x0091E17D
 		protected override IntPtr GetUStructPtr()
 		{
 			return SNpcSetupPartInfo.StaticStruct();
 		}
 
-		// Token: 0x06027B9B RID: 162715 RVA: 0x00999C1C File Offset: 0x00997E1C
+		// Token: 0x0601EDE7 RID: 126439 RVA: 0x0091FF89 File Offset: 0x0091E189
 		[NullableContext(2)]
 		public SNpcSetupPartInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06027B9C RID: 162716 RVA: 0x00999C26 File Offset: 0x00997E26
+		// Token: 0x0601EDE8 RID: 126440 RVA: 0x0091FF93 File Offset: 0x0091E193
 		public SNpcSetupPartInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06027B9D RID: 162717 RVA: 0x00999C31 File Offset: 0x00997E31
+		// Token: 0x0601EDE9 RID: 126441 RVA: 0x0091FF9E File Offset: 0x0091E19E
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SNpcSetupPartInfo(Pointer, false, true);
 		}
 
-		// Token: 0x06027B9E RID: 162718 RVA: 0x00999C3B File Offset: 0x00997E3B
+		// Token: 0x0601EDEA RID: 126442 RVA: 0x0091FFA8 File Offset: 0x0091E1A8
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SNpcSetupPartInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040141D1 RID: 82385
+		// Token: 0x04010699 RID: 67225
 		public const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Character/Npc/SNpcSetupPartInfo.SNpcSetupPartInfo";
 
-		// Token: 0x040141D2 RID: 82386
+		// Token: 0x0401069A RID: 67226
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040141D3 RID: 82387
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401069B RID: 67227
+		internal static int __PropertyOffset_SkeletalMeshComponents;
 
-		// Token: 0x040141D4 RID: 82388
+		// Token: 0x0401069C RID: 67228
 		[Nullable(new byte[]
 		{
 			2,

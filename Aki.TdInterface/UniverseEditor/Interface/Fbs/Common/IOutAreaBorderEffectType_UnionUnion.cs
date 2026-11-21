@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E1C RID: 24092
+	// Token: 0x02006459 RID: 25689
 	public class IOutAreaBorderEffectType_UnionUnion
 	{
-		// Token: 0x1700B43D RID: 46141
-		// (get) Token: 0x060293F0 RID: 168944 RVA: 0x005A8581 File Offset: 0x005A6781
-		// (set) Token: 0x060293F1 RID: 168945 RVA: 0x005A8589 File Offset: 0x005A6789
+		// Token: 0x1700BDA3 RID: 48547
+		// (get) Token: 0x0602BA7A RID: 178810 RVA: 0x005F12B1 File Offset: 0x005EF4B1
+		// (set) Token: 0x0602BA7B RID: 178811 RVA: 0x005F12B9 File Offset: 0x005EF4B9
 		public IOutAreaBorderEffectType_Union Type { get; set; }
 
-		// Token: 0x1700B43E RID: 46142
-		// (get) Token: 0x060293F2 RID: 168946 RVA: 0x005A8592 File Offset: 0x005A6792
-		// (set) Token: 0x060293F3 RID: 168947 RVA: 0x005A859A File Offset: 0x005A679A
+		// Token: 0x1700BDA4 RID: 48548
+		// (get) Token: 0x0602BA7C RID: 178812 RVA: 0x005F12C2 File Offset: 0x005EF4C2
+		// (set) Token: 0x0602BA7D RID: 178813 RVA: 0x005F12CA File Offset: 0x005EF4CA
 		public object Value { get; set; }
 
-		// Token: 0x060293F4 RID: 168948 RVA: 0x005A85A3 File Offset: 0x005A67A3
+		// Token: 0x0602BA7E RID: 178814 RVA: 0x005F12D3 File Offset: 0x005EF4D3
 		public IOutAreaBorderEffectType_UnionUnion()
 		{
 			this.Type = IOutAreaBorderEffectType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060293F5 RID: 168949 RVA: 0x005A85B9 File Offset: 0x005A67B9
+		// Token: 0x0602BA7F RID: 178815 RVA: 0x005F12E9 File Offset: 0x005EF4E9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060293F6 RID: 168950 RVA: 0x005A85CB File Offset: 0x005A67CB
+		// Token: 0x0602BA80 RID: 178816 RVA: 0x005F12FB File Offset: 0x005EF4FB
 		public IOutAreaBorderEffectTypeT AsIOutAreaBorderEffectType()
 		{
 			return this.As<IOutAreaBorderEffectTypeT>();
 		}
 
-		// Token: 0x060293F7 RID: 168951 RVA: 0x005A85D3 File Offset: 0x005A67D3
+		// Token: 0x0602BA81 RID: 178817 RVA: 0x005F1303 File Offset: 0x005EF503
 		public static IOutAreaBorderEffectType_UnionUnion FromIOutAreaBorderEffectType(IOutAreaBorderEffectTypeT _ioutareabordereffecttype)
 		{
 			return new IOutAreaBorderEffectType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x060293F8 RID: 168952 RVA: 0x005A85E8 File Offset: 0x005A67E8
+		// Token: 0x0602BA82 RID: 178818 RVA: 0x005F1318 File Offset: 0x005EF518
 		public IOutAreaBorderBuffEffectT AsIOutAreaBorderBuffEffect()
 		{
 			return this.As<IOutAreaBorderBuffEffectT>();
 		}
 
-		// Token: 0x060293F9 RID: 168953 RVA: 0x005A85F0 File Offset: 0x005A67F0
+		// Token: 0x0602BA83 RID: 178819 RVA: 0x005F1320 File Offset: 0x005EF520
 		public static IOutAreaBorderEffectType_UnionUnion FromIOutAreaBorderBuffEffect(IOutAreaBorderBuffEffectT _ioutareaborderbuffeffect)
 		{
 			return new IOutAreaBorderEffectType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x060293FA RID: 168954 RVA: 0x005A8608 File Offset: 0x005A6808
+		// Token: 0x0602BA84 RID: 178820 RVA: 0x005F1338 File Offset: 0x005EF538
 		public static int Pack(FlatBufferBuilder builder, IOutAreaBorderEffectType_UnionUnion _o)
 		{
 			IOutAreaBorderEffectType_Union type = _o.Type;

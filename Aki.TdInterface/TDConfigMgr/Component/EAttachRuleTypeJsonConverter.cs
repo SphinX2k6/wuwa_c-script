@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008F5 RID: 2293
+	// Token: 0x0200099E RID: 2462
 	public class EAttachRuleTypeJsonConverter : JsonConverter<EAttachRuleType>
 	{
-		// Token: 0x06003401 RID: 13313 RVA: 0x00084F0C File Offset: 0x0008310C
+		// Token: 0x0600375B RID: 14171 RVA: 0x0008C738 File Offset: 0x0008A938
 		public override EAttachRuleType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EAttachRuleTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003402 RID: 13314 RVA: 0x00084F30 File Offset: 0x00083130
+		// Token: 0x0600375C RID: 14172 RVA: 0x0008C75C File Offset: 0x0008A95C
 		public override void Write(Utf8JsonWriter writer, EAttachRuleType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

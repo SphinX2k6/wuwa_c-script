@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000902 RID: 2306
+	// Token: 0x020009AB RID: 2475
 	public static class EBossStateViewStyleExtensions
 	{
-		// Token: 0x0600343A RID: 13370 RVA: 0x00085670 File Offset: 0x00083870
+		// Token: 0x06003794 RID: 14228 RVA: 0x0008CEE0 File Offset: 0x0008B0E0
 		public static string ToEnumString(this EBossStateViewStyle value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600343B RID: 13371 RVA: 0x00085698 File Offset: 0x00083898
+		// Token: 0x06003795 RID: 14229 RVA: 0x0008CF08 File Offset: 0x0008B108
 		public static EBossStateViewStyle FromString(string name)
 		{
 			EBossStateViewStyle result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600343C RID: 13372 RVA: 0x000856C1 File Offset: 0x000838C1
+		// Token: 0x06003796 RID: 14230 RVA: 0x0008CF31 File Offset: 0x0008B131
 		public static bool TryFromString(string name, out EBossStateViewStyle value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x0600343D RID: 13373 RVA: 0x000856E6 File Offset: 0x000838E6
+		// Token: 0x06003797 RID: 14231 RVA: 0x0008CF56 File Offset: 0x0008B156
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600343E RID: 13374 RVA: 0x000856F6 File Offset: 0x000838F6
+		// Token: 0x06003798 RID: 14232 RVA: 0x0008CF66 File Offset: 0x0008B166
 		public static EBossStateViewStyle[] GetValues()
 		{
 			return new EBossStateViewStyle[1];
 		}
 
-		// Token: 0x0600343F RID: 13375 RVA: 0x000856FE File Offset: 0x000838FE
+		// Token: 0x06003799 RID: 14233 RVA: 0x0008CF6E File Offset: 0x0008B16E
 		public static string[] GetNames()
 		{
 			return new string[]

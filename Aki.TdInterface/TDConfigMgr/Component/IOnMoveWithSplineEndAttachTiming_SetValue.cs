@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005AF RID: 1455
+	// Token: 0x0200061A RID: 1562
 	public class IOnMoveWithSplineEndAttachTiming_SetValue
 	{
-		// Token: 0x040015D7 RID: 5591
+		// Token: 0x0400174B RID: 5963
 		public EAttachTimingType Type;
 
-		// Token: 0x040015D8 RID: 5592
+		// Token: 0x0400174C RID: 5964
 		public int SplineEntityId;
 	}
 }

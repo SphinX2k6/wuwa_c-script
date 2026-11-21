@@ -6,16 +6,16 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002339 RID: 9017
+// Token: 0x0200181E RID: 6174
 public class BattlePassUpLevelView : UiViewBase
 {
-	// Token: 0x06011DA1 RID: 73121 RVA: 0x00465EBC File Offset: 0x004640BC
+	// Token: 0x0600F251 RID: 62033 RVA: 0x00472F84 File Offset: 0x00471184
 	[NullableContext(1)]
 	public BattlePassUpLevelView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011DA2 RID: 73122 RVA: 0x00465EC8 File Offset: 0x004640C8
+	// Token: 0x0600F252 RID: 62034 RVA: 0x00472F90 File Offset: 0x00471190
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -29,7 +29,7 @@ public class BattlePassUpLevelView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06011DA3 RID: 73123 RVA: 0x00465F34 File Offset: 0x00464134
+	// Token: 0x0600F253 RID: 62035 RVA: 0x00472FFC File Offset: 0x004711FC
 	protected override void OnStart()
 	{
 		int battlePassLevel = BattlePassModel.Instance.BattlePassLevel;
@@ -43,7 +43,7 @@ public class BattlePassUpLevelView : UiViewBase
 		}, 2000f, null, null, true, 1f);
 	}
 
-	// Token: 0x06011DA4 RID: 73124 RVA: 0x00465FB2 File Offset: 0x004641B2
+	// Token: 0x0600F254 RID: 62036 RVA: 0x0047307A File Offset: 0x0047127A
 	protected override void OnAfterHide()
 	{
 		if (((IBattlePassUpLevelViewData)this.OpenParam).FirstUnlockPass)
@@ -52,12 +52,12 @@ public class BattlePassUpLevelView : UiViewBase
 		}
 	}
 
-	// Token: 0x020088BF RID: 35007
+	// Token: 0x02007A48 RID: 31304
 	private enum EBpUpgradeComponents
 	{
-		// Token: 0x0402C714 RID: 182036
+		// Token: 0x04027A28 RID: 162344
 		PreLevel,
-		// Token: 0x0402C715 RID: 182037
+		// Token: 0x04027A29 RID: 162345
 		NowLevel
 	}
 }

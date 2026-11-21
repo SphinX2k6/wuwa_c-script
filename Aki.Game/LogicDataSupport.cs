@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002E06 RID: 11782
+// Token: 0x02002362 RID: 9058
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataSupport.LogicDataSupport_C")]
 public class LogicDataSupport : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17002244 RID: 8772
-	// (get) Token: 0x06018C79 RID: 101497 RVA: 0x00659EB4 File Offset: 0x006580B4
-	// (set) Token: 0x06018C7A RID: 101498 RVA: 0x00659EC8 File Offset: 0x006580C8
+	// Token: 0x170022AC RID: 8876
+	// (get) Token: 0x0601653A RID: 91450 RVA: 0x00680088 File Offset: 0x0067E288
+	// (set) Token: 0x0601653B RID: 91451 RVA: 0x0068009C File Offset: 0x0067E29C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FGameplayTag Tag
 	{
@@ -30,9 +30,9 @@ public class LogicDataSupport : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002245 RID: 8773
-	// (get) Token: 0x06018C7B RID: 101499 RVA: 0x00659EDD File Offset: 0x006580DD
-	// (set) Token: 0x06018C7C RID: 101500 RVA: 0x00659EED File Offset: 0x006580ED
+	// Token: 0x170022AD RID: 8877
+	// (get) Token: 0x0601653C RID: 91452 RVA: 0x006800B1 File Offset: 0x0067E2B1
+	// (set) Token: 0x0601653D RID: 91453 RVA: 0x006800C1 File Offset: 0x0067E2C1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ECamp Camp
 	{
@@ -46,9 +46,9 @@ public class LogicDataSupport : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002246 RID: 8774
-	// (get) Token: 0x06018C7D RID: 101501 RVA: 0x00659F00 File Offset: 0x00658100
-	// (set) Token: 0x06018C7E RID: 101502 RVA: 0x00659F39 File Offset: 0x00658139
+	// Token: 0x170022AE RID: 8878
+	// (get) Token: 0x0601653E RID: 91454 RVA: 0x006800D4 File Offset: 0x0067E2D4
+	// (set) Token: 0x0601653F RID: 91455 RVA: 0x0068010D File Offset: 0x0067E30D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UEffectModelBase> Effect
 	{
@@ -68,7 +68,7 @@ public class LogicDataSupport : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06018C7F RID: 101503 RVA: 0x00659F5E File Offset: 0x0065815E
+	// Token: 0x06016540 RID: 91456 RVA: 0x00680132 File Offset: 0x0067E332
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataSupport._ClassPtr == IntPtr.Zero)
@@ -78,40 +78,40 @@ public class LogicDataSupport : LogicDataBase, IUnrealUObject, IUnrealObject
 		return LogicDataSupport._ClassPtr;
 	}
 
-	// Token: 0x06018C80 RID: 101504 RVA: 0x00659F84 File Offset: 0x00658184
+	// Token: 0x06016541 RID: 91457 RVA: 0x00680158 File Offset: 0x0067E358
 	public LogicDataSupport() : this(BuiltinUtils.AllocNativeUObject(LogicDataSupport.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018C81 RID: 101505 RVA: 0x00659FAC File Offset: 0x006581AC
+	// Token: 0x06016542 RID: 91458 RVA: 0x00680180 File Offset: 0x0067E380
 	public LogicDataSupport(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataSupport.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018C82 RID: 101506 RVA: 0x00659FDF File Offset: 0x006581DF
+	// Token: 0x06016543 RID: 91459 RVA: 0x006801B3 File Offset: 0x0067E3B3
 	protected LogicDataSupport(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B906 RID: 47366
+	// Token: 0x0400BC94 RID: 48276
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataSupport.LogicDataSupport_C";
 
-	// Token: 0x0400B907 RID: 47367
+	// Token: 0x0400BC95 RID: 48277
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B908 RID: 47368
+	// Token: 0x0400BC96 RID: 48278
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B909 RID: 47369
+	// Token: 0x0400BC97 RID: 48279
 	private static int __PropertyOffset_Tag;
 
-	// Token: 0x0400B90A RID: 47370
+	// Token: 0x0400BC98 RID: 48280
 	private static int __PropertyOffset_Camp;
 
-	// Token: 0x0400B90B RID: 47371
+	// Token: 0x0400BC99 RID: 48281
 	private static int __PropertyOffset_Effect;
 
-	// Token: 0x0400B90C RID: 47372
+	// Token: 0x0400BC9A RID: 48282
 	[Nullable(new byte[]
 	{
 		2,

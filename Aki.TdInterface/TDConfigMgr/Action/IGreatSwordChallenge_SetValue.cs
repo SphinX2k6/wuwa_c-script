@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ADE RID: 6878
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C85 RID: 7301
 	public class IGreatSwordChallenge_SetValue
 	{
-		// Token: 0x04005A98 RID: 23192
+		// Token: 0x04005F22 RID: 24354
 		public ECommonTipType Type;
 
-		// Token: 0x04005A99 RID: 23193
+		// Token: 0x04005F23 RID: 24355
 		public string MainText;
 
-		// Token: 0x04005A9A RID: 23194
+		// Token: 0x04005F24 RID: 24356
 		public string SubText;
 	}
 }

@@ -5,22 +5,22 @@ using System.Text.Json.Nodes;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001479 RID: 5241
+	// Token: 0x020015D2 RID: 5586
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CustomActionParams : ActionParams
 	{
-		// Token: 0x17002819 RID: 10265
-		// (get) Token: 0x06007738 RID: 30520 RVA: 0x0011CCCA File Offset: 0x0011AECA
-		// (set) Token: 0x06007739 RID: 30521 RVA: 0x0011CCD2 File Offset: 0x0011AED2
+		// Token: 0x17002A03 RID: 10755
+		// (get) Token: 0x06007E05 RID: 32261 RVA: 0x0012B8D5 File Offset: 0x00129AD5
+		// (set) Token: 0x06007E06 RID: 32262 RVA: 0x0012B8DD File Offset: 0x00129ADD
 		public string Name { get; set; }
 
-		// Token: 0x1700281A RID: 10266
-		// (get) Token: 0x0600773A RID: 30522 RVA: 0x0011CCDB File Offset: 0x0011AEDB
-		// (set) Token: 0x0600773B RID: 30523 RVA: 0x0011CCE3 File Offset: 0x0011AEE3
+		// Token: 0x17002A04 RID: 10756
+		// (get) Token: 0x06007E07 RID: 32263 RVA: 0x0012B8E6 File Offset: 0x00129AE6
+		// (set) Token: 0x06007E08 RID: 32264 RVA: 0x0012B8EE File Offset: 0x00129AEE
 		public JsonObject Param { get; set; }
 
-		// Token: 0x0600773C RID: 30524 RVA: 0x0011CCEC File Offset: 0x0011AEEC
+		// Token: 0x06007E09 RID: 32265 RVA: 0x0012B8F7 File Offset: 0x00129AF7
 		[NullableContext(2)]
 		public CustomActionParams(string name, JsonObject jsonObj)
 		{

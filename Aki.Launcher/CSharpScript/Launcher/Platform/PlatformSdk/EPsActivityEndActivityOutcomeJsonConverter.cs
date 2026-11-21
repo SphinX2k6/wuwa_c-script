@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x020001A3 RID: 419
+	// Token: 0x020001A7 RID: 423
 	public class EPsActivityEndActivityOutcomeJsonConverter : JsonConverter<EPsActivityEndActivityOutcome>
 	{
-		// Token: 0x06000B88 RID: 2952 RVA: 0x00048E50 File Offset: 0x00047050
+		// Token: 0x06000BBF RID: 3007 RVA: 0x0004B640 File Offset: 0x00049840
 		public override EPsActivityEndActivityOutcome Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return EPsActivityEndActivityOutcomeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06000B89 RID: 2953 RVA: 0x00048E74 File Offset: 0x00047074
+		// Token: 0x06000BC0 RID: 3008 RVA: 0x0004B664 File Offset: 0x00049864
 		public override void Write(Utf8JsonWriter writer, EPsActivityEndActivityOutcome value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C8D RID: 7309
+	// Token: 0x02000526 RID: 1318
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSDK.AchievementStruct")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FAchievementStruct : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601C5D0 RID: 116176 RVA: 0x0029CF6A File Offset: 0x0029B16A
+		// Token: 0x06007B11 RID: 31505 RVA: 0x000B4A47 File Offset: 0x000B2C47
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FAchievementStruct._ScriptStructPtr != 0) ? FAchievementStruct._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroSDK.AchievementStruct", ref FAchievementStruct._ScriptStructPtr);
 		}
 
-		// Token: 0x1700729B RID: 29339
-		// (get) Token: 0x0601C5D1 RID: 116177 RVA: 0x0029CF8E File Offset: 0x0029B18E
-		// (set) Token: 0x0601C5D2 RID: 116178 RVA: 0x0029CFA2 File Offset: 0x0029B1A2
+		// Token: 0x170017EB RID: 6123
+		// (get) Token: 0x06007B12 RID: 31506 RVA: 0x000B4A6B File Offset: 0x000B2C6B
+		// (set) Token: 0x06007B13 RID: 31507 RVA: 0x000B4A7F File Offset: 0x000B2C7F
 		public unsafe string AchievementId
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700729C RID: 29340
-		// (get) Token: 0x0601C5D3 RID: 116179 RVA: 0x0029CFB7 File Offset: 0x0029B1B7
-		// (set) Token: 0x0601C5D4 RID: 116180 RVA: 0x0029CFC7 File Offset: 0x0029B1C7
+		// Token: 0x170017EC RID: 6124
+		// (get) Token: 0x06007B14 RID: 31508 RVA: 0x000B4A94 File Offset: 0x000B2C94
+		// (set) Token: 0x06007B15 RID: 31509 RVA: 0x000B4AA4 File Offset: 0x000B2CA4
 		public unsafe float Progress
 		{
 			get
@@ -48,57 +48,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601C5D5 RID: 116181 RVA: 0x0029CFD8 File Offset: 0x0029B1D8
+		// Token: 0x06007B16 RID: 31510 RVA: 0x000B4AB5 File Offset: 0x000B2CB5
 		public FAchievementStruct()
 		{
 		}
 
-		// Token: 0x0601C5D6 RID: 116182 RVA: 0x0029CFE0 File Offset: 0x0029B1E0
-		public FAchievementStruct(string AchievementId, float Progress)
-		{
-			this.AchievementId = AchievementId;
-			this.Progress = Progress;
-		}
-
-		// Token: 0x0601C5D7 RID: 116183 RVA: 0x0029CFF6 File Offset: 0x0029B1F6
+		// Token: 0x06007B17 RID: 31511 RVA: 0x000B4ABD File Offset: 0x000B2CBD
 		protected override IntPtr GetUStructPtr()
 		{
 			return FAchievementStruct.StaticStruct();
 		}
 
-		// Token: 0x0601C5D8 RID: 116184 RVA: 0x0029D002 File Offset: 0x0029B202
+		// Token: 0x06007B18 RID: 31512 RVA: 0x000B4AC9 File Offset: 0x000B2CC9
 		[NullableContext(2)]
 		public FAchievementStruct(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C5D9 RID: 116185 RVA: 0x0029D00C File Offset: 0x0029B20C
+		// Token: 0x06007B19 RID: 31513 RVA: 0x000B4AD3 File Offset: 0x000B2CD3
 		public FAchievementStruct(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C5DA RID: 116186 RVA: 0x0029D017 File Offset: 0x0029B217
+		// Token: 0x06007B1A RID: 31514 RVA: 0x000B4ADE File Offset: 0x000B2CDE
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FAchievementStruct(Pointer, false, true);
 		}
 
-		// Token: 0x0601C5DB RID: 116187 RVA: 0x0029D021 File Offset: 0x0029B221
+		// Token: 0x06007B1B RID: 31515 RVA: 0x000B4AE8 File Offset: 0x000B2CE8
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FAchievementStruct(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400F3E8 RID: 62440
+		// Token: 0x04003452 RID: 13394
 		public const string __ObjectPath = "/Script/KuroSDK.AchievementStruct";
 
-		// Token: 0x0400F3E9 RID: 62441
+		// Token: 0x04003453 RID: 13395
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400F3EA RID: 62442
+		// Token: 0x04003454 RID: 13396
 		internal static int __PropertyOffset_AchievementId;
 
-		// Token: 0x0400F3EB RID: 62443
+		// Token: 0x04003455 RID: 13397
 		internal static int __PropertyOffset_Progress;
 	}
 }

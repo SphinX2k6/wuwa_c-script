@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200033F RID: 831
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000386 RID: 902
 	public class IEventRotator
 	{
-		// Token: 0x0600106C RID: 4204 RVA: 0x00038DCC File Offset: 0x00036FCC
+		// Token: 0x0600119E RID: 4510 RVA: 0x0003BD98 File Offset: 0x00039F98
 		private IEventRotator_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600106D RID: 4205 RVA: 0x00038E04 File Offset: 0x00037004
+		// Token: 0x0600119F RID: 4511 RVA: 0x0003BDD0 File Offset: 0x00039FD0
 		public static IEventRotator Create([Nullable(2)] IEventRotator instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600106E RID: 4206 RVA: 0x00038E17 File Offset: 0x00037017
+		// Token: 0x060011A0 RID: 4512 RVA: 0x0003BDE3 File Offset: 0x00039FE3
 		public static IEventRotator CreateFromSetValue([Nullable(2)] IEventRotator_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600106F RID: 4207 RVA: 0x00038E2A File Offset: 0x0003702A
+		// Token: 0x060011A1 RID: 4513 RVA: 0x0003BDF6 File Offset: 0x00039FF6
 		public IEventRotator_SetValue ToSetValue()
 		{
 			return new IEventRotator_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004B4 RID: 1204
-		// (get) Token: 0x06001070 RID: 4208 RVA: 0x00038E4C File Offset: 0x0003704C
-		// (set) Token: 0x06001071 RID: 4209 RVA: 0x00038EDF File Offset: 0x000370DF
+		// Token: 0x17000502 RID: 1282
+		// (get) Token: 0x060011A2 RID: 4514 RVA: 0x0003BE18 File Offset: 0x0003A018
+		// (set) Token: 0x060011A3 RID: 4515 RVA: 0x0003BEAB File Offset: 0x0003A0AB
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> StartActions
 		{
 			get
@@ -101,9 +99,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004B5 RID: 1205
-		// (get) Token: 0x06001072 RID: 4210 RVA: 0x00038EF4 File Offset: 0x000370F4
-		// (set) Token: 0x06001073 RID: 4211 RVA: 0x00038F87 File Offset: 0x00037187
+		// Token: 0x17000503 RID: 1283
+		// (get) Token: 0x060011A4 RID: 4516 RVA: 0x0003BEC0 File Offset: 0x0003A0C0
+		// (set) Token: 0x060011A5 RID: 4517 RVA: 0x0003BF53 File Offset: 0x0003A153
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> EndActions
 		{
 			get
@@ -139,24 +137,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000DCD RID: 3533
+		// Token: 0x04000EB8 RID: 3768
 		[Nullable(2)]
 		protected IEventRotator FbInstance;
 
-		// Token: 0x04000DCE RID: 3534
+		// Token: 0x04000EB9 RID: 3769
 		[Nullable(2)]
 		protected IEventRotator_SetValue PocoInterface;
 
-		// Token: 0x04000DCF RID: 3535
+		// Token: 0x04000EBA RID: 3770
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _StartActionsCache;
 
-		// Token: 0x04000DD0 RID: 3536
+		// Token: 0x04000EBB RID: 3771
 		private bool _StartActionsInited;
 
-		// Token: 0x04000DD1 RID: 3537
+		// Token: 0x04000EBC RID: 3772
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _EndActionsCache;
 
-		// Token: 0x04000DD2 RID: 3538
+		// Token: 0x04000EBD RID: 3773
 		private bool _EndActionsInited;
 	}
 }

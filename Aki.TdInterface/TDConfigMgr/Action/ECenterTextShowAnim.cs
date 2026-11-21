@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015A2 RID: 5538
+	// Token: 0x02001701 RID: 5889
 	[EnumExtensions]
 	public enum ECenterTextShowAnim
 	{
-		// Token: 0x040049BC RID: 18876
+		// Token: 0x04004D6E RID: 19822
 		ShowAll,
-		// Token: 0x040049BD RID: 18877
+		// Token: 0x04004D6F RID: 19823
 		FadeOut,
-		// Token: 0x040049BE RID: 18878
+		// Token: 0x04004D70 RID: 19824
 		TypeWriter
 	}
 }

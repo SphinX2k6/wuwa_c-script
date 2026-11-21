@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B2A RID: 15146
+	// Token: 0x02003F2C RID: 16172
 	public class IVectorInfoT
 	{
-		// Token: 0x170067E6 RID: 26598
-		// (get) Token: 0x06014B01 RID: 84737 RVA: 0x00302644 File Offset: 0x00300844
-		// (set) Token: 0x06014B02 RID: 84738 RVA: 0x0030264C File Offset: 0x0030084C
+		// Token: 0x17006D81 RID: 28033
+		// (get) Token: 0x06015FAB RID: 90027 RVA: 0x003288D4 File Offset: 0x00326AD4
+		// (set) Token: 0x06015FAC RID: 90028 RVA: 0x003288DC File Offset: 0x00326ADC
 		public float X { get; set; }
 
-		// Token: 0x170067E7 RID: 26599
-		// (get) Token: 0x06014B03 RID: 84739 RVA: 0x00302655 File Offset: 0x00300855
-		// (set) Token: 0x06014B04 RID: 84740 RVA: 0x0030265D File Offset: 0x0030085D
+		// Token: 0x17006D82 RID: 28034
+		// (get) Token: 0x06015FAD RID: 90029 RVA: 0x003288E5 File Offset: 0x00326AE5
+		// (set) Token: 0x06015FAE RID: 90030 RVA: 0x003288ED File Offset: 0x00326AED
 		public float Y { get; set; }
 
-		// Token: 0x170067E8 RID: 26600
-		// (get) Token: 0x06014B05 RID: 84741 RVA: 0x00302666 File Offset: 0x00300866
-		// (set) Token: 0x06014B06 RID: 84742 RVA: 0x0030266E File Offset: 0x0030086E
+		// Token: 0x17006D83 RID: 28035
+		// (get) Token: 0x06015FAF RID: 90031 RVA: 0x003288F6 File Offset: 0x00326AF6
+		// (set) Token: 0x06015FB0 RID: 90032 RVA: 0x003288FE File Offset: 0x00326AFE
 		public float Z { get; set; }
 
-		// Token: 0x170067E9 RID: 26601
-		// (get) Token: 0x06014B07 RID: 84743 RVA: 0x00302677 File Offset: 0x00300877
-		// (set) Token: 0x06014B08 RID: 84744 RVA: 0x0030267F File Offset: 0x0030087F
+		// Token: 0x17006D84 RID: 28036
+		// (get) Token: 0x06015FB1 RID: 90033 RVA: 0x00328907 File Offset: 0x00326B07
+		// (set) Token: 0x06015FB2 RID: 90034 RVA: 0x0032890F File Offset: 0x00326B0F
 		public byte NullMask { get; set; }
 
-		// Token: 0x06014B09 RID: 84745 RVA: 0x00302688 File Offset: 0x00300888
+		// Token: 0x06015FB3 RID: 90035 RVA: 0x00328918 File Offset: 0x00326B18
 		public IVectorInfoT()
 		{
 			this.X = 0f;

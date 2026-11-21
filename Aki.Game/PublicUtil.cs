@@ -10,18 +10,18 @@ using CSharpScript.Launcher.BaseConfig;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x02000253 RID: 595
+// Token: 0x02000257 RID: 599
 [NullableContext(1)]
 [Nullable(0)]
 public class PublicUtil : Singleton
 {
-	// Token: 0x060023F4 RID: 9204 RVA: 0x000DB6ED File Offset: 0x000D98ED
+	// Token: 0x060024AC RID: 9388 RVA: 0x000E1C35 File Offset: 0x000DFE35
 	public string GetConfigPath(string file)
 	{
 		return UKismetSystemLibrary.GetProjectDirectory() + file;
 	}
 
-	// Token: 0x060023F5 RID: 9205 RVA: 0x000DB6FC File Offset: 0x000D98FC
+	// Token: 0x060024AD RID: 9389 RVA: 0x000E1C44 File Offset: 0x000DFE44
 	public bool IsInIpWhiteList([Nullable(new byte[]
 	{
 		2,
@@ -53,13 +53,13 @@ public class PublicUtil : Singleton
 		return false;
 	}
 
-	// Token: 0x060023F6 RID: 9206 RVA: 0x000DB790 File Offset: 0x000D9990
+	// Token: 0x060024AE RID: 9390 RVA: 0x000E1CD8 File Offset: 0x000DFED8
 	public bool GetIfGlobalSdk()
 	{
 		return BaseConfigController.Instance.GetPublicValue("SdkArea") != "CN";
 	}
 
-	// Token: 0x060023F7 RID: 9207 RVA: 0x000DB7AB File Offset: 0x000D99AB
+	// Token: 0x060024AF RID: 9391 RVA: 0x000E1CF3 File Offset: 0x000DFEF3
 	public string GetGameId()
 	{
 		if (this.GetIfGlobalSdk())
@@ -69,7 +69,7 @@ public class PublicUtil : Singleton
 		return "G152";
 	}
 
-	// Token: 0x060023F8 RID: 9208 RVA: 0x000DB7C0 File Offset: 0x000D99C0
+	// Token: 0x060024B0 RID: 9392 RVA: 0x000E1D08 File Offset: 0x000DFF08
 	[return: Nullable(2)]
 	public string GetLoginNoticeUrl2(string gameId, string language, string serverId)
 	{
@@ -90,7 +90,7 @@ public class PublicUtil : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060023F9 RID: 9209 RVA: 0x000DB840 File Offset: 0x000D9A40
+	// Token: 0x060024B1 RID: 9393 RVA: 0x000E1D88 File Offset: 0x000DFF88
 	[return: Nullable(2)]
 	public string GetMarqueeUrl2(string gameId, string serverId)
 	{
@@ -109,7 +109,7 @@ public class PublicUtil : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060023FA RID: 9210 RVA: 0x000DB8AC File Offset: 0x000D9AAC
+	// Token: 0x060024B2 RID: 9394 RVA: 0x000E1DF4 File Offset: 0x000DFFF4
 	[NullableContext(2)]
 	public string GetLoginNoticeUrl()
 	{
@@ -129,7 +129,7 @@ public class PublicUtil : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060023FB RID: 9211 RVA: 0x000DB92C File Offset: 0x000D9B2C
+	// Token: 0x060024B3 RID: 9395 RVA: 0x000E1E74 File Offset: 0x000E0074
 	[NullableContext(2)]
 	public string GetMarqueeUrl()
 	{
@@ -149,7 +149,7 @@ public class PublicUtil : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060023FC RID: 9212 RVA: 0x000DB9AC File Offset: 0x000D9BAC
+	// Token: 0x060024B4 RID: 9396 RVA: 0x000E1EF4 File Offset: 0x000E00F4
 	[NullableContext(2)]
 	public string GetNoticeBaseUrl()
 	{
@@ -171,7 +171,7 @@ public class PublicUtil : Singleton
 		return CdnServerDebugConfig.Instance.TryGetNoticeServerPrefixAddress(noticeUrl);
 	}
 
-	// Token: 0x060023FD RID: 9213 RVA: 0x000DBA14 File Offset: 0x000D9C14
+	// Token: 0x060024B5 RID: 9397 RVA: 0x000E1F5C File Offset: 0x000E015C
 	[return: Nullable(2)]
 	public string GetGARUrl(int loginType, string userId, string userName, string token, string area)
 	{
@@ -195,7 +195,7 @@ public class PublicUtil : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060023FE RID: 9214 RVA: 0x000DBAB8 File Offset: 0x000D9CB8
+	// Token: 0x060024B6 RID: 9398 RVA: 0x000E2000 File Offset: 0x000E0200
 	[NullableContext(2)]
 	public string GetXboxRegionUrl()
 	{
@@ -207,7 +207,7 @@ public class PublicUtil : Singleton
 		return garurl + "/UserRegion/GetXboxRegion";
 	}
 
-	// Token: 0x060023FF RID: 9215 RVA: 0x000DBAE8 File Offset: 0x000D9CE8
+	// Token: 0x060024B7 RID: 9399 RVA: 0x000E2030 File Offset: 0x000E0230
 	[NullableContext(2)]
 	public string SetXboxRegionUrl()
 	{
@@ -219,7 +219,7 @@ public class PublicUtil : Singleton
 		return garurl + "/UserRegion/SetXboxRegion";
 	}
 
-	// Token: 0x06002400 RID: 9216 RVA: 0x000DBB18 File Offset: 0x000D9D18
+	// Token: 0x060024B8 RID: 9400 RVA: 0x000E2060 File Offset: 0x000E0260
 	public string GetPublicInfo()
 	{
 		string stringConfig = ConfigCommonParamById.GetStringConfig("mail_question_key");
@@ -267,7 +267,7 @@ public class PublicUtil : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06002401 RID: 9217 RVA: 0x000DBD1C File Offset: 0x000D9F1C
+	// Token: 0x060024B9 RID: 9401 RVA: 0x000E2264 File Offset: 0x000E0464
 	[return: Nullable(2)]
 	public string GetExternalUrl(string rootUrl, PublicUtil.EExternalUrlReason reason)
 	{
@@ -333,7 +333,7 @@ public class PublicUtil : Singleton
 		}
 	}
 
-	// Token: 0x06002402 RID: 9218 RVA: 0x000DBF10 File Offset: 0x000DA110
+	// Token: 0x060024BA RID: 9402 RVA: 0x000E2458 File Offset: 0x000E0658
 	private string AppendPublicInfo(string rootUrl, PublicUtil.EExternalUrlReason reason)
 	{
 		string publicInfo = this.GetPublicInfo();
@@ -368,7 +368,7 @@ public class PublicUtil : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06002403 RID: 9219 RVA: 0x000DC068 File Offset: 0x000DA268
+	// Token: 0x060024BB RID: 9403 RVA: 0x000E25B0 File Offset: 0x000E07B0
 	public string GetExtendExternalUrl(string originUrl, bool isInternal = true)
 	{
 		if (string.IsNullOrWhiteSpace(originUrl))
@@ -382,7 +382,7 @@ public class PublicUtil : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06002404 RID: 9220 RVA: 0x000DC0B4 File Offset: 0x000DA2B4
+	// Token: 0x060024BC RID: 9404 RVA: 0x000E25FC File Offset: 0x000E07FC
 	public string GetLocalHost()
 	{
 		TArray<string> tarray = new TArray<string>();
@@ -403,41 +403,29 @@ public class PublicUtil : Singleton
 		return result;
 	}
 
-	// Token: 0x06002405 RID: 9221 RVA: 0x000DC10F File Offset: 0x000DA30F
+	// Token: 0x060024BD RID: 9405 RVA: 0x000E2657 File Offset: 0x000E0857
 	public string GetConfigTextByKey(string key)
 	{
-		if (this.UseDbConfig())
-		{
-			return ConfigMultiTextLang.GetLocalTextNew(key, null) ?? key;
-		}
-		return MultiTextCsvModule.Instance.GetLocalText(key) ?? key;
+		return ConfigMultiTextLang.GetLocalTextNew(key, null) ?? key;
 	}
 
-	// Token: 0x06002406 RID: 9222 RVA: 0x000DC138 File Offset: 0x000DA338
+	// Token: 0x060024BE RID: 9406 RVA: 0x000E2668 File Offset: 0x000E0868
 	[NullableContext(2)]
 	public string GetConfigTextByTable(ETableText type, int? id)
 	{
 		string configIdByTable = this.GetConfigIdByTable(type, id);
-		if (this.UseDbConfig())
-		{
-			return ConfigMultiTextLang.GetLocalTextNew(configIdByTable, null);
-		}
-		return MultiTextCsvModule.Instance.GetLocalText(configIdByTable);
+		return ConfigMultiTextLang.GetLocalTextNew(configIdByTable, null);
 	}
 
-	// Token: 0x06002407 RID: 9223 RVA: 0x000DC16C File Offset: 0x000DA36C
+	// Token: 0x060024BF RID: 9407 RVA: 0x000E2688 File Offset: 0x000E0888
 	[NullableContext(2)]
 	public string GetConfigTextByTable(ETableText type, string id)
 	{
 		string configIdByTable = this.GetConfigIdByTable(type, id);
-		if (this.UseDbConfig())
-		{
-			return ConfigMultiTextLang.GetLocalTextNew(configIdByTable, null);
-		}
-		return MultiTextCsvModule.Instance.GetLocalText(configIdByTable);
+		return ConfigMultiTextLang.GetLocalTextNew(configIdByTable, null);
 	}
 
-	// Token: 0x06002408 RID: 9224 RVA: 0x000DC1A0 File Offset: 0x000DA3A0
+	// Token: 0x060024C0 RID: 9408 RVA: 0x000E26A8 File Offset: 0x000E08A8
 	public string GetConfigIdByTable(ETableText type, int? id)
 	{
 		ValueTuple<string, string> valueTuple;
@@ -452,7 +440,7 @@ public class PublicUtil : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06002409 RID: 9225 RVA: 0x000DC1F4 File Offset: 0x000DA3F4
+	// Token: 0x060024C1 RID: 9409 RVA: 0x000E26FC File Offset: 0x000E08FC
 	public string GetConfigIdByTable(ETableText type, [Nullable(2)] string id)
 	{
 		ValueTuple<string, string> valueTuple;
@@ -463,85 +451,38 @@ public class PublicUtil : Singleton
 		return valueTuple.Item1 + id + valueTuple.Item2;
 	}
 
-	// Token: 0x0600240A RID: 9226 RVA: 0x000DC228 File Offset: 0x000DA428
+	// Token: 0x060024C2 RID: 9410 RVA: 0x000E2730 File Offset: 0x000E0930
 	[return: Nullable(2)]
 	public string GetFlowConfigLocalText(string key)
 	{
-		if (this.UseDbConfig())
-		{
-			return ConfigMultiTextLang.GetLocalTextNew(key, null);
-		}
-		return MultiTextCsvModule.Instance.GetLocalText(key);
+		return ConfigMultiTextLang.GetLocalTextNew(key, null);
 	}
 
-	// Token: 0x0600240B RID: 9227 RVA: 0x000DC245 File Offset: 0x000DA445
+	// Token: 0x060024C3 RID: 9411 RVA: 0x000E2739 File Offset: 0x000E0939
 	public void RegisterEditorLocalConfig(bool isReload = false)
 	{
-		if (this.UseDbConfig())
-		{
-			return;
-		}
-		MultiTextCsvModule.Instance.RegisterTextLocalConfig(this.GetConfigPath("../Config/Raw/Tables/k.可视化编辑/__Temp__/Csv/TidText.csv"), isReload);
 	}
 
-	// Token: 0x0600240C RID: 9228 RVA: 0x000DC268 File Offset: 0x000DA468
-	public unsafe void RegisterFlowTextLocalConfig(string configName)
+	// Token: 0x060024C4 RID: 9412 RVA: 0x000E273C File Offset: 0x000E093C
+	public void RegisterFlowTextLocalConfig(string configName)
 	{
-		if (this.UseDbConfig())
-		{
-			return;
-		}
-		string text = UKismetSystemLibrary.GetProjectDirectory() + "../Config/Raw/Tables/w.文本库/剧情";
-		string text2 = "文本库_" + configName + ".csv";
-		TArray<string> filesRecursive = UKuroStaticLibrary.GetFilesRecursive(text, text2, true, false);
-		if (filesRecursive.Num() == 0)
-		{
-			global::Log instance = global::Log.Instance;
-			ELogModule module = ELogModule.MultiTextCsvModule;
-			ELogAuthor author = ELogAuthor.XXJ;
-			string message = "无法找到对应文本库表格";
-			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("文本库表格名字", text2);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("目录路径", text);
-			instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-			return;
-		}
-		MultiTextCsvModule.Instance.RegisterTextLocalConfig(filesRecursive.Get(0), true);
 	}
 
-	// Token: 0x0600240D RID: 9229 RVA: 0x000DC31C File Offset: 0x000DA51C
+	// Token: 0x060024C5 RID: 9413 RVA: 0x000E274C File Offset: 0x000E094C
 	[return: Nullable(2)]
 	public IFlowListInfo GetFlowListInfo(string flowListName)
 	{
-		if (this.UseDbConfig())
-		{
-			return null;
-		}
-		string text = null;
-		TArray<string> filesRecursive = UKuroStaticLibrary.GetFilesRecursive(this.GetConfigPath("../Config/Raw/Tables/k.可视化编辑/j.剧情"), flowListName + ".json", true, false);
-		if (filesRecursive.Num() == 0)
-		{
-			global::Log instance = global::Log.Instance;
-			ELogModule module = ELogModule.Level;
-			ELogAuthor author = ELogAuthor.YSQ;
-			string message = "[ControllerHolder.PlotController.StartPlotNetwork] 无法找到对应剧情资源";
-			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("flowListName", flowListName);
-			instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-			return null;
-		}
-		string filename = filesRecursive.Get(0);
-		UKuroStaticLibrary.LoadFileToString(ref text, filename);
-		return Json.Decode<IFlowListInfo>(text, null);
+		return null;
 	}
 
-	// Token: 0x0600240E RID: 9230 RVA: 0x000DC39C File Offset: 0x000DA59C
+	// Token: 0x060024C6 RID: 9414 RVA: 0x000E275A File Offset: 0x000E095A
 	[return: Nullable(2)]
 	public SParkourConfig GetParkourConfig(string inConfigId)
 	{
 		return DataTableUtil.GetDataTableRowFromName<SParkourConfig>(EDataTable.Parkour, inConfigId);
 	}
 
-	// Token: 0x0600240F RID: 9231 RVA: 0x000DC3A6 File Offset: 0x000DA5A6
+	// Token: 0x060024C7 RID: 9415 RVA: 0x000E2764 File Offset: 0x000E0964
 	public bool IsUseTempData()
 	{
 		if (!GlobalData.IsPlayInEditor && !GlobalData.IsRunWithEditorStartConfig())
@@ -555,7 +496,7 @@ public class PublicUtil : Singleton
 		return this.IsUseTemp.GetValueOrDefault();
 	}
 
-	// Token: 0x06002410 RID: 9232 RVA: 0x000DC3D6 File Offset: 0x000DA5D6
+	// Token: 0x060024C8 RID: 9416 RVA: 0x000E2794 File Offset: 0x000E0994
 	public bool? IsStartEditorDebugServer()
 	{
 		if (!GlobalData.IsPlayInEditor && !GlobalData.IsRunWithEditorStartConfig())
@@ -569,7 +510,7 @@ public class PublicUtil : Singleton
 		return this.IsAutoStartDebugServer;
 	}
 
-	// Token: 0x06002411 RID: 9233 RVA: 0x000DC408 File Offset: 0x000DA608
+	// Token: 0x060024C9 RID: 9417 RVA: 0x000E27C4 File Offset: 0x000E09C4
 	public int? GetGameDebugPort()
 	{
 		if (!GlobalData.IsPlayInEditor && !GlobalData.IsRunWithEditorStartConfig())
@@ -583,7 +524,7 @@ public class PublicUtil : Singleton
 		return this.GameDebugport;
 	}
 
-	// Token: 0x06002412 RID: 9234 RVA: 0x000DC448 File Offset: 0x000DA648
+	// Token: 0x060024CA RID: 9418 RVA: 0x000E2804 File Offset: 0x000E0A04
 	public int? GetEditorDebugPort()
 	{
 		if (!GlobalData.IsPlayInEditor && !GlobalData.IsRunWithEditorStartConfig())
@@ -597,7 +538,7 @@ public class PublicUtil : Singleton
 		return this.EditorDebugPort;
 	}
 
-	// Token: 0x06002413 RID: 9235 RVA: 0x000DC488 File Offset: 0x000DA688
+	// Token: 0x060024CB RID: 9419 RVA: 0x000E2844 File Offset: 0x000E0A44
 	private void GenerateEditorDebugServerConfig()
 	{
 		string text = UBlueprintPathsLibrary.ProjectDir() + "../Config/Raw/Tables/k.可视化编辑/__Temp__/EditorStartConfig.json";
@@ -624,7 +565,7 @@ public class PublicUtil : Singleton
 		this.EditorDebugPort = new int?(adaptEditorSaveConfig.EditorPort);
 	}
 
-	// Token: 0x06002414 RID: 9236 RVA: 0x000DC534 File Offset: 0x000DA734
+	// Token: 0x060024CC RID: 9420 RVA: 0x000E28F0 File Offset: 0x000E0AF0
 	[NullableContext(2)]
 	public AdaptEditorConfig TestLoadEditorConfigData()
 	{
@@ -653,7 +594,7 @@ public class PublicUtil : Singleton
 		return adaptEditorConfig;
 	}
 
-	// Token: 0x06002415 RID: 9237 RVA: 0x000DC5C0 File Offset: 0x000DA7C0
+	// Token: 0x060024CD RID: 9421 RVA: 0x000E297C File Offset: 0x000E0B7C
 	[NullableContext(2)]
 	public AdaptEditorConfig TestSaveEditorConfigData(AdaptEditorConfig data = null)
 	{
@@ -661,7 +602,7 @@ public class PublicUtil : Singleton
 		{
 			return null;
 		}
-		string text = Json.Stringify<AdaptEditorConfig>(data, null);
+		string text = Json.Stringify(data, null);
 		if (text == null)
 		{
 			global::Log.Instance.Error(ELogModule.Temp, ELogAuthor.CWZ, "IEditorConfig反序列化失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -672,25 +613,19 @@ public class PublicUtil : Singleton
 		return data;
 	}
 
-	// Token: 0x06002416 RID: 9238 RVA: 0x000DC618 File Offset: 0x000DA818
-	public bool UseDbConfig()
-	{
-		return !this.IsUseTempData();
-	}
-
-	// Token: 0x06002417 RID: 9239 RVA: 0x000DC623 File Offset: 0x000DA823
+	// Token: 0x060024CE RID: 9422 RVA: 0x000E29D4 File Offset: 0x000E0BD4
 	public void SetIsSilentLogin(bool value)
 	{
 		this.IsSilentLogin = value;
 	}
 
-	// Token: 0x06002418 RID: 9240 RVA: 0x000DC62C File Offset: 0x000DA82C
+	// Token: 0x060024CF RID: 9423 RVA: 0x000E29DD File Offset: 0x000E0BDD
 	public bool GetIsSilentLogin()
 	{
 		return this.IsSilentLogin;
 	}
 
-	// Token: 0x06002419 RID: 9241 RVA: 0x000DC634 File Offset: 0x000DA834
+	// Token: 0x060024D0 RID: 9424 RVA: 0x000E29E8 File Offset: 0x000E0BE8
 	[NullableContext(2)]
 	[return: Nullable(1)]
 	public Transform CreateTransformFromConfig(IVector inPos = null, IVector inRot = null, IVector inScale = null)
@@ -705,7 +640,7 @@ public class PublicUtil : Singleton
 		return transform;
 	}
 
-	// Token: 0x0600241A RID: 9242 RVA: 0x000DC72C File Offset: 0x000DA92C
+	// Token: 0x060024D1 RID: 9425 RVA: 0x000E2AE0 File Offset: 0x000E0CE0
 	public List<string> GetFiles(string folderPath, [Nullable(2)] string containerStr)
 	{
 		TArray<string> filesRecursive = UKuroStaticLibrary.GetFilesRecursive(folderPath, "*.*", true, false);
@@ -723,20 +658,20 @@ public class PublicUtil : Singleton
 		return list;
 	}
 
-	// Token: 0x0600241B RID: 9243 RVA: 0x000DC78E File Offset: 0x000DA98E
+	// Token: 0x060024D2 RID: 9426 RVA: 0x000E2B42 File Offset: 0x000E0D42
 	public string GetFileNameWithExtension(string file)
 	{
 		return UBlueprintPathsLibrary.GetCleanFilename(file);
 	}
 
-	// Token: 0x0600241C RID: 9244 RVA: 0x000DC796 File Offset: 0x000DA996
+	// Token: 0x060024D3 RID: 9427 RVA: 0x000E2B4A File Offset: 0x000E0D4A
 	public string GetFileNameWithoutExtension(string file)
 	{
 		return UBlueprintPathsLibrary.GetBaseFilename(file, true);
 	}
 
-	// Token: 0x17000591 RID: 1425
-	// (get) Token: 0x0600241D RID: 9245 RVA: 0x000DC79F File Offset: 0x000DA99F
+	// Token: 0x170005B8 RID: 1464
+	// (get) Token: 0x060024D4 RID: 9428 RVA: 0x000E2B53 File Offset: 0x000E0D53
 	public static PublicUtil Instance
 	{
 		get
@@ -750,12 +685,12 @@ public class PublicUtil : Singleton
 		}
 	}
 
-	// Token: 0x0600241E RID: 9246 RVA: 0x000DC7C2 File Offset: 0x000DA9C2
+	// Token: 0x060024D5 RID: 9429 RVA: 0x000E2B76 File Offset: 0x000E0D76
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600241F RID: 9247 RVA: 0x000DC7C4 File Offset: 0x000DA9C4
+	// Token: 0x060024D6 RID: 9430 RVA: 0x000E2B78 File Offset: 0x000E0D78
 	public static void ResetStaticDefaultValue()
 	{
 		PublicUtil instance = PublicUtil._instance;
@@ -766,59 +701,62 @@ public class PublicUtil : Singleton
 		PublicUtil._instance = null;
 	}
 
-	// Token: 0x06002420 RID: 9248 RVA: 0x000DC7DD File Offset: 0x000DA9DD
+	// Token: 0x060024D7 RID: 9431 RVA: 0x000E2B91 File Offset: 0x000E0D91
 	static PublicUtil()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PublicUtil.CreateStaticDefaultValue), new Action(PublicUtil.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040023B9 RID: 9145
+	// Token: 0x04002436 RID: 9270
 	private bool? IsUseTemp;
 
-	// Token: 0x040023BA RID: 9146
+	// Token: 0x04002437 RID: 9271
 	private bool? IsAutoStartDebugServer;
 
-	// Token: 0x040023BB RID: 9147
+	// Token: 0x04002438 RID: 9272
 	private int? EditorDebugPort;
 
-	// Token: 0x040023BC RID: 9148
+	// Token: 0x04002439 RID: 9273
 	private int? GameDebugport;
 
-	// Token: 0x040023BD RID: 9149
+	// Token: 0x0400243A RID: 9274
 	private readonly MultiTextCsvModule MultiTextCsvModule = new MultiTextCsvModule();
 
-	// Token: 0x040023BE RID: 9150
+	// Token: 0x0400243B RID: 9275
 	private const string PACKAGENAME = "com.kurogame.aki.internal";
 
-	// Token: 0x040023BF RID: 9151
+	// Token: 0x0400243C RID: 9276
 	private const string LOGIN_NOTICE = "LoginNotice.json";
 
-	// Token: 0x040023C0 RID: 9152
+	// Token: 0x0400243D RID: 9277
 	private const string SCROLLTEXT_NOTICE = "ScrollTextNotice.json";
 
-	// Token: 0x040023C1 RID: 9153
+	// Token: 0x0400243E RID: 9278
 	private bool IsSilentLogin;
 
-	// Token: 0x040023C2 RID: 9154
+	// Token: 0x0400243F RID: 9279
 	public string OverridePackageId;
 
-	// Token: 0x040023C3 RID: 9155
+	// Token: 0x04002440 RID: 9280
+	public const bool UseDbConfig = true;
+
+	// Token: 0x04002441 RID: 9281
 	[Nullable(2)]
 	private static PublicUtil _instance;
 
-	// Token: 0x02007440 RID: 29760
+	// Token: 0x020065D1 RID: 26065
 	[NullableContext(0)]
 	public enum EExternalUrlReason
 	{
-		// Token: 0x04026820 RID: 157728
+		// Token: 0x04021B5E RID: 138078
 		Mail,
-		// Token: 0x04026821 RID: 157729
+		// Token: 0x04021B5F RID: 138079
 		InviteNewbie,
-		// Token: 0x04026822 RID: 157730
+		// Token: 0x04021B60 RID: 138080
 		GameIntroduction,
-		// Token: 0x04026823 RID: 157731
+		// Token: 0x04021B61 RID: 138081
 		CommonH5,
-		// Token: 0x04026824 RID: 157732
+		// Token: 0x04021B62 RID: 138082
 		MailH5
 	}
 }

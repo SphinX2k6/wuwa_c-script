@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020032B1 RID: 12977
+// Token: 0x02002822 RID: 10274
 [NullableContext(2)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/SceneItem/SimpleBlueprintItem/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/SceneItem/SimpleBlueprintItem/TsSimpleInteractPlane.TsSimpleInteractPlane_C")]
 public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170026D6 RID: 9942
-	// (get) Token: 0x0601C1E7 RID: 115175 RVA: 0x007D2DA5 File Offset: 0x007D0FA5
-	// (set) Token: 0x0601C1E8 RID: 115176 RVA: 0x007D2DB5 File Offset: 0x007D0FB5
+	// Token: 0x170029C3 RID: 10691
+	// (get) Token: 0x06019E28 RID: 106024 RVA: 0x007F9EA1 File Offset: 0x007F80A1
+	// (set) Token: 0x06019E29 RID: 106025 RVA: 0x007F9EB1 File Offset: 0x007F80B1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float PlaneHalfHeight
 	{
@@ -30,9 +30,9 @@ public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x170026D7 RID: 9943
-	// (get) Token: 0x0601C1E9 RID: 115177 RVA: 0x007D2DC6 File Offset: 0x007D0FC6
-	// (set) Token: 0x0601C1EA RID: 115178 RVA: 0x007D2DD6 File Offset: 0x007D0FD6
+	// Token: 0x170029C4 RID: 10692
+	// (get) Token: 0x06019E2A RID: 106026 RVA: 0x007F9EC2 File Offset: 0x007F80C2
+	// (set) Token: 0x06019E2B RID: 106027 RVA: 0x007F9ED2 File Offset: 0x007F80D2
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float PlaneHalfWidth
 	{
@@ -46,7 +46,7 @@ public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x0601C1EB RID: 115179 RVA: 0x007D2DE8 File Offset: 0x007D0FE8
+	// Token: 0x06019E2C RID: 106028 RVA: 0x007F9EE4 File Offset: 0x007F80E4
 	protected override void OnBeginPlay()
 	{
 		this.SelfForward = Vector.Create();
@@ -63,7 +63,7 @@ public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnre
 		base.OnBeginPlay();
 	}
 
-	// Token: 0x0601C1EC RID: 115180 RVA: 0x007D2E74 File Offset: 0x007D1074
+	// Token: 0x06019E2D RID: 106029 RVA: 0x007F9F70 File Offset: 0x007F8170
 	protected override void UpdateData()
 	{
 		base.UpdateData();
@@ -81,7 +81,7 @@ public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x0601C1ED RID: 115181 RVA: 0x007D2F4C File Offset: 0x007D114C
+	// Token: 0x06019E2E RID: 106030 RVA: 0x007FA048 File Offset: 0x007F8248
 	protected override bool CheckLegal()
 	{
 		if (this.TmpLocation == null)
@@ -144,7 +144,7 @@ public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnre
 		return true;
 	}
 
-	// Token: 0x0601C1EE RID: 115182 RVA: 0x007D31F0 File Offset: 0x007D13F0
+	// Token: 0x06019E2F RID: 106031 RVA: 0x007FA2EC File Offset: 0x007F84EC
 	protected override void OnDraw()
 	{
 		FLinearColor lineColor = this.IsLegal ? TsSimpleInteractPlane.GreenColor : TsSimpleInteractPlane.YellowColor;
@@ -167,7 +167,7 @@ public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnre
 		UKismetSystemLibrary.D_DrawDebugArrow(this, base.D_K2_GetActorLocation(), this.EndLocation.ToUeVector(false), 100f, TsSimpleInteractPlane.RedColor, 0.05f, 4f);
 	}
 
-	// Token: 0x0601C1EF RID: 115183 RVA: 0x007D337C File Offset: 0x007D157C
+	// Token: 0x06019E30 RID: 106032 RVA: 0x007FA478 File Offset: 0x007F8678
 	protected override void SetText(FVector offset)
 	{
 		base.Text.HorizontalAlignment = EHorizTextAligment.EHTA_Center;
@@ -180,7 +180,7 @@ public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnre
 		text.Text = defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0601C1F0 RID: 115184 RVA: 0x007D33F4 File Offset: 0x007D15F4
+	// Token: 0x06019E31 RID: 106033 RVA: 0x007FA4F0 File Offset: 0x007F86F0
 	[NullableContext(1)]
 	protected override SSimpleInteractResult OnGetBestTransform(AActor actor, FVector moveOffset, float halfHeight, float radius)
 	{
@@ -217,7 +217,7 @@ public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnre
 		return tmpResult;
 	}
 
-	// Token: 0x0601C1F1 RID: 115185 RVA: 0x007D354C File Offset: 0x007D174C
+	// Token: 0x06019E32 RID: 106034 RVA: 0x007FA648 File Offset: 0x007F8848
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -277,7 +277,7 @@ public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnre
 		return new ValueTuple<Vector, Rotator, float>(this.TmpResultLocation, this.TmpResultRotator, (float)num15);
 	}
 
-	// Token: 0x0601C1F2 RID: 115186 RVA: 0x007D394C File Offset: 0x007D1B4C
+	// Token: 0x06019E33 RID: 106035 RVA: 0x007FAA48 File Offset: 0x007F8C48
 	private bool FindHitMatrixAndCircle(double validHalfWidth, double validHalfHeight, double yActor, double zActor, double moveOffsetSizeSquared2D, double yMoveTarget, double zMoveTarget)
 	{
 		double num = moveOffsetSizeSquared2D * 10.0;
@@ -346,7 +346,7 @@ public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnre
 		return num < moveOffsetSizeSquared2D * 10.0;
 	}
 
-	// Token: 0x0601C1F3 RID: 115187 RVA: 0x007D3B58 File Offset: 0x007D1D58
+	// Token: 0x06019E34 RID: 106036 RVA: 0x007FAC54 File Offset: 0x007F8E54
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -404,7 +404,7 @@ public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnre
 		return new ValueTuple<Vector, Rotator, float>(this.TmpResultLocation, this.NormalRotator, (float)num4);
 	}
 
-	// Token: 0x0601C1F4 RID: 115188 RVA: 0x007D4069 File Offset: 0x007D2269
+	// Token: 0x06019E35 RID: 106037 RVA: 0x007FB165 File Offset: 0x007F9365
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsSimpleInteractPlane._ClassPtr == IntPtr.Zero)
@@ -414,49 +414,49 @@ public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnre
 		return TsSimpleInteractPlane._ClassPtr;
 	}
 
-	// Token: 0x0601C1F5 RID: 115189 RVA: 0x007D4090 File Offset: 0x007D2290
+	// Token: 0x06019E36 RID: 106038 RVA: 0x007FB18C File Offset: 0x007F938C
 	public TsSimpleInteractPlane() : this(BuiltinUtils.AllocNativeUObject(TsSimpleInteractPlane.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601C1F6 RID: 115190 RVA: 0x007D40B8 File Offset: 0x007D22B8
+	// Token: 0x06019E37 RID: 106039 RVA: 0x007FB1B4 File Offset: 0x007F93B4
 	[NullableContext(1)]
 	public TsSimpleInteractPlane(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsSimpleInteractPlane.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601C1F7 RID: 115191 RVA: 0x007D40EB File Offset: 0x007D22EB
+	// Token: 0x06019E38 RID: 106040 RVA: 0x007FB1E7 File Offset: 0x007F93E7
 	protected TsSimpleInteractPlane(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400DE56 RID: 56918
+	// Token: 0x0400E2FC RID: 58108
 	private static readonly FLinearColor RedColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-	// Token: 0x0400DE57 RID: 56919
+	// Token: 0x0400E2FD RID: 58109
 	private static readonly FLinearColor YellowColor = new FLinearColor(1f, 1f, 0f, 1f);
 
-	// Token: 0x0400DE58 RID: 56920
+	// Token: 0x0400E2FE RID: 58110
 	private static readonly FLinearColor GreenColor = new FLinearColor(0f, 1f, 0f, 1f);
 
-	// Token: 0x0400DE59 RID: 56921
+	// Token: 0x0400E2FF RID: 58111
 	private const float DRAW_TIME = 0.05f;
 
-	// Token: 0x0400DE5A RID: 56922
+	// Token: 0x0400E300 RID: 58112
 	private const float DEFAULT_THICKNESS = 4f;
 
-	// Token: 0x0400DE5B RID: 56923
+	// Token: 0x0400E301 RID: 58113
 	private const float DEFAULT_ARROW_SIZE = 100f;
 
-	// Token: 0x0400DE5C RID: 56924
+	// Token: 0x0400E302 RID: 58114
 	private const float DRAW_LENGTH = 200f;
 
-	// Token: 0x0400DE5D RID: 56925
+	// Token: 0x0400E303 RID: 58115
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly Vector ForwardOffset = Vector.Create(200.0, 0.0, 0.0);
 
-	// Token: 0x0400DE5E RID: 56926
+	// Token: 0x0400E304 RID: 58116
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly FVector[] DrawPoints = new FVector[]
@@ -467,78 +467,78 @@ public class TsSimpleInteractPlane : TsSimpleInteractBase, IUnrealUObject, IUnre
 		new FVector(0f, 1f, 1f)
 	};
 
-	// Token: 0x0400DE5F RID: 56927
+	// Token: 0x0400E305 RID: 58117
 	private static readonly FColor TextColor = new FColor(byte.MaxValue, 128, 128, byte.MaxValue);
 
-	// Token: 0x0400DE60 RID: 56928
+	// Token: 0x0400E306 RID: 58118
 	private const float TEXT_SIZE = 200f;
 
-	// Token: 0x0400DE61 RID: 56929
+	// Token: 0x0400E307 RID: 58119
 	private const float LEGAL_CHECK_PERIOD = 100f;
 
-	// Token: 0x0400DE62 RID: 56930
+	// Token: 0x0400E308 RID: 58120
 	private const float SMALL_VALUE = 0.1f;
 
-	// Token: 0x0400DE63 RID: 56931
+	// Token: 0x0400E309 RID: 58121
 	[Nullable(1)]
 	private const string PROFILE_KEY_CEHCK_LEGAL = "TsSimpleInteractPlane_CheckLegal";
 
-	// Token: 0x0400DE64 RID: 56932
+	// Token: 0x0400E30A RID: 58122
 	[Nullable(1)]
 	private const string PROFILE_KEY = "TsSimpleInteractPlane_GetBestTransform";
 
-	// Token: 0x0400DE65 RID: 56933
+	// Token: 0x0400E30B RID: 58123
 	private Vector SelfForward;
 
-	// Token: 0x0400DE66 RID: 56934
+	// Token: 0x0400E30C RID: 58124
 	private Vector SelfBackward;
 
-	// Token: 0x0400DE67 RID: 56935
+	// Token: 0x0400E30D RID: 58125
 	private Vector SelfRight;
 
-	// Token: 0x0400DE68 RID: 56936
+	// Token: 0x0400E30E RID: 58126
 	private Vector SelfUp;
 
-	// Token: 0x0400DE69 RID: 56937
+	// Token: 0x0400E30F RID: 58127
 	private readonly bool IsHorizontalPlane;
 
-	// Token: 0x0400DE6A RID: 56938
+	// Token: 0x0400E310 RID: 58128
 	private Vector TmpResultLocation;
 
-	// Token: 0x0400DE6B RID: 56939
+	// Token: 0x0400E311 RID: 58129
 	private Rotator TmpResultRotator;
 
-	// Token: 0x0400DE6C RID: 56940
+	// Token: 0x0400E312 RID: 58130
 	private float ForwardSizeSquared2D;
 
-	// Token: 0x0400DE6D RID: 56941
+	// Token: 0x0400E313 RID: 58131
 	private Vector Forward2D;
 
-	// Token: 0x0400DE6E RID: 56942
+	// Token: 0x0400E314 RID: 58132
 	private Rotator NormalRotator;
 
-	// Token: 0x0400DE6F RID: 56943
+	// Token: 0x0400E315 RID: 58133
 	private Vector TmpLocation;
 
-	// Token: 0x0400DE70 RID: 56944
+	// Token: 0x0400E316 RID: 58134
 	private Vector StartLocation;
 
-	// Token: 0x0400DE71 RID: 56945
+	// Token: 0x0400E317 RID: 58135
 	private Vector EndLocation;
 
-	// Token: 0x0400DE72 RID: 56946
+	// Token: 0x0400E318 RID: 58136
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/SceneItem/SimpleBlueprintItem/TsSimpleInteractPlane.TsSimpleInteractPlane_C";
 
-	// Token: 0x0400DE73 RID: 56947
+	// Token: 0x0400E319 RID: 58137
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400DE74 RID: 56948
+	// Token: 0x0400E31A RID: 58138
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400DE75 RID: 56949
+	// Token: 0x0400E31B RID: 58139
 	private static int __PropertyOffset_PlaneHalfHeight;
 
-	// Token: 0x0400DE76 RID: 56950
+	// Token: 0x0400E31C RID: 58140
 	private static int __PropertyOffset_PlaneHalfWidth;
 }

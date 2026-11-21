@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C52 RID: 15442
+	// Token: 0x02004061 RID: 16481
 	public struct ISpotlightTriggerShape : IFlatbufferObject
 	{
-		// Token: 0x17006A76 RID: 27254
-		// (get) Token: 0x06015597 RID: 87447 RVA: 0x003169F0 File Offset: 0x00314BF0
+		// Token: 0x17007027 RID: 28711
+		// (get) Token: 0x06016AAB RID: 92843 RVA: 0x0033D890 File Offset: 0x0033BA90
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015598 RID: 87448 RVA: 0x003169FD File Offset: 0x00314BFD
+		// Token: 0x06016AAC RID: 92844 RVA: 0x0033D89D File Offset: 0x0033BA9D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015599 RID: 87449 RVA: 0x00316A04 File Offset: 0x00314C04
+		// Token: 0x06016AAD RID: 92845 RVA: 0x0033D8A4 File Offset: 0x0033BAA4
 		public static ISpotlightTriggerShape GetRootAsISpotlightTriggerShape(ByteBuffer _bb)
 		{
 			return ISpotlightTriggerShape.GetRootAsISpotlightTriggerShape(_bb, default(ISpotlightTriggerShape));
 		}
 
-		// Token: 0x0601559A RID: 87450 RVA: 0x00316A20 File Offset: 0x00314C20
+		// Token: 0x06016AAE RID: 92846 RVA: 0x0033D8C0 File Offset: 0x0033BAC0
 		public static ISpotlightTriggerShape GetRootAsISpotlightTriggerShape(ByteBuffer _bb, ISpotlightTriggerShape obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601559B RID: 87451 RVA: 0x00316A3D File Offset: 0x00314C3D
+		// Token: 0x06016AAF RID: 92847 RVA: 0x0033D8DD File Offset: 0x0033BADD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601559C RID: 87452 RVA: 0x00316A4C File Offset: 0x00314C4C
+		// Token: 0x06016AB0 RID: 92848 RVA: 0x0033D8EC File Offset: 0x0033BAEC
 		public ISpotlightTriggerShape __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006A77 RID: 27255
-		// (get) Token: 0x0601559D RID: 87453 RVA: 0x00316A5C File Offset: 0x00314C5C
+		// Token: 0x17007028 RID: 28712
+		// (get) Token: 0x06016AB1 RID: 92849 RVA: 0x0033D8FC File Offset: 0x0033BAFC
 		public ETriggerShape Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A78 RID: 27256
-		// (get) Token: 0x0601559E RID: 87454 RVA: 0x00316A98 File Offset: 0x00314C98
+		// Token: 0x17007029 RID: 28713
+		// (get) Token: 0x06016AB2 RID: 92850 RVA: 0x0033D938 File Offset: 0x0033BB38
 		public IVectorInfo? Center
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A79 RID: 27257
-		// (get) Token: 0x0601559F RID: 87455 RVA: 0x00316AF8 File Offset: 0x00314CF8
+		// Token: 0x1700702A RID: 28714
+		// (get) Token: 0x06016AB3 RID: 92851 RVA: 0x0033D998 File Offset: 0x0033BB98
 		public int HalfAngle
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A7A RID: 27258
-		// (get) Token: 0x060155A0 RID: 87456 RVA: 0x00316B34 File Offset: 0x00314D34
+		// Token: 0x1700702B RID: 28715
+		// (get) Token: 0x06016AB4 RID: 92852 RVA: 0x0033D9D4 File Offset: 0x0033BBD4
 		public int Height
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A7B RID: 27259
-		// (get) Token: 0x060155A1 RID: 87457 RVA: 0x00316B74 File Offset: 0x00314D74
+		// Token: 0x1700702C RID: 28716
+		// (get) Token: 0x06016AB5 RID: 92853 RVA: 0x0033DA14 File Offset: 0x0033BC14
 		public int Yaw
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A7C RID: 27260
-		// (get) Token: 0x060155A2 RID: 87458 RVA: 0x00316BB4 File Offset: 0x00314DB4
+		// Token: 0x1700702D RID: 28717
+		// (get) Token: 0x06016AB6 RID: 92854 RVA: 0x0033DA54 File Offset: 0x0033BC54
 		public int Pitch
 		{
 			get
@@ -138,8 +138,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A7D RID: 27261
-		// (get) Token: 0x060155A3 RID: 87459 RVA: 0x00316BF4 File Offset: 0x00314DF4
+		// Token: 0x1700702E RID: 28718
+		// (get) Token: 0x06016AB7 RID: 92855 RVA: 0x0033DA94 File Offset: 0x0033BC94
 		public byte NullMask
 		{
 			get
@@ -153,7 +153,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x060155A4 RID: 87460 RVA: 0x00316C34 File Offset: 0x00314E34
+		// Token: 0x06016AB8 RID: 92856 RVA: 0x0033DAD4 File Offset: 0x0033BCD4
 		public static Offset<ISpotlightTriggerShape> CreateISpotlightTriggerShape(FlatBufferBuilder builder, ETriggerShape Type = ETriggerShape.Box, Offset<IVectorInfo> CenterOffset = default(Offset<IVectorInfo>), int HalfAngle = 0, int Height = 0, int Yaw = 0, int Pitch = 0, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -167,61 +167,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return ISpotlightTriggerShape.EndISpotlightTriggerShape(builder);
 		}
 
-		// Token: 0x060155A5 RID: 87461 RVA: 0x00316C83 File Offset: 0x00314E83
+		// Token: 0x06016AB9 RID: 92857 RVA: 0x0033DB23 File Offset: 0x0033BD23
 		public static void StartISpotlightTriggerShape(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x060155A6 RID: 87462 RVA: 0x00316C8C File Offset: 0x00314E8C
+		// Token: 0x06016ABA RID: 92858 RVA: 0x0033DB2C File Offset: 0x0033BD2C
 		public static void AddType(FlatBufferBuilder builder, ETriggerShape type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060155A7 RID: 87463 RVA: 0x00316C97 File Offset: 0x00314E97
+		// Token: 0x06016ABB RID: 92859 RVA: 0x0033DB37 File Offset: 0x0033BD37
 		public static void AddCenter(FlatBufferBuilder builder, Offset<IVectorInfo> centerOffset)
 		{
 			builder.AddOffset(1, centerOffset.Value, 0);
 		}
 
-		// Token: 0x060155A8 RID: 87464 RVA: 0x00316CA7 File Offset: 0x00314EA7
+		// Token: 0x06016ABC RID: 92860 RVA: 0x0033DB47 File Offset: 0x0033BD47
 		public static void AddHalfAngle(FlatBufferBuilder builder, int halfAngle)
 		{
 			builder.AddInt(2, halfAngle, 0);
 		}
 
-		// Token: 0x060155A9 RID: 87465 RVA: 0x00316CB2 File Offset: 0x00314EB2
+		// Token: 0x06016ABD RID: 92861 RVA: 0x0033DB52 File Offset: 0x0033BD52
 		public static void AddHeight(FlatBufferBuilder builder, int height)
 		{
 			builder.AddInt(3, height, 0);
 		}
 
-		// Token: 0x060155AA RID: 87466 RVA: 0x00316CBD File Offset: 0x00314EBD
+		// Token: 0x06016ABE RID: 92862 RVA: 0x0033DB5D File Offset: 0x0033BD5D
 		public static void AddYaw(FlatBufferBuilder builder, int yaw)
 		{
 			builder.AddInt(4, yaw, 0);
 		}
 
-		// Token: 0x060155AB RID: 87467 RVA: 0x00316CC8 File Offset: 0x00314EC8
+		// Token: 0x06016ABF RID: 92863 RVA: 0x0033DB68 File Offset: 0x0033BD68
 		public static void AddPitch(FlatBufferBuilder builder, int pitch)
 		{
 			builder.AddInt(5, pitch, 0);
 		}
 
-		// Token: 0x060155AC RID: 87468 RVA: 0x00316CD3 File Offset: 0x00314ED3
+		// Token: 0x06016AC0 RID: 92864 RVA: 0x0033DB73 File Offset: 0x0033BD73
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x060155AD RID: 87469 RVA: 0x00316CDE File Offset: 0x00314EDE
+		// Token: 0x06016AC1 RID: 92865 RVA: 0x0033DB7E File Offset: 0x0033BD7E
 		public static Offset<ISpotlightTriggerShape> EndISpotlightTriggerShape(FlatBufferBuilder builder)
 		{
 			return new Offset<ISpotlightTriggerShape>(builder.EndTable());
 		}
 
-		// Token: 0x060155AE RID: 87470 RVA: 0x00316CEC File Offset: 0x00314EEC
+		// Token: 0x06016AC2 RID: 92866 RVA: 0x0033DB8C File Offset: 0x0033BD8C
 		public ISpotlightTriggerShapeT UnPack()
 		{
 			ISpotlightTriggerShapeT spotlightTriggerShapeT = new ISpotlightTriggerShapeT();
@@ -229,7 +229,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return spotlightTriggerShapeT;
 		}
 
-		// Token: 0x060155AF RID: 87471 RVA: 0x00316D08 File Offset: 0x00314F08
+		// Token: 0x06016AC3 RID: 92867 RVA: 0x0033DBA8 File Offset: 0x0033BDA8
 		public void UnPackTo(ISpotlightTriggerShapeT _o)
 		{
 			_o.Type = this.Type;
@@ -241,7 +241,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060155B0 RID: 87472 RVA: 0x00316D8C File Offset: 0x00314F8C
+		// Token: 0x06016AC4 RID: 92868 RVA: 0x0033DC2C File Offset: 0x0033BE2C
 		public static Offset<ISpotlightTriggerShape> Pack(FlatBufferBuilder builder, ISpotlightTriggerShapeT _o)
 		{
 			if (_o == null)
@@ -252,7 +252,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return ISpotlightTriggerShape.CreateISpotlightTriggerShape(builder, _o.Type, centerOffset, _o.HalfAngle, _o.Height, _o.Yaw, _o.Pitch, _o.NullMask);
 		}
 
-		// Token: 0x0400B263 RID: 45667
+		// Token: 0x0400BBF3 RID: 48115
 		private Table __p;
 	}
 }

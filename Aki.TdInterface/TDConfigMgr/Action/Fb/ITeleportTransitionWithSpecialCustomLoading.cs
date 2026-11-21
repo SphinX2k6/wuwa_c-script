@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002697 RID: 9879
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200295A RID: 10586
 	public class ITeleportTransitionWithSpecialCustomLoading : ITeleportTransitionType
 	{
-		// Token: 0x0600DD24 RID: 56612 RVA: 0x0020DD0D File Offset: 0x0020BF0D
+		// Token: 0x0600EAFB RID: 60155 RVA: 0x0022A4AD File Offset: 0x002286AD
 		public static ITeleportTransitionWithSpecialCustomLoading Create(ITeleportTransitionWithSpecialCustomLoading? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041B8 RID: 16824
-		// (get) Token: 0x0600DD25 RID: 56613 RVA: 0x0020DD2C File Offset: 0x0020BF2C
+		// Token: 0x170044F5 RID: 17653
+		// (get) Token: 0x0600EAFC RID: 60156 RVA: 0x0022A4CC File Offset: 0x002286CC
 		public override ETeleportTransitionType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041B9 RID: 16825
-		// (get) Token: 0x0600DD26 RID: 56614 RVA: 0x0020DD39 File Offset: 0x0020BF39
+		// Token: 0x170044F6 RID: 17654
+		// (get) Token: 0x0600EAFD RID: 60157 RVA: 0x0022A4D9 File Offset: 0x002286D9
 		public virtual IHonamiStoryCustomLoading LoadingType
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AD1 RID: 31441
+		// Token: 0x0400816E RID: 33134
 		private ITeleportTransitionWithSpecialCustomLoading Instance;
 
-		// Token: 0x04007AD2 RID: 31442
+		// Token: 0x0400816F RID: 33135
 		[Nullable(2)]
 		private IHonamiStoryCustomLoading _LoadingTypeCache;
 
-		// Token: 0x04007AD3 RID: 31443
+		// Token: 0x04008170 RID: 33136
 		private bool _LoadingTypeInited;
 	}
 }

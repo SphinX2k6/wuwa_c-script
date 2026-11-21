@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02003212 RID: 12818
+// Token: 0x02002781 RID: 10113
 public class NpcRedDotFlowLogic
 {
-	// Token: 0x0601BA6A RID: 113258 RVA: 0x0079936D File Offset: 0x0079756D
+	// Token: 0x060195EF RID: 103919 RVA: 0x007C1B09 File Offset: 0x007BFD09
 	public bool GetRedDotActive()
 	{
 		if (!this.ManualControl)
@@ -13,13 +13,13 @@ public class NpcRedDotFlowLogic
 		return this.RedDotActive;
 	}
 
-	// Token: 0x0601BA6B RID: 113259 RVA: 0x00799383 File Offset: 0x00797583
+	// Token: 0x060195F0 RID: 103920 RVA: 0x007C1B1F File Offset: 0x007BFD1F
 	private void CheckRedDotCondition()
 	{
 		this.RedDotActive = false;
 	}
 
-	// Token: 0x0601BA6C RID: 113260 RVA: 0x0079938C File Offset: 0x0079758C
+	// Token: 0x060195F1 RID: 103921 RVA: 0x007C1B28 File Offset: 0x007BFD28
 	public void ManualControlRedDotActive(bool manualControl, bool redDotActive)
 	{
 		this.ManualControl = manualControl;
@@ -31,16 +31,16 @@ public class NpcRedDotFlowLogic
 		this.RedDotActive = false;
 	}
 
-	// Token: 0x0601BA6D RID: 113261 RVA: 0x007993AC File Offset: 0x007975AC
+	// Token: 0x060195F2 RID: 103922 RVA: 0x007C1B48 File Offset: 0x007BFD48
 	public void Clear()
 	{
 		this.RedDotActive = false;
 		this.ManualControl = false;
 	}
 
-	// Token: 0x0400D973 RID: 55667
+	// Token: 0x0400DE12 RID: 56850
 	private bool RedDotActive;
 
-	// Token: 0x0400D974 RID: 55668
+	// Token: 0x0400DE13 RID: 56851
 	private bool ManualControl;
 }

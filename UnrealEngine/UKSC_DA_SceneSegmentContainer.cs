@@ -6,79 +6,47 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001DAB RID: 7595
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000570 RID: 1392
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_DA_SceneSegmentContainer")]
 	[UnrealStructLayout(80, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 80)]
 	public class UKSC_DA_SceneSegmentContainer : UDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D092 RID: 118930 RVA: 0x002AE9A0 File Offset: 0x002ACBA0
+		// Token: 0x06007E7C RID: 32380 RVA: 0x000BB702 File Offset: 0x000B9902
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKSC_DA_SceneSegmentContainer._ClassPtr;
 		}
 
-		// Token: 0x0601D093 RID: 118931 RVA: 0x002AE9AC File Offset: 0x002ACBAC
+		// Token: 0x06007E7D RID: 32381 RVA: 0x000BB710 File Offset: 0x000B9910
 		public UKSC_DA_SceneSegmentContainer() : this(BuiltinUtils.AllocNativeUObject(UKSC_DA_SceneSegmentContainer.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D094 RID: 118932 RVA: 0x002AE9D4 File Offset: 0x002ACBD4
+		// Token: 0x06007E7E RID: 32382 RVA: 0x000BB738 File Offset: 0x000B9938
+		[NullableContext(1)]
 		public UKSC_DA_SceneSegmentContainer(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKSC_DA_SceneSegmentContainer.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007523 RID: 29987
-		// (get) Token: 0x0601D095 RID: 118933 RVA: 0x002AEA08 File Offset: 0x002ACC08
-		// (set) Token: 0x0601D096 RID: 118934 RVA: 0x002AEA41 File Offset: 0x002ACC41
-		public TArray<UKSC_DA_SceneSegment> SubSceneSegments
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<UKSC_DA_SceneSegment> result;
-				if ((result = this._SubSceneSegments) == null)
-				{
-					result = (this._SubSceneSegments = new TArray<UKSC_DA_SceneSegment>(base.NativePtr + (IntPtr)UKSC_DA_SceneSegmentContainer.__PropertyOffset_SubSceneSegments, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.SubSceneSegments.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x0601D097 RID: 118935 RVA: 0x002AEA4F File Offset: 0x002ACC4F
+		// Token: 0x06007E7F RID: 32383 RVA: 0x000BB76B File Offset: 0x000B996B
 		static UKSC_DA_SceneSegmentContainer()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_DA_SceneSegmentContainer");
 		}
 
-		// Token: 0x0601D098 RID: 118936 RVA: 0x002AEA5D File Offset: 0x002ACC5D
+		// Token: 0x06007E80 RID: 32384 RVA: 0x000BB779 File Offset: 0x000B9979
 		protected UKSC_DA_SceneSegmentContainer(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FC30 RID: 64560
+		// Token: 0x04003736 RID: 14134
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_DA_SceneSegmentContainer";
 
-		// Token: 0x0400FC31 RID: 64561
+		// Token: 0x04003737 RID: 14135
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FC32 RID: 64562
+		// Token: 0x04003738 RID: 14136
 		private static IntPtr _ClassDefaultObjectPtr;
-
-		// Token: 0x0400FC33 RID: 64563
-		internal static int __PropertyOffset_SubSceneSegments;
-
-		// Token: 0x0400FC34 RID: 64564
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<UKSC_DA_SceneSegment> _SubSceneSegments;
 	}
 }

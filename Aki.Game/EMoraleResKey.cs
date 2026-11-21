@@ -1,53 +1,53 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002226 RID: 8742
+// Token: 0x0200170A RID: 5898
 [NullableContext(1)]
 [Nullable(0)]
 public static class EMoraleResKey
 {
-	// Token: 0x040081DF RID: 33247
+	// Token: 0x0400831D RID: 33565
 	public const string ActiveStateBgActive = "SP_FrameActivated";
 
-	// Token: 0x040081E0 RID: 33248
+	// Token: 0x0400831E RID: 33566
 	public const string ActiveStateBgNotActive = "SP_FrameUnactivated";
 
-	// Token: 0x040081E1 RID: 33249
+	// Token: 0x0400831F RID: 33567
 	public const string ActiveBgActive = "T_MoraleBuffBgActivate";
 
-	// Token: 0x040081E2 RID: 33250
+	// Token: 0x04008320 RID: 33568
 	public const string ActiveBgNotActive = "T_MoraleBuffBgUnactivated";
 
-	// Token: 0x040081E3 RID: 33251
+	// Token: 0x04008321 RID: 33569
 	public const string ActiveBgTempActive = "T_MoraleBuffBgActivateTemp";
 
-	// Token: 0x040081E4 RID: 33252
+	// Token: 0x04008322 RID: 33570
 	public const string ActiveStateTagBgNormal = "SP_ItemNewBg";
 
-	// Token: 0x040081E5 RID: 33253
+	// Token: 0x04008323 RID: 33571
 	public const string ActiveStateTagBgInvalid = "SP_InvalidationBg";
 
-	// Token: 0x040081E6 RID: 33254
+	// Token: 0x04008324 RID: 33572
 	public const string DeathViewExplore = "SP_IconDeathExplore";
 
-	// Token: 0x040081E7 RID: 33255
+	// Token: 0x04008325 RID: 33573
 	public const string DeathViewKillEnemy = "SP_IconDeathKillEnemy";
 
-	// Token: 0x040081E8 RID: 33256
+	// Token: 0x04008326 RID: 33574
 	public const string DeathViewCapturePoint = "SP_IconDeathCapturePoint";
 
-	// Token: 0x040081E9 RID: 33257
+	// Token: 0x04008327 RID: 33575
 	public const string AreaMonsterLvDiffBgEasy = "T_EnemyMoraleLevelGrayBg";
 
-	// Token: 0x040081EA RID: 33258
+	// Token: 0x04008328 RID: 33576
 	public const string AreaMonsterLvDiffBgNormal = "T_EnemyMoraleLevelYellowBg";
 
-	// Token: 0x040081EB RID: 33259
+	// Token: 0x04008329 RID: 33577
 	public const string AreaMonsterLvDiffBgHard = "T_EnemyMoraleLevelRedBg";
 
-	// Token: 0x040081EC RID: 33260
+	// Token: 0x0400832A RID: 33578
 	public const string AreaSumFinishBg = "T_MoraleMapBgFinished";
 
-	// Token: 0x040081ED RID: 33261
+	// Token: 0x0400832B RID: 33579
 	public const string AreaSumFinishLightBg = "T_MoraleLightOccAll";
 }

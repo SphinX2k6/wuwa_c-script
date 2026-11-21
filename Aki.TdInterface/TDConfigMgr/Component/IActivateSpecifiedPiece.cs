@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200019F RID: 415
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001B6 RID: 438
 	public class IActivateSpecifiedPiece : IJigsawCompleteCondition
 	{
-		// Token: 0x0600064E RID: 1614 RVA: 0x00022A24 File Offset: 0x00020C24
+		// Token: 0x06000664 RID: 1636 RVA: 0x00023684 File Offset: 0x00021884
 		private IActivateSpecifiedPiece_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600064F RID: 1615 RVA: 0x00022A5C File Offset: 0x00020C5C
+		// Token: 0x06000665 RID: 1637 RVA: 0x000236BC File Offset: 0x000218BC
 		public static IActivateSpecifiedPiece Create([Nullable(2)] IActivateSpecifiedPiece instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000650 RID: 1616 RVA: 0x00022A6F File Offset: 0x00020C6F
+		// Token: 0x06000666 RID: 1638 RVA: 0x000236CF File Offset: 0x000218CF
 		public static IActivateSpecifiedPiece CreateFromSetValue([Nullable(2)] IActivateSpecifiedPiece_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000651 RID: 1617 RVA: 0x00022A82 File Offset: 0x00020C82
+		// Token: 0x06000667 RID: 1639 RVA: 0x000236E2 File Offset: 0x000218E2
 		public new IActivateSpecifiedPiece_SetValue ToSetValue()
 		{
 			return new IActivateSpecifiedPiece_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000216 RID: 534
-		// (get) Token: 0x06000652 RID: 1618 RVA: 0x00022AA1 File Offset: 0x00020CA1
-		// (set) Token: 0x06000653 RID: 1619 RVA: 0x00022ACC File Offset: 0x00020CCC
+		// Token: 0x1700021E RID: 542
+		// (get) Token: 0x06000668 RID: 1640 RVA: 0x00023701 File Offset: 0x00021901
+		// (set) Token: 0x06000669 RID: 1641 RVA: 0x0002372C File Offset: 0x0002192C
 		public override EJigsawCompleteCondition Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000217 RID: 535
-		// (get) Token: 0x06000654 RID: 1620 RVA: 0x00022ADC File Offset: 0x00020CDC
-		// (set) Token: 0x06000655 RID: 1621 RVA: 0x00022B6F File Offset: 0x00020D6F
+		// Token: 0x1700021F RID: 543
+		// (get) Token: 0x0600066A RID: 1642 RVA: 0x0002373C File Offset: 0x0002193C
+		// (set) Token: 0x0600066B RID: 1643 RVA: 0x000237CF File Offset: 0x000219CF
 		public virtual List<IActivateSpecifiedPieceConfig> Config
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000800 RID: 2048
+		// Token: 0x04000859 RID: 2137
 		[Nullable(2)]
 		protected new IActivateSpecifiedPiece FbInstance;
 
-		// Token: 0x04000801 RID: 2049
+		// Token: 0x0400085A RID: 2138
 		[Nullable(2)]
 		protected new IActivateSpecifiedPiece_SetValue PocoInterface;
 
-		// Token: 0x04000802 RID: 2050
+		// Token: 0x0400085B RID: 2139
 		private List<IActivateSpecifiedPieceConfig> _ConfigCache;
 
-		// Token: 0x04000803 RID: 2051
+		// Token: 0x0400085C RID: 2140
 		private bool _ConfigInited;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B33 RID: 19251
+	// Token: 0x0200501A RID: 20506
 	public class ICheckSubLevelStateConfigT
 	{
-		// Token: 0x17008BAA RID: 35754
-		// (get) Token: 0x0601E4B8 RID: 124088 RVA: 0x0043ED3B File Offset: 0x0043CF3B
-		// (set) Token: 0x0601E4B9 RID: 124089 RVA: 0x0043ED43 File Offset: 0x0043CF43
+		// Token: 0x170092BA RID: 37562
+		// (get) Token: 0x06020043 RID: 131139 RVA: 0x004714E7 File Offset: 0x0046F6E7
+		// (set) Token: 0x06020044 RID: 131140 RVA: 0x004714EF File Offset: 0x0046F6EF
 		public string SubLevelName { get; set; }
 
-		// Token: 0x17008BAB RID: 35755
-		// (get) Token: 0x0601E4BA RID: 124090 RVA: 0x0043ED4C File Offset: 0x0043CF4C
-		// (set) Token: 0x0601E4BB RID: 124091 RVA: 0x0043ED54 File Offset: 0x0043CF54
+		// Token: 0x170092BB RID: 37563
+		// (get) Token: 0x06020045 RID: 131141 RVA: 0x004714F8 File Offset: 0x0046F6F8
+		// (set) Token: 0x06020046 RID: 131142 RVA: 0x00471500 File Offset: 0x0046F700
 		public ESubLevelState SubLevelState { get; set; }
 
-		// Token: 0x0601E4BC RID: 124092 RVA: 0x0043ED5D File Offset: 0x0043CF5D
+		// Token: 0x06020047 RID: 131143 RVA: 0x00471509 File Offset: 0x0046F709
 		public ICheckSubLevelStateConfigT()
 		{
 			this.SubLevelName = null;

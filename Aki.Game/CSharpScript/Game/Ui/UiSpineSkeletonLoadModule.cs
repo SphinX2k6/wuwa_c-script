@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046DE RID: 18142
+	// Token: 0x0200360E RID: 13838
 	public class UiSpineSkeletonLoadModule : UiResourceLoadModule
 	{
-		// Token: 0x0602ECAB RID: 191659 RVA: 0x00AD56C4 File Offset: 0x00AD38C4
+		// Token: 0x060233E6 RID: 144358 RVA: 0x00A0319C File Offset: 0x00A0139C
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{

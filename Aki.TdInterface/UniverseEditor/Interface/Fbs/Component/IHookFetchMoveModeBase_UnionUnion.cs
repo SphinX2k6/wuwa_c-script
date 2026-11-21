@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053BA RID: 21434
+	// Token: 0x02005940 RID: 22848
 	public class IHookFetchMoveModeBase_UnionUnion
 	{
-		// Token: 0x17009D8A RID: 40330
-		// (get) Token: 0x060231FE RID: 143870 RVA: 0x004DCC5D File Offset: 0x004DAE5D
-		// (set) Token: 0x060231FF RID: 143871 RVA: 0x004DCC65 File Offset: 0x004DAE65
+		// Token: 0x1700A5C2 RID: 42434
+		// (get) Token: 0x060252B2 RID: 152242 RVA: 0x00519B31 File Offset: 0x00517D31
+		// (set) Token: 0x060252B3 RID: 152243 RVA: 0x00519B39 File Offset: 0x00517D39
 		public IHookFetchMoveModeBase_Union Type { get; set; }
 
-		// Token: 0x17009D8B RID: 40331
-		// (get) Token: 0x06023200 RID: 143872 RVA: 0x004DCC6E File Offset: 0x004DAE6E
-		// (set) Token: 0x06023201 RID: 143873 RVA: 0x004DCC76 File Offset: 0x004DAE76
+		// Token: 0x1700A5C3 RID: 42435
+		// (get) Token: 0x060252B4 RID: 152244 RVA: 0x00519B42 File Offset: 0x00517D42
+		// (set) Token: 0x060252B5 RID: 152245 RVA: 0x00519B4A File Offset: 0x00517D4A
 		public object Value { get; set; }
 
-		// Token: 0x06023202 RID: 143874 RVA: 0x004DCC7F File Offset: 0x004DAE7F
+		// Token: 0x060252B6 RID: 152246 RVA: 0x00519B53 File Offset: 0x00517D53
 		public IHookFetchMoveModeBase_UnionUnion()
 		{
 			this.Type = IHookFetchMoveModeBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06023203 RID: 143875 RVA: 0x004DCC95 File Offset: 0x004DAE95
+		// Token: 0x060252B7 RID: 152247 RVA: 0x00519B69 File Offset: 0x00517D69
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06023204 RID: 143876 RVA: 0x004DCCA7 File Offset: 0x004DAEA7
+		// Token: 0x060252B8 RID: 152248 RVA: 0x00519B7B File Offset: 0x00517D7B
 		public IHookFetchMoveModeBaseT AsIHookFetchMoveModeBase()
 		{
 			return this.As<IHookFetchMoveModeBaseT>();
 		}
 
-		// Token: 0x06023205 RID: 143877 RVA: 0x004DCCAF File Offset: 0x004DAEAF
+		// Token: 0x060252B9 RID: 152249 RVA: 0x00519B83 File Offset: 0x00517D83
 		public static IHookFetchMoveModeBase_UnionUnion FromIHookFetchMoveModeBase(IHookFetchMoveModeBaseT _ihookfetchmovemodebase)
 		{
 			return new IHookFetchMoveModeBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06023206 RID: 143878 RVA: 0x004DCCC4 File Offset: 0x004DAEC4
+		// Token: 0x060252BA RID: 152250 RVA: 0x00519B98 File Offset: 0x00517D98
 		public IHookFetchMoveUniformT AsIHookFetchMoveUniform()
 		{
 			return this.As<IHookFetchMoveUniformT>();
 		}
 
-		// Token: 0x06023207 RID: 143879 RVA: 0x004DCCCC File Offset: 0x004DAECC
+		// Token: 0x060252BB RID: 152251 RVA: 0x00519BA0 File Offset: 0x00517DA0
 		public static IHookFetchMoveModeBase_UnionUnion FromIHookFetchMoveUniform(IHookFetchMoveUniformT _ihookfetchmoveuniform)
 		{
 			return new IHookFetchMoveModeBase_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06023208 RID: 143880 RVA: 0x004DCCE4 File Offset: 0x004DAEE4
+		// Token: 0x060252BC RID: 152252 RVA: 0x00519BB8 File Offset: 0x00517DB8
 		public static int Pack(FlatBufferBuilder builder, IHookFetchMoveModeBase_UnionUnion _o)
 		{
 			IHookFetchMoveModeBase_Union type = _o.Type;

@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AD5 RID: 19157
+	// Token: 0x02003A7D RID: 14973
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseTalentTreeRowItem : GridProxyAbstract<TrapDefenseTalentTreeRowData>
 	{
-		// Token: 0x060319E6 RID: 203238 RVA: 0x00B82904 File Offset: 0x00B80B04
+		// Token: 0x06026776 RID: 157558 RVA: 0x00AC68B8 File Offset: 0x00AC4AB8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060319E7 RID: 203239 RVA: 0x00B82970 File Offset: 0x00B80B70
+		// Token: 0x06026777 RID: 157559 RVA: 0x00AC6924 File Offset: 0x00AC4B24
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseTalentTreeRowItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060319E8 RID: 203240 RVA: 0x00B829B4 File Offset: 0x00B80BB4
+		// Token: 0x06026778 RID: 157560 RVA: 0x00AC6968 File Offset: 0x00AC4B68
 		public override void Refresh(TrapDefenseTalentTreeRowData data, bool isSelected, int gridIndex)
 		{
 			this.ResetAllLines();
@@ -97,13 +97,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060319E9 RID: 203241 RVA: 0x00B82BD0 File Offset: 0x00B80DD0
+		// Token: 0x06026779 RID: 157561 RVA: 0x00AC6B84 File Offset: 0x00AC4D84
 		public override object GetKey(TrapDefenseTalentTreeRowData data, int displayIndex)
 		{
 			return data.Row;
 		}
 
-		// Token: 0x060319EA RID: 203242 RVA: 0x00B82BE0 File Offset: 0x00B80DE0
+		// Token: 0x0602677A RID: 157562 RVA: 0x00AC6B94 File Offset: 0x00AC4D94
 		private void ResetAllLines()
 		{
 			List<UUIItem> allLines = this.LineList.GetAllLines();
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060319EB RID: 203243 RVA: 0x00B82C74 File Offset: 0x00B80E74
+		// Token: 0x0602677B RID: 157563 RVA: 0x00AC6C28 File Offset: 0x00AC4E28
 		private void ResetAllNodes()
 		{
 			for (int i = 0; i < 6; i++)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060319EC RID: 203244 RVA: 0x00B82CA8 File Offset: 0x00B80EA8
+		// Token: 0x0602677C RID: 157564 RVA: 0x00AC6C5C File Offset: 0x00AC4E5C
 		private void RefreshAllDots()
 		{
 			foreach (UUIItem uuiitem in this.LineList.GetAllDots())
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060319ED RID: 203245 RVA: 0x00B82D00 File Offset: 0x00B80F00
+		// Token: 0x0602677D RID: 157565 RVA: 0x00AC6CB4 File Offset: 0x00AC4EB4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -161,20 +161,20 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.NodeList.GetLinesByIndexInLineId(index);
 		}
 
-		// Token: 0x0401A816 RID: 108566
+		// Token: 0x04015168 RID: 86376
 		private TrapDefenseTalentTreeRowNodeListItem NodeList;
 
-		// Token: 0x0401A817 RID: 108567
+		// Token: 0x04015169 RID: 86377
 		private TrapDefenseTalentTreeRowLineListItem LineList;
 
-		// Token: 0x0200AC4F RID: 44111
+		// Token: 0x0200966F RID: 38511
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040345C9 RID: 214473
+			// Token: 0x0402EF7A RID: 192378
 			public const int ItemNodeList = 0;
 
-			// Token: 0x040345CA RID: 214474
+			// Token: 0x0402EF7B RID: 192379
 			public const int ItemLineList = 1;
 		}
 	}

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001A02 RID: 6658
+// Token: 0x02000EC1 RID: 3777
 public class PinballBattleDamageNumFormatRule : IDamageNumFormatRule
 {
-	// Token: 0x0600C2E5 RID: 49893 RVA: 0x002C0D58 File Offset: 0x002BEF58
+	// Token: 0x060096F3 RID: 38643 RVA: 0x002CBD44 File Offset: 0x002C9F44
 	[NullableContext(1)]
 	public string FormatNumber(float num)
 	{

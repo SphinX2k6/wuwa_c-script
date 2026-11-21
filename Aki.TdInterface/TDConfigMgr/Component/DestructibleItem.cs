@@ -14,8 +14,8 @@ namespace Aki.TDConfigMgr.Component
 	[Nullable(0)]
 	public class DestructibleItem : IHitComponentBase
 	{
-		// Token: 0x06000294 RID: 660 RVA: 0x00019C30 File Offset: 0x00017E30
-		[NullableContext(1)]
+		// Token: 0x06000298 RID: 664 RVA: 0x0001A5A4 File Offset: 0x000187A4
+		[NullableContext(0)]
 		private DestructibleItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -30,8 +30,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000295 RID: 661 RVA: 0x00019C68 File Offset: 0x00017E68
-		[NullableContext(1)]
+		// Token: 0x06000299 RID: 665 RVA: 0x0001A5DC File Offset: 0x000187DC
+		[NullableContext(0)]
 		public static DestructibleItem Create([Nullable(2)] DestructibleItem instance)
 		{
 			if (instance == null)
@@ -44,8 +44,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000296 RID: 662 RVA: 0x00019C7B File Offset: 0x00017E7B
-		[NullableContext(1)]
+		// Token: 0x0600029A RID: 666 RVA: 0x0001A5EF File Offset: 0x000187EF
+		[NullableContext(0)]
 		public static DestructibleItem CreateFromSetValue([Nullable(2)] DestructibleItem_SetValue value)
 		{
 			if (value == null)
@@ -58,8 +58,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000297 RID: 663 RVA: 0x00019C90 File Offset: 0x00017E90
-		[NullableContext(1)]
+		// Token: 0x0600029B RID: 667 RVA: 0x0001A604 File Offset: 0x00018804
+		[NullableContext(0)]
 		public new DestructibleItem_SetValue ToSetValue()
 		{
 			return new DestructibleItem_SetValue
@@ -83,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170000E4 RID: 228
-		// (get) Token: 0x06000298 RID: 664 RVA: 0x00019D64 File Offset: 0x00017F64
-		// (set) Token: 0x06000299 RID: 665 RVA: 0x00019D9E File Offset: 0x00017F9E
+		// Token: 0x170000E6 RID: 230
+		// (get) Token: 0x0600029C RID: 668 RVA: 0x0001A6D8 File Offset: 0x000188D8
+		// (set) Token: 0x0600029D RID: 669 RVA: 0x0001A712 File Offset: 0x00018912
 		public override bool? Disabled
 		{
 			get
@@ -107,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000E5 RID: 229
-		// (get) Token: 0x0600029A RID: 666 RVA: 0x00019DAC File Offset: 0x00017FAC
-		// (set) Token: 0x0600029B RID: 667 RVA: 0x00019DD3 File Offset: 0x00017FD3
+		// Token: 0x170000E7 RID: 231
+		// (get) Token: 0x0600029E RID: 670 RVA: 0x0001A720 File Offset: 0x00018920
+		// (set) Token: 0x0600029F RID: 671 RVA: 0x0001A747 File Offset: 0x00018947
 		public override IHitBulletType HitBullet
 		{
 			get
@@ -131,9 +131,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000E6 RID: 230
-		// (get) Token: 0x0600029C RID: 668 RVA: 0x00019DE4 File Offset: 0x00017FE4
-		// (set) Token: 0x0600029D RID: 669 RVA: 0x00019E45 File Offset: 0x00018045
+		// Token: 0x170000E8 RID: 232
+		// (get) Token: 0x060002A0 RID: 672 RVA: 0x0001A758 File Offset: 0x00018958
+		// (set) Token: 0x060002A1 RID: 673 RVA: 0x0001A7B9 File Offset: 0x000189B9
 		public override IHitTimeScaleRatio AttackerHitTimeScaleRatio
 		{
 			get
@@ -161,9 +161,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000E7 RID: 231
-		// (get) Token: 0x0600029E RID: 670 RVA: 0x00019E5C File Offset: 0x0001805C
-		// (set) Token: 0x0600029F RID: 671 RVA: 0x00019EBD File Offset: 0x000180BD
+		// Token: 0x170000E9 RID: 233
+		// (get) Token: 0x060002A2 RID: 674 RVA: 0x0001A7D0 File Offset: 0x000189D0
+		// (set) Token: 0x060002A3 RID: 675 RVA: 0x0001A831 File Offset: 0x00018A31
 		public override IHitTimeScaleRatio VictimHitTimeScaleRatio
 		{
 			get
@@ -191,20 +191,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000E8 RID: 232
-		// (get) Token: 0x060002A0 RID: 672 RVA: 0x00019ED4 File Offset: 0x000180D4
-		// (set) Token: 0x060002A1 RID: 673 RVA: 0x00019F67 File Offset: 0x00018167
+		// Token: 0x170000EA RID: 234
+		// (get) Token: 0x060002A4 RID: 676 RVA: 0x0001A848 File Offset: 0x00018A48
+		// (set) Token: 0x060002A5 RID: 677 RVA: 0x0001A8DB File Offset: 0x00018ADB
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<IAimPart> AimParts
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -235,7 +235,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -244,9 +244,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000E9 RID: 233
-		// (get) Token: 0x060002A2 RID: 674 RVA: 0x00019F7C File Offset: 0x0001817C
-		// (set) Token: 0x060002A3 RID: 675 RVA: 0x00019FA6 File Offset: 0x000181A6
+		// Token: 0x170000EB RID: 235
+		// (get) Token: 0x060002A6 RID: 678 RVA: 0x0001A8F0 File Offset: 0x00018AF0
+		// (set) Token: 0x060002A7 RID: 679 RVA: 0x0001A91A File Offset: 0x00018B1A
 		public override bool? EdIsLocked
 		{
 			get
@@ -263,9 +263,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000EA RID: 234
-		// (get) Token: 0x060002A4 RID: 676 RVA: 0x00019FB4 File Offset: 0x000181B4
-		// (set) Token: 0x060002A5 RID: 677 RVA: 0x00019FDF File Offset: 0x000181DF
+		// Token: 0x170000EC RID: 236
+		// (get) Token: 0x060002A8 RID: 680 RVA: 0x0001A928 File Offset: 0x00018B28
+		// (set) Token: 0x060002A9 RID: 681 RVA: 0x0001A953 File Offset: 0x00018B53
 		public virtual int DurabilityId
 		{
 			get
@@ -286,9 +286,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000EB RID: 235
-		// (get) Token: 0x060002A6 RID: 678 RVA: 0x00019FED File Offset: 0x000181ED
-		// (set) Token: 0x060002A7 RID: 679 RVA: 0x0001A018 File Offset: 0x00018218
+		// Token: 0x170000ED RID: 237
+		// (get) Token: 0x060002AA RID: 682 RVA: 0x0001A961 File Offset: 0x00018B61
+		// (set) Token: 0x060002AB RID: 683 RVA: 0x0001A98C File Offset: 0x00018B8C
 		public virtual int Durability
 		{
 			get
@@ -309,9 +309,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000EC RID: 236
-		// (get) Token: 0x060002A8 RID: 680 RVA: 0x0001A028 File Offset: 0x00018228
-		// (set) Token: 0x060002A9 RID: 681 RVA: 0x0001A089 File Offset: 0x00018289
+		// Token: 0x170000EE RID: 238
+		// (get) Token: 0x060002AC RID: 684 RVA: 0x0001A99C File Offset: 0x00018B9C
+		// (set) Token: 0x060002AD RID: 685 RVA: 0x0001A9FD File Offset: 0x00018BFD
 		public virtual IDurabilityWorn DurabilityWorn
 		{
 			get
@@ -339,9 +339,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000ED RID: 237
-		// (get) Token: 0x060002AA RID: 682 RVA: 0x0001A0A0 File Offset: 0x000182A0
-		// (set) Token: 0x060002AB RID: 683 RVA: 0x0001A101 File Offset: 0x00018301
+		// Token: 0x170000EF RID: 239
+		// (get) Token: 0x060002AE RID: 686 RVA: 0x0001AA14 File Offset: 0x00018C14
+		// (set) Token: 0x060002AF RID: 687 RVA: 0x0001AA75 File Offset: 0x00018C75
 		public virtual IDurabilityStateConfig DurabilityStateConfig
 		{
 			get
@@ -369,13 +369,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000EE RID: 238
-		// (get) Token: 0x060002AC RID: 684 RVA: 0x0001A118 File Offset: 0x00018318
-		// (set) Token: 0x060002AD RID: 685 RVA: 0x0001A179 File Offset: 0x00018379
-		[Nullable(1)]
+		// Token: 0x170000F0 RID: 240
+		// (get) Token: 0x060002B0 RID: 688 RVA: 0x0001AA8C File Offset: 0x00018C8C
+		// (set) Token: 0x060002B1 RID: 689 RVA: 0x0001AAED File Offset: 0x00018CED
+		[Nullable(0)]
 		public virtual VectorInfo HitPoint
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._HitPointInited)
@@ -394,7 +394,7 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this._HitPointCache;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().HitPoint = value;
@@ -402,20 +402,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000EF RID: 239
-		// (get) Token: 0x060002AE RID: 686 RVA: 0x0001A190 File Offset: 0x00018390
-		// (set) Token: 0x060002AF RID: 687 RVA: 0x0001A223 File Offset: 0x00018423
+		// Token: 0x170000F1 RID: 241
+		// (get) Token: 0x060002B2 RID: 690 RVA: 0x0001AB04 File Offset: 0x00018D04
+		// (set) Token: 0x060002B3 RID: 691 RVA: 0x0001AB97 File Offset: 0x00018D97
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> DestructionActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -446,7 +446,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -455,9 +455,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000F0 RID: 240
-		// (get) Token: 0x060002B0 RID: 688 RVA: 0x0001A238 File Offset: 0x00018438
-		// (set) Token: 0x060002B1 RID: 689 RVA: 0x0001A299 File Offset: 0x00018499
+		// Token: 0x170000F2 RID: 242
+		// (get) Token: 0x060002B4 RID: 692 RVA: 0x0001ABAC File Offset: 0x00018DAC
+		// (set) Token: 0x060002B5 RID: 693 RVA: 0x0001AC0D File Offset: 0x00018E0D
 		public virtual ISkillDamage SkillDamage
 		{
 			get
@@ -485,9 +485,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000F1 RID: 241
-		// (get) Token: 0x060002B2 RID: 690 RVA: 0x0001A2B0 File Offset: 0x000184B0
-		// (set) Token: 0x060002B3 RID: 691 RVA: 0x0001A311 File Offset: 0x00018511
+		// Token: 0x170000F3 RID: 243
+		// (get) Token: 0x060002B6 RID: 694 RVA: 0x0001AC24 File Offset: 0x00018E24
+		// (set) Token: 0x060002B7 RID: 695 RVA: 0x0001AC85 File Offset: 0x00018E85
 		public virtual IElementDamage ElementDamage
 		{
 			get
@@ -515,9 +515,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000F2 RID: 242
-		// (get) Token: 0x060002B4 RID: 692 RVA: 0x0001A328 File Offset: 0x00018528
-		// (set) Token: 0x060002B5 RID: 693 RVA: 0x0001A389 File Offset: 0x00018589
+		// Token: 0x170000F4 RID: 244
+		// (get) Token: 0x060002B8 RID: 696 RVA: 0x0001AC9C File Offset: 0x00018E9C
+		// (set) Token: 0x060002B9 RID: 697 RVA: 0x0001ACFD File Offset: 0x00018EFD
 		public virtual IWeaponDamage WeaponDamage
 		{
 			get
@@ -545,20 +545,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000F3 RID: 243
-		// (get) Token: 0x060002B6 RID: 694 RVA: 0x0001A39E File Offset: 0x0001859E
-		// (set) Token: 0x060002B7 RID: 695 RVA: 0x0001A3C5 File Offset: 0x000185C5
+		// Token: 0x170000F5 RID: 245
+		// (get) Token: 0x060002BA RID: 698 RVA: 0x0001AD12 File Offset: 0x00018F12
+		// (set) Token: 0x060002BB RID: 699 RVA: 0x0001AD39 File Offset: 0x00018F39
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMatchRoleType> MatchRoleOption
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -576,7 +576,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -584,88 +584,88 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400019B RID: 411
+		// Token: 0x040001A0 RID: 416
 		protected new DestructibleItem FbInstance;
 
-		// Token: 0x0400019C RID: 412
+		// Token: 0x040001A1 RID: 417
 		protected new DestructibleItem_SetValue PocoInterface;
 
-		// Token: 0x0400019D RID: 413
-		[Nullable(1)]
+		// Token: 0x040001A2 RID: 418
+		[Nullable(0)]
 		private IHitTimeScaleRatio _AttackerHitTimeScaleRatioCache;
 
-		// Token: 0x0400019E RID: 414
+		// Token: 0x040001A3 RID: 419
 		private bool _AttackerHitTimeScaleRatioInited;
 
-		// Token: 0x0400019F RID: 415
-		[Nullable(1)]
+		// Token: 0x040001A4 RID: 420
+		[Nullable(0)]
 		private IHitTimeScaleRatio _VictimHitTimeScaleRatioCache;
 
-		// Token: 0x040001A0 RID: 416
+		// Token: 0x040001A5 RID: 421
 		private bool _VictimHitTimeScaleRatioInited;
 
-		// Token: 0x040001A1 RID: 417
+		// Token: 0x040001A6 RID: 422
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IAimPart> _AimPartsCache;
 
-		// Token: 0x040001A2 RID: 418
+		// Token: 0x040001A7 RID: 423
 		private bool _AimPartsInited;
 
-		// Token: 0x040001A3 RID: 419
-		[Nullable(1)]
+		// Token: 0x040001A8 RID: 424
+		[Nullable(0)]
 		private IDurabilityWorn _DurabilityWornCache;
 
-		// Token: 0x040001A4 RID: 420
+		// Token: 0x040001A9 RID: 425
 		private bool _DurabilityWornInited;
 
-		// Token: 0x040001A5 RID: 421
-		[Nullable(1)]
+		// Token: 0x040001AA RID: 426
+		[Nullable(0)]
 		private IDurabilityStateConfig _DurabilityStateConfigCache;
 
-		// Token: 0x040001A6 RID: 422
+		// Token: 0x040001AB RID: 427
 		private bool _DurabilityStateConfigInited;
 
-		// Token: 0x040001A7 RID: 423
-		[Nullable(1)]
+		// Token: 0x040001AC RID: 428
+		[Nullable(0)]
 		private VectorInfo _HitPointCache;
 
-		// Token: 0x040001A8 RID: 424
+		// Token: 0x040001AD RID: 429
 		private bool _HitPointInited;
 
-		// Token: 0x040001A9 RID: 425
+		// Token: 0x040001AE RID: 430
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _DestructionActionsCache;
 
-		// Token: 0x040001AA RID: 426
+		// Token: 0x040001AF RID: 431
 		private bool _DestructionActionsInited;
 
-		// Token: 0x040001AB RID: 427
-		[Nullable(1)]
+		// Token: 0x040001B0 RID: 432
+		[Nullable(0)]
 		private ISkillDamage _SkillDamageCache;
 
-		// Token: 0x040001AC RID: 428
+		// Token: 0x040001B1 RID: 433
 		private bool _SkillDamageInited;
 
-		// Token: 0x040001AD RID: 429
-		[Nullable(1)]
+		// Token: 0x040001B2 RID: 434
+		[Nullable(0)]
 		private IElementDamage _ElementDamageCache;
 
-		// Token: 0x040001AE RID: 430
+		// Token: 0x040001B3 RID: 435
 		private bool _ElementDamageInited;
 
-		// Token: 0x040001AF RID: 431
-		[Nullable(1)]
+		// Token: 0x040001B4 RID: 436
+		[Nullable(0)]
 		private IWeaponDamage _WeaponDamageCache;
 
-		// Token: 0x040001B0 RID: 432
+		// Token: 0x040001B5 RID: 437
 		private bool _WeaponDamageInited;
 	}
 }

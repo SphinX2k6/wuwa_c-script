@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200131B RID: 4891
+	// Token: 0x020002BC RID: 700
 	[UnrealObjectPath("/Script/GameplayAbilities.AbilityTriggerData")]
 	[UnrealStructLayout(16, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class FAbilityTriggerData : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06012054 RID: 73812 RVA: 0x001A75D0 File Offset: 0x001A57D0
+		// Token: 0x06004CE2 RID: 19682 RVA: 0x0006B9F5 File Offset: 0x00069BF5
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FAbilityTriggerData._ScriptStructPtr != 0) ? FAbilityTriggerData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/GameplayAbilities.AbilityTriggerData", ref FAbilityTriggerData._ScriptStructPtr);
 		}
 
-		// Token: 0x17004649 RID: 17993
-		// (get) Token: 0x06012055 RID: 73813 RVA: 0x001A75F4 File Offset: 0x001A57F4
-		// (set) Token: 0x06012056 RID: 73814 RVA: 0x001A7608 File Offset: 0x001A5808
+		// Token: 0x17000EC2 RID: 3778
+		// (get) Token: 0x06004CE3 RID: 19683 RVA: 0x0006BA19 File Offset: 0x00069C19
+		// (set) Token: 0x06004CE4 RID: 19684 RVA: 0x0006BA2D File Offset: 0x00069C2D
 		public unsafe FGameplayTag TriggerTag
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700464A RID: 17994
-		// (get) Token: 0x06012057 RID: 73815 RVA: 0x001A761D File Offset: 0x001A581D
-		// (set) Token: 0x06012058 RID: 73816 RVA: 0x001A7631 File Offset: 0x001A5831
+		// Token: 0x17000EC3 RID: 3779
+		// (get) Token: 0x06004CE5 RID: 19685 RVA: 0x0006BA42 File Offset: 0x00069C42
+		// (set) Token: 0x06004CE6 RID: 19686 RVA: 0x0006BA56 File Offset: 0x00069C56
 		public unsafe TEnumAsByte<EGameplayAbilityTriggerSource> TriggerSource
 		{
 			get
@@ -46,60 +46,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06012059 RID: 73817 RVA: 0x001A7646 File Offset: 0x001A5846
+		// Token: 0x06004CE7 RID: 19687 RVA: 0x0006BA6B File Offset: 0x00069C6B
 		public FAbilityTriggerData()
 		{
 		}
 
-		// Token: 0x0601205A RID: 73818 RVA: 0x001A764E File Offset: 0x001A584E
-		public FAbilityTriggerData(FGameplayTag TriggerTag, TEnumAsByte<EGameplayAbilityTriggerSource> TriggerSource)
-		{
-			this.TriggerTag = TriggerTag;
-			this.TriggerSource = TriggerSource;
-		}
-
-		// Token: 0x0601205B RID: 73819 RVA: 0x001A7664 File Offset: 0x001A5864
+		// Token: 0x06004CE8 RID: 19688 RVA: 0x0006BA73 File Offset: 0x00069C73
 		protected override IntPtr GetUStructPtr()
 		{
 			return FAbilityTriggerData.StaticStruct();
 		}
 
-		// Token: 0x0601205C RID: 73820 RVA: 0x001A7670 File Offset: 0x001A5870
+		// Token: 0x06004CE9 RID: 19689 RVA: 0x0006BA7F File Offset: 0x00069C7F
 		[NullableContext(2)]
 		public FAbilityTriggerData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601205D RID: 73821 RVA: 0x001A767A File Offset: 0x001A587A
+		// Token: 0x06004CEA RID: 19690 RVA: 0x0006BA89 File Offset: 0x00069C89
 		public FAbilityTriggerData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601205E RID: 73822 RVA: 0x001A7685 File Offset: 0x001A5885
+		// Token: 0x06004CEB RID: 19691 RVA: 0x0006BA94 File Offset: 0x00069C94
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FAbilityTriggerData(Pointer, false, true);
 		}
 
-		// Token: 0x0601205F RID: 73823 RVA: 0x001A768F File Offset: 0x001A588F
+		// Token: 0x06004CEC RID: 19692 RVA: 0x0006BA9E File Offset: 0x00069C9E
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FAbilityTriggerData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04009A0A RID: 39434
+		// Token: 0x04001EAA RID: 7850
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/GameplayAbilities.AbilityTriggerData";
 
-		// Token: 0x04009A0B RID: 39435
+		// Token: 0x04001EAB RID: 7851
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04009A0C RID: 39436
+		// Token: 0x04001EAC RID: 7852
 		internal static int __PropertyOffset_TriggerTag;
 
-		// Token: 0x04009A0D RID: 39437
+		// Token: 0x04001EAD RID: 7853
 		internal static int __PropertyOffset_TriggerSource;
 	}
 }

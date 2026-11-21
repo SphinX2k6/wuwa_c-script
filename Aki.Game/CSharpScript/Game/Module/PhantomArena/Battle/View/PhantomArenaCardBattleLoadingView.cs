@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 {
-	// Token: 0x0200524E RID: 21070
+	// Token: 0x0200421E RID: 16926
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaCardBattleLoadingView : LoadingViewBase
 	{
-		// Token: 0x06035D75 RID: 220533 RVA: 0x00CBDA48 File Offset: 0x00CBBC48
+		// Token: 0x0602AC70 RID: 175216 RVA: 0x00C0B0D8 File Offset: 0x00C092D8
 		public PhantomArenaCardBattleLoadingView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06035D76 RID: 220534 RVA: 0x00CBDA54 File Offset: 0x00CBBC54
+		// Token: 0x0602AC71 RID: 175217 RVA: 0x00C0B0E4 File Offset: 0x00C092E4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			};
 		}
 
-		// Token: 0x06035D77 RID: 220535 RVA: 0x00CBDB78 File Offset: 0x00CBBD78
+		// Token: 0x0602AC72 RID: 175218 RVA: 0x00C0B208 File Offset: 0x00C09408
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaCardBattleLoadingView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D78 RID: 220536 RVA: 0x00CBDBBB File Offset: 0x00CBBDBB
+		// Token: 0x0602AC73 RID: 175219 RVA: 0x00C0B24B File Offset: 0x00C0944B
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -62,12 +62,12 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.InitNpcInfo();
 		}
 
-		// Token: 0x06035D79 RID: 220537 RVA: 0x00CBDBF8 File Offset: 0x00CBBDF8
+		// Token: 0x0602AC74 RID: 175220 RVA: 0x00C0B288 File Offset: 0x00C09488
 		protected override void UpdateProgressRate(float rate)
 		{
 		}
 
-		// Token: 0x06035D7A RID: 220538 RVA: 0x00CBDBFA File Offset: 0x00CBBDFA
+		// Token: 0x0602AC75 RID: 175221 RVA: 0x00C0B28A File Offset: 0x00C0948A
 		protected override void UpdateProgressValue(float value)
 		{
 			this.SetTextProgressValue(0, value, "");
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			}
 		}
 
-		// Token: 0x06035D7B RID: 220539 RVA: 0x00CBDC28 File Offset: 0x00CBBE28
+		// Token: 0x0602AC76 RID: 175222 RVA: 0x00C0B2B8 File Offset: 0x00C094B8
 		protected override void OnLevelSequencePlayerBandStateChange(bool state)
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			sequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x06035D7C RID: 220540 RVA: 0x00CBDC58 File Offset: 0x00CBBE58
+		// Token: 0x0602AC77 RID: 175223 RVA: 0x00C0B2E8 File Offset: 0x00C094E8
 		private UniTask InitBg()
 		{
 			PhantomArenaCardBattleLoadingView.<InitBg>d__9 <InitBg>d__;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitBg>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D7D RID: 220541 RVA: 0x00CBDC9C File Offset: 0x00CBBE9C
+		// Token: 0x0602AC78 RID: 175224 RVA: 0x00C0B32C File Offset: 0x00C0952C
 		private void InitPlayerInfo()
 		{
 			string playerName = FunctionModel.Instance.GetPlayerName();
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			base.SetTextureByPath(phantomBattleCardRole.RoleHeadTexture, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x06035D7E RID: 220542 RVA: 0x00CBDDE8 File Offset: 0x00CBBFE8
+		// Token: 0x0602AC79 RID: 175225 RVA: 0x00C0B478 File Offset: 0x00C09678
 		private void InitNpcInfo()
 		{
 			PhantomBattleEnterCtx loadingConfig = PhantomArenaBattleModel.Instance.LoadingConfig;
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			base.SetTextureByPath(phantomBattleChallengeConfig.NpcHead, base.GetTexture(4), null, null);
 		}
 
-		// Token: 0x06035D7F RID: 220543 RVA: 0x00CBDEF0 File Offset: 0x00CBC0F0
+		// Token: 0x0602AC7A RID: 175226 RVA: 0x00C0B580 File Offset: 0x00C09780
 		private void OnAnimEnd(string name)
 		{
 			if (name == "Start")
@@ -185,47 +185,47 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			}
 		}
 
-		// Token: 0x0401C8A0 RID: 116896
+		// Token: 0x040172D5 RID: 94933
 		protected LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0200B3FE RID: 46078
+		// Token: 0x02009E36 RID: 40502
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040368AC RID: 223404
+			// Token: 0x040312FF RID: 201471
 			public const int Progress = 0;
 
-			// Token: 0x040368AD RID: 223405
+			// Token: 0x04031300 RID: 201472
 			public const int TexRoleLeft = 1;
 
-			// Token: 0x040368AE RID: 223406
+			// Token: 0x04031301 RID: 201473
 			public const int TxtRoleNameLeft = 2;
 
-			// Token: 0x040368AF RID: 223407
+			// Token: 0x04031302 RID: 201474
 			public const int TxtRoleLevelLeft = 3;
 
-			// Token: 0x040368B0 RID: 223408
+			// Token: 0x04031303 RID: 201475
 			public const int TexRoleRight = 4;
 
-			// Token: 0x040368B1 RID: 223409
+			// Token: 0x04031304 RID: 201476
 			public const int TxtRoleNameRight = 5;
 
-			// Token: 0x040368B2 RID: 223410
+			// Token: 0x04031305 RID: 201477
 			public const int TxtRoleLevelRight = 6;
 
-			// Token: 0x040368B3 RID: 223411
+			// Token: 0x04031306 RID: 201478
 			public const int TextureBg = 7;
 
-			// Token: 0x040368B4 RID: 223412
+			// Token: 0x04031307 RID: 201479
 			public const int TextureTriangleBg = 8;
 
-			// Token: 0x040368B5 RID: 223413
+			// Token: 0x04031308 RID: 201480
 			public const int TextureLeftHand = 9;
 
-			// Token: 0x040368B6 RID: 223414
+			// Token: 0x04031309 RID: 201481
 			public const int TextureRightHand = 10;
 
-			// Token: 0x040368B7 RID: 223415
+			// Token: 0x0403130A RID: 201482
 			public const int TextureHandShadow = 11;
 		}
 	}

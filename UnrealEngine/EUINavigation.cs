@@ -4,28 +4,28 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200280E RID: 10254
+	// Token: 0x02000819 RID: 2073
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/SlateCore.EUINavigation")]
 	public enum EUINavigation : byte
 	{
-		// Token: 0x04014DF1 RID: 85489
+		// Token: 0x0400520A RID: 21002
 		Left,
-		// Token: 0x04014DF2 RID: 85490
+		// Token: 0x0400520B RID: 21003
 		Right,
-		// Token: 0x04014DF3 RID: 85491
+		// Token: 0x0400520C RID: 21004
 		Up,
-		// Token: 0x04014DF4 RID: 85492
+		// Token: 0x0400520D RID: 21005
 		Down,
-		// Token: 0x04014DF5 RID: 85493
+		// Token: 0x0400520E RID: 21006
 		Next,
-		// Token: 0x04014DF6 RID: 85494
+		// Token: 0x0400520F RID: 21007
 		Previous,
-		// Token: 0x04014DF7 RID: 85495
+		// Token: 0x04005210 RID: 21008
 		Num,
-		// Token: 0x04014DF8 RID: 85496
+		// Token: 0x04005211 RID: 21009
 		Invalid,
-		// Token: 0x04014DF9 RID: 85497
+		// Token: 0x04005212 RID: 21010
 		EUINavigation_MAX
 	}
 }

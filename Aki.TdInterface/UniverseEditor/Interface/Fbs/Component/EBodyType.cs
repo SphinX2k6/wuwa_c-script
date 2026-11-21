@@ -2,36 +2,36 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D75 RID: 19829
+	// Token: 0x02005274 RID: 21108
 	public enum EBodyType : byte
 	{
-		// Token: 0x0400D803 RID: 55299
+		// Token: 0x0400E33D RID: 58173
 		None,
-		// Token: 0x0400D804 RID: 55300
+		// Token: 0x0400E33E RID: 58174
 		MaleS,
-		// Token: 0x0400D805 RID: 55301
+		// Token: 0x0400E33F RID: 58175
 		MaleM,
-		// Token: 0x0400D806 RID: 55302
+		// Token: 0x0400E340 RID: 58176
 		MaleXL,
-		// Token: 0x0400D807 RID: 55303
+		// Token: 0x0400E341 RID: 58177
 		FemaleS,
-		// Token: 0x0400D808 RID: 55304
+		// Token: 0x0400E342 RID: 58178
 		FemaleMS,
-		// Token: 0x0400D809 RID: 55305
+		// Token: 0x0400E343 RID: 58179
 		FemaleM,
-		// Token: 0x0400D80A RID: 55306
+		// Token: 0x0400E344 RID: 58180
 		FemaleXL,
-		// Token: 0x0400D80B RID: 55307
+		// Token: 0x0400E345 RID: 58181
 		ShopHand,
-		// Token: 0x0400D80C RID: 55308
+		// Token: 0x0400E346 RID: 58182
 		ShopStore,
-		// Token: 0x0400D80D RID: 55309
+		// Token: 0x0400E347 RID: 58183
 		ShopDoll,
-		// Token: 0x0400D80E RID: 55310
+		// Token: 0x0400E348 RID: 58184
 		ShopPhonograph,
-		// Token: 0x0400D80F RID: 55311
+		// Token: 0x0400E349 RID: 58185
 		ShopPicture,
-		// Token: 0x0400D810 RID: 55312
+		// Token: 0x0400E34A RID: 58186
 		ShopIRIS
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060E0 RID: 24800
+	// Token: 0x02006742 RID: 26434
 	public struct IActorLookAtLockable : IFlatbufferObject
 	{
-		// Token: 0x1700B6C2 RID: 46786
-		// (get) Token: 0x0602A5C0 RID: 173504 RVA: 0x005D6764 File Offset: 0x005D4964
+		// Token: 0x1700C02D RID: 49197
+		// (get) Token: 0x0602CCA1 RID: 183457 RVA: 0x0062070C File Offset: 0x0061E90C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A5C1 RID: 173505 RVA: 0x005D6771 File Offset: 0x005D4971
+		// Token: 0x0602CCA2 RID: 183458 RVA: 0x00620719 File Offset: 0x0061E919
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602A5C2 RID: 173506 RVA: 0x005D6778 File Offset: 0x005D4978
+		// Token: 0x0602CCA3 RID: 183459 RVA: 0x00620720 File Offset: 0x0061E920
 		public static IActorLookAtLockable GetRootAsIActorLookAtLockable(ByteBuffer _bb)
 		{
 			return IActorLookAtLockable.GetRootAsIActorLookAtLockable(_bb, default(IActorLookAtLockable));
 		}
 
-		// Token: 0x0602A5C3 RID: 173507 RVA: 0x005D6794 File Offset: 0x005D4994
+		// Token: 0x0602CCA4 RID: 183460 RVA: 0x0062073C File Offset: 0x0061E93C
 		public static IActorLookAtLockable GetRootAsIActorLookAtLockable(ByteBuffer _bb, IActorLookAtLockable obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602A5C4 RID: 173508 RVA: 0x005D67B1 File Offset: 0x005D49B1
+		// Token: 0x0602CCA5 RID: 183461 RVA: 0x00620759 File Offset: 0x0061E959
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602A5C5 RID: 173509 RVA: 0x005D67C0 File Offset: 0x005D49C0
+		// Token: 0x0602CCA6 RID: 183462 RVA: 0x00620768 File Offset: 0x0061E968
 		public IActorLookAtLockable __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B6C3 RID: 46787
-		// (get) Token: 0x0602A5C6 RID: 173510 RVA: 0x005D67D0 File Offset: 0x005D49D0
+		// Token: 0x1700C02E RID: 49198
+		// (get) Token: 0x0602CCA7 RID: 183463 RVA: 0x00620778 File Offset: 0x0061E978
 		public EActorLookAtMode Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B6C4 RID: 46788
-		// (get) Token: 0x0602A5C7 RID: 173511 RVA: 0x005D680C File Offset: 0x005D4A0C
+		// Token: 0x1700C02F RID: 49199
+		// (get) Token: 0x0602CCA8 RID: 183464 RVA: 0x006207B4 File Offset: 0x0061E9B4
 		public bool Lock
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B6C5 RID: 46789
-		// (get) Token: 0x0602A5C8 RID: 173512 RVA: 0x005D684C File Offset: 0x005D4A4C
+		// Token: 0x1700C030 RID: 49200
+		// (get) Token: 0x0602CCA9 RID: 183465 RVA: 0x006207F4 File Offset: 0x0061E9F4
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A5C9 RID: 173513 RVA: 0x005D6888 File Offset: 0x005D4A88
+		// Token: 0x0602CCAA RID: 183466 RVA: 0x00620830 File Offset: 0x0061EA30
 		public static Offset<IActorLookAtLockable> CreateIActorLookAtLockable(FlatBufferBuilder builder, EActorLookAtMode Type = EActorLookAtMode.Talker, bool Lock = false, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActorLookAtLockable.EndIActorLookAtLockable(builder);
 		}
 
-		// Token: 0x0602A5CA RID: 173514 RVA: 0x005D68AC File Offset: 0x005D4AAC
+		// Token: 0x0602CCAB RID: 183467 RVA: 0x00620854 File Offset: 0x0061EA54
 		public static void StartIActorLookAtLockable(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602A5CB RID: 173515 RVA: 0x005D68B5 File Offset: 0x005D4AB5
+		// Token: 0x0602CCAC RID: 183468 RVA: 0x0062085D File Offset: 0x0061EA5D
 		public static void AddType(FlatBufferBuilder builder, EActorLookAtMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602A5CC RID: 173516 RVA: 0x005D68C0 File Offset: 0x005D4AC0
+		// Token: 0x0602CCAD RID: 183469 RVA: 0x00620868 File Offset: 0x0061EA68
 		public static void AddLock(FlatBufferBuilder builder, bool @lock)
 		{
 			builder.AddBool(1, @lock, false);
 		}
 
-		// Token: 0x0602A5CD RID: 173517 RVA: 0x005D68CB File Offset: 0x005D4ACB
+		// Token: 0x0602CCAE RID: 183470 RVA: 0x00620873 File Offset: 0x0061EA73
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602A5CE RID: 173518 RVA: 0x005D68D6 File Offset: 0x005D4AD6
+		// Token: 0x0602CCAF RID: 183471 RVA: 0x0062087E File Offset: 0x0061EA7E
 		public static Offset<IActorLookAtLockable> EndIActorLookAtLockable(FlatBufferBuilder builder)
 		{
 			return new Offset<IActorLookAtLockable>(builder.EndTable());
 		}
 
-		// Token: 0x0602A5CF RID: 173519 RVA: 0x005D68E4 File Offset: 0x005D4AE4
+		// Token: 0x0602CCB0 RID: 183472 RVA: 0x0062088C File Offset: 0x0061EA8C
 		public IActorLookAtLockableT UnPack()
 		{
 			IActorLookAtLockableT actorLookAtLockableT = new IActorLookAtLockableT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return actorLookAtLockableT;
 		}
 
-		// Token: 0x0602A5D0 RID: 173520 RVA: 0x005D68FF File Offset: 0x005D4AFF
+		// Token: 0x0602CCB1 RID: 183473 RVA: 0x006208A7 File Offset: 0x0061EAA7
 		public void UnPackTo(IActorLookAtLockableT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602A5D1 RID: 173521 RVA: 0x005D6928 File Offset: 0x005D4B28
+		// Token: 0x0602CCB2 RID: 183474 RVA: 0x006208D0 File Offset: 0x0061EAD0
 		public static Offset<IActorLookAtLockable> Pack(FlatBufferBuilder builder, IActorLookAtLockableT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActorLookAtLockable.CreateIActorLookAtLockable(builder, _o.Type, _o.Lock, _o.NullMask);
 		}
 
-		// Token: 0x0401049C RID: 66716
+		// Token: 0x040112A0 RID: 70304
 		private Table __p;
 	}
 }

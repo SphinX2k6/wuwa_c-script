@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002E12 RID: 11794
+// Token: 0x0200236E RID: 9070
 public class BulletAdditionInfo
 {
-	// Token: 0x1700226D RID: 8813
-	// (get) Token: 0x06018CF2 RID: 101618 RVA: 0x0065BF4A File Offset: 0x0065A14A
+	// Token: 0x170022D5 RID: 8917
+	// (get) Token: 0x060165B3 RID: 91571 RVA: 0x006820AA File Offset: 0x006802AA
 	public bool Valid
 	{
 		get
@@ -14,7 +14,7 @@ public class BulletAdditionInfo
 		}
 	}
 
-	// Token: 0x06018CF3 RID: 101619 RVA: 0x0065BF52 File Offset: 0x0065A152
+	// Token: 0x060165B4 RID: 91572 RVA: 0x006820B2 File Offset: 0x006802B2
 	public void Clear()
 	{
 		this.ValidInternal = false;
@@ -23,22 +23,22 @@ public class BulletAdditionInfo
 		this.DurationAddition = 0f;
 	}
 
-	// Token: 0x06018CF4 RID: 101620 RVA: 0x0065BF7C File Offset: 0x0065A17C
+	// Token: 0x060165B5 RID: 91573 RVA: 0x006820DC File Offset: 0x006802DC
 	public void Init()
 	{
 		this.ValidInternal = true;
 	}
 
-	// Token: 0x0400B9E3 RID: 47587
+	// Token: 0x0400BD71 RID: 48497
 	[Nullable(1)]
 	public readonly Vector SizeScale = Vector.Create();
 
-	// Token: 0x0400B9E4 RID: 47588
+	// Token: 0x0400BD72 RID: 48498
 	public float IntervalScale;
 
-	// Token: 0x0400B9E5 RID: 47589
+	// Token: 0x0400BD73 RID: 48499
 	public float DurationAddition;
 
-	// Token: 0x0400B9E6 RID: 47590
+	// Token: 0x0400BD74 RID: 48500
 	private bool ValidInternal;
 }

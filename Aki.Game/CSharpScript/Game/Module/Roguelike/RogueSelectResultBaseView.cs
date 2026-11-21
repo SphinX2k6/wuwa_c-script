@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E39 RID: 20025
+	// Token: 0x02003E02 RID: 15874
 	public class RogueSelectResultBaseView : UiViewBase
 	{
-		// Token: 0x060339F6 RID: 211446 RVA: 0x00C14E04 File Offset: 0x00C13004
+		// Token: 0x06028861 RID: 165985 RVA: 0x00B5E32C File Offset: 0x00B5C52C
 		[NullableContext(1)]
 		public RogueSelectResultBaseView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060339F7 RID: 211447 RVA: 0x00C14E10 File Offset: 0x00C13010
+		// Token: 0x06028862 RID: 165986 RVA: 0x00B5E338 File Offset: 0x00B5C538
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060339F8 RID: 211448 RVA: 0x00C14F40 File Offset: 0x00C13140
+		// Token: 0x06028863 RID: 165987 RVA: 0x00B5E468 File Offset: 0x00B5C668
 		protected override void OnStart()
 		{
 			EToggleState state = (RoguelikeModel.Instance.GetDescModel() == EDescModel.SIMPLE) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -58,42 +58,42 @@ namespace CSharpScript.Game.Module.Roguelike
 			extendToggle.SetToggleState(state, true, false, false);
 		}
 
-		// Token: 0x060339F9 RID: 211449 RVA: 0x00C14F74 File Offset: 0x00C13174
+		// Token: 0x06028864 RID: 165988 RVA: 0x00B5E49C File Offset: 0x00B5C69C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RoguelikeDataUpdate, new Action(this.OnDescModelChange));
 		}
 
-		// Token: 0x060339FA RID: 211450 RVA: 0x00C14F93 File Offset: 0x00C13193
+		// Token: 0x06028865 RID: 165989 RVA: 0x00B5E4BB File Offset: 0x00B5C6BB
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RoguelikeDataUpdate, new Action(this.OnDescModelChange));
 		}
 
-		// Token: 0x060339FB RID: 211451 RVA: 0x00C14FB2 File Offset: 0x00C131B2
+		// Token: 0x06028866 RID: 165990 RVA: 0x00B5E4DA File Offset: 0x00B5C6DA
 		protected virtual void OnDescModelChange()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x060339FC RID: 211452 RVA: 0x00C14FBA File Offset: 0x00C131BA
+		// Token: 0x06028867 RID: 165991 RVA: 0x00B5E4E2 File Offset: 0x00B5C6E2
 		protected virtual void Refresh()
 		{
 		}
 
-		// Token: 0x060339FD RID: 211453 RVA: 0x00C14FBC File Offset: 0x00C131BC
+		// Token: 0x06028868 RID: 165992 RVA: 0x00B5E4E4 File Offset: 0x00B5C6E4
 		protected virtual void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060339FE RID: 211454 RVA: 0x00C14FC5 File Offset: 0x00C131C5
+		// Token: 0x06028869 RID: 165993 RVA: 0x00B5E4ED File Offset: 0x00B5C6ED
 		protected virtual void CloseBtn()
 		{
 			this.OnCloseBtnClick();
 		}
 
-		// Token: 0x060339FF RID: 211455 RVA: 0x00C14FCD File Offset: 0x00C131CD
+		// Token: 0x0602886A RID: 165994 RVA: 0x00B5E4F5 File Offset: 0x00B5C6F5
 		protected virtual void TabBtn(EToggleState state)
 		{
 			RoguelikeModel.Instance.UpdateDescModel(state == EToggleState.ETT_Checked);

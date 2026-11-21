@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002B0E RID: 11022
+// Token: 0x0200208A RID: 8330
 [NullableContext(1)]
 [Nullable(0)]
 public class EntryItemData : IEntryItemData
 {
-	// Token: 0x17001E99 RID: 7833
-	// (get) Token: 0x06016E8C RID: 93836 RVA: 0x005D0206 File Offset: 0x005CE406
-	// (set) Token: 0x06016E8D RID: 93837 RVA: 0x005D020E File Offset: 0x005CE40E
+	// Token: 0x17001EF1 RID: 7921
+	// (get) Token: 0x060148BD RID: 84157 RVA: 0x005FCD86 File Offset: 0x005FAF86
+	// (set) Token: 0x060148BE RID: 84158 RVA: 0x005FCD8E File Offset: 0x005FAF8E
 	public string Text { get; set; } = "";
 
-	// Token: 0x17001E9A RID: 7834
-	// (get) Token: 0x06016E8E RID: 93838 RVA: 0x005D0217 File Offset: 0x005CE417
-	// (set) Token: 0x06016E8F RID: 93839 RVA: 0x005D021F File Offset: 0x005CE41F
+	// Token: 0x17001EF2 RID: 7922
+	// (get) Token: 0x060148BF RID: 84159 RVA: 0x005FCD97 File Offset: 0x005FAF97
+	// (set) Token: 0x060148C0 RID: 84160 RVA: 0x005FCD9F File Offset: 0x005FAF9F
 	public string[] Args { get; set; } = Array.Empty<string>();
 
-	// Token: 0x17001E9B RID: 7835
-	// (get) Token: 0x06016E90 RID: 93840 RVA: 0x005D0228 File Offset: 0x005CE428
-	// (set) Token: 0x06016E91 RID: 93841 RVA: 0x005D0230 File Offset: 0x005CE430
+	// Token: 0x17001EF3 RID: 7923
+	// (get) Token: 0x060148C1 RID: 84161 RVA: 0x005FCDA8 File Offset: 0x005FAFA8
+	// (set) Token: 0x060148C2 RID: 84162 RVA: 0x005FCDB0 File Offset: 0x005FAFB0
 	public string Color { get; set; } = "";
 }

@@ -3,59 +3,59 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 {
-	// Token: 0x020070B6 RID: 28854
+	// Token: 0x02006315 RID: 25365
 	[RequiredMember]
 	public class ProjectileJumpConfig : IProjectileJumpConfig
 	{
-		// Token: 0x17009C6C RID: 40044
-		// (get) Token: 0x06046590 RID: 288144 RVA: 0x011A1D58 File Offset: 0x0119FF58
-		// (set) Token: 0x06046591 RID: 288145 RVA: 0x011A1D60 File Offset: 0x0119FF60
+		// Token: 0x17007460 RID: 29792
+		// (get) Token: 0x0603D63A RID: 251450 RVA: 0x011BF62C File Offset: 0x011BD82C
+		// (set) Token: 0x0603D63B RID: 251451 RVA: 0x011BF634 File Offset: 0x011BD834
 		[RequiredMember]
 		public float BaseJumpHeight { get; set; }
 
-		// Token: 0x17009C6D RID: 40045
-		// (get) Token: 0x06046592 RID: 288146 RVA: 0x011A1D69 File Offset: 0x0119FF69
-		// (set) Token: 0x06046593 RID: 288147 RVA: 0x011A1D71 File Offset: 0x0119FF71
+		// Token: 0x17007461 RID: 29793
+		// (get) Token: 0x0603D63C RID: 251452 RVA: 0x011BF63D File Offset: 0x011BD83D
+		// (set) Token: 0x0603D63D RID: 251453 RVA: 0x011BF645 File Offset: 0x011BD845
 		[RequiredMember]
 		public float BaseJumpDistanceRate { get; set; }
 
-		// Token: 0x17009C6E RID: 40046
-		// (get) Token: 0x06046594 RID: 288148 RVA: 0x011A1D7A File Offset: 0x0119FF7A
-		// (set) Token: 0x06046595 RID: 288149 RVA: 0x011A1D82 File Offset: 0x0119FF82
+		// Token: 0x17007462 RID: 29794
+		// (get) Token: 0x0603D63E RID: 251454 RVA: 0x011BF64E File Offset: 0x011BD84E
+		// (set) Token: 0x0603D63F RID: 251455 RVA: 0x011BF656 File Offset: 0x011BD856
 		[RequiredMember]
 		public float MaxJumpDistance { get; set; }
 
-		// Token: 0x17009C6F RID: 40047
-		// (get) Token: 0x06046596 RID: 288150 RVA: 0x011A1D8B File Offset: 0x0119FF8B
-		// (set) Token: 0x06046597 RID: 288151 RVA: 0x011A1D93 File Offset: 0x0119FF93
+		// Token: 0x17007463 RID: 29795
+		// (get) Token: 0x0603D640 RID: 251456 RVA: 0x011BF65F File Offset: 0x011BD85F
+		// (set) Token: 0x0603D641 RID: 251457 RVA: 0x011BF667 File Offset: 0x011BD867
 		[RequiredMember]
 		public float MaxJumpHeight { get; set; }
 
-		// Token: 0x17009C70 RID: 40048
-		// (get) Token: 0x06046598 RID: 288152 RVA: 0x011A1D9C File Offset: 0x0119FF9C
-		// (set) Token: 0x06046599 RID: 288153 RVA: 0x011A1DA4 File Offset: 0x0119FFA4
+		// Token: 0x17007464 RID: 29796
+		// (get) Token: 0x0603D642 RID: 251458 RVA: 0x011BF670 File Offset: 0x011BD870
+		// (set) Token: 0x0603D643 RID: 251459 RVA: 0x011BF678 File Offset: 0x011BD878
 		[RequiredMember]
 		public float JumpAcceleration { get; set; }
 
-		// Token: 0x17009C71 RID: 40049
-		// (get) Token: 0x0604659A RID: 288154 RVA: 0x011A1DAD File Offset: 0x0119FFAD
-		// (set) Token: 0x0604659B RID: 288155 RVA: 0x011A1DB5 File Offset: 0x0119FFB5
+		// Token: 0x17007465 RID: 29797
+		// (get) Token: 0x0603D644 RID: 251460 RVA: 0x011BF681 File Offset: 0x011BD881
+		// (set) Token: 0x0603D645 RID: 251461 RVA: 0x011BF689 File Offset: 0x011BD889
 		[RequiredMember]
 		public float TargetSpeedForJump { get; set; }
 
-		// Token: 0x17009C72 RID: 40050
-		// (get) Token: 0x0604659C RID: 288156 RVA: 0x011A1DBE File Offset: 0x0119FFBE
-		// (set) Token: 0x0604659D RID: 288157 RVA: 0x011A1DC6 File Offset: 0x0119FFC6
+		// Token: 0x17007466 RID: 29798
+		// (get) Token: 0x0603D646 RID: 251462 RVA: 0x011BF692 File Offset: 0x011BD892
+		// (set) Token: 0x0603D647 RID: 251463 RVA: 0x011BF69A File Offset: 0x011BD89A
 		[RequiredMember]
 		public float AllTimeForJump { get; set; }
 
-		// Token: 0x17009C73 RID: 40051
-		// (get) Token: 0x0604659E RID: 288158 RVA: 0x011A1DCF File Offset: 0x0119FFCF
-		// (set) Token: 0x0604659F RID: 288159 RVA: 0x011A1DD7 File Offset: 0x0119FFD7
+		// Token: 0x17007467 RID: 29799
+		// (get) Token: 0x0603D648 RID: 251464 RVA: 0x011BF6A3 File Offset: 0x011BD8A3
+		// (set) Token: 0x0603D649 RID: 251465 RVA: 0x011BF6AB File Offset: 0x011BD8AB
 		[RequiredMember]
 		public float JumpBlendTime { get; set; }
 
-		// Token: 0x060465A0 RID: 288160 RVA: 0x011A1DE0 File Offset: 0x0119FFE0
+		// Token: 0x0603D64A RID: 251466 RVA: 0x011BF6B4 File Offset: 0x011BD8B4
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public ProjectileJumpConfig()

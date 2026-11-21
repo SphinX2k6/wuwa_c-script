@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200285D RID: 10333
+// Token: 0x02001DD8 RID: 7640
 public static class ContentHandlerFactory
 {
-	// Token: 0x06015490 RID: 87184 RVA: 0x0056001C File Offset: 0x0055E21C
+	// Token: 0x06012E8E RID: 77454 RVA: 0x0058AD78 File Offset: 0x00588F78
 	[NullableContext(1)]
 	public static IContentHandler<T> CreateContentHandler<[Nullable(0)] T>(Action<T> showItem, [Nullable(new byte[]
 	{

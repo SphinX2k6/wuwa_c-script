@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000331 RID: 817
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000378 RID: 888
 	public class IEntityPackageNode
 	{
-		// Token: 0x06001014 RID: 4116 RVA: 0x000380FC File Offset: 0x000362FC
+		// Token: 0x06001146 RID: 4422 RVA: 0x0003B0C8 File Offset: 0x000392C8
 		private IEntityPackageNode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001015 RID: 4117 RVA: 0x00038134 File Offset: 0x00036334
+		// Token: 0x06001147 RID: 4423 RVA: 0x0003B100 File Offset: 0x00039300
 		public static IEntityPackageNode Create([Nullable(2)] IEntityPackageNode instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001016 RID: 4118 RVA: 0x00038147 File Offset: 0x00036347
+		// Token: 0x06001148 RID: 4424 RVA: 0x0003B113 File Offset: 0x00039313
 		public static IEntityPackageNode CreateFromSetValue([Nullable(2)] IEntityPackageNode_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001017 RID: 4119 RVA: 0x0003815A File Offset: 0x0003635A
+		// Token: 0x06001149 RID: 4425 RVA: 0x0003B126 File Offset: 0x00039326
 		public IEntityPackageNode_SetValue ToSetValue()
 		{
 			return new IEntityPackageNode_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700049D RID: 1181
-		// (get) Token: 0x06001018 RID: 4120 RVA: 0x00038179 File Offset: 0x00036379
-		// (set) Token: 0x06001019 RID: 4121 RVA: 0x000381A4 File Offset: 0x000363A4
+		// Token: 0x170004EB RID: 1259
+		// (get) Token: 0x0600114A RID: 4426 RVA: 0x0003B145 File Offset: 0x00039345
+		// (set) Token: 0x0600114B RID: 4427 RVA: 0x0003B170 File Offset: 0x00039370
 		public virtual int EntityId
 		{
 			get
@@ -84,20 +82,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700049E RID: 1182
-		// (get) Token: 0x0600101A RID: 4122 RVA: 0x000381B4 File Offset: 0x000363B4
-		// (set) Token: 0x0600101B RID: 4123 RVA: 0x00038247 File Offset: 0x00036447
+		// Token: 0x170004EC RID: 1260
+		// (get) Token: 0x0600114C RID: 4428 RVA: 0x0003B180 File Offset: 0x00039380
+		// (set) Token: 0x0600114D RID: 4429 RVA: 0x0003B213 File Offset: 0x00039413
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IEntityPackageNode> Children
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -128,7 +126,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -137,23 +135,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D94 RID: 3476
+		// Token: 0x04000E7F RID: 3711
 		[Nullable(2)]
 		protected IEntityPackageNode FbInstance;
 
-		// Token: 0x04000D95 RID: 3477
+		// Token: 0x04000E80 RID: 3712
 		[Nullable(2)]
 		protected IEntityPackageNode_SetValue PocoInterface;
 
-		// Token: 0x04000D96 RID: 3478
+		// Token: 0x04000E81 RID: 3713
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IEntityPackageNode> _ChildrenCache;
 
-		// Token: 0x04000D97 RID: 3479
+		// Token: 0x04000E82 RID: 3714
 		private bool _ChildrenInited;
 	}
 }

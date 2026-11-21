@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F23 RID: 3875
+	// Token: 0x02001039 RID: 4153
 	public class ICompleteMessageQuestCondition_SetValue
 	{
-		// Token: 0x040033D8 RID: 13272
+		// Token: 0x040036E5 RID: 14053
 		public EPhoneMessageProgressType Type;
 	}
 }

@@ -6,18 +6,18 @@ using CSharpScript.Game.LevelFlow.Condition;
 
 namespace CSharpScript.Game.LevelFlow.Node
 {
-	// Token: 0x02006F73 RID: 28531
+	// Token: 0x020060F4 RID: 24820
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowNode : IStaticVariableResetter
 	{
-		// Token: 0x0604567C RID: 284284 RVA: 0x0113443C File Offset: 0x0113263C
+		// Token: 0x0603B82A RID: 243754 RVA: 0x010DE240 File Offset: 0x010DC440
 		static LevelFlowNode()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelFlowNode.CreateStaticDefaultValue), new Action(LevelFlowNode.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0604567D RID: 284285 RVA: 0x0113445B File Offset: 0x0113265B
+		// Token: 0x0603B82B RID: 243755 RVA: 0x010DE25F File Offset: 0x010DC45F
 		public LevelFlowNode([Nullable(2)] LevelFlowConditionBase condition, List<LevelFlowActionBase> actionList)
 		{
 			this.NodeId = LevelFlowNode.SelfIncrementId++;
@@ -25,13 +25,13 @@ namespace CSharpScript.Game.LevelFlow.Node
 			this.ActionList = actionList;
 		}
 
-		// Token: 0x0604567E RID: 284286 RVA: 0x0113449A File Offset: 0x0113269A
+		// Token: 0x0603B82C RID: 243756 RVA: 0x010DE29E File Offset: 0x010DC49E
 		public void BindCompleteCallBack(Action<LevelFlowNode, bool> completeCallBack)
 		{
 			this.CompleteCallBack = completeCallBack;
 		}
 
-		// Token: 0x0604567F RID: 284287 RVA: 0x011344A4 File Offset: 0x011326A4
+		// Token: 0x0603B82D RID: 243757 RVA: 0x010DE2A8 File Offset: 0x010DC4A8
 		public void Enter()
 		{
 			if (this.Condition != null)
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.LevelFlow.Node
 			this.ExecuteActionList();
 		}
 
-		// Token: 0x06045680 RID: 284288 RVA: 0x011344F0 File Offset: 0x011326F0
+		// Token: 0x0603B82E RID: 243758 RVA: 0x010DE2F4 File Offset: 0x010DC4F4
 		public void Exit()
 		{
 			this.CompleteCallBack = null;
 		}
 
-		// Token: 0x06045681 RID: 284289 RVA: 0x011344FC File Offset: 0x011326FC
+		// Token: 0x0603B82F RID: 243759 RVA: 0x010DE300 File Offset: 0x010DC500
 		public void Tick(float deltaTime)
 		{
 			if (this.NodeState == ELevelFlowNodeState.WaitingCondition)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.LevelFlow.Node
 			}
 		}
 
-		// Token: 0x06045682 RID: 284290 RVA: 0x0113456C File Offset: 0x0113276C
+		// Token: 0x0603B830 RID: 243760 RVA: 0x010DE370 File Offset: 0x010DC570
 		public void Reset()
 		{
 			if (this.NodeState == ELevelFlowNodeState.Idle)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.LevelFlow.Node
 			condition2.Reset();
 		}
 
-		// Token: 0x06045683 RID: 284291 RVA: 0x011345F0 File Offset: 0x011327F0
+		// Token: 0x0603B831 RID: 243761 RVA: 0x010DE3F4 File Offset: 0x010DC5F4
 		private void ExecuteActionList()
 		{
 			this.ActionSet.Clear();
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.LevelFlow.Node
 			}
 		}
 
-		// Token: 0x06045684 RID: 284292 RVA: 0x011346A8 File Offset: 0x011328A8
+		// Token: 0x0603B832 RID: 243762 RVA: 0x010DE4AC File Offset: 0x010DC6AC
 		private void OnConditionComplete(bool isSuccess)
 		{
 			if (isSuccess)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.LevelFlow.Node
 			completeCallBack(this, false);
 		}
 
-		// Token: 0x06045685 RID: 284293 RVA: 0x011346D4 File Offset: 0x011328D4
+		// Token: 0x0603B833 RID: 243763 RVA: 0x010DE4D8 File Offset: 0x010DC6D8
 		private void OnActionComplete(LevelFlowActionBase action, bool isSuccess)
 		{
 			if (isSuccess)
@@ -159,8 +159,8 @@ namespace CSharpScript.Game.LevelFlow.Node
 			}
 		}
 
-		// Token: 0x17009B6E RID: 39790
-		// (get) Token: 0x06045686 RID: 284294 RVA: 0x01134731 File Offset: 0x01132931
+		// Token: 0x170070AD RID: 28845
+		// (get) Token: 0x0603B834 RID: 243764 RVA: 0x010DE535 File Offset: 0x010DC735
 		public ELevelFlowNodeState NodeState
 		{
 			get
@@ -169,28 +169,28 @@ namespace CSharpScript.Game.LevelFlow.Node
 			}
 		}
 
-		// Token: 0x06045687 RID: 284295 RVA: 0x01134739 File Offset: 0x01132939
+		// Token: 0x0603B835 RID: 243765 RVA: 0x010DE53D File Offset: 0x010DC73D
 		public static void CreateStaticDefaultValue()
 		{
 			LevelFlowNode.SelfIncrementId = 0;
 		}
 
-		// Token: 0x06045688 RID: 284296 RVA: 0x01134741 File Offset: 0x01132941
+		// Token: 0x0603B836 RID: 243766 RVA: 0x010DE545 File Offset: 0x010DC745
 		public static void ResetStaticDefaultValue()
 		{
 			LevelFlowNode.SelfIncrementId = 0;
 		}
 
-		// Token: 0x0402437D RID: 148349
+		// Token: 0x0401F632 RID: 128562
 		public readonly int NodeId;
 
-		// Token: 0x0402437E RID: 148350
+		// Token: 0x0401F633 RID: 128563
 		private static int SelfIncrementId;
 
-		// Token: 0x0402437F RID: 148351
+		// Token: 0x0401F634 RID: 128564
 		private ELevelFlowNodeState NodeStateInternal;
 
-		// Token: 0x04024380 RID: 148352
+		// Token: 0x0401F635 RID: 128565
 		[Nullable(new byte[]
 		{
 			2,
@@ -198,14 +198,14 @@ namespace CSharpScript.Game.LevelFlow.Node
 		})]
 		private Action<LevelFlowNode, bool> CompleteCallBack;
 
-		// Token: 0x04024381 RID: 148353
+		// Token: 0x0401F636 RID: 128566
 		[Nullable(2)]
 		private readonly LevelFlowConditionBase Condition;
 
-		// Token: 0x04024382 RID: 148354
+		// Token: 0x0401F637 RID: 128567
 		private readonly List<LevelFlowActionBase> ActionList = new List<LevelFlowActionBase>();
 
-		// Token: 0x04024383 RID: 148355
+		// Token: 0x0401F638 RID: 128568
 		private readonly HashSet<LevelFlowActionBase> ActionSet = new HashSet<LevelFlowActionBase>();
 	}
 }

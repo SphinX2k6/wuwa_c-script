@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.TDConfigMgr.Action;
@@ -13,11 +12,11 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020032AB RID: 12971
+// Token: 0x0200281C RID: 10268
 [Controller(0)]
 public class SceneItemCaptureController : ControllerBase
 {
-	// Token: 0x0601C124 RID: 114980 RVA: 0x007CE2A0 File Offset: 0x007CC4A0
+	// Token: 0x06019D5C RID: 105820 RVA: 0x007F5470 File Offset: 0x007F3670
 	[NullableContext(2)]
 	public bool CanQuickCollect(Entity entity)
 	{
@@ -34,7 +33,7 @@ public class SceneItemCaptureController : ControllerBase
 		return component2 != null && (SceneItemCaptureController.PhotoCollectionCheck.IsValidTdCollect(component2) || SceneItemCaptureController.PhotoCollectionCheck.IsValidTdSoundBox(component2) || SceneItemCaptureController.PhotoCollectionCheck.IsValidTdDestructible(component2));
 	}
 
-	// Token: 0x0601C125 RID: 114981 RVA: 0x007CE30C File Offset: 0x007CC50C
+	// Token: 0x06019D5D RID: 105821 RVA: 0x007F54DC File Offset: 0x007F36DC
 	[NullableContext(2)]
 	public static bool IsVisible(Entity entity)
 	{
@@ -87,7 +86,7 @@ public class SceneItemCaptureController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x0601C126 RID: 114982 RVA: 0x007CE420 File Offset: 0x007CC620
+	// Token: 0x06019D5E RID: 105822 RVA: 0x007F55F0 File Offset: 0x007F37F0
 	public void CollectItemsInViewport()
 	{
 		TsCharacterController characterController = Global.CharacterController;
@@ -117,7 +116,7 @@ public class SceneItemCaptureController : ControllerBase
 		this.QuickCollect(list);
 	}
 
-	// Token: 0x0601C127 RID: 114983 RVA: 0x007CE4F4 File Offset: 0x007CC6F4
+	// Token: 0x06019D5F RID: 105823 RVA: 0x007F56C4 File Offset: 0x007F38C4
 	private UniTask<bool> QuickCollect([Nullable(1)] List<long> entityCreatureIds)
 	{
 		SceneItemCaptureController.<QuickCollect>d__6 <QuickCollect>d__;
@@ -128,8 +127,8 @@ public class SceneItemCaptureController : ControllerBase
 		return <QuickCollect>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x170026C3 RID: 9923
-	// (get) Token: 0x0601C128 RID: 114984 RVA: 0x007CE537 File Offset: 0x007CC737
+	// Token: 0x170029A7 RID: 10663
+	// (get) Token: 0x06019D60 RID: 105824 RVA: 0x007F5707 File Offset: 0x007F3907
 	[Nullable(1)]
 	public static SceneItemCaptureController Instance
 	{
@@ -140,7 +139,7 @@ public class SceneItemCaptureController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601C129 RID: 114985 RVA: 0x007CE53E File Offset: 0x007CC73E
+	// Token: 0x06019D61 RID: 105825 RVA: 0x007F570E File Offset: 0x007F390E
 	[NullableContext(1)]
 	public static SceneItemCaptureController GetOrCreateInstance()
 	{
@@ -151,7 +150,7 @@ public class SceneItemCaptureController : ControllerBase
 		return SceneItemCaptureController._Instance;
 	}
 
-	// Token: 0x0601C12A RID: 114986 RVA: 0x007CE552 File Offset: 0x007CC752
+	// Token: 0x06019D62 RID: 105826 RVA: 0x007F5722 File Offset: 0x007F3922
 	public static bool CreateInstance()
 	{
 		if (SceneItemCaptureController._Instance != null)
@@ -162,55 +161,55 @@ public class SceneItemCaptureController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601C12B RID: 114987 RVA: 0x007CE568 File Offset: 0x007CC768
+	// Token: 0x06019D63 RID: 105827 RVA: 0x007F5738 File Offset: 0x007F3938
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601C12C RID: 114988 RVA: 0x007CE56A File Offset: 0x007CC76A
+	// Token: 0x06019D64 RID: 105828 RVA: 0x007F573A File Offset: 0x007F393A
 	public static void ResetStaticDefaultValue()
 	{
 		SceneItemCaptureController._Instance = null;
 	}
 
-	// Token: 0x0601C12D RID: 114989 RVA: 0x007CE572 File Offset: 0x007CC772
+	// Token: 0x06019D65 RID: 105829 RVA: 0x007F5742 File Offset: 0x007F3942
 	static SceneItemCaptureController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SceneItemCaptureController.CreateStaticDefaultValue), new Action(SceneItemCaptureController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400DDF0 RID: 56816
+	// Token: 0x0400E296 RID: 58006
 	[Nullable(2)]
 	private static SceneItemCaptureController _Instance;
 
-	// Token: 0x02009742 RID: 38722
+	// Token: 0x02008969 RID: 35177
 	private enum EPhotoCollectionFilterType
 	{
-		// Token: 0x04030659 RID: 198233
+		// Token: 0x0402BCF0 RID: 179440
 		Collect1 = 1,
-		// Token: 0x0403065A RID: 198234
+		// Token: 0x0402BCF1 RID: 179441
 		SoundBox,
-		// Token: 0x0403065B RID: 198235
+		// Token: 0x0402BCF2 RID: 179442
 		Destructible
 	}
 
-	// Token: 0x02009743 RID: 38723
+	// Token: 0x0200896A RID: 35178
 	private enum EPhotoCollectionFilterResult
 	{
-		// Token: 0x0403065D RID: 198237
+		// Token: 0x0402BCF4 RID: 179444
 		Invalid = -1,
-		// Token: 0x0403065E RID: 198238
+		// Token: 0x0402BCF5 RID: 179445
 		Black,
-		// Token: 0x0403065F RID: 198239
+		// Token: 0x0402BCF6 RID: 179446
 		White
 	}
 
-	// Token: 0x02009744 RID: 38724
+	// Token: 0x0200896B RID: 35179
 	[NullableContext(1)]
 	[Nullable(0)]
 	private class PhotoCollectionCheck
 	{
-		// Token: 0x0604C4F8 RID: 312568 RVA: 0x0141C4EC File Offset: 0x0141A6EC
+		// Token: 0x06042986 RID: 272774 RVA: 0x013C714C File Offset: 0x013C534C
 		[return: Nullable(2)]
 		private static IComponentBase GetTdComponent(CreatureDataComponent creatureComp, EConfigComponent tdComponentType)
 		{
@@ -222,7 +221,7 @@ public class SceneItemCaptureController : ControllerBase
 			return null;
 		}
 
-		// Token: 0x0604C4F9 RID: 312569 RVA: 0x0141C514 File Offset: 0x0141A714
+		// Token: 0x06042987 RID: 272775 RVA: 0x013C7174 File Offset: 0x013C5374
 		public static bool IsValidTdCollect(CreatureDataComponent creatureDataComp)
 		{
 			if (!(SceneItemCaptureController.PhotoCollectionCheck.GetTdComponent(creatureDataComp, EConfigComponent.CollectComponent) is Aki.TDConfigMgr.Component.CollectComponent))
@@ -252,19 +251,19 @@ public class SceneItemCaptureController : ControllerBase
 			return false;
 		}
 
-		// Token: 0x0604C4FA RID: 312570 RVA: 0x0141C5EC File Offset: 0x0141A7EC
+		// Token: 0x06042988 RID: 272776 RVA: 0x013C724C File Offset: 0x013C544C
 		public static bool IsValidTdSoundBox(CreatureDataComponent creatureDataComp)
 		{
 			return SceneItemCaptureController.PhotoCollectionCheck.IsTemplateIdAllowed(creatureDataComp, SceneItemCaptureController.EPhotoCollectionFilterType.SoundBox) && SceneItemCaptureController.PhotoCollectionCheck.GetTdComponent(creatureDataComp, EConfigComponent.CollectComponent) is Aki.TDConfigMgr.Component.CollectComponent && SceneItemCaptureController.PhotoCollectionCheck.GetTdComponent(creatureDataComp, EConfigComponent.InteractComponent) is InteractComponent;
 		}
 
-		// Token: 0x0604C4FB RID: 312571 RVA: 0x0141C61C File Offset: 0x0141A81C
+		// Token: 0x06042989 RID: 272777 RVA: 0x013C727C File Offset: 0x013C547C
 		public static bool IsValidTdDestructible(CreatureDataComponent creatureDataComp)
 		{
 			return SceneItemCaptureController.PhotoCollectionCheck.GetTdComponent(creatureDataComp, EConfigComponent.DestructibleItem) is DestructibleItem && SceneItemCaptureController.PhotoCollectionCheck.IsTemplateIdAllowed(creatureDataComp, SceneItemCaptureController.EPhotoCollectionFilterType.Destructible);
 		}
 
-		// Token: 0x0604C4FC RID: 312572 RVA: 0x0141C63C File Offset: 0x0141A83C
+		// Token: 0x0604298A RID: 272778 RVA: 0x013C729C File Offset: 0x013C549C
 		public static SceneItemCaptureController.EPhotoCollectionFilterResult GetTemplateIdFilterStatus(CreatureDataComponent creatureDataComp, SceneItemCaptureController.EPhotoCollectionFilterType type)
 		{
 			if (SceneItemCaptureController.PhotoCollectionCheck.PhotoCollectionCheckMap.Count == 0)
@@ -280,24 +279,24 @@ public class SceneItemCaptureController : ControllerBase
 				return SceneItemCaptureController.EPhotoCollectionFilterResult.Invalid;
 			}
 			int templateId = creatureDataComp.GetTemplateId();
-			if (valueTuple.Item1 != null && valueTuple.Item1.Contains(templateId))
+			if (valueTuple.Item1 != null && Array.IndexOf<int>(valueTuple.Item1, templateId) >= 0)
 			{
 				return SceneItemCaptureController.EPhotoCollectionFilterResult.White;
 			}
-			if (valueTuple.Item2 != null && valueTuple.Item2.Contains(templateId))
+			if (valueTuple.Item2 != null && Array.IndexOf<int>(valueTuple.Item2, templateId) >= 0)
 			{
 				return SceneItemCaptureController.EPhotoCollectionFilterResult.Black;
 			}
 			return SceneItemCaptureController.EPhotoCollectionFilterResult.Invalid;
 		}
 
-		// Token: 0x0604C4FD RID: 312573 RVA: 0x0141C6FC File Offset: 0x0141A8FC
+		// Token: 0x0604298B RID: 272779 RVA: 0x013C7360 File Offset: 0x013C5560
 		public static bool IsTemplateIdAllowed(CreatureDataComponent creatureDataComp, SceneItemCaptureController.EPhotoCollectionFilterType type)
 		{
 			return SceneItemCaptureController.PhotoCollectionCheck.GetTemplateIdFilterStatus(creatureDataComp, type) == SceneItemCaptureController.EPhotoCollectionFilterResult.White;
 		}
 
-		// Token: 0x04030660 RID: 198240
+		// Token: 0x0402BCF7 RID: 179447
 		[Nullable(new byte[]
 		{
 			1,

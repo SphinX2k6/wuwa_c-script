@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004278 RID: 17016
+	// Token: 0x020046D4 RID: 18132
 	public class IVisionSystemQuestDoIdentifyT
 	{
-		// Token: 0x170078C7 RID: 30919
-		// (get) Token: 0x06019302 RID: 103170 RVA: 0x0039E882 File Offset: 0x0039CA82
-		// (set) Token: 0x06019303 RID: 103171 RVA: 0x0039E88A File Offset: 0x0039CA8A
+		// Token: 0x17007EF8 RID: 32504
+		// (get) Token: 0x0601AA6E RID: 109166 RVA: 0x003C9F5A File Offset: 0x003C815A
+		// (set) Token: 0x0601AA6F RID: 109167 RVA: 0x003C9F62 File Offset: 0x003C8162
 		public EVisionSystemQuestType Type { get; set; }
 
-		// Token: 0x06019304 RID: 103172 RVA: 0x0039E893 File Offset: 0x0039CA93
+		// Token: 0x0601AA70 RID: 109168 RVA: 0x003C9F6B File Offset: 0x003C816B
 		public IVisionSystemQuestDoIdentifyT()
 		{
 			this.Type = EVisionSystemQuestType.HasVisionGetTargetLevel;

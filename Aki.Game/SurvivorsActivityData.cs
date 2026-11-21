@@ -6,12 +6,12 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02002AB8 RID: 10936
+// Token: 0x02002034 RID: 8244
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsActivityData : ActivityBaseData
 {
-	// Token: 0x06016C50 RID: 93264 RVA: 0x005C7AD8 File Offset: 0x005C5CD8
+	// Token: 0x06014681 RID: 83585 RVA: 0x005F462C File Offset: 0x005F282C
 	protected override void OnInit(ActivityData data)
 	{
 		SurvivorsActivityConfig? survivorsActivityConfigByActivityId = SurvivorsRogueConfig.Instance.GetSurvivorsActivityConfigByActivityId(base.Id);
@@ -28,7 +28,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		this.InitTalentTree();
 	}
 
-	// Token: 0x06016C51 RID: 93265 RVA: 0x005C7B3C File Offset: 0x005C5D3C
+	// Token: 0x06014682 RID: 83586 RVA: 0x005F4690 File Offset: 0x005F2890
 	protected override void PhraseEx(ActivityData data)
 	{
 		if (this.CheckIfInShowTime())
@@ -73,19 +73,19 @@ public class SurvivorsActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06016C52 RID: 93266 RVA: 0x005C7D70 File Offset: 0x005C5F70
+	// Token: 0x06014683 RID: 83587 RVA: 0x005F48C4 File Offset: 0x005F2AC4
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.GetActivityRedDotState();
 	}
 
-	// Token: 0x06016C53 RID: 93267 RVA: 0x005C7D78 File Offset: 0x005C5F78
+	// Token: 0x06014684 RID: 83588 RVA: 0x005F48CC File Offset: 0x005F2ACC
 	public bool GetActivityRedDotState()
 	{
 		return this.GetActivityUnlockRedDotState() || this.GetRewardRedDotState() || this.GetLevelUnlockRedDotState();
 	}
 
-	// Token: 0x06016C54 RID: 93268 RVA: 0x005C7D94 File Offset: 0x005C5F94
+	// Token: 0x06014685 RID: 83589 RVA: 0x005F48E8 File Offset: 0x005F2AE8
 	public bool GetActivityUnlockRedDotState()
 	{
 		foreach (SurvivorsChallengeInfo survivorsChallengeInfo in this.LevelMap.Values)
@@ -99,7 +99,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 0, 0, 0) == 0;
 	}
 
-	// Token: 0x06016C55 RID: 93269 RVA: 0x005C7E14 File Offset: 0x005C6014
+	// Token: 0x06014686 RID: 83590 RVA: 0x005F4968 File Offset: 0x005F2B68
 	public bool SaveCacheState(ESurvivorsActivitySaveFlags saveFlag, int key1, int key2 = 0, int saveValue = 1)
 	{
 		if (ActivityModel.Instance.GetActivityCacheData(base.Id, 0, (int)saveFlag, key1, key2) == saveValue)
@@ -110,13 +110,13 @@ public class SurvivorsActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06016C56 RID: 93270 RVA: 0x005C7E48 File Offset: 0x005C6048
+	// Token: 0x06014687 RID: 83591 RVA: 0x005F499C File Offset: 0x005F2B9C
 	public void RefreshActivityRedDot()
 	{
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06016C57 RID: 93271 RVA: 0x005C7E60 File Offset: 0x005C6060
+	// Token: 0x06014688 RID: 83592 RVA: 0x005F49B4 File Offset: 0x005F2BB4
 	public void OnQuestStateChange(int questId, QuestState state)
 	{
 		int[] preShowGuideQuestArray = this.LocalConfig.Value.GetPreShowGuideQuestArray();
@@ -140,9 +140,9 @@ public class SurvivorsActivityData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x17001E4D RID: 7757
-	// (get) Token: 0x06016C58 RID: 93272 RVA: 0x005C7EBA File Offset: 0x005C60BA
-	// (set) Token: 0x06016C59 RID: 93273 RVA: 0x005C7ED4 File Offset: 0x005C60D4
+	// Token: 0x17001EA5 RID: 7845
+	// (get) Token: 0x06014689 RID: 83593 RVA: 0x005F4A0E File Offset: 0x005F2C0E
+	// (set) Token: 0x0601468A RID: 83594 RVA: 0x005F4A28 File Offset: 0x005F2C28
 	public bool NotTipsEnterInst
 	{
 		get
@@ -156,7 +156,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06016C5A RID: 93274 RVA: 0x005C7EF4 File Offset: 0x005C60F4
+	// Token: 0x0601468B RID: 83595 RVA: 0x005F4A48 File Offset: 0x005F2C48
 	private void InitRewardTaskData()
 	{
 		foreach (SurvivorsTask survivorsTask in SurvivorsRogueConfig.Instance.GetSurvivorsTaskByActId(this.ActId))
@@ -165,7 +165,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06016C5B RID: 93275 RVA: 0x005C7F54 File Offset: 0x005C6154
+	// Token: 0x0601468C RID: 83596 RVA: 0x005F4AA8 File Offset: 0x005F2CA8
 	public void RefreshRewardTaskData(ActivityTask task)
 	{
 		global::ActivityTaskData activityTaskData;
@@ -182,7 +182,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		activityTaskData2.Refresh(task, null);
 	}
 
-	// Token: 0x06016C5C RID: 93276 RVA: 0x005C7F94 File Offset: 0x005C6194
+	// Token: 0x0601468D RID: 83597 RVA: 0x005F4AE8 File Offset: 0x005F2CE8
 	private global::ActivityTaskData CreateRewardTaskData(int taskId)
 	{
 		global::ActivityTaskData activityTaskData = new global::ActivityTaskData();
@@ -201,13 +201,13 @@ public class SurvivorsActivityData : ActivityBaseData
 		return activityTaskData;
 	}
 
-	// Token: 0x06016C5D RID: 93277 RVA: 0x005C8016 File Offset: 0x005C6216
+	// Token: 0x0601468E RID: 83598 RVA: 0x005F4B6A File Offset: 0x005F2D6A
 	public void SetRewardTaskDataDone(int taskId)
 	{
 		this.RewardTaskMap[taskId].Status = EActivityTaskState.FinishedAndClaimed;
 	}
 
-	// Token: 0x06016C5E RID: 93278 RVA: 0x005C802C File Offset: 0x005C622C
+	// Token: 0x0601468F RID: 83599 RVA: 0x005F4B80 File Offset: 0x005F2D80
 	public int GetFinishedRewardTaskCount()
 	{
 		int num = 0;
@@ -224,7 +224,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06016C5F RID: 93279 RVA: 0x005C808C File Offset: 0x005C628C
+	// Token: 0x06014690 RID: 83600 RVA: 0x005F4BE0 File Offset: 0x005F2DE0
 	public List<global::ActivityTaskData> GetRewardTaskDataListByTypeId(int typeId)
 	{
 		List<global::ActivityTaskData> list = new List<global::ActivityTaskData>();
@@ -248,7 +248,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06016C60 RID: 93280 RVA: 0x005C8124 File Offset: 0x005C6324
+	// Token: 0x06014691 RID: 83601 RVA: 0x005F4C78 File Offset: 0x005F2E78
 	public bool GetTypeRedDotState(int typeId)
 	{
 		List<int> list;
@@ -266,7 +266,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06016C61 RID: 93281 RVA: 0x005C8198 File Offset: 0x005C6398
+	// Token: 0x06014692 RID: 83602 RVA: 0x005F4CEC File Offset: 0x005F2EEC
 	public bool GetRewardRedDotState()
 	{
 		if (this.GetAllAvailableGetMilestoneRewardIds().Count > 0)
@@ -286,7 +286,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06016C62 RID: 93282 RVA: 0x005C8208 File Offset: 0x005C6408
+	// Token: 0x06014693 RID: 83603 RVA: 0x005F4D5C File Offset: 0x005F2F5C
 	private static int SortTaskData(global::ActivityTaskData a, global::ActivityTaskData b)
 	{
 		if (a.Status != b.Status)
@@ -302,7 +302,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return survivorsTask.Value.SortId - survivorsTask2.Value.SortId;
 	}
 
-	// Token: 0x06016C63 RID: 93283 RVA: 0x005C82A0 File Offset: 0x005C64A0
+	// Token: 0x06014694 RID: 83604 RVA: 0x005F4DF4 File Offset: 0x005F2FF4
 	public List<int> GetAvailableGetTaskRewardIdsByType(int typeId)
 	{
 		List<int> list = new List<int>();
@@ -321,7 +321,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06016C64 RID: 93284 RVA: 0x005C831C File Offset: 0x005C651C
+	// Token: 0x06014695 RID: 83605 RVA: 0x005F4E70 File Offset: 0x005F3070
 	private void InitMilestoneReward()
 	{
 		this.MilestoneItemId = SurvivorsRogueConfig.Instance.GetSurvivorsActivityConfigByActivityId(base.Id).Value.ScoreItemId;
@@ -339,7 +339,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		this.MilestoneRewardMaxCount = num;
 	}
 
-	// Token: 0x06016C65 RID: 93285 RVA: 0x005C83F4 File Offset: 0x005C65F4
+	// Token: 0x06014696 RID: 83606 RVA: 0x005F4F48 File Offset: 0x005F3148
 	public void RefreshGotMilestoneReward(int milestoneRewardId)
 	{
 		SurvivorsMilestoneData survivorsMilestoneData;
@@ -350,13 +350,13 @@ public class SurvivorsActivityData : ActivityBaseData
 		survivorsMilestoneData.IsGot = true;
 	}
 
-	// Token: 0x06016C66 RID: 93286 RVA: 0x005C8419 File Offset: 0x005C6619
+	// Token: 0x06014697 RID: 83607 RVA: 0x005F4F6D File Offset: 0x005F316D
 	public int GetMilestoneItemCount()
 	{
 		return InventoryModel.Instance.GetItemCountByConfigId(this.MilestoneItemId, 0);
 	}
 
-	// Token: 0x06016C67 RID: 93287 RVA: 0x005C842C File Offset: 0x005C662C
+	// Token: 0x06014698 RID: 83608 RVA: 0x005F4F80 File Offset: 0x005F3180
 	public List<SurvivorsMilestoneData> GetAllMilestoneReward()
 	{
 		List<SurvivorsMilestoneData> list = new List<SurvivorsMilestoneData>(this.MilestoneRewardMap.Values);
@@ -364,7 +364,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06016C68 RID: 93288 RVA: 0x005C8464 File Offset: 0x005C6664
+	// Token: 0x06014699 RID: 83609 RVA: 0x005F4FB8 File Offset: 0x005F31B8
 	public List<int> GetAllAvailableGetMilestoneRewardIds()
 	{
 		List<int> list = new List<int>();
@@ -380,7 +380,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06016C69 RID: 93289 RVA: 0x005C84E0 File Offset: 0x005C66E0
+	// Token: 0x0601469A RID: 83610 RVA: 0x005F5034 File Offset: 0x005F3234
 	public List<int> GetAllLevelId()
 	{
 		List<int> list = new List<int>(this.LevelMap.Keys);
@@ -388,7 +388,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06016C6A RID: 93290 RVA: 0x005C8518 File Offset: 0x005C6718
+	// Token: 0x0601469B RID: 83611 RVA: 0x005F506C File Offset: 0x005F326C
 	[NullableContext(2)]
 	public ISurvivorsLevelInfo GetCurrentLevelInfoByLevelId(int levelId)
 	{
@@ -411,13 +411,13 @@ public class SurvivorsActivityData : ActivityBaseData
 		};
 	}
 
-	// Token: 0x06016C6B RID: 93291 RVA: 0x005C8587 File Offset: 0x005C6787
+	// Token: 0x0601469C RID: 83612 RVA: 0x005F50DB File Offset: 0x005F32DB
 	public bool IsEndlessMode(int levelId)
 	{
 		return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 3, levelId, 0) == 1;
 	}
 
-	// Token: 0x06016C6C RID: 93292 RVA: 0x005C85A0 File Offset: 0x005C67A0
+	// Token: 0x0601469D RID: 83613 RVA: 0x005F50F4 File Offset: 0x005F32F4
 	public bool GetLevelUnlockRedDotState()
 	{
 		if (!base.GetPreGuideQuestFinishState())
@@ -434,7 +434,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06016C6D RID: 93293 RVA: 0x005C860C File Offset: 0x005C680C
+	// Token: 0x0601469E RID: 83614 RVA: 0x005F5160 File Offset: 0x005F3360
 	private bool GetLevelNewUnlock(SurvivorsChallengeInfo levelInfo)
 	{
 		ModeInfo normalModeInfos = levelInfo.NormalModeInfos;
@@ -446,7 +446,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return infiniteModeInfos != null && this.GetLevelUnlockState(levelInfo.LevelId, true) && infiniteModeInfos.KillMonsterCount == 0 && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 1, levelInfo.LevelId, 1) == 0;
 	}
 
-	// Token: 0x06016C6E RID: 93294 RVA: 0x005C8698 File Offset: 0x005C6898
+	// Token: 0x0601469F RID: 83615 RVA: 0x005F51EC File Offset: 0x005F33EC
 	public bool TryRemoveLevelNewUnlock(int levelId, bool isEndless)
 	{
 		SurvivorsChallengeInfo survivorsChallengeInfo;
@@ -468,7 +468,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06016C6F RID: 93295 RVA: 0x005C86EC File Offset: 0x005C68EC
+	// Token: 0x060146A0 RID: 83616 RVA: 0x005F5240 File Offset: 0x005F3440
 	public bool TryRemoveLevelNewFinished(int levelId)
 	{
 		SurvivorsChallengeInfo survivorsChallengeInfo;
@@ -480,7 +480,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return normalModeInfos != null && normalModeInfos.IsFinish && !this.SaveCacheState(ESurvivorsActivitySaveFlags.LevelFinishedCheck, levelId, 0, 1);
 	}
 
-	// Token: 0x06016C70 RID: 93296 RVA: 0x005C8730 File Offset: 0x005C6930
+	// Token: 0x060146A1 RID: 83617 RVA: 0x005F5284 File Offset: 0x005F3484
 	public bool IsEndlessFirstOpenCheck()
 	{
 		bool flag = false;
@@ -495,7 +495,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return flag && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 4, 0, 0) == 0;
 	}
 
-	// Token: 0x06016C71 RID: 93297 RVA: 0x005C87B4 File Offset: 0x005C69B4
+	// Token: 0x060146A2 RID: 83618 RVA: 0x005F5308 File Offset: 0x005F3508
 	[NullableContext(2)]
 	public string GetLevelUnlockRemainTime(int levelId)
 	{
@@ -512,14 +512,14 @@ public class SurvivorsActivityData : ActivityBaseData
 		return TimeUtil.Instance.GetRemainTimeDataFormat3((double)openTime - TimeUtil.Instance.GetServerTime()).CountDownText;
 	}
 
-	// Token: 0x06016C72 RID: 93298 RVA: 0x005C8808 File Offset: 0x005C6A08
+	// Token: 0x060146A3 RID: 83619 RVA: 0x005F535C File Offset: 0x005F355C
 	public bool GetLevelTimeUnlockState(int levelId)
 	{
 		SurvivorsChallengeInfo survivorsChallengeInfo;
 		return this.LevelMap.TryGetValue(levelId, out survivorsChallengeInfo) && (double)survivorsChallengeInfo.OpenTime <= TimeUtil.Instance.GetServerTime();
 	}
 
-	// Token: 0x06016C73 RID: 93299 RVA: 0x005C8840 File Offset: 0x005C6A40
+	// Token: 0x060146A4 RID: 83620 RVA: 0x005F5394 File Offset: 0x005F3594
 	public bool GetLevelUnlockState(int levelId, bool isInfinite)
 	{
 		SurvivorsChallengeInfo survivorsChallengeInfo;
@@ -539,7 +539,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return isUnlock && (double)survivorsChallengeInfo.OpenTime <= TimeUtil.Instance.GetServerTime();
 	}
 
-	// Token: 0x06016C74 RID: 93300 RVA: 0x005C88A4 File Offset: 0x005C6AA4
+	// Token: 0x060146A5 RID: 83621 RVA: 0x005F53F8 File Offset: 0x005F35F8
 	public int GetFocusLevelId()
 	{
 		List<int> allLevelId = this.GetAllLevelId();
@@ -566,7 +566,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06016C75 RID: 93301 RVA: 0x005C8948 File Offset: 0x005C6B48
+	// Token: 0x060146A6 RID: 83622 RVA: 0x005F549C File Offset: 0x005F369C
 	public ESurvivorsLevelDiff GetCurrentUnlockDiffId()
 	{
 		int[] areaBoundLevelIdArray = SurvivorsRogueConfig.Instance.GetSurvivorsActivityConfigByActivityId(base.Id).Value.GetAreaBoundLevelIdArray();
@@ -584,8 +584,8 @@ public class SurvivorsActivityData : ActivityBaseData
 		return esurvivorsLevelDiff;
 	}
 
-	// Token: 0x17001E4E RID: 7758
-	// (get) Token: 0x06016C76 RID: 93302 RVA: 0x005C89C0 File Offset: 0x005C6BC0
+	// Token: 0x17001EA6 RID: 7846
+	// (get) Token: 0x060146A7 RID: 83623 RVA: 0x005F5514 File Offset: 0x005F3714
 	public List<SurvivorsTalentAreaData> AreaDataList
 	{
 		get
@@ -604,7 +604,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06016C77 RID: 93303 RVA: 0x005C8A2C File Offset: 0x005C6C2C
+	// Token: 0x060146A8 RID: 83624 RVA: 0x005F5580 File Offset: 0x005F3780
 	public bool GetTalentTreeRed()
 	{
 		bool result = false;
@@ -624,7 +624,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06016C78 RID: 93304 RVA: 0x005C8AAC File Offset: 0x005C6CAC
+	// Token: 0x060146A9 RID: 83625 RVA: 0x005F5600 File Offset: 0x005F3800
 	[NullableContext(2)]
 	public SurvivorsTalentNode GetTalentNodeById(int nodeId)
 	{
@@ -633,7 +633,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06016C79 RID: 93305 RVA: 0x005C8ACC File Offset: 0x005C6CCC
+	// Token: 0x060146AA RID: 83626 RVA: 0x005F5620 File Offset: 0x005F3820
 	[NullableContext(2)]
 	public SurvivorsTalentNode GetFirstTalentNode()
 	{
@@ -649,7 +649,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06016C7A RID: 93306 RVA: 0x005C8B2C File Offset: 0x005C6D2C
+	// Token: 0x060146AB RID: 83627 RVA: 0x005F5680 File Offset: 0x005F3880
 	public void RefreshTalentTreeNode(int nodeId, int status)
 	{
 		SurvivorsTalentNode talentNodeById = this.GetTalentNodeById(nodeId);
@@ -659,7 +659,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06016C7B RID: 93307 RVA: 0x005C8B4C File Offset: 0x005C6D4C
+	// Token: 0x060146AC RID: 83628 RVA: 0x005F56A0 File Offset: 0x005F38A0
 	public bool IsPreNodeUpgraded(SurvivorsTalentNode node)
 	{
 		bool flag = false;
@@ -688,7 +688,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return flag;
 	}
 
-	// Token: 0x06016C7C RID: 93308 RVA: 0x005C8BB8 File Offset: 0x005C6DB8
+	// Token: 0x060146AD RID: 83629 RVA: 0x005F570C File Offset: 0x005F390C
 	public bool IsEnoughUpgradeNode(SurvivorsTalentNode node)
 	{
 		SurvivorsTalentEffect? talentTreeEffect = SurvivorsRogueConfig.Instance.GetTalentTreeEffect(node.EffectId);
@@ -714,7 +714,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06016C7D RID: 93309 RVA: 0x005C8C70 File Offset: 0x005C6E70
+	// Token: 0x060146AE RID: 83630 RVA: 0x005F57C4 File Offset: 0x005F39C4
 	public void CheckCurrentTalentTreeNode()
 	{
 		SurvivorsTalentNode survivorsTalentNode = null;
@@ -753,7 +753,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06016C7E RID: 93310 RVA: 0x005C8D68 File Offset: 0x005C6F68
+	// Token: 0x060146AF RID: 83631 RVA: 0x005F58BC File Offset: 0x005F3ABC
 	private void InitTalentTree()
 	{
 		this.TalentNodeMap.Clear();
@@ -779,7 +779,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06016C7F RID: 93311 RVA: 0x005C8E90 File Offset: 0x005C7090
+	// Token: 0x060146B0 RID: 83632 RVA: 0x005F59E4 File Offset: 0x005F3BE4
 	private void InitRole()
 	{
 		this.RoleMap.Clear();
@@ -789,7 +789,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06016C80 RID: 93312 RVA: 0x005C8F00 File Offset: 0x005C7100
+	// Token: 0x060146B1 RID: 83633 RVA: 0x005F5A54 File Offset: 0x005F3C54
 	private void InitWeapon()
 	{
 		this.WeaponMap.Clear();
@@ -799,7 +799,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06016C81 RID: 93313 RVA: 0x005C8F70 File Offset: 0x005C7170
+	// Token: 0x060146B2 RID: 83634 RVA: 0x005F5AC4 File Offset: 0x005F3CC4
 	private void InitItem()
 	{
 		this.ItemMap.Clear();
@@ -809,7 +809,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06016C82 RID: 93314 RVA: 0x005C8FE0 File Offset: 0x005C71E0
+	// Token: 0x060146B3 RID: 83635 RVA: 0x005F5B34 File Offset: 0x005F3D34
 	public List<int> GetShowRoleList()
 	{
 		List<int> list = new List<int>();
@@ -846,7 +846,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06016C83 RID: 93315 RVA: 0x005C905C File Offset: 0x005C725C
+	// Token: 0x060146B4 RID: 83636 RVA: 0x005F5BB0 File Offset: 0x005F3DB0
 	public bool IsRoleIdCanShow(int survivorsRoleId)
 	{
 		Aki.Config.SurvivorsRole? survivorsRole = SurvivorsRogueConfig.Instance.GetSurvivorsRole(survivorsRoleId);
@@ -867,7 +867,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return !RoleModel.Instance.IsMainRole(roleId2) || RoleConfig.Instance.GetTrialRoleConfig(trialRoleId).Value.Gender == (int)playerGender;
 	}
 
-	// Token: 0x06016C84 RID: 93316 RVA: 0x005C9120 File Offset: 0x005C7320
+	// Token: 0x060146B5 RID: 83637 RVA: 0x005F5C74 File Offset: 0x005F3E74
 	public List<int> GetAllNeedPopupWeaponId()
 	{
 		List<int> list = new List<int>();
@@ -882,7 +882,7 @@ public class SurvivorsActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06016C85 RID: 93317 RVA: 0x005C9198 File Offset: 0x005C7398
+	// Token: 0x060146B6 RID: 83638 RVA: 0x005F5CEC File Offset: 0x005F3EEC
 	public int GetAllItemUnlockCount()
 	{
 		int num = 0;
@@ -916,57 +916,57 @@ public class SurvivorsActivityData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06016C86 RID: 93318 RVA: 0x005C9284 File Offset: 0x005C7484
+	// Token: 0x060146B7 RID: 83639 RVA: 0x005F5DD8 File Offset: 0x005F3FD8
 	public int GetAllItemCount()
 	{
 		return 0 + this.GetShowRoleList().Count + this.WeaponMap.Count + this.ItemMap.Count;
 	}
 
-	// Token: 0x0400A914 RID: 43284
+	// Token: 0x0400AD1A RID: 44314
 	public int ActId;
 
-	// Token: 0x0400A915 RID: 43285
+	// Token: 0x0400AD1B RID: 44315
 	public Dictionary<int, global::ActivityTaskData> RewardTaskMap = new Dictionary<int, global::ActivityTaskData>();
 
-	// Token: 0x0400A916 RID: 43286
+	// Token: 0x0400AD1C RID: 44316
 	public Dictionary<int, List<int>> RewardType2TaskIdList = new Dictionary<int, List<int>>();
 
-	// Token: 0x0400A917 RID: 43287
+	// Token: 0x0400AD1D RID: 44317
 	private readonly Dictionary<int, SurvivorsMilestoneData> MilestoneRewardMap = new Dictionary<int, SurvivorsMilestoneData>();
 
-	// Token: 0x0400A918 RID: 43288
+	// Token: 0x0400AD1E RID: 44318
 	public int MilestoneRewardMaxCount;
 
-	// Token: 0x0400A919 RID: 43289
+	// Token: 0x0400AD1F RID: 44319
 	public int MilestoneItemId;
 
-	// Token: 0x0400A91A RID: 43290
+	// Token: 0x0400AD20 RID: 44320
 	public readonly Dictionary<int, SurvivorsChallengeInfo> LevelMap = new Dictionary<int, SurvivorsChallengeInfo>();
 
-	// Token: 0x0400A91B RID: 43291
+	// Token: 0x0400AD21 RID: 44321
 	public Dictionary<int, SurvivorsTalentNode> TalentNodeMap = new Dictionary<int, SurvivorsTalentNode>();
 
-	// Token: 0x0400A91C RID: 43292
+	// Token: 0x0400AD22 RID: 44322
 	public Dictionary<int, SurvivorsTalentAreaData> TalentAreaMap = new Dictionary<int, SurvivorsTalentAreaData>();
 
-	// Token: 0x0400A91D RID: 43293
+	// Token: 0x0400AD23 RID: 44323
 	[Nullable(2)]
 	public SurvivorsTalentNode CurrentSelectNode;
 
-	// Token: 0x0400A91E RID: 43294
+	// Token: 0x0400AD24 RID: 44324
 	public Dictionary<int, bool> RoleMap = new Dictionary<int, bool>();
 
-	// Token: 0x0400A91F RID: 43295
+	// Token: 0x0400AD25 RID: 44325
 	public Dictionary<int, bool> WeaponMap = new Dictionary<int, bool>();
 
-	// Token: 0x0400A920 RID: 43296
+	// Token: 0x0400AD26 RID: 44326
 	public Dictionary<int, bool> ItemMap = new Dictionary<int, bool>();
 
-	// Token: 0x020090EB RID: 37099
+	// Token: 0x0200832F RID: 33583
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402EF25 RID: 192293
+		// Token: 0x0402A62B RID: 173611
 		[Nullable(new byte[]
 		{
 			0,

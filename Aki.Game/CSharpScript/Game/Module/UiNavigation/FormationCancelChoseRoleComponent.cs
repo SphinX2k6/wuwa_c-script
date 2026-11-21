@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200495F RID: 18783
+	// Token: 0x020038D7 RID: 14551
 	public class FormationCancelChoseRoleComponent : HotKeyComponent
 	{
-		// Token: 0x06031021 RID: 200737 RVA: 0x00B61102 File Offset: 0x00B5F302
+		// Token: 0x06025B51 RID: 154449 RVA: 0x00A9BFE2 File Offset: 0x00A9A1E2
 		public FormationCancelChoseRoleComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 			FormationViewDragController.AddCustomShieldHotKeyComponentSetData(this.HotKeyMapIndex);
 		}
 
-		// Token: 0x06031022 RID: 200738 RVA: 0x00B61116 File Offset: 0x00B5F316
+		// Token: 0x06025B52 RID: 154450 RVA: 0x00A9BFF6 File Offset: 0x00A9A1F6
 		protected override void OnPress(HotKeyMap config)
 		{
 			if (FormationViewDragController.GamePadSelectModel)
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06031023 RID: 200739 RVA: 0x00B6112C File Offset: 0x00B5F32C
+		// Token: 0x06025B53 RID: 154451 RVA: 0x00A9C00C File Offset: 0x00A9A20C
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

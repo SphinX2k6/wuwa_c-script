@@ -4,24 +4,24 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000170 RID: 368
+	// Token: 0x020000B9 RID: 185
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/AIModule.EArithmeticKeyOperation")]
 	public enum EArithmeticKeyOperation
 	{
-		// Token: 0x04000651 RID: 1617
+		// Token: 0x04000299 RID: 665
 		Equal,
-		// Token: 0x04000652 RID: 1618
+		// Token: 0x0400029A RID: 666
 		NotEqual,
-		// Token: 0x04000653 RID: 1619
+		// Token: 0x0400029B RID: 667
 		Less,
-		// Token: 0x04000654 RID: 1620
+		// Token: 0x0400029C RID: 668
 		LessOrEqual,
-		// Token: 0x04000655 RID: 1621
+		// Token: 0x0400029D RID: 669
 		Greater,
-		// Token: 0x04000656 RID: 1622
+		// Token: 0x0400029E RID: 670
 		GreaterOrEqual,
-		// Token: 0x04000657 RID: 1623
+		// Token: 0x0400029F RID: 671
 		EArithmeticKeyOperation_MAX
 	}
 }

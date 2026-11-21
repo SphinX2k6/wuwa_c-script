@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001391 RID: 5009
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014E2 RID: 5346
 	public class ICheckMonsterBattleAttribute : ITargetBattleAttribute
 	{
-		// Token: 0x0600728C RID: 29324 RVA: 0x00113626 File Offset: 0x00111826
+		// Token: 0x06007932 RID: 31026 RVA: 0x00121CAA File Offset: 0x0011FEAA
 		public static ICheckMonsterBattleAttribute Create(ICheckMonsterBattleAttribute? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700253D RID: 9533
-		// (get) Token: 0x0600728D RID: 29325 RVA: 0x00113645 File Offset: 0x00111845
+		// Token: 0x17002710 RID: 10000
+		// (get) Token: 0x06007933 RID: 31027 RVA: 0x00121CC9 File Offset: 0x0011FEC9
 		public override ETargetBattleAttribute Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700253E RID: 9534
-		// (get) Token: 0x0600728E RID: 29326 RVA: 0x00113652 File Offset: 0x00111852
+		// Token: 0x17002711 RID: 10001
+		// (get) Token: 0x06007934 RID: 31028 RVA: 0x00121CD6 File Offset: 0x0011FED6
 		public virtual IHealthAttributeToTarget Option
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700253F RID: 9535
-		// (get) Token: 0x0600728F RID: 29327 RVA: 0x00113688 File Offset: 0x00111888
+		// Token: 0x17002712 RID: 10002
+		// (get) Token: 0x06007935 RID: 31029 RVA: 0x00121D0C File Offset: 0x0011FF0C
 		public virtual List<int> EntityIds
 		{
 			get
@@ -70,20 +68,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004231 RID: 16945
+		// Token: 0x040045B2 RID: 17842
 		private ICheckMonsterBattleAttribute Instance;
 
-		// Token: 0x04004232 RID: 16946
+		// Token: 0x040045B3 RID: 17843
 		[Nullable(2)]
 		private IHealthAttributeToTarget _OptionCache;
 
-		// Token: 0x04004233 RID: 16947
+		// Token: 0x040045B4 RID: 17844
 		private bool _OptionInited;
 
-		// Token: 0x04004234 RID: 16948
+		// Token: 0x040045B5 RID: 17845
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04004235 RID: 16949
+		// Token: 0x040045B6 RID: 17846
 		private bool _EntityIdsInited;
 	}
 }

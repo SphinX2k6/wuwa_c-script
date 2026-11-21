@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D8C RID: 3468
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E88 RID: 3720
 	public class IGroupDestroyListenConfig
 	{
-		// Token: 0x06004EDB RID: 20187 RVA: 0x000C37FE File Offset: 0x000C19FE
+		// Token: 0x06005400 RID: 21504 RVA: 0x000CF04E File Offset: 0x000CD24E
 		public static IGroupDestroyListenConfig Create(IGroupDestroyListenConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001980 RID: 6528
-		// (get) Token: 0x06004EDC RID: 20188 RVA: 0x000C381D File Offset: 0x000C1A1D
+		// Token: 0x17001AEB RID: 6891
+		// (get) Token: 0x06005401 RID: 21505 RVA: 0x000CF06D File Offset: 0x000CD26D
 		public virtual ETemplateEntityGroupType GroupType
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001981 RID: 6529
-		// (get) Token: 0x06004EDD RID: 20189 RVA: 0x000C382C File Offset: 0x000C1A2C
+		// Token: 0x17001AEC RID: 6892
+		// (get) Token: 0x06005402 RID: 21506 RVA: 0x000CF07C File Offset: 0x000CD27C
 		public virtual List<ActionInfo> OnTriggerActions
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001982 RID: 6530
-		// (get) Token: 0x06004EDE RID: 20190 RVA: 0x000C3895 File Offset: 0x000C1A95
+		// Token: 0x17001AED RID: 6893
+		// (get) Token: 0x06005403 RID: 21507 RVA: 0x000CF0E5 File Offset: 0x000CD2E5
 		[Nullable(2)]
 		public virtual IChangeTemplateInstanceStateConfig ChangeInstanceStateConfig
 		{
@@ -73,20 +71,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D47 RID: 11591
+		// Token: 0x0400300D RID: 12301
 		private IGroupDestroyListenConfig Instance;
 
-		// Token: 0x04002D48 RID: 11592
+		// Token: 0x0400300E RID: 12302
 		private List<ActionInfo> _OnTriggerActionsCache;
 
-		// Token: 0x04002D49 RID: 11593
+		// Token: 0x0400300F RID: 12303
 		private bool _OnTriggerActionsInited;
 
-		// Token: 0x04002D4A RID: 11594
+		// Token: 0x04003010 RID: 12304
 		[Nullable(2)]
 		private IChangeTemplateInstanceStateConfig _ChangeInstanceStateConfigCache;
 
-		// Token: 0x04002D4B RID: 11595
+		// Token: 0x04003011 RID: 12305
 		private bool _ChangeInstanceStateConfigInited;
 	}
 }

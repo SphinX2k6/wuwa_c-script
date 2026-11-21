@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Ui;
 
-// Token: 0x0200291F RID: 10527
+// Token: 0x02001E9A RID: 7834
 [NullableContext(1)]
 [Nullable(0)]
 public class RouletteComponentMain : RouletteComponentBase
 {
-	// Token: 0x06015B8B RID: 88971 RVA: 0x0057AB0A File Offset: 0x00578D0A
+	// Token: 0x0601358F RID: 79247 RVA: 0x005A5A86 File Offset: 0x005A3C86
 	public void RegisterViewProxy(RouletteMainViewProxyBase viewProxy)
 	{
 		this.ViewProxy = viewProxy;
 	}
 
-	// Token: 0x06015B8C RID: 88972 RVA: 0x0057AB14 File Offset: 0x00578D14
+	// Token: 0x06013590 RID: 79248 RVA: 0x005A5A90 File Offset: 0x005A3C90
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -25,7 +25,7 @@ public class RouletteComponentMain : RouletteComponentBase
 		}
 	}
 
-	// Token: 0x06015B8D RID: 88973 RVA: 0x0057AB48 File Offset: 0x00578D48
+	// Token: 0x06013591 RID: 79249 RVA: 0x005A5AC4 File Offset: 0x005A3CC4
 	protected override void GamepadReturnEmptyGrid()
 	{
 		if (this.CurrentEquipGridIndex == this.CurrentGridIndex)
@@ -64,7 +64,7 @@ public class RouletteComponentMain : RouletteComponentBase
 		this.IsEmptyChoose = true;
 	}
 
-	// Token: 0x06015B8E RID: 88974 RVA: 0x0057AC20 File Offset: 0x00578E20
+	// Token: 0x06013592 RID: 79250 RVA: 0x005A5B9C File Offset: 0x005A3D9C
 	public void TryEmitCurrentGridSelectOn()
 	{
 		if (!this.CanEmitSelectOnFlag)
@@ -74,7 +74,7 @@ public class RouletteComponentMain : RouletteComponentBase
 		this.OnEmitCurrentGridSelectOn();
 	}
 
-	// Token: 0x06015B8F RID: 88975 RVA: 0x0057AC31 File Offset: 0x00578E31
+	// Token: 0x06013593 RID: 79251 RVA: 0x005A5BAD File Offset: 0x005A3DAD
 	protected void OnEmitCurrentGridSelectOn()
 	{
 		if (this.IsEmitGridSelectOn)
@@ -90,7 +90,7 @@ public class RouletteComponentMain : RouletteComponentBase
 		currentGrid.SelectOnGrid(true);
 	}
 
-	// Token: 0x06015B90 RID: 88976 RVA: 0x0057AC54 File Offset: 0x00578E54
+	// Token: 0x06013594 RID: 79252 RVA: 0x005A5BD0 File Offset: 0x005A3DD0
 	protected override bool IsCurrentEquippedId(RouletteData gridData)
 	{
 		ERouletteGridType gridType = gridData.GridType;
@@ -112,13 +112,13 @@ public class RouletteComponentMain : RouletteComponentBase
 		return false;
 	}
 
-	// Token: 0x06015B91 RID: 88977 RVA: 0x0057AC96 File Offset: 0x00578E96
+	// Token: 0x06013595 RID: 79253 RVA: 0x005A5C12 File Offset: 0x005A3E12
 	protected override int GetGridId(int index, ERouletteGridType gridType)
 	{
 		return this.ViewProxy.GetRouletteGridId(index, gridType);
 	}
 
-	// Token: 0x06015B92 RID: 88978 RVA: 0x0057ACA5 File Offset: 0x00578EA5
+	// Token: 0x06013596 RID: 79254 RVA: 0x005A5C21 File Offset: 0x005A3E21
 	protected override void SetCurrentToggleState(bool bSelect)
 	{
 		RouletteGridBase currentGrid = base.GetCurrentGrid();
@@ -132,7 +132,7 @@ public class RouletteComponentMain : RouletteComponentBase
 		}
 	}
 
-	// Token: 0x06015B93 RID: 88979 RVA: 0x0057ACD0 File Offset: 0x00578ED0
+	// Token: 0x06013597 RID: 79255 RVA: 0x005A5C4C File Offset: 0x005A3E4C
 	protected override void RefreshCurrentShowName()
 	{
 		bool flag = Info.Instance.IsInTouch();
@@ -161,7 +161,7 @@ public class RouletteComponentMain : RouletteComponentBase
 		}
 	}
 
-	// Token: 0x06015B94 RID: 88980 RVA: 0x0057AD34 File Offset: 0x00578F34
+	// Token: 0x06013598 RID: 79256 RVA: 0x005A5CB0 File Offset: 0x005A3EB0
 	protected override void RefreshTips()
 	{
 		bool flag = Info.Instance.IsInTouch();
@@ -173,25 +173,25 @@ public class RouletteComponentMain : RouletteComponentBase
 		this.ViewProxy.RefreshTips();
 	}
 
-	// Token: 0x06015B95 RID: 88981 RVA: 0x0057AD91 File Offset: 0x00578F91
+	// Token: 0x06013599 RID: 79257 RVA: 0x005A5D0D File Offset: 0x005A3F0D
 	[NullableContext(2)]
 	protected virtual string GetRefreshTips(bool isEmpty)
 	{
 		return null;
 	}
 
-	// Token: 0x06015B96 RID: 88982 RVA: 0x0057AD94 File Offset: 0x00578F94
+	// Token: 0x0601359A RID: 79258 RVA: 0x005A5D10 File Offset: 0x005A3F10
 	protected void CloseRouletteMain()
 	{
 		UiManager.Instance.CloseView(EUiViewName.PhantomExploreView, null);
 	}
 
-	// Token: 0x0400A1D2 RID: 41426
+	// Token: 0x0400A5BD RID: 42429
 	private bool CanEmitSelectOnFlag = true;
 
-	// Token: 0x0400A1D3 RID: 41427
+	// Token: 0x0400A5BE RID: 42430
 	private bool IsEmitGridSelectOn;
 
-	// Token: 0x0400A1D4 RID: 41428
+	// Token: 0x0400A5BF RID: 42431
 	protected RouletteMainViewProxyBase ViewProxy;
 }

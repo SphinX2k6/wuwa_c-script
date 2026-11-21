@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BF4 RID: 7156
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DE3 RID: 7651
 	public class IMonsterMoveSplineConfig
 	{
-		// Token: 0x0600993F RID: 39231 RVA: 0x00160BD4 File Offset: 0x0015EDD4
+		// Token: 0x0600A26D RID: 41581 RVA: 0x00173ACC File Offset: 0x00171CCC
 		private IMonsterMoveSplineConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009940 RID: 39232 RVA: 0x00160C0C File Offset: 0x0015EE0C
+		// Token: 0x0600A26E RID: 41582 RVA: 0x00173B04 File Offset: 0x00171D04
 		public static IMonsterMoveSplineConfig Create([Nullable(2)] IMonsterMoveSplineConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009941 RID: 39233 RVA: 0x00160C1F File Offset: 0x0015EE1F
+		// Token: 0x0600A26F RID: 41583 RVA: 0x00173B17 File Offset: 0x00171D17
 		public static IMonsterMoveSplineConfig CreateFromSetValue([Nullable(2)] IMonsterMoveSplineConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,19 +48,20 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009942 RID: 39234 RVA: 0x00160C32 File Offset: 0x0015EE32
+		// Token: 0x0600A270 RID: 41584 RVA: 0x00173B2A File Offset: 0x00171D2A
 		public IMonsterMoveSplineConfig_SetValue ToSetValue()
 		{
 			return new IMonsterMoveSplineConfig_SetValue
 			{
 				TargetEntityId = this.TargetEntityId,
-				SplineEntityId = this.SplineEntityId
+				SplineEntityId = this.SplineEntityId,
+				IsStrict = this.IsStrict
 			};
 		}
 
-		// Token: 0x17003008 RID: 12296
-		// (get) Token: 0x06009943 RID: 39235 RVA: 0x00160C51 File Offset: 0x0015EE51
-		// (set) Token: 0x06009944 RID: 39236 RVA: 0x00160C7C File Offset: 0x0015EE7C
+		// Token: 0x17003270 RID: 12912
+		// (get) Token: 0x0600A271 RID: 41585 RVA: 0x00173B55 File Offset: 0x00171D55
+		// (set) Token: 0x0600A272 RID: 41586 RVA: 0x00173B80 File Offset: 0x00171D80
 		public virtual int TargetEntityId
 		{
 			get
@@ -83,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003009 RID: 12297
-		// (get) Token: 0x06009945 RID: 39237 RVA: 0x00160C8A File Offset: 0x0015EE8A
-		// (set) Token: 0x06009946 RID: 39238 RVA: 0x00160CB5 File Offset: 0x0015EEB5
+		// Token: 0x17003271 RID: 12913
+		// (get) Token: 0x0600A273 RID: 41587 RVA: 0x00173B8E File Offset: 0x00171D8E
+		// (set) Token: 0x0600A274 RID: 41588 RVA: 0x00173BB9 File Offset: 0x00171DB9
 		public virtual int SplineEntityId
 		{
 			get
@@ -106,11 +105,35 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D53 RID: 23891
+		// Token: 0x17003272 RID: 12914
+		// (get) Token: 0x0600A275 RID: 41589 RVA: 0x00173BC8 File Offset: 0x00171DC8
+		// (set) Token: 0x0600A276 RID: 41590 RVA: 0x00173C02 File Offset: 0x00171E02
+		public virtual bool? IsStrict
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.IsStrict;
+				}
+				IMonsterMoveSplineConfig_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.IsStrict;
+			}
+			set
+			{
+				this.GetOrCreatePoco().IsStrict = value;
+			}
+		}
+
+		// Token: 0x04006279 RID: 25209
 		[Nullable(2)]
 		protected IMonsterMoveSplineConfig FbInstance;
 
-		// Token: 0x04005D54 RID: 23892
+		// Token: 0x0400627A RID: 25210
 		[Nullable(2)]
 		protected IMonsterMoveSplineConfig_SetValue PocoInterface;
 	}

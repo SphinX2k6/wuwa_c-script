@@ -5,24 +5,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.SceneCameraRotator
 {
-	// Token: 0x020072E7 RID: 29415
+	// Token: 0x0200646A RID: 25706
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneCameraFollowTargetRotator : SceneCameraRotatorBase
 	{
-		// Token: 0x0604831E RID: 295710 RVA: 0x0128A4A1 File Offset: 0x012886A1
+		// Token: 0x0603E76A RID: 255850 RVA: 0x0122CE4D File Offset: 0x0122B04D
 		public SceneCameraFollowTargetRotator(SceneCameraFollowConfig config)
 		{
 			this.CapturedConfig.DeepCopy(config);
 		}
 
-		// Token: 0x0604831F RID: 295711 RVA: 0x0128A4C0 File Offset: 0x012886C0
+		// Token: 0x0603E76B RID: 255851 RVA: 0x0122CE6C File Offset: 0x0122B06C
 		public override bool IsValid()
 		{
 			return true;
 		}
 
-		// Token: 0x06048320 RID: 295712 RVA: 0x0128A4C4 File Offset: 0x012886C4
+		// Token: 0x0603E76C RID: 255852 RVA: 0x0122CE70 File Offset: 0x0122B070
 		public override void ComputeExpectRotation()
 		{
 			this.HasValidExpectation = false;
@@ -50,12 +50,12 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			this.HasValidExpectation = true;
 		}
 
-		// Token: 0x06048321 RID: 295713 RVA: 0x0128A578 File Offset: 0x01288778
+		// Token: 0x0603E76D RID: 255853 RVA: 0x0122CF24 File Offset: 0x0122B124
 		public override void ApplyRotationLimit()
 		{
 		}
 
-		// Token: 0x06048322 RID: 295714 RVA: 0x0128A57C File Offset: 0x0128877C
+		// Token: 0x0603E76E RID: 255854 RVA: 0x0122CF28 File Offset: 0x0122B128
 		public override void ApplyRotationToCameraActor()
 		{
 			if (!this.HasValidExpectation)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			base.WriteCameraRotation();
 		}
 
-		// Token: 0x06048323 RID: 295715 RVA: 0x0128A5D8 File Offset: 0x012887D8
+		// Token: 0x0603E76F RID: 255855 RVA: 0x0122CF84 File Offset: 0x0122B184
 		[NullableContext(2)]
 		private Vector ResolveTargetPosition()
 		{
@@ -118,10 +118,10 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			}
 		}
 
-		// Token: 0x040261FF RID: 156159
+		// Token: 0x040214EA RID: 136426
 		private readonly SceneCameraFollowConfig CapturedConfig = new SceneCameraFollowConfig();
 
-		// Token: 0x04026200 RID: 156160
+		// Token: 0x040214EB RID: 136427
 		private bool HasValidExpectation;
 	}
 }

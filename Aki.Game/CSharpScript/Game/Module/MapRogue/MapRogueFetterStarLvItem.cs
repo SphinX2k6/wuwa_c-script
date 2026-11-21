@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055DD RID: 21981
+	// Token: 0x020045B3 RID: 17843
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.MapRogue
 	})]
 	public class MapRogueFetterStarLvItem : GridProxyAbstract<IFetterStarLvData>
 	{
-		// Token: 0x06038017 RID: 229399 RVA: 0x00D43C10 File Offset: 0x00D41E10
+		// Token: 0x0602CF15 RID: 184085 RVA: 0x00C91958 File Offset: 0x00C8FB58
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x06038018 RID: 229400 RVA: 0x00D43C4C File Offset: 0x00D41E4C
+		// Token: 0x0602CF16 RID: 184086 RVA: 0x00C91994 File Offset: 0x00C8FB94
 		public override void Refresh(IFetterStarLvData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			base.GetSprite(1).SetUIActive(data.StageLv < data.MaxLv);
 		}
 
-		// Token: 0x0401D6BC RID: 120508
+		// Token: 0x04018147 RID: 98631
 		protected IFetterStarLvData Data;
 	}
 }

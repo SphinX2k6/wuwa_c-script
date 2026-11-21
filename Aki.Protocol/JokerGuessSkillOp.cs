@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015E2 RID: 5602
+	// Token: 0x02001654 RID: 5716
 	public enum JokerGuessSkillOp
 	{
-		// Token: 0x0400BDBD RID: 48573
+		// Token: 0x0400C2B1 RID: 49841
 		[OriginalName("Use")]
 		Use,
-		// Token: 0x0400BDBE RID: 48574
+		// Token: 0x0400C2B2 RID: 49842
 		[OriginalName("GiveUp")]
 		GiveUp
 	}

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DEB RID: 24043
+	// Token: 0x02004DD0 RID: 19920
 	public class SpecialEnergyBarLuhes : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D1F5 RID: 250357 RVA: 0x00EB7508 File Offset: 0x00EB5708
+		// Token: 0x06032184 RID: 205188 RVA: 0x00E08A48 File Offset: 0x00E06C48
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>();
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D1F6 RID: 250358 RVA: 0x00EB7548 File Offset: 0x00EB5748
+		// Token: 0x06032185 RID: 205189 RVA: 0x00E08A88 File Offset: 0x00E06C88
 		protected override void OnInitData()
 		{
 			base.OnInitData();
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ConfigList.Add(BattleUiModel.Instance.SpecialEnergyBarData.GetSpecialEnergyBarInfo(151002));
 		}
 
-		// Token: 0x0603D1F7 RID: 250359 RVA: 0x00EB7580 File Offset: 0x00EB5780
+		// Token: 0x06032186 RID: 205190 RVA: 0x00E08AC0 File Offset: 0x00E06CC0
 		protected override void AddEvents()
 		{
 			base.AddEvents();
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.ListenForTagCountChanged(GameplayTagDefine.EGameplayTagId["角色.R2T1LuhesiMd10011.技能.强化E使用次数"], new BaseTagComponent.TTagChangedCallback(this.OnAdvanceCountChanged));
 		}
 
-		// Token: 0x0603D1F8 RID: 250360 RVA: 0x00EB75D8 File Offset: 0x00EB57D8
+		// Token: 0x06032187 RID: 205191 RVA: 0x00E08B18 File Offset: 0x00E06D18
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarLuhes.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D1F9 RID: 250361 RVA: 0x00EB761C File Offset: 0x00EB581C
+		// Token: 0x06032188 RID: 205192 RVA: 0x00E08B5C File Offset: 0x00E06D5C
 		protected UniTask InitBarItem()
 		{
 			SpecialEnergyBarLuhes.<InitBarItem>d__11 <InitBarItem>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D1FA RID: 250362 RVA: 0x00EB765F File Offset: 0x00EB585F
+		// Token: 0x06032189 RID: 205193 RVA: 0x00E08B9F File Offset: 0x00E06D9F
 		protected override void OnStart()
 		{
 			base.InitTweenAnim(5);
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.InitTweenAnim(8);
 		}
 
-		// Token: 0x0603D1FB RID: 250363 RVA: 0x00EB767D File Offset: 0x00EB587D
+		// Token: 0x0603218A RID: 205194 RVA: 0x00E08BBD File Offset: 0x00E06DBD
 		protected override void OnBeforeShow()
 		{
 			this.EnteredC = false;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdatePoint((tagComponent != null) ? tagComponent.GetTagCount(GameplayTagDefine.EGameplayTagId["角色.R2T1LuhesiMd10011.技能.强化E使用次数"]) : 0, true);
 		}
 
-		// Token: 0x0603D1FC RID: 250364 RVA: 0x00EB76B4 File Offset: 0x00EB58B4
+		// Token: 0x0603218B RID: 205195 RVA: 0x00E08BF4 File Offset: 0x00E06DF4
 		protected override void ClearAllTweenAnim()
 		{
 			BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -87,19 +87,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.ClearAllTweenAnim();
 		}
 
-		// Token: 0x0603D1FD RID: 250365 RVA: 0x00EB76CE File Offset: 0x00EB58CE
+		// Token: 0x0603218C RID: 205196 RVA: 0x00E08C0E File Offset: 0x00E06E0E
 		private void OnStateChanged(int tagId, bool tagExist)
 		{
 			this.RefreshState();
 		}
 
-		// Token: 0x0603D1FE RID: 250366 RVA: 0x00EB76D6 File Offset: 0x00EB58D6
+		// Token: 0x0603218D RID: 205197 RVA: 0x00E08C16 File Offset: 0x00E06E16
 		private void OnAdvanceCountChanged(int count, int tagId, int exactTagId, int oldCount)
 		{
 			this.UpdatePoint(count, false);
 		}
 
-		// Token: 0x0603D1FF RID: 250367 RVA: 0x00EB76E0 File Offset: 0x00EB58E0
+		// Token: 0x0603218E RID: 205198 RVA: 0x00E08C20 File Offset: 0x00E06E20
 		private void SwitchKeyItem()
 		{
 			SpecialEnergyBarLuhesSlot barSlot = this.BarSlot;
@@ -115,14 +115,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barSlot2.SetBarState(this.CurState == SpecialEnergyBarLuhes.EState.Advance);
 		}
 
-		// Token: 0x0603D200 RID: 250368 RVA: 0x00EB7739 File Offset: 0x00EB5939
+		// Token: 0x0603218F RID: 205199 RVA: 0x00E08C79 File Offset: 0x00E06E79
 		private void RefreshState()
 		{
 			this.CurState = (this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["角色.R2T1LuhesiMd10011.状态.超级强化状态"]) ? SpecialEnergyBarLuhes.EState.Advance : SpecialEnergyBarLuhes.EState.Normal);
 			this.SwitchKeyItem();
 		}
 
-		// Token: 0x0603D201 RID: 250369 RVA: 0x00EB7768 File Offset: 0x00EB5968
+		// Token: 0x06032190 RID: 205200 RVA: 0x00E08CA8 File Offset: 0x00E06EA8
 		private void UpdatePoint(int point, bool isStart = false)
 		{
 			if (point == 0)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D202 RID: 250370 RVA: 0x00EB77D4 File Offset: 0x00EB59D4
+		// Token: 0x06032191 RID: 205201 RVA: 0x00E08D14 File Offset: 0x00E06F14
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -175,54 +175,54 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barSlot.Tick(delta);
 		}
 
-		// Token: 0x0401FDC9 RID: 130505
+		// Token: 0x0401A890 RID: 108688
 		private const int ADV_BAR_ID = 151002;
 
-		// Token: 0x0401FDCA RID: 130506
+		// Token: 0x0401A891 RID: 108689
 		[Nullable(2)]
 		private SpecialEnergyBarLuhesSlot BarSlot;
 
-		// Token: 0x0401FDCB RID: 130507
+		// Token: 0x0401A892 RID: 108690
 		private SpecialEnergyBarLuhes.EState CurState;
 
-		// Token: 0x0401FDCC RID: 130508
+		// Token: 0x0401A893 RID: 108691
 		[Nullable(1)]
 		private readonly List<SpecialEnergyBarInfo> ConfigList = new List<SpecialEnergyBarInfo>();
 
-		// Token: 0x0401FDCD RID: 130509
+		// Token: 0x0401A894 RID: 108692
 		private bool EnteredC;
 
-		// Token: 0x0200C11F RID: 49439
+		// Token: 0x0200AB2E RID: 43822
 		private enum EState
 		{
-			// Token: 0x0403A520 RID: 238880
+			// Token: 0x04034F12 RID: 216850
 			Normal,
-			// Token: 0x0403A521 RID: 238881
+			// Token: 0x04034F13 RID: 216851
 			Advance
 		}
 
-		// Token: 0x0200C120 RID: 49440
+		// Token: 0x0200AB2F RID: 43823
 		private enum EChildType
 		{
-			// Token: 0x0403A523 RID: 238883
+			// Token: 0x04034F15 RID: 216853
 			SlotBarItem,
-			// Token: 0x0403A524 RID: 238884
+			// Token: 0x04034F16 RID: 216854
 			PnlState1,
-			// Token: 0x0403A525 RID: 238885
+			// Token: 0x04034F17 RID: 216855
 			PnlState2,
-			// Token: 0x0403A526 RID: 238886
+			// Token: 0x04034F18 RID: 216856
 			PnlState3,
-			// Token: 0x0403A527 RID: 238887
+			// Token: 0x04034F19 RID: 216857
 			Point1,
-			// Token: 0x0403A528 RID: 238888
+			// Token: 0x04034F1A RID: 216858
 			AniDefA,
-			// Token: 0x0403A529 RID: 238889
+			// Token: 0x04034F1B RID: 216859
 			AniC2A,
-			// Token: 0x0403A52A RID: 238890
+			// Token: 0x04034F1C RID: 216860
 			AniA2B,
-			// Token: 0x0403A52B RID: 238891
+			// Token: 0x04034F1D RID: 216861
 			AniB2C,
-			// Token: 0x0403A52C RID: 238892
+			// Token: 0x04034F1E RID: 216862
 			MaxCount
 		}
 	}

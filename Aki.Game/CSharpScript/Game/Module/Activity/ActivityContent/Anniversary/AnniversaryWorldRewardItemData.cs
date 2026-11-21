@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x02006929 RID: 26921
+	// Token: 0x02005879 RID: 22649
 	public class AnniversaryWorldRewardItemData
 	{
-		// Token: 0x04022EFF RID: 143103
+		// Token: 0x0401D75B RID: 120667
 		public int CfgId;
 
-		// Token: 0x04022F00 RID: 143104
+		// Token: 0x0401D75C RID: 120668
 		public EAnniversaryProgressRewardState? State;
 	}
 }

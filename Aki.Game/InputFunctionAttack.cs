@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Character.Input.Enum;
 using AkiClient.Game.Aki.Character.Input.Structures;
 using CSharpScript.Game;
 
-// Token: 0x020030B1 RID: 12465
+// Token: 0x02002609 RID: 9737
 [NullableContext(1)]
 [Nullable(0)]
 public static class InputFunctionAttack
 {
-	// Token: 0x0601AB50 RID: 109392 RVA: 0x00731C2C File Offset: 0x0072FE2C
+	// Token: 0x0601855F RID: 99679 RVA: 0x0075757C File Offset: 0x0075577C
 	[return: Nullable(2)]
 	private static SInputCommand AttackFunction(float time, BP_InputComponent_C bpInputComp)
 	{
@@ -40,14 +40,14 @@ public static class InputFunctionAttack
 		return null;
 	}
 
-	// Token: 0x0601AB51 RID: 109393 RVA: 0x00731C97 File Offset: 0x0072FE97
+	// Token: 0x06018560 RID: 99680 RVA: 0x007575E7 File Offset: 0x007557E7
 	[return: Nullable(2)]
 	public static SInputCommand AttackOnPress(float time, BP_InputComponent_C bpInputComp)
 	{
 		return InputFunctionAttack.AttackFunction(time, bpInputComp);
 	}
 
-	// Token: 0x0601AB52 RID: 109394 RVA: 0x00731CA0 File Offset: 0x0072FEA0
+	// Token: 0x06018561 RID: 99681 RVA: 0x007575F0 File Offset: 0x007557F0
 	[return: Nullable(2)]
 	public static SInputCommand AttackOnRelease(float time, BP_InputComponent_C bpInputComp)
 	{

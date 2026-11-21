@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001AE RID: 430
+	// Token: 0x020001C0 RID: 448
 	public class ConfigCouponById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000A17 RID: 2583 RVA: 0x0009296C File Offset: 0x00090B6C
+		// Token: 0x06000A83 RID: 2691 RVA: 0x000988A4 File Offset: 0x00096AA4
 		static ConfigCouponById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCouponById.CreateStaticDefaultValue), new Action(ConfigCouponById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A18 RID: 2584 RVA: 0x0009298C File Offset: 0x00090B8C
+		// Token: 0x06000A84 RID: 2692 RVA: 0x000988C4 File Offset: 0x00096AC4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCouponById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000A19 RID: 2585 RVA: 0x00092A0B File Offset: 0x00090C0B
+		// Token: 0x06000A85 RID: 2693 RVA: 0x00098943 File Offset: 0x00096B43
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCouponById.LogPair = null;
 			ConfigCouponById.HandleId = 0;
 		}
 
-		// Token: 0x06000A1A RID: 2586 RVA: 0x00092A19 File Offset: 0x00090C19
+		// Token: 0x06000A86 RID: 2694 RVA: 0x00098951 File Offset: 0x00096B51
 		public static void Init()
 		{
 			ConfigCouponById.HandleId = ConfigCommon.InitDataStatement(ConfigCouponById.HandleId, "db_item.db", "select BinData from `Coupon` where Id=?");
 		}
 
-		// Token: 0x06000A1B RID: 2587 RVA: 0x00092A34 File Offset: 0x00090C34
+		// Token: 0x06000A87 RID: 2695 RVA: 0x0009896C File Offset: 0x00096B6C
 		public static Coupon? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCouponById.HandleId, ConfigCouponById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Coupon?(rootAsCoupon);
 		}
 
-		// Token: 0x04000BA6 RID: 2982
+		// Token: 0x04000C24 RID: 3108
 		private const string DB = "db_item.db";
 
-		// Token: 0x04000BA7 RID: 2983
+		// Token: 0x04000C25 RID: 3109
 		private const string FILE = "d.道具.xlsx";
 
-		// Token: 0x04000BA8 RID: 2984
+		// Token: 0x04000C26 RID: 3110
 		private const string TABLE = "Coupon";
 
-		// Token: 0x04000BA9 RID: 2985
+		// Token: 0x04000C27 RID: 3111
 		private const string COMMAND = "select BinData from `Coupon` where Id=?";
 
-		// Token: 0x04000BAA RID: 2986
+		// Token: 0x04000C28 RID: 3112
 		private const string KEY_PREFIX = "CouponById";
 
-		// Token: 0x04000BAB RID: 2987
+		// Token: 0x04000C29 RID: 3113
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000BAC RID: 2988
+		// Token: 0x04000C2A RID: 3114
 		private static int HandleId;
 	}
 }

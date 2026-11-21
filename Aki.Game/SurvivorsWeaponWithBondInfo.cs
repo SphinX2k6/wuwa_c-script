@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002AF6 RID: 10998
+// Token: 0x02002072 RID: 8306
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsWeaponWithBondInfo : ISurvivorsWeaponWithBondInfo
 {
-	// Token: 0x17001E8B RID: 7819
-	// (get) Token: 0x06016E0A RID: 93706 RVA: 0x005CDA04 File Offset: 0x005CBC04
-	// (set) Token: 0x06016E0B RID: 93707 RVA: 0x005CDA0C File Offset: 0x005CBC0C
+	// Token: 0x17001EE3 RID: 7907
+	// (get) Token: 0x0601483B RID: 84027 RVA: 0x005FA584 File Offset: 0x005F8784
+	// (set) Token: 0x0601483C RID: 84028 RVA: 0x005FA58C File Offset: 0x005F878C
 	public SurvivorsWeaponGainData WeaponData { get; set; }
 
-	// Token: 0x17001E8C RID: 7820
-	// (get) Token: 0x06016E0C RID: 93708 RVA: 0x005CDA15 File Offset: 0x005CBC15
-	// (set) Token: 0x06016E0D RID: 93709 RVA: 0x005CDA1D File Offset: 0x005CBC1D
+	// Token: 0x17001EE4 RID: 7908
+	// (get) Token: 0x0601483D RID: 84029 RVA: 0x005FA595 File Offset: 0x005F8795
+	// (set) Token: 0x0601483E RID: 84030 RVA: 0x005FA59D File Offset: 0x005F879D
 	public int BondPosition { get; set; }
 }

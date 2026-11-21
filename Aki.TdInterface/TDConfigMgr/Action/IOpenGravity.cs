@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C98 RID: 7320
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E9D RID: 7837
 	public class IOpenGravity : ISetTeleControlConfig
 	{
-		// Token: 0x06009D13 RID: 40211 RVA: 0x00167F20 File Offset: 0x00166120
+		// Token: 0x0600A6AF RID: 42671 RVA: 0x0017B968 File Offset: 0x00179B68
 		private IOpenGravity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009D14 RID: 40212 RVA: 0x00167F58 File Offset: 0x00166158
+		// Token: 0x0600A6B0 RID: 42672 RVA: 0x0017B9A0 File Offset: 0x00179BA0
 		public static IOpenGravity Create([Nullable(2)] IOpenGravity instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009D15 RID: 40213 RVA: 0x00167F6B File Offset: 0x0016616B
+		// Token: 0x0600A6B1 RID: 42673 RVA: 0x0017B9B3 File Offset: 0x00179BB3
 		public static IOpenGravity CreateFromSetValue([Nullable(2)] IOpenGravity_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009D16 RID: 40214 RVA: 0x00167F7E File Offset: 0x0016617E
+		// Token: 0x0600A6B2 RID: 42674 RVA: 0x0017B9C6 File Offset: 0x00179BC6
 		public new IOpenGravity_SetValue ToSetValue()
 		{
 			return new IOpenGravity_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030FC RID: 12540
-		// (get) Token: 0x06009D17 RID: 40215 RVA: 0x00167FA9 File Offset: 0x001661A9
-		// (set) Token: 0x06009D18 RID: 40216 RVA: 0x00167FD4 File Offset: 0x001661D4
+		// Token: 0x1700337A RID: 13178
+		// (get) Token: 0x0600A6B3 RID: 42675 RVA: 0x0017B9F1 File Offset: 0x00179BF1
+		// (set) Token: 0x0600A6B4 RID: 42676 RVA: 0x0017BA1C File Offset: 0x00179C1C
 		public override ESetTeleControlType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030FD RID: 12541
-		// (get) Token: 0x06009D19 RID: 40217 RVA: 0x00167FE2 File Offset: 0x001661E2
-		// (set) Token: 0x06009D1A RID: 40218 RVA: 0x0016800D File Offset: 0x0016620D
+		// Token: 0x1700337B RID: 13179
+		// (get) Token: 0x0600A6B5 RID: 42677 RVA: 0x0017BA2A File Offset: 0x00179C2A
+		// (set) Token: 0x0600A6B6 RID: 42678 RVA: 0x0017BA55 File Offset: 0x00179C55
 		public override int EntityId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030FE RID: 12542
-		// (get) Token: 0x06009D1B RID: 40219 RVA: 0x0016801C File Offset: 0x0016621C
-		// (set) Token: 0x06009D1C RID: 40220 RVA: 0x00168056 File Offset: 0x00166256
+		// Token: 0x1700337C RID: 13180
+		// (get) Token: 0x0600A6B7 RID: 42679 RVA: 0x0017BA64 File Offset: 0x00179C64
+		// (set) Token: 0x0600A6B8 RID: 42680 RVA: 0x0017BA9E File Offset: 0x00179C9E
 		public virtual int? PositionEntityId
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005F25 RID: 24357
+		// Token: 0x04006479 RID: 25721
 		[Nullable(2)]
 		protected new IOpenGravity FbInstance;
 
-		// Token: 0x04005F26 RID: 24358
+		// Token: 0x0400647A RID: 25722
 		[Nullable(2)]
 		protected new IOpenGravity_SetValue PocoInterface;
 	}

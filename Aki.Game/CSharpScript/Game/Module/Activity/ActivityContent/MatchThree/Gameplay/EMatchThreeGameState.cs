@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064B9 RID: 25785
+	// Token: 0x02005437 RID: 21559
 	public enum EMatchThreeGameState
 	{
-		// Token: 0x04021B55 RID: 138069
+		// Token: 0x0401C486 RID: 115846
 		WaitingInput,
-		// Token: 0x04021B56 RID: 138070
+		// Token: 0x0401C487 RID: 115847
 		Resolving,
-		// Token: 0x04021B57 RID: 138071
+		// Token: 0x0401C488 RID: 115848
 		Settling,
-		// Token: 0x04021B58 RID: 138072
+		// Token: 0x0401C489 RID: 115849
 		Win,
-		// Token: 0x04021B59 RID: 138073
+		// Token: 0x0401C48A RID: 115850
 		Lose
 	}
 }

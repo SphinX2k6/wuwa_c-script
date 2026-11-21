@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FEE RID: 24558
+	// Token: 0x02006648 RID: 26184
 	public enum ESceneActorEventType : byte
 	{
-		// Token: 0x0400FFAD RID: 65453
+		// Token: 0x04010D7E RID: 68990
 		PlayMusicPlants,
-		// Token: 0x0400FFAE RID: 65454
+		// Token: 0x04010D7F RID: 68991
 		PlayMusicLights,
-		// Token: 0x0400FFAF RID: 65455
+		// Token: 0x04010D80 RID: 68992
 		Projection3dTo2d
 	}
 }

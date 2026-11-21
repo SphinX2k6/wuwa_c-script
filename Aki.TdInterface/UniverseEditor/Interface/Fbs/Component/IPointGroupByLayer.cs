@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200575D RID: 22365
+	// Token: 0x02005D64 RID: 23908
 	public struct IPointGroupByLayer : IFlatbufferObject
 	{
-		// Token: 0x1700A6D4 RID: 42708
-		// (get) Token: 0x060257A5 RID: 153509 RVA: 0x0052BB47 File Offset: 0x00529D47
+		// Token: 0x1700AFF8 RID: 45048
+		// (get) Token: 0x06027CC5 RID: 163013 RVA: 0x00571CD3 File Offset: 0x0056FED3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060257A6 RID: 153510 RVA: 0x0052BB54 File Offset: 0x00529D54
+		// Token: 0x06027CC6 RID: 163014 RVA: 0x00571CE0 File Offset: 0x0056FEE0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060257A7 RID: 153511 RVA: 0x0052BB5C File Offset: 0x00529D5C
+		// Token: 0x06027CC7 RID: 163015 RVA: 0x00571CE8 File Offset: 0x0056FEE8
 		public static IPointGroupByLayer GetRootAsIPointGroupByLayer(ByteBuffer _bb)
 		{
 			return IPointGroupByLayer.GetRootAsIPointGroupByLayer(_bb, default(IPointGroupByLayer));
 		}
 
-		// Token: 0x060257A8 RID: 153512 RVA: 0x0052BB78 File Offset: 0x00529D78
+		// Token: 0x06027CC8 RID: 163016 RVA: 0x00571D04 File Offset: 0x0056FF04
 		public static IPointGroupByLayer GetRootAsIPointGroupByLayer(ByteBuffer _bb, IPointGroupByLayer obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060257A9 RID: 153513 RVA: 0x0052BB95 File Offset: 0x00529D95
+		// Token: 0x06027CC9 RID: 163017 RVA: 0x00571D21 File Offset: 0x0056FF21
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060257AA RID: 153514 RVA: 0x0052BBA4 File Offset: 0x00529DA4
+		// Token: 0x06027CCA RID: 163018 RVA: 0x00571D30 File Offset: 0x0056FF30
 		public IPointGroupByLayer __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A6D5 RID: 42709
-		// (get) Token: 0x060257AB RID: 153515 RVA: 0x0052BBB4 File Offset: 0x00529DB4
+		// Token: 0x1700AFF9 RID: 45049
+		// (get) Token: 0x06027CCB RID: 163019 RVA: 0x00571D40 File Offset: 0x0056FF40
 		public EPointGroupGenerateType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A6D6 RID: 42710
-		// (get) Token: 0x060257AC RID: 153516 RVA: 0x0052BBF0 File Offset: 0x00529DF0
+		// Token: 0x1700AFFA RID: 45050
+		// (get) Token: 0x06027CCC RID: 163020 RVA: 0x00571D7C File Offset: 0x0056FF7C
 		public IVectorInfo? Space
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060257AD RID: 153517 RVA: 0x0052BC50 File Offset: 0x00529E50
+		// Token: 0x06027CCD RID: 163021 RVA: 0x00571DDC File Offset: 0x0056FFDC
 		public IParkourPointLayerConfig? Layers(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IParkourPointLayerConfig?(default(IParkourPointLayerConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A6D7 RID: 42711
-		// (get) Token: 0x060257AE RID: 153518 RVA: 0x0052BCB0 File Offset: 0x00529EB0
+		// Token: 0x1700AFFB RID: 45051
+		// (get) Token: 0x06027CCE RID: 163022 RVA: 0x00571E3C File Offset: 0x0057003C
 		public int LayersLength
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060257AF RID: 153519 RVA: 0x0052BCDB File Offset: 0x00529EDB
+		// Token: 0x06027CCF RID: 163023 RVA: 0x00571E67 File Offset: 0x00570067
 		public static Offset<IPointGroupByLayer> CreateIPointGroupByLayer(FlatBufferBuilder builder, EPointGroupGenerateType Type = EPointGroupGenerateType.Layer, Offset<IVectorInfo> SpaceOffset = default(Offset<IVectorInfo>), VectorOffset LayersOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -115,31 +115,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPointGroupByLayer.EndIPointGroupByLayer(builder);
 		}
 
-		// Token: 0x060257B0 RID: 153520 RVA: 0x0052BCFF File Offset: 0x00529EFF
+		// Token: 0x06027CD0 RID: 163024 RVA: 0x00571E8B File Offset: 0x0057008B
 		public static void StartIPointGroupByLayer(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060257B1 RID: 153521 RVA: 0x0052BD08 File Offset: 0x00529F08
+		// Token: 0x06027CD1 RID: 163025 RVA: 0x00571E94 File Offset: 0x00570094
 		public static void AddType(FlatBufferBuilder builder, EPointGroupGenerateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060257B2 RID: 153522 RVA: 0x0052BD13 File Offset: 0x00529F13
+		// Token: 0x06027CD2 RID: 163026 RVA: 0x00571E9F File Offset: 0x0057009F
 		public static void AddSpace(FlatBufferBuilder builder, Offset<IVectorInfo> spaceOffset)
 		{
 			builder.AddOffset(1, spaceOffset.Value, 0);
 		}
 
-		// Token: 0x060257B3 RID: 153523 RVA: 0x0052BD23 File Offset: 0x00529F23
+		// Token: 0x06027CD3 RID: 163027 RVA: 0x00571EAF File Offset: 0x005700AF
 		public static void AddLayers(FlatBufferBuilder builder, VectorOffset layersOffset)
 		{
 			builder.AddOffset(2, layersOffset.Value, 0);
 		}
 
-		// Token: 0x060257B4 RID: 153524 RVA: 0x0052BD34 File Offset: 0x00529F34
+		// Token: 0x06027CD4 RID: 163028 RVA: 0x00571EC0 File Offset: 0x005700C0
 		public static VectorOffset CreateLayersVector(FlatBufferBuilder builder, Offset<IParkourPointLayerConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060257B5 RID: 153525 RVA: 0x0052BD74 File Offset: 0x00529F74
+		// Token: 0x06027CD5 RID: 163029 RVA: 0x00571F00 File Offset: 0x00570100
 		public static VectorOffset CreateLayersVectorBlock(FlatBufferBuilder builder, Offset<IParkourPointLayerConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060257B6 RID: 153526 RVA: 0x0052BD8E File Offset: 0x00529F8E
+		// Token: 0x06027CD6 RID: 163030 RVA: 0x00571F1A File Offset: 0x0057011A
 		public static VectorOffset CreateLayersVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IParkourPointLayerConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -166,7 +166,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060257B7 RID: 153527 RVA: 0x0052BDAC File Offset: 0x00529FAC
+		// Token: 0x06027CD7 RID: 163031 RVA: 0x00571F38 File Offset: 0x00570138
 		public static VectorOffset CreateLayersVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -174,19 +174,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060257B8 RID: 153528 RVA: 0x0052BDC5 File Offset: 0x00529FC5
+		// Token: 0x06027CD8 RID: 163032 RVA: 0x00571F51 File Offset: 0x00570151
 		public static void StartLayersVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060257B9 RID: 153529 RVA: 0x0052BDD0 File Offset: 0x00529FD0
+		// Token: 0x06027CD9 RID: 163033 RVA: 0x00571F5C File Offset: 0x0057015C
 		public static Offset<IPointGroupByLayer> EndIPointGroupByLayer(FlatBufferBuilder builder)
 		{
 			return new Offset<IPointGroupByLayer>(builder.EndTable());
 		}
 
-		// Token: 0x060257BA RID: 153530 RVA: 0x0052BDE0 File Offset: 0x00529FE0
+		// Token: 0x06027CDA RID: 163034 RVA: 0x00571F6C File Offset: 0x0057016C
 		public IPointGroupByLayerT UnPack()
 		{
 			IPointGroupByLayerT pointGroupByLayerT = new IPointGroupByLayerT();
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return pointGroupByLayerT;
 		}
 
-		// Token: 0x060257BB RID: 153531 RVA: 0x0052BDFC File Offset: 0x00529FFC
+		// Token: 0x06027CDB RID: 163035 RVA: 0x00571F88 File Offset: 0x00570188
 		public void UnPackTo(IPointGroupByLayerT _o)
 		{
 			_o.Type = this.Type;
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060257BC RID: 153532 RVA: 0x0052BE98 File Offset: 0x0052A098
+		// Token: 0x06027CDC RID: 163036 RVA: 0x00572024 File Offset: 0x00570224
 		public static Offset<IPointGroupByLayer> Pack(FlatBufferBuilder builder, IPointGroupByLayerT _o)
 		{
 			if (_o == null)
@@ -227,7 +227,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPointGroupByLayer.CreateIPointGroupByLayer(builder, _o.Type, spaceOffset, layersOffset);
 		}
 
-		// Token: 0x0400EBFD RID: 60413
+		// Token: 0x0400F8E8 RID: 63720
 		private Table __p;
 	}
 }

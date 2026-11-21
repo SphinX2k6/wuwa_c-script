@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007DD RID: 2013
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000880 RID: 2176
 	public class IWeaponExhibitConfig : IExhibitItemType
 	{
-		// Token: 0x06002BB9 RID: 11193 RVA: 0x00071EC4 File Offset: 0x000700C4
+		// Token: 0x06002EE9 RID: 12009 RVA: 0x00079228 File Offset: 0x00077428
 		private IWeaponExhibitConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002BBA RID: 11194 RVA: 0x00071EFC File Offset: 0x000700FC
+		// Token: 0x06002EEA RID: 12010 RVA: 0x00079260 File Offset: 0x00077460
 		public static IWeaponExhibitConfig Create([Nullable(2)] IWeaponExhibitConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002BBB RID: 11195 RVA: 0x00071F0F File Offset: 0x0007010F
+		// Token: 0x06002EEB RID: 12011 RVA: 0x00079273 File Offset: 0x00077473
 		public static IWeaponExhibitConfig CreateFromSetValue([Nullable(2)] IWeaponExhibitConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002BBC RID: 11196 RVA: 0x00071F22 File Offset: 0x00070122
+		// Token: 0x06002EEC RID: 12012 RVA: 0x00079286 File Offset: 0x00077486
 		public new IWeaponExhibitConfig_SetValue ToSetValue()
 		{
 			return new IWeaponExhibitConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B74 RID: 2932
-		// (get) Token: 0x06002BBD RID: 11197 RVA: 0x00071F4D File Offset: 0x0007014D
-		// (set) Token: 0x06002BBE RID: 11198 RVA: 0x00071F78 File Offset: 0x00070178
+		// Token: 0x17000C37 RID: 3127
+		// (get) Token: 0x06002EED RID: 12013 RVA: 0x000792B1 File Offset: 0x000774B1
+		// (set) Token: 0x06002EEE RID: 12014 RVA: 0x000792DC File Offset: 0x000774DC
 		public override EExhibitItemType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B75 RID: 2933
-		// (get) Token: 0x06002BBF RID: 11199 RVA: 0x00071F88 File Offset: 0x00070188
-		// (set) Token: 0x06002BC0 RID: 11200 RVA: 0x00071FE9 File Offset: 0x000701E9
+		// Token: 0x17000C38 RID: 3128
+		// (get) Token: 0x06002EEF RID: 12015 RVA: 0x000792EC File Offset: 0x000774EC
+		// (set) Token: 0x06002EF0 RID: 12016 RVA: 0x0007934D File Offset: 0x0007754D
 		public virtual VectorInfo Offset
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B76 RID: 2934
-		// (get) Token: 0x06002BC1 RID: 11201 RVA: 0x00072000 File Offset: 0x00070200
-		// (set) Token: 0x06002BC2 RID: 11202 RVA: 0x00072061 File Offset: 0x00070261
+		// Token: 0x17000C39 RID: 3129
+		// (get) Token: 0x06002EF1 RID: 12017 RVA: 0x00079364 File Offset: 0x00077564
+		// (set) Token: 0x06002EF2 RID: 12018 RVA: 0x000793C5 File Offset: 0x000775C5
 		[Nullable(2)]
 		public virtual IExhibitEffect ActiveEffect
 		{
@@ -148,24 +146,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D00 RID: 7424
+		// Token: 0x04001F0C RID: 7948
 		[Nullable(2)]
 		protected new IWeaponExhibitConfig FbInstance;
 
-		// Token: 0x04001D01 RID: 7425
+		// Token: 0x04001F0D RID: 7949
 		[Nullable(2)]
 		protected new IWeaponExhibitConfig_SetValue PocoInterface;
 
-		// Token: 0x04001D02 RID: 7426
+		// Token: 0x04001F0E RID: 7950
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04001D03 RID: 7427
+		// Token: 0x04001F0F RID: 7951
 		private bool _OffsetInited;
 
-		// Token: 0x04001D04 RID: 7428
+		// Token: 0x04001F10 RID: 7952
 		private IExhibitEffect _ActiveEffectCache;
 
-		// Token: 0x04001D05 RID: 7429
+		// Token: 0x04001F11 RID: 7953
 		private bool _ActiveEffectInited;
 	}
 }

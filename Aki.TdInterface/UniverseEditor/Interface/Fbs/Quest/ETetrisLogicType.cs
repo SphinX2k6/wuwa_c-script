@@ -2,64 +2,64 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CD9 RID: 15577
+	// Token: 0x020040F0 RID: 16624
 	public enum ETetrisLogicType : byte
 	{
-		// Token: 0x0400B517 RID: 46359
+		// Token: 0x0400BEC4 RID: 48836
 		I,
-		// Token: 0x0400B518 RID: 46360
+		// Token: 0x0400BEC5 RID: 48837
 		J,
-		// Token: 0x0400B519 RID: 46361
+		// Token: 0x0400BEC6 RID: 48838
 		L,
-		// Token: 0x0400B51A RID: 46362
+		// Token: 0x0400BEC7 RID: 48839
 		O,
-		// Token: 0x0400B51B RID: 46363
+		// Token: 0x0400BEC8 RID: 48840
 		S,
-		// Token: 0x0400B51C RID: 46364
+		// Token: 0x0400BEC9 RID: 48841
 		T,
-		// Token: 0x0400B51D RID: 46365
+		// Token: 0x0400BECA RID: 48842
 		Z,
-		// Token: 0x0400B51E RID: 46366
+		// Token: 0x0400BECB RID: 48843
 		I_1,
-		// Token: 0x0400B51F RID: 46367
+		// Token: 0x0400BECC RID: 48844
 		T_1,
-		// Token: 0x0400B520 RID: 46368
+		// Token: 0x0400BECD RID: 48845
 		U,
-		// Token: 0x0400B521 RID: 46369
+		// Token: 0x0400BECE RID: 48846
 		V,
-		// Token: 0x0400B522 RID: 46370
+		// Token: 0x0400BECF RID: 48847
 		W,
-		// Token: 0x0400B523 RID: 46371
+		// Token: 0x0400BED0 RID: 48848
 		X,
-		// Token: 0x0400B524 RID: 46372
+		// Token: 0x0400BED1 RID: 48849
 		F,
-		// Token: 0x0400B525 RID: 46373
+		// Token: 0x0400BED2 RID: 48850
 		F1,
-		// Token: 0x0400B526 RID: 46374
+		// Token: 0x0400BED3 RID: 48851
 		S_1,
-		// Token: 0x0400B527 RID: 46375
+		// Token: 0x0400BED4 RID: 48852
 		Z_1,
-		// Token: 0x0400B528 RID: 46376
+		// Token: 0x0400BED5 RID: 48853
 		J_1,
-		// Token: 0x0400B529 RID: 46377
+		// Token: 0x0400BED6 RID: 48854
 		L_1,
-		// Token: 0x0400B52A RID: 46378
+		// Token: 0x0400BED7 RID: 48855
 		Y,
-		// Token: 0x0400B52B RID: 46379
+		// Token: 0x0400BED8 RID: 48856
 		Y1,
-		// Token: 0x0400B52C RID: 46380
+		// Token: 0x0400BED9 RID: 48857
 		N,
-		// Token: 0x0400B52D RID: 46381
+		// Token: 0x0400BEDA RID: 48858
 		N1,
-		// Token: 0x0400B52E RID: 46382
+		// Token: 0x0400BEDB RID: 48859
 		P,
-		// Token: 0x0400B52F RID: 46383
+		// Token: 0x0400BEDC RID: 48860
 		Q,
-		// Token: 0x0400B530 RID: 46384
+		// Token: 0x0400BEDD RID: 48861
 		I_2,
-		// Token: 0x0400B531 RID: 46385
+		// Token: 0x0400BEDE RID: 48862
 		V_1,
-		// Token: 0x0400B532 RID: 46386
+		// Token: 0x0400BEDF RID: 48863
 		Member_27
 	}
 }

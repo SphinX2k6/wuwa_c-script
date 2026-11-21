@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FA8 RID: 4008
+	// Token: 0x02001090 RID: 4240
 	public struct RefResourceQuestList : IFlatbufferObject
 	{
-		// Token: 0x17002D78 RID: 11640
-		// (get) Token: 0x0600BA91 RID: 47761 RVA: 0x002DB040 File Offset: 0x002D9240
+		// Token: 0x17002DF3 RID: 11763
+		// (get) Token: 0x0600C0DB RID: 49371 RVA: 0x002F77EC File Offset: 0x002F59EC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BA92 RID: 47762 RVA: 0x002DB04D File Offset: 0x002D924D
+		// Token: 0x0600C0DC RID: 49372 RVA: 0x002F77F9 File Offset: 0x002F59F9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BA93 RID: 47763 RVA: 0x002DB054 File Offset: 0x002D9254
+		// Token: 0x0600C0DD RID: 49373 RVA: 0x002F7800 File Offset: 0x002F5A00
 		public static RefResourceQuestList GetRootAsRefResourceQuestList(ByteBuffer _bb)
 		{
 			return RefResourceQuestList.GetRootAsRefResourceQuestList(_bb, default(RefResourceQuestList));
 		}
 
-		// Token: 0x0600BA94 RID: 47764 RVA: 0x002DB070 File Offset: 0x002D9270
+		// Token: 0x0600C0DE RID: 49374 RVA: 0x002F781C File Offset: 0x002F5A1C
 		public static RefResourceQuestList GetRootAsRefResourceQuestList(ByteBuffer _bb, RefResourceQuestList obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BA95 RID: 47765 RVA: 0x002DB08D File Offset: 0x002D928D
+		// Token: 0x0600C0DF RID: 49375 RVA: 0x002F7839 File Offset: 0x002F5A39
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BA96 RID: 47766 RVA: 0x002DB09C File Offset: 0x002D929C
+		// Token: 0x0600C0E0 RID: 49376 RVA: 0x002F7848 File Offset: 0x002F5A48
 		public RefResourceQuestList __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002D79 RID: 11641
-		// (get) Token: 0x0600BA97 RID: 47767 RVA: 0x002DB0AC File Offset: 0x002D92AC
+		// Token: 0x17002DF4 RID: 11764
+		// (get) Token: 0x0600C0E1 RID: 49377 RVA: 0x002F7858 File Offset: 0x002F5A58
 		public int BitId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002D7A RID: 11642
-		// (get) Token: 0x0600BA98 RID: 47768 RVA: 0x002DB0E8 File Offset: 0x002D92E8
+		// Token: 0x17002DF5 RID: 11765
+		// (get) Token: 0x0600C0E2 RID: 49378 RVA: 0x002F7894 File Offset: 0x002F5A94
 		public int QuestId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002D7B RID: 11643
-		// (get) Token: 0x0600BA99 RID: 47769 RVA: 0x002DB124 File Offset: 0x002D9324
+		// Token: 0x17002DF6 RID: 11766
+		// (get) Token: 0x0600C0E3 RID: 49379 RVA: 0x002F78D0 File Offset: 0x002F5AD0
 		public int HasRefResource
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005081 RID: 20609
+		// Token: 0x04005669 RID: 22121
 		private Table __p;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F53 RID: 3923
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200107D RID: 4221
 	public class IEnterDungeon
 	{
-		// Token: 0x06005734 RID: 22324 RVA: 0x000D565C File Offset: 0x000D385C
+		// Token: 0x06005D08 RID: 23816 RVA: 0x000E20C8 File Offset: 0x000E02C8
 		private IEnterDungeon_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005735 RID: 22325 RVA: 0x000D5694 File Offset: 0x000D3894
+		// Token: 0x06005D09 RID: 23817 RVA: 0x000E2100 File Offset: 0x000E0300
 		public static IEnterDungeon Create([Nullable(2)] IEnterDungeon instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005736 RID: 22326 RVA: 0x000D56A7 File Offset: 0x000D38A7
+		// Token: 0x06005D0A RID: 23818 RVA: 0x000E2113 File Offset: 0x000E0313
 		public static IEnterDungeon CreateFromSetValue([Nullable(2)] IEnterDungeon_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005737 RID: 22327 RVA: 0x000D56BA File Offset: 0x000D38BA
+		// Token: 0x06005D0B RID: 23819 RVA: 0x000E2126 File Offset: 0x000E0326
 		public IEnterDungeon_SetValue ToSetValue()
 		{
 			return new IEnterDungeon_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D1F RID: 7455
-		// (get) Token: 0x06005738 RID: 22328 RVA: 0x000D56CD File Offset: 0x000D38CD
-		// (set) Token: 0x06005739 RID: 22329 RVA: 0x000D56F8 File Offset: 0x000D38F8
+		// Token: 0x17001EC5 RID: 7877
+		// (get) Token: 0x06005D0C RID: 23820 RVA: 0x000E2139 File Offset: 0x000E0339
+		// (set) Token: 0x06005D0D RID: 23821 RVA: 0x000E2164 File Offset: 0x000E0364
 		public virtual EDungeonConditionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040034C8 RID: 13512
+		// Token: 0x040037F9 RID: 14329
 		[Nullable(2)]
 		protected IEnterDungeon FbInstance;
 
-		// Token: 0x040034C9 RID: 13513
+		// Token: 0x040037FA RID: 14330
 		[Nullable(2)]
 		protected IEnterDungeon_SetValue PocoInterface;
 	}

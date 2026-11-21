@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001053 RID: 4179
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001181 RID: 4481
 	public class IPlayFlowQuestCondition : IQuestCondition
 	{
-		// Token: 0x06005DA0 RID: 23968 RVA: 0x000E293C File Offset: 0x000E0B3C
+		// Token: 0x06006392 RID: 25490 RVA: 0x000EF910 File Offset: 0x000EDB10
 		private IPlayFlowQuestCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005DA1 RID: 23969 RVA: 0x000E2974 File Offset: 0x000E0B74
+		// Token: 0x06006393 RID: 25491 RVA: 0x000EF948 File Offset: 0x000EDB48
 		public static IPlayFlowQuestCondition Create([Nullable(2)] IPlayFlowQuestCondition instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005DA2 RID: 23970 RVA: 0x000E2987 File Offset: 0x000E0B87
+		// Token: 0x06006394 RID: 25492 RVA: 0x000EF95B File Offset: 0x000EDB5B
 		public static IPlayFlowQuestCondition CreateFromSetValue([Nullable(2)] IPlayFlowQuestCondition_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005DA3 RID: 23971 RVA: 0x000E299A File Offset: 0x000E0B9A
+		// Token: 0x06006395 RID: 25493 RVA: 0x000EF96E File Offset: 0x000EDB6E
 		public new IPlayFlowQuestCondition_SetValue ToSetValue()
 		{
 			return new IPlayFlowQuestCondition_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001ED5 RID: 7893
-		// (get) Token: 0x06005DA4 RID: 23972 RVA: 0x000E29C5 File Offset: 0x000E0BC5
-		// (set) Token: 0x06005DA5 RID: 23973 RVA: 0x000E29F0 File Offset: 0x000E0BF0
+		// Token: 0x17002084 RID: 8324
+		// (get) Token: 0x06006396 RID: 25494 RVA: 0x000EF999 File Offset: 0x000EDB99
+		// (set) Token: 0x06006397 RID: 25495 RVA: 0x000EF9C4 File Offset: 0x000EDBC4
 		public override EChildQuest Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001ED6 RID: 7894
-		// (get) Token: 0x06005DA6 RID: 23974 RVA: 0x000E2A00 File Offset: 0x000E0C00
-		// (set) Token: 0x06005DA7 RID: 23975 RVA: 0x000E2A61 File Offset: 0x000E0C61
+		// Token: 0x17002085 RID: 8325
+		// (get) Token: 0x06006398 RID: 25496 RVA: 0x000EF9D4 File Offset: 0x000EDBD4
+		// (set) Token: 0x06006399 RID: 25497 RVA: 0x000EFA35 File Offset: 0x000EDC35
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -119,9 +117,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001ED7 RID: 7895
-		// (get) Token: 0x06005DA8 RID: 23976 RVA: 0x000E2A78 File Offset: 0x000E0C78
-		// (set) Token: 0x06005DA9 RID: 23977 RVA: 0x000E2AD9 File Offset: 0x000E0CD9
+		// Token: 0x17002086 RID: 8326
+		// (get) Token: 0x0600639A RID: 25498 RVA: 0x000EFA4C File Offset: 0x000EDC4C
+		// (set) Token: 0x0600639B RID: 25499 RVA: 0x000EFAAD File Offset: 0x000EDCAD
 		public virtual PlayFlow Flow
 		{
 			get
@@ -149,24 +147,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400385C RID: 14428
+		// Token: 0x04003BA4 RID: 15268
 		[Nullable(2)]
 		protected new IPlayFlowQuestCondition FbInstance;
 
-		// Token: 0x0400385D RID: 14429
+		// Token: 0x04003BA5 RID: 15269
 		[Nullable(2)]
 		protected new IPlayFlowQuestCondition_SetValue PocoInterface;
 
-		// Token: 0x0400385E RID: 14430
+		// Token: 0x04003BA6 RID: 15270
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400385F RID: 14431
+		// Token: 0x04003BA7 RID: 15271
 		private bool _PreConditionsInited;
 
-		// Token: 0x04003860 RID: 14432
+		// Token: 0x04003BA8 RID: 15272
 		private PlayFlow _FlowCache;
 
-		// Token: 0x04003861 RID: 14433
+		// Token: 0x04003BA9 RID: 15273
 		private bool _FlowInited;
 	}
 }

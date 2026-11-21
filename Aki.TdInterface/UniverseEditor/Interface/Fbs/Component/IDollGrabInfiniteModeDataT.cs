@@ -3,45 +3,45 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005097 RID: 20631
+	// Token: 0x020055FC RID: 22012
 	public class IDollGrabInfiniteModeDataT
 	{
-		// Token: 0x170095DB RID: 38363
-		// (get) Token: 0x060211FF RID: 135679 RVA: 0x0049A704 File Offset: 0x00498904
-		// (set) Token: 0x06021200 RID: 135680 RVA: 0x0049A70C File Offset: 0x0049890C
+		// Token: 0x17009DC8 RID: 40392
+		// (get) Token: 0x06023153 RID: 143699 RVA: 0x004D4690 File Offset: 0x004D2890
+		// (set) Token: 0x06023154 RID: 143700 RVA: 0x004D4698 File Offset: 0x004D2898
 		public List<IDollGrabStandbyPoolItemT> StandbyItemPool { get; set; }
 
-		// Token: 0x170095DC RID: 38364
-		// (get) Token: 0x06021201 RID: 135681 RVA: 0x0049A715 File Offset: 0x00498915
-		// (set) Token: 0x06021202 RID: 135682 RVA: 0x0049A71D File Offset: 0x0049891D
+		// Token: 0x17009DC9 RID: 40393
+		// (get) Token: 0x06023155 RID: 143701 RVA: 0x004D46A1 File Offset: 0x004D28A1
+		// (set) Token: 0x06023156 RID: 143702 RVA: 0x004D46A9 File Offset: 0x004D28A9
 		public string RefreshIntervalCurve { get; set; }
 
-		// Token: 0x170095DD RID: 38365
-		// (get) Token: 0x06021203 RID: 135683 RVA: 0x0049A726 File Offset: 0x00498926
-		// (set) Token: 0x06021204 RID: 135684 RVA: 0x0049A72E File Offset: 0x0049892E
+		// Token: 0x17009DCA RID: 40394
+		// (get) Token: 0x06023157 RID: 143703 RVA: 0x004D46B2 File Offset: 0x004D28B2
+		// (set) Token: 0x06023158 RID: 143704 RVA: 0x004D46BA File Offset: 0x004D28BA
 		public List<IDollGrabInfiniteStageConfigT> StageConfigs { get; set; }
 
-		// Token: 0x170095DE RID: 38366
-		// (get) Token: 0x06021205 RID: 135685 RVA: 0x0049A737 File Offset: 0x00498937
-		// (set) Token: 0x06021206 RID: 135686 RVA: 0x0049A73F File Offset: 0x0049893F
+		// Token: 0x17009DCB RID: 40395
+		// (get) Token: 0x06023159 RID: 143705 RVA: 0x004D46C3 File Offset: 0x004D28C3
+		// (set) Token: 0x0602315A RID: 143706 RVA: 0x004D46CB File Offset: 0x004D28CB
 		public List<IDollGrabInfiniteScoreRewardT> ScoreRewards { get; set; }
 
-		// Token: 0x170095DF RID: 38367
-		// (get) Token: 0x06021207 RID: 135687 RVA: 0x0049A748 File Offset: 0x00498948
-		// (set) Token: 0x06021208 RID: 135688 RVA: 0x0049A750 File Offset: 0x00498950
+		// Token: 0x17009DCC RID: 40396
+		// (get) Token: 0x0602315B RID: 143707 RVA: 0x004D46D4 File Offset: 0x004D28D4
+		// (set) Token: 0x0602315C RID: 143708 RVA: 0x004D46DC File Offset: 0x004D28DC
 		public IDollGrabInfiniteScoreRewardT ScoreReward { get; set; }
 
-		// Token: 0x170095E0 RID: 38368
-		// (get) Token: 0x06021209 RID: 135689 RVA: 0x0049A759 File Offset: 0x00498959
-		// (set) Token: 0x0602120A RID: 135690 RVA: 0x0049A761 File Offset: 0x00498961
+		// Token: 0x17009DCD RID: 40397
+		// (get) Token: 0x0602315D RID: 143709 RVA: 0x004D46E5 File Offset: 0x004D28E5
+		// (set) Token: 0x0602315E RID: 143710 RVA: 0x004D46ED File Offset: 0x004D28ED
 		public int UnlockConditionGroupId { get; set; }
 
-		// Token: 0x170095E1 RID: 38369
-		// (get) Token: 0x0602120B RID: 135691 RVA: 0x0049A76A File Offset: 0x0049896A
-		// (set) Token: 0x0602120C RID: 135692 RVA: 0x0049A772 File Offset: 0x00498972
+		// Token: 0x17009DCE RID: 40398
+		// (get) Token: 0x0602315F RID: 143711 RVA: 0x004D46F6 File Offset: 0x004D28F6
+		// (set) Token: 0x06023160 RID: 143712 RVA: 0x004D46FE File Offset: 0x004D28FE
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602120D RID: 135693 RVA: 0x0049A77B File Offset: 0x0049897B
+		// Token: 0x06023161 RID: 143713 RVA: 0x004D4707 File Offset: 0x004D2907
 		public IDollGrabInfiniteModeDataT()
 		{
 			this.StandbyItemPool = null;

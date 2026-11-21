@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 {
-	// Token: 0x0200576E RID: 22382
+	// Token: 0x02004745 RID: 18245
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoEnemyDetailBookMainView : UiViewBase
 	{
-		// Token: 0x06038DAF RID: 232879 RVA: 0x00D8212D File Offset: 0x00D8032D
+		// Token: 0x0602DCBF RID: 187583 RVA: 0x00CD0C29 File Offset: 0x00CCEE29
 		public KurotatoEnemyDetailBookMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038DB0 RID: 232880 RVA: 0x00D82168 File Offset: 0x00D80368
+		// Token: 0x0602DCC0 RID: 187584 RVA: 0x00CD0C64 File Offset: 0x00CCEE64
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038DB1 RID: 232881 RVA: 0x00D82278 File Offset: 0x00D80478
+		// Token: 0x0602DCC1 RID: 187585 RVA: 0x00CD0D74 File Offset: 0x00CCEF74
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoEnemyDetailBookMainView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -58,19 +58,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038DB2 RID: 232882 RVA: 0x00D822BB File Offset: 0x00D804BB
+		// Token: 0x0602DCC2 RID: 187586 RVA: 0x00CD0DB7 File Offset: 0x00CCEFB7
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<KurotatoEnemyData>(EEventName.KurotatoEnemyDetailBookGridItemClick, new Action<KurotatoEnemyData>(this.OnClickGridItem));
 		}
 
-		// Token: 0x06038DB3 RID: 232883 RVA: 0x00D822D9 File Offset: 0x00D804D9
+		// Token: 0x0602DCC3 RID: 187587 RVA: 0x00CD0DD5 File Offset: 0x00CCEFD5
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<KurotatoEnemyData>(EEventName.KurotatoEnemyDetailBookGridItemClick, new Action<KurotatoEnemyData>(this.OnClickGridItem));
 		}
 
-		// Token: 0x06038DB4 RID: 232884 RVA: 0x00D822F8 File Offset: 0x00D804F8
+		// Token: 0x0602DCC4 RID: 187588 RVA: 0x00CD0DF4 File Offset: 0x00CCEFF4
 		protected override void OnBeforeShow()
 		{
 			List<KurotatoEnemyDetailBookBigItemData> list;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			this.OnClickTabTog(EKurotatoEnemyDetailBookTabAllOrWave.All);
 		}
 
-		// Token: 0x06038DB5 RID: 232885 RVA: 0x00D823B0 File Offset: 0x00D805B0
+		// Token: 0x0602DCC5 RID: 187589 RVA: 0x00CD0EAC File Offset: 0x00CCF0AC
 		private KurotatoEnemyDetailBookTabTog CreateTabTogItem()
 		{
 			return new KurotatoEnemyDetailBookTabTog
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			};
 		}
 
-		// Token: 0x06038DB6 RID: 232886 RVA: 0x00D823DB File Offset: 0x00D805DB
+		// Token: 0x0602DCC6 RID: 187590 RVA: 0x00CD0ED7 File Offset: 0x00CCF0D7
 		private KurotatoEnemyDetailBookBigItem CreateBigItem()
 		{
 			return new KurotatoEnemyDetailBookBigItem
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			};
 		}
 
-		// Token: 0x06038DB7 RID: 232887 RVA: 0x00D823F4 File Offset: 0x00D805F4
+		// Token: 0x0602DCC7 RID: 187591 RVA: 0x00CD0EF0 File Offset: 0x00CCF0F0
 		private void OnClickTabTog(EKurotatoEnemyDetailBookTabAllOrWave data)
 		{
 			this.CurShowAllOrWave = data;
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			this.RefreshView();
 		}
 
-		// Token: 0x06038DB8 RID: 232888 RVA: 0x00D8245C File Offset: 0x00D8065C
+		// Token: 0x0602DCC8 RID: 187592 RVA: 0x00CD0F58 File Offset: 0x00CCF158
 		private bool CanTabTogChange(int gridIndex)
 		{
 			GenericLayout<KurotatoEnemyDetailBookTabTog, EKurotatoEnemyDetailBookTabAllOrWave> tabTogLayout = this.TabTogLayout;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			return !(num.GetValueOrDefault() == gridIndex & num != null);
 		}
 
-		// Token: 0x06038DB9 RID: 232889 RVA: 0x00D824A0 File Offset: 0x00D806A0
+		// Token: 0x0602DCC9 RID: 187593 RVA: 0x00CD0F9C File Offset: 0x00CCF19C
 		private bool CanGridItemExecuteChange(KurotatoEnemyData data)
 		{
 			EKurotatoEnemyDetailBookTabAllOrWave curShowAllOrWave = this.CurShowAllOrWave;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			return this.CurSelectedDataInAll != data;
 		}
 
-		// Token: 0x06038DBA RID: 232890 RVA: 0x00D824D8 File Offset: 0x00D806D8
+		// Token: 0x0602DCCA RID: 187594 RVA: 0x00CD0FD4 File Offset: 0x00CCF1D4
 		private void OnClickGridItem(KurotatoEnemyData data)
 		{
 			this.SetCurSelectedData(data);
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			this.RefreshDetailInfoView();
 		}
 
-		// Token: 0x06038DBB RID: 232891 RVA: 0x00D8252C File Offset: 0x00D8072C
+		// Token: 0x0602DCCB RID: 187595 RVA: 0x00CD1028 File Offset: 0x00CCF228
 		private void CreateBigItemDataList()
 		{
 			List<KurotatoEnemyDetailBookBigItemData> list = new List<KurotatoEnemyDetailBookBigItemData>();
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			this.BigItemDataListMap[EKurotatoEnemyDetailBookTabAllOrWave.Wave] = list2;
 		}
 
-		// Token: 0x06038DBC RID: 232892 RVA: 0x00D8261C File Offset: 0x00D8081C
+		// Token: 0x0602DCCC RID: 187596 RVA: 0x00CD1118 File Offset: 0x00CCF318
 		[NullableContext(2)]
 		private void SetCurSelectedData(KurotatoEnemyData data)
 		{
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			}
 		}
 
-		// Token: 0x06038DBD RID: 232893 RVA: 0x00D826B0 File Offset: 0x00D808B0
+		// Token: 0x0602DCCD RID: 187597 RVA: 0x00CD11AC File Offset: 0x00CCF3AC
 		private void RefreshView()
 		{
 			List<KurotatoEnemyDetailBookBigItemData> data = this.BigItemDataListMap[this.CurShowAllOrWave];
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			}, false);
 		}
 
-		// Token: 0x06038DBE RID: 232894 RVA: 0x00D826EC File Offset: 0x00D808EC
+		// Token: 0x0602DCCE RID: 187598 RVA: 0x00CD11E8 File Offset: 0x00CCF3E8
 		private void RefreshDetailInfoView()
 		{
 			KurotatoEnemyData monsterData = (this.CurShowAllOrWave == EKurotatoEnemyDetailBookTabAllOrWave.All) ? this.CurSelectedDataInAll : this.CurSelectedDataInWave;
@@ -270,26 +270,26 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			enemyInfoPanel.RefreshMonsterInfoShow(monsterData);
 		}
 
-		// Token: 0x06038DBF RID: 232895 RVA: 0x00D82721 File Offset: 0x00D80921
+		// Token: 0x0602DCCF RID: 187599 RVA: 0x00CD121D File Offset: 0x00CCF41D
 		private void OnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401DD1D RID: 122141
+		// Token: 0x040187B3 RID: 100275
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401DD1E RID: 122142
+		// Token: 0x040187B4 RID: 100276
 		private int CurTargetLevel = 1001;
 
-		// Token: 0x0401DD1F RID: 122143
+		// Token: 0x040187B5 RID: 100277
 		private EKurotatoEnemyDetailBookTabAllOrWave CurShowAllOrWave;
 
-		// Token: 0x0401DD20 RID: 122144
+		// Token: 0x040187B6 RID: 100278
 		private int InitTargetWave;
 
-		// Token: 0x0401DD21 RID: 122145
+		// Token: 0x040187B7 RID: 100279
 		[Nullable(new byte[]
 		{
 			2,
@@ -297,14 +297,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 		})]
 		private GenericLayout<KurotatoEnemyDetailBookTabTog, EKurotatoEnemyDetailBookTabAllOrWave> TabTogLayout;
 
-		// Token: 0x0401DD22 RID: 122146
+		// Token: 0x040187B8 RID: 100280
 		private readonly List<EKurotatoEnemyDetailBookTabAllOrWave> TabTogDataList = new List<EKurotatoEnemyDetailBookTabAllOrWave>
 		{
 			EKurotatoEnemyDetailBookTabAllOrWave.All,
 			EKurotatoEnemyDetailBookTabAllOrWave.Wave
 		};
 
-		// Token: 0x0401DD23 RID: 122147
+		// Token: 0x040187B9 RID: 100281
 		[Nullable(new byte[]
 		{
 			2,
@@ -313,48 +313,48 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 		})]
 		protected LoopScrollView<KurotatoEnemyDetailBookBigItem, KurotatoEnemyDetailBookBigItemData> ScrollView;
 
-		// Token: 0x0401DD24 RID: 122148
+		// Token: 0x040187BA RID: 100282
 		protected Dictionary<EKurotatoEnemyDetailBookTabAllOrWave, List<KurotatoEnemyDetailBookBigItemData>> BigItemDataListMap = new Dictionary<EKurotatoEnemyDetailBookTabAllOrWave, List<KurotatoEnemyDetailBookBigItemData>>();
 
-		// Token: 0x0401DD25 RID: 122149
+		// Token: 0x040187BB RID: 100283
 		[Nullable(2)]
 		private KurotatoEnemyData CurSelectedDataInAll;
 
-		// Token: 0x0401DD26 RID: 122150
+		// Token: 0x040187BC RID: 100284
 		[Nullable(2)]
 		private KurotatoEnemyData CurSelectedDataInWave;
 
-		// Token: 0x0401DD27 RID: 122151
+		// Token: 0x040187BD RID: 100285
 		[Nullable(2)]
 		private KurotatoEnemyDetailBookInfoPanel EnemyInfoPanel;
 
-		// Token: 0x0401DD28 RID: 122152
+		// Token: 0x040187BE RID: 100286
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200B977 RID: 47479
+		// Token: 0x0200A391 RID: 41873
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04038150 RID: 229712
+			// Token: 0x04032B4A RID: 207690
 			public const int CaptionItem = 0;
 
-			// Token: 0x04038151 RID: 229713
+			// Token: 0x04032B4B RID: 207691
 			public const int PanelTab = 1;
 
-			// Token: 0x04038152 RID: 229714
+			// Token: 0x04032B4C RID: 207692
 			public const int ToggleTab = 2;
 
-			// Token: 0x04038153 RID: 229715
+			// Token: 0x04032B4D RID: 207693
 			public const int MainScrollView = 3;
 
-			// Token: 0x04038154 RID: 229716
+			// Token: 0x04032B4E RID: 207694
 			public const int NodeEnemyItemGrid = 4;
 
-			// Token: 0x04038155 RID: 229717
+			// Token: 0x04032B4F RID: 207695
 			public const int PanelEnemyInfo = 5;
 
-			// Token: 0x04038156 RID: 229718
+			// Token: 0x04032B50 RID: 207696
 			public const int Content = 6;
 		}
 	}

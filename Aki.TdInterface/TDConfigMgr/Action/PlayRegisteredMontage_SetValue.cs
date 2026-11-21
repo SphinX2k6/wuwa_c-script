@@ -2,34 +2,34 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200211E RID: 8478
+	// Token: 0x0200237F RID: 9087
 	public class PlayRegisteredMontage_SetValue
 	{
-		// Token: 0x04006FB6 RID: 28598
+		// Token: 0x040075EB RID: 30187
 		public int EntityId;
 
-		// Token: 0x04006FB7 RID: 28599
+		// Token: 0x040075EC RID: 30188
 		public int MontageId;
 
-		// Token: 0x04006FB8 RID: 28600
+		// Token: 0x040075ED RID: 30189
 		public bool? IsOverlayMontage;
 
-		// Token: 0x04006FB9 RID: 28601
+		// Token: 0x040075EE RID: 30190
 		public bool? IsAbpMontage;
 
-		// Token: 0x04006FBA RID: 28602
+		// Token: 0x040075EF RID: 30191
 		public int? FaceExpressionId;
 
-		// Token: 0x04006FBB RID: 28603
+		// Token: 0x040075F0 RID: 30192
 		public float? LoopDuration;
 
-		// Token: 0x04006FBC RID: 28604
+		// Token: 0x040075F1 RID: 30193
 		public int? RepeatTimes;
 
-		// Token: 0x04006FBD RID: 28605
+		// Token: 0x040075F2 RID: 30194
 		public bool? KeepMontageWhenEnd;
 
-		// Token: 0x04006FBE RID: 28606
+		// Token: 0x040075F3 RID: 30195
 		public bool? KeepMontageAfterFlow;
 	}
 }

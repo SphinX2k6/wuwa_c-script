@@ -5,18 +5,18 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02003024 RID: 12324
+// Token: 0x0200257A RID: 9594
 [NullableContext(1)]
 [Nullable(0)]
-public class BaseAnimationComponent : EntityComponent, IComponentDependency, IStaticVariableResetter
+public class BaseAnimationComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601A188 RID: 106888 RVA: 0x006D8050 File Offset: 0x006D6250
+	// Token: 0x06017AD0 RID: 96976 RVA: 0x006FFF58 File Offset: 0x006FE158
 	static BaseAnimationComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BaseAnimationComponent.CreateStaticDefaultValue), new Action(BaseAnimationComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601A189 RID: 106889 RVA: 0x006D80CD File Offset: 0x006D62CD
+	// Token: 0x06017AD1 RID: 96977 RVA: 0x006FFFB0 File Offset: 0x006FE1B0
 	public static void CreateStaticDefaultValue()
 	{
 		BaseAnimationComponent._xAngleLimits = new float[]
@@ -31,15 +31,15 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		};
 	}
 
-	// Token: 0x0601A18A RID: 106890 RVA: 0x006D8105 File Offset: 0x006D6305
+	// Token: 0x06017AD2 RID: 96978 RVA: 0x006FFFE8 File Offset: 0x006FE1E8
 	public static void ResetStaticDefaultValue()
 	{
 		BaseAnimationComponent._xAngleLimits = null;
 		BaseAnimationComponent._yAngleLimits = null;
 	}
 
-	// Token: 0x170023E9 RID: 9193
-	// (get) Token: 0x0601A18B RID: 106891 RVA: 0x006D8113 File Offset: 0x006D6313
+	// Token: 0x170024B7 RID: 9399
+	// (get) Token: 0x06017AD3 RID: 96979 RVA: 0x006FFFF6 File Offset: 0x006FE1F6
 	private static float[] xAngleLimits
 	{
 		get
@@ -48,8 +48,8 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x170023EA RID: 9194
-	// (get) Token: 0x0601A18C RID: 106892 RVA: 0x006D811A File Offset: 0x006D631A
+	// Token: 0x170024B8 RID: 9400
+	// (get) Token: 0x06017AD4 RID: 96980 RVA: 0x006FFFFD File Offset: 0x006FE1FD
 	private static float[] yAngleLimits
 	{
 		get
@@ -58,30 +58,27 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x170023EB RID: 9195
-	// (get) Token: 0x0601A18D RID: 106893 RVA: 0x006D8121 File Offset: 0x006D6321
-	[Nullable(new byte[]
+	// Token: 0x170024B9 RID: 9401
+	// (get) Token: 0x06017AD5 RID: 96981 RVA: 0x00700004 File Offset: 0x006FE204
+	public override Type[] Dependencies
 	{
-		2,
-		1
-	})]
-	public static Type[] Dependencies { [return: Nullable(new byte[]
-	{
-		2,
-		1
-	})] get; } = new Type[]
-	{
-		typeof(BaseCharacterComponent),
-		typeof(CreatureDataComponent)
-	};
+		get
+		{
+			return new Type[]
+			{
+				typeof(BaseCharacterComponent),
+				typeof(CreatureDataComponent)
+			};
+		}
+	}
 
-	// Token: 0x170023EC RID: 9196
-	// (get) Token: 0x0601A18E RID: 106894 RVA: 0x006D8128 File Offset: 0x006D6328
-	// (set) Token: 0x0601A18F RID: 106895 RVA: 0x006D8130 File Offset: 0x006D6330
+	// Token: 0x170024BA RID: 9402
+	// (get) Token: 0x06017AD6 RID: 96982 RVA: 0x00700026 File Offset: 0x006FE226
+	// (set) Token: 0x06017AD7 RID: 96983 RVA: 0x0070002E File Offset: 0x006FE22E
 	[Nullable(2)]
 	public TsBaseCharacter Actor { [NullableContext(2)] get; [NullableContext(2)] protected set; }
 
-	// Token: 0x0601A190 RID: 106896 RVA: 0x006D8139 File Offset: 0x006D6339
+	// Token: 0x06017AD8 RID: 96984 RVA: 0x00700037 File Offset: 0x006FE237
 	[NullableContext(2)]
 	public USkeleton GetSkeleton()
 	{
@@ -98,9 +95,9 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return skeletalMesh.Skeleton;
 	}
 
-	// Token: 0x170023ED RID: 9197
-	// (get) Token: 0x0601A191 RID: 106897 RVA: 0x006D8157 File Offset: 0x006D6357
-	// (set) Token: 0x0601A192 RID: 106898 RVA: 0x006D815F File Offset: 0x006D635F
+	// Token: 0x170024BB RID: 9403
+	// (get) Token: 0x06017AD9 RID: 96985 RVA: 0x00700055 File Offset: 0x006FE255
+	// (set) Token: 0x06017ADA RID: 96986 RVA: 0x0070005D File Offset: 0x006FE25D
 	public bool EnableSightDirect
 	{
 		get
@@ -122,8 +119,8 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x170023EE RID: 9198
-	// (get) Token: 0x0601A193 RID: 106899 RVA: 0x006D819B File Offset: 0x006D639B
+	// Token: 0x170024BC RID: 9404
+	// (get) Token: 0x06017ADB RID: 96987 RVA: 0x00700099 File Offset: 0x006FE299
 	public bool EnableBlendSpaceLookAt
 	{
 		get
@@ -132,8 +129,27 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x170023EF RID: 9199
-	// (get) Token: 0x0601A194 RID: 106900 RVA: 0x006D81A3 File Offset: 0x006D63A3
+	// Token: 0x170024BD RID: 9405
+	// (get) Token: 0x06017ADC RID: 96988 RVA: 0x007000A4 File Offset: 0x006FE2A4
+	public bool HasKuroRootMotion
+	{
+		get
+		{
+			if (this.ShellAnimInstance == null)
+			{
+				return false;
+			}
+			if (this.CachedHasKuroRootMotionFrame != Time.Instance.Frame)
+			{
+				this.CachedHasKuroRootMotion = this.ShellAnimInstance.HasKuroRootMotionAnim();
+				this.CachedHasKuroRootMotionFrame = Time.Instance.Frame;
+			}
+			return this.CachedHasKuroRootMotion;
+		}
+	}
+
+	// Token: 0x170024BE RID: 9406
+	// (get) Token: 0x06017ADD RID: 96989 RVA: 0x007000F4 File Offset: 0x006FE2F4
 	[Nullable(2)]
 	public UAnimInstance ShellAnimInstance
 	{
@@ -144,8 +160,8 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x170023F0 RID: 9200
-	// (get) Token: 0x0601A195 RID: 106901 RVA: 0x006D81AB File Offset: 0x006D63AB
+	// Token: 0x170024BF RID: 9407
+	// (get) Token: 0x06017ADE RID: 96990 RVA: 0x007000FC File Offset: 0x006FE2FC
 	[Nullable(2)]
 	public UAnimInstance MainAnimInstance
 	{
@@ -156,8 +172,8 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x170023F1 RID: 9201
-	// (get) Token: 0x0601A196 RID: 106902 RVA: 0x006D81B3 File Offset: 0x006D63B3
+	// Token: 0x170024C0 RID: 9408
+	// (get) Token: 0x06017ADF RID: 96991 RVA: 0x00700104 File Offset: 0x006FE304
 	[Nullable(2)]
 	public UAnimInstance SpecialAnimInstance
 	{
@@ -168,8 +184,8 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x170023F2 RID: 9202
-	// (get) Token: 0x0601A197 RID: 106903 RVA: 0x006D81BB File Offset: 0x006D63BB
+	// Token: 0x170024C1 RID: 9409
+	// (get) Token: 0x06017AE0 RID: 96992 RVA: 0x0070010C File Offset: 0x006FE30C
 	public MontageManager MontageManager
 	{
 		get
@@ -178,7 +194,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x0601A198 RID: 106904 RVA: 0x006D81C4 File Offset: 0x006D63C4
+	// Token: 0x06017AE1 RID: 96993 RVA: 0x00700118 File Offset: 0x006FE318
 	public MontageManager GetMontageManager(EPerformGroup group = EPerformGroup.DefaultGroup)
 	{
 		MontageManager montageManager;
@@ -192,7 +208,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return montageManager;
 	}
 
-	// Token: 0x0601A199 RID: 106905 RVA: 0x006D8200 File Offset: 0x006D6400
+	// Token: 0x06017AE2 RID: 96994 RVA: 0x00700154 File Offset: 0x006FE354
 	public EPerformGroup? FindGroupByMontageHandleId(int handleId)
 	{
 		foreach (KeyValuePair<EPerformGroup, MontageManager> keyValuePair in this.MontageManagerMap)
@@ -209,7 +225,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return null;
 	}
 
-	// Token: 0x0601A19A RID: 106906 RVA: 0x006D8280 File Offset: 0x006D6480
+	// Token: 0x06017AE3 RID: 96995 RVA: 0x007001D4 File Offset: 0x006FE3D4
 	public void StopMontageByHandleId(IStopMontageParam param)
 	{
 		foreach (MontageManager montageManager in this.MontageManagerMap.Values)
@@ -218,7 +234,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x0601A19B RID: 106907 RVA: 0x006D82D8 File Offset: 0x006D64D8
+	// Token: 0x06017AE4 RID: 96996 RVA: 0x0070022C File Offset: 0x006FE42C
 	public void ClearCallbackByHandleId(int handleId)
 	{
 		foreach (MontageManager montageManager in this.MontageManagerMap.Values)
@@ -227,7 +243,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x0601A19C RID: 106908 RVA: 0x006D8334 File Offset: 0x006D6534
+	// Token: 0x06017AE5 RID: 96997 RVA: 0x00700288 File Offset: 0x006FE488
 	protected override bool OnInit()
 	{
 		Array.Copy(BaseAnimationComponent.xAngleLimits, this.XAngleLimits, 2);
@@ -238,7 +254,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return true;
 	}
 
-	// Token: 0x0601A19D RID: 106909 RVA: 0x006D8390 File Offset: 0x006D6590
+	// Token: 0x06017AE6 RID: 96998 RVA: 0x007002E4 File Offset: 0x006FE4E4
 	protected override bool OnClear()
 	{
 		foreach (MontageManager montageManager in this.MontageManagerMap.Values)
@@ -254,19 +270,19 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return true;
 	}
 
-	// Token: 0x0601A19E RID: 106910 RVA: 0x006D8404 File Offset: 0x006D6604
+	// Token: 0x06017AE7 RID: 96999 RVA: 0x00700358 File Offset: 0x006FE558
 	protected override void OnEnable()
 	{
 		EventSystem.Instance.EmitWithTarget<bool>(base.Entity, EEventName.AnimCompActiveStateChange, true);
 	}
 
-	// Token: 0x0601A19F RID: 106911 RVA: 0x006D841D File Offset: 0x006D661D
+	// Token: 0x06017AE8 RID: 97000 RVA: 0x00700371 File Offset: 0x006FE571
 	protected override void OnDisable(string reason)
 	{
 		EventSystem.Instance.EmitWithTarget<bool>(base.Entity, EEventName.AnimCompActiveStateChange, false);
 	}
 
-	// Token: 0x0601A1A0 RID: 106912 RVA: 0x006D8438 File Offset: 0x006D6638
+	// Token: 0x06017AE9 RID: 97001 RVA: 0x0070038C File Offset: 0x006FE58C
 	public void SetSightLimit(float[] xLimits, float[] yLimits, bool changeDefaultValue = false)
 	{
 		this.XAngleLimits[0] = xLimits[0] * 0.017453292f;
@@ -283,7 +299,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		this.NoLimitForXAngle = ((double)this.XAngleLimits[0] <= -3.141592653589793 && (double)this.XAngleLimits[1] >= 3.141592653589793);
 	}
 
-	// Token: 0x0601A1A1 RID: 106913 RVA: 0x006D8504 File Offset: 0x006D6704
+	// Token: 0x06017AEA RID: 97002 RVA: 0x00700458 File Offset: 0x006FE658
 	public void ResetSightLimit()
 	{
 		this.XAngleLimits[0] = this.XAngleLimitsDefault[0];
@@ -292,7 +308,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		this.YAngleLimits[1] = this.YAngleLimitsDefault[1];
 	}
 
-	// Token: 0x0601A1A2 RID: 106914 RVA: 0x006D8554 File Offset: 0x006D6754
+	// Token: 0x06017AEB RID: 97003 RVA: 0x007004A8 File Offset: 0x006FE6A8
 	public float[][] GetSightLimit()
 	{
 		return new float[][]
@@ -310,7 +326,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		};
 	}
 
-	// Token: 0x0601A1A3 RID: 106915 RVA: 0x006D85C0 File Offset: 0x006D67C0
+	// Token: 0x06017AEC RID: 97004 RVA: 0x00700514 File Offset: 0x006FE714
 	public float[][] GetDefaultSightLimit()
 	{
 		return new float[][]
@@ -328,13 +344,13 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		};
 	}
 
-	// Token: 0x0601A1A4 RID: 106916 RVA: 0x006D8629 File Offset: 0x006D6829
+	// Token: 0x06017AED RID: 97005 RVA: 0x0070057D File Offset: 0x006FE77D
 	public void SetHeadBaseYaw(float angle)
 	{
 		this.HeadBaseYaw = MathUtils.Instance.WrapAngle(angle);
 	}
 
-	// Token: 0x0601A1A5 RID: 106917 RVA: 0x006D863C File Offset: 0x006D683C
+	// Token: 0x06017AEE RID: 97006 RVA: 0x00700590 File Offset: 0x006FE790
 	[NullableContext(2)]
 	public void SetSightTargetItem(BaseActorComponent target)
 	{
@@ -343,7 +359,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		this.SightTargetItemId = ((target != null) ? target.Entity.Id : 0);
 	}
 
-	// Token: 0x0601A1A6 RID: 106918 RVA: 0x006D8663 File Offset: 0x006D6863
+	// Token: 0x06017AEF RID: 97007 RVA: 0x007005B7 File Offset: 0x006FE7B7
 	[NullableContext(2)]
 	public BaseActorComponent GetSightTargetItem()
 	{
@@ -359,7 +375,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return component;
 	}
 
-	// Token: 0x0601A1A7 RID: 106919 RVA: 0x006D8689 File Offset: 0x006D6889
+	// Token: 0x06017AF0 RID: 97008 RVA: 0x007005DD File Offset: 0x006FE7DD
 	[NullableContext(2)]
 	public void SetSightTargetPoint(global::Vector point)
 	{
@@ -368,14 +384,14 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		this.SightTargetPoint = point;
 	}
 
-	// Token: 0x0601A1A8 RID: 106920 RVA: 0x006D86A0 File Offset: 0x006D68A0
+	// Token: 0x06017AF1 RID: 97009 RVA: 0x007005F4 File Offset: 0x006FE7F4
 	[NullableContext(2)]
 	public global::Vector GetSightTargetPoint()
 	{
 		return this.SightTargetPoint;
 	}
 
-	// Token: 0x0601A1A9 RID: 106921 RVA: 0x006D86A8 File Offset: 0x006D68A8
+	// Token: 0x06017AF2 RID: 97010 RVA: 0x007005FC File Offset: 0x006FE7FC
 	[NullableContext(2)]
 	public void SetSightTargetActor(AActor actor)
 	{
@@ -384,7 +400,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		this.SightTargetActor = ((actor != null && actor.IsValid()) ? actor : null);
 	}
 
-	// Token: 0x0601A1AA RID: 106922 RVA: 0x006D86CD File Offset: 0x006D68CD
+	// Token: 0x06017AF3 RID: 97011 RVA: 0x00700621 File Offset: 0x006FE821
 	[NullableContext(2)]
 	public AActor GetSightTargetActor()
 	{
@@ -397,25 +413,25 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return this.SightTargetActor;
 	}
 
-	// Token: 0x0601A1AB RID: 106923 RVA: 0x006D86F5 File Offset: 0x006D68F5
+	// Token: 0x06017AF4 RID: 97012 RVA: 0x00700649 File Offset: 0x006FE849
 	public FVector GetSightDirect()
 	{
 		return this.SightDirect.ToUeVectorOld();
 	}
 
-	// Token: 0x0601A1AC RID: 106924 RVA: 0x006D8702 File Offset: 0x006D6902
+	// Token: 0x06017AF5 RID: 97013 RVA: 0x00700656 File Offset: 0x006FE856
 	public float GetHeadBaseYawBuffer()
 	{
 		return this.HeadBaseYawBuffer;
 	}
 
-	// Token: 0x0601A1AD RID: 106925 RVA: 0x006D870A File Offset: 0x006D690A
+	// Token: 0x06017AF6 RID: 97014 RVA: 0x0070065E File Offset: 0x006FE85E
 	public global::Vector GetTsSightDirect()
 	{
 		return this.SightDirect;
 	}
 
-	// Token: 0x0601A1AE RID: 106926 RVA: 0x006D8712 File Offset: 0x006D6912
+	// Token: 0x06017AF7 RID: 97015 RVA: 0x00700666 File Offset: 0x006FE866
 	public global::Vector GetWorldSightDirect(global::Vector outV)
 	{
 		if (this.Mesh == null)
@@ -428,7 +444,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return outV;
 	}
 
-	// Token: 0x0601A1AF RID: 106927 RVA: 0x006D8751 File Offset: 0x006D6951
+	// Token: 0x06017AF8 RID: 97016 RVA: 0x007006A5 File Offset: 0x006FE8A5
 	public global::Vector GetWorldDefaultSightDirect(global::Vector outV)
 	{
 		if (this.Mesh == null)
@@ -441,7 +457,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return outV;
 	}
 
-	// Token: 0x0601A1B0 RID: 106928 RVA: 0x006D8790 File Offset: 0x006D6990
+	// Token: 0x06017AF9 RID: 97017 RVA: 0x007006E4 File Offset: 0x006FE8E4
 	public global::Vector GetBoneWorldLocation(FName boneName, global::Vector outV)
 	{
 		if (this.Mesh != null)
@@ -452,13 +468,13 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return outV;
 	}
 
-	// Token: 0x0601A1B1 RID: 106929 RVA: 0x006D87BB File Offset: 0x006D69BB
+	// Token: 0x06017AFA RID: 97018 RVA: 0x0070070F File Offset: 0x006FE90F
 	public Vector2D GetTsLookAt()
 	{
 		return this.LookAtBlendSpaceVector2D;
 	}
 
-	// Token: 0x0601A1B2 RID: 106930 RVA: 0x006D87C4 File Offset: 0x006D69C4
+	// Token: 0x06017AFB RID: 97019 RVA: 0x00700718 File Offset: 0x006FE918
 	[return: Nullable(2)]
 	public string GetMontageResPathByName(string montageName)
 	{
@@ -479,7 +495,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return null;
 	}
 
-	// Token: 0x0601A1B3 RID: 106931 RVA: 0x006D8848 File Offset: 0x006D6A48
+	// Token: 0x06017AFC RID: 97020 RVA: 0x0070079C File Offset: 0x006FE99C
 	protected unsafe void CheckNpcAnimationAssets()
 	{
 		if (!GlobalData.IsPlayInEditor)
@@ -531,7 +547,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x0601A1B4 RID: 106932 RVA: 0x006D89A8 File Offset: 0x006D6BA8
+	// Token: 0x06017AFD RID: 97021 RVA: 0x007008FC File Offset: 0x006FEAFC
 	protected virtual void GetAnimInstanceFromMesh()
 	{
 		this.CheckLinkAnimInstance();
@@ -544,7 +560,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		this.SpecialAnimInstanceInternal = this.Mesh.GetLinkedAnimGraphInstanceByTag(CharacterNameDefines.Instance.ABP_SPECIAL);
 	}
 
-	// Token: 0x0601A1B5 RID: 106933 RVA: 0x006D8A18 File Offset: 0x006D6C18
+	// Token: 0x06017AFE RID: 97022 RVA: 0x0070096C File Offset: 0x006FEB6C
 	protected void StartAnimInstance()
 	{
 		UKuroAnimInstance ukuroAnimInstance = this.MainAnimInstanceInternal as UKuroAnimInstance;
@@ -563,7 +579,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		this.StartAllAttachedAnimInstance();
 	}
 
-	// Token: 0x0601A1B6 RID: 106934 RVA: 0x006D8A60 File Offset: 0x006D6C60
+	// Token: 0x06017AFF RID: 97023 RVA: 0x007009B4 File Offset: 0x006FEBB4
 	protected void ClampSightDirect(global::Vector inV, global::Vector outV)
 	{
 		double num = inV.Z / inV.Size();
@@ -580,7 +596,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		outV.Z = num;
 	}
 
-	// Token: 0x0601A1B7 RID: 106935 RVA: 0x006D8B30 File Offset: 0x006D6D30
+	// Token: 0x06017B00 RID: 97024 RVA: 0x00700A84 File Offset: 0x006FEC84
 	private void StartAllAttachedAnimInstance()
 	{
 		TArray<UActorComponent> tarray = this.ActorComp.Actor.K2_GetComponentsByClass(USkeletalMeshComponent.StaticClass());
@@ -611,7 +627,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x0601A1B8 RID: 106936 RVA: 0x006D8BD4 File Offset: 0x006D6DD4
+	// Token: 0x06017B01 RID: 97025 RVA: 0x00700B28 File Offset: 0x006FED28
 	private void CheckLinkAnimInstance()
 	{
 		if (this.Actor.Mesh.GetLinkedAnimGraphInstanceByTag(FNameUtil.NONE) != null)
@@ -643,7 +659,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x0601A1B9 RID: 106937 RVA: 0x006D8C88 File Offset: 0x006D6E88
+	// Token: 0x06017B02 RID: 97026 RVA: 0x00700BDC File Offset: 0x006FEDDC
 	public static void LerpDirect2dByMaxAngle(global::Vector from, global::Vector to, float maxAngle, global::Vector outV, bool noLimitForXAngle = false)
 	{
 		double num = MathUtils.Instance.GetAngleByVector2D(from);
@@ -685,7 +701,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		outV.Y = Math.Sin(num8 * 0.01745329238474369) * num10;
 	}
 
-	// Token: 0x0601A1BA RID: 106938 RVA: 0x006D8DD0 File Offset: 0x006D6FD0
+	// Token: 0x06017B03 RID: 97027 RVA: 0x00700D24 File Offset: 0x006FEF24
 	public static void LerpVector2dByAlpha(global::Vector from, global::Vector to, float alpha, global::Vector outV, bool noLimitForXAngle = false)
 	{
 		double num = MathUtils.Instance.GetAngleByVector2D(from);
@@ -723,18 +739,18 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		outV.Y = Math.Sin(num7 * 0.01745329238474369) * num9;
 	}
 
-	// Token: 0x0601A1BB RID: 106939 RVA: 0x006D8EF9 File Offset: 0x006D70F9
+	// Token: 0x06017B04 RID: 97028 RVA: 0x00700E4D File Offset: 0x006FF04D
 	protected virtual void InitBaseInfo()
 	{
 	}
 
-	// Token: 0x0601A1BC RID: 106940 RVA: 0x006D8EFB File Offset: 0x006D70FB
+	// Token: 0x06017B05 RID: 97029 RVA: 0x00700E4F File Offset: 0x006FF04F
 	public EVisibilityBasedAnimTickOption GetAnimDefaultTickOption()
 	{
 		return this.DefaultVisibilityBasedAnimTickOption;
 	}
 
-	// Token: 0x0601A1BD RID: 106941 RVA: 0x006D8F04 File Offset: 0x006D7104
+	// Token: 0x06017B06 RID: 97030 RVA: 0x00700E58 File Offset: 0x006FF058
 	public bool StartForceDisableAnimOptimization(EForceDisableAnimOptimization reason, bool enableAutoCancel = true)
 	{
 		if (this.ForceDisableAnimOptimizationSet.Contains(reason))
@@ -759,7 +775,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return true;
 	}
 
-	// Token: 0x0601A1BE RID: 106942 RVA: 0x006D8FAC File Offset: 0x006D71AC
+	// Token: 0x06017B07 RID: 97031 RVA: 0x00700F00 File Offset: 0x006FF100
 	public bool StartForceDisableAnimOptimization2(EForceDisableAnimOptimization reason)
 	{
 		if (this.ForceDisableAnimOptimizationSet.Contains(reason))
@@ -777,7 +793,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return true;
 	}
 
-	// Token: 0x0601A1BF RID: 106943 RVA: 0x006D9009 File Offset: 0x006D7209
+	// Token: 0x06017B08 RID: 97032 RVA: 0x00700F5D File Offset: 0x006FF15D
 	public void CancelForceDisableAnimOptimization(EForceDisableAnimOptimization reason)
 	{
 		if (!this.ForceDisableAnimOptimizationSet.Remove(reason))
@@ -787,7 +803,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		this.RefreshAnimOptimization();
 	}
 
-	// Token: 0x0601A1C0 RID: 106944 RVA: 0x006D9020 File Offset: 0x006D7220
+	// Token: 0x06017B09 RID: 97033 RVA: 0x00700F74 File Offset: 0x006FF174
 	public void RefreshAnimOptimization()
 	{
 		if (this.Actor == null)
@@ -816,7 +832,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x0601A1C1 RID: 106945 RVA: 0x006D90DC File Offset: 0x006D72DC
+	// Token: 0x06017B0A RID: 97034 RVA: 0x00701030 File Offset: 0x006FF230
 	public void SetNoUpdateMeshes(HashSet<USkeletalMeshComponent> meshes)
 	{
 		if (this.NoUpdateMeshes == null)
@@ -834,7 +850,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		this.RefreshAnimOptimization();
 	}
 
-	// Token: 0x0601A1C2 RID: 106946 RVA: 0x006D9158 File Offset: 0x006D7358
+	// Token: 0x06017B0B RID: 97035 RVA: 0x007010AC File Offset: 0x006FF2AC
 	protected EVisibilityBasedAnimTickOption RefreshVisibilityBasedAnimTickOption(bool forceDisableAnimOptimization, bool inFight)
 	{
 		EVisibilityBasedAnimTickOption evisibilityBasedAnimTickOption = this.DefaultVisibilityBasedAnimTickOption;
@@ -853,7 +869,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		return evisibilityBasedAnimTickOption;
 	}
 
-	// Token: 0x0601A1C3 RID: 106947 RVA: 0x006D91D0 File Offset: 0x006D73D0
+	// Token: 0x06017B0C RID: 97036 RVA: 0x00701124 File Offset: 0x006FF324
 	public void UpdateLoopState(UAnimMontage montage, bool? isLoop)
 	{
 		if (isLoop == null)
@@ -903,7 +919,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x0601A1C4 RID: 106948 RVA: 0x006D92E4 File Offset: 0x006D74E4
+	// Token: 0x06017B0D RID: 97037 RVA: 0x00701238 File Offset: 0x006FF438
 	public void StopMontageForLoopState(UAnimMontage montage, bool singleSecForceStop = true)
 	{
 		TArray<FCompositeSection> compositeSections = montage.CompositeSections;
@@ -933,7 +949,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		this.UpdateLoopState(montage, new bool?(false));
 	}
 
-	// Token: 0x0601A1C5 RID: 106949 RVA: 0x006D9390 File Offset: 0x006D7590
+	// Token: 0x06017B0E RID: 97038 RVA: 0x007012E4 File Offset: 0x006FF4E4
 	protected override void OnTick(float delta)
 	{
 		foreach (MontageManager montageManager in this.MontageManagerMap.Values)
@@ -942,7 +958,7 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 		}
 	}
 
-	// Token: 0x0601A1C6 RID: 106950 RVA: 0x006D93E8 File Offset: 0x006D75E8
+	// Token: 0x06017B0F RID: 97039 RVA: 0x0070133C File Offset: 0x006FF53C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -950,334 +966,317 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 			return false;
 		}
 		BaseAnimationComponent baseAnimationComponent = (BaseAnimationComponent)componentTemplate;
-		if (base.CanResetComponentProperty("<Actor>k__BackingField"))
+		if (baseAnimationComponent.Actor == null)
 		{
-			if (baseAnimationComponent.Actor == null)
-			{
-				this.Actor = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsBaseCharacter>(this.Actor), "<Actor>k__BackingField"))
-			{
-				return false;
-			}
+			this.Actor = null;
 		}
-		if (base.CanResetComponentProperty("Mesh"))
-		{
-			if (baseAnimationComponent.Mesh == null)
-			{
-				this.Mesh = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.Mesh), "Mesh"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ActorComp"))
-		{
-			if (baseAnimationComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseCharacterComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SightTargetItemId"))
-		{
-			this.SightTargetItemId = baseAnimationComponent.SightTargetItemId;
-		}
-		if (base.CanResetComponentProperty("SightTargetPoint"))
-		{
-			if (baseAnimationComponent.SightTargetPoint == null)
-			{
-				this.SightTargetPoint = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SightTargetPoint), "SightTargetPoint"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SightTargetActor"))
-		{
-			if (baseAnimationComponent.SightTargetActor == null)
-			{
-				this.SightTargetActor = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.SightTargetActor), "SightTargetActor"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("HeadBaseYaw"))
-		{
-			this.HeadBaseYaw = baseAnimationComponent.HeadBaseYaw;
-		}
-		if (base.CanResetComponentProperty("HeadBaseYawBuffer"))
-		{
-			this.HeadBaseYawBuffer = baseAnimationComponent.HeadBaseYawBuffer;
-		}
-		if (base.CanResetComponentProperty("EnableSightDirectInternal"))
-		{
-			this.EnableSightDirectInternal = baseAnimationComponent.EnableSightDirectInternal;
-		}
-		if (base.CanResetComponentProperty("IgnoreMontageBlinkCurve"))
-		{
-			this.IgnoreMontageBlinkCurve = baseAnimationComponent.IgnoreMontageBlinkCurve;
-		}
-		if (base.CanResetComponentProperty("DisableBlink"))
-		{
-			this.DisableBlink = baseAnimationComponent.DisableBlink;
-		}
-		if (base.CanResetComponentProperty("DisableHumanIk"))
-		{
-			this.DisableHumanIk = baseAnimationComponent.DisableHumanIk;
-		}
-		if (base.CanResetComponentProperty("XAngleLimits"))
-		{
-			if (baseAnimationComponent.XAngleLimits == null)
-			{
-				this.XAngleLimits = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<float[]>(this.XAngleLimits), "XAngleLimits"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("YAngleLimits"))
-		{
-			if (baseAnimationComponent.YAngleLimits == null)
-			{
-				this.YAngleLimits = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<float[]>(this.YAngleLimits), "YAngleLimits"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("NoLimitForXAngle"))
-		{
-			this.NoLimitForXAngle = baseAnimationComponent.NoLimitForXAngle;
-		}
-		if (base.CanResetComponentProperty("SightDirect") && baseAnimationComponent.SightDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SightDirect), "SightDirect"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Actor), "Actor"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LookAtBlendSpaceVector2D"))
+		if (baseAnimationComponent.Mesh == null)
 		{
-			if (baseAnimationComponent.LookAtBlendSpaceVector2D == null)
-			{
-				this.LookAtBlendSpaceVector2D = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector2D>(this.LookAtBlendSpaceVector2D), "LookAtBlendSpaceVector2D"))
-			{
-				return false;
-			}
+			this.Mesh = null;
 		}
-		if (base.CanResetComponentProperty("EnableBlendSpaceLookAtInner"))
-		{
-			this.EnableBlendSpaceLookAtInner = baseAnimationComponent.EnableBlendSpaceLookAtInner;
-		}
-		if (base.CanResetComponentProperty("SightDirect2") && baseAnimationComponent.SightDirect2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SightDirect2), "SightDirect2"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Mesh), "Mesh"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SightDirectIsEqual"))
+		if (baseAnimationComponent.ActorComp == null)
 		{
-			this.SightDirectIsEqual = baseAnimationComponent.SightDirectIsEqual;
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("ShellAnimInstanceInternal"))
-		{
-			if (baseAnimationComponent.ShellAnimInstanceInternal == null)
-			{
-				this.ShellAnimInstanceInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimInstance>(this.ShellAnimInstanceInternal), "ShellAnimInstanceInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MainAnimInstanceInternal"))
-		{
-			if (baseAnimationComponent.MainAnimInstanceInternal == null)
-			{
-				this.MainAnimInstanceInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimInstance>(this.MainAnimInstanceInternal), "MainAnimInstanceInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SpecialAnimInstanceInternal"))
-		{
-			if (baseAnimationComponent.SpecialAnimInstanceInternal == null)
-			{
-				this.SpecialAnimInstanceInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimInstance>(this.SpecialAnimInstanceInternal), "SpecialAnimInstanceInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsPlayer"))
-		{
-			this.IsPlayer = baseAnimationComponent.IsPlayer;
-		}
-		if (base.CanResetComponentProperty("ForceDisableAnimOptimizationSet") && baseAnimationComponent.ForceDisableAnimOptimizationSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EForceDisableAnimOptimization>(this.ForceDisableAnimOptimizationSet), "ForceDisableAnimOptimizationSet"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DefaultVisibilityBasedAnimTickOption"))
+		this.SightTargetItemId = baseAnimationComponent.SightTargetItemId;
+		if (baseAnimationComponent.SightTargetPoint == null)
 		{
-			this.DefaultVisibilityBasedAnimTickOption = baseAnimationComponent.DefaultVisibilityBasedAnimTickOption;
+			this.SightTargetPoint = null;
 		}
-		if (base.CanResetComponentProperty("MontageManagerMap") && baseAnimationComponent.MontageManagerMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EPerformGroup, MontageManager>>(this.MontageManagerMap), "MontageManagerMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SightTargetPoint), "SightTargetPoint"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("NoUpdateMeshes"))
+		if (baseAnimationComponent.SightTargetActor == null)
 		{
-			if (baseAnimationComponent.NoUpdateMeshes == null)
-			{
-				this.NoUpdateMeshes = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.NoUpdateMeshes), "NoUpdateMeshes"))
-			{
-				return false;
-			}
+			this.SightTargetActor = null;
 		}
-		if (base.CanResetComponentProperty("CurMontageTimerHandle"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SightTargetActor), "SightTargetActor"))
 		{
-			if (baseAnimationComponent.CurMontageTimerHandle == null)
-			{
-				this.CurMontageTimerHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.CurMontageTimerHandle), "CurMontageTimerHandle"))
-			{
-				return false;
-			}
+			return false;
+		}
+		this.HeadBaseYaw = baseAnimationComponent.HeadBaseYaw;
+		this.HeadBaseYawBuffer = baseAnimationComponent.HeadBaseYawBuffer;
+		this.EnableSightDirectInternal = baseAnimationComponent.EnableSightDirectInternal;
+		this.IgnoreMontageBlinkCurve = baseAnimationComponent.IgnoreMontageBlinkCurve;
+		this.DisableBlink = baseAnimationComponent.DisableBlink;
+		this.DisableHumanIk = baseAnimationComponent.DisableHumanIk;
+		if (baseAnimationComponent.XAngleLimits == null)
+		{
+			this.XAngleLimits = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.XAngleLimits), "XAngleLimits"))
+		{
+			return false;
+		}
+		if (baseAnimationComponent.YAngleLimits == null)
+		{
+			this.YAngleLimits = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.YAngleLimits), "YAngleLimits"))
+		{
+			return false;
+		}
+		this.NoLimitForXAngle = baseAnimationComponent.NoLimitForXAngle;
+		if (baseAnimationComponent.SightDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SightDirect), "SightDirect"))
+		{
+			return false;
+		}
+		if (baseAnimationComponent.LookAtBlendSpaceVector2D == null)
+		{
+			this.LookAtBlendSpaceVector2D = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LookAtBlendSpaceVector2D), "LookAtBlendSpaceVector2D"))
+		{
+			return false;
+		}
+		this.EnableBlendSpaceLookAtInner = baseAnimationComponent.EnableBlendSpaceLookAtInner;
+		this.CachedHasKuroRootMotionFrame = baseAnimationComponent.CachedHasKuroRootMotionFrame;
+		this.CachedHasKuroRootMotion = baseAnimationComponent.CachedHasKuroRootMotion;
+		if (baseAnimationComponent.SightDirect2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SightDirect2), "SightDirect2"))
+		{
+			return false;
+		}
+		this.SightDirectIsEqual = baseAnimationComponent.SightDirectIsEqual;
+		if (baseAnimationComponent.ShellAnimInstanceInternal == null)
+		{
+			this.ShellAnimInstanceInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ShellAnimInstanceInternal), "ShellAnimInstanceInternal"))
+		{
+			return false;
+		}
+		if (baseAnimationComponent.MainAnimInstanceInternal == null)
+		{
+			this.MainAnimInstanceInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MainAnimInstanceInternal), "MainAnimInstanceInternal"))
+		{
+			return false;
+		}
+		if (baseAnimationComponent.SpecialAnimInstanceInternal == null)
+		{
+			this.SpecialAnimInstanceInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SpecialAnimInstanceInternal), "SpecialAnimInstanceInternal"))
+		{
+			return false;
+		}
+		this.IsPlayer = baseAnimationComponent.IsPlayer;
+		if (baseAnimationComponent.ForceDisableAnimOptimizationSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EForceDisableAnimOptimization>(this.ForceDisableAnimOptimizationSet), "ForceDisableAnimOptimizationSet"))
+		{
+			return false;
+		}
+		this.DefaultVisibilityBasedAnimTickOption = baseAnimationComponent.DefaultVisibilityBasedAnimTickOption;
+		if (baseAnimationComponent.MontageManagerMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MontageManagerMap), "MontageManagerMap"))
+		{
+			return false;
+		}
+		if (baseAnimationComponent.NoUpdateMeshes == null)
+		{
+			this.NoUpdateMeshes = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.NoUpdateMeshes), "NoUpdateMeshes"))
+		{
+			return false;
+		}
+		if (baseAnimationComponent.CurMontageTimerHandle == null)
+		{
+			this.CurMontageTimerHandle = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurMontageTimerHandle), "CurMontageTimerHandle"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400C5F1 RID: 50673
+	// Token: 0x170024C2 RID: 9410
+	// (get) Token: 0x06017B10 RID: 97040 RVA: 0x007016BB File Offset: 0x006FF8BB
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170024C3 RID: 9411
+	// (get) Token: 0x06017B11 RID: 97041 RVA: 0x007016BE File Offset: 0x006FF8BE
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170024C4 RID: 9412
+	// (get) Token: 0x06017B12 RID: 97042 RVA: 0x007016C1 File Offset: 0x006FF8C1
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170024C5 RID: 9413
+	// (get) Token: 0x06017B13 RID: 97043 RVA: 0x007016C4 File Offset: 0x006FF8C4
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170024C6 RID: 9414
+	// (get) Token: 0x06017B14 RID: 97044 RVA: 0x007016C7 File Offset: 0x006FF8C7
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C9BE RID: 51646
 	private const int SPLIT_LINE = -90;
 
-	// Token: 0x0400C5F2 RID: 50674
+	// Token: 0x0400C9BF RID: 51647
 	private const int FORCE_DISABLE_ANIM_OPTIMIZATION_TIME = 100;
 
-	// Token: 0x0400C5F3 RID: 50675
+	// Token: 0x0400C9C0 RID: 51648
 	private const string RUN_F = "Run_F";
 
-	// Token: 0x0400C5F4 RID: 50676
+	// Token: 0x0400C9C1 RID: 51649
 	private const string RUN_POSE_F = "Run_Pose_F";
 
-	// Token: 0x0400C5F5 RID: 50677
+	// Token: 0x0400C9C2 RID: 51650
 	private const string WALK_F = "Walk_F";
 
-	// Token: 0x0400C5F6 RID: 50678
+	// Token: 0x0400C9C3 RID: 51651
 	private const string WALK_POSE_F = "Walk_Pose_F";
 
-	// Token: 0x0400C5F7 RID: 50679
+	// Token: 0x0400C9C4 RID: 51652
 	[Nullable(2)]
 	private static float[] _xAngleLimits;
 
-	// Token: 0x0400C5F8 RID: 50680
+	// Token: 0x0400C9C5 RID: 51653
 	[Nullable(2)]
 	private static float[] _yAngleLimits;
 
-	// Token: 0x0400C5FB RID: 50683
+	// Token: 0x0400C9C7 RID: 51655
 	[Nullable(2)]
 	protected USkeletalMeshComponent Mesh;
 
-	// Token: 0x0400C5FC RID: 50684
+	// Token: 0x0400C9C8 RID: 51656
 	[Nullable(2)]
 	protected BaseCharacterComponent ActorComp;
 
-	// Token: 0x0400C5FD RID: 50685
+	// Token: 0x0400C9C9 RID: 51657
 	protected int SightTargetItemId;
 
-	// Token: 0x0400C5FE RID: 50686
+	// Token: 0x0400C9CA RID: 51658
 	[Nullable(2)]
 	protected global::Vector SightTargetPoint;
 
-	// Token: 0x0400C5FF RID: 50687
+	// Token: 0x0400C9CB RID: 51659
 	[Nullable(2)]
 	protected AActor SightTargetActor;
 
-	// Token: 0x0400C600 RID: 50688
+	// Token: 0x0400C9CC RID: 51660
 	protected float HeadBaseYaw;
 
-	// Token: 0x0400C601 RID: 50689
+	// Token: 0x0400C9CD RID: 51661
 	protected float HeadBaseYawBuffer;
 
-	// Token: 0x0400C602 RID: 50690
+	// Token: 0x0400C9CE RID: 51662
 	protected bool EnableSightDirectInternal;
 
-	// Token: 0x0400C603 RID: 50691
+	// Token: 0x0400C9CF RID: 51663
 	public bool IgnoreMontageBlinkCurve;
 
-	// Token: 0x0400C604 RID: 50692
+	// Token: 0x0400C9D0 RID: 51664
 	public bool DisableBlink;
 
-	// Token: 0x0400C605 RID: 50693
+	// Token: 0x0400C9D1 RID: 51665
 	public bool DisableHumanIk;
 
-	// Token: 0x0400C606 RID: 50694
+	// Token: 0x0400C9D2 RID: 51666
 	private float[] XAngleLimits = new float[2];
 
-	// Token: 0x0400C607 RID: 50695
+	// Token: 0x0400C9D3 RID: 51667
 	private float[] YAngleLimits = new float[2];
 
-	// Token: 0x0400C608 RID: 50696
+	// Token: 0x0400C9D4 RID: 51668
 	private readonly float[] XAngleLimitsDefault = new float[2];
 
-	// Token: 0x0400C609 RID: 50697
+	// Token: 0x0400C9D5 RID: 51669
 	private readonly float[] YAngleLimitsDefault = new float[2];
 
-	// Token: 0x0400C60A RID: 50698
+	// Token: 0x0400C9D6 RID: 51670
 	protected bool NoLimitForXAngle;
 
-	// Token: 0x0400C60B RID: 50699
+	// Token: 0x0400C9D7 RID: 51671
 	protected readonly global::Vector SightDirect = global::Vector.Create();
 
-	// Token: 0x0400C60C RID: 50700
+	// Token: 0x0400C9D8 RID: 51672
 	protected Vector2D LookAtBlendSpaceVector2D = Vector2D.Create();
 
-	// Token: 0x0400C60D RID: 50701
+	// Token: 0x0400C9D9 RID: 51673
 	protected bool EnableBlendSpaceLookAtInner;
 
-	// Token: 0x0400C60E RID: 50702
+	// Token: 0x0400C9DA RID: 51674
+	private int CachedHasKuroRootMotionFrame = -1;
+
+	// Token: 0x0400C9DB RID: 51675
+	private bool CachedHasKuroRootMotion;
+
+	// Token: 0x0400C9DC RID: 51676
 	protected readonly global::Vector SightDirect2 = global::Vector.Create();
 
-	// Token: 0x0400C60F RID: 50703
+	// Token: 0x0400C9DD RID: 51677
 	protected bool SightDirectIsEqual = true;
 
-	// Token: 0x0400C610 RID: 50704
+	// Token: 0x0400C9DE RID: 51678
 	[Nullable(2)]
 	protected UAnimInstance ShellAnimInstanceInternal;
 
-	// Token: 0x0400C611 RID: 50705
+	// Token: 0x0400C9DF RID: 51679
 	[Nullable(2)]
 	protected UAnimInstance MainAnimInstanceInternal;
 
-	// Token: 0x0400C612 RID: 50706
+	// Token: 0x0400C9E0 RID: 51680
 	[Nullable(2)]
 	protected UAnimInstance SpecialAnimInstanceInternal;
 
-	// Token: 0x0400C613 RID: 50707
+	// Token: 0x0400C9E1 RID: 51681
 	protected bool IsPlayer;
 
-	// Token: 0x0400C614 RID: 50708
+	// Token: 0x0400C9E2 RID: 51682
 	protected readonly HashSet<EForceDisableAnimOptimization> ForceDisableAnimOptimizationSet = new HashSet<EForceDisableAnimOptimization>();
 
-	// Token: 0x0400C615 RID: 50709
+	// Token: 0x0400C9E3 RID: 51683
 	protected EVisibilityBasedAnimTickOption DefaultVisibilityBasedAnimTickOption = EVisibilityBasedAnimTickOption.OnlyTickPoseWhenRendered;
 
-	// Token: 0x0400C616 RID: 50710
+	// Token: 0x0400C9E4 RID: 51684
 	private readonly Dictionary<EPerformGroup, MontageManager> MontageManagerMap = new Dictionary<EPerformGroup, MontageManager>();
 
-	// Token: 0x0400C617 RID: 50711
+	// Token: 0x0400C9E5 RID: 51685
 	[Nullable(new byte[]
 	{
 		2,
@@ -1285,11 +1284,11 @@ public class BaseAnimationComponent : EntityComponent, IComponentDependency, ISt
 	})]
 	public HashSet<USkeletalMeshComponent> NoUpdateMeshes;
 
-	// Token: 0x0400C618 RID: 50712
+	// Token: 0x0400C9E6 RID: 51686
 	[StaticVariableRuleIgnore]
 	private static readonly Quat TmpSightQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400C619 RID: 50713
+	// Token: 0x0400C9E7 RID: 51687
 	[Nullable(2)]
 	public TimerHandle CurMontageTimerHandle;
 }

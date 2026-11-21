@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024FB RID: 9467
+	// Token: 0x020027A1 RID: 10145
 	public class ITimeScaleType
 	{
-		// Token: 0x0600D357 RID: 54103 RVA: 0x001F55F6 File Offset: 0x001F37F6
-		[NullableContext(1)]
+		// Token: 0x0600E0B3 RID: 57523 RVA: 0x00210FEE File Offset: 0x0020F1EE
 		public static ITimeScaleType Create(ITimeScaleType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B23 RID: 15139
-		// (get) Token: 0x0600D358 RID: 54104 RVA: 0x001F5615 File Offset: 0x001F3815
+		// Token: 0x17003E1F RID: 15903
+		// (get) Token: 0x0600E0B4 RID: 57524 RVA: 0x0021100D File Offset: 0x0020F20D
 		public virtual ETimeScaleType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073E1 RID: 29665
+		// Token: 0x04007A33 RID: 31283
 		private ITimeScaleType Instance;
 	}
 }

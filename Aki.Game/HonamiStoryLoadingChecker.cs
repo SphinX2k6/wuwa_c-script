@@ -1,16 +1,16 @@
 ﻿using System;
 using CSharpScript.Game.Ui;
 
-// Token: 0x0200206B RID: 8299
+// Token: 0x0200153E RID: 5438
 public class HonamiStoryLoadingChecker : ISpecialCustomLoadingTypeChecker
 {
-	// Token: 0x06010571 RID: 66929 RVA: 0x003FC995 File Offset: 0x003FAB95
+	// Token: 0x0600D9D9 RID: 55769 RVA: 0x00408DDD File Offset: 0x00406FDD
 	public bool CanHandle(int instanceId)
 	{
 		return HonamiStoryUtil.CheckEnterOrExitHonamiStoryDungeon(instanceId);
 	}
 
-	// Token: 0x06010572 RID: 66930 RVA: 0x003FC99D File Offset: 0x003FAB9D
+	// Token: 0x0600D9DA RID: 55770 RVA: 0x00408DE5 File Offset: 0x00406FE5
 	public EUiViewName? GetLoadingViewName(int instanceId)
 	{
 		return HonamiStoryModel.Instance.GetCurLoadViewName();

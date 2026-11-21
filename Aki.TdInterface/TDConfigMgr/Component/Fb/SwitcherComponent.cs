@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action.Fb;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A58 RID: 2648
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B21 RID: 2849
 	public class SwitcherComponent : InteractiveComponent
 	{
-		// Token: 0x06003CFB RID: 15611 RVA: 0x0009CD20 File Offset: 0x0009AF20
+		// Token: 0x0600411B RID: 16667 RVA: 0x000A6198 File Offset: 0x000A4398
 		public static SwitcherComponent Create(ISwitcherComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E08 RID: 3592
-		// (get) Token: 0x06003CFC RID: 15612 RVA: 0x0009CD40 File Offset: 0x0009AF40
+		// Token: 0x17000ED4 RID: 3796
+		// (get) Token: 0x0600411C RID: 16668 RVA: 0x000A61B8 File Offset: 0x000A43B8
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E09 RID: 3593
-		// (get) Token: 0x06003CFD RID: 15613 RVA: 0x0009CD76 File Offset: 0x0009AF76
+		// Token: 0x17000ED5 RID: 3797
+		// (get) Token: 0x0600411D RID: 16669 RVA: 0x000A61EE File Offset: 0x000A43EE
 		public override string Content
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E0A RID: 3594
-		// (get) Token: 0x06003CFE RID: 15614 RVA: 0x0009CD83 File Offset: 0x0009AF83
+		// Token: 0x17000ED6 RID: 3798
+		// (get) Token: 0x0600411E RID: 16670 RVA: 0x000A61FB File Offset: 0x000A43FB
 		public override string Icon
 		{
 			get
@@ -58,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E0B RID: 3595
-		// (get) Token: 0x06003CFF RID: 15615 RVA: 0x0009CD90 File Offset: 0x0009AF90
+		// Token: 0x17000ED7 RID: 3799
+		// (get) Token: 0x0600411F RID: 16671 RVA: 0x000A6208 File Offset: 0x000A4408
 		public override bool? EdIsLocked
 		{
 			get
@@ -68,8 +65,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E0C RID: 3596
-		// (get) Token: 0x06003D00 RID: 15616 RVA: 0x0009CDA8 File Offset: 0x0009AFA8
+		// Token: 0x17000ED8 RID: 3800
+		// (get) Token: 0x06004120 RID: 16672 RVA: 0x000A6220 File Offset: 0x000A4420
 		public virtual List<ActionInfo> OnActions
 		{
 			get
@@ -89,8 +86,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E0D RID: 3597
-		// (get) Token: 0x06003D01 RID: 15617 RVA: 0x0009CE14 File Offset: 0x0009B014
+		// Token: 0x17000ED9 RID: 3801
+		// (get) Token: 0x06004121 RID: 16673 RVA: 0x000A628C File Offset: 0x000A448C
 		public virtual List<ActionInfo> OffActions
 		{
 			get
@@ -110,19 +107,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040021FB RID: 8699
+		// Token: 0x04002412 RID: 9234
 		private ISwitcherComponent Instance;
 
-		// Token: 0x040021FC RID: 8700
+		// Token: 0x04002413 RID: 9235
 		private List<ActionInfo> _OnActionsCache;
 
-		// Token: 0x040021FD RID: 8701
+		// Token: 0x04002414 RID: 9236
 		private bool _OnActionsInited;
 
-		// Token: 0x040021FE RID: 8702
+		// Token: 0x04002415 RID: 9237
 		private List<ActionInfo> _OffActionsCache;
 
-		// Token: 0x040021FF RID: 8703
+		// Token: 0x04002416 RID: 9238
 		private bool _OffActionsInited;
 	}
 }

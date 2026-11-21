@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F8F RID: 16271
+	// Token: 0x020043D0 RID: 17360
 	public struct IPhotographTarget : IFlatbufferObject
 	{
-		// Token: 0x17007195 RID: 29077
-		// (get) Token: 0x060173CC RID: 95180 RVA: 0x0035A248 File Offset: 0x00358448
+		// Token: 0x17007793 RID: 30611
+		// (get) Token: 0x06018A5B RID: 100955 RVA: 0x00383E60 File Offset: 0x00382060
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060173CD RID: 95181 RVA: 0x0035A255 File Offset: 0x00358455
+		// Token: 0x06018A5C RID: 100956 RVA: 0x00383E6D File Offset: 0x0038206D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060173CE RID: 95182 RVA: 0x0035A25C File Offset: 0x0035845C
+		// Token: 0x06018A5D RID: 100957 RVA: 0x00383E74 File Offset: 0x00382074
 		public static IPhotographTarget GetRootAsIPhotographTarget(ByteBuffer _bb)
 		{
 			return IPhotographTarget.GetRootAsIPhotographTarget(_bb, default(IPhotographTarget));
 		}
 
-		// Token: 0x060173CF RID: 95183 RVA: 0x0035A278 File Offset: 0x00358478
+		// Token: 0x06018A5E RID: 100958 RVA: 0x00383E90 File Offset: 0x00382090
 		public static IPhotographTarget GetRootAsIPhotographTarget(ByteBuffer _bb, IPhotographTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060173D0 RID: 95184 RVA: 0x0035A295 File Offset: 0x00358495
+		// Token: 0x06018A5F RID: 100959 RVA: 0x00383EAD File Offset: 0x003820AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060173D1 RID: 95185 RVA: 0x0035A2A4 File Offset: 0x003584A4
+		// Token: 0x06018A60 RID: 100960 RVA: 0x00383EBC File Offset: 0x003820BC
 		public IPhotographTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007196 RID: 29078
-		// (get) Token: 0x060173D2 RID: 95186 RVA: 0x0035A2B4 File Offset: 0x003584B4
+		// Token: 0x17007794 RID: 30612
+		// (get) Token: 0x06018A61 RID: 100961 RVA: 0x00383ECC File Offset: 0x003820CC
 		public EPhotographTargetType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060173D3 RID: 95187 RVA: 0x0035A2F0 File Offset: 0x003584F0
+		// Token: 0x06018A62 RID: 100962 RVA: 0x00383F08 File Offset: 0x00382108
 		public static Offset<IPhotographTarget> CreateIPhotographTarget(FlatBufferBuilder builder, EPhotographTargetType Type = EPhotographTargetType.Player)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPhotographTarget.EndIPhotographTarget(builder);
 		}
 
-		// Token: 0x060173D4 RID: 95188 RVA: 0x0035A306 File Offset: 0x00358506
+		// Token: 0x06018A63 RID: 100963 RVA: 0x00383F1E File Offset: 0x0038211E
 		public static void StartIPhotographTarget(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060173D5 RID: 95189 RVA: 0x0035A30F File Offset: 0x0035850F
+		// Token: 0x06018A64 RID: 100964 RVA: 0x00383F27 File Offset: 0x00382127
 		public static void AddType(FlatBufferBuilder builder, EPhotographTargetType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060173D6 RID: 95190 RVA: 0x0035A31A File Offset: 0x0035851A
+		// Token: 0x06018A65 RID: 100965 RVA: 0x00383F32 File Offset: 0x00382132
 		public static Offset<IPhotographTarget> EndIPhotographTarget(FlatBufferBuilder builder)
 		{
 			return new Offset<IPhotographTarget>(builder.EndTable());
 		}
 
-		// Token: 0x060173D7 RID: 95191 RVA: 0x0035A328 File Offset: 0x00358528
+		// Token: 0x06018A66 RID: 100966 RVA: 0x00383F40 File Offset: 0x00382140
 		public IPhotographTargetT UnPack()
 		{
 			IPhotographTargetT photographTargetT = new IPhotographTargetT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return photographTargetT;
 		}
 
-		// Token: 0x060173D8 RID: 95192 RVA: 0x0035A343 File Offset: 0x00358543
+		// Token: 0x06018A67 RID: 100967 RVA: 0x00383F5B File Offset: 0x0038215B
 		public void UnPackTo(IPhotographTargetT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060173D9 RID: 95193 RVA: 0x0035A354 File Offset: 0x00358554
+		// Token: 0x06018A68 RID: 100968 RVA: 0x00383F6C File Offset: 0x0038216C
 		public static Offset<IPhotographTarget> Pack(FlatBufferBuilder builder, IPhotographTargetT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPhotographTarget.CreateIPhotographTarget(builder, _o.Type);
 		}
 
-		// Token: 0x0400B9ED RID: 47597
+		// Token: 0x0400C3D2 RID: 50130
 		private Table __p;
 	}
 }

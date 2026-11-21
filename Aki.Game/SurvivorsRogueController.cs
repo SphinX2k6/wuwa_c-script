@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,13 +12,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02002B81 RID: 11137
+// Token: 0x020020FD RID: 8445
 [NullableContext(2)]
 [Nullable(0)]
 [Controller(0)]
 public class SurvivorsRogueController : UiControllerBase
 {
-	// Token: 0x0601712C RID: 94508 RVA: 0x005DB604 File Offset: 0x005D9804
+	// Token: 0x06014B5D RID: 84829 RVA: 0x00608198 File Offset: 0x00606398
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.SurvivorsInstGlobalDataNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSurvivorsInstGlobalDataNotify));
@@ -31,7 +30,7 @@ public class SurvivorsRogueController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.SurvivorsComboParamUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSurvivorsComboParamUpdateNotify));
 	}
 
-	// Token: 0x0601712D RID: 94509 RVA: 0x005DB6D8 File Offset: 0x005D98D8
+	// Token: 0x06014B5E RID: 84830 RVA: 0x0060826C File Offset: 0x0060646C
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.SurvivorsInstGlobalDataNotify);
@@ -43,33 +42,33 @@ public class SurvivorsRogueController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.SurvivorsComboParamUpdateNotify);
 	}
 
-	// Token: 0x0601712E RID: 94510 RVA: 0x005DB755 File Offset: 0x005D9955
+	// Token: 0x06014B5F RID: 84831 RVA: 0x006082E9 File Offset: 0x006064E9
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 		EventSystem.Instance.Add<int, int>(EEventName.OnInstanceChange, new Action<int, int>(this.OnInstanceChange));
 	}
 
-	// Token: 0x0601712F RID: 94511 RVA: 0x005DB78F File Offset: 0x005D998F
+	// Token: 0x06014B60 RID: 84832 RVA: 0x00608323 File Offset: 0x00606523
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 		EventSystem.Instance.Remove<int, int>(EEventName.OnInstanceChange, new Action<int, int>(this.OnInstanceChange));
 	}
 
-	// Token: 0x06017130 RID: 94512 RVA: 0x005DB7C9 File Offset: 0x005D99C9
+	// Token: 0x06014B61 RID: 84833 RVA: 0x0060835D File Offset: 0x0060655D
 	protected override void OnAddOpenViewCheckFunction()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.SurvivorsTabMainView, new Func<EUiViewName, object, bool>(this.CanOpenSurvivorsTabMainView), "SurvivorsRogueController.CanOpenSurvivorsTabMainView");
 	}
 
-	// Token: 0x06017131 RID: 94513 RVA: 0x005DB7EB File Offset: 0x005D99EB
+	// Token: 0x06014B62 RID: 84834 RVA: 0x0060837F File Offset: 0x0060657F
 	protected override void OnRemoveOpenViewCheckFunction()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.SurvivorsTabMainView, new Func<EUiViewName, object, bool>(this.CanOpenSurvivorsTabMainView));
 	}
 
-	// Token: 0x06017132 RID: 94514 RVA: 0x005DB808 File Offset: 0x005D9A08
+	// Token: 0x06014B63 RID: 84835 RVA: 0x0060839C File Offset: 0x0060659C
 	private bool CanOpenSurvivorsTabMainView(EUiViewName viewName, object param)
 	{
 		KscSubModelBase curSubModel = KuroSimpleCombatController.Instance.CurSubModel;
@@ -92,7 +91,7 @@ public class SurvivorsRogueController : UiControllerBase
 		return result;
 	}
 
-	// Token: 0x06017133 RID: 94515 RVA: 0x005DB854 File Offset: 0x005D9A54
+	// Token: 0x06014B64 RID: 84836 RVA: 0x006083E8 File Offset: 0x006065E8
 	private void OnSurvivorsInstGlobalDataNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		SurvivorsInstGlobalDataNotify survivorsInstGlobalDataNotify = (SurvivorsInstGlobalDataNotify)msg;
@@ -105,14 +104,19 @@ public class SurvivorsRogueController : UiControllerBase
 		commandQueue.InitCommands(survivorsInstGlobalDataNotify.SurvivorsOpDatas);
 	}
 
-	// Token: 0x06017134 RID: 94516 RVA: 0x005DB8D4 File Offset: 0x005D9AD4
+	// Token: 0x06014B65 RID: 84837 RVA: 0x00608468 File Offset: 0x00606668
 	private void OnSurvivorsVarRecordNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		SurvivorsVarRecordNotify survivorsVarRecordNotify = (SurvivorsVarRecordNotify)msg;
-		SurvivorsRogueModel.Instance.BattleData.SetBehaviorTreeVar(survivorsVarRecordNotify.VariableKeyNames.ToDictionary<string, string>());
+		Dictionary<string, string> dictionary = new Dictionary<string, string>();
+		foreach (KeyValuePair<string, string> keyValuePair in survivorsVarRecordNotify.VariableKeyNames)
+		{
+			dictionary[keyValuePair.Key] = keyValuePair.Value;
+		}
+		SurvivorsRogueModel.Instance.BattleData.SetBehaviorTreeVar(dictionary);
 	}
 
-	// Token: 0x06017135 RID: 94517 RVA: 0x005DB904 File Offset: 0x005D9B04
+	// Token: 0x06014B66 RID: 84838 RVA: 0x006084E0 File Offset: 0x006066E0
 	private void OnSurvivorsGainDataUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		SurvivorsGainDataUpdateNotify survivorsGainDataUpdateNotify = (SurvivorsGainDataUpdateNotify)msg;
@@ -131,7 +135,7 @@ public class SurvivorsRogueController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06017136 RID: 94518 RVA: 0x005DB9A0 File Offset: 0x005D9BA0
+	// Token: 0x06014B67 RID: 84839 RVA: 0x0060857C File Offset: 0x0060677C
 	private void OnSurvivorsOpDataUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		SurvivorsOpDataUpdateNotify survivorsOpDataUpdateNotify = (SurvivorsOpDataUpdateNotify)msg;
@@ -156,7 +160,7 @@ public class SurvivorsRogueController : UiControllerBase
 		commandQueue.StartForegroundCommand();
 	}
 
-	// Token: 0x06017137 RID: 94519 RVA: 0x005DBA54 File Offset: 0x005D9C54
+	// Token: 0x06014B68 RID: 84840 RVA: 0x00608630 File Offset: 0x00606830
 	private void OnSurvivorsOpDataForceChangeNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		SurvivorsOpDataForceChangeNotify survivorsOpDataForceChangeNotify = (SurvivorsOpDataForceChangeNotify)msg;
@@ -169,7 +173,7 @@ public class SurvivorsRogueController : UiControllerBase
 		commandQueue.StartForegroundCommand();
 	}
 
-	// Token: 0x06017138 RID: 94520 RVA: 0x005DBA8C File Offset: 0x005D9C8C
+	// Token: 0x06014B69 RID: 84841 RVA: 0x00608668 File Offset: 0x00606868
 	private void OnSurvivorsStepUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		SurvivorsStepUpdateNotify survivorsStepUpdateNotify = (SurvivorsStepUpdateNotify)msg;
@@ -189,14 +193,14 @@ public class SurvivorsRogueController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06017139 RID: 94521 RVA: 0x005DBADC File Offset: 0x005D9CDC
+	// Token: 0x06014B6A RID: 84842 RVA: 0x006086B8 File Offset: 0x006068B8
 	private void OnSurvivorsComboParamUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		SurvivorsComboParamUpdateNotify survivorsComboParamUpdateNotify = (SurvivorsComboParamUpdateNotify)msg;
 		SurvivorsRogueModel.Instance.InitComboEnhanceCfg(survivorsComboParamUpdateNotify.ComboParamInfos);
 	}
 
-	// Token: 0x0601713A RID: 94522 RVA: 0x005DBB00 File Offset: 0x005D9D00
+	// Token: 0x06014B6B RID: 84843 RVA: 0x006086DC File Offset: 0x006068DC
 	private void OnWorldDone()
 	{
 		if (SurvivorsRogueModel.Instance.NeedOpenActivityMainView)
@@ -215,7 +219,7 @@ public class SurvivorsRogueController : UiControllerBase
 		commandQueue.StartForegroundCommand();
 	}
 
-	// Token: 0x0601713B RID: 94523 RVA: 0x005DBB40 File Offset: 0x005D9D40
+	// Token: 0x06014B6C RID: 84844 RVA: 0x0060871C File Offset: 0x0060691C
 	private void OnInstanceChange(int lastInstanceId, int newInstanceId)
 	{
 		InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(newInstanceId);
@@ -227,7 +231,7 @@ public class SurvivorsRogueController : UiControllerBase
 		SkillButtonUiController.Instance.RemoveEventInterface(SurvivorsRogueModel.Instance.BattleData);
 	}
 
-	// Token: 0x0601713C RID: 94524 RVA: 0x005DBBA0 File Offset: 0x005D9DA0
+	// Token: 0x06014B6D RID: 84845 RVA: 0x0060877C File Offset: 0x0060697C
 	private void AddMainViewSplashTask()
 	{
 		SplashScreenTask splashScreenTask = new SplashScreenTask(ESplashScreenSourceModuleType.None, ESplashScreenType.Other, delegate()
@@ -237,7 +241,7 @@ public class SurvivorsRogueController : UiControllerBase
 		SplashScreenController.Instance.PushSplashScreenTask(splashScreenTask, false);
 	}
 
-	// Token: 0x0601713D RID: 94525 RVA: 0x005DBBE0 File Offset: 0x005D9DE0
+	// Token: 0x06014B6E RID: 84846 RVA: 0x006087BC File Offset: 0x006069BC
 	public void RequestEnterStep(ESurvivorsStepType stepType)
 	{
 		SurvivorsStepAdvanceRequest survivorsStepAdvanceRequest = SurvivorsStepAdvanceRequest.Create();
@@ -258,14 +262,14 @@ public class SurvivorsRogueController : UiControllerBase
 			}
 			if (survivorsStepAdvanceResponse.ErrCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(survivorsStepAdvanceResponse.ErrCode, 18453, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(survivorsStepAdvanceResponse.ErrCode, 23962, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x0601713E RID: 94526 RVA: 0x005DBC44 File Offset: 0x005D9E44
+	// Token: 0x06014B6F RID: 84847 RVA: 0x00608820 File Offset: 0x00606A20
 	[NullableContext(1)]
-	public void RequestCommandOperation(int commandIncId, List<int> operationIds, [Nullable(2)] Action<bool> callback = null)
+	public void RequestCommandOperation(int commandIncId, IEnumerable<int> operationIds, [Nullable(2)] Action<bool> callback = null)
 	{
 		SurvivorsOpDoneRequest survivorsOpDoneRequest = SurvivorsOpDoneRequest.Create();
 		survivorsOpDoneRequest.IncId = commandIncId;
@@ -285,7 +289,7 @@ public class SurvivorsRogueController : UiControllerBase
 			}
 			else if (survivorsOpDoneResponse.ErrCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(survivorsOpDoneResponse.ErrCode, 22698, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(survivorsOpDoneResponse.ErrCode, 18127, null, true, true);
 				Action<bool> callback3 = callback;
 				if (callback3 == null)
 				{
@@ -307,7 +311,7 @@ public class SurvivorsRogueController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0601713F RID: 94527 RVA: 0x005DBC94 File Offset: 0x005D9E94
+	// Token: 0x06014B70 RID: 84848 RVA: 0x00608870 File Offset: 0x00606A70
 	public void RequestDataLock(int commandIncId, int dataIncId, bool isLock, Action<bool> callback = null)
 	{
 		SurvivorsLockRequest survivorsLockRequest = SurvivorsLockRequest.Create();
@@ -329,7 +333,7 @@ public class SurvivorsRogueController : UiControllerBase
 			}
 			else if (survivorsLockResponse.ErrCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(survivorsLockResponse.ErrCode, 25907, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(survivorsLockResponse.ErrCode, 24428, null, true, true);
 				Action<bool> callback3 = callback;
 				if (callback3 == null)
 				{
@@ -351,7 +355,7 @@ public class SurvivorsRogueController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06017140 RID: 94528 RVA: 0x005DBCE8 File Offset: 0x005D9EE8
+	// Token: 0x06014B71 RID: 84849 RVA: 0x006088C4 File Offset: 0x00606AC4
 	public void RequestEnterInst(int levelId, int survivorRoleId, int weaponId, bool isInfinite, bool isContinue)
 	{
 		SurvivorsLevel? survivorsLevel = SurvivorsRogueConfig.Instance.GetSurvivorsLevel(levelId);
@@ -377,7 +381,7 @@ public class SurvivorsRogueController : UiControllerBase
 		}, 0, 0, null, null);
 	}
 
-	// Token: 0x06017141 RID: 94529 RVA: 0x005DBD98 File Offset: 0x005D9F98
+	// Token: 0x06014B72 RID: 84850 RVA: 0x00608974 File Offset: 0x00606B74
 	public void RequestInstSettle(bool openSettleView)
 	{
 		SurvivorsResultRequest message = SurvivorsResultRequest.Create();
@@ -391,7 +395,7 @@ public class SurvivorsRogueController : UiControllerBase
 			}
 			if (survivorsResultResponse.ErrCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(survivorsResultResponse.ErrCode, 15576, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(survivorsResultResponse.ErrCode, 24240, null, true, true);
 				EventSystem.Instance.Emit<bool>(EEventName.SurvivorsInstSettle, false);
 				return;
 			}
@@ -404,7 +408,7 @@ public class SurvivorsRogueController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06017142 RID: 94530 RVA: 0x005DBDD8 File Offset: 0x005D9FD8
+	// Token: 0x06014B73 RID: 84851 RVA: 0x006089B4 File Offset: 0x00606BB4
 	public UniTask RequestWeaponInfoUpdate()
 	{
 		SurvivorsRogueController.<RequestWeaponInfoUpdate>d__22 <RequestWeaponInfoUpdate>d__;
@@ -414,7 +418,7 @@ public class SurvivorsRogueController : UiControllerBase
 		return <RequestWeaponInfoUpdate>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017143 RID: 94531 RVA: 0x005DBE14 File Offset: 0x005DA014
+	// Token: 0x06014B74 RID: 84852 RVA: 0x006089F0 File Offset: 0x00606BF0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -429,7 +433,7 @@ public class SurvivorsRogueController : UiControllerBase
 		return <RequestLastFile>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017144 RID: 94532 RVA: 0x005DBE50 File Offset: 0x005DA050
+	// Token: 0x06014B75 RID: 84853 RVA: 0x00608A2C File Offset: 0x00606C2C
 	public void RequestEnterInstByLevelInfo()
 	{
 		SurvivorsActivityDefine.SurvivorsLevelInfo selectLevelInfo = SurvivorsRogueModel.Instance.SelectLevelInfo;
@@ -445,7 +449,7 @@ public class SurvivorsRogueController : UiControllerBase
 		this.RequestEnterInst(selectLevelInfo.LevelId, selectLevelInfo.RoleId, survivorsRole.Value.InitWeapon, selectLevelInfo.IsEndless, selectLevelInfo.IsSaveFile);
 	}
 
-	// Token: 0x06017145 RID: 94533 RVA: 0x005DBEB4 File Offset: 0x005DA0B4
+	// Token: 0x06014B76 RID: 84854 RVA: 0x00608A90 File Offset: 0x00606C90
 	public bool CheckInSurvivorsRogueInstance()
 	{
 		if (!GameModeController.Instance.IsInInstance())
@@ -457,7 +461,7 @@ public class SurvivorsRogueController : UiControllerBase
 		return config != null && config.Value.InstSubType == 41;
 	}
 
-	// Token: 0x06017146 RID: 94534 RVA: 0x005DBF08 File Offset: 0x005DA108
+	// Token: 0x06014B77 RID: 84855 RVA: 0x00608AE4 File Offset: 0x00606CE4
 	public void OpenLeaveInstanceView()
 	{
 		int batch = SurvivorsRogueModel.Instance.BattleData.GetBatch();
@@ -471,7 +475,7 @@ public class SurvivorsRogueController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsRogueExitView, param, null);
 	}
 
-	// Token: 0x06017147 RID: 94535 RVA: 0x005DBF61 File Offset: 0x005DA161
+	// Token: 0x06014B78 RID: 84856 RVA: 0x00608B3D File Offset: 0x00606D3D
 	public void LeaveRogueInstance()
 	{
 		InstanceDungeonEntranceController.Instance.LeaveInstanceDungeonRequest(LeaveInstWay.Default).ContinueWith(delegate(bool success)
@@ -483,7 +487,7 @@ public class SurvivorsRogueController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06017148 RID: 94536 RVA: 0x005DBF94 File Offset: 0x005DA194
+	// Token: 0x06014B79 RID: 84857 RVA: 0x00608B70 File Offset: 0x00606D70
 	public void OpenRogueHelp()
 	{
 		SurvivorsActivityConfig? survivorsActivityConfig;
@@ -495,7 +499,7 @@ public class SurvivorsRogueController : UiControllerBase
 		HelpController.Instance.OpenHelpById(num.Value);
 	}
 
-	// Token: 0x06017149 RID: 94537 RVA: 0x005DBFF0 File Offset: 0x005DA1F0
+	// Token: 0x06014B7A RID: 84858 RVA: 0x00608BCC File Offset: 0x00606DCC
 	public void OpenEnterInstConfirm()
 	{
 		if (SurvivorsRogueModel.Instance.ActivityData.NotTipsEnterInst)
@@ -517,7 +521,7 @@ public class SurvivorsRogueController : UiControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0601714A RID: 94538 RVA: 0x005DC0A8 File Offset: 0x005DA2A8
+	// Token: 0x06014B7B RID: 84859 RVA: 0x00608C84 File Offset: 0x00606E84
 	[NullableContext(0)]
 	public UniTask<bool> TryOpenWeaponUnlockView()
 	{
@@ -528,8 +532,8 @@ public class SurvivorsRogueController : UiControllerBase
 		return <TryOpenWeaponUnlockView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x17001EC7 RID: 7879
-	// (get) Token: 0x0601714B RID: 94539 RVA: 0x005DC0E3 File Offset: 0x005DA2E3
+	// Token: 0x17001F1F RID: 7967
+	// (get) Token: 0x06014B7C RID: 84860 RVA: 0x00608CBF File Offset: 0x00606EBF
 	[Nullable(1)]
 	public static SurvivorsRogueController Instance
 	{
@@ -540,7 +544,7 @@ public class SurvivorsRogueController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601714C RID: 94540 RVA: 0x005DC0EA File Offset: 0x005DA2EA
+	// Token: 0x06014B7D RID: 84861 RVA: 0x00608CC6 File Offset: 0x00606EC6
 	[NullableContext(1)]
 	public static SurvivorsRogueController GetOrCreateInstance()
 	{
@@ -551,7 +555,7 @@ public class SurvivorsRogueController : UiControllerBase
 		return SurvivorsRogueController._Instance;
 	}
 
-	// Token: 0x0601714D RID: 94541 RVA: 0x005DC0FE File Offset: 0x005DA2FE
+	// Token: 0x06014B7E RID: 84862 RVA: 0x00608CDA File Offset: 0x00606EDA
 	public static bool CreateInstance()
 	{
 		if (SurvivorsRogueController._Instance != null)
@@ -562,23 +566,23 @@ public class SurvivorsRogueController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0601714E RID: 94542 RVA: 0x005DC114 File Offset: 0x005DA314
+	// Token: 0x06014B7F RID: 84863 RVA: 0x00608CF0 File Offset: 0x00606EF0
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601714F RID: 94543 RVA: 0x005DC116 File Offset: 0x005DA316
+	// Token: 0x06014B80 RID: 84864 RVA: 0x00608CF2 File Offset: 0x00606EF2
 	public static void ResetStaticDefaultValue()
 	{
 		SurvivorsRogueController._Instance = null;
 	}
 
-	// Token: 0x06017150 RID: 94544 RVA: 0x005DC11E File Offset: 0x005DA31E
+	// Token: 0x06014B81 RID: 84865 RVA: 0x00608CFA File Offset: 0x00606EFA
 	static SurvivorsRogueController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SurvivorsRogueController.CreateStaticDefaultValue), new Action(SurvivorsRogueController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400ACB2 RID: 44210
+	// Token: 0x0400B0B9 RID: 45241
 	private static SurvivorsRogueController _Instance;
 }

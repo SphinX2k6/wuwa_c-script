@@ -4,11 +4,11 @@ using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001FB6 RID: 8118
+// Token: 0x02001478 RID: 5240
 public class OrnamentItemData : ItemDataBase
 {
-	// Token: 0x1700135C RID: 4956
-	// (get) Token: 0x0600FDB6 RID: 64950 RVA: 0x003D923C File Offset: 0x003D743C
+	// Token: 0x17001388 RID: 5000
+	// (get) Token: 0x0600D1DC RID: 53724 RVA: 0x003E4C18 File Offset: 0x003E2E18
 	public Ornament Ornament
 	{
 		get
@@ -17,12 +17,12 @@ public class OrnamentItemData : ItemDataBase
 		}
 	}
 
-	// Token: 0x0600FDB7 RID: 64951 RVA: 0x003D925C File Offset: 0x003D745C
+	// Token: 0x0600D1DD RID: 53725 RVA: 0x003E4C38 File Offset: 0x003E2E38
 	public OrnamentItemData(int configId, int count, InventoryDefine.EItemDataType itemDataType) : base(configId, count, itemDataType)
 	{
 	}
 
-	// Token: 0x0600FDB8 RID: 64952 RVA: 0x003D9268 File Offset: 0x003D7468
+	// Token: 0x0600D1DE RID: 53726 RVA: 0x003E4C44 File Offset: 0x003E2E44
 	[NullableContext(2)]
 	public override TItemConfig GetConfig()
 	{
@@ -34,25 +34,25 @@ public class OrnamentItemData : ItemDataBase
 		return ornamentConfig.GetValueOrDefault();
 	}
 
-	// Token: 0x0600FDB9 RID: 64953 RVA: 0x003D929D File Offset: 0x003D749D
+	// Token: 0x0600D1DF RID: 53727 RVA: 0x003E4C79 File Offset: 0x003E2E79
 	public override InventoryDefine.EItemMainTypeId? GetMainType()
 	{
 		return new InventoryDefine.EItemMainTypeId?(InventoryDefine.EItemMainTypeId.Special);
 	}
 
-	// Token: 0x0600FDBA RID: 64954 RVA: 0x003D92A5 File Offset: 0x003D74A5
+	// Token: 0x0600D1E0 RID: 53728 RVA: 0x003E4C81 File Offset: 0x003E2E81
 	public override InventoryDefine.EItemType? GetType()
 	{
 		return new InventoryDefine.EItemType?(InventoryDefine.EItemType.Ornament);
 	}
 
-	// Token: 0x0600FDBB RID: 64955 RVA: 0x003D92AE File Offset: 0x003D74AE
+	// Token: 0x0600D1E1 RID: 53729 RVA: 0x003E4C8A File Offset: 0x003E2E8A
 	public override int GetMaxStackCount()
 	{
 		return 1;
 	}
 
-	// Token: 0x0600FDBC RID: 64956 RVA: 0x003D92B4 File Offset: 0x003D74B4
+	// Token: 0x0600D1E2 RID: 53730 RVA: 0x003E4C90 File Offset: 0x003E2E90
 	public override int GetQuality()
 	{
 		if (this.GetConfig() == null)
@@ -62,7 +62,7 @@ public class OrnamentItemData : ItemDataBase
 		return this.Ornament.QualityId;
 	}
 
-	// Token: 0x0600FDBD RID: 64957 RVA: 0x003D92DC File Offset: 0x003D74DC
+	// Token: 0x0600D1E3 RID: 53731 RVA: 0x003E4CB8 File Offset: 0x003E2EB8
 	public override int GetSortIndex()
 	{
 		if (this.GetConfig() == null)
@@ -72,7 +72,7 @@ public class OrnamentItemData : ItemDataBase
 		return this.Ornament.SortIndex;
 	}
 
-	// Token: 0x0600FDBE RID: 64958 RVA: 0x003D9304 File Offset: 0x003D7504
+	// Token: 0x0600D1E4 RID: 53732 RVA: 0x003E4CE0 File Offset: 0x003E2EE0
 	public override Span<int> GetItemAccess()
 	{
 		if (this.GetConfig() == null)
@@ -82,44 +82,44 @@ public class OrnamentItemData : ItemDataBase
 		return this.Ornament.GetItemAccessArray();
 	}
 
-	// Token: 0x0600FDBF RID: 64959 RVA: 0x003D9332 File Offset: 0x003D7532
+	// Token: 0x0600D1E5 RID: 53733 RVA: 0x003E4D0E File Offset: 0x003E2F0E
 	public override int GetUseCountLimit()
 	{
 		return 1;
 	}
 
-	// Token: 0x0600FDC0 RID: 64960 RVA: 0x003D9338 File Offset: 0x003D7538
+	// Token: 0x0600D1E6 RID: 53734 RVA: 0x003E4D14 File Offset: 0x003E2F14
 	public override InventoryDefine.ERedDotDisableRule GetRedDotDisableRule()
 	{
 		return (InventoryDefine.ERedDotDisableRule)this.Ornament.RedDotDisableRule;
 	}
 
-	// Token: 0x0600FDC1 RID: 64961 RVA: 0x003D9354 File Offset: 0x003D7554
+	// Token: 0x0600D1E7 RID: 53735 RVA: 0x003E4D30 File Offset: 0x003E2F30
 	public override bool HasRedDot()
 	{
 		int configId = base.GetConfigId();
 		return InventoryModel.Instance.IsCommonItemHasRedDot(configId, 0);
 	}
 
-	// Token: 0x0600FDC2 RID: 64962 RVA: 0x003D9374 File Offset: 0x003D7574
+	// Token: 0x0600D1E8 RID: 53736 RVA: 0x003E4D50 File Offset: 0x003E2F50
 	public override bool IsValid()
 	{
 		return true;
 	}
 
-	// Token: 0x0600FDC3 RID: 64963 RVA: 0x003D9378 File Offset: 0x003D7578
+	// Token: 0x0600D1E9 RID: 53737 RVA: 0x003E4D54 File Offset: 0x003E2F54
 	public override bool GetIsShowUseButton()
 	{
 		return this.Ornament.ShowUseButton && RoleOrnamentModel.Instance.IsOwnOrnament(this.ConfigId);
 	}
 
-	// Token: 0x0600FDC4 RID: 64964 RVA: 0x003D93A7 File Offset: 0x003D75A7
+	// Token: 0x0600D1EA RID: 53738 RVA: 0x003E4D83 File Offset: 0x003E2F83
 	protected override bool OnIsShowInInventory()
 	{
 		return true;
 	}
 
-	// Token: 0x0600FDC5 RID: 64965 RVA: 0x003D93AC File Offset: 0x003D75AC
+	// Token: 0x0600D1EB RID: 53739 RVA: 0x003E4D88 File Offset: 0x003E2F88
 	[NullableContext(1)]
 	public override InventoryDefine.IItemViewDataInfo GetItemViewDataInfo(ItemViewDefine.EItemOperationMode viewMode)
 	{

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -11,12 +10,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Core.Define.TdConfigExtensions
 {
-	// Token: 0x0200013E RID: 318
+	// Token: 0x02000142 RID: 322
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Stcp : ITransport, IStaticVariableResetter
 	{
-		// Token: 0x06000B13 RID: 2835 RVA: 0x00035BB8 File Offset: 0x00033DB8
+		// Token: 0x06000B6E RID: 2926 RVA: 0x000366C8 File Offset: 0x000348C8
 		private static string PackageToString(Stcp.IPackageBase pkg)
 		{
 			Stcp.PackageConnect packageConnect = pkg as Stcp.PackageConnect;
@@ -38,52 +37,56 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			Stcp.PackageMessage packageMessage = pkg as Stcp.PackageMessage;
 			if (packageMessage != null)
 			{
-				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(11, 2);
+				List<string> list = new List<string>(packageMessage.Msgs.Count);
+				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler;
+				foreach (Stcp.Message message in packageMessage.Msgs)
+				{
+					List<string> list2 = list;
+					defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
+					defaultInterpolatedStringHandler.AppendFormatted<int>(message.Seq);
+					defaultInterpolatedStringHandler.AppendLiteral(" ");
+					defaultInterpolatedStringHandler.AppendFormatted(Json.Stringify(message.Payload, null));
+					list2.Add(defaultInterpolatedStringHandler.ToStringAndClear());
+				}
+				defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(11, 2);
 				defaultInterpolatedStringHandler.AppendLiteral("msg ack ");
 				defaultInterpolatedStringHandler.AppendFormatted<int>(packageMessage.Ack);
 				defaultInterpolatedStringHandler.AppendLiteral(" [");
-				defaultInterpolatedStringHandler.AppendFormatted(string.Join(", ", packageMessage.Msgs.Select(delegate(Stcp.Message x)
-				{
-					DefaultInterpolatedStringHandler defaultInterpolatedStringHandler2 = new DefaultInterpolatedStringHandler(1, 2);
-					defaultInterpolatedStringHandler2.AppendFormatted<int>(x.Seq);
-					defaultInterpolatedStringHandler2.AppendLiteral(" ");
-					defaultInterpolatedStringHandler2.AppendFormatted(Json.Stringify<object>(x.Payload, null));
-					return defaultInterpolatedStringHandler2.ToStringAndClear();
-				})));
+				defaultInterpolatedStringHandler.AppendFormatted(string.Join(", ", list));
 				defaultInterpolatedStringHandler.AppendLiteral("]");
 				return defaultInterpolatedStringHandler.ToStringAndClear();
 			}
 			return "unknown";
 		}
 
-		// Token: 0x06000B14 RID: 2836 RVA: 0x00035CBA File Offset: 0x00033EBA
+		// Token: 0x06000B6F RID: 2927 RVA: 0x0003683C File Offset: 0x00034A3C
 		static Stcp()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(Stcp.CreateStaticDefaultValue), new Action(Stcp.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000B15 RID: 2837 RVA: 0x00035CD9 File Offset: 0x00033ED9
+		// Token: 0x06000B70 RID: 2928 RVA: 0x0003685B File Offset: 0x00034A5B
 		public static void CreateStaticDefaultValue()
 		{
 			Stcp.RefreshInterval = 20;
 			Stcp.RecordConnectId = 0;
 		}
 
-		// Token: 0x06000B16 RID: 2838 RVA: 0x00035CE8 File Offset: 0x00033EE8
+		// Token: 0x06000B71 RID: 2929 RVA: 0x0003686A File Offset: 0x00034A6A
 		public static void ResetStaticDefaultValue()
 		{
 			Stcp.RefreshInterval = 20;
 			Stcp.RecordConnectId = 0;
 		}
 
-		// Token: 0x06000B17 RID: 2839 RVA: 0x00035CF7 File Offset: 0x00033EF7
+		// Token: 0x06000B72 RID: 2930 RVA: 0x00036879 File Offset: 0x00034A79
 		private static int GenerateConnectId()
 		{
 			Stcp.RecordConnectId++;
 			return Stcp.RecordConnectId;
 		}
 
-		// Token: 0x06000B18 RID: 2840 RVA: 0x00035D0C File Offset: 0x00033F0C
+		// Token: 0x06000B73 RID: 2931 RVA: 0x0003688C File Offset: 0x00034A8C
 		public Stcp(string name, IMessenger messenger, ILogger logger, bool isServer)
 		{
 			this.Name = name;
@@ -96,7 +99,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			}
 		}
 
-		// Token: 0x06000B19 RID: 2841 RVA: 0x00035D67 File Offset: 0x00033F67
+		// Token: 0x06000B74 RID: 2932 RVA: 0x000368E7 File Offset: 0x00034AE7
 		private void Log(string msg)
 		{
 			if (this.Verbose)
@@ -105,7 +108,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			}
 		}
 
-		// Token: 0x06000B1A RID: 2842 RVA: 0x00035D80 File Offset: 0x00033F80
+		// Token: 0x06000B75 RID: 2933 RVA: 0x00036900 File Offset: 0x00034B00
 		private Stcp.PackageMessage GeneratePackage()
 		{
 			Stcp.PackageMessage packageMessage = new Stcp.PackageMessage
@@ -116,7 +119,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			foreach (Stcp.Message item in this.SendQueue)
 			{
 				packageMessage.Msgs.Add(item);
-				if (Json.Stringify<Stcp.PackageMessage>(packageMessage, null).Length >= 16384)
+				if (Json.Stringify(packageMessage, null).Length >= 16384)
 				{
 					ILogger logger = this.Logger;
 					DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(39, 3);
@@ -133,7 +136,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return packageMessage;
 		}
 
-		// Token: 0x06000B1B RID: 2843 RVA: 0x00035E7C File Offset: 0x0003407C
+		// Token: 0x06000B76 RID: 2934 RVA: 0x000369FC File Offset: 0x00034BFC
 		private void SendWhileDisconnected()
 		{
 			if (this.IsServer)
@@ -152,7 +155,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			this.ConnectStatus = Stcp.EConnectStatus.Connecting;
 		}
 
-		// Token: 0x06000B1C RID: 2844 RVA: 0x00035EC8 File Offset: 0x000340C8
+		// Token: 0x06000B77 RID: 2935 RVA: 0x00036A48 File Offset: 0x00034C48
 		private void SendWhileConnecting()
 		{
 			if (this.IsServer)
@@ -166,7 +169,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			this.Messenger.Send(data);
 		}
 
-		// Token: 0x06000B1D RID: 2845 RVA: 0x00035EFC File Offset: 0x000340FC
+		// Token: 0x06000B78 RID: 2936 RVA: 0x00036A7C File Offset: 0x00034C7C
 		private void SendWhileConnected()
 		{
 			if (this.SendQueue.Size == 0 && !this.NeedAck)
@@ -182,7 +185,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			this.Log(this.Name + " send " + Stcp.PackageToString(packageMessage));
 		}
 
-		// Token: 0x06000B1E RID: 2846 RVA: 0x00035F64 File Offset: 0x00034164
+		// Token: 0x06000B79 RID: 2937 RVA: 0x00036AE4 File Offset: 0x00034CE4
 		private void SendImpl()
 		{
 			switch (this.ConnectStatus)
@@ -201,13 +204,13 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			}
 		}
 
-		// Token: 0x06000B1F RID: 2847 RVA: 0x00035F9F File Offset: 0x0003419F
+		// Token: 0x06000B7A RID: 2938 RVA: 0x00036B1F File Offset: 0x00034D1F
 		public void SimDropPackage(int count)
 		{
 			this.DropPackageCount = count;
 		}
 
-		// Token: 0x06000B20 RID: 2848 RVA: 0x00035FA8 File Offset: 0x000341A8
+		// Token: 0x06000B7B RID: 2939 RVA: 0x00036B28 File Offset: 0x00034D28
 		public override void Send(object obj)
 		{
 			if (this.SendQueue.Size >= 256)
@@ -223,7 +226,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			this.SendImpl();
 		}
 
-		// Token: 0x06000B21 RID: 2849 RVA: 0x0003600C File Offset: 0x0003420C
+		// Token: 0x06000B7C RID: 2940 RVA: 0x00036B8C File Offset: 0x00034D8C
 		private void SendConnectAck(int connectId)
 		{
 			Stcp.PackageConnectAck data = new Stcp.PackageConnectAck
@@ -233,7 +236,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			this.Messenger.Send(data);
 		}
 
-		// Token: 0x06000B22 RID: 2850 RVA: 0x00036034 File Offset: 0x00034234
+		// Token: 0x06000B7D RID: 2941 RVA: 0x00036BB4 File Offset: 0x00034DB4
 		private void PullOneWhileConnected(Stcp.IPackageBase pkg)
 		{
 			Stcp.PackageMessage packageMessage = pkg as Stcp.PackageMessage;
@@ -286,7 +289,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			}
 		}
 
-		// Token: 0x06000B23 RID: 2851 RVA: 0x00036184 File Offset: 0x00034384
+		// Token: 0x06000B7E RID: 2942 RVA: 0x00036D04 File Offset: 0x00034F04
 		private void PullOneWhileConnecting(Stcp.IPackageBase pkg)
 		{
 			if (!this.IsServer)
@@ -304,7 +307,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			}
 		}
 
-		// Token: 0x06000B24 RID: 2852 RVA: 0x000361B9 File Offset: 0x000343B9
+		// Token: 0x06000B7F RID: 2943 RVA: 0x00036D39 File Offset: 0x00034F39
 		public override void Reset()
 		{
 			if (!this.IsServer)
@@ -315,7 +318,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			this.Logger.Error("sv can not reset");
 		}
 
-		// Token: 0x06000B25 RID: 2853 RVA: 0x000361DC File Offset: 0x000343DC
+		// Token: 0x06000B80 RID: 2944 RVA: 0x00036D5C File Offset: 0x00034F5C
 		private void ResetForCl()
 		{
 			this.SendQueue.Clear();
@@ -329,7 +332,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			this.ConnectId = Stcp.GenerateConnectId();
 		}
 
-		// Token: 0x06000B26 RID: 2854 RVA: 0x00036234 File Offset: 0x00034434
+		// Token: 0x06000B81 RID: 2945 RVA: 0x00036DB4 File Offset: 0x00034FB4
 		private void ResetForSv()
 		{
 			this.SendQueue.Clear();
@@ -342,13 +345,13 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			this.ConnectStatus = Stcp.EConnectStatus.Disconnected;
 		}
 
-		// Token: 0x06000B27 RID: 2855 RVA: 0x00036281 File Offset: 0x00034481
+		// Token: 0x06000B82 RID: 2946 RVA: 0x00036E01 File Offset: 0x00035001
 		private void EstablishConnectForClient()
 		{
 			this.ConnectStatus = Stcp.EConnectStatus.Connected;
 		}
 
-		// Token: 0x06000B28 RID: 2856 RVA: 0x0003628A File Offset: 0x0003448A
+		// Token: 0x06000B83 RID: 2947 RVA: 0x00036E0A File Offset: 0x0003500A
 		private void EstablishConnectForServer(Stcp.PackageConnect pkg)
 		{
 			this.ResetForSv();
@@ -357,7 +360,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			this.SendConnectAck(pkg.ConnectId);
 		}
 
-		// Token: 0x06000B29 RID: 2857 RVA: 0x000362B4 File Offset: 0x000344B4
+		// Token: 0x06000B84 RID: 2948 RVA: 0x00036E34 File Offset: 0x00035034
 		private void PullOneWhileDisconnected(Stcp.IPackageBase pkg)
 		{
 			if (this.IsServer)
@@ -374,7 +377,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			}
 		}
 
-		// Token: 0x06000B2A RID: 2858 RVA: 0x000362EC File Offset: 0x000344EC
+		// Token: 0x06000B85 RID: 2949 RVA: 0x00036E6C File Offset: 0x0003506C
 		private bool PullOne()
 		{
 			if (this.RecvQueue.Size >= 256)
@@ -425,7 +428,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return true;
 		}
 
-		// Token: 0x06000B2B RID: 2859 RVA: 0x000363A3 File Offset: 0x000345A3
+		// Token: 0x06000B86 RID: 2950 RVA: 0x00036F23 File Offset: 0x00035123
 		private void Pull()
 		{
 			while (this.PullOne())
@@ -433,7 +436,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			}
 		}
 
-		// Token: 0x06000B2C RID: 2860 RVA: 0x000363AD File Offset: 0x000345AD
+		// Token: 0x06000B87 RID: 2951 RVA: 0x00036F2D File Offset: 0x0003512D
 		[NullableContext(2)]
 		public override object Recv()
 		{
@@ -445,14 +448,14 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return null;
 		}
 
-		// Token: 0x06000B2D RID: 2861 RVA: 0x000363D5 File Offset: 0x000345D5
+		// Token: 0x06000B88 RID: 2952 RVA: 0x00036F55 File Offset: 0x00035155
 		public void Update()
 		{
 			this.Pull();
 			this.SendImpl();
 		}
 
-		// Token: 0x06000B2E RID: 2862 RVA: 0x000363E4 File Offset: 0x000345E4
+		// Token: 0x06000B89 RID: 2953 RVA: 0x00036F64 File Offset: 0x00035164
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -469,7 +472,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return <RecvAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000B2F RID: 2863 RVA: 0x0003642F File Offset: 0x0003462F
+		// Token: 0x06000B8A RID: 2954 RVA: 0x00036FAF File Offset: 0x000351AF
 		public override void Start()
 		{
 			if (this.Timer != null)
@@ -482,7 +485,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			}, (float)Stcp.RefreshInterval, 1f, null, null, true);
 		}
 
-		// Token: 0x06000B30 RID: 2864 RVA: 0x00036464 File Offset: 0x00034664
+		// Token: 0x06000B8B RID: 2955 RVA: 0x00036FE4 File Offset: 0x000351E4
 		public override void Stop()
 		{
 			if (this.Timer != null)
@@ -492,91 +495,91 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			}
 		}
 
-		// Token: 0x040006CD RID: 1741
+		// Token: 0x040006DB RID: 1755
 		public const int MAX_MESSAGE_LENGTH = 16384;
 
-		// Token: 0x040006CE RID: 1742
+		// Token: 0x040006DC RID: 1756
 		public static int RefreshInterval;
 
-		// Token: 0x040006CF RID: 1743
+		// Token: 0x040006DD RID: 1757
 		public const int MaxSeqId = 256;
 
-		// Token: 0x040006D0 RID: 1744
+		// Token: 0x040006DE RID: 1758
 		private static int RecordConnectId;
 
-		// Token: 0x040006D1 RID: 1745
+		// Token: 0x040006DF RID: 1759
 		private readonly Queue<Stcp.Message> SendQueue = new Queue<Stcp.Message>(4);
 
-		// Token: 0x040006D2 RID: 1746
+		// Token: 0x040006E0 RID: 1760
 		private readonly Queue<Stcp.Message> RecvQueue = new Queue<Stcp.Message>(4);
 
-		// Token: 0x040006D3 RID: 1747
+		// Token: 0x040006E1 RID: 1761
 		private int SendSeq;
 
-		// Token: 0x040006D4 RID: 1748
+		// Token: 0x040006E2 RID: 1762
 		private int RecvSeq;
 
-		// Token: 0x040006D5 RID: 1749
+		// Token: 0x040006E3 RID: 1763
 		private int SendSeqAck;
 
-		// Token: 0x040006D6 RID: 1750
+		// Token: 0x040006E4 RID: 1764
 		[Nullable(2)]
 		private TimerHandle Timer;
 
-		// Token: 0x040006D7 RID: 1751
+		// Token: 0x040006E5 RID: 1765
 		private int DropPackageCount;
 
-		// Token: 0x040006D8 RID: 1752
+		// Token: 0x040006E6 RID: 1766
 		private bool NeedAck;
 
-		// Token: 0x040006D9 RID: 1753
+		// Token: 0x040006E7 RID: 1767
 		private Stcp.EConnectStatus ConnectStatus;
 
-		// Token: 0x040006DA RID: 1754
+		// Token: 0x040006E8 RID: 1768
 		private int ConnectId;
 
-		// Token: 0x040006DB RID: 1755
+		// Token: 0x040006E9 RID: 1769
 		public bool Verbose;
 
-		// Token: 0x040006DC RID: 1756
+		// Token: 0x040006EA RID: 1770
 		public readonly string Name;
 
-		// Token: 0x040006DD RID: 1757
+		// Token: 0x040006EB RID: 1771
 		private readonly IMessenger Messenger;
 
-		// Token: 0x040006DE RID: 1758
+		// Token: 0x040006EC RID: 1772
 		private readonly ILogger Logger;
 
-		// Token: 0x040006DF RID: 1759
+		// Token: 0x040006ED RID: 1773
 		public readonly bool IsServer;
 
-		// Token: 0x020001D7 RID: 471
+		// Token: 0x020001DC RID: 476
 		[NullableContext(0)]
 		private enum EConnectStatus
 		{
-			// Token: 0x040008C6 RID: 2246
+			// Token: 0x040008E9 RID: 2281
 			Disconnected,
-			// Token: 0x040008C7 RID: 2247
+			// Token: 0x040008EA RID: 2282
 			Connecting,
-			// Token: 0x040008C8 RID: 2248
+			// Token: 0x040008EB RID: 2283
 			Connected
 		}
 
-		// Token: 0x020001D8 RID: 472
+		// Token: 0x020001DD RID: 477
 		[JsonConverter(typeof(Stcp.PackageJsonConverter))]
 		private interface IPackageBase
 		{
-			// Token: 0x17000152 RID: 338
-			// (get) Token: 0x06000D95 RID: 3477
+			// Token: 0x17000167 RID: 359
+			// (get) Token: 0x06000DFF RID: 3583
 			EPackage Type { get; }
 		}
 
-		// Token: 0x020001D9 RID: 473
+		// Token: 0x020001DE RID: 478
 		[NullableContext(0)]
 		private class PackageConnect : Stcp.IPackageBase
 		{
-			// Token: 0x17000153 RID: 339
-			// (get) Token: 0x06000D96 RID: 3478 RVA: 0x0003F1AE File Offset: 0x0003D3AE
+			// Token: 0x17000168 RID: 360
+			// (get) Token: 0x06000E00 RID: 3584 RVA: 0x00040086 File Offset: 0x0003E286
 			public EPackage Type
 			{
 				get
@@ -585,16 +588,16 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 				}
 			}
 
-			// Token: 0x040008C9 RID: 2249
+			// Token: 0x040008EC RID: 2284
 			public int ConnectId;
 		}
 
-		// Token: 0x020001DA RID: 474
+		// Token: 0x020001DF RID: 479
 		[NullableContext(0)]
 		private class PackageConnectAck : Stcp.IPackageBase
 		{
-			// Token: 0x17000154 RID: 340
-			// (get) Token: 0x06000D98 RID: 3480 RVA: 0x0003F1B9 File Offset: 0x0003D3B9
+			// Token: 0x17000169 RID: 361
+			// (get) Token: 0x06000E02 RID: 3586 RVA: 0x00040091 File Offset: 0x0003E291
 			public EPackage Type
 			{
 				get
@@ -603,29 +606,29 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 				}
 			}
 
-			// Token: 0x040008CA RID: 2250
+			// Token: 0x040008ED RID: 2285
 			public int ConnectId;
 		}
 
-		// Token: 0x020001DB RID: 475
+		// Token: 0x020001E0 RID: 480
 		[NullableContext(0)]
 		private class Message
 		{
-			// Token: 0x040008CB RID: 2251
+			// Token: 0x040008EE RID: 2286
 			public int Seq;
 
-			// Token: 0x040008CC RID: 2252
+			// Token: 0x040008EF RID: 2287
 			[Nullable(2)]
 			[JsonConverter(typeof(Stcp.PayloadJsonConverter))]
 			public object Payload;
 		}
 
-		// Token: 0x020001DC RID: 476
+		// Token: 0x020001E1 RID: 481
 		[NullableContext(0)]
 		private class PackageMessage : Stcp.IPackageBase
 		{
-			// Token: 0x17000155 RID: 341
-			// (get) Token: 0x06000D9B RID: 3483 RVA: 0x0003F1CC File Offset: 0x0003D3CC
+			// Token: 0x1700016A RID: 362
+			// (get) Token: 0x06000E05 RID: 3589 RVA: 0x000400A4 File Offset: 0x0003E2A4
 			public EPackage Type
 			{
 				get
@@ -634,15 +637,15 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 				}
 			}
 
-			// Token: 0x040008CD RID: 2253
+			// Token: 0x040008F0 RID: 2288
 			public int Ack;
 
-			// Token: 0x040008CE RID: 2254
+			// Token: 0x040008F1 RID: 2289
 			[Nullable(1)]
 			public List<Stcp.Message> Msgs = new List<Stcp.Message>();
 		}
 
-		// Token: 0x020001DD RID: 477
+		// Token: 0x020001E2 RID: 482
 		[Nullable(new byte[]
 		{
 			0,
@@ -650,7 +653,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 		})]
 		private class PackageJsonConverter : JsonConverter<Stcp.IPackageBase>
 		{
-			// Token: 0x06000D9D RID: 3485 RVA: 0x0003F1E4 File Offset: 0x0003D3E4
+			// Token: 0x06000E07 RID: 3591 RVA: 0x000400BC File Offset: 0x0003E2BC
 			[return: Nullable(2)]
 			public override Stcp.IPackageBase Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 			{
@@ -687,14 +690,14 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 				return result;
 			}
 
-			// Token: 0x06000D9E RID: 3486 RVA: 0x0003F280 File Offset: 0x0003D480
+			// Token: 0x06000E08 RID: 3592 RVA: 0x00040158 File Offset: 0x0003E358
 			public override void Write(Utf8JsonWriter writer, Stcp.IPackageBase value, JsonSerializerOptions options)
 			{
 				JsonSerializer.Serialize(writer, value, value.GetType(), options);
 			}
 		}
 
-		// Token: 0x020001DE RID: 478
+		// Token: 0x020001E3 RID: 483
 		[Nullable(new byte[]
 		{
 			0,
@@ -702,7 +705,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 		})]
 		private class PayloadJsonConverter : JsonConverter<object>
 		{
-			// Token: 0x06000DA0 RID: 3488 RVA: 0x0003F298 File Offset: 0x0003D498
+			// Token: 0x06000E0A RID: 3594 RVA: 0x00040170 File Offset: 0x0003E370
 			[return: Nullable(2)]
 			public override object Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 			{
@@ -732,7 +735,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 				return result;
 			}
 
-			// Token: 0x06000DA1 RID: 3489 RVA: 0x0003F328 File Offset: 0x0003D528
+			// Token: 0x06000E0B RID: 3595 RVA: 0x00040200 File Offset: 0x0003E400
 			public override void Write(Utf8JsonWriter writer, object value, JsonSerializerOptions options)
 			{
 				JsonSerializer.Serialize(writer, value, value.GetType(), options);

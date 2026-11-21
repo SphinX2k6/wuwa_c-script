@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006150 RID: 24912
+	// Token: 0x020050CE RID: 20686
 	public class RoverlikeGameShopCostItem : UiPanelBase
 	{
-		// Token: 0x0603EF94 RID: 257940 RVA: 0x00F36F84 File Offset: 0x00F35184
+		// Token: 0x06033C54 RID: 212052 RVA: 0x00E7DE58 File Offset: 0x00E7C058
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EF95 RID: 257941 RVA: 0x00F37010 File Offset: 0x00F35210
+		// Token: 0x06033C55 RID: 212053 RVA: 0x00E7DEE4 File Offset: 0x00E7C0E4
 		[NullableContext(1)]
 		public void Refresh(IRoverlikeGameShopGridData data, int insideCurrencyItemId, int currencyCount)
 		{
@@ -52,16 +52,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.SetItemIcon(texture, insideCurrencyItemId, null, null);
 		}
 
-		// Token: 0x0200C3B3 RID: 50099
+		// Token: 0x0200AD9A RID: 44442
 		private class EComponents
 		{
-			// Token: 0x0403B0E2 RID: 241890
+			// Token: 0x04035A43 RID: 219715
 			public const int TextureCostIcon = 0;
 
-			// Token: 0x0403B0E3 RID: 241891
+			// Token: 0x04035A44 RID: 219716
 			public const int TxtCost = 1;
 
-			// Token: 0x0403B0E4 RID: 241892
+			// Token: 0x04035A45 RID: 219717
 			public const int TxtPlace = 2;
 		}
 	}

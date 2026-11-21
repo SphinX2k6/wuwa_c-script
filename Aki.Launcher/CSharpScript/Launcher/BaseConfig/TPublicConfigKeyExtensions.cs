@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000276 RID: 630
+	// Token: 0x0200027D RID: 637
 	public static class TPublicConfigKeyExtensions
 	{
-		// Token: 0x06000F50 RID: 3920 RVA: 0x0005947C File Offset: 0x0005767C
+		// Token: 0x06000F9B RID: 3995 RVA: 0x0005C420 File Offset: 0x0005A620
 		public static string ToEnumString(this TPublicConfigKey value)
 		{
 			string result;
@@ -60,7 +60,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return result;
 		}
 
-		// Token: 0x06000F51 RID: 3921 RVA: 0x00059548 File Offset: 0x00057748
+		// Token: 0x06000F9C RID: 3996 RVA: 0x0005C4EC File Offset: 0x0005A6EC
 		public static TPublicConfigKey FromString(string name)
 		{
 			TPublicConfigKey result;
@@ -71,7 +71,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return result;
 		}
 
-		// Token: 0x06000F52 RID: 3922 RVA: 0x00059574 File Offset: 0x00057774
+		// Token: 0x06000F9D RID: 3997 RVA: 0x0005C518 File Offset: 0x0005A718
 		public static bool TryFromString(string name, out TPublicConfigKey value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -217,7 +217,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return false;
 		}
 
-		// Token: 0x06000F53 RID: 3923 RVA: 0x000597B0 File Offset: 0x000579B0
+		// Token: 0x06000F9E RID: 3998 RVA: 0x0005C754 File Offset: 0x0005A954
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -239,7 +239,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			};
 		}
 
-		// Token: 0x06000F54 RID: 3924 RVA: 0x00059839 File Offset: 0x00057A39
+		// Token: 0x06000F9F RID: 3999 RVA: 0x0005C7DD File Offset: 0x0005A9DD
 		public static TPublicConfigKey[] GetValues()
 		{
 			return new TPublicConfigKey[]
@@ -261,7 +261,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			};
 		}
 
-		// Token: 0x06000F55 RID: 3925 RVA: 0x00059850 File Offset: 0x00057A50
+		// Token: 0x06000FA0 RID: 4000 RVA: 0x0005C7F4 File Offset: 0x0005A9F4
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CBE RID: 23742
+	// Token: 0x02004CA0 RID: 19616
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GamepadTopPanel : BattleVisibleChildView
 	{
-		// Token: 0x0603C085 RID: 245893 RVA: 0x00E5B5B4 File Offset: 0x00E597B4
+		// Token: 0x06030FD9 RID: 200665 RVA: 0x00DABC9C File Offset: 0x00DA9E9C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -57,19 +57,23 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603C086 RID: 245894 RVA: 0x00E5B788 File Offset: 0x00E59988
+		// Token: 0x06030FDA RID: 200666 RVA: 0x00DABE70 File Offset: 0x00DAA070
 		public override void Initialize(object param = null)
 		{
 			base.Initialize(param);
 			base.InitChildType(EBattleUiChild.HomeButton);
 			this.AddEvents();
 			this.BindRedDot();
+			if (RoleTowerModel.Instance.IsInRoleTowerDungeon())
+			{
+				base.SetVisible(8, false);
+			}
 			this.UiLevelSequence = new LevelSequencePlayer(this.RootItem);
 			this.HomeBtnLevelSequence = new LevelSequencePlayer(base.GetButton(0).RootUIComp);
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603C087 RID: 245895 RVA: 0x00E5B7F0 File Offset: 0x00E599F0
+		// Token: 0x06030FDB RID: 200667 RVA: 0x00DABEEC File Offset: 0x00DAA0EC
 		protected override UniTask InitializeAsync(object param = null)
 		{
 			GamepadTopPanel.<InitializeAsync>d__8 <InitializeAsync>d__;
@@ -80,7 +84,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C088 RID: 245896 RVA: 0x00E5B834 File Offset: 0x00E59A34
+		// Token: 0x06030FDC RID: 200668 RVA: 0x00DABF30 File Offset: 0x00DAA130
 		public override void Reset()
 		{
 			base.Reset();
@@ -100,7 +104,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RemoveRedDot();
 		}
 
-		// Token: 0x0603C089 RID: 245897 RVA: 0x00E5B884 File Offset: 0x00E59A84
+		// Token: 0x06030FDD RID: 200669 RVA: 0x00DABF80 File Offset: 0x00DAA180
 		private void BindRedDot()
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -123,7 +127,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C08A RID: 245898 RVA: 0x00E5B9B0 File Offset: 0x00E59BB0
+		// Token: 0x06030FDE RID: 200670 RVA: 0x00DAC0AC File Offset: 0x00DAA2AC
 		private void RemoveRedDot()
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -141,7 +145,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			RedDotController.Instance.UnBindRedDot(ERedDotName.ActivityDirectTrainProEntry);
 		}
 
-		// Token: 0x0603C08B RID: 245899 RVA: 0x00E5BA24 File Offset: 0x00E59C24
+		// Token: 0x06030FDF RID: 200671 RVA: 0x00DAC120 File Offset: 0x00DAA320
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
@@ -149,7 +153,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.OnPhoneTipsClose, new Action(this.OnPhoneTipsClose));
 		}
 
-		// Token: 0x0603C08C RID: 245900 RVA: 0x00E5BA88 File Offset: 0x00E59C88
+		// Token: 0x06030FE0 RID: 200672 RVA: 0x00DAC184 File Offset: 0x00DAA384
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
@@ -157,7 +161,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.OnPhoneTipsClose, new Action(this.OnPhoneTipsClose));
 		}
 
-		// Token: 0x0603C08D RID: 245901 RVA: 0x00E5BAEC File Offset: 0x00E59CEC
+		// Token: 0x06030FE1 RID: 200673 RVA: 0x00DAC1E8 File Offset: 0x00DAA3E8
 		protected override void OnShowBattleChildView()
 		{
 			this.RefreshTipsBg();
@@ -171,7 +175,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			uiLevelSequence.PlayLevelSequenceByName("BtnShow", false, null, false);
 		}
 
-		// Token: 0x0603C08E RID: 245902 RVA: 0x00E5BB2C File Offset: 0x00E59D2C
+		// Token: 0x06030FE2 RID: 200674 RVA: 0x00DAC228 File Offset: 0x00DAA428
 		protected override void OnHideBattleChildView()
 		{
 			this.OnHideButtons();
@@ -183,7 +187,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			uiLevelSequence.PlayLevelSequenceByName("BtnHide", false, null, false);
 		}
 
-		// Token: 0x0603C08F RID: 245903 RVA: 0x00E5BB60 File Offset: 0x00E59D60
+		// Token: 0x06030FE3 RID: 200675 RVA: 0x00DAC25C File Offset: 0x00DAA45C
 		private void OnLeftRedDotItemRefresh(bool toState, int _)
 		{
 			if (!toState)
@@ -198,21 +202,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(1).SetUIActive(true);
 		}
 
-		// Token: 0x0603C090 RID: 245904 RVA: 0x00E5BBA0 File Offset: 0x00E59DA0
+		// Token: 0x06030FE4 RID: 200676 RVA: 0x00DAC29C File Offset: 0x00DAA49C
 		private void RefreshTipsBg()
 		{
 			bool uiactive = base.GetItem(3).bIsUIActive || base.GetItem(4).bIsUIActive || base.GetItem(5).bIsUIActive || base.GetItem(6).bIsUIActive || base.GetItem(8).bIsUIActive || base.GetItem(9).bIsUIActive;
 			base.GetItem(1).SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603C091 RID: 245905 RVA: 0x00E5BC14 File Offset: 0x00E59E14
+		// Token: 0x06030FE5 RID: 200677 RVA: 0x00DAC310 File Offset: 0x00DAA510
 		private void RefreshTipsHomeButtonSprite()
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath(GamepadTopPanel.IconTypeSprite[Info.Instance.InputControllerType]);
 			base.SetTextureByPath(resourcePath, base.GetTexture(7), null, null);
 		}
 
-		// Token: 0x0603C092 RID: 245906 RVA: 0x00E5BC58 File Offset: 0x00E59E58
+		// Token: 0x06030FE6 RID: 200678 RVA: 0x00DAC354 File Offset: 0x00DAA554
 		private void OnShowButtons()
 		{
 			bool flag = !PhoneMsgModel.Instance.IsAllPhoneMsgRead();
@@ -231,7 +235,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			phoneMsgButton.OnShowGamepadTopPanel();
 		}
 
-		// Token: 0x0603C093 RID: 245907 RVA: 0x00E5BCC0 File Offset: 0x00E59EC0
+		// Token: 0x06030FE7 RID: 200679 RVA: 0x00DAC3BC File Offset: 0x00DAA5BC
 		private void OnHideButtons()
 		{
 			if (FunctionModel.Instance.IsOpen(10130))
@@ -245,7 +249,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C094 RID: 245908 RVA: 0x00E5BCE3 File Offset: 0x00E59EE3
+		// Token: 0x06030FE8 RID: 200680 RVA: 0x00DAC3DF File Offset: 0x00DAA5DF
 		private void InputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			if (Info.Instance.IsInGamepad())
@@ -257,7 +261,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetVisible(5, false);
 		}
 
-		// Token: 0x0603C095 RID: 245909 RVA: 0x00E5BD08 File Offset: 0x00E59F08
+		// Token: 0x06030FE9 RID: 200681 RVA: 0x00DAC404 File Offset: 0x00DAA604
+		public void RefreshRoleTowerVisible()
+		{
+			base.SetVisible(8, !RoleTowerModel.Instance.IsInRoleTowerDungeon());
+		}
+
+		// Token: 0x06030FEA RID: 200682 RVA: 0x00DAC41C File Offset: 0x00DAA61C
 		private void OnFunctionOpenUpdate(EFunctionType functionType, bool isOpen)
 		{
 			if (functionType == EFunctionType.AdventureGuide && isOpen)
@@ -270,7 +280,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C096 RID: 245910 RVA: 0x00E5BD58 File Offset: 0x00E59F58
+		// Token: 0x06030FEB RID: 200683 RVA: 0x00DAC46C File Offset: 0x00DAA66C
 		private void OnClickedHomeButton()
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -281,7 +291,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			UiManager.Instance.OpenView(EUiViewName.FunctionView, null, null);
 		}
 
-		// Token: 0x0603C097 RID: 245911 RVA: 0x00E5BD88 File Offset: 0x00E59F88
+		// Token: 0x06030FEC RID: 200684 RVA: 0x00DAC49C File Offset: 0x00DAA69C
 		private void OnPhoneTipsClose()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -297,7 +307,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer2.PlayLevelSequenceByName("Phone", false, null, false);
 		}
 
-		// Token: 0x0603C098 RID: 245912 RVA: 0x00E5BDCD File Offset: 0x00E59FCD
+		// Token: 0x06030FED RID: 200685 RVA: 0x00DAC4E1 File Offset: 0x00DAA6E1
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public UUIItem GetPanelItem(string item)
@@ -313,13 +323,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return base.GetItem(10);
 		}
 
-		// Token: 0x0603C099 RID: 245913 RVA: 0x00E5BDFE File Offset: 0x00E59FFE
+		// Token: 0x06030FEE RID: 200686 RVA: 0x00DAC512 File Offset: 0x00DAA712
 		public IPhoneMessageButtonImplement GetPhoneMsgButton()
 		{
 			return this.PhoneMsgButton;
 		}
 
-		// Token: 0x0401F508 RID: 128264
+		// Token: 0x04019FC1 RID: 106433
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EInputControllerType, string> IconTypeSprite = new Dictionary<EInputControllerType, string>
@@ -362,43 +372,43 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		};
 
-		// Token: 0x0401F509 RID: 128265
+		// Token: 0x04019FC2 RID: 106434
 		private LevelSequencePlayer UiLevelSequence;
 
-		// Token: 0x0401F50A RID: 128266
+		// Token: 0x04019FC3 RID: 106435
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401F50B RID: 128267
+		// Token: 0x04019FC4 RID: 106436
 		private LevelSequencePlayer HomeBtnLevelSequence;
 
-		// Token: 0x0401F50C RID: 128268
+		// Token: 0x04019FC5 RID: 106437
 		private GamepadPhoneMessageButton PhoneMsgButton;
 
-		// Token: 0x0200BEBC RID: 48828
+		// Token: 0x0200A8C2 RID: 43202
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403985D RID: 235613
+			// Token: 0x0403421E RID: 213534
 			HomeButton,
-			// Token: 0x0403985E RID: 235614
+			// Token: 0x0403421F RID: 213535
 			TipsBgItem,
-			// Token: 0x0403985F RID: 235615
+			// Token: 0x04034220 RID: 213536
 			HomeButtonRedDotItem,
-			// Token: 0x04039860 RID: 235616
+			// Token: 0x04034221 RID: 213537
 			ActivityRedDotItem,
-			// Token: 0x04039861 RID: 235617
+			// Token: 0x04034222 RID: 213538
 			AdventureRedDotItem,
-			// Token: 0x04039862 RID: 235618
+			// Token: 0x04034223 RID: 213539
 			GachaRedDotItem,
-			// Token: 0x04039863 RID: 235619
+			// Token: 0x04034224 RID: 213540
 			BattlePassRedDotItem,
-			// Token: 0x04039864 RID: 235620
+			// Token: 0x04034225 RID: 213541
 			HomeButtonTexture,
-			// Token: 0x04039865 RID: 235621
+			// Token: 0x04034226 RID: 213542
 			DirectTrainProItem,
-			// Token: 0x04039866 RID: 235622
+			// Token: 0x04034227 RID: 213543
 			PhoneMsgButtonItem,
-			// Token: 0x04039867 RID: 235623
+			// Token: 0x04034228 RID: 213544
 			EntitySequenceButtonRoot
 		}
 	}

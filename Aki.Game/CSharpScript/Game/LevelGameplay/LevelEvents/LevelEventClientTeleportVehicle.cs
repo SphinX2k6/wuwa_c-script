@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B09 RID: 27401
+	// Token: 0x02005C81 RID: 23681
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventClientTeleportVehicle : LevelEventBase
 	{
-		// Token: 0x06044071 RID: 278641 RVA: 0x010B7E86 File Offset: 0x010B6086
+		// Token: 0x0603A1C3 RID: 238019 RVA: 0x01061712 File Offset: 0x0105F912
 		public LevelEventClientTeleportVehicle(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044072 RID: 278642 RVA: 0x010B7E90 File Offset: 0x010B6090
+		// Token: 0x0603A1C4 RID: 238020 RVA: 0x0106171C File Offset: 0x0105F91C
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			this.Params = (inParams as ClientTeleportVehicle);
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}, 100f, null, null, true, 1f);
 		}
 
-		// Token: 0x06044073 RID: 278643 RVA: 0x010B7F4C File Offset: 0x010B614C
+		// Token: 0x0603A1C5 RID: 238021 RVA: 0x010617D8 File Offset: 0x0105F9D8
 		private unsafe void OnClientTeleportStart()
 		{
 			if (this.Params == null)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			});
 		}
 
-		// Token: 0x06044074 RID: 278644 RVA: 0x010B8258 File Offset: 0x010B6458
+		// Token: 0x0603A1C6 RID: 238022 RVA: 0x01061AE4 File Offset: 0x0105FCE4
 		private void OnClientTeleportEnd()
 		{
 			base.FinishExecute(true, false, true);
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044075 RID: 278645 RVA: 0x010B82AC File Offset: 0x010B64AC
+		// Token: 0x0603A1C7 RID: 238023 RVA: 0x01061B38 File Offset: 0x0105FD38
 		private unsafe bool SendClientTeleportVehicleRequest(long vehicleServerEntityId, global::Vector location, global::Rotator rotation)
 		{
 			Action<SeamlessTeleportVehicleResponse, Net.CallbackStatus> callback = delegate(SeamlessTeleportVehicleResponse response, Net.CallbackStatus _)
@@ -189,14 +189,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x040238CF RID: 145615
+		// Token: 0x0401EB71 RID: 125809
 		[Nullable(2)]
 		private ClientTeleportVehicle Params;
 
-		// Token: 0x040238D0 RID: 145616
+		// Token: 0x0401EB72 RID: 125810
 		private bool OriginEnableMovementSync;
 
-		// Token: 0x040238D1 RID: 145617
+		// Token: 0x0401EB73 RID: 125811
 		[Nullable(2)]
 		private BaseMovementSyncComponent VehicleMovementSyncComp;
 	}

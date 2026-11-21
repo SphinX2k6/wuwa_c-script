@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Utils.Command
 {
-	// Token: 0x02004577 RID: 17783
+	// Token: 0x0200349F RID: 13471
 	public interface IGameCommand<T> : IGameCommandBase where T : ICommandType
 	{
-		// Token: 0x1700758C RID: 30092
-		// (get) Token: 0x0602DE5D RID: 187997
-		// (set) Token: 0x0602DE5E RID: 187998
+		// Token: 0x17004843 RID: 18499
+		// (get) Token: 0x0602253F RID: 140607
+		// (set) Token: 0x06022540 RID: 140608
 		[Nullable(new byte[]
 		{
 			2,
@@ -27,9 +27,9 @@ namespace CSharpScript.Game.Utils.Command
 			1
 		})] set; }
 
-		// Token: 0x1700758D RID: 30093
-		// (get) Token: 0x0602DE5F RID: 187999
-		// (set) Token: 0x0602DE60 RID: 188000
+		// Token: 0x17004844 RID: 18500
+		// (get) Token: 0x06022541 RID: 140609
+		// (set) Token: 0x06022542 RID: 140610
 		[Nullable(new byte[]
 		{
 			2,
@@ -48,9 +48,9 @@ namespace CSharpScript.Game.Utils.Command
 			1
 		})] set; }
 
-		// Token: 0x1700758E RID: 30094
-		// (get) Token: 0x0602DE61 RID: 188001
-		// (set) Token: 0x0602DE62 RID: 188002
+		// Token: 0x17004845 RID: 18501
+		// (get) Token: 0x06022543 RID: 140611
+		// (set) Token: 0x06022544 RID: 140612
 		[Nullable(new byte[]
 		{
 			2,

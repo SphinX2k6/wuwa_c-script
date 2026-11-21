@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001715 RID: 5909
+	// Token: 0x02001892 RID: 6290
 	public class ExitMovieCamera : ActionParams
 	{
-		// Token: 0x06007D2F RID: 32047 RVA: 0x0012C77C File Offset: 0x0012A97C
-		[NullableContext(1)]
+		// Token: 0x0600840D RID: 33805 RVA: 0x0013B828 File Offset: 0x00139A28
 		public static ExitMovieCamera Create([Nullable(2)] ExitMovieCamera instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x04004FEB RID: 20459
+		// Token: 0x0400541A RID: 21530
 		[Nullable(2)]
 		protected new ExitMovieCamera FbInstance;
 	}

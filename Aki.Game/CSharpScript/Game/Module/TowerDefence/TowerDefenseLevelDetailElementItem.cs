@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B4D RID: 19277
+	// Token: 0x02003AF5 RID: 15093
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 	})]
 	public class TowerDefenseLevelDetailElementItem : GridProxyAbstract<string>
 	{
-		// Token: 0x06031EBA RID: 204474 RVA: 0x00B9464C File Offset: 0x00B9284C
+		// Token: 0x06026C4A RID: 158794 RVA: 0x00AD86B8 File Offset: 0x00AD68B8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -27,17 +27,17 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031EBB RID: 204475 RVA: 0x00B94694 File Offset: 0x00B92894
+		// Token: 0x06026C4B RID: 158795 RVA: 0x00AD8700 File Offset: 0x00AD6900
 		[NullableContext(1)]
 		public override void Refresh(string data, bool isSelected, int gridIndex)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data, Array.Empty<object>());
 		}
 
-		// Token: 0x0200ACCD RID: 44237
+		// Token: 0x020096ED RID: 38637
 		private class ELevelDetailElementItemComponent
 		{
-			// Token: 0x0403480A RID: 215050
+			// Token: 0x0402F1BA RID: 192954
 			public const int DescTxt = 0;
 		}
 	}

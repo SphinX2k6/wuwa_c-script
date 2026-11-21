@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027B7 RID: 10167
+	// Token: 0x02002A8A RID: 10890
 	public class DestroyQuest : ActionParams
 	{
-		// Token: 0x0600E236 RID: 57910 RVA: 0x00216BA6 File Offset: 0x00214DA6
-		[NullableContext(1)]
+		// Token: 0x0600F058 RID: 61528 RVA: 0x0023397A File Offset: 0x00231B7A
 		public static DestroyQuest Create(IDestroyQuest? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700448A RID: 17546
-		// (get) Token: 0x0600E237 RID: 57911 RVA: 0x00216BC5 File Offset: 0x00214DC5
+		// Token: 0x170047F2 RID: 18418
+		// (get) Token: 0x0600F059 RID: 61529 RVA: 0x00233999 File Offset: 0x00231B99
 		public virtual int QuestId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700448B RID: 17547
-		// (get) Token: 0x0600E238 RID: 57912 RVA: 0x00216BD4 File Offset: 0x00214DD4
+		// Token: 0x170047F3 RID: 18419
+		// (get) Token: 0x0600F05A RID: 61530 RVA: 0x002339A8 File Offset: 0x00231BA8
 		public virtual bool? IsDestroy
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D77 RID: 32119
+		// Token: 0x0400842E RID: 33838
 		private IDestroyQuest Instance;
 	}
 }

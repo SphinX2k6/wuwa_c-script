@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013DC RID: 5084
+	// Token: 0x02001533 RID: 5427
 	public class ICheckTrapDefenseBdBuffQualityUp : ICheckTrapDefenseEventBase
 	{
-		// Token: 0x060073F7 RID: 29687 RVA: 0x00115E63 File Offset: 0x00114063
-		[NullableContext(1)]
+		// Token: 0x06007AB8 RID: 31416 RVA: 0x00124847 File Offset: 0x00122A47
 		public static ICheckTrapDefenseBdBuffQualityUp Create(ICheckTrapDefenseBdBuffQualityUp? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002612 RID: 9746
-		// (get) Token: 0x060073F8 RID: 29688 RVA: 0x00115E82 File Offset: 0x00114082
+		// Token: 0x170027F4 RID: 10228
+		// (get) Token: 0x06007AB9 RID: 31417 RVA: 0x00124866 File Offset: 0x00122A66
 		public override ECheckTrapDefenseEvent Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004320 RID: 17184
+		// Token: 0x040046B1 RID: 18097
 		private ICheckTrapDefenseBdBuffQualityUp Instance;
 	}
 }

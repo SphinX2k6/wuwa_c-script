@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A16 RID: 2582
+	// Token: 0x02000AEB RID: 2795
 	public class ConfigTransitionPopupById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003C98 RID: 15512 RVA: 0x001B0699 File Offset: 0x001AE899
+		// Token: 0x06004196 RID: 16790 RVA: 0x001CFA2D File Offset: 0x001CDC2D
 		static ConfigTransitionPopupById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTransitionPopupById.CreateStaticDefaultValue), new Action(ConfigTransitionPopupById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003C99 RID: 15513 RVA: 0x001B06B8 File Offset: 0x001AE8B8
+		// Token: 0x06004197 RID: 16791 RVA: 0x001CFA4C File Offset: 0x001CDC4C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTransitionPopupById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003C9A RID: 15514 RVA: 0x001B0737 File Offset: 0x001AE937
+		// Token: 0x06004198 RID: 16792 RVA: 0x001CFACB File Offset: 0x001CDCCB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTransitionPopupById.LogPair = null;
 			ConfigTransitionPopupById.HandleId = 0;
 		}
 
-		// Token: 0x06003C9B RID: 15515 RVA: 0x001B0745 File Offset: 0x001AE945
+		// Token: 0x06004199 RID: 16793 RVA: 0x001CFAD9 File Offset: 0x001CDCD9
 		public static void Init()
 		{
 			ConfigTransitionPopupById.HandleId = ConfigCommon.InitDataStatement(ConfigTransitionPopupById.HandleId, "db_transitionpopup.db", "select BinData from `TransitionPopup` where Id = ?");
 		}
 
-		// Token: 0x06003C9C RID: 15516 RVA: 0x001B0760 File Offset: 0x001AE960
+		// Token: 0x0600419A RID: 16794 RVA: 0x001CFAF4 File Offset: 0x001CDCF4
 		public static TransitionPopup? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTransitionPopupById.HandleId, ConfigTransitionPopupById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TransitionPopup?(rootAsTransitionPopup);
 		}
 
-		// Token: 0x04004680 RID: 18048
+		// Token: 0x04004C53 RID: 19539
 		private const string DB = "db_transitionpopup.db";
 
-		// Token: 0x04004681 RID: 18049
+		// Token: 0x04004C54 RID: 19540
 		private const string FILE = "j.剧情转场弹窗.xlsx";
 
-		// Token: 0x04004682 RID: 18050
+		// Token: 0x04004C55 RID: 19541
 		private const string TABLE = "TransitionPopup";
 
-		// Token: 0x04004683 RID: 18051
+		// Token: 0x04004C56 RID: 19542
 		private const string COMMAND = "select BinData from `TransitionPopup` where Id = ?";
 
-		// Token: 0x04004684 RID: 18052
+		// Token: 0x04004C57 RID: 19543
 		private const string KEY_PREFIX = "TransitionPopupById";
 
-		// Token: 0x04004685 RID: 18053
+		// Token: 0x04004C58 RID: 19544
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004686 RID: 18054
+		// Token: 0x04004C59 RID: 19545
 		private static int HandleId;
 	}
 }

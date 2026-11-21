@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x0200539C RID: 21404
+	// Token: 0x0200437F RID: 17279
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleAreaInfoView : UiViewBase
 	{
-		// Token: 0x06036AE1 RID: 223969 RVA: 0x00CF0F06 File Offset: 0x00CEF106
+		// Token: 0x0602BA27 RID: 178727 RVA: 0x00C3FFAE File Offset: 0x00C3E1AE
 		public MoraleAreaInfoView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036AE2 RID: 223970 RVA: 0x00CF0F1C File Offset: 0x00CEF11C
+		// Token: 0x0602BA28 RID: 178728 RVA: 0x00C3FFC4 File Offset: 0x00C3E1C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 20;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06036AE3 RID: 223971 RVA: 0x00CF1248 File Offset: 0x00CEF448
+		// Token: 0x0602BA29 RID: 178729 RVA: 0x00C402F0 File Offset: 0x00C3E4F0
 		private void InitDataParam()
 		{
 			this.Model = MoraleModel.Instance;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.FlagData = this.AreaData.GetFlag(flagId);
 		}
 
-		// Token: 0x06036AE4 RID: 223972 RVA: 0x00CF12F0 File Offset: 0x00CEF4F0
+		// Token: 0x0602BA2A RID: 178730 RVA: 0x00C40398 File Offset: 0x00C3E598
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleAreaInfoView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036AE5 RID: 223973 RVA: 0x00CF1334 File Offset: 0x00CEF534
+		// Token: 0x0602BA2B RID: 178731 RVA: 0x00C403DC File Offset: 0x00C3E5DC
 		protected override UniTask OnPlayingStartSequenceAsync()
 		{
 			MoraleAreaInfoView.<OnPlayingStartSequenceAsync>d__15 <OnPlayingStartSequenceAsync>d__;
@@ -114,36 +114,36 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036AE6 RID: 223974 RVA: 0x00CF1377 File Offset: 0x00CEF577
+		// Token: 0x0602BA2C RID: 178732 RVA: 0x00C4041F File Offset: 0x00C3E61F
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.MoraleAreaChangeFlag, new Action<int>(this.EventMoraleAreaChangeFlag));
 		}
 
-		// Token: 0x06036AE7 RID: 223975 RVA: 0x00CF1395 File Offset: 0x00CEF595
+		// Token: 0x0602BA2D RID: 178733 RVA: 0x00C4043D File Offset: 0x00C3E63D
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.MoraleAreaChangeFlag, new Action<int>(this.EventMoraleAreaChangeFlag));
 		}
 
-		// Token: 0x06036AE8 RID: 223976 RVA: 0x00CF13B3 File Offset: 0x00CEF5B3
+		// Token: 0x0602BA2E RID: 178734 RVA: 0x00C4045B File Offset: 0x00C3E65B
 		protected override void OnBeforeShow()
 		{
 			this.UpdateData();
 		}
 
-		// Token: 0x06036AE9 RID: 223977 RVA: 0x00CF13BB File Offset: 0x00CEF5BB
+		// Token: 0x0602BA2F RID: 178735 RVA: 0x00C40463 File Offset: 0x00C3E663
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x06036AEA RID: 223978 RVA: 0x00CF13BD File Offset: 0x00CEF5BD
+		// Token: 0x0602BA30 RID: 178736 RVA: 0x00C40465 File Offset: 0x00C3E665
 		private void OnBtnClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06036AEB RID: 223979 RVA: 0x00CF13C8 File Offset: 0x00CEF5C8
+		// Token: 0x0602BA31 RID: 178737 RVA: 0x00C40470 File Offset: 0x00C3E670
 		public void UpdateData()
 		{
 			this.SumLvInfoPanel.UpdateData();
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UpdateExploreBoxNumPercent();
 		}
 
-		// Token: 0x06036AEC RID: 223980 RVA: 0x00CF1424 File Offset: 0x00CEF624
+		// Token: 0x0602BA32 RID: 178738 RVA: 0x00C404CC File Offset: 0x00C3E6CC
 		public void UpdateSmallFlagNumPercent()
 		{
 			if (!MoraleConfig.Instance.GetMoraleIsShowSmallFlagProgress())
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036AED RID: 223981 RVA: 0x00CF14D4 File Offset: 0x00CEF6D4
+		// Token: 0x0602BA33 RID: 178739 RVA: 0x00C4057C File Offset: 0x00C3E77C
 		public void UpdateFlagBoxNumPercent()
 		{
 			int allFlagBoxTotalCount = this.AreaData.GetAllFlagBoxTotalCount();
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.Morale
 			text.SetText(newText, true);
 		}
 
-		// Token: 0x06036AEE RID: 223982 RVA: 0x00CF153C File Offset: 0x00CEF73C
+		// Token: 0x0602BA34 RID: 178740 RVA: 0x00C405E4 File Offset: 0x00C3E7E4
 		public void UpdateExploreBoxNumPercent()
 		{
 			UUIButtonComponent button = base.GetButton(19);
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036AEF RID: 223983 RVA: 0x00CF1611 File Offset: 0x00CEF811
+		// Token: 0x0602BA35 RID: 178741 RVA: 0x00C406B9 File Offset: 0x00C3E8B9
 		public void SelectFlag(MoraleAreaFlagData flagData)
 		{
 			this.FlagData = flagData;
@@ -264,20 +264,20 @@ namespace CSharpScript.Game.Module.Morale
 			this.MapPanel.UpdateFlagState();
 		}
 
-		// Token: 0x06036AF0 RID: 223984 RVA: 0x00CF163C File Offset: 0x00CEF83C
+		// Token: 0x0602BA36 RID: 178742 RVA: 0x00C406E4 File Offset: 0x00C3E8E4
 		public void SelectFlagId(int flagId)
 		{
 			this.FlagData = this.AreaData.GetFlag(flagId);
 			this.SelectFlag(this.FlagData);
 		}
 
-		// Token: 0x06036AF1 RID: 223985 RVA: 0x00CF165C File Offset: 0x00CEF85C
+		// Token: 0x0602BA37 RID: 178743 RVA: 0x00C40704 File Offset: 0x00C3E904
 		private void EventMoraleAreaChangeFlag(int flagId)
 		{
 			this.SelectFlagId(flagId);
 		}
 
-		// Token: 0x06036AF2 RID: 223986 RVA: 0x00CF1668 File Offset: 0x00CEF868
+		// Token: 0x0602BA38 RID: 178744 RVA: 0x00C40710 File Offset: 0x00C3E910
 		public UniTask UpdateMapData()
 		{
 			MoraleAreaInfoView.<UpdateMapData>d__28 <UpdateMapData>d__;
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <UpdateMapData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036AF3 RID: 223987 RVA: 0x00CF16AC File Offset: 0x00CEF8AC
+		// Token: 0x0602BA39 RID: 178745 RVA: 0x00C40754 File Offset: 0x00C3E954
 		private UniTask UpdateMapBg()
 		{
 			MoraleAreaInfoView.<UpdateMapBg>d__29 <UpdateMapBg>d__;
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <UpdateMapBg>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036AF4 RID: 223988 RVA: 0x00CF16F0 File Offset: 0x00CEF8F0
+		// Token: 0x0602BA3A RID: 178746 RVA: 0x00C40798 File Offset: 0x00C3E998
 		private UniTask UpdateDiffLightBg()
 		{
 			MoraleAreaInfoView.<UpdateDiffLightBg>d__30 <UpdateDiffLightBg>d__;
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <UpdateDiffLightBg>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036AF5 RID: 223989 RVA: 0x00CF1733 File Offset: 0x00CEF933
+		// Token: 0x0602BA3B RID: 178747 RVA: 0x00C407DB File Offset: 0x00C3E9DB
 		private void OnClickFlagItem(MoraleAreaFlagData flagData)
 		{
 			this.SelectFlag(flagData);
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UpdateDiffLightBg().Forget();
 		}
 
-		// Token: 0x06036AF6 RID: 223990 RVA: 0x00CF1754 File Offset: 0x00CEF954
+		// Token: 0x0602BA3C RID: 178748 RVA: 0x00C407FC File Offset: 0x00C3E9FC
 		public void UpdateSelectFlagState()
 		{
 			MoraleAreaFlagData flagData = this.FlagData;
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036AF7 RID: 223991 RVA: 0x00CF17A0 File Offset: 0x00CEF9A0
+		// Token: 0x0602BA3D RID: 178749 RVA: 0x00C40848 File Offset: 0x00C3EA48
 		private void OnBtnSmallFlagDesc()
 		{
 			MoraleModel instance = MoraleModel.Instance;
@@ -339,7 +339,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.SmallFlagDescPanel.UpdateDesc(descKey);
 		}
 
-		// Token: 0x06036AF8 RID: 223992 RVA: 0x00CF17FA File Offset: 0x00CEF9FA
+		// Token: 0x0602BA3E RID: 178750 RVA: 0x00C408A2 File Offset: 0x00C3EAA2
 		private void OnClickBtnExploreBoxTrack()
 		{
 			MoraleModel instance = MoraleModel.Instance;
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Module.Morale
 			instance.TrackAreaExploreBox(this.AreaData.Id);
 		}
 
-		// Token: 0x06036AF9 RID: 223993 RVA: 0x00CF1816 File Offset: 0x00CEFA16
+		// Token: 0x0602BA3F RID: 178751 RVA: 0x00C408BE File Offset: 0x00C3EABE
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -378,96 +378,96 @@ namespace CSharpScript.Game.Module.Morale
 			return mapPanel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0401CE20 RID: 118304
+		// Token: 0x040178B8 RID: 96440
 		public PopupCaptionItem PopupCaption;
 
-		// Token: 0x0401CE21 RID: 118305
+		// Token: 0x040178B9 RID: 96441
 		public MoraleSumLvInfoPanel SumLvInfoPanel;
 
-		// Token: 0x0401CE22 RID: 118306
+		// Token: 0x040178BA RID: 96442
 		public MoraleFlagMonsterInfoPanel FlagMonsterInfoPanel;
 
-		// Token: 0x0401CE23 RID: 118307
+		// Token: 0x040178BB RID: 96443
 		public MoraleAreaInfoMapPanel MapPanel;
 
-		// Token: 0x0401CE24 RID: 118308
+		// Token: 0x040178BC RID: 96444
 		public MoraleAreaInfoFlagDescPanel SmallFlagDescPanel;
 
-		// Token: 0x0401CE25 RID: 118309
+		// Token: 0x040178BD RID: 96445
 		public MoraleAreaData AreaData;
 
-		// Token: 0x0401CE26 RID: 118310
+		// Token: 0x040178BE RID: 96446
 		public MoraleAreaFlagData FlagData;
 
-		// Token: 0x0401CE27 RID: 118311
+		// Token: 0x040178BF RID: 96447
 		public MoraleModel Model;
 
-		// Token: 0x0401CE28 RID: 118312
+		// Token: 0x040178C0 RID: 96448
 		public string LastLightBgPath = "";
 
-		// Token: 0x0200B609 RID: 46601
+		// Token: 0x0200A041 RID: 41025
 		[NullableContext(0)]
 		[RequiredMember]
 		public class Params
 		{
-			// Token: 0x0604EF38 RID: 323384 RVA: 0x01514716 File Offset: 0x01512916
+			// Token: 0x06045535 RID: 283957 RVA: 0x014CE282 File Offset: 0x014CC482
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public Params()
 			{
 			}
 
-			// Token: 0x0403723D RID: 225853
+			// Token: 0x04031C92 RID: 203922
 			[RequiredMember]
 			public int AreaId;
 
-			// Token: 0x0403723E RID: 225854
+			// Token: 0x04031C93 RID: 203923
 			public int? FlagId;
 		}
 
-		// Token: 0x0200B60A RID: 46602
+		// Token: 0x0200A042 RID: 41026
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04037240 RID: 225856
+			// Token: 0x04031C95 RID: 203925
 			ItemCaption,
-			// Token: 0x04037241 RID: 225857
+			// Token: 0x04031C96 RID: 203926
 			ItemLevelInfoPanel,
-			// Token: 0x04037242 RID: 225858
+			// Token: 0x04031C97 RID: 203927
 			ItemLeftBottomRoot,
-			// Token: 0x04037243 RID: 225859
+			// Token: 0x04031C98 RID: 203928
 			ItemSmallFlagTipsRoot,
-			// Token: 0x04037244 RID: 225860
+			// Token: 0x04031C99 RID: 203929
 			ItemFlagInfoPanel,
-			// Token: 0x04037245 RID: 225861
+			// Token: 0x04031C9A RID: 203930
 			ItemArea1Pos,
-			// Token: 0x04037246 RID: 225862
+			// Token: 0x04031C9B RID: 203931
 			ItemArea2Pos,
-			// Token: 0x04037247 RID: 225863
+			// Token: 0x04031C9C RID: 203932
 			ItemArea3Pos,
-			// Token: 0x04037248 RID: 225864
+			// Token: 0x04031C9D RID: 203933
 			ItemArea4Pos,
-			// Token: 0x04037249 RID: 225865
+			// Token: 0x04031C9E RID: 203934
 			ItemArea5Pos,
-			// Token: 0x0403724A RID: 225866
+			// Token: 0x04031C9F RID: 203935
 			TexMapBg,
-			// Token: 0x0403724B RID: 225867
+			// Token: 0x04031CA0 RID: 203936
 			TexDiffLight,
-			// Token: 0x0403724C RID: 225868
+			// Token: 0x04031CA1 RID: 203937
 			SpriteMapGridBg,
-			// Token: 0x0403724D RID: 225869
+			// Token: 0x04031CA2 RID: 203938
 			ItemSmallFlagDesc,
-			// Token: 0x0403724E RID: 225870
+			// Token: 0x04031CA3 RID: 203939
 			BtnSmallFlagDesc,
-			// Token: 0x0403724F RID: 225871
+			// Token: 0x04031CA4 RID: 203940
 			TxtFlagBoxNumPercent,
-			// Token: 0x04037250 RID: 225872
+			// Token: 0x04031CA5 RID: 203941
 			TxtExploreBoxNumPercent,
-			// Token: 0x04037251 RID: 225873
+			// Token: 0x04031CA6 RID: 203942
 			TxtSmallFlagNumPercent,
-			// Token: 0x04037252 RID: 225874
+			// Token: 0x04031CA7 RID: 203943
 			ItemExploreBoxRoot,
-			// Token: 0x04037253 RID: 225875
+			// Token: 0x04031CA8 RID: 203944
 			BtnExploreBoxTrack
 		}
 	}

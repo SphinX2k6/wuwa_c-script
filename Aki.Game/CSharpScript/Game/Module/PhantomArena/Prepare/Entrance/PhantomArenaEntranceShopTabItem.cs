@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005164 RID: 20836
+	// Token: 0x02004134 RID: 16692
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaEntranceShopTabItem : CommonTabItemBase
 	{
-		// Token: 0x0603544B RID: 218187 RVA: 0x00C9D510 File Offset: 0x00C9B710
+		// Token: 0x0602A347 RID: 172871 RVA: 0x00BEAA40 File Offset: 0x00BE8C40
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x0603544C RID: 218188 RVA: 0x00C9D5A4 File Offset: 0x00C9B7A4
+		// Token: 0x0602A348 RID: 172872 RVA: 0x00BEAAD4 File Offset: 0x00BE8CD4
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			base.GetItem(3).SetUIActive(false);
 		}
 
-		// Token: 0x0603544D RID: 218189 RVA: 0x00C9D5F4 File Offset: 0x00C9B7F4
+		// Token: 0x0602A349 RID: 172873 RVA: 0x00BEAB24 File Offset: 0x00BE8D24
 		protected override void OnBeforeDestroy()
 		{
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x0603544E RID: 218190 RVA: 0x00C9D5FC File Offset: 0x00C9B7FC
+		// Token: 0x0602A34A RID: 172874 RVA: 0x00BEAB2C File Offset: 0x00BE8D2C
 		protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 		{
 			PhantomArenaEntranceShopTabData phantomArenaEntranceShopTabData = data.Data as PhantomArenaEntranceShopTabData;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x0603544F RID: 218191 RVA: 0x00C9D657 File Offset: 0x00C9B857
+		// Token: 0x0602A34B RID: 172875 RVA: 0x00BEAB87 File Offset: 0x00BE8D87
 		private void ToggleClick(EToggleState toggleState)
 		{
 			if (base.GetExtendToggle(0).GetToggleState() == EToggleState.ETT_Checked)
@@ -73,18 +73,18 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x06035450 RID: 218192 RVA: 0x00C9D67B File Offset: 0x00C9B87B
+		// Token: 0x0602A34C RID: 172876 RVA: 0x00BEABAB File Offset: 0x00BE8DAB
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SelectedCallBack(base.GridIndex);
 		}
 
-		// Token: 0x06035451 RID: 218193 RVA: 0x00C9D68E File Offset: 0x00C9B88E
+		// Token: 0x0602A34D RID: 172877 RVA: 0x00BEABBE File Offset: 0x00BE8DBE
 		protected override void OnUpdateTabIcon(string iconPath)
 		{
 		}
 
-		// Token: 0x06035452 RID: 218194 RVA: 0x00C9D690 File Offset: 0x00C9B890
+		// Token: 0x0602A34E RID: 172878 RVA: 0x00BEABC0 File Offset: 0x00BE8DC0
 		protected void UpdateIcon(PhantomArenaEntranceShopTabData data)
 		{
 			EUiTabViewName tabViewName = data.GetTabViewName();
@@ -141,43 +141,43 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}, ResourceSystem.EResourceLoadPriority.Default, this.MemoryTag);
 		}
 
-		// Token: 0x06035453 RID: 218195 RVA: 0x00C9D710 File Offset: 0x00C9B910
+		// Token: 0x0602A34F RID: 172879 RVA: 0x00BEAC40 File Offset: 0x00BE8E40
 		protected void UpdateTabTitle(string titleId)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), titleId, Array.Empty<object>());
 		}
 
-		// Token: 0x06035454 RID: 218196 RVA: 0x00C9D729 File Offset: 0x00C9B929
+		// Token: 0x0602A350 RID: 172880 RVA: 0x00BEAC59 File Offset: 0x00BE8E59
 		public void SetToggleStateForce(EToggleState state, bool bFire)
 		{
 			base.GetExtendToggle(0).SetToggleStateForce(state, bFire, false, false);
 		}
 
-		// Token: 0x06035455 RID: 218197 RVA: 0x00C9D73B File Offset: 0x00C9B93B
+		// Token: 0x0602A351 RID: 172881 RVA: 0x00BEAC6B File Offset: 0x00BE8E6B
 		public void SetCanClickWhenDisable(bool state)
 		{
 			base.GetExtendToggle(0).SetCanClickWhenDisable(state);
 		}
 
-		// Token: 0x06035456 RID: 218198 RVA: 0x00C9D74A File Offset: 0x00C9B94A
+		// Token: 0x0602A352 RID: 172882 RVA: 0x00BEAC7A File Offset: 0x00BE8E7A
 		public void SetOnUndeterminedClick(Action call)
 		{
 			this.OnUndeterminedClick = call;
 		}
 
-		// Token: 0x06035457 RID: 218199 RVA: 0x00C9D753 File Offset: 0x00C9B953
+		// Token: 0x0602A353 RID: 172883 RVA: 0x00BEAC83 File Offset: 0x00BE8E83
 		protected override void OnSetToggleState(EToggleState state, bool bFire)
 		{
 			base.GetExtendToggle(0).SetToggleState(state, bFire, false, false);
 		}
 
-		// Token: 0x06035458 RID: 218200 RVA: 0x00C9D766 File Offset: 0x00C9B966
+		// Token: 0x0602A354 RID: 172884 RVA: 0x00BEAC96 File Offset: 0x00BE8E96
 		protected override UUIExtendToggle GetTabToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x06035459 RID: 218201 RVA: 0x00C9D76F File Offset: 0x00C9B96F
+		// Token: 0x0602A355 RID: 172885 RVA: 0x00BEAC9F File Offset: 0x00BE8E9F
 		public void BindRedDot(ERedDotName redDotName, int uId = 0)
 		{
 			this.RedDotName = new ERedDotName?(redDotName);
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x0603545A RID: 218202 RVA: 0x00C9D79E File Offset: 0x00C9B99E
+		// Token: 0x0602A356 RID: 172886 RVA: 0x00BEACCE File Offset: 0x00BE8ECE
 		public void UnBindRedDot()
 		{
 			if (this.RedDotName != null)
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x0603545B RID: 218203 RVA: 0x00C9D7CE File Offset: 0x00C9B9CE
+		// Token: 0x0602A357 RID: 172887 RVA: 0x00BEACFE File Offset: 0x00BE8EFE
 		protected void UnBindGivenUid(int uid = 0)
 		{
 			if (this.RedDotName != null)
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x0603545C RID: 218204 RVA: 0x00C9D806 File Offset: 0x00C9BA06
+		// Token: 0x0602A358 RID: 172888 RVA: 0x00BEAD36 File Offset: 0x00BE8F36
 		public void SetRedDotState(bool bVisible)
 		{
 			UUIItem item = base.GetItem(3);
@@ -218,39 +218,39 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			item.SetUIActive(bVisible);
 		}
 
-		// Token: 0x0603545D RID: 218205 RVA: 0x00C9D81A File Offset: 0x00C9BA1A
+		// Token: 0x0602A359 RID: 172889 RVA: 0x00BEAD4A File Offset: 0x00BE8F4A
 		public UUISprite GetIconSprite()
 		{
 			return base.GetSprite(2);
 		}
 
-		// Token: 0x0603545E RID: 218206 RVA: 0x00C9D823 File Offset: 0x00C9BA23
+		// Token: 0x0602A35A RID: 172890 RVA: 0x00BEAD53 File Offset: 0x00BE8F53
 		protected override void OnClear()
 		{
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x0401C568 RID: 116072
+		// Token: 0x04016F9D RID: 94109
 		[Nullable(2)]
 		private Action OnUndeterminedClick;
 
-		// Token: 0x0401C569 RID: 116073
+		// Token: 0x04016F9E RID: 94110
 		protected ERedDotName? RedDotName;
 
-		// Token: 0x0200B2C5 RID: 45765
+		// Token: 0x02009CFE RID: 40190
 		[NullableContext(0)]
 		private class ETabItem
 		{
-			// Token: 0x040362A8 RID: 221864
+			// Token: 0x04030CFD RID: 199933
 			public const int Toggle = 0;
 
-			// Token: 0x040362A9 RID: 221865
+			// Token: 0x04030CFE RID: 199934
 			public const int TxtName = 1;
 
-			// Token: 0x040362AA RID: 221866
+			// Token: 0x04030CFF RID: 199935
 			public const int Icon = 2;
 
-			// Token: 0x040362AB RID: 221867
+			// Token: 0x04030D00 RID: 199936
 			public const int RedDot = 3;
 		}
 	}

@@ -7,10 +7,10 @@ using CSharpScript.Game.NewWorld.Pawn.Controllers;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050B1 RID: 20657
+	// Token: 0x02004081 RID: 16513
 	public class FlowActionChangeInteractOptionText : FlowActionBase
 	{
-		// Token: 0x06034EBB RID: 216763 RVA: 0x00C88DB0 File Offset: 0x00C86FB0
+		// Token: 0x06029DB4 RID: 171444 RVA: 0x00BD606C File Offset: 0x00BD426C
 		protected override void OnExecute()
 		{
 			int? currentInteractEntityId = InteractionModel.Instance.CurrentInteractEntityId;

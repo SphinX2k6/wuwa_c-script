@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061EE RID: 25070
+	// Token: 0x0200685C RID: 26716
 	public struct IBattleStateFinalMonsterLanding : IFlatbufferObject
 	{
-		// Token: 0x1700BAE9 RID: 47849
-		// (get) Token: 0x0602B369 RID: 177001 RVA: 0x005F4734 File Offset: 0x005F2934
+		// Token: 0x1700C46C RID: 50284
+		// (get) Token: 0x0602DAB0 RID: 187056 RVA: 0x0063F1A8 File Offset: 0x0063D3A8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B36A RID: 177002 RVA: 0x005F4741 File Offset: 0x005F2941
+		// Token: 0x0602DAB1 RID: 187057 RVA: 0x0063F1B5 File Offset: 0x0063D3B5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B36B RID: 177003 RVA: 0x005F4748 File Offset: 0x005F2948
+		// Token: 0x0602DAB2 RID: 187058 RVA: 0x0063F1BC File Offset: 0x0063D3BC
 		public static IBattleStateFinalMonsterLanding GetRootAsIBattleStateFinalMonsterLanding(ByteBuffer _bb)
 		{
 			return IBattleStateFinalMonsterLanding.GetRootAsIBattleStateFinalMonsterLanding(_bb, default(IBattleStateFinalMonsterLanding));
 		}
 
-		// Token: 0x0602B36C RID: 177004 RVA: 0x005F4764 File Offset: 0x005F2964
+		// Token: 0x0602DAB3 RID: 187059 RVA: 0x0063F1D8 File Offset: 0x0063D3D8
 		public static IBattleStateFinalMonsterLanding GetRootAsIBattleStateFinalMonsterLanding(ByteBuffer _bb, IBattleStateFinalMonsterLanding obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B36D RID: 177005 RVA: 0x005F4781 File Offset: 0x005F2981
+		// Token: 0x0602DAB4 RID: 187060 RVA: 0x0063F1F5 File Offset: 0x0063D3F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B36E RID: 177006 RVA: 0x005F4790 File Offset: 0x005F2990
+		// Token: 0x0602DAB5 RID: 187061 RVA: 0x0063F204 File Offset: 0x0063D404
 		public IBattleStateFinalMonsterLanding __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BAEA RID: 47850
-		// (get) Token: 0x0602B36F RID: 177007 RVA: 0x005F47A0 File Offset: 0x005F29A0
+		// Token: 0x1700C46D RID: 50285
+		// (get) Token: 0x0602DAB6 RID: 187062 RVA: 0x0063F214 File Offset: 0x0063D414
 		public ESetBattleTagType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B370 RID: 177008 RVA: 0x005F47DC File Offset: 0x005F29DC
+		// Token: 0x0602DAB7 RID: 187063 RVA: 0x0063F250 File Offset: 0x0063D450
 		public static Offset<IBattleStateFinalMonsterLanding> CreateIBattleStateFinalMonsterLanding(FlatBufferBuilder builder, ESetBattleTagType Type = ESetBattleTagType.BattleMonsterLanding)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBattleStateFinalMonsterLanding.EndIBattleStateFinalMonsterLanding(builder);
 		}
 
-		// Token: 0x0602B371 RID: 177009 RVA: 0x005F47F2 File Offset: 0x005F29F2
+		// Token: 0x0602DAB8 RID: 187064 RVA: 0x0063F266 File Offset: 0x0063D466
 		public static void StartIBattleStateFinalMonsterLanding(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602B372 RID: 177010 RVA: 0x005F47FB File Offset: 0x005F29FB
+		// Token: 0x0602DAB9 RID: 187065 RVA: 0x0063F26F File Offset: 0x0063D46F
 		public static void AddType(FlatBufferBuilder builder, ESetBattleTagType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602B373 RID: 177011 RVA: 0x005F4806 File Offset: 0x005F2A06
+		// Token: 0x0602DABA RID: 187066 RVA: 0x0063F27A File Offset: 0x0063D47A
 		public static Offset<IBattleStateFinalMonsterLanding> EndIBattleStateFinalMonsterLanding(FlatBufferBuilder builder)
 		{
 			return new Offset<IBattleStateFinalMonsterLanding>(builder.EndTable());
 		}
 
-		// Token: 0x0602B374 RID: 177012 RVA: 0x005F4814 File Offset: 0x005F2A14
+		// Token: 0x0602DABB RID: 187067 RVA: 0x0063F288 File Offset: 0x0063D488
 		public IBattleStateFinalMonsterLandingT UnPack()
 		{
 			IBattleStateFinalMonsterLandingT battleStateFinalMonsterLandingT = new IBattleStateFinalMonsterLandingT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return battleStateFinalMonsterLandingT;
 		}
 
-		// Token: 0x0602B375 RID: 177013 RVA: 0x005F482F File Offset: 0x005F2A2F
+		// Token: 0x0602DABC RID: 187068 RVA: 0x0063F2A3 File Offset: 0x0063D4A3
 		public void UnPackTo(IBattleStateFinalMonsterLandingT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602B376 RID: 177014 RVA: 0x005F4840 File Offset: 0x005F2A40
+		// Token: 0x0602DABD RID: 187069 RVA: 0x0063F2B4 File Offset: 0x0063D4B4
 		public static Offset<IBattleStateFinalMonsterLanding> Pack(FlatBufferBuilder builder, IBattleStateFinalMonsterLandingT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBattleStateFinalMonsterLanding.CreateIBattleStateFinalMonsterLanding(builder, _o.Type);
 		}
 
-		// Token: 0x04010723 RID: 67363
+		// Token: 0x04011535 RID: 70965
 		private Table __p;
 	}
 }

@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E5D RID: 3677
+	// Token: 0x02000F6E RID: 3950
 	[EnumExtensions]
 	public enum ECommonEventType
 	{
-		// Token: 0x0400301C RID: 12316
+		// Token: 0x04003313 RID: 13075
 		VarValueChange,
-		// Token: 0x0400301D RID: 12317
+		// Token: 0x04003314 RID: 13076
 		EntityStateChange
 	}
 }

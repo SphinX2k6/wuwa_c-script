@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200692B RID: 26923
+	// Token: 0x02006FDE RID: 28638
 	public class IHonamiStoryPluginEquipSettingT
 	{
-		// Token: 0x1700C7BA RID: 51130
-		// (get) Token: 0x0602F002 RID: 192514 RVA: 0x006686A6 File Offset: 0x006668A6
-		// (set) Token: 0x0602F003 RID: 192515 RVA: 0x006686AE File Offset: 0x006668AE
+		// Token: 0x1700D1BD RID: 53693
+		// (get) Token: 0x060319D2 RID: 203218 RVA: 0x006B8B8E File Offset: 0x006B6D8E
+		// (set) Token: 0x060319D3 RID: 203219 RVA: 0x006B8B96 File Offset: 0x006B6D96
 		public EHonamiStoryRoleSlot RoleSlot { get; set; }
 
-		// Token: 0x1700C7BB RID: 51131
-		// (get) Token: 0x0602F004 RID: 192516 RVA: 0x006686B7 File Offset: 0x006668B7
-		// (set) Token: 0x0602F005 RID: 192517 RVA: 0x006686BF File Offset: 0x006668BF
+		// Token: 0x1700D1BE RID: 53694
+		// (get) Token: 0x060319D4 RID: 203220 RVA: 0x006B8B9F File Offset: 0x006B6D9F
+		// (set) Token: 0x060319D5 RID: 203221 RVA: 0x006B8BA7 File Offset: 0x006B6DA7
 		public EHonamiStoryPluginSlot PluginSlot { get; set; }
 
-		// Token: 0x1700C7BC RID: 51132
-		// (get) Token: 0x0602F006 RID: 192518 RVA: 0x006686C8 File Offset: 0x006668C8
-		// (set) Token: 0x0602F007 RID: 192519 RVA: 0x006686D0 File Offset: 0x006668D0
+		// Token: 0x1700D1BF RID: 53695
+		// (get) Token: 0x060319D6 RID: 203222 RVA: 0x006B8BB0 File Offset: 0x006B6DB0
+		// (set) Token: 0x060319D7 RID: 203223 RVA: 0x006B8BB8 File Offset: 0x006B6DB8
 		public int PluginId { get; set; }
 
-		// Token: 0x0602F008 RID: 192520 RVA: 0x006686D9 File Offset: 0x006668D9
+		// Token: 0x060319D8 RID: 203224 RVA: 0x006B8BC1 File Offset: 0x006B6DC1
 		public IHonamiStoryPluginEquipSettingT()
 		{
 			this.RoleSlot = EHonamiStoryRoleSlot.None;

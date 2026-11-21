@@ -8,19 +8,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity
 {
-	// Token: 0x02005F03 RID: 24323
+	// Token: 0x02004EEA RID: 20202
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityTipsButton : UiPanelBase
 	{
-		// Token: 0x0603DCE9 RID: 253161 RVA: 0x00EF0E6B File Offset: 0x00EEF06B
+		// Token: 0x06032C84 RID: 208004 RVA: 0x00E42B73 File Offset: 0x00E40D73
 		public ActivityTipsButton()
 		{
 			this.PermanentActivityHelpId = ConfigCommonParamById.GetIntConfig("PermanentActivityHelpId");
 			this.ButtonFunction = new Action(this.PermanentActivityHelp);
 		}
 
-		// Token: 0x0603DCEA RID: 253162 RVA: 0x00EF0E98 File Offset: 0x00EEF098
+		// Token: 0x06032C85 RID: 208005 RVA: 0x00E42BA0 File Offset: 0x00E40DA0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DCEB RID: 253163 RVA: 0x00EF0F5F File Offset: 0x00EEF15F
+		// Token: 0x06032C86 RID: 208006 RVA: 0x00E42C67 File Offset: 0x00E40E67
 		private void PermanentActivityHelp()
 		{
 			if (this.PermanentActivityHelpId != null)
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0603DCEC RID: 253164 RVA: 0x00EF0F83 File Offset: 0x00EEF183
+		// Token: 0x06032C87 RID: 208007 RVA: 0x00E42C8B File Offset: 0x00E40E8B
 		protected override void OnBeforeDestroy()
 		{
 			this.ButtonFunction = null;
 		}
 
-		// Token: 0x0603DCED RID: 253165 RVA: 0x00EF0F8C File Offset: 0x00EEF18C
+		// Token: 0x06032C88 RID: 208008 RVA: 0x00E42C94 File Offset: 0x00E40E94
 		private void ButtonClick()
 		{
 			Action buttonFunction = this.ButtonFunction;
@@ -69,19 +69,19 @@ namespace CSharpScript.Game.Module.Activity
 			buttonFunction();
 		}
 
-		// Token: 0x0603DCEE RID: 253166 RVA: 0x00EF0F9E File Offset: 0x00EEF19E
+		// Token: 0x06032C89 RID: 208009 RVA: 0x00E42CA6 File Offset: 0x00E40EA6
 		public void SetFunction(Action buttonFunction)
 		{
 			this.ButtonFunction = buttonFunction;
 		}
 
-		// Token: 0x0603DCEF RID: 253167 RVA: 0x00EF0FA7 File Offset: 0x00EEF1A7
+		// Token: 0x06032C8A RID: 208010 RVA: 0x00E42CAF File Offset: 0x00E40EAF
 		public void SetDefaultFunction()
 		{
 			this.ButtonFunction = new Action(this.PermanentActivityHelp);
 		}
 
-		// Token: 0x0603DCF0 RID: 253168 RVA: 0x00EF0FBC File Offset: 0x00EEF1BC
+		// Token: 0x06032C8B RID: 208011 RVA: 0x00E42CC4 File Offset: 0x00E40EC4
 		public void SetText(string text)
 		{
 			UUIText text2 = base.GetText(2);
@@ -91,30 +91,30 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0603DCF1 RID: 253169 RVA: 0x00EF0FDC File Offset: 0x00EEF1DC
+		// Token: 0x06032C8C RID: 208012 RVA: 0x00E42CE4 File Offset: 0x00E40EE4
 		public void SetLocalTextNew(string textId, params object[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textId, args);
 		}
 
-		// Token: 0x04020490 RID: 132240
+		// Token: 0x0401AF62 RID: 110434
 		private int? PermanentActivityHelpId;
 
-		// Token: 0x04020491 RID: 132241
+		// Token: 0x0401AF63 RID: 110435
 		[Nullable(2)]
 		private Action ButtonFunction;
 
-		// Token: 0x0200C239 RID: 49721
+		// Token: 0x0200AC46 RID: 44102
 		[NullableContext(0)]
 		private class EButtonItemDefine
 		{
-			// Token: 0x0403AAE5 RID: 240357
+			// Token: 0x040354D7 RID: 218327
 			public const int Button = 0;
 
-			// Token: 0x0403AAE6 RID: 240358
+			// Token: 0x040354D8 RID: 218328
 			public const int Sprite = 1;
 
-			// Token: 0x0403AAE7 RID: 240359
+			// Token: 0x040354D9 RID: 218329
 			public const int Text = 2;
 		}
 	}

@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 {
-	// Token: 0x02005255 RID: 21077
+	// Token: 0x02004225 RID: 16933
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleSkillTips : UiPanelBase
 	{
-		// Token: 0x06035DD1 RID: 220625 RVA: 0x00CBF2D8 File Offset: 0x00CBD4D8
+		// Token: 0x0602ACCC RID: 175308 RVA: 0x00C0C968 File Offset: 0x00C0AB68
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,21 +21,21 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			};
 		}
 
-		// Token: 0x06035DD2 RID: 220626 RVA: 0x00CBF311 File Offset: 0x00CBD511
+		// Token: 0x0602ACCD RID: 175309 RVA: 0x00C0C9A1 File Offset: 0x00C0ABA1
 		protected override void OnStart()
 		{
 			this.Sequence = new UiSequencePlayer(this.RootItem);
 			this.Sequence.BindOnEndSequenceEvent(new Action<string>(this.SequenceEnd));
 		}
 
-		// Token: 0x06035DD3 RID: 220627 RVA: 0x00CBF33B File Offset: 0x00CBD53B
+		// Token: 0x0602ACCE RID: 175310 RVA: 0x00C0C9CB File Offset: 0x00C0ABCB
 		protected override void OnBeforeDestroy()
 		{
 			this.Sequence.Clear();
 			this.RemoveTimeHandler();
 		}
 
-		// Token: 0x06035DD4 RID: 220628 RVA: 0x00CBF34E File Offset: 0x00CBD54E
+		// Token: 0x0602ACCF RID: 175311 RVA: 0x00C0C9DE File Offset: 0x00C0ABDE
 		private void SequenceEnd(string sequenceName)
 		{
 			if (sequenceName == "Close")
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			}
 		}
 
-		// Token: 0x06035DD5 RID: 220629 RVA: 0x00CBF364 File Offset: 0x00CBD564
+		// Token: 0x0602ACD0 RID: 175312 RVA: 0x00C0C9F4 File Offset: 0x00C0ABF4
 		private void SetPivotAndResetOffset(float pivotX, float pivotY, UIAnchorHorizontalAlign hAlign)
 		{
 			UUIItem originalItem = this.GetOriginalItem();
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			originalItem.SetAnchorOffset(new FVector2D(0f, 0f));
 		}
 
-		// Token: 0x06035DD6 RID: 220630 RVA: 0x00CBF3B0 File Offset: 0x00CBD5B0
+		// Token: 0x0602ACD1 RID: 175313 RVA: 0x00C0CA40 File Offset: 0x00C0AC40
 		private void AddTimeHandler()
 		{
 			this.RemoveTimeHandler();
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			}, 100f, 1f, null, null, true);
 		}
 
-		// Token: 0x06035DD7 RID: 220631 RVA: 0x00CBF3E1 File Offset: 0x00CBD5E1
+		// Token: 0x0602ACD2 RID: 175314 RVA: 0x00C0CA71 File Offset: 0x00C0AC71
 		private void RemoveTimeHandler()
 		{
 			if (this.TimerHandle != null)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			}
 		}
 
-		// Token: 0x06035DD8 RID: 220632 RVA: 0x00CBF404 File Offset: 0x00CBD604
+		// Token: 0x0602ACD3 RID: 175315 RVA: 0x00C0CA94 File Offset: 0x00C0AC94
 		private void CheckMouseInTip()
 		{
 			if (this.RootItem == null)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			}
 		}
 
-		// Token: 0x06035DD9 RID: 220633 RVA: 0x00CBF44C File Offset: 0x00CBD64C
+		// Token: 0x0602ACD4 RID: 175316 RVA: 0x00C0CADC File Offset: 0x00C0ACDC
 		private void ShowTips()
 		{
 			this.RemoveTimeHandler();
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.Sequence.PlaySequence("Start", false, null);
 		}
 
-		// Token: 0x06035DDA RID: 220634 RVA: 0x00CBF490 File Offset: 0x00CBD690
+		// Token: 0x0602ACD5 RID: 175317 RVA: 0x00C0CB20 File Offset: 0x00C0AD20
 		private void HideTips()
 		{
 			this.RemoveTimeHandler();
@@ -115,14 +115,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.Sequence.PlaySequence("Close", false, null);
 		}
 
-		// Token: 0x06035DDB RID: 220635 RVA: 0x00CBF4CA File Offset: 0x00CBD6CA
+		// Token: 0x0602ACD6 RID: 175318 RVA: 0x00C0CB5A File Offset: 0x00C0AD5A
 		public void Refresh(IPhantomArenaSkillData data)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.SkillName, Array.Empty<object>());
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.SkillDesc, data.SkillDescParams);
 		}
 
-		// Token: 0x06035DDC RID: 220636 RVA: 0x00CBF505 File Offset: 0x00CBD705
+		// Token: 0x0602ACD7 RID: 175319 RVA: 0x00C0CB95 File Offset: 0x00C0AD95
 		public void SetTipsPosition(UUIItem attachItem, bool isOwn)
 		{
 			UUIItem rootItem = this.RootItem;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.SetPivotAndResetOffset(0f, 1f, UIAnchorHorizontalAlign.Left);
 		}
 
-		// Token: 0x06035DDD RID: 220637 RVA: 0x00CBF540 File Offset: 0x00CBD740
+		// Token: 0x0602ACD8 RID: 175320 RVA: 0x00C0CBD0 File Offset: 0x00C0ADD0
 		public void SetTipsActive(bool isActive)
 		{
 			if (this.IsInActive == isActive)
@@ -154,23 +154,23 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.AddTimeHandler();
 		}
 
-		// Token: 0x0401C8B9 RID: 116921
+		// Token: 0x040172EE RID: 94958
 		protected UiSequencePlayer Sequence;
 
-		// Token: 0x0401C8BA RID: 116922
+		// Token: 0x040172EF RID: 94959
 		protected bool IsInActive;
 
-		// Token: 0x0401C8BB RID: 116923
+		// Token: 0x040172F0 RID: 94960
 		protected TimerHandle TimerHandle;
 
-		// Token: 0x0200B40E RID: 46094
+		// Token: 0x02009E46 RID: 40518
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040368F2 RID: 223474
+			// Token: 0x04031345 RID: 201541
 			public const int SkillName = 0;
 
-			// Token: 0x040368F3 RID: 223475
+			// Token: 0x04031346 RID: 201542
 			public const int SkillDesc = 1;
 		}
 	}

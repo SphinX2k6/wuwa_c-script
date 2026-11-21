@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.Role.Common.Data.Structure
 {
-	// Token: 0x020040AB RID: 16555
+	// Token: 0x020032A2 RID: 12962
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/Role/Common/Data/Structure/BP_OverShoulderModeConfig.BP_OverShoulderModeConfig_C")]
 	[UnrealStructLayout(144, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 144)]
 	public class BP_OverShoulderModeConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602AC1A RID: 175130 RVA: 0x009EAA53 File Offset: 0x009E8C53
+		// Token: 0x06020997 RID: 133527 RVA: 0x0094AA23 File Offset: 0x00948C23
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_OverShoulderModeConfig_C._ClassPtr == IntPtr.Zero)
@@ -24,112 +24,112 @@ namespace AkiClient.Game.Aki.Character.Role.Common.Data.Structure
 			return BP_OverShoulderModeConfig_C._ClassPtr;
 		}
 
-		// Token: 0x0602AC1B RID: 175131 RVA: 0x009EAA78 File Offset: 0x009E8C78
+		// Token: 0x06020998 RID: 133528 RVA: 0x0094AA48 File Offset: 0x00948C48
 		public BP_OverShoulderModeConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_OverShoulderModeConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602AC1C RID: 175132 RVA: 0x009EAAA0 File Offset: 0x009E8CA0
+		// Token: 0x06020999 RID: 133529 RVA: 0x0094AA70 File Offset: 0x00948C70
 		public BP_OverShoulderModeConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_OverShoulderModeConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700695A RID: 26970
-		// (get) Token: 0x0602AC1D RID: 175133 RVA: 0x009EAAD3 File Offset: 0x009E8CD3
-		// (set) Token: 0x0602AC1E RID: 175134 RVA: 0x009EAAE3 File Offset: 0x009E8CE3
+		// Token: 0x17003FFD RID: 16381
+		// (get) Token: 0x0602099A RID: 133530 RVA: 0x0094AAA3 File Offset: 0x00948CA3
+		// (set) Token: 0x0602099B RID: 133531 RVA: 0x0094AAB3 File Offset: 0x00948CB3
 		public unsafe float MinTurnSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_MinTurnSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_MinTurnSpeed) = value;
 			}
 		}
 
-		// Token: 0x1700695B RID: 26971
-		// (get) Token: 0x0602AC1F RID: 175135 RVA: 0x009EAAF4 File Offset: 0x009E8CF4
-		// (set) Token: 0x0602AC20 RID: 175136 RVA: 0x009EAB04 File Offset: 0x009E8D04
+		// Token: 0x17003FFE RID: 16382
+		// (get) Token: 0x0602099C RID: 133532 RVA: 0x0094AAC4 File Offset: 0x00948CC4
+		// (set) Token: 0x0602099D RID: 133533 RVA: 0x0094AAD4 File Offset: 0x00948CD4
 		public unsafe float MaxTurnSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_MaxTurnSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_MaxTurnSpeed) = value;
 			}
 		}
 
-		// Token: 0x1700695C RID: 26972
-		// (get) Token: 0x0602AC21 RID: 175137 RVA: 0x009EAB15 File Offset: 0x009E8D15
-		// (set) Token: 0x0602AC22 RID: 175138 RVA: 0x009EAB25 File Offset: 0x009E8D25
+		// Token: 0x17003FFF RID: 16383
+		// (get) Token: 0x0602099E RID: 133534 RVA: 0x0094AAE5 File Offset: 0x00948CE5
+		// (set) Token: 0x0602099F RID: 133535 RVA: 0x0094AAF5 File Offset: 0x00948CF5
 		public unsafe float LerpBeginDeg
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_LerpBeginDeg);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_LerpBeginDeg) = value;
 			}
 		}
 
-		// Token: 0x1700695D RID: 26973
-		// (get) Token: 0x0602AC23 RID: 175139 RVA: 0x009EAB36 File Offset: 0x009E8D36
-		// (set) Token: 0x0602AC24 RID: 175140 RVA: 0x009EAB4A File Offset: 0x009E8D4A
+		// Token: 0x17004000 RID: 16384
+		// (get) Token: 0x060209A0 RID: 133536 RVA: 0x0094AB06 File Offset: 0x00948D06
+		// (set) Token: 0x060209A1 RID: 133537 RVA: 0x0094AB1A File Offset: 0x00948D1A
 		[Nullable(2)]
 		public unsafe UCurveFloat LerpCurve
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_OverShoulderModeConfig_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_OverShoulderModeConfig_C.__PropertyOffset_LerpCurve);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_OverShoulderModeConfig_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_OverShoulderModeConfig_C.__PropertyOffset_LerpCurve, value);
 			}
 		}
 
-		// Token: 0x1700695E RID: 26974
-		// (get) Token: 0x0602AC25 RID: 175141 RVA: 0x009EAB5F File Offset: 0x009E8D5F
-		// (set) Token: 0x0602AC26 RID: 175142 RVA: 0x009EAB6F File Offset: 0x009E8D6F
+		// Token: 0x17004001 RID: 16385
+		// (get) Token: 0x060209A2 RID: 133538 RVA: 0x0094AB2F File Offset: 0x00948D2F
+		// (set) Token: 0x060209A3 RID: 133539 RVA: 0x0094AB3F File Offset: 0x00948D3F
 		public unsafe float LerpPow
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_LerpPow);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_LerpPow) = value;
 			}
 		}
 
-		// Token: 0x1700695F RID: 26975
-		// (get) Token: 0x0602AC27 RID: 175143 RVA: 0x009EAB80 File Offset: 0x009E8D80
-		// (set) Token: 0x0602AC28 RID: 175144 RVA: 0x009EAB90 File Offset: 0x009E8D90
+		// Token: 0x17004002 RID: 16386
+		// (get) Token: 0x060209A4 RID: 133540 RVA: 0x0094AB50 File Offset: 0x00948D50
+		// (set) Token: 0x060209A5 RID: 133541 RVA: 0x0094AB60 File Offset: 0x00948D60
 		public unsafe float SprintExitInputDegAbs
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_SprintExitInputDegAbs);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_SprintExitInputDegAbs) = value;
 			}
 		}
 
-		// Token: 0x17006960 RID: 26976
-		// (get) Token: 0x0602AC29 RID: 175145 RVA: 0x009EABA4 File Offset: 0x009E8DA4
-		// (set) Token: 0x0602AC2A RID: 175146 RVA: 0x009EABDD File Offset: 0x009E8DDD
+		// Token: 0x17004003 RID: 16387
+		// (get) Token: 0x060209A6 RID: 133542 RVA: 0x0094AB74 File Offset: 0x00948D74
+		// (set) Token: 0x060209A7 RID: 133543 RVA: 0x0094ABAD File Offset: 0x00948DAD
 		public FGameplayTagContainer TagList
 		{
 			get
@@ -138,52 +138,52 @@ namespace AkiClient.Game.Aki.Character.Role.Common.Data.Structure
 				FGameplayTagContainer result;
 				if ((result = this._TagList) == null)
 				{
-					result = (this._TagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_6, this));
+					result = (this._TagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_TagList, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_6, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_OverShoulderModeConfig_C.__PropertyOffset_TagList, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x0602AC2B RID: 175147 RVA: 0x009EABFE File Offset: 0x009E8DFE
+		// Token: 0x060209A8 RID: 133544 RVA: 0x0094ABCE File Offset: 0x00948DCE
 		protected BP_OverShoulderModeConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04016213 RID: 90643
+		// Token: 0x040119F1 RID: 72177
 		public new const string __ObjectPath = "/Game/Aki/Character/Role/Common/Data/Structure/BP_OverShoulderModeConfig.BP_OverShoulderModeConfig_C";
 
-		// Token: 0x04016214 RID: 90644
+		// Token: 0x040119F2 RID: 72178
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04016215 RID: 90645
+		// Token: 0x040119F3 RID: 72179
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04016216 RID: 90646
-		internal static int __PropertyOffset_0;
+		// Token: 0x040119F4 RID: 72180
+		internal static int __PropertyOffset_MinTurnSpeed;
 
-		// Token: 0x04016217 RID: 90647
-		internal static int __PropertyOffset_1;
+		// Token: 0x040119F5 RID: 72181
+		internal static int __PropertyOffset_MaxTurnSpeed;
 
-		// Token: 0x04016218 RID: 90648
-		internal static int __PropertyOffset_2;
+		// Token: 0x040119F6 RID: 72182
+		internal static int __PropertyOffset_LerpBeginDeg;
 
-		// Token: 0x04016219 RID: 90649
-		internal static int __PropertyOffset_3;
+		// Token: 0x040119F7 RID: 72183
+		internal static int __PropertyOffset_LerpCurve;
 
-		// Token: 0x0401621A RID: 90650
-		internal static int __PropertyOffset_4;
+		// Token: 0x040119F8 RID: 72184
+		internal static int __PropertyOffset_LerpPow;
 
-		// Token: 0x0401621B RID: 90651
-		internal static int __PropertyOffset_5;
+		// Token: 0x040119F9 RID: 72185
+		internal static int __PropertyOffset_SprintExitInputDegAbs;
 
-		// Token: 0x0401621C RID: 90652
-		internal static int __PropertyOffset_6;
+		// Token: 0x040119FA RID: 72186
+		internal static int __PropertyOffset_TagList;
 
-		// Token: 0x0401621D RID: 90653
+		// Token: 0x040119FB RID: 72187
 		[Nullable(2)]
 		private FGameplayTagContainer _TagList;
 	}

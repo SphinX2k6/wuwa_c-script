@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200104A RID: 4170
+	// Token: 0x02001132 RID: 4402
 	public struct RoleDevWeaponJumpGroup : IFlatbufferObject
 	{
-		// Token: 0x1700325D RID: 12893
-		// (get) Token: 0x0600C874 RID: 51316 RVA: 0x002FA229 File Offset: 0x002F8429
+		// Token: 0x170032D8 RID: 13016
+		// (get) Token: 0x0600CEBE RID: 52926 RVA: 0x00315EF5 File Offset: 0x003140F5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C875 RID: 51317 RVA: 0x002FA236 File Offset: 0x002F8436
+		// Token: 0x0600CEBF RID: 52927 RVA: 0x00315F02 File Offset: 0x00314102
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C876 RID: 51318 RVA: 0x002FA240 File Offset: 0x002F8440
+		// Token: 0x0600CEC0 RID: 52928 RVA: 0x00315F0C File Offset: 0x0031410C
 		public static RoleDevWeaponJumpGroup GetRootAsRoleDevWeaponJumpGroup(ByteBuffer _bb)
 		{
 			return RoleDevWeaponJumpGroup.GetRootAsRoleDevWeaponJumpGroup(_bb, default(RoleDevWeaponJumpGroup));
 		}
 
-		// Token: 0x0600C877 RID: 51319 RVA: 0x002FA25C File Offset: 0x002F845C
+		// Token: 0x0600CEC1 RID: 52929 RVA: 0x00315F28 File Offset: 0x00314128
 		public static RoleDevWeaponJumpGroup GetRootAsRoleDevWeaponJumpGroup(ByteBuffer _bb, RoleDevWeaponJumpGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C878 RID: 51320 RVA: 0x002FA279 File Offset: 0x002F8479
+		// Token: 0x0600CEC2 RID: 52930 RVA: 0x00315F45 File Offset: 0x00314145
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C879 RID: 51321 RVA: 0x002FA288 File Offset: 0x002F8488
+		// Token: 0x0600CEC3 RID: 52931 RVA: 0x00315F54 File Offset: 0x00314154
 		public RoleDevWeaponJumpGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700325E RID: 12894
-		// (get) Token: 0x0600C87A RID: 51322 RVA: 0x002FA298 File Offset: 0x002F8498
+		// Token: 0x170032D9 RID: 13017
+		// (get) Token: 0x0600CEC4 RID: 52932 RVA: 0x00315F64 File Offset: 0x00314164
 		public int WeaponId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700325F RID: 12895
-		// (get) Token: 0x0600C87B RID: 51323 RVA: 0x002FA2D4 File Offset: 0x002F84D4
+		// Token: 0x170032DA RID: 13018
+		// (get) Token: 0x0600CEC5 RID: 52933 RVA: 0x00315FA0 File Offset: 0x003141A0
 		public int JumpType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003260 RID: 12896
-		// (get) Token: 0x0600C87C RID: 51324 RVA: 0x002FA310 File Offset: 0x002F8510
+		// Token: 0x170032DB RID: 13019
+		// (get) Token: 0x0600CEC6 RID: 52934 RVA: 0x00315FDC File Offset: 0x003141DC
 		public int JumpPath
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003261 RID: 12897
-		// (get) Token: 0x0600C87D RID: 51325 RVA: 0x002FA34C File Offset: 0x002F854C
+		// Token: 0x170032DC RID: 13020
+		// (get) Token: 0x0600CEC7 RID: 52935 RVA: 0x00316018 File Offset: 0x00314218
 		public string PathDescribe
 		{
 			get
@@ -107,19 +107,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C87E RID: 51326 RVA: 0x002FA384 File Offset: 0x002F8584
+		// Token: 0x0600CEC8 RID: 52936 RVA: 0x00316050 File Offset: 0x00314250
 		public Span<byte> GetPathDescribeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600C87F RID: 51327 RVA: 0x002FA394 File Offset: 0x002F8594
+		// Token: 0x0600CEC9 RID: 52937 RVA: 0x00316060 File Offset: 0x00314260
 		public byte[] GetPathDescribeArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04005148 RID: 20808
+		// Token: 0x04005730 RID: 22320
 		private Table __p;
 	}
 }

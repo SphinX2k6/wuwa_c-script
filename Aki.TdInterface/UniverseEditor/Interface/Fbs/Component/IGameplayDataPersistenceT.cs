@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052E3 RID: 21219
+	// Token: 0x02005866 RID: 22630
 	public class IGameplayDataPersistenceT
 	{
-		// Token: 0x17009BC0 RID: 39872
-		// (get) Token: 0x06022A41 RID: 141889 RVA: 0x004CD376 File Offset: 0x004CB576
-		// (set) Token: 0x06022A42 RID: 141890 RVA: 0x004CD37E File Offset: 0x004CB57E
+		// Token: 0x1700A3F1 RID: 41969
+		// (get) Token: 0x06024ADB RID: 150235 RVA: 0x00509EA2 File Offset: 0x005080A2
+		// (set) Token: 0x06024ADC RID: 150236 RVA: 0x00509EAA File Offset: 0x005080AA
 		public EDataPersistenceGameplayType Type { get; set; }
 
-		// Token: 0x06022A43 RID: 141891 RVA: 0x004CD387 File Offset: 0x004CB587
+		// Token: 0x06024ADD RID: 150237 RVA: 0x00509EB3 File Offset: 0x005080B3
 		public IGameplayDataPersistenceT()
 		{
 			this.Type = EDataPersistenceGameplayType.TetrisBoardGame;

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C0F RID: 7183
+	// Token: 0x02001DFE RID: 7678
 	public class IMorseCode_SetValue
 	{
-		// Token: 0x04005DB4 RID: 23988
+		// Token: 0x040062DB RID: 25307
 		public ESimpleGameplayType Type;
 
-		// Token: 0x04005DB5 RID: 23989
-		[Nullable(1)]
+		// Token: 0x040062DC RID: 25308
 		public string MorseCodeId;
 	}
 }

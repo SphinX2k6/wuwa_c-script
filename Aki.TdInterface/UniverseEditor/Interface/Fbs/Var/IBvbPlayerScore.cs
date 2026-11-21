@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A81 RID: 14977
+	// Token: 0x02003E5C RID: 15964
 	public struct IBvbPlayerScore : IFlatbufferObject
 	{
-		// Token: 0x17006693 RID: 26259
-		// (get) Token: 0x060144E1 RID: 83169 RVA: 0x002F6B69 File Offset: 0x002F4D69
+		// Token: 0x17006BC3 RID: 27587
+		// (get) Token: 0x060157FD RID: 88061 RVA: 0x00319D55 File Offset: 0x00317F55
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060144E2 RID: 83170 RVA: 0x002F6B76 File Offset: 0x002F4D76
+		// Token: 0x060157FE RID: 88062 RVA: 0x00319D62 File Offset: 0x00317F62
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060144E3 RID: 83171 RVA: 0x002F6B80 File Offset: 0x002F4D80
+		// Token: 0x060157FF RID: 88063 RVA: 0x00319D6C File Offset: 0x00317F6C
 		public static IBvbPlayerScore GetRootAsIBvbPlayerScore(ByteBuffer _bb)
 		{
 			return IBvbPlayerScore.GetRootAsIBvbPlayerScore(_bb, default(IBvbPlayerScore));
 		}
 
-		// Token: 0x060144E4 RID: 83172 RVA: 0x002F6B9C File Offset: 0x002F4D9C
+		// Token: 0x06015800 RID: 88064 RVA: 0x00319D88 File Offset: 0x00317F88
 		public static IBvbPlayerScore GetRootAsIBvbPlayerScore(ByteBuffer _bb, IBvbPlayerScore obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060144E5 RID: 83173 RVA: 0x002F6BB9 File Offset: 0x002F4DB9
+		// Token: 0x06015801 RID: 88065 RVA: 0x00319DA5 File Offset: 0x00317FA5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060144E6 RID: 83174 RVA: 0x002F6BC8 File Offset: 0x002F4DC8
+		// Token: 0x06015802 RID: 88066 RVA: 0x00319DB4 File Offset: 0x00317FB4
 		public IBvbPlayerScore __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006694 RID: 26260
-		// (get) Token: 0x060144E7 RID: 83175 RVA: 0x002F6BD8 File Offset: 0x002F4DD8
+		// Token: 0x17006BC4 RID: 27588
+		// (get) Token: 0x06015803 RID: 88067 RVA: 0x00319DC4 File Offset: 0x00317FC4
 		public ESystemVarName Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060144E8 RID: 83176 RVA: 0x002F6C14 File Offset: 0x002F4E14
+		// Token: 0x06015804 RID: 88068 RVA: 0x00319E00 File Offset: 0x00318000
 		public static Offset<IBvbPlayerScore> CreateIBvbPlayerScore(FlatBufferBuilder builder, ESystemVarName Type = ESystemVarName.CommonHotFixVar)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbPlayerScore.EndIBvbPlayerScore(builder);
 		}
 
-		// Token: 0x060144E9 RID: 83177 RVA: 0x002F6C2A File Offset: 0x002F4E2A
+		// Token: 0x06015805 RID: 88069 RVA: 0x00319E16 File Offset: 0x00318016
 		public static void StartIBvbPlayerScore(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060144EA RID: 83178 RVA: 0x002F6C33 File Offset: 0x002F4E33
+		// Token: 0x06015806 RID: 88070 RVA: 0x00319E1F File Offset: 0x0031801F
 		public static void AddType(FlatBufferBuilder builder, ESystemVarName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060144EB RID: 83179 RVA: 0x002F6C3E File Offset: 0x002F4E3E
+		// Token: 0x06015807 RID: 88071 RVA: 0x00319E2A File Offset: 0x0031802A
 		public static Offset<IBvbPlayerScore> EndIBvbPlayerScore(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbPlayerScore>(builder.EndTable());
 		}
 
-		// Token: 0x060144EC RID: 83180 RVA: 0x002F6C4C File Offset: 0x002F4E4C
+		// Token: 0x06015808 RID: 88072 RVA: 0x00319E38 File Offset: 0x00318038
 		public IBvbPlayerScoreT UnPack()
 		{
 			IBvbPlayerScoreT bvbPlayerScoreT = new IBvbPlayerScoreT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return bvbPlayerScoreT;
 		}
 
-		// Token: 0x060144ED RID: 83181 RVA: 0x002F6C67 File Offset: 0x002F4E67
+		// Token: 0x06015809 RID: 88073 RVA: 0x00319E53 File Offset: 0x00318053
 		public void UnPackTo(IBvbPlayerScoreT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060144EE RID: 83182 RVA: 0x002F6C78 File Offset: 0x002F4E78
+		// Token: 0x0601580A RID: 88074 RVA: 0x00319E64 File Offset: 0x00318064
 		public static Offset<IBvbPlayerScore> Pack(FlatBufferBuilder builder, IBvbPlayerScoreT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbPlayerScore.CreateIBvbPlayerScore(builder, _o.Type);
 		}
 
-		// Token: 0x0400AEFC RID: 44796
+		// Token: 0x0400B81E RID: 47134
 		private Table __p;
 	}
 }

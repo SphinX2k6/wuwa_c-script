@@ -5,14 +5,14 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D84 RID: 19844
+	// Token: 0x02003D4D RID: 15693
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeEntriesGroupData
 	{
-		// Token: 0x17007E80 RID: 32384
-		// (get) Token: 0x060334CF RID: 210127 RVA: 0x00BF964C File Offset: 0x00BF784C
-		// (set) Token: 0x060334CE RID: 210126 RVA: 0x00BF9628 File Offset: 0x00BF7828
+		// Token: 0x17005230 RID: 21040
+		// (get) Token: 0x0602833C RID: 164668 RVA: 0x00B42C48 File Offset: 0x00B40E48
+		// (set) Token: 0x0602833B RID: 164667 RVA: 0x00B42C24 File Offset: 0x00B40E24
 		public bool IsActive
 		{
 			get
@@ -35,9 +35,9 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007E81 RID: 32385
-		// (get) Token: 0x060334D1 RID: 210129 RVA: 0x00BF9678 File Offset: 0x00BF7878
-		// (set) Token: 0x060334D0 RID: 210128 RVA: 0x00BF9654 File Offset: 0x00BF7854
+		// Token: 0x17005231 RID: 21041
+		// (get) Token: 0x0602833E RID: 164670 RVA: 0x00B42C74 File Offset: 0x00B40E74
+		// (set) Token: 0x0602833D RID: 164669 RVA: 0x00B42C50 File Offset: 0x00B40E50
 		public bool IsFocus
 		{
 			get
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060334D2 RID: 210130 RVA: 0x00BF9680 File Offset: 0x00BF7880
+		// Token: 0x0602833F RID: 164671 RVA: 0x00B42C7C File Offset: 0x00B40E7C
 		public List<RoguelikeEntryData> GetAllEntryDataList()
 		{
 			List<RoguelikeEntryData> list = new List<RoguelikeEntryData>();
@@ -70,41 +70,41 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x060334D3 RID: 210131 RVA: 0x00BF96AC File Offset: 0x00BF78AC
+		// Token: 0x06028340 RID: 164672 RVA: 0x00B42CA8 File Offset: 0x00B40EA8
 		public RogueHotEntryGroup GetConfig()
 		{
 			return RoguelikeConfig.Instance.GetRogueHotEntryGroupConfig(this.Id).Value;
 		}
 
-		// Token: 0x0401B399 RID: 111513
+		// Token: 0x04015D6C RID: 89452
 		public int Id;
 
-		// Token: 0x0401B39A RID: 111514
+		// Token: 0x04015D6D RID: 89453
 		public int Index;
 
-		// Token: 0x0401B39B RID: 111515
+		// Token: 0x04015D6E RID: 89454
 		public bool IsUnlock;
 
-		// Token: 0x0401B39C RID: 111516
+		// Token: 0x04015D6F RID: 89455
 		private bool IsActiveInternal;
 
-		// Token: 0x0401B39D RID: 111517
+		// Token: 0x04015D70 RID: 89456
 		private bool IsFocusInternal;
 
-		// Token: 0x0401B39E RID: 111518
+		// Token: 0x04015D71 RID: 89457
 		public List<RoguelikeEntryData> GroupDataListRow1 = new List<RoguelikeEntryData>();
 
-		// Token: 0x0401B39F RID: 111519
+		// Token: 0x04015D72 RID: 89458
 		public List<RoguelikeEntryData> GroupDataListRow2 = new List<RoguelikeEntryData>();
 
-		// Token: 0x0401B3A0 RID: 111520
+		// Token: 0x04015D73 RID: 89459
 		public List<RoguelikeEntryData> GroupDataListRow3 = new List<RoguelikeEntryData>();
 
-		// Token: 0x0401B3A1 RID: 111521
+		// Token: 0x04015D74 RID: 89460
 		[Nullable(2)]
 		public Action<bool> ActiveStateChange;
 
-		// Token: 0x0401B3A2 RID: 111522
+		// Token: 0x04015D75 RID: 89461
 		[Nullable(2)]
 		public Action<bool> FocusStateChange;
 	}

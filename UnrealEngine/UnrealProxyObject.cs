@@ -5,13 +5,13 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200009D RID: 157
+	// Token: 0x02000082 RID: 130
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class UnrealProxyObject : UnrealObject, IDisposable
 	{
-		// Token: 0x170004CE RID: 1230
-		// (get) Token: 0x0600107C RID: 4220 RVA: 0x00018A94 File Offset: 0x00016C94
+		// Token: 0x170000D6 RID: 214
+		// (get) Token: 0x06000C0F RID: 3087 RVA: 0x000137B8 File Offset: 0x000119B8
 		public UnrealObject MemoryOwner
 		{
 			get
@@ -20,8 +20,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004CF RID: 1231
-		// (get) Token: 0x0600107D RID: 4221 RVA: 0x00018A9C File Offset: 0x00016C9C
+		// Token: 0x170000D7 RID: 215
+		// (get) Token: 0x06000C10 RID: 3088 RVA: 0x000137C0 File Offset: 0x000119C0
 		public bool IsNativePtrAllocated
 		{
 			get
@@ -30,42 +30,42 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600107E RID: 4222
+		// Token: 0x06000C11 RID: 3089
 		protected abstract IntPtr AllocNativePtr();
 
-		// Token: 0x0600107F RID: 4223
+		// Token: 0x06000C12 RID: 3090
 		protected abstract void DeallocNativePtr();
 
-		// Token: 0x170004D0 RID: 1232
-		// (get) Token: 0x06001080 RID: 4224
+		// Token: 0x170000D8 RID: 216
+		// (get) Token: 0x06000C13 RID: 3091
 		public abstract bool AllowMoveAssign { get; }
 
-		// Token: 0x06001081 RID: 4225 RVA: 0x00018AA7 File Offset: 0x00016CA7
+		// Token: 0x06000C14 RID: 3092 RVA: 0x000137CB File Offset: 0x000119CB
 		public virtual void MoveAssign(IntPtr FromNativePtr)
 		{
 			throw new UnreachableException();
 		}
 
-		// Token: 0x170004D1 RID: 1233
-		// (get) Token: 0x06001082 RID: 4226
+		// Token: 0x170000D9 RID: 217
+		// (get) Token: 0x06000C15 RID: 3093
 		public abstract bool AllowCopyAssign { get; }
 
-		// Token: 0x06001083 RID: 4227 RVA: 0x00018AAE File Offset: 0x00016CAE
+		// Token: 0x06000C16 RID: 3094 RVA: 0x000137D2 File Offset: 0x000119D2
 		public virtual void CopyAssign(IntPtr FromNativePtr)
 		{
 			throw new UnreachableException();
 		}
 
-		// Token: 0x06001084 RID: 4228
+		// Token: 0x06000C17 RID: 3095
 		public abstract void CopyTo(IntPtr DestPtr, UScriptStructStackOnlyPtr NativeUStructPtr = default(UScriptStructStackOnlyPtr));
 
-		// Token: 0x06001085 RID: 4229 RVA: 0x00018AB5 File Offset: 0x00016CB5
+		// Token: 0x06000C18 RID: 3096 RVA: 0x000137D9 File Offset: 0x000119D9
 		protected UnrealProxyObject()
 		{
 			this._NativePtr = this.AllocNativePtr();
 		}
 
-		// Token: 0x06001086 RID: 4230 RVA: 0x00018ACC File Offset: 0x00016CCC
+		// Token: 0x06000C19 RID: 3097 RVA: 0x000137F0 File Offset: 0x000119F0
 		protected UnrealProxyObject(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr)
 		{
 			SharpherealAssert.Assert(NativePtr != IntPtr.Zero);
@@ -85,7 +85,7 @@ namespace UnrealEngine
 			this._MemoryOwner = MemoryOwner;
 		}
 
-		// Token: 0x06001087 RID: 4231 RVA: 0x00018B20 File Offset: 0x00016D20
+		// Token: 0x06000C1A RID: 3098 RVA: 0x00013844 File Offset: 0x00011A44
 		protected UnrealProxyObject(IntPtr OtherNativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : this()
 		{
 			SharpherealAssert.Assert(OtherNativePtr != IntPtr.Zero);
@@ -102,25 +102,25 @@ namespace UnrealEngine
 			throw new UnreachableException("At least one of move construction and copy construction needs to be implemented");
 		}
 
-		// Token: 0x06001088 RID: 4232 RVA: 0x00018B73 File Offset: 0x00016D73
+		// Token: 0x06000C1B RID: 3099 RVA: 0x00013897 File Offset: 0x00011A97
 		protected UnrealProxyObject(UnrealProxyObject.ENoInit Ctor)
 		{
 		}
 
-		// Token: 0x06001089 RID: 4233 RVA: 0x00018B7B File Offset: 0x00016D7B
+		// Token: 0x06000C1C RID: 3100 RVA: 0x0001389F File Offset: 0x00011A9F
 		public void Dispose()
 		{
 			this.OnScriptObjectDestruct();
 			GC.SuppressFinalize(this);
 		}
 
-		// Token: 0x0600108A RID: 4234 RVA: 0x00018B8C File Offset: 0x00016D8C
+		// Token: 0x06000C1D RID: 3101 RVA: 0x000138B0 File Offset: 0x00011AB0
 		~UnrealProxyObject()
 		{
 			this.OnScriptObjectDestruct();
 		}
 
-		// Token: 0x0600108B RID: 4235 RVA: 0x00018BB8 File Offset: 0x00016DB8
+		// Token: 0x06000C1E RID: 3102 RVA: 0x000138DC File Offset: 0x00011ADC
 		protected virtual void OnScriptObjectDestruct()
 		{
 			if (this._NativePtr != IntPtr.Zero && this.IsNativePtrAllocated)
@@ -142,7 +142,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600108C RID: 4236 RVA: 0x00018C48 File Offset: 0x00016E48
+		// Token: 0x06000C1F RID: 3103 RVA: 0x0001396C File Offset: 0x00011B6C
 		public override bool IsValid()
 		{
 			if (this._MemoryOwner != null)
@@ -152,14 +152,14 @@ namespace UnrealEngine
 			return this._NativePtr > (IntPtr)0;
 		}
 
-		// Token: 0x04000204 RID: 516
+		// Token: 0x040001BD RID: 445
 		internal UnrealObject _MemoryOwner;
 
-		// Token: 0x02002B27 RID: 11047
+		// Token: 0x020008D5 RID: 2261
 		[NullableContext(0)]
 		protected enum ENoInit
 		{
-			// Token: 0x04016380 RID: 91008
+			// Token: 0x04005796 RID: 22422
 			NoInit
 		}
 	}

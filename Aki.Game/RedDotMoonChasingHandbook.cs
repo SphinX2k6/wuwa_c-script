@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020033C2 RID: 13250
+// Token: 0x02002934 RID: 10548
 public class RedDotMoonChasingHandbook : RedDotBase
 {
-	// Token: 0x0601CBBA RID: 117690 RVA: 0x00808C01 File Offset: 0x00806E01
+	// Token: 0x0601A8B2 RID: 108722 RVA: 0x0082F1C5 File Offset: 0x0082D3C5
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.TrackMoonHandbookUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CBBB RID: 117691 RVA: 0x00808C1F File Offset: 0x00806E1F
+	// Token: 0x0601A8B3 RID: 108723 RVA: 0x0082F1E3 File Offset: 0x0082D3E3
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.TrackMoonHandbookUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CBBC RID: 117692 RVA: 0x00808C3D File Offset: 0x00806E3D
+	// Token: 0x0601A8B4 RID: 108724 RVA: 0x0082F201 File Offset: 0x0082D401
 	protected override bool OnCheck(int uId = 0)
 	{
 		ActivityMoonChasingController.Instance.RefreshActivityRedDot();

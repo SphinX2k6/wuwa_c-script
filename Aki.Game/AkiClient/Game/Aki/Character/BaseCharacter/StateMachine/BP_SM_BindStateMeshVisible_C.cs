@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x02004372 RID: 17266
+	// Token: 0x02003393 RID: 13203
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_BindStateMeshVisible.BP_SM_BindStateMeshVisible_C")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 66)]
 	public class BP_SM_BindStateMeshVisible_C : UASMBindState, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CBE8 RID: 183272 RVA: 0x00A27724 File Offset: 0x00A25924
+		// Token: 0x06021806 RID: 137222 RVA: 0x00962578 File Offset: 0x00960778
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SM_BindStateMeshVisible_C._ClassPtr == IntPtr.Zero)
@@ -24,82 +24,82 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			return BP_SM_BindStateMeshVisible_C._ClassPtr;
 		}
 
-		// Token: 0x0602CBE9 RID: 183273 RVA: 0x00A27748 File Offset: 0x00A25948
+		// Token: 0x06021807 RID: 137223 RVA: 0x0096259C File Offset: 0x0096079C
 		public BP_SM_BindStateMeshVisible_C() : this(BuiltinUtils.AllocNativeUObject(BP_SM_BindStateMeshVisible_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CBEA RID: 183274 RVA: 0x00A27770 File Offset: 0x00A25970
+		// Token: 0x06021808 RID: 137224 RVA: 0x009625C4 File Offset: 0x009607C4
 		public BP_SM_BindStateMeshVisible_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SM_BindStateMeshVisible_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170070A8 RID: 28840
-		// (get) Token: 0x0602CBEB RID: 183275 RVA: 0x00A277A3 File Offset: 0x00A259A3
-		// (set) Token: 0x0602CBEC RID: 183276 RVA: 0x00A277B7 File Offset: 0x00A259B7
+		// Token: 0x170044AA RID: 17578
+		// (get) Token: 0x06021809 RID: 137225 RVA: 0x009625F7 File Offset: 0x009607F7
+		// (set) Token: 0x0602180A RID: 137226 RVA: 0x0096260B File Offset: 0x0096080B
 		public unsafe string Tag
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_BindStateMeshVisible_C.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_BindStateMeshVisible_C.__PropertyOffset_Tag)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_BindStateMeshVisible_C.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_BindStateMeshVisible_C.__PropertyOffset_Tag)), value);
 			}
 		}
 
-		// Token: 0x170070A9 RID: 28841
-		// (get) Token: 0x0602CBED RID: 183277 RVA: 0x00A277CC File Offset: 0x00A259CC
-		// (set) Token: 0x0602CBEE RID: 183278 RVA: 0x00A277DC File Offset: 0x00A259DC
+		// Token: 0x170044AB RID: 17579
+		// (get) Token: 0x0602180B RID: 137227 RVA: 0x00962620 File Offset: 0x00960820
+		// (set) Token: 0x0602180C RID: 137228 RVA: 0x00962630 File Offset: 0x00960830
 		public unsafe bool 显示
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_BindStateMeshVisible_C.__PropertyOffset_1) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SM_BindStateMeshVisible_C.__PropertyOffset_显示) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_BindStateMeshVisible_C.__PropertyOffset_1) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SM_BindStateMeshVisible_C.__PropertyOffset_显示) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170070AA RID: 28842
-		// (get) Token: 0x0602CBEF RID: 183279 RVA: 0x00A277ED File Offset: 0x00A259ED
-		// (set) Token: 0x0602CBF0 RID: 183280 RVA: 0x00A277FD File Offset: 0x00A259FD
+		// Token: 0x170044AC RID: 17580
+		// (get) Token: 0x0602180D RID: 137229 RVA: 0x00962641 File Offset: 0x00960841
+		// (set) Token: 0x0602180E RID: 137230 RVA: 0x00962651 File Offset: 0x00960851
 		public unsafe bool 包含所有子节点
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_BindStateMeshVisible_C.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SM_BindStateMeshVisible_C.__PropertyOffset_包含所有子节点) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_BindStateMeshVisible_C.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SM_BindStateMeshVisible_C.__PropertyOffset_包含所有子节点) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602CBF1 RID: 183281 RVA: 0x00A2780E File Offset: 0x00A25A0E
+		// Token: 0x0602180F RID: 137231 RVA: 0x00962662 File Offset: 0x00960862
 		protected BP_SM_BindStateMeshVisible_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04017990 RID: 96656
+		// Token: 0x04012511 RID: 75025
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_BindStateMeshVisible.BP_SM_BindStateMeshVisible_C";
 
-		// Token: 0x04017991 RID: 96657
+		// Token: 0x04012512 RID: 75026
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04017992 RID: 96658
+		// Token: 0x04012513 RID: 75027
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04017993 RID: 96659
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012514 RID: 75028
+		internal static int __PropertyOffset_Tag;
 
-		// Token: 0x04017994 RID: 96660
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012515 RID: 75029
+		internal static int __PropertyOffset_显示;
 
-		// Token: 0x04017995 RID: 96661
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012516 RID: 75030
+		internal static int __PropertyOffset_包含所有子节点;
 	}
 }

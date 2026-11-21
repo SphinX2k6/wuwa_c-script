@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A0A RID: 6666
+	// Token: 0x0200048D RID: 1165
 	public sealed class FResolveDomainDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018B35 RID: 101173 RVA: 0x0024700E File Offset: 0x0024520E
+		// Token: 0x06006D7F RID: 28031 RVA: 0x000A030E File Offset: 0x0009E50E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FResolveDomainDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018B36 RID: 101174 RVA: 0x0024701A File Offset: 0x0024521A
+		// Token: 0x06006D80 RID: 28032 RVA: 0x000A031A File Offset: 0x0009E51A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FResolveDomainDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FResolveDomainDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06018B37 RID: 101175 RVA: 0x0024703D File Offset: 0x0024523D
+		// Token: 0x06006D81 RID: 28033 RVA: 0x000A033D File Offset: 0x0009E53D
 		public FResolveDomainDelegate()
 		{
 		}
 
-		// Token: 0x06018B38 RID: 101176 RVA: 0x00247045 File Offset: 0x00245245
+		// Token: 0x06006D82 RID: 28034 RVA: 0x000A0345 File Offset: 0x0009E545
 		[NullableContext(2)]
 		public FResolveDomainDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018B39 RID: 101177 RVA: 0x0024704F File Offset: 0x0024524F
+		// Token: 0x06006D83 RID: 28035 RVA: 0x000A034F File Offset: 0x0009E54F
 		public FResolveDomainDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018B3A RID: 101178 RVA: 0x0024705A File Offset: 0x0024525A
+		// Token: 0x06006D84 RID: 28036 RVA: 0x000A035A File Offset: 0x0009E55A
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int>) ?? ((Action<int>)Delegate.CreateDelegate(typeof(Action<int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018B3B RID: 101179 RVA: 0x0024708C File Offset: 0x0024528C
+		// Token: 0x06006D85 RID: 28037 RVA: 0x000A038C File Offset: 0x0009E58C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int> Callback)
 		{
 			if (FResolveDomainDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FResolveDomainDelegate.RegisterId);
 		}
 
-		// Token: 0x06018B3C RID: 101180 RVA: 0x002470C8 File Offset: 0x002452C8
+		// Token: 0x06006D86 RID: 28038 RVA: 0x000A03C8 File Offset: 0x0009E5C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int ErrorCode)
 		{
 			FResolveDomainDelegate.__FResolveDomainDelegate_DelegateParams* ptr = stackalloc FResolveDomainDelegate.__FResolveDomainDelegate_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FResolveDomainDelegate.__FResolveDomainDelegate_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06018B3D RID: 101181 RVA: 0x00247108 File Offset: 0x00245308
+		// Token: 0x06006D87 RID: 28039 RVA: 0x000A0408 File Offset: 0x0009E608
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int> action = target as Action<int>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FResolveDomainDelegate.__FResolveDomainDelegate_DelegateParams*)__Parameters)->ErrorCode);
 		}
 
-		// Token: 0x0400D56E RID: 54638
+		// Token: 0x04002EB8 RID: 11960
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D56F RID: 54639
+		// Token: 0x04002EB9 RID: 11961
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroNetwork.ResolveDomainDelegate__DelegateSignature";
 
-		// Token: 0x0400D570 RID: 54640
+		// Token: 0x04002EBA RID: 11962
 		private static int RegisterId;
 
-		// Token: 0x020030BF RID: 12479
+		// Token: 0x02000B9C RID: 2972
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FResolveDomainDelegate_DelegateParams
+		private ref struct __FResolveDomainDelegate_DelegateParams
 		{
-			// Token: 0x04016E17 RID: 93719
+			// Token: 0x04005D1D RID: 23837
 			[FieldOffset(0)]
 			public int ErrorCode;
 		}
 
-		// Token: 0x020030C0 RID: 12480
+		// Token: 0x02000B9D RID: 2973
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016E18 RID: 93720
+			// Token: 0x04005D1E RID: 23838
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

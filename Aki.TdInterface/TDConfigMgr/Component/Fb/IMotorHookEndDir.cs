@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B14 RID: 2836
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000BE2 RID: 3042
 	public class IMotorHookEndDir
 	{
-		// Token: 0x0600417F RID: 16767 RVA: 0x000A81CD File Offset: 0x000A63CD
+		// Token: 0x060045D5 RID: 17877 RVA: 0x000B21F9 File Offset: 0x000B03F9
 		public static IMotorHookEndDir Create(IMotorHookEndDir? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001114 RID: 4372
-		// (get) Token: 0x06004180 RID: 16768 RVA: 0x000A81EC File Offset: 0x000A63EC
+		// Token: 0x1700120C RID: 4620
+		// (get) Token: 0x060045D6 RID: 17878 RVA: 0x000B2218 File Offset: 0x000B0418
 		public virtual VectorInfo EndRot
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001115 RID: 4373
-		// (get) Token: 0x06004181 RID: 16769 RVA: 0x000A8220 File Offset: 0x000A6420
+		// Token: 0x1700120D RID: 4621
+		// (get) Token: 0x060045D7 RID: 17879 RVA: 0x000B224C File Offset: 0x000B044C
 		public virtual string TransitionCurve
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040024E7 RID: 9447
+		// Token: 0x0400272B RID: 10027
 		private IMotorHookEndDir Instance;
 
-		// Token: 0x040024E8 RID: 9448
+		// Token: 0x0400272C RID: 10028
 		[Nullable(2)]
 		private VectorInfo _EndRotCache;
 
-		// Token: 0x040024E9 RID: 9449
+		// Token: 0x0400272D RID: 10029
 		private bool _EndRotInited;
 	}
 }

@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.PinballBattle
 {
-	// Token: 0x02005A04 RID: 23044
+	// Token: 0x020049E0 RID: 18912
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballBattleMainViewProxy : GameMainViewProxy
 	{
-		// Token: 0x17008BB3 RID: 35763
-		// (get) Token: 0x0603A641 RID: 239169 RVA: 0x00DE4B50 File Offset: 0x00DE2D50
+		// Token: 0x17005F81 RID: 24449
+		// (get) Token: 0x0602F58A RID: 193930 RVA: 0x00D350A0 File Offset: 0x00D332A0
 		protected override EBattleUiCommonChildVisibleReason? BattleUiCommonChildVisibleReason
 		{
 			get
@@ -22,25 +22,25 @@ namespace CSharpScript.Game.Module.GameMainView.PinballBattle
 			}
 		}
 
-		// Token: 0x0603A642 RID: 239170 RVA: 0x00DE4B66 File Offset: 0x00DE2D66
+		// Token: 0x0602F58B RID: 193931 RVA: 0x00D350B6 File Offset: 0x00D332B6
 		protected override bool ShouldCreateJoystickPanel()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A643 RID: 239171 RVA: 0x00DE4B69 File Offset: 0x00DE2D69
+		// Token: 0x0602F58C RID: 193932 RVA: 0x00D350B9 File Offset: 0x00D332B9
 		protected override void OnAfterShow()
 		{
 			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.Default, PinballBattleMainViewProxy.pinballChildren, true, true, 0);
 		}
 
-		// Token: 0x0603A644 RID: 239172 RVA: 0x00DE4B83 File Offset: 0x00DE2D83
+		// Token: 0x0602F58D RID: 193933 RVA: 0x00D350D3 File Offset: 0x00D332D3
 		protected override void OnAfterHide()
 		{
 			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.Default, PinballBattleMainViewProxy.pinballChildren, false, true, 0);
 		}
 
-		// Token: 0x0603A645 RID: 239173 RVA: 0x00DE4BA0 File Offset: 0x00DE2DA0
+		// Token: 0x0602F58E RID: 193934 RVA: 0x00D350F0 File Offset: 0x00D332F0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballBattleMainViewProxy.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.GameMainView.PinballBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A646 RID: 239174 RVA: 0x00DE4BE3 File Offset: 0x00DE2DE3
+		// Token: 0x0602F58F RID: 193935 RVA: 0x00D35133 File Offset: 0x00D33333
 		protected override void OnStart()
 		{
 			UUIItem originalItem = this.BattlePanel.GetOriginalItem();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.GameMainView.PinballBattle
 			originalItem.SetAsFirstHierarchy();
 		}
 
-		// Token: 0x0603A647 RID: 239175 RVA: 0x00DE4BFC File Offset: 0x00DE2DFC
+		// Token: 0x0602F590 RID: 193936 RVA: 0x00D3514C File Offset: 0x00D3334C
 		private UniTask CreateBattlePanel()
 		{
 			PinballBattleMainViewProxy.<CreateBattlePanel>d__9 <CreateBattlePanel>d__;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.GameMainView.PinballBattle
 			return <CreateBattlePanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A648 RID: 239176 RVA: 0x00DE4C40 File Offset: 0x00DE2E40
+		// Token: 0x0602F591 RID: 193937 RVA: 0x00D35190 File Offset: 0x00D33390
 		protected override UniTask OnPlayingHideSequenceAsync()
 		{
 			PinballBattleMainViewProxy.<OnPlayingHideSequenceAsync>d__10 <OnPlayingHideSequenceAsync>d__;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.GameMainView.PinballBattle
 			return <OnPlayingHideSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401E6FF RID: 124671
+		// Token: 0x040191A6 RID: 102822
 		[StaticVariableRuleIgnore]
 		private static readonly EBattleUiChild[] pinballChildren = new EBattleUiChild[]
 		{
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.GameMainView.PinballBattle
 			EBattleUiChild.PositionOfficial
 		};
 
-		// Token: 0x0401E700 RID: 124672
+		// Token: 0x040191A7 RID: 102823
 		public PinballBattleMainBattlePanel BattlePanel;
 	}
 }

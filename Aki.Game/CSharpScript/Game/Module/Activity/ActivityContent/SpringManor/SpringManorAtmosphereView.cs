@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200607E RID: 24702
+	// Token: 0x02004FFC RID: 20476
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpringManorAtmosphereView : UiViewBase
 	{
-		// Token: 0x0603E74C RID: 255820 RVA: 0x00F17B13 File Offset: 0x00F15D13
+		// Token: 0x06033410 RID: 209936 RVA: 0x00E5E8D7 File Offset: 0x00E5CAD7
 		public SpringManorAtmosphereView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E74D RID: 255821 RVA: 0x00F17B24 File Offset: 0x00F15D24
+		// Token: 0x06033411 RID: 209937 RVA: 0x00E5E8E8 File Offset: 0x00E5CAE8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E74E RID: 255822 RVA: 0x00F17CD4 File Offset: 0x00F15ED4
+		// Token: 0x06033412 RID: 209938 RVA: 0x00E5EA98 File Offset: 0x00E5CC98
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpringManorAtmosphereView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E74F RID: 255823 RVA: 0x00F17D17 File Offset: 0x00F15F17
+		// Token: 0x06033413 RID: 209939 RVA: 0x00E5EADB File Offset: 0x00E5CCDB
 		protected override void OnStart()
 		{
 			this.InitCaption();
@@ -75,20 +75,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			receiveButton.SetRedDotVisible(true);
 		}
 
-		// Token: 0x0603E750 RID: 255824 RVA: 0x00F17D48 File Offset: 0x00F15F48
+		// Token: 0x06033414 RID: 209940 RVA: 0x00E5EB0C File Offset: 0x00E5CD0C
 		protected override void OnBeforeShow()
 		{
 			this.RefreshLevelView();
 			this.RefreshLevelExpDisplay();
 		}
 
-		// Token: 0x0603E751 RID: 255825 RVA: 0x00F17D56 File Offset: 0x00F15F56
+		// Token: 0x06033415 RID: 209941 RVA: 0x00E5EB1A File Offset: 0x00E5CD1A
 		protected override void OnBeforeHide()
 		{
 			GameSettingsDeviceRender.Instance.CancelPerformanceLimit(this.ViewInfo.Name);
 		}
 
-		// Token: 0x0603E752 RID: 255826 RVA: 0x00F17D72 File Offset: 0x00F15F72
+		// Token: 0x06033416 RID: 209942 RVA: 0x00E5EB36 File Offset: 0x00E5CD36
 		private void RefreshView()
 		{
 			this.RefreshUnlockScroll();
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshRewardPreview();
 		}
 
-		// Token: 0x0603E753 RID: 255827 RVA: 0x00F17D88 File Offset: 0x00F15F88
+		// Token: 0x06033417 RID: 209943 RVA: 0x00E5EB4C File Offset: 0x00E5CD4C
 		private void RefreshLevelExpDisplay()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E754 RID: 255828 RVA: 0x00F17E20 File Offset: 0x00F16020
+		// Token: 0x06033418 RID: 209944 RVA: 0x00E5EBE4 File Offset: 0x00E5CDE4
 		private void OnSelectLevel(int level, LevelItem levelItem)
 		{
 			if (this.SelectLevel == level)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshView();
 		}
 
-		// Token: 0x0603E755 RID: 255829 RVA: 0x00F17E80 File Offset: 0x00F16080
+		// Token: 0x06033419 RID: 209945 RVA: 0x00E5EC44 File Offset: 0x00E5CE44
 		private void InitCaption()
 		{
 			PopupCaptionItem caption = this.Caption;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			});
 		}
 
-		// Token: 0x0603E756 RID: 255830 RVA: 0x00F17ED9 File Offset: 0x00F160D9
+		// Token: 0x0603341A RID: 209946 RVA: 0x00E5EC9D File Offset: 0x00E5CE9D
 		private void InitRewardScroll()
 		{
 			this.RewardScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(6), () => new CommonItemSmallItemGrid
@@ -178,13 +178,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, null, false, null);
 		}
 
-		// Token: 0x0603E757 RID: 255831 RVA: 0x00F17EFC File Offset: 0x00F160FC
+		// Token: 0x0603341B RID: 209947 RVA: 0x00E5ECC0 File Offset: 0x00E5CEC0
 		private bool IsReceived(TItem _)
 		{
 			return this.CachedReceived;
 		}
 
-		// Token: 0x0603E758 RID: 255832 RVA: 0x00F17F04 File Offset: 0x00F16104
+		// Token: 0x0603341C RID: 209948 RVA: 0x00E5ECC8 File Offset: 0x00E5CEC8
 		private void RefreshRewardPreview()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.SetRewardState(ERewardState.Progress);
 		}
 
-		// Token: 0x0603E759 RID: 255833 RVA: 0x00F17FC4 File Offset: 0x00F161C4
+		// Token: 0x0603341D RID: 209949 RVA: 0x00E5ED88 File Offset: 0x00E5CF88
 		private void SetRewardState(ERewardState state)
 		{
 			bool flag = state == ERewardState.None;
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item4.SetUIActive(state == ERewardState.Received);
 		}
 
-		// Token: 0x0603E75A RID: 255834 RVA: 0x00F18043 File Offset: 0x00F16243
+		// Token: 0x0603341E RID: 209950 RVA: 0x00E5EE07 File Offset: 0x00E5D007
 		private void InitGetWayScroll()
 		{
 			this.GetWayScrollView = new GenericScrollViewNew<GetWayItem, int>(base.GetScrollViewWithScrollbar(1), () => new GetWayItem
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, null, false, null);
 		}
 
-		// Token: 0x0603E75B RID: 255835 RVA: 0x00F18066 File Offset: 0x00F16266
+		// Token: 0x0603341F RID: 209951 RVA: 0x00E5EE2A File Offset: 0x00E5D02A
 		private void InitUnlockScroll()
 		{
 			this.UnlockScrollView = new GenericScrollViewNew<UnlockItem, int>(base.GetScrollViewWithScrollbar(4), () => new UnlockItem
@@ -265,13 +265,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, null, false, null);
 		}
 
-		// Token: 0x0603E75C RID: 255836 RVA: 0x00F18089 File Offset: 0x00F16289
+		// Token: 0x06033420 RID: 209952 RVA: 0x00E5EE4D File Offset: 0x00E5D04D
 		private void OnTrackPositionCallback()
 		{
 			UiManager.Instance.ResetToBattleView(null);
 		}
 
-		// Token: 0x0603E75D RID: 255837 RVA: 0x00F18098 File Offset: 0x00F16298
+		// Token: 0x06033421 RID: 209953 RVA: 0x00E5EE5C File Offset: 0x00E5D05C
 		private void RefreshGetWayScroll()
 		{
 			AtmosphereLevel? levelConfig = SpringManorModel.Instance.GetLevelConfig(this.SelectLevel);
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			getWayScrollView.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603E75E RID: 255838 RVA: 0x00F1810C File Offset: 0x00F1630C
+		// Token: 0x06033422 RID: 209954 RVA: 0x00E5EED0 File Offset: 0x00E5D0D0
 		private void RefreshUnlockScroll()
 		{
 			AtmosphereLevel? levelConfig = SpringManorModel.Instance.GetLevelConfig(this.SelectLevel);
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			unlockScrollView.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603E75F RID: 255839 RVA: 0x00F1819C File Offset: 0x00F1639C
+		// Token: 0x06033423 RID: 209955 RVA: 0x00E5EF60 File Offset: 0x00E5D160
 		private void InitLevelAttachView()
 		{
 			this.LevelAttachView = new NoCircleAttachView<SpringLevelData, LevelItem>(base.GetItem(13).GetOwner(), false);
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.LevelAttachView.CreateItems(item.GetOwner(), 0f, new Func<AActor, int, int, LevelItem>(this.CreateLevelItem), EAttachDirection.Horizontal);
 		}
 
-		// Token: 0x0603E760 RID: 255840 RVA: 0x00F181F8 File Offset: 0x00F163F8
+		// Token: 0x06033424 RID: 209956 RVA: 0x00E5EFBC File Offset: 0x00E5D1BC
 		private LevelItem CreateLevelItem(AActor actor, int index, int showNum)
 		{
 			LevelItem levelItem = new LevelItem();
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return levelItem;
 		}
 
-		// Token: 0x0603E761 RID: 255841 RVA: 0x00F18248 File Offset: 0x00F16448
+		// Token: 0x06033425 RID: 209957 RVA: 0x00E5F00C File Offset: 0x00E5D20C
 		private void OnClickLevel(int level)
 		{
 			NoCircleAttachView<SpringLevelData, LevelItem> levelAttachView = this.LevelAttachView;
@@ -350,13 +350,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E762 RID: 255842 RVA: 0x00F1829C File Offset: 0x00F1649C
+		// Token: 0x06033426 RID: 209958 RVA: 0x00E5F060 File Offset: 0x00E5D260
 		private bool IsSelectLevel(int level)
 		{
 			return this.SelectLevel == level;
 		}
 
-		// Token: 0x0603E763 RID: 255843 RVA: 0x00F182A8 File Offset: 0x00F164A8
+		// Token: 0x06033427 RID: 209959 RVA: 0x00E5F06C File Offset: 0x00E5D26C
 		private void RefreshLevelView()
 		{
 			List<SpringLevelData> totalLevelData = SpringManorModel.Instance.GetTotalLevelData();
@@ -377,7 +377,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E764 RID: 255844 RVA: 0x00F18358 File Offset: 0x00F16558
+		// Token: 0x06033428 RID: 209960 RVA: 0x00E5F11C File Offset: 0x00E5D31C
 		private void OnClickReward(int _)
 		{
 			SpringManorController.Instance.RequestAtmosphereRewardReceive(delegate
@@ -387,11 +387,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			});
 		}
 
-		// Token: 0x04020AC4 RID: 133828
+		// Token: 0x0401B3F1 RID: 111601
 		[Nullable(2)]
 		private PopupCaptionItem Caption;
 
-		// Token: 0x04020AC5 RID: 133829
+		// Token: 0x0401B3F2 RID: 111602
 		[Nullable(new byte[]
 		{
 			2,
@@ -400,7 +400,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private NoCircleAttachView<SpringLevelData, LevelItem> LevelAttachView;
 
-		// Token: 0x04020AC6 RID: 133830
+		// Token: 0x0401B3F3 RID: 111603
 		[Nullable(new byte[]
 		{
 			2,
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericScrollViewNew<GetWayItem, int> GetWayScrollView;
 
-		// Token: 0x04020AC7 RID: 133831
+		// Token: 0x0401B3F4 RID: 111604
 		[Nullable(new byte[]
 		{
 			2,
@@ -416,7 +416,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericScrollViewNew<UnlockItem, int> UnlockScrollView;
 
-		// Token: 0x04020AC8 RID: 133832
+		// Token: 0x0401B3F5 RID: 111605
 		[Nullable(new byte[]
 		{
 			2,
@@ -424,14 +424,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-		// Token: 0x04020AC9 RID: 133833
+		// Token: 0x0401B3F6 RID: 111606
 		[Nullable(2)]
 		private ButtonItem ReceiveButton;
 
-		// Token: 0x04020ACA RID: 133834
+		// Token: 0x0401B3F7 RID: 111607
 		private int SelectLevel = -1;
 
-		// Token: 0x04020ACB RID: 133835
+		// Token: 0x0401B3F8 RID: 111608
 		private bool CachedReceived;
 	}
 }

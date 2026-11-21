@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AF8 RID: 11000
+	// Token: 0x02002DEC RID: 11756
 	public class BossPilingEnterNextInst : ActionParams
 	{
-		// Token: 0x0600F0FA RID: 61690 RVA: 0x0022F70C File Offset: 0x0022D90C
-		[NullableContext(1)]
+		// Token: 0x0600FFB0 RID: 65456 RVA: 0x0024D418 File Offset: 0x0024B618
 		public static BossPilingEnterNextInst Create(IBossPilingEnterNextInst? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x0400848C RID: 33932
+		// Token: 0x04008B90 RID: 35728
 		private IBossPilingEnterNextInst Instance;
 	}
 }

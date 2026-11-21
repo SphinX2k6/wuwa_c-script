@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015B5 RID: 5557
+	// Token: 0x02001714 RID: 5908
 	public enum ECommonTip2Type
 	{
-		// Token: 0x040049F8 RID: 18936
+		// Token: 0x04004DAB RID: 19883
 		PrepareCountdown
 	}
 }

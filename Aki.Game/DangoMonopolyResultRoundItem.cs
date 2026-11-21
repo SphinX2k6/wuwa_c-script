@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001240 RID: 4672
+// Token: 0x020006F4 RID: 1780
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class DangoMonopolyResultRoundItem : GridProxyAbstract<DangoMonopolyBoardData>
 {
-	// Token: 0x06007E9E RID: 32414 RVA: 0x001AD130 File Offset: 0x001AB330
+	// Token: 0x06005235 RID: 21045 RVA: 0x001B5DE8 File Offset: 0x001B3FE8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class DangoMonopolyResultRoundItem : GridProxyAbstract<DangoMonopolyBoard
 		};
 	}
 
-	// Token: 0x06007E9F RID: 32415 RVA: 0x001AD198 File Offset: 0x001AB398
+	// Token: 0x06005236 RID: 21046 RVA: 0x001B5E50 File Offset: 0x001B4050
 	public override void Refresh(DangoMonopolyBoardData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -44,7 +44,7 @@ public class DangoMonopolyResultRoundItem : GridProxyAbstract<DangoMonopolyBoard
 		selfToggle.SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06007EA0 RID: 32416 RVA: 0x001AD1ED File Offset: 0x001AB3ED
+	// Token: 0x06005237 RID: 21047 RVA: 0x001B5EA5 File Offset: 0x001B40A5
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		if (toggleState == EToggleState.ETT_Checked)
@@ -58,7 +58,7 @@ public class DangoMonopolyResultRoundItem : GridProxyAbstract<DangoMonopolyBoard
 		}
 	}
 
-	// Token: 0x06007EA1 RID: 32417 RVA: 0x001AD210 File Offset: 0x001AB410
+	// Token: 0x06005238 RID: 21048 RVA: 0x001B5EC8 File Offset: 0x001B40C8
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle selfToggle = this.GetSelfToggle();
@@ -74,7 +74,7 @@ public class DangoMonopolyResultRoundItem : GridProxyAbstract<DangoMonopolyBoard
 		clickCallBack(this.ItemData);
 	}
 
-	// Token: 0x06007EA2 RID: 32418 RVA: 0x001AD23E File Offset: 0x001AB43E
+	// Token: 0x06005239 RID: 21049 RVA: 0x001B5EF6 File Offset: 0x001B40F6
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle selfToggle = this.GetSelfToggle();
@@ -85,16 +85,16 @@ public class DangoMonopolyResultRoundItem : GridProxyAbstract<DangoMonopolyBoard
 		selfToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06007EA3 RID: 32419 RVA: 0x001AD255 File Offset: 0x001AB455
+	// Token: 0x0600523A RID: 21050 RVA: 0x001B5F0D File Offset: 0x001B410D
 	public UUIExtendToggle GetSelfToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x040039A4 RID: 14756
+	// Token: 0x04003A3C RID: 14908
 	private DangoMonopolyBoardData ItemData;
 
-	// Token: 0x040039A5 RID: 14757
+	// Token: 0x04003A3D RID: 14909
 	[Nullable(new byte[]
 	{
 		2,
@@ -102,13 +102,13 @@ public class DangoMonopolyResultRoundItem : GridProxyAbstract<DangoMonopolyBoard
 	})]
 	public Action<DangoMonopolyBoardData> ClickCallBack;
 
-	// Token: 0x02007845 RID: 30789
+	// Token: 0x020069D0 RID: 27088
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04027A2B RID: 162347
+		// Token: 0x04022D5C RID: 142684
 		ToggleSelf,
-		// Token: 0x04027A2C RID: 162348
+		// Token: 0x04022D5D RID: 142685
 		TxtIndex
 	}
 }

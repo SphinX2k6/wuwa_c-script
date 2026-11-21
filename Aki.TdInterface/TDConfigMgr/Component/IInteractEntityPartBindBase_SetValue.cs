@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000479 RID: 1145
+	// Token: 0x020004D2 RID: 1234
 	public class IInteractEntityPartBindBase_SetValue
 	{
-		// Token: 0x04001165 RID: 4453
+		// Token: 0x04001287 RID: 4743
 		public EInteractEntityPartBindType Type;
 	}
 }

@@ -3,37 +3,37 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x020030E0 RID: 12512
+// Token: 0x02002638 RID: 9784
 [NullableContext(2)]
 [Nullable(0)]
 public class LockOnUtils : IStaticVariableResetter
 {
-	// Token: 0x0601ACB8 RID: 109752 RVA: 0x0073AA98 File Offset: 0x00738C98
+	// Token: 0x060186D4 RID: 100052 RVA: 0x007604D4 File Offset: 0x0075E6D4
 	static LockOnUtils()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LockOnUtils.CreateStaticDefaultValue), new Action(LockOnUtils.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601ACB9 RID: 109753 RVA: 0x0073AAB7 File Offset: 0x00738CB7
+	// Token: 0x060186D5 RID: 100053 RVA: 0x007604F3 File Offset: 0x0075E6F3
 	public static void CreateStaticDefaultValue()
 	{
 		LockOnUtils._lockOnIgnoreBlockTag = GameplayTagDefine.EGameplayTagId["角色.Common.索敌无视遮挡"];
 	}
 
-	// Token: 0x0601ACBA RID: 109754 RVA: 0x0073AACD File Offset: 0x00738CCD
+	// Token: 0x060186D6 RID: 100054 RVA: 0x00760509 File Offset: 0x0075E709
 	public static void ResetStaticDefaultValue()
 	{
 		LockOnUtils._lockOnIgnoreBlockTag = 0;
 		LockOnUtils._lineTrace = null;
 	}
 
-	// Token: 0x0601ACBB RID: 109755 RVA: 0x0073AADB File Offset: 0x00738CDB
+	// Token: 0x060186D7 RID: 100055 RVA: 0x00760517 File Offset: 0x0075E717
 	public static bool CheckFriendCamp(int camp)
 	{
 		return camp == 0 || camp == 2 || camp == 4;
 	}
 
-	// Token: 0x0601ACBC RID: 109756 RVA: 0x0073AAEC File Offset: 0x00738CEC
+	// Token: 0x060186D8 RID: 100056 RVA: 0x00760528 File Offset: 0x0075E728
 	[NullableContext(1)]
 	public static UTraceLineElement GetLockOnLineTrace([Nullable(2)] UObject worldContextObject, bool showLine = false)
 	{
@@ -59,7 +59,7 @@ public class LockOnUtils : IStaticVariableResetter
 		return LockOnUtils._lineTrace;
 	}
 
-	// Token: 0x0601ACBD RID: 109757 RVA: 0x0073AB94 File Offset: 0x00738D94
+	// Token: 0x060186D9 RID: 100057 RVA: 0x007605D0 File Offset: 0x0075E7D0
 	public static bool TraceDetectBlock(UObject worldContextObject, FVector from, FVector to, AActor targetActor, bool showLine = false, BaseTagComponent tagComp = null)
 	{
 		if (tagComp != null && tagComp.HasTag(LockOnUtils._lockOnIgnoreBlockTag))
@@ -78,7 +78,7 @@ public class LockOnUtils : IStaticVariableResetter
 		return aactor != targetActor && entityActorByChildActor != targetActor;
 	}
 
-	// Token: 0x0601ACBE RID: 109758 RVA: 0x0073AC38 File Offset: 0x00738E38
+	// Token: 0x060186DA RID: 100058 RVA: 0x00760674 File Offset: 0x0075E874
 	public unsafe static bool IsValidLockOnTarget(EntityHandle handle, FGameplayTagContainer lockOnGameplayTags = null, FGameplayTagContainer ignoreLockOnGameplayTagContainer = null, bool forceCheckTag = false)
 	{
 		if (handle == null || !handle.Valid || (handle == null || !handle.IsInit))
@@ -149,7 +149,7 @@ public class LockOnUtils : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601ACBF RID: 109759 RVA: 0x0073ADC0 File Offset: 0x00738FC0
+	// Token: 0x060186DB RID: 100059 RVA: 0x007607FC File Offset: 0x0075E9FC
 	public static FVectorDouble? GetLockOnTargetLocation(AActor target)
 	{
 		FVectorDouble? result = null;
@@ -188,17 +188,17 @@ public class LockOnUtils : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0400CEF4 RID: 52980
+	// Token: 0x0400D2E4 RID: 53988
 	[Nullable(1)]
 	private const string SCENE_ITEM_ACTOR_KEY = "Center";
 
-	// Token: 0x0400CEF5 RID: 52981
+	// Token: 0x0400D2E5 RID: 53989
 	[Nullable(1)]
 	private const string PROFILE_KEY = "LockOnUtils_TraceDetectBlock";
 
-	// Token: 0x0400CEF6 RID: 52982
+	// Token: 0x0400D2E6 RID: 53990
 	private static int _lockOnIgnoreBlockTag;
 
-	// Token: 0x0400CEF7 RID: 52983
+	// Token: 0x0400D2E7 RID: 53991
 	private static UTraceLineElement _lineTrace;
 }

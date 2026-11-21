@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000096 RID: 150
+// Token: 0x02000098 RID: 152
 [NullableContext(1)]
 [Nullable(0)]
 public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5, [Nullable(2)] T6> : IEventArgs
 {
-	// Token: 0x06000477 RID: 1143 RVA: 0x0001A0FB File Offset: 0x000182FB
+	// Token: 0x060004B8 RID: 1208 RVA: 0x0001A85F File Offset: 0x00018A5F
 	public EventArgs(T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6)
 	{
 		this.<p1>P = p1;
@@ -17,7 +17,7 @@ public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2
 		this.<p6>P = p6;
 	}
 
-	// Token: 0x06000478 RID: 1144 RVA: 0x0001A12C File Offset: 0x0001832C
+	// Token: 0x060004B9 RID: 1209 RVA: 0x0001A890 File Offset: 0x00018A90
 	public bool Invoke(Enum name, Delegate handle)
 	{
 		Action<T1, T2, T3, T4, T5, T6> action = handle as Action<T1, T2, T3, T4, T5, T6>;
@@ -46,7 +46,7 @@ public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2
 		return true;
 	}
 
-	// Token: 0x06000479 RID: 1145 RVA: 0x0001A1F0 File Offset: 0x000183F0
+	// Token: 0x060004BA RID: 1210 RVA: 0x0001A954 File Offset: 0x00018B54
 	public bool Invoke(long name, Delegate handle)
 	{
 		Action<T1, T2, T3, T4, T5, T6> action = handle as Action<T1, T2, T3, T4, T5, T6>;
@@ -75,27 +75,27 @@ public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2
 		return true;
 	}
 
-	// Token: 0x040003FE RID: 1022
+	// Token: 0x0400040C RID: 1036
 	[CompilerGenerated]
 	private readonly T1 <p1>P;
 
-	// Token: 0x040003FF RID: 1023
+	// Token: 0x0400040D RID: 1037
 	[CompilerGenerated]
 	private readonly T2 <p2>P;
 
-	// Token: 0x04000400 RID: 1024
+	// Token: 0x0400040E RID: 1038
 	[CompilerGenerated]
 	private readonly T3 <p3>P;
 
-	// Token: 0x04000401 RID: 1025
+	// Token: 0x0400040F RID: 1039
 	[CompilerGenerated]
 	private readonly T4 <p4>P;
 
-	// Token: 0x04000402 RID: 1026
+	// Token: 0x04000410 RID: 1040
 	[CompilerGenerated]
 	private readonly T5 <p5>P;
 
-	// Token: 0x04000403 RID: 1027
+	// Token: 0x04000411 RID: 1041
 	[CompilerGenerated]
 	private readonly T6 <p6>P;
 }

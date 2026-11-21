@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200021F RID: 543
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000246 RID: 582
 	public class ICategoryMatchingConfig
 	{
-		// Token: 0x0600094C RID: 2380 RVA: 0x00028BF4 File Offset: 0x00026DF4
+		// Token: 0x060009C0 RID: 2496 RVA: 0x0002A3B4 File Offset: 0x000285B4
 		private ICategoryMatchingConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600094D RID: 2381 RVA: 0x00028C2C File Offset: 0x00026E2C
+		// Token: 0x060009C1 RID: 2497 RVA: 0x0002A3EC File Offset: 0x000285EC
 		public static ICategoryMatchingConfig Create([Nullable(2)] ICategoryMatchingConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600094E RID: 2382 RVA: 0x00028C3F File Offset: 0x00026E3F
+		// Token: 0x060009C2 RID: 2498 RVA: 0x0002A3FF File Offset: 0x000285FF
 		public static ICategoryMatchingConfig CreateFromSetValue([Nullable(2)] ICategoryMatchingConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600094F RID: 2383 RVA: 0x00028C52 File Offset: 0x00026E52
+		// Token: 0x060009C3 RID: 2499 RVA: 0x0002A412 File Offset: 0x00028612
 		public ICategoryMatchingConfig_SetValue ToSetValue()
 		{
 			return new ICategoryMatchingConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170002D5 RID: 725
-		// (get) Token: 0x06000950 RID: 2384 RVA: 0x00028C8C File Offset: 0x00026E8C
-		// (set) Token: 0x06000951 RID: 2385 RVA: 0x00028CED File Offset: 0x00026EED
+		// Token: 0x170002F4 RID: 756
+		// (get) Token: 0x060009C4 RID: 2500 RVA: 0x0002A44C File Offset: 0x0002864C
+		// (set) Token: 0x060009C5 RID: 2501 RVA: 0x0002A4AD File Offset: 0x000286AD
 		public virtual ICategoryMatchingCondition Condition
 		{
 			get
@@ -92,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002D6 RID: 726
-		// (get) Token: 0x06000952 RID: 2386 RVA: 0x00028D04 File Offset: 0x00026F04
-		// (set) Token: 0x06000953 RID: 2387 RVA: 0x00028D65 File Offset: 0x00026F65
+		// Token: 0x170002F5 RID: 757
+		// (get) Token: 0x060009C6 RID: 2502 RVA: 0x0002A4C4 File Offset: 0x000286C4
+		// (set) Token: 0x060009C7 RID: 2503 RVA: 0x0002A525 File Offset: 0x00028725
 		public virtual ICategoryMatchingAnimation Animation
 		{
 			get
@@ -122,9 +120,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002D7 RID: 727
-		// (get) Token: 0x06000954 RID: 2388 RVA: 0x00028D7C File Offset: 0x00026F7C
-		// (set) Token: 0x06000955 RID: 2389 RVA: 0x00028DDD File Offset: 0x00026FDD
+		// Token: 0x170002F6 RID: 758
+		// (get) Token: 0x060009C8 RID: 2504 RVA: 0x0002A53C File Offset: 0x0002873C
+		// (set) Token: 0x060009C9 RID: 2505 RVA: 0x0002A59D File Offset: 0x0002879D
 		public virtual ICategoryMatchingSucceed Callback
 		{
 			get
@@ -152,9 +150,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002D8 RID: 728
-		// (get) Token: 0x06000956 RID: 2390 RVA: 0x00028DF4 File Offset: 0x00026FF4
-		// (set) Token: 0x06000957 RID: 2391 RVA: 0x00028E55 File Offset: 0x00027055
+		// Token: 0x170002F7 RID: 759
+		// (get) Token: 0x060009CA RID: 2506 RVA: 0x0002A5B4 File Offset: 0x000287B4
+		// (set) Token: 0x060009CB RID: 2507 RVA: 0x0002A615 File Offset: 0x00028815
 		[Nullable(2)]
 		public virtual IItemLockingConfig ItemLockingConfig
 		{
@@ -185,36 +183,36 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040009AD RID: 2477
+		// Token: 0x04000A37 RID: 2615
 		[Nullable(2)]
 		protected ICategoryMatchingConfig FbInstance;
 
-		// Token: 0x040009AE RID: 2478
+		// Token: 0x04000A38 RID: 2616
 		[Nullable(2)]
 		protected ICategoryMatchingConfig_SetValue PocoInterface;
 
-		// Token: 0x040009AF RID: 2479
+		// Token: 0x04000A39 RID: 2617
 		private ICategoryMatchingCondition _ConditionCache;
 
-		// Token: 0x040009B0 RID: 2480
+		// Token: 0x04000A3A RID: 2618
 		private bool _ConditionInited;
 
-		// Token: 0x040009B1 RID: 2481
+		// Token: 0x04000A3B RID: 2619
 		private ICategoryMatchingAnimation _AnimationCache;
 
-		// Token: 0x040009B2 RID: 2482
+		// Token: 0x04000A3C RID: 2620
 		private bool _AnimationInited;
 
-		// Token: 0x040009B3 RID: 2483
+		// Token: 0x04000A3D RID: 2621
 		private ICategoryMatchingSucceed _CallbackCache;
 
-		// Token: 0x040009B4 RID: 2484
+		// Token: 0x04000A3E RID: 2622
 		private bool _CallbackInited;
 
-		// Token: 0x040009B5 RID: 2485
+		// Token: 0x04000A3F RID: 2623
 		private IItemLockingConfig _ItemLockingConfigCache;
 
-		// Token: 0x040009B6 RID: 2486
+		// Token: 0x04000A40 RID: 2624
 		private bool _ItemLockingConfigInited;
 	}
 }

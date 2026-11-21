@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005429 RID: 21545
+	// Token: 0x0200440C RID: 17420
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MenuDetailPopViewItemPanel : UiPanelBase
 	{
-		// Token: 0x060370A5 RID: 225445 RVA: 0x00D0B213 File Offset: 0x00D09413
+		// Token: 0x0602BFEE RID: 180206 RVA: 0x00C5A633 File Offset: 0x00C58833
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			};
 		}
 
-		// Token: 0x060370A6 RID: 225446 RVA: 0x00D0B24C File Offset: 0x00D0944C
+		// Token: 0x0602BFEF RID: 180207 RVA: 0x00C5A66C File Offset: 0x00C5886C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			this.View = new MenuDetailPopViewItemView(base.GetText(1), base.GetTexture(0), delegate(string path, UUITexture texture)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x060370A7 RID: 225447 RVA: 0x00D0B278 File Offset: 0x00D09478
+		// Token: 0x0602BFF0 RID: 180208 RVA: 0x00C5A698 File Offset: 0x00C58898
 		public void RefreshByData(MenuDetailPopItemData data)
 		{
 			MenuDetailPopViewItemView view = this.View;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			view.RefreshByData(data);
 		}
 
-		// Token: 0x060370A8 RID: 225448 RVA: 0x00D0B28B File Offset: 0x00D0948B
+		// Token: 0x0602BFF1 RID: 180209 RVA: 0x00C5A6AB File Offset: 0x00C588AB
 		protected override void OnBeforeDestroy()
 		{
 			MenuDetailPopViewItemView view = this.View;
@@ -54,10 +54,10 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.View = null;
 		}
 
-		// Token: 0x0401D0B6 RID: 118966
+		// Token: 0x04017B4F RID: 97103
 		private const string VIDEO_NAME = "MenuDetailPopViewItemPanel";
 
-		// Token: 0x0401D0B7 RID: 118967
+		// Token: 0x04017B50 RID: 97104
 		[Nullable(2)]
 		private MenuDetailPopViewItemView View;
 	}

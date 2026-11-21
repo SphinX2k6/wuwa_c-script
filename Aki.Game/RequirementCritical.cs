@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F0E RID: 12046
+// Token: 0x02002461 RID: 9313
 [RequiredMember]
 public class RequirementCritical : IRequirement
 {
-	// Token: 0x1700239E RID: 9118
-	// (get) Token: 0x06019B4D RID: 105293 RVA: 0x006B1B06 File Offset: 0x006AFD06
+	// Token: 0x17002460 RID: 9312
+	// (get) Token: 0x06017458 RID: 95320 RVA: 0x006D7E1E File Offset: 0x006D601E
 	public EExtraEffectRequire Type
 	{
 		get
@@ -15,14 +15,14 @@ public class RequirementCritical : IRequirement
 		}
 	}
 
-	// Token: 0x06019B4E RID: 105294 RVA: 0x006B1B09 File Offset: 0x006AFD09
+	// Token: 0x06017459 RID: 95321 RVA: 0x006D7E21 File Offset: 0x006D6021
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public RequirementCritical()
 	{
 	}
 
-	// Token: 0x0400C173 RID: 49523
+	// Token: 0x0400C515 RID: 50453
 	[RequiredMember]
 	public bool IsCritical;
 }

@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015DB RID: 5595
+	// Token: 0x0200173B RID: 5947
 	[EnumExtensions]
 	public enum EExitVehicleType
 	{
-		// Token: 0x04004A99 RID: 19097
+		// Token: 0x04004E59 RID: 20057
 		Launch,
-		// Token: 0x04004A9A RID: 19098
+		// Token: 0x04004E5A RID: 20058
 		Teleport,
-		// Token: 0x04004A9B RID: 19099
+		// Token: 0x04004E5B RID: 20059
 		StandUp,
-		// Token: 0x04004A9C RID: 19100
+		// Token: 0x04004E5C RID: 20060
 		SeatStandUp
 	}
 }

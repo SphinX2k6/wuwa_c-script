@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -20,14 +19,14 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x0200309F RID: 12447
+// Token: 0x020025F6 RID: 9718
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterWeaponComponent : EntityComponent
 {
-	// Token: 0x17002490 RID: 9360
-	// (get) Token: 0x0601A997 RID: 108951 RVA: 0x007250BD File Offset: 0x007232BD
-	public new static Type[] Dependencies
+	// Token: 0x17002602 RID: 9730
+	// (get) Token: 0x06018395 RID: 99221 RVA: 0x0074AEC9 File Offset: 0x007490C9
+	public override Type[] Dependencies
 	{
 		get
 		{
@@ -38,9 +37,9 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002491 RID: 9361
-	// (get) Token: 0x0601A998 RID: 108952 RVA: 0x007250D2 File Offset: 0x007232D2
-	// (set) Token: 0x0601A999 RID: 108953 RVA: 0x007250DC File Offset: 0x007232DC
+	// Token: 0x17002603 RID: 9731
+	// (get) Token: 0x06018396 RID: 99222 RVA: 0x0074AEDE File Offset: 0x007490DE
+	// (set) Token: 0x06018397 RID: 99223 RVA: 0x0074AEE8 File Offset: 0x007490E8
 	public int CurrentHangState
 	{
 		get
@@ -77,19 +76,19 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A99A RID: 108954 RVA: 0x007251BA File Offset: 0x007233BA
+	// Token: 0x06018398 RID: 99224 RVA: 0x0074AFC6 File Offset: 0x007491C6
 	private void WeaponVisibleCallBack(bool tagExist, CharacterWeapon weapon)
 	{
 		this.SetWeaponVisibleByTag(weapon, tagExist, true);
 	}
 
-	// Token: 0x0601A99B RID: 108955 RVA: 0x007251C5 File Offset: 0x007233C5
+	// Token: 0x06018399 RID: 99225 RVA: 0x0074AFD1 File Offset: 0x007491D1
 	private void WeaponHiddenCallBack(bool tagExist, CharacterWeapon weapon)
 	{
 		this.SetWeaponVisibleByTag(weapon, tagExist, false);
 	}
 
-	// Token: 0x0601A99C RID: 108956 RVA: 0x007251D0 File Offset: 0x007233D0
+	// Token: 0x0601839A RID: 99226 RVA: 0x0074AFDC File Offset: 0x007491DC
 	private void OnSelfCenteredChanged(ETimeScaleSourceType type, float timeScale, int priority)
 	{
 		CharacterWeapon[] characterWeapons = this.WeaponMesh.CharacterWeapons;
@@ -99,7 +98,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A99D RID: 108957 RVA: 0x00725200 File Offset: 0x00723400
+	// Token: 0x0601839B RID: 99227 RVA: 0x0074B00C File Offset: 0x0074920C
 	[NullableContext(2)]
 	private void OnStateInherit(Entity other, bool notInheritMoveAndAnim)
 	{
@@ -142,7 +141,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A99E RID: 108958 RVA: 0x007252F0 File Offset: 0x007234F0
+	// Token: 0x0601839C RID: 99228 RVA: 0x0074B0FC File Offset: 0x007492FC
 	private void OnParaglidingChanged(int tagId, bool tagExist)
 	{
 		if (!tagExist)
@@ -155,7 +154,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A99F RID: 108959 RVA: 0x0072531C File Offset: 0x0072351C
+	// Token: 0x0601839D RID: 99229 RVA: 0x0074B128 File Offset: 0x00749328
 	private void OnGlidingChanged(int tagId, bool tagExist)
 	{
 		if (!tagExist && this.ParaglidingIsOpen)
@@ -177,7 +176,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9A0 RID: 108960 RVA: 0x007253F8 File Offset: 0x007235F8
+	// Token: 0x0601839E RID: 99230 RVA: 0x0074B204 File Offset: 0x00749404
 	private void OnGlidingHoverChanged(int tagId, bool tagExist)
 	{
 		this.ParaglidingIsHover = tagExist;
@@ -189,7 +188,7 @@ public class CharacterWeaponComponent : EntityComponent
 		abp_ParaglidingBase_C.SetHover(tagExist);
 	}
 
-	// Token: 0x0601A9A1 RID: 108961 RVA: 0x00725428 File Offset: 0x00723628
+	// Token: 0x0601839F RID: 99231 RVA: 0x0074B234 File Offset: 0x00749434
 	public void SetParaglidingIsAscent(bool isAscent)
 	{
 		this.ParaglidingIsAscent = isAscent;
@@ -201,7 +200,7 @@ public class CharacterWeaponComponent : EntityComponent
 		abp_ParaglidingBase_C.SetDash(isAscent);
 	}
 
-	// Token: 0x0601A9A2 RID: 108962 RVA: 0x00725458 File Offset: 0x00723658
+	// Token: 0x060183A0 RID: 99232 RVA: 0x0074B264 File Offset: 0x00749464
 	private void OnUnifiedMoveStateChanged(global::ECharMoveState oldMoveState, global::ECharMoveState newMoveState)
 	{
 		if (oldMoveState == global::ECharMoveState.Soar || newMoveState == global::ECharMoveState.Soar)
@@ -218,7 +217,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9A3 RID: 108963 RVA: 0x00725498 File Offset: 0x00723698
+	// Token: 0x060183A1 RID: 99233 RVA: 0x0074B2A4 File Offset: 0x007494A4
 	private unsafe void OnChangeMeshAnim()
 	{
 		if (this.SoarWing == null || this.SoarWingConfig == null)
@@ -243,7 +242,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601A9A4 RID: 108964 RVA: 0x00725500 File Offset: 0x00723700
+	// Token: 0x060183A2 RID: 99234 RVA: 0x0074B30C File Offset: 0x0074950C
 	private void OnHuluHandEffectShowChanged(int tagId, bool tagExist)
 	{
 		if (!tagExist)
@@ -281,7 +280,7 @@ public class CharacterWeaponComponent : EntityComponent
 		effectActor.K2_AttachToComponent(this.ActorComp.Actor.Mesh, new FName?(CharacterNameDefines.Instance.HULU_EFFECT_SOCKET_NAME), EAttachmentRule.SnapToTarget, EAttachmentRule.SnapToTarget, EAttachmentRule.SnapToTarget, false);
 	}
 
-	// Token: 0x0601A9A5 RID: 108965 RVA: 0x0072566A File Offset: 0x0072386A
+	// Token: 0x060183A3 RID: 99235 RVA: 0x0074B476 File Offset: 0x00749676
 	private void OnHuluGlidingShowChanged(int tagId, bool tagExist)
 	{
 		if (tagExist)
@@ -294,7 +293,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.SetHuluHidden(false, true, false);
 	}
 
-	// Token: 0x0601A9A6 RID: 108966 RVA: 0x00725698 File Offset: 0x00723898
+	// Token: 0x060183A4 RID: 99236 RVA: 0x0074B4A4 File Offset: 0x007496A4
 	private void OnHuluShowChanged(int tagId, bool tagExist)
 	{
 		EHuluPositionState huluPositionState = this.HuluPositionState;
@@ -310,7 +309,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.SetHuluHidden(tagExist, false, false);
 	}
 
-	// Token: 0x0601A9A7 RID: 108967 RVA: 0x007256C7 File Offset: 0x007238C7
+	// Token: 0x060183A5 RID: 99237 RVA: 0x0074B4D3 File Offset: 0x007496D3
 	private void OnTagExistHideWeapon(int tagId, bool tagExist)
 	{
 		if (tagExist)
@@ -321,13 +320,13 @@ public class CharacterWeaponComponent : EntityComponent
 		this.GotHideTags.Remove(tagId);
 	}
 
-	// Token: 0x0601A9A8 RID: 108968 RVA: 0x007256E7 File Offset: 0x007238E7
+	// Token: 0x060183A6 RID: 99238 RVA: 0x0074B4F3 File Offset: 0x007496F3
 	private void CharacterDeadDropWeapon()
 	{
 		this.ReceiveRoleDeadDropWeapon();
 	}
 
-	// Token: 0x0601A9A9 RID: 108969 RVA: 0x007256EF File Offset: 0x007238EF
+	// Token: 0x060183A7 RID: 99239 RVA: 0x0074B4FB File Offset: 0x007496FB
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -336,13 +335,13 @@ public class CharacterWeaponComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A9AA RID: 108970 RVA: 0x00725708 File Offset: 0x00723908
+	// Token: 0x060183A8 RID: 99240 RVA: 0x0074B514 File Offset: 0x00749714
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0601A9AB RID: 108971 RVA: 0x0072570B File Offset: 0x0072390B
+	// Token: 0x060183A9 RID: 99241 RVA: 0x0074B517 File Offset: 0x00749717
 	protected override void OnActivate()
 	{
 		TimerSystem.Instance.Next(delegate(float delta)
@@ -366,7 +365,7 @@ public class CharacterWeaponComponent : EntityComponent
 		ConcomitantWeaponHelper.SyncWeaponToConcomitants(base.Entity);
 	}
 
-	// Token: 0x0601A9AC RID: 108972 RVA: 0x00725734 File Offset: 0x00723934
+	// Token: 0x060183AA RID: 99242 RVA: 0x0074B540 File Offset: 0x00749740
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.CheckGetComponent<CharacterActorComponent>();
@@ -444,7 +443,7 @@ public class CharacterWeaponComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A9AD RID: 108973 RVA: 0x00725B20 File Offset: 0x00723D20
+	// Token: 0x060183AB RID: 99243 RVA: 0x0074B92C File Offset: 0x00749B2C
 	public void OnEntitySoarWingOrParaglidingSkinChangeNotify(EntityFlySkin data)
 	{
 		foreach (FlySkinInfo flySkinInfo in data.SkinInfos)
@@ -478,7 +477,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9AE RID: 108974 RVA: 0x00725BF8 File Offset: 0x00723DF8
+	// Token: 0x060183AC RID: 99244 RVA: 0x0074BA04 File Offset: 0x00749C04
 	protected override bool OnEnd()
 	{
 		if (!this.IsRole)
@@ -497,7 +496,7 @@ public class CharacterWeaponComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A9AF RID: 108975 RVA: 0x00725D00 File Offset: 0x00723F00
+	// Token: 0x060183AD RID: 99245 RVA: 0x0074BB0C File Offset: 0x00749D0C
 	protected unsafe override void OnTick(float delta)
 	{
 		if (this.IsRoleOrRoleMonster)
@@ -560,7 +559,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.UpdateWeaponEffectTag();
 	}
 
-	// Token: 0x0601A9B0 RID: 108976 RVA: 0x00725F58 File Offset: 0x00724158
+	// Token: 0x060183AE RID: 99246 RVA: 0x0074BD64 File Offset: 0x00749F64
 	protected override bool OnClear()
 	{
 		this.ClearWeaponVisibleData();
@@ -624,19 +623,19 @@ public class CharacterWeaponComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A9B1 RID: 108977 RVA: 0x007260F7 File Offset: 0x007242F7
+	// Token: 0x060183AF RID: 99247 RVA: 0x0074BF03 File Offset: 0x0074A103
 	protected override void OnEnable()
 	{
 		this.UpdateWeaponBuffEffectsHiddenInGame();
 	}
 
-	// Token: 0x0601A9B2 RID: 108978 RVA: 0x007260FF File Offset: 0x007242FF
+	// Token: 0x060183B0 RID: 99248 RVA: 0x0074BF0B File Offset: 0x0074A10B
 	protected override void OnDisable(string reason)
 	{
 		this.UpdateWeaponBuffEffectsHiddenInGame();
 	}
 
-	// Token: 0x0601A9B3 RID: 108979 RVA: 0x00726107 File Offset: 0x00724307
+	// Token: 0x060183B1 RID: 99249 RVA: 0x0074BF13 File Offset: 0x0074A113
 	private void CheckOriginState()
 	{
 		if (this.TagComp.HasTag(this.ParaglidingTag))
@@ -645,7 +644,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9B4 RID: 108980 RVA: 0x00726124 File Offset: 0x00724324
+	// Token: 0x060183B2 RID: 99250 RVA: 0x0074BF30 File Offset: 0x0074A130
 	private void CreateWeaponMesh()
 	{
 		this.WeaponMesh = new CharacterWeaponMesh();
@@ -697,7 +696,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.CreateWeaponMeshForOther();
 	}
 
-	// Token: 0x0601A9B5 RID: 108981 RVA: 0x007262D4 File Offset: 0x007244D4
+	// Token: 0x060183B3 RID: 99251 RVA: 0x0074C0E0 File Offset: 0x0074A2E0
 	private unsafe void InitNormalAndBattleSocket()
 	{
 		SModelConfig modelConfig = base.Entity.GetComponent<CreatureDataComponent>().GetModelConfig();
@@ -736,7 +735,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9B6 RID: 108982 RVA: 0x00726480 File Offset: 0x00724680
+	// Token: 0x060183B4 RID: 99252 RVA: 0x0074C28C File Offset: 0x0074A48C
 	private void CreateWeaponMeshForRole()
 	{
 		this.CurrentHangState = 0;
@@ -747,7 +746,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.HideWeaponAfterWeaponInDelay = null;
 	}
 
-	// Token: 0x0601A9B7 RID: 108983 RVA: 0x007264D4 File Offset: 0x007246D4
+	// Token: 0x060183B5 RID: 99253 RVA: 0x0074C2E0 File Offset: 0x0074A4E0
 	private void CreateWeaponMeshForOther()
 	{
 		this.InitAiWeapon();
@@ -768,7 +767,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.WeaponIn(false, 0f, "CreateWeaponMeshForOther");
 	}
 
-	// Token: 0x0601A9B8 RID: 108984 RVA: 0x00726544 File Offset: 0x00724744
+	// Token: 0x060183B6 RID: 99254 RVA: 0x0074C350 File Offset: 0x0074A550
 	private void LoadParagliding(int modelConfigId)
 	{
 		if (!this.IsRole)
@@ -790,7 +789,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.HiddenParagliding(true);
 	}
 
-	// Token: 0x0601A9B9 RID: 108985 RVA: 0x0072663C File Offset: 0x0072483C
+	// Token: 0x060183B7 RID: 99255 RVA: 0x0074C448 File Offset: 0x0074A648
 	private unsafe void LoadSoarWing(int modelConfigId)
 	{
 		if (!this.IsRole)
@@ -834,7 +833,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601A9BA RID: 108986 RVA: 0x00726778 File Offset: 0x00724978
+	// Token: 0x060183B8 RID: 99256 RVA: 0x0074C584 File Offset: 0x0074A784
 	private unsafe void HiddenParagliding(bool bHidden)
 	{
 		FTransform socketTransform = this.Paragliding.GetSocketTransform(CharacterNameDefines.Instance.ROOT, ERelativeTransformSpace.RTS_World);
@@ -883,7 +882,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}, null, null);
 	}
 
-	// Token: 0x0601A9BB RID: 108987 RVA: 0x00726900 File Offset: 0x00724B00
+	// Token: 0x060183B9 RID: 99257 RVA: 0x0074C70C File Offset: 0x0074A90C
 	public void OpenParagliding(bool bOpen)
 	{
 		this.ParaglidingIsOpen = bOpen;
@@ -915,7 +914,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9BC RID: 108988 RVA: 0x0072699C File Offset: 0x00724B9C
+	// Token: 0x060183BA RID: 99258 RVA: 0x0074C7A8 File Offset: 0x0074A9A8
 	public unsafe void SetNewParagliding(int configId)
 	{
 		SModelConfig baseConfig = ModelUtil.GetModelConfig(configId);
@@ -960,7 +959,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601A9BD RID: 108989 RVA: 0x007269F0 File Offset: 0x00724BF0
+	// Token: 0x060183BB RID: 99259 RVA: 0x0074C7FC File Offset: 0x0074A9FC
 	public void SyncParagliding(CharacterWeaponComponent weapon, bool syncAnim = true)
 	{
 		this.HiddenParagliding(!weapon.ParaglidingIsOpen);
@@ -981,7 +980,7 @@ public class CharacterWeaponComponent : EntityComponent
 		UKuroAnimLibrary.EndAnimNotifyStates(abp_ParaglidingBase_C);
 	}
 
-	// Token: 0x0601A9BE RID: 108990 RVA: 0x00726A53 File Offset: 0x00724C53
+	// Token: 0x060183BC RID: 99260 RVA: 0x0074C85F File Offset: 0x0074AA5F
 	private void LoadHulu()
 	{
 		if (!this.IsRole)
@@ -993,7 +992,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.SetNewHulu(this.GetHuluModelId(0));
 	}
 
-	// Token: 0x0601A9BF RID: 108991 RVA: 0x00726A80 File Offset: 0x00724C80
+	// Token: 0x060183BD RID: 99261 RVA: 0x0074C88C File Offset: 0x0074AA8C
 	private unsafe void SetNewHulu(int meshId)
 	{
 		if (this.HuluId == meshId)
@@ -1056,7 +1055,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601A9C0 RID: 108992 RVA: 0x00726CD8 File Offset: 0x00724ED8
+	// Token: 0x060183BE RID: 99262 RVA: 0x0074CAE4 File Offset: 0x0074ACE4
 	private void SetHuluPosition(EHuluPositionState newPosition)
 	{
 		if (newPosition == this.HuluPositionState)
@@ -1082,13 +1081,13 @@ public class CharacterWeaponComponent : EntityComponent
 		this.HuluPositionState = newPosition;
 	}
 
-	// Token: 0x0601A9C1 RID: 108993 RVA: 0x00726D4A File Offset: 0x00724F4A
+	// Token: 0x060183BF RID: 99263 RVA: 0x0074CB56 File Offset: 0x0074AD56
 	public int GetHuluId()
 	{
 		return this.HuluId;
 	}
 
-	// Token: 0x0601A9C2 RID: 108994 RVA: 0x00726D54 File Offset: 0x00724F54
+	// Token: 0x060183C0 RID: 99264 RVA: 0x0074CB60 File Offset: 0x0074AD60
 	public void SetHuluHidden(bool bHidden, bool withEffect = true, bool checkOriginState = false)
 	{
 		bool flag = bHidden;
@@ -1154,13 +1153,13 @@ public class CharacterWeaponComponent : EntityComponent
 		this.Hulu.SetHiddenInGame(bHidden, false);
 	}
 
-	// Token: 0x0601A9C3 RID: 108995 RVA: 0x00726EEB File Offset: 0x007250EB
+	// Token: 0x060183C1 RID: 99265 RVA: 0x0074CCF7 File Offset: 0x0074AEF7
 	public void OnEntityHuluSkinChangeNotify(int skinId)
 	{
 		this.SetNewHulu(this.GetHuluModelId(skinId));
 	}
 
-	// Token: 0x0601A9C4 RID: 108996 RVA: 0x00726EFC File Offset: 0x007250FC
+	// Token: 0x060183C2 RID: 99266 RVA: 0x0074CD08 File Offset: 0x0074AF08
 	private int GetHuluModelId(int skinId = 0)
 	{
 		int num;
@@ -1187,13 +1186,13 @@ public class CharacterWeaponComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601A9C5 RID: 108997 RVA: 0x00726F78 File Offset: 0x00725178
+	// Token: 0x060183C3 RID: 99267 RVA: 0x0074CD84 File Offset: 0x0074AF84
 	private void InitAiWeapon()
 	{
 		this.AiWeaponConfigId = 0;
 	}
 
-	// Token: 0x0601A9C6 RID: 108998 RVA: 0x00726F81 File Offset: 0x00725181
+	// Token: 0x060183C4 RID: 99268 RVA: 0x0074CD8D File Offset: 0x0074AF8D
 	public void ClearWeaponForAi()
 	{
 		this.CurrentHangState = 0;
@@ -1206,7 +1205,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.UnRegisterCharacterDropWeaponEvent();
 	}
 
-	// Token: 0x0601A9C7 RID: 108999 RVA: 0x00726FAC File Offset: 0x007251AC
+	// Token: 0x060183C5 RID: 99269 RVA: 0x0074CDB8 File Offset: 0x0074AFB8
 	public unsafe void ChangeWeaponByWeaponByConfigId(int config)
 	{
 		SWeaponSocketItem weaponConfigByConfigId = AiWeaponModel.Instance.GetWeaponConfigByConfigId(config, base.Entity);
@@ -1226,7 +1225,7 @@ public class CharacterWeaponComponent : EntityComponent
 		instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0601A9C8 RID: 109000 RVA: 0x0072706C File Offset: 0x0072526C
+	// Token: 0x060183C6 RID: 99270 RVA: 0x0074CE78 File Offset: 0x0074B078
 	public void ChangeWeaponByWeaponSocketItem(SWeaponSocketItem weaponSocket)
 	{
 		this.OldWeaponHidden();
@@ -1308,7 +1307,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9C9 RID: 109001 RVA: 0x0072726C File Offset: 0x0072546C
+	// Token: 0x060183C7 RID: 99271 RVA: 0x0074D078 File Offset: 0x0074B278
 	public bool EquipWeaponForRole()
 	{
 		EntityComponentPb valueOrDefault = base.Entity.GetComponent<CreatureDataComponent>().ComponentDataMap.GetValueOrDefault("EquipComponent");
@@ -1316,7 +1315,7 @@ public class CharacterWeaponComponent : EntityComponent
 		return equipComponentPb != null && this.EquipWeaponForRoleByWeaponComponent(equipComponentPb);
 	}
 
-	// Token: 0x0601A9CA RID: 109002 RVA: 0x007272AC File Offset: 0x007254AC
+	// Token: 0x060183C8 RID: 99272 RVA: 0x0074D0B8 File Offset: 0x0074B2B8
 	public unsafe bool EquipWeaponForRoleByWeaponComponent(EquipComponentPb equipComponent)
 	{
 		if (!this.WeaponEquipInfo.SetData(equipComponent))
@@ -1361,7 +1360,7 @@ public class CharacterWeaponComponent : EntityComponent
 		return this.SetEquipWeaponModels(weaponModels.Item1, weaponModels.Item2);
 	}
 
-	// Token: 0x0601A9CB RID: 109003 RVA: 0x00727424 File Offset: 0x00725624
+	// Token: 0x060183C9 RID: 99273 RVA: 0x0074D230 File Offset: 0x0074B430
 	[return: TupleElementNames(new string[]
 	{
 		"Models",
@@ -1391,7 +1390,7 @@ public class CharacterWeaponComponent : EntityComponent
 		return new ValueTuple<int[], long[]>(item2, item);
 	}
 
-	// Token: 0x0601A9CC RID: 109004 RVA: 0x0072748C File Offset: 0x0072568C
+	// Token: 0x060183CA RID: 99274 RVA: 0x0074D298 File Offset: 0x0074B498
 	private unsafe bool SetEquipWeaponModels(int[] modelIds, long[] skinBuffIds = null)
 	{
 		if (modelIds.Length != this.WeaponMesh.CharacterWeapons.Length)
@@ -1509,7 +1508,7 @@ public class CharacterWeaponComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A9CD RID: 109005 RVA: 0x00727700 File Offset: 0x00725900
+	// Token: 0x060183CB RID: 99275 RVA: 0x0074D50C File Offset: 0x0074B70C
 	private void UpdateSkinBuffs(long[] skinBuffIds)
 	{
 		if (!this.IsRole)
@@ -1550,14 +1549,14 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9CE RID: 109006 RVA: 0x0072787C File Offset: 0x00725A7C
+	// Token: 0x060183CC RID: 99276 RVA: 0x0074D688 File Offset: 0x0074B888
 	public void OnEquipWeaponForRoleNotify(EntityEquipChangeNotify notify)
 	{
 		this.EquipWeaponForRoleByWeaponComponent(notify.EquipComponent);
 		ConcomitantWeaponHelper.SyncWeaponToConcomitants(base.Entity);
 	}
 
-	// Token: 0x0601A9CF RID: 109007 RVA: 0x00727898 File Offset: 0x00725A98
+	// Token: 0x060183CD RID: 99277 RVA: 0x0074D6A4 File Offset: 0x0074B8A4
 	public void OnEntityEquipSkinChangeNotify(EntityEquipSkinChangeNotify notify)
 	{
 		int weaponSkinId = notify.RoleWeaponSkinComponent.WeaponSkinId;
@@ -1575,7 +1574,7 @@ public class CharacterWeaponComponent : EntityComponent
 		ConcomitantWeaponHelper.SyncWeaponToConcomitants(base.Entity);
 	}
 
-	// Token: 0x0601A9D0 RID: 109008 RVA: 0x00727918 File Offset: 0x00725B18
+	// Token: 0x060183CE RID: 99278 RVA: 0x0074D724 File Offset: 0x0074B924
 	protected void CheckAndHangWeapons(bool withEffect)
 	{
 		if (this.CurrentHangState == 0)
@@ -1596,7 +1595,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9D1 RID: 109009 RVA: 0x007279F8 File Offset: 0x00725BF8
+	// Token: 0x060183CF RID: 99279 RVA: 0x0074D804 File Offset: 0x0074BA04
 	public void HideWeaponsWhenHideBones(bool hide, FName socketName)
 	{
 		if (this.ActorComp == null)
@@ -1621,7 +1620,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9D2 RID: 109010 RVA: 0x00727A9C File Offset: 0x00725C9C
+	// Token: 0x060183D0 RID: 99280 RVA: 0x0074D8A8 File Offset: 0x0074BAA8
 	private void LerpWeapons(float delta)
 	{
 		if (this.CurrentLerpTime >= this.LerpTimeLength || this.ActorComp == null)
@@ -1640,7 +1639,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9D3 RID: 109011 RVA: 0x00727B4C File Offset: 0x00725D4C
+	// Token: 0x060183D1 RID: 99281 RVA: 0x0074D958 File Offset: 0x0074BB58
 	protected void WeaponInInternal(bool withEffect, float lerpTime = 0f, string reason = "")
 	{
 		this.CurrentHangState = 0;
@@ -1702,7 +1701,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}, 100f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601A9D4 RID: 109012 RVA: 0x00727D60 File Offset: 0x00725F60
+	// Token: 0x060183D2 RID: 99282 RVA: 0x0074DB6C File Offset: 0x0074BD6C
 	protected void WeaponIn(bool withEffect, float lerpTime = 0f, string reason = "")
 	{
 		if (this.CurrentHangState == 0)
@@ -1712,7 +1711,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.WeaponInInternal(withEffect, lerpTime, reason);
 	}
 
-	// Token: 0x0601A9D5 RID: 109013 RVA: 0x00727D74 File Offset: 0x00725F74
+	// Token: 0x060183D3 RID: 99283 RVA: 0x0074DB80 File Offset: 0x0074BD80
 	private FName GetSafeSocketName(FName? socketName)
 	{
 		FName? fname = socketName;
@@ -1723,7 +1722,7 @@ public class CharacterWeaponComponent : EntityComponent
 		return fname.GetValueOrDefault();
 	}
 
-	// Token: 0x0601A9D6 RID: 109014 RVA: 0x00727D9C File Offset: 0x00725F9C
+	// Token: 0x060183D4 RID: 99284 RVA: 0x0074DBA8 File Offset: 0x0074BDA8
 	protected void OldWeaponHidden()
 	{
 		if (this.ActorComp == null)
@@ -1741,7 +1740,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9D7 RID: 109015 RVA: 0x00727E04 File Offset: 0x00726004
+	// Token: 0x060183D5 RID: 99285 RVA: 0x0074DC10 File Offset: 0x0074BE10
 	protected void WeaponOutInternal(float lerpTime = 0f, string reason = "")
 	{
 		this.CurrentHangState = 1;
@@ -1781,7 +1780,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9D8 RID: 109016 RVA: 0x00727F28 File Offset: 0x00726128
+	// Token: 0x060183D6 RID: 99286 RVA: 0x0074DD34 File Offset: 0x0074BF34
 	protected void WeaponOut(float lerpTime = 0f, string reason = "")
 	{
 		if (this.CurrentHangState == 1)
@@ -1791,7 +1790,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.WeaponOutInternal(lerpTime, reason);
 	}
 
-	// Token: 0x0601A9D9 RID: 109017 RVA: 0x00727F3C File Offset: 0x0072613C
+	// Token: 0x060183D7 RID: 99287 RVA: 0x0074DD48 File Offset: 0x0074BF48
 	private void HangSingleWeapon(CharacterWeapon weapon, FName socketName, FTransformDouble localTrans, bool withLerp)
 	{
 		this.ActorComp.Actor.Mesh.D_GetSocketTransform(socketName, ERelativeTransformSpace.RTS_World);
@@ -1814,7 +1813,7 @@ public class CharacterWeaponComponent : EntityComponent
 		weapon.Mesh.D_K2_SetRelativeTransform(localTrans, false, ref fhitResult, true);
 	}
 
-	// Token: 0x0601A9DA RID: 109018 RVA: 0x00727FFC File Offset: 0x007261FC
+	// Token: 0x060183D8 RID: 99288 RVA: 0x0074DE08 File Offset: 0x0074C008
 	public bool ChangeWeaponHangState(int weaponState, TArray<FName> sockets, TArray<FTransform> transforms, float lerpTime, string reason)
 	{
 		if (this.CurrentHangState == weaponState)
@@ -1882,13 +1881,13 @@ public class CharacterWeaponComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A9DB RID: 109019 RVA: 0x007281C3 File Offset: 0x007263C3
+	// Token: 0x060183D9 RID: 99289 RVA: 0x0074DFCF File Offset: 0x0074C1CF
 	public void HideWeapon(int index, bool hide, bool withEffect, bool bNormaState = false, EWeaponExtraVisibleType extraType = EWeaponExtraVisibleType.LowCustom, string source = "Unknown")
 	{
 		this.HideWeaponOrders.Add(new HideWeaponOrder(index, hide, withEffect, bNormaState, extraType));
 	}
 
-	// Token: 0x0601A9DC RID: 109020 RVA: 0x007281DC File Offset: 0x007263DC
+	// Token: 0x060183DA RID: 99290 RVA: 0x0074DFE8 File Offset: 0x0074C1E8
 	private void ClearHideWeaponWithEffectState()
 	{
 		for (int i = 0; i < this.HideWeaponOrders.Count; i++)
@@ -1897,7 +1896,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9DD RID: 109021 RVA: 0x00728214 File Offset: 0x00726414
+	// Token: 0x060183DB RID: 99291 RVA: 0x0074E020 File Offset: 0x0074C220
 	private void UpdateWeaponBuffEffectsHiddenInGame()
 	{
 		CharacterWeaponMesh weaponMesh = this.WeaponMesh;
@@ -1913,7 +1912,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9DE RID: 109022 RVA: 0x0072828C File Offset: 0x0072648C
+	// Token: 0x060183DC RID: 99292 RVA: 0x0074E098 File Offset: 0x0074C298
 	private bool HideWeaponInternal(CharacterWeapon weapon, bool hide, bool withEffect = true, bool bNormaState = true, EWeaponExtraVisibleType extraType = EWeaponExtraVisibleType.LowCustom, string reason = "Unknown")
 	{
 		bool flag = (this.CurrentHangState == 0 && this.GotHideTags.Count > 0) || weapon.VisibleHelper.RequestAndUpdateHiddenInGame(hide, bNormaState, extraType);
@@ -1942,7 +1941,7 @@ public class CharacterWeaponComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A9DF RID: 109023 RVA: 0x0072835C File Offset: 0x0072655C
+	// Token: 0x060183DD RID: 99293 RVA: 0x0074E168 File Offset: 0x0074C368
 	public void RegisterCharacterDropWeaponEvent(int weaponConfigId)
 	{
 		this.AiWeaponConfigId = weaponConfigId;
@@ -1951,7 +1950,7 @@ public class CharacterWeaponComponent : EntityComponent
 		EventSystem.Instance.AddWithTarget(base.Entity, EEventName.CharOnRoleDeadTargetSelf, new Action(this.CharacterDeadDropWeapon));
 	}
 
-	// Token: 0x0601A9E0 RID: 109024 RVA: 0x007283BC File Offset: 0x007265BC
+	// Token: 0x060183DE RID: 99294 RVA: 0x0074E1C8 File Offset: 0x0074C3C8
 	public void UnRegisterCharacterDropWeaponEvent()
 	{
 		if (this.AiWeaponConfigId == 0)
@@ -1964,13 +1963,13 @@ public class CharacterWeaponComponent : EntityComponent
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.CharOnRoleDeadTargetSelf, new Action(this.CharacterDeadDropWeapon));
 	}
 
-	// Token: 0x0601A9E1 RID: 109025 RVA: 0x00728428 File Offset: 0x00726628
+	// Token: 0x060183DF RID: 99295 RVA: 0x0074E234 File Offset: 0x0074C434
 	public void ReceiveCharacterKnockUpDropWeapon()
 	{
 		AiWeaponModel.Instance.Net.SendDiscardWeaponPush(this);
 	}
 
-	// Token: 0x0601A9E2 RID: 109026 RVA: 0x0072843B File Offset: 0x0072663B
+	// Token: 0x060183E0 RID: 99296 RVA: 0x0074E247 File Offset: 0x0074C447
 	private void ReceiveRoleDeadDropWeapon()
 	{
 		if (this.AiWeaponConfigId != 0)
@@ -1979,7 +1978,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9E3 RID: 109027 RVA: 0x00728458 File Offset: 0x00726658
+	// Token: 0x060183E1 RID: 99297 RVA: 0x0074E264 File Offset: 0x0074C464
 	private void AddWeaponTag(FGameplayTag tag)
 	{
 		int num = tag.TagId();
@@ -1998,7 +1997,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.TagComp.AddTag(new int?(num));
 	}
 
-	// Token: 0x0601A9E4 RID: 109028 RVA: 0x007284B4 File Offset: 0x007266B4
+	// Token: 0x060183E2 RID: 99298 RVA: 0x0074E2C0 File Offset: 0x0074C4C0
 	private void RemoveWeaponTag(FGameplayTag tag)
 	{
 		if (this.TagComp.Active)
@@ -2007,8 +2006,8 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002492 RID: 9362
-	// (get) Token: 0x0601A9E5 RID: 109029 RVA: 0x007284DA File Offset: 0x007266DA
+	// Token: 0x17002604 RID: 9732
+	// (get) Token: 0x060183E3 RID: 99299 RVA: 0x0074E2E6 File Offset: 0x0074C4E6
 	public bool HasWeapon
 	{
 		get
@@ -2017,7 +2016,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9E6 RID: 109030 RVA: 0x007284E5 File Offset: 0x007266E5
+	// Token: 0x060183E4 RID: 99300 RVA: 0x0074E2F1 File Offset: 0x0074C4F1
 	public void ResetWeaponTag()
 	{
 		this.CacheAiSocketItem = AiWeaponModel.Instance.GetWeaponConfigByConfigId(this.AiWeaponConfigId, base.Entity);
@@ -2028,7 +2027,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.AddWeaponTag(this.CacheAiSocketItem.Tag);
 	}
 
-	// Token: 0x0601A9E7 RID: 109031 RVA: 0x00728523 File Offset: 0x00726723
+	// Token: 0x060183E5 RID: 99301 RVA: 0x0074E32F File Offset: 0x0074C52F
 	public int GetWeaponBreachLevel()
 	{
 		if (this.WeaponEquipInfo != null)
@@ -2038,7 +2037,7 @@ public class CharacterWeaponComponent : EntityComponent
 		return -1;
 	}
 
-	// Token: 0x0601A9E8 RID: 109032 RVA: 0x0072853C File Offset: 0x0072673C
+	// Token: 0x060183E6 RID: 99302 RVA: 0x0074E348 File Offset: 0x0074C548
 	public void InitWeaponVisibleData()
 	{
 		WeaponVisibleConfig? weaponVisibleConfig = WeaponComponentConfig.Instance.GetWeaponVisibleConfig(base.Entity);
@@ -2061,7 +2060,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9E9 RID: 109033 RVA: 0x00728644 File Offset: 0x00726844
+	// Token: 0x060183E7 RID: 99303 RVA: 0x0074E450 File Offset: 0x0074C650
 	private void InitWeaponHideData()
 	{
 		CreatureDataComponent creatureData = this.ActorComp.CreatureData;
@@ -2079,7 +2078,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9EA RID: 109034 RVA: 0x007286DC File Offset: 0x007268DC
+	// Token: 0x060183E8 RID: 99304 RVA: 0x0074E4E8 File Offset: 0x0074C6E8
 	private void InitHuluHideData()
 	{
 		if (!this.IsRole)
@@ -2095,7 +2094,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9EB RID: 109035 RVA: 0x0072874C File Offset: 0x0072694C
+	// Token: 0x060183E9 RID: 99305 RVA: 0x0074E558 File Offset: 0x0074C758
 	public void InitDebugWeaponVisibleDataById(int configId)
 	{
 		WeaponVisibleConfig? weaponVisibleConfigById = WeaponComponentConfig.Instance.GetWeaponVisibleConfigById(configId);
@@ -2116,7 +2115,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.HideWeaponAfterWeaponInDelay = null;
 	}
 
-	// Token: 0x0601A9EC RID: 109036 RVA: 0x0072885C File Offset: 0x00726A5C
+	// Token: 0x060183EA RID: 99306 RVA: 0x0074E668 File Offset: 0x0074C868
 	public void ClearWeaponVisibleData()
 	{
 		CharacterWeaponMesh weaponMesh = this.WeaponMesh;
@@ -2130,7 +2129,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9ED RID: 109037 RVA: 0x007288A4 File Offset: 0x00726AA4
+	// Token: 0x060183EB RID: 99307 RVA: 0x0074E6B0 File Offset: 0x0074C8B0
 	public void SetWeaponVisibleByTag(CharacterWeapon weapon, bool tagExist, bool visibleWhenExist)
 	{
 		if (tagExist)
@@ -2141,7 +2140,7 @@ public class CharacterWeaponComponent : EntityComponent
 		this.HideWeapon(weapon.Index, visibleWhenExist, true, false, EWeaponExtraVisibleType.ExtraTag, "SetWeaponVisibleByTag-TagNotExist");
 	}
 
-	// Token: 0x0601A9EE RID: 109038 RVA: 0x007288D8 File Offset: 0x00726AD8
+	// Token: 0x060183EC RID: 99308 RVA: 0x0074E6E4 File Offset: 0x0074C8E4
 	public string GetCurrentWeaponEquipDebugInfo()
 	{
 		string text = "";
@@ -2184,49 +2183,74 @@ public class CharacterWeaponComponent : EntityComponent
 		return text;
 	}
 
-	// Token: 0x0601A9EF RID: 109039 RVA: 0x00728A64 File Offset: 0x00726C64
+	// Token: 0x060183ED RID: 99309 RVA: 0x0074E870 File Offset: 0x0074CA70
 	public CharacterWeaponMesh GetWeaponMesh()
 	{
 		return this.WeaponMesh;
 	}
 
-	// Token: 0x0601A9F0 RID: 109040 RVA: 0x00728A6C File Offset: 0x00726C6C
+	// Token: 0x060183EE RID: 99310 RVA: 0x0074E878 File Offset: 0x0074CA78
 	public bool IsCurrentWeaponHideEffectPlaying()
 	{
 		EffectSystem instance = EffectSystem.Instance;
 		CharacterWeaponMesh weaponMesh = this.WeaponMesh;
+		bool flag;
 		int? num;
 		if (weaponMesh == null)
 		{
-			num = null;
+			flag = false;
 		}
 		else
 		{
-			CharacterWeapon characterWeapon = weaponMesh.CharacterWeapons.ElementAtOrDefault(0);
-			num = ((characterWeapon != null) ? new int?(characterWeapon.WeaponHideEffect) : null);
+			CharacterWeapon[] characterWeapons = weaponMesh.CharacterWeapons;
+			num = ((characterWeapons != null) ? new int?(characterWeapons.Length) : null);
+			int num2 = 0;
+			flag = (num.GetValueOrDefault() > num2 & num != null);
 		}
-		int? num2 = num;
-		if (!instance.IsValid(num2.GetValueOrDefault()))
-		{
-			return false;
-		}
-		EffectSystem instance2 = EffectSystem.Instance;
-		CharacterWeaponMesh weaponMesh2 = this.WeaponMesh;
 		int? num3;
-		if (weaponMesh2 == null)
+		if (!flag)
 		{
 			num3 = null;
 		}
 		else
 		{
-			CharacterWeapon characterWeapon2 = weaponMesh2.CharacterWeapons.ElementAtOrDefault(0);
-			num3 = ((characterWeapon2 != null) ? new int?(characterWeapon2.WeaponHideEffect) : null);
+			CharacterWeapon characterWeapon = this.WeaponMesh.CharacterWeapons[0];
+			num3 = ((characterWeapon != null) ? new int?(characterWeapon.WeaponHideEffect) : null);
 		}
-		num2 = num3;
-		return instance2.IsPlaying(num2.GetValueOrDefault());
+		num = num3;
+		if (!instance.IsValid(num.GetValueOrDefault()))
+		{
+			return false;
+		}
+		EffectSystem instance2 = EffectSystem.Instance;
+		CharacterWeaponMesh weaponMesh2 = this.WeaponMesh;
+		bool flag2;
+		if (weaponMesh2 == null)
+		{
+			flag2 = false;
+		}
+		else
+		{
+			CharacterWeapon[] characterWeapons2 = weaponMesh2.CharacterWeapons;
+			num = ((characterWeapons2 != null) ? new int?(characterWeapons2.Length) : null);
+			int num2 = 0;
+			flag2 = (num.GetValueOrDefault() > num2 & num != null);
+		}
+		int? num4;
+		if (!flag2)
+		{
+			num4 = null;
+		}
+		else
+		{
+			CharacterWeapon characterWeapon2 = this.WeaponMesh.CharacterWeapons[0];
+			num4 = ((characterWeapon2 != null) ? new int?(characterWeapon2.WeaponHideEffect) : null);
+		}
+		num = num4;
+		return instance2.IsPlaying(num.GetValueOrDefault());
 	}
 
-	// Token: 0x0601A9F1 RID: 109041 RVA: 0x00728B14 File Offset: 0x00726D14
+	// Token: 0x060183EF RID: 99311 RVA: 0x0074E990 File Offset: 0x0074CB90
 	private void UpdateWeaponEffectTag()
 	{
 		if (this.IsRoleOrRoleMonster)
@@ -2253,7 +2277,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9F2 RID: 109042 RVA: 0x00728C07 File Offset: 0x00726E07
+	// Token: 0x060183F0 RID: 99312 RVA: 0x0074EA83 File Offset: 0x0074CC83
 	private void RefreshSoarWing()
 	{
 		this.RefreshSoarWingHandle = TimerSystem.Instance.Next(delegate(float delta)
@@ -2267,7 +2291,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}, null, null);
 	}
 
-	// Token: 0x0601A9F3 RID: 109043 RVA: 0x00728C27 File Offset: 0x00726E27
+	// Token: 0x060183F1 RID: 99313 RVA: 0x0074EAA3 File Offset: 0x0074CCA3
 	private bool CheckSoarWingVisibility()
 	{
 		CharacterUnifiedStateComponent unifiedStateComp = this.UnifiedStateComp;
@@ -2279,7 +2303,7 @@ public class CharacterWeaponComponent : EntityComponent
 		return component == null || component.CurrentSoarType != ESoarType.Roam;
 	}
 
-	// Token: 0x0601A9F4 RID: 109044 RVA: 0x00728C68 File Offset: 0x00726E68
+	// Token: 0x060183F2 RID: 99314 RVA: 0x0074EAE4 File Offset: 0x0074CCE4
 	private void InitWeaponSceneInteract()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -2309,7 +2333,7 @@ public class CharacterWeaponComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A9F5 RID: 109045 RVA: 0x00728D2C File Offset: 0x00726F2C
+	// Token: 0x060183F3 RID: 99315 RVA: 0x0074EBA8 File Offset: 0x0074CDA8
 	[NullableContext(2)]
 	private void UpdateWeaponSceneInteractEnable(CharacterWeapon weapon = null)
 	{
@@ -2320,7 +2344,7 @@ public class CharacterWeaponComponent : EntityComponent
 		weapon.UpdateSceneInteractEnable(this.CurrentHangState != 0);
 	}
 
-	// Token: 0x0601A9F6 RID: 109046 RVA: 0x00728D4C File Offset: 0x00726F4C
+	// Token: 0x060183F4 RID: 99316 RVA: 0x0074EBC8 File Offset: 0x0074CDC8
 	public unsafe bool SetEquipWeaponModelsLoaded(IWeaponResource[] resources, bool checkWeaponsMatch)
 	{
 		if (checkWeaponsMatch && resources.Length != this.WeaponMesh.CharacterWeapons.Length)
@@ -2407,7 +2431,7 @@ public class CharacterWeaponComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A9F7 RID: 109047 RVA: 0x00728FD8 File Offset: 0x007271D8
+	// Token: 0x060183F5 RID: 99317 RVA: 0x0074EE54 File Offset: 0x0074D054
 	public void ClearEquipWeaponModels()
 	{
 		ECharacterControllerCaseType echaracterControllerCaseType = ECharacterControllerCaseType.WeaponCase0;
@@ -2435,7 +2459,7 @@ public class CharacterWeaponComponent : EntityComponent
 		tagComp.RemoveTag(new int?(this.skinTag));
 	}
 
-	// Token: 0x0601A9F8 RID: 109048 RVA: 0x00729088 File Offset: 0x00727288
+	// Token: 0x060183F6 RID: 99318 RVA: 0x0074EF04 File Offset: 0x0074D104
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -2443,535 +2467,474 @@ public class CharacterWeaponComponent : EntityComponent
 			return false;
 		}
 		CharacterWeaponComponent characterWeaponComponent = (CharacterWeaponComponent)componentTemplate;
-		if (base.CanResetComponentProperty("noHideEffectWeaponIds") && characterWeaponComponent.noHideEffectWeaponIds != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.noHideEffectWeaponIds), "noHideEffectWeaponIds"))
+		if (characterWeaponComponent.noHideEffectWeaponIds != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.noHideEffectWeaponIds), "noHideEffectWeaponIds"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("skinTag"))
+		this.skinTag = characterWeaponComponent.skinTag;
+		if (characterWeaponComponent.ActorComp == null)
 		{
-			this.skinTag = characterWeaponComponent.skinTag;
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
-		{
-			if (characterWeaponComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AnimComp"))
-		{
-			if (characterWeaponComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagComp"))
-		{
-			if (characterWeaponComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AudioComp"))
-		{
-			if (characterWeaponComponent.AudioComp == null)
-			{
-				this.AudioComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAudioComponent>(this.AudioComp), "AudioComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("UnifiedStateComp"))
-		{
-			if (characterWeaponComponent.UnifiedStateComp == null)
-			{
-				this.UnifiedStateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComp), "UnifiedStateComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("Hulu"))
-		{
-			if (characterWeaponComponent.Hulu == null)
-			{
-				this.Hulu = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.Hulu), "Hulu"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("HuluId"))
-		{
-			this.HuluId = characterWeaponComponent.HuluId;
-		}
-		if (base.CanResetComponentProperty("HideHuluConfig"))
-		{
-			this.HideHuluConfig = characterWeaponComponent.HideHuluConfig;
-		}
-		if (base.CanResetComponentProperty("HuluHideEffect"))
-		{
-			this.HuluHideEffect = characterWeaponComponent.HuluHideEffect;
-		}
-		if (base.CanResetComponentProperty("HideHuluWhenGliding"))
-		{
-			this.HideHuluWhenGliding = characterWeaponComponent.HideHuluWhenGliding;
-		}
-		if (base.CanResetComponentProperty("Paragliding"))
-		{
-			if (characterWeaponComponent.Paragliding == null)
-			{
-				this.Paragliding = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.Paragliding), "Paragliding"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ParaglidingIsOpen"))
-		{
-			this.ParaglidingIsOpen = characterWeaponComponent.ParaglidingIsOpen;
-		}
-		if (base.CanResetComponentProperty("ParaglidingIsHover"))
-		{
-			this.ParaglidingIsHover = characterWeaponComponent.ParaglidingIsHover;
-		}
-		if (base.CanResetComponentProperty("ParaglidingIsAscent"))
-		{
-			this.ParaglidingIsAscent = characterWeaponComponent.ParaglidingIsAscent;
-		}
-		if (base.CanResetComponentProperty("SoarWing"))
-		{
-			if (characterWeaponComponent.SoarWing == null)
-			{
-				this.SoarWing = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.SoarWing), "SoarWing"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SoarWingConfig"))
-		{
-			if (characterWeaponComponent.SoarWingConfig == null)
-			{
-				this.SoarWingConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SModelConfig>(this.SoarWingConfig), "SoarWingConfig"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CurrentHangStateInternal"))
-		{
-			this.CurrentHangStateInternal = characterWeaponComponent.CurrentHangStateInternal;
-		}
-		if (base.CanResetComponentProperty("WeaponMesh"))
-		{
-			if (characterWeaponComponent.WeaponMesh == null)
-			{
-				this.WeaponMesh = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterWeaponMesh>(this.WeaponMesh), "WeaponMesh"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("LerpTimeLength"))
-		{
-			this.LerpTimeLength = characterWeaponComponent.LerpTimeLength;
-		}
-		if (base.CanResetComponentProperty("CurrentLerpTime"))
-		{
-			this.CurrentLerpTime = characterWeaponComponent.CurrentLerpTime;
-		}
-		if (base.CanResetComponentProperty("WeaponInEffectDelay"))
-		{
-			if (characterWeaponComponent.WeaponInEffectDelay == null)
-			{
-				this.WeaponInEffectDelay = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.WeaponInEffectDelay), "WeaponInEffectDelay"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("HideWeaponAfterWeaponInDelay"))
-		{
-			if (characterWeaponComponent.HideWeaponAfterWeaponInDelay == null)
-			{
-				this.HideWeaponAfterWeaponInDelay = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.HideWeaponAfterWeaponInDelay), "HideWeaponAfterWeaponInDelay"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsRole"))
-		{
-			this.IsRole = characterWeaponComponent.IsRole;
-		}
-		if (base.CanResetComponentProperty("IsRoleOrRoleMonster"))
-		{
-			this.IsRoleOrRoleMonster = characterWeaponComponent.IsRoleOrRoleMonster;
-		}
-		if (base.CanResetComponentProperty("HideWeaponOrders") && characterWeaponComponent.HideWeaponOrders != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<HideWeaponOrder>>(this.HideWeaponOrders), "HideWeaponOrders"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("AiItemMarkId"))
+		if (characterWeaponComponent.AnimComp == null)
 		{
-			this.AiItemMarkId = characterWeaponComponent.AiItemMarkId;
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("AiWeaponConfigId"))
-		{
-			this.AiWeaponConfigId = characterWeaponComponent.AiWeaponConfigId;
-		}
-		if (base.CanResetComponentProperty("CacheAiSocketItem"))
-		{
-			if (characterWeaponComponent.CacheAiSocketItem == null)
-			{
-				this.CacheAiSocketItem = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SWeaponSocketItem>(this.CacheAiSocketItem), "CacheAiSocketItem"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TempSocketItem"))
-		{
-			if (characterWeaponComponent.TempSocketItem == null)
-			{
-				this.TempSocketItem = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SWeaponSocketItem>(this.TempSocketItem), "TempSocketItem"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TempEntityConfig"))
-		{
-			if (characterWeaponComponent.TempEntityConfig == null)
-			{
-				this.TempEntityConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SEntityConfig>(this.TempEntityConfig), "TempEntityConfig"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CacheIndex"))
-		{
-			this.CacheIndex = characterWeaponComponent.CacheIndex;
-		}
-		if (base.CanResetComponentProperty("ParaglidingTag"))
-		{
-			this.ParaglidingTag = characterWeaponComponent.ParaglidingTag;
-		}
-		if (base.CanResetComponentProperty("OnParaglidingChangedTask"))
-		{
-			if (characterWeaponComponent.OnParaglidingChangedTask == null)
-			{
-				this.OnParaglidingChangedTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnParaglidingChangedTask), "OnParaglidingChangedTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OnGlidingChangedTask"))
-		{
-			if (characterWeaponComponent.OnGlidingChangedTask == null)
-			{
-				this.OnGlidingChangedTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnGlidingChangedTask), "OnGlidingChangedTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OnGlidingHoverChangedTask"))
-		{
-			if (characterWeaponComponent.OnGlidingHoverChangedTask == null)
-			{
-				this.OnGlidingHoverChangedTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnGlidingHoverChangedTask), "OnGlidingHoverChangedTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OnTagExistWeaponHideTasks"))
-		{
-			if (characterWeaponComponent.OnTagExistWeaponHideTasks == null)
-			{
-				this.OnTagExistWeaponHideTasks = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask[]>(this.OnTagExistWeaponHideTasks), "OnTagExistWeaponHideTasks"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("HuluPositionState"))
-		{
-			this.HuluPositionState = characterWeaponComponent.HuluPositionState;
-		}
-		if (base.CanResetComponentProperty("OnHuluGlidingShowChangedTask"))
-		{
-			if (characterWeaponComponent.OnHuluGlidingShowChangedTask == null)
-			{
-				this.OnHuluGlidingShowChangedTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnHuluGlidingShowChangedTask), "OnHuluGlidingShowChangedTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OnHuluEffectShowChangedTask"))
-		{
-			if (characterWeaponComponent.OnHuluEffectShowChangedTask == null)
-			{
-				this.OnHuluEffectShowChangedTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnHuluEffectShowChangedTask), "OnHuluEffectShowChangedTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OnHuluShowChangedTask"))
-		{
-			if (characterWeaponComponent.OnHuluShowChangedTask == null)
-			{
-				this.OnHuluShowChangedTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnHuluShowChangedTask), "OnHuluShowChangedTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("HuluShowMaterialData"))
-		{
-			this.HuluShowMaterialData = characterWeaponComponent.HuluShowMaterialData;
-		}
-		if (base.CanResetComponentProperty("WeaponScaleVector") && characterWeaponComponent.WeaponScaleVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.WeaponScaleVector), "WeaponScaleVector"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("HangTransform"))
+		if (characterWeaponComponent.TagComp == null)
 		{
-			this.HangTransform = characterWeaponComponent.HangTransform;
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("NoHideWeaponEffect"))
-		{
-			this.NoHideWeaponEffect = characterWeaponComponent.NoHideWeaponEffect;
-		}
-		if (base.CanResetComponentProperty("WeaponSwitchTime"))
-		{
-			this.WeaponSwitchTime = characterWeaponComponent.WeaponSwitchTime;
-		}
-		if (base.CanResetComponentProperty("ShowWeaponAfterHide"))
-		{
-			this.ShowWeaponAfterHide = characterWeaponComponent.ShowWeaponAfterHide;
-		}
-		if (base.CanResetComponentProperty("WeaponEquipInfo"))
-		{
-			if (characterWeaponComponent.WeaponEquipInfo == null)
-			{
-				this.WeaponEquipInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WeaponEquipInfo>(this.WeaponEquipInfo), "WeaponEquipInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("GotHideTags") && characterWeaponComponent.GotHideTags != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.GotHideTags), "GotHideTags"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LoadSkeletalMeshHandles") && characterWeaponComponent.LoadSkeletalMeshHandles != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.LoadSkeletalMeshHandles), "LoadSkeletalMeshHandles"))
+		if (characterWeaponComponent.AudioComp == null)
+		{
+			this.AudioComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AudioComp), "AudioComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("AppliedSkinBuffIds") && characterWeaponComponent.AppliedSkinBuffIds != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<long>(this.AppliedSkinBuffIds), "AppliedSkinBuffIds"))
+		if (characterWeaponComponent.UnifiedStateComp == null)
+		{
+			this.UnifiedStateComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComp), "UnifiedStateComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("RefreshSoarWingHandle"))
+		if (characterWeaponComponent.Hulu == null)
 		{
-			if (characterWeaponComponent.RefreshSoarWingHandle == null)
-			{
-				this.RefreshSoarWingHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.RefreshSoarWingHandle), "RefreshSoarWingHandle"))
-			{
-				return false;
-			}
+			this.Hulu = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Hulu), "Hulu"))
+		{
+			return false;
+		}
+		this.HuluId = characterWeaponComponent.HuluId;
+		this.HideHuluConfig = characterWeaponComponent.HideHuluConfig;
+		this.HuluHideEffect = characterWeaponComponent.HuluHideEffect;
+		this.HideHuluWhenGliding = characterWeaponComponent.HideHuluWhenGliding;
+		if (characterWeaponComponent.Paragliding == null)
+		{
+			this.Paragliding = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Paragliding), "Paragliding"))
+		{
+			return false;
+		}
+		this.ParaglidingIsOpen = characterWeaponComponent.ParaglidingIsOpen;
+		this.ParaglidingIsHover = characterWeaponComponent.ParaglidingIsHover;
+		this.ParaglidingIsAscent = characterWeaponComponent.ParaglidingIsAscent;
+		if (characterWeaponComponent.SoarWing == null)
+		{
+			this.SoarWing = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SoarWing), "SoarWing"))
+		{
+			return false;
+		}
+		if (characterWeaponComponent.SoarWingConfig == null)
+		{
+			this.SoarWingConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SoarWingConfig), "SoarWingConfig"))
+		{
+			return false;
+		}
+		this.CurrentHangStateInternal = characterWeaponComponent.CurrentHangStateInternal;
+		if (characterWeaponComponent.WeaponMesh == null)
+		{
+			this.WeaponMesh = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WeaponMesh), "WeaponMesh"))
+		{
+			return false;
+		}
+		this.LerpTimeLength = characterWeaponComponent.LerpTimeLength;
+		this.CurrentLerpTime = characterWeaponComponent.CurrentLerpTime;
+		if (characterWeaponComponent.WeaponInEffectDelay == null)
+		{
+			this.WeaponInEffectDelay = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WeaponInEffectDelay), "WeaponInEffectDelay"))
+		{
+			return false;
+		}
+		if (characterWeaponComponent.HideWeaponAfterWeaponInDelay == null)
+		{
+			this.HideWeaponAfterWeaponInDelay = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HideWeaponAfterWeaponInDelay), "HideWeaponAfterWeaponInDelay"))
+		{
+			return false;
+		}
+		this.IsRole = characterWeaponComponent.IsRole;
+		this.IsRoleOrRoleMonster = characterWeaponComponent.IsRoleOrRoleMonster;
+		if (characterWeaponComponent.HideWeaponOrders != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.HideWeaponOrders), "HideWeaponOrders"))
+		{
+			return false;
+		}
+		this.AiItemMarkId = characterWeaponComponent.AiItemMarkId;
+		this.AiWeaponConfigId = characterWeaponComponent.AiWeaponConfigId;
+		if (characterWeaponComponent.CacheAiSocketItem == null)
+		{
+			this.CacheAiSocketItem = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheAiSocketItem), "CacheAiSocketItem"))
+		{
+			return false;
+		}
+		if (characterWeaponComponent.TempSocketItem == null)
+		{
+			this.TempSocketItem = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempSocketItem), "TempSocketItem"))
+		{
+			return false;
+		}
+		if (characterWeaponComponent.TempEntityConfig == null)
+		{
+			this.TempEntityConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempEntityConfig), "TempEntityConfig"))
+		{
+			return false;
+		}
+		this.CacheIndex = characterWeaponComponent.CacheIndex;
+		this.ParaglidingTag = characterWeaponComponent.ParaglidingTag;
+		if (characterWeaponComponent.OnParaglidingChangedTask == null)
+		{
+			this.OnParaglidingChangedTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnParaglidingChangedTask), "OnParaglidingChangedTask"))
+		{
+			return false;
+		}
+		if (characterWeaponComponent.OnGlidingChangedTask == null)
+		{
+			this.OnGlidingChangedTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnGlidingChangedTask), "OnGlidingChangedTask"))
+		{
+			return false;
+		}
+		if (characterWeaponComponent.OnGlidingHoverChangedTask == null)
+		{
+			this.OnGlidingHoverChangedTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnGlidingHoverChangedTask), "OnGlidingHoverChangedTask"))
+		{
+			return false;
+		}
+		if (characterWeaponComponent.OnTagExistWeaponHideTasks == null)
+		{
+			this.OnTagExistWeaponHideTasks = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnTagExistWeaponHideTasks), "OnTagExistWeaponHideTasks"))
+		{
+			return false;
+		}
+		this.HuluPositionState = characterWeaponComponent.HuluPositionState;
+		if (characterWeaponComponent.OnHuluGlidingShowChangedTask == null)
+		{
+			this.OnHuluGlidingShowChangedTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnHuluGlidingShowChangedTask), "OnHuluGlidingShowChangedTask"))
+		{
+			return false;
+		}
+		if (characterWeaponComponent.OnHuluEffectShowChangedTask == null)
+		{
+			this.OnHuluEffectShowChangedTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnHuluEffectShowChangedTask), "OnHuluEffectShowChangedTask"))
+		{
+			return false;
+		}
+		if (characterWeaponComponent.OnHuluShowChangedTask == null)
+		{
+			this.OnHuluShowChangedTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnHuluShowChangedTask), "OnHuluShowChangedTask"))
+		{
+			return false;
+		}
+		this.HuluShowMaterialData = characterWeaponComponent.HuluShowMaterialData;
+		if (characterWeaponComponent.WeaponScaleVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.WeaponScaleVector), "WeaponScaleVector"))
+		{
+			return false;
+		}
+		this.HangTransform = characterWeaponComponent.HangTransform;
+		this.NoHideWeaponEffect = characterWeaponComponent.NoHideWeaponEffect;
+		this.WeaponSwitchTime = characterWeaponComponent.WeaponSwitchTime;
+		this.ShowWeaponAfterHide = characterWeaponComponent.ShowWeaponAfterHide;
+		if (characterWeaponComponent.WeaponEquipInfo == null)
+		{
+			this.WeaponEquipInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WeaponEquipInfo), "WeaponEquipInfo"))
+		{
+			return false;
+		}
+		if (characterWeaponComponent.GotHideTags != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.GotHideTags), "GotHideTags"))
+		{
+			return false;
+		}
+		if (characterWeaponComponent.LoadSkeletalMeshHandles != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.LoadSkeletalMeshHandles), "LoadSkeletalMeshHandles"))
+		{
+			return false;
+		}
+		if (characterWeaponComponent.AppliedSkinBuffIds != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<long>(this.AppliedSkinBuffIds), "AppliedSkinBuffIds"))
+		{
+			return false;
+		}
+		if (characterWeaponComponent.RefreshSoarWingHandle == null)
+		{
+			this.RefreshSoarWingHandle = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RefreshSoarWingHandle), "RefreshSoarWingHandle"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400CCEA RID: 52458
+	// Token: 0x17002605 RID: 9733
+	// (get) Token: 0x060183F7 RID: 99319 RVA: 0x0074F524 File Offset: 0x0074D724
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002606 RID: 9734
+	// (get) Token: 0x060183F8 RID: 99320 RVA: 0x0074F527 File Offset: 0x0074D727
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002607 RID: 9735
+	// (get) Token: 0x060183F9 RID: 99321 RVA: 0x0074F52A File Offset: 0x0074D72A
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002608 RID: 9736
+	// (get) Token: 0x060183FA RID: 99322 RVA: 0x0074F52D File Offset: 0x0074D72D
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002609 RID: 9737
+	// (get) Token: 0x060183FB RID: 99323 RVA: 0x0074F530 File Offset: 0x0074D730
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700260A RID: 9738
+	// (get) Token: 0x060183FC RID: 99324 RVA: 0x0074F533 File Offset: 0x0074D733
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700260B RID: 9739
+	// (get) Token: 0x060183FD RID: 99325 RVA: 0x0074F536 File Offset: 0x0074D736
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700260C RID: 9740
+	// (get) Token: 0x060183FE RID: 99326 RVA: 0x0074F539 File Offset: 0x0074D739
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D0CD RID: 53453
 	private const float KEEP_WEAPON_OUT_THREADHOLD = 0.1f;
 
-	// Token: 0x0400CCEB RID: 52459
+	// Token: 0x0400D0CE RID: 53454
 	private const int WEAPON_IN_DELAY = 100;
 
-	// Token: 0x0400CCEC RID: 52460
+	// Token: 0x0400D0CF RID: 53455
 	private const int HIDE_WEAPON_AFTER_WEAPON_IN_DELAY = 1000;
 
-	// Token: 0x0400CCED RID: 52461
+	// Token: 0x0400D0D0 RID: 53456
 	private readonly FRotator glideRelativeRotator = new FRotator(0f, 90f, -90f);
 
-	// Token: 0x0400CCEE RID: 52462
+	// Token: 0x0400D0D1 RID: 53457
 	private readonly HashSet<int> noHideEffectWeaponIds = new HashSet<int>
 	{
 		21040063,
 		21050063
 	};
 
-	// Token: 0x0400CCEF RID: 52463
+	// Token: 0x0400D0D2 RID: 53458
 	private int skinTag = GameplayTagDefine.EGameplayTagId["装备.武器.武器状态.处于幻化状态中"];
 
-	// Token: 0x0400CCF0 RID: 52464
+	// Token: 0x0400D0D3 RID: 53459
 	[Nullable(2)]
 	public CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CCF1 RID: 52465
+	// Token: 0x0400D0D4 RID: 53460
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400CCF2 RID: 52466
+	// Token: 0x0400D0D5 RID: 53461
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400CCF3 RID: 52467
+	// Token: 0x0400D0D6 RID: 53462
 	[Nullable(2)]
 	private CharacterAudioComponent AudioComp;
 
-	// Token: 0x0400CCF4 RID: 52468
+	// Token: 0x0400D0D7 RID: 53463
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent UnifiedStateComp;
 
-	// Token: 0x0400CCF5 RID: 52469
+	// Token: 0x0400D0D8 RID: 53464
 	[Nullable(2)]
 	public USkeletalMeshComponent Hulu;
 
-	// Token: 0x0400CCF6 RID: 52470
+	// Token: 0x0400D0D9 RID: 53465
 	private int HuluId;
 
-	// Token: 0x0400CCF7 RID: 52471
+	// Token: 0x0400D0DA RID: 53466
 	private bool HideHuluConfig;
 
-	// Token: 0x0400CCF8 RID: 52472
+	// Token: 0x0400D0DB RID: 53467
 	public int HuluHideEffect;
 
-	// Token: 0x0400CCF9 RID: 52473
+	// Token: 0x0400D0DC RID: 53468
 	private bool HideHuluWhenGliding;
 
-	// Token: 0x0400CCFA RID: 52474
+	// Token: 0x0400D0DD RID: 53469
 	[Nullable(2)]
 	public USkeletalMeshComponent Paragliding;
 
-	// Token: 0x0400CCFB RID: 52475
+	// Token: 0x0400D0DE RID: 53470
 	public bool ParaglidingIsOpen;
 
-	// Token: 0x0400CCFC RID: 52476
+	// Token: 0x0400D0DF RID: 53471
 	public bool ParaglidingIsHover;
 
-	// Token: 0x0400CCFD RID: 52477
+	// Token: 0x0400D0E0 RID: 53472
 	public bool ParaglidingIsAscent;
 
-	// Token: 0x0400CCFE RID: 52478
+	// Token: 0x0400D0E1 RID: 53473
 	[Nullable(2)]
 	public USkeletalMeshComponent SoarWing;
 
-	// Token: 0x0400CCFF RID: 52479
+	// Token: 0x0400D0E2 RID: 53474
 	[Nullable(2)]
 	public SModelConfig SoarWingConfig;
 
-	// Token: 0x0400CD00 RID: 52480
+	// Token: 0x0400D0E3 RID: 53475
 	private int CurrentHangStateInternal = -1;
 
-	// Token: 0x0400CD01 RID: 52481
+	// Token: 0x0400D0E4 RID: 53476
 	[Nullable(2)]
 	private CharacterWeaponMesh WeaponMesh;
 
-	// Token: 0x0400CD02 RID: 52482
+	// Token: 0x0400D0E5 RID: 53477
 	private float LerpTimeLength;
 
-	// Token: 0x0400CD03 RID: 52483
+	// Token: 0x0400D0E6 RID: 53478
 	private float CurrentLerpTime;
 
-	// Token: 0x0400CD04 RID: 52484
+	// Token: 0x0400D0E7 RID: 53479
 	[Nullable(2)]
 	private TimerHandle WeaponInEffectDelay;
 
-	// Token: 0x0400CD05 RID: 52485
+	// Token: 0x0400D0E8 RID: 53480
 	[Nullable(2)]
 	private TimerHandle HideWeaponAfterWeaponInDelay;
 
-	// Token: 0x0400CD06 RID: 52486
+	// Token: 0x0400D0E9 RID: 53481
 	private bool IsRole;
 
-	// Token: 0x0400CD07 RID: 52487
+	// Token: 0x0400D0EA RID: 53482
 	private bool IsRoleOrRoleMonster;
 
-	// Token: 0x0400CD08 RID: 52488
+	// Token: 0x0400D0EB RID: 53483
 	private readonly List<HideWeaponOrder> HideWeaponOrders = new List<HideWeaponOrder>();
 
-	// Token: 0x0400CD09 RID: 52489
+	// Token: 0x0400D0EC RID: 53484
 	public int AiItemMarkId;
 
-	// Token: 0x0400CD0A RID: 52490
+	// Token: 0x0400D0ED RID: 53485
 	public int AiWeaponConfigId;
 
-	// Token: 0x0400CD0B RID: 52491
+	// Token: 0x0400D0EE RID: 53486
 	[Nullable(2)]
 	public SWeaponSocketItem CacheAiSocketItem;
 
-	// Token: 0x0400CD0C RID: 52492
+	// Token: 0x0400D0EF RID: 53487
 	[Nullable(2)]
 	private SWeaponSocketItem TempSocketItem;
 
-	// Token: 0x0400CD0D RID: 52493
+	// Token: 0x0400D0F0 RID: 53488
 	[Nullable(2)]
 	private SEntityConfig TempEntityConfig;
 
-	// Token: 0x0400CD0E RID: 52494
+	// Token: 0x0400D0F1 RID: 53489
 	private int CacheIndex;
 
-	// Token: 0x0400CD0F RID: 52495
+	// Token: 0x0400D0F2 RID: 53490
 	private int ParaglidingTag;
 
-	// Token: 0x0400CD10 RID: 52496
+	// Token: 0x0400D0F3 RID: 53491
 	[Nullable(2)]
 	private ITagTask OnParaglidingChangedTask;
 
-	// Token: 0x0400CD11 RID: 52497
+	// Token: 0x0400D0F4 RID: 53492
 	[Nullable(2)]
 	private ITagTask OnGlidingChangedTask;
 
-	// Token: 0x0400CD12 RID: 52498
+	// Token: 0x0400D0F5 RID: 53493
 	[Nullable(2)]
 	private ITagTask OnGlidingHoverChangedTask;
 
-	// Token: 0x0400CD13 RID: 52499
+	// Token: 0x0400D0F6 RID: 53494
 	[Nullable(new byte[]
 	{
 		2,
@@ -2979,53 +2942,53 @@ public class CharacterWeaponComponent : EntityComponent
 	})]
 	private ITagTask[] OnTagExistWeaponHideTasks;
 
-	// Token: 0x0400CD14 RID: 52500
+	// Token: 0x0400D0F7 RID: 53495
 	private EHuluPositionState HuluPositionState;
 
-	// Token: 0x0400CD15 RID: 52501
+	// Token: 0x0400D0F8 RID: 53496
 	[Nullable(2)]
 	private ITagTask OnHuluGlidingShowChangedTask;
 
-	// Token: 0x0400CD16 RID: 52502
+	// Token: 0x0400D0F9 RID: 53497
 	[Nullable(2)]
 	private ITagTask OnHuluEffectShowChangedTask;
 
-	// Token: 0x0400CD17 RID: 52503
+	// Token: 0x0400D0FA RID: 53498
 	[Nullable(2)]
 	private ITagTask OnHuluShowChangedTask;
 
-	// Token: 0x0400CD18 RID: 52504
+	// Token: 0x0400D0FB RID: 53499
 	private int? HuluShowMaterialData;
 
-	// Token: 0x0400CD19 RID: 52505
+	// Token: 0x0400D0FC RID: 53500
 	private readonly global::Vector WeaponScaleVector = global::Vector.Create();
 
-	// Token: 0x0400CD1A RID: 52506
+	// Token: 0x0400D0FD RID: 53501
 	private FTransformDouble HangTransform;
 
-	// Token: 0x0400CD1B RID: 52507
+	// Token: 0x0400D0FE RID: 53502
 	private bool NoHideWeaponEffect;
 
-	// Token: 0x0400CD1C RID: 52508
+	// Token: 0x0400D0FF RID: 53503
 	private float WeaponSwitchTime = 10f;
 
-	// Token: 0x0400CD1D RID: 52509
+	// Token: 0x0400D100 RID: 53504
 	private bool ShowWeaponAfterHide = true;
 
-	// Token: 0x0400CD1E RID: 52510
+	// Token: 0x0400D101 RID: 53505
 	[Nullable(2)]
 	public WeaponEquipInfo WeaponEquipInfo;
 
-	// Token: 0x0400CD1F RID: 52511
+	// Token: 0x0400D102 RID: 53506
 	private readonly HashSet<int> GotHideTags = new HashSet<int>();
 
-	// Token: 0x0400CD20 RID: 52512
+	// Token: 0x0400D103 RID: 53507
 	private readonly HashSet<int> LoadSkeletalMeshHandles = new HashSet<int>();
 
-	// Token: 0x0400CD21 RID: 52513
+	// Token: 0x0400D104 RID: 53508
 	private readonly HashSet<long> AppliedSkinBuffIds = new HashSet<long>();
 
-	// Token: 0x0400CD22 RID: 52514
+	// Token: 0x0400D105 RID: 53509
 	[Nullable(2)]
 	private TimerHandle RefreshSoarWingHandle;
 }

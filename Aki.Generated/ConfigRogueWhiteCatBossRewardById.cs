@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000880 RID: 2176
+	// Token: 0x0200089C RID: 2204
 	public class ConfigRogueWhiteCatBossRewardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003312 RID: 13074 RVA: 0x0017A184 File Offset: 0x00178384
+		// Token: 0x060033BA RID: 13242 RVA: 0x0018146C File Offset: 0x0017F66C
 		static ConfigRogueWhiteCatBossRewardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueWhiteCatBossRewardById.CreateStaticDefaultValue), new Action(ConfigRogueWhiteCatBossRewardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003313 RID: 13075 RVA: 0x0017A1A4 File Offset: 0x001783A4
+		// Token: 0x060033BB RID: 13243 RVA: 0x0018148C File Offset: 0x0017F68C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueWhiteCatBossRewardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003314 RID: 13076 RVA: 0x0017A223 File Offset: 0x00178423
+		// Token: 0x060033BC RID: 13244 RVA: 0x0018150B File Offset: 0x0017F70B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueWhiteCatBossRewardById.LogPair = null;
 			ConfigRogueWhiteCatBossRewardById.HandleId = 0;
 		}
 
-		// Token: 0x06003315 RID: 13077 RVA: 0x0017A231 File Offset: 0x00178431
+		// Token: 0x060033BD RID: 13245 RVA: 0x00181519 File Offset: 0x0017F719
 		public static void Init()
 		{
 			ConfigRogueWhiteCatBossRewardById.HandleId = ConfigCommon.InitDataStatement(ConfigRogueWhiteCatBossRewardById.HandleId, "db_dreamlink.db", "select BinData from `RogueWhiteCatBossReward` where Id=?");
 		}
 
-		// Token: 0x06003316 RID: 13078 RVA: 0x0017A24C File Offset: 0x0017844C
+		// Token: 0x060033BE RID: 13246 RVA: 0x00181534 File Offset: 0x0017F734
 		public static RogueWhiteCatBossReward? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRogueWhiteCatBossRewardById.HandleId, ConfigRogueWhiteCatBossRewardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RogueWhiteCatBossReward?(rootAsRogueWhiteCatBossReward);
 		}
 
-		// Token: 0x04003B66 RID: 15206
+		// Token: 0x04003C2A RID: 15402
 		private const string DB = "db_dreamlink.db";
 
-		// Token: 0x04003B67 RID: 15207
+		// Token: 0x04003C2B RID: 15403
 		private const string FILE = "m.梦境链接活动.xlsx";
 
-		// Token: 0x04003B68 RID: 15208
+		// Token: 0x04003C2C RID: 15404
 		private const string TABLE = "RogueWhiteCatBossReward";
 
-		// Token: 0x04003B69 RID: 15209
+		// Token: 0x04003C2D RID: 15405
 		private const string COMMAND = "select BinData from `RogueWhiteCatBossReward` where Id=?";
 
-		// Token: 0x04003B6A RID: 15210
+		// Token: 0x04003C2E RID: 15406
 		private const string KEY_PREFIX = "RogueWhiteCatBossRewardById";
 
-		// Token: 0x04003B6B RID: 15211
+		// Token: 0x04003C2F RID: 15407
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003B6C RID: 15212
+		// Token: 0x04003C30 RID: 15408
 		private static int HandleId;
 	}
 }

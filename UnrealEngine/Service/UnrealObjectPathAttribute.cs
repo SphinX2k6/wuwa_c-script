@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine.Service
 {
-	// Token: 0x02002B02 RID: 11010
+	// Token: 0x020008B2 RID: 2226
 	[NullableContext(1)]
 	[Nullable(0)]
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Interface)]
 	public class UnrealObjectPathAttribute : Attribute
 	{
-		// Token: 0x060284A0 RID: 165024 RVA: 0x003D4B9F File Offset: 0x003D2D9F
+		// Token: 0x0600BE5A RID: 48730 RVA: 0x0012FEFB File Offset: 0x0012E0FB
 		public UnrealObjectPathAttribute(string Path)
 		{
 		}
 
-		// Token: 0x040162C2 RID: 90818
+		// Token: 0x040056DA RID: 22234
 		public string Path = Path;
 	}
 }

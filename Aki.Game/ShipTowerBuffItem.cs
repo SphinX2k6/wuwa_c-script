@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200299C RID: 10652
+// Token: 0x02001F17 RID: 7959
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class ShipTowerBuffItem : LoopScrollMediumItemGrid<ShipTowerBuffData>
 {
-	// Token: 0x06016150 RID: 90448 RVA: 0x00595516 File Offset: 0x00593716
+	// Token: 0x06013B56 RID: 80726 RVA: 0x005C04D6 File Offset: 0x005BE6D6
 	[NullableContext(1)]
 	protected override void OnRefresh(ShipTowerBuffData data, bool isSelected, int gridIndex)
 	{
@@ -26,7 +26,7 @@ public class ShipTowerBuffItem : LoopScrollMediumItemGrid<ShipTowerBuffData>
 		}
 	}
 
-	// Token: 0x06016151 RID: 90449 RVA: 0x0059553C File Offset: 0x0059373C
+	// Token: 0x06013B57 RID: 80727 RVA: 0x005C04FC File Offset: 0x005BE6FC
 	public void UpdateBuffInfo()
 	{
 		ShipTowerBuffData buffData = this.BuffData;
@@ -46,25 +46,25 @@ public class ShipTowerBuffItem : LoopScrollMediumItemGrid<ShipTowerBuffData>
 		base.Apply<PropMediumItemGrid>(parameters);
 	}
 
-	// Token: 0x06016152 RID: 90450 RVA: 0x0059561C File Offset: 0x0059381C
+	// Token: 0x06013B58 RID: 80728 RVA: 0x005C05DC File Offset: 0x005BE7DC
 	public void OnForceSelected()
 	{
 		this.SetSelected(true, true);
 	}
 
-	// Token: 0x06016153 RID: 90451 RVA: 0x00595626 File Offset: 0x00593826
+	// Token: 0x06013B59 RID: 80729 RVA: 0x005C05E6 File Offset: 0x005BE7E6
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, false);
 	}
 
-	// Token: 0x06016154 RID: 90452 RVA: 0x00595630 File Offset: 0x00593830
+	// Token: 0x06013B5A RID: 80730 RVA: 0x005C05F0 File Offset: 0x005BE7F0
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, false);
 	}
 
-	// Token: 0x06016155 RID: 90453 RVA: 0x0059563A File Offset: 0x0059383A
+	// Token: 0x06013B5B RID: 80731 RVA: 0x005C05FA File Offset: 0x005BE7FA
 	protected override void OnBeforeDestroy()
 	{
 		ShipTowerBuffData buffData = this.BuffData;
@@ -75,7 +75,7 @@ public class ShipTowerBuffItem : LoopScrollMediumItemGrid<ShipTowerBuffData>
 		buffData.ClearSelected();
 	}
 
-	// Token: 0x06016156 RID: 90454 RVA: 0x0059564C File Offset: 0x0059384C
+	// Token: 0x06013B5C RID: 80732 RVA: 0x005C060C File Offset: 0x005BE80C
 	protected override void OnExtendToggleStateChanged(EToggleState state)
 	{
 		ShipTowerBuffData buffData = this.BuffData;
@@ -96,20 +96,20 @@ public class ShipTowerBuffItem : LoopScrollMediumItemGrid<ShipTowerBuffData>
 		onItemClickCallback(this.BuffData);
 	}
 
-	// Token: 0x06016157 RID: 90455 RVA: 0x0059569F File Offset: 0x0059389F
+	// Token: 0x06013B5D RID: 80733 RVA: 0x005C065F File Offset: 0x005BE85F
 	protected override bool OnCanExecuteChange()
 	{
 		ShipTowerBuffData buffData = this.BuffData;
 		return buffData == null || !buffData.IsSelected;
 	}
 
-	// Token: 0x06016158 RID: 90456 RVA: 0x005956B8 File Offset: 0x005938B8
+	// Token: 0x06013B5E RID: 80734 RVA: 0x005C0678 File Offset: 0x005BE878
 	public void UpdateBuffState()
 	{
 		this.UpdateBuffInfo();
 	}
 
-	// Token: 0x06016159 RID: 90457 RVA: 0x005956C0 File Offset: 0x005938C0
+	// Token: 0x06013B5F RID: 80735 RVA: 0x005C0680 File Offset: 0x005BE880
 	public void UpdateBuffSelected()
 	{
 		ShipTowerBuffData buffData = this.BuffData;
@@ -125,10 +125,10 @@ public class ShipTowerBuffItem : LoopScrollMediumItemGrid<ShipTowerBuffData>
 		this.IsLastSelected = ((buffData3 != null) ? new bool?(buffData3.IsSelected) : null);
 	}
 
-	// Token: 0x0400A49A RID: 42138
+	// Token: 0x0400A884 RID: 43140
 	protected ShipTowerBuffData BuffData;
 
-	// Token: 0x0400A49B RID: 42139
+	// Token: 0x0400A885 RID: 43141
 	[Nullable(new byte[]
 	{
 		2,
@@ -136,9 +136,9 @@ public class ShipTowerBuffItem : LoopScrollMediumItemGrid<ShipTowerBuffData>
 	})]
 	public Action<ShipTowerBuffData> OnItemClickCallback;
 
-	// Token: 0x0400A49C RID: 42140
+	// Token: 0x0400A886 RID: 43142
 	public Func<int?> GetStageIdCallback;
 
-	// Token: 0x0400A49D RID: 42141
+	// Token: 0x0400A887 RID: 43143
 	private bool? IsLastSelected;
 }

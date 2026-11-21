@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FDA RID: 16346
+	// Token: 0x0200441B RID: 17435
 	public struct IQuestFailedConditionEntityAlert : IFlatbufferObject
 	{
-		// Token: 0x170072BB RID: 29371
-		// (get) Token: 0x06017851 RID: 96337 RVA: 0x003649CB File Offset: 0x00362BCB
+		// Token: 0x170078BD RID: 30909
+		// (get) Token: 0x06018EEA RID: 102122 RVA: 0x0038E7BE File Offset: 0x0038C9BE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017852 RID: 96338 RVA: 0x003649D8 File Offset: 0x00362BD8
+		// Token: 0x06018EEB RID: 102123 RVA: 0x0038E7CB File Offset: 0x0038C9CB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017853 RID: 96339 RVA: 0x003649E0 File Offset: 0x00362BE0
+		// Token: 0x06018EEC RID: 102124 RVA: 0x0038E7D4 File Offset: 0x0038C9D4
 		public static IQuestFailedConditionEntityAlert GetRootAsIQuestFailedConditionEntityAlert(ByteBuffer _bb)
 		{
 			return IQuestFailedConditionEntityAlert.GetRootAsIQuestFailedConditionEntityAlert(_bb, default(IQuestFailedConditionEntityAlert));
 		}
 
-		// Token: 0x06017854 RID: 96340 RVA: 0x003649FC File Offset: 0x00362BFC
+		// Token: 0x06018EED RID: 102125 RVA: 0x0038E7F0 File Offset: 0x0038C9F0
 		public static IQuestFailedConditionEntityAlert GetRootAsIQuestFailedConditionEntityAlert(ByteBuffer _bb, IQuestFailedConditionEntityAlert obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017855 RID: 96341 RVA: 0x00364A19 File Offset: 0x00362C19
+		// Token: 0x06018EEE RID: 102126 RVA: 0x0038E80D File Offset: 0x0038CA0D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017856 RID: 96342 RVA: 0x00364A28 File Offset: 0x00362C28
+		// Token: 0x06018EEF RID: 102127 RVA: 0x0038E81C File Offset: 0x0038CA1C
 		public IQuestFailedConditionEntityAlert __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06017857 RID: 96343 RVA: 0x00364A38 File Offset: 0x00362C38
+		// Token: 0x06018EF0 RID: 102128 RVA: 0x0038E82C File Offset: 0x0038CA2C
 		public int EntityIds(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170072BC RID: 29372
-		// (get) Token: 0x06017858 RID: 96344 RVA: 0x00364A78 File Offset: 0x00362C78
+		// Token: 0x170078BE RID: 30910
+		// (get) Token: 0x06018EF1 RID: 102129 RVA: 0x0038E86C File Offset: 0x0038CA6C
 		public int EntityIdsLength
 		{
 			get
@@ -74,19 +74,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017859 RID: 96345 RVA: 0x00364AA3 File Offset: 0x00362CA3
+		// Token: 0x06018EF2 RID: 102130 RVA: 0x0038E897 File Offset: 0x0038CA97
 		public Span<int> GetEntityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(4, 4);
 		}
 
-		// Token: 0x0601785A RID: 96346 RVA: 0x00364AB2 File Offset: 0x00362CB2
+		// Token: 0x06018EF3 RID: 102131 RVA: 0x0038E8A6 File Offset: 0x0038CAA6
 		public int[] GetEntityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(4);
 		}
 
-		// Token: 0x0601785B RID: 96347 RVA: 0x00364AC0 File Offset: 0x00362CC0
+		// Token: 0x06018EF4 RID: 102132 RVA: 0x0038E8B4 File Offset: 0x0038CAB4
 		public static Offset<IQuestFailedConditionEntityAlert> CreateIQuestFailedConditionEntityAlert(FlatBufferBuilder builder, VectorOffset EntityIdsOffset = default(VectorOffset))
 		{
 			builder.StartTable(1);
@@ -94,19 +94,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestFailedConditionEntityAlert.EndIQuestFailedConditionEntityAlert(builder);
 		}
 
-		// Token: 0x0601785C RID: 96348 RVA: 0x00364AD6 File Offset: 0x00362CD6
+		// Token: 0x06018EF5 RID: 102133 RVA: 0x0038E8CA File Offset: 0x0038CACA
 		public static void StartIQuestFailedConditionEntityAlert(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601785D RID: 96349 RVA: 0x00364ADF File Offset: 0x00362CDF
+		// Token: 0x06018EF6 RID: 102134 RVA: 0x0038E8D3 File Offset: 0x0038CAD3
 		public static void AddEntityIds(FlatBufferBuilder builder, VectorOffset entityIdsOffset)
 		{
 			builder.AddOffset(0, entityIdsOffset.Value, 0);
 		}
 
-		// Token: 0x0601785E RID: 96350 RVA: 0x00364AF0 File Offset: 0x00362CF0
+		// Token: 0x06018EF7 RID: 102135 RVA: 0x0038E8E4 File Offset: 0x0038CAE4
 		public static VectorOffset CreateEntityIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -117,7 +117,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601785F RID: 96351 RVA: 0x00364B27 File Offset: 0x00362D27
+		// Token: 0x06018EF8 RID: 102136 RVA: 0x0038E91B File Offset: 0x0038CB1B
 		public static VectorOffset CreateEntityIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017860 RID: 96352 RVA: 0x00364B41 File Offset: 0x00362D41
+		// Token: 0x06018EF9 RID: 102137 RVA: 0x0038E935 File Offset: 0x0038CB35
 		public static VectorOffset CreateEntityIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -133,7 +133,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017861 RID: 96353 RVA: 0x00364B5F File Offset: 0x00362D5F
+		// Token: 0x06018EFA RID: 102138 RVA: 0x0038E953 File Offset: 0x0038CB53
 		public static VectorOffset CreateEntityIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -141,19 +141,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017862 RID: 96354 RVA: 0x00364B78 File Offset: 0x00362D78
+		// Token: 0x06018EFB RID: 102139 RVA: 0x0038E96C File Offset: 0x0038CB6C
 		public static void StartEntityIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06017863 RID: 96355 RVA: 0x00364B83 File Offset: 0x00362D83
+		// Token: 0x06018EFC RID: 102140 RVA: 0x0038E977 File Offset: 0x0038CB77
 		public static Offset<IQuestFailedConditionEntityAlert> EndIQuestFailedConditionEntityAlert(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestFailedConditionEntityAlert>(builder.EndTable());
 		}
 
-		// Token: 0x06017864 RID: 96356 RVA: 0x00364B90 File Offset: 0x00362D90
+		// Token: 0x06018EFD RID: 102141 RVA: 0x0038E984 File Offset: 0x0038CB84
 		public IQuestFailedConditionEntityAlertT UnPack()
 		{
 			IQuestFailedConditionEntityAlertT questFailedConditionEntityAlertT = new IQuestFailedConditionEntityAlertT();
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return questFailedConditionEntityAlertT;
 		}
 
-		// Token: 0x06017865 RID: 96357 RVA: 0x00364BAC File Offset: 0x00362DAC
+		// Token: 0x06018EFE RID: 102142 RVA: 0x0038E9A0 File Offset: 0x0038CBA0
 		public void UnPackTo(IQuestFailedConditionEntityAlertT _o)
 		{
 			_o.EntityIds = new List<int>();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017866 RID: 96358 RVA: 0x00364BE8 File Offset: 0x00362DE8
+		// Token: 0x06018EFF RID: 102143 RVA: 0x0038E9DC File Offset: 0x0038CBDC
 		public static Offset<IQuestFailedConditionEntityAlert> Pack(FlatBufferBuilder builder, IQuestFailedConditionEntityAlertT _o)
 		{
 			if (_o == null)
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestFailedConditionEntityAlert.CreateIQuestFailedConditionEntityAlert(builder, entityIdsOffset);
 		}
 
-		// Token: 0x0400BADC RID: 47836
+		// Token: 0x0400C4C3 RID: 50371
 		private Table __p;
 	}
 }

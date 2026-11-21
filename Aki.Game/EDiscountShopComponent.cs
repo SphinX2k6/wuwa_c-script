@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x02002369 RID: 9065
+// Token: 0x0200184E RID: 6222
 public enum EDiscountShopComponent
 {
-	// Token: 0x040088D5 RID: 35029
+	// Token: 0x04008A1A RID: 35354
 	ScrollerItem,
-	// Token: 0x040088D6 RID: 35030
+	// Token: 0x04008A1B RID: 35355
 	Scroller,
-	// Token: 0x040088D7 RID: 35031
+	// Token: 0x04008A1C RID: 35356
 	HoriGroupScroller,
-	// Token: 0x040088D8 RID: 35032
+	// Token: 0x04008A1D RID: 35357
 	TabItem,
-	// Token: 0x040088D9 RID: 35033
+	// Token: 0x04008A1E RID: 35358
 	TabPanel,
-	// Token: 0x040088DA RID: 35034
+	// Token: 0x04008A1F RID: 35359
 	TitleTips,
-	// Token: 0x040088DB RID: 35035
+	// Token: 0x04008A20 RID: 35360
 	ScrollerItemNew,
-	// Token: 0x040088DC RID: 35036
+	// Token: 0x04008A21 RID: 35361
 	PanelItem,
-	// Token: 0x040088DD RID: 35037
+	// Token: 0x04008A22 RID: 35362
 	EmptyItem,
-	// Token: 0x040088DE RID: 35038
+	// Token: 0x04008A23 RID: 35363
 	EmptyText,
-	// Token: 0x040088DF RID: 35039
+	// Token: 0x04008A24 RID: 35364
 	TipsText,
-	// Token: 0x040088E0 RID: 35040
+	// Token: 0x04008A25 RID: 35365
 	TabScrollView
 }

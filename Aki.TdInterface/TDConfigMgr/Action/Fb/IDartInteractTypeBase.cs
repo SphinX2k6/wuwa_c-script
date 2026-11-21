@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002870 RID: 10352
+	// Token: 0x02002B46 RID: 11078
 	public class IDartInteractTypeBase
 	{
-		// Token: 0x0600E563 RID: 58723 RVA: 0x0021BA36 File Offset: 0x00219C36
-		[NullableContext(1)]
+		// Token: 0x0600F393 RID: 62355 RVA: 0x00238952 File Offset: 0x00236B52
 		public static IDartInteractTypeBase Create(IDartInteractTypeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004645 RID: 17989
-		// (get) Token: 0x0600E564 RID: 58724 RVA: 0x0021BA55 File Offset: 0x00219C55
+		// Token: 0x170049B5 RID: 18869
+		// (get) Token: 0x0600F394 RID: 62356 RVA: 0x00238971 File Offset: 0x00236B71
 		public virtual EDartInteractType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ED6 RID: 32470
+		// Token: 0x04008596 RID: 34198
 		private IDartInteractTypeBase Instance;
 	}
 }

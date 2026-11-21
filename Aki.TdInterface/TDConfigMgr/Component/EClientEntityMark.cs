@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000081 RID: 129
+	// Token: 0x02000086 RID: 134
 	public enum EClientEntityMark
 	{
-		// Token: 0x04000281 RID: 641
+		// Token: 0x04000298 RID: 664
 		ServerEntity,
-		// Token: 0x04000282 RID: 642
+		// Token: 0x04000299 RID: 665
 		ClientEntity,
-		// Token: 0x04000283 RID: 643
+		// Token: 0x0400029A RID: 666
 		ClientEntityToServerEntity,
-		// Token: 0x04000284 RID: 644
+		// Token: 0x0400029B RID: 667
 		ForceServerEntity
 	}
 }

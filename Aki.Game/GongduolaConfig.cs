@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Level.Vehicle;
 using UnrealEngine;
 
-// Token: 0x020032E9 RID: 13033
+// Token: 0x0200285B RID: 10331
 [NullableContext(1)]
 [Nullable(0)]
 public class GongduolaConfig : VehicleConfig
 {
-	// Token: 0x0601C5A5 RID: 116133 RVA: 0x007EE054 File Offset: 0x007EC254
+	// Token: 0x0601A25C RID: 107100 RVA: 0x00814788 File Offset: 0x00812988
 	public GongduolaConfig(Entity entity, [Nullable(2)] BP_GongduolaConfig_C asset) : base(entity, asset)
 	{
 		if (asset == null || !asset.IsValid())
@@ -72,7 +72,7 @@ public class GongduolaConfig : VehicleConfig
 		this.SprintForceInputDuration = asset.冲刺固定前向输入时间;
 	}
 
-	// Token: 0x0601C5A6 RID: 116134 RVA: 0x007EE310 File Offset: 0x007EC510
+	// Token: 0x0601A25D RID: 107101 RVA: 0x00814A44 File Offset: 0x00812C44
 	public override VehicleConfig DeepCopy()
 	{
 		GongduolaConfig gongduolaConfig = new GongduolaConfig(this.VehicleEntity, null);
@@ -80,7 +80,7 @@ public class GongduolaConfig : VehicleConfig
 		return gongduolaConfig;
 	}
 
-	// Token: 0x0601C5A7 RID: 116135 RVA: 0x007EE334 File Offset: 0x007EC534
+	// Token: 0x0601A25E RID: 107102 RVA: 0x00814A68 File Offset: 0x00812C68
 	public override bool Init()
 	{
 		if (!base.Init())
@@ -98,7 +98,7 @@ public class GongduolaConfig : VehicleConfig
 		return true;
 	}
 
-	// Token: 0x0601C5A8 RID: 116136 RVA: 0x007EE37C File Offset: 0x007EC57C
+	// Token: 0x0601A25F RID: 107103 RVA: 0x00814AB0 File Offset: 0x00812CB0
 	protected void InitGongduolaBaseInfo()
 	{
 		Entity vehicleEntity = this.VehicleEntity;
@@ -112,7 +112,7 @@ public class GongduolaConfig : VehicleConfig
 		gongduolaPerformComponent.SprintUsableCount = this.SprintMaxUsableCount;
 	}
 
-	// Token: 0x0601C5A9 RID: 116137 RVA: 0x007EE3CC File Offset: 0x007EC5CC
+	// Token: 0x0601A260 RID: 107104 RVA: 0x00814B00 File Offset: 0x00812D00
 	protected void InitGongduolaMovement(UKuroVehicleMovementComponent movement)
 	{
 		movement.RotaryInertia = this.RotaryIntertia;
@@ -130,7 +130,7 @@ public class GongduolaConfig : VehicleConfig
 		}
 	}
 
-	// Token: 0x0601C5AA RID: 116138 RVA: 0x007EE448 File Offset: 0x007EC648
+	// Token: 0x0601A261 RID: 107105 RVA: 0x00814B7C File Offset: 0x00812D7C
 	public virtual void SetBaseStateMoveConfig(UKuroVehicleMovementComponent movement)
 	{
 		Entity vehicleEntity = this.VehicleEntity;
@@ -159,7 +159,7 @@ public class GongduolaConfig : VehicleConfig
 		movement.StaticRotFriction = this.BaseStaticRotFriction;
 	}
 
-	// Token: 0x0601C5AB RID: 116139 RVA: 0x007EE550 File Offset: 0x007EC750
+	// Token: 0x0601A262 RID: 107106 RVA: 0x00814C84 File Offset: 0x00812E84
 	public void SetSprintStateMoveConfig(UKuroVehicleMovementComponent movement)
 	{
 		Entity vehicleEntity = this.VehicleEntity;
@@ -188,7 +188,7 @@ public class GongduolaConfig : VehicleConfig
 		movement.StaticRotFriction = this.SprintStaticRotFriction;
 	}
 
-	// Token: 0x0601C5AC RID: 116140 RVA: 0x007EE657 File Offset: 0x007EC857
+	// Token: 0x0601A263 RID: 107107 RVA: 0x00814D8B File Offset: 0x00812F8B
 	public void SetBuoyancyRelatedConfig(UKuroVehicleMovementComponent movement)
 	{
 		movement.MaxFloatingSpeed = this.MaxFloatingSpeed;
@@ -197,7 +197,7 @@ public class GongduolaConfig : VehicleConfig
 		movement.StrandedWaterDepthThreshold = this.StrandedWaterDepthThreshold;
 	}
 
-	// Token: 0x0601C5AD RID: 116141 RVA: 0x007EE68C File Offset: 0x007EC88C
+	// Token: 0x0601A264 RID: 107108 RVA: 0x00814DC0 File Offset: 0x00812FC0
 	protected override void DeepCopyInternal(VehicleConfig inOut)
 	{
 		base.DeepCopyInternal(inOut);
@@ -258,168 +258,168 @@ public class GongduolaConfig : VehicleConfig
 		gongduolaConfig.SprintForceInputDuration = this.SprintForceInputDuration;
 	}
 
-	// Token: 0x0400E0AD RID: 57517
+	// Token: 0x0400E558 RID: 58712
 	public float RotaryIntertia;
 
-	// Token: 0x0400E0AE RID: 57518
+	// Token: 0x0400E559 RID: 58713
 	public float SpeedImpactFactor;
 
-	// Token: 0x0400E0AF RID: 57519
+	// Token: 0x0400E55A RID: 58714
 	public float RotationImpactFactor;
 
-	// Token: 0x0400E0B0 RID: 57520
+	// Token: 0x0400E55B RID: 58715
 	public float TurnForwardInputMinX;
 
-	// Token: 0x0400E0B1 RID: 57521
+	// Token: 0x0400E55C RID: 58716
 	public float TurnBackwardInputMaxX;
 
-	// Token: 0x0400E0B2 RID: 57522
+	// Token: 0x0400E55D RID: 58717
 	public float MaxFloatingSpeed;
 
-	// Token: 0x0400E0B3 RID: 57523
+	// Token: 0x0400E55E RID: 58718
 	public float FloatingFrictionFactor;
 
-	// Token: 0x0400E0B4 RID: 57524
+	// Token: 0x0400E55F RID: 58719
 	public float BuoyancyBalanceRatio;
 
-	// Token: 0x0400E0B5 RID: 57525
+	// Token: 0x0400E560 RID: 58720
 	public float StrandedWaterDepthThreshold;
 
-	// Token: 0x0400E0B6 RID: 57526
+	// Token: 0x0400E561 RID: 58721
 	public float BaseMaxSpeed;
 
-	// Token: 0x0400E0B7 RID: 57527
+	// Token: 0x0400E562 RID: 58722
 	public float BaseMaxAcceleration;
 
-	// Token: 0x0400E0B8 RID: 57528
+	// Token: 0x0400E563 RID: 58723
 	public float BaseMinAcceleration;
 
-	// Token: 0x0400E0B9 RID: 57529
+	// Token: 0x0400E564 RID: 58724
 	public float BaseBrakeAcceleration;
 
-	// Token: 0x0400E0BA RID: 57530
+	// Token: 0x0400E565 RID: 58725
 	public float BaseMaxBackwardSpeed;
 
-	// Token: 0x0400E0BB RID: 57531
+	// Token: 0x0400E566 RID: 58726
 	public float BaseBackwardAcceleration;
 
-	// Token: 0x0400E0BC RID: 57532
+	// Token: 0x0400E567 RID: 58727
 	public float BaseMaxRotYawAcc;
 
-	// Token: 0x0400E0BD RID: 57533
+	// Token: 0x0400E568 RID: 58728
 	public float BaseMinRotYawAcc;
 
-	// Token: 0x0400E0BE RID: 57534
+	// Token: 0x0400E569 RID: 58729
 	public float BaseRotAngleCoef;
 
-	// Token: 0x0400E0BF RID: 57535
+	// Token: 0x0400E56A RID: 58730
 	public float BaseRotSpeedCoef;
 
-	// Token: 0x0400E0C0 RID: 57536
+	// Token: 0x0400E56B RID: 58731
 	public float BaseRotConstCoef;
 
-	// Token: 0x0400E0C1 RID: 57537
+	// Token: 0x0400E56C RID: 58732
 	public float BaseMinFriction;
 
-	// Token: 0x0400E0C2 RID: 57538
+	// Token: 0x0400E56D RID: 58733
 	public float BaseMaxFriction;
 
-	// Token: 0x0400E0C3 RID: 57539
+	// Token: 0x0400E56E RID: 58734
 	public float BaseMaxRotationSpeed;
 
-	// Token: 0x0400E0C4 RID: 57540
+	// Token: 0x0400E56F RID: 58735
 	public float BaseRotFrictionFactor;
 
-	// Token: 0x0400E0C5 RID: 57541
+	// Token: 0x0400E570 RID: 58736
 	public float BaseStaticRotFriction;
 
-	// Token: 0x0400E0C6 RID: 57542
+	// Token: 0x0400E571 RID: 58737
 	public float BaseTurningForceForwardFactor;
 
-	// Token: 0x0400E0C7 RID: 57543
+	// Token: 0x0400E572 RID: 58738
 	public float BaseMaxForwardThreshold;
 
-	// Token: 0x0400E0C8 RID: 57544
+	// Token: 0x0400E573 RID: 58739
 	public float BaseMaxRightThreshold;
 
-	// Token: 0x0400E0C9 RID: 57545
+	// Token: 0x0400E574 RID: 58740
 	public float SprintExceedLimitSpeed;
 
-	// Token: 0x0400E0CA RID: 57546
+	// Token: 0x0400E575 RID: 58741
 	public float SprintExceedLimitDuration;
 
-	// Token: 0x0400E0CB RID: 57547
+	// Token: 0x0400E576 RID: 58742
 	public float SprintMaxSpeed;
 
-	// Token: 0x0400E0CC RID: 57548
+	// Token: 0x0400E577 RID: 58743
 	public float SprintMaxAcceleration;
 
-	// Token: 0x0400E0CD RID: 57549
+	// Token: 0x0400E578 RID: 58744
 	public float SprintMinAcceleration;
 
-	// Token: 0x0400E0CE RID: 57550
+	// Token: 0x0400E579 RID: 58745
 	public float SprintBrakeAcceleration;
 
-	// Token: 0x0400E0CF RID: 57551
+	// Token: 0x0400E57A RID: 58746
 	public float SprintMaxBackwardSpeed;
 
-	// Token: 0x0400E0D0 RID: 57552
+	// Token: 0x0400E57B RID: 58747
 	public float SprintBackwardAcceleration;
 
-	// Token: 0x0400E0D1 RID: 57553
+	// Token: 0x0400E57C RID: 58748
 	public float SprintMaxRotYawAcc;
 
-	// Token: 0x0400E0D2 RID: 57554
+	// Token: 0x0400E57D RID: 58749
 	public float SprintMinRotYawAcc;
 
-	// Token: 0x0400E0D3 RID: 57555
+	// Token: 0x0400E57E RID: 58750
 	public float SprintDuration;
 
-	// Token: 0x0400E0D4 RID: 57556
+	// Token: 0x0400E57F RID: 58751
 	public float SprintStopSpeed;
 
-	// Token: 0x0400E0D5 RID: 57557
+	// Token: 0x0400E580 RID: 58752
 	public float SprintExtraFriction;
 
-	// Token: 0x0400E0D6 RID: 57558
+	// Token: 0x0400E581 RID: 58753
 	public float SprintRotAngleCoef;
 
-	// Token: 0x0400E0D7 RID: 57559
+	// Token: 0x0400E582 RID: 58754
 	public float SprintRotSpeedCoef;
 
-	// Token: 0x0400E0D8 RID: 57560
+	// Token: 0x0400E583 RID: 58755
 	public float SprintRotConstCoef;
 
-	// Token: 0x0400E0D9 RID: 57561
+	// Token: 0x0400E584 RID: 58756
 	public float SprintMinFriction;
 
-	// Token: 0x0400E0DA RID: 57562
+	// Token: 0x0400E585 RID: 58757
 	public float SprintMaxFriction;
 
-	// Token: 0x0400E0DB RID: 57563
+	// Token: 0x0400E586 RID: 58758
 	public float SprintMaxRotationSpeed;
 
-	// Token: 0x0400E0DC RID: 57564
+	// Token: 0x0400E587 RID: 58759
 	public float SprintRotFrictionFactor;
 
-	// Token: 0x0400E0DD RID: 57565
+	// Token: 0x0400E588 RID: 58760
 	public float SprintStaticRotFriction;
 
-	// Token: 0x0400E0DE RID: 57566
+	// Token: 0x0400E589 RID: 58761
 	public float SprintForceInputDuration;
 
-	// Token: 0x0400E0DF RID: 57567
+	// Token: 0x0400E58A RID: 58762
 	public float SprintTurningForceForwardFactor;
 
-	// Token: 0x0400E0E0 RID: 57568
+	// Token: 0x0400E58B RID: 58763
 	public float SprintMaxForwardThreshold;
 
-	// Token: 0x0400E0E1 RID: 57569
+	// Token: 0x0400E58C RID: 58764
 	public float SprintMaxRightThreshold;
 
-	// Token: 0x0400E0E2 RID: 57570
+	// Token: 0x0400E58D RID: 58765
 	public float SprintCoolDown;
 
-	// Token: 0x0400E0E3 RID: 57571
+	// Token: 0x0400E58E RID: 58766
 	public int SprintMaxUsableCount;
 }

@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015A2 RID: 5538
+// Token: 0x02000A5A RID: 2650
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class WheelTowerRecordBossItem : GridProxyAbstract<IBossItemData>
 {
-	// Token: 0x06009D95 RID: 40341 RVA: 0x002232C4 File Offset: 0x002214C4
+	// Token: 0x06007173 RID: 29043 RVA: 0x0022D074 File Offset: 0x0022B274
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -40,7 +40,7 @@ public class WheelTowerRecordBossItem : GridProxyAbstract<IBossItemData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D96 RID: 40342 RVA: 0x002233D4 File Offset: 0x002215D4
+	// Token: 0x06007174 RID: 29044 RVA: 0x0022D184 File Offset: 0x0022B384
 	public override void Refresh(IBossItemData data, bool isSelected, int gridIndex)
 	{
 		IBossInfo bossInfo = data.BossInfo;

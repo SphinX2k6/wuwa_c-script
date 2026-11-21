@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006098 RID: 24728
+	// Token: 0x020066FA RID: 26362
 	public struct IActiveRange : IFlatbufferObject
 	{
-		// Token: 0x1700B630 RID: 46640
-		// (get) Token: 0x0602A340 RID: 172864 RVA: 0x005D19E6 File Offset: 0x005CFBE6
+		// Token: 0x1700BF9B RID: 49051
+		// (get) Token: 0x0602CA21 RID: 182817 RVA: 0x0061B98E File Offset: 0x00619B8E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A341 RID: 172865 RVA: 0x005D19F3 File Offset: 0x005CFBF3
+		// Token: 0x0602CA22 RID: 182818 RVA: 0x0061B99B File Offset: 0x00619B9B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602A342 RID: 172866 RVA: 0x005D19FC File Offset: 0x005CFBFC
+		// Token: 0x0602CA23 RID: 182819 RVA: 0x0061B9A4 File Offset: 0x00619BA4
 		public static IActiveRange GetRootAsIActiveRange(ByteBuffer _bb)
 		{
 			return IActiveRange.GetRootAsIActiveRange(_bb, default(IActiveRange));
 		}
 
-		// Token: 0x0602A343 RID: 172867 RVA: 0x005D1A18 File Offset: 0x005CFC18
+		// Token: 0x0602CA24 RID: 182820 RVA: 0x0061B9C0 File Offset: 0x00619BC0
 		public static IActiveRange GetRootAsIActiveRange(ByteBuffer _bb, IActiveRange obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602A344 RID: 172868 RVA: 0x005D1A35 File Offset: 0x005CFC35
+		// Token: 0x0602CA25 RID: 182821 RVA: 0x0061B9DD File Offset: 0x00619BDD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602A345 RID: 172869 RVA: 0x005D1A44 File Offset: 0x005CFC44
+		// Token: 0x0602CA26 RID: 182822 RVA: 0x0061B9EC File Offset: 0x00619BEC
 		public IActiveRange __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B631 RID: 46641
-		// (get) Token: 0x0602A346 RID: 172870 RVA: 0x005D1A54 File Offset: 0x005CFC54
+		// Token: 0x1700BF9C RID: 49052
+		// (get) Token: 0x0602CA27 RID: 182823 RVA: 0x0061B9FC File Offset: 0x00619BFC
 		public IVectorInfo? CheckPoint
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B632 RID: 46642
-		// (get) Token: 0x0602A347 RID: 172871 RVA: 0x005D1AB4 File Offset: 0x005CFCB4
+		// Token: 0x1700BF9D RID: 49053
+		// (get) Token: 0x0602CA28 RID: 182824 RVA: 0x0061BA5C File Offset: 0x00619C5C
 		public int CheckEnterRange
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B633 RID: 46643
-		// (get) Token: 0x0602A348 RID: 172872 RVA: 0x005D1AF0 File Offset: 0x005CFCF0
+		// Token: 0x1700BF9E RID: 49054
+		// (get) Token: 0x0602CA29 RID: 182825 RVA: 0x0061BA98 File Offset: 0x00619C98
 		public int CheckLeaveRange
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B634 RID: 46644
-		// (get) Token: 0x0602A349 RID: 172873 RVA: 0x005D1B2C File Offset: 0x005CFD2C
+		// Token: 0x1700BF9F RID: 49055
+		// (get) Token: 0x0602CA2A RID: 182826 RVA: 0x0061BAD4 File Offset: 0x00619CD4
 		public bool AllowRangeExceed
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B635 RID: 46645
-		// (get) Token: 0x0602A34A RID: 172874 RVA: 0x005D1B6C File Offset: 0x005CFD6C
+		// Token: 0x1700BFA0 RID: 49056
+		// (get) Token: 0x0602CA2B RID: 182827 RVA: 0x0061BB14 File Offset: 0x00619D14
 		public byte NullMask
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A34B RID: 172875 RVA: 0x005D1BA9 File Offset: 0x005CFDA9
+		// Token: 0x0602CA2C RID: 182828 RVA: 0x0061BB51 File Offset: 0x00619D51
 		public static Offset<IActiveRange> CreateIActiveRange(FlatBufferBuilder builder, Offset<IVectorInfo> CheckPointOffset = default(Offset<IVectorInfo>), int CheckEnterRange = 0, int CheckLeaveRange = 0, bool AllowRangeExceed = false, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -131,49 +131,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActiveRange.EndIActiveRange(builder);
 		}
 
-		// Token: 0x0602A34C RID: 172876 RVA: 0x005D1BDD File Offset: 0x005CFDDD
+		// Token: 0x0602CA2D RID: 182829 RVA: 0x0061BB85 File Offset: 0x00619D85
 		public static void StartIActiveRange(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602A34D RID: 172877 RVA: 0x005D1BE6 File Offset: 0x005CFDE6
+		// Token: 0x0602CA2E RID: 182830 RVA: 0x0061BB8E File Offset: 0x00619D8E
 		public static void AddCheckPoint(FlatBufferBuilder builder, Offset<IVectorInfo> checkPointOffset)
 		{
 			builder.AddOffset(0, checkPointOffset.Value, 0);
 		}
 
-		// Token: 0x0602A34E RID: 172878 RVA: 0x005D1BF6 File Offset: 0x005CFDF6
+		// Token: 0x0602CA2F RID: 182831 RVA: 0x0061BB9E File Offset: 0x00619D9E
 		public static void AddCheckEnterRange(FlatBufferBuilder builder, int checkEnterRange)
 		{
 			builder.AddInt(1, checkEnterRange, 0);
 		}
 
-		// Token: 0x0602A34F RID: 172879 RVA: 0x005D1C01 File Offset: 0x005CFE01
+		// Token: 0x0602CA30 RID: 182832 RVA: 0x0061BBA9 File Offset: 0x00619DA9
 		public static void AddCheckLeaveRange(FlatBufferBuilder builder, int checkLeaveRange)
 		{
 			builder.AddInt(2, checkLeaveRange, 0);
 		}
 
-		// Token: 0x0602A350 RID: 172880 RVA: 0x005D1C0C File Offset: 0x005CFE0C
+		// Token: 0x0602CA31 RID: 182833 RVA: 0x0061BBB4 File Offset: 0x00619DB4
 		public static void AddAllowRangeExceed(FlatBufferBuilder builder, bool allowRangeExceed)
 		{
 			builder.AddBool(3, allowRangeExceed, false);
 		}
 
-		// Token: 0x0602A351 RID: 172881 RVA: 0x005D1C17 File Offset: 0x005CFE17
+		// Token: 0x0602CA32 RID: 182834 RVA: 0x0061BBBF File Offset: 0x00619DBF
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0602A352 RID: 172882 RVA: 0x005D1C22 File Offset: 0x005CFE22
+		// Token: 0x0602CA33 RID: 182835 RVA: 0x0061BBCA File Offset: 0x00619DCA
 		public static Offset<IActiveRange> EndIActiveRange(FlatBufferBuilder builder)
 		{
 			return new Offset<IActiveRange>(builder.EndTable());
 		}
 
-		// Token: 0x0602A353 RID: 172883 RVA: 0x005D1C30 File Offset: 0x005CFE30
+		// Token: 0x0602CA34 RID: 182836 RVA: 0x0061BBD8 File Offset: 0x00619DD8
 		public IActiveRangeT UnPack()
 		{
 			IActiveRangeT activeRangeT = new IActiveRangeT();
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return activeRangeT;
 		}
 
-		// Token: 0x0602A354 RID: 172884 RVA: 0x005D1C4C File Offset: 0x005CFE4C
+		// Token: 0x0602CA35 RID: 182837 RVA: 0x0061BBF4 File Offset: 0x00619DF4
 		public void UnPackTo(IActiveRangeT _o)
 		{
 			_o.CheckPoint = ((this.CheckPoint != null) ? this.CheckPoint.Value.UnPack() : null);
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602A355 RID: 172885 RVA: 0x005D1CB8 File Offset: 0x005CFEB8
+		// Token: 0x0602CA36 RID: 182838 RVA: 0x0061BC60 File Offset: 0x00619E60
 		public static Offset<IActiveRange> Pack(FlatBufferBuilder builder, IActiveRangeT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActiveRange.CreateIActiveRange(builder, checkPointOffset, _o.CheckEnterRange, _o.CheckLeaveRange, _o.AllowRangeExceed, _o.NullMask);
 		}
 
-		// Token: 0x0401042B RID: 66603
+		// Token: 0x0401122F RID: 70191
 		private Table __p;
 	}
 }

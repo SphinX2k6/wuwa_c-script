@@ -4,70 +4,70 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200522C RID: 21036
+	// Token: 0x02005794 RID: 22420
 	public class IFanComponentT
 	{
-		// Token: 0x17009A1B RID: 39451
-		// (get) Token: 0x06022355 RID: 140117 RVA: 0x004BF0EF File Offset: 0x004BD2EF
-		// (set) Token: 0x06022356 RID: 140118 RVA: 0x004BF0F7 File Offset: 0x004BD2F7
+		// Token: 0x1700A217 RID: 41495
+		// (get) Token: 0x060242EB RID: 148203 RVA: 0x004F9BB3 File Offset: 0x004F7DB3
+		// (set) Token: 0x060242EC RID: 148204 RVA: 0x004F9BBB File Offset: 0x004F7DBB
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009A1C RID: 39452
-		// (get) Token: 0x06022357 RID: 140119 RVA: 0x004BF100 File Offset: 0x004BD300
-		// (set) Token: 0x06022358 RID: 140120 RVA: 0x004BF108 File Offset: 0x004BD308
+		// Token: 0x1700A218 RID: 41496
+		// (get) Token: 0x060242ED RID: 148205 RVA: 0x004F9BC4 File Offset: 0x004F7DC4
+		// (set) Token: 0x060242EE RID: 148206 RVA: 0x004F9BCC File Offset: 0x004F7DCC
 		public EFanGearType GearType { get; set; }
 
-		// Token: 0x17009A1D RID: 39453
-		// (get) Token: 0x06022359 RID: 140121 RVA: 0x004BF111 File Offset: 0x004BD311
-		// (set) Token: 0x0602235A RID: 140122 RVA: 0x004BF119 File Offset: 0x004BD319
+		// Token: 0x1700A219 RID: 41497
+		// (get) Token: 0x060242EF RID: 148207 RVA: 0x004F9BD5 File Offset: 0x004F7DD5
+		// (set) Token: 0x060242F0 RID: 148208 RVA: 0x004F9BDD File Offset: 0x004F7DDD
 		public TFanInteractOptionUnion InteractType { get; set; }
 
-		// Token: 0x17009A1E RID: 39454
-		// (get) Token: 0x0602235B RID: 140123 RVA: 0x004BF122 File Offset: 0x004BD322
-		// (set) Token: 0x0602235C RID: 140124 RVA: 0x004BF12A File Offset: 0x004BD32A
+		// Token: 0x1700A21A RID: 41498
+		// (get) Token: 0x060242F1 RID: 148209 RVA: 0x004F9BE6 File Offset: 0x004F7DE6
+		// (set) Token: 0x060242F2 RID: 148210 RVA: 0x004F9BEE File Offset: 0x004F7DEE
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17009A1F RID: 39455
-		// (get) Token: 0x0602235D RID: 140125 RVA: 0x004BF133 File Offset: 0x004BD333
-		// (set) Token: 0x0602235E RID: 140126 RVA: 0x004BF13B File Offset: 0x004BD33B
+		// Token: 0x1700A21B RID: 41499
+		// (get) Token: 0x060242F3 RID: 148211 RVA: 0x004F9BF7 File Offset: 0x004F7DF7
+		// (set) Token: 0x060242F4 RID: 148212 RVA: 0x004F9BFF File Offset: 0x004F7DFF
 		public string RotateActor { get; set; }
 
-		// Token: 0x17009A20 RID: 39456
-		// (get) Token: 0x0602235F RID: 140127 RVA: 0x004BF144 File Offset: 0x004BD344
-		// (set) Token: 0x06022360 RID: 140128 RVA: 0x004BF14C File Offset: 0x004BD34C
+		// Token: 0x1700A21C RID: 41500
+		// (get) Token: 0x060242F5 RID: 148213 RVA: 0x004F9C08 File Offset: 0x004F7E08
+		// (set) Token: 0x060242F6 RID: 148214 RVA: 0x004F9C10 File Offset: 0x004F7E10
 		public string OffsetActor { get; set; }
 
-		// Token: 0x17009A21 RID: 39457
-		// (get) Token: 0x06022361 RID: 140129 RVA: 0x004BF155 File Offset: 0x004BD355
-		// (set) Token: 0x06022362 RID: 140130 RVA: 0x004BF15D File Offset: 0x004BD35D
+		// Token: 0x1700A21D RID: 41501
+		// (get) Token: 0x060242F7 RID: 148215 RVA: 0x004F9C19 File Offset: 0x004F7E19
+		// (set) Token: 0x060242F8 RID: 148216 RVA: 0x004F9C21 File Offset: 0x004F7E21
 		public int CirclePerRound { get; set; }
 
-		// Token: 0x17009A22 RID: 39458
-		// (get) Token: 0x06022363 RID: 140131 RVA: 0x004BF166 File Offset: 0x004BD366
-		// (set) Token: 0x06022364 RID: 140132 RVA: 0x004BF16E File Offset: 0x004BD36E
+		// Token: 0x1700A21E RID: 41502
+		// (get) Token: 0x060242F9 RID: 148217 RVA: 0x004F9C2A File Offset: 0x004F7E2A
+		// (set) Token: 0x060242FA RID: 148218 RVA: 0x004F9C32 File Offset: 0x004F7E32
 		public int InitCircle { get; set; }
 
-		// Token: 0x17009A23 RID: 39459
-		// (get) Token: 0x06022365 RID: 140133 RVA: 0x004BF177 File Offset: 0x004BD377
-		// (set) Token: 0x06022366 RID: 140134 RVA: 0x004BF17F File Offset: 0x004BD37F
+		// Token: 0x1700A21F RID: 41503
+		// (get) Token: 0x060242FB RID: 148219 RVA: 0x004F9C3B File Offset: 0x004F7E3B
+		// (set) Token: 0x060242FC RID: 148220 RVA: 0x004F9C43 File Offset: 0x004F7E43
 		public int TargetEntityId { get; set; }
 
-		// Token: 0x17009A24 RID: 39460
-		// (get) Token: 0x06022367 RID: 140135 RVA: 0x004BF188 File Offset: 0x004BD388
-		// (set) Token: 0x06022368 RID: 140136 RVA: 0x004BF190 File Offset: 0x004BD390
+		// Token: 0x1700A220 RID: 41504
+		// (get) Token: 0x060242FD RID: 148221 RVA: 0x004F9C4C File Offset: 0x004F7E4C
+		// (set) Token: 0x060242FE RID: 148222 RVA: 0x004F9C54 File Offset: 0x004F7E54
 		public IFanEffectConfigT EffectConfig { get; set; }
 
-		// Token: 0x17009A25 RID: 39461
-		// (get) Token: 0x06022369 RID: 140137 RVA: 0x004BF199 File Offset: 0x004BD399
-		// (set) Token: 0x0602236A RID: 140138 RVA: 0x004BF1A1 File Offset: 0x004BD3A1
+		// Token: 0x1700A221 RID: 41505
+		// (get) Token: 0x060242FF RID: 148223 RVA: 0x004F9C5D File Offset: 0x004F7E5D
+		// (set) Token: 0x06024300 RID: 148224 RVA: 0x004F9C65 File Offset: 0x004F7E65
 		public List<IFanStateEffectT> EffectByState { get; set; }
 
-		// Token: 0x17009A26 RID: 39462
-		// (get) Token: 0x0602236B RID: 140139 RVA: 0x004BF1AA File Offset: 0x004BD3AA
-		// (set) Token: 0x0602236C RID: 140140 RVA: 0x004BF1B2 File Offset: 0x004BD3B2
+		// Token: 0x1700A222 RID: 41506
+		// (get) Token: 0x06024301 RID: 148225 RVA: 0x004F9C6E File Offset: 0x004F7E6E
+		// (set) Token: 0x06024302 RID: 148226 RVA: 0x004F9C76 File Offset: 0x004F7E76
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602236D RID: 140141 RVA: 0x004BF1BC File Offset: 0x004BD3BC
+		// Token: 0x06024303 RID: 148227 RVA: 0x004F9C80 File Offset: 0x004F7E80
 		public IFanComponentT()
 		{
 			this.Disabled = false;

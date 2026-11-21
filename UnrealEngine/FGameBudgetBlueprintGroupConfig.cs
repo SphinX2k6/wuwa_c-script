@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001863 RID: 6243
+	// Token: 0x02000398 RID: 920
 	[UnrealObjectPath("/Script/KuroGameBudget.GameBudgetBlueprintGroupConfig")]
 	[UnrealStructLayout(24, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FGameBudgetBlueprintGroupConfig : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06016F7A RID: 94074 RVA: 0x00218166 File Offset: 0x00216366
+		// Token: 0x06005B35 RID: 23349 RVA: 0x00080D0B File Offset: 0x0007EF0B
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FGameBudgetBlueprintGroupConfig._ScriptStructPtr != 0) ? FGameBudgetBlueprintGroupConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroGameBudget.GameBudgetBlueprintGroupConfig", ref FGameBudgetBlueprintGroupConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x17005C82 RID: 23682
-		// (get) Token: 0x06016F7B RID: 94075 RVA: 0x0021818A File Offset: 0x0021638A
-		// (set) Token: 0x06016F7C RID: 94076 RVA: 0x0021819A File Offset: 0x0021639A
+		// Token: 0x17001206 RID: 4614
+		// (get) Token: 0x06005B36 RID: 23350 RVA: 0x00080D2F File Offset: 0x0007EF2F
+		// (set) Token: 0x06005B37 RID: 23351 RVA: 0x00080D3F File Offset: 0x0007EF3F
 		public unsafe EGameBudgetBlueprintGroup Group
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C83 RID: 23683
-		// (get) Token: 0x06016F7D RID: 94077 RVA: 0x002181AB File Offset: 0x002163AB
-		// (set) Token: 0x06016F7E RID: 94078 RVA: 0x002181BF File Offset: 0x002163BF
+		// Token: 0x17001207 RID: 4615
+		// (get) Token: 0x06005B38 RID: 23352 RVA: 0x00080D50 File Offset: 0x0007EF50
+		// (set) Token: 0x06005B39 RID: 23353 RVA: 0x00080D64 File Offset: 0x0007EF64
 		public unsafe FName GameBudgetGroupName
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C84 RID: 23684
-		// (get) Token: 0x06016F7F RID: 94079 RVA: 0x002181D4 File Offset: 0x002163D4
-		// (set) Token: 0x06016F80 RID: 94080 RVA: 0x002181E4 File Offset: 0x002163E4
+		// Token: 0x17001208 RID: 4616
+		// (get) Token: 0x06005B3A RID: 23354 RVA: 0x00080D79 File Offset: 0x0007EF79
+		// (set) Token: 0x06005B3B RID: 23355 RVA: 0x00080D89 File Offset: 0x0007EF89
 		public unsafe float DisableCollisionRange
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C85 RID: 23685
-		// (get) Token: 0x06016F81 RID: 94081 RVA: 0x002181F5 File Offset: 0x002163F5
-		// (set) Token: 0x06016F82 RID: 94082 RVA: 0x00218205 File Offset: 0x00216405
+		// Token: 0x17001209 RID: 4617
+		// (get) Token: 0x06005B3C RID: 23356 RVA: 0x00080D9A File Offset: 0x0007EF9A
+		// (set) Token: 0x06005B3D RID: 23357 RVA: 0x00080DAA File Offset: 0x0007EFAA
 		public unsafe float DisablePhysicsSimulationRange
 		{
 			get
@@ -76,68 +76,59 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06016F83 RID: 94083 RVA: 0x00218216 File Offset: 0x00216416
+		// Token: 0x06005B3E RID: 23358 RVA: 0x00080DBB File Offset: 0x0007EFBB
 		public FGameBudgetBlueprintGroupConfig()
 		{
 		}
 
-		// Token: 0x06016F84 RID: 94084 RVA: 0x0021821E File Offset: 0x0021641E
-		public FGameBudgetBlueprintGroupConfig(EGameBudgetBlueprintGroup Group, FName GameBudgetGroupName, float DisableCollisionRange, float DisablePhysicsSimulationRange)
-		{
-			this.Group = Group;
-			this.GameBudgetGroupName = GameBudgetGroupName;
-			this.DisableCollisionRange = DisableCollisionRange;
-			this.DisablePhysicsSimulationRange = DisablePhysicsSimulationRange;
-		}
-
-		// Token: 0x06016F85 RID: 94085 RVA: 0x00218243 File Offset: 0x00216443
+		// Token: 0x06005B3F RID: 23359 RVA: 0x00080DC3 File Offset: 0x0007EFC3
 		protected override IntPtr GetUStructPtr()
 		{
 			return FGameBudgetBlueprintGroupConfig.StaticStruct();
 		}
 
-		// Token: 0x06016F86 RID: 94086 RVA: 0x0021824F File Offset: 0x0021644F
+		// Token: 0x06005B40 RID: 23360 RVA: 0x00080DCF File Offset: 0x0007EFCF
 		[NullableContext(2)]
 		public FGameBudgetBlueprintGroupConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06016F87 RID: 94087 RVA: 0x00218259 File Offset: 0x00216459
+		// Token: 0x06005B41 RID: 23361 RVA: 0x00080DD9 File Offset: 0x0007EFD9
 		public FGameBudgetBlueprintGroupConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06016F88 RID: 94088 RVA: 0x00218264 File Offset: 0x00216464
+		// Token: 0x06005B42 RID: 23362 RVA: 0x00080DE4 File Offset: 0x0007EFE4
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FGameBudgetBlueprintGroupConfig(Pointer, false, true);
 		}
 
-		// Token: 0x06016F89 RID: 94089 RVA: 0x0021826E File Offset: 0x0021646E
+		// Token: 0x06005B43 RID: 23363 RVA: 0x00080DEE File Offset: 0x0007EFEE
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FGameBudgetBlueprintGroupConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400C7B5 RID: 51125
+		// Token: 0x04002613 RID: 9747
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameBudget.GameBudgetBlueprintGroupConfig";
 
-		// Token: 0x0400C7B6 RID: 51126
+		// Token: 0x04002614 RID: 9748
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400C7B7 RID: 51127
+		// Token: 0x04002615 RID: 9749
 		internal static int __PropertyOffset_Group;
 
-		// Token: 0x0400C7B8 RID: 51128
+		// Token: 0x04002616 RID: 9750
 		internal static int __PropertyOffset_GameBudgetGroupName;
 
-		// Token: 0x0400C7B9 RID: 51129
+		// Token: 0x04002617 RID: 9751
 		internal static int __PropertyOffset_DisableCollisionRange;
 
-		// Token: 0x0400C7BA RID: 51130
+		// Token: 0x04002618 RID: 9752
 		internal static int __PropertyOffset_DisablePhysicsSimulationRange;
 	}
 }

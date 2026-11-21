@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200008F RID: 143
+	// Token: 0x02000097 RID: 151
 	public class ConfigAiTeamLevelNewById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600035A RID: 858 RVA: 0x0006C864 File Offset: 0x0006AA64
+		// Token: 0x0600038A RID: 906 RVA: 0x00071118 File Offset: 0x0006F318
 		static ConfigAiTeamLevelNewById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAiTeamLevelNewById.CreateStaticDefaultValue), new Action(ConfigAiTeamLevelNewById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600035B RID: 859 RVA: 0x0006C884 File Offset: 0x0006AA84
+		// Token: 0x0600038B RID: 907 RVA: 0x00071138 File Offset: 0x0006F338
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAiTeamLevelNewById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600035C RID: 860 RVA: 0x0006C903 File Offset: 0x0006AB03
+		// Token: 0x0600038C RID: 908 RVA: 0x000711B7 File Offset: 0x0006F3B7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAiTeamLevelNewById.LogPair = null;
 			ConfigAiTeamLevelNewById.HandleId = 0;
 		}
 
-		// Token: 0x0600035D RID: 861 RVA: 0x0006C911 File Offset: 0x0006AB11
+		// Token: 0x0600038D RID: 909 RVA: 0x000711C5 File Offset: 0x0006F3C5
 		public static void Init()
 		{
 			ConfigAiTeamLevelNewById.HandleId = ConfigCommon.InitDataStatement(ConfigAiTeamLevelNewById.HandleId, "db_ai.db", "select BinData from `AiTeamLevelNew` where Id=?");
 		}
 
-		// Token: 0x0600035E RID: 862 RVA: 0x0006C92C File Offset: 0x0006AB2C
+		// Token: 0x0600038E RID: 910 RVA: 0x000711E0 File Offset: 0x0006F3E0
 		public static AiTeamLevelNew? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAiTeamLevelNewById.HandleId, ConfigAiTeamLevelNewById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AiTeamLevelNew?(rootAsAiTeamLevelNew);
 		}
 
-		// Token: 0x040003CD RID: 973
+		// Token: 0x04000405 RID: 1029
 		private const string DB = "db_ai.db";
 
-		// Token: 0x040003CE RID: 974
+		// Token: 0x04000406 RID: 1030
 		private const string FILE = "a.AI集群总表.xlsx";
 
-		// Token: 0x040003CF RID: 975
+		// Token: 0x04000407 RID: 1031
 		private const string TABLE = "AiTeamLevelNew";
 
-		// Token: 0x040003D0 RID: 976
+		// Token: 0x04000408 RID: 1032
 		private const string COMMAND = "select BinData from `AiTeamLevelNew` where Id=?";
 
-		// Token: 0x040003D1 RID: 977
+		// Token: 0x04000409 RID: 1033
 		private const string KEY_PREFIX = "AiTeamLevelNewById";
 
-		// Token: 0x040003D2 RID: 978
+		// Token: 0x0400040A RID: 1034
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040003D3 RID: 979
+		// Token: 0x0400040B RID: 1035
 		private static int HandleId;
 	}
 }

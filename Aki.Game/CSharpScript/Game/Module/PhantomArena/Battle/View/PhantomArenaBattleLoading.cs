@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 {
-	// Token: 0x02005244 RID: 21060
+	// Token: 0x02004214 RID: 16916
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleLoading : UiTickViewBase, IUiViewResource
 	{
-		// Token: 0x06035CB5 RID: 220341 RVA: 0x00CBA5D2 File Offset: 0x00CB87D2
+		// Token: 0x0602ABB0 RID: 175024 RVA: 0x00C07C12 File Offset: 0x00C05E12
 		public PhantomArenaBattleLoading(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06035CB6 RID: 220342 RVA: 0x00CBA5E8 File Offset: 0x00CB87E8
+		// Token: 0x0602ABB1 RID: 175025 RVA: 0x00C07C28 File Offset: 0x00C05E28
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,25 +39,25 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			};
 		}
 
-		// Token: 0x06035CB7 RID: 220343 RVA: 0x00CBA6B0 File Offset: 0x00CB88B0
+		// Token: 0x0602ABB2 RID: 175026 RVA: 0x00C07CF0 File Offset: 0x00C05EF0
 		protected override void OnBeforeShow()
 		{
 			GameAudioController.Instance.UpdateLoadingType(new ELoadingPerform?(ELoadingPerform.Loading));
 		}
 
-		// Token: 0x06035CB8 RID: 220344 RVA: 0x00CBA6C4 File Offset: 0x00CB88C4
+		// Token: 0x0602ABB3 RID: 175027 RVA: 0x00C07D04 File Offset: 0x00C05F04
 		protected override void OnBeforeHide()
 		{
 			GameAudioController.Instance.UpdateLoadingType(null);
 		}
 
-		// Token: 0x06035CB9 RID: 220345 RVA: 0x00CBA6E4 File Offset: 0x00CB88E4
+		// Token: 0x0602ABB4 RID: 175028 RVA: 0x00C07D24 File Offset: 0x00C05F24
 		protected override void OnAfterHide()
 		{
 			EventSystem.Instance.Emit(EEventName.OnPhantomArenaBattleLoadingHide);
 		}
 
-		// Token: 0x06035CBA RID: 220346 RVA: 0x00CBA6F8 File Offset: 0x00CB88F8
+		// Token: 0x0602ABB5 RID: 175029 RVA: 0x00C07D38 File Offset: 0x00C05F38
 		private UniTask InitLoadingBg()
 		{
 			PhantomArenaBattleLoading.<InitLoadingBg>d__19 <InitLoadingBg>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitLoadingBg>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035CBB RID: 220347 RVA: 0x00CBA73C File Offset: 0x00CB893C
+		// Token: 0x0602ABB6 RID: 175030 RVA: 0x00C07D7C File Offset: 0x00C05F7C
 		private UniTask InitOpponentLayout()
 		{
 			PhantomArenaBattleLoading.<InitOpponentLayout>d__20 <InitOpponentLayout>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitOpponentLayout>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035CBC RID: 220348 RVA: 0x00CBA77F File Offset: 0x00CB897F
+		// Token: 0x0602ABB7 RID: 175031 RVA: 0x00C07DBF File Offset: 0x00C05FBF
 		private int GetOpponentIndex(int index)
 		{
 			if (index < 3)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return index - 3;
 		}
 
-		// Token: 0x06035CBD RID: 220349 RVA: 0x00CBA78C File Offset: 0x00CB898C
+		// Token: 0x0602ABB8 RID: 175032 RVA: 0x00C07DCC File Offset: 0x00C05FCC
 		private UniTask InitOwnLayout()
 		{
 			PhantomArenaBattleLoading.<InitOwnLayout>d__22 <InitOwnLayout>d__;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <InitOwnLayout>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035CBE RID: 220350 RVA: 0x00CBA7D0 File Offset: 0x00CB89D0
+		// Token: 0x0602ABB9 RID: 175033 RVA: 0x00C07E10 File Offset: 0x00C06010
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaBattleLoading.<OnBeforeStartAsync>d__23 <OnBeforeStartAsync>d__;
@@ -111,13 +111,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035CBF RID: 220351 RVA: 0x00CBA813 File Offset: 0x00CB8A13
+		// Token: 0x0602ABBA RID: 175034 RVA: 0x00C07E53 File Offset: 0x00C06053
 		private PhantomArenaBattleLoadingItem InitLoadItem()
 		{
 			return new PhantomArenaBattleLoadingItem();
 		}
 
-		// Token: 0x06035CC0 RID: 220352 RVA: 0x00CBA81C File Offset: 0x00CB8A1C
+		// Token: 0x0602ABBB RID: 175035 RVA: 0x00C07E5C File Offset: 0x00C0605C
 		protected void WaitEntityLoadFinish()
 		{
 			List<long> allEntityIdList = PhantomArenaBattleModel.Instance.BattleData.GetAllEntityIdList();
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.IsLoadStart = true;
 		}
 
-		// Token: 0x06035CC1 RID: 220353 RVA: 0x00CBA8BC File Offset: 0x00CB8ABC
+		// Token: 0x0602ABBC RID: 175036 RVA: 0x00C07EFC File Offset: 0x00C060FC
 		protected override void OnTick(float delta)
 		{
 			if (!this.IsLoadStart || this.IsLoadEnd)
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.SetLoadingValue(this.NotNeedTimeCount / 2f);
 		}
 
-		// Token: 0x06035CC2 RID: 220354 RVA: 0x00CBA9AC File Offset: 0x00CB8BAC
+		// Token: 0x0602ABBD RID: 175037 RVA: 0x00C07FEC File Offset: 0x00C061EC
 		protected void SetLoadingValue(float value)
 		{
 			UUISliderComponent slider = base.GetSlider(4);
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x06035CC3 RID: 220355 RVA: 0x00CBAA23 File Offset: 0x00CB8C23
+		// Token: 0x0602ABBE RID: 175038 RVA: 0x00C08063 File Offset: 0x00C06263
 		protected void OnLoadingEnd()
 		{
 			this.IsLoadEnd = true;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			});
 		}
 
-		// Token: 0x06035CC4 RID: 220356 RVA: 0x00CBAA5B File Offset: 0x00CB8C5B
+		// Token: 0x0602ABBF RID: 175039 RVA: 0x00C0809B File Offset: 0x00C0629B
 		public string GetExtraResourceId(object param = null)
 		{
 			if (!PhantomArenaBattleModel.Instance.IsOldBvb)
@@ -219,71 +219,71 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return "UiView_DesktopLoading";
 		}
 
-		// Token: 0x0401C85E RID: 116830
+		// Token: 0x04017293 RID: 94867
 		private const int CARD_FRONT = 3;
 
-		// Token: 0x0401C85F RID: 116831
+		// Token: 0x04017294 RID: 94868
 		private const int CARD_TOTAL = 6;
 
-		// Token: 0x0401C860 RID: 116832
+		// Token: 0x04017295 RID: 94869
 		private const float PER_INTERVAL = 2f;
 
-		// Token: 0x0401C861 RID: 116833
+		// Token: 0x04017296 RID: 94870
 		protected GenericLayout<PhantomArenaBattleLoadingItem, IPhantomArenaBattleLoadingInfo> OpponentLayout;
 
-		// Token: 0x0401C862 RID: 116834
+		// Token: 0x04017297 RID: 94871
 		protected GenericLayout<PhantomArenaBattleLoadingItem, IPhantomArenaBattleLoadingInfo> OwnLayout;
 
-		// Token: 0x0401C863 RID: 116835
+		// Token: 0x04017298 RID: 94872
 		protected bool IsLoadStart;
 
-		// Token: 0x0401C864 RID: 116836
+		// Token: 0x04017299 RID: 94873
 		protected bool IsLoadEnd;
 
-		// Token: 0x0401C865 RID: 116837
+		// Token: 0x0401729A RID: 94874
 		protected bool NotNeedEntity;
 
-		// Token: 0x0401C866 RID: 116838
+		// Token: 0x0401729B RID: 94875
 		protected float NotNeedTimeCount;
 
-		// Token: 0x0401C867 RID: 116839
+		// Token: 0x0401729C RID: 94876
 		protected WaitEntityTask WaitTask;
 
-		// Token: 0x0401C868 RID: 116840
+		// Token: 0x0401729D RID: 94877
 		protected int EntityTotal;
 
-		// Token: 0x0401C869 RID: 116841
+		// Token: 0x0401729E RID: 94878
 		protected float CurCount;
 
-		// Token: 0x0401C86A RID: 116842
+		// Token: 0x0401729F RID: 94879
 		protected float CountSpeed = 1f;
 
-		// Token: 0x0200B3C6 RID: 46022
+		// Token: 0x02009DFE RID: 40446
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040367C4 RID: 223172
+			// Token: 0x04031217 RID: 201239
 			public const int OpponentLayout = 0;
 
-			// Token: 0x040367C5 RID: 223173
+			// Token: 0x04031218 RID: 201240
 			public const int OpponentItem = 1;
 
-			// Token: 0x040367C6 RID: 223174
+			// Token: 0x04031219 RID: 201241
 			public const int OwnLayout = 2;
 
-			// Token: 0x040367C7 RID: 223175
+			// Token: 0x0403121A RID: 201242
 			public const int OwnItem = 3;
 
-			// Token: 0x040367C8 RID: 223176
+			// Token: 0x0403121B RID: 201243
 			public const int SliderL = 4;
 
-			// Token: 0x040367C9 RID: 223177
+			// Token: 0x0403121C RID: 201244
 			public const int SliderR = 5;
 
-			// Token: 0x040367CA RID: 223178
+			// Token: 0x0403121D RID: 201245
 			public const int TxtTitle = 6;
 
-			// Token: 0x040367CB RID: 223179
+			// Token: 0x0403121E RID: 201246
 			public const int LoadingBg = 7;
 		}
 	}

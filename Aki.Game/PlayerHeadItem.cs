@@ -7,17 +7,17 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001952 RID: 6482
+// Token: 0x02000E0F RID: 3599
 public class PlayerHeadItem : UiPanelBase
 {
-	// Token: 0x0600BD43 RID: 48451 RVA: 0x002ACB82 File Offset: 0x002AAD82
+	// Token: 0x06009146 RID: 37190 RVA: 0x002B79C6 File Offset: 0x002B5BC6
 	[NullableContext(1)]
 	public PlayerHeadItem(AActor rootActor)
 	{
 		base.CreateThenShowByActor(rootActor, null);
 	}
 
-	// Token: 0x0600BD44 RID: 48452 RVA: 0x002ACB94 File Offset: 0x002AAD94
+	// Token: 0x06009147 RID: 37191 RVA: 0x002B79D8 File Offset: 0x002B5BD8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -29,13 +29,13 @@ public class PlayerHeadItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BD45 RID: 48453 RVA: 0x002ACBDC File Offset: 0x002AADDC
+	// Token: 0x06009148 RID: 37192 RVA: 0x002B7A20 File Offset: 0x002B5C20
 	public void RefreshByPlayerId(int playerId, bool useCard = false)
 	{
 		this.RefreshPlayerTexture(playerId, useCard);
 	}
 
-	// Token: 0x0600BD46 RID: 48454 RVA: 0x002ACBE8 File Offset: 0x002AADE8
+	// Token: 0x06009149 RID: 37193 RVA: 0x002B7A2C File Offset: 0x002B5C2C
 	private void RefreshPlayerTexture(int playerId, bool useCard = false)
 	{
 		PlayerInfoModel instance = PlayerInfoModel.Instance;
@@ -74,13 +74,13 @@ public class PlayerHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BD47 RID: 48455 RVA: 0x002ACC8B File Offset: 0x002AAE8B
+	// Token: 0x0600914A RID: 37194 RVA: 0x002B7ACF File Offset: 0x002B5CCF
 	public void RefreshByHeadPhotoId(int headPhotoId)
 	{
 		this.RefreshByRoleId(headPhotoId);
 	}
 
-	// Token: 0x0600BD48 RID: 48456 RVA: 0x002ACC94 File Offset: 0x002AAE94
+	// Token: 0x0600914B RID: 37195 RVA: 0x002B7AD8 File Offset: 0x002B5CD8
 	public void RefreshByRoleId(int headPhotoId)
 	{
 		UUITexture roleTexture = base.GetTexture(0);
@@ -101,7 +101,7 @@ public class PlayerHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BD49 RID: 48457 RVA: 0x002ACD18 File Offset: 0x002AAF18
+	// Token: 0x0600914C RID: 37196 RVA: 0x002B7B5C File Offset: 0x002B5D5C
 	public void RefreshByRoleIdUseCard(int headPhotoId)
 	{
 		UUITexture roleTexture = base.GetTexture(0);
@@ -119,16 +119,16 @@ public class PlayerHeadItem : UiPanelBase
 		base.SetRoleIcon(card, roleTexture, headPhotoId, null, null);
 	}
 
-	// Token: 0x0600BD4A RID: 48458 RVA: 0x002ACDA9 File Offset: 0x002AAFA9
+	// Token: 0x0600914D RID: 37197 RVA: 0x002B7BED File Offset: 0x002B5DED
 	public void SetIsGray(bool isGray)
 	{
 		base.GetTexture(0).SetIsGray(isGray);
 	}
 
-	// Token: 0x02007EAC RID: 32428
+	// Token: 0x0200703B RID: 28731
 	private class EChildType
 	{
-		// Token: 0x040296A5 RID: 169637
+		// Token: 0x040249E2 RID: 149986
 		public const int RoleTexture = 0;
 	}
 }

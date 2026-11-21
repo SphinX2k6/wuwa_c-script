@@ -7,16 +7,16 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x0200242F RID: 9263
+// Token: 0x02001914 RID: 6420
 public class PhantomManagerConfigRemovePopItem : UiViewBase
 {
-	// Token: 0x06012938 RID: 76088 RVA: 0x0049467B File Offset: 0x0049287B
+	// Token: 0x0600FDEE RID: 65006 RVA: 0x004A1C47 File Offset: 0x0049FE47
 	[NullableContext(1)]
 	public PhantomManagerConfigRemovePopItem(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06012939 RID: 76089 RVA: 0x00494690 File Offset: 0x00492890
+	// Token: 0x0600FDEF RID: 65007 RVA: 0x004A1C5C File Offset: 0x0049FE5C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -59,7 +59,7 @@ public class PhantomManagerConfigRemovePopItem : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601293A RID: 76090 RVA: 0x004948AC File Offset: 0x00492AAC
+	// Token: 0x0600FDF0 RID: 65008 RVA: 0x004A1E78 File Offset: 0x004A0078
 	protected override void OnStart()
 	{
 		this.CurData = ((this.OpenParam as IPhantomManagerApplySettingDetailInfo) ?? new PhantomManagerApplySettingDetailInfo());
@@ -84,7 +84,7 @@ public class PhantomManagerConfigRemovePopItem : UiViewBase
 		this.OnClickedToggleR(EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x0601293B RID: 76091 RVA: 0x004949B4 File Offset: 0x00492BB4
+	// Token: 0x0600FDF1 RID: 65009 RVA: 0x004A1F80 File Offset: 0x004A0180
 	private void OnClickedToggleL(EToggleState state)
 	{
 		if (this.CurrentSelected == PhantomManagerConfigRemovePopItem.EPhantomRemovePopState.Left)
@@ -107,7 +107,7 @@ public class PhantomManagerConfigRemovePopItem : UiViewBase
 		item.SetUIActive(this.CurData.DiscardList.Count == 0);
 	}
 
-	// Token: 0x0601293C RID: 76092 RVA: 0x00494A58 File Offset: 0x00492C58
+	// Token: 0x0600FDF2 RID: 65010 RVA: 0x004A2024 File Offset: 0x004A0224
 	private void OnClickedToggleR(EToggleState state)
 	{
 		if (this.CurrentSelected == PhantomManagerConfigRemovePopItem.EPhantomRemovePopState.Right)
@@ -130,13 +130,13 @@ public class PhantomManagerConfigRemovePopItem : UiViewBase
 		item.SetUIActive(this.CurData.LockList.Count == 0);
 	}
 
-	// Token: 0x0601293D RID: 76093 RVA: 0x00494AFB File Offset: 0x00492CFB
+	// Token: 0x0600FDF3 RID: 65011 RVA: 0x004A20C7 File Offset: 0x004A02C7
 	private void OnClickedClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601293E RID: 76094 RVA: 0x00494B04 File Offset: 0x00492D04
+	// Token: 0x0600FDF4 RID: 65012 RVA: 0x004A20D0 File Offset: 0x004A02D0
 	private void OnClickedConfirm()
 	{
 		PhantomBattleModel.Instance.GetPhantomConfigData().DoApplyOpera(this.CurData).ContinueWith(delegate(bool value)
@@ -149,17 +149,17 @@ public class PhantomManagerConfigRemovePopItem : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x0601293F RID: 76095 RVA: 0x00494B31 File Offset: 0x00492D31
+	// Token: 0x0600FDF5 RID: 65013 RVA: 0x004A20FD File Offset: 0x004A02FD
 	[NullableContext(1)]
 	private PhantomConfigRemoveItemGrid OnCreateItem()
 	{
 		return new PhantomConfigRemoveItemGrid();
 	}
 
-	// Token: 0x04008BFF RID: 35839
+	// Token: 0x04008D46 RID: 36166
 	private PhantomManagerConfigRemovePopItem.EPhantomRemovePopState CurrentSelected;
 
-	// Token: 0x04008C00 RID: 35840
+	// Token: 0x04008D47 RID: 36167
 	[Nullable(new byte[]
 	{
 		2,
@@ -168,43 +168,43 @@ public class PhantomManagerConfigRemovePopItem : UiViewBase
 	})]
 	private LoopScrollView<PhantomConfigRemoveItemGrid, PhantomItemData> LoopScrollView;
 
-	// Token: 0x04008C01 RID: 35841
+	// Token: 0x04008D48 RID: 36168
 	[Nullable(1)]
 	private IPhantomManagerApplySettingDetailInfo CurData = new PhantomManagerApplySettingDetailInfo();
 
-	// Token: 0x020089B1 RID: 35249
+	// Token: 0x02007B38 RID: 31544
 	private enum EDefine
 	{
-		// Token: 0x0402CBD9 RID: 183257
+		// Token: 0x04027EEF RID: 163567
 		ToggleTopLeft,
-		// Token: 0x0402CBDA RID: 183258
+		// Token: 0x04027EF0 RID: 163568
 		TxtToggleLeft,
-		// Token: 0x0402CBDB RID: 183259
+		// Token: 0x04027EF1 RID: 163569
 		ToggleTopRight,
-		// Token: 0x0402CBDC RID: 183260
+		// Token: 0x04027EF2 RID: 163570
 		TxtToggleRight,
-		// Token: 0x0402CBDD RID: 183261
+		// Token: 0x04027EF3 RID: 163571
 		TxtEchoNumber,
-		// Token: 0x0402CBDE RID: 183262
+		// Token: 0x04027EF4 RID: 163572
 		ScrollEcho,
-		// Token: 0x0402CBDF RID: 183263
+		// Token: 0x04027EF5 RID: 163573
 		ItemBase,
-		// Token: 0x0402CBE0 RID: 183264
+		// Token: 0x04027EF6 RID: 163574
 		BtnLeft,
-		// Token: 0x0402CBE1 RID: 183265
+		// Token: 0x04027EF7 RID: 163575
 		BtnRight,
-		// Token: 0x0402CBE2 RID: 183266
+		// Token: 0x04027EF8 RID: 163576
 		PanelEmpty
 	}
 
-	// Token: 0x020089B2 RID: 35250
+	// Token: 0x02007B39 RID: 31545
 	private enum EPhantomRemovePopState
 	{
-		// Token: 0x0402CBE4 RID: 183268
+		// Token: 0x04027EFA RID: 163578
 		Default,
-		// Token: 0x0402CBE5 RID: 183269
+		// Token: 0x04027EFB RID: 163579
 		Left = -1,
-		// Token: 0x0402CBE6 RID: 183270
+		// Token: 0x04027EFC RID: 163580
 		Right = 1
 	}
 }

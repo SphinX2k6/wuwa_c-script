@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x020051A0 RID: 20896
+	// Token: 0x02004170 RID: 16752
 	[NullableContext(1)]
 	public interface IDeckBuilderQuicklyBuildViewData
 	{
-		// Token: 0x1700819D RID: 33181
-		// (get) Token: 0x06035773 RID: 218995
-		// (set) Token: 0x06035774 RID: 218996
+		// Token: 0x1700555D RID: 21853
+		// (get) Token: 0x0602A66E RID: 173678
+		// (set) Token: 0x0602A66F RID: 173679
 		int ActivityId { get; set; }
 
-		// Token: 0x1700819E RID: 33182
-		// (get) Token: 0x06035775 RID: 218997
-		// (set) Token: 0x06035776 RID: 218998
+		// Token: 0x1700555E RID: 21854
+		// (get) Token: 0x0602A670 RID: 173680
+		// (set) Token: 0x0602A671 RID: 173681
 		Action<DeckInfo> ConfirmCallback { get; set; }
 	}
 }

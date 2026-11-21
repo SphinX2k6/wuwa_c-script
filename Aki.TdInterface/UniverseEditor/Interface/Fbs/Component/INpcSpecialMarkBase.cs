@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200564D RID: 22093
+	// Token: 0x02005BEB RID: 23531
 	public struct INpcSpecialMarkBase : IFlatbufferObject
 	{
-		// Token: 0x1700A3A7 RID: 41895
-		// (get) Token: 0x06024BA5 RID: 150437 RVA: 0x0051179C File Offset: 0x0050F99C
+		// Token: 0x1700AC31 RID: 44081
+		// (get) Token: 0x06026DC4 RID: 159172 RVA: 0x005520C0 File Offset: 0x005502C0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024BA6 RID: 150438 RVA: 0x005117A9 File Offset: 0x0050F9A9
+		// Token: 0x06026DC5 RID: 159173 RVA: 0x005520CD File Offset: 0x005502CD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06024BA7 RID: 150439 RVA: 0x005117B0 File Offset: 0x0050F9B0
+		// Token: 0x06026DC6 RID: 159174 RVA: 0x005520D4 File Offset: 0x005502D4
 		public static INpcSpecialMarkBase GetRootAsINpcSpecialMarkBase(ByteBuffer _bb)
 		{
 			return INpcSpecialMarkBase.GetRootAsINpcSpecialMarkBase(_bb, default(INpcSpecialMarkBase));
 		}
 
-		// Token: 0x06024BA8 RID: 150440 RVA: 0x005117CC File Offset: 0x0050F9CC
+		// Token: 0x06026DC7 RID: 159175 RVA: 0x005520F0 File Offset: 0x005502F0
 		public static INpcSpecialMarkBase GetRootAsINpcSpecialMarkBase(ByteBuffer _bb, INpcSpecialMarkBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06024BA9 RID: 150441 RVA: 0x005117E9 File Offset: 0x0050F9E9
+		// Token: 0x06026DC8 RID: 159176 RVA: 0x0055210D File Offset: 0x0055030D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06024BAA RID: 150442 RVA: 0x005117F8 File Offset: 0x0050F9F8
+		// Token: 0x06026DC9 RID: 159177 RVA: 0x0055211C File Offset: 0x0055031C
 		public INpcSpecialMarkBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A3A8 RID: 41896
-		// (get) Token: 0x06024BAB RID: 150443 RVA: 0x00511808 File Offset: 0x0050FA08
+		// Token: 0x1700AC32 RID: 44082
+		// (get) Token: 0x06026DCA RID: 159178 RVA: 0x0055212C File Offset: 0x0055032C
 		public ESpecialNpcMarkType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024BAC RID: 150444 RVA: 0x00511844 File Offset: 0x0050FA44
+		// Token: 0x06026DCB RID: 159179 RVA: 0x00552168 File Offset: 0x00550368
 		public static Offset<INpcSpecialMarkBase> CreateINpcSpecialMarkBase(FlatBufferBuilder builder, ESpecialNpcMarkType Type = ESpecialNpcMarkType.TrafficLight)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcSpecialMarkBase.EndINpcSpecialMarkBase(builder);
 		}
 
-		// Token: 0x06024BAD RID: 150445 RVA: 0x0051185A File Offset: 0x0050FA5A
+		// Token: 0x06026DCC RID: 159180 RVA: 0x0055217E File Offset: 0x0055037E
 		public static void StartINpcSpecialMarkBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06024BAE RID: 150446 RVA: 0x00511863 File Offset: 0x0050FA63
+		// Token: 0x06026DCD RID: 159181 RVA: 0x00552187 File Offset: 0x00550387
 		public static void AddType(FlatBufferBuilder builder, ESpecialNpcMarkType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06024BAF RID: 150447 RVA: 0x0051186E File Offset: 0x0050FA6E
+		// Token: 0x06026DCE RID: 159182 RVA: 0x00552192 File Offset: 0x00550392
 		public static Offset<INpcSpecialMarkBase> EndINpcSpecialMarkBase(FlatBufferBuilder builder)
 		{
 			return new Offset<INpcSpecialMarkBase>(builder.EndTable());
 		}
 
-		// Token: 0x06024BB0 RID: 150448 RVA: 0x0051187C File Offset: 0x0050FA7C
+		// Token: 0x06026DCF RID: 159183 RVA: 0x005521A0 File Offset: 0x005503A0
 		public INpcSpecialMarkBaseT UnPack()
 		{
 			INpcSpecialMarkBaseT npcSpecialMarkBaseT = new INpcSpecialMarkBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return npcSpecialMarkBaseT;
 		}
 
-		// Token: 0x06024BB1 RID: 150449 RVA: 0x00511897 File Offset: 0x0050FA97
+		// Token: 0x06026DD0 RID: 159184 RVA: 0x005521BB File Offset: 0x005503BB
 		public void UnPackTo(INpcSpecialMarkBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06024BB2 RID: 150450 RVA: 0x005118A8 File Offset: 0x0050FAA8
+		// Token: 0x06026DD1 RID: 159185 RVA: 0x005521CC File Offset: 0x005503CC
 		public static Offset<INpcSpecialMarkBase> Pack(FlatBufferBuilder builder, INpcSpecialMarkBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcSpecialMarkBase.CreateINpcSpecialMarkBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400E9FA RID: 59898
+		// Token: 0x0400F65F RID: 63071
 		private Table __p;
 	}
 }

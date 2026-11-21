@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x0200491E RID: 18718
+	// Token: 0x02004DD1 RID: 19921
 	public enum EAiStateType : byte
 	{
-		// Token: 0x0400CFA9 RID: 53161
+		// Token: 0x0400DA58 RID: 55896
 		AnimalStandUp,
-		// Token: 0x0400CFAA RID: 53162
+		// Token: 0x0400DA59 RID: 55897
 		AnimalSitDown,
-		// Token: 0x0400CFAB RID: 53163
+		// Token: 0x0400DA5A RID: 55898
 		AnimalRandomAction
 	}
 }

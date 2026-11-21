@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020011A6 RID: 4518
+	// Token: 0x020011E0 RID: 4576
 	[NetMessage(EMessageId.SeamlessTeleportRequest)]
 	public sealed class SeamlessTeleportRequest : IMessage<SeamlessTeleportRequest>, IMessage, IEquatable<SeamlessTeleportRequest>, IDeepCloneable<SeamlessTeleportRequest>, IBufferMessage
 	{
-		// Token: 0x0601812E RID: 98606 RVA: 0x0037EEF7 File Offset: 0x0037D0F7
+		// Token: 0x060186CF RID: 100047 RVA: 0x0038E23B File Offset: 0x0038C43B
 		[NullableContext(1)]
 		public static SeamlessTeleportRequest Create()
 		{
 			return new SeamlessTeleportRequest();
 		}
 
-		// Token: 0x170050E9 RID: 20713
-		// (get) Token: 0x0601812F RID: 98607 RVA: 0x0037EEFE File Offset: 0x0037D0FE
+		// Token: 0x17005255 RID: 21077
+		// (get) Token: 0x060186D0 RID: 100048 RVA: 0x0038E242 File Offset: 0x0038C442
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050EA RID: 20714
-		// (get) Token: 0x06018130 RID: 98608 RVA: 0x0037EF01 File Offset: 0x0037D101
+		// Token: 0x17005256 RID: 21078
+		// (get) Token: 0x060186D1 RID: 100049 RVA: 0x0038E245 File Offset: 0x0038C445
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018131 RID: 98609 RVA: 0x0037EF08 File Offset: 0x0037D108
+		// Token: 0x060186D2 RID: 100050 RVA: 0x0038E24C File Offset: 0x0038C44C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SeamlessTeleportRequest()
 		{
 		}
 
-		// Token: 0x06018132 RID: 98610 RVA: 0x0037EF10 File Offset: 0x0037D110
+		// Token: 0x060186D3 RID: 100051 RVA: 0x0038E254 File Offset: 0x0038C454
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SeamlessTeleportRequest(SeamlessTeleportRequest other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06018133 RID: 98611 RVA: 0x0037EFA0 File Offset: 0x0037D1A0
+		// Token: 0x060186D4 RID: 100052 RVA: 0x0038E2E4 File Offset: 0x0038C4E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SeamlessTeleportRequest Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new SeamlessTeleportRequest(this);
 		}
 
-		// Token: 0x170050EB RID: 20715
-		// (get) Token: 0x06018134 RID: 98612 RVA: 0x0037EFA8 File Offset: 0x0037D1A8
-		// (set) Token: 0x06018135 RID: 98613 RVA: 0x0037EFB0 File Offset: 0x0037D1B0
+		// Token: 0x17005257 RID: 21079
+		// (get) Token: 0x060186D5 RID: 100053 RVA: 0x0038E2EC File Offset: 0x0038C4EC
+		// (set) Token: 0x060186D6 RID: 100054 RVA: 0x0038E2F4 File Offset: 0x0038C4F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SeamlessTeleportType TeleportType
@@ -87,9 +87,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050EC RID: 20716
-		// (get) Token: 0x06018136 RID: 98614 RVA: 0x0037EFB9 File Offset: 0x0037D1B9
-		// (set) Token: 0x06018137 RID: 98615 RVA: 0x0037EFC1 File Offset: 0x0037D1C1
+		// Token: 0x17005258 RID: 21080
+		// (get) Token: 0x060186D7 RID: 100055 RVA: 0x0038E2FD File Offset: 0x0038C4FD
+		// (set) Token: 0x060186D8 RID: 100056 RVA: 0x0038E305 File Offset: 0x0038C505
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SeamlessTeleportArgs TeleportArgs
@@ -104,9 +104,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050ED RID: 20717
-		// (get) Token: 0x06018138 RID: 98616 RVA: 0x0037EFCA File Offset: 0x0037D1CA
-		// (set) Token: 0x06018139 RID: 98617 RVA: 0x0037EFD2 File Offset: 0x0037D1D2
+		// Token: 0x17005259 RID: 21081
+		// (get) Token: 0x060186D9 RID: 100057 RVA: 0x0038E30E File Offset: 0x0038C50E
+		// (set) Token: 0x060186DA RID: 100058 RVA: 0x0038E316 File Offset: 0x0038C516
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Vector Location
@@ -121,9 +121,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050EE RID: 20718
-		// (get) Token: 0x0601813A RID: 98618 RVA: 0x0037EFDB File Offset: 0x0037D1DB
-		// (set) Token: 0x0601813B RID: 98619 RVA: 0x0037EFE3 File Offset: 0x0037D1E3
+		// Token: 0x1700525A RID: 21082
+		// (get) Token: 0x060186DB RID: 100059 RVA: 0x0038E31F File Offset: 0x0038C51F
+		// (set) Token: 0x060186DC RID: 100060 RVA: 0x0038E327 File Offset: 0x0038C527
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Rotator Rotation
@@ -138,9 +138,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050EF RID: 20719
-		// (get) Token: 0x0601813C RID: 98620 RVA: 0x0037EFEC File Offset: 0x0037D1EC
-		// (set) Token: 0x0601813D RID: 98621 RVA: 0x0037EFF4 File Offset: 0x0037D1F4
+		// Token: 0x1700525B RID: 21083
+		// (get) Token: 0x060186DD RID: 100061 RVA: 0x0038E330 File Offset: 0x0038C530
+		// (set) Token: 0x060186DE RID: 100062 RVA: 0x0038E338 File Offset: 0x0038C538
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long VehicleId
@@ -155,7 +155,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601813E RID: 98622 RVA: 0x0037EFFD File Offset: 0x0037D1FD
+		// Token: 0x060186DF RID: 100063 RVA: 0x0038E341 File Offset: 0x0038C541
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SeamlessTeleportRequest);
 		}
 
-		// Token: 0x0601813F RID: 98623 RVA: 0x0037F00C File Offset: 0x0037D20C
+		// Token: 0x060186E0 RID: 100064 RVA: 0x0038E350 File Offset: 0x0038C550
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SeamlessTeleportRequest other)
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.TeleportType == other.TeleportType && object.Equals(this.TeleportArgs, other.TeleportArgs) && object.Equals(this.Location, other.Location) && object.Equals(this.Rotation, other.Rotation) && this.VehicleId == other.VehicleId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06018140 RID: 98624 RVA: 0x0037F094 File Offset: 0x0037D294
+		// Token: 0x060186E1 RID: 100065 RVA: 0x0038E3D8 File Offset: 0x0038C5D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -204,7 +204,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018141 RID: 98625 RVA: 0x0037F134 File Offset: 0x0037D334
+		// Token: 0x060186E2 RID: 100066 RVA: 0x0038E478 File Offset: 0x0038C678
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -212,7 +212,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06018142 RID: 98626 RVA: 0x0037F141 File Offset: 0x0037D341
+		// Token: 0x060186E3 RID: 100067 RVA: 0x0038E485 File Offset: 0x0038C685
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -220,29 +220,29 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06018143 RID: 98627 RVA: 0x0037F14C File Offset: 0x0037D34C
+		// Token: 0x060186E4 RID: 100068 RVA: 0x0038E490 File Offset: 0x0038C690
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.TeleportType != SeamlessTeleportType.ClientTriggerAction)
+			if (this.rotation_ != null)
 			{
-				output.WriteRawTag(40);
-				output.WriteEnum((int)this.TeleportType);
+				output.WriteRawTag(34);
+				output.WriteMessage(this.Rotation);
 			}
 			if (this.teleportArgs_ != null)
 			{
 				output.WriteRawTag(58);
 				output.WriteMessage(this.TeleportArgs);
 			}
-			if (this.rotation_ != null)
+			if (this.TeleportType != SeamlessTeleportType.ClientTriggerAction)
 			{
-				output.WriteRawTag(74);
-				output.WriteMessage(this.Rotation);
+				output.WriteRawTag(80);
+				output.WriteEnum((int)this.TeleportType);
 			}
 			if (this.VehicleId != 0L)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(112);
 				output.WriteInt64(this.VehicleId);
 			}
 			if (this.location_ != null)
@@ -256,7 +256,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018144 RID: 98628 RVA: 0x0037F1FC File Offset: 0x0037D3FC
+		// Token: 0x060186E5 RID: 100069 RVA: 0x0038E540 File Offset: 0x0038C740
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -289,7 +289,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018145 RID: 98629 RVA: 0x0037F29C File Offset: 0x0037D49C
+		// Token: 0x060186E6 RID: 100070 RVA: 0x0038E5E0 File Offset: 0x0038C7E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SeamlessTeleportRequest other)
@@ -333,7 +333,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06018146 RID: 98630 RVA: 0x0037F370 File Offset: 0x0037D570
+		// Token: 0x060186E7 RID: 100071 RVA: 0x0038E6B4 File Offset: 0x0038C8B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -341,7 +341,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06018147 RID: 98631 RVA: 0x0037F37C File Offset: 0x0037D57C
+		// Token: 0x060186E8 RID: 100072 RVA: 0x0038E6C0 File Offset: 0x0038C8C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -355,9 +355,13 @@ namespace Aki.Protocol
 				}
 				if (num <= 58U)
 				{
-					if (num == 40U)
+					if (num == 34U)
 					{
-						this.TeleportType = (SeamlessTeleportType)input.ReadEnum();
+						if (this.rotation_ == null)
+						{
+							this.Rotation = new Rotator();
+						}
+						input.ReadMessage(this.Rotation);
 						continue;
 					}
 					if (num == 58U)
@@ -372,16 +376,12 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 74U)
+					if (num == 80U)
 					{
-						if (this.rotation_ == null)
-						{
-							this.Rotation = new Rotator();
-						}
-						input.ReadMessage(this.Rotation);
+						this.TeleportType = (SeamlessTeleportType)input.ReadEnum();
 						continue;
 					}
-					if (num == 80U)
+					if (num == 112U)
 					{
 						this.VehicleId = input.ReadInt64();
 						continue;
@@ -400,37 +400,37 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008E7F RID: 36479
+		// Token: 0x04009112 RID: 37138
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008E80 RID: 36480
-		public const int TeleportTypeFieldNumber = 5;
+		// Token: 0x04009113 RID: 37139
+		public const int TeleportTypeFieldNumber = 10;
 
-		// Token: 0x04008E81 RID: 36481
+		// Token: 0x04009114 RID: 37140
 		private SeamlessTeleportType teleportType_;
 
-		// Token: 0x04008E82 RID: 36482
+		// Token: 0x04009115 RID: 37141
 		public const int TeleportArgsFieldNumber = 7;
 
-		// Token: 0x04008E83 RID: 36483
+		// Token: 0x04009116 RID: 37142
 		private SeamlessTeleportArgs teleportArgs_;
 
-		// Token: 0x04008E84 RID: 36484
+		// Token: 0x04009117 RID: 37143
 		public const int LocationFieldNumber = 15;
 
-		// Token: 0x04008E85 RID: 36485
+		// Token: 0x04009118 RID: 37144
 		private Vector location_;
 
-		// Token: 0x04008E86 RID: 36486
-		public const int RotationFieldNumber = 9;
+		// Token: 0x04009119 RID: 37145
+		public const int RotationFieldNumber = 4;
 
-		// Token: 0x04008E87 RID: 36487
+		// Token: 0x0400911A RID: 37146
 		private Rotator rotation_;
 
-		// Token: 0x04008E88 RID: 36488
-		public const int VehicleIdFieldNumber = 10;
+		// Token: 0x0400911B RID: 37147
+		public const int VehicleIdFieldNumber = 14;
 
-		// Token: 0x04008E89 RID: 36489
+		// Token: 0x0400911C RID: 37148
 		private long vehicleId_;
 	}
 }

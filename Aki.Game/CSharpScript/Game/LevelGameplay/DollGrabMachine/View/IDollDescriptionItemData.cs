@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EF0 RID: 28400
+	// Token: 0x02006070 RID: 24688
 	[NullableContext(1)]
 	public interface IDollDescriptionItemData
 	{
-		// Token: 0x17009AF1 RID: 39665
-		// (get) Token: 0x06045288 RID: 283272
-		// (set) Token: 0x06045289 RID: 283273
+		// Token: 0x17007030 RID: 28720
+		// (get) Token: 0x0603B431 RID: 242737
+		// (set) Token: 0x0603B432 RID: 242738
 		string IconPath { get; set; }
 
-		// Token: 0x17009AF2 RID: 39666
-		// (get) Token: 0x0604528A RID: 283274
-		// (set) Token: 0x0604528B RID: 283275
+		// Token: 0x17007031 RID: 28721
+		// (get) Token: 0x0603B433 RID: 242739
+		// (set) Token: 0x0603B434 RID: 242740
 		string TextTitle { get; set; }
 
-		// Token: 0x17009AF3 RID: 39667
-		// (get) Token: 0x0604528C RID: 283276
-		// (set) Token: 0x0604528D RID: 283277
+		// Token: 0x17007032 RID: 28722
+		// (get) Token: 0x0603B435 RID: 242741
+		// (set) Token: 0x0603B436 RID: 242742
 		string TextContent { get; set; }
 	}
 }

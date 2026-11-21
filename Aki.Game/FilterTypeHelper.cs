@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020034B8 RID: 13496
+// Token: 0x02002A2C RID: 10796
 [NullableContext(1)]
 [Nullable(0)]
 public static class FilterTypeHelper
 {
-	// Token: 0x0601D645 RID: 120389 RVA: 0x008331BC File Offset: 0x008313BC
+	// Token: 0x0601B344 RID: 111428 RVA: 0x0085A5DC File Offset: 0x008587DC
 	[return: Nullable(2)]
 	public unsafe static T TryCatchWrapper<[Nullable(2)] T>([Nullable(new byte[]
 	{
@@ -33,7 +33,7 @@ public static class FilterTypeHelper
 		return default(T);
 	}
 
-	// Token: 0x0400E7A0 RID: 59296
+	// Token: 0x0400EC54 RID: 60500
 	[StaticVariableRuleIgnore]
 	public static readonly EFilterType[] FilterTypePriority = new EFilterType[]
 	{
@@ -42,7 +42,7 @@ public static class FilterTypeHelper
 		EFilterType.Black
 	};
 
-	// Token: 0x0400E7A1 RID: 59297
+	// Token: 0x0400EC55 RID: 60501
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<EFilterType, bool> FilterResult = new Dictionary<EFilterType, bool>
 	{

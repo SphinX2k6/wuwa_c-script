@@ -3,14 +3,14 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001959 RID: 6489
+	// Token: 0x02001AE4 RID: 6884
 	public class ICustomShowUi_SetValue
 	{
-		// Token: 0x040056C8 RID: 22216
+		// Token: 0x04005B1B RID: 23323
 		[Nullable(2)]
 		public ICustomScreenTextSetting TextSetting;
 
-		// Token: 0x040056C9 RID: 22217
+		// Token: 0x04005B1C RID: 23324
 		public bool? IsHideCircle;
 	}
 }

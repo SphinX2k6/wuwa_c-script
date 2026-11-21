@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BFA RID: 7162
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DE9 RID: 7657
 	public class IMonsterNpcInteractTriggerHook : IMonsterNpcInteractConfigBase
 	{
-		// Token: 0x0600995D RID: 39261 RVA: 0x00160F14 File Offset: 0x0015F114
+		// Token: 0x0600A28D RID: 41613 RVA: 0x00173E60 File Offset: 0x00172060
 		private IMonsterNpcInteractTriggerHook_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600995E RID: 39262 RVA: 0x00160F4C File Offset: 0x0015F14C
+		// Token: 0x0600A28E RID: 41614 RVA: 0x00173E98 File Offset: 0x00172098
 		public static IMonsterNpcInteractTriggerHook Create([Nullable(2)] IMonsterNpcInteractTriggerHook instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600995F RID: 39263 RVA: 0x00160F5F File Offset: 0x0015F15F
+		// Token: 0x0600A28F RID: 41615 RVA: 0x00173EAB File Offset: 0x001720AB
 		public static IMonsterNpcInteractTriggerHook CreateFromSetValue([Nullable(2)] IMonsterNpcInteractTriggerHook_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009960 RID: 39264 RVA: 0x00160F72 File Offset: 0x0015F172
+		// Token: 0x0600A290 RID: 41616 RVA: 0x00173EBE File Offset: 0x001720BE
 		public new IMonsterNpcInteractTriggerHook_SetValue ToSetValue()
 		{
 			return new IMonsterNpcInteractTriggerHook_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700300E RID: 12302
-		// (get) Token: 0x06009961 RID: 39265 RVA: 0x00160F91 File Offset: 0x0015F191
-		// (set) Token: 0x06009962 RID: 39266 RVA: 0x00160FBC File Offset: 0x0015F1BC
+		// Token: 0x17003277 RID: 12919
+		// (get) Token: 0x0600A291 RID: 41617 RVA: 0x00173EDD File Offset: 0x001720DD
+		// (set) Token: 0x0600A292 RID: 41618 RVA: 0x00173F08 File Offset: 0x00172108
 		public override EMonsterNpcInteractType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700300F RID: 12303
-		// (get) Token: 0x06009963 RID: 39267 RVA: 0x00160FCA File Offset: 0x0015F1CA
-		// (set) Token: 0x06009964 RID: 39268 RVA: 0x00160FF5 File Offset: 0x0015F1F5
+		// Token: 0x17003278 RID: 12920
+		// (get) Token: 0x0600A293 RID: 41619 RVA: 0x00173F16 File Offset: 0x00172116
+		// (set) Token: 0x0600A294 RID: 41620 RVA: 0x00173F41 File Offset: 0x00172141
 		public virtual int HookEntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D61 RID: 23905
+		// Token: 0x04006288 RID: 25224
 		[Nullable(2)]
 		protected new IMonsterNpcInteractTriggerHook FbInstance;
 
-		// Token: 0x04005D62 RID: 23906
+		// Token: 0x04006289 RID: 25225
 		[Nullable(2)]
 		protected new IMonsterNpcInteractTriggerHook_SetValue PocoInterface;
 	}

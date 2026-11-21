@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x0200533C RID: 21308
+	// Token: 0x0200430C RID: 17164
 	public class RogueResTrialTabItem : GridProxyAbstract<ERogueResTrialType>
 	{
-		// Token: 0x0603673A RID: 223034 RVA: 0x00CE47C4 File Offset: 0x00CE29C4
+		// Token: 0x0602B636 RID: 177718 RVA: 0x00C32194 File Offset: 0x00C30394
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,13 +25,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x0603673B RID: 223035 RVA: 0x00CE4876 File Offset: 0x00CE2A76
+		// Token: 0x0602B637 RID: 177719 RVA: 0x00C32246 File Offset: 0x00C30446
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayout<RogueResTrialRoleItem, int>(base.GetGridLayout(2), new Func<RogueResTrialRoleItem>(this.InitRoleGrid), null, false, true);
 		}
 
-		// Token: 0x0603673C RID: 223036 RVA: 0x00CE489C File Offset: 0x00CE2A9C
+		// Token: 0x0602B638 RID: 177720 RVA: 0x00C3226C File Offset: 0x00C3046C
 		public override void Refresh(ERogueResTrialType data, bool isSelected, int gridIndex)
 		{
 			List<int> trailRole = ActivityPermanentRogueModel.Instance.GetTrailRole(this.SeasonId, data);
@@ -86,17 +86,17 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), <RogueResTrialPopView>FDADFB2A9BC14ABAED9384706B037305D07C2C04A563EB30B9F601FAE7EC4A498__TabTextMap.GetText(data), Array.Empty<object>());
 		}
 
-		// Token: 0x0603673D RID: 223037 RVA: 0x00CE4A2C File Offset: 0x00CE2C2C
+		// Token: 0x0602B639 RID: 177721 RVA: 0x00C323FC File Offset: 0x00C305FC
 		[NullableContext(1)]
 		private RogueResTrialRoleItem InitRoleGrid()
 		{
 			return new RogueResTrialRoleItem();
 		}
 
-		// Token: 0x0401CCCE RID: 117966
+		// Token: 0x04017704 RID: 96004
 		public int SeasonId;
 
-		// Token: 0x0401CCCF RID: 117967
+		// Token: 0x04017705 RID: 96005
 		[Nullable(new byte[]
 		{
 			2,

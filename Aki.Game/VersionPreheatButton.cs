@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001576 RID: 5494
+// Token: 0x02000A2E RID: 2606
 public class VersionPreheatButton : UiPanelBase
 {
-	// Token: 0x06009D1F RID: 40223 RVA: 0x002206A4 File Offset: 0x0021E8A4
+	// Token: 0x060070FD RID: 28925 RVA: 0x0022A454 File Offset: 0x00228654
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -31,7 +31,7 @@ public class VersionPreheatButton : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009D20 RID: 40224 RVA: 0x0022076B File Offset: 0x0021E96B
+	// Token: 0x060070FE RID: 28926 RVA: 0x0022A51B File Offset: 0x0022871B
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(2);
@@ -42,7 +42,7 @@ public class VersionPreheatButton : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "Text_RoleQuestGoto_Text", Array.Empty<object>());
 	}
 
-	// Token: 0x06009D21 RID: 40225 RVA: 0x0022079B File Offset: 0x0021E99B
+	// Token: 0x060070FF RID: 28927 RVA: 0x0022A54B File Offset: 0x0022874B
 	private void HandleOnClick()
 	{
 		if (this.ClickRewardFunc != null && this.ClickRewardPassData != null)
@@ -51,23 +51,23 @@ public class VersionPreheatButton : UiPanelBase
 		}
 	}
 
-	// Token: 0x040044F2 RID: 17650
+	// Token: 0x04004598 RID: 17816
 	[Nullable(1)]
 	public TVersionPreheatQuestDetailClickFunc ClickRewardFunc;
 
-	// Token: 0x040044F3 RID: 17651
+	// Token: 0x04004599 RID: 17817
 	public int? ClickRewardPassData;
 
-	// Token: 0x02007BA7 RID: 31655
+	// Token: 0x02006D32 RID: 27954
 	private class EButtonComponent
 	{
-		// Token: 0x04028A74 RID: 166516
+		// Token: 0x04023DAF RID: 146863
 		public const int RootButton = 0;
 
-		// Token: 0x04028A75 RID: 166517
+		// Token: 0x04023DB0 RID: 146864
 		public const int ConfirmText = 1;
 
-		// Token: 0x04028A76 RID: 166518
+		// Token: 0x04023DB1 RID: 146865
 		public const int RedDotItem = 2;
 	}
 }

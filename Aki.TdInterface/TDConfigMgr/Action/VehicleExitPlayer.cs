@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002271 RID: 8817
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024DE RID: 9438
 	public class VehicleExitPlayer : ActionParams
 	{
-		// Token: 0x0600C170 RID: 49520 RVA: 0x001BBE98 File Offset: 0x001BA098
+		// Token: 0x0600CD36 RID: 52534 RVA: 0x001D361C File Offset: 0x001D181C
 		private VehicleExitPlayer_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C171 RID: 49521 RVA: 0x001BBED0 File Offset: 0x001BA0D0
+		// Token: 0x0600CD37 RID: 52535 RVA: 0x001D3654 File Offset: 0x001D1854
 		public static VehicleExitPlayer Create([Nullable(2)] VehicleExitPlayer instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C172 RID: 49522 RVA: 0x001BBEE3 File Offset: 0x001BA0E3
+		// Token: 0x0600CD38 RID: 52536 RVA: 0x001D3667 File Offset: 0x001D1867
 		public static VehicleExitPlayer CreateFromSetValue([Nullable(2)] VehicleExitPlayer_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C173 RID: 49523 RVA: 0x001BBEF6 File Offset: 0x001BA0F6
+		// Token: 0x0600CD39 RID: 52537 RVA: 0x001D367A File Offset: 0x001D187A
 		public VehicleExitPlayer_SetValue ToSetValue()
 		{
 			return new VehicleExitPlayer_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A7C RID: 14972
-		// (get) Token: 0x0600C174 RID: 49524 RVA: 0x001BBF18 File Offset: 0x001BA118
-		// (set) Token: 0x0600C175 RID: 49525 RVA: 0x001BBF52 File Offset: 0x001BA152
+		// Token: 0x17003D73 RID: 15731
+		// (get) Token: 0x0600CD3A RID: 52538 RVA: 0x001D369C File Offset: 0x001D189C
+		// (set) Token: 0x0600CD3B RID: 52539 RVA: 0x001D36D6 File Offset: 0x001D18D6
 		public virtual bool? DestroyVehicle
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A7D RID: 14973
-		// (get) Token: 0x0600C176 RID: 49526 RVA: 0x001BBF60 File Offset: 0x001BA160
-		// (set) Token: 0x0600C177 RID: 49527 RVA: 0x001BBF87 File Offset: 0x001BA187
+		// Token: 0x17003D74 RID: 15732
+		// (get) Token: 0x0600CD3C RID: 52540 RVA: 0x001D36E4 File Offset: 0x001D18E4
+		// (set) Token: 0x0600CD3D RID: 52541 RVA: 0x001D370B File Offset: 0x001D190B
 		public virtual IExitVehicleType ExitType
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400733F RID: 29503
+		// Token: 0x0400798C RID: 31116
 		[Nullable(2)]
 		protected new VehicleExitPlayer FbInstance;
 
-		// Token: 0x04007340 RID: 29504
+		// Token: 0x0400798D RID: 31117
 		[Nullable(2)]
 		protected VehicleExitPlayer_SetValue PocoInterface;
 	}

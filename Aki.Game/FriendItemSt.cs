@@ -1,15 +1,15 @@
 ﻿using System;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001C2E RID: 7214
+// Token: 0x020010ED RID: 4333
 public class FriendItemSt
 {
-	// Token: 0x040062DB RID: 25307
+	// Token: 0x040063AD RID: 25517
 	public int Id;
 
-	// Token: 0x040062DC RID: 25308
+	// Token: 0x040063AE RID: 25518
 	public EFriendItemOperation OperationType;
 
-	// Token: 0x040062DD RID: 25309
+	// Token: 0x040063AF RID: 25519
 	public EUiViewName? ShowingView;
 }

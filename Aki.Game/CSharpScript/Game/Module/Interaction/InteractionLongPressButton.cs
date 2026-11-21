@@ -6,33 +6,33 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005856 RID: 22614
+	// Token: 0x0200482E RID: 18478
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class InteractionLongPressButton : UiPanelBase
 	{
-		// Token: 0x060397F2 RID: 235506
+		// Token: 0x0602E70F RID: 190223
 		protected abstract void ResolveComponents();
 
-		// Token: 0x060397F3 RID: 235507
+		// Token: 0x0602E710 RID: 190224
 		protected abstract void SetProgress(float progress);
 
-		// Token: 0x060397F4 RID: 235508 RVA: 0x00DA6CD3 File Offset: 0x00DA4ED3
+		// Token: 0x0602E711 RID: 190225 RVA: 0x00CF59FB File Offset: 0x00CF3BFB
 		protected virtual void RefreshKeyItem(string actionName)
 		{
 		}
 
-		// Token: 0x060397F5 RID: 235509 RVA: 0x00DA6CD5 File Offset: 0x00DA4ED5
+		// Token: 0x0602E712 RID: 190226 RVA: 0x00CF59FD File Offset: 0x00CF3BFD
 		protected virtual void HideKeyItem()
 		{
 		}
 
-		// Token: 0x060397F6 RID: 235510 RVA: 0x00DA6CD7 File Offset: 0x00DA4ED7
+		// Token: 0x0602E713 RID: 190227 RVA: 0x00CF59FF File Offset: 0x00CF3BFF
 		protected virtual void PlayEnterSequence()
 		{
 		}
 
-		// Token: 0x060397F7 RID: 235511 RVA: 0x00DA6CD9 File Offset: 0x00DA4ED9
+		// Token: 0x0602E714 RID: 190228 RVA: 0x00CF5A01 File Offset: 0x00CF3C01
 		protected override void OnStart()
 		{
 			this.ResolveComponents();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SetActive(false);
 		}
 
-		// Token: 0x060397F8 RID: 235512 RVA: 0x00DA6CF4 File Offset: 0x00DA4EF4
+		// Token: 0x0602E715 RID: 190229 RVA: 0x00CF5A1C File Offset: 0x00CF3C1C
 		protected override void OnBeforeDestroy()
 		{
 			UUIButtonComponent pressButton = this.PressButton;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.UnbindEntity();
 		}
 
-		// Token: 0x060397F9 RID: 235513 RVA: 0x00DA6D58 File Offset: 0x00DA4F58
+		// Token: 0x0602E716 RID: 190230 RVA: 0x00CF5A80 File Offset: 0x00CF3C80
 		public void BindEntity(Entity entity, string actionName = null)
 		{
 			if (this.BoundEntity == entity)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.PlayEnterSequence();
 		}
 
-		// Token: 0x060397FA RID: 235514 RVA: 0x00DA6DCC File Offset: 0x00DA4FCC
+		// Token: 0x0602E717 RID: 190231 RVA: 0x00CF5AF4 File Offset: 0x00CF3CF4
 		public void UnbindEntity()
 		{
 			if (this.BoundEntity != null)
@@ -98,13 +98,13 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SetActive(false);
 		}
 
-		// Token: 0x060397FB RID: 235515 RVA: 0x00DA6E3A File Offset: 0x00DA503A
+		// Token: 0x0602E718 RID: 190232 RVA: 0x00CF5B62 File Offset: 0x00CF3D62
 		public void BindPress(Action<bool> callback)
 		{
 			this.OnPressCallback = callback;
 		}
 
-		// Token: 0x060397FC RID: 235516 RVA: 0x00DA6E44 File Offset: 0x00DA5044
+		// Token: 0x0602E719 RID: 190233 RVA: 0x00CF5B6C File Offset: 0x00CF3D6C
 		protected void SetupPressButton(UUIButtonComponent button)
 		{
 			this.PressButton = button;
@@ -131,13 +131,13 @@ namespace CSharpScript.Game.Module.Interaction
 			pressButton4.OnPointExitCallBack.Bind(new Action(this.OnButtonPointUp));
 		}
 
-		// Token: 0x060397FD RID: 235517 RVA: 0x00DA6ECF File Offset: 0x00DA50CF
+		// Token: 0x0602E71A RID: 190234 RVA: 0x00CF5BF7 File Offset: 0x00CF3DF7
 		private void OnInteractionLongPressProgressChange(float progress)
 		{
 			this.SetProgress(progress);
 		}
 
-		// Token: 0x060397FE RID: 235518 RVA: 0x00DA6ED8 File Offset: 0x00DA50D8
+		// Token: 0x0602E71B RID: 190235 RVA: 0x00CF5C00 File Offset: 0x00CF3E00
 		private void OnButtonPointDown()
 		{
 			this.SetProgress(0f);
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Interaction
 			onPressCallback(true);
 		}
 
-		// Token: 0x060397FF RID: 235519 RVA: 0x00DA6EF6 File Offset: 0x00DA50F6
+		// Token: 0x0602E71C RID: 190236 RVA: 0x00CF5C1E File Offset: 0x00CF3E1E
 		private void OnButtonPointUp()
 		{
 			this.SetProgress(0f);
@@ -161,13 +161,13 @@ namespace CSharpScript.Game.Module.Interaction
 			onPressCallback(false);
 		}
 
-		// Token: 0x0401E100 RID: 123136
+		// Token: 0x04018B9D RID: 101277
 		private UUIButtonComponent PressButton;
 
-		// Token: 0x0401E101 RID: 123137
+		// Token: 0x04018B9E RID: 101278
 		private Action<bool> OnPressCallback;
 
-		// Token: 0x0401E102 RID: 123138
+		// Token: 0x04018B9F RID: 101279
 		private Entity BoundEntity;
 	}
 }

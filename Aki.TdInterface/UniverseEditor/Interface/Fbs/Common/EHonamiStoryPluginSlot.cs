@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005CFC RID: 23804
+	// Token: 0x02006330 RID: 25392
 	public enum EHonamiStoryPluginSlot : byte
 	{
-		// Token: 0x0400F654 RID: 63060
+		// Token: 0x040103A3 RID: 66467
 		None,
-		// Token: 0x0400F655 RID: 63061
+		// Token: 0x040103A4 RID: 66468
 		SlotOne,
-		// Token: 0x0400F656 RID: 63062
+		// Token: 0x040103A5 RID: 66469
 		SlotTwo,
-		// Token: 0x0400F657 RID: 63063
+		// Token: 0x040103A6 RID: 66470
 		SlotThree,
-		// Token: 0x0400F658 RID: 63064
+		// Token: 0x040103A7 RID: 66471
 		SlotFour,
-		// Token: 0x0400F659 RID: 63065
+		// Token: 0x040103A8 RID: 66472
 		SlotFive,
-		// Token: 0x0400F65A RID: 63066
+		// Token: 0x040103A9 RID: 66473
 		SlotSix
 	}
 }

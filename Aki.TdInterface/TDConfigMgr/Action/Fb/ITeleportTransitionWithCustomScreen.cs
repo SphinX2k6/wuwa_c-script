@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026A1 RID: 9889
+	// Token: 0x02002964 RID: 10596
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITeleportTransitionWithCustomScreen : ITeleportTransitionType
 	{
-		// Token: 0x0600DD4C RID: 56652 RVA: 0x0020E0CC File Offset: 0x0020C2CC
-		[NullableContext(1)]
+		// Token: 0x0600EB23 RID: 60195 RVA: 0x0022A86C File Offset: 0x00228A6C
+		[NullableContext(0)]
 		public static ITeleportTransitionWithCustomScreen Create(ITeleportTransitionWithCustomScreen? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041CC RID: 16844
-		// (get) Token: 0x0600DD4D RID: 56653 RVA: 0x0020E0EB File Offset: 0x0020C2EB
+		// Token: 0x17004509 RID: 17673
+		// (get) Token: 0x0600EB24 RID: 60196 RVA: 0x0022A88B File Offset: 0x00228A8B
 		public override ETeleportTransitionType Type
 		{
 			get
@@ -33,12 +33,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041CD RID: 16845
-		// (get) Token: 0x0600DD4E RID: 56654 RVA: 0x0020E0F8 File Offset: 0x0020C2F8
-		[Nullable(1)]
+		// Token: 0x1700450A RID: 17674
+		// (get) Token: 0x0600EB25 RID: 60197 RVA: 0x0022A898 File Offset: 0x00228A98
+		[Nullable(0)]
 		public virtual ICustomScreenTypeBase ScreenType
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ScreenTypeInited)
@@ -51,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041CE RID: 16846
-		// (get) Token: 0x0600DD4F RID: 56655 RVA: 0x0020E127 File Offset: 0x0020C327
+		// Token: 0x1700450B RID: 17675
+		// (get) Token: 0x0600EB26 RID: 60198 RVA: 0x0022A8C7 File Offset: 0x00228AC7
 		public virtual IFadeBackgroundFadeInEffect FadeInEffect
 		{
 			get
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041CF RID: 16847
-		// (get) Token: 0x0600DD50 RID: 56656 RVA: 0x0020E15B File Offset: 0x0020C35B
+		// Token: 0x1700450C RID: 17676
+		// (get) Token: 0x0600EB27 RID: 60199 RVA: 0x0022A8FB File Offset: 0x00228AFB
 		public virtual IFadeBackgroundFadeOutEffect FadeOutEffect
 		{
 			get
@@ -83,8 +83,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041D0 RID: 16848
-		// (get) Token: 0x0600DD51 RID: 56657 RVA: 0x0020E190 File Offset: 0x0020C390
+		// Token: 0x1700450D RID: 17677
+		// (get) Token: 0x0600EB28 RID: 60200 RVA: 0x0022A930 File Offset: 0x00228B30
 		public virtual float? KeepTime
 		{
 			get
@@ -97,8 +97,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041D1 RID: 16849
-		// (get) Token: 0x0600DD52 RID: 56658 RVA: 0x0020E1C6 File Offset: 0x0020C3C6
+		// Token: 0x1700450E RID: 17678
+		// (get) Token: 0x0600EB29 RID: 60201 RVA: 0x0022A966 File Offset: 0x00228B66
 		public virtual ICustomShowUi CustomShowUi
 		{
 			get
@@ -113,8 +113,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041D2 RID: 16850
-		// (get) Token: 0x0600DD53 RID: 56659 RVA: 0x0020E1FA File Offset: 0x0020C3FA
+		// Token: 0x1700450F RID: 17679
+		// (get) Token: 0x0600EB2A RID: 60202 RVA: 0x0022A99A File Offset: 0x00228B9A
 		public virtual string StartAkEvent
 		{
 			get
@@ -123,32 +123,32 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AE7 RID: 31463
+		// Token: 0x04008184 RID: 33156
 		private ITeleportTransitionWithCustomScreen Instance;
 
-		// Token: 0x04007AE8 RID: 31464
-		[Nullable(1)]
+		// Token: 0x04008185 RID: 33157
+		[Nullable(0)]
 		private ICustomScreenTypeBase _ScreenTypeCache;
 
-		// Token: 0x04007AE9 RID: 31465
+		// Token: 0x04008186 RID: 33158
 		private bool _ScreenTypeInited;
 
-		// Token: 0x04007AEA RID: 31466
+		// Token: 0x04008187 RID: 33159
 		private IFadeBackgroundFadeInEffect _FadeInEffectCache;
 
-		// Token: 0x04007AEB RID: 31467
+		// Token: 0x04008188 RID: 33160
 		private bool _FadeInEffectInited;
 
-		// Token: 0x04007AEC RID: 31468
+		// Token: 0x04008189 RID: 33161
 		private IFadeBackgroundFadeOutEffect _FadeOutEffectCache;
 
-		// Token: 0x04007AED RID: 31469
+		// Token: 0x0400818A RID: 33162
 		private bool _FadeOutEffectInited;
 
-		// Token: 0x04007AEE RID: 31470
+		// Token: 0x0400818B RID: 33163
 		private ICustomShowUi _CustomShowUiCache;
 
-		// Token: 0x04007AEF RID: 31471
+		// Token: 0x0400818C RID: 33164
 		private bool _CustomShowUiInited;
 	}
 }

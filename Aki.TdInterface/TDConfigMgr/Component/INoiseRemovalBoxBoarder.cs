@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200054E RID: 1358
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005B5 RID: 1461
 	public class INoiseRemovalBoxBoarder : INoiseRemovalBoarderBase
 	{
-		// Token: 0x06001BCA RID: 7114 RVA: 0x00050100 File Offset: 0x0004E300
+		// Token: 0x06001DC6 RID: 7622 RVA: 0x00054EBC File Offset: 0x000530BC
 		private INoiseRemovalBoxBoarder_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001BCB RID: 7115 RVA: 0x00050138 File Offset: 0x0004E338
+		// Token: 0x06001DC7 RID: 7623 RVA: 0x00054EF4 File Offset: 0x000530F4
 		public static INoiseRemovalBoxBoarder Create([Nullable(2)] INoiseRemovalBoxBoarder instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BCC RID: 7116 RVA: 0x0005014B File Offset: 0x0004E34B
+		// Token: 0x06001DC8 RID: 7624 RVA: 0x00054F07 File Offset: 0x00053107
 		public static INoiseRemovalBoxBoarder CreateFromSetValue([Nullable(2)] INoiseRemovalBoxBoarder_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BCD RID: 7117 RVA: 0x0005015E File Offset: 0x0004E35E
+		// Token: 0x06001DC9 RID: 7625 RVA: 0x00054F1A File Offset: 0x0005311A
 		public new INoiseRemovalBoxBoarder_SetValue ToSetValue()
 		{
 			return new INoiseRemovalBoxBoarder_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700074F RID: 1871
-		// (get) Token: 0x06001BCE RID: 7118 RVA: 0x00050189 File Offset: 0x0004E389
-		// (set) Token: 0x06001BCF RID: 7119 RVA: 0x000501B4 File Offset: 0x0004E3B4
+		// Token: 0x170007D2 RID: 2002
+		// (get) Token: 0x06001DCA RID: 7626 RVA: 0x00054F45 File Offset: 0x00053145
+		// (set) Token: 0x06001DCB RID: 7627 RVA: 0x00054F70 File Offset: 0x00053170
 		public override ENoiseRemovalBoarderShape Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000750 RID: 1872
-		// (get) Token: 0x06001BD0 RID: 7120 RVA: 0x000501C4 File Offset: 0x0004E3C4
-		// (set) Token: 0x06001BD1 RID: 7121 RVA: 0x00050225 File Offset: 0x0004E425
+		// Token: 0x170007D3 RID: 2003
+		// (get) Token: 0x06001DCC RID: 7628 RVA: 0x00054F80 File Offset: 0x00053180
+		// (set) Token: 0x06001DCD RID: 7629 RVA: 0x00054FE1 File Offset: 0x000531E1
 		public virtual VectorInfo BoxExtendPositive
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000751 RID: 1873
-		// (get) Token: 0x06001BD2 RID: 7122 RVA: 0x0005023C File Offset: 0x0004E43C
-		// (set) Token: 0x06001BD3 RID: 7123 RVA: 0x0005029D File Offset: 0x0004E49D
+		// Token: 0x170007D4 RID: 2004
+		// (get) Token: 0x06001DCE RID: 7630 RVA: 0x00054FF8 File Offset: 0x000531F8
+		// (set) Token: 0x06001DCF RID: 7631 RVA: 0x00055059 File Offset: 0x00053259
 		public virtual VectorInfo BoxExtendNegative
 		{
 			get
@@ -145,24 +143,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040013F1 RID: 5105
+		// Token: 0x0400155B RID: 5467
 		[Nullable(2)]
 		protected new INoiseRemovalBoxBoarder FbInstance;
 
-		// Token: 0x040013F2 RID: 5106
+		// Token: 0x0400155C RID: 5468
 		[Nullable(2)]
 		protected new INoiseRemovalBoxBoarder_SetValue PocoInterface;
 
-		// Token: 0x040013F3 RID: 5107
+		// Token: 0x0400155D RID: 5469
 		private VectorInfo _BoxExtendPositiveCache;
 
-		// Token: 0x040013F4 RID: 5108
+		// Token: 0x0400155E RID: 5470
 		private bool _BoxExtendPositiveInited;
 
-		// Token: 0x040013F5 RID: 5109
+		// Token: 0x0400155F RID: 5471
 		private VectorInfo _BoxExtendNegativeCache;
 
-		// Token: 0x040013F6 RID: 5110
+		// Token: 0x04001560 RID: 5472
 		private bool _BoxExtendNegativeInited;
 	}
 }

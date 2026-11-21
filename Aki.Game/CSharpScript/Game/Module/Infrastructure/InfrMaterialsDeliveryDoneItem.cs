@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x0200591C RID: 22812
+	// Token: 0x020048F5 RID: 18677
 	public class InfrMaterialsDeliveryDoneItem : InfrMaterialsDeliveryLockItemBase
 	{
-		// Token: 0x06039EEB RID: 237291 RVA: 0x00DC479C File Offset: 0x00DC299C
+		// Token: 0x0602EE0E RID: 192014 RVA: 0x00D13A90 File Offset: 0x00D11C90
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -22,16 +22,16 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0200BBA4 RID: 48036
+		// Token: 0x0200A5B4 RID: 42420
 		private class EChildType
 		{
-			// Token: 0x04038A67 RID: 232039
+			// Token: 0x0403344D RID: 209997
 			public const int LockSprite = 0;
 
-			// Token: 0x04038A68 RID: 232040
+			// Token: 0x0403344E RID: 209998
 			public const int LockDescriptionText = 1;
 
-			// Token: 0x04038A69 RID: 232041
+			// Token: 0x0403344F RID: 209999
 			public const int FunctionButton = 2;
 		}
 	}

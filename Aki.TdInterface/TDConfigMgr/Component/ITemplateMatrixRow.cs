@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000760 RID: 1888
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000801 RID: 2049
 	public class ITemplateMatrixRow
 	{
-		// Token: 0x060028D5 RID: 10453 RVA: 0x0006C0DC File Offset: 0x0006A2DC
+		// Token: 0x06002BF9 RID: 11257 RVA: 0x00073284 File Offset: 0x00071484
 		private ITemplateMatrixRow_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060028D6 RID: 10454 RVA: 0x0006C114 File Offset: 0x0006A314
+		// Token: 0x06002BFA RID: 11258 RVA: 0x000732BC File Offset: 0x000714BC
 		public static ITemplateMatrixRow Create([Nullable(2)] ITemplateMatrixRow instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060028D7 RID: 10455 RVA: 0x0006C127 File Offset: 0x0006A327
+		// Token: 0x06002BFB RID: 11259 RVA: 0x000732CF File Offset: 0x000714CF
 		public static ITemplateMatrixRow CreateFromSetValue([Nullable(2)] ITemplateMatrixRow_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060028D8 RID: 10456 RVA: 0x0006C13A File Offset: 0x0006A33A
+		// Token: 0x06002BFC RID: 11260 RVA: 0x000732E2 File Offset: 0x000714E2
 		public ITemplateMatrixRow_SetValue ToSetValue()
 		{
 			return new ITemplateMatrixRow_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000ABB RID: 2747
-		// (get) Token: 0x060028D9 RID: 10457 RVA: 0x0006C150 File Offset: 0x0006A350
-		// (set) Token: 0x060028DA RID: 10458 RVA: 0x0006C1E3 File Offset: 0x0006A3E3
+		// Token: 0x17000B7B RID: 2939
+		// (get) Token: 0x06002BFD RID: 11261 RVA: 0x000732F8 File Offset: 0x000714F8
+		// (set) Token: 0x06002BFE RID: 11262 RVA: 0x0007338B File Offset: 0x0007158B
 		public virtual List<ISpawnTemplateEntityConfig> Items
 		{
 			get
@@ -98,18 +96,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001B76 RID: 7030
+		// Token: 0x04001D7B RID: 7547
 		[Nullable(2)]
 		protected ITemplateMatrixRow FbInstance;
 
-		// Token: 0x04001B77 RID: 7031
+		// Token: 0x04001D7C RID: 7548
 		[Nullable(2)]
 		protected ITemplateMatrixRow_SetValue PocoInterface;
 
-		// Token: 0x04001B78 RID: 7032
+		// Token: 0x04001D7D RID: 7549
 		private List<ISpawnTemplateEntityConfig> _ItemsCache;
 
-		// Token: 0x04001B79 RID: 7033
+		// Token: 0x04001D7E RID: 7550
 		private bool _ItemsInited;
 	}
 }

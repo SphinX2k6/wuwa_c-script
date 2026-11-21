@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200131E RID: 4894
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200146E RID: 5230
 	public class IQuestScheduleChildQuestCompletedCount : IQuestScheduleType
 	{
-		// Token: 0x06007059 RID: 28761 RVA: 0x0010F647 File Offset: 0x0010D847
+		// Token: 0x060076F9 RID: 30457 RVA: 0x0011DBB3 File Offset: 0x0011BDB3
 		public static IQuestScheduleChildQuestCompletedCount Create(IQuestScheduleChildQuestCompletedCount? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023F0 RID: 9200
-		// (get) Token: 0x0600705A RID: 28762 RVA: 0x0010F666 File Offset: 0x0010D866
+		// Token: 0x170025BF RID: 9663
+		// (get) Token: 0x060076FA RID: 30458 RVA: 0x0011DBD2 File Offset: 0x0011BDD2
 		public override EQuestScheduleType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023F1 RID: 9201
-		// (get) Token: 0x0600705B RID: 28763 RVA: 0x0010F674 File Offset: 0x0010D874
+		// Token: 0x170025C0 RID: 9664
+		// (get) Token: 0x060076FB RID: 30459 RVA: 0x0011DBE0 File Offset: 0x0011BDE0
 		public virtual List<int> AssociatedChildQuestIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040CE RID: 16590
+		// Token: 0x0400444A RID: 17482
 		private IQuestScheduleChildQuestCompletedCount Instance;
 
-		// Token: 0x040040CF RID: 16591
+		// Token: 0x0400444B RID: 17483
 		private List<int> _AssociatedChildQuestIdsCache;
 
-		// Token: 0x040040D0 RID: 16592
+		// Token: 0x0400444C RID: 17484
 		private bool _AssociatedChildQuestIdsInited;
 	}
 }

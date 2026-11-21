@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 {
-	// Token: 0x02005761 RID: 22369
+	// Token: 0x02004738 RID: 18232
 	public class KurotatoLevelUnlockRolePanel : UiPanelBase
 	{
-		// Token: 0x06038D52 RID: 232786 RVA: 0x00D803B8 File Offset: 0x00D7E5B8
+		// Token: 0x0602DC62 RID: 187490 RVA: 0x00CCEE60 File Offset: 0x00CCD060
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038D53 RID: 232787 RVA: 0x00D804C4 File Offset: 0x00D7E6C4
+		// Token: 0x0602DC63 RID: 187491 RVA: 0x00CCEF6C File Offset: 0x00CCD16C
 		public void Refresh(int roleId)
 		{
 			this.RoleId = roleId;
@@ -62,33 +62,33 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			texture.SetUIActive(!kurotatoRoleData.IsUnLock);
 		}
 
-		// Token: 0x06038D54 RID: 232788 RVA: 0x00D8058A File Offset: 0x00D7E78A
+		// Token: 0x0602DC64 RID: 187492 RVA: 0x00CCF032 File Offset: 0x00CCD232
 		private void OnBtnRoleClick()
 		{
 			this.OnRoleBtnClick(this.RoleId);
 		}
 
-		// Token: 0x0401DCF6 RID: 122102
+		// Token: 0x0401878C RID: 100236
 		private int RoleId;
 
-		// Token: 0x0401DCF7 RID: 122103
+		// Token: 0x0401878D RID: 100237
 		[Nullable(1)]
 		public Action<int> OnRoleBtnClick = delegate(int _)
 		{
 		};
 
-		// Token: 0x0200B95B RID: 47451
+		// Token: 0x0200A377 RID: 41847
 		private enum EComponent
 		{
-			// Token: 0x040380D6 RID: 229590
+			// Token: 0x04032AD8 RID: 207576
 			BtnRole,
-			// Token: 0x040380D7 RID: 229591
+			// Token: 0x04032AD9 RID: 207577
 			TextureRole,
-			// Token: 0x040380D8 RID: 229592
+			// Token: 0x04032ADA RID: 207578
 			TextName,
-			// Token: 0x040380D9 RID: 229593
+			// Token: 0x04032ADB RID: 207579
 			SpriteFinish,
-			// Token: 0x040380DA RID: 229594
+			// Token: 0x04032ADC RID: 207580
 			TextureLock
 		}
 	}

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x02005898 RID: 22680
+	// Token: 0x02004870 RID: 18544
 	public class InstanceDungeonCostItemData
 	{
-		// Token: 0x17008A92 RID: 35474
-		// (get) Token: 0x06039B56 RID: 236374 RVA: 0x00DB6B77 File Offset: 0x00DB4D77
-		// (set) Token: 0x06039B57 RID: 236375 RVA: 0x00DB6B7F File Offset: 0x00DB4D7F
+		// Token: 0x17005E5E RID: 24158
+		// (get) Token: 0x0602EA79 RID: 191097 RVA: 0x00D05A8F File Offset: 0x00D03C8F
+		// (set) Token: 0x0602EA7A RID: 191098 RVA: 0x00D05A97 File Offset: 0x00D03C97
 		public TItem Item { get; set; }
 	}
 }

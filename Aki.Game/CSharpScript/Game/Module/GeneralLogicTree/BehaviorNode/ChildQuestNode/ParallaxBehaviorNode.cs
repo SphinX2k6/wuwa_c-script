@@ -5,17 +5,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059D9 RID: 23001
+	// Token: 0x020049B2 RID: 18866
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ParallaxBehaviorNode : TickBehaviorNode
 	{
-		// Token: 0x0603A4D1 RID: 238801 RVA: 0x00DDD2B6 File Offset: 0x00DDB4B6
+		// Token: 0x0602F3F9 RID: 193529 RVA: 0x00D2CAD6 File Offset: 0x00D2ACD6
 		public ParallaxBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A4D2 RID: 238802 RVA: 0x00DDD2D8 File Offset: 0x00DDB4D8
+		// Token: 0x0602F3FA RID: 193530 RVA: 0x00D2CAF8 File Offset: 0x00D2ACF8
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
 			if (base.OnCreate(nodeConfig))
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return false;
 		}
 
-		// Token: 0x0603A4D3 RID: 238803 RVA: 0x00DDD3D0 File Offset: 0x00DDB5D0
+		// Token: 0x0602F3FB RID: 193531 RVA: 0x00D2CBF0 File Offset: 0x00D2ADF0
 		protected override void OnStart(ENodeStatusUpdateReason reason)
 		{
 			this.IsFinish = false;
@@ -57,14 +57,14 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			base.OnStart(reason);
 		}
 
-		// Token: 0x0603A4D4 RID: 238804 RVA: 0x00DDD422 File Offset: 0x00DDB622
+		// Token: 0x0602F3FC RID: 193532 RVA: 0x00D2CC42 File Offset: 0x00D2AE42
 		protected override void OnEnd(bool bFinished)
 		{
 			this.IsFinish = true;
 			base.OnEnd(bFinished);
 		}
 
-		// Token: 0x0603A4D5 RID: 238805 RVA: 0x00DDD434 File Offset: 0x00DDB634
+		// Token: 0x0602F3FD RID: 193533 RVA: 0x00D2CC54 File Offset: 0x00D2AE54
 		protected override void OnTick(float delta)
 		{
 			if (this.IsFinish)
@@ -138,34 +138,34 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0401E64B RID: 124491
+		// Token: 0x040190EA RID: 102634
 		private const string EMISSION_PARAM_NAME = "E_Action_EmissionColor";
 
-		// Token: 0x0401E64C RID: 124492
+		// Token: 0x040190EB RID: 102635
 		[Nullable(2)]
 		private Vector PointA;
 
-		// Token: 0x0401E64D RID: 124493
+		// Token: 0x040190EC RID: 102636
 		[Nullable(2)]
 		private Vector PointB;
 
-		// Token: 0x0401E64E RID: 124494
+		// Token: 0x040190ED RID: 102637
 		private readonly Vector2D ScreenPointA = Vector2D.Create();
 
-		// Token: 0x0401E64F RID: 124495
+		// Token: 0x040190EE RID: 102638
 		private readonly Vector2D ScreenPointB = Vector2D.Create();
 
-		// Token: 0x0401E650 RID: 124496
+		// Token: 0x040190EF RID: 102639
 		[Nullable(2)]
 		private IParallaxAlignQuestCondition Config;
 
-		// Token: 0x0401E651 RID: 124497
+		// Token: 0x040190F0 RID: 102640
 		private float FixingTime;
 
-		// Token: 0x0401E652 RID: 124498
+		// Token: 0x040190F1 RID: 102641
 		private bool IsFinish;
 
-		// Token: 0x0401E653 RID: 124499
+		// Token: 0x040190F2 RID: 102642
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComponent;
 	}

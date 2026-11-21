@@ -21,18 +21,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006988 RID: 27016
+	// Token: 0x02005AE4 RID: 23268
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelGamePlayUtils : IStaticVariableResetter
 	{
-		// Token: 0x060433D6 RID: 275414 RVA: 0x01063880 File Offset: 0x01061A80
+		// Token: 0x0603940E RID: 234510 RVA: 0x01007AE8 File Offset: 0x01005CE8
 		static LevelGamePlayUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelGamePlayUtils.CreateStaticDefaultValue), new Action(LevelGamePlayUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060433D7 RID: 275415 RVA: 0x010638C4 File Offset: 0x01061AC4
+		// Token: 0x0603940F RID: 234511 RVA: 0x01007B2C File Offset: 0x01005D2C
 		public static bool HasScanInfo(CreatureDataComponent creatureData)
 		{
 			BaseInfoComponent baseInfo = creatureData.GetBaseInfo();
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return num2 != null && num2.Value != 0;
 		}
 
-		// Token: 0x060433D8 RID: 275416 RVA: 0x0106391C File Offset: 0x01061B1C
+		// Token: 0x06039410 RID: 234512 RVA: 0x01007B84 File Offset: 0x01005D84
 		[return: Nullable(2)]
 		public unsafe static IScanCompositeResult GetScanCompositeResult(CreatureDataComponent creatureData)
 		{
@@ -105,14 +105,14 @@ namespace CSharpScript.Game.LevelGamePlay
 			return null;
 		}
 
-		// Token: 0x060433D9 RID: 275417 RVA: 0x01063A8C File Offset: 0x01061C8C
+		// Token: 0x06039411 RID: 234513 RVA: 0x01007CF4 File Offset: 0x01005EF4
 		public static void ReleaseOperationRestriction()
 		{
 			global::Log.Instance.Info(ELogModule.LevelEvent, ELogAuthor.ZYL, "关卡事件-设置玩家操作限制: 全部解除", default(ReadOnlySpan<ValueTuple<string, object>>));
 			OperationRestrictUtils.Instance.SetOperationRestrictEnableAll();
 		}
 
-		// Token: 0x060433DA RID: 275418 RVA: 0x01063AC0 File Offset: 0x01061CC0
+		// Token: 0x06039412 RID: 234514 RVA: 0x01007D28 File Offset: 0x01005F28
 		public static void LevelOperationRestriction(string inParam)
 		{
 			SetPlayerOperationRestriction setPlayerOperationRestriction = Json.Parse<SetPlayerOperationRestriction>(inParam, null);
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			OperationRestrictUtils.Instance.SetOperationRestrictByOption(setPlayerOperationRestriction);
 		}
 
-		// Token: 0x060433DB RID: 275419 RVA: 0x01063B1C File Offset: 0x01061D1C
+		// Token: 0x06039413 RID: 234515 RVA: 0x01007D84 File Offset: 0x01005F84
 		public static bool CheckVarRefSame(VarRef v1, VarRef v2)
 		{
 			if (v1.Source == v2.Source)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return result;
 		}
 
-		// Token: 0x060433DC RID: 275420 RVA: 0x01063BD4 File Offset: 0x01061DD4
+		// Token: 0x06039414 RID: 234516 RVA: 0x01007E3C File Offset: 0x0100603C
 		[NullableContext(2)]
 		public static object GetVarValue([Nullable(1)] VarRef variable, GeneralContext context = null)
 		{
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060433DD RID: 275421 RVA: 0x01063CAC File Offset: 0x01061EAC
+		// Token: 0x06039415 RID: 234517 RVA: 0x01007F14 File Offset: 0x01006114
 		[return: Nullable(2)]
 		private static VarDefinePb ParseOtherValue(string vName, int id, ERefType refType)
 		{
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060433DE RID: 275422 RVA: 0x01063D8C File Offset: 0x01061F8C
+		// Token: 0x06039416 RID: 234518 RVA: 0x01007FF4 File Offset: 0x010061F4
 		[return: Nullable(2)]
 		private static VarDefinePb ParseSelfValue(string vName, GeneralContext context)
 		{
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return null;
 		}
 
-		// Token: 0x060433DF RID: 275423 RVA: 0x01063EEC File Offset: 0x010620EC
+		// Token: 0x06039417 RID: 234519 RVA: 0x01008154 File Offset: 0x01006354
 		[return: Nullable(2)]
 		public static VarRef GetVarRefFormAiLevelVar(SAiLevelVar levelVar)
 		{
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return result;
 		}
 
-		// Token: 0x060433E0 RID: 275424 RVA: 0x01063FD0 File Offset: 0x010621D0
+		// Token: 0x06039418 RID: 234520 RVA: 0x01008238 File Offset: 0x01006438
 		[NullableContext(2)]
 		private static object ParseValue(VarDefinePb pValue)
 		{
@@ -453,7 +453,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return null;
 		}
 
-		// Token: 0x060433E1 RID: 275425 RVA: 0x0106414C File Offset: 0x0106234C
+		// Token: 0x06039419 RID: 234521 RVA: 0x010083B4 File Offset: 0x010065B4
 		[NullableContext(2)]
 		public static EntityHandle GetEntityHandle(AActor inTrigger, GeneralContext context = null)
 		{
@@ -502,7 +502,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return result;
 		}
 
-		// Token: 0x060433E2 RID: 275426 RVA: 0x01064264 File Offset: 0x01062464
+		// Token: 0x0603941A RID: 234522 RVA: 0x010084CC File Offset: 0x010066CC
 		public static float? GetCustomTimeDilationByContext(GeneralContext context)
 		{
 			float? result = null;
@@ -557,7 +557,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return result;
 		}
 
-		// Token: 0x060433E3 RID: 275427 RVA: 0x01064390 File Offset: 0x01062590
+		// Token: 0x0603941B RID: 234523 RVA: 0x010085F8 File Offset: 0x010067F8
 		public static List<EntityHandle> GetCheckTargetConditionEntityHandles(ICheckEntityType checkTarget, [Nullable(2)] AActor inTrigger, [Nullable(2)] GeneralContext context = null)
 		{
 			ECheckEntity type = checkTarget.Type;
@@ -579,7 +579,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return LevelGamePlayUtils.GetEntityHandlesByCheckOnlinePlayerConfig((checkTarget as ICheckOnlinePlayer).OnlinePlayerConditionTargetOption, inTrigger, context);
 		}
 
-		// Token: 0x060433E4 RID: 275428 RVA: 0x010643E8 File Offset: 0x010625E8
+		// Token: 0x0603941C RID: 234524 RVA: 0x01008650 File Offset: 0x01006850
 		public static List<EntityHandle> GetEntityHandlesByCheckOnlinePlayerConfig(IOnlinePlayerConditionTarget config, [Nullable(2)] AActor inTrigger, [Nullable(2)] GeneralContext context)
 		{
 			LevelGamePlayUtils.<>c__DisplayClass16_0 CS$<>8__locals1;
@@ -604,7 +604,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return CS$<>8__locals1.result;
 		}
 
-		// Token: 0x060433E5 RID: 275429 RVA: 0x01064450 File Offset: 0x01062650
+		// Token: 0x0603941D RID: 234525 RVA: 0x010086B8 File Offset: 0x010068B8
 		[NullableContext(2)]
 		public static EntityHandle GetEntityHandleByCheckTargetEntityConfig([Nullable(1)] Aki.TDConfigMgr.AutoGenerated.ICondition.ITargetEntityType config, AActor inTrigger, GeneralContext context)
 		{
@@ -653,7 +653,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return entityHandle;
 		}
 
-		// Token: 0x060433E6 RID: 275430 RVA: 0x01064548 File Offset: 0x01062748
+		// Token: 0x0603941E RID: 234526 RVA: 0x010087B0 File Offset: 0x010069B0
 		public static void TogglePlayerControl(bool enable, string reason)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -744,7 +744,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			InputDistributeController.Instance.RefreshInputTag();
 		}
 
-		// Token: 0x060433E7 RID: 275431 RVA: 0x01064790 File Offset: 0x01062990
+		// Token: 0x0603941F RID: 234527 RVA: 0x010089F8 File Offset: 0x01006BF8
 		public static void SetSplinePointEffectParam(int effectHandle, FTransform transform, IEnumerable<IBaseSplinePointType> points)
 		{
 			if (!EffectSystem.Instance.IsValid(effectHandle))
@@ -772,7 +772,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			EffectSystem.Instance.SetEffectParameterNiagara(effectHandle, effectParameterNiagara);
 		}
 
-		// Token: 0x060433E8 RID: 275432 RVA: 0x010648A4 File Offset: 0x01062AA4
+		// Token: 0x06039420 RID: 234528 RVA: 0x01008B0C File Offset: 0x01006D0C
 		public static float GetValueInCurveFloatRange(ICurveFloatRange range, float from)
 		{
 			if ((double)(range.FromMax - range.FromMin) < 1E-08)
@@ -788,7 +788,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return MathUtils.Instance.Lerp(range.ToMin, range.ToMax, num);
 		}
 
-		// Token: 0x060433E9 RID: 275433 RVA: 0x01064928 File Offset: 0x01062B28
+		// Token: 0x06039421 RID: 234529 RVA: 0x01008B90 File Offset: 0x01006D90
 		public static float GetValueInCurveFloatRange(SFloatRangeWithCurve range, float from)
 		{
 			if ((double)(range.FromMax - range.FromMin) < 1E-08)
@@ -804,19 +804,19 @@ namespace CSharpScript.Game.LevelGamePlay
 			return MathUtils.Instance.Lerp(range.ToMin, range.ToMax, num);
 		}
 
-		// Token: 0x060433EA RID: 275434 RVA: 0x010649A9 File Offset: 0x01062BA9
+		// Token: 0x06039422 RID: 234530 RVA: 0x01008C11 File Offset: 0x01006E11
 		public static void CreateStaticDefaultValue()
 		{
 			LevelGamePlayUtils.ScanInfosCache = new Dictionary<int, IScanCompositeResult>();
 		}
 
-		// Token: 0x060433EB RID: 275435 RVA: 0x010649B5 File Offset: 0x01062BB5
+		// Token: 0x06039423 RID: 234531 RVA: 0x01008C1D File Offset: 0x01006E1D
 		public static void ResetStaticDefaultValue()
 		{
 			LevelGamePlayUtils.ScanInfosCache = null;
 		}
 
-		// Token: 0x060433ED RID: 275437 RVA: 0x010649C8 File Offset: 0x01062BC8
+		// Token: 0x06039425 RID: 234533 RVA: 0x01008C30 File Offset: 0x01006E30
 		[CompilerGenerated]
 		internal static void <GetEntityHandlesByCheckOnlinePlayerConfig>g__AddLocalPlayer|16_0(ref LevelGamePlayUtils.<>c__DisplayClass16_0 A_0)
 		{
@@ -834,10 +834,10 @@ namespace CSharpScript.Game.LevelGamePlay
 			A_0.result.Add(getCurrentEntity);
 		}
 
-		// Token: 0x0402305C RID: 143452
+		// Token: 0x0401E246 RID: 123462
 		private static Dictionary<int, IScanCompositeResult> ScanInfosCache;
 
-		// Token: 0x0402305D RID: 143453
+		// Token: 0x0401E247 RID: 123463
 		private static readonly FName vectorArrayName = FNameUtil.GetDynamicFName("VectorArray").Value;
 	}
 }

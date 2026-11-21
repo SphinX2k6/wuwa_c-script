@@ -10,10 +10,10 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BAA RID: 19370
+	// Token: 0x02003B54 RID: 15188
 	public class SkipTaskEnterEntrance : SkipTask
 	{
-		// Token: 0x060322D3 RID: 205523 RVA: 0x00BA8ABC File Offset: 0x00BA6CBC
+		// Token: 0x06027064 RID: 159844 RVA: 0x00AECD30 File Offset: 0x00AEAF30
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

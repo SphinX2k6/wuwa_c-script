@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051E3 RID: 20963
+	// Token: 0x0200574B RID: 22347
 	public struct IExploreSkillInteract : IFlatbufferObject
 	{
-		// Token: 0x17009970 RID: 39280
-		// (get) Token: 0x06022006 RID: 139270 RVA: 0x004B7686 File Offset: 0x004B5886
+		// Token: 0x1700A16C RID: 41324
+		// (get) Token: 0x06023F98 RID: 147352 RVA: 0x004F1FBE File Offset: 0x004F01BE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022007 RID: 139271 RVA: 0x004B7693 File Offset: 0x004B5893
+		// Token: 0x06023F99 RID: 147353 RVA: 0x004F1FCB File Offset: 0x004F01CB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022008 RID: 139272 RVA: 0x004B769C File Offset: 0x004B589C
+		// Token: 0x06023F9A RID: 147354 RVA: 0x004F1FD4 File Offset: 0x004F01D4
 		public static IExploreSkillInteract GetRootAsIExploreSkillInteract(ByteBuffer _bb)
 		{
 			return IExploreSkillInteract.GetRootAsIExploreSkillInteract(_bb, default(IExploreSkillInteract));
 		}
 
-		// Token: 0x06022009 RID: 139273 RVA: 0x004B76B8 File Offset: 0x004B58B8
+		// Token: 0x06023F9B RID: 147355 RVA: 0x004F1FF0 File Offset: 0x004F01F0
 		public static IExploreSkillInteract GetRootAsIExploreSkillInteract(ByteBuffer _bb, IExploreSkillInteract obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602200A RID: 139274 RVA: 0x004B76D5 File Offset: 0x004B58D5
+		// Token: 0x06023F9C RID: 147356 RVA: 0x004F200D File Offset: 0x004F020D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602200B RID: 139275 RVA: 0x004B76E4 File Offset: 0x004B58E4
+		// Token: 0x06023F9D RID: 147357 RVA: 0x004F201C File Offset: 0x004F021C
 		public IExploreSkillInteract __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009971 RID: 39281
-		// (get) Token: 0x0602200C RID: 139276 RVA: 0x004B76F4 File Offset: 0x004B58F4
+		// Token: 0x1700A16D RID: 41325
+		// (get) Token: 0x06023F9E RID: 147358 RVA: 0x004F202C File Offset: 0x004F022C
 		public string ExploreSkillUiResource
 		{
 			get
@@ -65,20 +65,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602200D RID: 139277 RVA: 0x004B772B File Offset: 0x004B592B
+		// Token: 0x06023F9F RID: 147359 RVA: 0x004F2063 File Offset: 0x004F0263
 		public Span<byte> GetExploreSkillUiResourceBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0602200E RID: 139278 RVA: 0x004B773A File Offset: 0x004B593A
+		// Token: 0x06023FA0 RID: 147360 RVA: 0x004F2072 File Offset: 0x004F0272
 		public byte[] GetExploreSkillUiResourceArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x17009972 RID: 39282
-		// (get) Token: 0x0602200F RID: 139279 RVA: 0x004B7748 File Offset: 0x004B5948
+		// Token: 0x1700A16E RID: 41326
+		// (get) Token: 0x06023FA1 RID: 147361 RVA: 0x004F2080 File Offset: 0x004F0280
 		public TExploreSkillInteractOption OptionType
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022010 RID: 139280 RVA: 0x004B7784 File Offset: 0x004B5984
+		// Token: 0x06023FA2 RID: 147362 RVA: 0x004F20BC File Offset: 0x004F02BC
 		public TTable? Option<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -103,92 +103,98 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06022011 RID: 139281 RVA: 0x004B77C8 File Offset: 0x004B59C8
+		// Token: 0x06023FA3 RID: 147363 RVA: 0x004F2100 File Offset: 0x004F0300
 		public IExploreSkillArrowInteractPoint OptionAsIExploreSkillArrowInteractPoint()
 		{
 			return this.Option<IExploreSkillArrowInteractPoint>().Value;
 		}
 
-		// Token: 0x06022012 RID: 139282 RVA: 0x004B77E4 File Offset: 0x004B59E4
+		// Token: 0x06023FA4 RID: 147364 RVA: 0x004F211C File Offset: 0x004F031C
 		public IExploreSkillCustom OptionAsIExploreSkillCustom()
 		{
 			return this.Option<IExploreSkillCustom>().Value;
 		}
 
-		// Token: 0x06022013 RID: 139283 RVA: 0x004B7800 File Offset: 0x004B5A00
+		// Token: 0x06023FA5 RID: 147365 RVA: 0x004F2138 File Offset: 0x004F0338
 		public IExploreSkillEavesdrop OptionAsIExploreSkillEavesdrop()
 		{
 			return this.Option<IExploreSkillEavesdrop>().Value;
 		}
 
-		// Token: 0x06022014 RID: 139284 RVA: 0x004B781C File Offset: 0x004B5A1C
+		// Token: 0x06023FA6 RID: 147366 RVA: 0x004F2154 File Offset: 0x004F0354
+		public IExploreSkillGraffitiPuzzle OptionAsIExploreSkillGraffitiPuzzle()
+		{
+			return this.Option<IExploreSkillGraffitiPuzzle>().Value;
+		}
+
+		// Token: 0x06023FA7 RID: 147367 RVA: 0x004F2170 File Offset: 0x004F0370
 		public IExploreSkillLonelyDollPollutant OptionAsIExploreSkillLonelyDollPollutant()
 		{
 			return this.Option<IExploreSkillLonelyDollPollutant>().Value;
 		}
 
-		// Token: 0x06022015 RID: 139285 RVA: 0x004B7838 File Offset: 0x004B5A38
+		// Token: 0x06023FA8 RID: 147368 RVA: 0x004F218C File Offset: 0x004F038C
 		public IExploreSkillMechascoutDrag OptionAsIExploreSkillMechascoutDrag()
 		{
 			return this.Option<IExploreSkillMechascoutDrag>().Value;
 		}
 
-		// Token: 0x06022016 RID: 139286 RVA: 0x004B7854 File Offset: 0x004B5A54
+		// Token: 0x06023FA9 RID: 147369 RVA: 0x004F21A8 File Offset: 0x004F03A8
 		public IExploreSkillPullGiant OptionAsIExploreSkillPullGiant()
 		{
 			return this.Option<IExploreSkillPullGiant>().Value;
 		}
 
-		// Token: 0x06022017 RID: 139287 RVA: 0x004B7870 File Offset: 0x004B5A70
+		// Token: 0x06023FAA RID: 147370 RVA: 0x004F21C4 File Offset: 0x004F03C4
 		public IExploreSkillPullStatue OptionAsIExploreSkillPullStatue()
 		{
 			return this.Option<IExploreSkillPullStatue>().Value;
 		}
 
-		// Token: 0x06022018 RID: 139288 RVA: 0x004B788C File Offset: 0x004B5A8C
+		// Token: 0x06023FAB RID: 147371 RVA: 0x004F21E0 File Offset: 0x004F03E0
 		public IExploreSkillQuantumDiffusion OptionAsIExploreSkillQuantumDiffusion()
 		{
 			return this.Option<IExploreSkillQuantumDiffusion>().Value;
 		}
 
-		// Token: 0x06022019 RID: 139289 RVA: 0x004B78A8 File Offset: 0x004B5AA8
+		// Token: 0x06023FAC RID: 147372 RVA: 0x004F21FC File Offset: 0x004F03FC
 		public IExploreSkillRagDollCrushingRock OptionAsIExploreSkillRagDollCrushingRock()
 		{
 			return this.Option<IExploreSkillRagDollCrushingRock>().Value;
 		}
 
-		// Token: 0x0602201A RID: 139290 RVA: 0x004B78C4 File Offset: 0x004B5AC4
+		// Token: 0x06023FAD RID: 147373 RVA: 0x004F2218 File Offset: 0x004F0418
 		public IExploreSkillRagDollDestroySolidRock OptionAsIExploreSkillRagDollDestroySolidRock()
 		{
 			return this.Option<IExploreSkillRagDollDestroySolidRock>().Value;
 		}
 
-		// Token: 0x0602201B RID: 139291 RVA: 0x004B78E0 File Offset: 0x004B5AE0
+		// Token: 0x06023FAE RID: 147374 RVA: 0x004F2234 File Offset: 0x004F0434
 		public IExploreSkillStatueInteractPoint OptionAsIExploreSkillStatueInteractPoint()
 		{
 			return this.Option<IExploreSkillStatueInteractPoint>().Value;
 		}
 
-		// Token: 0x0602201C RID: 139292 RVA: 0x004B78FC File Offset: 0x004B5AFC
+		// Token: 0x06023FAF RID: 147375 RVA: 0x004F2250 File Offset: 0x004F0450
 		public IFollowShooterInteractPoint OptionAsIFollowShooterInteractPoint()
 		{
 			return this.Option<IFollowShooterInteractPoint>().Value;
 		}
 
-		// Token: 0x0602201D RID: 139293 RVA: 0x004B7918 File Offset: 0x004B5B18
+		// Token: 0x06023FB0 RID: 147376 RVA: 0x004F226C File Offset: 0x004F046C
 		public IFoxJumpInteractPoint OptionAsIFoxJumpInteractPoint()
 		{
 			return this.Option<IFoxJumpInteractPoint>().Value;
 		}
 
-		// Token: 0x0602201E RID: 139294 RVA: 0x004B7934 File Offset: 0x004B5B34
+		// Token: 0x06023FB1 RID: 147377 RVA: 0x004F2288 File Offset: 0x004F0488
 		public IMonsterSummonInteractPoint OptionAsIMonsterSummonInteractPoint()
 		{
 			return this.Option<IMonsterSummonInteractPoint>().Value;
 		}
 
-		// Token: 0x17009973 RID: 39283
-		// (get) Token: 0x0602201F RID: 139295 RVA: 0x004B7950 File Offset: 0x004B5B50
+		// Token: 0x1700A16F RID: 41327
+		// (get) Token: 0x06023FB2 RID: 147378 RVA: 0x004F22A4 File Offset: 0x004F04A4
 		public int PlayerStateRestritionId
 		{
 			get
@@ -202,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022020 RID: 139296 RVA: 0x004B7990 File Offset: 0x004B5B90
+		// Token: 0x06023FB3 RID: 147379 RVA: 0x004F22E4 File Offset: 0x004F04E4
 		public TMatchRoleOption MatchRoleOptionType(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -213,8 +219,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return (TMatchRoleOption)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x17009974 RID: 39284
-		// (get) Token: 0x06022021 RID: 139297 RVA: 0x004B79D0 File Offset: 0x004B5BD0
+		// Token: 0x1700A170 RID: 41328
+		// (get) Token: 0x06023FB4 RID: 147380 RVA: 0x004F2324 File Offset: 0x004F0524
 		public int MatchRoleOptionTypeLength
 		{
 			get
@@ -228,13 +234,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022022 RID: 139298 RVA: 0x004B79FC File Offset: 0x004B5BFC
+		// Token: 0x06023FB5 RID: 147381 RVA: 0x004F2350 File Offset: 0x004F0550
 		public Span<TMatchRoleOption> GetMatchRoleOptionTypeBytes()
 		{
 			return this.__p.__vector_as_span<TMatchRoleOption>(12, 1);
 		}
 
-		// Token: 0x06022023 RID: 139299 RVA: 0x004B7A0C File Offset: 0x004B5C0C
+		// Token: 0x06023FB6 RID: 147382 RVA: 0x004F2360 File Offset: 0x004F0560
 		public TMatchRoleOption[] GetMatchRoleOptionTypeArray()
 		{
 			int num = this.__p.__offset(12);
@@ -252,7 +258,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return array;
 		}
 
-		// Token: 0x06022024 RID: 139300 RVA: 0x004B7A78 File Offset: 0x004B5C78
+		// Token: 0x06023FB7 RID: 147383 RVA: 0x004F23CC File Offset: 0x004F05CC
 		public TTable? MatchRoleOption<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(14);
@@ -263,8 +269,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x17009975 RID: 39285
-		// (get) Token: 0x06022025 RID: 139301 RVA: 0x004B7AC0 File Offset: 0x004B5CC0
+		// Token: 0x1700A171 RID: 41329
+		// (get) Token: 0x06023FB8 RID: 147384 RVA: 0x004F2414 File Offset: 0x004F0614
 		public int MatchRoleOptionLength
 		{
 			get
@@ -278,8 +284,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009976 RID: 39286
-		// (get) Token: 0x06022026 RID: 139302 RVA: 0x004B7AEC File Offset: 0x004B5CEC
+		// Token: 0x1700A172 RID: 41330
+		// (get) Token: 0x06023FB9 RID: 147385 RVA: 0x004F2440 File Offset: 0x004F0640
 		public IConditionGroup? Condition
 		{
 			get
@@ -293,8 +299,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009977 RID: 39287
-		// (get) Token: 0x06022027 RID: 139303 RVA: 0x004B7B4C File Offset: 0x004B5D4C
+		// Token: 0x1700A173 RID: 41331
+		// (get) Token: 0x06023FBA RID: 147386 RVA: 0x004F24A0 File Offset: 0x004F06A0
 		public TExploreSkillSearchTargetCfg SearchTargetCfgType
 		{
 			get
@@ -308,7 +314,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022028 RID: 139304 RVA: 0x004B7B8C File Offset: 0x004B5D8C
+		// Token: 0x06023FBB RID: 147387 RVA: 0x004F24E0 File Offset: 0x004F06E0
 		public TTable? SearchTargetCfg<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(20);
@@ -319,20 +325,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06022029 RID: 139305 RVA: 0x004B7BD4 File Offset: 0x004B5DD4
+		// Token: 0x06023FBC RID: 147388 RVA: 0x004F2528 File Offset: 0x004F0728
 		public IAngleWeight SearchTargetCfgAsIAngleWeight()
 		{
 			return this.SearchTargetCfg<IAngleWeight>().Value;
 		}
 
-		// Token: 0x0602202A RID: 139306 RVA: 0x004B7BF0 File Offset: 0x004B5DF0
+		// Token: 0x06023FBD RID: 147389 RVA: 0x004F2544 File Offset: 0x004F0744
 		public IEnterScreenWeight SearchTargetCfgAsIEnterScreenWeight()
 		{
 			return this.SearchTargetCfg<IEnterScreenWeight>().Value;
 		}
 
-		// Token: 0x17009978 RID: 39288
-		// (get) Token: 0x0602202B RID: 139307 RVA: 0x004B7C0C File Offset: 0x004B5E0C
+		// Token: 0x1700A174 RID: 41332
+		// (get) Token: 0x06023FBE RID: 147390 RVA: 0x004F2560 File Offset: 0x004F0760
 		public IIgnoresCollisionCfg? IgnoresCollisionCfg
 		{
 			get
@@ -346,7 +352,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602202C RID: 139308 RVA: 0x004B7C6C File Offset: 0x004B5E6C
+		// Token: 0x06023FBF RID: 147391 RVA: 0x004F25C0 File Offset: 0x004F07C0
 		public string SelfInteractBlockDetectionKeys(int j)
 		{
 			int num = this.__p.__offset(24);
@@ -357,8 +363,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17009979 RID: 39289
-		// (get) Token: 0x0602202D RID: 139309 RVA: 0x004B7CA8 File Offset: 0x004B5EA8
+		// Token: 0x1700A175 RID: 41333
+		// (get) Token: 0x06023FC0 RID: 147392 RVA: 0x004F25FC File Offset: 0x004F07FC
 		public int SelfInteractBlockDetectionKeysLength
 		{
 			get
@@ -372,8 +378,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700997A RID: 39290
-		// (get) Token: 0x0602202E RID: 139310 RVA: 0x004B7CD4 File Offset: 0x004B5ED4
+		// Token: 0x1700A176 RID: 41334
+		// (get) Token: 0x06023FC1 RID: 147393 RVA: 0x004F2628 File Offset: 0x004F0828
 		public byte NullMask
 		{
 			get
@@ -387,7 +393,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602202F RID: 139311 RVA: 0x004B7D14 File Offset: 0x004B5F14
+		// Token: 0x06023FC2 RID: 147394 RVA: 0x004F2668 File Offset: 0x004F0868
 		public static Offset<IExploreSkillInteract> CreateIExploreSkillInteract(FlatBufferBuilder builder, StringOffset ExploreSkillUiResourceOffset = default(StringOffset), TExploreSkillInteractOption Option_type = TExploreSkillInteractOption.NONE, int OptionOffset = 0, int PlayerStateRestritionId = 0, VectorOffset MatchRoleOption_typeOffset = default(VectorOffset), VectorOffset MatchRoleOptionOffset = default(VectorOffset), Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), TExploreSkillSearchTargetCfg SearchTargetCfg_type = TExploreSkillSearchTargetCfg.NONE, int SearchTargetCfgOffset = 0, Offset<IIgnoresCollisionCfg> IgnoresCollisionCfgOffset = default(Offset<IIgnoresCollisionCfg>), VectorOffset SelfInteractBlockDetectionKeysOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(12);
@@ -406,43 +412,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExploreSkillInteract.EndIExploreSkillInteract(builder);
 		}
 
-		// Token: 0x06022030 RID: 139312 RVA: 0x004B7D8C File Offset: 0x004B5F8C
+		// Token: 0x06023FC3 RID: 147395 RVA: 0x004F26E0 File Offset: 0x004F08E0
 		public static void StartIExploreSkillInteract(FlatBufferBuilder builder)
 		{
 			builder.StartTable(12);
 		}
 
-		// Token: 0x06022031 RID: 139313 RVA: 0x004B7D96 File Offset: 0x004B5F96
+		// Token: 0x06023FC4 RID: 147396 RVA: 0x004F26EA File Offset: 0x004F08EA
 		public static void AddExploreSkillUiResource(FlatBufferBuilder builder, StringOffset exploreSkillUiResourceOffset)
 		{
 			builder.AddOffset(0, exploreSkillUiResourceOffset.Value, 0);
 		}
 
-		// Token: 0x06022032 RID: 139314 RVA: 0x004B7DA6 File Offset: 0x004B5FA6
+		// Token: 0x06023FC5 RID: 147397 RVA: 0x004F26FA File Offset: 0x004F08FA
 		public static void AddOptionType(FlatBufferBuilder builder, TExploreSkillInteractOption optionType)
 		{
 			builder.AddByte(1, (byte)optionType, 0);
 		}
 
-		// Token: 0x06022033 RID: 139315 RVA: 0x004B7DB1 File Offset: 0x004B5FB1
+		// Token: 0x06023FC6 RID: 147398 RVA: 0x004F2705 File Offset: 0x004F0905
 		public static void AddOption(FlatBufferBuilder builder, int optionOffset)
 		{
 			builder.AddOffset(2, optionOffset, 0);
 		}
 
-		// Token: 0x06022034 RID: 139316 RVA: 0x004B7DBC File Offset: 0x004B5FBC
+		// Token: 0x06023FC7 RID: 147399 RVA: 0x004F2710 File Offset: 0x004F0910
 		public static void AddPlayerStateRestritionId(FlatBufferBuilder builder, int playerStateRestritionId)
 		{
 			builder.AddInt(3, playerStateRestritionId, 0);
 		}
 
-		// Token: 0x06022035 RID: 139317 RVA: 0x004B7DC7 File Offset: 0x004B5FC7
+		// Token: 0x06023FC8 RID: 147400 RVA: 0x004F271B File Offset: 0x004F091B
 		public static void AddMatchRoleOptionType(FlatBufferBuilder builder, VectorOffset matchRoleOptionTypeOffset)
 		{
 			builder.AddOffset(4, matchRoleOptionTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06022036 RID: 139318 RVA: 0x004B7DD8 File Offset: 0x004B5FD8
+		// Token: 0x06023FC9 RID: 147401 RVA: 0x004F272C File Offset: 0x004F092C
 		public static VectorOffset CreateMatchRoleOptionTypeVector(FlatBufferBuilder builder, TMatchRoleOption[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -453,7 +459,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022037 RID: 139319 RVA: 0x004B7E0F File Offset: 0x004B600F
+		// Token: 0x06023FCA RID: 147402 RVA: 0x004F2763 File Offset: 0x004F0963
 		public static VectorOffset CreateMatchRoleOptionTypeVectorBlock(FlatBufferBuilder builder, TMatchRoleOption[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -461,7 +467,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022038 RID: 139320 RVA: 0x004B7E29 File Offset: 0x004B6029
+		// Token: 0x06023FCB RID: 147403 RVA: 0x004F277D File Offset: 0x004F097D
 		public static VectorOffset CreateMatchRoleOptionTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TMatchRoleOption> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -469,7 +475,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022039 RID: 139321 RVA: 0x004B7E47 File Offset: 0x004B6047
+		// Token: 0x06023FCC RID: 147404 RVA: 0x004F279B File Offset: 0x004F099B
 		public static VectorOffset CreateMatchRoleOptionTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -477,19 +483,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602203A RID: 139322 RVA: 0x004B7E60 File Offset: 0x004B6060
+		// Token: 0x06023FCD RID: 147405 RVA: 0x004F27B4 File Offset: 0x004F09B4
 		public static void StartMatchRoleOptionTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0602203B RID: 139323 RVA: 0x004B7E6B File Offset: 0x004B606B
+		// Token: 0x06023FCE RID: 147406 RVA: 0x004F27BF File Offset: 0x004F09BF
 		public static void AddMatchRoleOption(FlatBufferBuilder builder, VectorOffset matchRoleOptionOffset)
 		{
 			builder.AddOffset(5, matchRoleOptionOffset.Value, 0);
 		}
 
-		// Token: 0x0602203C RID: 139324 RVA: 0x004B7E7C File Offset: 0x004B607C
+		// Token: 0x06023FCF RID: 147407 RVA: 0x004F27D0 File Offset: 0x004F09D0
 		public static VectorOffset CreateMatchRoleOptionVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -500,7 +506,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602203D RID: 139325 RVA: 0x004B7EB3 File Offset: 0x004B60B3
+		// Token: 0x06023FD0 RID: 147408 RVA: 0x004F2807 File Offset: 0x004F0A07
 		public static VectorOffset CreateMatchRoleOptionVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -508,7 +514,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602203E RID: 139326 RVA: 0x004B7ECD File Offset: 0x004B60CD
+		// Token: 0x06023FD1 RID: 147409 RVA: 0x004F2821 File Offset: 0x004F0A21
 		public static VectorOffset CreateMatchRoleOptionVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -516,7 +522,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602203F RID: 139327 RVA: 0x004B7EEB File Offset: 0x004B60EB
+		// Token: 0x06023FD2 RID: 147410 RVA: 0x004F283F File Offset: 0x004F0A3F
 		public static VectorOffset CreateMatchRoleOptionVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -524,43 +530,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022040 RID: 139328 RVA: 0x004B7F04 File Offset: 0x004B6104
+		// Token: 0x06023FD3 RID: 147411 RVA: 0x004F2858 File Offset: 0x004F0A58
 		public static void StartMatchRoleOptionVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06022041 RID: 139329 RVA: 0x004B7F0F File Offset: 0x004B610F
+		// Token: 0x06023FD4 RID: 147412 RVA: 0x004F2863 File Offset: 0x004F0A63
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
 			builder.AddOffset(6, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x06022042 RID: 139330 RVA: 0x004B7F1F File Offset: 0x004B611F
+		// Token: 0x06023FD5 RID: 147413 RVA: 0x004F2873 File Offset: 0x004F0A73
 		public static void AddSearchTargetCfgType(FlatBufferBuilder builder, TExploreSkillSearchTargetCfg searchTargetCfgType)
 		{
 			builder.AddByte(7, (byte)searchTargetCfgType, 0);
 		}
 
-		// Token: 0x06022043 RID: 139331 RVA: 0x004B7F2A File Offset: 0x004B612A
+		// Token: 0x06023FD6 RID: 147414 RVA: 0x004F287E File Offset: 0x004F0A7E
 		public static void AddSearchTargetCfg(FlatBufferBuilder builder, int searchTargetCfgOffset)
 		{
 			builder.AddOffset(8, searchTargetCfgOffset, 0);
 		}
 
-		// Token: 0x06022044 RID: 139332 RVA: 0x004B7F35 File Offset: 0x004B6135
+		// Token: 0x06023FD7 RID: 147415 RVA: 0x004F2889 File Offset: 0x004F0A89
 		public static void AddIgnoresCollisionCfg(FlatBufferBuilder builder, Offset<IIgnoresCollisionCfg> ignoresCollisionCfgOffset)
 		{
 			builder.AddOffset(9, ignoresCollisionCfgOffset.Value, 0);
 		}
 
-		// Token: 0x06022045 RID: 139333 RVA: 0x004B7F46 File Offset: 0x004B6146
+		// Token: 0x06023FD8 RID: 147416 RVA: 0x004F289A File Offset: 0x004F0A9A
 		public static void AddSelfInteractBlockDetectionKeys(FlatBufferBuilder builder, VectorOffset selfInteractBlockDetectionKeysOffset)
 		{
 			builder.AddOffset(10, selfInteractBlockDetectionKeysOffset.Value, 0);
 		}
 
-		// Token: 0x06022046 RID: 139334 RVA: 0x004B7F58 File Offset: 0x004B6158
+		// Token: 0x06023FD9 RID: 147417 RVA: 0x004F28AC File Offset: 0x004F0AAC
 		public static VectorOffset CreateSelfInteractBlockDetectionKeysVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -571,7 +577,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022047 RID: 139335 RVA: 0x004B7F98 File Offset: 0x004B6198
+		// Token: 0x06023FDA RID: 147418 RVA: 0x004F28EC File Offset: 0x004F0AEC
 		public static VectorOffset CreateSelfInteractBlockDetectionKeysVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -579,7 +585,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022048 RID: 139336 RVA: 0x004B7FB2 File Offset: 0x004B61B2
+		// Token: 0x06023FDB RID: 147419 RVA: 0x004F2906 File Offset: 0x004F0B06
 		public static VectorOffset CreateSelfInteractBlockDetectionKeysVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -587,7 +593,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022049 RID: 139337 RVA: 0x004B7FD0 File Offset: 0x004B61D0
+		// Token: 0x06023FDC RID: 147420 RVA: 0x004F2924 File Offset: 0x004F0B24
 		public static VectorOffset CreateSelfInteractBlockDetectionKeysVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -595,25 +601,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602204A RID: 139338 RVA: 0x004B7FE9 File Offset: 0x004B61E9
+		// Token: 0x06023FDD RID: 147421 RVA: 0x004F293D File Offset: 0x004F0B3D
 		public static void StartSelfInteractBlockDetectionKeysVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602204B RID: 139339 RVA: 0x004B7FF4 File Offset: 0x004B61F4
+		// Token: 0x06023FDE RID: 147422 RVA: 0x004F2948 File Offset: 0x004F0B48
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(11, nullMask, 0);
 		}
 
-		// Token: 0x0602204C RID: 139340 RVA: 0x004B8000 File Offset: 0x004B6200
+		// Token: 0x06023FDF RID: 147423 RVA: 0x004F2954 File Offset: 0x004F0B54
 		public static Offset<IExploreSkillInteract> EndIExploreSkillInteract(FlatBufferBuilder builder)
 		{
 			return new Offset<IExploreSkillInteract>(builder.EndTable());
 		}
 
-		// Token: 0x0602204D RID: 139341 RVA: 0x004B8010 File Offset: 0x004B6210
+		// Token: 0x06023FE0 RID: 147424 RVA: 0x004F2964 File Offset: 0x004F0B64
 		public IExploreSkillInteractT UnPack()
 		{
 			IExploreSkillInteractT exploreSkillInteractT = new IExploreSkillInteractT();
@@ -621,7 +627,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return exploreSkillInteractT;
 		}
 
-		// Token: 0x0602204E RID: 139342 RVA: 0x004B802C File Offset: 0x004B622C
+		// Token: 0x06023FE1 RID: 147425 RVA: 0x004F2980 File Offset: 0x004F0B80
 		public void UnPackTo(IExploreSkillInteractT _o)
 		{
 			_o.ExploreSkillUiResource = this.ExploreSkillUiResource;
@@ -637,6 +643,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				break;
 			case TExploreSkillInteractOption.IExploreSkillEavesdrop:
 				_o.Option.Value = ((this.Option<IExploreSkillEavesdrop>() != null) ? this.Option<IExploreSkillEavesdrop>().Value.UnPack() : null);
+				break;
+			case TExploreSkillInteractOption.IExploreSkillGraffitiPuzzle:
+				_o.Option.Value = ((this.Option<IExploreSkillGraffitiPuzzle>() != null) ? this.Option<IExploreSkillGraffitiPuzzle>().Value.UnPack() : null);
 				break;
 			case TExploreSkillInteractOption.IExploreSkillLonelyDollPollutant:
 				_o.Option.Value = ((this.Option<IExploreSkillLonelyDollPollutant>() != null) ? this.Option<IExploreSkillLonelyDollPollutant>().Value.UnPack() : null);
@@ -678,17 +687,17 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			{
 				TMatchRoleOptionUnion tmatchRoleOptionUnion = new TMatchRoleOptionUnion();
 				tmatchRoleOptionUnion.Type = this.MatchRoleOptionType(i);
-				TMatchRoleOption tmatchRoleOption = this.MatchRoleOptionType(i);
-				if (tmatchRoleOption != TMatchRoleOption.IMatchPhantomRole)
+				switch (this.MatchRoleOptionType(i))
 				{
-					if (tmatchRoleOption == TMatchRoleOption.IMatchPlayerRole)
-					{
-						tmatchRoleOptionUnion.Value = ((this.MatchRoleOption<IMatchPlayerRole>(i) != null) ? this.MatchRoleOption<IMatchPlayerRole>(i).Value.UnPack() : null);
-					}
-				}
-				else
-				{
+				case TMatchRoleOption.IMatchAssistCharacterRole:
+					tmatchRoleOptionUnion.Value = ((this.MatchRoleOption<IMatchAssistCharacterRole>(i) != null) ? this.MatchRoleOption<IMatchAssistCharacterRole>(i).Value.UnPack() : null);
+					break;
+				case TMatchRoleOption.IMatchPhantomRole:
 					tmatchRoleOptionUnion.Value = ((this.MatchRoleOption<IMatchPhantomRole>(i) != null) ? this.MatchRoleOption<IMatchPhantomRole>(i).Value.UnPack() : null);
+					break;
+				case TMatchRoleOption.IMatchPlayerRole:
+					tmatchRoleOptionUnion.Value = ((this.MatchRoleOption<IMatchPlayerRole>(i) != null) ? this.MatchRoleOption<IMatchPlayerRole>(i).Value.UnPack() : null);
+					break;
 				}
 				_o.MatchRoleOption.Add(tmatchRoleOptionUnion);
 			}
@@ -716,7 +725,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602204F RID: 139343 RVA: 0x004B8604 File Offset: 0x004B6804
+		// Token: 0x06023FE2 RID: 147426 RVA: 0x004F2FE0 File Offset: 0x004F11E0
 		public static Offset<IExploreSkillInteract> Pack(FlatBufferBuilder builder, IExploreSkillInteractT _o)
 		{
 			if (_o == null)
@@ -763,7 +772,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExploreSkillInteract.CreateIExploreSkillInteract(builder, exploreSkillUiResourceOffset, option_type, optionOffset, _o.PlayerStateRestritionId, matchRoleOption_typeOffset, matchRoleOptionOffset, conditionOffset, searchTargetCfg_type, searchTargetCfgOffset, ignoresCollisionCfgOffset, selfInteractBlockDetectionKeysOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E2F1 RID: 58097
+		// Token: 0x0400EEF6 RID: 61174
 		private Table __p;
 	}
 }

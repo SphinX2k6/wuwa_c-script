@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D28 RID: 23848
+	// Token: 0x02004D0A RID: 19722
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FormationOnlineItem : UiPanelBase
 	{
-		// Token: 0x0603C78A RID: 247690 RVA: 0x00E81524 File Offset: 0x00E7F724
+		// Token: 0x060316E3 RID: 202467 RVA: 0x00DD1CC4 File Offset: 0x00DCFEC4
 		public FormationOnlineItem(UUIItem rootUiItem)
 		{
 			base.CreateThenShowByResourceIdAsync("UiItem_FigthRoleHeadOnline", rootUiItem, false).Forget();
 		}
 
-		// Token: 0x0603C78B RID: 247691 RVA: 0x00E81540 File Offset: 0x00E7F740
+		// Token: 0x060316E4 RID: 202468 RVA: 0x00DD1CE0 File Offset: 0x00DCFEE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -42,21 +42,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C78C RID: 247692 RVA: 0x00E8162D File Offset: 0x00E7F82D
+		// Token: 0x060316E5 RID: 202469 RVA: 0x00DD1DCD File Offset: 0x00DCFFCD
 		protected override void OnStart()
 		{
 			this.DisconnectSequencePlayer = new LevelSequencePlayer(base.GetItem(1));
 			this.ClearAllHandle();
 		}
 
-		// Token: 0x0603C78D RID: 247693 RVA: 0x00E81647 File Offset: 0x00E7F847
+		// Token: 0x060316E6 RID: 202470 RVA: 0x00DD1DE7 File Offset: 0x00DCFFE7
 		protected override void OnBeforeDestroy()
 		{
 			this.DisconnectSequencePlayer.Clear();
 			this.DisconnectSequencePlayer = null;
 		}
 
-		// Token: 0x0603C78E RID: 247694 RVA: 0x00E8165B File Offset: 0x00E7F85B
+		// Token: 0x060316E7 RID: 202471 RVA: 0x00DD1DFB File Offset: 0x00DCFFFB
 		public void SetNameText(string name)
 		{
 			if (base.InAsyncLoading())
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetNameTextAsync(name).Forget();
 		}
 
-		// Token: 0x0603C78F RID: 247695 RVA: 0x00E81680 File Offset: 0x00E7F880
+		// Token: 0x060316E8 RID: 202472 RVA: 0x00DD1E20 File Offset: 0x00DD0020
 		private UniTask SetNameTextAsync(string name)
 		{
 			FormationOnlineItem.<SetNameTextAsync>d__13 <SetNameTextAsync>d__;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <SetNameTextAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C790 RID: 247696 RVA: 0x00E816CC File Offset: 0x00E7F8CC
+		// Token: 0x060316E9 RID: 202473 RVA: 0x00DD1E6C File Offset: 0x00DD006C
 		public void SetOnlineNumber(int onlineNumber)
 		{
 			if (base.InAsyncLoading())
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetTextureByPath(resourcePath, texture, null, null);
 		}
 
-		// Token: 0x0603C791 RID: 247697 RVA: 0x00E81758 File Offset: 0x00E7F958
+		// Token: 0x060316EA RID: 202474 RVA: 0x00DD1EF8 File Offset: 0x00DD00F8
 		public void SetIsGrayByOtherControl(bool isGray)
 		{
 			if (base.InAsyncLoading())
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			uuiitem2.SetChangeColor(isGray, fcolor);
 		}
 
-		// Token: 0x0603C792 RID: 247698 RVA: 0x00E817AF File Offset: 0x00E7F9AF
+		// Token: 0x060316EB RID: 202475 RVA: 0x00DD1F4F File Offset: 0x00DD014F
 		public void SetNetWeak(bool isWeak)
 		{
 			if (base.InAsyncLoading())
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(0).SetUIActive(isWeak);
 		}
 
-		// Token: 0x0603C793 RID: 247699 RVA: 0x00E817D0 File Offset: 0x00E7F9D0
+		// Token: 0x060316EC RID: 202476 RVA: 0x00DD1F70 File Offset: 0x00DD0170
 		public void RefreshThirdPartyItem(string thirdPartyAccountId)
 		{
 			if (base.InAsyncLoading())
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C794 RID: 247700 RVA: 0x00E81820 File Offset: 0x00E7FA20
+		// Token: 0x060316ED RID: 202477 RVA: 0x00DD1FC0 File Offset: 0x00DD01C0
 		private void RefreshPcItem(string thirdPartyAccountId)
 		{
 			if (KuroSdkController.Instance.NeedShowThirdPartyId())
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C795 RID: 247701 RVA: 0x00E81870 File Offset: 0x00E7FA70
+		// Token: 0x060316EE RID: 202478 RVA: 0x00DD2010 File Offset: 0x00DD0210
 		private UniTask RefreshThirdPartyItemAsync(string thirdPartyAccountId)
 		{
 			FormationOnlineItem.<RefreshThirdPartyItemAsync>d__19 <RefreshThirdPartyItemAsync>d__;
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <RefreshThirdPartyItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C796 RID: 247702 RVA: 0x00E818BB File Offset: 0x00E7FABB
+		// Token: 0x060316EF RID: 202479 RVA: 0x00DD205B File Offset: 0x00DD025B
 		public void SetNetDisconnect(bool isDisconnect)
 		{
 			if (base.InAsyncLoading())
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetDisconnectStatus(isDisconnect);
 		}
 
-		// Token: 0x0603C797 RID: 247703 RVA: 0x00E818D4 File Offset: 0x00E7FAD4
+		// Token: 0x060316F0 RID: 202480 RVA: 0x00DD2074 File Offset: 0x00DD0274
 		private void SetDisconnectStatus(bool isDisconnect)
 		{
 			base.GetItem(1).SetUIActive(isDisconnect);
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C798 RID: 247704 RVA: 0x00E8191C File Offset: 0x00E7FB1C
+		// Token: 0x060316F1 RID: 202481 RVA: 0x00DD20BC File Offset: 0x00DD02BC
 		private void ClearAllHandle()
 		{
 			if (this.NameHandle != null)
@@ -233,45 +233,45 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetIsGrayByOtherControl(this.IsGrayByOtherControl);
 		}
 
-		// Token: 0x0401F824 RID: 129060
+		// Token: 0x0401A2DD RID: 107229
 		[Nullable(2)]
 		private string NameHandle;
 
-		// Token: 0x0401F825 RID: 129061
+		// Token: 0x0401A2DE RID: 107230
 		private int? OnlineNumberHandle;
 
-		// Token: 0x0401F826 RID: 129062
+		// Token: 0x0401A2DF RID: 107231
 		[Nullable(2)]
 		private string CurrentThirdPartyAccountId;
 
-		// Token: 0x0401F827 RID: 129063
+		// Token: 0x0401A2E0 RID: 107232
 		private bool IsGrayByOtherControl;
 
-		// Token: 0x0401F828 RID: 129064
+		// Token: 0x0401A2E1 RID: 107233
 		private bool IsWeak;
 
-		// Token: 0x0401F829 RID: 129065
+		// Token: 0x0401A2E2 RID: 107234
 		private bool IsDisconnect;
 
-		// Token: 0x0401F82A RID: 129066
+		// Token: 0x0401A2E3 RID: 107235
 		[Nullable(2)]
 		private LevelSequencePlayer DisconnectSequencePlayer;
 
-		// Token: 0x0200BFB3 RID: 49075
+		// Token: 0x0200A9B9 RID: 43449
 		[NullableContext(0)]
 		private enum EFormationOnlineItem
 		{
-			// Token: 0x04039D5A RID: 236890
+			// Token: 0x0403471C RID: 214812
 			NetWeakItem,
-			// Token: 0x04039D5B RID: 236891
+			// Token: 0x0403471D RID: 214813
 			PanelDisconnect,
-			// Token: 0x04039D5C RID: 236892
+			// Token: 0x0403471E RID: 214814
 			OnlineNumberTexture,
-			// Token: 0x04039D5D RID: 236893
+			// Token: 0x0403471F RID: 214815
 			NameText,
-			// Token: 0x04039D5E RID: 236894
+			// Token: 0x04034720 RID: 214816
 			ThirdPartyTexture,
-			// Token: 0x04039D5F RID: 236895
+			// Token: 0x04034721 RID: 214817
 			PcItem
 		}
 	}

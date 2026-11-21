@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001338 RID: 4920
+	// Token: 0x020013AB RID: 5035
 	[NetMessage(EMessageId.TeleportDungeonForbidNotify)]
 	public sealed class TeleportDungeonForbidNotify : IMessage<TeleportDungeonForbidNotify>, IMessage, IEquatable<TeleportDungeonForbidNotify>, IDeepCloneable<TeleportDungeonForbidNotify>, IBufferMessage
 	{
-		// Token: 0x0601A23B RID: 107067 RVA: 0x003CBF1D File Offset: 0x003CA11D
+		// Token: 0x0601ACC2 RID: 109762 RVA: 0x003E7050 File Offset: 0x003E5250
 		[NullableContext(1)]
 		public static TeleportDungeonForbidNotify Create()
 		{
 			return new TeleportDungeonForbidNotify();
 		}
 
-		// Token: 0x17005829 RID: 22569
-		// (get) Token: 0x0601A23C RID: 107068 RVA: 0x003CBF24 File Offset: 0x003CA124
+		// Token: 0x17005ABC RID: 23228
+		// (get) Token: 0x0601ACC3 RID: 109763 RVA: 0x003E7057 File Offset: 0x003E5257
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700582A RID: 22570
-		// (get) Token: 0x0601A23D RID: 107069 RVA: 0x003CBF27 File Offset: 0x003CA127
+		// Token: 0x17005ABD RID: 23229
+		// (get) Token: 0x0601ACC4 RID: 109764 RVA: 0x003E705A File Offset: 0x003E525A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A23E RID: 107070 RVA: 0x003CBF2E File Offset: 0x003CA12E
+		// Token: 0x0601ACC5 RID: 109765 RVA: 0x003E7061 File Offset: 0x003E5261
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TeleportDungeonForbidNotify()
 		{
 		}
 
-		// Token: 0x0601A23F RID: 107071 RVA: 0x003CBF36 File Offset: 0x003CA136
+		// Token: 0x0601ACC6 RID: 109766 RVA: 0x003E7069 File Offset: 0x003E5269
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TeleportDungeonForbidNotify(TeleportDungeonForbidNotify other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601A240 RID: 107072 RVA: 0x003CBF5B File Offset: 0x003CA15B
+		// Token: 0x0601ACC7 RID: 109767 RVA: 0x003E708E File Offset: 0x003E528E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TeleportDungeonForbidNotify Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new TeleportDungeonForbidNotify(this);
 		}
 
-		// Token: 0x1700582B RID: 22571
-		// (get) Token: 0x0601A241 RID: 107073 RVA: 0x003CBF63 File Offset: 0x003CA163
-		// (set) Token: 0x0601A242 RID: 107074 RVA: 0x003CBF6B File Offset: 0x003CA16B
+		// Token: 0x17005ABE RID: 23230
+		// (get) Token: 0x0601ACC8 RID: 109768 RVA: 0x003E7096 File Offset: 0x003E5296
+		// (set) Token: 0x0601ACC9 RID: 109769 RVA: 0x003E709E File Offset: 0x003E529E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DungeonId
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A243 RID: 107075 RVA: 0x003CBF74 File Offset: 0x003CA174
+		// Token: 0x0601ACCA RID: 109770 RVA: 0x003E70A7 File Offset: 0x003E52A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TeleportDungeonForbidNotify);
 		}
 
-		// Token: 0x0601A244 RID: 107076 RVA: 0x003CBF82 File Offset: 0x003CA182
+		// Token: 0x0601ACCB RID: 109771 RVA: 0x003E70B5 File Offset: 0x003E52B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TeleportDungeonForbidNotify other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.DungeonId == other.DungeonId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601A245 RID: 107077 RVA: 0x003CBFB0 File Offset: 0x003CA1B0
+		// Token: 0x0601ACCC RID: 109772 RVA: 0x003E70E4 File Offset: 0x003E52E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601A246 RID: 107078 RVA: 0x003CBFEF File Offset: 0x003CA1EF
+		// Token: 0x0601ACCD RID: 109773 RVA: 0x003E7123 File Offset: 0x003E5323
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601A247 RID: 107079 RVA: 0x003CBFFC File Offset: 0x003CA1FC
+		// Token: 0x0601ACCE RID: 109774 RVA: 0x003E7130 File Offset: 0x003E5330
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601A248 RID: 107080 RVA: 0x003CC005 File Offset: 0x003CA205
+		// Token: 0x0601ACCF RID: 109775 RVA: 0x003E7139 File Offset: 0x003E5339
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.DungeonId != 0)
 			{
-				output.WriteRawTag(32);
+				output.WriteRawTag(120);
 				output.WriteInt32(this.DungeonId);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601A249 RID: 107081 RVA: 0x003CC038 File Offset: 0x003CA238
+		// Token: 0x0601ACD0 RID: 109776 RVA: 0x003E716C File Offset: 0x003E536C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601A24A RID: 107082 RVA: 0x003CC076 File Offset: 0x003CA276
+		// Token: 0x0601ACD1 RID: 109777 RVA: 0x003E71AA File Offset: 0x003E53AA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TeleportDungeonForbidNotify other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601A24B RID: 107083 RVA: 0x003CC0A7 File Offset: 0x003CA2A7
+		// Token: 0x0601ACD2 RID: 109778 RVA: 0x003E71DB File Offset: 0x003E53DB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601A24C RID: 107084 RVA: 0x003CC0B0 File Offset: 0x003CA2B0
+		// Token: 0x0601ACD3 RID: 109779 RVA: 0x003E71E4 File Offset: 0x003E53E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 32U)
+				if (num != 120U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400988D RID: 39053
+		// Token: 0x04009CCF RID: 40143
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400988E RID: 39054
-		public const int DungeonIdFieldNumber = 4;
+		// Token: 0x04009CD0 RID: 40144
+		public const int DungeonIdFieldNumber = 15;
 
-		// Token: 0x0400988F RID: 39055
+		// Token: 0x04009CD1 RID: 40145
 		private int dungeonId_;
 	}
 }

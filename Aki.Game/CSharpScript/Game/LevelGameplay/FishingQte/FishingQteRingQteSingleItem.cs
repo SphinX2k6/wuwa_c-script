@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E47 RID: 28231
+	// Token: 0x02005FC8 RID: 24520
 	public class FishingQteRingQteSingleItem : UiPanelBase
 	{
-		// Token: 0x06044D15 RID: 281877 RVA: 0x010FB864 File Offset: 0x010F9A64
+		// Token: 0x0603AEA2 RID: 241314 RVA: 0x010A5DE0 File Offset: 0x010A3FE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06044D16 RID: 281878 RVA: 0x010FB930 File Offset: 0x010F9B30
+		// Token: 0x0603AEA3 RID: 241315 RVA: 0x010A5EAC File Offset: 0x010A40AC
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06044D17 RID: 281879 RVA: 0x010FB943 File Offset: 0x010F9B43
+		// Token: 0x0603AEA4 RID: 241316 RVA: 0x010A5EBF File Offset: 0x010A40BF
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ProgressParamName = null;
 		}
 
-		// Token: 0x06044D18 RID: 281880 RVA: 0x010FB96C File Offset: 0x010F9B6C
+		// Token: 0x0603AEA5 RID: 241317 RVA: 0x010A5EE8 File Offset: 0x010A40E8
 		[NullableContext(1)]
 		private List<UUITexture> GetAllTextures()
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			};
 		}
 
-		// Token: 0x06044D19 RID: 281881 RVA: 0x010FB9C0 File Offset: 0x010F9BC0
+		// Token: 0x0603AEA6 RID: 241318 RVA: 0x010A5F3C File Offset: 0x010A413C
 		public void SetRotation(float angle)
 		{
 			foreach (UUIItem uuiitem in this.GetAllTextures())
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044D1A RID: 281882 RVA: 0x010FBA28 File Offset: 0x010F9C28
+		// Token: 0x0603AEA7 RID: 241319 RVA: 0x010A5FA4 File Offset: 0x010A41A4
 		public void SetType(EFishingAreaType type)
 		{
 			if (type == EFishingAreaType.QteArea)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			base.GetTexture(3).SetUIActive(true);
 		}
 
-		// Token: 0x06044D1B RID: 281883 RVA: 0x010FBA68 File Offset: 0x010F9C68
+		// Token: 0x0603AEA8 RID: 241320 RVA: 0x010A5FE4 File Offset: 0x010A41E4
 		public void SetFill(float amount)
 		{
 			foreach (UUITexture uuitexture in this.GetAllTextures())
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044D1C RID: 281884 RVA: 0x010FBACC File Offset: 0x010F9CCC
+		// Token: 0x0603AEA9 RID: 241321 RVA: 0x010A6048 File Offset: 0x010A4248
 		[NullableContext(1)]
 		public void PlayAnim(string sequenceName)
 		{
@@ -112,29 +112,29 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.LevelSequencePlayer.PlayLevelSequenceByName(sequenceName, false, null, false);
 		}
 
-		// Token: 0x04023CD3 RID: 146643
+		// Token: 0x0401EF88 RID: 126856
 		private FName? ProgressParamName = new FName?(new FName("Progress"));
 
-		// Token: 0x04023CD4 RID: 146644
+		// Token: 0x0401EF89 RID: 126857
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200CD01 RID: 52481
+		// Token: 0x0200B8F1 RID: 47345
 		private class EComponents
 		{
-			// Token: 0x0403DD0D RID: 253197
+			// Token: 0x0403912F RID: 233775
 			public const int TexBg = 0;
 
-			// Token: 0x0403DD0E RID: 253198
+			// Token: 0x04039130 RID: 233776
 			public const int TexBgFail = 1;
 
-			// Token: 0x0403DD0F RID: 253199
+			// Token: 0x04039131 RID: 233777
 			public const int TexBgSuccess = 2;
 
-			// Token: 0x0403DD10 RID: 253200
+			// Token: 0x04039132 RID: 233778
 			public const int TexPerfect = 3;
 
-			// Token: 0x0403DD11 RID: 253201
+			// Token: 0x04039133 RID: 233779
 			public const int TexPerfect2 = 4;
 		}
 	}

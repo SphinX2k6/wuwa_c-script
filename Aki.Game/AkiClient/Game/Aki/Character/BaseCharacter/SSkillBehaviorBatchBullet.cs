@@ -6,20 +6,20 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x0200432D RID: 17197
+	// Token: 0x02003365 RID: 13157
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SSkillBehaviorBatchBullet.SSkillBehaviorBatchBullet")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 41)]
 	public class SSkillBehaviorBatchBullet : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C8FD RID: 182525 RVA: 0x00A22C6C File Offset: 0x00A20E6C
+		// Token: 0x060215FB RID: 136699 RVA: 0x0095F33D File Offset: 0x0095D53D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SSkillBehaviorBatchBullet._ScriptStructPtr != 0) ? SSkillBehaviorBatchBullet._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SSkillBehaviorBatchBullet.SSkillBehaviorBatchBullet", ref SSkillBehaviorBatchBullet._ScriptStructPtr);
 		}
 
-		// Token: 0x17006FE7 RID: 28647
-		// (get) Token: 0x0602C8FE RID: 182526 RVA: 0x00A22C90 File Offset: 0x00A20E90
-		// (set) Token: 0x0602C8FF RID: 182527 RVA: 0x00A22CD3 File Offset: 0x00A20ED3
+		// Token: 0x17004414 RID: 17428
+		// (get) Token: 0x060215FC RID: 136700 RVA: 0x0095F364 File Offset: 0x0095D564
+		// (set) Token: 0x060215FD RID: 136701 RVA: 0x0095F3A7 File Offset: 0x0095D5A7
 		[Nullable(1)]
 		public TArray<string> Id
 		{
@@ -30,7 +30,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<string> result;
 				if ((result = this._Id) == null)
 				{
-					result = (this._Id = new TArray<string>(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._Id = new TArray<string>(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_Id, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -41,139 +41,128 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x17006FE8 RID: 28648
-		// (get) Token: 0x0602C900 RID: 182528 RVA: 0x00A22CE1 File Offset: 0x00A20EE1
-		// (set) Token: 0x0602C901 RID: 182529 RVA: 0x00A22CF1 File Offset: 0x00A20EF1
+		// Token: 0x17004415 RID: 17429
+		// (get) Token: 0x060215FE RID: 136702 RVA: 0x0095F3B5 File Offset: 0x0095D5B5
+		// (set) Token: 0x060215FF RID: 136703 RVA: 0x0095F3C5 File Offset: 0x0095D5C5
 		public unsafe int Number
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_Number);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_Number) = value;
 			}
 		}
 
-		// Token: 0x17006FE9 RID: 28649
-		// (get) Token: 0x0602C902 RID: 182530 RVA: 0x00A22D02 File Offset: 0x00A20F02
-		// (set) Token: 0x0602C903 RID: 182531 RVA: 0x00A22D12 File Offset: 0x00A20F12
+		// Token: 0x17004416 RID: 17430
+		// (get) Token: 0x06021600 RID: 136704 RVA: 0x0095F3D6 File Offset: 0x0095D5D6
+		// (set) Token: 0x06021601 RID: 136705 RVA: 0x0095F3E6 File Offset: 0x0095D5E6
 		public unsafe float Interval
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_Interval);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_Interval) = value;
 			}
 		}
 
-		// Token: 0x17006FEA RID: 28650
-		// (get) Token: 0x0602C904 RID: 182532 RVA: 0x00A22D23 File Offset: 0x00A20F23
-		// (set) Token: 0x0602C905 RID: 182533 RVA: 0x00A22D33 File Offset: 0x00A20F33
+		// Token: 0x17004417 RID: 17431
+		// (get) Token: 0x06021602 RID: 136706 RVA: 0x0095F3F7 File Offset: 0x0095D5F7
+		// (set) Token: 0x06021603 RID: 136707 RVA: 0x0095F407 File Offset: 0x0095D607
 		public unsafe bool StopOnSkillEnd
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_StopOnSkillEnd) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_StopOnSkillEnd) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006FEB RID: 28651
-		// (get) Token: 0x0602C906 RID: 182534 RVA: 0x00A22D44 File Offset: 0x00A20F44
-		// (set) Token: 0x0602C907 RID: 182535 RVA: 0x00A22D58 File Offset: 0x00A20F58
+		// Token: 0x17004418 RID: 17432
+		// (get) Token: 0x06021604 RID: 136708 RVA: 0x0095F418 File Offset: 0x0095D618
+		// (set) Token: 0x06021605 RID: 136709 RVA: 0x0095F42C File Offset: 0x0095D62C
 		public unsafe FGameplayTag ContinueWithTag
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_ContinueWithTag);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_ContinueWithTag) = value;
 			}
 		}
 
-		// Token: 0x17006FEC RID: 28652
-		// (get) Token: 0x0602C908 RID: 182536 RVA: 0x00A22D6D File Offset: 0x00A20F6D
-		// (set) Token: 0x0602C909 RID: 182537 RVA: 0x00A22D81 File Offset: 0x00A20F81
+		// Token: 0x17004419 RID: 17433
+		// (get) Token: 0x06021606 RID: 136710 RVA: 0x0095F441 File Offset: 0x0095D641
+		// (set) Token: 0x06021607 RID: 136711 RVA: 0x0095F455 File Offset: 0x0095D655
 		public unsafe TEnumAsByte<EBatchBulletMoveStartMode> StartMoving
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_StartMoving);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SSkillBehaviorBatchBullet.__PropertyOffset_StartMoving) = value;
 			}
 		}
 
-		// Token: 0x0602C90A RID: 182538 RVA: 0x00A22D96 File Offset: 0x00A20F96
+		// Token: 0x06021608 RID: 136712 RVA: 0x0095F46A File Offset: 0x0095D66A
 		public SSkillBehaviorBatchBullet()
 		{
 		}
 
-		// Token: 0x0602C90B RID: 182539 RVA: 0x00A22D9E File Offset: 0x00A20F9E
-		public SSkillBehaviorBatchBullet([Nullable(1)] TArray<string> Id, int Number, float Interval, bool StopOnSkillEnd, FGameplayTag ContinueWithTag, TEnumAsByte<EBatchBulletMoveStartMode> StartMoving)
-		{
-			this.Id = Id;
-			this.Number = Number;
-			this.Interval = Interval;
-			this.StopOnSkillEnd = StopOnSkillEnd;
-			this.ContinueWithTag = ContinueWithTag;
-			this.StartMoving = StartMoving;
-		}
-
-		// Token: 0x0602C90C RID: 182540 RVA: 0x00A22DD3 File Offset: 0x00A20FD3
+		// Token: 0x06021609 RID: 136713 RVA: 0x0095F472 File Offset: 0x0095D672
 		protected override IntPtr GetUStructPtr()
 		{
 			return SSkillBehaviorBatchBullet.StaticStruct();
 		}
 
-		// Token: 0x0602C90D RID: 182541 RVA: 0x00A22DDF File Offset: 0x00A20FDF
+		// Token: 0x0602160A RID: 136714 RVA: 0x0095F47E File Offset: 0x0095D67E
 		[NullableContext(2)]
 		public SSkillBehaviorBatchBullet(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C90E RID: 182542 RVA: 0x00A22DE9 File Offset: 0x00A20FE9
+		// Token: 0x0602160B RID: 136715 RVA: 0x0095F488 File Offset: 0x0095D688
 		public SSkillBehaviorBatchBullet(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C90F RID: 182543 RVA: 0x00A22DF4 File Offset: 0x00A20FF4
+		// Token: 0x0602160C RID: 136716 RVA: 0x0095F493 File Offset: 0x0095D693
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SSkillBehaviorBatchBullet(Pointer, false, true);
 		}
 
-		// Token: 0x0602C910 RID: 182544 RVA: 0x00A22DFE File Offset: 0x00A20FFE
+		// Token: 0x0602160D RID: 136717 RVA: 0x0095F49D File Offset: 0x0095D69D
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SSkillBehaviorBatchBullet(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040177D9 RID: 96217
+		// Token: 0x040123DA RID: 74714
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SSkillBehaviorBatchBullet.SSkillBehaviorBatchBullet";
 
-		// Token: 0x040177DA RID: 96218
+		// Token: 0x040123DB RID: 74715
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040177DB RID: 96219
-		internal static int __PropertyOffset_0;
+		// Token: 0x040123DC RID: 74716
+		internal static int __PropertyOffset_Id;
 
-		// Token: 0x040177DC RID: 96220
+		// Token: 0x040123DD RID: 74717
 		[Nullable(new byte[]
 		{
 			2,
@@ -181,19 +170,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 		})]
 		private TArray<string> _Id;
 
-		// Token: 0x040177DD RID: 96221
-		internal static int __PropertyOffset_1;
+		// Token: 0x040123DE RID: 74718
+		internal static int __PropertyOffset_Number;
 
-		// Token: 0x040177DE RID: 96222
-		internal static int __PropertyOffset_2;
+		// Token: 0x040123DF RID: 74719
+		internal static int __PropertyOffset_Interval;
 
-		// Token: 0x040177DF RID: 96223
-		internal static int __PropertyOffset_3;
+		// Token: 0x040123E0 RID: 74720
+		internal static int __PropertyOffset_StopOnSkillEnd;
 
-		// Token: 0x040177E0 RID: 96224
-		internal static int __PropertyOffset_4;
+		// Token: 0x040123E1 RID: 74721
+		internal static int __PropertyOffset_ContinueWithTag;
 
-		// Token: 0x040177E1 RID: 96225
-		internal static int __PropertyOffset_5;
+		// Token: 0x040123E2 RID: 74722
+		internal static int __PropertyOffset_StartMoving;
 	}
 }

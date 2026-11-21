@@ -2,16 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077BC RID: 30652
+	// Token: 0x02007FF4 RID: 32756
 	public enum TSystemOption : byte
 	{
-		// Token: 0x040129AE RID: 76206
+		// Token: 0x04013A66 RID: 80486
 		NONE,
-		// Token: 0x040129AF RID: 76207
+		// Token: 0x04013A67 RID: 80487
 		IGravityControlOption,
-		// Token: 0x040129B0 RID: 76208
+		// Token: 0x04013A68 RID: 80488
+		ILiveInteractScOption,
+		// Token: 0x04013A69 RID: 80489
 		IPermanentRogueRandomEvent,
-		// Token: 0x040129B1 RID: 76209
+		// Token: 0x04013A6A RID: 80490
 		IRogueRandomEventOption
 	}
 }

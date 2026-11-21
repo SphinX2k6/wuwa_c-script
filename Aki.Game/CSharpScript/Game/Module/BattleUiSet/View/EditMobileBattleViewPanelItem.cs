@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUiSet.View
 {
-	// Token: 0x02005E67 RID: 24167
+	// Token: 0x02004E4C RID: 20044
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EditMobileBattleViewPanelItem : UiPanelBase
 	{
-		// Token: 0x0603D710 RID: 251664 RVA: 0x00ED2770 File Offset: 0x00ED0970
+		// Token: 0x060326A0 RID: 206496 RVA: 0x00E23CE0 File Offset: 0x00E21EE0
 		protected override void OnStart()
 		{
 			PanelItemParams panelItemParams = this.OpenParam as PanelItemParams;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.Initialize(panelItemParams.PanelItemData, panelItemParams.PanelItem, panelItemParams.BattleViewBaseActor);
 		}
 
-		// Token: 0x0603D711 RID: 251665 RVA: 0x00ED27AC File Offset: 0x00ED09AC
+		// Token: 0x060326A1 RID: 206497 RVA: 0x00E23D1C File Offset: 0x00E21F1C
 		[NullableContext(1)]
 		private void Initialize(BattleUiSetPanelItemData panelItemData, UUIItem panelItem, AUIBaseActor battleViewBaseActor)
 		{
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			}
 		}
 
-		// Token: 0x0603D712 RID: 251666 RVA: 0x00ED2842 File Offset: 0x00ED0A42
+		// Token: 0x060326A2 RID: 206498 RVA: 0x00E23DB2 File Offset: 0x00E21FB2
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEvents();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.PanelItem = null;
 		}
 
-		// Token: 0x0603D713 RID: 251667 RVA: 0x00ED2874 File Offset: 0x00ED0A74
+		// Token: 0x060326A3 RID: 206499 RVA: 0x00E23DE4 File Offset: 0x00E21FE4
 		private void AddEvents()
 		{
 			if (this.Draggable != null)
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			}
 		}
 
-		// Token: 0x0603D714 RID: 251668 RVA: 0x00ED2960 File Offset: 0x00ED0B60
+		// Token: 0x060326A4 RID: 206500 RVA: 0x00E23ED0 File Offset: 0x00E220D0
 		private void RemoveEvents()
 		{
 			if (this.Draggable != null)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			}
 		}
 
-		// Token: 0x0603D715 RID: 251669 RVA: 0x00ED29E4 File Offset: 0x00ED0BE4
+		// Token: 0x060326A5 RID: 206501 RVA: 0x00E23F54 File Offset: 0x00E22154
 		private void OnDrag(ULGUIPointerEventData eventData)
 		{
 			if (this.PanelItemData == null)
@@ -120,14 +120,14 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.LocalOffsetVector = new FVector?(localPointInPlane);
 		}
 
-		// Token: 0x0603D716 RID: 251670 RVA: 0x00ED2ACC File Offset: 0x00ED0CCC
+		// Token: 0x060326A6 RID: 206502 RVA: 0x00E2403C File Offset: 0x00E2223C
 		public void RefreshRelativeLocation()
 		{
 			FVectorDouble relativeLocation = this.GetRelativeLocation();
 			this.SetRelativeLocation(relativeLocation);
 		}
 
-		// Token: 0x0603D717 RID: 251671 RVA: 0x00ED2AE8 File Offset: 0x00ED0CE8
+		// Token: 0x060326A7 RID: 206503 RVA: 0x00E24058 File Offset: 0x00E22258
 		public void SetRelativeLocation(in FVectorDouble relativeLocation)
 		{
 			FVectorDouble fvectorDouble = this.ClampBound(relativeLocation);
@@ -138,13 +138,13 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.RootItem.D_K2_SetRelativeLocation(fvectorDouble, false, ref fhitResult, false);
 		}
 
-		// Token: 0x0603D718 RID: 251672 RVA: 0x00ED2B47 File Offset: 0x00ED0D47
+		// Token: 0x060326A8 RID: 206504 RVA: 0x00E240B7 File Offset: 0x00E222B7
 		public FVectorDouble GetRelativeLocation()
 		{
 			return this.ResultLocation;
 		}
 
-		// Token: 0x0603D719 RID: 251673 RVA: 0x00ED2B4F File Offset: 0x00ED0D4F
+		// Token: 0x060326A9 RID: 206505 RVA: 0x00E240BF File Offset: 0x00E222BF
 		public void OnSave()
 		{
 			if (this.PanelItemData == null)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.PanelItemData.EditOffsetY = this.RootItem.GetAnchorOffsetY();
 		}
 
-		// Token: 0x0603D71A RID: 251674 RVA: 0x00ED2B88 File Offset: 0x00ED0D88
+		// Token: 0x060326AA RID: 206506 RVA: 0x00E240F8 File Offset: 0x00E222F8
 		private FVectorDouble ClampBound(FVectorDouble relativeLocation)
 		{
 			double x = this.RootActor.D_GetActorScale3D().X;
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			return relativeLocation;
 		}
 
-		// Token: 0x0603D71B RID: 251675 RVA: 0x00ED2C68 File Offset: 0x00ED0E68
+		// Token: 0x060326AB RID: 206507 RVA: 0x00E241D8 File Offset: 0x00E223D8
 		private void OnDragBegin(ULGUIPointerEventData eventData)
 		{
 			if (this.PanelItemData == null)
@@ -195,13 +195,13 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			BattleUiSetModel.Instance.SetPanelItemSelected(this.PanelItemData);
 		}
 
-		// Token: 0x0603D71C RID: 251676 RVA: 0x00ED2CC6 File Offset: 0x00ED0EC6
+		// Token: 0x060326AC RID: 206508 RVA: 0x00E24236 File Offset: 0x00E22436
 		private void OnDragEnded(ULGUIPointerEventData ulguiPointerEventData)
 		{
 			this.LocalOffsetVector = null;
 		}
 
-		// Token: 0x0603D71D RID: 251677 RVA: 0x00ED2CD4 File Offset: 0x00ED0ED4
+		// Token: 0x060326AD RID: 206509 RVA: 0x00E24244 File Offset: 0x00E22444
 		private void OnButtonPress()
 		{
 			if (this.PanelItemData == null)
@@ -218,13 +218,13 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			BattleUiSetModel.Instance.SetPanelItemSelected(this.PanelItemData);
 		}
 
-		// Token: 0x0603D71E RID: 251678 RVA: 0x00ED2D3C File Offset: 0x00ED0F3C
+		// Token: 0x060326AE RID: 206510 RVA: 0x00E242AC File Offset: 0x00E224AC
 		private void OnButtonRelease()
 		{
 			this.LocalOffsetVector = null;
 		}
 
-		// Token: 0x0603D71F RID: 251679 RVA: 0x00ED2D4A File Offset: 0x00ED0F4A
+		// Token: 0x060326AF RID: 206511 RVA: 0x00E242BA File Offset: 0x00E224BA
 		private void OnExtendToggleStateChanged(EToggleState state)
 		{
 			if (this.PanelItemData == null)
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			BattleUiSetModel.Instance.SetPanelItemSelected(this.PanelItemData);
 		}
 
-		// Token: 0x0603D720 RID: 251680 RVA: 0x00ED2D78 File Offset: 0x00ED0F78
+		// Token: 0x060326B0 RID: 206512 RVA: 0x00E242E8 File Offset: 0x00E224E8
 		private bool OnCheckCanExecuteChange()
 		{
 			if (this.PanelItemData == null)
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			return selectedPanelItemData == null || selectedPanelItemData.ConfigId != this.PanelItemData.ConfigId;
 		}
 
-		// Token: 0x0603D721 RID: 251681 RVA: 0x00ED2DEC File Offset: 0x00ED0FEC
+		// Token: 0x060326B1 RID: 206513 RVA: 0x00E2435C File Offset: 0x00E2255C
 		public void Refresh()
 		{
 			if (this.PanelItemData == null)
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.ResultLocation = new FVectorDouble(ref relativeLocation);
 		}
 
-		// Token: 0x0603D722 RID: 251682 RVA: 0x00ED2E90 File Offset: 0x00ED1090
+		// Token: 0x060326B2 RID: 206514 RVA: 0x00E24400 File Offset: 0x00E22600
 		public void Reset()
 		{
 			if (this.PanelItemData == null)
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.ResultLocation = new FVectorDouble(ref relativeLocation);
 		}
 
-		// Token: 0x0603D723 RID: 251683 RVA: 0x00ED2F34 File Offset: 0x00ED1134
+		// Token: 0x060326B3 RID: 206515 RVA: 0x00E244A4 File Offset: 0x00E226A4
 		public void SetSelected(bool bSelected)
 		{
 			if (this.ExtendToggle == null)
@@ -308,34 +308,34 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.ExtendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603D724 RID: 251684 RVA: 0x00ED2F63 File Offset: 0x00ED1163
+		// Token: 0x060326B4 RID: 206516 RVA: 0x00E244D3 File Offset: 0x00E226D3
 		public void ApplyTopIndex()
 		{
 			base.GetRootItem().SetHierarchyIndex(30);
 		}
 
-		// Token: 0x040200FE RID: 131326
+		// Token: 0x0401ABC5 RID: 109509
 		public BattleUiSetPanelItemData PanelItemData;
 
-		// Token: 0x040200FF RID: 131327
+		// Token: 0x0401ABC6 RID: 109510
 		private AUIBaseActor BattleViewBaseActor;
 
-		// Token: 0x04020100 RID: 131328
+		// Token: 0x0401ABC7 RID: 109511
 		protected UUIItem PanelItem;
 
-		// Token: 0x04020101 RID: 131329
+		// Token: 0x0401ABC8 RID: 109512
 		private FVectorDouble ResultLocation;
 
-		// Token: 0x04020102 RID: 131330
+		// Token: 0x0401ABC9 RID: 109513
 		private FVector? LocalOffsetVector;
 
-		// Token: 0x04020103 RID: 131331
+		// Token: 0x0401ABCA RID: 109514
 		private UUIDraggableComponent Draggable;
 
-		// Token: 0x04020104 RID: 131332
+		// Token: 0x0401ABCB RID: 109515
 		private UUIButtonComponent Button;
 
-		// Token: 0x04020105 RID: 131333
+		// Token: 0x0401ABCC RID: 109516
 		private UUIExtendToggle ExtendToggle;
 	}
 }

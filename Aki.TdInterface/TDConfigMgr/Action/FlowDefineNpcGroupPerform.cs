@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200172F RID: 5935
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018AC RID: 6316
 	public class FlowDefineNpcGroupPerform : ActionParams
 	{
-		// Token: 0x06007DA5 RID: 32165 RVA: 0x0012D504 File Offset: 0x0012B704
+		// Token: 0x06008483 RID: 33923 RVA: 0x0013C5B0 File Offset: 0x0013A7B0
 		private FlowDefineNpcGroupPerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007DA6 RID: 32166 RVA: 0x0012D53C File Offset: 0x0012B73C
+		// Token: 0x06008484 RID: 33924 RVA: 0x0013C5E8 File Offset: 0x0013A7E8
 		public static FlowDefineNpcGroupPerform Create([Nullable(2)] FlowDefineNpcGroupPerform instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007DA7 RID: 32167 RVA: 0x0012D54F File Offset: 0x0012B74F
+		// Token: 0x06008485 RID: 33925 RVA: 0x0013C5FB File Offset: 0x0013A7FB
 		public static FlowDefineNpcGroupPerform CreateFromSetValue([Nullable(2)] FlowDefineNpcGroupPerform_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007DA8 RID: 32168 RVA: 0x0012D562 File Offset: 0x0012B762
+		// Token: 0x06008486 RID: 33926 RVA: 0x0013C60E File Offset: 0x0013A80E
 		public FlowDefineNpcGroupPerform_SetValue ToSetValue()
 		{
 			return new FlowDefineNpcGroupPerform_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700295F RID: 10591
-		// (get) Token: 0x06007DA9 RID: 32169 RVA: 0x0012D575 File Offset: 0x0012B775
-		// (set) Token: 0x06007DAA RID: 32170 RVA: 0x0012D59C File Offset: 0x0012B79C
+		// Token: 0x17002B4A RID: 11082
+		// (get) Token: 0x06008487 RID: 33927 RVA: 0x0013C621 File Offset: 0x0013A821
+		// (set) Token: 0x06008488 RID: 33928 RVA: 0x0013C648 File Offset: 0x0013A848
 		public virtual IFlowDefineNpcGroupPerformType PerformType
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005027 RID: 20519
+		// Token: 0x04005456 RID: 21590
 		[Nullable(2)]
 		protected new FlowDefineNpcGroupPerform FbInstance;
 
-		// Token: 0x04005028 RID: 20520
+		// Token: 0x04005457 RID: 21591
 		[Nullable(2)]
 		protected FlowDefineNpcGroupPerform_SetValue PocoInterface;
 	}

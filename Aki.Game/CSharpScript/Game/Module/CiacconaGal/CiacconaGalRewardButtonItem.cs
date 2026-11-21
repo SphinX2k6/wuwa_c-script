@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BF3 RID: 23539
+	// Token: 0x02004BD3 RID: 19411
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaGalRewardButtonItem : UiPanelBase
 	{
-		// Token: 0x0603B7D0 RID: 243664 RVA: 0x00E2FF1C File Offset: 0x00E2E11C
+		// Token: 0x0603071B RID: 198427 RVA: 0x00D8022C File Offset: 0x00D7E42C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B7D1 RID: 243665 RVA: 0x00E2FFC8 File Offset: 0x00E2E1C8
+		// Token: 0x0603071C RID: 198428 RVA: 0x00D802D8 File Offset: 0x00D7E4D8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CiacconaGalRewardButtonItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B7D2 RID: 243666 RVA: 0x00E3000B File Offset: 0x00E2E20B
+		// Token: 0x0603071D RID: 198429 RVA: 0x00D8031B File Offset: 0x00D7E51B
 		protected override void OnStart()
 		{
 			if (this.NeedRemainTime)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B7D3 RID: 243667 RVA: 0x00E3004A File Offset: 0x00E2E24A
+		// Token: 0x0603071E RID: 198430 RVA: 0x00D8035A File Offset: 0x00D7E55A
 		protected override void OnBeforeDestroy()
 		{
 			if (this.TimerHandle != null)
@@ -63,49 +63,49 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B7D4 RID: 243668 RVA: 0x00E30065 File Offset: 0x00E2E265
+		// Token: 0x0603071F RID: 198431 RVA: 0x00D80375 File Offset: 0x00D7E575
 		public void SetNeedRemainTime(bool need)
 		{
 			this.NeedRemainTime = need;
 		}
 
-		// Token: 0x0603B7D5 RID: 243669 RVA: 0x00E3006E File Offset: 0x00E2E26E
+		// Token: 0x06030720 RID: 198432 RVA: 0x00D8037E File Offset: 0x00D7E57E
 		public void SetOnClick(Action callback)
 		{
 			this.OnClick = callback;
 		}
 
-		// Token: 0x0603B7D6 RID: 243670 RVA: 0x00E30077 File Offset: 0x00E2E277
+		// Token: 0x06030721 RID: 198433 RVA: 0x00D80387 File Offset: 0x00D7E587
 		public void BindRedDot(ERedDotName redDotName, int uId = 0)
 		{
 			this.Button.BindRedDot(redDotName, uId);
 		}
 
-		// Token: 0x0603B7D7 RID: 243671 RVA: 0x00E30086 File Offset: 0x00E2E286
+		// Token: 0x06030722 RID: 198434 RVA: 0x00D80396 File Offset: 0x00D7E596
 		public void UnBindRedDot()
 		{
 			this.Button.UnBindRedDot();
 		}
 
-		// Token: 0x0603B7D8 RID: 243672 RVA: 0x00E30093 File Offset: 0x00E2E293
+		// Token: 0x06030723 RID: 198435 RVA: 0x00D803A3 File Offset: 0x00D7E5A3
 		public void SetRedDotVisible(bool visible)
 		{
 			this.Button.SetRedDotVisible(visible);
 		}
 
-		// Token: 0x0603B7D9 RID: 243673 RVA: 0x00E300A1 File Offset: 0x00E2E2A1
+		// Token: 0x06030724 RID: 198436 RVA: 0x00D803B1 File Offset: 0x00D7E5B1
 		public void SetProgressText(string text)
 		{
 			base.GetText(2).SetText(text, true);
 		}
 
-		// Token: 0x0603B7DA RID: 243674 RVA: 0x00E300B1 File Offset: 0x00E2E2B1
+		// Token: 0x06030725 RID: 198437 RVA: 0x00D803C1 File Offset: 0x00D7E5C1
 		public void SetTitle(string textId)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0603B7DB RID: 243675 RVA: 0x00E300CC File Offset: 0x00E2E2CC
+		// Token: 0x06030726 RID: 198438 RVA: 0x00D803DC File Offset: 0x00D7E5DC
 		private void RefreshTimeStr()
 		{
 			string localTextNew = ConfigMultiTextLang.GetLocalTextNew("Xkjsx_Rewards_Timeless", null);
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			text.SetText(newText, true);
 		}
 
-		// Token: 0x0603B7DC RID: 243676 RVA: 0x00E30114 File Offset: 0x00E2E314
+		// Token: 0x06030727 RID: 198439 RVA: 0x00D80424 File Offset: 0x00D7E624
 		private void OnTick(float _)
 		{
 			this.RefreshTimeStr();
@@ -133,42 +133,42 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B7DD RID: 243677 RVA: 0x00E3017C File Offset: 0x00E2E37C
+		// Token: 0x06030728 RID: 198440 RVA: 0x00D8048C File Offset: 0x00D7E68C
 		private void OnClickInternal()
 		{
 			this.OnClick();
 		}
 
-		// Token: 0x0401EFDE RID: 126942
+		// Token: 0x04019A8F RID: 105103
 		[Nullable(2)]
 		private ButtonSpriteItem Button;
 
-		// Token: 0x0401EFDF RID: 126943
+		// Token: 0x04019A90 RID: 105104
 		private bool NeedRemainTime;
 
-		// Token: 0x0401EFE0 RID: 126944
+		// Token: 0x04019A91 RID: 105105
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0401EFE1 RID: 126945
+		// Token: 0x04019A92 RID: 105106
 		private Action OnClick = delegate()
 		{
 		};
 
-		// Token: 0x0200BDDA RID: 48602
+		// Token: 0x0200A7E2 RID: 42978
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040393EE RID: 234478
+			// Token: 0x04033DB1 RID: 212401
 			public const int ItemBtn = 0;
 
-			// Token: 0x040393EF RID: 234479
+			// Token: 0x04033DB2 RID: 212402
 			public const int TextName = 1;
 
-			// Token: 0x040393F0 RID: 234480
+			// Token: 0x04033DB3 RID: 212403
 			public const int TextNum = 2;
 
-			// Token: 0x040393F1 RID: 234481
+			// Token: 0x04033DB4 RID: 212404
 			public const int TextTime = 3;
 		}
 	}

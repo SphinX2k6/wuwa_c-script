@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005853 RID: 22611
+	// Token: 0x0200482B RID: 18475
 	public class FishTipItem : UiPanelBase
 	{
-		// Token: 0x060397A9 RID: 235433 RVA: 0x00DA55D0 File Offset: 0x00DA37D0
+		// Token: 0x0602E6C6 RID: 190150 RVA: 0x00CF42F8 File Offset: 0x00CF24F8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060397AA RID: 235434 RVA: 0x00DA567C File Offset: 0x00DA387C
+		// Token: 0x0602E6C7 RID: 190151 RVA: 0x00CF43A4 File Offset: 0x00CF25A4
 		public void RefreshByFishingPoint(int pbDataId)
 		{
 			FishingPoint? fishingPointConfigByEntityId = FishingConfig.Instance.GetFishingPointConfigByEntityId(pbDataId);
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.RefreshView(name, showFishIcon, fishingPointConfigByEntityId.Value.UnlockTech, (fishingPointDataByPbEntityId != null) ? new int?(fishingPointDataByPbEntityId.CurrentCount) : null, (fishingPointDataByPbEntityId != null) ? new int?(fishingPointDataByPbEntityId.MaxCount) : null);
 		}
 
-		// Token: 0x060397AB RID: 235435 RVA: 0x00DA5770 File Offset: 0x00DA3970
+		// Token: 0x0602E6C8 RID: 190152 RVA: 0x00CF4498 File Offset: 0x00CF2698
 		public void RefreshByDynamicFishingPoint(long creatureDataId)
 		{
 			TempFishingPointData tempFishingPointDataByCreatureDataId = FishingModel.Instance.GetTempFishingPointDataByCreatureDataId(creatureDataId);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.RefreshView("Fishing_TemporaryPoint", false, -1, new int?(tempFishingPointDataByCreatureDataId.CurrentCount), new int?(tempFishingPointDataByCreatureDataId.MaxCount));
 		}
 
-		// Token: 0x060397AC RID: 235436 RVA: 0x00DA57E0 File Offset: 0x00DA39E0
+		// Token: 0x0602E6C9 RID: 190153 RVA: 0x00CF4508 File Offset: 0x00CF2708
 		[NullableContext(2)]
 		private void RefreshView(string name, bool showFishIcon, int unlockTech, int? currentCount = 0, int? maxCount = 0)
 		{
@@ -125,20 +125,20 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0401E0E3 RID: 123107
+		// Token: 0x04018B80 RID: 101248
 		[Nullable(1)]
 		private const string DYNAMIC_FISHING_POINT_NAME = "Fishing_TemporaryPoint";
 
-		// Token: 0x0200BA77 RID: 47735
+		// Token: 0x0200A48E RID: 42126
 		public enum EChildType
 		{
-			// Token: 0x040385DA RID: 230874
+			// Token: 0x04032FD1 RID: 208849
 			NameText,
-			// Token: 0x040385DB RID: 230875
+			// Token: 0x04032FD2 RID: 208850
 			CountText,
-			// Token: 0x040385DC RID: 230876
+			// Token: 0x04032FD3 RID: 208851
 			LockItem,
-			// Token: 0x040385DD RID: 230877
+			// Token: 0x04032FD4 RID: 208852
 			FishIcon
 		}
 	}

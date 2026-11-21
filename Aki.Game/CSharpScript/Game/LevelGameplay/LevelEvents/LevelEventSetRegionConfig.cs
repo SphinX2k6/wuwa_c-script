@@ -7,15 +7,15 @@ using CSharpScript.Game.Render;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B7A RID: 27514
+	// Token: 0x02005CF2 RID: 23794
 	public class LevelEventSetRegionConfig : LevelEventBase
 	{
-		// Token: 0x06044256 RID: 279126 RVA: 0x010CA108 File Offset: 0x010C8308
+		// Token: 0x0603A3A8 RID: 238504 RVA: 0x01073D7C File Offset: 0x01071F7C
 		public LevelEventSetRegionConfig(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044257 RID: 279127 RVA: 0x010CA114 File Offset: 0x010C8314
+		// Token: 0x0603A3A9 RID: 238505 RVA: 0x01073D88 File Offset: 0x01071F88
 		[NullableContext(1)]
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

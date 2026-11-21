@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.GenericPrompt;
 
 namespace CSharpScript.Game.NewWorld.Character.Monster.Component
 {
-	// Token: 0x020070A2 RID: 28834
+	// Token: 0x02006307 RID: 25351
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HackManagementComponent : EntityComponent
 	{
-		// Token: 0x06046416 RID: 287766 RVA: 0x01194A9C File Offset: 0x01192C9C
+		// Token: 0x0603D504 RID: 251140 RVA: 0x011B7B08 File Offset: 0x011B5D08
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Component
 			return true;
 		}
 
-		// Token: 0x06046417 RID: 287767 RVA: 0x01194AD4 File Offset: 0x01192CD4
+		// Token: 0x0603D505 RID: 251141 RVA: 0x011B7B40 File Offset: 0x011B5D40
 		protected override bool OnStart()
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Component
 			return true;
 		}
 
-		// Token: 0x06046418 RID: 287768 RVA: 0x01194BFC File Offset: 0x01192DFC
+		// Token: 0x0603D506 RID: 251142 RVA: 0x011B7C68 File Offset: 0x011B5E68
 		private void HackingTagListener(int tag, bool tagExist)
 		{
 			double num = Time.Instance.Now - this.LastShowTipTime;
@@ -91,13 +91,13 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Component
 			}
 		}
 
-		// Token: 0x06046419 RID: 287769 RVA: 0x01194C71 File Offset: 0x01192E71
+		// Token: 0x0603D507 RID: 251143 RVA: 0x011B7CDD File Offset: 0x011B5EDD
 		public bool CanHack()
 		{
 			return this.CurrentHackEntity.Count < this.MaxHackCount;
 		}
 
-		// Token: 0x0604641A RID: 287770 RVA: 0x01194C86 File Offset: 0x01192E86
+		// Token: 0x0603D508 RID: 251144 RVA: 0x011B7CF2 File Offset: 0x011B5EF2
 		public void AddHackEntity(Entity entity)
 		{
 			this.CurrentHackEntity.Add(entity);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Component
 			tagComp.TagContainer.UpdateExactTag(ETagChannel.Common, HackManagementConstants.NUM_TAG_ID, -1);
 		}
 
-		// Token: 0x0604641B RID: 287771 RVA: 0x01194CB0 File Offset: 0x01192EB0
+		// Token: 0x0603D509 RID: 251145 RVA: 0x011B7D1C File Offset: 0x011B5F1C
 		public void RemoveHackEntity(Entity entity)
 		{
 			int num = this.CurrentHackEntity.IndexOf(entity);
@@ -125,13 +125,13 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Component
 			}
 		}
 
-		// Token: 0x0604641C RID: 287772 RVA: 0x01194CF6 File Offset: 0x01192EF6
+		// Token: 0x0603D50A RID: 251146 RVA: 0x011B7D62 File Offset: 0x011B5F62
 		public int GetRemainingHackNumber()
 		{
 			return Math.Max(0, this.MaxHackCount - this.CurrentHackEntity.Count);
 		}
 
-		// Token: 0x0604641D RID: 287773 RVA: 0x01194D10 File Offset: 0x01192F10
+		// Token: 0x0603D50B RID: 251147 RVA: 0x011B7D7C File Offset: 0x011B5F7C
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -139,80 +139,72 @@ namespace CSharpScript.Game.NewWorld.Character.Monster.Component
 				return false;
 			}
 			HackManagementComponent hackManagementComponent = (HackManagementComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (hackManagementComponent.Config == null)
 			{
-				if (hackManagementComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<HackManagementComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (hackManagementComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (hackManagementComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MaxHackCount"))
-			{
-				this.MaxHackCount = hackManagementComponent.MaxHackCount;
-			}
-			if (base.CanResetComponentProperty("CurrentHackEntity") && hackManagementComponent.CurrentHackEntity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<Entity>>(this.CurrentHackEntity), "CurrentHackEntity"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("HackNumIsEmpty"))
+			if (hackManagementComponent.CreatureDataComp == null)
 			{
-				this.HackNumIsEmpty = hackManagementComponent.HackNumIsEmpty;
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("LastShowTipTime"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				this.LastShowTipTime = hackManagementComponent.LastShowTipTime;
+				return false;
 			}
+			if (hackManagementComponent.TagComp == null)
+			{
+				this.TagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+			{
+				return false;
+			}
+			this.MaxHackCount = hackManagementComponent.MaxHackCount;
+			if (hackManagementComponent.CurrentHackEntity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentHackEntity), "CurrentHackEntity"))
+			{
+				return false;
+			}
+			this.HackNumIsEmpty = hackManagementComponent.HackNumIsEmpty;
+			this.LastShowTipTime = hackManagementComponent.LastShowTipTime;
 			return true;
 		}
 
-		// Token: 0x04024D09 RID: 150793
+		// Token: 0x17007411 RID: 29713
+		// (get) Token: 0x0603D50C RID: 251148 RVA: 0x011B7E63 File Offset: 0x011B6063
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402085B RID: 133211
 		[Nullable(2)]
 		private HackManagementComponent Config;
 
-		// Token: 0x04024D0A RID: 150794
+		// Token: 0x0402085C RID: 133212
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04024D0B RID: 150795
+		// Token: 0x0402085D RID: 133213
 		[Nullable(2)]
 		private BaseTagComponent TagComp;
 
-		// Token: 0x04024D0C RID: 150796
+		// Token: 0x0402085E RID: 133214
 		private int MaxHackCount;
 
-		// Token: 0x04024D0D RID: 150797
+		// Token: 0x0402085F RID: 133215
 		private readonly List<Entity> CurrentHackEntity = new List<Entity>();
 
-		// Token: 0x04024D0E RID: 150798
+		// Token: 0x04020860 RID: 133216
 		private bool HackNumIsEmpty;
 
-		// Token: 0x04024D0F RID: 150799
+		// Token: 0x04020861 RID: 133217
 		private double LastShowTipTime;
 	}
 }

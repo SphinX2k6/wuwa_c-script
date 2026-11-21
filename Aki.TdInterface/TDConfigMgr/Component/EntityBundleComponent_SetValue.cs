@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000FA RID: 250
+	// Token: 0x02000103 RID: 259
 	public class EntityBundleComponent_SetValue
 	{
-		// Token: 0x0400053C RID: 1340
+		// Token: 0x04000566 RID: 1382
 		public bool? Disabled;
 
-		// Token: 0x0400053D RID: 1341
+		// Token: 0x04000567 RID: 1383
 		public bool? EdIsLocked;
 
-		// Token: 0x0400053E RID: 1342
+		// Token: 0x04000568 RID: 1384
 		public int BundleId;
 
-		// Token: 0x0400053F RID: 1343
-		[Nullable(1)]
+		// Token: 0x04000569 RID: 1385
 		public List<IEntityBundleChildInfo> ChildInfos;
 	}
 }

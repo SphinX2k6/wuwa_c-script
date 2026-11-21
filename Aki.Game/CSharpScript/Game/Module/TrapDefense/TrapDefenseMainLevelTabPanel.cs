@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AB7 RID: 19127
+	// Token: 0x02003A5F RID: 14943
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,13 +13,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseMainLevelTabPanel : TrapDefenseLevelTabPanel<TrapDefenseLevelModeData>
 	{
-		// Token: 0x060318E5 RID: 202981 RVA: 0x00B7DD7F File Offset: 0x00B7BF7F
+		// Token: 0x06026675 RID: 157301 RVA: 0x00AC1D33 File Offset: 0x00ABFF33
 		public TrapDefenseMainLevelTabPanel()
 		{
 			this.ModeData = TrapDefenseModel.Instance.LevelModeData;
 		}
 
-		// Token: 0x060318E6 RID: 202982 RVA: 0x00B7DDA0 File Offset: 0x00B7BFA0
+		// Token: 0x06026676 RID: 157302 RVA: 0x00AC1D54 File Offset: 0x00ABFF54
 		protected override void OnStart()
 		{
 			this.PanelDifficultyChange.SetActive(true);
@@ -28,13 +28,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.PanelDifficultyChange.OnRedDotRightVisibleCallback = new Func<int, bool>(this.OnRedDotRightVisible);
 		}
 
-		// Token: 0x060318E7 RID: 202983 RVA: 0x00B7DDFE File Offset: 0x00B7BFFE
+		// Token: 0x06026677 RID: 157303 RVA: 0x00AC1DB2 File Offset: 0x00ABFFB2
 		public void InitSelectDifficulty(ETrapDefenseDifficultyLevel difficulty)
 		{
 			this.CurSelectDifficulty = difficulty;
 		}
 
-		// Token: 0x060318E8 RID: 202984 RVA: 0x00B7DE08 File Offset: 0x00B7C008
+		// Token: 0x06026678 RID: 157304 RVA: 0x00AC1DBC File Offset: 0x00ABFFBC
 		public override void UpdateModeData()
 		{
 			List<ITrapDefenseDifficultyLevelInfo> difficultyTypeList = this.ModeData.GetDifficultyTypeList();
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.PanelDifficultyChange.UpdateDataList(difficultyTypeList.ToArray(), selectIndex);
 		}
 
-		// Token: 0x060318E9 RID: 202985 RVA: 0x00B7DE54 File Offset: 0x00B7C054
+		// Token: 0x06026679 RID: 157305 RVA: 0x00AC1E08 File Offset: 0x00AC0008
 		public void OnSelectDifficulty(ITrapDefenseDifficultyLevelInfo info)
 		{
 			this.CurSelectDifficulty = info.DifficultyLevel;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			base.UpdateLevelDataList(levelDataListByDifficulty.ToArray());
 		}
 
-		// Token: 0x060318EA RID: 202986 RVA: 0x00B7DE8C File Offset: 0x00B7C08C
+		// Token: 0x0602667A RID: 157306 RVA: 0x00AC1E40 File Offset: 0x00AC0040
 		public bool OnRedDotLeftVisible(int index)
 		{
 			ETrapDefenseDifficultyLevel difficultyLevel = this.DifficultyTypeList[index].DifficultyLevel;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return false;
 		}
 
-		// Token: 0x060318EB RID: 202987 RVA: 0x00B7DF04 File Offset: 0x00B7C104
+		// Token: 0x0602667B RID: 157307 RVA: 0x00AC1EB8 File Offset: 0x00AC00B8
 		public bool OnRedDotRightVisible(int index)
 		{
 			ETrapDefenseDifficultyLevel difficultyLevel = this.DifficultyTypeList[index].DifficultyLevel;
@@ -79,10 +79,10 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return false;
 		}
 
-		// Token: 0x0401A7B3 RID: 108467
+		// Token: 0x04015105 RID: 86277
 		public ETrapDefenseDifficultyLevel CurSelectDifficulty = ETrapDefenseDifficultyLevel.Normal;
 
-		// Token: 0x0401A7B4 RID: 108468
+		// Token: 0x04015106 RID: 86278
 		public ITrapDefenseDifficultyLevelInfo[] DifficultyTypeList;
 	}
 }

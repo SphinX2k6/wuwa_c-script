@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Functional
 {
-	// Token: 0x02005A1B RID: 23067
+	// Token: 0x020049F7 RID: 18935
 	public class FunctionItem : UiPanelBase
 	{
-		// Token: 0x0603A81A RID: 239642 RVA: 0x00DEC2FF File Offset: 0x00DEA4FF
+		// Token: 0x0602F763 RID: 194403 RVA: 0x00D3C88F File Offset: 0x00D3AA8F
 		[NullableContext(1)]
 		public FunctionItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603A81B RID: 239643 RVA: 0x00DEC314 File Offset: 0x00DEA514
+		// Token: 0x0602F764 RID: 194404 RVA: 0x00D3C8A4 File Offset: 0x00D3AAA4
 		[NullableContext(2)]
 		public UUIItem GetButtonItem()
 		{
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Functional
 			return tweakObjectPtr.GetValueOrDefault();
 		}
 
-		// Token: 0x0603A81C RID: 239644 RVA: 0x00DEC35C File Offset: 0x00DEA55C
+		// Token: 0x0602F765 RID: 194405 RVA: 0x00D3C8EC File Offset: 0x00D3AAEC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Functional
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A81D RID: 239645 RVA: 0x00DEC468 File Offset: 0x00DEA668
+		// Token: 0x0602F766 RID: 194406 RVA: 0x00D3C9F8 File Offset: 0x00D3ABF8
 		private void ButtonClick()
 		{
 			if (this.FunctionId != 0)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A81E RID: 239646 RVA: 0x00DEC4E8 File Offset: 0x00DEA6E8
+		// Token: 0x0602F767 RID: 194407 RVA: 0x00D3CA78 File Offset: 0x00D3AC78
 		public void UpdateItem(int functionId)
 		{
 			this.FunctionId = functionId;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Functional
 			this.BindRedDot();
 		}
 
-		// Token: 0x0603A81F RID: 239647 RVA: 0x00DEC5A0 File Offset: 0x00DEA7A0
+		// Token: 0x0602F768 RID: 194408 RVA: 0x00D3CB30 File Offset: 0x00D3AD30
 		private void BindRedDot()
 		{
 			if (this.FunctionId == 0)
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A820 RID: 239648 RVA: 0x00DEC604 File Offset: 0x00DEA804
+		// Token: 0x0602F769 RID: 194409 RVA: 0x00D3CB94 File Offset: 0x00D3AD94
 		private void UnBindRedDot()
 		{
 			if (this.RedDotName != null)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Functional
 			}
 		}
 
-		// Token: 0x0603A821 RID: 239649 RVA: 0x00DEC649 File Offset: 0x00DEA849
+		// Token: 0x0602F76A RID: 194410 RVA: 0x00D3CBD9 File Offset: 0x00D3ADD9
 		protected override void OnBeforeDestroy()
 		{
 			this.UnBindRedDot();
@@ -153,28 +153,28 @@ namespace CSharpScript.Game.Module.Functional
 			button.OnPointExitCallBack.Unbind();
 		}
 
-		// Token: 0x0401E79D RID: 124829
+		// Token: 0x04019244 RID: 102980
 		protected int FunctionId;
 
-		// Token: 0x0401E79E RID: 124830
+		// Token: 0x04019245 RID: 102981
 		private ERedDotName? RedDotName;
 
-		// Token: 0x0200BC90 RID: 48272
+		// Token: 0x0200A699 RID: 42649
 		private class EFunctionItemDefine
 		{
-			// Token: 0x04038E34 RID: 233012
+			// Token: 0x040337FF RID: 210943
 			public const int LockIcon = 0;
 
-			// Token: 0x04038E35 RID: 233013
+			// Token: 0x04033800 RID: 210944
 			public const int FunctionName = 1;
 
-			// Token: 0x04038E36 RID: 233014
+			// Token: 0x04033801 RID: 210945
 			public const int Button = 2;
 
-			// Token: 0x04038E37 RID: 233015
+			// Token: 0x04033802 RID: 210946
 			public const int IconSpriteTransition = 3;
 
-			// Token: 0x04038E38 RID: 233016
+			// Token: 0x04033803 RID: 210947
 			public const int RedDotItem = 4;
 		}
 	}

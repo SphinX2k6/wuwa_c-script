@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002FD0 RID: 12240
+// Token: 0x02002524 RID: 9508
 [NullableContext(1)]
 [Nullable(0)]
 public class GameplayCueRopeEffectComponent : GameplayCueBase
 {
-	// Token: 0x06019F28 RID: 106280 RVA: 0x006C9E55 File Offset: 0x006C8055
+	// Token: 0x0601783A RID: 96314 RVA: 0x006F0749 File Offset: 0x006EE949
 	protected override void OnInit()
 	{
 	}
 
-	// Token: 0x06019F29 RID: 106281 RVA: 0x006C9E58 File Offset: 0x006C8058
+	// Token: 0x0601783B RID: 96315 RVA: 0x006F074C File Offset: 0x006EE94C
 	protected override void OnTick(float delta)
 	{
 		URopeEffectComponent ropeEffectComponent = this.RopeEffectComponent;
@@ -31,7 +31,7 @@ public class GameplayCueRopeEffectComponent : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019F2A RID: 106282 RVA: 0x006C9EB8 File Offset: 0x006C80B8
+	// Token: 0x0601783C RID: 96316 RVA: 0x006F07AC File Offset: 0x006EE9AC
 	protected override void OnCreate()
 	{
 		if (this.ActorInternal == null || this.ActorInternal.Mesh == null)
@@ -61,7 +61,7 @@ public class GameplayCueRopeEffectComponent : GameplayCueBase
 		this.LoadRopeDataAsset();
 	}
 
-	// Token: 0x06019F2B RID: 106283 RVA: 0x006C9FA8 File Offset: 0x006C81A8
+	// Token: 0x0601783D RID: 96317 RVA: 0x006F089C File Offset: 0x006EEA9C
 	protected override void OnDestroy()
 	{
 		this.IsActive = false;
@@ -79,13 +79,13 @@ public class GameplayCueRopeEffectComponent : GameplayCueBase
 		this.LastHidden = null;
 	}
 
-	// Token: 0x06019F2C RID: 106284 RVA: 0x006CA015 File Offset: 0x006C8215
+	// Token: 0x0601783E RID: 96318 RVA: 0x006F0909 File Offset: 0x006EEB09
 	public new static bool IsSingleInstance()
 	{
 		return false;
 	}
 
-	// Token: 0x06019F2D RID: 106285 RVA: 0x006CA018 File Offset: 0x006C8218
+	// Token: 0x0601783F RID: 96319 RVA: 0x006F090C File Offset: 0x006EEB0C
 	private unsafe void LoadRopeDataAsset()
 	{
 		URopeEffectComponent comp = this.RopeEffectComponent;
@@ -141,7 +141,7 @@ public class GameplayCueRopeEffectComponent : GameplayCueBase
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06019F2E RID: 106286 RVA: 0x006CA084 File Offset: 0x006C8284
+	// Token: 0x06017840 RID: 96320 RVA: 0x006F0978 File Offset: 0x006EEB78
 	private unsafe void LoadAndApplyNiagaraAsset(ARopeEffectSplineActor ropeActor, int generation)
 	{
 		string niagaraPath = base.GetPath();
@@ -177,16 +177,16 @@ public class GameplayCueRopeEffectComponent : GameplayCueBase
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0400C467 RID: 50279
+	// Token: 0x0400C810 RID: 51216
 	[Nullable(2)]
 	private URopeEffectComponent RopeEffectComponent;
 
-	// Token: 0x0400C468 RID: 50280
+	// Token: 0x0400C811 RID: 51217
 	private bool? LastHidden;
 
-	// Token: 0x0400C469 RID: 50281
+	// Token: 0x0400C812 RID: 51218
 	private int LoadGeneration;
 
-	// Token: 0x0400C46A RID: 50282
+	// Token: 0x0400C813 RID: 51219
 	private const string DEFAULT_ROPE_DATA_ASSET_PATH = "/Game/Aki/Render/RuntimeBP/RopeEffectComponent/DA/RopeDA.RopeDA";
 }

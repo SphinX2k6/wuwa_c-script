@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 {
-	// Token: 0x02006E5A RID: 28250
+	// Token: 0x02005FDB RID: 24539
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FindSunSpiritGuideLine
 	{
-		// Token: 0x06044D9C RID: 282012 RVA: 0x010FE220 File Offset: 0x010FC420
+		// Token: 0x0603AF29 RID: 241449 RVA: 0x010A8780 File Offset: 0x010A6980
 		public void Init(Transform transform)
 		{
 			AActor splineActor = this.SplineActor;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			this.SplinePoints = new TArray<FVectorDouble>();
 		}
 
-		// Token: 0x06044D9D RID: 282013 RVA: 0x010FE2A8 File Offset: 0x010FC4A8
+		// Token: 0x0603AF2A RID: 241450 RVA: 0x010A8808 File Offset: 0x010A6A08
 		public void Clear()
 		{
 			this.SplineComp = null;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			EffectSystem.Instance.StopEffectById(effectHandle, "[FindSunSpiritGuideLine.Clear]", false, null);
 		}
 
-		// Token: 0x06044D9E RID: 282014 RVA: 0x010FE32C File Offset: 0x010FC52C
+		// Token: 0x0603AF2B RID: 241451 RVA: 0x010A888C File Offset: 0x010A6A8C
 		public void SpawnGuideLine(string effectPath, Vector[] path, int duration)
 		{
 			AActor splineActor = this.SplineActor;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			this.StopEffectTimer = TimerSystem.GameplayTimeInstance.Delay(new TTimerAction(this.StopEffect), (float)duration, null, null, true, 1f);
 		}
 
-		// Token: 0x06044D9F RID: 282015 RVA: 0x010FE4A0 File Offset: 0x010FC6A0
+		// Token: 0x0603AF2C RID: 241452 RVA: 0x010A8A00 File Offset: 0x010A6C00
 		private void UpdateSplinePoint(Vector[] path)
 		{
 			this.SplinePoints.Empty(true);
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			this.SplineComp.D_SetSplinePoints(this.SplinePoints, ESplineCoordinateSpace.World, true);
 		}
 
-		// Token: 0x06044DA0 RID: 282016 RVA: 0x010FE4F4 File Offset: 0x010FC6F4
+		// Token: 0x0603AF2D RID: 241453 RVA: 0x010A8A54 File Offset: 0x010A6C54
 		private void StopEffect(float _)
 		{
 			this.StopEffectTimer = null;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			}
 		}
 
-		// Token: 0x06044DA2 RID: 282018 RVA: 0x010FE54D File Offset: 0x010FC74D
+		// Token: 0x0603AF2F RID: 241455 RVA: 0x010A8AAD File Offset: 0x010A6CAD
 		[CompilerGenerated]
 		private void <Clear>g__clearSplineActor|7_0(int _)
 		{
@@ -126,25 +126,25 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			}
 		}
 
-		// Token: 0x04023D2F RID: 146735
+		// Token: 0x0401EFE4 RID: 126948
 		[Nullable(2)]
 		private AActor SplineActor;
 
-		// Token: 0x04023D30 RID: 146736
+		// Token: 0x0401EFE5 RID: 126949
 		[Nullable(2)]
 		private USplineComponent SplineComp;
 
-		// Token: 0x04023D31 RID: 146737
+		// Token: 0x0401EFE6 RID: 126950
 		[Nullable(2)]
 		private TArray<FVectorDouble> SplinePoints;
 
-		// Token: 0x04023D32 RID: 146738
+		// Token: 0x0401EFE7 RID: 126951
 		private string EffectPath = "";
 
-		// Token: 0x04023D33 RID: 146739
+		// Token: 0x0401EFE8 RID: 126952
 		private int EffectHandle;
 
-		// Token: 0x04023D34 RID: 146740
+		// Token: 0x0401EFE9 RID: 126953
 		[Nullable(2)]
 		private TimerHandle StopEffectTimer;
 	}

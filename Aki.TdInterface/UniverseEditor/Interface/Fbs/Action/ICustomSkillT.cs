@@ -1,24 +1,31 @@
 ﻿using System;
+using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200651A RID: 25882
+	// Token: 0x02006B88 RID: 27528
 	public class ICustomSkillT
 	{
-		// Token: 0x1700C072 RID: 49266
-		// (get) Token: 0x0602CE5F RID: 183903 RVA: 0x0062A7EC File Offset: 0x006289EC
-		// (set) Token: 0x0602CE60 RID: 183904 RVA: 0x0062A7F4 File Offset: 0x006289F4
+		// Token: 0x1700CA03 RID: 51715
+		// (get) Token: 0x0602F5FB RID: 194043 RVA: 0x00676C3D File Offset: 0x00674E3D
+		// (set) Token: 0x0602F5FC RID: 194044 RVA: 0x00676C45 File Offset: 0x00674E45
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x1700C073 RID: 49267
-		// (get) Token: 0x0602CE61 RID: 183905 RVA: 0x0062A7FD File Offset: 0x006289FD
-		// (set) Token: 0x0602CE62 RID: 183906 RVA: 0x0062A805 File Offset: 0x00628A05
+		// Token: 0x1700CA04 RID: 51716
+		// (get) Token: 0x0602F5FD RID: 194045 RVA: 0x00676C4E File Offset: 0x00674E4E
+		// (set) Token: 0x0602F5FE RID: 194046 RVA: 0x00676C56 File Offset: 0x00674E56
+		public TCommonTargetUnion Target { get; set; }
+
+		// Token: 0x1700CA05 RID: 51717
+		// (get) Token: 0x0602F5FF RID: 194047 RVA: 0x00676C5F File Offset: 0x00674E5F
+		// (set) Token: 0x0602F600 RID: 194048 RVA: 0x00676C67 File Offset: 0x00674E67
 		public int SkillId { get; set; }
 
-		// Token: 0x0602CE63 RID: 183907 RVA: 0x0062A80E File Offset: 0x00628A0E
+		// Token: 0x0602F601 RID: 194049 RVA: 0x00676C70 File Offset: 0x00674E70
 		public ICustomSkillT()
 		{
 			this.Type = ELeisureInteract.CustomSkill;
+			this.Target = null;
 			this.SkillId = 0;
 		}
 	}

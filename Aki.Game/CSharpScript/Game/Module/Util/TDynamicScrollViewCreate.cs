@@ -4,7 +4,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048D4 RID: 18644
-	// (Invoke) Token: 0x06030B9E RID: 199582
+	// Token: 0x0200384B RID: 14411
+	// (Invoke) Token: 0x060256CA RID: 153290
 	public delegate TItem TDynamicScrollViewCreate<[Nullable(2)] TItem, [Nullable(2)] TData>(TData data, UUIItem uiItem, int index);
 }

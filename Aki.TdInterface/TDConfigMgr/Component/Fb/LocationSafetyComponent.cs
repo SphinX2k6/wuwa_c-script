@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D3E RID: 3390
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E38 RID: 3640
 	public class LocationSafetyComponent : IComponentBase
 	{
-		// Token: 0x06004D4F RID: 19791 RVA: 0x000C062E File Offset: 0x000BE82E
+		// Token: 0x0600526B RID: 21099 RVA: 0x000CBD72 File Offset: 0x000C9F72
 		public static LocationSafetyComponent Create(ILocationSafetyComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001890 RID: 6288
-		// (get) Token: 0x06004D50 RID: 19792 RVA: 0x000C0650 File Offset: 0x000BE850
+		// Token: 0x170019F6 RID: 6646
+		// (get) Token: 0x0600526C RID: 21100 RVA: 0x000CBD94 File Offset: 0x000C9F94
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001891 RID: 6289
-		// (get) Token: 0x06004D51 RID: 19793 RVA: 0x000C0688 File Offset: 0x000BE888
+		// Token: 0x170019F7 RID: 6647
+		// (get) Token: 0x0600526D RID: 21101 RVA: 0x000CBDCC File Offset: 0x000C9FCC
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001892 RID: 6290
-		// (get) Token: 0x06004D52 RID: 19794 RVA: 0x000C069E File Offset: 0x000BE89E
+		// Token: 0x170019F8 RID: 6648
+		// (get) Token: 0x0600526E RID: 21102 RVA: 0x000CBDE2 File Offset: 0x000C9FE2
 		public virtual EDetectionFrequency DetectionFrequency
 		{
 			get
@@ -57,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001893 RID: 6291
-		// (get) Token: 0x06004D53 RID: 19795 RVA: 0x000C06AB File Offset: 0x000BE8AB
+		// Token: 0x170019F9 RID: 6649
+		// (get) Token: 0x0600526F RID: 21103 RVA: 0x000CBDEF File Offset: 0x000C9FEF
 		public virtual VectorInfo SafeLocation
 		{
 			get
@@ -73,14 +71,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C57 RID: 11351
+		// Token: 0x04002F17 RID: 12055
 		private ILocationSafetyComponent Instance;
 
-		// Token: 0x04002C58 RID: 11352
+		// Token: 0x04002F18 RID: 12056
 		[Nullable(2)]
 		private VectorInfo _SafeLocationCache;
 
-		// Token: 0x04002C59 RID: 11353
+		// Token: 0x04002F19 RID: 12057
 		private bool _SafeLocationInited;
 	}
 }

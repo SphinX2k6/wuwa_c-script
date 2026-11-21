@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Core.Framework
 {
-	// Token: 0x02000134 RID: 308
+	// Token: 0x02000139 RID: 313
 	public interface IModelManagerBase
 	{
 	}

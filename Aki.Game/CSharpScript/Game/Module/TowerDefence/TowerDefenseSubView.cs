@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B5D RID: 19293
+	// Token: 0x02003B05 RID: 15109
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TowerDefenseSubView : ActivitySubViewBase
 	{
-		// Token: 0x06031F3F RID: 204607 RVA: 0x00B978CC File Offset: 0x00B95ACC
+		// Token: 0x06026CCE RID: 158926 RVA: 0x00ADBB08 File Offset: 0x00AD9D08
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -45,19 +45,19 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031F40 RID: 204608 RVA: 0x00B979FB File Offset: 0x00B95BFB
+		// Token: 0x06026CCF RID: 158927 RVA: 0x00ADBC37 File Offset: 0x00AD9E37
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<IActivityRewardViewData>(EEventName.RefreshCommonActivityRewardPopUpView, new Action<IActivityRewardViewData>(this.RefreshRewardRedDot));
 		}
 
-		// Token: 0x06031F41 RID: 204609 RVA: 0x00B97A19 File Offset: 0x00B95C19
+		// Token: 0x06026CD0 RID: 158928 RVA: 0x00ADBC55 File Offset: 0x00AD9E55
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<IActivityRewardViewData>(EEventName.RefreshCommonActivityRewardPopUpView, new Action<IActivityRewardViewData>(this.RefreshRewardRedDot));
 		}
 
-		// Token: 0x06031F42 RID: 204610 RVA: 0x00B97A38 File Offset: 0x00B95C38
+		// Token: 0x06026CD1 RID: 158929 RVA: 0x00ADBC74 File Offset: 0x00AD9E74
 		private UniTask LoadBgResource()
 		{
 			TowerDefenseSubView.<LoadBgResource>d__8 <LoadBgResource>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <LoadBgResource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F43 RID: 204611 RVA: 0x00B97A7C File Offset: 0x00B95C7C
+		// Token: 0x06026CD2 RID: 158930 RVA: 0x00ADBCB8 File Offset: 0x00AD9EB8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TowerDefenseSubView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F44 RID: 204612 RVA: 0x00B97AC0 File Offset: 0x00B95CC0
+		// Token: 0x06026CD3 RID: 158931 RVA: 0x00ADBCFC File Offset: 0x00AD9EFC
 		protected override void OnRefreshView()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -97,14 +97,14 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshButtonRedDot();
 		}
 
-		// Token: 0x06031F45 RID: 204613 RVA: 0x00B97B14 File Offset: 0x00B95D14
+		// Token: 0x06026CD4 RID: 158932 RVA: 0x00ADBD50 File Offset: 0x00AD9F50
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshTimerText();
 			this.RefreshFunctionalComponent();
 		}
 
-		// Token: 0x06031F46 RID: 204614 RVA: 0x00B97B24 File Offset: 0x00B95D24
+		// Token: 0x06026CD5 RID: 158933 RVA: 0x00ADBD60 File Offset: 0x00AD9F60
 		private void TryShowNewUnlockTips()
 		{
 			if (TowerDefenseController.Instance.GetIsFirstOpen())
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031F47 RID: 204615 RVA: 0x00B97B60 File Offset: 0x00B95D60
+		// Token: 0x06026CD6 RID: 158934 RVA: 0x00ADBD9C File Offset: 0x00AD9F9C
 		private void RefreshTitle()
 		{
 			string activitySubViewTitle = TowerDefenseController.Instance.GetActivitySubViewTitle();
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.TitleComponent.SetTitleByText(activitySubViewTitle);
 		}
 
-		// Token: 0x06031F48 RID: 204616 RVA: 0x00B97B98 File Offset: 0x00B95D98
+		// Token: 0x06026CD7 RID: 158935 RVA: 0x00ADBDD4 File Offset: 0x00AD9FD4
 		private void RefreshTimerText()
 		{
 			ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031F49 RID: 204617 RVA: 0x00B97BD4 File Offset: 0x00B95DD4
+		// Token: 0x06026CD8 RID: 158936 RVA: 0x00ADBE10 File Offset: 0x00ADA010
 		private void RefreshDesc()
 		{
 			Activity activityCfg = TowerDefenseController.Instance.GetActivityCfg();
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.DescriptionComponent.SetContentByTextId(desc, Array.Empty<string>());
 		}
 
-		// Token: 0x06031F4A RID: 204618 RVA: 0x00B97C38 File Offset: 0x00B95E38
+		// Token: 0x06026CD9 RID: 158937 RVA: 0x00ADBE74 File Offset: 0x00ADA074
 		private void RefreshReward()
 		{
 			List<TItem> activityPreviewReward = TowerDefenseController.Instance.GetActivityPreviewReward();
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RewardListComponent.RefreshItemLayout(activityPreviewReward, null);
 		}
 
-		// Token: 0x06031F4B RID: 204619 RVA: 0x00B97C8C File Offset: 0x00B95E8C
+		// Token: 0x06026CDA RID: 158938 RVA: 0x00ADBEC8 File Offset: 0x00ADA0C8
 		private void RefreshFunctionalComponent()
 		{
 			if (!TowerDefenseController.Instance.CheckActivityUnlockByMulti())
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RewardButtonItem.SetUiActive(flag);
 		}
 
-		// Token: 0x06031F4C RID: 204620 RVA: 0x00B97D96 File Offset: 0x00B95F96
+		// Token: 0x06026CDB RID: 158939 RVA: 0x00ADBFD2 File Offset: 0x00ADA1D2
 		private void HandleOnClickConfirm()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -217,29 +217,29 @@ namespace CSharpScript.Game.Module.TowerDefence
 			});
 		}
 
-		// Token: 0x06031F4D RID: 204621 RVA: 0x00B97DB4 File Offset: 0x00B95FB4
+		// Token: 0x06026CDC RID: 158940 RVA: 0x00ADBFF0 File Offset: 0x00ADA1F0
 		[NullableContext(1)]
 		private void RefreshRewardRedDot(IActivityRewardViewData activityRewardViewData = null)
 		{
 			this.RewardButtonItem.SetRedDotVisible(TowerDefenseController.Instance.CheckHasReward());
 		}
 
-		// Token: 0x06031F4E RID: 204622 RVA: 0x00B97DCB File Offset: 0x00B95FCB
+		// Token: 0x06026CDD RID: 158941 RVA: 0x00ADC007 File Offset: 0x00ADA207
 		private void RefreshButtonRedDot()
 		{
 			this.FunctionalComponent.SetFunctionRedDotVisible(TowerDefenseController.Instance.CheckHasNewStage());
 		}
 
-		// Token: 0x0401AA2B RID: 109099
+		// Token: 0x0401537D RID: 86909
 		private ActivityDescriptionTypeA DescriptionComponent;
 
-		// Token: 0x0401AA2C RID: 109100
+		// Token: 0x0401537E RID: 86910
 		private ActivityFunctionalTypeA FunctionalComponent;
 
-		// Token: 0x0401AA2D RID: 109101
+		// Token: 0x0401537F RID: 86911
 		private ActivityButtonItem RewardButtonItem;
 
-		// Token: 0x0401AA2E RID: 109102
+		// Token: 0x04015380 RID: 86912
 		[Nullable(new byte[]
 		{
 			2,
@@ -247,35 +247,35 @@ namespace CSharpScript.Game.Module.TowerDefence
 		})]
 		private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-		// Token: 0x0401AA2F RID: 109103
+		// Token: 0x04015381 RID: 86913
 		private ActivityTitleTypeA TitleComponent;
 
-		// Token: 0x0200ACEC RID: 44268
+		// Token: 0x0200970B RID: 38667
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x040348AC RID: 215212
+			// Token: 0x0402F255 RID: 193109
 			public const int TitleItem = 0;
 
-			// Token: 0x040348AD RID: 215213
+			// Token: 0x0402F256 RID: 193110
 			public const int DescItem = 1;
 
-			// Token: 0x040348AE RID: 215214
+			// Token: 0x0402F257 RID: 193111
 			public const int RewardItem = 2;
 
-			// Token: 0x040348AF RID: 215215
+			// Token: 0x0402F258 RID: 193112
 			public const int FunctionalAreaItem = 3;
 
-			// Token: 0x040348B0 RID: 215216
+			// Token: 0x0402F259 RID: 193113
 			public const int BgAttachItem = 4;
 
-			// Token: 0x040348B1 RID: 215217
+			// Token: 0x0402F25A RID: 193114
 			public const int RewardButtonItem = 5;
 
-			// Token: 0x040348B2 RID: 215218
+			// Token: 0x0402F25B RID: 193115
 			public const int TipsItem = 6;
 
-			// Token: 0x040348B3 RID: 215219
+			// Token: 0x0402F25C RID: 193116
 			public const int TipsText = 7;
 		}
 	}

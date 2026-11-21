@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BD9 RID: 7129
+	// Token: 0x02001DC2 RID: 7618
 	public class IMechStuntLevelFly_SetValue
 	{
-		// Token: 0x04005D18 RID: 23832
+		// Token: 0x04006231 RID: 25137
 		public EMechStuntType Type;
 	}
 }

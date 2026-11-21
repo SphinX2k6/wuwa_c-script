@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200040F RID: 1039
+	// Token: 0x02000425 RID: 1061
 	public class ConfigHonamiStoryWeaponSuitByWeaponPluginType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001861 RID: 6241 RVA: 0x000E3AA4 File Offset: 0x000E1CA4
+		// Token: 0x060018E5 RID: 6373 RVA: 0x000EA1F8 File Offset: 0x000E83F8
 		static ConfigHonamiStoryWeaponSuitByWeaponPluginType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHonamiStoryWeaponSuitByWeaponPluginType.CreateStaticDefaultValue), new Action(ConfigHonamiStoryWeaponSuitByWeaponPluginType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001862 RID: 6242 RVA: 0x000E3AC4 File Offset: 0x000E1CC4
+		// Token: 0x060018E6 RID: 6374 RVA: 0x000EA218 File Offset: 0x000E8418
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHonamiStoryWeaponSuitByWeaponPluginType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001863 RID: 6243 RVA: 0x000E3B43 File Offset: 0x000E1D43
+		// Token: 0x060018E7 RID: 6375 RVA: 0x000EA297 File Offset: 0x000E8497
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHonamiStoryWeaponSuitByWeaponPluginType.LogPair = null;
 			ConfigHonamiStoryWeaponSuitByWeaponPluginType.HandleId = 0;
 		}
 
-		// Token: 0x06001864 RID: 6244 RVA: 0x000E3B51 File Offset: 0x000E1D51
+		// Token: 0x060018E8 RID: 6376 RVA: 0x000EA2A5 File Offset: 0x000E84A5
 		public static void Init()
 		{
 			ConfigHonamiStoryWeaponSuitByWeaponPluginType.HandleId = ConfigCommon.InitDataStatement(ConfigHonamiStoryWeaponSuitByWeaponPluginType.HandleId, "db_honamistory.db", "select BinData from `HonamiStoryWeaponSuit` where WeaponPluginType=?");
 		}
 
-		// Token: 0x06001865 RID: 6245 RVA: 0x000E3B6C File Offset: 0x000E1D6C
+		// Token: 0x060018E9 RID: 6377 RVA: 0x000EA2C0 File Offset: 0x000E84C0
 		[NullableContext(2)]
 		public static IReadOnlyList<HonamiStoryWeaponSuit> GetConfigList(int p0WeaponPluginType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001C4D RID: 7245
+		// Token: 0x04001CE7 RID: 7399
 		private const string DB = "db_honamistory.db";
 
-		// Token: 0x04001C4E RID: 7246
+		// Token: 0x04001CE8 RID: 7400
 		private const string FILE = "s.穗波奇妙物语装备栏.xlsx";
 
-		// Token: 0x04001C4F RID: 7247
+		// Token: 0x04001CE9 RID: 7401
 		private const string TABLE = "HonamiStoryWeaponSuit";
 
-		// Token: 0x04001C50 RID: 7248
+		// Token: 0x04001CEA RID: 7402
 		private const string COMMAND = "select BinData from `HonamiStoryWeaponSuit` where WeaponPluginType=?";
 
-		// Token: 0x04001C51 RID: 7249
+		// Token: 0x04001CEB RID: 7403
 		private const string KEY_PREFIX = "HonamiStoryWeaponSuitByWeaponPluginType";
 
-		// Token: 0x04001C52 RID: 7250
+		// Token: 0x04001CEC RID: 7404
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001C53 RID: 7251
+		// Token: 0x04001CED RID: 7405
 		private static int HandleId;
 	}
 }

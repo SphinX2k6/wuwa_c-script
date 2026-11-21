@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020031CB RID: 12747
+// Token: 0x0200273A RID: 10042
 [NullableContext(1)]
 [Nullable(0)]
 public class MonsterDebugComponent : EntityComponent
 {
-	// Token: 0x0601B7B0 RID: 112560 RVA: 0x007871B8 File Offset: 0x007853B8
+	// Token: 0x060192F3 RID: 103155 RVA: 0x007AF278 File Offset: 0x007AD478
 	protected override bool OnStart()
 	{
 		EventSystem.Instance.AddWithTarget<int>(base.Entity, EEventName.MonsterDebug, new Action<int>(this.MonsterDebug));
@@ -17,7 +17,7 @@ public class MonsterDebugComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B7B1 RID: 112561 RVA: 0x00787223 File Offset: 0x00785423
+	// Token: 0x060192F4 RID: 103156 RVA: 0x007AF2E3 File Offset: 0x007AD4E3
 	protected override void OnTick(float delta)
 	{
 		if (this.HasBeenHit && !this.MarkedDirty)
@@ -26,7 +26,7 @@ public class MonsterDebugComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B7B2 RID: 112562 RVA: 0x00787244 File Offset: 0x00785444
+	// Token: 0x060192F5 RID: 103157 RVA: 0x007AF304 File Offset: 0x007AD504
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget<int>(base.Entity, EEventName.MonsterDebug, new Action<int>(this.MonsterDebug));
@@ -36,7 +36,7 @@ public class MonsterDebugComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B7B3 RID: 112563 RVA: 0x007872B8 File Offset: 0x007854B8
+	// Token: 0x060192F6 RID: 103158 RVA: 0x007AF378 File Offset: 0x007AD578
 	private void MonsterDebug(int attackerEntityId)
 	{
 		if (this.HasBeenHit)
@@ -85,7 +85,7 @@ public class MonsterDebugComponent : EntityComponent
 		this.HasBeenHit = true;
 	}
 
-	// Token: 0x0601B7B4 RID: 112564 RVA: 0x00787360 File Offset: 0x00785560
+	// Token: 0x060192F7 RID: 103159 RVA: 0x007AF420 File Offset: 0x007AD620
 	private bool ShouldIgnoreOwnConcomitantDebug()
 	{
 		if (this.IsOwnConcomitantTarget != null)
@@ -111,13 +111,13 @@ public class MonsterDebugComponent : EntityComponent
 		return this.IsOwnConcomitantTarget.Value;
 	}
 
-	// Token: 0x0601B7B5 RID: 112565 RVA: 0x007873E6 File Offset: 0x007855E6
+	// Token: 0x060192F8 RID: 103160 RVA: 0x007AF4A6 File Offset: 0x007AD6A6
 	private void OnBeDamage(Entity attacker, Entity victim, RequirementPayload requirements, DamageResult damageResult, FVectorDouble damagePosition)
 	{
 		this.HasBeenDamaged = true;
 	}
 
-	// Token: 0x0601B7B6 RID: 112566 RVA: 0x007873EF File Offset: 0x007855EF
+	// Token: 0x060192F9 RID: 103161 RVA: 0x007AF4AF File Offset: 0x007AD6AF
 	private unsafe void SetTimer()
 	{
 		this.Timer = TimerSystem.FlowTimeInstance.Delay(delegate(float _)
@@ -219,7 +219,7 @@ public class MonsterDebugComponent : EntityComponent
 		}, 5000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601B7B7 RID: 112567 RVA: 0x0078741A File Offset: 0x0078561A
+	// Token: 0x060192FA RID: 103162 RVA: 0x007AF4DA File Offset: 0x007AD6DA
 	private void DestroyTimer()
 	{
 		if (TimerSystem.FlowTimeInstance.Has(this.Timer))
@@ -229,7 +229,7 @@ public class MonsterDebugComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B7B8 RID: 112568 RVA: 0x00787446 File Offset: 0x00785646
+	// Token: 0x060192FB RID: 103163 RVA: 0x007AF506 File Offset: 0x007AD706
 	private void OnBattleStateChanged(bool inFight)
 	{
 		if (inFight)
@@ -238,7 +238,7 @@ public class MonsterDebugComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B7B9 RID: 112569 RVA: 0x00787454 File Offset: 0x00785654
+	// Token: 0x060192FC RID: 103164 RVA: 0x007AF514 File Offset: 0x007AD714
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -246,69 +246,78 @@ public class MonsterDebugComponent : EntityComponent
 			return false;
 		}
 		MonsterDebugComponent monsterDebugComponent = (MonsterDebugComponent)componentTemplate;
-		if (base.CanResetComponentProperty("TimeCount"))
+		this.TimeCount = monsterDebugComponent.TimeCount;
+		this.HasBeenHit = monsterDebugComponent.HasBeenHit;
+		this.HasBeenDamaged = monsterDebugComponent.HasBeenDamaged;
+		if (monsterDebugComponent.Timer == null)
 		{
-			this.TimeCount = monsterDebugComponent.TimeCount;
+			this.Timer = null;
 		}
-		if (base.CanResetComponentProperty("HasBeenHit"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Timer), "Timer"))
 		{
-			this.HasBeenHit = monsterDebugComponent.HasBeenHit;
+			return false;
 		}
-		if (base.CanResetComponentProperty("HasBeenDamaged"))
-		{
-			this.HasBeenDamaged = monsterDebugComponent.HasBeenDamaged;
-		}
-		if (base.CanResetComponentProperty("Timer"))
-		{
-			if (monsterDebugComponent.Timer == null)
-			{
-				this.Timer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.Timer), "Timer"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MarkedDirty"))
-		{
-			this.MarkedDirty = monsterDebugComponent.MarkedDirty;
-		}
-		if (base.CanResetComponentProperty("IsInFight"))
-		{
-			this.IsInFight = monsterDebugComponent.IsInFight;
-		}
-		if (base.CanResetComponentProperty("IsOwnConcomitantTarget"))
-		{
-			this.IsOwnConcomitantTarget = monsterDebugComponent.IsOwnConcomitantTarget;
-		}
+		this.MarkedDirty = monsterDebugComponent.MarkedDirty;
+		this.IsInFight = monsterDebugComponent.IsInFight;
+		this.IsOwnConcomitantTarget = monsterDebugComponent.IsOwnConcomitantTarget;
 		return true;
 	}
 
-	// Token: 0x0400D7A1 RID: 55201
+	// Token: 0x17002813 RID: 10259
+	// (get) Token: 0x060192FD RID: 103165 RVA: 0x007AF5A7 File Offset: 0x007AD7A7
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002814 RID: 10260
+	// (get) Token: 0x060192FE RID: 103166 RVA: 0x007AF5AA File Offset: 0x007AD7AA
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002815 RID: 10261
+	// (get) Token: 0x060192FF RID: 103167 RVA: 0x007AF5AD File Offset: 0x007AD7AD
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DC28 RID: 56360
 	private const float DELAY_TIME = 5000f;
 
-	// Token: 0x0400D7A2 RID: 55202
+	// Token: 0x0400DC29 RID: 56361
 	private const float CHECK_TIME = 100f;
 
-	// Token: 0x0400D7A3 RID: 55203
+	// Token: 0x0400DC2A RID: 56362
 	private float TimeCount;
 
-	// Token: 0x0400D7A4 RID: 55204
+	// Token: 0x0400DC2B RID: 56363
 	private bool HasBeenHit;
 
-	// Token: 0x0400D7A5 RID: 55205
+	// Token: 0x0400DC2C RID: 56364
 	private bool HasBeenDamaged;
 
-	// Token: 0x0400D7A6 RID: 55206
+	// Token: 0x0400DC2D RID: 56365
 	[Nullable(2)]
 	private TimerHandle Timer;
 
-	// Token: 0x0400D7A7 RID: 55207
+	// Token: 0x0400DC2E RID: 56366
 	private bool MarkedDirty;
 
-	// Token: 0x0400D7A8 RID: 55208
+	// Token: 0x0400DC2F RID: 56367
 	private bool IsInFight;
 
-	// Token: 0x0400D7A9 RID: 55209
+	// Token: 0x0400DC30 RID: 56368
 	private bool? IsOwnConcomitantTarget;
 }

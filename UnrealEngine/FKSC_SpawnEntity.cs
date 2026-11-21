@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E53 RID: 7763
+	// Token: 0x02000593 RID: 1427
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_SpawnEntity")]
 	[UnrealStructLayout(96, 16, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 96)]
 	public class FKSC_SpawnEntity : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601D8C9 RID: 121033 RVA: 0x002BA1DC File Offset: 0x002B83DC
+		// Token: 0x06008130 RID: 33072 RVA: 0x000BEB39 File Offset: 0x000BCD39
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKSC_SpawnEntity._ScriptStructPtr != 0) ? FKSC_SpawnEntity._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroSimpleCombat.KSC_SpawnEntity", ref FKSC_SpawnEntity._ScriptStructPtr);
 		}
 
-		// Token: 0x17007703 RID: 30467
-		// (get) Token: 0x0601D8CA RID: 121034 RVA: 0x002BA200 File Offset: 0x002B8400
-		// (set) Token: 0x0601D8CB RID: 121035 RVA: 0x002BA210 File Offset: 0x002B8410
+		// Token: 0x1700192C RID: 6444
+		// (get) Token: 0x06008131 RID: 33073 RVA: 0x000BEB5D File Offset: 0x000BCD5D
+		// (set) Token: 0x06008132 RID: 33074 RVA: 0x000BEB6D File Offset: 0x000BCD6D
 		public unsafe int EntityId
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007704 RID: 30468
-		// (get) Token: 0x0601D8CC RID: 121036 RVA: 0x002BA221 File Offset: 0x002B8421
-		// (set) Token: 0x0601D8CD RID: 121037 RVA: 0x002BA235 File Offset: 0x002B8435
+		// Token: 0x1700192D RID: 6445
+		// (get) Token: 0x06008133 RID: 33075 RVA: 0x000BEB7E File Offset: 0x000BCD7E
+		// (set) Token: 0x06008134 RID: 33076 RVA: 0x000BEB92 File Offset: 0x000BCD92
 		public unsafe FTransformDouble EntityTrans
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007705 RID: 30469
-		// (get) Token: 0x0601D8CE RID: 121038 RVA: 0x002BA24A File Offset: 0x002B844A
-		// (set) Token: 0x0601D8CF RID: 121039 RVA: 0x002BA25A File Offset: 0x002B845A
+		// Token: 0x1700192E RID: 6446
+		// (get) Token: 0x06008135 RID: 33077 RVA: 0x000BEBA7 File Offset: 0x000BCDA7
+		// (set) Token: 0x06008136 RID: 33078 RVA: 0x000BEBB7 File Offset: 0x000BCDB7
 		public unsafe bool IsUseAbsoluteTrans
 		{
 			get
@@ -61,64 +61,56 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601D8D0 RID: 121040 RVA: 0x002BA26B File Offset: 0x002B846B
+		// Token: 0x06008137 RID: 33079 RVA: 0x000BEBC8 File Offset: 0x000BCDC8
 		public FKSC_SpawnEntity()
 		{
 		}
 
-		// Token: 0x0601D8D1 RID: 121041 RVA: 0x002BA273 File Offset: 0x002B8473
-		public FKSC_SpawnEntity(int EntityId, FTransformDouble EntityTrans, bool IsUseAbsoluteTrans)
-		{
-			this.EntityId = EntityId;
-			this.EntityTrans = EntityTrans;
-			this.IsUseAbsoluteTrans = IsUseAbsoluteTrans;
-		}
-
-		// Token: 0x0601D8D2 RID: 121042 RVA: 0x002BA290 File Offset: 0x002B8490
+		// Token: 0x06008138 RID: 33080 RVA: 0x000BEBD0 File Offset: 0x000BCDD0
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKSC_SpawnEntity.StaticStruct();
 		}
 
-		// Token: 0x0601D8D3 RID: 121043 RVA: 0x002BA29C File Offset: 0x002B849C
+		// Token: 0x06008139 RID: 33081 RVA: 0x000BEBDC File Offset: 0x000BCDDC
 		[NullableContext(2)]
 		public FKSC_SpawnEntity(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601D8D4 RID: 121044 RVA: 0x002BA2A6 File Offset: 0x002B84A6
+		// Token: 0x0600813A RID: 33082 RVA: 0x000BEBE6 File Offset: 0x000BCDE6
 		public FKSC_SpawnEntity(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601D8D5 RID: 121045 RVA: 0x002BA2B1 File Offset: 0x002B84B1
+		// Token: 0x0600813B RID: 33083 RVA: 0x000BEBF1 File Offset: 0x000BCDF1
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKSC_SpawnEntity(Pointer, false, true);
 		}
 
-		// Token: 0x0601D8D6 RID: 121046 RVA: 0x002BA2BB File Offset: 0x002B84BB
+		// Token: 0x0600813C RID: 33084 RVA: 0x000BEBFB File Offset: 0x000BCDFB
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKSC_SpawnEntity(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401004E RID: 65614
+		// Token: 0x04003867 RID: 14439
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_SpawnEntity";
 
-		// Token: 0x0401004F RID: 65615
+		// Token: 0x04003868 RID: 14440
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04010050 RID: 65616
+		// Token: 0x04003869 RID: 14441
 		internal static int __PropertyOffset_EntityId;
 
-		// Token: 0x04010051 RID: 65617
+		// Token: 0x0400386A RID: 14442
 		internal static int __PropertyOffset_EntityTrans;
 
-		// Token: 0x04010052 RID: 65618
+		// Token: 0x0400386B RID: 14443
 		internal static int __PropertyOffset_IsUseAbsoluteTrans;
 	}
 }

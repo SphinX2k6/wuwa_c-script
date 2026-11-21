@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E56 RID: 3670
+	// Token: 0x02000F67 RID: 3943
 	[EnumExtensions]
 	public enum EAttributeToTarget
 	{
-		// Token: 0x04002FC0 RID: 12224
+		// Token: 0x040032B7 RID: 12983
 		Health
 	}
 }

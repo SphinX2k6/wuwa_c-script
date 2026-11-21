@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067AD RID: 26541
+	// Token: 0x020056FD RID: 22269
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlCombineViewTitleData
 	{
-		// Token: 0x04022859 RID: 141401
+		// Token: 0x0401D0B6 RID: 118966
 		public string Title = "";
 
-		// Token: 0x0402285A RID: 141402
+		// Token: 0x0401D0B7 RID: 118967
 		public List<DangoBrawlCombineViewListItemData> RowDataList = new List<DangoBrawlCombineViewListItemData>();
 
-		// Token: 0x0402285B RID: 141403
+		// Token: 0x0401D0B8 RID: 118968
 		public int LoopLimitNum;
 
-		// Token: 0x0402285C RID: 141404
+		// Token: 0x0401D0B9 RID: 118969
 		public int LoopMaxHeight;
 
-		// Token: 0x0402285D RID: 141405
+		// Token: 0x0401D0BA RID: 118970
 		public int LoopItemInterval;
 	}
 }

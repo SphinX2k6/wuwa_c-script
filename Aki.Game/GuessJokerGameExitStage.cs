@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02001043 RID: 4163
+// Token: 0x020004F7 RID: 1271
 public class GuessJokerGameExitStage : GuessJokerStageBase
 {
-	// Token: 0x06006ACF RID: 27343 RVA: 0x00157DBF File Offset: 0x00155FBF
+	// Token: 0x06003E64 RID: 15972 RVA: 0x001606E7 File Offset: 0x0015E8E7
 	[NullableContext(1)]
 	public GuessJokerGameExitStage(GuessJokerStageFsm stageFsm) : base(stageFsm)
 	{
 	}
 
-	// Token: 0x06006AD0 RID: 27344 RVA: 0x00157DC8 File Offset: 0x00155FC8
+	// Token: 0x06003E65 RID: 15973 RVA: 0x001606F0 File Offset: 0x0015E8F0
 	protected override void OnEnter()
 	{
 		GuessJokerGamePlayModel.Instance.CloseGamePlayViewAsync().Forget(delegate(Exception ex)

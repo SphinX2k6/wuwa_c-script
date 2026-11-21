@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x0200267F RID: 9855
+// Token: 0x02001B6A RID: 7018
 public class QuestReviewMainViewConstants
 {
-	// Token: 0x04009805 RID: 38917
+	// Token: 0x0400995D RID: 39261
 	public const int MAX_TAB_NUM = 3;
 }

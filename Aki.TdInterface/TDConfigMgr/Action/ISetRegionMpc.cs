@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E3E RID: 7742
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002073 RID: 8307
 	public class ISetRegionMpc : SetRegionConfig
 	{
-		// Token: 0x0600A5A9 RID: 42409 RVA: 0x001773B8 File Offset: 0x001755B8
+		// Token: 0x0600B061 RID: 45153 RVA: 0x0018D0B8 File Offset: 0x0018B2B8
 		private ISetRegionMpc_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A5AA RID: 42410 RVA: 0x001773F0 File Offset: 0x001755F0
+		// Token: 0x0600B062 RID: 45154 RVA: 0x0018D0F0 File Offset: 0x0018B2F0
 		public static ISetRegionMpc Create([Nullable(2)] ISetRegionMpc instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A5AB RID: 42411 RVA: 0x00177403 File Offset: 0x00175603
+		// Token: 0x0600B063 RID: 45155 RVA: 0x0018D103 File Offset: 0x0018B303
 		public static ISetRegionMpc CreateFromSetValue([Nullable(2)] ISetRegionMpc_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A5AC RID: 42412 RVA: 0x00177416 File Offset: 0x00175616
+		// Token: 0x0600B064 RID: 45156 RVA: 0x0018D116 File Offset: 0x0018B316
 		public new ISetRegionMpc_SetValue ToSetValue()
 		{
 			return new ISetRegionMpc_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032CE RID: 13006
-		// (get) Token: 0x0600A5AD RID: 42413 RVA: 0x00177435 File Offset: 0x00175635
-		// (set) Token: 0x0600A5AE RID: 42414 RVA: 0x00177460 File Offset: 0x00175660
+		// Token: 0x17003592 RID: 13714
+		// (get) Token: 0x0600B065 RID: 45157 RVA: 0x0018D135 File Offset: 0x0018B335
+		// (set) Token: 0x0600B066 RID: 45158 RVA: 0x0018D160 File Offset: 0x0018B360
 		public override ERegionConfigType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032CF RID: 13007
-		// (get) Token: 0x0600A5AF RID: 42415 RVA: 0x0017746E File Offset: 0x0017566E
-		// (set) Token: 0x0600A5B0 RID: 42416 RVA: 0x00177499 File Offset: 0x00175699
+		// Token: 0x17003593 RID: 13715
+		// (get) Token: 0x0600B067 RID: 45159 RVA: 0x0018D16E File Offset: 0x0018B36E
+		// (set) Token: 0x0600B068 RID: 45160 RVA: 0x0018D199 File Offset: 0x0018B399
 		public virtual int RegionMpcId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400630D RID: 25357
+		// Token: 0x040068F1 RID: 26865
 		[Nullable(2)]
 		protected new ISetRegionMpc FbInstance;
 
-		// Token: 0x0400630E RID: 25358
+		// Token: 0x040068F2 RID: 26866
 		[Nullable(2)]
 		protected new ISetRegionMpc_SetValue PocoInterface;
 	}

@@ -1,32 +1,32 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200206F RID: 8303
+// Token: 0x02001542 RID: 5442
 [NullableContext(2)]
 [Nullable(0)]
 public class NormalLoadingViewGlobalData : IStaticVariableResetter
 {
-	// Token: 0x06010587 RID: 66951 RVA: 0x003FD351 File Offset: 0x003FB551
+	// Token: 0x0600D9EF RID: 55791 RVA: 0x00409799 File Offset: 0x00407999
 	static NormalLoadingViewGlobalData()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(NormalLoadingViewGlobalData.CreateStaticDefaultValue), new Action(NormalLoadingViewGlobalData.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06010588 RID: 66952 RVA: 0x003FD370 File Offset: 0x003FB570
+	// Token: 0x0600D9F0 RID: 55792 RVA: 0x004097B8 File Offset: 0x004079B8
 	public static void CreateFirstProgressPromise()
 	{
 		NormalLoadingViewGlobalData.FirstProgressPromiseInternal = new CustomPromise();
 	}
 
-	// Token: 0x06010589 RID: 66953 RVA: 0x003FD37C File Offset: 0x003FB57C
+	// Token: 0x0600D9F1 RID: 55793 RVA: 0x004097C4 File Offset: 0x004079C4
 	public static void FinishFirstProgressPromise()
 	{
 		NormalLoadingViewGlobalData.FirstProgressPromiseInternal.SetResult();
 		NormalLoadingViewGlobalData.FirstProgressPromiseInternal = null;
 	}
 
-	// Token: 0x1700142A RID: 5162
-	// (get) Token: 0x0601058A RID: 66954 RVA: 0x003FD38E File Offset: 0x003FB58E
+	// Token: 0x17001457 RID: 5207
+	// (get) Token: 0x0600D9F2 RID: 55794 RVA: 0x004097D6 File Offset: 0x004079D6
 	public static CustomPromise FirstProgressPromise
 	{
 		get
@@ -35,8 +35,8 @@ public class NormalLoadingViewGlobalData : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700142B RID: 5163
-	// (get) Token: 0x0601058B RID: 66955 RVA: 0x003FD395 File Offset: 0x003FB595
+	// Token: 0x17001458 RID: 5208
+	// (get) Token: 0x0600D9F3 RID: 55795 RVA: 0x004097DD File Offset: 0x004079DD
 	public static CustomPromise FinishPromise
 	{
 		get
@@ -45,13 +45,13 @@ public class NormalLoadingViewGlobalData : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601058C RID: 66956 RVA: 0x003FD39C File Offset: 0x003FB59C
+	// Token: 0x0600D9F4 RID: 55796 RVA: 0x004097E4 File Offset: 0x004079E4
 	public static void CreateFinishPromisePromise()
 	{
 		NormalLoadingViewGlobalData.FinishPromiseInternal = new CustomPromise();
 	}
 
-	// Token: 0x0601058D RID: 66957 RVA: 0x003FD3A8 File Offset: 0x003FB5A8
+	// Token: 0x0600D9F5 RID: 55797 RVA: 0x004097F0 File Offset: 0x004079F0
 	public static void FinishEndPromise()
 	{
 		CustomPromise finishPromiseInternal = NormalLoadingViewGlobalData.FinishPromiseInternal;
@@ -62,8 +62,8 @@ public class NormalLoadingViewGlobalData : IStaticVariableResetter
 		NormalLoadingViewGlobalData.FinishPromiseInternal = null;
 	}
 
-	// Token: 0x1700142C RID: 5164
-	// (get) Token: 0x0601058E RID: 66958 RVA: 0x003FD3C0 File Offset: 0x003FB5C0
+	// Token: 0x17001459 RID: 5209
+	// (get) Token: 0x0600D9F6 RID: 55798 RVA: 0x00409808 File Offset: 0x00407A08
 	public static bool IsNotifyCloseView
 	{
 		get
@@ -72,18 +72,18 @@ public class NormalLoadingViewGlobalData : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601058F RID: 66959 RVA: 0x003FD3C7 File Offset: 0x003FB5C7
+	// Token: 0x0600D9F7 RID: 55799 RVA: 0x0040980F File Offset: 0x00407A0F
 	public static void ResetNotifyCloseView()
 	{
 		NormalLoadingViewGlobalData.IsNotifyCloseViewInternal = false;
 	}
 
-	// Token: 0x06010590 RID: 66960 RVA: 0x003FD3CF File Offset: 0x003FB5CF
+	// Token: 0x0600D9F8 RID: 55800 RVA: 0x00409817 File Offset: 0x00407A17
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010591 RID: 66961 RVA: 0x003FD3D1 File Offset: 0x003FB5D1
+	// Token: 0x0600D9F9 RID: 55801 RVA: 0x00409819 File Offset: 0x00407A19
 	public static void ResetStaticDefaultValue()
 	{
 		NormalLoadingViewGlobalData.FirstProgressPromiseInternal = null;
@@ -91,12 +91,12 @@ public class NormalLoadingViewGlobalData : IStaticVariableResetter
 		NormalLoadingViewGlobalData.IsNotifyCloseViewInternal = false;
 	}
 
-	// Token: 0x040078C3 RID: 30915
+	// Token: 0x040079AC RID: 31148
 	private static CustomPromise FirstProgressPromiseInternal;
 
-	// Token: 0x040078C4 RID: 30916
+	// Token: 0x040079AD RID: 31149
 	private static CustomPromise FinishPromiseInternal;
 
-	// Token: 0x040078C5 RID: 30917
+	// Token: 0x040079AE RID: 31150
 	private static bool IsNotifyCloseViewInternal;
 }

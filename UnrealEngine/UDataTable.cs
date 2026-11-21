@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200099D RID: 2461
+	// Token: 0x020001C4 RID: 452
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.DataTable")]
 	[UnrealStructLayout(320, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 320)]
 	public class UDataTable : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06008AF0 RID: 35568 RVA: 0x000C70A4 File Offset: 0x000C52A4
+		// Token: 0x06002103 RID: 8451 RVA: 0x000307E0 File Offset: 0x0002E9E0
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UDataTable._ClassPtr;
 		}
 
-		// Token: 0x06008AF1 RID: 35569 RVA: 0x000C70B0 File Offset: 0x000C52B0
+		// Token: 0x06002104 RID: 8452 RVA: 0x000307EC File Offset: 0x0002E9EC
 		public UDataTable() : this(BuiltinUtils.AllocNativeUObject(UDataTable.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06008AF2 RID: 35570 RVA: 0x000C70D8 File Offset: 0x000C52D8
+		// Token: 0x06002105 RID: 8453 RVA: 0x00030814 File Offset: 0x0002EA14
 		public UDataTable(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UDataTable.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170020B2 RID: 8370
-		// (get) Token: 0x06008AF3 RID: 35571 RVA: 0x000C710B File Offset: 0x000C530B
-		// (set) Token: 0x06008AF4 RID: 35572 RVA: 0x000C711F File Offset: 0x000C531F
+		// Token: 0x17000494 RID: 1172
+		// (get) Token: 0x06002106 RID: 8454 RVA: 0x00030847 File Offset: 0x0002EA47
+		// (set) Token: 0x06002107 RID: 8455 RVA: 0x0003085B File Offset: 0x0002EA5B
 		[Nullable(2)]
 		public unsafe UScriptStruct RowStruct
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170020B3 RID: 8371
-		// (get) Token: 0x06008AF5 RID: 35573 RVA: 0x000C7134 File Offset: 0x000C5334
-		// (set) Token: 0x06008AF6 RID: 35574 RVA: 0x000C714D File Offset: 0x000C534D
+		// Token: 0x17000495 RID: 1173
+		// (get) Token: 0x06002108 RID: 8456 RVA: 0x00030870 File Offset: 0x0002EA70
+		// (set) Token: 0x06002109 RID: 8457 RVA: 0x00030889 File Offset: 0x0002EA89
 		public unsafe bool bStripFromClientBuilds
 		{
 			get
@@ -62,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170020B4 RID: 8372
-		// (get) Token: 0x06008AF7 RID: 35575 RVA: 0x000C717D File Offset: 0x000C537D
-		// (set) Token: 0x06008AF8 RID: 35576 RVA: 0x000C7196 File Offset: 0x000C5396
+		// Token: 0x17000496 RID: 1174
+		// (get) Token: 0x0600210A RID: 8458 RVA: 0x000308B9 File Offset: 0x0002EAB9
+		// (set) Token: 0x0600210B RID: 8459 RVA: 0x000308D2 File Offset: 0x0002EAD2
 		public unsafe bool bIgnoreExtraFields
 		{
 			get
@@ -77,9 +77,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170020B5 RID: 8373
-		// (get) Token: 0x06008AF9 RID: 35577 RVA: 0x000C71C6 File Offset: 0x000C53C6
-		// (set) Token: 0x06008AFA RID: 35578 RVA: 0x000C71DF File Offset: 0x000C53DF
+		// Token: 0x17000497 RID: 1175
+		// (get) Token: 0x0600210C RID: 8460 RVA: 0x00030902 File Offset: 0x0002EB02
+		// (set) Token: 0x0600210D RID: 8461 RVA: 0x0003091B File Offset: 0x0002EB1B
 		public unsafe bool bIgnoreMissingFields
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170020B6 RID: 8374
-		// (get) Token: 0x06008AFB RID: 35579 RVA: 0x000C720F File Offset: 0x000C540F
-		// (set) Token: 0x06008AFC RID: 35580 RVA: 0x000C7223 File Offset: 0x000C5423
+		// Token: 0x17000498 RID: 1176
+		// (get) Token: 0x0600210E RID: 8462 RVA: 0x0003094B File Offset: 0x0002EB4B
+		// (set) Token: 0x0600210F RID: 8463 RVA: 0x0003095F File Offset: 0x0002EB5F
 		public unsafe string ImportKeyField
 		{
 			get
@@ -107,48 +107,48 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06008AFD RID: 35581 RVA: 0x000C7238 File Offset: 0x000C5438
+		// Token: 0x06002110 RID: 8464 RVA: 0x00030974 File Offset: 0x0002EB74
 		static UDataTable()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.DataTable");
 		}
 
-		// Token: 0x06008AFE RID: 35582 RVA: 0x000C7246 File Offset: 0x000C5446
+		// Token: 0x06002111 RID: 8465 RVA: 0x00030982 File Offset: 0x0002EB82
 		protected UDataTable(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040041FE RID: 16894
+		// Token: 0x04000AFE RID: 2814
 		public new const string __ObjectPath = "/Script/Engine.DataTable";
 
-		// Token: 0x040041FF RID: 16895
+		// Token: 0x04000AFF RID: 2815
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04004200 RID: 16896
+		// Token: 0x04000B00 RID: 2816
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04004201 RID: 16897
+		// Token: 0x04000B01 RID: 2817
 		internal static int __PropertyOffset_RowStruct;
 
-		// Token: 0x04004202 RID: 16898
+		// Token: 0x04000B02 RID: 2818
 		internal static int __PropertyOffset_bStripFromClientBuilds;
 
-		// Token: 0x04004203 RID: 16899
+		// Token: 0x04000B03 RID: 2819
 		internal static byte __PropertyMask_bStripFromClientBuilds;
 
-		// Token: 0x04004204 RID: 16900
+		// Token: 0x04000B04 RID: 2820
 		internal static int __PropertyOffset_bIgnoreExtraFields;
 
-		// Token: 0x04004205 RID: 16901
+		// Token: 0x04000B05 RID: 2821
 		internal static byte __PropertyMask_bIgnoreExtraFields;
 
-		// Token: 0x04004206 RID: 16902
+		// Token: 0x04000B06 RID: 2822
 		internal static int __PropertyOffset_bIgnoreMissingFields;
 
-		// Token: 0x04004207 RID: 16903
+		// Token: 0x04000B07 RID: 2823
 		internal static byte __PropertyMask_bIgnoreMissingFields;
 
-		// Token: 0x04004208 RID: 16904
+		// Token: 0x04000B08 RID: 2824
 		internal static int __PropertyOffset_ImportKeyField;
 	}
 }

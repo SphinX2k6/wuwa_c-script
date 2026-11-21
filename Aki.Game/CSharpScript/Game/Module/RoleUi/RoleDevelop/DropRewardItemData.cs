@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D1D RID: 19741
+	// Token: 0x02003CD6 RID: 15574
 	public class DropRewardItemData : IDropRewardItemData
 	{
-		// Token: 0x17007E10 RID: 32272
-		// (get) Token: 0x06033026 RID: 208934 RVA: 0x00BE1C2A File Offset: 0x00BDFE2A
-		// (set) Token: 0x06033027 RID: 208935 RVA: 0x00BE1C32 File Offset: 0x00BDFE32
+		// Token: 0x170051C0 RID: 20928
+		// (get) Token: 0x06027E11 RID: 163345 RVA: 0x00B2759B File Offset: 0x00B2579B
+		// (set) Token: 0x06027E12 RID: 163346 RVA: 0x00B275A3 File Offset: 0x00B257A3
 		public int ItemId { get; set; }
 
-		// Token: 0x17007E11 RID: 32273
-		// (get) Token: 0x06033028 RID: 208936 RVA: 0x00BE1C3B File Offset: 0x00BDFE3B
-		// (set) Token: 0x06033029 RID: 208937 RVA: 0x00BE1C43 File Offset: 0x00BDFE43
+		// Token: 0x170051C1 RID: 20929
+		// (get) Token: 0x06027E13 RID: 163347 RVA: 0x00B275AC File Offset: 0x00B257AC
+		// (set) Token: 0x06027E14 RID: 163348 RVA: 0x00B275B4 File Offset: 0x00B257B4
 		public int Count { get; set; }
 
-		// Token: 0x17007E12 RID: 32274
-		// (get) Token: 0x0603302A RID: 208938 RVA: 0x00BE1C4C File Offset: 0x00BDFE4C
-		// (set) Token: 0x0603302B RID: 208939 RVA: 0x00BE1C54 File Offset: 0x00BDFE54
+		// Token: 0x170051C2 RID: 20930
+		// (get) Token: 0x06027E15 RID: 163349 RVA: 0x00B275BD File Offset: 0x00B257BD
+		// (set) Token: 0x06027E16 RID: 163350 RVA: 0x00B275C5 File Offset: 0x00B257C5
 		public bool HaveFinish { get; set; }
 	}
 }

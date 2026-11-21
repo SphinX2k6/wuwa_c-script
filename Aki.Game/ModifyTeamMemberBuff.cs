@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002FA3 RID: 12195
+// Token: 0x020024F7 RID: 9463
 [NullableContext(1)]
 [Nullable(0)]
 public class ModifyTeamMemberBuff : PeriodExecution
 {
-	// Token: 0x06019DE0 RID: 105952 RVA: 0x006C2503 File Offset: 0x006C0703
+	// Token: 0x060176F2 RID: 95986 RVA: 0x006E8D9F File Offset: 0x006E6F9F
 	public ModifyTeamMemberBuff(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DE1 RID: 105953 RVA: 0x006C2520 File Offset: 0x006C0720
+	// Token: 0x060176F3 RID: 95987 RVA: 0x006E8DBC File Offset: 0x006E6FBC
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -37,7 +37,7 @@ public class ModifyTeamMemberBuff : PeriodExecution
 		this.BuffIds = Array.Empty<long>();
 	}
 
-	// Token: 0x06019DE2 RID: 105954 RVA: 0x006C25D4 File Offset: 0x006C07D4
+	// Token: 0x060176F4 RID: 95988 RVA: 0x006E8E70 File Offset: 0x006E7070
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -60,7 +60,7 @@ public class ModifyTeamMemberBuff : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x06019DE3 RID: 105955 RVA: 0x006C2664 File Offset: 0x006C0864
+	// Token: 0x060176F5 RID: 95989 RVA: 0x006E8F00 File Offset: 0x006E7100
 	[NullableContext(2)]
 	private void DoExecute(Entity entity)
 	{
@@ -103,7 +103,7 @@ public class ModifyTeamMemberBuff : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019DE4 RID: 105956 RVA: 0x006C2778 File Offset: 0x006C0978
+	// Token: 0x060176F6 RID: 95990 RVA: 0x006E9014 File Offset: 0x006E7214
 	public override string GetDebugEffectString()
 	{
 		string value = "自己";
@@ -126,12 +126,12 @@ public class ModifyTeamMemberBuff : PeriodExecution
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C385 RID: 50053
+	// Token: 0x0400C72E RID: 50990
 	private ETeamMemberType MemberType;
 
-	// Token: 0x0400C386 RID: 50054
+	// Token: 0x0400C72F RID: 50991
 	private bool AddBuff = true;
 
-	// Token: 0x0400C387 RID: 50055
+	// Token: 0x0400C730 RID: 50992
 	private long[] BuffIds = Array.Empty<long>();
 }

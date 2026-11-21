@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006F8 RID: 1784
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000799 RID: 1945
 	public class ISpeedCurveMotion
 	{
-		// Token: 0x06002668 RID: 9832 RVA: 0x00066C24 File Offset: 0x00064E24
-		[NullableContext(1)]
+		// Token: 0x06002988 RID: 10632 RVA: 0x0006DC94 File Offset: 0x0006BE94
 		private ISpeedCurveMotion_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002669 RID: 9833 RVA: 0x00066C5C File Offset: 0x00064E5C
-		[NullableContext(1)]
+		// Token: 0x06002989 RID: 10633 RVA: 0x0006DCCC File Offset: 0x0006BECC
 		public static ISpeedCurveMotion Create([Nullable(2)] ISpeedCurveMotion instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600266A RID: 9834 RVA: 0x00066C6F File Offset: 0x00064E6F
-		[NullableContext(1)]
+		// Token: 0x0600298A RID: 10634 RVA: 0x0006DCDF File Offset: 0x0006BEDF
 		public static ISpeedCurveMotion CreateFromSetValue([Nullable(2)] ISpeedCurveMotion_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600266B RID: 9835 RVA: 0x00066C82 File Offset: 0x00064E82
-		[NullableContext(1)]
+		// Token: 0x0600298B RID: 10635 RVA: 0x0006DCF2 File Offset: 0x0006BEF2
 		public ISpeedCurveMotion_SetValue ToSetValue()
 		{
 			return new ISpeedCurveMotion_SetValue
@@ -63,11 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A1F RID: 2591
-		// (get) Token: 0x0600266C RID: 9836 RVA: 0x00066C95 File Offset: 0x00064E95
-		// (set) Token: 0x0600266D RID: 9837 RVA: 0x00066CBC File Offset: 0x00064EBC
+		// Token: 0x17000ADD RID: 2781
+		// (get) Token: 0x0600298C RID: 10636 RVA: 0x0006DD05 File Offset: 0x0006BF05
+		// (set) Token: 0x0600298D RID: 10637 RVA: 0x0006DD2C File Offset: 0x0006BF2C
+		[Nullable(2)]
 		public virtual string SpeedCurve
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -81,16 +77,19 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.SpeedCurve;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().SpeedCurve = value;
 			}
 		}
 
-		// Token: 0x04001A11 RID: 6673
+		// Token: 0x04001C10 RID: 7184
+		[Nullable(2)]
 		protected ISpeedCurveMotion FbInstance;
 
-		// Token: 0x04001A12 RID: 6674
+		// Token: 0x04001C11 RID: 7185
+		[Nullable(2)]
 		protected ISpeedCurveMotion_SetValue PocoInterface;
 	}
 }

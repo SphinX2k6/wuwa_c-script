@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,39 +12,39 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F86 RID: 24454
+	// Token: 0x02004F6D RID: 20333
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class TotalTopUpController : ActivityControllerBase
 	{
-		// Token: 0x0603E0EB RID: 254187 RVA: 0x00EFB60C File Offset: 0x00EF980C
+		// Token: 0x06033085 RID: 209029 RVA: 0x00E4D2DC File Offset: 0x00E4B4DC
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.TotalTopUpActivityInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTotalTopUpUpdateNotify));
 			Net.Instance.Register(ENotifyMessageId.TotalTopUpRewardNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRewardNotify));
 		}
 
-		// Token: 0x0603E0EC RID: 254188 RVA: 0x00EFB646 File Offset: 0x00EF9846
+		// Token: 0x06033086 RID: 209030 RVA: 0x00E4D316 File Offset: 0x00E4B516
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.TotalTopUpActivityInfoNotify);
 			Net.Instance.UnRegister(ENotifyMessageId.TotalTopUpRewardNotify);
 		}
 
-		// Token: 0x0603E0ED RID: 254189 RVA: 0x00EFB668 File Offset: 0x00EF9868
+		// Token: 0x06033087 RID: 209031 RVA: 0x00E4D338 File Offset: 0x00E4B538
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnViewDone, new Action<EUiViewName, UiViewBase>(this.OnShopViewOpen));
 		}
 
-		// Token: 0x0603E0EE RID: 254190 RVA: 0x00EFB683 File Offset: 0x00EF9883
+		// Token: 0x06033088 RID: 209032 RVA: 0x00E4D353 File Offset: 0x00E4B553
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnViewDone, new Action<EUiViewName, UiViewBase>(this.OnShopViewOpen));
 		}
 
-		// Token: 0x0603E0EF RID: 254191 RVA: 0x00EFB6A0 File Offset: 0x00EF98A0
+		// Token: 0x06033089 RID: 209033 RVA: 0x00E4D370 File Offset: 0x00E4B570
 		private void OnShopViewOpen(EUiViewName viewName, UiViewBase viewBase)
 		{
 			if (viewName != EUiViewName.PayShopRootView)
@@ -61,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			TotalTopUpUtil.Debug("商店界面关闭，重置积分信息请求状态", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0603E0F0 RID: 254192 RVA: 0x00EFB6E0 File Offset: 0x00EF98E0
+		// Token: 0x0603308A RID: 209034 RVA: 0x00E4D3B0 File Offset: 0x00E4B5B0
 		[NullableContext(2)]
 		public TotalTopUpData GetSingleActivityData()
 		{
@@ -94,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return activityBaseData as TotalTopUpData;
 		}
 
-		// Token: 0x0603E0F1 RID: 254193 RVA: 0x00EFB778 File Offset: 0x00EF9978
+		// Token: 0x0603308B RID: 209035 RVA: 0x00E4D448 File Offset: 0x00E4B648
 		[NullableContext(2)]
 		private void OnTotalTopUpUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -113,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			EventSystem.Instance.Emit<int>(EEventName.ActivityViewRefreshCurrent, singleActivityData.Id);
 		}
 
-		// Token: 0x0603E0F2 RID: 254194 RVA: 0x00EFB7DC File Offset: 0x00EF99DC
+		// Token: 0x0603308C RID: 209036 RVA: 0x00E4D4AC File Offset: 0x00E4B6AC
 		[NullableContext(2)]
 		private void OnRewardNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -131,17 +130,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			{
 				return;
 			}
-			singleActivityData.UpdateReward(totalTopUpRewardNotify.TotalTopUpRewardInfo.ToList<TotalTopUpRewardInfo>());
+			singleActivityData.UpdateReward(totalTopUpRewardNotify.TotalTopUpRewardInfo);
 			EventSystem.Instance.Emit<int>(EEventName.ActivityViewRefreshCurrent, singleActivityData.Id);
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, singleActivityData.Id);
 		}
 
-		// Token: 0x0603E0F3 RID: 254195 RVA: 0x00EFB8B4 File Offset: 0x00EF9AB4
+		// Token: 0x0603308D RID: 209037 RVA: 0x00E4D580 File Offset: 0x00E4B780
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x0603E0F4 RID: 254196 RVA: 0x00EFB8B6 File Offset: 0x00EF9AB6
+		// Token: 0x0603308E RID: 209038 RVA: 0x00E4D582 File Offset: 0x00E4B782
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			if (!this.IsActivity37View(data))
@@ -151,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return "UiItem_CumulativeRecharge37Main";
 		}
 
-		// Token: 0x0603E0F5 RID: 254197 RVA: 0x00EFB8CC File Offset: 0x00EF9ACC
+		// Token: 0x0603308F RID: 209039 RVA: 0x00E4D598 File Offset: 0x00E4B798
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			if (!this.IsActivity37View(data))
@@ -161,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return new TotalTopUp37View();
 		}
 
-		// Token: 0x0603E0F6 RID: 254198 RVA: 0x00EFB8E4 File Offset: 0x00EF9AE4
+		// Token: 0x06033090 RID: 209040 RVA: 0x00E4D5B0 File Offset: 0x00E4B7B0
 		private bool IsActivity37View(ActivityBaseData data)
 		{
 			TotalTopUpConfig instance = TotalTopUpConfig.Instance;
@@ -169,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return totalTopUpViewConfig != null && totalTopUpViewConfig.GetValueOrDefault().ViewType == 1;
 		}
 
-		// Token: 0x0603E0F7 RID: 254199 RVA: 0x00EFB930 File Offset: 0x00EF9B30
+		// Token: 0x06033091 RID: 209041 RVA: 0x00E4D5FC File Offset: 0x00E4B7FC
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			TotalTopUpData totalTopUpData = new TotalTopUpData();
@@ -180,7 +179,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return totalTopUpData;
 		}
 
-		// Token: 0x0603E0F8 RID: 254200 RVA: 0x00EFB95E File Offset: 0x00EF9B5E
+		// Token: 0x06033092 RID: 209042 RVA: 0x00E4D62A File Offset: 0x00E4B82A
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.TotalTopUpPickRoleRewardView);
@@ -188,7 +187,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return totalTopUpPickRoleViewModel != null && totalTopUpPickRoleViewModel.IsFromActivity;
 		}
 
-		// Token: 0x0603E0F9 RID: 254201 RVA: 0x00EFB98C File Offset: 0x00EF9B8C
+		// Token: 0x06033093 RID: 209043 RVA: 0x00E4D658 File Offset: 0x00E4B858
 		public unsafe void RequestClaim(int rewardId, int? selectId = null)
 		{
 			TotalTopUpUtil.Debug("发送请求领取奖励", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -208,12 +207,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("RewardId", rewardId);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("ErrorCode", ((totalTopUpRewardResponse != null) ? new Aki.Protocol.ErrorCode?(totalTopUpRewardResponse.ErrorCode) : null) ?? Aki.Protocol.ErrorCode.UnKnownError);
 					TotalTopUpUtil.Error(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-					ErrorCodeController.Instance.OpenErrorCodeTipView((totalTopUpRewardResponse != null) ? totalTopUpRewardResponse.ErrorCode : Aki.Protocol.ErrorCode.UnKnownError, 23916, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView((totalTopUpRewardResponse != null) ? totalTopUpRewardResponse.ErrorCode : Aki.Protocol.ErrorCode.UnKnownError, 27942, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x0603E0FA RID: 254202 RVA: 0x00EFBA04 File Offset: 0x00EF9C04
+		// Token: 0x06033094 RID: 209044 RVA: 0x00E4D6D0 File Offset: 0x00E4B8D0
 		[NullableContext(0)]
 		public UniTask<bool> RequestScoreInfoAsync(int timeoutMs = 0)
 		{
@@ -226,7 +225,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <RequestScoreInfoAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E0FB RID: 254203 RVA: 0x00EFBA50 File Offset: 0x00EF9C50
+		// Token: 0x06033095 RID: 209045 RVA: 0x00E4D71C File Offset: 0x00E4B91C
 		public int GetGoodsScore(int id)
 		{
 			TotalTopUpData singleActivityData = this.GetSingleActivityData();
@@ -242,7 +241,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return result;
 		}
 
-		// Token: 0x0603E0FC RID: 254204 RVA: 0x00EFBA7C File Offset: 0x00EF9C7C
+		// Token: 0x06033096 RID: 209046 RVA: 0x00E4D748 File Offset: 0x00E4B948
 		public int GetRechargeItemScore(int id)
 		{
 			TotalTopUpData singleActivityData = this.GetSingleActivityData();
@@ -258,14 +257,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return result;
 		}
 
-		// Token: 0x0603E0FD RID: 254205 RVA: 0x00EFBAA8 File Offset: 0x00EF9CA8
+		// Token: 0x06033097 RID: 209047 RVA: 0x00E4D774 File Offset: 0x00E4B974
 		public bool CheckCurrentTotalUpRunning()
 		{
 			TotalTopUpData singleActivityData = this.GetSingleActivityData();
 			return singleActivityData != null && singleActivityData.CheckIfInOpenTime();
 		}
 
-		// Token: 0x0603E0FE RID: 254206 RVA: 0x00EFBAC8 File Offset: 0x00EF9CC8
+		// Token: 0x06033098 RID: 209048 RVA: 0x00E4D794 File Offset: 0x00E4B994
 		public void SkipToCurrentActivityView()
 		{
 			TotalTopUpData singleActivityData = this.GetSingleActivityData();
@@ -280,7 +279,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			});
 		}
 
-		// Token: 0x0603E0FF RID: 254207 RVA: 0x00EFBB10 File Offset: 0x00EF9D10
+		// Token: 0x06033099 RID: 209049 RVA: 0x00E4D7DC File Offset: 0x00E4B9DC
 		public void SkipToPayShop(PayShopDefine.EPayShopTabType shopId, int tabIndex)
 		{
 			TotalTopUpController.<>c__DisplayClass20_0 CS$<>8__locals1 = new TotalTopUpController.<>c__DisplayClass20_0();
@@ -299,7 +298,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			SkipTaskManager.Run(name, array);
 		}
 
-		// Token: 0x0603E100 RID: 254208 RVA: 0x00EFBB7C File Offset: 0x00EF9D7C
+		// Token: 0x0603309A RID: 209050 RVA: 0x00E4D848 File Offset: 0x00E4BA48
 		public bool TryResumePreviousView(EUiViewName fromViewName, EUiViewName toViewName, Action<UiViewBase> callbackBeforeClose)
 		{
 			UiViewBase uiViewBase = UiModel.Instance.PeekNormalView(0);
@@ -320,7 +319,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return true;
 		}
 
-		// Token: 0x0603E101 RID: 254209 RVA: 0x00EFBBE4 File Offset: 0x00EF9DE4
+		// Token: 0x0603309B RID: 209051 RVA: 0x00E4D8B0 File Offset: 0x00E4BAB0
 		public string GetCurrentScoreIconPath()
 		{
 			TotalTopUpData singleActivityData = this.GetSingleActivityData();
@@ -332,7 +331,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return ((totalTopUpData.ViewConfig != null) ? totalTopUpData.ViewConfig.GetValueOrDefault().ScoreIcon : null) ?? string.Empty;
 		}
 
-		// Token: 0x0603E102 RID: 254210 RVA: 0x00EFBC2C File Offset: 0x00EF9E2C
+		// Token: 0x0603309C RID: 209052 RVA: 0x00E4D8F8 File Offset: 0x00E4BAF8
 		public string GetCurrentEnterResourcesId()
 		{
 			TotalTopUpData singleActivityData = this.GetSingleActivityData();
@@ -344,7 +343,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return ((totalTopUpData.ViewConfig != null) ? totalTopUpData.ViewConfig.GetValueOrDefault().EnterResourcesId : null) ?? string.Empty;
 		}
 
-		// Token: 0x0603E103 RID: 254211 RVA: 0x00EFBC74 File Offset: 0x00EF9E74
+		// Token: 0x0603309D RID: 209053 RVA: 0x00E4D940 File Offset: 0x00E4BB40
 		public string GetCurrentTagResourcesId()
 		{
 			TotalTopUpData singleActivityData = this.GetSingleActivityData();
@@ -356,8 +355,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return ((totalTopUpData.ViewConfig != null) ? totalTopUpData.ViewConfig.GetValueOrDefault().TagResourcesId : null) ?? string.Empty;
 		}
 
-		// Token: 0x17008FE1 RID: 36833
-		// (get) Token: 0x0603E104 RID: 254212 RVA: 0x00EFBCB9 File Offset: 0x00EF9EB9
+		// Token: 0x170063B3 RID: 25523
+		// (get) Token: 0x0603309E RID: 209054 RVA: 0x00E4D985 File Offset: 0x00E4BB85
 		public static TotalTopUpController Instance
 		{
 			get
@@ -366,7 +365,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E105 RID: 254213 RVA: 0x00EFBCC0 File Offset: 0x00EF9EC0
+		// Token: 0x0603309F RID: 209055 RVA: 0x00E4D98C File Offset: 0x00E4BB8C
 		public static TotalTopUpController GetOrCreateInstance()
 		{
 			if (TotalTopUpController._Instance == null)
@@ -376,7 +375,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return TotalTopUpController._Instance;
 		}
 
-		// Token: 0x0603E106 RID: 254214 RVA: 0x00EFBCD4 File Offset: 0x00EF9ED4
+		// Token: 0x060330A0 RID: 209056 RVA: 0x00E4D9A0 File Offset: 0x00E4BBA0
 		public static bool CreateInstance()
 		{
 			if (TotalTopUpController._Instance != null)
@@ -387,24 +386,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return true;
 		}
 
-		// Token: 0x0603E107 RID: 254215 RVA: 0x00EFBCEA File Offset: 0x00EF9EEA
+		// Token: 0x060330A1 RID: 209057 RVA: 0x00E4D9B6 File Offset: 0x00E4BBB6
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603E108 RID: 254216 RVA: 0x00EFBCEC File Offset: 0x00EF9EEC
+		// Token: 0x060330A2 RID: 209058 RVA: 0x00E4D9B8 File Offset: 0x00E4BBB8
 		public static void ResetStaticDefaultValue()
 		{
 			TotalTopUpController._Instance = null;
 		}
 
-		// Token: 0x0603E109 RID: 254217 RVA: 0x00EFBCF4 File Offset: 0x00EF9EF4
+		// Token: 0x060330A3 RID: 209059 RVA: 0x00E4D9C0 File Offset: 0x00E4BBC0
 		static TotalTopUpController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TotalTopUpController.CreateStaticDefaultValue), new Action(TotalTopUpController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402067E RID: 132734
+		// Token: 0x0401B150 RID: 110928
 		[Nullable(2)]
 		private static TotalTopUpController _Instance;
 	}

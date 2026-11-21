@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x0200428B RID: 17035
+	// Token: 0x020032EC RID: 13036
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/EAnsBranchTargetBlackboardType.EAnsBranchTargetBlackboardType")]
 	public enum EAnsBranchTargetBlackboardType : byte
 	{
-		// Token: 0x0401727E RID: 94846
+		// Token: 0x04011F9C RID: 73628
 		EntityId,
-		// Token: 0x0401727F RID: 94847
+		// Token: 0x04011F9D RID: 73629
 		Location,
-		// Token: 0x04017280 RID: 94848
+		// Token: 0x04011F9E RID: 73630
 		EAnsBranchTargetBlackboardType_MAX
 	}
 }

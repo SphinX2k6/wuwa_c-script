@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002662 RID: 9826
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002926 RID: 10534
 	public class ITransitionPopupConfig
 	{
-		// Token: 0x0600DC3A RID: 56378 RVA: 0x0020C33C File Offset: 0x0020A53C
+		// Token: 0x0600EA16 RID: 59926 RVA: 0x00228C14 File Offset: 0x00226E14
 		public static ITransitionPopupConfig Create(ITransitionPopupConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004138 RID: 16696
-		// (get) Token: 0x0600DC3B RID: 56379 RVA: 0x0020C35C File Offset: 0x0020A55C
+		// Token: 0x17004478 RID: 17528
+		// (get) Token: 0x0600EA17 RID: 59927 RVA: 0x00228C34 File Offset: 0x00226E34
 		public virtual float? Duration
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004139 RID: 16697
-		// (get) Token: 0x0600DC3C RID: 56380 RVA: 0x0020C392 File Offset: 0x0020A592
+		// Token: 0x17004479 RID: 17529
+		// (get) Token: 0x0600EA18 RID: 59928 RVA: 0x00228C6A File Offset: 0x00226E6A
 		public virtual ITransitionPopupStyle PopupStyle
 		{
 			get
@@ -52,13 +49,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A64 RID: 31332
+		// Token: 0x04008106 RID: 33030
 		private ITransitionPopupConfig Instance;
 
-		// Token: 0x04007A65 RID: 31333
+		// Token: 0x04008107 RID: 33031
 		private ITransitionPopupStyle _PopupStyleCache;
 
-		// Token: 0x04007A66 RID: 31334
+		// Token: 0x04008108 RID: 33032
 		private bool _PopupStyleInited;
 	}
 }

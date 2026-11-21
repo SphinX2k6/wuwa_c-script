@@ -9,14 +9,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 {
-	// Token: 0x02004820 RID: 18464
+	// Token: 0x02003751 RID: 14161
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DifficultyItem : UiPanelBase, IGridProxy<DarkCoastDeliveryLevelData>
 	{
-		// Token: 0x170078E9 RID: 30953
-		// (get) Token: 0x06030564 RID: 197988 RVA: 0x00B386AD File Offset: 0x00B368AD
-		// (set) Token: 0x06030565 RID: 197989 RVA: 0x00B386B5 File Offset: 0x00B368B5
+		// Token: 0x17004BA6 RID: 19366
+		// (get) Token: 0x06024D34 RID: 150836 RVA: 0x00A68779 File Offset: 0x00A66979
+		// (set) Token: 0x06024D35 RID: 150837 RVA: 0x00A68781 File Offset: 0x00A66981
 		[Nullable(new byte[]
 		{
 			2,
@@ -38,17 +38,17 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 			1
 		})] set; }
 
-		// Token: 0x170078EA RID: 30954
-		// (get) Token: 0x06030566 RID: 197990 RVA: 0x00B386BE File Offset: 0x00B368BE
-		// (set) Token: 0x06030567 RID: 197991 RVA: 0x00B386C6 File Offset: 0x00B368C6
+		// Token: 0x17004BA7 RID: 19367
+		// (get) Token: 0x06024D36 RID: 150838 RVA: 0x00A6878A File Offset: 0x00A6698A
+		// (set) Token: 0x06024D37 RID: 150839 RVA: 0x00A68792 File Offset: 0x00A66992
 		public int GridIndex { get; set; }
 
-		// Token: 0x170078EB RID: 30955
-		// (get) Token: 0x06030568 RID: 197992 RVA: 0x00B386CF File Offset: 0x00B368CF
-		// (set) Token: 0x06030569 RID: 197993 RVA: 0x00B386D7 File Offset: 0x00B368D7
+		// Token: 0x17004BA8 RID: 19368
+		// (get) Token: 0x06024D38 RID: 150840 RVA: 0x00A6879B File Offset: 0x00A6699B
+		// (set) Token: 0x06024D39 RID: 150841 RVA: 0x00A687A3 File Offset: 0x00A669A3
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x0603056A RID: 197994 RVA: 0x00B386E0 File Offset: 0x00B368E0
+		// Token: 0x06024D3A RID: 150842 RVA: 0x00A687AC File Offset: 0x00A669AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603056B RID: 197995 RVA: 0x00B3878C File Offset: 0x00B3698C
+		// Token: 0x06024D3B RID: 150843 RVA: 0x00A68858 File Offset: 0x00A66A58
 		public void Refresh(DarkCoastDeliveryLevelData data, bool isSelected, int gridIndex)
 		{
 			string resourceId = (data.GetDarkCoastDeliveryGuardState() == MingSuDefine.EDarkCoastDeliveryLevelDataState.Received) ? "T_MapDifficultyTick" : "T_MapDifficultyEmpty";
@@ -102,22 +102,22 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 			text3.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603056C RID: 197996 RVA: 0x00B38873 File Offset: 0x00B36A73
+		// Token: 0x06024D3C RID: 150844 RVA: 0x00A6893F File Offset: 0x00A66B3F
 		public void Clear()
 		{
 		}
 
-		// Token: 0x0603056D RID: 197997 RVA: 0x00B38875 File Offset: 0x00B36A75
+		// Token: 0x06024D3D RID: 150845 RVA: 0x00A68941 File Offset: 0x00A66B41
 		public void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603056E RID: 197998 RVA: 0x00B38877 File Offset: 0x00B36A77
+		// Token: 0x06024D3E RID: 150846 RVA: 0x00A68943 File Offset: 0x00A66B43
 		public void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603056F RID: 197999 RVA: 0x00B38879 File Offset: 0x00B36A79
+		// Token: 0x06024D3F RID: 150847 RVA: 0x00A68945 File Offset: 0x00A66B45
 		public object GetKey(DarkCoastDeliveryLevelData data, int gridIndex)
 		{
 			return this.GridIndex;

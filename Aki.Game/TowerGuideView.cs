@@ -6,16 +6,16 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BFB RID: 11259
+// Token: 0x02002176 RID: 8566
 public class TowerGuideView : UiViewBase
 {
-	// Token: 0x0601762C RID: 95788 RVA: 0x005F356E File Offset: 0x005F176E
+	// Token: 0x0601505D RID: 86109 RVA: 0x006200A5 File Offset: 0x0061E2A5
 	[NullableContext(1)]
 	public TowerGuideView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601762D RID: 95789 RVA: 0x005F3578 File Offset: 0x005F1778
+	// Token: 0x0601505E RID: 86110 RVA: 0x006200B0 File Offset: 0x0061E2B0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -62,7 +62,7 @@ public class TowerGuideView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601762E RID: 95790 RVA: 0x005F37D2 File Offset: 0x005F19D2
+	// Token: 0x0601505F RID: 86111 RVA: 0x0062030A File Offset: 0x0061E50A
 	private void OnClickedCloseButton()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -73,7 +73,7 @@ public class TowerGuideView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601762F RID: 95791 RVA: 0x005F37F0 File Offset: 0x005F19F0
+	// Token: 0x06015060 RID: 86112 RVA: 0x00620328 File Offset: 0x0061E528
 	protected override void OnStart()
 	{
 		base.GetItem(14).SetUIActive(false);
@@ -98,48 +98,48 @@ public class TowerGuideView : UiViewBase
 		base.GetButton(13).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x06017630 RID: 95792 RVA: 0x005F38B2 File Offset: 0x005F1AB2
+	// Token: 0x06015061 RID: 86113 RVA: 0x006203EA File Offset: 0x0061E5EA
 	protected override void OnAfterDestroy()
 	{
 		EventSystem.Instance.Emit(EEventName.OnTowerGuideClose);
 	}
 
-	// Token: 0x0400AEF8 RID: 44792
+	// Token: 0x0400B2FD RID: 45821
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x020091BF RID: 37311
+	// Token: 0x02008402 RID: 33794
 	private enum EChildType
 	{
-		// Token: 0x0402F274 RID: 193140
+		// Token: 0x0402A975 RID: 174453
 		SpriteIcon,
-		// Token: 0x0402F275 RID: 193141
+		// Token: 0x0402A976 RID: 174454
 		TxtTitle,
-		// Token: 0x0402F276 RID: 193142
+		// Token: 0x0402A977 RID: 174455
 		BtnBack,
-		// Token: 0x0402F277 RID: 193143
+		// Token: 0x0402A978 RID: 174456
 		ItemMid,
-		// Token: 0x0402F278 RID: 193144
+		// Token: 0x0402A979 RID: 174457
 		ItemBottom,
-		// Token: 0x0402F279 RID: 193145
+		// Token: 0x0402A97A RID: 174458
 		LayoutPages,
-		// Token: 0x0402F27A RID: 193146
+		// Token: 0x0402A97B RID: 174459
 		UiItemPagesDot,
-		// Token: 0x0402F27B RID: 193147
+		// Token: 0x0402A97C RID: 174460
 		BtnArrowL,
-		// Token: 0x0402F27C RID: 193148
+		// Token: 0x0402A97D RID: 174461
 		BtnArrowR,
-		// Token: 0x0402F27D RID: 193149
+		// Token: 0x0402A97E RID: 174462
 		ItemTutorialsTips,
-		// Token: 0x0402F27E RID: 193150
+		// Token: 0x0402A97F RID: 174463
 		UiItemLayerBg,
-		// Token: 0x0402F27F RID: 193151
+		// Token: 0x0402A980 RID: 174464
 		UiItemLayerUi,
-		// Token: 0x0402F280 RID: 193152
+		// Token: 0x0402A981 RID: 174465
 		PageParent,
-		// Token: 0x0402F281 RID: 193153
+		// Token: 0x0402A982 RID: 174466
 		BtnBg,
-		// Token: 0x0402F282 RID: 193154
+		// Token: 0x0402A983 RID: 174467
 		DescItem
 	}
 }

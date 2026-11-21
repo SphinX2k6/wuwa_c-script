@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F93 RID: 3987
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010BD RID: 4285
 	public class IFlipperConditionStepFight : IFlipperConditionStepBase
 	{
-		// Token: 0x060058D6 RID: 22742 RVA: 0x000D8B1C File Offset: 0x000D6D1C
+		// Token: 0x06005EA8 RID: 24232 RVA: 0x000E5544 File Offset: 0x000E3744
 		private IFlipperConditionStepFight_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060058D7 RID: 22743 RVA: 0x000D8B54 File Offset: 0x000D6D54
+		// Token: 0x06005EA9 RID: 24233 RVA: 0x000E557C File Offset: 0x000E377C
 		public static IFlipperConditionStepFight Create([Nullable(2)] IFlipperConditionStepFight instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060058D8 RID: 22744 RVA: 0x000D8B67 File Offset: 0x000D6D67
+		// Token: 0x06005EAA RID: 24234 RVA: 0x000E558F File Offset: 0x000E378F
 		public static IFlipperConditionStepFight CreateFromSetValue([Nullable(2)] IFlipperConditionStepFight_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060058D9 RID: 22745 RVA: 0x000D8B7A File Offset: 0x000D6D7A
+		// Token: 0x06005EAB RID: 24235 RVA: 0x000E55A2 File Offset: 0x000E37A2
 		public new IFlipperConditionStepFight_SetValue ToSetValue()
 		{
 			return new IFlipperConditionStepFight_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D90 RID: 7568
-		// (get) Token: 0x060058DA RID: 22746 RVA: 0x000D8B8D File Offset: 0x000D6D8D
-		// (set) Token: 0x060058DB RID: 22747 RVA: 0x000D8BB8 File Offset: 0x000D6DB8
+		// Token: 0x17001F35 RID: 7989
+		// (get) Token: 0x06005EAC RID: 24236 RVA: 0x000E55B5 File Offset: 0x000E37B5
+		// (set) Token: 0x06005EAD RID: 24237 RVA: 0x000E55E0 File Offset: 0x000E37E0
 		public override EFlipperConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040035A9 RID: 13737
+		// Token: 0x040038D9 RID: 14553
 		[Nullable(2)]
 		protected new IFlipperConditionStepFight FbInstance;
 
-		// Token: 0x040035AA RID: 13738
+		// Token: 0x040038DA RID: 14554
 		[Nullable(2)]
 		protected new IFlipperConditionStepFight_SetValue PocoInterface;
 	}

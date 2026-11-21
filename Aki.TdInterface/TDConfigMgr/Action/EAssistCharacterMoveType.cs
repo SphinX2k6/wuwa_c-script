@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001589 RID: 5513
+	// Token: 0x020016E8 RID: 5864
 	[EnumExtensions]
 	public enum EAssistCharacterMoveType
 	{
-		// Token: 0x04004951 RID: 18769
+		// Token: 0x04004D03 RID: 19715
 		Navigation,
-		// Token: 0x04004952 RID: 18770
+		// Token: 0x04004D04 RID: 19716
 		Spline
 	}
 }

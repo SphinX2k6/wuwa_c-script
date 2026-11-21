@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Plot;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
@@ -10,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x0200488B RID: 18571
+	// Token: 0x02003802 RID: 14338
 	[NullableContext(1)]
 	[Nullable(0)]
-	public class VillageInfrWorldBuildView : UiViewBase, IUiCameraBehavior
+	public class VillageInfrWorldBuildView : UiViewBase, IUiViewCameraBehavior
 	{
-		// Token: 0x06030925 RID: 198949 RVA: 0x00B483BC File Offset: 0x00B465BC
+		// Token: 0x06025451 RID: 152657 RVA: 0x00A831CB File Offset: 0x00A813CB
 		public VillageInfrWorldBuildView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06030926 RID: 198950 RVA: 0x00B483E8 File Offset: 0x00B465E8
+		// Token: 0x06025452 RID: 152658 RVA: 0x00A831F8 File Offset: 0x00A813F8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,19 +36,19 @@ namespace CSharpScript.Game.Module.VillageInfr
 			};
 		}
 
-		// Token: 0x06030927 RID: 198951 RVA: 0x00B48465 File Offset: 0x00B46665
+		// Token: 0x06025453 RID: 152659 RVA: 0x00A83275 File Offset: 0x00A81475
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnAntiqueShopUpgradeSequenceFinished, new Action(this.OnSequenceFinished));
 		}
 
-		// Token: 0x06030928 RID: 198952 RVA: 0x00B48483 File Offset: 0x00B46683
+		// Token: 0x06025454 RID: 152660 RVA: 0x00A83293 File Offset: 0x00A81493
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnAntiqueShopUpgradeSequenceFinished, new Action(this.OnSequenceFinished));
 		}
 
-		// Token: 0x06030929 RID: 198953 RVA: 0x00B484A4 File Offset: 0x00B466A4
+		// Token: 0x06025455 RID: 152661 RVA: 0x00A832B4 File Offset: 0x00A814B4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			VillageInfrWorldBuildView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -58,7 +59,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603092A RID: 198954 RVA: 0x00B484E8 File Offset: 0x00B466E8
+		// Token: 0x06025456 RID: 152662 RVA: 0x00A832F8 File Offset: 0x00A814F8
 		private void SetOpenParam()
 		{
 			IVillageInfrDeliveryParam villageInfrDeliveryParam = this.OpenParam as IVillageInfrDeliveryParam;
@@ -71,7 +72,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x0603092B RID: 198955 RVA: 0x00B48540 File Offset: 0x00B46740
+		// Token: 0x06025457 RID: 152663 RVA: 0x00A83350 File Offset: 0x00A81550
 		private UniTask CreateCaption()
 		{
 			VillageInfrWorldBuildView.<CreateCaption>d__11 <CreateCaption>d__;
@@ -82,7 +83,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <CreateCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603092C RID: 198956 RVA: 0x00B48584 File Offset: 0x00B46784
+		// Token: 0x06025458 RID: 152664 RVA: 0x00A83394 File Offset: 0x00A81594
 		private UniTask CreateBuildPanel()
 		{
 			VillageInfrWorldBuildView.<CreateBuildPanel>d__12 <CreateBuildPanel>d__;
@@ -93,7 +94,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <CreateBuildPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603092D RID: 198957 RVA: 0x00B485C8 File Offset: 0x00B467C8
+		// Token: 0x06025459 RID: 152665 RVA: 0x00A833D8 File Offset: 0x00A815D8
 		protected override void OnStart()
 		{
 			this.RefreshBuildInfo();
@@ -108,50 +109,49 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x0603092E RID: 198958 RVA: 0x00B48618 File Offset: 0x00B46818
+		// Token: 0x0602545A RID: 152666 RVA: 0x00A83428 File Offset: 0x00A81628
 		protected override void OnBeforeShow()
 		{
 			if (this.SelectType == EVillageInfrSelectType.Village)
 			{
-				UiCameraAnimationManager.Instance.DisablePlayerActor();
+				UiCameraModel.Instance.DisablePlayerActor();
 			}
 		}
 
-		// Token: 0x0603092F RID: 198959 RVA: 0x00B4862D File Offset: 0x00B4682D
+		// Token: 0x0602545B RID: 152667 RVA: 0x00A8343D File Offset: 0x00A8163D
 		protected override void OnAfterDestroy()
 		{
 			if (this.SelectType == EVillageInfrSelectType.Village)
 			{
-				UiCameraAnimationManager.Instance.EnablePlayerActor();
+				UiCameraModel.Instance.EnablePlayerActor();
 			}
 		}
 
-		// Token: 0x06030930 RID: 198960 RVA: 0x00B48642 File Offset: 0x00B46842
-		public void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+		// Token: 0x0602545C RID: 152668 RVA: 0x00A83452 File Offset: 0x00A81652
+		public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 		{
 			if (this.UiCameraName.Length > 0)
 			{
-				UiCameraAnimationController.Instance.PushCameraHandle((EUiViewName)this.UiCameraName, new int?(viewId), isBlend);
+				UiCameraController.Instance.PushCameraHandleByOpenView((EUiViewName)this.UiCameraName, viewId, operationType);
 			}
 		}
 
-		// Token: 0x06030931 RID: 198961 RVA: 0x00B4866E File Offset: 0x00B4686E
-		[NullableContext(2)]
-		public void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+		// Token: 0x0602545D RID: 152669 RVA: 0x00A83479 File Offset: 0x00A81679
+		public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 		{
 			if (this.UiCameraName.Length > 0)
 			{
-				UiCameraAnimationController.Instance.PopCameraHandle((EUiViewName)this.UiCameraName, stackTopInfo, closeViewId, popOrDelete);
+				UiCameraController.Instance.PopCameraHandleByCloseView((EUiViewName)this.UiCameraName, nextViewName, closeViewId, operationType);
 			}
 		}
 
-		// Token: 0x06030932 RID: 198962 RVA: 0x00B48697 File Offset: 0x00B46897
+		// Token: 0x0602545E RID: 152670 RVA: 0x00A834A2 File Offset: 0x00A816A2
 		protected override void OnBeforeDestroy()
 		{
 			this.SelectId = 1;
 		}
 
-		// Token: 0x06030933 RID: 198963 RVA: 0x00B486A0 File Offset: 0x00B468A0
+		// Token: 0x0602545F RID: 152671 RVA: 0x00A834AB File Offset: 0x00A816AB
 		private void RefreshBuildInfo()
 		{
 			this.BuildPanel.SetBottomBtnClickCb(delegate
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			});
 		}
 
-		// Token: 0x06030934 RID: 198964 RVA: 0x00B486BC File Offset: 0x00B468BC
+		// Token: 0x06025460 RID: 152672 RVA: 0x00A834C4 File Offset: 0x00A816C4
 		private UniTask OnClickBuild()
 		{
 			VillageInfrWorldBuildView.<OnClickBuild>d__20 <OnClickBuild>d__;
@@ -171,31 +171,31 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <OnClickBuild>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030935 RID: 198965 RVA: 0x00B486FF File Offset: 0x00B468FF
+		// Token: 0x06025461 RID: 152673 RVA: 0x00A83507 File Offset: 0x00A81707
 		private void OnClickBtnFunction()
 		{
 			VillageInfrController.Instance.OpenVillageInfrMainView(null).Forget<int?>();
 		}
 
-		// Token: 0x06030936 RID: 198966 RVA: 0x00B48711 File Offset: 0x00B46911
+		// Token: 0x06025462 RID: 152674 RVA: 0x00A83519 File Offset: 0x00A81719
 		private void OnSequenceFinished()
 		{
 			PlotController.Instance.PlotViewManager.HangPlotViewHud(false);
 		}
 
-		// Token: 0x0401A1AA RID: 106922
+		// Token: 0x04014A1D RID: 84509
 		private int SelectId;
 
-		// Token: 0x0401A1AB RID: 106923
+		// Token: 0x04014A1E RID: 84510
 		private EVillageInfrSelectType SelectType;
 
-		// Token: 0x0401A1AC RID: 106924
+		// Token: 0x04014A1F RID: 84511
 		private readonly PopupCaptionItem Caption = new PopupCaptionItem(null);
 
-		// Token: 0x0401A1AD RID: 106925
+		// Token: 0x04014A20 RID: 84512
 		private readonly VillageInfrBuildPanel BuildPanel = new VillageInfrBuildPanel();
 
-		// Token: 0x0401A1AE RID: 106926
+		// Token: 0x04014A21 RID: 84513
 		private string UiCameraName = "";
 	}
 }

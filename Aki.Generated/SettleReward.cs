@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001099 RID: 4249
+	// Token: 0x02001194 RID: 4500
 	public struct SettleReward : IFlatbufferObject
 	{
-		// Token: 0x17003535 RID: 13621
-		// (get) Token: 0x0600D05D RID: 53341 RVA: 0x0030B995 File Offset: 0x00309B95
+		// Token: 0x17003642 RID: 13890
+		// (get) Token: 0x0600D830 RID: 55344 RVA: 0x0032AF11 File Offset: 0x00329111
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D05E RID: 53342 RVA: 0x0030B9A2 File Offset: 0x00309BA2
+		// Token: 0x0600D831 RID: 55345 RVA: 0x0032AF1E File Offset: 0x0032911E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D05F RID: 53343 RVA: 0x0030B9AC File Offset: 0x00309BAC
+		// Token: 0x0600D832 RID: 55346 RVA: 0x0032AF28 File Offset: 0x00329128
 		public static SettleReward GetRootAsSettleReward(ByteBuffer _bb)
 		{
 			return SettleReward.GetRootAsSettleReward(_bb, default(SettleReward));
 		}
 
-		// Token: 0x0600D060 RID: 53344 RVA: 0x0030B9C8 File Offset: 0x00309BC8
+		// Token: 0x0600D833 RID: 55347 RVA: 0x0032AF44 File Offset: 0x00329144
 		public static SettleReward GetRootAsSettleReward(ByteBuffer _bb, SettleReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D061 RID: 53345 RVA: 0x0030B9E5 File Offset: 0x00309BE5
+		// Token: 0x0600D834 RID: 55348 RVA: 0x0032AF61 File Offset: 0x00329161
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D062 RID: 53346 RVA: 0x0030B9F4 File Offset: 0x00309BF4
+		// Token: 0x0600D835 RID: 55349 RVA: 0x0032AF70 File Offset: 0x00329170
 		public SettleReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003536 RID: 13622
-		// (get) Token: 0x0600D063 RID: 53347 RVA: 0x0030BA04 File Offset: 0x00309C04
+		// Token: 0x17003643 RID: 13891
+		// (get) Token: 0x0600D836 RID: 55350 RVA: 0x0032AF80 File Offset: 0x00329180
 		public int ActivityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003537 RID: 13623
-		// (get) Token: 0x0600D064 RID: 53348 RVA: 0x0030BA40 File Offset: 0x00309C40
+		// Token: 0x17003644 RID: 13892
+		// (get) Token: 0x0600D837 RID: 55351 RVA: 0x0032AFBC File Offset: 0x003291BC
 		public int PhotoReward
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003538 RID: 13624
-		// (get) Token: 0x0600D065 RID: 53349 RVA: 0x0030BA7C File Offset: 0x00309C7C
+		// Token: 0x17003645 RID: 13893
+		// (get) Token: 0x0600D838 RID: 55352 RVA: 0x0032AFF8 File Offset: 0x003291F8
 		public int PhotoRewardFemale
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003539 RID: 13625
-		// (get) Token: 0x0600D066 RID: 53350 RVA: 0x0030BAB8 File Offset: 0x00309CB8
+		// Token: 0x17003646 RID: 13894
+		// (get) Token: 0x0600D839 RID: 55353 RVA: 0x0032B034 File Offset: 0x00329234
 		public int SkinReward
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700353A RID: 13626
-		// (get) Token: 0x0600D067 RID: 53351 RVA: 0x0030BAF8 File Offset: 0x00309CF8
+		// Token: 0x17003647 RID: 13895
+		// (get) Token: 0x0600D83A RID: 55354 RVA: 0x0032B074 File Offset: 0x00329274
 		public string MalePhotoPath
 		{
 			get
@@ -122,20 +122,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D068 RID: 53352 RVA: 0x0030BB30 File Offset: 0x00309D30
+		// Token: 0x0600D83B RID: 55355 RVA: 0x0032B0AC File Offset: 0x003292AC
 		public Span<byte> GetMalePhotoPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600D069 RID: 53353 RVA: 0x0030BB40 File Offset: 0x00309D40
+		// Token: 0x0600D83C RID: 55356 RVA: 0x0032B0BC File Offset: 0x003292BC
 		public byte[] GetMalePhotoPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700353B RID: 13627
-		// (get) Token: 0x0600D06A RID: 53354 RVA: 0x0030BB58 File Offset: 0x00309D58
+		// Token: 0x17003648 RID: 13896
+		// (get) Token: 0x0600D83D RID: 55357 RVA: 0x0032B0D4 File Offset: 0x003292D4
 		public string FemalePhotoPath
 		{
 			get
@@ -149,19 +149,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D06B RID: 53355 RVA: 0x0030BB90 File Offset: 0x00309D90
+		// Token: 0x0600D83E RID: 55358 RVA: 0x0032B10C File Offset: 0x0032930C
 		public Span<byte> GetFemalePhotoPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600D06C RID: 53356 RVA: 0x0030BBA0 File Offset: 0x00309DA0
+		// Token: 0x0600D83F RID: 55359 RVA: 0x0032B11C File Offset: 0x0032931C
 		public byte[] GetFemalePhotoPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x040051A6 RID: 20902
+		// Token: 0x040057A5 RID: 22437
 		private Table __p;
 	}
 }

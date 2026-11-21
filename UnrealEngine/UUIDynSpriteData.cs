@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002147 RID: 8519
+	// Token: 0x020006F8 RID: 1784
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UIDynSpriteData")]
 	[UnrealStructLayout(240, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 240)]
 	public class UUIDynSpriteData : ULGUISpriteData_BaseObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060201DA RID: 131546 RVA: 0x002FBE8A File Offset: 0x002FA08A
+		// Token: 0x060097FF RID: 38911 RVA: 0x000E507E File Offset: 0x000E327E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIDynSpriteData._ClassPtr;
 		}
 
-		// Token: 0x060201DB RID: 131547 RVA: 0x002FBE98 File Offset: 0x002FA098
+		// Token: 0x06009800 RID: 38912 RVA: 0x000E508C File Offset: 0x000E328C
 		public UUIDynSpriteData() : this(BuiltinUtils.AllocNativeUObject(UUIDynSpriteData.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060201DC RID: 131548 RVA: 0x002FBEC0 File Offset: 0x002FA0C0
+		// Token: 0x06009801 RID: 38913 RVA: 0x000E50B4 File Offset: 0x000E32B4
 		public UUIDynSpriteData(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIDynSpriteData.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007E17 RID: 32279
-		// (get) Token: 0x060201DD RID: 131549 RVA: 0x002FBEF3 File Offset: 0x002FA0F3
-		// (set) Token: 0x060201DE RID: 131550 RVA: 0x002FBF07 File Offset: 0x002FA107
+		// Token: 0x17001C39 RID: 7225
+		// (get) Token: 0x06009802 RID: 38914 RVA: 0x000E50E7 File Offset: 0x000E32E7
+		// (set) Token: 0x06009803 RID: 38915 RVA: 0x000E50FB File Offset: 0x000E32FB
 		[Nullable(2)]
 		public unsafe UTexture2D DynAtlasTexture
 		{
@@ -47,30 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E18 RID: 32280
-		// (get) Token: 0x060201DF RID: 131551 RVA: 0x002FBF1C File Offset: 0x002FA11C
-		// (set) Token: 0x060201E0 RID: 131552 RVA: 0x002FBF55 File Offset: 0x002FA155
-		public FLGUISpriteInfo SpriteInfo
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FLGUISpriteInfo result;
-				if ((result = this._SpriteInfo) == null)
-				{
-					result = (this._SpriteInfo = new FLGUISpriteInfo(base.NativePtr + (IntPtr)UUIDynSpriteData.__PropertyOffset_SpriteInfo, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLGUISpriteInfo.StaticStruct(), base.NativePtr + (IntPtr)UUIDynSpriteData.__PropertyOffset_SpriteInfo, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17007E19 RID: 32281
-		// (get) Token: 0x060201E1 RID: 131553 RVA: 0x002FBF78 File Offset: 0x002FA178
-		// (set) Token: 0x060201E2 RID: 131554 RVA: 0x002FBFB1 File Offset: 0x002FA1B1
+		// Token: 0x17001C3A RID: 7226
+		// (get) Token: 0x06009804 RID: 38916 RVA: 0x000E5110 File Offset: 0x000E3310
+		// (set) Token: 0x06009805 RID: 38917 RVA: 0x000E5149 File Offset: 0x000E3349
 		public FSoftObjectPath OriginSpritePath
 		{
 			get
@@ -89,9 +68,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E1A RID: 32282
-		// (get) Token: 0x060201E3 RID: 131555 RVA: 0x002FBFD2 File Offset: 0x002FA1D2
-		// (set) Token: 0x060201E4 RID: 131556 RVA: 0x002FBFE2 File Offset: 0x002FA1E2
+		// Token: 0x17001C3B RID: 7227
+		// (get) Token: 0x06009806 RID: 38918 RVA: 0x000E516A File Offset: 0x000E336A
+		// (set) Token: 0x06009807 RID: 38919 RVA: 0x000E517A File Offset: 0x000E337A
 		public unsafe float CustomUVOffsetX
 		{
 			get
@@ -104,9 +83,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E1B RID: 32283
-		// (get) Token: 0x060201E5 RID: 131557 RVA: 0x002FBFF3 File Offset: 0x002FA1F3
-		// (set) Token: 0x060201E6 RID: 131558 RVA: 0x002FC003 File Offset: 0x002FA203
+		// Token: 0x17001C3C RID: 7228
+		// (get) Token: 0x06009808 RID: 38920 RVA: 0x000E518B File Offset: 0x000E338B
+		// (set) Token: 0x06009809 RID: 38921 RVA: 0x000E519B File Offset: 0x000E339B
 		public unsafe float CustomUVOffsetY
 		{
 			get
@@ -119,47 +98,40 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060201E7 RID: 131559 RVA: 0x002FC014 File Offset: 0x002FA214
+		// Token: 0x0600980A RID: 38922 RVA: 0x000E51AC File Offset: 0x000E33AC
 		static UUIDynSpriteData()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIDynSpriteData");
 		}
 
-		// Token: 0x060201E8 RID: 131560 RVA: 0x002FC022 File Offset: 0x002FA222
+		// Token: 0x0600980B RID: 38923 RVA: 0x000E51BA File Offset: 0x000E33BA
 		protected UUIDynSpriteData(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011477 RID: 70775
+		// Token: 0x0400420D RID: 16909
 		public new const string __ObjectPath = "/Script/LGUI.UIDynSpriteData";
 
-		// Token: 0x04011478 RID: 70776
+		// Token: 0x0400420E RID: 16910
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011479 RID: 70777
+		// Token: 0x0400420F RID: 16911
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401147A RID: 70778
+		// Token: 0x04004210 RID: 16912
 		internal static int __PropertyOffset_DynAtlasTexture;
 
-		// Token: 0x0401147B RID: 70779
-		internal static int __PropertyOffset_SpriteInfo;
-
-		// Token: 0x0401147C RID: 70780
-		[Nullable(2)]
-		private FLGUISpriteInfo _SpriteInfo;
-
-		// Token: 0x0401147D RID: 70781
+		// Token: 0x04004211 RID: 16913
 		internal static int __PropertyOffset_OriginSpritePath;
 
-		// Token: 0x0401147E RID: 70782
+		// Token: 0x04004212 RID: 16914
 		[Nullable(2)]
 		private FSoftObjectPath _OriginSpritePath;
 
-		// Token: 0x0401147F RID: 70783
+		// Token: 0x04004213 RID: 16915
 		internal static int __PropertyOffset_CustomUVOffsetX;
 
-		// Token: 0x04011480 RID: 70784
+		// Token: 0x04004214 RID: 16916
 		internal static int __PropertyOffset_CustomUVOffsetY;
 	}
 }

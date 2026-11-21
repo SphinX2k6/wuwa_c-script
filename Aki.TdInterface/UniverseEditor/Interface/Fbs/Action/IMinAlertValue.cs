@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AA3 RID: 27299
+	// Token: 0x020071C8 RID: 29128
 	public struct IMinAlertValue : IFlatbufferObject
 	{
-		// Token: 0x1700CA9A RID: 51866
-		// (get) Token: 0x0602FD64 RID: 195940 RVA: 0x006820A0 File Offset: 0x006802A0
+		// Token: 0x1700D54A RID: 54602
+		// (get) Token: 0x06032AA0 RID: 207520 RVA: 0x006D8360 File Offset: 0x006D6560
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FD65 RID: 195941 RVA: 0x006820AD File Offset: 0x006802AD
+		// Token: 0x06032AA1 RID: 207521 RVA: 0x006D836D File Offset: 0x006D656D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602FD66 RID: 195942 RVA: 0x006820B4 File Offset: 0x006802B4
+		// Token: 0x06032AA2 RID: 207522 RVA: 0x006D8374 File Offset: 0x006D6574
 		public static IMinAlertValue GetRootAsIMinAlertValue(ByteBuffer _bb)
 		{
 			return IMinAlertValue.GetRootAsIMinAlertValue(_bb, default(IMinAlertValue));
 		}
 
-		// Token: 0x0602FD67 RID: 195943 RVA: 0x006820D0 File Offset: 0x006802D0
+		// Token: 0x06032AA3 RID: 207523 RVA: 0x006D8390 File Offset: 0x006D6590
 		public static IMinAlertValue GetRootAsIMinAlertValue(ByteBuffer _bb, IMinAlertValue obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602FD68 RID: 195944 RVA: 0x006820ED File Offset: 0x006802ED
+		// Token: 0x06032AA4 RID: 207524 RVA: 0x006D83AD File Offset: 0x006D65AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602FD69 RID: 195945 RVA: 0x006820FC File Offset: 0x006802FC
+		// Token: 0x06032AA5 RID: 207525 RVA: 0x006D83BC File Offset: 0x006D65BC
 		public IMinAlertValue __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CA9B RID: 51867
-		// (get) Token: 0x0602FD6A RID: 195946 RVA: 0x0068210C File Offset: 0x0068030C
+		// Token: 0x1700D54B RID: 54603
+		// (get) Token: 0x06032AA6 RID: 207526 RVA: 0x006D83CC File Offset: 0x006D65CC
 		public EValueChangeType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FD6B RID: 195947 RVA: 0x00682148 File Offset: 0x00680348
+		// Token: 0x06032AA7 RID: 207527 RVA: 0x006D8408 File Offset: 0x006D6608
 		public static Offset<IMinAlertValue> CreateIMinAlertValue(FlatBufferBuilder builder, EValueChangeType Type = EValueChangeType.AddOrSub)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMinAlertValue.EndIMinAlertValue(builder);
 		}
 
-		// Token: 0x0602FD6C RID: 195948 RVA: 0x0068215E File Offset: 0x0068035E
+		// Token: 0x06032AA8 RID: 207528 RVA: 0x006D841E File Offset: 0x006D661E
 		public static void StartIMinAlertValue(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602FD6D RID: 195949 RVA: 0x00682167 File Offset: 0x00680367
+		// Token: 0x06032AA9 RID: 207529 RVA: 0x006D8427 File Offset: 0x006D6627
 		public static void AddType(FlatBufferBuilder builder, EValueChangeType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602FD6E RID: 195950 RVA: 0x00682172 File Offset: 0x00680372
+		// Token: 0x06032AAA RID: 207530 RVA: 0x006D8432 File Offset: 0x006D6632
 		public static Offset<IMinAlertValue> EndIMinAlertValue(FlatBufferBuilder builder)
 		{
 			return new Offset<IMinAlertValue>(builder.EndTable());
 		}
 
-		// Token: 0x0602FD6F RID: 195951 RVA: 0x00682180 File Offset: 0x00680380
+		// Token: 0x06032AAB RID: 207531 RVA: 0x006D8440 File Offset: 0x006D6640
 		public IMinAlertValueT UnPack()
 		{
 			IMinAlertValueT minAlertValueT = new IMinAlertValueT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return minAlertValueT;
 		}
 
-		// Token: 0x0602FD70 RID: 195952 RVA: 0x0068219B File Offset: 0x0068039B
+		// Token: 0x06032AAC RID: 207532 RVA: 0x006D845B File Offset: 0x006D665B
 		public void UnPackTo(IMinAlertValueT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602FD71 RID: 195953 RVA: 0x006821AC File Offset: 0x006803AC
+		// Token: 0x06032AAD RID: 207533 RVA: 0x006D846C File Offset: 0x006D666C
 		public static Offset<IMinAlertValue> Pack(FlatBufferBuilder builder, IMinAlertValueT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMinAlertValue.CreateIMinAlertValue(builder, _o.Type);
 		}
 
-		// Token: 0x040112E0 RID: 70368
+		// Token: 0x040121DB RID: 74203
 		private Table __p;
 	}
 }

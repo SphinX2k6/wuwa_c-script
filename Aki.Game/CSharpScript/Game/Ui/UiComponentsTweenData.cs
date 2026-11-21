@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004630 RID: 17968
+	// Token: 0x0200355A RID: 13658
 	internal class UiComponentsTweenData
 	{
-		// Token: 0x0602E481 RID: 189569 RVA: 0x00AB3010 File Offset: 0x00AB1210
+		// Token: 0x06022B94 RID: 142228 RVA: 0x009DFDA0 File Offset: 0x009DDFA0
 		public UiComponentsTweenData(float alpha, float size, float time)
 		{
 			this.TargetAlpha = alpha;
@@ -13,13 +13,13 @@ namespace CSharpScript.Game.Ui
 			this.Time = time;
 		}
 
-		// Token: 0x04018D6B RID: 101739
+		// Token: 0x040133B8 RID: 78776
 		public float TargetAlpha;
 
-		// Token: 0x04018D6C RID: 101740
+		// Token: 0x040133B9 RID: 78777
 		public float TargetSize;
 
-		// Token: 0x04018D6D RID: 101741
+		// Token: 0x040133BA RID: 78778
 		public float Time;
 	}
 }

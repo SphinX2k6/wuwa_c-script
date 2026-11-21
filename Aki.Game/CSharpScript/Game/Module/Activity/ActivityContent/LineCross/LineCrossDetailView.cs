@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 {
-	// Token: 0x02006560 RID: 25952
+	// Token: 0x020054DE RID: 21726
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LineCrossDetailView : UiViewBase
 	{
-		// Token: 0x06041085 RID: 266373 RVA: 0x00FC2DE5 File Offset: 0x00FC0FE5
+		// Token: 0x06035D4A RID: 220490 RVA: 0x00F09DCD File Offset: 0x00F07FCD
 		public LineCrossDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06041086 RID: 266374 RVA: 0x00FC2DFC File Offset: 0x00FC0FFC
+		// Token: 0x06035D4B RID: 220491 RVA: 0x00F09DE4 File Offset: 0x00F07FE4
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.LineCrossDetailViewModel = (this.OpenParam as LineCrossDetailViewModel);
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041087 RID: 266375 RVA: 0x00FC3014 File Offset: 0x00FC1214
+		// Token: 0x06035D4C RID: 220492 RVA: 0x00F09FFC File Offset: 0x00F081FC
 		private void OnClickBtn()
 		{
 			LineCrossActivityController instance = LineCrossActivityController.Instance;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			instance.RequestStartChallenge(valueOrDefault, (lineCrossDetailViewModel2 != null) ? lineCrossDetailViewModel2.GetCurrentChallengeId() : 0);
 		}
 
-		// Token: 0x06041088 RID: 266376 RVA: 0x00FC3078 File Offset: 0x00FC1278
+		// Token: 0x06035D4D RID: 220493 RVA: 0x00F0A060 File Offset: 0x00F08260
 		protected override UniTask OnBeforeStartAsync()
 		{
 			LineCrossDetailView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -99,13 +99,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041089 RID: 266377 RVA: 0x00FC30BB File Offset: 0x00FC12BB
+		// Token: 0x06035D4E RID: 220494 RVA: 0x00F0A0A3 File Offset: 0x00F082A3
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0604108A RID: 266378 RVA: 0x00FC30C4 File Offset: 0x00FC12C4
+		// Token: 0x06035D4F RID: 220495 RVA: 0x00F0A0AC File Offset: 0x00F082AC
 		public void RefreshRewardLayout(List<TItem> list)
 		{
 			GenericScrollViewNew<CommonItemSmallItemGrid, TItem> rewardLayout = this.RewardLayout;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			rewardLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0604108B RID: 266379 RVA: 0x00FC30D9 File Offset: 0x00FC12D9
+		// Token: 0x06035D50 RID: 220496 RVA: 0x00F0A0C1 File Offset: 0x00F082C1
 		protected override void OnBeforeShow()
 		{
 			LineCrossDetailViewModel lineCrossDetailViewModel = this.LineCrossDetailViewModel;
@@ -127,25 +127,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			lineCrossDetailViewModel.OnShowView();
 		}
 
-		// Token: 0x0604108C RID: 266380 RVA: 0x00FC30EB File Offset: 0x00FC12EB
+		// Token: 0x06035D51 RID: 220497 RVA: 0x00F0A0D3 File Offset: 0x00F082D3
 		public void ShowDescText(string desc)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(6), desc, Array.Empty<object>());
 		}
 
-		// Token: 0x0604108D RID: 266381 RVA: 0x00FC3104 File Offset: 0x00FC1304
+		// Token: 0x06035D52 RID: 220498 RVA: 0x00F0A0EC File Offset: 0x00F082EC
 		public void RefreshTitleText(string title)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(5), title, Array.Empty<object>());
 		}
 
-		// Token: 0x0604108E RID: 266382 RVA: 0x00FC311D File Offset: 0x00FC131D
+		// Token: 0x06035D53 RID: 220499 RVA: 0x00F0A105 File Offset: 0x00F08305
 		public void RefreshDifficultDescText(string desc)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(11), desc, Array.Empty<object>());
 		}
 
-		// Token: 0x0604108F RID: 266383 RVA: 0x00FC3137 File Offset: 0x00FC1337
+		// Token: 0x06035D54 RID: 220500 RVA: 0x00F0A11F File Offset: 0x00F0831F
 		public void RefreshNumText(int num)
 		{
 			UUIText text = base.GetText(4);
@@ -156,8 +156,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			text.SetText(num.ToString(), true);
 		}
 
-		// Token: 0x06041090 RID: 266384 RVA: 0x00FC3154 File Offset: 0x00FC1354
-		public void RefreshDifficultItem(List<int> dataList, int selectData)
+		// Token: 0x06035D55 RID: 220501 RVA: 0x00F0A13C File Offset: 0x00F0833C
+		public void RefreshDifficultItem(IReadOnlyList<int> dataList, int selectData)
 		{
 			for (int i = 0; i < this.LineCrossItemList.Count; i++)
 			{
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			}
 		}
 
-		// Token: 0x06041091 RID: 266385 RVA: 0x00FC31B8 File Offset: 0x00FC13B8
+		// Token: 0x06035D56 RID: 220502 RVA: 0x00F0A1A0 File Offset: 0x00F083A0
 		public void RefreshDifficultItemSelection(int data)
 		{
 			foreach (DifficultLineCrossItem difficultLineCrossItem in this.LineCrossItemList)
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			}
 		}
 
-		// Token: 0x06041092 RID: 266386 RVA: 0x00FC320C File Offset: 0x00FC140C
+		// Token: 0x06035D57 RID: 220503 RVA: 0x00F0A1F4 File Offset: 0x00F083F4
 		public void RefreshMiddleByChallengeState(bool ifHiddenGroup, ELineCrossGroupState state)
 		{
 			LineCrossClawItem lineCrossClawItem = this.LineCrossClawItem;
@@ -195,24 +195,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			lineCrossClawItem.Refresh(ifHiddenGroup, state);
 		}
 
-		// Token: 0x06041093 RID: 266387 RVA: 0x00FC3220 File Offset: 0x00FC1420
+		// Token: 0x06035D58 RID: 220504 RVA: 0x00F0A208 File Offset: 0x00F08408
 		public void PlaySwitchSequence()
 		{
 			base.PlaySequence("Switch", null, false);
 		}
 
-		// Token: 0x04021E6E RID: 138862
+		// Token: 0x0401C79F RID: 116639
 		private readonly List<DifficultLineCrossItem> LineCrossItemList = new List<DifficultLineCrossItem>();
 
-		// Token: 0x04021E6F RID: 138863
+		// Token: 0x0401C7A0 RID: 116640
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021E70 RID: 138864
+		// Token: 0x0401C7A1 RID: 116641
 		[Nullable(2)]
 		private LineCrossDetailViewModel LineCrossDetailViewModel;
 
-		// Token: 0x04021E71 RID: 138865
+		// Token: 0x0401C7A2 RID: 116642
 		[Nullable(new byte[]
 		{
 			2,
@@ -220,48 +220,48 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-		// Token: 0x04021E72 RID: 138866
+		// Token: 0x0401C7A3 RID: 116643
 		[Nullable(2)]
 		private LineCrossClawItem LineCrossClawItem;
 
-		// Token: 0x0200C756 RID: 51030
+		// Token: 0x0200B13B RID: 45371
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403C393 RID: 246675
+			// Token: 0x04036CE5 RID: 224485
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403C394 RID: 246676
+			// Token: 0x04036CE6 RID: 224486
 			public const int DifficultItem1 = 1;
 
-			// Token: 0x0403C395 RID: 246677
+			// Token: 0x04036CE7 RID: 224487
 			public const int DifficultItem2 = 2;
 
-			// Token: 0x0403C396 RID: 246678
+			// Token: 0x04036CE8 RID: 224488
 			public const int DifficultItem3 = 3;
 
-			// Token: 0x0403C397 RID: 246679
+			// Token: 0x04036CE9 RID: 224489
 			public const int NumText = 4;
 
-			// Token: 0x0403C398 RID: 246680
+			// Token: 0x04036CEA RID: 224490
 			public const int TitleText = 5;
 
-			// Token: 0x0403C399 RID: 246681
+			// Token: 0x04036CEB RID: 224491
 			public const int DescText = 6;
 
-			// Token: 0x0403C39A RID: 246682
+			// Token: 0x04036CEC RID: 224492
 			public const int RewardLayout = 7;
 
-			// Token: 0x0403C39B RID: 246683
+			// Token: 0x04036CED RID: 224493
 			public const int RewardItem = 8;
 
-			// Token: 0x0403C39C RID: 246684
+			// Token: 0x04036CEE RID: 224494
 			public const int Btn = 9;
 
-			// Token: 0x0403C39D RID: 246685
+			// Token: 0x04036CEF RID: 224495
 			public const int ClawItem = 10;
 
-			// Token: 0x0403C39E RID: 246686
+			// Token: 0x04036CF0 RID: 224496
 			public const int DifficultDesc = 11;
 		}
 	}

@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200164D RID: 5709
+	// Token: 0x020016C3 RID: 5827
 	public enum HookLockPointExitWay
 	{
-		// Token: 0x0400C0FE RID: 49406
+		// Token: 0x0400C605 RID: 50693
 		[OriginalName("Midway")]
 		Midway,
-		// Token: 0x0400C0FF RID: 49407
+		// Token: 0x0400C606 RID: 50694
 		[OriginalName("Endpoint")]
 		Endpoint
 	}

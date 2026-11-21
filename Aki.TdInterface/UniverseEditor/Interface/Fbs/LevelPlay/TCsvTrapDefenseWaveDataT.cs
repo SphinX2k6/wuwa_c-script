@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045F7 RID: 17911
+	// Token: 0x02004A5F RID: 19039
 	public class TCsvTrapDefenseWaveDataT
 	{
-		// Token: 0x17007F59 RID: 32601
-		// (get) Token: 0x0601B22D RID: 111149 RVA: 0x003DDF97 File Offset: 0x003DC197
-		// (set) Token: 0x0601B22E RID: 111150 RVA: 0x003DDF9F File Offset: 0x003DC19F
+		// Token: 0x1700859A RID: 34202
+		// (get) Token: 0x0601CA02 RID: 117250 RVA: 0x0040A233 File Offset: 0x00408433
+		// (set) Token: 0x0601CA03 RID: 117251 RVA: 0x0040A23B File Offset: 0x0040843B
 		public int Id { get; set; }
 
-		// Token: 0x17007F5A RID: 32602
-		// (get) Token: 0x0601B22F RID: 111151 RVA: 0x003DDFA8 File Offset: 0x003DC1A8
-		// (set) Token: 0x0601B230 RID: 111152 RVA: 0x003DDFB0 File Offset: 0x003DC1B0
+		// Token: 0x1700859B RID: 34203
+		// (get) Token: 0x0601CA04 RID: 117252 RVA: 0x0040A244 File Offset: 0x00408444
+		// (set) Token: 0x0601CA05 RID: 117253 RVA: 0x0040A24C File Offset: 0x0040844C
 		public List<ITrapDefenseSpawnMonsterT> SpawnMonsters { get; set; }
 
-		// Token: 0x0601B231 RID: 111153 RVA: 0x003DDFB9 File Offset: 0x003DC1B9
+		// Token: 0x0601CA06 RID: 117254 RVA: 0x0040A255 File Offset: 0x00408455
 		public TCsvTrapDefenseWaveDataT()
 		{
 			this.Id = 0;

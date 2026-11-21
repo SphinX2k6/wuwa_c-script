@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 {
-	// Token: 0x020069DA RID: 27098
+	// Token: 0x02005B36 RID: 23350
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TuningStandGridStartItem : TuningStandGridBase
 	{
-		// Token: 0x060436BA RID: 276154 RVA: 0x01079CFD File Offset: 0x01077EFD
+		// Token: 0x060396F6 RID: 235254 RVA: 0x0101E1B1 File Offset: 0x0101C3B1
 		[NullableContext(1)]
 		public TuningStandGridStartItem(TuningGridData data) : base(data)
 		{
 		}
 
-		// Token: 0x060436BB RID: 276155 RVA: 0x01079D08 File Offset: 0x01077F08
+		// Token: 0x060396F7 RID: 235255 RVA: 0x0101E1BC File Offset: 0x0101C3BC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			};
 		}
 
-		// Token: 0x060436BC RID: 276156 RVA: 0x01079DFD File Offset: 0x01077FFD
+		// Token: 0x060396F8 RID: 235256 RVA: 0x0101E2B1 File Offset: 0x0101C4B1
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			this.InitGrid();
 		}
 
-		// Token: 0x060436BD RID: 276157 RVA: 0x01079E36 File Offset: 0x01078036
+		// Token: 0x060396F9 RID: 235257 RVA: 0x0101E2EA File Offset: 0x0101C4EA
 		protected override void OnResetGrid()
 		{
 			this.StopAllAnim();
 		}
 
-		// Token: 0x060436BE RID: 276158 RVA: 0x01079E40 File Offset: 0x01078040
+		// Token: 0x060396FA RID: 235258 RVA: 0x0101E2F4 File Offset: 0x0101C4F4
 		protected override void InitGrid()
 		{
 			this.CurSelected = false;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			item2.SetUIActive(flag);
 		}
 
-		// Token: 0x060436BF RID: 276159 RVA: 0x01079E8C File Offset: 0x0107808C
+		// Token: 0x060396FB RID: 235259 RVA: 0x0101E340 File Offset: 0x0101C540
 		public override void OnRefreshGrid()
 		{
 			if (TuningStandModel.Instance.GetIsPressing())
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			}
 		}
 
-		// Token: 0x060436C0 RID: 276160 RVA: 0x01079FAB File Offset: 0x010781AB
+		// Token: 0x060396FC RID: 235260 RVA: 0x0101E45F File Offset: 0x0101C65F
 		protected override void OnToggleHover()
 		{
 			if (TuningStandModel.Instance.OnHover(base.Data) == EGridCheckReturnState.Error)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			}
 		}
 
-		// Token: 0x060436C1 RID: 276161 RVA: 0x01079FDF File Offset: 0x010781DF
+		// Token: 0x060396FD RID: 235261 RVA: 0x0101E493 File Offset: 0x0101C693
 		protected override void OnToggleUnHover()
 		{
 			UUIItem item = base.GetItem(4);
@@ -126,14 +126,14 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x060436C2 RID: 276162 RVA: 0x01079FF3 File Offset: 0x010781F3
+		// Token: 0x060396FE RID: 235262 RVA: 0x0101E4A7 File Offset: 0x0101C6A7
 		protected override void OnTogglePress()
 		{
 			TuningStandModel.Instance.OnPress(base.Data);
 			this.OnRefreshGrid();
 		}
 
-		// Token: 0x060436C3 RID: 276163 RVA: 0x0107A00B File Offset: 0x0107820B
+		// Token: 0x060396FF RID: 235263 RVA: 0x0101E4BF File Offset: 0x0101C6BF
 		protected override void OnToggleRelease()
 		{
 			UUIItem item = base.GetItem(4);
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			TuningStandModel.Instance.OnRelease(base.Data);
 		}
 
-		// Token: 0x060436C4 RID: 276164 RVA: 0x0107A030 File Offset: 0x01078230
+		// Token: 0x06039700 RID: 235264 RVA: 0x0101E4E4 File Offset: 0x0101C6E4
 		protected override void OnToggleCancel()
 		{
 			UUIItem item = base.GetItem(4);
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			TuningStandModel.Instance.OnRelease(base.Data);
 		}
 
-		// Token: 0x060436C5 RID: 276165 RVA: 0x0107A058 File Offset: 0x01078258
+		// Token: 0x06039701 RID: 235265 RVA: 0x0101E50C File Offset: 0x0101C70C
 		protected void InitLongPress()
 		{
 			this.LongPress = new LongPressButtonItem(null, new LongPressButtonItem.ELongPressConfigId?(LongPressButtonItem.ELongPressConfigId.LongPressOne), null);
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			base.GetExtendToggle(5).OnUnHover.Add(new Action(this.OnToggleUnHover));
 		}
 
-		// Token: 0x060436C6 RID: 276166 RVA: 0x0107A0FC File Offset: 0x010782FC
+		// Token: 0x06039702 RID: 235266 RVA: 0x0101E5B0 File Offset: 0x0101C7B0
 		private void StopAllAnim()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			}
 		}
 
-		// Token: 0x060436C7 RID: 276167 RVA: 0x0107A1B5 File Offset: 0x010783B5
+		// Token: 0x06039703 RID: 235267 RVA: 0x0101E669 File Offset: 0x0101C869
 		public override void PlayInAnim(float dist)
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			sequencePlayer.PlayOrReplaySequenceByName("In", true, new float?(dist / 10f + 1f));
 		}
 
-		// Token: 0x060436C8 RID: 276168 RVA: 0x0107A1E0 File Offset: 0x010783E0
+		// Token: 0x06039704 RID: 235268 RVA: 0x0101E694 File Offset: 0x0101C894
 		public override void StartRevolving()
 		{
 			this.StopAllAnim();
@@ -212,10 +212,10 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			sequencePlayer.PlayLevelSequenceByName("Up", false, null, false);
 		}
 
-		// Token: 0x040232EC RID: 144108
+		// Token: 0x0401E4DC RID: 124124
 		private LongPressButtonItem LongPress;
 
-		// Token: 0x040232ED RID: 144109
+		// Token: 0x0401E4DD RID: 124125
 		protected LevelSequencePlayer SequencePlayer;
 	}
 }

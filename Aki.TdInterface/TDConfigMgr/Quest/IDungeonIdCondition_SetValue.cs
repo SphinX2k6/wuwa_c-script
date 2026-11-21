@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F4B RID: 3915
+	// Token: 0x02001075 RID: 4213
 	public class IDungeonIdCondition_SetValue
 	{
-		// Token: 0x040034B0 RID: 13488
+		// Token: 0x040037DF RID: 14303
 		public EDungeonConditionType Type;
 
-		// Token: 0x040034B1 RID: 13489
+		// Token: 0x040037E0 RID: 14304
 		public int Count;
 
-		// Token: 0x040034B2 RID: 13490
+		// Token: 0x040037E1 RID: 14305
 		public bool? IsExitDungeon;
 
-		// Token: 0x040034B3 RID: 13491
+		// Token: 0x040037E2 RID: 14306
 		public int DungeonId;
 	}
 }

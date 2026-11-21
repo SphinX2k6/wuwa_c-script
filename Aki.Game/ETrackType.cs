@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002C12 RID: 11282
+// Token: 0x0200218D RID: 8589
 public enum ETrackType
 {
-	// Token: 0x0400AF33 RID: 44851
+	// Token: 0x0400B338 RID: 45880
 	Default,
-	// Token: 0x0400AF34 RID: 44852
+	// Token: 0x0400B339 RID: 45881
 	AudioHint
 }

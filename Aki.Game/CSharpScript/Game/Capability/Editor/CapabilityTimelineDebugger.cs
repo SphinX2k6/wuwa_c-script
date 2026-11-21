@@ -7,24 +7,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Capability.Editor
 {
-	// Token: 0x020072A3 RID: 29347
+	// Token: 0x02006422 RID: 25634
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CapabilityTimelineDebugger : IStaticVariableResetter
 	{
-		// Token: 0x06047FF0 RID: 294896 RVA: 0x0127189C File Offset: 0x0126FA9C
+		// Token: 0x0603E3B9 RID: 254905 RVA: 0x01212830 File Offset: 0x01210A30
 		static CapabilityTimelineDebugger()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CapabilityTimelineDebugger.CreateStaticDefaultValue), new Action(CapabilityTimelineDebugger.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06047FF1 RID: 294897 RVA: 0x01271948 File Offset: 0x0126FB48
+		// Token: 0x0603E3BA RID: 254906 RVA: 0x012128DC File Offset: 0x01210ADC
 		public CapabilityTimelineDebugger(CapabilityDebugger Debugger)
 		{
 			this.Debugger = Debugger;
 		}
 
-		// Token: 0x06047FF2 RID: 294898 RVA: 0x012719FC File Offset: 0x0126FBFC
+		// Token: 0x0603E3BB RID: 254907 RVA: 0x01212990 File Offset: 0x01210B90
 		private static void ApplyFontConfig(UTextBlock tb, FontConfig cfg)
 		{
 			tb.Font.Size = cfg.Size;
@@ -33,10 +33,14 @@ namespace CSharpScript.Game.Capability.Editor
 				tb.Font.TypefaceFontName = FNameUtil.GetDynamicFName(cfg.Typeface).Value;
 			}
 			tb.Font.LetterSpacing = cfg.LetterSpacing;
-			tb.SetColorAndOpacity(new FSlateColor(cfg.Color, ESlateColorStylingMode.UseColor_Specified));
+			tb.SetColorAndOpacity(new FSlateColor
+			{
+				SpecifiedColor = cfg.Color,
+				ColorUseRule = ESlateColorStylingMode.UseColor_Specified
+			});
 		}
 
-		// Token: 0x06047FF3 RID: 294899 RVA: 0x01271A70 File Offset: 0x0126FC70
+		// Token: 0x0603E3BC RID: 254908 RVA: 0x01212A10 File Offset: 0x01210C10
 		public void Show()
 		{
 			if (this.RootWidget != null)
@@ -60,7 +64,7 @@ namespace CSharpScript.Game.Capability.Editor
 			}, 100f, 1f, null, "CapabilityTimelineDebugger.Redraw", true);
 		}
 
-		// Token: 0x06047FF4 RID: 294900 RVA: 0x01271AF4 File Offset: 0x0126FCF4
+		// Token: 0x0603E3BD RID: 254909 RVA: 0x01212A94 File Offset: 0x01210C94
 		public void Hide()
 		{
 			if (this.TickHandle != null)
@@ -95,13 +99,13 @@ namespace CSharpScript.Game.Capability.Editor
 			this.UsedTickLabels = 0;
 		}
 
-		// Token: 0x06047FF5 RID: 294901 RVA: 0x01271BF2 File Offset: 0x0126FDF2
+		// Token: 0x0603E3BE RID: 254910 RVA: 0x01212B92 File Offset: 0x01210D92
 		public bool IsVisible()
 		{
 			return this.RootWidget != null;
 		}
 
-		// Token: 0x06047FF6 RID: 294902 RVA: 0x01271BFD File Offset: 0x0126FDFD
+		// Token: 0x0603E3BF RID: 254911 RVA: 0x01212B9D File Offset: 0x01210D9D
 		public void SetZoom(float zoom)
 		{
 			if ((double)zoom > 0.05 && zoom < 50f)
@@ -110,7 +114,7 @@ namespace CSharpScript.Game.Capability.Editor
 			}
 		}
 
-		// Token: 0x06047FF7 RID: 294903 RVA: 0x01271C1B File Offset: 0x0126FE1B
+		// Token: 0x0603E3C0 RID: 254912 RVA: 0x01212BBB File Offset: 0x01210DBB
 		public void SetWindowSeconds(float s)
 		{
 			if (s >= 1f && s <= 600f)
@@ -119,14 +123,14 @@ namespace CSharpScript.Game.Capability.Editor
 			}
 		}
 
-		// Token: 0x06047FF8 RID: 294904 RVA: 0x01271C34 File Offset: 0x0126FE34
+		// Token: 0x0603E3C1 RID: 254913 RVA: 0x01212BD4 File Offset: 0x01210DD4
 		[NullableContext(2)]
 		private UUserWidget BuildWidget()
 		{
 			return null;
 		}
 
-		// Token: 0x06047FF9 RID: 294905 RVA: 0x01271C38 File Offset: 0x0126FE38
+		// Token: 0x0603E3C2 RID: 254914 RVA: 0x01212BD8 File Offset: 0x01210DD8
 		private void BuildLegend(UCanvasPanel canvas)
 		{
 			UWidgetTree widgetTree = this.WidgetTree;
@@ -157,7 +161,7 @@ namespace CSharpScript.Game.Capability.Editor
 			}
 		}
 
-		// Token: 0x06047FFA RID: 294906 RVA: 0x01271D34 File Offset: 0x0126FF34
+		// Token: 0x0603E3C3 RID: 254915 RVA: 0x01212CD4 File Offset: 0x01210ED4
 		private void Redraw()
 		{
 			if (this.Canvas == null)
@@ -220,7 +224,7 @@ namespace CSharpScript.Game.Capability.Editor
 			}
 		}
 
-		// Token: 0x06047FFB RID: 294907 RVA: 0x01271F70 File Offset: 0x01270170
+		// Token: 0x0603E3C4 RID: 254916 RVA: 0x01212F10 File Offset: 0x01211110
 		private void UpdateNowLabel(double now)
 		{
 			if (this.NowLabel == null)
@@ -242,7 +246,7 @@ namespace CSharpScript.Game.Capability.Editor
 			}
 		}
 
-		// Token: 0x06047FFC RID: 294908 RVA: 0x01272010 File Offset: 0x01270210
+		// Token: 0x0603E3C5 RID: 254917 RVA: 0x01212FB0 File Offset: 0x012111B0
 		private void LayoutTimeAxis(double startTime, double endTime, float pps)
 		{
 			UCanvasPanel canvas = this.Canvas;
@@ -324,7 +328,7 @@ namespace CSharpScript.Game.Capability.Editor
 			}
 		}
 
-		// Token: 0x06047FFD RID: 294909 RVA: 0x01272308 File Offset: 0x01270508
+		// Token: 0x0603E3C6 RID: 254918 RVA: 0x012132A8 File Offset: 0x012114A8
 		private void BucketizeByRow(List<string> ids, int rowCount, double startTime, double endTime, CapabilityDebugger capabilityDebugger)
 		{
 			try
@@ -397,13 +401,13 @@ namespace CSharpScript.Game.Capability.Editor
 			}
 		}
 
-		// Token: 0x06047FFE RID: 294910 RVA: 0x012725A0 File Offset: 0x012707A0
+		// Token: 0x0603E3C7 RID: 254919 RVA: 0x01213540 File Offset: 0x01211740
 		private static bool IsImportantEvent(CapabilityCommonDefine.ECapabilityDebugEvent e)
 		{
 			return e == CapabilityCommonDefine.ECapabilityDebugEvent.OnActivated || e == CapabilityCommonDefine.ECapabilityDebugEvent.OnDeactivated || e == CapabilityCommonDefine.ECapabilityDebugEvent.Interrupted || e == CapabilityCommonDefine.ECapabilityDebugEvent.Blocked || e == CapabilityCommonDefine.ECapabilityDebugEvent.Unblocked;
 		}
 
-		// Token: 0x06047FFF RID: 294911 RVA: 0x012725BC File Offset: 0x012707BC
+		// Token: 0x0603E3C8 RID: 254920 RVA: 0x0121355C File Offset: 0x0121175C
 		private RowPool EnsureRow(int rowIndex)
 		{
 			RowPool rowPool = this.Rows[rowIndex];
@@ -439,7 +443,7 @@ namespace CSharpScript.Game.Capability.Editor
 			return result;
 		}
 
-		// Token: 0x06048000 RID: 294912 RVA: 0x01272680 File Offset: 0x01270880
+		// Token: 0x0603E3C9 RID: 254921 RVA: 0x01213620 File Offset: 0x01211820
 		private void UpdateLabel(RowPool pool, string text, int x, int y)
 		{
 			if (pool.LabelText != text)
@@ -456,7 +460,7 @@ namespace CSharpScript.Game.Capability.Editor
 			pool.Label.SetVisibility(ESlateVisibility.HitTestInvisible);
 		}
 
-		// Token: 0x06048001 RID: 294913 RVA: 0x012726F0 File Offset: 0x012708F0
+		// Token: 0x0603E3CA RID: 254922 RVA: 0x01213690 File Offset: 0x01211890
 		private void LayoutRow(RowPool pool, List<ICapabilityDebugActiveSpan> spans, List<ICapabilityDebugRecord> events, double startTime, float pps, int y, double now)
 		{
 			UCanvasPanel canvas = this.Canvas;
@@ -521,7 +525,7 @@ namespace CSharpScript.Game.Capability.Editor
 			pool.UsedEvents = count2;
 		}
 
-		// Token: 0x06048002 RID: 294914 RVA: 0x01272990 File Offset: 0x01270B90
+		// Token: 0x0603E3CB RID: 254923 RVA: 0x01213930 File Offset: 0x01211B30
 		private void HideRow(RowPool pool)
 		{
 			pool.Label.SetVisibility(ESlateVisibility.Collapsed);
@@ -537,7 +541,7 @@ namespace CSharpScript.Game.Capability.Editor
 			pool.UsedEvents = 0;
 		}
 
-		// Token: 0x06048003 RID: 294915 RVA: 0x01272A00 File Offset: 0x01270C00
+		// Token: 0x0603E3CC RID: 254924 RVA: 0x012139A0 File Offset: 0x01211BA0
 		public string DumpToString()
 		{
 			CapabilityDebugger debugger = this.Debugger;
@@ -615,7 +619,7 @@ namespace CSharpScript.Game.Capability.Editor
 			return string.Join("\n", list);
 		}
 
-		// Token: 0x06048004 RID: 294916 RVA: 0x01272DB4 File Offset: 0x01270FB4
+		// Token: 0x0603E3CD RID: 254925 RVA: 0x01213D54 File Offset: 0x01211F54
 		public unsafe static void CreateStaticDefaultValue()
 		{
 			Dictionary<CapabilityCommonDefine.ECapabilityDebugEvent, FLinearColor> dictionary = new Dictionary<CapabilityCommonDefine.ECapabilityDebugEvent, FLinearColor>();
@@ -684,7 +688,7 @@ namespace CSharpScript.Game.Capability.Editor
 			CapabilityTimelineDebugger.statTimeAxis = Stat.Create("CapabilityTimelineDebugger.TimeAxis", "", "");
 		}
 
-		// Token: 0x06048005 RID: 294917 RVA: 0x01273160 File Offset: 0x01271360
+		// Token: 0x0603E3CE RID: 254926 RVA: 0x01214100 File Offset: 0x01212300
 		public static void ResetStaticDefaultValue()
 		{
 			CapabilityTimelineDebugger.legendEntries = null;
@@ -700,25 +704,25 @@ namespace CSharpScript.Game.Capability.Editor
 			CapabilityTimelineDebugger.statTimeAxis = null;
 		}
 
-		// Token: 0x04025F0B RID: 155403
+		// Token: 0x040211DE RID: 135646
 		private static Dictionary<CapabilityCommonDefine.ECapabilityDebugEvent, FLinearColor> eventColor;
 
-		// Token: 0x04025F0C RID: 155404
+		// Token: 0x040211DF RID: 135647
 		private static readonly FLinearColor spanColor = new FLinearColor(0.3f, 0.6f, 1f, 0.8f);
 
-		// Token: 0x04025F0D RID: 155405
+		// Token: 0x040211E0 RID: 135648
 		private static readonly FLinearColor cursorColor = ColorUtils.LinearWhiteOpaque;
 
-		// Token: 0x04025F0E RID: 155406
+		// Token: 0x040211E1 RID: 135649
 		private static readonly FLinearColor textColor = new FLinearColor(0.85f, 0.85f, 0.85f, 0.85f);
 
-		// Token: 0x04025F0F RID: 155407
+		// Token: 0x040211E2 RID: 135650
 		private static readonly FLinearColor tickColor = new FLinearColor(1f, 1f, 1f, 0.15f);
 
-		// Token: 0x04025F10 RID: 155408
+		// Token: 0x040211E3 RID: 135651
 		private static readonly FLinearColor tickLabelColor = new FLinearColor(0.7f, 0.7f, 0.7f, 0.6f);
 
-		// Token: 0x04025F11 RID: 155409
+		// Token: 0x040211E4 RID: 135652
 		[Nullable(new byte[]
 		{
 			1,
@@ -727,128 +731,128 @@ namespace CSharpScript.Game.Capability.Editor
 		})]
 		private static List<ValueTuple<FLinearColor, string>> legendEntries;
 
-		// Token: 0x04025F12 RID: 155410
+		// Token: 0x040211E5 RID: 135653
 		private const int ROW_HEIGHT = 22;
 
-		// Token: 0x04025F13 RID: 155411
+		// Token: 0x040211E6 RID: 135654
 		private const int LABEL_COL_WIDTH = 240;
 
-		// Token: 0x04025F14 RID: 155412
+		// Token: 0x040211E7 RID: 135655
 		private const int PIXELS_PER_SECOND_BASE = 80;
 
-		// Token: 0x04025F15 RID: 155413
+		// Token: 0x040211E8 RID: 135656
 		private const int REDRAW_INTERVAL_MS = 100;
 
-		// Token: 0x04025F16 RID: 155414
+		// Token: 0x040211E9 RID: 135657
 		private const int MAX_SPANS_PER_ROW = 64;
 
-		// Token: 0x04025F17 RID: 155415
+		// Token: 0x040211EA RID: 135658
 		private const int MAX_EVENTS_PER_ROW = 64;
 
-		// Token: 0x04025F18 RID: 155416
+		// Token: 0x040211EB RID: 135659
 		private const int MAX_ROWS = 64;
 
-		// Token: 0x04025F19 RID: 155417
+		// Token: 0x040211EC RID: 135660
 		private static FontConfig headerFontConfig;
 
-		// Token: 0x04025F1A RID: 155418
+		// Token: 0x040211ED RID: 135661
 		private static FontConfig labelFontConfig;
 
-		// Token: 0x04025F1B RID: 155419
+		// Token: 0x040211EE RID: 135662
 		private static FontConfig legendFontConfig;
 
-		// Token: 0x04025F1C RID: 155420
+		// Token: 0x040211EF RID: 135663
 		private static FontConfig tickLabelFontConfig;
 
-		// Token: 0x04025F1D RID: 155421
+		// Token: 0x040211F0 RID: 135664
 		private const int LEGEND_HEIGHT = 18;
 
-		// Token: 0x04025F1E RID: 155422
+		// Token: 0x040211F1 RID: 135665
 		private const int LEGEND_SWATCH_W = 12;
 
-		// Token: 0x04025F1F RID: 155423
+		// Token: 0x040211F2 RID: 135666
 		private const int LEGEND_SWATCH_H = 10;
 
-		// Token: 0x04025F20 RID: 155424
+		// Token: 0x040211F3 RID: 135667
 		private const int LEGEND_ITEM_WIDTH = 110;
 
-		// Token: 0x04025F21 RID: 155425
+		// Token: 0x040211F4 RID: 135668
 		private const int TIME_AXIS_HEIGHT = 14;
 
-		// Token: 0x04025F22 RID: 155426
+		// Token: 0x040211F5 RID: 135669
 		private const int ROW_Y_OFFSET = 62;
 
-		// Token: 0x04025F23 RID: 155427
+		// Token: 0x040211F6 RID: 135670
 		private const int CURSOR_MIN_HEIGHT = 36;
 
-		// Token: 0x04025F24 RID: 155428
+		// Token: 0x040211F7 RID: 135671
 		private const int TICK_MINOR_INTERVAL_SEC = 1;
 
-		// Token: 0x04025F25 RID: 155429
+		// Token: 0x040211F8 RID: 135672
 		private const int TICK_MAJOR_INTERVAL_SEC = 5;
 
-		// Token: 0x04025F26 RID: 155430
+		// Token: 0x040211F9 RID: 135673
 		private const int MAX_TIME_TICKS = 256;
 
-		// Token: 0x04025F27 RID: 155431
+		// Token: 0x040211FA RID: 135674
 		private static Stat statRedraw;
 
-		// Token: 0x04025F28 RID: 155432
+		// Token: 0x040211FB RID: 135675
 		private static Stat statBucketize;
 
-		// Token: 0x04025F29 RID: 155433
+		// Token: 0x040211FC RID: 135676
 		private static Stat statLayoutRow;
 
-		// Token: 0x04025F2A RID: 155434
+		// Token: 0x040211FD RID: 135677
 		private static Stat statEnsureRow;
 
-		// Token: 0x04025F2B RID: 155435
+		// Token: 0x040211FE RID: 135678
 		private static Stat statTimeAxis;
 
-		// Token: 0x04025F2C RID: 155436
+		// Token: 0x040211FF RID: 135679
 		private float Zoom = 1f;
 
-		// Token: 0x04025F2D RID: 155437
+		// Token: 0x04021200 RID: 135680
 		private float WindowSeconds = 30f;
 
-		// Token: 0x04025F2E RID: 155438
+		// Token: 0x04021201 RID: 135681
 		[Nullable(2)]
 		private UUserWidget RootWidget;
 
-		// Token: 0x04025F2F RID: 155439
+		// Token: 0x04021202 RID: 135682
 		[Nullable(2)]
 		private UWidgetTree WidgetTree;
 
-		// Token: 0x04025F30 RID: 155440
+		// Token: 0x04021203 RID: 135683
 		[Nullable(2)]
 		private UCanvasPanel Canvas;
 
-		// Token: 0x04025F31 RID: 155441
+		// Token: 0x04021204 RID: 135684
 		[Nullable(2)]
 		private UCanvasPanelSlot CursorSlot;
 
-		// Token: 0x04025F32 RID: 155442
+		// Token: 0x04021205 RID: 135685
 		[Nullable(2)]
 		private UTextBlock NowLabel;
 
-		// Token: 0x04025F33 RID: 155443
+		// Token: 0x04021206 RID: 135686
 		private string NowLabelText = "";
 
-		// Token: 0x04025F34 RID: 155444
+		// Token: 0x04021207 RID: 135687
 		[Nullable(2)]
 		private UTextBlock CursorTimeLabel;
 
-		// Token: 0x04025F35 RID: 155445
+		// Token: 0x04021208 RID: 135688
 		[Nullable(2)]
 		private UCanvasPanelSlot CursorTimeLabelSlot;
 
-		// Token: 0x04025F36 RID: 155446
+		// Token: 0x04021209 RID: 135689
 		private string CursorTimeLabelText = "";
 
-		// Token: 0x04025F37 RID: 155447
+		// Token: 0x0402120A RID: 135690
 		private readonly List<UImage> Ticks = new List<UImage>();
 
-		// Token: 0x04025F38 RID: 155448
+		// Token: 0x0402120B RID: 135691
 		[Nullable(new byte[]
 		{
 			1,
@@ -856,13 +860,13 @@ namespace CSharpScript.Game.Capability.Editor
 		})]
 		private readonly List<UCanvasPanelSlot> TickSlots = new List<UCanvasPanelSlot>();
 
-		// Token: 0x04025F39 RID: 155449
+		// Token: 0x0402120C RID: 135692
 		private int UsedTicks;
 
-		// Token: 0x04025F3A RID: 155450
+		// Token: 0x0402120D RID: 135693
 		private readonly List<UTextBlock> TickLabels = new List<UTextBlock>();
 
-		// Token: 0x04025F3B RID: 155451
+		// Token: 0x0402120E RID: 135694
 		[Nullable(new byte[]
 		{
 			1,
@@ -870,32 +874,32 @@ namespace CSharpScript.Game.Capability.Editor
 		})]
 		private readonly List<UCanvasPanelSlot> TickLabelSlots = new List<UCanvasPanelSlot>();
 
-		// Token: 0x04025F3C RID: 155452
+		// Token: 0x0402120F RID: 135695
 		private readonly List<string> TickLabelTexts = new List<string>();
 
-		// Token: 0x04025F3D RID: 155453
+		// Token: 0x04021210 RID: 135696
 		private int UsedTickLabels;
 
-		// Token: 0x04025F3E RID: 155454
+		// Token: 0x04021211 RID: 135697
 		private readonly List<RowPool> Rows = new List<RowPool>();
 
-		// Token: 0x04025F3F RID: 155455
+		// Token: 0x04021212 RID: 135698
 		private readonly List<List<ICapabilityDebugActiveSpan>> SpanBuckets = new List<List<ICapabilityDebugActiveSpan>>();
 
-		// Token: 0x04025F40 RID: 155456
+		// Token: 0x04021213 RID: 135699
 		private readonly List<List<ICapabilityDebugRecord>> EventBuckets = new List<List<ICapabilityDebugRecord>>();
 
-		// Token: 0x04025F41 RID: 155457
+		// Token: 0x04021214 RID: 135700
 		private readonly Dictionary<string, int> IdToRowIndex = new Dictionary<string, int>();
 
-		// Token: 0x04025F42 RID: 155458
+		// Token: 0x04021215 RID: 135701
 		private readonly List<string> RowIds = new List<string>();
 
-		// Token: 0x04025F43 RID: 155459
+		// Token: 0x04021216 RID: 135702
 		[Nullable(2)]
 		private TimerHandle TickHandle;
 
-		// Token: 0x04025F44 RID: 155460
+		// Token: 0x04021217 RID: 135703
 		public CapabilityDebugger Debugger;
 	}
 }

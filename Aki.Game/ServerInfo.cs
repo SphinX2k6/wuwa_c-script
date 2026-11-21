@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002099 RID: 8345
+// Token: 0x0200156F RID: 5487
 [NullableContext(1)]
 [Nullable(0)]
 public class ServerInfo
 {
-	// Token: 0x04007973 RID: 31091
+	// Token: 0x04007A6C RID: 31340
 	public string server = string.Empty;
 
-	// Token: 0x04007974 RID: 31092
+	// Token: 0x04007A6D RID: 31341
 	public string address = string.Empty;
 
-	// Token: 0x04007975 RID: 31093
+	// Token: 0x04007A6E RID: 31342
 	public string description = string.Empty;
 
-	// Token: 0x04007976 RID: 31094
+	// Token: 0x04007A6F RID: 31343
 	public string stream = string.Empty;
 
-	// Token: 0x04007977 RID: 31095
+	// Token: 0x04007A70 RID: 31344
 	public int? editor;
 
-	// Token: 0x04007978 RID: 31096
+	// Token: 0x04007A71 RID: 31345
 	public int? package;
 
-	// Token: 0x04007979 RID: 31097
+	// Token: 0x04007A72 RID: 31346
 	public int? order;
 }

@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002261 RID: 8801
+// Token: 0x02001745 RID: 5957
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorTechNodeListData : IMotorTechNodeListData
 {
-	// Token: 0x170015EC RID: 5612
-	// (get) Token: 0x06011295 RID: 70293 RVA: 0x0042E411 File Offset: 0x0042C611
-	// (set) Token: 0x06011296 RID: 70294 RVA: 0x0042E419 File Offset: 0x0042C619
+	// Token: 0x17001623 RID: 5667
+	// (get) Token: 0x0600E72B RID: 59179 RVA: 0x0043AFB1 File Offset: 0x004391B1
+	// (set) Token: 0x0600E72C RID: 59180 RVA: 0x0043AFB9 File Offset: 0x004391B9
 	public int[] TopIds { get; set; }
 
-	// Token: 0x170015ED RID: 5613
-	// (get) Token: 0x06011297 RID: 70295 RVA: 0x0042E422 File Offset: 0x0042C622
-	// (set) Token: 0x06011298 RID: 70296 RVA: 0x0042E42A File Offset: 0x0042C62A
+	// Token: 0x17001624 RID: 5668
+	// (get) Token: 0x0600E72D RID: 59181 RVA: 0x0043AFC2 File Offset: 0x004391C2
+	// (set) Token: 0x0600E72E RID: 59182 RVA: 0x0043AFCA File Offset: 0x004391CA
 	public int[] BottomIds { get; set; }
 
-	// Token: 0x170015EE RID: 5614
-	// (get) Token: 0x06011299 RID: 70297 RVA: 0x0042E433 File Offset: 0x0042C633
-	// (set) Token: 0x0601129A RID: 70298 RVA: 0x0042E43B File Offset: 0x0042C63B
+	// Token: 0x17001625 RID: 5669
+	// (get) Token: 0x0600E72F RID: 59183 RVA: 0x0043AFD3 File Offset: 0x004391D3
+	// (set) Token: 0x0600E730 RID: 59184 RVA: 0x0043AFDB File Offset: 0x004391DB
 	public int MiddleId { get; set; }
 }

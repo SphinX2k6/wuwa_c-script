@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200061B RID: 1563
+	// Token: 0x02000633 RID: 1587
 	public class ConfigNpcGroupPerformConfigByRoleIdAndNpcPerformType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060024B2 RID: 9394 RVA: 0x001291BA File Offset: 0x001273BA
+		// Token: 0x06002542 RID: 9538 RVA: 0x0012FC36 File Offset: 0x0012DE36
 		static ConfigNpcGroupPerformConfigByRoleIdAndNpcPerformType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNpcGroupPerformConfigByRoleIdAndNpcPerformType.CreateStaticDefaultValue), new Action(ConfigNpcGroupPerformConfigByRoleIdAndNpcPerformType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060024B3 RID: 9395 RVA: 0x001291DC File Offset: 0x001273DC
+		// Token: 0x06002543 RID: 9539 RVA: 0x0012FC58 File Offset: 0x0012DE58
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNpcGroupPerformConfigByRoleIdAndNpcPerformType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060024B4 RID: 9396 RVA: 0x0012925B File Offset: 0x0012745B
+		// Token: 0x06002544 RID: 9540 RVA: 0x0012FCD7 File Offset: 0x0012DED7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNpcGroupPerformConfigByRoleIdAndNpcPerformType.LogPair = null;
 			ConfigNpcGroupPerformConfigByRoleIdAndNpcPerformType.HandleId = 0;
 		}
 
-		// Token: 0x060024B5 RID: 9397 RVA: 0x00129269 File Offset: 0x00127469
+		// Token: 0x06002545 RID: 9541 RVA: 0x0012FCE5 File Offset: 0x0012DEE5
 		public static void Init()
 		{
 			ConfigNpcGroupPerformConfigByRoleIdAndNpcPerformType.HandleId = ConfigCommon.InitDataStatement(ConfigNpcGroupPerformConfigByRoleIdAndNpcPerformType.HandleId, "db_npcgroupperformconfig.db", "select BinData from `NpcGroupPerformConfig` where PerformType=? And RoleId=? And NpcType=?");
 		}
 
-		// Token: 0x060024B6 RID: 9398 RVA: 0x00129284 File Offset: 0x00127484
+		// Token: 0x06002546 RID: 9542 RVA: 0x0012FD00 File Offset: 0x0012DF00
 		[return: Nullable(2)]
 		public static IReadOnlyList<NpcGroupPerformConfig> GetConfigList(int p0PerformType, int p1RoleId, string p2NpcType, bool useCache = true)
 		{
@@ -104,22 +104,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002AA3 RID: 10915
+		// Token: 0x04002B4B RID: 11083
 		private const string DB = "db_npcgroupperformconfig.db";
 
-		// Token: 0x04002AA4 RID: 10916
+		// Token: 0x04002B4C RID: 11084
 		private const string FILE = "k.可视化编辑/c.Csv/n.NPC组合表演配置/*.csv*";
 
-		// Token: 0x04002AA5 RID: 10917
+		// Token: 0x04002B4D RID: 11085
 		private const string TABLE = "NpcGroupPerformConfig";
 
-		// Token: 0x04002AA6 RID: 10918
+		// Token: 0x04002B4E RID: 11086
 		private const string COMMAND = "select BinData from `NpcGroupPerformConfig` where PerformType=? And RoleId=? And NpcType=?";
 
-		// Token: 0x04002AA7 RID: 10919
+		// Token: 0x04002B4F RID: 11087
 		private const string KEY_PREFIX = "NpcGroupPerformConfigByRoleIdAndNpcPerformType";
 
-		// Token: 0x04002AA8 RID: 10920
+		// Token: 0x04002B50 RID: 11088
 		[Nullable(new byte[]
 		{
 			2,
@@ -129,7 +129,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002AA9 RID: 10921
+		// Token: 0x04002B51 RID: 11089
 		private static int HandleId;
 	}
 }

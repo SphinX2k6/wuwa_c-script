@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D85 RID: 23941
+	// Token: 0x02004D67 RID: 19815
 	public class StepConditionIndexChangeProcess : TPendingProcess
 	{
-		// Token: 0x0603CC3F RID: 248895 RVA: 0x00E96ACD File Offset: 0x00E94CCD
+		// Token: 0x06031B9B RID: 203675 RVA: 0x00DE7315 File Offset: 0x00DE5515
 		public StepConditionIndexChangeProcess(EMissionItemView viewId, int stepId, int? curConditionTextIndex)
 		{
 		}
 
-		// Token: 0x17008E5D RID: 36445
-		// (get) Token: 0x0603CC40 RID: 248896 RVA: 0x00E96AEA File Offset: 0x00E94CEA
+		// Token: 0x1700622F RID: 25135
+		// (get) Token: 0x06031B9C RID: 203676 RVA: 0x00DE7332 File Offset: 0x00DE5532
 		public override EMissionProcessType ProcessType
 		{
 			get
@@ -20,8 +20,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008E5E RID: 36446
-		// (get) Token: 0x0603CC41 RID: 248897 RVA: 0x00E96AED File Offset: 0x00E94CED
+		// Token: 0x17006230 RID: 25136
+		// (get) Token: 0x06031B9D RID: 203677 RVA: 0x00DE7335 File Offset: 0x00DE5535
 		public override bool IsSkipAnim
 		{
 			get
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FA78 RID: 129656
+		// Token: 0x0401A530 RID: 107824
 		public readonly EMissionItemView ViewId = viewId;
 
-		// Token: 0x0401FA79 RID: 129657
+		// Token: 0x0401A531 RID: 107825
 		public readonly int StepId = stepId;
 
-		// Token: 0x0401FA7A RID: 129658
+		// Token: 0x0401A532 RID: 107826
 		public readonly int? CurConditionTextIndex = curConditionTextIndex;
 	}
 }

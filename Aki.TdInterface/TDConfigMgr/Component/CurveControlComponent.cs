@@ -5,11 +5,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x0200004E RID: 78
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class CurveControlComponent : IComponentBase
 	{
-		// Token: 0x06000288 RID: 648 RVA: 0x00019A9C File Offset: 0x00017C9C
+		// Token: 0x0600028C RID: 652 RVA: 0x0001A410 File Offset: 0x00018610
 		private CurveControlComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000289 RID: 649 RVA: 0x00019AD4 File Offset: 0x00017CD4
+		// Token: 0x0600028D RID: 653 RVA: 0x0001A448 File Offset: 0x00018648
 		public static CurveControlComponent Create([Nullable(2)] CurveControlComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600028A RID: 650 RVA: 0x00019AE7 File Offset: 0x00017CE7
+		// Token: 0x0600028E RID: 654 RVA: 0x0001A45B File Offset: 0x0001865B
 		public static CurveControlComponent CreateFromSetValue([Nullable(2)] CurveControlComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600028B RID: 651 RVA: 0x00019AFA File Offset: 0x00017CFA
+		// Token: 0x0600028F RID: 655 RVA: 0x0001A46E File Offset: 0x0001866E
 		public new CurveControlComponent_SetValue ToSetValue()
 		{
 			return new CurveControlComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170000E1 RID: 225
-		// (get) Token: 0x0600028C RID: 652 RVA: 0x00019B28 File Offset: 0x00017D28
-		// (set) Token: 0x0600028D RID: 653 RVA: 0x00019B62 File Offset: 0x00017D62
+		// Token: 0x170000E3 RID: 227
+		// (get) Token: 0x06000290 RID: 656 RVA: 0x0001A49C File Offset: 0x0001869C
+		// (set) Token: 0x06000291 RID: 657 RVA: 0x0001A4D6 File Offset: 0x000186D6
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000E2 RID: 226
-		// (get) Token: 0x0600028E RID: 654 RVA: 0x00019B70 File Offset: 0x00017D70
-		// (set) Token: 0x0600028F RID: 655 RVA: 0x00019B9A File Offset: 0x00017D9A
+		// Token: 0x170000E4 RID: 228
+		// (get) Token: 0x06000292 RID: 658 RVA: 0x0001A4E4 File Offset: 0x000186E4
+		// (set) Token: 0x06000293 RID: 659 RVA: 0x0001A50E File Offset: 0x0001870E
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000E3 RID: 227
-		// (get) Token: 0x06000290 RID: 656 RVA: 0x00019BA8 File Offset: 0x00017DA8
-		// (set) Token: 0x06000291 RID: 657 RVA: 0x00019C09 File Offset: 0x00017E09
+		// Token: 0x170000E5 RID: 229
+		// (get) Token: 0x06000294 RID: 660 RVA: 0x0001A51C File Offset: 0x0001871C
+		// (set) Token: 0x06000295 RID: 661 RVA: 0x0001A57D File Offset: 0x0001877D
 		[Nullable(2)]
 		public virtual IChargeSlashControl CurveControlConfig
 		{
@@ -137,18 +135,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000194 RID: 404
+		// Token: 0x04000199 RID: 409
 		[Nullable(2)]
 		protected new CurveControlComponent FbInstance;
 
-		// Token: 0x04000195 RID: 405
+		// Token: 0x0400019A RID: 410
 		[Nullable(2)]
 		protected new CurveControlComponent_SetValue PocoInterface;
 
-		// Token: 0x04000196 RID: 406
+		// Token: 0x0400019B RID: 411
 		private IChargeSlashControl _CurveControlConfigCache;
 
-		// Token: 0x04000197 RID: 407
+		// Token: 0x0400019C RID: 412
 		private bool _CurveControlConfigInited;
 	}
 }

@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001213 RID: 4627
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200134F RID: 4943
 	public class IWordArtConfig_SetValue
 	{
-		// Token: 0x04003ECA RID: 16074
+		// Token: 0x04004238 RID: 16952
 		public INumberWordArtEffectiveTargetType EffectiveTarget;
 
-		// Token: 0x04003ECB RID: 16075
+		// Token: 0x04004239 RID: 16953
 		public IWordArtDefaultResourceType Resource;
 	}
 }

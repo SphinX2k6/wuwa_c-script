@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200097C RID: 2428
+	// Token: 0x02000A2F RID: 2607
 	public static class EInteractTurnAroundExtensions
 	{
-		// Token: 0x0600365F RID: 13919 RVA: 0x0008DBCC File Offset: 0x0008BDCC
+		// Token: 0x060039E6 RID: 14822 RVA: 0x00095B38 File Offset: 0x00093D38
 		public static string ToEnumString(this EInteractTurnAround value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003660 RID: 13920 RVA: 0x0008DC14 File Offset: 0x0008BE14
+		// Token: 0x060039E7 RID: 14823 RVA: 0x00095B80 File Offset: 0x00093D80
 		public static EInteractTurnAround FromString(string name)
 		{
 			EInteractTurnAround result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003661 RID: 13921 RVA: 0x0008DC40 File Offset: 0x0008BE40
+		// Token: 0x060039E8 RID: 14824 RVA: 0x00095BAC File Offset: 0x00093DAC
 		public static bool TryFromString(string name, out EInteractTurnAround value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003662 RID: 13922 RVA: 0x0008DC96 File Offset: 0x0008BE96
+		// Token: 0x060039E9 RID: 14825 RVA: 0x00095C02 File Offset: 0x00093E02
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003663 RID: 13923 RVA: 0x0008DCB6 File Offset: 0x0008BEB6
+		// Token: 0x060039EA RID: 14826 RVA: 0x00095C22 File Offset: 0x00093E22
 		public static EInteractTurnAround[] GetValues()
 		{
 			return new EInteractTurnAround[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003664 RID: 13924 RVA: 0x0008DCC6 File Offset: 0x0008BEC6
+		// Token: 0x060039EB RID: 14827 RVA: 0x00095C32 File Offset: 0x00093E32
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02000F6A RID: 3946
+// Token: 0x0200041F RID: 1055
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class DrinksRoleRequireItem : GridProxyAbstract<IDrinksRequireInfo>
 {
-	// Token: 0x060064F4 RID: 25844 RVA: 0x0014090C File Offset: 0x0013EB0C
+	// Token: 0x0600388C RID: 14476 RVA: 0x001491A8 File Offset: 0x001473A8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class DrinksRoleRequireItem : GridProxyAbstract<IDrinksRequireInfo>
 		};
 	}
 
-	// Token: 0x060064F5 RID: 25845 RVA: 0x00140994 File Offset: 0x0013EB94
+	// Token: 0x0600388D RID: 14477 RVA: 0x00149230 File Offset: 0x00147430
 	[NullableContext(1)]
 	public override void Refresh(IDrinksRequireInfo data, bool isSelected, int gridIndex)
 	{
@@ -79,22 +79,22 @@ public class DrinksRoleRequireItem : GridProxyAbstract<IDrinksRequireInfo>
 		}));
 	}
 
-	// Token: 0x020075B5 RID: 30133
+	// Token: 0x02006749 RID: 26441
 	private static class EItem
 	{
-		// Token: 0x04026E72 RID: 159346
+		// Token: 0x040221BD RID: 139709
 		public const int IconLock = 0;
 
-		// Token: 0x04026E73 RID: 159347
+		// Token: 0x040221BE RID: 139710
 		public const int PanelCheck = 1;
 
-		// Token: 0x04026E74 RID: 159348
+		// Token: 0x040221BF RID: 139711
 		public const int SpriteCheck = 2;
 
-		// Token: 0x04026E75 RID: 159349
+		// Token: 0x040221C0 RID: 139712
 		public const int Desc = 3;
 
-		// Token: 0x04026E76 RID: 159350
+		// Token: 0x040221C1 RID: 139713
 		public const int SpriteMain = 4;
 	}
 }

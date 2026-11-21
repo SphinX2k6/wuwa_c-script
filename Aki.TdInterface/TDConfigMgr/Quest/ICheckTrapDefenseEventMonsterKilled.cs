@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F08 RID: 3848
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200101E RID: 4126
 	public class ICheckTrapDefenseEventMonsterKilled : ICheckTrapDefenseEventBase
 	{
-		// Token: 0x060054DC RID: 21724 RVA: 0x000D0134 File Offset: 0x000CE334
+		// Token: 0x06005A58 RID: 23128 RVA: 0x000DC2DC File Offset: 0x000DA4DC
 		private ICheckTrapDefenseEventMonsterKilled_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060054DD RID: 21725 RVA: 0x000D016C File Offset: 0x000CE36C
+		// Token: 0x06005A59 RID: 23129 RVA: 0x000DC314 File Offset: 0x000DA514
 		public static ICheckTrapDefenseEventMonsterKilled Create([Nullable(2)] ICheckTrapDefenseEventMonsterKilled instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060054DE RID: 21726 RVA: 0x000D017F File Offset: 0x000CE37F
+		// Token: 0x06005A5A RID: 23130 RVA: 0x000DC327 File Offset: 0x000DA527
 		public static ICheckTrapDefenseEventMonsterKilled CreateFromSetValue([Nullable(2)] ICheckTrapDefenseEventMonsterKilled_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060054DF RID: 21727 RVA: 0x000D0192 File Offset: 0x000CE392
+		// Token: 0x06005A5B RID: 23131 RVA: 0x000DC33A File Offset: 0x000DA53A
 		public new ICheckTrapDefenseEventMonsterKilled_SetValue ToSetValue()
 		{
 			return new ICheckTrapDefenseEventMonsterKilled_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C63 RID: 7267
-		// (get) Token: 0x060054E0 RID: 21728 RVA: 0x000D01B1 File Offset: 0x000CE3B1
-		// (set) Token: 0x060054E1 RID: 21729 RVA: 0x000D01DC File Offset: 0x000CE3DC
+		// Token: 0x17001DFB RID: 7675
+		// (get) Token: 0x06005A5C RID: 23132 RVA: 0x000DC359 File Offset: 0x000DA559
+		// (set) Token: 0x06005A5D RID: 23133 RVA: 0x000DC384 File Offset: 0x000DA584
 		public override ECheckTrapDefenseEvent Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C64 RID: 7268
-		// (get) Token: 0x060054E2 RID: 21730 RVA: 0x000D01EA File Offset: 0x000CE3EA
-		// (set) Token: 0x060054E3 RID: 21731 RVA: 0x000D0215 File Offset: 0x000CE415
+		// Token: 0x17001DFC RID: 7676
+		// (get) Token: 0x06005A5E RID: 23134 RVA: 0x000DC392 File Offset: 0x000DA592
+		// (set) Token: 0x06005A5F RID: 23135 RVA: 0x000DC3BD File Offset: 0x000DA5BD
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400335C RID: 13148
+		// Token: 0x04003669 RID: 13929
 		[Nullable(2)]
 		protected new ICheckTrapDefenseEventMonsterKilled FbInstance;
 
-		// Token: 0x0400335D RID: 13149
+		// Token: 0x0400366A RID: 13930
 		[Nullable(2)]
 		protected new ICheckTrapDefenseEventMonsterKilled_SetValue PocoInterface;
 	}

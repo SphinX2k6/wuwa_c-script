@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001EE4 RID: 7908
+// Token: 0x020013A6 RID: 5030
 public class HonamiStoryPollutionUpdateParams : IHonamiStoryPollutionUpdateParams
 {
-	// Token: 0x17001303 RID: 4867
-	// (get) Token: 0x0600F37E RID: 62334 RVA: 0x003AB3CC File Offset: 0x003A95CC
-	// (set) Token: 0x0600F37F RID: 62335 RVA: 0x003AB3D4 File Offset: 0x003A95D4
+	// Token: 0x1700132D RID: 4909
+	// (get) Token: 0x0600C79D RID: 51101 RVA: 0x003B6EC8 File Offset: 0x003B50C8
+	// (set) Token: 0x0600C79E RID: 51102 RVA: 0x003B6ED0 File Offset: 0x003B50D0
 	public int PollutionLevel { get; set; }
 
-	// Token: 0x17001304 RID: 4868
-	// (get) Token: 0x0600F380 RID: 62336 RVA: 0x003AB3DD File Offset: 0x003A95DD
-	// (set) Token: 0x0600F381 RID: 62337 RVA: 0x003AB3E5 File Offset: 0x003A95E5
+	// Token: 0x1700132E RID: 4910
+	// (get) Token: 0x0600C79F RID: 51103 RVA: 0x003B6ED9 File Offset: 0x003B50D9
+	// (set) Token: 0x0600C7A0 RID: 51104 RVA: 0x003B6EE1 File Offset: 0x003B50E1
 	public int MonsterIncreaseLevel { get; set; }
 }

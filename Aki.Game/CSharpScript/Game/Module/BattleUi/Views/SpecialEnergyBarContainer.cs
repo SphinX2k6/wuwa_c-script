@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E1C RID: 24092
+	// Token: 0x02004E01 RID: 19969
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpecialEnergyBarContainer : BattleVisibleChildView
 	{
-		// Token: 0x0603D458 RID: 250968 RVA: 0x00EC3FAC File Offset: 0x00EC21AC
+		// Token: 0x060323E7 RID: 205799 RVA: 0x00E1550C File Offset: 0x00E1370C
 		public override void Initialize(object param = null)
 		{
 			base.Initialize(param);
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603D459 RID: 250969 RVA: 0x00EC4020 File Offset: 0x00EC2220
+		// Token: 0x060323E8 RID: 205800 RVA: 0x00E15580 File Offset: 0x00E13780
 		protected override void OnBeforeDestroy()
 		{
 			this.CurRoleBar = null;
@@ -38,14 +38,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.MotorcycleSpecialEnergyBar.Destroy();
 		}
 
-		// Token: 0x0603D45A RID: 250970 RVA: 0x00EC4088 File Offset: 0x00EC2288
+		// Token: 0x060323E9 RID: 205801 RVA: 0x00E155E8 File Offset: 0x00E137E8
 		public override void Reset()
 		{
 			this.RemoveEvents();
 			base.Reset();
 		}
 
-		// Token: 0x0603D45B RID: 250971 RVA: 0x00EC4098 File Offset: 0x00EC2298
+		// Token: 0x060323EA RID: 205802 RVA: 0x00E155F8 File Offset: 0x00E137F8
 		public void Tick(float delta)
 		{
 			foreach (RoleSpecialEnergyBar roleSpecialEnergyBar in this.RoleBarMap.Values)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.MotorcycleSpecialEnergyBar.Tick(delta);
 		}
 
-		// Token: 0x0603D45C RID: 250972 RVA: 0x00EC40FC File Offset: 0x00EC22FC
+		// Token: 0x060323EB RID: 205803 RVA: 0x00E1565C File Offset: 0x00E1385C
 		public void OnChangeRole(BattleUiRoleData roleData)
 		{
 			int? num;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshAllSpecialEnergyBarVisible();
 		}
 
-		// Token: 0x0603D45D RID: 250973 RVA: 0x00EC419C File Offset: 0x00EC239C
+		// Token: 0x060323EC RID: 205804 RVA: 0x00E156FC File Offset: 0x00E138FC
 		public void OnRemoveEntity(int entityId)
 		{
 			RoleSpecialEnergyBar roleSpecialEnergyBar;
@@ -97,28 +97,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D45E RID: 250974 RVA: 0x00EC41CF File Offset: 0x00EC23CF
+		// Token: 0x060323ED RID: 205805 RVA: 0x00E1572F File Offset: 0x00E1392F
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.BattleUiAllRoleDataChanged, new Action(this.OnFormationLoaded));
 			this.MotorcycleSpecialEnergyBar.AddEvents();
 		}
 
-		// Token: 0x0603D45F RID: 250975 RVA: 0x00EC41F8 File Offset: 0x00EC23F8
+		// Token: 0x060323EE RID: 205806 RVA: 0x00E15758 File Offset: 0x00E13958
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiAllRoleDataChanged, new Action(this.OnFormationLoaded));
 			this.MotorcycleSpecialEnergyBar.RemoveEvents();
 		}
 
-		// Token: 0x0603D460 RID: 250976 RVA: 0x00EC4221 File Offset: 0x00EC2421
+		// Token: 0x060323EF RID: 205807 RVA: 0x00E15781 File Offset: 0x00E13981
 		private void OnFormationLoaded()
 		{
 			this.LoadAllSpecialEnergyBar();
 			this.RefreshAllSpecialEnergyBarVisible();
 		}
 
-		// Token: 0x0603D461 RID: 250977 RVA: 0x00EC4230 File Offset: 0x00EC2430
+		// Token: 0x060323F0 RID: 205808 RVA: 0x00E15790 File Offset: 0x00E13990
 		private void LoadAllSpecialEnergyBar()
 		{
 			foreach (SceneTeamItem sceneTeamItem in SceneTeamModel.Instance.GetTeamItems(true))
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D462 RID: 250978 RVA: 0x00EC42CC File Offset: 0x00EC24CC
+		// Token: 0x060323F1 RID: 205809 RVA: 0x00E1582C File Offset: 0x00E13A2C
 		[NullableContext(1)]
 		private UniTask LoadSpecialEnergyBar(BattleUiRoleData roleData)
 		{
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadSpecialEnergyBar>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D463 RID: 250979 RVA: 0x00EC4318 File Offset: 0x00EC2518
+		// Token: 0x060323F2 RID: 205810 RVA: 0x00E15878 File Offset: 0x00E13A78
 		private void RefreshAllSpecialEnergyBarVisible()
 		{
 			foreach (KeyValuePair<int, RoleSpecialEnergyBar> keyValuePair in this.RoleBarMap)
@@ -171,26 +171,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D464 RID: 250980 RVA: 0x00EC43A0 File Offset: 0x00EC25A0
+		// Token: 0x060323F3 RID: 205811 RVA: 0x00E15900 File Offset: 0x00E13B00
 		private void OnEnergyBarEnableChange()
 		{
 			this.RefreshAllSpecialEnergyBarVisible();
 		}
 
-		// Token: 0x0401FF39 RID: 130873
+		// Token: 0x0401AA00 RID: 109056
 		private UUIItem PhantomContainer;
 
-		// Token: 0x0401FF3A RID: 130874
+		// Token: 0x0401AA01 RID: 109057
 		private int EntityId;
 
-		// Token: 0x0401FF3B RID: 130875
+		// Token: 0x0401AA02 RID: 109058
 		private RoleSpecialEnergyBar CurRoleBar;
 
-		// Token: 0x0401FF3C RID: 130876
+		// Token: 0x0401AA03 RID: 109059
 		[Nullable(1)]
 		private readonly Dictionary<int, RoleSpecialEnergyBar> RoleBarMap = new Dictionary<int, RoleSpecialEnergyBar>();
 
-		// Token: 0x0401FF3D RID: 130877
+		// Token: 0x0401AA04 RID: 109060
 		[Nullable(1)]
 		private readonly MotorcycleSpecialEnergyBar MotorcycleSpecialEnergyBar = new MotorcycleSpecialEnergyBar();
 	}

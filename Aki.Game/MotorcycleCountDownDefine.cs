@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.BattleUi;
 
-// Token: 0x02002232 RID: 8754
+// Token: 0x02001716 RID: 5910
 internal class MotorcycleCountDownDefine : IStaticVariableResetter
 {
-	// Token: 0x06011155 RID: 69973 RVA: 0x0042A310 File Offset: 0x00428510
+	// Token: 0x0600E5EB RID: 58859 RVA: 0x00436EB4 File Offset: 0x004350B4
 	static MotorcycleCountDownDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleCountDownDefine.CreateStaticDefaultValue), new Action(MotorcycleCountDownDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06011156 RID: 69974 RVA: 0x0042A32F File Offset: 0x0042852F
+	// Token: 0x0600E5EC RID: 58860 RVA: 0x00436ED3 File Offset: 0x004350D3
 	public static void CreateStaticDefaultValue()
 	{
 		MotorcycleCountDownDefine.hideBattleUiChildren = new EBattleUiChild[]
@@ -23,13 +23,13 @@ internal class MotorcycleCountDownDefine : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06011157 RID: 69975 RVA: 0x0042A347 File Offset: 0x00428547
+	// Token: 0x0600E5ED RID: 58861 RVA: 0x00436EEB File Offset: 0x004350EB
 	public static void ResetStaticDefaultValue()
 	{
 		MotorcycleCountDownDefine.hideBattleUiChildren = null;
 	}
 
-	// Token: 0x04008225 RID: 33317
+	// Token: 0x04008363 RID: 33635
 	[Nullable(1)]
 	public static EBattleUiChild[] hideBattleUiChildren;
 }

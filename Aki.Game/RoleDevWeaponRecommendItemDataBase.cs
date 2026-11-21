@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002834 RID: 10292
+// Token: 0x02001DAF RID: 7599
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class RoleDevWeaponRecommendItemDataBase
 {
-	// Token: 0x0601536F RID: 86895 RVA: 0x0055CDC9 File Offset: 0x0055AFC9
+	// Token: 0x06012D6D RID: 77165 RVA: 0x00587B25 File Offset: 0x00585D25
 	public void InitByRoleId(int roleId)
 	{
 		this.RoleIdInternal = roleId;
 		this.InitByRoleType(roleId);
 	}
 
-	// Token: 0x06015370 RID: 86896
+	// Token: 0x06012D6E RID: 77166
 	protected abstract void InitByRoleType(int roleId);
 
-	// Token: 0x17001C29 RID: 7209
-	// (get) Token: 0x06015371 RID: 86897 RVA: 0x0055CDD9 File Offset: 0x0055AFD9
+	// Token: 0x17001C81 RID: 7297
+	// (get) Token: 0x06012D6F RID: 77167 RVA: 0x00587B35 File Offset: 0x00585D35
 	public int RoleId
 	{
 		get
@@ -27,8 +27,8 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C2A RID: 7210
-	// (get) Token: 0x06015372 RID: 86898 RVA: 0x0055CDE1 File Offset: 0x0055AFE1
+	// Token: 0x17001C82 RID: 7298
+	// (get) Token: 0x06012D70 RID: 77168 RVA: 0x00587B3D File Offset: 0x00585D3D
 	public bool IsRoleObtained
 	{
 		get
@@ -37,8 +37,8 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C2B RID: 7211
-	// (get) Token: 0x06015373 RID: 86899 RVA: 0x0055CDF6 File Offset: 0x0055AFF6
+	// Token: 0x17001C83 RID: 7299
+	// (get) Token: 0x06012D71 RID: 77169 RVA: 0x00587B52 File Offset: 0x00585D52
 	public List<RoleDevWeaponSubRecommendItemDataBase> SubRecommendItems
 	{
 		get
@@ -47,35 +47,35 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x06015374 RID: 86900
+	// Token: 0x06012D72 RID: 77170
 	protected abstract int GetWeaponConfigId();
 
-	// Token: 0x06015375 RID: 86901
+	// Token: 0x06012D73 RID: 77171
 	protected abstract string GetWeaponName();
 
-	// Token: 0x06015376 RID: 86902
+	// Token: 0x06012D74 RID: 77172
 	protected abstract int GetWeaponLevel();
 
-	// Token: 0x06015377 RID: 86903
+	// Token: 0x06012D75 RID: 77173
 	protected abstract int GetWeaponGoalUpgradeLevel();
 
-	// Token: 0x06015378 RID: 86904
+	// Token: 0x06012D76 RID: 77174
 	protected abstract bool GetIsCall();
 
-	// Token: 0x06015379 RID: 86905
+	// Token: 0x06012D77 RID: 77175
 	protected abstract int GetGachaId();
 
-	// Token: 0x0601537A RID: 86906
+	// Token: 0x06012D78 RID: 77176
 	protected abstract bool GetIsWeaponHighQuality();
 
-	// Token: 0x0601537B RID: 86907
+	// Token: 0x06012D79 RID: 77177
 	protected abstract bool GetIsObtained();
 
-	// Token: 0x0601537C RID: 86908
+	// Token: 0x06012D7A RID: 77178
 	protected abstract bool GetIsForecast();
 
-	// Token: 0x17001C2C RID: 7212
-	// (get) Token: 0x0601537D RID: 86909 RVA: 0x0055CDFE File Offset: 0x0055AFFE
+	// Token: 0x17001C84 RID: 7300
+	// (get) Token: 0x06012D7B RID: 77179 RVA: 0x00587B5A File Offset: 0x00585D5A
 	public int WeaponConfigId
 	{
 		get
@@ -84,8 +84,8 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C2D RID: 7213
-	// (get) Token: 0x0601537E RID: 86910 RVA: 0x0055CE06 File Offset: 0x0055B006
+	// Token: 0x17001C85 RID: 7301
+	// (get) Token: 0x06012D7C RID: 77180 RVA: 0x00587B62 File Offset: 0x00585D62
 	public string WeaponName
 	{
 		get
@@ -94,8 +94,8 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C2E RID: 7214
-	// (get) Token: 0x0601537F RID: 86911 RVA: 0x0055CE0E File Offset: 0x0055B00E
+	// Token: 0x17001C86 RID: 7302
+	// (get) Token: 0x06012D7D RID: 77181 RVA: 0x00587B6A File Offset: 0x00585D6A
 	public int WeaponLevel
 	{
 		get
@@ -104,8 +104,8 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C2F RID: 7215
-	// (get) Token: 0x06015380 RID: 86912 RVA: 0x0055CE16 File Offset: 0x0055B016
+	// Token: 0x17001C87 RID: 7303
+	// (get) Token: 0x06012D7E RID: 77182 RVA: 0x00587B72 File Offset: 0x00585D72
 	public int WeaponGoalUpgradeLevel
 	{
 		get
@@ -114,8 +114,8 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C30 RID: 7216
-	// (get) Token: 0x06015381 RID: 86913 RVA: 0x0055CE1E File Offset: 0x0055B01E
+	// Token: 0x17001C88 RID: 7304
+	// (get) Token: 0x06012D7F RID: 77183 RVA: 0x00587B7A File Offset: 0x00585D7A
 	public bool IsCall
 	{
 		get
@@ -124,8 +124,8 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C31 RID: 7217
-	// (get) Token: 0x06015382 RID: 86914 RVA: 0x0055CE26 File Offset: 0x0055B026
+	// Token: 0x17001C89 RID: 7305
+	// (get) Token: 0x06012D80 RID: 77184 RVA: 0x00587B82 File Offset: 0x00585D82
 	public int GachaId
 	{
 		get
@@ -134,8 +134,8 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C32 RID: 7218
-	// (get) Token: 0x06015383 RID: 86915 RVA: 0x0055CE2E File Offset: 0x0055B02E
+	// Token: 0x17001C8A RID: 7306
+	// (get) Token: 0x06012D81 RID: 77185 RVA: 0x00587B8A File Offset: 0x00585D8A
 	public bool IsWeaponHighQuality
 	{
 		get
@@ -144,8 +144,8 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C33 RID: 7219
-	// (get) Token: 0x06015384 RID: 86916 RVA: 0x0055CE36 File Offset: 0x0055B036
+	// Token: 0x17001C8B RID: 7307
+	// (get) Token: 0x06012D82 RID: 77186 RVA: 0x00587B92 File Offset: 0x00585D92
 	public bool IsObtained
 	{
 		get
@@ -154,8 +154,8 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C34 RID: 7220
-	// (get) Token: 0x06015385 RID: 86917 RVA: 0x0055CE3E File Offset: 0x0055B03E
+	// Token: 0x17001C8C RID: 7308
+	// (get) Token: 0x06012D83 RID: 77187 RVA: 0x00587B9A File Offset: 0x00585D9A
 	public bool IsForecast
 	{
 		get
@@ -164,7 +164,7 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x06015386 RID: 86918 RVA: 0x0055CE48 File Offset: 0x0055B048
+	// Token: 0x06012D84 RID: 77188 RVA: 0x00587BA4 File Offset: 0x00585DA4
 	protected void InitSubRecommendItems(int roleId)
 	{
 		this.SubRecommendItemsInternal.Clear();
@@ -181,7 +181,7 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x06015387 RID: 86919 RVA: 0x0055CEA8 File Offset: 0x0055B0A8
+	// Token: 0x06012D85 RID: 77189 RVA: 0x00587C04 File Offset: 0x00585E04
 	public bool IsEquipRecommendWeapon()
 	{
 		int weaponConfigId = this.GetWeaponConfigId();
@@ -202,9 +202,9 @@ public abstract class RoleDevWeaponRecommendItemDataBase
 		return false;
 	}
 
-	// Token: 0x04009E9E RID: 40606
+	// Token: 0x0400A287 RID: 41607
 	protected int RoleIdInternal;
 
-	// Token: 0x04009E9F RID: 40607
+	// Token: 0x0400A288 RID: 41608
 	protected readonly List<RoleDevWeaponSubRecommendItemDataBase> SubRecommendItemsInternal = new List<RoleDevWeaponSubRecommendItemDataBase>();
 }

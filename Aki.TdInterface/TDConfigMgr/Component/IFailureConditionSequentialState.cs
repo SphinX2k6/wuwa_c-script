@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200036E RID: 878
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003B7 RID: 951
 	public class IFailureConditionSequentialState : ITargetGearGroupFailureCondition
 	{
-		// Token: 0x0600116F RID: 4463 RVA: 0x0003AF0C File Offset: 0x0003910C
+		// Token: 0x060012B3 RID: 4787 RVA: 0x0003E1F0 File Offset: 0x0003C3F0
 		private IFailureConditionSequentialState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001170 RID: 4464 RVA: 0x0003AF44 File Offset: 0x00039144
+		// Token: 0x060012B4 RID: 4788 RVA: 0x0003E228 File Offset: 0x0003C428
 		public static IFailureConditionSequentialState Create([Nullable(2)] IFailureConditionSequentialState instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001171 RID: 4465 RVA: 0x0003AF57 File Offset: 0x00039157
+		// Token: 0x060012B5 RID: 4789 RVA: 0x0003E23B File Offset: 0x0003C43B
 		public static IFailureConditionSequentialState CreateFromSetValue([Nullable(2)] IFailureConditionSequentialState_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001172 RID: 4466 RVA: 0x0003AF6A File Offset: 0x0003916A
+		// Token: 0x060012B6 RID: 4790 RVA: 0x0003E24E File Offset: 0x0003C44E
 		public new IFailureConditionSequentialState_SetValue ToSetValue()
 		{
 			return new IFailureConditionSequentialState_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004F0 RID: 1264
-		// (get) Token: 0x06001173 RID: 4467 RVA: 0x0003AF89 File Offset: 0x00039189
-		// (set) Token: 0x06001174 RID: 4468 RVA: 0x0003AFB4 File Offset: 0x000391B4
+		// Token: 0x17000544 RID: 1348
+		// (get) Token: 0x060012B7 RID: 4791 RVA: 0x0003E26D File Offset: 0x0003C46D
+		// (set) Token: 0x060012B8 RID: 4792 RVA: 0x0003E298 File Offset: 0x0003C498
 		public override ETargetGearGroupFailureCondition Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004F1 RID: 1265
-		// (get) Token: 0x06001175 RID: 4469 RVA: 0x0003AFC2 File Offset: 0x000391C2
-		// (set) Token: 0x06001176 RID: 4470 RVA: 0x0003AFE9 File Offset: 0x000391E9
+		// Token: 0x17000545 RID: 1349
+		// (get) Token: 0x060012B9 RID: 4793 RVA: 0x0003E2A6 File Offset: 0x0003C4A6
+		// (set) Token: 0x060012BA RID: 4794 RVA: 0x0003E2CD File Offset: 0x0003C4CD
 		public virtual List<int> Order
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E55 RID: 3669
+		// Token: 0x04000F4C RID: 3916
 		[Nullable(2)]
 		protected new IFailureConditionSequentialState FbInstance;
 
-		// Token: 0x04000E56 RID: 3670
+		// Token: 0x04000F4D RID: 3917
 		[Nullable(2)]
 		protected new IFailureConditionSequentialState_SetValue PocoInterface;
 	}

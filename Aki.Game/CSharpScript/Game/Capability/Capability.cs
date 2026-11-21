@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Capability
 {
-	// Token: 0x02007299 RID: 29337
+	// Token: 0x02006418 RID: 25624
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class Capability : IGameCapability
 	{
-		// Token: 0x06047F74 RID: 294772 RVA: 0x0126FCC0 File Offset: 0x0126DEC0
+		// Token: 0x0603E33A RID: 254778 RVA: 0x01210D0E File Offset: 0x0120EF0E
 		[NullableContext(2)]
 		protected Capability(ICapabilityGameObject ownerGameObject = null)
 		{
 		}
 
-		// Token: 0x06047F75 RID: 294773 RVA: 0x0126FCDC File Offset: 0x0126DEDC
+		// Token: 0x0603E33B RID: 254779 RVA: 0x01210D28 File Offset: 0x0120EF28
 		protected virtual ICapabilityConfig GetDefaultConfig()
 		{
 			return new CapabilityConfig
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Capability
 			};
 		}
 
-		// Token: 0x06047F76 RID: 294774 RVA: 0x0126FD1B File Offset: 0x0126DF1B
+		// Token: 0x0603E33C RID: 254780 RVA: 0x01210D67 File Offset: 0x0120EF67
 		public ICapabilityConfig GetConfig()
 		{
 			if (this.CachedConfig == null)
@@ -37,63 +37,63 @@ namespace CSharpScript.Game.Capability
 			return this.CachedConfig;
 		}
 
-		// Token: 0x06047F77 RID: 294775
+		// Token: 0x0603E33D RID: 254781
 		public abstract void Setup();
 
-		// Token: 0x06047F78 RID: 294776
+		// Token: 0x0603E33E RID: 254782
 		public abstract void PreTick(float deltaMilliseconds);
 
-		// Token: 0x06047F79 RID: 294777
+		// Token: 0x0603E33F RID: 254783
 		public abstract bool ShouldActivate();
 
-		// Token: 0x06047F7A RID: 294778
+		// Token: 0x0603E340 RID: 254784
 		public abstract bool ShouldDeactivate();
 
-		// Token: 0x06047F7B RID: 294779
+		// Token: 0x0603E341 RID: 254785
 		public abstract void OnActivated();
 
-		// Token: 0x06047F7C RID: 294780 RVA: 0x0126FD37 File Offset: 0x0126DF37
+		// Token: 0x0603E342 RID: 254786 RVA: 0x01210D83 File Offset: 0x0120EF83
 		public virtual void Activate()
 		{
 		}
 
-		// Token: 0x06047F7D RID: 294781 RVA: 0x0126FD39 File Offset: 0x0126DF39
+		// Token: 0x0603E343 RID: 254787 RVA: 0x01210D85 File Offset: 0x0120EF85
 		public virtual void Deactivate()
 		{
 		}
 
-		// Token: 0x06047F7E RID: 294782
+		// Token: 0x0603E344 RID: 254788
 		public abstract void OnDeactivated();
 
-		// Token: 0x06047F7F RID: 294783
+		// Token: 0x0603E345 RID: 254789
 		public abstract void TickActive(float deltaMilliseconds);
 
-		// Token: 0x06047F80 RID: 294784 RVA: 0x0126FD3B File Offset: 0x0126DF3B
+		// Token: 0x0603E346 RID: 254790 RVA: 0x01210D87 File Offset: 0x0120EF87
 		public bool IsActive()
 		{
 			return this.State == CapabilityCommonDefine.ECapabilityState.Active;
 		}
 
-		// Token: 0x06047F81 RID: 294785 RVA: 0x0126FD46 File Offset: 0x0126DF46
+		// Token: 0x0603E347 RID: 254791 RVA: 0x01210D92 File Offset: 0x0120EF92
 		public bool IsBlocked()
 		{
 			return this.BlockedBy.Count > 0;
 		}
 
-		// Token: 0x06047F82 RID: 294786 RVA: 0x0126FD56 File Offset: 0x0126DF56
+		// Token: 0x0603E348 RID: 254792 RVA: 0x01210DA2 File Offset: 0x0120EFA2
 		public CapabilityCommonDefine.ECapabilityState GetState()
 		{
 			return this.State;
 		}
 
-		// Token: 0x06047F83 RID: 294787 RVA: 0x0126FD5E File Offset: 0x0126DF5E
+		// Token: 0x0603E349 RID: 254793 RVA: 0x01210DAA File Offset: 0x0120EFAA
 		public string GetCapabilityId()
 		{
 			ICapabilityGameObject ownerGameObject = this.OwnerGameObject;
 			return ((ownerGameObject != null) ? ownerGameObject.GetId() : null) + ":" + base.GetType().Name;
 		}
 
-		// Token: 0x06047F84 RID: 294788 RVA: 0x0126FD87 File Offset: 0x0126DF87
+		// Token: 0x0603E34A RID: 254794 RVA: 0x01210DD3 File Offset: 0x0120EFD3
 		public void InternalMarkSetupDone()
 		{
 			if (this.State == CapabilityCommonDefine.ECapabilityState.Inactive)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Capability
 			}
 		}
 
-		// Token: 0x06047F85 RID: 294789 RVA: 0x0126FD98 File Offset: 0x0126DF98
+		// Token: 0x0603E34B RID: 254795 RVA: 0x01210DE4 File Offset: 0x0120EFE4
 		public void InternalSetActive()
 		{
 			if (this.State != CapabilityCommonDefine.ECapabilityState.Active)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Capability
 			}
 		}
 
-		// Token: 0x06047F86 RID: 294790 RVA: 0x0126FDAA File Offset: 0x0126DFAA
+		// Token: 0x0603E34C RID: 254796 RVA: 0x01210DF6 File Offset: 0x0120EFF6
 		public void InternalSetDeactivated()
 		{
 			if (this.State == CapabilityCommonDefine.ECapabilityState.Active)
@@ -120,13 +120,13 @@ namespace CSharpScript.Game.Capability
 			}
 		}
 
-		// Token: 0x06047F87 RID: 294791 RVA: 0x0126FDBC File Offset: 0x0126DFBC
+		// Token: 0x0603E34D RID: 254797 RVA: 0x01210E08 File Offset: 0x0120F008
 		public void InternalAddBlock(ICapabilityBlockEntry entry)
 		{
 			this.BlockedBy.Add(entry);
 		}
 
-		// Token: 0x06047F88 RID: 294792 RVA: 0x0126FDCC File Offset: 0x0126DFCC
+		// Token: 0x0603E34E RID: 254798 RVA: 0x01210E18 File Offset: 0x0120F018
 		public void InternalRemoveBlock(int tag, object instigator)
 		{
 			for (int i = this.BlockedBy.Count - 1; i >= 0; i--)
@@ -140,17 +140,17 @@ namespace CSharpScript.Game.Capability
 			}
 		}
 
-		// Token: 0x04025EDB RID: 155355
+		// Token: 0x040211AE RID: 135598
 		private CapabilityCommonDefine.ECapabilityState State;
 
-		// Token: 0x04025EDC RID: 155356
+		// Token: 0x040211AF RID: 135599
 		private readonly List<ICapabilityBlockEntry> BlockedBy = new List<ICapabilityBlockEntry>();
 
-		// Token: 0x04025EDD RID: 155357
+		// Token: 0x040211B0 RID: 135600
 		[Nullable(2)]
 		private ICapabilityConfig CachedConfig;
 
-		// Token: 0x04025EDE RID: 155358
+		// Token: 0x040211B1 RID: 135601
 		[Nullable(2)]
 		public ICapabilityGameObject OwnerGameObject = ownerGameObject;
 	}

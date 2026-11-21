@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D63 RID: 28003
+	// Token: 0x020074DE RID: 29918
 	public class IPosAT
 	{
-		// Token: 0x1700D0D6 RID: 53462
-		// (get) Token: 0x06031726 RID: 202534 RVA: 0x006B449A File Offset: 0x006B269A
-		// (set) Token: 0x06031727 RID: 202535 RVA: 0x006B44A2 File Offset: 0x006B26A2
+		// Token: 0x1700DC1E RID: 56350
+		// (get) Token: 0x06034722 RID: 214818 RVA: 0x0070FB82 File Offset: 0x0070DD82
+		// (set) Token: 0x06034723 RID: 214819 RVA: 0x0070FB8A File Offset: 0x0070DD8A
 		public float X { get; set; }
 
-		// Token: 0x1700D0D7 RID: 53463
-		// (get) Token: 0x06031728 RID: 202536 RVA: 0x006B44AB File Offset: 0x006B26AB
-		// (set) Token: 0x06031729 RID: 202537 RVA: 0x006B44B3 File Offset: 0x006B26B3
+		// Token: 0x1700DC1F RID: 56351
+		// (get) Token: 0x06034724 RID: 214820 RVA: 0x0070FB93 File Offset: 0x0070DD93
+		// (set) Token: 0x06034725 RID: 214821 RVA: 0x0070FB9B File Offset: 0x0070DD9B
 		public float Y { get; set; }
 
-		// Token: 0x1700D0D8 RID: 53464
-		// (get) Token: 0x0603172A RID: 202538 RVA: 0x006B44BC File Offset: 0x006B26BC
-		// (set) Token: 0x0603172B RID: 202539 RVA: 0x006B44C4 File Offset: 0x006B26C4
+		// Token: 0x1700DC20 RID: 56352
+		// (get) Token: 0x06034726 RID: 214822 RVA: 0x0070FBA4 File Offset: 0x0070DDA4
+		// (set) Token: 0x06034727 RID: 214823 RVA: 0x0070FBAC File Offset: 0x0070DDAC
 		public float Z { get; set; }
 
-		// Token: 0x1700D0D9 RID: 53465
-		// (get) Token: 0x0603172C RID: 202540 RVA: 0x006B44CD File Offset: 0x006B26CD
-		// (set) Token: 0x0603172D RID: 202541 RVA: 0x006B44D5 File Offset: 0x006B26D5
+		// Token: 0x1700DC21 RID: 56353
+		// (get) Token: 0x06034728 RID: 214824 RVA: 0x0070FBB5 File Offset: 0x0070DDB5
+		// (set) Token: 0x06034729 RID: 214825 RVA: 0x0070FBBD File Offset: 0x0070DDBD
 		public float A { get; set; }
 
-		// Token: 0x1700D0DA RID: 53466
-		// (get) Token: 0x0603172E RID: 202542 RVA: 0x006B44DE File Offset: 0x006B26DE
-		// (set) Token: 0x0603172F RID: 202543 RVA: 0x006B44E6 File Offset: 0x006B26E6
+		// Token: 0x1700DC22 RID: 56354
+		// (get) Token: 0x0603472A RID: 214826 RVA: 0x0070FBC6 File Offset: 0x0070DDC6
+		// (set) Token: 0x0603472B RID: 214827 RVA: 0x0070FBCE File Offset: 0x0070DDCE
 		public byte NullMask { get; set; }
 
-		// Token: 0x06031730 RID: 202544 RVA: 0x006B44EF File Offset: 0x006B26EF
+		// Token: 0x0603472C RID: 214828 RVA: 0x0070FBD7 File Offset: 0x0070DDD7
 		public IPosAT()
 		{
 			this.X = 0f;

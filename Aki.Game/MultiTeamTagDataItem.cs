@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200278A RID: 10122
+// Token: 0x02001C75 RID: 7285
 [NullableContext(1)]
 [Nullable(0)]
 public class MultiTeamTagDataItem
 {
-	// Token: 0x06014C33 RID: 85043 RVA: 0x00540F14 File Offset: 0x0053F114
+	// Token: 0x0601211D RID: 74013 RVA: 0x0054FEF4 File Offset: 0x0054E0F4
 	public static MultiTeamTagDataItem Phrase(int[] initSelectedTagList, ESkillBranchCacheType gameplayType)
 	{
 		return new MultiTeamTagDataItem
@@ -16,9 +16,9 @@ public class MultiTeamTagDataItem
 		};
 	}
 
-	// Token: 0x04009C27 RID: 39975
+	// Token: 0x04009D87 RID: 40327
 	public int[] InitSelectedTagList;
 
-	// Token: 0x04009C28 RID: 39976
+	// Token: 0x04009D88 RID: 40328
 	public ESkillBranchCacheType GamePlayType = ESkillBranchCacheType.BossPiling;
 }

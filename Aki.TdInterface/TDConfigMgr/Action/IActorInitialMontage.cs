@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001778 RID: 6008
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018F9 RID: 6393
 	public class IActorInitialMontage
 	{
-		// Token: 0x06007F31 RID: 32561 RVA: 0x001302BC File Offset: 0x0012E4BC
+		// Token: 0x06008621 RID: 34337 RVA: 0x0013F51C File Offset: 0x0013D71C
 		private IActorInitialMontage_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007F32 RID: 32562 RVA: 0x001302F4 File Offset: 0x0012E4F4
+		// Token: 0x06008622 RID: 34338 RVA: 0x0013F554 File Offset: 0x0013D754
 		public static IActorInitialMontage Create([Nullable(2)] IActorInitialMontage instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F33 RID: 32563 RVA: 0x00130307 File Offset: 0x0012E507
+		// Token: 0x06008623 RID: 34339 RVA: 0x0013F567 File Offset: 0x0013D767
 		public static IActorInitialMontage CreateFromSetValue([Nullable(2)] IActorInitialMontage_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F34 RID: 32564 RVA: 0x0013031A File Offset: 0x0012E51A
+		// Token: 0x06008624 RID: 34340 RVA: 0x0013F57A File Offset: 0x0013D77A
 		public IActorInitialMontage_SetValue ToSetValue()
 		{
 			return new IActorInitialMontage_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029B9 RID: 10681
-		// (get) Token: 0x06007F35 RID: 32565 RVA: 0x00130330 File Offset: 0x0012E530
-		// (set) Token: 0x06007F36 RID: 32566 RVA: 0x00130391 File Offset: 0x0012E591
+		// Token: 0x17002BA7 RID: 11175
+		// (get) Token: 0x06008625 RID: 34341 RVA: 0x0013F590 File Offset: 0x0013D790
+		// (set) Token: 0x06008626 RID: 34342 RVA: 0x0013F5F1 File Offset: 0x0013D7F1
 		public virtual IMontageId MontageId
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040050E2 RID: 20706
+		// Token: 0x04005518 RID: 21784
 		[Nullable(2)]
 		protected IActorInitialMontage FbInstance;
 
-		// Token: 0x040050E3 RID: 20707
+		// Token: 0x04005519 RID: 21785
 		[Nullable(2)]
 		protected IActorInitialMontage_SetValue PocoInterface;
 
-		// Token: 0x040050E4 RID: 20708
+		// Token: 0x0400551A RID: 21786
 		private IMontageId _MontageIdCache;
 
-		// Token: 0x040050E5 RID: 20709
+		// Token: 0x0400551B RID: 21787
 		private bool _MontageIdInited;
 	}
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002D13 RID: 11539
+// Token: 0x0200226D RID: 8813
 public class WeaponRootViewParam : IWeaponRootViewParam
 {
-	// Token: 0x170020BC RID: 8380
-	// (get) Token: 0x060183FC RID: 99324 RVA: 0x0062B7D3 File Offset: 0x006299D3
-	// (set) Token: 0x060183FD RID: 99325 RVA: 0x0062B7DB File Offset: 0x006299DB
+	// Token: 0x17002117 RID: 8471
+	// (get) Token: 0x06015C9D RID: 89245 RVA: 0x006517CB File Offset: 0x0064F9CB
+	// (set) Token: 0x06015C9E RID: 89246 RVA: 0x006517D3 File Offset: 0x0064F9D3
 	public int WeaponIncId { get; set; }
 
-	// Token: 0x170020BD RID: 8381
-	// (get) Token: 0x060183FE RID: 99326 RVA: 0x0062B7E4 File Offset: 0x006299E4
-	// (set) Token: 0x060183FF RID: 99327 RVA: 0x0062B7EC File Offset: 0x006299EC
+	// Token: 0x17002118 RID: 8472
+	// (get) Token: 0x06015C9F RID: 89247 RVA: 0x006517DC File Offset: 0x0064F9DC
+	// (set) Token: 0x06015CA0 RID: 89248 RVA: 0x006517E4 File Offset: 0x0064F9E4
 	public int WeaponSkinId { get; set; }
 
-	// Token: 0x170020BE RID: 8382
-	// (get) Token: 0x06018400 RID: 99328 RVA: 0x0062B7F5 File Offset: 0x006299F5
-	// (set) Token: 0x06018401 RID: 99329 RVA: 0x0062B7FD File Offset: 0x006299FD
+	// Token: 0x17002119 RID: 8473
+	// (get) Token: 0x06015CA1 RID: 89249 RVA: 0x006517ED File Offset: 0x0064F9ED
+	// (set) Token: 0x06015CA2 RID: 89250 RVA: 0x006517F5 File Offset: 0x0064F9F5
 	public bool IsFromRoleRootView { get; set; }
 }

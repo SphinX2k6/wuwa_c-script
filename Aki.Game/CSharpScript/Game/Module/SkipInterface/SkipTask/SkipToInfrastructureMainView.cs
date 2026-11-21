@@ -5,10 +5,10 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BCE RID: 19406
+	// Token: 0x02003B78 RID: 15224
 	public class SkipToInfrastructureMainView : SkipTask
 	{
-		// Token: 0x0603232B RID: 205611 RVA: 0x00BAA4A4 File Offset: 0x00BA86A4
+		// Token: 0x060270BC RID: 159932 RVA: 0x00AEE75C File Offset: 0x00AEC95C
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

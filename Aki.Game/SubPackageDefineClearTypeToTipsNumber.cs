@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002A98 RID: 10904
+// Token: 0x02002014 RID: 8212
 public static class SubPackageDefineClearTypeToTipsNumber
 {
-	// Token: 0x06016B2A RID: 92970 RVA: 0x005C08EA File Offset: 0x005BEAEA
+	// Token: 0x06014554 RID: 83284 RVA: 0x005ECEFA File Offset: 0x005EB0FA
 	// Note: this type is marked as 'beforefieldinit'.
 	static SubPackageDefineClearTypeToTipsNumber()
 	{
@@ -18,7 +18,7 @@ public static class SubPackageDefineClearTypeToTipsNumber
 		SubPackageDefineClearTypeToTipsNumber.clearTypeToTipsNumber = dictionary;
 	}
 
-	// Token: 0x0400A876 RID: 43126
+	// Token: 0x0400AC7C RID: 44156
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static Dictionary<ESubPackageDownLoadPackageType, int> clearTypeToTipsNumber;

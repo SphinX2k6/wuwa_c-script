@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E09 RID: 24073
+	// Token: 0x02004DEE RID: 19950
 	public class SpecialEnergyBarXiangLiYao : SpecialEnergyBarMorph
 	{
-		// Token: 0x0603D36F RID: 250735 RVA: 0x00EBF3B8 File Offset: 0x00EBD5B8
+		// Token: 0x060322FE RID: 205566 RVA: 0x00E10918 File Offset: 0x00E0EB18
 		protected override void OnBeforeShow()
 		{
 			base.OnBeforeShow();
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D370 RID: 250736 RVA: 0x00EBF3F2 File Offset: 0x00EBD5F2
+		// Token: 0x060322FF RID: 205567 RVA: 0x00E10952 File Offset: 0x00E0EB52
 		[NullableContext(1)]
 		protected override Type GetSpecialEnergyBarClass()
 		{

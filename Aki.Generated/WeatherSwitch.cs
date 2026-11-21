@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011A0 RID: 4512
+	// Token: 0x020012D6 RID: 4822
 	public struct WeatherSwitch : IFlatbufferObject
 	{
-		// Token: 0x17003E43 RID: 15939
-		// (get) Token: 0x0600E8C0 RID: 59584 RVA: 0x003448ED File Offset: 0x00342AED
+		// Token: 0x170041A8 RID: 16808
+		// (get) Token: 0x0600F631 RID: 63025 RVA: 0x0036F5B6 File Offset: 0x0036D7B6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8C1 RID: 59585 RVA: 0x003448FA File Offset: 0x00342AFA
+		// Token: 0x0600F632 RID: 63026 RVA: 0x0036F5C3 File Offset: 0x0036D7C3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E8C2 RID: 59586 RVA: 0x00344904 File Offset: 0x00342B04
+		// Token: 0x0600F633 RID: 63027 RVA: 0x0036F5CC File Offset: 0x0036D7CC
 		public static WeatherSwitch GetRootAsWeatherSwitch(ByteBuffer _bb)
 		{
 			return WeatherSwitch.GetRootAsWeatherSwitch(_bb, default(WeatherSwitch));
 		}
 
-		// Token: 0x0600E8C3 RID: 59587 RVA: 0x00344920 File Offset: 0x00342B20
+		// Token: 0x0600F634 RID: 63028 RVA: 0x0036F5E8 File Offset: 0x0036D7E8
 		public static WeatherSwitch GetRootAsWeatherSwitch(ByteBuffer _bb, WeatherSwitch obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E8C4 RID: 59588 RVA: 0x0034493D File Offset: 0x00342B3D
+		// Token: 0x0600F635 RID: 63029 RVA: 0x0036F605 File Offset: 0x0036D805
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E8C5 RID: 59589 RVA: 0x0034494C File Offset: 0x00342B4C
+		// Token: 0x0600F636 RID: 63030 RVA: 0x0036F614 File Offset: 0x0036D814
 		public WeatherSwitch __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003E44 RID: 15940
-		// (get) Token: 0x0600E8C6 RID: 59590 RVA: 0x0034495C File Offset: 0x00342B5C
+		// Token: 0x170041A9 RID: 16809
+		// (get) Token: 0x0600F637 RID: 63031 RVA: 0x0036F624 File Offset: 0x0036D824
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003E45 RID: 15941
-		// (get) Token: 0x0600E8C7 RID: 59591 RVA: 0x00344998 File Offset: 0x00342B98
+		// Token: 0x170041AA RID: 16810
+		// (get) Token: 0x0600F638 RID: 63032 RVA: 0x0036F660 File Offset: 0x0036D860
 		public string Name
 		{
 			get
@@ -81,19 +81,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8C8 RID: 59592 RVA: 0x003449CF File Offset: 0x00342BCF
+		// Token: 0x0600F639 RID: 63033 RVA: 0x0036F697 File Offset: 0x0036D897
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600E8C9 RID: 59593 RVA: 0x003449DE File Offset: 0x00342BDE
+		// Token: 0x0600F63A RID: 63034 RVA: 0x0036F6A6 File Offset: 0x0036D8A6
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600E8CA RID: 59594 RVA: 0x003449F8 File Offset: 0x00342BF8
+		// Token: 0x0600F63B RID: 63035 RVA: 0x0036F6C0 File Offset: 0x0036D8C0
 		public DicIntInt? Weather(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -104,8 +104,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003E46 RID: 15942
-		// (get) Token: 0x0600E8CB RID: 59595 RVA: 0x00344A58 File Offset: 0x00342C58
+		// Token: 0x170041AB RID: 16811
+		// (get) Token: 0x0600F63C RID: 63036 RVA: 0x0036F720 File Offset: 0x0036D920
 		public int WeatherLength
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8CC RID: 59596 RVA: 0x00344A84 File Offset: 0x00342C84
+		// Token: 0x0600F63D RID: 63037 RVA: 0x0036F74C File Offset: 0x0036D94C
 		public int ValidTime(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -130,8 +130,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003E47 RID: 15943
-		// (get) Token: 0x0600E8CD RID: 59597 RVA: 0x00344AC4 File Offset: 0x00342CC4
+		// Token: 0x170041AC RID: 16812
+		// (get) Token: 0x0600F63E RID: 63038 RVA: 0x0036F78C File Offset: 0x0036D98C
 		public int ValidTimeLength
 		{
 			get
@@ -145,20 +145,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8CE RID: 59598 RVA: 0x00344AF0 File Offset: 0x00342CF0
+		// Token: 0x0600F63F RID: 63039 RVA: 0x0036F7B8 File Offset: 0x0036D9B8
 		public Span<int> GetValidTimeBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600E8CF RID: 59599 RVA: 0x00344B00 File Offset: 0x00342D00
+		// Token: 0x0600F640 RID: 63040 RVA: 0x0036F7C8 File Offset: 0x0036D9C8
 		public int[] GetValidTimeArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17003E48 RID: 15944
-		// (get) Token: 0x0600E8D0 RID: 59600 RVA: 0x00344B18 File Offset: 0x00342D18
+		// Token: 0x170041AD RID: 16813
+		// (get) Token: 0x0600F641 RID: 63041 RVA: 0x0036F7E0 File Offset: 0x0036D9E0
 		public int UnlockCondition
 		{
 			get
@@ -172,8 +172,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003E49 RID: 15945
-		// (get) Token: 0x0600E8D1 RID: 59601 RVA: 0x00344B58 File Offset: 0x00342D58
+		// Token: 0x170041AE RID: 16814
+		// (get) Token: 0x0600F642 RID: 63042 RVA: 0x0036F820 File Offset: 0x0036DA20
 		public int MarkConfigId
 		{
 			get
@@ -187,8 +187,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003E4A RID: 15946
-		// (get) Token: 0x0600E8D2 RID: 59602 RVA: 0x00344B98 File Offset: 0x00342D98
+		// Token: 0x170041AF RID: 16815
+		// (get) Token: 0x0600F643 RID: 63043 RVA: 0x0036F860 File Offset: 0x0036DA60
 		public string Background
 		{
 			get
@@ -202,20 +202,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8D3 RID: 59603 RVA: 0x00344BD0 File Offset: 0x00342DD0
+		// Token: 0x0600F644 RID: 63044 RVA: 0x0036F898 File Offset: 0x0036DA98
 		public Span<byte> GetBackgroundBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600E8D4 RID: 59604 RVA: 0x00344BE0 File Offset: 0x00342DE0
+		// Token: 0x0600F645 RID: 63045 RVA: 0x0036F8A8 File Offset: 0x0036DAA8
 		public byte[] GetBackgroundArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003E4B RID: 15947
-		// (get) Token: 0x0600E8D5 RID: 59605 RVA: 0x00344BF8 File Offset: 0x00342DF8
+		// Token: 0x170041B0 RID: 16816
+		// (get) Token: 0x0600F646 RID: 63046 RVA: 0x0036F8C0 File Offset: 0x0036DAC0
 		public string Icon
 		{
 			get
@@ -229,20 +229,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8D6 RID: 59606 RVA: 0x00344C30 File Offset: 0x00342E30
+		// Token: 0x0600F647 RID: 63047 RVA: 0x0036F8F8 File Offset: 0x0036DAF8
 		public Span<byte> GetIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x0600E8D7 RID: 59607 RVA: 0x00344C40 File Offset: 0x00342E40
+		// Token: 0x0600F648 RID: 63048 RVA: 0x0036F908 File Offset: 0x0036DB08
 		public byte[] GetIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003E4C RID: 15948
-		// (get) Token: 0x0600E8D8 RID: 59608 RVA: 0x00344C58 File Offset: 0x00342E58
+		// Token: 0x170041B1 RID: 16817
+		// (get) Token: 0x0600F649 RID: 63049 RVA: 0x0036F920 File Offset: 0x0036DB20
 		public int QuestId
 		{
 			get
@@ -256,7 +256,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8D9 RID: 59609 RVA: 0x00344C98 File Offset: 0x00342E98
+		// Token: 0x0600F64A RID: 63050 RVA: 0x0036F960 File Offset: 0x0036DB60
 		public int BanAreaList(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -267,8 +267,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003E4D RID: 15949
-		// (get) Token: 0x0600E8DA RID: 59610 RVA: 0x00344CD8 File Offset: 0x00342ED8
+		// Token: 0x170041B2 RID: 16818
+		// (get) Token: 0x0600F64B RID: 63051 RVA: 0x0036F9A0 File Offset: 0x0036DBA0
 		public int BanAreaListLength
 		{
 			get
@@ -282,72 +282,67 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8DB RID: 59611 RVA: 0x00344D04 File Offset: 0x00342F04
+		// Token: 0x0600F64C RID: 63052 RVA: 0x0036F9CC File Offset: 0x0036DBCC
 		public Span<int> GetBanAreaListBytes()
 		{
 			return this.__p.__vector_as_span<int>(22, 4);
 		}
 
-		// Token: 0x0600E8DC RID: 59612 RVA: 0x00344D14 File Offset: 0x00342F14
+		// Token: 0x0600F64D RID: 63053 RVA: 0x0036F9DC File Offset: 0x0036DBDC
 		public int[] GetBanAreaListArray()
 		{
 			return this.__p.__vector_as_array<int>(22) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600E8DD RID: 59613 RVA: 0x00344D2C File Offset: 0x00342F2C
+		// Token: 0x0600F64E RID: 63054 RVA: 0x0036F9F4 File Offset: 0x0036DBF4
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BanAreaListIter()或GetBanAreaListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] BanAreaList()
+		public int[] BanAreaList()
 		{
-			WeatherSwitch weatherSwitch = this;
-			return weatherSwitch.GetBanAreaListArray() ?? Array.Empty<int>();
+			return this.GetBanAreaListArray();
 		}
 
-		// Token: 0x0600E8DE RID: 59614 RVA: 0x00344D50 File Offset: 0x00342F50
+		// Token: 0x0600F64F RID: 63055 RVA: 0x0036F9FC File Offset: 0x0036DBFC
 		[NullableContext(1)]
-		public readonly IEnumerable<int> BanAreaListIter()
+		public IEnumerable<int> BanAreaListIter()
 		{
 			WeatherSwitch.<BanAreaListIter>d__42 <BanAreaListIter>d__ = new WeatherSwitch.<BanAreaListIter>d__42(-2);
 			<BanAreaListIter>d__.<>3__<>4__this = this;
 			return <BanAreaListIter>d__;
 		}
 
-		// Token: 0x0600E8DF RID: 59615 RVA: 0x00344D68 File Offset: 0x00342F68
+		// Token: 0x0600F650 RID: 63056 RVA: 0x0036FA11 File Offset: 0x0036DC11
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ValidTimeIter()或GetValidTimeBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ValidTime()
+		public int[] ValidTime()
 		{
-			WeatherSwitch weatherSwitch = this;
-			return weatherSwitch.GetValidTimeArray() ?? Array.Empty<int>();
+			return this.GetValidTimeArray();
 		}
 
-		// Token: 0x0600E8E0 RID: 59616 RVA: 0x00344D8C File Offset: 0x00342F8C
+		// Token: 0x0600F651 RID: 63057 RVA: 0x0036FA19 File Offset: 0x0036DC19
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ValidTimeIter()
+		public IEnumerable<int> ValidTimeIter()
 		{
 			WeatherSwitch.<ValidTimeIter>d__44 <ValidTimeIter>d__ = new WeatherSwitch.<ValidTimeIter>d__44(-2);
 			<ValidTimeIter>d__.<>3__<>4__this = this;
 			return <ValidTimeIter>d__;
 		}
 
-		// Token: 0x0600E8E1 RID: 59617 RVA: 0x00344DA4 File Offset: 0x00342FA4
+		// Token: 0x0600F652 RID: 63058 RVA: 0x0036FA30 File Offset: 0x0036DC30
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用WeatherFrozenDict()缓存字典，遍历请使用WeatherIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> Weather()
+		public Dictionary<int, int> Weather()
 		{
 			return this.WeatherIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600E8E2 RID: 59618 RVA: 0x00344DFA File Offset: 0x00342FFA
+		// Token: 0x0600F653 RID: 63059 RVA: 0x0036FA86 File Offset: 0x0036DC86
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> WeatherIter()
+		public IEnumerable<DicIntInt> WeatherIter()
 		{
 			WeatherSwitch.<WeatherIter>d__46 <WeatherIter>d__ = new WeatherSwitch.<WeatherIter>d__46(-2);
 			<WeatherIter>d__.<>3__<>4__this = this;
 			return <WeatherIter>d__;
 		}
 
-		// Token: 0x0600E8E3 RID: 59619 RVA: 0x00344E10 File Offset: 0x00343010
+		// Token: 0x0600F654 RID: 63060 RVA: 0x0036FA9C File Offset: 0x0036DC9C
 		public int? GetWeather(int key)
 		{
 			this.EnsureWeatherCacheIfNeeded();
@@ -359,7 +354,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600E8E4 RID: 59620 RVA: 0x00344E44 File Offset: 0x00343044
+		// Token: 0x0600F655 RID: 63061 RVA: 0x0036FAD0 File Offset: 0x0036DCD0
 		private void EnsureWeatherCacheIfNeeded()
 		{
 			if (this.WeatherCache != null)
@@ -369,18 +364,18 @@ namespace Aki.Config
 			this.WeatherCache = this.WeatherIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600E8E5 RID: 59621 RVA: 0x00344EAA File Offset: 0x003430AA
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetWeatherFrozenDict(int key)
+		// Token: 0x0600F656 RID: 63062 RVA: 0x0036FB36 File Offset: 0x0036DD36
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetWeatherFrozenDict()
 		{
 			this.EnsureWeatherCacheIfNeeded();
 			return this.WeatherCache;
 		}
 
-		// Token: 0x040052EB RID: 21227
+		// Token: 0x0400592E RID: 22830
 		private Table __p;
 
-		// Token: 0x040052EC RID: 21228
+		// Token: 0x0400592F RID: 22831
 		[Nullable(2)]
 		private FrozenDictionary<int, int> WeatherCache;
 	}

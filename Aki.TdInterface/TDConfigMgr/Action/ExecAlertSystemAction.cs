@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001707 RID: 5895
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001884 RID: 6276
 	public class ExecAlertSystemAction : ActionParams
 	{
-		// Token: 0x06007CF7 RID: 31991 RVA: 0x0012C258 File Offset: 0x0012A458
+		// Token: 0x060083D5 RID: 33749 RVA: 0x0013B304 File Offset: 0x00139504
 		private ExecAlertSystemAction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007CF8 RID: 31992 RVA: 0x0012C290 File Offset: 0x0012A490
+		// Token: 0x060083D6 RID: 33750 RVA: 0x0013B33C File Offset: 0x0013953C
 		public static ExecAlertSystemAction Create([Nullable(2)] ExecAlertSystemAction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CF9 RID: 31993 RVA: 0x0012C2A3 File Offset: 0x0012A4A3
+		// Token: 0x060083D7 RID: 33751 RVA: 0x0013B34F File Offset: 0x0013954F
 		public static ExecAlertSystemAction CreateFromSetValue([Nullable(2)] ExecAlertSystemAction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CFA RID: 31994 RVA: 0x0012C2B6 File Offset: 0x0012A4B6
+		// Token: 0x060083D8 RID: 33752 RVA: 0x0013B362 File Offset: 0x00139562
 		public ExecAlertSystemAction_SetValue ToSetValue()
 		{
 			return new ExecAlertSystemAction_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002940 RID: 10560
-		// (get) Token: 0x06007CFB RID: 31995 RVA: 0x0012C2C9 File Offset: 0x0012A4C9
-		// (set) Token: 0x06007CFC RID: 31996 RVA: 0x0012C2F0 File Offset: 0x0012A4F0
+		// Token: 0x17002B2B RID: 11051
+		// (get) Token: 0x060083D9 RID: 33753 RVA: 0x0013B375 File Offset: 0x00139575
+		// (set) Token: 0x060083DA RID: 33754 RVA: 0x0013B39C File Offset: 0x0013959C
 		public virtual IAlertSystemOption Option
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004FD6 RID: 20438
+		// Token: 0x04005405 RID: 21509
 		[Nullable(2)]
 		protected new ExecAlertSystemAction FbInstance;
 
-		// Token: 0x04004FD7 RID: 20439
+		// Token: 0x04005406 RID: 21510
 		[Nullable(2)]
 		protected ExecAlertSystemAction_SetValue PocoInterface;
 	}

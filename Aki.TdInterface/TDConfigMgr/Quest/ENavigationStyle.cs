@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E72 RID: 3698
+	// Token: 0x02000F85 RID: 3973
 	public enum ENavigationStyle
 	{
-		// Token: 0x040030C7 RID: 12487
+		// Token: 0x040033C9 RID: 13257
 		Default,
-		// Token: 0x040030C8 RID: 12488
+		// Token: 0x040033CA RID: 13258
 		AreaRinascita
 	}
 }

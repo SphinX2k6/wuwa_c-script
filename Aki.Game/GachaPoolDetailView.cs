@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C83 RID: 7299
+// Token: 0x02001142 RID: 4418
 public class GachaPoolDetailView : UiViewBase
 {
-	// Token: 0x0600DC42 RID: 56386 RVA: 0x0033594C File Offset: 0x00333B4C
+	// Token: 0x0600B058 RID: 45144 RVA: 0x00340DF4 File Offset: 0x0033EFF4
 	[NullableContext(1)]
 	public GachaPoolDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600DC43 RID: 56387 RVA: 0x00335958 File Offset: 0x00333B58
+	// Token: 0x0600B059 RID: 45145 RVA: 0x00340E00 File Offset: 0x0033F000
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -35,7 +35,7 @@ public class GachaPoolDetailView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600DC44 RID: 56388 RVA: 0x00335A04 File Offset: 0x00333C04
+	// Token: 0x0600B05A RID: 45146 RVA: 0x00340EAC File Offset: 0x0033F0AC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GachaPoolDetailView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -46,28 +46,39 @@ public class GachaPoolDetailView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC45 RID: 56389 RVA: 0x00335A47 File Offset: 0x00333C47
+	// Token: 0x0600B05B RID: 45147 RVA: 0x00340EF0 File Offset: 0x0033F0F0
 	[NullableContext(1)]
 	[CompilerGenerated]
-	internal static int <OnBeforeStartAsync>g__SortFunc|3_0(GachaPoolDrop a, GachaPoolDrop b)
+	internal static List<GachaPoolDrop> <OnBeforeStartAsync>g__SortByUpPriority|3_0(IEnumerable<GachaPoolDrop> source)
 	{
-		if (!a.IsUp)
+		List<GachaPoolDrop> list = new List<GachaPoolDrop>();
+		foreach (GachaPoolDrop gachaPoolDrop in source)
 		{
-			return (b.IsUp > false) ? 1 : 0;
+			if (gachaPoolDrop.IsUp)
+			{
+				list.Add(gachaPoolDrop);
+			}
 		}
-		return -1;
+		foreach (GachaPoolDrop gachaPoolDrop2 in source)
+		{
+			if (!gachaPoolDrop2.IsUp)
+			{
+				list.Add(gachaPoolDrop2);
+			}
+		}
+		return list;
 	}
 
-	// Token: 0x02008256 RID: 33366
+	// Token: 0x020073DF RID: 29663
 	private enum EGachaPoolDetailViewDefine
 	{
-		// Token: 0x0402A86E RID: 174190
+		// Token: 0x04025B94 RID: 154516
 		TxtDetail,
-		// Token: 0x0402A86F RID: 174191
+		// Token: 0x04025B95 RID: 154517
 		GridContent,
-		// Token: 0x0402A870 RID: 174192
+		// Token: 0x04025B96 RID: 154518
 		GridItem,
-		// Token: 0x0402A871 RID: 174193
+		// Token: 0x04025B97 RID: 154519
 		TxtTitle
 	}
 }

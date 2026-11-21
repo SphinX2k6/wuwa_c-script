@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000838 RID: 2104
+	// Token: 0x0200017E RID: 382
 	[UnrealObjectPath("/Script/Engine.AnimSegment")]
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class FAnimSegment : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06007111 RID: 28945 RVA: 0x000A2176 File Offset: 0x000A0376
+		// Token: 0x0600185D RID: 6237 RVA: 0x00025279 File Offset: 0x00023479
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FAnimSegment._ScriptStructPtr != 0) ? FAnimSegment._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.AnimSegment", ref FAnimSegment._ScriptStructPtr);
 		}
 
-		// Token: 0x17001A99 RID: 6809
-		// (get) Token: 0x06007112 RID: 28946 RVA: 0x000A219A File Offset: 0x000A039A
-		// (set) Token: 0x06007113 RID: 28947 RVA: 0x000A21AE File Offset: 0x000A03AE
+		// Token: 0x170002A5 RID: 677
+		// (get) Token: 0x0600185E RID: 6238 RVA: 0x0002529D File Offset: 0x0002349D
+		// (set) Token: 0x0600185F RID: 6239 RVA: 0x000252B1 File Offset: 0x000234B1
 		[Nullable(2)]
 		public unsafe UAnimSequenceBase AnimReference
 		{
@@ -35,9 +35,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A9A RID: 6810
-		// (get) Token: 0x06007114 RID: 28948 RVA: 0x000A21C3 File Offset: 0x000A03C3
-		// (set) Token: 0x06007115 RID: 28949 RVA: 0x000A21D3 File Offset: 0x000A03D3
+		// Token: 0x170002A6 RID: 678
+		// (get) Token: 0x06001860 RID: 6240 RVA: 0x000252C6 File Offset: 0x000234C6
+		// (set) Token: 0x06001861 RID: 6241 RVA: 0x000252D6 File Offset: 0x000234D6
 		public unsafe float StartPos
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A9B RID: 6811
-		// (get) Token: 0x06007116 RID: 28950 RVA: 0x000A21E4 File Offset: 0x000A03E4
-		// (set) Token: 0x06007117 RID: 28951 RVA: 0x000A21F4 File Offset: 0x000A03F4
+		// Token: 0x170002A7 RID: 679
+		// (get) Token: 0x06001862 RID: 6242 RVA: 0x000252E7 File Offset: 0x000234E7
+		// (set) Token: 0x06001863 RID: 6243 RVA: 0x000252F7 File Offset: 0x000234F7
 		public unsafe float AnimStartTime
 		{
 			get
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A9C RID: 6812
-		// (get) Token: 0x06007118 RID: 28952 RVA: 0x000A2205 File Offset: 0x000A0405
-		// (set) Token: 0x06007119 RID: 28953 RVA: 0x000A2215 File Offset: 0x000A0415
+		// Token: 0x170002A8 RID: 680
+		// (get) Token: 0x06001864 RID: 6244 RVA: 0x00025308 File Offset: 0x00023508
+		// (set) Token: 0x06001865 RID: 6245 RVA: 0x00025318 File Offset: 0x00023518
 		public unsafe float AnimEndTime
 		{
 			get
@@ -80,9 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A9D RID: 6813
-		// (get) Token: 0x0600711A RID: 28954 RVA: 0x000A2226 File Offset: 0x000A0426
-		// (set) Token: 0x0600711B RID: 28955 RVA: 0x000A2236 File Offset: 0x000A0436
+		// Token: 0x170002A9 RID: 681
+		// (get) Token: 0x06001866 RID: 6246 RVA: 0x00025329 File Offset: 0x00023529
+		// (set) Token: 0x06001867 RID: 6247 RVA: 0x00025339 File Offset: 0x00023539
 		public unsafe float AnimPlayRate
 		{
 			get
@@ -95,9 +95,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A9E RID: 6814
-		// (get) Token: 0x0600711C RID: 28956 RVA: 0x000A2247 File Offset: 0x000A0447
-		// (set) Token: 0x0600711D RID: 28957 RVA: 0x000A2257 File Offset: 0x000A0457
+		// Token: 0x170002AA RID: 682
+		// (get) Token: 0x06001868 RID: 6248 RVA: 0x0002534A File Offset: 0x0002354A
+		// (set) Token: 0x06001869 RID: 6249 RVA: 0x0002535A File Offset: 0x0002355A
 		public unsafe int LoopingCount
 		{
 			get
@@ -110,77 +110,65 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600711E RID: 28958 RVA: 0x000A2268 File Offset: 0x000A0468
+		// Token: 0x0600186A RID: 6250 RVA: 0x0002536B File Offset: 0x0002356B
 		public FAnimSegment()
 		{
 		}
 
-		// Token: 0x0600711F RID: 28959 RVA: 0x000A2270 File Offset: 0x000A0470
-		[NullableContext(1)]
-		public FAnimSegment(UAnimSequenceBase AnimReference, float StartPos, float AnimStartTime, float AnimEndTime, float AnimPlayRate, int LoopingCount)
-		{
-			this.AnimReference = AnimReference;
-			this.StartPos = StartPos;
-			this.AnimStartTime = AnimStartTime;
-			this.AnimEndTime = AnimEndTime;
-			this.AnimPlayRate = AnimPlayRate;
-			this.LoopingCount = LoopingCount;
-		}
-
-		// Token: 0x06007120 RID: 28960 RVA: 0x000A22A5 File Offset: 0x000A04A5
+		// Token: 0x0600186B RID: 6251 RVA: 0x00025373 File Offset: 0x00023573
 		protected override IntPtr GetUStructPtr()
 		{
 			return FAnimSegment.StaticStruct();
 		}
 
-		// Token: 0x06007121 RID: 28961 RVA: 0x000A22B1 File Offset: 0x000A04B1
+		// Token: 0x0600186C RID: 6252 RVA: 0x0002537F File Offset: 0x0002357F
 		[NullableContext(2)]
 		public FAnimSegment(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06007122 RID: 28962 RVA: 0x000A22BB File Offset: 0x000A04BB
+		// Token: 0x0600186D RID: 6253 RVA: 0x00025389 File Offset: 0x00023589
 		public FAnimSegment(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06007123 RID: 28963 RVA: 0x000A22C6 File Offset: 0x000A04C6
+		// Token: 0x0600186E RID: 6254 RVA: 0x00025394 File Offset: 0x00023594
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FAnimSegment(Pointer, false, true);
 		}
 
-		// Token: 0x06007124 RID: 28964 RVA: 0x000A22D0 File Offset: 0x000A04D0
+		// Token: 0x0600186F RID: 6255 RVA: 0x0002539E File Offset: 0x0002359E
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FAnimSegment(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04003653 RID: 13907
+		// Token: 0x040007B7 RID: 1975
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.AnimSegment";
 
-		// Token: 0x04003654 RID: 13908
+		// Token: 0x040007B8 RID: 1976
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04003655 RID: 13909
+		// Token: 0x040007B9 RID: 1977
 		internal static int __PropertyOffset_AnimReference;
 
-		// Token: 0x04003656 RID: 13910
+		// Token: 0x040007BA RID: 1978
 		internal static int __PropertyOffset_StartPos;
 
-		// Token: 0x04003657 RID: 13911
+		// Token: 0x040007BB RID: 1979
 		internal static int __PropertyOffset_AnimStartTime;
 
-		// Token: 0x04003658 RID: 13912
+		// Token: 0x040007BC RID: 1980
 		internal static int __PropertyOffset_AnimEndTime;
 
-		// Token: 0x04003659 RID: 13913
+		// Token: 0x040007BD RID: 1981
 		internal static int __PropertyOffset_AnimPlayRate;
 
-		// Token: 0x0400365A RID: 13914
+		// Token: 0x040007BE RID: 1982
 		internal static int __PropertyOffset_LoopingCount;
 	}
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002D74 RID: 11636
+// Token: 0x020022CE RID: 8910
 public class RegionalTerminalViewParams : UiPopViewData
 {
-	// Token: 0x17002113 RID: 8467
-	// (get) Token: 0x06018787 RID: 100231 RVA: 0x0063A437 File Offset: 0x00638637
-	// (set) Token: 0x06018788 RID: 100232 RVA: 0x0063A43F File Offset: 0x0063863F
+	// Token: 0x1700216E RID: 8558
+	// (get) Token: 0x06016029 RID: 90153 RVA: 0x0066044F File Offset: 0x0065E64F
+	// (set) Token: 0x0601602A RID: 90154 RVA: 0x00660457 File Offset: 0x0065E657
 	public int GameplayId { get; set; }
 }

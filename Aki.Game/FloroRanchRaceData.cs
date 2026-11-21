@@ -2,19 +2,19 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001AF7 RID: 6903
+// Token: 0x02000FB6 RID: 4022
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchRaceData
 {
-	// Token: 0x0600CCEC RID: 52460 RVA: 0x002EC727 File Offset: 0x002EA927
+	// Token: 0x0600A0FD RID: 41213 RVA: 0x002F7813 File Offset: 0x002F5A13
 	public FloroRanchRaceData(FloroRanchRace config)
 	{
 		this.Config = config;
 	}
 
-	// Token: 0x170010F0 RID: 4336
-	// (get) Token: 0x0600CCED RID: 52461 RVA: 0x002EC738 File Offset: 0x002EA938
+	// Token: 0x17001115 RID: 4373
+	// (get) Token: 0x0600A0FE RID: 41214 RVA: 0x002F7824 File Offset: 0x002F5A24
 	public int Id
 	{
 		get
@@ -23,14 +23,14 @@ public class FloroRanchRaceData
 		}
 	}
 
-	// Token: 0x0600CCEE RID: 52462 RVA: 0x002EC754 File Offset: 0x002EA954
+	// Token: 0x0600A0FF RID: 41215 RVA: 0x002F7840 File Offset: 0x002F5A40
 	public string GetRaceName()
 	{
 		return this.Config.Name;
 	}
 
-	// Token: 0x170010F1 RID: 4337
-	// (get) Token: 0x0600CCEF RID: 52463 RVA: 0x002EC770 File Offset: 0x002EA970
+	// Token: 0x17001116 RID: 4374
+	// (get) Token: 0x0600A100 RID: 41216 RVA: 0x002F785C File Offset: 0x002F5A5C
 	public string Icon
 	{
 		get
@@ -39,8 +39,8 @@ public class FloroRanchRaceData
 		}
 	}
 
-	// Token: 0x170010F2 RID: 4338
-	// (get) Token: 0x0600CCF0 RID: 52464 RVA: 0x002EC78C File Offset: 0x002EA98C
+	// Token: 0x17001117 RID: 4375
+	// (get) Token: 0x0600A101 RID: 41217 RVA: 0x002F7878 File Offset: 0x002F5A78
 	public string SmallIcon
 	{
 		get
@@ -49,14 +49,14 @@ public class FloroRanchRaceData
 		}
 	}
 
-	// Token: 0x0600CCF1 RID: 52465 RVA: 0x002EC7A8 File Offset: 0x002EA9A8
+	// Token: 0x0600A102 RID: 41218 RVA: 0x002F7894 File Offset: 0x002F5A94
 	public string GetDesc()
 	{
 		return this.Config.Description;
 	}
 
-	// Token: 0x170010F3 RID: 4339
-	// (get) Token: 0x0600CCF2 RID: 52466 RVA: 0x002EC7C4 File Offset: 0x002EA9C4
+	// Token: 0x17001118 RID: 4376
+	// (get) Token: 0x0600A103 RID: 41219 RVA: 0x002F78B0 File Offset: 0x002F5AB0
 	public bool IsCommon
 	{
 		get
@@ -65,6 +65,6 @@ public class FloroRanchRaceData
 		}
 	}
 
-	// Token: 0x04005E10 RID: 24080
+	// Token: 0x04005EDF RID: 24287
 	private readonly FloroRanchRace Config;
 }

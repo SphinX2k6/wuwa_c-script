@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011AC RID: 4524
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012E6 RID: 4838
 	public class ITrackAreaText
 	{
-		// Token: 0x060066BC RID: 26300 RVA: 0x000F61E0 File Offset: 0x000F43E0
+		// Token: 0x06006CF3 RID: 27891 RVA: 0x001039AC File Offset: 0x00101BAC
 		private ITrackAreaText_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060066BD RID: 26301 RVA: 0x000F6218 File Offset: 0x000F4418
+		// Token: 0x06006CF4 RID: 27892 RVA: 0x001039E4 File Offset: 0x00101BE4
 		public static ITrackAreaText Create([Nullable(2)] ITrackAreaText instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060066BE RID: 26302 RVA: 0x000F622B File Offset: 0x000F442B
+		// Token: 0x06006CF5 RID: 27893 RVA: 0x001039F7 File Offset: 0x00101BF7
 		public static ITrackAreaText CreateFromSetValue([Nullable(2)] ITrackAreaText_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060066BF RID: 26303 RVA: 0x000F623E File Offset: 0x000F443E
+		// Token: 0x06006CF6 RID: 27894 RVA: 0x00103A0A File Offset: 0x00101C0A
 		public ITrackAreaText_SetValue ToSetValue()
 		{
 			return new ITrackAreaText_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002161 RID: 8545
-		// (get) Token: 0x060066C0 RID: 26304 RVA: 0x000F6269 File Offset: 0x000F4469
-		// (set) Token: 0x060066C1 RID: 26305 RVA: 0x000F6294 File Offset: 0x000F4494
+		// Token: 0x17002320 RID: 8992
+		// (get) Token: 0x06006CF7 RID: 27895 RVA: 0x00103A35 File Offset: 0x00101C35
+		// (set) Token: 0x06006CF8 RID: 27896 RVA: 0x00103A60 File Offset: 0x00101C60
 		public virtual bool Show
 		{
 			get
@@ -80,9 +78,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002162 RID: 8546
-		// (get) Token: 0x060066C2 RID: 26306 RVA: 0x000F62A2 File Offset: 0x000F44A2
-		// (set) Token: 0x060066C3 RID: 26307 RVA: 0x000F62CD File Offset: 0x000F44CD
+		// Token: 0x17002321 RID: 8993
+		// (get) Token: 0x06006CF9 RID: 27897 RVA: 0x00103A6E File Offset: 0x00101C6E
+		// (set) Token: 0x06006CFA RID: 27898 RVA: 0x00103A99 File Offset: 0x00101C99
 		public virtual string Tid
 		{
 			get
@@ -103,11 +101,13 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002163 RID: 8547
-		// (get) Token: 0x060066C4 RID: 26308 RVA: 0x000F62DB File Offset: 0x000F44DB
-		// (set) Token: 0x060066C5 RID: 26309 RVA: 0x000F62F2 File Offset: 0x000F44F2
+		// Token: 0x17002322 RID: 8994
+		// (get) Token: 0x06006CFB RID: 27899 RVA: 0x00103AA7 File Offset: 0x00101CA7
+		// (set) Token: 0x06006CFC RID: 27900 RVA: 0x00103ABE File Offset: 0x00101CBE
+		[Nullable(2)]
 		public virtual string EdTid
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.PocoInterface != null)
@@ -116,17 +116,18 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return null;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().EdTid = value;
 			}
 		}
 
-		// Token: 0x04003DA6 RID: 15782
+		// Token: 0x0400410E RID: 16654
 		[Nullable(2)]
 		protected ITrackAreaText FbInstance;
 
-		// Token: 0x04003DA7 RID: 15783
+		// Token: 0x0400410F RID: 16655
 		[Nullable(2)]
 		protected ITrackAreaText_SetValue PocoInterface;
 	}

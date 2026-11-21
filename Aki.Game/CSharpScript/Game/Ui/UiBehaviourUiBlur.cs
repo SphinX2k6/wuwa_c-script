@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200462D RID: 17965
+	// Token: 0x02003557 RID: 13655
 	public class UiBehaviourUiBlur : IUiBehavior, IStaticVariableResetter
 	{
-		// Token: 0x0602E45F RID: 189535 RVA: 0x00AB2849 File Offset: 0x00AB0A49
+		// Token: 0x06022B72 RID: 142194 RVA: 0x009DF5D9 File Offset: 0x009DD7D9
 		static UiBehaviourUiBlur()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiBehaviourUiBlur.CreateStaticDefaultValue), new Action(UiBehaviourUiBlur.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x170075E2 RID: 30178
-		// (get) Token: 0x0602E460 RID: 189536 RVA: 0x00AB2868 File Offset: 0x00AB0A68
+		// Token: 0x1700489C RID: 18588
+		// (get) Token: 0x06022B73 RID: 142195 RVA: 0x009DF5F8 File Offset: 0x009DD7F8
 		[Nullable(1)]
 		private static List<int> BlurViewSet
 		{
@@ -28,8 +28,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E461 RID: 189537 RVA: 0x00AB2870 File Offset: 0x00AB0A70
-		public void OnAfterUiStart()
+		// Token: 0x06022B74 RID: 142196 RVA: 0x009DF600 File Offset: 0x009DD800
+		public void OnUiStart()
 		{
 			if ((this.CurrentLayer.GetValueOrDefault() & (ELayerType.Normal | ELayerType.Plot | ELayerType.Pop)) == (ELayerType)0)
 			{
@@ -48,8 +48,8 @@ namespace CSharpScript.Game.Ui
 			this.RefreshViewBlurMode();
 		}
 
-		// Token: 0x0602E462 RID: 189538 RVA: 0x00AB28D7 File Offset: 0x00AB0AD7
-		public void OnAfterUiShow()
+		// Token: 0x06022B75 RID: 142197 RVA: 0x009DF667 File Offset: 0x009DD867
+		public void OnUiShow()
 		{
 			if (!this.IfNeedBlurEffect)
 			{
@@ -66,12 +66,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E463 RID: 189539 RVA: 0x00AB2909 File Offset: 0x00AB0B09
-		public void OnBeforeUiHide()
+		// Token: 0x06022B76 RID: 142198 RVA: 0x009DF699 File Offset: 0x009DD899
+		public void OnUiHide()
 		{
 		}
 
-		// Token: 0x0602E464 RID: 189540 RVA: 0x00AB290C File Offset: 0x00AB0B0C
+		// Token: 0x06022B77 RID: 142199 RVA: 0x009DF69C File Offset: 0x009DD89C
 		private bool HasExitingPartialBlurView()
 		{
 			UiViewBase currentView = this.CurrentView;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602E465 RID: 189541 RVA: 0x00AB2A00 File Offset: 0x00AB0C00
+		// Token: 0x06022B78 RID: 142200 RVA: 0x009DF790 File Offset: 0x009DD990
 		private void SetSaveModeByCurrentView()
 		{
 			UiShow? uiShow;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Ui
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.kuro.LGUIBlurTexture.save 0", null);
 		}
 
-		// Token: 0x0602E466 RID: 189542 RVA: 0x00AB2A68 File Offset: 0x00AB0C68
+		// Token: 0x06022B79 RID: 142201 RVA: 0x009DF7F8 File Offset: 0x009DD9F8
 		private void RefreshViewBlurMode()
 		{
 			if (!this.IfNeedBlurEffect)
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E467 RID: 189543 RVA: 0x00AB2B48 File Offset: 0x00AB0D48
+		// Token: 0x06022B7A RID: 142202 RVA: 0x009DF8D8 File Offset: 0x009DDAD8
 		public void RefreshBlur()
 		{
 			if (!this.IfNeedBlurEffect)
@@ -140,27 +140,27 @@ namespace CSharpScript.Game.Ui
 			UiBlurLogic.Instance.SetNormalUiRenderAfterBlur(this.CurrentView);
 		}
 
-		// Token: 0x0602E468 RID: 189544 RVA: 0x00AB2B63 File Offset: 0x00AB0D63
+		// Token: 0x06022B7B RID: 142203 RVA: 0x009DF8F3 File Offset: 0x009DDAF3
 		public void ChangeNeedBlurState(bool state)
 		{
 			this.IfNeedBlurEffect = state;
 		}
 
-		// Token: 0x0602E469 RID: 189545 RVA: 0x00AB2B6C File Offset: 0x00AB0D6C
+		// Token: 0x06022B7C RID: 142204 RVA: 0x009DF8FC File Offset: 0x009DDAFC
 		public void SetCurrentLayer(ELayerType layerType)
 		{
 			this.CurrentLayer = new ELayerType?(layerType);
 		}
 
-		// Token: 0x0602E46A RID: 189546 RVA: 0x00AB2B7A File Offset: 0x00AB0D7A
+		// Token: 0x06022B7D RID: 142205 RVA: 0x009DF90A File Offset: 0x009DDB0A
 		[NullableContext(1)]
 		public void SetViewInfo(UiViewBase baseView)
 		{
 			this.CurrentView = baseView;
 		}
 
-		// Token: 0x0602E46B RID: 189547 RVA: 0x00AB2B84 File Offset: 0x00AB0D84
-		public void OnBeforeDestroy()
+		// Token: 0x06022B7E RID: 142206 RVA: 0x009DF914 File Offset: 0x009DDB14
+		public void OnDestroy()
 		{
 			if (this.CurrentView != null)
 			{
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E46C RID: 189548 RVA: 0x00AB2BE0 File Offset: 0x00AB0DE0
+		// Token: 0x06022B7F RID: 142207 RVA: 0x009DF970 File Offset: 0x009DDB70
 		public bool IsCurrentViewPartialBlur()
 		{
 			if (this.IfNeedBlurEffect)
@@ -203,35 +203,35 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602E46D RID: 189549 RVA: 0x00AB2C64 File Offset: 0x00AB0E64
+		// Token: 0x06022B80 RID: 142208 RVA: 0x009DF9F4 File Offset: 0x009DDBF4
 		public UniTask OnUiCreateAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E46E RID: 189550 RVA: 0x00AB2C6B File Offset: 0x00AB0E6B
+		// Token: 0x06022B81 RID: 142209 RVA: 0x009DF9FB File Offset: 0x009DDBFB
 		public static void CreateStaticDefaultValue()
 		{
 			UiBehaviourUiBlur._blurViewSet = new List<int>();
 		}
 
-		// Token: 0x0602E46F RID: 189551 RVA: 0x00AB2C77 File Offset: 0x00AB0E77
+		// Token: 0x06022B82 RID: 142210 RVA: 0x009DFA07 File Offset: 0x009DDC07
 		public static void ResetStaticDefaultValue()
 		{
 			UiBehaviourUiBlur._blurViewSet = null;
 		}
 
-		// Token: 0x04018D63 RID: 101731
+		// Token: 0x040133B0 RID: 78768
 		private ELayerType? CurrentLayer;
 
-		// Token: 0x04018D64 RID: 101732
+		// Token: 0x040133B1 RID: 78769
 		[Nullable(2)]
 		protected UiViewBase CurrentView;
 
-		// Token: 0x04018D65 RID: 101733
+		// Token: 0x040133B2 RID: 78770
 		private bool IfNeedBlurEffect;
 
-		// Token: 0x04018D66 RID: 101734
+		// Token: 0x040133B3 RID: 78771
 		[Nullable(2)]
 		private static List<int> _blurViewSet;
 	}

@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 {
-	// Token: 0x020051B3 RID: 20915
+	// Token: 0x02004183 RID: 16771
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 	})]
 	public class CollectCardDetailTabItem : GridProxyAbstract<CollectCardDetailViewTabData>
 	{
-		// Token: 0x060358D6 RID: 219350 RVA: 0x00CAF540 File Offset: 0x00CAD740
+		// Token: 0x0602A7D1 RID: 174033 RVA: 0x00BFCB7C File Offset: 0x00BFAD7C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x060358D7 RID: 219351 RVA: 0x00CAF5A7 File Offset: 0x00CAD7A7
+		// Token: 0x0602A7D2 RID: 174034 RVA: 0x00BFCBE3 File Offset: 0x00BFADE3
 		private void OnItemToggleStateChange(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -43,45 +43,45 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			}
 		}
 
-		// Token: 0x060358D8 RID: 219352 RVA: 0x00CAF5C8 File Offset: 0x00CAD7C8
+		// Token: 0x0602A7D3 RID: 174035 RVA: 0x00BFCC04 File Offset: 0x00BFAE04
 		public override void Refresh(CollectCardDetailViewTabData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.NameId, Array.Empty<object>());
 		}
 
-		// Token: 0x060358D9 RID: 219353 RVA: 0x00CAF5ED File Offset: 0x00CAD7ED
+		// Token: 0x0602A7D4 RID: 174036 RVA: 0x00BFCC29 File Offset: 0x00BFAE29
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x060358DA RID: 219354 RVA: 0x00CAF600 File Offset: 0x00CAD800
+		// Token: 0x0602A7D5 RID: 174037 RVA: 0x00BFCC3C File Offset: 0x00BFAE3C
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x060358DB RID: 219355 RVA: 0x00CAF613 File Offset: 0x00CAD813
+		// Token: 0x0602A7D6 RID: 174038 RVA: 0x00BFCC4F File Offset: 0x00BFAE4F
 		public override object GetKey(CollectCardDetailViewTabData data, int displayIndex)
 		{
 			return data.Index;
 		}
 
-		// Token: 0x0401C6E2 RID: 116450
+		// Token: 0x04017117 RID: 94487
 		private CollectCardDetailViewTabData Data;
 
-		// Token: 0x0401C6E3 RID: 116451
+		// Token: 0x04017118 RID: 94488
 		public Action<ECollectCardDetailViewTab> CallbackOnClick;
 
-		// Token: 0x0200B33A RID: 45882
+		// Token: 0x02009D72 RID: 40306
 		[NullableContext(0)]
 		private static class ETabComponents
 		{
-			// Token: 0x0403651C RID: 222492
+			// Token: 0x04030F6F RID: 200559
 			public const int ItemToggle = 0;
 
-			// Token: 0x0403651D RID: 222493
+			// Token: 0x04030F70 RID: 200560
 			public const int NameText = 1;
 		}
 	}

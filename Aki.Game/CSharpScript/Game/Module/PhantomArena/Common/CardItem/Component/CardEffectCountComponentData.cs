@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051E8 RID: 20968
+	// Token: 0x020041B8 RID: 16824
 	public class CardEffectCountComponentData : ICardEffectCountComponentData
 	{
-		// Token: 0x170081CB RID: 33227
-		// (get) Token: 0x06035A46 RID: 219718 RVA: 0x00CB4DA3 File Offset: 0x00CB2FA3
-		// (set) Token: 0x06035A47 RID: 219719 RVA: 0x00CB4DAB File Offset: 0x00CB2FAB
+		// Token: 0x1700558B RID: 21899
+		// (get) Token: 0x0602A941 RID: 174401 RVA: 0x00C023DF File Offset: 0x00C005DF
+		// (set) Token: 0x0602A942 RID: 174402 RVA: 0x00C023E7 File Offset: 0x00C005E7
 		public int EffectCount { get; set; }
 
-		// Token: 0x170081CC RID: 33228
-		// (get) Token: 0x06035A48 RID: 219720 RVA: 0x00CB4DB4 File Offset: 0x00CB2FB4
-		// (set) Token: 0x06035A49 RID: 219721 RVA: 0x00CB4DBC File Offset: 0x00CB2FBC
+		// Token: 0x1700558C RID: 21900
+		// (get) Token: 0x0602A943 RID: 174403 RVA: 0x00C023F0 File Offset: 0x00C005F0
+		// (set) Token: 0x0602A944 RID: 174404 RVA: 0x00C023F8 File Offset: 0x00C005F8
 		public int EffectCountMax { get; set; }
 
-		// Token: 0x170081CD RID: 33229
-		// (get) Token: 0x06035A4A RID: 219722 RVA: 0x00CB4DC5 File Offset: 0x00CB2FC5
-		// (set) Token: 0x06035A4B RID: 219723 RVA: 0x00CB4DCD File Offset: 0x00CB2FCD
+		// Token: 0x1700558D RID: 21901
+		// (get) Token: 0x0602A945 RID: 174405 RVA: 0x00C02401 File Offset: 0x00C00601
+		// (set) Token: 0x0602A946 RID: 174406 RVA: 0x00C02409 File Offset: 0x00C00609
 		public bool InFight { get; set; }
 	}
 }

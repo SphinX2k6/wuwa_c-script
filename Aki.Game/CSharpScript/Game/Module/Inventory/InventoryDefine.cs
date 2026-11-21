@@ -6,42 +6,42 @@ using FilterDefine;
 
 namespace CSharpScript.Game.Module.Inventory
 {
-	// Token: 0x02005832 RID: 22578
+	// Token: 0x02004809 RID: 18441
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InventoryDefine
 	{
-		// Token: 0x0401DFEE RID: 122862
+		// Token: 0x04018A87 RID: 100999
 		public const int CONFIG_ID = 1;
 
-		// Token: 0x0401DFEF RID: 122863
+		// Token: 0x04018A88 RID: 101000
 		public const int LEVEL = 2;
 
-		// Token: 0x0401DFF0 RID: 122864
+		// Token: 0x04018A89 RID: 101001
 		public const int QUALITY_ID = 3;
 
-		// Token: 0x0401DFF1 RID: 122865
+		// Token: 0x04018A8A RID: 101002
 		public const int COUNT = 4;
 
-		// Token: 0x0401DFF2 RID: 122866
+		// Token: 0x04018A8B RID: 101003
 		public const int SORT_INDEX = 5;
 
-		// Token: 0x0401DFF3 RID: 122867
+		// Token: 0x04018A8C RID: 101004
 		public const int UNIQUE_ID = 6;
 
-		// Token: 0x0401DFF4 RID: 122868
+		// Token: 0x04018A8D RID: 101005
 		public const int COMMON_COIN = 2;
 
-		// Token: 0x0401DFF5 RID: 122869
+		// Token: 0x04018A8E RID: 101006
 		public const int ADVANCED_COIN = 3;
 
-		// Token: 0x0401DFF6 RID: 122870
+		// Token: 0x04018A8F RID: 101007
 		public const int WAVEPLATE_COIN = 5;
 
-		// Token: 0x0401DFF7 RID: 122871
+		// Token: 0x04018A90 RID: 101008
 		public const int WAVEPLATE_CRYSTAL_COIN = 6;
 
-		// Token: 0x0401DFF8 RID: 122872
+		// Token: 0x04018A91 RID: 101009
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<FilterDefine.EFilterType, InventoryDefine.ESettingGridType> recFilterRuleToGirdType = new Dictionary<FilterDefine.EFilterType, InventoryDefine.ESettingGridType>
 		{
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		};
 
-		// Token: 0x0401DFF9 RID: 122873
+		// Token: 0x04018A92 RID: 101010
 		[StaticVariableRuleIgnore]
 		public static readonly int[] weaponIdRange = new int[]
 		{
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Inventory
 			29999999
 		};
 
-		// Token: 0x0401DFFA RID: 122874
+		// Token: 0x04018A93 RID: 101011
 		[StaticVariableRuleIgnore]
 		public static readonly int[] phantomIdRange = new int[]
 		{
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Inventory
 			60999999
 		};
 
-		// Token: 0x0401DFFB RID: 122875
+		// Token: 0x04018A94 RID: 101012
 		[StaticVariableRuleIgnore]
 		public static readonly int[] phantomSpecificIdRange = new int[]
 		{
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Inventory
 			69999999
 		};
 
-		// Token: 0x0401DFFC RID: 122876
+		// Token: 0x04018A95 RID: 101013
 		[StaticVariableRuleIgnore]
 		public static readonly int[] roleIdRange = new int[]
 		{
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Inventory
 			2999
 		};
 
-		// Token: 0x0401DFFD RID: 122877
+		// Token: 0x04018A96 RID: 101014
 		[StaticVariableRuleIgnore]
 		public static readonly int[] virtualIdRange = new int[]
 		{
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Inventory
 			999
 		};
 
-		// Token: 0x0401DFFE RID: 122878
+		// Token: 0x04018A97 RID: 101015
 		[StaticVariableRuleIgnore]
 		public static readonly int[] cardIdRange = new int[]
 		{
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Inventory
 			80069999
 		};
 
-		// Token: 0x0401DFFF RID: 122879
+		// Token: 0x04018A98 RID: 101016
 		[StaticVariableRuleIgnore]
 		public static readonly int[] previewItemIdRange = new int[]
 		{
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Inventory
 			39999
 		};
 
-		// Token: 0x0401E000 RID: 122880
+		// Token: 0x04018A99 RID: 101017
 		[StaticVariableRuleIgnore]
 		public static readonly int[] rogueCurrencyIdRange = new int[]
 		{
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Inventory
 			80100099
 		};
 
-		// Token: 0x0401E001 RID: 122881
+		// Token: 0x04018A9A RID: 101018
 		[StaticVariableRuleIgnore]
 		public static readonly int[] rogueResCurrencyIdRange = new int[]
 		{
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Inventory
 			80109999
 		};
 
-		// Token: 0x0401E002 RID: 122882
+		// Token: 0x04018A9B RID: 101019
 		[StaticVariableRuleIgnore]
 		public static readonly int[] weaponSkinIdRange = new int[]
 		{
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Inventory
 			80089999
 		};
 
-		// Token: 0x0401E003 RID: 122883
+		// Token: 0x04018A9C RID: 101020
 		[StaticVariableRuleIgnore]
 		public static readonly int[] PhoneChatDialogItemRange = new int[]
 		{
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Inventory
 			80819999
 		};
 
-		// Token: 0x0401E004 RID: 122884
+		// Token: 0x04018A9D RID: 101021
 		[StaticVariableRuleIgnore]
 		public static readonly int[] PhoneChatBackGroundItemRange = new int[]
 		{
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Inventory
 			80829999
 		};
 
-		// Token: 0x0401E005 RID: 122885
+		// Token: 0x04018A9E RID: 101022
 		[StaticVariableRuleIgnore]
 		public static readonly int[] PhoneChatThemeItemRange = new int[]
 		{
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Inventory
 			80891999
 		};
 
-		// Token: 0x0401E006 RID: 122886
+		// Token: 0x04018A9F RID: 101023
 		[StaticVariableRuleIgnore]
 		public static readonly int[] PhoneChatCharmItemRange = new int[]
 		{
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.Inventory
 			80892999
 		};
 
-		// Token: 0x0401E007 RID: 122887
+		// Token: 0x04018AA0 RID: 101024
 		[StaticVariableRuleIgnore]
 		public static readonly int[] roleSkinIdRange = new int[]
 		{
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Inventory
 			81999999
 		};
 
-		// Token: 0x0401E008 RID: 122888
+		// Token: 0x04018AA1 RID: 101025
 		[StaticVariableRuleIgnore]
 		public static readonly int[] playerHeadRange = new int[]
 		{
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.Inventory
 			82999999
 		};
 
-		// Token: 0x0401E009 RID: 122889
+		// Token: 0x04018AA2 RID: 101026
 		[StaticVariableRuleIgnore]
 		public static readonly int[] playerTitleRange = new int[]
 		{
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.Inventory
 			82999999
 		};
 
-		// Token: 0x0401E00A RID: 122890
+		// Token: 0x04018AA3 RID: 101027
 		[StaticVariableRuleIgnore]
 		public static readonly int[] DangoAbyssItemRange = new int[]
 		{
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Inventory
 			83999999
 		};
 
-		// Token: 0x0401E00B RID: 122891
+		// Token: 0x04018AA4 RID: 101028
 		[StaticVariableRuleIgnore]
 		public static readonly int[] flySkinIdRange = new int[]
 		{
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.Inventory
 			84999999
 		};
 
-		// Token: 0x0401E00C RID: 122892
+		// Token: 0x04018AA5 RID: 101029
 		[StaticVariableRuleIgnore]
 		public static readonly int[] calabashSkinIdRange = new int[]
 		{
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.Inventory
 			86099999
 		};
 
-		// Token: 0x0401E00D RID: 122893
+		// Token: 0x04018AA6 RID: 101030
 		[StaticVariableRuleIgnore]
 		public static readonly int[] InfrastructureItemRange = new int[]
 		{
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.Inventory
 			86199999
 		};
 
-		// Token: 0x0401E00E RID: 122894
+		// Token: 0x04018AA7 RID: 101031
 		[StaticVariableRuleIgnore]
 		public static readonly int[] PhantomArenaCardItemRange = new int[]
 		{
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.Inventory
 			750000
 		};
 
-		// Token: 0x0401E00F RID: 122895
+		// Token: 0x04018AA8 RID: 101032
 		[StaticVariableRuleIgnore]
 		public static readonly int[] PhantomArenaBadgeItemRange = new int[]
 		{
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.Inventory
 			80000
 		};
 
-		// Token: 0x0401E010 RID: 122896
+		// Token: 0x04018AA9 RID: 101033
 		[StaticVariableRuleIgnore]
 		public static readonly int[] HonamiStoryItemRange = new int[]
 		{
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.Inventory
 			87999999
 		};
 
-		// Token: 0x0401E011 RID: 122897
+		// Token: 0x04018AAA RID: 101034
 		[StaticVariableRuleIgnore]
 		public static readonly int[] HonamiStoryWeaponRange = new int[]
 		{
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Inventory
 			88999999
 		};
 
-		// Token: 0x0401E012 RID: 122898
+		// Token: 0x04018AAB RID: 101035
 		[StaticVariableRuleIgnore]
 		public static readonly int[] MotorFrameItemRange = new int[]
 		{
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.Inventory
 			89499999
 		};
 
-		// Token: 0x0401E013 RID: 122899
+		// Token: 0x04018AAC RID: 101036
 		[StaticVariableRuleIgnore]
 		public static readonly int[] MotorStickerItemRange = new int[]
 		{
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.Inventory
 			89199999
 		};
 
-		// Token: 0x0401E014 RID: 122900
+		// Token: 0x04018AAD RID: 101037
 		[StaticVariableRuleIgnore]
 		public static readonly int[] MotorDecorationItemRange = new int[]
 		{
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Module.Inventory
 			89399999
 		};
 
-		// Token: 0x0401E015 RID: 122901
+		// Token: 0x04018AAE RID: 101038
 		[StaticVariableRuleIgnore]
 		public static readonly int[] MotorSkinItemRange = new int[]
 		{
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.Module.Inventory
 			89299999
 		};
 
-		// Token: 0x0401E016 RID: 122902
+		// Token: 0x04018AAF RID: 101039
 		[StaticVariableRuleIgnore]
 		public static readonly int[] FurnitureItemRange = new int[]
 		{
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.Module.Inventory
 			80839999
 		};
 
-		// Token: 0x0401E017 RID: 122903
+		// Token: 0x04018AB0 RID: 101040
 		[StaticVariableRuleIgnore]
 		public static readonly int[] OrnamentItemRange = new int[]
 		{
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Module.Inventory
 			80879999
 		};
 
-		// Token: 0x0401E018 RID: 122904
+		// Token: 0x04018AB1 RID: 101041
 		[StaticVariableRuleIgnore]
 		public static readonly int[] PinballRoleItemRange = new int[]
 		{
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Module.Inventory
 			80859999
 		};
 
-		// Token: 0x0401E019 RID: 122905
+		// Token: 0x04018AB2 RID: 101042
 		[StaticVariableRuleIgnore]
 		public static readonly int[] PinballWeaponItemRange = new int[]
 		{
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.Module.Inventory
 			80869999
 		};
 
-		// Token: 0x0401E01A RID: 122906
+		// Token: 0x04018AB3 RID: 101043
 		[StaticVariableRuleIgnore]
 		public static readonly int[] roverRogueCurrencyIdRange = new int[]
 		{
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.Inventory
 			89000099
 		};
 
-		// Token: 0x0401E01B RID: 122907
+		// Token: 0x04018AB4 RID: 101044
 		[StaticVariableRuleIgnore]
 		public static readonly int[] dangoBrawlRoleIdRange = new int[]
 		{
@@ -343,965 +343,965 @@ namespace CSharpScript.Game.Module.Inventory
 			80700040
 		};
 
-		// Token: 0x0401E01C RID: 122908
+		// Token: 0x04018AB5 RID: 101045
 		public const int MANAGE_CONFIG_FUNCTION_ID = 10096;
 
-		// Token: 0x0401E01D RID: 122909
+		// Token: 0x04018AB6 RID: 101046
 		public const int MANAGE_CONFIG_HELP_ID = 356;
 
-		// Token: 0x0401E01E RID: 122910
+		// Token: 0x04018AB7 RID: 101047
 		public const string EMPTY_CONFIG_TEXT_ID = "PhantomProject_EmptyProject";
 
-		// Token: 0x0401E01F RID: 122911
+		// Token: 0x04018AB8 RID: 101048
 		public const string EMPTY_RULE_TEXT_ID = "PhantomProject_EmptyChose";
 
-		// Token: 0x0401E020 RID: 122912
+		// Token: 0x04018AB9 RID: 101049
 		public const string EMPTY_CHECK_TEXT_ID = "PhantomProject_Tips02";
 
-		// Token: 0x0401E021 RID: 122913
+		// Token: 0x04018ABA RID: 101050
 		public const int MANAGE_CONFIG_MAX_COUNT = 10;
 
-		// Token: 0x0200BA32 RID: 47666
+		// Token: 0x0200A448 RID: 42056
 		[NullableContext(0)]
 		public enum EItemMainTypeId
 		{
-			// Token: 0x04038466 RID: 230502
+			// Token: 0x04032E53 RID: 208467
 			Virtual,
-			// Token: 0x04038467 RID: 230503
+			// Token: 0x04032E54 RID: 208468
 			Common,
-			// Token: 0x04038468 RID: 230504
+			// Token: 0x04032E55 RID: 208469
 			Weapon,
-			// Token: 0x04038469 RID: 230505
+			// Token: 0x04032E56 RID: 208470
 			Phantom,
-			// Token: 0x0403846A RID: 230506
+			// Token: 0x04032E57 RID: 208471
 			Collection,
-			// Token: 0x0403846B RID: 230507
+			// Token: 0x04032E58 RID: 208472
 			Material,
-			// Token: 0x0403846C RID: 230508
+			// Token: 0x04032E59 RID: 208473
 			Mission,
-			// Token: 0x0403846D RID: 230509
+			// Token: 0x04032E5A RID: 208474
 			Special,
-			// Token: 0x0403846E RID: 230510
+			// Token: 0x04032E5B RID: 208475
 			Card,
-			// Token: 0x0403846F RID: 230511
+			// Token: 0x04032E5C RID: 208476
 			DangoPluginItem,
-			// Token: 0x04038470 RID: 230512
+			// Token: 0x04032E5D RID: 208477
 			PinballWeapon
 		}
 
-		// Token: 0x0200BA33 RID: 47667
+		// Token: 0x0200A449 RID: 42057
 		[NullableContext(0)]
 		public enum EItemType
 		{
-			// Token: 0x04038472 RID: 230514
+			// Token: 0x04032E5F RID: 208479
 			Virtual,
-			// Token: 0x04038473 RID: 230515
+			// Token: 0x04032E60 RID: 208480
 			Common,
-			// Token: 0x04038474 RID: 230516
+			// Token: 0x04032E61 RID: 208481
 			Weapon,
-			// Token: 0x04038475 RID: 230517
+			// Token: 0x04032E62 RID: 208482
 			WeaponMaterial = 4,
-			// Token: 0x04038476 RID: 230518
+			// Token: 0x04032E63 RID: 208483
 			Task = 7,
-			// Token: 0x04038477 RID: 230519
+			// Token: 0x04032E64 RID: 208484
 			Phantom = 9,
-			// Token: 0x04038478 RID: 230520
+			// Token: 0x04032E65 RID: 208485
 			Gift = 11,
-			// Token: 0x04038479 RID: 230521
+			// Token: 0x04032E66 RID: 208486
 			SpecialItem = 13,
-			// Token: 0x0403847A RID: 230522
+			// Token: 0x04032E67 RID: 208487
 			Card,
-			// Token: 0x0403847B RID: 230523
+			// Token: 0x04032E68 RID: 208488
 			RogueCurrency,
-			// Token: 0x0403847C RID: 230524
+			// Token: 0x04032E69 RID: 208489
 			WeaponSkin = 18,
-			// Token: 0x0403847D RID: 230525
+			// Token: 0x04032E6A RID: 208490
 			RoleSkin,
-			// Token: 0x0403847E RID: 230526
+			// Token: 0x04032E6B RID: 208491
 			RecallActivityScore,
-			// Token: 0x0403847F RID: 230527
+			// Token: 0x04032E6C RID: 208492
 			PlayerHead,
-			// Token: 0x04038480 RID: 230528
+			// Token: 0x04032E6D RID: 208493
 			PlayerTitle,
-			// Token: 0x04038481 RID: 230529
+			// Token: 0x04032E6E RID: 208494
 			FlySkin = 24,
-			// Token: 0x04038482 RID: 230530
+			// Token: 0x04032E6F RID: 208495
 			HonamiStoryItem = 28,
-			// Token: 0x04038483 RID: 230531
+			// Token: 0x04032E70 RID: 208496
 			HonamiStoryWeapon,
-			// Token: 0x04038484 RID: 230532
+			// Token: 0x04032E71 RID: 208497
 			MotorSticker,
-			// Token: 0x04038485 RID: 230533
+			// Token: 0x04032E72 RID: 208498
 			MotorDecoration,
-			// Token: 0x04038486 RID: 230534
+			// Token: 0x04032E73 RID: 208499
 			MotorFrame,
-			// Token: 0x04038487 RID: 230535
+			// Token: 0x04032E74 RID: 208500
 			MotorSkin,
-			// Token: 0x04038488 RID: 230536
+			// Token: 0x04032E75 RID: 208501
 			Ornament = 35,
-			// Token: 0x04038489 RID: 230537
+			// Token: 0x04032E76 RID: 208502
 			PinballWeapon,
-			// Token: 0x0403848A RID: 230538
+			// Token: 0x04032E77 RID: 208503
 			PinballRole,
-			// Token: 0x0403848B RID: 230539
+			// Token: 0x04032E78 RID: 208504
 			DangoBrawlRole = 43,
-			// Token: 0x0403848C RID: 230540
+			// Token: 0x04032E79 RID: 208505
 			CookMenu = 60000,
-			// Token: 0x0403848D RID: 230541
+			// Token: 0x04032E7A RID: 208506
 			CookFood,
-			// Token: 0x0403848E RID: 230542
+			// Token: 0x04032E7B RID: 208507
 			ForgingFormula,
-			// Token: 0x0403848F RID: 230543
+			// Token: 0x04032E7C RID: 208508
 			ComposeFormula,
-			// Token: 0x04038490 RID: 230544
+			// Token: 0x04032E7D RID: 208509
 			Phonograph,
-			// Token: 0x04038491 RID: 230545
+			// Token: 0x04032E7E RID: 208510
 			ShipTowerBuff,
-			// Token: 0x04038492 RID: 230546
+			// Token: 0x04032E7F RID: 208511
 			AbyssItem,
-			// Token: 0x04038493 RID: 230547
+			// Token: 0x04032E80 RID: 208512
 			BirthdayItem,
-			// Token: 0x04038494 RID: 230548
+			// Token: 0x04032E81 RID: 208513
 			PayShopCoupon,
-			// Token: 0x04038495 RID: 230549
+			// Token: 0x04032E82 RID: 208514
 			PhantomArenaCard,
-			// Token: 0x04038496 RID: 230550
+			// Token: 0x04032E83 RID: 208515
 			PhantomArenaBadge,
-			// Token: 0x04038497 RID: 230551
+			// Token: 0x04032E84 RID: 208516
 			CalabashSkin = 60015,
-			// Token: 0x04038498 RID: 230552
+			// Token: 0x04032E85 RID: 208517
 			InfrastructureItem,
-			// Token: 0x04038499 RID: 230553
+			// Token: 0x04032E86 RID: 208518
 			PhoneChatDialog,
-			// Token: 0x0403849A RID: 230554
+			// Token: 0x04032E87 RID: 208519
 			PhoneChatBackGround,
-			// Token: 0x0403849B RID: 230555
+			// Token: 0x04032E88 RID: 208520
 			Furniture,
-			// Token: 0x0403849C RID: 230556
+			// Token: 0x04032E89 RID: 208521
 			PhoneChatTheme,
-			// Token: 0x0403849D RID: 230557
+			// Token: 0x04032E8A RID: 208522
 			PhoneChatCharm
 		}
 
-		// Token: 0x0200BA34 RID: 47668
+		// Token: 0x0200A44A RID: 42058
 		[NullableContext(0)]
 		public enum EItemInfoDisplayType
 		{
-			// Token: 0x0403849F RID: 230559
+			// Token: 0x04032E8C RID: 208524
 			StackCount,
-			// Token: 0x040384A0 RID: 230560
+			// Token: 0x04032E8D RID: 208525
 			Level
 		}
 
-		// Token: 0x0200BA35 RID: 47669
+		// Token: 0x0200A44B RID: 42059
 		[NullableContext(0)]
 		public enum EItemDataFunctionType
 		{
-			// Token: 0x040384A2 RID: 230562
+			// Token: 0x04032E8F RID: 208527
 			Lock,
-			// Token: 0x040384A3 RID: 230563
+			// Token: 0x04032E90 RID: 208528
 			Deprecate
 		}
 
-		// Token: 0x0200BA36 RID: 47670
+		// Token: 0x0200A44C RID: 42060
 		[NullableContext(0)]
 		public enum EItemDataType
 		{
-			// Token: 0x040384A5 RID: 230565
+			// Token: 0x04032E92 RID: 208530
 			CommonItem,
-			// Token: 0x040384A6 RID: 230566
+			// Token: 0x04032E93 RID: 208531
 			RoleItem,
-			// Token: 0x040384A7 RID: 230567
+			// Token: 0x04032E94 RID: 208532
 			WeaponItem,
-			// Token: 0x040384A8 RID: 230568
+			// Token: 0x04032E95 RID: 208533
 			PhantomItem,
-			// Token: 0x040384A9 RID: 230569
+			// Token: 0x04032E96 RID: 208534
 			PhantomCustomize,
-			// Token: 0x040384AA RID: 230570
+			// Token: 0x04032E97 RID: 208535
 			VirtualItem,
-			// Token: 0x040384AB RID: 230571
+			// Token: 0x04032E98 RID: 208536
 			CardItem,
-			// Token: 0x040384AC RID: 230572
+			// Token: 0x04032E99 RID: 208537
 			PreviewItem,
-			// Token: 0x040384AD RID: 230573
+			// Token: 0x04032E9A RID: 208538
 			RogueCurrency,
-			// Token: 0x040384AE RID: 230574
+			// Token: 0x04032E9B RID: 208539
 			RogueResCurrency,
-			// Token: 0x040384AF RID: 230575
+			// Token: 0x04032E9C RID: 208540
 			WeaponSkinItem,
-			// Token: 0x040384B0 RID: 230576
+			// Token: 0x04032E9D RID: 208541
 			RoleSkinItem,
-			// Token: 0x040384B1 RID: 230577
+			// Token: 0x04032E9E RID: 208542
 			PlayerHeadItem,
-			// Token: 0x040384B2 RID: 230578
+			// Token: 0x04032E9F RID: 208543
 			DangoAbyssItem,
-			// Token: 0x040384B3 RID: 230579
+			// Token: 0x04032EA0 RID: 208544
 			FlySkinItem,
-			// Token: 0x040384B4 RID: 230580
+			// Token: 0x04032EA1 RID: 208545
 			PhantomArenaCard,
-			// Token: 0x040384B5 RID: 230581
+			// Token: 0x04032EA2 RID: 208546
 			PhantomArenaBadge,
-			// Token: 0x040384B6 RID: 230582
+			// Token: 0x04032EA3 RID: 208547
 			HonamiStoryItem,
-			// Token: 0x040384B7 RID: 230583
+			// Token: 0x04032EA4 RID: 208548
 			CalabashSkinItem,
-			// Token: 0x040384B8 RID: 230584
+			// Token: 0x04032EA5 RID: 208549
 			HonamiStoryWeapon,
-			// Token: 0x040384B9 RID: 230585
+			// Token: 0x04032EA6 RID: 208550
 			InfrastructureItem,
-			// Token: 0x040384BA RID: 230586
+			// Token: 0x04032EA7 RID: 208551
 			MotorStickerItem,
-			// Token: 0x040384BB RID: 230587
+			// Token: 0x04032EA8 RID: 208552
 			PhoneChatDialog,
-			// Token: 0x040384BC RID: 230588
+			// Token: 0x04032EA9 RID: 208553
 			PhoneChatBackGround,
-			// Token: 0x040384BD RID: 230589
+			// Token: 0x04032EAA RID: 208554
 			PhoneChatTheme,
-			// Token: 0x040384BE RID: 230590
+			// Token: 0x04032EAB RID: 208555
 			PhoneChatCharm,
-			// Token: 0x040384BF RID: 230591
+			// Token: 0x04032EAC RID: 208556
 			FurnitureItem,
-			// Token: 0x040384C0 RID: 230592
+			// Token: 0x04032EAD RID: 208557
 			MotorFrameItem,
-			// Token: 0x040384C1 RID: 230593
+			// Token: 0x04032EAE RID: 208558
 			MotorDecorationItem,
-			// Token: 0x040384C2 RID: 230594
+			// Token: 0x04032EAF RID: 208559
 			MotorSkinItem,
-			// Token: 0x040384C3 RID: 230595
+			// Token: 0x04032EB0 RID: 208560
 			OrnamentItem,
-			// Token: 0x040384C4 RID: 230596
+			// Token: 0x04032EB1 RID: 208561
 			PinballRoleItem,
-			// Token: 0x040384C5 RID: 230597
+			// Token: 0x04032EB2 RID: 208562
 			PinballWeaponItem,
-			// Token: 0x040384C6 RID: 230598
+			// Token: 0x04032EB3 RID: 208563
 			RoverRogueCurrency,
-			// Token: 0x040384C7 RID: 230599
+			// Token: 0x04032EB4 RID: 208564
 			DangoBrawlRoleItem
 		}
 
-		// Token: 0x0200BA37 RID: 47671
+		// Token: 0x0200A44D RID: 42061
 		public interface IItemViewDataInfo
 		{
-			// Token: 0x1700A1C1 RID: 41409
-			// (get) Token: 0x0604F795 RID: 325525
-			// (set) Token: 0x0604F796 RID: 325526
+			// Token: 0x1700795E RID: 31070
+			// (get) Token: 0x06045D21 RID: 285985
+			// (set) Token: 0x06045D22 RID: 285986
 			int ConfigId { get; set; }
 
-			// Token: 0x1700A1C2 RID: 41410
-			// (get) Token: 0x0604F797 RID: 325527
-			// (set) Token: 0x0604F798 RID: 325528
+			// Token: 0x1700795F RID: 31071
+			// (get) Token: 0x06045D23 RID: 285987
+			// (set) Token: 0x06045D24 RID: 285988
 			int Count { get; set; }
 
-			// Token: 0x1700A1C3 RID: 41411
-			// (get) Token: 0x0604F799 RID: 325529
-			// (set) Token: 0x0604F79A RID: 325530
+			// Token: 0x17007960 RID: 31072
+			// (get) Token: 0x06045D25 RID: 285989
+			// (set) Token: 0x06045D26 RID: 285990
 			int StackId { get; set; }
 
-			// Token: 0x1700A1C4 RID: 41412
-			// (get) Token: 0x0604F79B RID: 325531
-			// (set) Token: 0x0604F79C RID: 325532
+			// Token: 0x17007961 RID: 31073
+			// (get) Token: 0x06045D27 RID: 285991
+			// (set) Token: 0x06045D28 RID: 285992
 			int QualityId { get; set; }
 
-			// Token: 0x1700A1C5 RID: 41413
-			// (get) Token: 0x0604F79D RID: 325533
-			// (set) Token: 0x0604F79E RID: 325534
+			// Token: 0x17007962 RID: 31074
+			// (get) Token: 0x06045D29 RID: 285993
+			// (set) Token: 0x06045D2A RID: 285994
 			bool IsLock { get; set; }
 
-			// Token: 0x1700A1C6 RID: 41414
-			// (get) Token: 0x0604F79F RID: 325535
-			// (set) Token: 0x0604F7A0 RID: 325536
+			// Token: 0x17007963 RID: 31075
+			// (get) Token: 0x06045D2B RID: 285995
+			// (set) Token: 0x06045D2C RID: 285996
 			bool IsDeprecate { get; set; }
 
-			// Token: 0x1700A1C7 RID: 41415
-			// (get) Token: 0x0604F7A1 RID: 325537
-			// (set) Token: 0x0604F7A2 RID: 325538
+			// Token: 0x17007964 RID: 31076
+			// (get) Token: 0x06045D2D RID: 285997
+			// (set) Token: 0x06045D2E RID: 285998
 			bool IsNewItem { get; set; }
 
-			// Token: 0x1700A1C8 RID: 41416
-			// (get) Token: 0x0604F7A3 RID: 325539
-			// (set) Token: 0x0604F7A4 RID: 325540
+			// Token: 0x17007965 RID: 31077
+			// (get) Token: 0x06045D2F RID: 285999
+			// (set) Token: 0x06045D30 RID: 286000
 			InventoryDefine.EItemDataType ItemDataType { get; set; }
 
-			// Token: 0x1700A1C9 RID: 41417
-			// (get) Token: 0x0604F7A5 RID: 325541
-			// (set) Token: 0x0604F7A6 RID: 325542
+			// Token: 0x17007966 RID: 31078
+			// (get) Token: 0x06045D31 RID: 286001
+			// (set) Token: 0x06045D32 RID: 286002
 			ItemDataBase ItemDataBase { get; set; }
 
-			// Token: 0x1700A1CA RID: 41418
-			// (get) Token: 0x0604F7A7 RID: 325543
-			// (set) Token: 0x0604F7A8 RID: 325544
+			// Token: 0x17007967 RID: 31079
+			// (get) Token: 0x06045D33 RID: 286003
+			// (set) Token: 0x06045D34 RID: 286004
 			bool HasRedDot { get; set; }
 
-			// Token: 0x1700A1CB RID: 41419
-			// (get) Token: 0x0604F7A9 RID: 325545
-			// (set) Token: 0x0604F7AA RID: 325546
+			// Token: 0x17007968 RID: 31080
+			// (get) Token: 0x06045D35 RID: 286005
+			// (set) Token: 0x06045D36 RID: 286006
 			ItemViewDefine.EItemOperationMode ItemOperationMode { get; set; }
 
-			// Token: 0x1700A1CC RID: 41420
-			// (get) Token: 0x0604F7AB RID: 325547
-			// (set) Token: 0x0604F7AC RID: 325548
+			// Token: 0x17007969 RID: 31081
+			// (get) Token: 0x06045D37 RID: 286007
+			// (set) Token: 0x06045D38 RID: 286008
 			bool IsSelectOn { get; set; }
 
-			// Token: 0x1700A1CD RID: 41421
-			// (get) Token: 0x0604F7AD RID: 325549
-			// (set) Token: 0x0604F7AE RID: 325550
+			// Token: 0x1700796A RID: 31082
+			// (get) Token: 0x06045D39 RID: 286009
+			// (set) Token: 0x06045D3A RID: 286010
 			int SelectOnNum { get; set; }
 		}
 
-		// Token: 0x0200BA38 RID: 47672
+		// Token: 0x0200A44E RID: 42062
 		[Nullable(0)]
 		public class ItemViewDataInfo : InventoryDefine.IItemViewDataInfo
 		{
-			// Token: 0x0604F7AF RID: 325551 RVA: 0x01546188 File Offset: 0x01544388
+			// Token: 0x06045D3B RID: 286011 RVA: 0x014FF4F0 File Offset: 0x014FD6F0
 			public ItemViewDataInfo(int configId, int count, int stackId, int qualityId, bool isLock, bool isDeprecate, bool isNewItem, InventoryDefine.EItemDataType itemDataType, ItemDataBase itemDataBase, bool hasRedDot, ItemViewDefine.EItemOperationMode itemOperationMode, bool isSelectOn, int selectOnNum)
 			{
 			}
 
-			// Token: 0x1700A1CE RID: 41422
-			// (get) Token: 0x0604F7B0 RID: 325552 RVA: 0x01546200 File Offset: 0x01544400
-			// (set) Token: 0x0604F7B1 RID: 325553 RVA: 0x01546208 File Offset: 0x01544408
+			// Token: 0x1700796B RID: 31083
+			// (get) Token: 0x06045D3C RID: 286012 RVA: 0x014FF568 File Offset: 0x014FD768
+			// (set) Token: 0x06045D3D RID: 286013 RVA: 0x014FF570 File Offset: 0x014FD770
 			public int ConfigId { get; set; } = configId;
 
-			// Token: 0x1700A1CF RID: 41423
-			// (get) Token: 0x0604F7B2 RID: 325554 RVA: 0x01546211 File Offset: 0x01544411
-			// (set) Token: 0x0604F7B3 RID: 325555 RVA: 0x01546219 File Offset: 0x01544419
+			// Token: 0x1700796C RID: 31084
+			// (get) Token: 0x06045D3E RID: 286014 RVA: 0x014FF579 File Offset: 0x014FD779
+			// (set) Token: 0x06045D3F RID: 286015 RVA: 0x014FF581 File Offset: 0x014FD781
 			public int Count { get; set; } = count;
 
-			// Token: 0x1700A1D0 RID: 41424
-			// (get) Token: 0x0604F7B4 RID: 325556 RVA: 0x01546222 File Offset: 0x01544422
-			// (set) Token: 0x0604F7B5 RID: 325557 RVA: 0x0154622A File Offset: 0x0154442A
+			// Token: 0x1700796D RID: 31085
+			// (get) Token: 0x06045D40 RID: 286016 RVA: 0x014FF58A File Offset: 0x014FD78A
+			// (set) Token: 0x06045D41 RID: 286017 RVA: 0x014FF592 File Offset: 0x014FD792
 			public int StackId { get; set; } = stackId;
 
-			// Token: 0x1700A1D1 RID: 41425
-			// (get) Token: 0x0604F7B6 RID: 325558 RVA: 0x01546233 File Offset: 0x01544433
-			// (set) Token: 0x0604F7B7 RID: 325559 RVA: 0x0154623B File Offset: 0x0154443B
+			// Token: 0x1700796E RID: 31086
+			// (get) Token: 0x06045D42 RID: 286018 RVA: 0x014FF59B File Offset: 0x014FD79B
+			// (set) Token: 0x06045D43 RID: 286019 RVA: 0x014FF5A3 File Offset: 0x014FD7A3
 			public int QualityId { get; set; } = qualityId;
 
-			// Token: 0x1700A1D2 RID: 41426
-			// (get) Token: 0x0604F7B8 RID: 325560 RVA: 0x01546244 File Offset: 0x01544444
-			// (set) Token: 0x0604F7B9 RID: 325561 RVA: 0x0154624C File Offset: 0x0154444C
+			// Token: 0x1700796F RID: 31087
+			// (get) Token: 0x06045D44 RID: 286020 RVA: 0x014FF5AC File Offset: 0x014FD7AC
+			// (set) Token: 0x06045D45 RID: 286021 RVA: 0x014FF5B4 File Offset: 0x014FD7B4
 			public bool IsLock { get; set; } = isLock;
 
-			// Token: 0x1700A1D3 RID: 41427
-			// (get) Token: 0x0604F7BA RID: 325562 RVA: 0x01546255 File Offset: 0x01544455
-			// (set) Token: 0x0604F7BB RID: 325563 RVA: 0x0154625D File Offset: 0x0154445D
+			// Token: 0x17007970 RID: 31088
+			// (get) Token: 0x06045D46 RID: 286022 RVA: 0x014FF5BD File Offset: 0x014FD7BD
+			// (set) Token: 0x06045D47 RID: 286023 RVA: 0x014FF5C5 File Offset: 0x014FD7C5
 			public bool IsDeprecate { get; set; } = isDeprecate;
 
-			// Token: 0x1700A1D4 RID: 41428
-			// (get) Token: 0x0604F7BC RID: 325564 RVA: 0x01546266 File Offset: 0x01544466
-			// (set) Token: 0x0604F7BD RID: 325565 RVA: 0x0154626E File Offset: 0x0154446E
+			// Token: 0x17007971 RID: 31089
+			// (get) Token: 0x06045D48 RID: 286024 RVA: 0x014FF5CE File Offset: 0x014FD7CE
+			// (set) Token: 0x06045D49 RID: 286025 RVA: 0x014FF5D6 File Offset: 0x014FD7D6
 			public bool IsNewItem { get; set; } = isNewItem;
 
-			// Token: 0x1700A1D5 RID: 41429
-			// (get) Token: 0x0604F7BE RID: 325566 RVA: 0x01546277 File Offset: 0x01544477
-			// (set) Token: 0x0604F7BF RID: 325567 RVA: 0x0154627F File Offset: 0x0154447F
+			// Token: 0x17007972 RID: 31090
+			// (get) Token: 0x06045D4A RID: 286026 RVA: 0x014FF5DF File Offset: 0x014FD7DF
+			// (set) Token: 0x06045D4B RID: 286027 RVA: 0x014FF5E7 File Offset: 0x014FD7E7
 			public InventoryDefine.EItemDataType ItemDataType { get; set; } = itemDataType;
 
-			// Token: 0x1700A1D6 RID: 41430
-			// (get) Token: 0x0604F7C0 RID: 325568 RVA: 0x01546288 File Offset: 0x01544488
-			// (set) Token: 0x0604F7C1 RID: 325569 RVA: 0x01546290 File Offset: 0x01544490
+			// Token: 0x17007973 RID: 31091
+			// (get) Token: 0x06045D4C RID: 286028 RVA: 0x014FF5F0 File Offset: 0x014FD7F0
+			// (set) Token: 0x06045D4D RID: 286029 RVA: 0x014FF5F8 File Offset: 0x014FD7F8
 			public ItemDataBase ItemDataBase { get; set; } = itemDataBase;
 
-			// Token: 0x1700A1D7 RID: 41431
-			// (get) Token: 0x0604F7C2 RID: 325570 RVA: 0x01546299 File Offset: 0x01544499
-			// (set) Token: 0x0604F7C3 RID: 325571 RVA: 0x015462A1 File Offset: 0x015444A1
+			// Token: 0x17007974 RID: 31092
+			// (get) Token: 0x06045D4E RID: 286030 RVA: 0x014FF601 File Offset: 0x014FD801
+			// (set) Token: 0x06045D4F RID: 286031 RVA: 0x014FF609 File Offset: 0x014FD809
 			public bool HasRedDot { get; set; } = hasRedDot;
 
-			// Token: 0x1700A1D8 RID: 41432
-			// (get) Token: 0x0604F7C4 RID: 325572 RVA: 0x015462AA File Offset: 0x015444AA
-			// (set) Token: 0x0604F7C5 RID: 325573 RVA: 0x015462B2 File Offset: 0x015444B2
+			// Token: 0x17007975 RID: 31093
+			// (get) Token: 0x06045D50 RID: 286032 RVA: 0x014FF612 File Offset: 0x014FD812
+			// (set) Token: 0x06045D51 RID: 286033 RVA: 0x014FF61A File Offset: 0x014FD81A
 			public ItemViewDefine.EItemOperationMode ItemOperationMode { get; set; } = itemOperationMode;
 
-			// Token: 0x1700A1D9 RID: 41433
-			// (get) Token: 0x0604F7C6 RID: 325574 RVA: 0x015462BB File Offset: 0x015444BB
-			// (set) Token: 0x0604F7C7 RID: 325575 RVA: 0x015462C3 File Offset: 0x015444C3
+			// Token: 0x17007976 RID: 31094
+			// (get) Token: 0x06045D52 RID: 286034 RVA: 0x014FF623 File Offset: 0x014FD823
+			// (set) Token: 0x06045D53 RID: 286035 RVA: 0x014FF62B File Offset: 0x014FD82B
 			public bool IsSelectOn { get; set; } = isSelectOn;
 
-			// Token: 0x1700A1DA RID: 41434
-			// (get) Token: 0x0604F7C8 RID: 325576 RVA: 0x015462CC File Offset: 0x015444CC
-			// (set) Token: 0x0604F7C9 RID: 325577 RVA: 0x015462D4 File Offset: 0x015444D4
+			// Token: 0x17007977 RID: 31095
+			// (get) Token: 0x06045D54 RID: 286036 RVA: 0x014FF634 File Offset: 0x014FD834
+			// (set) Token: 0x06045D55 RID: 286037 RVA: 0x014FF63C File Offset: 0x014FD83C
 			public int SelectOnNum { get; set; } = selectOnNum;
 		}
 
-		// Token: 0x0200BA39 RID: 47673
+		// Token: 0x0200A44F RID: 42063
 		public interface IPublicItemConfig
 		{
-			// Token: 0x1700A1DB RID: 41435
-			// (get) Token: 0x0604F7CA RID: 325578
-			// (set) Token: 0x0604F7CB RID: 325579
+			// Token: 0x17007978 RID: 31096
+			// (get) Token: 0x06045D56 RID: 286038
+			// (set) Token: 0x06045D57 RID: 286039
 			int TypeDescription { get; set; }
 
-			// Token: 0x1700A1DC RID: 41436
-			// (get) Token: 0x0604F7CC RID: 325580
-			// (set) Token: 0x0604F7CD RID: 325581
+			// Token: 0x17007979 RID: 31097
+			// (get) Token: 0x06045D58 RID: 286040
+			// (set) Token: 0x06045D59 RID: 286041
 			int AttributesDescription { get; set; }
 
-			// Token: 0x1700A1DD RID: 41437
-			// (get) Token: 0x0604F7CE RID: 325582
-			// (set) Token: 0x0604F7CF RID: 325583
+			// Token: 0x1700797A RID: 31098
+			// (get) Token: 0x06045D5A RID: 286042
+			// (set) Token: 0x06045D5B RID: 286043
 			int BgDescription { get; set; }
 
-			// Token: 0x1700A1DE RID: 41438
-			// (get) Token: 0x0604F7D0 RID: 325584
-			// (set) Token: 0x0604F7D1 RID: 325585
+			// Token: 0x1700797B RID: 31099
+			// (get) Token: 0x06045D5C RID: 286044
+			// (set) Token: 0x06045D5D RID: 286045
 			string Icon { get; set; }
 
-			// Token: 0x1700A1DF RID: 41439
-			// (get) Token: 0x0604F7D2 RID: 325586
-			// (set) Token: 0x0604F7D3 RID: 325587
+			// Token: 0x1700797C RID: 31100
+			// (get) Token: 0x06045D5E RID: 286046
+			// (set) Token: 0x06045D5F RID: 286047
 			int QualityId { get; set; }
 
-			// Token: 0x1700A1E0 RID: 41440
-			// (get) Token: 0x0604F7D4 RID: 325588
-			// (set) Token: 0x0604F7D5 RID: 325589
+			// Token: 0x1700797D RID: 31101
+			// (get) Token: 0x06045D60 RID: 286048
+			// (set) Token: 0x06045D61 RID: 286049
 			int MaxCapcity { get; set; }
 
-			// Token: 0x1700A1E1 RID: 41441
-			// (get) Token: 0x0604F7D6 RID: 325590
-			// (set) Token: 0x0604F7D7 RID: 325591
+			// Token: 0x1700797E RID: 31102
+			// (get) Token: 0x06045D62 RID: 286050
+			// (set) Token: 0x06045D63 RID: 286051
 			int[] ItemAccess { get; set; }
 
-			// Token: 0x1700A1E2 RID: 41442
-			// (get) Token: 0x0604F7D8 RID: 325592
-			// (set) Token: 0x0604F7D9 RID: 325593
+			// Token: 0x1700797F RID: 31103
+			// (get) Token: 0x06045D64 RID: 286052
+			// (set) Token: 0x06045D65 RID: 286053
 			string Mesh { get; set; }
 		}
 
-		// Token: 0x0200BA3A RID: 47674
+		// Token: 0x0200A450 RID: 42064
 		public interface IGetItemData
 		{
-			// Token: 0x1700A1E3 RID: 41443
-			// (get) Token: 0x0604F7DA RID: 325594
-			// (set) Token: 0x0604F7DB RID: 325595
+			// Token: 0x17007980 RID: 31104
+			// (get) Token: 0x06045D66 RID: 286054
+			// (set) Token: 0x06045D67 RID: 286055
 			int ItemId { get; set; }
 
-			// Token: 0x1700A1E4 RID: 41444
-			// (get) Token: 0x0604F7DC RID: 325596
-			// (set) Token: 0x0604F7DD RID: 325597
+			// Token: 0x17007981 RID: 31105
+			// (get) Token: 0x06045D68 RID: 286056
+			// (set) Token: 0x06045D69 RID: 286057
 			int IncId { get; set; }
 		}
 
-		// Token: 0x0200BA3B RID: 47675
+		// Token: 0x0200A451 RID: 42065
 		[NullableContext(0)]
 		public class GetItemData : InventoryDefine.IGetItemData
 		{
-			// Token: 0x0604F7DE RID: 325598 RVA: 0x015462DD File Offset: 0x015444DD
+			// Token: 0x06045D6A RID: 286058 RVA: 0x014FF645 File Offset: 0x014FD845
 			public GetItemData(int itemId, int incId)
 			{
 			}
 
-			// Token: 0x1700A1E5 RID: 41445
-			// (get) Token: 0x0604F7DF RID: 325599 RVA: 0x015462F3 File Offset: 0x015444F3
-			// (set) Token: 0x0604F7E0 RID: 325600 RVA: 0x015462FB File Offset: 0x015444FB
+			// Token: 0x17007982 RID: 31106
+			// (get) Token: 0x06045D6B RID: 286059 RVA: 0x014FF65B File Offset: 0x014FD85B
+			// (set) Token: 0x06045D6C RID: 286060 RVA: 0x014FF663 File Offset: 0x014FD863
 			public int ItemId { get; set; } = itemId;
 
-			// Token: 0x1700A1E6 RID: 41446
-			// (get) Token: 0x0604F7E1 RID: 325601 RVA: 0x01546304 File Offset: 0x01544504
-			// (set) Token: 0x0604F7E2 RID: 325602 RVA: 0x0154630C File Offset: 0x0154450C
+			// Token: 0x17007983 RID: 31107
+			// (get) Token: 0x06045D6D RID: 286061 RVA: 0x014FF66C File Offset: 0x014FD86C
+			// (set) Token: 0x06045D6E RID: 286062 RVA: 0x014FF674 File Offset: 0x014FD874
 			public int IncId { get; set; } = incId;
 		}
 
-		// Token: 0x0200BA3C RID: 47676
+		// Token: 0x0200A452 RID: 42066
 		[NullableContext(0)]
 		public enum EUseType
 		{
-			// Token: 0x040384D8 RID: 230616
+			// Token: 0x04032EC5 RID: 208581
 			OpenGiftPack = 2,
-			// Token: 0x040384D9 RID: 230617
+			// Token: 0x04032EC6 RID: 208582
 			AddTeamExpAuto,
-			// Token: 0x040384DA RID: 230618
+			// Token: 0x04032EC7 RID: 208583
 			OpenGiftPackAuto,
-			// Token: 0x040384DB RID: 230619
+			// Token: 0x04032EC8 RID: 208584
 			AddRoleAuto,
-			// Token: 0x040384DC RID: 230620
+			// Token: 0x04032EC9 RID: 208585
 			CostItem,
-			// Token: 0x040384DD RID: 230621
+			// Token: 0x04032ECA RID: 208586
 			AddVisionSkillAuto = 8,
-			// Token: 0x040384DE RID: 230622
+			// Token: 0x04032ECB RID: 208587
 			AddEnergy,
-			// Token: 0x040384DF RID: 230623
+			// Token: 0x04032ECC RID: 208588
 			AddPropRewardAuto,
-			// Token: 0x040384E0 RID: 230624
+			// Token: 0x04032ECD RID: 208589
 			AddRoleFavorAuto,
-			// Token: 0x040384E1 RID: 230625
+			// Token: 0x04032ECE RID: 208590
 			ForInfoDisplay
 		}
 
-		// Token: 0x0200BA3D RID: 47677
+		// Token: 0x0200A453 RID: 42067
 		[NullableContext(0)]
 		public enum EShowType
 		{
-			// Token: 0x040384E3 RID: 230627
+			// Token: 0x04032ED0 RID: 208592
 			Exp = 1,
-			// Token: 0x040384E4 RID: 230628
+			// Token: 0x04032ED1 RID: 208593
 			NormalCoin,
-			// Token: 0x040384E5 RID: 230629
+			// Token: 0x04032ED2 RID: 208594
 			SeniorCoin,
-			// Token: 0x040384E6 RID: 230630
+			// Token: 0x04032ED3 RID: 208595
 			SuperCoin,
-			// Token: 0x040384E7 RID: 230631
+			// Token: 0x04032ED4 RID: 208596
 			Power,
-			// Token: 0x040384E8 RID: 230632
+			// Token: 0x04032ED5 RID: 208597
 			CultivateMaterial,
-			// Token: 0x040384E9 RID: 230633
+			// Token: 0x04032ED6 RID: 208598
 			RoleBreachMaterial,
-			// Token: 0x040384EA RID: 230634
+			// Token: 0x04032ED7 RID: 208599
 			SkillUpgradeMaterial,
-			// Token: 0x040384EB RID: 230635
+			// Token: 0x04032ED8 RID: 208600
 			Material,
-			// Token: 0x040384EC RID: 230636
+			// Token: 0x04032ED9 RID: 208601
 			Consumable,
-			// Token: 0x040384ED RID: 230637
+			// Token: 0x04032EDA RID: 208602
 			RoleExpMaterial,
-			// Token: 0x040384EE RID: 230638
+			// Token: 0x04032EDB RID: 208603
 			WeaponExpMaterial,
-			// Token: 0x040384EF RID: 230639
+			// Token: 0x04032EDC RID: 208604
 			WeaponBreachMaterial,
-			// Token: 0x040384F0 RID: 230640
+			// Token: 0x04032EDD RID: 208605
 			ResonanceAmplificationMaterial,
-			// Token: 0x040384F1 RID: 230641
+			// Token: 0x04032EDE RID: 208606
 			ExchangeCoin,
-			// Token: 0x040384F2 RID: 230642
+			// Token: 0x04032EDF RID: 208607
 			PropBag,
-			// Token: 0x040384F3 RID: 230643
+			// Token: 0x04032EE0 RID: 208608
 			TuningProve,
-			// Token: 0x040384F4 RID: 230644
+			// Token: 0x04032EE1 RID: 208609
 			TuningExchangeCoin,
-			// Token: 0x040384F5 RID: 230645
+			// Token: 0x04032EE2 RID: 208610
 			MonthlyTicket,
-			// Token: 0x040384F6 RID: 230646
+			// Token: 0x04032EE3 RID: 208611
 			Supply,
-			// Token: 0x040384F7 RID: 230647
+			// Token: 0x04032EE4 RID: 208612
 			TaskItem,
-			// Token: 0x040384F8 RID: 230648
+			// Token: 0x04032EE5 RID: 208613
 			PhantomExpMaterial,
-			// Token: 0x040384F9 RID: 230649
+			// Token: 0x04032EE6 RID: 208614
 			CookFinishedProduct,
-			// Token: 0x040384FA RID: 230650
+			// Token: 0x04032EE7 RID: 208615
 			CookMenu,
-			// Token: 0x040384FB RID: 230651
+			// Token: 0x04032EE8 RID: 208616
 			MachiningProduct,
-			// Token: 0x040384FC RID: 230652
+			// Token: 0x04032EE9 RID: 208617
 			CookMaterial,
-			// Token: 0x040384FD RID: 230653
+			// Token: 0x04032EEA RID: 208618
 			Favorability,
-			// Token: 0x040384FE RID: 230654
+			// Token: 0x04032EEB RID: 208619
 			PowerPrestige,
-			// Token: 0x040384FF RID: 230655
+			// Token: 0x04032EEC RID: 208620
 			Fragment,
-			// Token: 0x04038500 RID: 230656
+			// Token: 0x04032EED RID: 208621
 			RoleCallback,
-			// Token: 0x04038501 RID: 230657
+			// Token: 0x04032EEE RID: 208622
 			CookSell,
-			// Token: 0x04038502 RID: 230658
+			// Token: 0x04032EEF RID: 208623
 			ChangeStar,
-			// Token: 0x04038503 RID: 230659
+			// Token: 0x04032EF0 RID: 208624
 			LevelItem,
-			// Token: 0x04038504 RID: 230660
+			// Token: 0x04032EF1 RID: 208625
 			ForgingMenu,
-			// Token: 0x04038505 RID: 230661
+			// Token: 0x04032EF2 RID: 208626
 			ComposeMenu,
-			// Token: 0x04038506 RID: 230662
+			// Token: 0x04032EF3 RID: 208627
 			ComposeProduct,
-			// Token: 0x04038507 RID: 230663
+			// Token: 0x04032EF4 RID: 208628
 			ComposeStructure,
-			// Token: 0x04038508 RID: 230664
+			// Token: 0x04032EF5 RID: 208629
 			ComposeStructureProduct,
-			// Token: 0x04038509 RID: 230665
+			// Token: 0x04032EF6 RID: 208630
 			RandomPhantomItem = 41,
-			// Token: 0x0403850A RID: 230666
+			// Token: 0x04032EF7 RID: 208631
 			Modifier = 54,
-			// Token: 0x0403850B RID: 230667
+			// Token: 0x04032EF8 RID: 208632
 			ModifierSub = 58,
-			// Token: 0x0403850C RID: 230668
+			// Token: 0x04032EF9 RID: 208633
 			ResonantSelectItem = 62
 		}
 
-		// Token: 0x0200BA3E RID: 47678
+		// Token: 0x0200A454 RID: 42068
 		[NullableContext(0)]
 		public enum ERedDotDisableRule
 		{
-			// Token: 0x0403850E RID: 230670
+			// Token: 0x04032EFB RID: 208635
 			None,
-			// Token: 0x0403850F RID: 230671
+			// Token: 0x04032EFC RID: 208636
 			AfterSelect,
-			// Token: 0x04038510 RID: 230672
+			// Token: 0x04032EFD RID: 208637
 			AfterUse,
-			// Token: 0x04038511 RID: 230673
+			// Token: 0x04032EFE RID: 208638
 			ServerFirstSelect
 		}
 
-		// Token: 0x0200BA3F RID: 47679
+		// Token: 0x0200A455 RID: 42069
 		[NullableContext(0)]
 		public enum EQuality
 		{
-			// Token: 0x04038513 RID: 230675
+			// Token: 0x04032F00 RID: 208640
 			White = 1,
-			// Token: 0x04038514 RID: 230676
+			// Token: 0x04032F01 RID: 208641
 			Green,
-			// Token: 0x04038515 RID: 230677
+			// Token: 0x04032F02 RID: 208642
 			Blue,
-			// Token: 0x04038516 RID: 230678
+			// Token: 0x04032F03 RID: 208643
 			Purple,
-			// Token: 0x04038517 RID: 230679
+			// Token: 0x04032F04 RID: 208644
 			Orange
 		}
 
-		// Token: 0x0200BA40 RID: 47680
+		// Token: 0x0200A456 RID: 42070
 		[NullableContext(0)]
 		public enum EItemDataFunctionValue
 		{
-			// Token: 0x04038519 RID: 230681
+			// Token: 0x04032F06 RID: 208646
 			Default,
-			// Token: 0x0403851A RID: 230682
+			// Token: 0x04032F07 RID: 208647
 			Lock,
-			// Token: 0x0403851B RID: 230683
+			// Token: 0x04032F08 RID: 208648
 			Deprecate
 		}
 
-		// Token: 0x0200BA41 RID: 47681
+		// Token: 0x0200A457 RID: 42071
 		public interface IManageConfigTypeItemData
 		{
-			// Token: 0x1700A1E7 RID: 41447
-			// (get) Token: 0x0604F7E3 RID: 325603
-			// (set) Token: 0x0604F7E4 RID: 325604
+			// Token: 0x17007984 RID: 31108
+			// (get) Token: 0x06045D6F RID: 286063
+			// (set) Token: 0x06045D70 RID: 286064
 			PhantomSettingType Type { get; set; }
 
-			// Token: 0x1700A1E8 RID: 41448
-			// (get) Token: 0x0604F7E5 RID: 325605
-			// (set) Token: 0x0604F7E6 RID: 325606
+			// Token: 0x17007985 RID: 31109
+			// (get) Token: 0x06045D71 RID: 286065
+			// (set) Token: 0x06045D72 RID: 286066
 			string Name { get; set; }
 		}
 
-		// Token: 0x0200BA42 RID: 47682
+		// Token: 0x0200A458 RID: 42072
 		[Nullable(0)]
 		public class ManageConfigTypeItemData : InventoryDefine.IManageConfigTypeItemData
 		{
-			// Token: 0x1700A1E9 RID: 41449
-			// (get) Token: 0x0604F7E7 RID: 325607 RVA: 0x01546315 File Offset: 0x01544515
-			// (set) Token: 0x0604F7E8 RID: 325608 RVA: 0x0154631D File Offset: 0x0154451D
+			// Token: 0x17007986 RID: 31110
+			// (get) Token: 0x06045D73 RID: 286067 RVA: 0x014FF67D File Offset: 0x014FD87D
+			// (set) Token: 0x06045D74 RID: 286068 RVA: 0x014FF685 File Offset: 0x014FD885
 			public PhantomSettingType Type { get; set; } = PhantomSettingType.AutoDisuse;
 
-			// Token: 0x1700A1EA RID: 41450
-			// (get) Token: 0x0604F7E9 RID: 325609 RVA: 0x01546326 File Offset: 0x01544526
-			// (set) Token: 0x0604F7EA RID: 325610 RVA: 0x0154632E File Offset: 0x0154452E
+			// Token: 0x17007987 RID: 31111
+			// (get) Token: 0x06045D75 RID: 286069 RVA: 0x014FF68E File Offset: 0x014FD88E
+			// (set) Token: 0x06045D76 RID: 286070 RVA: 0x014FF696 File Offset: 0x014FD896
 			public string Name { get; set; } = "";
 		}
 
-		// Token: 0x0200BA43 RID: 47683
+		// Token: 0x0200A459 RID: 42073
 		[NullableContext(0)]
 		public enum ESettingGridType
 		{
-			// Token: 0x0403851F RID: 230687
+			// Token: 0x04032F0C RID: 208652
 			Small = 1,
-			// Token: 0x04038520 RID: 230688
+			// Token: 0x04032F0D RID: 208653
 			Big
 		}
 
-		// Token: 0x0200BA44 RID: 47684
+		// Token: 0x0200A45A RID: 42074
 		public interface IManageConfigTitleItemData
 		{
-			// Token: 0x1700A1EB RID: 41451
-			// (get) Token: 0x0604F7EC RID: 325612
-			// (set) Token: 0x0604F7ED RID: 325613
+			// Token: 0x17007988 RID: 31112
+			// (get) Token: 0x06045D78 RID: 286072
+			// (set) Token: 0x06045D79 RID: 286073
 			int FilterId { get; set; }
 
-			// Token: 0x1700A1EC RID: 41452
-			// (get) Token: 0x0604F7EE RID: 325614
-			// (set) Token: 0x0604F7EF RID: 325615
+			// Token: 0x17007989 RID: 31113
+			// (get) Token: 0x06045D7A RID: 286074
+			// (set) Token: 0x06045D7B RID: 286075
 			int FilterRuleId { get; set; }
 		}
 
-		// Token: 0x0200BA45 RID: 47685
+		// Token: 0x0200A45B RID: 42075
 		[NullableContext(0)]
 		public class ManageConfigTitleItemData : InventoryDefine.IManageConfigTitleItemData
 		{
-			// Token: 0x1700A1ED RID: 41453
-			// (get) Token: 0x0604F7F0 RID: 325616 RVA: 0x01546351 File Offset: 0x01544551
-			// (set) Token: 0x0604F7F1 RID: 325617 RVA: 0x01546359 File Offset: 0x01544559
+			// Token: 0x1700798A RID: 31114
+			// (get) Token: 0x06045D7C RID: 286076 RVA: 0x014FF6B9 File Offset: 0x014FD8B9
+			// (set) Token: 0x06045D7D RID: 286077 RVA: 0x014FF6C1 File Offset: 0x014FD8C1
 			public int FilterId { get; set; }
 
-			// Token: 0x1700A1EE RID: 41454
-			// (get) Token: 0x0604F7F2 RID: 325618 RVA: 0x01546362 File Offset: 0x01544562
-			// (set) Token: 0x0604F7F3 RID: 325619 RVA: 0x0154636A File Offset: 0x0154456A
+			// Token: 0x1700798B RID: 31115
+			// (get) Token: 0x06045D7E RID: 286078 RVA: 0x014FF6CA File Offset: 0x014FD8CA
+			// (set) Token: 0x06045D7F RID: 286079 RVA: 0x014FF6D2 File Offset: 0x014FD8D2
 			public int FilterRuleId { get; set; }
 		}
 
-		// Token: 0x0200BA46 RID: 47686
+		// Token: 0x0200A45C RID: 42076
 		public interface IManageConfigSettingGridData
 		{
-			// Token: 0x1700A1EF RID: 41455
-			// (get) Token: 0x0604F7F5 RID: 325621
-			// (set) Token: 0x0604F7F6 RID: 325622
+			// Token: 0x1700798C RID: 31116
+			// (get) Token: 0x06045D81 RID: 286081
+			// (set) Token: 0x06045D82 RID: 286082
 			bool IsFirst { get; set; }
 
-			// Token: 0x1700A1F0 RID: 41456
-			// (get) Token: 0x0604F7F7 RID: 325623
-			// (set) Token: 0x0604F7F8 RID: 325624
+			// Token: 0x1700798D RID: 31117
+			// (get) Token: 0x06045D83 RID: 286083
+			// (set) Token: 0x06045D84 RID: 286084
 			bool IsEmpty { get; set; }
 
-			// Token: 0x1700A1F1 RID: 41457
-			// (get) Token: 0x0604F7F9 RID: 325625
-			// (set) Token: 0x0604F7FA RID: 325626
+			// Token: 0x1700798E RID: 31118
+			// (get) Token: 0x06045D85 RID: 286085
+			// (set) Token: 0x06045D86 RID: 286086
 			bool IsAdd { get; set; }
 
-			// Token: 0x1700A1F2 RID: 41458
-			// (get) Token: 0x0604F7FB RID: 325627
-			// (set) Token: 0x0604F7FC RID: 325628
+			// Token: 0x1700798F RID: 31119
+			// (get) Token: 0x06045D87 RID: 286087
+			// (set) Token: 0x06045D88 RID: 286088
 			bool IsSelect { get; set; }
 
-			// Token: 0x1700A1F3 RID: 41459
-			// (get) Token: 0x0604F7FD RID: 325629
-			// (set) Token: 0x0604F7FE RID: 325630
+			// Token: 0x17007990 RID: 31120
+			// (get) Token: 0x06045D89 RID: 286089
+			// (set) Token: 0x06045D8A RID: 286090
 			bool IsEditing { get; set; }
 
-			// Token: 0x1700A1F4 RID: 41460
-			// (get) Token: 0x0604F7FF RID: 325631
-			// (set) Token: 0x0604F800 RID: 325632
+			// Token: 0x17007991 RID: 31121
+			// (get) Token: 0x06045D8B RID: 286091
+			// (set) Token: 0x06045D8C RID: 286092
 			int RuleId { get; set; }
 
-			// Token: 0x1700A1F5 RID: 41461
-			// (get) Token: 0x0604F801 RID: 325633
-			// (set) Token: 0x0604F802 RID: 325634
+			// Token: 0x17007992 RID: 31122
+			// (get) Token: 0x06045D8D RID: 286093
+			// (set) Token: 0x06045D8E RID: 286094
 			int Value { get; set; }
 		}
 
-		// Token: 0x0200BA47 RID: 47687
+		// Token: 0x0200A45D RID: 42077
 		[NullableContext(0)]
 		public class ManageConfigSettingGridData : InventoryDefine.IManageConfigSettingGridData
 		{
-			// Token: 0x1700A1F6 RID: 41462
-			// (get) Token: 0x0604F803 RID: 325635 RVA: 0x0154637B File Offset: 0x0154457B
-			// (set) Token: 0x0604F804 RID: 325636 RVA: 0x01546383 File Offset: 0x01544583
+			// Token: 0x17007993 RID: 31123
+			// (get) Token: 0x06045D8F RID: 286095 RVA: 0x014FF6E3 File Offset: 0x014FD8E3
+			// (set) Token: 0x06045D90 RID: 286096 RVA: 0x014FF6EB File Offset: 0x014FD8EB
 			public bool IsFirst { get; set; }
 
-			// Token: 0x1700A1F7 RID: 41463
-			// (get) Token: 0x0604F805 RID: 325637 RVA: 0x0154638C File Offset: 0x0154458C
-			// (set) Token: 0x0604F806 RID: 325638 RVA: 0x01546394 File Offset: 0x01544594
+			// Token: 0x17007994 RID: 31124
+			// (get) Token: 0x06045D91 RID: 286097 RVA: 0x014FF6F4 File Offset: 0x014FD8F4
+			// (set) Token: 0x06045D92 RID: 286098 RVA: 0x014FF6FC File Offset: 0x014FD8FC
 			public bool IsEmpty { get; set; }
 
-			// Token: 0x1700A1F8 RID: 41464
-			// (get) Token: 0x0604F807 RID: 325639 RVA: 0x0154639D File Offset: 0x0154459D
-			// (set) Token: 0x0604F808 RID: 325640 RVA: 0x015463A5 File Offset: 0x015445A5
+			// Token: 0x17007995 RID: 31125
+			// (get) Token: 0x06045D93 RID: 286099 RVA: 0x014FF705 File Offset: 0x014FD905
+			// (set) Token: 0x06045D94 RID: 286100 RVA: 0x014FF70D File Offset: 0x014FD90D
 			public bool IsAdd { get; set; }
 
-			// Token: 0x1700A1F9 RID: 41465
-			// (get) Token: 0x0604F809 RID: 325641 RVA: 0x015463AE File Offset: 0x015445AE
-			// (set) Token: 0x0604F80A RID: 325642 RVA: 0x015463B6 File Offset: 0x015445B6
+			// Token: 0x17007996 RID: 31126
+			// (get) Token: 0x06045D95 RID: 286101 RVA: 0x014FF716 File Offset: 0x014FD916
+			// (set) Token: 0x06045D96 RID: 286102 RVA: 0x014FF71E File Offset: 0x014FD91E
 			public bool IsSelect { get; set; }
 
-			// Token: 0x1700A1FA RID: 41466
-			// (get) Token: 0x0604F80B RID: 325643 RVA: 0x015463BF File Offset: 0x015445BF
-			// (set) Token: 0x0604F80C RID: 325644 RVA: 0x015463C7 File Offset: 0x015445C7
+			// Token: 0x17007997 RID: 31127
+			// (get) Token: 0x06045D97 RID: 286103 RVA: 0x014FF727 File Offset: 0x014FD927
+			// (set) Token: 0x06045D98 RID: 286104 RVA: 0x014FF72F File Offset: 0x014FD92F
 			public bool IsEditing { get; set; }
 
-			// Token: 0x1700A1FB RID: 41467
-			// (get) Token: 0x0604F80D RID: 325645 RVA: 0x015463D0 File Offset: 0x015445D0
-			// (set) Token: 0x0604F80E RID: 325646 RVA: 0x015463D8 File Offset: 0x015445D8
+			// Token: 0x17007998 RID: 31128
+			// (get) Token: 0x06045D99 RID: 286105 RVA: 0x014FF738 File Offset: 0x014FD938
+			// (set) Token: 0x06045D9A RID: 286106 RVA: 0x014FF740 File Offset: 0x014FD940
 			public int RuleId { get; set; }
 
-			// Token: 0x1700A1FC RID: 41468
-			// (get) Token: 0x0604F80F RID: 325647 RVA: 0x015463E1 File Offset: 0x015445E1
-			// (set) Token: 0x0604F810 RID: 325648 RVA: 0x015463E9 File Offset: 0x015445E9
+			// Token: 0x17007999 RID: 31129
+			// (get) Token: 0x06045D9B RID: 286107 RVA: 0x014FF749 File Offset: 0x014FD949
+			// (set) Token: 0x06045D9C RID: 286108 RVA: 0x014FF751 File Offset: 0x014FD951
 			public int Value { get; set; }
 		}
 
-		// Token: 0x0200BA48 RID: 47688
+		// Token: 0x0200A45E RID: 42078
 		public interface ISelectViewData
 		{
-			// Token: 0x1700A1FD RID: 41469
-			// (get) Token: 0x0604F812 RID: 325650
-			// (set) Token: 0x0604F813 RID: 325651
+			// Token: 0x1700799A RID: 31130
+			// (get) Token: 0x06045D9E RID: 286110
+			// (set) Token: 0x06045D9F RID: 286111
 			string GridType { get; set; }
 
-			// Token: 0x1700A1FE RID: 41470
-			// (get) Token: 0x0604F814 RID: 325652
-			// (set) Token: 0x0604F815 RID: 325653
+			// Token: 0x1700799B RID: 31131
+			// (get) Token: 0x06045DA0 RID: 286112
+			// (set) Token: 0x06045DA1 RID: 286113
 			int FilterId { get; set; }
 
-			// Token: 0x1700A1FF RID: 41471
-			// (get) Token: 0x0604F816 RID: 325654
-			// (set) Token: 0x0604F817 RID: 325655
+			// Token: 0x1700799C RID: 31132
+			// (get) Token: 0x06045DA2 RID: 286114
+			// (set) Token: 0x06045DA3 RID: 286115
 			int[] RuleIdList { get; set; }
 
-			// Token: 0x1700A200 RID: 41472
-			// (get) Token: 0x0604F818 RID: 325656
-			// (set) Token: 0x0604F819 RID: 325657
+			// Token: 0x1700799D RID: 31133
+			// (get) Token: 0x06045DA4 RID: 286116
+			// (set) Token: 0x06045DA5 RID: 286117
 			Dictionary<int, int[]> ValueMap { get; set; }
 
-			// Token: 0x1700A201 RID: 41473
-			// (get) Token: 0x0604F81A RID: 325658
-			// (set) Token: 0x0604F81B RID: 325659
+			// Token: 0x1700799E RID: 31134
+			// (get) Token: 0x06045DA6 RID: 286118
+			// (set) Token: 0x06045DA7 RID: 286119
 			Action<Dictionary<int, int[]>> CallbackConfirm { get; set; }
 		}
 
-		// Token: 0x0200BA49 RID: 47689
+		// Token: 0x0200A45F RID: 42079
 		[Nullable(0)]
 		public class SelectViewData : InventoryDefine.ISelectViewData
 		{
-			// Token: 0x1700A202 RID: 41474
-			// (get) Token: 0x0604F81C RID: 325660 RVA: 0x015463FA File Offset: 0x015445FA
-			// (set) Token: 0x0604F81D RID: 325661 RVA: 0x01546402 File Offset: 0x01544602
+			// Token: 0x1700799F RID: 31135
+			// (get) Token: 0x06045DA8 RID: 286120 RVA: 0x014FF762 File Offset: 0x014FD962
+			// (set) Token: 0x06045DA9 RID: 286121 RVA: 0x014FF76A File Offset: 0x014FD96A
 			public string GridType { get; set; } = "";
 
-			// Token: 0x1700A203 RID: 41475
-			// (get) Token: 0x0604F81E RID: 325662 RVA: 0x0154640B File Offset: 0x0154460B
-			// (set) Token: 0x0604F81F RID: 325663 RVA: 0x01546413 File Offset: 0x01544613
+			// Token: 0x170079A0 RID: 31136
+			// (get) Token: 0x06045DAA RID: 286122 RVA: 0x014FF773 File Offset: 0x014FD973
+			// (set) Token: 0x06045DAB RID: 286123 RVA: 0x014FF77B File Offset: 0x014FD97B
 			public int FilterId { get; set; }
 
-			// Token: 0x1700A204 RID: 41476
-			// (get) Token: 0x0604F820 RID: 325664 RVA: 0x0154641C File Offset: 0x0154461C
-			// (set) Token: 0x0604F821 RID: 325665 RVA: 0x01546424 File Offset: 0x01544624
+			// Token: 0x170079A1 RID: 31137
+			// (get) Token: 0x06045DAC RID: 286124 RVA: 0x014FF784 File Offset: 0x014FD984
+			// (set) Token: 0x06045DAD RID: 286125 RVA: 0x014FF78C File Offset: 0x014FD98C
 			public int[] RuleIdList { get; set; } = Array.Empty<int>();
 
-			// Token: 0x1700A205 RID: 41477
-			// (get) Token: 0x0604F822 RID: 325666 RVA: 0x0154642D File Offset: 0x0154462D
-			// (set) Token: 0x0604F823 RID: 325667 RVA: 0x01546435 File Offset: 0x01544635
+			// Token: 0x170079A2 RID: 31138
+			// (get) Token: 0x06045DAE RID: 286126 RVA: 0x014FF795 File Offset: 0x014FD995
+			// (set) Token: 0x06045DAF RID: 286127 RVA: 0x014FF79D File Offset: 0x014FD99D
 			public Dictionary<int, int[]> ValueMap { get; set; } = new Dictionary<int, int[]>();
 
-			// Token: 0x1700A206 RID: 41478
-			// (get) Token: 0x0604F824 RID: 325668 RVA: 0x0154643E File Offset: 0x0154463E
-			// (set) Token: 0x0604F825 RID: 325669 RVA: 0x01546446 File Offset: 0x01544646
+			// Token: 0x170079A3 RID: 31139
+			// (get) Token: 0x06045DB0 RID: 286128 RVA: 0x014FF7A6 File Offset: 0x014FD9A6
+			// (set) Token: 0x06045DB1 RID: 286129 RVA: 0x014FF7AE File Offset: 0x014FD9AE
 			public Action<Dictionary<int, int[]>> CallbackConfirm { get; set; }
 		}
 
-		// Token: 0x0200BA4A RID: 47690
+		// Token: 0x0200A460 RID: 42080
 		public interface ISelectGroupData
 		{
-			// Token: 0x1700A207 RID: 41479
-			// (get) Token: 0x0604F827 RID: 325671
-			// (set) Token: 0x0604F828 RID: 325672
+			// Token: 0x170079A4 RID: 31140
+			// (get) Token: 0x06045DB3 RID: 286131
+			// (set) Token: 0x06045DB4 RID: 286132
 			int FilterId { get; set; }
 
-			// Token: 0x1700A208 RID: 41480
-			// (get) Token: 0x0604F829 RID: 325673
-			// (set) Token: 0x0604F82A RID: 325674
+			// Token: 0x170079A5 RID: 31141
+			// (get) Token: 0x06045DB5 RID: 286133
+			// (set) Token: 0x06045DB6 RID: 286134
 			int FilterRuleId { get; set; }
 
-			// Token: 0x1700A209 RID: 41481
-			// (get) Token: 0x0604F82B RID: 325675
-			// (set) Token: 0x0604F82C RID: 325676
+			// Token: 0x170079A6 RID: 31142
+			// (get) Token: 0x06045DB7 RID: 286135
+			// (set) Token: 0x06045DB8 RID: 286136
 			bool HasSelectAll { get; set; }
 
-			// Token: 0x1700A20A RID: 41482
-			// (get) Token: 0x0604F82D RID: 325677
-			// (set) Token: 0x0604F82E RID: 325678
+			// Token: 0x170079A7 RID: 31143
+			// (get) Token: 0x06045DB9 RID: 286137
+			// (set) Token: 0x06045DBA RID: 286138
 			bool NeedChangeColor { get; set; }
 
-			// Token: 0x1700A20B RID: 41483
-			// (get) Token: 0x0604F82F RID: 325679
-			// (set) Token: 0x0604F830 RID: 325680
+			// Token: 0x170079A8 RID: 31144
+			// (get) Token: 0x06045DBB RID: 286139
+			// (set) Token: 0x06045DBC RID: 286140
 			int[] ValueList { get; set; }
 		}
 
-		// Token: 0x0200BA4B RID: 47691
+		// Token: 0x0200A461 RID: 42081
 		[Nullable(0)]
 		public class SelectGroupData : InventoryDefine.ISelectGroupData
 		{
-			// Token: 0x1700A20C RID: 41484
-			// (get) Token: 0x0604F831 RID: 325681 RVA: 0x01546478 File Offset: 0x01544678
-			// (set) Token: 0x0604F832 RID: 325682 RVA: 0x01546480 File Offset: 0x01544680
+			// Token: 0x170079A9 RID: 31145
+			// (get) Token: 0x06045DBD RID: 286141 RVA: 0x014FF7E0 File Offset: 0x014FD9E0
+			// (set) Token: 0x06045DBE RID: 286142 RVA: 0x014FF7E8 File Offset: 0x014FD9E8
 			public int FilterId { get; set; }
 
-			// Token: 0x1700A20D RID: 41485
-			// (get) Token: 0x0604F833 RID: 325683 RVA: 0x01546489 File Offset: 0x01544689
-			// (set) Token: 0x0604F834 RID: 325684 RVA: 0x01546491 File Offset: 0x01544691
+			// Token: 0x170079AA RID: 31146
+			// (get) Token: 0x06045DBF RID: 286143 RVA: 0x014FF7F1 File Offset: 0x014FD9F1
+			// (set) Token: 0x06045DC0 RID: 286144 RVA: 0x014FF7F9 File Offset: 0x014FD9F9
 			public int FilterRuleId { get; set; }
 
-			// Token: 0x1700A20E RID: 41486
-			// (get) Token: 0x0604F835 RID: 325685 RVA: 0x0154649A File Offset: 0x0154469A
-			// (set) Token: 0x0604F836 RID: 325686 RVA: 0x015464A2 File Offset: 0x015446A2
+			// Token: 0x170079AB RID: 31147
+			// (get) Token: 0x06045DC1 RID: 286145 RVA: 0x014FF802 File Offset: 0x014FDA02
+			// (set) Token: 0x06045DC2 RID: 286146 RVA: 0x014FF80A File Offset: 0x014FDA0A
 			public bool HasSelectAll { get; set; }
 
-			// Token: 0x1700A20F RID: 41487
-			// (get) Token: 0x0604F837 RID: 325687 RVA: 0x015464AB File Offset: 0x015446AB
-			// (set) Token: 0x0604F838 RID: 325688 RVA: 0x015464B3 File Offset: 0x015446B3
+			// Token: 0x170079AC RID: 31148
+			// (get) Token: 0x06045DC3 RID: 286147 RVA: 0x014FF813 File Offset: 0x014FDA13
+			// (set) Token: 0x06045DC4 RID: 286148 RVA: 0x014FF81B File Offset: 0x014FDA1B
 			public bool NeedChangeColor { get; set; }
 
-			// Token: 0x1700A210 RID: 41488
-			// (get) Token: 0x0604F839 RID: 325689 RVA: 0x015464BC File Offset: 0x015446BC
-			// (set) Token: 0x0604F83A RID: 325690 RVA: 0x015464C4 File Offset: 0x015446C4
+			// Token: 0x170079AD RID: 31149
+			// (get) Token: 0x06045DC5 RID: 286149 RVA: 0x014FF824 File Offset: 0x014FDA24
+			// (set) Token: 0x06045DC6 RID: 286150 RVA: 0x014FF82C File Offset: 0x014FDA2C
 			public int[] ValueList { get; set; } = Array.Empty<int>();
 		}
 
-		// Token: 0x0200BA4C RID: 47692
+		// Token: 0x0200A462 RID: 42082
 		[NullableContext(2)]
 		public interface ISelectItemData
 		{
-			// Token: 0x1700A211 RID: 41489
-			// (get) Token: 0x0604F83C RID: 325692
-			// (set) Token: 0x0604F83D RID: 325693
+			// Token: 0x170079AE RID: 31150
+			// (get) Token: 0x06045DC8 RID: 286152
+			// (set) Token: 0x06045DC9 RID: 286153
 			bool IsShowIcon { get; set; }
 
-			// Token: 0x1700A212 RID: 41490
-			// (get) Token: 0x0604F83E RID: 325694
-			// (set) Token: 0x0604F83F RID: 325695
+			// Token: 0x170079AF RID: 31151
+			// (get) Token: 0x06045DCA RID: 286154
+			// (set) Token: 0x06045DCB RID: 286155
 			bool NeedChangeColor { get; set; }
 
-			// Token: 0x1700A213 RID: 41491
-			// (get) Token: 0x0604F840 RID: 325696
-			// (set) Token: 0x0604F841 RID: 325697
+			// Token: 0x170079B0 RID: 31152
+			// (get) Token: 0x06045DCC RID: 286156
+			// (set) Token: 0x06045DCD RID: 286157
 			int FilterId { get; set; }
 
-			// Token: 0x1700A214 RID: 41492
-			// (get) Token: 0x0604F842 RID: 325698
-			// (set) Token: 0x0604F843 RID: 325699
+			// Token: 0x170079B1 RID: 31153
+			// (get) Token: 0x06045DCE RID: 286158
+			// (set) Token: 0x06045DCF RID: 286159
 			int FilterRuleId { get; set; }
 
-			// Token: 0x1700A215 RID: 41493
-			// (get) Token: 0x0604F844 RID: 325700
-			// (set) Token: 0x0604F845 RID: 325701
+			// Token: 0x170079B2 RID: 31154
+			// (get) Token: 0x06045DD0 RID: 286160
+			// (set) Token: 0x06045DD1 RID: 286161
 			int Value { get; set; }
 
-			// Token: 0x1700A216 RID: 41494
-			// (get) Token: 0x0604F846 RID: 325702
-			// (set) Token: 0x0604F847 RID: 325703
+			// Token: 0x170079B3 RID: 31155
+			// (get) Token: 0x06045DD2 RID: 286162
+			// (set) Token: 0x06045DD3 RID: 286163
 			string IconPath { get; set; }
 
-			// Token: 0x1700A217 RID: 41495
-			// (get) Token: 0x0604F848 RID: 325704
-			// (set) Token: 0x0604F849 RID: 325705
+			// Token: 0x170079B4 RID: 31156
+			// (get) Token: 0x06045DD4 RID: 286164
+			// (set) Token: 0x06045DD5 RID: 286165
 			string Name { get; set; }
 		}
 
-		// Token: 0x0200BA4D RID: 47693
+		// Token: 0x0200A463 RID: 42083
 		[NullableContext(2)]
 		[Nullable(0)]
 		public class SelectItemData : InventoryDefine.ISelectItemData
 		{
-			// Token: 0x1700A218 RID: 41496
-			// (get) Token: 0x0604F84A RID: 325706 RVA: 0x015464E0 File Offset: 0x015446E0
-			// (set) Token: 0x0604F84B RID: 325707 RVA: 0x015464E8 File Offset: 0x015446E8
+			// Token: 0x170079B5 RID: 31157
+			// (get) Token: 0x06045DD6 RID: 286166 RVA: 0x014FF848 File Offset: 0x014FDA48
+			// (set) Token: 0x06045DD7 RID: 286167 RVA: 0x014FF850 File Offset: 0x014FDA50
 			public bool IsShowIcon { get; set; }
 
-			// Token: 0x1700A219 RID: 41497
-			// (get) Token: 0x0604F84C RID: 325708 RVA: 0x015464F1 File Offset: 0x015446F1
-			// (set) Token: 0x0604F84D RID: 325709 RVA: 0x015464F9 File Offset: 0x015446F9
+			// Token: 0x170079B6 RID: 31158
+			// (get) Token: 0x06045DD8 RID: 286168 RVA: 0x014FF859 File Offset: 0x014FDA59
+			// (set) Token: 0x06045DD9 RID: 286169 RVA: 0x014FF861 File Offset: 0x014FDA61
 			public bool NeedChangeColor { get; set; }
 
-			// Token: 0x1700A21A RID: 41498
-			// (get) Token: 0x0604F84E RID: 325710 RVA: 0x01546502 File Offset: 0x01544702
-			// (set) Token: 0x0604F84F RID: 325711 RVA: 0x0154650A File Offset: 0x0154470A
+			// Token: 0x170079B7 RID: 31159
+			// (get) Token: 0x06045DDA RID: 286170 RVA: 0x014FF86A File Offset: 0x014FDA6A
+			// (set) Token: 0x06045DDB RID: 286171 RVA: 0x014FF872 File Offset: 0x014FDA72
 			public int FilterId { get; set; }
 
-			// Token: 0x1700A21B RID: 41499
-			// (get) Token: 0x0604F850 RID: 325712 RVA: 0x01546513 File Offset: 0x01544713
-			// (set) Token: 0x0604F851 RID: 325713 RVA: 0x0154651B File Offset: 0x0154471B
+			// Token: 0x170079B8 RID: 31160
+			// (get) Token: 0x06045DDC RID: 286172 RVA: 0x014FF87B File Offset: 0x014FDA7B
+			// (set) Token: 0x06045DDD RID: 286173 RVA: 0x014FF883 File Offset: 0x014FDA83
 			public int FilterRuleId { get; set; }
 
-			// Token: 0x1700A21C RID: 41500
-			// (get) Token: 0x0604F852 RID: 325714 RVA: 0x01546524 File Offset: 0x01544724
-			// (set) Token: 0x0604F853 RID: 325715 RVA: 0x0154652C File Offset: 0x0154472C
+			// Token: 0x170079B9 RID: 31161
+			// (get) Token: 0x06045DDE RID: 286174 RVA: 0x014FF88C File Offset: 0x014FDA8C
+			// (set) Token: 0x06045DDF RID: 286175 RVA: 0x014FF894 File Offset: 0x014FDA94
 			public int Value { get; set; }
 
-			// Token: 0x1700A21D RID: 41501
-			// (get) Token: 0x0604F854 RID: 325716 RVA: 0x01546535 File Offset: 0x01544735
-			// (set) Token: 0x0604F855 RID: 325717 RVA: 0x0154653D File Offset: 0x0154473D
+			// Token: 0x170079BA RID: 31162
+			// (get) Token: 0x06045DE0 RID: 286176 RVA: 0x014FF89D File Offset: 0x014FDA9D
+			// (set) Token: 0x06045DE1 RID: 286177 RVA: 0x014FF8A5 File Offset: 0x014FDAA5
 			public string IconPath { get; set; }
 
-			// Token: 0x1700A21E RID: 41502
-			// (get) Token: 0x0604F856 RID: 325718 RVA: 0x01546546 File Offset: 0x01544746
-			// (set) Token: 0x0604F857 RID: 325719 RVA: 0x0154654E File Offset: 0x0154474E
+			// Token: 0x170079BB RID: 31163
+			// (get) Token: 0x06045DE2 RID: 286178 RVA: 0x014FF8AE File Offset: 0x014FDAAE
+			// (set) Token: 0x06045DE3 RID: 286179 RVA: 0x014FF8B6 File Offset: 0x014FDAB6
 			public string Name { get; set; }
 		}
 	}

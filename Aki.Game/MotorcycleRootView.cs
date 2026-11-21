@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200226E RID: 8814
+// Token: 0x02001752 RID: 5970
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleRootView : UiViewBase
 {
-	// Token: 0x06011349 RID: 70473 RVA: 0x00431B90 File Offset: 0x0042FD90
+	// Token: 0x0600E7DF RID: 59359 RVA: 0x0043E79C File Offset: 0x0043C99C
 	public MotorcycleRootView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601134A RID: 70474 RVA: 0x00431BA4 File Offset: 0x0042FDA4
+	// Token: 0x0600E7E0 RID: 59360 RVA: 0x0043E7B0 File Offset: 0x0043C9B0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class MotorcycleRootView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601134B RID: 70475 RVA: 0x00431BE0 File Offset: 0x0042FDE0
+	// Token: 0x0600E7E1 RID: 59361 RVA: 0x0043E7EC File Offset: 0x0043C9EC
 	protected override void OnStart()
 	{
 		MotorDevelopRootData motorDevelopRootData = this.OpenParam as MotorDevelopRootData;
@@ -45,21 +45,21 @@ public class MotorcycleRootView : UiViewBase
 		this.InitTabComponent();
 	}
 
-	// Token: 0x0601134C RID: 70476 RVA: 0x00431C30 File Offset: 0x0042FE30
+	// Token: 0x0600E7E2 RID: 59362 RVA: 0x0043E83C File Offset: 0x0043CA3C
 	protected override void OnHandleLoadScene()
 	{
 		MotorcycleUiModelUtil.Instance.CreateMotor(EUiModelUseWay.MotorInMotorView);
 		MotorcycleUiModelUtil.Instance.LoadEquippedMotor(null);
 	}
 
-	// Token: 0x0601134D RID: 70477 RVA: 0x00431C49 File Offset: 0x0042FE49
+	// Token: 0x0600E7E3 RID: 59363 RVA: 0x0043E855 File Offset: 0x0043CA55
 	protected override void OnBeforeShow()
 	{
 		this.RefreshTabListAsync();
 		MotorcycleUiModelUtil.Instance.ShowMotor(true);
 	}
 
-	// Token: 0x0601134E RID: 70478 RVA: 0x00431C5D File Offset: 0x0042FE5D
+	// Token: 0x0600E7E4 RID: 59364 RVA: 0x0043E869 File Offset: 0x0043CA69
 	protected override void OnAfterHide()
 	{
 		TabViewComponent<UiDynamicTab> tabViewComponent = this.TabViewComponent;
@@ -70,13 +70,13 @@ public class MotorcycleRootView : UiViewBase
 		tabViewComponent.SetCurrentTabViewState(false);
 	}
 
-	// Token: 0x0601134F RID: 70479 RVA: 0x00431C70 File Offset: 0x0042FE70
+	// Token: 0x0600E7E5 RID: 59365 RVA: 0x0043E87C File Offset: 0x0043CA7C
 	protected override void OnHandleReleaseScene()
 	{
 		MotorcycleUiModelUtil.Instance.DestroyMotor();
 	}
 
-	// Token: 0x06011350 RID: 70480 RVA: 0x00431C7C File Offset: 0x0042FE7C
+	// Token: 0x0600E7E6 RID: 59366 RVA: 0x0043E888 File Offset: 0x0043CA88
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TabComponent != null)
@@ -92,21 +92,21 @@ public class MotorcycleRootView : UiViewBase
 		MotorcycleDevelopModel.Instance.UpdateSelectedTreeType(0);
 	}
 
-	// Token: 0x06011351 RID: 70481 RVA: 0x00431CC9 File Offset: 0x0042FEC9
+	// Token: 0x0600E7E7 RID: 59367 RVA: 0x0043E8D5 File Offset: 0x0043CAD5
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<MotorDevelopRootData>(EEventName.MotorDevelopRootUpdate, new Action<MotorDevelopRootData>(this.OnRootUpdate));
 		EventSystem.Instance.Add<EUiTabViewName>(EEventName.SelectMotorDevelopTab, new Action<EUiTabViewName>(this.OnSelectDevelopTab));
 	}
 
-	// Token: 0x06011352 RID: 70482 RVA: 0x00431D03 File Offset: 0x0042FF03
+	// Token: 0x0600E7E8 RID: 59368 RVA: 0x0043E90F File Offset: 0x0043CB0F
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.MotorDevelopRootUpdate, new Action<MotorDevelopRootData>(this.OnRootUpdate));
 		EventSystem.Instance.Remove(EEventName.SelectMotorDevelopTab, new Action<EUiTabViewName>(this.OnSelectDevelopTab));
 	}
 
-	// Token: 0x06011353 RID: 70483 RVA: 0x00431D40 File Offset: 0x0042FF40
+	// Token: 0x0600E7E9 RID: 59369 RVA: 0x0043E94C File Offset: 0x0043CB4C
 	protected void InitTabComponent()
 	{
 		CommonTabComponentData<MotorcycleTabItem> data = new CommonTabComponentData<MotorcycleTabItem>(new Func<UUIItem, int?, MotorcycleTabItem>(this.ProxyCreate), new Action<int>(this.ToggleCallBack), new Func<int, CommonTabData>(this.GetCommonData));
@@ -116,7 +116,7 @@ public class MotorcycleRootView : UiViewBase
 		this.TabViewComponent = new TabViewComponent<UiDynamicTab>(base.GetItem(0), EKeyMode.Default);
 	}
 
-	// Token: 0x06011354 RID: 70484 RVA: 0x00431DD0 File Offset: 0x0042FFD0
+	// Token: 0x0600E7EA RID: 59370 RVA: 0x0043E9DC File Offset: 0x0043CBDC
 	protected UniTask RefreshTabListAsync()
 	{
 		MotorcycleRootView.<RefreshTabListAsync>d__17 <RefreshTabListAsync>d__;
@@ -127,7 +127,7 @@ public class MotorcycleRootView : UiViewBase
 		return <RefreshTabListAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011355 RID: 70485 RVA: 0x00431E14 File Offset: 0x00430014
+	// Token: 0x0600E7EB RID: 59371 RVA: 0x0043EA20 File Offset: 0x0043CC20
 	protected bool CanToggleChange(int index, bool? _)
 	{
 		if (Info.Instance.IsInGamepad())
@@ -138,13 +138,13 @@ public class MotorcycleRootView : UiViewBase
 		return this.LastClickTime == null || Time.Instance.Now - this.LastClickTime.Value >= (double)intConfig.Value;
 	}
 
-	// Token: 0x06011356 RID: 70486 RVA: 0x00431E6A File Offset: 0x0043006A
+	// Token: 0x0600E7EC RID: 59372 RVA: 0x0043EA76 File Offset: 0x0043CC76
 	private MotorcycleTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new MotorcycleTabItem();
 	}
 
-	// Token: 0x06011357 RID: 70487 RVA: 0x00431E74 File Offset: 0x00430074
+	// Token: 0x0600E7ED RID: 59373 RVA: 0x0043EA80 File Offset: 0x0043CC80
 	private void ToggleCallBack(int index)
 	{
 		this.LastClickTime = new double?(Time.Instance.Now);
@@ -168,14 +168,14 @@ public class MotorcycleRootView : UiViewBase
 		});
 	}
 
-	// Token: 0x06011358 RID: 70488 RVA: 0x00431F30 File Offset: 0x00430130
+	// Token: 0x0600E7EE RID: 59374 RVA: 0x0043EB3C File Offset: 0x0043CD3C
 	private CommonTabData GetCommonData(int index)
 	{
 		UiDynamicTab uiDynamicTab = this.TabDataList[index];
 		return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x06011359 RID: 70489 RVA: 0x00431F68 File Offset: 0x00430168
+	// Token: 0x0600E7EF RID: 59375 RVA: 0x0043EB74 File Offset: 0x0043CD74
 	protected ERedDotName? GetRedDotName(EUiTabViewName tabViewName)
 	{
 		if (tabViewName == EUiTabViewName.MotorcycleLevelInfoTabView)
@@ -197,7 +197,7 @@ public class MotorcycleRootView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x0601135A RID: 70490 RVA: 0x00431FE0 File Offset: 0x004301E0
+	// Token: 0x0600E7F0 RID: 59376 RVA: 0x0043EBEC File Offset: 0x0043CDEC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -237,7 +237,7 @@ public class MotorcycleRootView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601135B RID: 70491 RVA: 0x00432040 File Offset: 0x00430240
+	// Token: 0x0600E7F1 RID: 59377 RVA: 0x0043EC4C File Offset: 0x0043CE4C
 	private void OnRootUpdate(MotorDevelopRootData data)
 	{
 		if (data.Currency != null)
@@ -264,23 +264,23 @@ public class MotorcycleRootView : UiViewBase
 		}, true);
 	}
 
-	// Token: 0x0601135C RID: 70492 RVA: 0x004320FC File Offset: 0x004302FC
+	// Token: 0x0600E7F2 RID: 59378 RVA: 0x0043ED08 File Offset: 0x0043CF08
 	private void OnSelectDevelopTab(EUiTabViewName tabViewName)
 	{
 		int index = this.TabDataList.FindIndex((UiDynamicTab tabData) => (EUiTabViewName)tabData.ChildViewName == tabViewName);
 		this.TabComponent.SelectToggleByIndex(index, false);
 	}
 
-	// Token: 0x0601135D RID: 70493 RVA: 0x0043213B File Offset: 0x0043033B
+	// Token: 0x0600E7F3 RID: 59379 RVA: 0x0043ED47 File Offset: 0x0043CF47
 	protected void CloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x040082F6 RID: 33526
+	// Token: 0x04008434 RID: 33844
 	protected List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-	// Token: 0x040082F7 RID: 33527
+	// Token: 0x04008435 RID: 33845
 	[Nullable(new byte[]
 	{
 		2,
@@ -288,24 +288,24 @@ public class MotorcycleRootView : UiViewBase
 	})]
 	protected TabComponentWithCaptionItem<MotorcycleTabItem> TabComponent;
 
-	// Token: 0x040082F8 RID: 33528
+	// Token: 0x04008436 RID: 33846
 	[Nullable(2)]
 	protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-	// Token: 0x040082F9 RID: 33529
+	// Token: 0x04008437 RID: 33847
 	private EUiTabViewName? CurSelectTabView;
 
-	// Token: 0x040082FA RID: 33530
+	// Token: 0x04008438 RID: 33848
 	private double? LastClickTime;
 
-	// Token: 0x0200879A RID: 34714
+	// Token: 0x02007923 RID: 31011
 	[NullableContext(0)]
 	private class EMotorRootComponent
 	{
-		// Token: 0x0402C12D RID: 180525
+		// Token: 0x04027445 RID: 160837
 		public const int TabRootItem = 0;
 
-		// Token: 0x0402C12E RID: 180526
+		// Token: 0x04027446 RID: 160838
 		public const int TabComponent = 1;
 	}
 }

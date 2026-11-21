@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A54 RID: 19028
+	// Token: 0x020039FC RID: 14844
 	public interface ITrapDefensePauseInfo
 	{
-		// Token: 0x17007A6A RID: 31338
-		// (get) Token: 0x060315D0 RID: 202192
-		// (set) Token: 0x060315D1 RID: 202193
+		// Token: 0x17004E17 RID: 19991
+		// (get) Token: 0x06026360 RID: 156512
+		// (set) Token: 0x06026361 RID: 156513
 		ETrapDefensePauseInfoType Type { get; set; }
 
-		// Token: 0x17007A6B RID: 31339
-		// (get) Token: 0x060315D2 RID: 202194
-		// (set) Token: 0x060315D3 RID: 202195
+		// Token: 0x17004E18 RID: 19992
+		// (get) Token: 0x06026362 RID: 156514
+		// (set) Token: 0x06026363 RID: 156515
 		int? Value { get; set; }
 
-		// Token: 0x17007A6C RID: 31340
-		// (get) Token: 0x060315D4 RID: 202196
-		// (set) Token: 0x060315D5 RID: 202197
+		// Token: 0x17004E19 RID: 19993
+		// (get) Token: 0x06026364 RID: 156516
+		// (set) Token: 0x06026365 RID: 156517
 		int? MaxBatch { get; set; }
 	}
 }

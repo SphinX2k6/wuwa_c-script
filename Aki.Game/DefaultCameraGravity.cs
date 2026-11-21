@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
 
-// Token: 0x02000203 RID: 515
+// Token: 0x02000207 RID: 519
 public class DefaultCameraGravity : BaseCameraGravity
 {
-	// Token: 0x0600205F RID: 8287 RVA: 0x000AC901 File Offset: 0x000AAB01
+	// Token: 0x0600210D RID: 8461 RVA: 0x000B3C21 File Offset: 0x000B1E21
 	protected override void SetCameraGravityMode()
 	{
 		base.InternalSetCameraGravityMode(ECameraGravityMode.None);
 	}
 
-	// Token: 0x06002060 RID: 8288 RVA: 0x000AC90A File Offset: 0x000AAB0A
+	// Token: 0x0600210E RID: 8462 RVA: 0x000B3C2A File Offset: 0x000B1E2A
 	[NullableContext(1)]
 	public override Vector GravityEndLerpVector()
 	{

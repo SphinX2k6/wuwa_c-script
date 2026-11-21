@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B8C RID: 27532
+	// Token: 0x020072D2 RID: 29394
 	public class IMpcEffectParamBaseT
 	{
-		// Token: 0x1700CCAB RID: 52395
-		// (get) Token: 0x060305AF RID: 198063 RVA: 0x00691AC6 File Offset: 0x0068FCC6
-		// (set) Token: 0x060305B0 RID: 198064 RVA: 0x00691ACE File Offset: 0x0068FCCE
+		// Token: 0x1700D790 RID: 55184
+		// (get) Token: 0x06033407 RID: 209927 RVA: 0x006EA0E6 File Offset: 0x006E82E6
+		// (set) Token: 0x06033408 RID: 209928 RVA: 0x006EA0EE File Offset: 0x006E82EE
 		public EMpcEffectParamType Type { get; set; }
 
-		// Token: 0x060305B1 RID: 198065 RVA: 0x00691AD7 File Offset: 0x0068FCD7
+		// Token: 0x06033409 RID: 209929 RVA: 0x006EA0F7 File Offset: 0x006E82F7
 		public IMpcEffectParamBaseT()
 		{
 			this.Type = EMpcEffectParamType.PostProcessVolumeCenterPosition;

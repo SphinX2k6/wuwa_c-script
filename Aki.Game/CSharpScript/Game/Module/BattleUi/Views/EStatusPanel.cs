@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D01 RID: 23809
+	// Token: 0x02004CE3 RID: 19683
 	internal enum EStatusPanel
 	{
-		// Token: 0x0401F6AD RID: 128685
+		// Token: 0x0401A166 RID: 106854
 		None = -1,
-		// Token: 0x0401F6AE RID: 128686
+		// Token: 0x0401A167 RID: 106855
 		Inactive,
-		// Token: 0x0401F6AF RID: 128687
+		// Token: 0x0401A168 RID: 106856
 		Active,
-		// Token: 0x0401F6B0 RID: 128688
+		// Token: 0x0401A169 RID: 106857
 		Max
 	}
 }

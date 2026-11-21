@@ -3,31 +3,31 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02000E9F RID: 3743
+// Token: 0x02000354 RID: 852
 [NullableContext(2)]
 [Nullable(0)]
 [Config(0)]
 public class PinballBattleConfig : ConfigBase
 {
-	// Token: 0x06005C2F RID: 23599 RVA: 0x00110536 File Offset: 0x0010E736
+	// Token: 0x06002FC6 RID: 12230 RVA: 0x001181D2 File Offset: 0x001163D2
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x06005C30 RID: 23600 RVA: 0x00110539 File Offset: 0x0010E739
+	// Token: 0x06002FC7 RID: 12231 RVA: 0x001181D5 File Offset: 0x001163D5
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x06005C31 RID: 23601 RVA: 0x0011053C File Offset: 0x0010E73C
+	// Token: 0x06002FC8 RID: 12232 RVA: 0x001181D8 File Offset: 0x001163D8
 	public PinballWorldConfig? GetWorldConfig(int id)
 	{
 		return ConfigPinballWorldConfigById.GetConfig(id, true);
 	}
 
-	// Token: 0x06005C32 RID: 23602 RVA: 0x00110548 File Offset: 0x0010E748
+	// Token: 0x06002FC9 RID: 12233 RVA: 0x001181E4 File Offset: 0x001163E4
 	public PinballWorldConfig? GetWorldConfigByMapId(int mapId)
 	{
 		IReadOnlyList<PinballWorldConfig> configList = ConfigPinballWorldConfigByMapId.GetConfigList(mapId, true);
@@ -38,116 +38,116 @@ public class PinballBattleConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x06005C33 RID: 23603 RVA: 0x00110576 File Offset: 0x0010E776
+	// Token: 0x06002FCA RID: 12234 RVA: 0x00118212 File Offset: 0x00116412
 	public IReadOnlyList<PinballEntityTest> GetWorldEntities(int mapId)
 	{
 		return ConfigPinballEntityTestByMapId.GetConfigList(mapId, true);
 	}
 
-	// Token: 0x06005C34 RID: 23604 RVA: 0x0011057F File Offset: 0x0010E77F
+	// Token: 0x06002FCB RID: 12235 RVA: 0x0011821B File Offset: 0x0011641B
 	public PinballEntityTest? GetWorldEntityById(int configId)
 	{
 		return ConfigPinballEntityTestById.GetConfig(configId, true);
 	}
 
-	// Token: 0x06005C35 RID: 23605 RVA: 0x00110588 File Offset: 0x0010E788
+	// Token: 0x06002FCC RID: 12236 RVA: 0x00118224 File Offset: 0x00116424
 	public PinballCreature? GetCreatureConfigById(int configId)
 	{
 		return ConfigPinballCreatureById.GetConfig(configId, true);
 	}
 
-	// Token: 0x06005C36 RID: 23606 RVA: 0x00110591 File Offset: 0x0010E791
+	// Token: 0x06002FCD RID: 12237 RVA: 0x0011822D File Offset: 0x0011642D
 	public IReadOnlyList<PinballCreature> GetAllCreatureConfigs()
 	{
 		return ConfigPinballCreatureAll.GetConfigList(true);
 	}
 
-	// Token: 0x06005C37 RID: 23607 RVA: 0x00110599 File Offset: 0x0010E799
+	// Token: 0x06002FCE RID: 12238 RVA: 0x00118235 File Offset: 0x00116435
 	public IReadOnlyList<PinballDamage> GetAllDamageConfigs()
 	{
 		return ConfigPinballDamageAll.GetConfigList(true);
 	}
 
-	// Token: 0x06005C38 RID: 23608 RVA: 0x001105A1 File Offset: 0x0010E7A1
+	// Token: 0x06002FCF RID: 12239 RVA: 0x0011823D File Offset: 0x0011643D
 	public PinballAttr? GetAttrConfig(int attrId)
 	{
 		return ConfigPinballAttrById.GetConfig(attrId, true);
 	}
 
-	// Token: 0x06005C39 RID: 23609 RVA: 0x001105AA File Offset: 0x0010E7AA
+	// Token: 0x06002FD0 RID: 12240 RVA: 0x00118246 File Offset: 0x00116446
 	public IReadOnlyList<PinballAttr> GetAllAttrConfigs()
 	{
 		return ConfigPinballAttrAll.GetConfigList(true);
 	}
 
-	// Token: 0x06005C3A RID: 23610 RVA: 0x001105B2 File Offset: 0x0010E7B2
+	// Token: 0x06002FD1 RID: 12241 RVA: 0x0011824E File Offset: 0x0011644E
 	public IReadOnlyList<PinballMonsterAttr> GetAllMonsterAttrConfigs()
 	{
 		return ConfigPinballMonsterAttrAll.GetConfigList(true);
 	}
 
-	// Token: 0x06005C3B RID: 23611 RVA: 0x001105BA File Offset: 0x0010E7BA
+	// Token: 0x06002FD2 RID: 12242 RVA: 0x00118256 File Offset: 0x00116456
 	public PinballRoleConfig? GetRoleConfig(int configId)
 	{
 		return ConfigPinballRoleConfigById.GetConfig(configId, true);
 	}
 
-	// Token: 0x06005C3C RID: 23612 RVA: 0x001105C3 File Offset: 0x0010E7C3
+	// Token: 0x06002FD3 RID: 12243 RVA: 0x0011825F File Offset: 0x0011645F
 	public PinballRoleLevelConfig? GetLevelConfig(int groupId, int level)
 	{
 		return ConfigPinballRoleLevelConfigByGroupIdAndLevel.GetConfig(groupId, level, true);
 	}
 
-	// Token: 0x06005C3D RID: 23613 RVA: 0x001105CD File Offset: 0x0010E7CD
+	// Token: 0x06002FD4 RID: 12244 RVA: 0x00118269 File Offset: 0x00116469
 	public PinballRoleLevelConfig? GetRoleLevelConfig(int configId)
 	{
 		return ConfigPinballRoleLevelConfigById.GetConfig(configId, true);
 	}
 
-	// Token: 0x06005C3E RID: 23614 RVA: 0x001105D6 File Offset: 0x0010E7D6
+	// Token: 0x06002FD5 RID: 12245 RVA: 0x00118272 File Offset: 0x00116472
 	public PinballWeaponConfig? GetWeaponConfig(int configId)
 	{
 		return ConfigPinballWeaponConfigById.GetConfig(configId, true);
 	}
 
-	// Token: 0x06005C3F RID: 23615 RVA: 0x001105DF File Offset: 0x0010E7DF
+	// Token: 0x06002FD6 RID: 12246 RVA: 0x0011827B File Offset: 0x0011647B
 	public PinballWeaponMainEntry? GetWeaponMainEntryConfig(int configId)
 	{
 		return ConfigPinballWeaponMainEntryById.GetConfig(configId, true);
 	}
 
-	// Token: 0x06005C40 RID: 23616 RVA: 0x001105E8 File Offset: 0x0010E7E8
+	// Token: 0x06002FD7 RID: 12247 RVA: 0x00118284 File Offset: 0x00116484
 	public PinballWeaponSubEntry? GetWeaponSubEntryConfig(int configId)
 	{
 		return ConfigPinballWeaponSubEntryById.GetConfig(configId, true);
 	}
 
-	// Token: 0x06005C41 RID: 23617 RVA: 0x001105F1 File Offset: 0x0010E7F1
+	// Token: 0x06002FD8 RID: 12248 RVA: 0x0011828D File Offset: 0x0011648D
 	public PinballWeaponAttr? GetWeaponAttrConfig(int configId)
 	{
 		return ConfigPinballWeaponAttrById.GetConfig(configId, true);
 	}
 
-	// Token: 0x06005C42 RID: 23618 RVA: 0x001105FA File Offset: 0x0010E7FA
+	// Token: 0x06002FD9 RID: 12249 RVA: 0x00118296 File Offset: 0x00116496
 	public PinballCommonItem? GetCommonItemConfigByConfigId(int configId)
 	{
 		return ConfigPinballCommonItemById.GetConfig(configId, true);
 	}
 
-	// Token: 0x06005C43 RID: 23619 RVA: 0x00110603 File Offset: 0x0010E803
+	// Token: 0x06002FDA RID: 12250 RVA: 0x0011829F File Offset: 0x0011649F
 	public PinballDeathrattle? GetDeathrattleConfig(int configId)
 	{
 		return ConfigPinballDeathrattleById.GetConfig(configId, true);
 	}
 
-	// Token: 0x06005C44 RID: 23620 RVA: 0x0011060C File Offset: 0x0010E80C
+	// Token: 0x06002FDB RID: 12251 RVA: 0x001182A8 File Offset: 0x001164A8
 	public PinballEffect? GetEffectConfig(int configId)
 	{
 		return ConfigPinballEffectById.GetConfig(configId, true);
 	}
 
-	// Token: 0x170006C4 RID: 1732
-	// (get) Token: 0x06005C45 RID: 23621 RVA: 0x00110615 File Offset: 0x0010E815
+	// Token: 0x170006E8 RID: 1768
+	// (get) Token: 0x06002FDC RID: 12252 RVA: 0x001182B1 File Offset: 0x001164B1
 	[Nullable(1)]
 	public static PinballBattleConfig Instance
 	{
@@ -158,7 +158,7 @@ public class PinballBattleConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06005C46 RID: 23622 RVA: 0x0011061C File Offset: 0x0010E81C
+	// Token: 0x06002FDD RID: 12253 RVA: 0x001182B8 File Offset: 0x001164B8
 	[NullableContext(1)]
 	public static PinballBattleConfig GetOrCreateInstance()
 	{
@@ -169,7 +169,7 @@ public class PinballBattleConfig : ConfigBase
 		return PinballBattleConfig._Instance;
 	}
 
-	// Token: 0x06005C47 RID: 23623 RVA: 0x00110630 File Offset: 0x0010E830
+	// Token: 0x06002FDE RID: 12254 RVA: 0x001182CC File Offset: 0x001164CC
 	public static bool CreateInstance()
 	{
 		if (PinballBattleConfig._Instance != null)
@@ -180,23 +180,23 @@ public class PinballBattleConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06005C48 RID: 23624 RVA: 0x00110646 File Offset: 0x0010E846
+	// Token: 0x06002FDF RID: 12255 RVA: 0x001182E2 File Offset: 0x001164E2
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06005C49 RID: 23625 RVA: 0x00110648 File Offset: 0x0010E848
+	// Token: 0x06002FE0 RID: 12256 RVA: 0x001182E4 File Offset: 0x001164E4
 	public static void ResetStaticDefaultValue()
 	{
 		PinballBattleConfig._Instance = null;
 	}
 
-	// Token: 0x06005C4A RID: 23626 RVA: 0x00110650 File Offset: 0x0010E850
+	// Token: 0x06002FE1 RID: 12257 RVA: 0x001182EC File Offset: 0x001164EC
 	static PinballBattleConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PinballBattleConfig.CreateStaticDefaultValue), new Action(PinballBattleConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002A2A RID: 10794
+	// Token: 0x04002AC5 RID: 10949
 	private static PinballBattleConfig _Instance;
 }

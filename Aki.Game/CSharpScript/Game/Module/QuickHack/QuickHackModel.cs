@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F75 RID: 20341
+	// Token: 0x02003F3E RID: 16190
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Model(0)]
 	public class QuickHackModel : ModelBase
 	{
-		// Token: 0x06034185 RID: 213381 RVA: 0x00C39AD6 File Offset: 0x00C37CD6
+		// Token: 0x06028FF3 RID: 167923 RVA: 0x00B83282 File Offset: 0x00B81482
 		protected override bool OnChangeMode()
 		{
 			QuickHackMarkManager markManager = this.MarkManager;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return true;
 		}
 
-		// Token: 0x06034186 RID: 213382 RVA: 0x00C39AF1 File Offset: 0x00C37CF1
+		// Token: 0x06028FF4 RID: 167924 RVA: 0x00B8329D File Offset: 0x00B8149D
 		protected override bool OnLeaveLevel()
 		{
 			QuickHackMarkManager markManager = this.MarkManager;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return true;
 		}
 
-		// Token: 0x06034187 RID: 213383 RVA: 0x00C39B0C File Offset: 0x00C37D0C
+		// Token: 0x06028FF5 RID: 167925 RVA: 0x00B832B8 File Offset: 0x00B814B8
 		public void ClearQuickHack()
 		{
 			if (this.HighlightManagerList != null)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.TargetBeenUsedSkillRecordMap = null;
 		}
 
-		// Token: 0x06034188 RID: 213384 RVA: 0x00C39CD0 File Offset: 0x00C37ED0
+		// Token: 0x06028FF6 RID: 167926 RVA: 0x00B8347C File Offset: 0x00B8167C
 		public void ClearCameraControl()
 		{
 			this.IsCameraControlling = false;
@@ -120,8 +120,8 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.CameraControlAutoOpenQuickHack = false;
 		}
 
-		// Token: 0x17007F56 RID: 32598
-		// (get) Token: 0x06034189 RID: 213385 RVA: 0x00C39D63 File Offset: 0x00C37F63
+		// Token: 0x17005306 RID: 21254
+		// (get) Token: 0x06028FF7 RID: 167927 RVA: 0x00B8350F File Offset: 0x00B8170F
 		[Nullable(1)]
 		public static QuickHackModel Instance
 		{
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603418A RID: 213386 RVA: 0x00C39D6A File Offset: 0x00C37F6A
+		// Token: 0x06028FF8 RID: 167928 RVA: 0x00B83516 File Offset: 0x00B81716
 		[NullableContext(1)]
 		public static QuickHackModel GetOrCreateInstance()
 		{
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return QuickHackModel._Instance;
 		}
 
-		// Token: 0x0603418B RID: 213387 RVA: 0x00C39D7E File Offset: 0x00C37F7E
+		// Token: 0x06028FF9 RID: 167929 RVA: 0x00B8352A File Offset: 0x00B8172A
 		public static bool CreateInstance()
 		{
 			if (QuickHackModel._Instance != null)
@@ -154,30 +154,30 @@ namespace CSharpScript.Game.Module.QuickHack
 			return true;
 		}
 
-		// Token: 0x0603418C RID: 213388 RVA: 0x00C39D94 File Offset: 0x00C37F94
+		// Token: 0x06028FFA RID: 167930 RVA: 0x00B83540 File Offset: 0x00B81740
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603418D RID: 213389 RVA: 0x00C39D96 File Offset: 0x00C37F96
+		// Token: 0x06028FFB RID: 167931 RVA: 0x00B83542 File Offset: 0x00B81742
 		public static void ResetStaticDefaultValue()
 		{
 			QuickHackModel._Instance = null;
 		}
 
-		// Token: 0x0603418E RID: 213390 RVA: 0x00C39D9E File Offset: 0x00C37F9E
+		// Token: 0x06028FFC RID: 167932 RVA: 0x00B8354A File Offset: 0x00B8174A
 		static QuickHackModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(QuickHackModel.CreateStaticDefaultValue), new Action(QuickHackModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BB0F RID: 113423
+		// Token: 0x040164E4 RID: 91364
 		public bool IsQuickHacking;
 
-		// Token: 0x0401BB10 RID: 113424
+		// Token: 0x040164E5 RID: 91365
 		public QuickHackDevice? DeviceConfig;
 
-		// Token: 0x0401BB11 RID: 113425
+		// Token: 0x040164E6 RID: 91366
 		[Nullable(new byte[]
 		{
 			2,
@@ -185,19 +185,19 @@ namespace CSharpScript.Game.Module.QuickHack
 		})]
 		public Dictionary<int, QuickHackSkillInstance> SkillInstanceMap;
 
-		// Token: 0x0401BB12 RID: 113426
+		// Token: 0x040164E7 RID: 91367
 		public QuickHackRamManager RamManager;
 
-		// Token: 0x0401BB13 RID: 113427
+		// Token: 0x040164E8 RID: 91368
 		public QuickHackTargetSelector TargetSelector;
 
-		// Token: 0x0401BB14 RID: 113428
+		// Token: 0x040164E9 RID: 91369
 		public QuickHackSkillConditionHelper ConditionHelper;
 
-		// Token: 0x0401BB15 RID: 113429
+		// Token: 0x040164EA RID: 91370
 		public IQuickHackTimeScaleManager TimeScaleManager;
 
-		// Token: 0x0401BB16 RID: 113430
+		// Token: 0x040164EB RID: 91371
 		[Nullable(new byte[]
 		{
 			2,
@@ -205,19 +205,19 @@ namespace CSharpScript.Game.Module.QuickHack
 		})]
 		public List<QuickHackHighlightManager> HighlightManagerList;
 
-		// Token: 0x0401BB17 RID: 113431
+		// Token: 0x040164EC RID: 91372
 		public QuickHackMarkManager MarkManager;
 
-		// Token: 0x0401BB18 RID: 113432
+		// Token: 0x040164ED RID: 91373
 		public Dictionary<int, int> EntityIdToDisableActorHandleMap;
 
-		// Token: 0x0401BB19 RID: 113433
+		// Token: 0x040164EE RID: 91374
 		public long CombatMessageId;
 
-		// Token: 0x0401BB1A RID: 113434
+		// Token: 0x040164EF RID: 91375
 		public List<int> UsedSkillIdList;
 
-		// Token: 0x0401BB1B RID: 113435
+		// Token: 0x040164F0 RID: 91376
 		[Nullable(new byte[]
 		{
 			2,
@@ -225,43 +225,43 @@ namespace CSharpScript.Game.Module.QuickHack
 		})]
 		public Dictionary<int, HashSet<int>> TargetBeenUsedSkillRecordMap;
 
-		// Token: 0x0401BB1C RID: 113436
+		// Token: 0x040164F1 RID: 91377
 		public Action OnCloseQuickHack;
 
-		// Token: 0x0401BB1D RID: 113437
+		// Token: 0x040164F2 RID: 91378
 		public bool CloseWhenInteractFinish = true;
 
-		// Token: 0x0401BB1E RID: 113438
+		// Token: 0x040164F3 RID: 91379
 		public FGameplayTag? InteractFinishGameplayEventTag;
 
-		// Token: 0x0401BB1F RID: 113439
+		// Token: 0x040164F4 RID: 91380
 		public int OwnerEntityId;
 
-		// Token: 0x0401BB20 RID: 113440
+		// Token: 0x040164F5 RID: 91381
 		public bool IsInteractFinish;
 
-		// Token: 0x0401BB21 RID: 113441
+		// Token: 0x040164F6 RID: 91382
 		public TimerHandle InteractFinishTimer;
 
-		// Token: 0x0401BB22 RID: 113442
+		// Token: 0x040164F7 RID: 91383
 		public double DurationLimitTotalTime;
 
-		// Token: 0x0401BB23 RID: 113443
+		// Token: 0x040164F8 RID: 91384
 		public double DurationLimitRemainTime;
 
-		// Token: 0x0401BB24 RID: 113444
+		// Token: 0x040164F9 RID: 91385
 		public double DurationLimitStartTime;
 
-		// Token: 0x0401BB25 RID: 113445
+		// Token: 0x040164FA RID: 91386
 		public TimerHandle DurationLimitTimer;
 
-		// Token: 0x0401BB26 RID: 113446
+		// Token: 0x040164FB RID: 91387
 		public EntityHandle CurrentLockOnEntityHandle;
 
-		// Token: 0x0401BB27 RID: 113447
+		// Token: 0x040164FC RID: 91388
 		public QuickHackSkillInstance CurrentSelectSkill;
 
-		// Token: 0x0401BB28 RID: 113448
+		// Token: 0x040164FD RID: 91389
 		[Nullable(new byte[]
 		{
 			2,
@@ -269,52 +269,52 @@ namespace CSharpScript.Game.Module.QuickHack
 		})]
 		public List<QuickHackSkillInstance> CurrentSkillList;
 
-		// Token: 0x0401BB29 RID: 113449
+		// Token: 0x040164FE RID: 91390
 		public bool IsCameraControlling;
 
-		// Token: 0x0401BB2A RID: 113450
+		// Token: 0x040164FF RID: 91391
 		public int CameraControlDeviceId;
 
-		// Token: 0x0401BB2B RID: 113451
+		// Token: 0x04016500 RID: 91392
 		public int CurrentCameraControlIndex = -1;
 
-		// Token: 0x0401BB2C RID: 113452
+		// Token: 0x04016501 RID: 91393
 		public List<int> CameraControlPbDataIdList;
 
-		// Token: 0x0401BB2D RID: 113453
+		// Token: 0x04016502 RID: 91394
 		public float CameraControlMaxFov;
 
-		// Token: 0x0401BB2E RID: 113454
+		// Token: 0x04016503 RID: 91395
 		public float CameraControlMinFov;
 
-		// Token: 0x0401BB2F RID: 113455
+		// Token: 0x04016504 RID: 91396
 		public float CameraControlDefaultFov;
 
-		// Token: 0x0401BB30 RID: 113456
+		// Token: 0x04016505 RID: 91397
 		public float CameraControlDefaultPitch;
 
-		// Token: 0x0401BB31 RID: 113457
+		// Token: 0x04016506 RID: 91398
 		public float CameraControlPitchMin;
 
-		// Token: 0x0401BB32 RID: 113458
+		// Token: 0x04016507 RID: 91399
 		public float CameraControlPitchMax;
 
-		// Token: 0x0401BB33 RID: 113459
+		// Token: 0x04016508 RID: 91400
 		public float CameraControlDefaultYaw;
 
-		// Token: 0x0401BB34 RID: 113460
+		// Token: 0x04016509 RID: 91401
 		public float CameraControlYawMin;
 
-		// Token: 0x0401BB35 RID: 113461
+		// Token: 0x0401650A RID: 91402
 		public float CameraControlYawMax;
 
-		// Token: 0x0401BB36 RID: 113462
+		// Token: 0x0401650B RID: 91403
 		public bool CameraControlAutoOpenQuickHack;
 
-		// Token: 0x0401BB37 RID: 113463
+		// Token: 0x0401650C RID: 91404
 		public int PostProcessEffectHandle;
 
-		// Token: 0x0401BB38 RID: 113464
+		// Token: 0x0401650D RID: 91405
 		private static QuickHackModel _Instance;
 	}
 }

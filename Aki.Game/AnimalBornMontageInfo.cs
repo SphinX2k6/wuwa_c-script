@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02002E27 RID: 11815
+// Token: 0x02002383 RID: 9091
 [NullableContext(1)]
 [Nullable(0)]
 public class AnimalBornMontageInfo
 {
-	// Token: 0x06018E38 RID: 101944 RVA: 0x00669E7C File Offset: 0x0066807C
+	// Token: 0x06016705 RID: 91909 RVA: 0x0068FD6C File Offset: 0x0068DF6C
 	public void Init(AnimalStandbyMontage config)
 	{
 		this.StartPath = (this.IsPathValid(config.MontageStart) ? config.MontageStart : "");
@@ -33,20 +33,20 @@ public class AnimalBornMontageInfo
 		}
 	}
 
-	// Token: 0x06018E39 RID: 101945 RVA: 0x00669F76 File Offset: 0x00668176
+	// Token: 0x06016706 RID: 91910 RVA: 0x0068FE66 File Offset: 0x0068E066
 	[NullableContext(2)]
 	protected bool IsPathValid(string path)
 	{
 		return path != null && path != "" && path != "None";
 	}
 
-	// Token: 0x06018E3A RID: 101946 RVA: 0x00669F95 File Offset: 0x00668195
+	// Token: 0x06016707 RID: 91911 RVA: 0x0068FE85 File Offset: 0x0068E085
 	public bool IsAssetReady()
 	{
 		return this.StartReady && this.LoopReady && this.BranchReady && this.EndReady;
 	}
 
-	// Token: 0x06018E3B RID: 101947 RVA: 0x00669FB8 File Offset: 0x006681B8
+	// Token: 0x06016708 RID: 91912 RVA: 0x0068FEA8 File Offset: 0x0068E0A8
 	public bool IsConfigValid()
 	{
 		bool flag = this.StartPath != "" && this.StartPath != "None";
@@ -54,7 +54,7 @@ public class AnimalBornMontageInfo
 		return flag || flag2;
 	}
 
-	// Token: 0x06018E3C RID: 101948 RVA: 0x0066A012 File Offset: 0x00668212
+	// Token: 0x06016709 RID: 91913 RVA: 0x0068FF02 File Offset: 0x0068E102
 	[NullableContext(2)]
 	public UAnimMontage GetStartMontage()
 	{
@@ -66,52 +66,52 @@ public class AnimalBornMontageInfo
 		return this.Start;
 	}
 
-	// Token: 0x0400BABE RID: 47806
+	// Token: 0x0400BE4C RID: 48716
 	[Nullable(2)]
 	public UAnimMontage Start;
 
-	// Token: 0x0400BABF RID: 47807
+	// Token: 0x0400BE4D RID: 48717
 	[Nullable(2)]
 	public UAnimMontage Loop;
 
-	// Token: 0x0400BAC0 RID: 47808
+	// Token: 0x0400BE4E RID: 48718
 	[Nullable(2)]
 	public UAnimMontage Branch;
 
-	// Token: 0x0400BAC1 RID: 47809
+	// Token: 0x0400BE4F RID: 48719
 	[Nullable(2)]
 	public UAnimMontage End;
 
-	// Token: 0x0400BAC2 RID: 47810
+	// Token: 0x0400BE50 RID: 48720
 	public List<UAnimMontage> BranchList = new List<UAnimMontage>();
 
-	// Token: 0x0400BAC3 RID: 47811
+	// Token: 0x0400BE51 RID: 48721
 	public string StartPath = "";
 
-	// Token: 0x0400BAC4 RID: 47812
+	// Token: 0x0400BE52 RID: 48722
 	public string LoopPath = "";
 
-	// Token: 0x0400BAC5 RID: 47813
+	// Token: 0x0400BE53 RID: 48723
 	public string EndPath = "";
 
-	// Token: 0x0400BAC6 RID: 47814
+	// Token: 0x0400BE54 RID: 48724
 	public string BranchPath = "";
 
-	// Token: 0x0400BAC7 RID: 47815
+	// Token: 0x0400BE55 RID: 48725
 	public int BranchLoadedCount;
 
-	// Token: 0x0400BAC8 RID: 47816
+	// Token: 0x0400BE56 RID: 48726
 	public List<string> BranchPathList = new List<string>();
 
-	// Token: 0x0400BAC9 RID: 47817
+	// Token: 0x0400BE57 RID: 48727
 	public bool StartReady;
 
-	// Token: 0x0400BACA RID: 47818
+	// Token: 0x0400BE58 RID: 48728
 	public bool LoopReady;
 
-	// Token: 0x0400BACB RID: 47819
+	// Token: 0x0400BE59 RID: 48729
 	public bool BranchReady;
 
-	// Token: 0x0400BACC RID: 47820
+	// Token: 0x0400BE5A RID: 48730
 	public bool EndReady;
 }

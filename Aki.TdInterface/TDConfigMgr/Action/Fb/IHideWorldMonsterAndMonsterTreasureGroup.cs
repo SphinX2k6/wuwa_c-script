@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002792 RID: 10130
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A64 RID: 10852
 	public class IHideWorldMonsterAndMonsterTreasureGroup : IHideGroupType
 	{
-		// Token: 0x0600E17D RID: 57725 RVA: 0x0021519D File Offset: 0x0021339D
+		// Token: 0x0600EF9B RID: 61339 RVA: 0x00231F31 File Offset: 0x00230131
 		public static IHideWorldMonsterAndMonsterTreasureGroup Create(IHideWorldMonsterAndMonsterTreasureGroup? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700441B RID: 17435
-		// (get) Token: 0x0600E17E RID: 57726 RVA: 0x002151BC File Offset: 0x002133BC
+		// Token: 0x17004781 RID: 18305
+		// (get) Token: 0x0600EF9C RID: 61340 RVA: 0x00231F50 File Offset: 0x00230150
 		public override EHideType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700441C RID: 17436
-		// (get) Token: 0x0600E17F RID: 57727 RVA: 0x002151CC File Offset: 0x002133CC
+		// Token: 0x17004782 RID: 18306
+		// (get) Token: 0x0600EF9D RID: 61341 RVA: 0x00231F60 File Offset: 0x00230160
 		public virtual List<int> HideRangeEntities
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D02 RID: 32002
+		// Token: 0x040083B8 RID: 33720
 		private IHideWorldMonsterAndMonsterTreasureGroup Instance;
 
-		// Token: 0x04007D03 RID: 32003
+		// Token: 0x040083B9 RID: 33721
 		private List<int> _HideRangeEntitiesCache;
 
-		// Token: 0x04007D04 RID: 32004
+		// Token: 0x040083BA RID: 33722
 		private bool _HideRangeEntitiesInited;
 	}
 }

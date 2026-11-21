@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200664F RID: 26191
+	// Token: 0x02006CC0 RID: 27840
 	public class IEnableAoiNotifyT
 	{
-		// Token: 0x1700C29B RID: 49819
-		// (get) Token: 0x0602D7F1 RID: 186353 RVA: 0x0063B14E File Offset: 0x0063934E
-		// (set) Token: 0x0602D7F2 RID: 186354 RVA: 0x0063B156 File Offset: 0x00639356
+		// Token: 0x1700CC39 RID: 52281
+		// (get) Token: 0x0602FFC2 RID: 196546 RVA: 0x00687CB6 File Offset: 0x00685EB6
+		// (set) Token: 0x0602FFC3 RID: 196547 RVA: 0x00687CBE File Offset: 0x00685EBE
 		public EAoiNotifyState State { get; set; }
 
-		// Token: 0x0602D7F3 RID: 186355 RVA: 0x0063B15F File Offset: 0x0063935F
+		// Token: 0x0602FFC4 RID: 196548 RVA: 0x00687CC7 File Offset: 0x00685EC7
 		public IEnableAoiNotifyT()
 		{
 			this.State = EAoiNotifyState.Open;

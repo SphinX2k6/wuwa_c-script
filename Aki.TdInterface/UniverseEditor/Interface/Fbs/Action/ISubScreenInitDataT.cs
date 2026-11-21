@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007209 RID: 29193
+	// Token: 0x020079DE RID: 31198
 	public class ISubScreenInitDataT
 	{
-		// Token: 0x1700D8C2 RID: 55490
-		// (get) Token: 0x06033C88 RID: 212104 RVA: 0x006F8363 File Offset: 0x006F6563
-		// (set) Token: 0x06033C89 RID: 212105 RVA: 0x006F836B File Offset: 0x006F656B
+		// Token: 0x1700E4BB RID: 58555
+		// (get) Token: 0x06036F8A RID: 225162 RVA: 0x007596C3 File Offset: 0x007578C3
+		// (set) Token: 0x06036F8B RID: 225163 RVA: 0x007596CB File Offset: 0x007578CB
 		public ESubScreenInitDataType Type { get; set; }
 
-		// Token: 0x1700D8C3 RID: 55491
-		// (get) Token: 0x06033C8A RID: 212106 RVA: 0x006F8374 File Offset: 0x006F6574
-		// (set) Token: 0x06033C8B RID: 212107 RVA: 0x006F837C File Offset: 0x006F657C
+		// Token: 0x1700E4BC RID: 58556
+		// (get) Token: 0x06036F8C RID: 225164 RVA: 0x007596D4 File Offset: 0x007578D4
+		// (set) Token: 0x06036F8D RID: 225165 RVA: 0x007596DC File Offset: 0x007578DC
 		public string SubScreenKey { get; set; }
 
-		// Token: 0x06033C8C RID: 212108 RVA: 0x006F8385 File Offset: 0x006F6585
+		// Token: 0x06036F8E RID: 225166 RVA: 0x007596E5 File Offset: 0x007578E5
 		public ISubScreenInitDataT()
 		{
 			this.Type = ESubScreenInitDataType.Preset;

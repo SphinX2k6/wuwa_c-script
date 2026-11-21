@@ -7,23 +7,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 {
-	// Token: 0x020052D9 RID: 21209
+	// Token: 0x020042A9 RID: 17065
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ClickCardSkillOperation : NpcAiOperation
 	{
-		// Token: 0x170082FE RID: 33534
-		// (get) Token: 0x0603646A RID: 222314 RVA: 0x00CD7127 File Offset: 0x00CD5327
-		// (set) Token: 0x0603646B RID: 222315 RVA: 0x00CD712F File Offset: 0x00CD532F
+		// Token: 0x170056BE RID: 22206
+		// (get) Token: 0x0602B365 RID: 176997 RVA: 0x00C2484F File Offset: 0x00C22A4F
+		// (set) Token: 0x0602B366 RID: 176998 RVA: 0x00C24857 File Offset: 0x00C22A57
 		public NpcPhantomBattleCardDurableSkillInfo Info { get; private set; }
 
-		// Token: 0x0603646C RID: 222316 RVA: 0x00CD7138 File Offset: 0x00CD5338
+		// Token: 0x0602B367 RID: 176999 RVA: 0x00C24860 File Offset: 0x00C22A60
 		public ClickCardSkillOperation(NpcPhantomBattleCardDurableSkillInfo info)
 		{
 			this.Info = info;
 		}
 
-		// Token: 0x0603646D RID: 222317 RVA: 0x00CD7148 File Offset: 0x00CD5348
+		// Token: 0x0602B368 RID: 177000 RVA: 0x00C24870 File Offset: 0x00C22A70
 		public override UniTask ExecuteAiOperation(PhantomArenaBattleProxy proxy)
 		{
 			ClickCardSkillOperation.<ExecuteAiOperation>d__5 <ExecuteAiOperation>d__;

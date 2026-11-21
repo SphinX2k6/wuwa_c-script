@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020026A7 RID: 9895
+// Token: 0x02001B92 RID: 7058
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestTreeMainViewModel
 {
-	// Token: 0x06014456 RID: 83030 RVA: 0x0051F733 File Offset: 0x0051D933
+	// Token: 0x06011938 RID: 71992 RVA: 0x0052E46B File Offset: 0x0052C66B
 	protected QuestTreeMainViewModel()
 	{
 	}
 
-	// Token: 0x06014457 RID: 83031 RVA: 0x0051F74D File Offset: 0x0051D94D
+	// Token: 0x06011939 RID: 71993 RVA: 0x0052E485 File Offset: 0x0052C685
 	public static QuestTreeMainViewModel Create()
 	{
 		return new QuestTreeMainViewModel();
 	}
 
-	// Token: 0x06014458 RID: 83032 RVA: 0x0051F754 File Offset: 0x0051D954
+	// Token: 0x0601193A RID: 71994 RVA: 0x0052E48C File Offset: 0x0052C68C
 	public void InitLocatingHelper(UUIScrollViewComponent scroll)
 	{
 		if (this.LocatingHelper == null)
@@ -28,13 +28,13 @@ public class QuestTreeMainViewModel
 		}
 	}
 
-	// Token: 0x06014459 RID: 83033 RVA: 0x0051F76A File Offset: 0x0051D96A
+	// Token: 0x0601193B RID: 71995 RVA: 0x0052E4A2 File Offset: 0x0052C6A2
 	public void OnViewClose()
 	{
 		this.Clear();
 	}
 
-	// Token: 0x0601445A RID: 83034 RVA: 0x0051F772 File Offset: 0x0051D972
+	// Token: 0x0601193C RID: 71996 RVA: 0x0052E4AA File Offset: 0x0052C6AA
 	public void Clear()
 	{
 		this.DelegatesOnLocatingNode.Clear();
@@ -45,7 +45,7 @@ public class QuestTreeMainViewModel
 		}
 	}
 
-	// Token: 0x0601445B RID: 83035 RVA: 0x0051F79C File Offset: 0x0051D99C
+	// Token: 0x0601193D RID: 71997 RVA: 0x0052E4D4 File Offset: 0x0052C6D4
 	public List<List<QuestTreeChapterData>> GetViewDataList()
 	{
 		List<List<QuestTreeChapterData>> list = new List<List<QuestTreeChapterData>>();
@@ -59,7 +59,7 @@ public class QuestTreeMainViewModel
 		return list;
 	}
 
-	// Token: 0x0601445C RID: 83036 RVA: 0x0051F7ED File Offset: 0x0051D9ED
+	// Token: 0x0601193E RID: 71998 RVA: 0x0052E525 File Offset: 0x0052C725
 	public void AddOnLocatingNode([Nullable(new byte[]
 	{
 		1,
@@ -69,7 +69,7 @@ public class QuestTreeMainViewModel
 		this.DelegatesOnLocatingNode.Add(action);
 	}
 
-	// Token: 0x0601445D RID: 83037 RVA: 0x0051F7FB File Offset: 0x0051D9FB
+	// Token: 0x0601193F RID: 71999 RVA: 0x0052E533 File Offset: 0x0052C733
 	public void RemoveOnLocatingNode([Nullable(new byte[]
 	{
 		1,
@@ -79,7 +79,7 @@ public class QuestTreeMainViewModel
 		this.DelegatesOnLocatingNode.Remove(action);
 	}
 
-	// Token: 0x0601445E RID: 83038 RVA: 0x0051F80C File Offset: 0x0051DA0C
+	// Token: 0x06011940 RID: 72000 RVA: 0x0052E544 File Offset: 0x0052C744
 	[NullableContext(2)]
 	public void LocateNode(QuestTreeChapterData data, bool tween = true)
 	{
@@ -89,7 +89,7 @@ public class QuestTreeMainViewModel
 		}
 	}
 
-	// Token: 0x0601445F RID: 83039 RVA: 0x0051F860 File Offset: 0x0051DA60
+	// Token: 0x06011941 RID: 72001 RVA: 0x0052E598 File Offset: 0x0052C798
 	[NullableContext(2)]
 	public QuestTreeChapterData GetDefaultLocatingNode()
 	{
@@ -119,20 +119,20 @@ public class QuestTreeMainViewModel
 		return result;
 	}
 
-	// Token: 0x06014460 RID: 83040 RVA: 0x0051F8EC File Offset: 0x0051DAEC
+	// Token: 0x06011942 RID: 72002 RVA: 0x0052E624 File Offset: 0x0052C824
 	public void SetShouldLocateToDefaultNode(bool should)
 	{
 		this.ShouldLocateToDefaultNode = should;
 	}
 
-	// Token: 0x04009886 RID: 39046
+	// Token: 0x040099DE RID: 39390
 	[Nullable(2)]
 	public QuestTreeNodeLocatingHelper LocatingHelper;
 
-	// Token: 0x04009887 RID: 39047
+	// Token: 0x040099DF RID: 39391
 	public bool ShouldLocateToDefaultNode = true;
 
-	// Token: 0x04009888 RID: 39048
+	// Token: 0x040099E0 RID: 39392
 	[Nullable(new byte[]
 	{
 		1,

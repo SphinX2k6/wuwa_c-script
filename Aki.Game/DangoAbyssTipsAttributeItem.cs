@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001A61 RID: 6753
+// Token: 0x02000F20 RID: 3872
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class DangoAbyssTipsAttributeItem : GridProxyAbstract<AttrListScrollData>
 {
-	// Token: 0x0600C6D9 RID: 50905 RVA: 0x002D3FC4 File Offset: 0x002D21C4
+	// Token: 0x06009AE9 RID: 39657 RVA: 0x002DF0BC File Offset: 0x002DD2BC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -30,7 +30,7 @@ public class DangoAbyssTipsAttributeItem : GridProxyAbstract<AttrListScrollData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C6DA RID: 50906 RVA: 0x002D4050 File Offset: 0x002D2250
+	// Token: 0x06009AEA RID: 39658 RVA: 0x002DF148 File Offset: 0x002DD348
 	[NullableContext(1)]
 	public override void Refresh(AttrListScrollData attributeData, bool isSelected, int gridIndex)
 	{
@@ -42,14 +42,14 @@ public class DangoAbyssTipsAttributeItem : GridProxyAbstract<AttrListScrollData>
 		base.GetText(2).SetText(formatAttributeValueString, true);
 	}
 
-	// Token: 0x02007FAF RID: 32687
+	// Token: 0x0200713E RID: 28990
 	private enum EComponent
 	{
-		// Token: 0x04029B0C RID: 170764
+		// Token: 0x04024E49 RID: 151113
 		AttributeIcon,
-		// Token: 0x04029B0D RID: 170765
+		// Token: 0x04024E4A RID: 151114
 		AttributeName,
-		// Token: 0x04029B0E RID: 170766
+		// Token: 0x04024E4B RID: 151115
 		AttributeValue
 	}
 }

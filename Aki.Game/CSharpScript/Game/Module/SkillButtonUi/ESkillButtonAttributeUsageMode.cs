@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C01 RID: 19457
+	// Token: 0x02003BB2 RID: 15282
 	public enum ESkillButtonAttributeUsageMode
 	{
-		// Token: 0x0401AC2E RID: 109614
+		// Token: 0x04015588 RID: 87432
 		Ultra,
-		// Token: 0x0401AC2F RID: 109615
+		// Token: 0x04015589 RID: 87433
 		RecoverWithStack
 	}
 }

@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001759 RID: 5977
+// Token: 0x02000C12 RID: 3090
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : ItemDataBase
 {
-	// Token: 0x0600ACE7 RID: 44263 RVA: 0x0026DDD0 File Offset: 0x0026BFD0
+	// Token: 0x060080CE RID: 32974 RVA: 0x0027824C File Offset: 0x0027644C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,14 +37,14 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 		};
 	}
 
-	// Token: 0x0600ACE8 RID: 44264 RVA: 0x0026DF1B File Offset: 0x0026C11B
+	// Token: 0x060080CF RID: 32975 RVA: 0x00278397 File Offset: 0x00276597
 	protected override void OnBeforeCreateImplement()
 	{
 		this.UiViewSequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.UiViewSequence);
 	}
 
-	// Token: 0x0600ACE9 RID: 44265 RVA: 0x0026DF38 File Offset: 0x0026C138
+	// Token: 0x060080D0 RID: 32976 RVA: 0x002783B4 File Offset: 0x002765B4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionRecoveryChoosePanel<T>.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600ACEA RID: 44266 RVA: 0x0026DF7C File Offset: 0x0026C17C
+	// Token: 0x060080D1 RID: 32977 RVA: 0x002783F8 File Offset: 0x002765F8
 	protected override void OnStart()
 	{
 		base.SetButtonUiActive(9, true);
@@ -64,19 +64,19 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 		this.FilterEntrance = new FilterEntrance<T>(base.GetItem(4), new TUpdateDataListFunction<T>(this.OnFilterRefresh));
 	}
 
-	// Token: 0x0600ACEB RID: 44267 RVA: 0x0026DFE0 File Offset: 0x0026C1E0
+	// Token: 0x060080D2 RID: 32978 RVA: 0x0027845C File Offset: 0x0027665C
 	protected override void OnAfterShow()
 	{
 		this.OnAddEventListener();
 	}
 
-	// Token: 0x0600ACEC RID: 44268 RVA: 0x0026DFE8 File Offset: 0x0026C1E8
+	// Token: 0x060080D3 RID: 32979 RVA: 0x00278464 File Offset: 0x00276664
 	protected void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnSelectItemAdd, new Action<int, int>(this.OnSelectItem));
 	}
 
-	// Token: 0x0600ACED RID: 44269 RVA: 0x0026E008 File Offset: 0x0026C208
+	// Token: 0x060080D4 RID: 32980 RVA: 0x00278484 File Offset: 0x00276684
 	public void RefreshUi(CommonItemSelectViewOpenViewData<T> data)
 	{
 		this.SelectComponent.UpdateSelectableComponent(data.SelectableComponentType, data.ItemDataBaseList, data.SelectedDataList, data.SelectableComponentData, data.ExpData);
@@ -88,7 +88,7 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 		}
 	}
 
-	// Token: 0x0600ACEE RID: 44270 RVA: 0x0026E080 File Offset: 0x0026C280
+	// Token: 0x060080D5 RID: 32981 RVA: 0x002784FC File Offset: 0x002766FC
 	public void UpdateFilterComponent(EFilterSortGroupId useWayId, List<T> list)
 	{
 		bool flag = false;
@@ -141,37 +141,37 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 		}
 	}
 
-	// Token: 0x0600ACEF RID: 44271 RVA: 0x0026E1D0 File Offset: 0x0026C3D0
+	// Token: 0x060080D6 RID: 32982 RVA: 0x0027864C File Offset: 0x0027684C
 	public void SetAllSelectToggleVisible(bool state)
 	{
 		base.GetExtendToggle(7).RootUIComp.Get().SetUIActive(state);
 	}
 
-	// Token: 0x0600ACF0 RID: 44272 RVA: 0x0026E1F7 File Offset: 0x0026C3F7
+	// Token: 0x060080D7 RID: 32983 RVA: 0x00278673 File Offset: 0x00276873
 	public void UpdatePartByIndex(int index)
 	{
 		this.SelectComponent.RefreshPartByIndex(index);
 	}
 
-	// Token: 0x0600ACF1 RID: 44273 RVA: 0x0026E205 File Offset: 0x0026C405
+	// Token: 0x060080D8 RID: 32984 RVA: 0x00278681 File Offset: 0x00276881
 	public void BindClickCloseCallBack(Action callback)
 	{
 		this.OnClickCloseCallBack = callback;
 	}
 
-	// Token: 0x0600ACF2 RID: 44274 RVA: 0x0026E20E File Offset: 0x0026C40E
+	// Token: 0x060080D9 RID: 32985 RVA: 0x0027868A File Offset: 0x0027688A
 	public void BindClickSelectAllToggleCallback(Action<EToggleState> callback)
 	{
 		this.OnClickSelectAllToggleCallBack = callback;
 	}
 
-	// Token: 0x0600ACF3 RID: 44275 RVA: 0x0026E217 File Offset: 0x0026C417
+	// Token: 0x060080DA RID: 32986 RVA: 0x00278693 File Offset: 0x00276893
 	public void BindFilterSortRefresh(Action<List<T>> callback)
 	{
 		this.OnFilterSortRefreshCallBack = callback;
 	}
 
-	// Token: 0x0600ACF4 RID: 44276 RVA: 0x0026E220 File Offset: 0x0026C420
+	// Token: 0x060080DB RID: 32987 RVA: 0x0027869C File Offset: 0x0027689C
 	public void ShowTipsComponent(ItemTipsData data)
 	{
 		this.TipsComponent.Refresh(data);
@@ -179,33 +179,33 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 		base.GetButton(2).RootUIComp.Get().SetUIActive(true);
 	}
 
-	// Token: 0x0600ACF5 RID: 44277 RVA: 0x0026E260 File Offset: 0x0026C460
+	// Token: 0x060080DC RID: 32988 RVA: 0x002786DC File Offset: 0x002768DC
 	protected override void OnBeforeHide()
 	{
 		this.OnRemoveEventListener();
 	}
 
-	// Token: 0x0600ACF6 RID: 44278 RVA: 0x0026E268 File Offset: 0x0026C468
+	// Token: 0x060080DD RID: 32989 RVA: 0x002786E4 File Offset: 0x002768E4
 	protected void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnSelectItemAdd, new Action<int, int>(this.OnSelectItem));
 	}
 
-	// Token: 0x0600ACF7 RID: 44279 RVA: 0x0026E286 File Offset: 0x0026C486
+	// Token: 0x060080DE RID: 32990 RVA: 0x00278702 File Offset: 0x00276902
 	protected override void OnBeforeDestroy()
 	{
 		this.SelectComponent.Destroy(null);
 		this.TipsComponent.Destroy(null);
 	}
 
-	// Token: 0x0600ACF8 RID: 44280 RVA: 0x0026E2A0 File Offset: 0x0026C4A0
+	// Token: 0x060080DF RID: 32991 RVA: 0x0027871C File Offset: 0x0027691C
 	protected void OnClickMask()
 	{
 		base.GetItem(3).SetUIActive(false);
 		base.GetButton(2).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x0600ACF9 RID: 44281 RVA: 0x0026E2D4 File Offset: 0x0026C4D4
+	// Token: 0x060080E0 RID: 32992 RVA: 0x00278750 File Offset: 0x00276950
 	protected void OnClickCloseBtn()
 	{
 		if (this.OnClickCloseCallBack != null)
@@ -216,7 +216,7 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 		this.SetActive(false);
 	}
 
-	// Token: 0x0600ACFA RID: 44282 RVA: 0x0026E2F1 File Offset: 0x0026C4F1
+	// Token: 0x060080E1 RID: 32993 RVA: 0x0027876D File Offset: 0x0027696D
 	protected void OnClickSelectAllToggle(EToggleState state)
 	{
 		if (this.OnClickSelectAllToggleCallBack != null)
@@ -225,7 +225,7 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 		}
 	}
 
-	// Token: 0x0600ACFB RID: 44283 RVA: 0x0026E308 File Offset: 0x0026C508
+	// Token: 0x060080E2 RID: 32994 RVA: 0x00278784 File Offset: 0x00276984
 	private void OnSelectItem(int itemId, int incId)
 	{
 		ItemTipsData tipsDataById = ItemTipsComponentUtilTool.GetTipsDataById(itemId, new int?(incId), null);
@@ -246,7 +246,7 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 		this.ShowTipsComponent(tipsDataById);
 	}
 
-	// Token: 0x0600ACFC RID: 44284 RVA: 0x0026E398 File Offset: 0x0026C598
+	// Token: 0x060080E3 RID: 32995 RVA: 0x00278814 File Offset: 0x00276A14
 	private void OnFilterRefresh(List<T> list, bool _1, EFilterSortType _2)
 	{
 		this.SelectComponent.UpdateByDataList(list);
@@ -257,23 +257,23 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 		}
 	}
 
-	// Token: 0x0600ACFD RID: 44285 RVA: 0x0026E3C6 File Offset: 0x0026C5C6
+	// Token: 0x060080E4 RID: 32996 RVA: 0x00278842 File Offset: 0x00276A42
 	private void OnClickManageBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.PhantomManageView, null, null);
 	}
 
-	// Token: 0x0600ACFE RID: 44286 RVA: 0x0026E3D9 File Offset: 0x0026C5D9
+	// Token: 0x060080E5 RID: 32997 RVA: 0x00278855 File Offset: 0x00276A55
 	public UUIItem GetFilterToggleItem()
 	{
 		return this.FilterEntrance.GetFilterToggleItem();
 	}
 
-	// Token: 0x04004EA8 RID: 20136
+	// Token: 0x04004F51 RID: 20305
 	[Nullable(2)]
 	public UiBehaviorLevelSequence UiViewSequence;
 
-	// Token: 0x04004EA9 RID: 20137
+	// Token: 0x04004F52 RID: 20306
 	[Nullable(new byte[]
 	{
 		2,
@@ -281,11 +281,11 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 	})]
 	private CommonItemSelectView<T> SelectComponent;
 
-	// Token: 0x04004EAA RID: 20138
+	// Token: 0x04004F53 RID: 20307
 	[Nullable(2)]
 	private ItemTipsComponentContentComponent TipsComponent;
 
-	// Token: 0x04004EAB RID: 20139
+	// Token: 0x04004F54 RID: 20308
 	[Nullable(new byte[]
 	{
 		2,
@@ -293,7 +293,7 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 	})]
 	private SortEntrance<T> SortEntrance;
 
-	// Token: 0x04004EAC RID: 20140
+	// Token: 0x04004F55 RID: 20309
 	[Nullable(new byte[]
 	{
 		2,
@@ -301,11 +301,11 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 	})]
 	private FilterEntrance<T> FilterEntrance;
 
-	// Token: 0x04004EAD RID: 20141
+	// Token: 0x04004F56 RID: 20310
 	[Nullable(2)]
 	private Action OnClickCloseCallBack;
 
-	// Token: 0x04004EAE RID: 20142
+	// Token: 0x04004F57 RID: 20311
 	[Nullable(new byte[]
 	{
 		2,
@@ -314,31 +314,31 @@ public class VisionRecoveryChoosePanel<[Nullable(0)] T> : UiPanelBase where T : 
 	})]
 	private Action<List<T>> OnFilterSortRefreshCallBack;
 
-	// Token: 0x04004EAF RID: 20143
+	// Token: 0x04004F58 RID: 20312
 	[Nullable(2)]
 	private Action<EToggleState> OnClickSelectAllToggleCallBack;
 
-	// Token: 0x02007D3E RID: 32062
+	// Token: 0x02006EC4 RID: 28356
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029029 RID: 167977
+		// Token: 0x04024354 RID: 148308
 		Pad,
-		// Token: 0x0402902A RID: 167978
+		// Token: 0x04024355 RID: 148309
 		TipsPos,
-		// Token: 0x0402902B RID: 167979
+		// Token: 0x04024356 RID: 148310
 		Mask,
-		// Token: 0x0402902C RID: 167980
+		// Token: 0x04024357 RID: 148311
 		ItemTips,
-		// Token: 0x0402902D RID: 167981
+		// Token: 0x04024358 RID: 148312
 		FilterItem,
-		// Token: 0x0402902E RID: 167982
+		// Token: 0x04024359 RID: 148313
 		SortItem,
-		// Token: 0x0402902F RID: 167983
+		// Token: 0x0402435A RID: 148314
 		CloseBtn,
-		// Token: 0x04029030 RID: 167984
+		// Token: 0x0402435B RID: 148315
 		SelectAllToggle,
-		// Token: 0x04029031 RID: 167985
+		// Token: 0x0402435C RID: 148316
 		BtnPhantomManage = 9
 	}
 }

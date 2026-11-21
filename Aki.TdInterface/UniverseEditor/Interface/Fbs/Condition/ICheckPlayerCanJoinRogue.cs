@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AE1 RID: 19169
+	// Token: 0x02004FB6 RID: 20406
 	public struct ICheckPlayerCanJoinRogue : IFlatbufferObject
 	{
-		// Token: 0x17008AF8 RID: 35576
-		// (get) Token: 0x0601E1C0 RID: 123328 RVA: 0x00439366 File Offset: 0x00437566
+		// Token: 0x170091EF RID: 37359
+		// (get) Token: 0x0601FCD5 RID: 130261 RVA: 0x0046B012 File Offset: 0x00469212
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E1C1 RID: 123329 RVA: 0x00439373 File Offset: 0x00437573
+		// Token: 0x0601FCD6 RID: 130262 RVA: 0x0046B01F File Offset: 0x0046921F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E1C2 RID: 123330 RVA: 0x0043937C File Offset: 0x0043757C
+		// Token: 0x0601FCD7 RID: 130263 RVA: 0x0046B028 File Offset: 0x00469228
 		public static ICheckPlayerCanJoinRogue GetRootAsICheckPlayerCanJoinRogue(ByteBuffer _bb)
 		{
 			return ICheckPlayerCanJoinRogue.GetRootAsICheckPlayerCanJoinRogue(_bb, default(ICheckPlayerCanJoinRogue));
 		}
 
-		// Token: 0x0601E1C3 RID: 123331 RVA: 0x00439398 File Offset: 0x00437598
+		// Token: 0x0601FCD8 RID: 130264 RVA: 0x0046B044 File Offset: 0x00469244
 		public static ICheckPlayerCanJoinRogue GetRootAsICheckPlayerCanJoinRogue(ByteBuffer _bb, ICheckPlayerCanJoinRogue obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E1C4 RID: 123332 RVA: 0x004393B5 File Offset: 0x004375B5
+		// Token: 0x0601FCD9 RID: 130265 RVA: 0x0046B061 File Offset: 0x00469261
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E1C5 RID: 123333 RVA: 0x004393C4 File Offset: 0x004375C4
+		// Token: 0x0601FCDA RID: 130266 RVA: 0x0046B070 File Offset: 0x00469270
 		public ICheckPlayerCanJoinRogue __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008AF9 RID: 35577
-		// (get) Token: 0x0601E1C6 RID: 123334 RVA: 0x004393D4 File Offset: 0x004375D4
+		// Token: 0x170091F0 RID: 37360
+		// (get) Token: 0x0601FCDB RID: 130267 RVA: 0x0046B080 File Offset: 0x00469280
 		public ECheckPlayerCanJoinActivityType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008AFA RID: 35578
-		// (get) Token: 0x0601E1C7 RID: 123335 RVA: 0x00439410 File Offset: 0x00437610
+		// Token: 0x170091F1 RID: 37361
+		// (get) Token: 0x0601FCDC RID: 130268 RVA: 0x0046B0BC File Offset: 0x004692BC
 		public bool CanJoin
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008AFB RID: 35579
-		// (get) Token: 0x0601E1C8 RID: 123336 RVA: 0x00439450 File Offset: 0x00437650
+		// Token: 0x170091F2 RID: 37362
+		// (get) Token: 0x0601FCDD RID: 130269 RVA: 0x0046B0FC File Offset: 0x004692FC
 		public ERogueThemeType RogueType
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E1C9 RID: 123337 RVA: 0x0043948C File Offset: 0x0043768C
+		// Token: 0x0601FCDE RID: 130270 RVA: 0x0046B138 File Offset: 0x00469338
 		public static Offset<ICheckPlayerCanJoinRogue> CreateICheckPlayerCanJoinRogue(FlatBufferBuilder builder, ECheckPlayerCanJoinActivityType Type = ECheckPlayerCanJoinActivityType.Rogue, bool CanJoin = false, ERogueThemeType RogueType = ERogueThemeType.ZhongQu)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerCanJoinRogue.EndICheckPlayerCanJoinRogue(builder);
 		}
 
-		// Token: 0x0601E1CA RID: 123338 RVA: 0x004394B0 File Offset: 0x004376B0
+		// Token: 0x0601FCDF RID: 130271 RVA: 0x0046B15C File Offset: 0x0046935C
 		public static void StartICheckPlayerCanJoinRogue(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E1CB RID: 123339 RVA: 0x004394B9 File Offset: 0x004376B9
+		// Token: 0x0601FCE0 RID: 130272 RVA: 0x0046B165 File Offset: 0x00469365
 		public static void AddType(FlatBufferBuilder builder, ECheckPlayerCanJoinActivityType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E1CC RID: 123340 RVA: 0x004394C4 File Offset: 0x004376C4
+		// Token: 0x0601FCE1 RID: 130273 RVA: 0x0046B170 File Offset: 0x00469370
 		public static void AddCanJoin(FlatBufferBuilder builder, bool canJoin)
 		{
 			builder.AddBool(1, canJoin, false);
 		}
 
-		// Token: 0x0601E1CD RID: 123341 RVA: 0x004394CF File Offset: 0x004376CF
+		// Token: 0x0601FCE2 RID: 130274 RVA: 0x0046B17B File Offset: 0x0046937B
 		public static void AddRogueType(FlatBufferBuilder builder, ERogueThemeType rogueType)
 		{
 			builder.AddByte(2, (byte)rogueType, 0);
 		}
 
-		// Token: 0x0601E1CE RID: 123342 RVA: 0x004394DA File Offset: 0x004376DA
+		// Token: 0x0601FCE3 RID: 130275 RVA: 0x0046B186 File Offset: 0x00469386
 		public static Offset<ICheckPlayerCanJoinRogue> EndICheckPlayerCanJoinRogue(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckPlayerCanJoinRogue>(builder.EndTable());
 		}
 
-		// Token: 0x0601E1CF RID: 123343 RVA: 0x004394E8 File Offset: 0x004376E8
+		// Token: 0x0601FCE4 RID: 130276 RVA: 0x0046B194 File Offset: 0x00469394
 		public ICheckPlayerCanJoinRogueT UnPack()
 		{
 			ICheckPlayerCanJoinRogueT checkPlayerCanJoinRogueT = new ICheckPlayerCanJoinRogueT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkPlayerCanJoinRogueT;
 		}
 
-		// Token: 0x0601E1D0 RID: 123344 RVA: 0x00439503 File Offset: 0x00437703
+		// Token: 0x0601FCE5 RID: 130277 RVA: 0x0046B1AF File Offset: 0x004693AF
 		public void UnPackTo(ICheckPlayerCanJoinRogueT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.RogueType = this.RogueType;
 		}
 
-		// Token: 0x0601E1D1 RID: 123345 RVA: 0x0043952C File Offset: 0x0043772C
+		// Token: 0x0601FCE6 RID: 130278 RVA: 0x0046B1D8 File Offset: 0x004693D8
 		public static Offset<ICheckPlayerCanJoinRogue> Pack(FlatBufferBuilder builder, ICheckPlayerCanJoinRogueT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerCanJoinRogue.CreateICheckPlayerCanJoinRogue(builder, _o.Type, _o.CanJoin, _o.RogueType);
 		}
 
-		// Token: 0x0400D36E RID: 54126
+		// Token: 0x0400DE59 RID: 56921
 		private Table __p;
 	}
 }

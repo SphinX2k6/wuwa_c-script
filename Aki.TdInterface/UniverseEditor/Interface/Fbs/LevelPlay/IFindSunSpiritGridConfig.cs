@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044B8 RID: 17592
+	// Token: 0x02004920 RID: 18720
 	public struct IFindSunSpiritGridConfig : IFlatbufferObject
 	{
-		// Token: 0x17007C23 RID: 31779
-		// (get) Token: 0x0601A46E RID: 107630 RVA: 0x003C0B69 File Offset: 0x003BED69
+		// Token: 0x17008262 RID: 33378
+		// (get) Token: 0x0601BC3F RID: 113727 RVA: 0x003ECD75 File Offset: 0x003EAF75
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,38 +18,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A46F RID: 107631 RVA: 0x003C0B76 File Offset: 0x003BED76
+		// Token: 0x0601BC40 RID: 113728 RVA: 0x003ECD82 File Offset: 0x003EAF82
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A470 RID: 107632 RVA: 0x003C0B80 File Offset: 0x003BED80
+		// Token: 0x0601BC41 RID: 113729 RVA: 0x003ECD8C File Offset: 0x003EAF8C
 		public static IFindSunSpiritGridConfig GetRootAsIFindSunSpiritGridConfig(ByteBuffer _bb)
 		{
 			return IFindSunSpiritGridConfig.GetRootAsIFindSunSpiritGridConfig(_bb, default(IFindSunSpiritGridConfig));
 		}
 
-		// Token: 0x0601A471 RID: 107633 RVA: 0x003C0B9C File Offset: 0x003BED9C
+		// Token: 0x0601BC42 RID: 113730 RVA: 0x003ECDA8 File Offset: 0x003EAFA8
 		public static IFindSunSpiritGridConfig GetRootAsIFindSunSpiritGridConfig(ByteBuffer _bb, IFindSunSpiritGridConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A472 RID: 107634 RVA: 0x003C0BB9 File Offset: 0x003BEDB9
+		// Token: 0x0601BC43 RID: 113731 RVA: 0x003ECDC5 File Offset: 0x003EAFC5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A473 RID: 107635 RVA: 0x003C0BC8 File Offset: 0x003BEDC8
+		// Token: 0x0601BC44 RID: 113732 RVA: 0x003ECDD4 File Offset: 0x003EAFD4
 		public IFindSunSpiritGridConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0601A474 RID: 107636 RVA: 0x003C0BD8 File Offset: 0x003BEDD8
+		// Token: 0x0601BC45 RID: 113733 RVA: 0x003ECDE4 File Offset: 0x003EAFE4
 		public TFindSunSpiritGrid GridsType(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -60,8 +60,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return (TFindSunSpiritGrid)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x17007C24 RID: 31780
-		// (get) Token: 0x0601A475 RID: 107637 RVA: 0x003C0C18 File Offset: 0x003BEE18
+		// Token: 0x17008263 RID: 33379
+		// (get) Token: 0x0601BC46 RID: 113734 RVA: 0x003ECE24 File Offset: 0x003EB024
 		public int GridsTypeLength
 		{
 			get
@@ -75,13 +75,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A476 RID: 107638 RVA: 0x003C0C43 File Offset: 0x003BEE43
+		// Token: 0x0601BC47 RID: 113735 RVA: 0x003ECE4F File Offset: 0x003EB04F
 		public Span<TFindSunSpiritGrid> GetGridsTypeBytes()
 		{
 			return this.__p.__vector_as_span<TFindSunSpiritGrid>(4, 1);
 		}
 
-		// Token: 0x0601A477 RID: 107639 RVA: 0x003C0C54 File Offset: 0x003BEE54
+		// Token: 0x0601BC48 RID: 113736 RVA: 0x003ECE60 File Offset: 0x003EB060
 		public TFindSunSpiritGrid[] GetGridsTypeArray()
 		{
 			int num = this.__p.__offset(4);
@@ -99,7 +99,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return array;
 		}
 
-		// Token: 0x0601A478 RID: 107640 RVA: 0x003C0CC0 File Offset: 0x003BEEC0
+		// Token: 0x0601BC49 RID: 113737 RVA: 0x003ECECC File Offset: 0x003EB0CC
 		public TTable? Grids<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -110,8 +110,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x17007C25 RID: 31781
-		// (get) Token: 0x0601A479 RID: 107641 RVA: 0x003C0D08 File Offset: 0x003BEF08
+		// Token: 0x17008264 RID: 33380
+		// (get) Token: 0x0601BC4A RID: 113738 RVA: 0x003ECF14 File Offset: 0x003EB114
 		public int GridsLength
 		{
 			get
@@ -125,8 +125,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007C26 RID: 31782
-		// (get) Token: 0x0601A47A RID: 107642 RVA: 0x003C0D34 File Offset: 0x003BEF34
+		// Token: 0x17008265 RID: 33381
+		// (get) Token: 0x0601BC4B RID: 113739 RVA: 0x003ECF40 File Offset: 0x003EB140
 		public IVector2? BoardSize
 		{
 			get
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A47B RID: 107643 RVA: 0x003C0D91 File Offset: 0x003BEF91
+		// Token: 0x0601BC4C RID: 113740 RVA: 0x003ECF9D File Offset: 0x003EB19D
 		public static Offset<IFindSunSpiritGridConfig> CreateIFindSunSpiritGridConfig(FlatBufferBuilder builder, VectorOffset Grids_typeOffset = default(VectorOffset), VectorOffset GridsOffset = default(VectorOffset), Offset<IVector2> BoardSizeOffset = default(Offset<IVector2>))
 		{
 			builder.StartTable(3);
@@ -150,19 +150,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IFindSunSpiritGridConfig.EndIFindSunSpiritGridConfig(builder);
 		}
 
-		// Token: 0x0601A47C RID: 107644 RVA: 0x003C0DB5 File Offset: 0x003BEFB5
+		// Token: 0x0601BC4D RID: 113741 RVA: 0x003ECFC1 File Offset: 0x003EB1C1
 		public static void StartIFindSunSpiritGridConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601A47D RID: 107645 RVA: 0x003C0DBE File Offset: 0x003BEFBE
+		// Token: 0x0601BC4E RID: 113742 RVA: 0x003ECFCA File Offset: 0x003EB1CA
 		public static void AddGridsType(FlatBufferBuilder builder, VectorOffset gridsTypeOffset)
 		{
 			builder.AddOffset(0, gridsTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601A47E RID: 107646 RVA: 0x003C0DD0 File Offset: 0x003BEFD0
+		// Token: 0x0601BC4F RID: 113743 RVA: 0x003ECFDC File Offset: 0x003EB1DC
 		public static VectorOffset CreateGridsTypeVector(FlatBufferBuilder builder, TFindSunSpiritGrid[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A47F RID: 107647 RVA: 0x003C0E07 File Offset: 0x003BF007
+		// Token: 0x0601BC50 RID: 113744 RVA: 0x003ED013 File Offset: 0x003EB213
 		public static VectorOffset CreateGridsTypeVectorBlock(FlatBufferBuilder builder, TFindSunSpiritGrid[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A480 RID: 107648 RVA: 0x003C0E21 File Offset: 0x003BF021
+		// Token: 0x0601BC51 RID: 113745 RVA: 0x003ED02D File Offset: 0x003EB22D
 		public static VectorOffset CreateGridsTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TFindSunSpiritGrid> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A481 RID: 107649 RVA: 0x003C0E3F File Offset: 0x003BF03F
+		// Token: 0x0601BC52 RID: 113746 RVA: 0x003ED04B File Offset: 0x003EB24B
 		public static VectorOffset CreateGridsTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -197,19 +197,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A482 RID: 107650 RVA: 0x003C0E58 File Offset: 0x003BF058
+		// Token: 0x0601BC53 RID: 113747 RVA: 0x003ED064 File Offset: 0x003EB264
 		public static void StartGridsTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601A483 RID: 107651 RVA: 0x003C0E63 File Offset: 0x003BF063
+		// Token: 0x0601BC54 RID: 113748 RVA: 0x003ED06F File Offset: 0x003EB26F
 		public static void AddGrids(FlatBufferBuilder builder, VectorOffset gridsOffset)
 		{
 			builder.AddOffset(1, gridsOffset.Value, 0);
 		}
 
-		// Token: 0x0601A484 RID: 107652 RVA: 0x003C0E74 File Offset: 0x003BF074
+		// Token: 0x0601BC55 RID: 113749 RVA: 0x003ED080 File Offset: 0x003EB280
 		public static VectorOffset CreateGridsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -220,7 +220,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A485 RID: 107653 RVA: 0x003C0EAB File Offset: 0x003BF0AB
+		// Token: 0x0601BC56 RID: 113750 RVA: 0x003ED0B7 File Offset: 0x003EB2B7
 		public static VectorOffset CreateGridsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A486 RID: 107654 RVA: 0x003C0EC5 File Offset: 0x003BF0C5
+		// Token: 0x0601BC57 RID: 113751 RVA: 0x003ED0D1 File Offset: 0x003EB2D1
 		public static VectorOffset CreateGridsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -236,7 +236,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A487 RID: 107655 RVA: 0x003C0EE3 File Offset: 0x003BF0E3
+		// Token: 0x0601BC58 RID: 113752 RVA: 0x003ED0EF File Offset: 0x003EB2EF
 		public static VectorOffset CreateGridsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -244,25 +244,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A488 RID: 107656 RVA: 0x003C0EFC File Offset: 0x003BF0FC
+		// Token: 0x0601BC59 RID: 113753 RVA: 0x003ED108 File Offset: 0x003EB308
 		public static void StartGridsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A489 RID: 107657 RVA: 0x003C0F07 File Offset: 0x003BF107
+		// Token: 0x0601BC5A RID: 113754 RVA: 0x003ED113 File Offset: 0x003EB313
 		public static void AddBoardSize(FlatBufferBuilder builder, Offset<IVector2> boardSizeOffset)
 		{
 			builder.AddOffset(2, boardSizeOffset.Value, 0);
 		}
 
-		// Token: 0x0601A48A RID: 107658 RVA: 0x003C0F17 File Offset: 0x003BF117
+		// Token: 0x0601BC5B RID: 113755 RVA: 0x003ED123 File Offset: 0x003EB323
 		public static Offset<IFindSunSpiritGridConfig> EndIFindSunSpiritGridConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IFindSunSpiritGridConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601A48B RID: 107659 RVA: 0x003C0F24 File Offset: 0x003BF124
+		// Token: 0x0601BC5C RID: 113756 RVA: 0x003ED130 File Offset: 0x003EB330
 		public IFindSunSpiritGridConfigT UnPack()
 		{
 			IFindSunSpiritGridConfigT findSunSpiritGridConfigT = new IFindSunSpiritGridConfigT();
@@ -270,7 +270,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return findSunSpiritGridConfigT;
 		}
 
-		// Token: 0x0601A48C RID: 107660 RVA: 0x003C0F40 File Offset: 0x003BF140
+		// Token: 0x0601BC5D RID: 113757 RVA: 0x003ED14C File Offset: 0x003EB34C
 		public void UnPackTo(IFindSunSpiritGridConfigT _o)
 		{
 			_o.Grids = new List<TFindSunSpiritGridUnion>();
@@ -301,7 +301,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.BoardSize = ((this.BoardSize != null) ? this.BoardSize.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601A48D RID: 107661 RVA: 0x003C10FC File Offset: 0x003BF2FC
+		// Token: 0x0601BC5E RID: 113758 RVA: 0x003ED308 File Offset: 0x003EB508
 		public static Offset<IFindSunSpiritGridConfig> Pack(FlatBufferBuilder builder, IFindSunSpiritGridConfigT _o)
 		{
 			if (_o == null)
@@ -332,7 +332,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IFindSunSpiritGridConfig.CreateIFindSunSpiritGridConfig(builder, grids_typeOffset, gridsOffset, boardSizeOffset);
 		}
 
-		// Token: 0x0400C4CB RID: 50379
+		// Token: 0x0400CEF9 RID: 52985
 		private Table __p;
 	}
 }

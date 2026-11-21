@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068AB RID: 26795
+	// Token: 0x020057FB RID: 22523
 	public class AdamSmasherLockBtnPanel : UiPanelBase
 	{
-		// Token: 0x06042DE5 RID: 273893 RVA: 0x01047CE4 File Offset: 0x01045EE4
+		// Token: 0x0603793D RID: 227645 RVA: 0x00F892F4 File Offset: 0x00F874F4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,21 +19,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x06042DE6 RID: 273894 RVA: 0x01047D3E File Offset: 0x01045F3E
+		// Token: 0x0603793E RID: 227646 RVA: 0x00F8934E File Offset: 0x00F8754E
 		protected override void OnStart()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "AdamChallenge_Lock", Array.Empty<object>());
 			base.GetItem(2).SetUIActive(false);
 		}
 
-		// Token: 0x0200CA7D RID: 51837
+		// Token: 0x0200B445 RID: 46149
 		private enum ELockBtnItemComponent
 		{
-			// Token: 0x0403D35C RID: 250716
+			// Token: 0x04037C37 RID: 228407
 			LockIcon,
-			// Token: 0x0403D35D RID: 250717
+			// Token: 0x04037C38 RID: 228408
 			Txt,
-			// Token: 0x0403D35E RID: 250718
+			// Token: 0x04037C39 RID: 228409
 			Button
 		}
 	}

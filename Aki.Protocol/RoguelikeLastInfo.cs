@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000FA2 RID: 4002
+	// Token: 0x02000F92 RID: 3986
 	public sealed class RoguelikeLastInfo : IMessage<RoguelikeLastInfo>, IMessage, IEquatable<RoguelikeLastInfo>, IDeepCloneable<RoguelikeLastInfo>, IBufferMessage
 	{
-		// Token: 0x0601566D RID: 87661 RVA: 0x0031B44E File Offset: 0x0031964E
+		// Token: 0x06015588 RID: 87432 RVA: 0x00319DA2 File Offset: 0x00317FA2
 		[NullableContext(1)]
 		public static RoguelikeLastInfo Create()
 		{
 			return new RoguelikeLastInfo();
 		}
 
-		// Token: 0x17004757 RID: 18263
-		// (get) Token: 0x0601566E RID: 87662 RVA: 0x0031B455 File Offset: 0x00319655
+		// Token: 0x1700472D RID: 18221
+		// (get) Token: 0x06015589 RID: 87433 RVA: 0x00319DA9 File Offset: 0x00317FA9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<RoguelikeLastInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004758 RID: 18264
-		// (get) Token: 0x0601566F RID: 87663 RVA: 0x0031B45C File Offset: 0x0031965C
+		// Token: 0x1700472E RID: 18222
+		// (get) Token: 0x0601558A RID: 87434 RVA: 0x00319DB0 File Offset: 0x00317FB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004759 RID: 18265
-		// (get) Token: 0x06015670 RID: 87664 RVA: 0x0031B45F File Offset: 0x0031965F
+		// Token: 0x1700472F RID: 18223
+		// (get) Token: 0x0601558B RID: 87435 RVA: 0x00319DB3 File Offset: 0x00317FB3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015671 RID: 87665 RVA: 0x0031B466 File Offset: 0x00319666
+		// Token: 0x0601558C RID: 87436 RVA: 0x00319DBA File Offset: 0x00317FBA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoguelikeLastInfo()
 		{
 		}
 
-		// Token: 0x06015672 RID: 87666 RVA: 0x0031B470 File Offset: 0x00319670
+		// Token: 0x0601558D RID: 87437 RVA: 0x00319DC4 File Offset: 0x00317FC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoguelikeLastInfo(RoguelikeLastInfo other) : this()
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06015673 RID: 87667 RVA: 0x0031B4C4 File Offset: 0x003196C4
+		// Token: 0x0601558E RID: 87438 RVA: 0x00319E18 File Offset: 0x00318018
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoguelikeLastInfo Clone()
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			return new RoguelikeLastInfo(this);
 		}
 
-		// Token: 0x1700475A RID: 18266
-		// (get) Token: 0x06015674 RID: 87668 RVA: 0x0031B4CC File Offset: 0x003196CC
-		// (set) Token: 0x06015675 RID: 87669 RVA: 0x0031B4D4 File Offset: 0x003196D4
+		// Token: 0x17004730 RID: 18224
+		// (get) Token: 0x0601558F RID: 87439 RVA: 0x00319E20 File Offset: 0x00318020
+		// (set) Token: 0x06015590 RID: 87440 RVA: 0x00319E28 File Offset: 0x00318028
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int InstId
@@ -97,9 +97,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700475B RID: 18267
-		// (get) Token: 0x06015676 RID: 87670 RVA: 0x0031B4DD File Offset: 0x003196DD
-		// (set) Token: 0x06015677 RID: 87671 RVA: 0x0031B4E5 File Offset: 0x003196E5
+		// Token: 0x17004731 RID: 18225
+		// (get) Token: 0x06015591 RID: 87441 RVA: 0x00319E31 File Offset: 0x00318031
+		// (set) Token: 0x06015592 RID: 87442 RVA: 0x00319E39 File Offset: 0x00318039
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurLayer
@@ -114,9 +114,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700475C RID: 18268
-		// (get) Token: 0x06015678 RID: 87672 RVA: 0x0031B4EE File Offset: 0x003196EE
-		// (set) Token: 0x06015679 RID: 87673 RVA: 0x0031B4F6 File Offset: 0x003196F6
+		// Token: 0x17004732 RID: 18226
+		// (get) Token: 0x06015593 RID: 87443 RVA: 0x00319E42 File Offset: 0x00318042
+		// (set) Token: 0x06015594 RID: 87444 RVA: 0x00319E4A File Offset: 0x0031804A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MaxLayer
@@ -131,9 +131,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700475D RID: 18269
-		// (get) Token: 0x0601567A RID: 87674 RVA: 0x0031B4FF File Offset: 0x003196FF
-		// (set) Token: 0x0601567B RID: 87675 RVA: 0x0031B507 File Offset: 0x00319707
+		// Token: 0x17004733 RID: 18227
+		// (get) Token: 0x06015595 RID: 87445 RVA: 0x00319E53 File Offset: 0x00318053
+		// (set) Token: 0x06015596 RID: 87446 RVA: 0x00319E5B File Offset: 0x0031805B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueChallengeModeType ModeType
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601567C RID: 87676 RVA: 0x0031B510 File Offset: 0x00319710
+		// Token: 0x06015597 RID: 87447 RVA: 0x00319E64 File Offset: 0x00318064
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -156,7 +156,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RoguelikeLastInfo);
 		}
 
-		// Token: 0x0601567D RID: 87677 RVA: 0x0031B520 File Offset: 0x00319720
+		// Token: 0x06015598 RID: 87448 RVA: 0x00319E74 File Offset: 0x00318074
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RoguelikeLastInfo other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.InstId == other.InstId && this.CurLayer == other.CurLayer && this.MaxLayer == other.MaxLayer && this.ModeType == other.ModeType && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601567E RID: 87678 RVA: 0x0031B58C File Offset: 0x0031978C
+		// Token: 0x06015599 RID: 87449 RVA: 0x00319EE0 File Offset: 0x003180E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601567F RID: 87679 RVA: 0x0031B61C File Offset: 0x0031981C
+		// Token: 0x0601559A RID: 87450 RVA: 0x00319F70 File Offset: 0x00318170
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06015680 RID: 87680 RVA: 0x0031B629 File Offset: 0x00319829
+		// Token: 0x0601559B RID: 87451 RVA: 0x00319F7D File Offset: 0x0031817D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -209,7 +209,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06015681 RID: 87681 RVA: 0x0031B634 File Offset: 0x00319834
+		// Token: 0x0601559C RID: 87452 RVA: 0x00319F88 File Offset: 0x00318188
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -240,7 +240,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015682 RID: 87682 RVA: 0x0031B6C8 File Offset: 0x003198C8
+		// Token: 0x0601559D RID: 87453 RVA: 0x0031A01C File Offset: 0x0031821C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -269,7 +269,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015683 RID: 87683 RVA: 0x0031B750 File Offset: 0x00319950
+		// Token: 0x0601559E RID: 87454 RVA: 0x0031A0A4 File Offset: 0x003182A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RoguelikeLastInfo other)
@@ -297,7 +297,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06015684 RID: 87684 RVA: 0x0031B7C8 File Offset: 0x003199C8
+		// Token: 0x0601559F RID: 87455 RVA: 0x0031A11C File Offset: 0x0031831C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -305,7 +305,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06015685 RID: 87685 RVA: 0x0031B7D4 File Offset: 0x003199D4
+		// Token: 0x060155A0 RID: 87456 RVA: 0x0031A128 File Offset: 0x00318328
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -347,34 +347,34 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040080C4 RID: 32964
+		// Token: 0x040080EE RID: 33006
 		private static readonly MessageParser<RoguelikeLastInfo> _parser = new MessageParser<RoguelikeLastInfo>(() => new RoguelikeLastInfo());
 
-		// Token: 0x040080C5 RID: 32965
+		// Token: 0x040080EF RID: 33007
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040080C6 RID: 32966
+		// Token: 0x040080F0 RID: 33008
 		public const int InstIdFieldNumber = 2;
 
-		// Token: 0x040080C7 RID: 32967
+		// Token: 0x040080F1 RID: 33009
 		private int instId_;
 
-		// Token: 0x040080C8 RID: 32968
+		// Token: 0x040080F2 RID: 33010
 		public const int CurLayerFieldNumber = 3;
 
-		// Token: 0x040080C9 RID: 32969
+		// Token: 0x040080F3 RID: 33011
 		private int curLayer_;
 
-		// Token: 0x040080CA RID: 32970
+		// Token: 0x040080F4 RID: 33012
 		public const int MaxLayerFieldNumber = 4;
 
-		// Token: 0x040080CB RID: 32971
+		// Token: 0x040080F5 RID: 33013
 		private int maxLayer_;
 
-		// Token: 0x040080CC RID: 32972
+		// Token: 0x040080F6 RID: 33014
 		public const int ModeTypeFieldNumber = 5;
 
-		// Token: 0x040080CD RID: 32973
+		// Token: 0x040080F7 RID: 33015
 		private RogueChallengeModeType modeType_;
 	}
 }

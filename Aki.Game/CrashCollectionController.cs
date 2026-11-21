@@ -4,100 +4,58 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Aki.TDConfigMgr.Quest;
 using CSharpScript.Game.Common.Event;
-using CSharpScript.Game.Module.Plot;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x0200025B RID: 603
+// Token: 0x0200025F RID: 607
 [NullableContext(1)]
 [Nullable(0)]
 [StaticVariableRuleIgnore]
 public class CrashCollectionController : ControllerBase
 {
-	// Token: 0x0600250D RID: 9485 RVA: 0x000E02E4 File Offset: 0x000DE4E4
+	// Token: 0x060025C4 RID: 9668 RVA: 0x000E6720 File Offset: 0x000E4920
 	[NullableContext(2)]
 	private static Stat CreateOriginIsFightDebugStat()
 	{
-		if (!Stat.Enable)
-		{
-			return null;
-		}
-		if (!FormationDataController.Instance.GlobalIsInFight)
-		{
-			return CrashCollectionController.IsOriginFightFalseDebugStat;
-		}
-		return CrashCollectionController.IsOriginFightTrueDebugStat;
-	}
-
-	// Token: 0x0600250E RID: 9486 RVA: 0x000E0306 File Offset: 0x000DE506
-	[NullableContext(2)]
-	private static Stat CreateGameBudgetIsFightDebugStat()
-	{
-		if (!Stat.Enable)
-		{
-			return null;
-		}
-		if (!GameBudgetInterfaceController.Instance.IsInFight)
-		{
-			return CrashCollectionController.IsGameBudgetFightFalseDebugStat;
-		}
-		return CrashCollectionController.IsGameBudgetFightTrueDebugStat;
-	}
-
-	// Token: 0x0600250F RID: 9487 RVA: 0x000E0328 File Offset: 0x000DE528
-	[NullableContext(2)]
-	private static Stat CreateOriginIsCutsceneDebugStat()
-	{
-		if (!Stat.Enable)
-		{
-			return null;
-		}
-		if (!PlotModel.Instance.IsInPlot)
-		{
-			return CrashCollectionController.IsOriginCutsceneFalseDebugStat;
-		}
-		return CrashCollectionController.IsOriginCutsceneTrueDebugStat;
-	}
-
-	// Token: 0x06002510 RID: 9488 RVA: 0x000E034A File Offset: 0x000DE54A
-	[NullableContext(2)]
-	private static Stat CreateGameBudgetIsCutsceneDebugStat()
-	{
-		if (!Stat.Enable)
-		{
-			return null;
-		}
-		if (!GameBudgetInterfaceController.Instance.IsInPlot)
-		{
-			return CrashCollectionController.IsGameBudgetCutsceneFalseDebugStat;
-		}
-		return CrashCollectionController.IsGameBudgetCutsceneTrueDebugStat;
-	}
-
-	// Token: 0x06002511 RID: 9489 RVA: 0x000E036C File Offset: 0x000DE56C
-	[NullableContext(2)]
-	private static Stat CreateQualityLevelDebugStat(EGameQualitySettingLevel level)
-	{
-		bool enable = Stat.Enable;
 		return null;
 	}
 
-	// Token: 0x06002512 RID: 9490 RVA: 0x000E0375 File Offset: 0x000DE575
+	// Token: 0x060025C5 RID: 9669 RVA: 0x000E6723 File Offset: 0x000E4923
+	[NullableContext(2)]
+	private static Stat CreateGameBudgetIsFightDebugStat()
+	{
+		return null;
+	}
+
+	// Token: 0x060025C6 RID: 9670 RVA: 0x000E6726 File Offset: 0x000E4926
+	[NullableContext(2)]
+	private static Stat CreateOriginIsCutsceneDebugStat()
+	{
+		return null;
+	}
+
+	// Token: 0x060025C7 RID: 9671 RVA: 0x000E6729 File Offset: 0x000E4929
+	[NullableContext(2)]
+	private static Stat CreateGameBudgetIsCutsceneDebugStat()
+	{
+		return null;
+	}
+
+	// Token: 0x060025C8 RID: 9672 RVA: 0x000E672C File Offset: 0x000E492C
+	[NullableContext(2)]
+	private static Stat CreateQualityLevelDebugStat(EGameQualitySettingLevel level)
+	{
+		return null;
+	}
+
+	// Token: 0x060025C9 RID: 9673 RVA: 0x000E672F File Offset: 0x000E492F
 	[NullableContext(2)]
 	private static Stat CreateLoadModeDebugStat()
 	{
-		if (!Stat.Enable)
-		{
-			return null;
-		}
-		if (!LoadModeManager.Instance.IsLoadModeInGameOrForceInGame())
-		{
-			return CrashCollectionController.LoadModeInLoadingDebugStat;
-		}
-		return CrashCollectionController.LoadModeInGameDebugStat;
+		return null;
 	}
 
-	// Token: 0x06002513 RID: 9491 RVA: 0x000E0398 File Offset: 0x000DE598
+	// Token: 0x060025CA RID: 9674 RVA: 0x000E6734 File Offset: 0x000E4934
 	protected override bool OnInit()
 	{
 		CrashCollectionController.OnAddEvents();
@@ -105,14 +63,14 @@ public class CrashCollectionController : ControllerBase
 		return base.OnInit();
 	}
 
-	// Token: 0x06002514 RID: 9492 RVA: 0x000E03EC File Offset: 0x000DE5EC
+	// Token: 0x060025CB RID: 9675 RVA: 0x000E6788 File Offset: 0x000E4988
 	protected override bool OnClear()
 	{
 		CrashCollectionController.OnRemoveEvents();
 		return base.OnClear();
 	}
 
-	// Token: 0x06002515 RID: 9493 RVA: 0x000E03FC File Offset: 0x000DE5FC
+	// Token: 0x060025CC RID: 9676 RVA: 0x000E6798 File Offset: 0x000E4998
 	private static void OnAddEvents()
 	{
 		EventSystem instance = EventSystem.Instance;
@@ -189,7 +147,7 @@ public class CrashCollectionController : ControllerBase
 		instance9.Add(name9, handle9);
 	}
 
-	// Token: 0x06002516 RID: 9494 RVA: 0x000E058C File Offset: 0x000DE78C
+	// Token: 0x060025CD RID: 9677 RVA: 0x000E6928 File Offset: 0x000E4B28
 	private static void OnRemoveEvents()
 	{
 		EventSystem instance = EventSystem.Instance;
@@ -266,19 +224,19 @@ public class CrashCollectionController : ControllerBase
 		instance9.Remove(name9, handle9);
 	}
 
-	// Token: 0x06002517 RID: 9495 RVA: 0x000E0719 File Offset: 0x000DE919
+	// Token: 0x060025CE RID: 9678 RVA: 0x000E6AB5 File Offset: 0x000E4CB5
 	protected override void OnTick(float delta)
 	{
 		CrashCollectionController.GatherCrashInfo();
 	}
 
-	// Token: 0x06002518 RID: 9496 RVA: 0x000E0720 File Offset: 0x000DE920
+	// Token: 0x060025CF RID: 9679 RVA: 0x000E6ABC File Offset: 0x000E4CBC
 	private static void OnTodTimeChange()
 	{
 		CrashCollectionController.GatherTODInfo();
 	}
 
-	// Token: 0x06002519 RID: 9497 RVA: 0x000E0727 File Offset: 0x000DE927
+	// Token: 0x060025D0 RID: 9680 RVA: 0x000E6AC3 File Offset: 0x000E4CC3
 	private static void GatherCrashInfo()
 	{
 		CrashCollectionController.CreateOriginIsFightDebugStat();
@@ -288,7 +246,7 @@ public class CrashCollectionController : ControllerBase
 		CrashCollectionController.CreateLoadModeDebugStat();
 	}
 
-	// Token: 0x0600251A RID: 9498 RVA: 0x000E0748 File Offset: 0x000DE948
+	// Token: 0x060025D1 RID: 9681 RVA: 0x000E6AE4 File Offset: 0x000E4CE4
 	private static void GatherTODInfo()
 	{
 		TimeOfDayModel instance = TimeOfDayModel.Instance;
@@ -300,7 +258,7 @@ public class CrashCollectionController : ControllerBase
 		FCrashSightProxy.SetCustomDataByFName(CrashCollectionController.TODTimeName, hourMinuteString);
 	}
 
-	// Token: 0x0600251B RID: 9499 RVA: 0x000E0778 File Offset: 0x000DE978
+	// Token: 0x060025D2 RID: 9682 RVA: 0x000E6B14 File Offset: 0x000E4D14
 	private static void GatherQualityLevel(int settingLevel)
 	{
 		EGameQualitySettingLevel gameQualitySettingLevel = GameSettingsDeviceRender.Instance.GameQualitySettingLevel;
@@ -312,21 +270,21 @@ public class CrashCollectionController : ControllerBase
 		FCrashSightProxy.SetCustomDataByFName(CrashCollectionController.QualityLevelName, settingLevel.ToString());
 	}
 
-	// Token: 0x0600251C RID: 9500 RVA: 0x000E07C8 File Offset: 0x000DE9C8
+	// Token: 0x060025D3 RID: 9683 RVA: 0x000E6B64 File Offset: 0x000E4D64
 	private static void GatherRayTracing(int rayTracing)
 	{
 		Log.Instance.Info(ELogModule.Game, ELogAuthor.WLJ, "CrashSight GatherRayTracing", default(ReadOnlySpan<ValueTuple<string, object>>));
 		FCrashSightProxy.SetCustomData(CrashCollectionController.RayTracingName, rayTracing.ToString());
 	}
 
-	// Token: 0x0600251D RID: 9501 RVA: 0x000E0804 File Offset: 0x000DEA04
+	// Token: 0x060025D4 RID: 9684 RVA: 0x000E6BA0 File Offset: 0x000E4DA0
 	private static void GatherDlssFg(int dlssFg)
 	{
 		Log.Instance.Info(ELogModule.Game, ELogAuthor.WLJ, "CrashSight GatherDlssFg", default(ReadOnlySpan<ValueTuple<string, object>>));
 		FCrashSightProxy.SetCustomData(CrashCollectionController.DlssFgName, dlssFg.ToString());
 	}
 
-	// Token: 0x0600251E RID: 9502 RVA: 0x000E0840 File Offset: 0x000DEA40
+	// Token: 0x060025D5 RID: 9685 RVA: 0x000E6BDC File Offset: 0x000E4DDC
 	private static void OnAddNewQuest(TQuest tQuest)
 	{
 		global::Quest quest = (global::Quest)tQuest;
@@ -346,13 +304,13 @@ public class CrashCollectionController : ControllerBase
 		CrashCollectionController.CollectionQuest();
 	}
 
-	// Token: 0x0600251F RID: 9503 RVA: 0x000E088F File Offset: 0x000DEA8F
+	// Token: 0x060025D6 RID: 9686 RVA: 0x000E6C2B File Offset: 0x000E4E2B
 	private static void OnChangeRole(EntityHandle newEntity, EntityHandle oldEntity)
 	{
 		SceneTeamModel.Instance.GetCurrentEntity.Entity.GetComponent<CharacterActorComponent>();
 	}
 
-	// Token: 0x06002520 RID: 9504 RVA: 0x000E08A8 File Offset: 0x000DEAA8
+	// Token: 0x060025D7 RID: 9687 RVA: 0x000E6C44 File Offset: 0x000E4E44
 	private static void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 	{
 		global::Quest quest = QuestNewModel.Instance.GetQuest(questId);
@@ -380,25 +338,25 @@ public class CrashCollectionController : ControllerBase
 		}
 	}
 
-	// Token: 0x06002521 RID: 9505 RVA: 0x000E0910 File Offset: 0x000DEB10
+	// Token: 0x060025D8 RID: 9688 RVA: 0x000E6CAC File Offset: 0x000E4EAC
 	private static void CollectionQuest()
 	{
 		FCrashSightProxy.SetCustomDataByFName(CrashCollectionController.QuestIdsName, string.Join<int>(", ", CrashCollectionController.ProcessingQuestIds));
 	}
 
-	// Token: 0x06002522 RID: 9506 RVA: 0x000E092B File Offset: 0x000DEB2B
+	// Token: 0x060025D9 RID: 9689 RVA: 0x000E6CC7 File Offset: 0x000E4EC7
 	private static void OnLoginSuccess(string account)
 	{
 		CrashCollectionController.GatherGateWayInfo();
 	}
 
-	// Token: 0x06002523 RID: 9507 RVA: 0x000E0932 File Offset: 0x000DEB32
+	// Token: 0x060025DA RID: 9690 RVA: 0x000E6CCE File Offset: 0x000E4ECE
 	private static void ReConnectSuccess()
 	{
 		CrashCollectionController.GatherGateWayInfo();
 	}
 
-	// Token: 0x06002524 RID: 9508 RVA: 0x000E093C File Offset: 0x000DEB3C
+	// Token: 0x060025DB RID: 9691 RVA: 0x000E6CD8 File Offset: 0x000E4ED8
 	private static void GatherGateWayInfo()
 	{
 		string reconnectHost = LoginModel.Instance.GetReconnectHost();
@@ -409,14 +367,14 @@ public class CrashCollectionController : ControllerBase
 		FCrashSightProxy.SetCustomDataByFName(CrashCollectionController.GateWayName, str + str2 + num.ToString());
 	}
 
-	// Token: 0x06002525 RID: 9509 RVA: 0x000E0983 File Offset: 0x000DEB83
+	// Token: 0x060025DC RID: 9692 RVA: 0x000E6D1F File Offset: 0x000E4F1F
 	public static void RecordHttpInfo(string info)
 	{
 		FCrashSightProxy.SetCustomDataByFName(CrashCollectionController.HttpInfoName, info);
 	}
 
-	// Token: 0x1700059B RID: 1435
-	// (get) Token: 0x06002526 RID: 9510 RVA: 0x000E0990 File Offset: 0x000DEB90
+	// Token: 0x170005C2 RID: 1474
+	// (get) Token: 0x060025DD RID: 9693 RVA: 0x000E6D2C File Offset: 0x000E4F2C
 	public static CrashCollectionController Instance
 	{
 		get
@@ -425,7 +383,7 @@ public class CrashCollectionController : ControllerBase
 		}
 	}
 
-	// Token: 0x06002527 RID: 9511 RVA: 0x000E0997 File Offset: 0x000DEB97
+	// Token: 0x060025DE RID: 9694 RVA: 0x000E6D33 File Offset: 0x000E4F33
 	public static CrashCollectionController GetOrCreateInstance()
 	{
 		if (CrashCollectionController._Instance == null)
@@ -435,7 +393,7 @@ public class CrashCollectionController : ControllerBase
 		return CrashCollectionController._Instance;
 	}
 
-	// Token: 0x06002528 RID: 9512 RVA: 0x000E09AB File Offset: 0x000DEBAB
+	// Token: 0x060025DF RID: 9695 RVA: 0x000E6D47 File Offset: 0x000E4F47
 	public static bool CreateInstance()
 	{
 		if (CrashCollectionController._Instance != null)
@@ -446,108 +404,108 @@ public class CrashCollectionController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06002529 RID: 9513 RVA: 0x000E09C1 File Offset: 0x000DEBC1
+	// Token: 0x060025E0 RID: 9696 RVA: 0x000E6D5D File Offset: 0x000E4F5D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600252A RID: 9514 RVA: 0x000E09C3 File Offset: 0x000DEBC3
+	// Token: 0x060025E1 RID: 9697 RVA: 0x000E6D5F File Offset: 0x000E4F5F
 	public static void ResetStaticDefaultValue()
 	{
 		CrashCollectionController._Instance = null;
 	}
 
-	// Token: 0x0600252B RID: 9515 RVA: 0x000E09CC File Offset: 0x000DEBCC
+	// Token: 0x060025E2 RID: 9698 RVA: 0x000E6D68 File Offset: 0x000E4F68
 	static CrashCollectionController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CrashCollectionController.CreateStaticDefaultValue), new Action(CrashCollectionController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002400 RID: 9216
+	// Token: 0x0400247E RID: 9342
 	private static readonly Stat Stat = Stat.Create("CrashCollectionController.GatherCrashInfo", "", "");
 
-	// Token: 0x04002401 RID: 9217
+	// Token: 0x0400247F RID: 9343
 	private static readonly Stat QualityStat = Stat.Create("CrashCollectionController.GatherQualityLevel", "", "");
 
-	// Token: 0x04002402 RID: 9218
+	// Token: 0x04002480 RID: 9344
 	private static readonly Stat QuestStat = Stat.Create("CrashCollectionController.GatherQuestInfo", "", "");
 
-	// Token: 0x04002403 RID: 9219
+	// Token: 0x04002481 RID: 9345
 	private static readonly Stat TodStat = Stat.Create("CrashCollectionController.GatherTODInfo", "", "");
 
-	// Token: 0x04002404 RID: 9220
+	// Token: 0x04002482 RID: 9346
 	private static readonly Stat GateWayStat = Stat.Create("CrashCollectionController.GatherGateWayInfo", "", "");
 
-	// Token: 0x04002405 RID: 9221
+	// Token: 0x04002483 RID: 9347
 	private static readonly Stat HttpInfoStat = Stat.Create("CrashCollectionController.RecordHttpInfo", "", "");
 
-	// Token: 0x04002406 RID: 9222
+	// Token: 0x04002484 RID: 9348
 	private static readonly FName TODTimeName = FNameUtil.GetCheckDynamicFName("TODTime");
 
-	// Token: 0x04002407 RID: 9223
+	// Token: 0x04002485 RID: 9349
 	private static readonly FName QualityLevelName = FNameUtil.GetCheckDynamicFName("QualityLevel");
 
-	// Token: 0x04002408 RID: 9224
+	// Token: 0x04002486 RID: 9350
 	private static readonly string RayTracingName = "RayTracing";
 
-	// Token: 0x04002409 RID: 9225
+	// Token: 0x04002487 RID: 9351
 	private static readonly string DlssFgName = "DlssFG";
 
-	// Token: 0x0400240A RID: 9226
+	// Token: 0x04002488 RID: 9352
 	private static readonly FName QuestIdsName = FNameUtil.GetCheckDynamicFName("QuestIds");
 
-	// Token: 0x0400240B RID: 9227
+	// Token: 0x04002489 RID: 9353
 	private static readonly FName GateWayName = FNameUtil.GetCheckDynamicFName("GateWay");
 
-	// Token: 0x0400240C RID: 9228
+	// Token: 0x0400248A RID: 9354
 	private static readonly FName HttpInfoName = FNameUtil.GetCheckDynamicFName("HttpInfo");
 
-	// Token: 0x0400240D RID: 9229
+	// Token: 0x0400248B RID: 9355
 	private static readonly Stat IsOriginFightTrueDebugStat = Stat.Create("Origin IsFight: True", "", "");
 
-	// Token: 0x0400240E RID: 9230
+	// Token: 0x0400248C RID: 9356
 	private static readonly Stat IsOriginFightFalseDebugStat = Stat.Create("Origin IsFight: False", "", "");
 
-	// Token: 0x0400240F RID: 9231
+	// Token: 0x0400248D RID: 9357
 	private static readonly Stat IsOriginCutsceneTrueDebugStat = Stat.Create("Origin IsCutscene: True", "", "");
 
-	// Token: 0x04002410 RID: 9232
+	// Token: 0x0400248E RID: 9358
 	private static readonly Stat IsOriginCutsceneFalseDebugStat = Stat.Create("Origin IsCutscene: False", "", "");
 
-	// Token: 0x04002411 RID: 9233
+	// Token: 0x0400248F RID: 9359
 	private static readonly Stat IsGameBudgetFightTrueDebugStat = Stat.Create("GameBudget IsFight: True", "", "");
 
-	// Token: 0x04002412 RID: 9234
+	// Token: 0x04002490 RID: 9360
 	private static readonly Stat IsGameBudgetFightFalseDebugStat = Stat.Create("GameBudget IsFight: False", "", "");
 
-	// Token: 0x04002413 RID: 9235
+	// Token: 0x04002491 RID: 9361
 	private static readonly Stat IsGameBudgetCutsceneTrueDebugStat = Stat.Create("GameBudget IsCutscene: True", "", "");
 
-	// Token: 0x04002414 RID: 9236
+	// Token: 0x04002492 RID: 9362
 	private static readonly Stat IsGameBudgetCutsceneFalseDebugStat = Stat.Create("GameBudget IsCutscene: False", "", "");
 
-	// Token: 0x04002415 RID: 9237
+	// Token: 0x04002493 RID: 9363
 	private static readonly Stat LoadModeInGameDebugStat = Stat.Create("LoadModel: InGame", "", "");
 
-	// Token: 0x04002416 RID: 9238
+	// Token: 0x04002494 RID: 9364
 	private static readonly Stat LoadModeInLoadingDebugStat = Stat.Create("LoadModel: InLoading", "", "");
 
-	// Token: 0x04002417 RID: 9239
+	// Token: 0x04002495 RID: 9365
 	private static readonly List<int> ProcessingQuestIds = new List<int>();
 
-	// Token: 0x04002418 RID: 9240
+	// Token: 0x04002496 RID: 9366
 	[Nullable(2)]
 	private static CrashCollectionController _Instance;
 
-	// Token: 0x02007451 RID: 29777
+	// Token: 0x020065E2 RID: 26082
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402683F RID: 157759
+		// Token: 0x04021B7D RID: 138109
 		[Nullable(0)]
 		public static Action <0>__OnTodTimeChange;
 
-		// Token: 0x04026840 RID: 157760
+		// Token: 0x04021B7E RID: 138110
 		[Nullable(new byte[]
 		{
 			0,
@@ -555,11 +513,11 @@ public class CrashCollectionController : ControllerBase
 		})]
 		public static Action<string> <1>__OnLoginSuccess;
 
-		// Token: 0x04026841 RID: 157761
+		// Token: 0x04021B7F RID: 138111
 		[Nullable(0)]
 		public static Action <2>__ReConnectSuccess;
 
-		// Token: 0x04026842 RID: 157762
+		// Token: 0x04021B80 RID: 138112
 		[Nullable(new byte[]
 		{
 			0,
@@ -567,11 +525,11 @@ public class CrashCollectionController : ControllerBase
 		})]
 		public static Action<TQuest> <3>__OnAddNewQuest;
 
-		// Token: 0x04026843 RID: 157763
+		// Token: 0x04021B81 RID: 138113
 		[Nullable(0)]
 		public static Action<int, QuestState, EQuestStatusUpdateReason> <4>__OnQuestStateChange;
 
-		// Token: 0x04026844 RID: 157764
+		// Token: 0x04021B82 RID: 138114
 		[Nullable(new byte[]
 		{
 			0,
@@ -580,15 +538,15 @@ public class CrashCollectionController : ControllerBase
 		})]
 		public static Action<EntityHandle, EntityHandle> <5>__OnChangeRole;
 
-		// Token: 0x04026845 RID: 157765
+		// Token: 0x04021B83 RID: 138115
 		[Nullable(0)]
 		public static Action<int> <6>__GatherQualityLevel;
 
-		// Token: 0x04026846 RID: 157766
+		// Token: 0x04021B84 RID: 138116
 		[Nullable(0)]
 		public static Action<int> <7>__GatherRayTracing;
 
-		// Token: 0x04026847 RID: 157767
+		// Token: 0x04021B85 RID: 138117
 		[Nullable(0)]
 		public static Action<int> <8>__GatherDlssFg;
 	}

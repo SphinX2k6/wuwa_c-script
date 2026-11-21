@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BA8 RID: 2984
+	// Token: 0x02000C76 RID: 3190
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IGroupFinishDestroy : IGroupFinishConfig
 	{
-		// Token: 0x06004479 RID: 17529 RVA: 0x000ADE39 File Offset: 0x000AC039
-		[NullableContext(1)]
+		// Token: 0x060048D2 RID: 18642 RVA: 0x000B7EFD File Offset: 0x000B60FD
+		[NullableContext(0)]
 		public static IGroupFinishDestroy Create(IGroupFinishDestroy? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012E6 RID: 4838
-		// (get) Token: 0x0600447A RID: 17530 RVA: 0x000ADE58 File Offset: 0x000AC058
+		// Token: 0x170013E1 RID: 5089
+		// (get) Token: 0x060048D3 RID: 18643 RVA: 0x000B7F1C File Offset: 0x000B611C
 		public override EGroupFinishConfig Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012E7 RID: 4839
-		// (get) Token: 0x0600447B RID: 17531 RVA: 0x000ADE65 File Offset: 0x000AC065
+		// Token: 0x170013E2 RID: 5090
+		// (get) Token: 0x060048D4 RID: 18644 RVA: 0x000B7F29 File Offset: 0x000B6129
 		public virtual IEntityState SwitchSpecifiedStatus
 		{
 			get
@@ -49,13 +49,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026A9 RID: 9897
+		// Token: 0x040028F1 RID: 10481
 		private IGroupFinishDestroy Instance;
 
-		// Token: 0x040026AA RID: 9898
+		// Token: 0x040028F2 RID: 10482
 		private IEntityState _SwitchSpecifiedStatusCache;
 
-		// Token: 0x040026AB RID: 9899
+		// Token: 0x040028F3 RID: 10483
 		private bool _SwitchSpecifiedStatusInited;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001B3A RID: 6970
+// Token: 0x02000FF9 RID: 4089
 public enum EFloroRanchAnimEvent
 {
-	// Token: 0x04005F0E RID: 24334
+	// Token: 0x04005FDD RID: 24541
 	ListShow,
-	// Token: 0x04005F0F RID: 24335
+	// Token: 0x04005FDE RID: 24542
 	TagShow
 }

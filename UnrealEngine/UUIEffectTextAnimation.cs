@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200214F RID: 8527
+	// Token: 0x020006FB RID: 1787
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UIEffectTextAnimation")]
 	[UnrealStructLayout(304, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 304)]
 	public class UUIEffectTextAnimation : UUIGeometryModifierBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020260 RID: 131680 RVA: 0x002FC7D3 File Offset: 0x002FA9D3
+		// Token: 0x06009838 RID: 38968 RVA: 0x000E544F File Offset: 0x000E364F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIEffectTextAnimation._ClassPtr;
 		}
 
-		// Token: 0x06020261 RID: 131681 RVA: 0x002FC7E0 File Offset: 0x002FA9E0
+		// Token: 0x06009839 RID: 38969 RVA: 0x000E545C File Offset: 0x000E365C
 		public UUIEffectTextAnimation() : this(BuiltinUtils.AllocNativeUObject(UUIEffectTextAnimation.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020262 RID: 131682 RVA: 0x002FC808 File Offset: 0x002FAA08
+		// Token: 0x0600983A RID: 38970 RVA: 0x000E5484 File Offset: 0x000E3684
 		[NullableContext(1)]
 		public UUIEffectTextAnimation(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIEffectTextAnimation.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007E31 RID: 32305
-		// (get) Token: 0x06020263 RID: 131683 RVA: 0x002FC83B File Offset: 0x002FAA3B
-		// (set) Token: 0x06020264 RID: 131684 RVA: 0x002FC84F File Offset: 0x002FAA4F
+		// Token: 0x17001C44 RID: 7236
+		// (get) Token: 0x0600983B RID: 38971 RVA: 0x000E54B7 File Offset: 0x000E36B7
+		// (set) Token: 0x0600983C RID: 38972 RVA: 0x000E54CB File Offset: 0x000E36CB
 		public unsafe UUIEffectTextAnimation_Selector selector
 		{
 			get
@@ -45,33 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E32 RID: 32306
-		// (get) Token: 0x06020265 RID: 131685 RVA: 0x002FC864 File Offset: 0x002FAA64
-		// (set) Token: 0x06020266 RID: 131686 RVA: 0x002FC89D File Offset: 0x002FAA9D
-		[Nullable(1)]
-		public TArray<UUIEffectTextAnimation_Property> properties
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<UUIEffectTextAnimation_Property> result;
-				if ((result = this._properties) == null)
-				{
-					result = (this._properties = new TArray<UUIEffectTextAnimation_Property>(base.NativePtr + (IntPtr)UUIEffectTextAnimation.__PropertyOffset_properties, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				this.properties.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17007E33 RID: 32307
-		// (get) Token: 0x06020267 RID: 131687 RVA: 0x002FC8AB File Offset: 0x002FAAAB
-		// (set) Token: 0x06020268 RID: 131688 RVA: 0x002FC8BF File Offset: 0x002FAABF
+		// Token: 0x17001C45 RID: 7237
+		// (get) Token: 0x0600983D RID: 38973 RVA: 0x000E54E0 File Offset: 0x000E36E0
+		// (set) Token: 0x0600983E RID: 38974 RVA: 0x000E54F4 File Offset: 0x000E36F4
 		public unsafe UUIItem textTargetObject
 		{
 			get
@@ -84,127 +60,71 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020269 RID: 131689 RVA: 0x002FC8D4 File Offset: 0x002FAAD4
+		// Token: 0x0600983F RID: 38975 RVA: 0x000E5509 File Offset: 0x000E3709
 		public void SetSelectorOffset(float value)
 		{
 			UUIEffectTextAnimation.__SetSelectorOffset_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x0602026A RID: 131690 RVA: 0x002FC8E2 File Offset: 0x002FAAE2
+		// Token: 0x06009840 RID: 38976 RVA: 0x000E5517 File Offset: 0x000E3717
 		public void SetSelector(UUIEffectTextAnimation_Selector value)
 		{
 			UUIEffectTextAnimation.__SetSelector_Internal(base.NativePtr, (value != null) ? value.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0602026B RID: 131691 RVA: 0x002FC8FF File Offset: 0x002FAAFF
-		public void SetProperty(int index, UUIEffectTextAnimation_Property value)
-		{
-			UUIEffectTextAnimation.__SetProperty_Internal(base.NativePtr, index, (value != null) ? value.NativePtr : IntPtr.Zero);
-		}
-
-		// Token: 0x0602026C RID: 131692 RVA: 0x002FC91D File Offset: 0x002FAB1D
-		public void SetProperties([Nullable(new byte[]
-		{
-			2,
-			1
-		})] in TArray<UUIEffectTextAnimation_Property> value)
-		{
-			UUIEffectTextAnimation.__SetProperties_Internal(base.NativePtr, (value ?? new TArray<UUIEffectTextAnimation_Property>()).NativePtr);
-		}
-
-		// Token: 0x0602026D RID: 131693 RVA: 0x002FC93A File Offset: 0x002FAB3A
+		// Token: 0x06009841 RID: 38977 RVA: 0x000E5534 File Offset: 0x000E3734
 		public float GetSelectorOffset()
 		{
 			return UUIEffectTextAnimation.__GetSelectorOffset_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0602026E RID: 131694 RVA: 0x002FC947 File Offset: 0x002FAB47
+		// Token: 0x06009842 RID: 38978 RVA: 0x000E5541 File Offset: 0x000E3741
 		public UUIEffectTextAnimation_Selector GetSelector()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UUIEffectTextAnimation_Selector>(UUIEffectTextAnimation.__GetSelector_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0602026F RID: 131695 RVA: 0x002FC959 File Offset: 0x002FAB59
-		public UUIEffectTextAnimation_Property GetProperty(int index)
-		{
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UUIEffectTextAnimation_Property>(UUIEffectTextAnimation.__GetProperty_Internal(base.NativePtr, index));
-		}
-
-		// Token: 0x06020270 RID: 131696 RVA: 0x002FC96C File Offset: 0x002FAB6C
-		[NullableContext(1)]
-		public TArray<UUIEffectTextAnimation_Property> GetProperties()
-		{
-			return new TArray<UUIEffectTextAnimation_Property>(UUIEffectTextAnimation.__GetProperties_Internal(base.NativePtr), null);
-		}
-
-		// Token: 0x06020271 RID: 131697
+		// Token: 0x06009843 RID: 38979
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSelectorOffset_Internal(IntPtr @this, float value);
 
-		// Token: 0x06020272 RID: 131698
+		// Token: 0x06009844 RID: 38980
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSelector_Internal(IntPtr @this, IntPtr value);
 
-		// Token: 0x06020273 RID: 131699
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetProperty_Internal(IntPtr @this, int index, IntPtr value);
-
-		// Token: 0x06020274 RID: 131700
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetProperties_Internal(IntPtr @this, IntPtr value);
-
-		// Token: 0x06020275 RID: 131701
+		// Token: 0x06009845 RID: 38981
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetSelectorOffset_Internal(IntPtr @this);
 
-		// Token: 0x06020276 RID: 131702
+		// Token: 0x06009846 RID: 38982
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetSelector_Internal(IntPtr @this);
 
-		// Token: 0x06020277 RID: 131703
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetProperty_Internal(IntPtr @this, int index);
-
-		// Token: 0x06020278 RID: 131704
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetProperties_Internal(IntPtr @this);
-
-		// Token: 0x06020279 RID: 131705 RVA: 0x002FC97F File Offset: 0x002FAB7F
+		// Token: 0x06009847 RID: 38983 RVA: 0x000E5553 File Offset: 0x000E3753
 		static UUIEffectTextAnimation()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIEffectTextAnimation");
 		}
 
-		// Token: 0x0602027A RID: 131706 RVA: 0x002FC98D File Offset: 0x002FAB8D
+		// Token: 0x06009848 RID: 38984 RVA: 0x000E5561 File Offset: 0x000E3761
 		protected UUIEffectTextAnimation(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040114AB RID: 70827
+		// Token: 0x04004222 RID: 16930
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UIEffectTextAnimation";
 
-		// Token: 0x040114AC RID: 70828
+		// Token: 0x04004223 RID: 16931
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040114AD RID: 70829
+		// Token: 0x04004224 RID: 16932
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040114AE RID: 70830
+		// Token: 0x04004225 RID: 16933
 		internal static int __PropertyOffset_selector;
 
-		// Token: 0x040114AF RID: 70831
-		internal static int __PropertyOffset_properties;
-
-		// Token: 0x040114B0 RID: 70832
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<UUIEffectTextAnimation_Property> _properties;
-
-		// Token: 0x040114B1 RID: 70833
+		// Token: 0x04004226 RID: 16934
 		internal static int __PropertyOffset_textTargetObject;
 	}
 }

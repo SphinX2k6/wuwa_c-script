@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004596 RID: 17814
+	// Token: 0x020049FE RID: 18942
 	public struct IRollBlockItemBreakableObstacle : IFlatbufferObject
 	{
-		// Token: 0x17007E8A RID: 32394
-		// (get) Token: 0x0601AE8B RID: 110219 RVA: 0x003D6CFE File Offset: 0x003D4EFE
+		// Token: 0x170084CB RID: 33995
+		// (get) Token: 0x0601C660 RID: 116320 RVA: 0x00402F9A File Offset: 0x0040119A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AE8C RID: 110220 RVA: 0x003D6D0B File Offset: 0x003D4F0B
+		// Token: 0x0601C661 RID: 116321 RVA: 0x00402FA7 File Offset: 0x004011A7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601AE8D RID: 110221 RVA: 0x003D6D14 File Offset: 0x003D4F14
+		// Token: 0x0601C662 RID: 116322 RVA: 0x00402FB0 File Offset: 0x004011B0
 		public static IRollBlockItemBreakableObstacle GetRootAsIRollBlockItemBreakableObstacle(ByteBuffer _bb)
 		{
 			return IRollBlockItemBreakableObstacle.GetRootAsIRollBlockItemBreakableObstacle(_bb, default(IRollBlockItemBreakableObstacle));
 		}
 
-		// Token: 0x0601AE8E RID: 110222 RVA: 0x003D6D30 File Offset: 0x003D4F30
+		// Token: 0x0601C663 RID: 116323 RVA: 0x00402FCC File Offset: 0x004011CC
 		public static IRollBlockItemBreakableObstacle GetRootAsIRollBlockItemBreakableObstacle(ByteBuffer _bb, IRollBlockItemBreakableObstacle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601AE8F RID: 110223 RVA: 0x003D6D4D File Offset: 0x003D4F4D
+		// Token: 0x0601C664 RID: 116324 RVA: 0x00402FE9 File Offset: 0x004011E9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601AE90 RID: 110224 RVA: 0x003D6D5C File Offset: 0x003D4F5C
+		// Token: 0x0601C665 RID: 116325 RVA: 0x00402FF8 File Offset: 0x004011F8
 		public IRollBlockItemBreakableObstacle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007E8B RID: 32395
-		// (get) Token: 0x0601AE91 RID: 110225 RVA: 0x003D6D6C File Offset: 0x003D4F6C
+		// Token: 0x170084CC RID: 33996
+		// (get) Token: 0x0601C666 RID: 116326 RVA: 0x00403008 File Offset: 0x00401208
 		public ERollBlockItemType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007E8C RID: 32396
-		// (get) Token: 0x0601AE92 RID: 110226 RVA: 0x003D6DA8 File Offset: 0x003D4FA8
+		// Token: 0x170084CD RID: 33997
+		// (get) Token: 0x0601C667 RID: 116327 RVA: 0x00403044 File Offset: 0x00401244
 		public int Key
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007E8D RID: 32397
-		// (get) Token: 0x0601AE93 RID: 110227 RVA: 0x003D6DE4 File Offset: 0x003D4FE4
+		// Token: 0x170084CE RID: 33998
+		// (get) Token: 0x0601C668 RID: 116328 RVA: 0x00403080 File Offset: 0x00401280
 		public IRollBlockPath? Path
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AE94 RID: 110228 RVA: 0x003D6E41 File Offset: 0x003D5041
+		// Token: 0x0601C669 RID: 116329 RVA: 0x004030DD File Offset: 0x004012DD
 		public static Offset<IRollBlockItemBreakableObstacle> CreateIRollBlockItemBreakableObstacle(FlatBufferBuilder builder, ERollBlockItemType Type = ERollBlockItemType.BreakableObstacle, int Key = 0, Offset<IRollBlockPath> PathOffset = default(Offset<IRollBlockPath>))
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IRollBlockItemBreakableObstacle.EndIRollBlockItemBreakableObstacle(builder);
 		}
 
-		// Token: 0x0601AE95 RID: 110229 RVA: 0x003D6E65 File Offset: 0x003D5065
+		// Token: 0x0601C66A RID: 116330 RVA: 0x00403101 File Offset: 0x00401301
 		public static void StartIRollBlockItemBreakableObstacle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601AE96 RID: 110230 RVA: 0x003D6E6E File Offset: 0x003D506E
+		// Token: 0x0601C66B RID: 116331 RVA: 0x0040310A File Offset: 0x0040130A
 		public static void AddType(FlatBufferBuilder builder, ERollBlockItemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601AE97 RID: 110231 RVA: 0x003D6E79 File Offset: 0x003D5079
+		// Token: 0x0601C66C RID: 116332 RVA: 0x00403115 File Offset: 0x00401315
 		public static void AddKey(FlatBufferBuilder builder, int key)
 		{
 			builder.AddInt(1, key, 0);
 		}
 
-		// Token: 0x0601AE98 RID: 110232 RVA: 0x003D6E84 File Offset: 0x003D5084
+		// Token: 0x0601C66D RID: 116333 RVA: 0x00403120 File Offset: 0x00401320
 		public static void AddPath(FlatBufferBuilder builder, Offset<IRollBlockPath> pathOffset)
 		{
 			builder.AddOffset(2, pathOffset.Value, 0);
 		}
 
-		// Token: 0x0601AE99 RID: 110233 RVA: 0x003D6E94 File Offset: 0x003D5094
+		// Token: 0x0601C66E RID: 116334 RVA: 0x00403130 File Offset: 0x00401330
 		public static Offset<IRollBlockItemBreakableObstacle> EndIRollBlockItemBreakableObstacle(FlatBufferBuilder builder)
 		{
 			return new Offset<IRollBlockItemBreakableObstacle>(builder.EndTable());
 		}
 
-		// Token: 0x0601AE9A RID: 110234 RVA: 0x003D6EA4 File Offset: 0x003D50A4
+		// Token: 0x0601C66F RID: 116335 RVA: 0x00403140 File Offset: 0x00401340
 		public IRollBlockItemBreakableObstacleT UnPack()
 		{
 			IRollBlockItemBreakableObstacleT rollBlockItemBreakableObstacleT = new IRollBlockItemBreakableObstacleT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return rollBlockItemBreakableObstacleT;
 		}
 
-		// Token: 0x0601AE9B RID: 110235 RVA: 0x003D6EC0 File Offset: 0x003D50C0
+		// Token: 0x0601C670 RID: 116336 RVA: 0x0040315C File Offset: 0x0040135C
 		public void UnPackTo(IRollBlockItemBreakableObstacleT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.Path = ((this.Path != null) ? this.Path.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601AE9C RID: 110236 RVA: 0x003D6F14 File Offset: 0x003D5114
+		// Token: 0x0601C671 RID: 116337 RVA: 0x004031B0 File Offset: 0x004013B0
 		public static Offset<IRollBlockItemBreakableObstacle> Pack(FlatBufferBuilder builder, IRollBlockItemBreakableObstacleT _o)
 		{
 			if (_o == null)
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IRollBlockItemBreakableObstacle.CreateIRollBlockItemBreakableObstacle(builder, _o.Type, _o.Key, pathOffset);
 		}
 
-		// Token: 0x0400C654 RID: 50772
+		// Token: 0x0400D083 RID: 53379
 		private Table __p;
 	}
 }

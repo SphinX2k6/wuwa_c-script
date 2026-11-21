@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043F2 RID: 17394
+	// Token: 0x02004857 RID: 18519
 	public enum ERegionType : byte
 	{
-		// Token: 0x0400C30B RID: 49931
+		// Token: 0x0400CD33 RID: 52531
 		Lahailuo,
-		// Token: 0x0400C30C RID: 49932
+		// Token: 0x0400CD34 RID: 52532
 		Huanglong,
-		// Token: 0x0400C30D RID: 49933
+		// Token: 0x0400CD35 RID: 52533
 		Linaxita,
-		// Token: 0x0400C30E RID: 49934
+		// Token: 0x0400CD36 RID: 52534
 		Heihaian
 	}
 }

@@ -5,11 +5,11 @@ namespace Aki.Protocol
 	// Token: 0x0200000D RID: 13
 	public enum EMessageRoute
 	{
-		// Token: 0x04001EBF RID: 7871
+		// Token: 0x04001F15 RID: 7957
 		Gateway,
-		// Token: 0x04001EC0 RID: 7872
+		// Token: 0x04001F16 RID: 7958
 		Null,
-		// Token: 0x04001EC1 RID: 7873
+		// Token: 0x04001F17 RID: 7959
 		GameServer
 	}
 }

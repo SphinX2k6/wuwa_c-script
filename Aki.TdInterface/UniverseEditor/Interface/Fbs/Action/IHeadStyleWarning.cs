@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068D6 RID: 26838
+	// Token: 0x02006F86 RID: 28550
 	public struct IHeadStyleWarning : IFlatbufferObject
 	{
-		// Token: 0x1700C721 RID: 50977
-		// (get) Token: 0x0602ECF2 RID: 191730 RVA: 0x0066322A File Offset: 0x0066142A
+		// Token: 0x1700D11B RID: 53531
+		// (get) Token: 0x060316A4 RID: 202404 RVA: 0x006B3372 File Offset: 0x006B1572
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602ECF3 RID: 191731 RVA: 0x00663237 File Offset: 0x00661437
+		// Token: 0x060316A5 RID: 202405 RVA: 0x006B337F File Offset: 0x006B157F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602ECF4 RID: 191732 RVA: 0x00663240 File Offset: 0x00661440
+		// Token: 0x060316A6 RID: 202406 RVA: 0x006B3388 File Offset: 0x006B1588
 		public static IHeadStyleWarning GetRootAsIHeadStyleWarning(ByteBuffer _bb)
 		{
 			return IHeadStyleWarning.GetRootAsIHeadStyleWarning(_bb, default(IHeadStyleWarning));
 		}
 
-		// Token: 0x0602ECF5 RID: 191733 RVA: 0x0066325C File Offset: 0x0066145C
+		// Token: 0x060316A7 RID: 202407 RVA: 0x006B33A4 File Offset: 0x006B15A4
 		public static IHeadStyleWarning GetRootAsIHeadStyleWarning(ByteBuffer _bb, IHeadStyleWarning obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602ECF6 RID: 191734 RVA: 0x00663279 File Offset: 0x00661479
+		// Token: 0x060316A8 RID: 202408 RVA: 0x006B33C1 File Offset: 0x006B15C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602ECF7 RID: 191735 RVA: 0x00663288 File Offset: 0x00661488
+		// Token: 0x060316A9 RID: 202409 RVA: 0x006B33D0 File Offset: 0x006B15D0
 		public IHeadStyleWarning __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C722 RID: 50978
-		// (get) Token: 0x0602ECF8 RID: 191736 RVA: 0x00663298 File Offset: 0x00661498
+		// Token: 0x1700D11C RID: 53532
+		// (get) Token: 0x060316AA RID: 202410 RVA: 0x006B33E0 File Offset: 0x006B15E0
 		public EHeadStyle Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602ECF9 RID: 191737 RVA: 0x006632D4 File Offset: 0x006614D4
+		// Token: 0x060316AB RID: 202411 RVA: 0x006B341C File Offset: 0x006B161C
 		public static Offset<IHeadStyleWarning> CreateIHeadStyleWarning(FlatBufferBuilder builder, EHeadStyle Type = EHeadStyle.Normal)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHeadStyleWarning.EndIHeadStyleWarning(builder);
 		}
 
-		// Token: 0x0602ECFA RID: 191738 RVA: 0x006632EA File Offset: 0x006614EA
+		// Token: 0x060316AC RID: 202412 RVA: 0x006B3432 File Offset: 0x006B1632
 		public static void StartIHeadStyleWarning(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602ECFB RID: 191739 RVA: 0x006632F3 File Offset: 0x006614F3
+		// Token: 0x060316AD RID: 202413 RVA: 0x006B343B File Offset: 0x006B163B
 		public static void AddType(FlatBufferBuilder builder, EHeadStyle type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602ECFC RID: 191740 RVA: 0x006632FE File Offset: 0x006614FE
+		// Token: 0x060316AE RID: 202414 RVA: 0x006B3446 File Offset: 0x006B1646
 		public static Offset<IHeadStyleWarning> EndIHeadStyleWarning(FlatBufferBuilder builder)
 		{
 			return new Offset<IHeadStyleWarning>(builder.EndTable());
 		}
 
-		// Token: 0x0602ECFD RID: 191741 RVA: 0x0066330C File Offset: 0x0066150C
+		// Token: 0x060316AF RID: 202415 RVA: 0x006B3454 File Offset: 0x006B1654
 		public IHeadStyleWarningT UnPack()
 		{
 			IHeadStyleWarningT headStyleWarningT = new IHeadStyleWarningT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return headStyleWarningT;
 		}
 
-		// Token: 0x0602ECFE RID: 191742 RVA: 0x00663327 File Offset: 0x00661527
+		// Token: 0x060316B0 RID: 202416 RVA: 0x006B346F File Offset: 0x006B166F
 		public void UnPackTo(IHeadStyleWarningT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602ECFF RID: 191743 RVA: 0x00663338 File Offset: 0x00661538
+		// Token: 0x060316B1 RID: 202417 RVA: 0x006B3480 File Offset: 0x006B1680
 		public static Offset<IHeadStyleWarning> Pack(FlatBufferBuilder builder, IHeadStyleWarningT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHeadStyleWarning.CreateIHeadStyleWarning(builder, _o.Type);
 		}
 
-		// Token: 0x04011032 RID: 69682
+		// Token: 0x04011E99 RID: 73369
 		private Table __p;
 	}
 }

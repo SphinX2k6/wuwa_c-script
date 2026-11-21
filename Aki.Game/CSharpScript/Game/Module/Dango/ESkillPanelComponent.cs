@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Dango
 {
-	// Token: 0x02005AE1 RID: 23265
+	// Token: 0x02004AC2 RID: 19138
 	internal enum ESkillPanelComponent
 	{
-		// Token: 0x0401EBF8 RID: 125944
+		// Token: 0x040196B4 RID: 104116
 		Title,
-		// Token: 0x0401EBF9 RID: 125945
+		// Token: 0x040196B5 RID: 104117
 		Content
 	}
 }

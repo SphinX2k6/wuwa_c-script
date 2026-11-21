@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063F5 RID: 25589
+	// Token: 0x02005373 RID: 21363
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorParkourRankPanel : UiPanelBase
 	{
-		// Token: 0x060405BB RID: 263611 RVA: 0x00F913B4 File Offset: 0x00F8F5B4
+		// Token: 0x0603527C RID: 217724 RVA: 0x00ED839C File Offset: 0x00ED659C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -30,14 +30,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060405BC RID: 263612 RVA: 0x00F91440 File Offset: 0x00F8F640
+		// Token: 0x0603527D RID: 217725 RVA: 0x00ED8428 File Offset: 0x00ED6628
 		protected override void OnStart()
 		{
 			this.RankLayout = new GenericLayout<MotorParkourGameRankItem, MotorParkourRankData>(base.GetVerticalLayout(1), new Func<MotorParkourGameRankItem>(this.CreateRankItem), null, false, true);
 			this.DuringTime = ConfigCommonParamById.GetIntConfig("MotorRacingRoundTime").GetValueOrDefault(3000);
 		}
 
-		// Token: 0x060405BD RID: 263613 RVA: 0x00F9148B File Offset: 0x00F8F68B
+		// Token: 0x0603527E RID: 217726 RVA: 0x00ED8473 File Offset: 0x00ED6673
 		public void RefreshRankList(List<MotorParkourRankData> rankDataList)
 		{
 			this.RankLayout.RefreshByData(rankDataList, delegate
@@ -50,29 +50,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}, true);
 		}
 
-		// Token: 0x060405BE RID: 263614 RVA: 0x00F914A6 File Offset: 0x00F8F6A6
+		// Token: 0x0603527F RID: 217727 RVA: 0x00ED848E File Offset: 0x00ED668E
 		private MotorParkourGameRankItem CreateRankItem()
 		{
 			return new MotorParkourGameRankItem();
 		}
 
-		// Token: 0x0402179F RID: 137119
+		// Token: 0x0401C0CE RID: 114894
 		private GenericLayout<MotorParkourGameRankItem, MotorParkourRankData> RankLayout;
 
-		// Token: 0x040217A0 RID: 137120
+		// Token: 0x0401C0CF RID: 114895
 		private int DuringTime;
 
-		// Token: 0x0200C611 RID: 50705
+		// Token: 0x0200AFF8 RID: 45048
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BCC6 RID: 244934
+			// Token: 0x04036625 RID: 222757
 			public const int TextTitle = 0;
 
-			// Token: 0x0403BCC7 RID: 244935
+			// Token: 0x04036626 RID: 222758
 			public const int LayoutRank = 1;
 
-			// Token: 0x0403BCC8 RID: 244936
+			// Token: 0x04036627 RID: 222759
 			public const int ItemRank = 2;
 		}
 	}

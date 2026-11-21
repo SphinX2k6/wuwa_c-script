@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Utils;
 
-// Token: 0x02002FF6 RID: 12278
+// Token: 0x0200254B RID: 9547
 [NullableContext(1)]
 [Nullable(0)]
 public class BuffAddFailureTrigger : Trigger
 {
-	// Token: 0x0601A043 RID: 106563 RVA: 0x006D0134 File Offset: 0x006CE334
+	// Token: 0x06017977 RID: 96631 RVA: 0x006F7FD0 File Offset: 0x006F61D0
 	[NullableContext(2)]
 	public BuffAddFailureTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A044 RID: 106564 RVA: 0x006D0168 File Offset: 0x006CE368
+	// Token: 0x06017978 RID: 96632 RVA: 0x006F8004 File Offset: 0x006F6204
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TargetType = (ETriggerTargetType)Convert.ToInt32((triggerParams.Length != 0) ? triggerParams[0] : "0");
@@ -31,7 +31,7 @@ public class BuffAddFailureTrigger : Trigger
 		this.TriggerOncePerContext = (Convert.ToInt32((triggerParams.Length > 2) ? triggerParams[2] : "0") == 1);
 	}
 
-	// Token: 0x0601A045 RID: 106565 RVA: 0x006D01F8 File Offset: 0x006CE3F8
+	// Token: 0x06017979 RID: 96633 RVA: 0x006F8094 File Offset: 0x006F6294
 	protected override void OnActive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -45,7 +45,7 @@ public class BuffAddFailureTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A046 RID: 106566 RVA: 0x006D0280 File Offset: 0x006CE480
+	// Token: 0x0601797A RID: 96634 RVA: 0x006F811C File Offset: 0x006F631C
 	protected override void OnInactive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -59,7 +59,7 @@ public class BuffAddFailureTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A047 RID: 106567 RVA: 0x006D0308 File Offset: 0x006CE508
+	// Token: 0x0601797B RID: 96635 RVA: 0x006F81A4 File Offset: 0x006F63A4
 	private void OnEvent(long buffId, Entity victim, Entity attacker, int stackCount, long? bulletContextId)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -96,27 +96,27 @@ public class BuffAddFailureTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x0601A048 RID: 106568 RVA: 0x006D0437 File Offset: 0x006CE637
+	// Token: 0x0601797C RID: 96636 RVA: 0x006F82D3 File Offset: 0x006F64D3
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4E4 RID: 50404
+	// Token: 0x0400C8AC RID: 51372
 	protected ETriggerTargetType TargetType;
 
-	// Token: 0x0400C4E5 RID: 50405
+	// Token: 0x0400C8AD RID: 51373
 	protected readonly List<long> ListenBuffIds = new List<long>();
 
-	// Token: 0x0400C4E6 RID: 50406
+	// Token: 0x0400C8AE RID: 51374
 	protected readonly List<long> ContextIds = new List<long>();
 
-	// Token: 0x0400C4E7 RID: 50407
+	// Token: 0x0400C8AF RID: 51375
 	protected readonly List<int> VictimIds = new List<int>();
 
-	// Token: 0x0400C4E8 RID: 50408
+	// Token: 0x0400C8B0 RID: 51376
 	protected const int ContextCapacity = 15;
 
-	// Token: 0x0400C4E9 RID: 50409
+	// Token: 0x0400C8B1 RID: 51377
 	protected bool TriggerOncePerContext;
 }

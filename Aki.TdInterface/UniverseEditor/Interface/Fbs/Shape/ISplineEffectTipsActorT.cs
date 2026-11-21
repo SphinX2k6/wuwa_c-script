@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C4A RID: 15434
+	// Token: 0x02004059 RID: 16473
 	public class ISplineEffectTipsActorT
 	{
-		// Token: 0x17006A5E RID: 27230
-		// (get) Token: 0x0601554D RID: 87373 RVA: 0x0031624C File Offset: 0x0031444C
-		// (set) Token: 0x0601554E RID: 87374 RVA: 0x00316254 File Offset: 0x00314454
+		// Token: 0x1700700F RID: 28687
+		// (get) Token: 0x06016A61 RID: 92769 RVA: 0x0033D0EC File Offset: 0x0033B2EC
+		// (set) Token: 0x06016A62 RID: 92770 RVA: 0x0033D0F4 File Offset: 0x0033B2F4
 		public ETipsActorType Type { get; set; }
 
-		// Token: 0x17006A5F RID: 27231
-		// (get) Token: 0x0601554F RID: 87375 RVA: 0x0031625D File Offset: 0x0031445D
-		// (set) Token: 0x06015550 RID: 87376 RVA: 0x00316265 File Offset: 0x00314465
+		// Token: 0x17007010 RID: 28688
+		// (get) Token: 0x06016A63 RID: 92771 RVA: 0x0033D0FD File Offset: 0x0033B2FD
+		// (set) Token: 0x06016A64 RID: 92772 RVA: 0x0033D105 File Offset: 0x0033B305
 		public ETipsActorColorType ColorType { get; set; }
 
-		// Token: 0x17006A60 RID: 27232
-		// (get) Token: 0x06015551 RID: 87377 RVA: 0x0031626E File Offset: 0x0031446E
-		// (set) Token: 0x06015552 RID: 87378 RVA: 0x00316276 File Offset: 0x00314476
+		// Token: 0x17007011 RID: 28689
+		// (get) Token: 0x06016A65 RID: 92773 RVA: 0x0033D10E File Offset: 0x0033B30E
+		// (set) Token: 0x06016A66 RID: 92774 RVA: 0x0033D116 File Offset: 0x0033B316
 		public int EntityId { get; set; }
 
-		// Token: 0x17006A61 RID: 27233
-		// (get) Token: 0x06015553 RID: 87379 RVA: 0x0031627F File Offset: 0x0031447F
-		// (set) Token: 0x06015554 RID: 87380 RVA: 0x00316287 File Offset: 0x00314487
+		// Token: 0x17007012 RID: 28690
+		// (get) Token: 0x06016A67 RID: 92775 RVA: 0x0033D11F File Offset: 0x0033B31F
+		// (set) Token: 0x06016A68 RID: 92776 RVA: 0x0033D127 File Offset: 0x0033B327
 		public byte NullMask { get; set; }
 
-		// Token: 0x06015555 RID: 87381 RVA: 0x00316290 File Offset: 0x00314490
+		// Token: 0x06016A69 RID: 92777 RVA: 0x0033D130 File Offset: 0x0033B330
 		public ISplineEffectTipsActorT()
 		{
 			this.Type = ETipsActorType.Sphere;

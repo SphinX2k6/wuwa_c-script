@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AE8 RID: 2792
+	// Token: 0x02000BC2 RID: 3010
 	public struct AiBaseSkill : IFlatbufferObject
 	{
-		// Token: 0x1700024B RID: 587
-		// (get) Token: 0x06004647 RID: 17991 RVA: 0x001D236C File Offset: 0x001D056C
+		// Token: 0x17000262 RID: 610
+		// (get) Token: 0x06004B8E RID: 19342 RVA: 0x001F1E04 File Offset: 0x001F0004
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004648 RID: 17992 RVA: 0x001D2379 File Offset: 0x001D0579
+		// Token: 0x06004B8F RID: 19343 RVA: 0x001F1E11 File Offset: 0x001F0011
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004649 RID: 17993 RVA: 0x001D2380 File Offset: 0x001D0580
+		// Token: 0x06004B90 RID: 19344 RVA: 0x001F1E18 File Offset: 0x001F0018
 		public static AiBaseSkill GetRootAsAiBaseSkill(ByteBuffer _bb)
 		{
 			return AiBaseSkill.GetRootAsAiBaseSkill(_bb, default(AiBaseSkill));
 		}
 
-		// Token: 0x0600464A RID: 17994 RVA: 0x001D239C File Offset: 0x001D059C
+		// Token: 0x06004B91 RID: 19345 RVA: 0x001F1E34 File Offset: 0x001F0034
 		public static AiBaseSkill GetRootAsAiBaseSkill(ByteBuffer _bb, AiBaseSkill obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600464B RID: 17995 RVA: 0x001D23B9 File Offset: 0x001D05B9
+		// Token: 0x06004B92 RID: 19346 RVA: 0x001F1E51 File Offset: 0x001F0051
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600464C RID: 17996 RVA: 0x001D23C8 File Offset: 0x001D05C8
+		// Token: 0x06004B93 RID: 19347 RVA: 0x001F1E60 File Offset: 0x001F0060
 		public AiBaseSkill __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700024C RID: 588
-		// (get) Token: 0x0600464D RID: 17997 RVA: 0x001D23D8 File Offset: 0x001D05D8
+		// Token: 0x17000263 RID: 611
+		// (get) Token: 0x06004B94 RID: 19348 RVA: 0x001F1E70 File Offset: 0x001F0070
 		public int Id
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600464E RID: 17998 RVA: 0x001D2414 File Offset: 0x001D0614
+		// Token: 0x06004B95 RID: 19349 RVA: 0x001F1EAC File Offset: 0x001F00AC
 		public IntArray? RandomSkills(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return new IntArray?(default(IntArray).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700024D RID: 589
-		// (get) Token: 0x0600464F RID: 17999 RVA: 0x001D2474 File Offset: 0x001D0674
+		// Token: 0x17000264 RID: 612
+		// (get) Token: 0x06004B96 RID: 19350 RVA: 0x001F1F0C File Offset: 0x001F010C
 		public int RandomSkillsLength
 		{
 			get
@@ -91,24 +91,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004650 RID: 18000 RVA: 0x001D249F File Offset: 0x001D069F
+		// Token: 0x06004B97 RID: 19351 RVA: 0x001F1F37 File Offset: 0x001F0137
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RandomSkillsIter()或GetRandomSkillsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntArray[] RandomSkills()
+		public IntArray[] RandomSkills()
 		{
 			return this.RandomSkillsIter().ToArray<IntArray>();
 		}
 
-		// Token: 0x06004651 RID: 18001 RVA: 0x001D24AC File Offset: 0x001D06AC
+		// Token: 0x06004B98 RID: 19352 RVA: 0x001F1F44 File Offset: 0x001F0144
 		[NullableContext(1)]
-		public readonly IEnumerable<IntArray> RandomSkillsIter()
+		public IEnumerable<IntArray> RandomSkillsIter()
 		{
 			AiBaseSkill.<RandomSkillsIter>d__14 <RandomSkillsIter>d__ = new AiBaseSkill.<RandomSkillsIter>d__14(-2);
 			<RandomSkillsIter>d__.<>3__<>4__this = this;
 			return <RandomSkillsIter>d__;
 		}
 
-		// Token: 0x04004AC9 RID: 19145
+		// Token: 0x040050A3 RID: 20643
 		private Table __p;
 	}
 }

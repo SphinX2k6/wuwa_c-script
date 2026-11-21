@@ -13,12 +13,12 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Module.Weather
 {
-	// Token: 0x0200485F RID: 18527
+	// Token: 0x02003790 RID: 14224
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ObservatoryModule
 	{
-		// Token: 0x060307D2 RID: 198610 RVA: 0x00B42280 File Offset: 0x00B40480
+		// Token: 0x06024FA1 RID: 151457 RVA: 0x00A724C4 File Offset: 0x00A706C4
 		public bool AccelerateTime(int areaId, int duration, Action callback = null, Action accelerateFinishedCallback = null)
 		{
 			Log instance = Log.Instance;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Weather
 			return true;
 		}
 
-		// Token: 0x060307D3 RID: 198611 RVA: 0x00B42408 File Offset: 0x00B40608
+		// Token: 0x06024FA2 RID: 151458 RVA: 0x00A7264C File Offset: 0x00A7084C
 		public void PlayWeatherControlSequence(Action callback = null)
 		{
 			this.FinishedCallback = callback;
@@ -84,13 +84,13 @@ namespace CSharpScript.Game.Module.Weather
 			this.PlaySequence(this.ObservatorySequencePath);
 		}
 
-		// Token: 0x060307D4 RID: 198612 RVA: 0x00B42472 File Offset: 0x00B40672
+		// Token: 0x06024FA3 RID: 151459 RVA: 0x00A726B6 File Offset: 0x00A708B6
 		private void OnPlotSequenceStarted()
 		{
 			this.StartAccelerateTime(this.AccelerationDuration);
 		}
 
-		// Token: 0x060307D5 RID: 198613 RVA: 0x00B42480 File Offset: 0x00B40680
+		// Token: 0x06024FA4 RID: 151460 RVA: 0x00A726C4 File Offset: 0x00A708C4
 		private unsafe void OnPlotSequenceEnd()
 		{
 			Log instance = Log.Instance;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Weather
 			this.StopAccelerateTime();
 		}
 
-		// Token: 0x060307D6 RID: 198614 RVA: 0x00B42500 File Offset: 0x00B40700
+		// Token: 0x06024FA5 RID: 151461 RVA: 0x00A72744 File Offset: 0x00A70944
 		private unsafe void StartAccelerateTime(int duration)
 		{
 			if (!this.ObservatoryWorking)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Weather
 			}, 100f, 1f, null, null, true);
 		}
 
-		// Token: 0x060307D7 RID: 198615 RVA: 0x00B426A4 File Offset: 0x00B408A4
+		// Token: 0x06024FA6 RID: 151462 RVA: 0x00A728E8 File Offset: 0x00A70AE8
 		private void StopAccelerateTime()
 		{
 			if (this.ObservatoryWorkingTimerHandle != null)
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.Weather
 			accelerateFinishedCallback();
 		}
 
-		// Token: 0x060307D8 RID: 198616 RVA: 0x00B42728 File Offset: 0x00B40928
+		// Token: 0x06024FA7 RID: 151463 RVA: 0x00A7296C File Offset: 0x00A70B6C
 		private void SetCloudSpeed(double speed)
 		{
 			Log instance = Log.Instance;
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.Weather
 			instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 		}
 
-		// Token: 0x060307D9 RID: 198617 RVA: 0x00B42840 File Offset: 0x00B40A40
+		// Token: 0x06024FA8 RID: 151464 RVA: 0x00A72A84 File Offset: 0x00A70C84
 		[NullableContext(1)]
 		private void PlaySequence(string path)
 		{
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.Module.Weather
 			}, ResourceSystem.EResourceLoadPriority.Default, "js_undefined");
 		}
 
-		// Token: 0x060307DA RID: 198618 RVA: 0x00B42861 File Offset: 0x00B40A61
+		// Token: 0x06024FA9 RID: 151465 RVA: 0x00A72AA5 File Offset: 0x00A70CA5
 		private void OnSequenceFinished()
 		{
 			Action finishedCallback = this.FinishedCallback;
@@ -284,28 +284,28 @@ namespace CSharpScript.Game.Module.Weather
 			finishedCallback();
 		}
 
-		// Token: 0x0401A0BD RID: 106685
+		// Token: 0x04014771 RID: 83825
 		private bool ObservatoryWorking;
 
-		// Token: 0x0401A0BE RID: 106686
+		// Token: 0x04014772 RID: 83826
 		private TimerHandle ObservatoryWorkingTimerHandle;
 
-		// Token: 0x0401A0BF RID: 106687
+		// Token: 0x04014773 RID: 83827
 		private SimpleLevelSequenceActor SimpleSequenceActor;
 
-		// Token: 0x0401A0C0 RID: 106688
+		// Token: 0x04014774 RID: 83828
 		private int AccelerationDuration;
 
-		// Token: 0x0401A0C1 RID: 106689
+		// Token: 0x04014775 RID: 83829
 		private double AccelerationPassedTime;
 
-		// Token: 0x0401A0C2 RID: 106690
+		// Token: 0x04014776 RID: 83830
 		private string ObservatorySequencePath;
 
-		// Token: 0x0401A0C3 RID: 106691
+		// Token: 0x04014777 RID: 83831
 		private Action FinishedCallback;
 
-		// Token: 0x0401A0C4 RID: 106692
+		// Token: 0x04014778 RID: 83832
 		private Action AccelerateFinishedCallback;
 	}
 }

@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056D7 RID: 22231
+	// Token: 0x020046AE RID: 18094
 	public enum EKurotatoStep
 	{
-		// Token: 0x0401DB3C RID: 121660
+		// Token: 0x040185D2 RID: 99794
 		None = -1,
-		// Token: 0x0401DB3D RID: 121661
+		// Token: 0x040185D3 RID: 99795
 		Combat,
-		// Token: 0x0401DB3E RID: 121662
+		// Token: 0x040185D4 RID: 99796
 		ChestReward,
-		// Token: 0x0401DB3F RID: 121663
+		// Token: 0x040185D5 RID: 99797
 		Shop,
-		// Token: 0x0401DB40 RID: 121664
+		// Token: 0x040185D6 RID: 99798
 		WaveUpdate,
-		// Token: 0x0401DB41 RID: 121665
+		// Token: 0x040185D7 RID: 99799
 		UpgradeReward,
-		// Token: 0x0401DB42 RID: 121666
+		// Token: 0x040185D8 RID: 99800
 		Prepare,
-		// Token: 0x0401DB43 RID: 121667
+		// Token: 0x040185D9 RID: 99801
 		End
 	}
 }

@@ -7,33 +7,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002070 RID: 8304
+	// Token: 0x02000692 RID: 1682
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.LGUIEventSystem")]
 	[UnrealStructLayout(608, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 608)]
 	public class ULGUIEventSystem : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601F511 RID: 128273 RVA: 0x002E839E File Offset: 0x002E659E
+		// Token: 0x06009110 RID: 37136 RVA: 0x000DA523 File Offset: 0x000D8723
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULGUIEventSystem._ClassPtr;
 		}
 
-		// Token: 0x0601F512 RID: 128274 RVA: 0x002E83AC File Offset: 0x002E65AC
+		// Token: 0x06009111 RID: 37137 RVA: 0x000DA530 File Offset: 0x000D8730
 		public ULGUIEventSystem() : this(BuiltinUtils.AllocNativeUObject(ULGUIEventSystem.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601F513 RID: 128275 RVA: 0x002E83D4 File Offset: 0x002E65D4
+		// Token: 0x06009112 RID: 37138 RVA: 0x000DA558 File Offset: 0x000D8758
 		[NullableContext(1)]
 		public ULGUIEventSystem(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ULGUIEventSystem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007BBA RID: 31674
-		// (get) Token: 0x0601F514 RID: 128276 RVA: 0x002E8408 File Offset: 0x002E6608
-		// (set) Token: 0x0601F515 RID: 128277 RVA: 0x002E8441 File Offset: 0x002E6641
+		// Token: 0x17001B1C RID: 6940
+		// (get) Token: 0x06009113 RID: 37139 RVA: 0x000DA58C File Offset: 0x000D878C
+		// (set) Token: 0x06009114 RID: 37140 RVA: 0x000DA5C5 File Offset: 0x000D87C5
 		[Nullable(1)]
 		public FOnControllerConnectionChanged OnConnectionChanged
 		{
@@ -55,9 +55,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BBB RID: 31675
-		// (get) Token: 0x0601F516 RID: 128278 RVA: 0x002E8462 File Offset: 0x002E6662
-		// (set) Token: 0x0601F517 RID: 128279 RVA: 0x002E8472 File Offset: 0x002E6672
+		// Token: 0x17001B1D RID: 6941
+		// (get) Token: 0x06009115 RID: 37141 RVA: 0x000DA5E6 File Offset: 0x000D87E6
+		// (set) Token: 0x06009116 RID: 37142 RVA: 0x000DA5F6 File Offset: 0x000D87F6
 		public unsafe bool bRayEventEnable
 		{
 			get
@@ -70,9 +70,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BBC RID: 31676
-		// (get) Token: 0x0601F518 RID: 128280 RVA: 0x002E8483 File Offset: 0x002E6683
-		// (set) Token: 0x0601F519 RID: 128281 RVA: 0x002E8493 File Offset: 0x002E6693
+		// Token: 0x17001B1E RID: 6942
+		// (get) Token: 0x06009117 RID: 37143 RVA: 0x000DA607 File Offset: 0x000D8807
+		// (set) Token: 0x06009118 RID: 37144 RVA: 0x000DA617 File Offset: 0x000D8817
 		public unsafe bool HighlightWhenMouseMoveOut
 		{
 			get
@@ -85,9 +85,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BBD RID: 31677
-		// (get) Token: 0x0601F51A RID: 128282 RVA: 0x002E84A4 File Offset: 0x002E66A4
-		// (set) Token: 0x0601F51B RID: 128283 RVA: 0x002E84DD File Offset: 0x002E66DD
+		// Token: 0x17001B1F RID: 6943
+		// (get) Token: 0x06009119 RID: 37145 RVA: 0x000DA628 File Offset: 0x000D8828
+		// (set) Token: 0x0600911A RID: 37146 RVA: 0x000DA661 File Offset: 0x000D8861
 		[Nullable(1)]
 		public TMap<int, ULGUIPointerEventData> pointerEventDataMap
 		{
@@ -109,33 +109,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BBE RID: 31678
-		// (get) Token: 0x0601F51C RID: 128284 RVA: 0x002E84EC File Offset: 0x002E66EC
-		// (set) Token: 0x0601F51D RID: 128285 RVA: 0x002E8525 File Offset: 0x002E6725
-		[Nullable(1)]
-		public FLGUINavigationChangeDynamicDelegate NavigationChangeDelegate
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FLGUINavigationChangeDynamicDelegate result;
-				if ((result = this._NavigationChangeDelegate) == null)
-				{
-					result = (this._NavigationChangeDelegate = new FLGUINavigationChangeDynamicDelegate(base.NativePtr + (IntPtr)ULGUIEventSystem.__PropertyOffset_NavigationChangeDelegate, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				FScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)ULGUIEventSystem.__PropertyOffset_NavigationChangeDelegate, (value != null) ? value.NativePtr : ((IntPtr)0));
-			}
-		}
-
-		// Token: 0x17007BBF RID: 31679
-		// (get) Token: 0x0601F51E RID: 128286 RVA: 0x002E8548 File Offset: 0x002E6748
-		// (set) Token: 0x0601F51F RID: 128287 RVA: 0x002E8581 File Offset: 0x002E6781
+		// Token: 0x17001B20 RID: 6944
+		// (get) Token: 0x0600911B RID: 37147 RVA: 0x000DA670 File Offset: 0x000D8870
+		// (set) Token: 0x0600911C RID: 37148 RVA: 0x000DA6A9 File Offset: 0x000D88A9
 		[Nullable(1)]
 		public FLGUIFindDefaultNavigationDelegate FindDefaultNavigationDelegate
 		{
@@ -157,9 +133,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BC0 RID: 31680
-		// (get) Token: 0x0601F520 RID: 128288 RVA: 0x002E85A4 File Offset: 0x002E67A4
-		// (set) Token: 0x0601F521 RID: 128289 RVA: 0x002E85DD File Offset: 0x002E67DD
+		// Token: 0x17001B21 RID: 6945
+		// (get) Token: 0x0600911D RID: 37149 RVA: 0x000DA6CC File Offset: 0x000D88CC
+		// (set) Token: 0x0600911E RID: 37150 RVA: 0x000DA705 File Offset: 0x000D8905
 		[Nullable(1)]
 		public FLGUITryFindNavigationDelegate TryFindNavigationDelegate
 		{
@@ -181,9 +157,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BC1 RID: 31681
-		// (get) Token: 0x0601F522 RID: 128290 RVA: 0x002E85FE File Offset: 0x002E67FE
-		// (set) Token: 0x0601F523 RID: 128291 RVA: 0x002E860E File Offset: 0x002E680E
+		// Token: 0x17001B22 RID: 6946
+		// (get) Token: 0x0600911F RID: 37151 RVA: 0x000DA726 File Offset: 0x000D8926
+		// (set) Token: 0x06009120 RID: 37152 RVA: 0x000DA736 File Offset: 0x000D8936
 		public unsafe ELGUIPointerInputType defaultInputType
 		{
 			get
@@ -196,9 +172,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BC2 RID: 31682
-		// (get) Token: 0x0601F524 RID: 128292 RVA: 0x002E861F File Offset: 0x002E681F
-		// (set) Token: 0x0601F525 RID: 128293 RVA: 0x002E862F File Offset: 0x002E682F
+		// Token: 0x17001B23 RID: 6947
+		// (get) Token: 0x06009121 RID: 37153 RVA: 0x000DA747 File Offset: 0x000D8947
+		// (set) Token: 0x06009122 RID: 37154 RVA: 0x000DA757 File Offset: 0x000D8957
 		public unsafe ELGUIEventFireType eventFireTypeForNavigation
 		{
 			get
@@ -211,9 +187,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BC3 RID: 31683
-		// (get) Token: 0x0601F526 RID: 128294 RVA: 0x002E8640 File Offset: 0x002E6840
-		// (set) Token: 0x0601F527 RID: 128295 RVA: 0x002E8650 File Offset: 0x002E6850
+		// Token: 0x17001B24 RID: 6948
+		// (get) Token: 0x06009123 RID: 37155 RVA: 0x000DA768 File Offset: 0x000D8968
+		// (set) Token: 0x06009124 RID: 37156 RVA: 0x000DA778 File Offset: 0x000D8978
 		public unsafe float navigateInputInterval
 		{
 			get
@@ -226,9 +202,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BC4 RID: 31684
-		// (get) Token: 0x0601F528 RID: 128296 RVA: 0x002E8661 File Offset: 0x002E6861
-		// (set) Token: 0x0601F529 RID: 128297 RVA: 0x002E8671 File Offset: 0x002E6871
+		// Token: 0x17001B25 RID: 6949
+		// (get) Token: 0x06009125 RID: 37157 RVA: 0x000DA789 File Offset: 0x000D8989
+		// (set) Token: 0x06009126 RID: 37158 RVA: 0x000DA799 File Offset: 0x000D8999
 		public unsafe float navigateInputIntervalForFirstTime
 		{
 			get
@@ -241,9 +217,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BC5 RID: 31685
-		// (get) Token: 0x0601F52A RID: 128298 RVA: 0x002E8682 File Offset: 0x002E6882
-		// (set) Token: 0x0601F52B RID: 128299 RVA: 0x002E8696 File Offset: 0x002E6896
+		// Token: 0x17001B26 RID: 6950
+		// (get) Token: 0x06009127 RID: 37159 RVA: 0x000DA7AA File Offset: 0x000D89AA
+		// (set) Token: 0x06009128 RID: 37160 RVA: 0x000DA7BE File Offset: 0x000D89BE
 		public unsafe USceneComponent selectedComponent
 		{
 			get
@@ -256,9 +232,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BC6 RID: 31686
-		// (get) Token: 0x0601F52C RID: 128300 RVA: 0x002E86AB File Offset: 0x002E68AB
-		// (set) Token: 0x0601F52D RID: 128301 RVA: 0x002E86BF File Offset: 0x002E68BF
+		// Token: 0x17001B27 RID: 6951
+		// (get) Token: 0x06009129 RID: 37161 RVA: 0x000DA7D3 File Offset: 0x000D89D3
+		// (set) Token: 0x0600912A RID: 37162 RVA: 0x000DA7E7 File Offset: 0x000D89E7
 		public unsafe USceneComponent navigationComponent
 		{
 			get
@@ -271,9 +247,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BC7 RID: 31687
-		// (get) Token: 0x0601F52E RID: 128302 RVA: 0x002E86D4 File Offset: 0x002E68D4
-		// (set) Token: 0x0601F52F RID: 128303 RVA: 0x002E86E8 File Offset: 0x002E68E8
+		// Token: 0x17001B28 RID: 6952
+		// (get) Token: 0x0600912B RID: 37163 RVA: 0x000DA7FC File Offset: 0x000D89FC
+		// (set) Token: 0x0600912C RID: 37164 RVA: 0x000DA810 File Offset: 0x000D8A10
 		public unsafe USceneComponent preSelectedComponent
 		{
 			get
@@ -286,9 +262,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BC8 RID: 31688
-		// (get) Token: 0x0601F530 RID: 128304 RVA: 0x002E8700 File Offset: 0x002E6900
-		// (set) Token: 0x0601F531 RID: 128305 RVA: 0x002E8739 File Offset: 0x002E6939
+		// Token: 0x17001B29 RID: 6953
+		// (get) Token: 0x0600912D RID: 37165 RVA: 0x000DA828 File Offset: 0x000D8A28
+		// (set) Token: 0x0600912E RID: 37166 RVA: 0x000DA861 File Offset: 0x000D8A61
 		[Nullable(1)]
 		public FLGUIOnScrollTriggeredDelegate OnScrollTriggeredDelegate
 		{
@@ -310,43 +286,43 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601F532 RID: 128306 RVA: 0x002E875A File Offset: 0x002E695A
+		// Token: 0x0600912F RID: 37167 RVA: 0x000DA882 File Offset: 0x000D8A82
 		public void UnRegisterPointerEnterExitEvent()
 		{
 			ULGUIEventSystem.__UnRegisterPointerEnterExitEvent_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F533 RID: 128307 RVA: 0x002E8767 File Offset: 0x002E6967
+		// Token: 0x06009130 RID: 37168 RVA: 0x000DA88F File Offset: 0x000D8A8F
 		public void UnregisterHitEvent(in FLGUIDelegateHandleWrapper InHandle)
 		{
 			ULGUIEventSystem.__UnregisterHitEvent_Internal(base.NativePtr, (InHandle ?? new FLGUIDelegateHandleWrapper()).NativePtr);
 		}
 
-		// Token: 0x0601F534 RID: 128308 RVA: 0x002E8784 File Offset: 0x002E6984
+		// Token: 0x06009131 RID: 37169 RVA: 0x000DA8AC File Offset: 0x000D8AAC
 		public void UnregisterGlobalListener(in FLGUIDelegateHandleWrapper InHandle)
 		{
 			ULGUIEventSystem.__UnregisterGlobalListener_Internal(base.NativePtr, (InHandle ?? new FLGUIDelegateHandleWrapper()).NativePtr);
 		}
 
-		// Token: 0x0601F535 RID: 128309 RVA: 0x002E87A1 File Offset: 0x002E69A1
+		// Token: 0x06009132 RID: 37170 RVA: 0x000DA8C9 File Offset: 0x000D8AC9
 		public void SetSelectComponentWithDefault(USceneComponent InSelectComp)
 		{
 			ULGUIEventSystem.__SetSelectComponentWithDefault_Internal(base.NativePtr, (InSelectComp != null) ? InSelectComp.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601F536 RID: 128310 RVA: 0x002E87BE File Offset: 0x002E69BE
+		// Token: 0x06009133 RID: 37171 RVA: 0x000DA8E6 File Offset: 0x000D8AE6
 		public void SetSelectComponent(USceneComponent InSelectComp, ULGUIBaseEventData eventData, ELGUIEventFireType eventFireType)
 		{
 			ULGUIEventSystem.__SetSelectComponent_Internal(base.NativePtr, (InSelectComp != null) ? InSelectComp.NativePtr : IntPtr.Zero, (eventData != null) ? eventData.NativePtr : IntPtr.Zero, eventFireType);
 		}
 
-		// Token: 0x0601F537 RID: 128311 RVA: 0x002E87EC File Offset: 0x002E69EC
+		// Token: 0x06009134 RID: 37172 RVA: 0x000DA914 File Offset: 0x000D8B14
 		public void SetRaycastEnable(bool enable, bool clearEvent = false)
 		{
 			ULGUIEventSystem.__SetRaycastEnable_Internal(base.NativePtr, enable, clearEvent);
 		}
 
-		// Token: 0x0601F538 RID: 128312 RVA: 0x002E87FB File Offset: 0x002E69FB
+		// Token: 0x06009135 RID: 37173 RVA: 0x000DA923 File Offset: 0x000D8B23
 		public void RegisterPointerEnterExitEvent(in FLGUIPointerEnterExit_DynamicDelegate PointerEnterExitDelegate)
 		{
 			IntPtr nativePtr = base.NativePtr;
@@ -354,7 +330,7 @@ namespace UnrealEngine
 			ULGUIEventSystem.__RegisterPointerEnterExitEvent_Internal(nativePtr, (flguipointerEnterExit_DynamicDelegate != null) ? flguipointerEnterExit_DynamicDelegate.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x0601F539 RID: 128313 RVA: 0x002E8817 File Offset: 0x002E6A17
+		// Token: 0x06009136 RID: 37174 RVA: 0x000DA93F File Offset: 0x000D8B3F
 		[NullableContext(1)]
 		public FLGUIDelegateHandleWrapper RegisterHitEvent([Nullable(2)] in FLGUIHitDynamicDelegate InDelegate)
 		{
@@ -363,7 +339,7 @@ namespace UnrealEngine
 			return new FLGUIDelegateHandleWrapper(ULGUIEventSystem.__RegisterHitEvent_Internal(nativePtr, (flguihitDynamicDelegate != null) ? flguihitDynamicDelegate.NativePtr : ((IntPtr)0)), null);
 		}
 
-		// Token: 0x0601F53A RID: 128314 RVA: 0x002E8839 File Offset: 0x002E6A39
+		// Token: 0x06009137 RID: 37175 RVA: 0x000DA961 File Offset: 0x000D8B61
 		[NullableContext(1)]
 		public FLGUIDelegateHandleWrapper RegisterGlobalListener([Nullable(2)] in FLGUIBaseEventDynamicDelegate InDelegate)
 		{
@@ -372,31 +348,31 @@ namespace UnrealEngine
 			return new FLGUIDelegateHandleWrapper(ULGUIEventSystem.__RegisterGlobalListener_Internal(nativePtr, (flguibaseEventDynamicDelegate != null) ? flguibaseEventDynamicDelegate.NativePtr : ((IntPtr)0)), null);
 		}
 
-		// Token: 0x0601F53B RID: 128315 RVA: 0x002E885B File Offset: 0x002E6A5B
+		// Token: 0x06009138 RID: 37176 RVA: 0x000DA983 File Offset: 0x000D8B83
 		public USceneComponent Navigate(ELGUINavigationDirection direction, UUISelectableComponent Selectable = null)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USceneComponent>(ULGUIEventSystem.__Navigate_Internal(base.NativePtr, direction, (Selectable != null) ? Selectable.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x0601F53C RID: 128316 RVA: 0x002E887E File Offset: 0x002E6A7E
+		// Token: 0x06009139 RID: 37177 RVA: 0x000DA9A6 File Offset: 0x000D8BA6
 		public bool IsRaycastEnable()
 		{
 			return ULGUIEventSystem.__IsRaycastEnable_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F53D RID: 128317 RVA: 0x002E888B File Offset: 0x002E6A8B
+		// Token: 0x0600913A RID: 37178 RVA: 0x000DA9B3 File Offset: 0x000D8BB3
 		public bool IsNavigationActive()
 		{
 			return ULGUIEventSystem.__IsNavigationActive_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F53E RID: 128318 RVA: 0x002E8898 File Offset: 0x002E6A98
+		// Token: 0x0600913B RID: 37179 RVA: 0x000DA9C0 File Offset: 0x000D8BC0
 		public void InputTrigger(bool inTriggerPress, EMouseButtonType inMouseButtonType = EMouseButtonType.Left)
 		{
 			ULGUIEventSystem.__InputTrigger_Internal(base.NativePtr, inTriggerPress, inMouseButtonType);
 		}
 
-		// Token: 0x0601F53F RID: 128319 RVA: 0x002E88A8 File Offset: 0x002E6AA8
+		// Token: 0x0600913C RID: 37180 RVA: 0x000DA9D0 File Offset: 0x000D8BD0
 		public unsafe void InputScroll(in float inAxisValue)
 		{
 			fixed (float* ptr = &inAxisValue)
@@ -406,219 +382,219 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601F540 RID: 128320 RVA: 0x002E88C9 File Offset: 0x002E6AC9
+		// Token: 0x0600913D RID: 37181 RVA: 0x000DA9F1 File Offset: 0x000D8BF1
 		public void InputNavigationUp()
 		{
 			ULGUIEventSystem.__InputNavigationUp_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F541 RID: 128321 RVA: 0x002E88D6 File Offset: 0x002E6AD6
+		// Token: 0x0600913E RID: 37182 RVA: 0x000DA9FE File Offset: 0x000D8BFE
 		public void InputNavigationRight()
 		{
 			ULGUIEventSystem.__InputNavigationRight_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F542 RID: 128322 RVA: 0x002E88E3 File Offset: 0x002E6AE3
+		// Token: 0x0600913F RID: 37183 RVA: 0x000DAA0B File Offset: 0x000D8C0B
 		public void InputNavigationPrev()
 		{
 			ULGUIEventSystem.__InputNavigationPrev_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F543 RID: 128323 RVA: 0x002E88F0 File Offset: 0x002E6AF0
+		// Token: 0x06009140 RID: 37184 RVA: 0x000DAA18 File Offset: 0x000D8C18
 		public void InputNavigationNext()
 		{
 			ULGUIEventSystem.__InputNavigationNext_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F544 RID: 128324 RVA: 0x002E88FD File Offset: 0x002E6AFD
+		// Token: 0x06009141 RID: 37185 RVA: 0x000DAA25 File Offset: 0x000D8C25
 		public void InputNavigationLeft()
 		{
 			ULGUIEventSystem.__InputNavigationLeft_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F545 RID: 128325 RVA: 0x002E890A File Offset: 0x002E6B0A
+		// Token: 0x06009142 RID: 37186 RVA: 0x000DAA32 File Offset: 0x000D8C32
 		public void InputNavigationEnd()
 		{
 			ULGUIEventSystem.__InputNavigationEnd_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F546 RID: 128326 RVA: 0x002E8917 File Offset: 0x002E6B17
+		// Token: 0x06009143 RID: 37187 RVA: 0x000DAA3F File Offset: 0x000D8C3F
 		public void InputNavigationDown()
 		{
 			ULGUIEventSystem.__InputNavigationDown_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F547 RID: 128327 RVA: 0x002E8924 File Offset: 0x002E6B24
+		// Token: 0x06009144 RID: 37188 RVA: 0x000DAA4C File Offset: 0x000D8C4C
 		public void InputNavigationBegin()
 		{
 			ULGUIEventSystem.__InputNavigationBegin_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F548 RID: 128328 RVA: 0x002E8931 File Offset: 0x002E6B31
+		// Token: 0x06009145 RID: 37189 RVA: 0x000DAA59 File Offset: 0x000D8C59
 		public static ULGUIEventSystem GetLGUIEventSystemInstance(UObject WorldContextObject)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ULGUIEventSystem>(ULGUIEventSystem.__GetLGUIEventSystemInstance_Internal((WorldContextObject != null) ? WorldContextObject.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x0601F549 RID: 128329 RVA: 0x002E894D File Offset: 0x002E6B4D
+		// Token: 0x06009146 RID: 37190 RVA: 0x000DAA75 File Offset: 0x000D8C75
 		public USceneComponent GetCurrentSelectedComponent()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USceneComponent>(ULGUIEventSystem.__GetCurrentSelectedComponent_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601F54A RID: 128330 RVA: 0x002E895F File Offset: 0x002E6B5F
+		// Token: 0x06009147 RID: 37191 RVA: 0x000DAA87 File Offset: 0x000D8C87
 		public ULGUIBaseInputModule GetCurrentInputModule()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ULGUIBaseInputModule>(ULGUIEventSystem.__GetCurrentInputModule_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601F54B RID: 128331 RVA: 0x002E8971 File Offset: 0x002E6B71
+		// Token: 0x06009148 RID: 37192 RVA: 0x000DAA99 File Offset: 0x000D8C99
 		public void ClearEvent()
 		{
 			ULGUIEventSystem.__ClearEvent_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F54C RID: 128332
+		// Token: 0x06009149 RID: 37193
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnRegisterPointerEnterExitEvent_Internal(IntPtr @this);
 
-		// Token: 0x0601F54D RID: 128333
+		// Token: 0x0600914A RID: 37194
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnregisterHitEvent_Internal(IntPtr @this, IntPtr InHandle);
 
-		// Token: 0x0601F54E RID: 128334
+		// Token: 0x0600914B RID: 37195
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnregisterGlobalListener_Internal(IntPtr @this, IntPtr InHandle);
 
-		// Token: 0x0601F54F RID: 128335
+		// Token: 0x0600914C RID: 37196
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSelectComponentWithDefault_Internal(IntPtr @this, IntPtr InSelectComp);
 
-		// Token: 0x0601F550 RID: 128336
+		// Token: 0x0600914D RID: 37197
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSelectComponent_Internal(IntPtr @this, IntPtr InSelectComp, IntPtr eventData, ELGUIEventFireType eventFireType);
 
-		// Token: 0x0601F551 RID: 128337
+		// Token: 0x0600914E RID: 37198
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetRaycastEnable_Internal(IntPtr @this, bool enable, bool clearEvent);
 
-		// Token: 0x0601F552 RID: 128338
+		// Token: 0x0600914F RID: 37199
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RegisterPointerEnterExitEvent_Internal(IntPtr @this, IntPtr PointerEnterExitDelegate);
 
-		// Token: 0x0601F553 RID: 128339
+		// Token: 0x06009150 RID: 37200
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __RegisterHitEvent_Internal(IntPtr @this, IntPtr InDelegate);
 
-		// Token: 0x0601F554 RID: 128340
+		// Token: 0x06009151 RID: 37201
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __RegisterGlobalListener_Internal(IntPtr @this, IntPtr InDelegate);
 
-		// Token: 0x0601F555 RID: 128341
+		// Token: 0x06009152 RID: 37202
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __Navigate_Internal(IntPtr @this, ELGUINavigationDirection direction, IntPtr Selectable);
 
-		// Token: 0x0601F556 RID: 128342
+		// Token: 0x06009153 RID: 37203
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsRaycastEnable_Internal(IntPtr @this);
 
-		// Token: 0x0601F557 RID: 128343
+		// Token: 0x06009154 RID: 37204
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsNavigationActive_Internal(IntPtr @this);
 
-		// Token: 0x0601F558 RID: 128344
+		// Token: 0x06009155 RID: 37205
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InputTrigger_Internal(IntPtr @this, bool inTriggerPress, EMouseButtonType inMouseButtonType);
 
-		// Token: 0x0601F559 RID: 128345
+		// Token: 0x06009156 RID: 37206
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InputScroll_Internal(IntPtr @this, in float inAxisValue);
 
-		// Token: 0x0601F55A RID: 128346
+		// Token: 0x06009157 RID: 37207
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InputNavigationUp_Internal(IntPtr @this);
 
-		// Token: 0x0601F55B RID: 128347
+		// Token: 0x06009158 RID: 37208
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InputNavigationRight_Internal(IntPtr @this);
 
-		// Token: 0x0601F55C RID: 128348
+		// Token: 0x06009159 RID: 37209
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InputNavigationPrev_Internal(IntPtr @this);
 
-		// Token: 0x0601F55D RID: 128349
+		// Token: 0x0600915A RID: 37210
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InputNavigationNext_Internal(IntPtr @this);
 
-		// Token: 0x0601F55E RID: 128350
+		// Token: 0x0600915B RID: 37211
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InputNavigationLeft_Internal(IntPtr @this);
 
-		// Token: 0x0601F55F RID: 128351
+		// Token: 0x0600915C RID: 37212
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InputNavigationEnd_Internal(IntPtr @this);
 
-		// Token: 0x0601F560 RID: 128352
+		// Token: 0x0600915D RID: 37213
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InputNavigationDown_Internal(IntPtr @this);
 
-		// Token: 0x0601F561 RID: 128353
+		// Token: 0x0600915E RID: 37214
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InputNavigationBegin_Internal(IntPtr @this);
 
-		// Token: 0x0601F562 RID: 128354
+		// Token: 0x0600915F RID: 37215
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetLGUIEventSystemInstance_Internal(IntPtr WorldContextObject);
 
-		// Token: 0x0601F563 RID: 128355
+		// Token: 0x06009160 RID: 37216
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetCurrentSelectedComponent_Internal(IntPtr @this);
 
-		// Token: 0x0601F564 RID: 128356
+		// Token: 0x06009161 RID: 37217
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetCurrentInputModule_Internal(IntPtr @this);
 
-		// Token: 0x0601F565 RID: 128357
+		// Token: 0x06009162 RID: 37218
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearEvent_Internal(IntPtr @this);
 
-		// Token: 0x0601F566 RID: 128358 RVA: 0x002E897E File Offset: 0x002E6B7E
+		// Token: 0x06009163 RID: 37219 RVA: 0x000DAAA6 File Offset: 0x000D8CA6
 		static ULGUIEventSystem()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.LGUIEventSystem");
 		}
 
-		// Token: 0x0601F567 RID: 128359 RVA: 0x002E898C File Offset: 0x002E6B8C
+		// Token: 0x06009164 RID: 37220 RVA: 0x000DAAB4 File Offset: 0x000D8CB4
 		protected ULGUIEventSystem(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010EE0 RID: 69344
+		// Token: 0x04003F4F RID: 16207
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.LGUIEventSystem";
 
-		// Token: 0x04010EE1 RID: 69345
+		// Token: 0x04003F50 RID: 16208
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04010EE2 RID: 69346
+		// Token: 0x04003F51 RID: 16209
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04010EE3 RID: 69347
+		// Token: 0x04003F52 RID: 16210
 		internal static int __PropertyOffset_OnConnectionChanged;
 
-		// Token: 0x04010EE4 RID: 69348
+		// Token: 0x04003F53 RID: 16211
 		private FOnControllerConnectionChanged _OnConnectionChanged;
 
-		// Token: 0x04010EE5 RID: 69349
+		// Token: 0x04003F54 RID: 16212
 		internal static int __PropertyOffset_bRayEventEnable;
 
-		// Token: 0x04010EE6 RID: 69350
+		// Token: 0x04003F55 RID: 16213
 		internal static int __PropertyOffset_HighlightWhenMouseMoveOut;
 
-		// Token: 0x04010EE7 RID: 69351
+		// Token: 0x04003F56 RID: 16214
 		internal static int __PropertyOffset_pointerEventDataMap;
 
-		// Token: 0x04010EE8 RID: 69352
+		// Token: 0x04003F57 RID: 16215
 		[Nullable(new byte[]
 		{
 			2,
@@ -626,49 +602,43 @@ namespace UnrealEngine
 		})]
 		private TMap<int, ULGUIPointerEventData> _pointerEventDataMap;
 
-		// Token: 0x04010EE9 RID: 69353
-		internal static int __PropertyOffset_NavigationChangeDelegate;
-
-		// Token: 0x04010EEA RID: 69354
-		private FLGUINavigationChangeDynamicDelegate _NavigationChangeDelegate;
-
-		// Token: 0x04010EEB RID: 69355
+		// Token: 0x04003F58 RID: 16216
 		internal static int __PropertyOffset_FindDefaultNavigationDelegate;
 
-		// Token: 0x04010EEC RID: 69356
+		// Token: 0x04003F59 RID: 16217
 		private FLGUIFindDefaultNavigationDelegate _FindDefaultNavigationDelegate;
 
-		// Token: 0x04010EED RID: 69357
+		// Token: 0x04003F5A RID: 16218
 		internal static int __PropertyOffset_TryFindNavigationDelegate;
 
-		// Token: 0x04010EEE RID: 69358
+		// Token: 0x04003F5B RID: 16219
 		private FLGUITryFindNavigationDelegate _TryFindNavigationDelegate;
 
-		// Token: 0x04010EEF RID: 69359
+		// Token: 0x04003F5C RID: 16220
 		internal static int __PropertyOffset_defaultInputType;
 
-		// Token: 0x04010EF0 RID: 69360
+		// Token: 0x04003F5D RID: 16221
 		internal static int __PropertyOffset_eventFireTypeForNavigation;
 
-		// Token: 0x04010EF1 RID: 69361
+		// Token: 0x04003F5E RID: 16222
 		internal static int __PropertyOffset_navigateInputInterval;
 
-		// Token: 0x04010EF2 RID: 69362
+		// Token: 0x04003F5F RID: 16223
 		internal static int __PropertyOffset_navigateInputIntervalForFirstTime;
 
-		// Token: 0x04010EF3 RID: 69363
+		// Token: 0x04003F60 RID: 16224
 		internal static int __PropertyOffset_selectedComponent;
 
-		// Token: 0x04010EF4 RID: 69364
+		// Token: 0x04003F61 RID: 16225
 		internal static int __PropertyOffset_navigationComponent;
 
-		// Token: 0x04010EF5 RID: 69365
+		// Token: 0x04003F62 RID: 16226
 		internal static int __PropertyOffset_preSelectedComponent;
 
-		// Token: 0x04010EF6 RID: 69366
+		// Token: 0x04003F63 RID: 16227
 		internal static int __PropertyOffset_OnScrollTriggeredDelegate;
 
-		// Token: 0x04010EF7 RID: 69367
+		// Token: 0x04003F64 RID: 16228
 		private FLGUIOnScrollTriggeredDelegate _OnScrollTriggeredDelegate;
 	}
 }

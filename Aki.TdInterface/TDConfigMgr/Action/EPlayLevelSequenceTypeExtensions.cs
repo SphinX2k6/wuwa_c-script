@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023D5 RID: 9173
+	// Token: 0x0200266C RID: 9836
 	public static class EPlayLevelSequenceTypeExtensions
 	{
-		// Token: 0x0600C7BD RID: 51133 RVA: 0x001D3D8C File Offset: 0x001D1F8C
+		// Token: 0x0600D440 RID: 54336 RVA: 0x001ED538 File Offset: 0x001EB738
 		public static string ToEnumString(this EPlayLevelSequenceType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C7BE RID: 51134 RVA: 0x001D3DE0 File Offset: 0x001D1FE0
+		// Token: 0x0600D441 RID: 54337 RVA: 0x001ED58C File Offset: 0x001EB78C
 		public static EPlayLevelSequenceType FromString(string name)
 		{
 			EPlayLevelSequenceType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C7BF RID: 51135 RVA: 0x001D3E0C File Offset: 0x001D200C
+		// Token: 0x0600D442 RID: 54338 RVA: 0x001ED5B8 File Offset: 0x001EB7B8
 		public static bool TryFromString(string name, out EPlayLevelSequenceType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C7C0 RID: 51136 RVA: 0x001D3E74 File Offset: 0x001D2074
+		// Token: 0x0600D443 RID: 54339 RVA: 0x001ED620 File Offset: 0x001EB820
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C7C1 RID: 51137 RVA: 0x001D3E9C File Offset: 0x001D209C
+		// Token: 0x0600D444 RID: 54340 RVA: 0x001ED648 File Offset: 0x001EB848
 		public static EPlayLevelSequenceType[] GetValues()
 		{
 			return new EPlayLevelSequenceType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C7C2 RID: 51138 RVA: 0x001D3EAF File Offset: 0x001D20AF
+		// Token: 0x0600D445 RID: 54341 RVA: 0x001ED65B File Offset: 0x001EB85B
 		public static string[] GetNames()
 		{
 			return new string[]

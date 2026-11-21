@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006D50 RID: 27984
+	// Token: 0x02005ECD RID: 24269
 	public class LevelConditionCheckMapRogueEventDetailShow : LevelConditionBase
 	{
-		// Token: 0x06044746 RID: 280390 RVA: 0x010E2481 File Offset: 0x010E0681
+		// Token: 0x0603A8A6 RID: 239782 RVA: 0x0108C60D File Offset: 0x0108A80D
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return this.IsShow;
 		}
 
-		// Token: 0x040239D7 RID: 145879
+		// Token: 0x0401EC79 RID: 126073
 		private bool IsShow;
 	}
 }

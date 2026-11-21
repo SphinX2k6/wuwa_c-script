@@ -12,13 +12,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067E2 RID: 26594
+	// Token: 0x02005732 RID: 22322
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBackpackFight : UiPanelBase
 	{
-		// Token: 0x170096F8 RID: 38648
-		// (get) Token: 0x06042398 RID: 271256 RVA: 0x01011696 File Offset: 0x0100F896
+		// Token: 0x17006A39 RID: 27193
+		// (get) Token: 0x06036EEE RID: 225006 RVA: 0x00F52B2E File Offset: 0x00F50D2E
 		[Nullable(2)]
 		private UUIButtonComponent StartFightBtn
 		{
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042399 RID: 271257 RVA: 0x010116A0 File Offset: 0x0100F8A0
+		// Token: 0x06036EEF RID: 225007 RVA: 0x00F52B38 File Offset: 0x00F50D38
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604239A RID: 271258 RVA: 0x01011850 File Offset: 0x0100FA50
+		// Token: 0x06036EF0 RID: 225008 RVA: 0x00F52CE8 File Offset: 0x00F50EE8
 		protected override void OnStart()
 		{
 			ActivityDangoBrawlData activityDangoBrawlData = this.OpenParam as ActivityDangoBrawlData;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BindEvents();
 		}
 
-		// Token: 0x0604239B RID: 271259 RVA: 0x010118ED File Offset: 0x0100FAED
+		// Token: 0x06036EF1 RID: 225009 RVA: 0x00F52D85 File Offset: 0x00F50F85
 		protected override void OnBeforeDestroy()
 		{
 			this.UnbindGlobalInput();
@@ -94,33 +94,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.UnbindEvents();
 		}
 
-		// Token: 0x0604239C RID: 271260 RVA: 0x01011907 File Offset: 0x0100FB07
+		// Token: 0x06036EF2 RID: 225010 RVA: 0x00F52D9F File Offset: 0x00F50F9F
 		public void ClickFight()
 		{
 			this.OnClickFight();
 		}
 
-		// Token: 0x0604239D RID: 271261 RVA: 0x0101190F File Offset: 0x0100FB0F
+		// Token: 0x06036EF3 RID: 225011 RVA: 0x00F52DA7 File Offset: 0x00F50FA7
 		public bool IsFightBtnInteractive()
 		{
 			return this.IsExternalInteractive && !this.IsOverWeight;
 		}
 
-		// Token: 0x0604239E RID: 271262 RVA: 0x01011924 File Offset: 0x0100FB24
+		// Token: 0x06036EF4 RID: 225012 RVA: 0x00F52DBC File Offset: 0x00F50FBC
 		private void BindEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnDangoBrawlCostChanged, new Action(this.OnCostChanged));
 			EventSystem.Instance.Add(EEventName.OnDangoBrawlLoseCountChanged, new Action(this.OnLoseCountChanged));
 		}
 
-		// Token: 0x0604239F RID: 271263 RVA: 0x0101195E File Offset: 0x0100FB5E
+		// Token: 0x06036EF5 RID: 225013 RVA: 0x00F52DF6 File Offset: 0x00F50FF6
 		private void UnbindEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnDangoBrawlCostChanged, new Action(this.OnCostChanged));
 			EventSystem.Instance.Remove(EEventName.OnDangoBrawlLoseCountChanged, new Action(this.OnLoseCountChanged));
 		}
 
-		// Token: 0x060423A0 RID: 271264 RVA: 0x01011998 File Offset: 0x0100FB98
+		// Token: 0x06036EF6 RID: 225014 RVA: 0x00F52E30 File Offset: 0x00F51030
 		private void CreateSequencePlayer()
 		{
 			this.ClearSequencePlayer();
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SequencePlayer.BindOnEndSequenceEvent(new Action<string>(this.OnEndSequenceEvent));
 		}
 
-		// Token: 0x060423A1 RID: 271265 RVA: 0x010119F0 File Offset: 0x0100FBF0
+		// Token: 0x06036EF7 RID: 225015 RVA: 0x00F52E88 File Offset: 0x00F51088
 		private void ClearSequencePlayer()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x060423A2 RID: 271266 RVA: 0x01011A0A File Offset: 0x0100FC0A
+		// Token: 0x06036EF8 RID: 225016 RVA: 0x00F52EA2 File Offset: 0x00F510A2
 		private void BindGlobalInput()
 		{
 			this.MatchingBoundFrame = UKismetSystemLibrary.GetFrameCount();
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			InputDistributeController.Instance.BindTouch(0, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnGlobalTouchAction));
 		}
 
-		// Token: 0x060423A3 RID: 271267 RVA: 0x01011A4A File Offset: 0x0100FC4A
+		// Token: 0x06036EF9 RID: 225017 RVA: 0x00F52EE2 File Offset: 0x00F510E2
 		private void UnbindGlobalInput()
 		{
 			this.MatchingBoundFrame = -1L;
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			InputDistributeController.Instance.UnBindTouch(0, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnGlobalTouchAction));
 		}
 
-		// Token: 0x060423A4 RID: 271268 RVA: 0x01011A88 File Offset: 0x0100FC88
+		// Token: 0x06036EFA RID: 225018 RVA: 0x00F52F20 File Offset: 0x00F51120
 		private void TryCancelMatchingByHit()
 		{
 			if (this.State != EDangoBrawlFightState.Matching)
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.CancelMatching();
 		}
 
-		// Token: 0x060423A5 RID: 271269 RVA: 0x01011ABC File Offset: 0x0100FCBC
+		// Token: 0x06036EFB RID: 225019 RVA: 0x00F52F54 File Offset: 0x00F51154
 		private void CancelMatching()
 		{
 			if (this.State != EDangoBrawlFightState.Matching)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			matchingPromise.SetResult();
 		}
 
-		// Token: 0x060423A6 RID: 271270 RVA: 0x01011B08 File Offset: 0x0100FD08
+		// Token: 0x06036EFC RID: 225020 RVA: 0x00F52FA0 File Offset: 0x00F511A0
 		private void CompleteMatchingSeq()
 		{
 			CustomPromise matchingSeqPromise = this.MatchingSeqPromise;
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			matchingSeqPromise.SetResult();
 		}
 
-		// Token: 0x060423A7 RID: 271271 RVA: 0x01011B24 File Offset: 0x0100FD24
+		// Token: 0x06036EFD RID: 225021 RVA: 0x00F52FBC File Offset: 0x00F511BC
 		[NullableContext(2)]
 		private bool IsHitOnFightButton(UUIItem hit)
 		{
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return false;
 		}
 
-		// Token: 0x060423A8 RID: 271272 RVA: 0x01011B70 File Offset: 0x0100FD70
+		// Token: 0x06036EFE RID: 225022 RVA: 0x00F53008 File Offset: 0x00F51208
 		private void SetState(EDangoBrawlFightState val)
 		{
 			EDangoBrawlFightState state = this.State;
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			EventSystem.Instance.Emit<EDangoBrawlFightState, EDangoBrawlFightState>(EEventName.OnDangoBrawlFightStateModify, val, state);
 		}
 
-		// Token: 0x060423A9 RID: 271273 RVA: 0x01011C00 File Offset: 0x0100FE00
+		// Token: 0x06036EFF RID: 225023 RVA: 0x00F53098 File Offset: 0x00F51298
 		private void UpdateStateView()
 		{
 			base.GetItem(1).SetUIActive(false);
@@ -285,20 +285,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.UpdateMatchingState();
 		}
 
-		// Token: 0x060423AA RID: 271274 RVA: 0x01011C43 File Offset: 0x0100FE43
+		// Token: 0x06036F00 RID: 225024 RVA: 0x00F530DB File Offset: 0x00F512DB
 		private void UpdateWatingState()
 		{
 			base.GetItem(1).SetUIActive(true);
 		}
 
-		// Token: 0x060423AB RID: 271275 RVA: 0x01011C52 File Offset: 0x0100FE52
+		// Token: 0x06036F01 RID: 225025 RVA: 0x00F530EA File Offset: 0x00F512EA
 		private void UpdateMatchingState()
 		{
 			base.GetItem(2).SetUIActive(true);
 			this.SetMatchinProgress(0f);
 		}
 
-		// Token: 0x060423AC RID: 271276 RVA: 0x01011C6C File Offset: 0x0100FE6C
+		// Token: 0x06036F02 RID: 225026 RVA: 0x00F53104 File Offset: 0x00F51304
 		private void RefreshView()
 		{
 			DangoBrawlInstBaseNotify instBase = this.ActData.InstBase;
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.LoseCount = loseCount;
 		}
 
-		// Token: 0x060423AD RID: 271277 RVA: 0x01011E14 File Offset: 0x01010014
+		// Token: 0x06036F03 RID: 225027 RVA: 0x00F532AC File Offset: 0x00F514AC
 		private void SetMatchinProgress(float val)
 		{
 			float num = 0.166f + 0.668f * val;
@@ -385,14 +385,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x060423AE RID: 271278 RVA: 0x01011E6E File Offset: 0x0101006E
+		// Token: 0x06036F04 RID: 225028 RVA: 0x00F53306 File Offset: 0x00F51506
 		public void SetFightBtnInteractive(bool interactive)
 		{
 			this.IsExternalInteractive = interactive;
 			this.RefreshFightBtnInteractive();
 		}
 
-		// Token: 0x060423AF RID: 271279 RVA: 0x01011E80 File Offset: 0x01010080
+		// Token: 0x06036F05 RID: 225029 RVA: 0x00F53318 File Offset: 0x00F51518
 		private void RefreshFightBtnInteractive()
 		{
 			bool flag = this.IsExternalInteractive && !this.IsOverWeight;
@@ -404,7 +404,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			sprite.SetUIActive(!flag);
 		}
 
-		// Token: 0x060423B0 RID: 271280 RVA: 0x01011EB8 File Offset: 0x010100B8
+		// Token: 0x06036F06 RID: 225030 RVA: 0x00F53350 File Offset: 0x00F51550
 		private UniTask PlayMatchingProgressAsync()
 		{
 			DangoBrawlBackpackFight.<PlayMatchingProgressAsync>d__40 <PlayMatchingProgressAsync>d__;
@@ -415,7 +415,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <PlayMatchingProgressAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060423B1 RID: 271281 RVA: 0x01011EFB File Offset: 0x010100FB
+		// Token: 0x06036F07 RID: 225031 RVA: 0x00F53393 File Offset: 0x00F51593
 		private void StopMatchingTick()
 		{
 			if (this.MatchingTickId != -1)
@@ -425,7 +425,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060423B2 RID: 271282 RVA: 0x01011F20 File Offset: 0x01010120
+		// Token: 0x06036F08 RID: 225032 RVA: 0x00F533B8 File Offset: 0x00F515B8
 		private void RefreshFightEnable()
 		{
 			UUIButtonComponent startFightBtn = this.StartFightBtn;
@@ -447,12 +447,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshFightBtnInteractive();
 		}
 
-		// Token: 0x060423B3 RID: 271283 RVA: 0x01011F98 File Offset: 0x01010198
+		// Token: 0x06036F09 RID: 225033 RVA: 0x00F53430 File Offset: 0x00F51630
 		private void OnStartSequenceEvent(string sequenceStartEvent)
 		{
 		}
 
-		// Token: 0x060423B4 RID: 271284 RVA: 0x01011F9A File Offset: 0x0101019A
+		// Token: 0x06036F0A RID: 225034 RVA: 0x00F53432 File Offset: 0x00F51632
 		private void OnEndSequenceEvent(string sequenceStartEvent)
 		{
 			if (sequenceStartEvent == "Matching")
@@ -461,7 +461,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060423B5 RID: 271285 RVA: 0x01011FB0 File Offset: 0x010101B0
+		// Token: 0x06036F0B RID: 225035 RVA: 0x00F53448 File Offset: 0x00F51648
 		private void OnMatchingTick(float deltaMs, CustomPromise promise)
 		{
 			this.MatchingElapsedMs += deltaMs;
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SetMatchinProgress(num);
 		}
 
-		// Token: 0x060423B6 RID: 271286 RVA: 0x01012002 File Offset: 0x01010202
+		// Token: 0x06036F0C RID: 225036 RVA: 0x00F5349A File Offset: 0x00F5169A
 		private void OnGlobalAnyKey(bool bPress, FKey key)
 		{
 			if (!bPress)
@@ -491,7 +491,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.TryCancelMatchingByHit();
 		}
 
-		// Token: 0x060423B7 RID: 271287 RVA: 0x0101201C File Offset: 0x0101021C
+		// Token: 0x06036F0D RID: 225037 RVA: 0x00F534B4 File Offset: 0x00F516B4
 		private void OnGlobalTouchAction(string _, InputDistributeDefine.ITouchData touchData, InputIdentification __)
 		{
 			if (touchData.TouchType != InputDistributeDefine.ETouchType.TouchEnd)
@@ -505,7 +505,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.TryCancelMatchingByHit();
 		}
 
-		// Token: 0x060423B8 RID: 271288 RVA: 0x0101203C File Offset: 0x0101023C
+		// Token: 0x06036F0E RID: 225038 RVA: 0x00F534D4 File Offset: 0x00F516D4
 		private void OnClickFight()
 		{
 			if (this.State == EDangoBrawlFightState.Matching)
@@ -521,7 +521,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.OnClickFightAsync(battleManager).Forget();
 		}
 
-		// Token: 0x060423B9 RID: 271289 RVA: 0x010120A4 File Offset: 0x010102A4
+		// Token: 0x06036F0F RID: 225039 RVA: 0x00F5353C File Offset: 0x00F5173C
 		private UniTask OnClickFightAsync(DangoBrawlBattleManager manager)
 		{
 			DangoBrawlBackpackFight.<OnClickFightAsync>d__49 <OnClickFightAsync>d__;
@@ -533,86 +533,86 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnClickFightAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060423BA RID: 271290 RVA: 0x010120EF File Offset: 0x010102EF
+		// Token: 0x06036F10 RID: 225040 RVA: 0x00F53587 File Offset: 0x00F51787
 		private void OnCostChanged()
 		{
 			this.RefreshFightEnable();
 		}
 
-		// Token: 0x060423BB RID: 271291 RVA: 0x010120F7 File Offset: 0x010102F7
+		// Token: 0x06036F11 RID: 225041 RVA: 0x00F5358F File Offset: 0x00F5178F
 		private void OnLoseCountChanged()
 		{
 			this.RefreshView();
 		}
 
-		// Token: 0x040228FB RID: 141563
+		// Token: 0x0401D158 RID: 119128
 		private ActivityDangoBrawlData ActData;
 
-		// Token: 0x040228FC RID: 141564
+		// Token: 0x0401D159 RID: 119129
 		private EDangoBrawlFightState State;
 
-		// Token: 0x040228FD RID: 141565
+		// Token: 0x0401D15A RID: 119130
 		private int WinCount = -1;
 
-		// Token: 0x040228FE RID: 141566
+		// Token: 0x0401D15B RID: 119131
 		private int LoseCount = -1;
 
-		// Token: 0x040228FF RID: 141567
+		// Token: 0x0401D15C RID: 119132
 		private int MatchingTickId = -1;
 
-		// Token: 0x04022900 RID: 141568
+		// Token: 0x0401D15D RID: 119133
 		private float MatchingElapsedMs;
 
-		// Token: 0x04022901 RID: 141569
+		// Token: 0x0401D15E RID: 119134
 		private bool MatchingCanceled;
 
-		// Token: 0x04022902 RID: 141570
+		// Token: 0x0401D15F RID: 119135
 		private long MatchingBoundFrame = -1L;
 
-		// Token: 0x04022903 RID: 141571
+		// Token: 0x0401D160 RID: 119136
 		[Nullable(2)]
 		private CustomPromise MatchingPromise;
 
-		// Token: 0x04022904 RID: 141572
+		// Token: 0x0401D161 RID: 119137
 		[Nullable(2)]
 		private CustomPromise MatchingSeqPromise;
 
-		// Token: 0x04022905 RID: 141573
+		// Token: 0x0401D162 RID: 119138
 		private float MatchingDurationMs = 10000f;
 
-		// Token: 0x04022906 RID: 141574
+		// Token: 0x0401D163 RID: 119139
 		private bool IsExternalInteractive = true;
 
-		// Token: 0x04022907 RID: 141575
+		// Token: 0x0401D164 RID: 119140
 		private bool IsOverWeight;
 
-		// Token: 0x04022908 RID: 141576
+		// Token: 0x0401D165 RID: 119141
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0200C8F6 RID: 51446
+		// Token: 0x0200B2C6 RID: 45766
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403CAAF RID: 248495
+			// Token: 0x040373A4 RID: 226212
 			BtnFight,
-			// Token: 0x0403CAB0 RID: 248496
+			// Token: 0x040373A5 RID: 226213
 			PnlStart,
-			// Token: 0x0403CAB1 RID: 248497
+			// Token: 0x040373A6 RID: 226214
 			PnlMatching,
-			// Token: 0x0403CAB2 RID: 248498
+			// Token: 0x040373A7 RID: 226215
 			SprMatchingBar,
-			// Token: 0x0403CAB3 RID: 248499
+			// Token: 0x040373A8 RID: 226216
 			PnlMatchingRotate,
-			// Token: 0x0403CAB4 RID: 248500
+			// Token: 0x040373A9 RID: 226217
 			TxtLeftCost,
-			// Token: 0x0403CAB5 RID: 248501
+			// Token: 0x040373AA RID: 226218
 			TxtRightCost,
-			// Token: 0x0403CAB6 RID: 248502
+			// Token: 0x040373AB RID: 226219
 			SprDark,
-			// Token: 0x0403CAB7 RID: 248503
+			// Token: 0x040373AC RID: 226220
 			ItemIcon,
-			// Token: 0x0403CAB8 RID: 248504
+			// Token: 0x040373AD RID: 226221
 			ItemIconAddtional
 		}
 	}

@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200251B RID: 9499
+// Token: 0x02001A02 RID: 6658
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class PhoneMsgPhraseItem : GridProxyAbstract<string>
 {
-	// Token: 0x06013190 RID: 78224 RVA: 0x004BC3EF File Offset: 0x004BA5EF
+	// Token: 0x0601064F RID: 67151 RVA: 0x004CA0E7 File Offset: 0x004C82E7
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class PhoneMsgPhraseItem : GridProxyAbstract<string>
 		};
 	}
 
-	// Token: 0x06013191 RID: 78225 RVA: 0x004BC428 File Offset: 0x004BA628
+	// Token: 0x06010650 RID: 67152 RVA: 0x004CA120 File Offset: 0x004C8320
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -35,7 +35,7 @@ public class PhoneMsgPhraseItem : GridProxyAbstract<string>
 		extendToggle.CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 	}
 
-	// Token: 0x06013192 RID: 78226 RVA: 0x004BC483 File Offset: 0x004BA683
+	// Token: 0x06010651 RID: 67153 RVA: 0x004CA17B File Offset: 0x004C837B
 	[NullableContext(1)]
 	public override void Refresh(string contentText, bool isSelected, int gridIndex)
 	{
@@ -43,7 +43,7 @@ public class PhoneMsgPhraseItem : GridProxyAbstract<string>
 		base.GetText(1).SetText(contentText, true);
 	}
 
-	// Token: 0x06013193 RID: 78227 RVA: 0x004BC49A File Offset: 0x004BA69A
+	// Token: 0x06010652 RID: 67154 RVA: 0x004CA192 File Offset: 0x004C8392
 	private void OnClickToggle(EToggleState state)
 	{
 		Action<int> onClickDelegate = this.OnClickDelegate;
@@ -54,25 +54,25 @@ public class PhoneMsgPhraseItem : GridProxyAbstract<string>
 		onClickDelegate(base.GridIndex);
 	}
 
-	// Token: 0x06013194 RID: 78228 RVA: 0x004BC4B2 File Offset: 0x004BA6B2
+	// Token: 0x06010653 RID: 67155 RVA: 0x004CA1AA File Offset: 0x004C83AA
 	private bool CanExecuteChange()
 	{
 		return false;
 	}
 
-	// Token: 0x04009031 RID: 36913
+	// Token: 0x04009186 RID: 37254
 	protected string Data;
 
-	// Token: 0x04009032 RID: 36914
+	// Token: 0x04009187 RID: 37255
 	public Action<int> OnClickDelegate;
 
-	// Token: 0x02008AAA RID: 35498
+	// Token: 0x02007C31 RID: 31793
 	[NullableContext(0)]
 	private enum ETogPhraseComponent
 	{
-		// Token: 0x0402D07F RID: 184447
+		// Token: 0x04028393 RID: 164755
 		TogPhrase,
-		// Token: 0x0402D080 RID: 184448
+		// Token: 0x04028394 RID: 164756
 		TxtPhrase
 	}
 }

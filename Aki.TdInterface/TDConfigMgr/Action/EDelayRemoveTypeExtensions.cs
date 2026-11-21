@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022F9 RID: 8953
+	// Token: 0x0200256A RID: 9578
 	public static class EDelayRemoveTypeExtensions
 	{
-		// Token: 0x0600C3DF RID: 50143 RVA: 0x001C9B98 File Offset: 0x001C7D98
+		// Token: 0x0600CFB7 RID: 53175 RVA: 0x001E1B3C File Offset: 0x001DFD3C
 		public static string ToEnumString(this EDelayRemoveType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C3E0 RID: 50144 RVA: 0x001C9BC0 File Offset: 0x001C7DC0
+		// Token: 0x0600CFB8 RID: 53176 RVA: 0x001E1B64 File Offset: 0x001DFD64
 		public static EDelayRemoveType FromString(string name)
 		{
 			EDelayRemoveType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C3E1 RID: 50145 RVA: 0x001C9BE9 File Offset: 0x001C7DE9
+		// Token: 0x0600CFB9 RID: 53177 RVA: 0x001E1B8D File Offset: 0x001DFD8D
 		public static bool TryFromString(string name, out EDelayRemoveType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C3E2 RID: 50146 RVA: 0x001C9C0E File Offset: 0x001C7E0E
+		// Token: 0x0600CFBA RID: 53178 RVA: 0x001E1BB2 File Offset: 0x001DFDB2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C3E3 RID: 50147 RVA: 0x001C9C1E File Offset: 0x001C7E1E
+		// Token: 0x0600CFBB RID: 53179 RVA: 0x001E1BC2 File Offset: 0x001DFDC2
 		public static EDelayRemoveType[] GetValues()
 		{
 			return new EDelayRemoveType[1];
 		}
 
-		// Token: 0x0600C3E4 RID: 50148 RVA: 0x001C9C26 File Offset: 0x001C7E26
+		// Token: 0x0600CFBC RID: 53180 RVA: 0x001E1BCA File Offset: 0x001DFDCA
 		public static string[] GetNames()
 		{
 			return new string[]

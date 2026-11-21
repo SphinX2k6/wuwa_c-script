@@ -2,24 +2,24 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064E9 RID: 25833
+	// Token: 0x02006B54 RID: 27476
 	public enum ICreatePrefabConfig_Union : byte
 	{
-		// Token: 0x04010B27 RID: 68391
+		// Token: 0x0401193D RID: 71997
 		NONE,
-		// Token: 0x04010B28 RID: 68392
+		// Token: 0x0401193E RID: 71998
 		ICreatePrefabConfig,
-		// Token: 0x04010B29 RID: 68393
+		// Token: 0x0401193F RID: 71999
 		IPrefabConfig,
-		// Token: 0x04010B2A RID: 68394
+		// Token: 0x04011940 RID: 72000
 		IRandomPrefabConfig,
-		// Token: 0x04010B2B RID: 68395
+		// Token: 0x04011941 RID: 72001
 		ITowerDungeonPrefabConfig,
-		// Token: 0x04010B2C RID: 68396
+		// Token: 0x04011942 RID: 72002
 		IRoguePrefabConfig,
-		// Token: 0x04010B2D RID: 68397
+		// Token: 0x04011943 RID: 72003
 		ISlashTowerPrefabConfig,
-		// Token: 0x04010B2E RID: 68398
+		// Token: 0x04011944 RID: 72004
 		IRoleTowerPrefabConfig
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019FF RID: 6655
+	// Token: 0x02001B92 RID: 7058
 	public class IEnterMovieModeDurationType_SetValue
 	{
-		// Token: 0x04005859 RID: 22617
+		// Token: 0x04005CBB RID: 23739
 		public EEnterMovieModeDurationType Type;
 	}
 }

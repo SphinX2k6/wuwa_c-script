@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060FF RID: 24831
+	// Token: 0x0200507D RID: 20605
 	[NullableContext(2)]
 	public interface IRoverlikeBlessingReplaceParam
 	{
-		// Token: 0x17009161 RID: 37217
-		// (get) Token: 0x0603EC7F RID: 257151
-		// (set) Token: 0x0603EC80 RID: 257152
+		// Token: 0x170064C3 RID: 25795
+		// (get) Token: 0x06033941 RID: 211265
+		// (set) Token: 0x06033942 RID: 211266
 		int CurBlessId { get; set; }
 
-		// Token: 0x17009162 RID: 37218
-		// (get) Token: 0x0603EC81 RID: 257153
-		// (set) Token: 0x0603EC82 RID: 257154
+		// Token: 0x170064C4 RID: 25796
+		// (get) Token: 0x06033943 RID: 211267
+		// (set) Token: 0x06033944 RID: 211268
 		int NewBlessId { get; set; }
 
-		// Token: 0x17009163 RID: 37219
-		// (get) Token: 0x0603EC83 RID: 257155
-		// (set) Token: 0x0603EC84 RID: 257156
+		// Token: 0x170064C5 RID: 25797
+		// (get) Token: 0x06033945 RID: 211269
+		// (set) Token: 0x06033946 RID: 211270
 		ERoverlikeBlessingReplaceType Type { get; set; }
 
-		// Token: 0x17009164 RID: 37220
-		// (get) Token: 0x0603EC85 RID: 257157
-		// (set) Token: 0x0603EC86 RID: 257158
+		// Token: 0x170064C6 RID: 25798
+		// (get) Token: 0x06033947 RID: 211271
+		// (set) Token: 0x06033948 RID: 211272
 		Action OnConfirm { get; set; }
 	}
 }

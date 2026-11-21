@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CCA RID: 3274
+	// Token: 0x02000DAE RID: 3502
 	public struct FoleySynthConfig : IFlatbufferObject
 	{
-		// Token: 0x170013F3 RID: 5107
-		// (get) Token: 0x06007648 RID: 30280 RVA: 0x00241C7D File Offset: 0x0023FE7D
+		// Token: 0x17001450 RID: 5200
+		// (get) Token: 0x06007C53 RID: 31827 RVA: 0x00260951 File Offset: 0x0025EB51
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007649 RID: 30281 RVA: 0x00241C8A File Offset: 0x0023FE8A
+		// Token: 0x06007C54 RID: 31828 RVA: 0x0026095E File Offset: 0x0025EB5E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600764A RID: 30282 RVA: 0x00241C94 File Offset: 0x0023FE94
+		// Token: 0x06007C55 RID: 31829 RVA: 0x00260968 File Offset: 0x0025EB68
 		public static FoleySynthConfig GetRootAsFoleySynthConfig(ByteBuffer _bb)
 		{
 			return FoleySynthConfig.GetRootAsFoleySynthConfig(_bb, default(FoleySynthConfig));
 		}
 
-		// Token: 0x0600764B RID: 30283 RVA: 0x00241CB0 File Offset: 0x0023FEB0
+		// Token: 0x06007C56 RID: 31830 RVA: 0x00260984 File Offset: 0x0025EB84
 		public static FoleySynthConfig GetRootAsFoleySynthConfig(ByteBuffer _bb, FoleySynthConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600764C RID: 30284 RVA: 0x00241CCD File Offset: 0x0023FECD
+		// Token: 0x06007C57 RID: 31831 RVA: 0x002609A1 File Offset: 0x0025EBA1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600764D RID: 30285 RVA: 0x00241CDC File Offset: 0x0023FEDC
+		// Token: 0x06007C58 RID: 31832 RVA: 0x002609B0 File Offset: 0x0025EBB0
 		public FoleySynthConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170013F4 RID: 5108
-		// (get) Token: 0x0600764E RID: 30286 RVA: 0x00241CEC File Offset: 0x0023FEEC
+		// Token: 0x17001451 RID: 5201
+		// (get) Token: 0x06007C59 RID: 31833 RVA: 0x002609C0 File Offset: 0x0025EBC0
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170013F5 RID: 5109
-		// (get) Token: 0x0600764F RID: 30287 RVA: 0x00241D28 File Offset: 0x0023FF28
+		// Token: 0x17001452 RID: 5202
+		// (get) Token: 0x06007C5A RID: 31834 RVA: 0x002609FC File Offset: 0x0025EBFC
 		public string Name
 		{
 			get
@@ -79,19 +79,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007650 RID: 30288 RVA: 0x00241D5F File Offset: 0x0023FF5F
+		// Token: 0x06007C5B RID: 31835 RVA: 0x00260A33 File Offset: 0x0025EC33
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06007651 RID: 30289 RVA: 0x00241D6E File Offset: 0x0023FF6E
+		// Token: 0x06007C5C RID: 31836 RVA: 0x00260A42 File Offset: 0x0025EC42
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06007652 RID: 30290 RVA: 0x00241D88 File Offset: 0x0023FF88
+		// Token: 0x06007C5D RID: 31837 RVA: 0x00260A5C File Offset: 0x0025EC5C
 		public int Model1Config(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -102,8 +102,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170013F6 RID: 5110
-		// (get) Token: 0x06007653 RID: 30291 RVA: 0x00241DC8 File Offset: 0x0023FFC8
+		// Token: 0x17001453 RID: 5203
+		// (get) Token: 0x06007C5E RID: 31838 RVA: 0x00260A9C File Offset: 0x0025EC9C
 		public int Model1ConfigLength
 		{
 			get
@@ -117,19 +117,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007654 RID: 30292 RVA: 0x00241DF3 File Offset: 0x0023FFF3
+		// Token: 0x06007C5F RID: 31839 RVA: 0x00260AC7 File Offset: 0x0025ECC7
 		public Span<int> GetModel1ConfigBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06007655 RID: 30293 RVA: 0x00241E02 File Offset: 0x00240002
+		// Token: 0x06007C60 RID: 31840 RVA: 0x00260AD6 File Offset: 0x0025ECD6
 		public int[] GetModel1ConfigArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06007656 RID: 30294 RVA: 0x00241E1C File Offset: 0x0024001C
+		// Token: 0x06007C61 RID: 31841 RVA: 0x00260AF0 File Offset: 0x0025ECF0
 		public int Model2Config(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -140,8 +140,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170013F7 RID: 5111
-		// (get) Token: 0x06007657 RID: 30295 RVA: 0x00241E5C File Offset: 0x0024005C
+		// Token: 0x17001454 RID: 5204
+		// (get) Token: 0x06007C62 RID: 31842 RVA: 0x00260B30 File Offset: 0x0025ED30
 		public int Model2ConfigLength
 		{
 			get
@@ -155,20 +155,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007658 RID: 30296 RVA: 0x00241E88 File Offset: 0x00240088
+		// Token: 0x06007C63 RID: 31843 RVA: 0x00260B5C File Offset: 0x0025ED5C
 		public Span<int> GetModel2ConfigBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06007659 RID: 30297 RVA: 0x00241E98 File Offset: 0x00240098
+		// Token: 0x06007C64 RID: 31844 RVA: 0x00260B6C File Offset: 0x0025ED6C
 		public int[] GetModel2ConfigArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170013F8 RID: 5112
-		// (get) Token: 0x0600765A RID: 30298 RVA: 0x00241EB0 File Offset: 0x002400B0
+		// Token: 0x17001455 RID: 5205
+		// (get) Token: 0x06007C65 RID: 31845 RVA: 0x00260B84 File Offset: 0x0025ED84
 		public int Model2AccMaxCount
 		{
 			get
@@ -182,8 +182,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170013F9 RID: 5113
-		// (get) Token: 0x0600765B RID: 30299 RVA: 0x00241EF0 File Offset: 0x002400F0
+		// Token: 0x17001456 RID: 5206
+		// (get) Token: 0x06007C66 RID: 31846 RVA: 0x00260BC4 File Offset: 0x0025EDC4
 		public int Model2VelMaxCount
 		{
 			get
@@ -197,43 +197,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600765C RID: 30300 RVA: 0x00241F30 File Offset: 0x00240130
+		// Token: 0x06007C67 RID: 31847 RVA: 0x00260C01 File Offset: 0x0025EE01
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用Model1ConfigIter()或GetModel1ConfigBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Model1Config()
+		public int[] Model1Config()
 		{
-			FoleySynthConfig foleySynthConfig = this;
-			return foleySynthConfig.GetModel1ConfigArray() ?? Array.Empty<int>();
+			return this.GetModel1ConfigArray();
 		}
 
-		// Token: 0x0600765D RID: 30301 RVA: 0x00241F54 File Offset: 0x00240154
+		// Token: 0x06007C68 RID: 31848 RVA: 0x00260C09 File Offset: 0x0025EE09
 		[NullableContext(1)]
-		public readonly IEnumerable<int> Model1ConfigIter()
+		public IEnumerable<int> Model1ConfigIter()
 		{
 			FoleySynthConfig.<Model1ConfigIter>d__29 <Model1ConfigIter>d__ = new FoleySynthConfig.<Model1ConfigIter>d__29(-2);
 			<Model1ConfigIter>d__.<>3__<>4__this = this;
 			return <Model1ConfigIter>d__;
 		}
 
-		// Token: 0x0600765E RID: 30302 RVA: 0x00241F6C File Offset: 0x0024016C
+		// Token: 0x06007C69 RID: 31849 RVA: 0x00260C1E File Offset: 0x0025EE1E
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用Model2ConfigIter()或GetModel2ConfigBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Model2Config()
+		public int[] Model2Config()
 		{
-			FoleySynthConfig foleySynthConfig = this;
-			return foleySynthConfig.GetModel2ConfigArray() ?? Array.Empty<int>();
+			return this.GetModel2ConfigArray();
 		}
 
-		// Token: 0x0600765F RID: 30303 RVA: 0x00241F90 File Offset: 0x00240190
+		// Token: 0x06007C6A RID: 31850 RVA: 0x00260C26 File Offset: 0x0025EE26
 		[NullableContext(1)]
-		public readonly IEnumerable<int> Model2ConfigIter()
+		public IEnumerable<int> Model2ConfigIter()
 		{
 			FoleySynthConfig.<Model2ConfigIter>d__31 <Model2ConfigIter>d__ = new FoleySynthConfig.<Model2ConfigIter>d__31(-2);
 			<Model2ConfigIter>d__.<>3__<>4__this = this;
 			return <Model2ConfigIter>d__;
 		}
 
-		// Token: 0x04004D3A RID: 19770
+		// Token: 0x0400531E RID: 21278
 		private Table __p;
 	}
 }

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005ED4 RID: 24276
+	// Token: 0x02004EBB RID: 20155
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RegressPanel : UiPanelBase
 	{
-		// Token: 0x0603DB84 RID: 252804 RVA: 0x00EE8764 File Offset: 0x00EE6964
+		// Token: 0x06032B16 RID: 207638 RVA: 0x00E39F3C File Offset: 0x00E3813C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DB85 RID: 252805 RVA: 0x00EE884C File Offset: 0x00EE6A4C
+		// Token: 0x06032B17 RID: 207639 RVA: 0x00E3A024 File Offset: 0x00E38224
 		private void InitV2ActivityData()
 		{
 			this.V2Controller = (ActivityManager.GetActivityController(108) as ActivityNewPlayerSupportActivityV2Controller);
@@ -48,14 +48,14 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.IsV2ActivityValid = (PlayerInfoModel.Instance.NewbieGuideV2 && this.V2ActivityData != null && this.V2ActivityData.CheckIfInShowTime());
 		}
 
-		// Token: 0x0603DB86 RID: 252806 RVA: 0x00EE88AB File Offset: 0x00EE6AAB
+		// Token: 0x06032B18 RID: 207640 RVA: 0x00E3A083 File Offset: 0x00E38283
 		public bool CanShowV2Activity()
 		{
 			this.InitV2ActivityData();
 			return this.IsV2ActivityValid;
 		}
 
-		// Token: 0x0603DB87 RID: 252807 RVA: 0x00EE88BC File Offset: 0x00EE6ABC
+		// Token: 0x06032B19 RID: 207641 RVA: 0x00E3A094 File Offset: 0x00E38294
 		protected override void OnStart()
 		{
 			this.RemainTimeText = ConfigMultiTextLang.GetLocalTextNew("RegressPanelRemainTime", null);
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.OnTimerRefresh(0f);
 		}
 
-		// Token: 0x0603DB88 RID: 252808 RVA: 0x00EE8997 File Offset: 0x00EE6B97
+		// Token: 0x06032B1A RID: 207642 RVA: 0x00E3A16F File Offset: 0x00E3836F
 		[NullableContext(1)]
 		private List<int> GetRoleListForPanel(bool inRegress)
 		{
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			return ActivityRegressModel.Instance.GetGachaPoolUpRole();
 		}
 
-		// Token: 0x0603DB89 RID: 252809 RVA: 0x00EE89D0 File Offset: 0x00EE6BD0
+		// Token: 0x06032B1B RID: 207643 RVA: 0x00E3A1A8 File Offset: 0x00E383A8
 		private void OnTimerRefresh(float _)
 		{
 			if (this.ActivityData == null || !this.ActivityData.CheckIfInShowTime())
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			base.GetText(0).SetText(remainTimeText, true);
 		}
 
-		// Token: 0x0603DB8A RID: 252810 RVA: 0x00EE8A1D File Offset: 0x00EE6C1D
+		// Token: 0x06032B1C RID: 207644 RVA: 0x00E3A1F5 File Offset: 0x00E383F5
 		private void ClearTimer()
 		{
 			if (TimerSystem.GameplayTimeInstance.Has(this.RefreshTimer))
@@ -116,14 +116,14 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB8B RID: 252811 RVA: 0x00EE8A49 File Offset: 0x00EE6C49
+		// Token: 0x06032B1D RID: 207645 RVA: 0x00E3A221 File Offset: 0x00E38421
 		[NullableContext(1)]
 		private RoleItem InitRoleItem()
 		{
 			return new RoleItem();
 		}
 
-		// Token: 0x0603DB8C RID: 252812 RVA: 0x00EE8A50 File Offset: 0x00EE6C50
+		// Token: 0x06032B1E RID: 207646 RVA: 0x00E3A228 File Offset: 0x00E38428
 		private void OnClickJumpBtn()
 		{
 			if (ActivityRegressModel.Instance.CheckIfInShowTime)
@@ -150,17 +150,17 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			UiManager.Instance.OpenView(EUiViewName.ActivityRegressMainView, activityRegressMainViewOpenData2, null);
 		}
 
-		// Token: 0x0603DB8D RID: 252813 RVA: 0x00EE8AEC File Offset: 0x00EE6CEC
+		// Token: 0x06032B1F RID: 207647 RVA: 0x00E3A2C4 File Offset: 0x00E384C4
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearTimer();
 		}
 
-		// Token: 0x040203AB RID: 132011
+		// Token: 0x0401AE7A RID: 110202
 		[Nullable(1)]
 		private string RemainTimeText = "";
 
-		// Token: 0x040203AC RID: 132012
+		// Token: 0x0401AE7B RID: 110203
 		[Nullable(new byte[]
 		{
 			2,
@@ -168,19 +168,19 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 		})]
 		private GenericLayout<RoleItem, int> RoleLayout;
 
-		// Token: 0x040203AD RID: 132013
+		// Token: 0x0401AE7C RID: 110204
 		private TimerHandle RefreshTimer;
 
-		// Token: 0x040203AE RID: 132014
+		// Token: 0x0401AE7D RID: 110205
 		private ActivityBaseData ActivityData;
 
-		// Token: 0x040203AF RID: 132015
+		// Token: 0x0401AE7E RID: 110206
 		private ActivityNewPlayerSupportActivityV2Controller V2Controller;
 
-		// Token: 0x040203B0 RID: 132016
+		// Token: 0x0401AE7F RID: 110207
 		private ActivityBaseData V2ActivityData;
 
-		// Token: 0x040203B1 RID: 132017
+		// Token: 0x0401AE80 RID: 110208
 		private bool IsV2ActivityValid;
 	}
 }

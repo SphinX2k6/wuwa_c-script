@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005BA RID: 1466
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000625 RID: 1573
 	public class IParkourSpline : ISplineType
 	{
-		// Token: 0x06001EF0 RID: 7920 RVA: 0x00057288 File Offset: 0x00055488
+		// Token: 0x06002100 RID: 8448 RVA: 0x0005C2B4 File Offset: 0x0005A4B4
 		private IParkourSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001EF1 RID: 7921 RVA: 0x000572C0 File Offset: 0x000554C0
+		// Token: 0x06002101 RID: 8449 RVA: 0x0005C2EC File Offset: 0x0005A4EC
 		public static IParkourSpline Create([Nullable(2)] IParkourSpline instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001EF2 RID: 7922 RVA: 0x000572D3 File Offset: 0x000554D3
+		// Token: 0x06002102 RID: 8450 RVA: 0x0005C2FF File Offset: 0x0005A4FF
 		public static IParkourSpline CreateFromSetValue([Nullable(2)] IParkourSpline_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001EF3 RID: 7923 RVA: 0x000572E8 File Offset: 0x000554E8
+		// Token: 0x06002103 RID: 8451 RVA: 0x0005C314 File Offset: 0x0005A514
 		public new IParkourSpline_SetValue ToSetValue()
 		{
 			return new IParkourSpline_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000840 RID: 2112
-		// (get) Token: 0x06001EF4 RID: 7924 RVA: 0x0005735A File Offset: 0x0005555A
-		// (set) Token: 0x06001EF5 RID: 7925 RVA: 0x00057385 File Offset: 0x00055585
+		// Token: 0x170008C7 RID: 2247
+		// (get) Token: 0x06002104 RID: 8452 RVA: 0x0005C386 File Offset: 0x0005A586
+		// (set) Token: 0x06002105 RID: 8453 RVA: 0x0005C3B1 File Offset: 0x0005A5B1
 		public override ESplineType Type
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000841 RID: 2113
-		// (get) Token: 0x06001EF6 RID: 7926 RVA: 0x00057393 File Offset: 0x00055593
-		// (set) Token: 0x06001EF7 RID: 7927 RVA: 0x000573BE File Offset: 0x000555BE
+		// Token: 0x170008C8 RID: 2248
+		// (get) Token: 0x06002106 RID: 8454 RVA: 0x0005C3BF File Offset: 0x0005A5BF
+		// (set) Token: 0x06002107 RID: 8455 RVA: 0x0005C3EA File Offset: 0x0005A5EA
 		public virtual bool IsRequireToEnd
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000842 RID: 2114
-		// (get) Token: 0x06001EF8 RID: 7928 RVA: 0x000573CC File Offset: 0x000555CC
-		// (set) Token: 0x06001EF9 RID: 7929 RVA: 0x000573F7 File Offset: 0x000555F7
+		// Token: 0x170008C9 RID: 2249
+		// (get) Token: 0x06002108 RID: 8456 RVA: 0x0005C3F8 File Offset: 0x0005A5F8
+		// (set) Token: 0x06002109 RID: 8457 RVA: 0x0005C423 File Offset: 0x0005A623
 		public virtual int CheckPointsRequire
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000843 RID: 2115
-		// (get) Token: 0x06001EFA RID: 7930 RVA: 0x00057405 File Offset: 0x00055605
-		// (set) Token: 0x06001EFB RID: 7931 RVA: 0x00057430 File Offset: 0x00055630
+		// Token: 0x170008CA RID: 2250
+		// (get) Token: 0x0600210A RID: 8458 RVA: 0x0005C431 File Offset: 0x0005A631
+		// (set) Token: 0x0600210B RID: 8459 RVA: 0x0005C45C File Offset: 0x0005A65C
 		public virtual string CheckPointResource
 		{
 			get
@@ -155,9 +153,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000844 RID: 2116
-		// (get) Token: 0x06001EFC RID: 7932 RVA: 0x0005743E File Offset: 0x0005563E
-		// (set) Token: 0x06001EFD RID: 7933 RVA: 0x00057465 File Offset: 0x00055665
+		// Token: 0x170008CB RID: 2251
+		// (get) Token: 0x0600210C RID: 8460 RVA: 0x0005C46A File Offset: 0x0005A66A
+		// (set) Token: 0x0600210D RID: 8461 RVA: 0x0005C491 File Offset: 0x0005A691
 		[Nullable(2)]
 		public virtual string CheckPointsDestroyRes
 		{
@@ -182,9 +180,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000845 RID: 2117
-		// (get) Token: 0x06001EFE RID: 7934 RVA: 0x00057473 File Offset: 0x00055673
-		// (set) Token: 0x06001EFF RID: 7935 RVA: 0x0005749A File Offset: 0x0005569A
+		// Token: 0x170008CC RID: 2252
+		// (get) Token: 0x0600210E RID: 8462 RVA: 0x0005C49F File Offset: 0x0005A69F
+		// (set) Token: 0x0600210F RID: 8463 RVA: 0x0005C4C6 File Offset: 0x0005A6C6
 		[Nullable(2)]
 		public virtual string StartResource
 		{
@@ -209,9 +207,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000846 RID: 2118
-		// (get) Token: 0x06001F00 RID: 7936 RVA: 0x000574A8 File Offset: 0x000556A8
-		// (set) Token: 0x06001F01 RID: 7937 RVA: 0x000574CF File Offset: 0x000556CF
+		// Token: 0x170008CD RID: 2253
+		// (get) Token: 0x06002110 RID: 8464 RVA: 0x0005C4D4 File Offset: 0x0005A6D4
+		// (set) Token: 0x06002111 RID: 8465 RVA: 0x0005C4FB File Offset: 0x0005A6FB
 		[Nullable(2)]
 		public virtual string EndResource
 		{
@@ -236,9 +234,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000847 RID: 2119
-		// (get) Token: 0x06001F02 RID: 7938 RVA: 0x000574E0 File Offset: 0x000556E0
-		// (set) Token: 0x06001F03 RID: 7939 RVA: 0x00057573 File Offset: 0x00055773
+		// Token: 0x170008CE RID: 2254
+		// (get) Token: 0x06002112 RID: 8466 RVA: 0x0005C50C File Offset: 0x0005A70C
+		// (set) Token: 0x06002113 RID: 8467 RVA: 0x0005C59F File Offset: 0x0005A79F
 		public virtual List<IParkourSplinePoint> Points
 		{
 			get
@@ -274,18 +272,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040015F0 RID: 5616
+		// Token: 0x04001764 RID: 5988
 		[Nullable(2)]
 		protected new IParkourSpline FbInstance;
 
-		// Token: 0x040015F1 RID: 5617
+		// Token: 0x04001765 RID: 5989
 		[Nullable(2)]
 		protected new IParkourSpline_SetValue PocoInterface;
 
-		// Token: 0x040015F2 RID: 5618
+		// Token: 0x04001766 RID: 5990
 		private List<IParkourSplinePoint> _PointsCache;
 
-		// Token: 0x040015F3 RID: 5619
+		// Token: 0x04001767 RID: 5991
 		private bool _PointsInited;
 	}
 }

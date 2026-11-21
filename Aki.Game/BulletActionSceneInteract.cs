@@ -4,15 +4,15 @@ using AkiClient.Game.Aki.Core.Fight;
 using CSharpScript.Game.Module;
 using UnrealEngine;
 
-// Token: 0x02002D96 RID: 11670
+// Token: 0x020022F0 RID: 8944
 public class BulletActionSceneInteract : BulletActionBase
 {
-	// Token: 0x06018846 RID: 100422 RVA: 0x0064264A File Offset: 0x0064084A
+	// Token: 0x060160EA RID: 90346 RVA: 0x00668406 File Offset: 0x00666606
 	public BulletActionSceneInteract(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x06018847 RID: 100423 RVA: 0x00642654 File Offset: 0x00640854
+	// Token: 0x060160EB RID: 90347 RVA: 0x00668410 File Offset: 0x00666610
 	protected override void OnExecute()
 	{
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -59,7 +59,7 @@ public class BulletActionSceneInteract : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018848 RID: 100424 RVA: 0x006427AC File Offset: 0x006409AC
+	// Token: 0x060160EC RID: 90348 RVA: 0x00668568 File Offset: 0x00666768
 	[NullableContext(1)]
 	private void UpdateLocation(Vector outVector, FVectorDouble? offset = null)
 	{
@@ -76,7 +76,7 @@ public class BulletActionSceneInteract : BulletActionBase
 		outVector.AdditionEqual(collisionLocation);
 	}
 
-	// Token: 0x06018849 RID: 100425 RVA: 0x0064280C File Offset: 0x00640A0C
+	// Token: 0x060160ED RID: 90349 RVA: 0x006685C8 File Offset: 0x006667C8
 	private float GetRadius()
 	{
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -97,13 +97,13 @@ public class BulletActionSceneInteract : BulletActionBase
 		return result;
 	}
 
-	// Token: 0x0601884A RID: 100426 RVA: 0x0064285F File Offset: 0x00640A5F
+	// Token: 0x060160EE RID: 90350 RVA: 0x0066861B File Offset: 0x0066681B
 	public override void Clear()
 	{
 		base.Clear();
 		SceneBattleInteractModel.Instance.DestroySceneBattleInteract(this.HandleId);
 	}
 
-	// Token: 0x0400B5DF RID: 46559
+	// Token: 0x0400B955 RID: 47445
 	private int HandleId;
 }

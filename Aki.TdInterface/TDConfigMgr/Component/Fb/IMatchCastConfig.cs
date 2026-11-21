@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B30 RID: 2864
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000BFE RID: 3070
 	public class IMatchCastConfig
 	{
-		// Token: 0x06004224 RID: 16932 RVA: 0x000A9783 File Offset: 0x000A7983
+		// Token: 0x0600467D RID: 18045 RVA: 0x000B3847 File Offset: 0x000B1A47
 		public static IMatchCastConfig Create(IMatchCastConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001181 RID: 4481
-		// (get) Token: 0x06004225 RID: 16933 RVA: 0x000A97A2 File Offset: 0x000A79A2
+		// Token: 0x1700127C RID: 4732
+		// (get) Token: 0x0600467E RID: 18046 RVA: 0x000B3866 File Offset: 0x000B1A66
 		public virtual int Time
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001182 RID: 4482
-		// (get) Token: 0x06004226 RID: 16934 RVA: 0x000A97AF File Offset: 0x000A79AF
+		// Token: 0x1700127D RID: 4733
+		// (get) Token: 0x0600467F RID: 18047 RVA: 0x000B3873 File Offset: 0x000B1A73
 		public virtual string Spline
 		{
 			get
@@ -43,19 +41,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001183 RID: 4483
-		// (get) Token: 0x06004227 RID: 16935 RVA: 0x000A97BC File Offset: 0x000A79BC
+		// Token: 0x1700127E RID: 4734
+		// (get) Token: 0x06004680 RID: 18048 RVA: 0x000B3880 File Offset: 0x000B1A80
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMatchSequence> MatchSequence
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -78,8 +76,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001184 RID: 4484
-		// (get) Token: 0x06004228 RID: 16936 RVA: 0x000A9836 File Offset: 0x000A7A36
+		// Token: 0x1700127F RID: 4735
+		// (get) Token: 0x06004681 RID: 18049 RVA: 0x000B38FA File Offset: 0x000B1AFA
 		[Nullable(2)]
 		public virtual string SpeedCurve
 		{
@@ -90,18 +88,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400254F RID: 9551
+		// Token: 0x04002797 RID: 10135
 		private IMatchCastConfig Instance;
 
-		// Token: 0x04002550 RID: 9552
+		// Token: 0x04002798 RID: 10136
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMatchSequence> _MatchSequenceCache;
 
-		// Token: 0x04002551 RID: 9553
+		// Token: 0x04002799 RID: 10137
 		private bool _MatchSequenceInited;
 	}
 }

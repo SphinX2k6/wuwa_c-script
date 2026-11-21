@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200183C RID: 6204
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019C7 RID: 6599
 	public class ICameraDepthOfField
 	{
-		// Token: 0x0600851D RID: 34077 RVA: 0x0013CB4C File Offset: 0x0013AD4C
+		// Token: 0x06008C43 RID: 35907 RVA: 0x0014C340 File Offset: 0x0014A540
 		private ICameraDepthOfField_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600851E RID: 34078 RVA: 0x0013CB84 File Offset: 0x0013AD84
+		// Token: 0x06008C44 RID: 35908 RVA: 0x0014C378 File Offset: 0x0014A578
 		public static ICameraDepthOfField Create([Nullable(2)] ICameraDepthOfField instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600851F RID: 34079 RVA: 0x0013CB97 File Offset: 0x0013AD97
+		// Token: 0x06008C45 RID: 35909 RVA: 0x0014C38B File Offset: 0x0014A58B
 		public static ICameraDepthOfField CreateFromSetValue([Nullable(2)] ICameraDepthOfField_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008520 RID: 34080 RVA: 0x0013CBAA File Offset: 0x0013ADAA
+		// Token: 0x06008C46 RID: 35910 RVA: 0x0014C39E File Offset: 0x0014A59E
 		public ICameraDepthOfField_SetValue ToSetValue()
 		{
 			return new ICameraDepthOfField_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B89 RID: 11145
-		// (get) Token: 0x06008521 RID: 34081 RVA: 0x0013CBE4 File Offset: 0x0013ADE4
-		// (set) Token: 0x06008522 RID: 34082 RVA: 0x0013CC1E File Offset: 0x0013AE1E
+		// Token: 0x17002D83 RID: 11651
+		// (get) Token: 0x06008C47 RID: 35911 RVA: 0x0014C3D8 File Offset: 0x0014A5D8
+		// (set) Token: 0x06008C48 RID: 35912 RVA: 0x0014C412 File Offset: 0x0014A612
 		public virtual float? Fstop
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B8A RID: 11146
-		// (get) Token: 0x06008523 RID: 34083 RVA: 0x0013CC2C File Offset: 0x0013AE2C
-		// (set) Token: 0x06008524 RID: 34084 RVA: 0x0013CC66 File Offset: 0x0013AE66
+		// Token: 0x17002D84 RID: 11652
+		// (get) Token: 0x06008C49 RID: 35913 RVA: 0x0014C420 File Offset: 0x0014A620
+		// (set) Token: 0x06008C4A RID: 35914 RVA: 0x0014C45A File Offset: 0x0014A65A
 		public virtual float? Distance
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B8B RID: 11147
-		// (get) Token: 0x06008525 RID: 34085 RVA: 0x0013CC74 File Offset: 0x0013AE74
-		// (set) Token: 0x06008526 RID: 34086 RVA: 0x0013CCAE File Offset: 0x0013AEAE
+		// Token: 0x17002D85 RID: 11653
+		// (get) Token: 0x06008C4B RID: 35915 RVA: 0x0014C468 File Offset: 0x0014A668
+		// (set) Token: 0x06008C4C RID: 35916 RVA: 0x0014C4A2 File Offset: 0x0014A6A2
 		public virtual float? BlurAmount
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B8C RID: 11148
-		// (get) Token: 0x06008527 RID: 34087 RVA: 0x0013CCBC File Offset: 0x0013AEBC
-		// (set) Token: 0x06008528 RID: 34088 RVA: 0x0013CCF6 File Offset: 0x0013AEF6
+		// Token: 0x17002D86 RID: 11654
+		// (get) Token: 0x06008C4D RID: 35917 RVA: 0x0014C4B0 File Offset: 0x0014A6B0
+		// (set) Token: 0x06008C4E RID: 35918 RVA: 0x0014C4EA File Offset: 0x0014A6EA
 		public virtual float? BlurRadius
 		{
 			get
@@ -158,11 +156,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005420 RID: 21536
+		// Token: 0x0400586C RID: 22636
 		[Nullable(2)]
 		protected ICameraDepthOfField FbInstance;
 
-		// Token: 0x04005421 RID: 21537
+		// Token: 0x0400586D RID: 22637
 		[Nullable(2)]
 		protected ICameraDepthOfField_SetValue PocoInterface;
 	}

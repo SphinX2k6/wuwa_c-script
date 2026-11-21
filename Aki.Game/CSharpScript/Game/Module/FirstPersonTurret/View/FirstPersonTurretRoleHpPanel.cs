@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FirstPersonTurret.View
 {
-	// Token: 0x02005A83 RID: 23171
+	// Token: 0x02004A5F RID: 19039
 	public class FirstPersonTurretRoleHpPanel : UiPanelBase
 	{
-		// Token: 0x0603AAF7 RID: 240375 RVA: 0x00DF9BA4 File Offset: 0x00DF7DA4
+		// Token: 0x0602FA40 RID: 195136 RVA: 0x00D4A138 File Offset: 0x00D48338
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603AAF8 RID: 240376 RVA: 0x00DF9CB4 File Offset: 0x00DF7EB4
+		// Token: 0x0602FA41 RID: 195137 RVA: 0x00D4A248 File Offset: 0x00D48448
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FirstPersonTurretRoleHpPanel.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AAF9 RID: 240377 RVA: 0x00DF9CF8 File Offset: 0x00DF7EF8
+		// Token: 0x0602FA42 RID: 195138 RVA: 0x00D4A28C File Offset: 0x00D4848C
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(1);
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			item6.SetUIActive(false);
 		}
 
-		// Token: 0x0603AAFA RID: 240378 RVA: 0x00DF9D76 File Offset: 0x00DF7F76
+		// Token: 0x0602FA43 RID: 195139 RVA: 0x00D4A30A File Offset: 0x00D4850A
 		public void Refresh(float hp, float hpMax)
 		{
 			FirstPersonTurretRoleHpItem hpItem = this.HpItem;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			hpItem.Refresh(hp, hpMax);
 		}
 
-		// Token: 0x0603AAFB RID: 240379 RVA: 0x00DF9D8A File Offset: 0x00DF7F8A
+		// Token: 0x0602FA44 RID: 195140 RVA: 0x00D4A31E File Offset: 0x00D4851E
 		public void Tick(float delta)
 		{
 			FirstPersonTurretRoleHpItem hpItem = this.HpItem;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			hpItem.Tick(delta);
 		}
 
-		// Token: 0x0401EA1F RID: 125471
+		// Token: 0x040194C6 RID: 103622
 		[Nullable(2)]
 		private FirstPersonTurretRoleHpItem HpItem;
 	}

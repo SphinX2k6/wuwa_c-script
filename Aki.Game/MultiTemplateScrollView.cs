@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002CDF RID: 11487
+// Token: 0x02002238 RID: 8760
 [NullableContext(1)]
 [Nullable(0)]
 public class MultiTemplateScrollView
 {
-	// Token: 0x060181BD RID: 98749 RVA: 0x00621978 File Offset: 0x0061FB78
+	// Token: 0x06015A3C RID: 88636 RVA: 0x006475EC File Offset: 0x006457EC
 	public MultiTemplateScrollView(UUIMultiTemplateScrollViewComponent scrollView)
 	{
 		this.ScrollView = scrollView;
@@ -28,10 +27,10 @@ public class MultiTemplateScrollView
 		}
 	}
 
-	// Token: 0x060181BE RID: 98750 RVA: 0x00621A64 File Offset: 0x0061FC64
+	// Token: 0x06015A3D RID: 88637 RVA: 0x006476D8 File Offset: 0x006458D8
 	public void RefreshByData(MultiTemplateScrollViewRefreshContext context)
 	{
-		List<IMultiTemplateGridData> list = context.DataList.ToList<IMultiTemplateGridData>();
+		List<IMultiTemplateGridData> list = new List<IMultiTemplateGridData>(context.DataList);
 		this.DataList = list;
 		TArray<int> tarray = new TArray<int>();
 		foreach (IMultiTemplateGridData multiTemplateGridData in list)
@@ -45,7 +44,7 @@ public class MultiTemplateScrollView
 		}
 	}
 
-	// Token: 0x060181BF RID: 98751 RVA: 0x00621AFC File Offset: 0x0061FCFC
+	// Token: 0x06015A3E RID: 88638 RVA: 0x00647770 File Offset: 0x00645970
 	[NullableContext(2)]
 	private void OnItemCreate(int gridIndex, AUIBaseActor actor)
 	{
@@ -96,7 +95,7 @@ public class MultiTemplateScrollView
 		this.ProxyItems[uiitem] = syncGridProxy;
 	}
 
-	// Token: 0x060181C0 RID: 98752 RVA: 0x00621C34 File Offset: 0x0061FE34
+	// Token: 0x06015A3F RID: 88639 RVA: 0x006478A8 File Offset: 0x00645AA8
 	[NullableContext(2)]
 	private void OnItemRefresh(int gridIndex, AUIBaseActor actor)
 	{
@@ -137,7 +136,7 @@ public class MultiTemplateScrollView
 		syncGridProxy.Refresh(multiTemplateGridData.Data);
 	}
 
-	// Token: 0x060181C1 RID: 98753 RVA: 0x00621D20 File Offset: 0x0061FF20
+	// Token: 0x06015A40 RID: 88640 RVA: 0x00647994 File Offset: 0x00645B94
 	[NullableContext(2)]
 	private void OnItemClear(int gridIndex, AUIBaseActor actor)
 	{
@@ -177,19 +176,19 @@ public class MultiTemplateScrollView
 		syncGridProxy.Clear();
 	}
 
-	// Token: 0x060181C2 RID: 98754 RVA: 0x00621DF7 File Offset: 0x0061FFF7
+	// Token: 0x06015A41 RID: 88641 RVA: 0x00647A6B File Offset: 0x00645C6B
 	public bool IsGridDisplaying(int gridIndex)
 	{
 		return this.ScrollView.IsInDisplayRange(gridIndex, true);
 	}
 
-	// Token: 0x060181C3 RID: 98755 RVA: 0x00621E06 File Offset: 0x00620006
+	// Token: 0x06015A42 RID: 88642 RVA: 0x00647A7A File Offset: 0x00645C7A
 	private bool OnCheckItemNavigable(int gridIndex)
 	{
 		return gridIndex < 0 || gridIndex >= this.DataList.Count || this.DataList[gridIndex].IsNavigable();
 	}
 
-	// Token: 0x060181C4 RID: 98756 RVA: 0x00621E30 File Offset: 0x00620030
+	// Token: 0x06015A43 RID: 88643 RVA: 0x00647AA4 File Offset: 0x00645CA4
 	[NullableContext(2)]
 	public ISyncGridProxy GetProxyByGridIndex(int gridIndex)
 	{
@@ -206,7 +205,7 @@ public class MultiTemplateScrollView
 		return null;
 	}
 
-	// Token: 0x060181C5 RID: 98757 RVA: 0x00621E6C File Offset: 0x0062006C
+	// Token: 0x06015A44 RID: 88644 RVA: 0x00647AE0 File Offset: 0x00645CE0
 	public bool RefreshProxyDirectly(int gridIndex)
 	{
 		ISyncGridProxy proxyByGridIndex = this.GetProxyByGridIndex(gridIndex);
@@ -218,7 +217,7 @@ public class MultiTemplateScrollView
 		return true;
 	}
 
-	// Token: 0x060181C6 RID: 98758 RVA: 0x00621EA0 File Offset: 0x006200A0
+	// Token: 0x06015A45 RID: 88645 RVA: 0x00647B14 File Offset: 0x00645D14
 	public bool RefreshProxyByData(int gridIndex, IMultiTemplateGridData data)
 	{
 		ISyncGridProxy proxyByGridIndex = this.GetProxyByGridIndex(gridIndex);
@@ -231,7 +230,7 @@ public class MultiTemplateScrollView
 		return true;
 	}
 
-	// Token: 0x060181C7 RID: 98759 RVA: 0x00621ED4 File Offset: 0x006200D4
+	// Token: 0x06015A46 RID: 88646 RVA: 0x00647B48 File Offset: 0x00645D48
 	public void PlayGridAnim(string animName)
 	{
 		if (this.InturnAnimController != null)
@@ -240,16 +239,16 @@ public class MultiTemplateScrollView
 		}
 	}
 
-	// Token: 0x0400B356 RID: 45910
+	// Token: 0x0400B6C2 RID: 46786
 	protected List<IMultiTemplateGridData> DataList = new List<IMultiTemplateGridData>();
 
-	// Token: 0x0400B357 RID: 45911
+	// Token: 0x0400B6C3 RID: 46787
 	private readonly Dictionary<UUIItem, ISyncGridProxy> ProxyItems = new Dictionary<UUIItem, ISyncGridProxy>();
 
-	// Token: 0x0400B358 RID: 45912
+	// Token: 0x0400B6C4 RID: 46788
 	[Nullable(2)]
 	private readonly UUIInturnAnimController InturnAnimController;
 
-	// Token: 0x0400B359 RID: 45913
+	// Token: 0x0400B6C5 RID: 46789
 	public readonly UUIMultiTemplateScrollViewComponent ScrollView;
 }

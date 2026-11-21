@@ -8,27 +8,27 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Define.SimpleTabel
 {
-	// Token: 0x0200024C RID: 588
+	// Token: 0x02000251 RID: 593
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class TableReader<[Nullable(0)] T> where T : TableBaseRow
 	{
-		// Token: 0x06000EC6 RID: 3782
+		// Token: 0x06000F07 RID: 3847
 		protected abstract string GetTableName();
 
-		// Token: 0x06000EC7 RID: 3783
+		// Token: 0x06000F08 RID: 3848
 		protected abstract string GetDbFile();
 
-		// Token: 0x06000EC8 RID: 3784
+		// Token: 0x06000F09 RID: 3849
 		protected abstract string GetIdString();
 
-		// Token: 0x06000EC9 RID: 3785 RVA: 0x00056A9A File Offset: 0x00054C9A
+		// Token: 0x06000F0A RID: 3850 RVA: 0x000595DE File Offset: 0x000577DE
 		private string GetDbPath()
 		{
 			return KuroApplication.ProjectContentDir() + "Aki/ConfigDB/" + this.GetDbFile();
 		}
 
-		// Token: 0x06000ECA RID: 3786 RVA: 0x00056AB4 File Offset: 0x00054CB4
+		// Token: 0x06000F0B RID: 3851 RVA: 0x000595F8 File Offset: 0x000577F8
 		[NullableContext(2)]
 		public T GetById(int id)
 		{
@@ -40,7 +40,7 @@ namespace CSharpScript.Launcher.Define.SimpleTabel
 			return this.LoadFromDbById(id, id.ToString());
 		}
 
-		// Token: 0x06000ECB RID: 3787 RVA: 0x00056AEC File Offset: 0x00054CEC
+		// Token: 0x06000F0C RID: 3852 RVA: 0x00059630 File Offset: 0x00057830
 		[return: Nullable(2)]
 		public T GetById(string id)
 		{
@@ -52,7 +52,7 @@ namespace CSharpScript.Launcher.Define.SimpleTabel
 			return this.LoadFromDbById(id, id);
 		}
 
-		// Token: 0x06000ECC RID: 3788 RVA: 0x00056B14 File Offset: 0x00054D14
+		// Token: 0x06000F0D RID: 3853 RVA: 0x00059658 File Offset: 0x00057858
 		[return: Nullable(2)]
 		private T LoadFromDbById(object id, string tempId)
 		{
@@ -107,7 +107,7 @@ namespace CSharpScript.Launcher.Define.SimpleTabel
 			return t;
 		}
 
-		// Token: 0x06000ECD RID: 3789 RVA: 0x00056C88 File Offset: 0x00054E88
+		// Token: 0x06000F0E RID: 3854 RVA: 0x000597CC File Offset: 0x000579CC
 		protected List<T> LoadFromDb()
 		{
 			string sql = "SELECT BinData FROM `" + this.GetTableName() + "`";
@@ -157,10 +157,10 @@ namespace CSharpScript.Launcher.Define.SimpleTabel
 			return result;
 		}
 
-		// Token: 0x06000ECE RID: 3790
+		// Token: 0x06000F0F RID: 3855
 		public abstract T Parse(ByteBuffer byteBuffer);
 
-		// Token: 0x06000ECF RID: 3791 RVA: 0x00056DBC File Offset: 0x00054FBC
+		// Token: 0x06000F10 RID: 3856 RVA: 0x00059900 File Offset: 0x00057B00
 		public List<T> GetAll()
 		{
 			if (this.Rows.Count == 0)
@@ -170,10 +170,10 @@ namespace CSharpScript.Launcher.Define.SimpleTabel
 			return this.Rows;
 		}
 
-		// Token: 0x0400097E RID: 2430
+		// Token: 0x040009C6 RID: 2502
 		protected List<T> Rows = new List<T>();
 
-		// Token: 0x0400097F RID: 2431
+		// Token: 0x040009C7 RID: 2503
 		protected Dictionary<object, T> RowMap = new Dictionary<object, T>();
 	}
 }

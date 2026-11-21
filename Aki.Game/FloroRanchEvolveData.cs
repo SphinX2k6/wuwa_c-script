@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001AF5 RID: 6901
+// Token: 0x02000FB4 RID: 4020
 public class FloroRanchEvolveData
 {
-	// Token: 0x0600CCE2 RID: 52450 RVA: 0x002EC614 File Offset: 0x002EA814
+	// Token: 0x0600A0F3 RID: 41203 RVA: 0x002F7700 File Offset: 0x002F5900
 	[NullableContext(1)]
 	public FloroRanchEvolveData(FREvolveData evolveData)
 	{
@@ -15,7 +15,7 @@ public class FloroRanchEvolveData
 		this.IsValid = true;
 	}
 
-	// Token: 0x0600CCE3 RID: 52451 RVA: 0x002EC64F File Offset: 0x002EA84F
+	// Token: 0x0600A0F4 RID: 41204 RVA: 0x002F773B File Offset: 0x002F593B
 	[NullableContext(2)]
 	public void Refresh(FREvolveData evolveData)
 	{
@@ -30,18 +30,18 @@ public class FloroRanchEvolveData
 		this.IsValid = false;
 	}
 
-	// Token: 0x04005E07 RID: 24071
+	// Token: 0x04005ED6 RID: 24278
 	public int CurExp;
 
-	// Token: 0x04005E08 RID: 24072
+	// Token: 0x04005ED7 RID: 24279
 	public int CurLevel;
 
-	// Token: 0x04005E09 RID: 24073
+	// Token: 0x04005ED8 RID: 24280
 	public int MaxLevel = 100;
 
-	// Token: 0x04005E0A RID: 24074
+	// Token: 0x04005ED9 RID: 24281
 	public int ExpPerLevel;
 
-	// Token: 0x04005E0B RID: 24075
+	// Token: 0x04005EDA RID: 24282
 	public bool IsValid;
 }

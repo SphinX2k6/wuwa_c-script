@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F02 RID: 7938
+	// Token: 0x0200213B RID: 8507
 	public class ISwitchEffectStateEffectBase_SetValue
 	{
-		// Token: 0x040064EF RID: 25839
+		// Token: 0x04006ADE RID: 27358
 		public ESwitchEffectStateEffectType Type;
 	}
 }

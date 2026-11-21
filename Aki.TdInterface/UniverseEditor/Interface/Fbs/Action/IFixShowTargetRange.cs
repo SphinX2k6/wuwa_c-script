@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067DA RID: 26586
+	// Token: 0x02006E5A RID: 28250
 	public struct IFixShowTargetRange : IFlatbufferObject
 	{
-		// Token: 0x1700C557 RID: 50519
-		// (get) Token: 0x0602E482 RID: 189570 RVA: 0x00651D7F File Offset: 0x0064FF7F
+		// Token: 0x1700CF0D RID: 53005
+		// (get) Token: 0x06030CC8 RID: 199880 RVA: 0x0069F4C3 File Offset: 0x0069D6C3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E483 RID: 189571 RVA: 0x00651D8C File Offset: 0x0064FF8C
+		// Token: 0x06030CC9 RID: 199881 RVA: 0x0069F4D0 File Offset: 0x0069D6D0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E484 RID: 189572 RVA: 0x00651D94 File Offset: 0x0064FF94
+		// Token: 0x06030CCA RID: 199882 RVA: 0x0069F4D8 File Offset: 0x0069D6D8
 		public static IFixShowTargetRange GetRootAsIFixShowTargetRange(ByteBuffer _bb)
 		{
 			return IFixShowTargetRange.GetRootAsIFixShowTargetRange(_bb, default(IFixShowTargetRange));
 		}
 
-		// Token: 0x0602E485 RID: 189573 RVA: 0x00651DB0 File Offset: 0x0064FFB0
+		// Token: 0x06030CCB RID: 199883 RVA: 0x0069F4F4 File Offset: 0x0069D6F4
 		public static IFixShowTargetRange GetRootAsIFixShowTargetRange(ByteBuffer _bb, IFixShowTargetRange obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E486 RID: 189574 RVA: 0x00651DCD File Offset: 0x0064FFCD
+		// Token: 0x06030CCC RID: 199884 RVA: 0x0069F511 File Offset: 0x0069D711
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E487 RID: 189575 RVA: 0x00651DDC File Offset: 0x0064FFDC
+		// Token: 0x06030CCD RID: 199885 RVA: 0x0069F520 File Offset: 0x0069D720
 		public IFixShowTargetRange __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0602E488 RID: 189576 RVA: 0x00651DEC File Offset: 0x0064FFEC
+		// Token: 0x06030CCE RID: 199886 RVA: 0x0069F530 File Offset: 0x0069D730
 		public int RangeEntities(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700C558 RID: 50520
-		// (get) Token: 0x0602E489 RID: 189577 RVA: 0x00651E2C File Offset: 0x0065002C
+		// Token: 0x1700CF0E RID: 53006
+		// (get) Token: 0x06030CCF RID: 199887 RVA: 0x0069F570 File Offset: 0x0069D770
 		public int RangeEntitiesLength
 		{
 			get
@@ -74,20 +74,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E48A RID: 189578 RVA: 0x00651E57 File Offset: 0x00650057
+		// Token: 0x06030CD0 RID: 199888 RVA: 0x0069F59B File Offset: 0x0069D79B
 		public Span<int> GetRangeEntitiesBytes()
 		{
 			return this.__p.__vector_as_span<int>(4, 4);
 		}
 
-		// Token: 0x0602E48B RID: 189579 RVA: 0x00651E66 File Offset: 0x00650066
+		// Token: 0x06030CD1 RID: 199889 RVA: 0x0069F5AA File Offset: 0x0069D7AA
 		public int[] GetRangeEntitiesArray()
 		{
 			return this.__p.__vector_as_array<int>(4);
 		}
 
-		// Token: 0x1700C559 RID: 50521
-		// (get) Token: 0x0602E48C RID: 189580 RVA: 0x00651E74 File Offset: 0x00650074
+		// Token: 0x1700CF0F RID: 53007
+		// (get) Token: 0x06030CD2 RID: 199890 RVA: 0x0069F5B8 File Offset: 0x0069D7B8
 		public bool DelayShow
 		{
 			get
@@ -97,7 +97,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E48D RID: 189581 RVA: 0x00651EB3 File Offset: 0x006500B3
+		// Token: 0x06030CD3 RID: 199891 RVA: 0x0069F5F7 File Offset: 0x0069D7F7
 		public static Offset<IFixShowTargetRange> CreateIFixShowTargetRange(FlatBufferBuilder builder, VectorOffset RangeEntitiesOffset = default(VectorOffset), bool DelayShow = false)
 		{
 			builder.StartTable(2);
@@ -106,19 +106,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFixShowTargetRange.EndIFixShowTargetRange(builder);
 		}
 
-		// Token: 0x0602E48E RID: 189582 RVA: 0x00651ED0 File Offset: 0x006500D0
+		// Token: 0x06030CD4 RID: 199892 RVA: 0x0069F614 File Offset: 0x0069D814
 		public static void StartIFixShowTargetRange(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602E48F RID: 189583 RVA: 0x00651ED9 File Offset: 0x006500D9
+		// Token: 0x06030CD5 RID: 199893 RVA: 0x0069F61D File Offset: 0x0069D81D
 		public static void AddRangeEntities(FlatBufferBuilder builder, VectorOffset rangeEntitiesOffset)
 		{
 			builder.AddOffset(0, rangeEntitiesOffset.Value, 0);
 		}
 
-		// Token: 0x0602E490 RID: 189584 RVA: 0x00651EEC File Offset: 0x006500EC
+		// Token: 0x06030CD6 RID: 199894 RVA: 0x0069F630 File Offset: 0x0069D830
 		public static VectorOffset CreateRangeEntitiesVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -129,7 +129,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602E491 RID: 189585 RVA: 0x00651F23 File Offset: 0x00650123
+		// Token: 0x06030CD7 RID: 199895 RVA: 0x0069F667 File Offset: 0x0069D867
 		public static VectorOffset CreateRangeEntitiesVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602E492 RID: 189586 RVA: 0x00651F3D File Offset: 0x0065013D
+		// Token: 0x06030CD8 RID: 199896 RVA: 0x0069F681 File Offset: 0x0069D881
 		public static VectorOffset CreateRangeEntitiesVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -145,7 +145,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602E493 RID: 189587 RVA: 0x00651F5B File Offset: 0x0065015B
+		// Token: 0x06030CD9 RID: 199897 RVA: 0x0069F69F File Offset: 0x0069D89F
 		public static VectorOffset CreateRangeEntitiesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -153,25 +153,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602E494 RID: 189588 RVA: 0x00651F74 File Offset: 0x00650174
+		// Token: 0x06030CDA RID: 199898 RVA: 0x0069F6B8 File Offset: 0x0069D8B8
 		public static void StartRangeEntitiesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602E495 RID: 189589 RVA: 0x00651F7F File Offset: 0x0065017F
+		// Token: 0x06030CDB RID: 199899 RVA: 0x0069F6C3 File Offset: 0x0069D8C3
 		public static void AddDelayShow(FlatBufferBuilder builder, bool delayShow)
 		{
 			builder.AddBool(1, delayShow, false);
 		}
 
-		// Token: 0x0602E496 RID: 189590 RVA: 0x00651F8A File Offset: 0x0065018A
+		// Token: 0x06030CDC RID: 199900 RVA: 0x0069F6CE File Offset: 0x0069D8CE
 		public static Offset<IFixShowTargetRange> EndIFixShowTargetRange(FlatBufferBuilder builder)
 		{
 			return new Offset<IFixShowTargetRange>(builder.EndTable());
 		}
 
-		// Token: 0x0602E497 RID: 189591 RVA: 0x00651F98 File Offset: 0x00650198
+		// Token: 0x06030CDD RID: 199901 RVA: 0x0069F6DC File Offset: 0x0069D8DC
 		public IFixShowTargetRangeT UnPack()
 		{
 			IFixShowTargetRangeT fixShowTargetRangeT = new IFixShowTargetRangeT();
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return fixShowTargetRangeT;
 		}
 
-		// Token: 0x0602E498 RID: 189592 RVA: 0x00651FB4 File Offset: 0x006501B4
+		// Token: 0x06030CDE RID: 199902 RVA: 0x0069F6F8 File Offset: 0x0069D8F8
 		public void UnPackTo(IFixShowTargetRangeT _o)
 		{
 			_o.RangeEntities = new List<int>();
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.DelayShow = this.DelayShow;
 		}
 
-		// Token: 0x0602E499 RID: 189593 RVA: 0x00651FFC File Offset: 0x006501FC
+		// Token: 0x06030CDF RID: 199903 RVA: 0x0069F740 File Offset: 0x0069D940
 		public static Offset<IFixShowTargetRange> Pack(FlatBufferBuilder builder, IFixShowTargetRangeT _o)
 		{
 			if (_o == null)
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFixShowTargetRange.CreateIFixShowTargetRange(builder, rangeEntitiesOffset, _o.DelayShow);
 		}
 
-		// Token: 0x04010EF5 RID: 69365
+		// Token: 0x04011D27 RID: 72999
 		private Table __p;
 	}
 }

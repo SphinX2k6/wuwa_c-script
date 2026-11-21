@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02002366 RID: 9062
+// Token: 0x0200184B RID: 6219
 [NullableContext(1)]
 [Nullable(0)]
 public class PayShopRecommendTabItem : CommonTabItemBase
 {
-	// Token: 0x06012113 RID: 74003 RVA: 0x0046F49B File Offset: 0x0046D69B
+	// Token: 0x0600F5C3 RID: 62915 RVA: 0x0047C5C3 File Offset: 0x0047A7C3
 	public PayShopRecommendTabItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner());
 	}
 
-	// Token: 0x06012114 RID: 74004 RVA: 0x0046F4B0 File Offset: 0x0046D6B0
+	// Token: 0x0600F5C4 RID: 62916 RVA: 0x0047C5D8 File Offset: 0x0047A7D8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -36,14 +36,14 @@ public class PayShopRecommendTabItem : CommonTabItemBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06012115 RID: 74005 RVA: 0x0046F556 File Offset: 0x0046D756
+	// Token: 0x0600F5C5 RID: 62917 RVA: 0x0047C67E File Offset: 0x0047A87E
 	protected override void OnStart()
 	{
 		base.OnStart();
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06012116 RID: 74006 RVA: 0x0046F56F File Offset: 0x0046D76F
+	// Token: 0x0600F5C6 RID: 62918 RVA: 0x0047C697 File Offset: 0x0047A897
 	protected void ToggleEvent(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -52,30 +52,30 @@ public class PayShopRecommendTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x06012117 RID: 74007 RVA: 0x0046F588 File Offset: 0x0046D788
+	// Token: 0x0600F5C7 RID: 62919 RVA: 0x0047C6B0 File Offset: 0x0047A8B0
 	protected override void OnUpdateTabIcon(string iconPath)
 	{
 	}
 
-	// Token: 0x06012118 RID: 74008 RVA: 0x0046F58A File Offset: 0x0046D78A
+	// Token: 0x0600F5C8 RID: 62920 RVA: 0x0047C6B2 File Offset: 0x0047A8B2
 	protected override void OnSetToggleState(EToggleState state, bool bFire)
 	{
 		base.GetExtendToggle(0).SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x06012119 RID: 74009 RVA: 0x0046F59D File Offset: 0x0046D79D
+	// Token: 0x0600F5C9 RID: 62921 RVA: 0x0047C6C5 File Offset: 0x0047A8C5
 	protected override UUIExtendToggle GetTabToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x020088EF RID: 35055
+	// Token: 0x02007A79 RID: 31353
 	[NullableContext(0)]
 	private enum EPayShopRecommondTabItemDefine
 	{
-		// Token: 0x0402C801 RID: 182273
+		// Token: 0x04027B19 RID: 162585
 		Toggle,
-		// Token: 0x0402C802 RID: 182274
+		// Token: 0x04027B1A RID: 162586
 		Name
 	}
 }

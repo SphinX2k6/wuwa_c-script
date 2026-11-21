@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050F1 RID: 20721
+	// Token: 0x02005656 RID: 22102
 	public class IDynamicPortalCreateModeT
 	{
-		// Token: 0x170096E9 RID: 38633
-		// (get) Token: 0x060215E5 RID: 136677 RVA: 0x004A24F4 File Offset: 0x004A06F4
-		// (set) Token: 0x060215E6 RID: 136678 RVA: 0x004A24FC File Offset: 0x004A06FC
+		// Token: 0x17009ED6 RID: 40662
+		// (get) Token: 0x06023539 RID: 144697 RVA: 0x004DC480 File Offset: 0x004DA680
+		// (set) Token: 0x0602353A RID: 144698 RVA: 0x004DC488 File Offset: 0x004DA688
 		public EDynamicPortalCreateType Type { get; set; }
 
-		// Token: 0x170096EA RID: 38634
-		// (get) Token: 0x060215E7 RID: 136679 RVA: 0x004A2505 File Offset: 0x004A0705
-		// (set) Token: 0x060215E8 RID: 136680 RVA: 0x004A250D File Offset: 0x004A070D
+		// Token: 0x17009ED7 RID: 40663
+		// (get) Token: 0x0602353B RID: 144699 RVA: 0x004DC491 File Offset: 0x004DA691
+		// (set) Token: 0x0602353C RID: 144700 RVA: 0x004DC499 File Offset: 0x004DA699
 		public IDynamicPortalConfigT PortalA { get; set; }
 
-		// Token: 0x170096EB RID: 38635
-		// (get) Token: 0x060215E9 RID: 136681 RVA: 0x004A2516 File Offset: 0x004A0716
-		// (set) Token: 0x060215EA RID: 136682 RVA: 0x004A251E File Offset: 0x004A071E
+		// Token: 0x17009ED8 RID: 40664
+		// (get) Token: 0x0602353D RID: 144701 RVA: 0x004DC4A2 File Offset: 0x004DA6A2
+		// (set) Token: 0x0602353E RID: 144702 RVA: 0x004DC4AA File Offset: 0x004DA6AA
 		public IDynamicPortalConfigT PortalB { get; set; }
 
-		// Token: 0x170096EC RID: 38636
-		// (get) Token: 0x060215EB RID: 136683 RVA: 0x004A2527 File Offset: 0x004A0727
-		// (set) Token: 0x060215EC RID: 136684 RVA: 0x004A252F File Offset: 0x004A072F
+		// Token: 0x17009ED9 RID: 40665
+		// (get) Token: 0x0602353F RID: 144703 RVA: 0x004DC4B3 File Offset: 0x004DA6B3
+		// (set) Token: 0x06023540 RID: 144704 RVA: 0x004DC4BB File Offset: 0x004DA6BB
 		public EPortalModel InitOpenPortal { get; set; }
 
-		// Token: 0x170096ED RID: 38637
-		// (get) Token: 0x060215ED RID: 136685 RVA: 0x004A2538 File Offset: 0x004A0738
-		// (set) Token: 0x060215EE RID: 136686 RVA: 0x004A2540 File Offset: 0x004A0740
+		// Token: 0x17009EDA RID: 40666
+		// (get) Token: 0x06023541 RID: 144705 RVA: 0x004DC4C4 File Offset: 0x004DA6C4
+		// (set) Token: 0x06023542 RID: 144706 RVA: 0x004DC4CC File Offset: 0x004DA6CC
 		public IPortalRenderConfigT RenderConfig { get; set; }
 
-		// Token: 0x170096EE RID: 38638
-		// (get) Token: 0x060215EF RID: 136687 RVA: 0x004A2549 File Offset: 0x004A0749
-		// (set) Token: 0x060215F0 RID: 136688 RVA: 0x004A2551 File Offset: 0x004A0751
+		// Token: 0x17009EDB RID: 40667
+		// (get) Token: 0x06023543 RID: 144707 RVA: 0x004DC4D5 File Offset: 0x004DA6D5
+		// (set) Token: 0x06023544 RID: 144708 RVA: 0x004DC4DD File Offset: 0x004DA6DD
 		public byte NullMask { get; set; }
 
-		// Token: 0x060215F1 RID: 136689 RVA: 0x004A255A File Offset: 0x004A075A
+		// Token: 0x06023545 RID: 144709 RVA: 0x004DC4E6 File Offset: 0x004DA6E6
 		public IDynamicPortalCreateModeT()
 		{
 			this.Type = EDynamicPortalCreateType.Bullet;

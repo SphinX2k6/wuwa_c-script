@@ -8,7 +8,6 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Area;
 using CSharpScript.Game.Module.Map.MapDefine;
 using CSharpScript.Game.Module.Map.Mark;
-using CSharpScript.Game.Module.Map.Mark.Component;
 using CSharpScript.Game.Module.Map.Marks.MarkItemView;
 using CSharpScript.Game.Module.RecallQuest.Model;
 using CSharpScript.Game.Module.WorldMap;
@@ -16,13 +15,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054F9 RID: 21753
+	// Token: 0x020044CC RID: 17612
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TaskMarkItem : ServerMarkItem
 	{
-		// Token: 0x17008581 RID: 34177
-		// (get) Token: 0x06037917 RID: 227607 RVA: 0x00D31475 File Offset: 0x00D2F675
+		// Token: 0x1700591C RID: 22812
+		// (get) Token: 0x0602C7E5 RID: 182245 RVA: 0x00C7F399 File Offset: 0x00C7D599
 		public override EMarkType MarkType
 		{
 			get
@@ -31,9 +30,9 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x17008582 RID: 34178
-		// (get) Token: 0x06037918 RID: 227608 RVA: 0x00D31479 File Offset: 0x00D2F679
-		// (set) Token: 0x06037919 RID: 227609 RVA: 0x00D31481 File Offset: 0x00D2F681
+		// Token: 0x1700591D RID: 22813
+		// (get) Token: 0x0602C7E6 RID: 182246 RVA: 0x00C7F39D File Offset: 0x00C7D59D
+		// (set) Token: 0x0602C7E7 RID: 182247 RVA: 0x00C7F3A5 File Offset: 0x00C7D5A5
 		public bool CanShowInDistance
 		{
 			get
@@ -53,13 +52,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x0603791A RID: 227610 RVA: 0x00D314A6 File Offset: 0x00D2F6A6
+		// Token: 0x0602C7E8 RID: 182248 RVA: 0x00C7F3CA File Offset: 0x00C7D5CA
 		public override bool IsMultiMap()
 		{
 			return this.GetMultiMapId() != 0;
 		}
 
-		// Token: 0x0603791B RID: 227611 RVA: 0x00D314B4 File Offset: 0x00D2F6B4
+		// Token: 0x0602C7E9 RID: 182249 RVA: 0x00C7F3D8 File Offset: 0x00C7D5D8
 		public override int GetMultiMapId()
 		{
 			if (this.MultiMapAreaConfig == null)
@@ -69,14 +68,14 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return this.MultiMapAreaConfig.GetValueOrDefault().Id;
 		}
 
-		// Token: 0x0603791C RID: 227612 RVA: 0x00D314DF File Offset: 0x00D2F6DF
+		// Token: 0x0602C7EA RID: 182250 RVA: 0x00C7F403 File Offset: 0x00C7D603
 		public override bool LocateInGround()
 		{
 			return this.GetMultiMapId() == 0;
 		}
 
-		// Token: 0x17008583 RID: 34179
-		// (get) Token: 0x0603791D RID: 227613 RVA: 0x00D314EA File Offset: 0x00D2F6EA
+		// Token: 0x1700591E RID: 22814
+		// (get) Token: 0x0602C7EB RID: 182251 RVA: 0x00C7F40E File Offset: 0x00C7D60E
 		public override int? InstanceDungeonId
 		{
 			get
@@ -91,7 +90,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x0603791E RID: 227614 RVA: 0x00D31514 File Offset: 0x00D2F714
+		// Token: 0x0602C7EC RID: 182252 RVA: 0x00C7F438 File Offset: 0x00C7D638
 		private int? CalculateInstanceDungeonId()
 		{
 			int value = this.ServerMarkInfo.InstanceDungeonId.Value;
@@ -108,8 +107,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return new int?(value);
 		}
 
-		// Token: 0x17008584 RID: 34180
-		// (get) Token: 0x0603791F RID: 227615 RVA: 0x00D315CC File Offset: 0x00D2F7CC
+		// Token: 0x1700591F RID: 22815
+		// (get) Token: 0x0602C7ED RID: 182253 RVA: 0x00C7F4F0 File Offset: 0x00C7D6F0
 		public override int? TrackAreaId
 		{
 			get
@@ -118,12 +117,12 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037920 RID: 227616 RVA: 0x00D315F6 File Offset: 0x00D2F7F6
+		// Token: 0x0602C7EE RID: 182254 RVA: 0x00C7F51A File Offset: 0x00C7D71A
 		public TaskMarkItem(QuestMarkCreateInfo markPointInfo, UUIItem parent, EMapType mapType, float markScale) : base(markPointInfo, parent, mapType, markScale)
 		{
 		}
 
-		// Token: 0x06037921 RID: 227617 RVA: 0x00D31614 File Offset: 0x00D2F814
+		// Token: 0x0602C7EF RID: 182255 RVA: 0x00C7F538 File Offset: 0x00C7D738
 		protected override void OnInitialize()
 		{
 			base.OnInitialize();
@@ -163,7 +162,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 				double rangeMarkSize = this.Tree.GetRangeMarkSize(this.NodeId);
 				if (rangeMarkSize > 0.0)
 				{
-					base.MarkItemEntity.GetComponent<MarkResourceComponent>(EMapComponent.MarkResource).RangeSize = (float)(rangeMarkSize / 100.0);
+					this.RangeSize = (float)(rangeMarkSize / 100.0);
 				}
 				double rangeMarkShowDis = this.Tree.GetRangeMarkShowDis(this.NodeId);
 				if (rangeMarkShowDis > 0.0)
@@ -219,7 +218,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			this.UpdateMultiMapFloorSelectedState();
 		}
 
-		// Token: 0x06037922 RID: 227618 RVA: 0x00D31A07 File Offset: 0x00D2FC07
+		// Token: 0x0602C7F0 RID: 182256 RVA: 0x00C7F91F File Offset: 0x00C7DB1F
 		protected override void OnDestroy()
 		{
 			if (base.MapType == EMapType.MiniMap)
@@ -228,20 +227,20 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037923 RID: 227619 RVA: 0x00D31A2F File Offset: 0x00D2FC2F
+		// Token: 0x0602C7F1 RID: 182257 RVA: 0x00C7F947 File Offset: 0x00C7DB47
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.TaskMarkItemView;
 		}
 
-		// Token: 0x06037924 RID: 227620 RVA: 0x00D31A33 File Offset: 0x00D2FC33
+		// Token: 0x0602C7F2 RID: 182258 RVA: 0x00C7F94B File Offset: 0x00C7DB4B
 		[PreserveBaseOverrides]
 		protected new virtual TaskMarkItemView CreateView()
 		{
 			return new TaskMarkItemView(this);
 		}
 
-		// Token: 0x06037925 RID: 227621 RVA: 0x00D31A3B File Offset: 0x00D2FC3B
+		// Token: 0x0602C7F3 RID: 182259 RVA: 0x00C7F953 File Offset: 0x00C7DB53
 		protected override void OnUpdate(global::Vector playerLocation)
 		{
 			this._instanceDungeonIdDirty = true;
@@ -253,7 +252,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037926 RID: 227622 RVA: 0x00D31A61 File Offset: 0x00D2FC61
+		// Token: 0x0602C7F4 RID: 182260 RVA: 0x00C7F979 File Offset: 0x00C7DB79
 		public void UpdateMultiMapFloorSelectedState()
 		{
 			bool isSelectThisFloor = base.IsSelectThisFloor;
@@ -264,7 +263,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037927 RID: 227623 RVA: 0x00D31A83 File Offset: 0x00D2FC83
+		// Token: 0x0602C7F5 RID: 182261 RVA: 0x00C7F99B File Offset: 0x00C7DB9B
 		private void UpdateViewIcon()
 		{
 			if (base.View != null && !base.IsDestroy)
@@ -278,7 +277,19 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037928 RID: 227624 RVA: 0x00D31AAC File Offset: 0x00D2FCAC
+		// Token: 0x0602C7F6 RID: 182262 RVA: 0x00C7F9C4 File Offset: 0x00C7DBC4
+		public bool IsCrossInstanceDungeon()
+		{
+			int num = CreatureModel.Instance.GetInstanceId();
+			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(num);
+			if (config != null && config.GetValueOrDefault().EntranceEntitiesLength > 0)
+			{
+				num = config.Value.EntranceEntities(0).Value.DungeonId;
+			}
+			return base.RawInstanceDungeonId != num;
+		}
+
+		// Token: 0x0602C7F7 RID: 182263 RVA: 0x00C7FA38 File Offset: 0x00C7DC38
 		[NullableContext(2)]
 		public override string GetTitleText()
 		{
@@ -308,7 +319,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return null;
 		}
 
-		// Token: 0x06037929 RID: 227625 RVA: 0x00D31B87 File Offset: 0x00D2FD87
+		// Token: 0x0602C7F8 RID: 182264 RVA: 0x00C7FB13 File Offset: 0x00C7DD13
 		private void CalculatePlayerAndHolderWorldDistanceSqrt(global::Vector playerLocation)
 		{
 			if (this.CurrentDistance == null)
@@ -317,7 +328,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x0603792A RID: 227626 RVA: 0x00D31BB0 File Offset: 0x00D2FDB0
+		// Token: 0x0602C7F9 RID: 182265 RVA: 0x00C7FB3C File Offset: 0x00C7DD3C
 		private void CheckIfDailyTask(global::Vector playerLocation)
 		{
 			if (this.BtType.GetValueOrDefault() != Aki.Protocol.BtType.Quest)
@@ -349,7 +360,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x0603792B RID: 227627 RVA: 0x00D31CB0 File Offset: 0x00D2FEB0
+		// Token: 0x0602C7FA RID: 182266 RVA: 0x00C7FC3C File Offset: 0x00C7DE3C
 		public void UpdateItemIsInDistance(global::Vector playerLocation)
 		{
 			if (this.NodeId == 0)
@@ -366,7 +377,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			this.CurrentDistance = null;
 		}
 
-		// Token: 0x0603792C RID: 227628 RVA: 0x00D31D38 File Offset: 0x00D2FF38
+		// Token: 0x0602C7FB RID: 182267 RVA: 0x00C7FCC4 File Offset: 0x00C7DEC4
 		public override bool CheckCanShowView()
 		{
 			if (this.IsQuestMarkHiddenInRecall())
@@ -401,13 +412,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return config != null && config.GetValueOrDefault().DungeonMapTrackSwitch == 1;
 		}
 
-		// Token: 0x0603792D RID: 227629 RVA: 0x00D31E58 File Offset: 0x00D30058
+		// Token: 0x0602C7FC RID: 182268 RVA: 0x00C7FDE4 File Offset: 0x00C7DFE4
 		protected override bool IsTempMapMarkShow()
 		{
 			return !this.IsQuestMarkHiddenInRecall() && base.IsTempMapMarkShow();
 		}
 
-		// Token: 0x0603792E RID: 227630 RVA: 0x00D31E6C File Offset: 0x00D3006C
+		// Token: 0x0602C7FD RID: 182269 RVA: 0x00C7FDF8 File Offset: 0x00C7DFF8
 		protected override bool IsTracking()
 		{
 			if (this.IsQuestMarkHiddenInRecall())
@@ -436,13 +447,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return result;
 		}
 
-		// Token: 0x0603792F RID: 227631 RVA: 0x00D31F0B File Offset: 0x00D3010B
+		// Token: 0x0602C7FE RID: 182270 RVA: 0x00C7FE97 File Offset: 0x00C7E097
 		private bool IsQuestMarkHiddenInRecall()
 		{
 			return this.BtType.GetValueOrDefault() == Aki.Protocol.BtType.Quest && RecallQuestModel.Instance.IsInRecallInstance();
 		}
 
-		// Token: 0x06037930 RID: 227632 RVA: 0x00D31F28 File Offset: 0x00D30128
+		// Token: 0x0602C7FF RID: 182271 RVA: 0x00C7FEB4 File Offset: 0x00C7E0B4
 		private void TryToSendLogReport(global::Vector playerLocation)
 		{
 			if (base.MapType != EMapType.MiniMap || this.BtType.GetValueOrDefault() != Aki.Protocol.BtType.Quest || this.NodeId != 0 || !base.IsCanShowView || this.SentLog)
@@ -475,74 +486,74 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			this.SentLog = true;
 		}
 
-		// Token: 0x06037931 RID: 227633 RVA: 0x00D32052 File Offset: 0x00D30252
+		// Token: 0x0602C800 RID: 182272 RVA: 0x00C7FFDE File Offset: 0x00C7E1DE
 		public bool IsBtTypeQuest()
 		{
 			return this.BtType.GetValueOrDefault() == Aki.Protocol.BtType.Quest || this.BtType.GetValueOrDefault() == Aki.Protocol.BtType.Recall;
 		}
 
-		// Token: 0x06037932 RID: 227634 RVA: 0x00D32074 File Offset: 0x00D30274
+		// Token: 0x0602C801 RID: 182273 RVA: 0x00C80000 File Offset: 0x00C7E200
 		public override bool GetInteractiveFlag()
 		{
 			return (this.BtType.GetValueOrDefault() != Aki.Protocol.BtType.LevelPlay || this.InstanceDungeonId.GetValueOrDefault() != 8760) && base.GetInteractiveFlag();
 		}
 
-		// Token: 0x0401D3DA RID: 119770
+		// Token: 0x04017E61 RID: 97889
 		public double MarkRange;
 
-		// Token: 0x0401D3DB RID: 119771
+		// Token: 0x04017E62 RID: 97890
 		public double RangeMarkShowDisUp;
 
-		// Token: 0x0401D3DC RID: 119772
+		// Token: 0x04017E63 RID: 97891
 		public double RangeMarkShowDisDown;
 
-		// Token: 0x0401D3DD RID: 119773
+		// Token: 0x04017E64 RID: 97892
 		public double RangeMarkShowDis;
 
-		// Token: 0x0401D3DE RID: 119774
+		// Token: 0x04017E65 RID: 97893
 		public BtType? BtType;
 
-		// Token: 0x0401D3DF RID: 119775
+		// Token: 0x04017E66 RID: 97894
 		public long? TreeIncId;
 
-		// Token: 0x0401D3E0 RID: 119776
+		// Token: 0x04017E67 RID: 97895
 		public int TreeConfigId;
 
-		// Token: 0x0401D3E1 RID: 119777
+		// Token: 0x04017E68 RID: 97896
 		[Nullable(2)]
 		public BaseBehaviorTree Tree;
 
-		// Token: 0x0401D3E2 RID: 119778
+		// Token: 0x04017E69 RID: 97897
 		public int NodeId;
 
-		// Token: 0x0401D3E3 RID: 119779
+		// Token: 0x04017E6A RID: 97898
 		private double DailyTaskRange;
 
-		// Token: 0x0401D3E4 RID: 119780
+		// Token: 0x04017E6B RID: 97899
 		private bool InDailyQuestRange;
 
-		// Token: 0x0401D3E5 RID: 119781
+		// Token: 0x04017E6C RID: 97900
 		private double MarkShowDistance;
 
-		// Token: 0x0401D3E6 RID: 119782
+		// Token: 0x04017E6D RID: 97901
 		private bool IsBoundToParentQuest;
 
-		// Token: 0x0401D3E7 RID: 119783
+		// Token: 0x04017E6E RID: 97902
 		private double? CurrentDistance;
 
-		// Token: 0x0401D3E8 RID: 119784
+		// Token: 0x04017E6F RID: 97903
 		private int? _cachedInstanceDungeonId;
 
-		// Token: 0x0401D3E9 RID: 119785
+		// Token: 0x04017E70 RID: 97904
 		private bool _instanceDungeonIdDirty = true;
 
-		// Token: 0x0401D3EA RID: 119786
+		// Token: 0x04017E71 RID: 97905
 		private bool CanShowInDistanceInternal = true;
 
-		// Token: 0x0401D3EB RID: 119787
+		// Token: 0x04017E72 RID: 97906
 		private MultiMap? MultiMapAreaConfig;
 
-		// Token: 0x0401D3EC RID: 119788
+		// Token: 0x04017E73 RID: 97907
 		private bool SentLog;
 	}
 }

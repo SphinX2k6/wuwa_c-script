@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200085C RID: 2140
+	// Token: 0x0200084A RID: 2122
 	[NetMessage(EMessageId.ItemRewardNotify)]
 	public sealed class ItemRewardNotify : IMessage<ItemRewardNotify>, IMessage, IEquatable<ItemRewardNotify>, IDeepCloneable<ItemRewardNotify>, IBufferMessage
 	{
-		// Token: 0x0600BEC3 RID: 48835 RVA: 0x001C534E File Offset: 0x001C354E
+		// Token: 0x0600BD95 RID: 48533 RVA: 0x001C2E87 File Offset: 0x001C1087
 		[NullableContext(1)]
 		public static ItemRewardNotify Create()
 		{
 			return new ItemRewardNotify();
 		}
 
-		// Token: 0x17002686 RID: 9862
-		// (get) Token: 0x0600BEC4 RID: 48836 RVA: 0x001C5355 File Offset: 0x001C3555
+		// Token: 0x17002644 RID: 9796
+		// (get) Token: 0x0600BD96 RID: 48534 RVA: 0x001C2E8E File Offset: 0x001C108E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002687 RID: 9863
-		// (get) Token: 0x0600BEC5 RID: 48837 RVA: 0x001C5358 File Offset: 0x001C3558
+		// Token: 0x17002645 RID: 9797
+		// (get) Token: 0x0600BD97 RID: 48535 RVA: 0x001C2E91 File Offset: 0x001C1091
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600BEC6 RID: 48838 RVA: 0x001C535F File Offset: 0x001C355F
+		// Token: 0x0600BD98 RID: 48536 RVA: 0x001C2E98 File Offset: 0x001C1098
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ItemRewardNotify()
 		{
 		}
 
-		// Token: 0x0600BEC7 RID: 48839 RVA: 0x001C5374 File Offset: 0x001C3574
+		// Token: 0x0600BD99 RID: 48537 RVA: 0x001C2EAC File Offset: 0x001C10AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ItemRewardNotify(ItemRewardNotify other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600BEC8 RID: 48840 RVA: 0x001C53D9 File Offset: 0x001C35D9
+		// Token: 0x0600BD9A RID: 48538 RVA: 0x001C2F11 File Offset: 0x001C1111
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ItemRewardNotify Clone()
@@ -71,9 +71,9 @@ namespace Aki.Protocol
 			return new ItemRewardNotify(this);
 		}
 
-		// Token: 0x17002688 RID: 9864
-		// (get) Token: 0x0600BEC9 RID: 48841 RVA: 0x001C53E1 File Offset: 0x001C35E1
-		// (set) Token: 0x0600BECA RID: 48842 RVA: 0x001C53E9 File Offset: 0x001C35E9
+		// Token: 0x17002646 RID: 9798
+		// (get) Token: 0x0600BD9B RID: 48539 RVA: 0x001C2F19 File Offset: 0x001C1119
+		// (set) Token: 0x0600BD9C RID: 48540 RVA: 0x001C2F21 File Offset: 0x001C1121
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DropId
@@ -88,9 +88,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002689 RID: 9865
-		// (get) Token: 0x0600BECB RID: 48843 RVA: 0x001C53F2 File Offset: 0x001C35F2
-		// (set) Token: 0x0600BECC RID: 48844 RVA: 0x001C53FA File Offset: 0x001C35FA
+		// Token: 0x17002647 RID: 9799
+		// (get) Token: 0x0600BD9D RID: 48541 RVA: 0x001C2F2A File Offset: 0x001C112A
+		// (set) Token: 0x0600BD9E RID: 48542 RVA: 0x001C2F32 File Offset: 0x001C1132
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Reason
@@ -105,9 +105,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700268A RID: 9866
-		// (get) Token: 0x0600BECD RID: 48845 RVA: 0x001C5403 File Offset: 0x001C3603
-		// (set) Token: 0x0600BECE RID: 48846 RVA: 0x001C540B File Offset: 0x001C360B
+		// Token: 0x17002648 RID: 9800
+		// (get) Token: 0x0600BD9F RID: 48543 RVA: 0x001C2F3B File Offset: 0x001C113B
+		// (set) Token: 0x0600BDA0 RID: 48544 RVA: 0x001C2F43 File Offset: 0x001C1143
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Magnification
@@ -122,9 +122,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700268B RID: 9867
-		// (get) Token: 0x0600BECF RID: 48847 RVA: 0x001C5414 File Offset: 0x001C3614
-		// (set) Token: 0x0600BED0 RID: 48848 RVA: 0x001C541C File Offset: 0x001C361C
+		// Token: 0x17002649 RID: 9801
+		// (get) Token: 0x0600BDA1 RID: 48545 RVA: 0x001C2F4C File Offset: 0x001C114C
+		// (set) Token: 0x0600BDA2 RID: 48546 RVA: 0x001C2F54 File Offset: 0x001C1154
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DoubleDropFrom From
@@ -139,8 +139,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700268C RID: 9868
-		// (get) Token: 0x0600BED1 RID: 48849 RVA: 0x001C5425 File Offset: 0x001C3625
+		// Token: 0x1700264A RID: 9802
+		// (get) Token: 0x0600BDA3 RID: 48547 RVA: 0x001C2F5D File Offset: 0x001C115D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, RewardItemInfoList> RewardItems
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600BED2 RID: 48850 RVA: 0x001C542D File Offset: 0x001C362D
+		// Token: 0x0600BDA4 RID: 48548 RVA: 0x001C2F65 File Offset: 0x001C1165
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -159,7 +159,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ItemRewardNotify);
 		}
 
-		// Token: 0x0600BED3 RID: 48851 RVA: 0x001C543C File Offset: 0x001C363C
+		// Token: 0x0600BDA5 RID: 48549 RVA: 0x001C2F74 File Offset: 0x001C1174
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ItemRewardNotify other)
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.DropId == other.DropId && this.Reason == other.Reason && this.Magnification == other.Magnification && this.From == other.From && this.RewardItems.Equals(other.RewardItems) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600BED4 RID: 48852 RVA: 0x001C54BC File Offset: 0x001C36BC
+		// Token: 0x0600BDA6 RID: 48550 RVA: 0x001C2FF4 File Offset: 0x001C11F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600BED5 RID: 48853 RVA: 0x001C555A File Offset: 0x001C375A
+		// Token: 0x0600BDA7 RID: 48551 RVA: 0x001C3092 File Offset: 0x001C1292
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -205,7 +205,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600BED6 RID: 48854 RVA: 0x001C5567 File Offset: 0x001C3767
+		// Token: 0x0600BDA8 RID: 48552 RVA: 0x001C309F File Offset: 0x001C129F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -213,31 +213,31 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600BED7 RID: 48855 RVA: 0x001C5570 File Offset: 0x001C3770
+		// Token: 0x0600BDA9 RID: 48553 RVA: 0x001C30A8 File Offset: 0x001C12A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			if (this.DropId != 0)
+			{
+				output.WriteRawTag(16);
+				output.WriteInt32(this.DropId);
+			}
 			if (this.Magnification != 0)
 			{
-				output.WriteRawTag(40);
+				output.WriteRawTag(32);
 				output.WriteInt32(this.Magnification);
 			}
 			this.rewardItems_.WriteTo(ref output, ItemRewardNotify._map_rewardItems_codec);
-			if (this.Reason != 0)
-			{
-				output.WriteRawTag(88);
-				output.WriteInt32(this.Reason);
-			}
 			if (this.From != DoubleDropFrom.UnDefineDouble)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(72);
 				output.WriteEnum((int)this.From);
 			}
-			if (this.DropId != 0)
+			if (this.Reason != 0)
 			{
 				output.WriteRawTag(112);
-				output.WriteInt32(this.DropId);
+				output.WriteInt32(this.Reason);
 			}
 			if (this._unknownFields != null)
 			{
@@ -245,7 +245,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600BED8 RID: 48856 RVA: 0x001C5614 File Offset: 0x001C3814
+		// Token: 0x0600BDAA RID: 48554 RVA: 0x001C314C File Offset: 0x001C134C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -275,7 +275,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600BED9 RID: 48857 RVA: 0x001C56B0 File Offset: 0x001C38B0
+		// Token: 0x0600BDAB RID: 48555 RVA: 0x001C31E8 File Offset: 0x001C13E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ItemRewardNotify other)
@@ -304,7 +304,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600BEDA RID: 48858 RVA: 0x001C5739 File Offset: 0x001C3939
+		// Token: 0x0600BDAC RID: 48556 RVA: 0x001C3271 File Offset: 0x001C1471
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -312,7 +312,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600BEDB RID: 48859 RVA: 0x001C5744 File Offset: 0x001C3944
+		// Token: 0x0600BDAD RID: 48557 RVA: 0x001C327C File Offset: 0x001C147C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -324,34 +324,34 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 74U)
+				if (num <= 32U)
 				{
-					if (num == 40U)
+					if (num == 16U)
 					{
-						this.Magnification = input.ReadInt32();
+						this.DropId = input.ReadInt32();
 						continue;
 					}
-					if (num == 74U)
+					if (num == 32U)
 					{
-						this.rewardItems_.AddEntriesFrom(ref input, ItemRewardNotify._map_rewardItems_codec);
+						this.Magnification = input.ReadInt32();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 88U)
+					if (num == 58U)
 					{
-						this.Reason = input.ReadInt32();
+						this.rewardItems_.AddEntriesFrom(ref input, ItemRewardNotify._map_rewardItems_codec);
 						continue;
 					}
-					if (num == 96U)
+					if (num == 72U)
 					{
 						this.From = (DoubleDropFrom)input.ReadEnum();
 						continue;
 					}
 					if (num == 112U)
 					{
-						this.DropId = input.ReadInt32();
+						this.Reason = input.ReadInt32();
 						continue;
 					}
 				}
@@ -359,40 +359,40 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005327 RID: 21287
+		// Token: 0x0400532A RID: 21290
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005328 RID: 21288
-		public const int DropIdFieldNumber = 14;
-
-		// Token: 0x04005329 RID: 21289
-		private int dropId_;
-
-		// Token: 0x0400532A RID: 21290
-		public const int ReasonFieldNumber = 11;
-
 		// Token: 0x0400532B RID: 21291
-		private int reason_;
+		public const int DropIdFieldNumber = 2;
 
 		// Token: 0x0400532C RID: 21292
-		public const int MagnificationFieldNumber = 5;
+		private int dropId_;
 
 		// Token: 0x0400532D RID: 21293
-		private int magnification_;
+		public const int ReasonFieldNumber = 14;
 
 		// Token: 0x0400532E RID: 21294
-		public const int FromFieldNumber = 12;
+		private int reason_;
 
 		// Token: 0x0400532F RID: 21295
-		private DoubleDropFrom from_;
+		public const int MagnificationFieldNumber = 4;
 
 		// Token: 0x04005330 RID: 21296
-		public const int RewardItemsFieldNumber = 9;
+		private int magnification_;
 
 		// Token: 0x04005331 RID: 21297
-		private static readonly MapField<int, RewardItemInfoList>.Codec _map_rewardItems_codec = new MapField<int, RewardItemInfoList>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForMessage<RewardItemInfoList>(18U, RewardItemInfoList.Parser), 74U);
+		public const int FromFieldNumber = 9;
 
 		// Token: 0x04005332 RID: 21298
+		private DoubleDropFrom from_;
+
+		// Token: 0x04005333 RID: 21299
+		public const int RewardItemsFieldNumber = 7;
+
+		// Token: 0x04005334 RID: 21300
+		private static readonly MapField<int, RewardItemInfoList>.Codec _map_rewardItems_codec = new MapField<int, RewardItemInfoList>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForMessage<RewardItemInfoList>(18U, RewardItemInfoList.Parser), 58U);
+
+		// Token: 0x04005335 RID: 21301
 		private readonly MapField<int, RewardItemInfoList> rewardItems_ = new MapField<int, RewardItemInfoList>();
 	}
 }

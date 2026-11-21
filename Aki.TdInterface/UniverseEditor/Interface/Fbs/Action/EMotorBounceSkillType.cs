@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FA8 RID: 24488
+	// Token: 0x020065F9 RID: 26105
 	public enum EMotorBounceSkillType
 	{
-		// Token: 0x0400FEA6 RID: 65190
+		// Token: 0x04010C58 RID: 68696
 		None,
-		// Token: 0x0400FEA7 RID: 65191
+		// Token: 0x04010C59 RID: 68697
 		Default = 10001033,
-		// Token: 0x0400FEA8 RID: 65192
+		// Token: 0x04010C5A RID: 68698
 		MushroomBounce,
-		// Token: 0x0400FEA9 RID: 65193
+		// Token: 0x04010C5B RID: 68699
 		NoTailFlameBounce = 10001036
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F86 RID: 24454
+	// Token: 0x020065CD RID: 26061
 	public enum EHookTriggerType : byte
 	{
-		// Token: 0x0400FDCB RID: 64971
+		// Token: 0x04010B55 RID: 68437
 		Motor
 	}
 }

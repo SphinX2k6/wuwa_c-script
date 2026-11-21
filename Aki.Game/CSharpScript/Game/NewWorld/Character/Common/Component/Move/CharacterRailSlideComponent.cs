@@ -20,32 +20,32 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070E6 RID: 28902
+	// Token: 0x02006396 RID: 25494
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharacterRailSlideComponent : EntityComponent, IStaticVariableResetter
 	{
-		// Token: 0x060468C9 RID: 288969 RVA: 0x011BCBD8 File Offset: 0x011BADD8
+		// Token: 0x0603DCBF RID: 253119 RVA: 0x011EBFC8 File Offset: 0x011EA1C8
 		static CharacterRailSlideComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CharacterRailSlideComponent.CreateStaticDefaultValue), new Action(CharacterRailSlideComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060468CA RID: 288970 RVA: 0x011BCC59 File Offset: 0x011BAE59
+		// Token: 0x0603DCC0 RID: 253120 RVA: 0x011EC049 File Offset: 0x011EA249
 		public static void CreateStaticDefaultValue()
 		{
 			CharacterRailSlideComponent.DebugLog = false;
 		}
 
-		// Token: 0x060468CB RID: 288971 RVA: 0x011BCC61 File Offset: 0x011BAE61
+		// Token: 0x0603DCC1 RID: 253121 RVA: 0x011EC051 File Offset: 0x011EA251
 		public static void ResetStaticDefaultValue()
 		{
 			CharacterRailSlideComponent.DebugLog = false;
 		}
 
-		// Token: 0x17009CBB RID: 40123
-		// (get) Token: 0x060468CC RID: 288972 RVA: 0x011BCC69 File Offset: 0x011BAE69
-		public new static Type[] Dependencies
+		// Token: 0x17007541 RID: 30017
+		// (get) Token: 0x0603DCC2 RID: 253122 RVA: 0x011EC059 File Offset: 0x011EA259
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468CD RID: 288973 RVA: 0x011BCC98 File Offset: 0x011BAE98
+		// Token: 0x0603DCC3 RID: 253123 RVA: 0x011EC088 File Offset: 0x011EA288
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x060468CE RID: 288974 RVA: 0x011BCDCC File Offset: 0x011BAFCC
+		// Token: 0x0603DCC4 RID: 253124 RVA: 0x011EC1C0 File Offset: 0x011EA3C0
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget<int, string, string>(base.Entity, EEventName.RequestRestartRailSlide, new Action<int, string, string>(this.OnRequestRestartRailSlide));
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x060468CF RID: 288975 RVA: 0x011BCE24 File Offset: 0x011BB024
+		// Token: 0x0603DCC5 RID: 253125 RVA: 0x011EC218 File Offset: 0x011EA418
 		protected override void OnTick(float delta)
 		{
 			if (delta == 0f)
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 					CharacterActorComponent actorComp3 = this.ActorComp;
 					if (actorComp3 != null)
 					{
-						actorComp3.SetInputDirect(this.TmpVector, false);
+						actorComp3.SetInputDirect(this.TmpVector, false, EInputDirectSpace.World);
 					}
 					CharacterActorComponent actorComp4 = this.ActorComp;
 					if (actorComp4 != null)
@@ -144,37 +144,37 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468D0 RID: 288976 RVA: 0x011BCF18 File Offset: 0x011BB118
+		// Token: 0x0603DCC6 RID: 253126 RVA: 0x011EC30D File Offset: 0x011EA50D
 		public bool IsRailSlideState()
 		{
 			return this.InRailSlideState;
 		}
 
-		// Token: 0x060468D1 RID: 288977 RVA: 0x011BCF20 File Offset: 0x011BB120
+		// Token: 0x0603DCC7 RID: 253127 RVA: 0x011EC315 File Offset: 0x011EA515
 		public bool IsRailSlideAirState()
 		{
 			return this.InAirSlide;
 		}
 
-		// Token: 0x060468D2 RID: 288978 RVA: 0x011BCF28 File Offset: 0x011BB128
+		// Token: 0x0603DCC8 RID: 253128 RVA: 0x011EC31D File Offset: 0x011EA51D
 		public ERailSlideJumpType GetRailSlideAirType()
 		{
 			return this.AirSlideType;
 		}
 
-		// Token: 0x060468D3 RID: 288979 RVA: 0x011BCF30 File Offset: 0x011BB130
+		// Token: 0x0603DCC9 RID: 253129 RVA: 0x011EC325 File Offset: 0x011EA525
 		public ERailSlideAnimType GetRailSlideAnimType()
 		{
 			return this.RailSlideAnimType;
 		}
 
-		// Token: 0x060468D4 RID: 288980 RVA: 0x011BCF38 File Offset: 0x011BB138
+		// Token: 0x0603DCCA RID: 253130 RVA: 0x011EC32D File Offset: 0x011EA52D
 		public bool IsRailSlideLandAnim()
 		{
 			return this.LandAnimation;
 		}
 
-		// Token: 0x060468D5 RID: 288981 RVA: 0x011BCF40 File Offset: 0x011BB140
+		// Token: 0x0603DCCB RID: 253131 RVA: 0x011EC335 File Offset: 0x011EA535
 		public float GetCurrentRailDistance()
 		{
 			RailData currentRailData = this.CurrentRailData;
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return currentRailData.LastDistance;
 		}
 
-		// Token: 0x060468D6 RID: 288982 RVA: 0x011BCF58 File Offset: 0x011BB158
+		// Token: 0x0603DCCC RID: 253132 RVA: 0x011EC34C File Offset: 0x011EA54C
 		public float GetCurrentRad()
 		{
 			RailSlideParams railSlideConfig = this.RailSlideConfig;
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return num2.GetValueOrDefault();
 		}
 
-		// Token: 0x060468D7 RID: 288983 RVA: 0x011BCFA0 File Offset: 0x011BB1A0
+		// Token: 0x0603DCCD RID: 253133 RVA: 0x011EC394 File Offset: 0x011EA594
 		public float GetCurrentSplineLength()
 		{
 			RailData currentRailData = this.CurrentRailData;
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return num2.GetValueOrDefault();
 		}
 
-		// Token: 0x060468D8 RID: 288984 RVA: 0x011BCFE8 File Offset: 0x011BB1E8
+		// Token: 0x0603DCCE RID: 253134 RVA: 0x011EC3DC File Offset: 0x011EA5DC
 		[NullableContext(2)]
 		public void StartRailSlide(int railId, [Nullable(1)] string daPath, Action<bool> callback = null, string rtpcName = null)
 		{
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.LogEnterRailSlide(railId);
 		}
 
-		// Token: 0x060468D9 RID: 288985 RVA: 0x011BD078 File Offset: 0x011BB278
+		// Token: 0x0603DCCF RID: 253135 RVA: 0x011EC46C File Offset: 0x011EA66C
 		public void StartFollowerRailSlide(int railId, string daPath, bool restart = false, [Nullable(2)] Action<bool> callback = null)
 		{
 			bool flag = false;
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468DA RID: 288986 RVA: 0x011BD132 File Offset: 0x011BB332
+		// Token: 0x0603DCD0 RID: 253136 RVA: 0x011EC526 File Offset: 0x011EA726
 		private bool EnterRailSlide(int railId, string daPath, [Nullable(2)] Action<bool> callback = null)
 		{
 			this.RailSlideConfig = this.InitRailSlideParams(daPath);
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x060468DB RID: 288987 RVA: 0x011BD160 File Offset: 0x011BB360
+		// Token: 0x0603DCD1 RID: 253137 RVA: 0x011EC554 File Offset: 0x011EA754
 		private unsafe void LogEnterRailSlide(int railId)
 		{
 			global::Log instance = global::Log.Instance;
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x060468DC RID: 288988 RVA: 0x011BD1F4 File Offset: 0x011BB3F4
+		// Token: 0x0603DCD2 RID: 253138 RVA: 0x011EC5E8 File Offset: 0x011EA7E8
 		[NullableContext(2)]
 		private bool StartRailSlideInternal(int railId, Action<bool> callback = null)
 		{
@@ -363,17 +363,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			if (baseSkillComponent != null)
 			{
 				RailData currentRailData = this.CurrentRailData;
-				bool flag;
-				if (currentRailData == null)
-				{
-					flag = false;
-				}
-				else
-				{
-					IRailParam @params = currentRailData.Params;
-					flag = (((@params != null) ? new ERailMoveType?(@params.RailType) : null).GetValueOrDefault() == ERailMoveType.CableWay);
-				}
-				if (flag)
+				if (((currentRailData != null) ? currentRailData.RailInfo : null) != null)
 				{
 					baseSkillComponent.StopAllSkills("开始轨道移动");
 				}
@@ -402,7 +392,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x060468DD RID: 288989 RVA: 0x011BD410 File Offset: 0x011BB610
+		// Token: 0x0603DCD3 RID: 253139 RVA: 0x011EC7DC File Offset: 0x011EA9DC
 		public void RestartRailSlide(int railId, string daPath, string context = "重启轨道滑行")
 		{
 			if (!this.InRailSlideState)
@@ -418,13 +408,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.SetExitSplineRailSlide(context, true);
 		}
 
-		// Token: 0x060468DE RID: 288990 RVA: 0x011BD448 File Offset: 0x011BB648
+		// Token: 0x0603DCD4 RID: 253140 RVA: 0x011EC814 File Offset: 0x011EAA14
 		private void OnRequestRestartRailSlide(int railId, string daPath, string context)
 		{
 			this.RestartRailSlide(railId, daPath, context);
 		}
 
-		// Token: 0x060468DF RID: 288991 RVA: 0x011BD454 File Offset: 0x011BB654
+		// Token: 0x0603DCD5 RID: 253141 RVA: 0x011EC820 File Offset: 0x011EAA20
 		private void SyncFollowerLinkAnim(bool enter)
 		{
 			Entity entity = base.Entity;
@@ -451,7 +441,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			characterLinkedAnimInstComponent.SyncLinkGameplayAnimBlueprint(EGameplayABPType.SwordRiding);
 		}
 
-		// Token: 0x060468E0 RID: 288992 RVA: 0x011BD4A8 File Offset: 0x011BB6A8
+		// Token: 0x0603DCD6 RID: 253142 RVA: 0x011EC874 File Offset: 0x011EAA74
 		private bool HasRailSlideFrameworkState()
 		{
 			CharacterActorComponent actorComp = this.ActorComp;
@@ -470,13 +460,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return (stateComp != null && stateComp.PositionState == global::ECharPositionState.RailSlide) || (ucharacterMovementComponent2 != null && ucharacterMovementComponent2.MovementMode == EMovementMode.MOVE_Custom && ucharacterMovementComponent2.CustomMovementMode == 12);
 		}
 
-		// Token: 0x060468E1 RID: 288993 RVA: 0x011BD50F File Offset: 0x011BB70F
+		// Token: 0x0603DCD7 RID: 253143 RVA: 0x011EC8DB File Offset: 0x011EAADB
 		private bool HasRailSlideState()
 		{
 			return this.InRailSlideState || this.HasRailSlideFrameworkState();
 		}
 
-		// Token: 0x060468E2 RID: 288994 RVA: 0x011BD521 File Offset: 0x011BB721
+		// Token: 0x0603DCD8 RID: 253144 RVA: 0x011EC8ED File Offset: 0x011EAAED
 		public void SetExitSplineRailSlide(string context, bool interrupt = true)
 		{
 			if (!this.HasRailSlideState())
@@ -493,7 +483,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.IsInterrupt = interrupt;
 		}
 
-		// Token: 0x060468E3 RID: 288995 RVA: 0x011BD558 File Offset: 0x011BB758
+		// Token: 0x0603DCD9 RID: 253145 RVA: 0x011EC924 File Offset: 0x011EAB24
 		public unsafe void ForceExitSplineRailSlide(string context, bool interrupt = true)
 		{
 			this.PendingRestartRailSlide = null;
@@ -575,7 +565,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.IsInterrupt = false;
 		}
 
-		// Token: 0x060468E4 RID: 288996 RVA: 0x011BD728 File Offset: 0x011BB928
+		// Token: 0x0603DCDA RID: 253146 RVA: 0x011ECAF4 File Offset: 0x011EACF4
 		private unsafe void LogRequestExitRailSlide(string context)
 		{
 			global::Log instance = global::Log.Instance;
@@ -588,7 +578,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x060468E5 RID: 288997 RVA: 0x011BD794 File Offset: 0x011BB994
+		// Token: 0x0603DCDB RID: 253147 RVA: 0x011ECB60 File Offset: 0x011EAD60
 		private unsafe void LogExitRailSlide()
 		{
 			global::Log instance = global::Log.Instance;
@@ -648,7 +638,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x060468E6 RID: 288998 RVA: 0x011BD8E8 File Offset: 0x011BBAE8
+		// Token: 0x0603DCDC RID: 253148 RVA: 0x011ECCB4 File Offset: 0x011EAEB4
 		private void EnterRailSlideModeRequest()
 		{
 			LevelPlaySwitchSportModeRequest levelPlaySwitchSportModeRequest = LevelPlaySwitchSportModeRequest.Create();
@@ -674,7 +664,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}, 0);
 		}
 
-		// Token: 0x060468E7 RID: 288999 RVA: 0x011BD928 File Offset: 0x011BBB28
+		// Token: 0x0603DCDD RID: 253149 RVA: 0x011ECCF4 File Offset: 0x011EAEF4
 		private void ExitRailSlideModeRequest()
 		{
 			LevelPlaySwitchSportModeRequest levelPlaySwitchSportModeRequest = LevelPlaySwitchSportModeRequest.Create();
@@ -683,7 +673,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			Net.Instance.Call(ERequestMessageId.LevelPlaySwitchSportModeRequest, levelPlaySwitchSportModeRequest, null, 0);
 		}
 
-		// Token: 0x060468E8 RID: 289000 RVA: 0x011BD95C File Offset: 0x011BBB5C
+		// Token: 0x0603DCDE RID: 253150 RVA: 0x011ECD28 File Offset: 0x011EAF28
 		private void ExitSplineRailSlide()
 		{
 			if (!this.InRailSlideState)
@@ -763,7 +753,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468E9 RID: 289001 RVA: 0x011BDB90 File Offset: 0x011BBD90
+		// Token: 0x0603DCDF RID: 253151 RVA: 0x011ECF5C File Offset: 0x011EB15C
 		private void ReleaseCurrentRail()
 		{
 			this.StopRailPathEffect("[RailSlide] ReleaseCurrentRail", true);
@@ -785,7 +775,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.StartSlide = false;
 		}
 
-		// Token: 0x060468EA RID: 289002 RVA: 0x011BDC38 File Offset: 0x011BBE38
+		// Token: 0x0603DCE0 RID: 253152 RVA: 0x011ED004 File Offset: 0x011EB204
 		private void ExitForRestart()
 		{
 			if (!this.InRailSlideState)
@@ -822,7 +812,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468EB RID: 289003 RVA: 0x011BDD78 File Offset: 0x011BBF78
+		// Token: 0x0603DCE1 RID: 253153 RVA: 0x011ED144 File Offset: 0x011EB344
 		private void ResetPositionState()
 		{
 			CharacterActorComponent actorComp = this.ActorComp;
@@ -844,7 +834,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468EC RID: 289004 RVA: 0x011BDE08 File Offset: 0x011BC008
+		// Token: 0x0603DCE2 RID: 253154 RVA: 0x011ED1D4 File Offset: 0x011EB3D4
 		private void ExitRemoveTag()
 		{
 			BaseTagComponent tagComp = this.TagComp;
@@ -870,7 +860,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.SetGameplayTag(false);
 		}
 
-		// Token: 0x060468ED RID: 289005 RVA: 0x011BDEB4 File Offset: 0x011BC0B4
+		// Token: 0x0603DCE3 RID: 253155 RVA: 0x011ED280 File Offset: 0x011EB480
 		private void SetActorRotation()
 		{
 			CharacterActorComponent actorComp = this.ActorComp;
@@ -902,7 +892,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.ActorComp.ClearInput(false, true);
 		}
 
-		// Token: 0x060468EE RID: 289006 RVA: 0x011BDFD4 File Offset: 0x011BC1D4
+		// Token: 0x0603DCE4 RID: 253156 RVA: 0x011ED3A0 File Offset: 0x011EB5A0
 		private void CheckSlidePositionState()
 		{
 			if (!this.StartSlide)
@@ -990,7 +980,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468EF RID: 289007 RVA: 0x011BE21C File Offset: 0x011BC41C
+		// Token: 0x0603DCE5 RID: 253157 RVA: 0x011ED5E8 File Offset: 0x011EB7E8
 		[NullableContext(2)]
 		private unsafe RailData InitEnterRail(int railId)
 		{
@@ -1037,7 +1027,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return railData;
 		}
 
-		// Token: 0x060468F0 RID: 289008 RVA: 0x011BE380 File Offset: 0x011BC580
+		// Token: 0x0603DCE6 RID: 253158 RVA: 0x011ED74C File Offset: 0x011EB94C
 		[NullableContext(2)]
 		private unsafe RailData InitProjectileRail(int railId, bool freeJump, bool check = false)
 		{
@@ -1104,7 +1094,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return railData;
 		}
 
-		// Token: 0x060468F1 RID: 289009 RVA: 0x011BE5E8 File Offset: 0x011BC7E8
+		// Token: 0x0603DCE7 RID: 253159 RVA: 0x011ED9B4 File Offset: 0x011EBBB4
 		[NullableContext(2)]
 		private RailData InitEndProjectileRail()
 		{
@@ -1155,7 +1145,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return null;
 		}
 
-		// Token: 0x060468F2 RID: 289010 RVA: 0x011BE7C4 File Offset: 0x011BC9C4
+		// Token: 0x0603DCE8 RID: 253160 RVA: 0x011EDB90 File Offset: 0x011EBD90
 		[NullableContext(2)]
 		private unsafe RailData InitSplineRail(int railId, float startDist)
 		{
@@ -1230,7 +1220,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return railData;
 		}
 
-		// Token: 0x060468F3 RID: 289011 RVA: 0x011BEA30 File Offset: 0x011BCC30
+		// Token: 0x0603DCE9 RID: 253161 RVA: 0x011EDDFC File Offset: 0x011EBFFC
 		public void OnJump()
 		{
 			RailData currentRailData = this.CurrentRailData;
@@ -1303,7 +1293,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468F4 RID: 289012 RVA: 0x011BEBB0 File Offset: 0x011BCDB0
+		// Token: 0x0603DCEA RID: 253162 RVA: 0x011EDF7C File Offset: 0x011EC17C
 		private bool OnFreeJump(int railId)
 		{
 			if (this.CurrentRailData == null)
@@ -1346,7 +1336,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x060468F5 RID: 289013 RVA: 0x011BECB4 File Offset: 0x011BCEB4
+		// Token: 0x0603DCEB RID: 253163 RVA: 0x011EE080 File Offset: 0x011EC280
 		private void StartRailFreeJump(bool jumpToPoint, int railId)
 		{
 			if (this.CurrentRailData == null)
@@ -1363,7 +1353,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.SetCurrentRailData(data2, "轨道自由抛物线跳跃");
 		}
 
-		// Token: 0x060468F6 RID: 289014 RVA: 0x011BECF8 File Offset: 0x011BCEF8
+		// Token: 0x0603DCEC RID: 253164 RVA: 0x011EE0C4 File Offset: 0x011EC2C4
 		private bool CheckEndJump()
 		{
 			RailData currentRailData = this.CurrentRailData;
@@ -1428,7 +1418,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return false;
 		}
 
-		// Token: 0x060468F7 RID: 289015 RVA: 0x011BEE40 File Offset: 0x011BD040
+		// Token: 0x0603DCED RID: 253165 RVA: 0x011EE20C File Offset: 0x011EC40C
 		private bool CheckCanJump(int railId)
 		{
 			RailData currentRailData = this.CurrentRailData;
@@ -1491,7 +1481,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return false;
 		}
 
-		// Token: 0x060468F8 RID: 289016 RVA: 0x011BEF88 File Offset: 0x011BD188
+		// Token: 0x0603DCEE RID: 253166 RVA: 0x011EE354 File Offset: 0x011EC554
 		private void SetCurrentRailData([Nullable(2)] RailData data, string context)
 		{
 			if (data != null)
@@ -1540,7 +1530,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468F9 RID: 289017 RVA: 0x011BF0A8 File Offset: 0x011BD2A8
+		// Token: 0x0603DCEF RID: 253167 RVA: 0x011EE474 File Offset: 0x011EC674
 		[NullableContext(2)]
 		private void RailMoveEndCheckNextSpline(RailData railSpline)
 		{
@@ -1597,7 +1587,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.CurrentRailData = null;
 		}
 
-		// Token: 0x060468FA RID: 289018 RVA: 0x011BF200 File Offset: 0x011BD400
+		// Token: 0x0603DCF0 RID: 253168 RVA: 0x011EE5CC File Offset: 0x011EC7CC
 		private unsafe void CheckInput(float deltaTime)
 		{
 			if (this.CheckInputDeltaTime > 0f)
@@ -1688,7 +1678,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468FB RID: 289019 RVA: 0x011BF494 File Offset: 0x011BD694
+		// Token: 0x0603DCF1 RID: 253169 RVA: 0x011EE860 File Offset: 0x011ECA60
 		private void CheckExchangeNextRail(IExchangeSlideRailConfig item)
 		{
 			if (item.NextRails.Count == 0)
@@ -1761,7 +1751,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468FC RID: 289020 RVA: 0x011BF7DC File Offset: 0x011BD9DC
+		// Token: 0x0603DCF2 RID: 253170 RVA: 0x011EEBA8 File Offset: 0x011ECDA8
 		private void ClearRangeRailMap()
 		{
 			foreach (KeyValuePair<ETriggerKey, ValueTuple<int, int>> keyValuePair in this.InRangeRail)
@@ -1773,7 +1763,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.InRangeRail.Clear();
 		}
 
-		// Token: 0x060468FD RID: 289021 RVA: 0x011BF85C File Offset: 0x011BDA5C
+		// Token: 0x0603DCF3 RID: 253171 RVA: 0x011EEC28 File Offset: 0x011ECE28
 		private void UpdateRangeRailTag(int railId, ETriggerKey key, bool remove, int splineId)
 		{
 			if (!remove)
@@ -1787,7 +1777,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.AddOrRemoveTriggerKeyTag(key, true);
 		}
 
-		// Token: 0x060468FE RID: 289022 RVA: 0x011BF89C File Offset: 0x011BDA9C
+		// Token: 0x0603DCF4 RID: 253172 RVA: 0x011EEC68 File Offset: 0x011ECE68
 		private void AddOrRemoveTriggerKeyTag(ETriggerKey key, bool remove)
 		{
 			switch (key)
@@ -1806,7 +1796,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060468FF RID: 289023 RVA: 0x011BF910 File Offset: 0x011BDB10
+		// Token: 0x0603DCF5 RID: 253173 RVA: 0x011EECDC File Offset: 0x011ECEDC
 		private bool CheckNextRailFront(float offsetDist, float moveDist, USplineComponent splineAsset)
 		{
 			if (splineAsset.GetSplineLength() < offsetDist + moveDist)
@@ -1827,7 +1817,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return this.TmpVector2.DotProduct(this.TmpVector3) > 0.0;
 		}
 
-		// Token: 0x06046900 RID: 289024 RVA: 0x011BFA0C File Offset: 0x011BDC0C
+		// Token: 0x0603DCF6 RID: 253174 RVA: 0x011EEDD8 File Offset: 0x011ECFD8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -1876,7 +1866,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return new ValueTuple<SplineCurve, float, float>?(new ValueTuple<SplineCurve, float, float>(splineCurve, item4, item3));
 		}
 
-		// Token: 0x06046901 RID: 289025 RVA: 0x011BFC8C File Offset: 0x011BDE8C
+		// Token: 0x0603DCF7 RID: 253175 RVA: 0x011EF058 File Offset: 0x011ED258
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -1934,7 +1924,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return new ValueTuple<SplineCurve, float, IJumpProjectileParams>?(new ValueTuple<SplineCurve, float, IJumpProjectileParams>(splineCurve, item, item2));
 		}
 
-		// Token: 0x06046902 RID: 289026 RVA: 0x011BFF84 File Offset: 0x011BE184
+		// Token: 0x0603DCF8 RID: 253176 RVA: 0x011EF350 File Offset: 0x011ED550
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -1963,7 +1953,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return new ValueTuple<SplineCurve, float, IJumpProjectileParams>?(new ValueTuple<SplineCurve, float, IJumpProjectileParams>(splineCurve, 0f, item));
 		}
 
-		// Token: 0x06046903 RID: 289027 RVA: 0x011C00EC File Offset: 0x011BE2EC
+		// Token: 0x0603DCF9 RID: 253177 RVA: 0x011EF4B8 File Offset: 0x011ED6B8
 		private void MoveToTargetAlongSpline(float delta)
 		{
 			this.RailMoveEndCheckNextSpline(this.CurrentRailData);
@@ -2027,7 +2017,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.ActorComp.ResetAllCachedTime();
 		}
 
-		// Token: 0x06046904 RID: 289028 RVA: 0x011C0348 File Offset: 0x011BE548
+		// Token: 0x0603DCFA RID: 253178 RVA: 0x011EF714 File Offset: 0x011ED914
 		private void AddMoveOffset(float delta, global::Vector target, Quat quat, float distance)
 		{
 			RailData currentRailData = this.CurrentRailData;
@@ -2057,7 +2047,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046905 RID: 289029 RVA: 0x011C03EF File Offset: 0x011BE5EF
+		// Token: 0x0603DCFB RID: 253179 RVA: 0x011EF7BB File Offset: 0x011ED9BB
 		private void SetMoveRotation(global::Rotator rotator)
 		{
 			if (this.RailSlideConfig.DisableGravityLean)
@@ -2073,7 +2063,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.SetMoveRotationNormal(rotator);
 		}
 
-		// Token: 0x06046906 RID: 289030 RVA: 0x011C0424 File Offset: 0x011BE624
+		// Token: 0x0603DCFC RID: 253180 RVA: 0x011EF7F0 File Offset: 0x011ED9F0
 		private void SetMoveRotationDisableGravityLean(global::Rotator rotator)
 		{
 			RailData currentRailData = this.CurrentRailData;
@@ -2119,7 +2109,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046907 RID: 289031 RVA: 0x011C0608 File Offset: 0x011BE808
+		// Token: 0x0603DCFD RID: 253181 RVA: 0x011EF9D4 File Offset: 0x011EDBD4
 		private void SetMoveRotationDisablePitchLean(global::Rotator rotator)
 		{
 			RailData currentRailData = this.CurrentRailData;
@@ -2164,7 +2154,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046908 RID: 289032 RVA: 0x011C07D8 File Offset: 0x011BE9D8
+		// Token: 0x0603DCFE RID: 253182 RVA: 0x011EFBA4 File Offset: 0x011EDDA4
 		private void SetMoveRotationNormal(global::Rotator rotator)
 		{
 			RailData currentRailData = this.CurrentRailData;
@@ -2191,7 +2181,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046909 RID: 289033 RVA: 0x011C0874 File Offset: 0x011BEA74
+		// Token: 0x0603DCFF RID: 253183 RVA: 0x011EFC40 File Offset: 0x011EDE40
 		private void AddTangentOffset(global::Vector target, Quat quat)
 		{
 			RailData currentRailData = this.CurrentRailData;
@@ -2210,7 +2200,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			target.AdditionEqual(this.TmpVector2);
 		}
 
-		// Token: 0x0604690A RID: 289034 RVA: 0x011C0930 File Offset: 0x011BEB30
+		// Token: 0x0603DD00 RID: 253184 RVA: 0x011EFCFC File Offset: 0x011EDEFC
 		private void AddTangentIgnoreSideOffset(float delta, global::Vector target, float distance)
 		{
 			RailData currentRailData = this.CurrentRailData;
@@ -2237,7 +2227,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			target.AdditionEqual(this.TmpVector2);
 		}
 
-		// Token: 0x0604690B RID: 289035 RVA: 0x011C0AB8 File Offset: 0x011BECB8
+		// Token: 0x0603DD01 RID: 253185 RVA: 0x011EFE84 File Offset: 0x011EE084
 		private void AddRotatorDirectionOffset(float delta, global::Vector target)
 		{
 			RailData currentRailData = this.CurrentRailData;
@@ -2270,7 +2260,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x0604690C RID: 289036 RVA: 0x011C0C58 File Offset: 0x011BEE58
+		// Token: 0x0603DD02 RID: 253186 RVA: 0x011F0024 File Offset: 0x011EE224
 		private void AddSwordOffset(float delta, float currentDistance)
 		{
 			IRailParam @params = this.CurrentRailData.Params;
@@ -2301,7 +2291,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x0604690D RID: 289037 RVA: 0x011C0D64 File Offset: 0x011BEF64
+		// Token: 0x0603DD03 RID: 253187 RVA: 0x011F0130 File Offset: 0x011EE330
 		private void AddFollowerOffset(float delta, float currentDistance)
 		{
 			IRailParam @params = this.CurrentRailData.Params;
@@ -2342,7 +2332,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x0604690E RID: 289038 RVA: 0x011C0EC8 File Offset: 0x011BF0C8
+		// Token: 0x0603DD04 RID: 253188 RVA: 0x011F0294 File Offset: 0x011EE494
 		private void UpdateRtpcValue()
 		{
 			if (this.RtpcName != null)
@@ -2358,7 +2348,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x0604690F RID: 289039 RVA: 0x011C0F64 File Offset: 0x011BF164
+		// Token: 0x0603DD05 RID: 253189 RVA: 0x011F0330 File Offset: 0x011EE530
 		private void ResetRtpcValue()
 		{
 			if (this.RtpcName != null)
@@ -2368,7 +2358,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.RtpcName = null;
 		}
 
-		// Token: 0x06046910 RID: 289040 RVA: 0x011C0FA0 File Offset: 0x011BF1A0
+		// Token: 0x0603DD06 RID: 253190 RVA: 0x011F036C File Offset: 0x011EE56C
 		private float GetInputLeaningAngle(float maxLeaningAngle)
 		{
 			InputModel instance = InputModel.Instance;
@@ -2382,7 +2372,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return num * maxLeaningAngle;
 		}
 
-		// Token: 0x06046911 RID: 289041 RVA: 0x011C0FDC File Offset: 0x011BF1DC
+		// Token: 0x0603DD07 RID: 253191 RVA: 0x011F03A8 File Offset: 0x011EE5A8
 		private float GetFollowerLeaningAngle(float delta, float maxLeaningAngle)
 		{
 			RailControlData controlData = this.RailSlideConfig.ControlData;
@@ -2407,7 +2397,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return MathUtils.Instance.Clamp(num3 / num2, -1f, 1f) * maxLeaningAngle;
 		}
 
-		// Token: 0x06046912 RID: 289042 RVA: 0x011C1088 File Offset: 0x011BF288
+		// Token: 0x0603DD08 RID: 253192 RVA: 0x011F0454 File Offset: 0x011EE654
 		private float GetSplineLeaningAngle(Quat quat, float maxLeaningAngle)
 		{
 			this.TmpVector3.DeepCopy(this.ActorComp.ActorGravityDirectProxy);
@@ -2428,7 +2418,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return inputLeaningAngle;
 		}
 
-		// Token: 0x06046913 RID: 289043 RVA: 0x011C1138 File Offset: 0x011BF338
+		// Token: 0x0603DD09 RID: 253193 RVA: 0x011F0504 File Offset: 0x011EE704
 		private void UpdateRailSlideMix(Quat quat, float delta)
 		{
 			float to = 0f;
@@ -2458,7 +2448,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046914 RID: 289044 RVA: 0x011C120C File Offset: 0x011BF40C
+		// Token: 0x0603DD0A RID: 253194 RVA: 0x011F05D8 File Offset: 0x011EE7D8
 		private void CheckAirState(float currentDistance)
 		{
 			if (this.CurrentRailData == null)
@@ -2512,7 +2502,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046915 RID: 289045 RVA: 0x011C13F0 File Offset: 0x011BF5F0
+		// Token: 0x0603DD0B RID: 253195 RVA: 0x011F07BC File Offset: 0x011EE9BC
 		private void UpdateMoveSpeed(float delta, global::Vector moveVec, float distance)
 		{
 			if (this.CurrentRailData.Params.RailType == ERailMoveType.JumpProjectile || this.CurrentRailData.Params.RailType == ERailMoveType.JumpEndPointProjectile)
@@ -2537,7 +2527,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046916 RID: 289046 RVA: 0x011C14CC File Offset: 0x011BF6CC
+		// Token: 0x0603DD0C RID: 253196 RVA: 0x011F0898 File Offset: 0x011EEA98
 		[NullableContext(2)]
 		private IRailData GetRailComponentData(int railId)
 		{
@@ -2559,7 +2549,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return null;
 		}
 
-		// Token: 0x06046917 RID: 289047 RVA: 0x011C153C File Offset: 0x011BF73C
+		// Token: 0x0603DD0D RID: 253197 RVA: 0x011F0908 File Offset: 0x011EEB08
 		private unsafe void StartRailPathEffect(int railId)
 		{
 			this.StopRailPathEffect("[RailSlide] StartRailPathEffect reset", true);
@@ -2599,7 +2589,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046918 RID: 289048 RVA: 0x011C1664 File Offset: 0x011BF864
+		// Token: 0x0603DD0E RID: 253198 RVA: 0x011F0A30 File Offset: 0x011EEC30
 		private void StopRailPathEffect(string reason, bool immediately)
 		{
 			if (this.RailPathEffectSpline == null)
@@ -2618,7 +2608,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.RailPathEffectSpline = null;
 		}
 
-		// Token: 0x06046919 RID: 289049 RVA: 0x011C16F0 File Offset: 0x011BF8F0
+		// Token: 0x0603DD0F RID: 253199 RVA: 0x011F0ABC File Offset: 0x011EECBC
 		private FTransformDouble? GetSplineEntityTransform(int splineId)
 		{
 			GameSplineModel instance = GameSplineModel.Instance;
@@ -2630,7 +2620,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return null;
 		}
 
-		// Token: 0x0604691A RID: 289050 RVA: 0x011C1730 File Offset: 0x011BF930
+		// Token: 0x0603DD10 RID: 253200 RVA: 0x011F0AFC File Offset: 0x011EECFC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -2686,7 +2676,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return new ValueTuple<USplineComponent, Aki.TDConfigMgr.Action.ITransform>?(value);
 		}
 
-		// Token: 0x0604691B RID: 289051 RVA: 0x011C192A File Offset: 0x011BFB2A
+		// Token: 0x0603DD11 RID: 253201 RVA: 0x011F0CF6 File Offset: 0x011EEEF6
 		private void ReleaseSplineAsset(int splineId)
 		{
 			if (this.LoadSplineMap.ContainsKey(splineId))
@@ -2696,7 +2686,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x0604691C RID: 289052 RVA: 0x011C1960 File Offset: 0x011BFB60
+		// Token: 0x0603DD12 RID: 253202 RVA: 0x011F0D2C File Offset: 0x011EEF2C
 		private void RefreshRailControlState(int splineId)
 		{
 			RailSlideParams railSlideConfig = this.RailSlideConfig;
@@ -2730,7 +2720,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x0604691D RID: 289053 RVA: 0x011C1A14 File Offset: 0x011BFC14
+		// Token: 0x0603DD13 RID: 253203 RVA: 0x011F0DE0 File Offset: 0x011EEFE0
 		[NullableContext(2)]
 		private UKuroHitResult DetectFloor()
 		{
@@ -2754,7 +2744,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return actorTrace.HitResult;
 		}
 
-		// Token: 0x0604691E RID: 289054 RVA: 0x011C1B4C File Offset: 0x011BFD4C
+		// Token: 0x0603DD14 RID: 253204 RVA: 0x011F0F18 File Offset: 0x011EF118
 		private void OnUseSkill(int charId, int skillId, bool isAutonomousProxy)
 		{
 			RailSlideParams railSlideConfig = this.RailSlideConfig;
@@ -2766,19 +2756,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.SetExitSplineRailSlide("使用了技能" + skillId.ToString(), true);
 		}
 
-		// Token: 0x0604691F RID: 289055 RVA: 0x011C1B9F File Offset: 0x011BFD9F
+		// Token: 0x0603DD15 RID: 253205 RVA: 0x011F0F6B File Offset: 0x011EF16B
 		protected void OnTeleportStart(bool _)
 		{
 			this.ForceExitSplineRailSlide("触发传送", true);
 		}
 
-		// Token: 0x06046920 RID: 289056 RVA: 0x011C1BAD File Offset: 0x011BFDAD
+		// Token: 0x0603DD16 RID: 253206 RVA: 0x011F0F79 File Offset: 0x011EF179
 		private void OnEntityDead()
 		{
 			this.ForceExitSplineRailSlide("角色死亡", true);
 		}
 
-		// Token: 0x06046921 RID: 289057 RVA: 0x011C1BBC File Offset: 0x011BFDBC
+		// Token: 0x0603DD17 RID: 253207 RVA: 0x011F0F88 File Offset: 0x011EF188
 		private unsafe void OnPositionStateChanged(global::ECharPositionState oldPositionState, global::ECharPositionState newPositionState)
 		{
 			if (!this.InRailSlideState || this.ExitRailSlide || !this.StartSlide || oldPositionState != global::ECharPositionState.RailSlide || newPositionState == global::ECharPositionState.RailSlide)
@@ -2812,7 +2802,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.SetExitSplineRailSlide("PositionState离开RailSlide", true);
 		}
 
-		// Token: 0x06046922 RID: 289058 RVA: 0x011C1D00 File Offset: 0x011BFF00
+		// Token: 0x0603DD18 RID: 253208 RVA: 0x011F10CC File Offset: 0x011EF2CC
 		private void OnBeforeChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
 			int id = newEntity.Id;
@@ -2828,7 +2818,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046923 RID: 289059 RVA: 0x011C1D88 File Offset: 0x011BFF88
+		// Token: 0x0603DD19 RID: 253209 RVA: 0x011F1154 File Offset: 0x011EF354
 		[return: Nullable(2)]
 		private unsafe RailSlideParams InitRailSlideParams(string daPath)
 		{
@@ -2850,7 +2840,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return railSlideParams;
 		}
 
-		// Token: 0x06046924 RID: 289060 RVA: 0x011C1E36 File Offset: 0x011C0036
+		// Token: 0x0603DD1A RID: 253210 RVA: 0x011F1202 File Offset: 0x011EF402
 		[NullableContext(2)]
 		private void SetRailSlideConfig(RailSlideParams @params)
 		{
@@ -2864,7 +2854,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			CharacterRailSlideComponent.DebugLog = @params.DebugDraw;
 		}
 
-		// Token: 0x06046925 RID: 289061 RVA: 0x011C1E68 File Offset: 0x011C0068
+		// Token: 0x0603DD1B RID: 253211 RVA: 0x011F1234 File Offset: 0x011EF434
 		private void SetGameplayTag(bool val)
 		{
 			if (val)
@@ -2889,7 +2879,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.SetOnlyTag(GameplayTagDefine.EGameplayTagId["角色.Common.地区运动状态.御剑飞行"], !val, "御剑飞行动画");
 		}
 
-		// Token: 0x06046926 RID: 289062 RVA: 0x011C1F28 File Offset: 0x011C0128
+		// Token: 0x0603DD1C RID: 253212 RVA: 0x011F12F4 File Offset: 0x011EF4F4
 		private void AddKeepRailSlideCue(bool remove = false)
 		{
 			if (this.CueComp == null || this.RailSlideAnimType != ERailSlideAnimType.Normal)
@@ -2908,7 +2898,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x06046927 RID: 289063 RVA: 0x011C1F98 File Offset: 0x011C0198
+		// Token: 0x0603DD1D RID: 253213 RVA: 0x011F1364 File Offset: 0x011EF564
 		private void AddLandRailSlideCue()
 		{
 			if (this.CueComp == null || this.RailSlideAnimType != ERailSlideAnimType.Normal)
@@ -2921,7 +2911,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}));
 		}
 
-		// Token: 0x06046928 RID: 289064 RVA: 0x011C1FE8 File Offset: 0x011C01E8
+		// Token: 0x0603DD1E RID: 253214 RVA: 0x011F13B4 File Offset: 0x011EF5B4
 		private void AddLeaveRailSlideCue()
 		{
 			if (this.CueComp == null || this.RailSlideAnimType != ERailSlideAnimType.Normal)
@@ -2934,7 +2924,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}));
 		}
 
-		// Token: 0x06046929 RID: 289065 RVA: 0x011C2038 File Offset: 0x011C0238
+		// Token: 0x0603DD1F RID: 253215 RVA: 0x011F1404 File Offset: 0x011EF604
 		private void SetOnlyTag(int tagId, bool remove, string context)
 		{
 			if (!remove)
@@ -2956,7 +2946,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x0604692A RID: 289066 RVA: 0x011C209C File Offset: 0x011C029C
+		// Token: 0x0603DD20 RID: 253216 RVA: 0x011F1468 File Offset: 0x011EF668
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -2964,241 +2954,184 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 				return false;
 			}
 			CharacterRailSlideComponent characterRailSlideComponent = (CharacterRailSlideComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CurrentGravityQuat") && characterRailSlideComponent.CurrentGravityQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.CurrentGravityQuat), "CurrentGravityQuat"))
+			if (characterRailSlideComponent.CurrentGravityQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentGravityQuat), "CurrentGravityQuat"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (characterRailSlideComponent.ActorComp == null)
 			{
-				if (characterRailSlideComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (characterRailSlideComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("StateComp"))
-			{
-				if (characterRailSlideComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("AnimComp"))
-			{
-				if (characterRailSlideComponent.AnimComp == null)
-				{
-					this.AnimComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CueComp"))
-			{
-				if (characterRailSlideComponent.CueComp == null)
-				{
-					this.CueComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseGameplayCueComponent>(this.CueComp), "CueComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("InRailSlideState"))
-			{
-				this.InRailSlideState = characterRailSlideComponent.InRailSlideState;
-			}
-			if (base.CanResetComponentProperty("ExitRailSlide"))
-			{
-				this.ExitRailSlide = characterRailSlideComponent.ExitRailSlide;
-			}
-			if (base.CanResetComponentProperty("IsInterrupt"))
-			{
-				this.IsInterrupt = characterRailSlideComponent.IsInterrupt;
-			}
-			if (base.CanResetComponentProperty("StartSlide"))
-			{
-				this.StartSlide = characterRailSlideComponent.StartSlide;
-			}
-			if (base.CanResetComponentProperty("InAirSlide"))
-			{
-				this.InAirSlide = characterRailSlideComponent.InAirSlide;
-			}
-			if (base.CanResetComponentProperty("AirSlideType"))
-			{
-				this.AirSlideType = characterRailSlideComponent.AirSlideType;
-			}
-			if (base.CanResetComponentProperty("RailSlideAnimType"))
-			{
-				this.RailSlideAnimType = characterRailSlideComponent.RailSlideAnimType;
-			}
-			if (base.CanResetComponentProperty("LandAnimation"))
-			{
-				this.LandAnimation = characterRailSlideComponent.LandAnimation;
-			}
-			if (base.CanResetComponentProperty("RailSlideConfig"))
-			{
-				if (characterRailSlideComponent.RailSlideConfig == null)
-				{
-					this.RailSlideConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RailSlideParams>(this.RailSlideConfig), "RailSlideConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CurrentRailData"))
-			{
-				if (characterRailSlideComponent.CurrentRailData == null)
-				{
-					this.CurrentRailData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RailData>(this.CurrentRailData), "CurrentRailData"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("RailPathEffectSpline"))
-			{
-				if (characterRailSlideComponent.RailPathEffectSpline == null)
-				{
-					this.RailPathEffectSpline = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IGuideEffectSpline>(this.RailPathEffectSpline), "RailPathEffectSpline"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("InRangeRail") && characterRailSlideComponent.InRangeRail != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<ETriggerKey, ValueTuple<int, int>>>(this.InRangeRail), "InRangeRail"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ExitRailSlideCallbacks"))
+			if (characterRailSlideComponent.TagComp == null)
 			{
-				if (characterRailSlideComponent.ExitRailSlideCallbacks == null)
-				{
-					this.ExitRailSlideCallbacks = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<Action<bool>>>(this.ExitRailSlideCallbacks), "ExitRailSlideCallbacks"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("PendingRestartRailSlide"))
-			{
-				this.PendingRestartRailSlide = characterRailSlideComponent.PendingRestartRailSlide;
-			}
-			if (base.CanResetComponentProperty("RtpcName"))
-			{
-				this.RtpcName = characterRailSlideComponent.RtpcName;
-			}
-			if (base.CanResetComponentProperty("PbDataId"))
-			{
-				this.PbDataId = characterRailSlideComponent.PbDataId;
-			}
-			if (base.CanResetComponentProperty("LastLocation") && characterRailSlideComponent.LastLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastLocation), "LastLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpVector") && characterRailSlideComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector), "TmpVector"))
+			if (characterRailSlideComponent.StateComp == null)
+			{
+				this.StateComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpVector2") && characterRailSlideComponent.TmpVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector2), "TmpVector2"))
+			if (characterRailSlideComponent.AnimComp == null)
+			{
+				this.AnimComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpVector3") && characterRailSlideComponent.TmpVector3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector3), "TmpVector3"))
+			if (characterRailSlideComponent.CueComp == null)
+			{
+				this.CueComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CueComp), "CueComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpVector4") && characterRailSlideComponent.TmpVector4 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector4), "TmpVector4"))
+			this.InRailSlideState = characterRailSlideComponent.InRailSlideState;
+			this.ExitRailSlide = characterRailSlideComponent.ExitRailSlide;
+			this.IsInterrupt = characterRailSlideComponent.IsInterrupt;
+			this.StartSlide = characterRailSlideComponent.StartSlide;
+			this.InAirSlide = characterRailSlideComponent.InAirSlide;
+			this.AirSlideType = characterRailSlideComponent.AirSlideType;
+			this.RailSlideAnimType = characterRailSlideComponent.RailSlideAnimType;
+			this.LandAnimation = characterRailSlideComponent.LandAnimation;
+			if (characterRailSlideComponent.RailSlideConfig == null)
+			{
+				this.RailSlideConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RailSlideConfig), "RailSlideConfig"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpVector5") && characterRailSlideComponent.TmpVector5 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector5), "TmpVector5"))
+			if (characterRailSlideComponent.CurrentRailData == null)
+			{
+				this.CurrentRailData = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentRailData), "CurrentRailData"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpTransform") && characterRailSlideComponent.TmpTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.TmpTransform), "TmpTransform"))
+			if (characterRailSlideComponent.RailPathEffectSpline == null)
+			{
+				this.RailPathEffectSpline = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RailPathEffectSpline), "RailPathEffectSpline"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpQuat") && characterRailSlideComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat), "TmpQuat"))
+			if (characterRailSlideComponent.InRangeRail != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InRangeRail), "InRangeRail"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpRotator") && characterRailSlideComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.TmpRotator), "TmpRotator"))
+			if (characterRailSlideComponent.ExitRailSlideCallbacks == null)
+			{
+				this.ExitRailSlideCallbacks = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ExitRailSlideCallbacks), "ExitRailSlideCallbacks"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpRotator2") && characterRailSlideComponent.TmpRotator2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.TmpRotator2), "TmpRotator2"))
+			this.PendingRestartRailSlide = characterRailSlideComponent.PendingRestartRailSlide;
+			this.RtpcName = characterRailSlideComponent.RtpcName;
+			this.PbDataId = characterRailSlideComponent.PbDataId;
+			if (characterRailSlideComponent.LastLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastLocation), "LastLocation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IsFollower"))
-			{
-				this.IsFollower = characterRailSlideComponent.IsFollower;
-			}
-			if (base.CanResetComponentProperty("LastTriggerJumpKey"))
-			{
-				this.LastTriggerJumpKey = characterRailSlideComponent.LastTriggerJumpKey;
-			}
-			if (base.CanResetComponentProperty("CheckInputDeltaTime"))
-			{
-				this.CheckInputDeltaTime = characterRailSlideComponent.CheckInputDeltaTime;
-			}
-			if (base.CanResetComponentProperty("CheckInputTime"))
-			{
-				this.CheckInputTime = characterRailSlideComponent.CheckInputTime;
-			}
-			if (base.CanResetComponentProperty("LastLeaningAngle"))
-			{
-				this.LastLeaningAngle = characterRailSlideComponent.LastLeaningAngle;
-			}
-			if (base.CanResetComponentProperty("LastFollowerAngularVelocity"))
-			{
-				this.LastFollowerAngularVelocity = characterRailSlideComponent.LastFollowerAngularVelocity;
-			}
-			if (base.CanResetComponentProperty("HasLastFollowerAngularVelocity"))
-			{
-				this.HasLastFollowerAngularVelocity = characterRailSlideComponent.HasLastFollowerAngularVelocity;
-			}
-			if (base.CanResetComponentProperty("LoadSplineMap") && characterRailSlideComponent.LoadSplineMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, ValueTuple<USplineComponent, Aki.TDConfigMgr.Action.ITransform>>>(this.LoadSplineMap), "LoadSplineMap"))
+			if (characterRailSlideComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IsKatixiya"))
+			if (characterRailSlideComponent.TmpVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector2), "TmpVector2"))
 			{
-				this.IsKatixiya = characterRailSlideComponent.IsKatixiya;
+				return false;
 			}
-			if (base.CanResetComponentProperty("KeepRailSlideHandle"))
+			if (characterRailSlideComponent.TmpVector3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector3), "TmpVector3"))
 			{
-				this.KeepRailSlideHandle = characterRailSlideComponent.KeepRailSlideHandle;
+				return false;
 			}
+			if (characterRailSlideComponent.TmpVector4 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector4), "TmpVector4"))
+			{
+				return false;
+			}
+			if (characterRailSlideComponent.TmpVector5 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector5), "TmpVector5"))
+			{
+				return false;
+			}
+			if (characterRailSlideComponent.TmpTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTransform), "TmpTransform"))
+			{
+				return false;
+			}
+			if (characterRailSlideComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat), "TmpQuat"))
+			{
+				return false;
+			}
+			if (characterRailSlideComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator"))
+			{
+				return false;
+			}
+			if (characterRailSlideComponent.TmpRotator2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator2), "TmpRotator2"))
+			{
+				return false;
+			}
+			this.IsFollower = characterRailSlideComponent.IsFollower;
+			this.LastTriggerJumpKey = characterRailSlideComponent.LastTriggerJumpKey;
+			this.CheckInputDeltaTime = characterRailSlideComponent.CheckInputDeltaTime;
+			this.CheckInputTime = characterRailSlideComponent.CheckInputTime;
+			this.LastLeaningAngle = characterRailSlideComponent.LastLeaningAngle;
+			this.LastFollowerAngularVelocity = characterRailSlideComponent.LastFollowerAngularVelocity;
+			this.HasLastFollowerAngularVelocity = characterRailSlideComponent.HasLastFollowerAngularVelocity;
+			if (characterRailSlideComponent.LoadSplineMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LoadSplineMap), "LoadSplineMap"))
+			{
+				return false;
+			}
+			this.IsKatixiya = characterRailSlideComponent.IsKatixiya;
+			this.KeepRailSlideHandle = characterRailSlideComponent.KeepRailSlideHandle;
 			return true;
 		}
 
-		// Token: 0x0402501E RID: 151582
+		// Token: 0x17007542 RID: 30018
+		// (get) Token: 0x0603DD21 RID: 253217 RVA: 0x011F18B5 File Offset: 0x011EFAB5
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007543 RID: 30019
+		// (get) Token: 0x0603DD22 RID: 253218 RVA: 0x011F18B8 File Offset: 0x011EFAB8
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007544 RID: 30020
+		// (get) Token: 0x0603DD23 RID: 253219 RVA: 0x011F18BB File Offset: 0x011EFABB
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020CB3 RID: 134323
 		[StaticVariableRuleIgnore]
 		public static readonly int[] keepRailSlideCue = new int[]
 		{
@@ -3206,7 +3139,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			640018016
 		};
 
-		// Token: 0x0402501F RID: 151583
+		// Token: 0x04020CB4 RID: 134324
 		[StaticVariableRuleIgnore]
 		public static readonly int[] leaveRailSlideCue = new int[]
 		{
@@ -3214,7 +3147,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			640018020
 		};
 
-		// Token: 0x04025020 RID: 151584
+		// Token: 0x04020CB5 RID: 134325
 		[StaticVariableRuleIgnore]
 		public static readonly int[] landRailSlideCue = new int[]
 		{
@@ -3222,90 +3155,90 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			640018018
 		};
 
-		// Token: 0x04025021 RID: 151585
+		// Token: 0x04020CB6 RID: 134326
 		public const string PROFILE_KEY = "RailSlide";
 
-		// Token: 0x04025022 RID: 151586
+		// Token: 0x04020CB7 RID: 134327
 		public const int TEN_MS = 166;
 
-		// Token: 0x04025023 RID: 151587
+		// Token: 0x04020CB8 RID: 134328
 		public const float MS_TO_SECOUND = 0.001f;
 
-		// Token: 0x04025024 RID: 151588
+		// Token: 0x04020CB9 RID: 134329
 		public const int SECOUND_TO_MS = 1000;
 
-		// Token: 0x04025025 RID: 151589
+		// Token: 0x04020CBA RID: 134330
 		public const int HEIGHT_LIMIT = 800;
 
-		// Token: 0x04025026 RID: 151590
+		// Token: 0x04020CBB RID: 134331
 		public const int CHECK_RAIL_INTERNAL_TIME = 100;
 
-		// Token: 0x04025027 RID: 151591
+		// Token: 0x04020CBC RID: 134332
 		public const int KATIXIYA_ROLE_ID = 1409;
 
-		// Token: 0x04025028 RID: 151592
+		// Token: 0x04020CBD RID: 134333
 		public const int MIN_ENTER_RAIL_DISTANCE = 100;
 
-		// Token: 0x04025029 RID: 151593
+		// Token: 0x04020CBE RID: 134334
 		private readonly Quat CurrentGravityQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x0402502A RID: 151594
+		// Token: 0x04020CBF RID: 134335
 		[Nullable(2)]
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x0402502B RID: 151595
+		// Token: 0x04020CC0 RID: 134336
 		[Nullable(2)]
 		private BaseTagComponent TagComp;
 
-		// Token: 0x0402502C RID: 151596
+		// Token: 0x04020CC1 RID: 134337
 		[Nullable(2)]
 		private CharacterUnifiedStateComponent StateComp;
 
-		// Token: 0x0402502D RID: 151597
+		// Token: 0x04020CC2 RID: 134338
 		[Nullable(2)]
 		private CharacterAnimationComponent AnimComp;
 
-		// Token: 0x0402502E RID: 151598
+		// Token: 0x04020CC3 RID: 134339
 		[Nullable(2)]
 		private BaseGameplayCueComponent CueComp;
 
-		// Token: 0x0402502F RID: 151599
+		// Token: 0x04020CC4 RID: 134340
 		private bool InRailSlideState;
 
-		// Token: 0x04025030 RID: 151600
+		// Token: 0x04020CC5 RID: 134341
 		private bool ExitRailSlide;
 
-		// Token: 0x04025031 RID: 151601
+		// Token: 0x04020CC6 RID: 134342
 		private bool IsInterrupt;
 
-		// Token: 0x04025032 RID: 151602
+		// Token: 0x04020CC7 RID: 134343
 		private bool StartSlide;
 
-		// Token: 0x04025033 RID: 151603
+		// Token: 0x04020CC8 RID: 134344
 		private bool InAirSlide;
 
-		// Token: 0x04025034 RID: 151604
+		// Token: 0x04020CC9 RID: 134345
 		private ERailSlideJumpType AirSlideType;
 
-		// Token: 0x04025035 RID: 151605
+		// Token: 0x04020CCA RID: 134346
 		private ERailSlideAnimType RailSlideAnimType;
 
-		// Token: 0x04025036 RID: 151606
+		// Token: 0x04020CCB RID: 134347
 		private bool LandAnimation;
 
-		// Token: 0x04025037 RID: 151607
+		// Token: 0x04020CCC RID: 134348
 		[Nullable(2)]
 		private RailSlideParams RailSlideConfig;
 
-		// Token: 0x04025038 RID: 151608
+		// Token: 0x04020CCD RID: 134349
 		[Nullable(2)]
 		private RailData CurrentRailData;
 
-		// Token: 0x04025039 RID: 151609
+		// Token: 0x04020CCE RID: 134350
 		[Nullable(2)]
 		private IGuideEffectSpline RailPathEffectSpline;
 
-		// Token: 0x0402503A RID: 151610
+		// Token: 0x04020CCF RID: 134351
 		[Nullable(new byte[]
 		{
 			1,
@@ -3313,10 +3246,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 		})]
 		private readonly Dictionary<ETriggerKey, ValueTuple<int, int>> InRangeRail = new Dictionary<ETriggerKey, ValueTuple<int, int>>();
 
-		// Token: 0x0402503B RID: 151611
+		// Token: 0x04020CD0 RID: 134352
 		private List<Action<bool>> ExitRailSlideCallbacks = new List<Action<bool>>();
 
-		// Token: 0x0402503C RID: 151612
+		// Token: 0x04020CD1 RID: 134353
 		[TupleElementNames(new string[]
 		{
 			"RailId",
@@ -3329,68 +3262,68 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 		})]
 		private ValueTuple<int, string>? PendingRestartRailSlide;
 
-		// Token: 0x0402503D RID: 151613
+		// Token: 0x04020CD2 RID: 134354
 		[Nullable(2)]
 		private string RtpcName;
 
-		// Token: 0x0402503E RID: 151614
+		// Token: 0x04020CD3 RID: 134355
 		public static bool DebugLog = false;
 
-		// Token: 0x0402503F RID: 151615
+		// Token: 0x04020CD4 RID: 134356
 		private int PbDataId;
 
-		// Token: 0x04025040 RID: 151616
+		// Token: 0x04020CD5 RID: 134357
 		private readonly global::Vector LastLocation = global::Vector.Create();
 
-		// Token: 0x04025041 RID: 151617
+		// Token: 0x04020CD6 RID: 134358
 		private readonly global::Vector TmpVector = global::Vector.Create();
 
-		// Token: 0x04025042 RID: 151618
+		// Token: 0x04020CD7 RID: 134359
 		private readonly global::Vector TmpVector2 = global::Vector.Create();
 
-		// Token: 0x04025043 RID: 151619
+		// Token: 0x04020CD8 RID: 134360
 		private readonly global::Vector TmpVector3 = global::Vector.Create();
 
-		// Token: 0x04025044 RID: 151620
+		// Token: 0x04020CD9 RID: 134361
 		private readonly global::Vector TmpVector4 = global::Vector.Create();
 
-		// Token: 0x04025045 RID: 151621
+		// Token: 0x04020CDA RID: 134362
 		private readonly global::Vector TmpVector5 = global::Vector.Create();
 
-		// Token: 0x04025046 RID: 151622
+		// Token: 0x04020CDB RID: 134363
 		private readonly global::Transform TmpTransform = global::Transform.Create();
 
-		// Token: 0x04025047 RID: 151623
+		// Token: 0x04020CDC RID: 134364
 		private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04025048 RID: 151624
+		// Token: 0x04020CDD RID: 134365
 		private readonly global::Rotator TmpRotator = global::Rotator.Create();
 
-		// Token: 0x04025049 RID: 151625
+		// Token: 0x04020CDE RID: 134366
 		private readonly global::Rotator TmpRotator2 = global::Rotator.Create();
 
-		// Token: 0x0402504A RID: 151626
+		// Token: 0x04020CDF RID: 134367
 		private bool IsFollower;
 
-		// Token: 0x0402504B RID: 151627
+		// Token: 0x04020CE0 RID: 134368
 		private ETriggerKey? LastTriggerJumpKey;
 
-		// Token: 0x0402504C RID: 151628
+		// Token: 0x04020CE1 RID: 134369
 		private float CheckInputDeltaTime;
 
-		// Token: 0x0402504D RID: 151629
+		// Token: 0x04020CE2 RID: 134370
 		private double CheckInputTime;
 
-		// Token: 0x0402504E RID: 151630
+		// Token: 0x04020CE3 RID: 134371
 		private float LastLeaningAngle;
 
-		// Token: 0x0402504F RID: 151631
+		// Token: 0x04020CE4 RID: 134372
 		private float LastFollowerAngularVelocity;
 
-		// Token: 0x04025050 RID: 151632
+		// Token: 0x04020CE5 RID: 134373
 		private bool HasLastFollowerAngularVelocity;
 
-		// Token: 0x04025051 RID: 151633
+		// Token: 0x04020CE6 RID: 134374
 		[Nullable(new byte[]
 		{
 			1,
@@ -3400,10 +3333,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 		})]
 		private readonly Dictionary<int, ValueTuple<USplineComponent, Aki.TDConfigMgr.Action.ITransform>> LoadSplineMap = new Dictionary<int, ValueTuple<USplineComponent, Aki.TDConfigMgr.Action.ITransform>>();
 
-		// Token: 0x04025052 RID: 151634
+		// Token: 0x04020CE7 RID: 134375
 		private bool IsKatixiya;
 
-		// Token: 0x04025053 RID: 151635
+		// Token: 0x04020CE8 RID: 134376
 		private int KeepRailSlideHandle;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003AFC RID: 15100
+	// Token: 0x02003EFE RID: 16126
 	public struct IVarBooleanValidateConfig : IFlatbufferObject
 	{
-		// Token: 0x17006789 RID: 26505
-		// (get) Token: 0x06014941 RID: 84289 RVA: 0x002FEEB4 File Offset: 0x002FD0B4
+		// Token: 0x17006D24 RID: 27940
+		// (get) Token: 0x06015DEB RID: 89579 RVA: 0x00325144 File Offset: 0x00323344
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014942 RID: 84290 RVA: 0x002FEEC1 File Offset: 0x002FD0C1
+		// Token: 0x06015DEC RID: 89580 RVA: 0x00325151 File Offset: 0x00323351
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014943 RID: 84291 RVA: 0x002FEEC8 File Offset: 0x002FD0C8
+		// Token: 0x06015DED RID: 89581 RVA: 0x00325158 File Offset: 0x00323358
 		public static IVarBooleanValidateConfig GetRootAsIVarBooleanValidateConfig(ByteBuffer _bb)
 		{
 			return IVarBooleanValidateConfig.GetRootAsIVarBooleanValidateConfig(_bb, default(IVarBooleanValidateConfig));
 		}
 
-		// Token: 0x06014944 RID: 84292 RVA: 0x002FEEE4 File Offset: 0x002FD0E4
+		// Token: 0x06015DEE RID: 89582 RVA: 0x00325174 File Offset: 0x00323374
 		public static IVarBooleanValidateConfig GetRootAsIVarBooleanValidateConfig(ByteBuffer _bb, IVarBooleanValidateConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014945 RID: 84293 RVA: 0x002FEF01 File Offset: 0x002FD101
+		// Token: 0x06015DEF RID: 89583 RVA: 0x00325191 File Offset: 0x00323391
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014946 RID: 84294 RVA: 0x002FEF10 File Offset: 0x002FD110
+		// Token: 0x06015DF0 RID: 89584 RVA: 0x003251A0 File Offset: 0x003233A0
 		public IVarBooleanValidateConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700678A RID: 26506
-		// (get) Token: 0x06014947 RID: 84295 RVA: 0x002FEF20 File Offset: 0x002FD120
+		// Token: 0x17006D25 RID: 27941
+		// (get) Token: 0x06015DF1 RID: 89585 RVA: 0x003251B0 File Offset: 0x003233B0
 		public EVar Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014948 RID: 84296 RVA: 0x002FEF5C File Offset: 0x002FD15C
+		// Token: 0x06015DF2 RID: 89586 RVA: 0x003251EC File Offset: 0x003233EC
 		public static Offset<IVarBooleanValidateConfig> CreateIVarBooleanValidateConfig(FlatBufferBuilder builder, EVar Type = EVar.Boolean)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IVarBooleanValidateConfig.EndIVarBooleanValidateConfig(builder);
 		}
 
-		// Token: 0x06014949 RID: 84297 RVA: 0x002FEF72 File Offset: 0x002FD172
+		// Token: 0x06015DF3 RID: 89587 RVA: 0x00325202 File Offset: 0x00323402
 		public static void StartIVarBooleanValidateConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601494A RID: 84298 RVA: 0x002FEF7B File Offset: 0x002FD17B
+		// Token: 0x06015DF4 RID: 89588 RVA: 0x0032520B File Offset: 0x0032340B
 		public static void AddType(FlatBufferBuilder builder, EVar type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601494B RID: 84299 RVA: 0x002FEF86 File Offset: 0x002FD186
+		// Token: 0x06015DF5 RID: 89589 RVA: 0x00325216 File Offset: 0x00323416
 		public static Offset<IVarBooleanValidateConfig> EndIVarBooleanValidateConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IVarBooleanValidateConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601494C RID: 84300 RVA: 0x002FEF94 File Offset: 0x002FD194
+		// Token: 0x06015DF6 RID: 89590 RVA: 0x00325224 File Offset: 0x00323424
 		public IVarBooleanValidateConfigT UnPack()
 		{
 			IVarBooleanValidateConfigT varBooleanValidateConfigT = new IVarBooleanValidateConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return varBooleanValidateConfigT;
 		}
 
-		// Token: 0x0601494D RID: 84301 RVA: 0x002FEFAF File Offset: 0x002FD1AF
+		// Token: 0x06015DF7 RID: 89591 RVA: 0x0032523F File Offset: 0x0032343F
 		public void UnPackTo(IVarBooleanValidateConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601494E RID: 84302 RVA: 0x002FEFC0 File Offset: 0x002FD1C0
+		// Token: 0x06015DF8 RID: 89592 RVA: 0x00325250 File Offset: 0x00323450
 		public static Offset<IVarBooleanValidateConfig> Pack(FlatBufferBuilder builder, IVarBooleanValidateConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IVarBooleanValidateConfig.CreateIVarBooleanValidateConfig(builder, _o.Type);
 		}
 
-		// Token: 0x0400AFC2 RID: 44994
+		// Token: 0x0400B92F RID: 47407
 		private Table __p;
 	}
 }

@@ -7,24 +7,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhoneMessage
 {
-	// Token: 0x020050F5 RID: 20725
+	// Token: 0x020040C5 RID: 16581
 	[NullableContext(2)]
 	[Nullable(0)]
 	internal class PanelFilter : GridProxyAbstract<int>
 	{
-		// Token: 0x06034FCF RID: 217039 RVA: 0x00C8CF81 File Offset: 0x00C8B181
+		// Token: 0x06029EC8 RID: 171720 RVA: 0x00BDA25D File Offset: 0x00BD845D
 		public void SetOnFilterTogItemClick(Action<int, bool> callback)
 		{
 			this.OnFilterTogItemClick = callback;
 		}
 
-		// Token: 0x06034FD0 RID: 217040 RVA: 0x00C8CF8A File Offset: 0x00C8B18A
+		// Token: 0x06029EC9 RID: 171721 RVA: 0x00BDA266 File Offset: 0x00BD8466
 		public void SetIsFilterSelected(Func<int, bool> callback)
 		{
 			this.IsFilterSelected = callback;
 		}
 
-		// Token: 0x06034FD1 RID: 217041 RVA: 0x00C8CF94 File Offset: 0x00C8B194
+		// Token: 0x06029ECA RID: 171722 RVA: 0x00BDA270 File Offset: 0x00BD8470
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,14 +35,14 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			};
 		}
 
-		// Token: 0x06034FD2 RID: 217042 RVA: 0x00C8CFF0 File Offset: 0x00C8B1F0
+		// Token: 0x06029ECB RID: 171723 RVA: 0x00BDA2CC File Offset: 0x00BD84CC
 		protected override void OnStart()
 		{
 			UUIGridLayout gridLayout = base.GetGridLayout(1);
 			this.BigFilterTogItemLayout = new GenericLayout<FilterTogItem, int>(gridLayout, new Func<FilterTogItem>(this.CreateFilterTogItem), null, false, true);
 		}
 
-		// Token: 0x06034FD3 RID: 217043 RVA: 0x00C8D020 File Offset: 0x00C8B220
+		// Token: 0x06029ECC RID: 171724 RVA: 0x00BDA2FC File Offset: 0x00BD84FC
 		public override void Refresh(int filterTypeId, bool isSelected, int gridIndex)
 		{
 			this.FilterTypeId = new int?(filterTypeId);
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			bigFilterTogItemLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06034FD4 RID: 217044 RVA: 0x00C8D0F8 File Offset: 0x00C8B2F8
+		// Token: 0x06029ECD RID: 171725 RVA: 0x00BDA3D4 File Offset: 0x00BD85D4
 		[NullableContext(1)]
 		private FilterTogItem CreateFilterTogItem()
 		{
@@ -76,15 +76,15 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			return filterTogItem;
 		}
 
-		// Token: 0x06034FD5 RID: 217045 RVA: 0x00C8D117 File Offset: 0x00C8B317
+		// Token: 0x06029ECE RID: 171726 RVA: 0x00BDA3F3 File Offset: 0x00BD85F3
 		public override void Clear()
 		{
 		}
 
-		// Token: 0x0401C36B RID: 115563
+		// Token: 0x04016D9E RID: 93598
 		public int? FilterTypeId;
 
-		// Token: 0x0401C36C RID: 115564
+		// Token: 0x04016D9F RID: 93599
 		[Nullable(new byte[]
 		{
 			2,
@@ -92,10 +92,10 @@ namespace CSharpScript.Game.Module.PhoneMessage
 		})]
 		private GenericLayout<FilterTogItem, int> BigFilterTogItemLayout;
 
-		// Token: 0x0401C36D RID: 115565
+		// Token: 0x04016DA0 RID: 93600
 		private Action<int, bool> OnFilterTogItemClick;
 
-		// Token: 0x0401C36E RID: 115566
+		// Token: 0x04016DA1 RID: 93601
 		private Func<int, bool> IsFilterSelected;
 	}
 }

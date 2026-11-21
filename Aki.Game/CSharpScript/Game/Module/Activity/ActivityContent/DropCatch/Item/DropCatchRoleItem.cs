@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 {
-	// Token: 0x020066ED RID: 26349
+	// Token: 0x0200563D RID: 22077
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 	})]
 	public class DropCatchRoleItem : GridProxyAbstract<IDropCatchRoleItemData>
 	{
-		// Token: 0x06041D6B RID: 269675 RVA: 0x00FF7528 File Offset: 0x00FF5728
+		// Token: 0x060368B7 RID: 223415 RVA: 0x00F3892C File Offset: 0x00F36B2C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			};
 		}
 
-		// Token: 0x06041D6C RID: 269676 RVA: 0x00FF7600 File Offset: 0x00FF5800
+		// Token: 0x060368B8 RID: 223416 RVA: 0x00F38A04 File Offset: 0x00F36C04
 		public override void Refresh(IDropCatchRoleItemData data, bool isSelected, int gridIndex)
 		{
 			if (data == null)
@@ -98,25 +98,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			item2.SetUIActive(uiactive);
 		}
 
-		// Token: 0x06041D6D RID: 269677 RVA: 0x00FF77A3 File Offset: 0x00FF59A3
+		// Token: 0x060368B9 RID: 223417 RVA: 0x00F38BA7 File Offset: 0x00F36DA7
 		public void SetClickCallback(Action<int, int> callback)
 		{
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x06041D6E RID: 269678 RVA: 0x00FF77AC File Offset: 0x00FF59AC
+		// Token: 0x060368BA RID: 223418 RVA: 0x00F38BB0 File Offset: 0x00F36DB0
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleSelect(true);
 		}
 
-		// Token: 0x06041D6F RID: 269679 RVA: 0x00FF77B5 File Offset: 0x00FF59B5
+		// Token: 0x060368BB RID: 223419 RVA: 0x00F38BB9 File Offset: 0x00F36DB9
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleSelect(false);
 		}
 
-		// Token: 0x06041D70 RID: 269680 RVA: 0x00FF77C0 File Offset: 0x00FF59C0
+		// Token: 0x060368BC RID: 223420 RVA: 0x00F38BC4 File Offset: 0x00F36DC4
 		private void OnClicked(EToggleState state)
 		{
 			if (this.IsUnlock)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			clickCallback(this.BookCfgId, base.GridIndex);
 		}
 
-		// Token: 0x06041D71 RID: 269681 RVA: 0x00FF7825 File Offset: 0x00FF5A25
+		// Token: 0x060368BD RID: 223421 RVA: 0x00F38C29 File Offset: 0x00F36E29
 		public void SetToggleSelect(bool select)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -148,21 +148,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			extendToggle.SetToggleStateForce(select ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x040224BD RID: 140477
+		// Token: 0x0401CD16 RID: 118038
 		private int CfgId;
 
-		// Token: 0x040224BE RID: 140478
+		// Token: 0x0401CD17 RID: 118039
 		private int BookCfgId;
 
-		// Token: 0x040224BF RID: 140479
+		// Token: 0x0401CD18 RID: 118040
 		private bool IsUnlock;
 
-		// Token: 0x040224C0 RID: 140480
+		// Token: 0x0401CD19 RID: 118041
 		private Action<int, int> ClickCallback = delegate(int configId, int index)
 		{
 		};
 
-		// Token: 0x040224C1 RID: 140481
+		// Token: 0x0401CD1A RID: 118042
 		private const string ROME_ICON_PATH = "/Game/Aki/UI/UIResources/Common/Atlas/Num/Roman/RomanB/SP_RomanA0{0}.SP_RomanA0{1}";
 	}
 }

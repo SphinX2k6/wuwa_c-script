@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C6B RID: 23659
+	// Token: 0x02006293 RID: 25235
 	public static class TNearbyTrackingVerify
 	{
-		// Token: 0x060288B0 RID: 166064 RVA: 0x00593438 File Offset: 0x00591638
+		// Token: 0x0602AECE RID: 175822 RVA: 0x005DB7D0 File Offset: 0x005D99D0
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -19,9 +19,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				result = ICompassTrackingVerify.Verify(verifier, tablePos);
 				break;
 			case 3:
-				result = IIconNearbyTrackingVerify.Verify(verifier, tablePos);
+				result = IDarkTideNearbyTrackingVerify.Verify(verifier, tablePos);
 				break;
 			case 4:
+				result = IIconNearbyTrackingVerify.Verify(verifier, tablePos);
+				break;
+			case 5:
 				result = IStealthNearbyTrackingVerify.Verify(verifier, tablePos);
 				break;
 			default:

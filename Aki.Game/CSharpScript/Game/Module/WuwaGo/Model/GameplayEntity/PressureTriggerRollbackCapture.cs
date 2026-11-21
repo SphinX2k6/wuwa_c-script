@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 {
-	// Token: 0x0200474B RID: 18251
+	// Token: 0x0200367C RID: 13948
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,12 +12,12 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 	})]
 	internal class PressureTriggerRollbackCapture : GameplayEntityRollbackCapture<WuWaGoPressureTriggerEntity>
 	{
-		// Token: 0x0602FB39 RID: 195385 RVA: 0x00B0D84F File Offset: 0x00B0BA4F
+		// Token: 0x06024303 RID: 148227 RVA: 0x00A3D82F File Offset: 0x00A3BA2F
 		public PressureTriggerRollbackCapture(WuWaGoPressureTriggerEntity entity) : base(entity)
 		{
 		}
 
-		// Token: 0x0602FB3A RID: 195386 RVA: 0x00B0D870 File Offset: 0x00B0BA70
+		// Token: 0x06024304 RID: 148228 RVA: 0x00A3D850 File Offset: 0x00A3BA50
 		public override void Restore()
 		{
 			base.Restore();
@@ -25,10 +25,10 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 			base.Entity.SyncPresentationForRollback();
 		}
 
-		// Token: 0x04019BFE RID: 105470
+		// Token: 0x040142AE RID: 82606
 		private readonly int OccupantId = entity.CurrentOccupantId;
 
-		// Token: 0x04019BFF RID: 105471
+		// Token: 0x040142AF RID: 82607
 		private readonly bool IsDirty = entity.Dirty;
 	}
 }

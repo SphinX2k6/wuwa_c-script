@@ -7,17 +7,17 @@ using CSharpScript.Game.NewWorld.Character.Common.Component;
 using CSharpScript.Game.NewWorld.Character.Custom.Components;
 using UnrealEngine;
 
-// Token: 0x02002FBE RID: 12222
+// Token: 0x02002512 RID: 9490
 [NullableContext(2)]
 [Nullable(0)]
 public class GameplayCueFixHook : GameplayCueBase
 {
-	// Token: 0x06019E99 RID: 106137 RVA: 0x006C6A35 File Offset: 0x006C4C35
+	// Token: 0x060177AB RID: 96171 RVA: 0x006ED301 File Offset: 0x006EB501
 	protected override void OnInit()
 	{
 	}
 
-	// Token: 0x06019E9A RID: 106138 RVA: 0x006C6A38 File Offset: 0x006C4C38
+	// Token: 0x060177AC RID: 96172 RVA: 0x006ED304 File Offset: 0x006EB504
 	protected override void OnTick(float delta)
 	{
 		if (this.IsMovableHookPoint)
@@ -31,7 +31,7 @@ public class GameplayCueFixHook : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019E9B RID: 106139 RVA: 0x006C6A6C File Offset: 0x006C4C6C
+	// Token: 0x060177AD RID: 96173 RVA: 0x006ED338 File Offset: 0x006EB538
 	protected override void OnAfterTick(float delta)
 	{
 		if (!this.IsMovableHookPoint)
@@ -45,7 +45,7 @@ public class GameplayCueFixHook : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019E9C RID: 106140 RVA: 0x006C6AA0 File Offset: 0x006C4CA0
+	// Token: 0x060177AE RID: 96174 RVA: 0x006ED36C File Offset: 0x006EB56C
 	protected override void OnCreate()
 	{
 		BaseSceneInteractComponent sceneInteractComponent = this.GetSceneInteractComponent();
@@ -81,7 +81,7 @@ public class GameplayCueFixHook : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019E9D RID: 106141 RVA: 0x006C6BCC File Offset: 0x006C4DCC
+	// Token: 0x060177AF RID: 96175 RVA: 0x006ED498 File Offset: 0x006EB698
 	protected override void OnDestroy()
 	{
 		if (this.HookItem != null)
@@ -97,7 +97,7 @@ public class GameplayCueFixHook : GameplayCueBase
 		this.EnterPortal = null;
 	}
 
-	// Token: 0x06019E9E RID: 106142 RVA: 0x006C6C1C File Offset: 0x006C4E1C
+	// Token: 0x060177B0 RID: 96176 RVA: 0x006ED4E8 File Offset: 0x006EB6E8
 	private FVectorDouble GetTargetPosition(bool realtime = false)
 	{
 		BaseSceneInteractComponent sceneInteractComponent = this.GetSceneInteractComponent();
@@ -116,25 +116,25 @@ public class GameplayCueFixHook : GameplayCueBase
 		return sceneInteractComponent.GetCurrentTargetLocation().ToUeVector(false);
 	}
 
-	// Token: 0x06019E9F RID: 106143 RVA: 0x006C6C5B File Offset: 0x006C4E5B
+	// Token: 0x060177B1 RID: 96177 RVA: 0x006ED527 File Offset: 0x006EB727
 	private FVectorDouble GetCurrentPathwayEndLocation()
 	{
 		return this.GetSceneInteractComponent().GetCurrentPathwayEndLocation().ToUeVector(false);
 	}
 
-	// Token: 0x06019EA0 RID: 106144 RVA: 0x006C6C6E File Offset: 0x006C4E6E
+	// Token: 0x060177B2 RID: 96178 RVA: 0x006ED53A File Offset: 0x006EB73A
 	private bool GetIsInLastPathway()
 	{
 		return this.GetSceneInteractComponent().GetIsInLastPathway();
 	}
 
-	// Token: 0x06019EA1 RID: 106145 RVA: 0x006C6C7B File Offset: 0x006C4E7B
+	// Token: 0x060177B3 RID: 96179 RVA: 0x006ED547 File Offset: 0x006EB747
 	private BP_KuroPortalCapture_C GetTargetEnterPortalCapture()
 	{
 		return this.GetSceneInteractComponent().GetCurrentTargetEnterPortalCapture();
 	}
 
-	// Token: 0x06019EA2 RID: 106146 RVA: 0x006C6C88 File Offset: 0x006C4E88
+	// Token: 0x060177B4 RID: 96180 RVA: 0x006ED554 File Offset: 0x006EB754
 	private void OnRoleTeleport(FVector vector)
 	{
 		if (!this.IsActive || this.EnterPortal == null)
@@ -150,7 +150,7 @@ public class GameplayCueFixHook : GameplayCueBase
 		this.HookItem = GameplayCueHookCommonItem.Spawn(this.ActorInternal, FNameUtil.GetDynamicFName(this.CueConfig.Socket).Value, currentPathwayEndLocation, this.CueConfig.Resources(), true);
 	}
 
-	// Token: 0x06019EA3 RID: 106147 RVA: 0x006C6D00 File Offset: 0x006C4F00
+	// Token: 0x060177B5 RID: 96181 RVA: 0x006ED5CC File Offset: 0x006EB7CC
 	private BaseSceneInteractComponent GetSceneInteractComponent()
 	{
 		BaseSceneInteractComponent component = this.EntityHandle.Entity.GetComponent<BaseSceneInteractComponent>();
@@ -171,16 +171,16 @@ public class GameplayCueFixHook : GameplayCueBase
 		return driver.GetComponent<BaseSceneInteractComponent>();
 	}
 
-	// Token: 0x0400C403 RID: 50179
+	// Token: 0x0400C7AC RID: 51116
 	private GameplayCueHookCommonItem HookItem;
 
-	// Token: 0x0400C404 RID: 50180
+	// Token: 0x0400C7AD RID: 51117
 	private BP_KuroPortalCapture_C EnterPortal;
 
-	// Token: 0x0400C405 RID: 50181
+	// Token: 0x0400C7AE RID: 51118
 	private bool IsMovableHookPoint;
 
-	// Token: 0x0400C406 RID: 50182
+	// Token: 0x0400C7AF RID: 51119
 	[Nullable(1)]
 	private static readonly HashSet<EHookInteractType> MovableHookPointTypes = new HashSet<EHookInteractType>
 	{

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EC3 RID: 16067
+	// Token: 0x02004301 RID: 17153
 	public enum IItemVariableBase_Union : byte
 	{
-		// Token: 0x0400B897 RID: 47255
+		// Token: 0x0400C273 RID: 49779
 		NONE,
-		// Token: 0x0400B898 RID: 47256
+		// Token: 0x0400C274 RID: 49780
 		IItemVariableBase,
-		// Token: 0x0400B899 RID: 47257
+		// Token: 0x0400C275 RID: 49781
 		IItemIdVariable,
-		// Token: 0x0400B89A RID: 47258
+		// Token: 0x0400C276 RID: 49782
 		IItemTypeVariable
 	}
 }

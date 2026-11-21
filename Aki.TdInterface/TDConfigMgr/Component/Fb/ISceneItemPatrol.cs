@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D76 RID: 3446
+	// Token: 0x02000E72 RID: 3698
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ISceneItemPatrol : ISceneItemAiType
 	{
-		// Token: 0x06004E68 RID: 20072 RVA: 0x000C28A0 File Offset: 0x000C0AA0
-		[NullableContext(1)]
+		// Token: 0x0600538D RID: 21389 RVA: 0x000CE0F0 File Offset: 0x000CC2F0
+		[NullableContext(0)]
 		public static ISceneItemPatrol Create(ISceneItemPatrol? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001939 RID: 6457
-		// (get) Token: 0x06004E69 RID: 20073 RVA: 0x000C28BF File Offset: 0x000C0ABF
+		// Token: 0x17001AA4 RID: 6820
+		// (get) Token: 0x0600538E RID: 21390 RVA: 0x000CE10F File Offset: 0x000CC30F
 		public override ESceneItemAiType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700193A RID: 6458
-		// (get) Token: 0x06004E6A RID: 20074 RVA: 0x000C28CC File Offset: 0x000C0ACC
+		// Token: 0x17001AA5 RID: 6821
+		// (get) Token: 0x0600538F RID: 21391 RVA: 0x000CE11C File Offset: 0x000CC31C
 		public override IConditionGroup EnableCondition
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700193B RID: 6459
-		// (get) Token: 0x06004E6B RID: 20075 RVA: 0x000C2900 File Offset: 0x000C0B00
+		// Token: 0x17001AA6 RID: 6822
+		// (get) Token: 0x06005390 RID: 21392 RVA: 0x000CE150 File Offset: 0x000CC350
 		public override IConditionGroup DisableCondition
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700193C RID: 6460
-		// (get) Token: 0x06004E6C RID: 20076 RVA: 0x000C2934 File Offset: 0x000C0B34
+		// Token: 0x17001AA7 RID: 6823
+		// (get) Token: 0x06005391 RID: 21393 RVA: 0x000CE184 File Offset: 0x000CC384
 		public override bool HideWhenDisable
 		{
 			get
@@ -76,12 +76,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700193D RID: 6461
-		// (get) Token: 0x06004E6D RID: 20077 RVA: 0x000C2941 File Offset: 0x000C0B41
-		[Nullable(1)]
+		// Token: 0x17001AA8 RID: 6824
+		// (get) Token: 0x06005392 RID: 21394 RVA: 0x000CE191 File Offset: 0x000CC391
+		[Nullable(0)]
 		public virtual ISceneItemAiPatrolByGameTime PatrolType
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._PatrolTypeInited)
@@ -94,25 +94,25 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CFF RID: 11519
+		// Token: 0x04002FC5 RID: 12229
 		private ISceneItemPatrol Instance;
 
-		// Token: 0x04002D00 RID: 11520
+		// Token: 0x04002FC6 RID: 12230
 		private IConditionGroup _EnableConditionCache;
 
-		// Token: 0x04002D01 RID: 11521
+		// Token: 0x04002FC7 RID: 12231
 		private bool _EnableConditionInited;
 
-		// Token: 0x04002D02 RID: 11522
+		// Token: 0x04002FC8 RID: 12232
 		private IConditionGroup _DisableConditionCache;
 
-		// Token: 0x04002D03 RID: 11523
+		// Token: 0x04002FC9 RID: 12233
 		private bool _DisableConditionInited;
 
-		// Token: 0x04002D04 RID: 11524
+		// Token: 0x04002FCA RID: 12234
 		private ISceneItemAiPatrolByGameTime _PatrolTypeCache;
 
-		// Token: 0x04002D05 RID: 11525
+		// Token: 0x04002FCB RID: 12235
 		private bool _PatrolTypeInited;
 	}
 }

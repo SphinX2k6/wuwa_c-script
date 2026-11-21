@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045A8 RID: 17832
+	// Token: 0x020034D0 RID: 13520
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PropertyTimeCounter
 	{
-		// Token: 0x0602DFB4 RID: 188340 RVA: 0x00A93A48 File Offset: 0x00A91C48
+		// Token: 0x0602269E RID: 140958 RVA: 0x009BFC68 File Offset: 0x009BDE68
 		public void Init(int id, ECharacterBodySpecifiedType bodyType, int sectionIndex, ECharacterSlotSpecifiedType slotType, FName propertyName, FKuroCurveFloat curveFloatData, FKuroCurveLinearColor curveColorData, float wholeTime, EPropertyCurveDataType dataType)
 		{
 			this.Id = id;
@@ -36,37 +36,37 @@ namespace CSharpScript.Game.Render
 			this.CurveFloatData = null;
 		}
 
-		// Token: 0x040188BC RID: 100540
+		// Token: 0x04012EF7 RID: 77559
 		public int Id;
 
-		// Token: 0x040188BD RID: 100541
+		// Token: 0x04012EF8 RID: 77560
 		public float Factor;
 
-		// Token: 0x040188BE RID: 100542
+		// Token: 0x04012EF9 RID: 77561
 		public float WholeTime;
 
-		// Token: 0x040188BF RID: 100543
+		// Token: 0x04012EFA RID: 77562
 		public float Counter;
 
-		// Token: 0x040188C0 RID: 100544
+		// Token: 0x04012EFB RID: 77563
 		public ECharacterBodySpecifiedType BodyType;
 
-		// Token: 0x040188C1 RID: 100545
+		// Token: 0x04012EFC RID: 77564
 		public int SectionIndex;
 
-		// Token: 0x040188C2 RID: 100546
+		// Token: 0x04012EFD RID: 77565
 		public ECharacterSlotSpecifiedType SlotType;
 
-		// Token: 0x040188C3 RID: 100547
+		// Token: 0x04012EFE RID: 77566
 		public FName? PropertyName;
 
-		// Token: 0x040188C4 RID: 100548
+		// Token: 0x04012EFF RID: 77567
 		public FKuroCurveFloat CurveFloatData;
 
-		// Token: 0x040188C5 RID: 100549
+		// Token: 0x04012F00 RID: 77568
 		public FKuroCurveLinearColor CurveColorData;
 
-		// Token: 0x040188C6 RID: 100550
+		// Token: 0x04012F01 RID: 77569
 		public EPropertyCurveDataType DataType;
 	}
 }

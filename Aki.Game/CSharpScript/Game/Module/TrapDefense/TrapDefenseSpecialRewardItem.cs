@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004ACB RID: 19147
+	// Token: 0x02003A73 RID: 14963
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseSpecialRewardItem : UiPanelBase
 	{
-		// Token: 0x060319A2 RID: 203170 RVA: 0x00B80D30 File Offset: 0x00B7EF30
+		// Token: 0x06026732 RID: 157490 RVA: 0x00AC4CE4 File Offset: 0x00AC2EE4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060319A3 RID: 203171 RVA: 0x00B80EE4 File Offset: 0x00B7F0E4
+		// Token: 0x06026733 RID: 157491 RVA: 0x00AC4E98 File Offset: 0x00AC3098
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseSpecialRewardItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060319A4 RID: 203172 RVA: 0x00B80F28 File Offset: 0x00B7F128
+		// Token: 0x06026734 RID: 157492 RVA: 0x00AC4EDC File Offset: 0x00AC30DC
 		public void Refresh(TrapDefenseSpecialRewardData data)
 		{
 			this.Data = data;
@@ -90,50 +90,50 @@ namespace CSharpScript.Game.Module.TrapDefense
 			base.GetItem(7).SetUIActive(false);
 		}
 
-		// Token: 0x060319A5 RID: 203173 RVA: 0x00B810A2 File Offset: 0x00B7F2A2
+		// Token: 0x06026735 RID: 157493 RVA: 0x00AC5056 File Offset: 0x00AC3256
 		private void OnClaimClick()
 		{
 			TrapDefenseController.Instance.RequestTrapDefenseSpecialRewardClaim(this.Data.Id);
 		}
 
-		// Token: 0x0401A804 RID: 108548
+		// Token: 0x04015156 RID: 86358
 		private TrapDefenseSpecialRewardData Data;
 
-		// Token: 0x0401A805 RID: 108549
+		// Token: 0x04015157 RID: 86359
 		private CommonItemSmallItemGrid ItemGrid;
 
-		// Token: 0x0200AC3D RID: 44093
+		// Token: 0x0200965D RID: 38493
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04034558 RID: 214360
+			// Token: 0x0402EF09 RID: 192265
 			public const int ItemGrid = 0;
 
-			// Token: 0x04034559 RID: 214361
+			// Token: 0x0402EF0A RID: 192266
 			public const int TextState = 1;
 
-			// Token: 0x0403455A RID: 214362
+			// Token: 0x0402EF0B RID: 192267
 			public const int TextName = 2;
 
-			// Token: 0x0403455B RID: 214363
+			// Token: 0x0402EF0C RID: 192268
 			public const int TextDesc = 3;
 
-			// Token: 0x0403455C RID: 214364
+			// Token: 0x0402EF0D RID: 192269
 			public const int TextProgress = 4;
 
-			// Token: 0x0403455D RID: 214365
+			// Token: 0x0402EF0E RID: 192270
 			public const int SpriteProgress = 5;
 
-			// Token: 0x0403455E RID: 214366
+			// Token: 0x0402EF0F RID: 192271
 			public const int BtnWhite = 6;
 
-			// Token: 0x0403455F RID: 214367
+			// Token: 0x0402EF10 RID: 192272
 			public const int ItemRedDot = 7;
 
-			// Token: 0x04034560 RID: 214368
+			// Token: 0x0402EF11 RID: 192273
 			public const int ItemFinished = 8;
 
-			// Token: 0x04034561 RID: 214369
+			// Token: 0x0402EF12 RID: 192274
 			public const int BtnBlack = 9;
 		}
 	}

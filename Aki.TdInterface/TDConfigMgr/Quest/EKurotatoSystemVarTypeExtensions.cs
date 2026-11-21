@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001250 RID: 4688
+	// Token: 0x02001390 RID: 5008
 	public static class EKurotatoSystemVarTypeExtensions
 	{
-		// Token: 0x06006A0F RID: 27151 RVA: 0x000FE1B4 File Offset: 0x000FC3B4
+		// Token: 0x06007062 RID: 28770 RVA: 0x0010BDE0 File Offset: 0x00109FE0
 		public static string ToEnumString(this EKurotatoSystemVarType value)
 		{
 			string result;
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A10 RID: 27152 RVA: 0x000FE280 File Offset: 0x000FC480
+		// Token: 0x06007063 RID: 28771 RVA: 0x0010BEAC File Offset: 0x0010A0AC
 		public static EKurotatoSystemVarType FromString(string name)
 		{
 			EKurotatoSystemVarType result;
@@ -71,7 +71,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A11 RID: 27153 RVA: 0x000FE2AC File Offset: 0x000FC4AC
+		// Token: 0x06007064 RID: 28772 RVA: 0x0010BED8 File Offset: 0x0010A0D8
 		public static bool TryFromString(string name, out EKurotatoSystemVarType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -207,7 +207,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006A12 RID: 27154 RVA: 0x000FE4CC File Offset: 0x000FC6CC
+		// Token: 0x06007065 RID: 28773 RVA: 0x0010C0F8 File Offset: 0x0010A2F8
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -229,7 +229,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A13 RID: 27155 RVA: 0x000FE555 File Offset: 0x000FC755
+		// Token: 0x06007066 RID: 28774 RVA: 0x0010C181 File Offset: 0x0010A381
 		public static EKurotatoSystemVarType[] GetValues()
 		{
 			return new EKurotatoSystemVarType[]
@@ -251,7 +251,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A14 RID: 27156 RVA: 0x000FE56C File Offset: 0x000FC76C
+		// Token: 0x06007067 RID: 28775 RVA: 0x0010C198 File Offset: 0x0010A398
 		public static string[] GetNames()
 		{
 			return new string[]

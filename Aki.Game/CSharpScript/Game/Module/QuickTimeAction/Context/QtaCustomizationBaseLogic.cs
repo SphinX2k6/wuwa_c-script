@@ -6,23 +6,23 @@ using AkiClient.Game.Aki.Data.QuickTimeAction.Customization;
 
 namespace CSharpScript.Game.Module.QuickTimeAction.Context
 {
-	// Token: 0x02004F42 RID: 20290
+	// Token: 0x02003F0B RID: 16139
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class QtaCustomizationBaseLogic
 	{
-		// Token: 0x06034069 RID: 213097 RVA: 0x00C3358C File Offset: 0x00C3178C
+		// Token: 0x06028ED7 RID: 167639 RVA: 0x00B7CD2C File Offset: 0x00B7AF2C
 		[NullableContext(1)]
 		public virtual void OnSetConfig(QtaCustomizationContext qtaContext, SQta qtaConfig, BP_QtaCustomizationBase_C daConfig)
 		{
 		}
 
-		// Token: 0x0603406A RID: 213098 RVA: 0x00C3358E File Offset: 0x00C3178E
+		// Token: 0x06028ED8 RID: 167640 RVA: 0x00B7CD2E File Offset: 0x00B7AF2E
 		public virtual void OnQtaStart()
 		{
 		}
 
-		// Token: 0x0603406B RID: 213099 RVA: 0x00C33590 File Offset: 0x00C31790
+		// Token: 0x06028ED9 RID: 167641 RVA: 0x00B7CD30 File Offset: 0x00B7AF30
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -33,41 +33,41 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			return null;
 		}
 
-		// Token: 0x0603406C RID: 213100 RVA: 0x00C33593 File Offset: 0x00C31793
+		// Token: 0x06028EDA RID: 167642 RVA: 0x00B7CD33 File Offset: 0x00B7AF33
 		public virtual float GetProgress()
 		{
 			return 0f;
 		}
 
-		// Token: 0x0603406D RID: 213101 RVA: 0x00C3359A File Offset: 0x00C3179A
+		// Token: 0x06028EDB RID: 167643 RVA: 0x00B7CD3A File Offset: 0x00B7AF3A
 		public virtual float GetBgProgress(int index = 0)
 		{
 			return 0f;
 		}
 
-		// Token: 0x0603406E RID: 213102 RVA: 0x00C335A1 File Offset: 0x00C317A1
+		// Token: 0x06028EDC RID: 167644 RVA: 0x00B7CD41 File Offset: 0x00B7AF41
 		public virtual void OnQtaResponse(bool press = true)
 		{
 		}
 
-		// Token: 0x0603406F RID: 213103 RVA: 0x00C335A3 File Offset: 0x00C317A3
+		// Token: 0x06028EDD RID: 167645 RVA: 0x00B7CD43 File Offset: 0x00B7AF43
 		public virtual void OnUpdateTime(float delta)
 		{
 		}
 
-		// Token: 0x06034070 RID: 213104 RVA: 0x00C335A5 File Offset: 0x00C317A5
+		// Token: 0x06028EDE RID: 167646 RVA: 0x00B7CD45 File Offset: 0x00B7AF45
 		public virtual bool CheckQtaCanEnd()
 		{
 			return false;
 		}
 
-		// Token: 0x06034071 RID: 213105 RVA: 0x00C335A8 File Offset: 0x00C317A8
+		// Token: 0x06028EDF RID: 167647 RVA: 0x00B7CD48 File Offset: 0x00B7AF48
 		protected virtual bool CheckIsValid()
 		{
 			return false;
 		}
 
-		// Token: 0x06034072 RID: 213106 RVA: 0x00C335AC File Offset: 0x00C317AC
+		// Token: 0x06028EE0 RID: 167648 RVA: 0x00B7CD4C File Offset: 0x00B7AF4C
 		public virtual void OnPreEndQta()
 		{
 			if (this.QtaContext == null)
@@ -86,18 +86,18 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			this.QtaContext.SetQtaResult(this.CheckIsValid() ? EQtaResult.Success : EQtaResult.Fail);
 		}
 
-		// Token: 0x06034073 RID: 213107 RVA: 0x00C3360B File Offset: 0x00C3180B
+		// Token: 0x06028EE1 RID: 167649 RVA: 0x00B7CDAB File Offset: 0x00B7AFAB
 		public virtual void OnQtaEnd(bool success = false)
 		{
 		}
 
-		// Token: 0x0401BA20 RID: 113184
+		// Token: 0x040163F5 RID: 91125
 		protected SQta QtaConfig;
 
-		// Token: 0x0401BA21 RID: 113185
+		// Token: 0x040163F6 RID: 91126
 		protected QtaCustomizationContext QtaContext;
 
-		// Token: 0x0401BA22 RID: 113186
+		// Token: 0x040163F7 RID: 91127
 		protected float PassTime;
 	}
 }

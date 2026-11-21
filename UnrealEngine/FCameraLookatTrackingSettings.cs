@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000473 RID: 1139
+	// Token: 0x020000E5 RID: 229
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/CinematicCamera.CameraLookatTrackingSettings")]
 	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 88)]
 	public class FCameraLookatTrackingSettings : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06003CEA RID: 15594 RVA: 0x0005BA7B File Offset: 0x00059C7B
+		// Token: 0x06001008 RID: 4104 RVA: 0x000199EC File Offset: 0x00017BEC
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FCameraLookatTrackingSettings._ScriptStructPtr != 0) ? FCameraLookatTrackingSettings._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CinematicCamera.CameraLookatTrackingSettings", ref FCameraLookatTrackingSettings._ScriptStructPtr);
 		}
 
-		// Token: 0x17000EC7 RID: 3783
-		// (get) Token: 0x06003CEB RID: 15595 RVA: 0x0005BA9F File Offset: 0x00059C9F
-		// (set) Token: 0x06003CEC RID: 15596 RVA: 0x0005BAB8 File Offset: 0x00059CB8
+		// Token: 0x17000178 RID: 376
+		// (get) Token: 0x06001009 RID: 4105 RVA: 0x00019A10 File Offset: 0x00017C10
+		// (set) Token: 0x0600100A RID: 4106 RVA: 0x00019A29 File Offset: 0x00017C29
 		public unsafe bool bEnableLookAtTracking
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000EC8 RID: 3784
-		// (get) Token: 0x06003CED RID: 15597 RVA: 0x0005BAE8 File Offset: 0x00059CE8
-		// (set) Token: 0x06003CEE RID: 15598 RVA: 0x0005BB01 File Offset: 0x00059D01
+		// Token: 0x17000179 RID: 377
+		// (get) Token: 0x0600100B RID: 4107 RVA: 0x00019A59 File Offset: 0x00017C59
+		// (set) Token: 0x0600100C RID: 4108 RVA: 0x00019A72 File Offset: 0x00017C72
 		public unsafe bool bDrawDebugLookAtTrackingPosition
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000EC9 RID: 3785
-		// (get) Token: 0x06003CEF RID: 15599 RVA: 0x0005BB31 File Offset: 0x00059D31
-		// (set) Token: 0x06003CF0 RID: 15600 RVA: 0x0005BB41 File Offset: 0x00059D41
+		// Token: 0x1700017A RID: 378
+		// (get) Token: 0x0600100D RID: 4109 RVA: 0x00019AA2 File Offset: 0x00017CA2
+		// (set) Token: 0x0600100E RID: 4110 RVA: 0x00019AB2 File Offset: 0x00017CB2
 		public unsafe float LookAtTrackingInterpSpeed
 		{
 			get
@@ -63,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000ECA RID: 3786
-		// (get) Token: 0x06003CF1 RID: 15601 RVA: 0x0005BB52 File Offset: 0x00059D52
-		// (set) Token: 0x06003CF2 RID: 15602 RVA: 0x0005BB71 File Offset: 0x00059D71
+		// Token: 0x1700017B RID: 379
+		// (get) Token: 0x0600100F RID: 4111 RVA: 0x00019AC3 File Offset: 0x00017CC3
+		// (set) Token: 0x06001010 RID: 4112 RVA: 0x00019AE2 File Offset: 0x00017CE2
 		public TSoftObjectPtr<AActor> ActorToTrack
 		{
 			get
@@ -78,9 +78,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000ECB RID: 3787
-		// (get) Token: 0x06003CF3 RID: 15603 RVA: 0x0005BB96 File Offset: 0x00059D96
-		// (set) Token: 0x06003CF4 RID: 15604 RVA: 0x0005BBAA File Offset: 0x00059DAA
+		// Token: 0x1700017C RID: 380
+		// (get) Token: 0x06001011 RID: 4113 RVA: 0x00019B07 File Offset: 0x00017D07
+		// (set) Token: 0x06001012 RID: 4114 RVA: 0x00019B1B File Offset: 0x00017D1B
 		public unsafe FVector RelativeOffset
 		{
 			get
@@ -93,9 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000ECC RID: 3788
-		// (get) Token: 0x06003CF5 RID: 15605 RVA: 0x0005BBBF File Offset: 0x00059DBF
-		// (set) Token: 0x06003CF6 RID: 15606 RVA: 0x0005BBD8 File Offset: 0x00059DD8
+		// Token: 0x1700017D RID: 381
+		// (get) Token: 0x06001013 RID: 4115 RVA: 0x00019B30 File Offset: 0x00017D30
+		// (set) Token: 0x06001014 RID: 4116 RVA: 0x00019B49 File Offset: 0x00017D49
 		public unsafe bool bAllowRoll
 		{
 			get
@@ -108,82 +108,71 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06003CF7 RID: 15607 RVA: 0x0005BC08 File Offset: 0x00059E08
+		// Token: 0x06001015 RID: 4117 RVA: 0x00019B79 File Offset: 0x00017D79
 		public FCameraLookatTrackingSettings()
 		{
 		}
 
-		// Token: 0x06003CF8 RID: 15608 RVA: 0x0005BC10 File Offset: 0x00059E10
-		public FCameraLookatTrackingSettings(bool bEnableLookAtTracking, bool bDrawDebugLookAtTrackingPosition, float LookAtTrackingInterpSpeed, TSoftObjectPtr<AActor> ActorToTrack, FVector RelativeOffset, bool bAllowRoll)
-		{
-			this.bEnableLookAtTracking = bEnableLookAtTracking;
-			this.bDrawDebugLookAtTrackingPosition = bDrawDebugLookAtTrackingPosition;
-			this.LookAtTrackingInterpSpeed = LookAtTrackingInterpSpeed;
-			this.ActorToTrack = ActorToTrack;
-			this.RelativeOffset = RelativeOffset;
-			this.bAllowRoll = bAllowRoll;
-		}
-
-		// Token: 0x06003CF9 RID: 15609 RVA: 0x0005BC45 File Offset: 0x00059E45
+		// Token: 0x06001016 RID: 4118 RVA: 0x00019B81 File Offset: 0x00017D81
 		protected override IntPtr GetUStructPtr()
 		{
 			return FCameraLookatTrackingSettings.StaticStruct();
 		}
 
-		// Token: 0x06003CFA RID: 15610 RVA: 0x0005BC51 File Offset: 0x00059E51
+		// Token: 0x06001017 RID: 4119 RVA: 0x00019B8D File Offset: 0x00017D8D
 		[NullableContext(2)]
 		public FCameraLookatTrackingSettings(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06003CFB RID: 15611 RVA: 0x0005BC5B File Offset: 0x00059E5B
+		// Token: 0x06001018 RID: 4120 RVA: 0x00019B97 File Offset: 0x00017D97
 		public FCameraLookatTrackingSettings(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06003CFC RID: 15612 RVA: 0x0005BC66 File Offset: 0x00059E66
+		// Token: 0x06001019 RID: 4121 RVA: 0x00019BA2 File Offset: 0x00017DA2
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FCameraLookatTrackingSettings(Pointer, false, true);
 		}
 
-		// Token: 0x06003CFD RID: 15613 RVA: 0x0005BC70 File Offset: 0x00059E70
+		// Token: 0x0600101A RID: 4122 RVA: 0x00019BAC File Offset: 0x00017DAC
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FCameraLookatTrackingSettings(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04001C8F RID: 7311
+		// Token: 0x040003B4 RID: 948
 		public const string __ObjectPath = "/Script/CinematicCamera.CameraLookatTrackingSettings";
 
-		// Token: 0x04001C90 RID: 7312
+		// Token: 0x040003B5 RID: 949
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04001C91 RID: 7313
+		// Token: 0x040003B6 RID: 950
 		internal static int __PropertyOffset_bEnableLookAtTracking;
 
-		// Token: 0x04001C92 RID: 7314
+		// Token: 0x040003B7 RID: 951
 		internal static byte __PropertyMask_bEnableLookAtTracking;
 
-		// Token: 0x04001C93 RID: 7315
+		// Token: 0x040003B8 RID: 952
 		internal static int __PropertyOffset_bDrawDebugLookAtTrackingPosition;
 
-		// Token: 0x04001C94 RID: 7316
+		// Token: 0x040003B9 RID: 953
 		internal static byte __PropertyMask_bDrawDebugLookAtTrackingPosition;
 
-		// Token: 0x04001C95 RID: 7317
+		// Token: 0x040003BA RID: 954
 		internal static int __PropertyOffset_LookAtTrackingInterpSpeed;
 
-		// Token: 0x04001C96 RID: 7318
+		// Token: 0x040003BB RID: 955
 		internal static int __PropertyOffset_ActorToTrack;
 
-		// Token: 0x04001C97 RID: 7319
+		// Token: 0x040003BC RID: 956
 		internal static int __PropertyOffset_RelativeOffset;
 
-		// Token: 0x04001C98 RID: 7320
+		// Token: 0x040003BD RID: 957
 		internal static int __PropertyOffset_bAllowRoll;
 
-		// Token: 0x04001C99 RID: 7321
+		// Token: 0x040003BE RID: 958
 		internal static byte __PropertyMask_bAllowRoll;
 	}
 }

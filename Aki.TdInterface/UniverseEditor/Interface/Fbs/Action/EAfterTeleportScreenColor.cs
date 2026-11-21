@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F10 RID: 24336
+	// Token: 0x02006553 RID: 25939
 	public enum EAfterTeleportScreenColor : byte
 	{
-		// Token: 0x0400FBE4 RID: 64484
+		// Token: 0x04010957 RID: 67927
 		Black,
-		// Token: 0x0400FBE5 RID: 64485
+		// Token: 0x04010958 RID: 67928
 		White
 	}
 }

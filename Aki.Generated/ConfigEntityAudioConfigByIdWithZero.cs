@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000276 RID: 630
+	// Token: 0x0200028A RID: 650
 	public class ConfigEntityAudioConfigByIdWithZero : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000EC9 RID: 3785 RVA: 0x000AD015 File Offset: 0x000AB215
+		// Token: 0x06000F41 RID: 3905 RVA: 0x000B32D9 File Offset: 0x000B14D9
 		static ConfigEntityAudioConfigByIdWithZero()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEntityAudioConfigByIdWithZero.CreateStaticDefaultValue), new Action(ConfigEntityAudioConfigByIdWithZero.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000ECA RID: 3786 RVA: 0x000AD034 File Offset: 0x000AB234
+		// Token: 0x06000F42 RID: 3906 RVA: 0x000B32F8 File Offset: 0x000B14F8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEntityAudioConfigByIdWithZero.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000ECB RID: 3787 RVA: 0x000AD0B3 File Offset: 0x000AB2B3
+		// Token: 0x06000F43 RID: 3907 RVA: 0x000B3377 File Offset: 0x000B1577
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEntityAudioConfigByIdWithZero.LogPair = null;
 			ConfigEntityAudioConfigByIdWithZero.HandleId = 0;
 		}
 
-		// Token: 0x06000ECC RID: 3788 RVA: 0x000AD0C1 File Offset: 0x000AB2C1
+		// Token: 0x06000F44 RID: 3908 RVA: 0x000B3385 File Offset: 0x000B1585
 		public static void Init()
 		{
 			ConfigEntityAudioConfigByIdWithZero.HandleId = ConfigCommon.InitDataStatement(ConfigEntityAudioConfigByIdWithZero.HandleId, "db_entity_audio.db", "select BinData from `EntityAudioConfig` where id=0 AND (SELECT count(0) from `EntityAudioConfig` WHERE id = ?) <= 0 OR id = ? AND (SELECT count(0) from `EntityAudioConfig` WHERE id = ?) >0;");
 		}
 
-		// Token: 0x06000ECD RID: 3789 RVA: 0x000AD0DC File Offset: 0x000AB2DC
+		// Token: 0x06000F45 RID: 3909 RVA: 0x000B33A0 File Offset: 0x000B15A0
 		public static EntityAudioConfig? GetConfig(string p0Id, string p1Id, string p2Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEntityAudioConfigByIdWithZero.HandleId, ConfigEntityAudioConfigByIdWithZero.LogPair))
@@ -98,22 +98,22 @@ namespace Aki.Config
 			return new EntityAudioConfig?(rootAsEntityAudioConfig);
 		}
 
-		// Token: 0x0400111E RID: 4382
+		// Token: 0x040011AA RID: 4522
 		private const string DB = "db_entity_audio.db";
 
-		// Token: 0x0400111F RID: 4383
+		// Token: 0x040011AB RID: 4523
 		private const string FILE = "y.音频组件配置.xlsx";
 
-		// Token: 0x04001120 RID: 4384
+		// Token: 0x040011AC RID: 4524
 		private const string TABLE = "EntityAudioConfig";
 
-		// Token: 0x04001121 RID: 4385
+		// Token: 0x040011AD RID: 4525
 		private const string COMMAND = "select BinData from `EntityAudioConfig` where id=0 AND (SELECT count(0) from `EntityAudioConfig` WHERE id = ?) <= 0 OR id = ? AND (SELECT count(0) from `EntityAudioConfig` WHERE id = ?) >0;";
 
-		// Token: 0x04001122 RID: 4386
+		// Token: 0x040011AE RID: 4526
 		private const string KEY_PREFIX = "EntityAudioConfigByIdWithZero";
 
-		// Token: 0x04001123 RID: 4387
+		// Token: 0x040011AF RID: 4527
 		[Nullable(new byte[]
 		{
 			2,
@@ -123,7 +123,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001124 RID: 4388
+		// Token: 0x040011B0 RID: 4528
 		private static int HandleId;
 	}
 }

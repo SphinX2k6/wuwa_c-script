@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012F0 RID: 4848
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001436 RID: 5174
 	public class IRogueTowerTrialSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x06006EA7 RID: 28327 RVA: 0x0010B4C8 File Offset: 0x001096C8
+		// Token: 0x06007527 RID: 29991 RVA: 0x001197C8 File Offset: 0x001179C8
 		public static IRogueTowerTrialSystemConfig Create(IRogueTowerTrialSystemConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700229A RID: 8858
-		// (get) Token: 0x06006EA8 RID: 28328 RVA: 0x0010B4E7 File Offset: 0x001096E7
+		// Token: 0x1700245D RID: 9309
+		// (get) Token: 0x06007528 RID: 29992 RVA: 0x001197E7 File Offset: 0x001179E7
 		public override EEnableSystemType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700229B RID: 8859
-		// (get) Token: 0x06006EA9 RID: 28329 RVA: 0x0010B4F4 File Offset: 0x001096F4
+		// Token: 0x1700245E RID: 9310
+		// (get) Token: 0x06007529 RID: 29993 RVA: 0x001197F4 File Offset: 0x001179F4
 		public virtual List<IRogueTowerTrialSystemVar> Vars
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F6C RID: 16236
+		// Token: 0x040042DA RID: 17114
 		private IRogueTowerTrialSystemConfig Instance;
 
-		// Token: 0x04003F6D RID: 16237
+		// Token: 0x040042DB RID: 17115
 		private List<IRogueTowerTrialSystemVar> _VarsCache;
 
-		// Token: 0x04003F6E RID: 16238
+		// Token: 0x040042DC RID: 17116
 		private bool _VarsInited;
 	}
 }

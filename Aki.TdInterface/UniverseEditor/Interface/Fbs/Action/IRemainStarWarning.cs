@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E37 RID: 28215
+	// Token: 0x020075B5 RID: 30133
 	public struct IRemainStarWarning : IFlatbufferObject
 	{
-		// Token: 0x1700D23E RID: 53822
-		// (get) Token: 0x06031D9C RID: 204188 RVA: 0x006BF37D File Offset: 0x006BD57D
+		// Token: 0x1700DD8D RID: 56717
+		// (get) Token: 0x06034DB2 RID: 216498 RVA: 0x0071AD05 File Offset: 0x00718F05
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031D9D RID: 204189 RVA: 0x006BF38A File Offset: 0x006BD58A
+		// Token: 0x06034DB3 RID: 216499 RVA: 0x0071AD12 File Offset: 0x00718F12
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031D9E RID: 204190 RVA: 0x006BF394 File Offset: 0x006BD594
+		// Token: 0x06034DB4 RID: 216500 RVA: 0x0071AD1C File Offset: 0x00718F1C
 		public static IRemainStarWarning GetRootAsIRemainStarWarning(ByteBuffer _bb)
 		{
 			return IRemainStarWarning.GetRootAsIRemainStarWarning(_bb, default(IRemainStarWarning));
 		}
 
-		// Token: 0x06031D9F RID: 204191 RVA: 0x006BF3B0 File Offset: 0x006BD5B0
+		// Token: 0x06034DB5 RID: 216501 RVA: 0x0071AD38 File Offset: 0x00718F38
 		public static IRemainStarWarning GetRootAsIRemainStarWarning(ByteBuffer _bb, IRemainStarWarning obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031DA0 RID: 204192 RVA: 0x006BF3CD File Offset: 0x006BD5CD
+		// Token: 0x06034DB6 RID: 216502 RVA: 0x0071AD55 File Offset: 0x00718F55
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031DA1 RID: 204193 RVA: 0x006BF3DC File Offset: 0x006BD5DC
+		// Token: 0x06034DB7 RID: 216503 RVA: 0x0071AD64 File Offset: 0x00718F64
 		public IRemainStarWarning __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D23F RID: 53823
-		// (get) Token: 0x06031DA2 RID: 204194 RVA: 0x006BF3EC File Offset: 0x006BD5EC
+		// Token: 0x1700DD8E RID: 56718
+		// (get) Token: 0x06034DB8 RID: 216504 RVA: 0x0071AD74 File Offset: 0x00718F74
 		public ECommonTipType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D240 RID: 53824
-		// (get) Token: 0x06031DA3 RID: 204195 RVA: 0x006BF428 File Offset: 0x006BD628
+		// Token: 0x1700DD8F RID: 56719
+		// (get) Token: 0x06034DB9 RID: 216505 RVA: 0x0071ADB0 File Offset: 0x00718FB0
 		public string WarningText
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031DA4 RID: 204196 RVA: 0x006BF45F File Offset: 0x006BD65F
+		// Token: 0x06034DBA RID: 216506 RVA: 0x0071ADE7 File Offset: 0x00718FE7
 		public Span<byte> GetWarningTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06031DA5 RID: 204197 RVA: 0x006BF46E File Offset: 0x006BD66E
+		// Token: 0x06034DBB RID: 216507 RVA: 0x0071ADF6 File Offset: 0x00718FF6
 		public byte[] GetWarningTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x06031DA6 RID: 204198 RVA: 0x006BF47C File Offset: 0x006BD67C
+		// Token: 0x06034DBC RID: 216508 RVA: 0x0071AE04 File Offset: 0x00719004
 		public static Offset<IRemainStarWarning> CreateIRemainStarWarning(FlatBufferBuilder builder, ECommonTipType Type = ECommonTipType.ChallengeCondition, StringOffset WarningTextOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRemainStarWarning.EndIRemainStarWarning(builder);
 		}
 
-		// Token: 0x06031DA7 RID: 204199 RVA: 0x006BF499 File Offset: 0x006BD699
+		// Token: 0x06034DBD RID: 216509 RVA: 0x0071AE21 File Offset: 0x00719021
 		public static void StartIRemainStarWarning(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06031DA8 RID: 204200 RVA: 0x006BF4A2 File Offset: 0x006BD6A2
+		// Token: 0x06034DBE RID: 216510 RVA: 0x0071AE2A File Offset: 0x0071902A
 		public static void AddType(FlatBufferBuilder builder, ECommonTipType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06031DA9 RID: 204201 RVA: 0x006BF4AD File Offset: 0x006BD6AD
+		// Token: 0x06034DBF RID: 216511 RVA: 0x0071AE35 File Offset: 0x00719035
 		public static void AddWarningText(FlatBufferBuilder builder, StringOffset warningTextOffset)
 		{
 			builder.AddOffset(1, warningTextOffset.Value, 0);
 		}
 
-		// Token: 0x06031DAA RID: 204202 RVA: 0x006BF4BD File Offset: 0x006BD6BD
+		// Token: 0x06034DC0 RID: 216512 RVA: 0x0071AE45 File Offset: 0x00719045
 		public static Offset<IRemainStarWarning> EndIRemainStarWarning(FlatBufferBuilder builder)
 		{
 			return new Offset<IRemainStarWarning>(builder.EndTable());
 		}
 
-		// Token: 0x06031DAB RID: 204203 RVA: 0x006BF4CC File Offset: 0x006BD6CC
+		// Token: 0x06034DC1 RID: 216513 RVA: 0x0071AE54 File Offset: 0x00719054
 		public IRemainStarWarningT UnPack()
 		{
 			IRemainStarWarningT remainStarWarningT = new IRemainStarWarningT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return remainStarWarningT;
 		}
 
-		// Token: 0x06031DAC RID: 204204 RVA: 0x006BF4E7 File Offset: 0x006BD6E7
+		// Token: 0x06034DC2 RID: 216514 RVA: 0x0071AE6F File Offset: 0x0071906F
 		public void UnPackTo(IRemainStarWarningT _o)
 		{
 			_o.Type = this.Type;
 			_o.WarningText = this.WarningText;
 		}
 
-		// Token: 0x06031DAD RID: 204205 RVA: 0x006BF504 File Offset: 0x006BD704
+		// Token: 0x06034DC3 RID: 216515 RVA: 0x0071AE8C File Offset: 0x0071908C
 		public static Offset<IRemainStarWarning> Pack(FlatBufferBuilder builder, IRemainStarWarningT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRemainStarWarning.CreateIRemainStarWarning(builder, _o.Type, warningTextOffset);
 		}
 
-		// Token: 0x0401181B RID: 71707
+		// Token: 0x0401279B RID: 75675
 		private Table __p;
 	}
 }

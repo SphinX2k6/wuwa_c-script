@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001880 RID: 6272
+	// Token: 0x020003A8 RID: 936
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplayUI.DamageUiManager")]
 	[UnrealStructLayout(432, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 432)]
 	public class UDamageUiManager : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060171B6 RID: 94646 RVA: 0x0021AC9F File Offset: 0x00218E9F
+		// Token: 0x06005CAB RID: 23723 RVA: 0x00082806 File Offset: 0x00080A06
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UDamageUiManager._ClassPtr;
 		}
 
-		// Token: 0x060171B7 RID: 94647 RVA: 0x0021ACAC File Offset: 0x00218EAC
+		// Token: 0x06005CAC RID: 23724 RVA: 0x00082814 File Offset: 0x00080A14
 		public UDamageUiManager() : this(BuiltinUtils.AllocNativeUObject(UDamageUiManager.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060171B8 RID: 94648 RVA: 0x0021ACD4 File Offset: 0x00218ED4
+		// Token: 0x06005CAD RID: 23725 RVA: 0x0008283C File Offset: 0x00080A3C
 		[NullableContext(1)]
 		public UDamageUiManager(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UDamageUiManager.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005CF9 RID: 23801
-		// (get) Token: 0x060171B9 RID: 94649 RVA: 0x0021AD08 File Offset: 0x00218F08
-		// (set) Token: 0x060171BA RID: 94650 RVA: 0x0021AD41 File Offset: 0x00218F41
+		// Token: 0x17001255 RID: 4693
+		// (get) Token: 0x06005CAE RID: 23726 RVA: 0x00082870 File Offset: 0x00080A70
+		// (set) Token: 0x06005CAF RID: 23727 RVA: 0x000828A9 File Offset: 0x00080AA9
 		[Nullable(1)]
 		public TArray<UNiagaraSystem> CritNiagaraList
 		{
@@ -54,9 +54,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CFA RID: 23802
-		// (get) Token: 0x060171BB RID: 94651 RVA: 0x0021AD4F File Offset: 0x00218F4F
-		// (set) Token: 0x060171BC RID: 94652 RVA: 0x0021AD63 File Offset: 0x00218F63
+		// Token: 0x17001256 RID: 4694
+		// (get) Token: 0x06005CB0 RID: 23728 RVA: 0x000828B7 File Offset: 0x00080AB7
+		// (set) Token: 0x06005CB1 RID: 23729 RVA: 0x000828CB File Offset: 0x00080ACB
 		public unsafe UDamageBatchView DamageBatchView
 		{
 			get
@@ -69,9 +69,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CFB RID: 23803
-		// (get) Token: 0x060171BD RID: 94653 RVA: 0x0021AD78 File Offset: 0x00218F78
-		// (set) Token: 0x060171BE RID: 94654 RVA: 0x0021AD88 File Offset: 0x00218F88
+		// Token: 0x17001257 RID: 4695
+		// (get) Token: 0x06005CB2 RID: 23730 RVA: 0x000828E0 File Offset: 0x00080AE0
+		// (set) Token: 0x06005CB3 RID: 23731 RVA: 0x000828F0 File Offset: 0x00080AF0
 		public unsafe bool bDamageViewVisible
 		{
 			get
@@ -84,9 +84,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CFC RID: 23804
-		// (get) Token: 0x060171BF RID: 94655 RVA: 0x0021AD99 File Offset: 0x00218F99
-		// (set) Token: 0x060171C0 RID: 94656 RVA: 0x0021ADAD File Offset: 0x00218FAD
+		// Token: 0x17001258 RID: 4696
+		// (get) Token: 0x06005CB4 RID: 23732 RVA: 0x00082901 File Offset: 0x00080B01
+		// (set) Token: 0x06005CB5 RID: 23733 RVA: 0x00082915 File Offset: 0x00080B15
 		public unsafe UKSC_World KscWorld
 		{
 			get
@@ -99,13 +99,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060171C1 RID: 94657 RVA: 0x0021ADC2 File Offset: 0x00218FC2
+		// Token: 0x06005CB6 RID: 23734 RVA: 0x0008292A File Offset: 0x00080B2A
 		public void UpdateKscWorld()
 		{
 			UDamageUiManager.__UpdateKscWorld_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060171C2 RID: 94658 RVA: 0x0021ADD0 File Offset: 0x00218FD0
+		// Token: 0x06005CB7 RID: 23735 RVA: 0x00082938 File Offset: 0x00080B38
 		public unsafe void Update(in float DeltaTime, in FVectorDouble CameraLocation, APlayerController Player)
 		{
 			fixed (float* ptr = &DeltaTime)
@@ -115,123 +115,123 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060171C3 RID: 94659 RVA: 0x0021AE02 File Offset: 0x00219002
+		// Token: 0x06005CB8 RID: 23736 RVA: 0x0008296A File Offset: 0x00080B6A
 		public void InitDamageConfig(in FDamageConfig InDamageConfig)
 		{
 			UDamageUiManager.__InitDamageConfig_Internal(base.NativePtr, (InDamageConfig ?? new FDamageConfig()).NativePtr);
 		}
 
-		// Token: 0x060171C4 RID: 94660 RVA: 0x0021AE20 File Offset: 0x00219020
+		// Token: 0x06005CB9 RID: 23737 RVA: 0x00082988 File Offset: 0x00080B88
 		public void InitAllRes(USceneComponent Parent, AUIBaseActor DynamicBatchActor, AUIBaseActor DamageActor, int PreloadCount, bool bMobilePlatform)
 		{
 			UDamageUiManager.__InitAllRes_Internal(base.NativePtr, (Parent != null) ? Parent.NativePtr : IntPtr.Zero, (DynamicBatchActor != null) ? DynamicBatchActor.NativePtr : IntPtr.Zero, (DamageActor != null) ? DamageActor.NativePtr : IntPtr.Zero, PreloadCount, bMobilePlatform);
 		}
 
-		// Token: 0x060171C5 RID: 94661 RVA: 0x0021AE6C File Offset: 0x0021906C
+		// Token: 0x06005CBA RID: 23738 RVA: 0x000829D4 File Offset: 0x00080BD4
 		public static UDamageUiManager GetInstance()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UDamageUiManager>(UDamageUiManager.__GetInstance_Internal());
 		}
 
-		// Token: 0x060171C6 RID: 94662
+		// Token: 0x06005CBB RID: 23739
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void DestroyInstance();
 
-		// Token: 0x060171C7 RID: 94663 RVA: 0x0021AE78 File Offset: 0x00219078
+		// Token: 0x06005CBC RID: 23740 RVA: 0x000829E0 File Offset: 0x00080BE0
 		public static UDamageUiManager CreateInstance(UObject Outer)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UDamageUiManager>(UDamageUiManager.__CreateInstance_Internal((Outer != null) ? Outer.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x060171C8 RID: 94664 RVA: 0x0021AE94 File Offset: 0x00219094
+		// Token: 0x06005CBD RID: 23741 RVA: 0x000829FC File Offset: 0x00080BFC
 		public void ClearDamageInfo()
 		{
 			UDamageUiManager.__ClearDamageInfo_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060171C9 RID: 94665 RVA: 0x0021AEA1 File Offset: 0x002190A1
+		// Token: 0x06005CBE RID: 23742 RVA: 0x00082A09 File Offset: 0x00080C09
 		public void AddDamageViewData(in FDamageViewData InDamageViewData)
 		{
 			UDamageUiManager.__AddDamageViewData_Internal(base.NativePtr, (InDamageViewData ?? new FDamageViewData()).NativePtr);
 		}
 
-		// Token: 0x060171CA RID: 94666 RVA: 0x0021AEBE File Offset: 0x002190BE
+		// Token: 0x06005CBF RID: 23743 RVA: 0x00082A26 File Offset: 0x00080C26
 		public void AddDamageInfo(in FDamageInfo DamageInfo)
 		{
 			UDamageUiManager.__AddDamageInfo_Internal(base.NativePtr, (DamageInfo ?? new FDamageInfo()).NativePtr);
 		}
 
-		// Token: 0x060171CB RID: 94667 RVA: 0x0021AEDB File Offset: 0x002190DB
+		// Token: 0x06005CC0 RID: 23744 RVA: 0x00082A43 File Offset: 0x00080C43
 		public void AddCritNiagara(UNiagaraSystem CritNiagara)
 		{
 			UDamageUiManager.__AddCritNiagara_Internal(base.NativePtr, (CritNiagara != null) ? CritNiagara.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060171CC RID: 94668
+		// Token: 0x06005CC1 RID: 23745
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateKscWorld_Internal(IntPtr @this);
 
-		// Token: 0x060171CD RID: 94669
+		// Token: 0x06005CC2 RID: 23746
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Update_Internal(IntPtr @this, in float DeltaTime, in FVectorDouble CameraLocation, IntPtr Player);
 
-		// Token: 0x060171CE RID: 94670
+		// Token: 0x06005CC3 RID: 23747
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InitDamageConfig_Internal(IntPtr @this, IntPtr InDamageConfig);
 
-		// Token: 0x060171CF RID: 94671
+		// Token: 0x06005CC4 RID: 23748
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InitAllRes_Internal(IntPtr @this, IntPtr Parent, IntPtr DynamicBatchActor, IntPtr DamageActor, int PreloadCount, bool bMobilePlatform);
 
-		// Token: 0x060171D0 RID: 94672
+		// Token: 0x06005CC5 RID: 23749
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetInstance_Internal();
 
-		// Token: 0x060171D1 RID: 94673
+		// Token: 0x06005CC6 RID: 23750
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __CreateInstance_Internal(IntPtr Outer);
 
-		// Token: 0x060171D2 RID: 94674
+		// Token: 0x06005CC7 RID: 23751
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearDamageInfo_Internal(IntPtr @this);
 
-		// Token: 0x060171D3 RID: 94675
+		// Token: 0x06005CC8 RID: 23752
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddDamageViewData_Internal(IntPtr @this, IntPtr InDamageViewData);
 
-		// Token: 0x060171D4 RID: 94676
+		// Token: 0x06005CC9 RID: 23753
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddDamageInfo_Internal(IntPtr @this, IntPtr DamageInfo);
 
-		// Token: 0x060171D5 RID: 94677
+		// Token: 0x06005CCA RID: 23754
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddCritNiagara_Internal(IntPtr @this, IntPtr CritNiagara);
 
-		// Token: 0x060171D6 RID: 94678 RVA: 0x0021AEF8 File Offset: 0x002190F8
+		// Token: 0x06005CCB RID: 23755 RVA: 0x00082A60 File Offset: 0x00080C60
 		static UDamageUiManager()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplayUI.DamageUiManager");
 		}
 
-		// Token: 0x060171D7 RID: 94679 RVA: 0x0021AF06 File Offset: 0x00219106
+		// Token: 0x06005CCC RID: 23756 RVA: 0x00082A6E File Offset: 0x00080C6E
 		protected UDamageUiManager(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C895 RID: 51349
+		// Token: 0x040026A4 RID: 9892
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroGameplayUI.DamageUiManager";
 
-		// Token: 0x0400C896 RID: 51350
+		// Token: 0x040026A5 RID: 9893
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C897 RID: 51351
+		// Token: 0x040026A6 RID: 9894
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C898 RID: 51352
+		// Token: 0x040026A7 RID: 9895
 		internal static int __PropertyOffset_CritNiagaraList;
 
-		// Token: 0x0400C899 RID: 51353
+		// Token: 0x040026A8 RID: 9896
 		[Nullable(new byte[]
 		{
 			2,
@@ -239,13 +239,13 @@ namespace UnrealEngine
 		})]
 		private TArray<UNiagaraSystem> _CritNiagaraList;
 
-		// Token: 0x0400C89A RID: 51354
+		// Token: 0x040026A9 RID: 9897
 		internal static int __PropertyOffset_DamageBatchView;
 
-		// Token: 0x0400C89B RID: 51355
+		// Token: 0x040026AA RID: 9898
 		internal static int __PropertyOffset_bDamageViewVisible;
 
-		// Token: 0x0400C89C RID: 51356
+		// Token: 0x040026AB RID: 9899
 		internal static int __PropertyOffset_KscWorld;
 	}
 }

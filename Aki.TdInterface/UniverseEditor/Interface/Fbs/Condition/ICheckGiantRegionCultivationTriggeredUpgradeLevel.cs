@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A36 RID: 18998
+	// Token: 0x02004EF9 RID: 20217
 	public struct ICheckGiantRegionCultivationTriggeredUpgradeLevel : IFlatbufferObject
 	{
-		// Token: 0x17008989 RID: 35209
-		// (get) Token: 0x0601DBD0 RID: 121808 RVA: 0x0042EB74 File Offset: 0x0042CD74
+		// Token: 0x1700905E RID: 36958
+		// (get) Token: 0x0601F659 RID: 128601 RVA: 0x0045FA6C File Offset: 0x0045DC6C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DBD1 RID: 121809 RVA: 0x0042EB81 File Offset: 0x0042CD81
+		// Token: 0x0601F65A RID: 128602 RVA: 0x0045FA79 File Offset: 0x0045DC79
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DBD2 RID: 121810 RVA: 0x0042EB88 File Offset: 0x0042CD88
+		// Token: 0x0601F65B RID: 128603 RVA: 0x0045FA80 File Offset: 0x0045DC80
 		public static ICheckGiantRegionCultivationTriggeredUpgradeLevel GetRootAsICheckGiantRegionCultivationTriggeredUpgradeLevel(ByteBuffer _bb)
 		{
 			return ICheckGiantRegionCultivationTriggeredUpgradeLevel.GetRootAsICheckGiantRegionCultivationTriggeredUpgradeLevel(_bb, default(ICheckGiantRegionCultivationTriggeredUpgradeLevel));
 		}
 
-		// Token: 0x0601DBD3 RID: 121811 RVA: 0x0042EBA4 File Offset: 0x0042CDA4
+		// Token: 0x0601F65C RID: 128604 RVA: 0x0045FA9C File Offset: 0x0045DC9C
 		public static ICheckGiantRegionCultivationTriggeredUpgradeLevel GetRootAsICheckGiantRegionCultivationTriggeredUpgradeLevel(ByteBuffer _bb, ICheckGiantRegionCultivationTriggeredUpgradeLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DBD4 RID: 121812 RVA: 0x0042EBC1 File Offset: 0x0042CDC1
+		// Token: 0x0601F65D RID: 128605 RVA: 0x0045FAB9 File Offset: 0x0045DCB9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DBD5 RID: 121813 RVA: 0x0042EBD0 File Offset: 0x0042CDD0
+		// Token: 0x0601F65E RID: 128606 RVA: 0x0045FAC8 File Offset: 0x0045DCC8
 		public ICheckGiantRegionCultivationTriggeredUpgradeLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700898A RID: 35210
-		// (get) Token: 0x0601DBD6 RID: 121814 RVA: 0x0042EBE0 File Offset: 0x0042CDE0
+		// Token: 0x1700905F RID: 36959
+		// (get) Token: 0x0601F65F RID: 128607 RVA: 0x0045FAD8 File Offset: 0x0045DCD8
 		public ECondition Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700898B RID: 35211
-		// (get) Token: 0x0601DBD7 RID: 121815 RVA: 0x0042EC1C File Offset: 0x0042CE1C
+		// Token: 0x17009060 RID: 36960
+		// (get) Token: 0x0601F660 RID: 128608 RVA: 0x0045FB14 File Offset: 0x0045DD14
 		public EGiantEcoType EcoType
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DBD8 RID: 121816 RVA: 0x0042EC58 File Offset: 0x0042CE58
+		// Token: 0x0601F661 RID: 128609 RVA: 0x0045FB50 File Offset: 0x0045DD50
 		public int Levels(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700898C RID: 35212
-		// (get) Token: 0x0601DBD9 RID: 121817 RVA: 0x0042EC98 File Offset: 0x0042CE98
+		// Token: 0x17009061 RID: 36961
+		// (get) Token: 0x0601F662 RID: 128610 RVA: 0x0045FB90 File Offset: 0x0045DD90
 		public int LevelsLength
 		{
 			get
@@ -105,19 +105,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DBDA RID: 121818 RVA: 0x0042ECC3 File Offset: 0x0042CEC3
+		// Token: 0x0601F663 RID: 128611 RVA: 0x0045FBBB File Offset: 0x0045DDBB
 		public Span<int> GetLevelsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0601DBDB RID: 121819 RVA: 0x0042ECD2 File Offset: 0x0042CED2
+		// Token: 0x0601F664 RID: 128612 RVA: 0x0045FBCA File Offset: 0x0045DDCA
 		public int[] GetLevelsArray()
 		{
 			return this.__p.__vector_as_array<int>(8);
 		}
 
-		// Token: 0x0601DBDC RID: 121820 RVA: 0x0042ECE0 File Offset: 0x0042CEE0
+		// Token: 0x0601F665 RID: 128613 RVA: 0x0045FBD8 File Offset: 0x0045DDD8
 		public static Offset<ICheckGiantRegionCultivationTriggeredUpgradeLevel> CreateICheckGiantRegionCultivationTriggeredUpgradeLevel(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, EGiantEcoType EcoType = EGiantEcoType.Fire, VectorOffset LevelsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -127,31 +127,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckGiantRegionCultivationTriggeredUpgradeLevel.EndICheckGiantRegionCultivationTriggeredUpgradeLevel(builder);
 		}
 
-		// Token: 0x0601DBDD RID: 121821 RVA: 0x0042ED04 File Offset: 0x0042CF04
+		// Token: 0x0601F666 RID: 128614 RVA: 0x0045FBFC File Offset: 0x0045DDFC
 		public static void StartICheckGiantRegionCultivationTriggeredUpgradeLevel(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601DBDE RID: 121822 RVA: 0x0042ED0D File Offset: 0x0042CF0D
+		// Token: 0x0601F667 RID: 128615 RVA: 0x0045FC05 File Offset: 0x0045DE05
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DBDF RID: 121823 RVA: 0x0042ED18 File Offset: 0x0042CF18
+		// Token: 0x0601F668 RID: 128616 RVA: 0x0045FC10 File Offset: 0x0045DE10
 		public static void AddEcoType(FlatBufferBuilder builder, EGiantEcoType ecoType)
 		{
 			builder.AddByte(1, (byte)ecoType, 0);
 		}
 
-		// Token: 0x0601DBE0 RID: 121824 RVA: 0x0042ED23 File Offset: 0x0042CF23
+		// Token: 0x0601F669 RID: 128617 RVA: 0x0045FC1B File Offset: 0x0045DE1B
 		public static void AddLevels(FlatBufferBuilder builder, VectorOffset levelsOffset)
 		{
 			builder.AddOffset(2, levelsOffset.Value, 0);
 		}
 
-		// Token: 0x0601DBE1 RID: 121825 RVA: 0x0042ED34 File Offset: 0x0042CF34
+		// Token: 0x0601F66A RID: 128618 RVA: 0x0045FC2C File Offset: 0x0045DE2C
 		public static VectorOffset CreateLevelsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601DBE2 RID: 121826 RVA: 0x0042ED6B File Offset: 0x0042CF6B
+		// Token: 0x0601F66B RID: 128619 RVA: 0x0045FC63 File Offset: 0x0045DE63
 		public static VectorOffset CreateLevelsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -170,7 +170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601DBE3 RID: 121827 RVA: 0x0042ED85 File Offset: 0x0042CF85
+		// Token: 0x0601F66C RID: 128620 RVA: 0x0045FC7D File Offset: 0x0045DE7D
 		public static VectorOffset CreateLevelsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -178,7 +178,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601DBE4 RID: 121828 RVA: 0x0042EDA3 File Offset: 0x0042CFA3
+		// Token: 0x0601F66D RID: 128621 RVA: 0x0045FC9B File Offset: 0x0045DE9B
 		public static VectorOffset CreateLevelsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -186,19 +186,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601DBE5 RID: 121829 RVA: 0x0042EDBC File Offset: 0x0042CFBC
+		// Token: 0x0601F66E RID: 128622 RVA: 0x0045FCB4 File Offset: 0x0045DEB4
 		public static void StartLevelsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601DBE6 RID: 121830 RVA: 0x0042EDC7 File Offset: 0x0042CFC7
+		// Token: 0x0601F66F RID: 128623 RVA: 0x0045FCBF File Offset: 0x0045DEBF
 		public static Offset<ICheckGiantRegionCultivationTriggeredUpgradeLevel> EndICheckGiantRegionCultivationTriggeredUpgradeLevel(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckGiantRegionCultivationTriggeredUpgradeLevel>(builder.EndTable());
 		}
 
-		// Token: 0x0601DBE7 RID: 121831 RVA: 0x0042EDD4 File Offset: 0x0042CFD4
+		// Token: 0x0601F670 RID: 128624 RVA: 0x0045FCCC File Offset: 0x0045DECC
 		public ICheckGiantRegionCultivationTriggeredUpgradeLevelT UnPack()
 		{
 			ICheckGiantRegionCultivationTriggeredUpgradeLevelT checkGiantRegionCultivationTriggeredUpgradeLevelT = new ICheckGiantRegionCultivationTriggeredUpgradeLevelT();
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkGiantRegionCultivationTriggeredUpgradeLevelT;
 		}
 
-		// Token: 0x0601DBE8 RID: 121832 RVA: 0x0042EDF0 File Offset: 0x0042CFF0
+		// Token: 0x0601F671 RID: 128625 RVA: 0x0045FCE8 File Offset: 0x0045DEE8
 		public void UnPackTo(ICheckGiantRegionCultivationTriggeredUpgradeLevelT _o)
 		{
 			_o.Type = this.Type;
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DBE9 RID: 121833 RVA: 0x0042EE44 File Offset: 0x0042D044
+		// Token: 0x0601F672 RID: 128626 RVA: 0x0045FD3C File Offset: 0x0045DF3C
 		public static Offset<ICheckGiantRegionCultivationTriggeredUpgradeLevel> Pack(FlatBufferBuilder builder, ICheckGiantRegionCultivationTriggeredUpgradeLevelT _o)
 		{
 			if (_o == null)
@@ -234,7 +234,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckGiantRegionCultivationTriggeredUpgradeLevel.CreateICheckGiantRegionCultivationTriggeredUpgradeLevel(builder, _o.Type, _o.EcoType, levelsOffset);
 		}
 
-		// Token: 0x0400D28B RID: 53899
+		// Token: 0x0400DD62 RID: 56674
 		private Table __p;
 	}
 }

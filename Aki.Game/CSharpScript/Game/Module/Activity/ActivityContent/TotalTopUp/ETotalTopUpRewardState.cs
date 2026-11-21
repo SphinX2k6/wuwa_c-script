@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F8C RID: 24460
+	// Token: 0x02004F73 RID: 20339
 	public enum ETotalTopUpRewardState
 	{
-		// Token: 0x0402069B RID: 132763
+		// Token: 0x0401B16D RID: 110957
 		Lock,
-		// Token: 0x0402069C RID: 132764
+		// Token: 0x0401B16E RID: 110958
 		CanClaim,
-		// Token: 0x0402069D RID: 132765
+		// Token: 0x0401B16F RID: 110959
 		Claimed
 	}
 }

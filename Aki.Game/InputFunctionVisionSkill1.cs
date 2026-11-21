@@ -13,31 +13,31 @@ using CSharpScript.Game.NewWorld.Character.Custom.Components;
 using CSharpScript.Game.NewWorld.Character.Role.Component;
 using UnrealEngine;
 
-// Token: 0x020030BD RID: 12477
+// Token: 0x02002615 RID: 9749
 [NullableContext(2)]
 [Nullable(0)]
 public class InputFunctionVisionSkill1 : IStaticVariableResetter
 {
-	// Token: 0x0601AB7C RID: 109436 RVA: 0x007328CC File Offset: 0x00730ACC
+	// Token: 0x0601858B RID: 99723 RVA: 0x00758238 File Offset: 0x00756438
 	static InputFunctionVisionSkill1()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InputFunctionVisionSkill1.CreateStaticDefaultValue), new Action(InputFunctionVisionSkill1.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601AB7D RID: 109437 RVA: 0x00732928 File Offset: 0x00730B28
+	// Token: 0x0601858C RID: 99724 RVA: 0x00758294 File Offset: 0x00756494
 	public static void CreateStaticDefaultValue()
 	{
 		InputFunctionVisionSkill1.MotorcycleDisableChain = new MotorFunctionDisableHandler();
 		InputFunctionVisionSkill1.MotorcycleDisableChain.SetNext(new CharacterResponseInputDisableHandler()).SetNext(new PositionStateDisableHandler()).SetNext(new TagDisableHandler()).SetNext(new EntityDisableHandler()).SetNext(new OnlineDisableHandler());
 	}
 
-	// Token: 0x0601AB7E RID: 109438 RVA: 0x00732977 File Offset: 0x00730B77
+	// Token: 0x0601858D RID: 99725 RVA: 0x007582E3 File Offset: 0x007564E3
 	public static void ResetStaticDefaultValue()
 	{
 		InputFunctionVisionSkill1.MotorcycleDisableChain = null;
 	}
 
-	// Token: 0x0601AB7F RID: 109439 RVA: 0x00732980 File Offset: 0x00730B80
+	// Token: 0x0601858E RID: 99726 RVA: 0x007582EC File Offset: 0x007564EC
 	[NullableContext(1)]
 	private static bool VisionSkill1TraceDetectHasGround(Entity entity)
 	{
@@ -59,7 +59,7 @@ public class InputFunctionVisionSkill1 : IStaticVariableResetter
 		return TraceElementCommon.Instance.ShapeTrace(component.Actor.CapsuleComponent, actorTrace, "SoarEnterDetect", "SoarEnterDetect");
 	}
 
-	// Token: 0x0601AB80 RID: 109440 RVA: 0x00732A3C File Offset: 0x00730C3C
+	// Token: 0x0601858F RID: 99727 RVA: 0x007583A8 File Offset: 0x007565A8
 	[NullableContext(1)]
 	private static bool IsFollowerDisable(BaseTagComponent tagComp)
 	{
@@ -74,7 +74,7 @@ public class InputFunctionVisionSkill1 : IStaticVariableResetter
 		});
 	}
 
-	// Token: 0x0601AB81 RID: 109441 RVA: 0x00732AC4 File Offset: 0x00730CC4
+	// Token: 0x06018590 RID: 99728 RVA: 0x00758430 File Offset: 0x00756630
 	[NullableContext(1)]
 	private static InputFunctionVisionSkill1.IExploreDeriveResult TryExploreDerive(TsBaseCharacter character, Entity entity, BaseTagComponent tagComp, int exploreToolId, int skillId)
 	{
@@ -360,7 +360,7 @@ public class InputFunctionVisionSkill1 : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0601AB82 RID: 109442 RVA: 0x007331F4 File Offset: 0x007313F4
+	// Token: 0x06018591 RID: 99729 RVA: 0x00758B60 File Offset: 0x00756D60
 	private static SInputCommand VisionSkill1Function(float time)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -466,7 +466,7 @@ public class InputFunctionVisionSkill1 : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0601AB83 RID: 109443 RVA: 0x00733462 File Offset: 0x00731662
+	// Token: 0x06018592 RID: 99730 RVA: 0x00758DCE File Offset: 0x00756FCE
 	public static SInputCommand VisionSkill1OnPress(float time)
 	{
 		if (Info.Instance.IsInTouch())
@@ -476,7 +476,7 @@ public class InputFunctionVisionSkill1 : IStaticVariableResetter
 		return InputFunctionVisionSkill1.VisionSkill1Function(time);
 	}
 
-	// Token: 0x0601AB84 RID: 109444 RVA: 0x00733478 File Offset: 0x00731678
+	// Token: 0x06018593 RID: 99731 RVA: 0x00758DE4 File Offset: 0x00756FE4
 	public static SInputCommand VisionSkill1OnRelease(float time)
 	{
 		if (!Info.Instance.IsInTouch())
@@ -490,7 +490,7 @@ public class InputFunctionVisionSkill1 : IStaticVariableResetter
 		return InputFunctionVisionSkill1.VisionSkill1Function(time);
 	}
 
-	// Token: 0x0601AB85 RID: 109445 RVA: 0x00733498 File Offset: 0x00731698
+	// Token: 0x06018594 RID: 99732 RVA: 0x00758E04 File Offset: 0x00757004
 	public static int? GetVisionSkill1SkillId()
 	{
 		SInputCommand sinputCommand = InputFunctionVisionSkill1.VisionSkill1Function(0f);
@@ -501,70 +501,70 @@ public class InputFunctionVisionSkill1 : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0400CE56 RID: 52822
+	// Token: 0x0400D242 RID: 53826
 	private static MotorFunctionDisableHandler MotorcycleDisableChain;
 
-	// Token: 0x0400CE57 RID: 52823
+	// Token: 0x0400D243 RID: 53827
 	private const float SOAR_HEIGHT_LIMIT = 650f;
 
-	// Token: 0x0400CE58 RID: 52824
+	// Token: 0x0400D244 RID: 53828
 	[StaticVariableRuleIgnore]
 	private static readonly FVectorDouble SoarLandDetectOffset = new FVectorDouble(1100.0, 0.0, -500.0);
 
-	// Token: 0x0400CE59 RID: 52825
+	// Token: 0x0400D245 RID: 53829
 	private const int ROLE_ID_CALBRENA = 1208;
 
-	// Token: 0x0400CE5A RID: 52826
+	// Token: 0x0400D246 RID: 53830
 	[Nullable(1)]
 	private const string PROFILE_KEY = "SoarEnterDetect";
 
-	// Token: 0x0400CE5B RID: 52827
+	// Token: 0x0400D247 RID: 53831
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x02009672 RID: 38514
+	// Token: 0x02008893 RID: 34963
 	public interface IExploreDeriveResult
 	{
-		// Token: 0x1700A117 RID: 41239
-		// (get) Token: 0x0604C2B5 RID: 311989
-		// (set) Token: 0x0604C2B6 RID: 311990
+		// Token: 0x170078A6 RID: 30886
+		// (get) Token: 0x0604273C RID: 272188
+		// (set) Token: 0x0604273D RID: 272189
 		bool Derived { get; set; }
 
-		// Token: 0x1700A118 RID: 41240
-		// (get) Token: 0x0604C2B7 RID: 311991
-		// (set) Token: 0x0604C2B8 RID: 311992
+		// Token: 0x170078A7 RID: 30887
+		// (get) Token: 0x0604273E RID: 272190
+		// (set) Token: 0x0604273F RID: 272191
 		int SkillId { get; set; }
 
-		// Token: 0x1700A119 RID: 41241
-		// (get) Token: 0x0604C2B9 RID: 311993
-		// (set) Token: 0x0604C2BA RID: 311994
+		// Token: 0x170078A8 RID: 30888
+		// (get) Token: 0x06042740 RID: 272192
+		// (set) Token: 0x06042741 RID: 272193
 		Action OnRejected { get; set; }
 	}
 
-	// Token: 0x02009673 RID: 38515
+	// Token: 0x02008894 RID: 34964
 	[Nullable(0)]
 	[RequiredMember]
 	public class ExploreDeriveResult : InputFunctionVisionSkill1.IExploreDeriveResult
 	{
-		// Token: 0x1700A11A RID: 41242
-		// (get) Token: 0x0604C2BB RID: 311995 RVA: 0x01414BA2 File Offset: 0x01412DA2
-		// (set) Token: 0x0604C2BC RID: 311996 RVA: 0x01414BAA File Offset: 0x01412DAA
+		// Token: 0x170078A9 RID: 30889
+		// (get) Token: 0x06042742 RID: 272194 RVA: 0x013BF6BE File Offset: 0x013BD8BE
+		// (set) Token: 0x06042743 RID: 272195 RVA: 0x013BF6C6 File Offset: 0x013BD8C6
 		[RequiredMember]
 		public bool Derived { get; set; }
 
-		// Token: 0x1700A11B RID: 41243
-		// (get) Token: 0x0604C2BD RID: 311997 RVA: 0x01414BB3 File Offset: 0x01412DB3
-		// (set) Token: 0x0604C2BE RID: 311998 RVA: 0x01414BBB File Offset: 0x01412DBB
+		// Token: 0x170078AA RID: 30890
+		// (get) Token: 0x06042744 RID: 272196 RVA: 0x013BF6CF File Offset: 0x013BD8CF
+		// (set) Token: 0x06042745 RID: 272197 RVA: 0x013BF6D7 File Offset: 0x013BD8D7
 		[RequiredMember]
 		public int SkillId { get; set; }
 
-		// Token: 0x1700A11C RID: 41244
-		// (get) Token: 0x0604C2BF RID: 311999 RVA: 0x01414BC4 File Offset: 0x01412DC4
-		// (set) Token: 0x0604C2C0 RID: 312000 RVA: 0x01414BCC File Offset: 0x01412DCC
+		// Token: 0x170078AB RID: 30891
+		// (get) Token: 0x06042746 RID: 272198 RVA: 0x013BF6E0 File Offset: 0x013BD8E0
+		// (set) Token: 0x06042747 RID: 272199 RVA: 0x013BF6E8 File Offset: 0x013BD8E8
 		public Action OnRejected { get; set; }
 
-		// Token: 0x0604C2C1 RID: 312001 RVA: 0x01414BD5 File Offset: 0x01412DD5
+		// Token: 0x06042748 RID: 272200 RVA: 0x013BF6F1 File Offset: 0x013BD8F1
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public ExploreDeriveResult()

@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001373 RID: 4979
+// Token: 0x02000827 RID: 2087
 [NullableContext(1)]
 [Nullable(0)]
 public class MowingTowerBuffView : UiViewBase
 {
-	// Token: 0x06008B62 RID: 35682 RVA: 0x001DCB53 File Offset: 0x001DAD53
+	// Token: 0x06005EFD RID: 24317 RVA: 0x001E598F File Offset: 0x001E3B8F
 	public MowingTowerBuffView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06008B63 RID: 35683 RVA: 0x001DCB6C File Offset: 0x001DAD6C
+	// Token: 0x06005EFE RID: 24318 RVA: 0x001E59A8 File Offset: 0x001E3BA8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class MowingTowerBuffView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008B64 RID: 35684 RVA: 0x001DCC18 File Offset: 0x001DAE18
+	// Token: 0x06005EFF RID: 24319 RVA: 0x001E5A54 File Offset: 0x001E3C54
 	protected override void OnStart()
 	{
 		this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -46,13 +46,13 @@ public class MowingTowerBuffView : UiViewBase
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06008B65 RID: 35685 RVA: 0x001DCCA4 File Offset: 0x001DAEA4
+	// Token: 0x06005F00 RID: 24320 RVA: 0x001E5AE0 File Offset: 0x001E3CE0
 	private BuffGridItem CreateLoopItem()
 	{
 		return new BuffGridItem();
 	}
 
-	// Token: 0x06008B66 RID: 35686 RVA: 0x001DCCAC File Offset: 0x001DAEAC
+	// Token: 0x06005F01 RID: 24321 RVA: 0x001E5AE8 File Offset: 0x001E3CE8
 	private void OnClickConfirmButton()
 	{
 		List<MowingTowerBuffInfo> list = new List<MowingTowerBuffInfo>();
@@ -89,7 +89,7 @@ public class MowingTowerBuffView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06008B67 RID: 35687 RVA: 0x001DCDC0 File Offset: 0x001DAFC0
+	// Token: 0x06005F02 RID: 24322 RVA: 0x001E5BFC File Offset: 0x001E3DFC
 	protected override void OnBeforeShow()
 	{
 		this.TryShowAnimation();
@@ -122,7 +122,7 @@ public class MowingTowerBuffView : UiViewBase
 		this.IsBuffMaxCountOne = (this.CurrentTeamInfo.LevelInfo.GetMaxBuffCount() == 1);
 	}
 
-	// Token: 0x06008B68 RID: 35688 RVA: 0x001DCEDC File Offset: 0x001DB0DC
+	// Token: 0x06005F03 RID: 24323 RVA: 0x001E5D18 File Offset: 0x001E3F18
 	private void TryShowAnimation()
 	{
 		string sequenceName = "Start";
@@ -138,7 +138,7 @@ public class MowingTowerBuffView : UiViewBase
 		MowingTowerModel.Instance.PlayBackAnimation = false;
 	}
 
-	// Token: 0x06008B69 RID: 35689 RVA: 0x001DCF2C File Offset: 0x001DB12C
+	// Token: 0x06005F04 RID: 24324 RVA: 0x001E5D68 File Offset: 0x001E3F68
 	private void OnClickToggle(BuffScrollItemData data)
 	{
 		if (this.IsBuffMaxCountOne && !data.Selected)
@@ -153,13 +153,13 @@ public class MowingTowerBuffView : UiViewBase
 		this.RefreshCountText();
 	}
 
-	// Token: 0x06008B6A RID: 35690 RVA: 0x001DCF8C File Offset: 0x001DB18C
+	// Token: 0x06005F05 RID: 24325 RVA: 0x001E5DC8 File Offset: 0x001E3FC8
 	private bool CheckClickAble(BuffScrollItemData data)
 	{
 		return this.FirstRefresh || data.Selected || this.CheckIfStillCanSelectBuff();
 	}
 
-	// Token: 0x06008B6B RID: 35691 RVA: 0x001DCFB0 File Offset: 0x001DB1B0
+	// Token: 0x06005F06 RID: 24326 RVA: 0x001E5DEC File Offset: 0x001E3FEC
 	private bool CheckIfStillCanSelectBuff()
 	{
 		if (this.FirstRefresh)
@@ -174,7 +174,7 @@ public class MowingTowerBuffView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x06008B6C RID: 35692 RVA: 0x001DD000 File Offset: 0x001DB200
+	// Token: 0x06005F07 RID: 24327 RVA: 0x001E5E3C File Offset: 0x001E403C
 	private int GetCurrentSelectCount()
 	{
 		int num = 0;
@@ -188,7 +188,7 @@ public class MowingTowerBuffView : UiViewBase
 		return num;
 	}
 
-	// Token: 0x06008B6D RID: 35693 RVA: 0x001DD040 File Offset: 0x001DB240
+	// Token: 0x06005F08 RID: 24328 RVA: 0x001E5E7C File Offset: 0x001E407C
 	private void RefreshScrollView()
 	{
 		if (this.LoopScrollView != null)
@@ -215,7 +215,7 @@ public class MowingTowerBuffView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008B6E RID: 35694 RVA: 0x001DD103 File Offset: 0x001DB303
+	// Token: 0x06005F09 RID: 24329 RVA: 0x001E5F3F File Offset: 0x001E413F
 	protected override void OnBeforeHide()
 	{
 		LoopScrollView<BuffGridItem, BuffGridItemData> loopScrollView = this.LoopScrollView;
@@ -226,7 +226,7 @@ public class MowingTowerBuffView : UiViewBase
 		loopScrollView.ClearGridProxies();
 	}
 
-	// Token: 0x06008B6F RID: 35695 RVA: 0x001DD115 File Offset: 0x001DB315
+	// Token: 0x06005F0A RID: 24330 RVA: 0x001E5F51 File Offset: 0x001E4151
 	private void RefreshCountText()
 	{
 		UUIText text = base.GetText(2);
@@ -237,15 +237,15 @@ public class MowingTowerBuffView : UiViewBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x04003DCD RID: 15821
+	// Token: 0x04003E65 RID: 15973
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003DCE RID: 15822
+	// Token: 0x04003E66 RID: 15974
 	[Nullable(2)]
 	private MowingTowerTeamInfo CurrentTeamInfo;
 
-	// Token: 0x04003DCF RID: 15823
+	// Token: 0x04003E67 RID: 15975
 	[Nullable(new byte[]
 	{
 		2,
@@ -253,10 +253,10 @@ public class MowingTowerBuffView : UiViewBase
 	})]
 	private List<BuffScrollItemData> CurrentSelectableBuffData;
 
-	// Token: 0x04003DD0 RID: 15824
+	// Token: 0x04003E68 RID: 15976
 	private bool FirstRefresh = true;
 
-	// Token: 0x04003DD1 RID: 15825
+	// Token: 0x04003E69 RID: 15977
 	[Nullable(new byte[]
 	{
 		2,
@@ -265,30 +265,30 @@ public class MowingTowerBuffView : UiViewBase
 	})]
 	private LoopScrollView<BuffGridItem, BuffGridItemData> LoopScrollView;
 
-	// Token: 0x04003DD2 RID: 15826
+	// Token: 0x04003E6A RID: 15978
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04003DD3 RID: 15827
+	// Token: 0x04003E6B RID: 15979
 	private bool IsBuffMaxCountOne = true;
 
-	// Token: 0x020079EC RID: 31212
+	// Token: 0x02006B76 RID: 27510
 	[NullableContext(0)]
 	private static class EComponent
 	{
-		// Token: 0x0402820C RID: 164364
+		// Token: 0x04023539 RID: 144697
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402820D RID: 164365
+		// Token: 0x0402353A RID: 144698
 		public const int LoopScrollView = 1;
 
-		// Token: 0x0402820E RID: 164366
+		// Token: 0x0402353B RID: 144699
 		public const int SelectCountText = 2;
 
-		// Token: 0x0402820F RID: 164367
+		// Token: 0x0402353C RID: 144700
 		public const int ConfirmButton = 3;
 
-		// Token: 0x04028210 RID: 164368
+		// Token: 0x0402353D RID: 144701
 		public const int LoopItem = 4;
 	}
 }

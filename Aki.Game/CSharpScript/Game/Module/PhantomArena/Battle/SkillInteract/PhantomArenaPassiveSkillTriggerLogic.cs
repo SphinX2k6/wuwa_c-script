@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 {
-	// Token: 0x02005281 RID: 21121
+	// Token: 0x02004251 RID: 16977
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaPassiveSkillTriggerLogic : ISkillInteractMainInterface
 	{
-		// Token: 0x06036040 RID: 221248 RVA: 0x00CC86FC File Offset: 0x00CC68FC
+		// Token: 0x0602AF3B RID: 175931 RVA: 0x00C15E00 File Offset: 0x00C14000
 		public PhantomArenaPassiveSkillTriggerLogic(PhantomBattleSelectTargetEffectNotify notify, PhantomArenaBattleProxy viewProxy)
 		{
 			this.ViewProxy = viewProxy;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			};
 		}
 
-		// Token: 0x06036041 RID: 221249 RVA: 0x00CC8778 File Offset: 0x00CC6978
+		// Token: 0x0602AF3C RID: 175932 RVA: 0x00C15E7C File Offset: 0x00C1407C
 		public UniTask Execute()
 		{
 			PhantomArenaPassiveSkillTriggerLogic.<Execute>d__3 <Execute>d__;
@@ -42,32 +42,32 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			return <Execute>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036042 RID: 221250 RVA: 0x00CC87BB File Offset: 0x00CC69BB
+		// Token: 0x0602AF3D RID: 175933 RVA: 0x00C15EBF File Offset: 0x00C140BF
 		public ISkillTriggerInfo GetData()
 		{
 			return this.Data;
 		}
 
-		// Token: 0x06036043 RID: 221251 RVA: 0x00CC87C4 File Offset: 0x00CC69C4
+		// Token: 0x0602AF3E RID: 175934 RVA: 0x00C15EC8 File Offset: 0x00C140C8
 		public UniTask StartSkillInteract()
 		{
 			return default(UniTask);
 		}
 
-		// Token: 0x06036044 RID: 221252 RVA: 0x00CC87DA File Offset: 0x00CC69DA
+		// Token: 0x0602AF3F RID: 175935 RVA: 0x00C15EDE File Offset: 0x00C140DE
 		public void CancelSkillInteract()
 		{
 		}
 
-		// Token: 0x06036045 RID: 221253 RVA: 0x00CC87DC File Offset: 0x00CC69DC
+		// Token: 0x0602AF40 RID: 175936 RVA: 0x00C15EE0 File Offset: 0x00C140E0
 		public void FinishSkillInteract()
 		{
 		}
 
-		// Token: 0x0401C99B RID: 117147
+		// Token: 0x040173D0 RID: 95184
 		protected SkillTriggerInfo Data;
 
-		// Token: 0x0401C99C RID: 117148
+		// Token: 0x040173D1 RID: 95185
 		protected PhantomArenaBattleProxy ViewProxy;
 	}
 }

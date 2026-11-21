@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020025C6 RID: 9670
+// Token: 0x02001AB1 RID: 6833
 [NullableContext(2)]
 [Nullable(0)]
 public class PhotoFilterToggleItem : UiPanelBase
 {
-	// Token: 0x060139D5 RID: 80341 RVA: 0x004E81F0 File Offset: 0x004E63F0
+	// Token: 0x06010EB5 RID: 69301 RVA: 0x004F6DF0 File Offset: 0x004F4FF0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,27 +23,27 @@ public class PhotoFilterToggleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060139D6 RID: 80342 RVA: 0x004E8257 File Offset: 0x004E6457
+	// Token: 0x06010EB6 RID: 69302 RVA: 0x004F6E57 File Offset: 0x004F5057
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(base.GetButton(1).RootUIComp);
 	}
 
-	// Token: 0x060139D7 RID: 80343 RVA: 0x004E8275 File Offset: 0x004E6475
+	// Token: 0x06010EB7 RID: 69303 RVA: 0x004F6E75 File Offset: 0x004F5075
 	protected override void OnBeforeShow()
 	{
 		this.CurrentOptionState = PhotographModel.Instance.GetFilterToggleState();
 		this.ExecuteOption(false);
 	}
 
-	// Token: 0x060139D8 RID: 80344 RVA: 0x004E828E File Offset: 0x004E648E
+	// Token: 0x06010EB8 RID: 69304 RVA: 0x004F6E8E File Offset: 0x004F508E
 	protected override void OnBeforeDestroy()
 	{
 		this.LevelSequencePlayer.Clear();
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x060139D9 RID: 80345 RVA: 0x004E82A4 File Offset: 0x004E64A4
+	// Token: 0x06010EB9 RID: 69305 RVA: 0x004F6EA4 File Offset: 0x004F50A4
 	public void Initialize()
 	{
 		string textStringId = "CameraFlitercontroller";
@@ -51,21 +51,21 @@ public class PhotoFilterToggleItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(text, textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x060139DA RID: 80346 RVA: 0x004E82D0 File Offset: 0x004E64D0
+	// Token: 0x06010EBA RID: 69306 RVA: 0x004F6ED0 File Offset: 0x004F50D0
 	[NullableContext(1)]
 	public void BindSetSubOptionVisible(Action<bool, bool> setSubOptionVisible)
 	{
 		this.SetSubOptionVisible = setSubOptionVisible;
 	}
 
-	// Token: 0x060139DB RID: 80347 RVA: 0x004E82D9 File Offset: 0x004E64D9
+	// Token: 0x06010EBB RID: 69307 RVA: 0x004F6ED9 File Offset: 0x004F50D9
 	[NullableContext(1)]
 	public void BindDeselectOnFilterItem(Action deselectOnFilterItem)
 	{
 		this.DeselectOnFilterItem = deselectOnFilterItem;
 	}
 
-	// Token: 0x060139DC RID: 80348 RVA: 0x004E82E2 File Offset: 0x004E64E2
+	// Token: 0x06010EBC RID: 69308 RVA: 0x004F6EE2 File Offset: 0x004F50E2
 	private void OnClickedButton()
 	{
 		this.CurrentOptionState = !this.CurrentOptionState;
@@ -73,7 +73,7 @@ public class PhotoFilterToggleItem : UiPanelBase
 		this.ExecuteOption(true);
 	}
 
-	// Token: 0x060139DD RID: 80349 RVA: 0x004E830C File Offset: 0x004E650C
+	// Token: 0x06010EBD RID: 69309 RVA: 0x004F6F0C File Offset: 0x004F510C
 	private void SetToggleState(bool state, bool needAnim = true)
 	{
 		string sequenceName = state ? "ClickL" : "ClickR";
@@ -93,7 +93,7 @@ public class PhotoFilterToggleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060139DE RID: 80350 RVA: 0x004E835C File Offset: 0x004E655C
+	// Token: 0x06010EBE RID: 69310 RVA: 0x004F6F5C File Offset: 0x004F515C
 	private void ExecuteOption(bool isByClickToggle = true)
 	{
 		this.SetToggleState(this.CurrentOptionState, false);
@@ -107,25 +107,25 @@ public class PhotoFilterToggleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x040093F0 RID: 37872
+	// Token: 0x04009546 RID: 38214
 	private bool CurrentOptionState = true;
 
-	// Token: 0x040093F1 RID: 37873
+	// Token: 0x04009547 RID: 38215
 	private Action<bool, bool> SetSubOptionVisible;
 
-	// Token: 0x040093F2 RID: 37874
+	// Token: 0x04009548 RID: 38216
 	private Action DeselectOnFilterItem;
 
-	// Token: 0x040093F3 RID: 37875
+	// Token: 0x04009549 RID: 38217
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02008BD9 RID: 35801
+	// Token: 0x02007D61 RID: 32097
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402D663 RID: 185955
+		// Token: 0x04028978 RID: 166264
 		OptionNameText,
-		// Token: 0x0402D664 RID: 185956
+		// Token: 0x04028979 RID: 166265
 		OptionButton
 	}
 }

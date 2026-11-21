@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025C7 RID: 9671
+// Token: 0x02001AB2 RID: 6834
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotographDropDownSetup : PhotographSetupBase
 {
-	// Token: 0x060139E0 RID: 80352 RVA: 0x004E83BC File Offset: 0x004E65BC
+	// Token: 0x06010EC0 RID: 69312 RVA: 0x004F6FBC File Offset: 0x004F51BC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -30,7 +30,7 @@ public class PhotographDropDownSetup : PhotographSetupBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060139E1 RID: 80353 RVA: 0x004E8448 File Offset: 0x004E6648
+	// Token: 0x06010EC1 RID: 69313 RVA: 0x004F7048 File Offset: 0x004F5248
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhotographDropDownSetup.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -41,13 +41,13 @@ public class PhotographDropDownSetup : PhotographSetupBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060139E2 RID: 80354 RVA: 0x004E848B File Offset: 0x004E668B
+	// Token: 0x06010EC2 RID: 69314 RVA: 0x004F708B File Offset: 0x004F528B
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x060139E3 RID: 80355 RVA: 0x004E84A0 File Offset: 0x004E66A0
+	// Token: 0x06010EC3 RID: 69315 RVA: 0x004F70A0 File Offset: 0x004F52A0
 	protected override void OnBeforeShow()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -58,7 +58,7 @@ public class PhotographDropDownSetup : PhotographSetupBase
 		levelSequencePlayer.PlayLevelSequenceByName("Start01", false, null, false);
 	}
 
-	// Token: 0x060139E4 RID: 80356 RVA: 0x004E84CD File Offset: 0x004E66CD
+	// Token: 0x06010EC4 RID: 69316 RVA: 0x004F70CD File Offset: 0x004F52CD
 	public override void Initialize(EPhotoSetupValueType setupValueType)
 	{
 		this.SetupValueType = setupValueType;
@@ -66,14 +66,14 @@ public class PhotographDropDownSetup : PhotographSetupBase
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x060139E5 RID: 80357 RVA: 0x004E84E2 File Offset: 0x004E66E2
+	// Token: 0x06010EC5 RID: 69317 RVA: 0x004F70E2 File Offset: 0x004F52E2
 	public override void InitializeById(int setupId)
 	{
 		base.InitializeById(setupId);
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x060139E6 RID: 80358 RVA: 0x004E84F4 File Offset: 0x004E66F4
+	// Token: 0x06010EC6 RID: 69318 RVA: 0x004F70F4 File Offset: 0x004F52F4
 	private void RefreshRedDot()
 	{
 		UUIItem item = base.GetItem(2);
@@ -84,7 +84,7 @@ public class PhotographDropDownSetup : PhotographSetupBase
 		item.SetUIActive(base.IsPhotoSetupRedDotVisible());
 	}
 
-	// Token: 0x060139E7 RID: 80359 RVA: 0x004E851C File Offset: 0x004E671C
+	// Token: 0x06010EC7 RID: 69319 RVA: 0x004F711C File Offset: 0x004F531C
 	public override void Refresh()
 	{
 		if (this.SetupConfig == null || this.SetupConfig.Value.Type != 2)
@@ -97,7 +97,7 @@ public class PhotographDropDownSetup : PhotographSetupBase
 		this.RefreshDropDown();
 	}
 
-	// Token: 0x060139E8 RID: 80360 RVA: 0x004E8580 File Offset: 0x004E6780
+	// Token: 0x06010EC8 RID: 69320 RVA: 0x004F7180 File Offset: 0x004F5380
 	private void RefreshDropDown()
 	{
 		IReadOnlyList<PhotoDropDown> photoDropDownDataList = PhotographConfig.Instance.GetPhotoDropDownDataList(this.SetupValueType);
@@ -124,19 +124,19 @@ public class PhotographDropDownSetup : PhotographSetupBase
 		this.DropDown.InitScroll(list, new Func<PhotoDropDown, TableTextArgNew>(this.GetDropDownTextId), defaultIndex, true);
 	}
 
-	// Token: 0x060139E9 RID: 80361 RVA: 0x004E864D File Offset: 0x004E684D
+	// Token: 0x06010EC9 RID: 69321 RVA: 0x004F724D File Offset: 0x004F544D
 	private TableTextArgNew GetDropDownTextId(PhotoDropDown data)
 	{
 		return new TableTextArgNew(data.TextId, Array.Empty<object>());
 	}
 
-	// Token: 0x060139EA RID: 80362 RVA: 0x004E8660 File Offset: 0x004E6860
+	// Token: 0x06010ECA RID: 69322 RVA: 0x004F7260 File Offset: 0x004F5460
 	protected override void OnBeforeDestroy()
 	{
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x060139EB RID: 80363 RVA: 0x004E8669 File Offset: 0x004E6869
+	// Token: 0x06010ECB RID: 69323 RVA: 0x004F7269 File Offset: 0x004F5469
 	private void OnDropDownOpen()
 	{
 		base.MarkPhotoSetupRedDotAsRead(delegate
@@ -150,7 +150,7 @@ public class PhotographDropDownSetup : PhotographSetupBase
 		});
 	}
 
-	// Token: 0x060139EC RID: 80364 RVA: 0x004E8680 File Offset: 0x004E6880
+	// Token: 0x06010ECC RID: 69324 RVA: 0x004F7280 File Offset: 0x004F5480
 	private void OnSelectChange(int index, PhotoDropDown data)
 	{
 		if (this.SetupValueType == EPhotoSetupValueType.ImageQuality)
@@ -165,23 +165,23 @@ public class PhotographDropDownSetup : PhotographSetupBase
 		}
 	}
 
-	// Token: 0x060139ED RID: 80365 RVA: 0x004E8706 File Offset: 0x004E6906
+	// Token: 0x06010ECD RID: 69325 RVA: 0x004F7306 File Offset: 0x004F5506
 	private OneTextDropDownItem CreateDropDownItem(UUIItem uiItem, PhotoDropDown data)
 	{
 		return new OneTextDropDownItem(uiItem);
 	}
 
-	// Token: 0x060139EE RID: 80366 RVA: 0x004E870E File Offset: 0x004E690E
+	// Token: 0x06010ECE RID: 69326 RVA: 0x004F730E File Offset: 0x004F550E
 	private OneTextTitleItem CreateTitleItem(UUIItem uiItem)
 	{
 		return new OneTextTitleItem(uiItem);
 	}
 
-	// Token: 0x040093F4 RID: 37876
+	// Token: 0x0400954A RID: 38218
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040093F5 RID: 37877
+	// Token: 0x0400954B RID: 38219
 	[Nullable(new byte[]
 	{
 		2,
@@ -189,17 +189,17 @@ public class PhotographDropDownSetup : PhotographSetupBase
 	})]
 	private CommonDropDown<TableTextArgNew, PhotoDropDown> DropDown;
 
-	// Token: 0x02008BDA RID: 35802
+	// Token: 0x02007D62 RID: 32098
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402D665 RID: 185957
+		// Token: 0x0402897A RID: 166266
 		public const int OptionNameText = 0;
 
-		// Token: 0x0402D666 RID: 185958
+		// Token: 0x0402897B RID: 166267
 		public const int ItemDropDown = 1;
 
-		// Token: 0x0402D667 RID: 185959
+		// Token: 0x0402897C RID: 166268
 		public const int ItemRedDot = 2;
 	}
 }

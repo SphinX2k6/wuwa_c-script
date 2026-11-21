@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F04 RID: 7940
+// Token: 0x020013C6 RID: 5062
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryTechnologyInfoPanel : UiPanelBase
 {
-	// Token: 0x0600F47C RID: 62588 RVA: 0x003AFAE8 File Offset: 0x003ADCE8
+	// Token: 0x0600C89B RID: 51355 RVA: 0x003BB5DC File Offset: 0x003B97DC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class HonamiStoryTechnologyInfoPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F47D RID: 62589 RVA: 0x003AFBE0 File Offset: 0x003ADDE0
+	// Token: 0x0600C89C RID: 51356 RVA: 0x003BB6D4 File Offset: 0x003B98D4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryTechnologyInfoPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ public class HonamiStoryTechnologyInfoPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F47E RID: 62590 RVA: 0x003AFC24 File Offset: 0x003ADE24
+	// Token: 0x0600C89D RID: 51357 RVA: 0x003BB718 File Offset: 0x003B9918
 	public void Refresh(HonamiStoryTechNodeData data)
 	{
 		if (data == null)
@@ -110,7 +110,7 @@ public class HonamiStoryTechnologyInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F47F RID: 62591 RVA: 0x003AFE98 File Offset: 0x003AE098
+	// Token: 0x0600C89E RID: 51358 RVA: 0x003BB98C File Offset: 0x003B9B8C
 	private void OnClickConfirmBtn(int _)
 	{
 		HonamiStoryController.Instance.SendHonamiStoryActivateTalentRequest(this.CurSelectNode.Id, delegate
@@ -128,50 +128,50 @@ public class HonamiStoryTechnologyInfoPanel : UiPanelBase
 		});
 	}
 
-	// Token: 0x04007121 RID: 28961
+	// Token: 0x04007202 RID: 29186
 	private HonamiStoryTechNodeData CurSelectNode;
 
-	// Token: 0x04007122 RID: 28962
+	// Token: 0x04007203 RID: 29187
 	[Nullable(2)]
 	private ButtonItem ConfirmBtnItem;
 
-	// Token: 0x04007123 RID: 28963
+	// Token: 0x04007204 RID: 29188
 	[Nullable(2)]
 	private CommonCostItem CostItem;
 
-	// Token: 0x04007124 RID: 28964
+	// Token: 0x04007205 RID: 29189
 	[Nullable(2)]
 	private FunctionalPanelConditionLock LockTipsItem;
 
-	// Token: 0x04007125 RID: 28965
+	// Token: 0x04007206 RID: 29190
 	private readonly string LockBgPath = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity28/HonamiStory/HonamiStorySkillTree/SP_SkillFrmLockNor.SP_SkillFrmLockNor";
 
-	// Token: 0x04007126 RID: 28966
+	// Token: 0x04007207 RID: 29191
 	private readonly string UnLockBgPath = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity28/HonamiStory/HonamiStorySkillTree/SP_SkillFrmANor.SP_SkillFrmANor";
 
-	// Token: 0x02008508 RID: 34056
+	// Token: 0x0200768D RID: 30349
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B4B4 RID: 177332
+		// Token: 0x040267D8 RID: 157656
 		SprTechIconBg,
-		// Token: 0x0402B4B5 RID: 177333
+		// Token: 0x040267D9 RID: 157657
 		TexTechIcon,
-		// Token: 0x0402B4B6 RID: 177334
+		// Token: 0x040267DA RID: 157658
 		TxtTechTitle,
-		// Token: 0x0402B4B7 RID: 177335
+		// Token: 0x040267DB RID: 157659
 		TxtMidSkillInfo,
-		// Token: 0x0402B4B8 RID: 177336
+		// Token: 0x040267DC RID: 157660
 		PnlCost,
-		// Token: 0x0402B4B9 RID: 177337
+		// Token: 0x040267DD RID: 157661
 		BtnConfirm,
-		// Token: 0x0402B4BA RID: 177338
+		// Token: 0x040267DE RID: 157662
 		PnlLockTips,
-		// Token: 0x0402B4BB RID: 177339
+		// Token: 0x040267DF RID: 157663
 		TxtTechDesc,
-		// Token: 0x0402B4BC RID: 177340
+		// Token: 0x040267E0 RID: 157664
 		PnlUnLockTips,
-		// Token: 0x0402B4BD RID: 177341
+		// Token: 0x040267E1 RID: 157665
 		TxtMidSkillTitle
 	}
 }

@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E68 RID: 28264
+	// Token: 0x020075E9 RID: 30185
 	public class IRemovePreloadResourceTrialCharacterT
 	{
-		// Token: 0x1700D285 RID: 53893
-		// (get) Token: 0x06031F28 RID: 204584 RVA: 0x006C1D5F File Offset: 0x006BFF5F
-		// (set) Token: 0x06031F29 RID: 204585 RVA: 0x006C1D67 File Offset: 0x006BFF67
+		// Token: 0x1700DDD7 RID: 56791
+		// (get) Token: 0x06034F50 RID: 216912 RVA: 0x0071D85F File Offset: 0x0071BA5F
+		// (set) Token: 0x06034F51 RID: 216913 RVA: 0x0071D867 File Offset: 0x0071BA67
 		public ERemovePreloadResourceObjectType Type { get; set; }
 
-		// Token: 0x1700D286 RID: 53894
-		// (get) Token: 0x06031F2A RID: 204586 RVA: 0x006C1D70 File Offset: 0x006BFF70
-		// (set) Token: 0x06031F2B RID: 204587 RVA: 0x006C1D78 File Offset: 0x006BFF78
+		// Token: 0x1700DDD8 RID: 56792
+		// (get) Token: 0x06034F52 RID: 216914 RVA: 0x0071D870 File Offset: 0x0071BA70
+		// (set) Token: 0x06034F53 RID: 216915 RVA: 0x0071D878 File Offset: 0x0071BA78
 		public List<int> CharacterGroup { get; set; }
 
-		// Token: 0x06031F2C RID: 204588 RVA: 0x006C1D81 File Offset: 0x006BFF81
+		// Token: 0x06034F54 RID: 216916 RVA: 0x0071D881 File Offset: 0x0071BA81
 		public IRemovePreloadResourceTrialCharacterT()
 		{
 			this.Type = ERemovePreloadResourceObjectType.RemovePreloadResourceTrialCharacter;

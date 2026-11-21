@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002083 RID: 8323
+// Token: 0x02001556 RID: 5462
 public enum EBackToGameType
 {
-	// Token: 0x04007904 RID: 30980
+	// Token: 0x040079ED RID: 31213
 	None,
-	// Token: 0x04007905 RID: 30981
+	// Token: 0x040079EE RID: 31214
 	Normal,
-	// Token: 0x04007906 RID: 30982
+	// Token: 0x040079EF RID: 31215
 	SwitchGameServer,
-	// Token: 0x04007907 RID: 30983
+	// Token: 0x040079F0 RID: 31216
 	Gm
 }

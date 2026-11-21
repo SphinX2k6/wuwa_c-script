@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002B73 RID: 11123
+// Token: 0x020020EF RID: 8431
 public class SurvivorsExitViewParams : ISurvivorsExitViewParams
 {
-	// Token: 0x17001EBD RID: 7869
-	// (get) Token: 0x060170A0 RID: 94368 RVA: 0x005D995B File Offset: 0x005D7B5B
-	// (set) Token: 0x060170A1 RID: 94369 RVA: 0x005D9963 File Offset: 0x005D7B63
+	// Token: 0x17001F15 RID: 7957
+	// (get) Token: 0x06014AD1 RID: 84689 RVA: 0x006064CB File Offset: 0x006046CB
+	// (set) Token: 0x06014AD2 RID: 84690 RVA: 0x006064D3 File Offset: 0x006046D3
 	public bool IsExternal { get; set; }
 
-	// Token: 0x17001EBE RID: 7870
-	// (get) Token: 0x060170A2 RID: 94370 RVA: 0x005D996C File Offset: 0x005D7B6C
-	// (set) Token: 0x060170A3 RID: 94371 RVA: 0x005D9974 File Offset: 0x005D7B74
+	// Token: 0x17001F16 RID: 7958
+	// (get) Token: 0x06014AD3 RID: 84691 RVA: 0x006064DC File Offset: 0x006046DC
+	// (set) Token: 0x06014AD4 RID: 84692 RVA: 0x006064E4 File Offset: 0x006046E4
 	public int Batch { get; set; }
 
-	// Token: 0x17001EBF RID: 7871
-	// (get) Token: 0x060170A4 RID: 94372 RVA: 0x005D997D File Offset: 0x005D7B7D
-	// (set) Token: 0x060170A5 RID: 94373 RVA: 0x005D9985 File Offset: 0x005D7B85
+	// Token: 0x17001F17 RID: 7959
+	// (get) Token: 0x06014AD5 RID: 84693 RVA: 0x006064ED File Offset: 0x006046ED
+	// (set) Token: 0x06014AD6 RID: 84694 RVA: 0x006064F5 File Offset: 0x006046F5
 	public int MaxBatch { get; set; }
 }

@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070D1 RID: 28881
+	// Token: 0x02006335 RID: 25397
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhysicsAssetLoader
 	{
-		// Token: 0x0604678E RID: 288654 RVA: 0x011B2220 File Offset: 0x011B0420
+		// Token: 0x0603D88C RID: 252044 RVA: 0x011D13F8 File Offset: 0x011CF5F8
 		public bool SetDataAndLoadAsset([Nullable(2)] CharacterActorComponent actorComp, PhysicsAssetConfig config, Action callBack)
 		{
 			this.LoadSuccess = false;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604678F RID: 288655 RVA: 0x011B2321 File Offset: 0x011B0521
+		// Token: 0x0603D88D RID: 252045 RVA: 0x011D14F9 File Offset: 0x011CF6F9
 		public void ClearData()
 		{
 			this.BoneNames.Clear();
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.LoadSuccess = false;
 		}
 
-		// Token: 0x04024EFE RID: 151294
+		// Token: 0x04020A3D RID: 133693
 		public List<string> BoneNames = new List<string>();
 
-		// Token: 0x04024EFF RID: 151295
+		// Token: 0x04020A3E RID: 133694
 		public bool LoadSuccess;
 
-		// Token: 0x04024F00 RID: 151296
+		// Token: 0x04020A3F RID: 133695
 		[Nullable(2)]
 		public CharacterActorComponent ActorComp;
 	}

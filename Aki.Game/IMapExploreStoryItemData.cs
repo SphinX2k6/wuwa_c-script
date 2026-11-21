@@ -1,32 +1,32 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001AA8 RID: 6824
+// Token: 0x02000F67 RID: 3943
 [NullableContext(2)]
 public interface IMapExploreStoryItemData
 {
-	// Token: 0x170010A6 RID: 4262
-	// (get) Token: 0x0600CA1F RID: 51743
-	// (set) Token: 0x0600CA20 RID: 51744
+	// Token: 0x170010CB RID: 4299
+	// (get) Token: 0x06009E30 RID: 40496
+	// (set) Token: 0x06009E31 RID: 40497
 	bool IsOpen { get; set; }
 
-	// Token: 0x170010A7 RID: 4263
-	// (get) Token: 0x0600CA21 RID: 51745
-	// (set) Token: 0x0600CA22 RID: 51746
+	// Token: 0x170010CC RID: 4300
+	// (get) Token: 0x06009E32 RID: 40498
+	// (set) Token: 0x06009E33 RID: 40499
 	string StoryContent { get; set; }
 
-	// Token: 0x170010A8 RID: 4264
-	// (get) Token: 0x0600CA23 RID: 51747
-	// (set) Token: 0x0600CA24 RID: 51748
+	// Token: 0x170010CD RID: 4301
+	// (get) Token: 0x06009E34 RID: 40500
+	// (set) Token: 0x06009E35 RID: 40501
 	string StoryTitle { get; set; }
 
-	// Token: 0x170010A9 RID: 4265
-	// (get) Token: 0x0600CA25 RID: 51749
-	// (set) Token: 0x0600CA26 RID: 51750
+	// Token: 0x170010CE RID: 4302
+	// (get) Token: 0x06009E36 RID: 40502
+	// (set) Token: 0x06009E37 RID: 40503
 	string LockedDesc { get; set; }
 
-	// Token: 0x170010AA RID: 4266
-	// (get) Token: 0x0600CA27 RID: 51751
-	// (set) Token: 0x0600CA28 RID: 51752
+	// Token: 0x170010CF RID: 4303
+	// (get) Token: 0x06009E38 RID: 40504
+	// (set) Token: 0x06009E39 RID: 40505
 	bool? IsNewOpen { get; set; }
 }

@@ -12,13 +12,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CB7 RID: 7351
+// Token: 0x02001179 RID: 4473
 [NullableContext(1)]
 [Nullable(0)]
 public class KurotatoBossTrackedMarker : UiPanelBase
 {
-	// Token: 0x17001202 RID: 4610
-	// (get) Token: 0x0600DE13 RID: 56851 RVA: 0x0033E8A0 File Offset: 0x0033CAA0
+	// Token: 0x1700122C RID: 4652
+	// (get) Token: 0x0600B230 RID: 45616 RVA: 0x0034A2DC File Offset: 0x003484DC
 	protected int CurHp
 	{
 		get
@@ -33,8 +33,8 @@ public class KurotatoBossTrackedMarker : UiPanelBase
 		}
 	}
 
-	// Token: 0x17001203 RID: 4611
-	// (get) Token: 0x0600DE14 RID: 56852 RVA: 0x0033E8E8 File Offset: 0x0033CAE8
+	// Token: 0x1700122D RID: 4653
+	// (get) Token: 0x0600B231 RID: 45617 RVA: 0x0034A324 File Offset: 0x00348524
 	protected int MaxHp
 	{
 		get
@@ -50,7 +50,7 @@ public class KurotatoBossTrackedMarker : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE15 RID: 56853 RVA: 0x0033E940 File Offset: 0x0033CB40
+	// Token: 0x0600B232 RID: 45618 RVA: 0x0034A37C File Offset: 0x0034857C
 	public KurotatoBossTrackedMarker(int entityId)
 	{
 		this.TrackedEntityId = entityId;
@@ -64,7 +64,7 @@ public class KurotatoBossTrackedMarker : UiPanelBase
 		this.LimitB = Math.Min(712.5f, (((uiRootItem != null) ? uiRootItem.GetHeight() : 0f) - 495f) / 2f);
 	}
 
-	// Token: 0x0600DE16 RID: 56854 RVA: 0x0033EA3B File Offset: 0x0033CC3B
+	// Token: 0x0600B233 RID: 45619 RVA: 0x0034A477 File Offset: 0x00348677
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -74,7 +74,7 @@ public class KurotatoBossTrackedMarker : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DE17 RID: 56855 RVA: 0x0033EA74 File Offset: 0x0033CC74
+	// Token: 0x0600B234 RID: 45620 RVA: 0x0034A4B0 File Offset: 0x003486B0
 	protected override void OnStart()
 	{
 		this.DirectionArrow = base.GetItem(0);
@@ -90,7 +90,7 @@ public class KurotatoBossTrackedMarker : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x0600DE18 RID: 56856 RVA: 0x0033EAE0 File Offset: 0x0033CCE0
+	// Token: 0x0600B235 RID: 45621 RVA: 0x0034A51C File Offset: 0x0034871C
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
@@ -112,19 +112,19 @@ public class KurotatoBossTrackedMarker : UiPanelBase
 		animSequencePlayer2.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x0600DE19 RID: 56857 RVA: 0x0033EB4D File Offset: 0x0033CD4D
+	// Token: 0x0600B236 RID: 45622 RVA: 0x0034A589 File Offset: 0x00348789
 	protected override void OnBeforeShow()
 	{
 		this.TickEnabled = true;
 	}
 
-	// Token: 0x0600DE1A RID: 56858 RVA: 0x0033EB56 File Offset: 0x0033CD56
+	// Token: 0x0600B237 RID: 45623 RVA: 0x0034A592 File Offset: 0x00348792
 	protected override void OnBeforeHide()
 	{
 		this.TickEnabled = false;
 	}
 
-	// Token: 0x0600DE1B RID: 56859 RVA: 0x0033EB60 File Offset: 0x0033CD60
+	// Token: 0x0600B238 RID: 45624 RVA: 0x0034A59C File Offset: 0x0034879C
 	public UniTask CreateByPoolResourceIdAsync(string resourceId, [Nullable(2)] UUIItem parentItem = null)
 	{
 		KurotatoBossTrackedMarker.<CreateByPoolResourceIdAsync>d__39 <CreateByPoolResourceIdAsync>d__;
@@ -137,7 +137,7 @@ public class KurotatoBossTrackedMarker : UiPanelBase
 		return <CreateByPoolResourceIdAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DE1C RID: 56860 RVA: 0x0033EBB4 File Offset: 0x0033CDB4
+	// Token: 0x0600B239 RID: 45625 RVA: 0x0034A5F0 File Offset: 0x003487F0
 	private UniTask CreatePoolActorAsync(string resourceId, [Nullable(2)] UUIItem parentItem = null)
 	{
 		KurotatoBossTrackedMarker.<CreatePoolActorAsync>d__40 <CreatePoolActorAsync>d__;
@@ -150,13 +150,13 @@ public class KurotatoBossTrackedMarker : UiPanelBase
 		return <CreatePoolActorAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DE1D RID: 56861 RVA: 0x0033EC07 File Offset: 0x0033CE07
+	// Token: 0x0600B23A RID: 45626 RVA: 0x0034A643 File Offset: 0x00348843
 	public void Recycle()
 	{
 		UiActorPool.Instance.RecycleAsync(this.MarkerActor, this.ResourceId);
 	}
 
-	// Token: 0x0600DE1E RID: 56862 RVA: 0x0033EC20 File Offset: 0x0033CE20
+	// Token: 0x0600B23B RID: 45627 RVA: 0x0034A65C File Offset: 0x0034885C
 	public void DelayRecycle()
 	{
 		LevelSequencePlayer animSequencePlayer = this.AnimSequencePlayer;
@@ -180,7 +180,7 @@ public class KurotatoBossTrackedMarker : UiPanelBase
 		animSequencePlayer3.PlayOrReplaySequenceByName("Close", false, null);
 	}
 
-	// Token: 0x0600DE1F RID: 56863 RVA: 0x0033EC94 File Offset: 0x0033CE94
+	// Token: 0x0600B23C RID: 45628 RVA: 0x0034A6D0 File Offset: 0x003488D0
 	public void OnTick(float deltaTime)
 	{
 		if (!this.TickEnabled)
@@ -200,7 +200,7 @@ public class KurotatoBossTrackedMarker : UiPanelBase
 		this.TickHpBar(deltaTime);
 	}
 
-	// Token: 0x0600DE20 RID: 56864 RVA: 0x0033ECE0 File Offset: 0x0033CEE0
+	// Token: 0x0600B23D RID: 45629 RVA: 0x0034A71C File Offset: 0x0034891C
 	private void TickHpBar(float delta)
 	{
 		if (this.AttrMap == null)
@@ -274,14 +274,14 @@ public class KurotatoBossTrackedMarker : UiPanelBase
 		this.ApplyBarPercent(MathUtils.Instance.Lerp(this.SourceBarPercent, this.TargetBarPercent, alpha));
 	}
 
-	// Token: 0x0600DE21 RID: 56865 RVA: 0x0033EE37 File Offset: 0x0033D037
+	// Token: 0x0600B23E RID: 45630 RVA: 0x0034A873 File Offset: 0x00348A73
 	private void ApplyBarPercent(float percent)
 	{
 		this.CurrentBarPercent = percent;
 		this.TextureHpBar.SetFillAmount(percent);
 	}
 
-	// Token: 0x0600DE22 RID: 56866 RVA: 0x0033EE4C File Offset: 0x0033D04C
+	// Token: 0x0600B23F RID: 45631 RVA: 0x0034A888 File Offset: 0x00348A88
 	public void UpdateTargetPosition(FVector targetPosition)
 	{
 		TsCharacterController characterController = Global.CharacterController;
@@ -320,7 +320,7 @@ public class KurotatoBossTrackedMarker : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE23 RID: 56867 RVA: 0x0033F000 File Offset: 0x0033D200
+	// Token: 0x0600B240 RID: 45632 RVA: 0x0034AA3C File Offset: 0x00348C3C
 	protected bool ClampToEllipse(Vector2D vector, bool inFront)
 	{
 		double x = vector.X;
@@ -336,104 +336,104 @@ public class KurotatoBossTrackedMarker : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x040065D7 RID: 26071
+	// Token: 0x040066B6 RID: 26294
 	private const float MAX_A = 1176f;
 
-	// Token: 0x040065D8 RID: 26072
+	// Token: 0x040066B7 RID: 26295
 	private const float MARGIN_A = 1008f;
 
-	// Token: 0x040065D9 RID: 26073
+	// Token: 0x040066B8 RID: 26296
 	private const float MAX_B = 712.5f;
 
-	// Token: 0x040065DA RID: 26074
+	// Token: 0x040066B9 RID: 26297
 	private const float MARGIN_B = 495f;
 
-	// Token: 0x040065DB RID: 26075
+	// Token: 0x040066BA RID: 26298
 	private const float RAD_2_DEG = 57.295776f;
 
-	// Token: 0x040065DC RID: 26076
+	// Token: 0x040066BB RID: 26299
 	[Nullable(2)]
 	protected UUIItem DirectionArrow;
 
-	// Token: 0x040065DD RID: 26077
+	// Token: 0x040066BC RID: 26300
 	protected UUITexture TextureHpBar;
 
-	// Token: 0x040065DE RID: 26078
+	// Token: 0x040066BD RID: 26301
 	[Nullable(2)]
 	protected UiPoolActor MarkerActor;
 
-	// Token: 0x040065DF RID: 26079
+	// Token: 0x040066BE RID: 26302
 	[Nullable(2)]
 	protected string ResourceId;
 
-	// Token: 0x040065E0 RID: 26080
+	// Token: 0x040066BF RID: 26303
 	[Nullable(2)]
 	protected LevelSequencePlayer AnimSequencePlayer;
 
-	// Token: 0x040065E1 RID: 26081
+	// Token: 0x040066C0 RID: 26304
 	protected FVector2D ScreenPositionRef;
 
-	// Token: 0x040065E2 RID: 26082
+	// Token: 0x040066C1 RID: 26305
 	protected int TrackedEntityId;
 
-	// Token: 0x040065E3 RID: 26083
+	// Token: 0x040066C2 RID: 26306
 	[Nullable(2)]
 	protected KscEntityHandle TrackedEntity;
 
-	// Token: 0x040065E4 RID: 26084
+	// Token: 0x040066C3 RID: 26307
 	protected Vector2D ScreenPosition;
 
-	// Token: 0x040065E5 RID: 26085
+	// Token: 0x040066C4 RID: 26308
 	protected Vector2D LastScreenPosition;
 
-	// Token: 0x040065E6 RID: 26086
+	// Token: 0x040066C5 RID: 26309
 	protected readonly Vector2D PointTransport = new Vector2D(1.0, -1.0);
 
-	// Token: 0x040065E7 RID: 26087
+	// Token: 0x040066C6 RID: 26310
 	protected bool InRange;
 
-	// Token: 0x040065E8 RID: 26088
+	// Token: 0x040066C7 RID: 26311
 	protected Rotator TempRotator;
 
-	// Token: 0x040065E9 RID: 26089
+	// Token: 0x040066C8 RID: 26312
 	protected float LimitA;
 
-	// Token: 0x040065EA RID: 26090
+	// Token: 0x040066C9 RID: 26313
 	protected float LimitB;
 
-	// Token: 0x040065EB RID: 26091
+	// Token: 0x040066CA RID: 26314
 	protected bool TickEnabled;
 
-	// Token: 0x040065EC RID: 26092
+	// Token: 0x040066CB RID: 26315
 	[Nullable(2)]
 	protected TMap<EKSC_AttrType, int> AttrMap;
 
-	// Token: 0x040065ED RID: 26093
+	// Token: 0x040066CC RID: 26316
 	protected int LastValidMaxHp = -1;
 
-	// Token: 0x040065EE RID: 26094
+	// Token: 0x040066CD RID: 26317
 	protected float CurrentBarPercent = -1f;
 
-	// Token: 0x040065EF RID: 26095
+	// Token: 0x040066CE RID: 26318
 	protected float SourceBarPercent;
 
-	// Token: 0x040065F0 RID: 26096
+	// Token: 0x040066CF RID: 26319
 	protected float TargetBarPercent;
 
-	// Token: 0x040065F1 RID: 26097
+	// Token: 0x040066D0 RID: 26320
 	protected float HpBarLerpTime = -1f;
 
-	// Token: 0x040065F2 RID: 26098
+	// Token: 0x040066D1 RID: 26321
 	protected float HpBarLerpDuration;
 
-	// Token: 0x0200829E RID: 33438
+	// Token: 0x02007428 RID: 29736
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402A9BA RID: 174522
+		// Token: 0x04025CE5 RID: 154853
 		public const int DirectionArrow = 0;
 
-		// Token: 0x0402A9BB RID: 174523
+		// Token: 0x04025CE6 RID: 154854
 		public const int TextureHpBar = 1;
 	}
 }

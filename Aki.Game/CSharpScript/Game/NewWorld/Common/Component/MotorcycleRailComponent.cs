@@ -14,30 +14,30 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x02007088 RID: 28808
+	// Token: 0x02006209 RID: 25097
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleRailComponent : EntityComponent, IStaticVariableResetter
 	{
-		// Token: 0x060462A3 RID: 287395 RVA: 0x01187921 File Offset: 0x01185B21
+		// Token: 0x0603C4C7 RID: 246983 RVA: 0x01130E25 File Offset: 0x0112F025
 		static MotorcycleRailComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleRailComponent.CreateStaticDefaultValue), new Action(MotorcycleRailComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060462A4 RID: 287396 RVA: 0x0118794A File Offset: 0x01185B4A
+		// Token: 0x0603C4C8 RID: 246984 RVA: 0x01130E4E File Offset: 0x0112F04E
 		public static void CreateStaticDefaultValue()
 		{
 			MotorcycleRailComponent.AllRailsThatPlayerInRange.Clear();
 		}
 
-		// Token: 0x060462A5 RID: 287397 RVA: 0x01187956 File Offset: 0x01185B56
+		// Token: 0x0603C4C9 RID: 246985 RVA: 0x01130E5A File Offset: 0x0112F05A
 		public static void ResetStaticDefaultValue()
 		{
 			MotorcycleRailComponent.AllRailsThatPlayerInRange.Clear();
 		}
 
-		// Token: 0x060462A6 RID: 287398 RVA: 0x01187964 File Offset: 0x01185B64
+		// Token: 0x0603C4CA RID: 246986 RVA: 0x01130E68 File Offset: 0x0112F068
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x060462A7 RID: 287399 RVA: 0x011879D8 File Offset: 0x01185BD8
+		// Token: 0x0603C4CB RID: 246987 RVA: 0x01130EDC File Offset: 0x0112F0DC
 		protected override bool OnInit()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x060462A8 RID: 287400 RVA: 0x01187A8C File Offset: 0x01185C8C
+		// Token: 0x0603C4CC RID: 246988 RVA: 0x01130F90 File Offset: 0x0112F190
 		protected override bool OnStart()
 		{
 			if (base.Entity.GetComponent<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>() != null && !EventSystem.Instance.HasWithTarget<bool>(base.Entity, EEventName.OnMyPlayerInOutRangeLocal, new Action<bool>(this.OnPlayerInOutCheckingRange)))
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x060462A9 RID: 287401 RVA: 0x01187B42 File Offset: 0x01185D42
+		// Token: 0x0603C4CD RID: 246989 RVA: 0x01131046 File Offset: 0x0112F246
 		protected override void OnActivate()
 		{
 			if (base.Entity.GetComponent<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>() == null)
@@ -104,14 +104,14 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462AA RID: 287402 RVA: 0x01187B58 File Offset: 0x01185D58
+		// Token: 0x0603C4CE RID: 246990 RVA: 0x0113105C File Offset: 0x0112F25C
 		protected override bool OnEnd()
 		{
 			this.OnSelfEntityRemove();
 			return true;
 		}
 
-		// Token: 0x060462AB RID: 287403 RVA: 0x01187B61 File Offset: 0x01185D61
+		// Token: 0x0603C4CF RID: 246991 RVA: 0x01131065 File Offset: 0x0112F265
 		private void OnPlayerInOutCheckingRange(bool isEnter)
 		{
 			if (this.IsPlayerInCheckingRange == isEnter)
@@ -127,13 +127,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			MotorcycleRailComponent.AllRailsThatPlayerInRange.Remove(this);
 		}
 
-		// Token: 0x060462AC RID: 287404 RVA: 0x01187B90 File Offset: 0x01185D90
+		// Token: 0x0603C4D0 RID: 246992 RVA: 0x01131094 File Offset: 0x0112F294
 		private void OnSelfEntityRemove(ERemoveEntityType _1, EntityHandle _2)
 		{
 			this.OnSelfEntityRemove();
 		}
 
-		// Token: 0x060462AD RID: 287405 RVA: 0x01187B98 File Offset: 0x01185D98
+		// Token: 0x0603C4D1 RID: 246993 RVA: 0x0113109C File Offset: 0x0112F29C
 		private void OnSelfEntityRemove()
 		{
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462AE RID: 287406 RVA: 0x01187BEC File Offset: 0x01185DEC
+		// Token: 0x0603C4D2 RID: 246994 RVA: 0x011310F0 File Offset: 0x0112F2F0
 		private void InitEnterRailCheckerList()
 		{
 			this.EnterRailCheckerList.Clear();
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.JumpAlongRailCheckList.Add(MotorcycleRailMoveUtils.Instance.RailMoveCheckerCheckRailLenLeft);
 		}
 
-		// Token: 0x060462AF RID: 287407 RVA: 0x01187D9C File Offset: 0x01185F9C
+		// Token: 0x0603C4D3 RID: 246995 RVA: 0x011312A0 File Offset: 0x0112F4A0
 		public bool GetIsRailEnable()
 		{
 			USplineComponent splineComp = this.SplineComp;
@@ -198,13 +198,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x060462B0 RID: 287408 RVA: 0x01187E50 File Offset: 0x01186050
+		// Token: 0x0603C4D4 RID: 246996 RVA: 0x01131354 File Offset: 0x0112F554
 		public bool CheckIsRailCanJumpEnter(TRailMoveGetter vehicleMoveGetter)
 		{
 			return this.CheckIsRailCanJumpEnterAtDirection(vehicleMoveGetter, true, null) || this.CheckIsRailCanJumpEnterAtDirection(vehicleMoveGetter, false, null);
 		}
 
-		// Token: 0x060462B1 RID: 287409 RVA: 0x01187E68 File Offset: 0x01186068
+		// Token: 0x0603C4D5 RID: 246997 RVA: 0x0113136C File Offset: 0x0112F56C
 		public bool CheckIsRailCanJumpEnterAtDirection(TRailMoveGetter vehicleMoveGetter, bool isForward, [Nullable(2)] RailMoveContext outRailMoveContext = null)
 		{
 			USplineComponent splineComp = this.SplineComp;
@@ -259,13 +259,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x060462B2 RID: 287410 RVA: 0x01187F9D File Offset: 0x0118619D
+		// Token: 0x0603C4D6 RID: 246998 RVA: 0x011314A1 File Offset: 0x0112F6A1
 		public bool CheckIsRailCanDirectlyEnter(TRailMoveGetter vehicleMoveGetter)
 		{
 			return this.CheckIsRailCanDirectlyEnterAtDirection(vehicleMoveGetter, true, null) || this.CheckIsRailCanDirectlyEnterAtDirection(vehicleMoveGetter, false, null);
 		}
 
-		// Token: 0x060462B3 RID: 287411 RVA: 0x01187FB8 File Offset: 0x011861B8
+		// Token: 0x0603C4D7 RID: 246999 RVA: 0x011314BC File Offset: 0x0112F6BC
 		public bool CheckIsRailCanDirectlyEnterAtDirection(TRailMoveGetter vehicleMoveGetter, bool isForward, [Nullable(2)] RailMoveContext outRailMoveContext = null)
 		{
 			USplineComponent splineComp = this.SplineComp;
@@ -324,13 +324,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x060462B4 RID: 287412 RVA: 0x011880FF File Offset: 0x011862FF
+		// Token: 0x0603C4D8 RID: 247000 RVA: 0x01131603 File Offset: 0x0112F803
 		public bool CheckIsRailCanSwitch(TRailMoveGetter vehicleMoveGetter)
 		{
 			return this.CheckIsRailCanSwitchAtDirection(vehicleMoveGetter, true, null) || this.CheckIsRailCanSwitchAtDirection(vehicleMoveGetter, false, null);
 		}
 
-		// Token: 0x060462B5 RID: 287413 RVA: 0x01188118 File Offset: 0x01186318
+		// Token: 0x0603C4D9 RID: 247001 RVA: 0x0113161C File Offset: 0x0112F81C
 		public bool CheckIsRailCanSwitchAtDirection(TRailMoveGetter vehicleMoveGetter, bool isForward, [Nullable(2)] RailMoveContext outRailMoveContext = null)
 		{
 			USplineComponent splineComp = this.SplineComp;
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x060462B6 RID: 287414 RVA: 0x0118825C File Offset: 0x0118645C
+		// Token: 0x0603C4DA RID: 247002 RVA: 0x01131760 File Offset: 0x0112F960
 		public bool CheckIsRailCanJumpAlongAtDirection(TRailMoveGetter vehicleMoveGetter, MotorcycleRailMoveDataBase currentRailMoveData, [Nullable(2)] RailMoveContext outRailMoveContext = null)
 		{
 			USplineComponent splineComp = this.SplineComp;
@@ -452,7 +452,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x060462B7 RID: 287415 RVA: 0x011883BC File Offset: 0x011865BC
+		// Token: 0x0603C4DB RID: 247003 RVA: 0x011318C0 File Offset: 0x0112FAC0
 		public double GetDistanceToRail(TRailMoveGetter targetMoveGetter)
 		{
 			USplineComponent splineComp = this.SplineComp;
@@ -467,7 +467,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return -1.0;
 		}
 
-		// Token: 0x060462B8 RID: 287416 RVA: 0x01188414 File Offset: 0x01186614
+		// Token: 0x0603C4DC RID: 247004 RVA: 0x01131918 File Offset: 0x0112FB18
 		public EMotorcycleSide? GetRelativeSideOfTarget(TRailMoveGetter vehicleMoveGetter)
 		{
 			USplineComponent splineComp = this.SplineComp;
@@ -482,7 +482,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return null;
 		}
 
-		// Token: 0x060462B9 RID: 287417 RVA: 0x0118846A File Offset: 0x0118666A
+		// Token: 0x0603C4DD RID: 247005 RVA: 0x0113196E File Offset: 0x0112FB6E
 		[NullableContext(2)]
 		public USplineComponent GetRailSplineComp()
 		{
@@ -498,7 +498,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return null;
 		}
 
-		// Token: 0x060462BA RID: 287418 RVA: 0x011884A4 File Offset: 0x011866A4
+		// Token: 0x0603C4DE RID: 247006 RVA: 0x011319A8 File Offset: 0x0112FBA8
 		[NullableContext(2)]
 		public SplineCurve GetRailSplineCurve()
 		{
@@ -521,7 +521,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return null;
 		}
 
-		// Token: 0x060462BB RID: 287419 RVA: 0x0118857B File Offset: 0x0118677B
+		// Token: 0x0603C4DF RID: 247007 RVA: 0x01131A7F File Offset: 0x0112FC7F
 		public int GetRailSplineId()
 		{
 			if (this.CreatureDataComp == null)
@@ -531,7 +531,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return this.CreatureDataComp.GetPbDataId();
 		}
 
-		// Token: 0x060462BC RID: 287420 RVA: 0x01188592 File Offset: 0x01186792
+		// Token: 0x0603C4E0 RID: 247008 RVA: 0x01131A96 File Offset: 0x0112FC96
 		public long GetRailCreatureDataId()
 		{
 			if (this.CreatureDataComp == null)
@@ -541,7 +541,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return this.CreatureDataComp.GetCreatureDataId();
 		}
 
-		// Token: 0x060462BD RID: 287421 RVA: 0x011885AA File Offset: 0x011867AA
+		// Token: 0x0603C4E1 RID: 247009 RVA: 0x01131AAE File Offset: 0x0112FCAE
 		[NullableContext(2)]
 		public ISplineType GetRailSplineData()
 		{
@@ -557,7 +557,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return null;
 		}
 
-		// Token: 0x060462BE RID: 287422 RVA: 0x011885E8 File Offset: 0x011867E8
+		// Token: 0x0603C4E2 RID: 247010 RVA: 0x01131AEC File Offset: 0x0112FCEC
 		public ESplineType? GetRailSplineType()
 		{
 			USplineComponent splineComp = this.SplineComp;
@@ -577,20 +577,20 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return null;
 		}
 
-		// Token: 0x060462BF RID: 287423 RVA: 0x01188650 File Offset: 0x01186850
+		// Token: 0x0603C4E3 RID: 247011 RVA: 0x01131B54 File Offset: 0x0112FD54
 		public string GetRailMoveConfigRowName()
 		{
 			return this.OverrideRailMoveConfigRowName;
 		}
 
-		// Token: 0x060462C0 RID: 287424 RVA: 0x01188658 File Offset: 0x01186858
+		// Token: 0x0603C4E4 RID: 247012 RVA: 0x01131B5C File Offset: 0x0112FD5C
 		[NullableContext(2)]
 		public MotorcycleRailMoveConfig GetRailMoveConfig()
 		{
 			return this.MotorcycleRailMoveConfig;
 		}
 
-		// Token: 0x060462C1 RID: 287425 RVA: 0x01188660 File Offset: 0x01186860
+		// Token: 0x0603C4E5 RID: 247013 RVA: 0x01131B64 File Offset: 0x0112FD64
 		public void InitRailMoveConfig([Nullable(new byte[]
 		{
 			1,
@@ -610,13 +610,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462C2 RID: 287426 RVA: 0x011886E4 File Offset: 0x011868E4
+		// Token: 0x0603C4E6 RID: 247014 RVA: 0x01131BE8 File Offset: 0x0112FDE8
 		private bool RailMoveCheckerCheckIsPlayerInRange(RailMoveContext checkRailMoveContext, [Nullable(2)] EnterRailCondition enterRailCondition = null)
 		{
 			return this.IsPlayerInCheckingRange && MotorcycleRailComponent.AllRailsThatPlayerInRange.Contains(this);
 		}
 
-		// Token: 0x060462C3 RID: 287427 RVA: 0x011886FC File Offset: 0x011868FC
+		// Token: 0x0603C4E7 RID: 247015 RVA: 0x01131C00 File Offset: 0x0112FE00
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -624,172 +624,179 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			MotorcycleRailComponent motorcycleRailComponent = (MotorcycleRailComponent)componentTemplate;
-			if (base.CanResetComponentProperty("IsPlayerInCheckingRange"))
+			this.IsPlayerInCheckingRange = motorcycleRailComponent.IsPlayerInCheckingRange;
+			if (motorcycleRailComponent.SplineComp == null)
 			{
-				this.IsPlayerInCheckingRange = motorcycleRailComponent.IsPlayerInCheckingRange;
+				this.SplineComp = null;
 			}
-			if (base.CanResetComponentProperty("SplineComp"))
-			{
-				if (motorcycleRailComponent.SplineComp == null)
-				{
-					this.SplineComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USplineComponent>(this.SplineComp), "SplineComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SplineActor"))
-			{
-				if (motorcycleRailComponent.SplineActor == null)
-				{
-					this.SplineActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsGameSplineActor>(this.SplineActor), "SplineActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SplineCurve"))
-			{
-				if (motorcycleRailComponent.SplineCurve == null)
-				{
-					this.SplineCurve = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SplineCurve>(this.SplineCurve), "SplineCurve"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (motorcycleRailComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (motorcycleRailComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ConditionsGroupForEnable"))
-			{
-				if (motorcycleRailComponent.ConditionsGroupForEnable == null)
-				{
-					this.ConditionsGroupForEnable = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IConditionGroup>(this.ConditionsGroupForEnable), "ConditionsGroupForEnable"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("OverrideMaxAngleBetweenVehicleForwardAndRailTangent"))
-			{
-				this.OverrideMaxAngleBetweenVehicleForwardAndRailTangent = motorcycleRailComponent.OverrideMaxAngleBetweenVehicleForwardAndRailTangent;
-			}
-			if (base.CanResetComponentProperty("OverrideRailMoveConfigRowName"))
-			{
-				this.OverrideRailMoveConfigRowName = motorcycleRailComponent.OverrideRailMoveConfigRowName;
-			}
-			if (base.CanResetComponentProperty("MotorcycleRailMoveConfig"))
-			{
-				if (motorcycleRailComponent.MotorcycleRailMoveConfig == null)
-				{
-					this.MotorcycleRailMoveConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleRailMoveConfig>(this.MotorcycleRailMoveConfig), "MotorcycleRailMoveConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("EnterRailCheckerList") && motorcycleRailComponent.EnterRailCheckerList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<TRailMoveChecker>>(this.EnterRailCheckerList), "EnterRailCheckerList"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineComp), "SplineComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("SwitchRailCheckList") && motorcycleRailComponent.SwitchRailCheckList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<TRailMoveChecker>>(this.SwitchRailCheckList), "SwitchRailCheckList"))
+			if (motorcycleRailComponent.SplineActor == null)
+			{
+				this.SplineActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineActor), "SplineActor"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("JumpAlongRailCheckList") && motorcycleRailComponent.JumpAlongRailCheckList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<TRailMoveChecker>>(this.JumpAlongRailCheckList), "JumpAlongRailCheckList"))
+			if (motorcycleRailComponent.SplineCurve == null)
+			{
+				this.SplineCurve = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineCurve), "SplineCurve"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpRailMoveContext"))
+			if (motorcycleRailComponent.CreatureDataComp == null)
 			{
-				if (motorcycleRailComponent.TmpRailMoveContext == null)
-				{
-					this.TmpRailMoveContext = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RailMoveContext>(this.TmpRailMoveContext), "TmpRailMoveContext"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
+			{
+				return false;
+			}
+			if (motorcycleRailComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
+			{
+				return false;
+			}
+			if (motorcycleRailComponent.ConditionsGroupForEnable == null)
+			{
+				this.ConditionsGroupForEnable = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConditionsGroupForEnable), "ConditionsGroupForEnable"))
+			{
+				return false;
+			}
+			this.OverrideMaxAngleBetweenVehicleForwardAndRailTangent = motorcycleRailComponent.OverrideMaxAngleBetweenVehicleForwardAndRailTangent;
+			this.OverrideRailMoveConfigRowName = motorcycleRailComponent.OverrideRailMoveConfigRowName;
+			if (motorcycleRailComponent.MotorcycleRailMoveConfig == null)
+			{
+				this.MotorcycleRailMoveConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MotorcycleRailMoveConfig), "MotorcycleRailMoveConfig"))
+			{
+				return false;
+			}
+			if (motorcycleRailComponent.EnterRailCheckerList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EnterRailCheckerList), "EnterRailCheckerList"))
+			{
+				return false;
+			}
+			if (motorcycleRailComponent.SwitchRailCheckList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SwitchRailCheckList), "SwitchRailCheckList"))
+			{
+				return false;
+			}
+			if (motorcycleRailComponent.JumpAlongRailCheckList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.JumpAlongRailCheckList), "JumpAlongRailCheckList"))
+			{
+				return false;
+			}
+			if (motorcycleRailComponent.TmpRailMoveContext == null)
+			{
+				this.TmpRailMoveContext = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRailMoveContext), "TmpRailMoveContext"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024C10 RID: 150544
+		// Token: 0x170071CF RID: 29135
+		// (get) Token: 0x0603C4E8 RID: 247016 RVA: 0x01131E02 File Offset: 0x01130002
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071D0 RID: 29136
+		// (get) Token: 0x0603C4E9 RID: 247017 RVA: 0x01131E05 File Offset: 0x01130005
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071D1 RID: 29137
+		// (get) Token: 0x0603C4EA RID: 247018 RVA: 0x01131E08 File Offset: 0x01130008
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071D2 RID: 29138
+		// (get) Token: 0x0603C4EB RID: 247019 RVA: 0x01131E0B File Offset: 0x0113000B
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FECB RID: 130763
 		[StaticVariableRuleIgnore]
 		public static HashSet<MotorcycleRailComponent> AllRailsThatPlayerInRange = new HashSet<MotorcycleRailComponent>();
 
-		// Token: 0x04024C11 RID: 150545
+		// Token: 0x0401FECC RID: 130764
 		private bool IsPlayerInCheckingRange;
 
-		// Token: 0x04024C12 RID: 150546
+		// Token: 0x0401FECD RID: 130765
 		[Nullable(2)]
 		private USplineComponent SplineComp;
 
-		// Token: 0x04024C13 RID: 150547
+		// Token: 0x0401FECE RID: 130766
 		[Nullable(2)]
 		private TsGameSplineActor SplineActor;
 
-		// Token: 0x04024C14 RID: 150548
+		// Token: 0x0401FECF RID: 130767
 		[Nullable(2)]
 		private SplineCurve SplineCurve;
 
-		// Token: 0x04024C15 RID: 150549
+		// Token: 0x0401FED0 RID: 130768
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04024C16 RID: 150550
+		// Token: 0x0401FED1 RID: 130769
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04024C17 RID: 150551
+		// Token: 0x0401FED2 RID: 130770
 		[Nullable(2)]
 		private IConditionGroup ConditionsGroupForEnable;
 
-		// Token: 0x04024C18 RID: 150552
+		// Token: 0x0401FED3 RID: 130771
 		private float? OverrideMaxAngleBetweenVehicleForwardAndRailTangent;
 
-		// Token: 0x04024C19 RID: 150553
+		// Token: 0x0401FED4 RID: 130772
 		private string OverrideRailMoveConfigRowName = "Default";
 
-		// Token: 0x04024C1A RID: 150554
+		// Token: 0x0401FED5 RID: 130773
 		[Nullable(2)]
 		private MotorcycleRailMoveConfig MotorcycleRailMoveConfig;
 
-		// Token: 0x04024C1B RID: 150555
+		// Token: 0x0401FED6 RID: 130774
 		private readonly List<TRailMoveChecker> EnterRailCheckerList = new List<TRailMoveChecker>();
 
-		// Token: 0x04024C1C RID: 150556
+		// Token: 0x0401FED7 RID: 130775
 		private readonly List<TRailMoveChecker> SwitchRailCheckList = new List<TRailMoveChecker>();
 
-		// Token: 0x04024C1D RID: 150557
+		// Token: 0x0401FED8 RID: 130776
 		private readonly List<TRailMoveChecker> JumpAlongRailCheckList = new List<TRailMoveChecker>();
 
-		// Token: 0x04024C1E RID: 150558
+		// Token: 0x0401FED9 RID: 130777
 		[Nullable(2)]
 		private RailMoveContext TmpRailMoveContext;
 	}

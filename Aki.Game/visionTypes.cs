@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.Vision;
 
-// Token: 0x020031A4 RID: 12708
+// Token: 0x02002713 RID: 10003
 public static class visionTypes
 {
-	// Token: 0x0400D682 RID: 54914
+	// Token: 0x0400DB08 RID: 56072
 	[Nullable(new byte[]
 	{
 		1,

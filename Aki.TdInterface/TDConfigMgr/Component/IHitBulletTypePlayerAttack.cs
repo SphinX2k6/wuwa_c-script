@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000418 RID: 1048
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000471 RID: 1137
 	public class IHitBulletTypePlayerAttack : IHitBulletType
 	{
-		// Token: 0x06001523 RID: 5411 RVA: 0x00042954 File Offset: 0x00040B54
+		// Token: 0x060016BD RID: 5821 RVA: 0x0004669C File Offset: 0x0004489C
 		private IHitBulletTypePlayerAttack_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001524 RID: 5412 RVA: 0x0004298C File Offset: 0x00040B8C
+		// Token: 0x060016BE RID: 5822 RVA: 0x000466D4 File Offset: 0x000448D4
 		public static IHitBulletTypePlayerAttack Create([Nullable(2)] IHitBulletTypePlayerAttack instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001525 RID: 5413 RVA: 0x0004299F File Offset: 0x00040B9F
+		// Token: 0x060016BF RID: 5823 RVA: 0x000466E7 File Offset: 0x000448E7
 		public static IHitBulletTypePlayerAttack CreateFromSetValue([Nullable(2)] IHitBulletTypePlayerAttack_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001526 RID: 5414 RVA: 0x000429B2 File Offset: 0x00040BB2
+		// Token: 0x060016C0 RID: 5824 RVA: 0x000466FA File Offset: 0x000448FA
 		public new IHitBulletTypePlayerAttack_SetValue ToSetValue()
 		{
 			return new IHitBulletTypePlayerAttack_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005CB RID: 1483
-		// (get) Token: 0x06001527 RID: 5415 RVA: 0x000429C5 File Offset: 0x00040BC5
-		// (set) Token: 0x06001528 RID: 5416 RVA: 0x000429F0 File Offset: 0x00040BF0
+		// Token: 0x17000632 RID: 1586
+		// (get) Token: 0x060016C1 RID: 5825 RVA: 0x0004670D File Offset: 0x0004490D
+		// (set) Token: 0x060016C2 RID: 5826 RVA: 0x00046738 File Offset: 0x00044938
 		public override EHitBulletType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400106A RID: 4202
+		// Token: 0x0400118C RID: 4492
 		[Nullable(2)]
 		protected new IHitBulletTypePlayerAttack FbInstance;
 
-		// Token: 0x0400106B RID: 4203
+		// Token: 0x0400118D RID: 4493
 		[Nullable(2)]
 		protected new IHitBulletTypePlayerAttack_SetValue PocoInterface;
 	}

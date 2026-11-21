@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Map;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x0200148B RID: 5259
+// Token: 0x0200093F RID: 2367
 [NullableContext(1)]
 [Nullable(0)]
 public static class ActivityRegressHelper
 {
-	// Token: 0x060094F6 RID: 38134 RVA: 0x00201F6C File Offset: 0x0020016C
+	// Token: 0x0600688B RID: 26763 RVA: 0x0020AED4 File Offset: 0x002090D4
 	[NullableContext(0)]
 	public static void RefreshItemGrid([Nullable(1)] SmallItemGrid itemGrid, ItemInfo itemInfo, int itemCount, [TupleElementNames(new string[]
 	{
@@ -72,7 +72,7 @@ public static class ActivityRegressHelper
 		itemGrid.Apply<PhantomSmallItemGrid>(parameters3);
 	}
 
-	// Token: 0x060094F7 RID: 38135 RVA: 0x00202124 File Offset: 0x00200324
+	// Token: 0x0600688C RID: 26764 RVA: 0x0020B08C File Offset: 0x0020928C
 	public static void RefreshItemGridByData(SmallItemGrid itemGrid, IRegressRewardItemInfo data)
 	{
 		ItemInfo? itemInfo = data.ItemInfo;
@@ -83,19 +83,19 @@ public static class ActivityRegressHelper
 		ActivityRegressHelper.RefreshItemGrid(itemGrid, itemInfo.Value, itemCount, new ValueTuple<bool, bool, bool>(item, item2, item3));
 	}
 
-	// Token: 0x060094F8 RID: 38136 RVA: 0x0020217A File Offset: 0x0020037A
+	// Token: 0x0600688D RID: 26765 RVA: 0x0020B0E2 File Offset: 0x002092E2
 	public static void ReportRecallLog1023(EReportLogEventType eventType)
 	{
 		ActivityRegressHelper.ReportLog("1023", eventType, 0);
 	}
 
-	// Token: 0x060094F9 RID: 38137 RVA: 0x00202188 File Offset: 0x00200388
+	// Token: 0x0600688E RID: 26766 RVA: 0x0020B0F0 File Offset: 0x002092F0
 	public static void ReportRecallLog1024(EReportLogEventType eventType, int questId = 0)
 	{
 		ActivityRegressHelper.ReportLog("1024", eventType, questId);
 	}
 
-	// Token: 0x060094FA RID: 38138 RVA: 0x00202198 File Offset: 0x00200398
+	// Token: 0x0600688F RID: 26767 RVA: 0x0020B100 File Offset: 0x00209300
 	private static void ReportLog(string eventId, EReportLogEventType eventType, int questId = 0)
 	{
 		ActivityRegressData activityData = ActivityRegressModel.Instance.ActivityData;
@@ -112,19 +112,19 @@ public static class ActivityRegressHelper
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x060094FB RID: 38139 RVA: 0x0020220B File Offset: 0x0020040B
+	// Token: 0x06006890 RID: 26768 RVA: 0x0020B173 File Offset: 0x00209373
 	public static void ReportRecallLog1023New(EReportLogEventNewType eventType)
 	{
 		ActivityRegressHelper.ReportLogNew("1023", eventType, 0, 0);
 	}
 
-	// Token: 0x060094FC RID: 38140 RVA: 0x0020221A File Offset: 0x0020041A
+	// Token: 0x06006891 RID: 26769 RVA: 0x0020B182 File Offset: 0x00209382
 	public static void ReportRecallLog1024New(EReportLogEventNewType eventType, int questId = 0, int doubleDropType = 0)
 	{
 		ActivityRegressHelper.ReportLogNew("1024", eventType, questId, doubleDropType);
 	}
 
-	// Token: 0x060094FD RID: 38141 RVA: 0x0020222C File Offset: 0x0020042C
+	// Token: 0x06006892 RID: 26770 RVA: 0x0020B194 File Offset: 0x00209394
 	private static void ReportLogNew(string eventId, EReportLogEventNewType eventType, int questId = 0, int doubleDropType = 0)
 	{
 		ActivityRegressData activityData = ActivityRegressModel.Instance.ActivityData;
@@ -142,19 +142,19 @@ public static class ActivityRegressHelper
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x060094FE RID: 38142 RVA: 0x002022A6 File Offset: 0x002004A6
+	// Token: 0x06006893 RID: 26771 RVA: 0x0020B20E File Offset: 0x0020940E
 	public static void ReportRegressLog1060()
 	{
 		ActivityRegressHelper.ReportRegressLog("1060", 0);
 	}
 
-	// Token: 0x060094FF RID: 38143 RVA: 0x002022B3 File Offset: 0x002004B3
+	// Token: 0x06006894 RID: 26772 RVA: 0x0020B21B File Offset: 0x0020941B
 	public static void ReportRegressLog1061(int questionnaireId)
 	{
 		ActivityRegressHelper.ReportRegressLog("1061", questionnaireId);
 	}
 
-	// Token: 0x06009500 RID: 38144 RVA: 0x002022C0 File Offset: 0x002004C0
+	// Token: 0x06006895 RID: 26773 RVA: 0x0020B228 File Offset: 0x00209428
 	private static void ReportRegressLog(string eventId, int questionnaireId = 0)
 	{
 		ActivityRegressLogData logData = new ActivityRegressLogData
@@ -167,7 +167,7 @@ public static class ActivityRegressHelper
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x06009501 RID: 38145 RVA: 0x0020230C File Offset: 0x0020050C
+	// Token: 0x06006896 RID: 26774 RVA: 0x0020B274 File Offset: 0x00209474
 	public static Area? GetMinExploreAreaInfo()
 	{
 		Dictionary<int, bool> allUnlockedAreas = MapModel.Instance.GetAllUnlockedAreas();

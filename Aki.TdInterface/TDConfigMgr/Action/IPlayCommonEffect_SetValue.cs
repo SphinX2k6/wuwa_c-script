@@ -1,26 +1,23 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CFB RID: 7419
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F08 RID: 7944
 	public class IPlayCommonEffect_SetValue
 	{
-		// Token: 0x04006020 RID: 24608
+		// Token: 0x04006590 RID: 26000
 		public EEffectType Type;
 
-		// Token: 0x04006021 RID: 24609
+		// Token: 0x04006591 RID: 26001
 		public string Path;
 
-		// Token: 0x04006022 RID: 24610
+		// Token: 0x04006592 RID: 26002
 		public IBasePos2 Pos2;
 
-		// Token: 0x04006023 RID: 24611
+		// Token: 0x04006593 RID: 26003
 		public float? DestroyTime;
 
-		// Token: 0x04006024 RID: 24612
+		// Token: 0x04006594 RID: 26004
 		public bool? PlayEffectEnd;
 	}
 }

@@ -10,13 +10,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Common.InputView.Controller
 {
-	// Token: 0x02005B83 RID: 23427
+	// Token: 0x02004B63 RID: 19299
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class CommonInputViewController : UiControllerBase
 	{
-		// Token: 0x0603B462 RID: 242786 RVA: 0x00E208A0 File Offset: 0x00E1EAA0
+		// Token: 0x060303AF RID: 197551 RVA: 0x00D70E14 File Offset: 0x00D6F014
 		public void OpenSetRoleNameInputView()
 		{
 			string playerName = FunctionModel.Instance.GetPlayerName();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Common.InputView.Controller
 			UiManager.Instance.OpenView(EUiViewName.CommonModifyNameInputView, param, null);
 		}
 
-		// Token: 0x0603B463 RID: 242787 RVA: 0x00E20944 File Offset: 0x00E1EB44
+		// Token: 0x060303B0 RID: 197552 RVA: 0x00D70EB8 File Offset: 0x00D6F0B8
 		public void OpenSetPlayerRemarkNameInputView()
 		{
 			Func<string, UniTask<Aki.Protocol.ErrorCode>> confirmFunc = delegate([Nullable(1)] string input)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Common.InputView.Controller
 			UiManager.Instance.OpenView(EUiViewName.CommonSingleInputView, param, null);
 		}
 
-		// Token: 0x0603B464 RID: 242788 RVA: 0x00E20A4C File Offset: 0x00E1EC4C
+		// Token: 0x060303B1 RID: 197553 RVA: 0x00D70FC0 File Offset: 0x00D6F1C0
 		public void OpenPersonalSignInputView()
 		{
 			string signature = PersonalModel.Instance.GetSignature();
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Common.InputView.Controller
 			UiManager.Instance.OpenView(EUiViewName.CommonMultiInputView, param, null);
 		}
 
-		// Token: 0x0603B465 RID: 242789 RVA: 0x00E20AF4 File Offset: 0x00E1ECF4
+		// Token: 0x060303B2 RID: 197554 RVA: 0x00D71068 File Offset: 0x00D6F268
 		public void OpenCdKeyInputView()
 		{
 			Func<string, UniTask<Aki.Protocol.ErrorCode>> confirmFunc = delegate([Nullable(1)] string input)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Common.InputView.Controller
 			UiManager.Instance.OpenView(EUiViewName.CdKeyInputView, param, null);
 		}
 
-		// Token: 0x0603B466 RID: 242790 RVA: 0x00E20BA0 File Offset: 0x00E1EDA0
+		// Token: 0x060303B3 RID: 197555 RVA: 0x00D71114 File Offset: 0x00D6F314
 		public void OpenSetVisionEquipGroupName(string bottomText, [Nullable(new byte[]
 		{
 			1,
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Common.InputView.Controller
 			UiManager.Instance.OpenView(EUiViewName.VisionAssembleInputView, param, null);
 		}
 
-		// Token: 0x0603B467 RID: 242791 RVA: 0x00E20C3C File Offset: 0x00E1EE3C
+		// Token: 0x060303B4 RID: 197556 RVA: 0x00D711B0 File Offset: 0x00D6F3B0
 		public void OpenChangeVisionEquipGroupName(string bottomText, [Nullable(new byte[]
 		{
 			1,
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Common.InputView.Controller
 			UiManager.Instance.OpenView(EUiViewName.CommonSingleInputView, param, null);
 		}
 
-		// Token: 0x0603B468 RID: 242792 RVA: 0x00E20CD0 File Offset: 0x00E1EED0
+		// Token: 0x060303B5 RID: 197557 RVA: 0x00D71244 File Offset: 0x00D6F444
 		public void OpenSetPhantomArenaDeckName(string bottomText, [Nullable(new byte[]
 		{
 			1,
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Common.InputView.Controller
 			UiManager.Instance.OpenView(EUiViewName.DeckRenameInputView, param, null);
 		}
 
-		// Token: 0x0603B469 RID: 242793 RVA: 0x00E20D6C File Offset: 0x00E1EF6C
+		// Token: 0x060303B6 RID: 197558 RVA: 0x00D712E0 File Offset: 0x00D6F4E0
 		public void OpenSetPhantomManageConfigName(string inputText, [Nullable(new byte[]
 		{
 			1,
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.Common.InputView.Controller
 			UiManager.Instance.OpenView(EUiViewName.PhantomManageConfigRenameInputView, param, null);
 		}
 
-		// Token: 0x0603B46A RID: 242794 RVA: 0x00E20E08 File Offset: 0x00E1F008
+		// Token: 0x060303B7 RID: 197559 RVA: 0x00D7137C File Offset: 0x00D6F57C
 		public void OpenMotorcycleDiyNameInputView([Nullable(new byte[]
 		{
 			1,
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.Common.InputView.Controller
 			UiManager.Instance.OpenView(EUiViewName.MotorcycleDiyNameInputView, param, null);
 		}
 
-		// Token: 0x0603B46B RID: 242795 RVA: 0x00E20EB4 File Offset: 0x00E1F0B4
+		// Token: 0x060303B8 RID: 197560 RVA: 0x00D71428 File Offset: 0x00D6F628
 		public void OpenRenameFormationInputView([Nullable(new byte[]
 		{
 			1,
@@ -314,8 +314,8 @@ namespace CSharpScript.Game.Module.Common.InputView.Controller
 			UiManager.Instance.OpenView(EUiViewName.CommonSingleInputView, param, null);
 		}
 
-		// Token: 0x17008CCF RID: 36047
-		// (get) Token: 0x0603B46C RID: 242796 RVA: 0x00E20F6A File Offset: 0x00E1F16A
+		// Token: 0x170060A1 RID: 24737
+		// (get) Token: 0x060303B9 RID: 197561 RVA: 0x00D714DE File Offset: 0x00D6F6DE
 		public static CommonInputViewController Instance
 		{
 			get
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.Common.InputView.Controller
 			}
 		}
 
-		// Token: 0x0603B46D RID: 242797 RVA: 0x00E20F71 File Offset: 0x00E1F171
+		// Token: 0x060303BA RID: 197562 RVA: 0x00D714E5 File Offset: 0x00D6F6E5
 		public static CommonInputViewController GetOrCreateInstance()
 		{
 			if (CommonInputViewController._Instance == null)
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.Common.InputView.Controller
 			return CommonInputViewController._Instance;
 		}
 
-		// Token: 0x0603B46E RID: 242798 RVA: 0x00E20F85 File Offset: 0x00E1F185
+		// Token: 0x060303BB RID: 197563 RVA: 0x00D714F9 File Offset: 0x00D6F6F9
 		public static bool CreateInstance()
 		{
 			if (CommonInputViewController._Instance != null)
@@ -345,24 +345,24 @@ namespace CSharpScript.Game.Module.Common.InputView.Controller
 			return true;
 		}
 
-		// Token: 0x0603B46F RID: 242799 RVA: 0x00E20F9B File Offset: 0x00E1F19B
+		// Token: 0x060303BC RID: 197564 RVA: 0x00D7150F File Offset: 0x00D6F70F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B470 RID: 242800 RVA: 0x00E20F9D File Offset: 0x00E1F19D
+		// Token: 0x060303BD RID: 197565 RVA: 0x00D71511 File Offset: 0x00D6F711
 		public static void ResetStaticDefaultValue()
 		{
 			CommonInputViewController._Instance = null;
 		}
 
-		// Token: 0x0603B471 RID: 242801 RVA: 0x00E20FA5 File Offset: 0x00E1F1A5
+		// Token: 0x060303BE RID: 197566 RVA: 0x00D71519 File Offset: 0x00D6F719
 		static CommonInputViewController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CommonInputViewController.CreateStaticDefaultValue), new Action(CommonInputViewController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EE6C RID: 126572
+		// Token: 0x0401991D RID: 104733
 		[Nullable(2)]
 		private static CommonInputViewController _Instance;
 	}

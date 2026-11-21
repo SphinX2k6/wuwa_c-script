@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.PhoneMessage
 {
-	// Token: 0x020050EF RID: 20719
+	// Token: 0x020040BF RID: 16575
 	public enum EPhoneMsgScrollWaitTimeType
 	{
-		// Token: 0x0401C356 RID: 115542
+		// Token: 0x04016D89 RID: 93577
 		None,
-		// Token: 0x0401C357 RID: 115543
+		// Token: 0x04016D8A RID: 93578
 		LoadConfig,
-		// Token: 0x0401C358 RID: 115544
+		// Token: 0x04016D8B RID: 93579
 		AutoGenByChatNum,
-		// Token: 0x0401C359 RID: 115545
+		// Token: 0x04016D8C RID: 93580
 		FinalTime
 	}
 }

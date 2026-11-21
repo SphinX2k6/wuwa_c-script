@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CEA RID: 3306
+	// Token: 0x02000DE2 RID: 3554
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ICollisionChannelConfig
 	{
-		// Token: 0x06004B7F RID: 19327 RVA: 0x000BC7FE File Offset: 0x000BA9FE
-		[NullableContext(1)]
+		// Token: 0x0600508C RID: 20620 RVA: 0x000C7CB2 File Offset: 0x000C5EB2
+		[NullableContext(0)]
 		public static ICollisionChannelConfig Create(ICollisionChannelConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001768 RID: 5992
-		// (get) Token: 0x06004B80 RID: 19328 RVA: 0x000BC81D File Offset: 0x000BAA1D
+		// Token: 0x170018C3 RID: 6339
+		// (get) Token: 0x0600508D RID: 20621 RVA: 0x000C7CD1 File Offset: 0x000C5ED1
 		public virtual IOverrideCollisionChannel OverrideCollisionChannel
 		{
 			get
@@ -39,13 +39,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B29 RID: 11049
+		// Token: 0x04002DE1 RID: 11745
 		private ICollisionChannelConfig Instance;
 
-		// Token: 0x04002B2A RID: 11050
+		// Token: 0x04002DE2 RID: 11746
 		private IOverrideCollisionChannel _OverrideCollisionChannelCache;
 
-		// Token: 0x04002B2B RID: 11051
+		// Token: 0x04002DE3 RID: 11747
 		private bool _OverrideCollisionChannelInited;
 	}
 }

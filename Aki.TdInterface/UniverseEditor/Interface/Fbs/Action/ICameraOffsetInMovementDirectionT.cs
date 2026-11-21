@@ -2,50 +2,50 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006291 RID: 25233
+	// Token: 0x02006902 RID: 26882
 	public class ICameraOffsetInMovementDirectionT
 	{
-		// Token: 0x1700BC4E RID: 48206
-		// (get) Token: 0x0602B971 RID: 178545 RVA: 0x00600587 File Offset: 0x005FE787
-		// (set) Token: 0x0602B972 RID: 178546 RVA: 0x0060058F File Offset: 0x005FE78F
+		// Token: 0x1700C5D6 RID: 50646
+		// (get) Token: 0x0602E0D2 RID: 188626 RVA: 0x0064B38F File Offset: 0x0064958F
+		// (set) Token: 0x0602E0D3 RID: 188627 RVA: 0x0064B397 File Offset: 0x00649597
 		public float MinInterpolationSpeed { get; set; }
 
-		// Token: 0x1700BC4F RID: 48207
-		// (get) Token: 0x0602B973 RID: 178547 RVA: 0x00600598 File Offset: 0x005FE798
-		// (set) Token: 0x0602B974 RID: 178548 RVA: 0x006005A0 File Offset: 0x005FE7A0
+		// Token: 0x1700C5D7 RID: 50647
+		// (get) Token: 0x0602E0D4 RID: 188628 RVA: 0x0064B3A0 File Offset: 0x006495A0
+		// (set) Token: 0x0602E0D5 RID: 188629 RVA: 0x0064B3A8 File Offset: 0x006495A8
 		public float MaxInterpolationSpeed { get; set; }
 
-		// Token: 0x1700BC50 RID: 48208
-		// (get) Token: 0x0602B975 RID: 178549 RVA: 0x006005A9 File Offset: 0x005FE7A9
-		// (set) Token: 0x0602B976 RID: 178550 RVA: 0x006005B1 File Offset: 0x005FE7B1
+		// Token: 0x1700C5D8 RID: 50648
+		// (get) Token: 0x0602E0D6 RID: 188630 RVA: 0x0064B3B1 File Offset: 0x006495B1
+		// (set) Token: 0x0602E0D7 RID: 188631 RVA: 0x0064B3B9 File Offset: 0x006495B9
 		public float OffsetDistance1 { get; set; }
 
-		// Token: 0x1700BC51 RID: 48209
-		// (get) Token: 0x0602B977 RID: 178551 RVA: 0x006005BA File Offset: 0x005FE7BA
-		// (set) Token: 0x0602B978 RID: 178552 RVA: 0x006005C2 File Offset: 0x005FE7C2
+		// Token: 0x1700C5D9 RID: 50649
+		// (get) Token: 0x0602E0D8 RID: 188632 RVA: 0x0064B3C2 File Offset: 0x006495C2
+		// (set) Token: 0x0602E0D9 RID: 188633 RVA: 0x0064B3CA File Offset: 0x006495CA
 		public float OffsetDistance2 { get; set; }
 
-		// Token: 0x1700BC52 RID: 48210
-		// (get) Token: 0x0602B979 RID: 178553 RVA: 0x006005CB File Offset: 0x005FE7CB
-		// (set) Token: 0x0602B97A RID: 178554 RVA: 0x006005D3 File Offset: 0x005FE7D3
+		// Token: 0x1700C5DA RID: 50650
+		// (get) Token: 0x0602E0DA RID: 188634 RVA: 0x0064B3D3 File Offset: 0x006495D3
+		// (set) Token: 0x0602E0DB RID: 188635 RVA: 0x0064B3DB File Offset: 0x006495DB
 		public IBaseCurveT OffsetCurve { get; set; }
 
-		// Token: 0x1700BC53 RID: 48211
-		// (get) Token: 0x0602B97B RID: 178555 RVA: 0x006005DC File Offset: 0x005FE7DC
-		// (set) Token: 0x0602B97C RID: 178556 RVA: 0x006005E4 File Offset: 0x005FE7E4
+		// Token: 0x1700C5DB RID: 50651
+		// (get) Token: 0x0602E0DC RID: 188636 RVA: 0x0064B3E4 File Offset: 0x006495E4
+		// (set) Token: 0x0602E0DD RID: 188637 RVA: 0x0064B3EC File Offset: 0x006495EC
 		public int CenteringWaitTime { get; set; }
 
-		// Token: 0x1700BC54 RID: 48212
-		// (get) Token: 0x0602B97D RID: 178557 RVA: 0x006005ED File Offset: 0x005FE7ED
-		// (set) Token: 0x0602B97E RID: 178558 RVA: 0x006005F5 File Offset: 0x005FE7F5
+		// Token: 0x1700C5DC RID: 50652
+		// (get) Token: 0x0602E0DE RID: 188638 RVA: 0x0064B3F5 File Offset: 0x006495F5
+		// (set) Token: 0x0602E0DF RID: 188639 RVA: 0x0064B3FD File Offset: 0x006495FD
 		public int StartupWaitTime { get; set; }
 
-		// Token: 0x1700BC55 RID: 48213
-		// (get) Token: 0x0602B97F RID: 178559 RVA: 0x006005FE File Offset: 0x005FE7FE
-		// (set) Token: 0x0602B980 RID: 178560 RVA: 0x00600606 File Offset: 0x005FE806
+		// Token: 0x1700C5DD RID: 50653
+		// (get) Token: 0x0602E0E0 RID: 188640 RVA: 0x0064B406 File Offset: 0x00649606
+		// (set) Token: 0x0602E0E1 RID: 188641 RVA: 0x0064B40E File Offset: 0x0064960E
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602B981 RID: 178561 RVA: 0x00600610 File Offset: 0x005FE810
+		// Token: 0x0602E0E2 RID: 188642 RVA: 0x0064B418 File Offset: 0x00649618
 		public ICameraOffsetInMovementDirectionT()
 		{
 			this.MinInterpolationSpeed = 0f;

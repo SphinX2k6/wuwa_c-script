@@ -11,30 +11,27 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/TsTaskNpcReserveVehicle.TsTaskNpcReserveVehicle_C")]
 public class TsTaskNpcReserveVehicle : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06000607 RID: 1543 RVA: 0x0001DFBC File Offset: 0x0001C1BC
+	// Token: 0x0600060B RID: 1547 RVA: 0x0001EBA8 File Offset: 0x0001CDA8
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskNpcReserveVehicle) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskNpcReserveVehicle.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000608 RID: 1544 RVA: 0x0001E058 File Offset: 0x0001C258
+	// Token: 0x0600060C RID: 1548 RVA: 0x0001EC58 File Offset: 0x0001CE58
 	[NullableContext(2)]
 	protected unsafe virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -99,7 +96,7 @@ public class TsTaskNpcReserveVehicle : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		base.FinishExecute(false);
 	}
 
-	// Token: 0x06000609 RID: 1545 RVA: 0x0001E22C File Offset: 0x0001C42C
+	// Token: 0x0600060D RID: 1549 RVA: 0x0001EE2C File Offset: 0x0001D02C
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskNpcReserveVehicle._ClassPtr == IntPtr.Zero)
@@ -109,23 +106,23 @@ public class TsTaskNpcReserveVehicle : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		return TsTaskNpcReserveVehicle._ClassPtr;
 	}
 
-	// Token: 0x0600060A RID: 1546 RVA: 0x0001E250 File Offset: 0x0001C450
+	// Token: 0x0600060E RID: 1550 RVA: 0x0001EE50 File Offset: 0x0001D050
 	public TsTaskNpcReserveVehicle() : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcReserveVehicle.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600060B RID: 1547 RVA: 0x0001E278 File Offset: 0x0001C478
+	// Token: 0x0600060F RID: 1551 RVA: 0x0001EE78 File Offset: 0x0001D078
 	[NullableContext(1)]
 	public TsTaskNpcReserveVehicle(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcReserveVehicle.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600060C RID: 1548 RVA: 0x0001E2AB File Offset: 0x0001C4AB
+	// Token: 0x06000610 RID: 1552 RVA: 0x0001EEAB File Offset: 0x0001D0AB
 	protected TsTaskNpcReserveVehicle(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600060D RID: 1549 RVA: 0x0001E2B4 File Offset: 0x0001C4B4
+	// Token: 0x06000611 RID: 1553 RVA: 0x0001EEB4 File Offset: 0x0001D0B4
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -133,13 +130,13 @@ public class TsTaskNpcReserveVehicle : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0400046C RID: 1132
+	// Token: 0x04000470 RID: 1136
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/TsTaskNpcReserveVehicle.TsTaskNpcReserveVehicle_C";
 
-	// Token: 0x0400046D RID: 1133
+	// Token: 0x04000471 RID: 1137
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400046E RID: 1134
+	// Token: 0x04000472 RID: 1138
 	private static IntPtr _ClassDefaultObjectPtr;
 }

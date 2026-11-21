@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001624 RID: 5668
+	// Token: 0x02001791 RID: 6033
 	public enum EMotorSpeedUpConfigTag
 	{
-		// Token: 0x04004C13 RID: 19475
+		// Token: 0x04005007 RID: 20487
 		SpeedUp40mPerSecInHalf = -2032791012,
-		// Token: 0x04004C14 RID: 19476
+		// Token: 0x04005008 RID: 20488
 		SpeedUp55mPerSecInHalf = -740563452,
-		// Token: 0x04004C15 RID: 19477
+		// Token: 0x04005009 RID: 20489
 		SpeedUp45mPerSecInHalf = -433764853,
-		// Token: 0x04004C16 RID: 19478
+		// Token: 0x0400500A RID: 20490
 		SpeedUp35mPerSecInHalf = 1305642193
 	}
 }

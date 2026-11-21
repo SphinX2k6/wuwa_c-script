@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D7E RID: 3454
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E7A RID: 3706
 	public class ISingleBtnQte : IQteType
 	{
-		// Token: 0x06004E94 RID: 20116 RVA: 0x000C2ED6 File Offset: 0x000C10D6
+		// Token: 0x060053B9 RID: 21433 RVA: 0x000CE726 File Offset: 0x000CC926
 		public static ISingleBtnQte Create(ISingleBtnQte? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001955 RID: 6485
-		// (get) Token: 0x06004E95 RID: 20117 RVA: 0x000C2EF5 File Offset: 0x000C10F5
+		// Token: 0x17001AC0 RID: 6848
+		// (get) Token: 0x060053BA RID: 21434 RVA: 0x000CE745 File Offset: 0x000CC945
 		public override EQteType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001956 RID: 6486
-		// (get) Token: 0x06004E96 RID: 20118 RVA: 0x000C2F02 File Offset: 0x000C1102
+		// Token: 0x17001AC1 RID: 6849
+		// (get) Token: 0x060053BB RID: 21435 RVA: 0x000CE752 File Offset: 0x000CC952
 		public override int QteId
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001957 RID: 6487
-		// (get) Token: 0x06004E97 RID: 20119 RVA: 0x000C2F0F File Offset: 0x000C110F
+		// Token: 0x17001AC2 RID: 6850
+		// (get) Token: 0x060053BC RID: 21436 RVA: 0x000CE75F File Offset: 0x000CC95F
 		public virtual IQteCallback SuccessCallback
 		{
 			get
@@ -58,8 +56,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001958 RID: 6488
-		// (get) Token: 0x06004E98 RID: 20120 RVA: 0x000C2F43 File Offset: 0x000C1143
+		// Token: 0x17001AC3 RID: 6851
+		// (get) Token: 0x060053BD RID: 21437 RVA: 0x000CE793 File Offset: 0x000CC993
 		public virtual IQteCallback FailureCallback
 		{
 			get
@@ -74,21 +72,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D1B RID: 11547
+		// Token: 0x04002FE1 RID: 12257
 		private ISingleBtnQte Instance;
 
-		// Token: 0x04002D1C RID: 11548
+		// Token: 0x04002FE2 RID: 12258
 		[Nullable(2)]
 		private IQteCallback _SuccessCallbackCache;
 
-		// Token: 0x04002D1D RID: 11549
+		// Token: 0x04002FE3 RID: 12259
 		private bool _SuccessCallbackInited;
 
-		// Token: 0x04002D1E RID: 11550
+		// Token: 0x04002FE4 RID: 12260
 		[Nullable(2)]
 		private IQteCallback _FailureCallbackCache;
 
-		// Token: 0x04002D1F RID: 11551
+		// Token: 0x04002FE5 RID: 12261
 		private bool _FailureCallbackInited;
 	}
 }

@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol.Debug
 {
-	// Token: 0x0200169B RID: 5787
+	// Token: 0x02001717 RID: 5911
 	[NetMessage(EMessageId.GmVoxelInfoNotify)]
 	public sealed class GmVoxelInfoNotify : IMessage<GmVoxelInfoNotify>, IMessage, IEquatable<GmVoxelInfoNotify>, IDeepCloneable<GmVoxelInfoNotify>, IBufferMessage
 	{
-		// Token: 0x0601D017 RID: 118807 RVA: 0x0043F00A File Offset: 0x0043D20A
+		// Token: 0x0601DAE6 RID: 121574 RVA: 0x0045AD4A File Offset: 0x00458F4A
 		[NullableContext(1)]
 		public static GmVoxelInfoNotify Create()
 		{
 			return new GmVoxelInfoNotify();
 		}
 
-		// Token: 0x1700626D RID: 25197
-		// (get) Token: 0x0601D018 RID: 118808 RVA: 0x0043F011 File Offset: 0x0043D211
+		// Token: 0x17006512 RID: 25874
+		// (get) Token: 0x0601DAE7 RID: 121575 RVA: 0x0045AD51 File Offset: 0x00458F51
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x1700626E RID: 25198
-		// (get) Token: 0x0601D019 RID: 118809 RVA: 0x0043F014 File Offset: 0x0043D214
+		// Token: 0x17006513 RID: 25875
+		// (get) Token: 0x0601DAE8 RID: 121576 RVA: 0x0045AD54 File Offset: 0x00458F54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x0601D01A RID: 118810 RVA: 0x0043F01B File Offset: 0x0043D21B
+		// Token: 0x0601DAE9 RID: 121577 RVA: 0x0045AD5B File Offset: 0x00458F5B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GmVoxelInfoNotify()
 		{
 		}
 
-		// Token: 0x0601D01B RID: 118811 RVA: 0x0043F02E File Offset: 0x0043D22E
+		// Token: 0x0601DAEA RID: 121578 RVA: 0x0045AD6E File Offset: 0x00458F6E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GmVoxelInfoNotify(GmVoxelInfoNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol.Debug
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601D01C RID: 118812 RVA: 0x0043F064 File Offset: 0x0043D264
+		// Token: 0x0601DAEB RID: 121579 RVA: 0x0045ADA4 File Offset: 0x00458FA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GmVoxelInfoNotify Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol.Debug
 			return new GmVoxelInfoNotify(this);
 		}
 
-		// Token: 0x1700626F RID: 25199
-		// (get) Token: 0x0601D01D RID: 118813 RVA: 0x0043F06C File Offset: 0x0043D26C
-		// (set) Token: 0x0601D01E RID: 118814 RVA: 0x0043F074 File Offset: 0x0043D274
+		// Token: 0x17006514 RID: 25876
+		// (get) Token: 0x0601DAEC RID: 121580 RVA: 0x0045ADAC File Offset: 0x00458FAC
+		// (set) Token: 0x0601DAED RID: 121581 RVA: 0x0045ADB4 File Offset: 0x00458FB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float CellSize
@@ -85,8 +85,8 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x17006270 RID: 25200
-		// (get) Token: 0x0601D01F RID: 118815 RVA: 0x0043F07D File Offset: 0x0043D27D
+		// Token: 0x17006515 RID: 25877
+		// (get) Token: 0x0601DAEE RID: 121582 RVA: 0x0045ADBD File Offset: 0x00458FBD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<VoxelSpan> Spans
@@ -97,7 +97,7 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x0601D020 RID: 118816 RVA: 0x0043F085 File Offset: 0x0043D285
+		// Token: 0x0601DAEF RID: 121583 RVA: 0x0045ADC5 File Offset: 0x00458FC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol.Debug
 			return this.Equals(other as GmVoxelInfoNotify);
 		}
 
-		// Token: 0x0601D021 RID: 118817 RVA: 0x0043F094 File Offset: 0x0043D294
+		// Token: 0x0601DAF0 RID: 121584 RVA: 0x0045ADD4 File Offset: 0x00458FD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(GmVoxelInfoNotify other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol.Debug
 			return other != null && (other == this || (ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.CellSize, other.CellSize) && this.spans_.Equals(other.spans_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601D022 RID: 118818 RVA: 0x0043F0EC File Offset: 0x0043D2EC
+		// Token: 0x0601DAF1 RID: 121585 RVA: 0x0045AE2C File Offset: 0x0045902C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol.Debug
 			return num;
 		}
 
-		// Token: 0x0601D023 RID: 118819 RVA: 0x0043F140 File Offset: 0x0043D340
+		// Token: 0x0601DAF2 RID: 121586 RVA: 0x0045AE80 File Offset: 0x00459080
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol.Debug
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601D024 RID: 118820 RVA: 0x0043F14D File Offset: 0x0043D34D
+		// Token: 0x0601DAF3 RID: 121587 RVA: 0x0045AE8D File Offset: 0x0045908D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,7 +147,7 @@ namespace Aki.Protocol.Debug
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601D025 RID: 118821 RVA: 0x0043F158 File Offset: 0x0043D358
+		// Token: 0x0601DAF4 RID: 121588 RVA: 0x0045AE98 File Offset: 0x00459098
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -155,7 +155,7 @@ namespace Aki.Protocol.Debug
 			this.spans_.WriteTo(ref output, GmVoxelInfoNotify._repeated_spans_codec);
 			if (this.CellSize != 0f)
 			{
-				output.WriteRawTag(45);
+				output.WriteRawTag(69);
 				output.WriteFloat(this.CellSize);
 			}
 			if (this._unknownFields != null)
@@ -164,7 +164,7 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x0601D026 RID: 118822 RVA: 0x0043F1AC File Offset: 0x0043D3AC
+		// Token: 0x0601DAF5 RID: 121589 RVA: 0x0045AEEC File Offset: 0x004590EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol.Debug
 			return num;
 		}
 
-		// Token: 0x0601D027 RID: 118823 RVA: 0x0043F1F8 File Offset: 0x0043D3F8
+		// Token: 0x0601DAF6 RID: 121590 RVA: 0x0045AF38 File Offset: 0x00459138
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(GmVoxelInfoNotify other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol.Debug
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601D028 RID: 118824 RVA: 0x0043F24A File Offset: 0x0043D44A
+		// Token: 0x0601DAF7 RID: 121591 RVA: 0x0045AF8A File Offset: 0x0045918A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol.Debug
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601D029 RID: 118825 RVA: 0x0043F254 File Offset: 0x0043D454
+		// Token: 0x0601DAF8 RID: 121592 RVA: 0x0045AF94 File Offset: 0x00459194
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,9 +219,9 @@ namespace Aki.Protocol.Debug
 				{
 					return;
 				}
-				if (num != 26U)
+				if (num != 58U)
 				{
-					if (num != 45U)
+					if (num != 69U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x0400C3D7 RID: 50135
+		// Token: 0x0400C906 RID: 51462
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400C3D8 RID: 50136
-		public const int CellSizeFieldNumber = 5;
+		// Token: 0x0400C907 RID: 51463
+		public const int CellSizeFieldNumber = 8;
 
-		// Token: 0x0400C3D9 RID: 50137
+		// Token: 0x0400C908 RID: 51464
 		private float cellSize_;
 
-		// Token: 0x0400C3DA RID: 50138
-		public const int SpansFieldNumber = 3;
+		// Token: 0x0400C909 RID: 51465
+		public const int SpansFieldNumber = 7;
 
-		// Token: 0x0400C3DB RID: 50139
-		private static readonly FieldCodec<VoxelSpan> _repeated_spans_codec = FieldCodec.ForMessage<VoxelSpan>(26U, VoxelSpan.Parser);
+		// Token: 0x0400C90A RID: 51466
+		private static readonly FieldCodec<VoxelSpan> _repeated_spans_codec = FieldCodec.ForMessage<VoxelSpan>(58U, VoxelSpan.Parser);
 
-		// Token: 0x0400C3DC RID: 50140
+		// Token: 0x0400C90B RID: 51467
 		private readonly RepeatedField<VoxelSpan> spans_ = new RepeatedField<VoxelSpan>();
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A9F RID: 6815
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C38 RID: 7224
 	public class IFlowTemplateMode
 	{
-		// Token: 0x0600922C RID: 37420 RVA: 0x00153F4C File Offset: 0x0015214C
+		// Token: 0x060099AC RID: 39340 RVA: 0x00164138 File Offset: 0x00162338
 		private IFlowTemplateMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600922D RID: 37421 RVA: 0x00153F84 File Offset: 0x00152184
+		// Token: 0x060099AD RID: 39341 RVA: 0x00164170 File Offset: 0x00162370
 		public static IFlowTemplateMode Create([Nullable(2)] IFlowTemplateMode instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600922E RID: 37422 RVA: 0x00153F97 File Offset: 0x00152197
+		// Token: 0x060099AE RID: 39342 RVA: 0x00164183 File Offset: 0x00162383
 		public static IFlowTemplateMode CreateFromSetValue([Nullable(2)] IFlowTemplateMode_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600922F RID: 37423 RVA: 0x00153FAA File Offset: 0x001521AA
+		// Token: 0x060099AF RID: 39343 RVA: 0x00164196 File Offset: 0x00162396
 		public IFlowTemplateMode_SetValue ToSetValue()
 		{
 			return new IFlowTemplateMode_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E7D RID: 11901
-		// (get) Token: 0x06009230 RID: 37424 RVA: 0x00153FC9 File Offset: 0x001521C9
-		// (set) Token: 0x06009231 RID: 37425 RVA: 0x00153FF4 File Offset: 0x001521F4
+		// Token: 0x1700308F RID: 12431
+		// (get) Token: 0x060099B0 RID: 39344 RVA: 0x001641B5 File Offset: 0x001623B5
+		// (set) Token: 0x060099B1 RID: 39345 RVA: 0x001641E0 File Offset: 0x001623E0
 		public virtual int Id
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E7E RID: 11902
-		// (get) Token: 0x06009232 RID: 37426 RVA: 0x00154002 File Offset: 0x00152202
-		// (set) Token: 0x06009233 RID: 37427 RVA: 0x0015402D File Offset: 0x0015222D
+		// Token: 0x17003090 RID: 12432
+		// (get) Token: 0x060099B2 RID: 39346 RVA: 0x001641EE File Offset: 0x001623EE
+		// (set) Token: 0x060099B3 RID: 39347 RVA: 0x00164219 File Offset: 0x00162419
 		public virtual int CameraId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A0A RID: 23050
+		// Token: 0x04005E7A RID: 24186
 		[Nullable(2)]
 		protected IFlowTemplateMode FbInstance;
 
-		// Token: 0x04005A0B RID: 23051
+		// Token: 0x04005E7B RID: 24187
 		[Nullable(2)]
 		protected IFlowTemplateMode_SetValue PocoInterface;
 	}

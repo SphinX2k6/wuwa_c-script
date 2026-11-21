@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002043 RID: 8259
+// Token: 0x02001516 RID: 5398
 [NullableContext(1)]
 public interface IKingShipPlotViewData
 {
-	// Token: 0x170013D2 RID: 5074
-	// (get) Token: 0x060103A4 RID: 66468
-	// (set) Token: 0x060103A5 RID: 66469
+	// Token: 0x170013FF RID: 5119
+	// (get) Token: 0x0600D80C RID: 55308
+	// (set) Token: 0x0600D80D RID: 55309
 	string Path { get; set; }
 
-	// Token: 0x170013D3 RID: 5075
-	// (get) Token: 0x060103A6 RID: 66470
-	// (set) Token: 0x060103A7 RID: 66471
+	// Token: 0x17001400 RID: 5120
+	// (get) Token: 0x0600D80E RID: 55310
+	// (set) Token: 0x0600D80F RID: 55311
 	List<string> FlowId { get; set; }
 
-	// Token: 0x170013D4 RID: 5076
-	// (get) Token: 0x060103A8 RID: 66472
-	// (set) Token: 0x060103A9 RID: 66473
+	// Token: 0x17001401 RID: 5121
+	// (get) Token: 0x0600D810 RID: 55312
+	// (set) Token: 0x0600D811 RID: 55313
 	Action OnCloseCallBack { get; set; }
 }

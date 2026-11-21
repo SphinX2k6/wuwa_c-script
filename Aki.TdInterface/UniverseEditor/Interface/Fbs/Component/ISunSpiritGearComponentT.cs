@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059F9 RID: 23033
+	// Token: 0x02006006 RID: 24582
 	public class ISunSpiritGearComponentT
 	{
-		// Token: 0x1700AD12 RID: 44306
-		// (get) Token: 0x0602717C RID: 160124 RVA: 0x00560D7D File Offset: 0x0055EF7D
-		// (set) Token: 0x0602717D RID: 160125 RVA: 0x00560D85 File Offset: 0x0055EF85
+		// Token: 0x1700B64A RID: 46666
+		// (get) Token: 0x060296F4 RID: 169716 RVA: 0x005A7D41 File Offset: 0x005A5F41
+		// (set) Token: 0x060296F5 RID: 169717 RVA: 0x005A7D49 File Offset: 0x005A5F49
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700AD13 RID: 44307
-		// (get) Token: 0x0602717E RID: 160126 RVA: 0x00560D8E File Offset: 0x0055EF8E
-		// (set) Token: 0x0602717F RID: 160127 RVA: 0x00560D96 File Offset: 0x0055EF96
+		// Token: 0x1700B64B RID: 46667
+		// (get) Token: 0x060296F6 RID: 169718 RVA: 0x005A7D52 File Offset: 0x005A5F52
+		// (set) Token: 0x060296F7 RID: 169719 RVA: 0x005A7D5A File Offset: 0x005A5F5A
 		public TSunSpiritGearPerformConfigUnion PerformConfig { get; set; }
 
-		// Token: 0x1700AD14 RID: 44308
-		// (get) Token: 0x06027180 RID: 160128 RVA: 0x00560D9F File Offset: 0x0055EF9F
-		// (set) Token: 0x06027181 RID: 160129 RVA: 0x00560DA7 File Offset: 0x0055EFA7
+		// Token: 0x1700B64C RID: 46668
+		// (get) Token: 0x060296F8 RID: 169720 RVA: 0x005A7D63 File Offset: 0x005A5F63
+		// (set) Token: 0x060296F9 RID: 169721 RVA: 0x005A7D6B File Offset: 0x005A5F6B
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027182 RID: 160130 RVA: 0x00560DB0 File Offset: 0x0055EFB0
+		// Token: 0x060296FA RID: 169722 RVA: 0x005A7D74 File Offset: 0x005A5F74
 		public ISunSpiritGearComponentT()
 		{
 			this.Disabled = false;

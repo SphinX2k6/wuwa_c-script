@@ -3,22 +3,22 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001591 RID: 5521
+	// Token: 0x02001603 RID: 5635
 	public enum FsmStateBehaviorType
 	{
-		// Token: 0x0400A7B2 RID: 42930
+		// Token: 0x0400AC31 RID: 44081
 		[OriginalName("BT_Enter")]
 		BtEnter,
-		// Token: 0x0400A7B3 RID: 42931
+		// Token: 0x0400AC32 RID: 44082
 		[OriginalName("BT_Exit")]
 		BtExit,
-		// Token: 0x0400A7B4 RID: 42932
+		// Token: 0x0400AC33 RID: 44083
 		[OriginalName("BT_BindStart")]
 		BtBindStart,
-		// Token: 0x0400A7B5 RID: 42933
+		// Token: 0x0400AC34 RID: 44084
 		[OriginalName("BT_BindEnd")]
 		BtBindEnd,
-		// Token: 0x0400A7B6 RID: 42934
+		// Token: 0x0400AC35 RID: 44085
 		[OriginalName("BT_Task")]
 		BtTask
 	}

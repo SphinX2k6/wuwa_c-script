@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002819 RID: 10265
+	// Token: 0x02002AEC RID: 10988
 	public class INpcSwingGetUp : INpcLeisureInteractType
 	{
-		// Token: 0x0600E3B9 RID: 58297 RVA: 0x00218D0E File Offset: 0x00216F0E
-		[NullableContext(1)]
+		// Token: 0x0600F1DE RID: 61918 RVA: 0x00235B72 File Offset: 0x00233D72
 		public static INpcSwingGetUp Create(INpcSwingGetUp? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004549 RID: 17737
-		// (get) Token: 0x0600E3BA RID: 58298 RVA: 0x00218D2D File Offset: 0x00216F2D
+		// Token: 0x170048B4 RID: 18612
+		// (get) Token: 0x0600F1DF RID: 61919 RVA: 0x00235B91 File Offset: 0x00233D91
 		public override ENpcLeisureInteract Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700454A RID: 17738
-		// (get) Token: 0x0600E3BB RID: 58299 RVA: 0x00218D3C File Offset: 0x00216F3C
+		// Token: 0x170048B5 RID: 18613
+		// (get) Token: 0x0600F1E0 RID: 61920 RVA: 0x00235BA0 File Offset: 0x00233DA0
 		public override bool? KeepState
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700454B RID: 17739
-		// (get) Token: 0x0600E3BC RID: 58300 RVA: 0x00218D72 File Offset: 0x00216F72
+		// Token: 0x170048B6 RID: 18614
+		// (get) Token: 0x0600F1E1 RID: 61921 RVA: 0x00235BD6 File Offset: 0x00233DD6
 		public virtual int TargetNpcId
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E0F RID: 32271
+		// Token: 0x040084CC RID: 33996
 		private INpcSwingGetUp Instance;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200242F RID: 9263
+	// Token: 0x020026D0 RID: 9936
 	public static class EStopNewMoveWithSplineTypeExtensions
 	{
-		// Token: 0x0600C952 RID: 51538 RVA: 0x001D7A90 File Offset: 0x001D5C90
+		// Token: 0x0600D602 RID: 54786 RVA: 0x001F1958 File Offset: 0x001EFB58
 		public static string ToEnumString(this EStopNewMoveWithSplineType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C953 RID: 51539 RVA: 0x001D7AE4 File Offset: 0x001D5CE4
+		// Token: 0x0600D603 RID: 54787 RVA: 0x001F19AC File Offset: 0x001EFBAC
 		public static EStopNewMoveWithSplineType FromString(string name)
 		{
 			EStopNewMoveWithSplineType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C954 RID: 51540 RVA: 0x001D7B10 File Offset: 0x001D5D10
+		// Token: 0x0600D604 RID: 54788 RVA: 0x001F19D8 File Offset: 0x001EFBD8
 		public static bool TryFromString(string name, out EStopNewMoveWithSplineType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C955 RID: 51541 RVA: 0x001D7B78 File Offset: 0x001D5D78
+		// Token: 0x0600D605 RID: 54789 RVA: 0x001F1A40 File Offset: 0x001EFC40
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C956 RID: 51542 RVA: 0x001D7BA0 File Offset: 0x001D5DA0
+		// Token: 0x0600D606 RID: 54790 RVA: 0x001F1A68 File Offset: 0x001EFC68
 		public static EStopNewMoveWithSplineType[] GetValues()
 		{
 			return new EStopNewMoveWithSplineType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C957 RID: 51543 RVA: 0x001D7BB3 File Offset: 0x001D5DB3
+		// Token: 0x0600D607 RID: 54791 RVA: 0x001F1A7B File Offset: 0x001EFC7B
 		public static string[] GetNames()
 		{
 			return new string[]

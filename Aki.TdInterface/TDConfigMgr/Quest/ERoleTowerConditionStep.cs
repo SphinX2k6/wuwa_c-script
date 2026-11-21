@@ -3,19 +3,19 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E8F RID: 3727
+	// Token: 0x02000FA2 RID: 4002
 	[EnumExtensions]
 	public enum ERoleTowerConditionStep
 	{
-		// Token: 0x04003166 RID: 12646
+		// Token: 0x04003468 RID: 13416
 		Prepare,
-		// Token: 0x04003167 RID: 12647
+		// Token: 0x04003469 RID: 13417
 		Battle,
-		// Token: 0x04003168 RID: 12648
+		// Token: 0x0400346A RID: 13418
 		Settle,
-		// Token: 0x04003169 RID: 12649
+		// Token: 0x0400346B RID: 13419
 		TeamUpgrade,
-		// Token: 0x0400316A RID: 12650
+		// Token: 0x0400346C RID: 13420
 		LoadSubLevel
 	}
 }

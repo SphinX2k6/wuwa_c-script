@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02002B23 RID: 11043
+// Token: 0x0200209F RID: 8351
 internal enum <SurvivorsItemTabView>F8A5B4ADB321F3A4AC8BAB000A8C320FC3658C3F054F4C2BEC74247E1FCD5B371__EComponents
 {
-	// Token: 0x0400AAAC RID: 43692
+	// Token: 0x0400AEB2 RID: 44722
 	TxtTitle01,
-	// Token: 0x0400AAAD RID: 43693
+	// Token: 0x0400AEB3 RID: 44723
 	LoopScrollView,
-	// Token: 0x0400AAAE RID: 43694
+	// Token: 0x0400AEB4 RID: 44724
 	Content,
-	// Token: 0x0400AAAF RID: 43695
+	// Token: 0x0400AEB5 RID: 44725
 	ItemBaseA,
-	// Token: 0x0400AAB0 RID: 43696
+	// Token: 0x0400AEB6 RID: 44726
 	TeamMainInfo,
-	// Token: 0x0400AAB1 RID: 43697
+	// Token: 0x0400AEB7 RID: 44727
 	LockRoot
 }

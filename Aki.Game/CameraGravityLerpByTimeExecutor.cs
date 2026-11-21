@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02000209 RID: 521
+// Token: 0x0200020D RID: 525
 public class CameraGravityLerpByTimeExecutor : BaseCameraGravityLerpExecutor
 {
-	// Token: 0x0600207F RID: 8319 RVA: 0x000AD6F1 File Offset: 0x000AB8F1
+	// Token: 0x0600212D RID: 8493 RVA: 0x000B4A11 File Offset: 0x000B2C11
 	protected override void InitInternal()
 	{
 		this.LerpTime = 0f;
@@ -13,7 +13,7 @@ public class CameraGravityLerpByTimeExecutor : BaseCameraGravityLerpExecutor
 		}
 	}
 
-	// Token: 0x06002080 RID: 8320 RVA: 0x000AD718 File Offset: 0x000AB918
+	// Token: 0x0600212E RID: 8494 RVA: 0x000B4A38 File Offset: 0x000B2C38
 	protected unsafe override float UpdateInternal(float deltaTime)
 	{
 		this.LerpTime += deltaTime;
@@ -37,6 +37,6 @@ public class CameraGravityLerpByTimeExecutor : BaseCameraGravityLerpExecutor
 		return num;
 	}
 
-	// Token: 0x0400146F RID: 5231
+	// Token: 0x040014B1 RID: 5297
 	protected float LerpTime;
 }

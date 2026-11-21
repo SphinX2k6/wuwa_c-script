@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014D8 RID: 5336
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001631 RID: 5681
 	public class ChangeLiftTarget : ActionParams
 	{
-		// Token: 0x06007978 RID: 31096 RVA: 0x00122B58 File Offset: 0x00120D58
-		[NullableContext(1)]
+		// Token: 0x06008045 RID: 32837 RVA: 0x001317A4 File Offset: 0x0012F9A4
 		private ChangeLiftTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007979 RID: 31097 RVA: 0x00122B90 File Offset: 0x00120D90
-		[NullableContext(1)]
+		// Token: 0x06008046 RID: 32838 RVA: 0x001317DC File Offset: 0x0012F9DC
 		public static ChangeLiftTarget Create([Nullable(2)] ChangeLiftTarget instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600797A RID: 31098 RVA: 0x00122BA3 File Offset: 0x00120DA3
-		[NullableContext(1)]
+		// Token: 0x06008047 RID: 32839 RVA: 0x001317EF File Offset: 0x0012F9EF
 		public static ChangeLiftTarget CreateFromSetValue([Nullable(2)] ChangeLiftTarget_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600797B RID: 31099 RVA: 0x00122BB6 File Offset: 0x00120DB6
-		[NullableContext(1)]
+		// Token: 0x06008048 RID: 32840 RVA: 0x00131802 File Offset: 0x0012FA02
 		public ChangeLiftTarget_SetValue ToSetValue()
 		{
 			return new ChangeLiftTarget_SetValue
@@ -66,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028AE RID: 10414
-		// (get) Token: 0x0600797C RID: 31100 RVA: 0x00122BED File Offset: 0x00120DED
-		// (set) Token: 0x0600797D RID: 31101 RVA: 0x00122C18 File Offset: 0x00120E18
+		// Token: 0x17002A98 RID: 10904
+		// (get) Token: 0x06008049 RID: 32841 RVA: 0x00131839 File Offset: 0x0012FA39
+		// (set) Token: 0x0600804A RID: 32842 RVA: 0x00131864 File Offset: 0x0012FA64
 		public virtual bool IsSelf
 		{
 			get
@@ -85,11 +79,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028AF RID: 10415
-		// (get) Token: 0x0600797E RID: 31102 RVA: 0x00122C26 File Offset: 0x00120E26
-		// (set) Token: 0x0600797F RID: 31103 RVA: 0x00122C4D File Offset: 0x00120E4D
+		// Token: 0x17002A99 RID: 10905
+		// (get) Token: 0x0600804B RID: 32843 RVA: 0x00131872 File Offset: 0x0012FA72
+		// (set) Token: 0x0600804C RID: 32844 RVA: 0x00131899 File Offset: 0x0012FA99
+		[Nullable(2)]
 		public virtual ILiftMoveType MoveType
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -103,15 +99,16 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.MoveType;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().MoveType = value;
 			}
 		}
 
-		// Token: 0x170028B0 RID: 10416
-		// (get) Token: 0x06007980 RID: 31104 RVA: 0x00122C5C File Offset: 0x00120E5C
-		// (set) Token: 0x06007981 RID: 31105 RVA: 0x00122C96 File Offset: 0x00120E96
+		// Token: 0x17002A9A RID: 10906
+		// (get) Token: 0x0600804D RID: 32845 RVA: 0x001318A8 File Offset: 0x0012FAA8
+		// (set) Token: 0x0600804E RID: 32846 RVA: 0x001318E2 File Offset: 0x0012FAE2
 		public virtual int? EntityId
 		{
 			get
@@ -133,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028B1 RID: 10417
-		// (get) Token: 0x06007982 RID: 31106 RVA: 0x00122CA4 File Offset: 0x00120EA4
-		// (set) Token: 0x06007983 RID: 31107 RVA: 0x00122CCF File Offset: 0x00120ECF
+		// Token: 0x17002A9B RID: 10907
+		// (get) Token: 0x0600804F RID: 32847 RVA: 0x001318F0 File Offset: 0x0012FAF0
+		// (set) Token: 0x06008050 RID: 32848 RVA: 0x0013191B File Offset: 0x0012FB1B
 		public virtual int Location
 		{
 			get
@@ -156,10 +153,12 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400467D RID: 18045
+		// Token: 0x04004A18 RID: 18968
+		[Nullable(2)]
 		protected new ChangeLiftTarget FbInstance;
 
-		// Token: 0x0400467E RID: 18046
+		// Token: 0x04004A19 RID: 18969
+		[Nullable(2)]
 		protected ChangeLiftTarget_SetValue PocoInterface;
 	}
 }

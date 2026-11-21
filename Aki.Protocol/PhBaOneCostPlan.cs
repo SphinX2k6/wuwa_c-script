@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000D13 RID: 3347
+	// Token: 0x02000D03 RID: 3331
 	public sealed class PhBaOneCostPlan : IMessage<PhBaOneCostPlan>, IMessage, IEquatable<PhBaOneCostPlan>, IDeepCloneable<PhBaOneCostPlan>, IBufferMessage
 	{
-		// Token: 0x06012152 RID: 74066 RVA: 0x002A478C File Offset: 0x002A298C
+		// Token: 0x06012056 RID: 73814 RVA: 0x002A2B68 File Offset: 0x002A0D68
 		[NullableContext(1)]
 		public static PhBaOneCostPlan Create()
 		{
 			return new PhBaOneCostPlan();
 		}
 
-		// Token: 0x17003BE9 RID: 15337
-		// (get) Token: 0x06012153 RID: 74067 RVA: 0x002A4793 File Offset: 0x002A2993
+		// Token: 0x17003BB4 RID: 15284
+		// (get) Token: 0x06012057 RID: 73815 RVA: 0x002A2B6F File Offset: 0x002A0D6F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<PhBaOneCostPlan> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003BEA RID: 15338
-		// (get) Token: 0x06012154 RID: 74068 RVA: 0x002A479A File Offset: 0x002A299A
+		// Token: 0x17003BB5 RID: 15285
+		// (get) Token: 0x06012058 RID: 73816 RVA: 0x002A2B76 File Offset: 0x002A0D76
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003BEB RID: 15339
-		// (get) Token: 0x06012155 RID: 74069 RVA: 0x002A479D File Offset: 0x002A299D
+		// Token: 0x17003BB6 RID: 15286
+		// (get) Token: 0x06012059 RID: 73817 RVA: 0x002A2B79 File Offset: 0x002A0D79
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012156 RID: 74070 RVA: 0x002A47A4 File Offset: 0x002A29A4
+		// Token: 0x0601205A RID: 73818 RVA: 0x002A2B80 File Offset: 0x002A0D80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhBaOneCostPlan()
 		{
 		}
 
-		// Token: 0x06012157 RID: 74071 RVA: 0x002A47B7 File Offset: 0x002A29B7
+		// Token: 0x0601205B RID: 73819 RVA: 0x002A2B93 File Offset: 0x002A0D93
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhBaOneCostPlan(PhBaOneCostPlan other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06012158 RID: 74072 RVA: 0x002A47ED File Offset: 0x002A29ED
+		// Token: 0x0601205C RID: 73820 RVA: 0x002A2BC9 File Offset: 0x002A0DC9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhBaOneCostPlan Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new PhBaOneCostPlan(this);
 		}
 
-		// Token: 0x17003BEC RID: 15340
-		// (get) Token: 0x06012159 RID: 74073 RVA: 0x002A47F5 File Offset: 0x002A29F5
-		// (set) Token: 0x0601215A RID: 74074 RVA: 0x002A47FD File Offset: 0x002A29FD
+		// Token: 0x17003BB7 RID: 15287
+		// (get) Token: 0x0601205D RID: 73821 RVA: 0x002A2BD1 File Offset: 0x002A0DD1
+		// (set) Token: 0x0601205E RID: 73822 RVA: 0x002A2BD9 File Offset: 0x002A0DD9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhBaCostType CostType
@@ -96,8 +96,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003BED RID: 15341
-		// (get) Token: 0x0601215B RID: 74075 RVA: 0x002A4806 File Offset: 0x002A2A06
+		// Token: 0x17003BB8 RID: 15288
+		// (get) Token: 0x0601205F RID: 73823 RVA: 0x002A2BE2 File Offset: 0x002A0DE2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PhBaPlanAttr> AttrList
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601215C RID: 74076 RVA: 0x002A480E File Offset: 0x002A2A0E
+		// Token: 0x06012060 RID: 73824 RVA: 0x002A2BEA File Offset: 0x002A0DEA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PhBaOneCostPlan);
 		}
 
-		// Token: 0x0601215D RID: 74077 RVA: 0x002A481C File Offset: 0x002A2A1C
+		// Token: 0x06012061 RID: 73825 RVA: 0x002A2BF8 File Offset: 0x002A0DF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PhBaOneCostPlan other)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.CostType == other.CostType && this.attrList_.Equals(other.attrList_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601215E RID: 74078 RVA: 0x002A486C File Offset: 0x002A2A6C
+		// Token: 0x06012062 RID: 73826 RVA: 0x002A2C48 File Offset: 0x002A0E48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601215F RID: 74079 RVA: 0x002A48BF File Offset: 0x002A2ABF
+		// Token: 0x06012063 RID: 73827 RVA: 0x002A2C9B File Offset: 0x002A0E9B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06012160 RID: 74080 RVA: 0x002A48CC File Offset: 0x002A2ACC
+		// Token: 0x06012064 RID: 73828 RVA: 0x002A2CA8 File Offset: 0x002A0EA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06012161 RID: 74081 RVA: 0x002A48D8 File Offset: 0x002A2AD8
+		// Token: 0x06012065 RID: 73829 RVA: 0x002A2CB4 File Offset: 0x002A0EB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012162 RID: 74082 RVA: 0x002A4928 File Offset: 0x002A2B28
+		// Token: 0x06012066 RID: 73830 RVA: 0x002A2D04 File Offset: 0x002A0F04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012163 RID: 74083 RVA: 0x002A497C File Offset: 0x002A2B7C
+		// Token: 0x06012067 RID: 73831 RVA: 0x002A2D58 File Offset: 0x002A0F58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PhBaOneCostPlan other)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06012164 RID: 74084 RVA: 0x002A49C9 File Offset: 0x002A2BC9
+		// Token: 0x06012068 RID: 73832 RVA: 0x002A2DA5 File Offset: 0x002A0FA5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06012165 RID: 74085 RVA: 0x002A49D4 File Offset: 0x002A2BD4
+		// Token: 0x06012069 RID: 73833 RVA: 0x002A2DB0 File Offset: 0x002A0FB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -248,25 +248,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007120 RID: 28960
+		// Token: 0x04007138 RID: 28984
 		private static readonly MessageParser<PhBaOneCostPlan> _parser = new MessageParser<PhBaOneCostPlan>(() => new PhBaOneCostPlan());
 
-		// Token: 0x04007121 RID: 28961
+		// Token: 0x04007139 RID: 28985
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007122 RID: 28962
+		// Token: 0x0400713A RID: 28986
 		public const int CostTypeFieldNumber = 1;
 
-		// Token: 0x04007123 RID: 28963
+		// Token: 0x0400713B RID: 28987
 		private PhBaCostType costType_;
 
-		// Token: 0x04007124 RID: 28964
+		// Token: 0x0400713C RID: 28988
 		public const int AttrListFieldNumber = 2;
 
-		// Token: 0x04007125 RID: 28965
+		// Token: 0x0400713D RID: 28989
 		private static readonly FieldCodec<PhBaPlanAttr> _repeated_attrList_codec = FieldCodec.ForMessage<PhBaPlanAttr>(18U, PhBaPlanAttr.Parser);
 
-		// Token: 0x04007126 RID: 28966
+		// Token: 0x0400713E RID: 28990
 		private readonly RepeatedField<PhBaPlanAttr> attrList_ = new RepeatedField<PhBaPlanAttr>();
 	}
 }

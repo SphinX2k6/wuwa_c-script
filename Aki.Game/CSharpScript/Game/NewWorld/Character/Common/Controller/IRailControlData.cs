@@ -3,87 +3,87 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 {
-	// Token: 0x020070B7 RID: 28855
+	// Token: 0x02006316 RID: 25366
 	[NullableContext(1)]
 	public interface IRailControlData
 	{
-		// Token: 0x17009C74 RID: 40052
-		// (get) Token: 0x060465A1 RID: 288161
-		// (set) Token: 0x060465A2 RID: 288162
+		// Token: 0x17007468 RID: 29800
+		// (get) Token: 0x0603D64B RID: 251467
+		// (set) Token: 0x0603D64C RID: 251468
 		float Rad { get; set; }
 
-		// Token: 0x17009C75 RID: 40053
-		// (get) Token: 0x060465A3 RID: 288163
-		// (set) Token: 0x060465A4 RID: 288164
+		// Token: 0x17007469 RID: 29801
+		// (get) Token: 0x0603D64D RID: 251469
+		// (set) Token: 0x0603D64E RID: 251470
 		float AngularVelocity { get; set; }
 
-		// Token: 0x17009C76 RID: 40054
-		// (get) Token: 0x060465A5 RID: 288165
-		// (set) Token: 0x060465A6 RID: 288166
+		// Token: 0x1700746A RID: 29802
+		// (get) Token: 0x0603D64F RID: 251471
+		// (set) Token: 0x0603D650 RID: 251472
 		float Damping { get; set; }
 
-		// Token: 0x17009C77 RID: 40055
-		// (get) Token: 0x060465A7 RID: 288167
-		// (set) Token: 0x060465A8 RID: 288168
+		// Token: 0x1700746B RID: 29803
+		// (get) Token: 0x0603D651 RID: 251473
+		// (set) Token: 0x0603D652 RID: 251474
 		float MaxAngularVelocity { get; set; }
 
-		// Token: 0x17009C78 RID: 40056
-		// (get) Token: 0x060465A9 RID: 288169
-		// (set) Token: 0x060465AA RID: 288170
+		// Token: 0x1700746C RID: 29804
+		// (get) Token: 0x0603D653 RID: 251475
+		// (set) Token: 0x0603D654 RID: 251476
 		float MaxLinearVelocity { get; set; }
 
-		// Token: 0x17009C79 RID: 40057
-		// (get) Token: 0x060465AB RID: 288171
-		// (set) Token: 0x060465AC RID: 288172
+		// Token: 0x1700746D RID: 29805
+		// (get) Token: 0x0603D655 RID: 251477
+		// (set) Token: 0x0603D656 RID: 251478
 		bool IgnoreMaxAngle { get; set; }
 
-		// Token: 0x17009C7A RID: 40058
-		// (get) Token: 0x060465AD RID: 288173
-		// (set) Token: 0x060465AE RID: 288174
+		// Token: 0x1700746E RID: 29806
+		// (get) Token: 0x0603D657 RID: 251479
+		// (set) Token: 0x0603D658 RID: 251480
 		float RegressionSpeed { get; set; }
 
-		// Token: 0x17009C7B RID: 40059
-		// (get) Token: 0x060465AF RID: 288175
-		// (set) Token: 0x060465B0 RID: 288176
+		// Token: 0x1700746F RID: 29807
+		// (get) Token: 0x0603D659 RID: 251481
+		// (set) Token: 0x0603D65A RID: 251482
 		float InputCoefficient { get; set; }
 
-		// Token: 0x17009C7C RID: 40060
-		// (get) Token: 0x060465B1 RID: 288177
-		// (set) Token: 0x060465B2 RID: 288178
+		// Token: 0x17007470 RID: 29808
+		// (get) Token: 0x0603D65B RID: 251483
+		// (set) Token: 0x0603D65C RID: 251484
 		float MaxAngle { get; set; }
 
-		// Token: 0x17009C7D RID: 40061
-		// (get) Token: 0x060465B3 RID: 288179
-		// (set) Token: 0x060465B4 RID: 288180
+		// Token: 0x17007471 RID: 29809
+		// (get) Token: 0x0603D65D RID: 251485
+		// (set) Token: 0x0603D65E RID: 251486
 		float Radius { get; set; }
 
-		// Token: 0x17009C7E RID: 40062
-		// (get) Token: 0x060465B5 RID: 288181
-		// (set) Token: 0x060465B6 RID: 288182
+		// Token: 0x17007472 RID: 29810
+		// (get) Token: 0x0603D65F RID: 251487
+		// (set) Token: 0x0603D660 RID: 251488
 		bool InnerArc { get; set; }
 
-		// Token: 0x17009C7F RID: 40063
-		// (get) Token: 0x060465B7 RID: 288183
-		// (set) Token: 0x060465B8 RID: 288184
+		// Token: 0x17007473 RID: 29811
+		// (get) Token: 0x0603D661 RID: 251489
+		// (set) Token: 0x0603D662 RID: 251490
 		float HalfHeight { get; set; }
 
-		// Token: 0x17009C80 RID: 40064
-		// (get) Token: 0x060465B9 RID: 288185
+		// Token: 0x17007474 RID: 29812
+		// (get) Token: 0x0603D663 RID: 251491
 		Vector ToCenterVector { get; }
 
-		// Token: 0x17009C81 RID: 40065
-		// (get) Token: 0x060465BA RID: 288186
+		// Token: 0x17007475 RID: 29813
+		// (get) Token: 0x0603D664 RID: 251492
 		Vector SplineForwardVector { get; }
 
-		// Token: 0x17009C82 RID: 40066
-		// (get) Token: 0x060465BB RID: 288187
+		// Token: 0x17007476 RID: 29814
+		// (get) Token: 0x0603D665 RID: 251493
 		Vector CenterLocation { get; }
 
-		// Token: 0x17009C83 RID: 40067
-		// (get) Token: 0x060465BC RID: 288188
+		// Token: 0x17007477 RID: 29815
+		// (get) Token: 0x0603D666 RID: 251494
 		Vector DefaultLocation { get; }
 
-		// Token: 0x060465BD RID: 288189
+		// Token: 0x0603D667 RID: 251495
 		float GetLimitLinearVelocity();
 	}
 }

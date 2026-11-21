@@ -11,16 +11,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006253 RID: 25171
+	// Token: 0x020051D1 RID: 20945
 	public class RhythmShipSettlementView : UiViewBase
 	{
-		// Token: 0x0603F665 RID: 259685 RVA: 0x00F5374E File Offset: 0x00F5194E
+		// Token: 0x06034326 RID: 213798 RVA: 0x00E9A6AA File Offset: 0x00E988AA
 		[NullableContext(1)]
 		public RhythmShipSettlementView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F666 RID: 259686 RVA: 0x00F53760 File Offset: 0x00F51960
+		// Token: 0x06034327 RID: 213799 RVA: 0x00E9A6BC File Offset: 0x00E988BC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -47,14 +47,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F667 RID: 259687 RVA: 0x00F538EE File Offset: 0x00F51AEE
+		// Token: 0x06034328 RID: 213800 RVA: 0x00E9A84A File Offset: 0x00E98A4A
 		protected override void OnStart()
 		{
 			this.RhythmItemLayout = new GenericLayout<RhythmShipSettlementItem, ValueTuple<int, int>>(base.GetGridLayout(7), () => new RhythmShipSettlementItem(), null, false, true);
 			this.RefreshView();
 		}
 
-		// Token: 0x0603F668 RID: 259688 RVA: 0x00F5392C File Offset: 0x00F51B2C
+		// Token: 0x06034329 RID: 213801 RVA: 0x00E9A888 File Offset: 0x00E98A88
 		private void RefreshView()
 		{
 			IRhythmShipSettlementViewData rhythmShipSettlementViewData = this.OpenParam as IRhythmShipSettlementViewData;
@@ -111,13 +111,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			rhythmItemLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603F669 RID: 259689 RVA: 0x00F53C30 File Offset: 0x00F51E30
+		// Token: 0x0603432A RID: 213802 RVA: 0x00E9AB8C File Offset: 0x00E98D8C
 		private void OnClickRestartBtn()
 		{
-			InstanceDungeonEntranceController.Instance.RestartInstanceDungeon().Forget<bool>();
+			InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false).Forget<bool>();
 		}
 
-		// Token: 0x0603F66A RID: 259690 RVA: 0x00F53C44 File Offset: 0x00F51E44
+		// Token: 0x0603432B RID: 213803 RVA: 0x00E9ABA0 File Offset: 0x00E98DA0
 		private void OnClickGoOnGameBtn()
 		{
 			RhythmShipChoseLevelViewData param = new RhythmShipChoseLevelViewData
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.CloseMe(null);
 		}
 
-		// Token: 0x040211D5 RID: 135637
+		// Token: 0x0401BB04 RID: 113412
 		[Nullable(new byte[]
 		{
 			2,
@@ -140,16 +140,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 		})]
 		private GenericLayout<RhythmShipSettlementItem, ValueTuple<int, int>> RhythmItemLayout;
 
-		// Token: 0x040211D6 RID: 135638
+		// Token: 0x0401BB05 RID: 113413
 		private ERhythmShipPlanetType PlanetType = ERhythmShipPlanetType.Normal;
 
-		// Token: 0x040211D7 RID: 135639
+		// Token: 0x0401BB06 RID: 113414
 		private int PlanetId;
 
-		// Token: 0x040211D8 RID: 135640
+		// Token: 0x0401BB07 RID: 113415
 		private int LevelId;
 
-		// Token: 0x040211D9 RID: 135641
+		// Token: 0x0401BB08 RID: 113416
 		private int SubLevelId;
 	}
 }

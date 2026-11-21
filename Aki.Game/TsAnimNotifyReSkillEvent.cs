@@ -9,16 +9,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001CF RID: 463
+// Token: 0x020001D3 RID: 467
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyReSkillEvent.TsAnimNotifyReSkillEvent_C")]
 public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700049D RID: 1181
-	// (get) Token: 0x06001CDD RID: 7389 RVA: 0x0009253C File Offset: 0x0009073C
-	// (set) Token: 0x06001CDE RID: 7390 RVA: 0x00092550 File Offset: 0x00090750
+	// Token: 0x170004BF RID: 1215
+	// (get) Token: 0x06001D7A RID: 7546 RVA: 0x00099278 File Offset: 0x00097478
+	// (set) Token: 0x06001D7B RID: 7547 RVA: 0x0009928C File Offset: 0x0009748C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName 子弹数据名
 	{
@@ -32,9 +32,9 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x1700049E RID: 1182
-	// (get) Token: 0x06001CDF RID: 7391 RVA: 0x00092565 File Offset: 0x00090765
-	// (set) Token: 0x06001CE0 RID: 7392 RVA: 0x00092579 File Offset: 0x00090779
+	// Token: 0x170004C0 RID: 1216
+	// (get) Token: 0x06001D7C RID: 7548 RVA: 0x000992A1 File Offset: 0x000974A1
+	// (set) Token: 0x06001D7D RID: 7549 RVA: 0x000992B5 File Offset: 0x000974B5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector 子弹出生位置偏移
 	{
@@ -48,9 +48,9 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x1700049F RID: 1183
-	// (get) Token: 0x06001CE1 RID: 7393 RVA: 0x0009258E File Offset: 0x0009078E
-	// (set) Token: 0x06001CE2 RID: 7394 RVA: 0x000925A2 File Offset: 0x000907A2
+	// Token: 0x170004C1 RID: 1217
+	// (get) Token: 0x06001D7E RID: 7550 RVA: 0x000992CA File Offset: 0x000974CA
+	// (set) Token: 0x06001D7F RID: 7551 RVA: 0x000992DE File Offset: 0x000974DE
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FRotator 子弹初速度偏移
 	{
@@ -64,8 +64,8 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170004A0 RID: 1184
-	// (get) Token: 0x06001CE3 RID: 7395 RVA: 0x000925B8 File Offset: 0x000907B8
+	// Token: 0x170004C2 RID: 1218
+	// (get) Token: 0x06001D80 RID: 7552 RVA: 0x000992F4 File Offset: 0x000974F4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<string> 子弹id数组
 	{
@@ -81,8 +81,8 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170004A1 RID: 1185
-	// (get) Token: 0x06001CE4 RID: 7396 RVA: 0x000925F4 File Offset: 0x000907F4
+	// Token: 0x170004C3 RID: 1219
+	// (get) Token: 0x06001D81 RID: 7553 RVA: 0x00099330 File Offset: 0x00097530
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<FVector> 子弹出生位置偏移数组
 	{
@@ -98,8 +98,8 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170004A2 RID: 1186
-	// (get) Token: 0x06001CE5 RID: 7397 RVA: 0x00092630 File Offset: 0x00090830
+	// Token: 0x170004C4 RID: 1220
+	// (get) Token: 0x06001D82 RID: 7554 RVA: 0x0009936C File Offset: 0x0009756C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<FRotator> 子弹初速度偏移数组
 	{
@@ -115,9 +115,9 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170004A3 RID: 1187
-	// (get) Token: 0x06001CE6 RID: 7398 RVA: 0x00092669 File Offset: 0x00090869
-	// (set) Token: 0x06001CE7 RID: 7399 RVA: 0x00092679 File Offset: 0x00090879
+	// Token: 0x170004C5 RID: 1221
+	// (get) Token: 0x06001D83 RID: 7555 RVA: 0x000993A5 File Offset: 0x000975A5
+	// (set) Token: 0x06001D84 RID: 7556 RVA: 0x000993B5 File Offset: 0x000975B5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 使用子弹id数组
 	{
@@ -131,9 +131,9 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170004A4 RID: 1188
-	// (get) Token: 0x06001CE8 RID: 7400 RVA: 0x0009268A File Offset: 0x0009088A
-	// (set) Token: 0x06001CE9 RID: 7401 RVA: 0x0009269A File Offset: 0x0009089A
+	// Token: 0x170004C6 RID: 1222
+	// (get) Token: 0x06001D85 RID: 7557 RVA: 0x000993C6 File Offset: 0x000975C6
+	// (set) Token: 0x06001D86 RID: 7558 RVA: 0x000993D6 File Offset: 0x000975D6
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 使用召唤者子弹
 	{
@@ -147,8 +147,8 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170004A5 RID: 1189
-	// (get) Token: 0x06001CEA RID: 7402 RVA: 0x000926AC File Offset: 0x000908AC
+	// Token: 0x170004C7 RID: 1223
+	// (get) Token: 0x06001D87 RID: 7559 RVA: 0x000993E8 File Offset: 0x000975E8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<float> 随机子弹权重数组
 	{
@@ -164,9 +164,9 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170004A6 RID: 1190
-	// (get) Token: 0x06001CEB RID: 7403 RVA: 0x000926E5 File Offset: 0x000908E5
-	// (set) Token: 0x06001CEC RID: 7404 RVA: 0x000926F5 File Offset: 0x000908F5
+	// Token: 0x170004C8 RID: 1224
+	// (get) Token: 0x06001D88 RID: 7560 RVA: 0x00099421 File Offset: 0x00097621
+	// (set) Token: 0x06001D89 RID: 7561 RVA: 0x00099431 File Offset: 0x00097631
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 传入当前实体位置
 	{
@@ -180,9 +180,9 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170004A7 RID: 1191
-	// (get) Token: 0x06001CED RID: 7405 RVA: 0x00092706 File Offset: 0x00090906
-	// (set) Token: 0x06001CEE RID: 7406 RVA: 0x0009271A File Offset: 0x0009091A
+	// Token: 0x170004C9 RID: 1225
+	// (get) Token: 0x06001D8A RID: 7562 RVA: 0x00099442 File Offset: 0x00097642
+	// (set) Token: 0x06001D8B RID: 7563 RVA: 0x00099456 File Offset: 0x00097656
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName 骨骼名字
 	{
@@ -196,9 +196,9 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170004A8 RID: 1192
-	// (get) Token: 0x06001CEF RID: 7407 RVA: 0x0009272F File Offset: 0x0009092F
-	// (set) Token: 0x06001CF0 RID: 7408 RVA: 0x00092743 File Offset: 0x00090943
+	// Token: 0x170004CA RID: 1226
+	// (get) Token: 0x06001D8C RID: 7564 RVA: 0x0009946B File Offset: 0x0009766B
+	// (set) Token: 0x06001D8D RID: 7565 RVA: 0x0009947F File Offset: 0x0009767F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName 指定Tag的Component
 	{
@@ -212,9 +212,9 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170004A9 RID: 1193
-	// (get) Token: 0x06001CF1 RID: 7409 RVA: 0x00092758 File Offset: 0x00090958
-	// (set) Token: 0x06001CF2 RID: 7410 RVA: 0x00092768 File Offset: 0x00090968
+	// Token: 0x170004CB RID: 1227
+	// (get) Token: 0x06001D8E RID: 7566 RVA: 0x00099494 File Offset: 0x00097694
+	// (set) Token: 0x06001D8F RID: 7567 RVA: 0x000994A4 File Offset: 0x000976A4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 通知实体子弹动画帧事件
 	{
@@ -228,32 +228,28 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06001CF3 RID: 7411 RVA: 0x0009277C File Offset: 0x0009097C
+	// Token: 0x06001D90 RID: 7568 RVA: 0x000994B8 File Offset: 0x000976B8
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent MeshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyReSkillEvent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifyReSkillEvent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((MeshComp != null) ? MeshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(MeshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((MeshComp != null) ? MeshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001CF4 RID: 7412 RVA: 0x0009281C File Offset: 0x00090A1C
+	// Token: 0x06001D91 RID: 7569 RVA: 0x00099570 File Offset: 0x00097770
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent MeshComp, UAnimSequenceBase animation)
 	{
@@ -421,35 +417,31 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06001CF5 RID: 7413 RVA: 0x00092C74 File Offset: 0x00090E74
+	// Token: 0x06001D92 RID: 7570 RVA: 0x000999C8 File Offset: 0x00097BC8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyReSkillEvent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyReSkillEvent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001CF6 RID: 7414 RVA: 0x00092CEF File Offset: 0x00090EEF
+	// Token: 0x06001D93 RID: 7571 RVA: 0x00099A58 File Offset: 0x00097C58
 	protected override string GetNotifyName_Implementation()
 	{
 		return "添加子弹";
 	}
 
-	// Token: 0x06001CF7 RID: 7415 RVA: 0x00092CF8 File Offset: 0x00090EF8
+	// Token: 0x06001D94 RID: 7572 RVA: 0x00099A60 File Offset: 0x00097C60
 	private FTransformDouble GetInitTransform(AActor actor)
 	{
 		if (!this.传入当前实体位置)
@@ -499,7 +491,7 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		return tsBaseCharacter2.D_GetTransform();
 	}
 
-	// Token: 0x06001CF8 RID: 7416 RVA: 0x00092DD8 File Offset: 0x00090FD8
+	// Token: 0x06001D95 RID: 7573 RVA: 0x00099B40 File Offset: 0x00097D40
 	private int GetRandomIndex()
 	{
 		int num = this.随机子弹权重数组.Num();
@@ -537,13 +529,13 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		return -1;
 	}
 
-	// Token: 0x06001CF9 RID: 7417 RVA: 0x00092E9E File Offset: 0x0009109E
+	// Token: 0x06001D96 RID: 7574 RVA: 0x00099C06 File Offset: 0x00097E06
 	protected virtual bool CanCreateBullet(AActor owner, UAnimSequenceBase animation, int index)
 	{
 		return true;
 	}
 
-	// Token: 0x06001CFA RID: 7418 RVA: 0x00092EA4 File Offset: 0x000910A4
+	// Token: 0x06001D97 RID: 7575 RVA: 0x00099C0C File Offset: 0x00097E0C
 	protected virtual int CreateBulletFromAN(Entity ownerEntity, string bulletRowName, FTransformDouble? initialTransform, int skillId, bool needSync, long? preContextId, FVectorDouble? targetLocation = null, FVector? locationOffset = null, FRotator? beginRotatorOffset = null)
 	{
 		long? skillContextId = BulletUtil.GetSkillContextId(ownerEntity, skillId);
@@ -575,7 +567,7 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		return bulletEntity.Id;
 	}
 
-	// Token: 0x06001CFB RID: 7419 RVA: 0x00092F42 File Offset: 0x00091142
+	// Token: 0x06001D98 RID: 7576 RVA: 0x00099CAA File Offset: 0x00097EAA
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyReSkillEvent._ClassPtr == IntPtr.Zero)
@@ -585,22 +577,22 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		return TsAnimNotifyReSkillEvent._ClassPtr;
 	}
 
-	// Token: 0x06001CFC RID: 7420 RVA: 0x00092F68 File Offset: 0x00091168
+	// Token: 0x06001D99 RID: 7577 RVA: 0x00099CD0 File Offset: 0x00097ED0
 	public TsAnimNotifyReSkillEvent() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyReSkillEvent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001CFD RID: 7421 RVA: 0x00092F90 File Offset: 0x00091190
+	// Token: 0x06001D9A RID: 7578 RVA: 0x00099CF8 File Offset: 0x00097EF8
 	public TsAnimNotifyReSkillEvent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyReSkillEvent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001CFE RID: 7422 RVA: 0x00092FC3 File Offset: 0x000911C3
+	// Token: 0x06001D9B RID: 7579 RVA: 0x00099D2B File Offset: 0x00097F2B
 	protected TsAnimNotifyReSkillEvent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001CFF RID: 7423 RVA: 0x00092FCC File Offset: 0x000911CC
+	// Token: 0x06001D9C RID: 7580 RVA: 0x00099D34 File Offset: 0x00097F34
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
@@ -609,35 +601,35 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001D00 RID: 7424 RVA: 0x00092FFF File Offset: 0x000911FF
+	// Token: 0x06001D9D RID: 7581 RVA: 0x00099D67 File Offset: 0x00097F67
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x04001212 RID: 4626
+	// Token: 0x04001255 RID: 4693
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyReSkillEvent.TsAnimNotifyReSkillEvent_C";
 
-	// Token: 0x04001213 RID: 4627
+	// Token: 0x04001256 RID: 4694
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04001214 RID: 4628
+	// Token: 0x04001257 RID: 4695
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04001215 RID: 4629
+	// Token: 0x04001258 RID: 4696
 	private static int __PropertyOffset_子弹数据名;
 
-	// Token: 0x04001216 RID: 4630
+	// Token: 0x04001259 RID: 4697
 	private static int __PropertyOffset_子弹出生位置偏移;
 
-	// Token: 0x04001217 RID: 4631
+	// Token: 0x0400125A RID: 4698
 	private static int __PropertyOffset_子弹初速度偏移;
 
-	// Token: 0x04001218 RID: 4632
+	// Token: 0x0400125B RID: 4699
 	private static int __PropertyOffset_子弹id数组;
 
-	// Token: 0x04001219 RID: 4633
+	// Token: 0x0400125C RID: 4700
 	[Nullable(new byte[]
 	{
 		2,
@@ -645,42 +637,42 @@ public class TsAnimNotifyReSkillEvent : TsAnimNotifyBase, IUnrealUObject, IUnrea
 	})]
 	private TArray<string> _子弹id数组;
 
-	// Token: 0x0400121A RID: 4634
+	// Token: 0x0400125D RID: 4701
 	private static int __PropertyOffset_子弹出生位置偏移数组;
 
-	// Token: 0x0400121B RID: 4635
+	// Token: 0x0400125E RID: 4702
 	[Nullable(2)]
 	private TArray<FVector> _子弹出生位置偏移数组;
 
-	// Token: 0x0400121C RID: 4636
+	// Token: 0x0400125F RID: 4703
 	private static int __PropertyOffset_子弹初速度偏移数组;
 
-	// Token: 0x0400121D RID: 4637
+	// Token: 0x04001260 RID: 4704
 	[Nullable(2)]
 	private TArray<FRotator> _子弹初速度偏移数组;
 
-	// Token: 0x0400121E RID: 4638
+	// Token: 0x04001261 RID: 4705
 	private static int __PropertyOffset_使用子弹id数组;
 
-	// Token: 0x0400121F RID: 4639
+	// Token: 0x04001262 RID: 4706
 	private static int __PropertyOffset_使用召唤者子弹;
 
-	// Token: 0x04001220 RID: 4640
+	// Token: 0x04001263 RID: 4707
 	private static int __PropertyOffset_随机子弹权重数组;
 
-	// Token: 0x04001221 RID: 4641
+	// Token: 0x04001264 RID: 4708
 	[Nullable(2)]
 	private TArray<float> _随机子弹权重数组;
 
-	// Token: 0x04001222 RID: 4642
+	// Token: 0x04001265 RID: 4709
 	private static int __PropertyOffset_传入当前实体位置;
 
-	// Token: 0x04001223 RID: 4643
+	// Token: 0x04001266 RID: 4710
 	private static int __PropertyOffset_骨骼名字;
 
-	// Token: 0x04001224 RID: 4644
+	// Token: 0x04001267 RID: 4711
 	private static int __PropertyOffset_指定Tag的Component;
 
-	// Token: 0x04001225 RID: 4645
+	// Token: 0x04001268 RID: 4712
 	private static int __PropertyOffset_通知实体子弹动画帧事件;
 }

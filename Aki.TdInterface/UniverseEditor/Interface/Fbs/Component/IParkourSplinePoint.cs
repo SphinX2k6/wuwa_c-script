@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056B6 RID: 22198
+	// Token: 0x02005C5A RID: 23642
 	public struct IParkourSplinePoint : IFlatbufferObject
 	{
-		// Token: 0x1700A521 RID: 42273
-		// (get) Token: 0x06025102 RID: 151810 RVA: 0x0051DF3E File Offset: 0x0051C13E
+		// Token: 0x1700ADB5 RID: 44469
+		// (get) Token: 0x06027357 RID: 160599 RVA: 0x0055EE86 File Offset: 0x0055D086
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025103 RID: 151811 RVA: 0x0051DF4B File Offset: 0x0051C14B
+		// Token: 0x06027358 RID: 160600 RVA: 0x0055EE93 File Offset: 0x0055D093
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025104 RID: 151812 RVA: 0x0051DF54 File Offset: 0x0051C154
+		// Token: 0x06027359 RID: 160601 RVA: 0x0055EE9C File Offset: 0x0055D09C
 		public static IParkourSplinePoint GetRootAsIParkourSplinePoint(ByteBuffer _bb)
 		{
 			return IParkourSplinePoint.GetRootAsIParkourSplinePoint(_bb, default(IParkourSplinePoint));
 		}
 
-		// Token: 0x06025105 RID: 151813 RVA: 0x0051DF70 File Offset: 0x0051C170
+		// Token: 0x0602735A RID: 160602 RVA: 0x0055EEB8 File Offset: 0x0055D0B8
 		public static IParkourSplinePoint GetRootAsIParkourSplinePoint(ByteBuffer _bb, IParkourSplinePoint obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025106 RID: 151814 RVA: 0x0051DF8D File Offset: 0x0051C18D
+		// Token: 0x0602735B RID: 160603 RVA: 0x0055EED5 File Offset: 0x0055D0D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025107 RID: 151815 RVA: 0x0051DF9C File Offset: 0x0051C19C
+		// Token: 0x0602735C RID: 160604 RVA: 0x0055EEE4 File Offset: 0x0055D0E4
 		public IParkourSplinePoint __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A522 RID: 42274
-		// (get) Token: 0x06025108 RID: 151816 RVA: 0x0051DFAC File Offset: 0x0051C1AC
+		// Token: 0x1700ADB6 RID: 44470
+		// (get) Token: 0x0602735D RID: 160605 RVA: 0x0055EEF4 File Offset: 0x0055D0F4
 		public IVectorInfo? Position
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A523 RID: 42275
-		// (get) Token: 0x06025109 RID: 151817 RVA: 0x0051E00C File Offset: 0x0051C20C
+		// Token: 0x1700ADB7 RID: 44471
+		// (get) Token: 0x0602735E RID: 160606 RVA: 0x0055EF54 File Offset: 0x0055D154
 		public IVectorInfo? ArriveTangent
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A524 RID: 42276
-		// (get) Token: 0x0602510A RID: 151818 RVA: 0x0051E06C File Offset: 0x0051C26C
+		// Token: 0x1700ADB8 RID: 44472
+		// (get) Token: 0x0602735F RID: 160607 RVA: 0x0055EFB4 File Offset: 0x0055D1B4
 		public IVectorInfo? LeaveTangent
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A525 RID: 42277
-		// (get) Token: 0x0602510B RID: 151819 RVA: 0x0051E0CC File Offset: 0x0051C2CC
+		// Token: 0x1700ADB9 RID: 44473
+		// (get) Token: 0x06027360 RID: 160608 RVA: 0x0055F014 File Offset: 0x0055D214
 		public ESplineLine LineType
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A526 RID: 42278
-		// (get) Token: 0x0602510C RID: 151820 RVA: 0x0051E10C File Offset: 0x0051C30C
+		// Token: 0x1700ADBA RID: 44474
+		// (get) Token: 0x06027361 RID: 160609 RVA: 0x0055F054 File Offset: 0x0055D254
 		public IVectorInfo? Rotation
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A527 RID: 42279
-		// (get) Token: 0x0602510D RID: 151821 RVA: 0x0051E16C File Offset: 0x0051C36C
+		// Token: 0x1700ADBB RID: 44475
+		// (get) Token: 0x06027362 RID: 160610 RVA: 0x0055F0B4 File Offset: 0x0055D2B4
 		public int Radius
 		{
 			get
@@ -138,8 +138,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A528 RID: 42280
-		// (get) Token: 0x0602510E RID: 151822 RVA: 0x0051E1AC File Offset: 0x0051C3AC
+		// Token: 0x1700ADBC RID: 44476
+		// (get) Token: 0x06027363 RID: 160611 RVA: 0x0055F0F4 File Offset: 0x0055D2F4
 		public float ModifiedTime
 		{
 			get
@@ -153,8 +153,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A529 RID: 42281
-		// (get) Token: 0x0602510F RID: 151823 RVA: 0x0051E1F0 File Offset: 0x0051C3F0
+		// Token: 0x1700ADBD RID: 44477
+		// (get) Token: 0x06027364 RID: 160612 RVA: 0x0055F138 File Offset: 0x0055D338
 		public long BuffId
 		{
 			get
@@ -168,8 +168,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A52A RID: 42282
-		// (get) Token: 0x06025110 RID: 151824 RVA: 0x0051E230 File Offset: 0x0051C430
+		// Token: 0x1700ADBE RID: 44478
+		// (get) Token: 0x06027365 RID: 160613 RVA: 0x0055F178 File Offset: 0x0055D378
 		public IPointGroup? PointGroup
 		{
 			get
@@ -183,8 +183,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A52B RID: 42283
-		// (get) Token: 0x06025111 RID: 151825 RVA: 0x0051E290 File Offset: 0x0051C490
+		// Token: 0x1700ADBF RID: 44479
+		// (get) Token: 0x06027366 RID: 160614 RVA: 0x0055F1D8 File Offset: 0x0055D3D8
 		public string PlayerTag
 		{
 			get
@@ -198,20 +198,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025112 RID: 151826 RVA: 0x0051E2C8 File Offset: 0x0051C4C8
+		// Token: 0x06027367 RID: 160615 RVA: 0x0055F210 File Offset: 0x0055D410
 		public Span<byte> GetPlayerTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x06025113 RID: 151827 RVA: 0x0051E2D8 File Offset: 0x0051C4D8
+		// Token: 0x06027368 RID: 160616 RVA: 0x0055F220 File Offset: 0x0055D420
 		public byte[] GetPlayerTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(22);
 		}
 
-		// Token: 0x1700A52C RID: 42284
-		// (get) Token: 0x06025114 RID: 151828 RVA: 0x0051E2E8 File Offset: 0x0051C4E8
+		// Token: 0x1700ADC0 RID: 44480
+		// (get) Token: 0x06027369 RID: 160617 RVA: 0x0055F230 File Offset: 0x0055D430
 		public byte NullMask
 		{
 			get
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025115 RID: 151829 RVA: 0x0051E328 File Offset: 0x0051C528
+		// Token: 0x0602736A RID: 160618 RVA: 0x0055F270 File Offset: 0x0055D470
 		public static Offset<IParkourSplinePoint> CreateIParkourSplinePoint(FlatBufferBuilder builder, Offset<IVectorInfo> PositionOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> ArriveTangentOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> LeaveTangentOffset = default(Offset<IVectorInfo>), ESplineLine LineType = ESplineLine.Linear, Offset<IVectorInfo> RotationOffset = default(Offset<IVectorInfo>), int Radius = 0, float ModifiedTime = 0f, long BuffId = 0L, Offset<IPointGroup> PointGroupOffset = default(Offset<IPointGroup>), StringOffset PlayerTagOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(11);
@@ -243,85 +243,85 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IParkourSplinePoint.EndIParkourSplinePoint(builder);
 		}
 
-		// Token: 0x06025116 RID: 151830 RVA: 0x0051E398 File Offset: 0x0051C598
+		// Token: 0x0602736B RID: 160619 RVA: 0x0055F2E0 File Offset: 0x0055D4E0
 		public static void StartIParkourSplinePoint(FlatBufferBuilder builder)
 		{
 			builder.StartTable(11);
 		}
 
-		// Token: 0x06025117 RID: 151831 RVA: 0x0051E3A2 File Offset: 0x0051C5A2
+		// Token: 0x0602736C RID: 160620 RVA: 0x0055F2EA File Offset: 0x0055D4EA
 		public static void AddPosition(FlatBufferBuilder builder, Offset<IVectorInfo> positionOffset)
 		{
 			builder.AddOffset(0, positionOffset.Value, 0);
 		}
 
-		// Token: 0x06025118 RID: 151832 RVA: 0x0051E3B2 File Offset: 0x0051C5B2
+		// Token: 0x0602736D RID: 160621 RVA: 0x0055F2FA File Offset: 0x0055D4FA
 		public static void AddArriveTangent(FlatBufferBuilder builder, Offset<IVectorInfo> arriveTangentOffset)
 		{
 			builder.AddOffset(1, arriveTangentOffset.Value, 0);
 		}
 
-		// Token: 0x06025119 RID: 151833 RVA: 0x0051E3C2 File Offset: 0x0051C5C2
+		// Token: 0x0602736E RID: 160622 RVA: 0x0055F30A File Offset: 0x0055D50A
 		public static void AddLeaveTangent(FlatBufferBuilder builder, Offset<IVectorInfo> leaveTangentOffset)
 		{
 			builder.AddOffset(2, leaveTangentOffset.Value, 0);
 		}
 
-		// Token: 0x0602511A RID: 151834 RVA: 0x0051E3D2 File Offset: 0x0051C5D2
+		// Token: 0x0602736F RID: 160623 RVA: 0x0055F31A File Offset: 0x0055D51A
 		public static void AddLineType(FlatBufferBuilder builder, ESplineLine lineType)
 		{
 			builder.AddByte(3, (byte)lineType, 0);
 		}
 
-		// Token: 0x0602511B RID: 151835 RVA: 0x0051E3DD File Offset: 0x0051C5DD
+		// Token: 0x06027370 RID: 160624 RVA: 0x0055F325 File Offset: 0x0055D525
 		public static void AddRotation(FlatBufferBuilder builder, Offset<IVectorInfo> rotationOffset)
 		{
 			builder.AddOffset(4, rotationOffset.Value, 0);
 		}
 
-		// Token: 0x0602511C RID: 151836 RVA: 0x0051E3ED File Offset: 0x0051C5ED
+		// Token: 0x06027371 RID: 160625 RVA: 0x0055F335 File Offset: 0x0055D535
 		public static void AddRadius(FlatBufferBuilder builder, int radius)
 		{
 			builder.AddInt(5, radius, 0);
 		}
 
-		// Token: 0x0602511D RID: 151837 RVA: 0x0051E3F8 File Offset: 0x0051C5F8
+		// Token: 0x06027372 RID: 160626 RVA: 0x0055F340 File Offset: 0x0055D540
 		public static void AddModifiedTime(FlatBufferBuilder builder, float modifiedTime)
 		{
 			builder.AddFloat(6, modifiedTime, 0.0);
 		}
 
-		// Token: 0x0602511E RID: 151838 RVA: 0x0051E40B File Offset: 0x0051C60B
+		// Token: 0x06027373 RID: 160627 RVA: 0x0055F353 File Offset: 0x0055D553
 		public static void AddBuffId(FlatBufferBuilder builder, long buffId)
 		{
 			builder.AddLong(7, buffId, 0L);
 		}
 
-		// Token: 0x0602511F RID: 151839 RVA: 0x0051E417 File Offset: 0x0051C617
+		// Token: 0x06027374 RID: 160628 RVA: 0x0055F35F File Offset: 0x0055D55F
 		public static void AddPointGroup(FlatBufferBuilder builder, Offset<IPointGroup> pointGroupOffset)
 		{
 			builder.AddOffset(8, pointGroupOffset.Value, 0);
 		}
 
-		// Token: 0x06025120 RID: 151840 RVA: 0x0051E427 File Offset: 0x0051C627
+		// Token: 0x06027375 RID: 160629 RVA: 0x0055F36F File Offset: 0x0055D56F
 		public static void AddPlayerTag(FlatBufferBuilder builder, StringOffset playerTagOffset)
 		{
 			builder.AddOffset(9, playerTagOffset.Value, 0);
 		}
 
-		// Token: 0x06025121 RID: 151841 RVA: 0x0051E438 File Offset: 0x0051C638
+		// Token: 0x06027376 RID: 160630 RVA: 0x0055F380 File Offset: 0x0055D580
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(10, nullMask, 0);
 		}
 
-		// Token: 0x06025122 RID: 151842 RVA: 0x0051E444 File Offset: 0x0051C644
+		// Token: 0x06027377 RID: 160631 RVA: 0x0055F38C File Offset: 0x0055D58C
 		public static Offset<IParkourSplinePoint> EndIParkourSplinePoint(FlatBufferBuilder builder)
 		{
 			return new Offset<IParkourSplinePoint>(builder.EndTable());
 		}
 
-		// Token: 0x06025123 RID: 151843 RVA: 0x0051E454 File Offset: 0x0051C654
+		// Token: 0x06027378 RID: 160632 RVA: 0x0055F39C File Offset: 0x0055D59C
 		public IParkourSplinePointT UnPack()
 		{
 			IParkourSplinePointT parkourSplinePointT = new IParkourSplinePointT();
@@ -329,7 +329,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return parkourSplinePointT;
 		}
 
-		// Token: 0x06025124 RID: 151844 RVA: 0x0051E470 File Offset: 0x0051C670
+		// Token: 0x06027379 RID: 160633 RVA: 0x0055F3B8 File Offset: 0x0055D5B8
 		public void UnPackTo(IParkourSplinePointT _o)
 		{
 			_o.Position = ((this.Position != null) ? this.Position.Value.UnPack() : null);
@@ -345,7 +345,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06025125 RID: 151845 RVA: 0x0051E5B0 File Offset: 0x0051C7B0
+		// Token: 0x0602737A RID: 160634 RVA: 0x0055F4F8 File Offset: 0x0055D6F8
 		public static Offset<IParkourSplinePoint> Pack(FlatBufferBuilder builder, IParkourSplinePointT _o)
 		{
 			if (_o == null)
@@ -361,7 +361,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IParkourSplinePoint.CreateIParkourSplinePoint(builder, positionOffset, arriveTangentOffset, leaveTangentOffset, _o.LineType, rotationOffset, _o.Radius, _o.ModifiedTime, _o.BuffId, pointGroupOffset, playerTagOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400EAE3 RID: 60131
+		// Token: 0x0400F74F RID: 63311
 		private Table __p;
 	}
 }

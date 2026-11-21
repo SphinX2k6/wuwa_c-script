@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005725 RID: 22309
+	// Token: 0x02005D2C RID: 23852
 	public class IPetalGrabEventT
 	{
-		// Token: 0x1700A634 RID: 42548
-		// (get) Token: 0x0602553C RID: 152892 RVA: 0x0052679B File Offset: 0x0052499B
-		// (set) Token: 0x0602553D RID: 152893 RVA: 0x005267A3 File Offset: 0x005249A3
+		// Token: 0x1700AF54 RID: 44884
+		// (get) Token: 0x06027A4B RID: 162379 RVA: 0x0056C4A3 File Offset: 0x0056A6A3
+		// (set) Token: 0x06027A4C RID: 162380 RVA: 0x0056C4AB File Offset: 0x0056A6AB
 		public EPetalGrabEventType EventType { get; set; }
 
-		// Token: 0x1700A635 RID: 42549
-		// (get) Token: 0x0602553E RID: 152894 RVA: 0x005267AC File Offset: 0x005249AC
-		// (set) Token: 0x0602553F RID: 152895 RVA: 0x005267B4 File Offset: 0x005249B4
+		// Token: 0x1700AF55 RID: 44885
+		// (get) Token: 0x06027A4D RID: 162381 RVA: 0x0056C4B4 File Offset: 0x0056A6B4
+		// (set) Token: 0x06027A4E RID: 162382 RVA: 0x0056C4BC File Offset: 0x0056A6BC
 		public string State { get; set; }
 
-		// Token: 0x06025540 RID: 152896 RVA: 0x005267BD File Offset: 0x005249BD
+		// Token: 0x06027A4F RID: 162383 RVA: 0x0056C4C5 File Offset: 0x0056A6C5
 		public IPetalGrabEventT()
 		{
 			this.EventType = EPetalGrabEventType.Grabbed;

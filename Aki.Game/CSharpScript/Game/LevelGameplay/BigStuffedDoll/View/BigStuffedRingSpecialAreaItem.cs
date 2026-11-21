@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 {
-	// Token: 0x02006F5B RID: 28507
+	// Token: 0x020060DC RID: 24796
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BigStuffedRingSpecialAreaItem : BigStuffedRingSubItem<ESubItemType>
 	{
-		// Token: 0x06045590 RID: 284048 RVA: 0x01129840 File Offset: 0x01127A40
+		// Token: 0x0603B73E RID: 243518 RVA: 0x010D3620 File Offset: 0x010D1820
 		public BigStuffedRingSpecialAreaItem(int ringId, [Nullable(new byte[]
 		{
 			0,
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.RingInfo = ringInfo;
 		}
 
-		// Token: 0x06045591 RID: 284049 RVA: 0x0112989F File Offset: 0x01127A9F
+		// Token: 0x0603B73F RID: 243519 RVA: 0x010D367F File Offset: 0x010D187F
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.SpawnAllContinuousArea();
 		}
 
-		// Token: 0x06045592 RID: 284050 RVA: 0x011298B9 File Offset: 0x01127AB9
+		// Token: 0x0603B740 RID: 243520 RVA: 0x010D3699 File Offset: 0x010D1899
 		protected override void OnBeforeDestroy()
 		{
 			this.GoodAreaTextures.Clear();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x06045593 RID: 284051 RVA: 0x011298ED File Offset: 0x01127AED
+		// Token: 0x0603B741 RID: 243521 RVA: 0x010D36CD File Offset: 0x010D18CD
 		public void SpawnAllContinuousArea()
 		{
 			this.ClearAndRecycleAllTextures();
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.AdjustAllTexturesHierarchy();
 		}
 
-		// Token: 0x06045594 RID: 284052 RVA: 0x01129908 File Offset: 0x01127B08
+		// Token: 0x0603B742 RID: 243522 RVA: 0x010D36E8 File Offset: 0x010D18E8
 		public void SpawnSingleContinuousArea(int continuousIndex)
 		{
 			this.ClearAndRecycleTextures(continuousIndex);
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.AdjustTexturesHierarchy(continuousIndex);
 		}
 
-		// Token: 0x06045595 RID: 284053 RVA: 0x01129990 File Offset: 0x01127B90
+		// Token: 0x0603B743 RID: 243523 RVA: 0x010D3770 File Offset: 0x010D1970
 		private void SpawnAllGoodAreas()
 		{
 			List<Area> validAreas = this.RingInfo.GetValidAreas();
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			}
 		}
 
-		// Token: 0x06045596 RID: 284054 RVA: 0x01129ACC File Offset: 0x01127CCC
+		// Token: 0x0603B744 RID: 243524 RVA: 0x010D38AC File Offset: 0x010D1AAC
 		private void SpawnSingleGoodArea(int continuousIndex, bool bMultiBox)
 		{
 			this.RingInfo.RemoveGoodArea(continuousIndex);
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.SetUpRing(continuousIndex, BigStuffedRingSpecialAreaItem.EAreaType.GoodArea, startIndex2, num2);
 		}
 
-		// Token: 0x06045597 RID: 284055 RVA: 0x01129D54 File Offset: 0x01127F54
+		// Token: 0x0603B745 RID: 243525 RVA: 0x010D3B34 File Offset: 0x010D1D34
 		private void SpawnGoodAreaAtValidArea(int continuousIndex, Area validArea)
 		{
 			int startCellIndex = validArea.StartCellIndex;
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.SetUpRing(continuousIndex, BigStuffedRingSpecialAreaItem.EAreaType.GoodArea, startIndex2, num2);
 		}
 
-		// Token: 0x06045598 RID: 284056 RVA: 0x01129E28 File Offset: 0x01128028
+		// Token: 0x0603B746 RID: 243526 RVA: 0x010D3C08 File Offset: 0x010D1E08
 		private void SpawnAllPerfectOrBonusAreas()
 		{
 			this.RingInfo.GetPerfectAreas().Clear();
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			}
 		}
 
-		// Token: 0x06045599 RID: 284057 RVA: 0x01129EF0 File Offset: 0x011280F0
+		// Token: 0x0603B747 RID: 243527 RVA: 0x010D3CD0 File Offset: 0x010D1ED0
 		private void SpawnPerfectOrBonusArea(int continuousIndex)
 		{
 			this.RingInfo.RemovePerfectArea(continuousIndex);
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.SetUpRing(goodArea.ContinuousIndex, BigStuffedRingSpecialAreaItem.EAreaType.BonusArea, startIndex, num2);
 		}
 
-		// Token: 0x0604559A RID: 284058 RVA: 0x01129FF4 File Offset: 0x011281F4
+		// Token: 0x0603B748 RID: 243528 RVA: 0x010D3DD4 File Offset: 0x010D1FD4
 		private bool CheckCanLevelUpToBonus()
 		{
 			float currentScore = BigStuffedDollModel.Instance.CurrentScore;
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			return num != 0f && (float)this.RandomRangeInt(0, 100) <= num;
 		}
 
-		// Token: 0x0604559B RID: 284059 RVA: 0x0112A128 File Offset: 0x01128328
+		// Token: 0x0603B749 RID: 243529 RVA: 0x010D3F08 File Offset: 0x010D2108
 		private void AdjustAllTexturesHierarchy()
 		{
 			foreach (KeyValuePair<int, UUITexture> keyValuePair in this.PerfectAreaTextures)
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			}
 		}
 
-		// Token: 0x0604559C RID: 284060 RVA: 0x0112A1C8 File Offset: 0x011283C8
+		// Token: 0x0603B74A RID: 243530 RVA: 0x010D3FA8 File Offset: 0x010D21A8
 		private void AdjustTexturesHierarchy(int continuousIndex)
 		{
 			UUITexture uuitexture;
@@ -384,7 +384,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			}
 		}
 
-		// Token: 0x0604559D RID: 284061 RVA: 0x0112A208 File Offset: 0x01128408
+		// Token: 0x0603B74B RID: 243531 RVA: 0x010D3FE8 File Offset: 0x010D21E8
 		private void SetUpRing(int continuousIndex, BigStuffedRingSpecialAreaItem.EAreaType areaType, int startIndex, int areaSize)
 		{
 			UUITexture uuitexture = null;
@@ -425,7 +425,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			uuitexture.SetUIActive(true);
 		}
 
-		// Token: 0x0604559E RID: 284062 RVA: 0x0112A384 File Offset: 0x01128584
+		// Token: 0x0603B74C RID: 243532 RVA: 0x010D4164 File Offset: 0x010D2364
 		[NullableContext(0)]
 		private unsafe int GetGoodAreaRandomSize(Span<int> rangeConfig)
 		{
@@ -437,7 +437,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			return result;
 		}
 
-		// Token: 0x0604559F RID: 284063 RVA: 0x0112A3B8 File Offset: 0x011285B8
+		// Token: 0x0603B74D RID: 243533 RVA: 0x010D4198 File Offset: 0x010D2398
 		private int GetGoodAreaRandomSize(int[] rangeConfig)
 		{
 			int result = 3;
@@ -448,13 +448,13 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			return result;
 		}
 
-		// Token: 0x060455A0 RID: 284064 RVA: 0x0112A3DB File Offset: 0x011285DB
+		// Token: 0x0603B74E RID: 243534 RVA: 0x010D41BB File Offset: 0x010D23BB
 		private int RandomRangeInt(int start, int end)
 		{
 			return Math.Min(end, (int)Math.Floor(MathUtils.Instance.GetRandomRange((double)start, (double)(end + 1))));
 		}
 
-		// Token: 0x060455A1 RID: 284065 RVA: 0x0112A3FC File Offset: 0x011285FC
+		// Token: 0x0603B74F RID: 243535 RVA: 0x010D41DC File Offset: 0x010D23DC
 		private void ClearAndRecycleAllTextures()
 		{
 			foreach (KeyValuePair<int, UUITexture> keyValuePair in this.GoodAreaTextures)
@@ -480,7 +480,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.BonusAreaTextures.Clear();
 		}
 
-		// Token: 0x060455A2 RID: 284066 RVA: 0x0112A538 File Offset: 0x01128738
+		// Token: 0x0603B750 RID: 243536 RVA: 0x010D4318 File Offset: 0x010D2518
 		private void ClearAndRecycleTextures(int continuousIndex)
 		{
 			UUITexture uuitexture;
@@ -506,38 +506,38 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			}
 		}
 
-		// Token: 0x040242D1 RID: 148177
+		// Token: 0x0401F586 RID: 128390
 		private readonly Dictionary<int, UUITexture> GoodAreaTextures = new Dictionary<int, UUITexture>();
 
-		// Token: 0x040242D2 RID: 148178
+		// Token: 0x0401F587 RID: 128391
 		private readonly Dictionary<int, UUITexture> PerfectAreaTextures = new Dictionary<int, UUITexture>();
 
-		// Token: 0x040242D3 RID: 148179
+		// Token: 0x0401F588 RID: 128392
 		private readonly Dictionary<int, UUITexture> BonusAreaTextures = new Dictionary<int, UUITexture>();
 
-		// Token: 0x040242D4 RID: 148180
+		// Token: 0x0401F589 RID: 128393
 		private readonly FName ProgressParamName = new FName("Progress");
 
-		// Token: 0x040242D5 RID: 148181
+		// Token: 0x0401F58A RID: 128394
 		[Nullable(2)]
 		private ContinuousArea LastGoodArea;
 
-		// Token: 0x040242D6 RID: 148182
+		// Token: 0x0401F58B RID: 128395
 		private readonly List<UUITexture> CachedTexture = new List<UUITexture>();
 
-		// Token: 0x040242D7 RID: 148183
+		// Token: 0x0401F58C RID: 128396
 		[Nullable(2)]
 		private readonly BigStuffedRingInfo RingInfo;
 
-		// Token: 0x0200CD93 RID: 52627
+		// Token: 0x0200B985 RID: 47493
 		[NullableContext(0)]
 		private enum EAreaType
 		{
-			// Token: 0x0403DF13 RID: 253715
+			// Token: 0x04039342 RID: 234306
 			GoodArea,
-			// Token: 0x0403DF14 RID: 253716
+			// Token: 0x04039343 RID: 234307
 			PerfectArea,
-			// Token: 0x0403DF15 RID: 253717
+			// Token: 0x04039344 RID: 234308
 			BonusArea
 		}
 	}

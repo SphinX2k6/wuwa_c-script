@@ -1,53 +1,65 @@
 ﻿using System;
 
-// Token: 0x020030F8 RID: 12536
+// Token: 0x02002650 RID: 9808
 public static class CustomMovementDefine
 {
-	// Token: 0x0400D032 RID: 53298
+	// Token: 0x0400D423 RID: 54307
 	public const int CUSTOM_MOVEMENTMODE_CLIMB = 0;
 
-	// Token: 0x0400D033 RID: 53299
+	// Token: 0x0400D424 RID: 54308
 	public const int CUSTOM_MOVEMENTMODE_SWIM = 1;
 
-	// Token: 0x0400D034 RID: 53300
+	// Token: 0x0400D425 RID: 54309
 	public const int CUSTOM_MOVEMENTMODE_GLIDE = 2;
 
-	// Token: 0x0400D035 RID: 53301
+	// Token: 0x0400D426 RID: 54310
 	public const int CUSTOM_MOVEMENTMODE_PENDULUM = 3;
 
-	// Token: 0x0400D036 RID: 53302
+	// Token: 0x0400D427 RID: 54311
 	public const int CUSTOM_MOVEMENTMODE_SLIDE = 4;
 
-	// Token: 0x0400D037 RID: 53303
+	// Token: 0x0400D428 RID: 54312
 	public const int CUSTOM_MOVEMENTMODE_UP_TO_WALK_ON_WATER = 5;
 
-	// Token: 0x0400D038 RID: 53304
+	// Token: 0x0400D429 RID: 54313
 	public const int CUSTOM_MOVEMENTMODE_LEISURE = 6;
 
-	// Token: 0x0400D039 RID: 53305
+	// Token: 0x0400D42A RID: 54314
 	public const int CUSTOM_MOVEMENTMODE_SOAR = 7;
 
-	// Token: 0x0400D03A RID: 53306
+	// Token: 0x0400D42B RID: 54315
 	public const int CUSTOM_MOVEMENTMODE_SKI = 8;
 
-	// Token: 0x0400D03B RID: 53307
+	// Token: 0x0400D42C RID: 54316
 	public const int CUSTOM_MOVEMENTMODE_ROLL = 9;
 
-	// Token: 0x0400D03C RID: 53308
+	// Token: 0x0400D42D RID: 54317
 	public const int CUSTOM_MOVEMENTMODE_KITE = 10;
 
-	// Token: 0x0400D03D RID: 53309
+	// Token: 0x0400D42E RID: 54318
 	public const int CUSTOM_MOVEMENTMODE_RIDE = 11;
 
-	// Token: 0x0400D03E RID: 53310
+	// Token: 0x0400D42F RID: 54319
 	public const int CUSTOM_MOVEMENTMODE_RAIL_SLIDE = 12;
 
-	// Token: 0x0400D03F RID: 53311
+	// Token: 0x0400D430 RID: 54320
 	public const int CUSTOM_MOVEMENTMODE_SPLINE_CLIMB = 13;
 
-	// Token: 0x0400D040 RID: 53312
+	// Token: 0x0400D431 RID: 54321
 	public const int CUSTOM_MOVEMENTMODE_SWING = 14;
 
-	// Token: 0x0400D041 RID: 53313
+	// Token: 0x0400D432 RID: 54322
 	public const int CUSTOM_MOVEMENTMODE_FLOATING = 15;
+
+	// Token: 0x0400D433 RID: 54323
+	public const int CUSTOM_MOVEMENTMODE_MECH_HOVER = 16;
+
+	// Token: 0x0400D434 RID: 54324
+	public const int CUSTOM_MOVEMENTMODE_MECH_JET_FLIGHT = 17;
+
+	// Token: 0x0400D435 RID: 54325
+	public const int CUSTOM_MOVEMENTMODE_DIVING = 18;
+
+	// Token: 0x0400D436 RID: 54326
+	public const int CUSTOM_MOVEMENTMODE_FLOWER_FLYING = 19;
 }

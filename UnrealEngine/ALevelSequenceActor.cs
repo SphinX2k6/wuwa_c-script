@@ -6,45 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FB0 RID: 8112
+	// Token: 0x02000641 RID: 1601
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LevelSequence.LevelSequenceActor")]
 	[UnrealStructLayout(1192, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1192)]
-	public class ALevelSequenceActor : AActor, IUnrealUObject, IUnrealObject, IMovieScenePlaybackClient, IUnrealNativeInterface, IUnrealInterface, IMovieSceneBindingOwnerInterface
+	public class ALevelSequenceActor : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601EC84 RID: 126084 RVA: 0x002DC213 File Offset: 0x002DA413
+		// Token: 0x06008CD7 RID: 36055 RVA: 0x000D3EE7 File Offset: 0x000D20E7
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ALevelSequenceActor._ClassPtr;
 		}
 
-		// Token: 0x0601EC85 RID: 126085 RVA: 0x002DC21F File Offset: 0x002DA41F
-		int IMovieScenePlaybackClient.InterfaceOffset()
-		{
-			return ALevelSequenceActor.__InterfaceOffset_IMovieScenePlaybackClient;
-		}
-
-		// Token: 0x0601EC86 RID: 126086 RVA: 0x002DC226 File Offset: 0x002DA426
-		int IMovieSceneBindingOwnerInterface.InterfaceOffset()
-		{
-			return ALevelSequenceActor.__InterfaceOffset_IMovieSceneBindingOwnerInterface;
-		}
-
-		// Token: 0x0601EC87 RID: 126087 RVA: 0x002DC230 File Offset: 0x002DA430
+		// Token: 0x06008CD8 RID: 36056 RVA: 0x000D3EF4 File Offset: 0x000D20F4
 		public ALevelSequenceActor() : this(BuiltinUtils.AllocNativeUObject(ALevelSequenceActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601EC88 RID: 126088 RVA: 0x002DC258 File Offset: 0x002DA458
+		// Token: 0x06008CD9 RID: 36057 RVA: 0x000D3F1C File Offset: 0x000D211C
 		[NullableContext(1)]
 		public ALevelSequenceActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ALevelSequenceActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007A9E RID: 31390
-		// (get) Token: 0x0601EC89 RID: 126089 RVA: 0x002DC28C File Offset: 0x002DA48C
-		// (set) Token: 0x0601EC8A RID: 126090 RVA: 0x002DC2C5 File Offset: 0x002DA4C5
+		// Token: 0x17001AB2 RID: 6834
+		// (get) Token: 0x06008CDA RID: 36058 RVA: 0x000D3F50 File Offset: 0x000D2150
+		// (set) Token: 0x06008CDB RID: 36059 RVA: 0x000D3F89 File Offset: 0x000D2189
 		[Nullable(1)]
 		public FMovieSceneSequencePlaybackSettings PlaybackSettings
 		{
@@ -66,9 +54,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A9F RID: 31391
-		// (get) Token: 0x0601EC8B RID: 126091 RVA: 0x002DC2E6 File Offset: 0x002DA4E6
-		// (set) Token: 0x0601EC8C RID: 126092 RVA: 0x002DC2FA File Offset: 0x002DA4FA
+		// Token: 0x17001AB3 RID: 6835
+		// (get) Token: 0x06008CDC RID: 36060 RVA: 0x000D3FAA File Offset: 0x000D21AA
+		// (set) Token: 0x06008CDD RID: 36061 RVA: 0x000D3FBE File Offset: 0x000D21BE
 		public unsafe ULevelSequencePlayer SequencePlayer
 		{
 			get
@@ -81,9 +69,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007AA0 RID: 31392
-		// (get) Token: 0x0601EC8D RID: 126093 RVA: 0x002DC310 File Offset: 0x002DA510
-		// (set) Token: 0x0601EC8E RID: 126094 RVA: 0x002DC349 File Offset: 0x002DA549
+		// Token: 0x17001AB4 RID: 6836
+		// (get) Token: 0x06008CDE RID: 36062 RVA: 0x000D3FD4 File Offset: 0x000D21D4
+		// (set) Token: 0x06008CDF RID: 36063 RVA: 0x000D400D File Offset: 0x000D220D
 		[Nullable(1)]
 		public FSoftObjectPath LevelSequence
 		{
@@ -105,63 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007AA1 RID: 31393
-		// (get) Token: 0x0601EC8F RID: 126095 RVA: 0x002DC36C File Offset: 0x002DA56C
-		// (set) Token: 0x0601EC90 RID: 126096 RVA: 0x002DC3A5 File Offset: 0x002DA5A5
-		[Nullable(1)]
-		public FLevelSequenceCameraSettings CameraSettings
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FLevelSequenceCameraSettings result;
-				if ((result = this._CameraSettings) == null)
-				{
-					result = (this._CameraSettings = new FLevelSequenceCameraSettings(base.NativePtr + (IntPtr)ALevelSequenceActor.__PropertyOffset_CameraSettings, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLevelSequenceCameraSettings.StaticStruct(), base.NativePtr + (IntPtr)ALevelSequenceActor.__PropertyOffset_CameraSettings, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17007AA2 RID: 31394
-		// (get) Token: 0x0601EC91 RID: 126097 RVA: 0x002DC3C6 File Offset: 0x002DA5C6
-		// (set) Token: 0x0601EC92 RID: 126098 RVA: 0x002DC3DA File Offset: 0x002DA5DA
-		public unsafe ULevelSequenceBurnInOptions BurnInOptions
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<ULevelSequenceBurnInOptions>(base.NativePtr / (IntPtr)sizeof(void*) + ALevelSequenceActor.__PropertyOffset_BurnInOptions);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ALevelSequenceActor.__PropertyOffset_BurnInOptions, value);
-			}
-		}
-
-		// Token: 0x17007AA3 RID: 31395
-		// (get) Token: 0x0601EC93 RID: 126099 RVA: 0x002DC3EF File Offset: 0x002DA5EF
-		// (set) Token: 0x0601EC94 RID: 126100 RVA: 0x002DC403 File Offset: 0x002DA603
-		public unsafe UMovieSceneBindingOverrides BindingOverrides
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UMovieSceneBindingOverrides>(base.NativePtr / (IntPtr)sizeof(void*) + ALevelSequenceActor.__PropertyOffset_BindingOverrides);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ALevelSequenceActor.__PropertyOffset_BindingOverrides, value);
-			}
-		}
-
-		// Token: 0x17007AA4 RID: 31396
-		// (get) Token: 0x0601EC95 RID: 126101 RVA: 0x002DC418 File Offset: 0x002DA618
-		// (set) Token: 0x0601EC96 RID: 126102 RVA: 0x002DC431 File Offset: 0x002DA631
+		// Token: 0x17001AB5 RID: 6837
+		// (get) Token: 0x06008CE0 RID: 36064 RVA: 0x000D402E File Offset: 0x000D222E
+		// (set) Token: 0x06008CE1 RID: 36065 RVA: 0x000D4047 File Offset: 0x000D2247
 		public unsafe bool bAutoPlay_DEPRECATED
 		{
 			get
@@ -174,9 +108,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007AA5 RID: 31397
-		// (get) Token: 0x0601EC97 RID: 126103 RVA: 0x002DC461 File Offset: 0x002DA661
-		// (set) Token: 0x0601EC98 RID: 126104 RVA: 0x002DC47A File Offset: 0x002DA67A
+		// Token: 0x17001AB6 RID: 6838
+		// (get) Token: 0x06008CE2 RID: 36066 RVA: 0x000D4077 File Offset: 0x000D2277
+		// (set) Token: 0x06008CE3 RID: 36067 RVA: 0x000D4090 File Offset: 0x000D2290
 		public unsafe bool bOverrideInstanceData
 		{
 			get
@@ -189,9 +123,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007AA6 RID: 31398
-		// (get) Token: 0x0601EC99 RID: 126105 RVA: 0x002DC4AA File Offset: 0x002DA6AA
-		// (set) Token: 0x0601EC9A RID: 126106 RVA: 0x002DC4C3 File Offset: 0x002DA6C3
+		// Token: 0x17001AB7 RID: 6839
+		// (get) Token: 0x06008CE4 RID: 36068 RVA: 0x000D40C0 File Offset: 0x000D22C0
+		// (set) Token: 0x06008CE5 RID: 36069 RVA: 0x000D40D9 File Offset: 0x000D22D9
 		public unsafe bool bReplicatePlayback
 		{
 			get
@@ -204,9 +138,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007AA7 RID: 31399
-		// (get) Token: 0x0601EC9B RID: 126107 RVA: 0x002DC4F3 File Offset: 0x002DA6F3
-		// (set) Token: 0x0601EC9C RID: 126108 RVA: 0x002DC507 File Offset: 0x002DA707
+		// Token: 0x17001AB8 RID: 6840
+		// (get) Token: 0x06008CE6 RID: 36070 RVA: 0x000D4109 File Offset: 0x000D2309
+		// (set) Token: 0x06008CE7 RID: 36071 RVA: 0x000D411D File Offset: 0x000D231D
 		public unsafe UObject DefaultInstanceData
 		{
 			get
@@ -219,24 +153,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007AA8 RID: 31400
-		// (get) Token: 0x0601EC9D RID: 126109 RVA: 0x002DC51C File Offset: 0x002DA71C
-		// (set) Token: 0x0601EC9E RID: 126110 RVA: 0x002DC530 File Offset: 0x002DA730
-		public unsafe ULevelSequenceBurnIn BurnInInstance
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<ULevelSequenceBurnIn>(base.NativePtr / (IntPtr)sizeof(void*) + ALevelSequenceActor.__PropertyOffset_BurnInInstance);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ALevelSequenceActor.__PropertyOffset_BurnInInstance, value);
-			}
-		}
-
-		// Token: 0x17007AA9 RID: 31401
-		// (get) Token: 0x0601EC9F RID: 126111 RVA: 0x002DC545 File Offset: 0x002DA745
-		// (set) Token: 0x0601ECA0 RID: 126112 RVA: 0x002DC555 File Offset: 0x002DA755
+		// Token: 0x17001AB9 RID: 6841
+		// (get) Token: 0x06008CE8 RID: 36072 RVA: 0x000D4132 File Offset: 0x000D2332
+		// (set) Token: 0x06008CE9 RID: 36073 RVA: 0x000D4142 File Offset: 0x000D2342
 		public unsafe bool bShowBurnin
 		{
 			get
@@ -249,37 +168,37 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601ECA1 RID: 126113 RVA: 0x002DC566 File Offset: 0x002DA766
+		// Token: 0x06008CEA RID: 36074 RVA: 0x000D4153 File Offset: 0x000D2353
 		public void ShowBurnin()
 		{
 			ALevelSequenceActor.__ShowBurnin_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601ECA2 RID: 126114 RVA: 0x002DC573 File Offset: 0x002DA773
+		// Token: 0x06008CEB RID: 36075 RVA: 0x000D4160 File Offset: 0x000D2360
 		public void SetTickOptimize(bool Enable, bool InCheckBindingActorVisibility, bool InSeekTicks)
 		{
 			ALevelSequenceActor.__SetTickOptimize_Internal(base.NativePtr, Enable, InCheckBindingActorVisibility, InSeekTicks);
 		}
 
-		// Token: 0x0601ECA3 RID: 126115 RVA: 0x002DC583 File Offset: 0x002DA783
+		// Token: 0x06008CEC RID: 36076 RVA: 0x000D4170 File Offset: 0x000D2370
 		public void SetShouldLatentDestroy(bool bInShouldLatentDestroy)
 		{
 			ALevelSequenceActor.__SetShouldLatentDestroy_Internal(base.NativePtr, bInShouldLatentDestroy);
 		}
 
-		// Token: 0x0601ECA4 RID: 126116 RVA: 0x002DC591 File Offset: 0x002DA791
+		// Token: 0x06008CED RID: 36077 RVA: 0x000D417E File Offset: 0x000D237E
 		public void SetSequence(ULevelSequence InSequence)
 		{
 			ALevelSequenceActor.__SetSequence_Internal(base.NativePtr, (InSequence != null) ? InSequence.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601ECA5 RID: 126117 RVA: 0x002DC5AE File Offset: 0x002DA7AE
+		// Token: 0x06008CEE RID: 36078 RVA: 0x000D419B File Offset: 0x000D239B
 		public void SetReplicatePlayback(bool ReplicatePlayback)
 		{
 			ALevelSequenceActor.__SetReplicatePlayback_Internal(base.NativePtr, ReplicatePlayback);
 		}
 
-		// Token: 0x0601ECA6 RID: 126118 RVA: 0x002DC5BC File Offset: 0x002DA7BC
+		// Token: 0x06008CEF RID: 36079 RVA: 0x000D41A9 File Offset: 0x000D23A9
 		public void SetBindingByTag(FName BindingTag, [Nullable(new byte[]
 		{
 			2,
@@ -289,7 +208,7 @@ namespace UnrealEngine
 			ALevelSequenceActor.__SetBindingByTag_Internal(base.NativePtr, BindingTag, (Actors ?? new TArray<AActor>()).NativePtr, bAllowBindingsFromAsset, IncludeSubSequence);
 		}
 
-		// Token: 0x0601ECA7 RID: 126119 RVA: 0x002DC5DD File Offset: 0x002DA7DD
+		// Token: 0x06008CF0 RID: 36080 RVA: 0x000D41CA File Offset: 0x000D23CA
 		public void SetBinding(FMovieSceneObjectBindingID Binding, [Nullable(new byte[]
 		{
 			2,
@@ -299,270 +218,249 @@ namespace UnrealEngine
 			ALevelSequenceActor.__SetBinding_Internal(base.NativePtr, (Binding ?? new FMovieSceneObjectBindingID()).NativePtr, (Actors ?? new TArray<AActor>()).NativePtr, bAllowBindingsFromAsset);
 		}
 
-		// Token: 0x0601ECA8 RID: 126120 RVA: 0x002DC60A File Offset: 0x002DA80A
+		// Token: 0x06008CF1 RID: 36081 RVA: 0x000D41F7 File Offset: 0x000D23F7
 		public void ResetBindings()
 		{
 			ALevelSequenceActor.__ResetBindings_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601ECA9 RID: 126121 RVA: 0x002DC617 File Offset: 0x002DA817
+		// Token: 0x06008CF2 RID: 36082 RVA: 0x000D4204 File Offset: 0x000D2404
 		public void ResetBinding(FMovieSceneObjectBindingID Binding)
 		{
 			ALevelSequenceActor.__ResetBinding_Internal(base.NativePtr, (Binding ?? new FMovieSceneObjectBindingID()).NativePtr);
 		}
 
-		// Token: 0x0601ECAA RID: 126122 RVA: 0x002DC633 File Offset: 0x002DA833
+		// Token: 0x06008CF3 RID: 36083 RVA: 0x000D4220 File Offset: 0x000D2420
 		public void RemoveBindingByTag(FName Tag, AActor Actor, bool IncludeSubSequence = false)
 		{
 			ALevelSequenceActor.__RemoveBindingByTag_Internal(base.NativePtr, Tag, (Actor != null) ? Actor.NativePtr : IntPtr.Zero, IncludeSubSequence);
 		}
 
-		// Token: 0x0601ECAB RID: 126123 RVA: 0x002DC652 File Offset: 0x002DA852
+		// Token: 0x06008CF4 RID: 36084 RVA: 0x000D423F File Offset: 0x000D243F
 		public void RemoveBinding(FMovieSceneObjectBindingID Binding, AActor Actor)
 		{
 			ALevelSequenceActor.__RemoveBinding_Internal(base.NativePtr, (Binding ?? new FMovieSceneObjectBindingID()).NativePtr, (Actor != null) ? Actor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601ECAC RID: 126124 RVA: 0x002DC67E File Offset: 0x002DA87E
+		// Token: 0x06008CF5 RID: 36085 RVA: 0x000D426B File Offset: 0x000D246B
 		public ULevelSequence LoadSequence()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ULevelSequence>(ALevelSequenceActor.__LoadSequence_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601ECAD RID: 126125 RVA: 0x002DC690 File Offset: 0x002DA890
+		// Token: 0x06008CF6 RID: 36086 RVA: 0x000D427D File Offset: 0x000D247D
 		public void HideBurnin()
 		{
 			ALevelSequenceActor.__HideBurnin_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601ECAE RID: 126126 RVA: 0x002DC69D File Offset: 0x002DA89D
+		// Token: 0x06008CF7 RID: 36087 RVA: 0x000D428A File Offset: 0x000D248A
 		public bool HasBindingByTag(FName BindingTag, bool IncludeSubSequence = false)
 		{
 			return ALevelSequenceActor.__HasBindingByTag_Internal(base.NativePtr, BindingTag, IncludeSubSequence);
 		}
 
-		// Token: 0x0601ECAF RID: 126127 RVA: 0x002DC6AC File Offset: 0x002DA8AC
+		// Token: 0x06008CF8 RID: 36088 RVA: 0x000D4299 File Offset: 0x000D2499
 		public ULevelSequencePlayer GetSequencePlayer()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ULevelSequencePlayer>(ALevelSequenceActor.__GetSequencePlayer_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601ECB0 RID: 126128 RVA: 0x002DC6BE File Offset: 0x002DA8BE
+		// Token: 0x06008CF9 RID: 36089 RVA: 0x000D42AB File Offset: 0x000D24AB
 		public ULevelSequence GetSequence()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ULevelSequence>(ALevelSequenceActor.__GetSequence_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601ECB1 RID: 126129 RVA: 0x002DC6D0 File Offset: 0x002DA8D0
+		// Token: 0x06008CFA RID: 36090 RVA: 0x000D42BD File Offset: 0x000D24BD
 		[NullableContext(1)]
 		public TArray<UObject> GetBindingByTagInTemplate(FName BindingTag, bool IncludeSubSequence)
 		{
 			return new TArray<UObject>(ALevelSequenceActor.__GetBindingByTagInTemplate_Internal(base.NativePtr, BindingTag, IncludeSubSequence), null);
 		}
 
-		// Token: 0x0601ECB2 RID: 126130 RVA: 0x002DC6E5 File Offset: 0x002DA8E5
+		// Token: 0x06008CFB RID: 36091 RVA: 0x000D42D2 File Offset: 0x000D24D2
 		[NullableContext(1)]
 		public TArray<UObject> GetBindingByTag(FName BindingTag, bool IncludeSubSequence = false)
 		{
 			return new TArray<UObject>(ALevelSequenceActor.__GetBindingByTag_Internal(base.NativePtr, BindingTag, IncludeSubSequence), null);
 		}
 
-		// Token: 0x0601ECB3 RID: 126131 RVA: 0x002DC6FA File Offset: 0x002DA8FA
+		// Token: 0x06008CFC RID: 36092 RVA: 0x000D42E7 File Offset: 0x000D24E7
 		[NullableContext(1)]
 		public TArray<FMovieSceneObjectBindingID> FindNamedBindings(FName Tag)
 		{
 			return new TArray<FMovieSceneObjectBindingID>(ALevelSequenceActor.__FindNamedBindings_Internal(base.NativePtr, Tag), null);
 		}
 
-		// Token: 0x0601ECB4 RID: 126132 RVA: 0x002DC70E File Offset: 0x002DA90E
+		// Token: 0x06008CFD RID: 36093 RVA: 0x000D42FB File Offset: 0x000D24FB
 		[NullableContext(1)]
 		public FMovieSceneObjectBindingID FindNamedBinding(FName Tag)
 		{
 			return new FMovieSceneObjectBindingID(ALevelSequenceActor.__FindNamedBinding_Internal(base.NativePtr, Tag), null);
 		}
 
-		// Token: 0x0601ECB5 RID: 126133 RVA: 0x002DC722 File Offset: 0x002DA922
+		// Token: 0x06008CFE RID: 36094 RVA: 0x000D430F File Offset: 0x000D250F
 		public void AddBindingByTag(FName BindingTag, AActor Actor, bool bAllowBindingsFromAsset = false, bool IncludeSubSequence = false)
 		{
 			ALevelSequenceActor.__AddBindingByTag_Internal(base.NativePtr, BindingTag, (Actor != null) ? Actor.NativePtr : IntPtr.Zero, bAllowBindingsFromAsset, IncludeSubSequence);
 		}
 
-		// Token: 0x0601ECB6 RID: 126134 RVA: 0x002DC743 File Offset: 0x002DA943
+		// Token: 0x06008CFF RID: 36095 RVA: 0x000D4330 File Offset: 0x000D2530
 		public void AddBinding(FMovieSceneObjectBindingID Binding, AActor Actor, bool bAllowBindingsFromAsset = false)
 		{
 			ALevelSequenceActor.__AddBinding_Internal(base.NativePtr, (Binding ?? new FMovieSceneObjectBindingID()).NativePtr, (Actor != null) ? Actor.NativePtr : IntPtr.Zero, bAllowBindingsFromAsset);
 		}
 
-		// Token: 0x0601ECB7 RID: 126135
+		// Token: 0x06008D00 RID: 36096
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ShowBurnin_Internal(IntPtr @this);
 
-		// Token: 0x0601ECB8 RID: 126136
+		// Token: 0x06008D01 RID: 36097
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTickOptimize_Internal(IntPtr @this, bool Enable, bool InCheckBindingActorVisibility, bool InSeekTicks);
 
-		// Token: 0x0601ECB9 RID: 126137
+		// Token: 0x06008D02 RID: 36098
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetShouldLatentDestroy_Internal(IntPtr @this, bool bInShouldLatentDestroy);
 
-		// Token: 0x0601ECBA RID: 126138
+		// Token: 0x06008D03 RID: 36099
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSequence_Internal(IntPtr @this, IntPtr InSequence);
 
-		// Token: 0x0601ECBB RID: 126139
+		// Token: 0x06008D04 RID: 36100
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetReplicatePlayback_Internal(IntPtr @this, bool ReplicatePlayback);
 
-		// Token: 0x0601ECBC RID: 126140
+		// Token: 0x06008D05 RID: 36101
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBindingByTag_Internal(IntPtr @this, FName BindingTag, IntPtr Actors, bool bAllowBindingsFromAsset, bool IncludeSubSequence);
 
-		// Token: 0x0601ECBD RID: 126141
+		// Token: 0x06008D06 RID: 36102
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBinding_Internal(IntPtr @this, IntPtr Binding, IntPtr Actors, bool bAllowBindingsFromAsset);
 
-		// Token: 0x0601ECBE RID: 126142
+		// Token: 0x06008D07 RID: 36103
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetBindings_Internal(IntPtr @this);
 
-		// Token: 0x0601ECBF RID: 126143
+		// Token: 0x06008D08 RID: 36104
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetBinding_Internal(IntPtr @this, IntPtr Binding);
 
-		// Token: 0x0601ECC0 RID: 126144
+		// Token: 0x06008D09 RID: 36105
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RemoveBindingByTag_Internal(IntPtr @this, FName Tag, IntPtr Actor, bool IncludeSubSequence);
 
-		// Token: 0x0601ECC1 RID: 126145
+		// Token: 0x06008D0A RID: 36106
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RemoveBinding_Internal(IntPtr @this, IntPtr Binding, IntPtr Actor);
 
-		// Token: 0x0601ECC2 RID: 126146
+		// Token: 0x06008D0B RID: 36107
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __LoadSequence_Internal(IntPtr @this);
 
-		// Token: 0x0601ECC3 RID: 126147
+		// Token: 0x06008D0C RID: 36108
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __HideBurnin_Internal(IntPtr @this);
 
-		// Token: 0x0601ECC4 RID: 126148
+		// Token: 0x06008D0D RID: 36109
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasBindingByTag_Internal(IntPtr @this, FName BindingTag, bool IncludeSubSequence);
 
-		// Token: 0x0601ECC5 RID: 126149
+		// Token: 0x06008D0E RID: 36110
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetSequencePlayer_Internal(IntPtr @this);
 
-		// Token: 0x0601ECC6 RID: 126150
+		// Token: 0x06008D0F RID: 36111
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetSequence_Internal(IntPtr @this);
 
-		// Token: 0x0601ECC7 RID: 126151
+		// Token: 0x06008D10 RID: 36112
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetBindingByTagInTemplate_Internal(IntPtr @this, FName BindingTag, bool IncludeSubSequence);
 
-		// Token: 0x0601ECC8 RID: 126152
+		// Token: 0x06008D11 RID: 36113
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetBindingByTag_Internal(IntPtr @this, FName BindingTag, bool IncludeSubSequence);
 
-		// Token: 0x0601ECC9 RID: 126153
+		// Token: 0x06008D12 RID: 36114
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindNamedBindings_Internal(IntPtr @this, FName Tag);
 
-		// Token: 0x0601ECCA RID: 126154
+		// Token: 0x06008D13 RID: 36115
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindNamedBinding_Internal(IntPtr @this, FName Tag);
 
-		// Token: 0x0601ECCB RID: 126155
+		// Token: 0x06008D14 RID: 36116
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddBindingByTag_Internal(IntPtr @this, FName BindingTag, IntPtr Actor, bool bAllowBindingsFromAsset, bool IncludeSubSequence);
 
-		// Token: 0x0601ECCC RID: 126156
+		// Token: 0x06008D15 RID: 36117
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddBinding_Internal(IntPtr @this, IntPtr Binding, IntPtr Actor, bool bAllowBindingsFromAsset);
 
-		// Token: 0x0601ECCD RID: 126157 RVA: 0x002DC770 File Offset: 0x002DA970
+		// Token: 0x06008D16 RID: 36118 RVA: 0x000D435D File Offset: 0x000D255D
 		static ALevelSequenceActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LevelSequence.LevelSequenceActor");
 		}
 
-		// Token: 0x0601ECCE RID: 126158 RVA: 0x002DC77E File Offset: 0x002DA97E
+		// Token: 0x06008D17 RID: 36119 RVA: 0x000D436B File Offset: 0x000D256B
 		protected ALevelSequenceActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010A46 RID: 68166
-		internal static int __InterfaceOffset_IMovieScenePlaybackClient;
-
-		// Token: 0x04010A47 RID: 68167
-		internal static int __InterfaceOffset_IMovieSceneBindingOwnerInterface;
-
-		// Token: 0x04010A48 RID: 68168
+		// Token: 0x04003D5B RID: 15707
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LevelSequence.LevelSequenceActor";
 
-		// Token: 0x04010A49 RID: 68169
+		// Token: 0x04003D5C RID: 15708
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04010A4A RID: 68170
+		// Token: 0x04003D5D RID: 15709
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04010A4B RID: 68171
+		// Token: 0x04003D5E RID: 15710
 		public static IntPtr __OnLevelSequenceLoaded__DelegateSignature_NativeFunctionPtr;
 
-		// Token: 0x04010A4C RID: 68172
+		// Token: 0x04003D5F RID: 15711
 		internal static int __PropertyOffset_PlaybackSettings;
 
-		// Token: 0x04010A4D RID: 68173
+		// Token: 0x04003D60 RID: 15712
 		private FMovieSceneSequencePlaybackSettings _PlaybackSettings;
 
-		// Token: 0x04010A4E RID: 68174
+		// Token: 0x04003D61 RID: 15713
 		internal static int __PropertyOffset_SequencePlayer;
 
-		// Token: 0x04010A4F RID: 68175
+		// Token: 0x04003D62 RID: 15714
 		internal static int __PropertyOffset_LevelSequence;
 
-		// Token: 0x04010A50 RID: 68176
+		// Token: 0x04003D63 RID: 15715
 		private FSoftObjectPath _LevelSequence;
 
-		// Token: 0x04010A51 RID: 68177
-		internal static int __PropertyOffset_CameraSettings;
-
-		// Token: 0x04010A52 RID: 68178
-		private FLevelSequenceCameraSettings _CameraSettings;
-
-		// Token: 0x04010A53 RID: 68179
-		internal static int __PropertyOffset_BurnInOptions;
-
-		// Token: 0x04010A54 RID: 68180
-		internal static int __PropertyOffset_BindingOverrides;
-
-		// Token: 0x04010A55 RID: 68181
+		// Token: 0x04003D64 RID: 15716
 		internal static int __PropertyOffset_bAutoPlay_DEPRECATED;
 
-		// Token: 0x04010A56 RID: 68182
+		// Token: 0x04003D65 RID: 15717
 		internal static byte __PropertyMask_bAutoPlay_DEPRECATED;
 
-		// Token: 0x04010A57 RID: 68183
+		// Token: 0x04003D66 RID: 15718
 		internal static int __PropertyOffset_bOverrideInstanceData;
 
-		// Token: 0x04010A58 RID: 68184
+		// Token: 0x04003D67 RID: 15719
 		internal static byte __PropertyMask_bOverrideInstanceData;
 
-		// Token: 0x04010A59 RID: 68185
+		// Token: 0x04003D68 RID: 15720
 		internal static int __PropertyOffset_bReplicatePlayback;
 
-		// Token: 0x04010A5A RID: 68186
+		// Token: 0x04003D69 RID: 15721
 		internal static byte __PropertyMask_bReplicatePlayback;
 
-		// Token: 0x04010A5B RID: 68187
+		// Token: 0x04003D6A RID: 15722
 		internal static int __PropertyOffset_DefaultInstanceData;
 
-		// Token: 0x04010A5C RID: 68188
-		internal static int __PropertyOffset_BurnInInstance;
-
-		// Token: 0x04010A5D RID: 68189
+		// Token: 0x04003D6B RID: 15723
 		internal static int __PropertyOffset_bShowBurnin;
 	}
 }

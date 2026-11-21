@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200040F RID: 1039
+	// Token: 0x02000468 RID: 1128
 	public class IHitBulletType_SetValue
 	{
-		// Token: 0x04001058 RID: 4184
+		// Token: 0x0400117A RID: 4474
 		public EHitBulletType Type;
 	}
 }

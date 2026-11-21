@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018E8 RID: 6376
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A73 RID: 6771
 	public class ICloseSlideTrackMove : ICloseSplineMovePattern
 	{
-		// Token: 0x060088AF RID: 34991 RVA: 0x00143234 File Offset: 0x00141434
+		// Token: 0x06008FDD RID: 36829 RVA: 0x00152B34 File Offset: 0x00150D34
 		private ICloseSlideTrackMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060088B0 RID: 34992 RVA: 0x0014326C File Offset: 0x0014146C
+		// Token: 0x06008FDE RID: 36830 RVA: 0x00152B6C File Offset: 0x00150D6C
 		public static ICloseSlideTrackMove Create([Nullable(2)] ICloseSlideTrackMove instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060088B1 RID: 34993 RVA: 0x0014327F File Offset: 0x0014147F
+		// Token: 0x06008FDF RID: 36831 RVA: 0x00152B7F File Offset: 0x00150D7F
 		public static ICloseSlideTrackMove CreateFromSetValue([Nullable(2)] ICloseSlideTrackMove_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060088B2 RID: 34994 RVA: 0x00143292 File Offset: 0x00141492
+		// Token: 0x06008FE0 RID: 36832 RVA: 0x00152B92 File Offset: 0x00150D92
 		public new ICloseSlideTrackMove_SetValue ToSetValue()
 		{
 			return new ICloseSlideTrackMove_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C50 RID: 11344
-		// (get) Token: 0x060088B3 RID: 34995 RVA: 0x001432B1 File Offset: 0x001414B1
-		// (set) Token: 0x060088B4 RID: 34996 RVA: 0x001432DC File Offset: 0x001414DC
+		// Token: 0x17002E4E RID: 11854
+		// (get) Token: 0x06008FE1 RID: 36833 RVA: 0x00152BB1 File Offset: 0x00150DB1
+		// (set) Token: 0x06008FE2 RID: 36834 RVA: 0x00152BDC File Offset: 0x00150DDC
 		public override ESplineMovePattern Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C51 RID: 11345
-		// (get) Token: 0x060088B5 RID: 34997 RVA: 0x001432EC File Offset: 0x001414EC
-		// (set) Token: 0x060088B6 RID: 34998 RVA: 0x00143326 File Offset: 0x00141526
+		// Token: 0x17002E4F RID: 11855
+		// (get) Token: 0x06008FE3 RID: 36835 RVA: 0x00152BEC File Offset: 0x00150DEC
+		// (set) Token: 0x06008FE4 RID: 36836 RVA: 0x00152C26 File Offset: 0x00150E26
 		public override float? GravitySwitchAngularVelocity
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040055C7 RID: 21959
+		// Token: 0x04005A17 RID: 23063
 		[Nullable(2)]
 		protected new ICloseSlideTrackMove FbInstance;
 
-		// Token: 0x040055C8 RID: 21960
+		// Token: 0x04005A18 RID: 23064
 		[Nullable(2)]
 		protected new ICloseSlideTrackMove_SetValue PocoInterface;
 	}

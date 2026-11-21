@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200504E RID: 20558
+	// Token: 0x020055B0 RID: 21936
 	public enum ICurveControlConfig_Union : byte
 	{
-		// Token: 0x0400E043 RID: 57411
+		// Token: 0x0400EC3C RID: 60476
 		NONE,
-		// Token: 0x0400E044 RID: 57412
+		// Token: 0x0400EC3D RID: 60477
 		ICurveControlConfig,
-		// Token: 0x0400E045 RID: 57413
+		// Token: 0x0400EC3E RID: 60478
 		IChargeSlashControl
 	}
 }

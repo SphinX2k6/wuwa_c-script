@@ -4,50 +4,50 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x02004794 RID: 18324
+	// Token: 0x02004BFC RID: 19452
 	public class IEntityBaseT
 	{
-		// Token: 0x17008377 RID: 33655
-		// (get) Token: 0x0601C3C7 RID: 115655 RVA: 0x003FF87A File Offset: 0x003FDA7A
-		// (set) Token: 0x0601C3C8 RID: 115656 RVA: 0x003FF882 File Offset: 0x003FDA82
+		// Token: 0x170089B8 RID: 35256
+		// (get) Token: 0x0601DB9C RID: 121756 RVA: 0x0042BB16 File Offset: 0x00429D16
+		// (set) Token: 0x0601DB9D RID: 121757 RVA: 0x0042BB1E File Offset: 0x00429D1E
 		public string ObjType { get; set; }
 
-		// Token: 0x17008378 RID: 33656
-		// (get) Token: 0x0601C3C9 RID: 115657 RVA: 0x003FF88B File Offset: 0x003FDA8B
-		// (set) Token: 0x0601C3CA RID: 115658 RVA: 0x003FF893 File Offset: 0x003FDA93
+		// Token: 0x170089B9 RID: 35257
+		// (get) Token: 0x0601DB9E RID: 121758 RVA: 0x0042BB27 File Offset: 0x00429D27
+		// (set) Token: 0x0601DB9F RID: 121759 RVA: 0x0042BB2F File Offset: 0x00429D2F
 		public List<string> Children { get; set; }
 
-		// Token: 0x17008379 RID: 33657
-		// (get) Token: 0x0601C3CB RID: 115659 RVA: 0x003FF89C File Offset: 0x003FDA9C
-		// (set) Token: 0x0601C3CC RID: 115660 RVA: 0x003FF8A4 File Offset: 0x003FDAA4
+		// Token: 0x170089BA RID: 35258
+		// (get) Token: 0x0601DBA0 RID: 121760 RVA: 0x0042BB38 File Offset: 0x00429D38
+		// (set) Token: 0x0601DBA1 RID: 121761 RVA: 0x0042BB40 File Offset: 0x00429D40
 		public List<string> Reference { get; set; }
 
-		// Token: 0x1700837A RID: 33658
-		// (get) Token: 0x0601C3CD RID: 115661 RVA: 0x003FF8AD File Offset: 0x003FDAAD
-		// (set) Token: 0x0601C3CE RID: 115662 RVA: 0x003FF8B5 File Offset: 0x003FDAB5
+		// Token: 0x170089BB RID: 35259
+		// (get) Token: 0x0601DBA2 RID: 121762 RVA: 0x0042BB49 File Offset: 0x00429D49
+		// (set) Token: 0x0601DBA3 RID: 121763 RVA: 0x0042BB51 File Offset: 0x00429D51
 		public List<string> WeakReference { get; set; }
 
-		// Token: 0x1700837B RID: 33659
-		// (get) Token: 0x0601C3CF RID: 115663 RVA: 0x003FF8BE File Offset: 0x003FDABE
-		// (set) Token: 0x0601C3D0 RID: 115664 RVA: 0x003FF8C6 File Offset: 0x003FDAC6
+		// Token: 0x170089BC RID: 35260
+		// (get) Token: 0x0601DBA4 RID: 121764 RVA: 0x0042BB5A File Offset: 0x00429D5A
+		// (set) Token: 0x0601DBA5 RID: 121765 RVA: 0x0042BB62 File Offset: 0x00429D62
 		public string Name { get; set; }
 
-		// Token: 0x1700837C RID: 33660
-		// (get) Token: 0x0601C3D1 RID: 115665 RVA: 0x003FF8CF File Offset: 0x003FDACF
-		// (set) Token: 0x0601C3D2 RID: 115666 RVA: 0x003FF8D7 File Offset: 0x003FDAD7
+		// Token: 0x170089BD RID: 35261
+		// (get) Token: 0x0601DBA6 RID: 121766 RVA: 0x0042BB6B File Offset: 0x00429D6B
+		// (set) Token: 0x0601DBA7 RID: 121767 RVA: 0x0042BB73 File Offset: 0x00429D73
 		public string BlueprintType { get; set; }
 
-		// Token: 0x1700837D RID: 33661
-		// (get) Token: 0x0601C3D3 RID: 115667 RVA: 0x003FF8E0 File Offset: 0x003FDAE0
-		// (set) Token: 0x0601C3D4 RID: 115668 RVA: 0x003FF8E8 File Offset: 0x003FDAE8
+		// Token: 0x170089BE RID: 35262
+		// (get) Token: 0x0601DBA8 RID: 121768 RVA: 0x0042BB7C File Offset: 0x00429D7C
+		// (set) Token: 0x0601DBA9 RID: 121769 RVA: 0x0042BB84 File Offset: 0x00429D84
 		public TComponentsDataT ComponentsData { get; set; }
 
-		// Token: 0x1700837E RID: 33662
-		// (get) Token: 0x0601C3D5 RID: 115669 RVA: 0x003FF8F1 File Offset: 0x003FDAF1
-		// (set) Token: 0x0601C3D6 RID: 115670 RVA: 0x003FF8F9 File Offset: 0x003FDAF9
+		// Token: 0x170089BF RID: 35263
+		// (get) Token: 0x0601DBAA RID: 121770 RVA: 0x0042BB8D File Offset: 0x00429D8D
+		// (set) Token: 0x0601DBAB RID: 121771 RVA: 0x0042BB95 File Offset: 0x00429D95
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601C3D7 RID: 115671 RVA: 0x003FF902 File Offset: 0x003FDB02
+		// Token: 0x0601DBAC RID: 121772 RVA: 0x0042BB9E File Offset: 0x00429D9E
 		public IEntityBaseT()
 		{
 			this.ObjType = null;

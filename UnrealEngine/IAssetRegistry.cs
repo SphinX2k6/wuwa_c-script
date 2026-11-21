@@ -7,25 +7,23 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200035D RID: 861
+	// Token: 0x020000DD RID: 221
 	[UnrealObjectPath("/Script/AssetRegistry.AssetRegistry")]
 	public interface IAssetRegistry : IUnrealNativeInterface, IUnrealInterface, IUnrealObject
 	{
-		// Token: 0x06002FC7 RID: 12231
+		// Token: 0x06000F83 RID: 3971
 		int InterfaceOffset();
 
-		// Token: 0x06002FC8 RID: 12232 RVA: 0x00049392 File Offset: 0x00047592
+		// Token: 0x06000F84 RID: 3972 RVA: 0x0001813B File Offset: 0x0001633B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void WaitForCompletion()
 		{
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__WaitForCompletion_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__WaitForCompletion_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06002FC9 RID: 12233 RVA: 0x000493A8 File Offset: 0x000475A8
+		// Token: 0x06000F85 RID: 3973 RVA: 0x00018150 File Offset: 0x00016350
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void UseFilterToExcludeAssets([Nullable(new byte[]
 		{
 			2,
@@ -43,7 +41,7 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FARFilter.StaticStruct(), &ptr->Filter, Filter.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__UseFilterToExcludeAssets_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__UseFilterToExcludeAssets_NativeFunctionPtr, (void*)ptr);
 			TArray<FAssetData> tarray2 = AssetDataList;
 			if (tarray2 != null)
 			{
@@ -52,20 +50,18 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(IAssetRegistry_ReflectionImplementationFields.__UseFilterToExcludeAssets_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06002FCA RID: 12234 RVA: 0x00049448 File Offset: 0x00047648
+		// Token: 0x06000F86 RID: 3974 RVA: 0x000181F0 File Offset: 0x000163F0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void SearchAllAssets(bool bSynchronousSearch)
 		{
 			IAssetRegistry.__SearchAllAssets_FunctionParams* ptr = stackalloc IAssetRegistry.__SearchAllAssets_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(IAssetRegistry.__SearchAllAssets_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(IAssetRegistry_ReflectionImplementationFields.__SearchAllAssets_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->bSynchronousSearch = bSynchronousSearch;
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__SearchAllAssets_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__SearchAllAssets_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06002FCB RID: 12235 RVA: 0x00049490 File Offset: 0x00047690
+		// Token: 0x06000F87 RID: 3975 RVA: 0x00018238 File Offset: 0x00016438
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void ScanPathsSynchronous([Nullable(new byte[]
 		{
 			2,
@@ -82,7 +78,7 @@ namespace UnrealEngine
 			ptr->bForceRescan = bForceRescan;
 			ptr->bIgnoreBlackListScanFilters = bIgnoreBlackListScanFilters;
 			ptr->bUseParallelScan = bUseParallelScan;
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__ScanPathsSynchronous_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__ScanPathsSynchronous_NativeFunctionPtr, (void*)ptr);
 			object obj2 = InPaths;
 			if (obj2 != null)
 			{
@@ -91,9 +87,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(IAssetRegistry_ReflectionImplementationFields.__ScanPathsSynchronous_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06002FCC RID: 12236 RVA: 0x00049520 File Offset: 0x00047720
+		// Token: 0x06000F88 RID: 3976 RVA: 0x000182C8 File Offset: 0x000164C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void ScanModifiedAssetFiles([Nullable(new byte[]
 		{
 			2,
@@ -107,7 +102,7 @@ namespace UnrealEngine
 			{
 				obj.MoveTo(&ptr->InFilePaths);
 			}
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__ScanModifiedAssetFiles_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__ScanModifiedAssetFiles_NativeFunctionPtr, (void*)ptr);
 			object obj2 = InFilePaths;
 			if (obj2 != null)
 			{
@@ -116,9 +111,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(IAssetRegistry_ReflectionImplementationFields.__ScanModifiedAssetFiles_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06002FCD RID: 12237 RVA: 0x0004959C File Offset: 0x0004779C
+		// Token: 0x06000F89 RID: 3977 RVA: 0x00018340 File Offset: 0x00016540
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void ScanFilesSynchronous([Nullable(new byte[]
 		{
 			2,
@@ -133,7 +127,7 @@ namespace UnrealEngine
 				obj.MoveTo(&ptr->InFilePaths);
 			}
 			ptr->bForceRescan = bForceRescan;
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__ScanFilesSynchronous_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__ScanFilesSynchronous_NativeFunctionPtr, (void*)ptr);
 			object obj2 = InFilePaths;
 			if (obj2 != null)
 			{
@@ -142,10 +136,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(IAssetRegistry_ReflectionImplementationFields.__ScanFilesSynchronous_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06002FCE RID: 12238 RVA: 0x0004961C File Offset: 0x0004781C
+		// Token: 0x06000F8A RID: 3978 RVA: 0x000183C0 File Offset: 0x000165C0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void RunAssetsThroughFilter([Nullable(new byte[]
 		{
 			2,
@@ -163,7 +156,7 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FARFilter.StaticStruct(), &ptr->Filter, Filter.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__RunAssetsThroughFilter_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__RunAssetsThroughFilter_NativeFunctionPtr, (void*)ptr);
 			TArray<FAssetData> tarray2 = AssetDataList;
 			if (tarray2 != null)
 			{
@@ -172,23 +165,21 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(IAssetRegistry_ReflectionImplementationFields.__RunAssetsThroughFilter_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06002FCF RID: 12239 RVA: 0x000496BC File Offset: 0x000478BC
+		// Token: 0x06000F8B RID: 3979 RVA: 0x00018460 File Offset: 0x00016660
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void PrioritizeSearchPath(string PathToPrioritize)
 		{
 			IAssetRegistry.__PrioritizeSearchPath_FunctionParams* ptr = stackalloc IAssetRegistry.__PrioritizeSearchPath_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(IAssetRegistry.__PrioritizeSearchPath_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(IAssetRegistry_ReflectionImplementationFields.__PrioritizeSearchPath_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->PathToPrioritize), PathToPrioritize);
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__PrioritizeSearchPath_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__PrioritizeSearchPath_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(IAssetRegistry_ReflectionImplementationFields.__PrioritizeSearchPath_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06002FD0 RID: 12240 RVA: 0x0004971C File Offset: 0x0004791C
+		// Token: 0x06000F8C RID: 3980 RVA: 0x000184C0 File Offset: 0x000166C0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe bool K2_GetReferencers(FName PackageName, in FAssetRegistryDependencyOptions ReferenceOptions, ref TArray<FName> OutReferencers)
 		{
 			IAssetRegistry.__K2_GetReferencers_FunctionParams* ptr = stackalloc IAssetRegistry.__K2_GetReferencers_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(IAssetRegistry.__K2_GetReferencers_FunctionParams) & -16L;
@@ -203,7 +194,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutReferencers);
 			}
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__K2_GetReferencers_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__K2_GetReferencers_NativeFunctionPtr, (void*)ptr);
 			TArray<FName> tarray2 = OutReferencers;
 			if (tarray2 != null)
 			{
@@ -214,10 +205,9 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x06002FD1 RID: 12241 RVA: 0x000497C8 File Offset: 0x000479C8
+		// Token: 0x06000F8D RID: 3981 RVA: 0x0001856C File Offset: 0x0001676C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe bool K2_GetDependencies(FName PackageName, in FAssetRegistryDependencyOptions DependencyOptions, ref TArray<FName> OutDependencies)
 		{
 			IAssetRegistry.__K2_GetDependencies_FunctionParams* ptr = stackalloc IAssetRegistry.__K2_GetDependencies_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(IAssetRegistry.__K2_GetDependencies_FunctionParams) & -16L;
@@ -232,7 +222,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutDependencies);
 			}
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__K2_GetDependencies_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__K2_GetDependencies_NativeFunctionPtr, (void*)ptr);
 			TArray<FName> tarray2 = OutDependencies;
 			if (tarray2 != null)
 			{
@@ -243,9 +233,8 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x06002FD2 RID: 12242 RVA: 0x00049874 File Offset: 0x00047A74
+		// Token: 0x06000F8E RID: 3982 RVA: 0x00018618 File Offset: 0x00016818
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe bool IsPathsForceScanned([Nullable(new byte[]
 		{
 			2,
@@ -259,7 +248,7 @@ namespace UnrealEngine
 			{
 				obj.MoveTo(&ptr->InPaths);
 			}
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__IsPathsForceScanned_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__IsPathsForceScanned_NativeFunctionPtr, (void*)ptr);
 			object obj2 = InPaths;
 			if (obj2 != null)
 			{
@@ -270,65 +259,60 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x06002FD3 RID: 12243 RVA: 0x000498F4 File Offset: 0x00047AF4
+		// Token: 0x06000F8F RID: 3983 RVA: 0x00018698 File Offset: 0x00016898
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe bool IsPathForceScanned(string InPath)
 		{
 			IAssetRegistry.__IsPathForceScanned_FunctionParams* ptr = stackalloc IAssetRegistry.__IsPathForceScanned_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(IAssetRegistry.__IsPathForceScanned_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(IAssetRegistry_ReflectionImplementationFields.__IsPathForceScanned_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->InPath), InPath);
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__IsPathForceScanned_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__IsPathForceScanned_NativeFunctionPtr, (void*)ptr);
 			bool _Result = ptr->__Result;
 			UnrealReflectionUtils.DestroyStruct(IAssetRegistry_ReflectionImplementationFields.__IsPathForceScanned_NativeFunctionPtr, (void*)ptr, 1);
 			return _Result;
 		}
 
-		// Token: 0x06002FD4 RID: 12244 RVA: 0x00049958 File Offset: 0x00047B58
+		// Token: 0x06000F90 RID: 3984 RVA: 0x000186FC File Offset: 0x000168FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe bool IsLoadingAssets()
 		{
 			IAssetRegistry.__IsLoadingAssets_FunctionParams* ptr = stackalloc IAssetRegistry.__IsLoadingAssets_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(IAssetRegistry.__IsLoadingAssets_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(IAssetRegistry_ReflectionImplementationFields.__IsLoadingAssets_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__IsLoadingAssets_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__IsLoadingAssets_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06002FD5 RID: 12245 RVA: 0x000499A0 File Offset: 0x00047BA0
+		// Token: 0x06000F91 RID: 3985 RVA: 0x00018744 File Offset: 0x00016944
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe bool IsAssetPathLoaded(ref string Path)
 		{
 			IAssetRegistry.__IsAssetPathLoaded_FunctionParams* ptr = stackalloc IAssetRegistry.__IsAssetPathLoaded_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(IAssetRegistry.__IsAssetPathLoaded_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(IAssetRegistry_ReflectionImplementationFields.__IsAssetPathLoaded_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->Path), Path);
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__IsAssetPathLoaded_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__IsAssetPathLoaded_NativeFunctionPtr, (void*)ptr);
 			Path = FString.ToString((void*)(&ptr->Path));
 			bool _Result = ptr->__Result;
 			UnrealReflectionUtils.DestroyStruct(IAssetRegistry_ReflectionImplementationFields.__IsAssetPathLoaded_NativeFunctionPtr, (void*)ptr, 1);
 			return _Result;
 		}
 
-		// Token: 0x06002FD6 RID: 12246 RVA: 0x00049A14 File Offset: 0x00047C14
+		// Token: 0x06000F92 RID: 3986 RVA: 0x000187B8 File Offset: 0x000169B8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe bool HasAssets(FName PackagePath, bool bRecursive = false)
 		{
 			IAssetRegistry.__HasAssets_FunctionParams* ptr = stackalloc IAssetRegistry.__HasAssets_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(IAssetRegistry.__HasAssets_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(IAssetRegistry_ReflectionImplementationFields.__HasAssets_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->PackagePath = PackagePath;
 			ptr->bRecursive = bRecursive;
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__HasAssets_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__HasAssets_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06002FD7 RID: 12247 RVA: 0x00049A68 File Offset: 0x00047C68
+		// Token: 0x06000F93 RID: 3987 RVA: 0x0001880C File Offset: 0x00016A0C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void GetSubPaths(string InBasePath, [Nullable(new byte[]
 		{
 			2,
@@ -344,7 +328,7 @@ namespace UnrealEngine
 				tarray.MoveTo(&ptr->OutPathList);
 			}
 			ptr->bInRecurse = bInRecurse;
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetSubPaths_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetSubPaths_NativeFunctionPtr, (void*)ptr);
 			TArray<string> tarray2 = OutPathList;
 			if (tarray2 != null)
 			{
@@ -353,9 +337,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(IAssetRegistry_ReflectionImplementationFields.__GetSubPaths_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06002FD8 RID: 12248 RVA: 0x00049AF8 File Offset: 0x00047CF8
+		// Token: 0x06000F94 RID: 3988 RVA: 0x00018898 File Offset: 0x00016A98
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe bool GetAssetsByPath(FName PackagePath, [Nullable(new byte[]
 		{
 			2,
@@ -372,7 +355,7 @@ namespace UnrealEngine
 			}
 			ptr->bRecursive = bRecursive;
 			ptr->bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAssetsByPath_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAssetsByPath_NativeFunctionPtr, (void*)ptr);
 			TArray<FAssetData> tarray2 = OutAssetData;
 			if (tarray2 != null)
 			{
@@ -383,9 +366,8 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x06002FD9 RID: 12249 RVA: 0x00049B90 File Offset: 0x00047D90
+		// Token: 0x06000F95 RID: 3989 RVA: 0x0001892C File Offset: 0x00016B2C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe bool GetAssetsByPackageName(FName PackageName, [Nullable(new byte[]
 		{
 			2,
@@ -401,7 +383,7 @@ namespace UnrealEngine
 				tarray.MoveTo(&ptr->OutAssetData);
 			}
 			ptr->bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAssetsByPackageName_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAssetsByPackageName_NativeFunctionPtr, (void*)ptr);
 			TArray<FAssetData> tarray2 = OutAssetData;
 			if (tarray2 != null)
 			{
@@ -412,9 +394,8 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x06002FDA RID: 12250 RVA: 0x00049C20 File Offset: 0x00047E20
+		// Token: 0x06000F96 RID: 3990 RVA: 0x000189B8 File Offset: 0x00016BB8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe bool GetAssetsByClass(FName ClassName, [Nullable(new byte[]
 		{
 			2,
@@ -430,7 +411,7 @@ namespace UnrealEngine
 				tarray.MoveTo(&ptr->OutAssetData);
 			}
 			ptr->bSearchSubClasses = bSearchSubClasses;
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAssetsByClass_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAssetsByClass_NativeFunctionPtr, (void*)ptr);
 			TArray<FAssetData> tarray2 = OutAssetData;
 			if (tarray2 != null)
 			{
@@ -441,10 +422,9 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x06002FDB RID: 12251 RVA: 0x00049CB0 File Offset: 0x00047EB0
+		// Token: 0x06000F97 RID: 3991 RVA: 0x00018A44 File Offset: 0x00016C44
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe bool GetAssets(in FARFilter Filter, [Nullable(new byte[]
 		{
 			2,
@@ -462,7 +442,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutAssetData);
 			}
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAssets_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAssets_NativeFunctionPtr, (void*)ptr);
 			TArray<FAssetData> tarray2 = OutAssetData;
 			if (tarray2 != null)
 			{
@@ -473,25 +453,23 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x06002FDC RID: 12252 RVA: 0x00049D58 File Offset: 0x00047F58
+		// Token: 0x06000F98 RID: 3992 RVA: 0x00018AEC File Offset: 0x00016CEC
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe FAssetData GetAssetByObjectPath(FName ObjectPath, bool bIncludeOnlyOnDiskAssets = false)
 		{
 			IAssetRegistry.__GetAssetByObjectPath_FunctionParams* ptr = stackalloc IAssetRegistry.__GetAssetByObjectPath_FunctionParams[(UIntPtr)143] + 15L / (long)sizeof(IAssetRegistry.__GetAssetByObjectPath_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(IAssetRegistry_ReflectionImplementationFields.__GetAssetByObjectPath_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->ObjectPath = ObjectPath;
 			ptr->bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAssetByObjectPath_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAssetByObjectPath_NativeFunctionPtr, (void*)ptr);
 			FAssetData result = new FAssetData(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(IAssetRegistry_ReflectionImplementationFields.__GetAssetByObjectPath_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06002FDD RID: 12253 RVA: 0x00049DC8 File Offset: 0x00047FC8
+		// Token: 0x06000F99 RID: 3993 RVA: 0x00018B5C File Offset: 0x00016D5C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void GetAllCachedPaths([Nullable(new byte[]
 		{
 			2,
@@ -505,7 +483,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutPathList);
 			}
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAllCachedPaths_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAllCachedPaths_NativeFunctionPtr, (void*)ptr);
 			TArray<string> tarray2 = OutPathList;
 			if (tarray2 != null)
 			{
@@ -514,9 +492,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(IAssetRegistry_ReflectionImplementationFields.__GetAllCachedPaths_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06002FDE RID: 12254 RVA: 0x00049E44 File Offset: 0x00048044
+		// Token: 0x06000F9A RID: 3994 RVA: 0x00018BD4 File Offset: 0x00016DD4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe bool GetAllAssets([Nullable(new byte[]
 		{
 			2,
@@ -531,7 +508,7 @@ namespace UnrealEngine
 				tarray.MoveTo(&ptr->OutAssetData);
 			}
 			ptr->bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAllAssets_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IAssetRegistry_ReflectionImplementationFields.__GetAllAssets_NativeFunctionPtr, (void*)ptr);
 			TArray<FAssetData> tarray2 = OutAssetData;
 			if (tarray2 != null)
 			{
@@ -542,366 +519,366 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x040014BE RID: 5310
+		// Token: 0x04000378 RID: 888
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/AssetRegistry.AssetRegistry";
 
-		// Token: 0x02002BDB RID: 11227
+		// Token: 0x0200090C RID: 2316
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 256)]
 		protected ref struct __UseFilterToExcludeAssets_FunctionParams
 		{
-			// Token: 0x040164A7 RID: 91303
+			// Token: 0x040057E6 RID: 22502
 			[FieldOffset(0)]
 			public byte AssetDataList;
 
-			// Token: 0x040164A8 RID: 91304
+			// Token: 0x040057E7 RID: 22503
 			[FieldOffset(16)]
 			public byte Filter;
 		}
 
-		// Token: 0x02002BDC RID: 11228
+		// Token: 0x0200090D RID: 2317
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SearchAllAssets_FunctionParams
 		{
-			// Token: 0x040164A9 RID: 91305
+			// Token: 0x040057E8 RID: 22504
 			[FieldOffset(0)]
 			public bool bSynchronousSearch;
 		}
 
-		// Token: 0x02002BDD RID: 11229
+		// Token: 0x0200090E RID: 2318
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __ScanPathsSynchronous_FunctionParams
 		{
-			// Token: 0x040164AA RID: 91306
+			// Token: 0x040057E9 RID: 22505
 			[FieldOffset(0)]
 			public byte InPaths;
 
-			// Token: 0x040164AB RID: 91307
+			// Token: 0x040057EA RID: 22506
 			[FieldOffset(16)]
 			public bool bForceRescan;
 
-			// Token: 0x040164AC RID: 91308
+			// Token: 0x040057EB RID: 22507
 			[FieldOffset(17)]
 			public bool bIgnoreBlackListScanFilters;
 
-			// Token: 0x040164AD RID: 91309
+			// Token: 0x040057EC RID: 22508
 			[FieldOffset(18)]
 			public bool bUseParallelScan;
 		}
 
-		// Token: 0x02002BDE RID: 11230
+		// Token: 0x0200090F RID: 2319
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __ScanModifiedAssetFiles_FunctionParams
 		{
-			// Token: 0x040164AE RID: 91310
+			// Token: 0x040057ED RID: 22509
 			[FieldOffset(0)]
 			public byte InFilePaths;
 		}
 
-		// Token: 0x02002BDF RID: 11231
+		// Token: 0x02000910 RID: 2320
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __ScanFilesSynchronous_FunctionParams
 		{
-			// Token: 0x040164AF RID: 91311
+			// Token: 0x040057EE RID: 22510
 			[FieldOffset(0)]
 			public byte InFilePaths;
 
-			// Token: 0x040164B0 RID: 91312
+			// Token: 0x040057EF RID: 22511
 			[FieldOffset(16)]
 			public bool bForceRescan;
 		}
 
-		// Token: 0x02002BE0 RID: 11232
+		// Token: 0x02000911 RID: 2321
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 256)]
 		protected ref struct __RunAssetsThroughFilter_FunctionParams
 		{
-			// Token: 0x040164B1 RID: 91313
+			// Token: 0x040057F0 RID: 22512
 			[FieldOffset(0)]
 			public byte AssetDataList;
 
-			// Token: 0x040164B2 RID: 91314
+			// Token: 0x040057F1 RID: 22513
 			[FieldOffset(16)]
 			public byte Filter;
 		}
 
-		// Token: 0x02002BE1 RID: 11233
+		// Token: 0x02000912 RID: 2322
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __PrioritizeSearchPath_FunctionParams
 		{
-			// Token: 0x040164B3 RID: 91315
+			// Token: 0x040057F2 RID: 22514
 			[FieldOffset(0)]
 			public FString PathToPrioritize;
 		}
 
-		// Token: 0x02002BE2 RID: 11234
+		// Token: 0x02000913 RID: 2323
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __K2_GetReferencers_FunctionParams
 		{
-			// Token: 0x040164B4 RID: 91316
+			// Token: 0x040057F3 RID: 22515
 			[FieldOffset(0)]
 			public FName PackageName;
 
-			// Token: 0x040164B5 RID: 91317
+			// Token: 0x040057F4 RID: 22516
 			[FieldOffset(12)]
 			public byte ReferenceOptions;
 
-			// Token: 0x040164B6 RID: 91318
+			// Token: 0x040057F5 RID: 22517
 			[FieldOffset(24)]
 			public byte OutReferencers;
 
-			// Token: 0x040164B7 RID: 91319
+			// Token: 0x040057F6 RID: 22518
 			[FieldOffset(40)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002BE3 RID: 11235
+		// Token: 0x02000914 RID: 2324
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __K2_GetDependencies_FunctionParams
 		{
-			// Token: 0x040164B8 RID: 91320
+			// Token: 0x040057F7 RID: 22519
 			[FieldOffset(0)]
 			public FName PackageName;
 
-			// Token: 0x040164B9 RID: 91321
+			// Token: 0x040057F8 RID: 22520
 			[FieldOffset(12)]
 			public byte DependencyOptions;
 
-			// Token: 0x040164BA RID: 91322
+			// Token: 0x040057F9 RID: 22521
 			[FieldOffset(24)]
 			public byte OutDependencies;
 
-			// Token: 0x040164BB RID: 91323
+			// Token: 0x040057FA RID: 22522
 			[FieldOffset(40)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002BE4 RID: 11236
+		// Token: 0x02000915 RID: 2325
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __IsPathsForceScanned_FunctionParams
 		{
-			// Token: 0x040164BC RID: 91324
+			// Token: 0x040057FB RID: 22523
 			[FieldOffset(0)]
 			public byte InPaths;
 
-			// Token: 0x040164BD RID: 91325
+			// Token: 0x040057FC RID: 22524
 			[FieldOffset(16)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002BE5 RID: 11237
+		// Token: 0x02000916 RID: 2326
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __IsPathForceScanned_FunctionParams
 		{
-			// Token: 0x040164BE RID: 91326
+			// Token: 0x040057FD RID: 22525
 			[FieldOffset(0)]
 			public FString InPath;
 
-			// Token: 0x040164BF RID: 91327
+			// Token: 0x040057FE RID: 22526
 			[FieldOffset(16)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002BE6 RID: 11238
+		// Token: 0x02000917 RID: 2327
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsLoadingAssets_FunctionParams
 		{
-			// Token: 0x040164C0 RID: 91328
+			// Token: 0x040057FF RID: 22527
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002BE7 RID: 11239
+		// Token: 0x02000918 RID: 2328
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __IsAssetPathLoaded_FunctionParams
 		{
-			// Token: 0x040164C1 RID: 91329
+			// Token: 0x04005800 RID: 22528
 			[FieldOffset(0)]
 			public FString Path;
 
-			// Token: 0x040164C2 RID: 91330
+			// Token: 0x04005801 RID: 22529
 			[FieldOffset(16)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002BE8 RID: 11240
+		// Token: 0x02000919 RID: 2329
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __HasAssets_FunctionParams
 		{
-			// Token: 0x040164C3 RID: 91331
+			// Token: 0x04005802 RID: 22530
 			[FieldOffset(0)]
 			public FName PackagePath;
 
-			// Token: 0x040164C4 RID: 91332
+			// Token: 0x04005803 RID: 22531
 			[FieldOffset(12)]
 			public bool bRecursive;
 
-			// Token: 0x040164C5 RID: 91333
+			// Token: 0x04005804 RID: 22532
 			[FieldOffset(13)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002BE9 RID: 11241
+		// Token: 0x0200091A RID: 2330
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __GetSubPaths_FunctionParams
 		{
-			// Token: 0x040164C6 RID: 91334
+			// Token: 0x04005805 RID: 22533
 			[FieldOffset(0)]
 			public FString InBasePath;
 
-			// Token: 0x040164C7 RID: 91335
+			// Token: 0x04005806 RID: 22534
 			[FieldOffset(16)]
 			public byte OutPathList;
 
-			// Token: 0x040164C8 RID: 91336
+			// Token: 0x04005807 RID: 22535
 			[FieldOffset(32)]
 			public bool bInRecurse;
 		}
 
-		// Token: 0x02002BEA RID: 11242
+		// Token: 0x0200091B RID: 2331
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __GetAssetsByPath_FunctionParams
 		{
-			// Token: 0x040164C9 RID: 91337
+			// Token: 0x04005808 RID: 22536
 			[FieldOffset(0)]
 			public FName PackagePath;
 
-			// Token: 0x040164CA RID: 91338
+			// Token: 0x04005809 RID: 22537
 			[FieldOffset(16)]
 			public byte OutAssetData;
 
-			// Token: 0x040164CB RID: 91339
+			// Token: 0x0400580A RID: 22538
 			[FieldOffset(32)]
 			public bool bRecursive;
 
-			// Token: 0x040164CC RID: 91340
+			// Token: 0x0400580B RID: 22539
 			[FieldOffset(33)]
 			public bool bIncludeOnlyOnDiskAssets;
 
-			// Token: 0x040164CD RID: 91341
+			// Token: 0x0400580C RID: 22540
 			[FieldOffset(34)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002BEB RID: 11243
+		// Token: 0x0200091C RID: 2332
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __GetAssetsByPackageName_FunctionParams
 		{
-			// Token: 0x040164CE RID: 91342
+			// Token: 0x0400580D RID: 22541
 			[FieldOffset(0)]
 			public FName PackageName;
 
-			// Token: 0x040164CF RID: 91343
+			// Token: 0x0400580E RID: 22542
 			[FieldOffset(16)]
 			public byte OutAssetData;
 
-			// Token: 0x040164D0 RID: 91344
+			// Token: 0x0400580F RID: 22543
 			[FieldOffset(32)]
 			public bool bIncludeOnlyOnDiskAssets;
 
-			// Token: 0x040164D1 RID: 91345
+			// Token: 0x04005810 RID: 22544
 			[FieldOffset(33)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002BEC RID: 11244
+		// Token: 0x0200091D RID: 2333
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __GetAssetsByClass_FunctionParams
 		{
-			// Token: 0x040164D2 RID: 91346
+			// Token: 0x04005811 RID: 22545
 			[FieldOffset(0)]
 			public FName ClassName;
 
-			// Token: 0x040164D3 RID: 91347
+			// Token: 0x04005812 RID: 22546
 			[FieldOffset(16)]
 			public byte OutAssetData;
 
-			// Token: 0x040164D4 RID: 91348
+			// Token: 0x04005813 RID: 22547
 			[FieldOffset(32)]
 			public bool bSearchSubClasses;
 
-			// Token: 0x040164D5 RID: 91349
+			// Token: 0x04005814 RID: 22548
 			[FieldOffset(33)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002BED RID: 11245
+		// Token: 0x0200091E RID: 2334
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 264)]
 		protected ref struct __GetAssets_FunctionParams
 		{
-			// Token: 0x040164D6 RID: 91350
+			// Token: 0x04005815 RID: 22549
 			[FieldOffset(0)]
 			public byte Filter;
 
-			// Token: 0x040164D7 RID: 91351
+			// Token: 0x04005816 RID: 22550
 			[FieldOffset(240)]
 			public byte OutAssetData;
 
-			// Token: 0x040164D8 RID: 91352
+			// Token: 0x04005817 RID: 22551
 			[FieldOffset(256)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002BEE RID: 11246
+		// Token: 0x0200091F RID: 2335
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 128)]
 		protected ref struct __GetAssetByObjectPath_FunctionParams
 		{
-			// Token: 0x040164D9 RID: 91353
+			// Token: 0x04005818 RID: 22552
 			[FieldOffset(0)]
 			public FName ObjectPath;
 
-			// Token: 0x040164DA RID: 91354
+			// Token: 0x04005819 RID: 22553
 			[FieldOffset(12)]
 			public bool bIncludeOnlyOnDiskAssets;
 
-			// Token: 0x040164DB RID: 91355
+			// Token: 0x0400581A RID: 22554
 			[FieldOffset(16)]
 			public byte __Result;
 		}
 
-		// Token: 0x02002BEF RID: 11247
+		// Token: 0x02000920 RID: 2336
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetAllCachedPaths_FunctionParams
 		{
-			// Token: 0x040164DC RID: 91356
+			// Token: 0x0400581B RID: 22555
 			[FieldOffset(0)]
 			public byte OutPathList;
 		}
 
-		// Token: 0x02002BF0 RID: 11248
+		// Token: 0x02000921 RID: 2337
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __GetAllAssets_FunctionParams
 		{
-			// Token: 0x040164DD RID: 91357
+			// Token: 0x0400581C RID: 22556
 			[FieldOffset(0)]
 			public byte OutAssetData;
 
-			// Token: 0x040164DE RID: 91358
+			// Token: 0x0400581D RID: 22557
 			[FieldOffset(16)]
 			public bool bIncludeOnlyOnDiskAssets;
 
-			// Token: 0x040164DF RID: 91359
+			// Token: 0x0400581E RID: 22558
 			[FieldOffset(17)]
 			public bool __Result;
 		}

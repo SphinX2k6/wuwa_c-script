@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055FF RID: 22015
+	// Token: 0x02005B9D RID: 23453
 	public enum INoiseRemovalBoarderBase_Union : byte
 	{
-		// Token: 0x0400E977 RID: 59767
+		// Token: 0x0400F5DA RID: 62938
 		NONE,
-		// Token: 0x0400E978 RID: 59768
+		// Token: 0x0400F5DB RID: 62939
 		INoiseRemovalBoarderBase,
-		// Token: 0x0400E979 RID: 59769
+		// Token: 0x0400F5DC RID: 62940
 		INoiseRemovalBoxBoarder,
-		// Token: 0x0400E97A RID: 59770
+		// Token: 0x0400F5DD RID: 62941
 		INoiseRemovalSphereBoarder
 	}
 }

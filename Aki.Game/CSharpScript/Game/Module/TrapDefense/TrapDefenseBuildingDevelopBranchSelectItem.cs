@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AE1 RID: 19169
+	// Token: 0x02003A89 RID: 14985
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseBuildingDevelopBranchSelectItem : GridProxyAbstract<ITrapDefenseDevelopBranchSelectInfo>
 	{
-		// Token: 0x06031A6A RID: 203370 RVA: 0x00B854E8 File Offset: 0x00B836E8
+		// Token: 0x060267FA RID: 157690 RVA: 0x00AC949C File Offset: 0x00AC769C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031A6B RID: 203371 RVA: 0x00B855B0 File Offset: 0x00B837B0
+		// Token: 0x060267FB RID: 157691 RVA: 0x00AC9564 File Offset: 0x00AC7764
 		public override void Refresh(ITrapDefenseDevelopBranchSelectInfo data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A6C RID: 203372 RVA: 0x00B856C5 File Offset: 0x00B838C5
+		// Token: 0x060267FC RID: 157692 RVA: 0x00AC9679 File Offset: 0x00AC7879
 		public void UpdateSelected()
 		{
 			if (this.Data.IsSelected)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A6D RID: 203373 RVA: 0x00B85701 File Offset: 0x00B83901
+		// Token: 0x060267FD RID: 157693 RVA: 0x00AC96B5 File Offset: 0x00AC78B5
 		private void OnClickedToggle(EToggleState state)
 		{
 			if (this.OnClickCb != null)
@@ -113,23 +113,23 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A841 RID: 108609
+		// Token: 0x04015193 RID: 86419
 		protected ITrapDefenseDevelopBranchSelectInfo Data;
 
-		// Token: 0x0401A842 RID: 108610
+		// Token: 0x04015194 RID: 86420
 		public Action<int> OnClickCb;
 
-		// Token: 0x0200AC6A RID: 44138
+		// Token: 0x0200968A RID: 38538
 		[NullableContext(0)]
 		internal class EItem
 		{
-			// Token: 0x04034663 RID: 214627
+			// Token: 0x0402F014 RID: 192532
 			public const int Desc = 0;
 
-			// Token: 0x04034664 RID: 214628
+			// Token: 0x0402F015 RID: 192533
 			public const int Toggle = 1;
 
-			// Token: 0x04034665 RID: 214629
+			// Token: 0x0402F016 RID: 192534
 			public const int Title = 2;
 		}
 	}

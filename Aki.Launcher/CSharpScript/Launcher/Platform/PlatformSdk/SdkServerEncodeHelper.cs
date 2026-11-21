@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000192 RID: 402
+	// Token: 0x02000196 RID: 406
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class SdkServerEncodeHelper
 	{
-		// Token: 0x06000AD1 RID: 2769 RVA: 0x0004529C File Offset: 0x0004349C
+		// Token: 0x06000B05 RID: 2821 RVA: 0x000476B0 File Offset: 0x000458B0
 		public static string MarkData(params object[] keyValPairs)
 		{
 			Dictionary<string, object> dictionary = new Dictionary<string, object>();
@@ -25,7 +25,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return SdkServerEncodeHelper.MarkDataFlag(dictionary);
 		}
 
-		// Token: 0x06000AD2 RID: 2770 RVA: 0x000452EC File Offset: 0x000434EC
+		// Token: 0x06000B06 RID: 2822 RVA: 0x00047700 File Offset: 0x00045900
 		private static string MarkDataFlag(Dictionary<string, object> paramsMap)
 		{
 			string text = UKuroStaticLibrary.Base64EncodeWithConvertToUTF8(JsonSerializer.Serialize<Dictionary<string, object>>(paramsMap, null));
@@ -53,7 +53,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return result;
 		}
 
-		// Token: 0x06000AD3 RID: 2771 RVA: 0x0004533C File Offset: 0x0004353C
+		// Token: 0x06000B07 RID: 2823 RVA: 0x00047750 File Offset: 0x00045950
 		private static void ChangeArray(char[] chars, params int[] index)
 		{
 			for (int i = 0; i < index.Length; i += 2)
@@ -69,7 +69,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x06000AD4 RID: 2772 RVA: 0x00045384 File Offset: 0x00043584
+		// Token: 0x06000B08 RID: 2824 RVA: 0x00047798 File Offset: 0x00045998
 		public static string MarkSign(string appKey, params string[] keyVal)
 		{
 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -83,7 +83,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return SdkServerEncodeHelper.MarkSignFlag(appKey, dictionary);
 		}
 
-		// Token: 0x06000AD5 RID: 2773 RVA: 0x000453D0 File Offset: 0x000435D0
+		// Token: 0x06000B09 RID: 2825 RVA: 0x000477E4 File Offset: 0x000459E4
 		private static string MarkSignFlag(string appKey, Dictionary<string, string> paramsMap)
 		{
 			List<string> list = new List<string>();

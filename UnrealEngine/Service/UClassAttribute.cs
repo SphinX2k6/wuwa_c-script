@@ -5,21 +5,21 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine.Service
 {
-	// Token: 0x02002AFE RID: 11006
+	// Token: 0x020008AE RID: 2222
 	[NullableContext(1)]
 	[Nullable(0)]
 	[AttributeUsage(AttributeTargets.Class, Inherited = false)]
 	public class UClassAttribute : Attribute
 	{
-		// Token: 0x0602849C RID: 165020 RVA: 0x003D4B5C File Offset: 0x003D2D5C
+		// Token: 0x0600BE56 RID: 48726 RVA: 0x0012FEB8 File Offset: 0x0012E0B8
 		public UClassAttribute([NotNull] string path, EClassFlags flags = EClassFlags.CLASS_None)
 		{
 		}
 
-		// Token: 0x040162BD RID: 90813
+		// Token: 0x040056D5 RID: 22229
 		public string Path = path;
 
-		// Token: 0x040162BE RID: 90814
+		// Token: 0x040056D6 RID: 22230
 		public EClassFlags Flags = flags;
 	}
 }

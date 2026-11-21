@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DE5 RID: 3557
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EE1 RID: 3809
 	public class ICustomPrimitiveMapping
 	{
-		// Token: 0x060050A1 RID: 20641 RVA: 0x000C7107 File Offset: 0x000C5307
+		// Token: 0x060055C8 RID: 21960 RVA: 0x000D29CF File Offset: 0x000D0BCF
 		public static ICustomPrimitiveMapping Create(ICustomPrimitiveMapping? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A94 RID: 6804
-		// (get) Token: 0x060050A2 RID: 20642 RVA: 0x000C7126 File Offset: 0x000C5326
+		// Token: 0x17001C01 RID: 7169
+		// (get) Token: 0x060055C9 RID: 21961 RVA: 0x000D29EE File Offset: 0x000D0BEE
 		public virtual string KeyPrefix
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A95 RID: 6805
-		// (get) Token: 0x060050A3 RID: 20643 RVA: 0x000C7133 File Offset: 0x000C5333
+		// Token: 0x17001C02 RID: 7170
+		// (get) Token: 0x060055CA RID: 21962 RVA: 0x000D29FB File Offset: 0x000D0BFB
 		public virtual int Index
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E4C RID: 11852
+		// Token: 0x04003114 RID: 12564
 		private ICustomPrimitiveMapping Instance;
 	}
 }

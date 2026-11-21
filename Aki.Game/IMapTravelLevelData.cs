@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x020012D0 RID: 4816
+// Token: 0x02000784 RID: 1924
 public interface IMapTravelLevelData
 {
-	// Token: 0x17000B4D RID: 2893
-	// (get) Token: 0x060084BB RID: 33979
-	// (set) Token: 0x060084BC RID: 33980
+	// Token: 0x17000B6D RID: 2925
+	// (get) Token: 0x06005856 RID: 22614
+	// (set) Token: 0x06005857 RID: 22615
 	int Id { get; set; }
 
-	// Token: 0x17000B4E RID: 2894
-	// (get) Token: 0x060084BD RID: 33981
-	// (set) Token: 0x060084BE RID: 33982
+	// Token: 0x17000B6E RID: 2926
+	// (get) Token: 0x06005858 RID: 22616
+	// (set) Token: 0x06005859 RID: 22617
 	int Level { get; set; }
 
-	// Token: 0x17000B4F RID: 2895
-	// (get) Token: 0x060084BF RID: 33983
-	// (set) Token: 0x060084C0 RID: 33984
+	// Token: 0x17000B6F RID: 2927
+	// (get) Token: 0x0600585A RID: 22618
+	// (set) Token: 0x0600585B RID: 22619
 	int AccumulateExp { get; set; }
 
-	// Token: 0x17000B50 RID: 2896
-	// (get) Token: 0x060084C1 RID: 33985
-	// (set) Token: 0x060084C2 RID: 33986
+	// Token: 0x17000B70 RID: 2928
+	// (get) Token: 0x0600585C RID: 22620
+	// (set) Token: 0x0600585D RID: 22621
 	int TargetExp { get; set; }
 }

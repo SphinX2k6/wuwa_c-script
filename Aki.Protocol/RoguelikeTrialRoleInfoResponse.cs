@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000FC7 RID: 4039
+	// Token: 0x02000FB7 RID: 4023
 	[NetMessage(EMessageId.RoguelikeTrialRoleInfoResponse)]
 	public sealed class RoguelikeTrialRoleInfoResponse : IMessage<RoguelikeTrialRoleInfoResponse>, IMessage, IEquatable<RoguelikeTrialRoleInfoResponse>, IDeepCloneable<RoguelikeTrialRoleInfoResponse>, IBufferMessage
 	{
-		// Token: 0x06015977 RID: 88439 RVA: 0x0032244C File Offset: 0x0032064C
+		// Token: 0x06015892 RID: 88210 RVA: 0x00320D98 File Offset: 0x0031EF98
 		[NullableContext(1)]
 		public static RoguelikeTrialRoleInfoResponse Create()
 		{
 			return new RoguelikeTrialRoleInfoResponse();
 		}
 
-		// Token: 0x170047FF RID: 18431
-		// (get) Token: 0x06015978 RID: 88440 RVA: 0x00322453 File Offset: 0x00320653
+		// Token: 0x170047D5 RID: 18389
+		// (get) Token: 0x06015893 RID: 88211 RVA: 0x00320D9F File Offset: 0x0031EF9F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004800 RID: 18432
-		// (get) Token: 0x06015979 RID: 88441 RVA: 0x00322456 File Offset: 0x00320656
+		// Token: 0x170047D6 RID: 18390
+		// (get) Token: 0x06015894 RID: 88212 RVA: 0x00320DA2 File Offset: 0x0031EFA2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601597A RID: 88442 RVA: 0x0032245D File Offset: 0x0032065D
+		// Token: 0x06015895 RID: 88213 RVA: 0x00320DA9 File Offset: 0x0031EFA9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoguelikeTrialRoleInfoResponse()
 		{
 		}
 
-		// Token: 0x0601597B RID: 88443 RVA: 0x0032247C File Offset: 0x0032067C
+		// Token: 0x06015896 RID: 88214 RVA: 0x00320DC8 File Offset: 0x0031EFC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoguelikeTrialRoleInfoResponse(RoguelikeTrialRoleInfoResponse other) : this()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601597C RID: 88444 RVA: 0x003224FE File Offset: 0x003206FE
+		// Token: 0x06015897 RID: 88215 RVA: 0x00320E4A File Offset: 0x0031F04A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoguelikeTrialRoleInfoResponse Clone()
@@ -73,9 +73,9 @@ namespace Aki.Protocol
 			return new RoguelikeTrialRoleInfoResponse(this);
 		}
 
-		// Token: 0x17004801 RID: 18433
-		// (get) Token: 0x0601597D RID: 88445 RVA: 0x00322506 File Offset: 0x00320706
-		// (set) Token: 0x0601597E RID: 88446 RVA: 0x0032250E File Offset: 0x0032070E
+		// Token: 0x170047D7 RID: 18391
+		// (get) Token: 0x06015898 RID: 88216 RVA: 0x00320E52 File Offset: 0x0031F052
+		// (set) Token: 0x06015899 RID: 88217 RVA: 0x00320E5A File Offset: 0x0031F05A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -90,8 +90,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004802 RID: 18434
-		// (get) Token: 0x0601597F RID: 88447 RVA: 0x00322517 File Offset: 0x00320717
+		// Token: 0x170047D8 RID: 18392
+		// (get) Token: 0x0601589A RID: 88218 RVA: 0x00320E63 File Offset: 0x0031F063
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> ValidTrialRoleIds
@@ -102,9 +102,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004803 RID: 18435
-		// (get) Token: 0x06015980 RID: 88448 RVA: 0x0032251F File Offset: 0x0032071F
-		// (set) Token: 0x06015981 RID: 88449 RVA: 0x00322527 File Offset: 0x00320727
+		// Token: 0x170047D9 RID: 18393
+		// (get) Token: 0x0601589B RID: 88219 RVA: 0x00320E6B File Offset: 0x0031F06B
+		// (set) Token: 0x0601589C RID: 88220 RVA: 0x00320E73 File Offset: 0x0031F073
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int AddLevel
@@ -119,9 +119,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004804 RID: 18436
-		// (get) Token: 0x06015982 RID: 88450 RVA: 0x00322530 File Offset: 0x00320730
-		// (set) Token: 0x06015983 RID: 88451 RVA: 0x00322538 File Offset: 0x00320738
+		// Token: 0x170047DA RID: 18394
+		// (get) Token: 0x0601589D RID: 88221 RVA: 0x00320E7C File Offset: 0x0031F07C
+		// (set) Token: 0x0601589E RID: 88222 RVA: 0x00320E84 File Offset: 0x0031F084
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MaxLevel
@@ -136,9 +136,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004805 RID: 18437
-		// (get) Token: 0x06015984 RID: 88452 RVA: 0x00322541 File Offset: 0x00320741
-		// (set) Token: 0x06015985 RID: 88453 RVA: 0x00322549 File Offset: 0x00320749
+		// Token: 0x170047DB RID: 18395
+		// (get) Token: 0x0601589F RID: 88223 RVA: 0x00320E8D File Offset: 0x0031F08D
+		// (set) Token: 0x060158A0 RID: 88224 RVA: 0x00320E95 File Offset: 0x0031F095
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleLevel
@@ -153,9 +153,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004806 RID: 18438
-		// (get) Token: 0x06015986 RID: 88454 RVA: 0x00322552 File Offset: 0x00320752
-		// (set) Token: 0x06015987 RID: 88455 RVA: 0x0032255A File Offset: 0x0032075A
+		// Token: 0x170047DC RID: 18396
+		// (get) Token: 0x060158A1 RID: 88225 RVA: 0x00320E9E File Offset: 0x0031F09E
+		// (set) Token: 0x060158A2 RID: 88226 RVA: 0x00320EA6 File Offset: 0x0031F0A6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int WeaponLevel
@@ -170,8 +170,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004807 RID: 18439
-		// (get) Token: 0x06015988 RID: 88456 RVA: 0x00322563 File Offset: 0x00320763
+		// Token: 0x170047DD RID: 18397
+		// (get) Token: 0x060158A3 RID: 88227 RVA: 0x00320EAF File Offset: 0x0031F0AF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RogueInstRoleData> RogueInstRoleDatas
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015989 RID: 88457 RVA: 0x0032256B File Offset: 0x0032076B
+		// Token: 0x060158A4 RID: 88228 RVA: 0x00320EB7 File Offset: 0x0031F0B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RoguelikeTrialRoleInfoResponse);
 		}
 
-		// Token: 0x0601598A RID: 88458 RVA: 0x0032257C File Offset: 0x0032077C
+		// Token: 0x060158A5 RID: 88229 RVA: 0x00320EC8 File Offset: 0x0031F0C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RoguelikeTrialRoleInfoResponse other)
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.validTrialRoleIds_.Equals(other.validTrialRoleIds_) && this.AddLevel == other.AddLevel && this.MaxLevel == other.MaxLevel && this.RoleLevel == other.RoleLevel && this.WeaponLevel == other.WeaponLevel && this.rogueInstRoleDatas_.Equals(other.rogueInstRoleDatas_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601598B RID: 88459 RVA: 0x00322620 File Offset: 0x00320820
+		// Token: 0x060158A6 RID: 88230 RVA: 0x00320F6C File Offset: 0x0031F16C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -233,7 +233,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601598C RID: 88460 RVA: 0x003226E5 File Offset: 0x003208E5
+		// Token: 0x060158A7 RID: 88231 RVA: 0x00321031 File Offset: 0x0031F231
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -241,7 +241,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601598D RID: 88461 RVA: 0x003226F2 File Offset: 0x003208F2
+		// Token: 0x060158A8 RID: 88232 RVA: 0x0032103E File Offset: 0x0031F23E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -249,45 +249,45 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601598E RID: 88462 RVA: 0x003226FC File Offset: 0x003208FC
+		// Token: 0x060158A9 RID: 88233 RVA: 0x00321048 File Offset: 0x0031F248
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.rogueInstRoleDatas_.WriteTo(ref output, RoguelikeTrialRoleInfoResponse._repeated_rogueInstRoleDatas_codec);
-			if (this.ErrorCode != ErrorCode.Success)
+			if (this.AddLevel != 0)
 			{
-				output.WriteRawTag(24);
-				output.WriteEnum((int)this.ErrorCode);
+				output.WriteRawTag(8);
+				output.WriteInt32(this.AddLevel);
+			}
+			this.validTrialRoleIds_.WriteTo(ref output, RoguelikeTrialRoleInfoResponse._repeated_validTrialRoleIds_codec);
+			if (this.RoleLevel != 0)
+			{
+				output.WriteRawTag(32);
+				output.WriteInt32(this.RoleLevel);
 			}
 			if (this.MaxLevel != 0)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(40);
 				output.WriteInt32(this.MaxLevel);
-			}
-			if (this.AddLevel != 0)
-			{
-				output.WriteRawTag(96);
-				output.WriteInt32(this.AddLevel);
-			}
-			if (this.RoleLevel != 0)
-			{
-				output.WriteRawTag(104);
-				output.WriteInt32(this.RoleLevel);
 			}
 			if (this.WeaponLevel != 0)
 			{
-				output.WriteRawTag(112);
+				output.WriteRawTag(48);
 				output.WriteInt32(this.WeaponLevel);
 			}
-			this.validTrialRoleIds_.WriteTo(ref output, RoguelikeTrialRoleInfoResponse._repeated_validTrialRoleIds_codec);
+			if (this.ErrorCode != ErrorCode.Success)
+			{
+				output.WriteRawTag(64);
+				output.WriteEnum((int)this.ErrorCode);
+			}
+			this.rogueInstRoleDatas_.WriteTo(ref output, RoguelikeTrialRoleInfoResponse._repeated_rogueInstRoleDatas_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0601598F RID: 88463 RVA: 0x003227CC File Offset: 0x003209CC
+		// Token: 0x060158AA RID: 88234 RVA: 0x00321118 File Offset: 0x0031F318
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -322,7 +322,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015990 RID: 88464 RVA: 0x00322890 File Offset: 0x00320A90
+		// Token: 0x060158AB RID: 88235 RVA: 0x003211DC File Offset: 0x0031F3DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RoguelikeTrialRoleInfoResponse other)
@@ -356,7 +356,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06015991 RID: 88465 RVA: 0x0032293E File Offset: 0x00320B3E
+		// Token: 0x060158AC RID: 88236 RVA: 0x0032128A File Offset: 0x0031F48A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -364,7 +364,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06015992 RID: 88466 RVA: 0x00322948 File Offset: 0x00320B48
+		// Token: 0x060158AD RID: 88237 RVA: 0x00321294 File Offset: 0x0031F494
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -376,106 +376,112 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 96U)
+				if (num <= 32U)
 				{
-					if (num <= 24U)
+					if (num <= 16U)
 					{
-						if (num == 10U)
-						{
-							this.rogueInstRoleDatas_.AddEntriesFrom(ref input, RoguelikeTrialRoleInfoResponse._repeated_rogueInstRoleDatas_codec);
-							continue;
-						}
-						if (num == 24U)
-						{
-							this.ErrorCode = (ErrorCode)input.ReadEnum();
-							continue;
-						}
-					}
-					else
-					{
-						if (num == 88U)
-						{
-							this.MaxLevel = input.ReadInt32();
-							continue;
-						}
-						if (num == 96U)
+						if (num == 8U)
 						{
 							this.AddLevel = input.ReadInt32();
 							continue;
 						}
+						if (num != 16U)
+						{
+							goto IL_48;
+						}
 					}
-				}
-				else if (num <= 112U)
-				{
-					if (num == 104U)
+					else if (num != 18U)
 					{
+						if (num != 32U)
+						{
+							goto IL_48;
+						}
 						this.RoleLevel = input.ReadInt32();
 						continue;
 					}
-					if (num == 112U)
+					this.validTrialRoleIds_.AddEntriesFrom(ref input, RoguelikeTrialRoleInfoResponse._repeated_validTrialRoleIds_codec);
+					continue;
+				}
+				if (num <= 48U)
+				{
+					if (num == 40U)
+					{
+						this.MaxLevel = input.ReadInt32();
+						continue;
+					}
+					if (num == 48U)
 					{
 						this.WeaponLevel = input.ReadInt32();
 						continue;
 					}
 				}
-				else if (num == 120U || num == 122U)
+				else
 				{
-					this.validTrialRoleIds_.AddEntriesFrom(ref input, RoguelikeTrialRoleInfoResponse._repeated_validTrialRoleIds_codec);
-					continue;
+					if (num == 64U)
+					{
+						this.ErrorCode = (ErrorCode)input.ReadEnum();
+						continue;
+					}
+					if (num == 114U)
+					{
+						this.rogueInstRoleDatas_.AddEntriesFrom(ref input, RoguelikeTrialRoleInfoResponse._repeated_rogueInstRoleDatas_codec);
+						continue;
+					}
 				}
+				IL_48:
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x040081B1 RID: 33201
+		// Token: 0x040081DB RID: 33243
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040081B2 RID: 33202
-		public const int ErrorCodeFieldNumber = 3;
+		// Token: 0x040081DC RID: 33244
+		public const int ErrorCodeFieldNumber = 8;
 
-		// Token: 0x040081B3 RID: 33203
+		// Token: 0x040081DD RID: 33245
 		private ErrorCode errorCode_;
 
-		// Token: 0x040081B4 RID: 33204
-		public const int ValidTrialRoleIdsFieldNumber = 15;
+		// Token: 0x040081DE RID: 33246
+		public const int ValidTrialRoleIdsFieldNumber = 2;
 
-		// Token: 0x040081B5 RID: 33205
-		private static readonly FieldCodec<int> _repeated_validTrialRoleIds_codec = FieldCodec.ForInt32(122U);
+		// Token: 0x040081DF RID: 33247
+		private static readonly FieldCodec<int> _repeated_validTrialRoleIds_codec = FieldCodec.ForInt32(18U);
 
-		// Token: 0x040081B6 RID: 33206
+		// Token: 0x040081E0 RID: 33248
 		private readonly RepeatedField<int> validTrialRoleIds_ = new RepeatedField<int>();
 
-		// Token: 0x040081B7 RID: 33207
-		public const int AddLevelFieldNumber = 12;
+		// Token: 0x040081E1 RID: 33249
+		public const int AddLevelFieldNumber = 1;
 
-		// Token: 0x040081B8 RID: 33208
+		// Token: 0x040081E2 RID: 33250
 		private int addLevel_;
 
-		// Token: 0x040081B9 RID: 33209
-		public const int MaxLevelFieldNumber = 11;
+		// Token: 0x040081E3 RID: 33251
+		public const int MaxLevelFieldNumber = 5;
 
-		// Token: 0x040081BA RID: 33210
+		// Token: 0x040081E4 RID: 33252
 		private int maxLevel_;
 
-		// Token: 0x040081BB RID: 33211
-		public const int RoleLevelFieldNumber = 13;
+		// Token: 0x040081E5 RID: 33253
+		public const int RoleLevelFieldNumber = 4;
 
-		// Token: 0x040081BC RID: 33212
+		// Token: 0x040081E6 RID: 33254
 		private int roleLevel_;
 
-		// Token: 0x040081BD RID: 33213
-		public const int WeaponLevelFieldNumber = 14;
+		// Token: 0x040081E7 RID: 33255
+		public const int WeaponLevelFieldNumber = 6;
 
-		// Token: 0x040081BE RID: 33214
+		// Token: 0x040081E8 RID: 33256
 		private int weaponLevel_;
 
-		// Token: 0x040081BF RID: 33215
-		public const int RogueInstRoleDatasFieldNumber = 1;
+		// Token: 0x040081E9 RID: 33257
+		public const int RogueInstRoleDatasFieldNumber = 14;
 
-		// Token: 0x040081C0 RID: 33216
-		private static readonly FieldCodec<RogueInstRoleData> _repeated_rogueInstRoleDatas_codec = FieldCodec.ForMessage<RogueInstRoleData>(10U, RogueInstRoleData.Parser);
+		// Token: 0x040081EA RID: 33258
+		private static readonly FieldCodec<RogueInstRoleData> _repeated_rogueInstRoleDatas_codec = FieldCodec.ForMessage<RogueInstRoleData>(114U, RogueInstRoleData.Parser);
 
-		// Token: 0x040081C1 RID: 33217
+		// Token: 0x040081EB RID: 33259
 		private readonly RepeatedField<RogueInstRoleData> rogueInstRoleDatas_ = new RepeatedField<RogueInstRoleData>();
 	}
 }

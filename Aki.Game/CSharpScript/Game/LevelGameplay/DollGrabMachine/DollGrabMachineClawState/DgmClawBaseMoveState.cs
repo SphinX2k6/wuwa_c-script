@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawState
 {
-	// Token: 0x02006F0A RID: 28426
+	// Token: 0x0200608B RID: 24715
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DgmClawBaseMoveState
 	{
-		// Token: 0x0604530C RID: 283404 RVA: 0x0111DAEC File Offset: 0x0111BCEC
+		// Token: 0x0603B4BA RID: 242874 RVA: 0x010C7A8C File Offset: 0x010C5C8C
 		public DgmClawBaseMoveState(SceneItemDollGrabMachineComponent owner, AActor clawActor, AActor clawRootActor, FTransformDouble ownerActorTransform)
 		{
 			this.Owner = owner;
@@ -28,39 +28,39 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawSta
 			ownerRotation.FromUeRotator(frotator);
 		}
 
-		// Token: 0x0604530D RID: 283405 RVA: 0x0111DB87 File Offset: 0x0111BD87
+		// Token: 0x0603B4BB RID: 242875 RVA: 0x010C7B27 File Offset: 0x010C5D27
 		public virtual void Enter()
 		{
 		}
 
-		// Token: 0x0604530E RID: 283406 RVA: 0x0111DB89 File Offset: 0x0111BD89
+		// Token: 0x0603B4BC RID: 242876 RVA: 0x010C7B29 File Offset: 0x010C5D29
 		protected virtual void End()
 		{
 			EventSystem.Instance.EmitWithTarget(this.Owner.Entity, EEventName.OnDollGrabMachineClawStateEnd);
 		}
 
-		// Token: 0x0604530F RID: 283407 RVA: 0x0111DBA6 File Offset: 0x0111BDA6
+		// Token: 0x0603B4BD RID: 242877 RVA: 0x010C7B46 File Offset: 0x010C5D46
 		public virtual void Exit()
 		{
 		}
 
-		// Token: 0x06045310 RID: 283408 RVA: 0x0111DBA8 File Offset: 0x0111BDA8
+		// Token: 0x0603B4BE RID: 242878 RVA: 0x010C7B48 File Offset: 0x010C5D48
 		public virtual void Update(float delta)
 		{
 		}
 
-		// Token: 0x06045311 RID: 283409 RVA: 0x0111DBAA File Offset: 0x0111BDAA
+		// Token: 0x0603B4BF RID: 242879 RVA: 0x010C7B4A File Offset: 0x010C5D4A
 		public virtual void Pause()
 		{
 		}
 
-		// Token: 0x06045312 RID: 283410 RVA: 0x0111DBAC File Offset: 0x0111BDAC
+		// Token: 0x0603B4C0 RID: 242880 RVA: 0x010C7B4C File Offset: 0x010C5D4C
 		public virtual void Resume()
 		{
 		}
 
-		// Token: 0x17009AFD RID: 39677
-		// (get) Token: 0x06045313 RID: 283411 RVA: 0x0111DBAE File Offset: 0x0111BDAE
+		// Token: 0x1700703C RID: 28732
+		// (get) Token: 0x0603B4C1 RID: 242881 RVA: 0x010C7B4E File Offset: 0x010C5D4E
 		public EDollGrabMachineClawState ClawState
 		{
 			get
@@ -69,8 +69,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawSta
 			}
 		}
 
-		// Token: 0x17009AFE RID: 39678
-		// (get) Token: 0x06045314 RID: 283412 RVA: 0x0111DBB8 File Offset: 0x0111BDB8
+		// Token: 0x1700703D RID: 28733
+		// (get) Token: 0x0603B4C2 RID: 242882 RVA: 0x010C7B58 File Offset: 0x010C5D58
 		public EDollGrabMachineClawState? TargetState
 		{
 			get
@@ -90,34 +90,34 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawSta
 			}
 		}
 
-		// Token: 0x040240F1 RID: 147697
+		// Token: 0x0401F3A6 RID: 127910
 		protected bool IsFirstEnter;
 
-		// Token: 0x040240F2 RID: 147698
+		// Token: 0x0401F3A7 RID: 127911
 		[Nullable(2)]
 		protected SceneItemDollGrabMachineComponent Owner;
 
-		// Token: 0x040240F3 RID: 147699
+		// Token: 0x0401F3A8 RID: 127912
 		protected Vector OwnerLocation = Vector.Create();
 
-		// Token: 0x040240F4 RID: 147700
+		// Token: 0x0401F3A9 RID: 127913
 		protected Vector OwnerScale = Vector.Create();
 
-		// Token: 0x040240F5 RID: 147701
+		// Token: 0x0401F3AA RID: 127914
 		protected Rotator OwnerRotation = Rotator.Create();
 
-		// Token: 0x040240F6 RID: 147702
+		// Token: 0x0401F3AB RID: 127915
 		[Nullable(2)]
 		protected AActor ClawActor;
 
-		// Token: 0x040240F7 RID: 147703
+		// Token: 0x0401F3AC RID: 127916
 		[Nullable(2)]
 		protected AActor ClawRootActor;
 
-		// Token: 0x040240F8 RID: 147704
+		// Token: 0x0401F3AD RID: 127917
 		protected EDollGrabMachineClawState StateInternal;
 
-		// Token: 0x040240F9 RID: 147705
+		// Token: 0x0401F3AE RID: 127918
 		[Nullable(new byte[]
 		{
 			1,

@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002225 RID: 8741
+	// Token: 0x02002490 RID: 9360
 	public class StopUiScreenEffect_SetValue
 	{
-		// Token: 0x04007268 RID: 29288
-		[Nullable(1)]
+		// Token: 0x040078B2 RID: 30898
 		public string EffectDaPath;
 	}
 }

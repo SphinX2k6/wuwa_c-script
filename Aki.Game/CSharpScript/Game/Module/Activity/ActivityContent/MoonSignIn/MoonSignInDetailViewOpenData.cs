@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 {
-	// Token: 0x02006461 RID: 25697
+	// Token: 0x020053DF RID: 21471
 	internal class MoonSignInDetailViewOpenData : IMoonSignInDetailViewOpenData
 	{
-		// Token: 0x1700948B RID: 38027
-		// (get) Token: 0x06040946 RID: 264518 RVA: 0x00FA1287 File Offset: 0x00F9F487
-		// (set) Token: 0x06040947 RID: 264519 RVA: 0x00FA128F File Offset: 0x00F9F48F
+		// Token: 0x170067ED RID: 26605
+		// (get) Token: 0x06035607 RID: 218631 RVA: 0x00EE8203 File Offset: 0x00EE6403
+		// (set) Token: 0x06035608 RID: 218632 RVA: 0x00EE820B File Offset: 0x00EE640B
 		public int MoonId { get; set; }
 
-		// Token: 0x1700948C RID: 38028
-		// (get) Token: 0x06040948 RID: 264520 RVA: 0x00FA1298 File Offset: 0x00F9F498
-		// (set) Token: 0x06040949 RID: 264521 RVA: 0x00FA12A0 File Offset: 0x00F9F4A0
+		// Token: 0x170067EE RID: 26606
+		// (get) Token: 0x06035609 RID: 218633 RVA: 0x00EE8214 File Offset: 0x00EE6414
+		// (set) Token: 0x0603560A RID: 218634 RVA: 0x00EE821C File Offset: 0x00EE641C
 		public bool? Wishing { get; set; } = new bool?(false);
 	}
 }

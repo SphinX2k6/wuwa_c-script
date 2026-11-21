@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000E9D RID: 3741
+	// Token: 0x02000E8D RID: 3725
 	[NetMessage(EMessageId.RealmBetweenInfoUpdateNotify)]
 	public sealed class RealmBetweenInfoUpdateNotify : IMessage<RealmBetweenInfoUpdateNotify>, IMessage, IEquatable<RealmBetweenInfoUpdateNotify>, IDeepCloneable<RealmBetweenInfoUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x0601414D RID: 82253 RVA: 0x002EC529 File Offset: 0x002EA729
+		// Token: 0x06014068 RID: 82024 RVA: 0x002EAE71 File Offset: 0x002E9071
 		[NullableContext(1)]
 		public static RealmBetweenInfoUpdateNotify Create()
 		{
 			return new RealmBetweenInfoUpdateNotify();
 		}
 
-		// Token: 0x170042CA RID: 17098
-		// (get) Token: 0x0601414E RID: 82254 RVA: 0x002EC530 File Offset: 0x002EA730
+		// Token: 0x170042A0 RID: 17056
+		// (get) Token: 0x06014069 RID: 82025 RVA: 0x002EAE78 File Offset: 0x002E9078
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042CB RID: 17099
-		// (get) Token: 0x0601414F RID: 82255 RVA: 0x002EC533 File Offset: 0x002EA733
+		// Token: 0x170042A1 RID: 17057
+		// (get) Token: 0x0601406A RID: 82026 RVA: 0x002EAE7B File Offset: 0x002E907B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,55 +42,45 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014150 RID: 82256 RVA: 0x002EC53A File Offset: 0x002EA73A
+		// Token: 0x0601406B RID: 82027 RVA: 0x002EAE82 File Offset: 0x002E9082
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RealmBetweenInfoUpdateNotify()
 		{
 		}
 
-		// Token: 0x06014151 RID: 82257 RVA: 0x002EC544 File Offset: 0x002EA744
+		// Token: 0x0601406C RID: 82028 RVA: 0x002EAE8C File Offset: 0x002E908C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RealmBetweenInfoUpdateNotify(RealmBetweenInfoUpdateNotify other) : this()
 		{
 			RealmBetweenInfoUpdateNotify.DataOneofCase dataCase = other.DataCase;
-			if (dataCase <= RealmBetweenInfoUpdateNotify.DataOneofCase.MotorcycleLevel)
+			if (dataCase != RealmBetweenInfoUpdateNotify.DataOneofCase.UnLockMonsterId)
 			{
-				if (dataCase != RealmBetweenInfoUpdateNotify.DataOneofCase.UnLockArea)
+				switch (dataCase)
 				{
-					if (dataCase == RealmBetweenInfoUpdateNotify.DataOneofCase.MotorcycleLevel)
-					{
-						this.MotorcycleLevel = other.MotorcycleLevel.Clone();
-					}
-				}
-				else
-				{
+				case RealmBetweenInfoUpdateNotify.DataOneofCase.MotorcycleLevel:
+					this.MotorcycleLevel = other.MotorcycleLevel.Clone();
+					break;
+				case RealmBetweenInfoUpdateNotify.DataOneofCase.UnlockTask:
+					this.UnlockTask = other.UnlockTask;
+					break;
+				case RealmBetweenInfoUpdateNotify.DataOneofCase.UnLockArea:
 					this.UnLockArea = other.UnLockArea;
-				}
-			}
-			else if (dataCase != RealmBetweenInfoUpdateNotify.DataOneofCase.UnlockTask)
-			{
-				if (dataCase != RealmBetweenInfoUpdateNotify.DataOneofCase.ActivityTask)
-				{
-					if (dataCase == RealmBetweenInfoUpdateNotify.DataOneofCase.UnLockMonsterId)
-					{
-						this.UnLockMonsterId = other.UnLockMonsterId;
-					}
-				}
-				else
-				{
+					break;
+				case RealmBetweenInfoUpdateNotify.DataOneofCase.ActivityTask:
 					this.ActivityTask = other.ActivityTask.Clone();
+					break;
 				}
 			}
 			else
 			{
-				this.UnlockTask = other.UnlockTask;
+				this.UnLockMonsterId = other.UnLockMonsterId;
 			}
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06014152 RID: 82258 RVA: 0x002EC5DC File Offset: 0x002EA7DC
+		// Token: 0x0601406D RID: 82029 RVA: 0x002EAF2C File Offset: 0x002E912C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RealmBetweenInfoUpdateNotify Clone()
@@ -98,9 +88,9 @@ namespace Aki.Protocol
 			return new RealmBetweenInfoUpdateNotify(this);
 		}
 
-		// Token: 0x170042CC RID: 17100
-		// (get) Token: 0x06014153 RID: 82259 RVA: 0x002EC5E4 File Offset: 0x002EA7E4
-		// (set) Token: 0x06014154 RID: 82260 RVA: 0x002EC5FD File Offset: 0x002EA7FD
+		// Token: 0x170042A2 RID: 17058
+		// (get) Token: 0x0601406E RID: 82030 RVA: 0x002EAF34 File Offset: 0x002E9134
+		// (set) Token: 0x0601406F RID: 82031 RVA: 0x002EAF4D File Offset: 0x002E914D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ConditionTask ActivityTask
@@ -120,9 +110,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042CD RID: 17101
-		// (get) Token: 0x06014155 RID: 82261 RVA: 0x002EC614 File Offset: 0x002EA814
-		// (set) Token: 0x06014156 RID: 82262 RVA: 0x002EC62B File Offset: 0x002EA82B
+		// Token: 0x170042A3 RID: 17059
+		// (get) Token: 0x06014070 RID: 82032 RVA: 0x002EAF64 File Offset: 0x002E9164
+		// (set) Token: 0x06014071 RID: 82033 RVA: 0x002EAF7B File Offset: 0x002E917B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int UnLockMonsterId
@@ -142,8 +132,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042CE RID: 17102
-		// (get) Token: 0x06014157 RID: 82263 RVA: 0x002EC641 File Offset: 0x002EA841
+		// Token: 0x170042A4 RID: 17060
+		// (get) Token: 0x06014072 RID: 82034 RVA: 0x002EAF90 File Offset: 0x002E9190
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasUnLockMonsterId
@@ -154,7 +144,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014158 RID: 82264 RVA: 0x002EC64D File Offset: 0x002EA84D
+		// Token: 0x06014073 RID: 82035 RVA: 0x002EAF9B File Offset: 0x002E919B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearUnLockMonsterId()
@@ -165,9 +155,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042CF RID: 17103
-		// (get) Token: 0x06014159 RID: 82265 RVA: 0x002EC65D File Offset: 0x002EA85D
-		// (set) Token: 0x0601415A RID: 82266 RVA: 0x002EC674 File Offset: 0x002EA874
+		// Token: 0x170042A5 RID: 17061
+		// (get) Token: 0x06014074 RID: 82036 RVA: 0x002EAFAB File Offset: 0x002E91AB
+		// (set) Token: 0x06014075 RID: 82037 RVA: 0x002EAFC2 File Offset: 0x002E91C2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int UnLockArea
@@ -187,8 +177,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042D0 RID: 17104
-		// (get) Token: 0x0601415B RID: 82267 RVA: 0x002EC689 File Offset: 0x002EA889
+		// Token: 0x170042A6 RID: 17062
+		// (get) Token: 0x06014076 RID: 82038 RVA: 0x002EAFD8 File Offset: 0x002E91D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasUnLockArea
@@ -199,7 +189,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601415C RID: 82268 RVA: 0x002EC694 File Offset: 0x002EA894
+		// Token: 0x06014077 RID: 82039 RVA: 0x002EAFE4 File Offset: 0x002E91E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearUnLockArea()
@@ -210,9 +200,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042D1 RID: 17105
-		// (get) Token: 0x0601415D RID: 82269 RVA: 0x002EC6A4 File Offset: 0x002EA8A4
-		// (set) Token: 0x0601415E RID: 82270 RVA: 0x002EC6BC File Offset: 0x002EA8BC
+		// Token: 0x170042A7 RID: 17063
+		// (get) Token: 0x06014078 RID: 82040 RVA: 0x002EAFF4 File Offset: 0x002E91F4
+		// (set) Token: 0x06014079 RID: 82041 RVA: 0x002EB00D File Offset: 0x002E920D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RealmBetweenMotorcycleInfo MotorcycleLevel
@@ -232,9 +222,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042D2 RID: 17106
-		// (get) Token: 0x0601415F RID: 82271 RVA: 0x002EC6D2 File Offset: 0x002EA8D2
-		// (set) Token: 0x06014160 RID: 82272 RVA: 0x002EC6E9 File Offset: 0x002EA8E9
+		// Token: 0x170042A8 RID: 17064
+		// (get) Token: 0x0601407A RID: 82042 RVA: 0x002EB024 File Offset: 0x002E9224
+		// (set) Token: 0x0601407B RID: 82043 RVA: 0x002EB03B File Offset: 0x002E923B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int UnlockTask
@@ -254,8 +244,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042D3 RID: 17107
-		// (get) Token: 0x06014161 RID: 82273 RVA: 0x002EC6FF File Offset: 0x002EA8FF
+		// Token: 0x170042A9 RID: 17065
+		// (get) Token: 0x0601407C RID: 82044 RVA: 0x002EB051 File Offset: 0x002E9251
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasUnlockTask
@@ -266,7 +256,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014162 RID: 82274 RVA: 0x002EC70B File Offset: 0x002EA90B
+		// Token: 0x0601407D RID: 82045 RVA: 0x002EB05D File Offset: 0x002E925D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearUnlockTask()
@@ -277,8 +267,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042D4 RID: 17108
-		// (get) Token: 0x06014163 RID: 82275 RVA: 0x002EC71B File Offset: 0x002EA91B
+		// Token: 0x170042AA RID: 17066
+		// (get) Token: 0x0601407E RID: 82046 RVA: 0x002EB06D File Offset: 0x002E926D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RealmBetweenInfoUpdateNotify.DataOneofCase DataCase
@@ -289,7 +279,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014164 RID: 82276 RVA: 0x002EC723 File Offset: 0x002EA923
+		// Token: 0x0601407F RID: 82047 RVA: 0x002EB075 File Offset: 0x002E9275
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearData()
@@ -298,7 +288,7 @@ namespace Aki.Protocol
 			this.data_ = null;
 		}
 
-		// Token: 0x06014165 RID: 82277 RVA: 0x002EC733 File Offset: 0x002EA933
+		// Token: 0x06014080 RID: 82048 RVA: 0x002EB085 File Offset: 0x002E9285
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -306,7 +296,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RealmBetweenInfoUpdateNotify);
 		}
 
-		// Token: 0x06014166 RID: 82278 RVA: 0x002EC744 File Offset: 0x002EA944
+		// Token: 0x06014081 RID: 82049 RVA: 0x002EB094 File Offset: 0x002E9294
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RealmBetweenInfoUpdateNotify other)
@@ -314,7 +304,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.ActivityTask, other.ActivityTask) && this.UnLockMonsterId == other.UnLockMonsterId && this.UnLockArea == other.UnLockArea && object.Equals(this.MotorcycleLevel, other.MotorcycleLevel) && this.UnlockTask == other.UnlockTask && this.DataCase == other.DataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06014167 RID: 82279 RVA: 0x002EC7D8 File Offset: 0x002EA9D8
+		// Token: 0x06014082 RID: 82050 RVA: 0x002EB128 File Offset: 0x002E9328
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -348,7 +338,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06014168 RID: 82280 RVA: 0x002EC881 File Offset: 0x002EAA81
+		// Token: 0x06014083 RID: 82051 RVA: 0x002EB1D2 File Offset: 0x002E93D2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -356,7 +346,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06014169 RID: 82281 RVA: 0x002EC88E File Offset: 0x002EAA8E
+		// Token: 0x06014084 RID: 82052 RVA: 0x002EB1DF File Offset: 0x002E93DF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -364,35 +354,35 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601416A RID: 82282 RVA: 0x002EC898 File Offset: 0x002EAA98
+		// Token: 0x06014085 RID: 82053 RVA: 0x002EB1E8 File Offset: 0x002E93E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.HasUnLockArea)
+			if (this.HasUnLockMonsterId)
 			{
-				output.WriteRawTag(8);
-				output.WriteInt32(this.UnLockArea);
+				output.WriteRawTag(32);
+				output.WriteInt32(this.UnLockMonsterId);
 			}
 			if (this.dataCase_ == RealmBetweenInfoUpdateNotify.DataOneofCase.MotorcycleLevel)
 			{
-				output.WriteRawTag(34);
+				output.WriteRawTag(82);
 				output.WriteMessage(this.MotorcycleLevel);
 			}
 			if (this.HasUnlockTask)
 			{
-				output.WriteRawTag(72);
+				output.WriteRawTag(88);
 				output.WriteInt32(this.UnlockTask);
+			}
+			if (this.HasUnLockArea)
+			{
+				output.WriteRawTag(112);
+				output.WriteInt32(this.UnLockArea);
 			}
 			if (this.dataCase_ == RealmBetweenInfoUpdateNotify.DataOneofCase.ActivityTask)
 			{
-				output.WriteRawTag(98);
+				output.WriteRawTag(122);
 				output.WriteMessage(this.ActivityTask);
-			}
-			if (this.HasUnLockMonsterId)
-			{
-				output.WriteRawTag(120);
-				output.WriteInt32(this.UnLockMonsterId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -400,7 +390,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601416B RID: 82283 RVA: 0x002EC948 File Offset: 0x002EAB48
+		// Token: 0x06014086 RID: 82054 RVA: 0x002EB29C File Offset: 0x002E949C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -433,7 +423,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601416C RID: 82284 RVA: 0x002EC9EC File Offset: 0x002EABEC
+		// Token: 0x06014087 RID: 82055 RVA: 0x002EB340 File Offset: 0x002E9540
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RealmBetweenInfoUpdateNotify other)
@@ -443,50 +433,40 @@ namespace Aki.Protocol
 				return;
 			}
 			RealmBetweenInfoUpdateNotify.DataOneofCase dataCase = other.DataCase;
-			if (dataCase <= RealmBetweenInfoUpdateNotify.DataOneofCase.MotorcycleLevel)
+			if (dataCase != RealmBetweenInfoUpdateNotify.DataOneofCase.UnLockMonsterId)
 			{
-				if (dataCase != RealmBetweenInfoUpdateNotify.DataOneofCase.UnLockArea)
+				switch (dataCase)
 				{
-					if (dataCase == RealmBetweenInfoUpdateNotify.DataOneofCase.MotorcycleLevel)
+				case RealmBetweenInfoUpdateNotify.DataOneofCase.MotorcycleLevel:
+					if (this.MotorcycleLevel == null)
 					{
-						if (this.MotorcycleLevel == null)
-						{
-							this.MotorcycleLevel = new RealmBetweenMotorcycleInfo();
-						}
-						this.MotorcycleLevel.MergeFrom(other.MotorcycleLevel);
+						this.MotorcycleLevel = new RealmBetweenMotorcycleInfo();
 					}
-				}
-				else
-				{
+					this.MotorcycleLevel.MergeFrom(other.MotorcycleLevel);
+					break;
+				case RealmBetweenInfoUpdateNotify.DataOneofCase.UnlockTask:
+					this.UnlockTask = other.UnlockTask;
+					break;
+				case RealmBetweenInfoUpdateNotify.DataOneofCase.UnLockArea:
 					this.UnLockArea = other.UnLockArea;
-				}
-			}
-			else if (dataCase != RealmBetweenInfoUpdateNotify.DataOneofCase.UnlockTask)
-			{
-				if (dataCase != RealmBetweenInfoUpdateNotify.DataOneofCase.ActivityTask)
-				{
-					if (dataCase == RealmBetweenInfoUpdateNotify.DataOneofCase.UnLockMonsterId)
-					{
-						this.UnLockMonsterId = other.UnLockMonsterId;
-					}
-				}
-				else
-				{
+					break;
+				case RealmBetweenInfoUpdateNotify.DataOneofCase.ActivityTask:
 					if (this.ActivityTask == null)
 					{
 						this.ActivityTask = new ConditionTask();
 					}
 					this.ActivityTask.MergeFrom(other.ActivityTask);
+					break;
 				}
 			}
 			else
 			{
-				this.UnlockTask = other.UnlockTask;
+				this.UnLockMonsterId = other.UnLockMonsterId;
 			}
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601416D RID: 82285 RVA: 0x002ECAB1 File Offset: 0x002EACB1
+		// Token: 0x06014088 RID: 82056 RVA: 0x002EB40A File Offset: 0x002E960A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -494,7 +474,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601416E RID: 82286 RVA: 0x002ECABC File Offset: 0x002EACBC
+		// Token: 0x06014089 RID: 82057 RVA: 0x002EB414 File Offset: 0x002E9614
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -506,14 +486,14 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 34U)
+				if (num <= 82U)
 				{
-					if (num == 8U)
+					if (num == 32U)
 					{
-						this.UnLockArea = input.ReadInt32();
+						this.UnLockMonsterId = input.ReadInt32();
 						continue;
 					}
-					if (num == 34U)
+					if (num == 82U)
 					{
 						RealmBetweenMotorcycleInfo realmBetweenMotorcycleInfo = new RealmBetweenMotorcycleInfo();
 						if (this.dataCase_ == RealmBetweenInfoUpdateNotify.DataOneofCase.MotorcycleLevel)
@@ -527,12 +507,17 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 72U)
+					if (num == 88U)
 					{
 						this.UnlockTask = input.ReadInt32();
 						continue;
 					}
-					if (num == 98U)
+					if (num == 112U)
+					{
+						this.UnLockArea = input.ReadInt32();
+						continue;
+					}
+					if (num == 122U)
 					{
 						ConditionTask conditionTask = new ConditionTask();
 						if (this.dataCase_ == RealmBetweenInfoUpdateNotify.DataOneofCase.ActivityTask)
@@ -543,55 +528,50 @@ namespace Aki.Protocol
 						this.ActivityTask = conditionTask;
 						continue;
 					}
-					if (num == 120U)
-					{
-						this.UnLockMonsterId = input.ReadInt32();
-						continue;
-					}
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x04007A75 RID: 31349
+		// Token: 0x04007A9F RID: 31391
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007A76 RID: 31350
-		public const int ActivityTaskFieldNumber = 12;
+		// Token: 0x04007AA0 RID: 31392
+		public const int ActivityTaskFieldNumber = 15;
 
-		// Token: 0x04007A77 RID: 31351
-		public const int UnLockMonsterIdFieldNumber = 15;
+		// Token: 0x04007AA1 RID: 31393
+		public const int UnLockMonsterIdFieldNumber = 4;
 
-		// Token: 0x04007A78 RID: 31352
-		public const int UnLockAreaFieldNumber = 1;
+		// Token: 0x04007AA2 RID: 31394
+		public const int UnLockAreaFieldNumber = 14;
 
-		// Token: 0x04007A79 RID: 31353
-		public const int MotorcycleLevelFieldNumber = 4;
+		// Token: 0x04007AA3 RID: 31395
+		public const int MotorcycleLevelFieldNumber = 10;
 
-		// Token: 0x04007A7A RID: 31354
-		public const int UnlockTaskFieldNumber = 9;
+		// Token: 0x04007AA4 RID: 31396
+		public const int UnlockTaskFieldNumber = 11;
 
-		// Token: 0x04007A7B RID: 31355
+		// Token: 0x04007AA5 RID: 31397
 		private object data_;
 
-		// Token: 0x04007A7C RID: 31356
+		// Token: 0x04007AA6 RID: 31398
 		private RealmBetweenInfoUpdateNotify.DataOneofCase dataCase_;
 
-		// Token: 0x0200190D RID: 6413
+		// Token: 0x02001985 RID: 6533
 		public enum DataOneofCase
 		{
-			// Token: 0x0400C94A RID: 51530
+			// Token: 0x0400CE75 RID: 52853
 			None,
-			// Token: 0x0400C94B RID: 51531
-			ActivityTask = 12,
-			// Token: 0x0400C94C RID: 51532
-			UnLockMonsterId = 15,
-			// Token: 0x0400C94D RID: 51533
-			UnLockArea = 1,
-			// Token: 0x0400C94E RID: 51534
-			MotorcycleLevel = 4,
-			// Token: 0x0400C94F RID: 51535
-			UnlockTask = 9
+			// Token: 0x0400CE76 RID: 52854
+			ActivityTask = 15,
+			// Token: 0x0400CE77 RID: 52855
+			UnLockMonsterId = 4,
+			// Token: 0x0400CE78 RID: 52856
+			UnLockArea = 14,
+			// Token: 0x0400CE79 RID: 52857
+			MotorcycleLevel = 10,
+			// Token: 0x0400CE7A RID: 52858
+			UnlockTask
 		}
 	}
 }

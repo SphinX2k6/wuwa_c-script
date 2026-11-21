@@ -8,15 +8,15 @@ using CSharpScript.Game.Module.LevelLoading;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200170D RID: 5901
+// Token: 0x02000BC5 RID: 3013
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class BlackScreenFadeController : UiControllerBase
 {
-	// Token: 0x17000E00 RID: 3584
-	// (get) Token: 0x0600A92A RID: 43306 RVA: 0x00261024 File Offset: 0x0025F224
-	// (set) Token: 0x0600A92B RID: 43307 RVA: 0x0026102C File Offset: 0x0025F22C
+	// Token: 0x17000E21 RID: 3617
+	// (get) Token: 0x06007D0A RID: 32010 RVA: 0x0026B440 File Offset: 0x00269640
+	// (set) Token: 0x06007D0B RID: 32011 RVA: 0x0026B448 File Offset: 0x00269648
 	public bool NeedGuarantee
 	{
 		get
@@ -29,21 +29,21 @@ public class BlackScreenFadeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A92C RID: 43308 RVA: 0x00261035 File Offset: 0x0025F235
+	// Token: 0x06007D0C RID: 32012 RVA: 0x0026B451 File Offset: 0x00269651
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.UiManagerInit, new Action(this.PreloadBlackFadeScreen));
 		EventSystem.Instance.Add<bool, ETeamGroupType, ETeamLivingState, ETeamLivingState>(EEventName.OnTeamLivingStateChange, new Action<bool, ETeamGroupType, ETeamLivingState, ETeamLivingState>(this.OnTeamLivingStateChange));
 	}
 
-	// Token: 0x0600A92D RID: 43309 RVA: 0x0026106C File Offset: 0x0025F26C
+	// Token: 0x06007D0D RID: 32013 RVA: 0x0026B488 File Offset: 0x00269688
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.UiManagerInit, new Action(this.PreloadBlackFadeScreen));
 		EventSystem.Instance.Remove(EEventName.OnTeamLivingStateChange, new Action<bool, ETeamGroupType, ETeamLivingState, ETeamLivingState>(this.OnTeamLivingStateChange));
 	}
 
-	// Token: 0x0600A92E RID: 43310 RVA: 0x002610A3 File Offset: 0x0025F2A3
+	// Token: 0x06007D0E RID: 32014 RVA: 0x0026B4BF File Offset: 0x002696BF
 	private void PreloadBlackFadeScreen()
 	{
 		if (this.BlackScreen != null)
@@ -54,7 +54,7 @@ public class BlackScreenFadeController : UiControllerBase
 		this.BlackScreen.CreateByResourceIdAsync("UiView_BlackFadeScreen_Prefab", UiLayer.Instance.GetFloatUnit(ELayerType.Loading, 0), true);
 	}
 
-	// Token: 0x0600A92F RID: 43311 RVA: 0x002610DC File Offset: 0x0025F2DC
+	// Token: 0x06007D0F RID: 32015 RVA: 0x0026B4F8 File Offset: 0x002696F8
 	private void OnTeamLivingStateChange(bool isMyTeam, ETeamGroupType groupType, ETeamLivingState state, ETeamLivingState oldState)
 	{
 		if (isMyTeam && groupType == ETeamGroupType.Battle && state == ETeamLivingState.Dead)
@@ -64,7 +64,7 @@ public class BlackScreenFadeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A930 RID: 43312 RVA: 0x00261120 File Offset: 0x0025F320
+	// Token: 0x06007D10 RID: 32016 RVA: 0x0026B53C File Offset: 0x0026973C
 	[NullableContext(2)]
 	public bool CheckCanOpen(EUiViewName viewName, object param)
 	{
@@ -72,7 +72,7 @@ public class BlackScreenFadeController : UiControllerBase
 		return uiViewInfo != null && (uiViewInfo.Type != ELayerType.Normal || !this.NotEnableViews.Contains(viewName));
 	}
 
-	// Token: 0x0600A931 RID: 43313 RVA: 0x00261158 File Offset: 0x0025F358
+	// Token: 0x06007D11 RID: 32017 RVA: 0x0026B574 File Offset: 0x00269774
 	public void AddFadeBlackScreen(float num, bool needBackToFight, bool needCheckOpenView, int? treeId, string tag)
 	{
 		LevelLoadingModel.Instance.CameraFadeShowPromise = new CustomPromise();
@@ -116,7 +116,7 @@ public class BlackScreenFadeController : UiControllerBase
 		instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 	}
 
-	// Token: 0x0600A932 RID: 43314 RVA: 0x002612A4 File Offset: 0x0025F4A4
+	// Token: 0x06007D12 RID: 32018 RVA: 0x0026B6C0 File Offset: 0x002698C0
 	public void RemoveFadeBlackScreen(float num, string tag)
 	{
 		if (this.BlackScreen == null)
@@ -138,7 +138,7 @@ public class BlackScreenFadeController : UiControllerBase
 		this.BlackScreen.HideItem();
 	}
 
-	// Token: 0x0600A933 RID: 43315 RVA: 0x00261330 File Offset: 0x0025F530
+	// Token: 0x06007D13 RID: 32019 RVA: 0x0026B74C File Offset: 0x0026994C
 	protected override bool OnClear()
 	{
 		if (this.BlackScreen != null)
@@ -149,7 +149,7 @@ public class BlackScreenFadeController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A934 RID: 43316 RVA: 0x0026134E File Offset: 0x0025F54E
+	// Token: 0x06007D14 RID: 32020 RVA: 0x0026B76A File Offset: 0x0026996A
 	public void ChangeColor(EFadeInScreenShowType screenType)
 	{
 		if (this.BlackScreen != null)
@@ -158,7 +158,7 @@ public class BlackScreenFadeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A935 RID: 43317 RVA: 0x00261364 File Offset: 0x0025F564
+	// Token: 0x06007D15 RID: 32021 RVA: 0x0026B780 File Offset: 0x00269980
 	public void ChangeColorByForce(EFadeInScreenShowType screenType)
 	{
 		if (this.BlackScreen != null)
@@ -167,13 +167,13 @@ public class BlackScreenFadeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A936 RID: 43318 RVA: 0x0026137A File Offset: 0x0025F57A
+	// Token: 0x06007D16 RID: 32022 RVA: 0x0026B796 File Offset: 0x00269996
 	public bool ChangeAspect(float aspectRatio, bool? bInstantly = null)
 	{
 		return this.BlackScreen != null && this.BlackScreen.ChangeAspect(aspectRatio, bInstantly);
 	}
 
-	// Token: 0x0600A937 RID: 43319 RVA: 0x00261393 File Offset: 0x0025F593
+	// Token: 0x06007D17 RID: 32023 RVA: 0x0026B7AF File Offset: 0x002699AF
 	private void SetFadeTime(float num)
 	{
 		if (this.BlackScreen != null)
@@ -182,7 +182,7 @@ public class BlackScreenFadeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A938 RID: 43320 RVA: 0x002613A9 File Offset: 0x0025F5A9
+	// Token: 0x06007D18 RID: 32024 RVA: 0x0026B7C5 File Offset: 0x002699C5
 	private void SetIsFadeIn(bool value)
 	{
 		if (this.BlackScreen != null)
@@ -191,21 +191,21 @@ public class BlackScreenFadeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A939 RID: 43321 RVA: 0x002613BF File Offset: 0x0025F5BF
+	// Token: 0x06007D19 RID: 32025 RVA: 0x0026B7DB File Offset: 0x002699DB
 	public bool GetIsFadeIn()
 	{
 		BlackScreenFadeView blackScreen = this.BlackScreen;
 		return blackScreen != null && blackScreen.GetActive();
 	}
 
-	// Token: 0x0600A93A RID: 43322 RVA: 0x002613D4 File Offset: 0x0025F5D4
+	// Token: 0x06007D1A RID: 32026 RVA: 0x0026B7F0 File Offset: 0x002699F0
 	public bool CheckIfInCommon()
 	{
 		List<ELoadingReason> reasonsByPerform = LevelLoadingModel.Instance.GetReasonsByPerform(ELoadingPerform.CameraFade);
 		return reasonsByPerform.Contains(ELoadingReason.Common) && reasonsByPerform.Count == 1;
 	}
 
-	// Token: 0x0600A93B RID: 43323 RVA: 0x00261404 File Offset: 0x0025F604
+	// Token: 0x06007D1B RID: 32027 RVA: 0x0026B820 File Offset: 0x00269A20
 	public int GetHierarchyIndex()
 	{
 		BlackScreenFadeView blackScreen = this.BlackScreen;
@@ -223,7 +223,7 @@ public class BlackScreenFadeController : UiControllerBase
 		return num2.GetValueOrDefault();
 	}
 
-	// Token: 0x0600A93C RID: 43324 RVA: 0x0026144C File Offset: 0x0025F64C
+	// Token: 0x06007D1C RID: 32028 RVA: 0x0026B868 File Offset: 0x00269A68
 	public EFadeInScreenShowType? GetScreenColorType()
 	{
 		BlackScreenFadeView blackScreen = this.BlackScreen;
@@ -234,8 +234,8 @@ public class BlackScreenFadeController : UiControllerBase
 		return blackScreen.GetScreenColorType();
 	}
 
-	// Token: 0x17000E01 RID: 3585
-	// (get) Token: 0x0600A93D RID: 43325 RVA: 0x00261472 File Offset: 0x0025F672
+	// Token: 0x17000E22 RID: 3618
+	// (get) Token: 0x06007D1D RID: 32029 RVA: 0x0026B88E File Offset: 0x00269A8E
 	public static BlackScreenFadeController Instance
 	{
 		get
@@ -244,7 +244,7 @@ public class BlackScreenFadeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A93E RID: 43326 RVA: 0x00261479 File Offset: 0x0025F679
+	// Token: 0x06007D1E RID: 32030 RVA: 0x0026B895 File Offset: 0x00269A95
 	public static BlackScreenFadeController GetOrCreateInstance()
 	{
 		if (BlackScreenFadeController._Instance == null)
@@ -254,7 +254,7 @@ public class BlackScreenFadeController : UiControllerBase
 		return BlackScreenFadeController._Instance;
 	}
 
-	// Token: 0x0600A93F RID: 43327 RVA: 0x0026148D File Offset: 0x0025F68D
+	// Token: 0x06007D1F RID: 32031 RVA: 0x0026B8A9 File Offset: 0x00269AA9
 	public static bool CreateInstance()
 	{
 		if (BlackScreenFadeController._Instance != null)
@@ -265,41 +265,41 @@ public class BlackScreenFadeController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A940 RID: 43328 RVA: 0x002614A3 File Offset: 0x0025F6A3
+	// Token: 0x06007D20 RID: 32032 RVA: 0x0026B8BF File Offset: 0x00269ABF
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A941 RID: 43329 RVA: 0x002614A5 File Offset: 0x0025F6A5
+	// Token: 0x06007D21 RID: 32033 RVA: 0x0026B8C1 File Offset: 0x00269AC1
 	public static void ResetStaticDefaultValue()
 	{
 		BlackScreenFadeController._Instance = null;
 	}
 
-	// Token: 0x0600A942 RID: 43330 RVA: 0x002614AD File Offset: 0x0025F6AD
+	// Token: 0x06007D22 RID: 32034 RVA: 0x0026B8C9 File Offset: 0x00269AC9
 	static BlackScreenFadeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BlackScreenFadeController.CreateStaticDefaultValue), new Action(BlackScreenFadeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004D2B RID: 19755
+	// Token: 0x04004DD2 RID: 19922
 	[Nullable(2)]
 	private BlackScreenFadeView BlackScreen;
 
-	// Token: 0x04004D2C RID: 19756
+	// Token: 0x04004DD3 RID: 19923
 	public bool NeedInputDis;
 
-	// Token: 0x04004D2D RID: 19757
+	// Token: 0x04004DD4 RID: 19924
 	private readonly HashSet<EUiViewName> NotEnableViews = new HashSet<EUiViewName>
 	{
 		EUiViewName.GuideTutorialView,
 		EUiViewName.GuideTutorialPopView
 	};
 
-	// Token: 0x04004D2E RID: 19758
+	// Token: 0x04004DD5 RID: 19925
 	private bool NeedGuaranteeInternal = true;
 
-	// Token: 0x04004D2F RID: 19759
+	// Token: 0x04004DD6 RID: 19926
 	[Nullable(2)]
 	private static BlackScreenFadeController _Instance;
 }

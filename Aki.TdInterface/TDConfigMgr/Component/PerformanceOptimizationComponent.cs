@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200084F RID: 2127
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008F2 RID: 2290
 	public class PerformanceOptimizationComponent : IComponentBase
 	{
-		// Token: 0x06002EE5 RID: 12005 RVA: 0x00079370 File Offset: 0x00077570
+		// Token: 0x06003221 RID: 12833 RVA: 0x00080858 File Offset: 0x0007EA58
 		private PerformanceOptimizationComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002EE6 RID: 12006 RVA: 0x000793A8 File Offset: 0x000775A8
+		// Token: 0x06003222 RID: 12834 RVA: 0x00080890 File Offset: 0x0007EA90
 		public static PerformanceOptimizationComponent Create([Nullable(2)] PerformanceOptimizationComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002EE7 RID: 12007 RVA: 0x000793BB File Offset: 0x000775BB
+		// Token: 0x06003223 RID: 12835 RVA: 0x000808A3 File Offset: 0x0007EAA3
 		public static PerformanceOptimizationComponent CreateFromSetValue([Nullable(2)] PerformanceOptimizationComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002EE8 RID: 12008 RVA: 0x000793CE File Offset: 0x000775CE
+		// Token: 0x06003224 RID: 12836 RVA: 0x000808B6 File Offset: 0x0007EAB6
 		public new PerformanceOptimizationComponent_SetValue ToSetValue()
 		{
 			return new PerformanceOptimizationComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C5F RID: 3167
-		// (get) Token: 0x06002EE9 RID: 12009 RVA: 0x000793FC File Offset: 0x000775FC
-		// (set) Token: 0x06002EEA RID: 12010 RVA: 0x00079436 File Offset: 0x00077636
+		// Token: 0x17000D28 RID: 3368
+		// (get) Token: 0x06003225 RID: 12837 RVA: 0x000808E4 File Offset: 0x0007EAE4
+		// (set) Token: 0x06003226 RID: 12838 RVA: 0x0008091E File Offset: 0x0007EB1E
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C60 RID: 3168
-		// (get) Token: 0x06002EEB RID: 12011 RVA: 0x00079444 File Offset: 0x00077644
-		// (set) Token: 0x06002EEC RID: 12012 RVA: 0x0007946E File Offset: 0x0007766E
+		// Token: 0x17000D29 RID: 3369
+		// (get) Token: 0x06003227 RID: 12839 RVA: 0x0008092C File Offset: 0x0007EB2C
+		// (set) Token: 0x06003228 RID: 12840 RVA: 0x00080956 File Offset: 0x0007EB56
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C61 RID: 3169
-		// (get) Token: 0x06002EED RID: 12013 RVA: 0x0007947C File Offset: 0x0007767C
-		// (set) Token: 0x06002EEE RID: 12014 RVA: 0x000794A3 File Offset: 0x000776A3
+		// Token: 0x17000D2A RID: 3370
+		// (get) Token: 0x06003229 RID: 12841 RVA: 0x00080964 File Offset: 0x0007EB64
+		// (set) Token: 0x0600322A RID: 12842 RVA: 0x0008098B File Offset: 0x0007EB8B
 		public virtual List<IPerformanceOptimization> PerformanceOptimizationList
 		{
 			get
@@ -129,11 +127,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001EFF RID: 7935
+		// Token: 0x04002111 RID: 8465
 		[Nullable(2)]
 		protected new PerformanceOptimizationComponent FbInstance;
 
-		// Token: 0x04001F00 RID: 7936
+		// Token: 0x04002112 RID: 8466
 		[Nullable(2)]
 		protected new PerformanceOptimizationComponent_SetValue PocoInterface;
 	}

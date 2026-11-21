@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C02 RID: 3074
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CD2 RID: 3282
 	public class ResurrectionComponent : IComponentBase
 	{
-		// Token: 0x06004699 RID: 18073 RVA: 0x000B2486 File Offset: 0x000B0686
+		// Token: 0x06004AFC RID: 19196 RVA: 0x000BC652 File Offset: 0x000BA852
 		public static ResurrectionComponent Create(IResurrectionComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001452 RID: 5202
-		// (get) Token: 0x0600469A RID: 18074 RVA: 0x000B24A8 File Offset: 0x000B06A8
+		// Token: 0x17001553 RID: 5459
+		// (get) Token: 0x06004AFD RID: 19197 RVA: 0x000BC674 File Offset: 0x000BA874
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001453 RID: 5203
-		// (get) Token: 0x0600469B RID: 18075 RVA: 0x000B24E0 File Offset: 0x000B06E0
+		// Token: 0x17001554 RID: 5460
+		// (get) Token: 0x06004AFE RID: 19198 RVA: 0x000BC6AC File Offset: 0x000BA8AC
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001454 RID: 5204
-		// (get) Token: 0x0600469C RID: 18076 RVA: 0x000B24F6 File Offset: 0x000B06F6
+		// Token: 0x17001555 RID: 5461
+		// (get) Token: 0x06004AFF RID: 19199 RVA: 0x000BC6C2 File Offset: 0x000BA8C2
 		public virtual PosA TeleportPos
 		{
 			get
@@ -64,8 +62,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001455 RID: 5205
-		// (get) Token: 0x0600469D RID: 18077 RVA: 0x000B252A File Offset: 0x000B072A
+		// Token: 0x17001556 RID: 5462
+		// (get) Token: 0x06004B00 RID: 19200 RVA: 0x000BC6F6 File Offset: 0x000BA8F6
 		public virtual ITriggerShape TriggerShape
 		{
 			get
@@ -80,8 +78,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001456 RID: 5206
-		// (get) Token: 0x0600469E RID: 18078 RVA: 0x000B255C File Offset: 0x000B075C
+		// Token: 0x17001557 RID: 5463
+		// (get) Token: 0x06004B01 RID: 19201 RVA: 0x000BC728 File Offset: 0x000BA928
 		public virtual EReviveType? ReviveId
 		{
 			get
@@ -94,8 +92,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001457 RID: 5207
-		// (get) Token: 0x0600469F RID: 18079 RVA: 0x000B2592 File Offset: 0x000B0792
+		// Token: 0x17001558 RID: 5464
+		// (get) Token: 0x06004B02 RID: 19202 RVA: 0x000BC75E File Offset: 0x000BA95E
 		[Nullable(2)]
 		public virtual IGravityFlipTeleportConfig GravityConfig
 		{
@@ -112,27 +110,27 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002827 RID: 10279
+		// Token: 0x04002A73 RID: 10867
 		private IResurrectionComponent Instance;
 
-		// Token: 0x04002828 RID: 10280
+		// Token: 0x04002A74 RID: 10868
 		[Nullable(2)]
 		private PosA _TeleportPosCache;
 
-		// Token: 0x04002829 RID: 10281
+		// Token: 0x04002A75 RID: 10869
 		private bool _TeleportPosInited;
 
-		// Token: 0x0400282A RID: 10282
+		// Token: 0x04002A76 RID: 10870
 		private ITriggerShape _TriggerShapeCache;
 
-		// Token: 0x0400282B RID: 10283
+		// Token: 0x04002A77 RID: 10871
 		private bool _TriggerShapeInited;
 
-		// Token: 0x0400282C RID: 10284
+		// Token: 0x04002A78 RID: 10872
 		[Nullable(2)]
 		private IGravityFlipTeleportConfig _GravityConfigCache;
 
-		// Token: 0x0400282D RID: 10285
+		// Token: 0x04002A79 RID: 10873
 		private bool _GravityConfigInited;
 	}
 }

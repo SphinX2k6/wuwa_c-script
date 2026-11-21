@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Activity
 {
-	// Token: 0x0200578E RID: 22414
+	// Token: 0x02004765 RID: 18277
 	public class KurotatoCollectBtn : UiPanelBase
 	{
-		// Token: 0x06038EF0 RID: 233200 RVA: 0x00D8856C File Offset: 0x00D8676C
+		// Token: 0x0602DE00 RID: 187904 RVA: 0x00CD72C8 File Offset: 0x00CD54C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038EF1 RID: 233201 RVA: 0x00D88634 File Offset: 0x00D86834
+		// Token: 0x0602DE01 RID: 187905 RVA: 0x00CD7390 File Offset: 0x00CD5590
 		public void RefreshView()
 		{
 			KurotatoActivityData activityData = KurotatoActivityController.Instance.GetActivityData();
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			base.GetItem(2).SetUIActive(uiactive);
 		}
 
-		// Token: 0x06038EF2 RID: 233202 RVA: 0x00D886E9 File Offset: 0x00D868E9
+		// Token: 0x0602DE02 RID: 187906 RVA: 0x00CD7445 File Offset: 0x00CD5645
 		private void OnSelfBtnClick()
 		{
 			Action clickCallback = this.ClickCallback;
@@ -69,18 +69,18 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			clickCallback();
 		}
 
-		// Token: 0x0401DD81 RID: 122241
+		// Token: 0x04018817 RID: 100375
 		[Nullable(2)]
 		public Action ClickCallback;
 
-		// Token: 0x0200B9B5 RID: 47541
+		// Token: 0x0200A3CB RID: 41931
 		private enum ECollectBtnComponents
 		{
-			// Token: 0x04038268 RID: 229992
+			// Token: 0x04032C59 RID: 207961
 			BtnSelf,
-			// Token: 0x04038269 RID: 229993
+			// Token: 0x04032C5A RID: 207962
 			TextNum,
-			// Token: 0x0403826A RID: 229994
+			// Token: 0x04032C5B RID: 207963
 			RedDot
 		}
 	}

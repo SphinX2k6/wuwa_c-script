@@ -4,16 +4,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000FB2 RID: 4018
+// Token: 0x02000467 RID: 1127
 public abstract class FurnitureSceneItemBase
 {
-	// Token: 0x060066E2 RID: 26338 RVA: 0x00145BA0 File Offset: 0x00143DA0
+	// Token: 0x06003A7A RID: 14970 RVA: 0x0014E464 File Offset: 0x0014C664
 	public FurnitureSceneItemBase(int furnitureConfigId)
 	{
 		this.FurnitureConfigId = furnitureConfigId;
 	}
 
-	// Token: 0x060066E3 RID: 26339 RVA: 0x00145BB0 File Offset: 0x00143DB0
+	// Token: 0x06003A7B RID: 14971 RVA: 0x0014E474 File Offset: 0x0014C674
 	public UniTask<bool> LoadAndShowAsync([Nullable(1)] Transform rootTransform)
 	{
 		FurnitureSceneItemBase.<LoadAndShowAsync>d__7 <LoadAndShowAsync>d__;
@@ -25,7 +25,7 @@ public abstract class FurnitureSceneItemBase
 		return <LoadAndShowAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060066E4 RID: 26340 RVA: 0x00145BFC File Offset: 0x00143DFC
+	// Token: 0x06003A7C RID: 14972 RVA: 0x0014E4C0 File Offset: 0x0014C6C0
 	public UniTask<bool> LoadAsync([Nullable(1)] Transform rootTransform)
 	{
 		FurnitureSceneItemBase.<LoadAsync>d__8 <LoadAsync>d__;
@@ -37,10 +37,10 @@ public abstract class FurnitureSceneItemBase
 		return <LoadAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060066E5 RID: 26341
+	// Token: 0x06003A7D RID: 14973
 	protected abstract UniTask<bool> LoadAsyncImplement([Nullable(1)] Transform transform);
 
-	// Token: 0x060066E6 RID: 26342 RVA: 0x00145C47 File Offset: 0x00143E47
+	// Token: 0x06003A7E RID: 14974 RVA: 0x0014E50B File Offset: 0x0014C70B
 	public bool Show()
 	{
 		if (this.State != EFurnitureSceneItemState.Loaded && this.State != EFurnitureSceneItemState.Hide)
@@ -52,10 +52,10 @@ public abstract class FurnitureSceneItemBase
 		return true;
 	}
 
-	// Token: 0x060066E7 RID: 26343
+	// Token: 0x06003A7F RID: 14975
 	protected abstract void ShowImplement();
 
-	// Token: 0x060066E8 RID: 26344 RVA: 0x00145C6B File Offset: 0x00143E6B
+	// Token: 0x06003A80 RID: 14976 RVA: 0x0014E52F File Offset: 0x0014C72F
 	public bool Hide()
 	{
 		if (this.State != EFurnitureSceneItemState.Show)
@@ -67,10 +67,10 @@ public abstract class FurnitureSceneItemBase
 		return true;
 	}
 
-	// Token: 0x060066E9 RID: 26345
+	// Token: 0x06003A81 RID: 14977
 	protected abstract void HideImplement();
 
-	// Token: 0x060066EA RID: 26346 RVA: 0x00145C88 File Offset: 0x00143E88
+	// Token: 0x06003A82 RID: 14978 RVA: 0x0014E54C File Offset: 0x0014C74C
 	protected UniTask<bool> LoadLevelInstanceAsync([Nullable(1)] FurnitureLevelContext context)
 	{
 		FurnitureSceneItemBase.<LoadLevelInstanceAsync>d__14 <LoadLevelInstanceAsync>d__;
@@ -82,7 +82,7 @@ public abstract class FurnitureSceneItemBase
 		return <LoadLevelInstanceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060066EB RID: 26347 RVA: 0x00145CD4 File Offset: 0x00143ED4
+	// Token: 0x06003A83 RID: 14979 RVA: 0x0014E598 File Offset: 0x0014C798
 	[NullableContext(1)]
 	protected void UnloadLevelInstance(FurnitureLevelContext context)
 	{
@@ -98,7 +98,7 @@ public abstract class FurnitureSceneItemBase
 		context.LevelStreamingDynamic = null;
 	}
 
-	// Token: 0x060066EC RID: 26348 RVA: 0x00145D1B File Offset: 0x00143F1B
+	// Token: 0x06003A84 RID: 14980 RVA: 0x0014E5DF File Offset: 0x0014C7DF
 	[NullableContext(1)]
 	protected void ShowLevelInstance(FurnitureLevelContext context)
 	{
@@ -108,7 +108,7 @@ public abstract class FurnitureSceneItemBase
 		}
 	}
 
-	// Token: 0x060066ED RID: 26349 RVA: 0x00145D31 File Offset: 0x00143F31
+	// Token: 0x06003A85 RID: 14981 RVA: 0x0014E5F5 File Offset: 0x0014C7F5
 	[NullableContext(1)]
 	protected void HideLevelInstance(FurnitureLevelContext context)
 	{
@@ -118,7 +118,7 @@ public abstract class FurnitureSceneItemBase
 		}
 	}
 
-	// Token: 0x060066EE RID: 26350 RVA: 0x00145D47 File Offset: 0x00143F47
+	// Token: 0x06003A86 RID: 14982 RVA: 0x0014E60B File Offset: 0x0014C80B
 	public void Unload()
 	{
 		if (this.State == EFurnitureSceneItemState.None || this.State == EFurnitureSceneItemState.Unloaded)
@@ -137,68 +137,68 @@ public abstract class FurnitureSceneItemBase
 		this.State = EFurnitureSceneItemState.Unloaded;
 	}
 
-	// Token: 0x060066EF RID: 26351
+	// Token: 0x06003A87 RID: 14983
 	protected abstract void UnloadImplement();
 
-	// Token: 0x060066F0 RID: 26352 RVA: 0x00145D83 File Offset: 0x00143F83
+	// Token: 0x06003A88 RID: 14984 RVA: 0x0014E647 File Offset: 0x0014C847
 	public void MarkAsNeedUnload()
 	{
 		this.NeedUnload = true;
 	}
 
-	// Token: 0x060066F1 RID: 26353 RVA: 0x00145D8C File Offset: 0x00143F8C
+	// Token: 0x06003A89 RID: 14985 RVA: 0x0014E650 File Offset: 0x0014C850
 	public bool IsNeedUnload()
 	{
 		return this.NeedUnload;
 	}
 
-	// Token: 0x060066F2 RID: 26354 RVA: 0x00145D94 File Offset: 0x00143F94
+	// Token: 0x06003A8A RID: 14986 RVA: 0x0014E658 File Offset: 0x0014C858
 	public bool IsLoaded()
 	{
 		return this.State == EFurnitureSceneItemState.Loaded;
 	}
 
-	// Token: 0x060066F3 RID: 26355 RVA: 0x00145D9F File Offset: 0x00143F9F
+	// Token: 0x06003A8B RID: 14987 RVA: 0x0014E663 File Offset: 0x0014C863
 	public bool IsUnloaded()
 	{
 		return this.State == EFurnitureSceneItemState.Unloaded;
 	}
 
-	// Token: 0x060066F4 RID: 26356 RVA: 0x00145DAA File Offset: 0x00143FAA
+	// Token: 0x06003A8C RID: 14988 RVA: 0x0014E66E File Offset: 0x0014C86E
 	public bool IsLoading()
 	{
 		return this.State == EFurnitureSceneItemState.Loading;
 	}
 
-	// Token: 0x060066F5 RID: 26357 RVA: 0x00145DB5 File Offset: 0x00143FB5
+	// Token: 0x06003A8D RID: 14989 RVA: 0x0014E679 File Offset: 0x0014C879
 	public EFurnitureSceneItemType GetSceneItemType()
 	{
 		return this.SceneItemType;
 	}
 
-	// Token: 0x060066F6 RID: 26358 RVA: 0x00145DBD File Offset: 0x00143FBD
+	// Token: 0x06003A8E RID: 14990 RVA: 0x0014E681 File Offset: 0x0014C881
 	public bool IsEntityType()
 	{
 		return this.SceneItemType == EFurnitureSceneItemType.SingleEntity || this.SceneItemType == EFurnitureSceneItemType.GroupEntity;
 	}
 
-	// Token: 0x04002EA8 RID: 11944
+	// Token: 0x04002F41 RID: 12097
 	public readonly int FurnitureConfigId;
 
-	// Token: 0x04002EA9 RID: 11945
+	// Token: 0x04002F42 RID: 12098
 	protected EFurnitureSceneItemType SceneItemType;
 
-	// Token: 0x04002EAA RID: 11946
+	// Token: 0x04002F43 RID: 12099
 	[Nullable(2)]
 	private CustomPromise<bool> LoadingPromise;
 
-	// Token: 0x04002EAB RID: 11947
+	// Token: 0x04002F44 RID: 12100
 	private EFurnitureSceneItemState State;
 
-	// Token: 0x04002EAC RID: 11948
+	// Token: 0x04002F45 RID: 12101
 	[Nullable(2)]
 	protected Transform RootTransform;
 
-	// Token: 0x04002EAD RID: 11949
+	// Token: 0x04002F46 RID: 12102
 	private bool NeedUnload;
 }

@@ -5,15 +5,15 @@ using CSharpScript.Game.NewWorld.Character.Common.Component.Explore;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B37 RID: 27447
+	// Token: 0x02005CAF RID: 23727
 	public class LevelEventHighlightExploreUi : LevelEventBase
 	{
-		// Token: 0x0604413E RID: 278846 RVA: 0x010BD158 File Offset: 0x010BB358
+		// Token: 0x0603A290 RID: 238224 RVA: 0x010669E4 File Offset: 0x01064BE4
 		public LevelEventHighlightExploreUi(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604413F RID: 278847 RVA: 0x010BD164 File Offset: 0x010BB364
+		// Token: 0x0603A291 RID: 238225 RVA: 0x010669F0 File Offset: 0x01064BF0
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

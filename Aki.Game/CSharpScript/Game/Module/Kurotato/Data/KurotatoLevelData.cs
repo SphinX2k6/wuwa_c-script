@@ -6,21 +6,21 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Kurotato.Data
 {
-	// Token: 0x0200579D RID: 22429
+	// Token: 0x02004774 RID: 18292
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoLevelData
 	{
-		// Token: 0x06038FC2 RID: 233410 RVA: 0x00D8BD83 File Offset: 0x00D89F83
+		// Token: 0x0602DED2 RID: 188114 RVA: 0x00CDAAFF File Offset: 0x00CD8CFF
 		public KurotatoLevelData(KurotatoLevel config, int activityId)
 		{
 			this.Config = config;
 			this.ActivityId = activityId;
 		}
 
-		// Token: 0x1700889B RID: 34971
-		// (get) Token: 0x06038FC3 RID: 233411 RVA: 0x00D8BD99 File Offset: 0x00D89F99
-		// (set) Token: 0x06038FC4 RID: 233412 RVA: 0x00D8BDA1 File Offset: 0x00D89FA1
+		// Token: 0x17005C63 RID: 23651
+		// (get) Token: 0x0602DED3 RID: 188115 RVA: 0x00CDAB15 File Offset: 0x00CD8D15
+		// (set) Token: 0x0602DED4 RID: 188116 RVA: 0x00CDAB1D File Offset: 0x00CD8D1D
 		public long UnlockTime
 		{
 			get
@@ -33,16 +33,16 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x06038FC5 RID: 233413 RVA: 0x00D8BDAC File Offset: 0x00D89FAC
+		// Token: 0x0602DED5 RID: 188117 RVA: 0x00CDAB28 File Offset: 0x00CD8D28
 		public bool IsReachUnlockTime()
 		{
 			double serverTime = TimeUtil.Instance.GetServerTime();
 			return this.UnlockTimeInternal == 0L || (double)this.UnlockTime < serverTime;
 		}
 
-		// Token: 0x1700889C RID: 34972
-		// (get) Token: 0x06038FC6 RID: 233414 RVA: 0x00D8BDD8 File Offset: 0x00D89FD8
-		// (set) Token: 0x06038FC7 RID: 233415 RVA: 0x00D8BDEA File Offset: 0x00D89FEA
+		// Token: 0x17005C64 RID: 23652
+		// (get) Token: 0x0602DED6 RID: 188118 RVA: 0x00CDAB54 File Offset: 0x00CD8D54
+		// (set) Token: 0x0602DED7 RID: 188119 RVA: 0x00CDAB66 File Offset: 0x00CD8D66
 		public bool IsUnLock
 		{
 			get
@@ -55,9 +55,9 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x1700889D RID: 34973
-		// (get) Token: 0x06038FC8 RID: 233416 RVA: 0x00D8BDF3 File Offset: 0x00D89FF3
-		// (set) Token: 0x06038FC9 RID: 233417 RVA: 0x00D8BDFB File Offset: 0x00D89FFB
+		// Token: 0x17005C65 RID: 23653
+		// (get) Token: 0x0602DED8 RID: 188120 RVA: 0x00CDAB6F File Offset: 0x00CD8D6F
+		// (set) Token: 0x0602DED9 RID: 188121 RVA: 0x00CDAB77 File Offset: 0x00CD8D77
 		public bool IsFinished
 		{
 			get
@@ -70,9 +70,9 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x1700889E RID: 34974
-		// (get) Token: 0x06038FCA RID: 233418 RVA: 0x00D8BE04 File Offset: 0x00D8A004
-		// (set) Token: 0x06038FCB RID: 233419 RVA: 0x00D8BE0C File Offset: 0x00D8A00C
+		// Token: 0x17005C66 RID: 23654
+		// (get) Token: 0x0602DEDA RID: 188122 RVA: 0x00CDAB80 File Offset: 0x00CD8D80
+		// (set) Token: 0x0602DEDB RID: 188123 RVA: 0x00CDAB88 File Offset: 0x00CD8D88
 		public int HistoryWave
 		{
 			get
@@ -85,9 +85,9 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x1700889F RID: 34975
-		// (get) Token: 0x06038FCC RID: 233420 RVA: 0x00D8BE15 File Offset: 0x00D8A015
-		// (set) Token: 0x06038FCD RID: 233421 RVA: 0x00D8BE1D File Offset: 0x00D8A01D
+		// Token: 0x17005C67 RID: 23655
+		// (get) Token: 0x0602DEDC RID: 188124 RVA: 0x00CDAB91 File Offset: 0x00CD8D91
+		// (set) Token: 0x0602DEDD RID: 188125 RVA: 0x00CDAB99 File Offset: 0x00CD8D99
 		public int HistoryKillNum
 		{
 			get
@@ -100,9 +100,9 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088A0 RID: 34976
-		// (get) Token: 0x06038FCE RID: 233422 RVA: 0x00D8BE26 File Offset: 0x00D8A026
-		// (set) Token: 0x06038FCF RID: 233423 RVA: 0x00D8BE2E File Offset: 0x00D8A02E
+		// Token: 0x17005C68 RID: 23656
+		// (get) Token: 0x0602DEDE RID: 188126 RVA: 0x00CDABA2 File Offset: 0x00CD8DA2
+		// (set) Token: 0x0602DEDF RID: 188127 RVA: 0x00CDABAA File Offset: 0x00CD8DAA
 		public int HistoryRoleId
 		{
 			get
@@ -115,8 +115,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088A1 RID: 34977
-		// (get) Token: 0x06038FD0 RID: 233424 RVA: 0x00D8BE37 File Offset: 0x00D8A037
+		// Token: 0x17005C69 RID: 23657
+		// (get) Token: 0x0602DEE0 RID: 188128 RVA: 0x00CDABB3 File Offset: 0x00CD8DB3
 		public int ArchiveWave
 		{
 			get
@@ -130,8 +130,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088A2 RID: 34978
-		// (get) Token: 0x06038FD1 RID: 233425 RVA: 0x00D8BE4A File Offset: 0x00D8A04A
+		// Token: 0x17005C6A RID: 23658
+		// (get) Token: 0x0602DEE1 RID: 188129 RVA: 0x00CDABC6 File Offset: 0x00CD8DC6
 		public bool IsArchiveSpecialWave
 		{
 			get
@@ -141,9 +141,9 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088A3 RID: 34979
-		// (get) Token: 0x06038FD2 RID: 233426 RVA: 0x00D8BE60 File Offset: 0x00D8A060
-		// (set) Token: 0x06038FD3 RID: 233427 RVA: 0x00D8BE68 File Offset: 0x00D8A068
+		// Token: 0x17005C6B RID: 23659
+		// (get) Token: 0x0602DEE2 RID: 188130 RVA: 0x00CDABDC File Offset: 0x00CD8DDC
+		// (set) Token: 0x0602DEE3 RID: 188131 RVA: 0x00CDABE4 File Offset: 0x00CD8DE4
 		[Nullable(2)]
 		public KurotatoInstInfo ArchivedData
 		{
@@ -159,8 +159,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088A4 RID: 34980
-		// (get) Token: 0x06038FD4 RID: 233428 RVA: 0x00D8BE71 File Offset: 0x00D8A071
+		// Token: 0x17005C6C RID: 23660
+		// (get) Token: 0x0602DEE4 RID: 188132 RVA: 0x00CDABED File Offset: 0x00CD8DED
 		public bool HasArchivedData
 		{
 			get
@@ -169,8 +169,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088A5 RID: 34981
-		// (get) Token: 0x06038FD5 RID: 233429 RVA: 0x00D8BE7C File Offset: 0x00D8A07C
+		// Token: 0x17005C6D RID: 23661
+		// (get) Token: 0x0602DEE5 RID: 188133 RVA: 0x00CDABF8 File Offset: 0x00CD8DF8
 		public bool HasHistory
 		{
 			get
@@ -179,8 +179,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088A6 RID: 34982
-		// (get) Token: 0x06038FD6 RID: 233430 RVA: 0x00D8BE87 File Offset: 0x00D8A087
+		// Token: 0x17005C6E RID: 23662
+		// (get) Token: 0x0602DEE6 RID: 188134 RVA: 0x00CDAC03 File Offset: 0x00CD8E03
 		public bool HasRedDot
 		{
 			get
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x06038FD7 RID: 233431 RVA: 0x00D8BEB0 File Offset: 0x00D8A0B0
+		// Token: 0x0602DEE7 RID: 188135 RVA: 0x00CDAC2C File Offset: 0x00CD8E2C
 		public void ReadRedDot()
 		{
 			if (!this.IsUnLock)
@@ -204,8 +204,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
 		}
 
-		// Token: 0x170088A7 RID: 34983
-		// (get) Token: 0x06038FD8 RID: 233432 RVA: 0x00D8BF00 File Offset: 0x00D8A100
+		// Token: 0x17005C6F RID: 23663
+		// (get) Token: 0x0602DEE8 RID: 188136 RVA: 0x00CDAC7C File Offset: 0x00CD8E7C
 		public int Id
 		{
 			get
@@ -214,8 +214,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088A8 RID: 34984
-		// (get) Token: 0x06038FD9 RID: 233433 RVA: 0x00D8BF1C File Offset: 0x00D8A11C
+		// Token: 0x17005C70 RID: 23664
+		// (get) Token: 0x0602DEE9 RID: 188137 RVA: 0x00CDAC98 File Offset: 0x00CD8E98
 		public string Name
 		{
 			get
@@ -224,8 +224,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088A9 RID: 34985
-		// (get) Token: 0x06038FDA RID: 233434 RVA: 0x00D8BF38 File Offset: 0x00D8A138
+		// Token: 0x17005C71 RID: 23665
+		// (get) Token: 0x0602DEEA RID: 188138 RVA: 0x00CDACB4 File Offset: 0x00CD8EB4
 		public int PreId
 		{
 			get
@@ -234,8 +234,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088AA RID: 34986
-		// (get) Token: 0x06038FDB RID: 233435 RVA: 0x00D8BF54 File Offset: 0x00D8A154
+		// Token: 0x17005C72 RID: 23666
+		// (get) Token: 0x0602DEEB RID: 188139 RVA: 0x00CDACD0 File Offset: 0x00CD8ED0
 		public string Number
 		{
 			get
@@ -244,8 +244,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088AB RID: 34987
-		// (get) Token: 0x06038FDC RID: 233436 RVA: 0x00D8BF70 File Offset: 0x00D8A170
+		// Token: 0x17005C73 RID: 23667
+		// (get) Token: 0x0602DEEC RID: 188140 RVA: 0x00CDACEC File Offset: 0x00CD8EEC
 		public bool IsEndless
 		{
 			get
@@ -254,8 +254,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088AC RID: 34988
-		// (get) Token: 0x06038FDD RID: 233437 RVA: 0x00D8BF90 File Offset: 0x00D8A190
+		// Token: 0x17005C74 RID: 23668
+		// (get) Token: 0x0602DEED RID: 188141 RVA: 0x00CDAD0C File Offset: 0x00CD8F0C
 		public int TotalWave
 		{
 			get
@@ -264,8 +264,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088AD RID: 34989
-		// (get) Token: 0x06038FDE RID: 233438 RVA: 0x00D8BFAC File Offset: 0x00D8A1AC
+		// Token: 0x17005C75 RID: 23669
+		// (get) Token: 0x0602DEEE RID: 188142 RVA: 0x00CDAD28 File Offset: 0x00CD8F28
 		public int SortId
 		{
 			get
@@ -274,8 +274,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088AE RID: 34990
-		// (get) Token: 0x06038FDF RID: 233439 RVA: 0x00D8BFC8 File Offset: 0x00D8A1C8
+		// Token: 0x17005C76 RID: 23670
+		// (get) Token: 0x0602DEEF RID: 188143 RVA: 0x00CDAD44 File Offset: 0x00CD8F44
 		public int LevelGroup
 		{
 			get
@@ -284,8 +284,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088AF RID: 34991
-		// (get) Token: 0x06038FE0 RID: 233440 RVA: 0x00D8BFE4 File Offset: 0x00D8A1E4
+		// Token: 0x17005C77 RID: 23671
+		// (get) Token: 0x0602DEF0 RID: 188144 RVA: 0x00CDAD60 File Offset: 0x00CD8F60
 		public int Difficulty
 		{
 			get
@@ -294,31 +294,31 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x0401DDBB RID: 122299
+		// Token: 0x04018851 RID: 100433
 		private readonly KurotatoLevel Config;
 
-		// Token: 0x0401DDBC RID: 122300
+		// Token: 0x04018852 RID: 100434
 		private readonly int ActivityId;
 
-		// Token: 0x0401DDBD RID: 122301
+		// Token: 0x04018853 RID: 100435
 		private bool IsUnLockInternal;
 
-		// Token: 0x0401DDBE RID: 122302
+		// Token: 0x04018854 RID: 100436
 		private bool IsFinishedInternal;
 
-		// Token: 0x0401DDBF RID: 122303
+		// Token: 0x04018855 RID: 100437
 		private long UnlockTimeInternal;
 
-		// Token: 0x0401DDC0 RID: 122304
+		// Token: 0x04018856 RID: 100438
 		private int HistoryWaveInternal;
 
-		// Token: 0x0401DDC1 RID: 122305
+		// Token: 0x04018857 RID: 100439
 		private int HistoryKillNumInternal;
 
-		// Token: 0x0401DDC2 RID: 122306
+		// Token: 0x04018858 RID: 100440
 		private int HistoryRoleIdInternal;
 
-		// Token: 0x0401DDC3 RID: 122307
+		// Token: 0x04018859 RID: 100441
 		[Nullable(2)]
 		private KurotatoInstInfo ArchivedDataInternal;
 	}

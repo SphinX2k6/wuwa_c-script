@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002F41 RID: 12097
+// Token: 0x02002494 RID: 9364
 [NullableContext(1)]
 [Nullable(0)]
 public class LockValue : BuffEffect
 {
-	// Token: 0x06019C16 RID: 105494 RVA: 0x006B666C File Offset: 0x006B486C
+	// Token: 0x06017521 RID: 95521 RVA: 0x006DC98C File Offset: 0x006DAB8C
 	public LockValue(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C17 RID: 105495 RVA: 0x006B667C File Offset: 0x006B487C
+	// Token: 0x06017522 RID: 95522 RVA: 0x006DC99C File Offset: 0x006DAB9C
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -35,7 +35,7 @@ public class LockValue : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C18 RID: 105496 RVA: 0x006B66DC File Offset: 0x006B48DC
+	// Token: 0x06017523 RID: 95523 RVA: 0x006DC9FC File Offset: 0x006DABFC
 	public override void OnCreated()
 	{
 		Entity ownerEntity = base.OwnerEntity;
@@ -47,14 +47,14 @@ public class LockValue : BuffEffect
 		baseAttributeComponent.AddAttributeValueLock(this.ActiveHandleId, this.AttributeId, this.Percent, this.Offset);
 	}
 
-	// Token: 0x06019C19 RID: 105497 RVA: 0x006B671E File Offset: 0x006B491E
+	// Token: 0x06017524 RID: 95524 RVA: 0x006DCA3E File Offset: 0x006DAC3E
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C1A RID: 105498 RVA: 0x006B6724 File Offset: 0x006B4924
+	// Token: 0x06017525 RID: 95525 RVA: 0x006DCA44 File Offset: 0x006DAC44
 	public override void OnRemoved(bool bPremature)
 	{
 		Entity ownerEntity = base.OwnerEntity;
@@ -66,7 +66,7 @@ public class LockValue : BuffEffect
 		baseAttributeComponent.RemoveAttributeValueLock(this.ActiveHandleId, this.AttributeId);
 	}
 
-	// Token: 0x06019C1B RID: 105499 RVA: 0x006B675C File Offset: 0x006B495C
+	// Token: 0x06017526 RID: 95526 RVA: 0x006DCA7C File Offset: 0x006DAC7C
 	public override string GetDebugEffectString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler;
@@ -76,7 +76,7 @@ public class LockValue : BuffEffect
 			defaultInterpolatedStringHandler.AppendLiteral("锁定状态属性");
 			defaultInterpolatedStringHandler.AppendFormatted<EAttributeType>(this.AttributeId);
 			defaultInterpolatedStringHandler.AppendLiteral("为");
-			defaultInterpolatedStringHandler.AppendFormatted<float>(this.Percent);
+			defaultInterpolatedStringHandler.AppendFormatted<float>(this.Percent / 100f);
 			defaultInterpolatedStringHandler.AppendLiteral("% + ");
 			defaultInterpolatedStringHandler.AppendFormatted<float>(this.Offset);
 			return defaultInterpolatedStringHandler.ToStringAndClear();
@@ -89,12 +89,12 @@ public class LockValue : BuffEffect
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C227 RID: 49703
+	// Token: 0x0400C5C9 RID: 50633
 	protected EAttributeType AttributeId;
 
-	// Token: 0x0400C228 RID: 49704
+	// Token: 0x0400C5CA RID: 50634
 	protected float Offset;
 
-	// Token: 0x0400C229 RID: 49705
+	// Token: 0x0400C5CB RID: 50635
 	protected float Percent;
 }

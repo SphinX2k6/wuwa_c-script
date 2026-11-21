@@ -14,18 +14,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E24 RID: 20004
+	// Token: 0x02003DED RID: 15853
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoguelikeSettleView : UiViewBase
 	{
-		// Token: 0x0603396B RID: 211307 RVA: 0x00C10A93 File Offset: 0x00C0EC93
+		// Token: 0x060287D6 RID: 165846 RVA: 0x00B59FC7 File Offset: 0x00B581C7
 		[NullableContext(1)]
 		public RoguelikeSettleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603396C RID: 211308 RVA: 0x00C10AB0 File Offset: 0x00C0ECB0
+		// Token: 0x060287D7 RID: 165847 RVA: 0x00B59FE4 File Offset: 0x00B581E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 24;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603396D RID: 211309 RVA: 0x00C10E40 File Offset: 0x00C0F040
+		// Token: 0x060287D8 RID: 165848 RVA: 0x00B5A374 File Offset: 0x00B58574
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeSettleView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603396E RID: 211310 RVA: 0x00C10E83 File Offset: 0x00C0F083
+		// Token: 0x060287D9 RID: 165849 RVA: 0x00B5A3B7 File Offset: 0x00B585B7
 		protected override void OnAfterShow()
 		{
 			if (this.FirstShowFlag)
@@ -112,14 +112,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0603396F RID: 211311 RVA: 0x00C10EAC File Offset: 0x00C0F0AC
+		// Token: 0x060287DA RID: 165850 RVA: 0x00B5A3E0 File Offset: 0x00B585E0
 		protected override void OnStart()
 		{
 			this.InitBaseInfo();
 			EventSystem.Instance.Add<int>(EEventName.RoguelikeArchiveSaved, new Action<int>(this.OnArchiveSaved));
 		}
 
-		// Token: 0x06033970 RID: 211312 RVA: 0x00C10ED0 File Offset: 0x00C0F0D0
+		// Token: 0x060287DB RID: 165851 RVA: 0x00B5A404 File Offset: 0x00B58604
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RoguelikeArchiveSaved, new Action<int>(this.OnArchiveSaved));
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RecordItemList = new List<RoguelikeSettleRecordItem>();
 		}
 
-		// Token: 0x06033971 RID: 211313 RVA: 0x00C10F30 File Offset: 0x00C0F130
+		// Token: 0x060287DC RID: 165852 RVA: 0x00B5A464 File Offset: 0x00B58664
 		private void InitBaseInfo()
 		{
 			RoguelikeResultInfo roguelikeResultInfo = (RoguelikeResultInfo)this.OpenParam;
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033972 RID: 211314 RVA: 0x00C11678 File Offset: 0x00C0F878
+		// Token: 0x060287DD RID: 165853 RVA: 0x00B5ABAC File Offset: 0x00B58DAC
 		private void OnBtnAchieveClick(int _)
 		{
 			RoguelikeResultInfo roguelikeResultInfo = (RoguelikeResultInfo)this.OpenParam;
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033973 RID: 211315 RVA: 0x00C116A6 File Offset: 0x00C0F8A6
+		// Token: 0x060287DE RID: 165854 RVA: 0x00B5ABDA File Offset: 0x00B58DDA
 		private void OnArchiveSaved(int slotId)
 		{
 			((RoguelikeResultInfo)this.OpenParam).RogueArchiveState = RogueArchiveState.Saved;
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			btnAchieveItem2.SetEnableClick(false);
 		}
 
-		// Token: 0x06033974 RID: 211316 RVA: 0x00C116E8 File Offset: 0x00C0F8E8
+		// Token: 0x060287DF RID: 165855 RVA: 0x00B5AC1C File Offset: 0x00B58E1C
 		private void OnBtnBackClick()
 		{
 			RoguelikeResultInfo settleData = (RoguelikeResultInfo)this.OpenParam;
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			exit(true);
 		}
 
-		// Token: 0x06033975 RID: 211317 RVA: 0x00C1179C File Offset: 0x00C0F99C
+		// Token: 0x060287E0 RID: 165856 RVA: 0x00B5ACD0 File Offset: 0x00B58ED0
 		private void OpenAchieveViewAsync(RogueArchiveInfo achieveData)
 		{
 			RoguelikeSettleView.<>c__DisplayClass16_0 CS$<>8__locals1 = new RoguelikeSettleView.<>c__DisplayClass16_0();
@@ -386,96 +386,96 @@ namespace CSharpScript.Game.Module.Roguelike
 			}, null).Run().Forget();
 		}
 
-		// Token: 0x0401B5D5 RID: 112085
+		// Token: 0x04015FA8 RID: 90024
 		[Nullable(1)]
 		public List<RoguelikeSettleRecordItem> RecordItemList = new List<RoguelikeSettleRecordItem>();
 
-		// Token: 0x0401B5D6 RID: 112086
+		// Token: 0x04015FA9 RID: 90025
 		public RoguelikeSettleCurrencyItem SkillPointRewardItem;
 
-		// Token: 0x0401B5D7 RID: 112087
+		// Token: 0x04015FAA RID: 90026
 		public RoguelikeSettleCurrencyItem OutSideRewardItem;
 
-		// Token: 0x0401B5D8 RID: 112088
+		// Token: 0x04015FAB RID: 90027
 		private ButtonItem BtnAchieveItem;
 
-		// Token: 0x0401B5D9 RID: 112089
+		// Token: 0x04015FAC RID: 90028
 		private bool FirstShowFlag = true;
 
-		// Token: 0x0200AFC7 RID: 44999
+		// Token: 0x020099F9 RID: 39417
 		[NullableContext(0)]
 		public static class ERoguelikeSettleViewDefine
 		{
-			// Token: 0x040355C7 RID: 218567
+			// Token: 0x0402FFF7 RID: 196599
 			public const int QualityPanel = 0;
 
-			// Token: 0x040355C8 RID: 218568
+			// Token: 0x0402FFF8 RID: 196600
 			public const int RoleSprite = 1;
 
-			// Token: 0x040355C9 RID: 218569
+			// Token: 0x0402FFF9 RID: 196601
 			public const int TxtRoleName = 2;
 
-			// Token: 0x040355CA RID: 218570
+			// Token: 0x0402FFFA RID: 196602
 			public const int PhantomSprite = 3;
 
-			// Token: 0x040355CB RID: 218571
+			// Token: 0x0402FFFB RID: 196603
 			public const int TxtPhantomName = 4;
 
-			// Token: 0x040355CC RID: 218572
+			// Token: 0x0402FFFC RID: 196604
 			public const int ResultTex = 5;
 
-			// Token: 0x040355CD RID: 218573
+			// Token: 0x0402FFFD RID: 196605
 			public const int ResultTxt = 6;
 
-			// Token: 0x040355CE RID: 218574
+			// Token: 0x0402FFFE RID: 196606
 			public const int TxtTitle = 7;
 
-			// Token: 0x040355CF RID: 218575
+			// Token: 0x0402FFFF RID: 196607
 			public const int TxtDifficulty = 8;
 
-			// Token: 0x040355D0 RID: 218576
+			// Token: 0x04030000 RID: 196608
 			public const int TxtTime = 9;
 
-			// Token: 0x040355D1 RID: 218577
+			// Token: 0x04030001 RID: 196609
 			public const int TxtPlayer = 10;
 
-			// Token: 0x040355D2 RID: 218578
+			// Token: 0x04030002 RID: 196610
 			public const int RecordPanel = 11;
 
-			// Token: 0x040355D3 RID: 218579
+			// Token: 0x04030003 RID: 196611
 			public const int RecordItem = 12;
 
-			// Token: 0x040355D4 RID: 218580
+			// Token: 0x04030004 RID: 196612
 			public const int TxtProgress = 13;
 
-			// Token: 0x040355D5 RID: 218581
+			// Token: 0x04030005 RID: 196613
 			public const int TxtRate = 14;
 
-			// Token: 0x040355D6 RID: 218582
+			// Token: 0x04030006 RID: 196614
 			public const int RewardPanel = 15;
 
-			// Token: 0x040355D7 RID: 218583
+			// Token: 0x04030007 RID: 196615
 			public const int RewardItem = 16;
 
-			// Token: 0x040355D8 RID: 218584
+			// Token: 0x04030008 RID: 196616
 			public const int BtnBack = 17;
 
-			// Token: 0x040355D9 RID: 218585
+			// Token: 0x04030009 RID: 196617
 			public const int RewardItem2 = 18;
 
-			// Token: 0x040355DA RID: 218586
+			// Token: 0x0403000A RID: 196618
 			public const int TextureQualityBg = 19;
 
-			// Token: 0x040355DB RID: 218587
+			// Token: 0x0403000B RID: 196619
 			public const int TxtPassTitle = 20;
 
-			// Token: 0x040355DC RID: 218588
+			// Token: 0x0403000C RID: 196620
 			public const int TxtPassTime = 21;
 
-			// Token: 0x040355DD RID: 218589
+			// Token: 0x0403000D RID: 196621
 			public const int TxtLevelProgress = 22;
 
-			// Token: 0x040355DE RID: 218590
+			// Token: 0x0403000E RID: 196622
 			public const int BtnAchieve = 23;
 		}
 	}

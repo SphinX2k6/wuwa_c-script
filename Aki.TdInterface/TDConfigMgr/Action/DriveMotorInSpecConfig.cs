@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001574 RID: 5492
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020016D2 RID: 5842
 	public class DriveMotorInSpecConfig : ActionParams
 	{
-		// Token: 0x06007BF5 RID: 31733 RVA: 0x0012A4F4 File Offset: 0x001286F4
+		// Token: 0x060082D3 RID: 33491 RVA: 0x001395A0 File Offset: 0x001377A0
 		private DriveMotorInSpecConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007BF6 RID: 31734 RVA: 0x0012A52C File Offset: 0x0012872C
+		// Token: 0x060082D4 RID: 33492 RVA: 0x001395D8 File Offset: 0x001377D8
 		public static DriveMotorInSpecConfig Create([Nullable(2)] DriveMotorInSpecConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007BF7 RID: 31735 RVA: 0x0012A53F File Offset: 0x0012873F
+		// Token: 0x060082D5 RID: 33493 RVA: 0x001395EB File Offset: 0x001377EB
 		public static DriveMotorInSpecConfig CreateFromSetValue([Nullable(2)] DriveMotorInSpecConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007BF8 RID: 31736 RVA: 0x0012A554 File Offset: 0x00128754
+		// Token: 0x060082D6 RID: 33494 RVA: 0x00139600 File Offset: 0x00137800
 		public DriveMotorInSpecConfig_SetValue ToSetValue()
 		{
 			return new DriveMotorInSpecConfig_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002908 RID: 10504
-		// (get) Token: 0x06007BF9 RID: 31737 RVA: 0x0012A5AE File Offset: 0x001287AE
-		// (set) Token: 0x06007BFA RID: 31738 RVA: 0x0012A5D5 File Offset: 0x001287D5
+		// Token: 0x17002AF3 RID: 10995
+		// (get) Token: 0x060082D7 RID: 33495 RVA: 0x0013965A File Offset: 0x0013785A
+		// (set) Token: 0x060082D8 RID: 33496 RVA: 0x00139681 File Offset: 0x00137881
 		public virtual IMotorParamsChangeConfig MotorParamsChangeConfig
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002909 RID: 10505
-		// (get) Token: 0x06007BFB RID: 31739 RVA: 0x0012A5E4 File Offset: 0x001287E4
-		// (set) Token: 0x06007BFC RID: 31740 RVA: 0x0012A61E File Offset: 0x0012881E
+		// Token: 0x17002AF4 RID: 10996
+		// (get) Token: 0x060082D9 RID: 33497 RVA: 0x00139690 File Offset: 0x00137890
+		// (set) Token: 0x060082DA RID: 33498 RVA: 0x001396CA File Offset: 0x001378CA
 		public virtual bool? IsEnableNitrogen
 		{
 			get
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700290A RID: 10506
-		// (get) Token: 0x06007BFD RID: 31741 RVA: 0x0012A62C File Offset: 0x0012882C
-		// (set) Token: 0x06007BFE RID: 31742 RVA: 0x0012A653 File Offset: 0x00128853
+		// Token: 0x17002AF5 RID: 10997
+		// (get) Token: 0x060082DB RID: 33499 RVA: 0x001396D8 File Offset: 0x001378D8
+		// (set) Token: 0x060082DC RID: 33500 RVA: 0x001396FF File Offset: 0x001378FF
 		[Nullable(2)]
 		public virtual List<EPlayerInputConstraintType> DisableInput
 		{
@@ -140,9 +138,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700290B RID: 10507
-		// (get) Token: 0x06007BFF RID: 31743 RVA: 0x0012A661 File Offset: 0x00128861
-		// (set) Token: 0x06007C00 RID: 31744 RVA: 0x0012A690 File Offset: 0x00128890
+		// Token: 0x17002AF6 RID: 10998
+		// (get) Token: 0x060082DD RID: 33501 RVA: 0x0013970D File Offset: 0x0013790D
+		// (set) Token: 0x060082DE RID: 33502 RVA: 0x0013973C File Offset: 0x0013793C
 		public virtual float Duration
 		{
 			get
@@ -163,9 +161,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700290C RID: 10508
-		// (get) Token: 0x06007C01 RID: 31745 RVA: 0x0012A6A0 File Offset: 0x001288A0
-		// (set) Token: 0x06007C02 RID: 31746 RVA: 0x0012A6DA File Offset: 0x001288DA
+		// Token: 0x17002AF7 RID: 10999
+		// (get) Token: 0x060082DF RID: 33503 RVA: 0x0013974C File Offset: 0x0013794C
+		// (set) Token: 0x060082E0 RID: 33504 RVA: 0x00139786 File Offset: 0x00137986
 		public virtual bool? IsAffectedByTimeStop
 		{
 			get
@@ -187,9 +185,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700290D RID: 10509
-		// (get) Token: 0x06007C03 RID: 31747 RVA: 0x0012A6E8 File Offset: 0x001288E8
-		// (set) Token: 0x06007C04 RID: 31748 RVA: 0x0012A722 File Offset: 0x00128922
+		// Token: 0x17002AF8 RID: 11000
+		// (get) Token: 0x060082E1 RID: 33505 RVA: 0x00139794 File Offset: 0x00137994
+		// (set) Token: 0x060082E2 RID: 33506 RVA: 0x001397CE File Offset: 0x001379CE
 		public virtual bool? CanBeInterrupted
 		{
 			get
@@ -211,11 +209,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004754 RID: 18260
+		// Token: 0x04004AF4 RID: 19188
 		[Nullable(2)]
 		protected new DriveMotorInSpecConfig FbInstance;
 
-		// Token: 0x04004755 RID: 18261
+		// Token: 0x04004AF5 RID: 19189
 		[Nullable(2)]
 		protected DriveMotorInSpecConfig_SetValue PocoInterface;
 	}

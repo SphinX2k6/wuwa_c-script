@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002F9 RID: 761
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000340 RID: 832
 	public class IEffectSplineWholeLineMode : IEffectSplineCreationMode
 	{
-		// Token: 0x06000EAF RID: 3759 RVA: 0x00034CB8 File Offset: 0x00032EB8
+		// Token: 0x06000FDF RID: 4063 RVA: 0x00037BEC File Offset: 0x00035DEC
 		private IEffectSplineWholeLineMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000EB0 RID: 3760 RVA: 0x00034CF0 File Offset: 0x00032EF0
+		// Token: 0x06000FE0 RID: 4064 RVA: 0x00037C24 File Offset: 0x00035E24
 		public static IEffectSplineWholeLineMode Create([Nullable(2)] IEffectSplineWholeLineMode instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000EB1 RID: 3761 RVA: 0x00034D03 File Offset: 0x00032F03
+		// Token: 0x06000FE1 RID: 4065 RVA: 0x00037C37 File Offset: 0x00035E37
 		public static IEffectSplineWholeLineMode CreateFromSetValue([Nullable(2)] IEffectSplineWholeLineMode_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000EB2 RID: 3762 RVA: 0x00034D16 File Offset: 0x00032F16
+		// Token: 0x06000FE2 RID: 4066 RVA: 0x00037C4A File Offset: 0x00035E4A
 		public new IEffectSplineWholeLineMode_SetValue ToSetValue()
 		{
 			return new IEffectSplineWholeLineMode_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700043F RID: 1087
-		// (get) Token: 0x06000EB3 RID: 3763 RVA: 0x00034D29 File Offset: 0x00032F29
-		// (set) Token: 0x06000EB4 RID: 3764 RVA: 0x00034D54 File Offset: 0x00032F54
+		// Token: 0x1700048C RID: 1164
+		// (get) Token: 0x06000FE3 RID: 4067 RVA: 0x00037C5D File Offset: 0x00035E5D
+		// (set) Token: 0x06000FE4 RID: 4068 RVA: 0x00037C88 File Offset: 0x00035E88
 		public override EEffectSplineCreateMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000CE6 RID: 3302
+		// Token: 0x04000DD0 RID: 3536
 		[Nullable(2)]
 		protected new IEffectSplineWholeLineMode FbInstance;
 
-		// Token: 0x04000CE7 RID: 3303
+		// Token: 0x04000DD1 RID: 3537
 		[Nullable(2)]
 		protected new IEffectSplineWholeLineMode_SetValue PocoInterface;
 	}

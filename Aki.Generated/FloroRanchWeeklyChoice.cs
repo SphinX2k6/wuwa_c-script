@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CC0 RID: 3264
+	// Token: 0x02000DA4 RID: 3492
 	public struct FloroRanchWeeklyChoice : IFlatbufferObject
 	{
-		// Token: 0x17001385 RID: 4997
-		// (get) Token: 0x0600752E RID: 29998 RVA: 0x0023F6DC File Offset: 0x0023D8DC
+		// Token: 0x170013E2 RID: 5090
+		// (get) Token: 0x06007B39 RID: 31545 RVA: 0x0025E408 File Offset: 0x0025C608
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600752F RID: 29999 RVA: 0x0023F6E9 File Offset: 0x0023D8E9
+		// Token: 0x06007B3A RID: 31546 RVA: 0x0025E415 File Offset: 0x0025C615
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007530 RID: 30000 RVA: 0x0023F6F0 File Offset: 0x0023D8F0
+		// Token: 0x06007B3B RID: 31547 RVA: 0x0025E41C File Offset: 0x0025C61C
 		public static FloroRanchWeeklyChoice GetRootAsFloroRanchWeeklyChoice(ByteBuffer _bb)
 		{
 			return FloroRanchWeeklyChoice.GetRootAsFloroRanchWeeklyChoice(_bb, default(FloroRanchWeeklyChoice));
 		}
 
-		// Token: 0x06007531 RID: 30001 RVA: 0x0023F70C File Offset: 0x0023D90C
+		// Token: 0x06007B3C RID: 31548 RVA: 0x0025E438 File Offset: 0x0025C638
 		public static FloroRanchWeeklyChoice GetRootAsFloroRanchWeeklyChoice(ByteBuffer _bb, FloroRanchWeeklyChoice obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007532 RID: 30002 RVA: 0x0023F729 File Offset: 0x0023D929
+		// Token: 0x06007B3D RID: 31549 RVA: 0x0025E455 File Offset: 0x0025C655
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007533 RID: 30003 RVA: 0x0023F738 File Offset: 0x0023D938
+		// Token: 0x06007B3E RID: 31550 RVA: 0x0025E464 File Offset: 0x0025C664
 		public FloroRanchWeeklyChoice __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001386 RID: 4998
-		// (get) Token: 0x06007534 RID: 30004 RVA: 0x0023F748 File Offset: 0x0023D948
+		// Token: 0x170013E3 RID: 5091
+		// (get) Token: 0x06007B3F RID: 31551 RVA: 0x0025E474 File Offset: 0x0025C674
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001387 RID: 4999
-		// (get) Token: 0x06007535 RID: 30005 RVA: 0x0023F784 File Offset: 0x0023D984
+		// Token: 0x170013E4 RID: 5092
+		// (get) Token: 0x06007B40 RID: 31552 RVA: 0x0025E4B0 File Offset: 0x0025C6B0
 		public string Desc
 		{
 			get
@@ -80,19 +80,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007536 RID: 30006 RVA: 0x0023F7BB File Offset: 0x0023D9BB
+		// Token: 0x06007B41 RID: 31553 RVA: 0x0025E4E7 File Offset: 0x0025C6E7
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06007537 RID: 30007 RVA: 0x0023F7CA File Offset: 0x0023D9CA
+		// Token: 0x06007B42 RID: 31554 RVA: 0x0025E4F6 File Offset: 0x0025C6F6
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06007538 RID: 30008 RVA: 0x0023F7E4 File Offset: 0x0023D9E4
+		// Token: 0x06007B43 RID: 31555 RVA: 0x0025E510 File Offset: 0x0025C710
 		public string NameParam(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -103,8 +103,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001388 RID: 5000
-		// (get) Token: 0x06007539 RID: 30009 RVA: 0x0023F820 File Offset: 0x0023DA20
+		// Token: 0x170013E5 RID: 5093
+		// (get) Token: 0x06007B44 RID: 31556 RVA: 0x0025E54C File Offset: 0x0025C74C
 		public int NameParamLength
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001389 RID: 5001
-		// (get) Token: 0x0600753A RID: 30010 RVA: 0x0023F84C File Offset: 0x0023DA4C
+		// Token: 0x170013E6 RID: 5094
+		// (get) Token: 0x06007B45 RID: 31557 RVA: 0x0025E578 File Offset: 0x0025C778
 		public int NeedRemoveToyCount
 		{
 			get
@@ -133,8 +133,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700138A RID: 5002
-		// (get) Token: 0x0600753B RID: 30011 RVA: 0x0023F88C File Offset: 0x0023DA8C
+		// Token: 0x170013E7 RID: 5095
+		// (get) Token: 0x06007B46 RID: 31558 RVA: 0x0025E5B8 File Offset: 0x0025C7B8
 		public int NeedEmptyGridCount
 		{
 			get
@@ -148,8 +148,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700138B RID: 5003
-		// (get) Token: 0x0600753C RID: 30012 RVA: 0x0023F8CC File Offset: 0x0023DACC
+		// Token: 0x170013E8 RID: 5096
+		// (get) Token: 0x06007B47 RID: 31559 RVA: 0x0025E5F8 File Offset: 0x0025C7F8
 		public int ToyRelateQuality
 		{
 			get
@@ -163,8 +163,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700138C RID: 5004
-		// (get) Token: 0x0600753D RID: 30013 RVA: 0x0023F90C File Offset: 0x0023DB0C
+		// Token: 0x170013E9 RID: 5097
+		// (get) Token: 0x06007B48 RID: 31560 RVA: 0x0025E638 File Offset: 0x0025C838
 		public int GetToyRelateQuality
 		{
 			get
@@ -178,24 +178,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600753E RID: 30014 RVA: 0x0023F949 File Offset: 0x0023DB49
+		// Token: 0x06007B49 RID: 31561 RVA: 0x0025E675 File Offset: 0x0025C875
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用NameParamIter()或GetNameParamBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] NameParam()
+		public string[] NameParam()
 		{
 			return this.NameParamIter().ToArray<string>();
 		}
 
-		// Token: 0x0600753F RID: 30015 RVA: 0x0023F956 File Offset: 0x0023DB56
+		// Token: 0x06007B4A RID: 31562 RVA: 0x0025E682 File Offset: 0x0025C882
 		[NullableContext(1)]
-		public readonly IEnumerable<string> NameParamIter()
+		public IEnumerable<string> NameParamIter()
 		{
 			FloroRanchWeeklyChoice.<NameParamIter>d__26 <NameParamIter>d__ = new FloroRanchWeeklyChoice.<NameParamIter>d__26(-2);
 			<NameParamIter>d__.<>3__<>4__this = this;
 			return <NameParamIter>d__;
 		}
 
-		// Token: 0x04004D30 RID: 19760
+		// Token: 0x04005314 RID: 21268
 		private Table __p;
 	}
 }

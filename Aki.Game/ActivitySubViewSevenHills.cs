@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012AE RID: 4782
+// Token: 0x02000762 RID: 1890
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewSevenHills : ActivitySubViewBase
 {
-	// Token: 0x06008349 RID: 33609 RVA: 0x001BF573 File Offset: 0x001BD773
+	// Token: 0x060056E0 RID: 22240 RVA: 0x001C8303 File Offset: 0x001C6503
 	protected override void OnSetData()
 	{
 		this.ActivityData = (ActivityLongShanData)this.ActivityBaseData;
 	}
 
-	// Token: 0x0600834A RID: 33610 RVA: 0x001BF588 File Offset: 0x001BD788
+	// Token: 0x060056E1 RID: 22241 RVA: 0x001C8318 File Offset: 0x001C6518
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -41,7 +41,7 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600834B RID: 33611 RVA: 0x001BF678 File Offset: 0x001BD878
+	// Token: 0x060056E2 RID: 22242 RVA: 0x001C8408 File Offset: 0x001C6608
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewSevenHills.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600834C RID: 33612 RVA: 0x001BF6BC File Offset: 0x001BD8BC
+	// Token: 0x060056E3 RID: 22243 RVA: 0x001C844C File Offset: 0x001C664C
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -89,13 +89,13 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		this.OnRefreshView();
 	}
 
-	// Token: 0x0600834D RID: 33613 RVA: 0x001BF81A File Offset: 0x001BDA1A
+	// Token: 0x060056E4 RID: 22244 RVA: 0x001C85AA File Offset: 0x001C67AA
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x0600834E RID: 33614 RVA: 0x001BF824 File Offset: 0x001BDA24
+	// Token: 0x060056E5 RID: 22245 RVA: 0x001C85B4 File Offset: 0x001C67B4
 	public void RefreshFunction()
 	{
 		bool flag = this.ActivityBaseData.IsUnLock();
@@ -119,7 +119,7 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600834F RID: 33615 RVA: 0x001BF894 File Offset: 0x001BDA94
+	// Token: 0x060056E6 RID: 22246 RVA: 0x001C8624 File Offset: 0x001C6824
 	protected void RefreshTimerText()
 	{
 		if (this.HideRemainTimeInternal)
@@ -137,14 +137,14 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008350 RID: 33616 RVA: 0x001BF8E6 File Offset: 0x001BDAE6
+	// Token: 0x060056E7 RID: 22247 RVA: 0x001C8676 File Offset: 0x001C6876
 	public void HideRemainTime()
 	{
 		this.HideRemainTimeInternal = true;
 		this.TitleComponent.SetTimeTextVisible(false);
 	}
 
-	// Token: 0x06008351 RID: 33617 RVA: 0x001BF8FB File Offset: 0x001BDAFB
+	// Token: 0x060056E8 RID: 22248 RVA: 0x001C868B File Offset: 0x001C688B
 	[NullableContext(1)]
 	public void SetBtnText(string textId, params object[] args)
 	{
@@ -161,7 +161,7 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		functionButton.SetLocalTextNew(textId, args);
 	}
 
-	// Token: 0x06008352 RID: 33618 RVA: 0x001BF919 File Offset: 0x001BDB19
+	// Token: 0x060056E9 RID: 22249 RVA: 0x001C86A9 File Offset: 0x001C68A9
 	public void SetClickFunc([Nullable(new byte[]
 	{
 		1,
@@ -171,7 +171,7 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		this.ClickFunc = clickFunc;
 	}
 
-	// Token: 0x06008353 RID: 33619 RVA: 0x001BF922 File Offset: 0x001BDB22
+	// Token: 0x060056EA RID: 22250 RVA: 0x001C86B2 File Offset: 0x001C68B2
 	private void FunctionExecute()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -185,7 +185,7 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06008354 RID: 33620 RVA: 0x001BF940 File Offset: 0x001BDB40
+	// Token: 0x060056EB RID: 22251 RVA: 0x001C86D0 File Offset: 0x001C68D0
 	public void SetFunctionRedDotVisible(bool bVisible)
 	{
 		ActivityFunctionalTypeA functionalComponent = this.FunctionalComponent;
@@ -196,7 +196,7 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		functionalComponent.SetFunctionRedDotVisible(bVisible);
 	}
 
-	// Token: 0x06008355 RID: 33621 RVA: 0x001BF953 File Offset: 0x001BDB53
+	// Token: 0x060056EC RID: 22252 RVA: 0x001C86E3 File Offset: 0x001C68E3
 	[NullableContext(1)]
 	public void SetRewardButtonFunction(Action buttonFunction)
 	{
@@ -208,7 +208,7 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		functionalComponent.SetRewardButtonFunction(buttonFunction);
 	}
 
-	// Token: 0x06008356 RID: 33622 RVA: 0x001BF966 File Offset: 0x001BDB66
+	// Token: 0x060056ED RID: 22253 RVA: 0x001C86F6 File Offset: 0x001C68F6
 	public void SetPanelTipVisible(bool bVisible)
 	{
 		ActivityFunctionalTypeA functionalComponent = this.FunctionalComponent;
@@ -219,7 +219,7 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		functionalComponent.SetPanelTipVisible(bVisible);
 	}
 
-	// Token: 0x06008357 RID: 33623 RVA: 0x001BF979 File Offset: 0x001BDB79
+	// Token: 0x060056EE RID: 22254 RVA: 0x001C8709 File Offset: 0x001C6909
 	[NullableContext(1)]
 	public void SetSubTitleTextById(string textId)
 	{
@@ -227,13 +227,13 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		this.TitleComponent.SetSubTitleByTextId(textId, Array.Empty<string>());
 	}
 
-	// Token: 0x06008358 RID: 33624 RVA: 0x001BF998 File Offset: 0x001BDB98
+	// Token: 0x060056EF RID: 22255 RVA: 0x001C8728 File Offset: 0x001C6928
 	public ActivityFunctionalTypeA GetFunctional()
 	{
 		return this.FunctionalComponent;
 	}
 
-	// Token: 0x06008359 RID: 33625 RVA: 0x001BF9A0 File Offset: 0x001BDBA0
+	// Token: 0x060056F0 RID: 22256 RVA: 0x001C8730 File Offset: 0x001C6930
 	protected override void OnBeforeShow()
 	{
 		this.SetClickFunc(delegate(ActivityBaseData _)
@@ -245,7 +245,7 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		this.RefreshScoreNum();
 	}
 
-	// Token: 0x0600835A RID: 33626 RVA: 0x001BF9D0 File Offset: 0x001BDBD0
+	// Token: 0x060056F1 RID: 22257 RVA: 0x001C8760 File Offset: 0x001C6960
 	private void RefreshScoreNum()
 	{
 		int scoreItemCount = this.ActivityData.GetScoreItemCount();
@@ -266,7 +266,7 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		text2.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x0600835B RID: 33627 RVA: 0x001BFA45 File Offset: 0x001BDC45
+	// Token: 0x060056F2 RID: 22258 RVA: 0x001C87D5 File Offset: 0x001C69D5
 	protected override void OnRefreshView()
 	{
 		this.RefreshFunction();
@@ -275,26 +275,26 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 		this.RefreshScoreNum();
 	}
 
-	// Token: 0x0600835C RID: 33628 RVA: 0x001BFA60 File Offset: 0x001BDC60
+	// Token: 0x060056F3 RID: 22259 RVA: 0x001C87F0 File Offset: 0x001C69F0
 	private void RefreshRedDot()
 	{
 		bool functionRedDotVisible = this.ActivityData.CheckAnyStageRed() || this.ActivityData.CheckScoreRewardRedDot();
 		this.SetFunctionRedDotVisible(functionRedDotVisible);
 	}
 
-	// Token: 0x0600835D RID: 33629 RVA: 0x001BFA90 File Offset: 0x001BDC90
+	// Token: 0x060056F4 RID: 22260 RVA: 0x001C8820 File Offset: 0x001C6A20
 	protected virtual void OnConfirmBtnClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SevenHillsMainView, this.ActivityData, null);
 	}
 
-	// Token: 0x04003B27 RID: 15143
+	// Token: 0x04003BBF RID: 15295
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x04003B28 RID: 15144
+	// Token: 0x04003BC0 RID: 15296
 	private ActivityDescriptionTypeA DescriptionComponent;
 
-	// Token: 0x04003B29 RID: 15145
+	// Token: 0x04003BC1 RID: 15297
 	[Nullable(new byte[]
 	{
 		2,
@@ -302,38 +302,38 @@ public class ActivitySubViewSevenHills : ActivitySubViewBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-	// Token: 0x04003B2A RID: 15146
+	// Token: 0x04003BC2 RID: 15298
 	private ActivityFunctionalTypeA FunctionalComponent;
 
-	// Token: 0x04003B2B RID: 15147
+	// Token: 0x04003BC3 RID: 15299
 	private Action<ActivityBaseData> ClickFunc;
 
-	// Token: 0x04003B2C RID: 15148
+	// Token: 0x04003BC4 RID: 15300
 	private bool HideRemainTimeInternal;
 
-	// Token: 0x04003B2D RID: 15149
+	// Token: 0x04003BC5 RID: 15301
 	protected ActivityLongShanData ActivityData;
 
-	// Token: 0x020078CE RID: 30926
+	// Token: 0x02006A58 RID: 27224
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027CCE RID: 163022
+		// Token: 0x04022FFC RID: 143356
 		public const int TitleItem = 0;
 
-		// Token: 0x04027CCF RID: 163023
+		// Token: 0x04022FFD RID: 143357
 		public const int DescriptionItem = 1;
 
-		// Token: 0x04027CD0 RID: 163024
+		// Token: 0x04022FFE RID: 143358
 		public const int RewardListItem = 2;
 
-		// Token: 0x04027CD1 RID: 163025
+		// Token: 0x04022FFF RID: 143359
 		public const int FunctionArea = 3;
 
-		// Token: 0x04027CD2 RID: 163026
+		// Token: 0x04023000 RID: 143360
 		public const int TextCount = 4;
 
-		// Token: 0x04027CD3 RID: 163027
+		// Token: 0x04023001 RID: 143361
 		public const int TextTotal = 5;
 	}
 }

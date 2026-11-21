@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Skin;
 using UnrealEngine;
 
-// Token: 0x02001930 RID: 6448
+// Token: 0x02000DE9 RID: 3561
 public class MediumItemGridRoleHeadComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BCAB RID: 48299 RVA: 0x002AB0A0 File Offset: 0x002A92A0
+	// Token: 0x06009095 RID: 37013 RVA: 0x002B57FC File Offset: 0x002B39FC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -26,14 +26,14 @@ public class MediumItemGridRoleHeadComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BCAC RID: 48300 RVA: 0x002AB12A File Offset: 0x002A932A
+	// Token: 0x06009096 RID: 37014 RVA: 0x002B5886 File Offset: 0x002B3A86
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemRole";
 	}
 
-	// Token: 0x0600BCAD RID: 48301 RVA: 0x002AB134 File Offset: 0x002A9334
+	// Token: 0x06009097 RID: 37015 RVA: 0x002B5890 File Offset: 0x002B3A90
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -109,16 +109,16 @@ public class MediumItemGridRoleHeadComponent : MediumItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x02007E94 RID: 32404
+	// Token: 0x0200701B RID: 28699
 	private class EChildType
 	{
-		// Token: 0x0402966F RID: 169583
+		// Token: 0x0402499B RID: 149915
 		public const int RoleHeadTexture = 0;
 
-		// Token: 0x04029670 RID: 169584
+		// Token: 0x0402499C RID: 149916
 		public const int LightSprite = 1;
 
-		// Token: 0x04029671 RID: 169585
+		// Token: 0x0402499D RID: 149917
 		public const int SpriteBg = 2;
 	}
 }

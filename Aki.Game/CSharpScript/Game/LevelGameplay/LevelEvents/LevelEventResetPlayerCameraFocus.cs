@@ -5,21 +5,21 @@ using CSharpScript.Game.Camera;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B62 RID: 27490
+	// Token: 0x02005CDA RID: 23770
 	public class LevelEventResetPlayerCameraFocus : LevelEventBase, IStaticVariableResetter
 	{
-		// Token: 0x060441F1 RID: 279025 RVA: 0x010C4D41 File Offset: 0x010C2F41
+		// Token: 0x0603A343 RID: 238403 RVA: 0x0106E911 File Offset: 0x0106CB11
 		static LevelEventResetPlayerCameraFocus()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelEventResetPlayerCameraFocus.CreateStaticDefaultValue), new Action(LevelEventResetPlayerCameraFocus.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060441F2 RID: 279026 RVA: 0x010C4D60 File Offset: 0x010C2F60
+		// Token: 0x0603A344 RID: 238404 RVA: 0x0106E930 File Offset: 0x0106CB30
 		public LevelEventResetPlayerCameraFocus(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441F3 RID: 279027 RVA: 0x010C4D6C File Offset: 0x010C2F6C
+		// Token: 0x0603A345 RID: 238405 RVA: 0x0106E93C File Offset: 0x0106CB3C
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -72,19 +72,19 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			global::Log.Instance.Info(ELogModule.Event, ELogAuthor.LJM, "结束恢复相机调整", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060441F4 RID: 279028 RVA: 0x010C4EF2 File Offset: 0x010C30F2
+		// Token: 0x0603A346 RID: 238406 RVA: 0x0106EAC2 File Offset: 0x0106CCC2
 		public static void CreateStaticDefaultValue()
 		{
 			LevelEventResetPlayerCameraFocus._desRotator = Rotator.Create();
 		}
 
-		// Token: 0x060441F5 RID: 279029 RVA: 0x010C4EFE File Offset: 0x010C30FE
+		// Token: 0x0603A347 RID: 238407 RVA: 0x0106EACE File Offset: 0x0106CCCE
 		public static void ResetStaticDefaultValue()
 		{
 			LevelEventResetPlayerCameraFocus._desRotator = null;
 		}
 
-		// Token: 0x0402393F RID: 145727
+		// Token: 0x0401EBE1 RID: 125921
 		[Nullable(2)]
 		private static Rotator _desRotator;
 	}

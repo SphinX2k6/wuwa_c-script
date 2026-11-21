@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004465 RID: 17509
+	// Token: 0x020048CD RID: 18637
 	public class IDartboardZoneTypeT
 	{
-		// Token: 0x17007B92 RID: 31634
-		// (get) Token: 0x0601A180 RID: 106880 RVA: 0x003BA732 File Offset: 0x003B8932
-		// (set) Token: 0x0601A181 RID: 106881 RVA: 0x003BA73A File Offset: 0x003B893A
+		// Token: 0x170081D1 RID: 33233
+		// (get) Token: 0x0601B951 RID: 112977 RVA: 0x003E693E File Offset: 0x003E4B3E
+		// (set) Token: 0x0601B952 RID: 112978 RVA: 0x003E6946 File Offset: 0x003E4B46
 		public EDartboardZoneType Type { get; set; }
 
-		// Token: 0x0601A182 RID: 106882 RVA: 0x003BA743 File Offset: 0x003B8943
+		// Token: 0x0601B953 RID: 112979 RVA: 0x003E694F File Offset: 0x003E4B4F
 		public IDartboardZoneTypeT()
 		{
 			this.Type = EDartboardZoneType.CenterBull;

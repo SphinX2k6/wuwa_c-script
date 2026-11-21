@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000293 RID: 659
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002D6 RID: 726
 	public class ICreateStageConfig : ILifeStageConfig
 	{
-		// Token: 0x06000C4B RID: 3147 RVA: 0x0002FE44 File Offset: 0x0002E044
+		// Token: 0x06000D65 RID: 3429 RVA: 0x00032B34 File Offset: 0x00030D34
 		private ICreateStageConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000C4C RID: 3148 RVA: 0x0002FE7C File Offset: 0x0002E07C
+		// Token: 0x06000D66 RID: 3430 RVA: 0x00032B6C File Offset: 0x00030D6C
 		public static ICreateStageConfig Create([Nullable(2)] ICreateStageConfig instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C4D RID: 3149 RVA: 0x0002FE8F File Offset: 0x0002E08F
+		// Token: 0x06000D67 RID: 3431 RVA: 0x00032B7F File Offset: 0x00030D7F
 		public static ICreateStageConfig CreateFromSetValue([Nullable(2)] ICreateStageConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C4E RID: 3150 RVA: 0x0002FEA2 File Offset: 0x0002E0A2
+		// Token: 0x06000D68 RID: 3432 RVA: 0x00032B92 File Offset: 0x00030D92
 		public new ICreateStageConfig_SetValue ToSetValue()
 		{
 			return new ICreateStageConfig_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003A6 RID: 934
-		// (get) Token: 0x06000C4F RID: 3151 RVA: 0x0002FED0 File Offset: 0x0002E0D0
-		// (set) Token: 0x06000C50 RID: 3152 RVA: 0x0002FF0A File Offset: 0x0002E10A
+		// Token: 0x170003EE RID: 1006
+		// (get) Token: 0x06000D69 RID: 3433 RVA: 0x00032BC0 File Offset: 0x00030DC0
+		// (set) Token: 0x06000D6A RID: 3434 RVA: 0x00032BFA File Offset: 0x00030DFA
 		public override float? PerformDuration
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003A7 RID: 935
-		// (get) Token: 0x06000C51 RID: 3153 RVA: 0x0002FF18 File Offset: 0x0002E118
-		// (set) Token: 0x06000C52 RID: 3154 RVA: 0x0002FF79 File Offset: 0x0002E179
+		// Token: 0x170003EF RID: 1007
+		// (get) Token: 0x06000D6B RID: 3435 RVA: 0x00032C08 File Offset: 0x00030E08
+		// (set) Token: 0x06000D6C RID: 3436 RVA: 0x00032C69 File Offset: 0x00030E69
 		[Nullable(2)]
 		public virtual ICreateBulletConfig BulletConfig
 		{
@@ -121,20 +119,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003A8 RID: 936
-		// (get) Token: 0x06000C53 RID: 3155 RVA: 0x0002FF90 File Offset: 0x0002E190
-		// (set) Token: 0x06000C54 RID: 3156 RVA: 0x00030023 File Offset: 0x0002E223
+		// Token: 0x170003F0 RID: 1008
+		// (get) Token: 0x06000D6D RID: 3437 RVA: 0x00032C80 File Offset: 0x00030E80
+		// (set) Token: 0x06000D6E RID: 3438 RVA: 0x00032D13 File Offset: 0x00030F13
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -165,7 +163,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -174,29 +172,29 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000B99 RID: 2969
+		// Token: 0x04000C7A RID: 3194
 		[Nullable(2)]
 		protected new ICreateStageConfig FbInstance;
 
-		// Token: 0x04000B9A RID: 2970
+		// Token: 0x04000C7B RID: 3195
 		[Nullable(2)]
 		protected new ICreateStageConfig_SetValue PocoInterface;
 
-		// Token: 0x04000B9B RID: 2971
+		// Token: 0x04000C7C RID: 3196
 		private ICreateBulletConfig _BulletConfigCache;
 
-		// Token: 0x04000B9C RID: 2972
+		// Token: 0x04000C7D RID: 3197
 		private bool _BulletConfigInited;
 
-		// Token: 0x04000B9D RID: 2973
+		// Token: 0x04000C7E RID: 3198
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x04000B9E RID: 2974
+		// Token: 0x04000C7F RID: 3199
 		private bool _ActionsInited;
 	}
 }

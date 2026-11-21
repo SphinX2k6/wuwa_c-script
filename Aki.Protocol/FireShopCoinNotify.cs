@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000540 RID: 1344
+	// Token: 0x0200052B RID: 1323
 	[NetMessage(EMessageId.FireShopCoinNotify)]
 	public sealed class FireShopCoinNotify : IMessage<FireShopCoinNotify>, IMessage, IEquatable<FireShopCoinNotify>, IDeepCloneable<FireShopCoinNotify>, IBufferMessage
 	{
-		// Token: 0x06007DD9 RID: 32217 RVA: 0x00130D8D File Offset: 0x0012EF8D
+		// Token: 0x06007C71 RID: 31857 RVA: 0x0012E189 File Offset: 0x0012C389
 		[NullableContext(1)]
 		public static FireShopCoinNotify Create()
 		{
 			return new FireShopCoinNotify();
 		}
 
-		// Token: 0x1700187D RID: 6269
-		// (get) Token: 0x06007DDA RID: 32218 RVA: 0x00130D94 File Offset: 0x0012EF94
+		// Token: 0x17001830 RID: 6192
+		// (get) Token: 0x06007C72 RID: 31858 RVA: 0x0012E190 File Offset: 0x0012C390
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700187E RID: 6270
-		// (get) Token: 0x06007DDB RID: 32219 RVA: 0x00130D97 File Offset: 0x0012EF97
+		// Token: 0x17001831 RID: 6193
+		// (get) Token: 0x06007C73 RID: 31859 RVA: 0x0012E193 File Offset: 0x0012C393
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007DDC RID: 32220 RVA: 0x00130D9E File Offset: 0x0012EF9E
+		// Token: 0x06007C74 RID: 31860 RVA: 0x0012E19A File Offset: 0x0012C39A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FireShopCoinNotify()
 		{
 		}
 
-		// Token: 0x06007DDD RID: 32221 RVA: 0x00130DA6 File Offset: 0x0012EFA6
+		// Token: 0x06007C75 RID: 31861 RVA: 0x0012E1A2 File Offset: 0x0012C3A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FireShopCoinNotify(FireShopCoinNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06007DDE RID: 32222 RVA: 0x00130DD7 File Offset: 0x0012EFD7
+		// Token: 0x06007C76 RID: 31862 RVA: 0x0012E1D3 File Offset: 0x0012C3D3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FireShopCoinNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new FireShopCoinNotify(this);
 		}
 
-		// Token: 0x1700187F RID: 6271
-		// (get) Token: 0x06007DDF RID: 32223 RVA: 0x00130DDF File Offset: 0x0012EFDF
-		// (set) Token: 0x06007DE0 RID: 32224 RVA: 0x00130DE7 File Offset: 0x0012EFE7
+		// Token: 0x17001832 RID: 6194
+		// (get) Token: 0x06007C77 RID: 31863 RVA: 0x0012E1DB File Offset: 0x0012C3DB
+		// (set) Token: 0x06007C78 RID: 31864 RVA: 0x0012E1E3 File Offset: 0x0012C3E3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long MoneyCount
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001880 RID: 6272
-		// (get) Token: 0x06007DE1 RID: 32225 RVA: 0x00130DF0 File Offset: 0x0012EFF0
-		// (set) Token: 0x06007DE2 RID: 32226 RVA: 0x00130DF8 File Offset: 0x0012EFF8
+		// Token: 0x17001833 RID: 6195
+		// (get) Token: 0x06007C79 RID: 31865 RVA: 0x0012E1EC File Offset: 0x0012C3EC
+		// (set) Token: 0x06007C7A RID: 31866 RVA: 0x0012E1F4 File Offset: 0x0012C3F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long MoneyHistorySpent
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007DE3 RID: 32227 RVA: 0x00130E01 File Offset: 0x0012F001
+		// Token: 0x06007C7B RID: 31867 RVA: 0x0012E1FD File Offset: 0x0012C3FD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FireShopCoinNotify);
 		}
 
-		// Token: 0x06007DE4 RID: 32228 RVA: 0x00130E0F File Offset: 0x0012F00F
+		// Token: 0x06007C7C RID: 31868 RVA: 0x0012E20B File Offset: 0x0012C40B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FireShopCoinNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.MoneyCount == other.MoneyCount && this.MoneyHistorySpent == other.MoneyHistorySpent && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06007DE5 RID: 32229 RVA: 0x00130E50 File Offset: 0x0012F050
+		// Token: 0x06007C7D RID: 31869 RVA: 0x0012E24C File Offset: 0x0012C44C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007DE6 RID: 32230 RVA: 0x00130EA8 File Offset: 0x0012F0A8
+		// Token: 0x06007C7E RID: 31870 RVA: 0x0012E2A4 File Offset: 0x0012C4A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06007DE7 RID: 32231 RVA: 0x00130EB5 File Offset: 0x0012F0B5
+		// Token: 0x06007C7F RID: 31871 RVA: 0x0012E2B1 File Offset: 0x0012C4B1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06007DE8 RID: 32232 RVA: 0x00130EC0 File Offset: 0x0012F0C0
+		// Token: 0x06007C80 RID: 31872 RVA: 0x0012E2BC File Offset: 0x0012C4BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			if (this.MoneyCount != 0L)
+			{
+				output.WriteRawTag(64);
+				output.WriteInt64(this.MoneyCount);
+			}
 			if (this.MoneyHistorySpent != 0L)
 			{
 				output.WriteRawTag(80);
 				output.WriteInt64(this.MoneyHistorySpent);
-			}
-			if (this.MoneyCount != 0L)
-			{
-				output.WriteRawTag(96);
-				output.WriteInt64(this.MoneyCount);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007DE9 RID: 32233 RVA: 0x00130F1C File Offset: 0x0012F11C
+		// Token: 0x06007C81 RID: 31873 RVA: 0x0012E318 File Offset: 0x0012C518
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007DEA RID: 32234 RVA: 0x00130F74 File Offset: 0x0012F174
+		// Token: 0x06007C82 RID: 31874 RVA: 0x0012E370 File Offset: 0x0012C570
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FireShopCoinNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06007DEB RID: 32235 RVA: 0x00130FC4 File Offset: 0x0012F1C4
+		// Token: 0x06007C83 RID: 31875 RVA: 0x0012E3C0 File Offset: 0x0012C5C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06007DEC RID: 32236 RVA: 0x00130FD0 File Offset: 0x0012F1D0
+		// Token: 0x06007C84 RID: 31876 RVA: 0x0012E3CC File Offset: 0x0012C5CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,37 +236,37 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 80U)
+				if (num != 64U)
 				{
-					if (num != 96U)
+					if (num != 80U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.MoneyCount = input.ReadInt64();
+						this.MoneyHistorySpent = input.ReadInt64();
 					}
 				}
 				else
 				{
-					this.MoneyHistorySpent = input.ReadInt64();
+					this.MoneyCount = input.ReadInt64();
 				}
 			}
 		}
 
-		// Token: 0x04003FF1 RID: 16369
+		// Token: 0x04003FE7 RID: 16359
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003FF2 RID: 16370
-		public const int MoneyCountFieldNumber = 12;
+		// Token: 0x04003FE8 RID: 16360
+		public const int MoneyCountFieldNumber = 8;
 
-		// Token: 0x04003FF3 RID: 16371
+		// Token: 0x04003FE9 RID: 16361
 		private long moneyCount_;
 
-		// Token: 0x04003FF4 RID: 16372
+		// Token: 0x04003FEA RID: 16362
 		public const int MoneyHistorySpentFieldNumber = 10;
 
-		// Token: 0x04003FF5 RID: 16373
+		// Token: 0x04003FEB RID: 16363
 		private long moneyHistorySpent_;
 	}
 }

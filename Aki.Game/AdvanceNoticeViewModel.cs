@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020010E2 RID: 4322
+// Token: 0x02000596 RID: 1430
 [NullableContext(1)]
 [Nullable(0)]
 public class AdvanceNoticeViewModel
 {
-	// Token: 0x17000983 RID: 2435
-	// (get) Token: 0x0600708B RID: 28811 RVA: 0x0016F593 File Offset: 0x0016D793
+	// Token: 0x170009A3 RID: 2467
+	// (get) Token: 0x06004421 RID: 17441 RVA: 0x00177F4F File Offset: 0x0017614F
 	public int TabId
 	{
 		get
@@ -19,8 +19,8 @@ public class AdvanceNoticeViewModel
 		}
 	}
 
-	// Token: 0x17000984 RID: 2436
-	// (get) Token: 0x0600708C RID: 28812 RVA: 0x0016F5A6 File Offset: 0x0016D7A6
+	// Token: 0x170009A4 RID: 2468
+	// (get) Token: 0x06004422 RID: 17442 RVA: 0x00177F62 File Offset: 0x00176162
 	public int CurrentSubTabId
 	{
 		get
@@ -29,7 +29,7 @@ public class AdvanceNoticeViewModel
 		}
 	}
 
-	// Token: 0x0600708D RID: 28813 RVA: 0x0016F5C0 File Offset: 0x0016D7C0
+	// Token: 0x06004423 RID: 17443 RVA: 0x00177F7C File Offset: 0x0017617C
 	public void UpdateTabDataOnTabChange(int tabIndex)
 	{
 		this.TabIndex = tabIndex;
@@ -52,7 +52,7 @@ public class AdvanceNoticeViewModel
 		this.SetEnemyShowLineData();
 	}
 
-	// Token: 0x0600708E RID: 28814 RVA: 0x0016F6D0 File Offset: 0x0016D8D0
+	// Token: 0x06004424 RID: 17444 RVA: 0x0017808C File Offset: 0x0017628C
 	private AdvanceNoticeThumbItemData BuildAdvanceNoticeThumbItemData(EAdvanceNoticeTabType tabType, int subTabId)
 	{
 		AdvanceNoticeThumbItemData advanceNoticeThumbItemData = new AdvanceNoticeThumbItemData();
@@ -114,7 +114,7 @@ public class AdvanceNoticeViewModel
 		return advanceNoticeThumbItemData;
 	}
 
-	// Token: 0x0600708F RID: 28815 RVA: 0x0016F85C File Offset: 0x0016DA5C
+	// Token: 0x06004425 RID: 17445 RVA: 0x00178218 File Offset: 0x00176418
 	private void SetEnemyShowLineData()
 	{
 		int num = 0;
@@ -130,7 +130,7 @@ public class AdvanceNoticeViewModel
 		}
 	}
 
-	// Token: 0x06007090 RID: 28816 RVA: 0x0016F8D0 File Offset: 0x0016DAD0
+	// Token: 0x06004426 RID: 17446 RVA: 0x0017828C File Offset: 0x0017648C
 	public void OnSwitchSubTab(int subTabIndex)
 	{
 		this.CurrentSubTabIndex = subTabIndex;
@@ -142,7 +142,7 @@ public class AdvanceNoticeViewModel
 		onSwitchSubTabDelegate(subTabIndex);
 	}
 
-	// Token: 0x06007091 RID: 28817 RVA: 0x0016F8EC File Offset: 0x0016DAEC
+	// Token: 0x06004427 RID: 17447 RVA: 0x001782A8 File Offset: 0x001764A8
 	public void ClickTabLogEvent()
 	{
 		NextVersionContentLogEvent nextVersionContentLogEvent = new NextVersionContentLogEvent();
@@ -152,34 +152,34 @@ public class AdvanceNoticeViewModel
 		LogReportController.Instance.LogReport(nextVersionContentLogEvent);
 	}
 
-	// Token: 0x04003432 RID: 13362
+	// Token: 0x040034CB RID: 13515
 	public int DefaultSelectedTabId;
 
-	// Token: 0x04003433 RID: 13363
+	// Token: 0x040034CC RID: 13516
 	public int TabIndex;
 
-	// Token: 0x04003434 RID: 13364
+	// Token: 0x040034CD RID: 13517
 	public int CurrentSubTabIndex;
 
-	// Token: 0x04003435 RID: 13365
+	// Token: 0x040034CE RID: 13518
 	public List<int> TabList = new List<int>();
 
-	// Token: 0x04003436 RID: 13366
+	// Token: 0x040034CF RID: 13519
 	public List<int> SubTabIdList = new List<int>();
 
-	// Token: 0x04003437 RID: 13367
+	// Token: 0x040034D0 RID: 13520
 	public EUiTabViewName CurrentTabView = EUiTabViewName.AdvanceNoticeNewRoleTabView;
 
-	// Token: 0x04003438 RID: 13368
+	// Token: 0x040034D1 RID: 13521
 	public List<AdvanceNoticeThumbItemData> AdvanceNoticeThumbItemDataList = new List<AdvanceNoticeThumbItemData>();
 
-	// Token: 0x04003439 RID: 13369
+	// Token: 0x040034D2 RID: 13522
 	private readonly Dictionary<int, AdvanceNoticeThumbItemData> AdvanceNoticeThumbEnemyMap = new Dictionary<int, AdvanceNoticeThumbItemData>();
 
-	// Token: 0x0400343A RID: 13370
+	// Token: 0x040034D3 RID: 13523
 	public int ActivityId;
 
-	// Token: 0x0400343B RID: 13371
+	// Token: 0x040034D4 RID: 13524
 	[Nullable(2)]
 	public Action<int> OnSwitchSubTabDelegate;
 }

@@ -4,20 +4,20 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common;
 
-// Token: 0x02002A7C RID: 10876
+// Token: 0x02001FF8 RID: 8184
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class SoundAreaPlayTipsModel : ModelBase
 {
-	// Token: 0x06016A51 RID: 92753 RVA: 0x005BCCA9 File Offset: 0x005BAEA9
+	// Token: 0x06014476 RID: 83062 RVA: 0x005E8ED9 File Offset: 0x005E70D9
 	protected override bool OnLeaveLevel()
 	{
 		this.CurrentLevelShowInfoIdCountMap.Clear();
 		return true;
 	}
 
-	// Token: 0x06016A52 RID: 92754 RVA: 0x005BCCB8 File Offset: 0x005BAEB8
+	// Token: 0x06014477 RID: 83063 RVA: 0x005E8EE8 File Offset: 0x005E70E8
 	private int GetInfoIdCountType(int infoId)
 	{
 		SoundAreaPlayInfo? config = ConfigSoundAreaPlayInfoById.GetConfig(infoId, true);
@@ -28,7 +28,7 @@ public class SoundAreaPlayTipsModel : ModelBase
 		return config.GetValueOrDefault().MaxCountType;
 	}
 
-	// Token: 0x06016A53 RID: 92755 RVA: 0x005BCCE8 File Offset: 0x005BAEE8
+	// Token: 0x06014478 RID: 83064 RVA: 0x005E8F18 File Offset: 0x005E7118
 	public void AddShowInfoIdCount(int infoId)
 	{
 		int infoIdCountType = this.GetInfoIdCountType(infoId);
@@ -51,7 +51,7 @@ public class SoundAreaPlayTipsModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016A54 RID: 92756 RVA: 0x005BCD58 File Offset: 0x005BAF58
+	// Token: 0x06014479 RID: 83065 RVA: 0x005E8F88 File Offset: 0x005E7188
 	public int GetInfoIdShowCount(int infoId)
 	{
 		SoundAreaPlayInfo? config = ConfigSoundAreaPlayInfoById.GetConfig(infoId, true);
@@ -74,15 +74,15 @@ public class SoundAreaPlayTipsModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06016A55 RID: 92757 RVA: 0x005BCDCC File Offset: 0x005BAFCC
+	// Token: 0x0601447A RID: 83066 RVA: 0x005E8FFC File Offset: 0x005E71FC
 	public bool CheckInfoIdCanShow(int infoId)
 	{
 		SoundAreaPlayInfo? config = ConfigSoundAreaPlayInfoById.GetConfig(infoId, true);
 		return config == null || config.GetValueOrDefault().MaxCount <= 0 || this.GetInfoIdShowCount(infoId) < config.Value.MaxCount;
 	}
 
-	// Token: 0x17001E16 RID: 7702
-	// (get) Token: 0x06016A56 RID: 92758 RVA: 0x005BCE1C File Offset: 0x005BB01C
+	// Token: 0x17001E6E RID: 7790
+	// (get) Token: 0x0601447B RID: 83067 RVA: 0x005E904C File Offset: 0x005E724C
 	public static SoundAreaPlayTipsModel Instance
 	{
 		get
@@ -91,7 +91,7 @@ public class SoundAreaPlayTipsModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016A57 RID: 92759 RVA: 0x005BCE23 File Offset: 0x005BB023
+	// Token: 0x0601447C RID: 83068 RVA: 0x005E9053 File Offset: 0x005E7253
 	public static SoundAreaPlayTipsModel GetOrCreateInstance()
 	{
 		if (SoundAreaPlayTipsModel._Instance == null)
@@ -101,7 +101,7 @@ public class SoundAreaPlayTipsModel : ModelBase
 		return SoundAreaPlayTipsModel._Instance;
 	}
 
-	// Token: 0x06016A58 RID: 92760 RVA: 0x005BCE37 File Offset: 0x005BB037
+	// Token: 0x0601447D RID: 83069 RVA: 0x005E9067 File Offset: 0x005E7267
 	public static bool CreateInstance()
 	{
 		if (SoundAreaPlayTipsModel._Instance != null)
@@ -112,27 +112,27 @@ public class SoundAreaPlayTipsModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06016A59 RID: 92761 RVA: 0x005BCE4D File Offset: 0x005BB04D
+	// Token: 0x0601447E RID: 83070 RVA: 0x005E907D File Offset: 0x005E727D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016A5A RID: 92762 RVA: 0x005BCE4F File Offset: 0x005BB04F
+	// Token: 0x0601447F RID: 83071 RVA: 0x005E907F File Offset: 0x005E727F
 	public static void ResetStaticDefaultValue()
 	{
 		SoundAreaPlayTipsModel._Instance = null;
 	}
 
-	// Token: 0x06016A5B RID: 92763 RVA: 0x005BCE57 File Offset: 0x005BB057
+	// Token: 0x06014480 RID: 83072 RVA: 0x005E9087 File Offset: 0x005E7287
 	static SoundAreaPlayTipsModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SoundAreaPlayTipsModel.CreateStaticDefaultValue), new Action(SoundAreaPlayTipsModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A818 RID: 43032
+	// Token: 0x0400AC1D RID: 44061
 	private readonly Dictionary<int, int> CurrentLevelShowInfoIdCountMap = new Dictionary<int, int>();
 
-	// Token: 0x0400A819 RID: 43033
+	// Token: 0x0400AC1E RID: 44062
 	[Nullable(2)]
 	private static SoundAreaPlayTipsModel _Instance;
 }

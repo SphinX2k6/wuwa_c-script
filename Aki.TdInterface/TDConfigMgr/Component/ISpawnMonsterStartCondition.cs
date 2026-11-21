@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006F0 RID: 1776
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000791 RID: 1937
 	public class ISpawnMonsterStartCondition
 	{
-		// Token: 0x06002642 RID: 9794 RVA: 0x000667F0 File Offset: 0x000649F0
+		// Token: 0x06002962 RID: 10594 RVA: 0x0006D860 File Offset: 0x0006BA60
 		private ISpawnMonsterStartCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002643 RID: 9795 RVA: 0x00066828 File Offset: 0x00064A28
+		// Token: 0x06002963 RID: 10595 RVA: 0x0006D898 File Offset: 0x0006BA98
 		public static ISpawnMonsterStartCondition Create([Nullable(2)] ISpawnMonsterStartCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002644 RID: 9796 RVA: 0x0006683B File Offset: 0x00064A3B
+		// Token: 0x06002964 RID: 10596 RVA: 0x0006D8AB File Offset: 0x0006BAAB
 		public static ISpawnMonsterStartCondition CreateFromSetValue([Nullable(2)] ISpawnMonsterStartCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002645 RID: 9797 RVA: 0x0006684E File Offset: 0x00064A4E
+		// Token: 0x06002965 RID: 10597 RVA: 0x0006D8BE File Offset: 0x0006BABE
 		public ISpawnMonsterStartCondition_SetValue ToSetValue()
 		{
 			return new ISpawnMonsterStartCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A18 RID: 2584
-		// (get) Token: 0x06002646 RID: 9798 RVA: 0x00066861 File Offset: 0x00064A61
-		// (set) Token: 0x06002647 RID: 9799 RVA: 0x0006688C File Offset: 0x00064A8C
+		// Token: 0x17000AD6 RID: 2774
+		// (get) Token: 0x06002966 RID: 10598 RVA: 0x0006D8D1 File Offset: 0x0006BAD1
+		// (set) Token: 0x06002967 RID: 10599 RVA: 0x0006D8FC File Offset: 0x0006BAFC
 		public virtual ESpawnMonsterStartCondition Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019FE RID: 6654
+		// Token: 0x04001BFD RID: 7165
 		[Nullable(2)]
 		protected ISpawnMonsterStartCondition FbInstance;
 
-		// Token: 0x040019FF RID: 6655
+		// Token: 0x04001BFE RID: 7166
 		[Nullable(2)]
 		protected ISpawnMonsterStartCondition_SetValue PocoInterface;
 	}

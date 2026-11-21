@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B25 RID: 6949
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CD4 RID: 7380
 	public class IICenterTextTypeWriter : ICenterTextShowType
 	{
-		// Token: 0x060094C4 RID: 38084 RVA: 0x00158460 File Offset: 0x00156660
+		// Token: 0x06009CAE RID: 40110 RVA: 0x0016913C File Offset: 0x0016733C
 		private IICenterTextTypeWriter_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060094C5 RID: 38085 RVA: 0x00158498 File Offset: 0x00156698
+		// Token: 0x06009CAF RID: 40111 RVA: 0x00169174 File Offset: 0x00167374
 		public static IICenterTextTypeWriter Create([Nullable(2)] IICenterTextTypeWriter instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060094C6 RID: 38086 RVA: 0x001584AB File Offset: 0x001566AB
+		// Token: 0x06009CB0 RID: 40112 RVA: 0x00169187 File Offset: 0x00167387
 		public static IICenterTextTypeWriter CreateFromSetValue([Nullable(2)] IICenterTextTypeWriter_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060094C7 RID: 38087 RVA: 0x001584BE File Offset: 0x001566BE
+		// Token: 0x06009CB1 RID: 40113 RVA: 0x0016919A File Offset: 0x0016739A
 		public new IICenterTextTypeWriter_SetValue ToSetValue()
 		{
 			return new IICenterTextTypeWriter_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F00 RID: 12032
-		// (get) Token: 0x060094C8 RID: 38088 RVA: 0x001584DD File Offset: 0x001566DD
-		// (set) Token: 0x060094C9 RID: 38089 RVA: 0x00158508 File Offset: 0x00156708
+		// Token: 0x17003126 RID: 12582
+		// (get) Token: 0x06009CB2 RID: 40114 RVA: 0x001691B9 File Offset: 0x001673B9
+		// (set) Token: 0x06009CB3 RID: 40115 RVA: 0x001691E4 File Offset: 0x001673E4
 		public override ECenterTextShowAnim Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F01 RID: 12033
-		// (get) Token: 0x060094CA RID: 38090 RVA: 0x00158516 File Offset: 0x00156716
-		// (set) Token: 0x060094CB RID: 38091 RVA: 0x00158541 File Offset: 0x00156741
+		// Token: 0x17003127 RID: 12583
+		// (get) Token: 0x06009CB4 RID: 40116 RVA: 0x001691F2 File Offset: 0x001673F2
+		// (set) Token: 0x06009CB5 RID: 40117 RVA: 0x0016921D File Offset: 0x0016741D
 		public virtual int TextCountPerSecond
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B23 RID: 23331
+		// Token: 0x04005FC1 RID: 24513
 		[Nullable(2)]
 		protected new IICenterTextTypeWriter FbInstance;
 
-		// Token: 0x04005B24 RID: 23332
+		// Token: 0x04005FC2 RID: 24514
 		[Nullable(2)]
 		protected new IICenterTextTypeWriter_SetValue PocoInterface;
 	}

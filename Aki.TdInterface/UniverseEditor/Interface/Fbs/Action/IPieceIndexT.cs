@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CD0 RID: 27856
+	// Token: 0x02007446 RID: 29766
 	public class IPieceIndexT
 	{
-		// Token: 0x1700CF65 RID: 53093
-		// (get) Token: 0x06031191 RID: 201105 RVA: 0x006A9978 File Offset: 0x006A7B78
-		// (set) Token: 0x06031192 RID: 201106 RVA: 0x006A9980 File Offset: 0x006A7B80
+		// Token: 0x1700DAA2 RID: 55970
+		// (get) Token: 0x06034168 RID: 213352 RVA: 0x00704BAC File Offset: 0x00702DAC
+		// (set) Token: 0x06034169 RID: 213353 RVA: 0x00704BB4 File Offset: 0x00702DB4
 		public int RowIndex { get; set; }
 
-		// Token: 0x1700CF66 RID: 53094
-		// (get) Token: 0x06031193 RID: 201107 RVA: 0x006A9989 File Offset: 0x006A7B89
-		// (set) Token: 0x06031194 RID: 201108 RVA: 0x006A9991 File Offset: 0x006A7B91
+		// Token: 0x1700DAA3 RID: 55971
+		// (get) Token: 0x0603416A RID: 213354 RVA: 0x00704BBD File Offset: 0x00702DBD
+		// (set) Token: 0x0603416B RID: 213355 RVA: 0x00704BC5 File Offset: 0x00702DC5
 		public int ColumnIndex { get; set; }
 
-		// Token: 0x06031195 RID: 201109 RVA: 0x006A999A File Offset: 0x006A7B9A
+		// Token: 0x0603416C RID: 213356 RVA: 0x00704BCE File Offset: 0x00702DCE
 		public IPieceIndexT()
 		{
 			this.RowIndex = 0;

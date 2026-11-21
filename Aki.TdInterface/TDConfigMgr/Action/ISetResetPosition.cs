@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E40 RID: 7744
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002075 RID: 8309
 	public class ISetResetPosition : ISetTeleControlConfig
 	{
-		// Token: 0x0600A5B3 RID: 42419 RVA: 0x001774B8 File Offset: 0x001756B8
+		// Token: 0x0600B06B RID: 45163 RVA: 0x0018D1B8 File Offset: 0x0018B3B8
 		private ISetResetPosition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A5B4 RID: 42420 RVA: 0x001774F0 File Offset: 0x001756F0
+		// Token: 0x0600B06C RID: 45164 RVA: 0x0018D1F0 File Offset: 0x0018B3F0
 		public static ISetResetPosition Create([Nullable(2)] ISetResetPosition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A5B5 RID: 42421 RVA: 0x00177503 File Offset: 0x00175703
+		// Token: 0x0600B06D RID: 45165 RVA: 0x0018D203 File Offset: 0x0018B403
 		public static ISetResetPosition CreateFromSetValue([Nullable(2)] ISetResetPosition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A5B6 RID: 42422 RVA: 0x00177516 File Offset: 0x00175716
+		// Token: 0x0600B06E RID: 45166 RVA: 0x0018D216 File Offset: 0x0018B416
 		public new ISetResetPosition_SetValue ToSetValue()
 		{
 			return new ISetResetPosition_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032D0 RID: 13008
-		// (get) Token: 0x0600A5B7 RID: 42423 RVA: 0x00177541 File Offset: 0x00175741
-		// (set) Token: 0x0600A5B8 RID: 42424 RVA: 0x0017756C File Offset: 0x0017576C
+		// Token: 0x17003594 RID: 13716
+		// (get) Token: 0x0600B06F RID: 45167 RVA: 0x0018D241 File Offset: 0x0018B441
+		// (set) Token: 0x0600B070 RID: 45168 RVA: 0x0018D26C File Offset: 0x0018B46C
 		public override ESetTeleControlType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032D1 RID: 13009
-		// (get) Token: 0x0600A5B9 RID: 42425 RVA: 0x0017757A File Offset: 0x0017577A
-		// (set) Token: 0x0600A5BA RID: 42426 RVA: 0x001775A5 File Offset: 0x001757A5
+		// Token: 0x17003595 RID: 13717
+		// (get) Token: 0x0600B071 RID: 45169 RVA: 0x0018D27A File Offset: 0x0018B47A
+		// (set) Token: 0x0600B072 RID: 45170 RVA: 0x0018D2A5 File Offset: 0x0018B4A5
 		public override int EntityId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032D2 RID: 13010
-		// (get) Token: 0x0600A5BB RID: 42427 RVA: 0x001775B3 File Offset: 0x001757B3
-		// (set) Token: 0x0600A5BC RID: 42428 RVA: 0x001775DE File Offset: 0x001757DE
+		// Token: 0x17003596 RID: 13718
+		// (get) Token: 0x0600B073 RID: 45171 RVA: 0x0018D2B3 File Offset: 0x0018B4B3
+		// (set) Token: 0x0600B074 RID: 45172 RVA: 0x0018D2DE File Offset: 0x0018B4DE
 		public virtual int PositionEntityId
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006311 RID: 25361
+		// Token: 0x040068F5 RID: 26869
 		[Nullable(2)]
 		protected new ISetResetPosition FbInstance;
 
-		// Token: 0x04006312 RID: 25362
+		// Token: 0x040068F6 RID: 26870
 		[Nullable(2)]
 		protected new ISetResetPosition_SetValue PocoInterface;
 	}

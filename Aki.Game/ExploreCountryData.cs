@@ -1,35 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001A9B RID: 6811
+// Token: 0x02000F5A RID: 3930
 [NullableContext(1)]
 [Nullable(0)]
 public class ExploreCountryData
 {
-	// Token: 0x1700107E RID: 4222
-	// (get) Token: 0x0600C99B RID: 51611 RVA: 0x002E0F75 File Offset: 0x002DF175
-	// (set) Token: 0x0600C99C RID: 51612 RVA: 0x002E0F7D File Offset: 0x002DF17D
+	// Token: 0x170010A3 RID: 4259
+	// (get) Token: 0x06009DAC RID: 40364 RVA: 0x002EC0C9 File Offset: 0x002EA2C9
+	// (set) Token: 0x06009DAD RID: 40365 RVA: 0x002EC0D1 File Offset: 0x002EA2D1
 	public int CountryId { get; set; }
 
-	// Token: 0x1700107F RID: 4223
-	// (get) Token: 0x0600C99D RID: 51613 RVA: 0x002E0F86 File Offset: 0x002DF186
-	// (set) Token: 0x0600C99E RID: 51614 RVA: 0x002E0F8E File Offset: 0x002DF18E
+	// Token: 0x170010A4 RID: 4260
+	// (get) Token: 0x06009DAE RID: 40366 RVA: 0x002EC0DA File Offset: 0x002EA2DA
+	// (set) Token: 0x06009DAF RID: 40367 RVA: 0x002EC0E2 File Offset: 0x002EA2E2
 	public string Icon { get; set; } = "";
 
-	// Token: 0x17001080 RID: 4224
-	// (get) Token: 0x0600C99F RID: 51615 RVA: 0x002E0F97 File Offset: 0x002DF197
-	// (set) Token: 0x0600C9A0 RID: 51616 RVA: 0x002E0F9F File Offset: 0x002DF19F
+	// Token: 0x170010A5 RID: 4261
+	// (get) Token: 0x06009DB0 RID: 40368 RVA: 0x002EC0EB File Offset: 0x002EA2EB
+	// (set) Token: 0x06009DB1 RID: 40369 RVA: 0x002EC0F3 File Offset: 0x002EA2F3
 	public string TitleId { get; set; } = "";
 
-	// Token: 0x17001081 RID: 4225
-	// (get) Token: 0x0600C9A1 RID: 51617 RVA: 0x002E0FA8 File Offset: 0x002DF1A8
-	// (set) Token: 0x0600C9A2 RID: 51618 RVA: 0x002E0FB0 File Offset: 0x002DF1B0
+	// Token: 0x170010A6 RID: 4262
+	// (get) Token: 0x06009DB2 RID: 40370 RVA: 0x002EC0FC File Offset: 0x002EA2FC
+	// (set) Token: 0x06009DB3 RID: 40371 RVA: 0x002EC104 File Offset: 0x002EA304
 	public int SortIndex { get; set; }
 
-	// Token: 0x0600C9A3 RID: 51619 RVA: 0x002E0FB9 File Offset: 0x002DF1B9
+	// Token: 0x06009DB4 RID: 40372 RVA: 0x002EC10D File Offset: 0x002EA30D
 	public void Initialize(Country config)
 	{
 		this.CountryId = config.Id;
@@ -38,7 +37,7 @@ public class ExploreCountryData
 		this.SortIndex = config.SortIndex;
 	}
 
-	// Token: 0x0600C9A4 RID: 51620 RVA: 0x002E0FF0 File Offset: 0x002DF1F0
+	// Token: 0x06009DB5 RID: 40373 RVA: 0x002EC144 File Offset: 0x002EA344
 	public ExploreAreaData AddExploreAreaData(Area areaConfig)
 	{
 		int areaId = areaConfig.AreaId;
@@ -72,38 +71,38 @@ public class ExploreCountryData
 		return exploreAreaData;
 	}
 
-	// Token: 0x0600C9A5 RID: 51621 RVA: 0x002E10CC File Offset: 0x002DF2CC
+	// Token: 0x06009DB6 RID: 40374 RVA: 0x002EC220 File Offset: 0x002EA420
 	[NullableContext(2)]
 	public ExploreAreaData GetExploreAreaData(int areaId)
 	{
 		return this.ExploreAreaDataMap.GetValueOrDefault(areaId);
 	}
 
-	// Token: 0x0600C9A6 RID: 51622 RVA: 0x002E10DA File Offset: 0x002DF2DA
+	// Token: 0x06009DB7 RID: 40375 RVA: 0x002EC22E File Offset: 0x002EA42E
 	public IReadOnlyDictionary<int, ExploreAreaData> GetExploreAreaDataMap()
 	{
 		return this.ExploreAreaDataMap;
 	}
 
-	// Token: 0x0600C9A7 RID: 51623 RVA: 0x002E10E2 File Offset: 0x002DF2E2
+	// Token: 0x06009DB8 RID: 40376 RVA: 0x002EC236 File Offset: 0x002EA436
 	public List<ExploreAreaData> GetExploreAreaDataList()
 	{
 		return this.ExploreAreaDataList;
 	}
 
-	// Token: 0x0600C9A8 RID: 51624 RVA: 0x002E10EA File Offset: 0x002DF2EA
+	// Token: 0x06009DB9 RID: 40377 RVA: 0x002EC23E File Offset: 0x002EA43E
 	public int GetAreaSize()
 	{
 		return this.ExploreAreaDataMap.Count;
 	}
 
-	// Token: 0x0600C9A9 RID: 51625 RVA: 0x002E10F7 File Offset: 0x002DF2F7
+	// Token: 0x06009DBA RID: 40378 RVA: 0x002EC24B File Offset: 0x002EA44B
 	public string GetNameId()
 	{
 		return this.TitleId;
 	}
 
-	// Token: 0x0600C9AA RID: 51626 RVA: 0x002E1100 File Offset: 0x002DF300
+	// Token: 0x06009DBB RID: 40379 RVA: 0x002EC254 File Offset: 0x002EA454
 	public float GetCountryExploreProgress()
 	{
 		float num = 100f * (float)this.ExploreAreaDataList.Count;
@@ -115,10 +114,10 @@ public class ExploreCountryData
 		return num2 / num;
 	}
 
-	// Token: 0x0600C9AB RID: 51627 RVA: 0x002E1174 File Offset: 0x002DF374
+	// Token: 0x06009DBC RID: 40380 RVA: 0x002EC2C8 File Offset: 0x002EA4C8
 	public List<ExploreStateData> GetStateDataList()
 	{
-		List<ExploreStateData> list = this.ExploreStateDataMap.Values.ToList<ExploreStateData>();
+		List<ExploreStateData> list = new List<ExploreStateData>(this.ExploreStateDataMap.Values);
 		if (list.Count <= 1)
 		{
 			return list;
@@ -127,7 +126,7 @@ public class ExploreCountryData
 		return list;
 	}
 
-	// Token: 0x0600C9AC RID: 51628 RVA: 0x002E11C3 File Offset: 0x002DF3C3
+	// Token: 0x06009DBD RID: 40381 RVA: 0x002EC317 File Offset: 0x002EA517
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -143,20 +142,20 @@ public class ExploreCountryData
 		return stateDataByStateId.ExploreAreaDataList;
 	}
 
-	// Token: 0x0600C9AD RID: 51629 RVA: 0x002E11D7 File Offset: 0x002DF3D7
+	// Token: 0x06009DBE RID: 40382 RVA: 0x002EC32B File Offset: 0x002EA52B
 	[NullableContext(2)]
 	public ExploreStateData GetStateDataByStateId(int stateId)
 	{
 		return this.ExploreStateDataMap.GetValueOrDefault(stateId);
 	}
 
-	// Token: 0x0600C9AE RID: 51630 RVA: 0x002E11E5 File Offset: 0x002DF3E5
+	// Token: 0x06009DBF RID: 40383 RVA: 0x002EC339 File Offset: 0x002EA539
 	public bool HasCanTakeStageReward()
 	{
-		return this.ExploreAreaDataList.Any((ExploreAreaData data) => data.HasCanTakeStageReward());
+		return this.ExploreAreaDataList.Exists((ExploreAreaData data) => data.HasCanTakeStageReward());
 	}
 
-	// Token: 0x0600C9AF RID: 51631 RVA: 0x002E1214 File Offset: 0x002DF414
+	// Token: 0x06009DC0 RID: 40384 RVA: 0x002EC368 File Offset: 0x002EA568
 	public void UpdateStateAreaDataListSort()
 	{
 		foreach (ExploreStateData exploreStateData in this.ExploreStateDataMap.Values)
@@ -172,12 +171,12 @@ public class ExploreCountryData
 		}
 	}
 
-	// Token: 0x04005CE3 RID: 23779
+	// Token: 0x04005DB2 RID: 23986
 	private readonly Dictionary<int, ExploreAreaData> ExploreAreaDataMap = new Dictionary<int, ExploreAreaData>();
 
-	// Token: 0x04005CE4 RID: 23780
+	// Token: 0x04005DB3 RID: 23987
 	private readonly List<ExploreAreaData> ExploreAreaDataList = new List<ExploreAreaData>();
 
-	// Token: 0x04005CE5 RID: 23781
+	// Token: 0x04005DB4 RID: 23988
 	private readonly Dictionary<int, ExploreStateData> ExploreStateDataMap = new Dictionary<int, ExploreStateData>();
 }

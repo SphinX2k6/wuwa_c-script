@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004A8 RID: 1192
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000501 RID: 1281
 	public class IJigsawPieceMatch
 	{
-		// Token: 0x06001806 RID: 6150 RVA: 0x00048304 File Offset: 0x00046504
+		// Token: 0x060019A0 RID: 6560 RVA: 0x0004C04C File Offset: 0x0004A24C
 		private IJigsawPieceMatch_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001807 RID: 6151 RVA: 0x0004833C File Offset: 0x0004653C
+		// Token: 0x060019A1 RID: 6561 RVA: 0x0004C084 File Offset: 0x0004A284
 		public static IJigsawPieceMatch Create([Nullable(2)] IJigsawPieceMatch instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001808 RID: 6152 RVA: 0x0004834F File Offset: 0x0004654F
+		// Token: 0x060019A2 RID: 6562 RVA: 0x0004C097 File Offset: 0x0004A297
 		public static IJigsawPieceMatch CreateFromSetValue([Nullable(2)] IJigsawPieceMatch_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001809 RID: 6153 RVA: 0x00048362 File Offset: 0x00046562
+		// Token: 0x060019A3 RID: 6563 RVA: 0x0004C0AA File Offset: 0x0004A2AA
 		public IJigsawPieceMatch_SetValue ToSetValue()
 		{
 			return new IJigsawPieceMatch_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000666 RID: 1638
-		// (get) Token: 0x0600180A RID: 6154 RVA: 0x00048381 File Offset: 0x00046581
-		// (set) Token: 0x0600180B RID: 6155 RVA: 0x000483AC File Offset: 0x000465AC
+		// Token: 0x170006CD RID: 1741
+		// (get) Token: 0x060019A4 RID: 6564 RVA: 0x0004C0C9 File Offset: 0x0004A2C9
+		// (set) Token: 0x060019A5 RID: 6565 RVA: 0x0004C0F4 File Offset: 0x0004A2F4
 		public virtual int EntityId
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000667 RID: 1639
-		// (get) Token: 0x0600180C RID: 6156 RVA: 0x000483BC File Offset: 0x000465BC
-		// (set) Token: 0x0600180D RID: 6157 RVA: 0x0004841D File Offset: 0x0004661D
+		// Token: 0x170006CE RID: 1742
+		// (get) Token: 0x060019A6 RID: 6566 RVA: 0x0004C104 File Offset: 0x0004A304
+		// (set) Token: 0x060019A7 RID: 6567 RVA: 0x0004C165 File Offset: 0x0004A365
 		public virtual IPieceIndex Index
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040011E0 RID: 4576
+		// Token: 0x04001302 RID: 4866
 		[Nullable(2)]
 		protected IJigsawPieceMatch FbInstance;
 
-		// Token: 0x040011E1 RID: 4577
+		// Token: 0x04001303 RID: 4867
 		[Nullable(2)]
 		protected IJigsawPieceMatch_SetValue PocoInterface;
 
-		// Token: 0x040011E2 RID: 4578
+		// Token: 0x04001304 RID: 4868
 		private IPieceIndex _IndexCache;
 
-		// Token: 0x040011E3 RID: 4579
+		// Token: 0x04001305 RID: 4869
 		private bool _IndexInited;
 	}
 }

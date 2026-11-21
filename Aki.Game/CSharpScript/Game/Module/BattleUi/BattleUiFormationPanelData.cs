@@ -5,23 +5,23 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C90 RID: 23696
+	// Token: 0x02004C71 RID: 19569
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiFormationPanelData
 	{
-		// Token: 0x0603BD94 RID: 245140 RVA: 0x00E4B360 File Offset: 0x00E49560
+		// Token: 0x06030CE2 RID: 199906 RVA: 0x00D9B8DC File Offset: 0x00D99ADC
 		public void Init()
 		{
 		}
 
-		// Token: 0x0603BD95 RID: 245141 RVA: 0x00E4B362 File Offset: 0x00E49562
+		// Token: 0x06030CE3 RID: 199907 RVA: 0x00D9B8DE File Offset: 0x00D99ADE
 		public void Clear()
 		{
 			this.PositionItemMap.Clear();
 		}
 
-		// Token: 0x0603BD96 RID: 245142 RVA: 0x00E4B370 File Offset: 0x00E49570
+		// Token: 0x06030CE4 RID: 199908 RVA: 0x00D9B8EC File Offset: 0x00D99AEC
 		public void UpdateFormationPanelData()
 		{
 			this.PositionItemMap.Clear();
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BD97 RID: 245143 RVA: 0x00E4B64C File Offset: 0x00E4984C
+		// Token: 0x06030CE5 RID: 199909 RVA: 0x00D9BBC8 File Offset: 0x00D99DC8
 		[NullableContext(2)]
 		private bool IsPhantomContainsSpecialRole(SceneTeamPlayer playerData)
 		{
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return false;
 		}
 
-		// Token: 0x0603BD98 RID: 245144 RVA: 0x00E4B6EC File Offset: 0x00E498EC
+		// Token: 0x06030CE6 RID: 199910 RVA: 0x00D9BC68 File Offset: 0x00D99E68
 		private void AddPositionItem(int playerId, int roleId, int roleSkinId, long? creatureDataId = null)
 		{
 			int key = this.PositionItemMap.Count + 1;
@@ -186,14 +186,14 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.PositionItemMap[key] = formationItemData;
 		}
 
-		// Token: 0x0603BD99 RID: 245145 RVA: 0x00E4B745 File Offset: 0x00E49945
+		// Token: 0x06030CE7 RID: 199911 RVA: 0x00D9BCC1 File Offset: 0x00D99EC1
 		[NullableContext(2)]
 		public FormationItemData GetItemData(int position)
 		{
 			return this.PositionItemMap.GetValueOrDefault(position);
 		}
 
-		// Token: 0x0603BD9A RID: 245146 RVA: 0x00E4B754 File Offset: 0x00E49954
+		// Token: 0x06030CE8 RID: 199912 RVA: 0x00D9BCD0 File Offset: 0x00D99ED0
 		public int GetRolePosition(int playerId, int roleId)
 		{
 			foreach (KeyValuePair<int, FormationItemData> keyValuePair in this.PositionItemMap)
@@ -206,13 +206,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			return 0;
 		}
 
-		// Token: 0x0603BD9B RID: 245147 RVA: 0x00E4B7CC File Offset: 0x00E499CC
+		// Token: 0x06030CE9 RID: 199913 RVA: 0x00D9BD48 File Offset: 0x00D99F48
 		public IReadOnlyList<string> GetActionNames()
 		{
 			return BattleUiFormationPanelData.ActionNames;
 		}
 
-		// Token: 0x0603BD9C RID: 245148 RVA: 0x00E4B7D4 File Offset: 0x00E499D4
+		// Token: 0x06030CEA RID: 199914 RVA: 0x00D9BD50 File Offset: 0x00D99F50
 		public void SetInputType(EFormationInputType type)
 		{
 			Log instance = Log.Instance;
@@ -224,13 +224,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.InputHandler = this.InputHandlerMap.GetValueOrDefault(type);
 		}
 
-		// Token: 0x0603BD9D RID: 245149 RVA: 0x00E4B81F File Offset: 0x00E49A1F
+		// Token: 0x06030CEB RID: 199915 RVA: 0x00D9BD9B File Offset: 0x00D99F9B
 		public void RegisterInputHandler(EFormationInputType type, Action<string> handler)
 		{
 			this.InputHandlerMap[type] = handler;
 		}
 
-		// Token: 0x0603BD9E RID: 245150 RVA: 0x00E4B82E File Offset: 0x00E49A2E
+		// Token: 0x06030CEC RID: 199916 RVA: 0x00D9BDAA File Offset: 0x00D99FAA
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return this.InputHandler;
 		}
 
-		// Token: 0x0401F346 RID: 127814
+		// Token: 0x04019DFD RID: 105981
 		[StaticVariableRuleIgnore]
 		private static readonly string[] ActionNames = new string[]
 		{
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			"切换角色4"
 		};
 
-		// Token: 0x0401F347 RID: 127815
+		// Token: 0x04019DFE RID: 105982
 		[Nullable(new byte[]
 		{
 			2,
@@ -259,13 +259,13 @@ namespace CSharpScript.Game.Module.BattleUi
 		})]
 		private Action<string> InputHandler;
 
-		// Token: 0x0401F348 RID: 127816
+		// Token: 0x04019DFF RID: 105983
 		private readonly Dictionary<EFormationInputType, Action<string>> InputHandlerMap = new Dictionary<EFormationInputType, Action<string>>();
 
-		// Token: 0x0401F349 RID: 127817
+		// Token: 0x04019E00 RID: 105984
 		public Dictionary<int, FormationItemData> PositionItemMap = new Dictionary<int, FormationItemData>();
 
-		// Token: 0x0401F34A RID: 127818
+		// Token: 0x04019E01 RID: 105985
 		public ETeamGroupType DataSource = ETeamGroupType.Battle;
 	}
 }

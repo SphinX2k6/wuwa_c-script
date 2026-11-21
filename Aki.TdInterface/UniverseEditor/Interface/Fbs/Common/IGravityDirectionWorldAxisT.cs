@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E04 RID: 24068
+	// Token: 0x02006441 RID: 25665
 	public class IGravityDirectionWorldAxisT
 	{
-		// Token: 0x1700B414 RID: 46100
-		// (get) Token: 0x0602932C RID: 168748 RVA: 0x005A6DDC File Offset: 0x005A4FDC
-		// (set) Token: 0x0602932D RID: 168749 RVA: 0x005A6DE4 File Offset: 0x005A4FE4
+		// Token: 0x1700BD7A RID: 48506
+		// (get) Token: 0x0602B9B6 RID: 178614 RVA: 0x005EFB0C File Offset: 0x005EDD0C
+		// (set) Token: 0x0602B9B7 RID: 178615 RVA: 0x005EFB14 File Offset: 0x005EDD14
 		public EGravityDirectionType Type { get; set; }
 
-		// Token: 0x1700B415 RID: 46101
-		// (get) Token: 0x0602932E RID: 168750 RVA: 0x005A6DED File Offset: 0x005A4FED
-		// (set) Token: 0x0602932F RID: 168751 RVA: 0x005A6DF5 File Offset: 0x005A4FF5
+		// Token: 0x1700BD7B RID: 48507
+		// (get) Token: 0x0602B9B8 RID: 178616 RVA: 0x005EFB1D File Offset: 0x005EDD1D
+		// (set) Token: 0x0602B9B9 RID: 178617 RVA: 0x005EFB25 File Offset: 0x005EDD25
 		public EWorldAxisType WorldAxis { get; set; }
 
-		// Token: 0x06029330 RID: 168752 RVA: 0x005A6DFE File Offset: 0x005A4FFE
+		// Token: 0x0602B9BA RID: 178618 RVA: 0x005EFB2E File Offset: 0x005EDD2E
 		public IGravityDirectionWorldAxisT()
 		{
 			this.Type = EGravityDirectionType.SelfRotation;

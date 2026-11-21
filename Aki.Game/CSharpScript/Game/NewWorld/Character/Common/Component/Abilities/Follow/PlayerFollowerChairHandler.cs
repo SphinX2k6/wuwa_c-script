@@ -7,6 +7,7 @@ using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController;
 using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.LevelGamePlay.LevelConditions;
+using CSharpScript.Game.LevelGamePlay.StaticScene;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Plot;
 using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
@@ -17,27 +18,27 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x0200714A RID: 29002
+	// Token: 0x02006378 RID: 25464
 	internal class PlayerFollowerChairHandler : PlayerFollowerSwallowHandler, IPlayerFollowerChairHandler, IPlayerFollowerHandler, IChairPresentationHost
 	{
-		// Token: 0x17009D49 RID: 40265
-		// (get) Token: 0x06046CB4 RID: 289972 RVA: 0x011D6BA3 File Offset: 0x011D4DA3
-		// (set) Token: 0x06046CB5 RID: 289973 RVA: 0x011D6BAB File Offset: 0x011D4DAB
+		// Token: 0x1700751C RID: 29980
+		// (get) Token: 0x0603DB06 RID: 252678 RVA: 0x011DF583 File Offset: 0x011DD783
+		// (set) Token: 0x0603DB07 RID: 252679 RVA: 0x011DF58B File Offset: 0x011DD78B
 		public int OwnerPlayerId { get; private set; }
 
-		// Token: 0x17009D4A RID: 40266
-		// (get) Token: 0x06046CB6 RID: 289974 RVA: 0x011D6BB4 File Offset: 0x011D4DB4
-		// (set) Token: 0x06046CB7 RID: 289975 RVA: 0x011D6BBC File Offset: 0x011D4DBC
+		// Token: 0x1700751D RID: 29981
+		// (get) Token: 0x0603DB08 RID: 252680 RVA: 0x011DF594 File Offset: 0x011DD794
+		// (set) Token: 0x0603DB09 RID: 252681 RVA: 0x011DF59C File Offset: 0x011DD79C
 		public long ChairCreatureDataId { get; set; }
 
-		// Token: 0x17009D4B RID: 40267
-		// (get) Token: 0x06046CB8 RID: 289976 RVA: 0x011D6BC5 File Offset: 0x011D4DC5
-		// (set) Token: 0x06046CB9 RID: 289977 RVA: 0x011D6BCD File Offset: 0x011D4DCD
+		// Token: 0x1700751E RID: 29982
+		// (get) Token: 0x0603DB0A RID: 252682 RVA: 0x011DF5A5 File Offset: 0x011DD7A5
+		// (set) Token: 0x0603DB0B RID: 252683 RVA: 0x011DF5AD File Offset: 0x011DD7AD
 		public bool IsChairShown { get; set; }
 
-		// Token: 0x17009D4C RID: 40268
-		// (get) Token: 0x06046CBA RID: 289978 RVA: 0x011D6BD6 File Offset: 0x011D4DD6
-		// (set) Token: 0x06046CBB RID: 289979 RVA: 0x011D6BE4 File Offset: 0x011D4DE4
+		// Token: 0x1700751F RID: 29983
+		// (get) Token: 0x0603DB0C RID: 252684 RVA: 0x011DF5B6 File Offset: 0x011DD7B6
+		// (set) Token: 0x0603DB0D RID: 252685 RVA: 0x011DF5C4 File Offset: 0x011DD7C4
 		Func<bool> IChairPresentationHost.IsLocalOwner
 		{
 			get
@@ -49,9 +50,9 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x17009D4D RID: 40269
-		// (get) Token: 0x06046CBC RID: 289980 RVA: 0x011D6BE6 File Offset: 0x011D4DE6
-		// (set) Token: 0x06046CBD RID: 289981 RVA: 0x011D6BF4 File Offset: 0x011D4DF4
+		// Token: 0x17007520 RID: 29984
+		// (get) Token: 0x0603DB0E RID: 252686 RVA: 0x011DF5C6 File Offset: 0x011DD7C6
+		// (set) Token: 0x0603DB0F RID: 252687 RVA: 0x011DF5D4 File Offset: 0x011DD7D4
 		Action<Entity, EChairPerformanceState> IChairPresentationHost.ChangeChairPerformanceState
 		{
 			get
@@ -63,9 +64,9 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x17009D4E RID: 40270
-		// (get) Token: 0x06046CBE RID: 289982 RVA: 0x011D6BF6 File Offset: 0x011D4DF6
-		// (set) Token: 0x06046CBF RID: 289983 RVA: 0x011D6C04 File Offset: 0x011D4E04
+		// Token: 0x17007521 RID: 29985
+		// (get) Token: 0x0603DB10 RID: 252688 RVA: 0x011DF5D6 File Offset: 0x011DD7D6
+		// (set) Token: 0x0603DB11 RID: 252689 RVA: 0x011DF5E4 File Offset: 0x011DD7E4
 		Action<Entity, bool> IChairPresentationHost.SetChairPerformanceControlledExternally
 		{
 			get
@@ -77,9 +78,9 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x17009D4F RID: 40271
-		// (get) Token: 0x06046CC0 RID: 289984 RVA: 0x011D6C06 File Offset: 0x011D4E06
-		// (set) Token: 0x06046CC1 RID: 289985 RVA: 0x011D6C14 File Offset: 0x011D4E14
+		// Token: 0x17007522 RID: 29986
+		// (get) Token: 0x0603DB12 RID: 252690 RVA: 0x011DF5E6 File Offset: 0x011DD7E6
+		// (set) Token: 0x0603DB13 RID: 252691 RVA: 0x011DF5F4 File Offset: 0x011DD7F4
 		Action IChairPresentationHost.CleanupCurrentChair
 		{
 			get
@@ -91,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046CC2 RID: 289986 RVA: 0x011D6C18 File Offset: 0x011D4E18
+		// Token: 0x0603DB14 RID: 252692 RVA: 0x011DF5F8 File Offset: 0x011DD7F8
 		public static PlayerFollowerChairHandler Create(int ownerPlayerId)
 		{
 			PlayerFollowerChairHandler handler = new PlayerFollowerChairHandler
@@ -125,12 +126,12 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return handler;
 		}
 
-		// Token: 0x06046CC3 RID: 289987 RVA: 0x011D6DC6 File Offset: 0x011D4FC6
+		// Token: 0x0603DB15 RID: 252693 RVA: 0x011DF7A6 File Offset: 0x011DD9A6
 		private PlayerFollowerChairHandler()
 		{
 		}
 
-		// Token: 0x06046CC4 RID: 289988 RVA: 0x011D6DE4 File Offset: 0x011D4FE4
+		// Token: 0x0603DB16 RID: 252694 RVA: 0x011DF7C4 File Offset: 0x011DD9C4
 		public bool IsLocalOwner()
 		{
 			CreatureModel instance = CreatureModel.Instance;
@@ -138,7 +139,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return num <= 0 || this.OwnerPlayerId == num;
 		}
 
-		// Token: 0x06046CC5 RID: 289989 RVA: 0x011D6E14 File Offset: 0x011D5014
+		// Token: 0x0603DB17 RID: 252695 RVA: 0x011DF7F4 File Offset: 0x011DD9F4
 		private bool IsPlayerInAbnormalGravity()
 		{
 			SceneTeamModel instance = SceneTeamModel.Instance;
@@ -157,7 +158,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return characterMoveComponent != null && !characterMoveComponent.IsStandardGravity;
 		}
 
-		// Token: 0x06046CC6 RID: 289990 RVA: 0x011D6E5C File Offset: 0x011D505C
+		// Token: 0x0603DB18 RID: 252696 RVA: 0x011DF83C File Offset: 0x011DDA3C
 		private bool CanSummonChair()
 		{
 			string text = null;
@@ -178,7 +179,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return false;
 		}
 
-		// Token: 0x06046CC7 RID: 289991 RVA: 0x011D6ECC File Offset: 0x011D50CC
+		// Token: 0x0603DB19 RID: 252697 RVA: 0x011DF8AC File Offset: 0x011DDAAC
 		private void OnAnyCharGravityDirectChanged(Entity entity, global::Vector newGravityDirect, bool isStandardGravity)
 		{
 			SceneTeamModel instance = SceneTeamModel.Instance;
@@ -204,7 +205,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.RecallChair("PlayerFollowerChairHandler.GravityChanged");
 		}
 
-		// Token: 0x06046CC8 RID: 289992 RVA: 0x011D6F0E File Offset: 0x011D510E
+		// Token: 0x0603DB1A RID: 252698 RVA: 0x011DF8EE File Offset: 0x011DDAEE
 		private void OnPlotNetworkStart(PlotInfo plotInfo)
 		{
 			this.IsChairSummonBlockedByPlot = (plotInfo.PlotLevel != EPlotLevel.LevelD);
@@ -215,13 +216,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.RecallChair("PlayerFollowerChairHandler.EnterPlot");
 		}
 
-		// Token: 0x06046CC9 RID: 289993 RVA: 0x011D6F36 File Offset: 0x011D5136
+		// Token: 0x0603DB1B RID: 252699 RVA: 0x011DF916 File Offset: 0x011DDB16
 		private void OnPlotNetworkEnd(PlotResultInfo plotResult)
 		{
 			this.IsChairSummonBlockedByPlot = false;
 		}
 
-		// Token: 0x06046CCA RID: 289994 RVA: 0x011D6F40 File Offset: 0x011D5140
+		// Token: 0x0603DB1C RID: 252700 RVA: 0x011DF920 File Offset: 0x011DDB20
 		private void RegisterRestrictCondition()
 		{
 			int restrictConditionGroupId = InventoryConfig.Instance.GetItemConfig(70360001).Value.RestrictConditionGroupId;
@@ -238,7 +239,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.RestrictConditionCallback = conditionPassCallback;
 		}
 
-		// Token: 0x06046CCB RID: 289995 RVA: 0x011D6FA2 File Offset: 0x011D51A2
+		// Token: 0x0603DB1D RID: 252701 RVA: 0x011DF982 File Offset: 0x011DDB82
 		private void UnregisterRestrictCondition()
 		{
 			if (this.RestrictConditionGroupId <= 0 || this.RestrictConditionCallback == null)
@@ -250,7 +251,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.RestrictConditionCallback = null;
 		}
 
-		// Token: 0x06046CCC RID: 289996 RVA: 0x011D6FDA File Offset: 0x011D51DA
+		// Token: 0x0603DB1E RID: 252702 RVA: 0x011DF9BA File Offset: 0x011DDBBA
 		private void OnRestrictConditionCallback([Nullable(new byte[]
 		{
 			2,
@@ -260,7 +261,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.RecallChair("PlayerFollowerChairHandler.RestrictCondition");
 		}
 
-		// Token: 0x06046CCD RID: 289997 RVA: 0x011D6FE7 File Offset: 0x011D51E7
+		// Token: 0x0603DB1F RID: 252703 RVA: 0x011DF9C7 File Offset: 0x011DDBC7
 		private void RecallChair(string reason)
 		{
 			if (this.ChairCreatureDataId <= 0L)
@@ -270,19 +271,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.HideChair(reason);
 		}
 
-		// Token: 0x06046CCE RID: 289998 RVA: 0x011D6FFB File Offset: 0x011D51FB
+		// Token: 0x0603DB20 RID: 252704 RVA: 0x011DF9DB File Offset: 0x011DDBDB
 		public override bool HasFollower(long creatureDataId)
 		{
 			return this.ChairCreatureDataId == creatureDataId;
 		}
 
-		// Token: 0x06046CCF RID: 289999 RVA: 0x011D7006 File Offset: 0x011D5206
+		// Token: 0x0603DB21 RID: 252705 RVA: 0x011DF9E6 File Offset: 0x011DDBE6
 		public long GetChairCreatureDataId()
 		{
 			return this.ChairCreatureDataId;
 		}
 
-		// Token: 0x06046CD0 RID: 290000 RVA: 0x011D7010 File Offset: 0x011D5210
+		// Token: 0x0603DB22 RID: 252706 RVA: 0x011DF9F0 File Offset: 0x011DDBF0
 		private bool IsMySummonedChair(Entity chairEntity)
 		{
 			if (this.ChairCreatureDataId <= 0L)
@@ -304,25 +305,25 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return worldEntity2 != null && worldEntity2 == chairEntity;
 		}
 
-		// Token: 0x06046CD1 RID: 290001 RVA: 0x011D7056 File Offset: 0x011D5256
+		// Token: 0x0603DB23 RID: 252707 RVA: 0x011DFA36 File Offset: 0x011DDC36
 		public bool IsSummonedChairSitDownNotSettled(Entity chairEntity)
 		{
 			return this.IsMySummonedChair(chairEntity) && this.RealChairPerformanceState.GetValueOrDefault() != EChairPerformanceState.Seated;
 		}
 
-		// Token: 0x06046CD2 RID: 290002 RVA: 0x011D7074 File Offset: 0x011D5274
+		// Token: 0x0603DB24 RID: 252708 RVA: 0x011DFA54 File Offset: 0x011DDC54
 		public bool IsSummonedChairManualSitBlocked(Entity chairEntity)
 		{
 			return this.IsMySummonedChair(chairEntity) && this.IsChairShown && this.RealChairPerformanceState.GetValueOrDefault() != EChairPerformanceState.StoodUp;
 		}
 
-		// Token: 0x06046CD3 RID: 290003 RVA: 0x011D709C File Offset: 0x011D529C
+		// Token: 0x0603DB25 RID: 252709 RVA: 0x011DFA7C File Offset: 0x011DDC7C
 		public bool IsChairSpaceOccupied(Entity chairEntity)
 		{
 			return this.IsMySummonedChair(chairEntity) && this.ChairSpaceOccupied;
 		}
 
-		// Token: 0x06046CD4 RID: 290004 RVA: 0x011D70B0 File Offset: 0x011D52B0
+		// Token: 0x0603DB26 RID: 252710 RVA: 0x011DFA90 File Offset: 0x011DDC90
 		[NullableContext(2)]
 		public unsafe void SetChairSpaceOccupied([Nullable(0)] Entity chairEntity, bool occupied, AActor triggerActor = null, AActor currentOccupantActor = null)
 		{
@@ -332,6 +333,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 			bool chairSpaceOccupied = this.ChairSpaceOccupied;
 			this.ChairSpaceOccupied = occupied;
+			if (chairSpaceOccupied != occupied)
+			{
+				this.UpdateChairOccupiedSequence(chairEntity, occupied);
+			}
 			AActor aactor = (triggerActor != null && triggerActor.IsValid()) ? triggerActor : null;
 			AActor aactor2 = (currentOccupantActor != null && currentOccupantActor.IsValid()) ? currentOccupantActor : null;
 			Log instance = Log.Instance;
@@ -352,7 +357,305 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray10<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 10));
 		}
 
-		// Token: 0x06046CD5 RID: 290005 RVA: 0x011D7269 File Offset: 0x011D5469
+		// Token: 0x0603DB27 RID: 252711 RVA: 0x011DFC58 File Offset: 0x011DDE58
+		private unsafe void UpdateChairOccupiedSequence(Entity chairEntity, bool occupied)
+		{
+			if (!this.IsLocalOwner() || !this.IsChairShown || !chairEntity.Valid || !this.IsMySummonedChair(chairEntity))
+			{
+				return;
+			}
+			EChairPerformanceState? realChairPerformanceState = this.RealChairPerformanceState;
+			if (((realChairPerformanceState != null) ? realChairPerformanceState : this.CurChairPerformanceState).GetValueOrDefault() != EChairPerformanceState.StoodUp)
+			{
+				return;
+			}
+			ChairFollowerConfig chairConfig = this.GetChairConfig(chairEntity);
+			ULevelSequence ulevelSequence = (chairConfig != null) ? chairConfig.OccupiedSequence : null;
+			if (ulevelSequence == null || !ulevelSequence.IsValid())
+			{
+				Log instance = Log.Instance;
+				ELogModule module = ELogModule.SceneItem;
+				ELogAuthor author = ELogAuthor.CK;
+				string message = "[PlayerFollowerChairHandler] 椅子占用表现 Sequence 不可用";
+				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("ChairId", chairEntity.Id);
+				instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+				return;
+			}
+			if (!this.OccupiedSequenceKeepStateApplied)
+			{
+				this.OccupiedSequenceKeepStateApplied = true;
+				PlayerFollowerChairHandler.ForceSequenceKeepState(ulevelSequence);
+			}
+			SceneItemActorComponent component = chairEntity.GetComponent<SceneItemActorComponent>();
+			AActor aactor = (component != null) ? component.GetInteractionMainActor() : null;
+			if (aactor == null || !aactor.IsValid())
+			{
+				Log instance2 = Log.Instance;
+				ELogModule module2 = ELogModule.SceneItem;
+				ELogAuthor author2 = ELogAuthor.CK;
+				string message2 = "[PlayerFollowerChairHandler] 椅子占用表现 Sequence 目标预制体 Actor 不可用";
+				ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("ChairId", chairEntity.Id);
+				instance2.Warn(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
+				return;
+			}
+			bool flag = this.ChairOccupiedSequenceActor == null || !this.ChairOccupiedSequenceActor.IsDirectorValid() || this.ChairOccupiedSequenceTargetActor != aactor;
+			if (flag)
+			{
+				this.ClearChairOccupiedSequence();
+				this.ChairOccupiedSequenceActor = new SimpleLevelSequenceActor(ulevelSequence);
+			}
+			SimpleLevelSequenceActor chairOccupiedSequenceActor = this.ChairOccupiedSequenceActor;
+			ALevelSequenceActor alevelSequenceActor = (chairOccupiedSequenceActor != null) ? chairOccupiedSequenceActor.GetSequenceActor() : null;
+			if (alevelSequenceActor == null || !alevelSequenceActor.IsValid())
+			{
+				return;
+			}
+			SimpleLevelSequenceActor chairOccupiedSequenceActor2 = this.ChairOccupiedSequenceActor;
+			UMovieSceneSequencePlayer umovieSceneSequencePlayer = (chairOccupiedSequenceActor2 != null) ? chairOccupiedSequenceActor2.GetPlayer() : null;
+			if (umovieSceneSequencePlayer == null || !umovieSceneSequencePlayer.IsValid())
+			{
+				return;
+			}
+			UMovieScene movieScene = ulevelSequence.GetMovieScene();
+			if (movieScene == null)
+			{
+				return;
+			}
+			if (flag)
+			{
+				UKuroSceneInteractionActorSystem ukuroSceneInteractionActorSystem = UKuroRenderingRuntimeBPPluginBPLibrary.GetSubsystem(GlobalData.World, UKuroSceneInteractionActorSystem.StaticClass()) as UKuroSceneInteractionActorSystem;
+				if (ukuroSceneInteractionActorSystem == null || !ukuroSceneInteractionActorSystem.IsValid())
+				{
+					this.ClearChairOccupiedSequence();
+					Log instance3 = Log.Instance;
+					ELogModule module3 = ELogModule.SceneItem;
+					ELogAuthor author3 = ELogAuthor.CK;
+					string message3 = "[PlayerFollowerChairHandler] 椅子占用表现 Sequence 初始化失败, 场景交互子系统不可用";
+					ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("ChairId", chairEntity.Id);
+					instance3.Warn(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
+					return;
+				}
+				if (umovieSceneSequencePlayer.IsPlaying())
+				{
+					umovieSceneSequencePlayer.Pause();
+				}
+				alevelSequenceActor.ResetBindings();
+				ukuroSceneInteractionActorSystem.SetSequenceWithTargetLevelActor(alevelSequenceActor, ulevelSequence, aactor);
+				this.ChairOccupiedSequenceTargetActor = aactor;
+				string text;
+				int occupiedSequenceResolvedBindings = PlayerFollowerChairHandler.GetOccupiedSequenceResolvedBindings(ulevelSequence, umovieSceneSequencePlayer, false, out text);
+				int num = movieScene.ObjectBindings.Num();
+				if (occupiedSequenceResolvedBindings <= 0 || occupiedSequenceResolvedBindings != num)
+				{
+					string item;
+					PlayerFollowerChairHandler.GetOccupiedSequenceResolvedBindings(ulevelSequence, umovieSceneSequencePlayer, true, out item);
+					Log instance4 = Log.Instance;
+					ELogModule module4 = ELogModule.SceneItem;
+					ELogAuthor author4 = ELogAuthor.CK;
+					string message4 = "[PlayerFollowerChairHandler] 椅子占用表现 Sequence 播放前绑定未完整解析";
+					<>y__InlineArray6<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray6<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("ChairId", chairEntity.Id);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Sequence", UKismetSystemLibrary.GetPathName(ulevelSequence));
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("TargetLevel", UKismetSystemLibrary.GetPathName(aactor.GetLevel()));
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("ResolvedBindingCount", occupiedSequenceResolvedBindings);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("TotalBindingCount", num);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 5) = new ValueTuple<string, object>("Bindings", item);
+					instance4.Warn(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 6));
+				}
+			}
+			if (umovieSceneSequencePlayer.IsPlaying())
+			{
+				umovieSceneSequencePlayer.Pause();
+			}
+			if (!occupied && umovieSceneSequencePlayer.GetCurrentTime().Time.FrameNumber.Value == 0)
+			{
+				umovieSceneSequencePlayer.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams
+				{
+					Frame = umovieSceneSequencePlayer.GetEndTime().Time,
+					PositionType = EMovieScenePositionType.Frame,
+					UpdateMethod = EUpdatePositionMethod.Jump
+				});
+			}
+			if (occupied)
+			{
+				umovieSceneSequencePlayer.Play();
+				return;
+			}
+			umovieSceneSequencePlayer.PlayReverse();
+		}
+
+		// Token: 0x0603DB28 RID: 252712 RVA: 0x011E0013 File Offset: 0x011DE213
+		private void ClearChairOccupiedSequence()
+		{
+			SimpleLevelSequenceActor chairOccupiedSequenceActor = this.ChairOccupiedSequenceActor;
+			if (chairOccupiedSequenceActor != null)
+			{
+				chairOccupiedSequenceActor.Clear();
+			}
+			this.ChairOccupiedSequenceActor = null;
+			this.ChairOccupiedSequenceTargetActor = null;
+		}
+
+		// Token: 0x0603DB29 RID: 252713 RVA: 0x011E0034 File Offset: 0x011DE234
+		private void ResetChairOccupiedSequence()
+		{
+			SimpleLevelSequenceActor chairOccupiedSequenceActor = this.ChairOccupiedSequenceActor;
+			UMovieSceneSequencePlayer umovieSceneSequencePlayer = (chairOccupiedSequenceActor != null) ? chairOccupiedSequenceActor.GetPlayer() : null;
+			if (umovieSceneSequencePlayer != null && umovieSceneSequencePlayer.IsValid())
+			{
+				umovieSceneSequencePlayer.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams
+				{
+					Frame = umovieSceneSequencePlayer.GetStartTime().Time,
+					PositionType = EMovieScenePositionType.Frame,
+					UpdateMethod = EUpdatePositionMethod.Jump
+				});
+				umovieSceneSequencePlayer.StopAtCurrentTime();
+			}
+			this.ClearChairOccupiedSequence();
+		}
+
+		// Token: 0x0603DB2A RID: 252714 RVA: 0x011E0098 File Offset: 0x011DE298
+		private void FinishChairOccupiedSequence()
+		{
+			SimpleLevelSequenceActor chairOccupiedSequenceActor = this.ChairOccupiedSequenceActor;
+			UMovieSceneSequencePlayer umovieSceneSequencePlayer = (chairOccupiedSequenceActor != null) ? chairOccupiedSequenceActor.GetPlayer() : null;
+			if (umovieSceneSequencePlayer == null || !umovieSceneSequencePlayer.IsValid() || !umovieSceneSequencePlayer.IsPlaying())
+			{
+				return;
+			}
+			FFrameTime frame = this.ChairSpaceOccupied ? umovieSceneSequencePlayer.GetEndTime().Time : umovieSceneSequencePlayer.GetStartTime().Time;
+			umovieSceneSequencePlayer.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams
+			{
+				Frame = frame,
+				PositionType = EMovieScenePositionType.Frame,
+				UpdateMethod = EUpdatePositionMethod.Jump
+			});
+			umovieSceneSequencePlayer.StopAtCurrentTime();
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.SceneItem;
+			ELogAuthor author = ELogAuthor.CK;
+			string message = "[PlayerFollowerChairHandler] 椅子状态切换, 占用半透渐变已推进至终态并停止";
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("Occupied", this.ChairSpaceOccupied);
+			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+		}
+
+		// Token: 0x0603DB2B RID: 252715 RVA: 0x011E014C File Offset: 0x011DE34C
+		private static bool IsSitStandStateSwitch(EChairPerformanceState? from, EChairPerformanceState to)
+		{
+			bool flag = from.GetValueOrDefault() == EChairPerformanceState.Seated || from.GetValueOrDefault() == EChairPerformanceState.StoodUp;
+			bool flag2 = to == EChairPerformanceState.Seated || to == EChairPerformanceState.StoodUp;
+			return flag && flag2;
+		}
+
+		// Token: 0x0603DB2C RID: 252716 RVA: 0x011E0180 File Offset: 0x011DE380
+		private static void ForceSequenceKeepState(ULevelSequence sequence)
+		{
+			sequence.DefaultCompletionMode = EMovieSceneCompletionMode.KeepState;
+			UMovieScene movieScene = sequence.GetMovieScene();
+			if (movieScene == null)
+			{
+				return;
+			}
+			PlayerFollowerChairHandler.ApplyKeepStateToTracks(UKuroSequenceRuntimeFunctionLibrary.GetMasterTracks(sequence));
+			TArray<FMovieSceneBinding> objectBindings = movieScene.ObjectBindings;
+			for (int i = 0; i < objectBindings.Num(); i++)
+			{
+				FMovieSceneBinding fmovieSceneBinding = objectBindings.Get(i);
+				if (!(fmovieSceneBinding == null))
+				{
+					FSequencerBindingRuntimeProxy self = UKuroSequenceRuntimeFunctionLibrary.FindBindingById(sequence, fmovieSceneBinding.ObjectGuid);
+					if (!(self == null))
+					{
+						PlayerFollowerChairHandler.ApplyKeepStateToTracks(UKuroSequenceRuntimeFunctionLibrary.GetTracks(self));
+					}
+				}
+			}
+			UKuroSequenceRuntimeFunctionLibrary.ResetMovieSceneCompiledData(sequence);
+		}
+
+		// Token: 0x0603DB2D RID: 252717 RVA: 0x011E0200 File Offset: 0x011DE400
+		private static void ApplyKeepStateToTracks([Nullable(new byte[]
+		{
+			2,
+			0
+		})] TArray<UMovieSceneTrack> tracks)
+		{
+			if (tracks == null)
+			{
+				return;
+			}
+			for (int i = 0; i < tracks.Num(); i++)
+			{
+				TArray<UMovieSceneSection> sections = UKuroSequenceRuntimeFunctionLibrary.GetSections(tracks.Get(i));
+				if (sections != null)
+				{
+					for (int j = 0; j < sections.Num(); j++)
+					{
+						sections.Get(j).SetCompletionMode(EMovieSceneCompletionMode.KeepState);
+					}
+				}
+			}
+		}
+
+		// Token: 0x0603DB2E RID: 252718 RVA: 0x011E0250 File Offset: 0x011DE450
+		private static int GetOccupiedSequenceResolvedBindings(ULevelSequence sequence, UMovieSceneSequencePlayer player, bool includeDetails, out string bindingDetails)
+		{
+			bindingDetails = string.Empty;
+			UMovieScene movieScene = sequence.GetMovieScene();
+			if (movieScene == null)
+			{
+				return 0;
+			}
+			List<string> list = includeDetails ? new List<string>() : null;
+			int num = 0;
+			TArray<FMovieSceneBinding> objectBindings = movieScene.ObjectBindings;
+			for (int i = 0; i < objectBindings.Num(); i++)
+			{
+				FMovieSceneBinding fmovieSceneBinding = objectBindings.Get(i);
+				if (!(fmovieSceneBinding == null))
+				{
+					FMovieSceneObjectBindingID objectBinding = new FMovieSceneObjectBindingID
+					{
+						SequenceID = 0,
+						Guid = fmovieSceneBinding.ObjectGuid
+					};
+					TArray<UObject> boundObjects = player.GetBoundObjects(objectBinding);
+					List<string> list2 = includeDetails ? new List<string>() : null;
+					bool flag = false;
+					if (boundObjects != null)
+					{
+						foreach (UObject uobject in boundObjects)
+						{
+							if (uobject != null && uobject.IsValid())
+							{
+								flag = true;
+								if (!includeDetails)
+								{
+									break;
+								}
+								if (list2 != null)
+								{
+									list2.Add(UKismetSystemLibrary.GetPathName(uobject));
+								}
+							}
+						}
+					}
+					if (flag)
+					{
+						num++;
+					}
+					if (list != null && list2 != null)
+					{
+						string str = flag ? string.Join(",", list2) : "Unresolved";
+						list.Add(fmovieSceneBinding.BindingName + ":[" + str + "]");
+					}
+				}
+			}
+			bindingDetails = ((list != null) ? string.Join(";", list) : string.Empty);
+			return num;
+		}
+
+		// Token: 0x0603DB2F RID: 252719 RVA: 0x011E03B4 File Offset: 0x011DE5B4
 		public override IReceiver<ICommandTypeAddFollower> AddFollowerReceiver()
 		{
 			return new Receiver<ICommandTypeAddFollower>
@@ -421,7 +724,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			};
 		}
 
-		// Token: 0x06046CD6 RID: 290006 RVA: 0x011D7282 File Offset: 0x011D5482
+		// Token: 0x0603DB30 RID: 252720 RVA: 0x011E03CD File Offset: 0x011DE5CD
 		public void TryStartRemoteVisibilityByChairEntity(Entity chairEntity)
 		{
 			this.RemotePresenter.TryStartRemoteVisibilityByChairEntity(chairEntity);
@@ -431,7 +734,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046CD7 RID: 290007 RVA: 0x011D72B0 File Offset: 0x011D54B0
+		// Token: 0x0603DB31 RID: 252721 RVA: 0x011E03FC File Offset: 0x011DE5FC
 		public void TryRebindLocalChairEntity(Entity chairEntity)
 		{
 			if (this.ChairCreatureDataId <= 0L)
@@ -452,14 +755,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			CreatureController.Instance.SetEntityEnable(chairEntity, false, "PlayerFollowerChairHandler.RebindLocalChair", false);
 		}
 
-		// Token: 0x06046CD8 RID: 290008 RVA: 0x011D733C File Offset: 0x011D553C
+		// Token: 0x0603DB32 RID: 252722 RVA: 0x011E0488 File Offset: 0x011DE688
 		[NullableContext(2)]
 		public void OnRemoteChairPresentationNotify(long chairCreatureDataId, bool isShow, Aki.Protocol.Vector location, Aki.Protocol.Rotator rotation)
 		{
 			this.RemotePresenter.OnRemotePresentationNotify(chairCreatureDataId, isShow, location, rotation);
 		}
 
-		// Token: 0x06046CD9 RID: 290009 RVA: 0x011D734E File Offset: 0x011D554E
+		// Token: 0x0603DB33 RID: 252723 RVA: 0x011E049A File Offset: 0x011DE69A
 		public override IReceiver<ICommandTypeRemoveFollower> RemoveFollowerReceiver()
 		{
 			return new Receiver<ICommandTypeRemoveFollower>
@@ -500,6 +803,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 							this.SetChairPerformanceControlledExternally(worldEntity2, false);
 						}
 						this.StopListenStateReached();
+						this.ClearChairOccupiedSequence();
 						this.IsChairShown = false;
 						this.ChairCreatureDataId = 0L;
 						this.CurChairPerformanceState = null;
@@ -515,7 +819,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			};
 		}
 
-		// Token: 0x06046CDA RID: 290010 RVA: 0x011D7368 File Offset: 0x011D5568
+		// Token: 0x0603DB34 RID: 252724 RVA: 0x011E04B4 File Offset: 0x011DE6B4
 		[NullableContext(2)]
 		private void ExitSitDown(Entity removingChairEntity = null, Entity playerEntity = null)
 		{
@@ -557,25 +861,25 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			characterActionComponent.PreLeaveSitDownAction("PlayerFollowerChairHandler.RemoveFollower");
 		}
 
-		// Token: 0x06046CDB RID: 290011 RVA: 0x011D73ED File Offset: 0x011D55ED
+		// Token: 0x0603DB35 RID: 252725 RVA: 0x011E0539 File Offset: 0x011DE739
 		public void ExitSitDownDueToOverlap()
 		{
 			this.ExitSitDown(null, null);
 		}
 
-		// Token: 0x06046CDC RID: 290012 RVA: 0x011D73F7 File Offset: 0x011D55F7
+		// Token: 0x0603DB36 RID: 252726 RVA: 0x011E0543 File Offset: 0x011DE743
 		public void ExitSitDownDueToPlayerMove()
 		{
 			this.ExitSitDown(null, null);
 		}
 
-		// Token: 0x06046CDD RID: 290013 RVA: 0x011D7401 File Offset: 0x011D5601
+		// Token: 0x0603DB37 RID: 252727 RVA: 0x011E054D File Offset: 0x011DE74D
 		public void RecallChairDueToTickGroundCheck()
 		{
 			this.RecallChair("PlayerFollowerChairHandler.TickGroundCheck");
 		}
 
-		// Token: 0x06046CDE RID: 290014 RVA: 0x011D740E File Offset: 0x011D560E
+		// Token: 0x0603DB38 RID: 252728 RVA: 0x011E055A File Offset: 0x011DE75A
 		public void HideChairDueToLeaveRange(Entity chairEntity, int transactionVersion)
 		{
 			if (transactionVersion != this.SummonTransactionVersion || !this.IsChairShown || !this.IsMySummonedChair(chairEntity))
@@ -585,7 +889,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.HideChair("PlayerFollowerChairHandler.AutoHide");
 		}
 
-		// Token: 0x06046CDF RID: 290015 RVA: 0x011D7438 File Offset: 0x011D5638
+		// Token: 0x0603DB39 RID: 252729 RVA: 0x011E0584 File Offset: 0x011DE784
 		public void CleanupCurrentChair()
 		{
 			if (this.ChairCreatureDataId <= 0L)
@@ -628,6 +932,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				CreatureController.Instance.SetEntityEnable(worldEntity2, false, "PlayerFollowerChairHandler.ReplaceHide", false);
 			}
 			this.StopListenStateReached();
+			this.ClearChairOccupiedSequence();
 			this.IsChairShown = false;
 			this.ChairCreatureDataId = 0L;
 			this.CurChairPerformanceState = null;
@@ -635,7 +940,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			ChairPresentationNet.RemoveSnapshot(this.OwnerPlayerId, chairCreatureDataId);
 		}
 
-		// Token: 0x06046CE0 RID: 290016 RVA: 0x011D7538 File Offset: 0x011D5738
+		// Token: 0x0603DB3A RID: 252730 RVA: 0x011E068C File Offset: 0x011DE88C
 		private unsafe void OnChairEntityRemoved(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			Entity stateReachedListenEntity = this.StateReachedListenEntity;
@@ -668,12 +973,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 			this.RemotePresenter.StopRemoteVisibility();
 			this.StopListenStateReached();
+			this.ClearChairOccupiedSequence();
 			this.IsChairShown = false;
 			this.CurChairPerformanceState = null;
 			this.RealChairPerformanceState = null;
 		}
 
-		// Token: 0x06046CE1 RID: 290017 RVA: 0x011D7648 File Offset: 0x011D5848
+		// Token: 0x0603DB3B RID: 252731 RVA: 0x011E07A4 File Offset: 0x011DE9A4
 		public override void OnClear()
 		{
 			EventSystem.Instance.Remove<ERemoveEntityType, EntityHandle>(EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnChairEntityRemoved));
@@ -718,6 +1024,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				this.StopMonitor();
 			}
 			this.SummonEvaluator.Dispose();
+			this.ResetChairOccupiedSequence();
 			this.ChairCreatureDataId = 0L;
 			this.IsChairShown = false;
 			this.CurChairPerformanceState = null;
@@ -731,7 +1038,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.WaitEntityTasks.Clear();
 		}
 
-		// Token: 0x06046CE2 RID: 290018 RVA: 0x011D7844 File Offset: 0x011D5A44
+		// Token: 0x0603DB3C RID: 252732 RVA: 0x011E09A8 File Offset: 0x011DEBA8
 		public void SummonChair()
 		{
 			if (!ChairSummonEvaluator.DebugDraw)
@@ -832,7 +1139,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.StartListenSummonSkillEnd(worldEntity4, num2);
 		}
 
-		// Token: 0x06046CE3 RID: 290019 RVA: 0x011D7A90 File Offset: 0x011D5C90
+		// Token: 0x0603DB3D RID: 252733 RVA: 0x011E0BF4 File Offset: 0x011DEDF4
 		private void StartListenSummonSkillEnd(Entity playerEntity, int transactionVersion)
 		{
 			if (this.SummonSkillEndListening)
@@ -847,7 +1154,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.SummonSkillEndListening = true;
 		}
 
-		// Token: 0x06046CE4 RID: 290020 RVA: 0x011D7AE8 File Offset: 0x011D5CE8
+		// Token: 0x0603DB3E RID: 252734 RVA: 0x011E0C4C File Offset: 0x011DEE4C
 		private void StopListenSummonSkillEnd()
 		{
 			if (!this.SummonSkillEndListening)
@@ -866,7 +1173,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.PendingSummonTransactionVersion = 0;
 		}
 
-		// Token: 0x06046CE5 RID: 290021 RVA: 0x011D7B58 File Offset: 0x011D5D58
+		// Token: 0x0603DB3F RID: 252735 RVA: 0x011E0CBC File Offset: 0x011DEEBC
 		private void OnSummonSkillEnd(int entityId, int skillId, int transactionVersion)
 		{
 			if (skillId != 210062)
@@ -932,7 +1239,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.RestorePendingRole();
 		}
 
-		// Token: 0x06046CE6 RID: 290022 RVA: 0x011D7CC4 File Offset: 0x011D5EC4
+		// Token: 0x0603DB40 RID: 252736 RVA: 0x011E0E28 File Offset: 0x011DF028
 		private unsafe void EnterSitDownAfterSummonSkill(Entity chairEntity, Entity playerEntity, int transactionVersion)
 		{
 			if (transactionVersion != this.SummonTransactionVersion)
@@ -1020,7 +1327,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.SitDownTimeoutTimer = sitDownTimeoutTimer;
 		}
 
-		// Token: 0x06046CE7 RID: 290023 RVA: 0x011D7F88 File Offset: 0x011D6188
+		// Token: 0x0603DB41 RID: 252737 RVA: 0x011E10EC File Offset: 0x011DF2EC
 		private bool IsValidSitDownCompletion(Entity chairEntity, Entity playerEntity)
 		{
 			if (!playerEntity.Valid || !chairEntity.Valid || !this.IsMySummonedChair(chairEntity))
@@ -1031,7 +1338,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return component != null && component.IsSitDown && component.Chair == chairEntity;
 		}
 
-		// Token: 0x06046CE8 RID: 290024 RVA: 0x011D7FD0 File Offset: 0x011D61D0
+		// Token: 0x0603DB42 RID: 252738 RVA: 0x011E1134 File Offset: 0x011DF334
 		private unsafe void OnSitDownComplete(Entity chairEntity, Entity playerEntity, int transactionVersion, [Nullable(2)] ITagTask sitDownCompleteTagTask)
 		{
 			if (transactionVersion != this.SummonTransactionVersion || this.SitDownCompleteTagTask != sitDownCompleteTagTask || !this.IsValidSitDownCompletion(chairEntity, playerEntity))
@@ -1058,7 +1365,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.StartMonitor();
 		}
 
-		// Token: 0x06046CE9 RID: 290025 RVA: 0x011D80A8 File Offset: 0x011D62A8
+		// Token: 0x0603DB43 RID: 252739 RVA: 0x011E120C File Offset: 0x011DF40C
 		private unsafe void StartListenSitDownLeave(Entity chairEntity, [Nullable(2)] Entity playerEntity, int transactionVersion)
 		{
 			BaseTagComponent baseTagComponent = (playerEntity != null) ? playerEntity.GetComponent<BaseTagComponent>() : null;
@@ -1107,7 +1414,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046CEA RID: 290026 RVA: 0x011D81BA File Offset: 0x011D63BA
+		// Token: 0x0603DB44 RID: 252740 RVA: 0x011E131E File Offset: 0x011DF51E
 		private void StopListenSitDownLeave()
 		{
 			ITagTask sitDownLeaveTagTask = this.SitDownLeaveTagTask;
@@ -1121,7 +1428,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			sitDownLeaveTagTask.EndTask();
 		}
 
-		// Token: 0x06046CEB RID: 290027 RVA: 0x011D81E4 File Offset: 0x011D63E4
+		// Token: 0x0603DB45 RID: 252741 RVA: 0x011E1348 File Offset: 0x011DF548
 		private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
 			Entity entity = ((oldEntity != null) ? oldEntity.Entity : null) ?? this.SitDownLeaveListenEntity;
@@ -1157,9 +1464,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.StartListenSitDownLeave(worldEntity3, worldEntity, this.SummonTransactionVersion);
 		}
 
-		// Token: 0x06046CEC RID: 290028 RVA: 0x011D82EC File Offset: 0x011D64EC
+		// Token: 0x0603DB46 RID: 252742 RVA: 0x011E1450 File Offset: 0x011DF650
 		private void ShowChair(Entity chairEntity, int transactionVersion)
 		{
+			this.ResetChairOccupiedSequence();
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.SceneItem;
 			ELogAuthor author = ELogAuthor.CK;
@@ -1180,7 +1488,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}, null, null);
 		}
 
-		// Token: 0x06046CED RID: 290029 RVA: 0x011D839C File Offset: 0x011D659C
+		// Token: 0x0603DB47 RID: 252743 RVA: 0x011E1504 File Offset: 0x011DF704
 		public void ChangeChairPerformanceState(Entity chairEntity, EChairPerformanceState chairState)
 		{
 			BaseActorComponent component = chairEntity.GetComponent<BaseActorComponent>();
@@ -1196,7 +1504,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				return;
 			}
 			this.StartListenStateReached(chairEntity);
-			EKuroSceneInteractionState ekuroSceneInteractionState = PlayerFollowerChairHandler.CHAIR_PERFORMANCE_STATE_TO_SCENE_STATE[chairState];
+			EKuroSceneInteractionState ekuroSceneInteractionState = PlayerFollowerChairHandler.ChairPerformanceStateToSceneState[chairState];
 			if (sceneItemActorComponent.GetSceneInteractionLevelHandleId() == -1)
 			{
 				sceneItemActorComponent.LoadSceneInteractionLevel(ekuroSceneInteractionState, false);
@@ -1209,12 +1517,16 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			{
 				return;
 			}
+			if (PlayerFollowerChairHandler.IsSitStandStateSwitch(this.CurChairPerformanceState, chairState))
+			{
+				this.FinishChairOccupiedSequence();
+			}
 			this.CurChairPerformanceState = new EChairPerformanceState?(chairState);
 			this.ChairConvergeRetryCount = 0;
 			sceneItemActorComponent.SwitchToState(ekuroSceneInteractionState, true, false);
 		}
 
-		// Token: 0x06046CEE RID: 290030 RVA: 0x011D8460 File Offset: 0x011D6660
+		// Token: 0x0603DB48 RID: 252744 RVA: 0x011E15DC File Offset: 0x011DF7DC
 		private void StartListenStateReached(Entity chairEntity)
 		{
 			if (this.StateReachedListenEntity == chairEntity)
@@ -1228,7 +1540,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.StateReachedListenEntity = chairEntity;
 		}
 
-		// Token: 0x06046CEF RID: 290031 RVA: 0x011D84BC File Offset: 0x011D66BC
+		// Token: 0x0603DB49 RID: 252745 RVA: 0x011E1638 File Offset: 0x011DF838
 		private void StopListenStateReached()
 		{
 			if (this.ChairConvergeTimer != null)
@@ -1245,7 +1557,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046CF0 RID: 290032 RVA: 0x011D8530 File Offset: 0x011D6730
+		// Token: 0x0603DB4A RID: 252746 RVA: 0x011E16AC File Offset: 0x011DF8AC
 		private unsafe void OnChairStateReached(int handle, EKuroSceneInteractionState state)
 		{
 			Entity stateReachedListenEntity = this.StateReachedListenEntity;
@@ -1255,7 +1567,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				return;
 			}
 			EChairPerformanceState value;
-			EChairPerformanceState? echairPerformanceState = PlayerFollowerChairHandler.SCENE_STATE_TO_CHAIR_PERFORMANCE_STATE.TryGetValue(state, out value) ? new EChairPerformanceState?(value) : null;
+			EChairPerformanceState? echairPerformanceState = PlayerFollowerChairHandler.SceneStateToChairPerformanceState.TryGetValue(state, out value) ? new EChairPerformanceState?(value) : null;
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.SceneItem;
 			ELogAuthor author = ELogAuthor.CK;
@@ -1270,6 +1582,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				return;
 			}
 			this.RealChairPerformanceState = new EChairPerformanceState?(echairPerformanceState.Value);
+			if (echairPerformanceState.Value == EChairPerformanceState.StoodUp && this.ChairSpaceOccupied && this.StateReachedListenEntity != null)
+			{
+				this.UpdateChairOccupiedSequence(this.StateReachedListenEntity, true);
+			}
 			if (this.CurChairPerformanceState != null)
 			{
 				EChairPerformanceState value2 = echairPerformanceState.Value;
@@ -1283,7 +1599,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.ChairConvergeRetryCount = 0;
 		}
 
-		// Token: 0x06046CF1 RID: 290033 RVA: 0x011D8657 File Offset: 0x011D6857
+		// Token: 0x0603DB4B RID: 252747 RVA: 0x011E17FA File Offset: 0x011DF9FA
 		private void ScheduleChairConverge()
 		{
 			this.PendingChairConvergeState = this.CurChairPerformanceState;
@@ -1298,7 +1614,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}, null, null);
 		}
 
-		// Token: 0x06046CF2 RID: 290034 RVA: 0x011D868C File Offset: 0x011D688C
+		// Token: 0x0603DB4C RID: 252748 RVA: 0x011E1830 File Offset: 0x011DFA30
 		private unsafe void ExecuteChairConverge()
 		{
 			EChairPerformanceState? pendingChairConvergeState = this.PendingChairConvergeState;
@@ -1337,7 +1653,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 								return;
 							}
 							this.ChairConvergeRetryCount++;
-							SceneInteractionManager.Get().SwitchSceneInteractionToState(sceneInteractionLevelHandleId, PlayerFollowerChairHandler.CHAIR_PERFORMANCE_STATE_TO_SCENE_STATE[pendingChairConvergeState.Value], true, true, false);
+							SceneInteractionManager.Get().SwitchSceneInteractionToState(sceneInteractionLevelHandleId, PlayerFollowerChairHandler.ChairPerformanceStateToSceneState[pendingChairConvergeState.Value], true, true, false);
 							return;
 						}
 					}
@@ -1347,7 +1663,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046CF3 RID: 290035 RVA: 0x011D8814 File Offset: 0x011D6A14
+		// Token: 0x0603DB4D RID: 252749 RVA: 0x011E19B8 File Offset: 0x011DFBB8
 		public void SetChairPerformanceControlledExternally(Entity chairEntity, bool controlled)
 		{
 			SceneItemStateComponent component = chairEntity.GetComponent<SceneItemStateComponent>();
@@ -1358,7 +1674,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			component.SetPerformanceStateControlledExternally(controlled);
 		}
 
-		// Token: 0x06046CF4 RID: 290036 RVA: 0x011D8834 File Offset: 0x011D6A34
+		// Token: 0x0603DB4E RID: 252750 RVA: 0x011E19D8 File Offset: 0x011DFBD8
 		private void RollbackSummon(Entity chairEntity)
 		{
 			this.InvalidateSummonTransaction();
@@ -1372,7 +1688,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.IsChairShown = false;
 		}
 
-		// Token: 0x06046CF5 RID: 290037 RVA: 0x011D8892 File Offset: 0x011D6A92
+		// Token: 0x0603DB4F RID: 252751 RVA: 0x011E1A36 File Offset: 0x011DFC36
 		private void RestorePendingRole()
 		{
 			CharacterActorComponent pendingRoleActorComp = this.PendingRoleActorComp;
@@ -1384,7 +1700,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.PendingRoleActorComp = null;
 		}
 
-		// Token: 0x06046CF6 RID: 290038 RVA: 0x011D88C8 File Offset: 0x011D6AC8
+		// Token: 0x0603DB50 RID: 252752 RVA: 0x011E1A6C File Offset: 0x011DFC6C
 		private void ClearSitDownWaiters()
 		{
 			ITagTask sitDownCompleteTagTask = this.SitDownCompleteTagTask;
@@ -1400,14 +1716,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046CF7 RID: 290039 RVA: 0x011D8902 File Offset: 0x011D6B02
+		// Token: 0x0603DB51 RID: 252753 RVA: 0x011E1AA6 File Offset: 0x011DFCA6
 		private void InvalidateSummonTransaction()
 		{
 			this.SummonTransactionVersion++;
 			this.PendingSummonTransactionVersion = 0;
 		}
 
-		// Token: 0x06046CF8 RID: 290040 RVA: 0x011D8919 File Offset: 0x011D6B19
+		// Token: 0x0603DB52 RID: 252754 RVA: 0x011E1ABD File Offset: 0x011DFCBD
 		[return: Nullable(2)]
 		public ChairFollowerConfig GetChairConfig(Entity chairEntity)
 		{
@@ -1419,7 +1735,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return component.ChairConfig;
 		}
 
-		// Token: 0x06046CF9 RID: 290041 RVA: 0x011D892C File Offset: 0x011D6B2C
+		// Token: 0x0603DB53 RID: 252755 RVA: 0x011E1AD0 File Offset: 0x011DFCD0
 		private bool IsBlockedByExistingChair(Entity chairEntity, ChairFollowerConfig chairConfig)
 		{
 			float reSummonBlockDistanceSquared = chairConfig.ReSummonBlockDistanceSquared;
@@ -1448,7 +1764,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return component != null && baseActorComponent != null && global::Vector.DistSquared(component.ActorLocationProxy, baseActorComponent.ActorLocationProxy) <= (double)reSummonBlockDistanceSquared;
 		}
 
-		// Token: 0x06046CFA RID: 290042 RVA: 0x011D89A8 File Offset: 0x011D6BA8
+		// Token: 0x0603DB54 RID: 252756 RVA: 0x011E1B4C File Offset: 0x011DFD4C
 		[return: Nullable(2)]
 		private unsafe IChairSummonResult EvaluateSummonLocation(Entity chairEntity, ChairFollowerConfig chairConfig)
 		{
@@ -1477,7 +1793,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return chairSummonResult;
 		}
 
-		// Token: 0x06046CFB RID: 290043 RVA: 0x011D8AD4 File Offset: 0x011D6CD4
+		// Token: 0x0603DB55 RID: 252757 RVA: 0x011E1C78 File Offset: 0x011DFE78
 		private void PlaceChair(Entity chairEntity, IChairSummonResult result)
 		{
 			BaseActorComponent component = chairEntity.GetComponent<BaseActorComponent>();
@@ -1488,7 +1804,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			component.SetActorLocationAndRotation(result.FinalLocation.ToUeVector(false), global::Rotator.Create(0f, result.Yaw, 0f).ToUeRotator(), "ChairSummonRelocate", false, null);
 		}
 
-		// Token: 0x06046CFC RID: 290044 RVA: 0x011D8B28 File Offset: 0x011D6D28
+		// Token: 0x0603DB56 RID: 252758 RVA: 0x011E1CCC File Offset: 0x011DFECC
 		private unsafe void ReportChairPresentation(bool isShow, string reason)
 		{
 			if (!this.IsLocalOwner() || this.OwnerPlayerId <= 0 || this.ChairCreatureDataId <= 0L)
@@ -1528,20 +1844,20 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			ChairPresentationNet.SendChairPresentationPush(this.ChairCreatureDataId, isShow, baseActorComponent.ActorLocationProxy, baseActorComponent.ActorRotationProxy);
 		}
 
-		// Token: 0x06046CFD RID: 290045 RVA: 0x011D8C07 File Offset: 0x011D6E07
+		// Token: 0x0603DB57 RID: 252759 RVA: 0x011E1DAB File Offset: 0x011DFFAB
 		private void OnObserverChanged()
 		{
 			this.ReportChairPresentation(this.IsChairShown, "PlayerFollowerChairHandler.ScenePlayerChanged");
 		}
 
-		// Token: 0x06046CFE RID: 290046 RVA: 0x011D8C1A File Offset: 0x011D6E1A
+		// Token: 0x0603DB58 RID: 252760 RVA: 0x011E1DBE File Offset: 0x011DFFBE
 		private void OnReconnectSuccess()
 		{
 			this.ReportChairPresentation(this.IsChairShown, "PlayerFollowerChairHandler.ReConnectSuccess");
 			this.MigrateSitDownLeaveToCurrentPlayer();
 		}
 
-		// Token: 0x06046CFF RID: 290047 RVA: 0x011D8C34 File Offset: 0x011D6E34
+		// Token: 0x0603DB59 RID: 252761 RVA: 0x011E1DD8 File Offset: 0x011DFFD8
 		private void MigrateSitDownLeaveToCurrentPlayer()
 		{
 			if (this.SitDownLeaveTagTask == null || this.ChairCreatureDataId <= 0L)
@@ -1579,7 +1895,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.StartListenSitDownLeave(worldEntity2, worldEntity4, this.SummonTransactionVersion);
 		}
 
-		// Token: 0x06046D00 RID: 290048 RVA: 0x011D8CC8 File Offset: 0x011D6EC8
+		// Token: 0x0603DB5A RID: 252762 RVA: 0x011E1E6C File Offset: 0x011E006C
 		private void HideChair(string reason)
 		{
 			this.InvalidateSummonTransaction();
@@ -1590,6 +1906,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.SetCameraFollowing(true, "PlayerFollowerChairHandler.HideChair: " + reason);
 			this.ExitSitDown(null, null);
 			this.StopMonitor();
+			this.ResetChairOccupiedSequence();
 			CreatureModel instance = CreatureModel.Instance;
 			WorldEntity worldEntity;
 			if (instance == null)
@@ -1611,7 +1928,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.IsChairShown = false;
 		}
 
-		// Token: 0x06046D01 RID: 290049 RVA: 0x011D8D5F File Offset: 0x011D6F5F
+		// Token: 0x0603DB5B RID: 252763 RVA: 0x011E1F09 File Offset: 0x011E0109
 		[NullableContext(2)]
 		private void PlayGoBattleMaterialOnRole(CharacterActorComponent playerActorComp)
 		{
@@ -1631,7 +1948,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			charRenderingComponent.AddMaterialControllerDataGroup(this.GoBattleMaterial);
 		}
 
-		// Token: 0x06046D02 RID: 290050 RVA: 0x011D8D98 File Offset: 0x011D6F98
+		// Token: 0x0603DB5C RID: 252764 RVA: 0x011E1F44 File Offset: 0x011E0144
 		private unsafe void SetCameraFollowing(bool follow, string reason)
 		{
 			FightCamera fightCamera = CameraController.Instance.MainModel.FightCamera;
@@ -1655,19 +1972,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06046D03 RID: 290051 RVA: 0x011D8E2E File Offset: 0x011D702E
+		// Token: 0x0603DB5D RID: 252765 RVA: 0x011E1FDA File Offset: 0x011E01DA
 		private void StartMonitor()
 		{
 			this.EnsureChairRuntimeMonitor();
 		}
 
-		// Token: 0x06046D04 RID: 290052 RVA: 0x011D8E36 File Offset: 0x011D7036
+		// Token: 0x0603DB5E RID: 252766 RVA: 0x011E1FE2 File Offset: 0x011E01E2
 		private void StopMonitor()
 		{
 			this.StopChairRuntimeMonitor();
 		}
 
-		// Token: 0x06046D05 RID: 290053 RVA: 0x011D8E40 File Offset: 0x011D7040
+		// Token: 0x0603DB5F RID: 252767 RVA: 0x011E1FEC File Offset: 0x011E01EC
 		private void EnsureChairRuntimeMonitor()
 		{
 			if (this.ChairRuntimeMonitor != null)
@@ -1694,7 +2011,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.ChairRuntimeMonitor = new ChairMonitor(worldEntity2, chairFollowerConfig, this, this.SummonTransactionVersion);
 		}
 
-		// Token: 0x06046D06 RID: 290054 RVA: 0x011D8EA3 File Offset: 0x011D70A3
+		// Token: 0x0603DB60 RID: 252768 RVA: 0x011E204F File Offset: 0x011E024F
 		private void StopChairRuntimeMonitor()
 		{
 			ChairMonitor chairRuntimeMonitor = this.ChairRuntimeMonitor;
@@ -1706,29 +2023,30 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.ChairSpaceOccupied = false;
 		}
 
-		// Token: 0x0402528C RID: 152204
+		// Token: 0x04020B6C RID: 133996
 		private const string WAIT_REASON = "PlayerFollowerChairHandler.AddFollower";
 
-		// Token: 0x0402528D RID: 152205
+		// Token: 0x04020B6D RID: 133997
 		private const string SUMMON_FAIL_TIP_TEXT_ID = "Flying_Tip_002";
 
-		// Token: 0x0402528E RID: 152206
+		// Token: 0x04020B6E RID: 133998
 		private const int CHAIR_SIT_DOWN_TYPE = 1;
 
-		// Token: 0x0402528F RID: 152207
+		// Token: 0x04020B6F RID: 133999
 		private const int CHAIR_ITEM_ID = 70360001;
 
-		// Token: 0x04025290 RID: 152208
+		// Token: 0x04020B70 RID: 134000
 		private const int SUMMON_CHAIR_SKILL_ID = 210062;
 
-		// Token: 0x04025291 RID: 152209
+		// Token: 0x04020B71 RID: 134001
 		private const int SIT_DOWN_COMPLETE_TIMEOUT_MS = 3000;
 
-		// Token: 0x04025292 RID: 152210
+		// Token: 0x04020B72 RID: 134002
 		private const int CHAIR_CONVERGE_MAX_RETRY_COUNT = 2;
 
-		// Token: 0x04025293 RID: 152211
-		private static readonly Dictionary<EChairPerformanceState, EKuroSceneInteractionState> CHAIR_PERFORMANCE_STATE_TO_SCENE_STATE = new Dictionary<EChairPerformanceState, EKuroSceneInteractionState>
+		// Token: 0x04020B73 RID: 134003
+		[StaticVariableRuleIgnore]
+		private static readonly Dictionary<EChairPerformanceState, EKuroSceneInteractionState> ChairPerformanceStateToSceneState = new Dictionary<EChairPerformanceState, EKuroSceneInteractionState>
 		{
 			{
 				EChairPerformanceState.Init,
@@ -1744,8 +2062,9 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		};
 
-		// Token: 0x04025294 RID: 152212
-		private static readonly Dictionary<EKuroSceneInteractionState, EChairPerformanceState> SCENE_STATE_TO_CHAIR_PERFORMANCE_STATE = new Dictionary<EKuroSceneInteractionState, EChairPerformanceState>
+		// Token: 0x04020B74 RID: 134004
+		[StaticVariableRuleIgnore]
+		private static readonly Dictionary<EKuroSceneInteractionState, EChairPerformanceState> SceneStateToChairPerformanceState = new Dictionary<EKuroSceneInteractionState, EChairPerformanceState>
 		{
 			{
 				EKuroSceneInteractionState.State3,
@@ -1761,104 +2080,115 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		};
 
-		// Token: 0x04025297 RID: 152215
+		// Token: 0x04020B77 RID: 134007
 		private readonly Dictionary<long, WaitEntityTask> WaitEntityTasks = new Dictionary<long, WaitEntityTask>();
 
-		// Token: 0x04025298 RID: 152216
+		// Token: 0x04020B78 RID: 134008
 		[Nullable(2)]
 		private ChairMonitor ChairRuntimeMonitor;
 
-		// Token: 0x04025299 RID: 152217
+		// Token: 0x04020B79 RID: 134009
 		private bool ChairSpaceOccupied;
 
-		// Token: 0x0402529A RID: 152218
+		// Token: 0x04020B7A RID: 134010
+		[Nullable(2)]
+		private SimpleLevelSequenceActor ChairOccupiedSequenceActor;
+
+		// Token: 0x04020B7B RID: 134011
+		[Nullable(2)]
+		private AActor ChairOccupiedSequenceTargetActor;
+
+		// Token: 0x04020B7C RID: 134012
+		private bool OccupiedSequenceKeepStateApplied;
+
+		// Token: 0x04020B7D RID: 134013
 		private ChairRemotePresenter RemotePresenter;
 
-		// Token: 0x0402529B RID: 152219
+		// Token: 0x04020B7E RID: 134014
 		private int SummonTransactionVersion;
 
-		// Token: 0x0402529C RID: 152220
+		// Token: 0x04020B7F RID: 134015
 		private readonly ChairSummonEvaluator SummonEvaluator = new ChairSummonEvaluator();
 
-		// Token: 0x0402529E RID: 152222
+		// Token: 0x04020B81 RID: 134017
 		private EChairPerformanceState? CurChairPerformanceState;
 
-		// Token: 0x0402529F RID: 152223
+		// Token: 0x04020B82 RID: 134018
 		private EChairPerformanceState? RealChairPerformanceState;
 
-		// Token: 0x040252A0 RID: 152224
+		// Token: 0x04020B83 RID: 134019
 		[Nullable(2)]
 		private Entity StateReachedListenEntity;
 
-		// Token: 0x040252A1 RID: 152225
+		// Token: 0x04020B84 RID: 134020
 		private int ChairConvergeRetryCount;
 
-		// Token: 0x040252A2 RID: 152226
+		// Token: 0x04020B85 RID: 134021
 		private EChairPerformanceState? PendingChairConvergeState;
 
-		// Token: 0x040252A3 RID: 152227
+		// Token: 0x04020B86 RID: 134022
 		[Nullable(2)]
 		private TimerHandle ChairConvergeTimer;
 
-		// Token: 0x040252A4 RID: 152228
+		// Token: 0x04020B87 RID: 134023
 		[Nullable(2)]
 		private PD_CharacterControllerDataGroup_C GoBattleMaterial;
 
-		// Token: 0x040252A5 RID: 152229
+		// Token: 0x04020B88 RID: 134024
 		private int PendingRoleDisableHandle;
 
-		// Token: 0x040252A6 RID: 152230
+		// Token: 0x04020B89 RID: 134025
 		[Nullable(2)]
 		private CharacterActorComponent PendingRoleActorComp;
 
-		// Token: 0x040252A7 RID: 152231
+		// Token: 0x04020B8A RID: 134026
 		[Nullable(2)]
 		private ITagTask SitDownCompleteTagTask;
 
-		// Token: 0x040252A8 RID: 152232
+		// Token: 0x04020B8B RID: 134027
 		[Nullable(2)]
 		private ITagTask SitDownLeaveTagTask;
 
-		// Token: 0x040252A9 RID: 152233
+		// Token: 0x04020B8C RID: 134028
 		[Nullable(2)]
 		private Entity SitDownLeaveListenEntity;
 
-		// Token: 0x040252AA RID: 152234
+		// Token: 0x04020B8D RID: 134029
 		private int SitDownLeaveTransactionVersion;
 
-		// Token: 0x040252AB RID: 152235
+		// Token: 0x04020B8E RID: 134030
 		[Nullable(2)]
 		private TimerHandle SitDownTimeoutTimer;
 
-		// Token: 0x040252AC RID: 152236
+		// Token: 0x04020B8F RID: 134031
 		private bool SummonSkillEndListening;
 
-		// Token: 0x040252AD RID: 152237
+		// Token: 0x04020B90 RID: 134032
 		[Nullable(2)]
 		private Entity PendingChairEntity;
 
-		// Token: 0x040252AE RID: 152238
+		// Token: 0x04020B91 RID: 134033
 		[Nullable(2)]
 		private Entity PendingSitDownPlayerEntity;
 
-		// Token: 0x040252AF RID: 152239
+		// Token: 0x04020B92 RID: 134034
 		private int PendingSummonTransactionVersion;
 
-		// Token: 0x040252B0 RID: 152240
+		// Token: 0x04020B93 RID: 134035
 		[Nullable(2)]
 		private Action<int, int> SummonSkillEndCallback;
 
-		// Token: 0x040252B1 RID: 152241
+		// Token: 0x04020B94 RID: 134036
 		private bool IsChairSummonBlockedByPlot;
 
-		// Token: 0x040252B2 RID: 152242
+		// Token: 0x04020B95 RID: 134037
 		[Nullable(2)]
 		private ConditionPassCallback RestrictConditionCallback;
 
-		// Token: 0x040252B3 RID: 152243
+		// Token: 0x04020B96 RID: 134038
 		private int RestrictConditionGroupId;
 
-		// Token: 0x040252B4 RID: 152244
+		// Token: 0x04020B97 RID: 134039
 		private bool IsLocalEventListening;
 	}
 }

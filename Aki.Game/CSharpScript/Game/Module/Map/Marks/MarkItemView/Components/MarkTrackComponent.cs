@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 {
-	// Token: 0x0200554C RID: 21836
+	// Token: 0x0200451E RID: 17694
 	public class MarkTrackComponent : MarkPanelBase
 	{
-		// Token: 0x06037B81 RID: 228225 RVA: 0x00D386F4 File Offset: 0x00D368F4
+		// Token: 0x0602CA51 RID: 182865 RVA: 0x00C861C8 File Offset: 0x00C843C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x06037B82 RID: 228226 RVA: 0x00D38748 File Offset: 0x00D36948
+		// Token: 0x0602CA52 RID: 182866 RVA: 0x00C8621C File Offset: 0x00C8441C
 		protected override void OnStart()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(0);
@@ -44,16 +44,16 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			rootItem.SetUIRelativeScale3D(fvector);
 		}
 
-		// Token: 0x0401D44E RID: 119886
+		// Token: 0x04017ED7 RID: 98007
 		public EMapType MapType = EMapType.WorldMap;
 
-		// Token: 0x0401D44F RID: 119887
+		// Token: 0x04017ED8 RID: 98008
 		public float TrackFxScale = 1f;
 
-		// Token: 0x0200B778 RID: 46968
+		// Token: 0x0200A1A3 RID: 41379
 		public static class EMarkTrackNiaComponents
 		{
-			// Token: 0x040378B2 RID: 227506
+			// Token: 0x040322DD RID: 205533
 			public const int NiaTrace = 0;
 		}
 	}

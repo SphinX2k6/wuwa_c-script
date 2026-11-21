@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FA3 RID: 8099
+// Token: 0x02001465 RID: 5221
 [NullableContext(1)]
 [Nullable(0)]
 public class InfoDisplayTypeTwoView : UiTickViewBase
 {
-	// Token: 0x0600FB93 RID: 64403 RVA: 0x003CFDB3 File Offset: 0x003CDFB3
+	// Token: 0x0600CFB5 RID: 53173 RVA: 0x003DB9E7 File Offset: 0x003D9BE7
 	public InfoDisplayTypeTwoView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FB94 RID: 64404 RVA: 0x003CFDC4 File Offset: 0x003CDFC4
+	// Token: 0x0600CFB6 RID: 53174 RVA: 0x003DB9F8 File Offset: 0x003D9BF8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -60,25 +60,25 @@ public class InfoDisplayTypeTwoView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FB95 RID: 64405 RVA: 0x003CFFBA File Offset: 0x003CE1BA
+	// Token: 0x0600CFB7 RID: 53175 RVA: 0x003DBBEE File Offset: 0x003D9DEE
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<AutoAttachItem<string>>(EEventName.ClickDisplayItem, new Action<AutoAttachItem<string>>(this.OnClickItem));
 	}
 
-	// Token: 0x0600FB96 RID: 64406 RVA: 0x003CFFD8 File Offset: 0x003CE1D8
+	// Token: 0x0600CFB8 RID: 53176 RVA: 0x003DBC0C File Offset: 0x003D9E0C
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ClickDisplayItem, new Action<AutoAttachItem<string>>(this.OnClickItem));
 	}
 
-	// Token: 0x0600FB97 RID: 64407 RVA: 0x003CFFF6 File Offset: 0x003CE1F6
+	// Token: 0x0600CFB9 RID: 53177 RVA: 0x003DBC2A File Offset: 0x003D9E2A
 	private void OnClickItem(AutoAttachItem<string> item)
 	{
 		this.ScrollToItem(item);
 	}
 
-	// Token: 0x0600FB98 RID: 64408 RVA: 0x003D0000 File Offset: 0x003CE200
+	// Token: 0x0600CFBA RID: 53178 RVA: 0x003DBC34 File Offset: 0x003D9E34
 	protected override void OnStart()
 	{
 		int id = InfoDisplayModel.Instance.CurrentInformationId();
@@ -87,7 +87,7 @@ public class InfoDisplayTypeTwoView : UiTickViewBase
 		this.RefreshElement(id);
 	}
 
-	// Token: 0x0600FB99 RID: 64409 RVA: 0x003D0030 File Offset: 0x003CE230
+	// Token: 0x0600CFBB RID: 53179 RVA: 0x003DBC64 File Offset: 0x003D9E64
 	private void InitView(int id)
 	{
 		CircleAttachView<string, InfoDisplayCircleAttachItem> circleExhibitionView = this.CircleExhibitionView;
@@ -159,7 +159,7 @@ public class InfoDisplayTypeTwoView : UiTickViewBase
 		this.RefreshIndexText();
 	}
 
-	// Token: 0x0600FB9A RID: 64410 RVA: 0x003D01D0 File Offset: 0x003CE3D0
+	// Token: 0x0600CFBC RID: 53180 RVA: 0x003DBE04 File Offset: 0x003DA004
 	private void RefreshLeftRightBtnShowState(int id)
 	{
 		string[] infoDisplayPictures = InfoDisplayModuleConfig.Instance.GetInfoDisplayPictures(id);
@@ -180,26 +180,26 @@ public class InfoDisplayTypeTwoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FB9B RID: 64411 RVA: 0x003D021A File Offset: 0x003CE41A
+	// Token: 0x0600CFBD RID: 53181 RVA: 0x003DBE4E File Offset: 0x003DA04E
 	private InfoDisplayCircleAttachItem CreateCircleItem(AActor actor, int index, int showNum)
 	{
 		return new InfoDisplayCircleAttachItem(actor);
 	}
 
-	// Token: 0x0600FB9C RID: 64412 RVA: 0x003D0222 File Offset: 0x003CE422
+	// Token: 0x0600CFBE RID: 53182 RVA: 0x003DBE56 File Offset: 0x003DA056
 	private InfoDisplayNoCircleAttachItem CreateNoCircleItem(AActor actor, int index, int showNum)
 	{
 		return new InfoDisplayNoCircleAttachItem(actor);
 	}
 
-	// Token: 0x0600FB9D RID: 64413 RVA: 0x003D022A File Offset: 0x003CE42A
+	// Token: 0x0600CFBF RID: 53183 RVA: 0x003DBE5E File Offset: 0x003DA05E
 	private void RefreshElement(int id)
 	{
 		this.RefreshShowText(id);
 		this.RefreshIndexText();
 	}
 
-	// Token: 0x0600FB9E RID: 64414 RVA: 0x003D023C File Offset: 0x003CE43C
+	// Token: 0x0600CFC0 RID: 53184 RVA: 0x003DBE70 File Offset: 0x003DA070
 	private void RefreshShowText(int id)
 	{
 		string infoDisplayTitle = InfoDisplayModuleConfig.Instance.GetInfoDisplayTitle(id);
@@ -216,25 +216,25 @@ public class InfoDisplayTypeTwoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FB9F RID: 64415 RVA: 0x003D0287 File Offset: 0x003CE487
+	// Token: 0x0600CFC1 RID: 53185 RVA: 0x003DBEBB File Offset: 0x003DA0BB
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600FBA0 RID: 64416 RVA: 0x003D0290 File Offset: 0x003CE490
+	// Token: 0x0600CFC2 RID: 53186 RVA: 0x003DBEC4 File Offset: 0x003DA0C4
 	private void OnClickRightBtn()
 	{
 		this.AttachToItem(1);
 	}
 
-	// Token: 0x0600FBA1 RID: 64417 RVA: 0x003D0299 File Offset: 0x003CE499
+	// Token: 0x0600CFC3 RID: 53187 RVA: 0x003DBECD File Offset: 0x003DA0CD
 	private void OnClickLeftBtn()
 	{
 		this.AttachToItem(-1);
 	}
 
-	// Token: 0x0600FBA2 RID: 64418 RVA: 0x003D02A2 File Offset: 0x003CE4A2
+	// Token: 0x0600CFC4 RID: 53188 RVA: 0x003DBED6 File Offset: 0x003DA0D6
 	private void AttachToItem(int direction)
 	{
 		if (this.NoCircleExhibitionView != null)
@@ -248,7 +248,7 @@ public class InfoDisplayTypeTwoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FBA3 RID: 64419 RVA: 0x003D02CD File Offset: 0x003CE4CD
+	// Token: 0x0600CFC5 RID: 53189 RVA: 0x003DBF01 File Offset: 0x003DA101
 	private void ScrollToItem(AutoAttachItem<string> item)
 	{
 		if (this.NoCircleExhibitionView != null)
@@ -262,7 +262,7 @@ public class InfoDisplayTypeTwoView : UiTickViewBase
 		this.RefreshIndexText();
 	}
 
-	// Token: 0x0600FBA4 RID: 64420 RVA: 0x003D030C File Offset: 0x003CE50C
+	// Token: 0x0600CFC6 RID: 53190 RVA: 0x003DBF40 File Offset: 0x003DA140
 	private void RefreshIndexText()
 	{
 		int num = 0;
@@ -286,7 +286,7 @@ public class InfoDisplayTypeTwoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600FBA5 RID: 64421 RVA: 0x003D038C File Offset: 0x003CE58C
+	// Token: 0x0600CFC7 RID: 53191 RVA: 0x003DBFC0 File Offset: 0x003DA1C0
 	protected override void OnBeforeDestroy()
 	{
 		int displayId = InfoDisplayModel.Instance.CurrentInformationId();
@@ -304,7 +304,7 @@ public class InfoDisplayTypeTwoView : UiTickViewBase
 		noCircleExhibitionView.Clear();
 	}
 
-	// Token: 0x0600FBA6 RID: 64422 RVA: 0x003D03D0 File Offset: 0x003CE5D0
+	// Token: 0x0600CFC8 RID: 53192 RVA: 0x003DC004 File Offset: 0x003DA204
 	protected override UniTask OnBeforeHideAsync()
 	{
 		InfoDisplayTypeTwoView.<OnBeforeHideAsync>d__25 <OnBeforeHideAsync>d__;
@@ -315,13 +315,13 @@ public class InfoDisplayTypeTwoView : UiTickViewBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04007510 RID: 29968
+	// Token: 0x040075F3 RID: 30195
 	private const int PICTURE_DISTANCE = -850;
 
-	// Token: 0x04007511 RID: 29969
+	// Token: 0x040075F4 RID: 30196
 	private int CurrentDataLength;
 
-	// Token: 0x04007512 RID: 29970
+	// Token: 0x040075F5 RID: 30197
 	[Nullable(new byte[]
 	{
 		2,
@@ -330,7 +330,7 @@ public class InfoDisplayTypeTwoView : UiTickViewBase
 	})]
 	private CircleAttachView<string, InfoDisplayCircleAttachItem> CircleExhibitionView;
 
-	// Token: 0x04007513 RID: 29971
+	// Token: 0x040075F6 RID: 30198
 	[Nullable(new byte[]
 	{
 		2,
@@ -339,41 +339,41 @@ public class InfoDisplayTypeTwoView : UiTickViewBase
 	})]
 	private NoCircleAttachView<string, InfoDisplayNoCircleAttachItem> NoCircleExhibitionView;
 
-	// Token: 0x04007514 RID: 29972
+	// Token: 0x040075F7 RID: 30199
 	private readonly int ShowItemNum = 3;
 
-	// Token: 0x02008596 RID: 34198
+	// Token: 0x0200771B RID: 30491
 	[NullableContext(0)]
 	private class EInfoDisplayTypeTwoComponents
 	{
-		// Token: 0x0402B7E0 RID: 178144
+		// Token: 0x04026B03 RID: 158467
 		public const int InformationBtnItem = 0;
 
-		// Token: 0x0402B7E1 RID: 178145
+		// Token: 0x04026B04 RID: 158468
 		public const int Viewport = 1;
 
-		// Token: 0x0402B7E2 RID: 178146
+		// Token: 0x04026B05 RID: 158469
 		public const int IndexText = 2;
 
-		// Token: 0x0402B7E3 RID: 178147
+		// Token: 0x04026B06 RID: 158470
 		public const int RightBtn = 3;
 
-		// Token: 0x0402B7E4 RID: 178148
+		// Token: 0x04026B07 RID: 158471
 		public const int LeftBtn = 4;
 
-		// Token: 0x0402B7E5 RID: 178149
+		// Token: 0x04026B08 RID: 158472
 		public const int Desc = 5;
 
-		// Token: 0x0402B7E6 RID: 178150
+		// Token: 0x04026B09 RID: 158473
 		public const int Name = 6;
 
-		// Token: 0x0402B7E7 RID: 178151
+		// Token: 0x04026B0A RID: 158474
 		public const int BackBtn = 7;
 
-		// Token: 0x0402B7E8 RID: 178152
+		// Token: 0x04026B0B RID: 158475
 		public const int RightBtnItem = 8;
 
-		// Token: 0x0402B7E9 RID: 178153
+		// Token: 0x04026B0C RID: 158476
 		public const int LeftBtnItem = 9;
 	}
 }

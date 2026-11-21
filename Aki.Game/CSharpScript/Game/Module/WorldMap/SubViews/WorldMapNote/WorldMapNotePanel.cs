@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapNote
 {
-	// Token: 0x020047E0 RID: 18400
+	// Token: 0x02003711 RID: 14097
 	public class WorldMapNotePanel : WorldMapSecondaryUi
 	{
-		// Token: 0x0603032D RID: 197421 RVA: 0x00B2BB6D File Offset: 0x00B29D6D
+		// Token: 0x06024AFD RID: 150269 RVA: 0x00A5BA39 File Offset: 0x00A59C39
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiView_MapPopupTrack";
 		}
 
-		// Token: 0x0603032E RID: 197422 RVA: 0x00B2BB74 File Offset: 0x00B29D74
+		// Token: 0x06024AFE RID: 150270 RVA: 0x00A5BA40 File Offset: 0x00A59C40
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapNote
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603032F RID: 197423 RVA: 0x00B2BC00 File Offset: 0x00B29E00
+		// Token: 0x06024AFF RID: 150271 RVA: 0x00A5BACC File Offset: 0x00A59CCC
 		protected override void OnStart()
 		{
 			this.PopupCaption = new PopupCaptionItem(base.GetItem(0));
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapNote
 			this.NoteLayout = new GenericLayout<WorldMapNoteItemNew, WorldMapNoteItemData>(base.GetVerticalLayout(1), () => new WorldMapNoteItemNew(), null, false, true);
 		}
 
-		// Token: 0x06030330 RID: 197424 RVA: 0x00B2BC70 File Offset: 0x00B29E70
+		// Token: 0x06024B00 RID: 150272 RVA: 0x00A5BB3C File Offset: 0x00A59D3C
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
@@ -84,29 +84,29 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapNote
 			}
 		}
 
-		// Token: 0x06030331 RID: 197425 RVA: 0x00B2BD94 File Offset: 0x00B29F94
+		// Token: 0x06024B01 RID: 150273 RVA: 0x00A5BC60 File Offset: 0x00A59E60
 		protected override void OnCloseWorldMapSecondaryUi()
 		{
 		}
 
-		// Token: 0x06030332 RID: 197426 RVA: 0x00B2BD96 File Offset: 0x00B29F96
+		// Token: 0x06024B02 RID: 150274 RVA: 0x00A5BC62 File Offset: 0x00A59E62
 		protected override void OnBeforeDestroy()
 		{
 			this.PopupCaption = null;
 			this.NoteLayout = null;
 		}
 
-		// Token: 0x06030333 RID: 197427 RVA: 0x00B2BDA6 File Offset: 0x00B29FA6
+		// Token: 0x06024B03 RID: 150275 RVA: 0x00A5BC72 File Offset: 0x00A59E72
 		protected override bool GetNeedBgItem()
 		{
 			return false;
 		}
 
-		// Token: 0x04019F53 RID: 106323
+		// Token: 0x04014607 RID: 83463
 		[Nullable(2)]
 		private PopupCaptionItem PopupCaption;
 
-		// Token: 0x04019F54 RID: 106324
+		// Token: 0x04014608 RID: 83464
 		[Nullable(new byte[]
 		{
 			2,
@@ -115,16 +115,16 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapNote
 		})]
 		private GenericLayout<WorldMapNoteItemNew, WorldMapNoteItemData> NoteLayout;
 
-		// Token: 0x0200AA99 RID: 43673
+		// Token: 0x0200944B RID: 37963
 		public static class EChildType
 		{
-			// Token: 0x04033E6F RID: 212591
+			// Token: 0x0402E5F6 RID: 189942
 			public const int ItemCaption = 0;
 
-			// Token: 0x04033E70 RID: 212592
+			// Token: 0x0402E5F7 RID: 189943
 			public const int VerticalLayoutNote = 1;
 
-			// Token: 0x04033E71 RID: 212593
+			// Token: 0x0402E5F8 RID: 189944
 			public const int ItemNote = 2;
 		}
 	}

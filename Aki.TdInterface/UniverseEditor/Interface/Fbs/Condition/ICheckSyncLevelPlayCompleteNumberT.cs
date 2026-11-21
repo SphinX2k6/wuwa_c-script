@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B39 RID: 19257
+	// Token: 0x02005020 RID: 20512
 	public class ICheckSyncLevelPlayCompleteNumberT
 	{
-		// Token: 0x17008BB6 RID: 35766
-		// (get) Token: 0x0601E4E8 RID: 124136 RVA: 0x0043F1F8 File Offset: 0x0043D3F8
-		// (set) Token: 0x0601E4E9 RID: 124137 RVA: 0x0043F200 File Offset: 0x0043D400
+		// Token: 0x170092C6 RID: 37574
+		// (get) Token: 0x06020073 RID: 131187 RVA: 0x004719A4 File Offset: 0x0046FBA4
+		// (set) Token: 0x06020074 RID: 131188 RVA: 0x004719AC File Offset: 0x0046FBAC
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008BB7 RID: 35767
-		// (get) Token: 0x0601E4EA RID: 124138 RVA: 0x0043F209 File Offset: 0x0043D409
-		// (set) Token: 0x0601E4EB RID: 124139 RVA: 0x0043F211 File Offset: 0x0043D411
+		// Token: 0x170092C7 RID: 37575
+		// (get) Token: 0x06020075 RID: 131189 RVA: 0x004719B5 File Offset: 0x0046FBB5
+		// (set) Token: 0x06020076 RID: 131190 RVA: 0x004719BD File Offset: 0x0046FBBD
 		public int SyncId { get; set; }
 
-		// Token: 0x17008BB8 RID: 35768
-		// (get) Token: 0x0601E4EC RID: 124140 RVA: 0x0043F21A File Offset: 0x0043D41A
-		// (set) Token: 0x0601E4ED RID: 124141 RVA: 0x0043F222 File Offset: 0x0043D422
+		// Token: 0x170092C8 RID: 37576
+		// (get) Token: 0x06020077 RID: 131191 RVA: 0x004719C6 File Offset: 0x0046FBC6
+		// (set) Token: 0x06020078 RID: 131192 RVA: 0x004719CE File Offset: 0x0046FBCE
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008BB9 RID: 35769
-		// (get) Token: 0x0601E4EE RID: 124142 RVA: 0x0043F22B File Offset: 0x0043D42B
-		// (set) Token: 0x0601E4EF RID: 124143 RVA: 0x0043F233 File Offset: 0x0043D433
+		// Token: 0x170092C9 RID: 37577
+		// (get) Token: 0x06020079 RID: 131193 RVA: 0x004719D7 File Offset: 0x0046FBD7
+		// (set) Token: 0x0602007A RID: 131194 RVA: 0x004719DF File Offset: 0x0046FBDF
 		public int Number { get; set; }
 
-		// Token: 0x0601E4F0 RID: 124144 RVA: 0x0043F23C File Offset: 0x0043D43C
+		// Token: 0x0602007B RID: 131195 RVA: 0x004719E8 File Offset: 0x0046FBE8
 		public ICheckSyncLevelPlayCompleteNumberT()
 		{
 			this.Type = ECondition.CompareVar;

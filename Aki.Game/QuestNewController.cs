@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -25,69 +24,69 @@ using CSharpScript.Launcher.DiffPatch.Update;
 using CSharpScript.Launcher.Update;
 using Google.Protobuf;
 
-// Token: 0x02002636 RID: 9782
+// Token: 0x02001B21 RID: 6945
 [NullableContext(2)]
 [Nullable(0)]
 [TickController(0)]
 public class QuestNewController : ControllerWithAssistantBase
 {
-	// Token: 0x17001973 RID: 6515
-	// (get) Token: 0x0601401D RID: 81949 RVA: 0x00509811 File Offset: 0x00507A11
-	// (set) Token: 0x0601401E RID: 81950 RVA: 0x00509819 File Offset: 0x00507A19
+	// Token: 0x170019AB RID: 6571
+	// (get) Token: 0x060114FF RID: 70911 RVA: 0x00518721 File Offset: 0x00516921
+	// (set) Token: 0x06011500 RID: 70912 RVA: 0x00518729 File Offset: 0x00516929
 	[Nullable(1)]
 	private QuestRedDotNotify CachedRedDotNotify { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17001974 RID: 6516
-	// (get) Token: 0x0601401F RID: 81951 RVA: 0x00509822 File Offset: 0x00507A22
-	// (set) Token: 0x06014020 RID: 81952 RVA: 0x0050982A File Offset: 0x00507A2A
+	// Token: 0x170019AC RID: 6572
+	// (get) Token: 0x06011501 RID: 70913 RVA: 0x00518732 File Offset: 0x00516932
+	// (set) Token: 0x06011502 RID: 70914 RVA: 0x0051873A File Offset: 0x0051693A
 	public long QuestRangeFailWarningTreeId { get; set; }
 
-	// Token: 0x17001975 RID: 6517
-	// (get) Token: 0x06014021 RID: 81953 RVA: 0x00509833 File Offset: 0x00507A33
-	// (set) Token: 0x06014022 RID: 81954 RVA: 0x0050983B File Offset: 0x00507A3B
+	// Token: 0x170019AD RID: 6573
+	// (get) Token: 0x06011503 RID: 70915 RVA: 0x00518743 File Offset: 0x00516943
+	// (set) Token: 0x06011504 RID: 70916 RVA: 0x0051874B File Offset: 0x0051694B
 	private bool IsHidingQuestRangeFailWarning { get; set; }
 
-	// Token: 0x17001976 RID: 6518
-	// (get) Token: 0x06014023 RID: 81955 RVA: 0x00509844 File Offset: 0x00507A44
-	// (set) Token: 0x06014024 RID: 81956 RVA: 0x0050984C File Offset: 0x00507A4C
+	// Token: 0x170019AE RID: 6574
+	// (get) Token: 0x06011505 RID: 70917 RVA: 0x00518754 File Offset: 0x00516954
+	// (set) Token: 0x06011506 RID: 70918 RVA: 0x0051875C File Offset: 0x0051695C
 	private float HidingQuestRangeFialWarningTime { get; set; }
 
-	// Token: 0x17001977 RID: 6519
-	// (get) Token: 0x06014025 RID: 81957 RVA: 0x00509855 File Offset: 0x00507A55
-	// (set) Token: 0x06014026 RID: 81958 RVA: 0x0050985D File Offset: 0x00507A5D
+	// Token: 0x170019AF RID: 6575
+	// (get) Token: 0x06011507 RID: 70919 RVA: 0x00518765 File Offset: 0x00516965
+	// (set) Token: 0x06011508 RID: 70920 RVA: 0x0051876D File Offset: 0x0051696D
 	private bool IsShowingQuestRangeFailWarning { get; set; }
 
-	// Token: 0x17001978 RID: 6520
-	// (get) Token: 0x06014027 RID: 81959 RVA: 0x00509866 File Offset: 0x00507A66
-	// (set) Token: 0x06014028 RID: 81960 RVA: 0x0050986E File Offset: 0x00507A6E
+	// Token: 0x170019B0 RID: 6576
+	// (get) Token: 0x06011509 RID: 70921 RVA: 0x00518776 File Offset: 0x00516976
+	// (set) Token: 0x0601150A RID: 70922 RVA: 0x0051877E File Offset: 0x0051697E
 	private float ShowQuestRangeFialWarningTime { get; set; }
 
-	// Token: 0x17001979 RID: 6521
-	// (get) Token: 0x06014029 RID: 81961 RVA: 0x00509877 File Offset: 0x00507A77
-	// (set) Token: 0x0601402A RID: 81962 RVA: 0x0050987F File Offset: 0x00507A7F
+	// Token: 0x170019B1 RID: 6577
+	// (get) Token: 0x0601150B RID: 70923 RVA: 0x00518787 File Offset: 0x00516987
+	// (set) Token: 0x0601150C RID: 70924 RVA: 0x0051878F File Offset: 0x0051698F
 	private bool IsShowQuestRangeFailWarning { get; set; }
 
-	// Token: 0x1700197A RID: 6522
-	// (get) Token: 0x0601402B RID: 81963 RVA: 0x00509888 File Offset: 0x00507A88
-	// (set) Token: 0x0601402C RID: 81964 RVA: 0x00509890 File Offset: 0x00507A90
+	// Token: 0x170019B2 RID: 6578
+	// (get) Token: 0x0601150D RID: 70925 RVA: 0x00518798 File Offset: 0x00516998
+	// (set) Token: 0x0601150E RID: 70926 RVA: 0x005187A0 File Offset: 0x005169A0
 	private float StartShowQuestRangeFialWarningTime { get; set; }
 
-	// Token: 0x1700197B RID: 6523
-	// (get) Token: 0x0601402D RID: 81965 RVA: 0x00509899 File Offset: 0x00507A99
-	// (set) Token: 0x0601402E RID: 81966 RVA: 0x005098A1 File Offset: 0x00507AA1
+	// Token: 0x170019B3 RID: 6579
+	// (get) Token: 0x0601150F RID: 70927 RVA: 0x005187A9 File Offset: 0x005169A9
+	// (set) Token: 0x06011510 RID: 70928 RVA: 0x005187B1 File Offset: 0x005169B1
 	private TimerHandle DelayTimerHandle { get; set; }
 
-	// Token: 0x1700197C RID: 6524
-	// (get) Token: 0x0601402F RID: 81967 RVA: 0x005098AA File Offset: 0x00507AAA
-	// (set) Token: 0x06014030 RID: 81968 RVA: 0x005098B2 File Offset: 0x00507AB2
+	// Token: 0x170019B4 RID: 6580
+	// (get) Token: 0x06011511 RID: 70929 RVA: 0x005187BA File Offset: 0x005169BA
+	// (set) Token: 0x06011512 RID: 70930 RVA: 0x005187C2 File Offset: 0x005169C2
 	private int? VideoResourceDownloadTriggerId { get; set; }
 
-	// Token: 0x1700197D RID: 6525
-	// (get) Token: 0x06014031 RID: 81969 RVA: 0x005098BB File Offset: 0x00507ABB
-	// (set) Token: 0x06014032 RID: 81970 RVA: 0x005098C3 File Offset: 0x00507AC3
+	// Token: 0x170019B5 RID: 6581
+	// (get) Token: 0x06011513 RID: 70931 RVA: 0x005187CB File Offset: 0x005169CB
+	// (set) Token: 0x06011514 RID: 70932 RVA: 0x005187D3 File Offset: 0x005169D3
 	private bool? IsReportDownloadNotEnoughSpace { get; set; }
 
-	// Token: 0x06014033 RID: 81971 RVA: 0x005098CC File Offset: 0x00507ACC
+	// Token: 0x06011515 RID: 70933 RVA: 0x005187DC File Offset: 0x005169DC
 	protected override void OnRegisterNetEvent()
 	{
 		base.OnRegisterNetEvent();
@@ -108,7 +107,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		Net.Instance.Register(ENotifyMessageId.ResetQuestFocusModeNotify, new Action<IMessage, Net.CallbackStatus>(this.OnResetQuestFocusModeNotify));
 	}
 
-	// Token: 0x06014034 RID: 81972 RVA: 0x00509A84 File Offset: 0x00507C84
+	// Token: 0x06011516 RID: 70934 RVA: 0x00518994 File Offset: 0x00516B94
 	protected override void OnUnRegisterNetEvent()
 	{
 		base.OnUnRegisterNetEvent();
@@ -128,14 +127,14 @@ public class QuestNewController : ControllerWithAssistantBase
 		Net.Instance.UnRegister(ENotifyMessageId.ResetQuestFocusModeNotify);
 	}
 
-	// Token: 0x06014035 RID: 81973 RVA: 0x00509B77 File Offset: 0x00507D77
+	// Token: 0x06011517 RID: 70935 RVA: 0x00518A87 File Offset: 0x00516C87
 	protected override bool OnInit()
 	{
 		base.InitTickOptimize(30, -1);
 		return base.OnInit();
 	}
 
-	// Token: 0x06014036 RID: 81974 RVA: 0x00509B88 File Offset: 0x00507D88
+	// Token: 0x06011518 RID: 70936 RVA: 0x00518A98 File Offset: 0x00516C98
 	protected override void OnAddEvents()
 	{
 		base.OnAddEvents();
@@ -150,7 +149,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		VideoUpdateManager.Instance.GetVideoUpdater(EVideoResSizeType.MalePrepare).SetDownloadFinishCallBack(new Action<EVideoResSizeType>(this.OnQuestVideoResourceDownloadFinish));
 	}
 
-	// Token: 0x06014037 RID: 81975 RVA: 0x00509C9C File Offset: 0x00507E9C
+	// Token: 0x06011519 RID: 70937 RVA: 0x00518BAC File Offset: 0x00516DAC
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.GeneralLogicTreeWakeUp, new Action(this.OnGeneralLogicTreeWakeUp));
@@ -163,7 +162,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		base.OnRemoveEvents();
 	}
 
-	// Token: 0x06014038 RID: 81976 RVA: 0x00509D74 File Offset: 0x00507F74
+	// Token: 0x0601151A RID: 70938 RVA: 0x00518C84 File Offset: 0x00516E84
 	protected override void OnTick(float delta)
 	{
 		if (!GeneralLogicTreeModel.Instance.IsWakeUp)
@@ -215,7 +214,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x06014039 RID: 81977 RVA: 0x00509EF8 File Offset: 0x005080F8
+	// Token: 0x0601151B RID: 70939 RVA: 0x00518E08 File Offset: 0x00517008
 	protected override void RegisterAssistant()
 	{
 		base.AddAssistant(0, new GuideLineAssistant(new <>z__ReadOnlyArray<BtType>(new BtType[]
@@ -228,7 +227,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		base.AddAssistant(3, new DailyQuestAssistant());
 	}
 
-	// Token: 0x0601403A RID: 81978 RVA: 0x00509F48 File Offset: 0x00508148
+	// Token: 0x0601151C RID: 70940 RVA: 0x00518E58 File Offset: 0x00517058
 	[NullableContext(1)]
 	private T GetAssistant<T>(QuestNewController.EAssistantType type) where T : class
 	{
@@ -240,7 +239,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		return controllerAssistantBase as T;
 	}
 
-	// Token: 0x0601403B RID: 81979 RVA: 0x00509F7A File Offset: 0x0050817A
+	// Token: 0x0601151D RID: 70941 RVA: 0x00518E8A File Offset: 0x0051708A
 	public void AddQuestTraceEffect(int questId, float showTime, int splineEntityId)
 	{
 		GuideEffectAssistant assistant = this.GetAssistant<GuideEffectAssistant>(QuestNewController.EAssistantType.GuideEffect);
@@ -251,7 +250,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		assistant.AddQuestTraceEffect(questId, showTime, splineEntityId);
 	}
 
-	// Token: 0x0601403C RID: 81980 RVA: 0x00509F90 File Offset: 0x00508190
+	// Token: 0x0601151E RID: 70942 RVA: 0x00518EA0 File Offset: 0x005170A0
 	public void RemoveQuestTraceEffect(int questId, int splineEntityId)
 	{
 		GuideEffectAssistant assistant = this.GetAssistant<GuideEffectAssistant>(QuestNewController.EAssistantType.GuideEffect);
@@ -262,7 +261,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		assistant.RemoveQuestTraceEffect(questId, splineEntityId);
 	}
 
-	// Token: 0x0601403D RID: 81981 RVA: 0x00509FA5 File Offset: 0x005081A5
+	// Token: 0x0601151F RID: 70943 RVA: 0x00518EB5 File Offset: 0x005170B5
 	public void ClearQuestTraceEffect(int questId)
 	{
 		GuideEffectAssistant assistant = this.GetAssistant<GuideEffectAssistant>(QuestNewController.EAssistantType.GuideEffect);
@@ -273,7 +272,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		assistant.ClearQuestTraceEffect(questId);
 	}
 
-	// Token: 0x0601403E RID: 81982 RVA: 0x00509FBC File Offset: 0x005081BC
+	// Token: 0x06011520 RID: 70944 RVA: 0x00518ECC File Offset: 0x005170CC
 	private void OnGeneralLogicTreeWakeUp()
 	{
 		QuestTrackAssistant assistant = this.GetAssistant<QuestTrackAssistant>(QuestNewController.EAssistantType.Track);
@@ -293,7 +292,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x0601403F RID: 81983 RVA: 0x0050A00C File Offset: 0x0050820C
+	// Token: 0x06011521 RID: 70945 RVA: 0x00518F1C File Offset: 0x0051711C
 	private void OnQuestListNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		QuestListNotify questListNotify = (QuestListNotify)msg;
@@ -316,7 +315,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		QuestNewController.HandleQuestListNotify(list);
 	}
 
-	// Token: 0x06014040 RID: 81984 RVA: 0x0050A0C0 File Offset: 0x005082C0
+	// Token: 0x06011522 RID: 70946 RVA: 0x00518FD0 File Offset: 0x005171D0
 	private void OnQuestReadyListNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		QuestReadyListNotify questReadyListNotify = (QuestReadyListNotify)msg;
@@ -371,13 +370,13 @@ public class QuestNewController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x06014041 RID: 81985 RVA: 0x0050A220 File Offset: 0x00508420
+	// Token: 0x06011523 RID: 70947 RVA: 0x00519130 File Offset: 0x00517330
 	private void OnWorldDone()
 	{
 		this.AreaChanged(null, 0);
 	}
 
-	// Token: 0x06014042 RID: 81986 RVA: 0x0050A240 File Offset: 0x00508440
+	// Token: 0x06011524 RID: 70948 RVA: 0x00519150 File Offset: 0x00517350
 	private void AreaChanged(int? preAreaId, int curAreaId)
 	{
 		int currentAreaId = AreaModel.Instance.GetCurrentAreaId(null);
@@ -424,7 +423,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x06014043 RID: 81987 RVA: 0x0050A350 File Offset: 0x00508550
+	// Token: 0x06011525 RID: 70949 RVA: 0x00519260 File Offset: 0x00517460
 	private int GetMapTrackQuestId()
 	{
 		int result = 0;
@@ -440,7 +439,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		return result;
 	}
 
-	// Token: 0x06014044 RID: 81988 RVA: 0x0050A398 File Offset: 0x00508598
+	// Token: 0x06011526 RID: 70950 RVA: 0x005192A8 File Offset: 0x005174A8
 	private void OnQuestShowListNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		QuestShowListNotify questShowListNotify = (QuestShowListNotify)msg;
@@ -467,21 +466,22 @@ public class QuestNewController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x06014045 RID: 81989 RVA: 0x0050A48C File Offset: 0x0050868C
+	// Token: 0x06011527 RID: 70951 RVA: 0x0051939C File Offset: 0x0051759C
 	private void OnQuestFinishListNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		QuestFinishListNotify questFinishListNotify = (QuestFinishListNotify)msg;
 		FinishListNotifyData finishListNotifyData = new FinishListNotifyData();
-		finishListNotifyData.QuestIds = questFinishListNotify.QuestId.ToList<int>();
+		finishListNotifyData.QuestIds = new List<int>(questFinishListNotify.QuestId);
 		finishListNotifyData.EmitEventName = EEventName.OnQuestFinishListNotify;
 		finishListNotifyData.TryChangeTrackedQuest = delegate()
 		{
 			QuestNewController.Instance.TryChangeTrackedQuest2(null);
 		};
 		QuestNewController.HandleFinishListNotify(finishListNotifyData);
+		EventSystem.Instance.Emit(EEventName.OnNormalQuestFinishListNotify);
 	}
 
-	// Token: 0x06014046 RID: 81990 RVA: 0x0050A4EC File Offset: 0x005086EC
+	// Token: 0x06011528 RID: 70952 RVA: 0x0051940C File Offset: 0x0051760C
 	private void QuestStateUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		QuestStateUpdateNotify questStateUpdateNotify = (QuestStateUpdateNotify)msg;
@@ -493,7 +493,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		});
 	}
 
-	// Token: 0x06014047 RID: 81991 RVA: 0x0050A529 File Offset: 0x00508729
+	// Token: 0x06011529 RID: 70953 RVA: 0x00519449 File Offset: 0x00517649
 	public ESetTrackResult RequestTrackQuest(int questId, bool bTrack, ERequestTrackOperate operate, ESetTrackReason reason = ESetTrackReason.None, Action finishCallback = null)
 	{
 		QuestTrackAssistant assistant = this.GetAssistant<QuestTrackAssistant>(QuestNewController.EAssistantType.Track);
@@ -504,7 +504,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		return assistant.RequestTrackQuest(questId, bTrack, operate, reason, finishCallback);
 	}
 
-	// Token: 0x06014048 RID: 81992 RVA: 0x0050A544 File Offset: 0x00508744
+	// Token: 0x0601152A RID: 70954 RVA: 0x00519464 File Offset: 0x00517664
 	public void TryTrackAndOpenWorldMap(int questId)
 	{
 		QuestNewController.<>c__DisplayClass67_0 CS$<>8__locals1 = new QuestNewController.<>c__DisplayClass67_0();
@@ -517,28 +517,28 @@ public class QuestNewController : ControllerWithAssistantBase
 		CS$<>8__locals1.<TryTrackAndOpenWorldMap>g__OpenWorldMapView|0();
 	}
 
-	// Token: 0x06014049 RID: 81993 RVA: 0x0050A593 File Offset: 0x00508793
+	// Token: 0x0601152B RID: 70955 RVA: 0x005194B3 File Offset: 0x005176B3
 	public bool TryChangeTrackedQuest(int newQuestId)
 	{
 		QuestTrackAssistant assistant = QuestNewController.Instance.GetAssistant<QuestTrackAssistant>(QuestNewController.EAssistantType.Track);
 		return assistant != null && assistant.TryChangeTrackedQuest(newQuestId);
 	}
 
-	// Token: 0x0601404A RID: 81994 RVA: 0x0050A5AC File Offset: 0x005087AC
+	// Token: 0x0601152C RID: 70956 RVA: 0x005194CC File Offset: 0x005176CC
 	public bool TryChangeTrackedQuest2(int? newQuestId)
 	{
 		QuestTrackAssistant assistant = QuestNewController.Instance.GetAssistant<QuestTrackAssistant>(QuestNewController.EAssistantType.Track);
 		return assistant != null && assistant.TryChangeTrackedQuest2(newQuestId);
 	}
 
-	// Token: 0x0601404B RID: 81995 RVA: 0x0050A5C5 File Offset: 0x005087C5
+	// Token: 0x0601152D RID: 70957 RVA: 0x005194E5 File Offset: 0x005176E5
 	[NullableContext(1)]
 	private bool CanOpenView(EUiViewName viewName, object o)
 	{
 		return FunctionModel.Instance.IsOpen(10004);
 	}
 
-	// Token: 0x0601404C RID: 81996 RVA: 0x0050A5D8 File Offset: 0x005087D8
+	// Token: 0x0601152E RID: 70958 RVA: 0x005194F8 File Offset: 0x005176F8
 	private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 	{
 		global::Quest quest = QuestNewModel.Instance.GetQuest(questId);
@@ -563,7 +563,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		this.RedDotRequest(questId, EQuestRedDotOperate.Delete);
 	}
 
-	// Token: 0x0601404D RID: 81997 RVA: 0x0050A644 File Offset: 0x00508844
+	// Token: 0x0601152F RID: 70959 RVA: 0x00519564 File Offset: 0x00517764
 	private void OnQuestRedDotNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		QuestRedDotNotify questRedDotNotify = (QuestRedDotNotify)msg;
@@ -578,7 +578,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x0601404E RID: 81998 RVA: 0x0050A6B4 File Offset: 0x005088B4
+	// Token: 0x06011530 RID: 70960 RVA: 0x005195D4 File Offset: 0x005177D4
 	private void OnBtRangeFailWarningNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		BtRangeFailWarningNotify btRangeFailWarningNotify = (BtRangeFailWarningNotify)msg;
@@ -595,7 +595,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x0601404F RID: 81999 RVA: 0x0050A74C File Offset: 0x0050894C
+	// Token: 0x06011531 RID: 70961 RVA: 0x0051966C File Offset: 0x0051786C
 	private void OnQuestGiveUpNotify(IMessage __msg, Net.CallbackStatus status)
 	{
 		QuestGiveUpNotify questGiveUpNotify = (QuestGiveUpNotify)__msg;
@@ -608,13 +608,13 @@ public class QuestNewController : ControllerWithAssistantBase
 				QuestReadyForGiveUpResponse questReadyForGiveUpResponse = (QuestReadyForGiveUpResponse)msg;
 				if (questReadyForGiveUpResponse != null && questReadyForGiveUpResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(questReadyForGiveUpResponse.ErrorCode, 20397, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(questReadyForGiveUpResponse.ErrorCode, 19178, null, true, true);
 				}
 			}, 0);
 		}, "任务结束打断剧情");
 	}
 
-	// Token: 0x06014050 RID: 82000 RVA: 0x0050A79C File Offset: 0x0050899C
+	// Token: 0x06011532 RID: 70962 RVA: 0x005196BC File Offset: 0x005178BC
 	[NullableContext(1)]
 	private void OnPlotSequenceEnd(PlotResultInfo plotResultInfo)
 	{
@@ -632,7 +632,7 @@ public class QuestNewController : ControllerWithAssistantBase
 					RecallQuestReadyForGiveUpResponse recallQuestReadyForGiveUpResponse = (RecallQuestReadyForGiveUpResponse)msg;
 					if (recallQuestReadyForGiveUpResponse != null && recallQuestReadyForGiveUpResponse.ErrorId != Aki.Protocol.ErrorCode.Success)
 					{
-						ErrorCodeController.Instance.OpenErrorCodeTipView(recallQuestReadyForGiveUpResponse.ErrorId, 19174, null, true, true);
+						ErrorCodeController.Instance.OpenErrorCodeTipView(recallQuestReadyForGiveUpResponse.ErrorId, 21194, null, true, true);
 					}
 				}, 0);
 				return;
@@ -646,13 +646,13 @@ public class QuestNewController : ControllerWithAssistantBase
 				QuestReadyForGiveUpResponse questReadyForGiveUpResponse = (QuestReadyForGiveUpResponse)msg;
 				if (questReadyForGiveUpResponse != null && questReadyForGiveUpResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(questReadyForGiveUpResponse.ErrorCode, 20397, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(questReadyForGiveUpResponse.ErrorCode, 19178, null, true, true);
 				}
 			}, 0);
 		}
 	}
 
-	// Token: 0x06014051 RID: 82001 RVA: 0x0050A85C File Offset: 0x00508A5C
+	// Token: 0x06011533 RID: 70963 RVA: 0x0051977C File Offset: 0x0051797C
 	private void OnBtCancelRangeFailWarningNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		if (this.IsShowQuestRangeFailWarning)
@@ -661,7 +661,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x06014052 RID: 82002 RVA: 0x0050A86C File Offset: 0x00508A6C
+	// Token: 0x06011534 RID: 70964 RVA: 0x0051978C File Offset: 0x0051798C
 	public void HideCancelRangeFailWaringEffect()
 	{
 		this.IsHidingQuestRangeFailWarning = true;
@@ -671,7 +671,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		this.IsShowQuestRangeFailWarning = false;
 	}
 
-	// Token: 0x06014053 RID: 82003 RVA: 0x0050A898 File Offset: 0x00508A98
+	// Token: 0x06011535 RID: 70965 RVA: 0x005197B8 File Offset: 0x005179B8
 	public void RedDotRequest(int questId, EQuestRedDotOperate operate)
 	{
 		QuestRedDotRequest questRedDotRequest = QuestRedDotRequest.Create();
@@ -682,13 +682,13 @@ public class QuestNewController : ControllerWithAssistantBase
 			QuestRedDotResponse questRedDotResponse = (QuestRedDotResponse)msg;
 			if (questRedDotResponse != null && questRedDotResponse.ErrorId != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(questRedDotResponse.ErrorId, 18604, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(questRedDotResponse.ErrorId, 29563, null, true, true);
 			}
 			QuestNewModel.Instance.SetQuestRedDot(questId, operate == EQuestRedDotOperate.Add);
 		}, 0);
 	}
 
-	// Token: 0x06014054 RID: 82004 RVA: 0x0050A8F4 File Offset: 0x00508AF4
+	// Token: 0x06011536 RID: 70966 RVA: 0x00519814 File Offset: 0x00517A14
 	[NullableContext(1)]
 	public bool IsTrackPositionOutFailRange(global::Vector position)
 	{
@@ -706,7 +706,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		return processingFailedNode != null && !processingFailedNode.NeedRequiresSecondConfirmation && processingFailedNode.IsOutFailRange(position);
 	}
 
-	// Token: 0x06014055 RID: 82005 RVA: 0x0050A960 File Offset: 0x00508B60
+	// Token: 0x06011537 RID: 70967 RVA: 0x00519880 File Offset: 0x00517A80
 	private void OnWaitQuestConfirmResourceNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		WaitQuestConfirmResourceNotify waitQuestConfirmResourceNotify = (WaitQuestConfirmResourceNotify)msg;
@@ -723,19 +723,19 @@ public class QuestNewController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x06014056 RID: 82006 RVA: 0x0050A9CC File Offset: 0x00508BCC
+	// Token: 0x06011538 RID: 70968 RVA: 0x005198EC File Offset: 0x00517AEC
 	public void SetVideoResourceDownloadTriggerId(int questId)
 	{
 		this.VideoResourceDownloadTriggerId = new int?(questId);
 	}
 
-	// Token: 0x06014057 RID: 82007 RVA: 0x0050A9DA File Offset: 0x00508BDA
+	// Token: 0x06011539 RID: 70969 RVA: 0x005198FA File Offset: 0x00517AFA
 	public void SetIsReportDownloadNotEnoughSpace(bool result)
 	{
 		this.IsReportDownloadNotEnoughSpace = new bool?(result);
 	}
 
-	// Token: 0x06014058 RID: 82008 RVA: 0x0050A9E8 File Offset: 0x00508BE8
+	// Token: 0x0601153A RID: 70970 RVA: 0x00519908 File Offset: 0x00517B08
 	private void OnQuestVideoResourceDownloadFinish(EVideoResSizeType resType)
 	{
 		EPlayerGender playerGender = PlayerInfoModel.Instance.GetPlayerGender();
@@ -792,7 +792,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x06014059 RID: 82009 RVA: 0x0050AB74 File Offset: 0x00508D74
+	// Token: 0x0601153B RID: 70971 RVA: 0x00519A94 File Offset: 0x00517C94
 	[NullableContext(1)]
 	public void ConfirmQuestResourceRequest(int questId, Action callback = null)
 	{
@@ -805,7 +805,7 @@ public class QuestNewController : ControllerWithAssistantBase
 			{
 				if (confirmQuestResourceResponse.ErrorId != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(confirmQuestResourceResponse.ErrorId, 26295, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(confirmQuestResourceResponse.ErrorId, 24175, null, true, true);
 				}
 				QuestNewModel.Instance.RemoveLackResourceQuest(questId);
 				Action callback2 = callback;
@@ -818,7 +818,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}, 0);
 	}
 
-	// Token: 0x0601405A RID: 82010 RVA: 0x0050ABCC File Offset: 0x00508DCC
+	// Token: 0x0601153C RID: 70972 RVA: 0x00519AEC File Offset: 0x00517CEC
 	[NullableContext(1)]
 	public void RequestSetQuestFocusMode(int questId, Action<bool> callback = null)
 	{
@@ -838,7 +838,7 @@ public class QuestNewController : ControllerWithAssistantBase
 					}
 					else
 					{
-						ErrorCodeController.Instance.OpenErrorCodeTipView(setQuestFocusModeResponse.ErrorCode, 21189, null, true, true);
+						ErrorCodeController.Instance.OpenErrorCodeTipView(setQuestFocusModeResponse.ErrorCode, 22593, null, true, true);
 					}
 				}
 				Action<bool> callback2 = callback;
@@ -851,7 +851,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}, 0);
 	}
 
-	// Token: 0x0601405B RID: 82011 RVA: 0x0050AC10 File Offset: 0x00508E10
+	// Token: 0x0601153D RID: 70973 RVA: 0x00519B30 File Offset: 0x00517D30
 	[NullableContext(1)]
 	public void RequestCancelQuestFocusMode(int questId, Action callback)
 	{
@@ -864,7 +864,7 @@ public class QuestNewController : ControllerWithAssistantBase
 			{
 				if (cancelQuestFocusModeResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(cancelQuestFocusModeResponse.ErrorCode, 29321, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(cancelQuestFocusModeResponse.ErrorCode, 28253, null, true, true);
 				}
 				Action callback2 = callback;
 				if (callback2 == null)
@@ -876,7 +876,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}, 0);
 	}
 
-	// Token: 0x0601405C RID: 82012 RVA: 0x0050AC54 File Offset: 0x00508E54
+	// Token: 0x0601153E RID: 70974 RVA: 0x00519B74 File Offset: 0x00517D74
 	public void RequestSetFocusModeDeterCondition(bool deterCond)
 	{
 		SetFocusModeDeterCondRequest setFocusModeDeterCondRequest = SetFocusModeDeterCondRequest.Create();
@@ -886,12 +886,12 @@ public class QuestNewController : ControllerWithAssistantBase
 			SetFocusModeDeterCondResponse setFocusModeDeterCondResponse = (SetFocusModeDeterCondResponse)msg;
 			if (setFocusModeDeterCondResponse != null && setFocusModeDeterCondResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(setFocusModeDeterCondResponse.ErrorCode, 17260, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(setFocusModeDeterCondResponse.ErrorCode, 23033, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x0601405D RID: 82013 RVA: 0x0050ACA0 File Offset: 0x00508EA0
+	// Token: 0x0601153F RID: 70975 RVA: 0x00519BC0 File Offset: 0x00517DC0
 	[NullableContext(1)]
 	public void RequestAcceptFocusWaitQuest(int questId, Action callback)
 	{
@@ -904,7 +904,7 @@ public class QuestNewController : ControllerWithAssistantBase
 			{
 				if (acceptFocusWaitQuestResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(acceptFocusWaitQuestResponse.ErrorCode, 17260, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(acceptFocusWaitQuestResponse.ErrorCode, 23033, null, true, true);
 				}
 				QuestNewModel.Instance.RemovePendingAcceptQuestOnFocusMode(questId);
 				if (callback != null)
@@ -920,7 +920,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}, 0);
 	}
 
-	// Token: 0x0601405E RID: 82014 RVA: 0x0050ACF0 File Offset: 0x00508EF0
+	// Token: 0x06011540 RID: 70976 RVA: 0x00519C10 File Offset: 0x00517E10
 	private void OnStartSetQuestFocusNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		StartSetQuestFocusNotify startSetQuestFocusNotify = (StartSetQuestFocusNotify)msg;
@@ -939,7 +939,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}, 5000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601405F RID: 82015 RVA: 0x0050AD78 File Offset: 0x00508F78
+	// Token: 0x06011541 RID: 70977 RVA: 0x00519C98 File Offset: 0x00517E98
 	private void OnQuestFocusInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		QuestFocusInfoNotify notify = (QuestFocusInfoNotify)msg;
@@ -962,7 +962,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}, 2000f, null, null, true, 1f);
 	}
 
-	// Token: 0x06014060 RID: 82016 RVA: 0x0050AE00 File Offset: 0x00509000
+	// Token: 0x06011542 RID: 70978 RVA: 0x00519D20 File Offset: 0x00517F20
 	private void OnQuestLockInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		QuestLockInfoNotify questLockInfoNotify = (QuestLockInfoNotify)msg;
@@ -977,7 +977,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x06014061 RID: 82017 RVA: 0x0050AEA4 File Offset: 0x005090A4
+	// Token: 0x06011543 RID: 70979 RVA: 0x00519DC4 File Offset: 0x00517FC4
 	private void OnInteractQuestSuspendEntityNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		InteractQuestSuspendEntityNotify interactQuestSuspendEntityNotify = (InteractQuestSuspendEntityNotify)msg;
@@ -991,7 +991,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		GenericPromptController.Instance.ShowPromptByItsType<object>(EPromptSubViewType.FloatLinePrompt, null, null, new <>z__ReadOnlySingleElementList<object>(item), null, null, null, null, null, false, null);
 	}
 
-	// Token: 0x06014062 RID: 82018 RVA: 0x0050AF24 File Offset: 0x00509124
+	// Token: 0x06011544 RID: 70980 RVA: 0x00519E44 File Offset: 0x00518044
 	private void OnResetQuestFocusModeNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ResetQuestFocusModeReason reason = ((ResetQuestFocusModeNotify)msg).Reason;
@@ -1020,7 +1020,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		GenericPromptController.Instance.ShowPromptByItsType<object>(EPromptSubViewType.FloatLinePrompt, null, null, new <>z__ReadOnlySingleElementList<object>(item), null, null, null, null, null, false, null);
 	}
 
-	// Token: 0x06014063 RID: 82019 RVA: 0x0050AF98 File Offset: 0x00509198
+	// Token: 0x06011545 RID: 70981 RVA: 0x00519EB8 File Offset: 0x005180B8
 	[NullableContext(1)]
 	public static void HandleGiveUpNotify(int questId, long treeIncId, IReadOnlyList<long> flowIncIds, Action<int> sendReadyForGiveUpRequest, string reason)
 	{
@@ -1050,7 +1050,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		sendReadyForGiveUpRequest(questId);
 	}
 
-	// Token: 0x06014064 RID: 82020 RVA: 0x0050B060 File Offset: 0x00509260
+	// Token: 0x06011546 RID: 70982 RVA: 0x00519F80 File Offset: 0x00518180
 	[NullableContext(1)]
 	public static void HandleQuestListNotify(IReadOnlyList<QuestListItem> items)
 	{
@@ -1070,7 +1070,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x06014065 RID: 82021 RVA: 0x0050B0F8 File Offset: 0x005092F8
+	// Token: 0x06011547 RID: 70983 RVA: 0x0051A018 File Offset: 0x00518218
 	[NullableContext(1)]
 	public unsafe static void HandleQuestStateUpdate(QuestStateUpdateData data)
 	{
@@ -1135,7 +1135,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		onAfterUpdate();
 	}
 
-	// Token: 0x06014066 RID: 82022 RVA: 0x0050B2A8 File Offset: 0x005094A8
+	// Token: 0x06011548 RID: 70984 RVA: 0x0051A1C8 File Offset: 0x005183C8
 	[NullableContext(1)]
 	public static void HandleFinishListNotify(FinishListNotifyData data)
 	{
@@ -1152,7 +1152,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		tryChangeTrackedQuest();
 	}
 
-	// Token: 0x06014067 RID: 82023 RVA: 0x0050B320 File Offset: 0x00509520
+	// Token: 0x06011549 RID: 70985 RVA: 0x0051A240 File Offset: 0x00518440
 	public static void NotifyTraceQuestFromServer(int questId)
 	{
 		if (questId == 0)
@@ -1162,7 +1162,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		QuestNewModel.Instance.SetQuestTrackState(questId, true, ESetTrackReason.None);
 	}
 
-	// Token: 0x06014068 RID: 82024 RVA: 0x0050B334 File Offset: 0x00509534
+	// Token: 0x0601154A RID: 70986 RVA: 0x0051A254 File Offset: 0x00518454
 	public void RequestQuestNpcMoveOver(long creatureDataId)
 	{
 		if (RecallQuestModel.Instance.IsInRecallInstance())
@@ -1177,13 +1177,13 @@ public class QuestNewController : ControllerWithAssistantBase
 			QuestNpcMoveOverResponse questNpcMoveOverResponse = (QuestNpcMoveOverResponse)msg;
 			if (questNpcMoveOverResponse != null && questNpcMoveOverResponse.ErrorId != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(questNpcMoveOverResponse.ErrorId, 19722, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(questNpcMoveOverResponse.ErrorId, 21885, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x1700197E RID: 6526
-	// (get) Token: 0x06014069 RID: 82025 RVA: 0x0050B396 File Offset: 0x00509596
+	// Token: 0x170019B6 RID: 6582
+	// (get) Token: 0x0601154B RID: 70987 RVA: 0x0051A2B6 File Offset: 0x005184B6
 	[Nullable(1)]
 	public static QuestNewController Instance
 	{
@@ -1194,7 +1194,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x0601406A RID: 82026 RVA: 0x0050B39D File Offset: 0x0050959D
+	// Token: 0x0601154C RID: 70988 RVA: 0x0051A2BD File Offset: 0x005184BD
 	[NullableContext(1)]
 	public static QuestNewController GetOrCreateInstance()
 	{
@@ -1205,7 +1205,7 @@ public class QuestNewController : ControllerWithAssistantBase
 		return QuestNewController._Instance;
 	}
 
-	// Token: 0x0601406B RID: 82027 RVA: 0x0050B3B1 File Offset: 0x005095B1
+	// Token: 0x0601154D RID: 70989 RVA: 0x0051A2D1 File Offset: 0x005184D1
 	public static bool CreateInstance()
 	{
 		if (QuestNewController._Instance != null)
@@ -1216,44 +1216,44 @@ public class QuestNewController : ControllerWithAssistantBase
 		return true;
 	}
 
-	// Token: 0x0601406C RID: 82028 RVA: 0x0050B3C7 File Offset: 0x005095C7
+	// Token: 0x0601154E RID: 70990 RVA: 0x0051A2E7 File Offset: 0x005184E7
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601406D RID: 82029 RVA: 0x0050B3C9 File Offset: 0x005095C9
+	// Token: 0x0601154F RID: 70991 RVA: 0x0051A2E9 File Offset: 0x005184E9
 	public static void ResetStaticDefaultValue()
 	{
 		QuestNewController._Instance = null;
 	}
 
-	// Token: 0x0601406E RID: 82030 RVA: 0x0050B3D1 File Offset: 0x005095D1
+	// Token: 0x06011550 RID: 70992 RVA: 0x0051A2F1 File Offset: 0x005184F1
 	static QuestNewController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(QuestNewController.CreateStaticDefaultValue), new Action(QuestNewController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040096F6 RID: 38646
+	// Token: 0x0400984E RID: 38990
 	private readonly float ShowQuestRangeFailWarningTime = 300f;
 
-	// Token: 0x040096FA RID: 38650
+	// Token: 0x04009852 RID: 38994
 	[Nullable(1)]
 	private const string TIPS_NAME = "QuestRangeFailWarning";
 
-	// Token: 0x040096FB RID: 38651
+	// Token: 0x04009853 RID: 38995
 	private static QuestNewController _Instance;
 
-	// Token: 0x02008C87 RID: 35975
+	// Token: 0x02007E10 RID: 32272
 	[NullableContext(0)]
 	private enum EAssistantType
 	{
-		// Token: 0x0402D9E6 RID: 186854
+		// Token: 0x04028CFD RID: 167165
 		GuideLine,
-		// Token: 0x0402D9E7 RID: 186855
+		// Token: 0x04028CFE RID: 167166
 		Track,
-		// Token: 0x0402D9E8 RID: 186856
+		// Token: 0x04028CFF RID: 167167
 		GuideEffect,
-		// Token: 0x0402D9E9 RID: 186857
+		// Token: 0x04028D00 RID: 167168
 		DailyQuest
 	}
 }

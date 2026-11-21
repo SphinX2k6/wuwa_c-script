@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,42 +13,42 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x020011B7 RID: 4535
+// Token: 0x0200066B RID: 1643
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class BossRushController : ActivityControllerBase
 {
-	// Token: 0x06007861 RID: 30817 RVA: 0x001939CB File Offset: 0x00191BCB
+	// Token: 0x06004BF8 RID: 19448 RVA: 0x0019C597 File Offset: 0x0019A797
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06007862 RID: 30818 RVA: 0x001939CD File Offset: 0x00191BCD
+	// Token: 0x06004BF9 RID: 19449 RVA: 0x0019C599 File Offset: 0x0019A799
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityBossrush";
 	}
 
-	// Token: 0x06007863 RID: 30819 RVA: 0x001939D4 File Offset: 0x00191BD4
+	// Token: 0x06004BFA RID: 19450 RVA: 0x0019C5A0 File Offset: 0x0019A7A0
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new BossRushSubView();
 	}
 
-	// Token: 0x06007864 RID: 30820 RVA: 0x001939DB File Offset: 0x00191BDB
+	// Token: 0x06004BFB RID: 19451 RVA: 0x0019C5A7 File Offset: 0x0019A7A7
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return new BossRushData();
 	}
 
-	// Token: 0x06007865 RID: 30821 RVA: 0x001939E2 File Offset: 0x00191BE2
+	// Token: 0x06004BFC RID: 19452 RVA: 0x0019C5AE File Offset: 0x0019A7AE
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06007866 RID: 30822 RVA: 0x001939E8 File Offset: 0x00191BE8
+	// Token: 0x06004BFD RID: 19453 RVA: 0x0019C5B4 File Offset: 0x0019A7B4
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.BossRushResultNotify, new Action<IMessage, Net.CallbackStatus>(this.OnChallengeEndNotify));
@@ -59,7 +58,7 @@ public class BossRushController : ActivityControllerBase
 		Net.Instance.Register(ENotifyMessageId.BossRushSelectBuffNotify, new Action<IMessage, Net.CallbackStatus>(this.OnBossRushSelectBuffNotify));
 	}
 
-	// Token: 0x06007867 RID: 30823 RVA: 0x00193A84 File Offset: 0x00191C84
+	// Token: 0x06004BFE RID: 19454 RVA: 0x0019C650 File Offset: 0x0019A850
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.BossRushResultNotify);
@@ -69,21 +68,21 @@ public class BossRushController : ActivityControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.BossRushSelectBuffNotify);
 	}
 
-	// Token: 0x06007868 RID: 30824 RVA: 0x00193AE1 File Offset: 0x00191CE1
+	// Token: 0x06004BFF RID: 19455 RVA: 0x0019C6AD File Offset: 0x0019A8AD
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.LeaveInstanceDungeonConfirm, new Action(this.OnLeaveInstanceDungeonConfirm));
 		EventSystem.Instance.Add<Aki.Protocol.ErrorCode>(EEventName.EnterInstanceDungeonFail, new Action<Aki.Protocol.ErrorCode>(this.EnterInstanceDungeonFail));
 	}
 
-	// Token: 0x06007869 RID: 30825 RVA: 0x00193B1B File Offset: 0x00191D1B
+	// Token: 0x06004C00 RID: 19456 RVA: 0x0019C6E7 File Offset: 0x0019A8E7
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.LeaveInstanceDungeonConfirm, new Action(this.OnLeaveInstanceDungeonConfirm));
 		EventSystem.Instance.Remove(EEventName.EnterInstanceDungeonFail, new Action<Aki.Protocol.ErrorCode>(this.EnterInstanceDungeonFail));
 	}
 
-	// Token: 0x0600786A RID: 30826 RVA: 0x00193B58 File Offset: 0x00191D58
+	// Token: 0x06004C01 RID: 19457 RVA: 0x0019C724 File Offset: 0x0019A924
 	private void OnLeaveInstanceDungeonConfirm()
 	{
 		int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -94,7 +93,7 @@ public class BossRushController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600786B RID: 30827 RVA: 0x00193BA2 File Offset: 0x00191DA2
+	// Token: 0x06004C02 RID: 19458 RVA: 0x0019C76E File Offset: 0x0019A96E
 	private void EnterInstanceDungeonFail(Aki.Protocol.ErrorCode errorCode)
 	{
 		if (errorCode == Aki.Protocol.ErrorCode.BossRushActivityBuffSelectionEmpty)
@@ -107,7 +106,7 @@ public class BossRushController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600786C RID: 30828 RVA: 0x00193BD8 File Offset: 0x00191DD8
+	// Token: 0x06004C03 RID: 19459 RVA: 0x0019C7A4 File Offset: 0x0019A9A4
 	private void CheckIfNewBossRushOpen()
 	{
 		foreach (int id in BossRushModel.Instance.CurrentOpenBossRushActivityIds)
@@ -120,7 +119,7 @@ public class BossRushController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600786D RID: 30829 RVA: 0x00193C44 File Offset: 0x00191E44
+	// Token: 0x06004C04 RID: 19460 RVA: 0x0019C810 File Offset: 0x0019AA10
 	[NullableContext(2)]
 	private void OnBossRushLevelInfoNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -130,8 +129,13 @@ public class BossRushController : ActivityControllerBase
 		{
 			return;
 		}
-		bossRushData.PhraseLevelInfo(bossRushLevelInfoNotify.UnlockedBuffIndices.ToArray<int>(), bossRushLevelInfoNotify.BossRushLevelInfo.ToArray<BossRushLevelData>());
-		bossRushData.PhraseRewardInfo(bossRushLevelInfoNotify.BossRushScoreScoreRewardInfo.ToArray<BossRushScoreRewardData>());
+		int[] array = new int[bossRushLevelInfoNotify.UnlockedBuffIndices.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = bossRushLevelInfoNotify.UnlockedBuffIndices[i];
+		}
+		bossRushData.PhraseLevelInfo(array, bossRushLevelInfoNotify.BossRushLevelInfo);
+		bossRushData.PhraseRewardInfo(bossRushLevelInfoNotify.BossRushScoreScoreRewardInfo);
 		bossRushData.CheckIfNewBossRushOpen();
 		EventSystem.Instance.Emit(EEventName.BossRushDataUpdate);
 		if (UiManager.Instance.IsViewOpen(EUiViewName.ActivityRewardPopUpView))
@@ -141,7 +145,7 @@ public class BossRushController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.BossRefreshBossRushRewardRedDot, bossRushLevelInfoNotify.ActivityId);
 	}
 
-	// Token: 0x0600786E RID: 30830 RVA: 0x00193CF4 File Offset: 0x00191EF4
+	// Token: 0x06004C05 RID: 19461 RVA: 0x0019C8D8 File Offset: 0x0019AAD8
 	[NullableContext(2)]
 	private void OnBossRushSelectBuffNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -151,10 +155,15 @@ public class BossRushController : ActivityControllerBase
 		{
 			return;
 		}
-		bossRushData.SetInsSelectedBuffIdMap(bossRushSelectBuffNotify.InstId, bossRushSelectBuffNotify.SelectBuffIndices.ToArray<int>());
+		int[] array = new int[bossRushSelectBuffNotify.SelectBuffIndices.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = bossRushSelectBuffNotify.SelectBuffIndices[i];
+		}
+		bossRushData.SetInsSelectedBuffIdMap(bossRushSelectBuffNotify.InstId, array);
 	}
 
-	// Token: 0x0600786F RID: 30831 RVA: 0x00193D3C File Offset: 0x00191F3C
+	// Token: 0x06004C06 RID: 19462 RVA: 0x0019C944 File Offset: 0x0019AB44
 	public int GetBossRushSelectedBuffId(int instanceId)
 	{
 		foreach (ActivityBaseData activityBaseData in ActivityModel.Instance.GetAllActivityMap().Values)
@@ -172,7 +181,7 @@ public class BossRushController : ActivityControllerBase
 		return 0;
 	}
 
-	// Token: 0x06007870 RID: 30832 RVA: 0x00193DB8 File Offset: 0x00191FB8
+	// Token: 0x06004C07 RID: 19463 RVA: 0x0019C9C0 File Offset: 0x0019ABC0
 	[NullableContext(2)]
 	private void OnBossRushTaskUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -200,7 +209,7 @@ public class BossRushController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06007871 RID: 30833 RVA: 0x00193ED0 File Offset: 0x001920D0
+	// Token: 0x06004C08 RID: 19464 RVA: 0x0019CAD8 File Offset: 0x0019ACD8
 	[NullableContext(2)]
 	private void OnBossRushFailNotify(IMessage msg, Net.CallbackStatus _2)
 	{
@@ -222,7 +231,7 @@ public class BossRushController : ActivityControllerBase
 		ItemRewardController.Instance.Open<IExploreRewardInfo>(rewardData, null);
 	}
 
-	// Token: 0x06007872 RID: 30834 RVA: 0x00193F7C File Offset: 0x0019217C
+	// Token: 0x06004C09 RID: 19465 RVA: 0x0019CB84 File Offset: 0x0019AD84
 	[NullableContext(2)]
 	private unsafe void OnChallengeEndNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -291,7 +300,7 @@ public class BossRushController : ActivityControllerBase
 		TowerController.Instance.ClearAllHatredInTower();
 	}
 
-	// Token: 0x06007873 RID: 30835 RVA: 0x001941A4 File Offset: 0x001923A4
+	// Token: 0x06004C0A RID: 19466 RVA: 0x0019CDAC File Offset: 0x0019AFAC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -344,7 +353,7 @@ public class BossRushController : ActivityControllerBase
 		return ItemRewardModel.Instance.RefreshExploreRewardDataFromConfig(configId, isSuccess, null, null, null, list, null, null, onCloseCallback, null, null, null, null, null, null, null);
 	}
 
-	// Token: 0x06007874 RID: 30836 RVA: 0x001942DC File Offset: 0x001924DC
+	// Token: 0x06004C0B RID: 19467 RVA: 0x0019CEE4 File Offset: 0x0019B0E4
 	public void RequestStartBossRushByTeamData(BossRushTeamInfo data)
 	{
 		List<BuffSelection> list = new List<BuffSelection>();
@@ -373,7 +382,7 @@ public class BossRushController : ActivityControllerBase
 		BossRushController.Instance.RequestStartBossRush(activityId, data.GetCurrentSelectLevel().GetInstanceDungeonId(), list.ToArray(), list2.ToArray(), list3.ToArray());
 	}
 
-	// Token: 0x06007875 RID: 30837 RVA: 0x00194424 File Offset: 0x00192624
+	// Token: 0x06004C0C RID: 19468 RVA: 0x0019D02C File Offset: 0x0019B22C
 	public void RequestBossRushTaskReward(int activityId)
 	{
 		BossRushBatchClaimRewardRequest bossRushBatchClaimRewardRequest = BossRushBatchClaimRewardRequest.Create();
@@ -389,7 +398,7 @@ public class BossRushController : ActivityControllerBase
 			BossRushBatchClaimRewardResponse bossRushBatchClaimRewardResponse = (BossRushBatchClaimRewardResponse)msg;
 			if (bossRushBatchClaimRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(bossRushBatchClaimRewardResponse.ErrorCode, 23711, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(bossRushBatchClaimRewardResponse.ErrorCode, 26097, null, true, true);
 			}
 			EventSystem.Instance.Emit<int>(EEventName.BossRefreshBossRushRewardRedDot, activityId);
 			EventSystem.Instance.Emit(EEventName.BossRefreshBossRushReward);
@@ -397,7 +406,7 @@ public class BossRushController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06007876 RID: 30838 RVA: 0x00194498 File Offset: 0x00192698
+	// Token: 0x06004C0D RID: 19469 RVA: 0x0019D0A0 File Offset: 0x0019B2A0
 	public void RequestStartBossRush(int id, int instanceDungeonId, BuffSelection[] buff, int[] scoreBuff, int[] role)
 	{
 		if (this.LastRequestBossRushTime != 0f && Time.Instance.Now - (double)this.LastRequestBossRushTime <= 1000.0)
@@ -440,10 +449,10 @@ public class BossRushController : ActivityControllerBase
 		bossRushCtx.BuffSelections.AddRange(list);
 		bossRushCtx.ScoreBuff.AddRange(scoreBuff);
 		InstanceDungeonModel.Instance.InstanceEnterContentText.BossRushCtx = bossRushCtx;
-		InstanceDungeonController.Instance.PrewarTeamFightRequest(instanceDungeonId, role.ToList<int>(), 0, 0, null, null);
+		InstanceDungeonController.Instance.PrewarTeamFightRequest(instanceDungeonId, new List<int>(role), 0, 0, null, null);
 	}
 
-	// Token: 0x06007877 RID: 30839 RVA: 0x0019465C File Offset: 0x0019285C
+	// Token: 0x06004C0E RID: 19470 RVA: 0x0019D264 File Offset: 0x0019B464
 	public void RequestSettlement()
 	{
 		BossRushSettlementRequest message = BossRushSettlementRequest.Create();
@@ -452,12 +461,12 @@ public class BossRushController : ActivityControllerBase
 			BossRushSettlementResponse bossRushSettlementResponse = (BossRushSettlementResponse)msg;
 			if (bossRushSettlementResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(bossRushSettlementResponse.ErrorCode, 15915, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(bossRushSettlementResponse.ErrorCode, 25837, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x06007878 RID: 30840 RVA: 0x001946A0 File Offset: 0x001928A0
+	// Token: 0x06004C0F RID: 19471 RVA: 0x0019D2A8 File Offset: 0x0019B4A8
 	public void RequestGetBossRushReward(int activityId, int rewardId, BossRushRewardType type)
 	{
 		BossRushClaimRewardRequest bossRushClaimRewardRequest = BossRushClaimRewardRequest.Create();
@@ -469,7 +478,7 @@ public class BossRushController : ActivityControllerBase
 			BossRushClaimRewardResponse bossRushClaimRewardResponse = (BossRushClaimRewardResponse)msg;
 			if (bossRushClaimRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(bossRushClaimRewardResponse.ErrorCode, 20167, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(bossRushClaimRewardResponse.ErrorCode, 23469, null, true, true);
 			}
 			EventSystem.Instance.Emit<int>(EEventName.BossRefreshBossRushRewardRedDot, activityId);
 			EventSystem.Instance.Emit(EEventName.BossRefreshBossRushReward);
@@ -477,7 +486,7 @@ public class BossRushController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06007879 RID: 30841 RVA: 0x001946F8 File Offset: 0x001928F8
+	// Token: 0x06004C10 RID: 19472 RVA: 0x0019D300 File Offset: 0x0019B500
 	public void RequestGetBossRushLevelReward(int activityId, int configId, int levelId, int index)
 	{
 		BossRushLevelScoreRewardRequest bossRushLevelScoreRewardRequest = BossRushLevelScoreRewardRequest.Create();
@@ -488,7 +497,7 @@ public class BossRushController : ActivityControllerBase
 			BossRushLevelScoreRewardResponse bossRushLevelScoreRewardResponse = (BossRushLevelScoreRewardResponse)msg;
 			if (bossRushLevelScoreRewardResponse.Error != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(bossRushLevelScoreRewardResponse.Error, 20167, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(bossRushLevelScoreRewardResponse.Error, 23469, null, true, true);
 			}
 			BossRushData bossRushData = ActivityModel.Instance.GetActivityById(activityId) as BossRushData;
 			if (bossRushData == null)
@@ -502,7 +511,7 @@ public class BossRushController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600787A RID: 30842 RVA: 0x00194758 File Offset: 0x00192958
+	// Token: 0x06004C11 RID: 19473 RVA: 0x0019D360 File Offset: 0x0019B560
 	[NullableContext(0)]
 	public UniTask<bool> OpenDefaultBossRushView()
 	{
@@ -513,7 +522,7 @@ public class BossRushController : ActivityControllerBase
 		return <OpenDefaultBossRushView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600787B RID: 30843 RVA: 0x00194794 File Offset: 0x00192994
+	// Token: 0x06004C12 RID: 19474 RVA: 0x0019D39C File Offset: 0x0019B59C
 	[NullableContext(0)]
 	public UniTask<bool> OpenBossRushView(int activityId)
 	{
@@ -525,7 +534,7 @@ public class BossRushController : ActivityControllerBase
 		return <OpenBossRushView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600787C RID: 30844 RVA: 0x001947D8 File Offset: 0x001929D8
+	// Token: 0x06004C13 RID: 19475 RVA: 0x0019D3E0 File Offset: 0x0019B5E0
 	[NullableContext(0)]
 	public UniTask<bool> RefreshBossRushBuffInGame()
 	{
@@ -536,7 +545,7 @@ public class BossRushController : ActivityControllerBase
 		return <RefreshBossRushBuffInGame>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600787D RID: 30845 RVA: 0x00194814 File Offset: 0x00192A14
+	// Token: 0x06004C14 RID: 19476 RVA: 0x0019D41C File Offset: 0x0019B61C
 	[NullableContext(0)]
 	public UniTask<bool> RequestBossRushChooseBuffInGame(int index)
 	{
@@ -548,8 +557,8 @@ public class BossRushController : ActivityControllerBase
 		return <RequestBossRushChooseBuffInGame>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x17000A4C RID: 2636
-	// (get) Token: 0x0600787E RID: 30846 RVA: 0x00194857 File Offset: 0x00192A57
+	// Token: 0x17000A6C RID: 2668
+	// (get) Token: 0x06004C15 RID: 19477 RVA: 0x0019D45F File Offset: 0x0019B65F
 	public static BossRushController Instance
 	{
 		get
@@ -558,7 +567,7 @@ public class BossRushController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600787F RID: 30847 RVA: 0x0019485E File Offset: 0x00192A5E
+	// Token: 0x06004C16 RID: 19478 RVA: 0x0019D466 File Offset: 0x0019B666
 	public static BossRushController GetOrCreateInstance()
 	{
 		if (BossRushController._Instance == null)
@@ -568,7 +577,7 @@ public class BossRushController : ActivityControllerBase
 		return BossRushController._Instance;
 	}
 
-	// Token: 0x06007880 RID: 30848 RVA: 0x00194872 File Offset: 0x00192A72
+	// Token: 0x06004C17 RID: 19479 RVA: 0x0019D47A File Offset: 0x0019B67A
 	public static bool CreateInstance()
 	{
 		if (BossRushController._Instance != null)
@@ -579,30 +588,30 @@ public class BossRushController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06007881 RID: 30849 RVA: 0x00194888 File Offset: 0x00192A88
+	// Token: 0x06004C18 RID: 19480 RVA: 0x0019D490 File Offset: 0x0019B690
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06007882 RID: 30850 RVA: 0x0019488A File Offset: 0x00192A8A
+	// Token: 0x06004C19 RID: 19481 RVA: 0x0019D492 File Offset: 0x0019B692
 	public static void ResetStaticDefaultValue()
 	{
 		BossRushController._Instance = null;
 	}
 
-	// Token: 0x06007883 RID: 30851 RVA: 0x00194892 File Offset: 0x00192A92
+	// Token: 0x06004C1A RID: 19482 RVA: 0x0019D49A File Offset: 0x0019B69A
 	static BossRushController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BossRushController.CreateStaticDefaultValue), new Action(BossRushController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003763 RID: 14179
+	// Token: 0x040037FC RID: 14332
 	private const int SENDCD = 1000;
 
-	// Token: 0x04003764 RID: 14180
+	// Token: 0x040037FD RID: 14333
 	private float LastRequestBossRushTime;
 
-	// Token: 0x04003765 RID: 14181
+	// Token: 0x040037FE RID: 14334
 	[Nullable(2)]
 	private static BossRushController _Instance;
 }

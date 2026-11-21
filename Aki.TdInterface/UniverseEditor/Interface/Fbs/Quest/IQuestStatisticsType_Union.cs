@@ -2,32 +2,32 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004058 RID: 16472
+	// Token: 0x02004499 RID: 17561
 	public enum IQuestStatisticsType_Union : byte
 	{
-		// Token: 0x0400BBA5 RID: 48037
+		// Token: 0x0400C58C RID: 50572
 		NONE,
-		// Token: 0x0400BBA6 RID: 48038
+		// Token: 0x0400C58D RID: 50573
 		IQuestStatisticsType,
-		// Token: 0x0400BBA7 RID: 48039
+		// Token: 0x0400C58E RID: 50574
 		IQuestStatisticsCollect,
-		// Token: 0x0400BBA8 RID: 48040
+		// Token: 0x0400C58F RID: 50575
 		IQuestStatisticsUseSkill,
-		// Token: 0x0400BBA9 RID: 48041
+		// Token: 0x0400C590 RID: 50576
 		IQuestStatisticsUseSkillNew,
-		// Token: 0x0400BBAA RID: 48042
+		// Token: 0x0400C591 RID: 50577
 		IQuestStatisticsPlayerTriggerMotion,
-		// Token: 0x0400BBAB RID: 48043
+		// Token: 0x0400C592 RID: 50578
 		IQuestStaticTimer,
-		// Token: 0x0400BBAC RID: 48044
+		// Token: 0x0400C593 RID: 50579
 		IQuestMonsterPoint,
-		// Token: 0x0400BBAD RID: 48045
+		// Token: 0x0400C594 RID: 50580
 		IQuestMonsterRemainingHealth,
-		// Token: 0x0400BBAE RID: 48046
+		// Token: 0x0400C595 RID: 50581
 		IQuestMonsterHealthScore,
-		// Token: 0x0400BBAF RID: 48047
+		// Token: 0x0400C596 RID: 50582
 		IQuestPlayerHitStatistics,
-		// Token: 0x0400BBB0 RID: 48048
+		// Token: 0x0400C597 RID: 50583
 		IQuestMechaTrackScore
 	}
 }

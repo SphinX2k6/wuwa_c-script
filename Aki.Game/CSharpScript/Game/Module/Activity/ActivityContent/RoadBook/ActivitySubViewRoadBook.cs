@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061CB RID: 25035
+	// Token: 0x02005149 RID: 20809
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivitySubViewRoadBook : ActivitySubViewBase
 	{
-		// Token: 0x17009229 RID: 37417
-		// (get) Token: 0x0603F3B5 RID: 258997 RVA: 0x00F471B6 File Offset: 0x00F453B6
+		// Token: 0x1700658B RID: 25995
+		// (get) Token: 0x06034076 RID: 213110 RVA: 0x00E8E10E File Offset: 0x00E8C30E
 		protected new ActivityRoadBookData ActivityBaseData
 		{
 			get
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F3B6 RID: 258998 RVA: 0x00F471C4 File Offset: 0x00F453C4
+		// Token: 0x06034077 RID: 213111 RVA: 0x00E8E11C File Offset: 0x00E8C31C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F3B7 RID: 258999 RVA: 0x00F47234 File Offset: 0x00F45434
+		// Token: 0x06034078 RID: 213112 RVA: 0x00E8E18C File Offset: 0x00E8C38C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivitySubViewRoadBook.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -46,14 +46,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F3B8 RID: 259000 RVA: 0x00F47277 File Offset: 0x00F45477
+		// Token: 0x06034079 RID: 213113 RVA: 0x00E8E1CF File Offset: 0x00E8C3CF
 		protected override void OnRefreshView()
 		{
 			this.RefreshExpComponent();
 			this.RefreshButton();
 		}
 
-		// Token: 0x0603F3B9 RID: 259001 RVA: 0x00F47285 File Offset: 0x00F45485
+		// Token: 0x0603407A RID: 213114 RVA: 0x00E8E1DD File Offset: 0x00E8C3DD
 		private void OnBtnClick(ActivityBaseData _)
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -62,23 +62,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			});
 		}
 
-		// Token: 0x0603F3BA RID: 259002 RVA: 0x00F472A4 File Offset: 0x00F454A4
+		// Token: 0x0603407B RID: 213115 RVA: 0x00E8E1FC File Offset: 0x00E8C3FC
 		private void RefreshExpComponent()
 		{
 			this.ExpComponent.SetProgress(this.ActivityBaseData.GetCurrentExp(), this.ActivityBaseData.GetCurrentTargetExp(), this.ActivityBaseData.TravelLevel == this.ActivityBaseData.MaxTravelLevel);
 			this.ExpComponent.SetLevel(this.ActivityBaseData.TravelLevel);
 		}
 
-		// Token: 0x0603F3BB RID: 259003 RVA: 0x00F47300 File Offset: 0x00F45500
+		// Token: 0x0603407C RID: 213116 RVA: 0x00E8E258 File Offset: 0x00E8C458
 		private void RefreshButton()
 		{
 			this.GeneralActivityInfo.SetFunctionRedDotVisible(this.ActivityBaseData.RedPointShowState);
 		}
 
-		// Token: 0x04020F45 RID: 134981
+		// Token: 0x0401B874 RID: 112756
 		protected ActivitySubViewGeneralInfo GeneralActivityInfo;
 
-		// Token: 0x04020F46 RID: 134982
+		// Token: 0x0401B875 RID: 112757
 		protected RoadBookExpComponent ExpComponent;
 	}
 }

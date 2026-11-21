@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002307 RID: 8967
+	// Token: 0x02002576 RID: 9590
 	public static class EDoInteractExtensions
 	{
-		// Token: 0x0600C41E RID: 50206 RVA: 0x001CA280 File Offset: 0x001C8480
+		// Token: 0x0600CFED RID: 53229 RVA: 0x001E2148 File Offset: 0x001E0348
 		public static string ToEnumString(this EDoInteract value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C41F RID: 50207 RVA: 0x001CA2C8 File Offset: 0x001C84C8
+		// Token: 0x0600CFEE RID: 53230 RVA: 0x001E2190 File Offset: 0x001E0390
 		public static EDoInteract FromString(string name)
 		{
 			EDoInteract result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C420 RID: 50208 RVA: 0x001CA2F4 File Offset: 0x001C84F4
+		// Token: 0x0600CFEF RID: 53231 RVA: 0x001E21BC File Offset: 0x001E03BC
 		public static bool TryFromString(string name, out EDoInteract value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C421 RID: 50209 RVA: 0x001CA34A File Offset: 0x001C854A
+		// Token: 0x0600CFF0 RID: 53232 RVA: 0x001E2212 File Offset: 0x001E0412
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C422 RID: 50210 RVA: 0x001CA36A File Offset: 0x001C856A
+		// Token: 0x0600CFF1 RID: 53233 RVA: 0x001E2232 File Offset: 0x001E0432
 		public static EDoInteract[] GetValues()
 		{
 			return new EDoInteract[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C423 RID: 50211 RVA: 0x001CA37A File Offset: 0x001C857A
+		// Token: 0x0600CFF2 RID: 53234 RVA: 0x001E2242 File Offset: 0x001E0442
 		public static string[] GetNames()
 		{
 			return new string[]

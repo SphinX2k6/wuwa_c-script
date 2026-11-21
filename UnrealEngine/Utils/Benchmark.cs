@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine.Utils
 {
-	// Token: 0x02002AF1 RID: 10993
+	// Token: 0x020008A0 RID: 2208
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Benchmark : IDisposable
 	{
-		// Token: 0x06028478 RID: 164984 RVA: 0x003D47F6 File Offset: 0x003D29F6
+		// Token: 0x0600BE31 RID: 48689 RVA: 0x0012FB46 File Offset: 0x0012DD46
 		public Benchmark(string InName)
 		{
 			this.Name = InName;
 			this.Stopwatch = Stopwatch.StartNew();
 		}
 
-		// Token: 0x06028479 RID: 164985 RVA: 0x003D4810 File Offset: 0x003D2A10
+		// Token: 0x0600BE32 RID: 48690 RVA: 0x0012FB60 File Offset: 0x0012DD60
 		public void Dispose()
 		{
 			this.Stopwatch.Stop();
@@ -29,10 +29,10 @@ namespace UnrealEngine.Utils
 			UnrealLogger.Info(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x040162A0 RID: 90784
+		// Token: 0x040056B7 RID: 22199
 		private readonly string Name;
 
-		// Token: 0x040162A1 RID: 90785
+		// Token: 0x040056B8 RID: 22200
 		private readonly Stopwatch Stopwatch;
 	}
 }

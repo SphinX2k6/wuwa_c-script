@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004F3 RID: 1267
+	// Token: 0x02000554 RID: 1364
 	public class IMeshAnimalModel_SetValue
 	{
-		// Token: 0x040012E1 RID: 4833
+		// Token: 0x04001441 RID: 5185
 		public EAnimalModelType Type;
 
-		// Token: 0x040012E2 RID: 4834
-		[Nullable(1)]
+		// Token: 0x04001442 RID: 5186
 		public string Mesh;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023DF RID: 9183
+	// Token: 0x02002676 RID: 9846
 	public static class EPreprocessOperationExtensions
 	{
-		// Token: 0x0600C7EA RID: 51178 RVA: 0x001D440C File Offset: 0x001D260C
+		// Token: 0x0600D46D RID: 54381 RVA: 0x001EDBB8 File Offset: 0x001EBDB8
 		public static string ToEnumString(this EPreprocessOperation value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C7EB RID: 51179 RVA: 0x001D4434 File Offset: 0x001D2634
+		// Token: 0x0600D46E RID: 54382 RVA: 0x001EDBE0 File Offset: 0x001EBDE0
 		public static EPreprocessOperation FromString(string name)
 		{
 			EPreprocessOperation result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C7EC RID: 51180 RVA: 0x001D445D File Offset: 0x001D265D
+		// Token: 0x0600D46F RID: 54383 RVA: 0x001EDC09 File Offset: 0x001EBE09
 		public static bool TryFromString(string name, out EPreprocessOperation value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C7ED RID: 51181 RVA: 0x001D4482 File Offset: 0x001D2682
+		// Token: 0x0600D470 RID: 54384 RVA: 0x001EDC2E File Offset: 0x001EBE2E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C7EE RID: 51182 RVA: 0x001D4492 File Offset: 0x001D2692
+		// Token: 0x0600D471 RID: 54385 RVA: 0x001EDC3E File Offset: 0x001EBE3E
 		public static EPreprocessOperation[] GetValues()
 		{
 			return new EPreprocessOperation[1];
 		}
 
-		// Token: 0x0600C7EF RID: 51183 RVA: 0x001D449A File Offset: 0x001D269A
+		// Token: 0x0600D472 RID: 54386 RVA: 0x001EDC46 File Offset: 0x001EBE46
 		public static string[] GetNames()
 		{
 			return new string[]

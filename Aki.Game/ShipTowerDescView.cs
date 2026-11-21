@@ -9,19 +9,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029AB RID: 10667
+// Token: 0x02001F26 RID: 7974
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerDescView : UiViewBase
 {
-	// Token: 0x060161D3 RID: 90579 RVA: 0x00597769 File Offset: 0x00595969
+	// Token: 0x06013BD9 RID: 80857 RVA: 0x005C2729 File Offset: 0x005C0929
 	public ShipTowerDescView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x17001D9C RID: 7580
-	// (get) Token: 0x060161D4 RID: 90580 RVA: 0x00597772 File Offset: 0x00595972
-	// (set) Token: 0x060161D5 RID: 90581 RVA: 0x0059777E File Offset: 0x0059597E
+	// Token: 0x17001DF5 RID: 7669
+	// (get) Token: 0x06013BDA RID: 80858 RVA: 0x005C2732 File Offset: 0x005C0932
+	// (set) Token: 0x06013BDB RID: 80859 RVA: 0x005C273E File Offset: 0x005C093E
 	private bool IsShowTeamPanel
 	{
 		get
@@ -34,7 +34,7 @@ public class ShipTowerDescView : UiViewBase
 		}
 	}
 
-	// Token: 0x060161D6 RID: 90582 RVA: 0x0059778C File Offset: 0x0059598C
+	// Token: 0x06013BDC RID: 80860 RVA: 0x005C274C File Offset: 0x005C094C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -65,7 +65,7 @@ public class ShipTowerDescView : UiViewBase
 		};
 	}
 
-	// Token: 0x060161D7 RID: 90583 RVA: 0x0059797C File Offset: 0x00595B7C
+	// Token: 0x06013BDD RID: 80861 RVA: 0x005C293C File Offset: 0x005C0B3C
 	private void InitDataParam()
 	{
 		ShipTowerDescViewParams shipTowerDescViewParams = this.OpenParam as ShipTowerDescViewParams;
@@ -81,7 +81,7 @@ public class ShipTowerDescView : UiViewBase
 		this.IsShowTeamPanel = false;
 	}
 
-	// Token: 0x060161D8 RID: 90584 RVA: 0x005979FC File Offset: 0x00595BFC
+	// Token: 0x06013BDE RID: 80862 RVA: 0x005C29BC File Offset: 0x005C0BBC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerDescView.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -92,7 +92,7 @@ public class ShipTowerDescView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060161D9 RID: 90585 RVA: 0x00597A40 File Offset: 0x00595C40
+	// Token: 0x06013BDF RID: 80863 RVA: 0x005C2A00 File Offset: 0x005C0C00
 	protected override void OnStart()
 	{
 		this.CheckInitDataParam();
@@ -106,7 +106,7 @@ public class ShipTowerDescView : UiViewBase
 		}
 	}
 
-	// Token: 0x060161DA RID: 90586 RVA: 0x00597AF4 File Offset: 0x00595CF4
+	// Token: 0x06013BE0 RID: 80864 RVA: 0x005C2AB4 File Offset: 0x005C0CB4
 	private void CheckInitDataParam()
 	{
 		ShipTowerDescViewParams shipTowerDescViewParams = this.OpenParam as ShipTowerDescViewParams;
@@ -119,7 +119,7 @@ public class ShipTowerDescView : UiViewBase
 		}
 	}
 
-	// Token: 0x060161DB RID: 90587 RVA: 0x00597B48 File Offset: 0x00595D48
+	// Token: 0x06013BE1 RID: 80865 RVA: 0x005C2B08 File Offset: 0x005C0D08
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.ShipTowerStageUpdate, new Action<int>(this.CheckUpdateStageData));
@@ -129,7 +129,7 @@ public class ShipTowerDescView : UiViewBase
 		EventSystem.Instance.Add<int>(EEventName.OnRoleSkillBranchInGamePlayChanged, new Action<int>(this.OnRoleSkillBranchChanged));
 	}
 
-	// Token: 0x060161DC RID: 90588 RVA: 0x00597BE4 File Offset: 0x00595DE4
+	// Token: 0x06013BE2 RID: 80866 RVA: 0x005C2BA4 File Offset: 0x005C0DA4
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ShipTowerStageUpdate, new Action<int>(this.CheckUpdateStageData));
@@ -139,7 +139,7 @@ public class ShipTowerDescView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnRoleSkillBranchInGamePlayChanged, new Action<int>(this.OnRoleSkillBranchChanged));
 	}
 
-	// Token: 0x060161DD RID: 90589 RVA: 0x00597C80 File Offset: 0x00595E80
+	// Token: 0x06013BE3 RID: 80867 RVA: 0x005C2C40 File Offset: 0x005C0E40
 	protected override void OnBeforeShow()
 	{
 		if (this.RoleDetailMainRoleId != null)
@@ -165,7 +165,7 @@ public class ShipTowerDescView : UiViewBase
 		}
 	}
 
-	// Token: 0x060161DE RID: 90590 RVA: 0x00597D13 File Offset: 0x00595F13
+	// Token: 0x06013BE4 RID: 80868 RVA: 0x005C2CD3 File Offset: 0x005C0ED3
 	protected override void OnBeforeDestroy()
 	{
 		if (ShipTowerModel.Instance.ChallengeStageData != this.StageData)
@@ -179,7 +179,7 @@ public class ShipTowerDescView : UiViewBase
 		}
 	}
 
-	// Token: 0x060161DF RID: 90591 RVA: 0x00597D38 File Offset: 0x00595F38
+	// Token: 0x06013BE5 RID: 80869 RVA: 0x005C2CF8 File Offset: 0x005C0EF8
 	private void UpdateData()
 	{
 		this.UpdateChallengeType();
@@ -199,19 +199,19 @@ public class ShipTowerDescView : UiViewBase
 		this.UpdateSkillBranchBtn();
 	}
 
-	// Token: 0x060161E0 RID: 90592 RVA: 0x00597D88 File Offset: 0x00595F88
+	// Token: 0x06013BE6 RID: 80870 RVA: 0x005C2D48 File Offset: 0x005C0F48
 	private void UpdateChallengeType()
 	{
 		this.ChallengeBtnType = (this.StageData.CanReset() ? EShipTowerDescBtnType.AgainChallenge : EShipTowerDescBtnType.StartChallenge);
 	}
 
-	// Token: 0x060161E1 RID: 90593 RVA: 0x00597DAE File Offset: 0x00595FAE
+	// Token: 0x06013BE7 RID: 80871 RVA: 0x005C2D6E File Offset: 0x005C0F6E
 	private void OnBtnMaskClick()
 	{
 		this.ShowLeftPanel();
 	}
 
-	// Token: 0x060161E2 RID: 90594 RVA: 0x00597DB6 File Offset: 0x00595FB6
+	// Token: 0x06013BE8 RID: 80872 RVA: 0x005C2D76 File Offset: 0x005C0F76
 	private void OnBtnResetClick()
 	{
 		ShipTowerModel.Instance.OpenViewReset(new ShipTowerResetViewParams
@@ -220,13 +220,13 @@ public class ShipTowerDescView : UiViewBase
 		});
 	}
 
-	// Token: 0x060161E3 RID: 90595 RVA: 0x00597DD3 File Offset: 0x00595FD3
+	// Token: 0x06013BE9 RID: 80873 RVA: 0x005C2D93 File Offset: 0x005C0F93
 	private void OnBtnChallengeClick()
 	{
 		this.StageData.StartChallenge();
 	}
 
-	// Token: 0x060161E4 RID: 90596 RVA: 0x00597DE4 File Offset: 0x00595FE4
+	// Token: 0x06013BEA RID: 80874 RVA: 0x005C2DA4 File Offset: 0x005C0FA4
 	private void OnBtnRoleDetailClick()
 	{
 		ShipTowerTeamPanel teamPanel = this.TeamPanel;
@@ -258,19 +258,19 @@ public class ShipTowerDescView : UiViewBase
 		});
 	}
 
-	// Token: 0x060161E5 RID: 90597 RVA: 0x00597EAC File Offset: 0x005960AC
+	// Token: 0x06013BEB RID: 80875 RVA: 0x005C2E6C File Offset: 0x005C106C
 	private void OnBtnAgainChallengeClick()
 	{
 		this.StageData.StartChallenge();
 	}
 
-	// Token: 0x060161E6 RID: 90598 RVA: 0x00597EBA File Offset: 0x005960BA
+	// Token: 0x06013BEC RID: 80876 RVA: 0x005C2E7A File Offset: 0x005C107A
 	private void OnBtnTeamRecommendClick()
 	{
 		this.StageData.OpenViewTeamRecommend();
 	}
 
-	// Token: 0x060161E7 RID: 90599 RVA: 0x00597EC8 File Offset: 0x005960C8
+	// Token: 0x06013BED RID: 80877 RVA: 0x005C2E88 File Offset: 0x005C1088
 	private void OnExchangeTeamClick()
 	{
 		this.StageData.ExchangeTeamData();
@@ -298,7 +298,7 @@ public class ShipTowerDescView : UiViewBase
 		LogReportController.Instance.LogReport(shipTowerSwitch);
 	}
 
-	// Token: 0x060161E8 RID: 90600 RVA: 0x00597F44 File Offset: 0x00596144
+	// Token: 0x06013BEE RID: 80878 RVA: 0x005C2F04 File Offset: 0x005C1104
 	private void ShowTeamPanel()
 	{
 		if (!this.IsShowTeamPanel)
@@ -321,7 +321,7 @@ public class ShipTowerDescView : UiViewBase
 		this.SetBtnMaskActive(true);
 	}
 
-	// Token: 0x060161E9 RID: 90601 RVA: 0x00597FC0 File Offset: 0x005961C0
+	// Token: 0x06013BEF RID: 80879 RVA: 0x005C2F80 File Offset: 0x005C1180
 	private void UpdateRoleDetailBtn()
 	{
 		ShipTowerTeamPanel teamPanel = this.TeamPanel;
@@ -329,7 +329,7 @@ public class ShipTowerDescView : UiViewBase
 		this.UpdateBtnInfo(this.BtnA, EShipTowerDescBtnType.RoleDetail, list != null && list.Count > 0);
 	}
 
-	// Token: 0x060161EA RID: 90602 RVA: 0x00597FFC File Offset: 0x005961FC
+	// Token: 0x06013BF0 RID: 80880 RVA: 0x005C2FBC File Offset: 0x005C11BC
 	private void ShowLeftPanel()
 	{
 		this.IsShowTeamPanel = false;
@@ -354,7 +354,7 @@ public class ShipTowerDescView : UiViewBase
 		teamEmptyItem.SetUIActive(false);
 	}
 
-	// Token: 0x060161EB RID: 90603 RVA: 0x00598088 File Offset: 0x00596288
+	// Token: 0x06013BF1 RID: 80881 RVA: 0x005C3048 File Offset: 0x005C1248
 	private void SetBtnMaskActive(bool active)
 	{
 		UUIItem item = base.GetItem(8);
@@ -384,14 +384,14 @@ public class ShipTowerDescView : UiViewBase
 		selectDescTeamItem.SetTeamToggleIsSelect(false);
 	}
 
-	// Token: 0x060161EC RID: 90604 RVA: 0x005980E0 File Offset: 0x005962E0
+	// Token: 0x06013BF2 RID: 80882 RVA: 0x005C30A0 File Offset: 0x005C12A0
 	[NullableContext(2)]
 	private UUIItem GetTeamEmptyItem()
 	{
 		return base.GetItem(12);
 	}
 
-	// Token: 0x060161ED RID: 90605 RVA: 0x005980EC File Offset: 0x005962EC
+	// Token: 0x06013BF3 RID: 80883 RVA: 0x005C30AC File Offset: 0x005C12AC
 	private void NormalOtherTeam()
 	{
 		for (int i = 0; i < this.StageData.TeamDataList.Count; i++)
@@ -411,7 +411,7 @@ public class ShipTowerDescView : UiViewBase
 		}
 	}
 
-	// Token: 0x060161EE RID: 90606 RVA: 0x00598168 File Offset: 0x00596368
+	// Token: 0x06013BF4 RID: 80884 RVA: 0x005C3128 File Offset: 0x005C1328
 	[NullableContext(2)]
 	private ShipTowerDescTeamItem GetSelectDescTeamItem()
 	{
@@ -428,7 +428,7 @@ public class ShipTowerDescView : UiViewBase
 		return descTeamScroll.GetScrollItemByIndex(index);
 	}
 
-	// Token: 0x060161EF RID: 90607 RVA: 0x0059819D File Offset: 0x0059639D
+	// Token: 0x06013BF5 RID: 80885 RVA: 0x005C315D File Offset: 0x005C135D
 	private ShipTowerDescTeamItem CreateDescTeamItem()
 	{
 		return new ShipTowerDescTeamItem
@@ -439,21 +439,15 @@ public class ShipTowerDescView : UiViewBase
 		};
 	}
 
-	// Token: 0x060161F0 RID: 90608 RVA: 0x005981DC File Offset: 0x005963DC
+	// Token: 0x06013BF6 RID: 80886 RVA: 0x005C319A File Offset: 0x005C139A
 	public void OnRoleClick(ShipTowerTeamData data)
 	{
-		ShipTowerTeamData selectedTeamData = this.SelectedTeamData;
-		int? num = (selectedTeamData != null) ? new int?(selectedTeamData.Index) : null;
-		int index = data.Index;
-		if (!(num.GetValueOrDefault() == index & num != null))
-		{
-			this.SelectedTeamData = data;
-			this.SelectTeamDataRoleUpdate();
-		}
+		this.SelectedTeamData = data;
+		this.SelectTeamDataRoleUpdate();
 		this.ShowTeamPanel();
 	}
 
-	// Token: 0x060161F1 RID: 90609 RVA: 0x00598238 File Offset: 0x00596438
+	// Token: 0x06013BF7 RID: 80887 RVA: 0x005C31B0 File Offset: 0x005C13B0
 	private void SelectTeamDataRoleUpdate()
 	{
 		if (this.SelectedTeamData == null)
@@ -466,7 +460,7 @@ public class ShipTowerDescView : UiViewBase
 		this.StageData.UpdateAllTeamRoleToModel();
 	}
 
-	// Token: 0x060161F2 RID: 90610 RVA: 0x00598290 File Offset: 0x00596490
+	// Token: 0x06013BF8 RID: 80888 RVA: 0x005C3208 File Offset: 0x005C1408
 	private void OnBuffClick(ShipTowerTeamData teamData)
 	{
 		ShipTowerModel instance = ShipTowerModel.Instance;
@@ -480,13 +474,13 @@ public class ShipTowerDescView : UiViewBase
 		instance.OpenViewBuff(shipTowerBuffViewParams);
 	}
 
-	// Token: 0x060161F3 RID: 90611 RVA: 0x0059830C File Offset: 0x0059650C
+	// Token: 0x06013BF9 RID: 80889 RVA: 0x005C3284 File Offset: 0x005C1484
 	private void OnMechanismClick(ShipTowerTeamData teamData)
 	{
 		this.StageData.OpenViewMonsterDesc(new int?(teamData.InstId));
 	}
 
-	// Token: 0x060161F4 RID: 90612 RVA: 0x00598324 File Offset: 0x00596524
+	// Token: 0x06013BFA RID: 80890 RVA: 0x005C329C File Offset: 0x005C149C
 	private void OnUseBuff(ShipTowerBuffData buffData, [Nullable(2)] ShipTowerTeamData teamData)
 	{
 		if (teamData != null)
@@ -506,7 +500,7 @@ public class ShipTowerDescView : UiViewBase
 		UiManager.Instance.CloseView(EUiViewName.ShipTowerBuffView, null);
 	}
 
-	// Token: 0x060161F5 RID: 90613 RVA: 0x00598378 File Offset: 0x00596578
+	// Token: 0x06013BFB RID: 80891 RVA: 0x005C32F0 File Offset: 0x005C14F0
 	private void UpdateBtnInfo(ButtonItem btn, EShipTowerDescBtnType btnType, bool isShow = true)
 	{
 		btn.SetActive(isShow);
@@ -549,14 +543,14 @@ public class ShipTowerDescView : UiViewBase
 		}
 	}
 
-	// Token: 0x060161F6 RID: 90614 RVA: 0x00598424 File Offset: 0x00596624
+	// Token: 0x06013BFC RID: 80892 RVA: 0x005C339C File Offset: 0x005C159C
 	private void SetBtnText(ButtonItem btn, string textKey)
 	{
 		string multiTextByKey = TextConfig.Instance.GetMultiTextByKey(textKey, textKey);
 		btn.SetText(multiTextByKey);
 	}
 
-	// Token: 0x060161F7 RID: 90615 RVA: 0x00598448 File Offset: 0x00596648
+	// Token: 0x06013BFD RID: 80893 RVA: 0x005C33C0 File Offset: 0x005C15C0
 	private void OnRoleSelect(RoleDataBase roleData)
 	{
 		this.SelectedLeftRoleData = roleData;
@@ -581,7 +575,7 @@ public class ShipTowerDescView : UiViewBase
 		this.UpdateSkillBranchBtn();
 	}
 
-	// Token: 0x060161F8 RID: 90616 RVA: 0x005984D4 File Offset: 0x005966D4
+	// Token: 0x06013BFE RID: 80894 RVA: 0x005C344C File Offset: 0x005C164C
 	private void OnRoleTeamSelect(FormationData formationData)
 	{
 		if (this.SelectedTeamData == null)
@@ -614,7 +608,7 @@ public class ShipTowerDescView : UiViewBase
 		this.UpdateSkillBranchBtn();
 	}
 
-	// Token: 0x060161F9 RID: 90617 RVA: 0x005985DC File Offset: 0x005967DC
+	// Token: 0x06013BFF RID: 80895 RVA: 0x005C3554 File Offset: 0x005C1754
 	private void OnRoleListUpdate()
 	{
 		if (!this.IsShowTeamPanel)
@@ -624,7 +618,7 @@ public class ShipTowerDescView : UiViewBase
 		this.UpdateRoleDetailBtn();
 	}
 
-	// Token: 0x060161FA RID: 90618 RVA: 0x005985ED File Offset: 0x005967ED
+	// Token: 0x06013C00 RID: 80896 RVA: 0x005C3565 File Offset: 0x005C1765
 	private void CheckUpdateStageData(int id)
 	{
 		if (this.StageData.Id != id)
@@ -638,7 +632,7 @@ public class ShipTowerDescView : UiViewBase
 		this.UpdateData();
 	}
 
-	// Token: 0x060161FB RID: 90619 RVA: 0x00598614 File Offset: 0x00596814
+	// Token: 0x06013C01 RID: 80897 RVA: 0x005C358C File Offset: 0x005C178C
 	private void EventShipTowerTeamRecommendApplyFinish(int id)
 	{
 		if (this.StageData.Id != id)
@@ -654,7 +648,7 @@ public class ShipTowerDescView : UiViewBase
 		this.UpdateData();
 	}
 
-	// Token: 0x060161FC RID: 90620 RVA: 0x00598674 File Offset: 0x00596874
+	// Token: 0x06013C02 RID: 80898 RVA: 0x005C35EC File Offset: 0x005C17EC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -693,7 +687,7 @@ public class ShipTowerDescView : UiViewBase
 		}
 	}
 
-	// Token: 0x060161FD RID: 90621 RVA: 0x00598710 File Offset: 0x00596910
+	// Token: 0x06013C03 RID: 80899 RVA: 0x005C3688 File Offset: 0x005C1888
 	private void OnBtnSkillBranchClick()
 	{
 		RoleSkillBranchPopViewParams roleSkillBranchPopViewParams = this.BuildSkillBranchPopViewParams();
@@ -703,7 +697,7 @@ public class ShipTowerDescView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.RoleSkillBranchPopView, roleSkillBranchPopViewParams, null);
 	}
 
-	// Token: 0x060161FE RID: 90622 RVA: 0x0059875C File Offset: 0x0059695C
+	// Token: 0x06013C04 RID: 80900 RVA: 0x005C36D4 File Offset: 0x005C18D4
 	private RoleSkillBranchPopViewParams BuildSkillBranchPopViewParams()
 	{
 		RoleSkillBranchPopViewParams roleSkillBranchPopViewParams = new RoleSkillBranchPopViewParams();
@@ -726,7 +720,7 @@ public class ShipTowerDescView : UiViewBase
 		return roleSkillBranchPopViewParams;
 	}
 
-	// Token: 0x060161FF RID: 90623 RVA: 0x0059884C File Offset: 0x00596A4C
+	// Token: 0x06013C05 RID: 80901 RVA: 0x005C37C4 File Offset: 0x005C19C4
 	private bool CheckHasSkillBranchInRoleEdit()
 	{
 		foreach (ShipTowerTeamData shipTowerTeamData in this.StageData.TeamDataList)
@@ -742,7 +736,7 @@ public class ShipTowerDescView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x06016200 RID: 90624 RVA: 0x005988F8 File Offset: 0x00596AF8
+	// Token: 0x06013C06 RID: 80902 RVA: 0x005C3870 File Offset: 0x005C1A70
 	private void UpdateSkillBranchBtn()
 	{
 		bool uiactive = this.CheckHasSkillBranchInRoleEdit();
@@ -754,7 +748,7 @@ public class ShipTowerDescView : UiViewBase
 		button.RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x06016201 RID: 90625 RVA: 0x0059892C File Offset: 0x00596B2C
+	// Token: 0x06013C07 RID: 80903 RVA: 0x005C38A4 File Offset: 0x005C1AA4
 	private void OnRoleSkillBranchChanged(int roleId)
 	{
 		ShipTowerTeamPanel teamPanel = this.TeamPanel;
@@ -770,18 +764,18 @@ public class ShipTowerDescView : UiViewBase
 		descTeamScroll.RefreshByData(this.StageData.TeamDataList, null, false);
 	}
 
-	// Token: 0x0400A4D1 RID: 42193
+	// Token: 0x0400A8BB RID: 43195
 	private ShipTowerStageData StageData;
 
-	// Token: 0x0400A4D2 RID: 42194
+	// Token: 0x0400A8BC RID: 43196
 	[Nullable(2)]
 	private ShipTowerTeamPanel TeamPanel;
 
-	// Token: 0x0400A4D3 RID: 42195
+	// Token: 0x0400A8BD RID: 43197
 	[Nullable(2)]
 	private PopupCaptionItem PopupCaption;
 
-	// Token: 0x0400A4D4 RID: 42196
+	// Token: 0x0400A8BE RID: 43198
 	[Nullable(new byte[]
 	{
 		2,
@@ -790,77 +784,77 @@ public class ShipTowerDescView : UiViewBase
 	})]
 	private GenericScrollViewNew<ShipTowerDescTeamItem, ShipTowerTeamData> DescTeamScroll;
 
-	// Token: 0x0400A4D5 RID: 42197
+	// Token: 0x0400A8BF RID: 43199
 	[Nullable(2)]
 	private ShipTowerDescLeftPanel DescLeftPanel;
 
-	// Token: 0x0400A4D6 RID: 42198
+	// Token: 0x0400A8C0 RID: 43200
 	private ButtonItem BtnA;
 
-	// Token: 0x0400A4D7 RID: 42199
+	// Token: 0x0400A8C1 RID: 43201
 	private ButtonItem BtnB;
 
-	// Token: 0x0400A4D8 RID: 42200
+	// Token: 0x0400A8C2 RID: 43202
 	[Nullable(2)]
 	private ShipTowerTeamData SelectedTeamData;
 
-	// Token: 0x0400A4D9 RID: 42201
+	// Token: 0x0400A8C3 RID: 43203
 	[Nullable(2)]
 	public RoleDataBase SelectedLeftRoleData;
 
-	// Token: 0x0400A4DA RID: 42202
+	// Token: 0x0400A8C4 RID: 43204
 	private EShipTowerDescBtnType ChallengeBtnType;
 
-	// Token: 0x0400A4DB RID: 42203
+	// Token: 0x0400A8C5 RID: 43205
 	private int? RoleDetailMainRoleId;
 
-	// Token: 0x02008FBD RID: 36797
+	// Token: 0x02008206 RID: 33286
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E8DD RID: 190685
+		// Token: 0x04029FDC RID: 171996
 		public const int ItemCaption = 0;
 
-		// Token: 0x0402E8DE RID: 190686
+		// Token: 0x04029FDD RID: 171997
 		public const int ItemRootLeft = 1;
 
-		// Token: 0x0402E8DF RID: 190687
+		// Token: 0x04029FDE RID: 171998
 		public const int ScrollBarRight = 2;
 
-		// Token: 0x0402E8E0 RID: 190688
+		// Token: 0x04029FDF RID: 171999
 		public const int BtnMask = 3;
 
-		// Token: 0x0402E8E1 RID: 190689
+		// Token: 0x04029FE0 RID: 172000
 		public const int BtnReset = 4;
 
-		// Token: 0x0402E8E2 RID: 190690
+		// Token: 0x04029FE1 RID: 172001
 		public const int BtnChallenge = 5;
 
-		// Token: 0x0402E8E3 RID: 190691
+		// Token: 0x04029FE2 RID: 172002
 		public const int BtnTeamRecommend = 6;
 
-		// Token: 0x0402E8E4 RID: 190692
+		// Token: 0x04029FE3 RID: 172003
 		public const int ItemRootTeam = 7;
 
-		// Token: 0x0402E8E5 RID: 190693
+		// Token: 0x04029FE4 RID: 172004
 		public const int ItemMaskSet = 8;
 
-		// Token: 0x0402E8E6 RID: 190694
+		// Token: 0x04029FE5 RID: 172005
 		public const int ItemMaskTeam = 9;
 
-		// Token: 0x0402E8E7 RID: 190695
+		// Token: 0x04029FE6 RID: 172006
 		public const int BtnMask2 = 10;
 
-		// Token: 0x0402E8E8 RID: 190696
+		// Token: 0x04029FE7 RID: 172007
 		public const int ItemTeam = 11;
 
-		// Token: 0x0402E8E9 RID: 190697
+		// Token: 0x04029FE8 RID: 172008
 		public const int ItemTeamNull = 12;
 
-		// Token: 0x0402E8EA RID: 190698
+		// Token: 0x04029FE9 RID: 172009
 		public const int ExchangeTeamButton = 13;
 
-		// Token: 0x0402E8EB RID: 190699
+		// Token: 0x04029FEA RID: 172010
 		public const int BtnSkillBranch = 14;
 	}
 }

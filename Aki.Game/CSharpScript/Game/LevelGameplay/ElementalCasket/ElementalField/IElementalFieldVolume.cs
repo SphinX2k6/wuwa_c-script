@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006EA8 RID: 28328
+	// Token: 0x02006028 RID: 24616
 	[NullableContext(1)]
 	public interface IElementalFieldVolume
 	{
-		// Token: 0x0604503C RID: 282684
+		// Token: 0x0603B1DD RID: 242141
 		bool ContainsPoint(Vector point);
 
-		// Token: 0x0604503D RID: 282685
+		// Token: 0x0603B1DE RID: 242142
 		bool IntersectsSegment(Vector a, Vector b);
 
-		// Token: 0x0604503E RID: 282686
+		// Token: 0x0603B1DF RID: 242143
 		void DebugDraw();
 	}
 }

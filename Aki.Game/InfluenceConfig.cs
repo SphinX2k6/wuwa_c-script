@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001F75 RID: 8053
+// Token: 0x02001437 RID: 5175
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class InfluenceConfig : ConfigBase
 {
-	// Token: 0x0600F9D6 RID: 63958 RVA: 0x003C8C2C File Offset: 0x003C6E2C
+	// Token: 0x0600CDF5 RID: 52725 RVA: 0x003D4718 File Offset: 0x003D2918
 	public List<Country> GetCountriesByIds(int[] ids)
 	{
 		if (ids.Length != 0)
@@ -26,15 +25,22 @@ public class InfluenceConfig : ConfigBase
 		return new List<Country>();
 	}
 
-	// Token: 0x0600F9D7 RID: 63959 RVA: 0x003C8C94 File Offset: 0x003C6E94
+	// Token: 0x0600CDF6 RID: 52726 RVA: 0x003D4780 File Offset: 0x003D2980
 	public List<Country> GetCountryList()
 	{
-		return (from value in ConfigCountryAll.GetConfigList(true)
-		where value.Id != 0 && value.Id != 9999
-		select value).ToList<Country>();
+		IEnumerable<Country> configList = ConfigCountryAll.GetConfigList(true);
+		List<Country> list = new List<Country>();
+		foreach (Country item in configList)
+		{
+			if (item.Id != 0 && item.Id != 9999)
+			{
+				list.Add(item);
+			}
+		}
+		return list;
 	}
 
-	// Token: 0x0600F9D8 RID: 63960 RVA: 0x003C8CC8 File Offset: 0x003C6EC8
+	// Token: 0x0600CDF7 RID: 52727 RVA: 0x003D47EC File Offset: 0x003D29EC
 	public Country? GetCountryConfig(int id)
 	{
 		Country? config = ConfigCountryById.GetConfig(id, true);
@@ -45,7 +51,7 @@ public class InfluenceConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600F9D9 RID: 63961 RVA: 0x003C8CFC File Offset: 0x003C6EFC
+	// Token: 0x0600CDF8 RID: 52728 RVA: 0x003D4820 File Offset: 0x003D2A20
 	public State? GetStateConfig(int stateId)
 	{
 		State? config = ConfigStateByStateId.GetConfig(stateId, true);
@@ -56,7 +62,7 @@ public class InfluenceConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600F9DA RID: 63962 RVA: 0x003C8D30 File Offset: 0x003C6F30
+	// Token: 0x0600CDF9 RID: 52729 RVA: 0x003D4854 File Offset: 0x003D2A54
 	public List<Influence> GetCountryInfluence(int id)
 	{
 		List<Influence> list = new List<Influence>();
@@ -98,7 +104,7 @@ public class InfluenceConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x0600F9DB RID: 63963 RVA: 0x003C8E14 File Offset: 0x003C7014
+	// Token: 0x0600CDFA RID: 52730 RVA: 0x003D4938 File Offset: 0x003D2B38
 	public string GetCountryTitle(int id)
 	{
 		Country? countryConfig = this.GetCountryConfig(id);
@@ -109,7 +115,7 @@ public class InfluenceConfig : ConfigBase
 		return "";
 	}
 
-	// Token: 0x0600F9DC RID: 63964 RVA: 0x003C8E50 File Offset: 0x003C7050
+	// Token: 0x0600CDFB RID: 52731 RVA: 0x003D4974 File Offset: 0x003D2B74
 	public Influence? GetInfluenceConfig(int id)
 	{
 		Influence? config = ConfigInfluenceById.GetConfig(id, true);
@@ -120,7 +126,7 @@ public class InfluenceConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600F9DD RID: 63965 RVA: 0x003C8E84 File Offset: 0x003C7084
+	// Token: 0x0600CDFC RID: 52732 RVA: 0x003D49A8 File Offset: 0x003D2BA8
 	public string GetInfluenceTitle(int id)
 	{
 		Influence? influenceConfig = this.GetInfluenceConfig(id);
@@ -131,22 +137,22 @@ public class InfluenceConfig : ConfigBase
 		return "";
 	}
 
-	// Token: 0x0600F9DE RID: 63966 RVA: 0x003C8EC0 File Offset: 0x003C70C0
+	// Token: 0x0600CDFD RID: 52733 RVA: 0x003D49E4 File Offset: 0x003D2BE4
 	public bool GetInfluenceIfShowInDailyTask(int influenceId)
 	{
 		Influence? influenceConfig = this.GetInfluenceConfig(influenceId);
 		return influenceConfig != null && influenceConfig.Value.DailyTaskShow == 1;
 	}
 
-	// Token: 0x0600F9DF RID: 63967 RVA: 0x003C8EF4 File Offset: 0x003C70F4
+	// Token: 0x0600CDFE RID: 52734 RVA: 0x003D4A18 File Offset: 0x003D2C18
 	public bool GetCountryIfShowInDailyTask(int countryId)
 	{
 		Country? countryConfig = this.GetCountryConfig(countryId);
 		return countryConfig != null && countryConfig.Value.DailyTaskShow == 1;
 	}
 
-	// Token: 0x1700133B RID: 4923
-	// (get) Token: 0x0600F9E0 RID: 63968 RVA: 0x003C8F26 File Offset: 0x003C7126
+	// Token: 0x17001365 RID: 4965
+	// (get) Token: 0x0600CDFF RID: 52735 RVA: 0x003D4A4A File Offset: 0x003D2C4A
 	public static InfluenceConfig Instance
 	{
 		get
@@ -155,7 +161,7 @@ public class InfluenceConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600F9E1 RID: 63969 RVA: 0x003C8F2D File Offset: 0x003C712D
+	// Token: 0x0600CE00 RID: 52736 RVA: 0x003D4A51 File Offset: 0x003D2C51
 	public static InfluenceConfig GetOrCreateInstance()
 	{
 		if (InfluenceConfig._Instance == null)
@@ -165,7 +171,7 @@ public class InfluenceConfig : ConfigBase
 		return InfluenceConfig._Instance;
 	}
 
-	// Token: 0x0600F9E2 RID: 63970 RVA: 0x003C8F41 File Offset: 0x003C7141
+	// Token: 0x0600CE01 RID: 52737 RVA: 0x003D4A65 File Offset: 0x003D2C65
 	public static bool CreateInstance()
 	{
 		if (InfluenceConfig._Instance != null)
@@ -176,24 +182,24 @@ public class InfluenceConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600F9E3 RID: 63971 RVA: 0x003C8F57 File Offset: 0x003C7157
+	// Token: 0x0600CE02 RID: 52738 RVA: 0x003D4A7B File Offset: 0x003D2C7B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600F9E4 RID: 63972 RVA: 0x003C8F59 File Offset: 0x003C7159
+	// Token: 0x0600CE03 RID: 52739 RVA: 0x003D4A7D File Offset: 0x003D2C7D
 	public static void ResetStaticDefaultValue()
 	{
 		InfluenceConfig._Instance = null;
 	}
 
-	// Token: 0x0600F9E5 RID: 63973 RVA: 0x003C8F61 File Offset: 0x003C7161
+	// Token: 0x0600CE04 RID: 52740 RVA: 0x003D4A85 File Offset: 0x003D2C85
 	static InfluenceConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InfluenceConfig.CreateStaticDefaultValue), new Action(InfluenceConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007477 RID: 29815
+	// Token: 0x04007558 RID: 30040
 	[Nullable(2)]
 	private static InfluenceConfig _Instance;
 }

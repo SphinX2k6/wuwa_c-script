@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000476 RID: 1142
+	// Token: 0x020000E6 RID: 230
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/CinematicCamera.CameraTrackingFocusSettings")]
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 64)]
 	public class FCameraTrackingFocusSettings : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06003D26 RID: 15654 RVA: 0x0005BF91 File Offset: 0x0005A191
+		// Token: 0x0600101B RID: 4123 RVA: 0x00019BB5 File Offset: 0x00017DB5
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FCameraTrackingFocusSettings._ScriptStructPtr != 0) ? FCameraTrackingFocusSettings._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CinematicCamera.CameraTrackingFocusSettings", ref FCameraTrackingFocusSettings._ScriptStructPtr);
 		}
 
-		// Token: 0x17000EDB RID: 3803
-		// (get) Token: 0x06003D27 RID: 15655 RVA: 0x0005BFB5 File Offset: 0x0005A1B5
-		// (set) Token: 0x06003D28 RID: 15656 RVA: 0x0005BFD4 File Offset: 0x0005A1D4
+		// Token: 0x1700017E RID: 382
+		// (get) Token: 0x0600101C RID: 4124 RVA: 0x00019BD9 File Offset: 0x00017DD9
+		// (set) Token: 0x0600101D RID: 4125 RVA: 0x00019BF8 File Offset: 0x00017DF8
 		public TSoftObjectPtr<AActor> ActorToTrack
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000EDC RID: 3804
-		// (get) Token: 0x06003D29 RID: 15657 RVA: 0x0005BFF9 File Offset: 0x0005A1F9
-		// (set) Token: 0x06003D2A RID: 15658 RVA: 0x0005C00D File Offset: 0x0005A20D
+		// Token: 0x1700017F RID: 383
+		// (get) Token: 0x0600101E RID: 4126 RVA: 0x00019C1D File Offset: 0x00017E1D
+		// (set) Token: 0x0600101F RID: 4127 RVA: 0x00019C31 File Offset: 0x00017E31
 		public unsafe FVector RelativeOffset
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000EDD RID: 3805
-		// (get) Token: 0x06003D2B RID: 15659 RVA: 0x0005C022 File Offset: 0x0005A222
-		// (set) Token: 0x06003D2C RID: 15660 RVA: 0x0005C03B File Offset: 0x0005A23B
+		// Token: 0x17000180 RID: 384
+		// (get) Token: 0x06001020 RID: 4128 RVA: 0x00019C46 File Offset: 0x00017E46
+		// (set) Token: 0x06001021 RID: 4129 RVA: 0x00019C5F File Offset: 0x00017E5F
 		public unsafe bool bDrawDebugTrackingFocusPoint
 		{
 			get
@@ -63,64 +63,56 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06003D2D RID: 15661 RVA: 0x0005C06B File Offset: 0x0005A26B
+		// Token: 0x06001022 RID: 4130 RVA: 0x00019C8F File Offset: 0x00017E8F
 		public FCameraTrackingFocusSettings()
 		{
 		}
 
-		// Token: 0x06003D2E RID: 15662 RVA: 0x0005C073 File Offset: 0x0005A273
-		public FCameraTrackingFocusSettings(TSoftObjectPtr<AActor> ActorToTrack, FVector RelativeOffset, bool bDrawDebugTrackingFocusPoint)
-		{
-			this.ActorToTrack = ActorToTrack;
-			this.RelativeOffset = RelativeOffset;
-			this.bDrawDebugTrackingFocusPoint = bDrawDebugTrackingFocusPoint;
-		}
-
-		// Token: 0x06003D2F RID: 15663 RVA: 0x0005C090 File Offset: 0x0005A290
+		// Token: 0x06001023 RID: 4131 RVA: 0x00019C97 File Offset: 0x00017E97
 		protected override IntPtr GetUStructPtr()
 		{
 			return FCameraTrackingFocusSettings.StaticStruct();
 		}
 
-		// Token: 0x06003D30 RID: 15664 RVA: 0x0005C09C File Offset: 0x0005A29C
+		// Token: 0x06001024 RID: 4132 RVA: 0x00019CA3 File Offset: 0x00017EA3
 		[NullableContext(2)]
 		public FCameraTrackingFocusSettings(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06003D31 RID: 15665 RVA: 0x0005C0A6 File Offset: 0x0005A2A6
+		// Token: 0x06001025 RID: 4133 RVA: 0x00019CAD File Offset: 0x00017EAD
 		public FCameraTrackingFocusSettings(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06003D32 RID: 15666 RVA: 0x0005C0B1 File Offset: 0x0005A2B1
+		// Token: 0x06001026 RID: 4134 RVA: 0x00019CB8 File Offset: 0x00017EB8
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FCameraTrackingFocusSettings(Pointer, false, true);
 		}
 
-		// Token: 0x06003D33 RID: 15667 RVA: 0x0005C0BB File Offset: 0x0005A2BB
+		// Token: 0x06001027 RID: 4135 RVA: 0x00019CC2 File Offset: 0x00017EC2
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FCameraTrackingFocusSettings(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04001CAE RID: 7342
+		// Token: 0x040003BF RID: 959
 		public const string __ObjectPath = "/Script/CinematicCamera.CameraTrackingFocusSettings";
 
-		// Token: 0x04001CAF RID: 7343
+		// Token: 0x040003C0 RID: 960
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04001CB0 RID: 7344
+		// Token: 0x040003C1 RID: 961
 		internal static int __PropertyOffset_ActorToTrack;
 
-		// Token: 0x04001CB1 RID: 7345
+		// Token: 0x040003C2 RID: 962
 		internal static int __PropertyOffset_RelativeOffset;
 
-		// Token: 0x04001CB2 RID: 7346
+		// Token: 0x040003C3 RID: 963
 		internal static int __PropertyOffset_bDrawDebugTrackingFocusPoint;
 
-		// Token: 0x04001CB3 RID: 7347
+		// Token: 0x040003C4 RID: 964
 		internal static byte __PropertyMask_bDrawDebugTrackingFocusPoint;
 	}
 }

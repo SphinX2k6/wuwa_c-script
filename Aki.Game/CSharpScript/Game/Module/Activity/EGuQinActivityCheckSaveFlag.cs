@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity
 {
-	// Token: 0x02005EF7 RID: 24311
+	// Token: 0x02004EDE RID: 20190
 	public enum EGuQinActivityCheckSaveFlag
 	{
-		// Token: 0x04020469 RID: 132201
+		// Token: 0x0401AF3B RID: 110395
 		PreOpen
 	}
 }

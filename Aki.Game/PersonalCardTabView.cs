@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020023CE RID: 9166
+// Token: 0x020018B3 RID: 6323
 public class PersonalCardTabView : UiTabViewBase
 {
-	// Token: 0x06012537 RID: 75063 RVA: 0x004838DE File Offset: 0x00481ADE
+	// Token: 0x0600F9E9 RID: 63977 RVA: 0x00490DDE File Offset: 0x0048EFDE
 	protected override void OnStart()
 	{
 		if (this.PersonalCardComponent == null)
@@ -14,7 +14,7 @@ public class PersonalCardTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012538 RID: 75064 RVA: 0x00483905 File Offset: 0x00481B05
+	// Token: 0x0600F9EA RID: 63978 RVA: 0x00490E05 File Offset: 0x0048F005
 	protected override void OnBeforeDestroy()
 	{
 		if (this.PersonalCardComponent != null)
@@ -24,7 +24,7 @@ public class PersonalCardTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x04008A80 RID: 35456
+	// Token: 0x04008BC7 RID: 35783
 	[Nullable(2)]
 	private PersonalCardComponent PersonalCardComponent;
 }

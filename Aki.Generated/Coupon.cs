@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BAA RID: 2986
+	// Token: 0x02000C8C RID: 3212
 	public struct Coupon : IFlatbufferObject
 	{
-		// Token: 0x170009D1 RID: 2513
-		// (get) Token: 0x06005A72 RID: 23154 RVA: 0x0020206D File Offset: 0x0020026D
+		// Token: 0x17000A17 RID: 2583
+		// (get) Token: 0x0600604B RID: 24651 RVA: 0x00221D92 File Offset: 0x0021FF92
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005A73 RID: 23155 RVA: 0x0020207A File Offset: 0x0020027A
+		// Token: 0x0600604C RID: 24652 RVA: 0x00221D9F File Offset: 0x0021FF9F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005A74 RID: 23156 RVA: 0x00202084 File Offset: 0x00200284
+		// Token: 0x0600604D RID: 24653 RVA: 0x00221DA8 File Offset: 0x0021FFA8
 		public static Coupon GetRootAsCoupon(ByteBuffer _bb)
 		{
 			return Coupon.GetRootAsCoupon(_bb, default(Coupon));
 		}
 
-		// Token: 0x06005A75 RID: 23157 RVA: 0x002020A0 File Offset: 0x002002A0
+		// Token: 0x0600604E RID: 24654 RVA: 0x00221DC4 File Offset: 0x0021FFC4
 		public static Coupon GetRootAsCoupon(ByteBuffer _bb, Coupon obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005A76 RID: 23158 RVA: 0x002020BD File Offset: 0x002002BD
+		// Token: 0x0600604F RID: 24655 RVA: 0x00221DE1 File Offset: 0x0021FFE1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005A77 RID: 23159 RVA: 0x002020CC File Offset: 0x002002CC
+		// Token: 0x06006050 RID: 24656 RVA: 0x00221DF0 File Offset: 0x0021FFF0
 		public Coupon __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170009D2 RID: 2514
-		// (get) Token: 0x06005A78 RID: 23160 RVA: 0x002020DC File Offset: 0x002002DC
+		// Token: 0x17000A18 RID: 2584
+		// (get) Token: 0x06006051 RID: 24657 RVA: 0x00221E00 File Offset: 0x00220000
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170009D3 RID: 2515
-		// (get) Token: 0x06005A79 RID: 23161 RVA: 0x00202118 File Offset: 0x00200318
+		// Token: 0x17000A19 RID: 2585
+		// (get) Token: 0x06006052 RID: 24658 RVA: 0x00221E3C File Offset: 0x0022003C
 		public int Param
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004BCD RID: 19405
+		// Token: 0x040051AF RID: 20911
 		private Table __p;
 	}
 }

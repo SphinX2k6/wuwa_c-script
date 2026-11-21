@@ -5,15 +5,15 @@ using CSharpScript.Game.Camera;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B27 RID: 27431
+	// Token: 0x02005C9F RID: 23711
 	public class LevelEventExitMovieCamera : LevelEventBase
 	{
-		// Token: 0x060440FC RID: 278780 RVA: 0x010BC13B File Offset: 0x010BA33B
+		// Token: 0x0603A24E RID: 238158 RVA: 0x010659C7 File Offset: 0x01063BC7
 		public LevelEventExitMovieCamera(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060440FD RID: 278781 RVA: 0x010BC144 File Offset: 0x010BA344
+		// Token: 0x0603A24F RID: 238159 RVA: 0x010659D0 File Offset: 0x01063BD0
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

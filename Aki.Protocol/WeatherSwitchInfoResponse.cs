@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001503 RID: 5379
+	// Token: 0x02001579 RID: 5497
 	[NetMessage(EMessageId.WeatherSwitchInfoResponse)]
 	public sealed class WeatherSwitchInfoResponse : IMessage<WeatherSwitchInfoResponse>, IMessage, IEquatable<WeatherSwitchInfoResponse>, IDeepCloneable<WeatherSwitchInfoResponse>, IBufferMessage
 	{
-		// Token: 0x0601C6E2 RID: 116450 RVA: 0x0041B2FE File Offset: 0x004194FE
+		// Token: 0x0601D1A9 RID: 119209 RVA: 0x00436DBE File Offset: 0x00434FBE
 		[NullableContext(1)]
 		public static WeatherSwitchInfoResponse Create()
 		{
 			return new WeatherSwitchInfoResponse();
 		}
 
-		// Token: 0x17005FD4 RID: 24532
-		// (get) Token: 0x0601C6E3 RID: 116451 RVA: 0x0041B305 File Offset: 0x00419505
+		// Token: 0x17006275 RID: 25205
+		// (get) Token: 0x0601D1AA RID: 119210 RVA: 0x00436DC5 File Offset: 0x00434FC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005FD5 RID: 24533
-		// (get) Token: 0x0601C6E4 RID: 116452 RVA: 0x0041B308 File Offset: 0x00419508
+		// Token: 0x17006276 RID: 25206
+		// (get) Token: 0x0601D1AB RID: 119211 RVA: 0x00436DC8 File Offset: 0x00434FC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C6E5 RID: 116453 RVA: 0x0041B30F File Offset: 0x0041950F
+		// Token: 0x0601D1AC RID: 119212 RVA: 0x00436DCF File Offset: 0x00434FCF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeatherSwitchInfoResponse()
 		{
 		}
 
-		// Token: 0x0601C6E6 RID: 116454 RVA: 0x0041B322 File Offset: 0x00419522
+		// Token: 0x0601D1AD RID: 119213 RVA: 0x00436DE2 File Offset: 0x00434FE2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeatherSwitchInfoResponse(WeatherSwitchInfoResponse other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601C6E7 RID: 116455 RVA: 0x0041B34C File Offset: 0x0041954C
+		// Token: 0x0601D1AE RID: 119214 RVA: 0x00436E0C File Offset: 0x0043500C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeatherSwitchInfoResponse Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new WeatherSwitchInfoResponse(this);
 		}
 
-		// Token: 0x17005FD6 RID: 24534
-		// (get) Token: 0x0601C6E8 RID: 116456 RVA: 0x0041B354 File Offset: 0x00419554
+		// Token: 0x17006277 RID: 25207
+		// (get) Token: 0x0601D1AF RID: 119215 RVA: 0x00436E14 File Offset: 0x00435014
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockedSwitchIds
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C6E9 RID: 116457 RVA: 0x0041B35C File Offset: 0x0041955C
+		// Token: 0x0601D1B0 RID: 119216 RVA: 0x00436E1C File Offset: 0x0043501C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as WeatherSwitchInfoResponse);
 		}
 
-		// Token: 0x0601C6EA RID: 116458 RVA: 0x0041B36A File Offset: 0x0041956A
+		// Token: 0x0601D1B1 RID: 119217 RVA: 0x00436E2A File Offset: 0x0043502A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(WeatherSwitchInfoResponse other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.unlockedSwitchIds_.Equals(other.unlockedSwitchIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601C6EB RID: 116459 RVA: 0x0041B3A0 File Offset: 0x004195A0
+		// Token: 0x0601D1B2 RID: 119218 RVA: 0x00436E60 File Offset: 0x00435060
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C6EC RID: 116460 RVA: 0x0041B3D4 File Offset: 0x004195D4
+		// Token: 0x0601D1B3 RID: 119219 RVA: 0x00436E94 File Offset: 0x00435094
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601C6ED RID: 116461 RVA: 0x0041B3E1 File Offset: 0x004195E1
+		// Token: 0x0601D1B4 RID: 119220 RVA: 0x00436EA1 File Offset: 0x004350A1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601C6EE RID: 116462 RVA: 0x0041B3EA File Offset: 0x004195EA
+		// Token: 0x0601D1B5 RID: 119221 RVA: 0x00436EAA File Offset: 0x004350AA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C6EF RID: 116463 RVA: 0x0041B414 File Offset: 0x00419614
+		// Token: 0x0601D1B6 RID: 119222 RVA: 0x00436ED4 File Offset: 0x004350D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C6F0 RID: 116464 RVA: 0x0041B44D File Offset: 0x0041964D
+		// Token: 0x0601D1B7 RID: 119223 RVA: 0x00436F0D File Offset: 0x0043510D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(WeatherSwitchInfoResponse other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601C6F1 RID: 116465 RVA: 0x0041B47B File Offset: 0x0041967B
+		// Token: 0x0601D1B8 RID: 119224 RVA: 0x00436F3B File Offset: 0x0043513B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601C6F2 RID: 116466 RVA: 0x0041B484 File Offset: 0x00419684
+		// Token: 0x0601D1B9 RID: 119225 RVA: 0x00436F44 File Offset: 0x00435144
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 72U && num != 74U)
+				if (num != 112U && num != 114U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400A2BE RID: 41662
+		// Token: 0x0400A717 RID: 42775
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400A2BF RID: 41663
-		public const int UnlockedSwitchIdsFieldNumber = 9;
+		// Token: 0x0400A718 RID: 42776
+		public const int UnlockedSwitchIdsFieldNumber = 14;
 
-		// Token: 0x0400A2C0 RID: 41664
-		private static readonly FieldCodec<int> _repeated_unlockedSwitchIds_codec = FieldCodec.ForInt32(74U);
+		// Token: 0x0400A719 RID: 42777
+		private static readonly FieldCodec<int> _repeated_unlockedSwitchIds_codec = FieldCodec.ForInt32(114U);
 
-		// Token: 0x0400A2C1 RID: 41665
+		// Token: 0x0400A71A RID: 42778
 		private readonly RepeatedField<int> unlockedSwitchIds_ = new RepeatedField<int>();
 	}
 }

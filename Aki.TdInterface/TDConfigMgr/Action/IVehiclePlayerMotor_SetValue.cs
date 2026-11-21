@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002046 RID: 8262
+	// Token: 0x0200228F RID: 8847
 	public class IVehiclePlayerMotor_SetValue
 	{
-		// Token: 0x04006D3A RID: 27962
+		// Token: 0x04007343 RID: 29507
 		public ETargetVehicle Type;
 
-		// Token: 0x04006D3B RID: 27963
+		// Token: 0x04007344 RID: 29508
 		public int? SummonPositionEntityId;
 	}
 }

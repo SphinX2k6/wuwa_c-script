@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002103 RID: 8451
+	// Token: 0x020006D9 RID: 1753
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.SequenceInfo")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 56)]
 	public class FSequenceInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601FCBC RID: 130236 RVA: 0x002F4892 File Offset: 0x002F2A92
+		// Token: 0x06009502 RID: 38146 RVA: 0x000E0E56 File Offset: 0x000DF056
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSequenceInfo._ScriptStructPtr != 0) ? FSequenceInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/LGUI.SequenceInfo", ref FSequenceInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17007D14 RID: 32020
-		// (get) Token: 0x0601FCBD RID: 130237 RVA: 0x002F48B8 File Offset: 0x002F2AB8
-		// (set) Token: 0x0601FCBE RID: 130238 RVA: 0x002F48FB File Offset: 0x002F2AFB
+		// Token: 0x17001B9F RID: 7071
+		// (get) Token: 0x06009503 RID: 38147 RVA: 0x000E0E7C File Offset: 0x000DF07C
+		// (set) Token: 0x06009504 RID: 38148 RVA: 0x000E0EBF File Offset: 0x000DF0BF
 		public FSoftObjectPath LevelSequence
 		{
 			get
@@ -40,9 +40,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D15 RID: 32021
-		// (get) Token: 0x0601FCBF RID: 130239 RVA: 0x002F491C File Offset: 0x002F2B1C
-		// (set) Token: 0x0601FCC0 RID: 130240 RVA: 0x002F492C File Offset: 0x002F2B2C
+		// Token: 0x17001BA0 RID: 7072
+		// (get) Token: 0x06009505 RID: 38149 RVA: 0x000E0EE0 File Offset: 0x000DF0E0
+		// (set) Token: 0x06009506 RID: 38150 RVA: 0x000E0EF0 File Offset: 0x000DF0F0
 		public unsafe bool bUseAsHardRef
 		{
 			get
@@ -55,9 +55,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D16 RID: 32022
-		// (get) Token: 0x0601FCC1 RID: 130241 RVA: 0x002F493D File Offset: 0x002F2B3D
-		// (set) Token: 0x0601FCC2 RID: 130242 RVA: 0x002F494D File Offset: 0x002F2B4D
+		// Token: 0x17001BA1 RID: 7073
+		// (get) Token: 0x06009507 RID: 38151 RVA: 0x000E0F01 File Offset: 0x000DF101
+		// (set) Token: 0x06009508 RID: 38152 RVA: 0x000E0F11 File Offset: 0x000DF111
 		public unsafe bool ChildrenInteractiveDuringPlaying
 		{
 			get
@@ -70,9 +70,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D17 RID: 32023
-		// (get) Token: 0x0601FCC3 RID: 130243 RVA: 0x002F495E File Offset: 0x002F2B5E
-		// (set) Token: 0x0601FCC4 RID: 130244 RVA: 0x002F496E File Offset: 0x002F2B6E
+		// Token: 0x17001BA2 RID: 7074
+		// (get) Token: 0x06009509 RID: 38153 RVA: 0x000E0F22 File Offset: 0x000DF122
+		// (set) Token: 0x0600950A RID: 38154 RVA: 0x000E0F32 File Offset: 0x000DF132
 		public unsafe bool BlockAllEventWhilePlaying
 		{
 			get
@@ -85,9 +85,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D18 RID: 32024
-		// (get) Token: 0x0601FCC5 RID: 130245 RVA: 0x002F4980 File Offset: 0x002F2B80
-		// (set) Token: 0x0601FCC6 RID: 130246 RVA: 0x002F49C3 File Offset: 0x002F2BC3
+		// Token: 0x17001BA3 RID: 7075
+		// (get) Token: 0x0600950B RID: 38155 RVA: 0x000E0F44 File Offset: 0x000DF144
+		// (set) Token: 0x0600950C RID: 38156 RVA: 0x000E0F87 File Offset: 0x000DF187
 		public FMovieSceneSequencePlaybackSettings PlaySetting
 		{
 			get
@@ -106,76 +106,66 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601FCC7 RID: 130247 RVA: 0x002F49E4 File Offset: 0x002F2BE4
+		// Token: 0x0600950D RID: 38157 RVA: 0x000E0FA8 File Offset: 0x000DF1A8
 		public FSequenceInfo()
 		{
 		}
 
-		// Token: 0x0601FCC8 RID: 130248 RVA: 0x002F49EC File Offset: 0x002F2BEC
-		public FSequenceInfo(FSoftObjectPath LevelSequence, bool bUseAsHardRef, bool ChildrenInteractiveDuringPlaying, bool BlockAllEventWhilePlaying, FMovieSceneSequencePlaybackSettings PlaySetting)
-		{
-			this.LevelSequence = LevelSequence;
-			this.bUseAsHardRef = bUseAsHardRef;
-			this.ChildrenInteractiveDuringPlaying = ChildrenInteractiveDuringPlaying;
-			this.BlockAllEventWhilePlaying = BlockAllEventWhilePlaying;
-			this.PlaySetting = PlaySetting;
-		}
-
-		// Token: 0x0601FCC9 RID: 130249 RVA: 0x002F4A19 File Offset: 0x002F2C19
+		// Token: 0x0600950E RID: 38158 RVA: 0x000E0FB0 File Offset: 0x000DF1B0
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSequenceInfo.StaticStruct();
 		}
 
-		// Token: 0x0601FCCA RID: 130250 RVA: 0x002F4A25 File Offset: 0x002F2C25
+		// Token: 0x0600950F RID: 38159 RVA: 0x000E0FBC File Offset: 0x000DF1BC
 		[NullableContext(2)]
 		public FSequenceInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601FCCB RID: 130251 RVA: 0x002F4A2F File Offset: 0x002F2C2F
+		// Token: 0x06009510 RID: 38160 RVA: 0x000E0FC6 File Offset: 0x000DF1C6
 		public FSequenceInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601FCCC RID: 130252 RVA: 0x002F4A3A File Offset: 0x002F2C3A
+		// Token: 0x06009511 RID: 38161 RVA: 0x000E0FD1 File Offset: 0x000DF1D1
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSequenceInfo(Pointer, false, true);
 		}
 
-		// Token: 0x0601FCCD RID: 130253 RVA: 0x002F4A44 File Offset: 0x002F2C44
+		// Token: 0x06009512 RID: 38162 RVA: 0x000E0FDB File Offset: 0x000DF1DB
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSequenceInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401122B RID: 70187
+		// Token: 0x040040C9 RID: 16585
 		public const string __ObjectPath = "/Script/LGUI.SequenceInfo";
 
-		// Token: 0x0401122C RID: 70188
+		// Token: 0x040040CA RID: 16586
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401122D RID: 70189
+		// Token: 0x040040CB RID: 16587
 		internal static int __PropertyOffset_LevelSequence;
 
-		// Token: 0x0401122E RID: 70190
+		// Token: 0x040040CC RID: 16588
 		[Nullable(2)]
 		private FSoftObjectPath _LevelSequence;
 
-		// Token: 0x0401122F RID: 70191
+		// Token: 0x040040CD RID: 16589
 		internal static int __PropertyOffset_bUseAsHardRef;
 
-		// Token: 0x04011230 RID: 70192
+		// Token: 0x040040CE RID: 16590
 		internal static int __PropertyOffset_ChildrenInteractiveDuringPlaying;
 
-		// Token: 0x04011231 RID: 70193
+		// Token: 0x040040CF RID: 16591
 		internal static int __PropertyOffset_BlockAllEventWhilePlaying;
 
-		// Token: 0x04011232 RID: 70194
+		// Token: 0x040040D0 RID: 16592
 		internal static int __PropertyOffset_PlaySetting;
 
-		// Token: 0x04011233 RID: 70195
+		// Token: 0x040040D1 RID: 16593
 		[Nullable(2)]
 		private FMovieSceneSequencePlaybackSettings _PlaySetting;
 	}

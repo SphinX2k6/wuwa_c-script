@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplorePlaced
 {
-	// Token: 0x02006A9B RID: 27291
+	// Token: 0x02005BF8 RID: 23544
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlacedExploreInteractPointSearchStrategy : SceneInteractSearchStrategy
 	{
-		// Token: 0x17009943 RID: 39235
-		// (get) Token: 0x06043CE1 RID: 277729 RVA: 0x0109880C File Offset: 0x01096A0C
+		// Token: 0x17006E28 RID: 28200
+		// (get) Token: 0x06039D2F RID: 236847 RVA: 0x0103D054 File Offset: 0x0103B254
 		public override int Priority
 		{
 			get
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplorePlaced
 			}
 		}
 
-		// Token: 0x06043CE2 RID: 277730 RVA: 0x01098810 File Offset: 0x01096A10
+		// Token: 0x06039D30 RID: 236848 RVA: 0x0103D058 File Offset: 0x0103B258
 		[return: Nullable(2)]
 		public override ISceneInteractPoint SelectBest(IReadOnlyList<ISceneInteractPoint> points, ISceneInteractSearchParams @params)
 		{
@@ -125,13 +125,13 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplorePlaced
 			return placedExploreInteractPoint2;
 		}
 
-		// Token: 0x06043CE3 RID: 277731 RVA: 0x01098AD0 File Offset: 0x01096CD0
+		// Token: 0x06039D31 RID: 236849 RVA: 0x0103D318 File Offset: 0x0103B518
 		public override void Dispose()
 		{
 			this.BlockChecker.Dispose();
 		}
 
-		// Token: 0x06043CE4 RID: 277732 RVA: 0x01098AE0 File Offset: 0x01096CE0
+		// Token: 0x06039D32 RID: 236850 RVA: 0x0103D328 File Offset: 0x0103B528
 		private bool CheckEntityConditionCached(PlacedExploreInteractPoint point, Dictionary<int, bool> cache)
 		{
 			WorldEntity entity = point.GetEntityHandle().Entity;
@@ -149,14 +149,14 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplorePlaced
 			return flag;
 		}
 
-		// Token: 0x06043CE5 RID: 277733 RVA: 0x01098B28 File Offset: 0x01096D28
+		// Token: 0x06039D33 RID: 236851 RVA: 0x0103D370 File Offset: 0x0103B570
 		private bool IsBlocked(PlacedExploreInteractPoint point, ISceneInteractSearchParams @params)
 		{
 			Vector raycastDestLocation = point.GetRaycastDestLocation();
 			return raycastDestLocation != null && this.BlockChecker.IsBlocked(raycastDestLocation, @params, point.UseTwoPhaseBlockCheck(), (bool checkResult, UTraceBaseElement element) => this.FilterTraceResult(point, checkResult, element), SceneInteractDebugDraw.Enabled, point.GetOwnerActor());
 		}
 
-		// Token: 0x06043CE6 RID: 277734 RVA: 0x01098B90 File Offset: 0x01096D90
+		// Token: 0x06039D34 RID: 236852 RVA: 0x0103D3D8 File Offset: 0x0103B5D8
 		private bool FilterTraceResult(PlacedExploreInteractPoint point, bool checkResult, UTraceBaseElement element)
 		{
 			if (!checkResult)
@@ -181,16 +181,16 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplorePlaced
 			return false;
 		}
 
-		// Token: 0x040236C5 RID: 145093
+		// Token: 0x0401E8B7 RID: 125111
 		private readonly SphereTraceBlockChecker BlockChecker = new SphereTraceBlockChecker("PlacedExploreInteractPointSearchStrategy_SelectBest");
 
-		// Token: 0x040236C6 RID: 145094
+		// Token: 0x0401E8B8 RID: 125112
 		private readonly HashSet<int> HitBoxIdSet = new HashSet<int>();
 
-		// Token: 0x040236C7 RID: 145095
+		// Token: 0x0401E8B9 RID: 125113
 		private readonly Dictionary<int, bool> EntityConditionCache = new Dictionary<int, bool>();
 
-		// Token: 0x040236C8 RID: 145096
+		// Token: 0x0401E8BA RID: 125114
 		private const string PROFILE_KEY = "PlacedExploreInteractPointSearchStrategy_SelectBest";
 	}
 }

@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063AF RID: 25519
+	// Token: 0x0200532D RID: 21293
 	[NullableContext(1)]
 	[Nullable(0)]
 	public readonly struct EMowingBuffIntroduceQualityBackground : IEquatable<EMowingBuffIntroduceQualityBackground>
 	{
-		// Token: 0x06040336 RID: 262966 RVA: 0x00F8B411 File Offset: 0x00F89611
+		// Token: 0x06034FF7 RID: 217079 RVA: 0x00ED23A9 File Offset: 0x00ED05A9
 		private EMowingBuffIntroduceQualityBackground(string value)
 		{
 			this._Value = value;
 		}
 
-		// Token: 0x06040337 RID: 262967 RVA: 0x00F8B41A File Offset: 0x00F8961A
+		// Token: 0x06034FF8 RID: 217080 RVA: 0x00ED23B2 File Offset: 0x00ED05B2
 		public override string ToString()
 		{
 			return this._Value;
 		}
 
-		// Token: 0x06040338 RID: 262968 RVA: 0x00F8B422 File Offset: 0x00F89622
+		// Token: 0x06034FF9 RID: 217081 RVA: 0x00ED23BA File Offset: 0x00ED05BA
 		public bool Equals(EMowingBuffIntroduceQualityBackground other)
 		{
 			return this._Value == other._Value;
 		}
 
-		// Token: 0x06040339 RID: 262969 RVA: 0x00F8B438 File Offset: 0x00F89638
+		// Token: 0x06034FFA RID: 217082 RVA: 0x00ED23D0 File Offset: 0x00ED05D0
 		public override bool Equals(object obj)
 		{
 			if (obj is EMowingBuffIntroduceQualityBackground)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return false;
 		}
 
-		// Token: 0x0604033A RID: 262970 RVA: 0x00F8B45D File Offset: 0x00F8965D
+		// Token: 0x06034FFB RID: 217083 RVA: 0x00ED23F5 File Offset: 0x00ED05F5
 		public override int GetHashCode()
 		{
 			string value = this._Value;
@@ -48,28 +48,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return value.GetHashCode();
 		}
 
-		// Token: 0x0604033B RID: 262971 RVA: 0x00F8B470 File Offset: 0x00F89670
+		// Token: 0x06034FFC RID: 217084 RVA: 0x00ED2408 File Offset: 0x00ED0608
 		public static bool operator ==(EMowingBuffIntroduceQualityBackground left, EMowingBuffIntroduceQualityBackground right)
 		{
 			return left.Equals(right);
 		}
 
-		// Token: 0x0604033C RID: 262972 RVA: 0x00F8B47A File Offset: 0x00F8967A
+		// Token: 0x06034FFD RID: 217085 RVA: 0x00ED2412 File Offset: 0x00ED0612
 		public static bool operator !=(EMowingBuffIntroduceQualityBackground left, EMowingBuffIntroduceQualityBackground right)
 		{
 			return !left.Equals(right);
 		}
 
-		// Token: 0x040216EE RID: 136942
+		// Token: 0x0401C01D RID: 114717
 		private readonly string _Value;
 
-		// Token: 0x040216EF RID: 136943
+		// Token: 0x0401C01E RID: 114718
 		public static readonly EMowingBuffIntroduceQualityBackground Gold = new EMowingBuffIntroduceQualityBackground("T_MowingQualityGold");
 
-		// Token: 0x040216F0 RID: 136944
+		// Token: 0x0401C01F RID: 114719
 		public static readonly EMowingBuffIntroduceQualityBackground Purple = new EMowingBuffIntroduceQualityBackground("T_MowingQualityPurple");
 
-		// Token: 0x040216F1 RID: 136945
+		// Token: 0x0401C020 RID: 114720
 		public static readonly EMowingBuffIntroduceQualityBackground Blue = new EMowingBuffIntroduceQualityBackground("T_MowingQualityBlue");
 	}
 }

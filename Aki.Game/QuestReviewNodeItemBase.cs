@@ -2,23 +2,23 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002681 RID: 9857
+// Token: 0x02001B6C RID: 7020
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestReviewNodeItemBase : UiPanelBase
 {
-	// Token: 0x06014339 RID: 82745 RVA: 0x0051A3D2 File Offset: 0x005185D2
+	// Token: 0x0601181B RID: 71707 RVA: 0x0052910A File Offset: 0x0052730A
 	public virtual void Refresh(IQuestReviewNodeParam param)
 	{
 	}
 
-	// Token: 0x0601433A RID: 82746 RVA: 0x0051A3D4 File Offset: 0x005185D4
+	// Token: 0x0601181C RID: 71708 RVA: 0x0052910C File Offset: 0x0052730C
 	public void SetSeqPlayer(LevelSequencePlayer seqPlayer)
 	{
 		this.SeqPlayer = seqPlayer;
 	}
 
-	// Token: 0x0601433B RID: 82747 RVA: 0x0051A3E0 File Offset: 0x005185E0
+	// Token: 0x0601181D RID: 71709 RVA: 0x00529118 File Offset: 0x00527318
 	public void PlaySeqByName(string seqName)
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -29,6 +29,6 @@ public class QuestReviewNodeItemBase : UiPanelBase
 		seqPlayer.PlayLevelSequenceByName(seqName, false, null, false);
 	}
 
-	// Token: 0x0400980D RID: 38925
+	// Token: 0x04009965 RID: 39269
 	protected LevelSequencePlayer SeqPlayer;
 }

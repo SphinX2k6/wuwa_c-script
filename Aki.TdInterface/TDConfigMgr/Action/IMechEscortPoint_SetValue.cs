@@ -3,22 +3,22 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BCB RID: 7115
+	// Token: 0x02001DB2 RID: 7602
 	public class IMechEscortPoint_SetValue
 	{
-		// Token: 0x04005CFA RID: 23802
+		// Token: 0x0400620F RID: 25103
 		public int SplinePointIndex;
 
-		// Token: 0x04005CFB RID: 23803
+		// Token: 0x04006210 RID: 25104
 		public float ForwardOffset;
 
-		// Token: 0x04005CFC RID: 23804
+		// Token: 0x04006211 RID: 25105
 		public float Radius;
 
-		// Token: 0x04005CFD RID: 23805
+		// Token: 0x04006212 RID: 25106
 		public float Angle;
 
-		// Token: 0x04005CFE RID: 23806
+		// Token: 0x04006213 RID: 25107
 		[Nullable(2)]
 		public IEnterMovieCameraType MovieCamera;
 	}

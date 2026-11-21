@@ -9,13 +9,13 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x020032C4 RID: 12996
+// Token: 0x02002835 RID: 10293
 [NullableContext(1)]
 [Nullable(0)]
 public class VehicleActorComponent : BaseActorComponent
 {
-	// Token: 0x17002723 RID: 10019
-	// (get) Token: 0x0601C360 RID: 115552 RVA: 0x007DB0E9 File Offset: 0x007D92E9
+	// Token: 0x17002A1E RID: 10782
+	// (get) Token: 0x06019FB1 RID: 106417 RVA: 0x00802080 File Offset: 0x00800280
 	[Nullable(2)]
 	public AController DefaultController
 	{
@@ -26,8 +26,8 @@ public class VehicleActorComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x17002724 RID: 10020
-	// (get) Token: 0x0601C361 RID: 115553 RVA: 0x007DB0F1 File Offset: 0x007D92F1
+	// Token: 0x17002A1F RID: 10783
+	// (get) Token: 0x06019FB2 RID: 106418 RVA: 0x00802088 File Offset: 0x00800288
 	public TsBaseVehicle Actor
 	{
 		get
@@ -36,8 +36,8 @@ public class VehicleActorComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x17002725 RID: 10021
-	// (get) Token: 0x0601C362 RID: 115554 RVA: 0x007DB0FE File Offset: 0x007D92FE
+	// Token: 0x17002A20 RID: 10784
+	// (get) Token: 0x06019FB3 RID: 106419 RVA: 0x00802095 File Offset: 0x00800295
 	[Nullable(2)]
 	public TsBaseVehicle VehicleOwner
 	{
@@ -48,8 +48,8 @@ public class VehicleActorComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x17002726 RID: 10022
-	// (get) Token: 0x0601C363 RID: 115555 RVA: 0x007DB10B File Offset: 0x007D930B
+	// Token: 0x17002A21 RID: 10785
+	// (get) Token: 0x06019FB4 RID: 106420 RVA: 0x008020A2 File Offset: 0x008002A2
 	[Nullable(2)]
 	public override USkeletalMeshComponent SkeletalMesh
 	{
@@ -60,14 +60,14 @@ public class VehicleActorComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x0601C364 RID: 115556 RVA: 0x007DB118 File Offset: 0x007D9318
+	// Token: 0x06019FB5 RID: 106421 RVA: 0x008020AF File Offset: 0x008002AF
 	public UPrimitiveComponent GetPrimitiveComponent()
 	{
 		return this.SkeletalMesh;
 	}
 
-	// Token: 0x17002727 RID: 10023
-	// (get) Token: 0x0601C365 RID: 115557 RVA: 0x007DB120 File Offset: 0x007D9320
+	// Token: 0x17002A22 RID: 10786
+	// (get) Token: 0x06019FB6 RID: 106422 RVA: 0x008020B7 File Offset: 0x008002B7
 	public global::Vector InputDirectProxy
 	{
 		get
@@ -76,8 +76,8 @@ public class VehicleActorComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x17002728 RID: 10024
-	// (get) Token: 0x0601C366 RID: 115558 RVA: 0x007DB128 File Offset: 0x007D9328
+	// Token: 0x17002A23 RID: 10787
+	// (get) Token: 0x06019FB7 RID: 106423 RVA: 0x008020BF File Offset: 0x008002BF
 	public FVector InputDirect
 	{
 		get
@@ -86,8 +86,18 @@ public class VehicleActorComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x17002729 RID: 10025
-	// (get) Token: 0x0601C367 RID: 115559 RVA: 0x007DB138 File Offset: 0x007D9338
+	// Token: 0x17002A24 RID: 10788
+	// (get) Token: 0x06019FB8 RID: 106424 RVA: 0x008020CC File Offset: 0x008002CC
+	public EInputDirectSpace InputDirectSpace
+	{
+		get
+		{
+			return this.InputDirectSpaceInternal;
+		}
+	}
+
+	// Token: 0x17002A25 RID: 10789
+	// (get) Token: 0x06019FB9 RID: 106425 RVA: 0x008020D4 File Offset: 0x008002D4
 	public global::Rotator InputRotatorProxy
 	{
 		get
@@ -110,8 +120,8 @@ public class VehicleActorComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x1700272A RID: 10026
-	// (get) Token: 0x0601C368 RID: 115560 RVA: 0x007DB1F8 File Offset: 0x007D93F8
+	// Token: 0x17002A26 RID: 10790
+	// (get) Token: 0x06019FBA RID: 106426 RVA: 0x00802194 File Offset: 0x00800394
 	public global::Vector InputFacingProxy
 	{
 		get
@@ -138,8 +148,8 @@ public class VehicleActorComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x1700272B RID: 10027
-	// (get) Token: 0x0601C369 RID: 115561 RVA: 0x007DB2C4 File Offset: 0x007D94C4
+	// Token: 0x17002A27 RID: 10791
+	// (get) Token: 0x06019FBB RID: 106427 RVA: 0x00802260 File Offset: 0x00800460
 	public override global::Vector ActorGravityDirectProxy
 	{
 		get
@@ -153,10 +163,11 @@ public class VehicleActorComponent : BaseActorComponent
 				}
 				else
 				{
-					Aki.Protocol.Vector initGravityDirection = base.CreatureData.GetInitGravityDirection();
-					if (initGravityDirection != null)
+					CreatureDataComponent creatureData = base.CreatureData;
+					Aki.Protocol.Vector vector = (creatureData != null) ? creatureData.GetInitGravityDirection() : null;
+					if (vector != null)
 					{
-						this.CachedActorGravityDirect.FromConfigVector(initGravityDirection);
+						this.CachedActorGravityDirect.FromConfigVector(vector);
 					}
 				}
 			}
@@ -164,7 +175,7 @@ public class VehicleActorComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x0601C36A RID: 115562 RVA: 0x007DB334 File Offset: 0x007D9534
+	// Token: 0x06019FBC RID: 106428 RVA: 0x008022D7 File Offset: 0x008004D7
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -173,7 +184,7 @@ public class VehicleActorComponent : BaseActorComponent
 		return base.InitCreatureData();
 	}
 
-	// Token: 0x0601C36B RID: 115563 RVA: 0x007DB354 File Offset: 0x007D9554
+	// Token: 0x06019FBD RID: 106429 RVA: 0x008022F8 File Offset: 0x008004F8
 	protected override void InitSizeInternal()
 	{
 		this.RadiusInternal = this.Actor.CapsuleComponent.CapsuleRadius;
@@ -182,7 +193,7 @@ public class VehicleActorComponent : BaseActorComponent
 		this.DefaultHalfHeightInternal = this.HalfHeightInternal;
 	}
 
-	// Token: 0x0601C36C RID: 115564 RVA: 0x007DB3A8 File Offset: 0x007D95A8
+	// Token: 0x06019FBE RID: 106430 RVA: 0x0080234C File Offset: 0x0080054C
 	protected unsafe override bool OnInit()
 	{
 		base.OnInit();
@@ -259,7 +270,7 @@ public class VehicleActorComponent : BaseActorComponent
 		return true;
 	}
 
-	// Token: 0x0601C36D RID: 115565 RVA: 0x007DB6EB File Offset: 0x007D98EB
+	// Token: 0x06019FBF RID: 106431 RVA: 0x0080268F File Offset: 0x0080088F
 	protected override bool OnStart()
 	{
 		if (!base.OnStart())
@@ -272,7 +283,7 @@ public class VehicleActorComponent : BaseActorComponent
 		return true;
 	}
 
-	// Token: 0x0601C36E RID: 115566 RVA: 0x007DB72C File Offset: 0x007D992C
+	// Token: 0x06019FC0 RID: 106432 RVA: 0x008026D0 File Offset: 0x008008D0
 	protected override void OnActivate()
 	{
 		base.OnActivate();
@@ -286,7 +297,7 @@ public class VehicleActorComponent : BaseActorComponent
 		this.SetAutonomous(flag || entitySplineMoveInfo != null, null);
 	}
 
-	// Token: 0x0601C36F RID: 115567 RVA: 0x007DB7D0 File Offset: 0x007D99D0
+	// Token: 0x06019FC1 RID: 106433 RVA: 0x00802774 File Offset: 0x00800974
 	protected override bool OnClear()
 	{
 		AActor actorInternal = this.ActorInternal;
@@ -312,20 +323,20 @@ public class VehicleActorComponent : BaseActorComponent
 		return base.OnClear();
 	}
 
-	// Token: 0x0601C370 RID: 115568 RVA: 0x007DB866 File Offset: 0x007D9A66
+	// Token: 0x06019FC2 RID: 106434 RVA: 0x0080280A File Offset: 0x00800A0A
 	protected override void OnDisable(string reason)
 	{
 		this.OnSetActorActive(false, reason);
 	}
 
-	// Token: 0x0601C371 RID: 115569 RVA: 0x007DB870 File Offset: 0x007D9A70
+	// Token: 0x06019FC3 RID: 106435 RVA: 0x00802814 File Offset: 0x00800A14
 	protected override void OnEnable()
 	{
 		this.OnSetActorActive(true, null);
 		base.ResetAllCachedTime();
 	}
 
-	// Token: 0x0601C372 RID: 115570 RVA: 0x007DB880 File Offset: 0x007D9A80
+	// Token: 0x06019FC4 RID: 106436 RVA: 0x00802824 File Offset: 0x00800A24
 	[NullableContext(2)]
 	protected unsafe AActor InitActorNew(int modelId)
 	{
@@ -359,7 +370,7 @@ public class VehicleActorComponent : BaseActorComponent
 		return aactor;
 	}
 
-	// Token: 0x0601C373 RID: 115571 RVA: 0x007DB964 File Offset: 0x007D9B64
+	// Token: 0x06019FC5 RID: 106437 RVA: 0x00802908 File Offset: 0x00800B08
 	protected override void OnChangeTimeDilation(float timeDilation)
 	{
 		PawnTimeScaleComponent component = base.Entity.GetComponent<PawnTimeScaleComponent>();
@@ -367,7 +378,7 @@ public class VehicleActorComponent : BaseActorComponent
 		this.ActorInternal.CustomTimeDilation = timeDilation * num;
 	}
 
-	// Token: 0x0601C374 RID: 115572 RVA: 0x007DB99C File Offset: 0x007D9B9C
+	// Token: 0x06019FC6 RID: 106438 RVA: 0x00802940 File Offset: 0x00800B40
 	protected override void SetMoveAutonomous(bool moveAutonomous, string reason = "")
 	{
 		CombatLog instance = CombatLog.Instance;
@@ -394,7 +405,7 @@ public class VehicleActorComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x0601C375 RID: 115573 RVA: 0x007DBA14 File Offset: 0x007D9C14
+	// Token: 0x06019FC7 RID: 106439 RVA: 0x008029B8 File Offset: 0x00800BB8
 	[NullableContext(2)]
 	protected unsafe void OnActorDestroy(AActor aActor)
 	{
@@ -413,7 +424,7 @@ public class VehicleActorComponent : BaseActorComponent
 		instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0601C376 RID: 115574 RVA: 0x007DBAC8 File Offset: 0x007D9CC8
+	// Token: 0x06019FC8 RID: 106440 RVA: 0x00802A6C File Offset: 0x00800C6C
 	private void LoadPartHitConf()
 	{
 		UClassStackOnlyPtr @class = this.Actor.GetClass();
@@ -444,13 +455,13 @@ public class VehicleActorComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x0601C377 RID: 115575 RVA: 0x007DBB63 File Offset: 0x007D9D63
+	// Token: 0x06019FC9 RID: 106441 RVA: 0x00802B07 File Offset: 0x00800D07
 	public void SetInputRotator(IRotator value)
 	{
 		this.SetInputRotatorByNumber(value.Pitch, value.Yaw, value.Roll);
 	}
 
-	// Token: 0x0601C378 RID: 115576 RVA: 0x007DBB7D File Offset: 0x007D9D7D
+	// Token: 0x06019FCA RID: 106442 RVA: 0x00802B21 File Offset: 0x00800D21
 	public void SetInputRotatorByNumber(float pitch, float yaw, float roll)
 	{
 		this.InputRotatorInternal.Pitch = pitch;
@@ -459,8 +470,8 @@ public class VehicleActorComponent : BaseActorComponent
 		this.NewestInputFacingType = VehicleActorComponent.ENewestInputFacingType.Rotator;
 	}
 
-	// Token: 0x0601C379 RID: 115577 RVA: 0x007DBBAC File Offset: 0x007D9DAC
-	public unsafe void SetInputDirect(IVector value, bool clearGravityDirect = false)
+	// Token: 0x06019FCB RID: 106443 RVA: 0x00802B50 File Offset: 0x00800D50
+	public unsafe void SetInputDirect(IVector value, bool clearGravityDirect = false, EInputDirectSpace space = EInputDirectSpace.World)
 	{
 		if (!MathUtils.Instance.IsValidVector(value, 100000000))
 		{
@@ -475,6 +486,7 @@ public class VehicleActorComponent : BaseActorComponent
 			instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 			return;
 		}
+		this.InputDirectSpaceInternal = space;
 		if (!clearGravityDirect)
 		{
 			this.InputDirectInternal.DeepCopy(value);
@@ -490,8 +502,8 @@ public class VehicleActorComponent : BaseActorComponent
 		global::Vector.VectorPlaneProject(VehicleActorComponent.TmpVector, this.VehicleMoveComp.GravityDirect, this.InputDirectInternal);
 	}
 
-	// Token: 0x0601C37A RID: 115578 RVA: 0x007DBCC4 File Offset: 0x007D9EC4
-	public unsafe void SetInputDirectByNumber(float x, float y, float z)
+	// Token: 0x06019FCC RID: 106444 RVA: 0x00802C70 File Offset: 0x00800E70
+	public unsafe void SetInputDirectByNumber(float x, float y, float z, EInputDirectSpace space = EInputDirectSpace.World)
 	{
 		if (!MathUtils.Instance.IsValidNumbers((double)x, (double)y, (double)z, 100000000))
 		{
@@ -506,12 +518,13 @@ public class VehicleActorComponent : BaseActorComponent
 			instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 			return;
 		}
+		this.InputDirectSpaceInternal = space;
 		this.InputDirectInternal.X = (double)x;
 		this.InputDirectInternal.Y = (double)y;
 		this.InputDirectInternal.Z = (double)z;
 	}
 
-	// Token: 0x0601C37B RID: 115579 RVA: 0x007DBD8C File Offset: 0x007D9F8C
+	// Token: 0x06019FCD RID: 106445 RVA: 0x00802D40 File Offset: 0x00800F40
 	public void SetInputFacing(global::Vector facing, bool clearGravityDirect = false)
 	{
 		this.InputFacingInternal.DeepCopy(facing);
@@ -534,21 +547,21 @@ public class VehicleActorComponent : BaseActorComponent
 		this.NewestInputFacingType = VehicleActorComponent.ENewestInputFacingType.Facing;
 	}
 
-	// Token: 0x0601C37C RID: 115580 RVA: 0x007DBE2C File Offset: 0x007DA02C
+	// Token: 0x06019FCE RID: 106446 RVA: 0x00802DE0 File Offset: 0x00800FE0
 	public void SetOverrideTurnSpeed(float? value)
 	{
 		this.OverrideTurnSpeed = value;
 	}
 
-	// Token: 0x0601C37D RID: 115581 RVA: 0x007DBE35 File Offset: 0x007DA035
+	// Token: 0x06019FCF RID: 106447 RVA: 0x00802DE9 File Offset: 0x00800FE9
 	public void ClearInput()
 	{
-		this.SetInputDirect(global::Vector.ZeroVector, false);
+		this.SetInputDirect(global::Vector.ZeroVector, false, EInputDirectSpace.World);
 		this.SetInputFacing(base.ActorForwardProxy, false);
 		this.SetOverrideTurnSpeed(new float?(0f));
 	}
 
-	// Token: 0x0601C37E RID: 115582 RVA: 0x007DBE68 File Offset: 0x007DA068
+	// Token: 0x06019FD0 RID: 106448 RVA: 0x00802E1C File Offset: 0x0080101C
 	public unsafe void InitDefaultController(ACharacter actor)
 	{
 		this.DefaultControllerInternal = actor.GetController();
@@ -590,7 +603,7 @@ public class VehicleActorComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x0601C37F RID: 115583 RVA: 0x007DC02F File Offset: 0x007DA22F
+	// Token: 0x06019FD1 RID: 106449 RVA: 0x00802FE3 File Offset: 0x008011E3
 	public void CreateDefaultController(ACharacter actor)
 	{
 		actor.AIControllerClass = AKuroAIController.StaticClass();
@@ -598,7 +611,7 @@ public class VehicleActorComponent : BaseActorComponent
 		this.DefaultControllerInternal = actor.GetController();
 	}
 
-	// Token: 0x0601C380 RID: 115584 RVA: 0x007DC054 File Offset: 0x007DA254
+	// Token: 0x06019FD2 RID: 106450 RVA: 0x00803008 File Offset: 0x00801208
 	public void RestoreDefaultController()
 	{
 		if (this.DefaultController == null)
@@ -613,7 +626,7 @@ public class VehicleActorComponent : BaseActorComponent
 		this.DefaultController.Possess(this.Actor);
 	}
 
-	// Token: 0x0601C381 RID: 115585 RVA: 0x007DC0B4 File Offset: 0x007DA2B4
+	// Token: 0x06019FD3 RID: 106451 RVA: 0x00803068 File Offset: 0x00801268
 	public override bool SetActorRotation(FRotator value, string context, bool sweep = false)
 	{
 		bool result = false;
@@ -629,7 +642,7 @@ public class VehicleActorComponent : BaseActorComponent
 		return result;
 	}
 
-	// Token: 0x0601C382 RID: 115586 RVA: 0x007DC134 File Offset: 0x007DA334
+	// Token: 0x06019FD4 RID: 106452 RVA: 0x008030E8 File Offset: 0x008012E8
 	public unsafe bool SetActorRotationWithPriority(FRotator value, string module, ESetRotationPriority priority, bool clearMeshRotationBuffer = false, bool sweep = false)
 	{
 		FunctionRequestWithPriority<ESetRotationPriority> functionRequestWithPriority = new FunctionRequestWithPriority<ESetRotationPriority>();
@@ -660,7 +673,7 @@ public class VehicleActorComponent : BaseActorComponent
 		return false;
 	}
 
-	// Token: 0x0601C383 RID: 115587 RVA: 0x007DC238 File Offset: 0x007DA438
+	// Token: 0x06019FD5 RID: 106453 RVA: 0x008031EC File Offset: 0x008013EC
 	public override bool SetActorLocationAndRotation(FVectorDouble location, FRotator rotation, string context, bool sweep = false, ESetRotationPriority? priority = null)
 	{
 		if (!MathUtils.Instance.IsValidVector(location, 100000000) || !MathUtils.Instance.IsValidRotator(rotation, 100000000))
@@ -692,7 +705,7 @@ public class VehicleActorComponent : BaseActorComponent
 		return result;
 	}
 
-	// Token: 0x0601C384 RID: 115588 RVA: 0x007DC30C File Offset: 0x007DA50C
+	// Token: 0x06019FD6 RID: 106454 RVA: 0x008032C0 File Offset: 0x008014C0
 	public override bool SetActorTransform(FTransformDouble value, string context, bool sweep = true, ESetRotationPriority? priority = null)
 	{
 		if (priority != null)
@@ -709,7 +722,7 @@ public class VehicleActorComponent : BaseActorComponent
 		return base.SetActorTransform(value, context, sweep, null);
 	}
 
-	// Token: 0x0601C385 RID: 115589 RVA: 0x007DC374 File Offset: 0x007DA574
+	// Token: 0x06019FD7 RID: 106455 RVA: 0x00803328 File Offset: 0x00801528
 	public virtual bool SetActorTransformExceptMesh(FTransformDouble value, string context, bool sweep = true, ESetRotationPriority? priority = null)
 	{
 		global::Vector cachedDesiredActorLocation = this.CachedDesiredActorLocation;
@@ -728,7 +741,7 @@ public class VehicleActorComponent : BaseActorComponent
 		return result;
 	}
 
-	// Token: 0x0601C386 RID: 115590 RVA: 0x007DC3F4 File Offset: 0x007DA5F4
+	// Token: 0x06019FD8 RID: 106456 RVA: 0x008033A8 File Offset: 0x008015A8
 	public virtual bool SetActorLocationAndRotationExceptMesh(FVectorDouble location, FRotator rotation, string context, bool sweep = true, ESetRotationPriority? priority = null)
 	{
 		this.CachedDesiredActorLocation.FromUeVector(location);
@@ -744,7 +757,7 @@ public class VehicleActorComponent : BaseActorComponent
 		return result;
 	}
 
-	// Token: 0x0601C387 RID: 115591 RVA: 0x007DC46C File Offset: 0x007DA66C
+	// Token: 0x06019FD9 RID: 106457 RVA: 0x00803420 File Offset: 0x00801620
 	public void SetActorVelocity(global::Vector v)
 	{
 		if (this.Actor.RootComponent == null)
@@ -770,7 +783,7 @@ public class VehicleActorComponent : BaseActorComponent
 		this.CachedActorVelocity.DeepCopy(v);
 	}
 
-	// Token: 0x0601C388 RID: 115592 RVA: 0x007DC502 File Offset: 0x007DA702
+	// Token: 0x06019FDA RID: 106458 RVA: 0x008034B6 File Offset: 0x008016B6
 	public void FixBornLocation([Nullable(2)] global::Vector target = null, string context = "FixBornLocation")
 	{
 		BaseVehiclePerformComponent component = base.Entity.GetComponent<BaseVehiclePerformComponent>();
@@ -781,17 +794,17 @@ public class VehicleActorComponent : BaseActorComponent
 		component.FixBornLocation(target, context);
 	}
 
-	// Token: 0x0601C389 RID: 115593 RVA: 0x007DC51B File Offset: 0x007DA71B
+	// Token: 0x06019FDB RID: 106459 RVA: 0x008034CF File Offset: 0x008016CF
 	public virtual void EnterFirstPersonMode()
 	{
 	}
 
-	// Token: 0x0601C38A RID: 115594 RVA: 0x007DC51D File Offset: 0x007DA71D
+	// Token: 0x06019FDC RID: 106460 RVA: 0x008034D1 File Offset: 0x008016D1
 	public virtual void ExitFirstPersonMode()
 	{
 	}
 
-	// Token: 0x0601C38B RID: 115595 RVA: 0x007DC520 File Offset: 0x007DA720
+	// Token: 0x06019FDD RID: 106461 RVA: 0x008034D4 File Offset: 0x008016D4
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -799,97 +812,158 @@ public class VehicleActorComponent : BaseActorComponent
 			return false;
 		}
 		VehicleActorComponent vehicleActorComponent = (VehicleActorComponent)componentTemplate;
-		if (base.CanResetComponentProperty("InputComp"))
+		if (vehicleActorComponent.InputComp == null)
 		{
-			if (vehicleActorComponent.InputComp == null)
-			{
-				this.InputComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleInputComponent>(this.InputComp), "InputComp"))
-			{
-				return false;
-			}
+			this.InputComp = null;
 		}
-		if (base.CanResetComponentProperty("ShowDebug"))
-		{
-			this.ShowDebug = vehicleActorComponent.ShowDebug;
-		}
-		if (base.CanResetComponentProperty("SetRotationRequestProxy"))
-		{
-			if (vehicleActorComponent.SetRotationRequestProxy == null)
-			{
-				this.SetRotationRequestProxy = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FunctionRequestProxy<FunctionRequestWithPriority<ESetRotationPriority>>>(this.SetRotationRequestProxy), "SetRotationRequestProxy"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DefaultControllerInternal"))
-		{
-			if (vehicleActorComponent.DefaultControllerInternal == null)
-			{
-				this.DefaultControllerInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AController>(this.DefaultControllerInternal), "DefaultControllerInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PartHitConf"))
-		{
-			if (vehicleActorComponent.PartHitConf == null)
-			{
-				this.PartHitConf = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_PartHitEffect_C>(this.PartHitConf), "PartHitConf"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("StartHideDistance"))
-		{
-			this.StartHideDistance = vehicleActorComponent.StartHideDistance;
-		}
-		if (base.CanResetComponentProperty("CompleteHideDistance"))
-		{
-			this.CompleteHideDistance = vehicleActorComponent.CompleteHideDistance;
-		}
-		if (base.CanResetComponentProperty("StartDitherValue"))
-		{
-			this.StartDitherValue = vehicleActorComponent.StartDitherValue;
-		}
-		if (base.CanResetComponentProperty("InputDirectInternal") && vehicleActorComponent.InputDirectInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.InputDirectInternal), "InputDirectInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputComp), "InputComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("InputRotatorInternal") && vehicleActorComponent.InputRotatorInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.InputRotatorInternal), "InputRotatorInternal"))
+		this.ShowDebug = vehicleActorComponent.ShowDebug;
+		if (vehicleActorComponent.SetRotationRequestProxy == null)
+		{
+			this.SetRotationRequestProxy = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SetRotationRequestProxy), "SetRotationRequestProxy"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("InputFacingInternal") && vehicleActorComponent.InputFacingInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.InputFacingInternal), "InputFacingInternal"))
+		if (vehicleActorComponent.DefaultControllerInternal == null)
+		{
+			this.DefaultControllerInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DefaultControllerInternal), "DefaultControllerInternal"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("NewestInputFacingType"))
+		if (vehicleActorComponent.PartHitConf == null)
 		{
-			this.NewestInputFacingType = vehicleActorComponent.NewestInputFacingType;
+			this.PartHitConf = null;
 		}
-		if (base.CanResetComponentProperty("OverrideTurnSpeed"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PartHitConf), "PartHitConf"))
 		{
-			this.OverrideTurnSpeed = vehicleActorComponent.OverrideTurnSpeed;
+			return false;
 		}
+		this.StartHideDistance = vehicleActorComponent.StartHideDistance;
+		this.CompleteHideDistance = vehicleActorComponent.CompleteHideDistance;
+		this.StartDitherValue = vehicleActorComponent.StartDitherValue;
+		if (vehicleActorComponent.InputDirectInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputDirectInternal), "InputDirectInternal"))
+		{
+			return false;
+		}
+		this.InputDirectSpaceInternal = vehicleActorComponent.InputDirectSpaceInternal;
+		if (vehicleActorComponent.InputRotatorInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputRotatorInternal), "InputRotatorInternal"))
+		{
+			return false;
+		}
+		if (vehicleActorComponent.InputFacingInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputFacingInternal), "InputFacingInternal"))
+		{
+			return false;
+		}
+		this.NewestInputFacingType = vehicleActorComponent.NewestInputFacingType;
+		this.OverrideTurnSpeed = vehicleActorComponent.OverrideTurnSpeed;
 		return true;
 	}
 
-	// Token: 0x0400DF35 RID: 57141
+	// Token: 0x17002A28 RID: 10792
+	// (get) Token: 0x06019FDE RID: 106462 RVA: 0x0080365A File Offset: 0x0080185A
+	public override bool NeedCreateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A29 RID: 10793
+	// (get) Token: 0x06019FDF RID: 106463 RVA: 0x0080365D File Offset: 0x0080185D
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A2A RID: 10794
+	// (get) Token: 0x06019FE0 RID: 106464 RVA: 0x00803660 File Offset: 0x00801860
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A2B RID: 10795
+	// (get) Token: 0x06019FE1 RID: 106465 RVA: 0x00803663 File Offset: 0x00801863
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A2C RID: 10796
+	// (get) Token: 0x06019FE2 RID: 106466 RVA: 0x00803666 File Offset: 0x00801866
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A2D RID: 10797
+	// (get) Token: 0x06019FE3 RID: 106467 RVA: 0x00803669 File Offset: 0x00801869
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A2E RID: 10798
+	// (get) Token: 0x06019FE4 RID: 106468 RVA: 0x0080366C File Offset: 0x0080186C
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A2F RID: 10799
+	// (get) Token: 0x06019FE5 RID: 106469 RVA: 0x0080366F File Offset: 0x0080186F
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A30 RID: 10800
+	// (get) Token: 0x06019FE6 RID: 106470 RVA: 0x00803672 File Offset: 0x00801872
+	public override bool NeedChangeTimeDilationInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E3D7 RID: 58327
 	[Nullable(2)]
 	public VehicleInputComponent InputComp;
 
-	// Token: 0x0400DF36 RID: 57142
+	// Token: 0x0400E3D8 RID: 58328
 	public bool ShowDebug;
 
-	// Token: 0x0400DF37 RID: 57143
+	// Token: 0x0400E3D9 RID: 58329
 	[Nullable(new byte[]
 	{
 		2,
@@ -897,55 +971,58 @@ public class VehicleActorComponent : BaseActorComponent
 	})]
 	protected FunctionRequestProxy<FunctionRequestWithPriority<ESetRotationPriority>> SetRotationRequestProxy;
 
-	// Token: 0x0400DF38 RID: 57144
+	// Token: 0x0400E3DA RID: 58330
 	[Nullable(2)]
 	protected AController DefaultControllerInternal;
 
-	// Token: 0x0400DF39 RID: 57145
+	// Token: 0x0400E3DB RID: 58331
 	[Nullable(2)]
 	private BP_PartHitEffect_C PartHitConf;
 
-	// Token: 0x0400DF3A RID: 57146
+	// Token: 0x0400E3DC RID: 58332
 	public float StartHideDistance;
 
-	// Token: 0x0400DF3B RID: 57147
+	// Token: 0x0400E3DD RID: 58333
 	public float CompleteHideDistance;
 
-	// Token: 0x0400DF3C RID: 57148
+	// Token: 0x0400E3DE RID: 58334
 	public float StartDitherValue;
 
-	// Token: 0x0400DF3D RID: 57149
+	// Token: 0x0400E3DF RID: 58335
 	[StaticVariableRuleIgnore]
 	protected static global::Vector TmpVector = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x0400DF3E RID: 57150
+	// Token: 0x0400E3E0 RID: 58336
 	[StaticVariableRuleIgnore]
 	protected static Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400DF3F RID: 57151
+	// Token: 0x0400E3E1 RID: 58337
 	private readonly global::Vector InputDirectInternal = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x0400DF40 RID: 57152
+	// Token: 0x0400E3E2 RID: 58338
+	private EInputDirectSpace InputDirectSpaceInternal;
+
+	// Token: 0x0400E3E3 RID: 58339
 	private readonly global::Rotator InputRotatorInternal = global::Rotator.Create(0f, 0f, 0f);
 
-	// Token: 0x0400DF41 RID: 57153
+	// Token: 0x0400E3E4 RID: 58340
 	private readonly global::Vector InputFacingInternal = global::Vector.Create(1.0, 0.0, 0.0);
 
-	// Token: 0x0400DF42 RID: 57154
+	// Token: 0x0400E3E5 RID: 58341
 	protected VehicleActorComponent.ENewestInputFacingType NewestInputFacingType;
 
-	// Token: 0x0400DF43 RID: 57155
+	// Token: 0x0400E3E6 RID: 58342
 	public float? OverrideTurnSpeed = new float?(0f);
 
-	// Token: 0x0200976A RID: 38762
+	// Token: 0x0200898D RID: 35213
 	[NullableContext(0)]
 	public enum ENewestInputFacingType
 	{
-		// Token: 0x040306A7 RID: 198311
+		// Token: 0x0402BD34 RID: 179508
 		All,
-		// Token: 0x040306A8 RID: 198312
+		// Token: 0x0402BD35 RID: 179509
 		Rotator,
-		// Token: 0x040306A9 RID: 198313
+		// Token: 0x0402BD36 RID: 179510
 		Facing
 	}
 }

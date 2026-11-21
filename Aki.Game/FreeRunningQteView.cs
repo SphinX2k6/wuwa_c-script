@@ -11,18 +11,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002303 RID: 8963
+// Token: 0x020017E7 RID: 6119
 [NullableContext(2)]
 [Nullable(0)]
 public class FreeRunningQteView : PanelQteView
 {
-	// Token: 0x06011AED RID: 72429 RVA: 0x00458882 File Offset: 0x00456A82
+	// Token: 0x0600EF85 RID: 61317 RVA: 0x00465562 File Offset: 0x00463762
 	[NullableContext(1)]
 	public FreeRunningQteView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011AEE RID: 72430 RVA: 0x004588A4 File Offset: 0x00456AA4
+	// Token: 0x0600EF86 RID: 61318 RVA: 0x00465584 File Offset: 0x00463784
 	protected unsafe override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -61,7 +61,7 @@ public class FreeRunningQteView : PanelQteView
 		this.ComponentRegisterInfos = list2;
 	}
 
-	// Token: 0x06011AEF RID: 72431 RVA: 0x004589FC File Offset: 0x00456BFC
+	// Token: 0x0600EF87 RID: 61319 RVA: 0x004656DC File Offset: 0x004638DC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FreeRunningQteView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -72,7 +72,7 @@ public class FreeRunningQteView : PanelQteView
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011AF0 RID: 72432 RVA: 0x00458A40 File Offset: 0x00456C40
+	// Token: 0x0600EF88 RID: 61320 RVA: 0x00465720 File Offset: 0x00463920
 	protected override void OnStart()
 	{
 		if (this.IsMobile)
@@ -100,13 +100,13 @@ public class FreeRunningQteView : PanelQteView
 		this.InitQteData();
 	}
 
-	// Token: 0x06011AF1 RID: 72433 RVA: 0x00458AEF File Offset: 0x00456CEF
+	// Token: 0x0600EF89 RID: 61321 RVA: 0x004657CF File Offset: 0x004639CF
 	protected override void OnAfterPlayStartSequence()
 	{
 		this.OnViewSequenceEndEvent();
 	}
 
-	// Token: 0x06011AF2 RID: 72434 RVA: 0x00458AF7 File Offset: 0x00456CF7
+	// Token: 0x0600EF8A RID: 61322 RVA: 0x004657D7 File Offset: 0x004639D7
 	protected override void OnBeforeDestroyImplement()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -117,7 +117,7 @@ public class FreeRunningQteView : PanelQteView
 		levelSequencePlayer.Clear();
 	}
 
-	// Token: 0x06011AF3 RID: 72435 RVA: 0x00458B0C File Offset: 0x00456D0C
+	// Token: 0x0600EF8B RID: 61323 RVA: 0x004657EC File Offset: 0x004639EC
 	private void OnViewSequenceEndEvent()
 	{
 		if (this.IsQteEnd)
@@ -137,7 +137,7 @@ public class FreeRunningQteView : PanelQteView
 		levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x06011AF4 RID: 72436 RVA: 0x00458B54 File Offset: 0x00456D54
+	// Token: 0x0600EF8C RID: 61324 RVA: 0x00465834 File Offset: 0x00463A34
 	[NullableContext(1)]
 	private void OnSequenceEndEvent(string sequenceName)
 	{
@@ -182,7 +182,7 @@ public class FreeRunningQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011AF5 RID: 72437 RVA: 0x00458C3C File Offset: 0x00456E3C
+	// Token: 0x0600EF8D RID: 61325 RVA: 0x0046591C File Offset: 0x00463B1C
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
@@ -193,21 +193,21 @@ public class FreeRunningQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011AF6 RID: 72438 RVA: 0x00458C8F File Offset: 0x00456E8F
+	// Token: 0x0600EF8E RID: 61326 RVA: 0x0046596F File Offset: 0x00463B6F
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
 		this.ResumeQte();
 	}
 
-	// Token: 0x06011AF7 RID: 72439 RVA: 0x00458C9D File Offset: 0x00456E9D
+	// Token: 0x0600EF8F RID: 61327 RVA: 0x0046597D File Offset: 0x00463B7D
 	protected override void OnBeforeHide()
 	{
 		this.PauseQte();
 		base.OnBeforeHide();
 	}
 
-	// Token: 0x06011AF8 RID: 72440 RVA: 0x00458CAB File Offset: 0x00456EAB
+	// Token: 0x0600EF90 RID: 61328 RVA: 0x0046598B File Offset: 0x00463B8B
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -222,12 +222,12 @@ public class FreeRunningQteView : PanelQteView
 		this.StopDelayTimer();
 	}
 
-	// Token: 0x06011AF9 RID: 72441 RVA: 0x00458CD7 File Offset: 0x00456ED7
+	// Token: 0x0600EF91 RID: 61329 RVA: 0x004659B7 File Offset: 0x00463BB7
 	protected override void RefreshVisible()
 	{
 	}
 
-	// Token: 0x06011AFA RID: 72442 RVA: 0x00458CD9 File Offset: 0x00456ED9
+	// Token: 0x0600EF92 RID: 61330 RVA: 0x004659B9 File Offset: 0x00463BB9
 	private void StopDelayTimer()
 	{
 		if (this.DelayTimer != null)
@@ -237,7 +237,7 @@ public class FreeRunningQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011AFB RID: 72443 RVA: 0x00458CFC File Offset: 0x00456EFC
+	// Token: 0x0600EF93 RID: 61331 RVA: 0x004659DC File Offset: 0x00463BDC
 	private UniTask LoadIcon([Nullable(new byte[]
 	{
 		2,
@@ -253,7 +253,7 @@ public class FreeRunningQteView : PanelQteView
 		return <LoadIcon>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011AFC RID: 72444 RVA: 0x00458D48 File Offset: 0x00456F48
+	// Token: 0x0600EF94 RID: 61332 RVA: 0x00465A28 File Offset: 0x00463C28
 	private void InitQteData()
 	{
 		int num = (int)(this.OpenParam ?? 0);
@@ -276,7 +276,7 @@ public class FreeRunningQteView : PanelQteView
 		EventSystem.Instance.Emit<string>(EEventName.FreeRunningQteStart, this.QteAction);
 	}
 
-	// Token: 0x06011AFD RID: 72445 RVA: 0x00458E34 File Offset: 0x00457034
+	// Token: 0x0600EF95 RID: 61333 RVA: 0x00465B14 File Offset: 0x00463D14
 	protected override void OnAddEventListener()
 	{
 		base.OnAddEventListener();
@@ -284,7 +284,7 @@ public class FreeRunningQteView : PanelQteView
 		this.BindAction();
 	}
 
-	// Token: 0x06011AFE RID: 72446 RVA: 0x00458E5B File Offset: 0x0045705B
+	// Token: 0x0600EF96 RID: 61334 RVA: 0x00465B3B File Offset: 0x00463D3B
 	protected override void OnRemoveEventListener()
 	{
 		base.OnRemoveEventListener();
@@ -292,7 +292,7 @@ public class FreeRunningQteView : PanelQteView
 		this.UnbindAction();
 	}
 
-	// Token: 0x06011AFF RID: 72447 RVA: 0x00458E84 File Offset: 0x00457084
+	// Token: 0x0600EF97 RID: 61335 RVA: 0x00465B64 File Offset: 0x00463D64
 	private void BindAction()
 	{
 		if (this.HasBindAction)
@@ -313,7 +313,7 @@ public class FreeRunningQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011B00 RID: 72448 RVA: 0x00458EF8 File Offset: 0x004570F8
+	// Token: 0x0600EF98 RID: 61336 RVA: 0x00465BD8 File Offset: 0x00463DD8
 	private void UnbindAction()
 	{
 		if (!this.HasBindAction)
@@ -328,7 +328,7 @@ public class FreeRunningQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011B01 RID: 72449 RVA: 0x00458F44 File Offset: 0x00457144
+	// Token: 0x0600EF99 RID: 61337 RVA: 0x00465C24 File Offset: 0x00463E24
 	private void OnTriggerUiTimeDilation()
 	{
 		if (Time.Instance.TimeDilation == 0f)
@@ -339,7 +339,7 @@ public class FreeRunningQteView : PanelQteView
 		this.ResumeQte();
 	}
 
-	// Token: 0x06011B02 RID: 72450 RVA: 0x00458F64 File Offset: 0x00457164
+	// Token: 0x0600EF9A RID: 61338 RVA: 0x00465C44 File Offset: 0x00463E44
 	private bool IsValidInput()
 	{
 		if (this.IsQteEnd || (!this.IsQteStart && !this.IsQteInteractive))
@@ -368,7 +368,7 @@ public class FreeRunningQteView : PanelQteView
 		return true;
 	}
 
-	// Token: 0x06011B03 RID: 72451 RVA: 0x00458FDD File Offset: 0x004571DD
+	// Token: 0x0600EF9B RID: 61339 RVA: 0x00465CBD File Offset: 0x00463EBD
 	[NullableContext(1)]
 	private void OnInputCallback(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification identification)
 	{
@@ -382,7 +382,7 @@ public class FreeRunningQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011B04 RID: 72452 RVA: 0x00458FF1 File Offset: 0x004571F1
+	// Token: 0x0600EF9C RID: 61340 RVA: 0x00465CD1 File Offset: 0x00463ED1
 	private void OnPress()
 	{
 		if (!this.IsValidInput())
@@ -392,7 +392,7 @@ public class FreeRunningQteView : PanelQteView
 		this.OnInput();
 	}
 
-	// Token: 0x06011B05 RID: 72453 RVA: 0x00459004 File Offset: 0x00457204
+	// Token: 0x0600EF9D RID: 61341 RVA: 0x00465CE4 File Offset: 0x00463EE4
 	private void OnInput()
 	{
 		int handleId = (int)(this.OpenParam ?? 0);
@@ -400,7 +400,7 @@ public class FreeRunningQteView : PanelQteView
 		PanelQteController.Instance.StopQte(handleId, false);
 	}
 
-	// Token: 0x06011B06 RID: 72454 RVA: 0x00459044 File Offset: 0x00457244
+	// Token: 0x0600EF9E RID: 61342 RVA: 0x00465D24 File Offset: 0x00463F24
 	protected override void HandleQteEnd()
 	{
 		if (this.DelayTimer != null)
@@ -439,7 +439,7 @@ public class FreeRunningQteView : PanelQteView
 		}, 500f, null, null, true, 1f);
 	}
 
-	// Token: 0x06011B07 RID: 72455 RVA: 0x004590FB File Offset: 0x004572FB
+	// Token: 0x0600EF9F RID: 61343 RVA: 0x00465DDB File Offset: 0x00463FDB
 	[NullableContext(1)]
 	private void SetPlayRate(string sequenceName, float playRate)
 	{
@@ -461,7 +461,7 @@ public class FreeRunningQteView : PanelQteView
 		sequencePlayer.SetPlayRate(playRate);
 	}
 
-	// Token: 0x06011B08 RID: 72456 RVA: 0x0045912D File Offset: 0x0045732D
+	// Token: 0x0600EFA0 RID: 61344 RVA: 0x00465E0D File Offset: 0x0046400D
 	private void PauseQte()
 	{
 		this.IsPause = true;
@@ -472,7 +472,7 @@ public class FreeRunningQteView : PanelQteView
 		this.SetPlayRate("Loop", 0f);
 	}
 
-	// Token: 0x06011B09 RID: 72457 RVA: 0x0045915C File Offset: 0x0045735C
+	// Token: 0x0600EFA1 RID: 61345 RVA: 0x00465E3C File Offset: 0x0046403C
 	private void ResumeQte()
 	{
 		if (this.IsPause)
@@ -486,62 +486,62 @@ public class FreeRunningQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x0400862C RID: 34348
+	// Token: 0x0400876A RID: 34666
 	private CombineKeyItem KeyItem;
 
-	// Token: 0x0400862D RID: 34349
+	// Token: 0x0400876B RID: 34667
 	private TimerHandle DelayTimer;
 
-	// Token: 0x0400862E RID: 34350
+	// Token: 0x0400876C RID: 34668
 	private UUIItem AnimItem;
 
-	// Token: 0x0400862F RID: 34351
+	// Token: 0x0400876D RID: 34669
 	private UUIButtonComponent BtnClick;
 
-	// Token: 0x04008630 RID: 34352
+	// Token: 0x0400876E RID: 34670
 	private UUISprite IconItem;
 
-	// Token: 0x04008631 RID: 34353
+	// Token: 0x0400876F RID: 34671
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04008632 RID: 34354
+	// Token: 0x04008770 RID: 34672
 	private Number LoopDuration = 0;
 
-	// Token: 0x04008633 RID: 34355
+	// Token: 0x04008771 RID: 34673
 	private bool HasBindAction;
 
-	// Token: 0x04008634 RID: 34356
+	// Token: 0x04008772 RID: 34674
 	[Nullable(1)]
 	private string QteAction = string.Empty;
 
-	// Token: 0x04008635 RID: 34357
+	// Token: 0x04008773 RID: 34675
 	private bool IsQteInteractive;
 
-	// Token: 0x0200887B RID: 34939
+	// Token: 0x020079FF RID: 31231
 	[NullableContext(0)]
 	private enum EPadChildType
 	{
-		// Token: 0x0402C5CA RID: 181706
+		// Token: 0x040278CC RID: 161996
 		AnimItem,
-		// Token: 0x0402C5CB RID: 181707
+		// Token: 0x040278CD RID: 161997
 		BtnClick,
-		// Token: 0x0402C5CC RID: 181708
+		// Token: 0x040278CE RID: 161998
 		Icon
 	}
 
-	// Token: 0x0200887C RID: 34940
+	// Token: 0x02007A00 RID: 31232
 	[NullableContext(0)]
 	private enum EDesktopChildType
 	{
-		// Token: 0x0402C5CE RID: 181710
+		// Token: 0x040278D0 RID: 162000
 		AnimItem,
-		// Token: 0x0402C5CF RID: 181711
+		// Token: 0x040278D1 RID: 162001
 		KeyItemContainer,
-		// Token: 0x0402C5D0 RID: 181712
+		// Token: 0x040278D2 RID: 162002
 		KeyItem,
-		// Token: 0x0402C5D1 RID: 181713
+		// Token: 0x040278D3 RID: 162003
 		Icon,
-		// Token: 0x0402C5D2 RID: 181714
+		// Token: 0x040278D4 RID: 162004
 		BtnClick
 	}
 }

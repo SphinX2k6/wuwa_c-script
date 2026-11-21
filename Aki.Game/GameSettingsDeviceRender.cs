@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -13,13 +12,13 @@ using CSharpScript.Launcher;
 using CSharpScript.Launcher.Platform;
 using UnrealEngine;
 
-// Token: 0x02000DD3 RID: 3539
+// Token: 0x02000285 RID: 645
 [NullableContext(1)]
 [Nullable(0)]
 public class GameSettingsDeviceRender : Singleton
 {
-	// Token: 0x170005E1 RID: 1505
-	// (get) Token: 0x060053B8 RID: 21432 RVA: 0x000EA61C File Offset: 0x000E881C
+	// Token: 0x17000607 RID: 1543
+	// (get) Token: 0x0600272F RID: 10031 RVA: 0x000F0C7C File Offset: 0x000EEE7C
 	[Nullable(2)]
 	private Dictionary<int, DeviceRenderFeature> DeviceRenderFeatureCfgMap
 	{
@@ -49,8 +48,8 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x170005E2 RID: 1506
-	// (get) Token: 0x060053B9 RID: 21433 RVA: 0x000EA6DC File Offset: 0x000E88DC
+	// Token: 0x17000608 RID: 1544
+	// (get) Token: 0x06002730 RID: 10032 RVA: 0x000F0D3C File Offset: 0x000EEF3C
 	private int? RecommendQualityLv
 	{
 		get
@@ -81,8 +80,8 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x170005E3 RID: 1507
-	// (get) Token: 0x060053BA RID: 21434 RVA: 0x000EA7AC File Offset: 0x000E89AC
+	// Token: 0x17000609 RID: 1545
+	// (get) Token: 0x06002731 RID: 10033 RVA: 0x000F0E0C File Offset: 0x000EF00C
 	public EGameQualitySettingLevel GameQualitySettingLevel
 	{
 		get
@@ -91,8 +90,8 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x170005E4 RID: 1508
-	// (get) Token: 0x060053BB RID: 21435 RVA: 0x000EA7BC File Offset: 0x000E89BC
+	// Token: 0x1700060A RID: 1546
+	// (get) Token: 0x06002732 RID: 10034 RVA: 0x000F0E1C File Offset: 0x000EF01C
 	public int PhysicalGBRam
 	{
 		get
@@ -101,8 +100,8 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x170005E5 RID: 1509
-	// (get) Token: 0x060053BC RID: 21436 RVA: 0x000EA7C4 File Offset: 0x000E89C4
+	// Token: 0x1700060B RID: 1547
+	// (get) Token: 0x06002733 RID: 10035 RVA: 0x000F0E24 File Offset: 0x000EF024
 	private int[] FrameRateListAndroid
 	{
 		get
@@ -119,7 +118,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x060053BD RID: 21437 RVA: 0x000EA7E7 File Offset: 0x000E89E7
+	// Token: 0x06002734 RID: 10036 RVA: 0x000F0E47 File Offset: 0x000EF047
 	private bool IsSpecificMobileGpuByProfile(string keyword, bool fullMatch)
 	{
 		if (this.ProfileNameCache == null)
@@ -133,7 +132,7 @@ public class GameSettingsDeviceRender : Singleton
 		return this.ProfileNameCache.Contains(keyword);
 	}
 
-	// Token: 0x060053BE RID: 21438 RVA: 0x000EA818 File Offset: 0x000E8A18
+	// Token: 0x06002735 RID: 10037 RVA: 0x000F0E78 File Offset: 0x000EF078
 	public bool IsTargetBaseProfile(string keyword, bool fullMatch)
 	{
 		if (fullMatch)
@@ -143,7 +142,7 @@ public class GameSettingsDeviceRender : Singleton
 		return this.BaseProfileName.Contains(keyword);
 	}
 
-	// Token: 0x060053BF RID: 21439 RVA: 0x000EA838 File Offset: 0x000E8A38
+	// Token: 0x06002736 RID: 10038 RVA: 0x000F0E98 File Offset: 0x000EF098
 	public unsafe void InitializeBaseInfo()
 	{
 		this.DevicePhysicalGbRam = UKuroRenderingRuntimeBPPluginBPLibrary.GetPhysicalGBRam();
@@ -255,6 +254,10 @@ public class GameSettingsDeviceRender : Singleton
 		{
 			this.DeviceType = EGameDeviceType.PS;
 		}
+		else if (Platform.Instance.IsXSXPlatform())
+		{
+			this.DeviceType = EGameDeviceType.XBox;
+		}
 		else if (Platform.Instance.IsMacPlatform())
 		{
 			if (this.BaseProfileName == "Mac_Low")
@@ -349,19 +352,19 @@ public class GameSettingsDeviceRender : Singleton
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray20<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 20));
 	}
 
-	// Token: 0x060053C0 RID: 21440 RVA: 0x000EB052 File Offset: 0x000E9252
+	// Token: 0x06002737 RID: 10039 RVA: 0x000F16CB File Offset: 0x000EF8CB
 	public void Initialize()
 	{
 		EventSystem.Instance.Emit(EEventName.AfterGameQualitySettingsManagerInitialize);
 	}
 
-	// Token: 0x060053C1 RID: 21441 RVA: 0x000EB064 File Offset: 0x000E9264
+	// Token: 0x06002738 RID: 10040 RVA: 0x000F16DD File Offset: 0x000EF8DD
 	public void Clear()
 	{
 		this.CancelAllPerformanceLimit();
 	}
 
-	// Token: 0x060053C2 RID: 21442 RVA: 0x000EB06C File Offset: 0x000E926C
+	// Token: 0x06002739 RID: 10041 RVA: 0x000F16E8 File Offset: 0x000EF8E8
 	public bool IsDriverNeedUpdate()
 	{
 		string pattern = "(\\d{1,2})-(\\d{1,2})-(\\d{4})";
@@ -369,7 +372,7 @@ public class GameSettingsDeviceRender : Singleton
 		return (match.Success && int.Parse(match.Groups[3].Value) < 2023) || !UKuroRenderingRuntimeBPPluginBPLibrary.GetDriverValid();
 	}
 
-	// Token: 0x060053C3 RID: 21443 RVA: 0x000EB0BC File Offset: 0x000E92BC
+	// Token: 0x0600273A RID: 10042 RVA: 0x000F1738 File Offset: 0x000EF938
 	public bool IsDriverNeedUpdateForRayTracing()
 	{
 		string pattern = "(\\d{1,2})-(\\d{1,2})-(\\d{4})";
@@ -395,7 +398,7 @@ public class GameSettingsDeviceRender : Singleton
 		return false;
 	}
 
-	// Token: 0x060053C4 RID: 21444 RVA: 0x000EB158 File Offset: 0x000E9358
+	// Token: 0x0600273B RID: 10043 RVA: 0x000F17D4 File Offset: 0x000EF9D4
 	public bool IsDriverNeedUpdateForRayTracingAMD9000()
 	{
 		string pattern = "(\\d{1,2})-(\\d{1,2})-(\\d{4})";
@@ -421,17 +424,23 @@ public class GameSettingsDeviceRender : Singleton
 		return false;
 	}
 
-	// Token: 0x060053C5 RID: 21445 RVA: 0x000EB1F5 File Offset: 0x000E93F5
+	// Token: 0x0600273C RID: 10044 RVA: 0x000F1871 File Offset: 0x000EFA71
 	public bool IsDxr1_1NotSupported()
 	{
 		return UKuroRenderingRuntimeBPPluginBPLibrary.GetRayTracingSupportedType() == URayTracingSupport.NotSupportedDxr1_1;
 	}
 
-	// Token: 0x060053C6 RID: 21446 RVA: 0x000EB200 File Offset: 0x000E9400
+	// Token: 0x0600273D RID: 10045 RVA: 0x000F187C File Offset: 0x000EFA7C
 	private void UpdateQualityRange()
 	{
-		EGameDeviceType deviceType = this.DeviceType;
-		switch (deviceType)
+		EGameDeviceType egameDeviceType = this.DeviceType;
+		this.RecommendQualityDeviceCap = null;
+		if (egameDeviceType == EGameDeviceType.PC_HIGHEST && !GameSettingsManager.Instance.IsPcHighestDevice())
+		{
+			egameDeviceType = EGameDeviceType.PC_HIGH;
+			this.RecommendQualityDeviceCap = new EGameQualitySettingLevel?(EGameQualitySettingLevel.High);
+		}
+		switch (egameDeviceType)
 		{
 		case EGameDeviceType.PC_LOWEST:
 		case EGameDeviceType.PC_LOW:
@@ -456,12 +465,7 @@ public class GameSettingsDeviceRender : Singleton
 			this.QualityRange = EGameQualityRange.Two2Four;
 			return;
 		case EGameDeviceType.PC_HIGHEST:
-			if (GameSettingsManager.Instance.IsPcHighestDevice())
-			{
-				this.QualityRange = EGameQualityRange.Three2Five;
-				return;
-			}
-			this.QualityRange = EGameQualityRange.Two2Four;
+			this.QualityRange = EGameQualityRange.Three2Five;
 			return;
 		case (EGameDeviceType)17:
 		case (EGameDeviceType)18:
@@ -482,12 +486,12 @@ public class GameSettingsDeviceRender : Singleton
 			this.QualityRange = EGameQualityRange.Zero2One;
 			return;
 		default:
-			if (deviceType == EGameDeviceType.CLOUD_GAME)
+			if (egameDeviceType == EGameDeviceType.CLOUD_GAME)
 			{
 				this.QualityRange = EGameQualityRange.One;
 				return;
 			}
-			if (deviceType == EGameDeviceType.XBox)
+			if (egameDeviceType == EGameDeviceType.XBox)
 			{
 				return;
 			}
@@ -496,37 +500,65 @@ public class GameSettingsDeviceRender : Singleton
 		this.QualityRange = EGameQualityRange.Zero2Two;
 	}
 
-	// Token: 0x060053C7 RID: 21447 RVA: 0x000EB2F0 File Offset: 0x000E94F0
+	// Token: 0x0600273E RID: 10046 RVA: 0x000F1984 File Offset: 0x000EFB84
 	public DeviceRenderFeature? GetDeviceRenderFeature(EGameQualitySettingLevel qualityLevel)
 	{
-		if (this.DeviceRenderFeatureCfgMap == null)
-		{
-			return null;
-		}
 		DeviceRenderFeature value;
-		if (!this.DeviceRenderFeatureCfgMap.TryGetValue((int)qualityLevel, out value))
+		if (this.DeviceRenderFeatureCfgMap != null && this.DeviceRenderFeatureCfgMap.TryGetValue((int)qualityLevel, out value))
 		{
-			return null;
+			return new DeviceRenderFeature?(value);
 		}
-		return new DeviceRenderFeature?(value);
+		if (GameSettingsManager.Instance.IsImageQualityUnlockedForTesting())
+		{
+			EGameDeviceType? imageQualityTestDeviceId = this.GetImageQualityTestDeviceId();
+			IReadOnlyList<DeviceRenderFeature> readOnlyList = (imageQualityTestDeviceId == null) ? null : GameSettingsConfig.Instance.GetDeviceRenderFeatureConfigListByDeviceId((int)imageQualityTestDeviceId.Value);
+			if (readOnlyList != null)
+			{
+				foreach (DeviceRenderFeature value2 in readOnlyList)
+				{
+					if (value2.QualityType == (int)qualityLevel)
+					{
+						return new DeviceRenderFeature?(value2);
+					}
+				}
+			}
+		}
+		return null;
 	}
 
-	// Token: 0x060053C8 RID: 21448 RVA: 0x000EB330 File Offset: 0x000E9530
+	// Token: 0x0600273F RID: 10047 RVA: 0x000F1A3C File Offset: 0x000EFC3C
+	public EGameDeviceType? GetImageQualityTestDeviceId()
+	{
+		if (!GameSettingsManager.Instance.CanUnlockImageQualityForTesting())
+		{
+			return null;
+		}
+		if (Info.Instance.IsIosPlatform())
+		{
+			return new EGameDeviceType?(EGameDeviceType.IOS_VERY_HIGH);
+		}
+		if (Info.Instance.IsMobilePlatform())
+		{
+			return new EGameDeviceType?(EGameDeviceType.ANDROID_VERY_HIGH);
+		}
+		if (this.DeviceType >= EGameDeviceType.IOS_LOWEST && this.DeviceType <= EGameDeviceType.IOS_VERY_HIGH)
+		{
+			return new EGameDeviceType?(EGameDeviceType.IOS_VERY_HIGH);
+		}
+		if (this.DeviceType >= EGameDeviceType.ANDROID_LOWEST && this.DeviceType <= EGameDeviceType.ANDROID_VERY_HIGH)
+		{
+			return new EGameDeviceType?(EGameDeviceType.ANDROID_VERY_HIGH);
+		}
+		return new EGameDeviceType?(EGameDeviceType.PC_MIDDLE);
+	}
+
+	// Token: 0x06002740 RID: 10048 RVA: 0x000F1AC6 File Offset: 0x000EFCC6
 	public DeviceRenderFeature? GetCurrentDeviceRenderFeature()
 	{
-		if (this.DeviceRenderFeatureCfgMap == null)
-		{
-			return null;
-		}
-		DeviceRenderFeature value;
-		if (!this.DeviceRenderFeatureCfgMap.TryGetValue((int)this.GameQualitySettingLevel, out value))
-		{
-			return null;
-		}
-		return new DeviceRenderFeature?(value);
+		return this.GetDeviceRenderFeature(this.GameQualitySettingLevel);
 	}
 
-	// Token: 0x060053C9 RID: 21449 RVA: 0x000EB374 File Offset: 0x000E9574
+	// Token: 0x06002741 RID: 10049 RVA: 0x000F1AD4 File Offset: 0x000EFCD4
 	public DeviceRenderFeature? GetDefaultDeviceRenderFeature()
 	{
 		if (this.DeviceRenderFeatureCfgMap != null)
@@ -542,7 +574,7 @@ public class GameSettingsDeviceRender : Singleton
 		return null;
 	}
 
-	// Token: 0x060053CA RID: 21450 RVA: 0x000EB3F8 File Offset: 0x000E95F8
+	// Token: 0x06002742 RID: 10050 RVA: 0x000F1B58 File Offset: 0x000EFD58
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -580,7 +612,7 @@ public class GameSettingsDeviceRender : Singleton
 		return new ValueTuple<EFunction, EFunction, int>(item2, item3, item);
 	}
 
-	// Token: 0x060053CB RID: 21451 RVA: 0x000EB468 File Offset: 0x000E9668
+	// Token: 0x06002743 RID: 10051 RVA: 0x000F1BC8 File Offset: 0x000EFDC8
 	public Dictionary<EFunction, int> GetOtherChangedValue(DeviceRenderFeature targetCfg)
 	{
 		this.renderFeatureValueBuffer.Clear();
@@ -600,95 +632,264 @@ public class GameSettingsDeviceRender : Singleton
 		this.renderFeatureValueBuffer[EFunction.BLOOM] = targetCfg.Bloom;
 		this.renderFeatureValueBuffer[EFunction.SUPERRESOLUTION] = targetCfg.SuperResolution;
 		this.renderFeatureValueBuffer[EFunction.RayTracing] = targetCfg.Raytracing;
-		this.renderFeatureValueBuffer[EFunction.LOADINGRANGESCALELEVEL] = 0;
+		if (Info.Instance.IsPs5Platform())
+		{
+			this.renderFeatureValueBuffer[EFunction.PSSR] = 1;
+		}
 		return this.renderFeatureValueBuffer;
 	}
 
-	// Token: 0x060053CC RID: 21452 RVA: 0x000EB5E6 File Offset: 0x000E97E6
+	// Token: 0x06002744 RID: 10052 RVA: 0x000F1D52 File Offset: 0x000EFF52
+	private static MenuConfig GetRenderDistanceMenuConfig()
+	{
+		return GameSettingsManager.Instance.ValidApplyConfigMap[EFunction.LOADINGRANGESCALELEVEL];
+	}
+
+	// Token: 0x06002745 RID: 10053 RVA: 0x000F1D68 File Offset: 0x000EFF68
+	public static int GetRenderDistanceMaxStepIndex()
+	{
+		MenuConfig renderDistanceMenuConfig = GameSettingsDeviceRender.GetRenderDistanceMenuConfig();
+		decimal d = (decimal)Math.Pow(10.0, (double)renderDistanceMenuConfig.Digits);
+		decimal d2 = (decimal)renderDistanceMenuConfig.SliderRange(0);
+		return (int)Math.Round(((decimal)renderDistanceMenuConfig.SliderRange(1) - d2) * d, MidpointRounding.AwayFromZero);
+	}
+
+	// Token: 0x06002746 RID: 10054 RVA: 0x000F1DC9 File Offset: 0x000EFFC9
+	public static int GetRenderDistanceBaseMaxStepIndex()
+	{
+		return GameSettingsDeviceRender.GetRenderDistanceMaxStepIndex() - 2;
+	}
+
+	// Token: 0x06002747 RID: 10055 RVA: 0x000F1DD4 File Offset: 0x000EFFD4
+	public static int GetRenderDistanceStepIndex(float value)
+	{
+		MenuConfig renderDistanceMenuConfig = GameSettingsDeviceRender.GetRenderDistanceMenuConfig();
+		float num = renderDistanceMenuConfig.SliderRange(0);
+		float max = renderDistanceMenuConfig.SliderRange(1);
+		float value2 = MathUtils.Instance.Clamp(value, num, max);
+		decimal d = (decimal)Math.Pow(10.0, (double)renderDistanceMenuConfig.Digits);
+		return (int)Math.Round(((decimal)value2 - (decimal)num) * d, MidpointRounding.AwayFromZero);
+	}
+
+	// Token: 0x06002748 RID: 10056 RVA: 0x000F1E44 File Offset: 0x000F0044
+	public static float GetRenderDistanceValueByStepIndex(int stepIndex)
+	{
+		MenuConfig renderDistanceMenuConfig = GameSettingsDeviceRender.GetRenderDistanceMenuConfig();
+		decimal d = (decimal)Math.Pow(10.0, (double)renderDistanceMenuConfig.Digits);
+		return (float)Math.Round((decimal)renderDistanceMenuConfig.SliderRange(0) + stepIndex / d, renderDistanceMenuConfig.Digits, MidpointRounding.AwayFromZero);
+	}
+
+	// Token: 0x06002749 RID: 10057 RVA: 0x000F1EA4 File Offset: 0x000F00A4
+	public static float NormalizeRenderDistanceValue(float value)
+	{
+		return GameSettingsDeviceRender.GetRenderDistanceValueByStepIndex(GameSettingsDeviceRender.GetRenderDistanceStepIndex(value));
+	}
+
+	// Token: 0x0600274A RID: 10058 RVA: 0x000F1EB1 File Offset: 0x000F00B1
+	public static int GetRenderDistanceRecommendStepIndex(int index, int count)
+	{
+		if (count == 1)
+		{
+			return 0;
+		}
+		return (int)Math.Round((double)GameSettingsDeviceRender.GetRenderDistanceBaseMaxStepIndex() * (double)index / (double)(count - 1), MidpointRounding.AwayFromZero);
+	}
+
+	// Token: 0x0600274B RID: 10059 RVA: 0x000F1ED0 File Offset: 0x000F00D0
+	public static int GetRenderDistanceQualityIndex(int stepIndex, int count)
+	{
+		for (int i = count - 1; i >= 0; i--)
+		{
+			if (stepIndex >= GameSettingsDeviceRender.GetRenderDistanceRecommendStepIndex(i, count))
+			{
+				return i;
+			}
+		}
+		return 0;
+	}
+
+	// Token: 0x0600274C RID: 10060 RVA: 0x000F1EF8 File Offset: 0x000F00F8
+	public float? GetRenderDistanceRecommendation(int quality)
+	{
+		IReadOnlyList<DeviceRenderFeature> renderDistanceFeatures = this.GetRenderDistanceFeatures();
+		if (renderDistanceFeatures == null)
+		{
+			return null;
+		}
+		int index = 0;
+		int num = 0;
+		while (num < renderDistanceFeatures.Count && renderDistanceFeatures[num].QualityType <= quality)
+		{
+			index = num;
+			num++;
+		}
+		return new float?(GameSettingsDeviceRender.GetRenderDistanceValueByStepIndex(GameSettingsDeviceRender.GetRenderDistanceRecommendStepIndex(index, renderDistanceFeatures.Count)));
+	}
+
+	// Token: 0x0600274D RID: 10061 RVA: 0x000F1F57 File Offset: 0x000F0157
+	public float? GetLoadingRangeScaleDefault(DeviceRenderFeature featureCfg)
+	{
+		return this.GetRenderDistanceRecommendation(featureCfg.QualityType);
+	}
+
+	// Token: 0x0600274E RID: 10062 RVA: 0x000F1F68 File Offset: 0x000F0168
+	public Dictionary<EFunction, float> GetOtherChangedFloatValue(DeviceRenderFeature targetCfg)
+	{
+		Dictionary<EFunction, float> dictionary = new Dictionary<EFunction, float>();
+		if (GameSettingsManager.Instance.IsValid(EFunction.LOADINGRANGESCALELEVEL, false))
+		{
+			float? loadingRangeScaleDefault = this.GetLoadingRangeScaleDefault(targetCfg);
+			if (loadingRangeScaleDefault != null)
+			{
+				dictionary[EFunction.LOADINGRANGESCALELEVEL] = loadingRangeScaleDefault.Value;
+			}
+		}
+		return dictionary;
+	}
+
+	// Token: 0x0600274F RID: 10063 RVA: 0x000F1FB4 File Offset: 0x000F01B4
+	[NullableContext(2)]
+	public IReadOnlyList<DeviceRenderFeature> GetRenderDistanceFeatures()
+	{
+		EGameDeviceType? egameDeviceType = GameSettingsManager.Instance.IsImageQualityUnlockedForTesting() ? this.GetImageQualityTestDeviceId() : null;
+		if (this.RenderDistanceFeatures != null)
+		{
+			EGameDeviceType? egameDeviceType2 = this.RenderDistanceDeviceType;
+			EGameDeviceType deviceType = this.DeviceType;
+			if (egameDeviceType2.GetValueOrDefault() == deviceType & egameDeviceType2 != null)
+			{
+				egameDeviceType2 = this.RenderDistanceTestDeviceId;
+				EGameDeviceType? egameDeviceType3 = egameDeviceType;
+				if (egameDeviceType2.GetValueOrDefault() == egameDeviceType3.GetValueOrDefault() & egameDeviceType2 != null == (egameDeviceType3 != null))
+				{
+					goto IL_1CF;
+				}
+			}
+		}
+		IReadOnlyList<DeviceRenderFeature> deviceRenderFeatureConfigListByDeviceId = GameSettingsConfig.Instance.GetDeviceRenderFeatureConfigListByDeviceId((int)this.DeviceType);
+		if (deviceRenderFeatureConfigListByDeviceId == null || deviceRenderFeatureConfigListByDeviceId.Count == 0)
+		{
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.GameSettings;
+			ELogAuthor author = ELogAuthor.TZD;
+			string message = "渲染距离机型配置查询失败或无配置行";
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("deviceType", this.DeviceType.ToString());
+			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+			return null;
+		}
+		List<DeviceRenderFeature> list = new List<DeviceRenderFeature>(deviceRenderFeatureConfigListByDeviceId);
+		if (egameDeviceType != null)
+		{
+			IReadOnlyList<DeviceRenderFeature> deviceRenderFeatureConfigListByDeviceId2 = GameSettingsConfig.Instance.GetDeviceRenderFeatureConfigListByDeviceId((int)egameDeviceType.Value);
+			if (deviceRenderFeatureConfigListByDeviceId2 != null)
+			{
+				HashSet<int> hashSet = new HashSet<int>();
+				foreach (DeviceRenderFeature deviceRenderFeature in list)
+				{
+					hashSet.Add(deviceRenderFeature.QualityType);
+				}
+				foreach (DeviceRenderFeature item in deviceRenderFeatureConfigListByDeviceId2)
+				{
+					if (hashSet.Add(item.QualityType))
+					{
+						list.Add(item);
+					}
+				}
+			}
+		}
+		list.Sort((DeviceRenderFeature left, DeviceRenderFeature right) => left.QualityType.CompareTo(right.QualityType));
+		this.RenderDistanceFeatures = list;
+		this.RenderDistanceDeviceType = new EGameDeviceType?(this.DeviceType);
+		this.RenderDistanceTestDeviceId = egameDeviceType;
+		IL_1CF:
+		return this.RenderDistanceFeatures;
+	}
+
+	// Token: 0x06002750 RID: 10064 RVA: 0x000F21B4 File Offset: 0x000F03B4
 	public bool IsIosAndAndroidHighDevice()
 	{
 		return this.DeviceType == EGameDeviceType.ANDROID_MIDDLE || this.DeviceType == EGameDeviceType.ANDROID_HIGH || this.DeviceType == EGameDeviceType.ANDROID_VERY_HIGH || this.DeviceType == EGameDeviceType.IOS_MIDDLE || this.DeviceType == EGameDeviceType.IOS_HIGH || this.DeviceType == EGameDeviceType.IOS_VERY_HIGH;
 	}
 
-	// Token: 0x060053CD RID: 21453 RVA: 0x000EB626 File Offset: 0x000E9826
+	// Token: 0x06002751 RID: 10065 RVA: 0x000F21F4 File Offset: 0x000F03F4
 	public bool IsAndroidPlatformNotLow()
 	{
 		return this.DeviceType == EGameDeviceType.ANDROID_LOW || this.DeviceType == EGameDeviceType.ANDROID_MIDDLE || this.DeviceType == EGameDeviceType.ANDROID_HIGH || this.DeviceType == EGameDeviceType.ANDROID_VERY_HIGH;
 	}
 
-	// Token: 0x060053CE RID: 21454 RVA: 0x000EB652 File Offset: 0x000E9852
+	// Token: 0x06002752 RID: 10066 RVA: 0x000F2220 File Offset: 0x000F0420
 	public bool IsAndroidPlatformScreenBetter()
 	{
 		return this.DeviceType == EGameDeviceType.ANDROID_MIDDLE || this.DeviceType == EGameDeviceType.ANDROID_HIGH || this.DeviceType == EGameDeviceType.ANDROID_VERY_HIGH;
 	}
 
-	// Token: 0x060053CF RID: 21455 RVA: 0x000EB674 File Offset: 0x000E9874
+	// Token: 0x06002753 RID: 10067 RVA: 0x000F2242 File Offset: 0x000F0442
 	public bool IsAndroidPlatformScreenBad()
 	{
 		return this.DeviceType == EGameDeviceType.ANDROID_LOWEST || this.DeviceType == EGameDeviceType.ANDROID_LOW;
 	}
 
-	// Token: 0x060053D0 RID: 21456 RVA: 0x000EB68C File Offset: 0x000E988C
+	// Token: 0x06002754 RID: 10068 RVA: 0x000F225A File Offset: 0x000F045A
 	public bool IsAndroidPlatformLowest()
 	{
 		return this.DeviceType == EGameDeviceType.ANDROID_LOWEST;
 	}
 
-	// Token: 0x060053D1 RID: 21457 RVA: 0x000EB698 File Offset: 0x000E9898
+	// Token: 0x06002755 RID: 10069 RVA: 0x000F2266 File Offset: 0x000F0466
 	public bool IsAndroidPlatformLow()
 	{
 		return this.DeviceType == EGameDeviceType.ANDROID_LOW;
 	}
 
-	// Token: 0x060053D2 RID: 21458 RVA: 0x000EB6A4 File Offset: 0x000E98A4
+	// Token: 0x06002756 RID: 10070 RVA: 0x000F2272 File Offset: 0x000F0472
 	public bool IsAndroidPlatformAOValid()
 	{
 		return Platform.Instance.IsAndroidPlatform() && !this.IsAndroidPlatformScreenBad();
 	}
 
-	// Token: 0x060053D3 RID: 21459 RVA: 0x000EB6BD File Offset: 0x000E98BD
+	// Token: 0x06002757 RID: 10071 RVA: 0x000F228B File Offset: 0x000F048B
 	public bool IsIOSPlatformAOValid()
 	{
 		return Platform.Instance.IsIOSPlatform() && this.DeviceScore >= 230;
 	}
 
-	// Token: 0x060053D4 RID: 21460 RVA: 0x000EB6DD File Offset: 0x000E98DD
+	// Token: 0x06002758 RID: 10072 RVA: 0x000F22AB File Offset: 0x000F04AB
 	public bool IsOpenHarmonyPlatformAOValid()
 	{
 		return Platform.Instance.IsOpenHarmonyPlatform() && !this.IsAndroidPlatformScreenBad();
 	}
 
-	// Token: 0x060053D5 RID: 21461 RVA: 0x000EB6F6 File Offset: 0x000E98F6
+	// Token: 0x06002759 RID: 10073 RVA: 0x000F22C4 File Offset: 0x000F04C4
 	public bool IsAndroidAdreno()
 	{
 		return this.IsAdreno;
 	}
 
-	// Token: 0x060053D6 RID: 21462 RVA: 0x000EB6FE File Offset: 0x000E98FE
+	// Token: 0x0600275A RID: 10074 RVA: 0x000F22CC File Offset: 0x000F04CC
 	public bool IsRedMagic()
 	{
 		return Platform.Instance.IsRedMagicDevice();
 	}
 
-	// Token: 0x060053D7 RID: 21463 RVA: 0x000EB70A File Offset: 0x000E990A
+	// Token: 0x0600275B RID: 10075 RVA: 0x000F22D8 File Offset: 0x000F04D8
 	public bool IsRedMagicLow()
 	{
 		return Platform.Instance.IsRedMagicDeviceLow();
 	}
 
-	// Token: 0x060053D8 RID: 21464 RVA: 0x000EB716 File Offset: 0x000E9916
+	// Token: 0x0600275C RID: 10076 RVA: 0x000F22E4 File Offset: 0x000F04E4
 	public bool IsRedMagicHigh()
 	{
 		return Platform.Instance.IsRedMagicDeviceHigh();
 	}
 
-	// Token: 0x060053D9 RID: 21465 RVA: 0x000EB722 File Offset: 0x000E9922
+	// Token: 0x0600275D RID: 10077 RVA: 0x000F22F0 File Offset: 0x000F04F0
 	public bool IsLowMemoryDevice()
 	{
 		return (Info.Instance.PlatformType == ESourcePlatformType.IOS && this.DevicePhysicalGbRam < 4) || (Info.Instance.PlatformType == ESourcePlatformType.Android && this.DevicePhysicalGbRam <= 4);
 	}
 
-	// Token: 0x060053DA RID: 21466 RVA: 0x000EB755 File Offset: 0x000E9955
+	// Token: 0x0600275E RID: 10078 RVA: 0x000F2323 File Offset: 0x000F0523
 	public int GetD3D12Type()
 	{
 		if (this.RHIName.Contains("D3D12"))
@@ -698,7 +899,7 @@ public class GameSettingsDeviceRender : Singleton
 		return 0;
 	}
 
-	// Token: 0x060053DB RID: 21467 RVA: 0x000EB76C File Offset: 0x000E996C
+	// Token: 0x0600275F RID: 10079 RVA: 0x000F233A File Offset: 0x000F053A
 	public int IsVulkanRHI()
 	{
 		if (this.RHIName.Contains("Vulkan"))
@@ -708,19 +909,29 @@ public class GameSettingsDeviceRender : Singleton
 		return 0;
 	}
 
-	// Token: 0x060053DC RID: 21468 RVA: 0x000EB783 File Offset: 0x000E9983
+	// Token: 0x06002760 RID: 10080 RVA: 0x000F2351 File Offset: 0x000F0551
+	public int IsMetalCpp()
+	{
+		if (this.RHIName.Contains("MetalNew"))
+		{
+			return 1;
+		}
+		return 0;
+	}
+
+	// Token: 0x06002761 RID: 10081 RVA: 0x000F2368 File Offset: 0x000F0568
 	public bool IsQualcommGpu()
 	{
 		return this.DeviceName.Contains("Qualcomm(R) Adreno(TM)");
 	}
 
-	// Token: 0x060053DD RID: 21469 RVA: 0x000EB798 File Offset: 0x000E9998
+	// Token: 0x06002762 RID: 10082 RVA: 0x000F237C File Offset: 0x000F057C
 	public bool IsMaliNewSocOrXclipseOrPowerVR()
 	{
 		return this.DeviceName.Contains("G710") || this.DeviceName.Contains("G715") || this.DeviceName.Contains("G720") || this.DeviceName.Contains("G610") || this.DeviceName.Contains("G615") || this.DeviceName.Contains("G620") || this.DeviceName.Contains("Xclipse") || this.DeviceName.Contains("BXM-8-256");
 	}
 
-	// Token: 0x060053DE RID: 21470 RVA: 0x000EB838 File Offset: 0x000E9A38
+	// Token: 0x06002763 RID: 10083 RVA: 0x000F241C File Offset: 0x000F061C
 	public bool IsHuaweiAndroid()
 	{
 		if (string.IsNullOrEmpty(this.VendorName))
@@ -731,7 +942,7 @@ public class GameSettingsDeviceRender : Singleton
 		return this.DeviceName.Contains("Maleoon") && Platform.Instance.IsAndroidPlatform();
 	}
 
-	// Token: 0x060053DF RID: 21471 RVA: 0x000EB894 File Offset: 0x000E9A94
+	// Token: 0x06002764 RID: 10084 RVA: 0x000F2478 File Offset: 0x000F0678
 	private string GetMaleoonModel()
 	{
 		if (string.IsNullOrEmpty(this.DeviceName))
@@ -746,7 +957,7 @@ public class GameSettingsDeviceRender : Singleton
 		return string.Empty;
 	}
 
-	// Token: 0x060053E0 RID: 21472 RVA: 0x000EB8EC File Offset: 0x000E9AEC
+	// Token: 0x06002765 RID: 10085 RVA: 0x000F24D0 File Offset: 0x000F06D0
 	private int GetOpenHarmonyMajorVersion()
 	{
 		string osversion = UKuroStaticLibrary.GetOSVersion();
@@ -762,7 +973,7 @@ public class GameSettingsDeviceRender : Singleton
 		return 0;
 	}
 
-	// Token: 0x060053E1 RID: 21473 RVA: 0x000EB938 File Offset: 0x000E9B38
+	// Token: 0x06002766 RID: 10086 RVA: 0x000F251C File Offset: 0x000F071C
 	public bool IsMaleoonSuperResolutionSupported()
 	{
 		if (!Platform.Instance.IsOpenHarmonyPlatform())
@@ -773,7 +984,7 @@ public class GameSettingsDeviceRender : Singleton
 		return (maleoonModel == "935" || maleoonModel == "935A" || maleoonModel == "955" || maleoonModel == "955A") && this.GetOpenHarmonyMajorVersion() >= 7;
 	}
 
-	// Token: 0x060053E2 RID: 21474 RVA: 0x000EB9A0 File Offset: 0x000E9BA0
+	// Token: 0x06002767 RID: 10087 RVA: 0x000F2584 File Offset: 0x000F0784
 	public bool IsMaleoonRayTracingNormalSupported()
 	{
 		if (!Platform.Instance.IsOpenHarmonyPlatform())
@@ -784,7 +995,7 @@ public class GameSettingsDeviceRender : Singleton
 		return maleoonModel == "935" || maleoonModel == "935A";
 	}
 
-	// Token: 0x060053E3 RID: 21475 RVA: 0x000EB9DC File Offset: 0x000E9BDC
+	// Token: 0x06002768 RID: 10088 RVA: 0x000F25C0 File Offset: 0x000F07C0
 	public bool IsMaleoonRayTracingSuperSupported()
 	{
 		if (!Platform.Instance.IsOpenHarmonyPlatform())
@@ -795,13 +1006,13 @@ public class GameSettingsDeviceRender : Singleton
 		return maleoonModel == "955" || maleoonModel == "955A";
 	}
 
-	// Token: 0x060053E4 RID: 21476 RVA: 0x000EBA18 File Offset: 0x000E9C18
+	// Token: 0x06002769 RID: 10089 RVA: 0x000F25FC File Offset: 0x000F07FC
 	public bool IsNvidiaGPU()
 	{
 		return this.VendorName == "NVIDIA";
 	}
 
-	// Token: 0x060053E5 RID: 21477 RVA: 0x000EBA2C File Offset: 0x000E9C2C
+	// Token: 0x0600276A RID: 10090 RVA: 0x000F2610 File Offset: 0x000F0810
 	public bool IsUltraGpuDevice()
 	{
 		if (string.IsNullOrEmpty(this.VendorName))
@@ -812,13 +1023,13 @@ public class GameSettingsDeviceRender : Singleton
 		return this.IsNvidiaGPU() && this.DeviceName.Contains("RTX");
 	}
 
-	// Token: 0x060053E6 RID: 21478 RVA: 0x000EBA81 File Offset: 0x000E9C81
+	// Token: 0x0600276B RID: 10091 RVA: 0x000F2665 File Offset: 0x000F0865
 	public bool IsNvidia4060()
 	{
 		return this.IsNvidiaGPU() && this.DeviceName.Contains("4060");
 	}
 
-	// Token: 0x060053E7 RID: 21479 RVA: 0x000EBAA0 File Offset: 0x000E9CA0
+	// Token: 0x0600276C RID: 10092 RVA: 0x000F2684 File Offset: 0x000F0884
 	public bool IsNvidia5060AndAbove()
 	{
 		Match match = Regex.Match(this.DeviceName, "\\bRTX\\s*(50\\d{2})\\b", RegexOptions.IgnoreCase);
@@ -830,13 +1041,13 @@ public class GameSettingsDeviceRender : Singleton
 		return this.IsNvidiaGPU() && num >= 5060;
 	}
 
-	// Token: 0x060053E8 RID: 21480 RVA: 0x000EBAF5 File Offset: 0x000E9CF5
+	// Token: 0x0600276D RID: 10093 RVA: 0x000F26D9 File Offset: 0x000F08D9
 	public bool IsNvidiaLaptopGPU()
 	{
 		return this.IsNvidiaGPU() && this.DeviceName.Contains("Laptop");
 	}
 
-	// Token: 0x060053E9 RID: 21481 RVA: 0x000EBB14 File Offset: 0x000E9D14
+	// Token: 0x0600276E RID: 10094 RVA: 0x000F26F8 File Offset: 0x000F08F8
 	public bool Is120FrameGPU()
 	{
 		if (string.IsNullOrEmpty(this.VendorName))
@@ -847,13 +1058,13 @@ public class GameSettingsDeviceRender : Singleton
 		return ((this.VendorName == "AMD" || this.IsNvidiaGPU() || this.VendorName == "Intel") && this.DeviceScore > 1300) || (this.VendorName == "Intel" && UKuroRenderingRuntimeBPPluginBPLibrary.GetRayTracingSupportedType() == URayTracingSupport.Supported);
 	}
 
-	// Token: 0x060053EA RID: 21482 RVA: 0x000EBBA4 File Offset: 0x000E9DA4
+	// Token: 0x0600276F RID: 10095 RVA: 0x000F2788 File Offset: 0x000F0988
 	public bool IsLaptopCPU_Old()
 	{
 		return this.CPUBrand.Contains("14900") || this.CPUBrand.Contains("14790") || this.CPUBrand.Contains("14700") || this.CPUBrand.Contains("14650") || this.CPUBrand.Contains("14600") || this.CPUBrand.Contains("14500") || this.CPUBrand.Contains("14490") || this.CPUBrand.Contains("14450") || this.CPUBrand.Contains("14400") || this.CPUBrand.Contains("13980") || this.CPUBrand.Contains("13950") || this.CPUBrand.Contains("13905") || this.CPUBrand.Contains("13900") || this.CPUBrand.Contains("13800") || this.CPUBrand.Contains("13790") || this.CPUBrand.Contains("13705") || this.CPUBrand.Contains("13700") || this.CPUBrand.Contains("13650") || this.CPUBrand.Contains("13620") || this.CPUBrand.Contains("13600") || this.CPUBrand.Contains("13500") || this.CPUBrand.Contains("13490") || this.CPUBrand.Contains("13450") || this.CPUBrand.Contains("13400") || this.CPUBrand.Contains("12950") || this.CPUBrand.Contains("12900") || this.CPUBrand.Contains("12850") || this.CPUBrand.Contains("12800") || this.CPUBrand.Contains("12700") || this.CPUBrand.Contains("12650") || this.CPUBrand.Contains("12600") || this.CPUBrand.Contains("12500") || this.CPUBrand.Contains("11980") || this.CPUBrand.Contains("11950") || this.CPUBrand.Contains("11900") || this.CPUBrand.Contains("11850") || this.CPUBrand.Contains("11800") || this.CPUBrand.Contains("11700") || this.CPUBrand.Contains("10980") || this.CPUBrand.Contains("10940") || this.CPUBrand.Contains("10920") || this.CPUBrand.Contains("10900") || this.CPUBrand.Contains("10885") || this.CPUBrand.Contains("10875") || this.CPUBrand.Contains("10870") || this.CPUBrand.Contains("10850") || this.CPUBrand.Contains("10700") || this.CPUBrand.Contains("9980") || this.CPUBrand.Contains("9940") || this.CPUBrand.Contains("9920") || this.CPUBrand.Contains("9900") || this.CPUBrand.Contains("9880") || this.CPUBrand.Contains("9820") || this.CPUBrand.Contains("9800") || this.CPUBrand.Contains("9-7900") || this.CPUBrand.Contains("7-7820") || this.CPUBrand.Contains("7-6900") || this.CPUBrand.Contains("9-185") || this.CPUBrand.Contains("7-165") || this.CPUBrand.Contains("7-155") || this.CPUBrand.Contains("5-135") || this.CPUBrand.Contains("5-125") || this.CPUBrand.Contains("9-3495") || this.CPUBrand.Contains("9-3475") || this.CPUBrand.Contains("7-3465") || this.CPUBrand.Contains("7-3455") || this.CPUBrand.Contains("7-3445") || this.CPUBrand.Contains("5-3435") || this.CPUBrand.Contains("5-3425") || this.CPUBrand.Contains("7-1270") || this.CPUBrand.Contains("7-1260") || this.CPUBrand.Contains("5-1250") || this.CPUBrand.Contains("5-1240") || this.CPUBrand.Contains("9700") || this.CPUBrand.Contains("9600") || this.CPUBrand.Contains("8945") || this.CPUBrand.Contains("8845") || this.CPUBrand.Contains("8840") || this.CPUBrand.Contains("8700") || this.CPUBrand.Contains("7980") || this.CPUBrand.Contains("7970") || this.CPUBrand.Contains("7960") || this.CPUBrand.Contains("7950") || this.CPUBrand.Contains("7945") || this.CPUBrand.Contains("7940") || this.CPUBrand.Contains("7900") || this.CPUBrand.Contains("7845") || this.CPUBrand.Contains("7840") || this.CPUBrand.Contains("7800") || this.CPUBrand.Contains("7745") || this.CPUBrand.Contains("7735") || this.CPUBrand.Contains("7700") || this.CPUBrand.Contains("6980") || this.CPUBrand.Contains("6900") || this.CPUBrand.Contains("6800") || this.CPUBrand.Contains("5980") || this.CPUBrand.Contains("5975") || this.CPUBrand.Contains("5965") || this.CPUBrand.Contains("5955") || this.CPUBrand.Contains("5950") || this.CPUBrand.Contains("5945") || this.CPUBrand.Contains("5900") || this.CPUBrand.Contains("5800") || this.CPUBrand.Contains("5700") || this.CPUBrand.Contains("4900") || this.CPUBrand.Contains("4800") || this.CPUBrand.Contains("4700") || this.CPUBrand.Contains("3975") || this.CPUBrand.Contains("3970") || this.CPUBrand.Contains("3960") || this.CPUBrand.Contains("3955") || this.CPUBrand.Contains("3950") || this.CPUBrand.Contains("3945") || this.CPUBrand.Contains("3900") || this.CPUBrand.Contains("3800") || this.CPUBrand.Contains("3700") || this.CPUBrand.Contains("2950") || this.CPUBrand.Contains("2920") || this.CPUBrand.Contains("2700") || this.CPUBrand.Contains("1950") || this.CPUBrand.Contains("1920") || this.CPUBrand.Contains("1900") || this.CPUBrand.Contains("1800") || this.CPUBrand.Contains("1700") || this.CPUBrand.Contains("Intel(R) Core(TM) i5-11600K") || this.CPUBrand.Contains("Intel(R) Core(TM) i5-12490F") || this.CPUBrand.Contains("Intel(R) Core(TM) Ultra 9 28") || this.CPUBrand.Contains("Intel(R) Core(TM) Ultra 9 27") || this.CPUBrand.Contains("Intel(R) Core(TM) Ultra 7 26") || this.CPUBrand.Contains("Intel(R) Core(TM) Ultra 7 25") || this.CPUBrand.Contains("Intel(R) Core(TM) Ultra 5 24") || this.CPUBrand.Contains("Intel(R) Core(TM) Ultra 5 23") || this.CPUBrand.Contains("AMD Ryzen 5 9") || this.CPUBrand.Contains("AMD Ryzen 7 9") || this.CPUBrand.Contains("AMD Ryzen 9 9") || this.CPUBrand.Contains("AMD Ryzen 5 8600") || this.CPUBrand.Contains("AMD Ryzen 7 7435H");
 	}
 
-	// Token: 0x060053EB RID: 21483 RVA: 0x000EC6D8 File Offset: 0x000EA8D8
+	// Token: 0x06002770 RID: 10096 RVA: 0x000F32BC File Offset: 0x000F14BC
 	public bool IsLaptopCPU()
 	{
 		if (this.IsLaptopCPU_Old())
@@ -877,25 +1088,25 @@ public class GameSettingsDeviceRender : Singleton
 		return false;
 	}
 
-	// Token: 0x060053EC RID: 21484 RVA: 0x000EC774 File Offset: 0x000EA974
+	// Token: 0x06002771 RID: 10097 RVA: 0x000F3358 File Offset: 0x000F1558
 	private bool IsFrameRate120IOSDevice()
 	{
 		return Info.Instance.PlatformType == ESourcePlatformType.IOS && this.DeviceScore > 500;
 	}
 
-	// Token: 0x060053ED RID: 21485 RVA: 0x000EC792 File Offset: 0x000EA992
+	// Token: 0x06002772 RID: 10098 RVA: 0x000F3376 File Offset: 0x000F1576
 	private bool IsFrameRate120MacDevice()
 	{
 		return Info.Instance.PlatformType == ESourcePlatformType.Mac && this.DeviceScore > 500;
 	}
 
-	// Token: 0x060053EE RID: 21486 RVA: 0x000EC7B0 File Offset: 0x000EA9B0
+	// Token: 0x06002773 RID: 10099 RVA: 0x000F3394 File Offset: 0x000F1594
 	private bool IsAMDX3DCPU()
 	{
 		return this.CPUBrand.Contains("AMD") && this.CPUBrand.Contains("X3D");
 	}
 
-	// Token: 0x060053EF RID: 21487 RVA: 0x000EC7D8 File Offset: 0x000EA9D8
+	// Token: 0x06002774 RID: 10100 RVA: 0x000F33BC File Offset: 0x000F15BC
 	private unsafe bool IsFrameRate120Device()
 	{
 		Log instance = Log.Instance;
@@ -912,71 +1123,71 @@ public class GameSettingsDeviceRender : Singleton
 		return ((this.CPUFrequency >= 3000 && this.CPUCoresIncludingHyperthreads >= 16) || this.IsAMDX3DCPU() || this.IsLaptopCPU()) && this.Is120FrameGPU();
 	}
 
-	// Token: 0x060053F0 RID: 21488 RVA: 0x000EC8ED File Offset: 0x000EAAED
+	// Token: 0x06002775 RID: 10101 RVA: 0x000F34D1 File Offset: 0x000F16D1
 	public bool IsFrameRate120DeviceForAllDevice()
 	{
 		return (Info.Instance.IsPcOrGamepadPlatform() && this.IsFrameRate120Device()) || (Info.Instance.IsIosPlatform() && this.IsFrameRate120IOSDevice()) || (Info.Instance.IsMacPlatform() && this.IsFrameRate120MacDevice());
 	}
 
-	// Token: 0x060053F1 RID: 21489 RVA: 0x000EC92D File Offset: 0x000EAB2D
+	// Token: 0x06002776 RID: 10102 RVA: 0x000F3511 File Offset: 0x000F1711
 	public bool IsAndroidHighestResolutionDevice()
 	{
 		return this.DeviceScore >= 280;
 	}
 
-	// Token: 0x060053F2 RID: 21490 RVA: 0x000EC93F File Offset: 0x000EAB3F
+	// Token: 0x06002777 RID: 10103 RVA: 0x000F3523 File Offset: 0x000F1723
 	public bool IsAndroidHighResolutionDevice()
 	{
 		return this.DeviceType == EGameDeviceType.ANDROID_MIDDLE || this.DeviceType == EGameDeviceType.ANDROID_HIGH || this.DeviceType == EGameDeviceType.ANDROID_VERY_HIGH;
 	}
 
-	// Token: 0x060053F3 RID: 21491 RVA: 0x000EC961 File Offset: 0x000EAB61
+	// Token: 0x06002778 RID: 10104 RVA: 0x000F3545 File Offset: 0x000F1745
 	public bool IsMetalFxDevice()
 	{
 		return UKuroRenderingRuntimeBPPluginBPLibrary.IsSupportsMetalFx();
 	}
 
-	// Token: 0x060053F4 RID: 21492 RVA: 0x000EC968 File Offset: 0x000EAB68
+	// Token: 0x06002779 RID: 10105 RVA: 0x000F354C File Offset: 0x000F174C
 	public bool IsPWSDKDevice()
 	{
 		return false;
 	}
 
-	// Token: 0x060053F5 RID: 21493 RVA: 0x000EC96B File Offset: 0x000EAB6B
+	// Token: 0x0600277A RID: 10106 RVA: 0x000F354F File Offset: 0x000F174F
 	public bool IsIRXActive()
 	{
 		return false;
 	}
 
-	// Token: 0x060053F6 RID: 21494 RVA: 0x000EC96E File Offset: 0x000EAB6E
+	// Token: 0x0600277B RID: 10107 RVA: 0x000F3552 File Offset: 0x000F1752
 	public void TurnOffIRX()
 	{
 	}
 
-	// Token: 0x060053F7 RID: 21495 RVA: 0x000EC970 File Offset: 0x000EAB70
+	// Token: 0x0600277C RID: 10108 RVA: 0x000F3554 File Offset: 0x000F1754
 	public void TurnOnIRX()
 	{
 	}
 
-	// Token: 0x060053F8 RID: 21496 RVA: 0x000EC972 File Offset: 0x000EAB72
+	// Token: 0x0600277D RID: 10109 RVA: 0x000F3556 File Offset: 0x000F1756
 	public bool IsNvidiaDlessPluginLoaded()
 	{
 		return UKismetSystemLibrary.GetConsoleVariableIntValue("r.NGX.Enable") == 1;
 	}
 
-	// Token: 0x060053F9 RID: 21497 RVA: 0x000EC981 File Offset: 0x000EAB81
+	// Token: 0x0600277E RID: 10110 RVA: 0x000F3565 File Offset: 0x000F1765
 	public bool IsNvidiaStreamlinePluginLoaded()
 	{
 		return UKismetSystemLibrary.GetConsoleVariableBoolValue("r.Streamline.HasLoaded");
 	}
 
-	// Token: 0x060053FA RID: 21498 RVA: 0x000EC98D File Offset: 0x000EAB8D
+	// Token: 0x0600277F RID: 10111 RVA: 0x000F3571 File Offset: 0x000F1771
 	public bool IsNvidiaDlssPluginLoaded()
 	{
 		return UKismetSystemLibrary.GetConsoleVariableIntValue("r.NGX.Enable") == 1;
 	}
 
-	// Token: 0x060053FB RID: 21499 RVA: 0x000EC99C File Offset: 0x000EAB9C
+	// Token: 0x06002780 RID: 10112 RVA: 0x000F3580 File Offset: 0x000F1780
 	public bool IsDlssGpuDevice()
 	{
 		if (string.IsNullOrEmpty(this.VendorName))
@@ -987,7 +1198,7 @@ public class GameSettingsDeviceRender : Singleton
 		return this.IsNvidiaGPU() && this.DeviceName.Contains("RTX");
 	}
 
-	// Token: 0x060053FC RID: 21500 RVA: 0x000EC9F4 File Offset: 0x000EABF4
+	// Token: 0x06002781 RID: 10113 RVA: 0x000F35D8 File Offset: 0x000F17D8
 	private int? GetRTXSeriesNumber(string deviceName)
 	{
 		if (string.IsNullOrEmpty(deviceName))
@@ -1002,7 +1213,7 @@ public class GameSettingsDeviceRender : Singleton
 		return null;
 	}
 
-	// Token: 0x060053FD RID: 21501 RVA: 0x000ECA5C File Offset: 0x000EAC5C
+	// Token: 0x06002782 RID: 10114 RVA: 0x000F3640 File Offset: 0x000F1840
 	private int? GetAMDSeriesNumber(string deviceName)
 	{
 		if (string.IsNullOrEmpty(deviceName))
@@ -1017,7 +1228,7 @@ public class GameSettingsDeviceRender : Singleton
 		return null;
 	}
 
-	// Token: 0x060053FE RID: 21502 RVA: 0x000ECAC4 File Offset: 0x000EACC4
+	// Token: 0x06002783 RID: 10115 RVA: 0x000F36A8 File Offset: 0x000F18A8
 	public unsafe bool IsRayTracingGpuDevice()
 	{
 		string a = this.VendorName.ToLower();
@@ -1164,14 +1375,14 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x060053FF RID: 21503 RVA: 0x000ECEA0 File Offset: 0x000EB0A0
+	// Token: 0x06002784 RID: 10116 RVA: 0x000F3A84 File Offset: 0x000F1C84
 	public bool IsRTX50()
 	{
 		int? rtxseriesNumber = this.GetRTXSeriesNumber(this.DeviceName);
 		return rtxseriesNumber != null && rtxseriesNumber.Value > 5000;
 	}
 
-	// Token: 0x06005400 RID: 21504 RVA: 0x000ECED4 File Offset: 0x000EB0D4
+	// Token: 0x06002785 RID: 10117 RVA: 0x000F3AB8 File Offset: 0x000F1CB8
 	public bool IsShowRayTracingSetting()
 	{
 		if (this.IsRayTracingGpuDevice())
@@ -1187,7 +1398,7 @@ public class GameSettingsDeviceRender : Singleton
 		return false;
 	}
 
-	// Token: 0x06005401 RID: 21505 RVA: 0x000ECF30 File Offset: 0x000EB130
+	// Token: 0x06002786 RID: 10118 RVA: 0x000F3B14 File Offset: 0x000F1D14
 	public bool IsDlss3HardwareSchedulingDisabled()
 	{
 		if (string.IsNullOrEmpty(this.VendorName))
@@ -1203,13 +1414,13 @@ public class GameSettingsDeviceRender : Singleton
 		return UStreamlineLibraryDLSSG.QueryDLSSGSupport() == EStreamlineFeatureSupport.NotSupportedHardewareSchedulingDisabled;
 	}
 
-	// Token: 0x06005402 RID: 21506 RVA: 0x000ECF9E File Offset: 0x000EB19E
+	// Token: 0x06002787 RID: 10119 RVA: 0x000F3B82 File Offset: 0x000F1D82
 	public bool IsDlssSupported()
 	{
 		return this.IsNvidiaDlssPluginLoaded() && UDLSSLibrary.IsDLSSSupported();
 	}
 
-	// Token: 0x06005403 RID: 21507 RVA: 0x000ECFB0 File Offset: 0x000EB1B0
+	// Token: 0x06002788 RID: 10120 RVA: 0x000F3B94 File Offset: 0x000F1D94
 	public bool IsDlss3GpuDevice()
 	{
 		if (string.IsNullOrEmpty(this.VendorName))
@@ -1220,7 +1431,7 @@ public class GameSettingsDeviceRender : Singleton
 		return this.IsNvidiaGPU() && (this.DeviceName.Contains("RTX 40") || this.DeviceName.Contains("RTX 50"));
 	}
 
-	// Token: 0x06005404 RID: 21508 RVA: 0x000ED018 File Offset: 0x000EB218
+	// Token: 0x06002789 RID: 10121 RVA: 0x000F3BFC File Offset: 0x000F1DFC
 	public bool IsFsrDevice()
 	{
 		if (Platform.Instance.IsPs5Platform())
@@ -1235,19 +1446,19 @@ public class GameSettingsDeviceRender : Singleton
 		return !flag && !flag2 && !flag3 && !flag4;
 	}
 
-	// Token: 0x06005405 RID: 21509 RVA: 0x000ED082 File Offset: 0x000EB282
+	// Token: 0x0600278A RID: 10122 RVA: 0x000F3C66 File Offset: 0x000F1E66
 	public bool IsXess2Supported()
 	{
 		return UXeSSBlueprintLibrary.IsXeSSSupported();
 	}
 
-	// Token: 0x06005406 RID: 21510 RVA: 0x000ED089 File Offset: 0x000EB289
+	// Token: 0x0600278B RID: 10123 RVA: 0x000F3C6D File Offset: 0x000F1E6D
 	public bool IsXeFGSupported()
 	{
 		return UXeFGBlueprintLibrary.IsXeFGSupported();
 	}
 
-	// Token: 0x06005407 RID: 21511 RVA: 0x000ED090 File Offset: 0x000EB290
+	// Token: 0x0600278C RID: 10124 RVA: 0x000F3C74 File Offset: 0x000F1E74
 	public bool IsSteamDeck()
 	{
 		if (this.IsSteamDeckInternal == null)
@@ -1263,25 +1474,25 @@ public class GameSettingsDeviceRender : Singleton
 		return this.IsSteamDeckInternal.Value;
 	}
 
-	// Token: 0x06005408 RID: 21512 RVA: 0x000ED126 File Offset: 0x000EB326
+	// Token: 0x0600278D RID: 10125 RVA: 0x000F3D0A File Offset: 0x000F1F0A
 	public bool IsFsr3Supported()
 	{
 		return !this.IsSteamDeck() && UKuroFFXFSR3BlueprintLibrary.IsSupported() && UKuroFFXFSR3BlueprintLibrary.SupportFSR3();
 	}
 
-	// Token: 0x06005409 RID: 21513 RVA: 0x000ED140 File Offset: 0x000EB340
+	// Token: 0x0600278E RID: 10126 RVA: 0x000F3D24 File Offset: 0x000F1F24
 	public bool IsFFXFISupported()
 	{
 		return !this.IsSteamDeck() && UKuroFFXFSR3BlueprintLibrary.IsSupported() && UKuroFFXFSR3BlueprintLibrary.SupportFI();
 	}
 
-	// Token: 0x0600540A RID: 21514 RVA: 0x000ED15A File Offset: 0x000EB35A
+	// Token: 0x0600278F RID: 10127 RVA: 0x000F3D3E File Offset: 0x000F1F3E
 	public bool IsFsr3FallbackToFsr()
 	{
 		return this.IsFsr3Supported() && this.GetD3D12Type() <= 0;
 	}
 
-	// Token: 0x0600540B RID: 21515 RVA: 0x000ED174 File Offset: 0x000EB374
+	// Token: 0x06002790 RID: 10128 RVA: 0x000F3D58 File Offset: 0x000F1F58
 	public bool IsVulkanDevice()
 	{
 		bool flag = UKismetSystemLibrary.IsVulkanAutoDetectMode();
@@ -1343,20 +1554,20 @@ public class GameSettingsDeviceRender : Singleton
 		return flag2;
 	}
 
-	// Token: 0x0600540C RID: 21516 RVA: 0x000ED29F File Offset: 0x000EB49F
+	// Token: 0x06002791 RID: 10129 RVA: 0x000F3E83 File Offset: 0x000F2083
 	public bool IsEnableVolumeFog()
 	{
 		return this.EnableVolumeFog;
 	}
 
-	// Token: 0x0600540D RID: 21517 RVA: 0x000ED2A7 File Offset: 0x000EB4A7
+	// Token: 0x06002792 RID: 10130 RVA: 0x000F3E8B File Offset: 0x000F208B
 	public void CloseVolumeFog()
 	{
 		this.EnableVolumeFog = false;
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.volumetricfog 0", null);
 	}
 
-	// Token: 0x0600540E RID: 21518 RVA: 0x000ED2C0 File Offset: 0x000EB4C0
+	// Token: 0x06002793 RID: 10131 RVA: 0x000F3EA4 File Offset: 0x000F20A4
 	public FIntPoint GetResolutionByList(int index)
 	{
 		List<FIntPoint> resolutionList = this.GetResolutionList();
@@ -1364,7 +1575,7 @@ public class GameSettingsDeviceRender : Singleton
 		return resolutionList[index2];
 	}
 
-	// Token: 0x0600540F RID: 21519 RVA: 0x000ED2F0 File Offset: 0x000EB4F0
+	// Token: 0x06002794 RID: 10132 RVA: 0x000F3ED4 File Offset: 0x000F20D4
 	public List<FIntPoint> GetResolutionList()
 	{
 		List<FIntPoint> list = new List<FIntPoint>();
@@ -1403,7 +1614,7 @@ public class GameSettingsDeviceRender : Singleton
 		return list;
 	}
 
-	// Token: 0x06005410 RID: 21520 RVA: 0x000ED3E4 File Offset: 0x000EB5E4
+	// Token: 0x06002795 RID: 10133 RVA: 0x000F3FC8 File Offset: 0x000F21C8
 	public unsafe int GetResolutionIndexByList(FIntPoint resolution)
 	{
 		List<FIntPoint> resolutionList = this.GetResolutionList();
@@ -1443,7 +1654,7 @@ public class GameSettingsDeviceRender : Singleton
 		return -1;
 	}
 
-	// Token: 0x06005411 RID: 21521 RVA: 0x000ED530 File Offset: 0x000EB730
+	// Token: 0x06002796 RID: 10134 RVA: 0x000F4114 File Offset: 0x000F2314
 	public FIntPoint GetDefaultScreenResolution()
 	{
 		if (this.DefaultResolution == null)
@@ -1473,7 +1684,7 @@ public class GameSettingsDeviceRender : Singleton
 		return this.DefaultResolution.Value;
 	}
 
-	// Token: 0x06005412 RID: 21522 RVA: 0x000ED610 File Offset: 0x000EB810
+	// Token: 0x06002797 RID: 10135 RVA: 0x000F41F4 File Offset: 0x000F23F4
 	public int GetMobileResolutionByIndex(int index)
 	{
 		if (Info.Instance.PlatformType == ESourcePlatformType.IOS)
@@ -1515,12 +1726,16 @@ public class GameSettingsDeviceRender : Singleton
 		})[index];
 	}
 
-	// Token: 0x06005413 RID: 21523 RVA: 0x000ED68C File Offset: 0x000EB88C
+	// Token: 0x06002798 RID: 10136 RVA: 0x000F4270 File Offset: 0x000F2470
 	public unsafe int GetFrameIndexByList(int frameRate)
 	{
+		if (Info.Instance.PlatformType == ESourcePlatformType.XSX)
+		{
+			return 0;
+		}
 		if (Info.Instance.PlatformType == ESourcePlatformType.IOS)
 		{
-			if (GameSettingsDeviceRenderDefine.FrameRateListIos.Contains(frameRate))
+			if (Array.IndexOf<int>(GameSettingsDeviceRenderDefine.FrameRateListIos, frameRate) >= 0)
 			{
 				return Array.IndexOf<int>(GameSettingsDeviceRenderDefine.FrameRateListIos, frameRate);
 			}
@@ -1536,11 +1751,11 @@ public class GameSettingsDeviceRender : Singleton
 		}
 		else if (Info.Instance.PlatformType == ESourcePlatformType.Android)
 		{
-			if (this.FrameRateListAndroid.Contains(frameRate))
+			if (Array.IndexOf<int>(this.FrameRateListAndroid, frameRate) >= 0)
 			{
 				return Array.IndexOf<int>(this.FrameRateListAndroid, frameRate);
 			}
-			if (frameRate >= 40 && frameRate <= 45 && this.FrameRateListAndroid.Contains(40))
+			if (frameRate >= 40 && frameRate <= 45 && Array.IndexOf<int>(this.FrameRateListAndroid, 40) >= 0)
 			{
 				return Array.IndexOf<int>(this.FrameRateListAndroid, 40);
 			}
@@ -1556,7 +1771,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 		else if (Info.Instance.PlatformType == ESourcePlatformType.OpenHarmony)
 		{
-			if (GameSettingsDeviceRenderDefine.FrameRateListOpenHarmony.Contains(frameRate))
+			if (Array.IndexOf<int>(GameSettingsDeviceRenderDefine.FrameRateListOpenHarmony, frameRate) >= 0)
 			{
 				return Array.IndexOf<int>(GameSettingsDeviceRenderDefine.FrameRateListOpenHarmony, frameRate);
 			}
@@ -1572,7 +1787,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 		else
 		{
-			if (GameSettingsDeviceRenderDefine.FrameRateListPc.Contains(frameRate))
+			if (Array.IndexOf<int>(GameSettingsDeviceRenderDefine.FrameRateListPc, frameRate) >= 0)
 			{
 				return Array.IndexOf<int>(GameSettingsDeviceRenderDefine.FrameRateListPc, frameRate);
 			}
@@ -1588,7 +1803,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005414 RID: 21524 RVA: 0x000ED908 File Offset: 0x000EBB08
+	// Token: 0x06002799 RID: 10137 RVA: 0x000F4500 File Offset: 0x000F2700
 	public int GetFrameByList(int index)
 	{
 		if (Info.Instance.PlatformType == ESourcePlatformType.IOS)
@@ -1615,7 +1830,7 @@ public class GameSettingsDeviceRender : Singleton
 		return GameSettingsDeviceRenderDefine.FrameRateListPc[num5];
 	}
 
-	// Token: 0x06005415 RID: 21525 RVA: 0x000ED9E4 File Offset: 0x000EBBE4
+	// Token: 0x0600279A RID: 10138 RVA: 0x000F45DC File Offset: 0x000F27DC
 	public void ApplyDLSSG(int value)
 	{
 		try
@@ -1674,7 +1889,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005416 RID: 21526 RVA: 0x000EDAF4 File Offset: 0x000EBCF4
+	// Token: 0x0600279B RID: 10139 RVA: 0x000F46EC File Offset: 0x000F28EC
 	public unsafe void EnableDLSSG(int value)
 	{
 		this.DLSSGEnable = (value != 0);
@@ -1705,13 +1920,13 @@ public class GameSettingsDeviceRender : Singleton
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x06005417 RID: 21527 RVA: 0x000EDBFB File Offset: 0x000EBDFB
+	// Token: 0x0600279C RID: 10140 RVA: 0x000F47F3 File Offset: 0x000F29F3
 	public bool IsEnableDLSSG()
 	{
 		return this.DLSSGEnable;
 	}
 
-	// Token: 0x06005418 RID: 21528 RVA: 0x000EDC04 File Offset: 0x000EBE04
+	// Token: 0x0600279D RID: 10141 RVA: 0x000F47FC File Offset: 0x000F29FC
 	private void SetDLSSGRetainResourcesWhenOff(bool enable)
 	{
 		int value = (enable > false) ? 1 : 0;
@@ -1728,7 +1943,7 @@ public class GameSettingsDeviceRender : Singleton
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06005419 RID: 21529 RVA: 0x000EDC74 File Offset: 0x000EBE74
+	// Token: 0x0600279E RID: 10142 RVA: 0x000F486C File Offset: 0x000F2A6C
 	public unsafe void TemporaryDisableDLSSG(string key)
 	{
 		if (this.IsDlss3GpuDevice() && this.IsNvidiaStreamlinePluginLoaded())
@@ -1749,7 +1964,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x0600541A RID: 21530 RVA: 0x000EDD20 File Offset: 0x000EBF20
+	// Token: 0x0600279F RID: 10143 RVA: 0x000F4918 File Offset: 0x000F2B18
 	public unsafe void CancelTemporaryDisableDLSSG(string key)
 	{
 		if (this.IsDlss3GpuDevice() && this.IsNvidiaStreamlinePluginLoaded())
@@ -1770,14 +1985,14 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x0600541B RID: 21531 RVA: 0x000EDDD6 File Offset: 0x000EBFD6
+	// Token: 0x060027A0 RID: 10144 RVA: 0x000F49CE File Offset: 0x000F2BCE
 	public void EnableAFME(int value)
 	{
 		this.AFMEEnable = (value != 0);
 		this.ApplyAFME();
 	}
 
-	// Token: 0x0600541C RID: 21532 RVA: 0x000EDDE8 File Offset: 0x000EBFE8
+	// Token: 0x060027A1 RID: 10145 RVA: 0x000F49E0 File Offset: 0x000F2BE0
 	public void ApplyAFME()
 	{
 		if (this.AFMEDisalbeTemporaryKeys.Count <= 0 && this.AFMEEnable)
@@ -1793,7 +2008,7 @@ public class GameSettingsDeviceRender : Singleton
 		this.ApplyFrameRate(this.FrameRateInternal);
 	}
 
-	// Token: 0x0600541D RID: 21533 RVA: 0x000EDE4C File Offset: 0x000EC04C
+	// Token: 0x060027A2 RID: 10146 RVA: 0x000F4A44 File Offset: 0x000F2C44
 	public void ApplyKuroFITranslucentEnhance(bool bEnable)
 	{
 		int value = (bEnable > false) ? 1 : 0;
@@ -1805,7 +2020,7 @@ public class GameSettingsDeviceRender : Singleton
 		UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
 	}
 
-	// Token: 0x0600541E RID: 21534 RVA: 0x000EDE9C File Offset: 0x000EC09C
+	// Token: 0x060027A3 RID: 10147 RVA: 0x000F4A94 File Offset: 0x000F2C94
 	public void ApplyKuroFISingleOcclusionBloomReplace(bool bEnable)
 	{
 		int value = (bEnable > false) ? 1 : 0;
@@ -1817,7 +2032,7 @@ public class GameSettingsDeviceRender : Singleton
 		UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
 	}
 
-	// Token: 0x0600541F RID: 21535 RVA: 0x000EDEEC File Offset: 0x000EC0EC
+	// Token: 0x060027A4 RID: 10148 RVA: 0x000F4AE4 File Offset: 0x000F2CE4
 	public unsafe void TemporaryDisableAFME(string key)
 	{
 		if (this.IsSupportedAFME)
@@ -1840,7 +2055,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005420 RID: 21536 RVA: 0x000EDFAC File Offset: 0x000EC1AC
+	// Token: 0x060027A5 RID: 10149 RVA: 0x000F4BA4 File Offset: 0x000F2DA4
 	public unsafe void CancelTemporaryDisableAFME(string key)
 	{
 		if (this.IsSupportedAFME && this.AFMEDisalbeTemporaryKeys.Count > 0)
@@ -1863,7 +2078,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005421 RID: 21537 RVA: 0x000EE080 File Offset: 0x000EC280
+	// Token: 0x060027A6 RID: 10150 RVA: 0x000F4C78 File Offset: 0x000F2E78
 	public void TemporaryDisableFrameGeneration(string key)
 	{
 		if (this.IsSupportedAFME)
@@ -1884,7 +2099,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005422 RID: 21538 RVA: 0x000EE0D4 File Offset: 0x000EC2D4
+	// Token: 0x060027A7 RID: 10151 RVA: 0x000F4CCC File Offset: 0x000F2ECC
 	public void EnableXeSS(bool value)
 	{
 		if (value)
@@ -1903,7 +2118,7 @@ public class GameSettingsDeviceRender : Singleton
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.XeSS.Enabled 0", null);
 	}
 
-	// Token: 0x06005423 RID: 21539 RVA: 0x000EE12C File Offset: 0x000EC32C
+	// Token: 0x060027A8 RID: 10152 RVA: 0x000F4D24 File Offset: 0x000F2F24
 	public void ApplyXefg(int mode)
 	{
 		bool flag = this.XessEnabled > 0 && mode > 0;
@@ -1923,7 +2138,7 @@ public class GameSettingsDeviceRender : Singleton
 		this.ApplyUnlimitedFrameRate(flag);
 	}
 
-	// Token: 0x06005424 RID: 21540 RVA: 0x000EE1A6 File Offset: 0x000EC3A6
+	// Token: 0x060027A9 RID: 10153 RVA: 0x000F4D9E File Offset: 0x000F2F9E
 	public void EnableXefg(int mode)
 	{
 		this.XefgMode = mode;
@@ -1933,7 +2148,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005425 RID: 21541 RVA: 0x000EE1C4 File Offset: 0x000EC3C4
+	// Token: 0x060027AA RID: 10154 RVA: 0x000F4DBC File Offset: 0x000F2FBC
 	public unsafe void TemporaryDisableXefg(string key)
 	{
 		if (this.IsXess2Supported())
@@ -1954,7 +2169,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005426 RID: 21542 RVA: 0x000EE268 File Offset: 0x000EC468
+	// Token: 0x060027AB RID: 10155 RVA: 0x000F4E60 File Offset: 0x000F3060
 	public unsafe void CancelTemporaryDisableXefg(string key)
 	{
 		if (!this.XefgDisableTemporaryKeys.ContainsKey(key) && key != "CursorVisialbe")
@@ -1980,7 +2195,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005427 RID: 21543 RVA: 0x000EE34C File Offset: 0x000EC54C
+	// Token: 0x060027AC RID: 10156 RVA: 0x000F4F44 File Offset: 0x000F3144
 	public void CancelTemporaryDisableFrameGeneration(string key)
 	{
 		if (this.IsSupportedAFME)
@@ -2001,7 +2216,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005428 RID: 21544 RVA: 0x000EE3A0 File Offset: 0x000EC5A0
+	// Token: 0x060027AD RID: 10157 RVA: 0x000F4F98 File Offset: 0x000F3198
 	private EFFXFIApplyMode? GetFFXFIActiveTemporaryMode()
 	{
 		EFFXFIApplyMode? result = null;
@@ -2015,7 +2230,7 @@ public class GameSettingsDeviceRender : Singleton
 		return result;
 	}
 
-	// Token: 0x06005429 RID: 21545 RVA: 0x000EE414 File Offset: 0x000EC614
+	// Token: 0x060027AE RID: 10158 RVA: 0x000F500C File Offset: 0x000F320C
 	public void ToggleFFXFIStateTemporarily(EFFXFIApplyMode applyMode, bool bRecover, string key)
 	{
 		if (!this.IsFFXFISupported())
@@ -2056,7 +2271,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x0600542A RID: 21546 RVA: 0x000EE4E1 File Offset: 0x000EC6E1
+	// Token: 0x060027AF RID: 10159 RVA: 0x000F50D9 File Offset: 0x000F32D9
 	public void TempDisableFFXFIWhenLoading()
 	{
 		if (this.IsFFXFISupported())
@@ -2065,7 +2280,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x0600542B RID: 21547 RVA: 0x000EE4F8 File Offset: 0x000EC6F8
+	// Token: 0x060027B0 RID: 10160 RVA: 0x000F50F0 File Offset: 0x000F32F0
 	public void RecoverFFXFITempStateWhenLoading()
 	{
 		if (this.IsFFXFISupported())
@@ -2074,7 +2289,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x0600542C RID: 21548 RVA: 0x000EE50F File Offset: 0x000EC70F
+	// Token: 0x060027B1 RID: 10161 RVA: 0x000F5107 File Offset: 0x000F3307
 	public void TempDisableFFXFIWhenSeqC(PlotInfo plotInfo)
 	{
 		if (this.IsFFXFISupported())
@@ -2083,7 +2298,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x0600542D RID: 21549 RVA: 0x000EE526 File Offset: 0x000EC726
+	// Token: 0x060027B2 RID: 10162 RVA: 0x000F511E File Offset: 0x000F331E
 	public void RecoverFFXFITempStateFromSeqC(PlotResultInfo plotResultInfo)
 	{
 		if (this.IsFFXFISupported())
@@ -2092,7 +2307,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x0600542E RID: 21550 RVA: 0x000EE540 File Offset: 0x000EC740
+	// Token: 0x060027B3 RID: 10163 RVA: 0x000F5138 File Offset: 0x000F3338
 	public void ApplyFrameRate(int value)
 	{
 		int num = 0;
@@ -2166,8 +2381,8 @@ public class GameSettingsDeviceRender : Singleton
 		EventSystem.Instance.Emit<int>(EEventName.SettingFrameRateChanged, num);
 	}
 
-	// Token: 0x170005E6 RID: 1510
-	// (get) Token: 0x0600542F RID: 21551 RVA: 0x000EE74A File Offset: 0x000EC94A
+	// Token: 0x1700060C RID: 1548
+	// (get) Token: 0x060027B4 RID: 10164 RVA: 0x000F5342 File Offset: 0x000F3542
 	public int FrameRate
 	{
 		get
@@ -2176,8 +2391,8 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x170005E7 RID: 1511
-	// (get) Token: 0x06005430 RID: 21552 RVA: 0x000EE752 File Offset: 0x000EC952
+	// Token: 0x1700060D RID: 1549
+	// (get) Token: 0x060027B5 RID: 10165 RVA: 0x000F534A File Offset: 0x000F354A
 	public float FrameSeconds
 	{
 		get
@@ -2186,7 +2401,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005431 RID: 21553 RVA: 0x000EE75C File Offset: 0x000EC95C
+	// Token: 0x060027B6 RID: 10166 RVA: 0x000F5354 File Offset: 0x000F3554
 	public void ApplyUnlimitedFrameRate(bool value)
 	{
 		if (value)
@@ -2205,7 +2420,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005432 RID: 21554 RVA: 0x000EE7AC File Offset: 0x000EC9AC
+	// Token: 0x060027B7 RID: 10167 RVA: 0x000F53A4 File Offset: 0x000F35A4
 	public int GetMaxRoleShadowNum()
 	{
 		int gameQualitySettingLevel = (int)this.GameQualitySettingLevel;
@@ -2216,7 +2431,7 @@ public class GameSettingsDeviceRender : Singleton
 		return GameSettingsDeviceRenderDefine.MaxRoleShadowNumWithGameGraphQualityMobile[gameQualitySettingLevel];
 	}
 
-	// Token: 0x06005433 RID: 21555 RVA: 0x000EE7DC File Offset: 0x000EC9DC
+	// Token: 0x060027B8 RID: 10168 RVA: 0x000F53D4 File Offset: 0x000F35D4
 	public int GetMaxRoleShadowDistance()
 	{
 		int gameQualitySettingLevel = (int)this.GameQualitySettingLevel;
@@ -2227,7 +2442,7 @@ public class GameSettingsDeviceRender : Singleton
 		return GameSettingsDeviceRenderDefine.MaxRoleShadowDistanceWithGameGraphQualityMobile[gameQualitySettingLevel];
 	}
 
-	// Token: 0x06005434 RID: 21556 RVA: 0x000EE80C File Offset: 0x000ECA0C
+	// Token: 0x060027B9 RID: 10169 RVA: 0x000F5404 File Offset: 0x000F3604
 	public int GetMaxDecalShadowDistance()
 	{
 		int gameQualitySettingLevel = (int)this.GameQualitySettingLevel;
@@ -2238,21 +2453,21 @@ public class GameSettingsDeviceRender : Singleton
 		return GameSettingsDeviceRenderDefine.MaxDecalShadowDistanceWithGameGraphQualityMobile[gameQualitySettingLevel];
 	}
 
-	// Token: 0x06005435 RID: 21557 RVA: 0x000EE83C File Offset: 0x000ECA3C
+	// Token: 0x060027BA RID: 10170 RVA: 0x000F5434 File Offset: 0x000F3634
 	public int IsMainPlayerUseRealRoleShadow()
 	{
 		int gameQualitySettingLevel = (int)this.GameQualitySettingLevel;
 		return GameSettingsDeviceRenderDefine.MainPlayerRealShadow[gameQualitySettingLevel];
 	}
 
-	// Token: 0x06005436 RID: 21558 RVA: 0x000EE857 File Offset: 0x000ECA57
+	// Token: 0x060027BB RID: 10171 RVA: 0x000F544F File Offset: 0x000F364F
 	public void SetFrameRateTemploary(int frameRate)
 	{
 		this.FrameRateTemploary = MathUtils.Instance.Clamp(frameRate, 24, 120);
 		this.FrameSecondsInternal = 1f / (float)this.FrameRateTemploary;
 	}
 
-	// Token: 0x06005437 RID: 21559 RVA: 0x000EE884 File Offset: 0x000ECA84
+	// Token: 0x060027BC RID: 10172 RVA: 0x000F547C File Offset: 0x000F367C
 	public void SetSequenceFrameRateLimit()
 	{
 		if (Info.Instance.PlatformType == ESourcePlatformType.IOS)
@@ -2282,7 +2497,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005438 RID: 21560 RVA: 0x000EE930 File Offset: 0x000ECB30
+	// Token: 0x060027BD RID: 10173 RVA: 0x000F5528 File Offset: 0x000F3728
 	public void CancleSequenceFrameRateLimit()
 	{
 		this.CancelFrameRateTemploary();
@@ -2293,14 +2508,14 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005439 RID: 21561 RVA: 0x000EE982 File Offset: 0x000ECB82
+	// Token: 0x060027BE RID: 10174 RVA: 0x000F557A File Offset: 0x000F377A
 	public void CancelFrameRateTemploary()
 	{
 		this.FrameRateTemploary = 0;
 		this.FrameSecondsInternal = 1f / (float)this.FrameRateInternal;
 	}
 
-	// Token: 0x0600543A RID: 21562 RVA: 0x000EE99E File Offset: 0x000ECB9E
+	// Token: 0x060027BF RID: 10175 RVA: 0x000F5596 File Offset: 0x000F3796
 	public void TryReduceCsmUpdateFrequency(string reason)
 	{
 		bool count = this.ReduceCsmReasonSet.Count != 0;
@@ -2311,7 +2526,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x0600543B RID: 21563 RVA: 0x000EE9CE File Offset: 0x000ECBCE
+	// Token: 0x060027C0 RID: 10176 RVA: 0x000F55C6 File Offset: 0x000F37C6
 	public void TryRestoreCsmUpdateFrequency(string reason)
 	{
 		if (this.ReduceCsmReasonSet.Remove(reason) && this.ReduceCsmReasonSet.Count == 0)
@@ -2320,14 +2535,14 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x0600543C RID: 21564 RVA: 0x000EE9F1 File Offset: 0x000ECBF1
+	// Token: 0x060027C1 RID: 10177 RVA: 0x000F55E9 File Offset: 0x000F37E9
 	private void RestoreCsmUpdateFrequency()
 	{
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Shadow.CSMMode3EnableUpdateIntervalOverride 0", null);
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.PSO.IOSCompilationTimeLimit 2.0", null);
 	}
 
-	// Token: 0x0600543D RID: 21565 RVA: 0x000EEA13 File Offset: 0x000ECC13
+	// Token: 0x060027C2 RID: 10178 RVA: 0x000F560B File Offset: 0x000F380B
 	private void ReduceCsmUpdateFrequency()
 	{
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Shadow.CSMMode3EnableUpdateIntervalOverride 1", null);
@@ -2335,7 +2550,7 @@ public class GameSettingsDeviceRender : Singleton
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.PSO.IOSCompilationTimeLimit 0.1", null);
 	}
 
-	// Token: 0x0600543E RID: 21566 RVA: 0x000EEA48 File Offset: 0x000ECC48
+	// Token: 0x060027C3 RID: 10179 RVA: 0x000F5640 File Offset: 0x000F3840
 	public void RefreshPerformanceLimit(string reason)
 	{
 		int num = 0;
@@ -2377,7 +2592,7 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x0600543F RID: 21567 RVA: 0x000EEB3C File Offset: 0x000ECD3C
+	// Token: 0x060027C4 RID: 10180 RVA: 0x000F5734 File Offset: 0x000F3934
 	public void ApplyPerformanceLimit(string tag, bool cacheWorldFrame, bool frameLimit)
 	{
 		this.PerformanceLimitRunning[tag] = new PerformanceLimitConfig
@@ -2388,7 +2603,7 @@ public class GameSettingsDeviceRender : Singleton
 		this.RefreshPerformanceLimit(tag);
 	}
 
-	// Token: 0x06005440 RID: 21568 RVA: 0x000EEB64 File Offset: 0x000ECD64
+	// Token: 0x060027C5 RID: 10181 RVA: 0x000F575C File Offset: 0x000F395C
 	public void CancelPerformanceLimit(string tag)
 	{
 		if (!this.PerformanceLimitRunning.Remove(tag))
@@ -2398,7 +2613,7 @@ public class GameSettingsDeviceRender : Singleton
 		this.RefreshPerformanceLimit(tag);
 	}
 
-	// Token: 0x06005441 RID: 21569 RVA: 0x000EEB7C File Offset: 0x000ECD7C
+	// Token: 0x060027C6 RID: 10182 RVA: 0x000F5774 File Offset: 0x000F3974
 	public void CancelAllPerformanceLimit()
 	{
 		this.PerformanceLimitRunning.Clear();
@@ -2407,7 +2622,7 @@ public class GameSettingsDeviceRender : Singleton
 		this.RefreshPerformanceLimit("[CancelAll]");
 	}
 
-	// Token: 0x06005442 RID: 21570 RVA: 0x000EEBA6 File Offset: 0x000ECDA6
+	// Token: 0x060027C7 RID: 10183 RVA: 0x000F579E File Offset: 0x000F399E
 	public void SetIsAutoAdjustImageQuality(bool isAutoAdjustImageQuality)
 	{
 		if (isAutoAdjustImageQuality)
@@ -2418,24 +2633,34 @@ public class GameSettingsDeviceRender : Singleton
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Kuro.AutoCoolUIEnable 0", null);
 	}
 
-	// Token: 0x06005443 RID: 21571 RVA: 0x000EEBCC File Offset: 0x000ECDCC
+	// Token: 0x060027C8 RID: 10184 RVA: 0x000F57C4 File Offset: 0x000F39C4
 	public EGameQualitySettingLevel? GetRecommendQualityLv()
 	{
 		int? recommendQualityLv = this.RecommendQualityLv;
-		if (recommendQualityLv == null)
+		EGameQualitySettingLevel? result = (recommendQualityLv != null) ? new EGameQualitySettingLevel?((EGameQualitySettingLevel)recommendQualityLv.GetValueOrDefault()) : null;
+		if (result == null)
 		{
 			return null;
 		}
-		return new EGameQualitySettingLevel?((EGameQualitySettingLevel)recommendQualityLv.GetValueOrDefault());
+		if (this.RecommendQualityDeviceCap != null && result.Value > this.RecommendQualityDeviceCap.Value)
+		{
+			result = new EGameQualitySettingLevel?(this.RecommendQualityDeviceCap.Value);
+		}
+		EGameQualitySettingLevel? maxQualityLevelByResourceTier = GameSettingsManager.Instance.GetMaxQualityLevelByResourceTier();
+		if (maxQualityLevelByResourceTier != null && result.Value > maxQualityLevelByResourceTier.Value)
+		{
+			result = new EGameQualitySettingLevel?(maxQualityLevelByResourceTier.Value);
+		}
+		return result;
 	}
 
-	// Token: 0x06005444 RID: 21572 RVA: 0x000EEBFF File Offset: 0x000ECDFF
+	// Token: 0x060027C9 RID: 10185 RVA: 0x000F5872 File Offset: 0x000F3A72
 	public EGameQualityRange GetQualityRange()
 	{
 		return this.QualityRange;
 	}
 
-	// Token: 0x06005445 RID: 21573 RVA: 0x000EEC08 File Offset: 0x000ECE08
+	// Token: 0x060027CA RID: 10186 RVA: 0x000F587C File Offset: 0x000F3A7C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -2478,7 +2703,7 @@ public class GameSettingsDeviceRender : Singleton
 		return new ValueTuple<string, bool>(this.CPUBrand, !flag);
 	}
 
-	// Token: 0x06005446 RID: 21574 RVA: 0x000EED34 File Offset: 0x000ECF34
+	// Token: 0x060027CB RID: 10187 RVA: 0x000F59A8 File Offset: 0x000F3BA8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -2511,7 +2736,7 @@ public class GameSettingsDeviceRender : Singleton
 		return new ValueTuple<string, bool>(this.DeviceName, !flag);
 	}
 
-	// Token: 0x06005447 RID: 21575 RVA: 0x000EEE34 File Offset: 0x000ED034
+	// Token: 0x060027CC RID: 10188 RVA: 0x000F5AA8 File Offset: 0x000F3CA8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -2523,7 +2748,7 @@ public class GameSettingsDeviceRender : Singleton
 		return new ValueTuple<string, bool>(this.AdapterDriverVersion, item);
 	}
 
-	// Token: 0x06005448 RID: 21576 RVA: 0x000EEE54 File Offset: 0x000ED054
+	// Token: 0x060027CD RID: 10189 RVA: 0x000F5AC8 File Offset: 0x000F3CC8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -2545,7 +2770,7 @@ public class GameSettingsDeviceRender : Singleton
 		return new ValueTuple<string, bool>(item, item2);
 	}
 
-	// Token: 0x06005449 RID: 21577 RVA: 0x000EEECC File Offset: 0x000ED0CC
+	// Token: 0x060027CE RID: 10190 RVA: 0x000F5B40 File Offset: 0x000F3D40
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -2561,7 +2786,7 @@ public class GameSettingsDeviceRender : Singleton
 		return new ValueTuple<string, bool>(defaultInterpolatedStringHandler.ToStringAndClear(), !flag);
 	}
 
-	// Token: 0x0600544A RID: 21578 RVA: 0x000EEF2C File Offset: 0x000ED12C
+	// Token: 0x060027CF RID: 10191 RVA: 0x000F5BA0 File Offset: 0x000F3DA0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -2579,7 +2804,7 @@ public class GameSettingsDeviceRender : Singleton
 		return new ValueTuple<string, bool>("", false);
 	}
 
-	// Token: 0x0600544B RID: 21579 RVA: 0x000EEF80 File Offset: 0x000ED180
+	// Token: 0x060027D0 RID: 10192 RVA: 0x000F5BF4 File Offset: 0x000F3DF4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -2591,7 +2816,7 @@ public class GameSettingsDeviceRender : Singleton
 		return new ValueTuple<string, bool>(text ?? "", string.IsNullOrEmpty(text));
 	}
 
-	// Token: 0x0600544C RID: 21580 RVA: 0x000EEFC3 File Offset: 0x000ED1C3
+	// Token: 0x060027D1 RID: 10193 RVA: 0x000F5C37 File Offset: 0x000F3E37
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -2602,26 +2827,56 @@ public class GameSettingsDeviceRender : Singleton
 		return new ValueTuple<string, bool>(this.WindowsVersion, false);
 	}
 
-	// Token: 0x0600544D RID: 21581 RVA: 0x000EEFD4 File Offset: 0x000ED1D4
+	// Token: 0x060027D2 RID: 10194 RVA: 0x000F5C48 File Offset: 0x000F3E48
 	public bool ShouldOverrideVegetationDitherDefaultValue()
 	{
 		return !(this.VendorName.ToLower() != "intel") && (this.DeviceName.Contains("A580") || this.DeviceName.Contains("A750") || this.DeviceName.Contains("A770"));
 	}
 
-	// Token: 0x0600544E RID: 21582 RVA: 0x000EF030 File Offset: 0x000ED230
+	// Token: 0x060027D3 RID: 10195 RVA: 0x000F5CA4 File Offset: 0x000F3EA4
 	public bool IsAutoExposureOn()
 	{
 		return UKismetSystemLibrary.GetConsoleVariableIntValue("r.Kuro.AutoExposure") == 1;
 	}
 
-	// Token: 0x0600544F RID: 21583 RVA: 0x000EF03F File Offset: 0x000ED23F
+	// Token: 0x060027D4 RID: 10196 RVA: 0x000F5CB3 File Offset: 0x000F3EB3
 	public bool IsEnergySavingFrameInterpolationSupported()
 	{
 		return UKismetSystemLibrary.GetConsoleVariableIntValue("r.Mobile.EnergySavingFrameInterpolation") == 1;
 	}
 
-	// Token: 0x170005E8 RID: 1512
-	// (get) Token: 0x06005450 RID: 21584 RVA: 0x000EF04E File Offset: 0x000ED24E
+	// Token: 0x060027D5 RID: 10197 RVA: 0x000F5CC4 File Offset: 0x000F3EC4
+	public void TemporarySetIntCVar(string Name, int Value)
+	{
+		if (!this.TemporaryIntCVars.ContainsKey(Name))
+		{
+			this.TemporaryIntCVars[Name] = UKismetSystemLibrary.GetConsoleVariableIntValue(Name);
+		}
+		UObject world = GlobalData.World;
+		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
+		defaultInterpolatedStringHandler.AppendFormatted(Name);
+		defaultInterpolatedStringHandler.AppendLiteral(" ");
+		defaultInterpolatedStringHandler.AppendFormatted<int>(Value);
+		UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
+	}
+
+	// Token: 0x060027D6 RID: 10198 RVA: 0x000F5D28 File Offset: 0x000F3F28
+	public void TemporaryResetIntCVar(string Name)
+	{
+		if (this.TemporaryIntCVars.ContainsKey(Name))
+		{
+			UObject world = GlobalData.World;
+			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
+			defaultInterpolatedStringHandler.AppendFormatted(Name);
+			defaultInterpolatedStringHandler.AppendLiteral(" ");
+			defaultInterpolatedStringHandler.AppendFormatted<int>(this.TemporaryIntCVars[Name]);
+			UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
+			this.TemporaryIntCVars.Remove(Name);
+		}
+	}
+
+	// Token: 0x1700060E RID: 1550
+	// (get) Token: 0x060027D7 RID: 10199 RVA: 0x000F5D92 File Offset: 0x000F3F92
 	public static GameSettingsDeviceRender Instance
 	{
 		get
@@ -2635,12 +2890,12 @@ public class GameSettingsDeviceRender : Singleton
 		}
 	}
 
-	// Token: 0x06005451 RID: 21585 RVA: 0x000EF071 File Offset: 0x000ED271
+	// Token: 0x060027D8 RID: 10200 RVA: 0x000F5DB5 File Offset: 0x000F3FB5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06005452 RID: 21586 RVA: 0x000EF073 File Offset: 0x000ED273
+	// Token: 0x060027D9 RID: 10201 RVA: 0x000F5DB7 File Offset: 0x000F3FB7
 	public static void ResetStaticDefaultValue()
 	{
 		GameSettingsDeviceRender instance = GameSettingsDeviceRender._instance;
@@ -2651,171 +2906,190 @@ public class GameSettingsDeviceRender : Singleton
 		GameSettingsDeviceRender._instance = null;
 	}
 
-	// Token: 0x06005453 RID: 21587 RVA: 0x000EF08C File Offset: 0x000ED28C
+	// Token: 0x060027DA RID: 10202 RVA: 0x000F5DD0 File Offset: 0x000F3FD0
 	static GameSettingsDeviceRender()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GameSettingsDeviceRender.CreateStaticDefaultValue), new Action(GameSettingsDeviceRender.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400263B RID: 9787
+	// Token: 0x040026C0 RID: 9920
 	private const string KuroFITranslucentLightingModeCVar = "r.KuroFI.TranslucentLightingMode";
 
-	// Token: 0x0400263C RID: 9788
+	// Token: 0x040026C1 RID: 9921
 	private const string KuroFIEnableSingleOcclusionBloomReplaceCVar = "r.KuroFI.EnableSingleOcclusionBloomReplace";
 
-	// Token: 0x0400263D RID: 9789
+	// Token: 0x040026C2 RID: 9922
 	[Nullable(2)]
 	private Dictionary<int, DeviceRenderFeature> DeviceRenderFeatureCfgMapInternal;
 
-	// Token: 0x0400263E RID: 9790
+	// Token: 0x040026C3 RID: 9923
 	private int? RecommendQualityLvInternal;
 
-	// Token: 0x0400263F RID: 9791
+	// Token: 0x040026C4 RID: 9924
 	private int DevicePhysicalGbRam;
 
-	// Token: 0x04002640 RID: 9792
+	// Token: 0x040026C5 RID: 9925
 	public int DeviceVideoGbRam;
 
-	// Token: 0x04002641 RID: 9793
+	// Token: 0x040026C6 RID: 9926
 	public int CPUFrequency;
 
-	// Token: 0x04002642 RID: 9794
+	// Token: 0x040026C7 RID: 9927
 	public int CPUCores;
 
-	// Token: 0x04002643 RID: 9795
+	// Token: 0x040026C8 RID: 9928
 	public int CPUCoresIncludingHyperthreads;
 
-	// Token: 0x04002644 RID: 9796
+	// Token: 0x040026C9 RID: 9929
 	public string CPUBrand = "";
 
-	// Token: 0x04002645 RID: 9797
+	// Token: 0x040026CA RID: 9930
 	public bool IsSupportedAFME;
 
-	// Token: 0x04002646 RID: 9798
+	// Token: 0x040026CB RID: 9931
 	public string DriverDate = "Unknown";
 
-	// Token: 0x04002647 RID: 9799
+	// Token: 0x040026CC RID: 9932
 	public string DriverVersion = "Unknown";
 
-	// Token: 0x04002648 RID: 9800
+	// Token: 0x040026CD RID: 9933
 	public string AdapterDriverVersion = "Unknown";
 
-	// Token: 0x04002649 RID: 9801
+	// Token: 0x040026CE RID: 9934
 	public string WindowsVersion = "Unknown";
 
-	// Token: 0x0400264A RID: 9802
+	// Token: 0x040026CF RID: 9935
 	public bool IsSSDDevice;
 
-	// Token: 0x0400264B RID: 9803
+	// Token: 0x040026D0 RID: 9936
 	public bool IsAdreno;
 
-	// Token: 0x0400264C RID: 9804
+	// Token: 0x040026D1 RID: 9937
 	public bool IsXuanJie;
 
-	// Token: 0x0400264D RID: 9805
+	// Token: 0x040026D2 RID: 9938
 	private string MobileDeviceModel = "";
 
-	// Token: 0x0400264E RID: 9806
+	// Token: 0x040026D3 RID: 9939
 	private string MobileDeviceMake = "";
 
-	// Token: 0x0400264F RID: 9807
+	// Token: 0x040026D4 RID: 9940
 	private string VendorName = "";
 
-	// Token: 0x04002650 RID: 9808
+	// Token: 0x040026D5 RID: 9941
 	private string DeviceName = "";
 
-	// Token: 0x04002651 RID: 9809
+	// Token: 0x040026D6 RID: 9942
 	private string BaseProfileName = "";
 
-	// Token: 0x04002652 RID: 9810
+	// Token: 0x040026D7 RID: 9943
 	public int DeviceScore;
 
-	// Token: 0x04002653 RID: 9811
+	// Token: 0x040026D8 RID: 9944
 	public int LowMemoryDeviceMark;
 
-	// Token: 0x04002654 RID: 9812
+	// Token: 0x040026D9 RID: 9945
 	private bool IsBrokenGLPacingDevice;
 
-	// Token: 0x04002655 RID: 9813
+	// Token: 0x040026DA RID: 9946
 	private string RHIName = "";
 
-	// Token: 0x04002656 RID: 9814
+	// Token: 0x040026DB RID: 9947
 	private int HardwareLevel;
 
-	// Token: 0x04002657 RID: 9815
+	// Token: 0x040026DC RID: 9948
 	public EGameDeviceType DeviceType = EGameDeviceType.PC_HIGH;
 
-	// Token: 0x04002658 RID: 9816
+	// Token: 0x040026DD RID: 9949
 	private EGameQualityRange QualityRange = EGameQualityRange.One2Three;
 
-	// Token: 0x04002659 RID: 9817
+	// Token: 0x040026DE RID: 9950
+	private EGameQualitySettingLevel? RecommendQualityDeviceCap;
+
+	// Token: 0x040026DF RID: 9951
 	private bool EnableVolumeFog = true;
 
-	// Token: 0x0400265A RID: 9818
+	// Token: 0x040026E0 RID: 9952
 	private FIntPoint? DefaultResolution;
 
-	// Token: 0x0400265B RID: 9819
+	// Token: 0x040026E1 RID: 9953
 	private TArray<FIntPoint> ResolutionListRef;
 
-	// Token: 0x0400265C RID: 9820
+	// Token: 0x040026E2 RID: 9954
 	private int FrameRateTemploary;
 
-	// Token: 0x0400265D RID: 9821
+	// Token: 0x040026E3 RID: 9955
 	private int FrameRateInternal;
 
-	// Token: 0x0400265E RID: 9822
+	// Token: 0x040026E4 RID: 9956
 	private bool DLSSGEnable;
 
-	// Token: 0x0400265F RID: 9823
+	// Token: 0x040026E5 RID: 9957
 	private int DLSSGMode;
 
-	// Token: 0x04002660 RID: 9824
+	// Token: 0x040026E6 RID: 9958
 	private bool AFMEEnable;
 
-	// Token: 0x04002661 RID: 9825
+	// Token: 0x040026E7 RID: 9959
 	private bool AFMERunning;
 
-	// Token: 0x04002662 RID: 9826
+	// Token: 0x040026E8 RID: 9960
 	[Nullable(2)]
 	private string ProfileNameCache;
 
-	// Token: 0x04002663 RID: 9827
+	// Token: 0x040026E9 RID: 9961
 	private float FrameSecondsInternal;
 
-	// Token: 0x04002664 RID: 9828
+	// Token: 0x040026EA RID: 9962
 	private readonly HashSet<string> ReduceCsmReasonSet = new HashSet<string>();
 
-	// Token: 0x04002665 RID: 9829
+	// Token: 0x040026EB RID: 9963
 	private int XessEnabled;
 
-	// Token: 0x04002666 RID: 9830
+	// Token: 0x040026EC RID: 9964
 	private int XefgMode;
 
-	// Token: 0x04002667 RID: 9831
+	// Token: 0x040026ED RID: 9965
 	private readonly Dictionary<string, int> XefgDisableTemporaryKeys = new Dictionary<string, int>();
 
-	// Token: 0x04002668 RID: 9832
+	// Token: 0x040026EE RID: 9966
 	public Dictionary<string, IPerformanceLimitConfig> PerformanceLimitRunning = new Dictionary<string, IPerformanceLimitConfig>();
 
-	// Token: 0x04002669 RID: 9833
+	// Token: 0x040026EF RID: 9967
 	public int InCacheSceneColorMode;
 
-	// Token: 0x0400266A RID: 9834
+	// Token: 0x040026F0 RID: 9968
 	private readonly Dictionary<EFunction, int> renderFeatureValueBuffer = new Dictionary<EFunction, int>();
 
-	// Token: 0x0400266B RID: 9835
+	// Token: 0x040026F1 RID: 9969
+	[Nullable(2)]
+	private List<DeviceRenderFeature> RenderDistanceFeatures;
+
+	// Token: 0x040026F2 RID: 9970
+	private EGameDeviceType? RenderDistanceDeviceType;
+
+	// Token: 0x040026F3 RID: 9971
+	private EGameDeviceType? RenderDistanceTestDeviceId;
+
+	// Token: 0x040026F4 RID: 9972
+	private const int RenderDistanceExtensionPositionCount = 2;
+
+	// Token: 0x040026F5 RID: 9973
 	private bool? IsSteamDeckInternal;
 
-	// Token: 0x0400266C RID: 9836
+	// Token: 0x040026F6 RID: 9974
 	private readonly Dictionary<string, int> DLSSGDisalbeTemporaryKeys = new Dictionary<string, int>();
 
-	// Token: 0x0400266D RID: 9837
+	// Token: 0x040026F7 RID: 9975
 	private readonly Dictionary<string, int> AFMEDisalbeTemporaryKeys = new Dictionary<string, int>();
 
-	// Token: 0x0400266E RID: 9838
+	// Token: 0x040026F8 RID: 9976
 	private readonly Dictionary<string, EFFXFIApplyMode> FFXFIDisableTemporaryReasons = new Dictionary<string, EFFXFIApplyMode>();
 
-	// Token: 0x0400266F RID: 9839
+	// Token: 0x040026F9 RID: 9977
+	private Dictionary<string, int> TemporaryIntCVars = new Dictionary<string, int>();
+
+	// Token: 0x040026FA RID: 9978
 	[Nullable(2)]
 	private static GameSettingsDeviceRender _instance;
 }

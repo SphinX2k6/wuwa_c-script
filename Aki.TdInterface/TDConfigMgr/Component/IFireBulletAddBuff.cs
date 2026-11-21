@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000388 RID: 904
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003D1 RID: 977
 	public class IFireBulletAddBuff : IAddBuffMode
 	{
-		// Token: 0x060011ED RID: 4589 RVA: 0x0003BC94 File Offset: 0x00039E94
+		// Token: 0x06001331 RID: 4913 RVA: 0x0003EF78 File Offset: 0x0003D178
 		private IFireBulletAddBuff_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060011EE RID: 4590 RVA: 0x0003BCCC File Offset: 0x00039ECC
+		// Token: 0x06001332 RID: 4914 RVA: 0x0003EFB0 File Offset: 0x0003D1B0
 		public static IFireBulletAddBuff Create([Nullable(2)] IFireBulletAddBuff instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011EF RID: 4591 RVA: 0x0003BCDF File Offset: 0x00039EDF
+		// Token: 0x06001333 RID: 4915 RVA: 0x0003EFC3 File Offset: 0x0003D1C3
 		public static IFireBulletAddBuff CreateFromSetValue([Nullable(2)] IFireBulletAddBuff_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011F0 RID: 4592 RVA: 0x0003BCF2 File Offset: 0x00039EF2
+		// Token: 0x06001334 RID: 4916 RVA: 0x0003EFD6 File Offset: 0x0003D1D6
 		public new IFireBulletAddBuff_SetValue ToSetValue()
 		{
 			return new IFireBulletAddBuff_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000508 RID: 1288
-		// (get) Token: 0x060011F1 RID: 4593 RVA: 0x0003BD1D File Offset: 0x00039F1D
-		// (set) Token: 0x060011F2 RID: 4594 RVA: 0x0003BD48 File Offset: 0x00039F48
+		// Token: 0x1700055C RID: 1372
+		// (get) Token: 0x06001335 RID: 4917 RVA: 0x0003F001 File Offset: 0x0003D201
+		// (set) Token: 0x06001336 RID: 4918 RVA: 0x0003F02C File Offset: 0x0003D22C
 		public override EBuffProducerMode Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000509 RID: 1289
-		// (get) Token: 0x060011F3 RID: 4595 RVA: 0x0003BD56 File Offset: 0x00039F56
-		// (set) Token: 0x060011F4 RID: 4596 RVA: 0x0003BD82 File Offset: 0x00039F82
+		// Token: 0x1700055D RID: 1373
+		// (get) Token: 0x06001337 RID: 4919 RVA: 0x0003F03A File Offset: 0x0003D23A
+		// (set) Token: 0x06001338 RID: 4920 RVA: 0x0003F066 File Offset: 0x0003D266
 		public virtual long BulletId
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700050A RID: 1290
-		// (get) Token: 0x060011F5 RID: 4597 RVA: 0x0003BD90 File Offset: 0x00039F90
-		// (set) Token: 0x060011F6 RID: 4598 RVA: 0x0003BDF1 File Offset: 0x00039FF1
+		// Token: 0x1700055E RID: 1374
+		// (get) Token: 0x06001339 RID: 4921 RVA: 0x0003F074 File Offset: 0x0003D274
+		// (set) Token: 0x0600133A RID: 4922 RVA: 0x0003F0D5 File Offset: 0x0003D2D5
 		public virtual VectorInfo BulletOffset
 		{
 			get
@@ -138,18 +136,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E8F RID: 3727
+		// Token: 0x04000F86 RID: 3974
 		[Nullable(2)]
 		protected new IFireBulletAddBuff FbInstance;
 
-		// Token: 0x04000E90 RID: 3728
+		// Token: 0x04000F87 RID: 3975
 		[Nullable(2)]
 		protected new IFireBulletAddBuff_SetValue PocoInterface;
 
-		// Token: 0x04000E91 RID: 3729
+		// Token: 0x04000F88 RID: 3976
 		private VectorInfo _BulletOffsetCache;
 
-		// Token: 0x04000E92 RID: 3730
+		// Token: 0x04000F89 RID: 3977
 		private bool _BulletOffsetInited;
 	}
 }

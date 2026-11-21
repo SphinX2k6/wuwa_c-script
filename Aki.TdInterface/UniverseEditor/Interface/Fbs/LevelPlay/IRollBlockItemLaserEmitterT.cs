@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200459A RID: 17818
+	// Token: 0x02004A02 RID: 18946
 	public class IRollBlockItemLaserEmitterT
 	{
-		// Token: 0x17007E97 RID: 32407
-		// (get) Token: 0x0601AEBB RID: 110267 RVA: 0x003D72D2 File Offset: 0x003D54D2
-		// (set) Token: 0x0601AEBC RID: 110268 RVA: 0x003D72DA File Offset: 0x003D54DA
+		// Token: 0x170084D8 RID: 34008
+		// (get) Token: 0x0601C690 RID: 116368 RVA: 0x0040356E File Offset: 0x0040176E
+		// (set) Token: 0x0601C691 RID: 116369 RVA: 0x00403576 File Offset: 0x00401776
 		public ERollBlockItemType Type { get; set; }
 
-		// Token: 0x17007E98 RID: 32408
-		// (get) Token: 0x0601AEBD RID: 110269 RVA: 0x003D72E3 File Offset: 0x003D54E3
-		// (set) Token: 0x0601AEBE RID: 110270 RVA: 0x003D72EB File Offset: 0x003D54EB
+		// Token: 0x170084D9 RID: 34009
+		// (get) Token: 0x0601C692 RID: 116370 RVA: 0x0040357F File Offset: 0x0040177F
+		// (set) Token: 0x0601C693 RID: 116371 RVA: 0x00403587 File Offset: 0x00401787
 		public ERollBlockLayType Direction { get; set; }
 
-		// Token: 0x17007E99 RID: 32409
-		// (get) Token: 0x0601AEBF RID: 110271 RVA: 0x003D72F4 File Offset: 0x003D54F4
-		// (set) Token: 0x0601AEC0 RID: 110272 RVA: 0x003D72FC File Offset: 0x003D54FC
+		// Token: 0x170084DA RID: 34010
+		// (get) Token: 0x0601C694 RID: 116372 RVA: 0x00403590 File Offset: 0x00401790
+		// (set) Token: 0x0601C695 RID: 116373 RVA: 0x00403598 File Offset: 0x00401798
 		public int Length { get; set; }
 
-		// Token: 0x17007E9A RID: 32410
-		// (get) Token: 0x0601AEC1 RID: 110273 RVA: 0x003D7305 File Offset: 0x003D5505
-		// (set) Token: 0x0601AEC2 RID: 110274 RVA: 0x003D730D File Offset: 0x003D550D
+		// Token: 0x170084DB RID: 34011
+		// (get) Token: 0x0601C696 RID: 116374 RVA: 0x004035A1 File Offset: 0x004017A1
+		// (set) Token: 0x0601C697 RID: 116375 RVA: 0x004035A9 File Offset: 0x004017A9
 		public int Height { get; set; }
 
-		// Token: 0x17007E9B RID: 32411
-		// (get) Token: 0x0601AEC3 RID: 110275 RVA: 0x003D7316 File Offset: 0x003D5516
-		// (set) Token: 0x0601AEC4 RID: 110276 RVA: 0x003D731E File Offset: 0x003D551E
+		// Token: 0x170084DC RID: 34012
+		// (get) Token: 0x0601C698 RID: 116376 RVA: 0x004035B2 File Offset: 0x004017B2
+		// (set) Token: 0x0601C699 RID: 116377 RVA: 0x004035BA File Offset: 0x004017BA
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601AEC5 RID: 110277 RVA: 0x003D7327 File Offset: 0x003D5527
+		// Token: 0x0601C69A RID: 116378 RVA: 0x004035C3 File Offset: 0x004017C3
 		public IRollBlockItemLaserEmitterT()
 		{
 			this.Type = ERollBlockItemType.BreakableObstacle;

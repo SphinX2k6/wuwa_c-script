@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SeamlessTravel
 {
-	// Token: 0x02004C8A RID: 19594
+	// Token: 0x02003C3B RID: 15419
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SeamlessTravelKeepKite
 	{
-		// Token: 0x17007CF5 RID: 31989
-		// (get) Token: 0x06032A34 RID: 207412 RVA: 0x00BCE571 File Offset: 0x00BCC771
+		// Token: 0x1700509F RID: 20639
+		// (get) Token: 0x060277E7 RID: 161767 RVA: 0x00B131D5 File Offset: 0x00B113D5
 		public bool IsInit
 		{
 			get
@@ -22,8 +22,8 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x17007CF6 RID: 31990
-		// (get) Token: 0x06032A35 RID: 207413 RVA: 0x00BCE579 File Offset: 0x00BCC779
+		// Token: 0x170050A0 RID: 20640
+		// (get) Token: 0x060277E8 RID: 161768 RVA: 0x00B131DD File Offset: 0x00B113DD
 		public bool IsActive
 		{
 			get
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A36 RID: 207414 RVA: 0x00BCE584 File Offset: 0x00BCC784
+		// Token: 0x060277E9 RID: 161769 RVA: 0x00B131E8 File Offset: 0x00B113E8
 		public void Init(SeamlessTravelContext context, [Nullable(2)] Action<bool> callback = null)
 		{
 			Log.Instance.Info(ELogModule.Teleport, ELogAuthor.ZYL, "[无缝传送KeepKite] 初始化KeepKite(开始)", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.CheckInitLoadFinish();
 		}
 
-		// Token: 0x06032A37 RID: 207415 RVA: 0x00BCE74D File Offset: 0x00BCC94D
+		// Token: 0x060277EA RID: 161770 RVA: 0x00B133B1 File Offset: 0x00B115B1
 		private void FailInit()
 		{
 			Action<bool> initCallback = this.InitCallback;
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			initCallback(false);
 		}
 
-		// Token: 0x06032A38 RID: 207416 RVA: 0x00BCE767 File Offset: 0x00BCC967
+		// Token: 0x060277EB RID: 161771 RVA: 0x00B133CB File Offset: 0x00B115CB
 		private void SuccessInit()
 		{
 			Action<bool> initCallback = this.InitCallback;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			initCallback(true);
 		}
 
-		// Token: 0x06032A39 RID: 207417 RVA: 0x00BCE784 File Offset: 0x00BCC984
+		// Token: 0x060277EC RID: 161772 RVA: 0x00B133E8 File Offset: 0x00B115E8
 		private void CheckInitLoadFinish()
 		{
 			if (this.IsInit)
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A3A RID: 207418 RVA: 0x00BCE800 File Offset: 0x00BCCA00
+		// Token: 0x060277ED RID: 161773 RVA: 0x00B13464 File Offset: 0x00B11664
 		private void OnInitLoadFinish()
 		{
 			CharacterActorComponent actorComp = this.ActorComp;
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.FailInit();
 		}
 
-		// Token: 0x06032A3B RID: 207419 RVA: 0x00BCEAB9 File Offset: 0x00BCCCB9
+		// Token: 0x060277EE RID: 161774 RVA: 0x00B1371D File Offset: 0x00B1191D
 		public void Tick(float delta)
 		{
 			if (!this.IsInit || !this.IsActive)
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.UpdateKeepKite();
 		}
 
-		// Token: 0x06032A3C RID: 207420 RVA: 0x00BCEAD4 File Offset: 0x00BCCCD4
+		// Token: 0x060277EF RID: 161775 RVA: 0x00B13738 File Offset: 0x00B11938
 		public void UpdateKeepKite()
 		{
 			ASkeletalMeshActor kiteActor = this.KiteActor;
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A3D RID: 207421 RVA: 0x00BCEBAC File Offset: 0x00BCCDAC
+		// Token: 0x060277F0 RID: 161776 RVA: 0x00B13810 File Offset: 0x00B11A10
 		public void Destroy()
 		{
 			Log.Instance.Info(ELogModule.Teleport, ELogAuthor.ZYL, "[无缝传送KeepKite] 清理KeepKite", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.Context = null;
 		}
 
-		// Token: 0x06032A3E RID: 207422 RVA: 0x00BCEC7C File Offset: 0x00BCCE7C
+		// Token: 0x060277F1 RID: 161777 RVA: 0x00B138E0 File Offset: 0x00B11AE0
 		[NullableContext(2)]
 		public void AppearEffect(Action<bool> callback = null)
 		{
@@ -414,7 +414,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A3F RID: 207423 RVA: 0x00BCEEA0 File Offset: 0x00BCD0A0
+		// Token: 0x060277F2 RID: 161778 RVA: 0x00B13B04 File Offset: 0x00B11D04
 		[NullableContext(2)]
 		public void DisappearEffect(Action<bool> callback = null)
 		{
@@ -495,7 +495,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A40 RID: 207424 RVA: 0x00BCF028 File Offset: 0x00BCD228
+		// Token: 0x060277F3 RID: 161779 RVA: 0x00B13C8C File Offset: 0x00B11E8C
 		public void SetInitData(Entity kiteEntity, Entity instigatorEntity)
 		{
 			SceneItemActorComponent component = kiteEntity.GetComponent<SceneItemActorComponent>();
@@ -523,7 +523,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A41 RID: 207425 RVA: 0x00BCF124 File Offset: 0x00BCD324
+		// Token: 0x060277F4 RID: 161780 RVA: 0x00B13D88 File Offset: 0x00B11F88
 		private Vector GetKiteHookLocation(Vector outLocation)
 		{
 			ASkeletalMeshActor kiteActor = this.KiteActor;
@@ -538,7 +538,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return outLocation;
 		}
 
-		// Token: 0x06032A42 RID: 207426 RVA: 0x00BCF180 File Offset: 0x00BCD380
+		// Token: 0x060277F5 RID: 161781 RVA: 0x00B13DE4 File Offset: 0x00B11FE4
 		private Transform GetKiteTransform(Transform outTransform)
 		{
 			CharacterActorComponent actorComp = this.ActorComp;
@@ -553,7 +553,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return outTransform;
 		}
 
-		// Token: 0x06032A43 RID: 207427 RVA: 0x00BCF1DB File Offset: 0x00BCD3DB
+		// Token: 0x060277F6 RID: 161782 RVA: 0x00B13E3F File Offset: 0x00B1203F
 		public TArray<AActor> GetSeamlessTravelActors(TArray<AActor> arr)
 		{
 			if (this.KiteActor != null)
@@ -571,114 +571,114 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return arr;
 		}
 
-		// Token: 0x0401AEFE RID: 110334
+		// Token: 0x0401585B RID: 88155
 		private const string DEFAULT_KITE_SKELETAL_MESH_PATH = "/Game/Aki/Character/NPC/AlienNPC/Level_C/SC1Fengzheng/Model/SC1Fengzheng.SC1Fengzheng";
 
-		// Token: 0x0401AEFF RID: 110335
+		// Token: 0x0401585C RID: 88156
 		private const string DEFAULT_KITE_ANIM_PATH = "/Game/Aki/Character/NPC/AlienNPC/Level_C/SC1Fengzheng/CommonAnim/SC1Fengzheng_State03_Montage.SC1Fengzheng_State03_Montage";
 
-		// Token: 0x0401AF00 RID: 110336
+		// Token: 0x0401585D RID: 88157
 		private const string KITE_HOOK_BEAM_EFFECT_PATH = "/Game/Aki/Effect/Niagara/NI_Common/NS_Fx_Hook_Beam1.NS_Fx_Hook_Beam1";
 
-		// Token: 0x0401AF01 RID: 110337
+		// Token: 0x0401585E RID: 88158
 		private const string KITE_HOOK_BALL_EFFECT_PATH = "/Game/Aki/Effect/Niagara/NI_Common/NS_Fx_Hook_Maodian.NS_Fx_Hook_Maodian";
 
-		// Token: 0x0401AF02 RID: 110338
+		// Token: 0x0401585F RID: 88159
 		private const string KITE_HOOK_BEAM_OWNER_SOCKET = "Bip001LHand";
 
-		// Token: 0x0401AF03 RID: 110339
+		// Token: 0x04015860 RID: 88160
 		private const string KITE_HOOK_BEAM_NIAGARA_ENDPOS_VAR = "end";
 
-		// Token: 0x0401AF04 RID: 110340
+		// Token: 0x04015861 RID: 88161
 		private const string KITE_ACTOR_REF_NAME = "Fengzheng";
 
-		// Token: 0x0401AF05 RID: 110341
+		// Token: 0x04015862 RID: 88162
 		private const int SKILL_ID_XA_KITE = 210130;
 
-		// Token: 0x0401AF06 RID: 110342
+		// Token: 0x04015863 RID: 88163
 		[Nullable(2)]
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x0401AF07 RID: 110343
+		// Token: 0x04015864 RID: 88164
 		[Nullable(2)]
 		private SeamlessTravelContext Context;
 
-		// Token: 0x0401AF08 RID: 110344
+		// Token: 0x04015865 RID: 88165
 		private bool IsInitInternal;
 
-		// Token: 0x0401AF09 RID: 110345
+		// Token: 0x04015866 RID: 88166
 		private bool IsActiveInternal;
 
-		// Token: 0x0401AF0A RID: 110346
+		// Token: 0x04015867 RID: 88167
 		[Nullable(2)]
 		private USkeletalMesh KiteMeshAsset;
 
-		// Token: 0x0401AF0B RID: 110347
+		// Token: 0x04015868 RID: 88168
 		[Nullable(2)]
 		private UAnimationAsset KiteAnimAsset;
 
-		// Token: 0x0401AF0C RID: 110348
+		// Token: 0x04015869 RID: 88169
 		private float KiteAnimStartPos;
 
-		// Token: 0x0401AF0D RID: 110349
+		// Token: 0x0401586A RID: 88170
 		[Nullable(2)]
 		private ASkeletalMeshActor KiteActor;
 
-		// Token: 0x0401AF0E RID: 110350
+		// Token: 0x0401586B RID: 88171
 		[Nullable(2)]
 		private UNiagaraSystem BeamEffectAsset;
 
-		// Token: 0x0401AF0F RID: 110351
+		// Token: 0x0401586C RID: 88172
 		[Nullable(2)]
 		private UNiagaraSystem BallEffectAsset;
 
-		// Token: 0x0401AF10 RID: 110352
+		// Token: 0x0401586D RID: 88173
 		[Nullable(2)]
 		private AActor BeamActor;
 
-		// Token: 0x0401AF11 RID: 110353
+		// Token: 0x0401586E RID: 88174
 		[Nullable(2)]
 		private AActor BallActor;
 
-		// Token: 0x0401AF12 RID: 110354
+		// Token: 0x0401586F RID: 88175
 		[Nullable(2)]
 		private UNiagaraComponent BeamEffectNiagaraComp;
 
-		// Token: 0x0401AF13 RID: 110355
+		// Token: 0x04015870 RID: 88176
 		[Nullable(2)]
 		private UNiagaraComponent BallEffectNiagaraComp;
 
-		// Token: 0x0401AF14 RID: 110356
+		// Token: 0x04015871 RID: 88177
 		private readonly Transform RelativeTransform = Transform.Create();
 
-		// Token: 0x0401AF15 RID: 110357
+		// Token: 0x04015872 RID: 88178
 		private readonly Vector GravityDirect = Vector.Create();
 
-		// Token: 0x0401AF16 RID: 110358
+		// Token: 0x04015873 RID: 88179
 		private string BeamEffectPath = "";
 
-		// Token: 0x0401AF17 RID: 110359
+		// Token: 0x04015874 RID: 88180
 		private string BallEffectPath = "";
 
-		// Token: 0x0401AF18 RID: 110360
+		// Token: 0x04015875 RID: 88181
 		private string BeamOwnerSocketName = "";
 
-		// Token: 0x0401AF19 RID: 110361
+		// Token: 0x04015876 RID: 88182
 		private readonly Transform HookPointRelativeTransformToKite = Transform.Create();
 
-		// Token: 0x0401AF1A RID: 110362
+		// Token: 0x04015877 RID: 88183
 		private readonly Transform KiteTransformCache = Transform.Create();
 
-		// Token: 0x0401AF1B RID: 110363
+		// Token: 0x04015878 RID: 88184
 		private readonly Vector KiteHookLocationCache = Vector.Create();
 
-		// Token: 0x0401AF1C RID: 110364
+		// Token: 0x04015879 RID: 88185
 		private bool? CharaMainMeshCastHiddenShadowBeforeTravel;
 
-		// Token: 0x0401AF1D RID: 110365
+		// Token: 0x0401587A RID: 88186
 		private bool? CharaHuluMeshCastHiddenShadowBeforeTravel;
 
-		// Token: 0x0401AF1E RID: 110366
+		// Token: 0x0401587B RID: 88187
 		[Nullable(2)]
 		private Action<bool> InitCallback;
 	}

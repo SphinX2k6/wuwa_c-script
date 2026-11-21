@@ -3,43 +3,43 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001A12 RID: 6674
+// Token: 0x02000ED1 RID: 3793
 [NullableContext(1)]
 [Nullable(0)]
 public class AbyssChallengeResultRoleInfo
 {
-	// Token: 0x0600C3EB RID: 50155 RVA: 0x002C5CD4 File Offset: 0x002C3ED4
+	// Token: 0x060097FB RID: 38907 RVA: 0x002D0D2C File Offset: 0x002CEF2C
 	public int GetRoleSkinId()
 	{
 		return this.RoleSkinId;
 	}
 
-	// Token: 0x0600C3EC RID: 50156 RVA: 0x002C5CDC File Offset: 0x002C3EDC
+	// Token: 0x060097FC RID: 38908 RVA: 0x002D0D34 File Offset: 0x002CEF34
 	public int GetRoleLevel()
 	{
 		return this.RoleLevel;
 	}
 
-	// Token: 0x0600C3ED RID: 50157 RVA: 0x002C5CE4 File Offset: 0x002C3EE4
+	// Token: 0x060097FD RID: 38909 RVA: 0x002D0D3C File Offset: 0x002CEF3C
 	public int GetDangoId()
 	{
 		return this.DangoId;
 	}
 
-	// Token: 0x0600C3EE RID: 50158 RVA: 0x002C5CEC File Offset: 0x002C3EEC
+	// Token: 0x060097FE RID: 38910 RVA: 0x002D0D44 File Offset: 0x002CEF44
 	[NullableContext(2)]
 	public global::AbyssChallengeRoleHonor GetMainHonor()
 	{
 		return this.MainHonor;
 	}
 
-	// Token: 0x0600C3EF RID: 50159 RVA: 0x002C5CF4 File Offset: 0x002C3EF4
+	// Token: 0x060097FF RID: 38911 RVA: 0x002D0D4C File Offset: 0x002CEF4C
 	public global::AbyssChallengeRoleHonor[] GetSubHonor()
 	{
 		return this.SubHonor;
 	}
 
-	// Token: 0x0600C3F0 RID: 50160 RVA: 0x002C5CFC File Offset: 0x002C3EFC
+	// Token: 0x06009800 RID: 38912 RVA: 0x002D0D54 File Offset: 0x002CEF54
 	public void Phrase(Aki.Protocol.AbyssChallengeResultRoleInfo data)
 	{
 		this.RoleSkinId = data.RoleSkinId;
@@ -59,19 +59,19 @@ public class AbyssChallengeResultRoleInfo
 		this.SubHonor = list.ToArray();
 	}
 
-	// Token: 0x04005A5B RID: 23131
+	// Token: 0x04005B2A RID: 23338
 	private int RoleSkinId;
 
-	// Token: 0x04005A5C RID: 23132
+	// Token: 0x04005B2B RID: 23339
 	private int RoleLevel;
 
-	// Token: 0x04005A5D RID: 23133
+	// Token: 0x04005B2C RID: 23340
 	private int DangoId;
 
-	// Token: 0x04005A5E RID: 23134
+	// Token: 0x04005B2D RID: 23341
 	[Nullable(2)]
 	private global::AbyssChallengeRoleHonor MainHonor;
 
-	// Token: 0x04005A5F RID: 23135
+	// Token: 0x04005B2E RID: 23342
 	private global::AbyssChallengeRoleHonor[] SubHonor = Array.Empty<global::AbyssChallengeRoleHonor>();
 }

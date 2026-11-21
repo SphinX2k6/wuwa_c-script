@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073FB RID: 29691
+	// Token: 0x02007BE5 RID: 31717
 	public class IToggleDragActorPlayDisableT
 	{
-		// Token: 0x1700E181 RID: 57729
-		// (get) Token: 0x06035F03 RID: 220931 RVA: 0x0075708E File Offset: 0x0075528E
-		// (set) Token: 0x06035F04 RID: 220932 RVA: 0x00757096 File Offset: 0x00755296
+		// Token: 0x1700ED96 RID: 60822
+		// (get) Token: 0x060392B6 RID: 234166 RVA: 0x007B9802 File Offset: 0x007B7A02
+		// (set) Token: 0x060392B7 RID: 234167 RVA: 0x007B980A File Offset: 0x007B7A0A
 		public EToggleDragActorPlayType Type { get; set; }
 
-		// Token: 0x06035F05 RID: 220933 RVA: 0x0075709F File Offset: 0x0075529F
+		// Token: 0x060392B8 RID: 234168 RVA: 0x007B9813 File Offset: 0x007B7A13
 		public IToggleDragActorPlayDisableT()
 		{
 			this.Type = EToggleDragActorPlayType.Enable;

@@ -5,13 +5,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MechanismTimeline
 {
-	// Token: 0x0200547C RID: 21628
+	// Token: 0x0200445F RID: 17503
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class MechanismTimelineModel : ModelBase
 	{
-		// Token: 0x060372EF RID: 226031 RVA: 0x00D1646E File Offset: 0x00D1466E
+		// Token: 0x0602C238 RID: 180792 RVA: 0x00C658C6 File Offset: 0x00C63AC6
 		protected override bool OnInit()
 		{
 			bool result = base.OnInit();
@@ -19,14 +19,14 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			return result;
 		}
 
-		// Token: 0x060372F0 RID: 226032 RVA: 0x00D16480 File Offset: 0x00D14680
+		// Token: 0x0602C239 RID: 180793 RVA: 0x00C658D8 File Offset: 0x00C63AD8
 		protected override bool OnClear()
 		{
 			MechanismEventCenter.Instance.Clear();
 			return base.OnClear();
 		}
 
-		// Token: 0x060372F1 RID: 226033 RVA: 0x00D16492 File Offset: 0x00D14692
+		// Token: 0x0602C23A RID: 180794 RVA: 0x00C658EA File Offset: 0x00C63AEA
 		public void RegisterSequenceContext(UMovieSceneSequencePlayer sequencePlayer, MechanismEventContext context)
 		{
 			if (sequencePlayer == null || !sequencePlayer.IsValid())
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			this.MechanismEventContext.Set(sequencePlayer, context);
 		}
 
-		// Token: 0x060372F2 RID: 226034 RVA: 0x00D164B3 File Offset: 0x00D146B3
+		// Token: 0x0602C23B RID: 180795 RVA: 0x00C6590B File Offset: 0x00C63B0B
 		public void UnRegisterSequenceContext(UMovieSceneSequencePlayer sequencePlayer)
 		{
 			if (sequencePlayer == null || !sequencePlayer.IsValid())
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			this.MechanismEventContext.Remove(sequencePlayer);
 		}
 
-		// Token: 0x060372F3 RID: 226035 RVA: 0x00D164D4 File Offset: 0x00D146D4
+		// Token: 0x0602C23C RID: 180796 RVA: 0x00C6592C File Offset: 0x00C63B2C
 		[return: Nullable(2)]
 		public MechanismEventContext GetContextByPlayer(UMovieSceneSequencePlayer sequencePlayer)
 		{
@@ -58,8 +58,8 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			return result;
 		}
 
-		// Token: 0x1700845B RID: 33883
-		// (get) Token: 0x060372F4 RID: 226036 RVA: 0x00D164F4 File Offset: 0x00D146F4
+		// Token: 0x17005827 RID: 22567
+		// (get) Token: 0x0602C23D RID: 180797 RVA: 0x00C6594C File Offset: 0x00C63B4C
 		public static MechanismTimelineModel Instance
 		{
 			get
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			}
 		}
 
-		// Token: 0x060372F5 RID: 226037 RVA: 0x00D164FB File Offset: 0x00D146FB
+		// Token: 0x0602C23E RID: 180798 RVA: 0x00C65953 File Offset: 0x00C63B53
 		public static MechanismTimelineModel GetOrCreateInstance()
 		{
 			if (MechanismTimelineModel._Instance == null)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			return MechanismTimelineModel._Instance;
 		}
 
-		// Token: 0x060372F6 RID: 226038 RVA: 0x00D1650F File Offset: 0x00D1470F
+		// Token: 0x0602C23F RID: 180799 RVA: 0x00C65967 File Offset: 0x00C63B67
 		public static bool CreateInstance()
 		{
 			if (MechanismTimelineModel._Instance != null)
@@ -89,27 +89,27 @@ namespace CSharpScript.Game.Module.MechanismTimeline
 			return true;
 		}
 
-		// Token: 0x060372F7 RID: 226039 RVA: 0x00D16525 File Offset: 0x00D14725
+		// Token: 0x0602C240 RID: 180800 RVA: 0x00C6597D File Offset: 0x00C63B7D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060372F8 RID: 226040 RVA: 0x00D16527 File Offset: 0x00D14727
+		// Token: 0x0602C241 RID: 180801 RVA: 0x00C6597F File Offset: 0x00C63B7F
 		public static void ResetStaticDefaultValue()
 		{
 			MechanismTimelineModel._Instance = null;
 		}
 
-		// Token: 0x060372F9 RID: 226041 RVA: 0x00D1652F File Offset: 0x00D1472F
+		// Token: 0x0602C242 RID: 180802 RVA: 0x00C65987 File Offset: 0x00C63B87
 		static MechanismTimelineModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MechanismTimelineModel.CreateStaticDefaultValue), new Action(MechanismTimelineModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401D1B5 RID: 119221
+		// Token: 0x04017C4E RID: 97358
 		private readonly WeakMap<UMovieSceneSequencePlayer, MechanismEventContext> MechanismEventContext = new WeakMap<UMovieSceneSequencePlayer, MechanismEventContext>();
 
-		// Token: 0x0401D1B6 RID: 119222
+		// Token: 0x04017C4F RID: 97359
 		[Nullable(2)]
 		private static MechanismTimelineModel _Instance;
 	}

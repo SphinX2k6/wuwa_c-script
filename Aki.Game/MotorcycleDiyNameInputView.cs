@@ -6,35 +6,35 @@ using CSharpScript.Game.Module.Common.InputView.View;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020022AB RID: 8875
+// Token: 0x0200178F RID: 6031
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleDiyNameInputView : CommonInputViewBase
 {
-	// Token: 0x0601160D RID: 71181 RVA: 0x00440D6C File Offset: 0x0043EF6C
+	// Token: 0x0600EAA5 RID: 60069 RVA: 0x0044D965 File Offset: 0x0044BB65
 	public MotorcycleDiyNameInputView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601160E RID: 71182 RVA: 0x00440D78 File Offset: 0x0043EF78
+	// Token: 0x0600EAA6 RID: 60070 RVA: 0x0044D970 File Offset: 0x0044BB70
 	protected override int GetMaxLimit()
 	{
 		return ConfigCommonParamById.GetIntConfig("MotorOutlookPresetNameLength").GetValueOrDefault();
 	}
 
-	// Token: 0x0601160F RID: 71183 RVA: 0x00440D97 File Offset: 0x0043EF97
+	// Token: 0x0600EAA7 RID: 60071 RVA: 0x0044D98F File Offset: 0x0044BB8F
 	protected override void InitExtraParam()
 	{
 		this.RefreshUi();
 	}
 
-	// Token: 0x06011610 RID: 71184 RVA: 0x00440D9F File Offset: 0x0043EF9F
+	// Token: 0x0600EAA8 RID: 60072 RVA: 0x0044D997 File Offset: 0x0044BB97
 	protected override void RefreshDuplicateName(string inputText)
 	{
 		this.RefreshUi();
 	}
 
-	// Token: 0x06011611 RID: 71185 RVA: 0x00440DA7 File Offset: 0x0043EFA7
+	// Token: 0x0600EAA9 RID: 60073 RVA: 0x0044D99F File Offset: 0x0044BB9F
 	protected override void RefreshTips(ETipsType type)
 	{
 		base.RefreshTips(type);
@@ -44,13 +44,13 @@ public class MotorcycleDiyNameInputView : CommonInputViewBase
 		}
 	}
 
-	// Token: 0x06011612 RID: 71186 RVA: 0x00440DB9 File Offset: 0x0043EFB9
+	// Token: 0x0600EAAA RID: 60074 RVA: 0x0044D9B1 File Offset: 0x0044BBB1
 	protected override bool IsAllowMultiLine()
 	{
 		return false;
 	}
 
-	// Token: 0x06011613 RID: 71187 RVA: 0x00440DBC File Offset: 0x0043EFBC
+	// Token: 0x0600EAAB RID: 60075 RVA: 0x0044D9B4 File Offset: 0x0044BBB4
 	private void RefreshUi()
 	{
 		string text = this.InputText.Text;
@@ -76,6 +76,6 @@ public class MotorcycleDiyNameInputView : CommonInputViewBase
 		this.ConfirmButton.SetSelfInteractive(true);
 	}
 
-	// Token: 0x0400840F RID: 33807
+	// Token: 0x0400854D RID: 34125
 	private const int DEFAULT_TEXT_COMPONENT_INDEX = 6;
 }

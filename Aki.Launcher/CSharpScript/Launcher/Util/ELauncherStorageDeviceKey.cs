@@ -2,62 +2,62 @@
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x02000071 RID: 113
+	// Token: 0x02000074 RID: 116
 	public enum ELauncherStorageDeviceKey
 	{
-		// Token: 0x0400020C RID: 524
+		// Token: 0x04000238 RID: 568
 		CacheP4Version,
-		// Token: 0x0400020D RID: 525
+		// Token: 0x04000239 RID: 569
 		PatchP4Version,
-		// Token: 0x0400020E RID: 526
+		// Token: 0x0400023A RID: 570
 		PatchVersion,
-		// Token: 0x0400020F RID: 527
+		// Token: 0x0400023B RID: 571
 		LauncherPatchVersion,
-		// Token: 0x04000210 RID: 528
+		// Token: 0x0400023C RID: 572
 		RemoteVersionUpdate,
-		// Token: 0x04000211 RID: 529
+		// Token: 0x0400023D RID: 573
 		OH_Preset_Version,
-		// Token: 0x04000212 RID: 530
+		// Token: 0x0400023E RID: 574
 		EntryModifyTime,
-		// Token: 0x04000213 RID: 531
+		// Token: 0x0400023F RID: 575
 		PreDownloadUpdateTime,
-		// Token: 0x04000214 RID: 532
+		// Token: 0x04000240 RID: 576
 		PreDownloadVerCfgUpdateTime,
-		// Token: 0x04000215 RID: 533
+		// Token: 0x04000241 RID: 577
 		PreDownloadConfig,
-		// Token: 0x04000216 RID: 534
+		// Token: 0x04000242 RID: 578
 		PreDownloadRecord,
-		// Token: 0x04000217 RID: 535
+		// Token: 0x04000243 RID: 579
 		PreDownloadState,
-		// Token: 0x04000218 RID: 536
+		// Token: 0x04000244 RID: 580
 		RemoteVideoCfgUpdateTime,
-		// Token: 0x04000219 RID: 537
+		// Token: 0x04000245 RID: 581
 		PreDownloadVideoCfgUpdateTime,
-		// Token: 0x0400021A RID: 538
+		// Token: 0x04000246 RID: 582
 		PreDownloadVideoConfig,
-		// Token: 0x0400021B RID: 539
+		// Token: 0x04000247 RID: 583
 		UserSelectedVideoUpdate,
-		// Token: 0x0400021C RID: 540
+		// Token: 0x04000248 RID: 584
 		IsNewUserSelected,
-		// Token: 0x0400021D RID: 541
+		// Token: 0x04000249 RID: 585
 		UserFirstSelectedVideoUpdate,
-		// Token: 0x0400021E RID: 542
+		// Token: 0x0400024A RID: 586
 		UserFirstSelectedReportFlag,
-		// Token: 0x0400021F RID: 543
+		// Token: 0x0400024B RID: 587
 		PakKeyUpdateTime,
-		// Token: 0x04000220 RID: 544
+		// Token: 0x0400024C RID: 588
 		MajorVerPatchMode,
-		// Token: 0x04000221 RID: 545
+		// Token: 0x0400024D RID: 589
 		GameLoadCompleteFlag,
-		// Token: 0x04000222 RID: 546
+		// Token: 0x0400024E RID: 590
 		SelectedMaxOrMinPackType,
-		// Token: 0x04000223 RID: 547
+		// Token: 0x0400024F RID: 591
 		SplashRegionBlockRegion,
-		// Token: 0x04000224 RID: 548
+		// Token: 0x04000250 RID: 592
 		SplashRegionBlockTimestampSecs,
-		// Token: 0x04000225 RID: 549
+		// Token: 0x04000251 RID: 593
 		ResourceQualityTier,
-		// Token: 0x04000226 RID: 550
+		// Token: 0x04000252 RID: 594
 		TargetResourceQualityTier
 	}
 }

@@ -5,11 +5,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000034 RID: 52
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class BuffConsumerComponent : IComponentBase
 	{
-		// Token: 0x060001DC RID: 476 RVA: 0x000182D4 File Offset: 0x000164D4
+		// Token: 0x060001E0 RID: 480 RVA: 0x00018C48 File Offset: 0x00016E48
 		private BuffConsumerComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060001DD RID: 477 RVA: 0x0001830C File Offset: 0x0001650C
+		// Token: 0x060001E1 RID: 481 RVA: 0x00018C80 File Offset: 0x00016E80
 		public static BuffConsumerComponent Create([Nullable(2)] BuffConsumerComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060001DE RID: 478 RVA: 0x0001831F File Offset: 0x0001651F
+		// Token: 0x060001E2 RID: 482 RVA: 0x00018C93 File Offset: 0x00016E93
 		public static BuffConsumerComponent CreateFromSetValue([Nullable(2)] BuffConsumerComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060001DF RID: 479 RVA: 0x00018334 File Offset: 0x00016534
+		// Token: 0x060001E3 RID: 483 RVA: 0x00018CA8 File Offset: 0x00016EA8
 		public new BuffConsumerComponent_SetValue ToSetValue()
 		{
 			return new BuffConsumerComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170000B2 RID: 178
-		// (get) Token: 0x060001E0 RID: 480 RVA: 0x00018384 File Offset: 0x00016584
-		// (set) Token: 0x060001E1 RID: 481 RVA: 0x000183BE File Offset: 0x000165BE
+		// Token: 0x170000B4 RID: 180
+		// (get) Token: 0x060001E4 RID: 484 RVA: 0x00018CF8 File Offset: 0x00016EF8
+		// (set) Token: 0x060001E5 RID: 485 RVA: 0x00018D32 File Offset: 0x00016F32
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000B3 RID: 179
-		// (get) Token: 0x060001E2 RID: 482 RVA: 0x000183CC File Offset: 0x000165CC
-		// (set) Token: 0x060001E3 RID: 483 RVA: 0x000183F6 File Offset: 0x000165F6
+		// Token: 0x170000B5 RID: 181
+		// (get) Token: 0x060001E6 RID: 486 RVA: 0x00018D40 File Offset: 0x00016F40
+		// (set) Token: 0x060001E7 RID: 487 RVA: 0x00018D6A File Offset: 0x00016F6A
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000B4 RID: 180
-		// (get) Token: 0x060001E4 RID: 484 RVA: 0x00018404 File Offset: 0x00016604
-		// (set) Token: 0x060001E5 RID: 485 RVA: 0x00018430 File Offset: 0x00016630
+		// Token: 0x170000B6 RID: 182
+		// (get) Token: 0x060001E8 RID: 488 RVA: 0x00018D78 File Offset: 0x00016F78
+		// (set) Token: 0x060001E9 RID: 489 RVA: 0x00018DA4 File Offset: 0x00016FA4
 		public virtual long BuffId
 		{
 			get
@@ -129,9 +127,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000B5 RID: 181
-		// (get) Token: 0x060001E6 RID: 486 RVA: 0x00018440 File Offset: 0x00016640
-		// (set) Token: 0x060001E7 RID: 487 RVA: 0x0001847A File Offset: 0x0001667A
+		// Token: 0x170000B7 RID: 183
+		// (get) Token: 0x060001EA RID: 490 RVA: 0x00018DB4 File Offset: 0x00016FB4
+		// (set) Token: 0x060001EB RID: 491 RVA: 0x00018DEE File Offset: 0x00016FEE
 		public virtual long? BulletId
 		{
 			get
@@ -153,9 +151,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000B6 RID: 182
-		// (get) Token: 0x060001E8 RID: 488 RVA: 0x00018488 File Offset: 0x00016688
-		// (set) Token: 0x060001E9 RID: 489 RVA: 0x000184C2 File Offset: 0x000166C2
+		// Token: 0x170000B8 RID: 184
+		// (get) Token: 0x060001EC RID: 492 RVA: 0x00018DFC File Offset: 0x00016FFC
+		// (set) Token: 0x060001ED RID: 493 RVA: 0x00018E36 File Offset: 0x00017036
 		public virtual int? ProducerEntityId
 		{
 			get
@@ -177,11 +175,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000135 RID: 309
+		// Token: 0x0400013A RID: 314
 		[Nullable(2)]
 		protected new BuffConsumerComponent FbInstance;
 
-		// Token: 0x04000136 RID: 310
+		// Token: 0x0400013B RID: 315
 		[Nullable(2)]
 		protected new BuffConsumerComponent_SetValue PocoInterface;
 	}

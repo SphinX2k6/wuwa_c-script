@@ -10,28 +10,28 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001BB2 RID: 7090
+// Token: 0x02001071 RID: 4209
 public class FormationNetHandler : IStaticVariableResetter
 {
-	// Token: 0x0600D37C RID: 54140 RVA: 0x0030A00C File Offset: 0x0030820C
+	// Token: 0x0600A78E RID: 42894 RVA: 0x00315100 File Offset: 0x00313300
 	static FormationNetHandler()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FormationNetHandler.CreateStaticDefaultValue), new Action(FormationNetHandler.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600D37D RID: 54141 RVA: 0x0030A02B File Offset: 0x0030822B
+	// Token: 0x0600A78F RID: 42895 RVA: 0x0031511F File Offset: 0x0031331F
 	public static void CreateStaticDefaultValue()
 	{
 		FormationNetHandler.CacheFormationNotify = null;
 	}
 
-	// Token: 0x0600D37E RID: 54142 RVA: 0x0030A033 File Offset: 0x00308233
+	// Token: 0x0600A790 RID: 42896 RVA: 0x00315127 File Offset: 0x00313327
 	public static void ResetStaticDefaultValue()
 	{
 		FormationNetHandler.CacheFormationNotify = null;
 	}
 
-	// Token: 0x0600D37F RID: 54143 RVA: 0x0030A03B File Offset: 0x0030823B
+	// Token: 0x0600A791 RID: 42897 RVA: 0x0031512F File Offset: 0x0031332F
 	public static void RegisterNetEvent()
 	{
 		Net instance = Net.Instance;
@@ -44,13 +44,13 @@ public class FormationNetHandler : IStaticVariableResetter
 		instance.Register(id, callback);
 	}
 
-	// Token: 0x0600D380 RID: 54144 RVA: 0x0030A068 File Offset: 0x00308268
+	// Token: 0x0600A792 RID: 42898 RVA: 0x0031515C File Offset: 0x0031335C
 	public static void UnregisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.UpdateFormationNotify);
 	}
 
-	// Token: 0x0600D381 RID: 54145 RVA: 0x0030A07C File Offset: 0x0030827C
+	// Token: 0x0600A793 RID: 42899 RVA: 0x00315170 File Offset: 0x00313370
 	public static void FlushCachedNotify(EUiViewName viewName)
 	{
 		if (!FormationNetHandler.IsFormationView(viewName) || FormationNetHandler.CacheFormationNotify == null || FormationNetHandler.IsFormationViewOpen())
@@ -62,7 +62,7 @@ public class FormationNetHandler : IStaticVariableResetter
 		FormationNetHandler.CacheFormationNotify = null;
 	}
 
-	// Token: 0x0600D382 RID: 54146 RVA: 0x0030A0BC File Offset: 0x003082BC
+	// Token: 0x0600A794 RID: 42900 RVA: 0x003151B0 File Offset: 0x003133B0
 	[NullableContext(2)]
 	private static void OnUpdateFormationNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -87,13 +87,13 @@ public class FormationNetHandler : IStaticVariableResetter
 		FormationNetHandler.TryUpdateSpecialTrialRole();
 	}
 
-	// Token: 0x0600D383 RID: 54147 RVA: 0x0030A164 File Offset: 0x00308364
+	// Token: 0x0600A795 RID: 42901 RVA: 0x00315258 File Offset: 0x00313458
 	private static bool IsFormationView(EUiViewName viewName)
 	{
 		return viewName == EUiViewName.Formation2DView || viewName == EUiViewName.Formation3DView;
 	}
 
-	// Token: 0x0600D384 RID: 54148 RVA: 0x0030A180 File Offset: 0x00308380
+	// Token: 0x0600A796 RID: 42902 RVA: 0x00315274 File Offset: 0x00313474
 	private static bool IsFormationViewOpen()
 	{
 		UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.Formation2DView);
@@ -101,14 +101,14 @@ public class FormationNetHandler : IStaticVariableResetter
 		return (viewByName != null && !viewByName.IsDestroyOrDestroying) || (viewByName2 != null && !viewByName2.IsDestroyOrDestroying);
 	}
 
-	// Token: 0x0600D385 RID: 54149 RVA: 0x0030A1C8 File Offset: 0x003083C8
+	// Token: 0x0600A797 RID: 42903 RVA: 0x003152BC File Offset: 0x003134BC
 	private static void CheckFormationAllowOnline()
 	{
 		bool enable = FormationModel.Instance.IsCurrentFormationHasSpecialTrialRole();
 		OnlineModel.Instance.DisableOnline(EDisableOnlineType.TrialRole, enable, 0, 0);
 	}
 
-	// Token: 0x0600D386 RID: 54150 RVA: 0x0030A1F0 File Offset: 0x003083F0
+	// Token: 0x0600A798 RID: 42904 RVA: 0x003152E4 File Offset: 0x003134E4
 	private static void TryUpdateSpecialTrialRole()
 	{
 		FormationModel instance = FormationModel.Instance;
@@ -122,7 +122,7 @@ public class FormationNetHandler : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600D387 RID: 54151 RVA: 0x0030A234 File Offset: 0x00308434
+	// Token: 0x0600A799 RID: 42905 RVA: 0x00315328 File Offset: 0x00313528
 	public static void GetFormationDataRequest()
 	{
 		Log.Instance.Info(ELogModule.Formation, ELogAuthor.SYB, "请求所有编队数据", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -130,7 +130,7 @@ public class FormationNetHandler : IStaticVariableResetter
 		Net.Instance.Call(ERequestMessageId.GetFormationDataRequest, message, null, 0);
 	}
 
-	// Token: 0x0600D388 RID: 54152 RVA: 0x0030A278 File Offset: 0x00308478
+	// Token: 0x0600A79A RID: 42906 RVA: 0x0031536C File Offset: 0x0031356C
 	public static UniTask<bool> EditFormationRequest(int currentFormationId)
 	{
 		FormationNetHandler.<EditFormationRequest>d__13 <EditFormationRequest>d__;
@@ -141,7 +141,7 @@ public class FormationNetHandler : IStaticVariableResetter
 		return <EditFormationRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D389 RID: 54153 RVA: 0x0030A2BC File Offset: 0x003084BC
+	// Token: 0x0600A79B RID: 42907 RVA: 0x003153B0 File Offset: 0x003135B0
 	public static UniTask<bool> UpdateFormationRequest(int formationId, bool isCurrent, [Nullable(1)] int[] roleIdList, int currentRole)
 	{
 		FormationNetHandler.<UpdateFormationRequest>d__14 <UpdateFormationRequest>d__;
@@ -155,7 +155,7 @@ public class FormationNetHandler : IStaticVariableResetter
 		return <UpdateFormationRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D38A RID: 54154 RVA: 0x0030A318 File Offset: 0x00308518
+	// Token: 0x0600A79C RID: 42908 RVA: 0x0031540C File Offset: 0x0031360C
 	public static UniTask<bool> UpdateFightRoleRequest()
 	{
 		FormationNetHandler.<UpdateFightRoleRequest>d__15 <UpdateFightRoleRequest>d__;
@@ -165,7 +165,7 @@ public class FormationNetHandler : IStaticVariableResetter
 		return <UpdateFightRoleRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D38B RID: 54155 RVA: 0x0030A354 File Offset: 0x00308554
+	// Token: 0x0600A79D RID: 42909 RVA: 0x00315448 File Offset: 0x00313648
 	public static UniTask<ErrorCode> RenameFormationRequest(int formationId, [Nullable(1)] string name)
 	{
 		FormationNetHandler.<RenameFormationRequest>d__16 <RenameFormationRequest>d__;
@@ -177,7 +177,7 @@ public class FormationNetHandler : IStaticVariableResetter
 		return <RenameFormationRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D38C RID: 54156 RVA: 0x0030A3A0 File Offset: 0x003085A0
+	// Token: 0x0600A79E RID: 42910 RVA: 0x00315494 File Offset: 0x00313694
 	public static UniTask<bool> ReorderFormationRequest(int formationId, int targetId)
 	{
 		FormationNetHandler.<ReorderFormationRequest>d__17 <ReorderFormationRequest>d__;
@@ -189,7 +189,7 @@ public class FormationNetHandler : IStaticVariableResetter
 		return <ReorderFormationRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D38D RID: 54157 RVA: 0x0030A3EB File Offset: 0x003085EB
+	// Token: 0x0600A79F RID: 42911 RVA: 0x003154DF File Offset: 0x003136DF
 	[NullableContext(1)]
 	public static UpdateFormationRequest BuildUpdateFormationMessage(FightFormation[] formations)
 	{
@@ -198,7 +198,7 @@ public class FormationNetHandler : IStaticVariableResetter
 		return updateFormationRequest;
 	}
 
-	// Token: 0x0600D38E RID: 54158 RVA: 0x0030A400 File Offset: 0x00308600
+	// Token: 0x0600A7A0 RID: 42912 RVA: 0x003154F4 File Offset: 0x003136F4
 	[NullableContext(1)]
 	private static FightFormation[] ConvertEditingFormationsToProto(int currentFormationId)
 	{
@@ -232,7 +232,7 @@ public class FormationNetHandler : IStaticVariableResetter
 		return list.ToArray();
 	}
 
-	// Token: 0x0600D38F RID: 54159 RVA: 0x0030A524 File Offset: 0x00308724
+	// Token: 0x0600A7A1 RID: 42913 RVA: 0x00315618 File Offset: 0x00313818
 	[NullableContext(1)]
 	private static bool IsFormationDataUnchanged(int formationId, int[] roleList)
 	{
@@ -252,7 +252,7 @@ public class FormationNetHandler : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0600D390 RID: 54160 RVA: 0x0030A57C File Offset: 0x0030877C
+	// Token: 0x0600A7A2 RID: 42914 RVA: 0x00315670 File Offset: 0x00313870
 	[NullableContext(1)]
 	private static int PickCurrentRoleForFormation(int[] roleList)
 	{
@@ -277,7 +277,7 @@ public class FormationNetHandler : IStaticVariableResetter
 		return num;
 	}
 
-	// Token: 0x0600D391 RID: 54161 RVA: 0x0030A5F0 File Offset: 0x003087F0
+	// Token: 0x0600A7A3 RID: 42915 RVA: 0x003156E4 File Offset: 0x003138E4
 	[NullableContext(1)]
 	public static bool RequestSwitchSkillBranch(int configId, int skillBranch, Action<int> onMatchRejected)
 	{
@@ -305,15 +305,15 @@ public class FormationNetHandler : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x040060C4 RID: 24772
+	// Token: 0x04006193 RID: 24979
 	[Nullable(2)]
 	private static UpdateFormationNotify CacheFormationNotify;
 
-	// Token: 0x02008178 RID: 33144
+	// Token: 0x02007306 RID: 29446
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402A3F1 RID: 173041
+		// Token: 0x04025725 RID: 153381
 		[Nullable(new byte[]
 		{
 			0,

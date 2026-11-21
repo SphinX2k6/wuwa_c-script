@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FFB RID: 4091
+// Token: 0x020004AF RID: 1199
 public class GolemHackingTipsGirdInfo
 {
-	// Token: 0x04003025 RID: 12325
+	// Token: 0x040030BC RID: 12476
 	public int Index;
 
-	// Token: 0x04003026 RID: 12326
+	// Token: 0x040030BD RID: 12477
 	public int NextIndex;
 
-	// Token: 0x04003027 RID: 12327
+	// Token: 0x040030BE RID: 12478
 	public int Size;
 
-	// Token: 0x04003028 RID: 12328
+	// Token: 0x040030BF RID: 12479
 	[Nullable(1)]
 	public string Code;
 
-	// Token: 0x04003029 RID: 12329
+	// Token: 0x040030C0 RID: 12480
 	public float PosX;
 
-	// Token: 0x0400302A RID: 12330
+	// Token: 0x040030C1 RID: 12481
 	public float PosY;
 
-	// Token: 0x0400302B RID: 12331
+	// Token: 0x040030C2 RID: 12482
 	public float PosZ;
 }

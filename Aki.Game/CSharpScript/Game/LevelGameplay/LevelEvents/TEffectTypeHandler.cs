@@ -4,8 +4,8 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B8F RID: 27535
-	// (Invoke) Token: 0x060442A3 RID: 279203
+	// Token: 0x02005D07 RID: 23815
+	// (Invoke) Token: 0x0603A3F5 RID: 238581
 	[return: Nullable(2)]
 	internal delegate IEffectContext TEffectTypeHandler(PlayEffect2 inParams, GeneralContext context);
 }

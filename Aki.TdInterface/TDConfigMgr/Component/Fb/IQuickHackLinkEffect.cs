@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DF1 RID: 3569
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EED RID: 3821
 	public class IQuickHackLinkEffect
 	{
-		// Token: 0x060050D9 RID: 20697 RVA: 0x000C7A15 File Offset: 0x000C5C15
+		// Token: 0x06005600 RID: 22016 RVA: 0x000D32DD File Offset: 0x000D14DD
 		public static IQuickHackLinkEffect Create(IQuickHackLinkEffect? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AB4 RID: 6836
-		// (get) Token: 0x060050DA RID: 20698 RVA: 0x000C7A34 File Offset: 0x000C5C34
+		// Token: 0x17001C21 RID: 7201
+		// (get) Token: 0x06005601 RID: 22017 RVA: 0x000D32FC File Offset: 0x000D14FC
 		public virtual string RequiredState
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AB5 RID: 6837
-		// (get) Token: 0x060050DB RID: 20699 RVA: 0x000C7A41 File Offset: 0x000C5C41
+		// Token: 0x17001C22 RID: 7202
+		// (get) Token: 0x06005602 RID: 22018 RVA: 0x000D3309 File Offset: 0x000D1509
 		public virtual string EffectPath
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AB6 RID: 6838
-		// (get) Token: 0x060050DC RID: 20700 RVA: 0x000C7A4E File Offset: 0x000C5C4E
+		// Token: 0x17001C23 RID: 7203
+		// (get) Token: 0x06005603 RID: 22019 RVA: 0x000D3316 File Offset: 0x000D1516
 		public virtual VectorInfo StartPoint
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AB7 RID: 6839
-		// (get) Token: 0x060050DD RID: 20701 RVA: 0x000C7A82 File Offset: 0x000C5C82
+		// Token: 0x17001C24 RID: 7204
+		// (get) Token: 0x06005604 RID: 22020 RVA: 0x000D334A File Offset: 0x000D154A
 		public virtual VectorInfo EndPoint
 		{
 			get
@@ -75,21 +73,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E78 RID: 11896
+		// Token: 0x04003140 RID: 12608
 		private IQuickHackLinkEffect Instance;
 
-		// Token: 0x04002E79 RID: 11897
+		// Token: 0x04003141 RID: 12609
 		[Nullable(2)]
 		private VectorInfo _StartPointCache;
 
-		// Token: 0x04002E7A RID: 11898
+		// Token: 0x04003142 RID: 12610
 		private bool _StartPointInited;
 
-		// Token: 0x04002E7B RID: 11899
+		// Token: 0x04003143 RID: 12611
 		[Nullable(2)]
 		private VectorInfo _EndPointCache;
 
-		// Token: 0x04002E7C RID: 11900
+		// Token: 0x04003144 RID: 12612
 		private bool _EndPointInited;
 	}
 }

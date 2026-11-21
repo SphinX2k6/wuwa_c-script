@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020006FD RID: 1789
+	// Token: 0x020006E9 RID: 1769
 	public sealed class GmEntityFsmStateInfo : IMessage<GmEntityFsmStateInfo>, IMessage, IEquatable<GmEntityFsmStateInfo>, IDeepCloneable<GmEntityFsmStateInfo>, IBufferMessage
 	{
-		// Token: 0x0600A2EA RID: 41706 RVA: 0x00189C65 File Offset: 0x00187E65
+		// Token: 0x0600A194 RID: 41364 RVA: 0x00187231 File Offset: 0x00185431
 		[NullableContext(1)]
 		public static GmEntityFsmStateInfo Create()
 		{
 			return new GmEntityFsmStateInfo();
 		}
 
-		// Token: 0x170020BE RID: 8382
-		// (get) Token: 0x0600A2EB RID: 41707 RVA: 0x00189C6C File Offset: 0x00187E6C
+		// Token: 0x17002074 RID: 8308
+		// (get) Token: 0x0600A195 RID: 41365 RVA: 0x00187238 File Offset: 0x00185438
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<GmEntityFsmStateInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170020BF RID: 8383
-		// (get) Token: 0x0600A2EC RID: 41708 RVA: 0x00189C73 File Offset: 0x00187E73
+		// Token: 0x17002075 RID: 8309
+		// (get) Token: 0x0600A196 RID: 41366 RVA: 0x0018723F File Offset: 0x0018543F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170020C0 RID: 8384
-		// (get) Token: 0x0600A2ED RID: 41709 RVA: 0x00189C76 File Offset: 0x00187E76
+		// Token: 0x17002076 RID: 8310
+		// (get) Token: 0x0600A197 RID: 41367 RVA: 0x00187242 File Offset: 0x00185442
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A2EE RID: 41710 RVA: 0x00189C7D File Offset: 0x00187E7D
+		// Token: 0x0600A198 RID: 41368 RVA: 0x00187249 File Offset: 0x00185449
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GmEntityFsmStateInfo()
 		{
 		}
 
-		// Token: 0x0600A2EF RID: 41711 RVA: 0x00189C90 File Offset: 0x00187E90
+		// Token: 0x0600A199 RID: 41369 RVA: 0x0018725C File Offset: 0x0018545C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GmEntityFsmStateInfo(GmEntityFsmStateInfo other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600A2F0 RID: 41712 RVA: 0x00189CC6 File Offset: 0x00187EC6
+		// Token: 0x0600A19A RID: 41370 RVA: 0x00187292 File Offset: 0x00185492
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GmEntityFsmStateInfo Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new GmEntityFsmStateInfo(this);
 		}
 
-		// Token: 0x170020C1 RID: 8385
-		// (get) Token: 0x0600A2F1 RID: 41713 RVA: 0x00189CCE File Offset: 0x00187ECE
-		// (set) Token: 0x0600A2F2 RID: 41714 RVA: 0x00189CD6 File Offset: 0x00187ED6
+		// Token: 0x17002077 RID: 8311
+		// (get) Token: 0x0600A19B RID: 41371 RVA: 0x0018729A File Offset: 0x0018549A
+		// (set) Token: 0x0600A19C RID: 41372 RVA: 0x001872A2 File Offset: 0x001854A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int StateIndex
@@ -96,8 +96,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170020C2 RID: 8386
-		// (get) Token: 0x0600A2F3 RID: 41715 RVA: 0x00189CDF File Offset: 0x00187EDF
+		// Token: 0x17002078 RID: 8312
+		// (get) Token: 0x0600A19D RID: 41373 RVA: 0x001872AB File Offset: 0x001854AB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GmEntityFsmTransitionInfo> GmEntityFsmTransitionInfos
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A2F4 RID: 41716 RVA: 0x00189CE7 File Offset: 0x00187EE7
+		// Token: 0x0600A19E RID: 41374 RVA: 0x001872B3 File Offset: 0x001854B3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return this.Equals(other as GmEntityFsmStateInfo);
 		}
 
-		// Token: 0x0600A2F5 RID: 41717 RVA: 0x00189CF8 File Offset: 0x00187EF8
+		// Token: 0x0600A19F RID: 41375 RVA: 0x001872C4 File Offset: 0x001854C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(GmEntityFsmStateInfo other)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.StateIndex == other.StateIndex && this.gmEntityFsmTransitionInfos_.Equals(other.gmEntityFsmTransitionInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600A2F6 RID: 41718 RVA: 0x00189D48 File Offset: 0x00187F48
+		// Token: 0x0600A1A0 RID: 41376 RVA: 0x00187314 File Offset: 0x00185514
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600A2F7 RID: 41719 RVA: 0x00189D95 File Offset: 0x00187F95
+		// Token: 0x0600A1A1 RID: 41377 RVA: 0x00187361 File Offset: 0x00185561
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600A2F8 RID: 41720 RVA: 0x00189DA2 File Offset: 0x00187FA2
+		// Token: 0x0600A1A2 RID: 41378 RVA: 0x0018736E File Offset: 0x0018556E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600A2F9 RID: 41721 RVA: 0x00189DAC File Offset: 0x00187FAC
+		// Token: 0x0600A1A3 RID: 41379 RVA: 0x00187378 File Offset: 0x00185578
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A2FA RID: 41722 RVA: 0x00189DFC File Offset: 0x00187FFC
+		// Token: 0x0600A1A4 RID: 41380 RVA: 0x001873C8 File Offset: 0x001855C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600A2FB RID: 41723 RVA: 0x00189E50 File Offset: 0x00188050
+		// Token: 0x0600A1A5 RID: 41381 RVA: 0x0018741C File Offset: 0x0018561C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(GmEntityFsmStateInfo other)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600A2FC RID: 41724 RVA: 0x00189E9D File Offset: 0x0018809D
+		// Token: 0x0600A1A6 RID: 41382 RVA: 0x00187469 File Offset: 0x00185669
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600A2FD RID: 41725 RVA: 0x00189EA8 File Offset: 0x001880A8
+		// Token: 0x0600A1A7 RID: 41383 RVA: 0x00187474 File Offset: 0x00185674
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -248,25 +248,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04004B65 RID: 19301
+		// Token: 0x04004B5E RID: 19294
 		private static readonly MessageParser<GmEntityFsmStateInfo> _parser = new MessageParser<GmEntityFsmStateInfo>(() => new GmEntityFsmStateInfo());
 
-		// Token: 0x04004B66 RID: 19302
+		// Token: 0x04004B5F RID: 19295
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004B67 RID: 19303
+		// Token: 0x04004B60 RID: 19296
 		public const int StateIndexFieldNumber = 1;
 
-		// Token: 0x04004B68 RID: 19304
+		// Token: 0x04004B61 RID: 19297
 		private int stateIndex_;
 
-		// Token: 0x04004B69 RID: 19305
+		// Token: 0x04004B62 RID: 19298
 		public const int GmEntityFsmTransitionInfosFieldNumber = 2;
 
-		// Token: 0x04004B6A RID: 19306
+		// Token: 0x04004B63 RID: 19299
 		private static readonly FieldCodec<GmEntityFsmTransitionInfo> _repeated_gmEntityFsmTransitionInfos_codec = FieldCodec.ForMessage<GmEntityFsmTransitionInfo>(18U, GmEntityFsmTransitionInfo.Parser);
 
-		// Token: 0x04004B6B RID: 19307
+		// Token: 0x04004B64 RID: 19300
 		private readonly RepeatedField<GmEntityFsmTransitionInfo> gmEntityFsmTransitionInfos_ = new RepeatedField<GmEntityFsmTransitionInfo>();
 	}
 }

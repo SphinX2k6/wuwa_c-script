@@ -7,16 +7,16 @@ using CSharpScript.Launcher.DiffPatch.Update;
 using CSharpScript.Launcher.Ui.HotFix;
 using UnrealEngine;
 
-// Token: 0x0200275D RID: 10077
+// Token: 0x02001C48 RID: 7240
 public class ResDownLoadMeOutOfMemoryView : UiViewBase
 {
-	// Token: 0x06014AB3 RID: 84659 RVA: 0x0053A6EB File Offset: 0x005388EB
+	// Token: 0x06011F96 RID: 73622 RVA: 0x0054957F File Offset: 0x0054777F
 	[NullableContext(1)]
 	public ResDownLoadMeOutOfMemoryView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014AB4 RID: 84660 RVA: 0x0053A6F4 File Offset: 0x005388F4
+	// Token: 0x06011F97 RID: 73623 RVA: 0x00549588 File Offset: 0x00547788
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -47,13 +47,13 @@ public class ResDownLoadMeOutOfMemoryView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014AB5 RID: 84661 RVA: 0x0053A841 File Offset: 0x00538A41
+	// Token: 0x06011F98 RID: 73624 RVA: 0x005496D5 File Offset: 0x005478D5
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x06014AB6 RID: 84662 RVA: 0x0053A84C File Offset: 0x00538A4C
+	// Token: 0x06011F99 RID: 73625 RVA: 0x005496E0 File Offset: 0x005478E0
 	private void RefreshView()
 	{
 		long videoResSize = VideoResUpdate.Instance.GetVideoResSize(EVideoResSizeType.LoginPrepare);
@@ -62,33 +62,33 @@ public class ResDownLoadMeOutOfMemoryView : UiViewBase
 		LguiUtil.Instance.SetLocalText(base.GetText(1), "DownLoadText_LeftSpace", new <>z__ReadOnlySingleElementList<object>("<color=#c25757>" + HotFixManager.ByteConverter(freeSpace) + "</color>"));
 	}
 
-	// Token: 0x06014AB7 RID: 84663 RVA: 0x0053A8C1 File Offset: 0x00538AC1
+	// Token: 0x06011F9A RID: 73626 RVA: 0x00549755 File Offset: 0x00547955
 	private void OnClickConfirmBtn()
 	{
 		QuestResourceModel.Instance.UserClickOutOfMemoryView(true);
 	}
 
-	// Token: 0x06014AB8 RID: 84664 RVA: 0x0053A8CE File Offset: 0x00538ACE
+	// Token: 0x06011F9B RID: 73627 RVA: 0x00549762 File Offset: 0x00547962
 	private void OnClickCancelBtn()
 	{
 		base.CloseMe(null);
 		QuestResourceModel.Instance.UserClickOutOfMemoryView(false);
 	}
 
-	// Token: 0x02008DC3 RID: 36291
+	// Token: 0x02007F4C RID: 32588
 	private enum EComponentDefine
 	{
-		// Token: 0x0402E020 RID: 188448
+		// Token: 0x04029337 RID: 168759
 		NeedSpaceText,
-		// Token: 0x0402E021 RID: 188449
+		// Token: 0x04029338 RID: 168760
 		LeftSpaceText,
-		// Token: 0x0402E022 RID: 188450
+		// Token: 0x04029339 RID: 168761
 		CancelBtn,
-		// Token: 0x0402E023 RID: 188451
+		// Token: 0x0402933A RID: 168762
 		ConfirmBtn,
-		// Token: 0x0402E024 RID: 188452
+		// Token: 0x0402933B RID: 168763
 		TitleText,
-		// Token: 0x0402E025 RID: 188453
+		// Token: 0x0402933C RID: 168764
 		DesText
 	}
 }

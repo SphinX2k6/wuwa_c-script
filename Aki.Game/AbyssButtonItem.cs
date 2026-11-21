@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001A1F RID: 6687
+// Token: 0x02000EDE RID: 3806
 [NullableContext(1)]
 [Nullable(0)]
 public class AbyssButtonItem : UiPanelBase
 {
-	// Token: 0x0600C4CD RID: 50381 RVA: 0x002CA020 File Offset: 0x002C8220
+	// Token: 0x060098DD RID: 39133 RVA: 0x002D5138 File Offset: 0x002D3338
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -35,25 +35,25 @@ public class AbyssButtonItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C4CE RID: 50382 RVA: 0x002CA108 File Offset: 0x002C8308
+	// Token: 0x060098DE RID: 39134 RVA: 0x002D5220 File Offset: 0x002D3420
 	public void RefreshRedDotVisible(bool visible)
 	{
 		base.GetItem(2).SetUIActive(visible);
 	}
 
-	// Token: 0x0600C4CF RID: 50383 RVA: 0x002CA117 File Offset: 0x002C8317
+	// Token: 0x060098DF RID: 39135 RVA: 0x002D522F File Offset: 0x002D342F
 	public void SetNumText(string text)
 	{
 		base.GetText(1).SetText(text, true);
 	}
 
-	// Token: 0x0600C4D0 RID: 50384 RVA: 0x002CA127 File Offset: 0x002C8327
+	// Token: 0x060098E0 RID: 39136 RVA: 0x002D523F File Offset: 0x002D343F
 	public void SetNameText(string text)
 	{
 		base.GetText(3).SetText(text, true);
 	}
 
-	// Token: 0x0600C4D1 RID: 50385 RVA: 0x002CA137 File Offset: 0x002C8337
+	// Token: 0x060098E1 RID: 39137 RVA: 0x002D524F File Offset: 0x002D344F
 	private void ButtonCallBackInternal()
 	{
 		Action buttonCallBack = this.ButtonCallBack;
@@ -64,25 +64,25 @@ public class AbyssButtonItem : UiPanelBase
 		buttonCallBack();
 	}
 
-	// Token: 0x0600C4D2 RID: 50386 RVA: 0x002CA149 File Offset: 0x002C8349
+	// Token: 0x060098E2 RID: 39138 RVA: 0x002D5261 File Offset: 0x002D3461
 	public void SetSelfInteractive(bool interactive)
 	{
 		base.GetButton(0).SetSelfInteractive(interactive);
 	}
 
-	// Token: 0x0600C4D3 RID: 50387 RVA: 0x002CA158 File Offset: 0x002C8358
+	// Token: 0x060098E3 RID: 39139 RVA: 0x002D5270 File Offset: 0x002D3470
 	public void BindClickCallBack(Action callBack)
 	{
 		this.ButtonCallBack = callBack;
 	}
 
-	// Token: 0x0600C4D4 RID: 50388 RVA: 0x002CA161 File Offset: 0x002C8361
+	// Token: 0x060098E4 RID: 39140 RVA: 0x002D5279 File Offset: 0x002D3479
 	public void SetRedDotVisible(bool visible)
 	{
 		base.GetItem(2).SetUIActive(visible);
 	}
 
-	// Token: 0x0600C4D5 RID: 50389 RVA: 0x002CA170 File Offset: 0x002C8370
+	// Token: 0x060098E5 RID: 39141 RVA: 0x002D5288 File Offset: 0x002D3488
 	public void BindRedDot(ERedDotName redDotName, int? uId = null)
 	{
 		UUIItem item = base.GetItem(2);
@@ -98,7 +98,7 @@ public class AbyssButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C4D6 RID: 50390 RVA: 0x002CA1BC File Offset: 0x002C83BC
+	// Token: 0x060098E6 RID: 39142 RVA: 0x002D52D4 File Offset: 0x002D34D4
 	public void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -109,24 +109,24 @@ public class AbyssButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04005ABA RID: 23226
+	// Token: 0x04005B89 RID: 23433
 	private ERedDotName? RedDotName;
 
-	// Token: 0x04005ABB RID: 23227
+	// Token: 0x04005B8A RID: 23434
 	[Nullable(2)]
 	public Action ButtonCallBack;
 
-	// Token: 0x02007F65 RID: 32613
+	// Token: 0x020070F4 RID: 28916
 	[NullableContext(0)]
 	private enum EButtonComponent
 	{
-		// Token: 0x04029971 RID: 170353
+		// Token: 0x04024CAE RID: 150702
 		Button,
-		// Token: 0x04029972 RID: 170354
+		// Token: 0x04024CAF RID: 150703
 		NumText,
-		// Token: 0x04029973 RID: 170355
+		// Token: 0x04024CB0 RID: 150704
 		RedDot,
-		// Token: 0x04029974 RID: 170356
+		// Token: 0x04024CB1 RID: 150705
 		NameText
 	}
 }

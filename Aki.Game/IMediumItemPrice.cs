@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001918 RID: 6424
+// Token: 0x02000DD1 RID: 3537
 [NullableContext(2)]
 public interface IMediumItemPrice
 {
-	// Token: 0x17000FAA RID: 4010
-	// (get) Token: 0x0600BC28 RID: 48168
-	// (set) Token: 0x0600BC29 RID: 48169
+	// Token: 0x17000FCD RID: 4045
+	// (get) Token: 0x06009012 RID: 36882
+	// (set) Token: 0x06009013 RID: 36883
 	int CurPrice { get; set; }
 
-	// Token: 0x17000FAB RID: 4011
-	// (get) Token: 0x0600BC2A RID: 48170
-	// (set) Token: 0x0600BC2B RID: 48171
+	// Token: 0x17000FCE RID: 4046
+	// (get) Token: 0x06009014 RID: 36884
+	// (set) Token: 0x06009015 RID: 36885
 	int? OriginalPrice { get; set; }
 
-	// Token: 0x17000FAC RID: 4012
-	// (get) Token: 0x0600BC2C RID: 48172
-	// (set) Token: 0x0600BC2D RID: 48173
+	// Token: 0x17000FCF RID: 4047
+	// (get) Token: 0x06009016 RID: 36886
+	// (set) Token: 0x06009017 RID: 36887
 	string TexPath { get; set; }
 
-	// Token: 0x17000FAD RID: 4013
-	// (get) Token: 0x0600BC2E RID: 48174
-	// (set) Token: 0x0600BC2F RID: 48175
+	// Token: 0x17000FD0 RID: 4048
+	// (get) Token: 0x06009018 RID: 36888
+	// (set) Token: 0x06009019 RID: 36889
 	bool? CurrencyNotEnough { get; set; }
 }

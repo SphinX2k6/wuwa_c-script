@@ -4,22 +4,22 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014D5 RID: 5333
+	// Token: 0x0200162E RID: 5678
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ChangeFlowTemplate_SetValue
 	{
-		// Token: 0x04004675 RID: 18037
-		[Nullable(1)]
+		// Token: 0x04004A10 RID: 18960
+		[Nullable(0)]
 		public IFlowTemplateMode TemplateMode;
 
-		// Token: 0x04004676 RID: 18038
+		// Token: 0x04004A11 RID: 18961
 		public PosA TargetPos;
 
-		// Token: 0x04004677 RID: 18039
+		// Token: 0x04004A12 RID: 18962
 		public List<int> ActorIdArray;
 
-		// Token: 0x04004678 RID: 18040
+		// Token: 0x04004A13 RID: 18963
 		public List<int> TalkerIds;
 	}
 }

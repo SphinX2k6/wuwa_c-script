@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x020068FB RID: 26875
+	// Token: 0x0200584B RID: 22603
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossRushBuffSelectView : UiTabViewBase
 	{
-		// Token: 0x06043068 RID: 274536 RVA: 0x01053838 File Offset: 0x01051A38
+		// Token: 0x06037BC0 RID: 228288 RVA: 0x00F94E60 File Offset: 0x00F93060
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06043069 RID: 274537 RVA: 0x01053920 File Offset: 0x01051B20
+		// Token: 0x06037BC1 RID: 228289 RVA: 0x00F94F48 File Offset: 0x00F93148
 		protected override void OnStart()
 		{
 			this.LoopScrollView = new LoopScrollView<BuffGridItem, BuffGridItemData>(base.GetLoopScrollViewComponent(0), base.GetItem(1).GetOwner() as AUIBaseActor, new Func<BuffGridItem>(this.CreateLoopItem), false);
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			EventSystem.Instance.Emit(EEventName.OnBossRushBuffViewOpened);
 		}
 
-		// Token: 0x0604306A RID: 274538 RVA: 0x0105398B File Offset: 0x01051B8B
+		// Token: 0x06037BC2 RID: 228290 RVA: 0x00F94FB3 File Offset: 0x00F931B3
 		private BuffGridItem CreateLoopItem()
 		{
 			return new BuffGridItem();
 		}
 
-		// Token: 0x0604306B RID: 274539 RVA: 0x01053994 File Offset: 0x01051B94
+		// Token: 0x06037BC3 RID: 228291 RVA: 0x00F94FBC File Offset: 0x00F931BC
 		private void OnClickConfirmButton()
 		{
 			List<BossRushBuffInfo> list = new List<BossRushBuffInfo>();
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			EventSystem.Instance.Emit<EUiTabViewName>(EEventName.RequestChangeBossRushView, EUiTabViewName.BossRushLevelDetailView);
 		}
 
-		// Token: 0x0604306C RID: 274540 RVA: 0x01053B4C File Offset: 0x01051D4C
+		// Token: 0x06037BC4 RID: 228292 RVA: 0x00F95174 File Offset: 0x00F93374
 		protected override void OnBeforeShow()
 		{
 			this.TryShowAnimation();
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.IsBuffMaxCountOne = (this.CurrentTeamInfo.LevelInfo.GetMaxBuffCount() == 1);
 		}
 
-		// Token: 0x0604306D RID: 274541 RVA: 0x01053CAC File Offset: 0x01051EAC
+		// Token: 0x06037BC5 RID: 228293 RVA: 0x00F952D4 File Offset: 0x00F934D4
 		private void TryShowAnimation()
 		{
 			string sequenceName = "Start";
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			BossRushModel.Instance.PlayBackAnimation = false;
 		}
 
-		// Token: 0x0604306E RID: 274542 RVA: 0x01053CFC File Offset: 0x01051EFC
+		// Token: 0x06037BC6 RID: 228294 RVA: 0x00F95324 File Offset: 0x00F93524
 		private void OnClickToggle(BuffScrollItemData data)
 		{
 			if (this.IsBuffMaxCountOne && !data.Selected)
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.RefreshCountText();
 		}
 
-		// Token: 0x0604306F RID: 274543 RVA: 0x01053D7C File Offset: 0x01051F7C
+		// Token: 0x06037BC7 RID: 228295 RVA: 0x00F953A4 File Offset: 0x00F935A4
 		private bool CheckClickAble(BuffScrollItemData data)
 		{
 			if (this.FirstRefresh)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return false;
 		}
 
-		// Token: 0x06043070 RID: 274544 RVA: 0x01053DA8 File Offset: 0x01051FA8
+		// Token: 0x06037BC8 RID: 228296 RVA: 0x00F953D0 File Offset: 0x00F935D0
 		private bool CheckIfStillCanSelectBuff()
 		{
 			if (this.FirstRefresh)
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return false;
 		}
 
-		// Token: 0x06043071 RID: 274545 RVA: 0x01053DF8 File Offset: 0x01051FF8
+		// Token: 0x06037BC9 RID: 228297 RVA: 0x00F95420 File Offset: 0x00F93620
 		private int GetCurrentSelectCount()
 		{
 			int num = 0;
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return num;
 		}
 
-		// Token: 0x06043072 RID: 274546 RVA: 0x01053E54 File Offset: 0x01052054
+		// Token: 0x06037BCA RID: 228298 RVA: 0x00F9547C File Offset: 0x00F9367C
 		private void RefreshScrollView(bool needGridAnimation = false)
 		{
 			if (this.LoopScrollView != null)
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}
 		}
 
-		// Token: 0x06043073 RID: 274547 RVA: 0x01053EED File Offset: 0x010520ED
+		// Token: 0x06037BCB RID: 228299 RVA: 0x00F95515 File Offset: 0x00F93715
 		protected override void OnBeforeHide()
 		{
 			LoopScrollView<BuffGridItem, BuffGridItemData> loopScrollView = this.LoopScrollView;
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			loopScrollView.ClearGridProxies();
 		}
 
-		// Token: 0x06043074 RID: 274548 RVA: 0x01053F00 File Offset: 0x01052100
+		// Token: 0x06037BCC RID: 228300 RVA: 0x00F95528 File Offset: 0x00F93728
 		private void RefreshCountText()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "BossRushSelectBuffText", new <>z__ReadOnlyArray<object>(new object[]
@@ -254,11 +254,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}));
 		}
 
-		// Token: 0x04022E3F RID: 142911
+		// Token: 0x0401D69B RID: 120475
 		[Nullable(2)]
 		private BossRushTeamInfo CurrentTeamInfo;
 
-		// Token: 0x04022E40 RID: 142912
+		// Token: 0x0401D69C RID: 120476
 		[Nullable(new byte[]
 		{
 			2,
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 		})]
 		private List<BuffScrollItemData> CurrentSelectableBuffData;
 
-		// Token: 0x04022E41 RID: 142913
+		// Token: 0x0401D69D RID: 120477
 		[Nullable(new byte[]
 		{
 			2,
@@ -275,30 +275,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 		})]
 		private LoopScrollView<BuffGridItem, BuffGridItemData> LoopScrollView;
 
-		// Token: 0x04022E42 RID: 142914
+		// Token: 0x0401D69E RID: 120478
 		private bool FirstRefresh = true;
 
-		// Token: 0x04022E43 RID: 142915
+		// Token: 0x0401D69F RID: 120479
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04022E44 RID: 142916
+		// Token: 0x0401D6A0 RID: 120480
 		private bool IsBuffMaxCountOne;
 
-		// Token: 0x0200CAAF RID: 51887
+		// Token: 0x0200B477 RID: 46199
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403D420 RID: 250912
+			// Token: 0x04037CFA RID: 228602
 			public const int LoopScrollView = 0;
 
-			// Token: 0x0403D421 RID: 250913
+			// Token: 0x04037CFB RID: 228603
 			public const int ContentItem = 1;
 
-			// Token: 0x0403D422 RID: 250914
+			// Token: 0x04037CFC RID: 228604
 			public const int SelectCountText = 2;
 
-			// Token: 0x0403D423 RID: 250915
+			// Token: 0x04037CFD RID: 228605
 			public const int ConfirmButton = 3;
 		}
 	}

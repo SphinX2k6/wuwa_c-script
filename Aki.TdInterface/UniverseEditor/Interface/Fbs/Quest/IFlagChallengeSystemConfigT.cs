@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E58 RID: 15960
+	// Token: 0x02004293 RID: 17043
 	public class IFlagChallengeSystemConfigT
 	{
-		// Token: 0x17006EAE RID: 28334
-		// (get) Token: 0x06016777 RID: 92023 RVA: 0x0033F89F File Offset: 0x0033DA9F
-		// (set) Token: 0x06016778 RID: 92024 RVA: 0x0033F8A7 File Offset: 0x0033DAA7
+		// Token: 0x17007492 RID: 29842
+		// (get) Token: 0x06017D9E RID: 97694 RVA: 0x003683CF File Offset: 0x003665CF
+		// (set) Token: 0x06017D9F RID: 97695 RVA: 0x003683D7 File Offset: 0x003665D7
 		public EEnableSystemType Type { get; set; }
 
-		// Token: 0x17006EAF RID: 28335
-		// (get) Token: 0x06016779 RID: 92025 RVA: 0x0033F8B0 File Offset: 0x0033DAB0
-		// (set) Token: 0x0601677A RID: 92026 RVA: 0x0033F8B8 File Offset: 0x0033DAB8
+		// Token: 0x17007493 RID: 29843
+		// (get) Token: 0x06017DA0 RID: 97696 RVA: 0x003683E0 File Offset: 0x003665E0
+		// (set) Token: 0x06017DA1 RID: 97697 RVA: 0x003683E8 File Offset: 0x003665E8
 		public List<IFlagChallengeSystemVarT> Vars { get; set; }
 
-		// Token: 0x0601677B RID: 92027 RVA: 0x0033F8C1 File Offset: 0x0033DAC1
+		// Token: 0x06017DA2 RID: 97698 RVA: 0x003683F1 File Offset: 0x003665F1
 		public IFlagChallengeSystemConfigT()
 		{
 			this.Type = EEnableSystemType.GradingSystem;

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DB4 RID: 23988
+	// Token: 0x02004D98 RID: 19864
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemDurabilityStatePanel : BattleChildViewPanel
 	{
-		// Token: 0x0603CEE8 RID: 249576 RVA: 0x00EA3D2C File Offset: 0x00EA1F2C
+		// Token: 0x06031E5F RID: 204383 RVA: 0x00DF4C00 File Offset: 0x00DF2E00
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CEE9 RID: 249577 RVA: 0x00EA3E3C File Offset: 0x00EA203C
+		// Token: 0x06031E60 RID: 204384 RVA: 0x00DF4D10 File Offset: 0x00DF2F10
 		public override void InitializeTemp()
 		{
 			this.HitLargePercent = (float)ConfigCommonParamById.GetIntConfig("HitLargeBufferPercent").Value / 10000f;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.VisibleMachine.InitVisible(false);
 		}
 
-		// Token: 0x0603CEEA RID: 249578 RVA: 0x00EA3EDC File Offset: 0x00EA20DC
+		// Token: 0x06031E61 RID: 204385 RVA: 0x00DF4DB0 File Offset: 0x00DF2FB0
 		public override void Reset()
 		{
 			this.CandidateMap.Clear();
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603CEEB RID: 249579 RVA: 0x00EA3F40 File Offset: 0x00EA2140
+		// Token: 0x06031E62 RID: 204386 RVA: 0x00DF4E14 File Offset: 0x00DF3014
 		protected override void AddEvents()
 		{
 			EventSystem.Instance.Add<EntityHandle, int, int>(EEventName.OnAnySceneItemDurabilityChange, new Action<EntityHandle, int, int>(this.OnAnySceneItemDurabilityChange));
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<Entity>(EEventName.OnSceneItemDurabilityEmpty, new Action<Entity>(this.OnSceneItemDurabilityEmpty));
 		}
 
-		// Token: 0x0603CEEC RID: 249580 RVA: 0x00EA3FC0 File Offset: 0x00EA21C0
+		// Token: 0x06031E63 RID: 204387 RVA: 0x00DF4E94 File Offset: 0x00DF3094
 		protected override void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnAnySceneItemDurabilityChange, new Action<EntityHandle, int, int>(this.OnAnySceneItemDurabilityChange));
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.OnSceneItemDurabilityEmpty, new Action<Entity>(this.OnSceneItemDurabilityEmpty));
 		}
 
-		// Token: 0x0603CEED RID: 249581 RVA: 0x00EA403D File Offset: 0x00EA223D
+		// Token: 0x06031E64 RID: 204388 RVA: 0x00DF4F11 File Offset: 0x00DF3111
 		[NullableContext(2)]
 		public void OnEnableSceneItemDurabilityUI(int entityId, bool enable, int? durability, int? maxDurability, string tidName)
 		{
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UnregisterEntity(entityId);
 		}
 
-		// Token: 0x0603CEEE RID: 249582 RVA: 0x00EA4061 File Offset: 0x00EA2261
+		// Token: 0x06031E65 RID: 204389 RVA: 0x00DF4F35 File Offset: 0x00DF3135
 		private void RegisterEntity(int entityId, int durability, int maxDurability, string tidName)
 		{
 			this.CandidateMap[entityId] = new SceneItemDurabilityStatePanel.SceneItemDurabilityStateInfo
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEEF RID: 249583 RVA: 0x00EA409C File Offset: 0x00EA229C
+		// Token: 0x06031E66 RID: 204390 RVA: 0x00DF4F70 File Offset: 0x00DF3170
 		private void UnregisterEntity(int entityId)
 		{
 			this.CandidateMap.Remove(entityId);
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEF0 RID: 249584 RVA: 0x00EA40FC File Offset: 0x00EA22FC
+		// Token: 0x06031E67 RID: 204391 RVA: 0x00DF4FD0 File Offset: 0x00DF31D0
 		private void OnAnySceneItemDurabilityChange(EntityHandle entityHandle, int newDurability, int _curDurability)
 		{
 			int id = entityHandle.Id;
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateDurabilityBar(newDurability);
 		}
 
-		// Token: 0x0603CEF1 RID: 249585 RVA: 0x00EA414C File Offset: 0x00EA234C
+		// Token: 0x06031E68 RID: 204392 RVA: 0x00DF5020 File Offset: 0x00DF3220
 		private void OnRemoveEntity(ERemoveEntityType _removeType, EntityHandle handle)
 		{
 			if (handle == null || !handle.Valid)
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UnregisterEntity(id);
 		}
 
-		// Token: 0x0603CEF2 RID: 249586 RVA: 0x00EA4188 File Offset: 0x00EA2388
+		// Token: 0x06031E69 RID: 204393 RVA: 0x00DF505C File Offset: 0x00DF325C
 		private void OnSceneItemDurabilityEmpty(Entity entity)
 		{
 			int id = entity.Id;
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UnregisterEntity(id);
 		}
 
-		// Token: 0x0603CEF3 RID: 249587 RVA: 0x00EA41B4 File Offset: 0x00EA23B4
+		// Token: 0x06031E6A RID: 204394 RVA: 0x00DF5088 File Offset: 0x00DF3288
 		private void ActivateDurabilityView(int entityId)
 		{
 			SceneItemDurabilityStatePanel.SceneItemDurabilityStateInfo sceneItemDurabilityStateInfo;
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.VisibleMachine.SetVisible(true, 667f);
 		}
 
-		// Token: 0x0603CEF4 RID: 249588 RVA: 0x00EA423F File Offset: 0x00EA243F
+		// Token: 0x06031E6B RID: 204395 RVA: 0x00DF5113 File Offset: 0x00DF3313
 		private void DeactivateDurabilityView()
 		{
 			this.CurrentEntityId = -1;
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.VisibleMachine.SetVisible(false, 167f);
 		}
 
-		// Token: 0x0603CEF5 RID: 249589 RVA: 0x00EA4265 File Offset: 0x00EA2465
+		// Token: 0x06031E6C RID: 204396 RVA: 0x00DF5139 File Offset: 0x00DF3339
 		private void SwitchToEntity(int entityId)
 		{
 			this.StopBarLerpAnimation();
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ActivateDurabilityView(entityId);
 		}
 
-		// Token: 0x0603CEF6 RID: 249590 RVA: 0x00EA427C File Offset: 0x00EA247C
+		// Token: 0x06031E6D RID: 204397 RVA: 0x00DF5150 File Offset: 0x00DF3350
 		private void UpdateDurabilityBar(int newDurability)
 		{
 			float currentPercent = this.CurrentPercent;
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEF7 RID: 249591 RVA: 0x00EA42D2 File Offset: 0x00EA24D2
+		// Token: 0x06031E6E RID: 204398 RVA: 0x00DF51A6 File Offset: 0x00DF33A6
 		private void SetDurabilityBarPercent(float percent)
 		{
 			UUISprite sprite = base.GetSprite(1);
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sprite.SetFillAmount(percent);
 		}
 
-		// Token: 0x0603CEF8 RID: 249592 RVA: 0x00EA42E8 File Offset: 0x00EA24E8
+		// Token: 0x06031E6F RID: 204399 RVA: 0x00DF51BC File Offset: 0x00DF33BC
 		private void PlayBarAnimation(float durabilityPercent, float oldPercent)
 		{
 			bool flag = this.DurabilityStateMachine.IsOriginState();
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayDurabilityLight();
 		}
 
-		// Token: 0x0603CEF9 RID: 249593 RVA: 0x00EA434C File Offset: 0x00EA254C
+		// Token: 0x06031E70 RID: 204400 RVA: 0x00DF5220 File Offset: 0x00DF3420
 		private void SetBarBufferPercent(float pctBuffer, float pctReal)
 		{
 			float num = this.DurabilityParentWidth * pctReal;
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetSprite(3).SetAnchorOffsetX(-num4);
 		}
 
-		// Token: 0x0603CEFA RID: 249594 RVA: 0x00EA43A7 File Offset: 0x00EA25A7
+		// Token: 0x06031E71 RID: 204401 RVA: 0x00DF527B File Offset: 0x00DF347B
 		private void StopBarLerpAnimation()
 		{
 			UUIItem item = base.GetItem(2);
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsPlayingDurabilityBarAnim = false;
 		}
 
-		// Token: 0x0603CEFB RID: 249595 RVA: 0x00EA43D0 File Offset: 0x00EA25D0
+		// Token: 0x06031E72 RID: 204402 RVA: 0x00DF52A4 File Offset: 0x00DF34A4
 		private void InitDurabilityLightTween()
 		{
 			UUIItem item = base.GetItem(4);
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEFC RID: 249596 RVA: 0x00EA4410 File Offset: 0x00EA2610
+		// Token: 0x06031E73 RID: 204403 RVA: 0x00DF52E4 File Offset: 0x00DF34E4
 		private void PlayDurabilityLight()
 		{
 			UUIItem item = base.GetItem(4);
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			durabilityLightTweenComponent.Play();
 		}
 
-		// Token: 0x0603CEFD RID: 249597 RVA: 0x00EA4440 File Offset: 0x00EA2640
+		// Token: 0x06031E74 RID: 204404 RVA: 0x00DF5314 File Offset: 0x00DF3514
 		private void StopDurabilityLight()
 		{
 			UUIItem item = base.GetItem(4);
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			durabilityLightTweenComponent.Stop();
 		}
 
-		// Token: 0x0603CEFE RID: 249598 RVA: 0x00EA4470 File Offset: 0x00EA2670
+		// Token: 0x06031E75 RID: 204405 RVA: 0x00DF5344 File Offset: 0x00DF3544
 		private void InitDurabilityParentWidth()
 		{
 			UUIItem item = base.GetItem(2);
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEFF RID: 249599 RVA: 0x00EA449E File Offset: 0x00EA269E
+		// Token: 0x06031E76 RID: 204406 RVA: 0x00DF5372 File Offset: 0x00DF3572
 		private void OnRealVisibleChanged(bool visible)
 		{
 			if (!visible)
@@ -351,7 +351,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF00 RID: 249600 RVA: 0x00EA44AC File Offset: 0x00EA26AC
+		// Token: 0x06031E77 RID: 204407 RVA: 0x00DF5380 File Offset: 0x00DF3580
 		private void OnPlayVisibleAnim(bool visible)
 		{
 			if (visible)
@@ -362,13 +362,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SequencePlayer.PlaySequencePurely("CloseView", false, false, null, null, false);
 		}
 
-		// Token: 0x0603CF01 RID: 249601 RVA: 0x00EA44F7 File Offset: 0x00EA26F7
+		// Token: 0x06031E78 RID: 204408 RVA: 0x00DF53CB File Offset: 0x00DF35CB
 		private void OnStopVisibleAnim(bool _visible)
 		{
 			this.SequencePlayer.StopCurrentSequence(false, false);
 		}
 
-		// Token: 0x0603CF02 RID: 249602 RVA: 0x00EA4508 File Offset: 0x00EA2708
+		// Token: 0x06031E79 RID: 204409 RVA: 0x00DF53DC File Offset: 0x00DF35DC
 		private void RefreshName(string tidName)
 		{
 			UUIText text = base.GetText(0);
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF03 RID: 249603 RVA: 0x00EA4534 File Offset: 0x00EA2734
+		// Token: 0x06031E7A RID: 204410 RVA: 0x00DF5408 File Offset: 0x00DF3608
 		private void OnLanguageChange(string _oldLang, string _newLang)
 		{
 			if (this.CurrentEntityId == -1)
@@ -393,7 +393,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF04 RID: 249604 RVA: 0x00EA456C File Offset: 0x00EA276C
+		// Token: 0x06031E7B RID: 204411 RVA: 0x00DF5440 File Offset: 0x00DF3640
 		private void InitTweenAnim(int componentType)
 		{
 			TArray<UActorComponent> tarray = base.GetItem(componentType).GetOwner().K2_GetComponentsByClass(ULGUIPlayTweenComponent.StaticClass());
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenAnimMap[componentType] = list;
 		}
 
-		// Token: 0x0603CF05 RID: 249605 RVA: 0x00EA45EC File Offset: 0x00EA27EC
+		// Token: 0x06031E7C RID: 204412 RVA: 0x00DF54C8 File Offset: 0x00DF36C8
 		private void PlayTweenAnim(int componentType)
 		{
 			List<ULGUIPlayTweenComponent> list;
@@ -418,7 +418,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF06 RID: 249606 RVA: 0x00EA4648 File Offset: 0x00EA2848
+		// Token: 0x06031E7D RID: 204413 RVA: 0x00DF5524 File Offset: 0x00DF3724
 		public override void OnTickBattleChildViewPanel(float delta)
 		{
 			if (this.CurrentEntityId == -1)
@@ -440,92 +440,92 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FBBF RID: 129983
+		// Token: 0x0401A67C RID: 108156
 		private const int SHOW_VIEW_ANIM_TIME = 667;
 
-		// Token: 0x0401FBC0 RID: 129984
+		// Token: 0x0401A67D RID: 108157
 		private const int CLOSE_VIEW_ANIM_TIME = 167;
 
-		// Token: 0x0401FBC1 RID: 129985
+		// Token: 0x0401A67E RID: 108158
 		private readonly Dictionary<int, SceneItemDurabilityStatePanel.SceneItemDurabilityStateInfo> CandidateMap = new Dictionary<int, SceneItemDurabilityStatePanel.SceneItemDurabilityStateInfo>();
 
-		// Token: 0x0401FBC2 RID: 129986
+		// Token: 0x0401A67F RID: 108159
 		private int CurrentEntityId = -1;
 
-		// Token: 0x0401FBC3 RID: 129987
+		// Token: 0x0401A680 RID: 108160
 		private readonly HpBufferStateMachine DurabilityStateMachine = new HpBufferStateMachine();
 
-		// Token: 0x0401FBC4 RID: 129988
+		// Token: 0x0401A681 RID: 108161
 		private float CurrentPercent = 1f;
 
-		// Token: 0x0401FBC5 RID: 129989
+		// Token: 0x0401A682 RID: 108162
 		private int MaxDurability;
 
-		// Token: 0x0401FBC6 RID: 129990
+		// Token: 0x0401A683 RID: 108163
 		private float DurabilityParentWidth;
 
-		// Token: 0x0401FBC7 RID: 129991
+		// Token: 0x0401A684 RID: 108164
 		private bool IsPlayingDurabilityBarAnim;
 
-		// Token: 0x0401FBC8 RID: 129992
+		// Token: 0x0401A685 RID: 108165
 		private float HitLargePercent;
 
-		// Token: 0x0401FBC9 RID: 129993
+		// Token: 0x0401A686 RID: 108166
 		[Nullable(2)]
 		private ULGUIPlayTweenComponent DurabilityLightTweenComponent;
 
-		// Token: 0x0401FBCA RID: 129994
+		// Token: 0x0401A687 RID: 108167
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401FBCB RID: 129995
+		// Token: 0x0401A688 RID: 108168
 		[Nullable(2)]
 		private VisibleAnimMachine VisibleMachine;
 
-		// Token: 0x0401FBCC RID: 129996
+		// Token: 0x0401A689 RID: 108169
 		private readonly Dictionary<int, List<ULGUIPlayTweenComponent>> TweenAnimMap = new Dictionary<int, List<ULGUIPlayTweenComponent>>();
 
-		// Token: 0x0200C095 RID: 49301
+		// Token: 0x0200AA9E RID: 43678
 		[NullableContext(0)]
 		private enum EChildComponentType
 		{
-			// Token: 0x0403A1DA RID: 238042
+			// Token: 0x04034BAC RID: 215980
 			NameText,
-			// Token: 0x0403A1DB RID: 238043
+			// Token: 0x04034BAD RID: 215981
 			BarSprite,
-			// Token: 0x0403A1DC RID: 238044
+			// Token: 0x04034BAE RID: 215982
 			BarBufferCanvas,
-			// Token: 0x0403A1DD RID: 238045
+			// Token: 0x04034BAF RID: 215983
 			BarBufferSprite,
-			// Token: 0x0403A1DE RID: 238046
+			// Token: 0x04034BB0 RID: 215984
 			Light,
-			// Token: 0x0403A1DF RID: 238047
+			// Token: 0x04034BB1 RID: 215985
 			AnimSmallHit,
-			// Token: 0x0403A1E0 RID: 238048
+			// Token: 0x04034BB2 RID: 215986
 			AnimBigHit
 		}
 
-		// Token: 0x0200C096 RID: 49302
+		// Token: 0x0200AA9F RID: 43679
 		[NullableContext(0)]
 		[RequiredMember]
 		private class SceneItemDurabilityStateInfo
 		{
-			// Token: 0x06050358 RID: 328536 RVA: 0x0158B67F File Offset: 0x0158987F
+			// Token: 0x0604689F RID: 288927 RVA: 0x01544C93 File Offset: 0x01542E93
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public SceneItemDurabilityStateInfo()
 			{
 			}
 
-			// Token: 0x0403A1E1 RID: 238049
+			// Token: 0x04034BB3 RID: 215987
 			[RequiredMember]
 			public int Durability;
 
-			// Token: 0x0403A1E2 RID: 238050
+			// Token: 0x04034BB4 RID: 215988
 			[RequiredMember]
 			public int MaxDurability;
 
-			// Token: 0x0403A1E3 RID: 238051
+			// Token: 0x04034BB5 RID: 215989
 			[Nullable(1)]
 			[RequiredMember]
 			public string TidName;

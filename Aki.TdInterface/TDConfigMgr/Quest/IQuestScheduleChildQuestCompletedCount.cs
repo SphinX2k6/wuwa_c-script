@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200109D RID: 4253
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011CB RID: 4555
 	public class IQuestScheduleChildQuestCompletedCount : IQuestScheduleType
 	{
-		// Token: 0x06005FF2 RID: 24562 RVA: 0x000E8348 File Offset: 0x000E6548
+		// Token: 0x060065EB RID: 26091 RVA: 0x000F5468 File Offset: 0x000F3668
 		private IQuestScheduleChildQuestCompletedCount_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005FF3 RID: 24563 RVA: 0x000E8380 File Offset: 0x000E6580
+		// Token: 0x060065EC RID: 26092 RVA: 0x000F54A0 File Offset: 0x000F36A0
 		public static IQuestScheduleChildQuestCompletedCount Create([Nullable(2)] IQuestScheduleChildQuestCompletedCount instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005FF4 RID: 24564 RVA: 0x000E8393 File Offset: 0x000E6593
+		// Token: 0x060065ED RID: 26093 RVA: 0x000F54B3 File Offset: 0x000F36B3
 		public static IQuestScheduleChildQuestCompletedCount CreateFromSetValue([Nullable(2)] IQuestScheduleChildQuestCompletedCount_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005FF5 RID: 24565 RVA: 0x000E83A6 File Offset: 0x000E65A6
+		// Token: 0x060065EE RID: 26094 RVA: 0x000F54C6 File Offset: 0x000F36C6
 		public new IQuestScheduleChildQuestCompletedCount_SetValue ToSetValue()
 		{
 			return new IQuestScheduleChildQuestCompletedCount_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F91 RID: 8081
-		// (get) Token: 0x06005FF6 RID: 24566 RVA: 0x000E83C5 File Offset: 0x000E65C5
-		// (set) Token: 0x06005FF7 RID: 24567 RVA: 0x000E83F0 File Offset: 0x000E65F0
+		// Token: 0x17002143 RID: 8515
+		// (get) Token: 0x060065EF RID: 26095 RVA: 0x000F54E5 File Offset: 0x000F36E5
+		// (set) Token: 0x060065F0 RID: 26096 RVA: 0x000F5510 File Offset: 0x000F3710
 		public override EQuestScheduleType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F92 RID: 8082
-		// (get) Token: 0x06005FF8 RID: 24568 RVA: 0x000E83FE File Offset: 0x000E65FE
-		// (set) Token: 0x06005FF9 RID: 24569 RVA: 0x000E8425 File Offset: 0x000E6625
+		// Token: 0x17002144 RID: 8516
+		// (get) Token: 0x060065F1 RID: 26097 RVA: 0x000F551E File Offset: 0x000F371E
+		// (set) Token: 0x060065F2 RID: 26098 RVA: 0x000F5545 File Offset: 0x000F3745
 		public virtual List<int> AssociatedChildQuestIds
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040039DA RID: 14810
+		// Token: 0x04003D27 RID: 15655
 		[Nullable(2)]
 		protected new IQuestScheduleChildQuestCompletedCount FbInstance;
 
-		// Token: 0x040039DB RID: 14811
+		// Token: 0x04003D28 RID: 15656
 		[Nullable(2)]
 		protected new IQuestScheduleChildQuestCompletedCount_SetValue PocoInterface;
 	}

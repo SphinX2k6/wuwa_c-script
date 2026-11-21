@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawState
 {
-	// Token: 0x02006F0F RID: 28431
+	// Token: 0x02006090 RID: 24720
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DgmClawReleaseState : DgmClawBaseMoveState
 	{
-		// Token: 0x06045333 RID: 283443 RVA: 0x0111E9AC File Offset: 0x0111CBAC
+		// Token: 0x0603B4E1 RID: 242913 RVA: 0x010C894C File Offset: 0x010C6B4C
 		[NullableContext(1)]
 		public DgmClawReleaseState(SceneItemDollGrabMachineComponent owner, AActor clawActor, AActor clawRootActor, FTransformDouble ownerActorTransform) : base(owner, clawActor, clawRootActor, ownerActorTransform)
 		{
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawSta
 			}
 		}
 
-		// Token: 0x06045334 RID: 283444 RVA: 0x0111EA2C File Offset: 0x0111CC2C
+		// Token: 0x0603B4E2 RID: 242914 RVA: 0x010C89CC File Offset: 0x010C6BCC
 		public override void Enter()
 		{
 			if (!this.IsFirstEnter)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawSta
 			}
 		}
 
-		// Token: 0x06045335 RID: 283445 RVA: 0x0111EBC0 File Offset: 0x0111CDC0
+		// Token: 0x0603B4E3 RID: 242915 RVA: 0x010C8B60 File Offset: 0x010C6D60
 		public override void Update(float delta)
 		{
 			if (this.Model.ClawReleaseStateCanMoveTimeLeave > 0f)
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawSta
 			this.ClawRootActor.D_K2_SetActorRelativeLocation(commonTempVector2.ToUeVector(false), false, ref WorldGlobal.SweepHitResult, false);
 		}
 
-		// Token: 0x06045336 RID: 283446 RVA: 0x0111EDAC File Offset: 0x0111CFAC
+		// Token: 0x0603B4E4 RID: 242916 RVA: 0x010C8D4C File Offset: 0x010C6F4C
 		public override void Exit()
 		{
 			if (this.SeqActor != null && this.SeqActor.SequencePlayer != null)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawSta
 			}
 		}
 
-		// Token: 0x06045337 RID: 283447 RVA: 0x0111EE1C File Offset: 0x0111D01C
+		// Token: 0x0603B4E5 RID: 242917 RVA: 0x010C8DBC File Offset: 0x010C6FBC
 		public override void Pause()
 		{
 			if (this.ClawMoveEventHandle > 0)
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawSta
 			}
 		}
 
-		// Token: 0x06045338 RID: 283448 RVA: 0x0111EE54 File Offset: 0x0111D054
+		// Token: 0x0603B4E6 RID: 242918 RVA: 0x010C8DF4 File Offset: 0x010C6FF4
 		private void OnSequenceFinished()
 		{
 			if (this.DelayExitTime > 0f && this.HadGrabbingActor)
@@ -137,37 +137,37 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawSta
 			this.End();
 		}
 
-		// Token: 0x04024115 RID: 147733
+		// Token: 0x0401F3CA RID: 127946
 		private AKuroLevelSequenceActor SeqActor;
 
-		// Token: 0x04024116 RID: 147734
+		// Token: 0x0401F3CB RID: 127947
 		private bool HadGrabbingActor;
 
-		// Token: 0x04024117 RID: 147735
+		// Token: 0x0401F3CC RID: 127948
 		private readonly float DelayExitTime;
 
-		// Token: 0x04024118 RID: 147736
+		// Token: 0x0401F3CD RID: 127949
 		private float MoveSpeed;
 
-		// Token: 0x04024119 RID: 147737
+		// Token: 0x0401F3CE RID: 127950
 		private float RightMaxDistance;
 
-		// Token: 0x0402411A RID: 147738
+		// Token: 0x0401F3CF RID: 127951
 		private float RightMinDistance;
 
-		// Token: 0x0402411B RID: 147739
+		// Token: 0x0401F3D0 RID: 127952
 		private float ForwardMaxDistance;
 
-		// Token: 0x0402411C RID: 147740
+		// Token: 0x0401F3D1 RID: 127953
 		private float ForwardMinDistance;
 
-		// Token: 0x0402411D RID: 147741
+		// Token: 0x0401F3D2 RID: 127954
 		private bool CanMoveClaw;
 
-		// Token: 0x0402411E RID: 147742
+		// Token: 0x0401F3D3 RID: 127955
 		private int ClawMoveEventHandle = -1;
 
-		// Token: 0x0402411F RID: 147743
+		// Token: 0x0401F3D4 RID: 127956
 		private DollGrabModel Model;
 	}
 }

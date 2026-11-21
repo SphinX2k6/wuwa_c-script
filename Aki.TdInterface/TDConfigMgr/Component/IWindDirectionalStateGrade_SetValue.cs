@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007E8 RID: 2024
+	// Token: 0x0200088B RID: 2187
 	public class IWindDirectionalStateGrade_SetValue
 	{
-		// Token: 0x04001D2B RID: 7467
-		[Nullable(1)]
+		// Token: 0x04001F37 RID: 7991
 		public string State;
 
-		// Token: 0x04001D2C RID: 7468
+		// Token: 0x04001F38 RID: 7992
 		public float Speed;
 
-		// Token: 0x04001D2D RID: 7469
+		// Token: 0x04001F39 RID: 7993
 		public float Strength;
 	}
 }

@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200156E RID: 5486
+// Token: 0x02000A26 RID: 2598
 [NullableContext(1)]
 [Nullable(0)]
 [RequiredMember]
 public class VersionPreheatShareData
 {
-	// Token: 0x06009CEA RID: 40170 RVA: 0x0021EF62 File Offset: 0x0021D162
+	// Token: 0x060070C8 RID: 28872 RVA: 0x00228D12 File Offset: 0x00226F12
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public VersionPreheatShareData()
 	{
 	}
 
-	// Token: 0x040044DE RID: 17630
+	// Token: 0x04004584 RID: 17796
 	[RequiredMember]
 	public string PhotoPath;
 
-	// Token: 0x040044DF RID: 17631
+	// Token: 0x04004585 RID: 17797
 	[RequiredMember]
 	public string NameTextId;
 
-	// Token: 0x040044E0 RID: 17632
+	// Token: 0x04004586 RID: 17798
 	[RequiredMember]
 	public string ThemeTextId;
 }

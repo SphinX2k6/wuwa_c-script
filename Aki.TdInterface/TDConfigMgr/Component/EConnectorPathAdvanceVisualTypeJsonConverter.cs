@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000913 RID: 2323
+	// Token: 0x020009C0 RID: 2496
 	public class EConnectorPathAdvanceVisualTypeJsonConverter : JsonConverter<EConnectorPathAdvanceVisualType>
 	{
-		// Token: 0x06003488 RID: 13448 RVA: 0x000899B8 File Offset: 0x00087BB8
+		// Token: 0x060037F4 RID: 14324 RVA: 0x00091538 File Offset: 0x0008F738
 		public override EConnectorPathAdvanceVisualType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EConnectorPathAdvanceVisualTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003489 RID: 13449 RVA: 0x000899DC File Offset: 0x00087BDC
+		// Token: 0x060037F5 RID: 14325 RVA: 0x0009155C File Offset: 0x0008F75C
 		public override void Write(Utf8JsonWriter writer, EConnectorPathAdvanceVisualType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

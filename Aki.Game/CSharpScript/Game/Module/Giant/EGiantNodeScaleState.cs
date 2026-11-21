@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x0200595E RID: 22878
+	// Token: 0x02004937 RID: 18743
 	public enum EGiantNodeScaleState
 	{
-		// Token: 0x0401E474 RID: 124020
+		// Token: 0x04018F11 RID: 102161
 		Lock,
-		// Token: 0x0401E475 RID: 124021
+		// Token: 0x04018F12 RID: 102162
 		Current,
-		// Token: 0x0401E476 RID: 124022
+		// Token: 0x04018F13 RID: 102163
 		Expired
 	}
 }

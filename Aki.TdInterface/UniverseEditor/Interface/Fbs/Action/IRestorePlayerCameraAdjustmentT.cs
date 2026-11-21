@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EBC RID: 28348
+	// Token: 0x02007640 RID: 30272
 	public class IRestorePlayerCameraAdjustmentT
 	{
-		// Token: 0x1700D304 RID: 54020
-		// (get) Token: 0x060321B0 RID: 205232 RVA: 0x006C6467 File Offset: 0x006C4667
-		// (set) Token: 0x060321B1 RID: 205233 RVA: 0x006C646F File Offset: 0x006C466F
+		// Token: 0x1700DE5B RID: 56923
+		// (get) Token: 0x060351F0 RID: 217584 RVA: 0x0072219B File Offset: 0x0072039B
+		// (set) Token: 0x060351F1 RID: 217585 RVA: 0x007221A3 File Offset: 0x007203A3
 		public IResetFocusConfigT ResetFocus { get; set; }
 
-		// Token: 0x1700D305 RID: 54021
-		// (get) Token: 0x060321B2 RID: 205234 RVA: 0x006C6478 File Offset: 0x006C4678
-		// (set) Token: 0x060321B3 RID: 205235 RVA: 0x006C6480 File Offset: 0x006C4680
+		// Token: 0x1700DE5C RID: 56924
+		// (get) Token: 0x060351F2 RID: 217586 RVA: 0x007221AC File Offset: 0x007203AC
+		// (set) Token: 0x060351F3 RID: 217587 RVA: 0x007221B4 File Offset: 0x007203B4
 		public string SubScreenKey { get; set; }
 
-		// Token: 0x060321B4 RID: 205236 RVA: 0x006C6489 File Offset: 0x006C4689
+		// Token: 0x060351F4 RID: 217588 RVA: 0x007221BD File Offset: 0x007203BD
 		public IRestorePlayerCameraAdjustmentT()
 		{
 			this.ResetFocus = null;

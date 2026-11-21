@@ -4,12 +4,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x02007087 RID: 28807
+	// Token: 0x02006208 RID: 25096
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LockComponent : EntityComponent
 	{
-		// Token: 0x0604629F RID: 287391 RVA: 0x01187748 File Offset: 0x01185948
+		// Token: 0x0603C4C2 RID: 246978 RVA: 0x01130C70 File Offset: 0x0112EE70
 		protected override bool OnStart()
 		{
 			this.LevelTagComponent = base.Entity.GetComponent<LevelTagComponent>();
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x060462A0 RID: 287392 RVA: 0x01187840 File Offset: 0x01185A40
+		// Token: 0x0603C4C3 RID: 246979 RVA: 0x01130D68 File Offset: 0x0112EF68
 		public void ChangeLockTag(int tagId)
 		{
 			int curLockTagId = this.CurLockTagId;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.LevelTagComponent.ChangeLocalLevelTag(this.CurLockTagId, curLockTagId);
 		}
 
-		// Token: 0x060462A1 RID: 287393 RVA: 0x01187870 File Offset: 0x01185A70
+		// Token: 0x0603C4C4 RID: 246980 RVA: 0x01130D98 File Offset: 0x0112EF98
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -60,42 +60,43 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			LockComponent lockComponent = (LockComponent)componentTemplate;
-			if (base.CanResetComponentProperty("LevelTagComponent"))
+			if (lockComponent.LevelTagComponent == null)
 			{
-				if (lockComponent.LevelTagComponent == null)
-				{
-					this.LevelTagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.LevelTagComponent), "LevelTagComponent"))
-				{
-					return false;
-				}
+				this.LevelTagComponent = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LevelTagComponent), "LevelTagComponent"))
 			{
-				if (lockComponent.CreatureDataComponent == null)
-				{
-					this.CreatureDataComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurLockTagId"))
+			if (lockComponent.CreatureDataComponent == null)
 			{
-				this.CurLockTagId = lockComponent.CurLockTagId;
+				this.CreatureDataComponent = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
+			{
+				return false;
+			}
+			this.CurLockTagId = lockComponent.CurLockTagId;
 			return true;
 		}
 
-		// Token: 0x04024C0D RID: 150541
+		// Token: 0x170071CE RID: 29134
+		// (get) Token: 0x0603C4C5 RID: 246981 RVA: 0x01130E1A File Offset: 0x0112F01A
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FEC8 RID: 130760
 		private LevelTagComponent LevelTagComponent;
 
-		// Token: 0x04024C0E RID: 150542
+		// Token: 0x0401FEC9 RID: 130761
 		private CreatureDataComponent CreatureDataComponent;
 
-		// Token: 0x04024C0F RID: 150543
+		// Token: 0x0401FECA RID: 130762
 		private int CurLockTagId;
 	}
 }

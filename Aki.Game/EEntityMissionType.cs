@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002581 RID: 9601
+// Token: 0x02001A6C RID: 6764
 public enum EEntityMissionType
 {
-	// Token: 0x0400924C RID: 37452
+	// Token: 0x040093A4 RID: 37796
 	Time,
-	// Token: 0x0400924D RID: 37453
+	// Token: 0x040093A5 RID: 37797
 	Target,
-	// Token: 0x0400924E RID: 37454
+	// Token: 0x040093A6 RID: 37798
 	Place,
-	// Token: 0x0400924F RID: 37455
+	// Token: 0x040093A7 RID: 37799
 	Pro
 }

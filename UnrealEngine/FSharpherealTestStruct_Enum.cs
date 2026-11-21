@@ -5,7 +5,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200273F RID: 10047
+	// Token: 0x020007F3 RID: 2035
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -13,15 +13,15 @@ namespace UnrealEngine
 	[UnrealStructLayout(368, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 368)]
 	public class FSharpherealTestStruct_Enum : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602538A RID: 152458 RVA: 0x00372EED File Offset: 0x003710ED
+		// Token: 0x0600AE6E RID: 44654 RVA: 0x00102C24 File Offset: 0x00100E24
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSharpherealTestStruct_Enum._ScriptStructPtr != 0) ? FSharpherealTestStruct_Enum._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/SharpherealTest.SharpherealTestStruct_Enum", ref FSharpherealTestStruct_Enum._ScriptStructPtr);
 		}
 
-		// Token: 0x17008FB2 RID: 36786
-		// (get) Token: 0x0602538B RID: 152459 RVA: 0x00372F11 File Offset: 0x00371111
-		// (set) Token: 0x0602538C RID: 152460 RVA: 0x00372F25 File Offset: 0x00371125
+		// Token: 0x1700209A RID: 8346
+		// (get) Token: 0x0600AE6F RID: 44655 RVA: 0x00102C48 File Offset: 0x00100E48
+		// (set) Token: 0x0600AE70 RID: 44656 RVA: 0x00102C5C File Offset: 0x00100E5C
 		[Nullable(0)]
 		public unsafe TEnumAsByte<FSharpherealTestCEnum> EnumAsByte
 		{
@@ -37,9 +37,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FB3 RID: 36787
-		// (get) Token: 0x0602538D RID: 152461 RVA: 0x00372F3A File Offset: 0x0037113A
-		// (set) Token: 0x0602538E RID: 152462 RVA: 0x00372F4A File Offset: 0x0037114A
+		// Token: 0x1700209B RID: 8347
+		// (get) Token: 0x0600AE71 RID: 44657 RVA: 0x00102C71 File Offset: 0x00100E71
+		// (set) Token: 0x0600AE72 RID: 44658 RVA: 0x00102C81 File Offset: 0x00100E81
 		public unsafe FSharpherealTestEnum Enum
 		{
 			get
@@ -52,9 +52,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FB4 RID: 36788
-		// (get) Token: 0x0602538F RID: 152463 RVA: 0x00372F5C File Offset: 0x0037115C
-		// (set) Token: 0x06025390 RID: 152464 RVA: 0x00372F9F File Offset: 0x0037119F
+		// Token: 0x1700209C RID: 8348
+		// (get) Token: 0x0600AE73 RID: 44659 RVA: 0x00102C94 File Offset: 0x00100E94
+		// (set) Token: 0x0600AE74 RID: 44660 RVA: 0x00102CD7 File Offset: 0x00100ED7
 		[Nullable(new byte[]
 		{
 			1,
@@ -88,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FB5 RID: 36789
-		// (get) Token: 0x06025391 RID: 152465 RVA: 0x00372FB0 File Offset: 0x003711B0
-		// (set) Token: 0x06025392 RID: 152466 RVA: 0x00372FF3 File Offset: 0x003711F3
+		// Token: 0x1700209D RID: 8349
+		// (get) Token: 0x0600AE75 RID: 44661 RVA: 0x00102CE8 File Offset: 0x00100EE8
+		// (set) Token: 0x0600AE76 RID: 44662 RVA: 0x00102D2B File Offset: 0x00100F2B
 		public TArray<FSharpherealTestEnum> EnumArray
 		{
 			get
@@ -109,9 +109,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FB6 RID: 36790
-		// (get) Token: 0x06025393 RID: 152467 RVA: 0x00373004 File Offset: 0x00371204
-		// (set) Token: 0x06025394 RID: 152468 RVA: 0x00373048 File Offset: 0x00371248
+		// Token: 0x1700209E RID: 8350
+		// (get) Token: 0x0600AE77 RID: 44663 RVA: 0x00102D3C File Offset: 0x00100F3C
+		// (set) Token: 0x0600AE78 RID: 44664 RVA: 0x00102D80 File Offset: 0x00100F80
 		[Nullable(new byte[]
 		{
 			1,
@@ -145,9 +145,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FB7 RID: 36791
-		// (get) Token: 0x06025395 RID: 152469 RVA: 0x00373058 File Offset: 0x00371258
-		// (set) Token: 0x06025396 RID: 152470 RVA: 0x0037309C File Offset: 0x0037129C
+		// Token: 0x1700209F RID: 8351
+		// (get) Token: 0x0600AE79 RID: 44665 RVA: 0x00102D90 File Offset: 0x00100F90
+		// (set) Token: 0x0600AE7A RID: 44666 RVA: 0x00102DD4 File Offset: 0x00100FD4
 		public TFixedArray<FSharpherealTestEnum> EnumFixedArray
 		{
 			get
@@ -166,9 +166,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FB8 RID: 36792
-		// (get) Token: 0x06025397 RID: 152471 RVA: 0x003730AC File Offset: 0x003712AC
-		// (set) Token: 0x06025398 RID: 152472 RVA: 0x003730EF File Offset: 0x003712EF
+		// Token: 0x170020A0 RID: 8352
+		// (get) Token: 0x0600AE7B RID: 44667 RVA: 0x00102DE4 File Offset: 0x00100FE4
+		// (set) Token: 0x0600AE7C RID: 44668 RVA: 0x00102E27 File Offset: 0x00101027
 		[Nullable(new byte[]
 		{
 			1,
@@ -202,9 +202,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FB9 RID: 36793
-		// (get) Token: 0x06025399 RID: 152473 RVA: 0x00373100 File Offset: 0x00371300
-		// (set) Token: 0x0602539A RID: 152474 RVA: 0x00373143 File Offset: 0x00371343
+		// Token: 0x170020A1 RID: 8353
+		// (get) Token: 0x0600AE7D RID: 44669 RVA: 0x00102E38 File Offset: 0x00101038
+		// (set) Token: 0x0600AE7E RID: 44670 RVA: 0x00102E7B File Offset: 0x0010107B
 		public TSet<FSharpherealTestEnum> EnumSet
 		{
 			get
@@ -223,9 +223,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FBA RID: 36794
-		// (get) Token: 0x0602539B RID: 152475 RVA: 0x00373154 File Offset: 0x00371354
-		// (set) Token: 0x0602539C RID: 152476 RVA: 0x00373197 File Offset: 0x00371397
+		// Token: 0x170020A2 RID: 8354
+		// (get) Token: 0x0600AE7F RID: 44671 RVA: 0x00102E8C File Offset: 0x0010108C
+		// (set) Token: 0x0600AE80 RID: 44672 RVA: 0x00102ECF File Offset: 0x001010CF
 		[Nullable(new byte[]
 		{
 			1,
@@ -259,9 +259,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FBB RID: 36795
-		// (get) Token: 0x0602539D RID: 152477 RVA: 0x003731A8 File Offset: 0x003713A8
-		// (set) Token: 0x0602539E RID: 152478 RVA: 0x003731EB File Offset: 0x003713EB
+		// Token: 0x170020A3 RID: 8355
+		// (get) Token: 0x0600AE81 RID: 44673 RVA: 0x00102EE0 File Offset: 0x001010E0
+		// (set) Token: 0x0600AE82 RID: 44674 RVA: 0x00102F23 File Offset: 0x00101123
 		public TMap<FSharpherealTestEnum, int> EnumMap
 		{
 			get
@@ -280,87 +280,56 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0602539F RID: 152479 RVA: 0x003731F9 File Offset: 0x003713F9
+		// Token: 0x0600AE83 RID: 44675 RVA: 0x00102F31 File Offset: 0x00101131
 		public FSharpherealTestStruct_Enum()
 		{
 		}
 
-		// Token: 0x060253A0 RID: 152480 RVA: 0x00373204 File Offset: 0x00371404
-		public FSharpherealTestStruct_Enum([Nullable(0)] TEnumAsByte<FSharpherealTestCEnum> EnumAsByte, FSharpherealTestEnum Enum, [Nullable(new byte[]
-		{
-			1,
-			0
-		})] TArray<TEnumAsByte<FSharpherealTestCEnum>> EnumAsByteArray, TArray<FSharpherealTestEnum> EnumArray, [Nullable(new byte[]
-		{
-			1,
-			0
-		})] TFixedArray<TEnumAsByte<FSharpherealTestCEnum>> EnumAsByteFixedArray, TFixedArray<FSharpherealTestEnum> EnumFixedArray, [Nullable(new byte[]
-		{
-			1,
-			0
-		})] TSet<TEnumAsByte<FSharpherealTestCEnum>> EnumAsByteSet, TSet<FSharpherealTestEnum> EnumSet, [Nullable(new byte[]
-		{
-			1,
-			0
-		})] TMap<TEnumAsByte<FSharpherealTestCEnum>, int> EnumAsByteMap, TMap<FSharpherealTestEnum, int> EnumMap)
-		{
-			this.EnumAsByte = EnumAsByte;
-			this.Enum = Enum;
-			this.EnumAsByteArray = EnumAsByteArray;
-			this.EnumArray = EnumArray;
-			this.EnumAsByteFixedArray = EnumAsByteFixedArray;
-			this.EnumFixedArray = EnumFixedArray;
-			this.EnumAsByteSet = EnumAsByteSet;
-			this.EnumSet = EnumSet;
-			this.EnumAsByteMap = EnumAsByteMap;
-			this.EnumMap = EnumMap;
-		}
-
-		// Token: 0x060253A1 RID: 152481 RVA: 0x00373264 File Offset: 0x00371464
+		// Token: 0x0600AE84 RID: 44676 RVA: 0x00102F39 File Offset: 0x00101139
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSharpherealTestStruct_Enum.StaticStruct();
 		}
 
-		// Token: 0x060253A2 RID: 152482 RVA: 0x00373270 File Offset: 0x00371470
+		// Token: 0x0600AE85 RID: 44677 RVA: 0x00102F45 File Offset: 0x00101145
 		[NullableContext(2)]
 		public FSharpherealTestStruct_Enum(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060253A3 RID: 152483 RVA: 0x0037327A File Offset: 0x0037147A
+		// Token: 0x0600AE86 RID: 44678 RVA: 0x00102F4F File Offset: 0x0010114F
 		public FSharpherealTestStruct_Enum(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060253A4 RID: 152484 RVA: 0x00373285 File Offset: 0x00371485
+		// Token: 0x0600AE87 RID: 44679 RVA: 0x00102F5A File Offset: 0x0010115A
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSharpherealTestStruct_Enum(Pointer, false, true);
 		}
 
-		// Token: 0x060253A5 RID: 152485 RVA: 0x0037328F File Offset: 0x0037148F
+		// Token: 0x0600AE88 RID: 44680 RVA: 0x00102F64 File Offset: 0x00101164
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSharpherealTestStruct_Enum(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401412B RID: 82219
+		// Token: 0x04004B8A RID: 19338
 		public const string __ObjectPath = "/Script/SharpherealTest.SharpherealTestStruct_Enum";
 
-		// Token: 0x0401412C RID: 82220
+		// Token: 0x04004B8B RID: 19339
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401412D RID: 82221
+		// Token: 0x04004B8C RID: 19340
 		internal static int __PropertyOffset_EnumAsByte;
 
-		// Token: 0x0401412E RID: 82222
+		// Token: 0x04004B8D RID: 19341
 		internal static int __PropertyOffset_Enum;
 
-		// Token: 0x0401412F RID: 82223
+		// Token: 0x04004B8E RID: 19342
 		internal static int __PropertyOffset_EnumAsByteArray;
 
-		// Token: 0x04014130 RID: 82224
+		// Token: 0x04004B8F RID: 19343
 		[Nullable(new byte[]
 		{
 			2,
@@ -368,17 +337,17 @@ namespace UnrealEngine
 		})]
 		private TArray<TEnumAsByte<FSharpherealTestCEnum>> _EnumAsByteArray;
 
-		// Token: 0x04014131 RID: 82225
+		// Token: 0x04004B90 RID: 19344
 		internal static int __PropertyOffset_EnumArray;
 
-		// Token: 0x04014132 RID: 82226
+		// Token: 0x04004B91 RID: 19345
 		[Nullable(2)]
 		private TArray<FSharpherealTestEnum> _EnumArray;
 
-		// Token: 0x04014133 RID: 82227
+		// Token: 0x04004B92 RID: 19346
 		internal static int __PropertyOffset_EnumAsByteFixedArray;
 
-		// Token: 0x04014134 RID: 82228
+		// Token: 0x04004B93 RID: 19347
 		[Nullable(new byte[]
 		{
 			2,
@@ -386,17 +355,17 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<TEnumAsByte<FSharpherealTestCEnum>> _EnumAsByteFixedArray;
 
-		// Token: 0x04014135 RID: 82229
+		// Token: 0x04004B94 RID: 19348
 		internal static int __PropertyOffset_EnumFixedArray;
 
-		// Token: 0x04014136 RID: 82230
+		// Token: 0x04004B95 RID: 19349
 		[Nullable(2)]
 		private TFixedArray<FSharpherealTestEnum> _EnumFixedArray;
 
-		// Token: 0x04014137 RID: 82231
+		// Token: 0x04004B96 RID: 19350
 		internal static int __PropertyOffset_EnumAsByteSet;
 
-		// Token: 0x04014138 RID: 82232
+		// Token: 0x04004B97 RID: 19351
 		[Nullable(new byte[]
 		{
 			2,
@@ -404,17 +373,17 @@ namespace UnrealEngine
 		})]
 		private TSet<TEnumAsByte<FSharpherealTestCEnum>> _EnumAsByteSet;
 
-		// Token: 0x04014139 RID: 82233
+		// Token: 0x04004B98 RID: 19352
 		internal static int __PropertyOffset_EnumSet;
 
-		// Token: 0x0401413A RID: 82234
+		// Token: 0x04004B99 RID: 19353
 		[Nullable(2)]
 		private TSet<FSharpherealTestEnum> _EnumSet;
 
-		// Token: 0x0401413B RID: 82235
+		// Token: 0x04004B9A RID: 19354
 		internal static int __PropertyOffset_EnumAsByteMap;
 
-		// Token: 0x0401413C RID: 82236
+		// Token: 0x04004B9B RID: 19355
 		[Nullable(new byte[]
 		{
 			2,
@@ -422,10 +391,10 @@ namespace UnrealEngine
 		})]
 		private TMap<TEnumAsByte<FSharpherealTestCEnum>, int> _EnumAsByteMap;
 
-		// Token: 0x0401413D RID: 82237
+		// Token: 0x04004B9C RID: 19356
 		internal static int __PropertyOffset_EnumMap;
 
-		// Token: 0x0401413E RID: 82238
+		// Token: 0x04004B9D RID: 19357
 		[Nullable(2)]
 		private TMap<FSharpherealTestEnum, int> _EnumMap;
 	}

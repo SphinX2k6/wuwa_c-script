@@ -22,31 +22,21 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02003073 RID: 12403
+// Token: 0x020025CA RID: 9674
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVariableResetter
 {
-	// Token: 0x0601A6BD RID: 108221 RVA: 0x0070BB54 File Offset: 0x00709D54
+	// Token: 0x06018078 RID: 98424 RVA: 0x0073234C File Offset: 0x0073054C
 	static CharacterInputComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterInputComponent.CreateStaticDefaultValue), new Action(CharacterInputComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17002465 RID: 9317
-	// (get) Token: 0x0601A6BE RID: 108222 RVA: 0x0070BC2B File Offset: 0x00709E2B
-	[Nullable(new byte[]
+	// Token: 0x1700259B RID: 9627
+	// (get) Token: 0x06018079 RID: 98425 RVA: 0x00732423 File Offset: 0x00730623
+	public override Type[] Dependencies
 	{
-		2,
-		1
-	})]
-	public new static Type[] Dependencies
-	{
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
 		get
 		{
 			return new Type[]
@@ -56,9 +46,9 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x17002466 RID: 9318
-	// (get) Token: 0x0601A6BF RID: 108223 RVA: 0x0070BC40 File Offset: 0x00709E40
-	// (set) Token: 0x0601A6C0 RID: 108224 RVA: 0x0070BC48 File Offset: 0x00709E48
+	// Token: 0x1700259C RID: 9628
+	// (get) Token: 0x0601807A RID: 98426 RVA: 0x00732438 File Offset: 0x00730638
+	// (set) Token: 0x0601807B RID: 98427 RVA: 0x00732440 File Offset: 0x00730640
 	public bool IsLocalInput
 	{
 		get
@@ -71,7 +61,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6C1 RID: 108225 RVA: 0x0070BC54 File Offset: 0x00709E54
+	// Token: 0x0601807C RID: 98428 RVA: 0x0073244C File Offset: 0x0073064C
 	private void OnCharUseSkill(int charId, int skillId, bool isAutonomousProxy)
 	{
 		bool flag = false;
@@ -92,14 +82,14 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6C2 RID: 108226 RVA: 0x0070BCA6 File Offset: 0x00709EA6
+	// Token: 0x0601807D RID: 98429 RVA: 0x0073249E File Offset: 0x0073069E
 	private void OnCharPossessed(Entity entity, [Nullable(2)] AController newController)
 	{
 		this.SetCharacterController(newController as BP_CharacterController_C);
 		InputController.Instance.AddInputHandler(this);
 	}
 
-	// Token: 0x0601A6C3 RID: 108227 RVA: 0x0070BCBF File Offset: 0x00709EBF
+	// Token: 0x0601807E RID: 98430 RVA: 0x007324B7 File Offset: 0x007306B7
 	private void OnCharUnpossessed(Entity entity, [Nullable(2)] AController oldController)
 	{
 		this.InputEvents.Clear();
@@ -109,19 +99,19 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		InputController.Instance.RemoveInputHandler(this);
 	}
 
-	// Token: 0x0601A6C4 RID: 108228 RVA: 0x0070BCF4 File Offset: 0x00709EF4
+	// Token: 0x0601807F RID: 98431 RVA: 0x007324EC File Offset: 0x007306EC
 	private void OnPositionStateChanged(ECharPositionState oldPositionState, ECharPositionState newPositionState)
 	{
 		this.UpdateCharacterInputDirectAndFacing(0f);
 	}
 
-	// Token: 0x0601A6C5 RID: 108229 RVA: 0x0070BD01 File Offset: 0x00709F01
+	// Token: 0x06018080 RID: 98432 RVA: 0x007324F9 File Offset: 0x007306F9
 	private void CharOnRoleDrownInjure(bool isTargetKilled)
 	{
 		this.ClearInputCaches("CharOnRoleDrownInjure");
 	}
 
-	// Token: 0x0601A6C6 RID: 108230 RVA: 0x0070BD10 File Offset: 0x00709F10
+	// Token: 0x06018081 RID: 98433 RVA: 0x00732508 File Offset: 0x00730708
 	private void OnCharacterMorphTypeChanged(Entity entity, EMorphType morphType, EMorphType oldMorphType)
 	{
 		if (this.InputLayer != null)
@@ -152,19 +142,19 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6C7 RID: 108231 RVA: 0x0070BD76 File Offset: 0x00709F76
+	// Token: 0x06018082 RID: 98434 RVA: 0x0073256E File Offset: 0x0073076E
 	public int GetPriority()
 	{
 		return 0;
 	}
 
-	// Token: 0x0601A6C8 RID: 108232 RVA: 0x0070BD79 File Offset: 0x00709F79
+	// Token: 0x06018083 RID: 98435 RVA: 0x00732571 File Offset: 0x00730771
 	public InputFilter GetInputFilter()
 	{
 		return this.InputGroup;
 	}
 
-	// Token: 0x0601A6C9 RID: 108233 RVA: 0x0070BD81 File Offset: 0x00709F81
+	// Token: 0x06018084 RID: 98436 RVA: 0x0073257C File Offset: 0x0073077C
 	public void HandlePressEvent(CSharpScript.Game.Input.EInputAction action, float time)
 	{
 		if (!BattleInputModel.Instance.GetInputEnable(action))
@@ -172,15 +162,32 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 			return;
 		}
 		this.InputEvents.Add(new InputEvent(action, EInputState.Press, time, 0f));
+		foreach (ICharacterInputObserver characterInputObserver in this.InputObservers)
+		{
+			try
+			{
+				characterInputObserver.OnInputPress(action, time);
+			}
+			catch (Exception ex)
+			{
+				Log instance = Log.Instance;
+				ELogModule module = ELogModule.Input;
+				ELogAuthor author = ELogAuthor.LXH;
+				string message = "角色输入按下观察器执行异常";
+				Exception error = ex;
+				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("error", ex.Message);
+				instance.ErrorWithStack(module, author, message, error, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+			}
+		}
 	}
 
-	// Token: 0x0601A6CA RID: 108234 RVA: 0x0070BDA9 File Offset: 0x00709FA9
+	// Token: 0x06018085 RID: 98437 RVA: 0x00732634 File Offset: 0x00730834
 	public void ForcePushPressEvent(CSharpScript.Game.Input.EInputAction action, float time)
 	{
 		this.InputEvents.Add(new InputEvent(action, EInputState.Press, time, 0f));
 	}
 
-	// Token: 0x0601A6CB RID: 108235 RVA: 0x0070BDC4 File Offset: 0x00709FC4
+	// Token: 0x06018086 RID: 98438 RVA: 0x00732650 File Offset: 0x00730850
 	public void HandleReleaseEvent(CSharpScript.Game.Input.EInputAction action, float time)
 	{
 		if (!BattleInputModel.Instance.GetInputEnable(action))
@@ -192,9 +199,26 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		{
 			CharacterInputComponent.HoldPressMap[action] = false;
 		}
+		foreach (ICharacterInputObserver characterInputObserver in this.InputObservers)
+		{
+			try
+			{
+				characterInputObserver.OnInputRelease(action, time);
+			}
+			catch (Exception ex)
+			{
+				Log instance = Log.Instance;
+				ELogModule module = ELogModule.Input;
+				ELogAuthor author = ELogAuthor.LXH;
+				string message = "角色输入抬起观察器执行异常";
+				Exception error = ex;
+				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("error", ex.Message);
+				instance.ErrorWithStack(module, author, message, error, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+			}
+		}
 	}
 
-	// Token: 0x0601A6CC RID: 108236 RVA: 0x0070BE10 File Offset: 0x0070A010
+	// Token: 0x06018087 RID: 98439 RVA: 0x00732720 File Offset: 0x00730920
 	public void HandleHoldEvent(CSharpScript.Game.Input.EInputAction action, float time)
 	{
 		if (!BattleInputModel.Instance.GetInputEnable(action))
@@ -204,7 +228,19 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.InputEvents.Add(new InputEvent(action, EInputState.Hold, time, 0f));
 	}
 
-	// Token: 0x0601A6CD RID: 108237 RVA: 0x0070BE38 File Offset: 0x0070A038
+	// Token: 0x06018088 RID: 98440 RVA: 0x00732748 File Offset: 0x00730948
+	public void AddInputObserver(ICharacterInputObserver observer)
+	{
+		this.InputObservers.Add(observer);
+	}
+
+	// Token: 0x06018089 RID: 98441 RVA: 0x00732757 File Offset: 0x00730957
+	public void RemoveInputObserver(ICharacterInputObserver observer)
+	{
+		this.InputObservers.Remove(observer);
+	}
+
+	// Token: 0x0601808A RID: 98442 RVA: 0x00732768 File Offset: 0x00730968
 	public void HandleInputAxis(EInputAxis axis, float value)
 	{
 		float num = value;
@@ -219,13 +255,13 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.AxisValues[axis] = num;
 	}
 
-	// Token: 0x0601A6CE RID: 108238 RVA: 0x0070BE7E File Offset: 0x0070A07E
+	// Token: 0x0601808B RID: 98443 RVA: 0x007327AE File Offset: 0x007309AE
 	public void ClearInputAxis(bool nextFrame)
 	{
 		this.ClearInputAxis(nextFrame, false);
 	}
 
-	// Token: 0x0601A6CF RID: 108239 RVA: 0x0070BE88 File Offset: 0x0070A088
+	// Token: 0x0601808C RID: 98444 RVA: 0x007327B8 File Offset: 0x007309B8
 	public void ClearInputAxis(bool nextFrame, bool onlyMove = false)
 	{
 		if (Info.Instance.AxisInputOptimize)
@@ -246,7 +282,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6D0 RID: 108240 RVA: 0x0070BEDD File Offset: 0x0070A0DD
+	// Token: 0x0601808D RID: 98445 RVA: 0x0073280D File Offset: 0x00730A0D
 	public void ClearSingleAxisInput(EInputAxis axis, bool nextFrame)
 	{
 		if (Info.Instance.AxisInputOptimize)
@@ -266,7 +302,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6D1 RID: 108241 RVA: 0x0070BF1B File Offset: 0x0070A11B
+	// Token: 0x0601808E RID: 98446 RVA: 0x0073284B File Offset: 0x00730A4B
 	private void OnShowMouseCursor(bool value)
 	{
 		if (this.LastShowMouseCursor != value)
@@ -279,7 +315,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6D2 RID: 108242 RVA: 0x0070BF3C File Offset: 0x0070A13C
+	// Token: 0x0601808F RID: 98447 RVA: 0x0073286C File Offset: 0x00730A6C
 	public void PreProcessInput(float deltaTime, bool gamePaused)
 	{
 		if (!Info.Instance.AxisInputOptimize)
@@ -305,7 +341,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6D3 RID: 108243 RVA: 0x0070BFF0 File Offset: 0x0070A1F0
+	// Token: 0x06018090 RID: 98448 RVA: 0x00732920 File Offset: 0x00730B20
 	public void PostProcessInput(float deltaTime, bool gamePaused)
 	{
 		this.UpdateMoveCache();
@@ -350,14 +386,14 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6D4 RID: 108244 RVA: 0x0070C164 File Offset: 0x0070A364
+	// Token: 0x06018091 RID: 98449 RVA: 0x00732A94 File Offset: 0x00730C94
 	public void TestActionInput(CSharpScript.Game.Input.EInputAction action, EInputState state, float time)
 	{
 		InputEvent item = new InputEvent(action, state, time, 0f);
 		this.TestInputEvent.Add(item);
 	}
 
-	// Token: 0x0601A6D5 RID: 108245 RVA: 0x0070C18C File Offset: 0x0070A38C
+	// Token: 0x06018092 RID: 98450 RVA: 0x00732ABC File Offset: 0x00730CBC
 	[return: Nullable(2)]
 	private SInputCommand GetCommand(float deltaTime, IInputBase evt)
 	{
@@ -384,7 +420,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return result;
 	}
 
-	// Token: 0x0601A6D6 RID: 108246 RVA: 0x0070C264 File Offset: 0x0070A464
+	// Token: 0x06018093 RID: 98451 RVA: 0x00732B94 File Offset: 0x00730D94
 	[NullableContext(2)]
 	private void CacheInputs(InputCommand bestInputCommand)
 	{
@@ -400,7 +436,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6D7 RID: 108247 RVA: 0x0070C308 File Offset: 0x0070A508
+	// Token: 0x06018094 RID: 98452 RVA: 0x00732C38 File Offset: 0x00730E38
 	public void SetMoveVectorCache(global::Vector input, global::Vector worldInput)
 	{
 		this.MoveDirectionCache.DeepCopy(input);
@@ -409,22 +445,22 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.WorldMoveDirectionCache.Normalize(9.99999993922529E-09);
 	}
 
-	// Token: 0x0601A6D8 RID: 108248 RVA: 0x0070C357 File Offset: 0x0070A557
+	// Token: 0x06018095 RID: 98453 RVA: 0x00732C87 File Offset: 0x00730E87
 	public void ResetMoveVectorCache()
 	{
 		this.MoveDirectionCache.Reset();
 		this.WorldMoveDirectionCache.Reset();
 	}
 
-	// Token: 0x0601A6D9 RID: 108249 RVA: 0x0070C36F File Offset: 0x0070A56F
+	// Token: 0x06018096 RID: 98454 RVA: 0x00732C9F File Offset: 0x00730E9F
 	[NullableContext(2)]
 	public void SetCharacterController(BP_CharacterController_C controller)
 	{
 		this.CharacterControllerInternal = controller;
 	}
 
-	// Token: 0x17002467 RID: 9319
-	// (get) Token: 0x0601A6DA RID: 108250 RVA: 0x0070C378 File Offset: 0x0070A578
+	// Token: 0x1700259D RID: 9629
+	// (get) Token: 0x06018097 RID: 98455 RVA: 0x00732CA8 File Offset: 0x00730EA8
 	public BP_CharacterController_C CharacterController
 	{
 		get
@@ -433,8 +469,8 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x17002468 RID: 9320
-	// (get) Token: 0x0601A6DB RID: 108251 RVA: 0x0070C380 File Offset: 0x0070A580
+	// Token: 0x1700259E RID: 9630
+	// (get) Token: 0x06018098 RID: 98456 RVA: 0x00732CB0 File Offset: 0x00730EB0
 	[Nullable(2)]
 	public TsBaseCharacter Character
 	{
@@ -445,19 +481,19 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6DC RID: 108252 RVA: 0x0070C388 File Offset: 0x0070A588
+	// Token: 0x06018099 RID: 98457 RVA: 0x00732CB8 File Offset: 0x00730EB8
 	public void SetCharacter(TsBaseCharacter character)
 	{
 		this.CharacterInternal = character;
 	}
 
-	// Token: 0x0601A6DD RID: 108253 RVA: 0x0070C391 File Offset: 0x0070A591
+	// Token: 0x0601809A RID: 98458 RVA: 0x00732CC1 File Offset: 0x00730EC1
 	public global::Vector GetMoveVectorCache()
 	{
 		return this.MoveVectorCache;
 	}
 
-	// Token: 0x0601A6DE RID: 108254 RVA: 0x0070C39C File Offset: 0x0070A59C
+	// Token: 0x0601809B RID: 98459 RVA: 0x00732CCC File Offset: 0x00730ECC
 	public void SetMoveInputOuterRingEnabled(bool enabled)
 	{
 		if (enabled)
@@ -476,19 +512,19 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		component.SetMoveInputGaitSwitchEnabled(this.MoveInputOuterRingEnableCount == 0);
 	}
 
-	// Token: 0x0601A6DF RID: 108255 RVA: 0x0070C3EE File Offset: 0x0070A5EE
+	// Token: 0x0601809C RID: 98460 RVA: 0x00732D1E File Offset: 0x00730F1E
 	public bool IsMoveInputOuterRingEnabled()
 	{
 		return this.MoveInputOuterRingEnableCount > 0;
 	}
 
-	// Token: 0x0601A6E0 RID: 108256 RVA: 0x0070C3F9 File Offset: 0x0070A5F9
+	// Token: 0x0601809D RID: 98461 RVA: 0x00732D29 File Offset: 0x00730F29
 	public global::Vector GetMoveDirectionCache()
 	{
 		return this.MoveDirectionCache;
 	}
 
-	// Token: 0x0601A6E1 RID: 108257 RVA: 0x0070C401 File Offset: 0x0070A601
+	// Token: 0x0601809E RID: 98462 RVA: 0x00732D31 File Offset: 0x00730F31
 	public global::Vector GetWorldMoveDirectionCache()
 	{
 		if (!this.ActorComp.IsAutonomousProxy)
@@ -499,7 +535,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return this.WorldMoveDirectionCache;
 	}
 
-	// Token: 0x0601A6E2 RID: 108258 RVA: 0x0070C430 File Offset: 0x0070A630
+	// Token: 0x0601809F RID: 98463 RVA: 0x00732D60 File Offset: 0x00730F60
 	public bool TryGetManualWorldMoveDirection(global::Vector @out)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -539,7 +575,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return false;
 	}
 
-	// Token: 0x0601A6E3 RID: 108259 RVA: 0x0070C52C File Offset: 0x0070A72C
+	// Token: 0x060180A0 RID: 98464 RVA: 0x00732E5C File Offset: 0x0073105C
 	private void ConvertMoveDirectionToWorld(global::Vector direction, global::Vector @out)
 	{
 		if (this.IsActorRelativeMove())
@@ -584,7 +620,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.CameraInputQuat.RotateVector(direction, @out);
 	}
 
-	// Token: 0x0601A6E4 RID: 108260 RVA: 0x0070C670 File Offset: 0x0070A870
+	// Token: 0x060180A1 RID: 98465 RVA: 0x00732FA0 File Offset: 0x007311A0
 	public void GetMoveVector(global::Vector outVector)
 	{
 		if (this.AutomaticFlightMode)
@@ -597,14 +633,14 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		outVector.Z = 0.0;
 	}
 
-	// Token: 0x0601A6E5 RID: 108261 RVA: 0x0070C6CF File Offset: 0x0070A8CF
+	// Token: 0x060180A2 RID: 98466 RVA: 0x00732FFF File Offset: 0x007311FF
 	public void GetMoveDirection(global::Vector outVector)
 	{
 		this.GetMoveVector(outVector);
 		outVector.Normalize(9.99999993922529E-09);
 	}
 
-	// Token: 0x0601A6E6 RID: 108262 RVA: 0x0070C6E8 File Offset: 0x0070A8E8
+	// Token: 0x060180A3 RID: 98467 RVA: 0x00733018 File Offset: 0x00731218
 	[NullableContext(0)]
 	public ValueTuple<float, float> GetCameraInput()
 	{
@@ -622,19 +658,19 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return new ValueTuple<float, float>(num, num2);
 	}
 
-	// Token: 0x0601A6E7 RID: 108263 RVA: 0x0070C770 File Offset: 0x0070A970
+	// Token: 0x060180A4 RID: 98468 RVA: 0x007330A0 File Offset: 0x007312A0
 	public bool HasCameraInput(float tolerance = 0.0001f)
 	{
 		return !MathUtils.Instance.IsNearlyZero((double)this.QueryInputAxis(EInputAxis.Turn).GetValueOrDefault(), new double?((double)tolerance)) || !MathUtils.Instance.IsNearlyZero((double)this.QueryInputAxis(EInputAxis.LookUp).GetValueOrDefault(), new double?((double)tolerance));
 	}
 
-	// Token: 0x0601A6E8 RID: 108264 RVA: 0x0070C7D0 File Offset: 0x0070A9D0
+	// Token: 0x060180A5 RID: 98469 RVA: 0x00733100 File Offset: 0x00731300
 	public float GetZoomInput()
 	{
 		return this.QueryInputAxis(EInputAxis.Zoom).GetValueOrDefault();
 	}
 
-	// Token: 0x0601A6E9 RID: 108265 RVA: 0x0070C7F0 File Offset: 0x0070A9F0
+	// Token: 0x060180A6 RID: 98470 RVA: 0x00733120 File Offset: 0x00731320
 	public float? QueryInputAxis(EInputAxis axis)
 	{
 		if (this.AxisValues.ContainsKey(axis))
@@ -644,7 +680,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return null;
 	}
 
-	// Token: 0x0601A6EA RID: 108266 RVA: 0x0070C826 File Offset: 0x0070AA26
+	// Token: 0x060180A7 RID: 98471 RVA: 0x00733156 File Offset: 0x00731356
 	public void ClearMoveVectorCache()
 	{
 		this.MoveVectorCache.Reset();
@@ -653,7 +689,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.LastMovementInputTime = -1.0;
 	}
 
-	// Token: 0x0601A6EB RID: 108267 RVA: 0x0070C858 File Offset: 0x0070AA58
+	// Token: 0x060180A8 RID: 98472 RVA: 0x00733188 File Offset: 0x00731388
 	public void AnimBreakPoint()
 	{
 		if (this.QueryInputCaches())
@@ -662,7 +698,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6EC RID: 108268 RVA: 0x0070C870 File Offset: 0x0070AA70
+	// Token: 0x060180A9 RID: 98473 RVA: 0x007331A0 File Offset: 0x007313A0
 	public void ClearInputCache(int action, EInputState state)
 	{
 		if (action == 0)
@@ -680,7 +716,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6ED RID: 108269 RVA: 0x0070C8E4 File Offset: 0x0070AAE4
+	// Token: 0x060180AA RID: 98474 RVA: 0x00733214 File Offset: 0x00731414
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -696,14 +732,14 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return true;
 	}
 
-	// Token: 0x0601A6EE RID: 108270 RVA: 0x0070C982 File Offset: 0x0070AB82
+	// Token: 0x060180AB RID: 98475 RVA: 0x007332B2 File Offset: 0x007314B2
 	protected override bool OnClear()
 	{
 		this.MoveInputOuterRingEnableCount = 0;
 		return true;
 	}
 
-	// Token: 0x0601A6EF RID: 108271 RVA: 0x0070C98C File Offset: 0x0070AB8C
+	// Token: 0x060180AC RID: 98476 RVA: 0x007332BC File Offset: 0x007314BC
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -748,7 +784,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return true;
 	}
 
-	// Token: 0x0601A6F0 RID: 108272 RVA: 0x0070CC00 File Offset: 0x0070AE00
+	// Token: 0x060180AD RID: 98477 RVA: 0x00733530 File Offset: 0x00731730
 	protected override bool OnEnd()
 	{
 		this.RemoveCharacterInputLayer();
@@ -775,6 +811,11 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.InputEvents.Clear();
 		this.InputCaches.Clear();
 		this.AxisValues.Clear();
+		foreach (ICharacterInputObserver characterInputObserver in this.InputObservers)
+		{
+			characterInputObserver.OnObserverCleared();
+		}
+		this.InputObservers.Clear();
 		this.RemoveBlockActionEvents();
 		this.RemoveMoveAxisToButton();
 		this.InputAngleRanges = null;
@@ -782,7 +823,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return true;
 	}
 
-	// Token: 0x0601A6F1 RID: 108273 RVA: 0x0070CE14 File Offset: 0x0070B014
+	// Token: 0x060180AE RID: 98478 RVA: 0x00733790 File Offset: 0x00731990
 	protected override void OnTick(float deltaTime)
 	{
 		this.AccumulateCacheInputs(deltaTime);
@@ -791,7 +832,6 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		{
 			this.UpdateCharacterInputDirectAndFacingAutomaticFlightMode(deltaTime);
 			this.StandInputDelayCountDown = 0f;
-			this.CacheStandInputDirect.Reset();
 			return;
 		}
 		if (this.IsOverShoulderMode)
@@ -806,7 +846,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6F2 RID: 108274 RVA: 0x0070CE7C File Offset: 0x0070B07C
+	// Token: 0x060180AF RID: 98479 RVA: 0x007337EC File Offset: 0x007319EC
 	private void AccumulateCacheInputs(float deltaTime)
 	{
 		if (this.InputCaches.Count == 0)
@@ -823,7 +863,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6F3 RID: 108275 RVA: 0x0070CEF0 File Offset: 0x0070B0F0
+	// Token: 0x060180B0 RID: 98480 RVA: 0x00733860 File Offset: 0x00731A60
 	private void AddBlockEvents()
 	{
 		this.TagEventJump = this.AddBlockActionEvent(GameplayTagDefine.EGameplayTagId["战斗状态.输入限制.禁止跳跃"], CSharpScript.Game.Input.EInputAction.跳跃);
@@ -846,7 +886,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		});
 	}
 
-	// Token: 0x0601A6F4 RID: 108276 RVA: 0x0070D0D8 File Offset: 0x0070B2D8
+	// Token: 0x060180B1 RID: 98481 RVA: 0x00733A48 File Offset: 0x00731C48
 	private ITagTask AddBlockActionEvent(int tagNumber, CSharpScript.Game.Input.EInputAction inputAction)
 	{
 		return this.TagComp.ListenForTagAddOrRemove(new int?(tagNumber), delegate(int tagId, bool tagExists)
@@ -860,7 +900,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}, null);
 	}
 
-	// Token: 0x0601A6F5 RID: 108277 RVA: 0x0070D118 File Offset: 0x0070B318
+	// Token: 0x060180B2 RID: 98482 RVA: 0x00733A88 File Offset: 0x00731C88
 	private ITagTask AddBlockAxisEvent(int tagNumber, EInputAxis[] axes)
 	{
 		return this.TagComp.ListenForTagAddOrRemove(new int?(tagNumber), delegate(int tagId, bool tagExists)
@@ -879,7 +919,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}, null);
 	}
 
-	// Token: 0x0601A6F6 RID: 108278 RVA: 0x0070D158 File Offset: 0x0070B358
+	// Token: 0x060180B3 RID: 98483 RVA: 0x00733AC8 File Offset: 0x00731CC8
 	private void RemoveBlockActionEvents()
 	{
 		this.TagEventJump.EndTask();
@@ -898,7 +938,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.TagEventMove.EndTask();
 	}
 
-	// Token: 0x0601A6F7 RID: 108279 RVA: 0x0070D200 File Offset: 0x0070B400
+	// Token: 0x060180B4 RID: 98484 RVA: 0x00733B70 File Offset: 0x00731D70
 	private bool LockInputRotator()
 	{
 		CharacterMoveComponent moveComp = this.MoveComp;
@@ -921,14 +961,14 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return component != null && component.LockRotator;
 	}
 
-	// Token: 0x0601A6F8 RID: 108280 RVA: 0x0070D284 File Offset: 0x0070B484
+	// Token: 0x060180B5 RID: 98485 RVA: 0x00733BF4 File Offset: 0x00731DF4
 	[NullableContext(2)]
 	public void SetInputAngleRanges(InputAngleRange[] ranges)
 	{
 		this.InputAngleRanges = ((ranges != null && ranges.Length != 0) ? ranges : null);
 	}
 
-	// Token: 0x0601A6F9 RID: 108281 RVA: 0x0070D297 File Offset: 0x0070B497
+	// Token: 0x060180B6 RID: 98486 RVA: 0x00733C07 File Offset: 0x00731E07
 	public void ApplyInputAngleRanges(IVector direction, global::Vector @out)
 	{
 		@out.DeepCopy(direction);
@@ -939,7 +979,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.ClampInputByAngleRanges(direction, @out);
 	}
 
-	// Token: 0x0601A6FA RID: 108282 RVA: 0x0070D2CA File Offset: 0x0070B4CA
+	// Token: 0x060180B7 RID: 98487 RVA: 0x00733C3A File Offset: 0x00731E3A
 	private static bool IsAngleInRange(float angle, float start, float end)
 	{
 		if (start <= end)
@@ -949,14 +989,14 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return angle >= start || angle <= end;
 	}
 
-	// Token: 0x0601A6FB RID: 108283 RVA: 0x0070D2EC File Offset: 0x0070B4EC
+	// Token: 0x060180B8 RID: 98488 RVA: 0x00733C5C File Offset: 0x00731E5C
 	private static float CircularDist(float a, float b)
 	{
 		float num = Math.Abs(a - b);
 		return Math.Min(num, 360f - num);
 	}
 
-	// Token: 0x0601A6FC RID: 108284 RVA: 0x0070D310 File Offset: 0x0070B510
+	// Token: 0x060180B9 RID: 98489 RVA: 0x00733C80 File Offset: 0x00731E80
 	private void ClampInputByAngleRanges(IVector direction, global::Vector @out)
 	{
 		global::Vector actorForwardProxy = this.ActorComp.ActorForwardProxy;
@@ -987,7 +1027,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6FD RID: 108285 RVA: 0x0070D405 File Offset: 0x0070B605
+	// Token: 0x060180BA RID: 98490 RVA: 0x00733D75 File Offset: 0x00731F75
 	private void CommitMoveInput(global::Vector direction, bool clearGravityDirect)
 	{
 		if (this.IsLocalInputInternal)
@@ -998,10 +1038,10 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		{
 			this.ApplyInputAngleRanges(direction, this.ProcessedMoveInput);
 		}
-		this.ActorComp.SetInputDirect(this.ProcessedMoveInput, clearGravityDirect);
+		this.ActorComp.SetInputDirect(this.ProcessedMoveInput, clearGravityDirect, EInputDirectSpace.World);
 	}
 
-	// Token: 0x0601A6FE RID: 108286 RVA: 0x0070D444 File Offset: 0x0070B644
+	// Token: 0x060180BB RID: 98491 RVA: 0x00733DB4 File Offset: 0x00731FB4
 	private void UpdateCharacterInputDirectAndFacing(float delta)
 	{
 		global::Vector vector = global::Vector.ZeroVectorProxy;
@@ -1067,54 +1107,93 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 				}
 				else
 				{
-					vector = this.GetWorldMoveDirectionCache();
-					this.UpdateAutoMovingCheck(vector, delta);
-					bool autoMovingState = this.AutoMovingConfig.GetAutoMovingState();
-					if (vector.IsNearlyZero(9.999999747378752E-05) && (this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["战斗状态.行为改变.保持输入"]) || autoMovingState))
+					CharacterUnifiedStateComponent unifiedComp3 = this.UnifiedComp;
+					if (unifiedComp3 != null && unifiedComp3.MoveState == ECharMoveState.FlowerFlying)
 					{
-						vector = this.ActorComp.InputDirectProxy;
-						if (vector.IsNearlyZero(9.999999747378752E-05))
+						this.IsLocalInputInternal = true;
+						this.TempVector.DeepCopy(this.GetMoveVectorCache());
+						if (GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.FlyControlMode, 0, true) != 0)
 						{
-							vector = this.ActorComp.ActorForwardProxy;
+							this.TempVector.X = -this.TempVector.X;
 						}
-						if (autoMovingState)
+						double num2 = this.TempVector.SizeSquared();
+						if (num2 > 1.0)
 						{
-							this.CalculateMoveDirection(this.TempVector2);
-							if (!this.TempVector2.IsNearlyZero(9.999999747378752E-05))
-							{
-								this.TempVector2.Normalize(9.99999993922529E-09);
-								vector.DeepCopy(this.TempVector2);
-							}
+							this.TempVector.DivisionEqual(Math.Sqrt(num2));
 						}
+						vector = this.TempVector;
 					}
-					if (!vector.IsNearlyZero(9.999999747378752E-05))
+					else
 					{
-						if (!FormationDataController.Instance.GlobalIsInFight)
+						vector = this.GetWorldMoveDirectionCache();
+						this.UpdateAutoMovingCheck(vector, delta);
+						bool autoMovingState = this.AutoMovingConfig.GetAutoMovingState();
+						if (vector.IsNearlyZero(9.999999747378752E-05) && (this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["战斗状态.行为改变.保持输入"]) || autoMovingState))
 						{
+							vector = this.ActorComp.InputDirectProxy;
+							if (vector.IsNearlyZero(9.999999747378752E-05))
+							{
+								vector = this.ActorComp.ActorForwardProxy;
+							}
 							if (autoMovingState)
 							{
-								goto IL_2DE;
-							}
-							BattleUiFormationData formationData = BattleUiModel.Instance.FormationData;
-							if (formationData != null && formationData.AutoSprintSettingEnable)
-							{
-								goto IL_2DE;
+								this.CalculateMoveDirection(this.TempVector2);
+								if (!this.TempVector2.IsNearlyZero(9.999999747378752E-05))
+								{
+									this.TempVector2.Normalize(9.99999993922529E-09);
+									vector.DeepCopy(this.TempVector2);
+								}
 							}
 						}
-						if (!this.CheckAutoSprintTag())
+						if (!vector.IsNearlyZero(9.999999747378752E-05))
 						{
-							goto IL_2E8;
+							if (!FormationDataController.Instance.GlobalIsInFight)
+							{
+								if (autoMovingState)
+								{
+									goto IL_36E;
+								}
+								BattleUiFormationData formationData = BattleUiModel.Instance.FormationData;
+								if (formationData != null && formationData.AutoSprintSettingEnable)
+								{
+									goto IL_36E;
+								}
+							}
+							if (!this.CheckAutoSprintTag())
+							{
+								goto IL_378;
+							}
+							IL_36E:
+							this.UpdateAutoSprint(autoMovingState, delta);
+							goto IL_383;
 						}
-						IL_2DE:
-						this.UpdateAutoSprint(autoMovingState, delta);
-						goto IL_2F3;
+						IL_378:
+						this.AutoSprintTime = 0f;
 					}
-					IL_2E8:
-					this.AutoSprintTime = 0f;
 				}
 			}
-			IL_2F3:
-			this.CacheStandInputDirect.Reset();
+			IL_383:
+			CharacterUnifiedStateComponent unifiedComp4 = this.UnifiedComp;
+			if (unifiedComp4 != null && unifiedComp4.MoveState == ECharMoveState.Stand)
+			{
+				CharacterUnifiedStateComponent unifiedComp5 = this.UnifiedComp;
+				if (unifiedComp5 != null && unifiedComp5.IsWalkMode)
+				{
+					if (vector.IsNearlyZero(9.999999747378752E-05))
+					{
+						this.StandInputDelayCountDown = 150f;
+					}
+					else if (this.StandInputDelayCountDown > 0f)
+					{
+						this.StandInputDelayCountDown -= delta;
+						if (!vector.IsNearlyZero(9.999999747378752E-05) && global::Vector.DotProduct(this.ActorComp.ActorForwardProxy, vector) < 0.5)
+						{
+							this.ActorComp.SetInputFacing(vector, false);
+							return;
+						}
+					}
+				}
+			}
 			this.CommitMoveInput(vector, !this.IsLocalInputInternal);
 			if (this.ActorComp.UseControllerRotation)
 			{
@@ -1141,7 +1220,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 				this.SetInputFacingFromInputDirect(true);
 				return;
 			default:
-				if (positionState != ECharPositionState.Floating)
+				if (positionState != ECharPositionState.Floating && positionState != ECharPositionState.FlowerAllTerrain)
 				{
 					return;
 				}
@@ -1152,21 +1231,21 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A6FF RID: 108287 RVA: 0x0070D7ED File Offset: 0x0070B9ED
+	// Token: 0x060180BC RID: 98492 RVA: 0x00734292 File Offset: 0x00732492
 	public bool CheckAutoSprintTag()
 	{
 		BaseTagComponent tagComp = this.TagComp;
 		return tagComp != null && tagComp.HasTag(GameplayTagDefine.EGameplayTagId["功能.功能制作.自动进入疾跑"]);
 	}
 
-	// Token: 0x0601A700 RID: 108288 RVA: 0x0070D80F File Offset: 0x0070BA0F
+	// Token: 0x060180BD RID: 98493 RVA: 0x007342B4 File Offset: 0x007324B4
 	public bool CheckAutoSprintTagImmediately()
 	{
 		BaseTagComponent tagComp = this.TagComp;
 		return tagComp != null && tagComp.HasTag(GameplayTagDefine.EGameplayTagId["功能.功能制作.自动进入疾跑.瞬间起步"]);
 	}
 
-	// Token: 0x0601A701 RID: 108289 RVA: 0x0070D834 File Offset: 0x0070BA34
+	// Token: 0x060180BE RID: 98494 RVA: 0x007342D8 File Offset: 0x007324D8
 	private void UpdateCharacterInputDirectAndFacingAutomaticFlightMode(float deltaTime)
 	{
 		BaseTagComponent tagComp = this.TagComp;
@@ -1261,7 +1340,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A702 RID: 108290 RVA: 0x0070DC74 File Offset: 0x0070BE74
+	// Token: 0x060180BF RID: 98495 RVA: 0x00734718 File Offset: 0x00732918
 	private void UpdateCharacterInputDirectInCameraDrivenAutoFlightMode(float deltaTime)
 	{
 		this.IsInCameraDrivenAutoFlight = false;
@@ -1300,10 +1379,10 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 		this.IsInCameraDrivenAutoFlight = true;
 		float num2 = MathUtils.Instance.RangeClamp(Math.Abs(num), this.CameraDrivenAutoFlightDataAsset.AutoFlightInputAngleMin, this.CameraDrivenAutoFlightDataAsset.AutoFlightInputAngleMax, this.CameraDrivenAutoFlightDataAsset.AutoFlightInputMin, this.CameraDrivenAutoFlightDataAsset.AutoFlightInputMax);
-		this.ActorComp.SetInputDirectByNumber(this.ActorComp.InputDirectProxy.X, (double)(num2 * (float)((num > 0f) ? -1 : 1)), 0.0);
+		this.ActorComp.SetInputDirectByNumber(this.ActorComp.InputDirectProxy.X, (double)(num2 * (float)((num > 0f) ? -1 : 1)), 0.0, EInputDirectSpace.World);
 	}
 
-	// Token: 0x0601A703 RID: 108291 RVA: 0x0070DE1C File Offset: 0x0070C01C
+	// Token: 0x060180C0 RID: 98496 RVA: 0x007348C4 File Offset: 0x00732AC4
 	private void SetInputFacingOnGround()
 	{
 		if (this.StateComp.DirectionState != ECharDirectionState.LockDirection)
@@ -1331,7 +1410,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.ActorComp.SetInputFacing(this.ActorComp.ActorForwardProxy, true);
 	}
 
-	// Token: 0x0601A704 RID: 108292 RVA: 0x0070DF54 File Offset: 0x0070C154
+	// Token: 0x060180C1 RID: 98497 RVA: 0x007349FC File Offset: 0x00732BFC
 	private void SetInputFacingFromInputDirect(bool clearWhenNoInput = true)
 	{
 		if (this.IsActorRelativeMove())
@@ -1360,7 +1439,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A705 RID: 108293 RVA: 0x0070E01C File Offset: 0x0070C21C
+	// Token: 0x060180C2 RID: 98498 RVA: 0x00734AC4 File Offset: 0x00732CC4
 	private bool ShouldTriggerHoldEvent(CSharpScript.Game.Input.EInputAction action, double holdTime, float deltaTime)
 	{
 		ValueTuple<bool, float> holdConfig = this.GetHoldConfig(action);
@@ -1388,7 +1467,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return holdTime - (double)num2 > (double)item2;
 	}
 
-	// Token: 0x0601A706 RID: 108294 RVA: 0x0070E094 File Offset: 0x0070C294
+	// Token: 0x060180C3 RID: 98499 RVA: 0x00734B3C File Offset: 0x00732D3C
 	private void UpdateMoveCache()
 	{
 		this.GetMoveVector(this.MoveVectorCache);
@@ -1411,7 +1490,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A707 RID: 108295 RVA: 0x0070E188 File Offset: 0x0070C388
+	// Token: 0x060180C4 RID: 98500 RVA: 0x00734C30 File Offset: 0x00732E30
 	private void RefreshMoveAxisToButtonActiveCondition()
 	{
 		SInputActive moveAxisToButtonConfig = InputLayerQueryHelper.GetMoveAxisToButtonConfig(base.Entity.Id);
@@ -1438,7 +1517,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.MoveAxisToButtonActiveCondition.SetActiveCondition(moveAxisToButtonConfig);
 	}
 
-	// Token: 0x0601A708 RID: 108296 RVA: 0x0070E221 File Offset: 0x0070C421
+	// Token: 0x060180C5 RID: 98501 RVA: 0x00734CC9 File Offset: 0x00732EC9
 	private MoveInputSimButtonLogic GetMoveAxisToButtonLogic()
 	{
 		if (this.MoveAxisToButtonLogic == null)
@@ -1449,7 +1528,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return this.MoveAxisToButtonLogic;
 	}
 
-	// Token: 0x0601A709 RID: 108297 RVA: 0x0070E24D File Offset: 0x0070C44D
+	// Token: 0x060180C6 RID: 98502 RVA: 0x00734CF5 File Offset: 0x00732EF5
 	private void RemoveMoveAxisToButton()
 	{
 		if (this.MoveAxisToButtonActiveCondition != null)
@@ -1462,13 +1541,13 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.MoveAxisToButtonLogic = null;
 	}
 
-	// Token: 0x0601A70A RID: 108298 RVA: 0x0070E27E File Offset: 0x0070C47E
+	// Token: 0x060180C7 RID: 98503 RVA: 0x00734D26 File Offset: 0x00732F26
 	public void OnEnableMoveAxisToButton(bool enable)
 	{
 		this.IsMoveAxisToButtonEnabled = enable;
 	}
 
-	// Token: 0x0601A70B RID: 108299 RVA: 0x0070E287 File Offset: 0x0070C487
+	// Token: 0x060180C8 RID: 98504 RVA: 0x00734D2F File Offset: 0x00732F2F
 	private void UpdateMoveAxisToButton()
 	{
 		this.RefreshMoveAxisToButtonActiveCondition();
@@ -1478,7 +1557,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A70C RID: 108300 RVA: 0x0070E2A8 File Offset: 0x0070C4A8
+	// Token: 0x060180C9 RID: 98505 RVA: 0x00734D50 File Offset: 0x00732F50
 	protected void GetNewQuatInLockMode(EntityHandle targetEntity, FName? targetSocketName, Quat inOutQuat)
 	{
 		CameraUtility.GetSocketLocation(null, targetSocketName, this.TempVector, targetEntity);
@@ -1502,7 +1581,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		inOutQuat.DeepCopy(this.TempQuat2);
 	}
 
-	// Token: 0x0601A70D RID: 108301 RVA: 0x0070E3BC File Offset: 0x0070C5BC
+	// Token: 0x060180CA RID: 98506 RVA: 0x00734E64 File Offset: 0x00733064
 	private bool IsSmallInput(global::Vector moveVector)
 	{
 		if (Info.Instance.IsInKeyBoard())
@@ -1512,7 +1591,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return moveVector.SizeSquared() <= MathUtils.Instance.Square((double)RoleGaitStatic.GetWalkOrRunRate());
 	}
 
-	// Token: 0x0601A70E RID: 108302 RVA: 0x0070E3F8 File Offset: 0x0070C5F8
+	// Token: 0x060180CB RID: 98507 RVA: 0x00734EA0 File Offset: 0x007330A0
 	private void ValidateInputCaches()
 	{
 		for (int i = this.InputCaches.Count - 1; i >= 0; i--)
@@ -1526,14 +1605,14 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A70F RID: 108303 RVA: 0x0070E453 File Offset: 0x0070C653
+	// Token: 0x060180CC RID: 98508 RVA: 0x00734EFB File Offset: 0x007330FB
 	[NullableContext(2)]
 	private void ClearInputCaches(string reason = null)
 	{
 		this.InputCaches.Clear();
 	}
 
-	// Token: 0x0601A710 RID: 108304 RVA: 0x0070E460 File Offset: 0x0070C660
+	// Token: 0x060180CD RID: 98509 RVA: 0x00734F08 File Offset: 0x00733108
 	private bool QueryInputCaches()
 	{
 		if (this.InputCaches.Count == 0)
@@ -1575,7 +1654,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return true;
 	}
 
-	// Token: 0x0601A711 RID: 108305 RVA: 0x0070E596 File Offset: 0x0070C796
+	// Token: 0x060180CE RID: 98510 RVA: 0x0073503E File Offset: 0x0073323E
 	private void HandleAnimBreakPoint(int entityId)
 	{
 		if (this.CharacterInternal == null || this.CharacterInternal.GetEntityIdNoBlueprint() != entityId)
@@ -1588,7 +1667,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A712 RID: 108306 RVA: 0x0070E5C4 File Offset: 0x0070C7C4
+	// Token: 0x060180CF RID: 98511 RVA: 0x0073506C File Offset: 0x0073326C
 	[return: Nullable(2)]
 	private InputCommand GetBestInputCommand(List<InputCommand> commands)
 	{
@@ -1615,7 +1694,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return commands[num2];
 	}
 
-	// Token: 0x0601A713 RID: 108307 RVA: 0x0070E620 File Offset: 0x0070C820
+	// Token: 0x060180D0 RID: 98512 RVA: 0x007350C8 File Offset: 0x007332C8
 	private int QueryInputPriority(SInputCommand command)
 	{
 		int? num = null;
@@ -1638,7 +1717,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return num.Value;
 	}
 
-	// Token: 0x0601A714 RID: 108308 RVA: 0x0070E68B File Offset: 0x0070C88B
+	// Token: 0x060180D1 RID: 98513 RVA: 0x00735133 File Offset: 0x00733333
 	private int QuerySkillPriority(int skillId)
 	{
 		TsBaseCharacter characterInternal = this.CharacterInternal;
@@ -1663,7 +1742,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return baseSkillComponent.GetPriority(skillId);
 	}
 
-	// Token: 0x0601A715 RID: 108309 RVA: 0x0070E6C0 File Offset: 0x0070C8C0
+	// Token: 0x060180D2 RID: 98514 RVA: 0x00735168 File Offset: 0x00733368
 	private void ExecuteInputCommand(InputCommand inputCommand, string context)
 	{
 		SInputCommand command = inputCommand.Command;
@@ -1716,7 +1795,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A716 RID: 108310 RVA: 0x0070E7DC File Offset: 0x0070C9DC
+	// Token: 0x060180D3 RID: 98515 RVA: 0x00735284 File Offset: 0x00733484
 	private void ExecuteJump(SInputCommand command)
 	{
 		CharacterMoveComponent component = base.Entity.GetComponent<CharacterMoveComponent>();
@@ -1732,7 +1811,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		component.JumpRelease();
 	}
 
-	// Token: 0x0601A717 RID: 108311 RVA: 0x0070E814 File Offset: 0x0070CA14
+	// Token: 0x060180D4 RID: 98516 RVA: 0x007352BC File Offset: 0x007334BC
 	private void ExecuteClimb(SInputCommand command)
 	{
 		CharacterClimbComponent component = base.Entity.GetComponent<CharacterClimbComponent>();
@@ -1743,7 +1822,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		component.ClimbPress(command.IntValue == 1);
 	}
 
-	// Token: 0x0601A718 RID: 108312 RVA: 0x0070E834 File Offset: 0x0070CA34
+	// Token: 0x060180D5 RID: 98517 RVA: 0x007352DC File Offset: 0x007334DC
 	private void ExecuteSprint(SInputCommand command)
 	{
 		if (command.IntValue == 1)
@@ -1754,25 +1833,25 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		base.Entity.CheckGetComponent<CharacterUnifiedStateComponent>().SprintRelease();
 	}
 
-	// Token: 0x0601A719 RID: 108313 RVA: 0x0070E860 File Offset: 0x0070CA60
+	// Token: 0x060180D6 RID: 98518 RVA: 0x00735308 File Offset: 0x00733508
 	private void ExecuteFastSwim(SInputCommand command)
 	{
 		base.Entity.CheckGetComponent<CharacterUnifiedStateComponent>().SwitchFastSwim(command.IntValue == 1);
 	}
 
-	// Token: 0x0601A71A RID: 108314 RVA: 0x0070E87B File Offset: 0x0070CA7B
+	// Token: 0x060180D7 RID: 98519 RVA: 0x00735323 File Offset: 0x00733523
 	private void ExecuteFastClimb(SInputCommand command)
 	{
 		base.Entity.CheckGetComponent<CharacterUnifiedStateComponent>().SwitchFastClimb(command.IntValue == 1, false);
 	}
 
-	// Token: 0x0601A71B RID: 108315 RVA: 0x0070E897 File Offset: 0x0070CA97
+	// Token: 0x060180D8 RID: 98520 RVA: 0x0073533F File Offset: 0x0073353F
 	private void ExecuteSwitchWalk(SInputCommand command)
 	{
 		base.Entity.CheckGetComponent<CharacterUnifiedStateComponent>().WalkPress();
 	}
 
-	// Token: 0x0601A71C RID: 108316 RVA: 0x0070E8A9 File Offset: 0x0070CAA9
+	// Token: 0x060180D9 RID: 98521 RVA: 0x00735351 File Offset: 0x00733551
 	private void ExecuteXaBoost(SInputCommand command)
 	{
 		CharacterGlideComponent characterGlideComponent = base.Entity.CheckGetComponent<CharacterGlideComponent>();
@@ -1783,7 +1862,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		characterGlideComponent.SetSoarBoostOn(command.IntValue > 0);
 	}
 
-	// Token: 0x0601A71D RID: 108317 RVA: 0x0070E8C9 File Offset: 0x0070CAC9
+	// Token: 0x060180DA RID: 98522 RVA: 0x00735371 File Offset: 0x00733571
 	private void ExecuteDrop(SInputCommand command)
 	{
 		if (!this.MoveComp)
@@ -1798,12 +1877,12 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.MoveComp.OnDropRelease();
 	}
 
-	// Token: 0x0601A71E RID: 108318 RVA: 0x0070E8F9 File Offset: 0x0070CAF9
+	// Token: 0x060180DB RID: 98523 RVA: 0x007353A1 File Offset: 0x007335A1
 	private void ExecuteSwitchCharacter(int index)
 	{
 	}
 
-	// Token: 0x0601A71F RID: 108319 RVA: 0x0070E8FB File Offset: 0x0070CAFB
+	// Token: 0x060180DC RID: 98524 RVA: 0x007353A3 File Offset: 0x007335A3
 	private void ExecuteSkill(int skillId, string context)
 	{
 		base.Entity.GetComponent<CharacterSkillComponent>().BeginSkillAsync(skillId, new SkillParam
@@ -1812,13 +1891,13 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}).Forget<bool>();
 	}
 
-	// Token: 0x0601A720 RID: 108320 RVA: 0x0070E929 File Offset: 0x0070CB29
+	// Token: 0x060180DD RID: 98525 RVA: 0x007353D1 File Offset: 0x007335D1
 	private float GetWorldTime()
 	{
 		return UGameplayStatics.GetTimeSeconds(GlobalData.World);
 	}
 
-	// Token: 0x0601A721 RID: 108321 RVA: 0x0070E938 File Offset: 0x0070CB38
+	// Token: 0x060180DE RID: 98526 RVA: 0x007353E0 File Offset: 0x007335E0
 	public void SetActive(bool value)
 	{
 		if (value)
@@ -1841,8 +1920,8 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		moveAxisToButtonLogic.Reset();
 	}
 
-	// Token: 0x0601A722 RID: 108322 RVA: 0x0070E9B4 File Offset: 0x0070CBB4
-	private unsafe void DispatchPressEvent(CSharpScript.Game.Input.EInputAction action, double time, float moveInputYaw = 0f)
+	// Token: 0x060180DF RID: 98527 RVA: 0x0073545C File Offset: 0x0073365C
+	private void DispatchPressEvent(CSharpScript.Game.Input.EInputAction action, double time, float moveInputYaw = 0f)
 	{
 		if (this.ActorComp == null)
 		{
@@ -1860,27 +1939,14 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			return;
 		}
-		for (int i = 0; i < inputLayers.Count; i++)
+		int num = 0;
+		while (num < inputLayers.Count && !inputLayers[num].DispatchPressEventEx(action, (float)time, moveInputYaw))
 		{
-			InputLayer inputLayer = inputLayers[i];
-			if (inputLayer.CheckBlockDispatchEvent(action))
-			{
-				Log instance2 = Log.Instance;
-				ELogModule module2 = ELogModule.Input;
-				ELogAuthor author2 = ELogAuthor.JYS;
-				string message2 = "[CharacterInputComponent.DispatchPressEvent]输入的事件被LayerMap屏蔽";
-				<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("entityId", base.Entity.Id);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("layer", inputLayer.GetLayerType());
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("action", action);
-				instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
-				return;
-			}
-			inputLayer.DispatchPressEventEx(action, (float)time, moveInputYaw);
+			num++;
 		}
 	}
 
-	// Token: 0x0601A723 RID: 108323 RVA: 0x0070EB00 File Offset: 0x0070CD00
+	// Token: 0x060180E0 RID: 98528 RVA: 0x00735500 File Offset: 0x00733700
 	private void DispatchReleaseEvent(CSharpScript.Game.Input.EInputAction action, double time, float moveInputYaw = 0f)
 	{
 		if (this.ActorComp == null)
@@ -1899,13 +1965,14 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			return;
 		}
-		for (int i = 0; i < inputLayers.Count; i++)
+		int num = 0;
+		while (num < inputLayers.Count && !inputLayers[num].DispatchReleaseEventEx(action, (float)time, moveInputYaw))
 		{
-			inputLayers[i].DispatchReleaseEventEx(action, (float)time, moveInputYaw);
+			num++;
 		}
 	}
 
-	// Token: 0x0601A724 RID: 108324 RVA: 0x0070EBA4 File Offset: 0x0070CDA4
+	// Token: 0x060180E1 RID: 98529 RVA: 0x007355A4 File Offset: 0x007337A4
 	[NullableContext(2)]
 	private SInputCommand HandlePress(CSharpScript.Game.Input.EInputAction action, float time, float moveInputYaw = 0f)
 	{
@@ -1933,7 +2000,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return null;
 	}
 
-	// Token: 0x0601A725 RID: 108325 RVA: 0x0070EC80 File Offset: 0x0070CE80
+	// Token: 0x060180E2 RID: 98530 RVA: 0x00735680 File Offset: 0x00733880
 	[NullableContext(2)]
 	private SInputCommand HandleRelease(CSharpScript.Game.Input.EInputAction action, double time, float moveInputYaw = 0f)
 	{
@@ -1961,7 +2028,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return null;
 	}
 
-	// Token: 0x0601A726 RID: 108326 RVA: 0x0070ED5C File Offset: 0x0070CF5C
+	// Token: 0x060180E3 RID: 98531 RVA: 0x0073575C File Offset: 0x0073395C
 	[NullableContext(2)]
 	private SInputCommand HandleHold(CSharpScript.Game.Input.EInputAction action, double time, float moveInputYaw = 0f)
 	{
@@ -1989,7 +2056,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return null;
 	}
 
-	// Token: 0x0601A727 RID: 108327 RVA: 0x0070EE38 File Offset: 0x0070D038
+	// Token: 0x060180E4 RID: 98532 RVA: 0x00735838 File Offset: 0x00733A38
 	private float GetCacheTime(CSharpScript.Game.Input.EInputAction action, EInputState state)
 	{
 		SInputCaches? cacheConfig = InputLayerQueryHelper.GetCacheConfig(base.Entity.Id, action);
@@ -2018,7 +2085,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A728 RID: 108328 RVA: 0x0070EED4 File Offset: 0x0070D0D4
+	// Token: 0x060180E5 RID: 98533 RVA: 0x007358D4 File Offset: 0x00733AD4
 	[NullableContext(0)]
 	public ValueTuple<bool, float> GetHoldConfig(CSharpScript.Game.Input.EInputAction action)
 	{
@@ -2030,7 +2097,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return new ValueTuple<bool, float>(holdConfig.Value.连续触发, holdConfig.Value.触发时间);
 	}
 
-	// Token: 0x0601A729 RID: 108329 RVA: 0x0070EF28 File Offset: 0x0070D128
+	// Token: 0x060180E6 RID: 98534 RVA: 0x00735928 File Offset: 0x00733B28
 	public void TurnOnAutomaticFlightMode(ICM_AutomaticFlight_DataBase_C dataAsset)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -2088,7 +2155,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.MoveComp.SetMaxSpeed(this.AutomaticFlightDataAsset.NormalFlySpeed.Value);
 	}
 
-	// Token: 0x0601A72A RID: 108330 RVA: 0x0070F055 File Offset: 0x0070D255
+	// Token: 0x060180E7 RID: 98535 RVA: 0x00735A55 File Offset: 0x00733C55
 	public void TurnOffAutomaticFlightMode()
 	{
 		this.AutomaticFlightMode = false;
@@ -2101,13 +2168,13 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.StateComp.ResetCharState();
 	}
 
-	// Token: 0x0601A72B RID: 108331 RVA: 0x0070F088 File Offset: 0x0070D288
+	// Token: 0x060180E8 RID: 98536 RVA: 0x00735A88 File Offset: 0x00733C88
 	public bool IsInAutomaticFlightMode()
 	{
 		return this.AutomaticFlightMode;
 	}
 
-	// Token: 0x0601A72C RID: 108332 RVA: 0x0070F090 File Offset: 0x0070D290
+	// Token: 0x060180E9 RID: 98537 RVA: 0x00735A90 File Offset: 0x00733C90
 	public void TurnOnCameraDrivenAutoFlightMode(BP_CameraDrivenAutoFlightData_C dataAsset)
 	{
 		if (dataAsset == null)
@@ -2129,20 +2196,20 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.CameraDrivenAutoFlightDataAsset.AutoFlightInputMax = dataAsset.自动驾驶归正角度模拟输入Max;
 	}
 
-	// Token: 0x0601A72D RID: 108333 RVA: 0x0070F139 File Offset: 0x0070D339
+	// Token: 0x060180EA RID: 98538 RVA: 0x00735B39 File Offset: 0x00733D39
 	public void TurnOffCameraDrivenAutoFlightMode()
 	{
 		this.CameraDrivenAutoFlightMode = false;
 		this.IsStartCameraDrivenAutoFlightTick = false;
 	}
 
-	// Token: 0x0601A72E RID: 108334 RVA: 0x0070F149 File Offset: 0x0070D349
+	// Token: 0x060180EB RID: 98539 RVA: 0x00735B49 File Offset: 0x00733D49
 	public bool IsInCameraDrivenAutoFlightMode()
 	{
 		return this.CameraDrivenAutoFlightMode && this.IsInCameraDrivenAutoFlight;
 	}
 
-	// Token: 0x0601A72F RID: 108335 RVA: 0x0070F15C File Offset: 0x0070D35C
+	// Token: 0x060180EC RID: 98540 RVA: 0x00735B5C File Offset: 0x00733D5C
 	private void AddCharacterInputLayer()
 	{
 		if (this.InputLayer != null)
@@ -2161,7 +2228,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A730 RID: 108336 RVA: 0x0070F1D0 File Offset: 0x0070D3D0
+	// Token: 0x060180ED RID: 98541 RVA: 0x00735BD0 File Offset: 0x00733DD0
 	private void RemoveCharacterInputLayer()
 	{
 		if (this.InputLayer != null)
@@ -2172,7 +2239,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A731 RID: 108337 RVA: 0x0070F1FC File Offset: 0x0070D3FC
+	// Token: 0x060180EE RID: 98542 RVA: 0x00735BFC File Offset: 0x00733DFC
 	private void AddExtraInputLayer()
 	{
 		EntityHandle handleByEntity = CharacterModel.Instance.GetHandleByEntity(base.Entity);
@@ -2199,7 +2266,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		InputController.Instance.AddInputLayer(base.Entity.Id, this.ExtraInputLayer);
 	}
 
-	// Token: 0x0601A732 RID: 108338 RVA: 0x0070F27B File Offset: 0x0070D47B
+	// Token: 0x060180EF RID: 98543 RVA: 0x00735C7B File Offset: 0x00733E7B
 	private void RemoveExtraInputLayer()
 	{
 		if (this.ExtraInputLayer != null)
@@ -2210,14 +2277,14 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A733 RID: 108339 RVA: 0x0070F2A7 File Offset: 0x0070D4A7
+	// Token: 0x060180F0 RID: 98544 RVA: 0x00735CA7 File Offset: 0x00733EA7
 	[NullableContext(2)]
 	public BP_InputBase_C GetBpInputComp()
 	{
 		return InputLayerQueryHelper.GetFirstBpInputComp(base.Entity.Id);
 	}
 
-	// Token: 0x0601A734 RID: 108340 RVA: 0x0070F2B9 File Offset: 0x0070D4B9
+	// Token: 0x060180F1 RID: 98545 RVA: 0x00735CB9 File Offset: 0x00733EB9
 	public void SetBpInputComp(BP_InputBase_C bpInputComp)
 	{
 		CharacterInputLayer inputLayer = this.InputLayer;
@@ -2228,33 +2295,33 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		inputLayer.SetBpInputComp(bpInputComp);
 	}
 
-	// Token: 0x0601A735 RID: 108341 RVA: 0x0070F2CC File Offset: 0x0070D4CC
+	// Token: 0x060180F2 RID: 98546 RVA: 0x00735CCC File Offset: 0x00733ECC
 	public float GetCommandInterval(ECommandType commandType)
 	{
 		double num = this.CommandTimeMap.ContainsKey(commandType) ? this.CommandTimeMap[commandType] : 0.0;
 		return (float)(Time.Instance.WorldTimeSeconds - num);
 	}
 
-	// Token: 0x0601A736 RID: 108342 RVA: 0x0070F30C File Offset: 0x0070D50C
+	// Token: 0x060180F3 RID: 98547 RVA: 0x00735D0C File Offset: 0x00733F0C
 	public void RemoveCommandInterval(ECommandType commandType)
 	{
 		this.CommandTimeMap.Remove(commandType);
 	}
 
-	// Token: 0x0601A737 RID: 108343 RVA: 0x0070F31B File Offset: 0x0070D51B
+	// Token: 0x060180F4 RID: 98548 RVA: 0x00735D1B File Offset: 0x00733F1B
 	public bool IsOnlyAllowFightInput()
 	{
 		return this.IsOnlyAllowFightInputInternal;
 	}
 
-	// Token: 0x0601A738 RID: 108344 RVA: 0x0070F323 File Offset: 0x0070D523
+	// Token: 0x060180F5 RID: 98549 RVA: 0x00735D23 File Offset: 0x00733F23
 	public void SetOnlyAllowFightInput(bool isOnlyAllowFightInput)
 	{
 		this.IsOnlyAllowFightInputInternal = isOnlyAllowFightInput;
 		EventSystem.Instance.Emit(EEventName.OnOnlyAllowFightInputStateChanged);
 	}
 
-	// Token: 0x0601A739 RID: 108345 RVA: 0x0070F33C File Offset: 0x0070D53C
+	// Token: 0x060180F6 RID: 98550 RVA: 0x00735D3C File Offset: 0x00733F3C
 	private void TryGetTagDaPathMap()
 	{
 		BP_FirstPersonConfigMap_C bp_FirstPersonConfigMap_C = ResourceSystem.Instance.Load<BP_FirstPersonConfigMap_C>("/Game/Aki/Character/Role/Common/Data/DA/DA_FirstPersonConfigMap.DA_FirstPersonConfigMap", "js_undefined");
@@ -2285,7 +2352,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A73A RID: 108346 RVA: 0x0070F420 File Offset: 0x0070D620
+	// Token: 0x060180F7 RID: 98551 RVA: 0x00735E20 File Offset: 0x00734020
 	private void AddCameraFollowInputListener()
 	{
 		foreach (KeyValuePair<int, string> keyValuePair in this.TagToDaPathMap)
@@ -2308,7 +2375,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A73B RID: 108347 RVA: 0x0070F4AC File Offset: 0x0070D6AC
+	// Token: 0x060180F8 RID: 98552 RVA: 0x00735EAC File Offset: 0x007340AC
 	private void ActiveCameraFollowInput(int triggerTagId)
 	{
 		this.InCameraFollowInput = true;
@@ -2342,7 +2409,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		component.SetLockedRotation(true);
 	}
 
-	// Token: 0x0601A73C RID: 108348 RVA: 0x0070F500 File Offset: 0x0070D700
+	// Token: 0x060180F9 RID: 98553 RVA: 0x00735F00 File Offset: 0x00734100
 	private void ClearCameraFollowInputState()
 	{
 		this.InCameraFollowInput = false;
@@ -2379,7 +2446,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A73D RID: 108349 RVA: 0x0070F5AC File Offset: 0x0070D7AC
+	// Token: 0x060180FA RID: 98554 RVA: 0x00735FAC File Offset: 0x007341AC
 	private void RemoveCameraFollowInputListener()
 	{
 		this.ClearCameraFollowInputState();
@@ -2393,7 +2460,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.CameraFollowInputTagTasks.Clear();
 	}
 
-	// Token: 0x0601A73E RID: 108350 RVA: 0x0070F608 File Offset: 0x0070D808
+	// Token: 0x060180FB RID: 98555 RVA: 0x00736008 File Offset: 0x00734208
 	private void InitCameraFollowInputConfig(int triggerTagId, Action<CameraFollowInputConfig> callback)
 	{
 		if (!this.CameraFollowInputLockRunState)
@@ -2439,7 +2506,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}, "js_undefined");
 	}
 
-	// Token: 0x0601A73F RID: 108351 RVA: 0x0070F6C8 File Offset: 0x0070D8C8
+	// Token: 0x060180FC RID: 98556 RVA: 0x007360C8 File Offset: 0x007342C8
 	[NullableContext(2)]
 	private string FindFirstPersonConfigPath(int triggerTagId)
 	{
@@ -2456,7 +2523,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return null;
 	}
 
-	// Token: 0x0601A740 RID: 108352 RVA: 0x0070F720 File Offset: 0x0070D920
+	// Token: 0x060180FD RID: 98557 RVA: 0x00736120 File Offset: 0x00734320
 	private void SetMoveSprint(bool value)
 	{
 		if (value)
@@ -2483,7 +2550,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A741 RID: 108353 RVA: 0x0070F774 File Offset: 0x0070D974
+	// Token: 0x060180FE RID: 98558 RVA: 0x00736174 File Offset: 0x00734374
 	private void CameraFollowInputCompensate()
 	{
 		CharacterUnifiedStateComponent unifiedComp = this.UnifiedComp;
@@ -2562,39 +2629,39 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A742 RID: 108354 RVA: 0x0070F98A File Offset: 0x0070DB8A
+	// Token: 0x060180FF RID: 98559 RVA: 0x0073638A File Offset: 0x0073458A
 	public void SetUseActorRelativeMoveInput(bool value)
 	{
 		this.UseActorRelativeMoveInput = value;
 	}
 
-	// Token: 0x0601A743 RID: 108355 RVA: 0x0070F993 File Offset: 0x0070DB93
+	// Token: 0x06018100 RID: 98560 RVA: 0x00736393 File Offset: 0x00734593
 	public bool GetUseActorRelativeMoveInput()
 	{
 		return this.UseActorRelativeMoveInput;
 	}
 
-	// Token: 0x0601A744 RID: 108356 RVA: 0x0070F99B File Offset: 0x0070DB9B
+	// Token: 0x06018101 RID: 98561 RVA: 0x0073639B File Offset: 0x0073459B
 	public void SetInvertMoveForward(bool value)
 	{
 		this.InvertMoveForward = value;
 	}
 
-	// Token: 0x0601A745 RID: 108357 RVA: 0x0070F9A4 File Offset: 0x0070DBA4
+	// Token: 0x06018102 RID: 98562 RVA: 0x007363A4 File Offset: 0x007345A4
 	public void SetInvertMoveRight(bool value)
 	{
 		this.InvertMoveRight = value;
 	}
 
-	// Token: 0x0601A746 RID: 108358 RVA: 0x0070F9AD File Offset: 0x0070DBAD
+	// Token: 0x06018103 RID: 98563 RVA: 0x007363AD File Offset: 0x007345AD
 	private bool IsActorRelativeMove()
 	{
 		return this.UseActorRelativeMoveInput;
 	}
 
-	// Token: 0x17002469 RID: 9321
-	// (get) Token: 0x0601A747 RID: 108359 RVA: 0x0070F9B8 File Offset: 0x0070DBB8
-	// (set) Token: 0x0601A748 RID: 108360 RVA: 0x0070FA03 File Offset: 0x0070DC03
+	// Token: 0x1700259F RID: 9631
+	// (get) Token: 0x06018104 RID: 98564 RVA: 0x007363B8 File Offset: 0x007345B8
+	// (set) Token: 0x06018105 RID: 98565 RVA: 0x00736403 File Offset: 0x00734603
 	private InputContinuously AutoMovingConfig
 	{
 		get
@@ -2614,7 +2681,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A749 RID: 108361 RVA: 0x0070FA0C File Offset: 0x0070DC0C
+	// Token: 0x06018106 RID: 98566 RVA: 0x0073640C File Offset: 0x0073460C
 	private void UpdateAutoMovingCheck(global::Vector moveDirection, float delta)
 	{
 		BattleUiFormationData formationData = BattleUiModel.Instance.FormationData;
@@ -2673,7 +2740,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A74A RID: 108362 RVA: 0x0070FB18 File Offset: 0x0070DD18
+	// Token: 0x06018107 RID: 98567 RVA: 0x00736518 File Offset: 0x00734718
 	private bool CheckOtherPositionState(float delta)
 	{
 		bool flag = FormationAttributeController.Instance.GetValue(EFormationAttributeId.Strength) < 2200f;
@@ -2692,9 +2759,27 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 			{
 				this.InterruptAutoMoving("空中太久", true);
 				CharacterMoveComponent moveComp = this.MoveComp;
-				if (moveComp != null)
+				TEnumAsByte<EMovementMode>? tenumAsByte;
+				if (moveComp == null)
 				{
-					moveComp.TrySetGlide();
+					tenumAsByte = null;
+				}
+				else
+				{
+					UCharacterMovementComponent characterMovement = moveComp.CharacterMovement;
+					tenumAsByte = ((characterMovement != null) ? new TEnumAsByte<EMovementMode>?(characterMovement.MovementMode) : null);
+				}
+				if (tenumAsByte == EMovementMode.MOVE_Falling)
+				{
+					CharacterUnifiedStateComponent unifiedComp2 = this.UnifiedComp;
+					if (unifiedComp2 != null && unifiedComp2.MoveState == ECharMoveState.Other)
+					{
+						CharacterMoveComponent moveComp2 = this.MoveComp;
+						if (moveComp2 != null)
+						{
+							moveComp2.TrySetGlide();
+						}
+					}
 				}
 			}
 		}
@@ -2702,11 +2787,11 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		{
 			this.AutoMovingConfig.InAirTime = 0f;
 		}
-		CharacterUnifiedStateComponent unifiedComp2 = this.UnifiedComp;
-		if (unifiedComp2 == null || unifiedComp2.PositionState != ECharPositionState.Water)
+		CharacterUnifiedStateComponent unifiedComp3 = this.UnifiedComp;
+		if (unifiedComp3 == null || unifiedComp3.PositionState != ECharPositionState.Water)
 		{
-			CharacterUnifiedStateComponent unifiedComp3 = this.UnifiedComp;
-			if (unifiedComp3 == null || unifiedComp3.PositionState != ECharPositionState.Climb)
+			CharacterUnifiedStateComponent unifiedComp4 = this.UnifiedComp;
+			if (unifiedComp4 == null || unifiedComp4.PositionState != ECharPositionState.Climb)
 			{
 				this.AutoMovingConfig.InDelayExitTime = 0f;
 				return result;
@@ -2720,17 +2805,17 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 		else if (flag)
 		{
-			CharacterUnifiedStateComponent unifiedComp4 = this.UnifiedComp;
-			if (unifiedComp4 == null || unifiedComp4.MoveState != ECharMoveState.FastClimb)
+			CharacterUnifiedStateComponent unifiedComp5 = this.UnifiedComp;
+			if (unifiedComp5 == null || unifiedComp5.MoveState != ECharMoveState.FastClimb)
 			{
-				CharacterUnifiedStateComponent unifiedComp5 = this.UnifiedComp;
-				if (unifiedComp5 == null || unifiedComp5.MoveState != ECharMoveState.NormalClimb)
+				CharacterUnifiedStateComponent unifiedComp6 = this.UnifiedComp;
+				if (unifiedComp6 == null || unifiedComp6.MoveState != ECharMoveState.NormalClimb)
 				{
-					CharacterUnifiedStateComponent unifiedComp6 = this.UnifiedComp;
-					if (unifiedComp6 == null || unifiedComp6.MoveState != ECharMoveState.NormalSwim)
+					CharacterUnifiedStateComponent unifiedComp7 = this.UnifiedComp;
+					if (unifiedComp7 == null || unifiedComp7.MoveState != ECharMoveState.NormalSwim)
 					{
-						CharacterUnifiedStateComponent unifiedComp7 = this.UnifiedComp;
-						if (unifiedComp7 == null || unifiedComp7.MoveState != ECharMoveState.FastSwim)
+						CharacterUnifiedStateComponent unifiedComp8 = this.UnifiedComp;
+						if (unifiedComp8 == null || unifiedComp8.MoveState != ECharMoveState.FastSwim)
 						{
 							return result;
 						}
@@ -2742,7 +2827,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return result;
 	}
 
-	// Token: 0x0601A74B RID: 108363 RVA: 0x0070FCC0 File Offset: 0x0070DEC0
+	// Token: 0x06018108 RID: 98568 RVA: 0x00736735 File Offset: 0x00734935
 	public bool InterruptAutoMoving(string context, bool clear = true)
 	{
 		if (base.Entity == null)
@@ -2761,19 +2846,19 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return false;
 	}
 
-	// Token: 0x0601A74C RID: 108364 RVA: 0x0070FCF6 File Offset: 0x0070DEF6
+	// Token: 0x06018109 RID: 98569 RVA: 0x0073676B File Offset: 0x0073496B
 	public void SetAutoMovingConfig(InputContinuously value)
 	{
 		this.AutoMovingConfig.DeepCopy(value);
 	}
 
-	// Token: 0x0601A74D RID: 108365 RVA: 0x0070FD04 File Offset: 0x0070DF04
+	// Token: 0x0601810A RID: 98570 RVA: 0x00736779 File Offset: 0x00734979
 	public InputContinuously GetAutoMovingConfig()
 	{
 		return this.AutoMovingConfig;
 	}
 
-	// Token: 0x0601A74E RID: 108366 RVA: 0x0070FD0C File Offset: 0x0070DF0C
+	// Token: 0x0601810B RID: 98571 RVA: 0x00736784 File Offset: 0x00734984
 	private void CalculateMoveDirection(global::Vector outVector)
 	{
 		FVectorDouble fvectorDouble = Global.CharacterCameraManager.GetCameraRotation().VectorDouble();
@@ -2782,7 +2867,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		global::Vector.VectorPlaneProject(this.TempVector, gravityDirect, outVector);
 	}
 
-	// Token: 0x0601A74F RID: 108367 RVA: 0x0070FD54 File Offset: 0x0070DF54
+	// Token: 0x0601810C RID: 98572 RVA: 0x007367CC File Offset: 0x007349CC
 	private void CalculateMoveDirectionFromFightCamera(global::Vector outVector)
 	{
 		CameraController.Instance.MainModel.FightCamera.LogicComponent.CameraRotation.Vector(this.TempVector);
@@ -2790,13 +2875,13 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		global::Vector.VectorPlaneProject(this.TempVector, gravityDirect, outVector);
 	}
 
-	// Token: 0x0601A750 RID: 108368 RVA: 0x0070FD9E File Offset: 0x0070DF9E
+	// Token: 0x0601810D RID: 98573 RVA: 0x00736816 File Offset: 0x00734A16
 	private void OnRoleDead()
 	{
 		this.InterruptAutoMoving("角色死亡", true);
 	}
 
-	// Token: 0x0601A751 RID: 108369 RVA: 0x0070FDAD File Offset: 0x0070DFAD
+	// Token: 0x0601810E RID: 98574 RVA: 0x00736825 File Offset: 0x00734A25
 	private void OnSequenceNetworkStart(PlotInfo plotInfo)
 	{
 		if (plotInfo.PlotLevel == EPlotLevel.LevelA || plotInfo.PlotLevel == EPlotLevel.LevelB || plotInfo.PlotLevel == EPlotLevel.LevelC)
@@ -2805,7 +2890,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A752 RID: 108370 RVA: 0x0070FDD6 File Offset: 0x0070DFD6
+	// Token: 0x0601810F RID: 98575 RVA: 0x0073684E File Offset: 0x00734A4E
 	private void AutoMovingSettingChanged(bool value)
 	{
 		if (!value)
@@ -2814,7 +2899,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A753 RID: 108371 RVA: 0x0070FDEC File Offset: 0x0070DFEC
+	// Token: 0x06018110 RID: 98576 RVA: 0x00736864 File Offset: 0x00734A64
 	private void OnViewShow(EUiViewName viewName, int viewId)
 	{
 		UiShow? uiShowConfig = UiViewConfig.Instance.GetUiShowConfig(viewName);
@@ -2824,7 +2909,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A754 RID: 108372 RVA: 0x0070FE37 File Offset: 0x0070E037
+	// Token: 0x06018111 RID: 98577 RVA: 0x007368AF File Offset: 0x00734AAF
 	private void CameraModeChanged(ECustomCameraMode newMode, ECustomCameraMode? oldMode, string cameraName)
 	{
 		if (cameraName != "MainCamera")
@@ -2837,7 +2922,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A755 RID: 108373 RVA: 0x0070FE78 File Offset: 0x0070E078
+	// Token: 0x06018112 RID: 98578 RVA: 0x007368F0 File Offset: 0x00734AF0
 	private void UpdateAutoSprint(bool autoMoving, float delta)
 	{
 		if (!this.CheckAutoSprintTagImmediately())
@@ -2874,7 +2959,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A756 RID: 108374 RVA: 0x0070FF58 File Offset: 0x0070E158
+	// Token: 0x06018113 RID: 98579 RVA: 0x007369D0 File Offset: 0x00734BD0
 	[NullableContext(2)]
 	public void EnableOverShoulderMode(OverShoulderModeConfig config)
 	{
@@ -2901,7 +2986,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A757 RID: 108375 RVA: 0x0070FFE6 File Offset: 0x0070E1E6
+	// Token: 0x06018114 RID: 98580 RVA: 0x00736A5E File Offset: 0x00734C5E
 	private void AddChangeOverShoulderSprintModeListener()
 	{
 		BaseTagComponent tagComp = this.TagComp;
@@ -2916,7 +3001,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}, null) : null);
 	}
 
-	// Token: 0x0601A758 RID: 108376 RVA: 0x00710021 File Offset: 0x0070E221
+	// Token: 0x06018115 RID: 98581 RVA: 0x00736A99 File Offset: 0x00734C99
 	public void TrySwitchOverShoulderSprintMode()
 	{
 		if (!this.IsOverShoulderMode)
@@ -2930,7 +3015,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.SetOverShoulderSprintMode(!this.IsOverShoulderSprint, false);
 	}
 
-	// Token: 0x0601A759 RID: 108377 RVA: 0x00710050 File Offset: 0x0070E250
+	// Token: 0x06018116 RID: 98582 RVA: 0x00736AC8 File Offset: 0x00734CC8
 	private bool CanEnterOverShoulderSprintMode()
 	{
 		if (this.OverShoulderConfig == null)
@@ -2951,7 +3036,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		return !moveDirectionCache.IsNearlyZero(9.999999747378752E-05) && Math.Abs(moveDirectionCache.HeadingAngle() * 57.295780181884766) <= (double)this.OverShoulderConfig.SprintExitDegAbs;
 	}
 
-	// Token: 0x0601A75A RID: 108378 RVA: 0x007100D6 File Offset: 0x0070E2D6
+	// Token: 0x06018117 RID: 98583 RVA: 0x00736B4E File Offset: 0x00734D4E
 	private void SetOverShoulderSprintMode(bool enable, bool force = false)
 	{
 		if (!force && this.IsOverShoulderSprint == enable)
@@ -2981,7 +3066,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		}
 	}
 
-	// Token: 0x0601A75B RID: 108379 RVA: 0x00710110 File Offset: 0x0070E310
+	// Token: 0x06018118 RID: 98584 RVA: 0x00736B88 File Offset: 0x00734D88
 	private void SetInputFacingFromCameraDirection(float delta)
 	{
 		if (this.OverShoulderConfig == null)
@@ -3032,7 +3117,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.ActorComp.SetActorRotation(this.TempRotator.ToUeRotator(), "SetInputFacingFromCameraDirection", false);
 	}
 
-	// Token: 0x0601A75C RID: 108380 RVA: 0x00710368 File Offset: 0x0070E568
+	// Token: 0x06018119 RID: 98585 RVA: 0x00736DE0 File Offset: 0x00734FE0
 	private void UpdateCharacterInputDirectAndFacingOverShoulderMode(float delta)
 	{
 		global::Vector vector = global::Vector.ZeroVectorProxy;
@@ -3062,19 +3147,16 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 						if (vector.IsNearlyZero(9.999999747378752E-05))
 						{
 							this.StandInputDelayCountDown = 200f;
-							this.CacheStandInputDirect.Reset();
 							flag3 = true;
 						}
 						else if (this.StandInputDelayCountDown > 0f)
 						{
 							this.StandInputDelayCountDown -= delta;
-							this.CacheStandInputDirect.DeepCopy(vector);
 							flag3 = true;
 						}
 					}
 					if (!flag3)
 					{
-						this.CacheStandInputDirect.Reset();
 						this.CommitMoveInput(vector, !this.IsLocalInputInternal);
 					}
 					ECharPositionState positionState = this.StateComp.PositionState;
@@ -3119,7 +3201,7 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.SetInputFacingFromCameraDirection(delta);
 	}
 
-	// Token: 0x0601A75D RID: 108381 RVA: 0x00710548 File Offset: 0x0070E748
+	// Token: 0x0601811A RID: 98586 RVA: 0x00736FA0 File Offset: 0x007351A0
 	private void SetInputFacingOnGroundFromCameraDirection(float delta)
 	{
 		BaseTagComponent tagComp = this.TagComp;
@@ -3150,19 +3232,19 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		this.SetInputFacingFromInputDirect(true);
 	}
 
-	// Token: 0x0601A75E RID: 108382 RVA: 0x007105CE File Offset: 0x0070E7CE
+	// Token: 0x0601811B RID: 98587 RVA: 0x00737026 File Offset: 0x00735226
 	public static void CreateStaticDefaultValue()
 	{
 		CharacterInputComponent.HoldPressMap = new Dictionary<CSharpScript.Game.Input.EInputAction, bool>();
 	}
 
-	// Token: 0x0601A75F RID: 108383 RVA: 0x007105DA File Offset: 0x0070E7DA
+	// Token: 0x0601811C RID: 98588 RVA: 0x00737032 File Offset: 0x00735232
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterInputComponent.HoldPressMap = null;
 	}
 
-	// Token: 0x0601A760 RID: 108384 RVA: 0x007105E4 File Offset: 0x0070E7E4
+	// Token: 0x0601811D RID: 98589 RVA: 0x0073703C File Offset: 0x0073523C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -3170,659 +3252,500 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 			return false;
 		}
 		CharacterInputComponent characterInputComponent = (CharacterInputComponent)componentTemplate;
-		if (base.CanResetComponentProperty("TempVector") && characterInputComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector), "TempVector"))
+		if (characterInputComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempVector2") && characterInputComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector2), "TempVector2"))
+		if (characterInputComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector2), "TempVector2"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempRotator") && characterInputComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TempRotator), "TempRotator"))
+		if (characterInputComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempRotator), "TempRotator"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempQuat") && characterInputComponent.TempQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TempQuat), "TempQuat"))
+		if (characterInputComponent.TempQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempQuat), "TempQuat"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempQuat2") && characterInputComponent.TempQuat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TempQuat2), "TempQuat2"))
+		if (characterInputComponent.TempQuat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempQuat2), "TempQuat2"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterInputComponent.ActorComp == null)
 		{
-			if (characterInputComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("AbilityComp"))
-		{
-			if (characterInputComponent.AbilityComp == null)
-			{
-				this.AbilityComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAbilityComponent>(this.AbilityComp), "AbilityComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagComp"))
-		{
-			if (characterInputComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("StateComp"))
-		{
-			if (characterInputComponent.StateComp == null)
-			{
-				this.StateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.StateComp), "StateComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SkillComponent"))
-		{
-			if (characterInputComponent.SkillComponent == null)
-			{
-				this.SkillComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterSkillComponent>(this.SkillComponent), "SkillComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MoveComp"))
-		{
-			if (characterInputComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("UnifiedComp"))
-		{
-			if (characterInputComponent.UnifiedComp == null)
-			{
-				this.UnifiedComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedComp), "UnifiedComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CharacterInternal"))
-		{
-			if (characterInputComponent.CharacterInternal == null)
-			{
-				this.CharacterInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsBaseCharacter>(this.CharacterInternal), "CharacterInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CharacterControllerInternal"))
-		{
-			if (characterInputComponent.CharacterControllerInternal == null)
-			{
-				this.CharacterControllerInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_CharacterController_C>(this.CharacterControllerInternal), "CharacterControllerInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("InputLayer"))
-		{
-			if (characterInputComponent.InputLayer == null)
-			{
-				this.InputLayer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterInputLayer>(this.InputLayer), "InputLayer"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ExtraInputLayer"))
-		{
-			if (characterInputComponent.ExtraInputLayer == null)
-			{
-				this.ExtraInputLayer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ExtraInputLayer>(this.ExtraInputLayer), "ExtraInputLayer"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("InputEvents") && characterInputComponent.InputEvents != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<InputEvent>>(this.InputEvents), "InputEvents"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("InputCaches") && characterInputComponent.InputCaches != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<InputCache>>(this.InputCaches), "InputCaches"))
+		if (characterInputComponent.AbilityComp == null)
+		{
+			this.AbilityComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AbilityComp), "AbilityComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("AxisValues") && characterInputComponent.AxisValues != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EInputAxis, float>>(this.AxisValues), "AxisValues"))
+		if (characterInputComponent.TagComp == null)
+		{
+			this.TagComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("InputGroup"))
+		if (characterInputComponent.StateComp == null)
 		{
-			if (characterInputComponent.InputGroup == null)
-			{
-				this.InputGroup = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<InputFilter>(this.InputGroup), "InputGroup"))
-			{
-				return false;
-			}
+			this.StateComp = null;
 		}
-		if (base.CanResetComponentProperty("MoveVectorCache") && characterInputComponent.MoveVectorCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.MoveVectorCache), "MoveVectorCache"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ProcessedMoveInput") && characterInputComponent.ProcessedMoveInput != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.ProcessedMoveInput), "ProcessedMoveInput"))
+		if (characterInputComponent.SkillComponent == null)
+		{
+			this.SkillComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComponent), "SkillComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("InputAngleRanges"))
+		if (characterInputComponent.MoveComp == null)
 		{
-			if (characterInputComponent.InputAngleRanges == null)
-			{
-				this.InputAngleRanges = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<InputAngleRange[]>(this.InputAngleRanges), "InputAngleRanges"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("MoveInputOuterRingEnableCount"))
-		{
-			this.MoveInputOuterRingEnableCount = characterInputComponent.MoveInputOuterRingEnableCount;
-		}
-		if (base.CanResetComponentProperty("MoveDirectionCache") && characterInputComponent.MoveDirectionCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.MoveDirectionCache), "MoveDirectionCache"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("WorldMoveDirectionCache") && characterInputComponent.WorldMoveDirectionCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.WorldMoveDirectionCache), "WorldMoveDirectionCache"))
+		if (characterInputComponent.UnifiedComp == null)
+		{
+			this.UnifiedComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedComp), "UnifiedComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("IsLocalInputInternal"))
+		if (characterInputComponent.CharacterInternal == null)
 		{
-			this.IsLocalInputInternal = characterInputComponent.IsLocalInputInternal;
+			this.CharacterInternal = null;
 		}
-		if (base.CanResetComponentProperty("IsOnlyAllowFightInputInternal"))
-		{
-			this.IsOnlyAllowFightInputInternal = characterInputComponent.IsOnlyAllowFightInputInternal;
-		}
-		if (base.CanResetComponentProperty("LastMovementInputTime"))
-		{
-			this.LastMovementInputTime = characterInputComponent.LastMovementInputTime;
-		}
-		if (base.CanResetComponentProperty("CommandTimeMap") && characterInputComponent.CommandTimeMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<ECommandType, double>>(this.CommandTimeMap), "CommandTimeMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterInternal), "CharacterInternal"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DisableHandle"))
+		if (characterInputComponent.CharacterControllerInternal == null)
 		{
-			this.DisableHandle = characterInputComponent.DisableHandle;
+			this.CharacterControllerInternal = null;
 		}
-		if (base.CanResetComponentProperty("AutomaticFlightMode"))
-		{
-			this.AutomaticFlightMode = characterInputComponent.AutomaticFlightMode;
-		}
-		if (base.CanResetComponentProperty("AutomaticFlightDataAsset"))
-		{
-			if (characterInputComponent.AutomaticFlightDataAsset == null)
-			{
-				this.AutomaticFlightDataAsset = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AutomaticFlightData>(this.AutomaticFlightDataAsset), "AutomaticFlightDataAsset"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AutomaticFlightModeTimeCache"))
-		{
-			this.AutomaticFlightModeTimeCache = characterInputComponent.AutomaticFlightModeTimeCache;
-		}
-		if (base.CanResetComponentProperty("CameraDrivenAutoFlightMode"))
-		{
-			this.CameraDrivenAutoFlightMode = characterInputComponent.CameraDrivenAutoFlightMode;
-		}
-		if (base.CanResetComponentProperty("CameraDrivenAutoFlightDataAsset"))
-		{
-			if (characterInputComponent.CameraDrivenAutoFlightDataAsset == null)
-			{
-				this.CameraDrivenAutoFlightDataAsset = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraDrivenAutoFlightData>(this.CameraDrivenAutoFlightDataAsset), "CameraDrivenAutoFlightDataAsset"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsInCameraDrivenAutoFlight"))
-		{
-			this.IsInCameraDrivenAutoFlight = characterInputComponent.IsInCameraDrivenAutoFlight;
-		}
-		if (base.CanResetComponentProperty("IsStartCameraDrivenAutoFlightTick"))
-		{
-			this.IsStartCameraDrivenAutoFlightTick = characterInputComponent.IsStartCameraDrivenAutoFlightTick;
-		}
-		if (base.CanResetComponentProperty("CameraDrivenAutoFlightTime"))
-		{
-			this.CameraDrivenAutoFlightTime = characterInputComponent.CameraDrivenAutoFlightTime;
-		}
-		if (base.CanResetComponentProperty("MoveDirectionDistanceMin"))
-		{
-			this.MoveDirectionDistanceMin = characterInputComponent.MoveDirectionDistanceMin;
-		}
-		if (base.CanResetComponentProperty("MoveDirectionDistanceMax"))
-		{
-			this.MoveDirectionDistanceMax = characterInputComponent.MoveDirectionDistanceMax;
-		}
-		if (base.CanResetComponentProperty("MovementDirectionAngleThreshold"))
-		{
-			this.MovementDirectionAngleThreshold = characterInputComponent.MovementDirectionAngleThreshold;
-		}
-		if (base.CanResetComponentProperty("StandInputDelayCountDown"))
-		{
-			this.StandInputDelayCountDown = characterInputComponent.StandInputDelayCountDown;
-		}
-		if (base.CanResetComponentProperty("CacheStandInputDirect"))
-		{
-			if (characterInputComponent.CacheStandInputDirect == null)
-			{
-				this.CacheStandInputDirect = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheStandInputDirect), "CacheStandInputDirect"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("NextFrameClear"))
-		{
-			this.NextFrameClear = characterInputComponent.NextFrameClear;
-		}
-		if (base.CanResetComponentProperty("NextFrameClearAxis") && characterInputComponent.NextFrameClearAxis != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EInputAxis>(this.NextFrameClearAxis), "NextFrameClearAxis"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterControllerInternal), "CharacterControllerInternal"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LastShowMouseCursor"))
+		if (characterInputComponent.InputLayer == null)
 		{
-			this.LastShowMouseCursor = characterInputComponent.LastShowMouseCursor;
+			this.InputLayer = null;
 		}
-		if (base.CanResetComponentProperty("TestInputEvent") && characterInputComponent.TestInputEvent != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<InputEvent>>(this.TestInputEvent), "TestInputEvent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputLayer), "InputLayer"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CameraInputQuat") && characterInputComponent.CameraInputQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.CameraInputQuat), "CameraInputQuat"))
+		if (characterInputComponent.ExtraInputLayer == null)
+		{
+			this.ExtraInputLayer = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ExtraInputLayer), "ExtraInputLayer"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("PhotoMoveInput") && characterInputComponent.PhotoMoveInput != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PhotoMoveInput), "PhotoMoveInput"))
+		if (characterInputComponent.InputEvents != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputEvents), "InputEvents"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CurrentMoveDirection") && characterInputComponent.CurrentMoveDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CurrentMoveDirection), "CurrentMoveDirection"))
+		if (characterInputComponent.InputObservers != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<ICharacterInputObserver>(this.InputObservers), "InputObservers"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TagEventJump"))
-		{
-			if (characterInputComponent.TagEventJump == null)
-			{
-				this.TagEventJump = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventJump), "TagEventJump"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagEventClimb"))
-		{
-			if (characterInputComponent.TagEventClimb == null)
-			{
-				this.TagEventClimb = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventClimb), "TagEventClimb"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagEventAttack"))
-		{
-			if (characterInputComponent.TagEventAttack == null)
-			{
-				this.TagEventAttack = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventAttack), "TagEventAttack"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagEventDodge"))
-		{
-			if (characterInputComponent.TagEventDodge == null)
-			{
-				this.TagEventDodge = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventDodge), "TagEventDodge"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagEventSkill"))
-		{
-			if (characterInputComponent.TagEventSkill == null)
-			{
-				this.TagEventSkill = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventSkill), "TagEventSkill"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagEventVision1"))
-		{
-			if (characterInputComponent.TagEventVision1 == null)
-			{
-				this.TagEventVision1 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventVision1), "TagEventVision1"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagEventUltimateSkill"))
-		{
-			if (characterInputComponent.TagEventUltimateSkill == null)
-			{
-				this.TagEventUltimateSkill = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventUltimateSkill), "TagEventUltimateSkill"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagEventVision2"))
-		{
-			if (characterInputComponent.TagEventVision2 == null)
-			{
-				this.TagEventVision2 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventVision2), "TagEventVision2"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagEventChangeRoll1"))
-		{
-			if (characterInputComponent.TagEventChangeRoll1 == null)
-			{
-				this.TagEventChangeRoll1 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventChangeRoll1), "TagEventChangeRoll1"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagEventChangeRoll2"))
-		{
-			if (characterInputComponent.TagEventChangeRoll2 == null)
-			{
-				this.TagEventChangeRoll2 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventChangeRoll2), "TagEventChangeRoll2"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagEventChangeRoll3"))
-		{
-			if (characterInputComponent.TagEventChangeRoll3 == null)
-			{
-				this.TagEventChangeRoll3 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventChangeRoll3), "TagEventChangeRoll3"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagEventLock"))
-		{
-			if (characterInputComponent.TagEventLock == null)
-			{
-				this.TagEventLock = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventLock), "TagEventLock"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagEventAim"))
-		{
-			if (characterInputComponent.TagEventAim == null)
-			{
-				this.TagEventAim = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventAim), "TagEventAim"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagEventMove"))
-		{
-			if (characterInputComponent.TagEventMove == null)
-			{
-				this.TagEventMove = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventMove), "TagEventMove"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsMoveAxisToButtonEnabled"))
-		{
-			this.IsMoveAxisToButtonEnabled = characterInputComponent.IsMoveAxisToButtonEnabled;
-		}
-		if (base.CanResetComponentProperty("MoveAxisToButtonLogic"))
-		{
-			if (characterInputComponent.MoveAxisToButtonLogic == null)
-			{
-				this.MoveAxisToButtonLogic = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MoveInputSimButtonLogic>(this.MoveAxisToButtonLogic), "MoveAxisToButtonLogic"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CurrentMoveAxisToButtonConfig"))
-		{
-			if (characterInputComponent.CurrentMoveAxisToButtonConfig == null)
-			{
-				this.CurrentMoveAxisToButtonConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SInputActive>(this.CurrentMoveAxisToButtonConfig), "CurrentMoveAxisToButtonConfig"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MoveAxisToButtonActiveCondition"))
-		{
-			if (characterInputComponent.MoveAxisToButtonActiveCondition == null)
-			{
-				this.MoveAxisToButtonActiveCondition = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<InputActiveCondition>(this.MoveAxisToButtonActiveCondition), "MoveAxisToButtonActiveCondition"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("InCameraFollowInput"))
-		{
-			this.InCameraFollowInput = characterInputComponent.InCameraFollowInput;
-		}
-		if (base.CanResetComponentProperty("CameraFollowInputTagTasks") && characterInputComponent.CameraFollowInputTagTasks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.CameraFollowInputTagTasks), "CameraFollowInputTagTasks"))
+		if (characterInputComponent.InputCaches != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputCaches), "InputCaches"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TagToDaPathMap") && characterInputComponent.TagToDaPathMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, string>>(this.TagToDaPathMap), "TagToDaPathMap"))
+		if (characterInputComponent.AxisValues != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.AxisValues), "AxisValues"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CameraFollowInputLockRunState"))
+		if (characterInputComponent.InputGroup == null)
 		{
-			this.CameraFollowInputLockRunState = characterInputComponent.CameraFollowInputLockRunState;
+			this.InputGroup = null;
 		}
-		if (base.CanResetComponentProperty("CameraFollowInputInSprintState"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputGroup), "InputGroup"))
 		{
-			this.CameraFollowInputInSprintState = characterInputComponent.CameraFollowInputInSprintState;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CameraFollowInputConfig"))
+		if (characterInputComponent.MoveVectorCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveVectorCache), "MoveVectorCache"))
 		{
-			if (characterInputComponent.CameraFollowInputConfig == null)
-			{
-				this.CameraFollowInputConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraFollowInputConfig>(this.CameraFollowInputConfig), "CameraFollowInputConfig"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("UseActorRelativeMoveInput"))
+		if (characterInputComponent.ProcessedMoveInput != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ProcessedMoveInput), "ProcessedMoveInput"))
 		{
-			this.UseActorRelativeMoveInput = characterInputComponent.UseActorRelativeMoveInput;
+			return false;
 		}
-		if (base.CanResetComponentProperty("InvertMoveForward"))
+		if (characterInputComponent.InputAngleRanges == null)
 		{
-			this.InvertMoveForward = characterInputComponent.InvertMoveForward;
+			this.InputAngleRanges = null;
 		}
-		if (base.CanResetComponentProperty("InvertMoveRight"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputAngleRanges), "InputAngleRanges"))
 		{
-			this.InvertMoveRight = characterInputComponent.InvertMoveRight;
+			return false;
 		}
-		if (base.CanResetComponentProperty("AutoMovingConfigInternal"))
+		this.MoveInputOuterRingEnableCount = characterInputComponent.MoveInputOuterRingEnableCount;
+		if (characterInputComponent.MoveDirectionCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveDirectionCache), "MoveDirectionCache"))
 		{
-			if (characterInputComponent.AutoMovingConfigInternal == null)
-			{
-				this.AutoMovingConfigInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<InputContinuously>(this.AutoMovingConfigInternal), "AutoMovingConfigInternal"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("AutoSprintTime"))
+		if (characterInputComponent.WorldMoveDirectionCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.WorldMoveDirectionCache), "WorldMoveDirectionCache"))
 		{
-			this.AutoSprintTime = characterInputComponent.AutoSprintTime;
+			return false;
 		}
-		if (base.CanResetComponentProperty("AutoSprintConfigTime"))
+		this.IsLocalInputInternal = characterInputComponent.IsLocalInputInternal;
+		this.IsOnlyAllowFightInputInternal = characterInputComponent.IsOnlyAllowFightInputInternal;
+		this.LastMovementInputTime = characterInputComponent.LastMovementInputTime;
+		if (characterInputComponent.CommandTimeMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CommandTimeMap), "CommandTimeMap"))
 		{
-			this.AutoSprintConfigTime = characterInputComponent.AutoSprintConfigTime;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsOverShoulderMode"))
+		this.DisableHandle = characterInputComponent.DisableHandle;
+		this.AutomaticFlightMode = characterInputComponent.AutomaticFlightMode;
+		if (characterInputComponent.AutomaticFlightDataAsset == null)
 		{
-			this.IsOverShoulderMode = characterInputComponent.IsOverShoulderMode;
+			this.AutomaticFlightDataAsset = null;
 		}
-		if (base.CanResetComponentProperty("IsOverShoulderSprint"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AutomaticFlightDataAsset), "AutomaticFlightDataAsset"))
 		{
-			this.IsOverShoulderSprint = characterInputComponent.IsOverShoulderSprint;
+			return false;
 		}
-		if (base.CanResetComponentProperty("ChangeOverShoulderSprintMode"))
+		this.AutomaticFlightModeTimeCache = characterInputComponent.AutomaticFlightModeTimeCache;
+		this.CameraDrivenAutoFlightMode = characterInputComponent.CameraDrivenAutoFlightMode;
+		if (characterInputComponent.CameraDrivenAutoFlightDataAsset == null)
 		{
-			if (characterInputComponent.ChangeOverShoulderSprintMode == null)
-			{
-				this.ChangeOverShoulderSprintMode = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.ChangeOverShoulderSprintMode), "ChangeOverShoulderSprintMode"))
-			{
-				return false;
-			}
+			this.CameraDrivenAutoFlightDataAsset = null;
 		}
-		if (base.CanResetComponentProperty("OverShoulderConfig"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraDrivenAutoFlightDataAsset), "CameraDrivenAutoFlightDataAsset"))
 		{
-			if (characterInputComponent.OverShoulderConfig == null)
-			{
-				this.OverShoulderConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<OverShoulderModeConfig>(this.OverShoulderConfig), "OverShoulderConfig"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("LastCameraDir"))
+		this.IsInCameraDrivenAutoFlight = characterInputComponent.IsInCameraDrivenAutoFlight;
+		this.IsStartCameraDrivenAutoFlightTick = characterInputComponent.IsStartCameraDrivenAutoFlightTick;
+		this.CameraDrivenAutoFlightTime = characterInputComponent.CameraDrivenAutoFlightTime;
+		this.MoveDirectionDistanceMin = characterInputComponent.MoveDirectionDistanceMin;
+		this.MoveDirectionDistanceMax = characterInputComponent.MoveDirectionDistanceMax;
+		this.MovementDirectionAngleThreshold = characterInputComponent.MovementDirectionAngleThreshold;
+		this.StandInputDelayCountDown = characterInputComponent.StandInputDelayCountDown;
+		this.NextFrameClear = characterInputComponent.NextFrameClear;
+		if (characterInputComponent.NextFrameClearAxis != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EInputAxis>(this.NextFrameClearAxis), "NextFrameClearAxis"))
 		{
-			if (characterInputComponent.LastCameraDir == null)
-			{
-				this.LastCameraDir = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastCameraDir), "LastCameraDir"))
-			{
-				return false;
-			}
+			return false;
+		}
+		this.LastShowMouseCursor = characterInputComponent.LastShowMouseCursor;
+		if (characterInputComponent.TestInputEvent != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TestInputEvent), "TestInputEvent"))
+		{
+			return false;
+		}
+		if (characterInputComponent.CameraInputQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraInputQuat), "CameraInputQuat"))
+		{
+			return false;
+		}
+		if (characterInputComponent.PhotoMoveInput != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PhotoMoveInput), "PhotoMoveInput"))
+		{
+			return false;
+		}
+		if (characterInputComponent.CurrentMoveDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentMoveDirection), "CurrentMoveDirection"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventJump == null)
+		{
+			this.TagEventJump = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventJump), "TagEventJump"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventClimb == null)
+		{
+			this.TagEventClimb = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventClimb), "TagEventClimb"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventAttack == null)
+		{
+			this.TagEventAttack = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventAttack), "TagEventAttack"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventDodge == null)
+		{
+			this.TagEventDodge = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventDodge), "TagEventDodge"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventSkill == null)
+		{
+			this.TagEventSkill = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventSkill), "TagEventSkill"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventVision1 == null)
+		{
+			this.TagEventVision1 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventVision1), "TagEventVision1"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventUltimateSkill == null)
+		{
+			this.TagEventUltimateSkill = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventUltimateSkill), "TagEventUltimateSkill"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventVision2 == null)
+		{
+			this.TagEventVision2 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventVision2), "TagEventVision2"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventChangeRoll1 == null)
+		{
+			this.TagEventChangeRoll1 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventChangeRoll1), "TagEventChangeRoll1"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventChangeRoll2 == null)
+		{
+			this.TagEventChangeRoll2 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventChangeRoll2), "TagEventChangeRoll2"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventChangeRoll3 == null)
+		{
+			this.TagEventChangeRoll3 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventChangeRoll3), "TagEventChangeRoll3"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventLock == null)
+		{
+			this.TagEventLock = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventLock), "TagEventLock"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventAim == null)
+		{
+			this.TagEventAim = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventAim), "TagEventAim"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagEventMove == null)
+		{
+			this.TagEventMove = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventMove), "TagEventMove"))
+		{
+			return false;
+		}
+		this.IsMoveAxisToButtonEnabled = characterInputComponent.IsMoveAxisToButtonEnabled;
+		if (characterInputComponent.MoveAxisToButtonLogic == null)
+		{
+			this.MoveAxisToButtonLogic = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveAxisToButtonLogic), "MoveAxisToButtonLogic"))
+		{
+			return false;
+		}
+		if (characterInputComponent.CurrentMoveAxisToButtonConfig == null)
+		{
+			this.CurrentMoveAxisToButtonConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentMoveAxisToButtonConfig), "CurrentMoveAxisToButtonConfig"))
+		{
+			return false;
+		}
+		if (characterInputComponent.MoveAxisToButtonActiveCondition == null)
+		{
+			this.MoveAxisToButtonActiveCondition = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveAxisToButtonActiveCondition), "MoveAxisToButtonActiveCondition"))
+		{
+			return false;
+		}
+		this.InCameraFollowInput = characterInputComponent.InCameraFollowInput;
+		if (characterInputComponent.CameraFollowInputTagTasks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraFollowInputTagTasks), "CameraFollowInputTagTasks"))
+		{
+			return false;
+		}
+		if (characterInputComponent.TagToDaPathMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagToDaPathMap), "TagToDaPathMap"))
+		{
+			return false;
+		}
+		this.CameraFollowInputLockRunState = characterInputComponent.CameraFollowInputLockRunState;
+		this.CameraFollowInputInSprintState = characterInputComponent.CameraFollowInputInSprintState;
+		if (characterInputComponent.CameraFollowInputConfig == null)
+		{
+			this.CameraFollowInputConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraFollowInputConfig), "CameraFollowInputConfig"))
+		{
+			return false;
+		}
+		this.UseActorRelativeMoveInput = characterInputComponent.UseActorRelativeMoveInput;
+		this.InvertMoveForward = characterInputComponent.InvertMoveForward;
+		this.InvertMoveRight = characterInputComponent.InvertMoveRight;
+		if (characterInputComponent.AutoMovingConfigInternal == null)
+		{
+			this.AutoMovingConfigInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AutoMovingConfigInternal), "AutoMovingConfigInternal"))
+		{
+			return false;
+		}
+		this.AutoSprintTime = characterInputComponent.AutoSprintTime;
+		this.AutoSprintConfigTime = characterInputComponent.AutoSprintConfigTime;
+		this.IsOverShoulderMode = characterInputComponent.IsOverShoulderMode;
+		this.IsOverShoulderSprint = characterInputComponent.IsOverShoulderSprint;
+		if (characterInputComponent.ChangeOverShoulderSprintMode == null)
+		{
+			this.ChangeOverShoulderSprintMode = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ChangeOverShoulderSprintMode), "ChangeOverShoulderSprintMode"))
+		{
+			return false;
+		}
+		if (characterInputComponent.OverShoulderConfig == null)
+		{
+			this.OverShoulderConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OverShoulderConfig), "OverShoulderConfig"))
+		{
+			return false;
+		}
+		if (characterInputComponent.LastCameraDir == null)
+		{
+			this.LastCameraDir = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastCameraDir), "LastCameraDir"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400CA9E RID: 51870
+	// Token: 0x170025A0 RID: 9632
+	// (get) Token: 0x0601811E RID: 98590 RVA: 0x00737AB3 File Offset: 0x00735CB3
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025A1 RID: 9633
+	// (get) Token: 0x0601811F RID: 98591 RVA: 0x00737AB6 File Offset: 0x00735CB6
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025A2 RID: 9634
+	// (get) Token: 0x06018120 RID: 98592 RVA: 0x00737AB9 File Offset: 0x00735CB9
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025A3 RID: 9635
+	// (get) Token: 0x06018121 RID: 98593 RVA: 0x00737ABC File Offset: 0x00735CBC
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CE78 RID: 52856
 	private const int ZERO_TIME = 0;
 
-	// Token: 0x0400CA9F RID: 51871
+	// Token: 0x0400CE79 RID: 52857
 	private const int NULL_CONFIG_TIME = -1;
 
-	// Token: 0x0400CAA0 RID: 51872
+	// Token: 0x0400CE7A RID: 52858
 	private const int INVALID_PRIORITY = -1;
 
-	// Token: 0x0400CAA1 RID: 51873
+	// Token: 0x0400CE7B RID: 52859
 	private const int INVALID_PRIORITY_INDEX = -1;
 
-	// Token: 0x0400CAA2 RID: 51874
+	// Token: 0x0400CE7C RID: 52860
 	private const int INVALID_INPUT_TIME = -1;
 
-	// Token: 0x0400CAA3 RID: 51875
+	// Token: 0x0400CE7D RID: 52861
 	private const float MOVE_VECTOR_CACHE_TIME = 100f;
 
-	// Token: 0x0400CAA4 RID: 51876
+	// Token: 0x0400CE7E RID: 52862
 	private const float EXIT_CLIMB_BLOCK_ATTACK_RELEASE_TIME = 0.25f;
 
-	// Token: 0x0400CAA5 RID: 51877
+	// Token: 0x0400CE7F RID: 52863
 	public const int CAMERA_FOLLOW_FORWARD_ANGLE = 50;
 
-	// Token: 0x0400CAA6 RID: 51878
+	// Token: 0x0400CE80 RID: 52864
 	private const string FIRST_PERSON_CONFIG_MAP_PATH = "/Game/Aki/Character/Role/Common/Data/DA/DA_FirstPersonConfigMap.DA_FirstPersonConfigMap";
 
-	// Token: 0x0400CAA7 RID: 51879
+	// Token: 0x0400CE81 RID: 52865
 	private const float LOW_STRENGTH_EXIT_VALUE = 2200f;
 
-	// Token: 0x0400CAA8 RID: 51880
-	private const float STAND_INPUT_DELAY = 200f;
+	// Token: 0x0400CE82 RID: 52866
+	private const float STAND_INPUT_DELAY = 150f;
 
-	// Token: 0x0400CAA9 RID: 51881
+	// Token: 0x0400CE83 RID: 52867
+	private const float FACING_SHOULDER_STAND_INPUT_DELAY = 200f;
+
+	// Token: 0x0400CE84 RID: 52868
 	private const float STAND_INPUT_TURN_THRESHOLD = 0.5f;
 
-	// Token: 0x0400CAAA RID: 51882
+	// Token: 0x0400CE85 RID: 52869
 	private const float FACING_INPUT_THRESHOLD_IN_LOCK_MODE = 60f;
 
-	// Token: 0x0400CAAB RID: 51883
+	// Token: 0x0400CE86 RID: 52870
 	[StaticVariableRuleIgnore]
 	private static readonly ESkillGenre[] interruptAutoMoving = new ESkillGenre[]
 	{
@@ -3837,324 +3760,324 @@ public class CharacterInputComponent : EntityComponent, IInputHandler, IStaticVa
 		ESkillGenre.战斗幻象技9
 	};
 
-	// Token: 0x0400CAAC RID: 51884
+	// Token: 0x0400CE87 RID: 52871
 	[StaticVariableRuleIgnore]
 	private static readonly Stat GetCommandStat = Stat.Create("CharacterInputComponent.GetCommand", "", "");
 
-	// Token: 0x0400CAAD RID: 51885
+	// Token: 0x0400CE88 RID: 52872
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ExecuteCommandStat = Stat.Create("CharacterInputComponent.ExecuteCommand", "", "");
 
-	// Token: 0x0400CAAE RID: 51886
+	// Token: 0x0400CE89 RID: 52873
 	[StaticVariableRuleIgnore]
 	private static readonly Stat DispatchPressEventStat = Stat.Create("CharacterInputComponent.DispatchPressEvent", "", "");
 
-	// Token: 0x0400CAAF RID: 51887
+	// Token: 0x0400CE8A RID: 52874
 	[StaticVariableRuleIgnore]
 	private static readonly Stat DispatchReleaseEventStat = Stat.Create("CharacterInputComponent.DispatchReleaseEvent", "", "");
 
-	// Token: 0x0400CAB0 RID: 51888
+	// Token: 0x0400CE8B RID: 52875
 	[StaticVariableRuleIgnore]
 	private static readonly Stat HandlePressStat = Stat.Create("CharacterInputComponent.HandlePress", "", "");
 
-	// Token: 0x0400CAB1 RID: 51889
+	// Token: 0x0400CE8C RID: 52876
 	[StaticVariableRuleIgnore]
 	private static readonly Stat HandleReleaseStat = Stat.Create("CharacterInputComponent.HandleRelease", "", "");
 
-	// Token: 0x0400CAB2 RID: 51890
+	// Token: 0x0400CE8D RID: 52877
 	private readonly global::Vector TempVector = global::Vector.Create();
 
-	// Token: 0x0400CAB3 RID: 51891
+	// Token: 0x0400CE8E RID: 52878
 	private readonly global::Vector TempVector2 = global::Vector.Create();
 
-	// Token: 0x0400CAB4 RID: 51892
+	// Token: 0x0400CE8F RID: 52879
 	private readonly Rotator TempRotator = Rotator.Create();
 
-	// Token: 0x0400CAB5 RID: 51893
+	// Token: 0x0400CE90 RID: 52880
 	private readonly Quat TempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400CAB6 RID: 51894
+	// Token: 0x0400CE91 RID: 52881
 	private readonly Quat TempQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400CAB7 RID: 51895
+	// Token: 0x0400CE92 RID: 52882
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CAB8 RID: 51896
+	// Token: 0x0400CE93 RID: 52883
 	[Nullable(2)]
 	private CharacterAbilityComponent AbilityComp;
 
-	// Token: 0x0400CAB9 RID: 51897
+	// Token: 0x0400CE94 RID: 52884
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400CABA RID: 51898
+	// Token: 0x0400CE95 RID: 52885
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent StateComp;
 
-	// Token: 0x0400CABB RID: 51899
+	// Token: 0x0400CE96 RID: 52886
 	[Nullable(2)]
 	private CharacterSkillComponent SkillComponent;
 
-	// Token: 0x0400CABC RID: 51900
+	// Token: 0x0400CE97 RID: 52887
 	[Nullable(2)]
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400CABD RID: 51901
+	// Token: 0x0400CE98 RID: 52888
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent UnifiedComp;
 
-	// Token: 0x0400CABE RID: 51902
+	// Token: 0x0400CE99 RID: 52889
 	[Nullable(2)]
 	private TsBaseCharacter CharacterInternal;
 
-	// Token: 0x0400CABF RID: 51903
+	// Token: 0x0400CE9A RID: 52890
 	[Nullable(2)]
 	private BP_CharacterController_C CharacterControllerInternal;
 
-	// Token: 0x0400CAC0 RID: 51904
+	// Token: 0x0400CE9B RID: 52891
 	[Nullable(2)]
 	private CharacterInputLayer InputLayer;
 
-	// Token: 0x0400CAC1 RID: 51905
+	// Token: 0x0400CE9C RID: 52892
 	[Nullable(2)]
 	private ExtraInputLayer ExtraInputLayer;
 
-	// Token: 0x0400CAC2 RID: 51906
+	// Token: 0x0400CE9D RID: 52893
 	private readonly List<InputEvent> InputEvents = new List<InputEvent>();
 
-	// Token: 0x0400CAC3 RID: 51907
+	// Token: 0x0400CE9E RID: 52894
+	private readonly HashSet<ICharacterInputObserver> InputObservers = new HashSet<ICharacterInputObserver>();
+
+	// Token: 0x0400CE9F RID: 52895
 	private readonly List<InputCache> InputCaches = new List<InputCache>();
 
-	// Token: 0x0400CAC4 RID: 51908
+	// Token: 0x0400CEA0 RID: 52896
 	private readonly Dictionary<EInputAxis, float> AxisValues = new Dictionary<EInputAxis, float>();
 
-	// Token: 0x0400CAC5 RID: 51909
+	// Token: 0x0400CEA1 RID: 52897
 	[Nullable(2)]
 	private InputFilter InputGroup;
 
-	// Token: 0x0400CAC6 RID: 51910
+	// Token: 0x0400CEA2 RID: 52898
 	private readonly global::Vector MoveVectorCache = global::Vector.Create();
 
-	// Token: 0x0400CAC7 RID: 51911
+	// Token: 0x0400CEA3 RID: 52899
 	private readonly global::Vector ProcessedMoveInput = global::Vector.Create();
 
-	// Token: 0x0400CAC8 RID: 51912
+	// Token: 0x0400CEA4 RID: 52900
 	[Nullable(2)]
 	private InputAngleRange[] InputAngleRanges;
 
-	// Token: 0x0400CAC9 RID: 51913
+	// Token: 0x0400CEA5 RID: 52901
 	private int MoveInputOuterRingEnableCount;
 
-	// Token: 0x0400CACA RID: 51914
+	// Token: 0x0400CEA6 RID: 52902
 	private readonly global::Vector MoveDirectionCache = global::Vector.Create();
 
-	// Token: 0x0400CACB RID: 51915
+	// Token: 0x0400CEA7 RID: 52903
 	private readonly global::Vector WorldMoveDirectionCache = global::Vector.Create();
 
-	// Token: 0x0400CACC RID: 51916
+	// Token: 0x0400CEA8 RID: 52904
 	private bool IsLocalInputInternal;
 
-	// Token: 0x0400CACD RID: 51917
+	// Token: 0x0400CEA9 RID: 52905
 	private bool IsOnlyAllowFightInputInternal;
 
-	// Token: 0x0400CACE RID: 51918
+	// Token: 0x0400CEAA RID: 52906
 	private double LastMovementInputTime = -1.0;
 
-	// Token: 0x0400CACF RID: 51919
+	// Token: 0x0400CEAB RID: 52907
 	private static Dictionary<CSharpScript.Game.Input.EInputAction, bool> HoldPressMap;
 
-	// Token: 0x0400CAD0 RID: 51920
+	// Token: 0x0400CEAC RID: 52908
 	private readonly Dictionary<ECommandType, double> CommandTimeMap = new Dictionary<ECommandType, double>();
 
-	// Token: 0x0400CAD1 RID: 51921
+	// Token: 0x0400CEAD RID: 52909
 	private int? DisableHandle;
 
-	// Token: 0x0400CAD2 RID: 51922
+	// Token: 0x0400CEAE RID: 52910
 	private bool AutomaticFlightMode;
 
-	// Token: 0x0400CAD3 RID: 51923
+	// Token: 0x0400CEAF RID: 52911
 	[Nullable(2)]
 	private AutomaticFlightData AutomaticFlightDataAsset;
 
-	// Token: 0x0400CAD4 RID: 51924
+	// Token: 0x0400CEB0 RID: 52912
 	private float AutomaticFlightModeTimeCache;
 
-	// Token: 0x0400CAD5 RID: 51925
+	// Token: 0x0400CEB1 RID: 52913
 	private bool CameraDrivenAutoFlightMode;
 
-	// Token: 0x0400CAD6 RID: 51926
+	// Token: 0x0400CEB2 RID: 52914
 	[Nullable(2)]
 	private CameraDrivenAutoFlightData CameraDrivenAutoFlightDataAsset;
 
-	// Token: 0x0400CAD7 RID: 51927
+	// Token: 0x0400CEB3 RID: 52915
 	private bool IsInCameraDrivenAutoFlight;
 
-	// Token: 0x0400CAD8 RID: 51928
+	// Token: 0x0400CEB4 RID: 52916
 	private bool IsStartCameraDrivenAutoFlightTick;
 
-	// Token: 0x0400CAD9 RID: 51929
+	// Token: 0x0400CEB5 RID: 52917
 	private float CameraDrivenAutoFlightTime;
 
-	// Token: 0x0400CADA RID: 51930
+	// Token: 0x0400CEB6 RID: 52918
 	private float MoveDirectionDistanceMin;
 
-	// Token: 0x0400CADB RID: 51931
+	// Token: 0x0400CEB7 RID: 52919
 	private float MoveDirectionDistanceMax;
 
-	// Token: 0x0400CADC RID: 51932
+	// Token: 0x0400CEB8 RID: 52920
 	private float MovementDirectionAngleThreshold;
 
-	// Token: 0x0400CADD RID: 51933
+	// Token: 0x0400CEB9 RID: 52921
 	private float StandInputDelayCountDown;
 
-	// Token: 0x0400CADE RID: 51934
-	private global::Vector CacheStandInputDirect = new global::Vector();
-
-	// Token: 0x0400CADF RID: 51935
+	// Token: 0x0400CEBA RID: 52922
 	private bool NextFrameClear;
 
-	// Token: 0x0400CAE0 RID: 51936
+	// Token: 0x0400CEBB RID: 52923
 	private readonly HashSet<EInputAxis> NextFrameClearAxis = new HashSet<EInputAxis>();
 
-	// Token: 0x0400CAE1 RID: 51937
+	// Token: 0x0400CEBC RID: 52924
 	private bool LastShowMouseCursor;
 
-	// Token: 0x0400CAE2 RID: 51938
+	// Token: 0x0400CEBD RID: 52925
 	private readonly List<InputEvent> TestInputEvent = new List<InputEvent>();
 
-	// Token: 0x0400CAE3 RID: 51939
+	// Token: 0x0400CEBE RID: 52926
 	private readonly Quat CameraInputQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400CAE4 RID: 51940
+	// Token: 0x0400CEBF RID: 52927
 	private readonly global::Vector PhotoMoveInput = global::Vector.Create();
 
-	// Token: 0x0400CAE5 RID: 51941
+	// Token: 0x0400CEC0 RID: 52928
 	private readonly global::Vector CurrentMoveDirection = global::Vector.Create();
 
-	// Token: 0x0400CAE6 RID: 51942
+	// Token: 0x0400CEC1 RID: 52929
 	[Nullable(2)]
 	private ITagTask TagEventJump;
 
-	// Token: 0x0400CAE7 RID: 51943
+	// Token: 0x0400CEC2 RID: 52930
 	[Nullable(2)]
 	private ITagTask TagEventClimb;
 
-	// Token: 0x0400CAE8 RID: 51944
+	// Token: 0x0400CEC3 RID: 52931
 	[Nullable(2)]
 	private ITagTask TagEventAttack;
 
-	// Token: 0x0400CAE9 RID: 51945
+	// Token: 0x0400CEC4 RID: 52932
 	[Nullable(2)]
 	private ITagTask TagEventDodge;
 
-	// Token: 0x0400CAEA RID: 51946
+	// Token: 0x0400CEC5 RID: 52933
 	[Nullable(2)]
 	private ITagTask TagEventSkill;
 
-	// Token: 0x0400CAEB RID: 51947
+	// Token: 0x0400CEC6 RID: 52934
 	[Nullable(2)]
 	private ITagTask TagEventVision1;
 
-	// Token: 0x0400CAEC RID: 51948
+	// Token: 0x0400CEC7 RID: 52935
 	[Nullable(2)]
 	private ITagTask TagEventUltimateSkill;
 
-	// Token: 0x0400CAED RID: 51949
+	// Token: 0x0400CEC8 RID: 52936
 	[Nullable(2)]
 	private ITagTask TagEventVision2;
 
-	// Token: 0x0400CAEE RID: 51950
+	// Token: 0x0400CEC9 RID: 52937
 	[Nullable(2)]
 	private ITagTask TagEventChangeRoll1;
 
-	// Token: 0x0400CAEF RID: 51951
+	// Token: 0x0400CECA RID: 52938
 	[Nullable(2)]
 	private ITagTask TagEventChangeRoll2;
 
-	// Token: 0x0400CAF0 RID: 51952
+	// Token: 0x0400CECB RID: 52939
 	[Nullable(2)]
 	private ITagTask TagEventChangeRoll3;
 
-	// Token: 0x0400CAF1 RID: 51953
+	// Token: 0x0400CECC RID: 52940
 	[Nullable(2)]
 	private ITagTask TagEventLock;
 
-	// Token: 0x0400CAF2 RID: 51954
+	// Token: 0x0400CECD RID: 52941
 	[Nullable(2)]
 	private ITagTask TagEventAim;
 
-	// Token: 0x0400CAF3 RID: 51955
+	// Token: 0x0400CECE RID: 52942
 	[Nullable(2)]
 	private ITagTask TagEventMove;
 
-	// Token: 0x0400CAF4 RID: 51956
+	// Token: 0x0400CECF RID: 52943
 	private bool IsMoveAxisToButtonEnabled;
 
-	// Token: 0x0400CAF5 RID: 51957
+	// Token: 0x0400CED0 RID: 52944
 	[Nullable(2)]
 	private MoveInputSimButtonLogic MoveAxisToButtonLogic;
 
-	// Token: 0x0400CAF6 RID: 51958
+	// Token: 0x0400CED1 RID: 52945
 	[Nullable(2)]
 	private SInputActive CurrentMoveAxisToButtonConfig;
 
-	// Token: 0x0400CAF7 RID: 51959
+	// Token: 0x0400CED2 RID: 52946
 	[Nullable(2)]
 	private InputActiveCondition MoveAxisToButtonActiveCondition;
 
-	// Token: 0x0400CAF8 RID: 51960
+	// Token: 0x0400CED3 RID: 52947
 	private bool InCameraFollowInput;
 
-	// Token: 0x0400CAF9 RID: 51961
+	// Token: 0x0400CED4 RID: 52948
 	private readonly List<ITagTask> CameraFollowInputTagTasks = new List<ITagTask>();
 
-	// Token: 0x0400CAFA RID: 51962
+	// Token: 0x0400CED5 RID: 52949
 	private readonly Dictionary<int, string> TagToDaPathMap = new Dictionary<int, string>();
 
-	// Token: 0x0400CAFB RID: 51963
+	// Token: 0x0400CED6 RID: 52950
 	private bool CameraFollowInputLockRunState;
 
-	// Token: 0x0400CAFC RID: 51964
+	// Token: 0x0400CED7 RID: 52951
 	private bool CameraFollowInputInSprintState;
 
-	// Token: 0x0400CAFD RID: 51965
+	// Token: 0x0400CED8 RID: 52952
 	[Nullable(2)]
 	private CameraFollowInputConfig CameraFollowInputConfig;
 
-	// Token: 0x0400CAFE RID: 51966
+	// Token: 0x0400CED9 RID: 52953
 	private bool UseActorRelativeMoveInput;
 
-	// Token: 0x0400CAFF RID: 51967
+	// Token: 0x0400CEDA RID: 52954
 	private bool InvertMoveForward;
 
-	// Token: 0x0400CB00 RID: 51968
+	// Token: 0x0400CEDB RID: 52955
 	private bool InvertMoveRight;
 
-	// Token: 0x0400CB01 RID: 51969
+	// Token: 0x0400CEDC RID: 52956
 	[Nullable(2)]
 	private InputContinuously AutoMovingConfigInternal;
 
-	// Token: 0x0400CB02 RID: 51970
+	// Token: 0x0400CEDD RID: 52957
 	private float AutoSprintTime;
 
-	// Token: 0x0400CB03 RID: 51971
+	// Token: 0x0400CEDE RID: 52958
 	private float AutoSprintConfigTime;
 
-	// Token: 0x0400CB04 RID: 51972
+	// Token: 0x0400CEDF RID: 52959
 	private bool IsOverShoulderMode;
 
-	// Token: 0x0400CB05 RID: 51973
+	// Token: 0x0400CEE0 RID: 52960
 	private bool IsOverShoulderSprint;
 
-	// Token: 0x0400CB06 RID: 51974
+	// Token: 0x0400CEE1 RID: 52961
 	[Nullable(2)]
 	private ITagTask ChangeOverShoulderSprintMode;
 
-	// Token: 0x0400CB07 RID: 51975
+	// Token: 0x0400CEE2 RID: 52962
 	[Nullable(2)]
 	private OverShoulderModeConfig OverShoulderConfig;
 
-	// Token: 0x0400CB08 RID: 51976
+	// Token: 0x0400CEE3 RID: 52963
 	private global::Vector LastCameraDir = global::Vector.Create();
 }

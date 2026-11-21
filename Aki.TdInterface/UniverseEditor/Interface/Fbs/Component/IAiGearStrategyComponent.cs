@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E7D RID: 20093
+	// Token: 0x0200538E RID: 21390
 	public struct IAiGearStrategyComponent : IFlatbufferObject
 	{
-		// Token: 0x17008FF5 RID: 36853
-		// (get) Token: 0x0601F964 RID: 129380 RVA: 0x00466600 File Offset: 0x00464800
+		// Token: 0x1700972E RID: 38702
+		// (get) Token: 0x060215AF RID: 136623 RVA: 0x0049A618 File Offset: 0x00498818
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F965 RID: 129381 RVA: 0x0046660D File Offset: 0x0046480D
+		// Token: 0x060215B0 RID: 136624 RVA: 0x0049A625 File Offset: 0x00498825
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F966 RID: 129382 RVA: 0x00466614 File Offset: 0x00464814
+		// Token: 0x060215B1 RID: 136625 RVA: 0x0049A62C File Offset: 0x0049882C
 		public static IAiGearStrategyComponent GetRootAsIAiGearStrategyComponent(ByteBuffer _bb)
 		{
 			return IAiGearStrategyComponent.GetRootAsIAiGearStrategyComponent(_bb, default(IAiGearStrategyComponent));
 		}
 
-		// Token: 0x0601F967 RID: 129383 RVA: 0x00466630 File Offset: 0x00464830
+		// Token: 0x060215B2 RID: 136626 RVA: 0x0049A648 File Offset: 0x00498848
 		public static IAiGearStrategyComponent GetRootAsIAiGearStrategyComponent(ByteBuffer _bb, IAiGearStrategyComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F968 RID: 129384 RVA: 0x0046664D File Offset: 0x0046484D
+		// Token: 0x060215B3 RID: 136627 RVA: 0x0049A665 File Offset: 0x00498865
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F969 RID: 129385 RVA: 0x0046665C File Offset: 0x0046485C
+		// Token: 0x060215B4 RID: 136628 RVA: 0x0049A674 File Offset: 0x00498874
 		public IAiGearStrategyComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008FF6 RID: 36854
-		// (get) Token: 0x0601F96A RID: 129386 RVA: 0x0046666C File Offset: 0x0046486C
+		// Token: 0x1700972F RID: 38703
+		// (get) Token: 0x060215B5 RID: 136629 RVA: 0x0049A684 File Offset: 0x00498884
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17008FF7 RID: 36855
-		// (get) Token: 0x0601F96B RID: 129387 RVA: 0x004666AC File Offset: 0x004648AC
+		// Token: 0x17009730 RID: 38704
+		// (get) Token: 0x060215B6 RID: 136630 RVA: 0x0049A6C4 File Offset: 0x004988C4
 		public TAiGearStrategy StrategyTypeType
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F96C RID: 129388 RVA: 0x004666E8 File Offset: 0x004648E8
+		// Token: 0x060215B7 RID: 136631 RVA: 0x0049A700 File Offset: 0x00498900
 		public TTable? StrategyType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -84,20 +84,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601F96D RID: 129389 RVA: 0x0046672C File Offset: 0x0046492C
+		// Token: 0x060215B8 RID: 136632 RVA: 0x0049A744 File Offset: 0x00498944
 		public IRaceStrategy StrategyTypeAsIRaceStrategy()
 		{
 			return this.StrategyType<IRaceStrategy>().Value;
 		}
 
-		// Token: 0x0601F96E RID: 129390 RVA: 0x00466748 File Offset: 0x00464948
+		// Token: 0x060215B9 RID: 136633 RVA: 0x0049A760 File Offset: 0x00498960
 		public IRenjuStrategy StrategyTypeAsIRenjuStrategy()
 		{
 			return this.StrategyType<IRenjuStrategy>().Value;
 		}
 
-		// Token: 0x17008FF8 RID: 36856
-		// (get) Token: 0x0601F96F RID: 129391 RVA: 0x00466764 File Offset: 0x00464964
+		// Token: 0x17009731 RID: 38705
+		// (get) Token: 0x060215BA RID: 136634 RVA: 0x0049A77C File Offset: 0x0049897C
 		public byte NullMask
 		{
 			get
@@ -111,7 +111,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F970 RID: 129392 RVA: 0x004667A1 File Offset: 0x004649A1
+		// Token: 0x060215BB RID: 136635 RVA: 0x0049A7B9 File Offset: 0x004989B9
 		public static Offset<IAiGearStrategyComponent> CreateIAiGearStrategyComponent(FlatBufferBuilder builder, bool Disabled = false, TAiGearStrategy StrategyType_type = TAiGearStrategy.NONE, int StrategyTypeOffset = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -122,43 +122,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAiGearStrategyComponent.EndIAiGearStrategyComponent(builder);
 		}
 
-		// Token: 0x0601F971 RID: 129393 RVA: 0x004667CD File Offset: 0x004649CD
+		// Token: 0x060215BC RID: 136636 RVA: 0x0049A7E5 File Offset: 0x004989E5
 		public static void StartIAiGearStrategyComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601F972 RID: 129394 RVA: 0x004667D6 File Offset: 0x004649D6
+		// Token: 0x060215BD RID: 136637 RVA: 0x0049A7EE File Offset: 0x004989EE
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x0601F973 RID: 129395 RVA: 0x004667E1 File Offset: 0x004649E1
+		// Token: 0x060215BE RID: 136638 RVA: 0x0049A7F9 File Offset: 0x004989F9
 		public static void AddStrategyTypeType(FlatBufferBuilder builder, TAiGearStrategy strategyTypeType)
 		{
 			builder.AddByte(1, (byte)strategyTypeType, 0);
 		}
 
-		// Token: 0x0601F974 RID: 129396 RVA: 0x004667EC File Offset: 0x004649EC
+		// Token: 0x060215BF RID: 136639 RVA: 0x0049A804 File Offset: 0x00498A04
 		public static void AddStrategyType(FlatBufferBuilder builder, int strategyTypeOffset)
 		{
 			builder.AddOffset(2, strategyTypeOffset, 0);
 		}
 
-		// Token: 0x0601F975 RID: 129397 RVA: 0x004667F7 File Offset: 0x004649F7
+		// Token: 0x060215C0 RID: 136640 RVA: 0x0049A80F File Offset: 0x00498A0F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0601F976 RID: 129398 RVA: 0x00466802 File Offset: 0x00464A02
+		// Token: 0x060215C1 RID: 136641 RVA: 0x0049A81A File Offset: 0x00498A1A
 		public static Offset<IAiGearStrategyComponent> EndIAiGearStrategyComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IAiGearStrategyComponent>(builder.EndTable());
 		}
 
-		// Token: 0x0601F977 RID: 129399 RVA: 0x00466810 File Offset: 0x00464A10
+		// Token: 0x060215C2 RID: 136642 RVA: 0x0049A828 File Offset: 0x00498A28
 		public IAiGearStrategyComponentT UnPack()
 		{
 			IAiGearStrategyComponentT aiGearStrategyComponentT = new IAiGearStrategyComponentT();
@@ -166,7 +166,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return aiGearStrategyComponentT;
 		}
 
-		// Token: 0x0601F978 RID: 129400 RVA: 0x0046682C File Offset: 0x00464A2C
+		// Token: 0x060215C3 RID: 136643 RVA: 0x0049A844 File Offset: 0x00498A44
 		public void UnPackTo(IAiGearStrategyComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601F979 RID: 129401 RVA: 0x004668EC File Offset: 0x00464AEC
+		// Token: 0x060215C4 RID: 136644 RVA: 0x0049A904 File Offset: 0x00498B04
 		public static Offset<IAiGearStrategyComponent> Pack(FlatBufferBuilder builder, IAiGearStrategyComponentT _o)
 		{
 			if (_o == null)
@@ -199,7 +199,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAiGearStrategyComponent.CreateIAiGearStrategyComponent(builder, _o.Disabled, strategyType_type, strategyTypeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400DC37 RID: 56375
+		// Token: 0x0400E7B1 RID: 59313
 		private Table __p;
 	}
 }

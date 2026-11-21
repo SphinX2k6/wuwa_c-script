@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001789 RID: 6025
+	// Token: 0x0200190A RID: 6410
 	public class IActorLookAtPlayerData_SetValue
 	{
-		// Token: 0x0400510E RID: 20750
+		// Token: 0x04005544 RID: 21828
 		public EActorLookAtMode Type;
 
-		// Token: 0x0400510F RID: 20751
+		// Token: 0x04005545 RID: 21829
 		public bool? Lock;
 	}
 }

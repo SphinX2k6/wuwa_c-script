@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 {
-	// Token: 0x020062B3 RID: 25267
+	// Token: 0x02005231 RID: 21041
 	public class ActivityPreWarmCollectItem : UiPanelBase
 	{
-		// Token: 0x0603F8BD RID: 260285 RVA: 0x00F5EA70 File Offset: 0x00F5CC70
+		// Token: 0x0603457E RID: 214398 RVA: 0x00EA59CC File Offset: 0x00EA3BCC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F8BE RID: 260286 RVA: 0x00F5EBBB File Offset: 0x00F5CDBB
+		// Token: 0x0603457F RID: 214399 RVA: 0x00EA5B17 File Offset: 0x00EA3D17
 		private void OnSelectItem(EToggleState _)
 		{
 			if (this.SelectCallBack == null)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			this.SelectCallBack(this.Id);
 		}
 
-		// Token: 0x0603F8BF RID: 260287 RVA: 0x00F5EBD7 File Offset: 0x00F5CDD7
+		// Token: 0x06034580 RID: 214400 RVA: 0x00EA5B33 File Offset: 0x00EA3D33
 		[NullableContext(1)]
 		public void SetSelectCallBack(Action<int> callBack, int id)
 		{
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			this.SelectCallBack = callBack;
 		}
 
-		// Token: 0x0603F8C0 RID: 260288 RVA: 0x00F5EBE8 File Offset: 0x00F5CDE8
+		// Token: 0x06034581 RID: 214401 RVA: 0x00EA5B44 File Offset: 0x00EA3D44
 		public void Refresh()
 		{
 			UUIItem curStateItem = this.CurStateItem;
@@ -109,45 +109,45 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			curStateItem2.SetUIActive(true);
 		}
 
-		// Token: 0x0603F8C1 RID: 260289 RVA: 0x00F5ED0F File Offset: 0x00F5CF0F
+		// Token: 0x06034582 RID: 214402 RVA: 0x00EA5C6B File Offset: 0x00EA3E6B
 		public void SetToggleState(EToggleState state, bool bFireEvent = false)
 		{
 			base.GetExtendToggle(0).SetToggleState(state, bFireEvent, false, false);
 		}
 
-		// Token: 0x040213C8 RID: 136136
+		// Token: 0x0401BCF7 RID: 113911
 		private int Id;
 
-		// Token: 0x040213C9 RID: 136137
+		// Token: 0x0401BCF8 RID: 113912
 		[Nullable(2)]
 		private Action<int> SelectCallBack;
 
-		// Token: 0x040213CA RID: 136138
+		// Token: 0x0401BCF9 RID: 113913
 		[Nullable(2)]
 		private UUIItem CurStateItem;
 
-		// Token: 0x0200C48D RID: 50317
+		// Token: 0x0200AE74 RID: 44660
 		private class EComponents
 		{
-			// Token: 0x0403B4E0 RID: 242912
+			// Token: 0x04035E42 RID: 220738
 			public const int Item = 0;
 
-			// Token: 0x0403B4E1 RID: 242913
+			// Token: 0x04035E43 RID: 220739
 			public const int Num = 1;
 
-			// Token: 0x0403B4E2 RID: 242914
+			// Token: 0x04035E44 RID: 220740
 			public const int Icon = 2;
 
-			// Token: 0x0403B4E3 RID: 242915
+			// Token: 0x04035E45 RID: 220741
 			public const int Lock = 3;
 
-			// Token: 0x0403B4E4 RID: 242916
+			// Token: 0x04035E46 RID: 220742
 			public const int Unknown = 4;
 
-			// Token: 0x0403B4E5 RID: 242917
+			// Token: 0x04035E47 RID: 220743
 			public const int Finished = 5;
 
-			// Token: 0x0403B4E6 RID: 242918
+			// Token: 0x04035E48 RID: 220744
 			public const int UnknownIcon = 6;
 		}
 	}

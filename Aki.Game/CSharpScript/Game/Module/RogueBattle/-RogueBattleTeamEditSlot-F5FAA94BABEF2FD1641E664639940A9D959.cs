@@ -2,40 +2,40 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EAE RID: 20142
+	// Token: 0x02003E77 RID: 15991
 	internal enum <RogueBattleTeamEditSlot>F5FAA94BABEF2FD1641E664639940A9D959C1C864F89B62FE958CACAB7EB5FFB1__ERogueBattleTeamEditSlotDefine
 	{
-		// Token: 0x0401B7C6 RID: 112582
+		// Token: 0x04016199 RID: 90521
 		BtnSelf,
-		// Token: 0x0401B7C7 RID: 112583
+		// Token: 0x0401619A RID: 90522
 		RoleItem,
-		// Token: 0x0401B7C8 RID: 112584
+		// Token: 0x0401619B RID: 90523
 		RoleIconSpine,
-		// Token: 0x0401B7C9 RID: 112585
+		// Token: 0x0401619C RID: 90524
 		TxtName,
-		// Token: 0x0401B7CA RID: 112586
+		// Token: 0x0401619D RID: 90525
 		TxtLevel,
-		// Token: 0x0401B7CB RID: 112587
+		// Token: 0x0401619E RID: 90526
 		ElementItem,
-		// Token: 0x0401B7CC RID: 112588
+		// Token: 0x0401619F RID: 90527
 		TxtSlotNumber,
-		// Token: 0x0401B7CD RID: 112589
+		// Token: 0x040161A0 RID: 90528
 		FettersLayout,
-		// Token: 0x0401B7CE RID: 112590
+		// Token: 0x040161A1 RID: 90529
 		FetterItem,
-		// Token: 0x0401B7CF RID: 112591
+		// Token: 0x040161A2 RID: 90530
 		TxtRoleLv,
-		// Token: 0x0401B7D0 RID: 112592
+		// Token: 0x040161A3 RID: 90531
 		RedDotItem,
-		// Token: 0x0401B7D1 RID: 112593
+		// Token: 0x040161A4 RID: 90532
 		Drag = 17,
-		// Token: 0x0401B7D2 RID: 112594
+		// Token: 0x040161A5 RID: 90533
 		DragStateItem,
-		// Token: 0x0401B7D3 RID: 112595
+		// Token: 0x040161A6 RID: 90534
 		LockItem,
-		// Token: 0x0401B7D4 RID: 112596
+		// Token: 0x040161A7 RID: 90535
 		OtherOnItem,
-		// Token: 0x0401B7D5 RID: 112597
+		// Token: 0x040161A8 RID: 90536
 		AddRoleIcon
 	}
 }

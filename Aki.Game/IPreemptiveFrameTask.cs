@@ -1,38 +1,38 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020021F8 RID: 8696
+// Token: 0x020016DC RID: 5852
 [NullableContext(2)]
 public interface IPreemptiveFrameTask
 {
-	// Token: 0x17001578 RID: 5496
-	// (get) Token: 0x06010EA3 RID: 69283
-	// (set) Token: 0x06010EA4 RID: 69284
+	// Token: 0x170015AF RID: 5551
+	// (get) Token: 0x0600E336 RID: 58166
+	// (set) Token: 0x0600E337 RID: 58167
 	int Priority { get; set; }
 
-	// Token: 0x17001579 RID: 5497
-	// (get) Token: 0x06010EA5 RID: 69285
-	// (set) Token: 0x06010EA6 RID: 69286
+	// Token: 0x170015B0 RID: 5552
+	// (get) Token: 0x0600E338 RID: 58168
+	// (set) Token: 0x0600E339 RID: 58169
 	[Nullable(1)]
 	TPreemptiveExecuteMethod Execute { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x1700157A RID: 5498
-	// (get) Token: 0x06010EA7 RID: 69287
-	// (set) Token: 0x06010EA8 RID: 69288
+	// Token: 0x170015B1 RID: 5553
+	// (get) Token: 0x0600E33A RID: 58170
+	// (set) Token: 0x0600E33B RID: 58171
 	TPreemptiveExecuteMethod FrameExecute { get; set; }
 
-	// Token: 0x1700157B RID: 5499
-	// (get) Token: 0x06010EA9 RID: 69289
-	// (set) Token: 0x06010EAA RID: 69290
+	// Token: 0x170015B2 RID: 5554
+	// (get) Token: 0x0600E33C RID: 58172
+	// (set) Token: 0x0600E33D RID: 58173
 	TPreemptiveIsCompleteMethod IsComplete { get; set; }
 
-	// Token: 0x1700157C RID: 5500
-	// (get) Token: 0x06010EAB RID: 69291
-	// (set) Token: 0x06010EAC RID: 69292
+	// Token: 0x170015B3 RID: 5555
+	// (get) Token: 0x0600E33E RID: 58174
+	// (set) Token: 0x0600E33F RID: 58175
 	TPreemptiveCancelMethod Cancel { get; set; }
 
-	// Token: 0x1700157D RID: 5501
-	// (get) Token: 0x06010EAD RID: 69293
-	// (set) Token: 0x06010EAE RID: 69294
+	// Token: 0x170015B4 RID: 5556
+	// (get) Token: 0x0600E340 RID: 58176
+	// (set) Token: 0x0600E341 RID: 58177
 	TGetPreemptiveResultMethod GetResult { get; set; }
 }

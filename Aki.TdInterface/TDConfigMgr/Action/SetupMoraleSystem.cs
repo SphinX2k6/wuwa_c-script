@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021E9 RID: 8681
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002454 RID: 9300
 	public class SetupMoraleSystem : ActionParams
 	{
-		// Token: 0x0600BEAF RID: 48815 RVA: 0x001B6DA8 File Offset: 0x001B4FA8
+		// Token: 0x0600CA6B RID: 51819 RVA: 0x001CE434 File Offset: 0x001CC634
 		private SetupMoraleSystem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BEB0 RID: 48816 RVA: 0x001B6DE0 File Offset: 0x001B4FE0
+		// Token: 0x0600CA6C RID: 51820 RVA: 0x001CE46C File Offset: 0x001CC66C
 		public static SetupMoraleSystem Create([Nullable(2)] SetupMoraleSystem instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEB1 RID: 48817 RVA: 0x001B6DF3 File Offset: 0x001B4FF3
+		// Token: 0x0600CA6D RID: 51821 RVA: 0x001CE47F File Offset: 0x001CC67F
 		public static SetupMoraleSystem CreateFromSetValue([Nullable(2)] SetupMoraleSystem_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEB2 RID: 48818 RVA: 0x001B6E06 File Offset: 0x001B5006
+		// Token: 0x0600CA6E RID: 51822 RVA: 0x001CE492 File Offset: 0x001CC692
 		public SetupMoraleSystem_SetValue ToSetValue()
 		{
 			return new SetupMoraleSystem_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039DC RID: 14812
-		// (get) Token: 0x0600BEB3 RID: 48819 RVA: 0x001B6E25 File Offset: 0x001B5025
-		// (set) Token: 0x0600BEB4 RID: 48820 RVA: 0x001B6E50 File Offset: 0x001B5050
+		// Token: 0x17003CD1 RID: 15569
+		// (get) Token: 0x0600CA6F RID: 51823 RVA: 0x001CE4B1 File Offset: 0x001CC6B1
+		// (set) Token: 0x0600CA70 RID: 51824 RVA: 0x001CE4DC File Offset: 0x001CC6DC
 		public virtual int MoralePlayId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039DD RID: 14813
-		// (get) Token: 0x0600BEB5 RID: 48821 RVA: 0x001B6E5E File Offset: 0x001B505E
-		// (set) Token: 0x0600BEB6 RID: 48822 RVA: 0x001B6E89 File Offset: 0x001B5089
+		// Token: 0x17003CD2 RID: 15570
+		// (get) Token: 0x0600CA71 RID: 51825 RVA: 0x001CE4EA File Offset: 0x001CC6EA
+		// (set) Token: 0x0600CA72 RID: 51826 RVA: 0x001CE515 File Offset: 0x001CC715
 		public virtual bool IsOn
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071C3 RID: 29123
+		// Token: 0x0400780C RID: 30732
 		[Nullable(2)]
 		protected new SetupMoraleSystem FbInstance;
 
-		// Token: 0x040071C4 RID: 29124
+		// Token: 0x0400780D RID: 30733
 		[Nullable(2)]
 		protected SetupMoraleSystem_SetValue PocoInterface;
 	}

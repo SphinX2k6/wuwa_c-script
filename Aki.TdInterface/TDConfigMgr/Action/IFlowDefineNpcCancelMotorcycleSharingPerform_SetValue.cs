@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A84 RID: 6788
+	// Token: 0x02001C19 RID: 7193
 	public class IFlowDefineNpcCancelMotorcycleSharingPerform_SetValue
 	{
-		// Token: 0x040059AB RID: 22955
+		// Token: 0x04005E10 RID: 24080
 		public ENpcGroupPerformType Type;
 
-		// Token: 0x040059AC RID: 22956
-		[Nullable(1)]
+		// Token: 0x04005E11 RID: 24081
 		public string Key;
 	}
 }

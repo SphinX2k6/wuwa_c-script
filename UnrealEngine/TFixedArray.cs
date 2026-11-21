@@ -6,12 +6,12 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000072 RID: 114
+	// Token: 0x02000057 RID: 87
 	[NullableContext(1)]
 	[Nullable(0)]
-	public sealed class TFixedArray<[Nullable(2)] T> : UnrealProxyObject, IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable
+	public sealed class TFixedArray<[Nullable(2)] T> : UnrealProxyObject, IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable, IReadOnlyList<T>, IReadOnlyCollection<T>
 	{
-		// Token: 0x06000DF9 RID: 3577 RVA: 0x000147BD File Offset: 0x000129BD
+		// Token: 0x06000989 RID: 2441 RVA: 0x0000F4B5 File Offset: 0x0000D6B5
 		public TFixedArray(int InLength) : base(UnrealProxyObject.ENoInit.NoInit)
 		{
 			SharpherealAssert.Assert(InLength > 0);
@@ -19,7 +19,7 @@ namespace UnrealEngine
 			this._NativePtr = this.AllocNativePtr();
 		}
 
-		// Token: 0x06000DFA RID: 3578 RVA: 0x000147E2 File Offset: 0x000129E2
+		// Token: 0x0600098A RID: 2442 RVA: 0x0000F4DA File Offset: 0x0000D6DA
 		[NullableContext(2)]
 		public TFixedArray(IntPtr NativePtr, int InLength, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
@@ -31,7 +31,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000DFB RID: 3579 RVA: 0x0001480E File Offset: 0x00012A0E
+		// Token: 0x0600098B RID: 2443 RVA: 0x0000F506 File Offset: 0x0000D706
 		public TFixedArray(IntPtr NativePtr, int InLength, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(UnrealProxyObject.ENoInit.NoInit)
 		{
 			SharpherealAssert.Assert(InLength > 0);
@@ -40,7 +40,7 @@ namespace UnrealEngine
 			this.CopyAssign(NativePtr);
 		}
 
-		// Token: 0x06000DFC RID: 3580 RVA: 0x0001483C File Offset: 0x00012A3C
+		// Token: 0x0600098C RID: 2444 RVA: 0x0000F534 File Offset: 0x0000D734
 		protected override IntPtr AllocNativePtr()
 		{
 			NativeArrayProcessorFactory.AddRef(TFixedArray<T>.Processor);
@@ -49,7 +49,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06000DFD RID: 3581 RVA: 0x0001488B File Offset: 0x00012A8B
+		// Token: 0x0600098D RID: 2445 RVA: 0x0000F583 File Offset: 0x0000D783
 		protected override void DeallocNativePtr()
 		{
 			TFixedArray<T>.Processor.DestructValues(this._NativePtr, 0, this._Length);
@@ -57,8 +57,8 @@ namespace UnrealEngine
 			NativeArrayProcessorFactory.DecRef(TFixedArray<T>.Processor);
 		}
 
-		// Token: 0x170004A1 RID: 1185
-		// (get) Token: 0x06000DFE RID: 3582 RVA: 0x000148B9 File Offset: 0x00012AB9
+		// Token: 0x170000A9 RID: 169
+		// (get) Token: 0x0600098E RID: 2446 RVA: 0x0000F5B1 File Offset: 0x0000D7B1
 		public override bool AllowMoveAssign
 		{
 			get
@@ -67,8 +67,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004A2 RID: 1186
-		// (get) Token: 0x06000DFF RID: 3583 RVA: 0x000148BC File Offset: 0x00012ABC
+		// Token: 0x170000AA RID: 170
+		// (get) Token: 0x0600098F RID: 2447 RVA: 0x0000F5B4 File Offset: 0x0000D7B4
 		public override bool AllowCopyAssign
 		{
 			get
@@ -77,7 +77,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E00 RID: 3584 RVA: 0x000148BF File Offset: 0x00012ABF
+		// Token: 0x06000990 RID: 2448 RVA: 0x0000F5B7 File Offset: 0x0000D7B7
 		public override void CopyAssign(IntPtr FromNativePtr)
 		{
 			if (FromNativePtr == 0)
@@ -88,25 +88,25 @@ namespace UnrealEngine
 			TFixedArray<T>.Processor.CopyTo(FromNativePtr, this._NativePtr, this._Length);
 		}
 
-		// Token: 0x06000E01 RID: 3585 RVA: 0x000148E2 File Offset: 0x00012AE2
+		// Token: 0x06000991 RID: 2449 RVA: 0x0000F5DA File Offset: 0x0000D7DA
 		public override void CopyTo(IntPtr DestPtr, UScriptStructStackOnlyPtr NativeUStructPtr = default(UScriptStructStackOnlyPtr))
 		{
 			this.CopyTo(DestPtr);
 		}
 
-		// Token: 0x06000E02 RID: 3586 RVA: 0x000148EB File Offset: 0x00012AEB
+		// Token: 0x06000992 RID: 2450 RVA: 0x0000F5E3 File Offset: 0x0000D7E3
 		public void CopyTo(IntPtr DestPtr)
 		{
 			TFixedArray<T>.Processor.CopyTo(this._NativePtr, DestPtr, this._Length);
 		}
 
-		// Token: 0x06000E03 RID: 3587 RVA: 0x00014904 File Offset: 0x00012B04
+		// Token: 0x06000993 RID: 2451 RVA: 0x0000F5FC File Offset: 0x0000D7FC
 		public void CopyTo(TFixedArray<T> Dest)
 		{
 			TFixedArray<T>.Processor.CopyTo(this._NativePtr, Dest.NativePtr, Math.Min(this._Length, Dest._Length));
 		}
 
-		// Token: 0x06000E04 RID: 3588 RVA: 0x00014930 File Offset: 0x00012B30
+		// Token: 0x06000994 RID: 2452 RVA: 0x0000F628 File Offset: 0x0000D828
 		public void CopyAssign([Nullable(new byte[]
 		{
 			2,
@@ -130,8 +130,8 @@ namespace UnrealEngine
 			TFixedArray<T>.Processor.CopyTo(Src.NativePtr, this._NativePtr, Math.Min(this._Length, Src._Length));
 		}
 
-		// Token: 0x170004A3 RID: 1187
-		// (get) Token: 0x06000E05 RID: 3589 RVA: 0x000149C5 File Offset: 0x00012BC5
+		// Token: 0x170000AB RID: 171
+		// (get) Token: 0x06000995 RID: 2453 RVA: 0x0000F6BD File Offset: 0x0000D8BD
 		public int Count
 		{
 			get
@@ -140,8 +140,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004A4 RID: 1188
-		// (get) Token: 0x06000E06 RID: 3590 RVA: 0x000149CD File Offset: 0x00012BCD
+		// Token: 0x170000AC RID: 172
+		// (get) Token: 0x06000996 RID: 2454 RVA: 0x0000F6C5 File Offset: 0x0000D8C5
 		public bool IsReadOnly
 		{
 			get
@@ -150,7 +150,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004A5 RID: 1189
+		// Token: 0x170000AD RID: 173
 		public T this[int Index]
 		{
 			get
@@ -165,7 +165,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E09 RID: 3593 RVA: 0x00014A05 File Offset: 0x00012C05
+		// Token: 0x06000999 RID: 2457 RVA: 0x0000F6FD File Offset: 0x0000D8FD
 		[NullableContext(2)]
 		public T Get(int Index)
 		{
@@ -173,88 +173,88 @@ namespace UnrealEngine
 			return TFixedArray<T>.Processor.Get(this._NativePtr, Index);
 		}
 
-		// Token: 0x06000E0A RID: 3594 RVA: 0x00014A1F File Offset: 0x00012C1F
+		// Token: 0x0600099A RID: 2458 RVA: 0x0000F717 File Offset: 0x0000D917
 		public void Set(int Index, in T Value)
 		{
 			this.CheckValidIndex(Index);
 			TFixedArray<T>.Processor.Set(this._NativePtr, Index, Value);
 		}
 
-		// Token: 0x06000E0B RID: 3595 RVA: 0x00014A3F File Offset: 0x00012C3F
+		// Token: 0x0600099B RID: 2459 RVA: 0x0000F737 File Offset: 0x0000D937
 		[Obsolete("NotSupported")]
 		public void Add(T Item)
 		{
 			throw new NotSupportedException();
 		}
 
-		// Token: 0x06000E0C RID: 3596 RVA: 0x00014A46 File Offset: 0x00012C46
+		// Token: 0x0600099C RID: 2460 RVA: 0x0000F73E File Offset: 0x0000D93E
 		[Obsolete("NotSupported")]
 		public void Insert(int Index, T Value)
 		{
 			throw new NotSupportedException();
 		}
 
-		// Token: 0x06000E0D RID: 3597 RVA: 0x00014A4D File Offset: 0x00012C4D
+		// Token: 0x0600099D RID: 2461 RVA: 0x0000F745 File Offset: 0x0000D945
 		[Obsolete("NotSupported")]
 		public bool Remove(T Item)
 		{
 			throw new NotSupportedException();
 		}
 
-		// Token: 0x06000E0E RID: 3598 RVA: 0x00014A54 File Offset: 0x00012C54
+		// Token: 0x0600099E RID: 2462 RVA: 0x0000F74C File Offset: 0x0000D94C
 		[Obsolete("NotSupported")]
 		public void RemoveAt(int Index)
 		{
 			throw new NotSupportedException();
 		}
 
-		// Token: 0x06000E0F RID: 3599 RVA: 0x00014A5B File Offset: 0x00012C5B
+		// Token: 0x0600099F RID: 2463 RVA: 0x0000F753 File Offset: 0x0000D953
 		public bool Contains(T Value)
 		{
 			return TFixedArray<T>.Processor.FindIndex(this._NativePtr, this._Length, Value) != -1;
 		}
 
-		// Token: 0x06000E10 RID: 3600 RVA: 0x00014A7A File Offset: 0x00012C7A
+		// Token: 0x060009A0 RID: 2464 RVA: 0x0000F772 File Offset: 0x0000D972
 		public int FindIndex(in T Value)
 		{
 			return TFixedArray<T>.Processor.FindIndex(this._NativePtr, this._Length, Value);
 		}
 
-		// Token: 0x06000E11 RID: 3601 RVA: 0x00014A98 File Offset: 0x00012C98
+		// Token: 0x060009A1 RID: 2465 RVA: 0x0000F790 File Offset: 0x0000D990
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public bool IsValidIndex(int Index)
 		{
 			return Index >= 0 && Index < this._Length;
 		}
 
-		// Token: 0x06000E12 RID: 3602 RVA: 0x00014AA9 File Offset: 0x00012CA9
+		// Token: 0x060009A2 RID: 2466 RVA: 0x0000F7A1 File Offset: 0x0000D9A1
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public int Num()
 		{
 			return this._Length;
 		}
 
-		// Token: 0x06000E13 RID: 3603 RVA: 0x00014AB1 File Offset: 0x00012CB1
+		// Token: 0x060009A3 RID: 2467 RVA: 0x0000F7A9 File Offset: 0x0000D9A9
 		public void Clear()
 		{
 			TFixedArray<T>.Processor.DestructValues(this._NativePtr, 0, this._Length);
 			TFixedArray<T>.Processor.ConstructValues(this._NativePtr, 0, this._Length);
 		}
 
-		// Token: 0x06000E14 RID: 3604 RVA: 0x00014AE1 File Offset: 0x00012CE1
+		// Token: 0x060009A4 RID: 2468 RVA: 0x0000F7D9 File Offset: 0x0000D9D9
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public void Empty()
 		{
 			this.Clear();
 		}
 
-		// Token: 0x06000E15 RID: 3605 RVA: 0x00014AE9 File Offset: 0x00012CE9
+		// Token: 0x060009A5 RID: 2469 RVA: 0x0000F7E1 File Offset: 0x0000D9E1
 		public int IndexOf(T Item)
 		{
 			return this.FindIndex(Item);
 		}
 
-		// Token: 0x06000E16 RID: 3606 RVA: 0x00014AF4 File Offset: 0x00012CF4
+		// Token: 0x060009A6 RID: 2470 RVA: 0x0000F7EC File Offset: 0x0000D9EC
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		internal void CheckValidIndex(int Index)
 		{
@@ -270,7 +270,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E17 RID: 3607 RVA: 0x00014B54 File Offset: 0x00012D54
+		// Token: 0x060009A7 RID: 2471 RVA: 0x0000F84C File Offset: 0x0000DA4C
 		public void CopyTo(T[] Array, int ArrayIndex)
 		{
 			int num = 0;
@@ -281,29 +281,36 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E18 RID: 3608 RVA: 0x00014B88 File Offset: 0x00012D88
-		public IEnumerator<T> GetEnumerator()
+		// Token: 0x060009A8 RID: 2472 RVA: 0x0000F880 File Offset: 0x0000DA80
+		[NullableContext(0)]
+		public TFixedArray<T>.Enumerator GetEnumerator()
 		{
 			return new TFixedArray<T>.Enumerator(this);
 		}
 
-		// Token: 0x06000E19 RID: 3609 RVA: 0x00014B95 File Offset: 0x00012D95
+		// Token: 0x060009A9 RID: 2473 RVA: 0x0000F888 File Offset: 0x0000DA88
+		IEnumerator<T> IEnumerable<!0>.GetEnumerator()
+		{
+			return new TFixedArray<T>.Enumerator(this);
+		}
+
+		// Token: 0x060009AA RID: 2474 RVA: 0x0000F895 File Offset: 0x0000DA95
 		IEnumerator IEnumerable.GetEnumerator()
 		{
 			return new TFixedArray<T>.Enumerator(this);
 		}
 
-		// Token: 0x04000187 RID: 391
+		// Token: 0x04000140 RID: 320
 		internal static readonly NativeArrayProcessorBase<T> Processor = NativeArrayProcessorFactory<T>.Processor;
 
-		// Token: 0x04000188 RID: 392
+		// Token: 0x04000141 RID: 321
 		private int _Length;
 
-		// Token: 0x02002B20 RID: 11040
+		// Token: 0x020008CE RID: 2254
 		[Nullable(0)]
-		public struct Enumerator : IEnumerator<!0>, IEnumerator, IDisposable
+		public struct Enumerator : IEnumerator<T>, IEnumerator, IDisposable
 		{
-			// Token: 0x060284F5 RID: 165109 RVA: 0x003D5400 File Offset: 0x003D3600
+			// Token: 0x0600BEAF RID: 48815 RVA: 0x00130754 File Offset: 0x0012E954
 			public Enumerator(TFixedArray<T> Array)
 			{
 				this.<Array>P = Array;
@@ -311,7 +318,7 @@ namespace UnrealEngine
 				this._Index = 0;
 			}
 
-			// Token: 0x060284F6 RID: 165110 RVA: 0x003D541C File Offset: 0x003D361C
+			// Token: 0x0600BEB0 RID: 48816 RVA: 0x00130770 File Offset: 0x0012E970
 			public bool MoveNext()
 			{
 				if (this._Index < this.<Array>P.Num())
@@ -325,14 +332,24 @@ namespace UnrealEngine
 				return false;
 			}
 
-			// Token: 0x060284F7 RID: 165111 RVA: 0x003D5461 File Offset: 0x003D3661
+			// Token: 0x0600BEB1 RID: 48817 RVA: 0x001307B5 File Offset: 0x0012E9B5
 			public void Reset()
 			{
 				this._Index = 0;
 			}
 
-			// Token: 0x170099AC RID: 39340
-			// (get) Token: 0x060284F8 RID: 165112 RVA: 0x003D546A File Offset: 0x003D366A
+			// Token: 0x17002336 RID: 9014
+			// (get) Token: 0x0600BEB2 RID: 48818 RVA: 0x001307BE File Offset: 0x0012E9BE
+			public T Current
+			{
+				get
+				{
+					return this._Current;
+				}
+			}
+
+			// Token: 0x17002337 RID: 9015
+			// (get) Token: 0x0600BEB3 RID: 48819 RVA: 0x001307C6 File Offset: 0x0012E9C6
 			T IEnumerator<!0>.Current
 			{
 				get
@@ -341,8 +358,8 @@ namespace UnrealEngine
 				}
 			}
 
-			// Token: 0x170099AD RID: 39341
-			// (get) Token: 0x060284F9 RID: 165113 RVA: 0x003D5472 File Offset: 0x003D3672
+			// Token: 0x17002338 RID: 9016
+			// (get) Token: 0x0600BEB4 RID: 48820 RVA: 0x001307CE File Offset: 0x0012E9CE
 			[Nullable(2)]
 			object IEnumerator.Current
 			{
@@ -353,19 +370,19 @@ namespace UnrealEngine
 				}
 			}
 
-			// Token: 0x060284FA RID: 165114 RVA: 0x003D547F File Offset: 0x003D367F
+			// Token: 0x0600BEB5 RID: 48821 RVA: 0x001307DB File Offset: 0x0012E9DB
 			public void Dispose()
 			{
 			}
 
-			// Token: 0x0401636B RID: 90987
+			// Token: 0x04005781 RID: 22401
 			[CompilerGenerated]
 			private TFixedArray<T> <Array>P;
 
-			// Token: 0x0401636C RID: 90988
+			// Token: 0x04005782 RID: 22402
 			private int _Index;
 
-			// Token: 0x0401636D RID: 90989
+			// Token: 0x04005783 RID: 22403
 			private T _Current;
 		}
 	}

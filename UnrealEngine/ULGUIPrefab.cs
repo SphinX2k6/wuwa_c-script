@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020AE RID: 8366
+	// Token: 0x020006B4 RID: 1716
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.LGUIPrefab")]
 	[UnrealStructLayout(224, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 224)]
 	public class ULGUIPrefab : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601F884 RID: 129156 RVA: 0x002EE011 File Offset: 0x002EC211
+		// Token: 0x0600935C RID: 37724 RVA: 0x000DDDFA File Offset: 0x000DBFFA
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULGUIPrefab._ClassPtr;
 		}
 
-		// Token: 0x0601F885 RID: 129157 RVA: 0x002EE020 File Offset: 0x002EC220
+		// Token: 0x0600935D RID: 37725 RVA: 0x000DDE08 File Offset: 0x000DC008
 		public ULGUIPrefab() : this(BuiltinUtils.AllocNativeUObject(ULGUIPrefab.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601F886 RID: 129158 RVA: 0x002EE048 File Offset: 0x002EC248
+		// Token: 0x0600935E RID: 37726 RVA: 0x000DDE30 File Offset: 0x000DC030
 		public ULGUIPrefab(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ULGUIPrefab.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007C60 RID: 31840
-		// (get) Token: 0x0601F887 RID: 129159 RVA: 0x002EE07C File Offset: 0x002EC27C
-		// (set) Token: 0x0601F888 RID: 129160 RVA: 0x002EE0B5 File Offset: 0x002EC2B5
+		// Token: 0x17001B8A RID: 7050
+		// (get) Token: 0x0600935F RID: 37727 RVA: 0x000DDE64 File Offset: 0x000DC064
+		// (set) Token: 0x06009360 RID: 37728 RVA: 0x000DDE9D File Offset: 0x000DC09D
 		public TArray<UObject> ReferenceAssetList
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C61 RID: 31841
-		// (get) Token: 0x0601F889 RID: 129161 RVA: 0x002EE0C4 File Offset: 0x002EC2C4
-		// (set) Token: 0x0601F88A RID: 129162 RVA: 0x002EE0FD File Offset: 0x002EC2FD
+		// Token: 0x17001B8B RID: 7051
+		// (get) Token: 0x06009361 RID: 37729 RVA: 0x000DDEAC File Offset: 0x000DC0AC
+		// (set) Token: 0x06009362 RID: 37730 RVA: 0x000DDEE5 File Offset: 0x000DC0E5
 		public TArray<string> ReferenceStringList
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C62 RID: 31842
-		// (get) Token: 0x0601F88B RID: 129163 RVA: 0x002EE10C File Offset: 0x002EC30C
-		// (set) Token: 0x0601F88C RID: 129164 RVA: 0x002EE145 File Offset: 0x002EC345
+		// Token: 0x17001B8C RID: 7052
+		// (get) Token: 0x06009363 RID: 37731 RVA: 0x000DDEF4 File Offset: 0x000DC0F4
+		// (set) Token: 0x06009364 RID: 37732 RVA: 0x000DDF2D File Offset: 0x000DC12D
 		public TArray<FName> ReferenceNameList
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C63 RID: 31843
-		// (get) Token: 0x0601F88D RID: 129165 RVA: 0x002EE154 File Offset: 0x002EC354
-		// (set) Token: 0x0601F88E RID: 129166 RVA: 0x002EE18D File Offset: 0x002EC38D
+		// Token: 0x17001B8D RID: 7053
+		// (get) Token: 0x06009365 RID: 37733 RVA: 0x000DDF3C File Offset: 0x000DC13C
+		// (set) Token: 0x06009366 RID: 37734 RVA: 0x000DDF75 File Offset: 0x000DC175
 		public TArray<FText> ReferenceTextList
 		{
 			get
@@ -113,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C64 RID: 31844
-		// (get) Token: 0x0601F88F RID: 129167 RVA: 0x002EE19C File Offset: 0x002EC39C
-		// (set) Token: 0x0601F890 RID: 129168 RVA: 0x002EE1D5 File Offset: 0x002EC3D5
+		// Token: 0x17001B8E RID: 7054
+		// (get) Token: 0x06009367 RID: 37735 RVA: 0x000DDF84 File Offset: 0x000DC184
+		// (set) Token: 0x06009368 RID: 37736 RVA: 0x000DDFBD File Offset: 0x000DC1BD
 		public TArray<UClass> ReferenceClassList
 		{
 			get
@@ -134,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C65 RID: 31845
-		// (get) Token: 0x0601F891 RID: 129169 RVA: 0x002EE1E4 File Offset: 0x002EC3E4
-		// (set) Token: 0x0601F892 RID: 129170 RVA: 0x002EE21D File Offset: 0x002EC41D
+		// Token: 0x17001B8F RID: 7055
+		// (get) Token: 0x06009369 RID: 37737 RVA: 0x000DDFCC File Offset: 0x000DC1CC
+		// (set) Token: 0x0600936A RID: 37738 RVA: 0x000DE005 File Offset: 0x000DC205
 		public TArray<FSoftObjectPath> AllSoftObjectReferences
 		{
 			get
@@ -155,9 +155,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C66 RID: 31846
-		// (get) Token: 0x0601F893 RID: 129171 RVA: 0x002EE22B File Offset: 0x002EC42B
-		// (set) Token: 0x0601F894 RID: 129172 RVA: 0x002EE23B File Offset: 0x002EC43B
+		// Token: 0x17001B90 RID: 7056
+		// (get) Token: 0x0600936B RID: 37739 RVA: 0x000DE013 File Offset: 0x000DC213
+		// (set) Token: 0x0600936C RID: 37740 RVA: 0x000DE023 File Offset: 0x000DC223
 		public unsafe ushort PrefabVersion
 		{
 			get
@@ -170,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C67 RID: 31847
-		// (get) Token: 0x0601F895 RID: 129173 RVA: 0x002EE24C File Offset: 0x002EC44C
-		// (set) Token: 0x0601F896 RID: 129174 RVA: 0x002EE25C File Offset: 0x002EC45C
+		// Token: 0x17001B91 RID: 7057
+		// (get) Token: 0x0600936D RID: 37741 RVA: 0x000DE034 File Offset: 0x000DC234
+		// (set) Token: 0x0600936E RID: 37742 RVA: 0x000DE044 File Offset: 0x000DC244
 		public unsafe ushort EngineMajorVersion
 		{
 			get
@@ -185,9 +185,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C68 RID: 31848
-		// (get) Token: 0x0601F897 RID: 129175 RVA: 0x002EE26D File Offset: 0x002EC46D
-		// (set) Token: 0x0601F898 RID: 129176 RVA: 0x002EE27D File Offset: 0x002EC47D
+		// Token: 0x17001B92 RID: 7058
+		// (get) Token: 0x0600936F RID: 37743 RVA: 0x000DE055 File Offset: 0x000DC255
+		// (set) Token: 0x06009370 RID: 37744 RVA: 0x000DE065 File Offset: 0x000DC265
 		public unsafe ushort EngineMinorVersion
 		{
 			get
@@ -200,9 +200,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C69 RID: 31849
-		// (get) Token: 0x0601F899 RID: 129177 RVA: 0x002EE290 File Offset: 0x002EC490
-		// (set) Token: 0x0601F89A RID: 129178 RVA: 0x002EE2C9 File Offset: 0x002EC4C9
+		// Token: 0x17001B93 RID: 7059
+		// (get) Token: 0x06009371 RID: 37745 RVA: 0x000DE078 File Offset: 0x000DC278
+		// (set) Token: 0x06009372 RID: 37746 RVA: 0x000DE0B1 File Offset: 0x000DC2B1
 		public TArray<byte> BinaryDataForBuild
 		{
 			get
@@ -221,30 +221,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601F89B RID: 129179 RVA: 0x002EE2D7 File Offset: 0x002EC4D7
+		// Token: 0x06009373 RID: 37747 RVA: 0x000DE0BF File Offset: 0x000DC2BF
 		static ULGUIPrefab()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.LGUIPrefab");
 		}
 
-		// Token: 0x0601F89C RID: 129180 RVA: 0x002EE2E5 File Offset: 0x002EC4E5
+		// Token: 0x06009374 RID: 37748 RVA: 0x000DE0CD File Offset: 0x000DC2CD
 		protected ULGUIPrefab(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011056 RID: 69718
+		// Token: 0x0400403D RID: 16445
 		public new const string __ObjectPath = "/Script/LGUI.LGUIPrefab";
 
-		// Token: 0x04011057 RID: 69719
+		// Token: 0x0400403E RID: 16446
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011058 RID: 69720
+		// Token: 0x0400403F RID: 16447
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011059 RID: 69721
+		// Token: 0x04004040 RID: 16448
 		internal static int __PropertyOffset_ReferenceAssetList;
 
-		// Token: 0x0401105A RID: 69722
+		// Token: 0x04004041 RID: 16449
 		[Nullable(new byte[]
 		{
 			2,
@@ -252,10 +252,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UObject> _ReferenceAssetList;
 
-		// Token: 0x0401105B RID: 69723
+		// Token: 0x04004042 RID: 16450
 		internal static int __PropertyOffset_ReferenceStringList;
 
-		// Token: 0x0401105C RID: 69724
+		// Token: 0x04004043 RID: 16451
 		[Nullable(new byte[]
 		{
 			2,
@@ -263,17 +263,17 @@ namespace UnrealEngine
 		})]
 		private TArray<string> _ReferenceStringList;
 
-		// Token: 0x0401105D RID: 69725
+		// Token: 0x04004044 RID: 16452
 		internal static int __PropertyOffset_ReferenceNameList;
 
-		// Token: 0x0401105E RID: 69726
+		// Token: 0x04004045 RID: 16453
 		[Nullable(2)]
 		private TArray<FName> _ReferenceNameList;
 
-		// Token: 0x0401105F RID: 69727
+		// Token: 0x04004046 RID: 16454
 		internal static int __PropertyOffset_ReferenceTextList;
 
-		// Token: 0x04011060 RID: 69728
+		// Token: 0x04004047 RID: 16455
 		[Nullable(new byte[]
 		{
 			2,
@@ -281,10 +281,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FText> _ReferenceTextList;
 
-		// Token: 0x04011061 RID: 69729
+		// Token: 0x04004048 RID: 16456
 		internal static int __PropertyOffset_ReferenceClassList;
 
-		// Token: 0x04011062 RID: 69730
+		// Token: 0x04004049 RID: 16457
 		[Nullable(new byte[]
 		{
 			2,
@@ -292,10 +292,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UClass> _ReferenceClassList;
 
-		// Token: 0x04011063 RID: 69731
+		// Token: 0x0400404A RID: 16458
 		internal static int __PropertyOffset_AllSoftObjectReferences;
 
-		// Token: 0x04011064 RID: 69732
+		// Token: 0x0400404B RID: 16459
 		[Nullable(new byte[]
 		{
 			2,
@@ -303,19 +303,19 @@ namespace UnrealEngine
 		})]
 		private TArray<FSoftObjectPath> _AllSoftObjectReferences;
 
-		// Token: 0x04011065 RID: 69733
+		// Token: 0x0400404C RID: 16460
 		internal static int __PropertyOffset_PrefabVersion;
 
-		// Token: 0x04011066 RID: 69734
+		// Token: 0x0400404D RID: 16461
 		internal static int __PropertyOffset_EngineMajorVersion;
 
-		// Token: 0x04011067 RID: 69735
+		// Token: 0x0400404E RID: 16462
 		internal static int __PropertyOffset_EngineMinorVersion;
 
-		// Token: 0x04011068 RID: 69736
+		// Token: 0x0400404F RID: 16463
 		internal static int __PropertyOffset_BinaryDataForBuild;
 
-		// Token: 0x04011069 RID: 69737
+		// Token: 0x04004050 RID: 16464
 		[Nullable(2)]
 		private TArray<byte> _BinaryDataForBuild;
 	}

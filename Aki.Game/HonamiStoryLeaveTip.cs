@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EC1 RID: 7873
+// Token: 0x02001383 RID: 4995
 public class HonamiStoryLeaveTip : UiViewBase
 {
-	// Token: 0x0600F234 RID: 62004 RVA: 0x003A4FD3 File Offset: 0x003A31D3
+	// Token: 0x0600C653 RID: 50771 RVA: 0x003B0AD3 File Offset: 0x003AECD3
 	[NullableContext(1)]
 	public HonamiStoryLeaveTip(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F235 RID: 62005 RVA: 0x003A4FDC File Offset: 0x003A31DC
+	// Token: 0x0600C654 RID: 50772 RVA: 0x003B0ADC File Offset: 0x003AECDC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -60,7 +60,7 @@ public class HonamiStoryLeaveTip : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F236 RID: 62006 RVA: 0x003A51F8 File Offset: 0x003A33F8
+	// Token: 0x0600C655 RID: 50773 RVA: 0x003B0CF8 File Offset: 0x003AEEF8
 	protected override void OnStart()
 	{
 		IHonamiStoryLeaveTipParams honamiStoryLeaveTipParams = this.OpenParam as IHonamiStoryLeaveTipParams;
@@ -125,7 +125,7 @@ public class HonamiStoryLeaveTip : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F237 RID: 62007 RVA: 0x003A53E8 File Offset: 0x003A35E8
+	// Token: 0x0600C656 RID: 50774 RVA: 0x003B0EE8 File Offset: 0x003AF0E8
 	protected override UniTask OnPlayingCloseSequenceAsync()
 	{
 		HonamiStoryLeaveTip.<OnPlayingCloseSequenceAsync>d__8 <OnPlayingCloseSequenceAsync>d__;
@@ -136,7 +136,7 @@ public class HonamiStoryLeaveTip : UiViewBase
 		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F238 RID: 62008 RVA: 0x003A542B File Offset: 0x003A362B
+	// Token: 0x0600C657 RID: 50775 RVA: 0x003B0F2B File Offset: 0x003AF12B
 	protected override void OnBeforeDestroy()
 	{
 		if (this.ShowSafeLeaveUpdate)
@@ -146,7 +146,7 @@ public class HonamiStoryLeaveTip : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F239 RID: 62009 RVA: 0x003A5446 File Offset: 0x003A3646
+	// Token: 0x0600C658 RID: 50776 RVA: 0x003B0F46 File Offset: 0x003AF146
 	private void OnCancelClick()
 	{
 		this.IsConfirmClose = false;
@@ -159,7 +159,7 @@ public class HonamiStoryLeaveTip : UiViewBase
 		cancelCallback();
 	}
 
-	// Token: 0x0600F23A RID: 62010 RVA: 0x003A5466 File Offset: 0x003A3666
+	// Token: 0x0600C659 RID: 50777 RVA: 0x003B0F66 File Offset: 0x003AF166
 	private void OnConfirmClick()
 	{
 		this.IsConfirmClose = true;
@@ -172,42 +172,42 @@ public class HonamiStoryLeaveTip : UiViewBase
 		confirmCallback();
 	}
 
-	// Token: 0x04006FF0 RID: 28656
+	// Token: 0x040070D1 RID: 28881
 	private bool IsConfirmClose;
 
-	// Token: 0x04006FF1 RID: 28657
+	// Token: 0x040070D2 RID: 28882
 	private bool ShowSafeLeaveUpdate;
 
-	// Token: 0x04006FF2 RID: 28658
+	// Token: 0x040070D3 RID: 28883
 	[Nullable(2)]
 	private Action ConfirmCallback;
 
-	// Token: 0x04006FF3 RID: 28659
+	// Token: 0x040070D4 RID: 28884
 	[Nullable(2)]
 	private Action CancelCallback;
 
-	// Token: 0x020084A8 RID: 33960
+	// Token: 0x0200762D RID: 30253
 	private enum EComponentType
 	{
-		// Token: 0x0402B2DF RID: 176863
+		// Token: 0x04026603 RID: 157187
 		TitleText,
-		// Token: 0x0402B2E0 RID: 176864
+		// Token: 0x04026604 RID: 157188
 		SubTitleText,
-		// Token: 0x0402B2E1 RID: 176865
+		// Token: 0x04026605 RID: 157189
 		ContentText,
-		// Token: 0x0402B2E2 RID: 176866
+		// Token: 0x04026606 RID: 157190
 		SubContentText,
-		// Token: 0x0402B2E3 RID: 176867
+		// Token: 0x04026607 RID: 157191
 		CancelButton,
-		// Token: 0x0402B2E4 RID: 176868
+		// Token: 0x04026608 RID: 157192
 		ConfirmButton,
-		// Token: 0x0402B2E5 RID: 176869
+		// Token: 0x04026609 RID: 157193
 		BackButton,
-		// Token: 0x0402B2E6 RID: 176870
+		// Token: 0x0402660A RID: 157194
 		BgButton,
-		// Token: 0x0402B2E7 RID: 176871
+		// Token: 0x0402660B RID: 157195
 		CancelButtonText,
-		// Token: 0x0402B2E8 RID: 176872
+		// Token: 0x0402660C RID: 157196
 		ConfirmButtonText
 	}
 }

@@ -3,13 +3,13 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006971 RID: 26993
+	// Token: 0x02005ACD RID: 23245
 	public class ActionTimeTrackControl : ActionParams
 	{
-		// Token: 0x04023004 RID: 143364
+		// Token: 0x0401E1EE RID: 123374
 		public long EntityId;
 
-		// Token: 0x04023005 RID: 143365
+		// Token: 0x0401E1EF RID: 123375
 		public int ConfigIndex;
 	}
 }

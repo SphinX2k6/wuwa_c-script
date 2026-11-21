@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000434 RID: 1076
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200048D RID: 1165
 	public class IHoldingTrackTarget
 	{
-		// Token: 0x060015B9 RID: 5561 RVA: 0x00043CA0 File Offset: 0x00041EA0
+		// Token: 0x06001753 RID: 5971 RVA: 0x000479E8 File Offset: 0x00045BE8
 		private IHoldingTrackTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060015BA RID: 5562 RVA: 0x00043CD8 File Offset: 0x00041ED8
+		// Token: 0x06001754 RID: 5972 RVA: 0x00047A20 File Offset: 0x00045C20
 		public static IHoldingTrackTarget Create([Nullable(2)] IHoldingTrackTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060015BB RID: 5563 RVA: 0x00043CEB File Offset: 0x00041EEB
+		// Token: 0x06001755 RID: 5973 RVA: 0x00047A33 File Offset: 0x00045C33
 		public static IHoldingTrackTarget CreateFromSetValue([Nullable(2)] IHoldingTrackTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060015BC RID: 5564 RVA: 0x00043CFE File Offset: 0x00041EFE
+		// Token: 0x06001756 RID: 5974 RVA: 0x00047A46 File Offset: 0x00045C46
 		public IHoldingTrackTarget_SetValue ToSetValue()
 		{
 			return new IHoldingTrackTarget_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005EC RID: 1516
-		// (get) Token: 0x060015BD RID: 5565 RVA: 0x00043D29 File Offset: 0x00041F29
-		// (set) Token: 0x060015BE RID: 5566 RVA: 0x00043D54 File Offset: 0x00041F54
+		// Token: 0x17000653 RID: 1619
+		// (get) Token: 0x06001757 RID: 5975 RVA: 0x00047A71 File Offset: 0x00045C71
+		// (set) Token: 0x06001758 RID: 5976 RVA: 0x00047A9C File Offset: 0x00045C9C
 		public virtual string EffectPath
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005ED RID: 1517
-		// (get) Token: 0x060015BF RID: 5567 RVA: 0x00043D62 File Offset: 0x00041F62
-		// (set) Token: 0x060015C0 RID: 5568 RVA: 0x00043D8D File Offset: 0x00041F8D
+		// Token: 0x17000654 RID: 1620
+		// (get) Token: 0x06001759 RID: 5977 RVA: 0x00047AAA File Offset: 0x00045CAA
+		// (set) Token: 0x0600175A RID: 5978 RVA: 0x00047AD5 File Offset: 0x00045CD5
 		public virtual int EffectLength
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005EE RID: 1518
-		// (get) Token: 0x060015C1 RID: 5569 RVA: 0x00043D9B File Offset: 0x00041F9B
-		// (set) Token: 0x060015C2 RID: 5570 RVA: 0x00043DC6 File Offset: 0x00041FC6
+		// Token: 0x17000655 RID: 1621
+		// (get) Token: 0x0600175B RID: 5979 RVA: 0x00047AE3 File Offset: 0x00045CE3
+		// (set) Token: 0x0600175C RID: 5980 RVA: 0x00047B0E File Offset: 0x00045D0E
 		public virtual int EntityId
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040010BD RID: 4285
+		// Token: 0x040011DF RID: 4575
 		[Nullable(2)]
 		protected IHoldingTrackTarget FbInstance;
 
-		// Token: 0x040010BE RID: 4286
+		// Token: 0x040011E0 RID: 4576
 		[Nullable(2)]
 		protected IHoldingTrackTarget_SetValue PocoInterface;
 	}

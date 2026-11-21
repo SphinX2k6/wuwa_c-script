@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.AdventureGuide;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016B9 RID: 5817
+// Token: 0x02000B71 RID: 2929
 public class SilentCategoryItem : UiPanelBase
 {
-	// Token: 0x0600A5FB RID: 42491 RVA: 0x00251A52 File Offset: 0x0024FC52
+	// Token: 0x060079DB RID: 31195 RVA: 0x0025BE62 File Offset: 0x0025A062
 	[NullableContext(1)]
 	public SilentCategoryItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600A5FC RID: 42492 RVA: 0x00251A68 File Offset: 0x0024FC68
+	// Token: 0x060079DC RID: 31196 RVA: 0x0025BE78 File Offset: 0x0025A078
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -41,7 +41,7 @@ public class SilentCategoryItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600A5FD RID: 42493 RVA: 0x00251B50 File Offset: 0x0024FD50
+	// Token: 0x060079DD RID: 31197 RVA: 0x0025BF60 File Offset: 0x0025A160
 	protected override void OnStart()
 	{
 		this.ExtendToggle = base.GetExtendToggle(0);
@@ -62,7 +62,7 @@ public class SilentCategoryItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600A5FE RID: 42494 RVA: 0x00251BB2 File Offset: 0x0024FDB2
+	// Token: 0x060079DE RID: 31198 RVA: 0x0025BFC2 File Offset: 0x0025A1C2
 	protected override void OnBeforeDestroy()
 	{
 		this.UnbindRedDot();
@@ -71,7 +71,7 @@ public class SilentCategoryItem : UiPanelBase
 		this.ExtendToggle.OnPostAudioStateEvent.Unbind();
 	}
 
-	// Token: 0x0600A5FF RID: 42495 RVA: 0x00251BE4 File Offset: 0x0024FDE4
+	// Token: 0x060079DF RID: 31199 RVA: 0x0025BFF4 File Offset: 0x0025A1F4
 	[NullableContext(1)]
 	public void Update(ISilentAreaTitleData data, bool isShow)
 	{
@@ -82,13 +82,13 @@ public class SilentCategoryItem : UiPanelBase
 		this.BindRedDot();
 	}
 
-	// Token: 0x0600A600 RID: 42496 RVA: 0x00251C42 File Offset: 0x0024FE42
+	// Token: 0x060079E0 RID: 31200 RVA: 0x0025C052 File Offset: 0x0025A252
 	private void BindRedDot()
 	{
 		RedDotController.Instance.BindRedDot(ERedDotName.AdventureFirstAwardCategory, base.GetItem(3), null, this.Data.TypeDescription);
 	}
 
-	// Token: 0x0600A601 RID: 42497 RVA: 0x00251C63 File Offset: 0x0024FE63
+	// Token: 0x060079E1 RID: 31201 RVA: 0x0025C073 File Offset: 0x0025A273
 	private void UnbindRedDot()
 	{
 		if (this.Data == null)
@@ -98,13 +98,13 @@ public class SilentCategoryItem : UiPanelBase
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.AdventureFirstAwardCategory, base.GetItem(3), this.Data.TypeDescription);
 	}
 
-	// Token: 0x0600A602 RID: 42498 RVA: 0x00251C8C File Offset: 0x0024FE8C
+	// Token: 0x060079E2 RID: 31202 RVA: 0x0025C09C File Offset: 0x0025A29C
 	public void RefreshRedDot(bool isShow)
 	{
 		base.GetItem(3).SetUIActive(isShow);
 	}
 
-	// Token: 0x0600A603 RID: 42499 RVA: 0x00251C9B File Offset: 0x0024FE9B
+	// Token: 0x060079E3 RID: 31203 RVA: 0x0025C0AB File Offset: 0x0025A2AB
 	public void BindCategoryCallback([Nullable(new byte[]
 	{
 		2,
@@ -114,7 +114,7 @@ public class SilentCategoryItem : UiPanelBase
 		this.CategoryCallback = onCategoryCallback;
 	}
 
-	// Token: 0x0600A604 RID: 42500 RVA: 0x00251CA4 File Offset: 0x0024FEA4
+	// Token: 0x060079E4 RID: 31204 RVA: 0x0025C0B4 File Offset: 0x0025A2B4
 	public void OnClickExtendToggle(EToggleState state)
 	{
 		this.IsShowingSilentCategoryItem = !this.IsShowingSilentCategoryItem;
@@ -124,11 +124,11 @@ public class SilentCategoryItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04004AF6 RID: 19190
+	// Token: 0x04004B9D RID: 19357
 	[Nullable(2)]
 	private UUIExtendToggle ExtendToggle;
 
-	// Token: 0x04004AF7 RID: 19191
+	// Token: 0x04004B9E RID: 19358
 	[Nullable(new byte[]
 	{
 		2,
@@ -136,23 +136,23 @@ public class SilentCategoryItem : UiPanelBase
 	})]
 	private Action<int, UUIExtendToggle, bool> CategoryCallback;
 
-	// Token: 0x04004AF8 RID: 19192
+	// Token: 0x04004B9F RID: 19359
 	[Nullable(2)]
 	private ISilentAreaTitleData Data;
 
-	// Token: 0x04004AF9 RID: 19193
+	// Token: 0x04004BA0 RID: 19360
 	private bool IsShowingSilentCategoryItem;
 
-	// Token: 0x02007C8D RID: 31885
+	// Token: 0x02006E12 RID: 28178
 	private enum ESilentCategoryDefine
 	{
-		// Token: 0x04028DD3 RID: 167379
+		// Token: 0x040240FC RID: 147708
 		ExtendToggle,
-		// Token: 0x04028DD4 RID: 167380
+		// Token: 0x040240FD RID: 147709
 		TitleText,
-		// Token: 0x04028DD5 RID: 167381
+		// Token: 0x040240FE RID: 147710
 		FlagSprite,
-		// Token: 0x04028DD6 RID: 167382
+		// Token: 0x040240FF RID: 147711
 		RedDotItem
 	}
 }

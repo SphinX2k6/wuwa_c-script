@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D81 RID: 7553
+	// Token: 0x02001F92 RID: 8082
 	public class IQuestBranchConfig_SetValue
 	{
-		// Token: 0x04006152 RID: 24914
+		// Token: 0x040066CE RID: 26318
 		public bool? EnableAnimation;
 	}
 }

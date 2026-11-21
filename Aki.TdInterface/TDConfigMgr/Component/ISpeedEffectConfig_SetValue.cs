@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006FB RID: 1787
+	// Token: 0x0200079C RID: 1948
 	public class ISpeedEffectConfig_SetValue
 	{
-		// Token: 0x04001A16 RID: 6678
+		// Token: 0x04001C15 RID: 7189
 		public float MinVehicleSpeed;
 
-		// Token: 0x04001A17 RID: 6679
+		// Token: 0x04001C16 RID: 7190
 		public float MaxVehicleSpeed;
 
-		// Token: 0x04001A18 RID: 6680
-		[Nullable(1)]
+		// Token: 0x04001C17 RID: 7191
 		public List<long> GameplayCueIds;
 	}
 }

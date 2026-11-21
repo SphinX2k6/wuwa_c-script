@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DA0 RID: 19872
+	// Token: 0x02003D69 RID: 15721
 	public enum ERoguelikeSettleAudioState
 	{
-		// Token: 0x0401B414 RID: 111636
+		// Token: 0x04015DE7 RID: 89575
 		SettleS = 1,
-		// Token: 0x0401B415 RID: 111637
+		// Token: 0x04015DE8 RID: 89576
 		SettleA,
-		// Token: 0x0401B416 RID: 111638
+		// Token: 0x04015DE9 RID: 89577
 		SettleB,
-		// Token: 0x0401B417 RID: 111639
+		// Token: 0x04015DEA RID: 89578
 		SettleC
 	}
 }

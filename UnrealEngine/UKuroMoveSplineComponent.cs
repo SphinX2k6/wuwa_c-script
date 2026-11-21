@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E7C RID: 7804
+	// Token: 0x020005AD RID: 1453
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSplines.KuroMoveSplineComponent")]
 	[UnrealStructLayout(1952, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1952)]
 	public class UKuroMoveSplineComponent : USplineComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601DB45 RID: 121669 RVA: 0x002BE145 File Offset: 0x002BC345
+		// Token: 0x060082AF RID: 33455 RVA: 0x000C1421 File Offset: 0x000BF621
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroMoveSplineComponent._ClassPtr;
 		}
 
-		// Token: 0x0601DB46 RID: 121670 RVA: 0x002BE154 File Offset: 0x002BC354
+		// Token: 0x060082B0 RID: 33456 RVA: 0x000C1430 File Offset: 0x000BF630
 		public UKuroMoveSplineComponent() : this(BuiltinUtils.AllocNativeUObject(UKuroMoveSplineComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601DB47 RID: 121671 RVA: 0x002BE17C File Offset: 0x002BC37C
+		// Token: 0x060082B1 RID: 33457 RVA: 0x000C1458 File Offset: 0x000BF658
 		public UKuroMoveSplineComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroMoveSplineComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007770 RID: 30576
-		// (get) Token: 0x0601DB48 RID: 121672 RVA: 0x002BE1B0 File Offset: 0x002BC3B0
-		// (set) Token: 0x0601DB49 RID: 121673 RVA: 0x002BE1E9 File Offset: 0x002BC3E9
+		// Token: 0x1700194C RID: 6476
+		// (get) Token: 0x060082B2 RID: 33458 RVA: 0x000C148C File Offset: 0x000BF68C
+		// (set) Token: 0x060082B3 RID: 33459 RVA: 0x000C14C5 File Offset: 0x000BF6C5
 		public TArray<int> MoveStates
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007771 RID: 30577
-		// (get) Token: 0x0601DB4A RID: 121674 RVA: 0x002BE1F8 File Offset: 0x002BC3F8
-		// (set) Token: 0x0601DB4B RID: 121675 RVA: 0x002BE231 File Offset: 0x002BC431
+		// Token: 0x1700194D RID: 6477
+		// (get) Token: 0x060082B4 RID: 33460 RVA: 0x000C14D4 File Offset: 0x000BF6D4
+		// (set) Token: 0x060082B5 RID: 33461 RVA: 0x000C150D File Offset: 0x000BF70D
 		public TArray<int> MoveSpeeds
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007772 RID: 30578
-		// (get) Token: 0x0601DB4C RID: 121676 RVA: 0x002BE240 File Offset: 0x002BC440
-		// (set) Token: 0x0601DB4D RID: 121677 RVA: 0x002BE279 File Offset: 0x002BC479
+		// Token: 0x1700194E RID: 6478
+		// (get) Token: 0x060082B6 RID: 33462 RVA: 0x000C151C File Offset: 0x000BF71C
+		// (set) Token: 0x060082B7 RID: 33463 RVA: 0x000C1555 File Offset: 0x000BF755
 		public TArray<int> IgnorePoints
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007773 RID: 30579
-		// (get) Token: 0x0601DB4E RID: 121678 RVA: 0x002BE288 File Offset: 0x002BC488
-		// (set) Token: 0x0601DB4F RID: 121679 RVA: 0x002BE2C1 File Offset: 0x002BC4C1
+		// Token: 0x1700194F RID: 6479
+		// (get) Token: 0x060082B8 RID: 33464 RVA: 0x000C1564 File Offset: 0x000BF764
+		// (set) Token: 0x060082B9 RID: 33465 RVA: 0x000C159D File Offset: 0x000BF79D
 		public TArray<int> StayTimes
 		{
 			get
@@ -113,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007774 RID: 30580
-		// (get) Token: 0x0601DB50 RID: 121680 RVA: 0x002BE2D0 File Offset: 0x002BC4D0
-		// (set) Token: 0x0601DB51 RID: 121681 RVA: 0x002BE309 File Offset: 0x002BC509
+		// Token: 0x17001950 RID: 6480
+		// (get) Token: 0x060082BA RID: 33466 RVA: 0x000C15AC File Offset: 0x000BF7AC
+		// (set) Token: 0x060082BB RID: 33467 RVA: 0x000C15E5 File Offset: 0x000BF7E5
 		public TArray<int> IsHides
 		{
 			get
@@ -134,108 +134,108 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601DB52 RID: 121682 RVA: 0x002BE317 File Offset: 0x002BC517
+		// Token: 0x060082BC RID: 33468 RVA: 0x000C15F3 File Offset: 0x000BF7F3
 		public int GetStayTime(int Index)
 		{
 			return UKuroMoveSplineComponent.__GetStayTime_Internal(base.NativePtr, Index);
 		}
 
-		// Token: 0x0601DB53 RID: 121683 RVA: 0x002BE325 File Offset: 0x002BC525
+		// Token: 0x060082BD RID: 33469 RVA: 0x000C1601 File Offset: 0x000BF801
 		public int GetMoveState(int Index)
 		{
 			return UKuroMoveSplineComponent.__GetMoveState_Internal(base.NativePtr, Index);
 		}
 
-		// Token: 0x0601DB54 RID: 121684 RVA: 0x002BE333 File Offset: 0x002BC533
+		// Token: 0x060082BE RID: 33470 RVA: 0x000C160F File Offset: 0x000BF80F
 		public int GetMoveSpeed(int Index)
 		{
 			return UKuroMoveSplineComponent.__GetMoveSpeed_Internal(base.NativePtr, Index);
 		}
 
-		// Token: 0x0601DB55 RID: 121685 RVA: 0x002BE341 File Offset: 0x002BC541
+		// Token: 0x060082BF RID: 33471 RVA: 0x000C161D File Offset: 0x000BF81D
 		public int GetIsHide(int Index)
 		{
 			return UKuroMoveSplineComponent.__GetIsHide_Internal(base.NativePtr, Index);
 		}
 
-		// Token: 0x0601DB56 RID: 121686 RVA: 0x002BE34F File Offset: 0x002BC54F
+		// Token: 0x060082C0 RID: 33472 RVA: 0x000C162B File Offset: 0x000BF82B
 		public int GetIgnorePoint(int Index)
 		{
 			return UKuroMoveSplineComponent.__GetIgnorePoint_Internal(base.NativePtr, Index);
 		}
 
-		// Token: 0x0601DB57 RID: 121687
+		// Token: 0x060082C1 RID: 33473
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetStayTime_Internal(IntPtr @this, int Index);
 
-		// Token: 0x0601DB58 RID: 121688
+		// Token: 0x060082C2 RID: 33474
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetMoveState_Internal(IntPtr @this, int Index);
 
-		// Token: 0x0601DB59 RID: 121689
+		// Token: 0x060082C3 RID: 33475
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetMoveSpeed_Internal(IntPtr @this, int Index);
 
-		// Token: 0x0601DB5A RID: 121690
+		// Token: 0x060082C4 RID: 33476
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetIsHide_Internal(IntPtr @this, int Index);
 
-		// Token: 0x0601DB5B RID: 121691
+		// Token: 0x060082C5 RID: 33477
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetIgnorePoint_Internal(IntPtr @this, int Index);
 
-		// Token: 0x0601DB5C RID: 121692 RVA: 0x002BE35D File Offset: 0x002BC55D
+		// Token: 0x060082C6 RID: 33478 RVA: 0x000C1639 File Offset: 0x000BF839
 		static UKuroMoveSplineComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSplines.KuroMoveSplineComponent");
 		}
 
-		// Token: 0x0601DB5D RID: 121693 RVA: 0x002BE36B File Offset: 0x002BC56B
+		// Token: 0x060082C7 RID: 33479 RVA: 0x000C1647 File Offset: 0x000BF847
 		protected UKuroMoveSplineComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401015A RID: 65882
+		// Token: 0x040038E6 RID: 14566
 		public new const string __ObjectPath = "/Script/KuroSplines.KuroMoveSplineComponent";
 
-		// Token: 0x0401015B RID: 65883
+		// Token: 0x040038E7 RID: 14567
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401015C RID: 65884
+		// Token: 0x040038E8 RID: 14568
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401015D RID: 65885
+		// Token: 0x040038E9 RID: 14569
 		internal static int __PropertyOffset_MoveStates;
 
-		// Token: 0x0401015E RID: 65886
+		// Token: 0x040038EA RID: 14570
 		[Nullable(2)]
 		private TArray<int> _MoveStates;
 
-		// Token: 0x0401015F RID: 65887
+		// Token: 0x040038EB RID: 14571
 		internal static int __PropertyOffset_MoveSpeeds;
 
-		// Token: 0x04010160 RID: 65888
+		// Token: 0x040038EC RID: 14572
 		[Nullable(2)]
 		private TArray<int> _MoveSpeeds;
 
-		// Token: 0x04010161 RID: 65889
+		// Token: 0x040038ED RID: 14573
 		internal static int __PropertyOffset_IgnorePoints;
 
-		// Token: 0x04010162 RID: 65890
+		// Token: 0x040038EE RID: 14574
 		[Nullable(2)]
 		private TArray<int> _IgnorePoints;
 
-		// Token: 0x04010163 RID: 65891
+		// Token: 0x040038EF RID: 14575
 		internal static int __PropertyOffset_StayTimes;
 
-		// Token: 0x04010164 RID: 65892
+		// Token: 0x040038F0 RID: 14576
 		[Nullable(2)]
 		private TArray<int> _StayTimes;
 
-		// Token: 0x04010165 RID: 65893
+		// Token: 0x040038F1 RID: 14577
 		internal static int __PropertyOffset_IsHides;
 
-		// Token: 0x04010166 RID: 65894
+		// Token: 0x040038F2 RID: 14578
 		[Nullable(2)]
 		private TArray<int> _IsHides;
 	}

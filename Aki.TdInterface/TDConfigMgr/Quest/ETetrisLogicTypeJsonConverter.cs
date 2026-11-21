@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012A3 RID: 4771
+	// Token: 0x020013E9 RID: 5097
 	public class ETetrisLogicTypeJsonConverter : JsonConverter<ETetrisLogicType>
 	{
-		// Token: 0x06006B86 RID: 27526 RVA: 0x00102C24 File Offset: 0x00100E24
+		// Token: 0x060071F4 RID: 29172 RVA: 0x00110BEC File Offset: 0x0010EDEC
 		public override ETetrisLogicType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ETetrisLogicTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006B87 RID: 27527 RVA: 0x00102C48 File Offset: 0x00100E48
+		// Token: 0x060071F5 RID: 29173 RVA: 0x00110C10 File Offset: 0x0010EE10
 		public override void Write(Utf8JsonWriter writer, ETetrisLogicType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

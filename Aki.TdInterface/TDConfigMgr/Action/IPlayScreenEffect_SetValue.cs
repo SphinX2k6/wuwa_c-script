@@ -3,20 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D1F RID: 7455
+	// Token: 0x02001F30 RID: 7984
 	public class IPlayScreenEffect_SetValue
 	{
-		// Token: 0x0400607A RID: 24698
+		// Token: 0x040065F6 RID: 26102
 		public EEffectType Type;
 
-		// Token: 0x0400607B RID: 24699
-		[Nullable(1)]
+		// Token: 0x040065F7 RID: 26103
 		public string Path;
 
-		// Token: 0x0400607C RID: 24700
+		// Token: 0x040065F8 RID: 26104
 		public float? DestroyTime;
 
-		// Token: 0x0400607D RID: 24701
+		// Token: 0x040065F9 RID: 26105
 		[Nullable(2)]
 		public string BindSubScreenKey;
 	}

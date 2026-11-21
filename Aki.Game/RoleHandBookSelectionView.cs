@@ -11,34 +11,34 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002783 RID: 10115
+// Token: 0x02001C6E RID: 7278
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleHandBookSelectionView : UiViewBase
 {
-	// Token: 0x06014C0B RID: 85003 RVA: 0x005406A6 File Offset: 0x0053E8A6
+	// Token: 0x060120EE RID: 73966 RVA: 0x0054F52A File Offset: 0x0054D72A
 	public RoleHandBookSelectionView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014C0C RID: 85004 RVA: 0x005406AF File Offset: 0x0053E8AF
+	// Token: 0x060120EF RID: 73967 RVA: 0x0054F533 File Offset: 0x0054D733
 	protected override void OnHandleLoadScene()
 	{
 	}
 
-	// Token: 0x06014C0D RID: 85005 RVA: 0x005406B1 File Offset: 0x0053E8B1
+	// Token: 0x060120F0 RID: 73968 RVA: 0x0054F535 File Offset: 0x0054D735
 	protected override void OnHandleReleaseScene()
 	{
 	}
 
-	// Token: 0x06014C0E RID: 85006 RVA: 0x005406B3 File Offset: 0x0053E8B3
+	// Token: 0x060120F1 RID: 73969 RVA: 0x0054F537 File Offset: 0x0054D737
 	protected override void OnStart()
 	{
 		this.RoleSelectionComponent = new RoleHandBookSelectionComponent();
 		this.LoadFloorEffect();
 	}
 
-	// Token: 0x06014C0F RID: 85007 RVA: 0x005406C8 File Offset: 0x0053E8C8
+	// Token: 0x060120F2 RID: 73970 RVA: 0x0054F54C File Offset: 0x0054D74C
 	protected override void OnAfterShow()
 	{
 		RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Attribute, false, false, false);
@@ -51,7 +51,7 @@ public class RoleHandBookSelectionView : UiViewBase
 		RoleController.Instance.ShowUiSceneActorAndShadow(true);
 	}
 
-	// Token: 0x06014C10 RID: 85008 RVA: 0x0054071F File Offset: 0x0053E91F
+	// Token: 0x060120F3 RID: 73971 RVA: 0x0054F5A3 File Offset: 0x0054D7A3
 	protected override void OnAddEventListener()
 	{
 		base.OnAddEventListener();
@@ -59,7 +59,7 @@ public class RoleHandBookSelectionView : UiViewBase
 		EventSystem.Instance.Add<IReadOnlyList<IProto_NormalItem>>(EEventName.OnAddCommonItemList, new Action<IReadOnlyList<IProto_NormalItem>>(this.OnAddCommonItemList));
 	}
 
-	// Token: 0x06014C11 RID: 85009 RVA: 0x0054075F File Offset: 0x0053E95F
+	// Token: 0x060120F4 RID: 73972 RVA: 0x0054F5E3 File Offset: 0x0054D7E3
 	protected override void OnRemoveEventListener()
 	{
 		base.OnRemoveEventListener();
@@ -67,7 +67,7 @@ public class RoleHandBookSelectionView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnAddCommonItemList, new Action<IReadOnlyList<IProto_NormalItem>>(this.OnAddCommonItemList));
 	}
 
-	// Token: 0x06014C12 RID: 85010 RVA: 0x005407A0 File Offset: 0x0053E9A0
+	// Token: 0x060120F5 RID: 73973 RVA: 0x0054F624 File Offset: 0x0054D824
 	private void OnAddCommonItemList(IReadOnlyList<IProto_NormalItem> _)
 	{
 		if (this.RoleSelectionComponent == null)
@@ -82,7 +82,7 @@ public class RoleHandBookSelectionView : UiViewBase
 		this.RoleSelectionComponent.UpdateItemByRoleId(curSelectRoleId);
 	}
 
-	// Token: 0x06014C13 RID: 85011 RVA: 0x005407D2 File Offset: 0x0053E9D2
+	// Token: 0x060120F6 RID: 73974 RVA: 0x0054F656 File Offset: 0x0054D856
 	private void OnRoleHandBookActive(int roleId)
 	{
 		if (this.RoleSelectionComponent == null)
@@ -94,7 +94,7 @@ public class RoleHandBookSelectionView : UiViewBase
 		this.RoleSelectionComponent.PlaySequence();
 	}
 
-	// Token: 0x06014C14 RID: 85012 RVA: 0x005407FC File Offset: 0x0053E9FC
+	// Token: 0x060120F7 RID: 73975 RVA: 0x0054F680 File Offset: 0x0054D880
 	protected void InitRoleList()
 	{
 		List<RoleInfo> list = ConfigCommon.ToList<RoleInfo>(RoleConfig.Instance.GetRoleListByType(ERoleType.Common));
@@ -114,7 +114,7 @@ public class RoleHandBookSelectionView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014C15 RID: 85013 RVA: 0x00540898 File Offset: 0x0053EA98
+	// Token: 0x060120F8 RID: 73976 RVA: 0x0054F71C File Offset: 0x0054D91C
 	protected void LoadFloorEffect()
 	{
 		AActor actorByTag = UiSceneManager.Instance.GetActorByTag("RoleFloorCase");
@@ -124,7 +124,7 @@ public class RoleHandBookSelectionView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014C16 RID: 85014 RVA: 0x005408F0 File Offset: 0x0053EAF0
+	// Token: 0x060120F9 RID: 73977 RVA: 0x0054F774 File Offset: 0x0054D974
 	protected override void OnAfterHide()
 	{
 		if (EffectSystem.Instance.IsValid(this.FloorEffect))
@@ -133,7 +133,7 @@ public class RoleHandBookSelectionView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014C17 RID: 85015 RVA: 0x00540930 File Offset: 0x0053EB30
+	// Token: 0x060120FA RID: 73978 RVA: 0x0054F7B4 File Offset: 0x0054D9B4
 	protected void RoleSelectionSelectedEvent(int roleId)
 	{
 		int? curSelectMainRoleId = RoleModel.Instance.GetCurSelectMainRoleId();
@@ -147,13 +147,13 @@ public class RoleHandBookSelectionView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014C18 RID: 85016 RVA: 0x00540980 File Offset: 0x0053EB80
+	// Token: 0x060120FB RID: 73979 RVA: 0x0054F804 File Offset: 0x0054DA04
 	protected override void OnBeforeCreate()
 	{
 		this.UiSceneRoleActor = UiSceneManager.Instance.InitRoleSystemRoleActor(EUiModelUseWay.RoleInRoleView);
 	}
 
-	// Token: 0x06014C19 RID: 85017 RVA: 0x00540994 File Offset: 0x0053EB94
+	// Token: 0x060120FC RID: 73980 RVA: 0x0054F818 File Offset: 0x0054DA18
 	protected override void OnBeforeDestroy()
 	{
 		UiSceneManager.Instance.DestroyRoleSystemRoleActor(this.UiSceneRoleActor);
@@ -165,17 +165,17 @@ public class RoleHandBookSelectionView : UiViewBase
 		this.RoleList = null;
 	}
 
-	// Token: 0x04009C0B RID: 39947
+	// Token: 0x04009D63 RID: 40291
 	public const string ROLE_HAND_BOOK_BLENDNAME = "10061";
 
-	// Token: 0x04009C0C RID: 39948
+	// Token: 0x04009D64 RID: 40292
 	[Nullable(2)]
 	protected RoleHandBookSelectionComponent RoleSelectionComponent;
 
-	// Token: 0x04009C0D RID: 39949
+	// Token: 0x04009D65 RID: 40293
 	private int FloorEffect;
 
-	// Token: 0x04009C0E RID: 39950
+	// Token: 0x04009D66 RID: 40294
 	[Nullable(new byte[]
 	{
 		2,
@@ -183,7 +183,7 @@ public class RoleHandBookSelectionView : UiViewBase
 	})]
 	protected RoleDataBase[] RoleList;
 
-	// Token: 0x04009C0F RID: 39951
+	// Token: 0x04009D67 RID: 40295
 	[Nullable(2)]
 	private TsUiSceneRoleActor UiSceneRoleActor;
 }

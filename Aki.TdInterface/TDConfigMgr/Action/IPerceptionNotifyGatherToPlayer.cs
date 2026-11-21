@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CCC RID: 7372
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001ED3 RID: 7891
 	public class IPerceptionNotifyGatherToPlayer : IBattleStatePerceptionBehaviorType
 	{
-		// Token: 0x06009E4F RID: 40527 RVA: 0x0016A250 File Offset: 0x00168450
+		// Token: 0x0600A7FD RID: 43005 RVA: 0x0017DEB0 File Offset: 0x0017C0B0
 		private IPerceptionNotifyGatherToPlayer_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009E50 RID: 40528 RVA: 0x0016A288 File Offset: 0x00168488
+		// Token: 0x0600A7FE RID: 43006 RVA: 0x0017DEE8 File Offset: 0x0017C0E8
 		public static IPerceptionNotifyGatherToPlayer Create([Nullable(2)] IPerceptionNotifyGatherToPlayer instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E51 RID: 40529 RVA: 0x0016A29B File Offset: 0x0016849B
+		// Token: 0x0600A7FF RID: 43007 RVA: 0x0017DEFB File Offset: 0x0017C0FB
 		public static IPerceptionNotifyGatherToPlayer CreateFromSetValue([Nullable(2)] IPerceptionNotifyGatherToPlayer_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E52 RID: 40530 RVA: 0x0016A2AE File Offset: 0x001684AE
+		// Token: 0x0600A800 RID: 43008 RVA: 0x0017DF0E File Offset: 0x0017C10E
 		public new IPerceptionNotifyGatherToPlayer_SetValue ToSetValue()
 		{
 			return new IPerceptionNotifyGatherToPlayer_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700314C RID: 12620
-		// (get) Token: 0x06009E53 RID: 40531 RVA: 0x0016A2C1 File Offset: 0x001684C1
-		// (set) Token: 0x06009E54 RID: 40532 RVA: 0x0016A2EC File Offset: 0x001684EC
+		// Token: 0x170033D0 RID: 13264
+		// (get) Token: 0x0600A801 RID: 43009 RVA: 0x0017DF21 File Offset: 0x0017C121
+		// (set) Token: 0x0600A802 RID: 43010 RVA: 0x0017DF4C File Offset: 0x0017C14C
 		public override EBattleStatePerceptionBehavior Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005FB1 RID: 24497
+		// Token: 0x0400650D RID: 25869
 		[Nullable(2)]
 		protected new IPerceptionNotifyGatherToPlayer FbInstance;
 
-		// Token: 0x04005FB2 RID: 24498
+		// Token: 0x0400650E RID: 25870
 		[Nullable(2)]
 		protected new IPerceptionNotifyGatherToPlayer_SetValue PocoInterface;
 	}

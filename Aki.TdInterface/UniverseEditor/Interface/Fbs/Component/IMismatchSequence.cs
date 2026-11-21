@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005557 RID: 21847
+	// Token: 0x02005AE9 RID: 23273
 	public struct IMismatchSequence : IFlatbufferObject
 	{
-		// Token: 0x1700A156 RID: 41302
-		// (get) Token: 0x060241ED RID: 147949 RVA: 0x004FD5D0 File Offset: 0x004FB7D0
+		// Token: 0x1700A9CA RID: 43466
+		// (get) Token: 0x06026388 RID: 156552 RVA: 0x0053CCB8 File Offset: 0x0053AEB8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060241EE RID: 147950 RVA: 0x004FD5DD File Offset: 0x004FB7DD
+		// Token: 0x06026389 RID: 156553 RVA: 0x0053CCC5 File Offset: 0x0053AEC5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060241EF RID: 147951 RVA: 0x004FD5E4 File Offset: 0x004FB7E4
+		// Token: 0x0602638A RID: 156554 RVA: 0x0053CCCC File Offset: 0x0053AECC
 		public static IMismatchSequence GetRootAsIMismatchSequence(ByteBuffer _bb)
 		{
 			return IMismatchSequence.GetRootAsIMismatchSequence(_bb, default(IMismatchSequence));
 		}
 
-		// Token: 0x060241F0 RID: 147952 RVA: 0x004FD600 File Offset: 0x004FB800
+		// Token: 0x0602638B RID: 156555 RVA: 0x0053CCE8 File Offset: 0x0053AEE8
 		public static IMismatchSequence GetRootAsIMismatchSequence(ByteBuffer _bb, IMismatchSequence obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060241F1 RID: 147953 RVA: 0x004FD61D File Offset: 0x004FB81D
+		// Token: 0x0602638C RID: 156556 RVA: 0x0053CD05 File Offset: 0x0053AF05
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060241F2 RID: 147954 RVA: 0x004FD62C File Offset: 0x004FB82C
+		// Token: 0x0602638D RID: 156557 RVA: 0x0053CD14 File Offset: 0x0053AF14
 		public IMismatchSequence __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A157 RID: 41303
-		// (get) Token: 0x060241F3 RID: 147955 RVA: 0x004FD63C File Offset: 0x004FB83C
+		// Token: 0x1700A9CB RID: 43467
+		// (get) Token: 0x0602638E RID: 156558 RVA: 0x0053CD24 File Offset: 0x0053AF24
 		public EItemFoundationMatchType FoundationType
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A158 RID: 41304
-		// (get) Token: 0x060241F4 RID: 147956 RVA: 0x004FD678 File Offset: 0x004FB878
+		// Token: 0x1700A9CC RID: 43468
+		// (get) Token: 0x0602638F RID: 156559 RVA: 0x0053CD60 File Offset: 0x0053AF60
 		public string MatchSequence
 		{
 			get
@@ -78,19 +78,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060241F5 RID: 147957 RVA: 0x004FD6AF File Offset: 0x004FB8AF
+		// Token: 0x06026390 RID: 156560 RVA: 0x0053CD97 File Offset: 0x0053AF97
 		public Span<byte> GetMatchSequenceBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060241F6 RID: 147958 RVA: 0x004FD6BE File Offset: 0x004FB8BE
+		// Token: 0x06026391 RID: 156561 RVA: 0x0053CDA6 File Offset: 0x0053AFA6
 		public byte[] GetMatchSequenceArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x060241F7 RID: 147959 RVA: 0x004FD6CC File Offset: 0x004FB8CC
+		// Token: 0x06026392 RID: 156562 RVA: 0x0053CDB4 File Offset: 0x0053AFB4
 		public static Offset<IMismatchSequence> CreateIMismatchSequence(FlatBufferBuilder builder, EItemFoundationMatchType FoundationType = EItemFoundationMatchType.Branch, StringOffset MatchSequenceOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -99,31 +99,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMismatchSequence.EndIMismatchSequence(builder);
 		}
 
-		// Token: 0x060241F8 RID: 147960 RVA: 0x004FD6E9 File Offset: 0x004FB8E9
+		// Token: 0x06026393 RID: 156563 RVA: 0x0053CDD1 File Offset: 0x0053AFD1
 		public static void StartIMismatchSequence(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060241F9 RID: 147961 RVA: 0x004FD6F2 File Offset: 0x004FB8F2
+		// Token: 0x06026394 RID: 156564 RVA: 0x0053CDDA File Offset: 0x0053AFDA
 		public static void AddFoundationType(FlatBufferBuilder builder, EItemFoundationMatchType foundationType)
 		{
 			builder.AddByte(0, (byte)foundationType, 0);
 		}
 
-		// Token: 0x060241FA RID: 147962 RVA: 0x004FD6FD File Offset: 0x004FB8FD
+		// Token: 0x06026395 RID: 156565 RVA: 0x0053CDE5 File Offset: 0x0053AFE5
 		public static void AddMatchSequence(FlatBufferBuilder builder, StringOffset matchSequenceOffset)
 		{
 			builder.AddOffset(1, matchSequenceOffset.Value, 0);
 		}
 
-		// Token: 0x060241FB RID: 147963 RVA: 0x004FD70D File Offset: 0x004FB90D
+		// Token: 0x06026396 RID: 156566 RVA: 0x0053CDF5 File Offset: 0x0053AFF5
 		public static Offset<IMismatchSequence> EndIMismatchSequence(FlatBufferBuilder builder)
 		{
 			return new Offset<IMismatchSequence>(builder.EndTable());
 		}
 
-		// Token: 0x060241FC RID: 147964 RVA: 0x004FD71C File Offset: 0x004FB91C
+		// Token: 0x06026397 RID: 156567 RVA: 0x0053CE04 File Offset: 0x0053B004
 		public IMismatchSequenceT UnPack()
 		{
 			IMismatchSequenceT mismatchSequenceT = new IMismatchSequenceT();
@@ -131,14 +131,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return mismatchSequenceT;
 		}
 
-		// Token: 0x060241FD RID: 147965 RVA: 0x004FD737 File Offset: 0x004FB937
+		// Token: 0x06026398 RID: 156568 RVA: 0x0053CE1F File Offset: 0x0053B01F
 		public void UnPackTo(IMismatchSequenceT _o)
 		{
 			_o.FoundationType = this.FoundationType;
 			_o.MatchSequence = this.MatchSequence;
 		}
 
-		// Token: 0x060241FE RID: 147966 RVA: 0x004FD754 File Offset: 0x004FB954
+		// Token: 0x06026399 RID: 156569 RVA: 0x0053CE3C File Offset: 0x0053B03C
 		public static Offset<IMismatchSequence> Pack(FlatBufferBuilder builder, IMismatchSequenceT _o)
 		{
 			if (_o == null)
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMismatchSequence.CreateIMismatchSequence(builder, _o.FoundationType, matchSequenceOffset);
 		}
 
-		// Token: 0x0400E865 RID: 59493
+		// Token: 0x0400F4B6 RID: 62646
 		private Table __p;
 	}
 }

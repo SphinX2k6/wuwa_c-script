@@ -1,26 +1,23 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A66 RID: 6758
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BFB RID: 7163
 	public class IFireBulletTrackTarget_SetValue
 	{
-		// Token: 0x04005956 RID: 22870
+		// Token: 0x04005DBB RID: 23995
 		public EFireBulletType Type;
 
-		// Token: 0x04005957 RID: 22871
+		// Token: 0x04005DBC RID: 23996
 		public long BulletId;
 
-		// Token: 0x04005958 RID: 22872
+		// Token: 0x04005DBD RID: 23997
 		public ITargetEntityType Launcher;
 
-		// Token: 0x04005959 RID: 22873
+		// Token: 0x04005DBE RID: 23998
 		public ITargetEntityType Target;
 
-		// Token: 0x0400595A RID: 22874
+		// Token: 0x04005DBF RID: 23999
 		public bool? WaitDestroy;
 	}
 }

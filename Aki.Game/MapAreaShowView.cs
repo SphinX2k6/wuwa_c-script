@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Core.Common;
@@ -13,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001AC6 RID: 6854
+// Token: 0x02000F85 RID: 3973
 [NullableContext(1)]
 [Nullable(0)]
 public class MapAreaShowView : UiViewBase
 {
-	// Token: 0x0600CB30 RID: 52016 RVA: 0x002E512F File Offset: 0x002E332F
+	// Token: 0x06009F41 RID: 40769 RVA: 0x002F02B3 File Offset: 0x002EE4B3
 	public MapAreaShowView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600CB31 RID: 52017 RVA: 0x002E5138 File Offset: 0x002E3338
+	// Token: 0x06009F42 RID: 40770 RVA: 0x002F02BC File Offset: 0x002EE4BC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -45,7 +44,7 @@ public class MapAreaShowView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600CB32 RID: 52018 RVA: 0x002E5228 File Offset: 0x002E3428
+	// Token: 0x06009F43 RID: 40771 RVA: 0x002F03AC File Offset: 0x002EE5AC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MapAreaShowView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -56,25 +55,25 @@ public class MapAreaShowView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CB33 RID: 52019 RVA: 0x002E526B File Offset: 0x002E346B
+	// Token: 0x06009F44 RID: 40772 RVA: 0x002F03EF File Offset: 0x002EE5EF
 	protected override void OnStart()
 	{
 		this.TabComponent.SetHelpButtonShowState(false);
 	}
 
-	// Token: 0x0600CB34 RID: 52020 RVA: 0x002E5279 File Offset: 0x002E3479
+	// Token: 0x06009F45 RID: 40773 RVA: 0x002F03FD File Offset: 0x002EE5FD
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.MapAreaShowClickArea, new Action<int>(this.EventMapAreaShowClickArea));
 	}
 
-	// Token: 0x0600CB35 RID: 52021 RVA: 0x002E5297 File Offset: 0x002E3497
+	// Token: 0x06009F46 RID: 40774 RVA: 0x002F041B File Offset: 0x002EE61B
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.MapAreaShowClickArea, new Action<int>(this.EventMapAreaShowClickArea));
 	}
 
-	// Token: 0x0600CB36 RID: 52022 RVA: 0x002E52B8 File Offset: 0x002E34B8
+	// Token: 0x06009F47 RID: 40775 RVA: 0x002F043C File Offset: 0x002EE63C
 	protected override void OnBeforeShow()
 	{
 		this.DataParam = (this.OpenParam as MapAreaShowViewParams);
@@ -97,7 +96,7 @@ public class MapAreaShowView : UiViewBase
 		this.TabComponent.SelectToggleByIndex(index, true);
 	}
 
-	// Token: 0x0600CB37 RID: 52023 RVA: 0x002E53C6 File Offset: 0x002E35C6
+	// Token: 0x06009F48 RID: 40776 RVA: 0x002F054A File Offset: 0x002EE74A
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TwoTabGroup != null)
@@ -107,7 +106,7 @@ public class MapAreaShowView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600CB38 RID: 52024 RVA: 0x002E53E4 File Offset: 0x002E35E4
+	// Token: 0x06009F49 RID: 40777 RVA: 0x002F0568 File Offset: 0x002EE768
 	protected UniTask InitCommonOneTab()
 	{
 		MapAreaShowView.<InitCommonOneTab>d__20 <InitCommonOneTab>d__;
@@ -118,13 +117,13 @@ public class MapAreaShowView : UiViewBase
 		return <InitCommonOneTab>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CB39 RID: 52025 RVA: 0x002E5427 File Offset: 0x002E3627
+	// Token: 0x06009F4A RID: 40778 RVA: 0x002F05AB File Offset: 0x002EE7AB
 	private MapAreaShowCountryItem ProxyCreate([Nullable(2)] UUIItem item, int? index)
 	{
 		return new MapAreaShowCountryItem();
 	}
 
-	// Token: 0x0600CB3A RID: 52026 RVA: 0x002E542E File Offset: 0x002E362E
+	// Token: 0x06009F4B RID: 40779 RVA: 0x002F05B2 File Offset: 0x002EE7B2
 	private void ToggleCallBack(int index)
 	{
 		this.LastClickTime = new double?(Time.Instance.Now);
@@ -132,7 +131,7 @@ public class MapAreaShowView : UiViewBase
 		this.RefreshTwoTab();
 	}
 
-	// Token: 0x0600CB3B RID: 52027 RVA: 0x002E5454 File Offset: 0x002E3654
+	// Token: 0x06009F4C RID: 40780 RVA: 0x002F05D8 File Offset: 0x002EE7D8
 	private CommonTabData GetCommonTitleData(int index)
 	{
 		ExploreCountryData exploreCountryData = this.OneTabDataList[index];
@@ -142,34 +141,40 @@ public class MapAreaShowView : UiViewBase
 		}), null);
 	}
 
-	// Token: 0x0600CB3C RID: 52028 RVA: 0x002E548F File Offset: 0x002E368F
+	// Token: 0x06009F4D RID: 40781 RVA: 0x002F0613 File Offset: 0x002EE813
 	private void OnClickCloseButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600CB3D RID: 52029 RVA: 0x002E5498 File Offset: 0x002E3698
+	// Token: 0x06009F4E RID: 40782 RVA: 0x002F061C File Offset: 0x002EE81C
 	private bool CanToggleChange(int index, bool? forceSwitch)
 	{
 		return Info.Instance.IsInGamepad() || (this.LastClickTime == null || Time.Instance.Now - this.LastClickTime.Value >= (double)this.Interval);
 	}
 
-	// Token: 0x0600CB3E RID: 52030 RVA: 0x002E54D8 File Offset: 0x002E36D8
+	// Token: 0x06009F4F RID: 40783 RVA: 0x002F065C File Offset: 0x002EE85C
 	private void RefreshTwoTab()
 	{
 		if (this.TwoTabGroup == null)
 		{
 			this.TwoTabGroup = new TabComponent<MapAreaShowTabItem>(base.GetItem(3), new Func<UUIItem, int?, MapAreaShowTabItem>(this.TabItemProxyCreate), new Action<int>(this.ToggleTwoTabCallBack), base.GetItem(5));
 		}
-		ExploreCountryData exploreCountryData = this.OneTabDataList[this.CurSelectOneTabIndex];
-		this.TwoTabDataList = (from s in exploreCountryData.GetStateDataList()
-		orderby s.SortIndex, s.StateId
-		select s).ToList<ExploreStateData>();
+		List<ExploreStateData> list = new List<ExploreStateData>(this.OneTabDataList[this.CurSelectOneTabIndex].GetStateDataList());
+		list.Sort(delegate(ExploreStateData a, ExploreStateData b)
+		{
+			if (a.SortIndex != b.SortIndex)
+			{
+				return a.SortIndex - b.SortIndex;
+			}
+			return a.StateId - b.StateId;
+		});
+		this.TwoTabDataList = list;
 		int count = this.TwoTabDataList.Count;
 		this.TwoTabGroup.RefreshTabItemByLength(count, new Action(this.RefreshTwoTabFinish));
 	}
 
-	// Token: 0x0600CB3F RID: 52031 RVA: 0x002E55B0 File Offset: 0x002E37B0
+	// Token: 0x06009F50 RID: 40784 RVA: 0x002F0710 File Offset: 0x002EE910
 	private void RefreshTwoTabFinish()
 	{
 		int index = 0;
@@ -216,26 +221,26 @@ public class MapAreaShowView : UiViewBase
 		base.GetItem(3).SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600CB40 RID: 52032 RVA: 0x002E56B4 File Offset: 0x002E38B4
+	// Token: 0x06009F51 RID: 40785 RVA: 0x002F0814 File Offset: 0x002EEA14
 	private MapAreaShowTabItem TabItemProxyCreate([Nullable(2)] UUIItem item, int? index)
 	{
 		return new MapAreaShowTabItem();
 	}
 
-	// Token: 0x0600CB41 RID: 52033 RVA: 0x002E56BB File Offset: 0x002E38BB
+	// Token: 0x06009F52 RID: 40786 RVA: 0x002F081B File Offset: 0x002EEA1B
 	private void ToggleTwoTabCallBack(int index)
 	{
 		this.CurSelectTwoTabIndex = index;
 		this.RefreshArea();
 	}
 
-	// Token: 0x0600CB42 RID: 52034 RVA: 0x002E56CA File Offset: 0x002E38CA
+	// Token: 0x06009F53 RID: 40787 RVA: 0x002F082A File Offset: 0x002EEA2A
 	private void RefreshArea()
 	{
 		this.RefreshLoopScrollView();
 	}
 
-	// Token: 0x0600CB43 RID: 52035 RVA: 0x002E56D4 File Offset: 0x002E38D4
+	// Token: 0x06009F54 RID: 40788 RVA: 0x002F0834 File Offset: 0x002EEA34
 	protected void RefreshLoopScrollView()
 	{
 		UUILoopScrollViewComponent loopScrollViewComponent = base.GetLoopScrollViewComponent(1);
@@ -250,13 +255,13 @@ public class MapAreaShowView : UiViewBase
 		}, true);
 	}
 
-	// Token: 0x0600CB44 RID: 52036 RVA: 0x002E5766 File Offset: 0x002E3966
+	// Token: 0x06009F55 RID: 40789 RVA: 0x002F08C6 File Offset: 0x002EEAC6
 	private MapAreaShowItem InitHandBookQuestItem()
 	{
 		return new MapAreaShowItem();
 	}
 
-	// Token: 0x0600CB45 RID: 52037 RVA: 0x002E576D File Offset: 0x002E396D
+	// Token: 0x06009F56 RID: 40790 RVA: 0x002F08CD File Offset: 0x002EEACD
 	private void EventMapAreaShowClickArea(int areaId)
 	{
 		MapAreaShowViewParams dataParam = this.DataParam;
@@ -272,22 +277,22 @@ public class MapAreaShowView : UiViewBase
 		onClickArea(areaId);
 	}
 
-	// Token: 0x04005D85 RID: 23941
+	// Token: 0x04005E54 RID: 24148
 	private IReadOnlyList<ExploreCountryData> OneTabDataList;
 
-	// Token: 0x04005D86 RID: 23942
+	// Token: 0x04005E55 RID: 24149
 	private TabComponentWithCaptionItem<MapAreaShowCountryItem> TabComponent;
 
-	// Token: 0x04005D87 RID: 23943
+	// Token: 0x04005E56 RID: 24150
 	private int CurSelectOneTabIndex;
 
-	// Token: 0x04005D88 RID: 23944
+	// Token: 0x04005E57 RID: 24151
 	private int Interval;
 
-	// Token: 0x04005D89 RID: 23945
+	// Token: 0x04005E58 RID: 24152
 	private double? LastClickTime;
 
-	// Token: 0x04005D8A RID: 23946
+	// Token: 0x04005E59 RID: 24153
 	[Nullable(new byte[]
 	{
 		2,
@@ -296,7 +301,7 @@ public class MapAreaShowView : UiViewBase
 	})]
 	protected LoopScrollView<MapAreaShowItem, ExploreAreaData> AreaScroll;
 
-	// Token: 0x04005D8B RID: 23947
+	// Token: 0x04005E5A RID: 24154
 	[Nullable(new byte[]
 	{
 		2,
@@ -304,7 +309,7 @@ public class MapAreaShowView : UiViewBase
 	})]
 	private TabComponent<MapAreaShowTabItem> TwoTabGroup;
 
-	// Token: 0x04005D8C RID: 23948
+	// Token: 0x04005E5B RID: 24155
 	[Nullable(new byte[]
 	{
 		2,
@@ -312,31 +317,31 @@ public class MapAreaShowView : UiViewBase
 	})]
 	private IReadOnlyList<ExploreStateData> TwoTabDataList;
 
-	// Token: 0x04005D8D RID: 23949
+	// Token: 0x04005E5C RID: 24156
 	private int CurSelectTwoTabIndex;
 
-	// Token: 0x04005D8E RID: 23950
+	// Token: 0x04005E5D RID: 24157
 	[Nullable(2)]
 	private MapAreaShowViewParams DataParam;
 
-	// Token: 0x04005D8F RID: 23951
+	// Token: 0x04005E5E RID: 24158
 	private int PendingDefaultStateId;
 
-	// Token: 0x0200801B RID: 32795
+	// Token: 0x020071AA RID: 29098
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029D2A RID: 171306
+		// Token: 0x04025063 RID: 151651
 		TitleItem,
-		// Token: 0x04029D2B RID: 171307
+		// Token: 0x04025064 RID: 151652
 		LoopScrollView,
-		// Token: 0x04029D2C RID: 171308
+		// Token: 0x04025065 RID: 151653
 		ScrollViewItem,
-		// Token: 0x04029D2D RID: 171309
+		// Token: 0x04025066 RID: 151654
 		TwoTabRoot,
-		// Token: 0x04029D2E RID: 171310
+		// Token: 0x04025067 RID: 151655
 		TwoTabScrollView,
-		// Token: 0x04029D2F RID: 171311
+		// Token: 0x04025068 RID: 151656
 		TwoTabItem
 	}
 }

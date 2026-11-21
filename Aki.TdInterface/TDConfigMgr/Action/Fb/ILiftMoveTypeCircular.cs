@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002832 RID: 10290
+	// Token: 0x02002B05 RID: 11013
 	public class ILiftMoveTypeCircular : ILiftMoveType
 	{
-		// Token: 0x0600E42D RID: 58413 RVA: 0x00219880 File Offset: 0x00217A80
-		[NullableContext(1)]
+		// Token: 0x0600F252 RID: 62034 RVA: 0x002366E4 File Offset: 0x002348E4
 		public static ILiftMoveTypeCircular Create(ILiftMoveTypeCircular? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700458B RID: 17803
-		// (get) Token: 0x0600E42E RID: 58414 RVA: 0x0021989F File Offset: 0x00217A9F
+		// Token: 0x170048F6 RID: 18678
+		// (get) Token: 0x0600F253 RID: 62035 RVA: 0x00236703 File Offset: 0x00234903
 		public override ELiftMoveType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E40 RID: 32320
+		// Token: 0x040084FD RID: 34045
 		private ILiftMoveTypeCircular Instance;
 	}
 }

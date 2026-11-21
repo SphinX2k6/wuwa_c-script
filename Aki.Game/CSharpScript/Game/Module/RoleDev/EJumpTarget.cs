@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CCB RID: 19659
+	// Token: 0x02003C7C RID: 15484
 	public enum EJumpTarget
 	{
-		// Token: 0x0401B07A RID: 110714
+		// Token: 0x040159DB RID: 88539
 		SkillPage = 1,
-		// Token: 0x0401B07B RID: 110715
+		// Token: 0x040159DC RID: 88540
 		IllustrationPage
 	}
 }

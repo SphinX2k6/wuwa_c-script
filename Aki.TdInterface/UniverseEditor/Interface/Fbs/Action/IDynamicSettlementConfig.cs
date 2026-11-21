@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200661E RID: 26142
+	// Token: 0x02006C8F RID: 27791
 	public struct IDynamicSettlementConfig : IFlatbufferObject
 	{
-		// Token: 0x1700C23D RID: 49725
-		// (get) Token: 0x0602D657 RID: 185943 RVA: 0x006385B9 File Offset: 0x006367B9
+		// Token: 0x1700CBDB RID: 52187
+		// (get) Token: 0x0602FE28 RID: 196136 RVA: 0x00685121 File Offset: 0x00683321
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D658 RID: 185944 RVA: 0x006385C6 File Offset: 0x006367C6
+		// Token: 0x0602FE29 RID: 196137 RVA: 0x0068512E File Offset: 0x0068332E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D659 RID: 185945 RVA: 0x006385D0 File Offset: 0x006367D0
+		// Token: 0x0602FE2A RID: 196138 RVA: 0x00685138 File Offset: 0x00683338
 		public static IDynamicSettlementConfig GetRootAsIDynamicSettlementConfig(ByteBuffer _bb)
 		{
 			return IDynamicSettlementConfig.GetRootAsIDynamicSettlementConfig(_bb, default(IDynamicSettlementConfig));
 		}
 
-		// Token: 0x0602D65A RID: 185946 RVA: 0x006385EC File Offset: 0x006367EC
+		// Token: 0x0602FE2B RID: 196139 RVA: 0x00685154 File Offset: 0x00683354
 		public static IDynamicSettlementConfig GetRootAsIDynamicSettlementConfig(ByteBuffer _bb, IDynamicSettlementConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D65B RID: 185947 RVA: 0x00638609 File Offset: 0x00636809
+		// Token: 0x0602FE2C RID: 196140 RVA: 0x00685171 File Offset: 0x00683371
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D65C RID: 185948 RVA: 0x00638618 File Offset: 0x00636818
+		// Token: 0x0602FE2D RID: 196141 RVA: 0x00685180 File Offset: 0x00683380
 		public IDynamicSettlementConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C23E RID: 49726
-		// (get) Token: 0x0602D65D RID: 185949 RVA: 0x00638628 File Offset: 0x00636828
+		// Token: 0x1700CBDC RID: 52188
+		// (get) Token: 0x0602FE2E RID: 196142 RVA: 0x00685190 File Offset: 0x00683390
 		public EDynamicSettlementType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D65E RID: 185950 RVA: 0x00638664 File Offset: 0x00636864
+		// Token: 0x0602FE2F RID: 196143 RVA: 0x006851CC File Offset: 0x006833CC
 		public static Offset<IDynamicSettlementConfig> CreateIDynamicSettlementConfig(FlatBufferBuilder builder, EDynamicSettlementType Type = EDynamicSettlementType.Battle)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDynamicSettlementConfig.EndIDynamicSettlementConfig(builder);
 		}
 
-		// Token: 0x0602D65F RID: 185951 RVA: 0x0063867A File Offset: 0x0063687A
+		// Token: 0x0602FE30 RID: 196144 RVA: 0x006851E2 File Offset: 0x006833E2
 		public static void StartIDynamicSettlementConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602D660 RID: 185952 RVA: 0x00638683 File Offset: 0x00636883
+		// Token: 0x0602FE31 RID: 196145 RVA: 0x006851EB File Offset: 0x006833EB
 		public static void AddType(FlatBufferBuilder builder, EDynamicSettlementType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D661 RID: 185953 RVA: 0x0063868E File Offset: 0x0063688E
+		// Token: 0x0602FE32 RID: 196146 RVA: 0x006851F6 File Offset: 0x006833F6
 		public static Offset<IDynamicSettlementConfig> EndIDynamicSettlementConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IDynamicSettlementConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602D662 RID: 185954 RVA: 0x0063869C File Offset: 0x0063689C
+		// Token: 0x0602FE33 RID: 196147 RVA: 0x00685204 File Offset: 0x00683404
 		public IDynamicSettlementConfigT UnPack()
 		{
 			IDynamicSettlementConfigT dynamicSettlementConfigT = new IDynamicSettlementConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return dynamicSettlementConfigT;
 		}
 
-		// Token: 0x0602D663 RID: 185955 RVA: 0x006386B7 File Offset: 0x006368B7
+		// Token: 0x0602FE34 RID: 196148 RVA: 0x0068521F File Offset: 0x0068341F
 		public void UnPackTo(IDynamicSettlementConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602D664 RID: 185956 RVA: 0x006386C8 File Offset: 0x006368C8
+		// Token: 0x0602FE35 RID: 196149 RVA: 0x00685230 File Offset: 0x00683430
 		public static Offset<IDynamicSettlementConfig> Pack(FlatBufferBuilder builder, IDynamicSettlementConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDynamicSettlementConfig.CreateIDynamicSettlementConfig(builder, _o.Type);
 		}
 
-		// Token: 0x04010CAB RID: 68779
+		// Token: 0x04011AC6 RID: 72390
 		private Table __p;
 	}
 }

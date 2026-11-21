@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B1D RID: 23325
+	// Token: 0x02004AFE RID: 19198
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CookPopItem : UiPanelBase
 	{
-		// Token: 0x0603B0BD RID: 241853 RVA: 0x00E13DFA File Offset: 0x00E11FFA
+		// Token: 0x0603002F RID: 196655 RVA: 0x00D64B12 File Offset: 0x00D62D12
 		public CookPopItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B0BE RID: 241854 RVA: 0x00E13E10 File Offset: 0x00E12010
+		// Token: 0x06030030 RID: 196656 RVA: 0x00D64B28 File Offset: 0x00D62D28
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B0BF RID: 241855 RVA: 0x00E13EFA File Offset: 0x00E120FA
+		// Token: 0x06030031 RID: 196657 RVA: 0x00D64C12 File Offset: 0x00D62E12
 		public void Update(ICookPopItem data)
 		{
 			this.ItemData = data;
@@ -56,31 +56,31 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.SetCount();
 		}
 
-		// Token: 0x0603B0C0 RID: 241856 RVA: 0x00E13F18 File Offset: 0x00E12118
+		// Token: 0x06030032 RID: 196658 RVA: 0x00D64C30 File Offset: 0x00D62E30
 		private void SetIcon()
 		{
 			base.SetItemIcon(base.GetTexture(4), this.ItemData.ItemId, null, null);
 		}
 
-		// Token: 0x0603B0C1 RID: 241857 RVA: 0x00E13F48 File Offset: 0x00E12148
+		// Token: 0x06030033 RID: 196659 RVA: 0x00D64C60 File Offset: 0x00D62E60
 		private void SetQuality()
 		{
 			base.SetItemQualityIcon(base.GetSprite(5), this.ItemData.ItemId, null, CommonDefine.EQualityIconType.BackgroundSprite, null);
 		}
 
-		// Token: 0x0603B0C2 RID: 241858 RVA: 0x00E13F78 File Offset: 0x00E12178
+		// Token: 0x06030034 RID: 196660 RVA: 0x00D64C90 File Offset: 0x00D62E90
 		private void SetCount()
 		{
 			base.GetText(8).SetText(this.ItemData.ItemNum.ToString(), true);
 		}
 
-		// Token: 0x0603B0C3 RID: 241859 RVA: 0x00E13FA5 File Offset: 0x00E121A5
+		// Token: 0x06030035 RID: 196661 RVA: 0x00D64CBD File Offset: 0x00D62EBD
 		private void OnClick()
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.ItemData.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.ItemData.ItemId, true, null, false);
 		}
 
-		// Token: 0x0401ECC3 RID: 126147
+		// Token: 0x0401977F RID: 104319
 		[Nullable(2)]
 		private ICookPopItem ItemData;
 	}

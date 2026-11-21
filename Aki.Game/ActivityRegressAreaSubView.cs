@@ -6,18 +6,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001470 RID: 5232
+// Token: 0x02000924 RID: 2340
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivityRegressAreaSubView : ActivityRegressMainSubViewBase
 {
-	// Token: 0x06009410 RID: 37904 RVA: 0x001FE965 File Offset: 0x001FCB65
+	// Token: 0x060067A5 RID: 26533 RVA: 0x002078C9 File Offset: 0x00205AC9
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = ActivityRegressMainViewComponentsInfo.Value;
 	}
 
-	// Token: 0x06009411 RID: 37905 RVA: 0x001FE974 File Offset: 0x001FCB74
+	// Token: 0x060067A6 RID: 26534 RVA: 0x002078D8 File Offset: 0x00205AD8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegressAreaSubView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -28,7 +28,7 @@ public class ActivityRegressAreaSubView : ActivityRegressMainSubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009412 RID: 37906 RVA: 0x001FE9B8 File Offset: 0x001FCBB8
+	// Token: 0x060067A7 RID: 26535 RVA: 0x0020791C File Offset: 0x00205B1C
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -39,14 +39,14 @@ public class ActivityRegressAreaSubView : ActivityRegressMainSubViewBase
 		base.GetItem(3).SetUIActive(false);
 	}
 
-	// Token: 0x06009413 RID: 37907 RVA: 0x001FEA0C File Offset: 0x001FCC0C
+	// Token: 0x060067A8 RID: 26536 RVA: 0x00207970 File Offset: 0x00205B70
 	protected override void OnBeforeDestroy()
 	{
 		this.ActivityRegressTabGroupPanel.Destroy();
 		this.ActivityRegressTabGroupPanel = null;
 	}
 
-	// Token: 0x06009414 RID: 37908 RVA: 0x001FEA20 File Offset: 0x001FCC20
+	// Token: 0x060067A9 RID: 26537 RVA: 0x00207984 File Offset: 0x00205B84
 	protected override void OnUpdate(int subTabIndex)
 	{
 		IReadOnlyList<RegressBase> lastestRegressBaseConfigList = ActivityRegressModel.Instance.GetLastestRegressBaseConfigList(EActivityRegressEntranceType.NewArea);
@@ -68,7 +68,7 @@ public class ActivityRegressAreaSubView : ActivityRegressMainSubViewBase
 		this.ActivityRegressTabGroupPanel.RefreshByData(this.TabCommonDataList, subTabIndex);
 	}
 
-	// Token: 0x06009415 RID: 37909 RVA: 0x001FEAE0 File Offset: 0x001FCCE0
+	// Token: 0x060067AA RID: 26538 RVA: 0x00207A44 File Offset: 0x00205C44
 	private void TabCallBack(int index)
 	{
 		RegressBase? config = this.TabCommonDataList[index].Config;
@@ -76,13 +76,13 @@ public class ActivityRegressAreaSubView : ActivityRegressMainSubViewBase
 		this.SequencePlayer.PlaySequence("Start", false, null);
 	}
 
-	// Token: 0x040041AE RID: 16814
+	// Token: 0x04004246 RID: 16966
 	private ActivityRegressTabGroupPanel ActivityRegressTabGroupPanel;
 
-	// Token: 0x040041AF RID: 16815
+	// Token: 0x04004247 RID: 16967
 	private ActivityRegressAreaActivityInfoPanel ActivityRegressAreaActivityInfoPanel;
 
-	// Token: 0x040041B0 RID: 16816
+	// Token: 0x04004248 RID: 16968
 	[Nullable(new byte[]
 	{
 		2,

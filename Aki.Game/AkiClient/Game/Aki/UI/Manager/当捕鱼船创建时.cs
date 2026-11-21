@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039F1 RID: 14833
+	// Token: 0x02003048 RID: 12360
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 当捕鱼船创建时 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F11A RID: 127258 RVA: 0x008A989A File Offset: 0x008A7A9A
+		// Token: 0x0601D57B RID: 120187 RVA: 0x008F1EFA File Offset: 0x008F00FA
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 当捕鱼船创建时.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F11B RID: 127259 RVA: 0x008A98A6 File Offset: 0x008A7AA6
+		// Token: 0x0601D57C RID: 120188 RVA: 0x008F1F06 File Offset: 0x008F0106
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__当捕鱼船创建时__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,31 +28,30 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__当捕鱼船创建时__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F11C RID: 127260 RVA: 0x008A98C9 File Offset: 0x008A7AC9
+		// Token: 0x0601D57D RID: 120189 RVA: 0x008F1F29 File Offset: 0x008F0129
 		public 当捕鱼船创建时()
 		{
 		}
 
-		// Token: 0x0601F11D RID: 127261 RVA: 0x008A98D1 File Offset: 0x008A7AD1
+		// Token: 0x0601D57E RID: 120190 RVA: 0x008F1F31 File Offset: 0x008F0131
 		[NullableContext(2)]
 		public 当捕鱼船创建时(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F11E RID: 127262 RVA: 0x008A98DB File Offset: 0x008A7ADB
+		// Token: 0x0601D57F RID: 120191 RVA: 0x008F1F3B File Offset: 0x008F013B
 		public 当捕鱼船创建时(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F11F RID: 127263 RVA: 0x008A98E6 File Offset: 0x008A7AE6
+		// Token: 0x0601D580 RID: 120192 RVA: 0x008F1F46 File Offset: 0x008F0146
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<AActor>) ?? ((Action<AActor>)Delegate.CreateDelegate(typeof(Action<AActor>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F120 RID: 127264 RVA: 0x008A9918 File Offset: 0x008A7B18
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D581 RID: 120193 RVA: 0x008F1F78 File Offset: 0x008F0178
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 当捕鱼船创建时.RegisterId);
 		}
 
-		// Token: 0x0601F121 RID: 127265 RVA: 0x008A9952 File Offset: 0x008A7B52
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D582 RID: 120194 RVA: 0x008F1FB2 File Offset: 0x008F01B2
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -82,10 +80,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F122 RID: 127266 RVA: 0x008A995C File Offset: 0x008A7B5C
+		// Token: 0x0601D583 RID: 120195 RVA: 0x008F1FBC File Offset: 0x008F01BC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(AActor fishingBoat)
 		{
 			当捕鱼船创建时.__当捕鱼船创建时_DelegateParams* ptr = stackalloc 当捕鱼船创建时.__当捕鱼船创建时_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(当捕鱼船创建时.__当捕鱼船创建时_DelegateParams) & -16L;
@@ -94,10 +91,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F123 RID: 127267 RVA: 0x008A99A8 File Offset: 0x008A7BA8
+		// Token: 0x0601D584 RID: 120196 RVA: 0x008F2008 File Offset: 0x008F0208
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<AActor> action = target as Action<AActor>;
@@ -109,28 +105,28 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0400EE24 RID: 60964
+		// Token: 0x0400F74C RID: 63308
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:当捕鱼船创建时__DelegateSignature";
 
-		// Token: 0x0400EE25 RID: 60965
+		// Token: 0x0400F74D RID: 63309
 		private static int RegisterId;
 
-		// Token: 0x020099F1 RID: 39409
+		// Token: 0x02008CA5 RID: 36005
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __当捕鱼船创建时_DelegateParams
+		private ref struct __当捕鱼船创建时_DelegateParams
 		{
-			// Token: 0x04030EC9 RID: 200393
+			// Token: 0x0402C7A9 RID: 182185
 			[FieldOffset(0)]
 			public IntPtr fishingBoat;
 		}
 
-		// Token: 0x020099F2 RID: 39410
+		// Token: 0x02008CA6 RID: 36006
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030ECA RID: 200394
+			// Token: 0x0402C7AA RID: 182186
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

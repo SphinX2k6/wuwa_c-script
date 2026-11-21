@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009FA RID: 2554
+	// Token: 0x02000ABF RID: 2751
 	public static class ERoleMotionInteractTypeExtensions
 	{
-		// Token: 0x06003896 RID: 14486 RVA: 0x000927D8 File Offset: 0x000909D8
+		// Token: 0x06003C6E RID: 15470 RVA: 0x0009B0C8 File Offset: 0x000992C8
 		public static string ToEnumString(this ERoleMotionInteractType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003897 RID: 14487 RVA: 0x00092800 File Offset: 0x00090A00
+		// Token: 0x06003C6F RID: 15471 RVA: 0x0009B0F0 File Offset: 0x000992F0
 		public static ERoleMotionInteractType FromString(string name)
 		{
 			ERoleMotionInteractType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003898 RID: 14488 RVA: 0x00092829 File Offset: 0x00090A29
+		// Token: 0x06003C70 RID: 15472 RVA: 0x0009B119 File Offset: 0x00099319
 		public static bool TryFromString(string name, out ERoleMotionInteractType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003899 RID: 14489 RVA: 0x0009284E File Offset: 0x00090A4E
+		// Token: 0x06003C71 RID: 15473 RVA: 0x0009B13E File Offset: 0x0009933E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600389A RID: 14490 RVA: 0x0009285E File Offset: 0x00090A5E
+		// Token: 0x06003C72 RID: 15474 RVA: 0x0009B14E File Offset: 0x0009934E
 		public static ERoleMotionInteractType[] GetValues()
 		{
 			return new ERoleMotionInteractType[1];
 		}
 
-		// Token: 0x0600389B RID: 14491 RVA: 0x00092866 File Offset: 0x00090A66
+		// Token: 0x06003C73 RID: 15475 RVA: 0x0009B156 File Offset: 0x00099356
 		public static string[] GetNames()
 		{
 			return new string[]

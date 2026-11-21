@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200032D RID: 813
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000374 RID: 884
 	public class IEntityMatchSpecificBp : IEntityMatchConfig
 	{
-		// Token: 0x06000FFE RID: 4094 RVA: 0x00037E2C File Offset: 0x0003602C
+		// Token: 0x06001130 RID: 4400 RVA: 0x0003ADF8 File Offset: 0x00038FF8
 		private IEntityMatchSpecificBp_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000FFF RID: 4095 RVA: 0x00037E64 File Offset: 0x00036064
+		// Token: 0x06001131 RID: 4401 RVA: 0x0003AE30 File Offset: 0x00039030
 		public static IEntityMatchSpecificBp Create([Nullable(2)] IEntityMatchSpecificBp instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001000 RID: 4096 RVA: 0x00037E77 File Offset: 0x00036077
+		// Token: 0x06001132 RID: 4402 RVA: 0x0003AE43 File Offset: 0x00039043
 		public static IEntityMatchSpecificBp CreateFromSetValue([Nullable(2)] IEntityMatchSpecificBp_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001001 RID: 4097 RVA: 0x00037E8A File Offset: 0x0003608A
+		// Token: 0x06001133 RID: 4403 RVA: 0x0003AE56 File Offset: 0x00039056
 		public new IEntityMatchSpecificBp_SetValue ToSetValue()
 		{
 			return new IEntityMatchSpecificBp_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000498 RID: 1176
-		// (get) Token: 0x06001002 RID: 4098 RVA: 0x00037EA9 File Offset: 0x000360A9
-		// (set) Token: 0x06001003 RID: 4099 RVA: 0x00037ED4 File Offset: 0x000360D4
+		// Token: 0x170004E6 RID: 1254
+		// (get) Token: 0x06001134 RID: 4404 RVA: 0x0003AE75 File Offset: 0x00039075
+		// (set) Token: 0x06001135 RID: 4405 RVA: 0x0003AEA0 File Offset: 0x000390A0
 		public override EEntityMatchType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000499 RID: 1177
-		// (get) Token: 0x06001004 RID: 4100 RVA: 0x00037EE2 File Offset: 0x000360E2
-		// (set) Token: 0x06001005 RID: 4101 RVA: 0x00037F09 File Offset: 0x00036109
+		// Token: 0x170004E7 RID: 1255
+		// (get) Token: 0x06001136 RID: 4406 RVA: 0x0003AEAE File Offset: 0x000390AE
+		// (set) Token: 0x06001137 RID: 4407 RVA: 0x0003AED5 File Offset: 0x000390D5
 		public virtual List<string> SpecificBpList
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D89 RID: 3465
+		// Token: 0x04000E74 RID: 3700
 		[Nullable(2)]
 		protected new IEntityMatchSpecificBp FbInstance;
 
-		// Token: 0x04000D8A RID: 3466
+		// Token: 0x04000E75 RID: 3701
 		[Nullable(2)]
 		protected new IEntityMatchSpecificBp_SetValue PocoInterface;
 	}

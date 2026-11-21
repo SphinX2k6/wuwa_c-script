@@ -7,22 +7,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.HotPatchKuroSdk
 {
-	// Token: 0x020001DC RID: 476
+	// Token: 0x020001E1 RID: 481
 	public class LauncherSdk : IStaticVariableResetter
 	{
-		// Token: 0x06000C98 RID: 3224 RVA: 0x0004D06C File Offset: 0x0004B26C
+		// Token: 0x06000CD0 RID: 3280 RVA: 0x0004F888 File Offset: 0x0004DA88
 		static LauncherSdk()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LauncherSdk.CreateStaticDefaultValue), new Action(LauncherSdk.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C99 RID: 3225 RVA: 0x0004D08B File Offset: 0x0004B28B
+		// Token: 0x06000CD1 RID: 3281 RVA: 0x0004F8A7 File Offset: 0x0004DAA7
 		public static bool canUseSdk()
 		{
 			return !PlatformSdkManagerNew.Instance.IsSdkOn && UKuroStaticLibrary.IsModuleLoaded("KuroSDK") && BaseConfigController.Instance.GetPublicValue("UseSDK") == "1";
 		}
 
-		// Token: 0x06000C9A RID: 3226 RVA: 0x0004D0C0 File Offset: 0x0004B2C0
+		// Token: 0x06000CD2 RID: 3282 RVA: 0x0004F8DC File Offset: 0x0004DADC
 		[NullableContext(1)]
 		public static LauncherSdkBase Get()
 		{
@@ -74,30 +74,35 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			return LauncherSdk.LauncherSdkInstance;
 		}
 
-		// Token: 0x06000C9B RID: 3227 RVA: 0x0004D209 File Offset: 0x0004B409
+		// Token: 0x06000CD3 RID: 3283 RVA: 0x0004FA25 File Offset: 0x0004DC25
 		public static void Init()
 		{
 			LauncherSdk.Get().Init();
 		}
 
-		// Token: 0x06000C9C RID: 3228 RVA: 0x0004D215 File Offset: 0x0004B415
+		// Token: 0x06000CD4 RID: 3284 RVA: 0x0004FA31 File Offset: 0x0004DC31
 		public static bool IsGlobalSdk()
 		{
 			return BaseConfigController.Instance.GetPublicValue("SdkArea") != "CN" || (PlatformSdkManagerNew.Instance.IsSdkOn && PlatformSdkConfig.Instance.IsGlobal);
 		}
 
-		// Token: 0x06000C9D RID: 3229 RVA: 0x0004D24C File Offset: 0x0004B44C
+		// Token: 0x06000CD5 RID: 3285 RVA: 0x0004FA68 File Offset: 0x0004DC68
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000C9E RID: 3230 RVA: 0x0004D24E File Offset: 0x0004B44E
+		// Token: 0x06000CD6 RID: 3286 RVA: 0x0004FA6A File Offset: 0x0004DC6A
 		public static void ResetStaticDefaultValue()
 		{
+			LauncherSdkBase launcherSdkInstance = LauncherSdk.LauncherSdkInstance;
+			if (launcherSdkInstance != null)
+			{
+				launcherSdkInstance.ClearFoldStateChangeCallback();
+			}
 			LauncherSdk.LauncherSdkInstance = null;
 		}
 
-		// Token: 0x040007EA RID: 2026
+		// Token: 0x04000828 RID: 2088
 		[Nullable(2)]
 		private static LauncherSdkBase LauncherSdkInstance;
 	}

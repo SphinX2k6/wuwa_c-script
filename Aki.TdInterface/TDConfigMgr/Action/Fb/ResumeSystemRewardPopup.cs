@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029AD RID: 10669
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C9A RID: 11418
 	public class ResumeSystemRewardPopup : ActionParams
 	{
-		// Token: 0x0600EC0E RID: 60430 RVA: 0x00227DD8 File Offset: 0x00225FD8
+		// Token: 0x0600FAA5 RID: 64165 RVA: 0x0024575D File Offset: 0x0024395D
 		public static ResumeSystemRewardPopup Create(IResumeSystemRewardPopup? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A76 RID: 19062
-		// (get) Token: 0x0600EC0F RID: 60431 RVA: 0x00227DF7 File Offset: 0x00225FF7
+		// Token: 0x17004E1F RID: 19999
+		// (get) Token: 0x0600FAA6 RID: 64166 RVA: 0x0024577C File Offset: 0x0024397C
 		public virtual IResumeGiantDeliveryRewardPopup SystemType
 		{
 			get
@@ -38,14 +36,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081FD RID: 33277
+		// Token: 0x040088EE RID: 35054
 		private IResumeSystemRewardPopup Instance;
 
-		// Token: 0x040081FE RID: 33278
+		// Token: 0x040088EF RID: 35055
 		[Nullable(2)]
 		private IResumeGiantDeliveryRewardPopup _SystemTypeCache;
 
-		// Token: 0x040081FF RID: 33279
+		// Token: 0x040088F0 RID: 35056
 		private bool _SystemTypeInited;
 	}
 }

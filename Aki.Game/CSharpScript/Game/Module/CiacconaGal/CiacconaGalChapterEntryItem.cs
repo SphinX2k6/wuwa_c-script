@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.GenericPrompt;
@@ -9,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BE4 RID: 23524
+	// Token: 0x02004BC4 RID: 19396
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +17,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 	})]
 	public class CiacconaGalChapterEntryItem : GridProxyAbstract<CiacconaGalChapterSlotData>
 	{
-		// Token: 0x0603B776 RID: 243574 RVA: 0x00E2E4E4 File Offset: 0x00E2C6E4
+		// Token: 0x060306C1 RID: 198337 RVA: 0x00D7E7EC File Offset: 0x00D7C9EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -51,13 +50,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B777 RID: 243575 RVA: 0x00E2E650 File Offset: 0x00E2C850
+		// Token: 0x060306C2 RID: 198338 RVA: 0x00D7E958 File Offset: 0x00D7CB58
 		protected override void OnStart()
 		{
 			this.LayoutIcon = new GenericLayout<CiacconaSubEndingIcon, CiacconaGalSubEndingData>(base.GetHorizontalLayout(5), new Func<CiacconaSubEndingIcon>(this.GetEndingItem), null, false, true);
 		}
 
-		// Token: 0x0603B778 RID: 243576 RVA: 0x00E2E674 File Offset: 0x00E2C874
+		// Token: 0x060306C3 RID: 198339 RVA: 0x00D7E97C File Offset: 0x00D7CB7C
 		public override void Refresh(CiacconaGalChapterSlotData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -67,13 +66,16 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			base.SetTextureByPath(path, base.GetTexture(0), null, null);
 			this.SetSpriteByPath(data.RomanNumberIconPath, base.GetSprite(3), false, null, null);
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), chapterDataById.Title, Array.Empty<object>());
-			List<CiacconaGalSubEndingData> data2 = (from subEndingId in chapterDataById.SubEndingIds
-			select CiacconaGalModel.Instance.GetSubEndingDataById(subEndingId)).ToList<CiacconaGalSubEndingData>();
-			this.LayoutIcon.RefreshByData(data2, null, false);
+			List<CiacconaGalSubEndingData> list = new List<CiacconaGalSubEndingData>();
+			foreach (int id in chapterDataById.SubEndingIds)
+			{
+				list.Add(CiacconaGalModel.Instance.GetSubEndingDataById(id));
+			}
+			this.LayoutIcon.RefreshByData(list, null, false);
 			base.GetItem(7).SetUIActive(CiacconaGalModel.Instance.HasAnySubEndingRewardByChapterId(data.ChapterId));
 		}
 
-		// Token: 0x0603B779 RID: 243577 RVA: 0x00E2E774 File Offset: 0x00E2C974
+		// Token: 0x060306C4 RID: 198340 RVA: 0x00D7EA84 File Offset: 0x00D7CC84
 		private void OnClick(EToggleState toggleState)
 		{
 			base.GetExtendToggle(4).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
@@ -85,17 +87,17 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			CiacconaGalController.Instance.OpenChapterViewById(this.Data.ChapterId, null);
 		}
 
-		// Token: 0x0603B77A RID: 243578 RVA: 0x00E2E7E1 File Offset: 0x00E2C9E1
+		// Token: 0x060306C5 RID: 198341 RVA: 0x00D7EAF1 File Offset: 0x00D7CCF1
 		private CiacconaSubEndingIcon GetEndingItem()
 		{
 			return new CiacconaSubEndingIcon();
 		}
 
-		// Token: 0x0401EFB8 RID: 126904
+		// Token: 0x04019A69 RID: 105065
 		[Nullable(2)]
 		private CiacconaGalChapterSlotData Data;
 
-		// Token: 0x0401EFB9 RID: 126905
+		// Token: 0x04019A6A RID: 105066
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,32 +106,32 @@ namespace CSharpScript.Game.Module.CiacconaGal
 		})]
 		private GenericLayout<CiacconaSubEndingIcon, CiacconaGalSubEndingData> LayoutIcon;
 
-		// Token: 0x0200BDC8 RID: 48584
+		// Token: 0x0200A7D1 RID: 42961
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403939C RID: 234396
+			// Token: 0x04033D61 RID: 212321
 			public const int TextureChapterImage = 0;
 
-			// Token: 0x0403939D RID: 234397
+			// Token: 0x04033D62 RID: 212322
 			public const int SpriteLock = 1;
 
-			// Token: 0x0403939E RID: 234398
+			// Token: 0x04033D63 RID: 212323
 			public const int TextName = 2;
 
-			// Token: 0x0403939F RID: 234399
+			// Token: 0x04033D64 RID: 212324
 			public const int SpriteRomanNumber = 3;
 
-			// Token: 0x040393A0 RID: 234400
+			// Token: 0x04033D65 RID: 212325
 			public const int TogSelf = 4;
 
-			// Token: 0x040393A1 RID: 234401
+			// Token: 0x04033D66 RID: 212326
 			public const int LayoutIcon = 5;
 
-			// Token: 0x040393A2 RID: 234402
+			// Token: 0x04033D67 RID: 212327
 			public const int ItemIcon = 6;
 
-			// Token: 0x040393A3 RID: 234403
+			// Token: 0x04033D68 RID: 212328
 			public const int ItemRedDot = 7;
 		}
 	}

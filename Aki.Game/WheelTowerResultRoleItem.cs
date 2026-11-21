@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001599 RID: 5529
+// Token: 0x02000A51 RID: 2641
 public class WheelTowerResultRoleItem : GridProxyAbstract<int>
 {
-	// Token: 0x06009D7F RID: 40319 RVA: 0x00222980 File Offset: 0x00220B80
+	// Token: 0x0600715D RID: 29021 RVA: 0x0022C730 File Offset: 0x0022A930
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -33,7 +33,7 @@ public class WheelTowerResultRoleItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D80 RID: 40320 RVA: 0x00222A90 File Offset: 0x00220C90
+	// Token: 0x0600715E RID: 29022 RVA: 0x0022C840 File Offset: 0x0022AA40
 	public override void Refresh(int roleId, bool isSelected, int gridIndex)
 	{
 		UUIItem item = base.GetItem(2);

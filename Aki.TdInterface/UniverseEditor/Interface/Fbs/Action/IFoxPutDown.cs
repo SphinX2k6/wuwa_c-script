@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006861 RID: 26721
+	// Token: 0x02006EF6 RID: 28406
 	public struct IFoxPutDown : IFlatbufferObject
 	{
-		// Token: 0x1700C67D RID: 50813
-		// (get) Token: 0x0602E987 RID: 190855 RVA: 0x0065B13C File Offset: 0x0065933C
+		// Token: 0x1700D051 RID: 53329
+		// (get) Token: 0x0603126D RID: 201325 RVA: 0x006A99A8 File Offset: 0x006A7BA8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E988 RID: 190856 RVA: 0x0065B149 File Offset: 0x00659349
+		// Token: 0x0603126E RID: 201326 RVA: 0x006A99B5 File Offset: 0x006A7BB5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E989 RID: 190857 RVA: 0x0065B150 File Offset: 0x00659350
+		// Token: 0x0603126F RID: 201327 RVA: 0x006A99BC File Offset: 0x006A7BBC
 		public static IFoxPutDown GetRootAsIFoxPutDown(ByteBuffer _bb)
 		{
 			return IFoxPutDown.GetRootAsIFoxPutDown(_bb, default(IFoxPutDown));
 		}
 
-		// Token: 0x0602E98A RID: 190858 RVA: 0x0065B16C File Offset: 0x0065936C
+		// Token: 0x06031270 RID: 201328 RVA: 0x006A99D8 File Offset: 0x006A7BD8
 		public static IFoxPutDown GetRootAsIFoxPutDown(ByteBuffer _bb, IFoxPutDown obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E98B RID: 190859 RVA: 0x0065B189 File Offset: 0x00659389
+		// Token: 0x06031271 RID: 201329 RVA: 0x006A99F5 File Offset: 0x006A7BF5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E98C RID: 190860 RVA: 0x0065B198 File Offset: 0x00659398
+		// Token: 0x06031272 RID: 201330 RVA: 0x006A9A04 File Offset: 0x006A7C04
 		public IFoxPutDown __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C67E RID: 50814
-		// (get) Token: 0x0602E98D RID: 190861 RVA: 0x0065B1A8 File Offset: 0x006593A8
+		// Token: 0x1700D052 RID: 53330
+		// (get) Token: 0x06031273 RID: 201331 RVA: 0x006A9A14 File Offset: 0x006A7C14
 		public ELeisureInteract Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E98E RID: 190862 RVA: 0x0065B1E4 File Offset: 0x006593E4
+		// Token: 0x06031274 RID: 201332 RVA: 0x006A9A50 File Offset: 0x006A7C50
 		public static Offset<IFoxPutDown> CreateIFoxPutDown(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFoxPutDown.EndIFoxPutDown(builder);
 		}
 
-		// Token: 0x0602E98F RID: 190863 RVA: 0x0065B1FA File Offset: 0x006593FA
+		// Token: 0x06031275 RID: 201333 RVA: 0x006A9A66 File Offset: 0x006A7C66
 		public static void StartIFoxPutDown(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602E990 RID: 190864 RVA: 0x0065B203 File Offset: 0x00659403
+		// Token: 0x06031276 RID: 201334 RVA: 0x006A9A6F File Offset: 0x006A7C6F
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E991 RID: 190865 RVA: 0x0065B20E File Offset: 0x0065940E
+		// Token: 0x06031277 RID: 201335 RVA: 0x006A9A7A File Offset: 0x006A7C7A
 		public static Offset<IFoxPutDown> EndIFoxPutDown(FlatBufferBuilder builder)
 		{
 			return new Offset<IFoxPutDown>(builder.EndTable());
 		}
 
-		// Token: 0x0602E992 RID: 190866 RVA: 0x0065B21C File Offset: 0x0065941C
+		// Token: 0x06031278 RID: 201336 RVA: 0x006A9A88 File Offset: 0x006A7C88
 		public IFoxPutDownT UnPack()
 		{
 			IFoxPutDownT foxPutDownT = new IFoxPutDownT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return foxPutDownT;
 		}
 
-		// Token: 0x0602E993 RID: 190867 RVA: 0x0065B237 File Offset: 0x00659437
+		// Token: 0x06031279 RID: 201337 RVA: 0x006A9AA3 File Offset: 0x006A7CA3
 		public void UnPackTo(IFoxPutDownT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602E994 RID: 190868 RVA: 0x0065B248 File Offset: 0x00659448
+		// Token: 0x0603127A RID: 201338 RVA: 0x006A9AB4 File Offset: 0x006A7CB4
 		public static Offset<IFoxPutDown> Pack(FlatBufferBuilder builder, IFoxPutDownT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFoxPutDown.CreateIFoxPutDown(builder, _o.Type);
 		}
 
-		// Token: 0x04010FB1 RID: 69553
+		// Token: 0x04011DFB RID: 73211
 		private Table __p;
 	}
 }

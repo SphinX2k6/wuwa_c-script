@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071E3 RID: 29155
+	// Token: 0x02006298 RID: 25240
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemManipulableCastToOutletState : SceneItemManipulableCastState
 	{
-		// Token: 0x060475CA RID: 292298 RVA: 0x012258DE File Offset: 0x01223ADE
+		// Token: 0x0603CECC RID: 249548 RVA: 0x0117F716 File Offset: 0x0117D916
 		public SceneItemManipulableCastToOutletState(SceneItemManipulatableComponent sceneItem, [Nullable(new byte[]
 		{
 			0,
@@ -20,19 +20,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 		{
 		}
 
-		// Token: 0x060475CB RID: 292299 RVA: 0x012258E9 File Offset: 0x01223AE9
+		// Token: 0x0603CECD RID: 249549 RVA: 0x0117F721 File Offset: 0x0117D921
 		public void SetTarget(Entity newValue)
 		{
 			this.TargetInternal = newValue;
 		}
 
-		// Token: 0x060475CC RID: 292300 RVA: 0x012258F2 File Offset: 0x01223AF2
+		// Token: 0x0603CECE RID: 249550 RVA: 0x0117F72A File Offset: 0x0117D92A
 		public override void SetEnterCallback(Action callback)
 		{
 			this.EnterCallback = callback;
 		}
 
-		// Token: 0x060475CD RID: 292301 RVA: 0x012258FC File Offset: 0x01223AFC
+		// Token: 0x0603CECF RID: 249551 RVA: 0x0117F734 File Offset: 0x0117D934
 		protected override void OnEnter()
 		{
 			Entity targetInternal = this.TargetInternal;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			base.CalcDirection();
 		}
 
-		// Token: 0x060475CE RID: 292302 RVA: 0x012259AC File Offset: 0x01223BAC
+		// Token: 0x0603CED0 RID: 249552 RVA: 0x0117F7E4 File Offset: 0x0117D9E4
 		protected override void OnTick(float delta)
 		{
 			this.Timer += delta;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.CheckFinish();
 		}
 
-		// Token: 0x060475CF RID: 292303 RVA: 0x01225A28 File Offset: 0x01223C28
+		// Token: 0x0603CED1 RID: 249553 RVA: 0x0117F860 File Offset: 0x0117DA60
 		protected override void OnExit()
 		{
 			base.OnExit();
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SceneItem.StopSequence();
 		}
 
-		// Token: 0x060475D0 RID: 292304 RVA: 0x01225A44 File Offset: 0x01223C44
+		// Token: 0x0603CED2 RID: 249554 RVA: 0x0117F87C File Offset: 0x0117DA7C
 		private void UpdateRotation(float alpha)
 		{
 			float alpha2 = UKismetMathLibrary.Ease(0f, 1f, alpha, EEasingFunc.EaseInOut, 2f, 2);
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SceneItem.ActorComp.SetActorRotation(rotator.ToUeRotator(), "[ManipulableCastToOutletState.UpdateRotation]", false);
 		}
 
-		// Token: 0x060475D1 RID: 292305 RVA: 0x01225AB8 File Offset: 0x01223CB8
+		// Token: 0x0603CED3 RID: 249555 RVA: 0x0117F8F0 File Offset: 0x0117DAF0
 		private void CheckFinish()
 		{
 			if (this.Timer < this.CastDuration && this.CastDuration > 0f)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475D2 RID: 292306 RVA: 0x01225B3C File Offset: 0x01223D3C
+		// Token: 0x0603CED4 RID: 249556 RVA: 0x0117F974 File Offset: 0x0117DB74
 		private void MatchOutlet()
 		{
 			this.SceneItem.ActivatedOutlet = this.SceneItem.TargetOutletComponent;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			sceneItem3.TryPlayMismatchSequence(entity);
 		}
 
-		// Token: 0x04025865 RID: 153701
+		// Token: 0x040204D4 RID: 132308
 		[Nullable(2)]
 		private Entity TargetInternal;
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063EB RID: 25579
+	// Token: 0x02006A6B RID: 27243
 	public struct IClientSetPlayerPos : IFlatbufferObject
 	{
-		// Token: 0x1700BE86 RID: 48774
-		// (get) Token: 0x0602C405 RID: 181253 RVA: 0x00612EB2 File Offset: 0x006110B2
+		// Token: 0x1700C820 RID: 51232
+		// (get) Token: 0x0602EBDB RID: 191451 RVA: 0x0065ED3E File Offset: 0x0065CF3E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C406 RID: 181254 RVA: 0x00612EBF File Offset: 0x006110BF
+		// Token: 0x0602EBDC RID: 191452 RVA: 0x0065ED4B File Offset: 0x0065CF4B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C407 RID: 181255 RVA: 0x00612EC8 File Offset: 0x006110C8
+		// Token: 0x0602EBDD RID: 191453 RVA: 0x0065ED54 File Offset: 0x0065CF54
 		public static IClientSetPlayerPos GetRootAsIClientSetPlayerPos(ByteBuffer _bb)
 		{
 			return IClientSetPlayerPos.GetRootAsIClientSetPlayerPos(_bb, default(IClientSetPlayerPos));
 		}
 
-		// Token: 0x0602C408 RID: 181256 RVA: 0x00612EE4 File Offset: 0x006110E4
+		// Token: 0x0602EBDE RID: 191454 RVA: 0x0065ED70 File Offset: 0x0065CF70
 		public static IClientSetPlayerPos GetRootAsIClientSetPlayerPos(ByteBuffer _bb, IClientSetPlayerPos obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C409 RID: 181257 RVA: 0x00612F01 File Offset: 0x00611101
+		// Token: 0x0602EBDF RID: 191455 RVA: 0x0065ED8D File Offset: 0x0065CF8D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C40A RID: 181258 RVA: 0x00612F10 File Offset: 0x00611110
+		// Token: 0x0602EBE0 RID: 191456 RVA: 0x0065ED9C File Offset: 0x0065CF9C
 		public IClientSetPlayerPos __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BE87 RID: 48775
-		// (get) Token: 0x0602C40B RID: 181259 RVA: 0x00612F20 File Offset: 0x00611120
+		// Token: 0x1700C821 RID: 51233
+		// (get) Token: 0x0602EBE1 RID: 191457 RVA: 0x0065EDAC File Offset: 0x0065CFAC
 		public TClientTeleportConfig TelePortConfigType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C40C RID: 181260 RVA: 0x00612F5C File Offset: 0x0061115C
+		// Token: 0x0602EBE2 RID: 191458 RVA: 0x0065EDE8 File Offset: 0x0065CFE8
 		public TTable? TelePortConfig<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,19 +73,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602C40D RID: 181261 RVA: 0x00612FA0 File Offset: 0x006111A0
+		// Token: 0x0602EBE3 RID: 191459 RVA: 0x0065EE2C File Offset: 0x0065D02C
 		public IClientTpRelativeEntityPos TelePortConfigAsIClientTpRelativeEntityPos()
 		{
 			return this.TelePortConfig<IClientTpRelativeEntityPos>().Value;
 		}
 
-		// Token: 0x0602C40E RID: 181262 RVA: 0x00612FBC File Offset: 0x006111BC
+		// Token: 0x0602EBE4 RID: 191460 RVA: 0x0065EE48 File Offset: 0x0065D048
 		public IClientTpToStreamingTargetPoint TelePortConfigAsIClientTpToStreamingTargetPoint()
 		{
 			return this.TelePortConfig<IClientTpToStreamingTargetPoint>().Value;
 		}
 
-		// Token: 0x0602C40F RID: 181263 RVA: 0x00612FD7 File Offset: 0x006111D7
+		// Token: 0x0602EBE5 RID: 191461 RVA: 0x0065EE63 File Offset: 0x0065D063
 		public static Offset<IClientSetPlayerPos> CreateIClientSetPlayerPos(FlatBufferBuilder builder, TClientTeleportConfig TelePortConfig_type = TClientTeleportConfig.NONE, int TelePortConfigOffset = 0)
 		{
 			builder.StartTable(2);
@@ -94,31 +94,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientSetPlayerPos.EndIClientSetPlayerPos(builder);
 		}
 
-		// Token: 0x0602C410 RID: 181264 RVA: 0x00612FF4 File Offset: 0x006111F4
+		// Token: 0x0602EBE6 RID: 191462 RVA: 0x0065EE80 File Offset: 0x0065D080
 		public static void StartIClientSetPlayerPos(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602C411 RID: 181265 RVA: 0x00612FFD File Offset: 0x006111FD
+		// Token: 0x0602EBE7 RID: 191463 RVA: 0x0065EE89 File Offset: 0x0065D089
 		public static void AddTelePortConfigType(FlatBufferBuilder builder, TClientTeleportConfig telePortConfigType)
 		{
 			builder.AddByte(0, (byte)telePortConfigType, 0);
 		}
 
-		// Token: 0x0602C412 RID: 181266 RVA: 0x00613008 File Offset: 0x00611208
+		// Token: 0x0602EBE8 RID: 191464 RVA: 0x0065EE94 File Offset: 0x0065D094
 		public static void AddTelePortConfig(FlatBufferBuilder builder, int telePortConfigOffset)
 		{
 			builder.AddOffset(1, telePortConfigOffset, 0);
 		}
 
-		// Token: 0x0602C413 RID: 181267 RVA: 0x00613013 File Offset: 0x00611213
+		// Token: 0x0602EBE9 RID: 191465 RVA: 0x0065EE9F File Offset: 0x0065D09F
 		public static Offset<IClientSetPlayerPos> EndIClientSetPlayerPos(FlatBufferBuilder builder)
 		{
 			return new Offset<IClientSetPlayerPos>(builder.EndTable());
 		}
 
-		// Token: 0x0602C414 RID: 181268 RVA: 0x00613020 File Offset: 0x00611220
+		// Token: 0x0602EBEA RID: 191466 RVA: 0x0065EEAC File Offset: 0x0065D0AC
 		public IClientSetPlayerPosT UnPack()
 		{
 			IClientSetPlayerPosT clientSetPlayerPosT = new IClientSetPlayerPosT();
@@ -126,7 +126,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return clientSetPlayerPosT;
 		}
 
-		// Token: 0x0602C415 RID: 181269 RVA: 0x0061303C File Offset: 0x0061123C
+		// Token: 0x0602EBEB RID: 191467 RVA: 0x0065EEC8 File Offset: 0x0065D0C8
 		public void UnPackTo(IClientSetPlayerPosT _o)
 		{
 			_o.TelePortConfig = new TClientTeleportConfigUnion();
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.TelePortConfig.Value = ((this.TelePortConfig<IClientTpToStreamingTargetPoint>() != null) ? this.TelePortConfig<IClientTpToStreamingTargetPoint>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0602C416 RID: 181270 RVA: 0x006130E0 File Offset: 0x006112E0
+		// Token: 0x0602EBEC RID: 191468 RVA: 0x0065EF6C File Offset: 0x0065D16C
 		public static Offset<IClientSetPlayerPos> Pack(FlatBufferBuilder builder, IClientSetPlayerPosT _o)
 		{
 			if (_o == null)
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientSetPlayerPos.CreateIClientSetPlayerPos(builder, telePortConfig_type, telePortConfigOffset);
 		}
 
-		// Token: 0x040109D1 RID: 68049
+		// Token: 0x040117F7 RID: 71671
 		private Table __p;
 	}
 }

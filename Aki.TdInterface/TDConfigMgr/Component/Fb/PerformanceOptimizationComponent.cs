@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DA5 RID: 3493
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EA1 RID: 3745
 	public class PerformanceOptimizationComponent : IComponentBase
 	{
-		// Token: 0x06004F61 RID: 20321 RVA: 0x000C4A8E File Offset: 0x000C2C8E
+		// Token: 0x06005486 RID: 21638 RVA: 0x000D02DE File Offset: 0x000CE4DE
 		public static PerformanceOptimizationComponent Create(IPerformanceOptimizationComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019D4 RID: 6612
-		// (get) Token: 0x06004F62 RID: 20322 RVA: 0x000C4AB0 File Offset: 0x000C2CB0
+		// Token: 0x17001B3F RID: 6975
+		// (get) Token: 0x06005487 RID: 21639 RVA: 0x000D0300 File Offset: 0x000CE500
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019D5 RID: 6613
-		// (get) Token: 0x06004F63 RID: 20323 RVA: 0x000C4AE8 File Offset: 0x000C2CE8
+		// Token: 0x17001B40 RID: 6976
+		// (get) Token: 0x06005488 RID: 21640 RVA: 0x000D0338 File Offset: 0x000CE538
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019D6 RID: 6614
-		// (get) Token: 0x06004F64 RID: 20324 RVA: 0x000C4AFE File Offset: 0x000C2CFE
+		// Token: 0x17001B41 RID: 6977
+		// (get) Token: 0x06005489 RID: 21641 RVA: 0x000D034E File Offset: 0x000CE54E
 		public virtual List<IPerformanceOptimization> PerformanceOptimizationList
 		{
 			get
@@ -63,13 +60,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D8C RID: 11660
+		// Token: 0x04003052 RID: 12370
 		private IPerformanceOptimizationComponent Instance;
 
-		// Token: 0x04002D8D RID: 11661
+		// Token: 0x04003053 RID: 12371
 		private List<IPerformanceOptimization> _PerformanceOptimizationListCache;
 
-		// Token: 0x04002D8E RID: 11662
+		// Token: 0x04003054 RID: 12372
 		private bool _PerformanceOptimizationListInited;
 	}
 }

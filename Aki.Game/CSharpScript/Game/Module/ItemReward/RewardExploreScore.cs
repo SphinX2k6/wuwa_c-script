@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x02005806 RID: 22534
+	// Token: 0x020047DD RID: 18397
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardExploreScore : UiPanelBase
 	{
-		// Token: 0x0603948E RID: 234638 RVA: 0x00D95ED4 File Offset: 0x00D940D4
+		// Token: 0x0602E3A2 RID: 189346 RVA: 0x00CE4D3C File Offset: 0x00CE2F3C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603948F RID: 234639 RVA: 0x00D95F40 File Offset: 0x00D94140
+		// Token: 0x0602E3A3 RID: 189347 RVA: 0x00CE4DA8 File Offset: 0x00CE2FA8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RewardExploreScore.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -40,25 +40,25 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039490 RID: 234640 RVA: 0x00D95F84 File Offset: 0x00D94184
+		// Token: 0x0602E3A4 RID: 189348 RVA: 0x00CE4DEC File Offset: 0x00CE2FEC
 		protected override void OnStart()
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(0);
 			this.Scroller = new GenericLayout<RewardExploreScore.ScoreItem, IRewardExploreTargetReached>(scrollViewWithScrollbar.GetContent().GetComponentByClass(UUILayoutBase.StaticClass()) as UUILayoutBase, new Func<RewardExploreScore.ScoreItem>(this.CreateTaskItem), null, false, true);
 		}
 
-		// Token: 0x06039491 RID: 234641 RVA: 0x00D95FCD File Offset: 0x00D941CD
+		// Token: 0x0602E3A5 RID: 189349 RVA: 0x00CE4E35 File Offset: 0x00CE3035
 		private RewardExploreScore.ScoreItem CreateTaskItem()
 		{
 			return new RewardExploreScore.ScoreItem();
 		}
 
-		// Token: 0x06039492 RID: 234642 RVA: 0x00D95FD4 File Offset: 0x00D941D4
+		// Token: 0x0602E3A6 RID: 189350 RVA: 0x00CE4E3C File Offset: 0x00CE303C
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x06039493 RID: 234643 RVA: 0x00D95FD6 File Offset: 0x00D941D6
+		// Token: 0x0602E3A7 RID: 189351 RVA: 0x00CE4E3E File Offset: 0x00CE303E
 		public void Refresh(ReachTargetData data)
 		{
 			GenericLayout<RewardExploreScore.ScoreItem, IRewardExploreTargetReached> scroller = this.Scroller;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			newRecordItemInstance.Refresh(data);
 		}
 
-		// Token: 0x0401DF52 RID: 122706
+		// Token: 0x040189E9 RID: 100841
 		[Nullable(new byte[]
 		{
 			2,
@@ -83,28 +83,28 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		private GenericLayout<RewardExploreScore.ScoreItem, IRewardExploreTargetReached> Scroller;
 
-		// Token: 0x0401DF53 RID: 122707
+		// Token: 0x040189EA RID: 100842
 		[Nullable(2)]
 		private RewardExploreScore.NewRecordItem NewRecordItemInstance;
 
-		// Token: 0x0200BA02 RID: 47618
+		// Token: 0x0200A418 RID: 42008
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040383A8 RID: 230312
+			// Token: 0x04032D95 RID: 208277
 			public const int LayoutItem = 0;
 
-			// Token: 0x040383A9 RID: 230313
+			// Token: 0x04032D96 RID: 208278
 			public const int NewRecordItem = 1;
 		}
 
-		// Token: 0x0200BA03 RID: 47619
+		// Token: 0x0200A419 RID: 42009
 		[Nullable(0)]
 		public class ScoreItem : UiPanelBase, IGridProxy<IRewardExploreTargetReached>
 		{
-			// Token: 0x1700A1BE RID: 41406
-			// (get) Token: 0x0604F722 RID: 325410 RVA: 0x0154343E File Offset: 0x0154163E
-			// (set) Token: 0x0604F723 RID: 325411 RVA: 0x01543446 File Offset: 0x01541646
+			// Token: 0x1700795B RID: 31067
+			// (get) Token: 0x06045CAE RID: 285870 RVA: 0x014FC786 File Offset: 0x014FA986
+			// (set) Token: 0x06045CAF RID: 285871 RVA: 0x014FC78E File Offset: 0x014FA98E
 			[Nullable(new byte[]
 			{
 				2,
@@ -126,38 +126,38 @@ namespace CSharpScript.Game.Module.ItemReward
 				1
 			})] set; }
 
-			// Token: 0x1700A1BF RID: 41407
-			// (get) Token: 0x0604F724 RID: 325412 RVA: 0x0154344F File Offset: 0x0154164F
-			// (set) Token: 0x0604F725 RID: 325413 RVA: 0x01543457 File Offset: 0x01541657
+			// Token: 0x1700795C RID: 31068
+			// (get) Token: 0x06045CB0 RID: 285872 RVA: 0x014FC797 File Offset: 0x014FA997
+			// (set) Token: 0x06045CB1 RID: 285873 RVA: 0x014FC79F File Offset: 0x014FA99F
 			public int GridIndex { get; set; }
 
-			// Token: 0x1700A1C0 RID: 41408
-			// (get) Token: 0x0604F726 RID: 325414 RVA: 0x01543460 File Offset: 0x01541660
-			// (set) Token: 0x0604F727 RID: 325415 RVA: 0x01543468 File Offset: 0x01541668
+			// Token: 0x1700795D RID: 31069
+			// (get) Token: 0x06045CB2 RID: 285874 RVA: 0x014FC7A8 File Offset: 0x014FA9A8
+			// (set) Token: 0x06045CB3 RID: 285875 RVA: 0x014FC7B0 File Offset: 0x014FA9B0
 			public int DisplayIndex { get; set; }
 
-			// Token: 0x0604F728 RID: 325416 RVA: 0x01543471 File Offset: 0x01541671
+			// Token: 0x06045CB4 RID: 285876 RVA: 0x014FC7B9 File Offset: 0x014FA9B9
 			public void Clear()
 			{
 			}
 
-			// Token: 0x0604F729 RID: 325417 RVA: 0x01543473 File Offset: 0x01541673
+			// Token: 0x06045CB5 RID: 285877 RVA: 0x014FC7BB File Offset: 0x014FA9BB
 			public void OnSelected(bool fireEvent)
 			{
 			}
 
-			// Token: 0x0604F72A RID: 325418 RVA: 0x01543475 File Offset: 0x01541675
+			// Token: 0x06045CB6 RID: 285878 RVA: 0x014FC7BD File Offset: 0x014FA9BD
 			public void OnDeselected(bool fireEvent)
 			{
 			}
 
-			// Token: 0x0604F72B RID: 325419 RVA: 0x01543477 File Offset: 0x01541677
+			// Token: 0x06045CB7 RID: 285879 RVA: 0x014FC7BF File Offset: 0x014FA9BF
 			public object GetKey(IRewardExploreTargetReached data, int gridIndex)
 			{
 				return null;
 			}
 
-			// Token: 0x0604F72C RID: 325420 RVA: 0x0154347C File Offset: 0x0154167C
+			// Token: 0x06045CB8 RID: 285880 RVA: 0x014FC7C4 File Offset: 0x014FA9C4
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 3;
@@ -174,20 +174,20 @@ namespace CSharpScript.Game.Module.ItemReward
 				this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 			}
 
-			// Token: 0x0604F72D RID: 325421 RVA: 0x01543511 File Offset: 0x01541711
+			// Token: 0x06045CB9 RID: 285881 RVA: 0x014FC859 File Offset: 0x014FAA59
 			public void Refresh(IRewardExploreTargetReached data, bool isSelected, int gridIndex)
 			{
 				this.RefreshName(data);
 				this.RefreshDesc(data);
 			}
 
-			// Token: 0x0604F72E RID: 325422 RVA: 0x01543521 File Offset: 0x01541721
+			// Token: 0x06045CBA RID: 285882 RVA: 0x014FC869 File Offset: 0x014FAA69
 			private void RefreshName(IRewardExploreTargetReached data)
 			{
 				LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.DescriptionTextId, Array.Empty<object>());
 			}
 
-			// Token: 0x0604F72F RID: 325423 RVA: 0x0154353F File Offset: 0x0154173F
+			// Token: 0x06045CBB RID: 285883 RVA: 0x014FC887 File Offset: 0x014FAA87
 			private void RefreshDesc(IRewardExploreTargetReached data)
 			{
 				UUIText text = base.GetText(2);
@@ -198,26 +198,26 @@ namespace CSharpScript.Game.Module.ItemReward
 				text.SetText(data.Target[0], true);
 			}
 
-			// Token: 0x0200D16C RID: 53612
+			// Token: 0x0200BD4A RID: 48458
 			[NullableContext(0)]
 			private class EScoreItemComponent
 			{
-				// Token: 0x0403ED9A RID: 257434
+				// Token: 0x0403A1E2 RID: 238050
 				public const int SpriteBg = 0;
 
-				// Token: 0x0403ED9B RID: 257435
+				// Token: 0x0403A1E3 RID: 238051
 				public const int NameText = 1;
 
-				// Token: 0x0403ED9C RID: 257436
+				// Token: 0x0403A1E4 RID: 238052
 				public const int DescText = 2;
 			}
 		}
 
-		// Token: 0x0200BA04 RID: 47620
+		// Token: 0x0200A41A RID: 42010
 		[Nullable(0)]
 		public class NewRecordItem : UiPanelBase
 		{
-			// Token: 0x0604F731 RID: 325425 RVA: 0x01543568 File Offset: 0x01541768
+			// Token: 0x06045CBD RID: 285885 RVA: 0x014FC8B0 File Offset: 0x014FAAB0
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 3;
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 			}
 
-			// Token: 0x0604F732 RID: 325426 RVA: 0x015435FD File Offset: 0x015417FD
+			// Token: 0x06045CBE RID: 285886 RVA: 0x014FC945 File Offset: 0x014FAB45
 			public void Refresh(ReachTargetData data)
 			{
 				this.RefreshTitle(data);
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				this.SetNewRecordItemVisible(data.IfNewRecord);
 			}
 
-			// Token: 0x0604F733 RID: 325427 RVA: 0x01543619 File Offset: 0x01541819
+			// Token: 0x06045CBF RID: 285887 RVA: 0x014FC961 File Offset: 0x014FAB61
 			private void RefreshTitle(ReachTargetData data)
 			{
 				if (StringUtils.IsEmpty(data.RecordTextId))
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.RecordTextId, Array.Empty<object>());
 			}
 
-			// Token: 0x0604F734 RID: 325428 RVA: 0x01543645 File Offset: 0x01541845
+			// Token: 0x06045CC0 RID: 285888 RVA: 0x014FC98D File Offset: 0x014FAB8D
 			private void RefreshRecord(ReachTargetData data)
 			{
 				UUIText text = base.GetText(1);
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				text.SetText(data.FullScore.ToString(), true);
 			}
 
-			// Token: 0x0604F735 RID: 325429 RVA: 0x01543664 File Offset: 0x01541864
+			// Token: 0x06045CC1 RID: 285889 RVA: 0x014FC9AC File Offset: 0x014FABAC
 			private void SetNewRecordItemVisible(bool bVisible)
 			{
 				UUIItem item = base.GetItem(2);
@@ -274,17 +274,17 @@ namespace CSharpScript.Game.Module.ItemReward
 				item.SetUIActive(bVisible);
 			}
 
-			// Token: 0x0200D16D RID: 53613
+			// Token: 0x0200BD4B RID: 48459
 			[NullableContext(0)]
 			private class ENewRecordCompoent
 			{
-				// Token: 0x0403ED9D RID: 257437
+				// Token: 0x0403A1E5 RID: 238053
 				public const int TitleText = 0;
 
-				// Token: 0x0403ED9E RID: 257438
+				// Token: 0x0403A1E6 RID: 238054
 				public const int RecordText = 1;
 
-				// Token: 0x0403ED9F RID: 257439
+				// Token: 0x0403A1E7 RID: 238055
 				public const int NewRecordItem = 2;
 			}
 		}

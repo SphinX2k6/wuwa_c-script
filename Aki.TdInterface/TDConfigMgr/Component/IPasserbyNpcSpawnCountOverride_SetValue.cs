@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005CF RID: 1487
+	// Token: 0x0200065E RID: 1630
 	public class IPasserbyNpcSpawnCountOverride_SetValue
 	{
-		// Token: 0x0400163C RID: 5692
+		// Token: 0x0400180D RID: 6157
 		public int? PcSpawnCount;
 
-		// Token: 0x0400163D RID: 5693
+		// Token: 0x0400180E RID: 6158
 		public int? MobileSpawnCount;
 	}
 }

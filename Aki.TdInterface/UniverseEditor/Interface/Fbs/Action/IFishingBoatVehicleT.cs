@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067C6 RID: 26566
+	// Token: 0x02006E46 RID: 28230
 	public class IFishingBoatVehicleT
 	{
-		// Token: 0x1700C534 RID: 50484
-		// (get) Token: 0x0602E3ED RID: 189421 RVA: 0x00650C8E File Offset: 0x0064EE8E
-		// (set) Token: 0x0602E3EE RID: 189422 RVA: 0x00650C96 File Offset: 0x0064EE96
+		// Token: 0x1700CEEA RID: 52970
+		// (get) Token: 0x06030C33 RID: 199731 RVA: 0x0069E3D2 File Offset: 0x0069C5D2
+		// (set) Token: 0x06030C34 RID: 199732 RVA: 0x0069E3DA File Offset: 0x0069C5DA
 		public ETargetVehicle Type { get; set; }
 
-		// Token: 0x0602E3EF RID: 189423 RVA: 0x00650C9F File Offset: 0x0064EE9F
+		// Token: 0x06030C35 RID: 199733 RVA: 0x0069E3E3 File Offset: 0x0069C5E3
 		public IFishingBoatVehicleT()
 		{
 			this.Type = ETargetVehicle.Current;

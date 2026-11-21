@@ -4,94 +4,94 @@ using CSharpScript.Game.Module.Map.MapDefine;
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x0200478D RID: 18317
+	// Token: 0x020036BE RID: 14014
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WorldMapViewOpenParams : IWorldMapViewOpenParams
 	{
-		// Token: 0x170077C5 RID: 30661
-		// (get) Token: 0x0602FEA4 RID: 196260 RVA: 0x00B19B29 File Offset: 0x00B17D29
-		// (set) Token: 0x0602FEA5 RID: 196261 RVA: 0x00B19B31 File Offset: 0x00B17D31
+		// Token: 0x17004A81 RID: 19073
+		// (get) Token: 0x0602466F RID: 149103 RVA: 0x00A49A05 File Offset: 0x00A47C05
+		// (set) Token: 0x06024670 RID: 149104 RVA: 0x00A49A0D File Offset: 0x00A47C0D
 		public EMarkType MarkType { get; set; }
 
-		// Token: 0x170077C6 RID: 30662
-		// (get) Token: 0x0602FEA6 RID: 196262 RVA: 0x00B19B3A File Offset: 0x00B17D3A
-		// (set) Token: 0x0602FEA7 RID: 196263 RVA: 0x00B19B42 File Offset: 0x00B17D42
+		// Token: 0x17004A82 RID: 19074
+		// (get) Token: 0x06024671 RID: 149105 RVA: 0x00A49A16 File Offset: 0x00A47C16
+		// (set) Token: 0x06024672 RID: 149106 RVA: 0x00A49A1E File Offset: 0x00A47C1E
 		public int? MarkId { get; set; }
 
-		// Token: 0x170077C7 RID: 30663
-		// (get) Token: 0x0602FEA8 RID: 196264 RVA: 0x00B19B4B File Offset: 0x00B17D4B
-		// (set) Token: 0x0602FEA9 RID: 196265 RVA: 0x00B19B53 File Offset: 0x00B17D53
+		// Token: 0x17004A83 RID: 19075
+		// (get) Token: 0x06024673 RID: 149107 RVA: 0x00A49A27 File Offset: 0x00A47C27
+		// (set) Token: 0x06024674 RID: 149108 RVA: 0x00A49A2F File Offset: 0x00A47C2F
 		public Vector2D StartWorldPosition { get; set; }
 
-		// Token: 0x170077C8 RID: 30664
-		// (get) Token: 0x0602FEAA RID: 196266 RVA: 0x00B19B5C File Offset: 0x00B17D5C
-		// (set) Token: 0x0602FEAB RID: 196267 RVA: 0x00B19B64 File Offset: 0x00B17D64
+		// Token: 0x17004A84 RID: 19076
+		// (get) Token: 0x06024675 RID: 149109 RVA: 0x00A49A38 File Offset: 0x00A47C38
+		// (set) Token: 0x06024676 RID: 149110 RVA: 0x00A49A40 File Offset: 0x00A47C40
 		public Vector DebugWorldPosition { get; set; }
 
-		// Token: 0x170077C9 RID: 30665
-		// (get) Token: 0x0602FEAC RID: 196268 RVA: 0x00B19B6D File Offset: 0x00B17D6D
-		// (set) Token: 0x0602FEAD RID: 196269 RVA: 0x00B19B75 File Offset: 0x00B17D75
+		// Token: 0x17004A85 RID: 19077
+		// (get) Token: 0x06024677 RID: 149111 RVA: 0x00A49A49 File Offset: 0x00A47C49
+		// (set) Token: 0x06024678 RID: 149112 RVA: 0x00A49A51 File Offset: 0x00A47C51
 		public int? MapId { get; set; }
 
-		// Token: 0x170077CA RID: 30666
-		// (get) Token: 0x0602FEAE RID: 196270 RVA: 0x00B19B7E File Offset: 0x00B17D7E
-		// (set) Token: 0x0602FEAF RID: 196271 RVA: 0x00B19B86 File Offset: 0x00B17D86
+		// Token: 0x17004A86 RID: 19078
+		// (get) Token: 0x06024679 RID: 149113 RVA: 0x00A49A5A File Offset: 0x00A47C5A
+		// (set) Token: 0x0602467A RID: 149114 RVA: 0x00A49A62 File Offset: 0x00A47C62
 		public float? StartScale { get; set; }
 
-		// Token: 0x170077CB RID: 30667
-		// (get) Token: 0x0602FEB0 RID: 196272 RVA: 0x00B19B8F File Offset: 0x00B17D8F
-		// (set) Token: 0x0602FEB1 RID: 196273 RVA: 0x00B19B97 File Offset: 0x00B17D97
+		// Token: 0x17004A87 RID: 19079
+		// (get) Token: 0x0602467B RID: 149115 RVA: 0x00A49A6B File Offset: 0x00A47C6B
+		// (set) Token: 0x0602467C RID: 149116 RVA: 0x00A49A73 File Offset: 0x00A47C73
 		public int? OpenFogId { get; set; }
 
-		// Token: 0x170077CC RID: 30668
-		// (get) Token: 0x0602FEB2 RID: 196274 RVA: 0x00B19BA0 File Offset: 0x00B17DA0
-		// (set) Token: 0x0602FEB3 RID: 196275 RVA: 0x00B19BA8 File Offset: 0x00B17DA8
+		// Token: 0x17004A88 RID: 19080
+		// (get) Token: 0x0602467D RID: 149117 RVA: 0x00A49A7C File Offset: 0x00A47C7C
+		// (set) Token: 0x0602467E RID: 149118 RVA: 0x00A49A84 File Offset: 0x00A47C84
 		public bool? ShowFogEffectInstant { get; set; }
 
-		// Token: 0x170077CD RID: 30669
-		// (get) Token: 0x0602FEB4 RID: 196276 RVA: 0x00B19BB1 File Offset: 0x00B17DB1
-		// (set) Token: 0x0602FEB5 RID: 196277 RVA: 0x00B19BB9 File Offset: 0x00B17DB9
+		// Token: 0x17004A89 RID: 19081
+		// (get) Token: 0x0602467F RID: 149119 RVA: 0x00A49A8D File Offset: 0x00A47C8D
+		// (set) Token: 0x06024680 RID: 149120 RVA: 0x00A49A95 File Offset: 0x00A47C95
 		public bool? IsNotFocusTween { get; set; }
 
-		// Token: 0x170077CE RID: 30670
-		// (get) Token: 0x0602FEB6 RID: 196278 RVA: 0x00B19BC2 File Offset: 0x00B17DC2
-		// (set) Token: 0x0602FEB7 RID: 196279 RVA: 0x00B19BCA File Offset: 0x00B17DCA
+		// Token: 0x17004A8A RID: 19082
+		// (get) Token: 0x06024681 RID: 149121 RVA: 0x00A49A9E File Offset: 0x00A47C9E
+		// (set) Token: 0x06024682 RID: 149122 RVA: 0x00A49AA6 File Offset: 0x00A47CA6
 		public bool? IsNotFocal { get; set; }
 
-		// Token: 0x170077CF RID: 30671
-		// (get) Token: 0x0602FEB8 RID: 196280 RVA: 0x00B19BD3 File Offset: 0x00B17DD3
-		// (set) Token: 0x0602FEB9 RID: 196281 RVA: 0x00B19BDB File Offset: 0x00B17DDB
+		// Token: 0x17004A8B RID: 19083
+		// (get) Token: 0x06024683 RID: 149123 RVA: 0x00A49AAF File Offset: 0x00A47CAF
+		// (set) Token: 0x06024684 RID: 149124 RVA: 0x00A49AB7 File Offset: 0x00A47CB7
 		public bool? IsNotNeedUnLockEffect { get; set; }
 
-		// Token: 0x170077D0 RID: 30672
-		// (get) Token: 0x0602FEBA RID: 196282 RVA: 0x00B19BE4 File Offset: 0x00B17DE4
-		// (set) Token: 0x0602FEBB RID: 196283 RVA: 0x00B19BEC File Offset: 0x00B17DEC
+		// Token: 0x17004A8C RID: 19084
+		// (get) Token: 0x06024685 RID: 149125 RVA: 0x00A49AC0 File Offset: 0x00A47CC0
+		// (set) Token: 0x06024686 RID: 149126 RVA: 0x00A49AC8 File Offset: 0x00A47CC8
 		public int[] FocusExplorePlayPoint { get; set; }
 
-		// Token: 0x170077D1 RID: 30673
-		// (get) Token: 0x0602FEBC RID: 196284 RVA: 0x00B19BF5 File Offset: 0x00B17DF5
-		// (set) Token: 0x0602FEBD RID: 196285 RVA: 0x00B19BFD File Offset: 0x00B17DFD
+		// Token: 0x17004A8D RID: 19085
+		// (get) Token: 0x06024687 RID: 149127 RVA: 0x00A49AD1 File Offset: 0x00A47CD1
+		// (set) Token: 0x06024688 RID: 149128 RVA: 0x00A49AD9 File Offset: 0x00A47CD9
 		public int[] SkipToExploreAreaDetailView { get; set; }
 
-		// Token: 0x170077D2 RID: 30674
-		// (get) Token: 0x0602FEBE RID: 196286 RVA: 0x00B19C06 File Offset: 0x00B17E06
-		// (set) Token: 0x0602FEBF RID: 196287 RVA: 0x00B19C0E File Offset: 0x00B17E0E
+		// Token: 0x17004A8E RID: 19086
+		// (get) Token: 0x06024689 RID: 149129 RVA: 0x00A49AE2 File Offset: 0x00A47CE2
+		// (set) Token: 0x0602468A RID: 149130 RVA: 0x00A49AEA File Offset: 0x00A47CEA
 		public bool? NeedRefreshMultiFloor { get; set; }
 
-		// Token: 0x170077D3 RID: 30675
-		// (get) Token: 0x0602FEC0 RID: 196288 RVA: 0x00B19C17 File Offset: 0x00B17E17
-		// (set) Token: 0x0602FEC1 RID: 196289 RVA: 0x00B19C1F File Offset: 0x00B17E1F
+		// Token: 0x17004A8F RID: 19087
+		// (get) Token: 0x0602468B RID: 149131 RVA: 0x00A49AF3 File Offset: 0x00A47CF3
+		// (set) Token: 0x0602468C RID: 149132 RVA: 0x00A49AFB File Offset: 0x00A47CFB
 		public EWorldMapExtraUiPanelName? SkipToExtraUiName { get; set; }
 
-		// Token: 0x170077D4 RID: 30676
-		// (get) Token: 0x0602FEC2 RID: 196290 RVA: 0x00B19C28 File Offset: 0x00B17E28
-		// (set) Token: 0x0602FEC3 RID: 196291 RVA: 0x00B19C30 File Offset: 0x00B17E30
+		// Token: 0x17004A90 RID: 19088
+		// (get) Token: 0x0602468D RID: 149133 RVA: 0x00A49B04 File Offset: 0x00A47D04
+		// (set) Token: 0x0602468E RID: 149134 RVA: 0x00A49B0C File Offset: 0x00A47D0C
 		public object SkipToExtraUiParam { get; set; }
 
-		// Token: 0x170077D5 RID: 30677
-		// (get) Token: 0x0602FEC4 RID: 196292 RVA: 0x00B19C39 File Offset: 0x00B17E39
-		// (set) Token: 0x0602FEC5 RID: 196293 RVA: 0x00B19C41 File Offset: 0x00B17E41
+		// Token: 0x17004A91 RID: 19089
+		// (get) Token: 0x0602468F RID: 149135 RVA: 0x00A49B15 File Offset: 0x00A47D15
+		// (set) Token: 0x06024690 RID: 149136 RVA: 0x00A49B1D File Offset: 0x00A47D1D
 		public IRegionalTerminalBarItemParams RegionalTerminalBarItemParams { get; set; }
 	}
 }

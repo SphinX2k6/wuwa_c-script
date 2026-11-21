@@ -2,15 +2,15 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060AB RID: 24747
+	// Token: 0x02005029 RID: 20521
 	public class SolarSpeedUiContext
 	{
-		// Token: 0x0603E931 RID: 256305 RVA: 0x00F20134 File Offset: 0x00F1E334
+		// Token: 0x060335F5 RID: 210421 RVA: 0x00E66EF8 File Offset: 0x00E650F8
 		public void Dispose()
 		{
 		}
 
-		// Token: 0x04020B96 RID: 134038
+		// Token: 0x0401B4C3 RID: 111811
 		public int? CurrentChosenTabInRewardView;
 	}
 }

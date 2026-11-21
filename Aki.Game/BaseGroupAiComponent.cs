@@ -14,12 +14,12 @@ using CSharpScript.Game.NewWorld.Character.Monster.Controller;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x0200302E RID: 12334
+// Token: 0x02002584 RID: 9604
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseGroupAiComponent : EntityComponent
 {
-	// Token: 0x0601A203 RID: 107011 RVA: 0x006DBBE0 File Offset: 0x006D9DE0
+	// Token: 0x06017B60 RID: 97120 RVA: 0x00703A60 File Offset: 0x00701C60
 	protected override bool OnStart()
 	{
 		this.TagComp = base.Entity.GetComponent<BaseTagComponent>();
@@ -57,7 +57,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A204 RID: 107012 RVA: 0x006DBD3C File Offset: 0x006D9F3C
+	// Token: 0x06017B61 RID: 97121 RVA: 0x00703BBC File Offset: 0x00701DBC
 	protected override bool OnEnd()
 	{
 		if (!this.IsGroupAi)
@@ -84,7 +84,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A205 RID: 107013 RVA: 0x006DBDF8 File Offset: 0x006D9FF8
+	// Token: 0x06017B62 RID: 97122 RVA: 0x00703C78 File Offset: 0x00701E78
 	[NullableContext(2)]
 	private GroupConfigInfo GetGroupAiComponent()
 	{
@@ -101,12 +101,12 @@ public class BaseGroupAiComponent : EntityComponent
 		{
 			return null;
 		}
-		IEntityOwnerInfo entityOwner = CreatureModel.Instance.GetEntityOwner(GameModeModel.Instance.MapConfig.MapId, component.GetPbDataId(), false);
-		if (entityOwner == null || entityOwner.Type != EEntityOwnerType.Entity)
+		IEntityOwnerEntity entityOwnerEntity = CreatureModel.Instance.GetEntityOwner(GameModeModel.Instance.MapConfig.MapId, component.GetPbDataId(), EEntityOwnerType.Entity) as IEntityOwnerEntity;
+		if (entityOwnerEntity == null)
 		{
 			return null;
 		}
-		IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?((entityOwner as IEntityOwnerEntity).EntityId), null);
+		IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(entityOwnerEntity.EntityId), null);
 		if (completeEntityData == null)
 		{
 			return null;
@@ -119,12 +119,12 @@ public class BaseGroupAiComponent : EntityComponent
 		this.OwnerPbDataId = completeEntityData.Id;
 		return new GroupConfigInfo
 		{
-			GroupEntityId = (entityOwner as IEntityOwnerEntity).EntityId,
+			GroupEntityId = entityOwnerEntity.EntityId,
 			GroupComp = component2
 		};
 	}
 
-	// Token: 0x0601A206 RID: 107014 RVA: 0x006DBECC File Offset: 0x006DA0CC
+	// Token: 0x06017B63 RID: 97123 RVA: 0x00703D3C File Offset: 0x00701F3C
 	private void InitGroupPatrolConfig()
 	{
 		GroupConfigInfo groupConfig = this.GroupConfig;
@@ -150,24 +150,24 @@ public class BaseGroupAiComponent : EntityComponent
 		MonsterGroupPatrolController.Instance.RegisterMonsterPbDataId(this.GroupConfig.GroupEntityId, base.Entity, component.GetPbDataId(), this.GroupConfig.GroupComp);
 	}
 
-	// Token: 0x0601A207 RID: 107015 RVA: 0x006DBF56 File Offset: 0x006DA156
+	// Token: 0x06017B64 RID: 97124 RVA: 0x00703DC6 File Offset: 0x00701FC6
 	private void ClearGroupPatrolConfig()
 	{
 		MonsterGroupPatrolController.Instance.RemoveEntityFromMonsterGroup(base.Entity.Id, this.PbDataId);
 	}
 
-	// Token: 0x0601A208 RID: 107016 RVA: 0x006DBF73 File Offset: 0x006DA173
+	// Token: 0x06017B65 RID: 97125 RVA: 0x00703DE3 File Offset: 0x00701FE3
 	public virtual void OnGroupPatrolRegistered()
 	{
 	}
 
-	// Token: 0x0601A209 RID: 107017 RVA: 0x006DBF75 File Offset: 0x006DA175
+	// Token: 0x06017B66 RID: 97126 RVA: 0x00703DE5 File Offset: 0x00701FE5
 	public virtual bool ShouldForceResetPatrolOnLargeDelta()
 	{
 		return true;
 	}
 
-	// Token: 0x0601A20A RID: 107018 RVA: 0x006DBF78 File Offset: 0x006DA178
+	// Token: 0x06017B67 RID: 97127 RVA: 0x00703DE8 File Offset: 0x00701FE8
 	public virtual void PushPatrolMoveInfo(EGroupPatrolMemberRole role)
 	{
 		BaseMoveComponent moveComp = this.MoveComp;
@@ -178,7 +178,7 @@ public class BaseGroupAiComponent : EntityComponent
 		moveComp.MoveController.PushMoveInfo();
 	}
 
-	// Token: 0x0601A20B RID: 107019 RVA: 0x006DBF90 File Offset: 0x006DA190
+	// Token: 0x06017B68 RID: 97128 RVA: 0x00703E00 File Offset: 0x00702000
 	public bool IsGroupPatrolEntityActive()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -193,7 +193,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x0601A20C RID: 107020 RVA: 0x006DBFEF File Offset: 0x006DA1EF
+	// Token: 0x06017B69 RID: 97129 RVA: 0x00703E5F File Offset: 0x0070205F
 	public bool IsGroupPatrolEntityValid()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -205,7 +205,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x0601A20D RID: 107021 RVA: 0x006DC018 File Offset: 0x006DA218
+	// Token: 0x06017B6A RID: 97130 RVA: 0x00703E88 File Offset: 0x00702088
 	public bool IsGroupPatrolMemberMoving(EGroupPatrolMemberRole role, bool preciseFollow, bool isReady)
 	{
 		if (role == EGroupPatrolMemberRole.Captain)
@@ -225,7 +225,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return (moveComp2 != null && moveComp2.MoveController.IsMoving()) || (this.PrecisePatrolFollowActive && !this.PrecisePatrolFollowHasArrived && this.CanDrivePrecisePatrolFollow());
 	}
 
-	// Token: 0x0601A20E RID: 107022 RVA: 0x006DC080 File Offset: 0x006DA280
+	// Token: 0x06017B6B RID: 97131 RVA: 0x00703EF0 File Offset: 0x007020F0
 	public void StopGroupPatrolMovement(EGroupPatrolMemberRole role, EGroupPatrolStopMode mode, int splineId, string pauseKey, string reason)
 	{
 		this.StopPatrolMovement(reason);
@@ -251,7 +251,7 @@ public class BaseGroupAiComponent : EntityComponent
 		this.PatrolComp.PausePatrol(splineId, pauseKey);
 	}
 
-	// Token: 0x0601A20F RID: 107023 RVA: 0x006DC117 File Offset: 0x006DA317
+	// Token: 0x06017B6C RID: 97132 RVA: 0x00703F87 File Offset: 0x00702187
 	public global::ECharMoveState GetPatrolMoveState()
 	{
 		BaseUnifiedStateComponent stateComp = this.StateComp;
@@ -262,7 +262,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return global::ECharMoveState.Run;
 	}
 
-	// Token: 0x0601A210 RID: 107024 RVA: 0x006DC133 File Offset: 0x006DA333
+	// Token: 0x06017B6D RID: 97133 RVA: 0x00703FA3 File Offset: 0x007021A3
 	public void SetPatrolMoveState(global::ECharMoveState moveState)
 	{
 		if (this.StateComp != null && this.StateComp.MoveState != moveState)
@@ -271,7 +271,7 @@ public class BaseGroupAiComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A211 RID: 107025 RVA: 0x006DC158 File Offset: 0x006DA358
+	// Token: 0x06017B6E RID: 97134 RVA: 0x00703FC8 File Offset: 0x007021C8
 	public float? GetPatrolMaxSpeed()
 	{
 		BaseMoveComponent moveComp = this.MoveComp;
@@ -287,7 +287,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return new float?(characterMovement.GetMaxSpeed());
 	}
 
-	// Token: 0x0601A212 RID: 107026 RVA: 0x006DC196 File Offset: 0x006DA396
+	// Token: 0x06017B6F RID: 97135 RVA: 0x00704006 File Offset: 0x00702206
 	public bool PrepareGroupPatrolCaptain(int splineId, string pauseKey)
 	{
 		CharacterPatrolComponent patrolComp = this.PatrolComp;
@@ -299,7 +299,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return patrolComp2 != null && patrolComp2.Active;
 	}
 
-	// Token: 0x0601A213 RID: 107027 RVA: 0x006DC1CC File Offset: 0x006DA3CC
+	// Token: 0x06017B70 RID: 97136 RVA: 0x0070403C File Offset: 0x0070223C
 	public bool StartGroupPatrolCaptain(int splineId, SplineCurve splineCurve, SplineComponent splineData, IPatrolParams patrolParams)
 	{
 		CharacterPatrolComponent patrolComp = this.PatrolComp;
@@ -315,7 +315,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return patrolComp.IsInPatrol();
 	}
 
-	// Token: 0x0601A214 RID: 107028 RVA: 0x006DC21E File Offset: 0x006DA41E
+	// Token: 0x06017B71 RID: 97137 RVA: 0x0070408E File Offset: 0x0070228E
 	public int GetGroupPatrolLastPointRawIndex()
 	{
 		CharacterPatrolComponent patrolComp = this.PatrolComp;
@@ -326,21 +326,21 @@ public class BaseGroupAiComponent : EntityComponent
 		return patrolComp.GetLastPointRawIndex();
 	}
 
-	// Token: 0x0601A215 RID: 107029 RVA: 0x006DC231 File Offset: 0x006DA431
+	// Token: 0x06017B72 RID: 97138 RVA: 0x007040A1 File Offset: 0x007022A1
 	public bool IsGroupPatrolPositiveDirection()
 	{
 		CharacterPatrolComponent patrolComp = this.PatrolComp;
 		return patrolComp == null || patrolComp.IsPositiveDirection();
 	}
 
-	// Token: 0x0601A216 RID: 107030 RVA: 0x006DC244 File Offset: 0x006DA444
+	// Token: 0x06017B73 RID: 97139 RVA: 0x007040B4 File Offset: 0x007022B4
 	public bool CanStartGroupPatrolInitMove()
 	{
 		BaseMoveComponent moveComp = this.MoveComp;
 		return moveComp != null && moveComp.Active && !this.MoveComp.MoveController.IsMoving();
 	}
 
-	// Token: 0x0601A217 RID: 107031 RVA: 0x006DC270 File Offset: 0x006DA470
+	// Token: 0x06017B74 RID: 97140 RVA: 0x007040E0 File Offset: 0x007022E0
 	public bool StartGroupPatrolInitMove(global::Vector target, Action<ELevelEventState> callback, string reason)
 	{
 		if (!this.CanStartGroupPatrolInitMove())
@@ -364,7 +364,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return this.MoveComp.MoveController.MoveToLocation(moveConfig, true, reason);
 	}
 
-	// Token: 0x0601A218 RID: 107032 RVA: 0x006DC30C File Offset: 0x006DA50C
+	// Token: 0x06017B75 RID: 97141 RVA: 0x0070417C File Offset: 0x0070237C
 	public void UpdateGroupPatrolNavigation(Func<global::Vector> getTargetPosition, global::ECharMoveState moveState, float captainSpeed, float turnSpeed, string reason)
 	{
 		BaseMoveComponent moveComp = this.MoveComp;
@@ -402,7 +402,7 @@ public class BaseGroupAiComponent : EntityComponent
 		this.ApplyPatrolFollowSpeed(rate, captainSpeed);
 	}
 
-	// Token: 0x0601A219 RID: 107033 RVA: 0x006DC45C File Offset: 0x006DA65C
+	// Token: 0x06017B76 RID: 97142 RVA: 0x007042CC File Offset: 0x007024CC
 	public void SetGroupPatrolLocation(global::Vector target, string reason)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -413,7 +413,7 @@ public class BaseGroupAiComponent : EntityComponent
 		actorComp.SetActorLocation(target.ToUeVector(false), reason, false);
 	}
 
-	// Token: 0x0601A21A RID: 107034 RVA: 0x006DC478 File Offset: 0x006DA678
+	// Token: 0x06017B77 RID: 97143 RVA: 0x007042E8 File Offset: 0x007024E8
 	public void ApplyPatrolFollowSpeed(double rate, float captainSpeed)
 	{
 		if (this.PrecisePatrolFollowActive)
@@ -440,7 +440,7 @@ public class BaseGroupAiComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A21B RID: 107035 RVA: 0x006DC4E4 File Offset: 0x006DA6E4
+	// Token: 0x06017B78 RID: 97144 RVA: 0x00704354 File Offset: 0x00702554
 	private void RestorePatrolMaxSpeed()
 	{
 		if (!this.PatrolMaxSpeedOverrideActive)
@@ -457,7 +457,7 @@ public class BaseGroupAiComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A21C RID: 107036 RVA: 0x006DC540 File Offset: 0x006DA740
+	// Token: 0x06017B79 RID: 97145 RVA: 0x007043B0 File Offset: 0x007025B0
 	public bool StartPrecisePatrolFollow()
 	{
 		if (this.PrecisePatrolFollowActive)
@@ -489,7 +489,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A21D RID: 107037 RVA: 0x006DC5E5 File Offset: 0x006DA7E5
+	// Token: 0x06017B7A RID: 97146 RVA: 0x00704455 File Offset: 0x00702655
 	public void RefreshPrecisePatrolRootMotion()
 	{
 		if (this.PrecisePatrolFollowActive && this.RootMotionScaleMode != EPatrolRootMotionScaleMode.PreciseFollow)
@@ -503,7 +503,7 @@ public class BaseGroupAiComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A21E RID: 107038 RVA: 0x006DC620 File Offset: 0x006DA820
+	// Token: 0x06017B7B RID: 97147 RVA: 0x00704490 File Offset: 0x00702690
 	public EPatrolFollowerTickResult TickPrecisePatrolFollow(global::Vector target, float? facingYaw, float captainSpeed, global::ECharMoveState captainMoveState, float deltaSeconds, float turnSpeed)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -557,7 +557,7 @@ public class BaseGroupAiComponent : EntityComponent
 			this.UpdatePrecisePatrolFollowFacing(actorComp2, facingYaw, flag2, num, num2, turnSpeed);
 			if (flag2)
 			{
-				actorComp2.SetInputDirect(global::Vector.ZeroVectorProxy, false);
+				actorComp2.SetInputDirect(global::Vector.ZeroVectorProxy, false, EInputDirectSpace.World);
 				this.PrecisePatrolFollowLastPosition.Set(actorLocationProxy.X, actorLocationProxy.Y, actorLocationProxy.Z);
 				return epatrolFollowerTickResult;
 			}
@@ -566,7 +566,7 @@ public class BaseGroupAiComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A21F RID: 107039 RVA: 0x006DC8E0 File Offset: 0x006DAAE0
+	// Token: 0x06017B7C RID: 97148 RVA: 0x00704750 File Offset: 0x00702950
 	private bool CanDrivePrecisePatrolFollow()
 	{
 		BaseMoveComponent moveComp = this.MoveComp;
@@ -580,7 +580,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return tenumAsByte == EMovementMode.MOVE_Walking || tenumAsByte == EMovementMode.MOVE_NavWalking;
 	}
 
-	// Token: 0x0601A220 RID: 107040 RVA: 0x006DC997 File Offset: 0x006DAB97
+	// Token: 0x06017B7D RID: 97149 RVA: 0x00704807 File Offset: 0x00702A07
 	private EPatrolFollowerTickResult UpdatePrecisePatrolFollowArrival(bool arrived)
 	{
 		this.PrecisePatrolFollowHasArrived = arrived;
@@ -592,7 +592,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return EPatrolFollowerTickResult.Arrived;
 	}
 
-	// Token: 0x0601A221 RID: 107041 RVA: 0x006DC9B4 File Offset: 0x006DABB4
+	// Token: 0x06017B7E RID: 97150 RVA: 0x00704824 File Offset: 0x00702A24
 	private void UpdatePrecisePatrolFollowFacing(CharacterActorComponent actorComp, float? facingYaw, bool standing, double deltaX, double deltaY, float turnSpeed)
 	{
 		if (facingYaw != null)
@@ -612,10 +612,10 @@ public class BaseGroupAiComponent : EntityComponent
 		actorComp.SetOverrideTurnSpeed(new float?(turnSpeed));
 	}
 
-	// Token: 0x0601A222 RID: 107042 RVA: 0x006DCA38 File Offset: 0x006DAC38
+	// Token: 0x06017B7F RID: 97151 RVA: 0x007048A8 File Offset: 0x00702AA8
 	private EPatrolFollowerTickResult TickPrecisePatrolFollowMovement(BaseMoveComponent moveComp, CharacterActorComponent actorComp, double deltaX, double deltaY, double distance, double targetSpeed, float deltaSeconds)
 	{
-		actorComp.SetInputDirect((targetSpeed > 1E-08) ? actorComp.ActorForwardProxy : global::Vector.ZeroVectorProxy, false);
+		actorComp.SetInputDirect((targetSpeed > 1E-08) ? actorComp.ActorForwardProxy : global::Vector.ZeroVectorProxy, false, EInputDirectSpace.World);
 		if (this.UpdatePrecisePatrolStuckDetection(targetSpeed, deltaSeconds))
 		{
 			return EPatrolFollowerTickResult.Stuck;
@@ -626,13 +626,13 @@ public class BaseGroupAiComponent : EntityComponent
 		return EPatrolFollowerTickResult.None;
 	}
 
-	// Token: 0x0601A223 RID: 107043 RVA: 0x006DCABC File Offset: 0x006DACBC
+	// Token: 0x06017B80 RID: 97152 RVA: 0x0070492D File Offset: 0x00702B2D
 	private void DrawPrecisePatrolFollowDebug(global::Vector target)
 	{
 		UKismetSystemLibrary.D_DrawDebugSphere(GlobalData.World, target.ToUeVector(false), 30f, 10, new FLinearColor?(ColorUtils.LinearYellow), 0f, 0f);
 	}
 
-	// Token: 0x0601A224 RID: 107044 RVA: 0x006DCAEA File Offset: 0x006DACEA
+	// Token: 0x06017B81 RID: 97153 RVA: 0x0070495B File Offset: 0x00702B5B
 	[NullableContext(2)]
 	public bool OnPrecisePatrolFollowStuck(global::Vector target = null)
 	{
@@ -644,13 +644,13 @@ public class BaseGroupAiComponent : EntityComponent
 		return this.ResetPrecisePatrolFollowLocation(target, "MonsterGroupInfo.OnFollowerStuck");
 	}
 
-	// Token: 0x0601A225 RID: 107045 RVA: 0x006DCB08 File Offset: 0x006DAD08
+	// Token: 0x06017B82 RID: 97154 RVA: 0x00704979 File Offset: 0x00702B79
 	public void OnGroupPatrolCaptainArrivePoint(global::Vector target)
 	{
 		this.ResetPrecisePatrolFollowLocation(target, "MonsterGroupInfo.OnCaptainArrivePoint");
 	}
 
-	// Token: 0x0601A226 RID: 107046 RVA: 0x006DCB17 File Offset: 0x006DAD17
+	// Token: 0x06017B83 RID: 97155 RVA: 0x00704988 File Offset: 0x00702B88
 	[NullableContext(2)]
 	public void OnGroupPatrolCaptainReset(bool preciseFollow, global::Vector target = null)
 	{
@@ -675,7 +675,7 @@ public class BaseGroupAiComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A227 RID: 107047 RVA: 0x006DCB44 File Offset: 0x006DAD44
+	// Token: 0x06017B84 RID: 97156 RVA: 0x007049B4 File Offset: 0x00702BB4
 	private bool ResetPrecisePatrolFollowLocation(global::Vector target, string context)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -724,7 +724,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A228 RID: 107048 RVA: 0x006DCC5C File Offset: 0x006DAE5C
+	// Token: 0x06017B85 RID: 97157 RVA: 0x00704ACC File Offset: 0x00702CCC
 	private unsafe bool SetPrecisePatrolFollowLocation(global::Vector target, double distance, string context)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -754,7 +754,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return flag;
 	}
 
-	// Token: 0x0601A229 RID: 107049 RVA: 0x006DCDBC File Offset: 0x006DAFBC
+	// Token: 0x06017B86 RID: 97158 RVA: 0x00704C2C File Offset: 0x00702E2C
 	public void StopPatrolMovement(string reason = "BaseGroupAiComponent.StopPatrolMovement")
 	{
 		bool precisePatrolFollowActive = this.PrecisePatrolFollowActive;
@@ -786,7 +786,7 @@ public class BaseGroupAiComponent : EntityComponent
 		this.RestorePatrolRootMotionScale();
 	}
 
-	// Token: 0x0601A22A RID: 107050 RVA: 0x006DCE74 File Offset: 0x006DB074
+	// Token: 0x06017B87 RID: 97159 RVA: 0x00704CE4 File Offset: 0x00702EE4
 	private double ComputePrecisePatrolFollowSpeed(double distance, double arriveRadius, float captainSpeed, float deltaSeconds)
 	{
 		double num5;
@@ -819,7 +819,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return this.PrecisePatrolFollowSmoothedSpeed;
 	}
 
-	// Token: 0x0601A22B RID: 107051 RVA: 0x006DCF94 File Offset: 0x006DB194
+	// Token: 0x06017B88 RID: 97160 RVA: 0x00704E04 File Offset: 0x00703004
 	private bool UpdatePrecisePatrolStuckDetection(double expectedSpeed, float deltaSeconds)
 	{
 		global::Vector actorLocationProxy = this.ActorComp.ActorLocationProxy;
@@ -842,7 +842,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return this.PrecisePatrolFollowStuckTimeSeconds >= 3f;
 	}
 
-	// Token: 0x0601A22C RID: 107052 RVA: 0x006DD03C File Offset: 0x006DB23C
+	// Token: 0x06017B89 RID: 97161 RVA: 0x00704EAC File Offset: 0x007030AC
 	private bool SetPatrolRootMotionScale(EPatrolRootMotionScaleMode mode, float scale)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -861,7 +861,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A22D RID: 107053 RVA: 0x006DD090 File Offset: 0x006DB290
+	// Token: 0x06017B8A RID: 97162 RVA: 0x00704F00 File Offset: 0x00703100
 	private void RestorePatrolRootMotionScale()
 	{
 		if (this.RootMotionScaleMode == EPatrolRootMotionScaleMode.None)
@@ -878,7 +878,7 @@ public class BaseGroupAiComponent : EntityComponent
 		this.RootMotionScaleMode = EPatrolRootMotionScaleMode.None;
 	}
 
-	// Token: 0x0601A22E RID: 107054 RVA: 0x006DD0EC File Offset: 0x006DB2EC
+	// Token: 0x06017B8B RID: 97163 RVA: 0x00704F5C File Offset: 0x0070315C
 	public void StartGroupPatrolEcologyAnimBlueprint(EGroupAiEcologyGameplayType ecologyType)
 	{
 		EGroupAiEcologyGameplayType? patrolEcologyGameplayType = this.PatrolEcologyGameplayType;
@@ -912,7 +912,7 @@ public class BaseGroupAiComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A22F RID: 107055 RVA: 0x006DD1A0 File Offset: 0x006DB3A0
+	// Token: 0x06017B8C RID: 97164 RVA: 0x00705010 File Offset: 0x00703210
 	public void StopGroupPatrolEcologyAnimBlueprint()
 	{
 		EGroupAiEcologyGameplayType? patrolEcologyGameplayType = this.PatrolEcologyGameplayType;
@@ -942,7 +942,7 @@ public class BaseGroupAiComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A230 RID: 107056 RVA: 0x006DD234 File Offset: 0x006DB434
+	// Token: 0x06017B8D RID: 97165 RVA: 0x007050A4 File Offset: 0x007032A4
 	private void InitGroupSyncTagConfig()
 	{
 		GroupConfigInfo groupConfig = this.GroupConfig;
@@ -969,13 +969,13 @@ public class BaseGroupAiComponent : EntityComponent
 		this.AddSyncTagList(this.SyncTagIds, true);
 	}
 
-	// Token: 0x0601A231 RID: 107057 RVA: 0x006DD2EC File Offset: 0x006DB4EC
+	// Token: 0x06017B8E RID: 97166 RVA: 0x0070515C File Offset: 0x0070335C
 	private void ClearGroupSyncTagConfig()
 	{
 		this.AddSyncTagList(this.SyncTagIds, false);
 	}
 
-	// Token: 0x0601A232 RID: 107058 RVA: 0x006DD2FC File Offset: 0x006DB4FC
+	// Token: 0x06017B8F RID: 97167 RVA: 0x0070516C File Offset: 0x0070336C
 	[NullableContext(2)]
 	public void AddSyncTagList(List<int> syncTags, bool add = true)
 	{
@@ -1009,7 +1009,7 @@ public class BaseGroupAiComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A233 RID: 107059 RVA: 0x006DD3C8 File Offset: 0x006DB5C8
+	// Token: 0x06017B90 RID: 97168 RVA: 0x00705238 File Offset: 0x00703438
 	private void OnAddOrRemoveTag(int tagId, bool tagExist)
 	{
 		if (this.IsSyncing)
@@ -1028,7 +1028,7 @@ public class BaseGroupAiComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A234 RID: 107060 RVA: 0x006DD420 File Offset: 0x006DB620
+	// Token: 0x06017B91 RID: 97169 RVA: 0x00705290 File Offset: 0x00703490
 	private unsafe void OnGroupSyncTagAdded(int ownerPbDataId, int tagId)
 	{
 		if (ownerPbDataId != this.OwnerPbDataId || this.IsSyncing)
@@ -1057,7 +1057,7 @@ public class BaseGroupAiComponent : EntityComponent
 		this.IsSyncing = false;
 	}
 
-	// Token: 0x0601A235 RID: 107061 RVA: 0x006DD502 File Offset: 0x006DB702
+	// Token: 0x06017B92 RID: 97170 RVA: 0x00705372 File Offset: 0x00703572
 	private void OnGroupSyncTagRemoved(int ownerPbDataId, int tagId)
 	{
 		if (ownerPbDataId != this.OwnerPbDataId || this.IsSyncing)
@@ -1073,7 +1073,7 @@ public class BaseGroupAiComponent : EntityComponent
 		this.IsSyncing = false;
 	}
 
-	// Token: 0x0601A236 RID: 107062 RVA: 0x006DD540 File Offset: 0x006DB740
+	// Token: 0x06017B93 RID: 97171 RVA: 0x007053B0 File Offset: 0x007035B0
 	private void InitGroupEcologyConfig()
 	{
 		GroupConfigInfo groupConfig = this.GroupConfig;
@@ -1123,7 +1123,7 @@ public class BaseGroupAiComponent : EntityComponent
 		MonsterGroupEcologyController.Instance.RegisterMonsterPbDataId(this.GroupConfig.GroupEntityId, base.Entity, component.GetPbDataId(), this.GroupConfig.GroupComp);
 	}
 
-	// Token: 0x0601A237 RID: 107063 RVA: 0x006DD760 File Offset: 0x006DB960
+	// Token: 0x06017B94 RID: 97172 RVA: 0x007055D0 File Offset: 0x007037D0
 	private void ClearGroupEcologyConfig()
 	{
 		this.StopEcologyAction();
@@ -1134,7 +1134,7 @@ public class BaseGroupAiComponent : EntityComponent
 		MonsterGroupEcologyController.Instance.RemoveEntityFromMonsterGroup(base.Entity.Id, this.PbDataId);
 	}
 
-	// Token: 0x0601A238 RID: 107064 RVA: 0x006DD7A0 File Offset: 0x006DB9A0
+	// Token: 0x06017B95 RID: 97173 RVA: 0x00705610 File Offset: 0x00703810
 	private void ChangeEcologyPerformTag(bool add = true)
 	{
 		if (this.EcologyActionTag == 0)
@@ -1163,7 +1163,7 @@ public class BaseGroupAiComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A239 RID: 107065 RVA: 0x006DD7F1 File Offset: 0x006DB9F1
+	// Token: 0x06017B96 RID: 97174 RVA: 0x00705661 File Offset: 0x00703861
 	public void RunEcologyAction()
 	{
 		if (this.InEcologyAction)
@@ -1174,21 +1174,21 @@ public class BaseGroupAiComponent : EntityComponent
 		this.ChangeEcologyPerformTag(true);
 	}
 
-	// Token: 0x0601A23A RID: 107066 RVA: 0x006DD80A File Offset: 0x006DBA0A
+	// Token: 0x06017B97 RID: 97175 RVA: 0x0070567A File Offset: 0x0070387A
 	public void StopEcologyAction()
 	{
 		this.InEcologyAction = false;
 		this.ChangeEcologyPerformTag(false);
 	}
 
-	// Token: 0x0601A23B RID: 107067 RVA: 0x006DD81A File Offset: 0x006DBA1A
+	// Token: 0x06017B98 RID: 97176 RVA: 0x0070568A File Offset: 0x0070388A
 	[NullableContext(2)]
 	public global::Transform GetEcologyRelativeTransform()
 	{
 		return this.RelativeTransform;
 	}
 
-	// Token: 0x0601A23C RID: 107068 RVA: 0x006DD822 File Offset: 0x006DBA22
+	// Token: 0x06017B99 RID: 97177 RVA: 0x00705692 File Offset: 0x00703892
 	[NullableContext(2)]
 	public EntityHandle GetEcologyAttachTarget()
 	{
@@ -1204,7 +1204,7 @@ public class BaseGroupAiComponent : EntityComponent
 		return instance.GetEntityByPbDataId(this.AttachTarget);
 	}
 
-	// Token: 0x0601A23D RID: 107069 RVA: 0x006DD844 File Offset: 0x006DBA44
+	// Token: 0x06017B9A RID: 97178 RVA: 0x007056B4 File Offset: 0x007038B4
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1212,323 +1212,265 @@ public class BaseGroupAiComponent : EntityComponent
 			return false;
 		}
 		BaseGroupAiComponent baseGroupAiComponent = (BaseGroupAiComponent)componentTemplate;
-		if (base.CanResetComponentProperty("IsGroupAi"))
+		this.IsGroupAi = baseGroupAiComponent.IsGroupAi;
+		this.OwnerPbDataId = baseGroupAiComponent.OwnerPbDataId;
+		if (baseGroupAiComponent.GroupConfig == null)
 		{
-			this.IsGroupAi = baseGroupAiComponent.IsGroupAi;
+			this.GroupConfig = null;
 		}
-		if (base.CanResetComponentProperty("OwnerPbDataId"))
-		{
-			this.OwnerPbDataId = baseGroupAiComponent.OwnerPbDataId;
-		}
-		if (base.CanResetComponentProperty("GroupConfig"))
-		{
-			if (baseGroupAiComponent.GroupConfig == null)
-			{
-				this.GroupConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GroupConfigInfo>(this.GroupConfig), "GroupConfig"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagComp"))
-		{
-			if (baseGroupAiComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PbDataId"))
-		{
-			this.PbDataId = baseGroupAiComponent.PbDataId;
-		}
-		if (base.CanResetComponentProperty("ActorComp"))
-		{
-			if (baseGroupAiComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AnimComp"))
-		{
-			if (baseGroupAiComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MoveComp"))
-		{
-			if (baseGroupAiComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PatrolComp"))
-		{
-			if (baseGroupAiComponent.PatrolComp == null)
-			{
-				this.PatrolComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterPatrolComponent>(this.PatrolComp), "PatrolComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("StateComp"))
-		{
-			if (baseGroupAiComponent.StateComp == null)
-			{
-				this.StateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseUnifiedStateComponent>(this.StateComp), "StateComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PatrolMaxSpeedOverrideActive"))
-		{
-			this.PatrolMaxSpeedOverrideActive = baseGroupAiComponent.PatrolMaxSpeedOverrideActive;
-		}
-		if (base.CanResetComponentProperty("PrecisePatrolFollowActive"))
-		{
-			this.PrecisePatrolFollowActive = baseGroupAiComponent.PrecisePatrolFollowActive;
-		}
-		if (base.CanResetComponentProperty("PrecisePatrolFollowSmoothedSpeed"))
-		{
-			this.PrecisePatrolFollowSmoothedSpeed = baseGroupAiComponent.PrecisePatrolFollowSmoothedSpeed;
-		}
-		if (base.CanResetComponentProperty("PrecisePatrolFollowStuckTimeSeconds"))
-		{
-			this.PrecisePatrolFollowStuckTimeSeconds = baseGroupAiComponent.PrecisePatrolFollowStuckTimeSeconds;
-		}
-		if (base.CanResetComponentProperty("PrecisePatrolFollowHasArrived"))
-		{
-			this.PrecisePatrolFollowHasArrived = baseGroupAiComponent.PrecisePatrolFollowHasArrived;
-		}
-		if (base.CanResetComponentProperty("PrecisePatrolFollowLastPosition") && baseGroupAiComponent.PrecisePatrolFollowLastPosition != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PrecisePatrolFollowLastPosition), "PrecisePatrolFollowLastPosition"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GroupConfig), "GroupConfig"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("PrecisePatrolFollowMoveOffset") && baseGroupAiComponent.PrecisePatrolFollowMoveOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PrecisePatrolFollowMoveOffset), "PrecisePatrolFollowMoveOffset"))
+		if (baseGroupAiComponent.TagComp == null)
+		{
+			this.TagComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("RootMotionScaleMode"))
+		this.PbDataId = baseGroupAiComponent.PbDataId;
+		if (baseGroupAiComponent.ActorComp == null)
 		{
-			this.RootMotionScaleMode = baseGroupAiComponent.RootMotionScaleMode;
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("SavedRootMotionScale"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			this.SavedRootMotionScale = baseGroupAiComponent.SavedRootMotionScale;
+			return false;
 		}
-		if (base.CanResetComponentProperty("PatrolEcologyGameplayType"))
+		if (baseGroupAiComponent.AnimComp == null)
 		{
-			this.PatrolEcologyGameplayType = baseGroupAiComponent.PatrolEcologyGameplayType;
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("PatrolEcologyOriginalRegionMoveMode"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			this.PatrolEcologyOriginalRegionMoveMode = baseGroupAiComponent.PatrolEcologyOriginalRegionMoveMode;
+			return false;
 		}
-		if (base.CanResetComponentProperty("SyncTagIds"))
+		if (baseGroupAiComponent.MoveComp == null)
 		{
-			if (baseGroupAiComponent.SyncTagIds == null)
-			{
-				this.SyncTagIds = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.SyncTagIds), "SyncTagIds"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("IsSyncing"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			this.IsSyncing = baseGroupAiComponent.IsSyncing;
+			return false;
 		}
-		if (base.CanResetComponentProperty("TmpRotator"))
+		if (baseGroupAiComponent.PatrolComp == null)
 		{
-			if (baseGroupAiComponent.TmpRotator == null)
-			{
-				this.TmpRotator = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.TmpRotator), "TmpRotator"))
-			{
-				return false;
-			}
+			this.PatrolComp = null;
 		}
-		if (base.CanResetComponentProperty("RelativeTransform"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PatrolComp), "PatrolComp"))
 		{
-			if (baseGroupAiComponent.RelativeTransform == null)
-			{
-				this.RelativeTransform = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.RelativeTransform), "RelativeTransform"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("AttachTarget"))
+		if (baseGroupAiComponent.StateComp == null)
 		{
-			this.AttachTarget = baseGroupAiComponent.AttachTarget;
+			this.StateComp = null;
 		}
-		if (base.CanResetComponentProperty("EcologyActionTag"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 		{
-			this.EcologyActionTag = baseGroupAiComponent.EcologyActionTag;
+			return false;
 		}
-		if (base.CanResetComponentProperty("InEcologyAction"))
+		this.PatrolMaxSpeedOverrideActive = baseGroupAiComponent.PatrolMaxSpeedOverrideActive;
+		this.PrecisePatrolFollowActive = baseGroupAiComponent.PrecisePatrolFollowActive;
+		this.PrecisePatrolFollowSmoothedSpeed = baseGroupAiComponent.PrecisePatrolFollowSmoothedSpeed;
+		this.PrecisePatrolFollowStuckTimeSeconds = baseGroupAiComponent.PrecisePatrolFollowStuckTimeSeconds;
+		this.PrecisePatrolFollowHasArrived = baseGroupAiComponent.PrecisePatrolFollowHasArrived;
+		if (baseGroupAiComponent.PrecisePatrolFollowLastPosition != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PrecisePatrolFollowLastPosition), "PrecisePatrolFollowLastPosition"))
 		{
-			this.InEcologyAction = baseGroupAiComponent.InEcologyAction;
+			return false;
 		}
+		if (baseGroupAiComponent.PrecisePatrolFollowMoveOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PrecisePatrolFollowMoveOffset), "PrecisePatrolFollowMoveOffset"))
+		{
+			return false;
+		}
+		this.RootMotionScaleMode = baseGroupAiComponent.RootMotionScaleMode;
+		this.SavedRootMotionScale = baseGroupAiComponent.SavedRootMotionScale;
+		this.PatrolEcologyGameplayType = baseGroupAiComponent.PatrolEcologyGameplayType;
+		this.PatrolEcologyOriginalRegionMoveMode = baseGroupAiComponent.PatrolEcologyOriginalRegionMoveMode;
+		if (baseGroupAiComponent.SyncTagIds == null)
+		{
+			this.SyncTagIds = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SyncTagIds), "SyncTagIds"))
+		{
+			return false;
+		}
+		this.IsSyncing = baseGroupAiComponent.IsSyncing;
+		if (baseGroupAiComponent.TmpRotator == null)
+		{
+			this.TmpRotator = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator"))
+		{
+			return false;
+		}
+		if (baseGroupAiComponent.RelativeTransform == null)
+		{
+			this.RelativeTransform = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RelativeTransform), "RelativeTransform"))
+		{
+			return false;
+		}
+		this.AttachTarget = baseGroupAiComponent.AttachTarget;
+		this.EcologyActionTag = baseGroupAiComponent.EcologyActionTag;
+		this.InEcologyAction = baseGroupAiComponent.InEcologyAction;
 		return true;
 	}
 
-	// Token: 0x0400C642 RID: 50754
+	// Token: 0x170024D8 RID: 9432
+	// (get) Token: 0x06017B9B RID: 97179 RVA: 0x00705986 File Offset: 0x00703B86
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170024D9 RID: 9433
+	// (get) Token: 0x06017B9C RID: 97180 RVA: 0x00705989 File Offset: 0x00703B89
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CA11 RID: 51729
 	private const float PATROL_CAPTAIN_STILL_SPEED = 10f;
 
-	// Token: 0x0400C643 RID: 50755
+	// Token: 0x0400CA12 RID: 51730
 	private const float PATROL_FOLLOW_STANDOFF_DISTANCE = 100f;
 
-	// Token: 0x0400C644 RID: 50756
+	// Token: 0x0400CA13 RID: 51731
 	private const float PATROL_FOLLOW_MAX_SPEED_RATE = 3f;
 
-	// Token: 0x0400C645 RID: 50757
+	// Token: 0x0400CA14 RID: 51732
 	private const float PATROL_FOLLOW_MAX_SPEED_FLOOR = 100f;
 
-	// Token: 0x0400C646 RID: 50758
+	// Token: 0x0400CA15 RID: 51733
 	private const float PATROL_FOLLOW_ARRIVE_DISTANCE = 50f;
 
-	// Token: 0x0400C647 RID: 50759
+	// Token: 0x0400CA16 RID: 51734
 	private const float PATROL_FOLLOW_STUCK_MIN_SPEED = 30f;
 
-	// Token: 0x0400C648 RID: 50760
+	// Token: 0x0400CA17 RID: 51735
 	private const float PATROL_FOLLOW_STUCK_SPEED_RATE = 0.25f;
 
-	// Token: 0x0400C649 RID: 50761
+	// Token: 0x0400CA18 RID: 51736
 	private const float PATROL_FOLLOW_STUCK_TIME_SECONDS = 3f;
 
-	// Token: 0x0400C64A RID: 50762
+	// Token: 0x0400CA19 RID: 51737
 	private const string PRECISE_PATROL_INPUT_MOVEMENT_LOCK = "GroupPatrolPreciseFollow";
 
-	// Token: 0x0400C64B RID: 50763
+	// Token: 0x0400CA1A RID: 51738
 	private const float PRECISE_PATROL_FOLLOW_MODEL_BUFFER_TIME_MS = 100f;
 
-	// Token: 0x0400C64C RID: 50764
+	// Token: 0x0400CA1B RID: 51739
 	private const float PRECISE_PATROL_FOLLOW_MODEL_BUFFER_MAX_DISTANCE = 300f;
 
-	// Token: 0x0400C64D RID: 50765
+	// Token: 0x0400CA1C RID: 51740
 	private const float PATROL_NAVIGATION_END_DISTANCE = 30f;
 
-	// Token: 0x0400C64E RID: 50766
+	// Token: 0x0400CA1D RID: 51741
 	private const float PATROL_NAVIGATION_RETURN_TIMEOUT_SECONDS = 3f;
 
-	// Token: 0x0400C64F RID: 50767
+	// Token: 0x0400CA1E RID: 51742
 	private const int PATROL_NAVIGATION_LARGE_DELTA_RESET_MIN_MOVE = 500;
 
-	// Token: 0x0400C650 RID: 50768
+	// Token: 0x0400CA1F RID: 51743
 	private bool IsGroupAi;
 
-	// Token: 0x0400C651 RID: 50769
+	// Token: 0x0400CA20 RID: 51744
 	private int OwnerPbDataId;
 
-	// Token: 0x0400C652 RID: 50770
+	// Token: 0x0400CA21 RID: 51745
 	[Nullable(2)]
 	private GroupConfigInfo GroupConfig;
 
-	// Token: 0x0400C653 RID: 50771
+	// Token: 0x0400CA22 RID: 51746
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400C654 RID: 50772
+	// Token: 0x0400CA23 RID: 51747
 	private int PbDataId;
 
-	// Token: 0x0400C655 RID: 50773
+	// Token: 0x0400CA24 RID: 51748
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400C656 RID: 50774
+	// Token: 0x0400CA25 RID: 51749
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400C657 RID: 50775
+	// Token: 0x0400CA26 RID: 51750
 	[Nullable(2)]
 	private BaseMoveComponent MoveComp;
 
-	// Token: 0x0400C658 RID: 50776
+	// Token: 0x0400CA27 RID: 51751
 	[Nullable(2)]
 	private CharacterPatrolComponent PatrolComp;
 
-	// Token: 0x0400C659 RID: 50777
+	// Token: 0x0400CA28 RID: 51752
 	[Nullable(2)]
 	private BaseUnifiedStateComponent StateComp;
 
-	// Token: 0x0400C65A RID: 50778
+	// Token: 0x0400CA29 RID: 51753
 	private bool PatrolMaxSpeedOverrideActive;
 
-	// Token: 0x0400C65B RID: 50779
+	// Token: 0x0400CA2A RID: 51754
 	private bool PrecisePatrolFollowActive;
 
-	// Token: 0x0400C65C RID: 50780
+	// Token: 0x0400CA2B RID: 51755
 	private double PrecisePatrolFollowSmoothedSpeed;
 
-	// Token: 0x0400C65D RID: 50781
+	// Token: 0x0400CA2C RID: 51756
 	private float PrecisePatrolFollowStuckTimeSeconds;
 
-	// Token: 0x0400C65E RID: 50782
+	// Token: 0x0400CA2D RID: 51757
 	private bool PrecisePatrolFollowHasArrived;
 
-	// Token: 0x0400C65F RID: 50783
+	// Token: 0x0400CA2E RID: 51758
 	private readonly global::Vector PrecisePatrolFollowLastPosition = global::Vector.Create();
 
-	// Token: 0x0400C660 RID: 50784
+	// Token: 0x0400CA2F RID: 51759
 	private readonly global::Vector PrecisePatrolFollowMoveOffset = global::Vector.Create();
 
-	// Token: 0x0400C661 RID: 50785
+	// Token: 0x0400CA30 RID: 51760
 	private EPatrolRootMotionScaleMode RootMotionScaleMode;
 
-	// Token: 0x0400C662 RID: 50786
+	// Token: 0x0400CA31 RID: 51761
 	private float SavedRootMotionScale = -1f;
 
-	// Token: 0x0400C663 RID: 50787
+	// Token: 0x0400CA32 RID: 51762
 	private EGroupAiEcologyGameplayType? PatrolEcologyGameplayType;
 
-	// Token: 0x0400C664 RID: 50788
+	// Token: 0x0400CA33 RID: 51763
 	private bool PatrolEcologyOriginalRegionMoveMode;
 
-	// Token: 0x0400C665 RID: 50789
+	// Token: 0x0400CA34 RID: 51764
 	[Nullable(2)]
 	private List<int> SyncTagIds;
 
-	// Token: 0x0400C666 RID: 50790
+	// Token: 0x0400CA35 RID: 51765
 	private bool IsSyncing;
 
-	// Token: 0x0400C667 RID: 50791
+	// Token: 0x0400CA36 RID: 51766
 	private global::Rotator TmpRotator = global::Rotator.Create();
 
-	// Token: 0x0400C668 RID: 50792
+	// Token: 0x0400CA37 RID: 51767
 	[Nullable(2)]
 	private global::Transform RelativeTransform;
 
-	// Token: 0x0400C669 RID: 50793
+	// Token: 0x0400CA38 RID: 51768
 	private int AttachTarget;
 
-	// Token: 0x0400C66A RID: 50794
+	// Token: 0x0400CA39 RID: 51769
 	private int EcologyActionTag;
 
-	// Token: 0x0400C66B RID: 50795
+	// Token: 0x0400CA3A RID: 51770
 	private bool InEcologyAction;
 }

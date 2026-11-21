@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027C5 RID: 10181
+	// Token: 0x02002A98 RID: 10904
 	public class ToggleTimerPauseState : ActionParams
 	{
-		// Token: 0x0600E26F RID: 57967 RVA: 0x0021713C File Offset: 0x0021533C
-		[NullableContext(1)]
+		// Token: 0x0600F091 RID: 61585 RVA: 0x00233F10 File Offset: 0x00232110
 		public static ToggleTimerPauseState Create(IToggleTimerPauseState? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044A7 RID: 17575
-		// (get) Token: 0x0600E270 RID: 57968 RVA: 0x0021715B File Offset: 0x0021535B
+		// Token: 0x1700480F RID: 18447
+		// (get) Token: 0x0600F092 RID: 61586 RVA: 0x00233F2F File Offset: 0x0023212F
 		public virtual ETimerType TimerType
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044A8 RID: 17576
-		// (get) Token: 0x0600E271 RID: 57969 RVA: 0x00217168 File Offset: 0x00215368
+		// Token: 0x17004810 RID: 18448
+		// (get) Token: 0x0600F093 RID: 61587 RVA: 0x00233F3C File Offset: 0x0023213C
 		public virtual bool IsPause
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D93 RID: 32147
+		// Token: 0x0400844A RID: 33866
 		private IToggleTimerPauseState Instance;
 	}
 }

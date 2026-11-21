@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010F8 RID: 4344
+	// Token: 0x0200122E RID: 4654
 	public struct SurvivorsCombo : IFlatbufferObject
 	{
-		// Token: 0x170038AE RID: 14510
-		// (get) Token: 0x0600DA25 RID: 55845 RVA: 0x0032320C File Offset: 0x0032140C
+		// Token: 0x17003C04 RID: 15364
+		// (get) Token: 0x0600E770 RID: 59248 RVA: 0x0034E6BC File Offset: 0x0034C8BC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DA26 RID: 55846 RVA: 0x00323219 File Offset: 0x00321419
+		// Token: 0x0600E771 RID: 59249 RVA: 0x0034E6C9 File Offset: 0x0034C8C9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DA27 RID: 55847 RVA: 0x00323220 File Offset: 0x00321420
+		// Token: 0x0600E772 RID: 59250 RVA: 0x0034E6D0 File Offset: 0x0034C8D0
 		public static SurvivorsCombo GetRootAsSurvivorsCombo(ByteBuffer _bb)
 		{
 			return SurvivorsCombo.GetRootAsSurvivorsCombo(_bb, default(SurvivorsCombo));
 		}
 
-		// Token: 0x0600DA28 RID: 55848 RVA: 0x0032323C File Offset: 0x0032143C
+		// Token: 0x0600E773 RID: 59251 RVA: 0x0034E6EC File Offset: 0x0034C8EC
 		public static SurvivorsCombo GetRootAsSurvivorsCombo(ByteBuffer _bb, SurvivorsCombo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DA29 RID: 55849 RVA: 0x00323259 File Offset: 0x00321459
+		// Token: 0x0600E774 RID: 59252 RVA: 0x0034E709 File Offset: 0x0034C909
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DA2A RID: 55850 RVA: 0x00323268 File Offset: 0x00321468
+		// Token: 0x0600E775 RID: 59253 RVA: 0x0034E718 File Offset: 0x0034C918
 		public SurvivorsCombo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170038AF RID: 14511
-		// (get) Token: 0x0600DA2B RID: 55851 RVA: 0x00323278 File Offset: 0x00321478
+		// Token: 0x17003C05 RID: 15365
+		// (get) Token: 0x0600E776 RID: 59254 RVA: 0x0034E728 File Offset: 0x0034C928
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DA2C RID: 55852 RVA: 0x003232B4 File Offset: 0x003214B4
+		// Token: 0x0600E777 RID: 59255 RVA: 0x0034E764 File Offset: 0x0034C964
 		public int ComboNum(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170038B0 RID: 14512
-		// (get) Token: 0x0600DA2D RID: 55853 RVA: 0x003232F4 File Offset: 0x003214F4
+		// Token: 0x17003C06 RID: 15366
+		// (get) Token: 0x0600E778 RID: 59256 RVA: 0x0034E7A4 File Offset: 0x0034C9A4
 		public int ComboNumLength
 		{
 			get
@@ -90,19 +90,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DA2E RID: 55854 RVA: 0x0032331F File Offset: 0x0032151F
+		// Token: 0x0600E779 RID: 59257 RVA: 0x0034E7CF File Offset: 0x0034C9CF
 		public Span<int> GetComboNumBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600DA2F RID: 55855 RVA: 0x0032332E File Offset: 0x0032152E
+		// Token: 0x0600E77A RID: 59258 RVA: 0x0034E7DE File Offset: 0x0034C9DE
 		public int[] GetComboNumArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600DA30 RID: 55856 RVA: 0x00323348 File Offset: 0x00321548
+		// Token: 0x0600E77B RID: 59259 RVA: 0x0034E7F8 File Offset: 0x0034C9F8
 		public int ComboDuration(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -113,8 +113,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170038B1 RID: 14513
-		// (get) Token: 0x0600DA31 RID: 55857 RVA: 0x00323388 File Offset: 0x00321588
+		// Token: 0x17003C07 RID: 15367
+		// (get) Token: 0x0600E77C RID: 59260 RVA: 0x0034E838 File Offset: 0x0034CA38
 		public int ComboDurationLength
 		{
 			get
@@ -128,19 +128,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DA32 RID: 55858 RVA: 0x003233B3 File Offset: 0x003215B3
+		// Token: 0x0600E77D RID: 59261 RVA: 0x0034E863 File Offset: 0x0034CA63
 		public Span<int> GetComboDurationBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600DA33 RID: 55859 RVA: 0x003233C2 File Offset: 0x003215C2
+		// Token: 0x0600E77E RID: 59262 RVA: 0x0034E872 File Offset: 0x0034CA72
 		public int[] GetComboDurationArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600DA34 RID: 55860 RVA: 0x003233DC File Offset: 0x003215DC
+		// Token: 0x0600E77F RID: 59263 RVA: 0x0034E88C File Offset: 0x0034CA8C
 		public int PlayerBuffIds(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -151,8 +151,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170038B2 RID: 14514
-		// (get) Token: 0x0600DA35 RID: 55861 RVA: 0x0032341C File Offset: 0x0032161C
+		// Token: 0x17003C08 RID: 15368
+		// (get) Token: 0x0600E780 RID: 59264 RVA: 0x0034E8CC File Offset: 0x0034CACC
 		public int PlayerBuffIdsLength
 		{
 			get
@@ -166,19 +166,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DA36 RID: 55862 RVA: 0x00323448 File Offset: 0x00321648
+		// Token: 0x0600E781 RID: 59265 RVA: 0x0034E8F8 File Offset: 0x0034CAF8
 		public Span<int> GetPlayerBuffIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600DA37 RID: 55863 RVA: 0x00323458 File Offset: 0x00321658
+		// Token: 0x0600E782 RID: 59266 RVA: 0x0034E908 File Offset: 0x0034CB08
 		public int[] GetPlayerBuffIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600DA38 RID: 55864 RVA: 0x00323470 File Offset: 0x00321670
+		// Token: 0x0600E783 RID: 59267 RVA: 0x0034E920 File Offset: 0x0034CB20
 		public int WeaponBuffIds(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -189,8 +189,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170038B3 RID: 14515
-		// (get) Token: 0x0600DA39 RID: 55865 RVA: 0x003234B0 File Offset: 0x003216B0
+		// Token: 0x17003C09 RID: 15369
+		// (get) Token: 0x0600E784 RID: 59268 RVA: 0x0034E960 File Offset: 0x0034CB60
 		public int WeaponBuffIdsLength
 		{
 			get
@@ -204,91 +204,83 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DA3A RID: 55866 RVA: 0x003234DC File Offset: 0x003216DC
+		// Token: 0x0600E785 RID: 59269 RVA: 0x0034E98C File Offset: 0x0034CB8C
 		public Span<int> GetWeaponBuffIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x0600DA3B RID: 55867 RVA: 0x003234EC File Offset: 0x003216EC
+		// Token: 0x0600E786 RID: 59270 RVA: 0x0034E99C File Offset: 0x0034CB9C
 		public int[] GetWeaponBuffIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600DA3C RID: 55868 RVA: 0x00323504 File Offset: 0x00321704
+		// Token: 0x0600E787 RID: 59271 RVA: 0x0034E9B4 File Offset: 0x0034CBB4
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ComboDurationIter()或GetComboDurationBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ComboDuration()
+		public int[] ComboDuration()
 		{
-			SurvivorsCombo survivorsCombo = this;
-			return survivorsCombo.GetComboDurationArray() ?? Array.Empty<int>();
+			return this.GetComboDurationArray();
 		}
 
-		// Token: 0x0600DA3D RID: 55869 RVA: 0x00323528 File Offset: 0x00321728
+		// Token: 0x0600E788 RID: 59272 RVA: 0x0034E9BC File Offset: 0x0034CBBC
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ComboDurationIter()
+		public IEnumerable<int> ComboDurationIter()
 		{
 			SurvivorsCombo.<ComboDurationIter>d__31 <ComboDurationIter>d__ = new SurvivorsCombo.<ComboDurationIter>d__31(-2);
 			<ComboDurationIter>d__.<>3__<>4__this = this;
 			return <ComboDurationIter>d__;
 		}
 
-		// Token: 0x0600DA3E RID: 55870 RVA: 0x00323540 File Offset: 0x00321740
+		// Token: 0x0600E789 RID: 59273 RVA: 0x0034E9D1 File Offset: 0x0034CBD1
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ComboNumIter()或GetComboNumBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ComboNum()
+		public int[] ComboNum()
 		{
-			SurvivorsCombo survivorsCombo = this;
-			return survivorsCombo.GetComboNumArray() ?? Array.Empty<int>();
+			return this.GetComboNumArray();
 		}
 
-		// Token: 0x0600DA3F RID: 55871 RVA: 0x00323564 File Offset: 0x00321764
+		// Token: 0x0600E78A RID: 59274 RVA: 0x0034E9D9 File Offset: 0x0034CBD9
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ComboNumIter()
+		public IEnumerable<int> ComboNumIter()
 		{
 			SurvivorsCombo.<ComboNumIter>d__33 <ComboNumIter>d__ = new SurvivorsCombo.<ComboNumIter>d__33(-2);
 			<ComboNumIter>d__.<>3__<>4__this = this;
 			return <ComboNumIter>d__;
 		}
 
-		// Token: 0x0600DA40 RID: 55872 RVA: 0x0032357C File Offset: 0x0032177C
+		// Token: 0x0600E78B RID: 59275 RVA: 0x0034E9EE File Offset: 0x0034CBEE
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PlayerBuffIdsIter()或GetPlayerBuffIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PlayerBuffIds()
+		public int[] PlayerBuffIds()
 		{
-			SurvivorsCombo survivorsCombo = this;
-			return survivorsCombo.GetPlayerBuffIdsArray() ?? Array.Empty<int>();
+			return this.GetPlayerBuffIdsArray();
 		}
 
-		// Token: 0x0600DA41 RID: 55873 RVA: 0x003235A0 File Offset: 0x003217A0
+		// Token: 0x0600E78C RID: 59276 RVA: 0x0034E9F6 File Offset: 0x0034CBF6
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PlayerBuffIdsIter()
+		public IEnumerable<int> PlayerBuffIdsIter()
 		{
 			SurvivorsCombo.<PlayerBuffIdsIter>d__35 <PlayerBuffIdsIter>d__ = new SurvivorsCombo.<PlayerBuffIdsIter>d__35(-2);
 			<PlayerBuffIdsIter>d__.<>3__<>4__this = this;
 			return <PlayerBuffIdsIter>d__;
 		}
 
-		// Token: 0x0600DA42 RID: 55874 RVA: 0x003235B8 File Offset: 0x003217B8
+		// Token: 0x0600E78D RID: 59277 RVA: 0x0034EA0B File Offset: 0x0034CC0B
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WeaponBuffIdsIter()或GetWeaponBuffIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WeaponBuffIds()
+		public int[] WeaponBuffIds()
 		{
-			SurvivorsCombo survivorsCombo = this;
-			return survivorsCombo.GetWeaponBuffIdsArray() ?? Array.Empty<int>();
+			return this.GetWeaponBuffIdsArray();
 		}
 
-		// Token: 0x0600DA43 RID: 55875 RVA: 0x003235DC File Offset: 0x003217DC
+		// Token: 0x0600E78E RID: 59278 RVA: 0x0034EA13 File Offset: 0x0034CC13
 		[NullableContext(1)]
-		public readonly IEnumerable<int> WeaponBuffIdsIter()
+		public IEnumerable<int> WeaponBuffIdsIter()
 		{
 			SurvivorsCombo.<WeaponBuffIdsIter>d__37 <WeaponBuffIdsIter>d__ = new SurvivorsCombo.<WeaponBuffIdsIter>d__37(-2);
 			<WeaponBuffIdsIter>d__.<>3__<>4__this = this;
 			return <WeaponBuffIdsIter>d__;
 		}
 
-		// Token: 0x0400522E RID: 21038
+		// Token: 0x04005871 RID: 22641
 		private Table __p;
 	}
 }

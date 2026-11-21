@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000A8 RID: 168
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020000AE RID: 174
 	public class EffectAreaComponent : IComponentBase
 	{
-		// Token: 0x06000360 RID: 864 RVA: 0x0001BA84 File Offset: 0x00019C84
+		// Token: 0x06000364 RID: 868 RVA: 0x0001C3F8 File Offset: 0x0001A5F8
 		private EffectAreaComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000361 RID: 865 RVA: 0x0001BABC File Offset: 0x00019CBC
+		// Token: 0x06000365 RID: 869 RVA: 0x0001C430 File Offset: 0x0001A630
 		public static EffectAreaComponent Create([Nullable(2)] EffectAreaComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000362 RID: 866 RVA: 0x0001BACF File Offset: 0x00019CCF
+		// Token: 0x06000366 RID: 870 RVA: 0x0001C443 File Offset: 0x0001A643
 		public static EffectAreaComponent CreateFromSetValue([Nullable(2)] EffectAreaComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000363 RID: 867 RVA: 0x0001BAE2 File Offset: 0x00019CE2
+		// Token: 0x06000367 RID: 871 RVA: 0x0001C456 File Offset: 0x0001A656
 		public new EffectAreaComponent_SetValue ToSetValue()
 		{
 			return new EffectAreaComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000123 RID: 291
-		// (get) Token: 0x06000364 RID: 868 RVA: 0x0001BB10 File Offset: 0x00019D10
-		// (set) Token: 0x06000365 RID: 869 RVA: 0x0001BB4A File Offset: 0x00019D4A
+		// Token: 0x17000125 RID: 293
+		// (get) Token: 0x06000368 RID: 872 RVA: 0x0001C484 File Offset: 0x0001A684
+		// (set) Token: 0x06000369 RID: 873 RVA: 0x0001C4BE File Offset: 0x0001A6BE
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000124 RID: 292
-		// (get) Token: 0x06000366 RID: 870 RVA: 0x0001BB58 File Offset: 0x00019D58
-		// (set) Token: 0x06000367 RID: 871 RVA: 0x0001BB82 File Offset: 0x00019D82
+		// Token: 0x17000126 RID: 294
+		// (get) Token: 0x0600036A RID: 874 RVA: 0x0001C4CC File Offset: 0x0001A6CC
+		// (set) Token: 0x0600036B RID: 875 RVA: 0x0001C4F6 File Offset: 0x0001A6F6
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000125 RID: 293
-		// (get) Token: 0x06000368 RID: 872 RVA: 0x0001BB90 File Offset: 0x00019D90
-		// (set) Token: 0x06000369 RID: 873 RVA: 0x0001BBF1 File Offset: 0x00019DF1
+		// Token: 0x17000127 RID: 295
+		// (get) Token: 0x0600036C RID: 876 RVA: 0x0001C504 File Offset: 0x0001A704
+		// (set) Token: 0x0600036D RID: 877 RVA: 0x0001C565 File Offset: 0x0001A765
 		public virtual IBuffArea Config
 		{
 			get
@@ -134,18 +132,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040003EA RID: 1002
+		// Token: 0x04000406 RID: 1030
 		[Nullable(2)]
 		protected new EffectAreaComponent FbInstance;
 
-		// Token: 0x040003EB RID: 1003
+		// Token: 0x04000407 RID: 1031
 		[Nullable(2)]
 		protected new EffectAreaComponent_SetValue PocoInterface;
 
-		// Token: 0x040003EC RID: 1004
+		// Token: 0x04000408 RID: 1032
 		private IBuffArea _ConfigCache;
 
-		// Token: 0x040003ED RID: 1005
+		// Token: 0x04000409 RID: 1033
 		private bool _ConfigInited;
 	}
 }

@@ -6,22 +6,22 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042F0 RID: 17136
+	// Token: 0x02003338 RID: 13112
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SBatchBulletPositionPointMatrix.SBatchBulletPositionPointMatrix")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 65)]
 	public class SBatchBulletPositionPointMatrix : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C3F6 RID: 181238 RVA: 0x00A1B524 File Offset: 0x00A19724
+		// Token: 0x0602120C RID: 135692 RVA: 0x00959E0A File Offset: 0x0095800A
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SBatchBulletPositionPointMatrix._ScriptStructPtr != 0) ? SBatchBulletPositionPointMatrix._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SBatchBulletPositionPointMatrix.SBatchBulletPositionPointMatrix", ref SBatchBulletPositionPointMatrix._ScriptStructPtr);
 		}
 
-		// Token: 0x17006E53 RID: 28243
-		// (get) Token: 0x0602C3F7 RID: 181239 RVA: 0x00A1B548 File Offset: 0x00A19748
-		// (set) Token: 0x0602C3F8 RID: 181240 RVA: 0x00A1B58B File Offset: 0x00A1978B
+		// Token: 0x170042BA RID: 17082
+		// (get) Token: 0x0602120D RID: 135693 RVA: 0x00959E30 File Offset: 0x00958030
+		// (set) Token: 0x0602120E RID: 135694 RVA: 0x00959E73 File Offset: 0x00958073
 		public TArray<FVector> PositionOffset
 		{
 			get
@@ -30,7 +30,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<FVector> result;
 				if ((result = this._PositionOffset) == null)
 				{
-					result = (this._PositionOffset = new TArray<FVector>(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._PositionOffset = new TArray<FVector>(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_PositionOffset, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -40,155 +40,144 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x17006E54 RID: 28244
-		// (get) Token: 0x0602C3F9 RID: 181241 RVA: 0x00A1B599 File Offset: 0x00A19799
-		// (set) Token: 0x0602C3FA RID: 181242 RVA: 0x00A1B5AD File Offset: 0x00A197AD
+		// Token: 0x170042BB RID: 17083
+		// (get) Token: 0x0602120F RID: 135695 RVA: 0x00959E81 File Offset: 0x00958081
+		// (set) Token: 0x06021210 RID: 135696 RVA: 0x00959E95 File Offset: 0x00958095
 		public unsafe string CenterKey
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_1)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_CenterKey)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_1)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_CenterKey)), value);
 			}
 		}
 
-		// Token: 0x17006E55 RID: 28245
-		// (get) Token: 0x0602C3FB RID: 181243 RVA: 0x00A1B5C2 File Offset: 0x00A197C2
-		// (set) Token: 0x0602C3FC RID: 181244 RVA: 0x00A1B5D6 File Offset: 0x00A197D6
+		// Token: 0x170042BC RID: 17084
+		// (get) Token: 0x06021211 RID: 135697 RVA: 0x00959EAA File Offset: 0x009580AA
+		// (set) Token: 0x06021212 RID: 135698 RVA: 0x00959EBE File Offset: 0x009580BE
 		public unsafe string RotatorKey
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_2)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_RotatorKey)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_2)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_RotatorKey)), value);
 			}
 		}
 
-		// Token: 0x17006E56 RID: 28246
-		// (get) Token: 0x0602C3FD RID: 181245 RVA: 0x00A1B5EB File Offset: 0x00A197EB
-		// (set) Token: 0x0602C3FE RID: 181246 RVA: 0x00A1B5FB File Offset: 0x00A197FB
+		// Token: 0x170042BD RID: 17085
+		// (get) Token: 0x06021213 RID: 135699 RVA: 0x00959ED3 File Offset: 0x009580D3
+		// (set) Token: 0x06021214 RID: 135700 RVA: 0x00959EE3 File Offset: 0x009580E3
 		public unsafe float PositionOffsetScale
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_PositionOffsetScale);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_PositionOffsetScale) = value;
 			}
 		}
 
-		// Token: 0x17006E57 RID: 28247
-		// (get) Token: 0x0602C3FF RID: 181247 RVA: 0x00A1B60C File Offset: 0x00A1980C
-		// (set) Token: 0x0602C400 RID: 181248 RVA: 0x00A1B620 File Offset: 0x00A19820
+		// Token: 0x170042BE RID: 17086
+		// (get) Token: 0x06021215 RID: 135701 RVA: 0x00959EF4 File Offset: 0x009580F4
+		// (set) Token: 0x06021216 RID: 135702 RVA: 0x00959F08 File Offset: 0x00958108
 		public unsafe FRotator RotatorOffset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_RotatorOffset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_RotatorOffset) = value;
 			}
 		}
 
-		// Token: 0x17006E58 RID: 28248
-		// (get) Token: 0x0602C401 RID: 181249 RVA: 0x00A1B635 File Offset: 0x00A19835
-		// (set) Token: 0x0602C402 RID: 181250 RVA: 0x00A1B649 File Offset: 0x00A19849
+		// Token: 0x170042BF RID: 17087
+		// (get) Token: 0x06021217 RID: 135703 RVA: 0x00959F1D File Offset: 0x0095811D
+		// (set) Token: 0x06021218 RID: 135704 RVA: 0x00959F31 File Offset: 0x00958131
 		[Nullable(0)]
 		public unsafe TEnumAsByte<EBatchBulletBeginRotator> BeginRotator
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_BeginRotator);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SBatchBulletPositionPointMatrix.__PropertyOffset_BeginRotator) = value;
 			}
 		}
 
-		// Token: 0x0602C403 RID: 181251 RVA: 0x00A1B65E File Offset: 0x00A1985E
+		// Token: 0x06021219 RID: 135705 RVA: 0x00959F46 File Offset: 0x00958146
 		public SBatchBulletPositionPointMatrix()
 		{
 		}
 
-		// Token: 0x0602C404 RID: 181252 RVA: 0x00A1B666 File Offset: 0x00A19866
-		public SBatchBulletPositionPointMatrix(TArray<FVector> PositionOffset, string CenterKey, string RotatorKey, float PositionOffsetScale, FRotator RotatorOffset, [Nullable(0)] TEnumAsByte<EBatchBulletBeginRotator> BeginRotator)
-		{
-			this.PositionOffset = PositionOffset;
-			this.CenterKey = CenterKey;
-			this.RotatorKey = RotatorKey;
-			this.PositionOffsetScale = PositionOffsetScale;
-			this.RotatorOffset = RotatorOffset;
-			this.BeginRotator = BeginRotator;
-		}
-
-		// Token: 0x0602C405 RID: 181253 RVA: 0x00A1B69B File Offset: 0x00A1989B
+		// Token: 0x0602121A RID: 135706 RVA: 0x00959F4E File Offset: 0x0095814E
 		protected override IntPtr GetUStructPtr()
 		{
 			return SBatchBulletPositionPointMatrix.StaticStruct();
 		}
 
-		// Token: 0x0602C406 RID: 181254 RVA: 0x00A1B6A7 File Offset: 0x00A198A7
+		// Token: 0x0602121B RID: 135707 RVA: 0x00959F5A File Offset: 0x0095815A
 		[NullableContext(2)]
 		public SBatchBulletPositionPointMatrix(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C407 RID: 181255 RVA: 0x00A1B6B1 File Offset: 0x00A198B1
+		// Token: 0x0602121C RID: 135708 RVA: 0x00959F64 File Offset: 0x00958164
 		public SBatchBulletPositionPointMatrix(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C408 RID: 181256 RVA: 0x00A1B6BC File Offset: 0x00A198BC
+		// Token: 0x0602121D RID: 135709 RVA: 0x00959F6F File Offset: 0x0095816F
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SBatchBulletPositionPointMatrix(Pointer, false, true);
 		}
 
-		// Token: 0x0602C409 RID: 181257 RVA: 0x00A1B6C6 File Offset: 0x00A198C6
+		// Token: 0x0602121E RID: 135710 RVA: 0x00959F79 File Offset: 0x00958179
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SBatchBulletPositionPointMatrix(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401755E RID: 95582
+		// Token: 0x040121D2 RID: 74194
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SBatchBulletPositionPointMatrix.SBatchBulletPositionPointMatrix";
 
-		// Token: 0x0401755F RID: 95583
+		// Token: 0x040121D3 RID: 74195
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017560 RID: 95584
-		internal static int __PropertyOffset_0;
+		// Token: 0x040121D4 RID: 74196
+		internal static int __PropertyOffset_PositionOffset;
 
-		// Token: 0x04017561 RID: 95585
+		// Token: 0x040121D5 RID: 74197
 		[Nullable(2)]
 		private TArray<FVector> _PositionOffset;
 
-		// Token: 0x04017562 RID: 95586
-		internal static int __PropertyOffset_1;
+		// Token: 0x040121D6 RID: 74198
+		internal static int __PropertyOffset_CenterKey;
 
-		// Token: 0x04017563 RID: 95587
-		internal static int __PropertyOffset_2;
+		// Token: 0x040121D7 RID: 74199
+		internal static int __PropertyOffset_RotatorKey;
 
-		// Token: 0x04017564 RID: 95588
-		internal static int __PropertyOffset_3;
+		// Token: 0x040121D8 RID: 74200
+		internal static int __PropertyOffset_PositionOffsetScale;
 
-		// Token: 0x04017565 RID: 95589
-		internal static int __PropertyOffset_4;
+		// Token: 0x040121D9 RID: 74201
+		internal static int __PropertyOffset_RotatorOffset;
 
-		// Token: 0x04017566 RID: 95590
-		internal static int __PropertyOffset_5;
+		// Token: 0x040121DA RID: 74202
+		internal static int __PropertyOffset_BeginRotator;
 	}
 }

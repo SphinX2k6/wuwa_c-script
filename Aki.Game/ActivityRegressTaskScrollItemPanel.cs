@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.Map;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020014AF RID: 5295
+// Token: 0x02000963 RID: 2403
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivityRegressTaskScrollItemPanel : UiPanelBase
 {
-	// Token: 0x06009600 RID: 38400 RVA: 0x002059AC File Offset: 0x00203BAC
+	// Token: 0x06006995 RID: 27029 RVA: 0x0020E918 File Offset: 0x0020CB18
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class ActivityRegressTaskScrollItemPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06009601 RID: 38401 RVA: 0x00205AB8 File Offset: 0x00203CB8
+	// Token: 0x06006996 RID: 27030 RVA: 0x0020EA24 File Offset: 0x0020CC24
 	protected override void OnStart()
 	{
 		this.ItemGrid = new SmallItemGrid();
@@ -48,7 +48,7 @@ public class ActivityRegressTaskScrollItemPanel : UiPanelBase
 		this.ButtonItemB.SetFunction(new Action<int>(this.OnConfirmBtnClick));
 	}
 
-	// Token: 0x06009602 RID: 38402 RVA: 0x00205B90 File Offset: 0x00203D90
+	// Token: 0x06006997 RID: 27031 RVA: 0x0020EAFC File Offset: 0x0020CCFC
 	[NullableContext(1)]
 	public void RefreshByData(ActivityRegressTaskDynamicData data)
 	{
@@ -85,7 +85,7 @@ public class ActivityRegressTaskScrollItemPanel : UiPanelBase
 		base.GetItem(9).SetUIActive(taskRewardStateForShow == ERegressRewardState.Claim);
 	}
 
-	// Token: 0x06009603 RID: 38403 RVA: 0x00205CC0 File Offset: 0x00203EC0
+	// Token: 0x06006998 RID: 27032 RVA: 0x0020EC2C File Offset: 0x0020CE2C
 	private void SetupConstantTaskVisuals()
 	{
 		RegressQuest? config = this.Data.Config;
@@ -160,7 +160,7 @@ public class ActivityRegressTaskScrollItemPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009604 RID: 38404 RVA: 0x00205F5C File Offset: 0x0020415C
+	// Token: 0x06006999 RID: 27033 RVA: 0x0020EEC8 File Offset: 0x0020D0C8
 	private void SetupDailyTaskVisuals()
 	{
 		RegressQuest? config = this.Data.Config;
@@ -180,7 +180,7 @@ public class ActivityRegressTaskScrollItemPanel : UiPanelBase
 		base.GetText(8).SetText("", true);
 	}
 
-	// Token: 0x06009605 RID: 38405 RVA: 0x00206010 File Offset: 0x00204210
+	// Token: 0x0600699A RID: 27034 RVA: 0x0020EF7C File Offset: 0x0020D17C
 	private ERegressRewardState GetTaskRewardStateForShow()
 	{
 		RegressQuest? config = this.Data.Config;
@@ -208,7 +208,7 @@ public class ActivityRegressTaskScrollItemPanel : UiPanelBase
 		return eregressRewardState;
 	}
 
-	// Token: 0x06009606 RID: 38406 RVA: 0x002060C0 File Offset: 0x002042C0
+	// Token: 0x0600699B RID: 27035 RVA: 0x0020F02C File Offset: 0x0020D22C
 	private void OnConfirmBtnClick(int _)
 	{
 		RegressQuest? config = this.Data.Config;
@@ -228,62 +228,62 @@ public class ActivityRegressTaskScrollItemPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009607 RID: 38407 RVA: 0x0020615C File Offset: 0x0020435C
+	// Token: 0x0600699C RID: 27036 RVA: 0x0020F0C8 File Offset: 0x0020D2C8
 	[NullableContext(1)]
 	private void OnExtendToggleClicked(MediumItemGridExtendCallback _)
 	{
 		RegressQuest? config = this.Data.Config;
 		int id = ActivityRegressModel.Instance.GetRegressTaskRewardItemInfo(config.Value).ItemInfo.Value.Id;
-		ItemController.Instance.OpenItemTipsByItemId(id, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(id, true, null, false);
 	}
 
-	// Token: 0x04004246 RID: 16966
+	// Token: 0x040042DE RID: 17118
 	private SmallItemGrid ItemGrid;
 
-	// Token: 0x04004247 RID: 16967
+	// Token: 0x040042DF RID: 17119
 	private ActivityRegressTaskDynamicData Data;
 
-	// Token: 0x04004248 RID: 16968
+	// Token: 0x040042E0 RID: 17120
 	private ButtonItem ButtonItemE;
 
-	// Token: 0x04004249 RID: 16969
+	// Token: 0x040042E1 RID: 17121
 	private ButtonItem ButtonItemB;
 
-	// Token: 0x02007AE6 RID: 31462
+	// Token: 0x02006C6A RID: 27754
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040286D7 RID: 165591
+		// Token: 0x040239F1 RID: 145905
 		public const int StripBtn = 0;
 
-		// Token: 0x040286D8 RID: 165592
+		// Token: 0x040239F2 RID: 145906
 		public const int NameTxt = 1;
 
-		// Token: 0x040286D9 RID: 165593
+		// Token: 0x040239F3 RID: 145907
 		public const int LinePanel = 2;
 
-		// Token: 0x040286DA RID: 165594
+		// Token: 0x040239F4 RID: 145908
 		public const int NumTxt = 3;
 
-		// Token: 0x040286DB RID: 165595
+		// Token: 0x040239F5 RID: 145909
 		public const int ItemBaseB = 4;
 
-		// Token: 0x040286DC RID: 165596
+		// Token: 0x040239F6 RID: 145910
 		public const int DoneSpr = 5;
 
-		// Token: 0x040286DD RID: 165597
+		// Token: 0x040239F7 RID: 145911
 		public const int DoingTxt = 6;
 
-		// Token: 0x040286DE RID: 165598
+		// Token: 0x040239F8 RID: 145912
 		public const int BtnSecConfirm = 7;
 
-		// Token: 0x040286DF RID: 165599
+		// Token: 0x040239F9 RID: 145913
 		public const int RecommendTxt = 8;
 
-		// Token: 0x040286E0 RID: 165600
+		// Token: 0x040239FA RID: 145914
 		public const int SprDone = 9;
 
-		// Token: 0x040286E1 RID: 165601
+		// Token: 0x040239FB RID: 145915
 		public const int BtnSecConfirmB = 10;
 	}
 }

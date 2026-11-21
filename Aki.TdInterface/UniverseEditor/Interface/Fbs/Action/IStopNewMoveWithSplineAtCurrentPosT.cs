@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071DF RID: 29151
+	// Token: 0x020079B4 RID: 31156
 	public class IStopNewMoveWithSplineAtCurrentPosT
 	{
-		// Token: 0x1700D887 RID: 55431
-		// (get) Token: 0x06033B5C RID: 211804 RVA: 0x006F6632 File Offset: 0x006F4832
-		// (set) Token: 0x06033B5D RID: 211805 RVA: 0x006F663A File Offset: 0x006F483A
+		// Token: 0x1700E480 RID: 58496
+		// (get) Token: 0x06036E5E RID: 224862 RVA: 0x00757992 File Offset: 0x00755B92
+		// (set) Token: 0x06036E5F RID: 224863 RVA: 0x0075799A File Offset: 0x00755B9A
 		public EStopNewMoveWithSplineType Type { get; set; }
 
-		// Token: 0x06033B5E RID: 211806 RVA: 0x006F6643 File Offset: 0x006F4843
+		// Token: 0x06036E60 RID: 224864 RVA: 0x007579A3 File Offset: 0x00755BA3
 		public IStopNewMoveWithSplineAtCurrentPosT()
 		{
 			this.Type = EStopNewMoveWithSplineType.StopAtCurrentPos;

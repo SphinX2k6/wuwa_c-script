@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045D4 RID: 17876
+	// Token: 0x020034FD RID: 13565
 	public class PostProcessTriggerStateInside : PostProcessTriggerStateBase
 	{
-		// Token: 0x0602E13B RID: 188731 RVA: 0x00A9F2B2 File Offset: 0x00A9D4B2
+		// Token: 0x0602282F RID: 141359 RVA: 0x009CB982 File Offset: 0x009C9B82
 		[NullableContext(1)]
 		public PostProcessTriggerStateInside(PostProcessTrigger owner, EPostProcessTriggerState state, [Nullable(new byte[]
 		{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Render
 		{
 		}
 
-		// Token: 0x0602E13C RID: 188732 RVA: 0x00A9F2C0 File Offset: 0x00A9D4C0
+		// Token: 0x06022830 RID: 141360 RVA: 0x009CB990 File Offset: 0x009C9B90
 		protected override void OnEnter(EPostProcessTriggerState? lastState)
 		{
 			double targetDefaultValue = base.GetTargetDefaultValue();
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Render
 			this.Timer = 0.0;
 		}
 
-		// Token: 0x0602E13D RID: 188733 RVA: 0x00A9F304 File Offset: 0x00A9D504
+		// Token: 0x06022831 RID: 141361 RVA: 0x009CB9D4 File Offset: 0x009C9BD4
 		protected override void OnUpdate(float delta)
 		{
 			double targetDefaultValue = base.GetTargetDefaultValue();
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x04018B0E RID: 101134
+		// Token: 0x0401314C RID: 78156
 		private double LastInnerValue;
 
-		// Token: 0x04018B0F RID: 101135
+		// Token: 0x0401314D RID: 78157
 		private bool IsTickingState;
 
-		// Token: 0x04018B10 RID: 101136
+		// Token: 0x0401314E RID: 78158
 		private double Timer;
 	}
 }

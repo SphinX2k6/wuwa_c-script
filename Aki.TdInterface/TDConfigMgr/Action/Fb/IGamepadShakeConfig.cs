@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002917 RID: 10519
+	// Token: 0x02002BF3 RID: 11251
 	public class IGamepadShakeConfig
 	{
-		// Token: 0x0600E979 RID: 59769 RVA: 0x002239F7 File Offset: 0x00221BF7
-		[NullableContext(1)]
+		// Token: 0x0600F7CB RID: 63435 RVA: 0x00240D4F File Offset: 0x0023EF4F
 		public static IGamepadShakeConfig Create(IGamepadShakeConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700490D RID: 18701
-		// (get) Token: 0x0600E97A RID: 59770 RVA: 0x00223A16 File Offset: 0x00221C16
+		// Token: 0x17004C93 RID: 19603
+		// (get) Token: 0x0600F7CC RID: 63436 RVA: 0x00240D6E File Offset: 0x0023EF6E
 		public virtual EGamepadShakeType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080DD RID: 32989
+		// Token: 0x040087AB RID: 34731
 		private IGamepadShakeConfig Instance;
 	}
 }

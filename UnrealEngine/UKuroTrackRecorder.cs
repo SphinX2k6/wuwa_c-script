@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001675 RID: 5749
+	// Token: 0x02000303 RID: 771
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroAnim.KuroTrackRecorder")]
 	[UnrealStructLayout(304, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 304)]
 	public class UKuroTrackRecorder : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06014DBA RID: 85434 RVA: 0x001EAB3F File Offset: 0x001E8D3F
+		// Token: 0x060052F4 RID: 21236 RVA: 0x00073F6D File Offset: 0x0007216D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroTrackRecorder._ClassPtr;
 		}
 
-		// Token: 0x06014DBB RID: 85435 RVA: 0x001EAB4C File Offset: 0x001E8D4C
+		// Token: 0x060052F5 RID: 21237 RVA: 0x00073F7C File Offset: 0x0007217C
 		public UKuroTrackRecorder() : this(BuiltinUtils.AllocNativeUObject(UKuroTrackRecorder.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06014DBC RID: 85436 RVA: 0x001EAB74 File Offset: 0x001E8D74
+		// Token: 0x060052F6 RID: 21238 RVA: 0x00073FA4 File Offset: 0x000721A4
 		public UKuroTrackRecorder(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroTrackRecorder.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170052A0 RID: 21152
-		// (get) Token: 0x06014DBD RID: 85437 RVA: 0x001EABA7 File Offset: 0x001E8DA7
-		// (set) Token: 0x06014DBE RID: 85438 RVA: 0x001EABBB File Offset: 0x001E8DBB
+		// Token: 0x17001083 RID: 4227
+		// (get) Token: 0x060052F7 RID: 21239 RVA: 0x00073FD7 File Offset: 0x000721D7
+		// (set) Token: 0x060052F8 RID: 21240 RVA: 0x00073FEB File Offset: 0x000721EB
 		[Nullable(2)]
 		public unsafe AActor TargetActor
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170052A1 RID: 21153
-		// (get) Token: 0x06014DBF RID: 85439 RVA: 0x001EABD0 File Offset: 0x001E8DD0
-		// (set) Token: 0x06014DC0 RID: 85440 RVA: 0x001EAC09 File Offset: 0x001E8E09
+		// Token: 0x17001084 RID: 4228
+		// (get) Token: 0x060052F9 RID: 21241 RVA: 0x00074000 File Offset: 0x00072200
+		// (set) Token: 0x060052FA RID: 21242 RVA: 0x00074039 File Offset: 0x00072239
 		public TArray<UActorComponent> CachedComponents
 		{
 			get
@@ -68,54 +68,54 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014DC1 RID: 85441 RVA: 0x001EAC17 File Offset: 0x001E8E17
+		// Token: 0x060052FB RID: 21243 RVA: 0x00074047 File Offset: 0x00072247
 		[NullableContext(2)]
 		public AActor GetShadow()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(UKuroTrackRecorder.__GetShadow_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06014DC2 RID: 85442 RVA: 0x001EAC29 File Offset: 0x001E8E29
+		// Token: 0x060052FC RID: 21244 RVA: 0x00074059 File Offset: 0x00072259
 		public FGuid GetMainGuid()
 		{
 			return UKuroTrackRecorder.__GetMainGuid_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06014DC3 RID: 85443
+		// Token: 0x060052FD RID: 21245
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetShadow_Internal(IntPtr @this);
 
-		// Token: 0x06014DC4 RID: 85444
+		// Token: 0x060052FE RID: 21246
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FGuid __GetMainGuid_Internal(IntPtr @this);
 
-		// Token: 0x06014DC5 RID: 85445 RVA: 0x001EAC36 File Offset: 0x001E8E36
+		// Token: 0x060052FF RID: 21247 RVA: 0x00074066 File Offset: 0x00072266
 		static UKuroTrackRecorder()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroAnim.KuroTrackRecorder");
 		}
 
-		// Token: 0x06014DC6 RID: 85446 RVA: 0x001EAC44 File Offset: 0x001E8E44
+		// Token: 0x06005300 RID: 21248 RVA: 0x00074074 File Offset: 0x00072274
 		protected UKuroTrackRecorder(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400B5E1 RID: 46561
+		// Token: 0x040021D5 RID: 8661
 		public new const string __ObjectPath = "/Script/KuroAnim.KuroTrackRecorder";
 
-		// Token: 0x0400B5E2 RID: 46562
+		// Token: 0x040021D6 RID: 8662
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400B5E3 RID: 46563
+		// Token: 0x040021D7 RID: 8663
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400B5E4 RID: 46564
+		// Token: 0x040021D8 RID: 8664
 		internal static int __PropertyOffset_TargetActor;
 
-		// Token: 0x0400B5E5 RID: 46565
+		// Token: 0x040021D9 RID: 8665
 		internal static int __PropertyOffset_CachedComponents;
 
-		// Token: 0x0400B5E6 RID: 46566
+		// Token: 0x040021DA RID: 8666
 		[Nullable(new byte[]
 		{
 			2,

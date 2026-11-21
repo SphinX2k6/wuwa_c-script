@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x02002034 RID: 8244
+// Token: 0x02001507 RID: 5383
 public class KingShipAttributeItemData : IKingShipAttributeItemData
 {
-	// Token: 0x170013BE RID: 5054
-	// (get) Token: 0x060102E0 RID: 66272 RVA: 0x003F09EB File Offset: 0x003EEBEB
-	// (set) Token: 0x060102E1 RID: 66273 RVA: 0x003F09F3 File Offset: 0x003EEBF3
+	// Token: 0x170013EB RID: 5099
+	// (get) Token: 0x0600D748 RID: 55112 RVA: 0x003FCFE3 File Offset: 0x003FB1E3
+	// (set) Token: 0x0600D749 RID: 55113 RVA: 0x003FCFEB File Offset: 0x003FB1EB
 	public int AttributeId { get; set; }
 
-	// Token: 0x170013BF RID: 5055
-	// (get) Token: 0x060102E2 RID: 66274 RVA: 0x003F09FC File Offset: 0x003EEBFC
-	// (set) Token: 0x060102E3 RID: 66275 RVA: 0x003F0A04 File Offset: 0x003EEC04
+	// Token: 0x170013EC RID: 5100
+	// (get) Token: 0x0600D74A RID: 55114 RVA: 0x003FCFF4 File Offset: 0x003FB1F4
+	// (set) Token: 0x0600D74B RID: 55115 RVA: 0x003FCFFC File Offset: 0x003FB1FC
 	public int MaxCount { get; set; }
 
-	// Token: 0x170013C0 RID: 5056
-	// (get) Token: 0x060102E4 RID: 66276 RVA: 0x003F0A0D File Offset: 0x003EEC0D
-	// (set) Token: 0x060102E5 RID: 66277 RVA: 0x003F0A15 File Offset: 0x003EEC15
+	// Token: 0x170013ED RID: 5101
+	// (get) Token: 0x0600D74C RID: 55116 RVA: 0x003FD005 File Offset: 0x003FB205
+	// (set) Token: 0x0600D74D RID: 55117 RVA: 0x003FD00D File Offset: 0x003FB20D
 	public int MinCount { get; set; }
 
-	// Token: 0x170013C1 RID: 5057
-	// (get) Token: 0x060102E6 RID: 66278 RVA: 0x003F0A1E File Offset: 0x003EEC1E
-	// (set) Token: 0x060102E7 RID: 66279 RVA: 0x003F0A26 File Offset: 0x003EEC26
+	// Token: 0x170013EE RID: 5102
+	// (get) Token: 0x0600D74E RID: 55118 RVA: 0x003FD016 File Offset: 0x003FB216
+	// (set) Token: 0x0600D74F RID: 55119 RVA: 0x003FD01E File Offset: 0x003FB21E
 	public int Current { get; set; }
 
-	// Token: 0x170013C2 RID: 5058
-	// (get) Token: 0x060102E8 RID: 66280 RVA: 0x003F0A2F File Offset: 0x003EEC2F
-	// (set) Token: 0x060102E9 RID: 66281 RVA: 0x003F0A37 File Offset: 0x003EEC37
+	// Token: 0x170013EF RID: 5103
+	// (get) Token: 0x0600D750 RID: 55120 RVA: 0x003FD027 File Offset: 0x003FB227
+	// (set) Token: 0x0600D751 RID: 55121 RVA: 0x003FD02F File Offset: 0x003FB22F
 	public bool IsDefaultEnable { get; set; }
 }

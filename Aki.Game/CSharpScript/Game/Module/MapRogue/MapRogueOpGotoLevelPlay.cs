@@ -6,17 +6,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055B5 RID: 21941
+	// Token: 0x0200458B RID: 17803
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueOpGotoLevelPlay : MapRogueOp
 	{
-		// Token: 0x170086C5 RID: 34501
-		// (get) Token: 0x06037EFD RID: 229117 RVA: 0x00D409C6 File Offset: 0x00D3EBC6
-		// (set) Token: 0x06037EFE RID: 229118 RVA: 0x00D409CE File Offset: 0x00D3EBCE
+		// Token: 0x17005A8C RID: 23180
+		// (get) Token: 0x0602CDFB RID: 183803 RVA: 0x00C8E70E File Offset: 0x00C8C90E
+		// (set) Token: 0x0602CDFC RID: 183804 RVA: 0x00C8E716 File Offset: 0x00C8C916
 		public override int StepSize { get; set; } = 1;
 
-		// Token: 0x06037F00 RID: 229120 RVA: 0x00D409F0 File Offset: 0x00D3EBF0
+		// Token: 0x0602CDFE RID: 183806 RVA: 0x00C8E738 File Offset: 0x00C8C938
 		public override string ToString()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(24, 2);
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06037F01 RID: 229121 RVA: 0x00D40A40 File Offset: 0x00D3EC40
+		// Token: 0x0602CDFF RID: 183807 RVA: 0x00C8E788 File Offset: 0x00C8C988
 		protected override void OnStartExecute(MapRogueGameInfo gameInfo)
 		{
 			if (this.Data.RogueGotoLevelPlayOp.CanSkipBattle && gameInfo.IsSkipBattle)
@@ -44,18 +44,18 @@ namespace CSharpScript.Game.Module.MapRogue
 			base.Execute(gameInfo, null);
 		}
 
-		// Token: 0x06037F02 RID: 229122 RVA: 0x00D40AAC File Offset: 0x00D3ECAC
+		// Token: 0x0602CE00 RID: 183808 RVA: 0x00C8E7F4 File Offset: 0x00C8C9F4
 		protected override void OnExecute(MapRogueGameInfo gameInfo)
 		{
 			this.OnRogueSubLevelNotify(this.Data.RogueGotoLevelPlayOp.RogueResSubLevelData, gameInfo);
 		}
 
-		// Token: 0x06037F03 RID: 229123 RVA: 0x00D40AC5 File Offset: 0x00D3ECC5
+		// Token: 0x0602CE01 RID: 183809 RVA: 0x00C8E80D File Offset: 0x00C8CA0D
 		protected override void OnFinish(MapRogueGameInfo gameInfo)
 		{
 		}
 
-		// Token: 0x06037F04 RID: 229124 RVA: 0x00D40AC8 File Offset: 0x00D3ECC8
+		// Token: 0x0602CE02 RID: 183810 RVA: 0x00C8E810 File Offset: 0x00C8CA10
 		private void OnRogueSubLevelNotify(RogueResSubLevelData notify, MapRogueGameInfo gameInfo)
 		{
 			MapRogueOpGotoLevelPlay.<>c__DisplayClass10_0 CS$<>8__locals1 = new MapRogueOpGotoLevelPlay.<>c__DisplayClass10_0();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			TaskSystem.Instance.Run();
 		}
 
-		// Token: 0x0401D61C RID: 120348
+		// Token: 0x040180A7 RID: 98471
 		public int SelectIndex = -1;
 	}
 }

@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Flow
 {
-	// Token: 0x02007255 RID: 29269
+	// Token: 0x020063D4 RID: 25556
 	public class FlowBoolOptionConfig
 	{
-		// Token: 0x04025B87 RID: 154503
+		// Token: 0x04020E45 RID: 134725
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<string, string> Config = new Dictionary<string, string>

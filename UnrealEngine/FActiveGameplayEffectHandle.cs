@@ -5,21 +5,21 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200131F RID: 4895
+	// Token: 0x020002BD RID: 701
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Script/GameplayAbilities.ActiveGameplayEffectHandle")]
 	[UnrealStructLayout(8, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 8)]
 	public class FActiveGameplayEffectHandle : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06012092 RID: 73874 RVA: 0x001A7B7C File Offset: 0x001A5D7C
+		// Token: 0x06004CED RID: 19693 RVA: 0x0006BAA7 File Offset: 0x00069CA7
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FActiveGameplayEffectHandle._ScriptStructPtr != 0) ? FActiveGameplayEffectHandle._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/GameplayAbilities.ActiveGameplayEffectHandle", ref FActiveGameplayEffectHandle._ScriptStructPtr);
 		}
 
-		// Token: 0x17004658 RID: 18008
-		// (get) Token: 0x06012093 RID: 73875 RVA: 0x001A7BA0 File Offset: 0x001A5DA0
-		// (set) Token: 0x06012094 RID: 73876 RVA: 0x001A7BB0 File Offset: 0x001A5DB0
+		// Token: 0x17000EC4 RID: 3780
+		// (get) Token: 0x06004CEE RID: 19694 RVA: 0x0006BACB File Offset: 0x00069CCB
+		// (set) Token: 0x06004CEF RID: 19695 RVA: 0x0006BADB File Offset: 0x00069CDB
 		public unsafe int Handle
 		{
 			get
@@ -32,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004659 RID: 18009
-		// (get) Token: 0x06012095 RID: 73877 RVA: 0x001A7BC1 File Offset: 0x001A5DC1
-		// (set) Token: 0x06012096 RID: 73878 RVA: 0x001A7BD1 File Offset: 0x001A5DD1
+		// Token: 0x17000EC5 RID: 3781
+		// (get) Token: 0x06004CF0 RID: 19696 RVA: 0x0006BAEC File Offset: 0x00069CEC
+		// (set) Token: 0x06004CF1 RID: 19697 RVA: 0x0006BAFC File Offset: 0x00069CFC
 		public unsafe bool bPassedFiltersAndWasExecuted
 		{
 			get
@@ -47,60 +47,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06012097 RID: 73879 RVA: 0x001A7BE2 File Offset: 0x001A5DE2
+		// Token: 0x06004CF2 RID: 19698 RVA: 0x0006BB0D File Offset: 0x00069D0D
 		public FActiveGameplayEffectHandle()
 		{
 		}
 
-		// Token: 0x06012098 RID: 73880 RVA: 0x001A7BEA File Offset: 0x001A5DEA
-		public FActiveGameplayEffectHandle(int Handle, bool bPassedFiltersAndWasExecuted)
-		{
-			this.Handle = Handle;
-			this.bPassedFiltersAndWasExecuted = bPassedFiltersAndWasExecuted;
-		}
-
-		// Token: 0x06012099 RID: 73881 RVA: 0x001A7C00 File Offset: 0x001A5E00
+		// Token: 0x06004CF3 RID: 19699 RVA: 0x0006BB15 File Offset: 0x00069D15
 		protected override IntPtr GetUStructPtr()
 		{
 			return FActiveGameplayEffectHandle.StaticStruct();
 		}
 
-		// Token: 0x0601209A RID: 73882 RVA: 0x001A7C0C File Offset: 0x001A5E0C
+		// Token: 0x06004CF4 RID: 19700 RVA: 0x0006BB21 File Offset: 0x00069D21
 		[NullableContext(2)]
 		public FActiveGameplayEffectHandle(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601209B RID: 73883 RVA: 0x001A7C16 File Offset: 0x001A5E16
+		// Token: 0x06004CF5 RID: 19701 RVA: 0x0006BB2B File Offset: 0x00069D2B
 		public FActiveGameplayEffectHandle(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601209C RID: 73884 RVA: 0x001A7C21 File Offset: 0x001A5E21
+		// Token: 0x06004CF6 RID: 19702 RVA: 0x0006BB36 File Offset: 0x00069D36
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FActiveGameplayEffectHandle(Pointer, false, true);
 		}
 
-		// Token: 0x0601209D RID: 73885 RVA: 0x001A7C2B File Offset: 0x001A5E2B
+		// Token: 0x06004CF7 RID: 19703 RVA: 0x0006BB40 File Offset: 0x00069D40
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FActiveGameplayEffectHandle(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04009A26 RID: 39462
+		// Token: 0x04001EAE RID: 7854
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/GameplayAbilities.ActiveGameplayEffectHandle";
 
-		// Token: 0x04009A27 RID: 39463
+		// Token: 0x04001EAF RID: 7855
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04009A28 RID: 39464
+		// Token: 0x04001EB0 RID: 7856
 		internal static int __PropertyOffset_Handle;
 
-		// Token: 0x04009A29 RID: 39465
+		// Token: 0x04001EB1 RID: 7857
 		internal static int __PropertyOffset_bPassedFiltersAndWasExecuted;
 	}
 }

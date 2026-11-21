@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.DiffPatch.Data
 {
-	// Token: 0x02000237 RID: 567
+	// Token: 0x0200023C RID: 572
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TsPatchApi
 	{
-		// Token: 0x06000E61 RID: 3681 RVA: 0x0005583C File Offset: 0x00053A3C
+		// Token: 0x06000EA2 RID: 3746 RVA: 0x00058344 File Offset: 0x00056544
 		public TsPatchApi()
 		{
 			this.Patcher = new UKuroBinPatch();
 		}
 
-		// Token: 0x06000E62 RID: 3682 RVA: 0x00055850 File Offset: 0x00053A50
+		// Token: 0x06000EA3 RID: 3747 RVA: 0x00058358 File Offset: 0x00056558
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -40,7 +40,7 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return <Patch>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04000924 RID: 2340
+		// Token: 0x04000966 RID: 2406
 		private readonly UKuroBinPatch Patcher;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A33 RID: 18995
+	// Token: 0x02004EF6 RID: 20214
 	public struct ICheckGameplayTagCondition : IFlatbufferObject
 	{
-		// Token: 0x17008980 RID: 35200
-		// (get) Token: 0x0601DBAA RID: 121770 RVA: 0x0042E5E8 File Offset: 0x0042C7E8
+		// Token: 0x17009055 RID: 36949
+		// (get) Token: 0x0601F633 RID: 128563 RVA: 0x0045F4E0 File Offset: 0x0045D6E0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DBAB RID: 121771 RVA: 0x0042E5F5 File Offset: 0x0042C7F5
+		// Token: 0x0601F634 RID: 128564 RVA: 0x0045F4ED File Offset: 0x0045D6ED
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DBAC RID: 121772 RVA: 0x0042E5FC File Offset: 0x0042C7FC
+		// Token: 0x0601F635 RID: 128565 RVA: 0x0045F4F4 File Offset: 0x0045D6F4
 		public static ICheckGameplayTagCondition GetRootAsICheckGameplayTagCondition(ByteBuffer _bb)
 		{
 			return ICheckGameplayTagCondition.GetRootAsICheckGameplayTagCondition(_bb, default(ICheckGameplayTagCondition));
 		}
 
-		// Token: 0x0601DBAD RID: 121773 RVA: 0x0042E618 File Offset: 0x0042C818
+		// Token: 0x0601F636 RID: 128566 RVA: 0x0045F510 File Offset: 0x0045D710
 		public static ICheckGameplayTagCondition GetRootAsICheckGameplayTagCondition(ByteBuffer _bb, ICheckGameplayTagCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DBAE RID: 121774 RVA: 0x0042E635 File Offset: 0x0042C835
+		// Token: 0x0601F637 RID: 128567 RVA: 0x0045F52D File Offset: 0x0045D72D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DBAF RID: 121775 RVA: 0x0042E644 File Offset: 0x0042C844
+		// Token: 0x0601F638 RID: 128568 RVA: 0x0045F53C File Offset: 0x0045D73C
 		public ICheckGameplayTagCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008981 RID: 35201
-		// (get) Token: 0x0601DBB0 RID: 121776 RVA: 0x0042E654 File Offset: 0x0042C854
+		// Token: 0x17009056 RID: 36950
+		// (get) Token: 0x0601F639 RID: 128569 RVA: 0x0045F54C File Offset: 0x0045D74C
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008982 RID: 35202
-		// (get) Token: 0x0601DBB1 RID: 121777 RVA: 0x0042E690 File Offset: 0x0042C890
+		// Token: 0x17009057 RID: 36951
+		// (get) Token: 0x0601F63A RID: 128570 RVA: 0x0045F588 File Offset: 0x0045D788
 		public TTargetEntity TargetType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DBB2 RID: 121778 RVA: 0x0042E6CC File Offset: 0x0042C8CC
+		// Token: 0x0601F63B RID: 128571 RVA: 0x0045F5C4 File Offset: 0x0045D7C4
 		public TTable? Target<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,32 +88,32 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601DBB3 RID: 121779 RVA: 0x0042E710 File Offset: 0x0042C910
+		// Token: 0x0601F63C RID: 128572 RVA: 0x0045F608 File Offset: 0x0045D808
 		public IPlayerEntity TargetAsIPlayerEntity()
 		{
 			return this.Target<IPlayerEntity>().Value;
 		}
 
-		// Token: 0x0601DBB4 RID: 121780 RVA: 0x0042E72C File Offset: 0x0042C92C
+		// Token: 0x0601F63D RID: 128573 RVA: 0x0045F624 File Offset: 0x0045D824
 		public ISelfEntity TargetAsISelfEntity()
 		{
 			return this.Target<ISelfEntity>().Value;
 		}
 
-		// Token: 0x0601DBB5 RID: 121781 RVA: 0x0042E748 File Offset: 0x0042C948
+		// Token: 0x0601F63E RID: 128574 RVA: 0x0045F640 File Offset: 0x0045D840
 		public ITargetEntity TargetAsITargetEntity()
 		{
 			return this.Target<ITargetEntity>().Value;
 		}
 
-		// Token: 0x0601DBB6 RID: 121782 RVA: 0x0042E764 File Offset: 0x0042C964
+		// Token: 0x0601F63F RID: 128575 RVA: 0x0045F65C File Offset: 0x0045D85C
 		public ITriggeredEntity TargetAsITriggeredEntity()
 		{
 			return this.Target<ITriggeredEntity>().Value;
 		}
 
-		// Token: 0x17008983 RID: 35203
-		// (get) Token: 0x0601DBB7 RID: 121783 RVA: 0x0042E780 File Offset: 0x0042C980
+		// Token: 0x17009058 RID: 36952
+		// (get) Token: 0x0601F640 RID: 128576 RVA: 0x0045F678 File Offset: 0x0045D878
 		public string GameplayTag
 		{
 			get
@@ -127,20 +127,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DBB8 RID: 121784 RVA: 0x0042E7B8 File Offset: 0x0042C9B8
+		// Token: 0x0601F641 RID: 128577 RVA: 0x0045F6B0 File Offset: 0x0045D8B0
 		public Span<byte> GetGameplayTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0601DBB9 RID: 121785 RVA: 0x0042E7C8 File Offset: 0x0042C9C8
+		// Token: 0x0601F642 RID: 128578 RVA: 0x0045F6C0 File Offset: 0x0045D8C0
 		public byte[] GetGameplayTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x17008984 RID: 35204
-		// (get) Token: 0x0601DBBA RID: 121786 RVA: 0x0042E7D8 File Offset: 0x0042C9D8
+		// Token: 0x17009059 RID: 36953
+		// (get) Token: 0x0601F643 RID: 128579 RVA: 0x0045F6D0 File Offset: 0x0045D8D0
 		public ECompare Compare
 		{
 			get
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DBBB RID: 121787 RVA: 0x0042E815 File Offset: 0x0042CA15
+		// Token: 0x0601F644 RID: 128580 RVA: 0x0045F70D File Offset: 0x0045D90D
 		public static Offset<ICheckGameplayTagCondition> CreateICheckGameplayTagCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, TTargetEntity Target_type = TTargetEntity.NONE, int TargetOffset = 0, StringOffset GameplayTagOffset = default(StringOffset), ECompare Compare = ECompare.Eq)
 		{
 			builder.StartTable(5);
@@ -166,49 +166,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckGameplayTagCondition.EndICheckGameplayTagCondition(builder);
 		}
 
-		// Token: 0x0601DBBC RID: 121788 RVA: 0x0042E849 File Offset: 0x0042CA49
+		// Token: 0x0601F645 RID: 128581 RVA: 0x0045F741 File Offset: 0x0045D941
 		public static void StartICheckGameplayTagCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601DBBD RID: 121789 RVA: 0x0042E852 File Offset: 0x0042CA52
+		// Token: 0x0601F646 RID: 128582 RVA: 0x0045F74A File Offset: 0x0045D94A
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DBBE RID: 121790 RVA: 0x0042E85D File Offset: 0x0042CA5D
+		// Token: 0x0601F647 RID: 128583 RVA: 0x0045F755 File Offset: 0x0045D955
 		public static void AddTargetType(FlatBufferBuilder builder, TTargetEntity targetType)
 		{
 			builder.AddByte(1, (byte)targetType, 0);
 		}
 
-		// Token: 0x0601DBBF RID: 121791 RVA: 0x0042E868 File Offset: 0x0042CA68
+		// Token: 0x0601F648 RID: 128584 RVA: 0x0045F760 File Offset: 0x0045D960
 		public static void AddTarget(FlatBufferBuilder builder, int targetOffset)
 		{
 			builder.AddOffset(2, targetOffset, 0);
 		}
 
-		// Token: 0x0601DBC0 RID: 121792 RVA: 0x0042E873 File Offset: 0x0042CA73
+		// Token: 0x0601F649 RID: 128585 RVA: 0x0045F76B File Offset: 0x0045D96B
 		public static void AddGameplayTag(FlatBufferBuilder builder, StringOffset gameplayTagOffset)
 		{
 			builder.AddOffset(3, gameplayTagOffset.Value, 0);
 		}
 
-		// Token: 0x0601DBC1 RID: 121793 RVA: 0x0042E883 File Offset: 0x0042CA83
+		// Token: 0x0601F64A RID: 128586 RVA: 0x0045F77B File Offset: 0x0045D97B
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(4, (byte)compare, 0);
 		}
 
-		// Token: 0x0601DBC2 RID: 121794 RVA: 0x0042E88E File Offset: 0x0042CA8E
+		// Token: 0x0601F64B RID: 128587 RVA: 0x0045F786 File Offset: 0x0045D986
 		public static Offset<ICheckGameplayTagCondition> EndICheckGameplayTagCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckGameplayTagCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601DBC3 RID: 121795 RVA: 0x0042E89C File Offset: 0x0042CA9C
+		// Token: 0x0601F64C RID: 128588 RVA: 0x0045F794 File Offset: 0x0045D994
 		public ICheckGameplayTagConditionT UnPack()
 		{
 			ICheckGameplayTagConditionT checkGameplayTagConditionT = new ICheckGameplayTagConditionT();
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkGameplayTagConditionT;
 		}
 
-		// Token: 0x0601DBC4 RID: 121796 RVA: 0x0042E8B8 File Offset: 0x0042CAB8
+		// Token: 0x0601F64D RID: 128589 RVA: 0x0045F7B0 File Offset: 0x0045D9B0
 		public void UnPackTo(ICheckGameplayTagConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -241,7 +241,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.Compare = this.Compare;
 		}
 
-		// Token: 0x0601DBC5 RID: 121797 RVA: 0x0042EA0C File Offset: 0x0042CC0C
+		// Token: 0x0601F64E RID: 128590 RVA: 0x0045F904 File Offset: 0x0045DB04
 		public static Offset<ICheckGameplayTagCondition> Pack(FlatBufferBuilder builder, ICheckGameplayTagConditionT _o)
 		{
 			if (_o == null)
@@ -254,7 +254,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckGameplayTagCondition.CreateICheckGameplayTagCondition(builder, _o.Type, target_type, targetOffset, gameplayTagOffset, _o.Compare);
 		}
 
-		// Token: 0x0400D286 RID: 53894
+		// Token: 0x0400DD5D RID: 56669
 		private Table __p;
 	}
 }

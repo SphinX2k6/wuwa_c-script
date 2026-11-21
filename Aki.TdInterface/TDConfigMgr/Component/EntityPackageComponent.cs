@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000101 RID: 257
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200010A RID: 266
 	public class EntityPackageComponent : IComponentBase
 	{
-		// Token: 0x06000420 RID: 1056 RVA: 0x0001D5DC File Offset: 0x0001B7DC
+		// Token: 0x06000424 RID: 1060 RVA: 0x0001DF50 File Offset: 0x0001C150
 		private EntityPackageComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000421 RID: 1057 RVA: 0x0001D614 File Offset: 0x0001B814
+		// Token: 0x06000425 RID: 1061 RVA: 0x0001DF88 File Offset: 0x0001C188
 		public static EntityPackageComponent Create([Nullable(2)] EntityPackageComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000422 RID: 1058 RVA: 0x0001D627 File Offset: 0x0001B827
+		// Token: 0x06000426 RID: 1062 RVA: 0x0001DF9B File Offset: 0x0001C19B
 		public static EntityPackageComponent CreateFromSetValue([Nullable(2)] EntityPackageComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000423 RID: 1059 RVA: 0x0001D63A File Offset: 0x0001B83A
+		// Token: 0x06000427 RID: 1063 RVA: 0x0001DFAE File Offset: 0x0001C1AE
 		public new EntityPackageComponent_SetValue ToSetValue()
 		{
 			return new EntityPackageComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700015F RID: 351
-		// (get) Token: 0x06000424 RID: 1060 RVA: 0x0001D674 File Offset: 0x0001B874
-		// (set) Token: 0x06000425 RID: 1061 RVA: 0x0001D6AE File Offset: 0x0001B8AE
+		// Token: 0x17000161 RID: 353
+		// (get) Token: 0x06000428 RID: 1064 RVA: 0x0001DFE8 File Offset: 0x0001C1E8
+		// (set) Token: 0x06000429 RID: 1065 RVA: 0x0001E022 File Offset: 0x0001C222
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000160 RID: 352
-		// (get) Token: 0x06000426 RID: 1062 RVA: 0x0001D6BC File Offset: 0x0001B8BC
-		// (set) Token: 0x06000427 RID: 1063 RVA: 0x0001D6E6 File Offset: 0x0001B8E6
+		// Token: 0x17000162 RID: 354
+		// (get) Token: 0x0600042A RID: 1066 RVA: 0x0001E030 File Offset: 0x0001C230
+		// (set) Token: 0x0600042B RID: 1067 RVA: 0x0001E05A File Offset: 0x0001C25A
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000161 RID: 353
-		// (get) Token: 0x06000428 RID: 1064 RVA: 0x0001D6F4 File Offset: 0x0001B8F4
-		// (set) Token: 0x06000429 RID: 1065 RVA: 0x0001D71F File Offset: 0x0001B91F
+		// Token: 0x17000163 RID: 355
+		// (get) Token: 0x0600042C RID: 1068 RVA: 0x0001E068 File Offset: 0x0001C268
+		// (set) Token: 0x0600042D RID: 1069 RVA: 0x0001E093 File Offset: 0x0001C293
 		public virtual bool BindTemplate
 		{
 			get
@@ -124,9 +122,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000162 RID: 354
-		// (get) Token: 0x0600042A RID: 1066 RVA: 0x0001D730 File Offset: 0x0001B930
-		// (set) Token: 0x0600042B RID: 1067 RVA: 0x0001D791 File Offset: 0x0001B991
+		// Token: 0x17000164 RID: 356
+		// (get) Token: 0x0600042E RID: 1070 RVA: 0x0001E0A4 File Offset: 0x0001C2A4
+		// (set) Token: 0x0600042F RID: 1071 RVA: 0x0001E105 File Offset: 0x0001C305
 		[Nullable(2)]
 		public virtual IEntityPackageData PackageData
 		{
@@ -157,18 +155,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000559 RID: 1369
+		// Token: 0x04000583 RID: 1411
 		[Nullable(2)]
 		protected new EntityPackageComponent FbInstance;
 
-		// Token: 0x0400055A RID: 1370
+		// Token: 0x04000584 RID: 1412
 		[Nullable(2)]
 		protected new EntityPackageComponent_SetValue PocoInterface;
 
-		// Token: 0x0400055B RID: 1371
+		// Token: 0x04000585 RID: 1413
 		private IEntityPackageData _PackageDataCache;
 
-		// Token: 0x0400055C RID: 1372
+		// Token: 0x04000586 RID: 1414
 		private bool _PackageDataInited;
 	}
 }

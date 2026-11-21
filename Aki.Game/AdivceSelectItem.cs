@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016C7 RID: 5831
+// Token: 0x02000B7F RID: 2943
 [NullableContext(1)]
 [Nullable(0)]
 public class AdivceSelectItem : UiPanelBase
 {
-	// Token: 0x0600A6AF RID: 42671 RVA: 0x00255368 File Offset: 0x00253568
+	// Token: 0x06007A8F RID: 31375 RVA: 0x0025F778 File Offset: 0x0025D978
 	public AdivceSelectItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600A6B0 RID: 42672 RVA: 0x00255394 File Offset: 0x00253594
+	// Token: 0x06007A90 RID: 31376 RVA: 0x0025F7A4 File Offset: 0x0025D9A4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class AdivceSelectItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A6B1 RID: 42673 RVA: 0x00255404 File Offset: 0x00253604
+	// Token: 0x06007A91 RID: 31377 RVA: 0x0025F814 File Offset: 0x0025DA14
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(2);
@@ -43,7 +43,7 @@ public class AdivceSelectItem : UiPanelBase
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x0600A6B2 RID: 42674 RVA: 0x0025542C File Offset: 0x0025362C
+	// Token: 0x06007A92 RID: 31378 RVA: 0x0025F83C File Offset: 0x0025DA3C
 	public void RefreshView(AdviceSelectItemData[] dataList)
 	{
 		this.ResetView();
@@ -66,7 +66,7 @@ public class AdivceSelectItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A6B3 RID: 42675 RVA: 0x002554BC File Offset: 0x002536BC
+	// Token: 0x06007A93 RID: 31379 RVA: 0x0025F8CC File Offset: 0x0025DACC
 	private void ResetView()
 	{
 		foreach (AdviceSelectBtnContentItem adviceSelectBtnContentItem in this.AdviceSelectBtnContentItem)
@@ -81,7 +81,7 @@ public class AdivceSelectItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A6B4 RID: 42676 RVA: 0x0025557C File Offset: 0x0025377C
+	// Token: 0x06007A94 RID: 31380 RVA: 0x0025F98C File Offset: 0x0025DB8C
 	private AdviceSelectBtnContentItem GetAdviceSelectBtnItem(int index)
 	{
 		if (this.AdviceSelectBtnContentItem.Count > index)
@@ -96,7 +96,7 @@ public class AdivceSelectItem : UiPanelBase
 		return adviceSelectBtnContentItem;
 	}
 
-	// Token: 0x0600A6B5 RID: 42677 RVA: 0x002555E8 File Offset: 0x002537E8
+	// Token: 0x06007A95 RID: 31381 RVA: 0x0025F9F8 File Offset: 0x0025DBF8
 	private AdviceSelectLineContentItem GetLineItem(int index)
 	{
 		if (this.AdviceSelectLineContentItem.Count > index)
@@ -111,47 +111,47 @@ public class AdivceSelectItem : UiPanelBase
 		return adviceSelectLineContentItem;
 	}
 
-	// Token: 0x04004B55 RID: 19285
+	// Token: 0x04004BFC RID: 19452
 	public const string SPRITEONE = "/Game/Aki/UI/UIResources/UiAdvice/Atlas/SP_AdviceBtnOne.SP_AdviceBtnOne";
 
-	// Token: 0x04004B56 RID: 19286
+	// Token: 0x04004BFD RID: 19453
 	public const string SPRITETWO = "/Game/Aki/UI/UIResources/UiAdvice/Atlas/SP_AdviceBtnTwo.SP_AdviceBtnTwo";
 
-	// Token: 0x04004B57 RID: 19287
+	// Token: 0x04004BFE RID: 19454
 	public const string SPRITETHREE = "/Game/Aki/UI/UIResources/UiAdvice/Atlas/SP_AdviceBtnThree.SP_AdviceBtnThree";
 
-	// Token: 0x04004B58 RID: 19288
+	// Token: 0x04004BFF RID: 19455
 	public const string SPRITEEXPRESSION = "/Game/Aki/UI/UIResources/UiAdvice/Atlas/SP_AdviceBtnbiaoqing.SP_AdviceBtnbiaoqing";
 
-	// Token: 0x04004B59 RID: 19289
+	// Token: 0x04004C00 RID: 19456
 	public const string SPRITECHANGE = "/Game/Aki/UI/UIResources/UiAdvice/Atlas/SP_AdviceBtnHuan.SP_AdviceBtnHuan";
 
-	// Token: 0x04004B5A RID: 19290
+	// Token: 0x04004C01 RID: 19457
 	public const string SPRITEADD = "/Game/Aki/UI/UIResources/UiAdvice/Atlas/SP_AdviceBtnJia.SP_AdviceBtnJia";
 
-	// Token: 0x04004B5B RID: 19291
+	// Token: 0x04004C02 RID: 19458
 	public const string SPRITEDECREASE = "/Game/Aki/UI/UIResources/UiAdvice/Atlas/SP_AdviceBtnJian.SP_AdviceBtnJian";
 
-	// Token: 0x04004B5C RID: 19292
+	// Token: 0x04004C03 RID: 19459
 	private readonly List<AdviceSelectBtnContentItem> AdviceSelectBtnContentItem = new List<AdviceSelectBtnContentItem>();
 
-	// Token: 0x04004B5D RID: 19293
+	// Token: 0x04004C04 RID: 19460
 	private readonly List<AdviceSelectLineContentItem> AdviceSelectLineContentItem = new List<AdviceSelectLineContentItem>();
 
-	// Token: 0x02007C9C RID: 31900
+	// Token: 0x02006E21 RID: 28193
 	[NullableContext(0)]
 	private static class EComponents
 	{
-		// Token: 0x04028DFB RID: 167419
+		// Token: 0x04024124 RID: 147748
 		public const int Scroller = 0;
 
-		// Token: 0x04028DFC RID: 167420
+		// Token: 0x04024125 RID: 147749
 		public const int Content = 1;
 
-		// Token: 0x04028DFD RID: 167421
+		// Token: 0x04024126 RID: 147750
 		public const int BtnItem = 2;
 
-		// Token: 0x04028DFE RID: 167422
+		// Token: 0x04024127 RID: 147751
 		public const int LineItem = 3;
 	}
 }

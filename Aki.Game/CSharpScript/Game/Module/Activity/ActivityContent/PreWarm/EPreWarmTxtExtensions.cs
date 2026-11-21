@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 {
-	// Token: 0x020062C0 RID: 25280
+	// Token: 0x0200523E RID: 21054
 	public static class EPreWarmTxtExtensions
 	{
-		// Token: 0x0603F94E RID: 260430 RVA: 0x00F61638 File Offset: 0x00F5F838
+		// Token: 0x0603460F RID: 214543 RVA: 0x00EA8594 File Offset: 0x00EA6794
 		public static string ToEnumString(this EPreWarmTxt value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return result;
 		}
 
-		// Token: 0x0603F94F RID: 260431 RVA: 0x00F61698 File Offset: 0x00F5F898
+		// Token: 0x06034610 RID: 214544 RVA: 0x00EA85F4 File Offset: 0x00EA67F4
 		public static EPreWarmTxt FromString(string name)
 		{
 			EPreWarmTxt result;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return result;
 		}
 
-		// Token: 0x0603F950 RID: 260432 RVA: 0x00F616C4 File Offset: 0x00F5F8C4
+		// Token: 0x06034611 RID: 214545 RVA: 0x00EA8620 File Offset: 0x00EA6820
 		public static bool TryFromString(string name, out EPreWarmTxt value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return true;
 		}
 
-		// Token: 0x0603F951 RID: 260433 RVA: 0x00F6173E File Offset: 0x00F5F93E
+		// Token: 0x06034612 RID: 214546 RVA: 0x00EA869A File Offset: 0x00EA689A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			};
 		}
 
-		// Token: 0x0603F952 RID: 260434 RVA: 0x00F6176E File Offset: 0x00F5F96E
+		// Token: 0x06034613 RID: 214547 RVA: 0x00EA86CA File Offset: 0x00EA68CA
 		public static EPreWarmTxt[] GetValues()
 		{
 			return new EPreWarmTxt[]
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			};
 		}
 
-		// Token: 0x0603F953 RID: 260435 RVA: 0x00F61781 File Offset: 0x00F5F981
+		// Token: 0x06034614 RID: 214548 RVA: 0x00EA86DD File Offset: 0x00EA68DD
 		public static string[] GetNames()
 		{
 			return new string[]

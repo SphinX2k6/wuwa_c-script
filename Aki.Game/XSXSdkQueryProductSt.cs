@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E62 RID: 3682
+// Token: 0x02000317 RID: 791
 public class XSXSdkQueryProductSt
 {
-	// Token: 0x040028E3 RID: 10467
+	// Token: 0x0400297E RID: 10622
 	[Nullable(new byte[]
 	{
 		2,
@@ -12,10 +12,10 @@ public class XSXSdkQueryProductSt
 	})]
 	public XSXSdkProductContentSt[] data;
 
-	// Token: 0x040028E4 RID: 10468
+	// Token: 0x0400297F RID: 10623
 	public int error;
 
-	// Token: 0x040028E5 RID: 10469
+	// Token: 0x04002980 RID: 10624
 	[Nullable(1)]
 	public string type = "";
 }

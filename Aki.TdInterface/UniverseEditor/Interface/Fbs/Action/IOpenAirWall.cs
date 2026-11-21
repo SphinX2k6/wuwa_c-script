@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BF1 RID: 27633
+	// Token: 0x02007355 RID: 29525
 	public struct IOpenAirWall : IFlatbufferObject
 	{
-		// Token: 0x1700CD69 RID: 52585
-		// (get) Token: 0x060308F0 RID: 198896 RVA: 0x00697614 File Offset: 0x00695814
+		// Token: 0x1700D875 RID: 55413
+		// (get) Token: 0x0603380C RID: 210956 RVA: 0x006F0F14 File Offset: 0x006EF114
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060308F1 RID: 198897 RVA: 0x00697621 File Offset: 0x00695821
+		// Token: 0x0603380D RID: 210957 RVA: 0x006F0F21 File Offset: 0x006EF121
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060308F2 RID: 198898 RVA: 0x00697628 File Offset: 0x00695828
+		// Token: 0x0603380E RID: 210958 RVA: 0x006F0F28 File Offset: 0x006EF128
 		public static IOpenAirWall GetRootAsIOpenAirWall(ByteBuffer _bb)
 		{
 			return IOpenAirWall.GetRootAsIOpenAirWall(_bb, default(IOpenAirWall));
 		}
 
-		// Token: 0x060308F3 RID: 198899 RVA: 0x00697644 File Offset: 0x00695844
+		// Token: 0x0603380F RID: 210959 RVA: 0x006F0F44 File Offset: 0x006EF144
 		public static IOpenAirWall GetRootAsIOpenAirWall(ByteBuffer _bb, IOpenAirWall obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060308F4 RID: 198900 RVA: 0x00697661 File Offset: 0x00695861
+		// Token: 0x06033810 RID: 210960 RVA: 0x006F0F61 File Offset: 0x006EF161
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060308F5 RID: 198901 RVA: 0x00697670 File Offset: 0x00695870
+		// Token: 0x06033811 RID: 210961 RVA: 0x006F0F70 File Offset: 0x006EF170
 		public IOpenAirWall __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CD6A RID: 52586
-		// (get) Token: 0x060308F6 RID: 198902 RVA: 0x00697680 File Offset: 0x00695880
+		// Token: 0x1700D876 RID: 55414
+		// (get) Token: 0x06033812 RID: 210962 RVA: 0x006F0F80 File Offset: 0x006EF180
 		public EToggleAirWall Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CD6B RID: 52587
-		// (get) Token: 0x060308F7 RID: 198903 RVA: 0x006976BC File Offset: 0x006958BC
+		// Token: 0x1700D877 RID: 55415
+		// (get) Token: 0x06033813 RID: 210963 RVA: 0x006F0FBC File Offset: 0x006EF1BC
 		public string HitEffectData
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060308F8 RID: 198904 RVA: 0x006976F3 File Offset: 0x006958F3
+		// Token: 0x06033814 RID: 210964 RVA: 0x006F0FF3 File Offset: 0x006EF1F3
 		public Span<byte> GetHitEffectDataBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060308F9 RID: 198905 RVA: 0x00697702 File Offset: 0x00695902
+		// Token: 0x06033815 RID: 210965 RVA: 0x006F1002 File Offset: 0x006EF202
 		public byte[] GetHitEffectDataArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700CD6C RID: 52588
-		// (get) Token: 0x060308FA RID: 198906 RVA: 0x00697710 File Offset: 0x00695910
+		// Token: 0x1700D878 RID: 55416
+		// (get) Token: 0x06033816 RID: 210966 RVA: 0x006F1010 File Offset: 0x006EF210
 		public float HitCd
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CD6D RID: 52589
-		// (get) Token: 0x060308FB RID: 198907 RVA: 0x00697750 File Offset: 0x00695950
+		// Token: 0x1700D879 RID: 55417
+		// (get) Token: 0x06033817 RID: 210967 RVA: 0x006F1050 File Offset: 0x006EF250
 		public string AirWallEffectData
 		{
 			get
@@ -119,20 +119,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060308FC RID: 198908 RVA: 0x00697788 File Offset: 0x00695988
+		// Token: 0x06033818 RID: 210968 RVA: 0x006F1088 File Offset: 0x006EF288
 		public Span<byte> GetAirWallEffectDataBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x060308FD RID: 198909 RVA: 0x00697798 File Offset: 0x00695998
+		// Token: 0x06033819 RID: 210969 RVA: 0x006F1098 File Offset: 0x006EF298
 		public byte[] GetAirWallEffectDataArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700CD6E RID: 52590
-		// (get) Token: 0x060308FE RID: 198910 RVA: 0x006977A8 File Offset: 0x006959A8
+		// Token: 0x1700D87A RID: 55418
+		// (get) Token: 0x0603381A RID: 210970 RVA: 0x006F10A8 File Offset: 0x006EF2A8
 		public string VectorArrayAirWallEffectData
 		{
 			get
@@ -146,36 +146,36 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060308FF RID: 198911 RVA: 0x006977E0 File Offset: 0x006959E0
+		// Token: 0x0603381B RID: 210971 RVA: 0x006F10E0 File Offset: 0x006EF2E0
 		public Span<byte> GetVectorArrayAirWallEffectDataBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06030900 RID: 198912 RVA: 0x006977F0 File Offset: 0x006959F0
+		// Token: 0x0603381C RID: 210972 RVA: 0x006F10F0 File Offset: 0x006EF2F0
 		public byte[] GetVectorArrayAirWallEffectDataArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x1700CD6F RID: 52591
-		// (get) Token: 0x06030901 RID: 198913 RVA: 0x00697800 File Offset: 0x00695A00
-		public float AirWallEffectHeight
+		// Token: 0x1700D87B RID: 55419
+		// (get) Token: 0x0603381D RID: 210973 RVA: 0x006F1100 File Offset: 0x006EF300
+		public int AirWallEffectSplineEntityId
 		{
 			get
 			{
 				int num = this.__p.__offset(14);
 				if (num == 0)
 				{
-					return 0f;
+					return 0;
 				}
-				return this.__p.bb.GetFloat(num + this.__p.bb_pos);
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x1700CD70 RID: 52592
-		// (get) Token: 0x06030902 RID: 198914 RVA: 0x00697844 File Offset: 0x00695A44
-		public float AirWallEffectThickness
+		// Token: 0x1700D87C RID: 55420
+		// (get) Token: 0x0603381E RID: 210974 RVA: 0x006F1140 File Offset: 0x006EF340
+		public float AirWallEffectHeight
 		{
 			get
 			{
@@ -188,13 +188,28 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CD71 RID: 52593
-		// (get) Token: 0x06030903 RID: 198915 RVA: 0x00697888 File Offset: 0x00695A88
-		public EAirWallCollisionPreset CollisionPreset
+		// Token: 0x1700D87D RID: 55421
+		// (get) Token: 0x0603381F RID: 210975 RVA: 0x006F1184 File Offset: 0x006EF384
+		public float AirWallEffectThickness
 		{
 			get
 			{
 				int num = this.__p.__offset(18);
+				if (num == 0)
+				{
+					return 0f;
+				}
+				return this.__p.bb.GetFloat(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x1700D87E RID: 55422
+		// (get) Token: 0x06033820 RID: 210976 RVA: 0x006F11C8 File Offset: 0x006EF3C8
+		public EAirWallCollisionPreset CollisionPreset
+		{
+			get
+			{
+				int num = this.__p.__offset(20);
 				if (num == 0)
 				{
 					return EAirWallCollisionPreset.Normal;
@@ -203,13 +218,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CD72 RID: 52594
-		// (get) Token: 0x06030904 RID: 198916 RVA: 0x006978C8 File Offset: 0x00695AC8
+		// Token: 0x1700D87F RID: 55423
+		// (get) Token: 0x06033821 RID: 210977 RVA: 0x006F1208 File Offset: 0x006EF408
 		public byte NullMask
 		{
 			get
 			{
-				int num = this.__p.__offset(20);
+				int num = this.__p.__offset(22);
 				if (num == 0)
 				{
 					return 0;
@@ -218,12 +233,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030905 RID: 198917 RVA: 0x00697908 File Offset: 0x00695B08
-		public static Offset<IOpenAirWall> CreateIOpenAirWall(FlatBufferBuilder builder, EToggleAirWall Type = EToggleAirWall.Open, StringOffset HitEffectDataOffset = default(StringOffset), float HitCd = 0f, StringOffset AirWallEffectDataOffset = default(StringOffset), StringOffset VectorArrayAirWallEffectDataOffset = default(StringOffset), float AirWallEffectHeight = 0f, float AirWallEffectThickness = 0f, EAirWallCollisionPreset CollisionPreset = EAirWallCollisionPreset.Normal, byte NullMask = 0)
+		// Token: 0x06033822 RID: 210978 RVA: 0x006F1248 File Offset: 0x006EF448
+		public static Offset<IOpenAirWall> CreateIOpenAirWall(FlatBufferBuilder builder, EToggleAirWall Type = EToggleAirWall.Open, StringOffset HitEffectDataOffset = default(StringOffset), float HitCd = 0f, StringOffset AirWallEffectDataOffset = default(StringOffset), StringOffset VectorArrayAirWallEffectDataOffset = default(StringOffset), int AirWallEffectSplineEntityId = 0, float AirWallEffectHeight = 0f, float AirWallEffectThickness = 0f, EAirWallCollisionPreset CollisionPreset = EAirWallCollisionPreset.Normal, byte NullMask = 0)
 		{
-			builder.StartTable(9);
+			builder.StartTable(10);
 			IOpenAirWall.AddAirWallEffectThickness(builder, AirWallEffectThickness);
 			IOpenAirWall.AddAirWallEffectHeight(builder, AirWallEffectHeight);
+			IOpenAirWall.AddAirWallEffectSplineEntityId(builder, AirWallEffectSplineEntityId);
 			IOpenAirWall.AddVectorArrayAirWallEffectData(builder, VectorArrayAirWallEffectDataOffset);
 			IOpenAirWall.AddAirWallEffectData(builder, AirWallEffectDataOffset);
 			IOpenAirWall.AddHitCd(builder, HitCd);
@@ -234,73 +250,79 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenAirWall.EndIOpenAirWall(builder);
 		}
 
-		// Token: 0x06030906 RID: 198918 RVA: 0x00697968 File Offset: 0x00695B68
+		// Token: 0x06033823 RID: 210979 RVA: 0x006F12B0 File Offset: 0x006EF4B0
 		public static void StartIOpenAirWall(FlatBufferBuilder builder)
 		{
-			builder.StartTable(9);
+			builder.StartTable(10);
 		}
 
-		// Token: 0x06030907 RID: 198919 RVA: 0x00697972 File Offset: 0x00695B72
+		// Token: 0x06033824 RID: 210980 RVA: 0x006F12BA File Offset: 0x006EF4BA
 		public static void AddType(FlatBufferBuilder builder, EToggleAirWall type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06030908 RID: 198920 RVA: 0x0069797D File Offset: 0x00695B7D
+		// Token: 0x06033825 RID: 210981 RVA: 0x006F12C5 File Offset: 0x006EF4C5
 		public static void AddHitEffectData(FlatBufferBuilder builder, StringOffset hitEffectDataOffset)
 		{
 			builder.AddOffset(1, hitEffectDataOffset.Value, 0);
 		}
 
-		// Token: 0x06030909 RID: 198921 RVA: 0x0069798D File Offset: 0x00695B8D
+		// Token: 0x06033826 RID: 210982 RVA: 0x006F12D5 File Offset: 0x006EF4D5
 		public static void AddHitCd(FlatBufferBuilder builder, float hitCd)
 		{
 			builder.AddFloat(2, hitCd, 0.0);
 		}
 
-		// Token: 0x0603090A RID: 198922 RVA: 0x006979A0 File Offset: 0x00695BA0
+		// Token: 0x06033827 RID: 210983 RVA: 0x006F12E8 File Offset: 0x006EF4E8
 		public static void AddAirWallEffectData(FlatBufferBuilder builder, StringOffset airWallEffectDataOffset)
 		{
 			builder.AddOffset(3, airWallEffectDataOffset.Value, 0);
 		}
 
-		// Token: 0x0603090B RID: 198923 RVA: 0x006979B0 File Offset: 0x00695BB0
+		// Token: 0x06033828 RID: 210984 RVA: 0x006F12F8 File Offset: 0x006EF4F8
 		public static void AddVectorArrayAirWallEffectData(FlatBufferBuilder builder, StringOffset vectorArrayAirWallEffectDataOffset)
 		{
 			builder.AddOffset(4, vectorArrayAirWallEffectDataOffset.Value, 0);
 		}
 
-		// Token: 0x0603090C RID: 198924 RVA: 0x006979C0 File Offset: 0x00695BC0
+		// Token: 0x06033829 RID: 210985 RVA: 0x006F1308 File Offset: 0x006EF508
+		public static void AddAirWallEffectSplineEntityId(FlatBufferBuilder builder, int airWallEffectSplineEntityId)
+		{
+			builder.AddInt(5, airWallEffectSplineEntityId, 0);
+		}
+
+		// Token: 0x0603382A RID: 210986 RVA: 0x006F1313 File Offset: 0x006EF513
 		public static void AddAirWallEffectHeight(FlatBufferBuilder builder, float airWallEffectHeight)
 		{
-			builder.AddFloat(5, airWallEffectHeight, 0.0);
+			builder.AddFloat(6, airWallEffectHeight, 0.0);
 		}
 
-		// Token: 0x0603090D RID: 198925 RVA: 0x006979D3 File Offset: 0x00695BD3
+		// Token: 0x0603382B RID: 210987 RVA: 0x006F1326 File Offset: 0x006EF526
 		public static void AddAirWallEffectThickness(FlatBufferBuilder builder, float airWallEffectThickness)
 		{
-			builder.AddFloat(6, airWallEffectThickness, 0.0);
+			builder.AddFloat(7, airWallEffectThickness, 0.0);
 		}
 
-		// Token: 0x0603090E RID: 198926 RVA: 0x006979E6 File Offset: 0x00695BE6
+		// Token: 0x0603382C RID: 210988 RVA: 0x006F1339 File Offset: 0x006EF539
 		public static void AddCollisionPreset(FlatBufferBuilder builder, EAirWallCollisionPreset collisionPreset)
 		{
-			builder.AddByte(7, (byte)collisionPreset, 0);
+			builder.AddByte(8, (byte)collisionPreset, 0);
 		}
 
-		// Token: 0x0603090F RID: 198927 RVA: 0x006979F1 File Offset: 0x00695BF1
+		// Token: 0x0603382D RID: 210989 RVA: 0x006F1344 File Offset: 0x006EF544
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
-			builder.AddByte(8, nullMask, 0);
+			builder.AddByte(9, nullMask, 0);
 		}
 
-		// Token: 0x06030910 RID: 198928 RVA: 0x006979FC File Offset: 0x00695BFC
+		// Token: 0x0603382E RID: 210990 RVA: 0x006F1350 File Offset: 0x006EF550
 		public static Offset<IOpenAirWall> EndIOpenAirWall(FlatBufferBuilder builder)
 		{
 			return new Offset<IOpenAirWall>(builder.EndTable());
 		}
 
-		// Token: 0x06030911 RID: 198929 RVA: 0x00697A0C File Offset: 0x00695C0C
+		// Token: 0x0603382F RID: 210991 RVA: 0x006F1360 File Offset: 0x006EF560
 		public IOpenAirWallT UnPack()
 		{
 			IOpenAirWallT openAirWallT = new IOpenAirWallT();
@@ -308,7 +330,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return openAirWallT;
 		}
 
-		// Token: 0x06030912 RID: 198930 RVA: 0x00697A28 File Offset: 0x00695C28
+		// Token: 0x06033830 RID: 210992 RVA: 0x006F137C File Offset: 0x006EF57C
 		public void UnPackTo(IOpenAirWallT _o)
 		{
 			_o.Type = this.Type;
@@ -316,13 +338,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.HitCd = this.HitCd;
 			_o.AirWallEffectData = this.AirWallEffectData;
 			_o.VectorArrayAirWallEffectData = this.VectorArrayAirWallEffectData;
+			_o.AirWallEffectSplineEntityId = this.AirWallEffectSplineEntityId;
 			_o.AirWallEffectHeight = this.AirWallEffectHeight;
 			_o.AirWallEffectThickness = this.AirWallEffectThickness;
 			_o.CollisionPreset = this.CollisionPreset;
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06030913 RID: 198931 RVA: 0x00697AA4 File Offset: 0x00695CA4
+		// Token: 0x06033831 RID: 210993 RVA: 0x006F1404 File Offset: 0x006EF604
 		public static Offset<IOpenAirWall> Pack(FlatBufferBuilder builder, IOpenAirWallT _o)
 		{
 			if (_o == null)
@@ -332,10 +355,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			StringOffset hitEffectDataOffset = (_o.HitEffectData == null) ? default(StringOffset) : builder.CreateString(_o.HitEffectData);
 			StringOffset airWallEffectDataOffset = (_o.AirWallEffectData == null) ? default(StringOffset) : builder.CreateString(_o.AirWallEffectData);
 			StringOffset vectorArrayAirWallEffectDataOffset = (_o.VectorArrayAirWallEffectData == null) ? default(StringOffset) : builder.CreateString(_o.VectorArrayAirWallEffectData);
-			return IOpenAirWall.CreateIOpenAirWall(builder, _o.Type, hitEffectDataOffset, _o.HitCd, airWallEffectDataOffset, vectorArrayAirWallEffectDataOffset, _o.AirWallEffectHeight, _o.AirWallEffectThickness, _o.CollisionPreset, _o.NullMask);
+			return IOpenAirWall.CreateIOpenAirWall(builder, _o.Type, hitEffectDataOffset, _o.HitCd, airWallEffectDataOffset, vectorArrayAirWallEffectDataOffset, _o.AirWallEffectSplineEntityId, _o.AirWallEffectHeight, _o.AirWallEffectThickness, _o.CollisionPreset, _o.NullMask);
 		}
 
-		// Token: 0x040114E2 RID: 70882
+		// Token: 0x04012431 RID: 74801
 		private Table __p;
 	}
 }

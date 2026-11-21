@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006465 RID: 25701
+	// Token: 0x02006ACD RID: 27341
 	public struct ICommonBtOverride : IFlatbufferObject
 	{
-		// Token: 0x1700BF42 RID: 48962
-		// (get) Token: 0x0602C79A RID: 182170 RVA: 0x0061957A File Offset: 0x0061777A
+		// Token: 0x1700C8C4 RID: 51396
+		// (get) Token: 0x0602EEDF RID: 192223 RVA: 0x00664646 File Offset: 0x00662846
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C79B RID: 182171 RVA: 0x00619587 File Offset: 0x00617787
+		// Token: 0x0602EEE0 RID: 192224 RVA: 0x00664653 File Offset: 0x00662853
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C79C RID: 182172 RVA: 0x00619590 File Offset: 0x00617790
+		// Token: 0x0602EEE1 RID: 192225 RVA: 0x0066465C File Offset: 0x0066285C
 		public static ICommonBtOverride GetRootAsICommonBtOverride(ByteBuffer _bb)
 		{
 			return ICommonBtOverride.GetRootAsICommonBtOverride(_bb, default(ICommonBtOverride));
 		}
 
-		// Token: 0x0602C79D RID: 182173 RVA: 0x006195AC File Offset: 0x006177AC
+		// Token: 0x0602EEE2 RID: 192226 RVA: 0x00664678 File Offset: 0x00662878
 		public static ICommonBtOverride GetRootAsICommonBtOverride(ByteBuffer _bb, ICommonBtOverride obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C79E RID: 182174 RVA: 0x006195C9 File Offset: 0x006177C9
+		// Token: 0x0602EEE3 RID: 192227 RVA: 0x00664695 File Offset: 0x00662895
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C79F RID: 182175 RVA: 0x006195D8 File Offset: 0x006177D8
+		// Token: 0x0602EEE4 RID: 192228 RVA: 0x006646A4 File Offset: 0x006628A4
 		public ICommonBtOverride __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BF43 RID: 48963
-		// (get) Token: 0x0602C7A0 RID: 182176 RVA: 0x006195E8 File Offset: 0x006177E8
+		// Token: 0x1700C8C5 RID: 51397
+		// (get) Token: 0x0602EEE5 RID: 192229 RVA: 0x006646B4 File Offset: 0x006628B4
 		public int CommonBtId
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C7A1 RID: 182177 RVA: 0x00619624 File Offset: 0x00617824
+		// Token: 0x0602EEE6 RID: 192230 RVA: 0x006646F0 File Offset: 0x006628F0
 		public ICommonBtPlaceholder? OverridePlaceholders(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new ICommonBtPlaceholder?(default(ICommonBtPlaceholder).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700BF44 RID: 48964
-		// (get) Token: 0x0602C7A2 RID: 182178 RVA: 0x00619684 File Offset: 0x00617884
+		// Token: 0x1700C8C6 RID: 51398
+		// (get) Token: 0x0602EEE7 RID: 192231 RVA: 0x00664750 File Offset: 0x00662950
 		public int OverridePlaceholdersLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C7A3 RID: 182179 RVA: 0x006196B0 File Offset: 0x006178B0
+		// Token: 0x0602EEE8 RID: 192232 RVA: 0x0066477C File Offset: 0x0066297C
 		public ICommonBtClientOverrideData? ClientOverrideData(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new ICommonBtClientOverrideData?(default(ICommonBtClientOverrideData).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700BF45 RID: 48965
-		// (get) Token: 0x0602C7A4 RID: 182180 RVA: 0x00619710 File Offset: 0x00617910
+		// Token: 0x1700C8C7 RID: 51399
+		// (get) Token: 0x0602EEE9 RID: 192233 RVA: 0x006647DC File Offset: 0x006629DC
 		public int ClientOverrideDataLength
 		{
 			get
@@ -115,7 +115,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C7A5 RID: 182181 RVA: 0x0061973B File Offset: 0x0061793B
+		// Token: 0x0602EEEA RID: 192234 RVA: 0x00664807 File Offset: 0x00662A07
 		public static Offset<ICommonBtOverride> CreateICommonBtOverride(FlatBufferBuilder builder, int CommonBtId = 0, VectorOffset OverridePlaceholdersOffset = default(VectorOffset), VectorOffset ClientOverrideDataOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -125,25 +125,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICommonBtOverride.EndICommonBtOverride(builder);
 		}
 
-		// Token: 0x0602C7A6 RID: 182182 RVA: 0x0061975F File Offset: 0x0061795F
+		// Token: 0x0602EEEB RID: 192235 RVA: 0x0066482B File Offset: 0x00662A2B
 		public static void StartICommonBtOverride(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602C7A7 RID: 182183 RVA: 0x00619768 File Offset: 0x00617968
+		// Token: 0x0602EEEC RID: 192236 RVA: 0x00664834 File Offset: 0x00662A34
 		public static void AddCommonBtId(FlatBufferBuilder builder, int commonBtId)
 		{
 			builder.AddInt(0, commonBtId, 0);
 		}
 
-		// Token: 0x0602C7A8 RID: 182184 RVA: 0x00619773 File Offset: 0x00617973
+		// Token: 0x0602EEED RID: 192237 RVA: 0x0066483F File Offset: 0x00662A3F
 		public static void AddOverridePlaceholders(FlatBufferBuilder builder, VectorOffset overridePlaceholdersOffset)
 		{
 			builder.AddOffset(1, overridePlaceholdersOffset.Value, 0);
 		}
 
-		// Token: 0x0602C7A9 RID: 182185 RVA: 0x00619784 File Offset: 0x00617984
+		// Token: 0x0602EEEE RID: 192238 RVA: 0x00664850 File Offset: 0x00662A50
 		public static VectorOffset CreateOverridePlaceholdersVector(FlatBufferBuilder builder, Offset<ICommonBtPlaceholder>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602C7AA RID: 182186 RVA: 0x006197C4 File Offset: 0x006179C4
+		// Token: 0x0602EEEF RID: 192239 RVA: 0x00664890 File Offset: 0x00662A90
 		public static VectorOffset CreateOverridePlaceholdersVectorBlock(FlatBufferBuilder builder, Offset<ICommonBtPlaceholder>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602C7AB RID: 182187 RVA: 0x006197DE File Offset: 0x006179DE
+		// Token: 0x0602EEF0 RID: 192240 RVA: 0x006648AA File Offset: 0x00662AAA
 		public static VectorOffset CreateOverridePlaceholdersVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ICommonBtPlaceholder>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -170,7 +170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602C7AC RID: 182188 RVA: 0x006197FC File Offset: 0x006179FC
+		// Token: 0x0602EEF1 RID: 192241 RVA: 0x006648C8 File Offset: 0x00662AC8
 		public static VectorOffset CreateOverridePlaceholdersVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -178,19 +178,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602C7AD RID: 182189 RVA: 0x00619815 File Offset: 0x00617A15
+		// Token: 0x0602EEF2 RID: 192242 RVA: 0x006648E1 File Offset: 0x00662AE1
 		public static void StartOverridePlaceholdersVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602C7AE RID: 182190 RVA: 0x00619820 File Offset: 0x00617A20
+		// Token: 0x0602EEF3 RID: 192243 RVA: 0x006648EC File Offset: 0x00662AEC
 		public static void AddClientOverrideData(FlatBufferBuilder builder, VectorOffset clientOverrideDataOffset)
 		{
 			builder.AddOffset(2, clientOverrideDataOffset.Value, 0);
 		}
 
-		// Token: 0x0602C7AF RID: 182191 RVA: 0x00619830 File Offset: 0x00617A30
+		// Token: 0x0602EEF4 RID: 192244 RVA: 0x006648FC File Offset: 0x00662AFC
 		public static VectorOffset CreateClientOverrideDataVector(FlatBufferBuilder builder, Offset<ICommonBtClientOverrideData>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602C7B0 RID: 182192 RVA: 0x00619870 File Offset: 0x00617A70
+		// Token: 0x0602EEF5 RID: 192245 RVA: 0x0066493C File Offset: 0x00662B3C
 		public static VectorOffset CreateClientOverrideDataVectorBlock(FlatBufferBuilder builder, Offset<ICommonBtClientOverrideData>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -209,7 +209,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602C7B1 RID: 182193 RVA: 0x0061988A File Offset: 0x00617A8A
+		// Token: 0x0602EEF6 RID: 192246 RVA: 0x00664956 File Offset: 0x00662B56
 		public static VectorOffset CreateClientOverrideDataVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ICommonBtClientOverrideData>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602C7B2 RID: 182194 RVA: 0x006198A8 File Offset: 0x00617AA8
+		// Token: 0x0602EEF7 RID: 192247 RVA: 0x00664974 File Offset: 0x00662B74
 		public static VectorOffset CreateClientOverrideDataVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -225,19 +225,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602C7B3 RID: 182195 RVA: 0x006198C1 File Offset: 0x00617AC1
+		// Token: 0x0602EEF8 RID: 192248 RVA: 0x0066498D File Offset: 0x00662B8D
 		public static void StartClientOverrideDataVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602C7B4 RID: 182196 RVA: 0x006198CC File Offset: 0x00617ACC
+		// Token: 0x0602EEF9 RID: 192249 RVA: 0x00664998 File Offset: 0x00662B98
 		public static Offset<ICommonBtOverride> EndICommonBtOverride(FlatBufferBuilder builder)
 		{
 			return new Offset<ICommonBtOverride>(builder.EndTable());
 		}
 
-		// Token: 0x0602C7B5 RID: 182197 RVA: 0x006198DC File Offset: 0x00617ADC
+		// Token: 0x0602EEFA RID: 192250 RVA: 0x006649A8 File Offset: 0x00662BA8
 		public ICommonBtOverrideT UnPack()
 		{
 			ICommonBtOverrideT commonBtOverrideT = new ICommonBtOverrideT();
@@ -245,7 +245,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return commonBtOverrideT;
 		}
 
-		// Token: 0x0602C7B6 RID: 182198 RVA: 0x006198F8 File Offset: 0x00617AF8
+		// Token: 0x0602EEFB RID: 192251 RVA: 0x006649C4 File Offset: 0x00662BC4
 		public void UnPackTo(ICommonBtOverrideT _o)
 		{
 			_o.CommonBtId = this.CommonBtId;
@@ -261,7 +261,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C7B7 RID: 182199 RVA: 0x006199B8 File Offset: 0x00617BB8
+		// Token: 0x0602EEFC RID: 192252 RVA: 0x00664A84 File Offset: 0x00662C84
 		public static Offset<ICommonBtOverride> Pack(FlatBufferBuilder builder, ICommonBtOverrideT _o)
 		{
 			if (_o == null)
@@ -291,7 +291,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICommonBtOverride.CreateICommonBtOverride(builder, _o.CommonBtId, overridePlaceholdersOffset, clientOverrideDataOffset);
 		}
 
-		// Token: 0x04010A62 RID: 68194
+		// Token: 0x0401186D RID: 71789
 		private Table __p;
 	}
 }

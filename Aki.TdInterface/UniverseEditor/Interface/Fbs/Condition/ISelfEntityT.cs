@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CC2 RID: 19650
+	// Token: 0x020051BE RID: 20926
 	public class ISelfEntityT
 	{
-		// Token: 0x17008EA8 RID: 36520
-		// (get) Token: 0x0601F2E3 RID: 127715 RVA: 0x0045A7EA File Offset: 0x004589EA
-		// (set) Token: 0x0601F2E4 RID: 127716 RVA: 0x0045A7F2 File Offset: 0x004589F2
+		// Token: 0x170095E1 RID: 38369
+		// (get) Token: 0x06020F27 RID: 134951 RVA: 0x0048E6E2 File Offset: 0x0048C8E2
+		// (set) Token: 0x06020F28 RID: 134952 RVA: 0x0048E6EA File Offset: 0x0048C8EA
 		public ETargetEntityType Type { get; set; }
 
-		// Token: 0x0601F2E5 RID: 127717 RVA: 0x0045A7FB File Offset: 0x004589FB
+		// Token: 0x06020F29 RID: 134953 RVA: 0x0048E6F3 File Offset: 0x0048C8F3
 		public ISelfEntityT()
 		{
 			this.Type = ETargetEntityType.Target;

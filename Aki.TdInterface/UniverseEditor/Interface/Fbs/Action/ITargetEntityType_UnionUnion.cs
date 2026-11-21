@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007362 RID: 29538
+	// Token: 0x02007B3D RID: 31549
 	public class ITargetEntityType_UnionUnion
 	{
-		// Token: 0x1700E04D RID: 57421
-		// (get) Token: 0x060359C2 RID: 219586 RVA: 0x0074D0F1 File Offset: 0x0074B2F1
-		// (set) Token: 0x060359C3 RID: 219587 RVA: 0x0074D0F9 File Offset: 0x0074B2F9
+		// Token: 0x1700EC4E RID: 60494
+		// (get) Token: 0x06038D0B RID: 232715 RVA: 0x007AEEC5 File Offset: 0x007AD0C5
+		// (set) Token: 0x06038D0C RID: 232716 RVA: 0x007AEECD File Offset: 0x007AD0CD
 		public ITargetEntityType_Union Type { get; set; }
 
-		// Token: 0x1700E04E RID: 57422
-		// (get) Token: 0x060359C4 RID: 219588 RVA: 0x0074D102 File Offset: 0x0074B302
-		// (set) Token: 0x060359C5 RID: 219589 RVA: 0x0074D10A File Offset: 0x0074B30A
+		// Token: 0x1700EC4F RID: 60495
+		// (get) Token: 0x06038D0D RID: 232717 RVA: 0x007AEED6 File Offset: 0x007AD0D6
+		// (set) Token: 0x06038D0E RID: 232718 RVA: 0x007AEEDE File Offset: 0x007AD0DE
 		public object Value { get; set; }
 
-		// Token: 0x060359C6 RID: 219590 RVA: 0x0074D113 File Offset: 0x0074B313
+		// Token: 0x06038D0F RID: 232719 RVA: 0x007AEEE7 File Offset: 0x007AD0E7
 		public ITargetEntityType_UnionUnion()
 		{
 			this.Type = ITargetEntityType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060359C7 RID: 219591 RVA: 0x0074D129 File Offset: 0x0074B329
+		// Token: 0x06038D10 RID: 232720 RVA: 0x007AEEFD File Offset: 0x007AD0FD
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060359C8 RID: 219592 RVA: 0x0074D13B File Offset: 0x0074B33B
+		// Token: 0x06038D11 RID: 232721 RVA: 0x007AEF0F File Offset: 0x007AD10F
 		public ITargetEntityTypeT AsITargetEntityType()
 		{
 			return this.As<ITargetEntityTypeT>();
 		}
 
-		// Token: 0x060359C9 RID: 219593 RVA: 0x0074D143 File Offset: 0x0074B343
+		// Token: 0x06038D12 RID: 232722 RVA: 0x007AEF17 File Offset: 0x007AD117
 		public static ITargetEntityType_UnionUnion FromITargetEntityType(ITargetEntityTypeT _itargetentitytype)
 		{
 			return new ITargetEntityType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060359CA RID: 219594 RVA: 0x0074D158 File Offset: 0x0074B358
+		// Token: 0x06038D13 RID: 232723 RVA: 0x007AEF2C File Offset: 0x007AD12C
 		public ITargetEntityT AsITargetEntity()
 		{
 			return this.As<ITargetEntityT>();
 		}
 
-		// Token: 0x060359CB RID: 219595 RVA: 0x0074D160 File Offset: 0x0074B360
+		// Token: 0x06038D14 RID: 232724 RVA: 0x007AEF34 File Offset: 0x007AD134
 		public static ITargetEntityType_UnionUnion FromITargetEntity(ITargetEntityT _itargetentity)
 		{
 			return new ITargetEntityType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060359CC RID: 219596 RVA: 0x0074D175 File Offset: 0x0074B375
+		// Token: 0x06038D15 RID: 232725 RVA: 0x007AEF49 File Offset: 0x007AD149
 		public ISelfEntityT AsISelfEntity()
 		{
 			return this.As<ISelfEntityT>();
 		}
 
-		// Token: 0x060359CD RID: 219597 RVA: 0x0074D17D File Offset: 0x0074B37D
+		// Token: 0x06038D16 RID: 232726 RVA: 0x007AEF51 File Offset: 0x007AD151
 		public static ITargetEntityType_UnionUnion FromISelfEntity(ISelfEntityT _iselfentity)
 		{
 			return new ITargetEntityType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060359CE RID: 219598 RVA: 0x0074D192 File Offset: 0x0074B392
+		// Token: 0x06038D17 RID: 232727 RVA: 0x007AEF66 File Offset: 0x007AD166
 		public ITriggeredEntityT AsITriggeredEntity()
 		{
 			return this.As<ITriggeredEntityT>();
 		}
 
-		// Token: 0x060359CF RID: 219599 RVA: 0x0074D19A File Offset: 0x0074B39A
+		// Token: 0x06038D18 RID: 232728 RVA: 0x007AEF6E File Offset: 0x007AD16E
 		public static ITargetEntityType_UnionUnion FromITriggeredEntity(ITriggeredEntityT _itriggeredentity)
 		{
 			return new ITargetEntityType_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060359D0 RID: 219600 RVA: 0x0074D1AF File Offset: 0x0074B3AF
+		// Token: 0x06038D19 RID: 232729 RVA: 0x007AEF83 File Offset: 0x007AD183
 		public IPlayerEntityT AsIPlayerEntity()
 		{
 			return this.As<IPlayerEntityT>();
 		}
 
-		// Token: 0x060359D1 RID: 219601 RVA: 0x0074D1B7 File Offset: 0x0074B3B7
+		// Token: 0x06038D1A RID: 232730 RVA: 0x007AEF8B File Offset: 0x007AD18B
 		public static ITargetEntityType_UnionUnion FromIPlayerEntity(IPlayerEntityT _iplayerentity)
 		{
 			return new ITargetEntityType_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060359D2 RID: 219602 RVA: 0x0074D1CC File Offset: 0x0074B3CC
+		// Token: 0x06038D1B RID: 232731 RVA: 0x007AEFA0 File Offset: 0x007AD1A0
 		public IVehicleEntityT AsIVehicleEntity()
 		{
 			return this.As<IVehicleEntityT>();
 		}
 
-		// Token: 0x060359D3 RID: 219603 RVA: 0x0074D1D4 File Offset: 0x0074B3D4
+		// Token: 0x06038D1C RID: 232732 RVA: 0x007AEFA8 File Offset: 0x007AD1A8
 		public static ITargetEntityType_UnionUnion FromIVehicleEntity(IVehicleEntityT _ivehicleentity)
 		{
 			return new ITargetEntityType_UnionUnion
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060359D4 RID: 219604 RVA: 0x0074D1EC File Offset: 0x0074B3EC
+		// Token: 0x06038D1D RID: 232733 RVA: 0x007AEFC0 File Offset: 0x007AD1C0
 		public static int Pack(FlatBufferBuilder builder, ITargetEntityType_UnionUnion _o)
 		{
 			switch (_o.Type)

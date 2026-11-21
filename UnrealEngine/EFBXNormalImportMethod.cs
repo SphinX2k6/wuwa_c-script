@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002A1E RID: 10782
+	// Token: 0x0200087A RID: 2170
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/UnrealEd.EFBXNormalImportMethod")]
 	public enum EFBXNormalImportMethod
 	{
-		// Token: 0x04015DF3 RID: 89587
+		// Token: 0x04005574 RID: 21876
 		FBXNIM_ComputeNormals,
-		// Token: 0x04015DF4 RID: 89588
+		// Token: 0x04005575 RID: 21877
 		FBXNIM_ImportNormals,
-		// Token: 0x04015DF5 RID: 89589
+		// Token: 0x04005576 RID: 21878
 		FBXNIM_ImportNormalsAndTangents,
-		// Token: 0x04015DF6 RID: 89590
+		// Token: 0x04005577 RID: 21879
 		FBXNIM_MAX
 	}
 }

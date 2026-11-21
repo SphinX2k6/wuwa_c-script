@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002138 RID: 8504
+// Token: 0x02001610 RID: 5648
 [NullableContext(1)]
 [Nullable(0)]
 public class BirthdayRepeatEnterEvent : PlayerCommonLogData
 {
-	// Token: 0x170014DE RID: 5342
-	// (get) Token: 0x060109E4 RID: 68068 RVA: 0x0040BBE1 File Offset: 0x00409DE1
-	// (set) Token: 0x060109E5 RID: 68069 RVA: 0x0040BBE9 File Offset: 0x00409DE9
+	// Token: 0x1700150C RID: 5388
+	// (get) Token: 0x0600DE57 RID: 56919 RVA: 0x00418329 File Offset: 0x00416529
+	// (set) Token: 0x0600DE58 RID: 56920 RVA: 0x00418331 File Offset: 0x00416531
 	public override string event_id { get; set; } = "1063";
 
-	// Token: 0x04007D53 RID: 32083
+	// Token: 0x04007E63 RID: 32355
 	public int i_item_id;
 
-	// Token: 0x04007D54 RID: 32084
+	// Token: 0x04007E64 RID: 32356
 	public int i_trigger_type;
 
-	// Token: 0x04007D55 RID: 32085
+	// Token: 0x04007E65 RID: 32357
 	public int bird_round_id;
 }

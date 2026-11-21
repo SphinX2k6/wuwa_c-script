@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001044 RID: 4164
+// Token: 0x020004F8 RID: 1272
 public class GuessJokerGameStartStage : GuessJokerStageBase
 {
-	// Token: 0x06006AD1 RID: 27345 RVA: 0x00157E5F File Offset: 0x0015605F
+	// Token: 0x06003E66 RID: 15974 RVA: 0x00160787 File Offset: 0x0015E987
 	[NullableContext(1)]
 	public GuessJokerGameStartStage(GuessJokerStageFsm stageFsm) : base(stageFsm)
 	{
 	}
 
-	// Token: 0x06006AD2 RID: 27346 RVA: 0x00157E68 File Offset: 0x00156068
+	// Token: 0x06003E67 RID: 15975 RVA: 0x00160790 File Offset: 0x0015E990
 	protected override void OnEnter()
 	{
 		int levelId = GuessJokerGamePlayModel.Instance.GetLevelId();

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006964 RID: 26980
+	// Token: 0x02007017 RID: 28695
 	public class IInputDrivenMoveDriveModeT
 	{
-		// Token: 0x1700C817 RID: 51223
-		// (get) Token: 0x0602F1B0 RID: 192944 RVA: 0x0066B192 File Offset: 0x00669392
-		// (set) Token: 0x0602F1B1 RID: 192945 RVA: 0x0066B19A File Offset: 0x0066939A
+		// Token: 0x1700D21A RID: 53786
+		// (get) Token: 0x06031B80 RID: 203648 RVA: 0x006BB67A File Offset: 0x006B987A
+		// (set) Token: 0x06031B81 RID: 203649 RVA: 0x006BB682 File Offset: 0x006B9882
 		public ESplineMoveDriveMode Type { get; set; }
 
-		// Token: 0x0602F1B2 RID: 192946 RVA: 0x0066B1A3 File Offset: 0x006693A3
+		// Token: 0x06031B82 RID: 203650 RVA: 0x006BB68B File Offset: 0x006B988B
 		public IInputDrivenMoveDriveModeT()
 		{
 			this.Type = ESplineMoveDriveMode.InputDriven;

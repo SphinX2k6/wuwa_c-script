@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063A3 RID: 25507
+	// Token: 0x02006A14 RID: 27156
 	public enum IClientEventPianoEvent_Union : byte
 	{
-		// Token: 0x04010974 RID: 67956
+		// Token: 0x04011787 RID: 71559
 		NONE,
-		// Token: 0x04010975 RID: 67957
+		// Token: 0x04011788 RID: 71560
 		IClientEventPianoEvent,
-		// Token: 0x04010976 RID: 67958
+		// Token: 0x04011789 RID: 71561
 		IClientEventPianoUpdateSubtitle,
-		// Token: 0x04010977 RID: 67959
+		// Token: 0x0401178A RID: 71562
 		IClientEventPianoSwitchPhase
 	}
 }

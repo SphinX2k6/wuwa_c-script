@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007170 RID: 29040
+	// Token: 0x0200793C RID: 31036
 	public class ISpawnEntityT
 	{
-		// Token: 0x1700D7C4 RID: 55236
-		// (get) Token: 0x060337DF RID: 210911 RVA: 0x006EFE15 File Offset: 0x006EE015
-		// (set) Token: 0x060337E0 RID: 210912 RVA: 0x006EFE1D File Offset: 0x006EE01D
+		// Token: 0x1700E3A9 RID: 58281
+		// (get) Token: 0x06036A89 RID: 223881 RVA: 0x00750621 File Offset: 0x0074E821
+		// (set) Token: 0x06036A8A RID: 223882 RVA: 0x00750629 File Offset: 0x0074E829
 		public int EntityDataId { get; set; }
 
-		// Token: 0x1700D7C5 RID: 55237
-		// (get) Token: 0x060337E1 RID: 210913 RVA: 0x006EFE26 File Offset: 0x006EE026
-		// (set) Token: 0x060337E2 RID: 210914 RVA: 0x006EFE2E File Offset: 0x006EE02E
+		// Token: 0x1700E3AA RID: 58282
+		// (get) Token: 0x06036A8B RID: 223883 RVA: 0x00750632 File Offset: 0x0074E832
+		// (set) Token: 0x06036A8C RID: 223884 RVA: 0x0075063A File Offset: 0x0074E83A
 		public ITransformT Transform { get; set; }
 
-		// Token: 0x1700D7C6 RID: 55238
-		// (get) Token: 0x060337E3 RID: 210915 RVA: 0x006EFE37 File Offset: 0x006EE037
-		// (set) Token: 0x060337E4 RID: 210916 RVA: 0x006EFE3F File Offset: 0x006EE03F
+		// Token: 0x1700E3AB RID: 58283
+		// (get) Token: 0x06036A8D RID: 223885 RVA: 0x00750643 File Offset: 0x0074E843
+		// (set) Token: 0x06036A8E RID: 223886 RVA: 0x0075064B File Offset: 0x0074E84B
 		public TVarRefUnion Save { get; set; }
 
-		// Token: 0x060337E5 RID: 210917 RVA: 0x006EFE48 File Offset: 0x006EE048
+		// Token: 0x06036A8F RID: 223887 RVA: 0x00750654 File Offset: 0x0074E854
 		public ISpawnEntityT()
 		{
 			this.EntityDataId = 0;

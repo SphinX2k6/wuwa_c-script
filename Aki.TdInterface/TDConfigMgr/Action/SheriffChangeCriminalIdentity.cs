@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021F5 RID: 8693
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002460 RID: 9312
 	public class SheriffChangeCriminalIdentity : ActionParams
 	{
-		// Token: 0x0600BEEB RID: 48875 RVA: 0x001B7394 File Offset: 0x001B5594
+		// Token: 0x0600CAA7 RID: 51879 RVA: 0x001CEA20 File Offset: 0x001CCC20
 		private SheriffChangeCriminalIdentity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BEEC RID: 48876 RVA: 0x001B73CC File Offset: 0x001B55CC
+		// Token: 0x0600CAA8 RID: 51880 RVA: 0x001CEA58 File Offset: 0x001CCC58
 		public static SheriffChangeCriminalIdentity Create([Nullable(2)] SheriffChangeCriminalIdentity instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEED RID: 48877 RVA: 0x001B73DF File Offset: 0x001B55DF
+		// Token: 0x0600CAA9 RID: 51881 RVA: 0x001CEA6B File Offset: 0x001CCC6B
 		public static SheriffChangeCriminalIdentity CreateFromSetValue([Nullable(2)] SheriffChangeCriminalIdentity_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEEE RID: 48878 RVA: 0x001B73F2 File Offset: 0x001B55F2
+		// Token: 0x0600CAAA RID: 51882 RVA: 0x001CEA7E File Offset: 0x001CCC7E
 		public SheriffChangeCriminalIdentity_SetValue ToSetValue()
 		{
 			return new SheriffChangeCriminalIdentity_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039E8 RID: 14824
-		// (get) Token: 0x0600BEEF RID: 48879 RVA: 0x001B7411 File Offset: 0x001B5611
-		// (set) Token: 0x0600BEF0 RID: 48880 RVA: 0x001B743C File Offset: 0x001B563C
+		// Token: 0x17003CDD RID: 15581
+		// (get) Token: 0x0600CAAB RID: 51883 RVA: 0x001CEA9D File Offset: 0x001CCC9D
+		// (set) Token: 0x0600CAAC RID: 51884 RVA: 0x001CEAC8 File Offset: 0x001CCCC8
 		public virtual int CriminalId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039E9 RID: 14825
-		// (get) Token: 0x0600BEF1 RID: 48881 RVA: 0x001B744A File Offset: 0x001B564A
-		// (set) Token: 0x0600BEF2 RID: 48882 RVA: 0x001B7475 File Offset: 0x001B5675
+		// Token: 0x17003CDE RID: 15582
+		// (get) Token: 0x0600CAAD RID: 51885 RVA: 0x001CEAD6 File Offset: 0x001CCCD6
+		// (set) Token: 0x0600CAAE RID: 51886 RVA: 0x001CEB01 File Offset: 0x001CCD01
 		public virtual int IdentityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071DB RID: 29147
+		// Token: 0x04007824 RID: 30756
 		[Nullable(2)]
 		protected new SheriffChangeCriminalIdentity FbInstance;
 
-		// Token: 0x040071DC RID: 29148
+		// Token: 0x04007825 RID: 30757
 		[Nullable(2)]
 		protected SheriffChangeCriminalIdentity_SetValue PocoInterface;
 	}

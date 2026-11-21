@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C19 RID: 19481
+	// Token: 0x02005106 RID: 20742
 	public struct IEntityStateCondition : IFlatbufferObject
 	{
-		// Token: 0x17008D86 RID: 36230
-		// (get) Token: 0x0601EDC5 RID: 126405 RVA: 0x0045201B File Offset: 0x0045021B
+		// Token: 0x170094AA RID: 38058
+		// (get) Token: 0x060209AB RID: 133547 RVA: 0x00485683 File Offset: 0x00483883
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EDC6 RID: 126406 RVA: 0x00452028 File Offset: 0x00450228
+		// Token: 0x060209AC RID: 133548 RVA: 0x00485690 File Offset: 0x00483890
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601EDC7 RID: 126407 RVA: 0x00452030 File Offset: 0x00450230
+		// Token: 0x060209AD RID: 133549 RVA: 0x00485698 File Offset: 0x00483898
 		public static IEntityStateCondition GetRootAsIEntityStateCondition(ByteBuffer _bb)
 		{
 			return IEntityStateCondition.GetRootAsIEntityStateCondition(_bb, default(IEntityStateCondition));
 		}
 
-		// Token: 0x0601EDC8 RID: 126408 RVA: 0x0045204C File Offset: 0x0045024C
+		// Token: 0x060209AE RID: 133550 RVA: 0x004856B4 File Offset: 0x004838B4
 		public static IEntityStateCondition GetRootAsIEntityStateCondition(ByteBuffer _bb, IEntityStateCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601EDC9 RID: 126409 RVA: 0x00452069 File Offset: 0x00450269
+		// Token: 0x060209AF RID: 133551 RVA: 0x004856D1 File Offset: 0x004838D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601EDCA RID: 126410 RVA: 0x00452078 File Offset: 0x00450278
+		// Token: 0x060209B0 RID: 133552 RVA: 0x004856E0 File Offset: 0x004838E0
 		public IEntityStateCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008D87 RID: 36231
-		// (get) Token: 0x0601EDCB RID: 126411 RVA: 0x00452088 File Offset: 0x00450288
+		// Token: 0x170094AB RID: 38059
+		// (get) Token: 0x060209B1 RID: 133553 RVA: 0x004856F0 File Offset: 0x004838F0
 		public int EntityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008D88 RID: 36232
-		// (get) Token: 0x0601EDCC RID: 126412 RVA: 0x004520C4 File Offset: 0x004502C4
+		// Token: 0x170094AC RID: 38060
+		// (get) Token: 0x060209B2 RID: 133554 RVA: 0x0048572C File Offset: 0x0048392C
 		public string State
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EDCD RID: 126413 RVA: 0x004520FB File Offset: 0x004502FB
+		// Token: 0x060209B3 RID: 133555 RVA: 0x00485763 File Offset: 0x00483963
 		public Span<byte> GetStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601EDCE RID: 126414 RVA: 0x0045210A File Offset: 0x0045030A
+		// Token: 0x060209B4 RID: 133556 RVA: 0x00485772 File Offset: 0x00483972
 		public byte[] GetStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601EDCF RID: 126415 RVA: 0x00452118 File Offset: 0x00450318
+		// Token: 0x060209B5 RID: 133557 RVA: 0x00485780 File Offset: 0x00483980
 		public static Offset<IEntityStateCondition> CreateIEntityStateCondition(FlatBufferBuilder builder, int EntityId = 0, StringOffset StateOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IEntityStateCondition.EndIEntityStateCondition(builder);
 		}
 
-		// Token: 0x0601EDD0 RID: 126416 RVA: 0x00452135 File Offset: 0x00450335
+		// Token: 0x060209B6 RID: 133558 RVA: 0x0048579D File Offset: 0x0048399D
 		public static void StartIEntityStateCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601EDD1 RID: 126417 RVA: 0x0045213E File Offset: 0x0045033E
+		// Token: 0x060209B7 RID: 133559 RVA: 0x004857A6 File Offset: 0x004839A6
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(0, entityId, 0);
 		}
 
-		// Token: 0x0601EDD2 RID: 126418 RVA: 0x00452149 File Offset: 0x00450349
+		// Token: 0x060209B8 RID: 133560 RVA: 0x004857B1 File Offset: 0x004839B1
 		public static void AddState(FlatBufferBuilder builder, StringOffset stateOffset)
 		{
 			builder.AddOffset(1, stateOffset.Value, 0);
 		}
 
-		// Token: 0x0601EDD3 RID: 126419 RVA: 0x00452159 File Offset: 0x00450359
+		// Token: 0x060209B9 RID: 133561 RVA: 0x004857C1 File Offset: 0x004839C1
 		public static Offset<IEntityStateCondition> EndIEntityStateCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IEntityStateCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601EDD4 RID: 126420 RVA: 0x00452168 File Offset: 0x00450368
+		// Token: 0x060209BA RID: 133562 RVA: 0x004857D0 File Offset: 0x004839D0
 		public IEntityStateConditionT UnPack()
 		{
 			IEntityStateConditionT entityStateConditionT = new IEntityStateConditionT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return entityStateConditionT;
 		}
 
-		// Token: 0x0601EDD5 RID: 126421 RVA: 0x00452183 File Offset: 0x00450383
+		// Token: 0x060209BB RID: 133563 RVA: 0x004857EB File Offset: 0x004839EB
 		public void UnPackTo(IEntityStateConditionT _o)
 		{
 			_o.EntityId = this.EntityId;
 			_o.State = this.State;
 		}
 
-		// Token: 0x0601EDD6 RID: 126422 RVA: 0x004521A0 File Offset: 0x004503A0
+		// Token: 0x060209BC RID: 133564 RVA: 0x00485808 File Offset: 0x00483A08
 		public static Offset<IEntityStateCondition> Pack(FlatBufferBuilder builder, IEntityStateConditionT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IEntityStateCondition.CreateIEntityStateCondition(builder, _o.EntityId, stateOffset);
 		}
 
-		// Token: 0x0400D5B2 RID: 54706
+		// Token: 0x0400E0C9 RID: 57545
 		private Table __p;
 	}
 }

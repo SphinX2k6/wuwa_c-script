@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -9,7 +8,6 @@ using Aki.Protocol;
 using Aki.Protocol.Ai;
 using Aki.Protocol.Debug;
 using AkiClient.Game.Aki.Character.BaseCharacter;
-using CSharpScript.Core.Common;
 using CSharpScript.Game;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.RoleUi;
@@ -19,22 +17,22 @@ using Google.Protobuf;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x02002EC8 RID: 11976
+// Token: 0x0200241B RID: 9243
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x060198E4 RID: 104676 RVA: 0x0069C5C4 File Offset: 0x0069A7C4
+	// Token: 0x060171D7 RID: 94679 RVA: 0x006C2804 File Offset: 0x006C0A04
 	static CharacterGasDebugComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterGasDebugComponent.CreateStaticDefaultValue), new Action(CharacterGasDebugComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060198E5 RID: 104677 RVA: 0x0069C6B4 File Offset: 0x0069A8B4
+	// Token: 0x060171D8 RID: 94680 RVA: 0x006C28F4 File Offset: 0x006C0AF4
 	public static void CreateStaticDefaultValue()
 	{
-		EAttributeType[] array = new EAttributeType[66];
-		RuntimeHelpers.InitializeArray(array, fieldof(<PrivateImplementationDetails>.90066994069708F4BE5C0F6E5772312598BCB9848418CD9C1798F16C878742E0).FieldHandle);
+		EAttributeType[] array = new EAttributeType[68];
+		RuntimeHelpers.InitializeArray(array, fieldof(<PrivateImplementationDetails>.C441E20D5B71E095C10A8AEB434B662CCFFEBA5EA1F0511CF111616566293A46).FieldHandle);
 		CharacterGasDebugComponent._attributeIdArray = array;
 		CharacterGasDebugComponent._moveRecordStrings = new List<string>();
 		CharacterGasDebugComponent._damageRecordStrings = new List<string>();
@@ -48,7 +46,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		CharacterGasDebugComponent._damageRecordAttrArray = new List<string>();
 	}
 
-	// Token: 0x060198E6 RID: 104678 RVA: 0x0069C73C File Offset: 0x0069A93C
+	// Token: 0x060171D9 RID: 94681 RVA: 0x006C297C File Offset: 0x006C0B7C
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterGasDebugComponent._attributeIdArray = null;
@@ -72,8 +70,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		CharacterGasDebugComponent.FrameUpdateSpanTime = 0L;
 	}
 
-	// Token: 0x17002344 RID: 9028
-	// (get) Token: 0x060198E7 RID: 104679 RVA: 0x0069C7D0 File Offset: 0x0069A9D0
+	// Token: 0x170023ED RID: 9197
+	// (get) Token: 0x060171DA RID: 94682 RVA: 0x006C2A10 File Offset: 0x006C0C10
 	private static EAttributeType[] AttributeIdArray
 	{
 		get
@@ -82,7 +80,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x060198E8 RID: 104680 RVA: 0x0069C7D8 File Offset: 0x0069A9D8
+	// Token: 0x060171DB RID: 94683 RVA: 0x006C2A18 File Offset: 0x006C0C18
 	protected override bool OnStart()
 	{
 		CharacterActorComponent component = base.Entity.GetComponent<CharacterActorComponent>();
@@ -95,7 +93,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return true;
 	}
 
-	// Token: 0x060198E9 RID: 104681 RVA: 0x0069C878 File Offset: 0x0069AA78
+	// Token: 0x060171DC RID: 94684 RVA: 0x006C2AB8 File Offset: 0x006C0CB8
 	protected override void OnTick(float delta)
 	{
 		if (CharacterGasDebugComponent.InTimeStop && (long)Time.Instance.Frame > CharacterGasDebugComponent.FrameUpdateSpanTime)
@@ -121,7 +119,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x060198EA RID: 104682 RVA: 0x0069C968 File Offset: 0x0069AB68
+	// Token: 0x060171DD RID: 94685 RVA: 0x006C2BA8 File Offset: 0x006C0DA8
 	protected override bool OnEnd()
 	{
 		UAsyncTaskEffectDebugString geDebugTask = this.GeDebugTask;
@@ -137,7 +135,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return true;
 	}
 
-	// Token: 0x060198EB RID: 104683 RVA: 0x0069C9F7 File Offset: 0x0069ABF7
+	// Token: 0x060171DE RID: 94686 RVA: 0x006C2C37 File Offset: 0x006C0E37
 	private void BeginDebugTask()
 	{
 		if (this.DebugGasComponent == null)
@@ -153,7 +151,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		geDebugTask.OnAnyGameplayEffectExecuted.Add(new Action<string>(this.GeDebugTaskCallback));
 	}
 
-	// Token: 0x060198EC RID: 104684 RVA: 0x0069CA34 File Offset: 0x0069AC34
+	// Token: 0x060171DF RID: 94687 RVA: 0x006C2C74 File Offset: 0x006C0E74
 	private void GeDebugTaskCallback(string debugInfo)
 	{
 		if (debugInfo.Contains("Tag"))
@@ -168,20 +166,20 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x060198ED RID: 104685 RVA: 0x0069CAAB File Offset: 0x0069ACAB
+	// Token: 0x060171E0 RID: 94688 RVA: 0x006C2CEB File Offset: 0x006C0EEB
 	public string GetGeDebugStrings()
 	{
 		return string.Join(" ", this.DebugStrings);
 	}
 
-	// Token: 0x060198EE RID: 104686 RVA: 0x0069CABD File Offset: 0x0069ACBD
+	// Token: 0x060171E1 RID: 94689 RVA: 0x006C2CFD File Offset: 0x006C0EFD
 	public string GetTagDebugStrings()
 	{
 		BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
 		return ((component != null) ? component.TagContainer.GetDebugString() : null) ?? "找不到tag组件";
 	}
 
-	// Token: 0x060198EF RID: 104687 RVA: 0x0069CAE4 File Offset: 0x0069ACE4
+	// Token: 0x060171E2 RID: 94690 RVA: 0x006C2D24 File Offset: 0x006C0F24
 	public unsafe void AddSkillLogString(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -223,7 +221,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		this.SkillLogStrings.Add(text);
 	}
 
-	// Token: 0x060198F0 RID: 104688 RVA: 0x0069CBF4 File Offset: 0x0069ADF4
+	// Token: 0x060171E3 RID: 94691 RVA: 0x006C2E34 File Offset: 0x006C1034
 	public string GetSkillLogString(string filterStr)
 	{
 		List<string> list = new List<string>();
@@ -269,13 +267,13 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return string.Join("\n", list2);
 	}
 
-	// Token: 0x060198F1 RID: 104689 RVA: 0x0069CCC3 File Offset: 0x0069AEC3
+	// Token: 0x060171E4 RID: 94692 RVA: 0x006C2F03 File Offset: 0x006C1103
 	public void ClearSkillLogString()
 	{
 		this.SkillLogStrings.Clear();
 	}
 
-	// Token: 0x060198F2 RID: 104690 RVA: 0x0069CCD0 File Offset: 0x0069AED0
+	// Token: 0x060171E5 RID: 94693 RVA: 0x006C2F10 File Offset: 0x006C1110
 	public unsafe void AddSkillBehaviorLogString(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -313,7 +311,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		this.SkillBehaviorLogStrings.Add(item3);
 	}
 
-	// Token: 0x060198F3 RID: 104691 RVA: 0x0069CDC8 File Offset: 0x0069AFC8
+	// Token: 0x060171E6 RID: 94694 RVA: 0x006C3008 File Offset: 0x006C1208
 	public string GetSkillBehaviorLogString(string filterStr)
 	{
 		List<string> list = new List<string>();
@@ -346,13 +344,13 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return string.Join("\n", list2);
 	}
 
-	// Token: 0x060198F4 RID: 104692 RVA: 0x0069CEE4 File Offset: 0x0069B0E4
+	// Token: 0x060171E7 RID: 94695 RVA: 0x006C3124 File Offset: 0x006C1324
 	public void ClearSkillBehaviorLogString()
 	{
 		this.SkillBehaviorLogStrings.Clear();
 	}
 
-	// Token: 0x060198F5 RID: 104693 RVA: 0x0069CEF4 File Offset: 0x0069B0F4
+	// Token: 0x060171E8 RID: 94696 RVA: 0x006C3134 File Offset: 0x006C1334
 	public unsafe void AddBulletDebugLogString(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -390,7 +388,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		this.BulletDebugStrings.Add(sb.ToString());
 	}
 
-	// Token: 0x060198F6 RID: 104694 RVA: 0x0069CFF0 File Offset: 0x0069B1F0
+	// Token: 0x060171E9 RID: 94697 RVA: 0x006C3230 File Offset: 0x006C1430
 	public void AddBulletDebugLogString(string message, [ParamCollection] [Nullable(new byte[]
 	{
 		1,
@@ -426,7 +424,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		this.BulletDebugStrings.Add(sb.ToString());
 	}
 
-	// Token: 0x060198F7 RID: 104695 RVA: 0x0069D0FC File Offset: 0x0069B2FC
+	// Token: 0x060171EA RID: 94698 RVA: 0x006C333C File Offset: 0x006C153C
 	public string GetBulletLogString(string filterStr)
 	{
 		List<string> list = new List<string>();
@@ -459,13 +457,13 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return string.Join("\n", list2);
 	}
 
-	// Token: 0x060198F8 RID: 104696 RVA: 0x0069D218 File Offset: 0x0069B418
+	// Token: 0x060171EB RID: 94699 RVA: 0x006C3458 File Offset: 0x006C1658
 	public void ClearBulletLogString()
 	{
 		this.BulletDebugStrings.Clear();
 	}
 
-	// Token: 0x060198F9 RID: 104697 RVA: 0x0069D228 File Offset: 0x0069B428
+	// Token: 0x060171EC RID: 94700 RVA: 0x006C3468 File Offset: 0x006C1668
 	public string GetTagContainerDebugString(FGameplayTagContainer tagContainer)
 	{
 		TArray<FGameplayTag> gameplayTags = tagContainer.GameplayTags;
@@ -482,7 +480,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return text;
 	}
 
-	// Token: 0x060198FA RID: 104698 RVA: 0x0069D290 File Offset: 0x0069B490
+	// Token: 0x060171ED RID: 94701 RVA: 0x006C34D0 File Offset: 0x006C16D0
 	public string GetBuffEffectDebugString(string searchStr)
 	{
 		string text = "";
@@ -504,36 +502,53 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return text;
 	}
 
-	// Token: 0x060198FB RID: 104699 RVA: 0x0069D370 File Offset: 0x0069B570
+	// Token: 0x060171EE RID: 94702 RVA: 0x006C35B0 File Offset: 0x006C17B0
 	public string GetShieldDebugString(string filterStr = "")
 	{
 		this.ShieldDebugStrings.Clear();
-		string[] array = (from match in Regex.Matches(filterStr, "[0-9]+")
-		select match.Value).ToArray<string>();
+		MatchCollection matchCollection = Regex.Matches(filterStr, "[0-9]+");
+		string[] array = new string[matchCollection.Count];
+		for (int i = 0; i < matchCollection.Count; i++)
+		{
+			array[i] = matchCollection[i].Value;
+		}
 		CharacterShieldComponent component = base.Entity.GetComponent<CharacterShieldComponent>();
 		if (component != null)
 		{
 			foreach (KeyValuePair<int, CharacterShield> keyValuePair in component.GetDebugShieldInfo())
 			{
 				int num;
-				CharacterShield shield2;
-				keyValuePair.Deconstruct(out num, out shield2);
-				CharacterShield shield = shield2;
-				if (array.Length == 0 || array.Any((string key) => shield.TemplateId.ToString().StartsWith(key)))
+				CharacterShield characterShield;
+				keyValuePair.Deconstruct(out num, out characterShield);
+				CharacterShield characterShield2 = characterShield;
+				if (array.Length != 0)
 				{
-					float shieldValue = shield.ShieldValue;
-					int priority = shield.Priority;
-					int templateId = shield.TemplateId;
-					DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(42, 3);
-					defaultInterpolatedStringHandler.AppendLiteral("Shield magnitude: ");
-					defaultInterpolatedStringHandler.AppendFormatted<float>(shieldValue);
-					defaultInterpolatedStringHandler.AppendLiteral(" priority: ");
-					defaultInterpolatedStringHandler.AppendFormatted<int>(priority);
-					defaultInterpolatedStringHandler.AppendLiteral(" templateId: ");
-					defaultInterpolatedStringHandler.AppendFormatted<int>(templateId);
-					string item = defaultInterpolatedStringHandler.ToStringAndClear();
-					this.ShieldDebugStrings.Add(item);
+					bool flag = false;
+					for (int j = 0; j < array.Length; j++)
+					{
+						if (characterShield2.TemplateId.ToString().StartsWith(array[j]))
+						{
+							flag = true;
+							break;
+						}
+					}
+					if (!flag)
+					{
+						continue;
+					}
 				}
+				float shieldValue = characterShield2.ShieldValue;
+				int priority = characterShield2.Priority;
+				int templateId = characterShield2.TemplateId;
+				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(42, 3);
+				defaultInterpolatedStringHandler.AppendLiteral("Shield magnitude: ");
+				defaultInterpolatedStringHandler.AppendFormatted<float>(shieldValue);
+				defaultInterpolatedStringHandler.AppendLiteral(" priority: ");
+				defaultInterpolatedStringHandler.AppendFormatted<int>(priority);
+				defaultInterpolatedStringHandler.AppendLiteral(" templateId: ");
+				defaultInterpolatedStringHandler.AppendFormatted<int>(templateId);
+				string item = defaultInterpolatedStringHandler.ToStringAndClear();
+				this.ShieldDebugStrings.Add(item);
 			}
 		}
 		BaseAttributeComponent component2 = base.Entity.GetComponent<BaseAttributeComponent>();
@@ -541,7 +556,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return "\n\nShields:\n" + string.Join("\n", this.ShieldDebugStrings) + str;
 	}
 
-	// Token: 0x060198FC RID: 104700 RVA: 0x0069D50C File Offset: 0x0069B70C
+	// Token: 0x060171EF RID: 94703 RVA: 0x006C375C File Offset: 0x006C195C
 	public string GetAttributeDebugStrings()
 	{
 		BaseAttributeComponent component = base.Entity.GetComponent<BaseAttributeComponent>();
@@ -603,7 +618,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return text + "\n队伍属性：\n" + CharacterGasDebugComponent.GetFormationAttributeDebugStrings();
 	}
 
-	// Token: 0x060198FD RID: 104701 RVA: 0x0069D730 File Offset: 0x0069B930
+	// Token: 0x060171F0 RID: 94704 RVA: 0x006C3980 File Offset: 0x006C1B80
 	public string GetAllAttributeDebugStrings()
 	{
 		this.AttributeDebugStrings.Clear();
@@ -630,7 +645,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return string.Join("\n", this.AttributeDebugStrings);
 	}
 
-	// Token: 0x060198FE RID: 104702 RVA: 0x0069D830 File Offset: 0x0069BA30
+	// Token: 0x060171F1 RID: 94705 RVA: 0x006C3A80 File Offset: 0x006C1C80
 	public static string GetFormationAttributeDebugStrings()
 	{
 		string text = "";
@@ -657,7 +672,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return text;
 	}
 
-	// Token: 0x060198FF RID: 104703 RVA: 0x0069D950 File Offset: 0x0069BB50
+	// Token: 0x060171F2 RID: 94706 RVA: 0x006C3BA0 File Offset: 0x006C1DA0
 	public string GetAllAttributeDebugInfo()
 	{
 		BaseAttributeComponent component = base.Entity.GetComponent<BaseAttributeComponent>();
@@ -780,7 +795,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return text;
 	}
 
-	// Token: 0x06019900 RID: 104704 RVA: 0x0069DF1C File Offset: 0x0069C11C
+	// Token: 0x060171F3 RID: 94707 RVA: 0x006C416C File Offset: 0x006C236C
 	private void StartListenMovementHistory()
 	{
 		EventSystem.Instance.AddWithTarget<int, EMovementMode, EMovementMode, byte, byte>(base.Entity, EEventName.CharMovementModeChanged, new Action<int, EMovementMode, EMovementMode, byte, byte>(this.OnCharacterMovementModeChanged));
@@ -789,7 +804,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		EventSystem.Instance.AddWithTarget(base.Entity, EEventName.CharOnSetNewBeHit, new Action<bool>(this.NewBeHitChangeHandler));
 	}
 
-	// Token: 0x06019901 RID: 104705 RVA: 0x0069DFB4 File Offset: 0x0069C1B4
+	// Token: 0x060171F4 RID: 94708 RVA: 0x006C4204 File Offset: 0x006C2404
 	private void EndListenMovementHistory()
 	{
 		EventSystem.Instance.RemoveWithTarget<int, EMovementMode, EMovementMode, byte, byte>(base.Entity, EEventName.CharMovementModeChanged, new Action<int, EMovementMode, EMovementMode, byte, byte>(this.OnCharacterMovementModeChanged));
@@ -798,7 +813,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.CharOnSetNewBeHit, new Action<bool>(this.NewBeHitChangeHandler));
 	}
 
-	// Token: 0x06019902 RID: 104706 RVA: 0x0069E04C File Offset: 0x0069C24C
+	// Token: 0x060171F5 RID: 94709 RVA: 0x006C429C File Offset: 0x006C249C
 	private void OnCharacterMovementModeChanged(int charId, EMovementMode prevMovementMode, EMovementMode newMovementMode, byte prevCustomMode, byte newCustomMode)
 	{
 		int num = (int)prevMovementMode;
@@ -837,25 +852,25 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}));
 	}
 
-	// Token: 0x06019903 RID: 104707 RVA: 0x0069E104 File Offset: 0x0069C304
+	// Token: 0x060171F6 RID: 94710 RVA: 0x006C4354 File Offset: 0x006C2554
 	private void MoveStateChangeHandler(global::ECharMoveState oldState, global::ECharMoveState newState)
 	{
 		this.MovementDebugStrings.Insert(0, oldState.ToString() + " ->" + newState.ToString());
 	}
 
-	// Token: 0x06019904 RID: 104708 RVA: 0x0069E136 File Offset: 0x0069C336
+	// Token: 0x060171F7 RID: 94711 RVA: 0x006C4386 File Offset: 0x006C2586
 	private void PositionStateChangeHandler(global::ECharPositionState oldState, global::ECharPositionState newState)
 	{
 		this.MovementDebugStrings.Insert(0, oldState.ToString() + " ->" + newState.ToString());
 	}
 
-	// Token: 0x06019905 RID: 104709 RVA: 0x0069E168 File Offset: 0x0069C368
+	// Token: 0x060171F8 RID: 94712 RVA: 0x006C43B8 File Offset: 0x006C25B8
 	private void NewBeHitChangeHandler(bool beHit)
 	{
 		this.MovementDebugStrings.Insert(0, "Set NewBeHit:" + beHit.ToString());
 	}
 
-	// Token: 0x06019906 RID: 104710 RVA: 0x0069E187 File Offset: 0x0069C387
+	// Token: 0x060171F9 RID: 94713 RVA: 0x006C43D7 File Offset: 0x006C25D7
 	public string GetAllMovementHistory()
 	{
 		if (this.MovementDebugStrings.Count > 50)
@@ -865,7 +880,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return string.Join("\n", this.MovementDebugStrings);
 	}
 
-	// Token: 0x06019907 RID: 104711 RVA: 0x0069E1C0 File Offset: 0x0069C3C0
+	// Token: 0x060171FA RID: 94714 RVA: 0x006C4410 File Offset: 0x006C2610
 	public void DebugResetBaseValue(int id, float val)
 	{
 		if (id >= 1 && id < 143)
@@ -879,8 +894,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x17002345 RID: 9029
-	// (get) Token: 0x06019908 RID: 104712 RVA: 0x0069E1E5 File Offset: 0x0069C3E5
+	// Token: 0x170023EE RID: 9198
+	// (get) Token: 0x060171FB RID: 94715 RVA: 0x006C4435 File Offset: 0x006C2635
 	public static bool IsServerLogOff
 	{
 		get
@@ -889,13 +904,13 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x06019909 RID: 104713 RVA: 0x0069E1EC File Offset: 0x0069C3EC
+	// Token: 0x060171FC RID: 94716 RVA: 0x006C443C File Offset: 0x006C263C
 	public static void ReceiveSwitchServerLogMode(bool isClientControl)
 	{
 		CharacterGasDebugComponent.IsServerLogOnInternal = isClientControl;
 	}
 
-	// Token: 0x0601990A RID: 104714 RVA: 0x0069E1F4 File Offset: 0x0069C3F4
+	// Token: 0x060171FD RID: 94717 RVA: 0x006C4444 File Offset: 0x006C2644
 	public static void RequestSwitchServerMode(bool isClientControl)
 	{
 		SwitchBattleModeRequest switchBattleModeRequest = SwitchBattleModeRequest.Create();
@@ -911,18 +926,18 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}, 0);
 	}
 
-	// Token: 0x0601990B RID: 104715 RVA: 0x0069E248 File Offset: 0x0069C448
+	// Token: 0x060171FE RID: 94718 RVA: 0x006C4498 File Offset: 0x006C2698
 	public static string SecondsSinceStartup()
 	{
 		return (Time.Instance.WorldTimeSeconds - CharacterGasDebugComponent.RecordStartTime - (double)CharacterGasDebugComponent.TimeStopSpanTime).ToString("F2");
 	}
 
-	// Token: 0x0601990C RID: 104716 RVA: 0x0069E279 File Offset: 0x0069C479
+	// Token: 0x060171FF RID: 94719 RVA: 0x006C44C9 File Offset: 0x006C26C9
 	public static void SetDistanceMax(float max)
 	{
 	}
 
-	// Token: 0x0601990D RID: 104717 RVA: 0x0069E27C File Offset: 0x0069C47C
+	// Token: 0x06017200 RID: 94720 RVA: 0x006C44CC File Offset: 0x006C26CC
 	public static void BeginRecord()
 	{
 		CharacterGasDebugComponent.TimeStopSpanTime = 0f;
@@ -950,7 +965,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		instance2.Add<bool, float>(name2, handle2);
 	}
 
-	// Token: 0x0601990E RID: 104718 RVA: 0x0069E32C File Offset: 0x0069C52C
+	// Token: 0x06017201 RID: 94721 RVA: 0x006C457C File Offset: 0x006C277C
 	public static string EndRecord()
 	{
 		if (CharacterGasDebugComponent.ShouldRecord)
@@ -980,8 +995,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return "";
 	}
 
-	// Token: 0x17002346 RID: 9030
-	// (get) Token: 0x0601990F RID: 104719 RVA: 0x0069E3B2 File Offset: 0x0069C5B2
+	// Token: 0x170023EF RID: 9199
+	// (get) Token: 0x06017202 RID: 94722 RVA: 0x006C4602 File Offset: 0x006C2802
 	private static List<string> MoveRecordStrings
 	{
 		get
@@ -990,8 +1005,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x17002347 RID: 9031
-	// (get) Token: 0x06019910 RID: 104720 RVA: 0x0069E3B9 File Offset: 0x0069C5B9
+	// Token: 0x170023F0 RID: 9200
+	// (get) Token: 0x06017203 RID: 94723 RVA: 0x006C4609 File Offset: 0x006C2809
 	private static List<string> DamageRecordStrings
 	{
 		get
@@ -1000,8 +1015,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x17002348 RID: 9032
-	// (get) Token: 0x06019911 RID: 104721 RVA: 0x0069E3C0 File Offset: 0x0069C5C0
+	// Token: 0x170023F1 RID: 9201
+	// (get) Token: 0x06017204 RID: 94724 RVA: 0x006C4610 File Offset: 0x006C2810
 	private static Dictionary<int, RecordMoveSum> MoveSumTable
 	{
 		get
@@ -1010,8 +1025,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x17002349 RID: 9033
-	// (get) Token: 0x06019912 RID: 104722 RVA: 0x0069E3C7 File Offset: 0x0069C5C7
+	// Token: 0x170023F2 RID: 9202
+	// (get) Token: 0x06017205 RID: 94725 RVA: 0x006C4617 File Offset: 0x006C2817
 	private static Dictionary<string, RecordDamageSum> RoleDamageSumTable
 	{
 		get
@@ -1020,8 +1035,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x1700234A RID: 9034
-	// (get) Token: 0x06019913 RID: 104723 RVA: 0x0069E3CE File Offset: 0x0069C5CE
+	// Token: 0x170023F3 RID: 9203
+	// (get) Token: 0x06017206 RID: 94726 RVA: 0x006C461E File Offset: 0x006C281E
 	private static Dictionary<string, RecordDamageSum> MonsterDamageSumTable
 	{
 		get
@@ -1030,8 +1045,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x1700234B RID: 9035
-	// (get) Token: 0x06019914 RID: 104724 RVA: 0x0069E3D5 File Offset: 0x0069C5D5
+	// Token: 0x170023F4 RID: 9204
+	// (get) Token: 0x06017207 RID: 94727 RVA: 0x006C4625 File Offset: 0x006C2825
 	private static Dictionary<int, string[]> BulletCreateMap
 	{
 		get
@@ -1040,8 +1055,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x1700234C RID: 9036
-	// (get) Token: 0x06019915 RID: 104725 RVA: 0x0069E3DC File Offset: 0x0069C5DC
+	// Token: 0x170023F5 RID: 9205
+	// (get) Token: 0x06017208 RID: 94728 RVA: 0x006C462C File Offset: 0x006C282C
 	private static List<int> BulletCreateEntityId
 	{
 		get
@@ -1050,7 +1065,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x06019916 RID: 104726 RVA: 0x0069E3E4 File Offset: 0x0069C5E4
+	// Token: 0x06017209 RID: 94729 RVA: 0x006C4634 File Offset: 0x006C2834
 	private static string Output()
 	{
 		List<string> list = new List<string>();
@@ -1070,9 +1085,9 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		UKuroStaticLibrary.SaveStringToFile(str + string.Join("\n", list2), UBlueprintPathsLibrary.ProjectSavedDir() + "Statistics/FightDataRecord/BulletRecord.csv", true);
 		str = "X秒,当前时间,对象,对象ID,对象名称,伤害来源,结算ID,子弹名称,伤害值,技能ID,技能名称,唯一ID,Config ID,攻击,暴击,爆伤,生命,防御,伤害加成\n";
 		UKuroStaticLibrary.SaveStringToFile(str + string.Join("\n", CharacterGasDebugComponent.DamageRecordStrings), UBlueprintPathsLibrary.ProjectSavedDir() + "Statistics/FightDataRecord/DamageRecord.csv", true);
-		str = "X秒,当前时间,对象,对象ID,对象名称,伤害来源,结算ID,子弹名称,伤害值,期望伤害,技能ID,技能名称,是否暴击,唯一ID,协奏能量,基础攻击,倍率系数,当前生效增伤,伤害总深,伤害加深,受击者集协buff层数,集协乘区伤害提升,防御承伤系数,抗性承伤系数,实际生效防御值,共鸣能量变动,实时暴击率,是否弱点伤害类型,弱点伤害增幅系数,怪物类型系数,受击方通用伤害减免,受击方属性伤害减免,偏谐值,实时当前生命值,实时生命值上限,实时攻击,暴击,实时暴击伤害,实时防御,实时共鸣效率,实时共鸣能量上限,实时共鸣能量,实时普攻速度,实时重击速度,实时共鸣技能伤害加成,实时通用伤害加成,实时声骸技能伤害加成,实时普攻伤害加成,实时蓄力攻击伤害加成,实时共鸣解放伤害加成,实时连携技能伤害加成,实时物理伤害加成,实时冷凝伤害加成,实时热熔伤害加成,实时导电伤害加成,实时气动伤害加成,实时衍射伤害加成,实时解离伤害加成,实时无视物理伤害抗性,实时无视属性1伤害抗性,实时无视属性2伤害抗性,实时无视属性3伤害抗性,实时无视属性4伤害抗性,实时无视属性5伤害抗性,实时无视属性6伤害抗性,实时物理伤害抗性,实时冷凝伤害抗性,实时热熔伤害抗性,实时导电伤害抗性,实时气动伤害抗性,实时衍射伤害抗性,实时解离伤害抗性,实时治疗效果加成,实时受治疗效果加成,实时通用受伤减免,实时物理伤害减免,实时冷凝伤害减免,实时热熔伤害减免,实时导电伤害减免,实时气动伤害减免,实时衍射伤害减免,实时解离伤害减免,实时韧性上限,实时韧性,实时韧性恢复速度,实时削韧倍率,实时被削韧倍率,实时狂暴上限,实时狂暴,实时狂暴恢复,实时空狂暴惩罚时间,实时破狂暴倍率,实时被破狂暴倍率,实时共振度上限,实时共振度上限,实时共振度恢复速度,实时空共振度惩罚时间,实时破共振度倍率,实时被破共振度倍率,实时弱点击破速率,实时弱点增幅,当前生命值,生命值上限,攻击,暴击,暴击伤害,防御,共鸣效率,共鸣能量上限,共鸣能量,普攻速度,重击速度,共鸣技能伤害加成,通用伤害加成,声骸技能伤害加成,普攻伤害加成,蓄力攻击伤害加成,共鸣解放伤害加成,连携技能伤害加成,物理伤害加成,冷凝伤害加成,热熔伤害加成,导电伤害加成,气动伤害加成,衍射伤害加成,解离伤害加成,无视物理伤害抗性,无视属性1伤害抗性,无视属性2伤害抗性,无视属性3伤害抗性,无视属性4伤害抗性,无视属性5伤害抗性,无视属性6伤害抗性,物理伤害抗性,冷凝伤害抗性,热熔伤害抗性,导电伤害抗性,气动伤害抗性,衍射伤害抗性,解离伤害抗性,治疗效果加成,受治疗效果加成,通用受伤减免,物理伤害减免,冷凝伤害减免,热熔伤害减免,导电伤害减免,气动伤害减免,衍射伤害减免,解离伤害减免,韧性上限,韧性,韧性恢复速度,削韧倍率,被削韧倍率,狂暴上限,狂暴,狂暴恢复,空狂暴惩罚时间,破狂暴倍率,被破狂暴倍率,共振度上限,共振度上限,共振度恢复速度,空共振度惩罚时间,破共振度倍率,被破共振度倍率,弱点击破速率,弱点增幅,被击者实时当前生命值,被击者实时生命值上限,被击者实时攻击,被击者实时暴击,被击者实时暴击伤害,被击者实时防御,被击者实时共鸣效率,被击者实时共鸣能量上限,被击者实时共鸣能量,被击者实时普攻速度,被击者实时重击速度,被击者实时共鸣技能伤害加成,被击者实时通用伤害加成,被击者实时声骸技能伤害加成,被击者实时普攻伤害加成,被击者实时蓄力攻击伤害加成,被击者实时共鸣解放伤害加成,被击者实时连携技能伤害加成,被击者实时物理伤害加成,被击者实时冷凝伤害加成,被击者实时热熔伤害加成,被击者实时导电伤害加成,被击者实时气动伤害加成,被击者实时衍射伤害加成,被击者实时解离伤害加成,被击者实时无视物理伤害抗性,被击者实时无视属性1伤害抗性,被击者实时无视属性2伤害抗性,被击者实时无视属性3伤害抗性,被击者实时无视属性4伤害抗性,被击者实时无视属性5伤害抗性,被击者实时无视属性6伤害抗性,被击者实时物理伤害抗性,被击者实时冷凝伤害抗性,被击者实时热熔伤害抗性,被击者实时导电伤害抗性,被击者实时气动伤害抗性,被击者实时衍射伤害抗性,被击者实时解离伤害抗性,被击者实时治疗效果加成,被击者实时受治疗效果加成,被击者实时通用受伤减免,被击者实时物理伤害减免,被击者实时冷凝伤害减免,被击者实时热熔伤害减免,被击者实时导电伤害减免,被击者实时气动伤害减免,被击者实时衍射伤害减免,被击者实时解离伤害减免,被击者实时韧性上限,被击者实时韧性,被击者实时韧性恢复速度,被击者实时削韧倍率,被击者实时被削韧倍率,被击者实时狂暴上限,被击者实时狂暴,被击者实时狂暴恢复,被击者实时空狂暴惩罚时间,被击者实时破狂暴倍率,被击者实时被破狂暴倍率,被击者实时共振度上限,被击者实时共振度上限,被击者实时共振度恢复速度,被击者实时空共振度惩罚时间,被击者实时破共振度倍率,被击者实时被破共振度倍率,被击者实时弱点击破速率,被击者实时弱点增幅,被击者当前生命值,被击者生命值上限,被击者攻击,被击者暴击,被击者暴击伤害,被击者防御,被击者共鸣效率,被击者共鸣能量上限,被击者共鸣能量,被击者普攻速度,被击者重击速度,被击者共鸣技能伤害加成,被击者通用伤害加成,被击者声骸技能伤害加成,被击者普攻伤害加成,被击者蓄力攻击伤害加成,被击者共鸣解放伤害加成,被击者连携技能伤害加成,被击者物理伤害加成,被击者冷凝伤害加成,被击者热熔伤害加成,被击者导电伤害加成,被击者气动伤害加成,被击者衍射伤害加成,被击者解离伤害加成,被击者无视物理伤害抗性,被击者无视属性1伤害抗性,被击者无视属性2伤害抗性,被击者无视属性3伤害抗性,被击者无视属性4伤害抗性,被击者无视属性5伤害抗性,被击者无视属性6伤害抗性,被击者物理伤害抗性,被击者冷凝伤害抗性,被击者热熔伤害抗性,被击者导电伤害抗性,被击者气动伤害抗性,被击者衍射伤害抗性,被击者解离伤害抗性,被击者治疗效果加成,被击者受治疗效果加成,被击者通用受伤减免,被击者物理伤害减免,被击者冷凝伤害减免,被击者热熔伤害减免,被击者导电伤害减免,被击者气动伤害减免,被击者衍射伤害减免,被击者解离伤害减免,被击者韧性上限,被击者韧性,被击者韧性恢复速度,被击者削韧倍率,被击者被削韧倍率,被击者狂暴上限,被击者狂暴,被击者狂暴恢复,被击者空狂暴惩罚时间,被击者破狂暴倍率,被击者被破狂暴倍率,被击者共振度上限,被击者共振度上限,被击者共振度恢复速度,被击者空共振度惩罚时间,被击者破共振度倍率,被击者被破共振度倍率,被击者弱点击破速率,被击者弱点增幅,结算表HardnessLv,结算表Percent0,结算表Percent1,结算表ToughLv,结算表Energy,结算表ElementPowerType,结算表ElementPower,攻击者BuffID,攻击者Buff名称,受击者存在的BuffID,受击者存在的Buff名称\n";
+		str = "X秒,当前时间,对象,对象ID,对象名称,伤害来源,结算ID,子弹名称,伤害值,期望伤害,技能ID,技能名称,是否暴击,唯一ID,协奏能量,基础攻击,倍率系数,当前生效增伤,伤害总深,伤害加深,伤害修正,受击者集协buff层数,集协乘区伤害提升,防御承伤系数,抗性承伤系数,实际生效防御值,共鸣能量变动,实时暴击率,是否弱点伤害类型,弱点伤害增幅系数,怪物类型系数,受击方通用伤害减免,受击方属性伤害减免,偏谐值,实时当前生命值,实时生命值上限,实时攻击,暴击,实时暴击伤害,实时防御,实时共鸣效率,实时共鸣能量上限,实时共鸣能量,实时普攻速度,实时重击速度,实时共鸣技能伤害加成,实时通用伤害加成,实时声骸技能伤害加成,实时普攻伤害加成,实时蓄力攻击伤害加成,实时共鸣解放伤害加成,实时连携技能伤害加成,实时物理伤害加成,实时冷凝伤害加成,实时热熔伤害加成,实时导电伤害加成,实时气动伤害加成,实时衍射伤害加成,实时解离伤害加成,实时无视物理伤害抗性,实时无视属性1伤害抗性,实时无视属性2伤害抗性,实时无视属性3伤害抗性,实时无视属性4伤害抗性,实时无视属性5伤害抗性,实时无视属性6伤害抗性,实时物理伤害抗性,实时冷凝伤害抗性,实时热熔伤害抗性,实时导电伤害抗性,实时气动伤害抗性,实时衍射伤害抗性,实时解离伤害抗性,实时治疗效果加成,实时受治疗效果加成,实时通用受伤减免,实时物理伤害减免,实时冷凝伤害减免,实时热熔伤害减免,实时导电伤害减免,实时气动伤害减免,实时衍射伤害减免,实时解离伤害减免,实时韧性上限,实时韧性,实时韧性恢复速度,实时削韧倍率,实时被削韧倍率,实时狂暴上限,实时狂暴,实时狂暴恢复,实时空狂暴惩罚时间,实时破狂暴倍率,实时被破狂暴倍率,实时共振度上限,实时共振度上限,实时共振度恢复速度,实时空共振度惩罚时间,实时破共振度倍率,实时被破共振度倍率,实时弱点击破速率,实时弱点增幅,当前生命值,生命值上限,攻击,暴击,暴击伤害,防御,共鸣效率,共鸣能量上限,共鸣能量,普攻速度,重击速度,共鸣技能伤害加成,通用伤害加成,声骸技能伤害加成,普攻伤害加成,蓄力攻击伤害加成,共鸣解放伤害加成,连携技能伤害加成,物理伤害加成,冷凝伤害加成,热熔伤害加成,导电伤害加成,气动伤害加成,衍射伤害加成,解离伤害加成,无视物理伤害抗性,无视属性1伤害抗性,无视属性2伤害抗性,无视属性3伤害抗性,无视属性4伤害抗性,无视属性5伤害抗性,无视属性6伤害抗性,物理伤害抗性,冷凝伤害抗性,热熔伤害抗性,导电伤害抗性,气动伤害抗性,衍射伤害抗性,解离伤害抗性,治疗效果加成,受治疗效果加成,通用受伤减免,物理伤害减免,冷凝伤害减免,热熔伤害减免,导电伤害减免,气动伤害减免,衍射伤害减免,解离伤害减免,韧性上限,韧性,韧性恢复速度,削韧倍率,被削韧倍率,狂暴上限,狂暴,狂暴恢复,空狂暴惩罚时间,破狂暴倍率,被破狂暴倍率,共振度上限,共振度上限,共振度恢复速度,空共振度惩罚时间,破共振度倍率,被破共振度倍率,弱点击破速率,弱点增幅,被击者实时当前生命值,被击者实时生命值上限,被击者实时攻击,被击者实时暴击,被击者实时暴击伤害,被击者实时防御,被击者实时共鸣效率,被击者实时共鸣能量上限,被击者实时共鸣能量,被击者实时普攻速度,被击者实时重击速度,被击者实时共鸣技能伤害加成,被击者实时通用伤害加成,被击者实时声骸技能伤害加成,被击者实时普攻伤害加成,被击者实时蓄力攻击伤害加成,被击者实时共鸣解放伤害加成,被击者实时连携技能伤害加成,被击者实时物理伤害加成,被击者实时冷凝伤害加成,被击者实时热熔伤害加成,被击者实时导电伤害加成,被击者实时气动伤害加成,被击者实时衍射伤害加成,被击者实时解离伤害加成,被击者实时无视物理伤害抗性,被击者实时无视属性1伤害抗性,被击者实时无视属性2伤害抗性,被击者实时无视属性3伤害抗性,被击者实时无视属性4伤害抗性,被击者实时无视属性5伤害抗性,被击者实时无视属性6伤害抗性,被击者实时物理伤害抗性,被击者实时冷凝伤害抗性,被击者实时热熔伤害抗性,被击者实时导电伤害抗性,被击者实时气动伤害抗性,被击者实时衍射伤害抗性,被击者实时解离伤害抗性,被击者实时治疗效果加成,被击者实时受治疗效果加成,被击者实时通用受伤减免,被击者实时物理伤害减免,被击者实时冷凝伤害减免,被击者实时热熔伤害减免,被击者实时导电伤害减免,被击者实时气动伤害减免,被击者实时衍射伤害减免,被击者实时解离伤害减免,被击者实时韧性上限,被击者实时韧性,被击者实时韧性恢复速度,被击者实时削韧倍率,被击者实时被削韧倍率,被击者实时狂暴上限,被击者实时狂暴,被击者实时狂暴恢复,被击者实时空狂暴惩罚时间,被击者实时破狂暴倍率,被击者实时被破狂暴倍率,被击者实时共振度上限,被击者实时共振度上限,被击者实时共振度恢复速度,被击者实时空共振度惩罚时间,被击者实时破共振度倍率,被击者实时被破共振度倍率,被击者实时弱点击破速率,被击者实时弱点增幅,被击者当前生命值,被击者生命值上限,被击者攻击,被击者暴击,被击者暴击伤害,被击者防御,被击者共鸣效率,被击者共鸣能量上限,被击者共鸣能量,被击者普攻速度,被击者重击速度,被击者共鸣技能伤害加成,被击者通用伤害加成,被击者声骸技能伤害加成,被击者普攻伤害加成,被击者蓄力攻击伤害加成,被击者共鸣解放伤害加成,被击者连携技能伤害加成,被击者物理伤害加成,被击者冷凝伤害加成,被击者热熔伤害加成,被击者导电伤害加成,被击者气动伤害加成,被击者衍射伤害加成,被击者解离伤害加成,被击者无视物理伤害抗性,被击者无视属性1伤害抗性,被击者无视属性2伤害抗性,被击者无视属性3伤害抗性,被击者无视属性4伤害抗性,被击者无视属性5伤害抗性,被击者无视属性6伤害抗性,被击者物理伤害抗性,被击者冷凝伤害抗性,被击者热熔伤害抗性,被击者导电伤害抗性,被击者气动伤害抗性,被击者衍射伤害抗性,被击者解离伤害抗性,被击者治疗效果加成,被击者受治疗效果加成,被击者通用受伤减免,被击者物理伤害减免,被击者冷凝伤害减免,被击者热熔伤害减免,被击者导电伤害减免,被击者气动伤害减免,被击者衍射伤害减免,被击者解离伤害减免,被击者韧性上限,被击者韧性,被击者韧性恢复速度,被击者削韧倍率,被击者被削韧倍率,被击者狂暴上限,被击者狂暴,被击者狂暴恢复,被击者空狂暴惩罚时间,被击者破狂暴倍率,被击者被破狂暴倍率,被击者共振度上限,被击者共振度上限,被击者共振度恢复速度,被击者空共振度惩罚时间,被击者破共振度倍率,被击者被破共振度倍率,被击者弱点击破速率,被击者弱点增幅,结算表HardnessLv,结算表Percent0,结算表Percent1,结算表ToughLv,结算表Energy,结算表ElementPowerType,结算表ElementPower,攻击者BuffID,攻击者Buff名称,受击者存在的BuffID,受击者存在的Buff名称\n";
 		UKuroStaticLibrary.SaveStringToFile(str + string.Join("\n", CharacterGasDebugComponent.DamageRecordAttrArray), UBlueprintPathsLibrary.ProjectSavedDir() + "Statistics/FightDataRecord/DamageRecord_Attr.csv", true);
-		str = "X秒,当前时间,对象,对象ID,对象名称,伤害来源,结算ID,子弹名称,伤害值,技能ID,技能名称,唯一ID,是否暴击,当前生命值,生命值上限,攻击,暴击,暴击伤害,防御,共鸣效率,共鸣能量上限,共鸣能量,普攻速度,重击速度,共鸣技能伤害加成,通用伤害加成,声骸技能伤害加成,普攻伤害加成,蓄力攻击伤害加成,共鸣解放伤害加成,连携技能伤害加成,物理伤害加成,冷凝伤害加成,热熔伤害加成,导电伤害加成,气动伤害加成,衍射伤害加成,解离伤害加成,无视物理伤害抗性,无视属性1伤害抗性,无视属性2伤害抗性,无视属性3伤害抗性,无视属性4伤害抗性,无视属性5伤害抗性,无视属性6伤害抗性,物理伤害抗性,冷凝伤害抗性,热熔伤害抗性,导电伤害抗性,气动伤害抗性,衍射伤害抗性,解离伤害抗性,治疗效果加成,受治疗效果加成,通用受伤减免,物理伤害减免,冷凝伤害减免,热熔伤害减免,导电伤害减免,气动伤害减免,衍射伤害减免,解离伤害减免,韧性上限,韧性,韧性恢复速度,削韧倍率,被削韧倍率,狂暴上限,狂暴,狂暴恢复,空狂暴惩罚时间,破狂暴倍率,被破狂暴倍率,共振度上限,共振度上限,共振度恢复速度,空共振度惩罚时间,破共振度倍率,被破共振度倍率,弱点击破速率,弱点增幅,当前生命值,生命值上限,攻击,暴击,暴击伤害,防御,共鸣效率,共鸣能量上限,共鸣能量,普攻速度,重击速度,共鸣技能伤害加成,通用伤害加成,声骸技能伤害加成,普攻伤害加成,蓄力攻击伤害加成,共鸣解放伤害加成,连携技能伤害加成,物理伤害加成,冷凝伤害加成,热熔伤害加成,导电伤害加成,气动伤害加成,衍射伤害加成,解离伤害加成,无视物理伤害抗性,无视属性1伤害抗性,无视属性2伤害抗性,无视属性3伤害抗性,无视属性4伤害抗性,无视属性5伤害抗性,无视属性6伤害抗性,物理伤害抗性,冷凝伤害抗性,热熔伤害抗性,导电伤害抗性,气动伤害抗性,衍射伤害抗性,解离伤害抗性,治疗效果加成,受治疗效果加成,通用受伤减免,物理伤害减免,冷凝伤害减免,热熔伤害减免,导电伤害减免,气动伤害减免,衍射伤害减免,解离伤害减免,韧性上限,韧性,韧性恢复速度,削韧倍率,被削韧倍率,狂暴上限,狂暴,狂暴恢复,空狂暴惩罚时间,破狂暴倍率,被破狂暴倍率,共振度上限,共振度上限,共振度恢复速度,空共振度惩罚时间,破共振度倍率,被破共振度倍率,弱点击破速率,弱点增幅,削刃,大招能量,元素能量类型,元素能量,存在的BuffID,存在的Buff名称,存在的BuffID,存在的Buff名称\n";
+		str = "X秒,当前时间,对象,对象ID,对象名称,伤害来源,结算ID,子弹名称,伤害值,技能ID,技能名称,唯一ID,是否暴击,被击者当前生命值,被击者生命值上限,被击者攻击,被击者暴击,被击者暴击伤害,被击者防御,被击者共鸣效率,被击者共鸣能量上限,被击者共鸣能量,被击者普攻速度,被击者重击速度,被击者共鸣技能伤害加成,被击者通用伤害加成,被击者声骸技能伤害加成,被击者普攻伤害加成,被击者蓄力攻击伤害加成,被击者共鸣解放伤害加成,被击者连携技能伤害加成,被击者物理伤害加成,被击者冷凝伤害加成,被击者热熔伤害加成,被击者导电伤害加成,被击者气动伤害加成,被击者衍射伤害加成,被击者解离伤害加成,被击者无视物理伤害抗性,被击者无视属性1伤害抗性,被击者无视属性2伤害抗性,被击者无视属性3伤害抗性,被击者无视属性4伤害抗性,被击者无视属性5伤害抗性,被击者无视属性6伤害抗性,被击者物理伤害抗性,被击者冷凝伤害抗性,被击者热熔伤害抗性,被击者导电伤害抗性,被击者气动伤害抗性,被击者衍射伤害抗性,被击者解离伤害抗性,被击者治疗效果加成,被击者受治疗效果加成,被击者通用受伤减免,被击者物理伤害减免,被击者冷凝伤害减免,被击者热熔伤害减免,被击者导电伤害减免,被击者气动伤害减免,被击者衍射伤害减免,被击者解离伤害减免,被击者韧性上限,被击者韧性,被击者韧性恢复速度,被击者削韧倍率,被击者被削韧倍率,被击者狂暴上限,被击者狂暴,被击者狂暴恢复,被击者空狂暴惩罚时间,被击者破狂暴倍率,被击者被破狂暴倍率,被击者共振度上限,被击者共振度上限,被击者共振度恢复速度,被击者空共振度惩罚时间,被击者破共振度倍率,被击者被破共振度倍率,被击者弱点击破速率,被击者弱点增幅,当前生命值,生命值上限,攻击,暴击,暴击伤害,防御,共鸣效率,共鸣能量上限,共鸣能量,普攻速度,重击速度,共鸣技能伤害加成,通用伤害加成,声骸技能伤害加成,普攻伤害加成,蓄力攻击伤害加成,共鸣解放伤害加成,连携技能伤害加成,物理伤害加成,冷凝伤害加成,热熔伤害加成,导电伤害加成,气动伤害加成,衍射伤害加成,解离伤害加成,无视物理伤害抗性,无视属性1伤害抗性,无视属性2伤害抗性,无视属性3伤害抗性,无视属性4伤害抗性,无视属性5伤害抗性,无视属性6伤害抗性,物理伤害抗性,冷凝伤害抗性,热熔伤害抗性,导电伤害抗性,气动伤害抗性,衍射伤害抗性,解离伤害抗性,治疗效果加成,受治疗效果加成,通用受伤减免,物理伤害减免,冷凝伤害减免,热熔伤害减免,导电伤害减免,气动伤害减免,衍射伤害减免,解离伤害减免,韧性上限,韧性,韧性恢复速度,削韧倍率,被削韧倍率,狂暴上限,狂暴,狂暴恢复,空狂暴惩罚时间,破狂暴倍率,被破狂暴倍率,共振度上限,共振度上限,共振度恢复速度,空共振度惩罚时间,破共振度倍率,被破共振度倍率,弱点击破速率,弱点增幅,削刃,大招能量,元素能量类型,元素能量,存在的BuffID,存在的Buff名称,存在的BuffID,存在的Buff名称\n";
 		UKuroStaticLibrary.SaveStringToFile(str + string.Join("\n", CharacterGasDebugComponent.DamageRecordSnipeshotArray), UBlueprintPathsLibrary.ProjectSavedDir() + "Statistics/FightDataRecord/DamageRecord_Snipeshot.csv", true);
 		str = "X秒,当前时间,对象,对象ID,对象名称,BuffId,Buff名称,添加or删除\n";
 		string text2 = str + string.Join("\n", CharacterGasDebugComponent.BuffRecordArray);
@@ -1108,19 +1123,18 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return text;
 	}
 
-	// Token: 0x06019917 RID: 104727 RVA: 0x0069E79C File Offset: 0x0069C99C
+	// Token: 0x0601720A RID: 94730 RVA: 0x006C49EC File Offset: 0x006C2BEC
 	private static void SaveRoleDsp()
 	{
-		bool isPlayInEditor = Info.Instance.IsPlayInEditor;
 	}
 
-	// Token: 0x06019918 RID: 104728 RVA: 0x0069E7A9 File Offset: 0x0069C9A9
+	// Token: 0x0601720B RID: 94731 RVA: 0x006C49EE File Offset: 0x006C2BEE
 	private bool CheckDistance(Entity entity)
 	{
 		return CharacterStatisticsComponent.IsInRecordArea(entity);
 	}
 
-	// Token: 0x06019919 RID: 104729 RVA: 0x0069E7B4 File Offset: 0x0069C9B4
+	// Token: 0x0601720C RID: 94732 RVA: 0x006C49F8 File Offset: 0x006C2BF8
 	private static string SkillGenreNames(IReadOnlyList<ESkillGenre> skillGenres)
 	{
 		List<string> list = new List<string>();
@@ -1143,7 +1157,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return string.Join("|", list);
 	}
 
-	// Token: 0x0601991A RID: 104730 RVA: 0x0069E815 File Offset: 0x0069CA15
+	// Token: 0x0601720D RID: 94733 RVA: 0x006C4A59 File Offset: 0x006C2C59
 	private static string DamageIdToDesc(long damageId)
 	{
 		if (CharacterGasDebugComponent.DamageIdToString.ContainsKey(damageId))
@@ -1153,7 +1167,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return damageId.ToString();
 	}
 
-	// Token: 0x0601991B RID: 104731 RVA: 0x0069E838 File Offset: 0x0069CA38
+	// Token: 0x0601720E RID: 94734 RVA: 0x006C4A7C File Offset: 0x006C2C7C
 	public static void RecordDamage(Entity attackerEntity, DamageRecordNotify data, string secondSinceStartup, string currTimeString)
 	{
 		List<string> list = new List<string>();
@@ -1267,7 +1281,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		CharacterGasDebugComponent.RecordDamageSumTable(EntitySystem.Instance.Get(entityId), attackerEntity, (float)data.DamageValue, ((baseSkillComponent != null) ? baseSkillComponent.GetSkillGenres(skillId) : null) ?? Array.Empty<ESkillGenre>());
 	}
 
-	// Token: 0x0601991C RID: 104732 RVA: 0x0069ECA8 File Offset: 0x0069CEA8
+	// Token: 0x0601720F RID: 94735 RVA: 0x006C4EEC File Offset: 0x006C30EC
 	private void OnBulletCreate(BulletInfo bulletInfo)
 	{
 		if (!CharacterGasDebugComponent.ShouldRecord)
@@ -1344,7 +1358,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		CharacterGasDebugComponent.BulletCreateEntityId.Add(id2);
 	}
 
-	// Token: 0x0601991D RID: 104733 RVA: 0x0069EF08 File Offset: 0x0069D108
+	// Token: 0x06017210 RID: 94736 RVA: 0x006C514C File Offset: 0x006C334C
 	private static void RecordDamageSumTable([Nullable(2)] Entity target, Entity source, float damageMagnitude, IReadOnlyList<ESkillGenre> skillGenres)
 	{
 		Dictionary<string, RecordDamageSum> dictionary = CharacterGasDebugComponent.RoleDamageSumTable;
@@ -1425,7 +1439,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		dictionary[key] = recordDamageSum2;
 	}
 
-	// Token: 0x0601991E RID: 104734 RVA: 0x0069F118 File Offset: 0x0069D318
+	// Token: 0x06017211 RID: 94737 RVA: 0x006C535C File Offset: 0x006C355C
 	public void RecordMove([Nullable(2)] EntityHandle handle, int skillId, IReadOnlyList<ESkillGenre> skillGenres)
 	{
 		if (!CharacterGasDebugComponent.ShouldRecord)
@@ -1488,7 +1502,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601991F RID: 104735 RVA: 0x0069F328 File Offset: 0x0069D528
+	// Token: 0x06017212 RID: 94738 RVA: 0x006C556C File Offset: 0x006C376C
 	[NullableContext(2)]
 	private static void RecordMoveSumTable(Entity entity1, Entity entity2, ESkillGenre skillGenre)
 	{
@@ -1510,13 +1524,13 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		CharacterGasDebugComponent.MoveSumTable[num + (int)num2] = recordMoveSum2;
 	}
 
-	// Token: 0x06019920 RID: 104736 RVA: 0x0069F3FC File Offset: 0x0069D5FC
+	// Token: 0x06017213 RID: 94739 RVA: 0x006C5640 File Offset: 0x006C3840
 	private bool MatchBuffId(string searchStr, string buffId)
 	{
 		return string.IsNullOrEmpty(searchStr) || buffId.Contains(searchStr) || searchStr.Contains(buffId);
 	}
 
-	// Token: 0x06019921 RID: 104737 RVA: 0x0069F418 File Offset: 0x0069D618
+	// Token: 0x06017214 RID: 94740 RVA: 0x006C565C File Offset: 0x006C385C
 	public string GetServerBuffString()
 	{
 		EntityBattleInfoResponse serverDebugInfo = this.ServerDebugInfo;
@@ -1561,7 +1575,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return text;
 	}
 
-	// Token: 0x06019922 RID: 104738 RVA: 0x0069F604 File Offset: 0x0069D804
+	// Token: 0x06017215 RID: 94741 RVA: 0x006C5848 File Offset: 0x006C3A48
 	public float GetServerBuffRemainDuration(int handle)
 	{
 		EntityBattleInfoResponse serverDebugInfo = this.ServerDebugInfo;
@@ -1591,7 +1605,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return result;
 	}
 
-	// Token: 0x06019923 RID: 104739 RVA: 0x0069F694 File Offset: 0x0069D894
+	// Token: 0x06017216 RID: 94742 RVA: 0x006C58D8 File Offset: 0x006C3AD8
 	public float GetServerBuffTotalDuration(int handle)
 	{
 		EntityBattleInfoResponse serverDebugInfo = this.ServerDebugInfo;
@@ -1621,13 +1635,13 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return result;
 	}
 
-	// Token: 0x06019924 RID: 104740 RVA: 0x0069F724 File Offset: 0x0069D924
+	// Token: 0x06017217 RID: 94743 RVA: 0x006C5968 File Offset: 0x006C3B68
 	public bool HasBuffRequest(int handle)
 	{
 		return this.HasRequestServerBuff.Contains(handle);
 	}
 
-	// Token: 0x06019925 RID: 104741 RVA: 0x0069F734 File Offset: 0x0069D934
+	// Token: 0x06017218 RID: 94744 RVA: 0x006C5978 File Offset: 0x006C3B78
 	public bool HasServerBuff(int handle)
 	{
 		EntityBattleInfoResponse serverDebugInfo = this.ServerDebugInfo;
@@ -1658,7 +1672,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return false;
 	}
 
-	// Token: 0x06019926 RID: 104742 RVA: 0x0069F7B4 File Offset: 0x0069D9B4
+	// Token: 0x06017219 RID: 94745 RVA: 0x006C59F8 File Offset: 0x006C3BF8
 	private string GetServerBuffInfoString(string id, int handle, string desc, int stackCount, int level, bool isActive, string instigatorId, float leftDuration, float duration)
 	{
 		return string.Concat(new string[]
@@ -1685,7 +1699,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		});
 	}
 
-	// Token: 0x06019927 RID: 104743 RVA: 0x0069F880 File Offset: 0x0069DA80
+	// Token: 0x0601721A RID: 94746 RVA: 0x006C5AC4 File Offset: 0x006C3CC4
 	public string GetServerTagString()
 	{
 		string text = "";
@@ -1723,7 +1737,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return text;
 	}
 
-	// Token: 0x06019928 RID: 104744 RVA: 0x0069F9C0 File Offset: 0x0069DBC0
+	// Token: 0x0601721B RID: 94747 RVA: 0x006C5C04 File Offset: 0x006C3E04
 	public string GetServerAttributeString()
 	{
 		EntityBattleInfoResponse serverDebugInfo = this.ServerDebugInfo;
@@ -1766,7 +1780,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return text;
 	}
 
-	// Token: 0x06019929 RID: 104745 RVA: 0x0069FB7C File Offset: 0x0069DD7C
+	// Token: 0x0601721C RID: 94748 RVA: 0x006C5DC0 File Offset: 0x006C3FC0
 	public string GetServerPartString()
 	{
 		EntityBattleInfoResponse serverDebugInfo = this.ServerDebugInfo;
@@ -1803,7 +1817,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return text;
 	}
 
-	// Token: 0x0601992A RID: 104746 RVA: 0x0069FC84 File Offset: 0x0069DE84
+	// Token: 0x0601721D RID: 94749 RVA: 0x006C5EC8 File Offset: 0x006C40C8
 	public string GetServerHateString()
 	{
 		EntityBattleInfoResponse serverDebugInfo = this.ServerDebugInfo;
@@ -1826,7 +1840,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return text;
 	}
 
-	// Token: 0x0601992B RID: 104747 RVA: 0x0069FD38 File Offset: 0x0069DF38
+	// Token: 0x0601721E RID: 94750 RVA: 0x006C5F7C File Offset: 0x006C417C
 	public string GetServerShieldString()
 	{
 		EntityBattleInfoResponse serverDebugInfo = this.ServerDebugInfo;
@@ -1858,26 +1872,23 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return text;
 	}
 
-	// Token: 0x0601992C RID: 104748 RVA: 0x0069FE8C File Offset: 0x0069E08C
+	// Token: 0x0601721F RID: 94751 RVA: 0x006C60D0 File Offset: 0x006C42D0
 	public HashSet<int> GetCltBuffHandleSet()
 	{
-		HashSet<int> result = new HashSet<int>();
+		HashSet<int> hashSet = new HashSet<int>();
 		BaseBuffComponent component = base.Entity.GetComponent<BaseBuffComponent>();
-		if (component != null)
+		IActiveBuff[] array = (component != null) ? component.GetAllBuffs() : null;
+		if (array != null)
 		{
-			IActiveBuff[] allBuffs = component.GetAllBuffs();
-			if (allBuffs != null)
+			foreach (IActiveBuff activeBuff in array)
 			{
-				allBuffs.ToList<IActiveBuff>().ForEach(delegate(IActiveBuff buff)
-				{
-					result.Add(buff.Handle);
-				});
+				hashSet.Add(activeBuff.Handle);
 			}
 		}
-		return result;
+		return hashSet;
 	}
 
-	// Token: 0x0601992D RID: 104749 RVA: 0x0069FEE4 File Offset: 0x0069E0E4
+	// Token: 0x06017220 RID: 94752 RVA: 0x006C6124 File Offset: 0x006C4324
 	public void Union(HashSet<int> left, HashSet<int> right)
 	{
 		foreach (int item in right)
@@ -1889,7 +1900,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601992E RID: 104750 RVA: 0x0069FF3C File Offset: 0x0069E13C
+	// Token: 0x06017221 RID: 94753 RVA: 0x006C617C File Offset: 0x006C437C
 	public void ServerDebugInfoRequest()
 	{
 		this.InnerRequestHandle++;
@@ -1927,8 +1938,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}, 0);
 	}
 
-	// Token: 0x1700234D RID: 9037
-	// (get) Token: 0x0601992F RID: 104751 RVA: 0x006A0070 File Offset: 0x0069E270
+	// Token: 0x170023F6 RID: 9206
+	// (get) Token: 0x06017222 RID: 94754 RVA: 0x006C62B0 File Offset: 0x006C44B0
 	private static List<string> BuffRecordArray
 	{
 		get
@@ -1937,7 +1948,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x06019930 RID: 104752 RVA: 0x006A0078 File Offset: 0x0069E278
+	// Token: 0x06017223 RID: 94755 RVA: 0x006C62B8 File Offset: 0x006C44B8
 	public void OnBuffAdded(ActiveBuffInternal buff)
 	{
 		if (!CharacterGasDebugComponent.ShouldRecord)
@@ -1951,7 +1962,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x06019931 RID: 104753 RVA: 0x006A00B4 File Offset: 0x0069E2B4
+	// Token: 0x06017224 RID: 94756 RVA: 0x006C62F4 File Offset: 0x006C44F4
 	public void OnBuffRemoved(ActiveBuffInternal buff)
 	{
 		if (!CharacterGasDebugComponent.ShouldRecord)
@@ -1965,7 +1976,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x06019932 RID: 104754 RVA: 0x006A00F0 File Offset: 0x0069E2F0
+	// Token: 0x06017225 RID: 94757 RVA: 0x006C6330 File Offset: 0x006C4530
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1991,7 +2002,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return list.ToArray();
 	}
 
-	// Token: 0x06019933 RID: 104755 RVA: 0x006A01A0 File Offset: 0x0069E3A0
+	// Token: 0x06017226 RID: 94758 RVA: 0x006C63E0 File Offset: 0x006C45E0
 	[return: Nullable(2)]
 	private static CharacterGasDebugComponent.EntityInfo GetEntityInfo(Entity attacker)
 	{
@@ -2054,7 +2065,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x06019934 RID: 104756 RVA: 0x006A0344 File Offset: 0x0069E544
+	// Token: 0x06017227 RID: 94759 RVA: 0x006C6584 File Offset: 0x006C4784
 	public static void SetDamageRecord(bool enable)
 	{
 		EnableDamageRecordRequest enableDamageRecordRequest = EnableDamageRecordRequest.Create();
@@ -2065,7 +2076,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}, 0);
 	}
 
-	// Token: 0x06019935 RID: 104757 RVA: 0x006A0390 File Offset: 0x0069E590
+	// Token: 0x06017228 RID: 94760 RVA: 0x006C65D0 File Offset: 0x006C47D0
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.DamageRecordNotify, true, false)]
 	public static void OnDamageRecordNotify(Entity owner, [Nullable(1)] DamageRecordNotify data, CombatCommon combatCommon = null)
@@ -2092,19 +2103,19 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		CharacterGasDebugComponent.OnDamageRecordDsp(entity, data);
 	}
 
-	// Token: 0x06019936 RID: 104758 RVA: 0x006A046A File Offset: 0x0069E66A
+	// Token: 0x06017229 RID: 94761 RVA: 0x006C66AA File Offset: 0x006C48AA
 	private static bool IsMoto(Entity entity)
 	{
 		return entity.GetComponent<MotorcyclePerformComponent>() != null;
 	}
 
-	// Token: 0x06019937 RID: 104759 RVA: 0x006A0475 File Offset: 0x0069E675
+	// Token: 0x0601722A RID: 94762 RVA: 0x006C66B5 File Offset: 0x006C48B5
 	private static int RecordDspCompare(DamageRecordDsp a, DamageRecordDsp b)
 	{
 		return (int)(a.TimeStamp - b.TimeStamp);
 	}
 
-	// Token: 0x06019938 RID: 104760 RVA: 0x006A0488 File Offset: 0x0069E688
+	// Token: 0x0601722B RID: 94763 RVA: 0x006C66C8 File Offset: 0x006C48C8
 	private static void OnDamageRecordDsp(Entity attackerEntity, DamageRecordNotify data)
 	{
 		CreatureDataComponent component = attackerEntity.GetComponent<CreatureDataComponent>();
@@ -2132,7 +2143,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		priorityQueue.Push(item);
 	}
 
-	// Token: 0x06019939 RID: 104761 RVA: 0x006A0538 File Offset: 0x0069E738
+	// Token: 0x0601722C RID: 94764 RVA: 0x006C6778 File Offset: 0x006C4978
 	private void OnBeginSkill(int entityId, int skillId, bool isAutonomousProxy)
 	{
 		BaseSkillComponent component = base.Entity.GetComponent<BaseSkillComponent>();
@@ -2141,8 +2152,17 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 			CharacterGasDebugComponent.DamageRecordDspMap = new Dictionary<int, PriorityQueue<DamageRecordDsp>>();
 		}
 		int id = base.Entity.Id;
-		IReadOnlyList<ESkillGenre> source = ((component != null) ? component.GetSkillGenres(skillId) : null) ?? Array.Empty<ESkillGenre>();
-		if (source.Contains(ESkillGenre.QTE4))
+		IReadOnlyList<ESkillGenre> readOnlyList = ((component != null) ? component.GetSkillGenres(skillId) : null) ?? Array.Empty<ESkillGenre>();
+		bool flag = false;
+		for (int i = 0; i < readOnlyList.Count; i++)
+		{
+			if (readOnlyList[i] == ESkillGenre.QTE4)
+			{
+				flag = true;
+				break;
+			}
+		}
+		if (flag)
 		{
 			PriorityQueue<DamageRecordDsp> priorityQueue = CharacterGasDebugComponent.DamageRecordDspMap.ContainsKey(id) ? CharacterGasDebugComponent.DamageRecordDspMap[id] : null;
 			if (priorityQueue == null)
@@ -2158,7 +2178,16 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 			DamageRecordDsp item = new DamageRecordDsp((float)(Time.Instance.WorldTimeSeconds - (double)CharacterGasDebugComponent.TimeStopSpanTime), -1f, true, false, false, false);
 			priorityQueue.Push(item);
 		}
-		if (source.Contains(ESkillGenre.退场技12))
+		bool flag2 = false;
+		for (int j = 0; j < readOnlyList.Count; j++)
+		{
+			if (readOnlyList[j] == ESkillGenre.退场技12)
+			{
+				flag2 = true;
+				break;
+			}
+		}
+		if (flag2)
 		{
 			PriorityQueue<DamageRecordDsp> priorityQueue2 = CharacterGasDebugComponent.DamageRecordDspMap.ContainsKey(id) ? CharacterGasDebugComponent.DamageRecordDspMap[id] : null;
 			if (priorityQueue2 == null)
@@ -2176,7 +2205,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601993A RID: 104762 RVA: 0x006A067F File Offset: 0x0069E87F
+	// Token: 0x0601722D RID: 94765 RVA: 0x006C690D File Offset: 0x006C4B0D
 	private static void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		CharacterGasDebugComponent.OnChangeRoleInternal(newEntity.Id, true, false);
@@ -2186,7 +2215,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601993B RID: 104763 RVA: 0x006A06A0 File Offset: 0x0069E8A0
+	// Token: 0x0601722E RID: 94766 RVA: 0x006C692C File Offset: 0x006C4B2C
 	private static void OnChangeRoleInternal(int entityId, bool inGame, bool outGame)
 	{
 		if (CharacterGasDebugComponent.DamageRecordDspMap == null)
@@ -2208,8 +2237,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		priorityQueue.Push(item);
 	}
 
-	// Token: 0x1700234E RID: 9038
-	// (get) Token: 0x0601993C RID: 104764 RVA: 0x006A0734 File Offset: 0x0069E934
+	// Token: 0x170023F7 RID: 9207
+	// (get) Token: 0x0601722F RID: 94767 RVA: 0x006C69C0 File Offset: 0x006C4BC0
 	private static List<string> DamageRecordSnipeshotArray
 	{
 		get
@@ -2218,7 +2247,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601993D RID: 104765 RVA: 0x006A073C File Offset: 0x0069E93C
+	// Token: 0x06017230 RID: 94768 RVA: 0x006C69C8 File Offset: 0x006C4BC8
 	private unsafe static void OnDamageRecordSnapshot(Entity attackerEntity, DamageRecordNotify data, string secondSinceStartup, string currTimeString)
 	{
 		long damageConfId = data.DamageConfId;
@@ -2304,8 +2333,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		list.Add(data.IsCritical ? "1" : "0");
 		int count = list.Count;
 		int num = CharacterGasDebugComponent.AttributeIdArray.Length;
-		CharacterGasDebugComponent.ColletSnapshot(data.Victim.AttrSnapshot.ToArray<GameplayAttributeData>(), list, count);
-		CharacterGasDebugComponent.ColletSnapshot(data.Attacker.AttrSnapshot.ToArray<GameplayAttributeData>(), list, count + num);
+		CharacterGasDebugComponent.ColletSnapshot(data.Victim.AttrSnapshot, list, count);
+		CharacterGasDebugComponent.ColletSnapshot(data.Attacker.AttrSnapshot, list, count + num);
 		int skillLevel = data.SkillLevel;
 		int num2 = count + num * 2;
 		int index = num2 + 1;
@@ -2347,11 +2376,12 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		CharacterGasDebugComponent.DamageRecordSnipeshotArray.Add(item2);
 	}
 
-	// Token: 0x0601993E RID: 104766 RVA: 0x006A0C40 File Offset: 0x0069EE40
-	private static void ColletSnapshot(GameplayAttributeData[] attrsSnapshot, List<string> result, int baseIndexBase)
+	// Token: 0x06017231 RID: 94769 RVA: 0x006C6EC0 File Offset: 0x006C50C0
+	private static void ColletSnapshot(IReadOnlyList<GameplayAttributeData> attrsSnapshot, List<string> result, int baseIndexBase)
 	{
-		foreach (GameplayAttributeData gameplayAttributeData in attrsSnapshot)
+		for (int i = 0; i < attrsSnapshot.Count; i++)
 		{
+			GameplayAttributeData gameplayAttributeData = attrsSnapshot[i];
 			int j = 0;
 			int num = CharacterGasDebugComponent.AttributeIdArray.Length;
 			while (j < num)
@@ -2370,7 +2400,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601993F RID: 104767 RVA: 0x006A0CB4 File Offset: 0x0069EEB4
+	// Token: 0x06017232 RID: 94770 RVA: 0x006C6F3C File Offset: 0x006C513C
 	private static string TimeStringFromStamp(long timestampMs)
 	{
 		DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddMilliseconds((double)MathUtils.Instance.LongToNumber(timestampMs));
@@ -2385,8 +2415,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		});
 	}
 
-	// Token: 0x1700234F RID: 9039
-	// (get) Token: 0x06019940 RID: 104768 RVA: 0x006A0D64 File Offset: 0x0069EF64
+	// Token: 0x170023F8 RID: 9208
+	// (get) Token: 0x06017233 RID: 94771 RVA: 0x006C6FEC File Offset: 0x006C51EC
 	private static List<string> DamageRecordAttrArray
 	{
 		get
@@ -2395,7 +2425,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x06019941 RID: 104769 RVA: 0x006A0D6C File Offset: 0x0069EF6C
+	// Token: 0x06017234 RID: 94772 RVA: 0x006C6FF4 File Offset: 0x006C51F4
 	private unsafe static void OnDamageRecordAttr(Entity attackerEntity, DamageRecordNotify data, string secondSinceStartup, string currTimeString)
 	{
 		long damageConfId = data.DamageConfId;
@@ -2496,6 +2526,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		list.Add(((damageCalculationDetails != null) ? damageCalculationDetails.ADamageFactor : 0f).ToString());
 		list.Add(((damageCalculationDetails != null) ? damageCalculationDetails.ADamageBonusRate : 0f).ToString());
 		list.Add(((damageCalculationDetails != null) ? damageCalculationDetails.HitDamageBonusRate : 0f).ToString());
+		list.Add(((damageCalculationDetails != null) ? damageCalculationDetails.ADamageBonusRate2 : 0f).ToString());
 		list.Add(((damageCalculationDetails != null) ? damageCalculationDetails.VWeaknessBuffStack : 0).ToString());
 		list.Add(((damageCalculationDetails != null) ? damageCalculationDetails.WeakDamageBonusRate : 0f).ToString());
 		list.Add(((damageCalculationDetails != null) ? damageCalculationDetails.VDefFactor : 0f).ToString());
@@ -2511,8 +2542,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		list.Add(((damageCalculationDetails != null) ? damageCalculationDetails.WeaknessLvValue : 0f).ToString());
 		count = list.Count;
 		int num = CharacterGasDebugComponent.AttributeIdArray.Length;
-		CharacterGasDebugComponent.CollectAttr(data.Attacker.Attr.ToArray<GameplayAttributeData>(), data.Attacker.AttrSnapshot.ToArray<GameplayAttributeData>(), list, count, count + num);
-		CharacterGasDebugComponent.CollectAttr(data.Victim.Attr.ToArray<GameplayAttributeData>(), data.Victim.AttrSnapshot.ToArray<GameplayAttributeData>(), list, count + num * 2, count + num * 3);
+		CharacterGasDebugComponent.CollectAttr(data.Attacker.Attr, data.Attacker.AttrSnapshot, list, count, count + num);
+		CharacterGasDebugComponent.CollectAttr(data.Victim.Attr, data.Victim.AttrSnapshot, list, count + num * 2, count + num * 3);
 		int skillLevel = data.SkillLevel;
 		int num2 = count + num * 4;
 		while (list.Count <= num2)
@@ -2550,7 +2581,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		CharacterGasDebugComponent.DamageRecordAttrArray.Add(item2);
 	}
 
-	// Token: 0x06019942 RID: 104770 RVA: 0x006A15BC File Offset: 0x0069F7BC
+	// Token: 0x06017235 RID: 94773 RVA: 0x006C7854 File Offset: 0x006C5A54
 	private static int ResolveSnapshotValue(GameplayAttributeData attrSnapshot)
 	{
 		if (attrSnapshot.CurrentValue == -2147483648)
@@ -2564,8 +2595,8 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		return attrSnapshot.CurrentValue;
 	}
 
-	// Token: 0x06019943 RID: 104771 RVA: 0x006A15E4 File Offset: 0x0069F7E4
-	private static void CollectAttr(GameplayAttributeData[] attrs, GameplayAttributeData[] attrsSnapshot, List<string> result, int baseIndexCurrent, int baseIndexBase)
+	// Token: 0x06017236 RID: 94774 RVA: 0x006C787C File Offset: 0x006C5A7C
+	private static void CollectAttr(IReadOnlyList<GameplayAttributeData> attrs, IReadOnlyList<GameplayAttributeData> attrsSnapshot, List<string> result, int baseIndexCurrent, int baseIndexBase)
 	{
 		int i = 0;
 		int num = CharacterGasDebugComponent.AttributeIdArray.Length;
@@ -2599,7 +2630,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x06019944 RID: 104772 RVA: 0x006A16C0 File Offset: 0x0069F8C0
+	// Token: 0x06017237 RID: 94775 RVA: 0x006C7990 File Offset: 0x006C5B90
 	public static void CleanupRecord()
 	{
 		CharacterGasDebugComponent.InTimeStop = false;
@@ -2621,13 +2652,13 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		CharacterGasDebugComponent.DamageRecordAttrArray.Clear();
 	}
 
-	// Token: 0x06019945 RID: 104773 RVA: 0x006A1751 File Offset: 0x0069F951
+	// Token: 0x06017238 RID: 94776 RVA: 0x006C7A21 File Offset: 0x006C5C21
 	private static void OnAbsoluteTimeStop(bool open, float _)
 	{
 		CharacterGasDebugComponent.InTimeStop = open;
 	}
 
-	// Token: 0x06019946 RID: 104774 RVA: 0x006A175C File Offset: 0x0069F95C
+	// Token: 0x06017239 RID: 94777 RVA: 0x006C7A2C File Offset: 0x006C5C2C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -2635,153 +2666,162 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 			return false;
 		}
 		CharacterGasDebugComponent characterGasDebugComponent = (CharacterGasDebugComponent)componentTemplate;
-		if (base.CanResetComponentProperty("DebugGasComponent"))
+		if (characterGasDebugComponent.DebugGasComponent == null)
 		{
-			if (characterGasDebugComponent.DebugGasComponent == null)
-			{
-				this.DebugGasComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UBaseAbilitySystemComponent>(this.DebugGasComponent), "DebugGasComponent"))
-			{
-				return false;
-			}
+			this.DebugGasComponent = null;
 		}
-		if (base.CanResetComponentProperty("EnableCollisionDebugDraw"))
-		{
-			this.EnableCollisionDebugDraw = characterGasDebugComponent.EnableCollisionDebugDraw;
-		}
-		if (base.CanResetComponentProperty("GeDebugId"))
-		{
-			this.GeDebugId = characterGasDebugComponent.GeDebugId;
-		}
-		if (base.CanResetComponentProperty("GeDebugTask"))
-		{
-			if (characterGasDebugComponent.GeDebugTask == null)
-			{
-				this.GeDebugTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAsyncTaskEffectDebugString>(this.GeDebugTask), "GeDebugTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DebugStrings") && characterGasDebugComponent.DebugStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<string>>(this.DebugStrings), "DebugStrings"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugGasComponent), "DebugGasComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SkillLogStrings") && characterGasDebugComponent.SkillLogStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<string>>(this.SkillLogStrings), "SkillLogStrings"))
+		this.EnableCollisionDebugDraw = characterGasDebugComponent.EnableCollisionDebugDraw;
+		this.GeDebugId = characterGasDebugComponent.GeDebugId;
+		if (characterGasDebugComponent.GeDebugTask == null)
+		{
+			this.GeDebugTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GeDebugTask), "GeDebugTask"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SkillBehaviorLogStrings") && characterGasDebugComponent.SkillBehaviorLogStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<string>>(this.SkillBehaviorLogStrings), "SkillBehaviorLogStrings"))
+		if (characterGasDebugComponent.DebugStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugStrings), "DebugStrings"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ShieldDebugStrings") && characterGasDebugComponent.ShieldDebugStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<string>>(this.ShieldDebugStrings), "ShieldDebugStrings"))
+		if (characterGasDebugComponent.SkillLogStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillLogStrings), "SkillLogStrings"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BulletDebugStrings") && characterGasDebugComponent.BulletDebugStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<string>>(this.BulletDebugStrings), "BulletDebugStrings"))
+		if (characterGasDebugComponent.SkillBehaviorLogStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillBehaviorLogStrings), "SkillBehaviorLogStrings"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("AttributeDebugStrings") && characterGasDebugComponent.AttributeDebugStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<string>>(this.AttributeDebugStrings), "AttributeDebugStrings"))
+		if (characterGasDebugComponent.ShieldDebugStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ShieldDebugStrings), "ShieldDebugStrings"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("MovementDebugStrings") && characterGasDebugComponent.MovementDebugStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<string>>(this.MovementDebugStrings), "MovementDebugStrings"))
+		if (characterGasDebugComponent.BulletDebugStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BulletDebugStrings), "BulletDebugStrings"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ServerDebugInfo"))
-		{
-			if (characterGasDebugComponent.ServerDebugInfo == null)
-			{
-				this.ServerDebugInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityBattleInfoResponse>(this.ServerDebugInfo), "ServerDebugInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ServerDebugInfoDirty"))
-		{
-			this.ServerDebugInfoDirty = characterGasDebugComponent.ServerDebugInfoDirty;
-		}
-		if (base.CanResetComponentProperty("HasRequestServerBuff") && characterGasDebugComponent.HasRequestServerBuff != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.HasRequestServerBuff), "HasRequestServerBuff"))
+		if (characterGasDebugComponent.AttributeDebugStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttributeDebugStrings), "AttributeDebugStrings"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("WaitResponseBuff") && characterGasDebugComponent.WaitResponseBuff != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, HashSet<int>>>(this.WaitResponseBuff), "WaitResponseBuff"))
+		if (characterGasDebugComponent.MovementDebugStrings != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MovementDebugStrings), "MovementDebugStrings"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("InnerRequestHandle"))
+		if (characterGasDebugComponent.ServerDebugInfo == null)
 		{
-			this.InnerRequestHandle = characterGasDebugComponent.InnerRequestHandle;
+			this.ServerDebugInfo = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ServerDebugInfo), "ServerDebugInfo"))
+		{
+			return false;
+		}
+		this.ServerDebugInfoDirty = characterGasDebugComponent.ServerDebugInfoDirty;
+		if (characterGasDebugComponent.HasRequestServerBuff != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.HasRequestServerBuff), "HasRequestServerBuff"))
+		{
+			return false;
+		}
+		if (characterGasDebugComponent.WaitResponseBuff != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaitResponseBuff), "WaitResponseBuff"))
+		{
+			return false;
+		}
+		this.InnerRequestHandle = characterGasDebugComponent.InnerRequestHandle;
 		return true;
 	}
 
-	// Token: 0x0400BF2B RID: 48939
+	// Token: 0x170023F9 RID: 9209
+	// (get) Token: 0x0601723A RID: 94778 RVA: 0x006C7C2F File Offset: 0x006C5E2F
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170023FA RID: 9210
+	// (get) Token: 0x0601723B RID: 94779 RVA: 0x006C7C32 File Offset: 0x006C5E32
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170023FB RID: 9211
+	// (get) Token: 0x0601723C RID: 94780 RVA: 0x006C7C35 File Offset: 0x006C5E35
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C2C6 RID: 49862
 	[StaticVariableRuleIgnore]
 	private static readonly StringBuilder Sb = new StringBuilder(256);
 
-	// Token: 0x0400BF2C RID: 48940
+	// Token: 0x0400C2C7 RID: 49863
 	private const int MAX_DEBUG_STRING_NUMS = 50;
 
-	// Token: 0x0400BF2D RID: 48941
+	// Token: 0x0400C2C8 RID: 49864
 	[Nullable(2)]
 	private static EAttributeType[] _attributeIdArray;
 
-	// Token: 0x0400BF2E RID: 48942
+	// Token: 0x0400C2C9 RID: 49865
 	[Nullable(2)]
 	private UBaseAbilitySystemComponent DebugGasComponent;
 
-	// Token: 0x0400BF2F RID: 48943
+	// Token: 0x0400C2CA RID: 49866
 	public bool EnableCollisionDebugDraw;
 
-	// Token: 0x0400BF30 RID: 48944
+	// Token: 0x0400C2CB RID: 49867
 	private int GeDebugId;
 
-	// Token: 0x0400BF31 RID: 48945
+	// Token: 0x0400C2CC RID: 49868
 	[Nullable(2)]
 	private UAsyncTaskEffectDebugString GeDebugTask;
 
-	// Token: 0x0400BF32 RID: 48946
+	// Token: 0x0400C2CD RID: 49869
 	private readonly List<string> DebugStrings = new List<string>();
 
-	// Token: 0x0400BF33 RID: 48947
+	// Token: 0x0400C2CE RID: 49870
 	private readonly List<string> SkillLogStrings = new List<string>();
 
-	// Token: 0x0400BF34 RID: 48948
+	// Token: 0x0400C2CF RID: 49871
 	private readonly List<string> SkillBehaviorLogStrings = new List<string>();
 
-	// Token: 0x0400BF35 RID: 48949
+	// Token: 0x0400C2D0 RID: 49872
 	private readonly List<string> ShieldDebugStrings = new List<string>();
 
-	// Token: 0x0400BF36 RID: 48950
+	// Token: 0x0400C2D1 RID: 49873
 	private readonly List<string> BulletDebugStrings = new List<string>();
 
-	// Token: 0x0400BF37 RID: 48951
+	// Token: 0x0400C2D2 RID: 49874
 	private readonly List<string> AttributeDebugStrings = new List<string>();
 
-	// Token: 0x0400BF38 RID: 48952
+	// Token: 0x0400C2D3 RID: 49875
 	private readonly List<string> MovementDebugStrings = new List<string>();
 
-	// Token: 0x0400BF39 RID: 48953
+	// Token: 0x0400C2D4 RID: 49876
 	private static bool IsServerLogOnInternal = false;
 
-	// Token: 0x0400BF3A RID: 48954
+	// Token: 0x0400C2D5 RID: 49877
 	private static bool ShouldRecord = false;
 
-	// Token: 0x0400BF3B RID: 48955
+	// Token: 0x0400C2D6 RID: 49878
 	private static double RecordStartTime = 0.0;
 
-	// Token: 0x0400BF3C RID: 48956
+	// Token: 0x0400C2D7 RID: 49879
 	private static double RecordStartTimeStamp = 0.0;
 
-	// Token: 0x0400BF3D RID: 48957
+	// Token: 0x0400C2D8 RID: 49880
 	[Nullable(new byte[]
 	{
 		2,
@@ -2789,7 +2829,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 	})]
 	private static List<string> _moveRecordStrings;
 
-	// Token: 0x0400BF3E RID: 48958
+	// Token: 0x0400C2D9 RID: 49881
 	[Nullable(new byte[]
 	{
 		2,
@@ -2797,7 +2837,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 	})]
 	private static List<string> _damageRecordStrings;
 
-	// Token: 0x0400BF3F RID: 48959
+	// Token: 0x0400C2DA RID: 49882
 	[Nullable(new byte[]
 	{
 		2,
@@ -2805,7 +2845,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 	})]
 	private static Dictionary<int, RecordMoveSum> _moveSumTable;
 
-	// Token: 0x0400BF40 RID: 48960
+	// Token: 0x0400C2DB RID: 49883
 	[Nullable(new byte[]
 	{
 		2,
@@ -2814,7 +2854,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 	})]
 	private static Dictionary<string, RecordDamageSum> _roleDamageSumTable;
 
-	// Token: 0x0400BF41 RID: 48961
+	// Token: 0x0400C2DC RID: 49884
 	[Nullable(new byte[]
 	{
 		2,
@@ -2823,7 +2863,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 	})]
 	private static Dictionary<string, RecordDamageSum> _monsterDamageSumTable;
 
-	// Token: 0x0400BF42 RID: 48962
+	// Token: 0x0400C2DD RID: 49885
 	[Nullable(new byte[]
 	{
 		2,
@@ -2832,14 +2872,14 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 	})]
 	private static Dictionary<int, string[]> _bulletCreateMap;
 
-	// Token: 0x0400BF43 RID: 48963
+	// Token: 0x0400C2DE RID: 49886
 	[Nullable(2)]
 	private static List<int> _bulletCreateEntityId;
 
-	// Token: 0x0400BF44 RID: 48964
+	// Token: 0x0400C2DF RID: 49887
 	private const string SavePath = "Statistics/FightDataRecord/";
 
-	// Token: 0x0400BF45 RID: 48965
+	// Token: 0x0400C2E0 RID: 49888
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<long, string> DamageIdToString = new Dictionary<long, string>
 	{
@@ -2869,23 +2909,23 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		}
 	};
 
-	// Token: 0x0400BF46 RID: 48966
+	// Token: 0x0400C2E1 RID: 49889
 	[Nullable(2)]
 	public EntityBattleInfoResponse ServerDebugInfo;
 
-	// Token: 0x0400BF47 RID: 48967
+	// Token: 0x0400C2E2 RID: 49890
 	public bool ServerDebugInfoDirty;
 
-	// Token: 0x0400BF48 RID: 48968
+	// Token: 0x0400C2E3 RID: 49891
 	private readonly HashSet<int> HasRequestServerBuff = new HashSet<int>();
 
-	// Token: 0x0400BF49 RID: 48969
+	// Token: 0x0400C2E4 RID: 49892
 	private readonly Dictionary<int, HashSet<int>> WaitResponseBuff = new Dictionary<int, HashSet<int>>();
 
-	// Token: 0x0400BF4A RID: 48970
+	// Token: 0x0400C2E5 RID: 49893
 	private int InnerRequestHandle;
 
-	// Token: 0x0400BF4B RID: 48971
+	// Token: 0x0400C2E6 RID: 49894
 	[Nullable(new byte[]
 	{
 		2,
@@ -2893,7 +2933,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 	})]
 	private static List<string> _buffRecordArray;
 
-	// Token: 0x0400BF4C RID: 48972
+	// Token: 0x0400C2E7 RID: 49895
 	[Nullable(new byte[]
 	{
 		2,
@@ -2902,7 +2942,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 	})]
 	private static Dictionary<int, PriorityQueue<DamageRecordDsp>> DamageRecordDspMap = null;
 
-	// Token: 0x0400BF4D RID: 48973
+	// Token: 0x0400C2E8 RID: 49896
 	[Nullable(new byte[]
 	{
 		2,
@@ -2910,7 +2950,7 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 	})]
 	private static List<string> _damageRecordSnipeshotArray;
 
-	// Token: 0x0400BF4E RID: 48974
+	// Token: 0x0400C2E9 RID: 49897
 	[Nullable(new byte[]
 	{
 		2,
@@ -2918,34 +2958,34 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 	})]
 	private static List<string> _damageRecordAttrArray;
 
-	// Token: 0x0400BF4F RID: 48975
+	// Token: 0x0400C2EA RID: 49898
 	private static bool InTimeStop = false;
 
-	// Token: 0x0400BF50 RID: 48976
+	// Token: 0x0400C2EB RID: 49899
 	private static float TimeStopSpanTime = 0f;
 
-	// Token: 0x0400BF51 RID: 48977
+	// Token: 0x0400C2EC RID: 49900
 	private static long FrameUpdateSpanTime = 0L;
 
-	// Token: 0x020095EE RID: 38382
+	// Token: 0x02008815 RID: 34837
 	[Nullable(0)]
 	public class EntityInfo
 	{
-		// Token: 0x040301F9 RID: 197113
+		// Token: 0x0402B890 RID: 178320
 		public string Name = "";
 
-		// Token: 0x040301FA RID: 197114
+		// Token: 0x0402B891 RID: 178321
 		public string Type = "";
 
-		// Token: 0x040301FB RID: 197115
+		// Token: 0x0402B892 RID: 178322
 		public string ConfigId = "";
 	}
 
-	// Token: 0x020095EF RID: 38383
+	// Token: 0x02008816 RID: 34838
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x040301FC RID: 197116
+		// Token: 0x0402B893 RID: 178323
 		[Nullable(new byte[]
 		{
 			0,
@@ -2954,11 +2994,11 @@ public class CharacterGasDebugComponent : EntityComponent, IStaticVariableResett
 		})]
 		public static Action<EntityHandle, EntityHandle> <0>__OnChangeRole;
 
-		// Token: 0x040301FD RID: 197117
+		// Token: 0x0402B894 RID: 178324
 		[Nullable(0)]
 		public static Action<bool, float> <1>__OnAbsoluteTimeStop;
 
-		// Token: 0x040301FE RID: 197118
+		// Token: 0x0402B895 RID: 178325
 		[Nullable(new byte[]
 		{
 			0,

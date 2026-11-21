@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053B1 RID: 21425
+	// Token: 0x02005937 RID: 22839
 	public class IHoldingTrackTargetT
 	{
-		// Token: 0x17009D73 RID: 40307
-		// (get) Token: 0x060231AA RID: 143786 RVA: 0x004DC005 File Offset: 0x004DA205
-		// (set) Token: 0x060231AB RID: 143787 RVA: 0x004DC00D File Offset: 0x004DA20D
+		// Token: 0x1700A5AB RID: 42411
+		// (get) Token: 0x0602525E RID: 152158 RVA: 0x00518ED9 File Offset: 0x005170D9
+		// (set) Token: 0x0602525F RID: 152159 RVA: 0x00518EE1 File Offset: 0x005170E1
 		public string EffectPath { get; set; }
 
-		// Token: 0x17009D74 RID: 40308
-		// (get) Token: 0x060231AC RID: 143788 RVA: 0x004DC016 File Offset: 0x004DA216
-		// (set) Token: 0x060231AD RID: 143789 RVA: 0x004DC01E File Offset: 0x004DA21E
+		// Token: 0x1700A5AC RID: 42412
+		// (get) Token: 0x06025260 RID: 152160 RVA: 0x00518EEA File Offset: 0x005170EA
+		// (set) Token: 0x06025261 RID: 152161 RVA: 0x00518EF2 File Offset: 0x005170F2
 		public int EffectLength { get; set; }
 
-		// Token: 0x17009D75 RID: 40309
-		// (get) Token: 0x060231AE RID: 143790 RVA: 0x004DC027 File Offset: 0x004DA227
-		// (set) Token: 0x060231AF RID: 143791 RVA: 0x004DC02F File Offset: 0x004DA22F
+		// Token: 0x1700A5AD RID: 42413
+		// (get) Token: 0x06025262 RID: 152162 RVA: 0x00518EFB File Offset: 0x005170FB
+		// (set) Token: 0x06025263 RID: 152163 RVA: 0x00518F03 File Offset: 0x00517103
 		public int EntityId { get; set; }
 
-		// Token: 0x060231B0 RID: 143792 RVA: 0x004DC038 File Offset: 0x004DA238
+		// Token: 0x06025264 RID: 152164 RVA: 0x00518F0C File Offset: 0x0051710C
 		public IHoldingTrackTargetT()
 		{
 			this.EffectPath = null;

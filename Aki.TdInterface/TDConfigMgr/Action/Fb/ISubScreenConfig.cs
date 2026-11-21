@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200279A RID: 10138
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A6C RID: 10860
 	public class ISubScreenConfig
 	{
-		// Token: 0x0600E1A3 RID: 57763 RVA: 0x002157CC File Offset: 0x002139CC
+		// Token: 0x0600EFC1 RID: 61377 RVA: 0x00232560 File Offset: 0x00230760
 		public static ISubScreenConfig Create(ISubScreenConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004431 RID: 17457
-		// (get) Token: 0x0600E1A4 RID: 57764 RVA: 0x002157EB File Offset: 0x002139EB
+		// Token: 0x17004797 RID: 18327
+		// (get) Token: 0x0600EFC2 RID: 61378 RVA: 0x0023257F File Offset: 0x0023077F
 		public virtual IVector2 Anchor
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004432 RID: 17458
-		// (get) Token: 0x0600E1A5 RID: 57765 RVA: 0x0021581F File Offset: 0x00213A1F
+		// Token: 0x17004798 RID: 18328
+		// (get) Token: 0x0600EFC3 RID: 61379 RVA: 0x002325B3 File Offset: 0x002307B3
 		public virtual IVector2 Size
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004433 RID: 17459
-		// (get) Token: 0x0600E1A6 RID: 57766 RVA: 0x00215854 File Offset: 0x00213A54
+		// Token: 0x17004799 RID: 18329
+		// (get) Token: 0x0600EFC4 RID: 61380 RVA: 0x002325E8 File Offset: 0x002307E8
 		public virtual bool? IsSeamlessScreen
 		{
 			get
@@ -69,21 +67,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D1E RID: 32030
+		// Token: 0x040083D4 RID: 33748
 		private ISubScreenConfig Instance;
 
-		// Token: 0x04007D1F RID: 32031
+		// Token: 0x040083D5 RID: 33749
 		[Nullable(2)]
 		private IVector2 _AnchorCache;
 
-		// Token: 0x04007D20 RID: 32032
+		// Token: 0x040083D6 RID: 33750
 		private bool _AnchorInited;
 
-		// Token: 0x04007D21 RID: 32033
+		// Token: 0x040083D7 RID: 33751
 		[Nullable(2)]
 		private IVector2 _SizeCache;
 
-		// Token: 0x04007D22 RID: 32034
+		// Token: 0x040083D8 RID: 33752
 		private bool _SizeInited;
 	}
 }

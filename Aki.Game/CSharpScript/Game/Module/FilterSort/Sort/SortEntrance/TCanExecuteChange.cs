@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 {
-	// Token: 0x02005B31 RID: 23345
-	// (Invoke) Token: 0x0603B1BE RID: 242110
+	// Token: 0x02004B12 RID: 19218
+	// (Invoke) Token: 0x06030130 RID: 196912
 	public delegate bool TCanExecuteChange(int ruleId);
 }

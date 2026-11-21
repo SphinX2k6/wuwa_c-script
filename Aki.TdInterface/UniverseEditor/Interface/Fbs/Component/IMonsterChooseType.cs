@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005569 RID: 21865
+	// Token: 0x02005AFB RID: 23291
 	public struct IMonsterChooseType : IFlatbufferObject
 	{
-		// Token: 0x1700A18B RID: 41355
-		// (get) Token: 0x060242BF RID: 148159 RVA: 0x004FEFC7 File Offset: 0x004FD1C7
+		// Token: 0x1700AA01 RID: 43521
+		// (get) Token: 0x06026464 RID: 156772 RVA: 0x0053E88B File Offset: 0x0053CA8B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060242C0 RID: 148160 RVA: 0x004FEFD4 File Offset: 0x004FD1D4
+		// Token: 0x06026465 RID: 156773 RVA: 0x0053E898 File Offset: 0x0053CA98
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060242C1 RID: 148161 RVA: 0x004FEFDC File Offset: 0x004FD1DC
+		// Token: 0x06026466 RID: 156774 RVA: 0x0053E8A0 File Offset: 0x0053CAA0
 		public static IMonsterChooseType GetRootAsIMonsterChooseType(ByteBuffer _bb)
 		{
 			return IMonsterChooseType.GetRootAsIMonsterChooseType(_bb, default(IMonsterChooseType));
 		}
 
-		// Token: 0x060242C2 RID: 148162 RVA: 0x004FEFF8 File Offset: 0x004FD1F8
+		// Token: 0x06026467 RID: 156775 RVA: 0x0053E8BC File Offset: 0x0053CABC
 		public static IMonsterChooseType GetRootAsIMonsterChooseType(ByteBuffer _bb, IMonsterChooseType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060242C3 RID: 148163 RVA: 0x004FF015 File Offset: 0x004FD215
+		// Token: 0x06026468 RID: 156776 RVA: 0x0053E8D9 File Offset: 0x0053CAD9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060242C4 RID: 148164 RVA: 0x004FF024 File Offset: 0x004FD224
+		// Token: 0x06026469 RID: 156777 RVA: 0x0053E8E8 File Offset: 0x0053CAE8
 		public IMonsterChooseType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A18C RID: 41356
-		// (get) Token: 0x060242C5 RID: 148165 RVA: 0x004FF034 File Offset: 0x004FD234
+		// Token: 0x1700AA02 RID: 43522
+		// (get) Token: 0x0602646A RID: 156778 RVA: 0x0053E8F8 File Offset: 0x0053CAF8
 		public EMonsterChooseType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060242C6 RID: 148166 RVA: 0x004FF070 File Offset: 0x004FD270
+		// Token: 0x0602646B RID: 156779 RVA: 0x0053E934 File Offset: 0x0053CB34
 		public static Offset<IMonsterChooseType> CreateIMonsterChooseType(FlatBufferBuilder builder, EMonsterChooseType Type = EMonsterChooseType.RandomPoolChoose)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterChooseType.EndIMonsterChooseType(builder);
 		}
 
-		// Token: 0x060242C7 RID: 148167 RVA: 0x004FF086 File Offset: 0x004FD286
+		// Token: 0x0602646C RID: 156780 RVA: 0x0053E94A File Offset: 0x0053CB4A
 		public static void StartIMonsterChooseType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060242C8 RID: 148168 RVA: 0x004FF08F File Offset: 0x004FD28F
+		// Token: 0x0602646D RID: 156781 RVA: 0x0053E953 File Offset: 0x0053CB53
 		public static void AddType(FlatBufferBuilder builder, EMonsterChooseType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060242C9 RID: 148169 RVA: 0x004FF09A File Offset: 0x004FD29A
+		// Token: 0x0602646E RID: 156782 RVA: 0x0053E95E File Offset: 0x0053CB5E
 		public static Offset<IMonsterChooseType> EndIMonsterChooseType(FlatBufferBuilder builder)
 		{
 			return new Offset<IMonsterChooseType>(builder.EndTable());
 		}
 
-		// Token: 0x060242CA RID: 148170 RVA: 0x004FF0A8 File Offset: 0x004FD2A8
+		// Token: 0x0602646F RID: 156783 RVA: 0x0053E96C File Offset: 0x0053CB6C
 		public IMonsterChooseTypeT UnPack()
 		{
 			IMonsterChooseTypeT monsterChooseTypeT = new IMonsterChooseTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return monsterChooseTypeT;
 		}
 
-		// Token: 0x060242CB RID: 148171 RVA: 0x004FF0C3 File Offset: 0x004FD2C3
+		// Token: 0x06026470 RID: 156784 RVA: 0x0053E987 File Offset: 0x0053CB87
 		public void UnPackTo(IMonsterChooseTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060242CC RID: 148172 RVA: 0x004FF0D4 File Offset: 0x004FD2D4
+		// Token: 0x06026471 RID: 156785 RVA: 0x0053E998 File Offset: 0x0053CB98
 		public static Offset<IMonsterChooseType> Pack(FlatBufferBuilder builder, IMonsterChooseTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterChooseType.CreateIMonsterChooseType(builder, _o.Type);
 		}
 
-		// Token: 0x0400E88A RID: 59530
+		// Token: 0x0400F4DC RID: 62684
 		private Table __p;
 	}
 }

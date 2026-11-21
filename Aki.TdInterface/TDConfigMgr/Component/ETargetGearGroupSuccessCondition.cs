@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200014C RID: 332
+	// Token: 0x0200015F RID: 351
 	[EnumExtensions]
 	public enum ETargetGearGroupSuccessCondition
 	{
-		// Token: 0x04000665 RID: 1637
+		// Token: 0x040006AA RID: 1706
 		SameSpecificState,
-		// Token: 0x04000666 RID: 1638
+		// Token: 0x040006AB RID: 1707
 		SameArbitraryState,
-		// Token: 0x04000667 RID: 1639
+		// Token: 0x040006AC RID: 1708
 		CountDownState,
-		// Token: 0x04000668 RID: 1640
+		// Token: 0x040006AD RID: 1709
 		SpecificTargetState
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D54 RID: 19796
+	// Token: 0x02005250 RID: 21072
 	public enum TRogueStateType : byte
 	{
-		// Token: 0x0400D791 RID: 55185
+		// Token: 0x0400E2C0 RID: 58048
 		NONE,
-		// Token: 0x0400D792 RID: 55186
+		// Token: 0x0400E2C1 RID: 58049
 		ICheckRogueMiracleCreation,
-		// Token: 0x0400D793 RID: 55187
+		// Token: 0x0400E2C2 RID: 58050
 		ICheckRogueTalent
 	}
 }

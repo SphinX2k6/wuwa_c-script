@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D44 RID: 7492
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F55 RID: 8021
 	public class IPreloadCharacterType
 	{
-		// Token: 0x0600A0C1 RID: 41153 RVA: 0x0016E974 File Offset: 0x0016CB74
+		// Token: 0x0600AAAD RID: 43693 RVA: 0x00182D98 File Offset: 0x00180F98
 		private IPreloadCharacterType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A0C2 RID: 41154 RVA: 0x0016E9AC File Offset: 0x0016CBAC
+		// Token: 0x0600AAAE RID: 43694 RVA: 0x00182DD0 File Offset: 0x00180FD0
 		public static IPreloadCharacterType Create([Nullable(2)] IPreloadCharacterType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A0C3 RID: 41155 RVA: 0x0016E9BF File Offset: 0x0016CBBF
+		// Token: 0x0600AAAF RID: 43695 RVA: 0x00182DE3 File Offset: 0x00180FE3
 		public static IPreloadCharacterType CreateFromSetValue([Nullable(2)] IPreloadCharacterType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A0C4 RID: 41156 RVA: 0x0016E9D2 File Offset: 0x0016CBD2
+		// Token: 0x0600AAB0 RID: 43696 RVA: 0x00182DF6 File Offset: 0x00180FF6
 		public IPreloadCharacterType_SetValue ToSetValue()
 		{
 			return new IPreloadCharacterType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031D1 RID: 12753
-		// (get) Token: 0x0600A0C5 RID: 41157 RVA: 0x0016E9E5 File Offset: 0x0016CBE5
-		// (set) Token: 0x0600A0C6 RID: 41158 RVA: 0x0016EA10 File Offset: 0x0016CC10
+		// Token: 0x17003465 RID: 13413
+		// (get) Token: 0x0600AAB1 RID: 43697 RVA: 0x00182E09 File Offset: 0x00181009
+		// (set) Token: 0x0600AAB2 RID: 43698 RVA: 0x00182E34 File Offset: 0x00181034
 		public virtual EPreloadObjectType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040060D8 RID: 24792
+		// Token: 0x04006654 RID: 26196
 		[Nullable(2)]
 		protected IPreloadCharacterType FbInstance;
 
-		// Token: 0x040060D9 RID: 24793
+		// Token: 0x04006655 RID: 26197
 		[Nullable(2)]
 		protected IPreloadCharacterType_SetValue PocoInterface;
 	}

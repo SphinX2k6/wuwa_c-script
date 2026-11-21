@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B3C RID: 27452
+	// Token: 0x02007282 RID: 29314
 	public struct IMotorSoarInWindFieldEnterWindField : IFlatbufferObject
 	{
-		// Token: 0x1700CBF4 RID: 52212
-		// (get) Token: 0x060302DF RID: 197343 RVA: 0x0068C418 File Offset: 0x0068A618
+		// Token: 0x1700D6D9 RID: 55001
+		// (get) Token: 0x06033136 RID: 209206 RVA: 0x006E49D4 File Offset: 0x006E2BD4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060302E0 RID: 197344 RVA: 0x0068C425 File Offset: 0x0068A625
+		// Token: 0x06033137 RID: 209207 RVA: 0x006E49E1 File Offset: 0x006E2BE1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060302E1 RID: 197345 RVA: 0x0068C42C File Offset: 0x0068A62C
+		// Token: 0x06033138 RID: 209208 RVA: 0x006E49E8 File Offset: 0x006E2BE8
 		public static IMotorSoarInWindFieldEnterWindField GetRootAsIMotorSoarInWindFieldEnterWindField(ByteBuffer _bb)
 		{
 			return IMotorSoarInWindFieldEnterWindField.GetRootAsIMotorSoarInWindFieldEnterWindField(_bb, default(IMotorSoarInWindFieldEnterWindField));
 		}
 
-		// Token: 0x060302E2 RID: 197346 RVA: 0x0068C448 File Offset: 0x0068A648
+		// Token: 0x06033139 RID: 209209 RVA: 0x006E4A04 File Offset: 0x006E2C04
 		public static IMotorSoarInWindFieldEnterWindField GetRootAsIMotorSoarInWindFieldEnterWindField(ByteBuffer _bb, IMotorSoarInWindFieldEnterWindField obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060302E3 RID: 197347 RVA: 0x0068C465 File Offset: 0x0068A665
+		// Token: 0x0603313A RID: 209210 RVA: 0x006E4A21 File Offset: 0x006E2C21
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060302E4 RID: 197348 RVA: 0x0068C474 File Offset: 0x0068A674
+		// Token: 0x0603313B RID: 209211 RVA: 0x006E4A30 File Offset: 0x006E2C30
 		public IMotorSoarInWindFieldEnterWindField __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CBF5 RID: 52213
-		// (get) Token: 0x060302E5 RID: 197349 RVA: 0x0068C484 File Offset: 0x0068A684
+		// Token: 0x1700D6DA RID: 55002
+		// (get) Token: 0x0603313C RID: 209212 RVA: 0x006E4A40 File Offset: 0x006E2C40
 		public EMotorSoarInWindFieldControlType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CBF6 RID: 52214
-		// (get) Token: 0x060302E6 RID: 197350 RVA: 0x0068C4C0 File Offset: 0x0068A6C0
+		// Token: 0x1700D6DB RID: 55003
+		// (get) Token: 0x0603313D RID: 209213 RVA: 0x006E4A7C File Offset: 0x006E2C7C
 		public IVectorInfo? Direction
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CBF7 RID: 52215
-		// (get) Token: 0x060302E7 RID: 197351 RVA: 0x0068C520 File Offset: 0x0068A720
+		// Token: 0x1700D6DC RID: 55004
+		// (get) Token: 0x0603313E RID: 209214 RVA: 0x006E4ADC File Offset: 0x006E2CDC
 		public IVectorInfo? Offset
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CBF8 RID: 52216
-		// (get) Token: 0x060302E8 RID: 197352 RVA: 0x0068C580 File Offset: 0x0068A780
+		// Token: 0x1700D6DD RID: 55005
+		// (get) Token: 0x0603313F RID: 209215 RVA: 0x006E4B3C File Offset: 0x006E2D3C
 		public float WindFieldDepth
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CBF9 RID: 52217
-		// (get) Token: 0x060302E9 RID: 197353 RVA: 0x0068C5C4 File Offset: 0x0068A7C4
+		// Token: 0x1700D6DE RID: 55006
+		// (get) Token: 0x06033140 RID: 209216 RVA: 0x006E4B80 File Offset: 0x006E2D80
 		public float MaxAdditionalSpeed
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CBFA RID: 52218
-		// (get) Token: 0x060302EA RID: 197354 RVA: 0x0068C608 File Offset: 0x0068A808
+		// Token: 0x1700D6DF RID: 55007
+		// (get) Token: 0x06033141 RID: 209217 RVA: 0x006E4BC4 File Offset: 0x006E2DC4
 		public string SpeedCurve
 		{
 			get
@@ -138,20 +138,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060302EB RID: 197355 RVA: 0x0068C640 File Offset: 0x0068A840
+		// Token: 0x06033142 RID: 209218 RVA: 0x006E4BFC File Offset: 0x006E2DFC
 		public Span<byte> GetSpeedCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x060302EC RID: 197356 RVA: 0x0068C650 File Offset: 0x0068A850
+		// Token: 0x06033143 RID: 209219 RVA: 0x006E4C0C File Offset: 0x006E2E0C
 		public byte[] GetSpeedCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(14);
 		}
 
-		// Token: 0x1700CBFB RID: 52219
-		// (get) Token: 0x060302ED RID: 197357 RVA: 0x0068C660 File Offset: 0x0068A860
+		// Token: 0x1700D6E0 RID: 55008
+		// (get) Token: 0x06033144 RID: 209220 RVA: 0x006E4C1C File Offset: 0x006E2E1C
 		public float SpeedTolerance
 		{
 			get
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060302EE RID: 197358 RVA: 0x0068C6A4 File Offset: 0x0068A8A4
+		// Token: 0x06033145 RID: 209221 RVA: 0x006E4C60 File Offset: 0x006E2E60
 		public static Offset<IMotorSoarInWindFieldEnterWindField> CreateIMotorSoarInWindFieldEnterWindField(FlatBufferBuilder builder, EMotorSoarInWindFieldControlType Type = EMotorSoarInWindFieldControlType.EnterWindField, Offset<IVectorInfo> DirectionOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> OffsetOffset = default(Offset<IVectorInfo>), float WindFieldDepth = 0f, float MaxAdditionalSpeed = 0f, StringOffset SpeedCurveOffset = default(StringOffset), float SpeedTolerance = 0f)
 		{
 			builder.StartTable(7);
@@ -179,61 +179,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorSoarInWindFieldEnterWindField.EndIMotorSoarInWindFieldEnterWindField(builder);
 		}
 
-		// Token: 0x060302EF RID: 197359 RVA: 0x0068C6F3 File Offset: 0x0068A8F3
+		// Token: 0x06033146 RID: 209222 RVA: 0x006E4CAF File Offset: 0x006E2EAF
 		public static void StartIMotorSoarInWindFieldEnterWindField(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x060302F0 RID: 197360 RVA: 0x0068C6FC File Offset: 0x0068A8FC
+		// Token: 0x06033147 RID: 209223 RVA: 0x006E4CB8 File Offset: 0x006E2EB8
 		public static void AddType(FlatBufferBuilder builder, EMotorSoarInWindFieldControlType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060302F1 RID: 197361 RVA: 0x0068C707 File Offset: 0x0068A907
+		// Token: 0x06033148 RID: 209224 RVA: 0x006E4CC3 File Offset: 0x006E2EC3
 		public static void AddDirection(FlatBufferBuilder builder, Offset<IVectorInfo> directionOffset)
 		{
 			builder.AddOffset(1, directionOffset.Value, 0);
 		}
 
-		// Token: 0x060302F2 RID: 197362 RVA: 0x0068C717 File Offset: 0x0068A917
+		// Token: 0x06033149 RID: 209225 RVA: 0x006E4CD3 File Offset: 0x006E2ED3
 		public static void AddOffset(FlatBufferBuilder builder, Offset<IVectorInfo> offsetOffset)
 		{
 			builder.AddOffset(2, offsetOffset.Value, 0);
 		}
 
-		// Token: 0x060302F3 RID: 197363 RVA: 0x0068C727 File Offset: 0x0068A927
+		// Token: 0x0603314A RID: 209226 RVA: 0x006E4CE3 File Offset: 0x006E2EE3
 		public static void AddWindFieldDepth(FlatBufferBuilder builder, float windFieldDepth)
 		{
 			builder.AddFloat(3, windFieldDepth, 0.0);
 		}
 
-		// Token: 0x060302F4 RID: 197364 RVA: 0x0068C73A File Offset: 0x0068A93A
+		// Token: 0x0603314B RID: 209227 RVA: 0x006E4CF6 File Offset: 0x006E2EF6
 		public static void AddMaxAdditionalSpeed(FlatBufferBuilder builder, float maxAdditionalSpeed)
 		{
 			builder.AddFloat(4, maxAdditionalSpeed, 0.0);
 		}
 
-		// Token: 0x060302F5 RID: 197365 RVA: 0x0068C74D File Offset: 0x0068A94D
+		// Token: 0x0603314C RID: 209228 RVA: 0x006E4D09 File Offset: 0x006E2F09
 		public static void AddSpeedCurve(FlatBufferBuilder builder, StringOffset speedCurveOffset)
 		{
 			builder.AddOffset(5, speedCurveOffset.Value, 0);
 		}
 
-		// Token: 0x060302F6 RID: 197366 RVA: 0x0068C75D File Offset: 0x0068A95D
+		// Token: 0x0603314D RID: 209229 RVA: 0x006E4D19 File Offset: 0x006E2F19
 		public static void AddSpeedTolerance(FlatBufferBuilder builder, float speedTolerance)
 		{
 			builder.AddFloat(6, speedTolerance, 0.0);
 		}
 
-		// Token: 0x060302F7 RID: 197367 RVA: 0x0068C770 File Offset: 0x0068A970
+		// Token: 0x0603314E RID: 209230 RVA: 0x006E4D2C File Offset: 0x006E2F2C
 		public static Offset<IMotorSoarInWindFieldEnterWindField> EndIMotorSoarInWindFieldEnterWindField(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorSoarInWindFieldEnterWindField>(builder.EndTable());
 		}
 
-		// Token: 0x060302F8 RID: 197368 RVA: 0x0068C780 File Offset: 0x0068A980
+		// Token: 0x0603314F RID: 209231 RVA: 0x006E4D3C File Offset: 0x006E2F3C
 		public IMotorSoarInWindFieldEnterWindFieldT UnPack()
 		{
 			IMotorSoarInWindFieldEnterWindFieldT motorSoarInWindFieldEnterWindFieldT = new IMotorSoarInWindFieldEnterWindFieldT();
@@ -241,7 +241,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return motorSoarInWindFieldEnterWindFieldT;
 		}
 
-		// Token: 0x060302F9 RID: 197369 RVA: 0x0068C79C File Offset: 0x0068A99C
+		// Token: 0x06033150 RID: 209232 RVA: 0x006E4D58 File Offset: 0x006E2F58
 		public void UnPackTo(IMotorSoarInWindFieldEnterWindFieldT _o)
 		{
 			_o.Type = this.Type;
@@ -253,7 +253,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.SpeedTolerance = this.SpeedTolerance;
 		}
 
-		// Token: 0x060302FA RID: 197370 RVA: 0x0068C844 File Offset: 0x0068AA44
+		// Token: 0x06033151 RID: 209233 RVA: 0x006E4E00 File Offset: 0x006E3000
 		public static Offset<IMotorSoarInWindFieldEnterWindField> Pack(FlatBufferBuilder builder, IMotorSoarInWindFieldEnterWindFieldT _o)
 		{
 			if (_o == null)
@@ -266,7 +266,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorSoarInWindFieldEnterWindField.CreateIMotorSoarInWindFieldEnterWindField(builder, _o.Type, directionOffset, offsetOffset, _o.WindFieldDepth, _o.MaxAdditionalSpeed, speedCurveOffset, _o.SpeedTolerance);
 		}
 
-		// Token: 0x040113D6 RID: 70614
+		// Token: 0x040122FF RID: 74495
 		private Table __p;
 	}
 }

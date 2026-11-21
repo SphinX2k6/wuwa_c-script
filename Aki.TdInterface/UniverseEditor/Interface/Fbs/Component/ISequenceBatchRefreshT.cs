@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058FB RID: 22779
+	// Token: 0x02005F08 RID: 24328
 	public class ISequenceBatchRefreshT
 	{
-		// Token: 0x1700AABC RID: 43708
-		// (get) Token: 0x060267DE RID: 157662 RVA: 0x0054DC97 File Offset: 0x0054BE97
-		// (set) Token: 0x060267DF RID: 157663 RVA: 0x0054DC9F File Offset: 0x0054BE9F
+		// Token: 0x1700B3F0 RID: 46064
+		// (get) Token: 0x06028D48 RID: 167240 RVA: 0x00594903 File Offset: 0x00592B03
+		// (set) Token: 0x06028D49 RID: 167241 RVA: 0x0059490B File Offset: 0x00592B0B
 		public EEntityBatchRefreshMode Type { get; set; }
 
-		// Token: 0x1700AABD RID: 43709
-		// (get) Token: 0x060267E0 RID: 157664 RVA: 0x0054DCA8 File Offset: 0x0054BEA8
-		// (set) Token: 0x060267E1 RID: 157665 RVA: 0x0054DCB0 File Offset: 0x0054BEB0
+		// Token: 0x1700B3F1 RID: 46065
+		// (get) Token: 0x06028D4A RID: 167242 RVA: 0x00594914 File Offset: 0x00592B14
+		// (set) Token: 0x06028D4B RID: 167243 RVA: 0x0059491C File Offset: 0x00592B1C
 		public List<IEntityListBatchT> EntityBatches { get; set; }
 
-		// Token: 0x1700AABE RID: 43710
-		// (get) Token: 0x060267E2 RID: 157666 RVA: 0x0054DCB9 File Offset: 0x0054BEB9
-		// (set) Token: 0x060267E3 RID: 157667 RVA: 0x0054DCC1 File Offset: 0x0054BEC1
+		// Token: 0x1700B3F2 RID: 46066
+		// (get) Token: 0x06028D4C RID: 167244 RVA: 0x00594925 File Offset: 0x00592B25
+		// (set) Token: 0x06028D4D RID: 167245 RVA: 0x0059492D File Offset: 0x00592B2D
 		public bool IsRestartAfterAllBatchesFinished { get; set; }
 
-		// Token: 0x1700AABF RID: 43711
-		// (get) Token: 0x060267E4 RID: 157668 RVA: 0x0054DCCA File Offset: 0x0054BECA
-		// (set) Token: 0x060267E5 RID: 157669 RVA: 0x0054DCD2 File Offset: 0x0054BED2
+		// Token: 0x1700B3F3 RID: 46067
+		// (get) Token: 0x06028D4E RID: 167246 RVA: 0x00594936 File Offset: 0x00592B36
+		// (set) Token: 0x06028D4F RID: 167247 RVA: 0x0059493E File Offset: 0x00592B3E
 		public byte NullMask { get; set; }
 
-		// Token: 0x060267E6 RID: 157670 RVA: 0x0054DCDB File Offset: 0x0054BEDB
+		// Token: 0x06028D50 RID: 167248 RVA: 0x00594947 File Offset: 0x00592B47
 		public ISequenceBatchRefreshT()
 		{
 			this.Type = EEntityBatchRefreshMode.SequenceBatch;

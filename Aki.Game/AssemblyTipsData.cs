@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02002916 RID: 10518
+// Token: 0x02001E91 RID: 7825
 [NullableContext(1)]
 [Nullable(0)]
 public class AssemblyTipsData
 {
-	// Token: 0x06015AF4 RID: 88820 RVA: 0x00578694 File Offset: 0x00576894
+	// Token: 0x060134F8 RID: 79096 RVA: 0x005A3588 File Offset: 0x005A1788
 	public AssemblyTipsData()
 	{
 		this.GridType = ERouletteGridType.Explore;
@@ -27,46 +27,46 @@ public class AssemblyTipsData
 		this.ShowPhantomInteractEquipment = false;
 	}
 
-	// Token: 0x0400A191 RID: 41361
+	// Token: 0x0400A57C RID: 42364
 	public ERouletteGridType GridType;
 
-	// Token: 0x0400A192 RID: 41362
+	// Token: 0x0400A57D RID: 42365
 	public int GridId;
 
-	// Token: 0x0400A193 RID: 41363
+	// Token: 0x0400A57E RID: 42366
 	public string Title;
 
-	// Token: 0x0400A194 RID: 41364
+	// Token: 0x0400A57F RID: 42367
 	public InventoryDefine.EQuality BgQuality;
 
-	// Token: 0x0400A195 RID: 41365
+	// Token: 0x0400A580 RID: 42368
 	public bool IsIconTexture;
 
-	// Token: 0x0400A196 RID: 41366
+	// Token: 0x0400A581 RID: 42369
 	public string IconPath;
 
-	// Token: 0x0400A197 RID: 41367
+	// Token: 0x0400A582 RID: 42370
 	public int HelpId;
 
-	// Token: 0x0400A198 RID: 41368
+	// Token: 0x0400A583 RID: 42371
 	public string TextMain;
 
-	// Token: 0x0400A199 RID: 41369
+	// Token: 0x0400A584 RID: 42372
 	public string TextSub;
 
-	// Token: 0x0400A19A RID: 41370
+	// Token: 0x0400A585 RID: 42373
 	public List<IGetWayItemData> GetWayData;
 
-	// Token: 0x0400A19B RID: 41371
+	// Token: 0x0400A586 RID: 42374
 	[Nullable(0)]
 	public ValueTuple<int, int> CanSetItemNum;
 
-	// Token: 0x0400A19C RID: 41372
+	// Token: 0x0400A587 RID: 42375
 	public Dictionary<int, int> NeedItemMap;
 
-	// Token: 0x0400A19D RID: 41373
+	// Token: 0x0400A588 RID: 42376
 	public List<int> Authorization;
 
-	// Token: 0x0400A19E RID: 41374
+	// Token: 0x0400A589 RID: 42377
 	public bool ShowPhantomInteractEquipment;
 }

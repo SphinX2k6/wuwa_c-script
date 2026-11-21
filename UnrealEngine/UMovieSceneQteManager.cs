@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020026F3 RID: 9971
+	// Token: 0x020007CD RID: 1997
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/SequenceDialogue.MovieSceneQteManager")]
-	[UnrealStructLayout(312, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 312)]
+	[UnrealStructLayout(568, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 568)]
 	public class UMovieSceneQteManager : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06024FBF RID: 151487 RVA: 0x0036B5F4 File Offset: 0x003697F4
+		// Token: 0x0600AC68 RID: 44136 RVA: 0x000FE79D File Offset: 0x000FC99D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneQteManager._ClassPtr;
 		}
 
-		// Token: 0x06024FC0 RID: 151488 RVA: 0x0036B600 File Offset: 0x00369800
+		// Token: 0x0600AC69 RID: 44137 RVA: 0x000FE7AC File Offset: 0x000FC9AC
 		public UMovieSceneQteManager() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneQteManager.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06024FC1 RID: 151489 RVA: 0x0036B628 File Offset: 0x00369828
+		// Token: 0x0600AC6A RID: 44138 RVA: 0x000FE7D4 File Offset: 0x000FC9D4
 		public UMovieSceneQteManager(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneQteManager.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008ED2 RID: 36562
-		// (get) Token: 0x06024FC2 RID: 151490 RVA: 0x0036B65C File Offset: 0x0036985C
-		// (set) Token: 0x06024FC3 RID: 151491 RVA: 0x0036B695 File Offset: 0x00369895
+		// Token: 0x17002028 RID: 8232
+		// (get) Token: 0x0600AC6B RID: 44139 RVA: 0x000FE808 File Offset: 0x000FCA08
+		// (set) Token: 0x0600AC6C RID: 44140 RVA: 0x000FE841 File Offset: 0x000FCA41
 		public FOnQteAnimEnd OnQteAnimEnd
 		{
 			get
@@ -50,9 +50,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008ED3 RID: 36563
-		// (get) Token: 0x06024FC4 RID: 151492 RVA: 0x0036B6B8 File Offset: 0x003698B8
-		// (set) Token: 0x06024FC5 RID: 151493 RVA: 0x0036B6F1 File Offset: 0x003698F1
+		// Token: 0x17002029 RID: 8233
+		// (get) Token: 0x0600AC6D RID: 44141 RVA: 0x000FE864 File Offset: 0x000FCA64
+		// (set) Token: 0x0600AC6E RID: 44142 RVA: 0x000FE89D File Offset: 0x000FCA9D
+		public FOnQteSectionEnd OnQteSectionEnd
+		{
+			get
+			{
+				base.FastCheckIsValid();
+				FOnQteSectionEnd result;
+				if ((result = this._OnQteSectionEnd) == null)
+				{
+					result = (this._OnQteSectionEnd = new FOnQteSectionEnd(base.NativePtr + (IntPtr)UMovieSceneQteManager.__PropertyOffset_OnQteSectionEnd, this));
+				}
+				return result;
+			}
+			set
+			{
+				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)UMovieSceneQteManager.__PropertyOffset_OnQteSectionEnd, (value != null) ? value.NativePtr : ((IntPtr)0));
+			}
+		}
+
+		// Token: 0x1700202A RID: 8234
+		// (get) Token: 0x0600AC6F RID: 44143 RVA: 0x000FE8C0 File Offset: 0x000FCAC0
+		// (set) Token: 0x0600AC70 RID: 44144 RVA: 0x000FE8F9 File Offset: 0x000FCAF9
 		public FOnQteStart OnQteStart
 		{
 			get
@@ -71,30 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008ED4 RID: 36564
-		// (get) Token: 0x06024FC6 RID: 151494 RVA: 0x0036B714 File Offset: 0x00369914
-		// (set) Token: 0x06024FC7 RID: 151495 RVA: 0x0036B74D File Offset: 0x0036994D
-		public TMap<UAnimInstance, FMovieSceneQteAnimParams> AnimMap
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<UAnimInstance, FMovieSceneQteAnimParams> result;
-				if ((result = this._AnimMap) == null)
-				{
-					result = (this._AnimMap = new TMap<UAnimInstance, FMovieSceneQteAnimParams>(base.NativePtr + (IntPtr)UMovieSceneQteManager.__PropertyOffset_AnimMap, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.AnimMap.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17008ED5 RID: 36565
-		// (get) Token: 0x06024FC8 RID: 151496 RVA: 0x0036B75B File Offset: 0x0036995B
-		// (set) Token: 0x06024FC9 RID: 151497 RVA: 0x0036B76F File Offset: 0x0036996F
+		// Token: 0x1700202B RID: 8235
+		// (get) Token: 0x0600AC71 RID: 44145 RVA: 0x000FE91A File Offset: 0x000FCB1A
+		// (set) Token: 0x0600AC72 RID: 44146 RVA: 0x000FE92E File Offset: 0x000FCB2E
 		[Nullable(2)]
 		public unsafe ALevelSequenceActor QteSeqActor
 		{
@@ -110,9 +110,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008ED6 RID: 36566
-		// (get) Token: 0x06024FCA RID: 151498 RVA: 0x0036B784 File Offset: 0x00369984
-		// (set) Token: 0x06024FCB RID: 151499 RVA: 0x0036B7BD File Offset: 0x003699BD
+		// Token: 0x1700202C RID: 8236
+		// (get) Token: 0x0600AC73 RID: 44147 RVA: 0x000FE944 File Offset: 0x000FCB44
+		// (set) Token: 0x0600AC74 RID: 44148 RVA: 0x000FE97D File Offset: 0x000FCB7D
 		public TMap<UAnimMontage, UAnimInstance> MontageToAnimInstance
 		{
 			get
@@ -131,100 +131,158 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06024FCC RID: 151500 RVA: 0x0036B7CB File Offset: 0x003699CB
+		// Token: 0x1700202D RID: 8237
+		// (get) Token: 0x0600AC75 RID: 44149 RVA: 0x000FE98C File Offset: 0x000FCB8C
+		// (set) Token: 0x0600AC76 RID: 44150 RVA: 0x000FE9C5 File Offset: 0x000FCBC5
+		public TMap<UAnimMontage, UAnimInstance> ClickMontageToAnimInstance
+		{
+			get
+			{
+				base.FastCheckIsValid();
+				TMap<UAnimMontage, UAnimInstance> result;
+				if ((result = this._ClickMontageToAnimInstance) == null)
+				{
+					result = (this._ClickMontageToAnimInstance = new TMap<UAnimMontage, UAnimInstance>(base.NativePtr + (IntPtr)UMovieSceneQteManager.__PropertyOffset_ClickMontageToAnimInstance, this));
+				}
+				return result;
+			}
+			set
+			{
+				this.ClickMontageToAnimInstance.CopyAssign(value);
+			}
+		}
+
+		// Token: 0x1700202E RID: 8238
+		// (get) Token: 0x0600AC77 RID: 44151 RVA: 0x000FE9D4 File Offset: 0x000FCBD4
+		// (set) Token: 0x0600AC78 RID: 44152 RVA: 0x000FEA0D File Offset: 0x000FCC0D
+		public TSet<UAnimInstance> PendingClickAnimInstances
+		{
+			get
+			{
+				base.FastCheckIsValid();
+				TSet<UAnimInstance> result;
+				if ((result = this._PendingClickAnimInstances) == null)
+				{
+					result = (this._PendingClickAnimInstances = new TSet<UAnimInstance>(base.NativePtr + (IntPtr)UMovieSceneQteManager.__PropertyOffset_PendingClickAnimInstances, this));
+				}
+				return result;
+			}
+			set
+			{
+				this.PendingClickAnimInstances.CopyAssign(value);
+			}
+		}
+
+		// Token: 0x0600AC79 RID: 44153 RVA: 0x000FEA1B File Offset: 0x000FCC1B
 		public void UpdateQte(int Id, bool bProgress, float ProgressPercentage)
 		{
 			UMovieSceneQteManager.__UpdateQte_Internal(base.NativePtr, Id, bProgress, ProgressPercentage);
 		}
 
-		// Token: 0x06024FCD RID: 151501 RVA: 0x0036B7DB File Offset: 0x003699DB
+		// Token: 0x0600AC7A RID: 44154 RVA: 0x000FEA2B File Offset: 0x000FCC2B
+		public void QteTriggerInput(int Id)
+		{
+			UMovieSceneQteManager.__QteTriggerInput_Internal(base.NativePtr, Id);
+		}
+
+		// Token: 0x0600AC7B RID: 44155 RVA: 0x000FEA39 File Offset: 0x000FCC39
 		public void OnSequencePaused()
 		{
 			UMovieSceneQteManager.__OnSequencePaused_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06024FCE RID: 151502 RVA: 0x0036B7E8 File Offset: 0x003699E8
+		// Token: 0x0600AC7C RID: 44156 RVA: 0x000FEA46 File Offset: 0x000FCC46
 		[NullableContext(2)]
 		public void OnMontageBlendingOut(UAnimMontage Montage, bool bInterrupted)
 		{
 			UMovieSceneQteManager.__OnMontageBlendingOut_Internal(base.NativePtr, (Montage != null) ? Montage.NativePtr : IntPtr.Zero, bInterrupted);
 		}
 
-		// Token: 0x06024FCF RID: 151503 RVA: 0x0036B806 File Offset: 0x00369A06
+		// Token: 0x0600AC7D RID: 44157 RVA: 0x000FEA64 File Offset: 0x000FCC64
+		[NullableContext(2)]
+		public void OnClickMontageEnded(UAnimMontage Montage, bool bInterrupted)
+		{
+			UMovieSceneQteManager.__OnClickMontageEnded_Internal(base.NativePtr, (Montage != null) ? Montage.NativePtr : IntPtr.Zero, bInterrupted);
+		}
+
+		// Token: 0x0600AC7E RID: 44158 RVA: 0x000FEA82 File Offset: 0x000FCC82
 		public void FinishQte(int Id)
 		{
 			UMovieSceneQteManager.__FinishQte_Internal(base.NativePtr, Id);
 		}
 
-		// Token: 0x06024FD0 RID: 151504
+		// Token: 0x0600AC7F RID: 44159
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateQte_Internal(IntPtr @this, int Id, bool bProgress, float ProgressPercentage);
 
-		// Token: 0x06024FD1 RID: 151505
+		// Token: 0x0600AC80 RID: 44160
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		private static extern void __QteTriggerInput_Internal(IntPtr @this, int Id);
+
+		// Token: 0x0600AC81 RID: 44161
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnSequencePaused_Internal(IntPtr @this);
 
-		// Token: 0x06024FD2 RID: 151506
+		// Token: 0x0600AC82 RID: 44162
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnMontageBlendingOut_Internal(IntPtr @this, IntPtr Montage, bool bInterrupted);
 
-		// Token: 0x06024FD3 RID: 151507
+		// Token: 0x0600AC83 RID: 44163
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		private static extern void __OnClickMontageEnded_Internal(IntPtr @this, IntPtr Montage, bool bInterrupted);
+
+		// Token: 0x0600AC84 RID: 44164
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __FinishQte_Internal(IntPtr @this, int Id);
 
-		// Token: 0x06024FD4 RID: 151508 RVA: 0x0036B814 File Offset: 0x00369A14
+		// Token: 0x0600AC85 RID: 44165 RVA: 0x000FEA90 File Offset: 0x000FCC90
 		static UMovieSceneQteManager()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SequenceDialogue.MovieSceneQteManager");
 		}
 
-		// Token: 0x06024FD5 RID: 151509 RVA: 0x0036B822 File Offset: 0x00369A22
+		// Token: 0x0600AC86 RID: 44166 RVA: 0x000FEA9E File Offset: 0x000FCC9E
 		protected UMovieSceneQteManager(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04013EE3 RID: 81635
+		// Token: 0x04004A4C RID: 19020
 		public new const string __ObjectPath = "/Script/SequenceDialogue.MovieSceneQteManager";
 
-		// Token: 0x04013EE4 RID: 81636
+		// Token: 0x04004A4D RID: 19021
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04013EE5 RID: 81637
+		// Token: 0x04004A4E RID: 19022
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04013EE6 RID: 81638
+		// Token: 0x04004A4F RID: 19023
 		internal static int __PropertyOffset_OnQteAnimEnd;
 
-		// Token: 0x04013EE7 RID: 81639
+		// Token: 0x04004A50 RID: 19024
 		[Nullable(2)]
 		private FOnQteAnimEnd _OnQteAnimEnd;
 
-		// Token: 0x04013EE8 RID: 81640
+		// Token: 0x04004A51 RID: 19025
+		internal static int __PropertyOffset_OnQteSectionEnd;
+
+		// Token: 0x04004A52 RID: 19026
+		[Nullable(2)]
+		private FOnQteSectionEnd _OnQteSectionEnd;
+
+		// Token: 0x04004A53 RID: 19027
 		internal static int __PropertyOffset_OnQteStart;
 
-		// Token: 0x04013EE9 RID: 81641
+		// Token: 0x04004A54 RID: 19028
 		[Nullable(2)]
 		private FOnQteStart _OnQteStart;
 
-		// Token: 0x04013EEA RID: 81642
-		internal static int __PropertyOffset_AnimMap;
-
-		// Token: 0x04013EEB RID: 81643
-		[Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		private TMap<UAnimInstance, FMovieSceneQteAnimParams> _AnimMap;
-
-		// Token: 0x04013EEC RID: 81644
+		// Token: 0x04004A55 RID: 19029
 		internal static int __PropertyOffset_QteSeqActor;
 
-		// Token: 0x04013EED RID: 81645
+		// Token: 0x04004A56 RID: 19030
 		internal static int __PropertyOffset_MontageToAnimInstance;
 
-		// Token: 0x04013EEE RID: 81646
+		// Token: 0x04004A57 RID: 19031
 		[Nullable(new byte[]
 		{
 			2,
@@ -232,5 +290,28 @@ namespace UnrealEngine
 			1
 		})]
 		private TMap<UAnimMontage, UAnimInstance> _MontageToAnimInstance;
+
+		// Token: 0x04004A58 RID: 19032
+		internal static int __PropertyOffset_ClickMontageToAnimInstance;
+
+		// Token: 0x04004A59 RID: 19033
+		[Nullable(new byte[]
+		{
+			2,
+			1,
+			1
+		})]
+		private TMap<UAnimMontage, UAnimInstance> _ClickMontageToAnimInstance;
+
+		// Token: 0x04004A5A RID: 19034
+		internal static int __PropertyOffset_PendingClickAnimInstances;
+
+		// Token: 0x04004A5B RID: 19035
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private TSet<UAnimInstance> _PendingClickAnimInstances;
 	}
 }

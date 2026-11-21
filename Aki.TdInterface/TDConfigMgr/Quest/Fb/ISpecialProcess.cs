@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013CE RID: 5070
+	// Token: 0x02001525 RID: 5413
 	public class ISpecialProcess
 	{
-		// Token: 0x060073C0 RID: 29632 RVA: 0x0011598E File Offset: 0x00113B8E
-		[NullableContext(1)]
+		// Token: 0x06007A81 RID: 31361 RVA: 0x00124372 File Offset: 0x00122572
 		public static ISpecialProcess Create(ISpecialProcess? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025F7 RID: 9719
-		// (get) Token: 0x060073C1 RID: 29633 RVA: 0x001159AD File Offset: 0x00113BAD
+		// Token: 0x170027D9 RID: 10201
+		// (get) Token: 0x06007A82 RID: 31362 RVA: 0x00124391 File Offset: 0x00122591
 		public virtual ESpecialProcess Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004302 RID: 17154
+		// Token: 0x04004693 RID: 18067
 		private ISpecialProcess Instance;
 	}
 }

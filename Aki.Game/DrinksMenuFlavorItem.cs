@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F5D RID: 3933
+// Token: 0x02000412 RID: 1042
 [NullableContext(1)]
 [Nullable(0)]
 public class DrinksMenuFlavorItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600649D RID: 25757 RVA: 0x0013EBE8 File Offset: 0x0013CDE8
+	// Token: 0x06003835 RID: 14389 RVA: 0x00147484 File Offset: 0x00145684
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class DrinksMenuFlavorItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0600649E RID: 25758 RVA: 0x0013ECC0 File Offset: 0x0013CEC0
+	// Token: 0x06003836 RID: 14390 RVA: 0x0014755C File Offset: 0x0014575C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DrinksMenuFlavorItem.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -42,21 +42,21 @@ public class DrinksMenuFlavorItem : GridProxyAbstract<int>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600649F RID: 25759 RVA: 0x0013ED03 File Offset: 0x0013CF03
+	// Token: 0x06003837 RID: 14391 RVA: 0x0014759F File Offset: 0x0014579F
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChange));
 		base.GetExtendToggle(0).OnPointDownCallBack.Bind(new Action<EToggleState>(this.OnClickedToggle));
 	}
 
-	// Token: 0x060064A0 RID: 25760 RVA: 0x0013ED40 File Offset: 0x0013CF40
+	// Token: 0x06003838 RID: 14392 RVA: 0x001475DC File Offset: 0x001457DC
 	private void OnClickedReduce()
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, true, false, false);
 		base.GetButton(5).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x060064A1 RID: 25761 RVA: 0x0013ED78 File Offset: 0x0013CF78
+	// Token: 0x06003839 RID: 14393 RVA: 0x00147614 File Offset: 0x00145814
 	private void OnClickedToggle(EToggleState _)
 	{
 		if (base.GetExtendToggle(0).GetToggleState() == EToggleState.ETT_UnDetermined)
@@ -65,7 +65,7 @@ public class DrinksMenuFlavorItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x060064A2 RID: 25762 RVA: 0x0013ED9D File Offset: 0x0013CF9D
+	// Token: 0x0600383A RID: 14394 RVA: 0x00147639 File Offset: 0x00145839
 	public override void OnSelected(bool fireEvent)
 	{
 		if (this.IsSelectOnCb != null && this.Id != 0)
@@ -74,7 +74,7 @@ public class DrinksMenuFlavorItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x060064A3 RID: 25763 RVA: 0x0013EDC8 File Offset: 0x0013CFC8
+	// Token: 0x0600383B RID: 14395 RVA: 0x00147664 File Offset: 0x00145864
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.Id = data;
@@ -137,7 +137,7 @@ public class DrinksMenuFlavorItem : GridProxyAbstract<int>
 		this.TasteItem2.Refresh((flavorRange.Count > 1) ? flavorRange[1] : null);
 	}
 
-	// Token: 0x060064A4 RID: 25764 RVA: 0x0013F034 File Offset: 0x0013D234
+	// Token: 0x0600383C RID: 14396 RVA: 0x001478D0 File Offset: 0x00145AD0
 	private List<ITasteInfo> GetFlavorRange(int configId)
 	{
 		DrinksDrinkBase? drinkBase = DrinksConfig.Instance.GetDrinkBase(configId);
@@ -164,7 +164,7 @@ public class DrinksMenuFlavorItem : GridProxyAbstract<int>
 		return list;
 	}
 
-	// Token: 0x060064A5 RID: 25765 RVA: 0x0013F10C File Offset: 0x0013D30C
+	// Token: 0x0600383D RID: 14397 RVA: 0x001479A8 File Offset: 0x00145BA8
 	private void SetSelected(bool bSelectOn, bool bFireEvent = false)
 	{
 		base.GetExtendToggle(0).SetToggleState(bSelectOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, bFireEvent, false, false);
@@ -172,7 +172,7 @@ public class DrinksMenuFlavorItem : GridProxyAbstract<int>
 		base.GetButton(5).RootUIComp.Get().SetUIActive(bSelectOn && curStep == EDrinksPlayStep.Batching);
 	}
 
-	// Token: 0x060064A6 RID: 25766 RVA: 0x0013F160 File Offset: 0x0013D360
+	// Token: 0x0600383E RID: 14398 RVA: 0x001479FC File Offset: 0x00145BFC
 	private void OnToggleStateChange(EToggleState state)
 	{
 		bool flag = state == EToggleState.ETT_Checked;
@@ -183,30 +183,30 @@ public class DrinksMenuFlavorItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x04002DAC RID: 11692
+	// Token: 0x04002E45 RID: 11845
 	private const string TXT_FLAVOR_DRINKS = "{0}~{1}";
 
-	// Token: 0x04002DAD RID: 11693
+	// Token: 0x04002E46 RID: 11846
 	private const string TXT_FLAVOR_BATCHING = "+{0}";
 
-	// Token: 0x04002DAE RID: 11694
+	// Token: 0x04002E47 RID: 11847
 	protected DrinksMenuFlavorTasteItem TasteItem1;
 
-	// Token: 0x04002DAF RID: 11695
+	// Token: 0x04002E48 RID: 11848
 	protected DrinksMenuFlavorTasteItem TasteItem2;
 
-	// Token: 0x04002DB0 RID: 11696
+	// Token: 0x04002E49 RID: 11849
 	public int Id;
 
-	// Token: 0x04002DB1 RID: 11697
+	// Token: 0x04002E4A RID: 11850
 	[Nullable(2)]
 	public Func<int, bool> IsSelectOnCb;
 
-	// Token: 0x04002DB2 RID: 11698
+	// Token: 0x04002E4B RID: 11851
 	[Nullable(2)]
 	public Func<int, bool> IsEnableCb;
 
-	// Token: 0x04002DB3 RID: 11699
+	// Token: 0x04002E4C RID: 11852
 	[Nullable(new byte[]
 	{
 		2,
@@ -215,29 +215,29 @@ public class DrinksMenuFlavorItem : GridProxyAbstract<int>
 	})]
 	public Action<UUIExtendToggle, UUIButtonComponent, int, bool> OnToggleStateChangeFunction;
 
-	// Token: 0x020075AA RID: 30122
+	// Token: 0x0200673E RID: 26430
 	[NullableContext(0)]
 	private static class EDefine
 	{
-		// Token: 0x04026E44 RID: 159300
+		// Token: 0x0402218F RID: 139663
 		public const int Toggle = 0;
 
-		// Token: 0x04026E45 RID: 159301
+		// Token: 0x04022190 RID: 139664
 		public const int Icon = 1;
 
-		// Token: 0x04026E46 RID: 159302
+		// Token: 0x04022191 RID: 139665
 		public const int Name = 2;
 
-		// Token: 0x04026E47 RID: 159303
+		// Token: 0x04022192 RID: 139666
 		public const int PanelTasteList = 3;
 
-		// Token: 0x04026E48 RID: 159304
+		// Token: 0x04022193 RID: 139667
 		public const int TasteItem1 = 4;
 
-		// Token: 0x04026E49 RID: 159305
+		// Token: 0x04022194 RID: 139668
 		public const int BtnReduce = 5;
 
-		// Token: 0x04026E4A RID: 159306
+		// Token: 0x04022195 RID: 139669
 		public const int TasteItem2 = 6;
 	}
 }

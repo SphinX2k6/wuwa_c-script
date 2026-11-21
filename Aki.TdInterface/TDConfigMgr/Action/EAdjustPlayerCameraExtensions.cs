@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002297 RID: 8855
+	// Token: 0x02002504 RID: 9476
 	public static class EAdjustPlayerCameraExtensions
 	{
-		// Token: 0x0600C226 RID: 49702 RVA: 0x001C5C78 File Offset: 0x001C3E78
+		// Token: 0x0600CDEC RID: 52716 RVA: 0x001DD96C File Offset: 0x001DBB6C
 		public static string ToEnumString(this EAdjustPlayerCamera value)
 		{
 			string result;
@@ -45,7 +45,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C227 RID: 49703 RVA: 0x001C5D08 File Offset: 0x001C3F08
+		// Token: 0x0600CDED RID: 52717 RVA: 0x001DD9FC File Offset: 0x001DBBFC
 		public static EAdjustPlayerCamera FromString(string name)
 		{
 			EAdjustPlayerCamera result;
@@ -56,7 +56,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C228 RID: 49704 RVA: 0x001C5D34 File Offset: 0x001C3F34
+		// Token: 0x0600CDEE RID: 52718 RVA: 0x001DDA28 File Offset: 0x001DBC28
 		public static bool TryFromString(string name, out EAdjustPlayerCamera value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -165,7 +165,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C229 RID: 49705 RVA: 0x001C5ED0 File Offset: 0x001C40D0
+		// Token: 0x0600CDEF RID: 52719 RVA: 0x001DDBC4 File Offset: 0x001DBDC4
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -182,7 +182,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C22A RID: 49706 RVA: 0x001C5F2C File Offset: 0x001C412C
+		// Token: 0x0600CDF0 RID: 52720 RVA: 0x001DDC20 File Offset: 0x001DBE20
 		public static EAdjustPlayerCamera[] GetValues()
 		{
 			return new EAdjustPlayerCamera[]
@@ -199,7 +199,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C22B RID: 49707 RVA: 0x001C5F40 File Offset: 0x001C4140
+		// Token: 0x0600CDF1 RID: 52721 RVA: 0x001DDC34 File Offset: 0x001DBE34
 		public static string[] GetNames()
 		{
 			return new string[]

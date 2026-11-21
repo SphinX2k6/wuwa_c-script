@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012AB RID: 4779
+	// Token: 0x020013F1 RID: 5105
 	public class ETrackRuleTypeJsonConverter : JsonConverter<ETrackRuleType>
 	{
-		// Token: 0x06006BAA RID: 27562 RVA: 0x00103080 File Offset: 0x00101280
+		// Token: 0x06007218 RID: 29208 RVA: 0x00111048 File Offset: 0x0010F248
 		public override ETrackRuleType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ETrackRuleTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006BAB RID: 27563 RVA: 0x001030A4 File Offset: 0x001012A4
+		// Token: 0x06007219 RID: 29209 RVA: 0x0011106C File Offset: 0x0010F26C
 		public override void Write(Utf8JsonWriter writer, ETrackRuleType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

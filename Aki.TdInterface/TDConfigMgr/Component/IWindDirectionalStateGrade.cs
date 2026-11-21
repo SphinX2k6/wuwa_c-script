@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007E7 RID: 2023
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200088A RID: 2186
 	public class IWindDirectionalStateGrade
 	{
-		// Token: 0x06002BF5 RID: 11253 RVA: 0x00072764 File Offset: 0x00070964
+		// Token: 0x06002F25 RID: 12069 RVA: 0x00079AC8 File Offset: 0x00077CC8
 		private IWindDirectionalStateGrade_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002BF6 RID: 11254 RVA: 0x0007279C File Offset: 0x0007099C
+		// Token: 0x06002F26 RID: 12070 RVA: 0x00079B00 File Offset: 0x00077D00
 		public static IWindDirectionalStateGrade Create([Nullable(2)] IWindDirectionalStateGrade instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002BF7 RID: 11255 RVA: 0x000727AF File Offset: 0x000709AF
+		// Token: 0x06002F27 RID: 12071 RVA: 0x00079B13 File Offset: 0x00077D13
 		public static IWindDirectionalStateGrade CreateFromSetValue([Nullable(2)] IWindDirectionalStateGrade_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002BF8 RID: 11256 RVA: 0x000727C2 File Offset: 0x000709C2
+		// Token: 0x06002F28 RID: 12072 RVA: 0x00079B26 File Offset: 0x00077D26
 		public IWindDirectionalStateGrade_SetValue ToSetValue()
 		{
 			return new IWindDirectionalStateGrade_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B83 RID: 2947
-		// (get) Token: 0x06002BF9 RID: 11257 RVA: 0x000727ED File Offset: 0x000709ED
-		// (set) Token: 0x06002BFA RID: 11258 RVA: 0x00072818 File Offset: 0x00070A18
+		// Token: 0x17000C46 RID: 3142
+		// (get) Token: 0x06002F29 RID: 12073 RVA: 0x00079B51 File Offset: 0x00077D51
+		// (set) Token: 0x06002F2A RID: 12074 RVA: 0x00079B7C File Offset: 0x00077D7C
 		public virtual string State
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B84 RID: 2948
-		// (get) Token: 0x06002BFB RID: 11259 RVA: 0x00072826 File Offset: 0x00070A26
-		// (set) Token: 0x06002BFC RID: 11260 RVA: 0x00072855 File Offset: 0x00070A55
+		// Token: 0x17000C47 RID: 3143
+		// (get) Token: 0x06002F2B RID: 12075 RVA: 0x00079B8A File Offset: 0x00077D8A
+		// (set) Token: 0x06002F2C RID: 12076 RVA: 0x00079BB9 File Offset: 0x00077DB9
 		public virtual float Speed
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B85 RID: 2949
-		// (get) Token: 0x06002BFD RID: 11261 RVA: 0x00072863 File Offset: 0x00070A63
-		// (set) Token: 0x06002BFE RID: 11262 RVA: 0x00072892 File Offset: 0x00070A92
+		// Token: 0x17000C48 RID: 3144
+		// (get) Token: 0x06002F2D RID: 12077 RVA: 0x00079BC7 File Offset: 0x00077DC7
+		// (set) Token: 0x06002F2E RID: 12078 RVA: 0x00079BF6 File Offset: 0x00077DF6
 		public virtual float Strength
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D29 RID: 7465
+		// Token: 0x04001F35 RID: 7989
 		[Nullable(2)]
 		protected IWindDirectionalStateGrade FbInstance;
 
-		// Token: 0x04001D2A RID: 7466
+		// Token: 0x04001F36 RID: 7990
 		[Nullable(2)]
 		protected IWindDirectionalStateGrade_SetValue PocoInterface;
 	}

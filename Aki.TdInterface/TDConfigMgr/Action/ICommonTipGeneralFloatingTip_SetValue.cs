@@ -3,17 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200191B RID: 6427
+	// Token: 0x02001AA4 RID: 6820
 	public class ICommonTipGeneralFloatingTip_SetValue
 	{
-		// Token: 0x04005640 RID: 22080
+		// Token: 0x04005A90 RID: 23184
 		public ECommonTipType Type;
 
-		// Token: 0x04005641 RID: 22081
-		[Nullable(1)]
+		// Token: 0x04005A91 RID: 23185
 		public string TidMainText;
 
-		// Token: 0x04005642 RID: 22082
+		// Token: 0x04005A92 RID: 23186
 		[Nullable(2)]
 		public string EdTidMainText;
 	}

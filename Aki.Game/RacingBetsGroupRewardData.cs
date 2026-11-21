@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020026DD RID: 9949
+// Token: 0x02001BC8 RID: 7112
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsGroupRewardData
 {
-	// Token: 0x06014669 RID: 83561 RVA: 0x00529030 File Offset: 0x00527230
+	// Token: 0x06011B4B RID: 72523 RVA: 0x00537D68 File Offset: 0x00535F68
 	public RacingBetsGroupRewardData(int id)
 	{
 		this.Id = id;
 	}
 
-	// Token: 0x0601466A RID: 83562 RVA: 0x0052904C File Offset: 0x0052724C
+	// Token: 0x06011B4C RID: 72524 RVA: 0x00537D84 File Offset: 0x00535F84
 	public void AddRewardData(RacingBetsRewardData rewardData)
 	{
 		using (List<RacingBetsRewardData>.Enumerator enumerator = this.RewardDataList.GetEnumerator())
@@ -29,7 +29,7 @@ public class RacingBetsGroupRewardData
 		this.RewardDataList.Add(rewardData);
 	}
 
-	// Token: 0x0601466B RID: 83563 RVA: 0x005290B4 File Offset: 0x005272B4
+	// Token: 0x06011B4D RID: 72525 RVA: 0x00537DEC File Offset: 0x00535FEC
 	public List<RacingBetsRewardData> GetRewardDataList()
 	{
 		List<RacingBetsRewardData> list = new List<RacingBetsRewardData>(this.RewardDataList);
@@ -52,7 +52,7 @@ public class RacingBetsGroupRewardData
 		return list;
 	}
 
-	// Token: 0x0601466C RID: 83564 RVA: 0x005290E8 File Offset: 0x005272E8
+	// Token: 0x06011B4E RID: 72526 RVA: 0x00537E20 File Offset: 0x00536020
 	public bool CanReceiveRewards()
 	{
 		using (List<RacingBetsRewardData>.Enumerator enumerator = this.RewardDataList.GetEnumerator())
@@ -68,9 +68,9 @@ public class RacingBetsGroupRewardData
 		return false;
 	}
 
-	// Token: 0x04009945 RID: 39237
+	// Token: 0x04009A9D RID: 39581
 	public readonly int Id;
 
-	// Token: 0x04009946 RID: 39238
+	// Token: 0x04009A9E RID: 39582
 	private readonly List<RacingBetsRewardData> RewardDataList = new List<RacingBetsRewardData>();
 }

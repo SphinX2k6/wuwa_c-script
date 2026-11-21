@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A41 RID: 2625
+	// Token: 0x02000B06 RID: 2822
 	public class ETrampleTipTypeJsonConverter : JsonConverter<ETrampleTipType>
 	{
-		// Token: 0x060039D7 RID: 14807 RVA: 0x0009525C File Offset: 0x0009345C
+		// Token: 0x06003DAF RID: 15791 RVA: 0x0009DBC8 File Offset: 0x0009BDC8
 		public override ETrampleTipType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ETrampleTipTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060039D8 RID: 14808 RVA: 0x00095280 File Offset: 0x00093480
+		// Token: 0x06003DB0 RID: 15792 RVA: 0x0009DBEC File Offset: 0x0009BDEC
 		public override void Write(Utf8JsonWriter writer, ETrampleTipType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

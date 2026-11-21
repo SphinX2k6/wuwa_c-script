@@ -7,13 +7,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001247 RID: 4679
+// Token: 0x020006FB RID: 1787
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoMonopolyRoundBuffShowView : DangoMonopolyViewBase
 {
-	// Token: 0x17000ABF RID: 2751
-	// (get) Token: 0x06007F07 RID: 32519 RVA: 0x001AEC7C File Offset: 0x001ACE7C
+	// Token: 0x17000ADF RID: 2783
+	// (get) Token: 0x0600529E RID: 21150 RVA: 0x001B7934 File Offset: 0x001B5B34
 	[Nullable(2)]
 	public new DangoMonopolyRoundBuffShowViewParam OpenParam
 	{
@@ -24,12 +24,12 @@ public class DangoMonopolyRoundBuffShowView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007F08 RID: 32520 RVA: 0x001AEC89 File Offset: 0x001ACE89
+	// Token: 0x0600529F RID: 21151 RVA: 0x001B7941 File Offset: 0x001B5B41
 	public DangoMonopolyRoundBuffShowView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007F09 RID: 32521 RVA: 0x001AEC94 File Offset: 0x001ACE94
+	// Token: 0x060052A0 RID: 21152 RVA: 0x001B794C File Offset: 0x001B5B4C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -47,12 +47,12 @@ public class DangoMonopolyRoundBuffShowView : DangoMonopolyViewBase
 		};
 	}
 
-	// Token: 0x06007F0A RID: 32522 RVA: 0x001AED55 File Offset: 0x001ACF55
+	// Token: 0x060052A1 RID: 21153 RVA: 0x001B7A0D File Offset: 0x001B5C0D
 	private void InitDataParam()
 	{
 	}
 
-	// Token: 0x06007F0B RID: 32523 RVA: 0x001AED58 File Offset: 0x001ACF58
+	// Token: 0x060052A2 RID: 21154 RVA: 0x001B7A10 File Offset: 0x001B5C10
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoMonopolyRoundBuffShowView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ public class DangoMonopolyRoundBuffShowView : DangoMonopolyViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007F0C RID: 32524 RVA: 0x001AED9B File Offset: 0x001ACF9B
+	// Token: 0x060052A3 RID: 21155 RVA: 0x001B7A53 File Offset: 0x001B5C53
 	protected override void OnBeforeShow()
 	{
 		GenericLayout<DangoMonopolyRoundBuffShowItem, IDangoMonopolyRoundBuffData> buffLayout = this.BuffLayout;
@@ -74,7 +74,7 @@ public class DangoMonopolyRoundBuffShowView : DangoMonopolyViewBase
 		buffLayout.RefreshByData(this.GetBuffList(), null, true);
 	}
 
-	// Token: 0x06007F0D RID: 32525 RVA: 0x001AEDB8 File Offset: 0x001ACFB8
+	// Token: 0x060052A4 RID: 21156 RVA: 0x001B7A70 File Offset: 0x001B5C70
 	private List<IDangoMonopolyRoundBuffData> GetBuffList()
 	{
 		DangoMonopolyRoundBuffShowViewParam openParam = this.OpenParam;
@@ -87,7 +87,7 @@ public class DangoMonopolyRoundBuffShowView : DangoMonopolyViewBase
 		return ((currentBoardData != null) ? currentBoardData.GetDangoBuffShowList() : null) ?? new List<IDangoMonopolyRoundBuffData>();
 	}
 
-	// Token: 0x06007F0E RID: 32526 RVA: 0x001AEE0E File Offset: 0x001AD00E
+	// Token: 0x060052A5 RID: 21157 RVA: 0x001B7AC6 File Offset: 0x001B5CC6
 	protected override void OnBeforeDestroy()
 	{
 		DangoMonopolyRoundBuffShowViewParam openParam = this.OpenParam;
@@ -103,19 +103,19 @@ public class DangoMonopolyRoundBuffShowView : DangoMonopolyViewBase
 		promise.SetResult();
 	}
 
-	// Token: 0x06007F0F RID: 32527 RVA: 0x001AEE2A File Offset: 0x001AD02A
+	// Token: 0x060052A6 RID: 21158 RVA: 0x001B7AE2 File Offset: 0x001B5CE2
 	private void OnClickClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06007F10 RID: 32528 RVA: 0x001AEE33 File Offset: 0x001AD033
+	// Token: 0x060052A7 RID: 21159 RVA: 0x001B7AEB File Offset: 0x001B5CEB
 	private DangoMonopolyRoundBuffShowItem CreateBuffItem()
 	{
 		return new DangoMonopolyRoundBuffShowItem();
 	}
 
-	// Token: 0x040039D6 RID: 14806
+	// Token: 0x04003A6E RID: 14958
 	[Nullable(new byte[]
 	{
 		2,
@@ -124,19 +124,19 @@ public class DangoMonopolyRoundBuffShowView : DangoMonopolyViewBase
 	})]
 	private GenericLayout<DangoMonopolyRoundBuffShowItem, IDangoMonopolyRoundBuffData> BuffLayout;
 
-	// Token: 0x0200785F RID: 30815
+	// Token: 0x020069EA RID: 27114
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04027AA7 RID: 162471
+		// Token: 0x04022DD8 RID: 142808
 		BtnClose,
-		// Token: 0x04027AA8 RID: 162472
+		// Token: 0x04022DD9 RID: 142809
 		TxtTitle,
-		// Token: 0x04027AA9 RID: 162473
+		// Token: 0x04022DDA RID: 142810
 		BtnEmpty,
-		// Token: 0x04027AAA RID: 162474
+		// Token: 0x04022DDB RID: 142811
 		VLayoutProperty,
-		// Token: 0x04027AAB RID: 162475
+		// Token: 0x04022DDC RID: 142812
 		ItemProperty
 	}
 }

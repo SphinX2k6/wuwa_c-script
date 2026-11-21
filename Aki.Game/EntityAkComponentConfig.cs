@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02003023 RID: 12323
+// Token: 0x02002579 RID: 9593
 [NullableContext(1)]
 [Nullable(0)]
 public class EntityAkComponentConfig : ConfigBase
 {
-	// Token: 0x0601A17D RID: 106877 RVA: 0x006D7904 File Offset: 0x006D5B04
+	// Token: 0x06017AC5 RID: 96965 RVA: 0x006FF80C File Offset: 0x006FDA0C
 	public EntityAudioConfig? GetEntityAkComponentConfig(Entity entity)
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -20,7 +20,7 @@ public class EntityAkComponentConfig : ConfigBase
 		return ConfigEntityAudioConfigByIdWithZero.GetConfig(entityPbModelConfigId, entityPbModelConfigId, entityPbModelConfigId, true);
 	}
 
-	// Token: 0x0601A17E RID: 106878 RVA: 0x006D7934 File Offset: 0x006D5B34
+	// Token: 0x06017AC6 RID: 96966 RVA: 0x006FF83C File Offset: 0x006FDA3C
 	[return: Nullable(2)]
 	public unsafe FoleySynthAllConfig GetEntityFoleySynthConfig(Entity entity)
 	{
@@ -190,7 +190,7 @@ public class EntityAkComponentConfig : ConfigBase
 		return allConfig;
 	}
 
-	// Token: 0x0601A17F RID: 106879 RVA: 0x006D7EC8 File Offset: 0x006D60C8
+	// Token: 0x06017AC7 RID: 96967 RVA: 0x006FFDD0 File Offset: 0x006FDFD0
 	public CharacterAudioConfig? GetCharacterAudioConfigByEntity(Entity entity)
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -203,7 +203,7 @@ public class EntityAkComponentConfig : ConfigBase
 		return this.GetCharacterAudioConfigByConfigId(configId);
 	}
 
-	// Token: 0x0601A180 RID: 106880 RVA: 0x006D7F1C File Offset: 0x006D611C
+	// Token: 0x06017AC8 RID: 96968 RVA: 0x006FFE24 File Offset: 0x006FE024
 	public unsafe CharacterAudioConfig? GetCharacterAudioConfigByConfigId(int configId)
 	{
 		CharacterAudioConfig? config = ConfigCharacterAudioConfigByIdWithDefaultId.GetConfig(0, configId, configId, configId, true);
@@ -232,8 +232,8 @@ public class EntityAkComponentConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x170023E8 RID: 9192
-	// (get) Token: 0x0601A181 RID: 106881 RVA: 0x006D7FED File Offset: 0x006D61ED
+	// Token: 0x170024B6 RID: 9398
+	// (get) Token: 0x06017AC9 RID: 96969 RVA: 0x006FFEF5 File Offset: 0x006FE0F5
 	public static EntityAkComponentConfig Instance
 	{
 		get
@@ -242,7 +242,7 @@ public class EntityAkComponentConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601A182 RID: 106882 RVA: 0x006D7FF4 File Offset: 0x006D61F4
+	// Token: 0x06017ACA RID: 96970 RVA: 0x006FFEFC File Offset: 0x006FE0FC
 	public static EntityAkComponentConfig GetOrCreateInstance()
 	{
 		if (EntityAkComponentConfig._Instance == null)
@@ -252,7 +252,7 @@ public class EntityAkComponentConfig : ConfigBase
 		return EntityAkComponentConfig._Instance;
 	}
 
-	// Token: 0x0601A183 RID: 106883 RVA: 0x006D8008 File Offset: 0x006D6208
+	// Token: 0x06017ACB RID: 96971 RVA: 0x006FFF10 File Offset: 0x006FE110
 	public static bool CreateInstance()
 	{
 		if (EntityAkComponentConfig._Instance != null)
@@ -263,27 +263,27 @@ public class EntityAkComponentConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601A184 RID: 106884 RVA: 0x006D801E File Offset: 0x006D621E
+	// Token: 0x06017ACC RID: 96972 RVA: 0x006FFF26 File Offset: 0x006FE126
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601A185 RID: 106885 RVA: 0x006D8020 File Offset: 0x006D6220
+	// Token: 0x06017ACD RID: 96973 RVA: 0x006FFF28 File Offset: 0x006FE128
 	public static void ResetStaticDefaultValue()
 	{
 		EntityAkComponentConfig._Instance = null;
 	}
 
-	// Token: 0x0601A186 RID: 106886 RVA: 0x006D8028 File Offset: 0x006D6228
+	// Token: 0x06017ACE RID: 96974 RVA: 0x006FFF30 File Offset: 0x006FE130
 	static EntityAkComponentConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(EntityAkComponentConfig.CreateStaticDefaultValue), new Action(EntityAkComponentConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400C5EF RID: 50671
+	// Token: 0x0400C9BC RID: 51644
 	private const int DEFAULT_DB_ID = 0;
 
-	// Token: 0x0400C5F0 RID: 50672
+	// Token: 0x0400C9BD RID: 51645
 	[Nullable(2)]
 	private static EntityAkComponentConfig _Instance;
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004C6 RID: 1222
+	// Token: 0x020004DC RID: 1244
 	public class ConfigLangImageResourceById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001CAF RID: 7343 RVA: 0x000FB4B8 File Offset: 0x000F96B8
+		// Token: 0x06001D33 RID: 7475 RVA: 0x00101C0C File Offset: 0x000FFE0C
 		static ConfigLangImageResourceById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLangImageResourceById.CreateStaticDefaultValue), new Action(ConfigLangImageResourceById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001CB0 RID: 7344 RVA: 0x000FB4D8 File Offset: 0x000F96D8
+		// Token: 0x06001D34 RID: 7476 RVA: 0x00101C2C File Offset: 0x000FFE2C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLangImageResourceById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001CB1 RID: 7345 RVA: 0x000FB557 File Offset: 0x000F9757
+		// Token: 0x06001D35 RID: 7477 RVA: 0x00101CAB File Offset: 0x000FFEAB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLangImageResourceById.LogPair = null;
 			ConfigLangImageResourceById.HandleId = 0;
 		}
 
-		// Token: 0x06001CB2 RID: 7346 RVA: 0x000FB565 File Offset: 0x000F9765
+		// Token: 0x06001D36 RID: 7478 RVA: 0x00101CB9 File Offset: 0x000FFEB9
 		public static void Init()
 		{
 			ConfigLangImageResourceById.HandleId = ConfigCommon.InitDataStatement(ConfigLangImageResourceById.HandleId, "db_langimage.db", "select BinData from `LangImageResource` where Id=?");
 		}
 
-		// Token: 0x06001CB3 RID: 7347 RVA: 0x000FB580 File Offset: 0x000F9780
+		// Token: 0x06001D37 RID: 7479 RVA: 0x00101CD4 File Offset: 0x000FFED4
 		public static LangImageResource? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLangImageResourceById.HandleId, ConfigLangImageResourceById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new LangImageResource?(rootAsLangImageResource);
 		}
 
-		// Token: 0x0400214E RID: 8526
+		// Token: 0x040021E8 RID: 8680
 		private const string DB = "db_langimage.db";
 
-		// Token: 0x0400214F RID: 8527
+		// Token: 0x040021E9 RID: 8681
 		private const string FILE = "d.多语言图片资源.xlsx";
 
-		// Token: 0x04002150 RID: 8528
+		// Token: 0x040021EA RID: 8682
 		private const string TABLE = "LangImageResource";
 
-		// Token: 0x04002151 RID: 8529
+		// Token: 0x040021EB RID: 8683
 		private const string COMMAND = "select BinData from `LangImageResource` where Id=?";
 
-		// Token: 0x04002152 RID: 8530
+		// Token: 0x040021EC RID: 8684
 		private const string KEY_PREFIX = "LangImageResourceById";
 
-		// Token: 0x04002153 RID: 8531
+		// Token: 0x040021ED RID: 8685
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002154 RID: 8532
+		// Token: 0x040021EE RID: 8686
 		private static int HandleId;
 	}
 }

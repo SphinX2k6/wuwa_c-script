@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C82 RID: 7298
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E87 RID: 7815
 	public class Interact : ActionParams
 	{
-		// Token: 0x06009C89 RID: 40073 RVA: 0x00166F74 File Offset: 0x00165174
+		// Token: 0x0600A623 RID: 42531 RVA: 0x0017A968 File Offset: 0x00178B68
 		private Interact_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009C8A RID: 40074 RVA: 0x00166FAC File Offset: 0x001651AC
+		// Token: 0x0600A624 RID: 42532 RVA: 0x0017A9A0 File Offset: 0x00178BA0
 		public static Interact Create([Nullable(2)] Interact instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C8B RID: 40075 RVA: 0x00166FBF File Offset: 0x001651BF
+		// Token: 0x0600A625 RID: 42533 RVA: 0x0017A9B3 File Offset: 0x00178BB3
 		public static Interact CreateFromSetValue([Nullable(2)] Interact_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C8C RID: 40076 RVA: 0x00166FD2 File Offset: 0x001651D2
+		// Token: 0x0600A626 RID: 42534 RVA: 0x0017A9C6 File Offset: 0x00178BC6
 		public Interact_SetValue ToSetValue()
 		{
 			return new Interact_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030D8 RID: 12504
-		// (get) Token: 0x06009C8D RID: 40077 RVA: 0x00166FF1 File Offset: 0x001651F1
-		// (set) Token: 0x06009C8E RID: 40078 RVA: 0x0016701C File Offset: 0x0016521C
+		// Token: 0x17003355 RID: 13141
+		// (get) Token: 0x0600A627 RID: 42535 RVA: 0x0017A9E5 File Offset: 0x00178BE5
+		// (set) Token: 0x0600A628 RID: 42536 RVA: 0x0017AA10 File Offset: 0x00178C10
 		public virtual int Who
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030D9 RID: 12505
-		// (get) Token: 0x06009C8F RID: 40079 RVA: 0x0016702A File Offset: 0x0016522A
-		// (set) Token: 0x06009C90 RID: 40080 RVA: 0x00167055 File Offset: 0x00165255
+		// Token: 0x17003356 RID: 13142
+		// (get) Token: 0x0600A629 RID: 42537 RVA: 0x0017AA1E File Offset: 0x00178C1E
+		// (set) Token: 0x0600A62A RID: 42538 RVA: 0x0017AA49 File Offset: 0x00178C49
 		public virtual string Param
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005EE7 RID: 24295
+		// Token: 0x0400643A RID: 25658
 		[Nullable(2)]
 		protected new Interact FbInstance;
 
-		// Token: 0x04005EE8 RID: 24296
+		// Token: 0x0400643B RID: 25659
 		[Nullable(2)]
 		protected Interact_SetValue PocoInterface;
 	}

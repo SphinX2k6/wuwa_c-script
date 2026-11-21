@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F3C RID: 7996
+	// Token: 0x02002175 RID: 8565
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITalkItemAvgTalk : ITalkItem
 	{
-		// Token: 0x0600AC6C RID: 44140 RVA: 0x00188A00 File Offset: 0x00186C00
-		[NullableContext(1)]
+		// Token: 0x0600B73E RID: 46910 RVA: 0x0019E9F8 File Offset: 0x0019CBF8
+		[NullableContext(0)]
 		private ITalkItemAvgTalk_SetValue GetOrCreatePoco()
 		{
 			ITalkItemAvgTalk_SetValue result;
@@ -22,8 +22,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AC6D RID: 44141 RVA: 0x00188A25 File Offset: 0x00186C25
-		[NullableContext(1)]
+		// Token: 0x0600B73F RID: 46911 RVA: 0x0019EA1D File Offset: 0x0019CC1D
+		[NullableContext(0)]
 		public static ITalkItemAvgTalk Create([Nullable(2)] ITalkItemAvgTalk instance)
 		{
 			if (instance == null)
@@ -36,8 +36,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AC6E RID: 44142 RVA: 0x00188A38 File Offset: 0x00186C38
-		[NullableContext(1)]
+		// Token: 0x0600B740 RID: 46912 RVA: 0x0019EA30 File Offset: 0x0019CC30
+		[NullableContext(0)]
 		public static ITalkItemAvgTalk CreateFromSetValue([Nullable(2)] ITalkItemAvgTalk_SetValue value)
 		{
 			if (value == null)
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AC6F RID: 44143 RVA: 0x00188A4C File Offset: 0x00186C4C
-		[NullableContext(1)]
+		// Token: 0x0600B741 RID: 46913 RVA: 0x0019EA44 File Offset: 0x0019CC44
+		[NullableContext(0)]
 		public new ITalkItemAvgTalk_SetValue ToSetValue()
 		{
 			return new ITalkItemAvgTalk_SetValue
@@ -94,9 +94,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170034B4 RID: 13492
-		// (get) Token: 0x0600AC70 RID: 44144 RVA: 0x00188C04 File Offset: 0x00186E04
-		// (set) Token: 0x0600AC71 RID: 44145 RVA: 0x00188C55 File Offset: 0x00186E55
+		// Token: 0x1700377F RID: 14207
+		// (get) Token: 0x0600B742 RID: 46914 RVA: 0x0019EBFC File Offset: 0x0019CDFC
+		// (set) Token: 0x0600B743 RID: 46915 RVA: 0x0019EC4D File Offset: 0x0019CE4D
 		public override ETalkItemType? Type
 		{
 			get
@@ -123,9 +123,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034B5 RID: 13493
-		// (get) Token: 0x0600AC72 RID: 44146 RVA: 0x00188C74 File Offset: 0x00186E74
-		// (set) Token: 0x0600AC73 RID: 44147 RVA: 0x00188CC1 File Offset: 0x00186EC1
+		// Token: 0x17003780 RID: 14208
+		// (get) Token: 0x0600B744 RID: 46916 RVA: 0x0019EC6C File Offset: 0x0019CE6C
+		// (set) Token: 0x0600B745 RID: 46917 RVA: 0x0019ECB9 File Offset: 0x0019CEB9
 		public override int Id
 		{
 			get
@@ -151,9 +151,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034B6 RID: 13494
-		// (get) Token: 0x0600AC74 RID: 44148 RVA: 0x00188CE0 File Offset: 0x00186EE0
-		// (set) Token: 0x0600AC75 RID: 44149 RVA: 0x00188D31 File Offset: 0x00186F31
+		// Token: 0x17003781 RID: 14209
+		// (get) Token: 0x0600B746 RID: 46918 RVA: 0x0019ECD8 File Offset: 0x0019CED8
+		// (set) Token: 0x0600B747 RID: 46919 RVA: 0x0019ED29 File Offset: 0x0019CF29
 		public override int? PlotLineId
 		{
 			get
@@ -180,9 +180,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034B7 RID: 13495
-		// (get) Token: 0x0600AC76 RID: 44150 RVA: 0x00188D4E File Offset: 0x00186F4E
-		// (set) Token: 0x0600AC77 RID: 44151 RVA: 0x00188D8C File Offset: 0x00186F8C
+		// Token: 0x17003782 RID: 14210
+		// (get) Token: 0x0600B748 RID: 46920 RVA: 0x0019ED46 File Offset: 0x0019CF46
+		// (set) Token: 0x0600B749 RID: 46921 RVA: 0x0019ED84 File Offset: 0x0019CF84
 		public override string PlotLineKey
 		{
 			get
@@ -209,13 +209,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034B8 RID: 13496
-		// (get) Token: 0x0600AC78 RID: 44152 RVA: 0x00188DAC File Offset: 0x00186FAC
-		// (set) Token: 0x0600AC79 RID: 44153 RVA: 0x00188DFA File Offset: 0x00186FFA
-		[Nullable(1)]
+		// Token: 0x17003783 RID: 14211
+		// (get) Token: 0x0600B74A RID: 46922 RVA: 0x0019EDA4 File Offset: 0x0019CFA4
+		// (set) Token: 0x0600B74B RID: 46923 RVA: 0x0019EDF2 File Offset: 0x0019CFF2
+		[Nullable(0)]
 		public override string Name
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if ((this._SetMark & 16UL) != 0UL)
@@ -232,7 +232,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this.PocoInterface.Name;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this._SetMark |= 16UL;
@@ -240,9 +240,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034B9 RID: 13497
-		// (get) Token: 0x0600AC7A RID: 44154 RVA: 0x00188E18 File Offset: 0x00187018
-		// (set) Token: 0x0600AC7B RID: 44155 RVA: 0x00188E6A File Offset: 0x0018706A
+		// Token: 0x17003784 RID: 14212
+		// (get) Token: 0x0600B74C RID: 46924 RVA: 0x0019EE10 File Offset: 0x0019D010
+		// (set) Token: 0x0600B74D RID: 46925 RVA: 0x0019EE62 File Offset: 0x0019D062
 		public override bool? _Folded
 		{
 			get
@@ -269,9 +269,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034BA RID: 13498
-		// (get) Token: 0x0600AC7C RID: 44156 RVA: 0x00188E88 File Offset: 0x00187088
-		// (set) Token: 0x0600AC7D RID: 44157 RVA: 0x00188EDA File Offset: 0x001870DA
+		// Token: 0x17003785 RID: 14213
+		// (get) Token: 0x0600B74E RID: 46926 RVA: 0x0019EE80 File Offset: 0x0019D080
+		// (set) Token: 0x0600B74F RID: 46927 RVA: 0x0019EED2 File Offset: 0x0019D0D2
 		public override EEditFlag? _EditFlag
 		{
 			get
@@ -298,9 +298,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034BB RID: 13499
-		// (get) Token: 0x0600AC7E RID: 44158 RVA: 0x00188EF8 File Offset: 0x001870F8
-		// (set) Token: 0x0600AC7F RID: 44159 RVA: 0x00188F4D File Offset: 0x0018714D
+		// Token: 0x17003786 RID: 14214
+		// (get) Token: 0x0600B750 RID: 46928 RVA: 0x0019EEF0 File Offset: 0x0019D0F0
+		// (set) Token: 0x0600B751 RID: 46929 RVA: 0x0019EF45 File Offset: 0x0019D145
 		public override int? WhoId
 		{
 			get
@@ -327,9 +327,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034BC RID: 13500
-		// (get) Token: 0x0600AC80 RID: 44160 RVA: 0x00188F70 File Offset: 0x00187170
-		// (set) Token: 0x0600AC81 RID: 44161 RVA: 0x00188FC5 File Offset: 0x001871C5
+		// Token: 0x17003787 RID: 14215
+		// (get) Token: 0x0600B752 RID: 46930 RVA: 0x0019EF68 File Offset: 0x0019D168
+		// (set) Token: 0x0600B753 RID: 46931 RVA: 0x0019EFBD File Offset: 0x0019D1BD
 		public override int? TextId
 		{
 			get
@@ -356,9 +356,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034BD RID: 13501
-		// (get) Token: 0x0600AC82 RID: 44162 RVA: 0x00188FE8 File Offset: 0x001871E8
-		// (set) Token: 0x0600AC83 RID: 44163 RVA: 0x00189035 File Offset: 0x00187235
+		// Token: 0x17003788 RID: 14216
+		// (get) Token: 0x0600B754 RID: 46932 RVA: 0x0019EFE0 File Offset: 0x0019D1E0
+		// (set) Token: 0x0600B755 RID: 46933 RVA: 0x0019F02D File Offset: 0x0019D22D
 		public override string TidTalk
 		{
 			get
@@ -385,9 +385,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034BE RID: 13502
-		// (get) Token: 0x0600AC84 RID: 44164 RVA: 0x00189058 File Offset: 0x00187258
-		// (set) Token: 0x0600AC85 RID: 44165 RVA: 0x001890AD File Offset: 0x001872AD
+		// Token: 0x17003789 RID: 14217
+		// (get) Token: 0x0600B756 RID: 46934 RVA: 0x0019F050 File Offset: 0x0019D250
+		// (set) Token: 0x0600B757 RID: 46935 RVA: 0x0019F0A5 File Offset: 0x0019D2A5
 		public override float? WaitTime
 		{
 			get
@@ -414,9 +414,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034BF RID: 13503
-		// (get) Token: 0x0600AC86 RID: 44166 RVA: 0x001890D0 File Offset: 0x001872D0
-		// (set) Token: 0x0600AC87 RID: 44167 RVA: 0x0018914C File Offset: 0x0018734C
+		// Token: 0x1700378A RID: 14218
+		// (get) Token: 0x0600B758 RID: 46936 RVA: 0x0019F0C8 File Offset: 0x0019D2C8
+		// (set) Token: 0x0600B759 RID: 46937 RVA: 0x0019F144 File Offset: 0x0019D344
 		public override ICaptionParam CaptionParams
 		{
 			get
@@ -449,20 +449,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034C0 RID: 13504
-		// (get) Token: 0x0600AC88 RID: 44168 RVA: 0x00189174 File Offset: 0x00187374
-		// (set) Token: 0x0600AC89 RID: 44169 RVA: 0x00189222 File Offset: 0x00187422
+		// Token: 0x1700378B RID: 14219
+		// (get) Token: 0x0600B75A RID: 46938 RVA: 0x0019F16C File Offset: 0x0019D36C
+		// (set) Token: 0x0600B75B RID: 46939 RVA: 0x0019F21A File Offset: 0x0019D41A
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -497,7 +497,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -507,20 +507,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034C1 RID: 13505
-		// (get) Token: 0x0600AC8A RID: 44170 RVA: 0x0018924C File Offset: 0x0018744C
-		// (set) Token: 0x0600AC8B RID: 44171 RVA: 0x001892FA File Offset: 0x001874FA
+		// Token: 0x1700378C RID: 14220
+		// (get) Token: 0x0600B75C RID: 46940 RVA: 0x0019F244 File Offset: 0x0019D444
+		// (set) Token: 0x0600B75D RID: 46941 RVA: 0x0019F2F2 File Offset: 0x0019D4F2
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ITalkOption> Options
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -555,7 +555,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -565,9 +565,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034C2 RID: 13506
-		// (get) Token: 0x0600AC8C RID: 44172 RVA: 0x00189324 File Offset: 0x00187524
-		// (set) Token: 0x0600AC8D RID: 44173 RVA: 0x001893A0 File Offset: 0x001875A0
+		// Token: 0x1700378D RID: 14221
+		// (get) Token: 0x0600B75E RID: 46942 RVA: 0x0019F31C File Offset: 0x0019D51C
+		// (set) Token: 0x0600B75F RID: 46943 RVA: 0x0019F398 File Offset: 0x0019D598
 		public override PlayMontage Montage
 		{
 			get
@@ -600,9 +600,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034C3 RID: 13507
-		// (get) Token: 0x0600AC8E RID: 44174 RVA: 0x001893C8 File Offset: 0x001875C8
-		// (set) Token: 0x0600AC8F RID: 44175 RVA: 0x00189444 File Offset: 0x00187644
+		// Token: 0x1700378E RID: 14222
+		// (get) Token: 0x0600B760 RID: 46944 RVA: 0x0019F3C0 File Offset: 0x0019D5C0
+		// (set) Token: 0x0600B761 RID: 46945 RVA: 0x0019F43C File Offset: 0x0019D63C
 		public override ICameraData CameraData
 		{
 			get
@@ -635,9 +635,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034C4 RID: 13508
-		// (get) Token: 0x0600AC90 RID: 44176 RVA: 0x0018946C File Offset: 0x0018766C
-		// (set) Token: 0x0600AC91 RID: 44177 RVA: 0x001894E8 File Offset: 0x001876E8
+		// Token: 0x1700378F RID: 14223
+		// (get) Token: 0x0600B762 RID: 46946 RVA: 0x0019F464 File Offset: 0x0019D664
+		// (set) Token: 0x0600B763 RID: 46947 RVA: 0x0019F4E0 File Offset: 0x0019D6E0
 		public override SetFlowTemplate FlowTemplate
 		{
 			get
@@ -670,20 +670,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034C5 RID: 13509
-		// (get) Token: 0x0600AC92 RID: 44178 RVA: 0x00189510 File Offset: 0x00187710
-		// (set) Token: 0x0600AC93 RID: 44179 RVA: 0x001895BE File Offset: 0x001877BE
+		// Token: 0x17003790 RID: 14224
+		// (get) Token: 0x0600B764 RID: 46948 RVA: 0x0019F508 File Offset: 0x0019D708
+		// (set) Token: 0x0600B765 RID: 46949 RVA: 0x0019F5B6 File Offset: 0x0019D7B6
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<SetFlowTemplate> FlowTemplateList
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -718,7 +718,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -728,20 +728,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034C6 RID: 13510
-		// (get) Token: 0x0600AC94 RID: 44180 RVA: 0x001895E8 File Offset: 0x001877E8
-		// (set) Token: 0x0600AC95 RID: 44181 RVA: 0x00189696 File Offset: 0x00187896
+		// Token: 0x17003791 RID: 14225
+		// (get) Token: 0x0600B766 RID: 46950 RVA: 0x0019F5E0 File Offset: 0x0019D7E0
+		// (set) Token: 0x0600B767 RID: 46951 RVA: 0x0019F68E File Offset: 0x0019D88E
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<IMontageData> ActorMontageArray
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -776,7 +776,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -786,20 +786,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034C7 RID: 13511
-		// (get) Token: 0x0600AC96 RID: 44182 RVA: 0x001896C0 File Offset: 0x001878C0
-		// (set) Token: 0x0600AC97 RID: 44183 RVA: 0x0018976E File Offset: 0x0018796E
+		// Token: 0x17003792 RID: 14226
+		// (get) Token: 0x0600B768 RID: 46952 RVA: 0x0019F6B8 File Offset: 0x0019D8B8
+		// (set) Token: 0x0600B769 RID: 46953 RVA: 0x0019F766 File Offset: 0x0019D966
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<IActorFaceExpression> ActorFaceExpressionArray
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -834,7 +834,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -844,20 +844,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034C8 RID: 13512
-		// (get) Token: 0x0600AC98 RID: 44184 RVA: 0x00189798 File Offset: 0x00187998
-		// (set) Token: 0x0600AC99 RID: 44185 RVA: 0x00189846 File Offset: 0x00187A46
+		// Token: 0x17003793 RID: 14227
+		// (get) Token: 0x0600B76A RID: 46954 RVA: 0x0019F790 File Offset: 0x0019D990
+		// (set) Token: 0x0600B76B RID: 46955 RVA: 0x0019F83E File Offset: 0x0019DA3E
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<IActorLookAt> ActorLookAtArray
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -892,7 +892,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -902,20 +902,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034C9 RID: 13513
-		// (get) Token: 0x0600AC9A RID: 44186 RVA: 0x00189870 File Offset: 0x00187A70
-		// (set) Token: 0x0600AC9B RID: 44187 RVA: 0x0018991E File Offset: 0x00187B1E
+		// Token: 0x17003794 RID: 14228
+		// (get) Token: 0x0600B76C RID: 46956 RVA: 0x0019F868 File Offset: 0x0019DA68
+		// (set) Token: 0x0600B76D RID: 46957 RVA: 0x0019F916 File Offset: 0x0019DB16
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<IActorTurnTo> ActorTurnToArray
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -950,7 +950,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -960,9 +960,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034CA RID: 13514
-		// (get) Token: 0x0600AC9C RID: 44188 RVA: 0x00189948 File Offset: 0x00187B48
-		// (set) Token: 0x0600AC9D RID: 44189 RVA: 0x00189995 File Offset: 0x00187B95
+		// Token: 0x17003795 RID: 14229
+		// (get) Token: 0x0600B76E RID: 46958 RVA: 0x0019F940 File Offset: 0x0019DB40
+		// (set) Token: 0x0600B76F RID: 46959 RVA: 0x0019F98D File Offset: 0x0019DB8D
 		public override IPostAkEventType TalkAkEvent
 		{
 			get
@@ -989,9 +989,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034CB RID: 13515
-		// (get) Token: 0x0600AC9E RID: 44190 RVA: 0x001899B8 File Offset: 0x00187BB8
-		// (set) Token: 0x0600AC9F RID: 44191 RVA: 0x00189A05 File Offset: 0x00187C05
+		// Token: 0x17003796 RID: 14230
+		// (get) Token: 0x0600B770 RID: 46960 RVA: 0x0019F9B0 File Offset: 0x0019DBB0
+		// (set) Token: 0x0600B771 RID: 46961 RVA: 0x0019F9FD File Offset: 0x0019DBFD
 		public override IPostAkEventType TalkEndAkEvent
 		{
 			get
@@ -1018,9 +1018,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034CC RID: 13516
-		// (get) Token: 0x0600ACA0 RID: 44192 RVA: 0x00189A28 File Offset: 0x00187C28
-		// (set) Token: 0x0600ACA1 RID: 44193 RVA: 0x00189AA4 File Offset: 0x00187CA4
+		// Token: 0x17003797 RID: 14231
+		// (get) Token: 0x0600B772 RID: 46962 RVA: 0x0019FA20 File Offset: 0x0019DC20
+		// (set) Token: 0x0600B773 RID: 46963 RVA: 0x0019FA9C File Offset: 0x0019DC9C
 		public override IUniversalTone UniversalTone
 		{
 			get
@@ -1053,9 +1053,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034CD RID: 13517
-		// (get) Token: 0x0600ACA2 RID: 44194 RVA: 0x00189ACC File Offset: 0x00187CCC
-		// (set) Token: 0x0600ACA3 RID: 44195 RVA: 0x00189B19 File Offset: 0x00187D19
+		// Token: 0x17003798 RID: 14232
+		// (get) Token: 0x0600B774 RID: 46964 RVA: 0x0019FAC4 File Offset: 0x0019DCC4
+		// (set) Token: 0x0600B775 RID: 46965 RVA: 0x0019FB11 File Offset: 0x0019DD11
 		public override ITalkBackground BackgroundConfig
 		{
 			get
@@ -1082,9 +1082,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034CE RID: 13518
-		// (get) Token: 0x0600ACA4 RID: 44196 RVA: 0x00189B3C File Offset: 0x00187D3C
-		// (set) Token: 0x0600ACA5 RID: 44197 RVA: 0x00189B91 File Offset: 0x00187D91
+		// Token: 0x17003799 RID: 14233
+		// (get) Token: 0x0600B776 RID: 46966 RVA: 0x0019FB34 File Offset: 0x0019DD34
+		// (set) Token: 0x0600B777 RID: 46967 RVA: 0x0019FB89 File Offset: 0x0019DD89
 		public override bool? PlayVoice
 		{
 			get
@@ -1111,9 +1111,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034CF RID: 13519
-		// (get) Token: 0x0600ACA6 RID: 44198 RVA: 0x00189BB4 File Offset: 0x00187DB4
-		// (set) Token: 0x0600ACA7 RID: 44199 RVA: 0x00189C30 File Offset: 0x00187E30
+		// Token: 0x1700379A RID: 14234
+		// (get) Token: 0x0600B778 RID: 46968 RVA: 0x0019FBAC File Offset: 0x0019DDAC
+		// (set) Token: 0x0600B779 RID: 46969 RVA: 0x0019FC28 File Offset: 0x0019DE28
 		public override ITimeLimitOptionGroup TimeLimitOptionGroup
 		{
 			get
@@ -1146,9 +1146,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034D0 RID: 13520
-		// (get) Token: 0x0600ACA8 RID: 44200 RVA: 0x00189C58 File Offset: 0x00187E58
-		// (set) Token: 0x0600ACA9 RID: 44201 RVA: 0x00189CD4 File Offset: 0x00187ED4
+		// Token: 0x1700379B RID: 14235
+		// (get) Token: 0x0600B77A RID: 46970 RVA: 0x0019FC50 File Offset: 0x0019DE50
+		// (set) Token: 0x0600B77B RID: 46971 RVA: 0x0019FCCC File Offset: 0x0019DECC
 		public override IGamepadShakeInTalk GamepadShake
 		{
 			get
@@ -1181,20 +1181,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034D1 RID: 13521
-		// (get) Token: 0x0600ACAA RID: 44202 RVA: 0x00189CFC File Offset: 0x00187EFC
-		// (set) Token: 0x0600ACAB RID: 44203 RVA: 0x00189DAA File Offset: 0x00187FAA
+		// Token: 0x1700379C RID: 14236
+		// (get) Token: 0x0600B77C RID: 46972 RVA: 0x0019FCF4 File Offset: 0x0019DEF4
+		// (set) Token: 0x0600B77D RID: 46973 RVA: 0x0019FDA2 File Offset: 0x0019DFA2
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> IntroActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -1229,7 +1229,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -1239,20 +1239,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034D2 RID: 13522
-		// (get) Token: 0x0600ACAC RID: 44204 RVA: 0x00189DD4 File Offset: 0x00187FD4
-		// (set) Token: 0x0600ACAD RID: 44205 RVA: 0x00189E82 File Offset: 0x00188082
+		// Token: 0x1700379D RID: 14237
+		// (get) Token: 0x0600B77E RID: 46974 RVA: 0x0019FDCC File Offset: 0x0019DFCC
+		// (set) Token: 0x0600B77F RID: 46975 RVA: 0x0019FE7A File Offset: 0x0019E07A
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<IActorFxEmote> ActorFxEmoteArray
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -1287,7 +1287,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -1297,20 +1297,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034D3 RID: 13523
-		// (get) Token: 0x0600ACAE RID: 44206 RVA: 0x00189EAC File Offset: 0x001880AC
-		// (set) Token: 0x0600ACAF RID: 44207 RVA: 0x00189EF9 File Offset: 0x001880F9
+		// Token: 0x1700379E RID: 14238
+		// (get) Token: 0x0600B780 RID: 46976 RVA: 0x0019FEA4 File Offset: 0x0019E0A4
+		// (set) Token: 0x0600B781 RID: 46977 RVA: 0x0019FEF1 File Offset: 0x0019E0F1
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ITalkEffectActionType> TalkEffectArray
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -1332,7 +1332,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -1341,20 +1341,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034D4 RID: 13524
-		// (get) Token: 0x0600ACB0 RID: 44208 RVA: 0x00189F1C File Offset: 0x0018811C
-		// (set) Token: 0x0600ACB1 RID: 44209 RVA: 0x00189FCD File Offset: 0x001881CD
+		// Token: 0x1700379F RID: 14239
+		// (get) Token: 0x0600B782 RID: 46978 RVA: 0x0019FF14 File Offset: 0x0019E114
+		// (set) Token: 0x0600B783 RID: 46979 RVA: 0x0019FFC5 File Offset: 0x0019E1C5
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<IActorVisibility> ActorVisibilityArray
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -1389,7 +1389,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -1399,13 +1399,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034D5 RID: 13525
-		// (get) Token: 0x0600ACB2 RID: 44210 RVA: 0x00189FF8 File Offset: 0x001881F8
-		// (set) Token: 0x0600ACB3 RID: 44211 RVA: 0x0018A077 File Offset: 0x00188277
-		[Nullable(1)]
+		// Token: 0x170037A0 RID: 14240
+		// (get) Token: 0x0600B784 RID: 46980 RVA: 0x0019FFF0 File Offset: 0x0019E1F0
+		// (set) Token: 0x0600B785 RID: 46981 RVA: 0x001A006F File Offset: 0x0019E26F
+		[Nullable(0)]
 		public virtual ITalkItemAvgRoleConfig AvgRoleConfig
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if ((this._SetMark & 8589934592UL) != 0UL)
@@ -1428,7 +1428,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this._AvgRoleConfigCache;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this._SetMark |= 8589934592UL;
@@ -1437,9 +1437,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170034D6 RID: 13526
-		// (get) Token: 0x0600ACB4 RID: 44212 RVA: 0x0018A0A4 File Offset: 0x001882A4
-		// (set) Token: 0x0600ACB5 RID: 44213 RVA: 0x0018A0F8 File Offset: 0x001882F8
+		// Token: 0x170037A1 RID: 14241
+		// (get) Token: 0x0600B786 RID: 46982 RVA: 0x001A009C File Offset: 0x0019E29C
+		// (set) Token: 0x0600B787 RID: 46983 RVA: 0x001A00F0 File Offset: 0x0019E2F0
 		public virtual EAvgRolePosition PositionConfig
 		{
 			get
@@ -1465,179 +1465,179 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006708 RID: 26376
+		// Token: 0x04006CF7 RID: 27895
 		protected new ITalkItemAvgTalk FbInstance;
 
-		// Token: 0x04006709 RID: 26377
+		// Token: 0x04006CF8 RID: 27896
 		protected new ITalkItemAvgTalk_SetValue PocoInterface;
 
-		// Token: 0x0400670A RID: 26378
+		// Token: 0x04006CF9 RID: 27897
 		private ulong _SetMark;
 
-		// Token: 0x0400670B RID: 26379
-		[Nullable(1)]
+		// Token: 0x04006CFA RID: 27898
+		[Nullable(0)]
 		private ICaptionParam _CaptionParamsCache;
 
-		// Token: 0x0400670C RID: 26380
+		// Token: 0x04006CFB RID: 27899
 		private bool _CaptionParamsInited;
 
-		// Token: 0x0400670D RID: 26381
+		// Token: 0x04006CFC RID: 27900
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x0400670E RID: 26382
+		// Token: 0x04006CFD RID: 27901
 		private bool _ActionsInited;
 
-		// Token: 0x0400670F RID: 26383
+		// Token: 0x04006CFE RID: 27902
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ITalkOption> _OptionsCache;
 
-		// Token: 0x04006710 RID: 26384
+		// Token: 0x04006CFF RID: 27903
 		private bool _OptionsInited;
 
-		// Token: 0x04006711 RID: 26385
-		[Nullable(1)]
+		// Token: 0x04006D00 RID: 27904
+		[Nullable(0)]
 		private PlayMontage _MontageCache;
 
-		// Token: 0x04006712 RID: 26386
+		// Token: 0x04006D01 RID: 27905
 		private bool _MontageInited;
 
-		// Token: 0x04006713 RID: 26387
-		[Nullable(1)]
+		// Token: 0x04006D02 RID: 27906
+		[Nullable(0)]
 		private ICameraData _CameraDataCache;
 
-		// Token: 0x04006714 RID: 26388
+		// Token: 0x04006D03 RID: 27907
 		private bool _CameraDataInited;
 
-		// Token: 0x04006715 RID: 26389
-		[Nullable(1)]
+		// Token: 0x04006D04 RID: 27908
+		[Nullable(0)]
 		private SetFlowTemplate _FlowTemplateCache;
 
-		// Token: 0x04006716 RID: 26390
+		// Token: 0x04006D05 RID: 27909
 		private bool _FlowTemplateInited;
 
-		// Token: 0x04006717 RID: 26391
+		// Token: 0x04006D06 RID: 27910
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<SetFlowTemplate> _FlowTemplateListCache;
 
-		// Token: 0x04006718 RID: 26392
+		// Token: 0x04006D07 RID: 27911
 		private bool _FlowTemplateListInited;
 
-		// Token: 0x04006719 RID: 26393
+		// Token: 0x04006D08 RID: 27912
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMontageData> _ActorMontageArrayCache;
 
-		// Token: 0x0400671A RID: 26394
+		// Token: 0x04006D09 RID: 27913
 		private bool _ActorMontageArrayInited;
 
-		// Token: 0x0400671B RID: 26395
+		// Token: 0x04006D0A RID: 27914
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IActorFaceExpression> _ActorFaceExpressionArrayCache;
 
-		// Token: 0x0400671C RID: 26396
+		// Token: 0x04006D0B RID: 27915
 		private bool _ActorFaceExpressionArrayInited;
 
-		// Token: 0x0400671D RID: 26397
+		// Token: 0x04006D0C RID: 27916
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IActorLookAt> _ActorLookAtArrayCache;
 
-		// Token: 0x0400671E RID: 26398
+		// Token: 0x04006D0D RID: 27917
 		private bool _ActorLookAtArrayInited;
 
-		// Token: 0x0400671F RID: 26399
+		// Token: 0x04006D0E RID: 27918
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IActorTurnTo> _ActorTurnToArrayCache;
 
-		// Token: 0x04006720 RID: 26400
+		// Token: 0x04006D0F RID: 27919
 		private bool _ActorTurnToArrayInited;
 
-		// Token: 0x04006721 RID: 26401
-		[Nullable(1)]
+		// Token: 0x04006D10 RID: 27920
+		[Nullable(0)]
 		private IUniversalTone _UniversalToneCache;
 
-		// Token: 0x04006722 RID: 26402
+		// Token: 0x04006D11 RID: 27921
 		private bool _UniversalToneInited;
 
-		// Token: 0x04006723 RID: 26403
-		[Nullable(1)]
+		// Token: 0x04006D12 RID: 27922
+		[Nullable(0)]
 		private ITimeLimitOptionGroup _TimeLimitOptionGroupCache;
 
-		// Token: 0x04006724 RID: 26404
+		// Token: 0x04006D13 RID: 27923
 		private bool _TimeLimitOptionGroupInited;
 
-		// Token: 0x04006725 RID: 26405
-		[Nullable(1)]
+		// Token: 0x04006D14 RID: 27924
+		[Nullable(0)]
 		private IGamepadShakeInTalk _GamepadShakeCache;
 
-		// Token: 0x04006726 RID: 26406
+		// Token: 0x04006D15 RID: 27925
 		private bool _GamepadShakeInited;
 
-		// Token: 0x04006727 RID: 26407
+		// Token: 0x04006D16 RID: 27926
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _IntroActionsCache;
 
-		// Token: 0x04006728 RID: 26408
+		// Token: 0x04006D17 RID: 27927
 		private bool _IntroActionsInited;
 
-		// Token: 0x04006729 RID: 26409
+		// Token: 0x04006D18 RID: 27928
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IActorFxEmote> _ActorFxEmoteArrayCache;
 
-		// Token: 0x0400672A RID: 26410
+		// Token: 0x04006D19 RID: 27929
 		private bool _ActorFxEmoteArrayInited;
 
-		// Token: 0x0400672B RID: 26411
+		// Token: 0x04006D1A RID: 27930
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IActorVisibility> _ActorVisibilityArrayCache;
 
-		// Token: 0x0400672C RID: 26412
+		// Token: 0x04006D1B RID: 27931
 		private bool _ActorVisibilityArrayInited;
 
-		// Token: 0x0400672D RID: 26413
-		[Nullable(1)]
+		// Token: 0x04006D1C RID: 27932
+		[Nullable(0)]
 		private ITalkItemAvgRoleConfig _AvgRoleConfigCache;
 
-		// Token: 0x0400672E RID: 26414
+		// Token: 0x04006D1D RID: 27933
 		private bool _AvgRoleConfigInited;
 	}
 }

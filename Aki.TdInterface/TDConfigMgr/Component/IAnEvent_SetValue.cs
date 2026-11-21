@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001C0 RID: 448
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001E3 RID: 483
 	public class IAnEvent_SetValue
 	{
-		// Token: 0x04000873 RID: 2163
+		// Token: 0x040008E7 RID: 2279
 		public ESceneItemSeqEventCbType Type;
 
-		// Token: 0x04000874 RID: 2164
+		// Token: 0x040008E8 RID: 2280
 		public string EventName;
 
-		// Token: 0x04000875 RID: 2165
+		// Token: 0x040008E9 RID: 2281
 		public ActionInfo Action;
 	}
 }

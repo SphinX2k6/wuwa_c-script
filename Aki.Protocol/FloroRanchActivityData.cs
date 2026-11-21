@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020005A7 RID: 1447
+	// Token: 0x02000592 RID: 1426
 	public sealed class FloroRanchActivityData : IMessage<FloroRanchActivityData>, IMessage, IEquatable<FloroRanchActivityData>, IDeepCloneable<FloroRanchActivityData>, IBufferMessage
 	{
-		// Token: 0x060085CB RID: 34251 RVA: 0x00141954 File Offset: 0x0013FB54
+		// Token: 0x06008463 RID: 33891 RVA: 0x0013ED4C File Offset: 0x0013CF4C
 		[NullableContext(1)]
 		public static FloroRanchActivityData Create()
 		{
 			return new FloroRanchActivityData();
 		}
 
-		// Token: 0x17001A16 RID: 6678
-		// (get) Token: 0x060085CC RID: 34252 RVA: 0x0014195B File Offset: 0x0013FB5B
+		// Token: 0x170019C9 RID: 6601
+		// (get) Token: 0x06008464 RID: 33892 RVA: 0x0013ED53 File Offset: 0x0013CF53
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001A17 RID: 6679
-		// (get) Token: 0x060085CD RID: 34253 RVA: 0x0014195E File Offset: 0x0013FB5E
+		// Token: 0x170019CA RID: 6602
+		// (get) Token: 0x06008465 RID: 33893 RVA: 0x0013ED56 File Offset: 0x0013CF56
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060085CE RID: 34254 RVA: 0x00141965 File Offset: 0x0013FB65
+		// Token: 0x06008466 RID: 33894 RVA: 0x0013ED5D File Offset: 0x0013CF5D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchActivityData()
 		{
 		}
 
-		// Token: 0x060085CF RID: 34255 RVA: 0x00141970 File Offset: 0x0013FB70
+		// Token: 0x06008467 RID: 33895 RVA: 0x0013ED68 File Offset: 0x0013CF68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchActivityData(FloroRanchActivityData other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060085D0 RID: 34256 RVA: 0x001419D4 File Offset: 0x0013FBD4
+		// Token: 0x06008468 RID: 33896 RVA: 0x0013EDCC File Offset: 0x0013CFCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchActivityData Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new FloroRanchActivityData(this);
 		}
 
-		// Token: 0x17001A18 RID: 6680
-		// (get) Token: 0x060085D1 RID: 34257 RVA: 0x001419DC File Offset: 0x0013FBDC
-		// (set) Token: 0x060085D2 RID: 34258 RVA: 0x001419E4 File Offset: 0x0013FBE4
+		// Token: 0x170019CB RID: 6603
+		// (get) Token: 0x06008469 RID: 33897 RVA: 0x0013EDD4 File Offset: 0x0013CFD4
+		// (set) Token: 0x0600846A RID: 33898 RVA: 0x0013EDDC File Offset: 0x0013CFDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchPlayerInfo PlayerInfo
@@ -85,9 +85,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001A19 RID: 6681
-		// (get) Token: 0x060085D3 RID: 34259 RVA: 0x001419ED File Offset: 0x0013FBED
-		// (set) Token: 0x060085D4 RID: 34260 RVA: 0x001419F5 File Offset: 0x0013FBF5
+		// Token: 0x170019CC RID: 6604
+		// (get) Token: 0x0600846B RID: 33899 RVA: 0x0013EDE5 File Offset: 0x0013CFE5
+		// (set) Token: 0x0600846C RID: 33900 RVA: 0x0013EDED File Offset: 0x0013CFED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int UnSettleSubInsId
@@ -102,9 +102,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001A1A RID: 6682
-		// (get) Token: 0x060085D5 RID: 34261 RVA: 0x001419FE File Offset: 0x0013FBFE
-		// (set) Token: 0x060085D6 RID: 34262 RVA: 0x00141A06 File Offset: 0x0013FC06
+		// Token: 0x170019CD RID: 6605
+		// (get) Token: 0x0600846D RID: 33901 RVA: 0x0013EDF6 File Offset: 0x0013CFF6
+		// (set) Token: 0x0600846E RID: 33902 RVA: 0x0013EDFE File Offset: 0x0013CFFE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Stage
@@ -119,9 +119,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001A1B RID: 6683
-		// (get) Token: 0x060085D7 RID: 34263 RVA: 0x00141A0F File Offset: 0x0013FC0F
-		// (set) Token: 0x060085D8 RID: 34264 RVA: 0x00141A17 File Offset: 0x0013FC17
+		// Token: 0x170019CE RID: 6606
+		// (get) Token: 0x0600846F RID: 33903 RVA: 0x0013EE07 File Offset: 0x0013D007
+		// (set) Token: 0x06008470 RID: 33904 RVA: 0x0013EE0F File Offset: 0x0013D00F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurWeeklyInsId
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060085D9 RID: 34265 RVA: 0x00141A20 File Offset: 0x0013FC20
+		// Token: 0x06008471 RID: 33905 RVA: 0x0013EE18 File Offset: 0x0013D018
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FloroRanchActivityData);
 		}
 
-		// Token: 0x060085DA RID: 34266 RVA: 0x00141A30 File Offset: 0x0013FC30
+		// Token: 0x06008472 RID: 33906 RVA: 0x0013EE28 File Offset: 0x0013D028
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FloroRanchActivityData other)
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.PlayerInfo, other.PlayerInfo) && this.UnSettleSubInsId == other.UnSettleSubInsId && this.Stage == other.Stage && this.CurWeeklyInsId == other.CurWeeklyInsId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060085DB RID: 34267 RVA: 0x00141AA0 File Offset: 0x0013FCA0
+		// Token: 0x06008473 RID: 33907 RVA: 0x0013EE98 File Offset: 0x0013D098
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060085DC RID: 34268 RVA: 0x00141B27 File Offset: 0x0013FD27
+		// Token: 0x06008474 RID: 33908 RVA: 0x0013EF1F File Offset: 0x0013D11F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060085DD RID: 34269 RVA: 0x00141B34 File Offset: 0x0013FD34
+		// Token: 0x06008475 RID: 33909 RVA: 0x0013EF2C File Offset: 0x0013D12C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060085DE RID: 34270 RVA: 0x00141B40 File Offset: 0x0013FD40
+		// Token: 0x06008476 RID: 33910 RVA: 0x0013EF38 File Offset: 0x0013D138
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060085DF RID: 34271 RVA: 0x00141BD4 File Offset: 0x0013FDD4
+		// Token: 0x06008477 RID: 33911 RVA: 0x0013EFCC File Offset: 0x0013D1CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -257,7 +257,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060085E0 RID: 34272 RVA: 0x00141C5C File Offset: 0x0013FE5C
+		// Token: 0x06008478 RID: 33912 RVA: 0x0013F054 File Offset: 0x0013D254
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FloroRanchActivityData other)
@@ -289,7 +289,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060085E1 RID: 34273 RVA: 0x00141CEC File Offset: 0x0013FEEC
+		// Token: 0x06008479 RID: 33913 RVA: 0x0013F0E4 File Offset: 0x0013D2E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -297,7 +297,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060085E2 RID: 34274 RVA: 0x00141CF8 File Offset: 0x0013FEF8
+		// Token: 0x0600847A RID: 33914 RVA: 0x0013F0F0 File Offset: 0x0013D2F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -343,31 +343,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04004218 RID: 16920
+		// Token: 0x0400420E RID: 16910
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004219 RID: 16921
+		// Token: 0x0400420F RID: 16911
 		public const int PlayerInfoFieldNumber = 1;
 
-		// Token: 0x0400421A RID: 16922
+		// Token: 0x04004210 RID: 16912
 		private FloroRanchPlayerInfo playerInfo_;
 
-		// Token: 0x0400421B RID: 16923
+		// Token: 0x04004211 RID: 16913
 		public const int UnSettleSubInsIdFieldNumber = 2;
 
-		// Token: 0x0400421C RID: 16924
+		// Token: 0x04004212 RID: 16914
 		private int unSettleSubInsId_;
 
-		// Token: 0x0400421D RID: 16925
+		// Token: 0x04004213 RID: 16915
 		public const int StageFieldNumber = 3;
 
-		// Token: 0x0400421E RID: 16926
+		// Token: 0x04004214 RID: 16916
 		private int stage_;
 
-		// Token: 0x0400421F RID: 16927
+		// Token: 0x04004215 RID: 16917
 		public const int CurWeeklyInsIdFieldNumber = 4;
 
-		// Token: 0x04004220 RID: 16928
+		// Token: 0x04004216 RID: 16918
 		private int curWeeklyInsId_;
 	}
 }

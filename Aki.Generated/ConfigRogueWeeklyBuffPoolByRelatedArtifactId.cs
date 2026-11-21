@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000872 RID: 2162
+	// Token: 0x0200088E RID: 2190
 	public class ConfigRogueWeeklyBuffPoolByRelatedArtifactId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060032BE RID: 12990 RVA: 0x00178538 File Offset: 0x00176738
+		// Token: 0x06003366 RID: 13158 RVA: 0x0017F820 File Offset: 0x0017DA20
 		static ConfigRogueWeeklyBuffPoolByRelatedArtifactId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueWeeklyBuffPoolByRelatedArtifactId.CreateStaticDefaultValue), new Action(ConfigRogueWeeklyBuffPoolByRelatedArtifactId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060032BF RID: 12991 RVA: 0x00178558 File Offset: 0x00176758
+		// Token: 0x06003367 RID: 13159 RVA: 0x0017F840 File Offset: 0x0017DA40
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueWeeklyBuffPoolByRelatedArtifactId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060032C0 RID: 12992 RVA: 0x001785D7 File Offset: 0x001767D7
+		// Token: 0x06003368 RID: 13160 RVA: 0x0017F8BF File Offset: 0x0017DABF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueWeeklyBuffPoolByRelatedArtifactId.LogPair = null;
 			ConfigRogueWeeklyBuffPoolByRelatedArtifactId.HandleId = 0;
 		}
 
-		// Token: 0x060032C1 RID: 12993 RVA: 0x001785E5 File Offset: 0x001767E5
+		// Token: 0x06003369 RID: 13161 RVA: 0x0017F8CD File Offset: 0x0017DACD
 		public static void Init()
 		{
 			ConfigRogueWeeklyBuffPoolByRelatedArtifactId.HandleId = ConfigCommon.InitDataStatement(ConfigRogueWeeklyBuffPoolByRelatedArtifactId.HandleId, "db_weeklyrogue.db", "select BinData from `RogueWeeklyBuffPool` where RelatedArtifactId=?");
 		}
 
-		// Token: 0x060032C2 RID: 12994 RVA: 0x00178600 File Offset: 0x00176800
+		// Token: 0x0600336A RID: 13162 RVA: 0x0017F8E8 File Offset: 0x0017DAE8
 		[NullableContext(2)]
 		public static IReadOnlyList<RogueWeeklyBuffPool> GetConfigList(int p0RelatedArtifactId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003B04 RID: 15108
+		// Token: 0x04003BC8 RID: 15304
 		private const string DB = "db_weeklyrogue.db";
 
-		// Token: 0x04003B05 RID: 15109
+		// Token: 0x04003BC9 RID: 15305
 		private const string FILE = "r.肉鸽周常.xlsx";
 
-		// Token: 0x04003B06 RID: 15110
+		// Token: 0x04003BCA RID: 15306
 		private const string TABLE = "RogueWeeklyBuffPool";
 
-		// Token: 0x04003B07 RID: 15111
+		// Token: 0x04003BCB RID: 15307
 		private const string COMMAND = "select BinData from `RogueWeeklyBuffPool` where RelatedArtifactId=?";
 
-		// Token: 0x04003B08 RID: 15112
+		// Token: 0x04003BCC RID: 15308
 		private const string KEY_PREFIX = "RogueWeeklyBuffPoolByRelatedArtifactId";
 
-		// Token: 0x04003B09 RID: 15113
+		// Token: 0x04003BCD RID: 15309
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003B0A RID: 15114
+		// Token: 0x04003BCE RID: 15310
 		private static int HandleId;
 	}
 }

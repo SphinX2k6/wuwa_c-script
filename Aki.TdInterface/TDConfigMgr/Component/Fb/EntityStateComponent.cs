@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AD4 RID: 2772
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B9E RID: 2974
 	public class EntityStateComponent : IComponentBase
 	{
-		// Token: 0x06003FD9 RID: 16345 RVA: 0x000A3393 File Offset: 0x000A1593
+		// Token: 0x06004403 RID: 17411 RVA: 0x000AC987 File Offset: 0x000AAB87
 		public static EntityStateComponent Create(IEntityStateComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FEE RID: 4078
-		// (get) Token: 0x06003FDA RID: 16346 RVA: 0x000A33B4 File Offset: 0x000A15B4
+		// Token: 0x170010C2 RID: 4290
+		// (get) Token: 0x06004404 RID: 17412 RVA: 0x000AC9A8 File Offset: 0x000AABA8
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FEF RID: 4079
-		// (get) Token: 0x06003FDB RID: 16347 RVA: 0x000A33EC File Offset: 0x000A15EC
+		// Token: 0x170010C3 RID: 4291
+		// (get) Token: 0x06004405 RID: 17413 RVA: 0x000AC9E0 File Offset: 0x000AABE0
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FF0 RID: 4080
-		// (get) Token: 0x06003FDC RID: 16348 RVA: 0x000A3402 File Offset: 0x000A1602
+		// Token: 0x170010C4 RID: 4292
+		// (get) Token: 0x06004406 RID: 17414 RVA: 0x000AC9F6 File Offset: 0x000AABF6
 		public virtual string Type
 		{
 			get
@@ -58,8 +56,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FF1 RID: 4081
-		// (get) Token: 0x06003FDD RID: 16349 RVA: 0x000A340F File Offset: 0x000A160F
+		// Token: 0x170010C5 RID: 4293
+		// (get) Token: 0x06004407 RID: 17415 RVA: 0x000ACA03 File Offset: 0x000AAC03
 		public virtual string State
 		{
 			get
@@ -68,8 +66,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FF2 RID: 4082
-		// (get) Token: 0x06003FDE RID: 16350 RVA: 0x000A341C File Offset: 0x000A161C
+		// Token: 0x170010C6 RID: 4294
+		// (get) Token: 0x06004408 RID: 17416 RVA: 0x000ACA10 File Offset: 0x000AAC10
 		[Nullable(2)]
 		public virtual IConditionGroup StateChangeCondition
 		{
@@ -86,19 +84,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FF3 RID: 4083
-		// (get) Token: 0x06003FDF RID: 16351 RVA: 0x000A3450 File Offset: 0x000A1650
+		// Token: 0x170010C7 RID: 4295
+		// (get) Token: 0x06004409 RID: 17417 RVA: 0x000ACA44 File Offset: 0x000AAC44
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IStateChangeBehavior> StateChangeBehaviors
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -121,8 +119,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FF4 RID: 4084
-		// (get) Token: 0x06003FE0 RID: 16352 RVA: 0x000A34CC File Offset: 0x000A16CC
+		// Token: 0x170010C8 RID: 4296
+		// (get) Token: 0x0600440A RID: 17418 RVA: 0x000ACAC0 File Offset: 0x000AACC0
 		public virtual bool? InstantActionsOnStateChange
 		{
 			get
@@ -135,8 +133,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FF5 RID: 4085
-		// (get) Token: 0x06003FE1 RID: 16353 RVA: 0x000A3502 File Offset: 0x000A1702
+		// Token: 0x170010C9 RID: 4297
+		// (get) Token: 0x0600440B RID: 17419 RVA: 0x000ACAF6 File Offset: 0x000AACF6
 		public virtual ILockConfig LockConfig
 		{
 			get
@@ -151,19 +149,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FF6 RID: 4086
-		// (get) Token: 0x06003FE2 RID: 16354 RVA: 0x000A3538 File Offset: 0x000A1738
+		// Token: 0x170010CA RID: 4298
+		// (get) Token: 0x0600440C RID: 17420 RVA: 0x000ACB2C File Offset: 0x000AAD2C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IStateConfig> StateConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -186,19 +184,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FF7 RID: 4087
-		// (get) Token: 0x06003FE3 RID: 16355 RVA: 0x000A35B4 File Offset: 0x000A17B4
+		// Token: 0x170010CB RID: 4299
+		// (get) Token: 0x0600440D RID: 17421 RVA: 0x000ACBA8 File Offset: 0x000AADA8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> CycleStates
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -221,8 +219,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FF8 RID: 4088
-		// (get) Token: 0x06003FE4 RID: 16356 RVA: 0x000A362A File Offset: 0x000A182A
+		// Token: 0x170010CC RID: 4300
+		// (get) Token: 0x0600440E RID: 17422 RVA: 0x000ACC1E File Offset: 0x000AAE1E
 		[Nullable(2)]
 		public virtual string PrefabPerformanceType
 		{
@@ -233,54 +231,54 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400238B RID: 9099
+		// Token: 0x040025A7 RID: 9639
 		private IEntityStateComponent Instance;
 
-		// Token: 0x0400238C RID: 9100
+		// Token: 0x040025A8 RID: 9640
 		[Nullable(2)]
 		private IConditionGroup _StateChangeConditionCache;
 
-		// Token: 0x0400238D RID: 9101
+		// Token: 0x040025A9 RID: 9641
 		private bool _StateChangeConditionInited;
 
-		// Token: 0x0400238E RID: 9102
+		// Token: 0x040025AA RID: 9642
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IStateChangeBehavior> _StateChangeBehaviorsCache;
 
-		// Token: 0x0400238F RID: 9103
+		// Token: 0x040025AB RID: 9643
 		private bool _StateChangeBehaviorsInited;
 
-		// Token: 0x04002390 RID: 9104
+		// Token: 0x040025AC RID: 9644
 		[Nullable(2)]
 		private ILockConfig _LockConfigCache;
 
-		// Token: 0x04002391 RID: 9105
+		// Token: 0x040025AD RID: 9645
 		private bool _LockConfigInited;
 
-		// Token: 0x04002392 RID: 9106
+		// Token: 0x040025AE RID: 9646
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IStateConfig> _StateConfigsCache;
 
-		// Token: 0x04002393 RID: 9107
+		// Token: 0x040025AF RID: 9647
 		private bool _StateConfigsInited;
 
-		// Token: 0x04002394 RID: 9108
+		// Token: 0x040025B0 RID: 9648
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _CycleStatesCache;
 
-		// Token: 0x04002395 RID: 9109
+		// Token: 0x040025B1 RID: 9649
 		private bool _CycleStatesInited;
 	}
 }

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000144 RID: 324
+	// Token: 0x02000147 RID: 327
 	public sealed class BabelActivityLevelInfo : IMessage<BabelActivityLevelInfo>, IMessage, IEquatable<BabelActivityLevelInfo>, IDeepCloneable<BabelActivityLevelInfo>, IBufferMessage
 	{
-		// Token: 0x060029D0 RID: 10704 RVA: 0x0006D9C1 File Offset: 0x0006BBC1
+		// Token: 0x06002A47 RID: 10823 RVA: 0x0006EDF5 File Offset: 0x0006CFF5
 		[NullableContext(1)]
 		public static BabelActivityLevelInfo Create()
 		{
 			return new BabelActivityLevelInfo();
 		}
 
-		// Token: 0x1700061D RID: 1565
-		// (get) Token: 0x060029D1 RID: 10705 RVA: 0x0006D9C8 File Offset: 0x0006BBC8
+		// Token: 0x17000631 RID: 1585
+		// (get) Token: 0x06002A48 RID: 10824 RVA: 0x0006EDFC File Offset: 0x0006CFFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<BabelActivityLevelInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700061E RID: 1566
-		// (get) Token: 0x060029D2 RID: 10706 RVA: 0x0006D9CF File Offset: 0x0006BBCF
+		// Token: 0x17000632 RID: 1586
+		// (get) Token: 0x06002A49 RID: 10825 RVA: 0x0006EE03 File Offset: 0x0006D003
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700061F RID: 1567
-		// (get) Token: 0x060029D3 RID: 10707 RVA: 0x0006D9D2 File Offset: 0x0006BBD2
+		// Token: 0x17000633 RID: 1587
+		// (get) Token: 0x06002A4A RID: 10826 RVA: 0x0006EE06 File Offset: 0x0006D006
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060029D4 RID: 10708 RVA: 0x0006D9DC File Offset: 0x0006BBDC
+		// Token: 0x06002A4B RID: 10827 RVA: 0x0006EE10 File Offset: 0x0006D010
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelActivityLevelInfo()
 		{
 		}
 
-		// Token: 0x060029D5 RID: 10709 RVA: 0x0006DA3C File Offset: 0x0006BC3C
+		// Token: 0x06002A4C RID: 10828 RVA: 0x0006EE70 File Offset: 0x0006D070
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelActivityLevelInfo(BabelActivityLevelInfo other) : this()
@@ -82,7 +82,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060029D6 RID: 10710 RVA: 0x0006DB1F File Offset: 0x0006BD1F
+		// Token: 0x06002A4D RID: 10829 RVA: 0x0006EF53 File Offset: 0x0006D153
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelActivityLevelInfo Clone()
@@ -90,9 +90,9 @@ namespace Aki.Protocol
 			return new BabelActivityLevelInfo(this);
 		}
 
-		// Token: 0x17000620 RID: 1568
-		// (get) Token: 0x060029D7 RID: 10711 RVA: 0x0006DB27 File Offset: 0x0006BD27
-		// (set) Token: 0x060029D8 RID: 10712 RVA: 0x0006DB2F File Offset: 0x0006BD2F
+		// Token: 0x17000634 RID: 1588
+		// (get) Token: 0x06002A4E RID: 10830 RVA: 0x0006EF5B File Offset: 0x0006D15B
+		// (set) Token: 0x06002A4F RID: 10831 RVA: 0x0006EF63 File Offset: 0x0006D163
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LevelsId
@@ -107,9 +107,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000621 RID: 1569
-		// (get) Token: 0x060029D9 RID: 10713 RVA: 0x0006DB38 File Offset: 0x0006BD38
-		// (set) Token: 0x060029DA RID: 10714 RVA: 0x0006DB40 File Offset: 0x0006BD40
+		// Token: 0x17000635 RID: 1589
+		// (get) Token: 0x06002A50 RID: 10832 RVA: 0x0006EF6C File Offset: 0x0006D16C
+		// (set) Token: 0x06002A51 RID: 10833 RVA: 0x0006EF74 File Offset: 0x0006D174
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long UnlockTime
@@ -124,8 +124,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000622 RID: 1570
-		// (get) Token: 0x060029DB RID: 10715 RVA: 0x0006DB49 File Offset: 0x0006BD49
+		// Token: 0x17000636 RID: 1590
+		// (get) Token: 0x06002A52 RID: 10834 RVA: 0x0006EF7D File Offset: 0x0006D17D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> BabelDeTermId
@@ -136,8 +136,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000623 RID: 1571
-		// (get) Token: 0x060029DC RID: 10716 RVA: 0x0006DB51 File Offset: 0x0006BD51
+		// Token: 0x17000637 RID: 1591
+		// (get) Token: 0x06002A53 RID: 10835 RVA: 0x0006EF85 File Offset: 0x0006D185
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> LimitWeaponTypes
@@ -148,8 +148,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000624 RID: 1572
-		// (get) Token: 0x060029DD RID: 10717 RVA: 0x0006DB59 File Offset: 0x0006BD59
+		// Token: 0x17000638 RID: 1592
+		// (get) Token: 0x06002A54 RID: 10836 RVA: 0x0006EF8D File Offset: 0x0006D18D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> BuffSelection
@@ -160,8 +160,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000625 RID: 1573
-		// (get) Token: 0x060029DE RID: 10718 RVA: 0x0006DB61 File Offset: 0x0006BD61
+		// Token: 0x17000639 RID: 1593
+		// (get) Token: 0x06002A55 RID: 10837 RVA: 0x0006EF95 File Offset: 0x0006D195
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> RoleSelection
@@ -172,9 +172,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000626 RID: 1574
-		// (get) Token: 0x060029DF RID: 10719 RVA: 0x0006DB69 File Offset: 0x0006BD69
-		// (set) Token: 0x060029E0 RID: 10720 RVA: 0x0006DB71 File Offset: 0x0006BD71
+		// Token: 0x1700063A RID: 1594
+		// (get) Token: 0x06002A56 RID: 10838 RVA: 0x0006EF9D File Offset: 0x0006D19D
+		// (set) Token: 0x06002A57 RID: 10839 RVA: 0x0006EFA5 File Offset: 0x0006D1A5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PassStar
@@ -189,9 +189,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000627 RID: 1575
-		// (get) Token: 0x060029E1 RID: 10721 RVA: 0x0006DB7A File Offset: 0x0006BD7A
-		// (set) Token: 0x060029E2 RID: 10722 RVA: 0x0006DB82 File Offset: 0x0006BD82
+		// Token: 0x1700063B RID: 1595
+		// (get) Token: 0x06002A58 RID: 10840 RVA: 0x0006EFAE File Offset: 0x0006D1AE
+		// (set) Token: 0x06002A59 RID: 10841 RVA: 0x0006EFB6 File Offset: 0x0006D1B6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsFinished
@@ -206,8 +206,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000628 RID: 1576
-		// (get) Token: 0x060029E3 RID: 10723 RVA: 0x0006DB8B File Offset: 0x0006BD8B
+		// Token: 0x1700063C RID: 1596
+		// (get) Token: 0x06002A5A RID: 10842 RVA: 0x0006EFBF File Offset: 0x0006D1BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> MaxPassRoleSelection
@@ -218,8 +218,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000629 RID: 1577
-		// (get) Token: 0x060029E4 RID: 10724 RVA: 0x0006DB93 File Offset: 0x0006BD93
+		// Token: 0x1700063D RID: 1597
+		// (get) Token: 0x06002A5B RID: 10843 RVA: 0x0006EFC7 File Offset: 0x0006D1C7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> MaxPassBuffSelection
@@ -230,9 +230,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700062A RID: 1578
-		// (get) Token: 0x060029E5 RID: 10725 RVA: 0x0006DB9B File Offset: 0x0006BD9B
-		// (set) Token: 0x060029E6 RID: 10726 RVA: 0x0006DBA3 File Offset: 0x0006BDA3
+		// Token: 0x1700063E RID: 1598
+		// (get) Token: 0x06002A5C RID: 10844 RVA: 0x0006EFCF File Offset: 0x0006D1CF
+		// (set) Token: 0x06002A5D RID: 10845 RVA: 0x0006EFD7 File Offset: 0x0006D1D7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MaxPassStar
@@ -247,8 +247,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700062B RID: 1579
-		// (get) Token: 0x060029E7 RID: 10727 RVA: 0x0006DBAC File Offset: 0x0006BDAC
+		// Token: 0x1700063F RID: 1599
+		// (get) Token: 0x06002A5E RID: 10846 RVA: 0x0006EFE0 File Offset: 0x0006D1E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> SkillBranchId
@@ -259,9 +259,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700062C RID: 1580
-		// (get) Token: 0x060029E8 RID: 10728 RVA: 0x0006DBB4 File Offset: 0x0006BDB4
-		// (set) Token: 0x060029E9 RID: 10729 RVA: 0x0006DBBC File Offset: 0x0006BDBC
+		// Token: 0x17000640 RID: 1600
+		// (get) Token: 0x06002A5F RID: 10847 RVA: 0x0006EFE8 File Offset: 0x0006D1E8
+		// (set) Token: 0x06002A60 RID: 10848 RVA: 0x0006EFF0 File Offset: 0x0006D1F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MaxPassUseTime
@@ -276,7 +276,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060029EA RID: 10730 RVA: 0x0006DBC5 File Offset: 0x0006BDC5
+		// Token: 0x06002A61 RID: 10849 RVA: 0x0006EFF9 File Offset: 0x0006D1F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -284,7 +284,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BabelActivityLevelInfo);
 		}
 
-		// Token: 0x060029EB RID: 10731 RVA: 0x0006DBD4 File Offset: 0x0006BDD4
+		// Token: 0x06002A62 RID: 10850 RVA: 0x0006F008 File Offset: 0x0006D208
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BabelActivityLevelInfo other)
@@ -292,7 +292,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LevelsId == other.LevelsId && this.UnlockTime == other.UnlockTime && this.babelDeTermId_.Equals(other.babelDeTermId_) && this.limitWeaponTypes_.Equals(other.limitWeaponTypes_) && this.buffSelection_.Equals(other.buffSelection_) && this.roleSelection_.Equals(other.roleSelection_) && this.PassStar == other.PassStar && this.IsFinished == other.IsFinished && this.maxPassRoleSelection_.Equals(other.maxPassRoleSelection_) && this.maxPassBuffSelection_.Equals(other.maxPassBuffSelection_) && this.MaxPassStar == other.MaxPassStar && this.skillBranchId_.Equals(other.skillBranchId_) && this.MaxPassUseTime == other.MaxPassUseTime && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060029EC RID: 10732 RVA: 0x0006DCF0 File Offset: 0x0006BEF0
+		// Token: 0x06002A63 RID: 10851 RVA: 0x0006F124 File Offset: 0x0006D324
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -336,7 +336,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060029ED RID: 10733 RVA: 0x0006DE0E File Offset: 0x0006C00E
+		// Token: 0x06002A64 RID: 10852 RVA: 0x0006F242 File Offset: 0x0006D442
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -344,7 +344,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060029EE RID: 10734 RVA: 0x0006DE1B File Offset: 0x0006C01B
+		// Token: 0x06002A65 RID: 10853 RVA: 0x0006F24F File Offset: 0x0006D44F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -352,7 +352,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060029EF RID: 10735 RVA: 0x0006DE24 File Offset: 0x0006C024
+		// Token: 0x06002A66 RID: 10854 RVA: 0x0006F258 File Offset: 0x0006D458
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -400,7 +400,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060029F0 RID: 10736 RVA: 0x0006DF64 File Offset: 0x0006C164
+		// Token: 0x06002A67 RID: 10855 RVA: 0x0006F398 File Offset: 0x0006D598
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -444,7 +444,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060029F1 RID: 10737 RVA: 0x0006E094 File Offset: 0x0006C294
+		// Token: 0x06002A68 RID: 10856 RVA: 0x0006F4C8 File Offset: 0x0006D6C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BabelActivityLevelInfo other)
@@ -487,7 +487,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060029F2 RID: 10738 RVA: 0x0006E1AB File Offset: 0x0006C3AB
+		// Token: 0x06002A69 RID: 10857 RVA: 0x0006F5DF File Offset: 0x0006D7DF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -495,7 +495,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060029F3 RID: 10739 RVA: 0x0006E1B4 File Offset: 0x0006C3B4
+		// Token: 0x06002A6A RID: 10858 RVA: 0x0006F5E8 File Offset: 0x0006D7E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -626,109 +626,109 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400271A RID: 10010
+		// Token: 0x0400278E RID: 10126
 		private static readonly MessageParser<BabelActivityLevelInfo> _parser = new MessageParser<BabelActivityLevelInfo>(() => new BabelActivityLevelInfo());
 
-		// Token: 0x0400271B RID: 10011
+		// Token: 0x0400278F RID: 10127
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400271C RID: 10012
+		// Token: 0x04002790 RID: 10128
 		public const int LevelsIdFieldNumber = 1;
 
-		// Token: 0x0400271D RID: 10013
+		// Token: 0x04002791 RID: 10129
 		private int levelsId_;
 
-		// Token: 0x0400271E RID: 10014
+		// Token: 0x04002792 RID: 10130
 		public const int UnlockTimeFieldNumber = 2;
 
-		// Token: 0x0400271F RID: 10015
+		// Token: 0x04002793 RID: 10131
 		private long unlockTime_;
 
-		// Token: 0x04002720 RID: 10016
+		// Token: 0x04002794 RID: 10132
 		public const int BabelDeTermIdFieldNumber = 3;
 
-		// Token: 0x04002721 RID: 10017
+		// Token: 0x04002795 RID: 10133
 		private static readonly FieldCodec<int> _repeated_babelDeTermId_codec = FieldCodec.ForInt32(26U);
 
-		// Token: 0x04002722 RID: 10018
+		// Token: 0x04002796 RID: 10134
 		private readonly RepeatedField<int> babelDeTermId_ = new RepeatedField<int>();
 
-		// Token: 0x04002723 RID: 10019
+		// Token: 0x04002797 RID: 10135
 		public const int LimitWeaponTypesFieldNumber = 4;
 
-		// Token: 0x04002724 RID: 10020
+		// Token: 0x04002798 RID: 10136
 		private static readonly FieldCodec<int> _repeated_limitWeaponTypes_codec = FieldCodec.ForInt32(34U);
 
-		// Token: 0x04002725 RID: 10021
+		// Token: 0x04002799 RID: 10137
 		private readonly RepeatedField<int> limitWeaponTypes_ = new RepeatedField<int>();
 
-		// Token: 0x04002726 RID: 10022
+		// Token: 0x0400279A RID: 10138
 		public const int BuffSelectionFieldNumber = 5;
 
-		// Token: 0x04002727 RID: 10023
+		// Token: 0x0400279B RID: 10139
 		private static readonly FieldCodec<int> _repeated_buffSelection_codec = FieldCodec.ForInt32(42U);
 
-		// Token: 0x04002728 RID: 10024
+		// Token: 0x0400279C RID: 10140
 		private readonly RepeatedField<int> buffSelection_ = new RepeatedField<int>();
 
-		// Token: 0x04002729 RID: 10025
+		// Token: 0x0400279D RID: 10141
 		public const int RoleSelectionFieldNumber = 6;
 
-		// Token: 0x0400272A RID: 10026
+		// Token: 0x0400279E RID: 10142
 		private static readonly FieldCodec<int> _repeated_roleSelection_codec = FieldCodec.ForInt32(50U);
 
-		// Token: 0x0400272B RID: 10027
+		// Token: 0x0400279F RID: 10143
 		private readonly RepeatedField<int> roleSelection_ = new RepeatedField<int>();
 
-		// Token: 0x0400272C RID: 10028
+		// Token: 0x040027A0 RID: 10144
 		public const int PassStarFieldNumber = 7;
 
-		// Token: 0x0400272D RID: 10029
+		// Token: 0x040027A1 RID: 10145
 		private int passStar_;
 
-		// Token: 0x0400272E RID: 10030
+		// Token: 0x040027A2 RID: 10146
 		public const int IsFinishedFieldNumber = 8;
 
-		// Token: 0x0400272F RID: 10031
+		// Token: 0x040027A3 RID: 10147
 		private bool isFinished_;
 
-		// Token: 0x04002730 RID: 10032
+		// Token: 0x040027A4 RID: 10148
 		public const int MaxPassRoleSelectionFieldNumber = 9;
 
-		// Token: 0x04002731 RID: 10033
+		// Token: 0x040027A5 RID: 10149
 		private static readonly FieldCodec<int> _repeated_maxPassRoleSelection_codec = FieldCodec.ForInt32(74U);
 
-		// Token: 0x04002732 RID: 10034
+		// Token: 0x040027A6 RID: 10150
 		private readonly RepeatedField<int> maxPassRoleSelection_ = new RepeatedField<int>();
 
-		// Token: 0x04002733 RID: 10035
+		// Token: 0x040027A7 RID: 10151
 		public const int MaxPassBuffSelectionFieldNumber = 10;
 
-		// Token: 0x04002734 RID: 10036
+		// Token: 0x040027A8 RID: 10152
 		private static readonly FieldCodec<int> _repeated_maxPassBuffSelection_codec = FieldCodec.ForInt32(82U);
 
-		// Token: 0x04002735 RID: 10037
+		// Token: 0x040027A9 RID: 10153
 		private readonly RepeatedField<int> maxPassBuffSelection_ = new RepeatedField<int>();
 
-		// Token: 0x04002736 RID: 10038
+		// Token: 0x040027AA RID: 10154
 		public const int MaxPassStarFieldNumber = 11;
 
-		// Token: 0x04002737 RID: 10039
+		// Token: 0x040027AB RID: 10155
 		private int maxPassStar_;
 
-		// Token: 0x04002738 RID: 10040
+		// Token: 0x040027AC RID: 10156
 		public const int SkillBranchIdFieldNumber = 12;
 
-		// Token: 0x04002739 RID: 10041
+		// Token: 0x040027AD RID: 10157
 		private static readonly FieldCodec<int> _repeated_skillBranchId_codec = FieldCodec.ForInt32(98U);
 
-		// Token: 0x0400273A RID: 10042
+		// Token: 0x040027AE RID: 10158
 		private readonly RepeatedField<int> skillBranchId_ = new RepeatedField<int>();
 
-		// Token: 0x0400273B RID: 10043
+		// Token: 0x040027AF RID: 10159
 		public const int MaxPassUseTimeFieldNumber = 13;
 
-		// Token: 0x0400273C RID: 10044
+		// Token: 0x040027B0 RID: 10160
 		private int maxPassUseTime_;
 	}
 }

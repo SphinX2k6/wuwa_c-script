@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025A6 RID: 9638
+	// Token: 0x02002855 RID: 10325
 	public class IActorTurnToTalkerData : IActorTurnToData
 	{
-		// Token: 0x0600D8E0 RID: 55520 RVA: 0x00205E42 File Offset: 0x00204042
-		[NullableContext(1)]
+		// Token: 0x0600E65A RID: 58970 RVA: 0x00221B16 File Offset: 0x0021FD16
 		public static IActorTurnToTalkerData Create(IActorTurnToTalkerData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F56 RID: 16214
-		// (get) Token: 0x0600D8E1 RID: 55521 RVA: 0x00205E61 File Offset: 0x00204061
+		// Token: 0x1700425E RID: 16990
+		// (get) Token: 0x0600E65B RID: 58971 RVA: 0x00221B35 File Offset: 0x0021FD35
 		public override EActorTurnToMode Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007880 RID: 30848
+		// Token: 0x04007EE7 RID: 32487
 		private IActorTurnToTalkerData Instance;
 	}
 }

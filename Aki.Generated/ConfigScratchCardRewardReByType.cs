@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008FD RID: 2301
+	// Token: 0x02000948 RID: 2376
 	public class ConfigScratchCardRewardReByType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003601 RID: 13825 RVA: 0x0018A984 File Offset: 0x00188B84
+		// Token: 0x060037C3 RID: 14275 RVA: 0x00197BA4 File Offset: 0x00195DA4
 		static ConfigScratchCardRewardReByType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigScratchCardRewardReByType.CreateStaticDefaultValue), new Action(ConfigScratchCardRewardReByType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003602 RID: 13826 RVA: 0x0018A9A4 File Offset: 0x00188BA4
+		// Token: 0x060037C4 RID: 14276 RVA: 0x00197BC4 File Offset: 0x00195DC4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigScratchCardRewardReByType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003603 RID: 13827 RVA: 0x0018AA23 File Offset: 0x00188C23
+		// Token: 0x060037C5 RID: 14277 RVA: 0x00197C43 File Offset: 0x00195E43
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigScratchCardRewardReByType.LogPair = null;
 			ConfigScratchCardRewardReByType.HandleId = 0;
 		}
 
-		// Token: 0x06003604 RID: 13828 RVA: 0x0018AA31 File Offset: 0x00188C31
+		// Token: 0x060037C6 RID: 14278 RVA: 0x00197C51 File Offset: 0x00195E51
 		public static void Init()
 		{
 			ConfigScratchCardRewardReByType.HandleId = ConfigCommon.InitDataStatement(ConfigScratchCardRewardReByType.HandleId, "db_scratchcard.db", "select BinData from `ScratchCardRewardRe` where RoundId=?");
 		}
 
-		// Token: 0x06003605 RID: 13829 RVA: 0x0018AA4C File Offset: 0x00188C4C
+		// Token: 0x060037C7 RID: 14279 RVA: 0x00197C6C File Offset: 0x00195E6C
 		[NullableContext(2)]
 		public static IReadOnlyList<ScratchCardRewardRe> GetConfigList(int p0RoundId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003ED1 RID: 16081
+		// Token: 0x040040DE RID: 16606
 		private const string DB = "db_scratchcard.db";
 
-		// Token: 0x04003ED2 RID: 16082
+		// Token: 0x040040DF RID: 16607
 		private const string FILE = "g.刮刮乐.xlsx";
 
-		// Token: 0x04003ED3 RID: 16083
+		// Token: 0x040040E0 RID: 16608
 		private const string TABLE = "ScratchCardRewardRe";
 
-		// Token: 0x04003ED4 RID: 16084
+		// Token: 0x040040E1 RID: 16609
 		private const string COMMAND = "select BinData from `ScratchCardRewardRe` where RoundId=?";
 
-		// Token: 0x04003ED5 RID: 16085
+		// Token: 0x040040E2 RID: 16610
 		private const string KEY_PREFIX = "ScratchCardRewardReByType";
 
-		// Token: 0x04003ED6 RID: 16086
+		// Token: 0x040040E3 RID: 16611
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003ED7 RID: 16087
+		// Token: 0x040040E4 RID: 16612
 		private static int HandleId;
 	}
 }

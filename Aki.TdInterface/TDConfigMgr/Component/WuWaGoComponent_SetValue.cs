@@ -4,20 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008EB RID: 2283
+	// Token: 0x02000990 RID: 2448
 	public class WuWaGoComponent_SetValue
 	{
-		// Token: 0x040021E8 RID: 8680
+		// Token: 0x040023FF RID: 9215
 		public bool? Disabled;
 
-		// Token: 0x040021E9 RID: 8681
+		// Token: 0x04002400 RID: 9216
 		public bool? EdIsLocked;
 
-		// Token: 0x040021EA RID: 8682
-		[Nullable(1)]
+		// Token: 0x04002401 RID: 9217
 		public IWuWaGoEntityBase WuWaGoEntity;
 
-		// Token: 0x040021EB RID: 8683
+		// Token: 0x04002402 RID: 9218
 		[Nullable(2)]
 		public List<int> OpenAddClientTags;
 	}

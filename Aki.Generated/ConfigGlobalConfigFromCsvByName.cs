@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003A0 RID: 928
+	// Token: 0x020003B6 RID: 950
 	public class ConfigGlobalConfigFromCsvByName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060015C7 RID: 5575 RVA: 0x000D4B40 File Offset: 0x000D2D40
+		// Token: 0x0600164B RID: 5707 RVA: 0x000DB294 File Offset: 0x000D9494
 		static ConfigGlobalConfigFromCsvByName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGlobalConfigFromCsvByName.CreateStaticDefaultValue), new Action(ConfigGlobalConfigFromCsvByName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060015C8 RID: 5576 RVA: 0x000D4B60 File Offset: 0x000D2D60
+		// Token: 0x0600164C RID: 5708 RVA: 0x000DB2B4 File Offset: 0x000D94B4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGlobalConfigFromCsvByName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060015C9 RID: 5577 RVA: 0x000D4BDF File Offset: 0x000D2DDF
+		// Token: 0x0600164D RID: 5709 RVA: 0x000DB333 File Offset: 0x000D9533
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGlobalConfigFromCsvByName.LogPair = null;
 			ConfigGlobalConfigFromCsvByName.HandleId = 0;
 		}
 
-		// Token: 0x060015CA RID: 5578 RVA: 0x000D4BED File Offset: 0x000D2DED
+		// Token: 0x0600164E RID: 5710 RVA: 0x000DB341 File Offset: 0x000D9541
 		public static void Init()
 		{
 			ConfigGlobalConfigFromCsvByName.HandleId = ConfigCommon.InitDataStatement(ConfigGlobalConfigFromCsvByName.HandleId, "db_global_config.db", "select BinData from `GlobalConfigFromCsv` where Name=?");
 		}
 
-		// Token: 0x060015CB RID: 5579 RVA: 0x000D4C08 File Offset: 0x000D2E08
+		// Token: 0x0600164F RID: 5711 RVA: 0x000DB35C File Offset: 0x000D955C
 		public static GlobalConfigFromCsv? GetConfig(string p0Name, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGlobalConfigFromCsvByName.HandleId, ConfigGlobalConfigFromCsvByName.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new GlobalConfigFromCsv?(rootAsGlobalConfigFromCsv);
 		}
 
-		// Token: 0x04001944 RID: 6468
+		// Token: 0x040019DE RID: 6622
 		private const string DB = "db_global_config.db";
 
-		// Token: 0x04001945 RID: 6469
+		// Token: 0x040019DF RID: 6623
 		private const string FILE = "k.可视化编辑/c.Csv/q.全局配置/*.csv*";
 
-		// Token: 0x04001946 RID: 6470
+		// Token: 0x040019E0 RID: 6624
 		private const string TABLE = "GlobalConfigFromCsv";
 
-		// Token: 0x04001947 RID: 6471
+		// Token: 0x040019E1 RID: 6625
 		private const string COMMAND = "select BinData from `GlobalConfigFromCsv` where Name=?";
 
-		// Token: 0x04001948 RID: 6472
+		// Token: 0x040019E2 RID: 6626
 		private const string KEY_PREFIX = "GlobalConfigFromCsvByName";
 
-		// Token: 0x04001949 RID: 6473
+		// Token: 0x040019E3 RID: 6627
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400194A RID: 6474
+		// Token: 0x040019E4 RID: 6628
 		private static int HandleId;
 	}
 }

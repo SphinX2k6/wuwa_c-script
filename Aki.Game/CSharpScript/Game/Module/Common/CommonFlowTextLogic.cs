@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Common
 {
-	// Token: 0x02005B43 RID: 23363
+	// Token: 0x02004B24 RID: 19236
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonFlowTextLogic<T> where T : class
 	{
-		// Token: 0x0603B26F RID: 242287 RVA: 0x00E1AC18 File Offset: 0x00E18E18
+		// Token: 0x060301E1 RID: 197089 RVA: 0x00D6B930 File Offset: 0x00D69B30
 		private void RemoveAnimTimer()
 		{
 			if (this.AnimTimer != null)
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Common
 			}
 		}
 
-		// Token: 0x0603B270 RID: 242288 RVA: 0x00E1AC3A File Offset: 0x00E18E3A
+		// Token: 0x060301E2 RID: 197090 RVA: 0x00D6B952 File Offset: 0x00D69B52
 		private void HandleSubtitleAnimFinished(float _)
 		{
 			this.AnimTimer = null;
@@ -38,30 +38,13 @@ namespace CSharpScript.Game.Module.Common
 			textAnimFinishDelegate(this.TalkData, this.ExtraData);
 		}
 
-		// Token: 0x0603B271 RID: 242289 RVA: 0x00E1AC6C File Offset: 0x00E18E6C
+		// Token: 0x060301E3 RID: 197091 RVA: 0x00D6B984 File Offset: 0x00D69B84
 		private void SetFlowText(UUIText text)
 		{
-			if (PublicUtil.Instance.UseDbConfig())
-			{
-				LguiUtil.Instance.SetLocalTextNew(text, this.TalkData.TidTalk, Array.Empty<object>());
-				return;
-			}
-			string text2 = PublicUtil.Instance.GetFlowConfigLocalText(this.TalkData.TidTalk);
-			if (StringUtils.IsEmpty(text2))
-			{
-				global::Log instance = global::Log.Instance;
-				ELogModule module = ELogModule.Plot;
-				ELogAuthor author = ELogAuthor.XXJ;
-				string message = "字幕为空";
-				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("id", this.TalkData.TidTalk);
-				instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-				text2 = this.TalkData.TidTalk;
-			}
-			text.SetGameRichText(true);
-			text.SetText(text2, true);
+			LguiUtil.Instance.SetLocalTextNew(text, this.TalkData.TidTalk, Array.Empty<object>());
 		}
 
-		// Token: 0x0603B272 RID: 242290 RVA: 0x00E1AD0C File Offset: 0x00E18F0C
+		// Token: 0x060301E4 RID: 197092 RVA: 0x00D6B9AC File Offset: 0x00D69BAC
 		private void PlayTextAnim(UUIText text, float? totalTime = null)
 		{
 			this.RemoveAnimTimer();
@@ -99,13 +82,13 @@ namespace CSharpScript.Game.Module.Common
 			this.AnimTimer = TimerSystem.GameplayTimeInstance.Delay(new TTimerAction(this.HandleSubtitleAnimFinished), interval, null, null, true, 1f);
 		}
 
-		// Token: 0x0603B273 RID: 242291 RVA: 0x00E1AE1F File Offset: 0x00E1901F
+		// Token: 0x060301E5 RID: 197093 RVA: 0x00D6BABF File Offset: 0x00D69CBF
 		public void InitData(ICommonFlowTextLogicData<T> data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x0603B274 RID: 242292 RVA: 0x00E1AE28 File Offset: 0x00E19028
+		// Token: 0x060301E6 RID: 197094 RVA: 0x00D6BAC8 File Offset: 0x00D69CC8
 		public void PlayFlowText(ITalkItem talkData, [Nullable(2)] T param)
 		{
 			this.TalkData = talkData;
@@ -132,7 +115,7 @@ namespace CSharpScript.Game.Module.Common
 			this.PlayTextAnim(uuitext2, (captionParams != null) ? captionParams.TotalTime : null);
 		}
 
-		// Token: 0x0603B275 RID: 242293 RVA: 0x00E1AE9C File Offset: 0x00E1909C
+		// Token: 0x060301E7 RID: 197095 RVA: 0x00D6BB3C File Offset: 0x00D69D3C
 		public void Clear()
 		{
 			ULGUIPlayTweenComponent textAnimComp = this.TextAnimComp;
@@ -154,7 +137,7 @@ namespace CSharpScript.Game.Module.Common
 			this.ExtraData = default(T);
 		}
 
-		// Token: 0x0603B276 RID: 242294 RVA: 0x00E1AEF0 File Offset: 0x00E190F0
+		// Token: 0x060301E8 RID: 197096 RVA: 0x00D6BB90 File Offset: 0x00D69D90
 		private void PlayAkEvent()
 		{
 			IPostAkEventType talkAkEvent = this.TalkData.TalkAkEvent;
@@ -219,20 +202,20 @@ namespace CSharpScript.Game.Module.Common
 			AudioSystem.Instance.PostEvent(text2);
 		}
 
-		// Token: 0x0401ED4E RID: 126286
+		// Token: 0x0401980A RID: 104458
 		private ULGUIPlayTweenComponent TextAnimComp;
 
-		// Token: 0x0401ED4F RID: 126287
+		// Token: 0x0401980B RID: 104459
 		private ITalkItem TalkData;
 
-		// Token: 0x0401ED50 RID: 126288
+		// Token: 0x0401980C RID: 104460
 		[Nullable(2)]
 		private T ExtraData;
 
-		// Token: 0x0401ED51 RID: 126289
+		// Token: 0x0401980D RID: 104461
 		private ICommonFlowTextLogicData<T> Data;
 
-		// Token: 0x0401ED52 RID: 126290
+		// Token: 0x0401980E RID: 104462
 		private TimerHandle AnimTimer;
 	}
 }

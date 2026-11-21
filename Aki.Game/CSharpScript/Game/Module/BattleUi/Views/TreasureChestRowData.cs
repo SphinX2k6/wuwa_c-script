@@ -6,12 +6,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DAD RID: 23981
+	// Token: 0x02004D91 RID: 19857
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TreasureChestRowData : IEquatable<TreasureChestRowData>
 	{
-		// Token: 0x0603CE79 RID: 249465 RVA: 0x00EA176C File Offset: 0x00E9F96C
+		// Token: 0x06031DF0 RID: 204272 RVA: 0x00DF2640 File Offset: 0x00DF0840
 		public TreasureChestRowData(TreasureChestCountData Count, bool IsLast, bool Gained)
 		{
 			this.Count = Count;
@@ -20,8 +20,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base..ctor();
 		}
 
-		// Token: 0x17008E67 RID: 36455
-		// (get) Token: 0x0603CE7A RID: 249466 RVA: 0x00EA1789 File Offset: 0x00E9F989
+		// Token: 0x17006239 RID: 25145
+		// (get) Token: 0x06031DF1 RID: 204273 RVA: 0x00DF265D File Offset: 0x00DF085D
 		[CompilerGenerated]
 		protected virtual Type EqualityContract
 		{
@@ -32,22 +32,22 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008E68 RID: 36456
-		// (get) Token: 0x0603CE7B RID: 249467 RVA: 0x00EA1795 File Offset: 0x00E9F995
-		// (set) Token: 0x0603CE7C RID: 249468 RVA: 0x00EA179D File Offset: 0x00E9F99D
+		// Token: 0x1700623A RID: 25146
+		// (get) Token: 0x06031DF2 RID: 204274 RVA: 0x00DF2669 File Offset: 0x00DF0869
+		// (set) Token: 0x06031DF3 RID: 204275 RVA: 0x00DF2671 File Offset: 0x00DF0871
 		public TreasureChestCountData Count { get; set; }
 
-		// Token: 0x17008E69 RID: 36457
-		// (get) Token: 0x0603CE7D RID: 249469 RVA: 0x00EA17A6 File Offset: 0x00E9F9A6
-		// (set) Token: 0x0603CE7E RID: 249470 RVA: 0x00EA17AE File Offset: 0x00E9F9AE
+		// Token: 0x1700623B RID: 25147
+		// (get) Token: 0x06031DF4 RID: 204276 RVA: 0x00DF267A File Offset: 0x00DF087A
+		// (set) Token: 0x06031DF5 RID: 204277 RVA: 0x00DF2682 File Offset: 0x00DF0882
 		public bool IsLast { get; set; }
 
-		// Token: 0x17008E6A RID: 36458
-		// (get) Token: 0x0603CE7F RID: 249471 RVA: 0x00EA17B7 File Offset: 0x00E9F9B7
-		// (set) Token: 0x0603CE80 RID: 249472 RVA: 0x00EA17BF File Offset: 0x00E9F9BF
+		// Token: 0x1700623C RID: 25148
+		// (get) Token: 0x06031DF6 RID: 204278 RVA: 0x00DF268B File Offset: 0x00DF088B
+		// (set) Token: 0x06031DF7 RID: 204279 RVA: 0x00DF2693 File Offset: 0x00DF0893
 		public bool Gained { get; set; }
 
-		// Token: 0x0603CE81 RID: 249473 RVA: 0x00EA17C8 File Offset: 0x00E9F9C8
+		// Token: 0x06031DF8 RID: 204280 RVA: 0x00DF269C File Offset: 0x00DF089C
 		[CompilerGenerated]
 		public override string ToString()
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x0603CE82 RID: 249474 RVA: 0x00EA1814 File Offset: 0x00E9FA14
+		// Token: 0x06031DF9 RID: 204281 RVA: 0x00DF26E8 File Offset: 0x00DF08E8
 		[CompilerGenerated]
 		protected virtual bool PrintMembers(StringBuilder builder)
 		{
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603CE83 RID: 249475 RVA: 0x00EA188E File Offset: 0x00E9FA8E
+		// Token: 0x06031DFA RID: 204282 RVA: 0x00DF2762 File Offset: 0x00DF0962
 		[NullableContext(2)]
 		[CompilerGenerated]
 		public static bool operator !=(TreasureChestRowData left, TreasureChestRowData right)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return !(left == right);
 		}
 
-		// Token: 0x0603CE84 RID: 249476 RVA: 0x00EA189A File Offset: 0x00E9FA9A
+		// Token: 0x06031DFB RID: 204283 RVA: 0x00DF276E File Offset: 0x00DF096E
 		[NullableContext(2)]
 		[CompilerGenerated]
 		public static bool operator ==(TreasureChestRowData left, TreasureChestRowData right)
@@ -92,14 +92,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return left == right || (left != null && left.Equals(right));
 		}
 
-		// Token: 0x0603CE85 RID: 249477 RVA: 0x00EA18B0 File Offset: 0x00E9FAB0
+		// Token: 0x06031DFC RID: 204284 RVA: 0x00DF2784 File Offset: 0x00DF0984
 		[CompilerGenerated]
 		public override int GetHashCode()
 		{
 			return ((EqualityComparer<Type>.Default.GetHashCode(this.EqualityContract) * -1521134295 + EqualityComparer<TreasureChestCountData>.Default.GetHashCode(this.<Count>k__BackingField)) * -1521134295 + EqualityComparer<bool>.Default.GetHashCode(this.<IsLast>k__BackingField)) * -1521134295 + EqualityComparer<bool>.Default.GetHashCode(this.<Gained>k__BackingField);
 		}
 
-		// Token: 0x0603CE86 RID: 249478 RVA: 0x00EA1912 File Offset: 0x00E9FB12
+		// Token: 0x06031DFD RID: 204285 RVA: 0x00DF27E6 File Offset: 0x00DF09E6
 		[NullableContext(2)]
 		[CompilerGenerated]
 		public override bool Equals(object obj)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.Equals(obj as TreasureChestRowData);
 		}
 
-		// Token: 0x0603CE87 RID: 249479 RVA: 0x00EA1920 File Offset: 0x00E9FB20
+		// Token: 0x06031DFE RID: 204286 RVA: 0x00DF27F4 File Offset: 0x00DF09F4
 		[NullableContext(2)]
 		[CompilerGenerated]
 		public virtual bool Equals(TreasureChestRowData other)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this == other || (other != null && this.EqualityContract == other.EqualityContract && EqualityComparer<TreasureChestCountData>.Default.Equals(this.<Count>k__BackingField, other.<Count>k__BackingField) && EqualityComparer<bool>.Default.Equals(this.<IsLast>k__BackingField, other.<IsLast>k__BackingField) && EqualityComparer<bool>.Default.Equals(this.<Gained>k__BackingField, other.<Gained>k__BackingField));
 		}
 
-		// Token: 0x0603CE89 RID: 249481 RVA: 0x00EA1999 File Offset: 0x00E9FB99
+		// Token: 0x06031E00 RID: 204288 RVA: 0x00DF286D File Offset: 0x00DF0A6D
 		[CompilerGenerated]
 		protected TreasureChestRowData(TreasureChestRowData original)
 		{
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Gained = original.<Gained>k__BackingField;
 		}
 
-		// Token: 0x0603CE8A RID: 249482 RVA: 0x00EA19C5 File Offset: 0x00E9FBC5
+		// Token: 0x06031E01 RID: 204289 RVA: 0x00DF2899 File Offset: 0x00DF0A99
 		[CompilerGenerated]
 		public void Deconstruct(out TreasureChestCountData Count, out bool IsLast, out bool Gained)
 		{

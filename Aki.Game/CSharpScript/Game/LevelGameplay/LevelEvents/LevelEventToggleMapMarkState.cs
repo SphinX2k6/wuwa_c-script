@@ -12,15 +12,15 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006BA8 RID: 27560
+	// Token: 0x02005D20 RID: 23840
 	public class LevelEventToggleMapMarkState : LevelEventBase
 	{
-		// Token: 0x06044306 RID: 279302 RVA: 0x010CE617 File Offset: 0x010CC817
+		// Token: 0x0603A45C RID: 238684 RVA: 0x010784A3 File Offset: 0x010766A3
 		public LevelEventToggleMapMarkState(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044307 RID: 279303 RVA: 0x010CE620 File Offset: 0x010CC820
+		// Token: 0x0603A45D RID: 238685 RVA: 0x010784AC File Offset: 0x010766AC
 		private void OnCloseMapView(EUiViewName viewName, int viewId)
 		{
 			if (viewName == EUiViewName.WorldMapView)
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044308 RID: 279304 RVA: 0x010CE650 File Offset: 0x010CC850
+		// Token: 0x0603A45E RID: 238686 RVA: 0x010784DC File Offset: 0x010766DC
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.Finish();
 		}
 
-		// Token: 0x06044309 RID: 279305 RVA: 0x010CE7B4 File Offset: 0x010CC9B4
+		// Token: 0x0603A45F RID: 238687 RVA: 0x01078640 File Offset: 0x01076840
 		private bool ConditionMarkId(int markId)
 		{
 			MapMark? configMark = MapConfig.Instance.GetConfigMark(markId);

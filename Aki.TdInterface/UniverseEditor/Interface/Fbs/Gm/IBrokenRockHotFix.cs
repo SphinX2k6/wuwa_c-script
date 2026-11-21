@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x0200463C RID: 17980
+	// Token: 0x02004AA4 RID: 19108
 	public struct IBrokenRockHotFix : IFlatbufferObject
 	{
-		// Token: 0x17007F96 RID: 32662
-		// (get) Token: 0x0601B3B7 RID: 111543 RVA: 0x003E04FE File Offset: 0x003DE6FE
+		// Token: 0x170085D7 RID: 34263
+		// (get) Token: 0x0601CB8C RID: 117644 RVA: 0x0040C79A File Offset: 0x0040A99A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B3B8 RID: 111544 RVA: 0x003E050B File Offset: 0x003DE70B
+		// Token: 0x0601CB8D RID: 117645 RVA: 0x0040C7A7 File Offset: 0x0040A9A7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B3B9 RID: 111545 RVA: 0x003E0514 File Offset: 0x003DE714
+		// Token: 0x0601CB8E RID: 117646 RVA: 0x0040C7B0 File Offset: 0x0040A9B0
 		public static IBrokenRockHotFix GetRootAsIBrokenRockHotFix(ByteBuffer _bb)
 		{
 			return IBrokenRockHotFix.GetRootAsIBrokenRockHotFix(_bb, default(IBrokenRockHotFix));
 		}
 
-		// Token: 0x0601B3BA RID: 111546 RVA: 0x003E0530 File Offset: 0x003DE730
+		// Token: 0x0601CB8F RID: 117647 RVA: 0x0040C7CC File Offset: 0x0040A9CC
 		public static IBrokenRockHotFix GetRootAsIBrokenRockHotFix(ByteBuffer _bb, IBrokenRockHotFix obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B3BB RID: 111547 RVA: 0x003E054D File Offset: 0x003DE74D
+		// Token: 0x0601CB90 RID: 117648 RVA: 0x0040C7E9 File Offset: 0x0040A9E9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B3BC RID: 111548 RVA: 0x003E055C File Offset: 0x003DE75C
+		// Token: 0x0601CB91 RID: 117649 RVA: 0x0040C7F8 File Offset: 0x0040A9F8
 		public IBrokenRockHotFix __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007F97 RID: 32663
-		// (get) Token: 0x0601B3BD RID: 111549 RVA: 0x003E056C File Offset: 0x003DE76C
+		// Token: 0x170085D8 RID: 34264
+		// (get) Token: 0x0601CB92 RID: 117650 RVA: 0x0040C808 File Offset: 0x0040AA08
 		public EGmCommand Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B3BE RID: 111550 RVA: 0x003E05A8 File Offset: 0x003DE7A8
+		// Token: 0x0601CB93 RID: 117651 RVA: 0x0040C844 File Offset: 0x0040AA44
 		public static Offset<IBrokenRockHotFix> CreateIBrokenRockHotFix(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IBrokenRockHotFix.EndIBrokenRockHotFix(builder);
 		}
 
-		// Token: 0x0601B3BF RID: 111551 RVA: 0x003E05BE File Offset: 0x003DE7BE
+		// Token: 0x0601CB94 RID: 117652 RVA: 0x0040C85A File Offset: 0x0040AA5A
 		public static void StartIBrokenRockHotFix(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601B3C0 RID: 111552 RVA: 0x003E05C7 File Offset: 0x003DE7C7
+		// Token: 0x0601CB95 RID: 117653 RVA: 0x0040C863 File Offset: 0x0040AA63
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B3C1 RID: 111553 RVA: 0x003E05D2 File Offset: 0x003DE7D2
+		// Token: 0x0601CB96 RID: 117654 RVA: 0x0040C86E File Offset: 0x0040AA6E
 		public static Offset<IBrokenRockHotFix> EndIBrokenRockHotFix(FlatBufferBuilder builder)
 		{
 			return new Offset<IBrokenRockHotFix>(builder.EndTable());
 		}
 
-		// Token: 0x0601B3C2 RID: 111554 RVA: 0x003E05E0 File Offset: 0x003DE7E0
+		// Token: 0x0601CB97 RID: 117655 RVA: 0x0040C87C File Offset: 0x0040AA7C
 		public IBrokenRockHotFixT UnPack()
 		{
 			IBrokenRockHotFixT brokenRockHotFixT = new IBrokenRockHotFixT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return brokenRockHotFixT;
 		}
 
-		// Token: 0x0601B3C3 RID: 111555 RVA: 0x003E05FB File Offset: 0x003DE7FB
+		// Token: 0x0601CB98 RID: 117656 RVA: 0x0040C897 File Offset: 0x0040AA97
 		public void UnPackTo(IBrokenRockHotFixT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601B3C4 RID: 111556 RVA: 0x003E060C File Offset: 0x003DE80C
+		// Token: 0x0601CB99 RID: 117657 RVA: 0x0040C8A8 File Offset: 0x0040AAA8
 		public static Offset<IBrokenRockHotFix> Pack(FlatBufferBuilder builder, IBrokenRockHotFixT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IBrokenRockHotFix.CreateIBrokenRockHotFix(builder, _o.Type);
 		}
 
-		// Token: 0x0400C7B3 RID: 51123
+		// Token: 0x0400D1E2 RID: 53730
 		private Table __p;
 	}
 }

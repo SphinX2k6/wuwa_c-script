@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042BD RID: 17085
+	// Token: 0x02004719 RID: 18201
 	public enum TCheckTrapDefenseEvent : byte
 	{
-		// Token: 0x0400BF7D RID: 49021
+		// Token: 0x0400C98A RID: 51594
 		NONE,
-		// Token: 0x0400BF7E RID: 49022
+		// Token: 0x0400C98B RID: 51595
 		ICheckTrapDefenseBdBuffQualityUp,
-		// Token: 0x0400BF7F RID: 49023
+		// Token: 0x0400C98C RID: 51596
 		ICheckTrapDefenseEventMonsterKilled
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200677A RID: 26490
+	// Token: 0x020056CA RID: 22218
 	public enum EDangoBrawlTipsOperationMode
 	{
-		// Token: 0x040227B4 RID: 141236
+		// Token: 0x0401D011 RID: 118801
 		None,
-		// Token: 0x040227B5 RID: 141237
+		// Token: 0x0401D012 RID: 118802
 		Selected,
-		// Token: 0x040227B6 RID: 141238
+		// Token: 0x0401D013 RID: 118803
 		Hover
 	}
 }

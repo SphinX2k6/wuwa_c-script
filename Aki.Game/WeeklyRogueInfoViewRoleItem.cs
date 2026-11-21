@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002D34 RID: 11572
+// Token: 0x0200228E RID: 8846
 public class WeeklyRogueInfoViewRoleItem : GridProxyAbstract<int>
 {
-	// Token: 0x0601854B RID: 99659 RVA: 0x00631504 File Offset: 0x0062F704
+	// Token: 0x06015DED RID: 89581 RVA: 0x00657518 File Offset: 0x00655718
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class WeeklyRogueInfoViewRoleItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0601854C RID: 99660 RVA: 0x006315C4 File Offset: 0x0062F7C4
+	// Token: 0x06015DEE RID: 89582 RVA: 0x006575D8 File Offset: 0x006557D8
 	public override void Refresh(int roleConfigId, bool isSelected, int gridIndex)
 	{
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleConfigId, true);
@@ -59,7 +59,7 @@ public class WeeklyRogueInfoViewRoleItem : GridProxyAbstract<int>
 		this.RefreshSkillBranch(roleConfigId);
 	}
 
-	// Token: 0x0601854D RID: 99661 RVA: 0x00631712 File Offset: 0x0062F912
+	// Token: 0x06015DEF RID: 89583 RVA: 0x00657726 File Offset: 0x00655926
 	private void OnClick(EToggleState toggleState)
 	{
 		Action<int> onSelectedCallback = this.OnSelectedCallback;
@@ -70,7 +70,7 @@ public class WeeklyRogueInfoViewRoleItem : GridProxyAbstract<int>
 		onSelectedCallback(base.GridIndex);
 	}
 
-	// Token: 0x0601854E RID: 99662 RVA: 0x0063172A File Offset: 0x0062F92A
+	// Token: 0x06015DF0 RID: 89584 RVA: 0x0065773E File Offset: 0x0065593E
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(5).SetToggleState(EToggleState.ETT_Checked, false, false, false);
@@ -85,13 +85,13 @@ public class WeeklyRogueInfoViewRoleItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0601854F RID: 99663 RVA: 0x00631756 File Offset: 0x0062F956
+	// Token: 0x06015DF1 RID: 89585 RVA: 0x0065776A File Offset: 0x0065596A
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(5).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06018550 RID: 99664 RVA: 0x0063176C File Offset: 0x0062F96C
+	// Token: 0x06015DF2 RID: 89586 RVA: 0x00657780 File Offset: 0x00655980
 	public void RefreshSkillBranch(int roleId)
 	{
 		UUIItem item = base.GetItem(4);
@@ -108,24 +108,24 @@ public class WeeklyRogueInfoViewRoleItem : GridProxyAbstract<int>
 		item.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x0400B4A2 RID: 46242
+	// Token: 0x0400B817 RID: 47127
 	[Nullable(2)]
 	public Action<int> OnSelectedCallback;
 
-	// Token: 0x020092C4 RID: 37572
+	// Token: 0x020084EB RID: 34027
 	private enum EWeeklyRogueInfoViewRoleItemDefine
 	{
-		// Token: 0x0402F708 RID: 194312
+		// Token: 0x0402AD90 RID: 175504
 		TextureIcon,
-		// Token: 0x0402F709 RID: 194313
+		// Token: 0x0402AD91 RID: 175505
 		SpriteSelect,
-		// Token: 0x0402F70A RID: 194314
+		// Token: 0x0402AD92 RID: 175506
 		SpriteHover,
-		// Token: 0x0402F70B RID: 194315
+		// Token: 0x0402AD93 RID: 175507
 		SpriteNormal,
-		// Token: 0x0402F70C RID: 194316
+		// Token: 0x0402AD94 RID: 175508
 		ItemSkillBranch,
-		// Token: 0x0402F70D RID: 194317
+		// Token: 0x0402AD95 RID: 175509
 		ExtendToggle
 	}
 }

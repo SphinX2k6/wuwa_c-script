@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CEB RID: 27883
+	// Token: 0x02007460 RID: 29792
 	public class IPlayEffect2_UnionUnion
 	{
-		// Token: 0x1700CFAF RID: 53167
-		// (get) Token: 0x060312A7 RID: 201383 RVA: 0x006ABCD9 File Offset: 0x006A9ED9
-		// (set) Token: 0x060312A8 RID: 201384 RVA: 0x006ABCE1 File Offset: 0x006A9EE1
+		// Token: 0x1700DAEE RID: 56046
+		// (get) Token: 0x0603427B RID: 213627 RVA: 0x00706F49 File Offset: 0x00705149
+		// (set) Token: 0x0603427C RID: 213628 RVA: 0x00706F51 File Offset: 0x00705151
 		public IPlayEffect2_Union Type { get; set; }
 
-		// Token: 0x1700CFB0 RID: 53168
-		// (get) Token: 0x060312A9 RID: 201385 RVA: 0x006ABCEA File Offset: 0x006A9EEA
-		// (set) Token: 0x060312AA RID: 201386 RVA: 0x006ABCF2 File Offset: 0x006A9EF2
+		// Token: 0x1700DAEF RID: 56047
+		// (get) Token: 0x0603427D RID: 213629 RVA: 0x00706F5A File Offset: 0x0070515A
+		// (set) Token: 0x0603427E RID: 213630 RVA: 0x00706F62 File Offset: 0x00705162
 		public object Value { get; set; }
 
-		// Token: 0x060312AB RID: 201387 RVA: 0x006ABCFB File Offset: 0x006A9EFB
+		// Token: 0x0603427F RID: 213631 RVA: 0x00706F6B File Offset: 0x0070516B
 		public IPlayEffect2_UnionUnion()
 		{
 			this.Type = IPlayEffect2_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060312AC RID: 201388 RVA: 0x006ABD11 File Offset: 0x006A9F11
+		// Token: 0x06034280 RID: 213632 RVA: 0x00706F81 File Offset: 0x00705181
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060312AD RID: 201389 RVA: 0x006ABD23 File Offset: 0x006A9F23
+		// Token: 0x06034281 RID: 213633 RVA: 0x00706F93 File Offset: 0x00705193
 		public IPlayEffect2T AsIPlayEffect2()
 		{
 			return this.As<IPlayEffect2T>();
 		}
 
-		// Token: 0x060312AE RID: 201390 RVA: 0x006ABD2B File Offset: 0x006A9F2B
+		// Token: 0x06034282 RID: 213634 RVA: 0x00706F9B File Offset: 0x0070519B
 		public static IPlayEffect2_UnionUnion FromIPlayEffect2(IPlayEffect2T _iplayeffect2)
 		{
 			return new IPlayEffect2_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060312AF RID: 201391 RVA: 0x006ABD40 File Offset: 0x006A9F40
+		// Token: 0x06034283 RID: 213635 RVA: 0x00706FB0 File Offset: 0x007051B0
 		public IPlayCommonEffectT AsIPlayCommonEffect()
 		{
 			return this.As<IPlayCommonEffectT>();
 		}
 
-		// Token: 0x060312B0 RID: 201392 RVA: 0x006ABD48 File Offset: 0x006A9F48
+		// Token: 0x06034284 RID: 213636 RVA: 0x00706FB8 File Offset: 0x007051B8
 		public static IPlayEffect2_UnionUnion FromIPlayCommonEffect(IPlayCommonEffectT _iplaycommoneffect)
 		{
 			return new IPlayEffect2_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060312B1 RID: 201393 RVA: 0x006ABD5D File Offset: 0x006A9F5D
+		// Token: 0x06034285 RID: 213637 RVA: 0x00706FCD File Offset: 0x007051CD
 		public IPlayScreenEffectT AsIPlayScreenEffect()
 		{
 			return this.As<IPlayScreenEffectT>();
 		}
 
-		// Token: 0x060312B2 RID: 201394 RVA: 0x006ABD65 File Offset: 0x006A9F65
+		// Token: 0x06034286 RID: 213638 RVA: 0x00706FD5 File Offset: 0x007051D5
 		public static IPlayEffect2_UnionUnion FromIPlayScreenEffect(IPlayScreenEffectT _iplayscreeneffect)
 		{
 			return new IPlayEffect2_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060312B3 RID: 201395 RVA: 0x006ABD7A File Offset: 0x006A9F7A
+		// Token: 0x06034287 RID: 213639 RVA: 0x00706FEA File Offset: 0x007051EA
 		public ISwitchEffectStateT AsISwitchEffectState()
 		{
 			return this.As<ISwitchEffectStateT>();
 		}
 
-		// Token: 0x060312B4 RID: 201396 RVA: 0x006ABD82 File Offset: 0x006A9F82
+		// Token: 0x06034288 RID: 213640 RVA: 0x00706FF2 File Offset: 0x007051F2
 		public static IPlayEffect2_UnionUnion FromISwitchEffectState(ISwitchEffectStateT _iswitcheffectstate)
 		{
 			return new IPlayEffect2_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060312B5 RID: 201397 RVA: 0x006ABD97 File Offset: 0x006A9F97
+		// Token: 0x06034289 RID: 213641 RVA: 0x00707007 File Offset: 0x00705207
 		public IPlayDissolveEffectT AsIPlayDissolveEffect()
 		{
 			return this.As<IPlayDissolveEffectT>();
 		}
 
-		// Token: 0x060312B6 RID: 201398 RVA: 0x006ABD9F File Offset: 0x006A9F9F
+		// Token: 0x0603428A RID: 213642 RVA: 0x0070700F File Offset: 0x0070520F
 		public static IPlayEffect2_UnionUnion FromIPlayDissolveEffect(IPlayDissolveEffectT _iplaydissolveeffect)
 		{
 			return new IPlayEffect2_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060312B7 RID: 201399 RVA: 0x006ABDB4 File Offset: 0x006A9FB4
+		// Token: 0x0603428B RID: 213643 RVA: 0x00707024 File Offset: 0x00705224
 		public IPlayMpcEffectT AsIPlayMpcEffect()
 		{
 			return this.As<IPlayMpcEffectT>();
 		}
 
-		// Token: 0x060312B8 RID: 201400 RVA: 0x006ABDBC File Offset: 0x006A9FBC
+		// Token: 0x0603428C RID: 213644 RVA: 0x0070702C File Offset: 0x0070522C
 		public static IPlayEffect2_UnionUnion FromIPlayMpcEffect(IPlayMpcEffectT _iplaympceffect)
 		{
 			return new IPlayEffect2_UnionUnion
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060312B9 RID: 201401 RVA: 0x006ABDD4 File Offset: 0x006A9FD4
+		// Token: 0x0603428D RID: 213645 RVA: 0x00707044 File Offset: 0x00705244
 		public static int Pack(FlatBufferBuilder builder, IPlayEffect2_UnionUnion _o)
 		{
 			switch (_o.Type)

@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02001D24 RID: 7460
+// Token: 0x020011E6 RID: 4582
 public class SurvivorsRogueWaveCompleteTipsPanel : SurvivorsRogueTipsPanelBase
 {
-	// Token: 0x0600E1E4 RID: 57828 RVA: 0x00350BE0 File Offset: 0x0034EDE0
+	// Token: 0x0600B601 RID: 46593 RVA: 0x0035C610 File Offset: 0x0035A810
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());

@@ -2,51 +2,51 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002985 RID: 10629
+// Token: 0x02001F00 RID: 7936
 [NullableContext(1)]
 [Nullable(0)]
 [RequiredMember]
 public class ShipTowerAreaItemData
 {
-	// Token: 0x06016037 RID: 90167 RVA: 0x0058F075 File Offset: 0x0058D275
+	// Token: 0x06013A3D RID: 80445 RVA: 0x005BA039 File Offset: 0x005B8239
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public ShipTowerAreaItemData()
 	{
 	}
 
-	// Token: 0x0400A3C7 RID: 41927
+	// Token: 0x0400A7B1 RID: 42929
 	[RequiredMember]
 	public int Id;
 
-	// Token: 0x0400A3C8 RID: 41928
+	// Token: 0x0400A7B2 RID: 42930
 	public int? Index;
 
-	// Token: 0x0400A3C9 RID: 41929
+	// Token: 0x0400A7B3 RID: 42931
 	[RequiredMember]
 	public string Name;
 
-	// Token: 0x0400A3CA RID: 41930
+	// Token: 0x0400A7B4 RID: 42932
 	[RequiredMember]
 	public string Desc;
 
-	// Token: 0x0400A3CB RID: 41931
+	// Token: 0x0400A7B5 RID: 42933
 	[Nullable(2)]
 	public string TimeContent;
 
-	// Token: 0x0400A3CC RID: 41932
+	// Token: 0x0400A7B6 RID: 42934
 	public bool? IsFinish;
 
-	// Token: 0x0400A3CD RID: 41933
+	// Token: 0x0400A7B7 RID: 42935
 	public bool? IsRedPoint;
 
-	// Token: 0x0400A3CE RID: 41934
+	// Token: 0x0400A7B8 RID: 42936
 	public bool? IsEndless;
 
-	// Token: 0x0400A3CF RID: 41935
+	// Token: 0x0400A7B9 RID: 42937
 	public int? MaxScore;
 
-	// Token: 0x0400A3D0 RID: 41936
+	// Token: 0x0400A7BA RID: 42938
 	[Nullable(new byte[]
 	{
 		2,
@@ -54,7 +54,7 @@ public class ShipTowerAreaItemData
 	})]
 	public List<ShipTowerRewardItemData> RewardList;
 
-	// Token: 0x0400A3D1 RID: 41937
+	// Token: 0x0400A7BB RID: 42939
 	[Nullable(new byte[]
 	{
 		2,

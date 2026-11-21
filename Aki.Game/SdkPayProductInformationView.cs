@@ -6,16 +6,16 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Launcher.Platform.PlatformSdk;
 using UnrealEngine;
 
-// Token: 0x0200296F RID: 10607
+// Token: 0x02001EEA RID: 7914
 public class SdkPayProductInformationView : UiViewBase
 {
-	// Token: 0x06015EAC RID: 89772 RVA: 0x005877BF File Offset: 0x005859BF
+	// Token: 0x060138B0 RID: 80048 RVA: 0x005B27C3 File Offset: 0x005B09C3
 	[NullableContext(1)]
 	public SdkPayProductInformationView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06015EAD RID: 89773 RVA: 0x005877C8 File Offset: 0x005859C8
+	// Token: 0x060138B1 RID: 80049 RVA: 0x005B27CC File Offset: 0x005B09CC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,20 +32,20 @@ public class SdkPayProductInformationView : UiViewBase
 		};
 	}
 
-	// Token: 0x06015EAE RID: 89774 RVA: 0x00587873 File Offset: 0x00585A73
+	// Token: 0x060138B2 RID: 80050 RVA: 0x005B2877 File Offset: 0x005B0A77
 	protected override void OnStart()
 	{
 		this.ViewData = (this.OpenParam as SdkPayProductInformationViewData);
 	}
 
-	// Token: 0x06015EAF RID: 89775 RVA: 0x00587886 File Offset: 0x00585A86
+	// Token: 0x060138B3 RID: 80051 RVA: 0x005B288A File Offset: 0x005B0A8A
 	private void OnClickBackBtn()
 	{
 		base.CloseMe(null);
 		EventSystem.Instance.Emit<ESdkDialogResult>(EEventName.SdkPayEnd, ESdkDialogResult.No);
 	}
 
-	// Token: 0x06015EB0 RID: 89776 RVA: 0x005878A0 File Offset: 0x00585AA0
+	// Token: 0x060138B4 RID: 80052 RVA: 0x005B28A4 File Offset: 0x005B0AA4
 	private void OnClickConfirmBtn()
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -60,14 +60,14 @@ public class SdkPayProductInformationView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06015EB1 RID: 89777 RVA: 0x005878EC File Offset: 0x00585AEC
+	// Token: 0x060138B5 RID: 80053 RVA: 0x005B28F0 File Offset: 0x005B0AF0
 	protected override void OnBeforeShow()
 	{
 		this.RefreshTitle();
 		this.RefreshContent();
 	}
 
-	// Token: 0x06015EB2 RID: 89778 RVA: 0x005878FA File Offset: 0x00585AFA
+	// Token: 0x060138B6 RID: 80054 RVA: 0x005B28FE File Offset: 0x005B0AFE
 	private void RefreshTitle()
 	{
 		if (this.ViewData != null)
@@ -81,7 +81,7 @@ public class SdkPayProductInformationView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015EB3 RID: 89779 RVA: 0x00587921 File Offset: 0x00585B21
+	// Token: 0x060138B7 RID: 80055 RVA: 0x005B2925 File Offset: 0x005B0B25
 	private void RefreshContent()
 	{
 		if (this.ViewData != null)
@@ -95,20 +95,20 @@ public class SdkPayProductInformationView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400A321 RID: 41761
+	// Token: 0x0400A70B RID: 42763
 	[Nullable(2)]
 	private SdkPayProductInformationViewData ViewData;
 
-	// Token: 0x02008F34 RID: 36660
+	// Token: 0x0200817C RID: 33148
 	private enum EComponents
 	{
-		// Token: 0x0402E6B0 RID: 190128
+		// Token: 0x04029DAD RID: 171437
 		ProductName,
-		// Token: 0x0402E6B1 RID: 190129
+		// Token: 0x04029DAE RID: 171438
 		Content,
-		// Token: 0x0402E6B2 RID: 190130
+		// Token: 0x04029DAF RID: 171439
 		BackBtn,
-		// Token: 0x0402E6B3 RID: 190131
+		// Token: 0x04029DB0 RID: 171440
 		ConfirmBtn
 	}
 }

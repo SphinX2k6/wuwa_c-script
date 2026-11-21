@@ -5,18 +5,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004901 RID: 18689
+	// Token: 0x02003878 RID: 14456
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleResonancePanelHandle : SpecialPanelHandleBase
 	{
-		// Token: 0x06030DC2 RID: 200130 RVA: 0x00B58D4C File Offset: 0x00B56F4C
+		// Token: 0x060258EF RID: 153839 RVA: 0x00A93BBC File Offset: 0x00A91DBC
 		public RoleResonancePanelHandle(string type) : base(type)
 		{
 		}
 
-		// Token: 0x170079C2 RID: 31170
-		// (get) Token: 0x06030DC3 RID: 200131 RVA: 0x00B58D78 File Offset: 0x00B56F78
+		// Token: 0x17004D2A RID: 19754
+		// (get) Token: 0x060258F0 RID: 153840 RVA: 0x00A93BE8 File Offset: 0x00A91DE8
 		private IReadOnlyList<TsUiNavigationBehaviorListener> LockList
 		{
 			get
@@ -35,8 +35,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079C3 RID: 31171
-		// (get) Token: 0x06030DC4 RID: 200132 RVA: 0x00B58DC4 File Offset: 0x00B56FC4
+		// Token: 0x17004D2B RID: 19755
+		// (get) Token: 0x060258F1 RID: 153841 RVA: 0x00A93C34 File Offset: 0x00A91E34
 		private IReadOnlyList<TsUiNavigationBehaviorListener> UnLockList
 		{
 			get
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030DC5 RID: 200133 RVA: 0x00B58E10 File Offset: 0x00B57010
+		// Token: 0x060258F2 RID: 153842 RVA: 0x00A93C80 File Offset: 0x00A91E80
 		protected override List<TsUiNavigationBehaviorListener> OnGetSuitableNavigationListenerList(bool isDefault)
 		{
 			if (this.DefaultListener == null)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			};
 		}
 
-		// Token: 0x06030DC6 RID: 200134 RVA: 0x00B58EA4 File Offset: 0x00B570A4
+		// Token: 0x060258F3 RID: 153843 RVA: 0x00A93D14 File Offset: 0x00A91F14
 		public void SetToggleSelectByGroupName(string groupName)
 		{
 			NavigationGroup navigationGroup = base.GetNavigationGroup(groupName);
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030DC7 RID: 200135 RVA: 0x00B58F18 File Offset: 0x00B57118
+		// Token: 0x060258F4 RID: 153844 RVA: 0x00A93D88 File Offset: 0x00A91F88
 		public void ResetToggleSelect()
 		{
 			NavigationGroup navigationGroup = base.GetNavigationGroup(this.GroupName);
@@ -123,47 +123,47 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030DC8 RID: 200136 RVA: 0x00B58F94 File Offset: 0x00B57194
+		// Token: 0x060258F5 RID: 153845 RVA: 0x00A93E04 File Offset: 0x00A92004
 		[NullableContext(2)]
 		public void SetDefaultNavigationListener(TsUiNavigationBehaviorListener listener)
 		{
 			this.DefaultListener = listener;
 		}
 
-		// Token: 0x06030DC9 RID: 200137 RVA: 0x00B58F9D File Offset: 0x00B5719D
+		// Token: 0x060258F6 RID: 153846 RVA: 0x00A93E0D File Offset: 0x00A9200D
 		public void AddLockNavigationListener(TsUiNavigationBehaviorListener listener)
 		{
 			this.LockListInternal.Add(listener);
 			this.SortLockListDirty = true;
 		}
 
-		// Token: 0x06030DCA RID: 200138 RVA: 0x00B58FB2 File Offset: 0x00B571B2
+		// Token: 0x060258F7 RID: 153847 RVA: 0x00A93E22 File Offset: 0x00A92022
 		public void AddUnLockNavigationListener(TsUiNavigationBehaviorListener listener)
 		{
 			this.UnLockListInternal.Add(listener);
 			this.SortUnLockListDirty = true;
 		}
 
-		// Token: 0x0401A3BC RID: 107452
+		// Token: 0x04014C2F RID: 85039
 		private const int MAX_NUM = 6;
 
-		// Token: 0x0401A3BD RID: 107453
+		// Token: 0x04014C30 RID: 85040
 		public string GroupName = "";
 
-		// Token: 0x0401A3BE RID: 107454
+		// Token: 0x04014C31 RID: 85041
 		[Nullable(2)]
 		private TsUiNavigationBehaviorListener DefaultListener;
 
-		// Token: 0x0401A3BF RID: 107455
+		// Token: 0x04014C32 RID: 85042
 		private readonly List<TsUiNavigationBehaviorListener> LockListInternal = new List<TsUiNavigationBehaviorListener>();
 
-		// Token: 0x0401A3C0 RID: 107456
+		// Token: 0x04014C33 RID: 85043
 		private bool SortLockListDirty;
 
-		// Token: 0x0401A3C1 RID: 107457
+		// Token: 0x04014C34 RID: 85044
 		private readonly List<TsUiNavigationBehaviorListener> UnLockListInternal = new List<TsUiNavigationBehaviorListener>();
 
-		// Token: 0x0401A3C2 RID: 107458
+		// Token: 0x04014C35 RID: 85045
 		private bool SortUnLockListDirty;
 	}
 }

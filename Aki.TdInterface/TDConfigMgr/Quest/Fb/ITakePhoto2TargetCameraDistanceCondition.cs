@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013B1 RID: 5041
+	// Token: 0x02001502 RID: 5378
 	public class ITakePhoto2TargetCameraDistanceCondition
 	{
-		// Token: 0x06007323 RID: 29475 RVA: 0x00114814 File Offset: 0x00112A14
-		[NullableContext(1)]
+		// Token: 0x060079CA RID: 31178 RVA: 0x00122ED0 File Offset: 0x001210D0
 		public static ITakePhoto2TargetCameraDistanceCondition Create(ITakePhoto2TargetCameraDistanceCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002594 RID: 9620
-		// (get) Token: 0x06007324 RID: 29476 RVA: 0x00114833 File Offset: 0x00112A33
+		// Token: 0x17002768 RID: 10088
+		// (get) Token: 0x060079CB RID: 31179 RVA: 0x00122EEF File Offset: 0x001210EF
 		public virtual int MaxDistance
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004295 RID: 17045
+		// Token: 0x04004616 RID: 17942
 		private ITakePhoto2TargetCameraDistanceCondition Instance;
 	}
 }

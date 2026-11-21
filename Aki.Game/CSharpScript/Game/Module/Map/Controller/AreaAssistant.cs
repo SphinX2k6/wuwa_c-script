@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Cysharp.Threading.Tasks;
@@ -8,17 +8,17 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Map.Controller
 {
-	// Token: 0x0200558E RID: 21902
+	// Token: 0x02004564 RID: 17764
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AreaAssistant : ControllerAssistantBase
 	{
-		// Token: 0x06037D00 RID: 228608 RVA: 0x00D39858 File Offset: 0x00D37A58
+		// Token: 0x0602CBFE RID: 183294 RVA: 0x00C87530 File Offset: 0x00C85730
 		protected override void OnDestroy()
 		{
 		}
 
-		// Token: 0x06037D01 RID: 228609 RVA: 0x00D3985C File Offset: 0x00D37A5C
+		// Token: 0x0602CBFF RID: 183295 RVA: 0x00C87534 File Offset: 0x00C85734
 		public override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.MapUnlockFieldNotify, new Action<IMessage, Net.CallbackStatus>(this.OnMapUnlockFieldNotify));
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			Net.Instance.Register(ENotifyMessageId.UnlockMultiMapNotify, new Action<IMessage, Net.CallbackStatus>(this.OnUnlockMultiMapNotify));
 		}
 
-		// Token: 0x06037D02 RID: 228610 RVA: 0x00D398DC File Offset: 0x00D37ADC
+		// Token: 0x0602CC00 RID: 183296 RVA: 0x00C875B4 File Offset: 0x00C857B4
 		public override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.MapUnlockFieldNotify);
@@ -36,36 +36,36 @@ namespace CSharpScript.Game.Module.Map.Controller
 			Net.Instance.UnRegister(ENotifyMessageId.UnlockMultiMapNotify);
 		}
 
-		// Token: 0x06037D03 RID: 228611 RVA: 0x00D3992C File Offset: 0x00D37B2C
+		// Token: 0x0602CC01 RID: 183297 RVA: 0x00C87604 File Offset: 0x00C85804
 		private void OnUnlockMultiMapNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			UnlockMultiMapNotify unlockMultiMapNotify = (UnlockMultiMapNotify)msg;
-			MapModel.Instance.AddUnlockMultiMapIds(unlockMultiMapNotify.UnlockMultiMapId.ToList<int>());
+			MapModel.Instance.AddUnlockMultiMapIds(unlockMultiMapNotify.UnlockMultiMapId);
 		}
 
-		// Token: 0x06037D04 RID: 228612 RVA: 0x00D39958 File Offset: 0x00D37B58
+		// Token: 0x0602CC02 RID: 183298 RVA: 0x00C87628 File Offset: 0x00C85828
 		private void OnUnlockMapBlockNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			UnlockMapBlockNotify unlockMapBlockNotify = (UnlockMapBlockNotify)msg;
-			MapModel.Instance.AddUnlockMapBlockIds(unlockMapBlockNotify.UnlockBlockId.ToList<int>());
+			MapModel.Instance.AddUnlockMapBlockIds(unlockMapBlockNotify.UnlockBlockId);
 		}
 
-		// Token: 0x06037D05 RID: 228613 RVA: 0x00D39984 File Offset: 0x00D37B84
+		// Token: 0x0602CC03 RID: 183299 RVA: 0x00C8764C File Offset: 0x00C8584C
 		private void OnMultiMapInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			MultiMapInfoNotify multiMapInfoNotify = (MultiMapInfoNotify)msg;
-			MapModel.Instance.SetUnlockMultiMapIds(multiMapInfoNotify.UnlockMultiMapId.ToList<int>());
-			MapModel.Instance.SetUnlockMapBlockIds(multiMapInfoNotify.UnlockBlockId.ToList<int>());
+			MapModel.Instance.SetUnlockMultiMapIds(new List<int>(multiMapInfoNotify.UnlockMultiMapId));
+			MapModel.Instance.SetUnlockMapBlockIds(new List<int>(multiMapInfoNotify.UnlockBlockId));
 		}
 
-		// Token: 0x06037D06 RID: 228614 RVA: 0x00D399C4 File Offset: 0x00D37BC4
+		// Token: 0x0602CC04 RID: 183300 RVA: 0x00C8768C File Offset: 0x00C8588C
 		private void OnMapUnlockFieldNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			MapUnlockFieldNotify mapUnlockFieldNotify = (MapUnlockFieldNotify)msg;
 			MapModel.Instance.AddUnlockedFogs(mapUnlockFieldNotify.FieldId);
 		}
 
-		// Token: 0x06037D07 RID: 228615 RVA: 0x00D399E8 File Offset: 0x00D37BE8
+		// Token: 0x0602CC05 RID: 183301 RVA: 0x00C876B0 File Offset: 0x00C858B0
 		public UniTask RequestUnlockedAreaInfo()
 		{
 			AreaAssistant.<RequestUnlockedAreaInfo>d__7 <RequestUnlockedAreaInfo>d__;

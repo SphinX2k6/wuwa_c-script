@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042CA RID: 17098
+	// Token: 0x02004729 RID: 18217
 	public class TDungeonConditionTypeUnion
 	{
-		// Token: 0x1700793E RID: 31038
-		// (get) Token: 0x060195C1 RID: 103873 RVA: 0x003A3934 File Offset: 0x003A1B34
-		// (set) Token: 0x060195C2 RID: 103874 RVA: 0x003A393C File Offset: 0x003A1B3C
+		// Token: 0x17007F71 RID: 32625
+		// (get) Token: 0x0601AD41 RID: 109889 RVA: 0x003CF21A File Offset: 0x003CD41A
+		// (set) Token: 0x0601AD42 RID: 109890 RVA: 0x003CF222 File Offset: 0x003CD422
 		public TDungeonConditionType Type { get; set; }
 
-		// Token: 0x1700793F RID: 31039
-		// (get) Token: 0x060195C3 RID: 103875 RVA: 0x003A3945 File Offset: 0x003A1B45
-		// (set) Token: 0x060195C4 RID: 103876 RVA: 0x003A394D File Offset: 0x003A1B4D
+		// Token: 0x17007F72 RID: 32626
+		// (get) Token: 0x0601AD43 RID: 109891 RVA: 0x003CF22B File Offset: 0x003CD42B
+		// (set) Token: 0x0601AD44 RID: 109892 RVA: 0x003CF233 File Offset: 0x003CD433
 		public object Value { get; set; }
 
-		// Token: 0x060195C5 RID: 103877 RVA: 0x003A3956 File Offset: 0x003A1B56
+		// Token: 0x0601AD45 RID: 109893 RVA: 0x003CF23C File Offset: 0x003CD43C
 		public TDungeonConditionTypeUnion()
 		{
 			this.Type = TDungeonConditionType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060195C6 RID: 103878 RVA: 0x003A396C File Offset: 0x003A1B6C
+		// Token: 0x0601AD46 RID: 109894 RVA: 0x003CF252 File Offset: 0x003CD452
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060195C7 RID: 103879 RVA: 0x003A397E File Offset: 0x003A1B7E
+		// Token: 0x0601AD47 RID: 109895 RVA: 0x003CF264 File Offset: 0x003CD464
 		public IDungeonIdConditionT AsIDungeonIdCondition()
 		{
 			return this.As<IDungeonIdConditionT>();
 		}
 
-		// Token: 0x060195C8 RID: 103880 RVA: 0x003A3986 File Offset: 0x003A1B86
+		// Token: 0x0601AD48 RID: 109896 RVA: 0x003CF26C File Offset: 0x003CD46C
 		public static TDungeonConditionTypeUnion FromIDungeonIdCondition(IDungeonIdConditionT _idungeonidcondition)
 		{
 			return new TDungeonConditionTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060195C9 RID: 103881 RVA: 0x003A399B File Offset: 0x003A1B9B
+		// Token: 0x0601AD49 RID: 109897 RVA: 0x003CF281 File Offset: 0x003CD481
 		public IDungeonSubTypeConditionT AsIDungeonSubTypeCondition()
 		{
 			return this.As<IDungeonSubTypeConditionT>();
 		}
 
-		// Token: 0x060195CA RID: 103882 RVA: 0x003A39A3 File Offset: 0x003A1BA3
+		// Token: 0x0601AD4A RID: 109898 RVA: 0x003CF289 File Offset: 0x003CD489
 		public static TDungeonConditionTypeUnion FromIDungeonSubTypeCondition(IDungeonSubTypeConditionT _idungeonsubtypecondition)
 		{
 			return new TDungeonConditionTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060195CB RID: 103883 RVA: 0x003A39B8 File Offset: 0x003A1BB8
+		// Token: 0x0601AD4B RID: 109899 RVA: 0x003CF2A0 File Offset: 0x003CD4A0
 		public static int Pack(FlatBufferBuilder builder, TDungeonConditionTypeUnion _o)
 		{
 			TDungeonConditionType type = _o.Type;

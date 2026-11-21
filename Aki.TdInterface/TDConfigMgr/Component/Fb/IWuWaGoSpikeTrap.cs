@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E0C RID: 3596
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F08 RID: 3848
 	public class IWuWaGoSpikeTrap : IWuWaGoEntityBase
 	{
-		// Token: 0x06005164 RID: 20836 RVA: 0x000C8D2C File Offset: 0x000C6F2C
+		// Token: 0x0600568B RID: 22155 RVA: 0x000D45F4 File Offset: 0x000D27F4
 		public static IWuWaGoSpikeTrap Create(IWuWaGoSpikeTrap? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B09 RID: 6921
-		// (get) Token: 0x06005165 RID: 20837 RVA: 0x000C8D4B File Offset: 0x000C6F4B
+		// Token: 0x17001C76 RID: 7286
+		// (get) Token: 0x0600568C RID: 22156 RVA: 0x000D4613 File Offset: 0x000D2813
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B0A RID: 6922
-		// (get) Token: 0x06005166 RID: 20838 RVA: 0x000C8D58 File Offset: 0x000C6F58
+		// Token: 0x17001C77 RID: 7287
+		// (get) Token: 0x0600568D RID: 22157 RVA: 0x000D4620 File Offset: 0x000D2820
 		public virtual IWuWaGoGridLinkData LinkData
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EDF RID: 11999
+		// Token: 0x040031A7 RID: 12711
 		private IWuWaGoSpikeTrap Instance;
 
-		// Token: 0x04002EE0 RID: 12000
+		// Token: 0x040031A8 RID: 12712
 		[Nullable(2)]
 		private IWuWaGoGridLinkData _LinkDataCache;
 
-		// Token: 0x04002EE1 RID: 12001
+		// Token: 0x040031A9 RID: 12713
 		private bool _LinkDataInited;
 	}
 }

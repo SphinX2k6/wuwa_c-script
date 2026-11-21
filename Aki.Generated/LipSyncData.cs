@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DD2 RID: 3538
+	// Token: 0x02000EB7 RID: 3767
 	public struct LipSyncData : IFlatbufferObject
 	{
-		// Token: 0x17001D24 RID: 7460
-		// (get) Token: 0x06008EE4 RID: 36580 RVA: 0x002798FD File Offset: 0x00277AFD
+		// Token: 0x17001D88 RID: 7560
+		// (get) Token: 0x06009500 RID: 38144 RVA: 0x00297CD6 File Offset: 0x00295ED6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008EE5 RID: 36581 RVA: 0x0027990A File Offset: 0x00277B0A
+		// Token: 0x06009501 RID: 38145 RVA: 0x00297CE3 File Offset: 0x00295EE3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008EE6 RID: 36582 RVA: 0x00279914 File Offset: 0x00277B14
+		// Token: 0x06009502 RID: 38146 RVA: 0x00297CEC File Offset: 0x00295EEC
 		public static LipSyncData GetRootAsLipSyncData(ByteBuffer _bb)
 		{
 			return LipSyncData.GetRootAsLipSyncData(_bb, default(LipSyncData));
 		}
 
-		// Token: 0x06008EE7 RID: 36583 RVA: 0x00279930 File Offset: 0x00277B30
+		// Token: 0x06009503 RID: 38147 RVA: 0x00297D08 File Offset: 0x00295F08
 		public static LipSyncData GetRootAsLipSyncData(ByteBuffer _bb, LipSyncData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008EE8 RID: 36584 RVA: 0x0027994D File Offset: 0x00277B4D
+		// Token: 0x06009504 RID: 38148 RVA: 0x00297D25 File Offset: 0x00295F25
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008EE9 RID: 36585 RVA: 0x0027995C File Offset: 0x00277B5C
+		// Token: 0x06009505 RID: 38149 RVA: 0x00297D34 File Offset: 0x00295F34
 		public LipSyncData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001D25 RID: 7461
-		// (get) Token: 0x06008EEA RID: 36586 RVA: 0x0027996C File Offset: 0x00277B6C
+		// Token: 0x17001D89 RID: 7561
+		// (get) Token: 0x06009506 RID: 38150 RVA: 0x00297D44 File Offset: 0x00295F44
 		public int DataID
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001D26 RID: 7462
-		// (get) Token: 0x06008EEB RID: 36587 RVA: 0x002799A8 File Offset: 0x00277BA8
+		// Token: 0x17001D8A RID: 7562
+		// (get) Token: 0x06009507 RID: 38151 RVA: 0x00297D80 File Offset: 0x00295F80
 		public string FunctionName
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008EEC RID: 36588 RVA: 0x002799DF File Offset: 0x00277BDF
+		// Token: 0x06009508 RID: 38152 RVA: 0x00297DB7 File Offset: 0x00295FB7
 		public Span<byte> GetFunctionNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06008EED RID: 36589 RVA: 0x002799EE File Offset: 0x00277BEE
+		// Token: 0x06009509 RID: 38153 RVA: 0x00297DC6 File Offset: 0x00295FC6
 		public byte[] GetFunctionNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004E6C RID: 20076
+		// Token: 0x04005451 RID: 21585
 		private Table __p;
 	}
 }

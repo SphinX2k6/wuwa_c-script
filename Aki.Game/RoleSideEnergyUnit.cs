@@ -7,10 +7,10 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.BattleUi;
 using UnrealEngine;
 
-// Token: 0x02001F53 RID: 8019
+// Token: 0x02001415 RID: 5141
 public class RoleSideEnergyUnit : HudUnitBase
 {
-	// Token: 0x0600F836 RID: 63542 RVA: 0x003C0F10 File Offset: 0x003BF110
+	// Token: 0x0600CC55 RID: 52309 RVA: 0x003CC9FC File Offset: 0x003CABFC
 	[NullableContext(1)]
 	public void InitInfo(GameplayCue cueConfig, BattleUiRoleData roleData)
 	{
@@ -22,7 +22,7 @@ public class RoleSideEnergyUnit : HudUnitBase
 		this.RefreshBarPercent();
 	}
 
-	// Token: 0x0600F837 RID: 63543 RVA: 0x003C0F60 File Offset: 0x003BF160
+	// Token: 0x0600CC56 RID: 52310 RVA: 0x003CCA4C File Offset: 0x003CAC4C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -34,7 +34,7 @@ public class RoleSideEnergyUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F838 RID: 63544 RVA: 0x003C0FA8 File Offset: 0x003BF1A8
+	// Token: 0x0600CC57 RID: 52311 RVA: 0x003CCA94 File Offset: 0x003CAC94
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEvents();
@@ -43,7 +43,7 @@ public class RoleSideEnergyUnit : HudUnitBase
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600F839 RID: 63545 RVA: 0x003C0FCC File Offset: 0x003BF1CC
+	// Token: 0x0600CC58 RID: 52312 RVA: 0x003CCAB8 File Offset: 0x003CACB8
 	protected virtual void AddEvents()
 	{
 		if (this.AttrId != EAttributeType.None)
@@ -58,7 +58,7 @@ public class RoleSideEnergyUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F83A RID: 63546 RVA: 0x003C103C File Offset: 0x003BF23C
+	// Token: 0x0600CC59 RID: 52313 RVA: 0x003CCB28 File Offset: 0x003CAD28
 	protected virtual void RemoveEvents()
 	{
 		if (this.AttrId != EAttributeType.None)
@@ -73,13 +73,13 @@ public class RoleSideEnergyUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F83B RID: 63547 RVA: 0x003C10AC File Offset: 0x003BF2AC
+	// Token: 0x0600CC5A RID: 52314 RVA: 0x003CCB98 File Offset: 0x003CAD98
 	protected void OnAttrChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		this.RefreshBarPercent();
 	}
 
-	// Token: 0x0600F83C RID: 63548 RVA: 0x003C10B4 File Offset: 0x003BF2B4
+	// Token: 0x0600CC5B RID: 52315 RVA: 0x003CCBA0 File Offset: 0x003CADA0
 	protected virtual void RefreshBarPercent()
 	{
 		if (this.AttrId != EAttributeType.None)
@@ -96,7 +96,7 @@ public class RoleSideEnergyUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F83D RID: 63549 RVA: 0x003C112C File Offset: 0x003BF32C
+	// Token: 0x0600CC5C RID: 52316 RVA: 0x003CCC18 File Offset: 0x003CAE18
 	[NullableContext(1)]
 	public void RefreshTargetPosition(float delta, Vector2D screenPos)
 	{
@@ -122,7 +122,7 @@ public class RoleSideEnergyUnit : HudUnitBase
 		base.SetAnchorOffset(this.OffsetX + -150f, this.OffsetY);
 	}
 
-	// Token: 0x0600F83E RID: 63550 RVA: 0x003C1230 File Offset: 0x003BF430
+	// Token: 0x0600CC5D RID: 52317 RVA: 0x003CCD1C File Offset: 0x003CAF1C
 	private float GetSpeed(float delta, float target, float cur, float lastSpeed)
 	{
 		float num = target - cur;
@@ -152,47 +152,47 @@ public class RoleSideEnergyUnit : HudUnitBase
 		return MathUtils.Instance.Lerp(lastSpeed, num2, 0.5f);
 	}
 
-	// Token: 0x04007332 RID: 29490
+	// Token: 0x04007413 RID: 29715
 	private const float MAX_DELTA_TIME = 200f;
 
-	// Token: 0x04007333 RID: 29491
+	// Token: 0x04007414 RID: 29716
 	private const float MIN_DELTA_OFFSET = 0.5f;
 
-	// Token: 0x04007334 RID: 29492
+	// Token: 0x04007415 RID: 29717
 	private const float MAX_POS_OFFSET = 500f;
 
-	// Token: 0x04007335 RID: 29493
+	// Token: 0x04007416 RID: 29718
 	private const float OFFSET_X = -150f;
 
-	// Token: 0x04007336 RID: 29494
+	// Token: 0x04007417 RID: 29719
 	protected GameplayCue? CueConfig;
 
-	// Token: 0x04007337 RID: 29495
+	// Token: 0x04007418 RID: 29720
 	[Nullable(2)]
 	protected BattleUiRoleData RoleData;
 
-	// Token: 0x04007338 RID: 29496
+	// Token: 0x04007419 RID: 29721
 	protected EAttributeType AttrId;
 
-	// Token: 0x04007339 RID: 29497
+	// Token: 0x0400741A RID: 29722
 	protected EAttributeType MaxAttrId;
 
-	// Token: 0x0400733A RID: 29498
+	// Token: 0x0400741B RID: 29723
 	protected float OffsetX;
 
-	// Token: 0x0400733B RID: 29499
+	// Token: 0x0400741C RID: 29724
 	protected float OffsetY;
 
-	// Token: 0x0400733C RID: 29500
+	// Token: 0x0400741D RID: 29725
 	protected float SpeedX;
 
-	// Token: 0x0400733D RID: 29501
+	// Token: 0x0400741E RID: 29726
 	protected float SpeedY;
 
-	// Token: 0x02008551 RID: 34129
+	// Token: 0x020076D6 RID: 30422
 	private enum EChildType
 	{
-		// Token: 0x0402B676 RID: 177782
+		// Token: 0x0402699A RID: 158106
 		BarSprite
 	}
 }

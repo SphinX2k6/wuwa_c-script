@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.Data
 {
-	// Token: 0x02005795 RID: 22421
+	// Token: 0x0200476C RID: 18284
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoBattleData : ISkillButtonUiEventInterface
 	{
-		// Token: 0x06038F5E RID: 233310 RVA: 0x00D8AD19 File Offset: 0x00D88F19
+		// Token: 0x0602DE6E RID: 188014 RVA: 0x00CD9A95 File Offset: 0x00CD7C95
 		public static KurotatoBattleData Create()
 		{
 			return new KurotatoBattleData();
 		}
 
-		// Token: 0x06038F5F RID: 233311 RVA: 0x00D8AD20 File Offset: 0x00D88F20
+		// Token: 0x0602DE6F RID: 188015 RVA: 0x00CD9A9C File Offset: 0x00CD7C9C
 		public void InitBattleSkillData()
 		{
 			KurotatoBattleSkillData kurotatoBattleSkillData = new KurotatoBattleSkillData(700105);
@@ -29,14 +29,14 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			this.BattleSkillData["闪避"] = kurotatoBattleSkillData;
 		}
 
-		// Token: 0x06038F60 RID: 233312 RVA: 0x00D8AD54 File Offset: 0x00D88F54
+		// Token: 0x0602DE70 RID: 188016 RVA: 0x00CD9AD0 File Offset: 0x00CD7CD0
 		[return: Nullable(2)]
 		public KurotatoBattleSkillData GetBattleSkillData(string actionName)
 		{
 			return this.BattleSkillData.GetValueOrDefault(actionName);
 		}
 
-		// Token: 0x06038F61 RID: 233313 RVA: 0x00D8AD64 File Offset: 0x00D88F64
+		// Token: 0x0602DE71 RID: 188017 RVA: 0x00CD9AE0 File Offset: 0x00CD7CE0
 		public void Clear()
 		{
 			this.BehaviorDelegate.Clear();
@@ -49,19 +49,19 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			this.SkillCdChanged.Clear();
 		}
 
-		// Token: 0x06038F62 RID: 233314 RVA: 0x00D8ADB2 File Offset: 0x00D88FB2
+		// Token: 0x0602DE72 RID: 188018 RVA: 0x00CD9B2E File Offset: 0x00CD7D2E
 		public void SkillCountChanged(GroupSkillCdInfo groupSkillCdInfo)
 		{
 			this.RefreshSkillCdNextTick(groupSkillCdInfo);
 		}
 
-		// Token: 0x06038F63 RID: 233315 RVA: 0x00D8ADBB File Offset: 0x00D88FBB
+		// Token: 0x0602DE73 RID: 188019 RVA: 0x00CD9B37 File Offset: 0x00CD7D37
 		public void SkillRemainCdChanged(GroupSkillCdInfo groupSkillCdInfo)
 		{
 			this.RefreshSkillCdNextTick(groupSkillCdInfo);
 		}
 
-		// Token: 0x06038F64 RID: 233316 RVA: 0x00D8ADC4 File Offset: 0x00D88FC4
+		// Token: 0x0602DE74 RID: 188020 RVA: 0x00CD9B40 File Offset: 0x00CD7D40
 		private void RefreshSkillCdNextTick(GroupSkillCdInfo groupSkillCdInfo)
 		{
 			foreach (int num in groupSkillCdInfo.SkillCdInfoMap.Keys)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			this.NextTickTimerId = TimerSystem.Instance.Next(new TTimerAction(this.NextTick), null, null);
 		}
 
-		// Token: 0x06038F65 RID: 233317 RVA: 0x00D8AE94 File Offset: 0x00D89094
+		// Token: 0x0602DE75 RID: 188021 RVA: 0x00CD9C10 File Offset: 0x00CD7E10
 		private void NextTick(float delta)
 		{
 			this.NextTickTimerId = null;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			this.SkillCdChanged.Clear();
 		}
 
-		// Token: 0x06038F66 RID: 233318 RVA: 0x00D8AF10 File Offset: 0x00D89110
+		// Token: 0x0602DE76 RID: 188022 RVA: 0x00CD9C8C File Offset: 0x00CD7E8C
 		public void SetBehaviorTreeVar(IDictionary<string, string> variableKeyNames)
 		{
 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -104,92 +104,92 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			this.BehaviorDelegate.SetBehaviorTreeVarRelation(dictionary);
 		}
 
-		// Token: 0x06038F67 RID: 233319 RVA: 0x00D8AF78 File Offset: 0x00D89178
+		// Token: 0x0602DE77 RID: 188023 RVA: 0x00CD9CF4 File Offset: 0x00CD7EF4
 		[NullableContext(2)]
 		public VarDefinePb GetBehaviorTreeVar(EKurotatoSystemVarType varType)
 		{
 			return this.BehaviorDelegate.GetBehaviorTreeVar(varType.ToEnumString());
 		}
 
-		// Token: 0x06038F68 RID: 233320 RVA: 0x00D8AF8B File Offset: 0x00D8918B
+		// Token: 0x0602DE78 RID: 188024 RVA: 0x00CD9D07 File Offset: 0x00CD7F07
 		public int GetBehaviorTreeVarToNumber(EKurotatoSystemVarType varType)
 		{
 			return (int)this.BehaviorDelegate.GetBehaviorTreeVarToNumber(varType.ToEnumString());
 		}
 
-		// Token: 0x06038F69 RID: 233321 RVA: 0x00D8AF9F File Offset: 0x00D8919F
+		// Token: 0x0602DE79 RID: 188025 RVA: 0x00CD9D1B File Offset: 0x00CD7F1B
 		public int GetCurrencyCount()
 		{
 			return this.GetBehaviorTreeVarToNumber(EKurotatoSystemVarType.Gold);
 		}
 
-		// Token: 0x06038F6A RID: 233322 RVA: 0x00D8AFA8 File Offset: 0x00D891A8
+		// Token: 0x0602DE7A RID: 188026 RVA: 0x00CD9D24 File Offset: 0x00CD7F24
 		public int GetRoleLevel()
 		{
 			return this.GetBehaviorTreeVarToNumber(EKurotatoSystemVarType.RoleLevel);
 		}
 
-		// Token: 0x06038F6B RID: 233323 RVA: 0x00D8AFB1 File Offset: 0x00D891B1
+		// Token: 0x0602DE7B RID: 188027 RVA: 0x00CD9D2D File Offset: 0x00CD7F2D
 		public int GetRoleExp()
 		{
 			return this.GetBehaviorTreeVarToNumber(EKurotatoSystemVarType.TotalRoleExp);
 		}
 
-		// Token: 0x06038F6C RID: 233324 RVA: 0x00D8AFBA File Offset: 0x00D891BA
+		// Token: 0x0602DE7C RID: 188028 RVA: 0x00CD9D36 File Offset: 0x00CD7F36
 		public int GetBatchConfigId()
 		{
 			return this.GetBehaviorTreeVarToNumber(EKurotatoSystemVarType.BatchConfigId);
 		}
 
-		// Token: 0x06038F6D RID: 233325 RVA: 0x00D8AFC3 File Offset: 0x00D891C3
+		// Token: 0x0602DE7D RID: 188029 RVA: 0x00CD9D3F File Offset: 0x00CD7F3F
 		public int GetBatch()
 		{
 			return this.GetBehaviorTreeVarToNumber(EKurotatoSystemVarType.Batch);
 		}
 
-		// Token: 0x06038F6E RID: 233326 RVA: 0x00D8AFCC File Offset: 0x00D891CC
+		// Token: 0x0602DE7E RID: 188030 RVA: 0x00CD9D48 File Offset: 0x00CD7F48
 		public EKurotatoBatchType GetBatchType()
 		{
 			return (EKurotatoBatchType)this.GetBehaviorTreeVarToNumber(EKurotatoSystemVarType.BatchType);
 		}
 
-		// Token: 0x06038F6F RID: 233327 RVA: 0x00D8AFD5 File Offset: 0x00D891D5
+		// Token: 0x0602DE7F RID: 188031 RVA: 0x00CD9D51 File Offset: 0x00CD7F51
 		public int GetMaxBatch()
 		{
 			return this.GetBehaviorTreeVarToNumber(EKurotatoSystemVarType.MaxBatch);
 		}
 
-		// Token: 0x06038F70 RID: 233328 RVA: 0x00D8AFDE File Offset: 0x00D891DE
+		// Token: 0x0602DE80 RID: 188032 RVA: 0x00CD9D5A File Offset: 0x00CD7F5A
 		public int GetChestCount()
 		{
 			return this.GetBehaviorTreeVarToNumber(EKurotatoSystemVarType.TreasureBoxCount);
 		}
 
-		// Token: 0x06038F71 RID: 233329 RVA: 0x00D8AFE8 File Offset: 0x00D891E8
+		// Token: 0x0602DE81 RID: 188033 RVA: 0x00CD9D64 File Offset: 0x00CD7F64
 		public int GetUpgradeCount()
 		{
 			return this.GetBehaviorTreeVarToNumber(EKurotatoSystemVarType.UpgradeCount);
 		}
 
-		// Token: 0x06038F72 RID: 233330 RVA: 0x00D8AFF2 File Offset: 0x00D891F2
+		// Token: 0x0602DE82 RID: 188034 RVA: 0x00CD9D6E File Offset: 0x00CD7F6E
 		public int GetComboKillCount()
 		{
 			return this.GetBehaviorTreeVarToNumber(EKurotatoSystemVarType.ConsecutiveKillCount);
 		}
 
-		// Token: 0x06038F73 RID: 233331 RVA: 0x00D8AFFC File Offset: 0x00D891FC
+		// Token: 0x0602DE83 RID: 188035 RVA: 0x00CD9D78 File Offset: 0x00CD7F78
 		public int GetGoldGainEfficiency()
 		{
 			return this.GetBehaviorTreeVarToNumber(EKurotatoSystemVarType.GoldGainEfficiency);
 		}
 
-		// Token: 0x06038F74 RID: 233332 RVA: 0x00D8B006 File Offset: 0x00D89206
+		// Token: 0x0602DE84 RID: 188036 RVA: 0x00CD9D82 File Offset: 0x00CD7F82
 		public int GetSpareGold()
 		{
 			return this.GetBehaviorTreeVarToNumber(EKurotatoSystemVarType.SpareGold);
 		}
 
-		// Token: 0x06038F75 RID: 233333 RVA: 0x00D8B010 File Offset: 0x00D89210
+		// Token: 0x0602DE85 RID: 188037 RVA: 0x00CD9D8C File Offset: 0x00CD7F8C
 		public int GetPlayerPropertyValue(int propId)
 		{
 			UKSC_AttrSet playerAttrSet = this.GetPlayerAttrSet();
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			return num2.GetValueOrDefault();
 		}
 
-		// Token: 0x06038F76 RID: 233334 RVA: 0x00D8B055 File Offset: 0x00D89255
+		// Token: 0x0602DE86 RID: 188038 RVA: 0x00CD9DD1 File Offset: 0x00CD7FD1
 		[NullableContext(2)]
 		public UKSC_AttrSet GetPlayerAttrSet()
 		{
@@ -229,14 +229,14 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			return skillComp.AttrSet_;
 		}
 
-		// Token: 0x06038F77 RID: 233335 RVA: 0x00D8B082 File Offset: 0x00D89282
+		// Token: 0x0602DE87 RID: 188039 RVA: 0x00CD9DFE File Offset: 0x00CD7FFE
 		public bool IsPlayerPropertyLocked(int propId)
 		{
 			UKSC_AttrSet playerAttrSet = this.GetPlayerAttrSet();
 			return playerAttrSet != null && playerAttrSet.IsAttrValueLocked((EKSC_AttrType)propId);
 		}
 
-		// Token: 0x06038F78 RID: 233336 RVA: 0x00D8B098 File Offset: 0x00D89298
+		// Token: 0x0602DE88 RID: 188040 RVA: 0x00CD9E14 File Offset: 0x00CD8014
 		public int GetPlayerPropertyLockedValue(int propId)
 		{
 			UKSC_AttrSet playerAttrSet = this.GetPlayerAttrSet();
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			return result;
 		}
 
-		// Token: 0x06038F79 RID: 233337 RVA: 0x00D8B0C0 File Offset: 0x00D892C0
+		// Token: 0x0602DE89 RID: 188041 RVA: 0x00CD9E3C File Offset: 0x00CD803C
 		public bool AssignAllPlayerAttrListen(FOnKSCAllAttrChange delegateFunc)
 		{
 			UKSC_AttrSet playerAttrSet = this.GetPlayerAttrSet();
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			return true;
 		}
 
-		// Token: 0x06038F7A RID: 233338 RVA: 0x00D8B0E2 File Offset: 0x00D892E2
+		// Token: 0x0602DE8A RID: 188042 RVA: 0x00CD9E5E File Offset: 0x00CD805E
 		public void RemoveAllPlayerAttrListen(FOnKSCAllAttrChange delegateFunc)
 		{
 			UKSC_AttrSet playerAttrSet = this.GetPlayerAttrSet();
@@ -272,20 +272,20 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			playerAttrSet.RemoveAllAttrListen(delegateFunc);
 		}
 
-		// Token: 0x0401DD98 RID: 122264
+		// Token: 0x0401882E RID: 100398
 		private const int DODGE_SKILL_ID = 700105;
 
-		// Token: 0x0401DD99 RID: 122265
+		// Token: 0x0401882F RID: 100399
 		public BehaviorTreeUpdateDelegateProxy BehaviorDelegate = new BehaviorTreeUpdateDelegateProxy();
 
-		// Token: 0x0401DD9A RID: 122266
+		// Token: 0x04018830 RID: 100400
 		private readonly Dictionary<string, KurotatoBattleSkillData> BattleSkillData = new Dictionary<string, KurotatoBattleSkillData>();
 
-		// Token: 0x0401DD9B RID: 122267
+		// Token: 0x04018831 RID: 100401
 		[Nullable(2)]
 		private TimerHandle NextTickTimerId;
 
-		// Token: 0x0401DD9C RID: 122268
+		// Token: 0x04018832 RID: 100402
 		private readonly HashSet<KurotatoBattleSkillData> SkillCdChanged = new HashSet<KurotatoBattleSkillData>();
 	}
 }

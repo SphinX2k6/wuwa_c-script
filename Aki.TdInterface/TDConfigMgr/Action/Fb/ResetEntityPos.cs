@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024DB RID: 9435
+	// Token: 0x02002780 RID: 10112
 	public class ResetEntityPos : ActionParams
 	{
-		// Token: 0x0600D2AE RID: 53934 RVA: 0x001F40B4 File Offset: 0x001F22B4
-		[NullableContext(1)]
+		// Token: 0x0600E003 RID: 57347 RVA: 0x0020F910 File Offset: 0x0020DB10
 		public static ResetEntityPos Create(IResetEntityPos? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003ABA RID: 15034
-		// (get) Token: 0x0600D2AF RID: 53935 RVA: 0x001F40D3 File Offset: 0x001F22D3
+		// Token: 0x17003DB1 RID: 15793
+		// (get) Token: 0x0600E004 RID: 57348 RVA: 0x0020F92F File Offset: 0x0020DB2F
 		public virtual int EntityId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400738F RID: 29583
+		// Token: 0x040079DC RID: 31196
 		private IResetEntityPos Instance;
 	}
 }

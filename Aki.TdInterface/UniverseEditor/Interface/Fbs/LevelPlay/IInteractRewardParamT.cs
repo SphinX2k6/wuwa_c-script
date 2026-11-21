@@ -4,50 +4,50 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044E0 RID: 17632
+	// Token: 0x02004948 RID: 18760
 	public class IInteractRewardParamT
 	{
-		// Token: 0x17007C7B RID: 31867
-		// (get) Token: 0x0601A5EC RID: 108012 RVA: 0x003C3A5E File Offset: 0x003C1C5E
-		// (set) Token: 0x0601A5ED RID: 108013 RVA: 0x003C3A66 File Offset: 0x003C1C66
+		// Token: 0x170082BA RID: 33466
+		// (get) Token: 0x0601BDBD RID: 114109 RVA: 0x003EFC6A File Offset: 0x003EDE6A
+		// (set) Token: 0x0601BDBE RID: 114110 RVA: 0x003EFC72 File Offset: 0x003EDE72
 		public ELevelPlayRewardType Type { get; set; }
 
-		// Token: 0x17007C7C RID: 31868
-		// (get) Token: 0x0601A5EE RID: 108014 RVA: 0x003C3A6F File Offset: 0x003C1C6F
-		// (set) Token: 0x0601A5EF RID: 108015 RVA: 0x003C3A77 File Offset: 0x003C1C77
+		// Token: 0x170082BB RID: 33467
+		// (get) Token: 0x0601BDBF RID: 114111 RVA: 0x003EFC7B File Offset: 0x003EDE7B
+		// (set) Token: 0x0601BDC0 RID: 114112 RVA: 0x003EFC83 File Offset: 0x003EDE83
 		public int RewardId { get; set; }
 
-		// Token: 0x17007C7D RID: 31869
-		// (get) Token: 0x0601A5F0 RID: 108016 RVA: 0x003C3A80 File Offset: 0x003C1C80
-		// (set) Token: 0x0601A5F1 RID: 108017 RVA: 0x003C3A88 File Offset: 0x003C1C88
+		// Token: 0x170082BC RID: 33468
+		// (get) Token: 0x0601BDC1 RID: 114113 RVA: 0x003EFC8C File Offset: 0x003EDE8C
+		// (set) Token: 0x0601BDC2 RID: 114114 RVA: 0x003EFC94 File Offset: 0x003EDE94
 		public int FirstRewardId { get; set; }
 
-		// Token: 0x17007C7E RID: 31870
-		// (get) Token: 0x0601A5F2 RID: 108018 RVA: 0x003C3A91 File Offset: 0x003C1C91
-		// (set) Token: 0x0601A5F3 RID: 108019 RVA: 0x003C3A99 File Offset: 0x003C1C99
+		// Token: 0x170082BD RID: 33469
+		// (get) Token: 0x0601BDC3 RID: 114115 RVA: 0x003EFC9D File Offset: 0x003EDE9D
+		// (set) Token: 0x0601BDC4 RID: 114116 RVA: 0x003EFCA5 File Offset: 0x003EDEA5
 		public int RewardEntityId { get; set; }
 
-		// Token: 0x17007C7F RID: 31871
-		// (get) Token: 0x0601A5F4 RID: 108020 RVA: 0x003C3AA2 File Offset: 0x003C1CA2
-		// (set) Token: 0x0601A5F5 RID: 108021 RVA: 0x003C3AAA File Offset: 0x003C1CAA
+		// Token: 0x170082BE RID: 33470
+		// (get) Token: 0x0601BDC5 RID: 114117 RVA: 0x003EFCAE File Offset: 0x003EDEAE
+		// (set) Token: 0x0601BDC6 RID: 114118 RVA: 0x003EFCB6 File Offset: 0x003EDEB6
 		public ILevelPlayInteractResetOptionT Reset { get; set; }
 
-		// Token: 0x17007C80 RID: 31872
-		// (get) Token: 0x0601A5F6 RID: 108022 RVA: 0x003C3AB3 File Offset: 0x003C1CB3
-		// (set) Token: 0x0601A5F7 RID: 108023 RVA: 0x003C3ABB File Offset: 0x003C1CBB
+		// Token: 0x170082BF RID: 33471
+		// (get) Token: 0x0601BDC7 RID: 114119 RVA: 0x003EFCBF File Offset: 0x003EDEBF
+		// (set) Token: 0x0601BDC8 RID: 114120 RVA: 0x003EFCC7 File Offset: 0x003EDEC7
 		public List<IActionInfoT> RewardCompleteActions { get; set; }
 
-		// Token: 0x17007C81 RID: 31873
-		// (get) Token: 0x0601A5F8 RID: 108024 RVA: 0x003C3AC4 File Offset: 0x003C1CC4
-		// (set) Token: 0x0601A5F9 RID: 108025 RVA: 0x003C3ACC File Offset: 0x003C1CCC
+		// Token: 0x170082C0 RID: 33472
+		// (get) Token: 0x0601BDC9 RID: 114121 RVA: 0x003EFCD0 File Offset: 0x003EDED0
+		// (set) Token: 0x0601BDCA RID: 114122 RVA: 0x003EFCD8 File Offset: 0x003EDED8
 		public List<IActionInfoT> FirstCompleteActions { get; set; }
 
-		// Token: 0x17007C82 RID: 31874
-		// (get) Token: 0x0601A5FA RID: 108026 RVA: 0x003C3AD5 File Offset: 0x003C1CD5
-		// (set) Token: 0x0601A5FB RID: 108027 RVA: 0x003C3ADD File Offset: 0x003C1CDD
+		// Token: 0x170082C1 RID: 33473
+		// (get) Token: 0x0601BDCB RID: 114123 RVA: 0x003EFCE1 File Offset: 0x003EDEE1
+		// (set) Token: 0x0601BDCC RID: 114124 RVA: 0x003EFCE9 File Offset: 0x003EDEE9
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601A5FC RID: 108028 RVA: 0x003C3AE6 File Offset: 0x003C1CE6
+		// Token: 0x0601BDCD RID: 114125 RVA: 0x003EFCF2 File Offset: 0x003EDEF2
 		public IInteractRewardParamT()
 		{
 			this.Type = ELevelPlayRewardType.None;

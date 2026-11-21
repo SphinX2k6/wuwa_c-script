@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020013C9 RID: 5065
+// Token: 0x0200087D RID: 2173
 [NullableContext(1)]
 [Nullable(0)]
 public class NewPlayerSupportTrialRoleViewModel
 {
-	// Token: 0x17000BFD RID: 3069
-	// (get) Token: 0x06008EF5 RID: 36597 RVA: 0x001EDF55 File Offset: 0x001EC155
+	// Token: 0x17000C1D RID: 3101
+	// (get) Token: 0x0600628A RID: 25226 RVA: 0x001F6A75 File Offset: 0x001F4C75
 	public ETrialRoleType TrialRoleType
 	{
 		get
@@ -17,8 +17,8 @@ public class NewPlayerSupportTrialRoleViewModel
 		}
 	}
 
-	// Token: 0x17000BFE RID: 3070
-	// (get) Token: 0x06008EF6 RID: 36598 RVA: 0x001EDF5D File Offset: 0x001EC15D
+	// Token: 0x17000C1E RID: 3102
+	// (get) Token: 0x0600628B RID: 25227 RVA: 0x001F6A7D File Offset: 0x001F4C7D
 	public string CaptionIcon
 	{
 		get
@@ -27,8 +27,8 @@ public class NewPlayerSupportTrialRoleViewModel
 		}
 	}
 
-	// Token: 0x17000BFF RID: 3071
-	// (get) Token: 0x06008EF7 RID: 36599 RVA: 0x001EDF65 File Offset: 0x001EC165
+	// Token: 0x17000C1F RID: 3103
+	// (get) Token: 0x0600628C RID: 25228 RVA: 0x001F6A85 File Offset: 0x001F4C85
 	public string CaptionText
 	{
 		get
@@ -37,8 +37,8 @@ public class NewPlayerSupportTrialRoleViewModel
 		}
 	}
 
-	// Token: 0x17000C00 RID: 3072
-	// (get) Token: 0x06008EF8 RID: 36600 RVA: 0x001EDF6D File Offset: 0x001EC16D
+	// Token: 0x17000C20 RID: 3104
+	// (get) Token: 0x0600628D RID: 25229 RVA: 0x001F6A8D File Offset: 0x001F4C8D
 	public int? SelectedGroupId
 	{
 		get
@@ -47,8 +47,8 @@ public class NewPlayerSupportTrialRoleViewModel
 		}
 	}
 
-	// Token: 0x17000C01 RID: 3073
-	// (get) Token: 0x06008EF9 RID: 36601 RVA: 0x001EDF75 File Offset: 0x001EC175
+	// Token: 0x17000C21 RID: 3105
+	// (get) Token: 0x0600628E RID: 25230 RVA: 0x001F6A95 File Offset: 0x001F4C95
 	public int HelpId
 	{
 		get
@@ -57,7 +57,7 @@ public class NewPlayerSupportTrialRoleViewModel
 		}
 	}
 
-	// Token: 0x06008EFA RID: 36602 RVA: 0x001EDF80 File Offset: 0x001EC180
+	// Token: 0x0600628F RID: 25231 RVA: 0x001F6AA0 File Offset: 0x001F4CA0
 	public NewPlayerSupportTrialRoleViewModel(ETrialRoleType trialRoleType, string captionIcon, string captionText, int helpId, int? selectedGroupId = null)
 	{
 		this.TrialRoleTypeIntl = trialRoleType;
@@ -67,7 +67,7 @@ public class NewPlayerSupportTrialRoleViewModel
 		this.SelectedGroupIdIntl = selectedGroupId;
 	}
 
-	// Token: 0x06008EFB RID: 36603 RVA: 0x001EDFDC File Offset: 0x001EC1DC
+	// Token: 0x06006290 RID: 25232 RVA: 0x001F6AFC File Offset: 0x001F4CFC
 	public int? GetCurUseTrialRoleId()
 	{
 		TrialRoleGroupData curUseTrialRole = TrialRoleModel.Instance.GetCurUseTrialRole(this.TrialRoleType);
@@ -78,46 +78,46 @@ public class NewPlayerSupportTrialRoleViewModel
 		return new int?(curUseTrialRole.TrialRoleId);
 	}
 
-	// Token: 0x06008EFC RID: 36604 RVA: 0x001EE011 File Offset: 0x001EC211
+	// Token: 0x06006291 RID: 25233 RVA: 0x001F6B31 File Offset: 0x001F4D31
 	[NullableContext(2)]
 	public TrialRoleGroupData CurUseTrialRoleGroupData()
 	{
 		return TrialRoleModel.Instance.GetCurUseTrialRole(this.TrialRoleType);
 	}
 
-	// Token: 0x06008EFD RID: 36605 RVA: 0x001EE023 File Offset: 0x001EC223
+	// Token: 0x06006292 RID: 25234 RVA: 0x001F6B43 File Offset: 0x001F4D43
 	[NullableContext(2)]
 	public TrialRoleGroupData GetTrialRoleByGroupId(int groupId)
 	{
 		return TrialRoleModel.Instance.GetDataByGroupId(groupId);
 	}
 
-	// Token: 0x06008EFE RID: 36606 RVA: 0x001EE030 File Offset: 0x001EC230
+	// Token: 0x06006293 RID: 25235 RVA: 0x001F6B50 File Offset: 0x001F4D50
 	public List<TrialRoleGroupData> GetTrialRoleList()
 	{
 		return TrialRoleModel.Instance.GetDataListByType(this.TrialRoleType);
 	}
 
-	// Token: 0x06008EFF RID: 36607 RVA: 0x001EE042 File Offset: 0x001EC242
+	// Token: 0x06006294 RID: 25236 RVA: 0x001F6B62 File Offset: 0x001F4D62
 	public void SetRequestTrialRoleLvUpFunc(Action<int> func)
 	{
 		this.RequestTrialRoleLvUpFunc = func;
 	}
 
-	// Token: 0x06008F00 RID: 36608 RVA: 0x001EE04B File Offset: 0x001EC24B
+	// Token: 0x06006295 RID: 25237 RVA: 0x001F6B6B File Offset: 0x001F4D6B
 	[NullableContext(2)]
 	public Action<int> GetRequestTrialRoleLvUpFunc()
 	{
 		return this.RequestTrialRoleLvUpFunc;
 	}
 
-	// Token: 0x06008F01 RID: 36609 RVA: 0x001EE053 File Offset: 0x001EC253
+	// Token: 0x06006296 RID: 25238 RVA: 0x001F6B73 File Offset: 0x001F4D73
 	public void SetRequestSetCurUseTrialRoleFunc(Action<int, Action<int>> func)
 	{
 		this.RequestSetCurUseTrialRoleFunc = func;
 	}
 
-	// Token: 0x06008F02 RID: 36610 RVA: 0x001EE05C File Offset: 0x001EC25C
+	// Token: 0x06006297 RID: 25239 RVA: 0x001F6B7C File Offset: 0x001F4D7C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -128,13 +128,13 @@ public class NewPlayerSupportTrialRoleViewModel
 		return this.RequestSetCurUseTrialRoleFunc;
 	}
 
-	// Token: 0x06008F03 RID: 36611 RVA: 0x001EE064 File Offset: 0x001EC264
+	// Token: 0x06006298 RID: 25240 RVA: 0x001F6B84 File Offset: 0x001F4D84
 	public void SetTrialRoleGroupUnlockDesc(Dictionary<int, string> descMap)
 	{
 		this.TrialGroupUnlockDescMap = descMap;
 	}
 
-	// Token: 0x06008F04 RID: 36612 RVA: 0x001EE070 File Offset: 0x001EC270
+	// Token: 0x06006299 RID: 25241 RVA: 0x001F6B90 File Offset: 0x001F4D90
 	[NullableContext(2)]
 	public string GetTrialRoleGroupUnlockDesc(int groupId)
 	{
@@ -146,29 +146,29 @@ public class NewPlayerSupportTrialRoleViewModel
 		return result;
 	}
 
-	// Token: 0x04003F35 RID: 16181
+	// Token: 0x04003FCD RID: 16333
 	private ETrialRoleType TrialRoleTypeIntl;
 
-	// Token: 0x04003F36 RID: 16182
+	// Token: 0x04003FCE RID: 16334
 	private string CaptionIconIntl = "";
 
-	// Token: 0x04003F37 RID: 16183
+	// Token: 0x04003FCF RID: 16335
 	private string CaptionTextIntl = "";
 
-	// Token: 0x04003F38 RID: 16184
+	// Token: 0x04003FD0 RID: 16336
 	private int? SelectedGroupIdIntl;
 
-	// Token: 0x04003F39 RID: 16185
+	// Token: 0x04003FD1 RID: 16337
 	private int HelpIdIntl;
 
-	// Token: 0x04003F3A RID: 16186
+	// Token: 0x04003FD2 RID: 16338
 	private Dictionary<int, string> TrialGroupUnlockDescMap = new Dictionary<int, string>();
 
-	// Token: 0x04003F3B RID: 16187
+	// Token: 0x04003FD3 RID: 16339
 	[Nullable(2)]
 	private Action<int> RequestTrialRoleLvUpFunc;
 
-	// Token: 0x04003F3C RID: 16188
+	// Token: 0x04003FD4 RID: 16340
 	[Nullable(new byte[]
 	{
 		2,

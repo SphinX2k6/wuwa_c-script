@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001446 RID: 5190
+	// Token: 0x0200159E RID: 5534
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IDistributeParams
 	{
-		// Token: 0x0600760A RID: 30218 RVA: 0x0011A016 File Offset: 0x00118216
-		[NullableContext(1)]
+		// Token: 0x06007CD2 RID: 31954 RVA: 0x00128AEA File Offset: 0x00126CEA
+		[NullableContext(0)]
 		public static IDistributeParams Create(IDistributeParams? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002751 RID: 10065
-		// (get) Token: 0x0600760B RID: 30219 RVA: 0x0011A038 File Offset: 0x00118238
+		// Token: 0x17002938 RID: 10552
+		// (get) Token: 0x06007CD3 RID: 31955 RVA: 0x00128B0C File Offset: 0x00126D0C
 		public virtual int? InformationViewCheck
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002752 RID: 10066
-		// (get) Token: 0x0600760C RID: 30220 RVA: 0x0011A06E File Offset: 0x0011826E
+		// Token: 0x17002939 RID: 10553
+		// (get) Token: 0x06007CD4 RID: 31956 RVA: 0x00128B42 File Offset: 0x00126D42
 		public virtual IItemConfig UseItem
 		{
 			get
@@ -54,13 +54,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004486 RID: 17542
+		// Token: 0x0400481C RID: 18460
 		private IDistributeParams Instance;
 
-		// Token: 0x04004487 RID: 17543
+		// Token: 0x0400481D RID: 18461
 		private IItemConfig _UseItemCache;
 
-		// Token: 0x04004488 RID: 17544
+		// Token: 0x0400481E RID: 18462
 		private bool _UseItemInited;
 	}
 }

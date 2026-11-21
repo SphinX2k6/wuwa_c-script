@@ -15,35 +15,35 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x0200509C RID: 20636
+	// Token: 0x0200406C RID: 16492
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlowLaunchCenter : ControllerAssistantBase, IStaticVariableResetter
 	{
-		// Token: 0x06034E25 RID: 216613 RVA: 0x00C8315F File Offset: 0x00C8135F
+		// Token: 0x06029D1E RID: 171294 RVA: 0x00BD037F File Offset: 0x00BCE57F
 		protected override void OnDestroy()
 		{
 		}
 
-		// Token: 0x06034E26 RID: 216614 RVA: 0x00C83161 File Offset: 0x00C81361
+		// Token: 0x06029D1F RID: 171295 RVA: 0x00BD0381 File Offset: 0x00BCE581
 		static FlowLaunchCenter()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FlowLaunchCenter.CreateStaticDefaultValue), new Action(FlowLaunchCenter.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06034E27 RID: 216615 RVA: 0x00C83180 File Offset: 0x00C81380
+		// Token: 0x06029D20 RID: 171296 RVA: 0x00BD03A0 File Offset: 0x00BCE5A0
 		public static void CreateStaticDefaultValue()
 		{
 			FlowLaunchCenter.LocalFlowIncId = -1;
 		}
 
-		// Token: 0x06034E28 RID: 216616 RVA: 0x00C83188 File Offset: 0x00C81388
+		// Token: 0x06029D21 RID: 171297 RVA: 0x00BD03A8 File Offset: 0x00BCE5A8
 		public static void ResetStaticDefaultValue()
 		{
 			FlowLaunchCenter.LocalFlowIncId = -1;
 		}
 
-		// Token: 0x06034E29 RID: 216617 RVA: 0x00C83190 File Offset: 0x00C81390
+		// Token: 0x06029D22 RID: 171298 RVA: 0x00BD03B0 File Offset: 0x00BCE5B0
 		protected override void OnInit()
 		{
 			this.CheckList.Add(new ValueTuple<FlowLaunchCenter.ECheckType, string, Func<float, PlotInfo, bool>>(FlowLaunchCenter.ECheckType.LoadingDone, "场景未加载完", this.OnCheckLoading));
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034E2A RID: 216618 RVA: 0x00C83324 File Offset: 0x00C81524
+		// Token: 0x06029D23 RID: 171299 RVA: 0x00BD0544 File Offset: 0x00BCE744
 		[NullableContext(2)]
 		public unsafe long StartFlow([Nullable(1)] string flowListName, int flowId, int stateId, GeneralContext context = null, long flowIncId = -1L, bool isServerNotify = false, bool isAsync = false, UiParam uiParam = null, bool canBeAbandoned = false, bool isSkip = false, Vector pos = null, Action callback = null, bool isTeleportTransition = false)
 		{
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return num;
 		}
 
-		// Token: 0x06034E2B RID: 216619 RVA: 0x00C835AC File Offset: 0x00C817AC
+		// Token: 0x06029D24 RID: 171300 RVA: 0x00BD07CC File Offset: 0x00BCE9CC
 		public unsafe void StartPlotNetworkPending()
 		{
 			if (PlotModel.Instance.IsInPlot)
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.StartFlowByPlotInfo(plotInfo);
 		}
 
-		// Token: 0x06034E2C RID: 216620 RVA: 0x00C836BC File Offset: 0x00C818BC
+		// Token: 0x06029D25 RID: 171301 RVA: 0x00BD08DC File Offset: 0x00BCEADC
 		public unsafe void Tick(float delta)
 		{
 			if (!this.NeedPlay)
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034E2D RID: 216621 RVA: 0x00C837D4 File Offset: 0x00C819D4
+		// Token: 0x06029D26 RID: 171302 RVA: 0x00BD09F4 File Offset: 0x00BCEBF4
 		private unsafe bool CheckStateCanPlay(PlotInfo plotInfo, float deltaTime = 0f)
 		{
 			if (plotInfo.IsBreakdown)
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return true;
 		}
 
-		// Token: 0x06034E2E RID: 216622 RVA: 0x00C83900 File Offset: 0x00C81B00
+		// Token: 0x06029D27 RID: 171303 RVA: 0x00BD0B20 File Offset: 0x00BCED20
 		private unsafe bool OnCheckUi(float delta, PlotInfo plotInfo)
 		{
 			if (BlackScreenFadeController.Instance.GetIsFadeIn() && BlackScreenFadeController.Instance.CheckIfInCommon())
@@ -307,13 +307,13 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034E2F RID: 216623 RVA: 0x00C83B7E File Offset: 0x00C81D7E
+		// Token: 0x06029D28 RID: 171304 RVA: 0x00BD0D9E File Offset: 0x00BCEF9E
 		private bool OnCheckFormation(float delta, PlotInfo plotInfo)
 		{
 			return AutoRunModel.Instance.IsInLogicTreeGmMode() || this.TempSkipFormationCheck.Contains(plotInfo.FormatId) || SceneTeamModel.Instance.IsTeamReady;
 		}
 
-		// Token: 0x06034E30 RID: 216624 RVA: 0x00C83BB0 File Offset: 0x00C81DB0
+		// Token: 0x06029D29 RID: 171305 RVA: 0x00BD0DD0 File Offset: 0x00BCEFD0
 		private bool OnCheckCharAnim(float delta, PlotInfo plotInfo)
 		{
 			if (AutoRunModel.Instance.IsInLogicTreeGmMode())
@@ -344,7 +344,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return false;
 		}
 
-		// Token: 0x06034E31 RID: 216625 RVA: 0x00C83C68 File Offset: 0x00C81E68
+		// Token: 0x06029D2A RID: 171306 RVA: 0x00BD0E88 File Offset: 0x00BCF088
 		private bool OnCheckTransitionFlowWaitWorldDoneEnd(float delta, PlotInfo plotInfo)
 		{
 			if (!this.TransitionFlowNeedWaitForWorldDoneEnd.Contains(plotInfo.FormatId))
@@ -355,7 +355,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return loadingPhase <= ELoadingPhase.Finished || loadingPhase >= ELoadingPhase.WorldDoneEnd;
 		}
 
-		// Token: 0x06034E32 RID: 216626 RVA: 0x00C83CA3 File Offset: 0x00C81EA3
+		// Token: 0x06029D2B RID: 171307 RVA: 0x00BD0EC3 File Offset: 0x00BCF0C3
 		public static void ApplyTemporaryLowQuality()
 		{
 			GameSettingsUtils.ApplyImageQualityOnly(0);
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			GameSettingsUtils.ApplyMobileResolution(0);
 		}
 
-		// Token: 0x06034E33 RID: 216627 RVA: 0x00C83CD8 File Offset: 0x00C81ED8
+		// Token: 0x06029D2C RID: 171308 RVA: 0x00BD0EF8 File Offset: 0x00BCF0F8
 		public static void ReApplyTemporaryLowQuality()
 		{
 			GameSettingsManager.Instance.ReApply(EFunction.IMAGEQUALITY, EGameSettingsApplyReason.AnyTime, true);
@@ -380,7 +380,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			GameSettingsManager.Instance.ReApply(EFunction.MOBILERESOLUTION, EGameSettingsApplyReason.AnyTime, true);
 		}
 
-		// Token: 0x06034E34 RID: 216628 RVA: 0x00C83D68 File Offset: 0x00C81F68
+		// Token: 0x06029D2D RID: 171309 RVA: 0x00BD0F88 File Offset: 0x00BCF188
 		private unsafe void StartFlowByPlotInfo(PlotInfo plotInfo)
 		{
 			if (PlotModel.Instance.IsInInteraction)
@@ -537,16 +537,16 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			plotInfo.Recycle();
 		}
 
-		// Token: 0x0401C2BB RID: 115387
+		// Token: 0x04016CEA RID: 93418
 		private static int LocalFlowIncId;
 
-		// Token: 0x0401C2BC RID: 115388
+		// Token: 0x04016CEB RID: 93419
 		private bool NeedPlay;
 
-		// Token: 0x0401C2BD RID: 115389
+		// Token: 0x04016CEC RID: 93420
 		private float DeltaForCalm;
 
-		// Token: 0x0401C2BE RID: 115390
+		// Token: 0x04016CED RID: 93421
 		[Nullable(new byte[]
 		{
 			1,
@@ -557,10 +557,10 @@ namespace CSharpScript.Game.Module.Plot.Flow
 		})]
 		private readonly List<ValueTuple<FlowLaunchCenter.ECheckType, string, Func<float, PlotInfo, bool>>> CheckList = new List<ValueTuple<FlowLaunchCenter.ECheckType, string, Func<float, PlotInfo, bool>>>();
 
-		// Token: 0x0401C2BF RID: 115391
+		// Token: 0x04016CEE RID: 93422
 		private FlowLaunchCenter.ECheckType CurCheckType = FlowLaunchCenter.ECheckType.None;
 
-		// Token: 0x0401C2C0 RID: 115392
+		// Token: 0x04016CEF RID: 93423
 		private readonly Func<float, PlotInfo, bool> OnCheckLoading = delegate(float delta, PlotInfo plotInfo)
 		{
 			if (plotInfo.IsTeleportTransition)
@@ -586,23 +586,23 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return true;
 		};
 
-		// Token: 0x0401C2C1 RID: 115393
+		// Token: 0x04016CF0 RID: 93424
 		private readonly HashSet<EUiViewName> EnableView = new HashSet<EUiViewName>
 		{
 			EUiViewName.PlotView,
 			EUiViewName.PlotSubtitleView
 		};
 
-		// Token: 0x0401C2C2 RID: 115394
+		// Token: 0x04016CF1 RID: 93425
 		private float UiCheckTime;
 
-		// Token: 0x0401C2C3 RID: 115395
+		// Token: 0x04016CF2 RID: 93426
 		private readonly Func<float, PlotInfo, bool> OnCheckTeleport = (float delta, PlotInfo plotInfo) => plotInfo.IsTeleportTransition || !TeleportModel.Instance.IsTeleport;
 
-		// Token: 0x0401C2C4 RID: 115396
+		// Token: 0x04016CF3 RID: 93427
 		private readonly Func<float, PlotInfo, bool> OnCheckAllPlayerAlive = (float delta, PlotInfo plotInfo) => AutoRunModel.Instance.IsInLogicTreeGmMode() || !SceneTeamModel.Instance.IsAllDid();
 
-		// Token: 0x0401C2C5 RID: 115397
+		// Token: 0x04016CF4 RID: 93428
 		private readonly Func<float, PlotInfo, bool> OnCheckCurPlayerAlive = delegate(float delta, PlotInfo plotInfo)
 		{
 			if (AutoRunModel.Instance.IsInLogicTreeGmMode())
@@ -613,30 +613,30 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return getCurrentTeamItem != null && !getCurrentTeamItem.IsDead();
 		};
 
-		// Token: 0x0401C2C6 RID: 115398
+		// Token: 0x04016CF5 RID: 93429
 		private readonly Func<float, PlotInfo, bool> OnCheckPreload = delegate(float delta, PlotInfo plotInfo)
 		{
 			ELoadResultType eloadResultType;
 			return !plotInfo.CheckPreload || ((!PreloadModelNew.Instance.PlotAssetManager.LoadStateMap.TryGetValue(plotInfo.FormatId, out eloadResultType) || eloadResultType != ELoadResultType.Loading) && !PreloadModelNew.Instance.PlotUiAssetManager.IsLoading(plotInfo.FormatId) && !PreloadModelNew.Instance.PlotUiAssetManager.IsHanging(plotInfo.FormatId));
 		};
 
-		// Token: 0x0401C2C7 RID: 115399
+		// Token: 0x04016CF6 RID: 93430
 		private readonly Func<float, PlotInfo, bool> OnCheckPlotCaption = (float delta, PlotInfo plotInfo) => !PlotCaptionImageController.Instance.IsInPlotCaption;
 
-		// Token: 0x0401C2C8 RID: 115400
+		// Token: 0x04016CF7 RID: 93431
 		private readonly HashSet<string> TempEnablePlotStreamingSource = new HashSet<string>
 		{
 			"剧情_2_6_狄斯台地主线_上半_1,25,1",
 			"剧情_2_0_黎那汐塔主线_第一幕,1,1"
 		};
 
-		// Token: 0x0401C2C9 RID: 115401
+		// Token: 0x04016CF8 RID: 93432
 		private readonly HashSet<string> TempEnableWorldOrigin = new HashSet<string>
 		{
 			"剧情_3_7_一级POI_愧心域,50,1"
 		};
 
-		// Token: 0x0401C2CA RID: 115402
+		// Token: 0x04016CF9 RID: 93433
 		private readonly Dictionary<string, Vector> IndependentStreamingSource = new Dictionary<string, Vector>
 		{
 			{
@@ -653,27 +653,27 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		};
 
-		// Token: 0x0401C2CB RID: 115403
+		// Token: 0x04016CFA RID: 93434
 		private readonly HashSet<string> LowQualityPlot = new HashSet<string>
 		{
 			"剧情_3_0_主线_拉海洛主线_上半_1,35,1"
 		};
 
-		// Token: 0x0401C2CC RID: 115404
+		// Token: 0x04016CFB RID: 93435
 		private readonly HashSet<string> TransitionFlowNeedWaitForWorldDoneEnd = new HashSet<string>
 		{
 			"剧情_3_4_拉海洛主线,13,1",
 			"剧情_3_4_拉海洛主线,6,2"
 		};
 
-		// Token: 0x0401C2CD RID: 115405
+		// Token: 0x04016CFC RID: 93436
 		private readonly HashSet<string> TempSkipFormationCheck = new HashSet<string>
 		{
 			"剧情_3_5_穗穗线_玩法副本_1,2,18",
 			"剧情_3_5_穗穗线_玩法副本_1,1,9"
 		};
 
-		// Token: 0x0401C2CE RID: 115406
+		// Token: 0x04016CFD RID: 93437
 		private readonly HashSet<string> DebugProtectedPlot = new HashSet<string>
 		{
 			"剧情_2_7_狄斯台地主线_上半_巡游天国,33,1",
@@ -723,35 +723,35 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			"剧情_2.8_穗波怪异物语（战中语音对话文本）,9,2"
 		};
 
-		// Token: 0x0401C2CF RID: 115407
+		// Token: 0x04016CFE RID: 93438
 		[Nullable(2)]
 		private TimerHandle DebugProtectedPlotTimer;
 
-		// Token: 0x0200B226 RID: 45606
+		// Token: 0x02009C5F RID: 40031
 		[NullableContext(0)]
 		private enum ECheckType
 		{
-			// Token: 0x0403605B RID: 221275
+			// Token: 0x04030AAF RID: 199343
 			LoadingDone,
-			// Token: 0x0403605C RID: 221276
+			// Token: 0x04030AB0 RID: 199344
 			UiReady,
-			// Token: 0x0403605D RID: 221277
+			// Token: 0x04030AB1 RID: 199345
 			TeleportDone,
-			// Token: 0x0403605E RID: 221278
+			// Token: 0x04030AB2 RID: 199346
 			AllPlayerAlive,
-			// Token: 0x0403605F RID: 221279
+			// Token: 0x04030AB3 RID: 199347
 			CurPlayerAlive,
-			// Token: 0x04036060 RID: 221280
+			// Token: 0x04030AB4 RID: 199348
 			FormationReady,
-			// Token: 0x04036061 RID: 221281
+			// Token: 0x04030AB5 RID: 199349
 			CharAnimReady,
-			// Token: 0x04036062 RID: 221282
+			// Token: 0x04030AB6 RID: 199350
 			PreloadReady,
-			// Token: 0x04036063 RID: 221283
+			// Token: 0x04030AB7 RID: 199351
 			PlotCaption,
-			// Token: 0x04036064 RID: 221284
+			// Token: 0x04030AB8 RID: 199352
 			TransitionFlowWaitWorldDoneEnd,
-			// Token: 0x04036065 RID: 221285
+			// Token: 0x04030AB9 RID: 199353
 			None
 		}
 	}

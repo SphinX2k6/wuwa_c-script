@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000648 RID: 1608
+	// Token: 0x02000660 RID: 1632
 	public class ConfigPbDataPreloadAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060025C0 RID: 9664 RVA: 0x0012F1AD File Offset: 0x0012D3AD
+		// Token: 0x06002650 RID: 9808 RVA: 0x00135C29 File Offset: 0x00133E29
 		static ConfigPbDataPreloadAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPbDataPreloadAll.CreateStaticDefaultValue), new Action(ConfigPbDataPreloadAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060025C1 RID: 9665 RVA: 0x0012F1CC File Offset: 0x0012D3CC
+		// Token: 0x06002651 RID: 9809 RVA: 0x00135C48 File Offset: 0x00133E48
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPbDataPreloadAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060025C2 RID: 9666 RVA: 0x0012F24B File Offset: 0x0012D44B
+		// Token: 0x06002652 RID: 9810 RVA: 0x00135CC7 File Offset: 0x00133EC7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPbDataPreloadAll.LogPair = null;
 			ConfigPbDataPreloadAll.HandleId = 0;
 		}
 
-		// Token: 0x060025C3 RID: 9667 RVA: 0x0012F259 File Offset: 0x0012D459
+		// Token: 0x06002653 RID: 9811 RVA: 0x00135CD5 File Offset: 0x00133ED5
 		public static void Init()
 		{
 			ConfigPbDataPreloadAll.HandleId = ConfigCommon.InitDataStatement(ConfigPbDataPreloadAll.HandleId, "db_pbdata_preload.db", "select BinData from `PbDataPreload`");
 		}
 
-		// Token: 0x060025C4 RID: 9668 RVA: 0x0012F274 File Offset: 0x0012D474
+		// Token: 0x06002654 RID: 9812 RVA: 0x00135CF0 File Offset: 0x00133EF0
 		[NullableContext(2)]
 		public static IReadOnlyList<PbDataPreload> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002BDE RID: 11230
+		// Token: 0x04002C86 RID: 11398
 		private const string DB = "db_pbdata_preload.db";
 
-		// Token: 0x04002BDF RID: 11231
+		// Token: 0x04002C87 RID: 11399
 		private const string FILE = "Preload/PbDataPreload.csv";
 
-		// Token: 0x04002BE0 RID: 11232
+		// Token: 0x04002C88 RID: 11400
 		private const string TABLE = "PbDataPreload";
 
-		// Token: 0x04002BE1 RID: 11233
+		// Token: 0x04002C89 RID: 11401
 		private const string COMMAND = "select BinData from `PbDataPreload`";
 
-		// Token: 0x04002BE2 RID: 11234
+		// Token: 0x04002C8A RID: 11402
 		private const string KEY_PREFIX = "PbDataPreloadAll";
 
-		// Token: 0x04002BE3 RID: 11235
+		// Token: 0x04002C8B RID: 11403
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002BE4 RID: 11236
+		// Token: 0x04002C8C RID: 11404
 		private static int HandleId;
 	}
 }

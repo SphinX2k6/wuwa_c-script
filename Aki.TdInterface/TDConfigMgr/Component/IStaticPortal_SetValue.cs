@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000722 RID: 1826
+	// Token: 0x020007C3 RID: 1987
 	public class IStaticPortal_SetValue
 	{
-		// Token: 0x04001A96 RID: 6806
+		// Token: 0x04001C9B RID: 7323
 		public EPortalType Type;
 
-		// Token: 0x04001A97 RID: 6807
+		// Token: 0x04001C9C RID: 7324
 		public EPortalModel PortalModel;
 
-		// Token: 0x04001A98 RID: 6808
+		// Token: 0x04001C9D RID: 7325
 		[Nullable(2)]
 		public IPortalRenderConfig RenderConfig;
 
-		// Token: 0x04001A99 RID: 6809
+		// Token: 0x04001C9E RID: 7326
 		public int LinkPortalEntityId;
 
-		// Token: 0x04001A9A RID: 6810
+		// Token: 0x04001C9F RID: 7327
 		public bool? IsStreamSource;
 	}
 }

@@ -11,13 +11,13 @@ using UnrealEngine.Utils;
 
 namespace Aki.Common
 {
-	// Token: 0x0200001A RID: 26
+	// Token: 0x0200001B RID: 27
 	[ConsoleVariableBool("cs.JitProfile.Disable", false, "Disable JitProfile", EConsoleVariableFlags.ECVF_Default)]
 	[ConsoleVariableBool("cs.JitProfile.FrameSplit", true, "Enable JitProfile frameSplit mode, if true, async will disable", EConsoleVariableFlags.ECVF_Default)]
 	[ConsoleVariableInt("cs.JitProfile.FrameSplitBatch", 100, "JitProfile frameSplit batch job count", EConsoleVariableFlags.ECVF_Default)]
 	public class JitProfile
 	{
-		// Token: 0x060000BB RID: 187 RVA: 0x0000B038 File Offset: 0x00009238
+		// Token: 0x06000128 RID: 296 RVA: 0x0000E7E0 File Offset: 0x0000C9E0
 		[NullableContext(1)]
 		public static void LoadProfile(string BinProfilePath)
 		{
@@ -31,6 +31,11 @@ namespace Aki.Common
 				UnrealLogger.Info("JitProfile: Disable by variable");
 				return;
 			}
+			if (UKismetSystemLibrary.GetCommandLine().Contains("-DisableJitProfile", StringComparison.OrdinalIgnoreCase))
+			{
+				UnrealLogger.Info("JitProfile: Disable by commandLine");
+				return;
+			}
 			UnrealLogger.Info("JitProfile: Start");
 			Stopwatch stopwatch = Stopwatch.StartNew();
 			TArray<byte> tarray = JitProfile.LoadBinProfile(BinProfilePath);
@@ -40,7 +45,8 @@ namespace Aki.Common
 			}
 			bool cs_JitProfile_FrameSplit = JitProfile.Get_cs_JitProfile_FrameSplit();
 			bool flag = false;
-			JitProfile.Job = new JitProfile.JitJobs(cs_JitProfile_FrameSplit, flag);
+			bool drop = false;
+			JitProfile.Job = new JitProfile.JitJobs(cs_JitProfile_FrameSplit, flag, drop);
 			JitProfile.Job.Run(tarray);
 			stopwatch.Stop();
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(43, 3);
@@ -53,7 +59,7 @@ namespace Aki.Common
 			UnrealLogger.Info(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x060000BC RID: 188 RVA: 0x0000B104 File Offset: 0x00009304
+		// Token: 0x06000129 RID: 297 RVA: 0x0000E8CE File Offset: 0x0000CACE
 		public static void StopProfileAsync()
 		{
 			JitProfile.JitJobs jitJobs = Interlocked.Exchange<JitProfile.JitJobs>(ref JitProfile.Job, null);
@@ -64,11 +70,11 @@ namespace Aki.Common
 			jitJobs.Stop();
 		}
 
-		// Token: 0x060000BD RID: 189
+		// Token: 0x0600012A RID: 298
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern bool Internal_Load(char* Path, IntPtr OutData);
 
-		// Token: 0x060000BE RID: 190 RVA: 0x0000B11C File Offset: 0x0000931C
+		// Token: 0x0600012B RID: 299 RVA: 0x0000E8E8 File Offset: 0x0000CAE8
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private unsafe static TArray<byte> LoadBinProfile(string BinProfilePath)
@@ -99,66 +105,66 @@ namespace Aki.Common
 			return tarray;
 		}
 
-		// Token: 0x060000BF RID: 191
+		// Token: 0x0600012C RID: 300
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_RequestFrameSplit();
 
-		// Token: 0x060000C0 RID: 192 RVA: 0x0000B162 File Offset: 0x00009362
+		// Token: 0x0600012D RID: 301 RVA: 0x0000E92E File Offset: 0x0000CB2E
 		internal static void OnFrameSplit(out bool Finish)
 		{
 			Finish = (JitProfile.Job == null || JitProfile.Job.FrameSplitWork());
 		}
 
-		// Token: 0x060000C1 RID: 193 RVA: 0x0000B17A File Offset: 0x0000937A
+		// Token: 0x0600012E RID: 302 RVA: 0x0000E946 File Offset: 0x0000CB46
 		public static bool Get_cs_JitProfile_Disable()
 		{
 			return IConsoleManager.GetConsoleBoolVariable("cs.JitProfile.Disable");
 		}
 
-		// Token: 0x060000C2 RID: 194 RVA: 0x0000B186 File Offset: 0x00009386
+		// Token: 0x0600012F RID: 303 RVA: 0x0000E952 File Offset: 0x0000CB52
 		public static bool Set_cs_JitProfile_Disable(bool Value, EConsoleVariableFlags Flags = EConsoleVariableFlags.ECVF_SetByCode)
 		{
 			return IConsoleManager.SetConsoleVariable("cs.JitProfile.Disable", Value, Flags);
 		}
 
-		// Token: 0x060000C3 RID: 195 RVA: 0x0000B194 File Offset: 0x00009394
+		// Token: 0x06000130 RID: 304 RVA: 0x0000E960 File Offset: 0x0000CB60
 		public static bool Get_cs_JitProfile_FrameSplit()
 		{
 			return IConsoleManager.GetConsoleBoolVariable("cs.JitProfile.FrameSplit");
 		}
 
-		// Token: 0x060000C4 RID: 196 RVA: 0x0000B1A0 File Offset: 0x000093A0
+		// Token: 0x06000131 RID: 305 RVA: 0x0000E96C File Offset: 0x0000CB6C
 		public static bool Set_cs_JitProfile_FrameSplit(bool Value, EConsoleVariableFlags Flags = EConsoleVariableFlags.ECVF_SetByCode)
 		{
 			return IConsoleManager.SetConsoleVariable("cs.JitProfile.FrameSplit", Value, Flags);
 		}
 
-		// Token: 0x060000C5 RID: 197 RVA: 0x0000B1AE File Offset: 0x000093AE
+		// Token: 0x06000132 RID: 306 RVA: 0x0000E97A File Offset: 0x0000CB7A
 		public static int Get_cs_JitProfile_FrameSplitBatch()
 		{
 			return IConsoleManager.GetConsoleIntVariable("cs.JitProfile.FrameSplitBatch");
 		}
 
-		// Token: 0x060000C6 RID: 198 RVA: 0x0000B1BA File Offset: 0x000093BA
+		// Token: 0x06000133 RID: 307 RVA: 0x0000E986 File Offset: 0x0000CB86
 		public static bool Set_cs_JitProfile_FrameSplitBatch(int Value, EConsoleVariableFlags Flags = EConsoleVariableFlags.ECVF_SetByCode)
 		{
 			return IConsoleManager.SetConsoleVariable("cs.JitProfile.FrameSplitBatch", Value, Flags);
 		}
 
-		// Token: 0x0400021F RID: 543
+		// Token: 0x04000224 RID: 548
 		private static bool HasInvoked;
 
-		// Token: 0x04000220 RID: 544
+		// Token: 0x04000225 RID: 549
 		[Nullable(2)]
 		private static JitProfile.JitJobs Job;
 
-		// Token: 0x02000044 RID: 68
+		// Token: 0x02000066 RID: 102
 		[NullableContext(2)]
 		[Nullable(0)]
 		private sealed class JitJobs
 		{
-			// Token: 0x0600013A RID: 314 RVA: 0x0000C2F6 File Offset: 0x0000A4F6
-			public JitJobs(bool frameSplit, bool async = false)
+			// Token: 0x06000276 RID: 630 RVA: 0x00011F06 File Offset: 0x00010106
+			public JitJobs(bool frameSplit, bool async = false, bool drop = false)
 			{
 				if (async || frameSplit)
 				{
@@ -167,7 +173,7 @@ namespace Aki.Common
 				this.IsFrameSplit = frameSplit;
 			}
 
-			// Token: 0x0600013B RID: 315 RVA: 0x0000C328 File Offset: 0x0000A528
+			// Token: 0x06000277 RID: 631 RVA: 0x00011F38 File Offset: 0x00010138
 			public void Stop()
 			{
 				CancellationTokenSource cts = this.Cts;
@@ -186,7 +192,7 @@ namespace Aki.Common
 				}
 			}
 
-			// Token: 0x0600013C RID: 316 RVA: 0x0000C398 File Offset: 0x0000A598
+			// Token: 0x06000278 RID: 632 RVA: 0x00011FA8 File Offset: 0x000101A8
 			[NullableContext(1)]
 			public void Run(TArray<byte> binProfile)
 			{
@@ -227,7 +233,7 @@ namespace Aki.Common
 				}
 			}
 
-			// Token: 0x0600013D RID: 317 RVA: 0x0000C460 File Offset: 0x0000A660
+			// Token: 0x06000279 RID: 633 RVA: 0x00012070 File Offset: 0x00010270
 			public bool FrameSplitWork()
 			{
 				try
@@ -250,7 +256,7 @@ namespace Aki.Common
 				return false;
 			}
 
-			// Token: 0x0600013E RID: 318 RVA: 0x0000C4F8 File Offset: 0x0000A6F8
+			// Token: 0x0600027A RID: 634 RVA: 0x00012108 File Offset: 0x00010308
 			[NullableContext(0)]
 			private bool ReadBinBufferAndJitJob(ReadOnlySpan<byte> buffer, ref int index, ref int offset, int maxNumToRead = 2147483647)
 			{
@@ -275,7 +281,7 @@ namespace Aki.Common
 				return index >= this.NumTotal;
 			}
 
-			// Token: 0x0600013F RID: 319 RVA: 0x0000C5B4 File Offset: 0x0000A7B4
+			// Token: 0x0600027B RID: 635 RVA: 0x000121C4 File Offset: 0x000103C4
 			[NullableContext(1)]
 			private bool JitEntry(string className, string method)
 			{
@@ -307,7 +313,7 @@ namespace Aki.Common
 				return false;
 			}
 
-			// Token: 0x06000140 RID: 320 RVA: 0x0000C650 File Offset: 0x0000A850
+			// Token: 0x0600027C RID: 636 RVA: 0x00012260 File Offset: 0x00010460
 			[NullableContext(1)]
 			private static bool JitJob(Type type, string method)
 			{
@@ -344,34 +350,34 @@ namespace Aki.Common
 				return false;
 			}
 
-			// Token: 0x040002A0 RID: 672
+			// Token: 0x04000328 RID: 808
 			private int NumTotal;
 
-			// Token: 0x040002A1 RID: 673
+			// Token: 0x04000329 RID: 809
 			private int NumJit;
 
-			// Token: 0x040002A2 RID: 674
+			// Token: 0x0400032A RID: 810
 			private readonly CancellationTokenSource Cts;
 
-			// Token: 0x040002A3 RID: 675
+			// Token: 0x0400032B RID: 811
 			private int Index;
 
-			// Token: 0x040002A4 RID: 676
+			// Token: 0x0400032C RID: 812
 			private int Offset;
 
-			// Token: 0x040002A5 RID: 677
+			// Token: 0x0400032D RID: 813
 			private readonly bool IsFrameSplit;
 
-			// Token: 0x040002A6 RID: 678
+			// Token: 0x0400032E RID: 814
 			private TArray<byte> Buffer;
 
-			// Token: 0x040002A7 RID: 679
+			// Token: 0x0400032F RID: 815
 			private readonly int FrameSplitBatch = Math.Max(10, JitProfile.Get_cs_JitProfile_FrameSplitBatch());
 
-			// Token: 0x040002A8 RID: 680
+			// Token: 0x04000330 RID: 816
 			private string LastTypeName;
 
-			// Token: 0x040002A9 RID: 681
+			// Token: 0x04000331 RID: 817
 			private Type LastType;
 		}
 	}

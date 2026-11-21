@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DF6 RID: 3574
+	// Token: 0x02000EF2 RID: 3826
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IDollGrabInfiniteStageConfig
 	{
-		// Token: 0x060050F4 RID: 20724 RVA: 0x000C7D11 File Offset: 0x000C5F11
-		[NullableContext(1)]
+		// Token: 0x0600561B RID: 22043 RVA: 0x000D35D9 File Offset: 0x000D17D9
+		[NullableContext(0)]
 		public static IDollGrabInfiniteStageConfig Create(IDollGrabInfiniteStageConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AC5 RID: 6853
-		// (get) Token: 0x060050F5 RID: 20725 RVA: 0x000C7D30 File Offset: 0x000C5F30
+		// Token: 0x17001C32 RID: 7218
+		// (get) Token: 0x0600561C RID: 22044 RVA: 0x000D35F8 File Offset: 0x000D17F8
 		public virtual float Duration
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AC6 RID: 6854
-		// (get) Token: 0x060050F6 RID: 20726 RVA: 0x000C7D3D File Offset: 0x000C5F3D
+		// Token: 0x17001C33 RID: 7219
+		// (get) Token: 0x0600561D RID: 22045 RVA: 0x000D3605 File Offset: 0x000D1805
 		public virtual IDollGrabStageAudioState AudioState
 		{
 			get
@@ -49,13 +49,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E87 RID: 11911
+		// Token: 0x0400314F RID: 12623
 		private IDollGrabInfiniteStageConfig Instance;
 
-		// Token: 0x04002E88 RID: 11912
+		// Token: 0x04003150 RID: 12624
 		private IDollGrabStageAudioState _AudioStateCache;
 
-		// Token: 0x04002E89 RID: 11913
+		// Token: 0x04003151 RID: 12625
 		private bool _AudioStateInited;
 	}
 }

@@ -4,16 +4,16 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F6A RID: 3946
+	// Token: 0x02001094 RID: 4244
 	public class IFastReturnGravityEntityPos_SetValue
 	{
-		// Token: 0x04003501 RID: 13569
+		// Token: 0x04003832 RID: 14386
 		public EFastReturnPosType Type;
 
-		// Token: 0x04003502 RID: 13570
+		// Token: 0x04003833 RID: 14387
 		public int EntityId;
 
-		// Token: 0x04003503 RID: 13571
+		// Token: 0x04003834 RID: 14388
 		[Nullable(2)]
 		public ITeleportTransitionType TransitionOption;
 	}

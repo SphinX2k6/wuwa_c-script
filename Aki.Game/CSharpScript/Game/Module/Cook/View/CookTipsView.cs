@@ -14,18 +14,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B28 RID: 23336
+	// Token: 0x02004B09 RID: 19209
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CookTipsView : UiPanelBase
 	{
-		// Token: 0x0603B151 RID: 242001 RVA: 0x00E168A1 File Offset: 0x00E14AA1
+		// Token: 0x060300C3 RID: 196803 RVA: 0x00D675B9 File Offset: 0x00D657B9
 		public CookTipsView(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B152 RID: 242002 RVA: 0x00E168B8 File Offset: 0x00E14AB8
+		// Token: 0x060300C4 RID: 196804 RVA: 0x00D675D0 File Offset: 0x00D657D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B153 RID: 242003 RVA: 0x00E16B5A File Offset: 0x00E14D5A
+		// Token: 0x060300C5 RID: 196805 RVA: 0x00D67872 File Offset: 0x00D65A72
 		protected override void OnBeforeDestroy()
 		{
 			this.MaterialHorizontal.ClearChildren();
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.MachiningVertical = null;
 		}
 
-		// Token: 0x0603B154 RID: 242004 RVA: 0x00E16B80 File Offset: 0x00E14D80
+		// Token: 0x060300C6 RID: 196806 RVA: 0x00D67898 File Offset: 0x00D65A98
 		protected override void OnStart()
 		{
 			this.ConfirmButtonCompose = new ConfirmButtonCompose(base.GetItem(8));
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.MachiningVertical = new GenericLayoutNew<MachiningClueItem>(base.GetVerticalLayout(21), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<MachiningClueItem>(this.InitMachining), null);
 		}
 
-		// Token: 0x0603B155 RID: 242005 RVA: 0x00E16BF8 File Offset: 0x00E14DF8
+		// Token: 0x060300C7 RID: 196807 RVA: 0x00D67910 File Offset: 0x00D65B10
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -120,17 +120,17 @@ namespace CSharpScript.Game.Module.Cook.View
 			};
 		}
 
-		// Token: 0x0603B156 RID: 242006 RVA: 0x00E16C4A File Offset: 0x00E14E4A
+		// Token: 0x060300C8 RID: 196808 RVA: 0x00D67962 File Offset: 0x00D65B62
 		private void OnClicked(ISingleItemInfo itemData, int _)
 		{
 			if (!itemData.Proto_IsUnlock)
 			{
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(itemData.Proto_ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(itemData.Proto_ItemId, true, null, false);
 		}
 
-		// Token: 0x0603B157 RID: 242007 RVA: 0x00E16C68 File Offset: 0x00E14E68
+		// Token: 0x060300C9 RID: 196809 RVA: 0x00D67980 File Offset: 0x00D65B80
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			};
 		}
 
-		// Token: 0x0603B158 RID: 242008 RVA: 0x00E16CB4 File Offset: 0x00E14EB4
+		// Token: 0x060300CA RID: 196810 RVA: 0x00D679CC File Offset: 0x00D65BCC
 		public void RefreshTips(ICookingData itemData)
 		{
 			this.ItemData = itemData;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.RefreshMachining();
 		}
 
-		// Token: 0x0603B159 RID: 242009 RVA: 0x00E16CE4 File Offset: 0x00E14EE4
+		// Token: 0x060300CB RID: 196811 RVA: 0x00D679FC File Offset: 0x00D65BFC
 		private void RefreshCooking()
 		{
 			ICookingData cookingData = this.ItemData as ICookingData;
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			}
 		}
 
-		// Token: 0x0603B15A RID: 242010 RVA: 0x00E16D2C File Offset: 0x00E14F2C
+		// Token: 0x060300CC RID: 196812 RVA: 0x00D67A44 File Offset: 0x00D65C44
 		private void RefreshCookMenu(ICookingData data)
 		{
 			CookFormula cookFormulaByFormulaItemId = CookConfig.Instance.GetCookFormulaByFormulaItemId(data.ItemId);
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.RefreshConfirmButton(textById2, true);
 		}
 
-		// Token: 0x0603B15B RID: 242011 RVA: 0x00E16E00 File Offset: 0x00E15000
+		// Token: 0x060300CD RID: 196813 RVA: 0x00D67B18 File Offset: 0x00D65D18
 		private void RefreshCookFood(ICookingData data)
 		{
 			CookFormula cookFormulaById = CookConfig.Instance.GetCookFormulaById(data.ItemId);
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.SetMaterialList(data.ItemId, ECookListType.Cooking);
 		}
 
-		// Token: 0x0603B15C RID: 242012 RVA: 0x00E16F40 File Offset: 0x00E15140
+		// Token: 0x060300CE RID: 196814 RVA: 0x00D67C58 File Offset: 0x00D65E58
 		private void SetCookMenuHide()
 		{
 			base.GetText(3).SetUIActive(true);
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetText(16).SetUIActive(false);
 		}
 
-		// Token: 0x0603B15D RID: 242013 RVA: 0x00E16FB0 File Offset: 0x00E151B0
+		// Token: 0x060300CF RID: 196815 RVA: 0x00D67CC8 File Offset: 0x00D65EC8
 		private void SetCookFoodHide()
 		{
 			base.GetText(3).SetUIActive(true);
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetText(16).SetUIActive(true);
 		}
 
-		// Token: 0x0603B15E RID: 242014 RVA: 0x00E17020 File Offset: 0x00E15220
+		// Token: 0x060300D0 RID: 196816 RVA: 0x00D67D38 File Offset: 0x00D65F38
 		private void RefreshMachining()
 		{
 			this.SetMachiningHide();
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.SetMaterialList(machiningData.ItemId, ECookListType.Machining);
 		}
 
-		// Token: 0x0603B15F RID: 242015 RVA: 0x00E17154 File Offset: 0x00E15354
+		// Token: 0x060300D1 RID: 196817 RVA: 0x00D67E6C File Offset: 0x00D6606C
 		private void SetMachiningHide()
 		{
 			base.GetText(3).SetUIActive(false);
@@ -304,49 +304,49 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetText(16).SetUIActive(false);
 		}
 
-		// Token: 0x0603B160 RID: 242016 RVA: 0x00E171C1 File Offset: 0x00E153C1
+		// Token: 0x060300D2 RID: 196818 RVA: 0x00D67ED9 File Offset: 0x00D660D9
 		private void SetNameText(string name)
 		{
 			base.GetText(0).SetText(name, true);
 		}
 
-		// Token: 0x0603B161 RID: 242017 RVA: 0x00E171D4 File Offset: 0x00E153D4
+		// Token: 0x060300D3 RID: 196819 RVA: 0x00D67EEC File Offset: 0x00D660EC
 		private void SetIconTexture(string icon)
 		{
 			base.SetTextureByPath(icon, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x0603B162 RID: 242018 RVA: 0x00E171F9 File Offset: 0x00E153F9
+		// Token: 0x060300D4 RID: 196820 RVA: 0x00D67F11 File Offset: 0x00D66111
 		private void SetContentText(string text)
 		{
 			base.GetText(3).SetText(text, true);
 		}
 
-		// Token: 0x0603B163 RID: 242019 RVA: 0x00E17209 File Offset: 0x00E15409
+		// Token: 0x060300D5 RID: 196821 RVA: 0x00D67F21 File Offset: 0x00D66121
 		private void SetAttributeText(string text)
 		{
 			base.GetText(12).SetText(text, true);
 		}
 
-		// Token: 0x0603B164 RID: 242020 RVA: 0x00E1721A File Offset: 0x00E1541A
+		// Token: 0x060300D6 RID: 196822 RVA: 0x00D67F32 File Offset: 0x00D66132
 		private void SetMachiningAttributeText(string text)
 		{
 			base.GetText(22).SetText(text, true);
 		}
 
-		// Token: 0x0603B165 RID: 242021 RVA: 0x00E1722B File Offset: 0x00E1542B
+		// Token: 0x060300D7 RID: 196823 RVA: 0x00D67F43 File Offset: 0x00D66143
 		private void SetTypeNameText(string text)
 		{
 			base.GetText(15).SetText(text, true);
 		}
 
-		// Token: 0x0603B166 RID: 242022 RVA: 0x00E1723C File Offset: 0x00E1543C
+		// Token: 0x060300D8 RID: 196824 RVA: 0x00D67F54 File Offset: 0x00D66154
 		private void SetHaveText(int have)
 		{
 			LguiUtil.Instance.SetLocalText(base.GetText(14), "Have", new <>z__ReadOnlySingleElementList<object>(have));
 		}
 
-		// Token: 0x0603B167 RID: 242023 RVA: 0x00E17260 File Offset: 0x00E15460
+		// Token: 0x060300D9 RID: 196825 RVA: 0x00D67F78 File Offset: 0x00D66178
 		private void SetProficiencyText(int cookCount, int single, int sum)
 		{
 			int num = single * sum;
@@ -372,27 +372,27 @@ namespace CSharpScript.Game.Module.Cook.View
 			}));
 		}
 
-		// Token: 0x0603B168 RID: 242024 RVA: 0x00E17309 File Offset: 0x00E15509
+		// Token: 0x060300DA RID: 196826 RVA: 0x00D68021 File Offset: 0x00D66221
 		private void RefreshConfirmButton(string text, bool isEnable)
 		{
 			this.ConfirmButtonCompose.UpdateText(text);
 			this.ConfirmButtonCompose.RefreshButton(isEnable);
 		}
 
-		// Token: 0x0603B169 RID: 242025 RVA: 0x00E17323 File Offset: 0x00E15523
+		// Token: 0x060300DB RID: 196827 RVA: 0x00D6803B File Offset: 0x00D6623B
 		private void RefreshDisableButton(bool isEnable)
 		{
 			(base.GetButton(23).GetOwner() as AUIBaseActor).GetUIItem().SetUIActive(!isEnable);
 		}
 
-		// Token: 0x0603B16A RID: 242026 RVA: 0x00E17348 File Offset: 0x00E15548
+		// Token: 0x060300DC RID: 196828 RVA: 0x00D68060 File Offset: 0x00D66260
 		private void SetMaterialList(int itemId, ECookListType type)
 		{
 			List<ISingleItemInfo> cookMaterialList = CookModel.Instance.GetCookMaterialList(itemId, type);
 			this.MaterialHorizontal.RebuildLayoutByDataNew<ISingleItemInfo>(cookMaterialList, null);
 		}
 
-		// Token: 0x0603B16B RID: 242027 RVA: 0x00E17378 File Offset: 0x00E15578
+		// Token: 0x060300DD RID: 196829 RVA: 0x00D68090 File Offset: 0x00D66290
 		private void SetInterations()
 		{
 			IMachiningData machiningData = this.ItemData as IMachiningData;
@@ -424,7 +424,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.MachiningVertical.RebuildLayoutByDataNew<IMachiningClueData>(list, null);
 		}
 
-		// Token: 0x0603B16C RID: 242028 RVA: 0x00E1745C File Offset: 0x00E1565C
+		// Token: 0x060300DE RID: 196830 RVA: 0x00D68174 File Offset: 0x00D66374
 		private void OnClickConfirmButton()
 		{
 			if (CookModel.Instance.CurrentCookListType == ECookListType.Cooking)
@@ -455,21 +455,21 @@ namespace CSharpScript.Game.Module.Cook.View
 			}
 		}
 
-		// Token: 0x0603B16D RID: 242029 RVA: 0x00E1750E File Offset: 0x00E1570E
+		// Token: 0x060300DF RID: 196831 RVA: 0x00D68226 File Offset: 0x00D66426
 		private void OnDisableCook()
 		{
 			GenericPromptController.Instance.ShowPromptByCode("MaterialShort", Array.Empty<object>());
 		}
 
-		// Token: 0x0401ECEB RID: 126187
+		// Token: 0x040197A7 RID: 104359
 		[Nullable(2)]
 		private ICookItemData ItemData;
 
-		// Token: 0x0401ECEC RID: 126188
+		// Token: 0x040197A8 RID: 104360
 		[Nullable(2)]
 		private ConfirmButtonCompose ConfirmButtonCompose;
 
-		// Token: 0x0401ECED RID: 126189
+		// Token: 0x040197A9 RID: 104361
 		[Nullable(new byte[]
 		{
 			2,
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.Module.Cook.View
 		})]
 		private GenericLayoutNew<MaterialItem> MaterialHorizontal;
 
-		// Token: 0x0401ECEE RID: 126190
+		// Token: 0x040197AA RID: 104362
 		[Nullable(new byte[]
 		{
 			2,
@@ -485,43 +485,43 @@ namespace CSharpScript.Game.Module.Cook.View
 		})]
 		private GenericLayoutNew<MachiningClueItem> MachiningVertical;
 
-		// Token: 0x0200BD65 RID: 48485
+		// Token: 0x0200A76E RID: 42862
 		[NullableContext(0)]
 		private enum ECookTipsDefine
 		{
-			// Token: 0x04039200 RID: 233984
+			// Token: 0x04033BCC RID: 211916
 			NameText,
-			// Token: 0x04039201 RID: 233985
+			// Token: 0x04033BCD RID: 211917
 			IconTexture,
-			// Token: 0x04039202 RID: 233986
+			// Token: 0x04033BCE RID: 211918
 			CookCountText,
-			// Token: 0x04039203 RID: 233987
+			// Token: 0x04033BCF RID: 211919
 			ConTentText,
-			// Token: 0x04039204 RID: 233988
+			// Token: 0x04033BD0 RID: 211920
 			TipsBtnItem = 6,
-			// Token: 0x04039205 RID: 233989
+			// Token: 0x04033BD1 RID: 211921
 			TipsConfirmButton = 8,
-			// Token: 0x04039206 RID: 233990
+			// Token: 0x04033BD2 RID: 211922
 			AttributeText = 12,
-			// Token: 0x04039207 RID: 233991
+			// Token: 0x04033BD3 RID: 211923
 			HaveText = 14,
-			// Token: 0x04039208 RID: 233992
+			// Token: 0x04033BD4 RID: 211924
 			TypeNameText,
-			// Token: 0x04039209 RID: 233993
+			// Token: 0x04033BD5 RID: 211925
 			SumText,
-			// Token: 0x0403920A RID: 233994
+			// Token: 0x04033BD6 RID: 211926
 			MaterialLayoutItem,
-			// Token: 0x0403920B RID: 233995
+			// Token: 0x04033BD7 RID: 211927
 			MaterialHorizontalLayout,
-			// Token: 0x0403920C RID: 233996
+			// Token: 0x04033BD8 RID: 211928
 			CookingIntroduceItem,
-			// Token: 0x0403920D RID: 233997
+			// Token: 0x04033BD9 RID: 211929
 			MachiningConditionItem,
-			// Token: 0x0403920E RID: 233998
+			// Token: 0x04033BDA RID: 211930
 			MachiningVerticalLayout,
-			// Token: 0x0403920F RID: 233999
+			// Token: 0x04033BDB RID: 211931
 			MachiningAttributeText,
-			// Token: 0x04039210 RID: 234000
+			// Token: 0x04033BDC RID: 211932
 			DisableButton
 		}
 	}

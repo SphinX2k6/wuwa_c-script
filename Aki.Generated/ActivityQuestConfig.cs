@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AC8 RID: 2760
+	// Token: 0x02000BA2 RID: 2978
 	public struct ActivityQuestConfig : IFlatbufferObject
 	{
-		// Token: 0x1700015D RID: 349
-		// (get) Token: 0x06004394 RID: 17300 RVA: 0x001CC9A1 File Offset: 0x001CABA1
+		// Token: 0x17000174 RID: 372
+		// (get) Token: 0x060048DB RID: 18651 RVA: 0x001EC581 File Offset: 0x001EA781
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004395 RID: 17301 RVA: 0x001CC9AE File Offset: 0x001CABAE
+		// Token: 0x060048DC RID: 18652 RVA: 0x001EC58E File Offset: 0x001EA78E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004396 RID: 17302 RVA: 0x001CC9B8 File Offset: 0x001CABB8
+		// Token: 0x060048DD RID: 18653 RVA: 0x001EC598 File Offset: 0x001EA798
 		public static ActivityQuestConfig GetRootAsActivityQuestConfig(ByteBuffer _bb)
 		{
 			return ActivityQuestConfig.GetRootAsActivityQuestConfig(_bb, default(ActivityQuestConfig));
 		}
 
-		// Token: 0x06004397 RID: 17303 RVA: 0x001CC9D4 File Offset: 0x001CABD4
+		// Token: 0x060048DE RID: 18654 RVA: 0x001EC5B4 File Offset: 0x001EA7B4
 		public static ActivityQuestConfig GetRootAsActivityQuestConfig(ByteBuffer _bb, ActivityQuestConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004398 RID: 17304 RVA: 0x001CC9F1 File Offset: 0x001CABF1
+		// Token: 0x060048DF RID: 18655 RVA: 0x001EC5D1 File Offset: 0x001EA7D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004399 RID: 17305 RVA: 0x001CCA00 File Offset: 0x001CAC00
+		// Token: 0x060048E0 RID: 18656 RVA: 0x001EC5E0 File Offset: 0x001EA7E0
 		public ActivityQuestConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700015E RID: 350
-		// (get) Token: 0x0600439A RID: 17306 RVA: 0x001CCA10 File Offset: 0x001CAC10
+		// Token: 0x17000175 RID: 373
+		// (get) Token: 0x060048E1 RID: 18657 RVA: 0x001EC5F0 File Offset: 0x001EA7F0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700015F RID: 351
-		// (get) Token: 0x0600439B RID: 17307 RVA: 0x001CCA4C File Offset: 0x001CAC4C
+		// Token: 0x17000176 RID: 374
+		// (get) Token: 0x060048E2 RID: 18658 RVA: 0x001EC62C File Offset: 0x001EA82C
 		public int QuestId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000160 RID: 352
-		// (get) Token: 0x0600439C RID: 17308 RVA: 0x001CCA88 File Offset: 0x001CAC88
+		// Token: 0x17000177 RID: 375
+		// (get) Token: 0x060048E3 RID: 18659 RVA: 0x001EC668 File Offset: 0x001EA868
 		public int ActivityId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000161 RID: 353
-		// (get) Token: 0x0600439D RID: 17309 RVA: 0x001CCAC4 File Offset: 0x001CACC4
+		// Token: 0x17000178 RID: 376
+		// (get) Token: 0x060048E4 RID: 18660 RVA: 0x001EC6A4 File Offset: 0x001EA8A4
 		public int ConditionId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000162 RID: 354
-		// (get) Token: 0x0600439E RID: 17310 RVA: 0x001CCB04 File Offset: 0x001CAD04
+		// Token: 0x17000179 RID: 377
+		// (get) Token: 0x060048E5 RID: 18661 RVA: 0x001EC6E4 File Offset: 0x001EA8E4
 		public int OpenDay
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000163 RID: 355
-		// (get) Token: 0x0600439F RID: 17311 RVA: 0x001CCB44 File Offset: 0x001CAD44
+		// Token: 0x1700017A RID: 378
+		// (get) Token: 0x060048E6 RID: 18662 RVA: 0x001EC724 File Offset: 0x001EA924
 		public bool IsDisplay
 		{
 			get
@@ -133,7 +133,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004AA5 RID: 19109
+		// Token: 0x0400507F RID: 20607
 		private Table __p;
 	}
 }

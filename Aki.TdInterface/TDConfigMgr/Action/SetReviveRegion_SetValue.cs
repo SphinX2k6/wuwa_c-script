@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021D7 RID: 8663
+	// Token: 0x02002442 RID: 9282
 	public class SetReviveRegion_SetValue
 	{
-		// Token: 0x0400719D RID: 29085
+		// Token: 0x040077E6 RID: 30694
 		public ESetReviveType SetReviveType;
 
-		// Token: 0x0400719E RID: 29086
+		// Token: 0x040077E7 RID: 30695
 		public int ReviveId;
 	}
 }

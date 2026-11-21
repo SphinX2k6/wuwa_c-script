@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 {
-	// Token: 0x02006492 RID: 25746
+	// Token: 0x02005410 RID: 21520
 	public class MatchThreeDifficultyTabItem : GridProxyAbstract<MatchThreeLevel>
 	{
-		// Token: 0x06040A84 RID: 264836 RVA: 0x00FA61EC File Offset: 0x00FA43EC
+		// Token: 0x06035748 RID: 218952 RVA: 0x00EED234 File Offset: 0x00EEB434
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -40,19 +40,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040A85 RID: 264837 RVA: 0x00FA62F5 File Offset: 0x00FA44F5
+		// Token: 0x06035749 RID: 218953 RVA: 0x00EED33D File Offset: 0x00EEB53D
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnMatchThreeChallengeStateUpdate, new Action<int>(this.OnChallengeStateUpdate));
 		}
 
-		// Token: 0x06040A86 RID: 264838 RVA: 0x00FA6313 File Offset: 0x00FA4513
+		// Token: 0x0603574A RID: 218954 RVA: 0x00EED35B File Offset: 0x00EEB55B
 		public void SetNormalLevelId(int normalLevelId)
 		{
 			this.NormalLevelId = normalLevelId;
 		}
 
-		// Token: 0x06040A87 RID: 264839 RVA: 0x00FA631C File Offset: 0x00FA451C
+		// Token: 0x0603574B RID: 218955 RVA: 0x00EED364 File Offset: 0x00EEB564
 		public override void Refresh(MatchThreeLevel data, bool isSelected, int gridIndex)
 		{
 			this.LevelConfig = new MatchThreeLevel?(data);
@@ -60,21 +60,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.RefreshLockAndComplete();
 		}
 
-		// Token: 0x06040A88 RID: 264840 RVA: 0x00FA6336 File Offset: 0x00FA4536
+		// Token: 0x0603574C RID: 218956 RVA: 0x00EED37E File Offset: 0x00EEB57E
 		public void SetToggleActive(bool selected)
 		{
 			this.IsSelected = selected;
 			this.RefreshToggleState();
 		}
 
-		// Token: 0x06040A89 RID: 264841 RVA: 0x00FA6348 File Offset: 0x00FA4548
+		// Token: 0x0603574D RID: 218957 RVA: 0x00EED390 File Offset: 0x00EEB590
 		private void RefreshTitle()
 		{
 			string textStringId = (this.LevelConfig != null && this.LevelConfig.GetValueOrDefault().Difficulty == 0) ? "Tetristext_06" : "Tetristext_07";
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textStringId, Array.Empty<object>());
 		}
 
-		// Token: 0x06040A8A RID: 264842 RVA: 0x00FA63A0 File Offset: 0x00FA45A0
+		// Token: 0x0603574E RID: 218958 RVA: 0x00EED3E8 File Offset: 0x00EEB5E8
 		private void RefreshLockAndComplete()
 		{
 			ActivityMatchThreeData matchThreeData = ActivityMatchThreeController.Instance.GetMatchThreeData();
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.RefreshToggleState();
 		}
 
-		// Token: 0x06040A8B RID: 264843 RVA: 0x00FA646C File Offset: 0x00FA466C
+		// Token: 0x0603574F RID: 218959 RVA: 0x00EED4B4 File Offset: 0x00EEB6B4
 		private void RefreshToggleState()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			extendToggle.SetToggleState(this.IsSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06040A8C RID: 264844 RVA: 0x00FA64A7 File Offset: 0x00FA46A7
+		// Token: 0x06035750 RID: 218960 RVA: 0x00EED4EF File Offset: 0x00EEB6EF
 		private void OnClickedEnterButton(EToggleState state)
 		{
 			if (this.LevelConfig == null || state != EToggleState.ETT_Checked)
@@ -129,28 +129,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			matchThreeLevelDetailView.ChangeDifficultyIndex(base.GridIndex);
 		}
 
-		// Token: 0x06040A8D RID: 264845 RVA: 0x00FA64DF File Offset: 0x00FA46DF
+		// Token: 0x06035751 RID: 218961 RVA: 0x00EED527 File Offset: 0x00EEB727
 		private void OnChallengeStateUpdate(int challengeId)
 		{
 			this.RefreshLockAndComplete();
 		}
 
-		// Token: 0x06040A8E RID: 264846 RVA: 0x00FA64E7 File Offset: 0x00FA46E7
+		// Token: 0x06035752 RID: 218962 RVA: 0x00EED52F File Offset: 0x00EEB72F
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.OnMatchThreeChallengeStateUpdate, new Action<int>(this.OnChallengeStateUpdate));
 		}
 
-		// Token: 0x04021A28 RID: 137768
+		// Token: 0x0401C359 RID: 115545
 		private MatchThreeLevel? LevelConfig;
 
-		// Token: 0x04021A29 RID: 137769
+		// Token: 0x0401C35A RID: 115546
 		private bool IsSelected;
 
-		// Token: 0x04021A2A RID: 137770
+		// Token: 0x0401C35B RID: 115547
 		private bool IsPrevFinish = true;
 
-		// Token: 0x04021A2B RID: 137771
+		// Token: 0x0401C35C RID: 115548
 		private int NormalLevelId;
 	}
 }

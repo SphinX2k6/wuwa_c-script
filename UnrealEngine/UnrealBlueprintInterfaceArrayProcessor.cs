@@ -7,7 +7,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000056 RID: 86
+	// Token: 0x0200003B RID: 59
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,21 +16,21 @@ namespace UnrealEngine
 	})]
 	public sealed class UnrealBlueprintInterfaceArrayProcessor<T> : NativeArrayProcessorBase<T> where T : class, IUnrealBlueprintInterface
 	{
-		// Token: 0x060008E4 RID: 2276 RVA: 0x00010B99 File Offset: 0x0000ED99
+		// Token: 0x06000869 RID: 2153 RVA: 0x0000D405 File Offset: 0x0000B605
 		public UnrealBlueprintInterfaceArrayProcessor()
 		{
 			this.Size = sizeof(FScriptInterface);
 			this.MinAlignment = typeof(FScriptInterface).GetCustomAttribute<UnrealStructLayoutAttribute>().Pack;
 		}
 
-		// Token: 0x060008E5 RID: 2277 RVA: 0x00010BC7 File Offset: 0x0000EDC7
+		// Token: 0x0600086A RID: 2154 RVA: 0x0000D433 File Offset: 0x0000B633
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override T Get(IntPtr Data, int Index)
 		{
 			return (Data + (IntPtr)(Index * this.Size)).ToInterface<T>();
 		}
 
-		// Token: 0x060008E6 RID: 2278 RVA: 0x00010BD9 File Offset: 0x0000EDD9
+		// Token: 0x0600086B RID: 2155 RVA: 0x0000D445 File Offset: 0x0000B645
 		[NullableContext(2)]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override void Set(IntPtr Data, int Index, T Value)
@@ -40,7 +40,7 @@ namespace UnrealEngine
 			ptr = new FScriptInterface((t != null) ? t.NativePtr : IntPtr.Zero, IntPtr.Zero);
 		}
 
-		// Token: 0x060008E7 RID: 2279 RVA: 0x00010C0C File Offset: 0x0000EE0C
+		// Token: 0x0600086C RID: 2156 RVA: 0x0000D478 File Offset: 0x0000B678
 		[NullableContext(2)]
 		public unsafe override int FindIndex(IntPtr Data, int Num, T Value)
 		{
@@ -56,14 +56,14 @@ namespace UnrealEngine
 			return -1;
 		}
 
-		// Token: 0x060008E8 RID: 2280 RVA: 0x00010C62 File Offset: 0x0000EE62
+		// Token: 0x0600086D RID: 2157 RVA: 0x0000D4CE File Offset: 0x0000B6CE
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public unsafe override void ConstructValues(IntPtr Data, int Index, int Count)
 		{
 			NativeMemory.Clear((void*)(Data + (byte*)((IntPtr)(Index * this.Size))), (UIntPtr)((IntPtr)(Count * this.Size)));
 		}
 
-		// Token: 0x060008E9 RID: 2281 RVA: 0x00010C7D File Offset: 0x0000EE7D
+		// Token: 0x0600086E RID: 2158 RVA: 0x0000D4E9 File Offset: 0x0000B6E9
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override void CopyTo(IntPtr Data, IntPtr Dest, int Num)
 		{

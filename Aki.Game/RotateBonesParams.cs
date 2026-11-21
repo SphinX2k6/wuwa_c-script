@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020030E3 RID: 12515
+// Token: 0x0200263B RID: 9787
 [NullableContext(1)]
 [Nullable(0)]
 public class RotateBonesParams
 {
-	// Token: 0x170024D3 RID: 9427
-	// (get) Token: 0x0601ACC8 RID: 109768 RVA: 0x0073AFC0 File Offset: 0x007391C0
-	// (set) Token: 0x0601ACC9 RID: 109769 RVA: 0x0073AFC8 File Offset: 0x007391C8
+	// Token: 0x1700265D RID: 9821
+	// (get) Token: 0x060186E4 RID: 100068 RVA: 0x007609FC File Offset: 0x0075EBFC
+	// (set) Token: 0x060186E5 RID: 100069 RVA: 0x00760A04 File Offset: 0x0075EC04
 	public long Handle { get; private set; }
 
-	// Token: 0x0601ACCA RID: 109770 RVA: 0x0073AFD4 File Offset: 0x007391D4
+	// Token: 0x060186E6 RID: 100070 RVA: 0x00760A10 File Offset: 0x0075EC10
 	public RotateBonesParams(long handle, TArray<string> bones)
 	{
 		this.Handle = handle;
@@ -28,7 +28,7 @@ public class RotateBonesParams
 		}
 	}
 
-	// Token: 0x0601ACCB RID: 109771 RVA: 0x0073B038 File Offset: 0x00739238
+	// Token: 0x060186E7 RID: 100071 RVA: 0x00760A74 File Offset: 0x0075EC74
 	public void Set(float timeLength, float targetAlpha, Dictionary<string, float> currentAlphaMap)
 	{
 		this.CurrentTime = 0f;
@@ -42,13 +42,13 @@ public class RotateBonesParams
 		this.GoingToEnd = (targetAlpha <= 0f);
 	}
 
-	// Token: 0x0601ACCC RID: 109772 RVA: 0x0073B0CC File Offset: 0x007392CC
+	// Token: 0x060186E8 RID: 100072 RVA: 0x00760B08 File Offset: 0x0075ED08
 	public bool IsEnd()
 	{
 		return this.RotateBoneItemMap.Count == 0 || (this.GoingToEnd && this.CurrentTime >= this.TimeLength);
 	}
 
-	// Token: 0x0601ACCD RID: 109773 RVA: 0x0073B0F8 File Offset: 0x007392F8
+	// Token: 0x060186E9 RID: 100073 RVA: 0x00760B34 File Offset: 0x0075ED34
 	public void GetAndUpdate(float deltaTime, Dictionary<string, float> outAlphaMap)
 	{
 		this.CurrentTime += deltaTime;
@@ -70,15 +70,15 @@ public class RotateBonesParams
 		}
 	}
 
-	// Token: 0x0400CEFB RID: 52987
+	// Token: 0x0400D2EB RID: 53995
 	private readonly Dictionary<string, RotateBoneItem> RotateBoneItemMap = new Dictionary<string, RotateBoneItem>();
 
-	// Token: 0x0400CEFC RID: 52988
+	// Token: 0x0400D2EC RID: 53996
 	private float CurrentTime;
 
-	// Token: 0x0400CEFD RID: 52989
+	// Token: 0x0400D2ED RID: 53997
 	private float TimeLength = 1f;
 
-	// Token: 0x0400CEFE RID: 52990
+	// Token: 0x0400D2EE RID: 53998
 	public bool GoingToEnd;
 }

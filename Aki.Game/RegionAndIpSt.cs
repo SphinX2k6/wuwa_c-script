@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020020A3 RID: 8355
+// Token: 0x0200157A RID: 5498
 [NullableContext(1)]
 [Nullable(0)]
 public class RegionAndIpSt
 {
-	// Token: 0x060107A9 RID: 67497 RVA: 0x00405E7E File Offset: 0x0040407E
+	// Token: 0x0600DC17 RID: 56343 RVA: 0x00412492 File Offset: 0x00410692
 	public void Phrase(string region, string ip)
 	{
 		this.Region = region;
 		this.Ip = ip;
 	}
 
-	// Token: 0x040079E5 RID: 31205
+	// Token: 0x04007AE3 RID: 31459
 	public string Region = string.Empty;
 
-	// Token: 0x040079E6 RID: 31206
+	// Token: 0x04007AE4 RID: 31460
 	public string Ip = string.Empty;
 }

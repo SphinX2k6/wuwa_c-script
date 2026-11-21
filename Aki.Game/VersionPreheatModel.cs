@@ -7,13 +7,13 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001558 RID: 5464
+// Token: 0x02000A10 RID: 2576
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class VersionPreheatModel : ModelBase
 {
-	// Token: 0x06009CAD RID: 40109 RVA: 0x0021E3C0 File Offset: 0x0021C5C0
+	// Token: 0x0600708B RID: 28811 RVA: 0x00228170 File Offset: 0x00226370
 	protected override bool OnInit()
 	{
 		this.ActivityContext = new VersionPreheatActivityContext();
@@ -21,15 +21,15 @@ public class VersionPreheatModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06009CAE RID: 40110 RVA: 0x0021E3D9 File Offset: 0x0021C5D9
+	// Token: 0x0600708C RID: 28812 RVA: 0x00228189 File Offset: 0x00226389
 	protected override bool OnClear()
 	{
 		this.ActivityContext.Dispose();
 		return true;
 	}
 
-	// Token: 0x17000D73 RID: 3443
-	// (get) Token: 0x06009CAF RID: 40111 RVA: 0x0021E3E7 File Offset: 0x0021C5E7
+	// Token: 0x17000D94 RID: 3476
+	// (get) Token: 0x0600708D RID: 28813 RVA: 0x00228197 File Offset: 0x00226397
 	public VersionPreheatActivityContext ActivityData
 	{
 		get
@@ -38,8 +38,8 @@ public class VersionPreheatModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000D74 RID: 3444
-	// (get) Token: 0x06009CB0 RID: 40112 RVA: 0x0021E3F0 File Offset: 0x0021C5F0
+	// Token: 0x17000D95 RID: 3477
+	// (get) Token: 0x0600708E RID: 28814 RVA: 0x002281A0 File Offset: 0x002263A0
 	public bool IsBonusAvailable
 	{
 		get
@@ -59,8 +59,8 @@ public class VersionPreheatModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000D75 RID: 3445
-	// (get) Token: 0x06009CB1 RID: 40113 RVA: 0x0021E470 File Offset: 0x0021C670
+	// Token: 0x17000D96 RID: 3478
+	// (get) Token: 0x0600708F RID: 28815 RVA: 0x00228220 File Offset: 0x00226420
 	public bool HasNewQuest
 	{
 		get
@@ -81,25 +81,25 @@ public class VersionPreheatModel : ModelBase
 		}
 	}
 
-	// Token: 0x06009CB2 RID: 40114 RVA: 0x0021E510 File Offset: 0x0021C710
+	// Token: 0x06007090 RID: 28816 RVA: 0x002282C0 File Offset: 0x002264C0
 	public void SyncPreheatSignSurveyInfo(int id, PreheatSignSurveyInfo info)
 	{
 		this.ActivityContext.SyncPreheatSignSurveyInfo(id, info);
 	}
 
-	// Token: 0x06009CB3 RID: 40115 RVA: 0x0021E51F File Offset: 0x0021C71F
+	// Token: 0x06007091 RID: 28817 RVA: 0x002282CF File Offset: 0x002264CF
 	public void SyncPreheatRewardedState(int id)
 	{
 		this.ActivityContext.SyncPreheatRewardedState(id);
 	}
 
-	// Token: 0x06009CB4 RID: 40116 RVA: 0x0021E52D File Offset: 0x0021C72D
+	// Token: 0x06007092 RID: 28818 RVA: 0x002282DD File Offset: 0x002264DD
 	public int GetQuestIdById(int id)
 	{
 		return this.ConfigContext.GetQuestIdById(id);
 	}
 
-	// Token: 0x06009CB5 RID: 40117 RVA: 0x0021E53C File Offset: 0x0021C73C
+	// Token: 0x06007093 RID: 28819 RVA: 0x002282EC File Offset: 0x002264EC
 	public EVersionPreheatQuestState GetQuestStateById(int id)
 	{
 		VersionPreheatQuestInfoCache cache;
@@ -110,7 +110,7 @@ public class VersionPreheatModel : ModelBase
 		return EVersionPreheatQuestState.Lock;
 	}
 
-	// Token: 0x06009CB6 RID: 40118 RVA: 0x0021E568 File Offset: 0x0021C768
+	// Token: 0x06007094 RID: 28820 RVA: 0x00228318 File Offset: 0x00226518
 	public List<VersionPreheatQuestData> BuildQuestDataList()
 	{
 		List<VersionPreheatQuestData> list = new List<VersionPreheatQuestData>();
@@ -132,7 +132,7 @@ public class VersionPreheatModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06009CB7 RID: 40119 RVA: 0x0021E638 File Offset: 0x0021C838
+	// Token: 0x06007095 RID: 28821 RVA: 0x002283E8 File Offset: 0x002265E8
 	public VersionPreheatActivityInfoData BuildActivityInfoData()
 	{
 		Activity? localConfig = this.ActivityContext.LocalConfig;
@@ -158,7 +158,7 @@ public class VersionPreheatModel : ModelBase
 		return versionPreheatActivityInfoData;
 	}
 
-	// Token: 0x06009CB8 RID: 40120 RVA: 0x0021E735 File Offset: 0x0021C935
+	// Token: 0x06007096 RID: 28822 RVA: 0x002284E5 File Offset: 0x002266E5
 	public VersionPreheatBonusData BuildBonusQuestData()
 	{
 		return new VersionPreheatBonusData
@@ -169,7 +169,7 @@ public class VersionPreheatModel : ModelBase
 		};
 	}
 
-	// Token: 0x06009CB9 RID: 40121 RVA: 0x0021E764 File Offset: 0x0021C964
+	// Token: 0x06007097 RID: 28823 RVA: 0x00228514 File Offset: 0x00226714
 	public VersionPreheatQuestDetailData BuildQuestDetailDataById(int id)
 	{
 		EVersionPreheatQuestState questStateById = this.GetQuestStateById(id);
@@ -197,7 +197,7 @@ public class VersionPreheatModel : ModelBase
 		};
 	}
 
-	// Token: 0x06009CBA RID: 40122 RVA: 0x0021E7D0 File Offset: 0x0021C9D0
+	// Token: 0x06007098 RID: 28824 RVA: 0x00228580 File Offset: 0x00226780
 	public VersionPreheatQuestDetailData BuildBonusDetailData()
 	{
 		return new VersionPreheatQuestDetailData
@@ -217,7 +217,7 @@ public class VersionPreheatModel : ModelBase
 		};
 	}
 
-	// Token: 0x06009CBB RID: 40123 RVA: 0x0021E870 File Offset: 0x0021CA70
+	// Token: 0x06007099 RID: 28825 RVA: 0x00228620 File Offset: 0x00226820
 	public VersionPreheatVoteData BuildVoteDataById(int id)
 	{
 		return new VersionPreheatVoteData
@@ -244,7 +244,7 @@ public class VersionPreheatModel : ModelBase
 		};
 	}
 
-	// Token: 0x06009CBC RID: 40124 RVA: 0x0021E960 File Offset: 0x0021CB60
+	// Token: 0x0600709A RID: 28826 RVA: 0x00228710 File Offset: 0x00226910
 	private EVersionPreheatQuestState GetQuestStateByQuestInfo(VersionPreheatQuestInfoCache cache)
 	{
 		if (TimeUtil.Instance.GetServerTimeStamp() < (double)cache.UnlockTimestamp)
@@ -275,7 +275,7 @@ public class VersionPreheatModel : ModelBase
 		return EVersionPreheatQuestState.BeforeVote;
 	}
 
-	// Token: 0x06009CBD RID: 40125 RVA: 0x0021E9DD File Offset: 0x0021CBDD
+	// Token: 0x0600709B RID: 28827 RVA: 0x0022878D File Offset: 0x0022698D
 	public bool IsQuestClickedById(int id)
 	{
 		if (this.QuestClickedCache == null)
@@ -286,7 +286,7 @@ public class VersionPreheatModel : ModelBase
 		return questClickedCache != null && questClickedCache.GetValueOrDefault(id);
 	}
 
-	// Token: 0x06009CBE RID: 40126 RVA: 0x0021EA08 File Offset: 0x0021CC08
+	// Token: 0x0600709C RID: 28828 RVA: 0x002287B8 File Offset: 0x002269B8
 	public void SetQuestClickedById(int id)
 	{
 		if (this.QuestClickedCache == null)
@@ -298,7 +298,7 @@ public class VersionPreheatModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityContext.Id);
 	}
 
-	// Token: 0x06009CBF RID: 40127 RVA: 0x0021EA5E File Offset: 0x0021CC5E
+	// Token: 0x0600709D RID: 28829 RVA: 0x0022880E File Offset: 0x00226A0E
 	public bool IsQuestPlayedById(int id)
 	{
 		if (this.QuestPlayedCache == null)
@@ -309,7 +309,7 @@ public class VersionPreheatModel : ModelBase
 		return questPlayedCache != null && questPlayedCache.GetValueOrDefault(id);
 	}
 
-	// Token: 0x06009CC0 RID: 40128 RVA: 0x0021EA88 File Offset: 0x0021CC88
+	// Token: 0x0600709E RID: 28830 RVA: 0x00228838 File Offset: 0x00226A38
 	public void SetQuestPlayedById(int id)
 	{
 		if (this.QuestPlayedCache == null)
@@ -320,7 +320,7 @@ public class VersionPreheatModel : ModelBase
 		LocalStorage.SetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.VersionPreheatToQuestPlayed, this.QuestPlayedCache);
 	}
 
-	// Token: 0x06009CC1 RID: 40129 RVA: 0x0021EAB8 File Offset: 0x0021CCB8
+	// Token: 0x0600709F RID: 28831 RVA: 0x00228868 File Offset: 0x00226A68
 	public bool IsBonusClicked()
 	{
 		if (this.BonusClickedCache == null)
@@ -330,7 +330,7 @@ public class VersionPreheatModel : ModelBase
 		return this.BonusClickedCache.GetValueOrDefault();
 	}
 
-	// Token: 0x06009CC2 RID: 40130 RVA: 0x0021EAF4 File Offset: 0x0021CCF4
+	// Token: 0x060070A0 RID: 28832 RVA: 0x002288A4 File Offset: 0x00226AA4
 	public void SetBonusClicked()
 	{
 		if (this.BonusClickedCache == null)
@@ -341,7 +341,7 @@ public class VersionPreheatModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityContext.Id);
 	}
 
-	// Token: 0x06009CC3 RID: 40131 RVA: 0x0021EB48 File Offset: 0x0021CD48
+	// Token: 0x060070A1 RID: 28833 RVA: 0x002288F8 File Offset: 0x00226AF8
 	public bool IsBonusPlayed()
 	{
 		if (this.BonusPlayedCache == null)
@@ -351,7 +351,7 @@ public class VersionPreheatModel : ModelBase
 		return this.BonusPlayedCache.GetValueOrDefault();
 	}
 
-	// Token: 0x06009CC4 RID: 40132 RVA: 0x0021EB83 File Offset: 0x0021CD83
+	// Token: 0x060070A2 RID: 28834 RVA: 0x00228933 File Offset: 0x00226B33
 	public void SetBonusPlayed()
 	{
 		if (this.BonusPlayedCache == null)
@@ -361,7 +361,7 @@ public class VersionPreheatModel : ModelBase
 		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.VersionPreheatBonusPlayed, this.BonusPlayedCache.Value);
 	}
 
-	// Token: 0x06009CC5 RID: 40133 RVA: 0x0021EBB4 File Offset: 0x0021CDB4
+	// Token: 0x060070A3 RID: 28835 RVA: 0x00228964 File Offset: 0x00226B64
 	private VersionPreheatQuestDetailPersistentData BuildQuestDetailPersistentDataById(int id)
 	{
 		VersionPreheatConfigContext configContext = this.ConfigContext;
@@ -378,7 +378,7 @@ public class VersionPreheatModel : ModelBase
 		};
 	}
 
-	// Token: 0x06009CC6 RID: 40134 RVA: 0x0021EC40 File Offset: 0x0021CE40
+	// Token: 0x060070A4 RID: 28836 RVA: 0x002289F0 File Offset: 0x00226BF0
 	private VersionPreheatQuestDetailVoteData BuildQuestDetailVoteDataById(int id)
 	{
 		long voteLeftCountById = this.ActivityContext.GetVoteLeftCountById(id);
@@ -409,7 +409,7 @@ public class VersionPreheatModel : ModelBase
 		};
 	}
 
-	// Token: 0x06009CC7 RID: 40135 RVA: 0x0021ED2C File Offset: 0x0021CF2C
+	// Token: 0x060070A5 RID: 28837 RVA: 0x00228ADC File Offset: 0x00226CDC
 	private VersionPreheatQuestDetailChatData BuildQuestDetailChatDataById(int id, EVersionPreheatQuestState state)
 	{
 		VersionPreheatQuestDetailChatData selfChatData = this.BuildQuestDetailSelfChatDataById(id, state);
@@ -421,7 +421,7 @@ public class VersionPreheatModel : ModelBase
 		};
 	}
 
-	// Token: 0x06009CC8 RID: 40136 RVA: 0x0021ED72 File Offset: 0x0021CF72
+	// Token: 0x060070A6 RID: 28838 RVA: 0x00228B22 File Offset: 0x00226D22
 	private VersionPreheatQuestDetailChatData BuildBonusDetailChatData()
 	{
 		return new VersionPreheatQuestDetailChatData
@@ -431,7 +431,7 @@ public class VersionPreheatModel : ModelBase
 		};
 	}
 
-	// Token: 0x06009CC9 RID: 40137 RVA: 0x0021ED9C File Offset: 0x0021CF9C
+	// Token: 0x060070A7 RID: 28839 RVA: 0x00228B4C File Offset: 0x00226D4C
 	[NullableContext(2)]
 	private VersionPreheatQuestDetailChatData BuildQuestDetailSelfChatDataById(int id, EVersionPreheatQuestState state)
 	{
@@ -448,7 +448,7 @@ public class VersionPreheatModel : ModelBase
 		};
 	}
 
-	// Token: 0x06009CCA RID: 40138 RVA: 0x0021EE18 File Offset: 0x0021D018
+	// Token: 0x060070A8 RID: 28840 RVA: 0x00228BC8 File Offset: 0x00226DC8
 	private VersionPreheatQuestDetailRewardData BuildQuestDetailRewardDataById(int id, EVersionPreheatQuestState state)
 	{
 		return new VersionPreheatQuestDetailRewardData
@@ -461,8 +461,8 @@ public class VersionPreheatModel : ModelBase
 		};
 	}
 
-	// Token: 0x17000D76 RID: 3446
-	// (get) Token: 0x06009CCB RID: 40139 RVA: 0x0021EE80 File Offset: 0x0021D080
+	// Token: 0x17000D97 RID: 3479
+	// (get) Token: 0x060070A9 RID: 28841 RVA: 0x00228C30 File Offset: 0x00226E30
 	public static VersionPreheatModel Instance
 	{
 		get
@@ -471,7 +471,7 @@ public class VersionPreheatModel : ModelBase
 		}
 	}
 
-	// Token: 0x06009CCC RID: 40140 RVA: 0x0021EE87 File Offset: 0x0021D087
+	// Token: 0x060070AA RID: 28842 RVA: 0x00228C37 File Offset: 0x00226E37
 	public static VersionPreheatModel GetOrCreateInstance()
 	{
 		if (VersionPreheatModel._Instance == null)
@@ -481,7 +481,7 @@ public class VersionPreheatModel : ModelBase
 		return VersionPreheatModel._Instance;
 	}
 
-	// Token: 0x06009CCD RID: 40141 RVA: 0x0021EE9B File Offset: 0x0021D09B
+	// Token: 0x060070AB RID: 28843 RVA: 0x00228C4B File Offset: 0x00226E4B
 	public static bool CreateInstance()
 	{
 		if (VersionPreheatModel._Instance != null)
@@ -492,47 +492,47 @@ public class VersionPreheatModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06009CCE RID: 40142 RVA: 0x0021EEB1 File Offset: 0x0021D0B1
+	// Token: 0x060070AC RID: 28844 RVA: 0x00228C61 File Offset: 0x00226E61
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06009CCF RID: 40143 RVA: 0x0021EEB3 File Offset: 0x0021D0B3
+	// Token: 0x060070AD RID: 28845 RVA: 0x00228C63 File Offset: 0x00226E63
 	public static void ResetStaticDefaultValue()
 	{
 		VersionPreheatModel._Instance = null;
 	}
 
-	// Token: 0x06009CD0 RID: 40144 RVA: 0x0021EEBB File Offset: 0x0021D0BB
+	// Token: 0x060070AE RID: 28846 RVA: 0x00228C6B File Offset: 0x00226E6B
 	static VersionPreheatModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(VersionPreheatModel.CreateStaticDefaultValue), new Action(VersionPreheatModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004484 RID: 17540
+	// Token: 0x0400452A RID: 17706
 	public int? CurrentUsingVersionPreheatId;
 
-	// Token: 0x04004485 RID: 17541
+	// Token: 0x0400452B RID: 17707
 	[Nullable(2)]
 	private Dictionary<int, bool> QuestClickedCache;
 
-	// Token: 0x04004486 RID: 17542
+	// Token: 0x0400452C RID: 17708
 	private bool? BonusClickedCache;
 
-	// Token: 0x04004487 RID: 17543
+	// Token: 0x0400452D RID: 17709
 	[Nullable(2)]
 	private Dictionary<int, bool> QuestPlayedCache;
 
-	// Token: 0x04004488 RID: 17544
+	// Token: 0x0400452E RID: 17710
 	private bool? BonusPlayedCache;
 
-	// Token: 0x04004489 RID: 17545
+	// Token: 0x0400452F RID: 17711
 	private VersionPreheatActivityContext ActivityContext;
 
-	// Token: 0x0400448A RID: 17546
+	// Token: 0x04004530 RID: 17712
 	private VersionPreheatConfigContext ConfigContext;
 
-	// Token: 0x0400448B RID: 17547
+	// Token: 0x04004531 RID: 17713
 	[Nullable(2)]
 	private static VersionPreheatModel _Instance;
 }

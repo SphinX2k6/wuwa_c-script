@@ -4,10 +4,10 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine.Extension
 {
-	// Token: 0x02002AE4 RID: 10980
+	// Token: 0x02000893 RID: 2195
 	public static class TSoftClassPtrExtension
 	{
-		// Token: 0x06028403 RID: 164867 RVA: 0x003D3A98 File Offset: 0x003D1C98
+		// Token: 0x0600BDB8 RID: 48568 RVA: 0x0012EDA8 File Offset: 0x0012CFA8
 		[NullableContext(1)]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static string ToAssetPathName<[Nullable(0)] T>(this TSoftClassPtr<T> Ptr) where T : UnrealUObject, IUnrealUObject

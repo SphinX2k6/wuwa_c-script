@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006823 RID: 26659
+	// Token: 0x02005773 RID: 22387
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlMainButtonItem : UiPanelBase
 	{
-		// Token: 0x06042865 RID: 272485 RVA: 0x0102A750 File Offset: 0x01028950
+		// Token: 0x060373B9 RID: 226233 RVA: 0x00F6BC8C File Offset: 0x00F69E8C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042866 RID: 272486 RVA: 0x0102A817 File Offset: 0x01028A17
+		// Token: 0x060373BA RID: 226234 RVA: 0x00F6BD53 File Offset: 0x00F69F53
 		public void SetOnClick(Action onClick)
 		{
 			this.OnClickInternal = onClick;
 		}
 
-		// Token: 0x06042867 RID: 272487 RVA: 0x0102A820 File Offset: 0x01028A20
+		// Token: 0x060373BB RID: 226235 RVA: 0x00F6BD5C File Offset: 0x00F69F5C
 		public void SetProgressText(string text)
 		{
 			UUIText text2 = base.GetText(0);
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			text2.SetText(text, true);
 		}
 
-		// Token: 0x06042868 RID: 272488 RVA: 0x0102A835 File Offset: 0x01028A35
+		// Token: 0x060373BC RID: 226236 RVA: 0x00F6BD71 File Offset: 0x00F69F71
 		public void SetProgressText(string textId, params object[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 		}
 
-		// Token: 0x06042869 RID: 272489 RVA: 0x0102A84A File Offset: 0x01028A4A
+		// Token: 0x060373BD RID: 226237 RVA: 0x00F6BD86 File Offset: 0x00F69F86
 		public void SetRedDotVisible(bool value)
 		{
 			UUIItem item = base.GetItem(1);
@@ -69,36 +69,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item.SetUIActive(value);
 		}
 
-		// Token: 0x0604286A RID: 272490 RVA: 0x0102A85E File Offset: 0x01028A5E
+		// Token: 0x060373BE RID: 226238 RVA: 0x00F6BD9A File Offset: 0x00F69F9A
 		public void BindRedDot(object _, int? __ = null)
 		{
 		}
 
-		// Token: 0x0604286B RID: 272491 RVA: 0x0102A860 File Offset: 0x01028A60
+		// Token: 0x060373BF RID: 226239 RVA: 0x00F6BD9C File Offset: 0x00F69F9C
 		public void UnBindRedDot()
 		{
 		}
 
-		// Token: 0x0604286C RID: 272492 RVA: 0x0102A862 File Offset: 0x01028A62
+		// Token: 0x060373C0 RID: 226240 RVA: 0x00F6BD9E File Offset: 0x00F69F9E
 		private void OnClick()
 		{
 			this.OnClickInternal();
 		}
 
-		// Token: 0x04022A9D RID: 141981
+		// Token: 0x0401D2FA RID: 119546
 		private Action OnClickInternal = delegate()
 		{
 		};
 
-		// Token: 0x0200C9C0 RID: 51648
+		// Token: 0x0200B38C RID: 45964
 		[NullableContext(0)]
 		private enum EComponentDefine
 		{
-			// Token: 0x0403CF33 RID: 249651
+			// Token: 0x0403781D RID: 227357
 			TxtProgress,
-			// Token: 0x0403CF34 RID: 249652
+			// Token: 0x0403781E RID: 227358
 			RedDot,
-			// Token: 0x0403CF35 RID: 249653
+			// Token: 0x0403781F RID: 227359
 			Btn
 		}
 	}

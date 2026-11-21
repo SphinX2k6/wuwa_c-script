@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004630 RID: 17968
+	// Token: 0x02004A98 RID: 19096
 	public struct IAddAllPhantom : IFlatbufferObject
 	{
-		// Token: 0x17007F84 RID: 32644
-		// (get) Token: 0x0601B363 RID: 111459 RVA: 0x003DFD7D File Offset: 0x003DDF7D
+		// Token: 0x170085C5 RID: 34245
+		// (get) Token: 0x0601CB38 RID: 117560 RVA: 0x0040C019 File Offset: 0x0040A219
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B364 RID: 111460 RVA: 0x003DFD8A File Offset: 0x003DDF8A
+		// Token: 0x0601CB39 RID: 117561 RVA: 0x0040C026 File Offset: 0x0040A226
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B365 RID: 111461 RVA: 0x003DFD94 File Offset: 0x003DDF94
+		// Token: 0x0601CB3A RID: 117562 RVA: 0x0040C030 File Offset: 0x0040A230
 		public static IAddAllPhantom GetRootAsIAddAllPhantom(ByteBuffer _bb)
 		{
 			return IAddAllPhantom.GetRootAsIAddAllPhantom(_bb, default(IAddAllPhantom));
 		}
 
-		// Token: 0x0601B366 RID: 111462 RVA: 0x003DFDB0 File Offset: 0x003DDFB0
+		// Token: 0x0601CB3B RID: 117563 RVA: 0x0040C04C File Offset: 0x0040A24C
 		public static IAddAllPhantom GetRootAsIAddAllPhantom(ByteBuffer _bb, IAddAllPhantom obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B367 RID: 111463 RVA: 0x003DFDCD File Offset: 0x003DDFCD
+		// Token: 0x0601CB3C RID: 117564 RVA: 0x0040C069 File Offset: 0x0040A269
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B368 RID: 111464 RVA: 0x003DFDDC File Offset: 0x003DDFDC
+		// Token: 0x0601CB3D RID: 117565 RVA: 0x0040C078 File Offset: 0x0040A278
 		public IAddAllPhantom __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007F85 RID: 32645
-		// (get) Token: 0x0601B369 RID: 111465 RVA: 0x003DFDEC File Offset: 0x003DDFEC
+		// Token: 0x170085C6 RID: 34246
+		// (get) Token: 0x0601CB3E RID: 117566 RVA: 0x0040C088 File Offset: 0x0040A288
 		public EGmCommand Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B36A RID: 111466 RVA: 0x003DFE28 File Offset: 0x003DE028
+		// Token: 0x0601CB3F RID: 117567 RVA: 0x0040C0C4 File Offset: 0x0040A2C4
 		public static Offset<IAddAllPhantom> CreateIAddAllPhantom(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IAddAllPhantom.EndIAddAllPhantom(builder);
 		}
 
-		// Token: 0x0601B36B RID: 111467 RVA: 0x003DFE3E File Offset: 0x003DE03E
+		// Token: 0x0601CB40 RID: 117568 RVA: 0x0040C0DA File Offset: 0x0040A2DA
 		public static void StartIAddAllPhantom(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601B36C RID: 111468 RVA: 0x003DFE47 File Offset: 0x003DE047
+		// Token: 0x0601CB41 RID: 117569 RVA: 0x0040C0E3 File Offset: 0x0040A2E3
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B36D RID: 111469 RVA: 0x003DFE52 File Offset: 0x003DE052
+		// Token: 0x0601CB42 RID: 117570 RVA: 0x0040C0EE File Offset: 0x0040A2EE
 		public static Offset<IAddAllPhantom> EndIAddAllPhantom(FlatBufferBuilder builder)
 		{
 			return new Offset<IAddAllPhantom>(builder.EndTable());
 		}
 
-		// Token: 0x0601B36E RID: 111470 RVA: 0x003DFE60 File Offset: 0x003DE060
+		// Token: 0x0601CB43 RID: 117571 RVA: 0x0040C0FC File Offset: 0x0040A2FC
 		public IAddAllPhantomT UnPack()
 		{
 			IAddAllPhantomT addAllPhantomT = new IAddAllPhantomT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return addAllPhantomT;
 		}
 
-		// Token: 0x0601B36F RID: 111471 RVA: 0x003DFE7B File Offset: 0x003DE07B
+		// Token: 0x0601CB44 RID: 117572 RVA: 0x0040C117 File Offset: 0x0040A317
 		public void UnPackTo(IAddAllPhantomT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601B370 RID: 111472 RVA: 0x003DFE8C File Offset: 0x003DE08C
+		// Token: 0x0601CB45 RID: 117573 RVA: 0x0040C128 File Offset: 0x0040A328
 		public static Offset<IAddAllPhantom> Pack(FlatBufferBuilder builder, IAddAllPhantomT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IAddAllPhantom.CreateIAddAllPhantom(builder, _o.Type);
 		}
 
-		// Token: 0x0400C7A8 RID: 51112
+		// Token: 0x0400D1D7 RID: 53719
 		private Table __p;
 	}
 }

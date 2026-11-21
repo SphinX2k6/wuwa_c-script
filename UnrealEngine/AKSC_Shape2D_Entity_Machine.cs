@@ -6,47 +6,47 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E37 RID: 7735
+	// Token: 0x0200058D RID: 1421
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_Shape2D_Entity_Machine")]
 	[UnrealStructLayout(1656, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1656)]
 	public class AKSC_Shape2D_Entity_Machine : AKSC_Shape2D_Entity, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D78A RID: 120714 RVA: 0x002B8572 File Offset: 0x002B6772
+		// Token: 0x060080A7 RID: 32935 RVA: 0x000BE066 File Offset: 0x000BC266
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKSC_Shape2D_Entity_Machine._ClassPtr;
 		}
 
-		// Token: 0x0601D78B RID: 120715 RVA: 0x002B8580 File Offset: 0x002B6780
+		// Token: 0x060080A8 RID: 32936 RVA: 0x000BE074 File Offset: 0x000BC274
 		public AKSC_Shape2D_Entity_Machine() : this(BuiltinUtils.AllocNativeUObject(AKSC_Shape2D_Entity_Machine.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D78C RID: 120716 RVA: 0x002B85A8 File Offset: 0x002B67A8
+		// Token: 0x060080A9 RID: 32937 RVA: 0x000BE09C File Offset: 0x000BC29C
 		[NullableContext(1)]
 		public AKSC_Shape2D_Entity_Machine(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKSC_Shape2D_Entity_Machine.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0601D78D RID: 120717 RVA: 0x002B85DB File Offset: 0x002B67DB
+		// Token: 0x060080AA RID: 32938 RVA: 0x000BE0CF File Offset: 0x000BC2CF
 		static AKSC_Shape2D_Entity_Machine()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_Shape2D_Entity_Machine");
 		}
 
-		// Token: 0x0601D78E RID: 120718 RVA: 0x002B85E9 File Offset: 0x002B67E9
+		// Token: 0x060080AB RID: 32939 RVA: 0x000BE0DD File Offset: 0x000BC2DD
 		protected AKSC_Shape2D_Entity_Machine(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FFA7 RID: 65447
+		// Token: 0x0400382F RID: 14383
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_Shape2D_Entity_Machine";
 
-		// Token: 0x0400FFA8 RID: 65448
+		// Token: 0x04003830 RID: 14384
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FFA9 RID: 65449
+		// Token: 0x04003831 RID: 14385
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

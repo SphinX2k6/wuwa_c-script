@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000D0 RID: 208
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020000D8 RID: 216
 	public class ElementalHolderComponent : IComponentBase
 	{
-		// Token: 0x06000394 RID: 916 RVA: 0x0001C2D8 File Offset: 0x0001A4D8
+		// Token: 0x06000398 RID: 920 RVA: 0x0001CC4C File Offset: 0x0001AE4C
 		private ElementalHolderComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000395 RID: 917 RVA: 0x0001C310 File Offset: 0x0001A510
+		// Token: 0x06000399 RID: 921 RVA: 0x0001CC84 File Offset: 0x0001AE84
 		public static ElementalHolderComponent Create([Nullable(2)] ElementalHolderComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000396 RID: 918 RVA: 0x0001C323 File Offset: 0x0001A523
+		// Token: 0x0600039A RID: 922 RVA: 0x0001CC97 File Offset: 0x0001AE97
 		public static ElementalHolderComponent CreateFromSetValue([Nullable(2)] ElementalHolderComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000397 RID: 919 RVA: 0x0001C336 File Offset: 0x0001A536
+		// Token: 0x0600039B RID: 923 RVA: 0x0001CCAA File Offset: 0x0001AEAA
 		public new ElementalHolderComponent_SetValue ToSetValue()
 		{
 			return new ElementalHolderComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000134 RID: 308
-		// (get) Token: 0x06000398 RID: 920 RVA: 0x0001C364 File Offset: 0x0001A564
-		// (set) Token: 0x06000399 RID: 921 RVA: 0x0001C39E File Offset: 0x0001A59E
+		// Token: 0x17000136 RID: 310
+		// (get) Token: 0x0600039C RID: 924 RVA: 0x0001CCD8 File Offset: 0x0001AED8
+		// (set) Token: 0x0600039D RID: 925 RVA: 0x0001CD12 File Offset: 0x0001AF12
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000135 RID: 309
-		// (get) Token: 0x0600039A RID: 922 RVA: 0x0001C3AC File Offset: 0x0001A5AC
-		// (set) Token: 0x0600039B RID: 923 RVA: 0x0001C3D6 File Offset: 0x0001A5D6
+		// Token: 0x17000137 RID: 311
+		// (get) Token: 0x0600039E RID: 926 RVA: 0x0001CD20 File Offset: 0x0001AF20
+		// (set) Token: 0x0600039F RID: 927 RVA: 0x0001CD4A File Offset: 0x0001AF4A
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000136 RID: 310
-		// (get) Token: 0x0600039C RID: 924 RVA: 0x0001C3E4 File Offset: 0x0001A5E4
-		// (set) Token: 0x0600039D RID: 925 RVA: 0x0001C445 File Offset: 0x0001A645
+		// Token: 0x17000138 RID: 312
+		// (get) Token: 0x060003A0 RID: 928 RVA: 0x0001CD58 File Offset: 0x0001AF58
+		// (set) Token: 0x060003A1 RID: 929 RVA: 0x0001CDB9 File Offset: 0x0001AFB9
 		public virtual IElementalAbilityConfig AbilityConfig
 		{
 			get
@@ -134,18 +132,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000492 RID: 1170
+		// Token: 0x040004B6 RID: 1206
 		[Nullable(2)]
 		protected new ElementalHolderComponent FbInstance;
 
-		// Token: 0x04000493 RID: 1171
+		// Token: 0x040004B7 RID: 1207
 		[Nullable(2)]
 		protected new ElementalHolderComponent_SetValue PocoInterface;
 
-		// Token: 0x04000494 RID: 1172
+		// Token: 0x040004B8 RID: 1208
 		private IElementalAbilityConfig _AbilityConfigCache;
 
-		// Token: 0x04000495 RID: 1173
+		// Token: 0x040004B9 RID: 1209
 		private bool _AbilityConfigInited;
 	}
 }

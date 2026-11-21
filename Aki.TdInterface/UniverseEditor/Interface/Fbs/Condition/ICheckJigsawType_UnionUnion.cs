@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004ABB RID: 19131
+	// Token: 0x02004F8A RID: 20362
 	public class ICheckJigsawType_UnionUnion
 	{
-		// Token: 0x17008AAC RID: 35500
-		// (get) Token: 0x0601E07C RID: 123004 RVA: 0x00436F31 File Offset: 0x00435131
-		// (set) Token: 0x0601E07D RID: 123005 RVA: 0x00436F39 File Offset: 0x00435139
+		// Token: 0x17009199 RID: 37273
+		// (get) Token: 0x0601FB65 RID: 129893 RVA: 0x00468751 File Offset: 0x00466951
+		// (set) Token: 0x0601FB66 RID: 129894 RVA: 0x00468759 File Offset: 0x00466959
 		public ICheckJigsawType_Union Type { get; set; }
 
-		// Token: 0x17008AAD RID: 35501
-		// (get) Token: 0x0601E07E RID: 123006 RVA: 0x00436F42 File Offset: 0x00435142
-		// (set) Token: 0x0601E07F RID: 123007 RVA: 0x00436F4A File Offset: 0x0043514A
+		// Token: 0x1700919A RID: 37274
+		// (get) Token: 0x0601FB67 RID: 129895 RVA: 0x00468762 File Offset: 0x00466962
+		// (set) Token: 0x0601FB68 RID: 129896 RVA: 0x0046876A File Offset: 0x0046696A
 		public object Value { get; set; }
 
-		// Token: 0x0601E080 RID: 123008 RVA: 0x00436F53 File Offset: 0x00435153
+		// Token: 0x0601FB69 RID: 129897 RVA: 0x00468773 File Offset: 0x00466973
 		public ICheckJigsawType_UnionUnion()
 		{
 			this.Type = ICheckJigsawType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601E081 RID: 123009 RVA: 0x00436F69 File Offset: 0x00435169
+		// Token: 0x0601FB6A RID: 129898 RVA: 0x00468789 File Offset: 0x00466989
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601E082 RID: 123010 RVA: 0x00436F7B File Offset: 0x0043517B
+		// Token: 0x0601FB6B RID: 129899 RVA: 0x0046879B File Offset: 0x0046699B
 		public ICheckJigsawTypeT AsICheckJigsawType()
 		{
 			return this.As<ICheckJigsawTypeT>();
 		}
 
-		// Token: 0x0601E083 RID: 123011 RVA: 0x00436F83 File Offset: 0x00435183
+		// Token: 0x0601FB6C RID: 129900 RVA: 0x004687A3 File Offset: 0x004669A3
 		public static ICheckJigsawType_UnionUnion FromICheckJigsawType(ICheckJigsawTypeT _icheckjigsawtype)
 		{
 			return new ICheckJigsawType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E084 RID: 123012 RVA: 0x00436F98 File Offset: 0x00435198
+		// Token: 0x0601FB6D RID: 129901 RVA: 0x004687B8 File Offset: 0x004669B8
 		public ICheckJigsawItemPlaceIndexT AsICheckJigsawItemPlaceIndex()
 		{
 			return this.As<ICheckJigsawItemPlaceIndexT>();
 		}
 
-		// Token: 0x0601E085 RID: 123013 RVA: 0x00436FA0 File Offset: 0x004351A0
+		// Token: 0x0601FB6E RID: 129902 RVA: 0x004687C0 File Offset: 0x004669C0
 		public static ICheckJigsawType_UnionUnion FromICheckJigsawItemPlaceIndex(ICheckJigsawItemPlaceIndexT _icheckjigsawitemplaceindex)
 		{
 			return new ICheckJigsawType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E086 RID: 123014 RVA: 0x00436FB5 File Offset: 0x004351B5
+		// Token: 0x0601FB6F RID: 129903 RVA: 0x004687D5 File Offset: 0x004669D5
 		public ICheckJigsawItemMoveT AsICheckJigsawItemMove()
 		{
 			return this.As<ICheckJigsawItemMoveT>();
 		}
 
-		// Token: 0x0601E087 RID: 123015 RVA: 0x00436FBD File Offset: 0x004351BD
+		// Token: 0x0601FB70 RID: 129904 RVA: 0x004687DD File Offset: 0x004669DD
 		public static ICheckJigsawType_UnionUnion FromICheckJigsawItemMove(ICheckJigsawItemMoveT _icheckjigsawitemmove)
 		{
 			return new ICheckJigsawType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E088 RID: 123016 RVA: 0x00436FD4 File Offset: 0x004351D4
+		// Token: 0x0601FB71 RID: 129905 RVA: 0x004687F4 File Offset: 0x004669F4
 		public static int Pack(FlatBufferBuilder builder, ICheckJigsawType_UnionUnion _o)
 		{
 			switch (_o.Type)

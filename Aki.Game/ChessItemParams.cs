@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x020011D3 RID: 4563
+// Token: 0x02000687 RID: 1671
 public class ChessItemParams : IChessItemParams
 {
-	// Token: 0x17000A5C RID: 2652
-	// (get) Token: 0x06007992 RID: 31122 RVA: 0x00199D7B File Offset: 0x00197F7B
-	// (set) Token: 0x06007993 RID: 31123 RVA: 0x00199D83 File Offset: 0x00197F83
+	// Token: 0x17000A7C RID: 2684
+	// (get) Token: 0x06004D29 RID: 19753 RVA: 0x001A2A2B File Offset: 0x001A0C2B
+	// (set) Token: 0x06004D2A RID: 19754 RVA: 0x001A2A33 File Offset: 0x001A0C33
 	public int Id { get; set; }
 
-	// Token: 0x17000A5D RID: 2653
-	// (get) Token: 0x06007994 RID: 31124 RVA: 0x00199D8C File Offset: 0x00197F8C
-	// (set) Token: 0x06007995 RID: 31125 RVA: 0x00199D94 File Offset: 0x00197F94
+	// Token: 0x17000A7D RID: 2685
+	// (get) Token: 0x06004D2B RID: 19755 RVA: 0x001A2A3C File Offset: 0x001A0C3C
+	// (set) Token: 0x06004D2C RID: 19756 RVA: 0x001A2A44 File Offset: 0x001A0C44
 	public long CreatureDataId { get; set; }
 
-	// Token: 0x17000A5E RID: 2654
-	// (get) Token: 0x06007996 RID: 31126 RVA: 0x00199D9D File Offset: 0x00197F9D
-	// (set) Token: 0x06007997 RID: 31127 RVA: 0x00199DA5 File Offset: 0x00197FA5
+	// Token: 0x17000A7E RID: 2686
+	// (get) Token: 0x06004D2D RID: 19757 RVA: 0x001A2A4D File Offset: 0x001A0C4D
+	// (set) Token: 0x06004D2E RID: 19758 RVA: 0x001A2A55 File Offset: 0x001A0C55
 	public bool RotationIsForward { get; set; }
 
-	// Token: 0x17000A5F RID: 2655
-	// (get) Token: 0x06007998 RID: 31128 RVA: 0x00199DAE File Offset: 0x00197FAE
-	// (set) Token: 0x06007999 RID: 31129 RVA: 0x00199DB6 File Offset: 0x00197FB6
+	// Token: 0x17000A7F RID: 2687
+	// (get) Token: 0x06004D2F RID: 19759 RVA: 0x001A2A5E File Offset: 0x001A0C5E
+	// (set) Token: 0x06004D30 RID: 19760 RVA: 0x001A2A66 File Offset: 0x001A0C66
 	public int InitPointId { get; set; }
 }

@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x0200563C RID: 22076
+	// Token: 0x02004612 RID: 17938
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GridPopupViewModelBattle : GridPopupViewModelBase
 	{
-		// Token: 0x17008735 RID: 34613
-		// (get) Token: 0x0603821F RID: 229919 RVA: 0x00D4BDDE File Offset: 0x00D49FDE
+		// Token: 0x17005AFC RID: 23292
+		// (get) Token: 0x0602D11D RID: 184605 RVA: 0x00C99B26 File Offset: 0x00C97D26
 		public override bool HasBtnDetail
 		{
 			get
@@ -22,12 +22,12 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038220 RID: 229920 RVA: 0x00D4BDE1 File Offset: 0x00D49FE1
+		// Token: 0x0602D11E RID: 184606 RVA: 0x00C99B29 File Offset: 0x00C97D29
 		public GridPopupViewModelBattle(MapGridData gridData, MapRogueGameInfo gameInfo) : base(gridData, gameInfo)
 		{
 		}
 
-		// Token: 0x06038221 RID: 229921 RVA: 0x00D4BDEC File Offset: 0x00D49FEC
+		// Token: 0x0602D11F RID: 184607 RVA: 0x00C99B34 File Offset: 0x00C97D34
 		public override UniTask Init()
 		{
 			GridPopupViewModelBattle.<Init>d__8 <Init>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038222 RID: 229922 RVA: 0x00D4BE2F File Offset: 0x00D4A02F
+		// Token: 0x0602D120 RID: 184608 RVA: 0x00C99B77 File Offset: 0x00C97D77
 		[NullableContext(2)]
 		public override string GetSubTxtInfo()
 		{
@@ -52,20 +52,20 @@ namespace CSharpScript.Game.Module.MapRogue
 			});
 		}
 
-		// Token: 0x06038223 RID: 229923 RVA: 0x00D4BE69 File Offset: 0x00D4A069
+		// Token: 0x0602D121 RID: 184609 RVA: 0x00C99BB1 File Offset: 0x00C97DB1
 		public override void RefreshBottom()
 		{
 			this.InfoList.Refresh(this.GridData);
 			this.RewardList.Refresh(this.GridData);
 		}
 
-		// Token: 0x06038224 RID: 229924 RVA: 0x00D4BE8D File Offset: 0x00D4A08D
+		// Token: 0x0602D122 RID: 184610 RVA: 0x00C99BD5 File Offset: 0x00C97DD5
 		public override void RefreshTop()
 		{
 			this.EventCost.Refresh(this.GridData);
 		}
 
-		// Token: 0x06038225 RID: 229925 RVA: 0x00D4BEA0 File Offset: 0x00D4A0A0
+		// Token: 0x0602D123 RID: 184611 RVA: 0x00C99BE8 File Offset: 0x00C97DE8
 		public override void RefreshFunctional()
 		{
 			if (!this.GridData.IsExplore)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.Button.SetButtonFunction(new Action<int>(base.MoveButtonFunction));
 		}
 
-		// Token: 0x06038226 RID: 229926 RVA: 0x00D4BF64 File Offset: 0x00D4A164
+		// Token: 0x0602D124 RID: 184612 RVA: 0x00C99CAC File Offset: 0x00C97EAC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -142,19 +142,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x0401D87C RID: 120956
+		// Token: 0x04018307 RID: 99079
 		protected PopupComponentRecommendTip RecommendTip;
 
-		// Token: 0x0401D87D RID: 120957
+		// Token: 0x04018308 RID: 99080
 		protected PopupComponentFunctionButton Button;
 
-		// Token: 0x0401D87E RID: 120958
+		// Token: 0x04018309 RID: 99081
 		protected PopupComponentInfoList InfoList;
 
-		// Token: 0x0401D87F RID: 120959
+		// Token: 0x0401830A RID: 99082
 		protected PopupComponentEventCost EventCost;
 
-		// Token: 0x0401D880 RID: 120960
+		// Token: 0x0401830B RID: 99083
 		protected PopupComponentRewardList RewardList;
 	}
 }

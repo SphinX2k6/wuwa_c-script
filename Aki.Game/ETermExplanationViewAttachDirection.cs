@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002B9F RID: 11167
+// Token: 0x0200211B RID: 8475
 public enum ETermExplanationViewAttachDirection
 {
-	// Token: 0x0400AD1D RID: 44317
+	// Token: 0x0400B124 RID: 45348
 	None,
-	// Token: 0x0400AD1E RID: 44318
+	// Token: 0x0400B125 RID: 45349
 	Left,
-	// Token: 0x0400AD1F RID: 44319
+	// Token: 0x0400B126 RID: 45350
 	Right,
-	// Token: 0x0400AD20 RID: 44320
+	// Token: 0x0400B127 RID: 45351
 	Up,
-	// Token: 0x0400AD21 RID: 44321
+	// Token: 0x0400B128 RID: 45352
 	Down
 }

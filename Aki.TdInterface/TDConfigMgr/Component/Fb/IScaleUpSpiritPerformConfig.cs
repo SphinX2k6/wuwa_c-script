@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DBC RID: 3516
+	// Token: 0x02000EB8 RID: 3768
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IScaleUpSpiritPerformConfig
 	{
-		// Token: 0x06004FCD RID: 20429 RVA: 0x000C5721 File Offset: 0x000C3921
-		[NullableContext(1)]
+		// Token: 0x060054F2 RID: 21746 RVA: 0x000D0F71 File Offset: 0x000CF171
+		[NullableContext(0)]
 		public static IScaleUpSpiritPerformConfig Create(IScaleUpSpiritPerformConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A12 RID: 6674
-		// (get) Token: 0x06004FCE RID: 20430 RVA: 0x000C5740 File Offset: 0x000C3940
+		// Token: 0x17001B7D RID: 7037
+		// (get) Token: 0x060054F3 RID: 21747 RVA: 0x000D0F90 File Offset: 0x000CF190
 		public virtual bool? IsInitHide
 		{
 			get
@@ -37,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A13 RID: 6675
-		// (get) Token: 0x06004FCF RID: 20431 RVA: 0x000C5776 File Offset: 0x000C3976
+		// Token: 0x17001B7E RID: 7038
+		// (get) Token: 0x060054F4 RID: 21748 RVA: 0x000D0FC6 File Offset: 0x000CF1C6
 		public virtual string AppearEffectDa
 		{
 			get
@@ -47,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A14 RID: 6676
-		// (get) Token: 0x06004FD0 RID: 20432 RVA: 0x000C5783 File Offset: 0x000C3983
+		// Token: 0x17001B7F RID: 7039
+		// (get) Token: 0x060054F5 RID: 21749 RVA: 0x000D0FD3 File Offset: 0x000CF1D3
 		public virtual string ScaleUpEffectDa
 		{
 			get
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A15 RID: 6677
-		// (get) Token: 0x06004FD1 RID: 20433 RVA: 0x000C5790 File Offset: 0x000C3990
+		// Token: 0x17001B80 RID: 7040
+		// (get) Token: 0x060054F6 RID: 21750 RVA: 0x000D0FE0 File Offset: 0x000CF1E0
 		public virtual int? ScaleUpPerformTag
 		{
 			get
@@ -71,7 +71,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DC7 RID: 11719
+		// Token: 0x0400308D RID: 12429
 		private IScaleUpSpiritPerformConfig Instance;
 	}
 }

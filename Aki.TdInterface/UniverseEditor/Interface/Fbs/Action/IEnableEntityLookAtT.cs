@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200665B RID: 26203
+	// Token: 0x02006CCC RID: 27852
 	public class IEnableEntityLookAtT
 	{
-		// Token: 0x1700C2A9 RID: 49833
-		// (get) Token: 0x0602D847 RID: 186439 RVA: 0x0063BAFB File Offset: 0x00639CFB
-		// (set) Token: 0x0602D848 RID: 186440 RVA: 0x0063BB03 File Offset: 0x00639D03
+		// Token: 0x1700CC47 RID: 52295
+		// (get) Token: 0x06030018 RID: 196632 RVA: 0x00688663 File Offset: 0x00686863
+		// (set) Token: 0x06030019 RID: 196633 RVA: 0x0068866B File Offset: 0x0068686B
 		public string Key { get; set; }
 
-		// Token: 0x1700C2AA RID: 49834
-		// (get) Token: 0x0602D849 RID: 186441 RVA: 0x0063BB0C File Offset: 0x00639D0C
-		// (set) Token: 0x0602D84A RID: 186442 RVA: 0x0063BB14 File Offset: 0x00639D14
+		// Token: 0x1700CC48 RID: 52296
+		// (get) Token: 0x0603001A RID: 196634 RVA: 0x00688674 File Offset: 0x00686874
+		// (set) Token: 0x0603001B RID: 196635 RVA: 0x0068867C File Offset: 0x0068687C
 		public TDefaultLookAtTypeUnion DefaultLookAtType { get; set; }
 
-		// Token: 0x1700C2AB RID: 49835
-		// (get) Token: 0x0602D84B RID: 186443 RVA: 0x0063BB1D File Offset: 0x00639D1D
-		// (set) Token: 0x0602D84C RID: 186444 RVA: 0x0063BB25 File Offset: 0x00639D25
+		// Token: 0x1700CC49 RID: 52297
+		// (get) Token: 0x0603001C RID: 196636 RVA: 0x00688685 File Offset: 0x00686885
+		// (set) Token: 0x0603001D RID: 196637 RVA: 0x0068868D File Offset: 0x0068688D
 		public ICheckFlowLookAtT OverrideLookAtType { get; set; }
 
-		// Token: 0x1700C2AC RID: 49836
-		// (get) Token: 0x0602D84D RID: 186445 RVA: 0x0063BB2E File Offset: 0x00639D2E
-		// (set) Token: 0x0602D84E RID: 186446 RVA: 0x0063BB36 File Offset: 0x00639D36
+		// Token: 0x1700CC4A RID: 52298
+		// (get) Token: 0x0603001E RID: 196638 RVA: 0x00688696 File Offset: 0x00686896
+		// (set) Token: 0x0603001F RID: 196639 RVA: 0x0068869E File Offset: 0x0068689E
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x0602D84F RID: 186447 RVA: 0x0063BB3F File Offset: 0x00639D3F
+		// Token: 0x06030020 RID: 196640 RVA: 0x006886A7 File Offset: 0x006868A7
 		public IEnableEntityLookAtT()
 		{
 			this.Key = null;

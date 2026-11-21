@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020C5 RID: 8389
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200231A RID: 8986
 	public class IWuWaGoGame : IUiGame
 	{
-		// Token: 0x0600B866 RID: 47206 RVA: 0x001AAB7C File Offset: 0x001A8D7C
+		// Token: 0x0600C3BE RID: 50110 RVA: 0x001C17C4 File Offset: 0x001BF9C4
 		private IWuWaGoGame_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B867 RID: 47207 RVA: 0x001AABB4 File Offset: 0x001A8DB4
+		// Token: 0x0600C3BF RID: 50111 RVA: 0x001C17FC File Offset: 0x001BF9FC
 		public static IWuWaGoGame Create([Nullable(2)] IWuWaGoGame instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B868 RID: 47208 RVA: 0x001AABC7 File Offset: 0x001A8DC7
+		// Token: 0x0600C3C0 RID: 50112 RVA: 0x001C180F File Offset: 0x001BFA0F
 		public static IWuWaGoGame CreateFromSetValue([Nullable(2)] IWuWaGoGame_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B869 RID: 47209 RVA: 0x001AABDA File Offset: 0x001A8DDA
+		// Token: 0x0600C3C1 RID: 50113 RVA: 0x001C1822 File Offset: 0x001BFA22
 		public new IWuWaGoGame_SetValue ToSetValue()
 		{
 			return new IWuWaGoGame_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003864 RID: 14436
-		// (get) Token: 0x0600B86A RID: 47210 RVA: 0x001AABF9 File Offset: 0x001A8DF9
-		// (set) Token: 0x0600B86B RID: 47211 RVA: 0x001AAC24 File Offset: 0x001A8E24
+		// Token: 0x17003B48 RID: 15176
+		// (get) Token: 0x0600C3C2 RID: 50114 RVA: 0x001C1841 File Offset: 0x001BFA41
+		// (set) Token: 0x0600C3C3 RID: 50115 RVA: 0x001C186C File Offset: 0x001BFA6C
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003865 RID: 14437
-		// (get) Token: 0x0600B86C RID: 47212 RVA: 0x001AAC32 File Offset: 0x001A8E32
-		// (set) Token: 0x0600B86D RID: 47213 RVA: 0x001AAC5D File Offset: 0x001A8E5D
+		// Token: 0x17003B49 RID: 15177
+		// (get) Token: 0x0600C3C4 RID: 50116 RVA: 0x001C187A File Offset: 0x001BFA7A
+		// (set) Token: 0x0600C3C5 RID: 50117 RVA: 0x001C18A5 File Offset: 0x001BFAA5
 		public virtual int LevelCenterId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E87 RID: 28295
+		// Token: 0x040074A5 RID: 29861
 		[Nullable(2)]
 		protected new IWuWaGoGame FbInstance;
 
-		// Token: 0x04006E88 RID: 28296
+		// Token: 0x040074A6 RID: 29862
 		[Nullable(2)]
 		protected new IWuWaGoGame_SetValue PocoInterface;
 	}

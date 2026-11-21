@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003244 RID: 12868
+// Token: 0x020027B3 RID: 10163
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleGrowComponent : EntityComponent
 {
-	// Token: 0x0601BC5B RID: 113755 RVA: 0x007A824C File Offset: 0x007A644C
+	// Token: 0x0601980B RID: 104459 RVA: 0x007D09CC File Offset: 0x007CEBCC
 	protected override bool OnStart()
 	{
 		this.TagComponent = base.Entity.CheckGetComponent<BaseTagComponent>();
@@ -22,20 +22,20 @@ public class RoleGrowComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BC5C RID: 113756 RVA: 0x007A82DB File Offset: 0x007A64DB
+	// Token: 0x0601980C RID: 104460 RVA: 0x007D0A5B File Offset: 0x007CEC5B
 	protected override bool OnEnd()
 	{
 		return true;
 	}
 
-	// Token: 0x0601BC5D RID: 113757 RVA: 0x007A82DE File Offset: 0x007A64DE
+	// Token: 0x0601980D RID: 104461 RVA: 0x007D0A5E File Offset: 0x007CEC5E
 	private void InitStartingRestriction()
 	{
 		this.TagComponent.AddTag(new int?(GameplayTagDefine.EGameplayTagId["战斗状态.行为限制.快速攀爬禁止.出生专用"]));
 		this.TagComponent.AddTag(new int?(GameplayTagDefine.EGameplayTagId["战斗状态.行为限制.滑翔禁止.出生专用"]));
 	}
 
-	// Token: 0x0601BC5E RID: 113758 RVA: 0x007A831E File Offset: 0x007A651E
+	// Token: 0x0601980E RID: 104462 RVA: 0x007D0A9E File Offset: 0x007CEC9E
 	public int GetWeaponType()
 	{
 		if (this.WeaponType != 0)
@@ -45,7 +45,7 @@ public class RoleGrowComponent : EntityComponent
 		return 0;
 	}
 
-	// Token: 0x0601BC5F RID: 113759 RVA: 0x007A8330 File Offset: 0x007A6530
+	// Token: 0x0601980F RID: 104463 RVA: 0x007D0AB0 File Offset: 0x007CECB0
 	public int GetSkillLevelBySkillInfoId(long skillInfoId)
 	{
 		if (this.RoleInstance != null)
@@ -55,7 +55,7 @@ public class RoleGrowComponent : EntityComponent
 		return 0;
 	}
 
-	// Token: 0x0601BC60 RID: 113760 RVA: 0x007A834F File Offset: 0x007A654F
+	// Token: 0x06019810 RID: 104464 RVA: 0x007D0ACF File Offset: 0x007CECCF
 	public int GetSkillLevelByBuffId(long buffId)
 	{
 		if (this.RoleInstance != null)
@@ -65,7 +65,7 @@ public class RoleGrowComponent : EntityComponent
 		return 0;
 	}
 
-	// Token: 0x0601BC61 RID: 113761 RVA: 0x007A836E File Offset: 0x007A656E
+	// Token: 0x06019811 RID: 104465 RVA: 0x007D0AEE File Offset: 0x007CECEE
 	public int GetSkillLevelByDamageId(long damageId)
 	{
 		if (this.RoleInstance != null)
@@ -75,7 +75,7 @@ public class RoleGrowComponent : EntityComponent
 		return 0;
 	}
 
-	// Token: 0x0601BC62 RID: 113762 RVA: 0x007A8390 File Offset: 0x007A6590
+	// Token: 0x06019812 RID: 104466 RVA: 0x007D0B10 File Offset: 0x007CED10
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -84,41 +84,52 @@ public class RoleGrowComponent : EntityComponent
 			return false;
 		}
 		RoleGrowComponent roleGrowComponent = (RoleGrowComponent)componentTemplate;
-		if (base.CanResetComponentProperty("TagComponent"))
+		if (roleGrowComponent.TagComponent == null)
 		{
-			if (roleGrowComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
+			this.TagComponent = null;
 		}
-		if (base.CanResetComponentProperty("RoleInstance"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 		{
-			if (roleGrowComponent.RoleInstance == null)
-			{
-				this.RoleInstance = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RoleDataBase>(this.RoleInstance), "RoleInstance"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("WeaponType"))
+		if (roleGrowComponent.RoleInstance == null)
 		{
-			this.WeaponType = roleGrowComponent.WeaponType;
+			this.RoleInstance = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RoleInstance), "RoleInstance"))
+		{
+			return false;
+		}
+		this.WeaponType = roleGrowComponent.WeaponType;
 		return true;
 	}
 
-	// Token: 0x0400DACA RID: 56010
+	// Token: 0x170028AF RID: 10415
+	// (get) Token: 0x06019813 RID: 104467 RVA: 0x007D0B92 File Offset: 0x007CED92
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028B0 RID: 10416
+	// (get) Token: 0x06019814 RID: 104468 RVA: 0x007D0B95 File Offset: 0x007CED95
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DF69 RID: 57193
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400DACB RID: 56011
+	// Token: 0x0400DF6A RID: 57194
 	private RoleDataBase RoleInstance;
 
-	// Token: 0x0400DACC RID: 56012
+	// Token: 0x0400DF6B RID: 57195
 	private int WeaponType;
 }

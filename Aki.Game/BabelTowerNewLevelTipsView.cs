@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001178 RID: 4472
+// Token: 0x0200062C RID: 1580
 public class BabelTowerNewLevelTipsView : UiViewBase
 {
-	// Token: 0x0600762F RID: 30255 RVA: 0x001884AA File Offset: 0x001866AA
+	// Token: 0x060049C6 RID: 18886 RVA: 0x0019105A File Offset: 0x0018F25A
 	[NullableContext(1)]
 	public BabelTowerNewLevelTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007630 RID: 30256 RVA: 0x001884B4 File Offset: 0x001866B4
+	// Token: 0x060049C7 RID: 18887 RVA: 0x00191064 File Offset: 0x0018F264
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,7 +26,7 @@ public class BabelTowerNewLevelTipsView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007631 RID: 30257 RVA: 0x001884FC File Offset: 0x001866FC
+	// Token: 0x060049C8 RID: 18888 RVA: 0x001910AC File Offset: 0x0018F2AC
 	protected override void OnStart()
 	{
 		int levelId = (int)this.OpenParam;
@@ -55,10 +55,10 @@ public class BabelTowerNewLevelTipsView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x02007749 RID: 30537
+	// Token: 0x020068D6 RID: 26838
 	private class EComponentDefine
 	{
-		// Token: 0x0402759F RID: 161183
+		// Token: 0x040228D8 RID: 141528
 		public const int TitleText = 0;
 	}
 }

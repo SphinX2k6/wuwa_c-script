@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021AB RID: 8619
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002416 RID: 9238
 	public class SetElementalBoxToTarget : ActionParams
 	{
-		// Token: 0x0600BD44 RID: 48452 RVA: 0x001B3E64 File Offset: 0x001B2064
+		// Token: 0x0600C8FE RID: 51454 RVA: 0x001CB49C File Offset: 0x001C969C
 		private SetElementalBoxToTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BD45 RID: 48453 RVA: 0x001B3E9C File Offset: 0x001B209C
+		// Token: 0x0600C8FF RID: 51455 RVA: 0x001CB4D4 File Offset: 0x001C96D4
 		public static SetElementalBoxToTarget Create([Nullable(2)] SetElementalBoxToTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BD46 RID: 48454 RVA: 0x001B3EAF File Offset: 0x001B20AF
+		// Token: 0x0600C900 RID: 51456 RVA: 0x001CB4E7 File Offset: 0x001C96E7
 		public static SetElementalBoxToTarget CreateFromSetValue([Nullable(2)] SetElementalBoxToTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BD47 RID: 48455 RVA: 0x001B3EC2 File Offset: 0x001B20C2
+		// Token: 0x0600C901 RID: 51457 RVA: 0x001CB4FA File Offset: 0x001C96FA
 		public SetElementalBoxToTarget_SetValue ToSetValue()
 		{
 			return new SetElementalBoxToTarget_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003982 RID: 14722
-		// (get) Token: 0x0600BD48 RID: 48456 RVA: 0x001B3EE1 File Offset: 0x001B20E1
-		// (set) Token: 0x0600BD49 RID: 48457 RVA: 0x001B3F0C File Offset: 0x001B210C
+		// Token: 0x17003C76 RID: 15478
+		// (get) Token: 0x0600C902 RID: 51458 RVA: 0x001CB519 File Offset: 0x001C9719
+		// (set) Token: 0x0600C903 RID: 51459 RVA: 0x001CB544 File Offset: 0x001C9744
 		public virtual int ElementalBoxId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003983 RID: 14723
-		// (get) Token: 0x0600BD4A RID: 48458 RVA: 0x001B3F1A File Offset: 0x001B211A
-		// (set) Token: 0x0600BD4B RID: 48459 RVA: 0x001B3F41 File Offset: 0x001B2141
+		// Token: 0x17003C77 RID: 15479
+		// (get) Token: 0x0600C904 RID: 51460 RVA: 0x001CB552 File Offset: 0x001C9752
+		// (set) Token: 0x0600C905 RID: 51461 RVA: 0x001CB579 File Offset: 0x001C9779
 		public virtual ITargetEntityType Target
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040070EF RID: 28911
+		// Token: 0x04007737 RID: 30519
 		[Nullable(2)]
 		protected new SetElementalBoxToTarget FbInstance;
 
-		// Token: 0x040070F0 RID: 28912
+		// Token: 0x04007738 RID: 30520
 		[Nullable(2)]
 		protected SetElementalBoxToTarget_SetValue PocoInterface;
 	}

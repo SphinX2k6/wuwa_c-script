@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000955 RID: 2389
+	// Token: 0x020001B0 RID: 432
 	[UnrealStructLayout(1, 1, UnrealReflectionPropertyTypeCode.MulticastSparseDelegate)]
 	public sealed class FComponentEndCursorOverSignature : FSparseDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0600872F RID: 34607 RVA: 0x000C122E File Offset: 0x000BF42E
+		// Token: 0x0600200F RID: 8207 RVA: 0x0002EB25 File Offset: 0x0002CD25
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FComponentEndCursorOverSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x06008730 RID: 34608 RVA: 0x000C123A File Offset: 0x000BF43A
+		// Token: 0x06002010 RID: 8208 RVA: 0x0002EB31 File Offset: 0x0002CD31
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FComponentEndCursorOverSignature._FunctionPtr == IntPtr.Zero)
@@ -27,8 +27,8 @@ namespace UnrealEngine
 			return FComponentEndCursorOverSignature._FunctionPtr;
 		}
 
-		// Token: 0x17001FF9 RID: 8185
-		// (get) Token: 0x06008731 RID: 34609 RVA: 0x000C125D File Offset: 0x000BF45D
+		// Token: 0x17000478 RID: 1144
+		// (get) Token: 0x06002011 RID: 8209 RVA: 0x0002EB54 File Offset: 0x0002CD54
 		public override FName DelegateName
 		{
 			get
@@ -37,21 +37,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06008732 RID: 34610 RVA: 0x000C1264 File Offset: 0x000BF464
+		// Token: 0x06002012 RID: 8210 RVA: 0x0002EB5B File Offset: 0x0002CD5B
 		[NullableContext(2)]
 		public FComponentEndCursorOverSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06008733 RID: 34611 RVA: 0x000C126E File Offset: 0x000BF46E
+		// Token: 0x06002013 RID: 8211 RVA: 0x0002EB65 File Offset: 0x0002CD65
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<UPrimitiveComponent>) ?? ((Action<UPrimitiveComponent>)Delegate.CreateDelegate(typeof(Action<UPrimitiveComponent>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06008734 RID: 34612 RVA: 0x000C12A0 File Offset: 0x000BF4A0
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06002014 RID: 8212 RVA: 0x0002EB98 File Offset: 0x0002CD98
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace UnrealEngine
 			base.Add(delegateName, Callback, FComponentEndCursorOverSignature.RegisterId);
 		}
 
-		// Token: 0x06008735 RID: 34613 RVA: 0x000C12F0 File Offset: 0x000BF4F0
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06002015 RID: 8213 RVA: 0x0002EBE8 File Offset: 0x0002CDE8
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -83,10 +81,9 @@ namespace UnrealEngine
 			base.Remove(delegateName, Callback);
 		}
 
-		// Token: 0x06008736 RID: 34614 RVA: 0x000C1310 File Offset: 0x000BF510
+		// Token: 0x06002016 RID: 8214 RVA: 0x0002EC08 File Offset: 0x0002CE08
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(UPrimitiveComponent TouchedComponent)
 		{
 			FComponentEndCursorOverSignature.__FComponentEndCursorOverSignature_DelegateParams* ptr = stackalloc FComponentEndCursorOverSignature.__FComponentEndCursorOverSignature_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FComponentEndCursorOverSignature.__FComponentEndCursorOverSignature_DelegateParams) & -16L;
@@ -95,10 +92,9 @@ namespace UnrealEngine
 			FSparseDelegate.BroadcastInternal(base.GetOwner().NativePtr, this.DelegateName, (void*)ptr);
 		}
 
-		// Token: 0x06008737 RID: 34615 RVA: 0x000C136C File Offset: 0x000BF56C
+		// Token: 0x06002017 RID: 8215 RVA: 0x0002EC64 File Offset: 0x0002CE64
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UPrimitiveComponent> action = target as Action<UPrimitiveComponent>;
@@ -110,31 +106,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x04004054 RID: 16468
+		// Token: 0x04000AA9 RID: 2729
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04004055 RID: 16469
+		// Token: 0x04000AAA RID: 2730
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.ComponentEndCursorOverSignature__DelegateSignature";
 
-		// Token: 0x04004056 RID: 16470
+		// Token: 0x04000AAB RID: 2731
 		private static int RegisterId;
 
-		// Token: 0x02002CCB RID: 11467
+		// Token: 0x02000987 RID: 2439
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FComponentEndCursorOverSignature_DelegateParams
+		private ref struct __FComponentEndCursorOverSignature_DelegateParams
 		{
-			// Token: 0x0401666B RID: 91755
+			// Token: 0x040058E0 RID: 22752
 			[FieldOffset(0)]
 			public IntPtr TouchedComponent;
 		}
 
-		// Token: 0x02002CCC RID: 11468
+		// Token: 0x02000988 RID: 2440
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401666C RID: 91756
+			// Token: 0x040058E1 RID: 22753
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

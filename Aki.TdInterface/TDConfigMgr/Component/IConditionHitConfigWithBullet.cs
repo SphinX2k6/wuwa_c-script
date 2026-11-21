@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200026B RID: 619
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002AE RID: 686
 	public class IConditionHitConfigWithBullet : IConditionHitConfig
 	{
-		// Token: 0x06000B3F RID: 2879 RVA: 0x0002D6F8 File Offset: 0x0002B8F8
+		// Token: 0x06000C59 RID: 3161 RVA: 0x000303E8 File Offset: 0x0002E5E8
 		private IConditionHitConfigWithBullet_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000B40 RID: 2880 RVA: 0x0002D730 File Offset: 0x0002B930
+		// Token: 0x06000C5A RID: 3162 RVA: 0x00030420 File Offset: 0x0002E620
 		public static IConditionHitConfigWithBullet Create([Nullable(2)] IConditionHitConfigWithBullet instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B41 RID: 2881 RVA: 0x0002D743 File Offset: 0x0002B943
+		// Token: 0x06000C5B RID: 3163 RVA: 0x00030433 File Offset: 0x0002E633
 		public static IConditionHitConfigWithBullet CreateFromSetValue([Nullable(2)] IConditionHitConfigWithBullet_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B42 RID: 2882 RVA: 0x0002D756 File Offset: 0x0002B956
+		// Token: 0x06000C5C RID: 3164 RVA: 0x00030446 File Offset: 0x0002E646
 		public new IConditionHitConfigWithBullet_SetValue ToSetValue()
 		{
 			return new IConditionHitConfigWithBullet_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700035C RID: 860
-		// (get) Token: 0x06000B43 RID: 2883 RVA: 0x0002D784 File Offset: 0x0002B984
-		// (set) Token: 0x06000B44 RID: 2884 RVA: 0x0002D7E5 File Offset: 0x0002B9E5
+		// Token: 0x170003A4 RID: 932
+		// (get) Token: 0x06000C5D RID: 3165 RVA: 0x00030474 File Offset: 0x0002E674
+		// (set) Token: 0x06000C5E RID: 3166 RVA: 0x000304D5 File Offset: 0x0002E6D5
 		[Nullable(2)]
 		public override IConditionGroup Conditions
 		{
@@ -95,9 +93,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700035D RID: 861
-		// (get) Token: 0x06000B45 RID: 2885 RVA: 0x0002D7FA File Offset: 0x0002B9FA
-		// (set) Token: 0x06000B46 RID: 2886 RVA: 0x0002D825 File Offset: 0x0002BA25
+		// Token: 0x170003A5 RID: 933
+		// (get) Token: 0x06000C5F RID: 3167 RVA: 0x000304EA File Offset: 0x0002E6EA
+		// (set) Token: 0x06000C60 RID: 3168 RVA: 0x00030515 File Offset: 0x0002E715
 		public override string State
 		{
 			get
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700035E RID: 862
-		// (get) Token: 0x06000B47 RID: 2887 RVA: 0x0002D833 File Offset: 0x0002BA33
-		// (set) Token: 0x06000B48 RID: 2888 RVA: 0x0002D85A File Offset: 0x0002BA5A
+		// Token: 0x170003A6 RID: 934
+		// (get) Token: 0x06000C61 RID: 3169 RVA: 0x00030523 File Offset: 0x0002E723
+		// (set) Token: 0x06000C62 RID: 3170 RVA: 0x0003054A File Offset: 0x0002E74A
 		public virtual IHitBulletType HitBullets
 		{
 			get
@@ -142,18 +140,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000AED RID: 2797
+		// Token: 0x04000BCE RID: 3022
 		[Nullable(2)]
 		protected new IConditionHitConfigWithBullet FbInstance;
 
-		// Token: 0x04000AEE RID: 2798
+		// Token: 0x04000BCF RID: 3023
 		[Nullable(2)]
 		protected new IConditionHitConfigWithBullet_SetValue PocoInterface;
 
-		// Token: 0x04000AEF RID: 2799
+		// Token: 0x04000BD0 RID: 3024
 		private IConditionGroup _ConditionsCache;
 
-		// Token: 0x04000AF0 RID: 2800
+		// Token: 0x04000BD1 RID: 3025
 		private bool _ConditionsInited;
 	}
 }

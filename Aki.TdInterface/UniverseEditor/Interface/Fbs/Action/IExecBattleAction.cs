@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066F9 RID: 26361
+	// Token: 0x02006D79 RID: 28025
 	public struct IExecBattleAction : IFlatbufferObject
 	{
-		// Token: 0x1700C3E8 RID: 50152
-		// (get) Token: 0x0602DD84 RID: 187780 RVA: 0x00644EF5 File Offset: 0x006430F5
+		// Token: 0x1700CD9E RID: 52638
+		// (get) Token: 0x060305C1 RID: 198081 RVA: 0x00692469 File Offset: 0x00690669
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DD85 RID: 187781 RVA: 0x00644F02 File Offset: 0x00643102
+		// Token: 0x060305C2 RID: 198082 RVA: 0x00692476 File Offset: 0x00690676
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DD86 RID: 187782 RVA: 0x00644F0C File Offset: 0x0064310C
+		// Token: 0x060305C3 RID: 198083 RVA: 0x00692480 File Offset: 0x00690680
 		public static IExecBattleAction GetRootAsIExecBattleAction(ByteBuffer _bb)
 		{
 			return IExecBattleAction.GetRootAsIExecBattleAction(_bb, default(IExecBattleAction));
 		}
 
-		// Token: 0x0602DD87 RID: 187783 RVA: 0x00644F28 File Offset: 0x00643128
+		// Token: 0x060305C4 RID: 198084 RVA: 0x0069249C File Offset: 0x0069069C
 		public static IExecBattleAction GetRootAsIExecBattleAction(ByteBuffer _bb, IExecBattleAction obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DD88 RID: 187784 RVA: 0x00644F45 File Offset: 0x00643145
+		// Token: 0x060305C5 RID: 198085 RVA: 0x006924B9 File Offset: 0x006906B9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DD89 RID: 187785 RVA: 0x00644F54 File Offset: 0x00643154
+		// Token: 0x060305C6 RID: 198086 RVA: 0x006924C8 File Offset: 0x006906C8
 		public IExecBattleAction __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C3E9 RID: 50153
-		// (get) Token: 0x0602DD8A RID: 187786 RVA: 0x00644F64 File Offset: 0x00643164
+		// Token: 0x1700CD9F RID: 52639
+		// (get) Token: 0x060305C7 RID: 198087 RVA: 0x006924D8 File Offset: 0x006906D8
 		public TExecBattleOption BattleOptionType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DD8B RID: 187787 RVA: 0x00644FA0 File Offset: 0x006431A0
+		// Token: 0x060305C8 RID: 198088 RVA: 0x00692514 File Offset: 0x00690714
 		public TTable? BattleOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,49 +73,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602DD8C RID: 187788 RVA: 0x00644FE4 File Offset: 0x006431E4
+		// Token: 0x060305C9 RID: 198089 RVA: 0x00692558 File Offset: 0x00690758
+		public IAiAssistCharacterMoveToPoint BattleOptionAsIAiAssistCharacterMoveToPoint()
+		{
+			return this.BattleOption<IAiAssistCharacterMoveToPoint>().Value;
+		}
+
+		// Token: 0x060305CA RID: 198090 RVA: 0x00692574 File Offset: 0x00690774
+		public IAiAssistCharacterStopMoveToPoint BattleOptionAsIAiAssistCharacterStopMoveToPoint()
+		{
+			return this.BattleOption<IAiAssistCharacterStopMoveToPoint>().Value;
+		}
+
+		// Token: 0x060305CB RID: 198091 RVA: 0x00692590 File Offset: 0x00690790
 		public IExitMonsterMoveTarget BattleOptionAsIExitMonsterMoveTarget()
 		{
 			return this.BattleOption<IExitMonsterMoveTarget>().Value;
 		}
 
-		// Token: 0x0602DD8D RID: 187789 RVA: 0x00645000 File Offset: 0x00643200
+		// Token: 0x060305CC RID: 198092 RVA: 0x006925AC File Offset: 0x006907AC
 		public IExitMonsterMoveWithSpline BattleOptionAsIExitMonsterMoveWithSpline()
 		{
 			return this.BattleOption<IExitMonsterMoveWithSpline>().Value;
 		}
 
-		// Token: 0x0602DD8E RID: 187790 RVA: 0x0064501C File Offset: 0x0064321C
+		// Token: 0x060305CD RID: 198093 RVA: 0x006925C8 File Offset: 0x006907C8
 		public ISendBattleEvents BattleOptionAsISendBattleEvents()
 		{
 			return this.BattleOption<ISendBattleEvents>().Value;
 		}
 
-		// Token: 0x0602DD8F RID: 187791 RVA: 0x00645038 File Offset: 0x00643238
+		// Token: 0x060305CE RID: 198094 RVA: 0x006925E4 File Offset: 0x006907E4
 		public ISendBattleEventsForMonsterSummon BattleOptionAsISendBattleEventsForMonsterSummon()
 		{
 			return this.BattleOption<ISendBattleEventsForMonsterSummon>().Value;
 		}
 
-		// Token: 0x0602DD90 RID: 187792 RVA: 0x00645054 File Offset: 0x00643254
+		// Token: 0x060305CF RID: 198095 RVA: 0x00692600 File Offset: 0x00690800
 		public ISetBattleTags BattleOptionAsISetBattleTags()
 		{
 			return this.BattleOption<ISetBattleTags>().Value;
 		}
 
-		// Token: 0x0602DD91 RID: 187793 RVA: 0x00645070 File Offset: 0x00643270
+		// Token: 0x060305D0 RID: 198096 RVA: 0x0069261C File Offset: 0x0069081C
 		public ISetMonsterMoveTarget BattleOptionAsISetMonsterMoveTarget()
 		{
 			return this.BattleOption<ISetMonsterMoveTarget>().Value;
 		}
 
-		// Token: 0x0602DD92 RID: 187794 RVA: 0x0064508C File Offset: 0x0064328C
+		// Token: 0x060305D1 RID: 198097 RVA: 0x00692638 File Offset: 0x00690838
 		public ISetMonsterMoveWithSpline BattleOptionAsISetMonsterMoveWithSpline()
 		{
 			return this.BattleOption<ISetMonsterMoveWithSpline>().Value;
 		}
 
-		// Token: 0x0602DD93 RID: 187795 RVA: 0x006450A7 File Offset: 0x006432A7
+		// Token: 0x060305D2 RID: 198098 RVA: 0x00692653 File Offset: 0x00690853
 		public static Offset<IExecBattleAction> CreateIExecBattleAction(FlatBufferBuilder builder, TExecBattleOption BattleOption_type = TExecBattleOption.NONE, int BattleOptionOffset = 0)
 		{
 			builder.StartTable(2);
@@ -124,31 +136,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IExecBattleAction.EndIExecBattleAction(builder);
 		}
 
-		// Token: 0x0602DD94 RID: 187796 RVA: 0x006450C4 File Offset: 0x006432C4
+		// Token: 0x060305D3 RID: 198099 RVA: 0x00692670 File Offset: 0x00690870
 		public static void StartIExecBattleAction(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602DD95 RID: 187797 RVA: 0x006450CD File Offset: 0x006432CD
+		// Token: 0x060305D4 RID: 198100 RVA: 0x00692679 File Offset: 0x00690879
 		public static void AddBattleOptionType(FlatBufferBuilder builder, TExecBattleOption battleOptionType)
 		{
 			builder.AddByte(0, (byte)battleOptionType, 0);
 		}
 
-		// Token: 0x0602DD96 RID: 187798 RVA: 0x006450D8 File Offset: 0x006432D8
+		// Token: 0x060305D5 RID: 198101 RVA: 0x00692684 File Offset: 0x00690884
 		public static void AddBattleOption(FlatBufferBuilder builder, int battleOptionOffset)
 		{
 			builder.AddOffset(1, battleOptionOffset, 0);
 		}
 
-		// Token: 0x0602DD97 RID: 187799 RVA: 0x006450E3 File Offset: 0x006432E3
+		// Token: 0x060305D6 RID: 198102 RVA: 0x0069268F File Offset: 0x0069088F
 		public static Offset<IExecBattleAction> EndIExecBattleAction(FlatBufferBuilder builder)
 		{
 			return new Offset<IExecBattleAction>(builder.EndTable());
 		}
 
-		// Token: 0x0602DD98 RID: 187800 RVA: 0x006450F0 File Offset: 0x006432F0
+		// Token: 0x060305D7 RID: 198103 RVA: 0x0069269C File Offset: 0x0069089C
 		public IExecBattleActionT UnPack()
 		{
 			IExecBattleActionT execBattleActionT = new IExecBattleActionT();
@@ -156,13 +168,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return execBattleActionT;
 		}
 
-		// Token: 0x0602DD99 RID: 187801 RVA: 0x0064510C File Offset: 0x0064330C
+		// Token: 0x060305D8 RID: 198104 RVA: 0x006926B8 File Offset: 0x006908B8
 		public void UnPackTo(IExecBattleActionT _o)
 		{
 			_o.BattleOption = new TExecBattleOptionUnion();
 			_o.BattleOption.Type = this.BattleOptionType;
 			switch (this.BattleOptionType)
 			{
+			case TExecBattleOption.IAiAssistCharacterMoveToPoint:
+				_o.BattleOption.Value = ((this.BattleOption<IAiAssistCharacterMoveToPoint>() != null) ? this.BattleOption<IAiAssistCharacterMoveToPoint>().Value.UnPack() : null);
+				return;
+			case TExecBattleOption.IAiAssistCharacterStopMoveToPoint:
+				_o.BattleOption.Value = ((this.BattleOption<IAiAssistCharacterStopMoveToPoint>() != null) ? this.BattleOption<IAiAssistCharacterStopMoveToPoint>().Value.UnPack() : null);
+				return;
 			case TExecBattleOption.IExitMonsterMoveTarget:
 				_o.BattleOption.Value = ((this.BattleOption<IExitMonsterMoveTarget>() != null) ? this.BattleOption<IExitMonsterMoveTarget>().Value.UnPack() : null);
 				return;
@@ -189,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DD9A RID: 187802 RVA: 0x006452E4 File Offset: 0x006434E4
+		// Token: 0x060305D9 RID: 198105 RVA: 0x00692908 File Offset: 0x00690B08
 		public static Offset<IExecBattleAction> Pack(FlatBufferBuilder builder, IExecBattleActionT _o)
 		{
 			if (_o == null)
@@ -201,7 +219,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IExecBattleAction.CreateIExecBattleAction(builder, battleOption_type, battleOptionOffset);
 		}
 
-		// Token: 0x04010DD0 RID: 69072
+		// Token: 0x04011BFF RID: 72703
 		private Table __p;
 	}
 }

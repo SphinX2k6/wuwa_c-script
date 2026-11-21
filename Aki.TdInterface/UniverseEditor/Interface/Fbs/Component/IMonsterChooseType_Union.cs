@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200556C RID: 21868
+	// Token: 0x02005AFE RID: 23294
 	public enum IMonsterChooseType_Union : byte
 	{
-		// Token: 0x0400E88D RID: 59533
+		// Token: 0x0400F4DF RID: 62687
 		NONE,
-		// Token: 0x0400E88E RID: 59534
+		// Token: 0x0400F4E0 RID: 62688
 		IMonsterChooseType,
-		// Token: 0x0400E88F RID: 59535
+		// Token: 0x0400F4E1 RID: 62689
 		IRandomPoolChoose
 	}
 }

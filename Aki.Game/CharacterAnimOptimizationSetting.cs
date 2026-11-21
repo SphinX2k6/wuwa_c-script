@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020032B9 RID: 12985
+// Token: 0x0200282A RID: 10282
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterAnimOptimizationSetting : Singleton
 {
-	// Token: 0x170026DA RID: 9946
-	// (get) Token: 0x0601C214 RID: 115220 RVA: 0x007D49D5 File Offset: 0x007D2BD5
+	// Token: 0x170029C7 RID: 10695
+	// (get) Token: 0x06019E55 RID: 106069 RVA: 0x007FBAD1 File Offset: 0x007F9CD1
 	public static CharacterAnimOptimizationSetting Instance
 	{
 		get
@@ -22,12 +22,12 @@ public class CharacterAnimOptimizationSetting : Singleton
 		}
 	}
 
-	// Token: 0x0601C215 RID: 115221 RVA: 0x007D49F8 File Offset: 0x007D2BF8
+	// Token: 0x06019E56 RID: 106070 RVA: 0x007FBAF4 File Offset: 0x007F9CF4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601C216 RID: 115222 RVA: 0x007D49FA File Offset: 0x007D2BFA
+	// Token: 0x06019E57 RID: 106071 RVA: 0x007FBAF6 File Offset: 0x007F9CF6
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterAnimOptimizationSetting instance = CharacterAnimOptimizationSetting._instance;
@@ -38,13 +38,13 @@ public class CharacterAnimOptimizationSetting : Singleton
 		CharacterAnimOptimizationSetting._instance = null;
 	}
 
-	// Token: 0x0601C217 RID: 115223 RVA: 0x007D4A13 File Offset: 0x007D2C13
+	// Token: 0x06019E58 RID: 106072 RVA: 0x007FBB0F File Offset: 0x007F9D0F
 	static CharacterAnimOptimizationSetting()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterAnimOptimizationSetting.CreateStaticDefaultValue), new Action(CharacterAnimOptimizationSetting.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601C218 RID: 115224 RVA: 0x007D4A32 File Offset: 0x007D2C32
+	// Token: 0x06019E59 RID: 106073 RVA: 0x007FBB2E File Offset: 0x007F9D2E
 	public CharacterAnimOptimizationSetting()
 	{
 		EVisibilityBasedAnimTickOption[] array = new EVisibilityBasedAnimTickOption[9];
@@ -53,10 +53,10 @@ public class CharacterAnimOptimizationSetting : Singleton
 		base..ctor();
 	}
 
-	// Token: 0x0400DE9F RID: 56991
+	// Token: 0x0400E345 RID: 58181
 	public readonly EVisibilityBasedAnimTickOption[] DisableAnimOptimizationTypeDefines;
 
-	// Token: 0x0400DEA0 RID: 56992
+	// Token: 0x0400E346 RID: 58182
 	[Nullable(2)]
 	private static CharacterAnimOptimizationSetting _instance;
 }

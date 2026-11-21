@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DA4 RID: 3492
+	// Token: 0x02000E89 RID: 3721
 	public struct KurotatoLevelGroup : IFlatbufferObject
 	{
-		// Token: 0x17001BB3 RID: 7091
-		// (get) Token: 0x06008A53 RID: 35411 RVA: 0x0026FA95 File Offset: 0x0026DC95
+		// Token: 0x17001C17 RID: 7191
+		// (get) Token: 0x0600906F RID: 36975 RVA: 0x0028E4A6 File Offset: 0x0028C6A6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008A54 RID: 35412 RVA: 0x0026FAA2 File Offset: 0x0026DCA2
+		// Token: 0x06009070 RID: 36976 RVA: 0x0028E4B3 File Offset: 0x0028C6B3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008A55 RID: 35413 RVA: 0x0026FAAC File Offset: 0x0026DCAC
+		// Token: 0x06009071 RID: 36977 RVA: 0x0028E4BC File Offset: 0x0028C6BC
 		public static KurotatoLevelGroup GetRootAsKurotatoLevelGroup(ByteBuffer _bb)
 		{
 			return KurotatoLevelGroup.GetRootAsKurotatoLevelGroup(_bb, default(KurotatoLevelGroup));
 		}
 
-		// Token: 0x06008A56 RID: 35414 RVA: 0x0026FAC8 File Offset: 0x0026DCC8
+		// Token: 0x06009072 RID: 36978 RVA: 0x0028E4D8 File Offset: 0x0028C6D8
 		public static KurotatoLevelGroup GetRootAsKurotatoLevelGroup(ByteBuffer _bb, KurotatoLevelGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008A57 RID: 35415 RVA: 0x0026FAE5 File Offset: 0x0026DCE5
+		// Token: 0x06009073 RID: 36979 RVA: 0x0028E4F5 File Offset: 0x0028C6F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008A58 RID: 35416 RVA: 0x0026FAF4 File Offset: 0x0026DCF4
+		// Token: 0x06009074 RID: 36980 RVA: 0x0028E504 File Offset: 0x0028C704
 		public KurotatoLevelGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001BB4 RID: 7092
-		// (get) Token: 0x06008A59 RID: 35417 RVA: 0x0026FB04 File Offset: 0x0026DD04
+		// Token: 0x17001C18 RID: 7192
+		// (get) Token: 0x06009075 RID: 36981 RVA: 0x0028E514 File Offset: 0x0028C714
 		public int GroupId
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001BB5 RID: 7093
-		// (get) Token: 0x06008A5A RID: 35418 RVA: 0x0026FB40 File Offset: 0x0026DD40
+		// Token: 0x17001C19 RID: 7193
+		// (get) Token: 0x06009076 RID: 36982 RVA: 0x0028E550 File Offset: 0x0028C750
 		public int ActivityId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001BB6 RID: 7094
-		// (get) Token: 0x06008A5B RID: 35419 RVA: 0x0026FB7C File Offset: 0x0026DD7C
+		// Token: 0x17001C1A RID: 7194
+		// (get) Token: 0x06009077 RID: 36983 RVA: 0x0028E58C File Offset: 0x0028C78C
 		public int PerId
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001BB7 RID: 7095
-		// (get) Token: 0x06008A5C RID: 35420 RVA: 0x0026FBB8 File Offset: 0x0026DDB8
+		// Token: 0x17001C1B RID: 7195
+		// (get) Token: 0x06009078 RID: 36984 RVA: 0x0028E5C8 File Offset: 0x0028C7C8
 		public int LevelId
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001BB8 RID: 7096
-		// (get) Token: 0x06008A5D RID: 35421 RVA: 0x0026FBF8 File Offset: 0x0026DDF8
+		// Token: 0x17001C1C RID: 7196
+		// (get) Token: 0x06009079 RID: 36985 RVA: 0x0028E608 File Offset: 0x0028C808
 		public string Name
 		{
 			get
@@ -124,20 +124,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008A5E RID: 35422 RVA: 0x0026FC30 File Offset: 0x0026DE30
+		// Token: 0x0600907A RID: 36986 RVA: 0x0028E640 File Offset: 0x0028C840
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06008A5F RID: 35423 RVA: 0x0026FC40 File Offset: 0x0026DE40
+		// Token: 0x0600907B RID: 36987 RVA: 0x0028E650 File Offset: 0x0028C850
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001BB9 RID: 7097
-		// (get) Token: 0x06008A60 RID: 35424 RVA: 0x0026FC58 File Offset: 0x0026DE58
+		// Token: 0x17001C1D RID: 7197
+		// (get) Token: 0x0600907C RID: 36988 RVA: 0x0028E668 File Offset: 0x0028C868
 		public string TitleBg
 		{
 			get
@@ -151,19 +151,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008A61 RID: 35425 RVA: 0x0026FC90 File Offset: 0x0026DE90
+		// Token: 0x0600907D RID: 36989 RVA: 0x0028E6A0 File Offset: 0x0028C8A0
 		public Span<byte> GetTitleBgBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x06008A62 RID: 35426 RVA: 0x0026FCA0 File Offset: 0x0026DEA0
+		// Token: 0x0600907E RID: 36990 RVA: 0x0028E6B0 File Offset: 0x0028C8B0
 		public byte[] GetTitleBgArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06008A63 RID: 35427 RVA: 0x0026FCB8 File Offset: 0x0026DEB8
+		// Token: 0x0600907F RID: 36991 RVA: 0x0028E6C8 File Offset: 0x0028C8C8
 		public int DifficultyGroup(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -174,8 +174,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001BBA RID: 7098
-		// (get) Token: 0x06008A64 RID: 35428 RVA: 0x0026FCF8 File Offset: 0x0026DEF8
+		// Token: 0x17001C1E RID: 7198
+		// (get) Token: 0x06009080 RID: 36992 RVA: 0x0028E708 File Offset: 0x0028C908
 		public int DifficultyGroupLength
 		{
 			get
@@ -189,19 +189,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008A65 RID: 35429 RVA: 0x0026FD24 File Offset: 0x0026DF24
+		// Token: 0x06009081 RID: 36993 RVA: 0x0028E734 File Offset: 0x0028C934
 		public Span<int> GetDifficultyGroupBytes()
 		{
 			return this.__p.__vector_as_span<int>(16, 4);
 		}
 
-		// Token: 0x06008A66 RID: 35430 RVA: 0x0026FD34 File Offset: 0x0026DF34
+		// Token: 0x06009082 RID: 36994 RVA: 0x0028E744 File Offset: 0x0028C944
 		public int[] GetDifficultyGroupArray()
 		{
 			return this.__p.__vector_as_array<int>(16) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008A67 RID: 35431 RVA: 0x0026FD4C File Offset: 0x0026DF4C
+		// Token: 0x06009083 RID: 36995 RVA: 0x0028E75C File Offset: 0x0028C95C
 		public int SecondGroup(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -212,8 +212,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001BBB RID: 7099
-		// (get) Token: 0x06008A68 RID: 35432 RVA: 0x0026FD8C File Offset: 0x0026DF8C
+		// Token: 0x17001C1F RID: 7199
+		// (get) Token: 0x06009084 RID: 36996 RVA: 0x0028E79C File Offset: 0x0028C99C
 		public int SecondGroupLength
 		{
 			get
@@ -227,55 +227,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008A69 RID: 35433 RVA: 0x0026FDB8 File Offset: 0x0026DFB8
+		// Token: 0x06009085 RID: 36997 RVA: 0x0028E7C8 File Offset: 0x0028C9C8
 		public Span<int> GetSecondGroupBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x06008A6A RID: 35434 RVA: 0x0026FDC8 File Offset: 0x0026DFC8
+		// Token: 0x06009086 RID: 36998 RVA: 0x0028E7D8 File Offset: 0x0028C9D8
 		public int[] GetSecondGroupArray()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008A6B RID: 35435 RVA: 0x0026FDE0 File Offset: 0x0026DFE0
+		// Token: 0x06009087 RID: 36999 RVA: 0x0028E7F0 File Offset: 0x0028C9F0
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DifficultyGroupIter()或GetDifficultyGroupBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] DifficultyGroup()
+		public int[] DifficultyGroup()
 		{
-			KurotatoLevelGroup kurotatoLevelGroup = this;
-			return kurotatoLevelGroup.GetDifficultyGroupArray() ?? Array.Empty<int>();
+			return this.GetDifficultyGroupArray();
 		}
 
-		// Token: 0x06008A6C RID: 35436 RVA: 0x0026FE04 File Offset: 0x0026E004
+		// Token: 0x06009088 RID: 37000 RVA: 0x0028E7F8 File Offset: 0x0028C9F8
 		[NullableContext(1)]
-		public readonly IEnumerable<int> DifficultyGroupIter()
+		public IEnumerable<int> DifficultyGroupIter()
 		{
 			KurotatoLevelGroup.<DifficultyGroupIter>d__35 <DifficultyGroupIter>d__ = new KurotatoLevelGroup.<DifficultyGroupIter>d__35(-2);
 			<DifficultyGroupIter>d__.<>3__<>4__this = this;
 			return <DifficultyGroupIter>d__;
 		}
 
-		// Token: 0x06008A6D RID: 35437 RVA: 0x0026FE1C File Offset: 0x0026E01C
+		// Token: 0x06009089 RID: 37001 RVA: 0x0028E80D File Offset: 0x0028CA0D
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SecondGroupIter()或GetSecondGroupBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SecondGroup()
+		public int[] SecondGroup()
 		{
-			KurotatoLevelGroup kurotatoLevelGroup = this;
-			return kurotatoLevelGroup.GetSecondGroupArray() ?? Array.Empty<int>();
+			return this.GetSecondGroupArray();
 		}
 
-		// Token: 0x06008A6E RID: 35438 RVA: 0x0026FE40 File Offset: 0x0026E040
+		// Token: 0x0600908A RID: 37002 RVA: 0x0028E815 File Offset: 0x0028CA15
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SecondGroupIter()
+		public IEnumerable<int> SecondGroupIter()
 		{
 			KurotatoLevelGroup.<SecondGroupIter>d__37 <SecondGroupIter>d__ = new KurotatoLevelGroup.<SecondGroupIter>d__37(-2);
 			<SecondGroupIter>d__.<>3__<>4__this = this;
 			return <SecondGroupIter>d__;
 		}
 
-		// Token: 0x04004E35 RID: 20021
+		// Token: 0x0400541A RID: 21530
 		private Table __p;
 	}
 }

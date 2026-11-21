@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200480E RID: 18446
+	// Token: 0x02004C76 RID: 19574
 	public enum EMaximumDisplayCountInSelector : byte
 	{
-		// Token: 0x0400CCE3 RID: 52451
+		// Token: 0x0400D71D RID: 55069
 		None,
-		// Token: 0x0400CCE4 RID: 52452
+		// Token: 0x0400D71E RID: 55070
 		Moderate = 8,
-		// Token: 0x0400CCE5 RID: 52453
+		// Token: 0x0400D71F RID: 55071
 		Abundant = 10,
-		// Token: 0x0400CCE6 RID: 52454
+		// Token: 0x0400D720 RID: 55072
 		Plentiful = 12
 	}
 }

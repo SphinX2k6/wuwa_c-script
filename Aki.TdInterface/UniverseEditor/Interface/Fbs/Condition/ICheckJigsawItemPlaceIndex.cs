@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AB4 RID: 19124
+	// Token: 0x02004F83 RID: 20355
 	public struct ICheckJigsawItemPlaceIndex : IFlatbufferObject
 	{
-		// Token: 0x17008A9E RID: 35486
-		// (get) Token: 0x0601E048 RID: 122952 RVA: 0x00436990 File Offset: 0x00434B90
+		// Token: 0x1700918B RID: 37259
+		// (get) Token: 0x0601FB31 RID: 129841 RVA: 0x004681B0 File Offset: 0x004663B0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E049 RID: 122953 RVA: 0x0043699D File Offset: 0x00434B9D
+		// Token: 0x0601FB32 RID: 129842 RVA: 0x004681BD File Offset: 0x004663BD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E04A RID: 122954 RVA: 0x004369A4 File Offset: 0x00434BA4
+		// Token: 0x0601FB33 RID: 129843 RVA: 0x004681C4 File Offset: 0x004663C4
 		public static ICheckJigsawItemPlaceIndex GetRootAsICheckJigsawItemPlaceIndex(ByteBuffer _bb)
 		{
 			return ICheckJigsawItemPlaceIndex.GetRootAsICheckJigsawItemPlaceIndex(_bb, default(ICheckJigsawItemPlaceIndex));
 		}
 
-		// Token: 0x0601E04B RID: 122955 RVA: 0x004369C0 File Offset: 0x00434BC0
+		// Token: 0x0601FB34 RID: 129844 RVA: 0x004681E0 File Offset: 0x004663E0
 		public static ICheckJigsawItemPlaceIndex GetRootAsICheckJigsawItemPlaceIndex(ByteBuffer _bb, ICheckJigsawItemPlaceIndex obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E04C RID: 122956 RVA: 0x004369DD File Offset: 0x00434BDD
+		// Token: 0x0601FB35 RID: 129845 RVA: 0x004681FD File Offset: 0x004663FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E04D RID: 122957 RVA: 0x004369EC File Offset: 0x00434BEC
+		// Token: 0x0601FB36 RID: 129846 RVA: 0x0046820C File Offset: 0x0046640C
 		public ICheckJigsawItemPlaceIndex __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008A9F RID: 35487
-		// (get) Token: 0x0601E04E RID: 122958 RVA: 0x004369FC File Offset: 0x00434BFC
+		// Token: 0x1700918C RID: 37260
+		// (get) Token: 0x0601FB37 RID: 129847 RVA: 0x0046821C File Offset: 0x0046641C
 		public ECheckJigsawInfoType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008AA0 RID: 35488
-		// (get) Token: 0x0601E04F RID: 122959 RVA: 0x00436A38 File Offset: 0x00434C38
+		// Token: 0x1700918D RID: 37261
+		// (get) Token: 0x0601FB38 RID: 129848 RVA: 0x00468258 File Offset: 0x00466458
 		public int ItemEntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008AA1 RID: 35489
-		// (get) Token: 0x0601E050 RID: 122960 RVA: 0x00436A74 File Offset: 0x00434C74
+		// Token: 0x1700918E RID: 37262
+		// (get) Token: 0x0601FB39 RID: 129849 RVA: 0x00468294 File Offset: 0x00466494
 		public int FoundationEntityId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008AA2 RID: 35490
-		// (get) Token: 0x0601E051 RID: 122961 RVA: 0x00436AB0 File Offset: 0x00434CB0
+		// Token: 0x1700918F RID: 37263
+		// (get) Token: 0x0601FB3A RID: 129850 RVA: 0x004682D0 File Offset: 0x004664D0
 		public IPieceIndex? PlaceIndex
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008AA3 RID: 35491
-		// (get) Token: 0x0601E052 RID: 122962 RVA: 0x00436B10 File Offset: 0x00434D10
+		// Token: 0x17009190 RID: 37264
+		// (get) Token: 0x0601FB3B RID: 129851 RVA: 0x00468330 File Offset: 0x00466530
 		public ECompare Compare
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E053 RID: 122963 RVA: 0x00436B4D File Offset: 0x00434D4D
+		// Token: 0x0601FB3C RID: 129852 RVA: 0x0046836D File Offset: 0x0046656D
 		public static Offset<ICheckJigsawItemPlaceIndex> CreateICheckJigsawItemPlaceIndex(FlatBufferBuilder builder, ECheckJigsawInfoType Type = ECheckJigsawInfoType.CheckJigsawItemPlaceIndex, int ItemEntityId = 0, int FoundationEntityId = 0, Offset<IPieceIndex> PlaceIndexOffset = default(Offset<IPieceIndex>), ECompare Compare = ECompare.Eq)
 		{
 			builder.StartTable(5);
@@ -134,49 +134,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckJigsawItemPlaceIndex.EndICheckJigsawItemPlaceIndex(builder);
 		}
 
-		// Token: 0x0601E054 RID: 122964 RVA: 0x00436B81 File Offset: 0x00434D81
+		// Token: 0x0601FB3D RID: 129853 RVA: 0x004683A1 File Offset: 0x004665A1
 		public static void StartICheckJigsawItemPlaceIndex(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601E055 RID: 122965 RVA: 0x00436B8A File Offset: 0x00434D8A
+		// Token: 0x0601FB3E RID: 129854 RVA: 0x004683AA File Offset: 0x004665AA
 		public static void AddType(FlatBufferBuilder builder, ECheckJigsawInfoType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E056 RID: 122966 RVA: 0x00436B95 File Offset: 0x00434D95
+		// Token: 0x0601FB3F RID: 129855 RVA: 0x004683B5 File Offset: 0x004665B5
 		public static void AddItemEntityId(FlatBufferBuilder builder, int itemEntityId)
 		{
 			builder.AddInt(1, itemEntityId, 0);
 		}
 
-		// Token: 0x0601E057 RID: 122967 RVA: 0x00436BA0 File Offset: 0x00434DA0
+		// Token: 0x0601FB40 RID: 129856 RVA: 0x004683C0 File Offset: 0x004665C0
 		public static void AddFoundationEntityId(FlatBufferBuilder builder, int foundationEntityId)
 		{
 			builder.AddInt(2, foundationEntityId, 0);
 		}
 
-		// Token: 0x0601E058 RID: 122968 RVA: 0x00436BAB File Offset: 0x00434DAB
+		// Token: 0x0601FB41 RID: 129857 RVA: 0x004683CB File Offset: 0x004665CB
 		public static void AddPlaceIndex(FlatBufferBuilder builder, Offset<IPieceIndex> placeIndexOffset)
 		{
 			builder.AddOffset(3, placeIndexOffset.Value, 0);
 		}
 
-		// Token: 0x0601E059 RID: 122969 RVA: 0x00436BBB File Offset: 0x00434DBB
+		// Token: 0x0601FB42 RID: 129858 RVA: 0x004683DB File Offset: 0x004665DB
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(4, (byte)compare, 0);
 		}
 
-		// Token: 0x0601E05A RID: 122970 RVA: 0x00436BC6 File Offset: 0x00434DC6
+		// Token: 0x0601FB43 RID: 129859 RVA: 0x004683E6 File Offset: 0x004665E6
 		public static Offset<ICheckJigsawItemPlaceIndex> EndICheckJigsawItemPlaceIndex(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckJigsawItemPlaceIndex>(builder.EndTable());
 		}
 
-		// Token: 0x0601E05B RID: 122971 RVA: 0x00436BD4 File Offset: 0x00434DD4
+		// Token: 0x0601FB44 RID: 129860 RVA: 0x004683F4 File Offset: 0x004665F4
 		public ICheckJigsawItemPlaceIndexT UnPack()
 		{
 			ICheckJigsawItemPlaceIndexT checkJigsawItemPlaceIndexT = new ICheckJigsawItemPlaceIndexT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkJigsawItemPlaceIndexT;
 		}
 
-		// Token: 0x0601E05C RID: 122972 RVA: 0x00436BF0 File Offset: 0x00434DF0
+		// Token: 0x0601FB45 RID: 129861 RVA: 0x00468410 File Offset: 0x00466610
 		public void UnPackTo(ICheckJigsawItemPlaceIndexT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.Compare = this.Compare;
 		}
 
-		// Token: 0x0601E05D RID: 122973 RVA: 0x00436C5C File Offset: 0x00434E5C
+		// Token: 0x0601FB46 RID: 129862 RVA: 0x0046847C File Offset: 0x0046667C
 		public static Offset<ICheckJigsawItemPlaceIndex> Pack(FlatBufferBuilder builder, ICheckJigsawItemPlaceIndexT _o)
 		{
 			if (_o == null)
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckJigsawItemPlaceIndex.CreateICheckJigsawItemPlaceIndex(builder, _o.Type, _o.ItemEntityId, _o.FoundationEntityId, placeIndexOffset, _o.Compare);
 		}
 
-		// Token: 0x0400D330 RID: 54064
+		// Token: 0x0400DE15 RID: 56853
 		private Table __p;
 	}
 }

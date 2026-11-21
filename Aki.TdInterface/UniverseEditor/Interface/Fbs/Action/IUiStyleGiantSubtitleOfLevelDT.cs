@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074B2 RID: 29874
+	// Token: 0x02007CA8 RID: 31912
 	public class IUiStyleGiantSubtitleOfLevelDT
 	{
-		// Token: 0x1700E2C0 RID: 58048
-		// (get) Token: 0x060364FE RID: 222462 RVA: 0x00761AC0 File Offset: 0x0075FCC0
-		// (set) Token: 0x060364FF RID: 222463 RVA: 0x00761AC8 File Offset: 0x0075FCC8
+		// Token: 0x1700EEE4 RID: 61156
+		// (get) Token: 0x06039907 RID: 235783 RVA: 0x007C4B4C File Offset: 0x007C2D4C
+		// (set) Token: 0x06039908 RID: 235784 RVA: 0x007C4B54 File Offset: 0x007C2D54
 		public EUiStyleTypeOfLevelD Type { get; set; }
 
-		// Token: 0x1700E2C1 RID: 58049
-		// (get) Token: 0x06036500 RID: 222464 RVA: 0x00761AD1 File Offset: 0x0075FCD1
-		// (set) Token: 0x06036501 RID: 222465 RVA: 0x00761AD9 File Offset: 0x0075FCD9
+		// Token: 0x1700EEE5 RID: 61157
+		// (get) Token: 0x06039909 RID: 235785 RVA: 0x007C4B5D File Offset: 0x007C2D5D
+		// (set) Token: 0x0603990A RID: 235786 RVA: 0x007C4B65 File Offset: 0x007C2D65
 		public EGiantSubtitleStyle Style { get; set; }
 
-		// Token: 0x06036502 RID: 222466 RVA: 0x00761AE2 File Offset: 0x0075FCE2
+		// Token: 0x0603990B RID: 235787 RVA: 0x007C4B6E File Offset: 0x007C2D6E
 		public IUiStyleGiantSubtitleOfLevelDT()
 		{
 			this.Type = EUiStyleTypeOfLevelD.GiantSubtitle;

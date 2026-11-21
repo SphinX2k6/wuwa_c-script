@@ -15,17 +15,33 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002CF1 RID: 11505
+// Token: 0x0200224B RID: 8779
 [NullableContext(1)]
 [Nullable(0)]
 public class VideoView : UiTickViewBase
 {
-	// Token: 0x0601825B RID: 98907 RVA: 0x00622C84 File Offset: 0x00620E84
+	// Token: 0x06015AEA RID: 88810 RVA: 0x00648964 File Offset: 0x00646B64
 	public VideoView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601825C RID: 98908 RVA: 0x00622D14 File Offset: 0x00620F14
+	// Token: 0x06015AEB RID: 88811 RVA: 0x006489F4 File Offset: 0x00646BF4
+	public void SetSkipButtonVisible(bool visible)
+	{
+		if (this.SkipComp != null)
+		{
+			this.SkipComp.EnableSkipButton(visible);
+			return;
+		}
+		UUIButtonComponent skipButton = this.SkipButton;
+		if (skipButton == null)
+		{
+			return;
+		}
+		skipButton.RootUIComp.Get().SetUIActive(visible);
+	}
+
+	// Token: 0x06015AEC RID: 88812 RVA: 0x00648A34 File Offset: 0x00646C34
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,24 +55,198 @@ public class VideoView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x0601825D RID: 98909 RVA: 0x00622DB0 File Offset: 0x00620FB0
+	// Token: 0x06015AED RID: 88813 RVA: 0x00648AD0 File Offset: 0x00646CD0
 	protected override UniTask OnBeforeStartAsync()
 	{
-		VideoView.<OnBeforeStartAsync>d__43 <OnBeforeStartAsync>d__;
+		VideoView.<OnBeforeStartAsync>d__45 <OnBeforeStartAsync>d__;
 		<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<OnBeforeStartAsync>d__.<>4__this = this;
 		<OnBeforeStartAsync>d__.<>1__state = -1;
-		<OnBeforeStartAsync>d__.<>t__builder.Start<VideoView.<OnBeforeStartAsync>d__43>(ref <OnBeforeStartAsync>d__);
+		<OnBeforeStartAsync>d__.<>t__builder.Start<VideoView.<OnBeforeStartAsync>d__45>(ref <OnBeforeStartAsync>d__);
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601825E RID: 98910 RVA: 0x00622DF4 File Offset: 0x00620FF4
-	protected override void OnStart()
+	// Token: 0x06015AEE RID: 88814 RVA: 0x00648B14 File Offset: 0x00646D14
+	protected override void OnAddEventListener()
 	{
-		base.GetButton(1).RootUIComp.Get().SetUIActive(false);
-		this.SkipComp = new PlotSkipComponent(base.GetButton(1), new Action(this.OnSkipCg), null, this, null, null, null);
+		Application.Instance.AddApplicationHandler(EApplicationLifetimeDelegate.ApplicationHasReactivatedDelegate, new Action(this.ResumeVideo));
+		Application.Instance.AddApplicationHandler(EApplicationLifetimeDelegate.ApplicationWillDeactivateDelegate, new Action(this.PauseVideo));
+		EventSystem.Instance.Add<IVideoParamHub>(EEventName.PlayVideo, new Action<IVideoParamHub>(this.OnPlayVideo));
+		EventSystem.Instance.Add(EEventName.UIViewPortSizeChanged, new Action(this.OnUiViewPortSizeChanged));
+	}
+
+	// Token: 0x06015AEF RID: 88815 RVA: 0x00648B84 File Offset: 0x00646D84
+	protected override UniTask OnPlayingStartSequenceAsync()
+	{
+		VideoView.<OnPlayingStartSequenceAsync>d__47 <OnPlayingStartSequenceAsync>d__;
+		<OnPlayingStartSequenceAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+		<OnPlayingStartSequenceAsync>d__.<>4__this = this;
+		<OnPlayingStartSequenceAsync>d__.<>1__state = -1;
+		<OnPlayingStartSequenceAsync>d__.<>t__builder.Start<VideoView.<OnPlayingStartSequenceAsync>d__47>(ref <OnPlayingStartSequenceAsync>d__);
+		return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
+	}
+
+	// Token: 0x06015AF0 RID: 88816 RVA: 0x00648BC7 File Offset: 0x00646DC7
+	protected override void OnAfterShow()
+	{
+		EventSystem.Instance.Emit(EEventName.VideoViewShow);
+		LoadModeManager.Instance.SetLoadModeByReason(ELoadMode.ForceInGame, ELoadModeReason.VideoView);
+		this.IsViewClosed = false;
+		this.OnShowVideo();
+	}
+
+	// Token: 0x06015AF1 RID: 88817 RVA: 0x00648BF2 File Offset: 0x00646DF2
+	protected override void OnTick(float delta)
+	{
+		if (this.RunningState)
+		{
+			this.TickPlayback();
+		}
+		this.TickAspectTransition(delta);
+	}
+
+	// Token: 0x06015AF2 RID: 88818 RVA: 0x00648C0C File Offset: 0x00646E0C
+	protected override void OnBeforeHide()
+	{
+		EventSystem.Instance.Emit<bool>(EEventName.VideoViewHide, this.IsPlayToEnd);
+		foreach (CommonQteContextBase commonQteContextBase in this.CurrentQte)
+		{
+			CommonQteController.Instance.StopQte(commonQteContextBase.HandleId);
+		}
+		this.CurrentQte.Clear();
+		LoadModeManager.Instance.ResetLoadModeByReason(ELoadModeReason.VideoView);
+		this.SetSkipButtonVisible(false);
+		GameModeModel.Instance.Mp4FadeInScreenColor = null;
+		GameModeModel.Instance.Mp4FadeOutScreenColor = null;
+		this.BackgroundColor = null;
+	}
+
+	// Token: 0x06015AF3 RID: 88819 RVA: 0x00648CD0 File Offset: 0x00646ED0
+	protected override UniTask OnPlayingCloseSequenceAsync()
+	{
+		VideoView.<OnPlayingCloseSequenceAsync>d__51 <OnPlayingCloseSequenceAsync>d__;
+		<OnPlayingCloseSequenceAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+		<OnPlayingCloseSequenceAsync>d__.<>4__this = this;
+		<OnPlayingCloseSequenceAsync>d__.<>1__state = -1;
+		<OnPlayingCloseSequenceAsync>d__.<>t__builder.Start<VideoView.<OnPlayingCloseSequenceAsync>d__51>(ref <OnPlayingCloseSequenceAsync>d__);
+		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
+	}
+
+	// Token: 0x06015AF4 RID: 88820 RVA: 0x00648D14 File Offset: 0x00646F14
+	protected override void OnRemoveEventListener()
+	{
+		Application.Instance.RemoveApplicationHandler(EApplicationLifetimeDelegate.ApplicationHasReactivatedDelegate, new Action(this.ResumeVideo));
+		Application.Instance.RemoveApplicationHandler(EApplicationLifetimeDelegate.ApplicationWillDeactivateDelegate, new Action(this.PauseVideo));
+		EventSystem.Instance.Remove<IVideoParamHub>(EEventName.PlayVideo, new Action<IVideoParamHub>(this.OnPlayVideo));
+		EventSystem.Instance.Remove(EEventName.UIViewPortSizeChanged, new Action(this.OnUiViewPortSizeChanged));
+	}
+
+	// Token: 0x06015AF5 RID: 88821 RVA: 0x00648D84 File Offset: 0x00646F84
+	protected override void OnBeforeDestroy()
+	{
+		if (!this.IsViewClosed)
+		{
+			this.RenderSetup(false);
+			this.TryExecuteBlendAnim();
+		}
+		this.CleanVideo();
+		IVideoParamHub videoParamHub = this.OpenParam as IVideoParamHub;
+		Action action = (videoParamHub != null) ? videoParamHub.VideoCloseCb : null;
+		if (action == null)
+		{
+			return;
+		}
+		action();
+	}
+
+	// Token: 0x06015AF6 RID: 88822 RVA: 0x00648DC2 File Offset: 0x00646FC2
+	protected override void OnAfterDestroy()
+	{
+		if (this.HasTriggerBlendOut)
+		{
+			UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("VideoView.TriggerBlendOut");
+		}
+		this.ReleaseSeamlessEndTimeDilationTag();
+	}
+
+	// Token: 0x06015AF7 RID: 88823 RVA: 0x00648DE4 File Offset: 0x00646FE4
+	private bool TryInitializeCgTexture()
+	{
+		this.CgTexture = (base.GetButton(0).GetOwner().GetComponentByClass(UUITexture.StaticClass()) as UUITexture);
+		if (this.CgTexture != null)
+		{
+			return true;
+		}
+		global::Log.Instance.Error(ELogModule.Video, ELogAuthor.ZWY, "获取CgTexture异常！！", default(ReadOnlySpan<ValueTuple<string, object>>));
+		return false;
+	}
+
+	// Token: 0x06015AF8 RID: 88824 RVA: 0x00648E44 File Offset: 0x00647044
+	[NullableContext(2)]
+	private UniTask PrepareVisualResourcesAsync(IVideoParamHub param)
+	{
+		VideoView.<PrepareVisualResourcesAsync>d__56 <PrepareVisualResourcesAsync>d__;
+		<PrepareVisualResourcesAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+		<PrepareVisualResourcesAsync>d__.<>4__this = this;
+		<PrepareVisualResourcesAsync>d__.param = param;
+		<PrepareVisualResourcesAsync>d__.<>1__state = -1;
+		<PrepareVisualResourcesAsync>d__.<>t__builder.Start<VideoView.<PrepareVisualResourcesAsync>d__56>(ref <PrepareVisualResourcesAsync>d__);
+		return <PrepareVisualResourcesAsync>d__.<>t__builder.Task;
+	}
+
+	// Token: 0x06015AF9 RID: 88825 RVA: 0x00648E90 File Offset: 0x00647090
+	[NullableContext(2)]
+	private UniTask LoadReplaceMaterialAsync(IProgramSpecialConfigBase config)
+	{
+		if (config == null || config.Type > EPlayMovieProgramSpecialConfigType.Mp4UiReplaceMaterial)
+		{
+			return UniTask.CompletedTask;
+		}
+		UniTaskCompletionSource promise = new UniTaskCompletionSource();
+		ResourceSystem.Instance.LoadAsync<UMaterialInterface>(((IMp4UiReplaceMaterial)config).Mp4UiReplaceMaterial, delegate([Nullable(2)] UMaterialInterface material, string _)
+		{
+			if (material != null)
+			{
+				this.CgTexture.SetCustomUIMaterial(material);
+			}
+			promise.TrySetResult();
+		}, ResourceSystem.EResourceLoadPriority.Ui, this.MemoryTag);
+		return promise.Task;
+	}
+
+	// Token: 0x06015AFA RID: 88826 RVA: 0x00648F04 File Offset: 0x00647104
+	private void InitializeSkip()
+	{
+		this.ClearSkip();
+		this.SkipButton = base.GetButton(1);
+		this.SkipButton.RootUIComp.Get().SetUIActive(false);
+		IVideoParamHub videoParamHub = this.OpenParam as IVideoParamHub;
+		if (videoParamHub != null && videoParamHub.SkipType == EVideoSkipType.Normal)
+		{
+			this.InitializeNormalSkip();
+			return;
+		}
+		this.InitializePlotSkip();
+	}
+
+	// Token: 0x06015AFB RID: 88827 RVA: 0x00648F66 File Offset: 0x00647166
+	private void InitializeNormalSkip()
+	{
+		this.SkipButton.OnClickCallBack.Bind(new Action(this.OnSkipCg));
+		this.SetSkipButtonVisible(false);
+	}
+
+	// Token: 0x06015AFC RID: 88828 RVA: 0x00648F8C File Offset: 0x0064718C
+	private void InitializePlotSkip()
+	{
+		this.SkipComp = new PlotSkipComponent(this.SkipButton, new Action(this.OnSkipCg), null, this, null, null, null);
 		this.SkipComp.AddEventListener();
-		this.SkipComp.EnableSkipButton(false);
+		this.SetSkipButtonVisible(false);
+	}
+
+	// Token: 0x06015AFD RID: 88829 RVA: 0x00648FD8 File Offset: 0x006471D8
+	private UMediaTexture InitializeMediaPlayer()
+	{
 		UMediaTexture umediaTexture = this.CgTexture.GetTexture() as UMediaTexture;
 		umediaTexture.AutoClear = false;
 		this.MediaPlayer = ((umediaTexture != null) ? umediaTexture.GetMediaPlayer() : null);
@@ -64,15 +254,25 @@ public class VideoView : UiTickViewBase
 		{
 			global::Log.Instance.Error(ELogModule.Video, ELogAuthor.ZWY, "获取MediaPlayer异常！！", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
-		this.ClearCaptionLines();
+		return umediaTexture;
+	}
+
+	// Token: 0x06015AFE RID: 88830 RVA: 0x00649038 File Offset: 0x00647238
+	[NullableContext(2)]
+	private void ApplyPlaybackConfig(IVideoParamHub param)
+	{
 		this.BackgroundColor = null;
-		IVideoParamHub videoParamHub = this.OpenParam as IVideoParamHub;
-		this.Mp4FadeOutTime = ((videoParamHub != null) ? videoParamHub.Mp4FadeOutTime : null).GetValueOrDefault() * 1000f;
-		this.BlackBorderFadeOutTime = ((videoParamHub != null) ? videoParamHub.BlackBorderFadeOutTime : null).GetValueOrDefault() * 1000f;
-		if (((videoParamHub != null) ? videoParamHub.Mp4BlendAnim : null) != null)
+		this.Mp4FadeOutTime = ((param != null) ? param.Mp4FadeOutTime : null).GetValueOrDefault() * 1000f;
+		this.BlackBorderFadeOutTime = ((param != null) ? param.BlackBorderFadeOutTime : null).GetValueOrDefault() * 1000f;
+		if (((param != null) ? param.Mp4BlendAnim : null) != null)
 		{
-			PlotBlendController.Instance.SetupInfo(videoParamHub.Mp4BlendAnim, videoParamHub.VideoDataConf.CgName);
+			PlotBlendController.Instance.SetupInfo(param.Mp4BlendAnim, param.VideoDataConf.CgName);
 		}
+	}
+
+	// Token: 0x06015AFF RID: 88831 RVA: 0x006490D0 File Offset: 0x006472D0
+	private void ApplyBackgroundColor(UMediaTexture mediaTexture, [Nullable(2)] IVideoParamHub param)
+	{
 		EMovieBackgroundType? emovieBackgroundType2;
 		if (GameModeModel.Instance.Mp4FadeInScreenColor != null)
 		{
@@ -81,13 +281,13 @@ public class VideoView : UiTickViewBase
 		else
 		{
 			EMovieBackgroundType? emovieBackgroundType;
-			if (videoParamHub == null)
+			if (param == null)
 			{
 				emovieBackgroundType = null;
 			}
 			else
 			{
-				IMovieBackgroundFadeData backgroundColor = videoParamHub.BackgroundColor;
+				IMovieBackgroundFadeData backgroundColor = param.BackgroundColor;
 				emovieBackgroundType = ((backgroundColor != null) ? new EMovieBackgroundType?(backgroundColor.FadeInBackgroundType) : null);
 			}
 			emovieBackgroundType2 = emovieBackgroundType;
@@ -101,16 +301,21 @@ public class VideoView : UiTickViewBase
 			if (valueOrDefault == EMovieBackgroundType.White)
 			{
 				flinearColor = new FLinearColor?(new FLinearColor(1f, 1f, 1f, 1f));
-				goto IL_229;
+				goto IL_D2;
 			}
 			if (valueOrDefault != EMovieBackgroundType.Black)
 			{
 			}
 		}
 		flinearColor = new FLinearColor?(new FLinearColor(0f, 0f, 0f, 1f));
-		IL_229:
-		this.HasChangeColor = !umediaTexture.ClearColor.Equals(flinearColor);
-		umediaTexture.ClearColor = flinearColor.Value;
+		IL_D2:
+		this.HasChangeColor = !mediaTexture.ClearColor.Equals(flinearColor);
+		mediaTexture.ClearColor = flinearColor.Value;
+	}
+
+	// Token: 0x06015B00 RID: 88832 RVA: 0x006491E0 File Offset: 0x006473E0
+	private void InitializeAspectTransition()
+	{
 		float num = UiLayer.Instance.UiRootItem.GetWidth() / UiLayer.Instance.UiRootItem.GetHeight();
 		if (PlotModel.Instance.LastPlotAspect != -1f && num > 1f)
 		{
@@ -123,13 +328,18 @@ public class VideoView : UiTickViewBase
 		}
 		this.LerpFullTime = (float)ConfigCommonParamById.GetIntConfig("VideoViewLerpFullTime").GetValueOrDefault(4000);
 		this.LerpWaitTime = (float)ConfigCommonParamById.GetIntConfig("VideoViewLerpWaitTime").GetValueOrDefault(1000);
+	}
+
+	// Token: 0x06015B01 RID: 88833 RVA: 0x00649297 File Offset: 0x00647497
+	private void ResetPlaybackState()
+	{
 		this.CurrentQte.Clear();
 		this.HasTriggerBlendOut = false;
 		this.HasHandledVideoEnd = false;
 		this.RemoveSeamlessEndDelayHandle();
 	}
 
-	// Token: 0x0601825F RID: 98911 RVA: 0x00623128 File Offset: 0x00621328
+	// Token: 0x06015B02 RID: 88834 RVA: 0x006492B8 File Offset: 0x006474B8
 	private void SetAspect(float videoAspect)
 	{
 		float num = UiLayer.Instance.UiRootItem.GetWidth() / UiLayer.Instance.UiRootItem.GetHeight();
@@ -151,28 +361,17 @@ public class VideoView : UiTickViewBase
 		this.CgTexture.SetHeight(UiLayer.Instance.UiRootItem.GetHeight());
 	}
 
-	// Token: 0x06018260 RID: 98912 RVA: 0x00623204 File Offset: 0x00621404
-	protected override UniTask OnPlayingStartSequenceAsync()
-	{
-		VideoView.<OnPlayingStartSequenceAsync>d__46 <OnPlayingStartSequenceAsync>d__;
-		<OnPlayingStartSequenceAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
-		<OnPlayingStartSequenceAsync>d__.<>4__this = this;
-		<OnPlayingStartSequenceAsync>d__.<>1__state = -1;
-		<OnPlayingStartSequenceAsync>d__.<>t__builder.Start<VideoView.<OnPlayingStartSequenceAsync>d__46>(ref <OnPlayingStartSequenceAsync>d__);
-		return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
-	}
-
-	// Token: 0x06018261 RID: 98913 RVA: 0x00623247 File Offset: 0x00621447
-	protected override void OnAfterShow()
-	{
-		EventSystem.Instance.Emit(EEventName.VideoViewShow);
-		LoadModeManager.Instance.SetLoadModeByReason(ELoadMode.ForceInGame, ELoadModeReason.VideoView);
-		this.IsViewClosed = false;
-		this.OnShowVideo();
-	}
-
-	// Token: 0x06018262 RID: 98914 RVA: 0x00623274 File Offset: 0x00621474
+	// Token: 0x06015B03 RID: 88835 RVA: 0x00649393 File Offset: 0x00647593
 	private void CleanVideo()
+	{
+		this.ClearPlaybackResources();
+		this.ClearAudio();
+		this.ClearCaptionLines();
+		this.ClearSkip();
+	}
+
+	// Token: 0x06015B04 RID: 88836 RVA: 0x006493B0 File Offset: 0x006475B0
+	private void ClearPlaybackResources()
 	{
 		if (this.CaptionTimerId != null)
 		{
@@ -211,6 +410,11 @@ public class VideoView : UiTickViewBase
 		this.VideoPauseTime = null;
 		this.RunningState = false;
 		this.RemoveSeamlessEndDelayHandle();
+	}
+
+	// Token: 0x06015B05 RID: 88837 RVA: 0x006494B4 File Offset: 0x006476B4
+	private void ClearAudio()
+	{
 		if (!this.IsPlayToEnd)
 		{
 			foreach (VideoSoundPlay videoSoundPlay in this.VideoSoundPlays)
@@ -226,7 +430,12 @@ public class VideoView : UiTickViewBase
 		this.PendingVideoSounds.Clear();
 		this.SubtitleVoicePlays.Clear();
 		AudioSystem.Instance.SetState("plot_video", "none", true);
-		this.ClearCaptionLines();
+	}
+
+	// Token: 0x06015B06 RID: 88838 RVA: 0x00649570 File Offset: 0x00647770
+	private void ClearSkip()
+	{
+		this.SetSkipButtonVisible(false);
 		PlotSkipComponent skipComp = this.SkipComp;
 		if (skipComp != null)
 		{
@@ -237,89 +446,48 @@ public class VideoView : UiTickViewBase
 		{
 			skipComp2.RemoveEventListener();
 		}
+		UUIButtonComponent skipButton = this.SkipButton;
+		if (skipButton != null)
+		{
+			skipButton.OnClickCallBack.Unbind();
+		}
 		this.SkipComp = null;
+		this.SkipButton = null;
 	}
 
-	// Token: 0x06018263 RID: 98915 RVA: 0x00623458 File Offset: 0x00621658
-	protected override void OnBeforeHide()
+	// Token: 0x06015B07 RID: 88839 RVA: 0x006495CC File Offset: 0x006477CC
+	private void OnSkipCg()
 	{
-		EventSystem.Instance.Emit<bool>(EEventName.VideoViewHide, this.IsPlayToEnd);
-		foreach (CommonQteContextBase commonQteContextBase in this.CurrentQte)
-		{
-			CommonQteController.Instance.StopQte(commonQteContextBase.HandleId);
-		}
-		this.CurrentQte.Clear();
-		LoadModeManager.Instance.ResetLoadModeByReason(ELoadModeReason.VideoView);
-		this.SkipComp.EnableSkipButton(false);
-		GameModeModel.Instance.Mp4FadeInScreenColor = null;
-		GameModeModel.Instance.Mp4FadeOutScreenColor = null;
-		this.BackgroundColor = null;
-	}
-
-	// Token: 0x06018264 RID: 98916 RVA: 0x00623520 File Offset: 0x00621720
-	protected override void OnBeforeDestroy()
-	{
-		if (!this.IsViewClosed)
-		{
-			this.RenderSetup(false);
-			this.TryExecuteBlendAnim();
-		}
-		this.CleanVideo();
 		IVideoParamHub videoParamHub = this.OpenParam as IVideoParamHub;
-		Action action = (videoParamHub != null) ? videoParamHub.VideoCloseCb : null;
-		if (action == null)
+		if (videoParamHub == null || videoParamHub.SkipType != EVideoSkipType.Normal)
+		{
+			FlowController.Instance.BackgroundFlow("UI点击跳过(VideoView)", true, false, false);
+			return;
+		}
+		Action skipCallback = videoParamHub.SkipCallback;
+		if (skipCallback == null)
 		{
 			return;
 		}
-		action();
+		skipCallback();
 	}
 
-	// Token: 0x06018265 RID: 98917 RVA: 0x00623560 File Offset: 0x00621760
-	protected override UniTask OnPlayingCloseSequenceAsync()
-	{
-		VideoView.<OnPlayingCloseSequenceAsync>d__51 <OnPlayingCloseSequenceAsync>d__;
-		<OnPlayingCloseSequenceAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
-		<OnPlayingCloseSequenceAsync>d__.<>4__this = this;
-		<OnPlayingCloseSequenceAsync>d__.<>1__state = -1;
-		<OnPlayingCloseSequenceAsync>d__.<>t__builder.Start<VideoView.<OnPlayingCloseSequenceAsync>d__51>(ref <OnPlayingCloseSequenceAsync>d__);
-		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
-	}
-
-	// Token: 0x06018266 RID: 98918 RVA: 0x006235A3 File Offset: 0x006217A3
-	protected override void OnAfterDestroy()
-	{
-		if (this.HasTriggerBlendOut)
-		{
-			UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("VideoView.TriggerBlendOut");
-		}
-		this.ReleaseSeamlessEndTimeDilationTag();
-	}
-
-	// Token: 0x06018267 RID: 98919 RVA: 0x006235C2 File Offset: 0x006217C2
-	private void OnSkipCg()
-	{
-		FlowController.Instance.BackgroundFlow("UI点击跳过(VideoView)", true, false, false);
-	}
-
-	// Token: 0x06018268 RID: 98920 RVA: 0x006235D8 File Offset: 0x006217D8
-	protected override void OnAddEventListener()
-	{
-		Application.Instance.AddApplicationHandler(EApplicationLifetimeDelegate.ApplicationHasReactivatedDelegate, new Action(this.ResumeVideo));
-		Application.Instance.AddApplicationHandler(EApplicationLifetimeDelegate.ApplicationWillDeactivateDelegate, new Action(this.PauseVideo));
-		EventSystem.Instance.Add<IVideoParamHub>(EEventName.PlayVideo, new Action<IVideoParamHub>(this.OnPlayVideo));
-		EventSystem.Instance.Add(EEventName.UIViewPortSizeChanged, new Action(this.OnUiViewPortSizeChanged));
-	}
-
-	// Token: 0x06018269 RID: 98921 RVA: 0x00623648 File Offset: 0x00621848
+	// Token: 0x06015B08 RID: 88840 RVA: 0x00649614 File Offset: 0x00647814
 	private void OnPlayVideo(IVideoParamHub param)
 	{
 		this.OpenParam = param;
-		this.OnStart();
+		this.InitializeSkip();
+		UMediaTexture mediaTexture = this.InitializeMediaPlayer();
+		this.ClearCaptionLines();
+		this.ApplyPlaybackConfig(param);
+		this.ApplyBackgroundColor(mediaTexture, param);
+		this.InitializeAspectTransition();
+		this.ResetPlaybackState();
 		this.IsViewClosed = false;
 		this.OnShowVideo();
 	}
 
-	// Token: 0x0601826A RID: 98922 RVA: 0x00623664 File Offset: 0x00621864
+	// Token: 0x06015B09 RID: 88841 RVA: 0x00649664 File Offset: 0x00647864
 	private void OnUiViewPortSizeChanged()
 	{
 		if (!this.RunningState || this.IsViewClosed || this.MediaPlayer == null || this.CgTexture == null || this.VideoName == null)
@@ -330,7 +498,7 @@ public class VideoView : UiTickViewBase
 		this.BlendOutRatio = this.CgTexture.GetWidth() / this.CgTexture.GetHeight();
 	}
 
-	// Token: 0x0601826B RID: 98923 RVA: 0x006236C0 File Offset: 0x006218C0
+	// Token: 0x06015B0A RID: 88842 RVA: 0x006496C0 File Offset: 0x006478C0
 	private void ResumeVideo()
 	{
 		this.RunningState = true;
@@ -362,7 +530,7 @@ public class VideoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601826C RID: 98924 RVA: 0x0062379C File Offset: 0x0062199C
+	// Token: 0x06015B0B RID: 88843 RVA: 0x0064979C File Offset: 0x0064799C
 	private void PauseVideo()
 	{
 		UMediaPlayer mediaPlayer = this.MediaPlayer;
@@ -387,16 +555,7 @@ public class VideoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601826D RID: 98925 RVA: 0x00623868 File Offset: 0x00621A68
-	protected override void OnRemoveEventListener()
-	{
-		Application.Instance.RemoveApplicationHandler(EApplicationLifetimeDelegate.ApplicationHasReactivatedDelegate, new Action(this.ResumeVideo));
-		Application.Instance.RemoveApplicationHandler(EApplicationLifetimeDelegate.ApplicationWillDeactivateDelegate, new Action(this.PauseVideo));
-		EventSystem.Instance.Remove<IVideoParamHub>(EEventName.PlayVideo, new Action<IVideoParamHub>(this.OnPlayVideo));
-		EventSystem.Instance.Remove(EEventName.UIViewPortSizeChanged, new Action(this.OnUiViewPortSizeChanged));
-	}
-
-	// Token: 0x0601826E RID: 98926 RVA: 0x006238D8 File Offset: 0x00621AD8
+	// Token: 0x06015B0C RID: 88844 RVA: 0x00649868 File Offset: 0x00647A68
 	private void CloseMeInternal()
 	{
 		bool? remainViewWhenEnd = (this.OpenParam as IVideoParamHub).RemainViewWhenEnd;
@@ -450,7 +609,7 @@ public class VideoView : UiTickViewBase
 		action();
 	}
 
-	// Token: 0x0601826F RID: 98927 RVA: 0x00623A34 File Offset: 0x00621C34
+	// Token: 0x06015B0D RID: 88845 RVA: 0x006499C4 File Offset: 0x00647BC4
 	private unsafe void HandleVideoEnd(string source, float? playTime = null)
 	{
 		if (this.HasHandledVideoEnd)
@@ -476,7 +635,7 @@ public class VideoView : UiTickViewBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x06018270 RID: 98928 RVA: 0x00623AF8 File Offset: 0x00621CF8
+	// Token: 0x06015B0E RID: 88846 RVA: 0x00649A88 File Offset: 0x00647C88
 	private void OnVideoEnd()
 	{
 		IVideoParamHub videoParamHub = this.OpenParam as IVideoParamHub;
@@ -488,14 +647,14 @@ public class VideoView : UiTickViewBase
 		this.HandleVideoEnd("OnEndReached", null);
 	}
 
-	// Token: 0x06018271 RID: 98929 RVA: 0x00623B48 File Offset: 0x00621D48
+	// Token: 0x06015B0F RID: 88847 RVA: 0x00649AD8 File Offset: 0x00647CD8
 	private void OnVideoOpenFailed(string _)
 	{
 		global::Log.Instance.Error(ELogModule.Video, ELogAuthor.ZWY, "视频文件打开失败,可能需要修复修复系统文件", default(ReadOnlySpan<ValueTuple<string, object>>));
 		this.CloseMeInternal();
 	}
 
-	// Token: 0x06018272 RID: 98930 RVA: 0x00623B7C File Offset: 0x00621D7C
+	// Token: 0x06015B10 RID: 88848 RVA: 0x00649B0C File Offset: 0x00647D0C
 	private void OnShowVideo()
 	{
 		if (this.VideoName != null)
@@ -545,7 +704,7 @@ public class VideoView : UiTickViewBase
 		this.PlayVideo(videoData);
 	}
 
-	// Token: 0x06018273 RID: 98931 RVA: 0x00623D44 File Offset: 0x00621F44
+	// Token: 0x06015B11 RID: 88849 RVA: 0x00649CD4 File Offset: 0x00647ED4
 	private unsafe void PlayVideo(VideoData videoData)
 	{
 		if (GameModeModel.Instance.NeedOpenBlackScreenWhenTeleportDungeon)
@@ -587,8 +746,16 @@ public class VideoView : UiTickViewBase
 			}
 			this.VideoName = videoData.CgName;
 			this.ClearCaptionLines();
-			bool enable = !GameModeModel.Instance.PlayTravelMp4 && (PlotModel.Instance.IsGmCanSkip || videoData.CanSkip);
-			FlowController.Instance.EnableSkip(enable);
+			IVideoParamHub videoParamHub = this.OpenParam as IVideoParamHub;
+			bool flag = !GameModeModel.Instance.PlayTravelMp4 && (PlotModel.Instance.IsGmCanSkip || videoData.CanSkip);
+			if (videoParamHub != null && videoParamHub.SkipType == EVideoSkipType.Normal)
+			{
+				this.SetSkipButtonVisible(flag);
+			}
+			else
+			{
+				FlowController.Instance.EnableSkip(flag);
+			}
 			this.CaptionDataList = new List<VideoSubtitle>(VideoConfig.Instance.GetVideoCaptions(this.VideoName, LanguageSystem.Instance.PackageAudio));
 			this.CaptionDataList.Sort((VideoSubtitle a, VideoSubtitle b) => b.ShowMoment.CompareTo(a.ShowMoment));
 			this.QteDataList = new List<VideoQteConfig>(VideoConfig.Instance.GetVideoQte(this.VideoName, LanguageSystem.Instance.PackageAudio));
@@ -596,8 +763,8 @@ public class VideoView : UiTickViewBase
 			this.MediaPlayer.OnEndReached.Add(new Action(this.OnVideoEnd));
 			this.MediaPlayer.OnMediaOpened.Add(new Action<string>(this.OnMediaOpen));
 			this.MediaPlayer.OnMediaOpenFailed.Add(new Action<string>(this.OnVideoOpenFailed));
-			bool flag = PreloadModelNew.Instance.PlotAssetManager.HasPreloadVideo(videoData.CgFile);
-			if (flag)
+			bool flag2 = PreloadModelNew.Instance.PlotAssetManager.HasPreloadVideo(videoData.CgFile);
+			if (flag2)
 			{
 				if (this.MediaPlayer.Play())
 				{
@@ -627,7 +794,7 @@ public class VideoView : UiTickViewBase
 					<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray4 = default(<>y__InlineArray3<ValueTuple<string, object>>);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 0) = new ValueTuple<string, object>("配置名称", videoData.CgName);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 1) = new ValueTuple<string, object>("视频路径", videoData.CgFile);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 2) = new ValueTuple<string, object>("hasPreload", flag);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 2) = new ValueTuple<string, object>("hasPreload", flag2);
 					instance5.Error(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 3));
 					this.CloseMeInternal();
 					return;
@@ -729,7 +896,7 @@ public class VideoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06018274 RID: 98932 RVA: 0x00623EA4 File Offset: 0x006220A4
+	// Token: 0x06015B12 RID: 88850 RVA: 0x00649E34 File Offset: 0x00648034
 	[NullableContext(2)]
 	private void OnMediaOpen(string _)
 	{
@@ -763,6 +930,7 @@ public class VideoView : UiTickViewBase
 		this.BlendOutRatio = this.CgTexture.GetWidth() / this.CgTexture.GetHeight();
 		this.RunningState = true;
 		this.MediaPlayer.Play();
+		this.TickPlayback();
 		global::Log instance = global::Log.Instance;
 		ELogModule module = ELogModule.Video;
 		ELogAuthor author = ELogAuthor.YZY;
@@ -771,7 +939,7 @@ public class VideoView : UiTickViewBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06018275 RID: 98933 RVA: 0x00623FFC File Offset: 0x006221FC
+	// Token: 0x06015B13 RID: 88851 RVA: 0x00649F94 File Offset: 0x00648194
 	private void PlayVideoSound(VideoSound soundConf)
 	{
 		string eventName = AudioSystem.Instance.parseAudioEventPath(soundConf.EventPath);
@@ -811,7 +979,7 @@ public class VideoView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06018276 RID: 98934 RVA: 0x00624120 File Offset: 0x00622320
+	// Token: 0x06015B14 RID: 88852 RVA: 0x0064A0B8 File Offset: 0x006482B8
 	private unsafe void SyncVideoSoundOnce(string eventName, int handle, int startMomentMs, float audioDurationMs)
 	{
 		if (this.IsViewClosed || !this.RunningState || this.MediaPlayer == null)
@@ -843,7 +1011,7 @@ public class VideoView : UiTickViewBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x06018277 RID: 98935 RVA: 0x00624214 File Offset: 0x00622414
+	// Token: 0x06015B15 RID: 88853 RVA: 0x0064A1AC File Offset: 0x006483AC
 	private unsafe void TryPlaySubtitleVoice(VideoSubtitle caption)
 	{
 		if (!caption.IsPlaySubtitleVoice)
@@ -889,7 +1057,7 @@ public class VideoView : UiTickViewBase
 		this.SubtitleVoicePlays.Add(handle);
 	}
 
-	// Token: 0x06018278 RID: 98936 RVA: 0x00624340 File Offset: 0x00622540
+	// Token: 0x06015B16 RID: 88854 RVA: 0x0064A2D8 File Offset: 0x006484D8
 	private void StopAllSubtitleVoices()
 	{
 		foreach (int handle in this.SubtitleVoicePlays)
@@ -902,7 +1070,7 @@ public class VideoView : UiTickViewBase
 		this.SubtitleVoicePlays.Clear();
 	}
 
-	// Token: 0x06018279 RID: 98937 RVA: 0x006243C0 File Offset: 0x006225C0
+	// Token: 0x06015B17 RID: 88855 RVA: 0x0064A358 File Offset: 0x00648558
 	private void SizeSelfAdaption()
 	{
 		float videoTrackAspectRatio = this.MediaPlayer.GetVideoTrackAspectRatio(0, 0);
@@ -957,7 +1125,7 @@ public class VideoView : UiTickViewBase
 		instance.LastPlotColor = ((!(backgroundColor.GetValueOrDefault() == emovieBackgroundType & backgroundColor != null)) ? 1 : 0);
 	}
 
-	// Token: 0x0601827A RID: 98938 RVA: 0x0062460C File Offset: 0x0062280C
+	// Token: 0x06015B18 RID: 88856 RVA: 0x0064A5A4 File Offset: 0x006487A4
 	private void ClearCaptionLines()
 	{
 		for (int i = 0; i < this.CaptionLines.Length; i++)
@@ -971,7 +1139,7 @@ public class VideoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601827B RID: 98939 RVA: 0x00624650 File Offset: 0x00622850
+	// Token: 0x06015B19 RID: 88857 RVA: 0x0064A5E8 File Offset: 0x006487E8
 	private void ShowCaptionTick(float playTime)
 	{
 		for (int i = 0; i < this.CaptionLines.Length; i++)
@@ -1022,7 +1190,7 @@ public class VideoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601827C RID: 98940 RVA: 0x006247CC File Offset: 0x006229CC
+	// Token: 0x06015B1A RID: 88858 RVA: 0x0064A764 File Offset: 0x00648964
 	private void ShowQte(float playTime)
 	{
 		if (this.QteDataList == null || this.QteDataList.Count == 0)
@@ -1048,7 +1216,7 @@ public class VideoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601827D RID: 98941 RVA: 0x006248A2 File Offset: 0x00622AA2
+	// Token: 0x06015B1B RID: 88859 RVA: 0x0064A83A File Offset: 0x00648A3A
 	[NullableContext(2)]
 	private void OnQteEnd(CommonQteContextBase context = null)
 	{
@@ -1063,7 +1231,7 @@ public class VideoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601827E RID: 98942 RVA: 0x006248CC File Offset: 0x00622ACC
+	// Token: 0x06015B1C RID: 88860 RVA: 0x0064A864 File Offset: 0x00648A64
 	private void SetBackgroundColorOut()
 	{
 		if (GameModeModel.Instance.Mp4FadeOutScreenColor != null)
@@ -1113,7 +1281,7 @@ public class VideoView : UiTickViewBase
 		(this.CgTexture.GetTexture() as UMediaTexture).ClearColor = flinearColor.Value;
 	}
 
-	// Token: 0x0601827F RID: 98943 RVA: 0x00624A30 File Offset: 0x00622C30
+	// Token: 0x06015B1D RID: 88861 RVA: 0x0064A9C8 File Offset: 0x00648BC8
 	private unsafe void DelaySeamlessEndAfterTimeDilationRelease(string endSource)
 	{
 		if (this.HasHandledVideoEnd)
@@ -1143,7 +1311,7 @@ public class VideoView : UiTickViewBase
 		}, null, null);
 	}
 
-	// Token: 0x06018280 RID: 98944 RVA: 0x00624B1C File Offset: 0x00622D1C
+	// Token: 0x06015B1E RID: 88862 RVA: 0x0064AAB4 File Offset: 0x00648CB4
 	private void RemoveSeamlessEndDelayHandle()
 	{
 		if (this.SeamlessEndDelayHandle != null && TimerSystem.GameplayTimeInstance.Has(this.SeamlessEndDelayHandle))
@@ -1153,7 +1321,7 @@ public class VideoView : UiTickViewBase
 		this.SeamlessEndDelayHandle = null;
 	}
 
-	// Token: 0x06018281 RID: 98945 RVA: 0x00624B50 File Offset: 0x00622D50
+	// Token: 0x06015B1F RID: 88863 RVA: 0x0064AAE8 File Offset: 0x00648CE8
 	private void ReleaseSeamlessEndTimeDilationTag()
 	{
 		if (!this.HasSeamlessReleasedTimeDilation)
@@ -1164,48 +1332,61 @@ public class VideoView : UiTickViewBase
 		UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("VideoView.SeamlessEnd");
 	}
 
-	// Token: 0x06018282 RID: 98946 RVA: 0x00624B74 File Offset: 0x00622D74
-	protected override void OnTick(float delta)
+	// Token: 0x06015B20 RID: 88864 RVA: 0x0064AB0C File Offset: 0x00648D0C
+	private void TickPlayback()
 	{
-		if (this.RunningState)
+		float totalMilliseconds = UKismetMathLibrary.GetTotalMilliseconds(this.MediaPlayer.GetTime());
+		this.ShowCaptionTick(totalMilliseconds);
+		this.ShowQte(totalMilliseconds);
+		this.TickVideoSounds(totalMilliseconds);
+		this.TickFadeOut(totalMilliseconds);
+		VideoLauncher.OnCheckFrameEvent((int)totalMilliseconds);
+	}
+
+	// Token: 0x06015B21 RID: 88865 RVA: 0x0064AB50 File Offset: 0x00648D50
+	private void TickVideoSounds(float playTime)
+	{
+		while (this.PendingVideoSounds.Count > 0)
 		{
-			float totalMilliseconds = UKismetMathLibrary.GetTotalMilliseconds(this.MediaPlayer.GetTime());
-			this.ShowCaptionTick(totalMilliseconds);
-			this.ShowQte(totalMilliseconds);
-			while (this.PendingVideoSounds.Count > 0)
+			PendingVideoSound pendingVideoSound = this.PendingVideoSounds[this.PendingVideoSounds.Count - 1];
+			if ((double)playTime < pendingVideoSound.StartMomentMs)
 			{
-				PendingVideoSound pendingVideoSound = this.PendingVideoSounds[this.PendingVideoSounds.Count - 1];
-				if ((double)totalMilliseconds < pendingVideoSound.StartMomentMs)
+				IL_CF:
+				while (this.VideoSoundPlays.Count > 0)
 				{
-					IL_F9:
-					while (this.VideoSoundPlays.Count > 0)
+					List<VideoSoundPlay> videoSoundPlays = this.VideoSoundPlays;
+					VideoSoundPlay videoSoundPlay = videoSoundPlays[videoSoundPlays.Count - 1];
+					if (videoSoundPlay.EndMomentMs < 0.0 || (double)playTime < videoSoundPlay.EndMomentMs)
 					{
-						List<VideoSoundPlay> videoSoundPlays = this.VideoSoundPlays;
-						VideoSoundPlay videoSoundPlay = videoSoundPlays[videoSoundPlays.Count - 1];
-						if (videoSoundPlay.EndMomentMs < 0.0 || (double)totalMilliseconds < videoSoundPlay.EndMomentMs)
-						{
-							break;
-						}
-						AudioSystem.Instance.ExecuteAction(videoSoundPlay.Handle, EAudioActionType.Stop, new ExecuteActionArgs?(new ExecuteActionArgs
-						{
-							TransitionDuration = new int?(0)
-						}));
-						this.VideoSoundPlays.RemoveAt(this.VideoSoundPlays.Count - 1);
+						break;
 					}
-					if (this.Mp4FadeOutTime > 0f && this.SourceLength - totalMilliseconds <= this.Mp4FadeOutTime)
+					AudioSystem.Instance.ExecuteAction(videoSoundPlay.Handle, EAudioActionType.Stop, new ExecuteActionArgs?(new ExecuteActionArgs
 					{
-						this.TriggerBlendOut();
-						base.GetRootItem().SetAlpha(MathUtils.Instance.GetRangePct(0f, this.Mp4FadeOutTime, this.SourceLength - totalMilliseconds));
-					}
-					VideoLauncher.OnCheckFrameEvent((int)totalMilliseconds);
-					goto IL_15C;
+						TransitionDuration = new int?(0)
+					}));
+					this.VideoSoundPlays.RemoveAt(this.VideoSoundPlays.Count - 1);
 				}
-				this.PendingVideoSounds.RemoveAt(this.PendingVideoSounds.Count - 1);
-				this.PlayVideoSound(pendingVideoSound.SoundConf);
+				return;
 			}
-			goto IL_F9;
+			this.PendingVideoSounds.RemoveAt(this.PendingVideoSounds.Count - 1);
+			this.PlayVideoSound(pendingVideoSound.SoundConf);
 		}
-		IL_15C:
+		goto IL_CF;
+	}
+
+	// Token: 0x06015B22 RID: 88866 RVA: 0x0064AC40 File Offset: 0x00648E40
+	private void TickFadeOut(float playTime)
+	{
+		if (this.Mp4FadeOutTime > 0f && this.SourceLength - playTime <= this.Mp4FadeOutTime)
+		{
+			this.TriggerBlendOut();
+			base.GetRootItem().SetAlpha(MathUtils.Instance.GetRangePct(0f, this.Mp4FadeOutTime, this.SourceLength - playTime));
+		}
+	}
+
+	// Token: 0x06015B23 RID: 88867 RVA: 0x0064AC98 File Offset: 0x00648E98
+	private void TickAspectTransition(float delta)
+	{
 		if (this.IsLerp)
 		{
 			this.LerpNowTime += delta;
@@ -1218,7 +1399,7 @@ public class VideoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06018283 RID: 98947 RVA: 0x00624D50 File Offset: 0x00622F50
+	// Token: 0x06015B24 RID: 88868 RVA: 0x0064AD14 File Offset: 0x00648F14
 	private void TriggerBlendOut()
 	{
 		if (this.HasTriggerBlendOut)
@@ -1237,7 +1418,7 @@ public class VideoView : UiTickViewBase
 		}, new float?(0f));
 	}
 
-	// Token: 0x06018284 RID: 98948 RVA: 0x00624DE8 File Offset: 0x00622FE8
+	// Token: 0x06015B25 RID: 88869 RVA: 0x0064ADAC File Offset: 0x00648FAC
 	private void TryExecuteBlendAnim()
 	{
 		if (PlotBlendController.Instance.HasBlendInfo)
@@ -1251,7 +1432,7 @@ public class VideoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06018285 RID: 98949 RVA: 0x00624E38 File Offset: 0x00623038
+	// Token: 0x06015B26 RID: 88870 RVA: 0x0064ADFC File Offset: 0x00648FFC
 	private void RenderSetup(bool isApply)
 	{
 		bool flag;
@@ -1284,27 +1465,61 @@ public class VideoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0400B38C RID: 45964
+	// Token: 0x0400B700 RID: 46848
 	private const string SeamlessEndTimeDilationTag = "VideoView.SeamlessEnd";
 
-	// Token: 0x0400B38D RID: 45965
+	// Token: 0x0400B701 RID: 46849
 	private const string SubtitleVoiceEvent = "play_external_vo_video_subtitle_level_b";
 
-	// Token: 0x0400B38E RID: 45966
+	// Token: 0x0400B702 RID: 46850
 	private const string SubtitleVoiceExternalSourceName = "vo_video_subtitle_level_b";
 
-	// Token: 0x0400B38F RID: 45967
+	// Token: 0x0400B703 RID: 46851
 	private const int VIDEO_SOUND_SYNC_MIN_DELAY_MS = 200;
 
-	// Token: 0x0400B390 RID: 45968
+	// Token: 0x0400B704 RID: 46852
 	[Nullable(2)]
 	private UUITexture CgTexture;
 
-	// Token: 0x0400B391 RID: 45969
+	// Token: 0x0400B705 RID: 46853
 	[Nullable(2)]
 	private UMediaPlayer MediaPlayer;
 
-	// Token: 0x0400B392 RID: 45970
+	// Token: 0x0400B706 RID: 46854
+	[Nullable(2)]
+	private UUIButtonComponent SkipButton;
+
+	// Token: 0x0400B707 RID: 46855
+	[Nullable(2)]
+	private PlotSkipComponent SkipComp;
+
+	// Token: 0x0400B708 RID: 46856
+	private int LoadHandle = -1;
+
+	// Token: 0x0400B709 RID: 46857
+	[Nullable(2)]
+	private string VideoName;
+
+	// Token: 0x0400B70A RID: 46858
+	[Nullable(2)]
+	private FTimespan VideoPauseTime;
+
+	// Token: 0x0400B70B RID: 46859
+	private float SourceLength;
+
+	// Token: 0x0400B70C RID: 46860
+	private bool RunningState;
+
+	// Token: 0x0400B70D RID: 46861
+	private bool IsPlayToEnd;
+
+	// Token: 0x0400B70E RID: 46862
+	private bool HasHandledVideoEnd;
+
+	// Token: 0x0400B70F RID: 46863
+	private bool IsViewClosed = true;
+
+	// Token: 0x0400B710 RID: 46864
 	[Nullable(new byte[]
 	{
 		2,
@@ -1312,7 +1527,7 @@ public class VideoView : UiTickViewBase
 	})]
 	private List<VideoSubtitle> CaptionDataList;
 
-	// Token: 0x0400B393 RID: 45971
+	// Token: 0x0400B711 RID: 46865
 	[Nullable(new byte[]
 	{
 		2,
@@ -1320,33 +1535,14 @@ public class VideoView : UiTickViewBase
 	})]
 	private List<VideoQteConfig> QteDataList;
 
-	// Token: 0x0400B394 RID: 45972
-	[Nullable(2)]
-	private TimerHandle CaptionTimerId;
-
-	// Token: 0x0400B395 RID: 45973
-	[Nullable(2)]
-	private string VideoName;
-
-	// Token: 0x0400B396 RID: 45974
-	[Nullable(2)]
-	private FTimespan VideoPauseTime;
-
-	// Token: 0x0400B397 RID: 45975
-	[Nullable(2)]
-	private PlotSkipComponent SkipComp;
-
-	// Token: 0x0400B398 RID: 45976
-	private int LoadHandle = -1;
-
-	// Token: 0x0400B399 RID: 45977
+	// Token: 0x0400B712 RID: 46866
 	private readonly EVideoView[] CaptionLineComponents = new EVideoView[]
 	{
 		EVideoView.CaptionText,
 		EVideoView.CaptionText2
 	};
 
-	// Token: 0x0400B39A RID: 45978
+	// Token: 0x0400B713 RID: 46867
 	[Nullable(new byte[]
 	{
 		1,
@@ -1354,85 +1550,74 @@ public class VideoView : UiTickViewBase
 	})]
 	private readonly VideoSubtitle[] CaptionLines = new VideoSubtitle[2];
 
-	// Token: 0x0400B39B RID: 45979
-	private bool IsPlayToEnd;
+	// Token: 0x0400B714 RID: 46868
+	private readonly HashSet<CommonQteContextBase> CurrentQte = new HashSet<CommonQteContextBase>();
 
-	// Token: 0x0400B39C RID: 45980
-	private bool RunningState;
+	// Token: 0x0400B715 RID: 46869
+	[Nullable(2)]
+	private TimerHandle CaptionTimerId;
 
-	// Token: 0x0400B39D RID: 45981
-	private bool HasHandledVideoEnd;
-
-	// Token: 0x0400B39E RID: 45982
-	private bool HasSeamlessReleasedTimeDilation;
-
-	// Token: 0x0400B39F RID: 45983
+	// Token: 0x0400B716 RID: 46870
 	private List<VideoSoundPlay> VideoSoundPlays = new List<VideoSoundPlay>();
 
-	// Token: 0x0400B3A0 RID: 45984
+	// Token: 0x0400B717 RID: 46871
 	private List<PendingVideoSound> PendingVideoSounds = new List<PendingVideoSound>();
 
-	// Token: 0x0400B3A1 RID: 45985
+	// Token: 0x0400B718 RID: 46872
 	private readonly List<int> SubtitleVoicePlays = new List<int>();
 
-	// Token: 0x0400B3A2 RID: 45986
+	// Token: 0x0400B719 RID: 46873
 	[Nullable(2)]
 	private TimerHandle PlayStateTimeCheckHandle;
 
-	// Token: 0x0400B3A3 RID: 45987
+	// Token: 0x0400B71A RID: 46874
 	[Nullable(2)]
 	private TimerHandle PlayStateFrameCheckHandle;
 
-	// Token: 0x0400B3A4 RID: 45988
+	// Token: 0x0400B71B RID: 46875
 	[Nullable(2)]
 	private TimerHandle PlayLerpHandle;
 
-	// Token: 0x0400B3A5 RID: 45989
+	// Token: 0x0400B71C RID: 46876
 	[Nullable(2)]
 	private TimerHandle SeamlessEndDelayHandle;
 
-	// Token: 0x0400B3A6 RID: 45990
-	private bool IsViewClosed = true;
-
-	// Token: 0x0400B3A7 RID: 45991
+	// Token: 0x0400B71D RID: 46877
 	private float LerpFullTime = 4000f;
 
-	// Token: 0x0400B3A8 RID: 45992
+	// Token: 0x0400B71E RID: 46878
 	private float LerpWaitTime = 1000f;
 
-	// Token: 0x0400B3A9 RID: 45993
+	// Token: 0x0400B71F RID: 46879
 	private float LerpNowTime;
 
-	// Token: 0x0400B3AA RID: 45994
+	// Token: 0x0400B720 RID: 46880
 	private bool IsLerp;
 
-	// Token: 0x0400B3AB RID: 45995
+	// Token: 0x0400B721 RID: 46881
 	private float NowAspect;
 
-	// Token: 0x0400B3AC RID: 45996
+	// Token: 0x0400B722 RID: 46882
 	private float LastAspect;
 
-	// Token: 0x0400B3AD RID: 45997
+	// Token: 0x0400B723 RID: 46883
 	private EMovieBackgroundType? BackgroundColor = new EMovieBackgroundType?(EMovieBackgroundType.Black);
 
-	// Token: 0x0400B3AE RID: 45998
-	private readonly HashSet<CommonQteContextBase> CurrentQte = new HashSet<CommonQteContextBase>();
-
-	// Token: 0x0400B3AF RID: 45999
-	private float SourceLength;
-
-	// Token: 0x0400B3B0 RID: 46000
+	// Token: 0x0400B724 RID: 46884
 	protected float Mp4FadeOutTime;
 
-	// Token: 0x0400B3B1 RID: 46001
+	// Token: 0x0400B725 RID: 46885
 	protected float BlackBorderFadeOutTime;
 
-	// Token: 0x0400B3B2 RID: 46002
-	private bool HasTriggerBlendOut;
-
-	// Token: 0x0400B3B3 RID: 46003
+	// Token: 0x0400B726 RID: 46886
 	private float BlendOutRatio;
 
-	// Token: 0x0400B3B4 RID: 46004
+	// Token: 0x0400B727 RID: 46887
+	private bool HasTriggerBlendOut;
+
+	// Token: 0x0400B728 RID: 46888
 	private bool HasChangeColor;
+
+	// Token: 0x0400B729 RID: 46889
+	private bool HasSeamlessReleasedTimeDilation;
 }

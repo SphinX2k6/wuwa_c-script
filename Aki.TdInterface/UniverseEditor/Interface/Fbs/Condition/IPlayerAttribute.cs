@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C82 RID: 19586
+	// Token: 0x0200517B RID: 20859
 	public struct IPlayerAttribute : IFlatbufferObject
 	{
-		// Token: 0x17008E3B RID: 36411
-		// (get) Token: 0x0601F0F3 RID: 127219 RVA: 0x00457402 File Offset: 0x00455602
+		// Token: 0x17009569 RID: 38249
+		// (get) Token: 0x06020D15 RID: 134421 RVA: 0x0048AF52 File Offset: 0x00489152
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F0F4 RID: 127220 RVA: 0x0045740F File Offset: 0x0045560F
+		// Token: 0x06020D16 RID: 134422 RVA: 0x0048AF5F File Offset: 0x0048915F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F0F5 RID: 127221 RVA: 0x00457418 File Offset: 0x00455618
+		// Token: 0x06020D17 RID: 134423 RVA: 0x0048AF68 File Offset: 0x00489168
 		public static IPlayerAttribute GetRootAsIPlayerAttribute(ByteBuffer _bb)
 		{
 			return IPlayerAttribute.GetRootAsIPlayerAttribute(_bb, default(IPlayerAttribute));
 		}
 
-		// Token: 0x0601F0F6 RID: 127222 RVA: 0x00457434 File Offset: 0x00455634
+		// Token: 0x06020D18 RID: 134424 RVA: 0x0048AF84 File Offset: 0x00489184
 		public static IPlayerAttribute GetRootAsIPlayerAttribute(ByteBuffer _bb, IPlayerAttribute obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F0F7 RID: 127223 RVA: 0x00457451 File Offset: 0x00455651
+		// Token: 0x06020D19 RID: 134425 RVA: 0x0048AFA1 File Offset: 0x004891A1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F0F8 RID: 127224 RVA: 0x00457460 File Offset: 0x00455660
+		// Token: 0x06020D1A RID: 134426 RVA: 0x0048AFB0 File Offset: 0x004891B0
 		public IPlayerAttribute __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008E3C RID: 36412
-		// (get) Token: 0x0601F0F9 RID: 127225 RVA: 0x00457470 File Offset: 0x00455670
+		// Token: 0x1700956A RID: 38250
+		// (get) Token: 0x06020D1B RID: 134427 RVA: 0x0048AFC0 File Offset: 0x004891C0
 		public ETargetType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008E3D RID: 36413
-		// (get) Token: 0x0601F0FA RID: 127226 RVA: 0x004574AC File Offset: 0x004556AC
+		// Token: 0x1700956B RID: 38251
+		// (get) Token: 0x06020D1C RID: 134428 RVA: 0x0048AFFC File Offset: 0x004891FC
 		public EPlayerCheckType Option
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F0FB RID: 127227 RVA: 0x004574E8 File Offset: 0x004556E8
+		// Token: 0x06020D1D RID: 134429 RVA: 0x0048B038 File Offset: 0x00489238
 		public TPlayerAttribute AttributeTypesType(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return (TPlayerAttribute)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x17008E3E RID: 36414
-		// (get) Token: 0x0601F0FC RID: 127228 RVA: 0x00457528 File Offset: 0x00455728
+		// Token: 0x1700956C RID: 38252
+		// (get) Token: 0x06020D1E RID: 134430 RVA: 0x0048B078 File Offset: 0x00489278
 		public int AttributeTypesTypeLength
 		{
 			get
@@ -104,13 +104,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F0FD RID: 127229 RVA: 0x00457553 File Offset: 0x00455753
+		// Token: 0x06020D1F RID: 134431 RVA: 0x0048B0A3 File Offset: 0x004892A3
 		public Span<TPlayerAttribute> GetAttributeTypesTypeBytes()
 		{
 			return this.__p.__vector_as_span<TPlayerAttribute>(8, 1);
 		}
 
-		// Token: 0x0601F0FE RID: 127230 RVA: 0x00457564 File Offset: 0x00455764
+		// Token: 0x06020D20 RID: 134432 RVA: 0x0048B0B4 File Offset: 0x004892B4
 		public TPlayerAttribute[] GetAttributeTypesTypeArray()
 		{
 			int num = this.__p.__offset(8);
@@ -128,7 +128,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return array;
 		}
 
-		// Token: 0x0601F0FF RID: 127231 RVA: 0x004575D0 File Offset: 0x004557D0
+		// Token: 0x06020D21 RID: 134433 RVA: 0x0048B120 File Offset: 0x00489320
 		public TTable? AttributeTypes<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -139,8 +139,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x17008E3F RID: 36415
-		// (get) Token: 0x0601F100 RID: 127232 RVA: 0x00457618 File Offset: 0x00455818
+		// Token: 0x1700956D RID: 38253
+		// (get) Token: 0x06020D22 RID: 134434 RVA: 0x0048B168 File Offset: 0x00489368
 		public int AttributeTypesLength
 		{
 			get
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F101 RID: 127233 RVA: 0x00457644 File Offset: 0x00455844
+		// Token: 0x06020D23 RID: 134435 RVA: 0x0048B194 File Offset: 0x00489394
 		public static Offset<IPlayerAttribute> CreateIPlayerAttribute(FlatBufferBuilder builder, ETargetType Type = ETargetType.Player, EPlayerCheckType Option = EPlayerCheckType.AnyRole, VectorOffset AttributeTypes_typeOffset = default(VectorOffset), VectorOffset AttributeTypesOffset = default(VectorOffset))
 		{
 			builder.StartTable(4);
@@ -165,31 +165,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IPlayerAttribute.EndIPlayerAttribute(builder);
 		}
 
-		// Token: 0x0601F102 RID: 127234 RVA: 0x00457670 File Offset: 0x00455870
+		// Token: 0x06020D24 RID: 134436 RVA: 0x0048B1C0 File Offset: 0x004893C0
 		public static void StartIPlayerAttribute(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601F103 RID: 127235 RVA: 0x00457679 File Offset: 0x00455879
+		// Token: 0x06020D25 RID: 134437 RVA: 0x0048B1C9 File Offset: 0x004893C9
 		public static void AddType(FlatBufferBuilder builder, ETargetType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601F104 RID: 127236 RVA: 0x00457684 File Offset: 0x00455884
+		// Token: 0x06020D26 RID: 134438 RVA: 0x0048B1D4 File Offset: 0x004893D4
 		public static void AddOption(FlatBufferBuilder builder, EPlayerCheckType option)
 		{
 			builder.AddByte(1, (byte)option, 0);
 		}
 
-		// Token: 0x0601F105 RID: 127237 RVA: 0x0045768F File Offset: 0x0045588F
+		// Token: 0x06020D27 RID: 134439 RVA: 0x0048B1DF File Offset: 0x004893DF
 		public static void AddAttributeTypesType(FlatBufferBuilder builder, VectorOffset attributeTypesTypeOffset)
 		{
 			builder.AddOffset(2, attributeTypesTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601F106 RID: 127238 RVA: 0x004576A0 File Offset: 0x004558A0
+		// Token: 0x06020D28 RID: 134440 RVA: 0x0048B1F0 File Offset: 0x004893F0
 		public static VectorOffset CreateAttributeTypesTypeVector(FlatBufferBuilder builder, TPlayerAttribute[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -200,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F107 RID: 127239 RVA: 0x004576D7 File Offset: 0x004558D7
+		// Token: 0x06020D29 RID: 134441 RVA: 0x0048B227 File Offset: 0x00489427
 		public static VectorOffset CreateAttributeTypesTypeVectorBlock(FlatBufferBuilder builder, TPlayerAttribute[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F108 RID: 127240 RVA: 0x004576F1 File Offset: 0x004558F1
+		// Token: 0x06020D2A RID: 134442 RVA: 0x0048B241 File Offset: 0x00489441
 		public static VectorOffset CreateAttributeTypesTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TPlayerAttribute> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F109 RID: 127241 RVA: 0x0045770F File Offset: 0x0045590F
+		// Token: 0x06020D2B RID: 134443 RVA: 0x0048B25F File Offset: 0x0048945F
 		public static VectorOffset CreateAttributeTypesTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -224,19 +224,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F10A RID: 127242 RVA: 0x00457728 File Offset: 0x00455928
+		// Token: 0x06020D2C RID: 134444 RVA: 0x0048B278 File Offset: 0x00489478
 		public static void StartAttributeTypesTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601F10B RID: 127243 RVA: 0x00457733 File Offset: 0x00455933
+		// Token: 0x06020D2D RID: 134445 RVA: 0x0048B283 File Offset: 0x00489483
 		public static void AddAttributeTypes(FlatBufferBuilder builder, VectorOffset attributeTypesOffset)
 		{
 			builder.AddOffset(3, attributeTypesOffset.Value, 0);
 		}
 
-		// Token: 0x0601F10C RID: 127244 RVA: 0x00457744 File Offset: 0x00455944
+		// Token: 0x06020D2E RID: 134446 RVA: 0x0048B294 File Offset: 0x00489494
 		public static VectorOffset CreateAttributeTypesVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -247,7 +247,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F10D RID: 127245 RVA: 0x0045777B File Offset: 0x0045597B
+		// Token: 0x06020D2F RID: 134447 RVA: 0x0048B2CB File Offset: 0x004894CB
 		public static VectorOffset CreateAttributeTypesVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -255,7 +255,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F10E RID: 127246 RVA: 0x00457795 File Offset: 0x00455995
+		// Token: 0x06020D30 RID: 134448 RVA: 0x0048B2E5 File Offset: 0x004894E5
 		public static VectorOffset CreateAttributeTypesVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F10F RID: 127247 RVA: 0x004577B3 File Offset: 0x004559B3
+		// Token: 0x06020D31 RID: 134449 RVA: 0x0048B303 File Offset: 0x00489503
 		public static VectorOffset CreateAttributeTypesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -271,19 +271,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F110 RID: 127248 RVA: 0x004577CC File Offset: 0x004559CC
+		// Token: 0x06020D32 RID: 134450 RVA: 0x0048B31C File Offset: 0x0048951C
 		public static void StartAttributeTypesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601F111 RID: 127249 RVA: 0x004577D7 File Offset: 0x004559D7
+		// Token: 0x06020D33 RID: 134451 RVA: 0x0048B327 File Offset: 0x00489527
 		public static Offset<IPlayerAttribute> EndIPlayerAttribute(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlayerAttribute>(builder.EndTable());
 		}
 
-		// Token: 0x0601F112 RID: 127250 RVA: 0x004577E4 File Offset: 0x004559E4
+		// Token: 0x06020D34 RID: 134452 RVA: 0x0048B334 File Offset: 0x00489534
 		public IPlayerAttributeT UnPack()
 		{
 			IPlayerAttributeT playerAttributeT = new IPlayerAttributeT();
@@ -291,7 +291,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return playerAttributeT;
 		}
 
-		// Token: 0x0601F113 RID: 127251 RVA: 0x00457800 File Offset: 0x00455A00
+		// Token: 0x06020D35 RID: 134453 RVA: 0x0048B350 File Offset: 0x00489550
 		public void UnPackTo(IPlayerAttributeT _o)
 		{
 			_o.Type = this.Type;
@@ -317,7 +317,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F114 RID: 127252 RVA: 0x004578E0 File Offset: 0x00455AE0
+		// Token: 0x06020D36 RID: 134454 RVA: 0x0048B430 File Offset: 0x00489630
 		public static Offset<IPlayerAttribute> Pack(FlatBufferBuilder builder, IPlayerAttributeT _o)
 		{
 			if (_o == null)
@@ -347,7 +347,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IPlayerAttribute.CreateIPlayerAttribute(builder, _o.Type, _o.Option, attributeTypes_typeOffset, attributeTypesOffset);
 		}
 
-		// Token: 0x0400D638 RID: 54840
+		// Token: 0x0400E15F RID: 57695
 		private Table __p;
 	}
 }

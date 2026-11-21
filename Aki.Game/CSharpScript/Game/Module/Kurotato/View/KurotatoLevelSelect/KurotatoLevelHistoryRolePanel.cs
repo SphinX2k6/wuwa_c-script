@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 {
-	// Token: 0x02005756 RID: 22358
+	// Token: 0x0200472D RID: 18221
 	public class KurotatoLevelHistoryRolePanel : UiPanelBase
 	{
-		// Token: 0x06038D17 RID: 232727 RVA: 0x00D7EAF8 File Offset: 0x00D7CCF8
+		// Token: 0x0602DC27 RID: 187431 RVA: 0x00CCD4D0 File Offset: 0x00CCB6D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038D18 RID: 232728 RVA: 0x00D7EBA4 File Offset: 0x00D7CDA4
+		// Token: 0x0602DC28 RID: 187432 RVA: 0x00CCD57C File Offset: 0x00CCB77C
 		public void Refresh(int roleId)
 		{
 			bool flag = roleId == 0;
@@ -55,16 +55,16 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), value.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x0200B94E RID: 47438
+		// Token: 0x0200A36C RID: 41836
 		private enum EComponent
 		{
-			// Token: 0x040380AE RID: 229550
+			// Token: 0x04032AB4 RID: 207540
 			ItemEmpty,
-			// Token: 0x040380AF RID: 229551
+			// Token: 0x04032AB5 RID: 207541
 			ItemRolePanel,
-			// Token: 0x040380B0 RID: 229552
+			// Token: 0x04032AB6 RID: 207542
 			TextureRole,
-			// Token: 0x040380B1 RID: 229553
+			// Token: 0x04032AB7 RID: 207543
 			TextName
 		}
 	}

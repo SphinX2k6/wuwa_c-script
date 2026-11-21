@@ -4,13 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AA2 RID: 10914
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02002D96 RID: 11670
 	public class SetMotorSpeed : ActionParams
 	{
-		// Token: 0x0600EFAC RID: 61356 RVA: 0x0022D5B1 File Offset: 0x0022B7B1
-		[NullableContext(1)]
+		// Token: 0x0600FE62 RID: 65122 RVA: 0x0024B2BD File Offset: 0x002494BD
 		public static SetMotorSpeed Create(ISetMotorSpeed? instance)
 		{
 			if (instance == null)
@@ -23,10 +20,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C2A RID: 19498
-		// (get) Token: 0x0600EFAD RID: 61357 RVA: 0x0022D5D0 File Offset: 0x0022B7D0
+		// Token: 0x17004FE4 RID: 20452
+		// (get) Token: 0x0600FE63 RID: 65123 RVA: 0x0024B2DC File Offset: 0x002494DC
+		[Nullable(2)]
 		public virtual IMotorConstraintConfig MotorConstraint
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._MotorConstraintInited)
@@ -39,12 +38,10 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C2B RID: 19499
-		// (get) Token: 0x0600EFAE RID: 61358 RVA: 0x0022D604 File Offset: 0x0022B804
-		[Nullable(1)]
+		// Token: 0x17004FE5 RID: 20453
+		// (get) Token: 0x0600FE64 RID: 65124 RVA: 0x0024B310 File Offset: 0x00249510
 		public virtual ISetMotorSpeedTargetSpeed SpeedConfig
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._SpeedConfigInited)
@@ -57,19 +54,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083D4 RID: 33748
+		// Token: 0x04008AD8 RID: 35544
 		private ISetMotorSpeed Instance;
 
-		// Token: 0x040083D5 RID: 33749
+		// Token: 0x04008AD9 RID: 35545
+		[Nullable(2)]
 		private IMotorConstraintConfig _MotorConstraintCache;
 
-		// Token: 0x040083D6 RID: 33750
+		// Token: 0x04008ADA RID: 35546
 		private bool _MotorConstraintInited;
 
-		// Token: 0x040083D7 RID: 33751
+		// Token: 0x04008ADB RID: 35547
+		[Nullable(2)]
 		private ISetMotorSpeedTargetSpeed _SpeedConfigCache;
 
-		// Token: 0x040083D8 RID: 33752
+		// Token: 0x04008ADC RID: 35548
 		private bool _SpeedConfigInited;
 	}
 }

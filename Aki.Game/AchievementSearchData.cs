@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000F15 RID: 3861
+// Token: 0x020003CA RID: 970
 [NullableContext(2)]
 [Nullable(0)]
 public class AchievementSearchData
 {
-	// Token: 0x04002C57 RID: 11351
+	// Token: 0x04002CF0 RID: 11504
 	public AchievementCategoryData AchievementCategoryData;
 
-	// Token: 0x04002C58 RID: 11352
+	// Token: 0x04002CF1 RID: 11505
 	public AchievementSearchGroupData AchievementSearchGroupData;
 
-	// Token: 0x04002C59 RID: 11353
+	// Token: 0x04002CF2 RID: 11506
 	public AchievementData AchievementData;
 }

@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BD9 RID: 23513
+	// Token: 0x02004BB9 RID: 19385
 	public class CiacconaGalFinishBtnItem : UiPanelBase
 	{
-		// Token: 0x0603B713 RID: 243475 RVA: 0x00E2CA9C File Offset: 0x00E2AC9C
+		// Token: 0x0603065E RID: 198238 RVA: 0x00D7CDA4 File Offset: 0x00D7AFA4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B714 RID: 243476 RVA: 0x00E2CB64 File Offset: 0x00E2AD64
+		// Token: 0x0603065F RID: 198239 RVA: 0x00D7CE6C File Offset: 0x00D7B06C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CiacconaGalFinishBtnItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B715 RID: 243477 RVA: 0x00E2CBA7 File Offset: 0x00E2ADA7
+		// Token: 0x06030660 RID: 198240 RVA: 0x00D7CEAF File Offset: 0x00D7B0AF
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603B716 RID: 243478 RVA: 0x00E2CBBC File Offset: 0x00E2ADBC
+		// Token: 0x06030661 RID: 198241 RVA: 0x00D7CEC4 File Offset: 0x00D7B0C4
 		protected override void OnAfterShow()
 		{
 			this.CanClick = false;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			seqPlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x0603B717 RID: 243479 RVA: 0x00E2CC27 File Offset: 0x00E2AE27
+		// Token: 0x06030662 RID: 198242 RVA: 0x00D7CF2F File Offset: 0x00D7B12F
 		protected override void OnBeforeDestroy()
 		{
 			if (this.ProtectionTimerHandle != null && TimerSystem.Instance.Has(this.ProtectionTimerHandle))
@@ -79,14 +79,14 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B718 RID: 243480 RVA: 0x00E2CC5B File Offset: 0x00E2AE5B
+		// Token: 0x06030663 RID: 198243 RVA: 0x00D7CF63 File Offset: 0x00D7B163
 		[NullableContext(1)]
 		public void SetLocalText(string textId)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0603B719 RID: 243481 RVA: 0x00E2CC74 File Offset: 0x00E2AE74
+		// Token: 0x06030664 RID: 198244 RVA: 0x00D7CF7C File Offset: 0x00D7B17C
 		private void OnClickInternal(EToggleState toggleState)
 		{
 			if (!this.CanClick)
@@ -99,27 +99,27 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			CiacconaGalController.Instance.ExitAvg().Forget();
 		}
 
-		// Token: 0x0401EF8F RID: 126863
+		// Token: 0x04019A40 RID: 105024
 		private bool CanClick;
 
-		// Token: 0x0401EF90 RID: 126864
+		// Token: 0x04019A41 RID: 105025
 		[Nullable(2)]
 		private TimerHandle ProtectionTimerHandle;
 
-		// Token: 0x0401EF91 RID: 126865
+		// Token: 0x04019A42 RID: 105026
 		[Nullable(2)]
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0200BDB8 RID: 48568
+		// Token: 0x0200A7C1 RID: 42945
 		private class EBtnItemComponentDefine
 		{
-			// Token: 0x04039368 RID: 234344
+			// Token: 0x04033D2D RID: 212269
 			public const int TogSelf = 0;
 
-			// Token: 0x04039369 RID: 234345
+			// Token: 0x04033D2E RID: 212270
 			public const int Text = 1;
 
-			// Token: 0x0403936A RID: 234346
+			// Token: 0x04033D2F RID: 212271
 			public const int TextureIconLock = 2;
 		}
 	}

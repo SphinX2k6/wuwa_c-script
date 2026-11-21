@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 {
-	// Token: 0x02006A5C RID: 27228
+	// Token: 0x02005BB9 RID: 23481
 	public enum ESeekTraceGridStateViewType
 	{
-		// Token: 0x040235BA RID: 144826
+		// Token: 0x0401E7AC RID: 124844
 		None,
-		// Token: 0x040235BB RID: 144827
+		// Token: 0x0401E7AD RID: 124845
 		Light,
-		// Token: 0x040235BC RID: 144828
+		// Token: 0x0401E7AE RID: 124846
 		LightGreen,
-		// Token: 0x040235BD RID: 144829
+		// Token: 0x0401E7AF RID: 124847
 		Red
 	}
 }

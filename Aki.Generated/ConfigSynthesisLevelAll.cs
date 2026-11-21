@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009BD RID: 2493
+	// Token: 0x02000A92 RID: 2706
 	public class ConfigSynthesisLevelAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003A82 RID: 14978 RVA: 0x001A4B2C File Offset: 0x001A2D2C
+		// Token: 0x06003F80 RID: 16256 RVA: 0x001C3EC0 File Offset: 0x001C20C0
 		static ConfigSynthesisLevelAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSynthesisLevelAll.CreateStaticDefaultValue), new Action(ConfigSynthesisLevelAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003A83 RID: 14979 RVA: 0x001A4B4C File Offset: 0x001A2D4C
+		// Token: 0x06003F81 RID: 16257 RVA: 0x001C3EE0 File Offset: 0x001C20E0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSynthesisLevelAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003A84 RID: 14980 RVA: 0x001A4BCB File Offset: 0x001A2DCB
+		// Token: 0x06003F82 RID: 16258 RVA: 0x001C3F5F File Offset: 0x001C215F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSynthesisLevelAll.LogPair = null;
 			ConfigSynthesisLevelAll.HandleId = 0;
 		}
 
-		// Token: 0x06003A85 RID: 14981 RVA: 0x001A4BD9 File Offset: 0x001A2DD9
+		// Token: 0x06003F83 RID: 16259 RVA: 0x001C3F6D File Offset: 0x001C216D
 		public static void Init()
 		{
 			ConfigSynthesisLevelAll.HandleId = ConfigCommon.InitDataStatement(ConfigSynthesisLevelAll.HandleId, "db_compose.db", "select BinData from `SynthesisLevel`");
 		}
 
-		// Token: 0x06003A86 RID: 14982 RVA: 0x001A4BF4 File Offset: 0x001A2DF4
+		// Token: 0x06003F84 RID: 16260 RVA: 0x001C3F88 File Offset: 0x001C2188
 		[NullableContext(2)]
 		public static IReadOnlyList<SynthesisLevel> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04004411 RID: 17425
+		// Token: 0x040049E4 RID: 18916
 		private const string DB = "db_compose.db";
 
-		// Token: 0x04004412 RID: 17426
+		// Token: 0x040049E5 RID: 18917
 		private const string FILE = "h.合成.xlsx";
 
-		// Token: 0x04004413 RID: 17427
+		// Token: 0x040049E6 RID: 18918
 		private const string TABLE = "SynthesisLevel";
 
-		// Token: 0x04004414 RID: 17428
+		// Token: 0x040049E7 RID: 18919
 		private const string COMMAND = "select BinData from `SynthesisLevel`";
 
-		// Token: 0x04004415 RID: 17429
+		// Token: 0x040049E8 RID: 18920
 		private const string KEY_PREFIX = "SynthesisLevelAll";
 
-		// Token: 0x04004416 RID: 17430
+		// Token: 0x040049E9 RID: 18921
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004417 RID: 17431
+		// Token: 0x040049EA RID: 18922
 		private static int HandleId;
 	}
 }

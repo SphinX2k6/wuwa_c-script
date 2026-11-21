@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200020A RID: 522
+	// Token: 0x0200021C RID: 540
 	public class ConfigDirectTrainActivityAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C3F RID: 3135 RVA: 0x0009EE7C File Offset: 0x0009D07C
+		// Token: 0x06000CAB RID: 3243 RVA: 0x000A4DB4 File Offset: 0x000A2FB4
 		static ConfigDirectTrainActivityAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDirectTrainActivityAll.CreateStaticDefaultValue), new Action(ConfigDirectTrainActivityAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C40 RID: 3136 RVA: 0x0009EE9C File Offset: 0x0009D09C
+		// Token: 0x06000CAC RID: 3244 RVA: 0x000A4DD4 File Offset: 0x000A2FD4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDirectTrainActivityAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000C41 RID: 3137 RVA: 0x0009EF1B File Offset: 0x0009D11B
+		// Token: 0x06000CAD RID: 3245 RVA: 0x000A4E53 File Offset: 0x000A3053
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDirectTrainActivityAll.LogPair = null;
 			ConfigDirectTrainActivityAll.HandleId = 0;
 		}
 
-		// Token: 0x06000C42 RID: 3138 RVA: 0x0009EF29 File Offset: 0x0009D129
+		// Token: 0x06000CAE RID: 3246 RVA: 0x000A4E61 File Offset: 0x000A3061
 		public static void Init()
 		{
 			ConfigDirectTrainActivityAll.HandleId = ConfigCommon.InitDataStatement(ConfigDirectTrainActivityAll.HandleId, "db_directtrain.db", "select BinData from `DirectTrainActivity`");
 		}
 
-		// Token: 0x06000C43 RID: 3139 RVA: 0x0009EF44 File Offset: 0x0009D144
+		// Token: 0x06000CAF RID: 3247 RVA: 0x000A4E7C File Offset: 0x000A307C
 		[NullableContext(2)]
 		public static IReadOnlyList<DirectTrainActivity> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000E2A RID: 3626
+		// Token: 0x04000EA8 RID: 3752
 		private const string DB = "db_directtrain.db";
 
-		// Token: 0x04000E2B RID: 3627
+		// Token: 0x04000EA9 RID: 3753
 		private const string FILE = "j.剧情直通车活动.xlsx";
 
-		// Token: 0x04000E2C RID: 3628
+		// Token: 0x04000EAA RID: 3754
 		private const string TABLE = "DirectTrainActivity";
 
-		// Token: 0x04000E2D RID: 3629
+		// Token: 0x04000EAB RID: 3755
 		private const string COMMAND = "select BinData from `DirectTrainActivity`";
 
-		// Token: 0x04000E2E RID: 3630
+		// Token: 0x04000EAC RID: 3756
 		private const string KEY_PREFIX = "DirectTrainActivityAll";
 
-		// Token: 0x04000E2F RID: 3631
+		// Token: 0x04000EAD RID: 3757
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000E30 RID: 3632
+		// Token: 0x04000EAE RID: 3758
 		private static int HandleId;
 	}
 }

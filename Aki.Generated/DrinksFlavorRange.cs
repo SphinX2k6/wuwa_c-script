@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C03 RID: 3075
+	// Token: 0x02000CE5 RID: 3301
 	public struct DrinksFlavorRange : IFlatbufferObject
 	{
-		// Token: 0x17000D3D RID: 3389
-		// (get) Token: 0x060063FC RID: 25596 RVA: 0x00217761 File Offset: 0x00215961
+		// Token: 0x17000D89 RID: 3465
+		// (get) Token: 0x060069DB RID: 27099 RVA: 0x00236DA2 File Offset: 0x00234FA2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060063FD RID: 25597 RVA: 0x0021776E File Offset: 0x0021596E
+		// Token: 0x060069DC RID: 27100 RVA: 0x00236DAF File Offset: 0x00234FAF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060063FE RID: 25598 RVA: 0x00217778 File Offset: 0x00215978
+		// Token: 0x060069DD RID: 27101 RVA: 0x00236DB8 File Offset: 0x00234FB8
 		public static DrinksFlavorRange GetRootAsDrinksFlavorRange(ByteBuffer _bb)
 		{
 			return DrinksFlavorRange.GetRootAsDrinksFlavorRange(_bb, default(DrinksFlavorRange));
 		}
 
-		// Token: 0x060063FF RID: 25599 RVA: 0x00217794 File Offset: 0x00215994
+		// Token: 0x060069DE RID: 27102 RVA: 0x00236DD4 File Offset: 0x00234FD4
 		public static DrinksFlavorRange GetRootAsDrinksFlavorRange(ByteBuffer _bb, DrinksFlavorRange obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006400 RID: 25600 RVA: 0x002177B1 File Offset: 0x002159B1
+		// Token: 0x060069DF RID: 27103 RVA: 0x00236DF1 File Offset: 0x00234FF1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006401 RID: 25601 RVA: 0x002177C0 File Offset: 0x002159C0
+		// Token: 0x060069E0 RID: 27104 RVA: 0x00236E00 File Offset: 0x00235000
 		public DrinksFlavorRange __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000D3E RID: 3390
-		// (get) Token: 0x06006402 RID: 25602 RVA: 0x002177D0 File Offset: 0x002159D0
+		// Token: 0x17000D8A RID: 3466
+		// (get) Token: 0x060069E1 RID: 27105 RVA: 0x00236E10 File Offset: 0x00235010
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D3F RID: 3391
-		// (get) Token: 0x06006403 RID: 25603 RVA: 0x0021780C File Offset: 0x00215A0C
+		// Token: 0x17000D8B RID: 3467
+		// (get) Token: 0x060069E2 RID: 27106 RVA: 0x00236E4C File Offset: 0x0023504C
 		public int FlavorGroupId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D40 RID: 3392
-		// (get) Token: 0x06006404 RID: 25604 RVA: 0x00217848 File Offset: 0x00215A48
+		// Token: 0x17000D8C RID: 3468
+		// (get) Token: 0x060069E3 RID: 27107 RVA: 0x00236E88 File Offset: 0x00235088
 		public int FlavorTypeRef
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006405 RID: 25605 RVA: 0x00217884 File Offset: 0x00215A84
+		// Token: 0x060069E4 RID: 27108 RVA: 0x00236EC4 File Offset: 0x002350C4
 		public int FlavorValues(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D41 RID: 3393
-		// (get) Token: 0x06006406 RID: 25606 RVA: 0x002178C4 File Offset: 0x00215AC4
+		// Token: 0x17000D8D RID: 3469
+		// (get) Token: 0x060069E5 RID: 27109 RVA: 0x00236F04 File Offset: 0x00235104
 		public int FlavorValuesLength
 		{
 			get
@@ -120,19 +120,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006407 RID: 25607 RVA: 0x002178F0 File Offset: 0x00215AF0
+		// Token: 0x060069E6 RID: 27110 RVA: 0x00236F30 File Offset: 0x00235130
 		public Span<int> GetFlavorValuesBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06006408 RID: 25608 RVA: 0x00217900 File Offset: 0x00215B00
+		// Token: 0x060069E7 RID: 27111 RVA: 0x00236F40 File Offset: 0x00235140
 		public int[] GetFlavorValuesArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06006409 RID: 25609 RVA: 0x00217918 File Offset: 0x00215B18
+		// Token: 0x060069E8 RID: 27112 RVA: 0x00236F58 File Offset: 0x00235158
 		public int FlavorLikeValue(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -143,8 +143,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D42 RID: 3394
-		// (get) Token: 0x0600640A RID: 25610 RVA: 0x00217958 File Offset: 0x00215B58
+		// Token: 0x17000D8E RID: 3470
+		// (get) Token: 0x060069E9 RID: 27113 RVA: 0x00236F98 File Offset: 0x00235198
 		public int FlavorLikeValueLength
 		{
 			get
@@ -158,20 +158,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600640B RID: 25611 RVA: 0x00217984 File Offset: 0x00215B84
+		// Token: 0x060069EA RID: 27114 RVA: 0x00236FC4 File Offset: 0x002351C4
 		public Span<int> GetFlavorLikeValueBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x0600640C RID: 25612 RVA: 0x00217994 File Offset: 0x00215B94
+		// Token: 0x060069EB RID: 27115 RVA: 0x00236FD4 File Offset: 0x002351D4
 		public int[] GetFlavorLikeValueArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000D43 RID: 3395
-		// (get) Token: 0x0600640D RID: 25613 RVA: 0x002179AC File Offset: 0x00215BAC
+		// Token: 0x17000D8F RID: 3471
+		// (get) Token: 0x060069EC RID: 27116 RVA: 0x00236FEC File Offset: 0x002351EC
 		public string Desc
 		{
 			get
@@ -185,55 +185,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600640E RID: 25614 RVA: 0x002179E4 File Offset: 0x00215BE4
+		// Token: 0x060069ED RID: 27117 RVA: 0x00237024 File Offset: 0x00235224
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600640F RID: 25615 RVA: 0x002179F4 File Offset: 0x00215BF4
+		// Token: 0x060069EE RID: 27118 RVA: 0x00237034 File Offset: 0x00235234
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06006410 RID: 25616 RVA: 0x00217A0C File Offset: 0x00215C0C
+		// Token: 0x060069EF RID: 27119 RVA: 0x0023704C File Offset: 0x0023524C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用FlavorLikeValueIter()或GetFlavorLikeValueBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] FlavorLikeValue()
+		public int[] FlavorLikeValue()
 		{
-			DrinksFlavorRange drinksFlavorRange = this;
-			return drinksFlavorRange.GetFlavorLikeValueArray() ?? Array.Empty<int>();
+			return this.GetFlavorLikeValueArray();
 		}
 
-		// Token: 0x06006411 RID: 25617 RVA: 0x00217A30 File Offset: 0x00215C30
+		// Token: 0x060069F0 RID: 27120 RVA: 0x00237054 File Offset: 0x00235254
 		[NullableContext(1)]
-		public readonly IEnumerable<int> FlavorLikeValueIter()
+		public IEnumerable<int> FlavorLikeValueIter()
 		{
 			DrinksFlavorRange.<FlavorLikeValueIter>d__29 <FlavorLikeValueIter>d__ = new DrinksFlavorRange.<FlavorLikeValueIter>d__29(-2);
 			<FlavorLikeValueIter>d__.<>3__<>4__this = this;
 			return <FlavorLikeValueIter>d__;
 		}
 
-		// Token: 0x06006412 RID: 25618 RVA: 0x00217A48 File Offset: 0x00215C48
+		// Token: 0x060069F1 RID: 27121 RVA: 0x00237069 File Offset: 0x00235269
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用FlavorValuesIter()或GetFlavorValuesBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] FlavorValues()
+		public int[] FlavorValues()
 		{
-			DrinksFlavorRange drinksFlavorRange = this;
-			return drinksFlavorRange.GetFlavorValuesArray() ?? Array.Empty<int>();
+			return this.GetFlavorValuesArray();
 		}
 
-		// Token: 0x06006413 RID: 25619 RVA: 0x00217A6C File Offset: 0x00215C6C
+		// Token: 0x060069F2 RID: 27122 RVA: 0x00237071 File Offset: 0x00235271
 		[NullableContext(1)]
-		public readonly IEnumerable<int> FlavorValuesIter()
+		public IEnumerable<int> FlavorValuesIter()
 		{
 			DrinksFlavorRange.<FlavorValuesIter>d__31 <FlavorValuesIter>d__ = new DrinksFlavorRange.<FlavorValuesIter>d__31(-2);
 			<FlavorValuesIter>d__.<>3__<>4__this = this;
 			return <FlavorValuesIter>d__;
 		}
 
-		// Token: 0x04004C39 RID: 19513
+		// Token: 0x0400521B RID: 21019
 		private Table __p;
 	}
 }

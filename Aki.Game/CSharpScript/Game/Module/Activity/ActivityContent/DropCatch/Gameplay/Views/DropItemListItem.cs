@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x02006706 RID: 26374
+	// Token: 0x02005656 RID: 22102
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 	})]
 	internal class DropItemListItem : GridProxyAbstract<IDropItemListItemData>
 	{
-		// Token: 0x06041E10 RID: 269840 RVA: 0x00FFA3B4 File Offset: 0x00FF85B4
+		// Token: 0x0603695C RID: 223580 RVA: 0x00F3B7A8 File Offset: 0x00F399A8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			};
 		}
 
-		// Token: 0x06041E11 RID: 269841 RVA: 0x00FFA410 File Offset: 0x00FF8610
+		// Token: 0x0603695D RID: 223581 RVA: 0x00F3B804 File Offset: 0x00F39A04
 		public override void Refresh(IDropItemListItemData data, bool isSelected, int gridIndex)
 		{
 			UUIArtText artText = base.GetArtText(2);

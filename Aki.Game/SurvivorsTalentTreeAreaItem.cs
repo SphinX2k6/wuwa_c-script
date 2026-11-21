@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B4D RID: 11085
+// Token: 0x020020C9 RID: 8393
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class SurvivorsTalentTreeAreaItem : GridProxyAbstract<SurvivorsTalentAreaData>
 {
-	// Token: 0x06016FFB RID: 94203 RVA: 0x005D6C68 File Offset: 0x005D4E68
+	// Token: 0x06014A2C RID: 84524 RVA: 0x006037D4 File Offset: 0x006019D4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,13 +32,13 @@ public class SurvivorsTalentTreeAreaItem : GridProxyAbstract<SurvivorsTalentArea
 		};
 	}
 
-	// Token: 0x06016FFC RID: 94204 RVA: 0x005D6D30 File Offset: 0x005D4F30
+	// Token: 0x06014A2D RID: 84525 RVA: 0x0060389C File Offset: 0x00601A9C
 	protected override void OnStart()
 	{
 		this.NodeItemMap = new Dictionary<SurvivorsTalentNode, SurvivorsTalentTreeSkillNodeItem>();
 	}
 
-	// Token: 0x06016FFD RID: 94205 RVA: 0x005D6D40 File Offset: 0x005D4F40
+	// Token: 0x06014A2E RID: 84526 RVA: 0x006038AC File Offset: 0x00601AAC
 	public override void Refresh(SurvivorsTalentAreaData areaData, bool isSelected, int gridIndex)
 	{
 		List<int> nodeIds = areaData.NodeIds;
@@ -63,7 +63,7 @@ public class SurvivorsTalentTreeAreaItem : GridProxyAbstract<SurvivorsTalentArea
 		this.RefreshArea(list2);
 	}
 
-	// Token: 0x06016FFE RID: 94206 RVA: 0x005D6E30 File Offset: 0x005D5030
+	// Token: 0x06014A2F RID: 84527 RVA: 0x0060399C File Offset: 0x00601B9C
 	public void RefreshArea(IReadOnlyList<SurvivorsTalentNode> nodeDataList)
 	{
 		SurvivorsTalentTreeAreaItem.<>c__DisplayClass5_0 CS$<>8__locals1 = new SurvivorsTalentTreeAreaItem.<>c__DisplayClass5_0();
@@ -80,7 +80,7 @@ public class SurvivorsTalentTreeAreaItem : GridProxyAbstract<SurvivorsTalentArea
 		}, null).Run();
 	}
 
-	// Token: 0x06016FFF RID: 94207 RVA: 0x005D6E70 File Offset: 0x005D5070
+	// Token: 0x06014A30 RID: 84528 RVA: 0x006039DC File Offset: 0x00601BDC
 	public UniTask RefreshAreaItemAsync(IReadOnlyList<SurvivorsTalentNode> nodeDataList)
 	{
 		SurvivorsTalentTreeAreaItem.<RefreshAreaItemAsync>d__6 <RefreshAreaItemAsync>d__;
@@ -92,7 +92,7 @@ public class SurvivorsTalentTreeAreaItem : GridProxyAbstract<SurvivorsTalentArea
 		return <RefreshAreaItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400AB9E RID: 43934
+	// Token: 0x0400AFA4 RID: 44964
 	[Nullable(new byte[]
 	{
 		2,
@@ -101,7 +101,7 @@ public class SurvivorsTalentTreeAreaItem : GridProxyAbstract<SurvivorsTalentArea
 	})]
 	public Dictionary<SurvivorsTalentNode, SurvivorsTalentTreeSkillNodeItem> NodeItemMap;
 
-	// Token: 0x0400AB9F RID: 43935
+	// Token: 0x0400AFA5 RID: 44965
 	[Nullable(new byte[]
 	{
 		2,

@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057EB RID: 22507
+	// Token: 0x02005DF2 RID: 24050
 	public class IRandomInteractOptionT
 	{
-		// Token: 0x1700A81C RID: 43036
-		// (get) Token: 0x06025D2A RID: 154922 RVA: 0x0053763B File Offset: 0x0053583B
-		// (set) Token: 0x06025D2B RID: 154923 RVA: 0x00537643 File Offset: 0x00535843
+		// Token: 0x1700B140 RID: 45376
+		// (get) Token: 0x0602824A RID: 164426 RVA: 0x0057D7C7 File Offset: 0x0057B9C7
+		// (set) Token: 0x0602824B RID: 164427 RVA: 0x0057D7CF File Offset: 0x0057B9CF
 		public int Weight { get; set; }
 
-		// Token: 0x1700A81D RID: 43037
-		// (get) Token: 0x06025D2C RID: 154924 RVA: 0x0053764C File Offset: 0x0053584C
-		// (set) Token: 0x06025D2D RID: 154925 RVA: 0x00537654 File Offset: 0x00535854
+		// Token: 0x1700B141 RID: 45377
+		// (get) Token: 0x0602824C RID: 164428 RVA: 0x0057D7D8 File Offset: 0x0057B9D8
+		// (set) Token: 0x0602824D RID: 164429 RVA: 0x0057D7E0 File Offset: 0x0057B9E0
 		public IInteractOptionT Option { get; set; }
 
-		// Token: 0x06025D2E RID: 154926 RVA: 0x0053765D File Offset: 0x0053585D
+		// Token: 0x0602824E RID: 164430 RVA: 0x0057D7E9 File Offset: 0x0057B9E9
 		public IRandomInteractOptionT()
 		{
 			this.Weight = 0;

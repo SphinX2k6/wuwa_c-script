@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Audio
 {
-	// Token: 0x02005E98 RID: 24216
+	// Token: 0x02004E7D RID: 20093
 	[NullableContext(2)]
 	[Nullable(0)]
 	internal class GondolaPlotAudioHandle : IGondolaPlotAudioHandle
 	{
-		// Token: 0x17008E9D RID: 36509
-		// (get) Token: 0x0603D9A1 RID: 252321 RVA: 0x00EDF18A File Offset: 0x00EDD38A
-		// (set) Token: 0x0603D9A2 RID: 252322 RVA: 0x00EDF192 File Offset: 0x00EDD392
+		// Token: 0x1700626F RID: 25199
+		// (get) Token: 0x06032931 RID: 207153 RVA: 0x00E3071A File Offset: 0x00E2E91A
+		// (set) Token: 0x06032932 RID: 207154 RVA: 0x00E30722 File Offset: 0x00E2E922
 		public int RoleId { get; set; }
 
-		// Token: 0x17008E9E RID: 36510
-		// (get) Token: 0x0603D9A3 RID: 252323 RVA: 0x00EDF19B File Offset: 0x00EDD39B
-		// (set) Token: 0x0603D9A4 RID: 252324 RVA: 0x00EDF1A3 File Offset: 0x00EDD3A3
+		// Token: 0x17006270 RID: 25200
+		// (get) Token: 0x06032933 RID: 207155 RVA: 0x00E3072B File Offset: 0x00E2E92B
+		// (set) Token: 0x06032934 RID: 207156 RVA: 0x00E30733 File Offset: 0x00E2E933
 		public int PassengerId { get; set; }
 
-		// Token: 0x17008E9F RID: 36511
-		// (get) Token: 0x0603D9A5 RID: 252325 RVA: 0x00EDF1AC File Offset: 0x00EDD3AC
-		// (set) Token: 0x0603D9A6 RID: 252326 RVA: 0x00EDF1B4 File Offset: 0x00EDD3B4
+		// Token: 0x17006271 RID: 25201
+		// (get) Token: 0x06032935 RID: 207157 RVA: 0x00E3073C File Offset: 0x00E2E93C
+		// (set) Token: 0x06032936 RID: 207158 RVA: 0x00E30744 File Offset: 0x00E2E944
 		public BaseActorComponent PassengerActor { get; set; }
 
-		// Token: 0x17008EA0 RID: 36512
-		// (get) Token: 0x0603D9A7 RID: 252327 RVA: 0x00EDF1BD File Offset: 0x00EDD3BD
-		// (set) Token: 0x0603D9A8 RID: 252328 RVA: 0x00EDF1C5 File Offset: 0x00EDD3C5
+		// Token: 0x17006272 RID: 25202
+		// (get) Token: 0x06032937 RID: 207159 RVA: 0x00E3074D File Offset: 0x00E2E94D
+		// (set) Token: 0x06032938 RID: 207160 RVA: 0x00E30755 File Offset: 0x00E2E955
 		public AudioHandleInfo AudioHandle { get; set; }
 
-		// Token: 0x17008EA1 RID: 36513
-		// (get) Token: 0x0603D9A9 RID: 252329 RVA: 0x00EDF1CE File Offset: 0x00EDD3CE
-		// (set) Token: 0x0603D9AA RID: 252330 RVA: 0x00EDF1D6 File Offset: 0x00EDD3D6
+		// Token: 0x17006273 RID: 25203
+		// (get) Token: 0x06032939 RID: 207161 RVA: 0x00E3075E File Offset: 0x00E2E95E
+		// (set) Token: 0x0603293A RID: 207162 RVA: 0x00E30766 File Offset: 0x00E2E966
 		public PlotHandleInfo PlotHandle { get; set; }
 	}
 }

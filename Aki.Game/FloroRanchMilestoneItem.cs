@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B95 RID: 7061
+// Token: 0x02001054 RID: 4180
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchMilestoneItem : UiPanelBase
 {
-	// Token: 0x0600D23E RID: 53822 RVA: 0x003042DC File Offset: 0x003024DC
+	// Token: 0x0600A64F RID: 42575 RVA: 0x0030F3B4 File Offset: 0x0030D5B4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -33,14 +33,14 @@ public class FloroRanchMilestoneItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D23F RID: 53823 RVA: 0x003043A8 File Offset: 0x003025A8
+	// Token: 0x0600A650 RID: 42576 RVA: 0x0030F480 File Offset: 0x0030D680
 	protected override void OnStart()
 	{
 		this.ProgressLayout = new GenericLayout<FloroRanchMilestoneRewardItem, FloroRanchMilestoneData>(base.GetHorizontalLayout(1), new Func<FloroRanchMilestoneRewardItem>(this.ProgressItemProxyCreate), null, false, true);
 		this.ProgressBarWidth = base.GetSprite(4).GetWidth();
 	}
 
-	// Token: 0x0600D240 RID: 53824 RVA: 0x003043DD File Offset: 0x003025DD
+	// Token: 0x0600A651 RID: 42577 RVA: 0x0030F4B5 File Offset: 0x0030D6B5
 	private FloroRanchMilestoneRewardItem ProgressItemProxyCreate()
 	{
 		return new FloroRanchMilestoneRewardItem
@@ -49,7 +49,7 @@ public class FloroRanchMilestoneItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600D241 RID: 53825 RVA: 0x003043F0 File Offset: 0x003025F0
+	// Token: 0x0600A652 RID: 42578 RVA: 0x0030F4C8 File Offset: 0x0030D6C8
 	public UniTask RefreshProgressItem(float currentProgress, List<FloroRanchMilestoneData> dataList)
 	{
 		FloroRanchMilestoneItem.<RefreshProgressItem>d__8 <RefreshProgressItem>d__;
@@ -62,36 +62,36 @@ public class FloroRanchMilestoneItem : UiPanelBase
 		return <RefreshProgressItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04006058 RID: 24664
+	// Token: 0x04006127 RID: 24871
 	protected GenericLayout<FloroRanchMilestoneRewardItem, FloroRanchMilestoneData> ProgressLayout;
 
-	// Token: 0x04006059 RID: 24665
+	// Token: 0x04006128 RID: 24872
 	protected float ProgressBarWidth;
 
-	// Token: 0x0400605A RID: 24666
+	// Token: 0x04006129 RID: 24873
 	[Nullable(2)]
 	public Action OnClickToGet;
 
-	// Token: 0x0400605B RID: 24667
+	// Token: 0x0400612A RID: 24874
 	private const float REWARD_ITEM_WIDTH = 108f;
 
-	// Token: 0x02008121 RID: 33057
+	// Token: 0x020072AF RID: 29359
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402A26A RID: 172650
+		// Token: 0x0402559E RID: 152990
 		public const int TxtProgress = 0;
 
-		// Token: 0x0402A26B RID: 172651
+		// Token: 0x0402559F RID: 152991
 		public const int ProgressLayout = 1;
 
-		// Token: 0x0402A26C RID: 172652
+		// Token: 0x040255A0 RID: 152992
 		public const int ProgressItem = 2;
 
-		// Token: 0x0402A26D RID: 172653
+		// Token: 0x040255A1 RID: 152993
 		public const int DotStart = 3;
 
-		// Token: 0x0402A26E RID: 172654
+		// Token: 0x040255A2 RID: 152994
 		public const int BarProgress = 4;
 	}
 }

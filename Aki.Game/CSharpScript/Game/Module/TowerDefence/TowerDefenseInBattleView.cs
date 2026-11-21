@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B49 RID: 19273
+	// Token: 0x02003AF1 RID: 15089
 	public class TowerDefenseInBattleView : BattleVisibleChildView
 	{
-		// Token: 0x06031E83 RID: 204419 RVA: 0x00B92D38 File Offset: 0x00B90F38
+		// Token: 0x06026C13 RID: 158739 RVA: 0x00AD6D9C File Offset: 0x00AD4F9C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031E84 RID: 204420 RVA: 0x00B92E62 File Offset: 0x00B91062
+		// Token: 0x06026C14 RID: 158740 RVA: 0x00AD6EC6 File Offset: 0x00AD50C6
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -53,14 +53,14 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.AddEventListeners();
 		}
 
-		// Token: 0x06031E85 RID: 204421 RVA: 0x00B92E80 File Offset: 0x00B91080
+		// Token: 0x06026C15 RID: 158741 RVA: 0x00AD6EE4 File Offset: 0x00AD50E4
 		public override void Reset()
 		{
 			base.Reset();
 			this.RemoveEventListeners();
 		}
 
-		// Token: 0x06031E86 RID: 204422 RVA: 0x00B92E90 File Offset: 0x00B91090
+		// Token: 0x06026C16 RID: 158742 RVA: 0x00AD6EF4 File Offset: 0x00AD50F4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TowerDefenseInBattleView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031E87 RID: 204423 RVA: 0x00B92ED4 File Offset: 0x00B910D4
+		// Token: 0x06026C17 RID: 158743 RVA: 0x00AD6F38 File Offset: 0x00AD5138
 		protected override void OnStart()
 		{
 			base.GetSprite(2).SetUIActive(true);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.SeqPlayer.StopCurrentSequence(false, true);
 		}
 
-		// Token: 0x06031E88 RID: 204424 RVA: 0x00B92F30 File Offset: 0x00B91130
+		// Token: 0x06026C18 RID: 158744 RVA: 0x00AD6F94 File Offset: 0x00AD5194
 		protected override void OnAfterDestroy()
 		{
 			BattleUiEnvironmentKeyData environmentKeyData = BattleUiModel.Instance.EnvironmentKeyData;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			environmentKeyData.SetEnvironmentKeyVisible(EEnvironmentKey.TowerDefense, false);
 		}
 
-		// Token: 0x06031E89 RID: 204425 RVA: 0x00B92F48 File Offset: 0x00B91148
+		// Token: 0x06026C19 RID: 158745 RVA: 0x00AD6FAC File Offset: 0x00AD51AC
 		public void StartShow()
 		{
 			base.SetVisible(1, true);
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			environmentKeyData.SetEnvironmentKeyVisible(EEnvironmentKey.TowerDefense, true);
 		}
 
-		// Token: 0x06031E8A RID: 204426 RVA: 0x00B92F6E File Offset: 0x00B9116E
+		// Token: 0x06026C1A RID: 158746 RVA: 0x00AD6FD2 File Offset: 0x00AD51D2
 		public void EndShow()
 		{
 			base.SetVisible(1, false);
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			environmentKeyData.SetEnvironmentKeyVisible(EEnvironmentKey.TowerDefense, false);
 		}
 
-		// Token: 0x06031E8B RID: 204427 RVA: 0x00B92F90 File Offset: 0x00B91190
+		// Token: 0x06026C1B RID: 158747 RVA: 0x00AD6FF4 File Offset: 0x00AD51F4
 		private void AddEventListeners()
 		{
 			EventSystem.Instance.Add(EEventName.BattleUiToggleTowerDefenseInfoView, new Action(this.OnToggle));
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			EventSystem.Instance.Add(EEventName.TowerDefenseDataInit, new Action(this.HandleTowerDefenseDataInit));
 		}
 
-		// Token: 0x06031E8C RID: 204428 RVA: 0x00B93010 File Offset: 0x00B91210
+		// Token: 0x06026C1C RID: 158748 RVA: 0x00AD7074 File Offset: 0x00AD5274
 		private void RemoveEventListeners()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiToggleTowerDefenseInfoView, new Action(this.OnToggle));
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			EventSystem.Instance.Remove(EEventName.TowerDefenseDataInit, new Action(this.HandleTowerDefenseDataInit));
 		}
 
-		// Token: 0x06031E8D RID: 204429 RVA: 0x00B93090 File Offset: 0x00B91290
+		// Token: 0x06026C1D RID: 158749 RVA: 0x00AD70F4 File Offset: 0x00AD52F4
 		private void OnClick(EToggleState toggleState)
 		{
 			bool flag = toggleState == EToggleState.ETT_Checked;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031E8E RID: 204430 RVA: 0x00B930C8 File Offset: 0x00B912C8
+		// Token: 0x06026C1E RID: 158750 RVA: 0x00AD712C File Offset: 0x00AD532C
 		private void OnToggle()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031E8F RID: 204431 RVA: 0x00B93100 File Offset: 0x00B91300
+		// Token: 0x06026C1F RID: 158751 RVA: 0x00AD7164 File Offset: 0x00AD5364
 		[NullableContext(1)]
 		private void TryToggleOff(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 		{
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031E90 RID: 204432 RVA: 0x00B9312C File Offset: 0x00B9132C
+		// Token: 0x06026C20 RID: 158752 RVA: 0x00AD7190 File Offset: 0x00AD5390
 		private void HandleTowerDefenseDataInit()
 		{
 			if (base.GetVisible())
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031E91 RID: 204433 RVA: 0x00B9313C File Offset: 0x00B9133C
+		// Token: 0x06026C21 RID: 158753 RVA: 0x00AD71A0 File Offset: 0x00AD53A0
 		private void OnRefreshAll()
 		{
 			if (TowerDefenseModel.Instance.PhantomMessageCache.Id != 0)
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031E92 RID: 204434 RVA: 0x00B9316C File Offset: 0x00B9136C
+		// Token: 0x06026C22 RID: 158754 RVA: 0x00AD71D0 File Offset: 0x00AD53D0
 		private void OnRefreshLevel()
 		{
 			string levelContentInBattle = TowerDefenseController.Instance.GetLevelContentInBattle();
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			base.GetSprite(2).SetFillAmount(TowerDefenseController.Instance.GetProgressInBattle());
 		}
 
-		// Token: 0x06031E93 RID: 204435 RVA: 0x00B931A8 File Offset: 0x00B913A8
+		// Token: 0x06026C23 RID: 158755 RVA: 0x00AD720C File Offset: 0x00AD540C
 		private void RefreshLevelUp()
 		{
 			int levelInBattle = TowerDefenseController.Instance.GetLevelInBattle();
@@ -224,43 +224,43 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x0401A9E4 RID: 109028
+		// Token: 0x04015336 RID: 86838
 		[Nullable(2)]
 		private TowerDefenseInBattlePanel ChildPanel;
 
-		// Token: 0x0401A9E5 RID: 109029
+		// Token: 0x04015337 RID: 86839
 		private int LastLevel = 1;
 
-		// Token: 0x0401A9E6 RID: 109030
+		// Token: 0x04015338 RID: 86840
 		[Nullable(1)]
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0200ACC3 RID: 44227
+		// Token: 0x020096E3 RID: 38627
 		private class EViewComponent
 		{
-			// Token: 0x040347CA RID: 214986
+			// Token: 0x0402F17B RID: 192891
 			public const int Toggle = 0;
 
-			// Token: 0x040347CB RID: 214987
+			// Token: 0x0402F17C RID: 192892
 			public const int LevelText = 1;
 
-			// Token: 0x040347CC RID: 214988
+			// Token: 0x0402F17D RID: 192893
 			public const int ProgressSprite = 2;
 
-			// Token: 0x040347CD RID: 214989
+			// Token: 0x0402F17E RID: 192894
 			public const int ParentItem = 3;
 
-			// Token: 0x040347CE RID: 214990
+			// Token: 0x0402F17F RID: 192895
 			public const int LevelUpItem = 4;
 
-			// Token: 0x040347CF RID: 214991
+			// Token: 0x0402F180 RID: 192896
 			public const int IconSprite = 5;
 		}
 
-		// Token: 0x0200ACC4 RID: 44228
+		// Token: 0x020096E4 RID: 38628
 		private class EVisibleReason
 		{
-			// Token: 0x040347D0 RID: 214992
+			// Token: 0x0402F181 RID: 192897
 			public const int Default = 1;
 		}
 	}

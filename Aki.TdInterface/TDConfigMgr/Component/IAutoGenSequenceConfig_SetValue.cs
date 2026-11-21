@@ -4,18 +4,17 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001E2 RID: 482
+	// Token: 0x02000209 RID: 521
 	public class IAutoGenSequenceConfig_SetValue
 	{
-		// Token: 0x040008C8 RID: 2248
+		// Token: 0x0400094F RID: 2383
 		[Nullable(2)]
 		public string SequencePath;
 
-		// Token: 0x040008C9 RID: 2249
-		[Nullable(1)]
+		// Token: 0x04000950 RID: 2384
 		public PlayLevelSequence SequenceConfig;
 
-		// Token: 0x040008CA RID: 2250
+		// Token: 0x04000951 RID: 2385
 		public int Count;
 	}
 }

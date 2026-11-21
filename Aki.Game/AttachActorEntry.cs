@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020034F4 RID: 13556
+// Token: 0x02002A68 RID: 10856
 [NullableContext(1)]
 [Nullable(0)]
 public class AttachActorEntry
 {
-	// Token: 0x0601DB8D RID: 121741 RVA: 0x008543D8 File Offset: 0x008525D8
+	// Token: 0x0601B89B RID: 112795 RVA: 0x0087C7A0 File Offset: 0x0087A9A0
 	public bool AddAttachActorItem(int id, int entityId, AActor actor, AActor parentActor, string reason, EDetachType detachType)
 	{
 		if (this.ActorKeyMap.ContainsKey(actor))
@@ -44,7 +44,7 @@ public class AttachActorEntry
 		return true;
 	}
 
-	// Token: 0x0601DB8E RID: 121742 RVA: 0x008544BC File Offset: 0x008526BC
+	// Token: 0x0601B89C RID: 112796 RVA: 0x0087C884 File Offset: 0x0087AA84
 	[return: Nullable(2)]
 	public AttachActorItem GetAttachActorItem(AActor actor)
 	{
@@ -56,26 +56,26 @@ public class AttachActorEntry
 		return this.ActorMap.Get(key);
 	}
 
-	// Token: 0x0601DB8F RID: 121743 RVA: 0x008544E7 File Offset: 0x008526E7
+	// Token: 0x0601B89D RID: 112797 RVA: 0x0087C8AF File Offset: 0x0087AAAF
 	public IReadOnlyList<AttachActorItem> GetAttachActorItems()
 	{
 		return this.ActorMap.GetItems();
 	}
 
-	// Token: 0x0601DB90 RID: 121744 RVA: 0x008544F4 File Offset: 0x008526F4
+	// Token: 0x0601B89E RID: 112798 RVA: 0x0087C8BC File Offset: 0x0087AABC
 	public int Size()
 	{
 		return this.ActorKeyMap.Count;
 	}
 
-	// Token: 0x0601DB91 RID: 121745 RVA: 0x00854504 File Offset: 0x00852704
+	// Token: 0x0601B89F RID: 112799 RVA: 0x0087C8CC File Offset: 0x0087AACC
 	public bool RemoveAttachActorItem(AActor actor)
 	{
 		int key;
 		return this.ActorKeyMap.Remove(actor, out key) && this.ActorMap.Remove(key);
 	}
 
-	// Token: 0x0601DB92 RID: 121746 RVA: 0x0085452F File Offset: 0x0085272F
+	// Token: 0x0601B8A0 RID: 112800 RVA: 0x0087C8F7 File Offset: 0x0087AAF7
 	public void Clear()
 	{
 		this.AttachActorId = 0;
@@ -83,12 +83,12 @@ public class AttachActorEntry
 		this.ActorMap.Clear();
 	}
 
-	// Token: 0x0400E941 RID: 59713
+	// Token: 0x0400EDF8 RID: 60920
 	private int AttachActorId;
 
-	// Token: 0x0400E942 RID: 59714
+	// Token: 0x0400EDF9 RID: 60921
 	private readonly Dictionary<AActor, int> ActorKeyMap = new Dictionary<AActor, int>();
 
-	// Token: 0x0400E943 RID: 59715
+	// Token: 0x0400EDFA RID: 60922
 	private readonly CustomMap<int, AttachActorItem> ActorMap = new CustomMap<int, AttachActorItem>();
 }

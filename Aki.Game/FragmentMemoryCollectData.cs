@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,91 +7,91 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x02001C1B RID: 7195
+// Token: 0x020010DA RID: 4314
 [NullableContext(1)]
 [Nullable(0)]
 public class FragmentMemoryCollectData
 {
-	// Token: 0x0600D7E6 RID: 55270 RVA: 0x0031F623 File Offset: 0x0031D823
+	// Token: 0x0600ABFB RID: 44027 RVA: 0x0032A9B7 File Offset: 0x00328BB7
 	public int GetId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x0600D7E7 RID: 55271 RVA: 0x0031F62B File Offset: 0x0031D82B
+	// Token: 0x0600ABFC RID: 44028 RVA: 0x0032A9BF File Offset: 0x00328BBF
 	public int GetFlag()
 	{
 		return this.Flag;
 	}
 
-	// Token: 0x0600D7E8 RID: 55272 RVA: 0x0031F633 File Offset: 0x0031D833
+	// Token: 0x0600ABFD RID: 44029 RVA: 0x0032A9C7 File Offset: 0x00328BC7
 	public bool GetIfCanGetReward()
 	{
 		return this.GetIfUnlock() && !this.GetIfGetReward();
 	}
 
-	// Token: 0x0600D7E9 RID: 55273 RVA: 0x0031F648 File Offset: 0x0031D848
+	// Token: 0x0600ABFE RID: 44030 RVA: 0x0032A9DC File Offset: 0x00328BDC
 	public bool GetIfUnlock()
 	{
 		return (this.Flag & 1) == 1;
 	}
 
-	// Token: 0x0600D7EA RID: 55274 RVA: 0x0031F655 File Offset: 0x0031D855
+	// Token: 0x0600ABFF RID: 44031 RVA: 0x0032A9E9 File Offset: 0x00328BE9
 	[NullableContext(2)]
 	public FragmentMemoryTopicData GetTopicData()
 	{
 		return this.TopicData;
 	}
 
-	// Token: 0x0600D7EB RID: 55275 RVA: 0x0031F65D File Offset: 0x0031D85D
+	// Token: 0x0600AC00 RID: 44032 RVA: 0x0032A9F1 File Offset: 0x00328BF1
 	public bool GetIfGetReward()
 	{
 		return (this.Flag >> 1 & 1) == 1;
 	}
 
-	// Token: 0x0600D7EC RID: 55276 RVA: 0x0031F66C File Offset: 0x0031D86C
+	// Token: 0x0600AC01 RID: 44033 RVA: 0x0032AA00 File Offset: 0x00328C00
 	public int GetTraceEntityId()
 	{
 		return this.GetConfig().TraceEntityId;
 	}
 
-	// Token: 0x0600D7ED RID: 55277 RVA: 0x0031F688 File Offset: 0x0031D888
+	// Token: 0x0600AC02 RID: 44034 RVA: 0x0032AA1C File Offset: 0x00328C1C
 	public int GetTraceMarkId()
 	{
 		return this.GetConfig().TraceMarkId;
 	}
 
-	// Token: 0x0600D7EE RID: 55278 RVA: 0x0031F6A4 File Offset: 0x0031D8A4
+	// Token: 0x0600AC03 RID: 44035 RVA: 0x0032AA38 File Offset: 0x00328C38
 	public int GetTrackMapId()
 	{
 		return this.GetConfig().TrackMapId;
 	}
 
-	// Token: 0x0600D7EF RID: 55279 RVA: 0x0031F6C0 File Offset: 0x0031D8C0
+	// Token: 0x0600AC04 RID: 44036 RVA: 0x0032AA54 File Offset: 0x00328C54
 	public List<int> GetQuestList()
 	{
-		return this.GetConfig().GetQuestIdListArray().ToList<int>();
+		return new List<int>(this.GetConfig().GetQuestIdListArray());
 	}
 
-	// Token: 0x0600D7F0 RID: 55280 RVA: 0x0031F6E0 File Offset: 0x0031D8E0
+	// Token: 0x0600AC05 RID: 44037 RVA: 0x0032AA74 File Offset: 0x00328C74
 	public double GetFinishTime()
 	{
 		return this.FinishTime;
 	}
 
-	// Token: 0x0600D7F1 RID: 55281 RVA: 0x0031F6E8 File Offset: 0x0031D8E8
+	// Token: 0x0600AC06 RID: 44038 RVA: 0x0032AA7C File Offset: 0x00328C7C
 	public void PhraseFromConfig(PhotoMemoryCollect config)
 	{
 		this.Id = config.Id;
 	}
 
-	// Token: 0x0600D7F2 RID: 55282 RVA: 0x0031F6F8 File Offset: 0x0031D8F8
+	// Token: 0x0600AC07 RID: 44039 RVA: 0x0032AA8C File Offset: 0x00328C8C
 	public int GetRank()
 	{
 		return this.GetConfig().Rank;
 	}
 
-	// Token: 0x0600D7F3 RID: 55283 RVA: 0x0031F714 File Offset: 0x0031D914
+	// Token: 0x0600AC08 RID: 44040 RVA: 0x0032AAA8 File Offset: 0x00328CA8
 	public void Phrase(PhotoMemoryCollectInfo data)
 	{
 		this.Id = data.Id;
@@ -101,7 +100,7 @@ public class FragmentMemoryCollectData
 		EventSystem.Instance.Emit<int>(EEventName.FragmentRewardRedDot, this.Id);
 	}
 
-	// Token: 0x0600D7F4 RID: 55284 RVA: 0x0031F770 File Offset: 0x0031D970
+	// Token: 0x0600AC09 RID: 44041 RVA: 0x0032AB04 File Offset: 0x00328D04
 	public string GetTimeText()
 	{
 		if (this.FinishTime == 0.0)
@@ -111,61 +110,61 @@ public class FragmentMemoryCollectData
 		return TimeUtil.Instance.DateFormatString(this.FinishTime);
 	}
 
-	// Token: 0x0600D7F5 RID: 55285 RVA: 0x0031F799 File Offset: 0x0031D999
+	// Token: 0x0600AC0A RID: 44042 RVA: 0x0032AB2D File Offset: 0x00328D2D
 	public void BindSourceTopic(FragmentMemoryTopicData topicData)
 	{
 		this.TopicData = topicData;
 	}
 
-	// Token: 0x0600D7F6 RID: 55286 RVA: 0x0031F7A4 File Offset: 0x0031D9A4
+	// Token: 0x0600AC0B RID: 44043 RVA: 0x0032AB38 File Offset: 0x00328D38
 	public ClueEntrance GetClueEntrance()
 	{
 		return FragmentMemoryConfig.Instance.GetClueEntrance(this.GetClueId()).Value;
 	}
 
-	// Token: 0x0600D7F7 RID: 55287 RVA: 0x0031F7CC File Offset: 0x0031D9CC
+	// Token: 0x0600AC0C RID: 44044 RVA: 0x0032AB60 File Offset: 0x00328D60
 	public IReadOnlyList<ClueContent> GetClueContent()
 	{
 		return FragmentMemoryConfig.Instance.GetClueContent(this.GetClueEntrance().ContentGroupId);
 	}
 
-	// Token: 0x0600D7F8 RID: 55288 RVA: 0x0031F7F4 File Offset: 0x0031D9F4
+	// Token: 0x0600AC0D RID: 44045 RVA: 0x0032AB88 File Offset: 0x00328D88
 	public int GetClueId()
 	{
 		return this.GetConfig().ClueId;
 	}
 
-	// Token: 0x0600D7F9 RID: 55289 RVA: 0x0031F810 File Offset: 0x0031DA10
+	// Token: 0x0600AC0E RID: 44046 RVA: 0x0032ABA4 File Offset: 0x00328DA4
 	public PhotoMemoryCollect GetConfig()
 	{
 		return FragmentMemoryConfig.Instance.GetPhotoMemoryCollectById(this.Id).Value;
 	}
 
-	// Token: 0x0600D7FA RID: 55290 RVA: 0x0031F838 File Offset: 0x0031DA38
+	// Token: 0x0600AC0F RID: 44047 RVA: 0x0032ABCC File Offset: 0x00328DCC
 	public string GetTitle()
 	{
 		return this.GetConfig().Title;
 	}
 
-	// Token: 0x0600D7FB RID: 55291 RVA: 0x0031F854 File Offset: 0x0031DA54
+	// Token: 0x0600AC10 RID: 44048 RVA: 0x0032ABE8 File Offset: 0x00328DE8
 	public string GetTipsDesc()
 	{
 		return this.GetConfig().TipsDesc;
 	}
 
-	// Token: 0x0600D7FC RID: 55292 RVA: 0x0031F870 File Offset: 0x0031DA70
+	// Token: 0x0600AC11 RID: 44049 RVA: 0x0032AC04 File Offset: 0x00328E04
 	public string GetDesc()
 	{
 		return this.GetConfig().Desc;
 	}
 
-	// Token: 0x0600D7FD RID: 55293 RVA: 0x0031F88C File Offset: 0x0031DA8C
+	// Token: 0x0600AC12 RID: 44050 RVA: 0x0032AC20 File Offset: 0x00328E20
 	public int GetDropId()
 	{
 		return this.GetConfig().DropId;
 	}
 
-	// Token: 0x0600D7FE RID: 55294 RVA: 0x0031F8A8 File Offset: 0x0031DAA8
+	// Token: 0x0600AC13 RID: 44051 RVA: 0x0032AC3C File Offset: 0x00328E3C
 	public List<TItem> GetPreviewReward()
 	{
 		Dictionary<int, int> dictionary = CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackage(this.GetDropId()).Value.DropPreview();
@@ -180,13 +179,13 @@ public class FragmentMemoryCollectData
 		return list;
 	}
 
-	// Token: 0x0600D7FF RID: 55295 RVA: 0x0031F944 File Offset: 0x0031DB44
+	// Token: 0x0600AC14 RID: 44052 RVA: 0x0032ACD8 File Offset: 0x00328ED8
 	public string GetThemeBg()
 	{
 		return this.GetBgResource();
 	}
 
-	// Token: 0x0600D800 RID: 55296 RVA: 0x0031F94C File Offset: 0x0031DB4C
+	// Token: 0x0600AC15 RID: 44053 RVA: 0x0032ACE0 File Offset: 0x00328EE0
 	public string GetBgResource()
 	{
 		EPlayerGender playerGender = PlayerInfoModel.Instance.GetPlayerGender();
@@ -201,28 +200,28 @@ public class FragmentMemoryCollectData
 		return "";
 	}
 
-	// Token: 0x0600D801 RID: 55297 RVA: 0x0031F980 File Offset: 0x0031DB80
+	// Token: 0x0600AC16 RID: 44054 RVA: 0x0032AD14 File Offset: 0x00328F14
 	private string GetMaleBgResource()
 	{
 		return this.GetConfig().BgResourceM;
 	}
 
-	// Token: 0x0600D802 RID: 55298 RVA: 0x0031F99C File Offset: 0x0031DB9C
+	// Token: 0x0600AC17 RID: 44055 RVA: 0x0032AD30 File Offset: 0x00328F30
 	private string GetFemaleBgResource()
 	{
 		return this.GetConfig().BgResourceF;
 	}
 
-	// Token: 0x04006283 RID: 25219
+	// Token: 0x04006355 RID: 25429
 	private int Id;
 
-	// Token: 0x04006284 RID: 25220
+	// Token: 0x04006356 RID: 25430
 	private int Flag;
 
-	// Token: 0x04006285 RID: 25221
+	// Token: 0x04006357 RID: 25431
 	[Nullable(2)]
 	private FragmentMemoryTopicData TopicData;
 
-	// Token: 0x04006286 RID: 25222
+	// Token: 0x04006358 RID: 25432
 	private double FinishTime;
 }

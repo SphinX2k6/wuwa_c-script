@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x0200369E RID: 13982
+// Token: 0x02002C13 RID: 11283
 public class __TsTaskPlayMontage_InheritProxy : TsTaskPlayMontage
 {
-	// Token: 0x0601E337 RID: 123703 RVA: 0x008847EC File Offset: 0x008829EC
+	// Token: 0x0601C050 RID: 114768 RVA: 0x008AC1C4 File Offset: 0x008AA3C4
 	[NullableContext(1)]
 	public __TsTaskPlayMontage_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskPlayMontage.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E338 RID: 123704 RVA: 0x0088481F File Offset: 0x00882A1F
+	// Token: 0x0601C051 RID: 114769 RVA: 0x008AC1F7 File Offset: 0x008AA3F7
 	protected __TsTaskPlayMontage_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E339 RID: 123705 RVA: 0x00884828 File Offset: 0x00882A28
+	// Token: 0x0601C052 RID: 114770 RVA: 0x008AC200 File Offset: 0x008AA400
 	protected unsafe override void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

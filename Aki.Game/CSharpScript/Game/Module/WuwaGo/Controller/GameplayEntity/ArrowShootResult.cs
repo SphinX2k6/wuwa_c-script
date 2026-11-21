@@ -4,30 +4,30 @@ using CSharpScript.Game.Module.WuwaGo.Model.Role;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 {
-	// Token: 0x02004768 RID: 18280
+	// Token: 0x02003699 RID: 13977
 	[NullableContext(2)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class ArrowShootResult : IArrowShootResult
 	{
-		// Token: 0x1700775A RID: 30554
-		// (get) Token: 0x0602FC90 RID: 195728 RVA: 0x00B12262 File Offset: 0x00B10462
-		// (set) Token: 0x0602FC91 RID: 195729 RVA: 0x00B1226A File Offset: 0x00B1046A
+		// Token: 0x17004A16 RID: 18966
+		// (get) Token: 0x0602445A RID: 148570 RVA: 0x00A42222 File Offset: 0x00A40422
+		// (set) Token: 0x0602445B RID: 148571 RVA: 0x00A4222A File Offset: 0x00A4042A
 		public WuWaGoRole HitRole { get; set; }
 
-		// Token: 0x1700775B RID: 30555
-		// (get) Token: 0x0602FC92 RID: 195730 RVA: 0x00B12273 File Offset: 0x00B10473
-		// (set) Token: 0x0602FC93 RID: 195731 RVA: 0x00B1227B File Offset: 0x00B1047B
+		// Token: 0x17004A17 RID: 18967
+		// (get) Token: 0x0602445C RID: 148572 RVA: 0x00A42233 File Offset: 0x00A40433
+		// (set) Token: 0x0602445D RID: 148573 RVA: 0x00A4223B File Offset: 0x00A4043B
 		[RequiredMember]
 		public bool HitWall { get; set; }
 
-		// Token: 0x1700775C RID: 30556
-		// (get) Token: 0x0602FC94 RID: 195732 RVA: 0x00B12284 File Offset: 0x00B10484
-		// (set) Token: 0x0602FC95 RID: 195733 RVA: 0x00B1228C File Offset: 0x00B1048C
+		// Token: 0x17004A18 RID: 18968
+		// (get) Token: 0x0602445E RID: 148574 RVA: 0x00A42244 File Offset: 0x00A40444
+		// (set) Token: 0x0602445F RID: 148575 RVA: 0x00A4224C File Offset: 0x00A4044C
 		[RequiredMember]
 		public float TargetDistanceMeter { get; set; }
 
-		// Token: 0x0602FC96 RID: 195734 RVA: 0x00B12295 File Offset: 0x00B10495
+		// Token: 0x06024460 RID: 148576 RVA: 0x00A42255 File Offset: 0x00A40455
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public ArrowShootResult()

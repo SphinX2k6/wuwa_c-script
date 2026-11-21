@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D0D RID: 23821
+	// Token: 0x02006341 RID: 25409
 	public struct IAirCurrentData : IFlatbufferObject
 	{
-		// Token: 0x1700B274 RID: 45684
-		// (get) Token: 0x06028AF3 RID: 166643 RVA: 0x005969D6 File Offset: 0x00594BD6
+		// Token: 0x1700BBD0 RID: 48080
+		// (get) Token: 0x0602B147 RID: 176455 RVA: 0x005DF246 File Offset: 0x005DD446
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028AF4 RID: 166644 RVA: 0x005969E3 File Offset: 0x00594BE3
+		// Token: 0x0602B148 RID: 176456 RVA: 0x005DF253 File Offset: 0x005DD453
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028AF5 RID: 166645 RVA: 0x005969EC File Offset: 0x00594BEC
+		// Token: 0x0602B149 RID: 176457 RVA: 0x005DF25C File Offset: 0x005DD45C
 		public static IAirCurrentData GetRootAsIAirCurrentData(ByteBuffer _bb)
 		{
 			return IAirCurrentData.GetRootAsIAirCurrentData(_bb, default(IAirCurrentData));
 		}
 
-		// Token: 0x06028AF6 RID: 166646 RVA: 0x00596A08 File Offset: 0x00594C08
+		// Token: 0x0602B14A RID: 176458 RVA: 0x005DF278 File Offset: 0x005DD478
 		public static IAirCurrentData GetRootAsIAirCurrentData(ByteBuffer _bb, IAirCurrentData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028AF7 RID: 166647 RVA: 0x00596A25 File Offset: 0x00594C25
+		// Token: 0x0602B14B RID: 176459 RVA: 0x005DF295 File Offset: 0x005DD495
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028AF8 RID: 166648 RVA: 0x00596A34 File Offset: 0x00594C34
+		// Token: 0x0602B14C RID: 176460 RVA: 0x005DF2A4 File Offset: 0x005DD4A4
 		public IAirCurrentData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B275 RID: 45685
-		// (get) Token: 0x06028AF9 RID: 166649 RVA: 0x00596A44 File Offset: 0x00594C44
+		// Token: 0x1700BBD1 RID: 48081
+		// (get) Token: 0x0602B14D RID: 176461 RVA: 0x005DF2B4 File Offset: 0x005DD4B4
 		public EAreaFunctionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B276 RID: 45686
-		// (get) Token: 0x06028AFA RID: 166650 RVA: 0x00596A80 File Offset: 0x00594C80
+		// Token: 0x1700BBD2 RID: 48082
+		// (get) Token: 0x0602B14E RID: 176462 RVA: 0x005DF2F0 File Offset: 0x005DD4F0
 		public float ExitEffectHeight
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B277 RID: 45687
-		// (get) Token: 0x06028AFB RID: 166651 RVA: 0x00596AC0 File Offset: 0x00594CC0
+		// Token: 0x1700BBD3 RID: 48083
+		// (get) Token: 0x0602B14F RID: 176463 RVA: 0x005DF330 File Offset: 0x005DD530
 		public float EffectiveHeight
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B278 RID: 45688
-		// (get) Token: 0x06028AFC RID: 166652 RVA: 0x00596B00 File Offset: 0x00594D00
+		// Token: 0x1700BBD4 RID: 48084
+		// (get) Token: 0x0602B150 RID: 176464 RVA: 0x005DF370 File Offset: 0x005DD570
 		public float FallTeleportHeight
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B279 RID: 45689
-		// (get) Token: 0x06028AFD RID: 166653 RVA: 0x00596B44 File Offset: 0x00594D44
+		// Token: 0x1700BBD5 RID: 48085
+		// (get) Token: 0x0602B151 RID: 176465 RVA: 0x005DF3B4 File Offset: 0x005DD5B4
 		public int FallTeleportTransitionConfigId
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B27A RID: 45690
-		// (get) Token: 0x06028AFE RID: 166654 RVA: 0x00596B84 File Offset: 0x00594D84
+		// Token: 0x1700BBD6 RID: 48086
+		// (get) Token: 0x0602B152 RID: 176466 RVA: 0x005DF3F4 File Offset: 0x005DD5F4
 		public float TopTeleportHeight
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B27B RID: 45691
-		// (get) Token: 0x06028AFF RID: 166655 RVA: 0x00596BC8 File Offset: 0x00594DC8
+		// Token: 0x1700BBD7 RID: 48087
+		// (get) Token: 0x0602B153 RID: 176467 RVA: 0x005DF438 File Offset: 0x005DD638
 		public IMotorAirCurrentConfig? Motor
 		{
 			get
@@ -152,8 +152,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B27C RID: 45692
-		// (get) Token: 0x06028B00 RID: 166656 RVA: 0x00596C28 File Offset: 0x00594E28
+		// Token: 0x1700BBD8 RID: 48088
+		// (get) Token: 0x0602B154 RID: 176468 RVA: 0x005DF498 File Offset: 0x005DD698
 		public ICharacterAirCurrentConfig? Character
 		{
 			get
@@ -167,8 +167,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B27D RID: 45693
-		// (get) Token: 0x06028B01 RID: 166657 RVA: 0x00596C88 File Offset: 0x00594E88
+		// Token: 0x1700BBD9 RID: 48089
+		// (get) Token: 0x0602B155 RID: 176469 RVA: 0x005DF4F8 File Offset: 0x005DD6F8
 		public byte NullMask
 		{
 			get
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028B02 RID: 166658 RVA: 0x00596CC8 File Offset: 0x00594EC8
+		// Token: 0x0602B156 RID: 176470 RVA: 0x005DF538 File Offset: 0x005DD738
 		public static Offset<IAirCurrentData> CreateIAirCurrentData(FlatBufferBuilder builder, EAreaFunctionType Type = EAreaFunctionType.AirCurrent, float ExitEffectHeight = 0f, float EffectiveHeight = 0f, float FallTeleportHeight = 0f, int FallTeleportTransitionConfigId = 0, float TopTeleportHeight = 0f, Offset<IMotorAirCurrentConfig> MotorOffset = default(Offset<IMotorAirCurrentConfig>), Offset<ICharacterAirCurrentConfig> CharacterOffset = default(Offset<ICharacterAirCurrentConfig>), byte NullMask = 0)
 		{
 			builder.StartTable(9);
@@ -198,73 +198,73 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IAirCurrentData.EndIAirCurrentData(builder);
 		}
 
-		// Token: 0x06028B03 RID: 166659 RVA: 0x00596D28 File Offset: 0x00594F28
+		// Token: 0x0602B157 RID: 176471 RVA: 0x005DF598 File Offset: 0x005DD798
 		public static void StartIAirCurrentData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(9);
 		}
 
-		// Token: 0x06028B04 RID: 166660 RVA: 0x00596D32 File Offset: 0x00594F32
+		// Token: 0x0602B158 RID: 176472 RVA: 0x005DF5A2 File Offset: 0x005DD7A2
 		public static void AddType(FlatBufferBuilder builder, EAreaFunctionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06028B05 RID: 166661 RVA: 0x00596D3D File Offset: 0x00594F3D
+		// Token: 0x0602B159 RID: 176473 RVA: 0x005DF5AD File Offset: 0x005DD7AD
 		public static void AddExitEffectHeight(FlatBufferBuilder builder, float exitEffectHeight)
 		{
 			builder.AddFloat(1, exitEffectHeight, 0.0);
 		}
 
-		// Token: 0x06028B06 RID: 166662 RVA: 0x00596D50 File Offset: 0x00594F50
+		// Token: 0x0602B15A RID: 176474 RVA: 0x005DF5C0 File Offset: 0x005DD7C0
 		public static void AddEffectiveHeight(FlatBufferBuilder builder, float effectiveHeight)
 		{
 			builder.AddFloat(2, effectiveHeight, 0.0);
 		}
 
-		// Token: 0x06028B07 RID: 166663 RVA: 0x00596D63 File Offset: 0x00594F63
+		// Token: 0x0602B15B RID: 176475 RVA: 0x005DF5D3 File Offset: 0x005DD7D3
 		public static void AddFallTeleportHeight(FlatBufferBuilder builder, float fallTeleportHeight)
 		{
 			builder.AddFloat(3, fallTeleportHeight, 0.0);
 		}
 
-		// Token: 0x06028B08 RID: 166664 RVA: 0x00596D76 File Offset: 0x00594F76
+		// Token: 0x0602B15C RID: 176476 RVA: 0x005DF5E6 File Offset: 0x005DD7E6
 		public static void AddFallTeleportTransitionConfigId(FlatBufferBuilder builder, int fallTeleportTransitionConfigId)
 		{
 			builder.AddInt(4, fallTeleportTransitionConfigId, 0);
 		}
 
-		// Token: 0x06028B09 RID: 166665 RVA: 0x00596D81 File Offset: 0x00594F81
+		// Token: 0x0602B15D RID: 176477 RVA: 0x005DF5F1 File Offset: 0x005DD7F1
 		public static void AddTopTeleportHeight(FlatBufferBuilder builder, float topTeleportHeight)
 		{
 			builder.AddFloat(5, topTeleportHeight, 0.0);
 		}
 
-		// Token: 0x06028B0A RID: 166666 RVA: 0x00596D94 File Offset: 0x00594F94
+		// Token: 0x0602B15E RID: 176478 RVA: 0x005DF604 File Offset: 0x005DD804
 		public static void AddMotor(FlatBufferBuilder builder, Offset<IMotorAirCurrentConfig> motorOffset)
 		{
 			builder.AddOffset(6, motorOffset.Value, 0);
 		}
 
-		// Token: 0x06028B0B RID: 166667 RVA: 0x00596DA4 File Offset: 0x00594FA4
+		// Token: 0x0602B15F RID: 176479 RVA: 0x005DF614 File Offset: 0x005DD814
 		public static void AddCharacter(FlatBufferBuilder builder, Offset<ICharacterAirCurrentConfig> characterOffset)
 		{
 			builder.AddOffset(7, characterOffset.Value, 0);
 		}
 
-		// Token: 0x06028B0C RID: 166668 RVA: 0x00596DB4 File Offset: 0x00594FB4
+		// Token: 0x0602B160 RID: 176480 RVA: 0x005DF624 File Offset: 0x005DD824
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(8, nullMask, 0);
 		}
 
-		// Token: 0x06028B0D RID: 166669 RVA: 0x00596DBF File Offset: 0x00594FBF
+		// Token: 0x0602B161 RID: 176481 RVA: 0x005DF62F File Offset: 0x005DD82F
 		public static Offset<IAirCurrentData> EndIAirCurrentData(FlatBufferBuilder builder)
 		{
 			return new Offset<IAirCurrentData>(builder.EndTable());
 		}
 
-		// Token: 0x06028B0E RID: 166670 RVA: 0x00596DCC File Offset: 0x00594FCC
+		// Token: 0x0602B162 RID: 176482 RVA: 0x005DF63C File Offset: 0x005DD83C
 		public IAirCurrentDataT UnPack()
 		{
 			IAirCurrentDataT airCurrentDataT = new IAirCurrentDataT();
@@ -272,7 +272,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return airCurrentDataT;
 		}
 
-		// Token: 0x06028B0F RID: 166671 RVA: 0x00596DE8 File Offset: 0x00594FE8
+		// Token: 0x0602B163 RID: 176483 RVA: 0x005DF658 File Offset: 0x005DD858
 		public void UnPackTo(IAirCurrentDataT _o)
 		{
 			_o.Type = this.Type;
@@ -286,7 +286,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06028B10 RID: 166672 RVA: 0x00596EA8 File Offset: 0x005950A8
+		// Token: 0x0602B164 RID: 176484 RVA: 0x005DF718 File Offset: 0x005DD918
 		public static Offset<IAirCurrentData> Pack(FlatBufferBuilder builder, IAirCurrentDataT _o)
 		{
 			if (_o == null)
@@ -298,7 +298,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IAirCurrentData.CreateIAirCurrentData(builder, _o.Type, _o.ExitEffectHeight, _o.EffectiveHeight, _o.FallTeleportHeight, _o.FallTeleportTransitionConfigId, _o.TopTeleportHeight, motorOffset, characterOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400F6AE RID: 63150
+		// Token: 0x040103FD RID: 66557
 		private Table __p;
 	}
 }

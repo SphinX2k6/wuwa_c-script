@@ -3,52 +3,52 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200160B RID: 5643
+	// Token: 0x0200167E RID: 5758
 	public enum PhantomBattleCardAttr
 	{
-		// Token: 0x0400BF8A RID: 49034
+		// Token: 0x0400C484 RID: 50308
 		[OriginalName("AttackAbility")]
 		AttackAbility,
-		// Token: 0x0400BF8B RID: 49035
+		// Token: 0x0400C485 RID: 50309
 		[OriginalName("LifeAbility")]
 		LifeAbility,
-		// Token: 0x0400BF8C RID: 49036
+		// Token: 0x0400C486 RID: 50310
 		[OriginalName("CostAbility")]
 		CostAbility,
-		// Token: 0x0400BF8D RID: 49037
+		// Token: 0x0400C487 RID: 50311
 		[OriginalName("Crit")]
 		Crit,
-		// Token: 0x0400BF8E RID: 49038
+		// Token: 0x0400C488 RID: 50312
 		[OriginalName("CritDamage")]
 		CritDamage,
-		// Token: 0x0400BF8F RID: 49039
+		// Token: 0x0400C489 RID: 50313
 		[OriginalName("Defence")]
 		Defence,
-		// Token: 0x0400BF90 RID: 49040
+		// Token: 0x0400C48A RID: 50314
 		[OriginalName("FightScore")]
 		FightScore,
-		// Token: 0x0400BF91 RID: 49041
+		// Token: 0x0400C48B RID: 50315
 		[OriginalName("SettleInvincible")]
 		SettleInvincible,
-		// Token: 0x0400BF92 RID: 49042
+		// Token: 0x0400C48C RID: 50316
 		[OriginalName("CardInvincible")]
 		CardInvincible,
-		// Token: 0x0400BF93 RID: 49043
+		// Token: 0x0400C48D RID: 50317
 		[OriginalName("CardSkillCD")]
 		CardSkillCd,
-		// Token: 0x0400BF94 RID: 49044
+		// Token: 0x0400C48E RID: 50318
 		[OriginalName("CardSkillCDMax")]
 		CardSkillCdmax,
-		// Token: 0x0400BF95 RID: 49045
+		// Token: 0x0400C48F RID: 50319
 		[OriginalName("Durable")]
 		Durable,
-		// Token: 0x0400BF96 RID: 49046
+		// Token: 0x0400C490 RID: 50320
 		[OriginalName("DurableMax")]
 		DurableMax,
-		// Token: 0x0400BF97 RID: 49047
+		// Token: 0x0400C491 RID: 50321
 		[OriginalName("CurEffectCount")]
 		CurEffectCount,
-		// Token: 0x0400BF98 RID: 49048
+		// Token: 0x0400C492 RID: 50322
 		[OriginalName("MaxEffectCount")]
 		MaxEffectCount
 	}

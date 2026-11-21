@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001659 RID: 5721
+	// Token: 0x020017C9 RID: 6089
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EnterMovieMode : ActionParams
 	{
-		// Token: 0x06007CB9 RID: 31929 RVA: 0x0012BA90 File Offset: 0x00129C90
-		[NullableContext(1)]
+		// Token: 0x06008397 RID: 33687 RVA: 0x0013AB3C File Offset: 0x00138D3C
+		[NullableContext(0)]
 		private EnterMovieMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007CBA RID: 31930 RVA: 0x0012BAC8 File Offset: 0x00129CC8
-		[NullableContext(1)]
+		// Token: 0x06008398 RID: 33688 RVA: 0x0013AB74 File Offset: 0x00138D74
+		[NullableContext(0)]
 		public static EnterMovieMode Create([Nullable(2)] EnterMovieMode instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CBB RID: 31931 RVA: 0x0012BADB File Offset: 0x00129CDB
-		[NullableContext(1)]
+		// Token: 0x06008399 RID: 33689 RVA: 0x0013AB87 File Offset: 0x00138D87
+		[NullableContext(0)]
 		public static EnterMovieMode CreateFromSetValue([Nullable(2)] EnterMovieMode_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CBC RID: 31932 RVA: 0x0012BAF0 File Offset: 0x00129CF0
-		[NullableContext(1)]
+		// Token: 0x0600839A RID: 33690 RVA: 0x0013AB9C File Offset: 0x00138D9C
+		[NullableContext(0)]
 		public EnterMovieMode_SetValue ToSetValue()
 		{
 			return new EnterMovieMode_SetValue
@@ -67,9 +67,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002931 RID: 10545
-		// (get) Token: 0x06007CBD RID: 31933 RVA: 0x0012BB40 File Offset: 0x00129D40
-		// (set) Token: 0x06007CBE RID: 31934 RVA: 0x0012BBA1 File Offset: 0x00129DA1
+		// Token: 0x17002B1C RID: 11036
+		// (get) Token: 0x0600839B RID: 33691 RVA: 0x0013ABEC File Offset: 0x00138DEC
+		// (set) Token: 0x0600839C RID: 33692 RVA: 0x0013AC4D File Offset: 0x00138E4D
 		public virtual IMovieCameraConfig MovieCameraConfig
 		{
 			get
@@ -97,9 +97,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002932 RID: 10546
-		// (get) Token: 0x06007CBF RID: 31935 RVA: 0x0012BBB8 File Offset: 0x00129DB8
-		// (set) Token: 0x06007CC0 RID: 31936 RVA: 0x0012BC19 File Offset: 0x00129E19
+		// Token: 0x17002B1D RID: 11037
+		// (get) Token: 0x0600839D RID: 33693 RVA: 0x0013AC64 File Offset: 0x00138E64
+		// (set) Token: 0x0600839E RID: 33694 RVA: 0x0013ACC5 File Offset: 0x00138EC5
 		public virtual IEnableFuncConfig EnableFuncConfig
 		{
 			get
@@ -127,9 +127,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002933 RID: 10547
-		// (get) Token: 0x06007CC1 RID: 31937 RVA: 0x0012BC30 File Offset: 0x00129E30
-		// (set) Token: 0x06007CC2 RID: 31938 RVA: 0x0012BC6A File Offset: 0x00129E6A
+		// Token: 0x17002B1E RID: 11038
+		// (get) Token: 0x0600839F RID: 33695 RVA: 0x0013ACDC File Offset: 0x00138EDC
+		// (set) Token: 0x060083A0 RID: 33696 RVA: 0x0013AD16 File Offset: 0x00138F16
 		public virtual float? BorderAnimDuration
 		{
 			get
@@ -151,9 +151,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002934 RID: 10548
-		// (get) Token: 0x06007CC3 RID: 31939 RVA: 0x0012BC78 File Offset: 0x00129E78
-		// (set) Token: 0x06007CC4 RID: 31940 RVA: 0x0012BC9F File Offset: 0x00129E9F
+		// Token: 0x17002B1F RID: 11039
+		// (get) Token: 0x060083A1 RID: 33697 RVA: 0x0013AD24 File Offset: 0x00138F24
+		// (set) Token: 0x060083A2 RID: 33698 RVA: 0x0013AD4B File Offset: 0x00138F4B
 		public virtual IEnterMovieModeDurationType DurationType
 		{
 			get
@@ -175,9 +175,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002935 RID: 10549
-		// (get) Token: 0x06007CC5 RID: 31941 RVA: 0x0012BCB0 File Offset: 0x00129EB0
-		// (set) Token: 0x06007CC6 RID: 31942 RVA: 0x0012BCEA File Offset: 0x00129EEA
+		// Token: 0x17002B20 RID: 11040
+		// (get) Token: 0x060083A3 RID: 33699 RVA: 0x0013AD5C File Offset: 0x00138F5C
+		// (set) Token: 0x060083A4 RID: 33700 RVA: 0x0013AD96 File Offset: 0x00138F96
 		public virtual bool? AutoExitInFlow
 		{
 			get
@@ -199,24 +199,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004CA4 RID: 19620
+		// Token: 0x0400509F RID: 20639
 		protected new EnterMovieMode FbInstance;
 
-		// Token: 0x04004CA5 RID: 19621
+		// Token: 0x040050A0 RID: 20640
 		protected EnterMovieMode_SetValue PocoInterface;
 
-		// Token: 0x04004CA6 RID: 19622
-		[Nullable(1)]
+		// Token: 0x040050A1 RID: 20641
+		[Nullable(0)]
 		private IMovieCameraConfig _MovieCameraConfigCache;
 
-		// Token: 0x04004CA7 RID: 19623
+		// Token: 0x040050A2 RID: 20642
 		private bool _MovieCameraConfigInited;
 
-		// Token: 0x04004CA8 RID: 19624
-		[Nullable(1)]
+		// Token: 0x040050A3 RID: 20643
+		[Nullable(0)]
 		private IEnableFuncConfig _EnableFuncConfigCache;
 
-		// Token: 0x04004CA9 RID: 19625
+		// Token: 0x040050A4 RID: 20644
 		private bool _EnableFuncConfigInited;
 	}
 }

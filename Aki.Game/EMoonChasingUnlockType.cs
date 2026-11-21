@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200134B RID: 4939
+// Token: 0x020007FF RID: 2047
 public enum EMoonChasingUnlockType
 {
-	// Token: 0x04003D5B RID: 15707
+	// Token: 0x04003DF3 RID: 15859
 	BranchTask,
-	// Token: 0x04003D5C RID: 15708
+	// Token: 0x04003DF4 RID: 15860
 	Building
 }

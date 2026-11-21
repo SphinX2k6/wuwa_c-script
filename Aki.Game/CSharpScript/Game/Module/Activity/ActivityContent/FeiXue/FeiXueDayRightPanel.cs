@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 {
-	// Token: 0x02006641 RID: 26177
+	// Token: 0x020055BF RID: 21951
 	public class FeiXueDayRightPanel : UiPanelBase
 	{
-		// Token: 0x060419AE RID: 268718 RVA: 0x00FE92CC File Offset: 0x00FE74CC
+		// Token: 0x06036673 RID: 222835 RVA: 0x00F30384 File Offset: 0x00F2E584
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,13 +23,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			};
 		}
 
-		// Token: 0x060419AF RID: 268719 RVA: 0x00FE933C File Offset: 0x00FE753C
+		// Token: 0x06036674 RID: 222836 RVA: 0x00F303F4 File Offset: 0x00F2E5F4
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x060419B0 RID: 268720 RVA: 0x00FE9350 File Offset: 0x00FE7550
+		// Token: 0x06036675 RID: 222837 RVA: 0x00F30408 File Offset: 0x00F2E608
 		public UniTask PlaySearchInSequence()
 		{
 			FeiXueDayRightPanel.<PlaySearchInSequence>d__3 <PlaySearchInSequence>d__;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return <PlaySearchInSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060419B1 RID: 268721 RVA: 0x00FE9394 File Offset: 0x00FE7594
+		// Token: 0x06036676 RID: 222838 RVA: 0x00F3044C File Offset: 0x00F2E64C
 		public UniTask PlayDoneSequence()
 		{
 			FeiXueDayRightPanel.<PlayDoneSequence>d__4 <PlayDoneSequence>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return <PlayDoneSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060419B2 RID: 268722 RVA: 0x00FE93D8 File Offset: 0x00FE75D8
+		// Token: 0x06036677 RID: 222839 RVA: 0x00F30490 File Offset: 0x00F2E690
 		public UniTask PlaySearchingLoopSequence()
 		{
 			FeiXueDayRightPanel.<PlaySearchingLoopSequence>d__5 <PlaySearchingLoopSequence>d__;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return <PlaySearchingLoopSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060419B3 RID: 268723 RVA: 0x00FE941C File Offset: 0x00FE761C
+		// Token: 0x06036678 RID: 222840 RVA: 0x00F304D4 File Offset: 0x00F2E6D4
 		public void SetPanelItemActive(EFeiXueQuestState state)
 		{
 			switch (state)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			}
 		}
 
-		// Token: 0x0402221F RID: 139807
+		// Token: 0x0401CB50 RID: 117584
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 	}

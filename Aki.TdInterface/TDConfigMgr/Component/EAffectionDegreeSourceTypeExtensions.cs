@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008EC RID: 2284
+	// Token: 0x02000991 RID: 2449
 	public static class EAffectionDegreeSourceTypeExtensions
 	{
-		// Token: 0x060033D7 RID: 13271 RVA: 0x0008499C File Offset: 0x00082B9C
+		// Token: 0x0600371F RID: 14111 RVA: 0x0008BFD8 File Offset: 0x0008A1D8
 		public static string ToEnumString(this EAffectionDegreeSourceType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060033D8 RID: 13272 RVA: 0x000849C4 File Offset: 0x00082BC4
+		// Token: 0x06003720 RID: 14112 RVA: 0x0008C000 File Offset: 0x0008A200
 		public static EAffectionDegreeSourceType FromString(string name)
 		{
 			EAffectionDegreeSourceType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060033D9 RID: 13273 RVA: 0x000849ED File Offset: 0x00082BED
+		// Token: 0x06003721 RID: 14113 RVA: 0x0008C029 File Offset: 0x0008A229
 		public static bool TryFromString(string name, out EAffectionDegreeSourceType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060033DA RID: 13274 RVA: 0x00084A12 File Offset: 0x00082C12
+		// Token: 0x06003722 RID: 14114 RVA: 0x0008C04E File Offset: 0x0008A24E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060033DB RID: 13275 RVA: 0x00084A22 File Offset: 0x00082C22
+		// Token: 0x06003723 RID: 14115 RVA: 0x0008C05E File Offset: 0x0008A25E
 		public static EAffectionDegreeSourceType[] GetValues()
 		{
 			return new EAffectionDegreeSourceType[1];
 		}
 
-		// Token: 0x060033DC RID: 13276 RVA: 0x00084A2A File Offset: 0x00082C2A
+		// Token: 0x06003724 RID: 14116 RVA: 0x0008C066 File Offset: 0x0008A266
 		public static string[] GetNames()
 		{
 			return new string[]

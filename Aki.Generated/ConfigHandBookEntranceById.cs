@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003CC RID: 972
+	// Token: 0x020003E2 RID: 994
 	public class ConfigHandBookEntranceById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060016CF RID: 5839 RVA: 0x000DA71F File Offset: 0x000D891F
+		// Token: 0x06001753 RID: 5971 RVA: 0x000E0E73 File Offset: 0x000DF073
 		static ConfigHandBookEntranceById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHandBookEntranceById.CreateStaticDefaultValue), new Action(ConfigHandBookEntranceById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060016D0 RID: 5840 RVA: 0x000DA740 File Offset: 0x000D8940
+		// Token: 0x06001754 RID: 5972 RVA: 0x000E0E94 File Offset: 0x000DF094
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHandBookEntranceById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060016D1 RID: 5841 RVA: 0x000DA7BF File Offset: 0x000D89BF
+		// Token: 0x06001755 RID: 5973 RVA: 0x000E0F13 File Offset: 0x000DF113
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHandBookEntranceById.LogPair = null;
 			ConfigHandBookEntranceById.HandleId = 0;
 		}
 
-		// Token: 0x060016D2 RID: 5842 RVA: 0x000DA7CD File Offset: 0x000D89CD
+		// Token: 0x06001756 RID: 5974 RVA: 0x000E0F21 File Offset: 0x000DF121
 		public static void Init()
 		{
 			ConfigHandBookEntranceById.HandleId = ConfigCommon.InitDataStatement(ConfigHandBookEntranceById.HandleId, "db_handbook_entrance.db", "select BinData from `HandBookEntrance` where Id=?");
 		}
 
-		// Token: 0x060016D3 RID: 5843 RVA: 0x000DA7E8 File Offset: 0x000D89E8
+		// Token: 0x06001757 RID: 5975 RVA: 0x000E0F3C File Offset: 0x000DF13C
 		public static HandBookEntrance? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHandBookEntranceById.HandleId, ConfigHandBookEntranceById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new HandBookEntrance?(rootAsHandBookEntrance);
 		}
 
-		// Token: 0x04001A78 RID: 6776
+		// Token: 0x04001B12 RID: 6930
 		private const string DB = "db_handbook_entrance.db";
 
-		// Token: 0x04001A79 RID: 6777
+		// Token: 0x04001B13 RID: 6931
 		private const string FILE = "t.图鉴入口.xlsx";
 
-		// Token: 0x04001A7A RID: 6778
+		// Token: 0x04001B14 RID: 6932
 		private const string TABLE = "HandBookEntrance";
 
-		// Token: 0x04001A7B RID: 6779
+		// Token: 0x04001B15 RID: 6933
 		private const string COMMAND = "select BinData from `HandBookEntrance` where Id=?";
 
-		// Token: 0x04001A7C RID: 6780
+		// Token: 0x04001B16 RID: 6934
 		private const string KEY_PREFIX = "HandBookEntranceById";
 
-		// Token: 0x04001A7D RID: 6781
+		// Token: 0x04001B17 RID: 6935
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001A7E RID: 6782
+		// Token: 0x04001B18 RID: 6936
 		private static int HandleId;
 	}
 }

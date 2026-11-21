@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000DD5 RID: 3541
+// Token: 0x02000287 RID: 647
 [NullableContext(2)]
 [Nullable(0)]
 public class GameSettingsDeviceRenderDefine : IStaticVariableResetter
 {
-	// Token: 0x06005455 RID: 21589 RVA: 0x000EF19B File Offset: 0x000ED39B
+	// Token: 0x060027DC RID: 10204 RVA: 0x000F5EEA File Offset: 0x000F40EA
 	static GameSettingsDeviceRenderDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GameSettingsDeviceRenderDefine.CreateStaticDefaultValue), new Action(GameSettingsDeviceRenderDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170005E9 RID: 1513
-	// (get) Token: 0x06005456 RID: 21590 RVA: 0x000EF1BA File Offset: 0x000ED3BA
+	// Token: 0x1700060F RID: 1551
+	// (get) Token: 0x060027DD RID: 10205 RVA: 0x000F5F09 File Offset: 0x000F4109
 	[Nullable(1)]
 	public static Dictionary<string, IPerformanceLimitConfig> PerformanceLimitConfigs
 	{
@@ -25,7 +25,7 @@ public class GameSettingsDeviceRenderDefine : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005457 RID: 21591 RVA: 0x000EF1C4 File Offset: 0x000ED3C4
+	// Token: 0x060027DE RID: 10206 RVA: 0x000F5F10 File Offset: 0x000F4110
 	public static void CreateStaticDefaultValue()
 	{
 		GameSettingsDeviceRenderDefine.FrameRateListPc = new int[]
@@ -70,9 +70,7 @@ public class GameSettingsDeviceRenderDefine : IStaticVariableResetter
 		};
 		GameSettingsDeviceRenderDefine.FrameRateListXSX = new int[]
 		{
-			60,
-			90,
-			120
+			60
 		};
 		GameSettingsDeviceRenderDefine.MaxRoleShadowNumWithGameGraphQualityPc = new int[]
 		{
@@ -286,7 +284,7 @@ public class GameSettingsDeviceRenderDefine : IStaticVariableResetter
 		GameSettingsDeviceRenderDefine.performanceLimitConfigs = dictionary;
 	}
 
-	// Token: 0x06005458 RID: 21592 RVA: 0x000EF680 File Offset: 0x000ED880
+	// Token: 0x060027DF RID: 10207 RVA: 0x000F63C8 File Offset: 0x000F45C8
 	public static void ResetStaticDefaultValue()
 	{
 		GameSettingsDeviceRenderDefine.FrameRateListPc = null;
@@ -307,43 +305,43 @@ public class GameSettingsDeviceRenderDefine : IStaticVariableResetter
 		GameSettingsDeviceRenderDefine.performanceLimitConfigs = null;
 	}
 
-	// Token: 0x04002684 RID: 9860
+	// Token: 0x0400270F RID: 9999
 	[StaticVariableRuleIgnore]
 	public static int[] FrameRateListPc;
 
-	// Token: 0x04002685 RID: 9861
+	// Token: 0x04002710 RID: 10000
 	[StaticVariableRuleIgnore]
 	public static int[] FrameRateListIos;
 
-	// Token: 0x04002686 RID: 9862
+	// Token: 0x04002711 RID: 10001
 	[StaticVariableRuleIgnore]
 	public static int[] FrameRateListAndroid;
 
-	// Token: 0x04002687 RID: 9863
+	// Token: 0x04002712 RID: 10002
 	[StaticVariableRuleIgnore]
 	public static int[] FrameRateListAndroidForRedMagicLow;
 
-	// Token: 0x04002688 RID: 9864
+	// Token: 0x04002713 RID: 10003
 	[StaticVariableRuleIgnore]
 	public static int[] FrameRateListAndroidForRedMagicHigh;
 
-	// Token: 0x04002689 RID: 9865
+	// Token: 0x04002714 RID: 10004
 	[StaticVariableRuleIgnore]
 	public static int[] FrameRateListAndroidForRedMagic;
 
-	// Token: 0x0400268A RID: 9866
+	// Token: 0x04002715 RID: 10005
 	[StaticVariableRuleIgnore]
 	public static int[] FrameRateListOpenHarmony;
 
-	// Token: 0x0400268B RID: 9867
+	// Token: 0x04002716 RID: 10006
 	[StaticVariableRuleIgnore]
 	public static int[] FrameRateListXSX;
 
-	// Token: 0x0400268C RID: 9868
+	// Token: 0x04002717 RID: 10007
 	[Nullable(1)]
 	public const string PERFORMENCELIMIT_SEQ_TAIL = "_Seq";
 
-	// Token: 0x0400268D RID: 9869
+	// Token: 0x04002718 RID: 10008
 	[Nullable(new byte[]
 	{
 		2,
@@ -352,40 +350,40 @@ public class GameSettingsDeviceRenderDefine : IStaticVariableResetter
 	})]
 	private static Dictionary<string, IPerformanceLimitConfig> performanceLimitConfigs;
 
-	// Token: 0x0400268E RID: 9870
+	// Token: 0x04002719 RID: 10009
 	public const int HD_SCREEN_WIDTH = 2000;
 
-	// Token: 0x0400268F RID: 9871
+	// Token: 0x0400271A RID: 10010
 	public const int HD_SCREEN_HEIGHT = 1100;
 
-	// Token: 0x04002690 RID: 9872
+	// Token: 0x0400271B RID: 10011
 	[StaticVariableRuleIgnore]
 	public static int[] MaxRoleShadowNumWithGameGraphQualityPc;
 
-	// Token: 0x04002691 RID: 9873
+	// Token: 0x0400271C RID: 10012
 	[StaticVariableRuleIgnore]
 	public static int[] MaxRoleShadowNumWithGameGraphQualityMobile;
 
-	// Token: 0x04002692 RID: 9874
+	// Token: 0x0400271D RID: 10013
 	[StaticVariableRuleIgnore]
 	public static int[] MaxRoleShadowDistanceWithGameGraphQualityPc;
 
-	// Token: 0x04002693 RID: 9875
+	// Token: 0x0400271E RID: 10014
 	[StaticVariableRuleIgnore]
 	public static int[] MaxRoleShadowDistanceWithGameGraphQualityMobile;
 
-	// Token: 0x04002694 RID: 9876
+	// Token: 0x0400271F RID: 10015
 	[StaticVariableRuleIgnore]
 	public static int[] MaxDecalShadowDistanceWithGameGraphQualityPc;
 
-	// Token: 0x04002695 RID: 9877
+	// Token: 0x04002720 RID: 10016
 	[StaticVariableRuleIgnore]
 	public static int[] MaxDecalShadowDistanceWithGameGraphQualityMobile;
 
-	// Token: 0x04002696 RID: 9878
+	// Token: 0x04002721 RID: 10017
 	[StaticVariableRuleIgnore]
 	public static int[] MainPlayerRealShadow;
 
-	// Token: 0x04002697 RID: 9879
+	// Token: 0x04002722 RID: 10018
 	public const int WHOLE_SHADOW_CACHE_DELAY_TIME = 1000;
 }

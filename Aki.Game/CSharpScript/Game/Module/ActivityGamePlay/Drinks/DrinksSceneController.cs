@@ -11,6 +11,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.LevelGamePlay.StaticScene;
 using CSharpScript.Game.Module.BlackScreen;
 using CSharpScript.Game.Module.Plot.Flow;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.NewWorld.SceneItem.RefCompController;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
@@ -19,18 +20,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 {
-	// Token: 0x02006932 RID: 26930
+	// Token: 0x02005882 RID: 22658
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DrinksSceneController : IStaticVariableResetter
 	{
-		// Token: 0x060431FF RID: 274943 RVA: 0x0105BC71 File Offset: 0x01059E71
+		// Token: 0x06037D57 RID: 228695 RVA: 0x00F9D29D File Offset: 0x00F9B49D
 		static DrinksSceneController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DrinksSceneController.CreateStaticDefaultValue), new Action(DrinksSceneController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06043200 RID: 274944 RVA: 0x0105BC90 File Offset: 0x01059E90
+		// Token: 0x06037D58 RID: 228696 RVA: 0x00F9D2BC File Offset: 0x00F9B4BC
 		public static void CreateStaticDefaultValue()
 		{
 			DrinksSceneController.StateMap = new Dictionary<EDrinksPreferenceLevel, string>
@@ -50,13 +51,13 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			};
 		}
 
-		// Token: 0x06043201 RID: 274945 RVA: 0x0105BCC0 File Offset: 0x01059EC0
+		// Token: 0x06037D59 RID: 228697 RVA: 0x00F9D2EC File Offset: 0x00F9B4EC
 		public static void ResetStaticDefaultValue()
 		{
 			DrinksSceneController.StateMap = null;
 		}
 
-		// Token: 0x06043202 RID: 274946 RVA: 0x0105BCC8 File Offset: 0x01059EC8
+		// Token: 0x06037D5A RID: 228698 RVA: 0x00F9D2F4 File Offset: 0x00F9B4F4
 		public UniTask InitOnGameStart()
 		{
 			DrinksSceneController.<InitOnGameStart>d__21 <InitOnGameStart>d__;
@@ -67,7 +68,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			return <InitOnGameStart>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043203 RID: 274947 RVA: 0x0105BD0C File Offset: 0x01059F0C
+		// Token: 0x06037D5B RID: 228699 RVA: 0x00F9D338 File Offset: 0x00F9B538
 		[NullableContext(0)]
 		protected UniTask<bool> InitSeq()
 		{
@@ -79,7 +80,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			return <InitSeq>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043204 RID: 274948 RVA: 0x0105BD50 File Offset: 0x01059F50
+		// Token: 0x06037D5C RID: 228700 RVA: 0x00F9D37C File Offset: 0x00F9B57C
 		protected void InitCup()
 		{
 			AActor actorWithTag = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("Cups").Value, ECollectActorType.Default);
@@ -103,7 +104,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			}
 		}
 
-		// Token: 0x06043205 RID: 274949 RVA: 0x0105BDE0 File Offset: 0x01059FE0
+		// Token: 0x06037D5D RID: 228701 RVA: 0x00F9D40C File Offset: 0x00F9B60C
 		protected void UpdateCupLocationOrigin(BP_Prop_GobletLiquid_C cupActor, int roleId)
 		{
 			AActor actorWithTag = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("CupsTranform").Value, ECollectActorType.Default);
@@ -130,7 +131,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			}
 		}
 
-		// Token: 0x06043206 RID: 274950 RVA: 0x0105BEE3 File Offset: 0x0105A0E3
+		// Token: 0x06037D5E RID: 228702 RVA: 0x00F9D50F File Offset: 0x00F9B70F
 		public void OnStepSequenceStart()
 		{
 			if (DrinksModel.Instance.GetCurStep() != EDrinksPlayStep.Batching)
@@ -142,7 +143,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			this.BeginPlayBatchingLevelSequence();
 		}
 
-		// Token: 0x06043207 RID: 274951 RVA: 0x0105BF10 File Offset: 0x0105A110
+		// Token: 0x06037D5F RID: 228703 RVA: 0x00F9D53C File Offset: 0x00F9B73C
 		protected void BeginPlayDrinksLevelSequence()
 		{
 			this.IsJump = true;
@@ -150,7 +151,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			this.SimpleSequenceActor.PlayToMark(ESeqStep.DrinksStart.ToString(), null, null, new RefCompDefine.PlayRateStruct(new float?(1f), EKuroEasingFuncType.KEF_Linear, new float?(0f), new float?(0f)), true);
 		}
 
-		// Token: 0x06043208 RID: 274952 RVA: 0x0105BF74 File Offset: 0x0105A174
+		// Token: 0x06037D60 RID: 228704 RVA: 0x00F9D5A0 File Offset: 0x00F9B7A0
 		protected void BeginPlayBatchingLevelSequence()
 		{
 			this.IsJump = true;
@@ -160,7 +161,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			this.SimpleSequenceActor.PlayToMark(eseqStep.ToString(), null, null, new RefCompDefine.PlayRateStruct(new float?(1f), EKuroEasingFuncType.KEF_Linear, new float?(0f), new float?(0f)), true);
 		}
 
-		// Token: 0x06043209 RID: 274953 RVA: 0x0105C014 File Offset: 0x0105A214
+		// Token: 0x06037D61 RID: 228705 RVA: 0x00F9D640 File Offset: 0x00F9B840
 		public void OnBackToBeforeOrnament()
 		{
 			this.IgnorePause = true;
@@ -168,7 +169,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			this.SimpleSequenceActor.PlayToMark(ESeqStep.DrinksStart.ToString(), null, null, new RefCompDefine.PlayRateStruct(new float?(1f), EKuroEasingFuncType.KEF_Linear, new float?(0f), new float?(0f)), true);
 		}
 
-		// Token: 0x0604320A RID: 274954 RVA: 0x0105C078 File Offset: 0x0105A278
+		// Token: 0x06037D62 RID: 228706 RVA: 0x00F9D6A4 File Offset: 0x00F9B8A4
 		[NullableContext(2)]
 		public void OnSetOrnament(int curId, int roleId, BP_Prop_GobletLiquid_C cupActor = null, bool needUpdate = true)
 		{
@@ -201,7 +202,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			}
 		}
 
-		// Token: 0x0604320B RID: 274955 RVA: 0x0105C1CC File Offset: 0x0105A3CC
+		// Token: 0x06037D63 RID: 228707 RVA: 0x00F9D7F8 File Offset: 0x00F9B9F8
 		public void UpdateBatchingOnWater(BP_Prop_GobletLiquid_C actor, int[] batching, int roleId)
 		{
 			if (batching.Length >= 1 && batching[0] != 0)
@@ -236,7 +237,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			actor.DrinksBatching_Tag02 = 0;
 		}
 
-		// Token: 0x0604320C RID: 274956 RVA: 0x0105C39B File Offset: 0x0105A59B
+		// Token: 0x06037D64 RID: 228708 RVA: 0x00F9D9C7 File Offset: 0x00F9BBC7
 		public void Destroy(bool force = false)
 		{
 			this.DestroySeq();
@@ -247,7 +248,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			}
 		}
 
-		// Token: 0x0604320D RID: 274957 RVA: 0x0105C3B5 File Offset: 0x0105A5B5
+		// Token: 0x06037D65 RID: 228709 RVA: 0x00F9D9E1 File Offset: 0x00F9BBE1
 		protected void DestroySeq()
 		{
 			SimpleLevelSequenceActor simpleSequenceActor = this.SimpleSequenceActor;
@@ -258,13 +259,13 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			this.SimpleSequenceActor = null;
 		}
 
-		// Token: 0x0604320E RID: 274958 RVA: 0x0105C3CF File Offset: 0x0105A5CF
+		// Token: 0x06037D66 RID: 228710 RVA: 0x00F9D9FB File Offset: 0x00F9BBFB
 		protected void DestroyCup()
 		{
 			this.CupActor = null;
 		}
 
-		// Token: 0x0604320F RID: 274959 RVA: 0x0105C3D8 File Offset: 0x0105A5D8
+		// Token: 0x06037D67 RID: 228711 RVA: 0x00F9DA04 File Offset: 0x00F9BC04
 		protected void PlayStepEndSequence()
 		{
 			EDrinksPlayStep curStep = DrinksModel.Instance.GetCurStep();
@@ -279,7 +280,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			}
 		}
 
-		// Token: 0x06043210 RID: 274960 RVA: 0x0105C408 File Offset: 0x0105A608
+		// Token: 0x06037D68 RID: 228712 RVA: 0x00F9DA34 File Offset: 0x00F9BC34
 		protected void PlayDrinksBaseSeq()
 		{
 			DrinksModel instance = DrinksModel.Instance;
@@ -316,7 +317,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			this.SimpleSequenceActor.PlayToMark(mark, null, null, new RefCompDefine.PlayRateStruct(new float?(1f), EKuroEasingFuncType.KEF_Linear, new float?(0f), new float?(0f)), false);
 		}
 
-		// Token: 0x06043211 RID: 274961 RVA: 0x0105C568 File Offset: 0x0105A768
+		// Token: 0x06037D69 RID: 228713 RVA: 0x00F9DB94 File Offset: 0x00F9BD94
 		protected void PlayBatchingSeq()
 		{
 			if (this.NeedBatching)
@@ -336,11 +337,11 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			FlowController.Instance.StartFlow("剧情_调饮料a级摇雪克杯演出", 1, 1, null, 0L, false, false, false, null);
 		}
 
-		// Token: 0x06043212 RID: 274962 RVA: 0x0105C680 File Offset: 0x0105A880
+		// Token: 0x06037D6A RID: 228714 RVA: 0x00F9DCAC File Offset: 0x00F9BEAC
 		public void PlayShowDrinks()
 		{
 			this.IsJump = false;
-			UiCameraAnimationController.Instance.ExitUiCameraMode();
+			UiCameraController.Instance.ExitUiCameraMode();
 			this.SimpleSequenceActor.PlayToMark(ESeqStep.ShowEnd.ToString(), null, null, new RefCompDefine.PlayRateStruct(new float?(1f), EKuroEasingFuncType.KEF_Linear, new float?(0f), new float?(0f)), false);
 			TimerSystem.Instance.Delay(delegate(float _)
 			{
@@ -360,10 +361,10 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			}, 200f, null, null, true, 1f);
 		}
 
-		// Token: 0x06043213 RID: 274963 RVA: 0x0105C704 File Offset: 0x0105A904
+		// Token: 0x06037D6B RID: 228715 RVA: 0x00F9DD30 File Offset: 0x00F9BF30
 		protected void OnMixShowEnd()
 		{
-			UiCameraAnimationController.Instance.EnterUiCameraMode();
+			UiCameraController.Instance.EnterUiCameraMode();
 			if (this.SceneCamera != null)
 			{
 				DrinksModel.Instance.GetProxy().SetShakeCamera(this.SceneCamera);
@@ -372,7 +373,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			DrinksModel.Instance.GetProxy().OnFinishMixingEnd();
 		}
 
-		// Token: 0x06043214 RID: 274964 RVA: 0x0105C744 File Offset: 0x0105A944
+		// Token: 0x06037D6C RID: 228716 RVA: 0x00F9DD70 File Offset: 0x00F9BF70
 		private void OnShakeStart()
 		{
 			BlackScreenController.Instance.RemoveBlackScreen("Close", "DrinksShake", "Default");
@@ -386,7 +387,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			this.CupActor.UpdateGobletLiguid();
 		}
 
-		// Token: 0x06043215 RID: 274965 RVA: 0x0105C817 File Offset: 0x0105AA17
+		// Token: 0x06037D6D RID: 228717 RVA: 0x00F9DE43 File Offset: 0x00F9C043
 		private void OnShakeJump(EUiViewName viewName, bool isShow)
 		{
 			if (isShow)
@@ -396,7 +397,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			this.OnShakeEnd();
 		}
 
-		// Token: 0x06043216 RID: 274966 RVA: 0x0105C824 File Offset: 0x0105AA24
+		// Token: 0x06037D6E RID: 228718 RVA: 0x00F9DE50 File Offset: 0x00F9C050
 		private void OnShakeEnd()
 		{
 			this.IgnorePause = true;
@@ -407,7 +408,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			DrinksModel.Instance.EnterNextStep();
 		}
 
-		// Token: 0x06043217 RID: 274967 RVA: 0x0105C8CC File Offset: 0x0105AACC
+		// Token: 0x06037D6F RID: 228719 RVA: 0x00F9DEF8 File Offset: 0x00F9C0F8
 		private void OnSequencePause()
 		{
 			if (this.IgnorePause)
@@ -439,7 +440,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			}
 		}
 
-		// Token: 0x06043218 RID: 274968 RVA: 0x0105C939 File Offset: 0x0105AB39
+		// Token: 0x06037D70 RID: 228720 RVA: 0x00F9DF65 File Offset: 0x00F9C165
 		private void OnSequenceStop()
 		{
 			BP_Prop_GobletLiquid_C cupActor = this.CupActor;
@@ -450,7 +451,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			cupActor.SetActorHiddenInGame(true);
 		}
 
-		// Token: 0x06043219 RID: 274969 RVA: 0x0105C94C File Offset: 0x0105AB4C
+		// Token: 0x06037D71 RID: 228721 RVA: 0x00F9DF78 File Offset: 0x00F9C178
 		private void UpdateDrinkBaseBp()
 		{
 			DrinksModel instance = DrinksModel.Instance;
@@ -462,7 +463,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			this.UpdateWaterById(this.CupActor, value.EffectId, Array.Empty<int>(), roleId, false, true);
 		}
 
-		// Token: 0x0604321A RID: 274970 RVA: 0x0105C9C8 File Offset: 0x0105ABC8
+		// Token: 0x06037D72 RID: 228722 RVA: 0x00F9DFF4 File Offset: 0x00F9C1F4
 		public void UpdateWaterById(BP_Prop_GobletLiquid_C actor, int paramId, int[] batching, int roleId, bool needBatchingFall = true, bool needUpdate = true)
 		{
 			DrinksParam value = DrinksConfig.Instance.GetParam(paramId).Value;
@@ -515,7 +516,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			}
 		}
 
-		// Token: 0x0604321B RID: 274971 RVA: 0x0105CD68 File Offset: 0x0105AF68
+		// Token: 0x06037D73 RID: 228723 RVA: 0x00F9E394 File Offset: 0x00F9C594
 		private void UpdateBatchingFall(BP_Prop_GobletLiquid_C actor, bool needUpdate = true)
 		{
 			DrinksResultInfo currentPlayData = DrinksModel.Instance.GetCurrentPlayData();
@@ -531,7 +532,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			}
 		}
 
-		// Token: 0x0604321C RID: 274972 RVA: 0x0105CE0C File Offset: 0x0105B00C
+		// Token: 0x06037D74 RID: 228724 RVA: 0x00F9E438 File Offset: 0x00F9C638
 		[NullableContext(2)]
 		public void UpdateCupActor(DrinksResultInfo data, int roleId, bool needFallBatching = false)
 		{
@@ -605,7 +606,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			}, ResourceSystem.EResourceLoadPriority.Default, "js_undefined");
 		}
 
-		// Token: 0x0604321D RID: 274973 RVA: 0x0105CF00 File Offset: 0x0105B100
+		// Token: 0x06037D75 RID: 228725 RVA: 0x00F9E52C File Offset: 0x00F9C72C
 		public void OnEndingPlotBegin()
 		{
 			int requireId = DrinksModel.Instance.GetCurrentPlayData().RequireId;
@@ -613,7 +614,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			EventSystem.Instance.Add(EEventName.OnBlackFadeScreenStart, new Action(this.OnEndBlackFadeScreen));
 		}
 
-		// Token: 0x0604321E RID: 274974 RVA: 0x0105CF4C File Offset: 0x0105B14C
+		// Token: 0x06037D76 RID: 228726 RVA: 0x00F9E578 File Offset: 0x00F9C778
 		public void UpdateCupMontageLocation(int roleId, EDrinksPreferenceLevel state)
 		{
 			AActor actorWithTag = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName(string.Format("Cups_{0}_{1}", roleId, DrinksSceneController.StateMap[state])).Value, ECollectActorType.Default);
@@ -632,7 +633,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			bp_Prop_GobletLiquid_C.UpdateGobletLiguid();
 		}
 
-		// Token: 0x0604321F RID: 274975 RVA: 0x0105D010 File Offset: 0x0105B210
+		// Token: 0x06037D77 RID: 228727 RVA: 0x00F9E63C File Offset: 0x00F9C83C
 		private void OnEndBlackFadeScreen()
 		{
 			EventSystem.Instance.Remove(EEventName.OnBlackFadeScreenStart, new Action(this.OnEndBlackFadeScreen));
@@ -642,22 +643,22 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 				DrinksModel.Instance.FlowSpecialRotationByRoleId(roleId, true);
 				if (DrinksModel.Instance.GameplayOpenWay == EDrinksGameplayOpenWay.FromEntityNPC)
 				{
-					UiCameraAnimationManager.Instance.EnablePlayerActor();
+					UiCameraModel.Instance.EnablePlayerActor();
 					this.ShowNpc();
 					return;
 				}
-				UiCameraAnimationManager.Instance.DisablePlayerActor();
+				UiCameraModel.Instance.DisablePlayerActor();
 			}, 950f, null, null, true, 1f);
 		}
 
-		// Token: 0x06043220 RID: 274976 RVA: 0x0105D05D File Offset: 0x0105B25D
+		// Token: 0x06037D78 RID: 228728 RVA: 0x00F9E689 File Offset: 0x00F9C889
 		private void UpdateWaterHighProcessSeq(BP_Prop_GobletLiquid_C cupActor, bool isEndCup)
 		{
 			cupActor.Water_HighProcess_Seq = (float)(isEndCup ? 0 : -1);
 			cupActor.UpdateGobletLiguid();
 		}
 
-		// Token: 0x06043221 RID: 274977 RVA: 0x0105D074 File Offset: 0x0105B274
+		// Token: 0x06037D79 RID: 228729 RVA: 0x00F9E6A0 File Offset: 0x00F9C8A0
 		public void HideNpc()
 		{
 			foreach (int num in DrinksConfig.Instance.GetNeedHideNpcId())
@@ -671,7 +672,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			}
 		}
 
-		// Token: 0x06043222 RID: 274978 RVA: 0x0105D11C File Offset: 0x0105B31C
+		// Token: 0x06037D7A RID: 228730 RVA: 0x00F9E748 File Offset: 0x00F9C948
 		public void ShowNpc()
 		{
 			foreach (int pbDataId in this.NpcEntitySet)
@@ -685,7 +686,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			this.NpcEntitySet.Clear();
 		}
 
-		// Token: 0x06043223 RID: 274979 RVA: 0x0105D1B0 File Offset: 0x0105B3B0
+		// Token: 0x06037D7B RID: 228731 RVA: 0x00F9E7DC File Offset: 0x00F9C9DC
 		public void CacheCurrentCupState()
 		{
 			BP_Prop_GobletLiquid_C bp_Prop_GobletLiquid_C = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("Cups").Value, ECollectActorType.Default) as BP_Prop_GobletLiquid_C;
@@ -754,7 +755,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			this.CacheBatching02 = bp_Prop_GobletLiquid_C.DrinksBatching_Tag02;
 		}
 
-		// Token: 0x06043224 RID: 274980 RVA: 0x0105D436 File Offset: 0x0105B636
+		// Token: 0x06037D7C RID: 228732 RVA: 0x00F9EA62 File Offset: 0x00F9CC62
 		private float[] LinearColorToArray(FLinearColor linear)
 		{
 			return new float[]
@@ -766,7 +767,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			};
 		}
 
-		// Token: 0x06043225 RID: 274981 RVA: 0x0105D464 File Offset: 0x0105B664
+		// Token: 0x06037D7D RID: 228733 RVA: 0x00F9EA90 File Offset: 0x00F9CC90
 		public void ApplyCurrentCupState()
 		{
 			if (!this.IsShowing)
@@ -865,178 +866,178 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.Drinks
 			}, ResourceSystem.EResourceLoadPriority.Default, "js_undefined");
 		}
 
-		// Token: 0x04022F12 RID: 143122
+		// Token: 0x0401D76E RID: 120686
 		private const string SEQUENCE_PATH = "DrinksSeqDrinkBase";
 
-		// Token: 0x04022F13 RID: 143123
+		// Token: 0x0401D76F RID: 120687
 		private const int MULTI_PARAM = 1000000;
 
-		// Token: 0x04022F14 RID: 143124
+		// Token: 0x0401D770 RID: 120688
 		private const string DRINK_EVENT = "play_ui_springfestival_mixwine_pour_{0}_{1}";
 
-		// Token: 0x04022F15 RID: 143125
+		// Token: 0x0401D771 RID: 120689
 		private const int THOUSAND = 1000;
 
-		// Token: 0x04022F16 RID: 143126
+		// Token: 0x0401D772 RID: 120690
 		private static Dictionary<EDrinksPreferenceLevel, string> StateMap;
 
-		// Token: 0x04022F17 RID: 143127
+		// Token: 0x0401D773 RID: 120691
 		[Nullable(2)]
 		protected SimpleLevelSequenceActor SimpleSequenceActor;
 
-		// Token: 0x04022F18 RID: 143128
+		// Token: 0x0401D774 RID: 120692
 		[Nullable(2)]
 		protected BP_Prop_GobletLiquid_C CupActor;
 
-		// Token: 0x04022F19 RID: 143129
+		// Token: 0x0401D775 RID: 120693
 		protected int CurOrnament;
 
-		// Token: 0x04022F1A RID: 143130
+		// Token: 0x0401D776 RID: 120694
 		protected bool IsJump = true;
 
-		// Token: 0x04022F1B RID: 143131
+		// Token: 0x0401D777 RID: 120695
 		protected bool IsBatchingEnd;
 
-		// Token: 0x04022F1C RID: 143132
+		// Token: 0x0401D778 RID: 120696
 		protected bool IgnorePause;
 
-		// Token: 0x04022F1D RID: 143133
+		// Token: 0x0401D779 RID: 120697
 		protected bool NeedBatching;
 
-		// Token: 0x04022F1E RID: 143134
+		// Token: 0x0401D77A RID: 120698
 		[Nullable(2)]
 		protected BP_CineCamera_C SceneCamera;
 
-		// Token: 0x04022F1F RID: 143135
+		// Token: 0x0401D77B RID: 120699
 		protected global::Vector RelativeLocation = global::Vector.Create();
 
-		// Token: 0x04022F20 RID: 143136
+		// Token: 0x0401D77C RID: 120700
 		protected global::Vector OrnamentLocation = global::Vector.Create();
 
-		// Token: 0x04022F21 RID: 143137
+		// Token: 0x0401D77D RID: 120701
 		protected Rotator OrnamentRotation = Rotator.Create();
 
-		// Token: 0x04022F22 RID: 143138
+		// Token: 0x0401D77E RID: 120702
 		protected global::Vector BatchingLocation = global::Vector.Create();
 
-		// Token: 0x04022F23 RID: 143139
+		// Token: 0x0401D77F RID: 120703
 		protected int CacheRoleId;
 
-		// Token: 0x04022F24 RID: 143140
+		// Token: 0x0401D780 RID: 120704
 		protected HashSet<int> NpcEntitySet = new HashSet<int>();
 
-		// Token: 0x04022F25 RID: 143141
+		// Token: 0x0401D781 RID: 120705
 		protected bool IsShowing;
 
-		// Token: 0x04022F26 RID: 143142
+		// Token: 0x0401D782 RID: 120706
 		protected global::Vector CacheLocation = global::Vector.Create();
 
-		// Token: 0x04022F27 RID: 143143
+		// Token: 0x0401D783 RID: 120707
 		protected Rotator CacheRotation = Rotator.Create();
 
-		// Token: 0x04022F28 RID: 143144
+		// Token: 0x0401D784 RID: 120708
 		protected float[] CacheMainColorPalette = new float[4];
 
-		// Token: 0x04022F29 RID: 143145
+		// Token: 0x0401D785 RID: 120709
 		protected float CacheWaterHighProcess;
 
-		// Token: 0x04022F2A RID: 143146
+		// Token: 0x0401D786 RID: 120710
 		protected float CacheWaterCenterOffset;
 
-		// Token: 0x04022F2B RID: 143147
+		// Token: 0x0401D787 RID: 120711
 		protected float CacheWaterMaskWidth;
 
-		// Token: 0x04022F2C RID: 143148
+		// Token: 0x0401D788 RID: 120712
 		protected float[] CacheWaterLineColor = new float[4];
 
-		// Token: 0x04022F2D RID: 143149
+		// Token: 0x0401D789 RID: 120713
 		protected float[] CacheWaterColorHigh = new float[4];
 
-		// Token: 0x04022F2E RID: 143150
+		// Token: 0x0401D78A RID: 120714
 		protected float[] CacheWaterColorMiddle = new float[4];
 
-		// Token: 0x04022F2F RID: 143151
+		// Token: 0x0401D78B RID: 120715
 		protected float[] CacheWaterColorDown = new float[4];
 
-		// Token: 0x04022F30 RID: 143152
+		// Token: 0x0401D78C RID: 120716
 		protected float[] CacheUpColorAdd = new float[4];
 
-		// Token: 0x04022F31 RID: 143153
+		// Token: 0x0401D78D RID: 120717
 		protected float[] CacheUpLightColor = new float[4];
 
-		// Token: 0x04022F32 RID: 143154
+		// Token: 0x0401D78E RID: 120718
 		protected float CacheColorMidHighProcess;
 
-		// Token: 0x04022F33 RID: 143155
+		// Token: 0x0401D78F RID: 120719
 		protected float CacheColorMidHighWidth;
 
-		// Token: 0x04022F34 RID: 143156
+		// Token: 0x0401D790 RID: 120720
 		protected float CacheColorDownMidProcess;
 
-		// Token: 0x04022F35 RID: 143157
+		// Token: 0x0401D791 RID: 120721
 		protected float CacheColorDownMidWidth;
 
-		// Token: 0x04022F36 RID: 143158
+		// Token: 0x0401D792 RID: 120722
 		protected float CacheUpLightMaskProcess;
 
-		// Token: 0x04022F37 RID: 143159
+		// Token: 0x0401D793 RID: 120723
 		protected float CacheWaterRoughness;
 
-		// Token: 0x04022F38 RID: 143160
+		// Token: 0x0401D794 RID: 120724
 		protected float CacheWaterMetallic;
 
-		// Token: 0x04022F39 RID: 143161
+		// Token: 0x0401D795 RID: 120725
 		protected float CacheFresnelRangeWater;
 
-		// Token: 0x04022F3A RID: 143162
+		// Token: 0x0401D796 RID: 120726
 		protected float[] CacheFresnelColorAdd = new float[4];
 
-		// Token: 0x04022F3B RID: 143163
+		// Token: 0x0401D797 RID: 120727
 		protected float CacheRefractIntensity;
 
-		// Token: 0x04022F3C RID: 143164
+		// Token: 0x0401D798 RID: 120728
 		protected float CacheBubbleIntensity;
 
-		// Token: 0x04022F3D RID: 143165
+		// Token: 0x0401D799 RID: 120729
 		protected float CacheBubbleSpeed;
 
-		// Token: 0x04022F3E RID: 143166
+		// Token: 0x0401D79A RID: 120730
 		protected int[] CacheBatchingTag = new int[2];
 
-		// Token: 0x04022F3F RID: 143167
+		// Token: 0x0401D79B RID: 120731
 		protected float CacheBatchPosHeightScale;
 
-		// Token: 0x04022F40 RID: 143168
+		// Token: 0x0401D79C RID: 120732
 		protected float CacheOrnamentScale;
 
-		// Token: 0x04022F41 RID: 143169
+		// Token: 0x0401D79D RID: 120733
 		protected global::Vector CacheOrnamentLocation = global::Vector.Create();
 
-		// Token: 0x04022F42 RID: 143170
+		// Token: 0x0401D79E RID: 120734
 		protected Rotator CacheOrnamentRotation = Rotator.Create();
 
-		// Token: 0x04022F43 RID: 143171
+		// Token: 0x0401D79F RID: 120735
 		protected float CacheBatchingScale1;
 
-		// Token: 0x04022F44 RID: 143172
+		// Token: 0x0401D7A0 RID: 120736
 		protected float CacheBatchingScale2;
 
-		// Token: 0x04022F45 RID: 143173
+		// Token: 0x0401D7A1 RID: 120737
 		protected float CacheBatchPosScale;
 
-		// Token: 0x04022F46 RID: 143174
+		// Token: 0x0401D7A2 RID: 120738
 		protected global::Vector CacheBatchPos1 = global::Vector.Create();
 
-		// Token: 0x04022F47 RID: 143175
+		// Token: 0x0401D7A3 RID: 120739
 		protected global::Vector CacheBatchPos2 = global::Vector.Create();
 
-		// Token: 0x04022F48 RID: 143176
+		// Token: 0x0401D7A4 RID: 120740
 		protected int CacheOrnamentTag;
 
-		// Token: 0x04022F49 RID: 143177
+		// Token: 0x0401D7A5 RID: 120741
 		protected int CacheBatching01;
 
-		// Token: 0x04022F4A RID: 143178
+		// Token: 0x0401D7A6 RID: 120742
 		protected int CacheBatching02;
 	}
 }

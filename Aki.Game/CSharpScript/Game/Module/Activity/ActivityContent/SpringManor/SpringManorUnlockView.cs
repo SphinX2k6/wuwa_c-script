@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006097 RID: 24727
+	// Token: 0x02005015 RID: 20501
 	public class SpringManorUnlockView : UiTickViewBase
 	{
-		// Token: 0x0603E801 RID: 256001 RVA: 0x00F1B4E0 File Offset: 0x00F196E0
+		// Token: 0x060334C5 RID: 210117 RVA: 0x00E622A4 File Offset: 0x00E604A4
 		[NullableContext(1)]
 		public SpringManorUnlockView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E802 RID: 256002 RVA: 0x00F1B50C File Offset: 0x00F1970C
+		// Token: 0x060334C6 RID: 210118 RVA: 0x00E622D0 File Offset: 0x00E604D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -42,14 +42,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603E803 RID: 256003 RVA: 0x00F1B5F4 File Offset: 0x00F197F4
+		// Token: 0x060334C7 RID: 210119 RVA: 0x00E623B8 File Offset: 0x00E605B8
 		protected override void OnStart()
 		{
 			this.CloseTimer = (float)this.CloseTime;
 			this.FillBar = base.GetSprite(1);
 		}
 
-		// Token: 0x0603E804 RID: 256004 RVA: 0x00F1B610 File Offset: 0x00F19810
+		// Token: 0x060334C8 RID: 210120 RVA: 0x00E623D4 File Offset: 0x00E605D4
 		protected override void OnTick(float delta)
 		{
 			UUISprite fillBar = this.FillBar;
@@ -72,22 +72,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E805 RID: 256005 RVA: 0x00F1B66F File Offset: 0x00F1986F
+		// Token: 0x060334C9 RID: 210121 RVA: 0x00E62433 File Offset: 0x00E60633
 		private void OnClickButton()
 		{
 			UiManager.Instance.OpenView(EUiViewName.SpringManorAtmosphereLevelView, null, null);
 		}
 
-		// Token: 0x04020B5F RID: 133983
+		// Token: 0x0401B48C RID: 111756
 		private bool IsClosing;
 
-		// Token: 0x04020B60 RID: 133984
+		// Token: 0x0401B48D RID: 111757
 		private float CloseTimer;
 
-		// Token: 0x04020B61 RID: 133985
+		// Token: 0x0401B48E RID: 111758
 		private readonly int CloseTime = ConfigCommonParamById.GetIntConfig("SpringManorLevelDisplayTime").Value;
 
-		// Token: 0x04020B62 RID: 133986
+		// Token: 0x0401B48F RID: 111759
 		[Nullable(2)]
 		private UUISprite FillBar;
 	}

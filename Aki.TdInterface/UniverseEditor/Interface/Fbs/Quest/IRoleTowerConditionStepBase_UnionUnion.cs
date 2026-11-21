@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040D1 RID: 16593
+	// Token: 0x02004512 RID: 17682
 	public class IRoleTowerConditionStepBase_UnionUnion
 	{
-		// Token: 0x17007505 RID: 29957
-		// (get) Token: 0x060182C6 RID: 99014 RVA: 0x0037B909 File Offset: 0x00379B09
-		// (set) Token: 0x060182C7 RID: 99015 RVA: 0x0037B911 File Offset: 0x00379B11
+		// Token: 0x17007B0B RID: 31499
+		// (get) Token: 0x06019967 RID: 104807 RVA: 0x003A5859 File Offset: 0x003A3A59
+		// (set) Token: 0x06019968 RID: 104808 RVA: 0x003A5861 File Offset: 0x003A3A61
 		public IRoleTowerConditionStepBase_Union Type { get; set; }
 
-		// Token: 0x17007506 RID: 29958
-		// (get) Token: 0x060182C8 RID: 99016 RVA: 0x0037B91A File Offset: 0x00379B1A
-		// (set) Token: 0x060182C9 RID: 99017 RVA: 0x0037B922 File Offset: 0x00379B22
+		// Token: 0x17007B0C RID: 31500
+		// (get) Token: 0x06019969 RID: 104809 RVA: 0x003A586A File Offset: 0x003A3A6A
+		// (set) Token: 0x0601996A RID: 104810 RVA: 0x003A5872 File Offset: 0x003A3A72
 		public object Value { get; set; }
 
-		// Token: 0x060182CA RID: 99018 RVA: 0x0037B92B File Offset: 0x00379B2B
+		// Token: 0x0601996B RID: 104811 RVA: 0x003A587B File Offset: 0x003A3A7B
 		public IRoleTowerConditionStepBase_UnionUnion()
 		{
 			this.Type = IRoleTowerConditionStepBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060182CB RID: 99019 RVA: 0x0037B941 File Offset: 0x00379B41
+		// Token: 0x0601996C RID: 104812 RVA: 0x003A5891 File Offset: 0x003A3A91
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060182CC RID: 99020 RVA: 0x0037B953 File Offset: 0x00379B53
+		// Token: 0x0601996D RID: 104813 RVA: 0x003A58A3 File Offset: 0x003A3AA3
 		public IRoleTowerConditionStepBaseT AsIRoleTowerConditionStepBase()
 		{
 			return this.As<IRoleTowerConditionStepBaseT>();
 		}
 
-		// Token: 0x060182CD RID: 99021 RVA: 0x0037B95B File Offset: 0x00379B5B
+		// Token: 0x0601996E RID: 104814 RVA: 0x003A58AB File Offset: 0x003A3AAB
 		public static IRoleTowerConditionStepBase_UnionUnion FromIRoleTowerConditionStepBase(IRoleTowerConditionStepBaseT _iroletowerconditionstepbase)
 		{
 			return new IRoleTowerConditionStepBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060182CE RID: 99022 RVA: 0x0037B970 File Offset: 0x00379B70
+		// Token: 0x0601996F RID: 104815 RVA: 0x003A58C0 File Offset: 0x003A3AC0
 		public IRoleTowerConditionStepPrepareT AsIRoleTowerConditionStepPrepare()
 		{
 			return this.As<IRoleTowerConditionStepPrepareT>();
 		}
 
-		// Token: 0x060182CF RID: 99023 RVA: 0x0037B978 File Offset: 0x00379B78
+		// Token: 0x06019970 RID: 104816 RVA: 0x003A58C8 File Offset: 0x003A3AC8
 		public static IRoleTowerConditionStepBase_UnionUnion FromIRoleTowerConditionStepPrepare(IRoleTowerConditionStepPrepareT _iroletowerconditionstepprepare)
 		{
 			return new IRoleTowerConditionStepBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060182D0 RID: 99024 RVA: 0x0037B98D File Offset: 0x00379B8D
+		// Token: 0x06019971 RID: 104817 RVA: 0x003A58DD File Offset: 0x003A3ADD
 		public IRoleTowerConditionStepBattleT AsIRoleTowerConditionStepBattle()
 		{
 			return this.As<IRoleTowerConditionStepBattleT>();
 		}
 
-		// Token: 0x060182D1 RID: 99025 RVA: 0x0037B995 File Offset: 0x00379B95
+		// Token: 0x06019972 RID: 104818 RVA: 0x003A58E5 File Offset: 0x003A3AE5
 		public static IRoleTowerConditionStepBase_UnionUnion FromIRoleTowerConditionStepBattle(IRoleTowerConditionStepBattleT _iroletowerconditionstepbattle)
 		{
 			return new IRoleTowerConditionStepBase_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060182D2 RID: 99026 RVA: 0x0037B9AA File Offset: 0x00379BAA
+		// Token: 0x06019973 RID: 104819 RVA: 0x003A58FA File Offset: 0x003A3AFA
 		public IRoleTowerConditionStepSettleT AsIRoleTowerConditionStepSettle()
 		{
 			return this.As<IRoleTowerConditionStepSettleT>();
 		}
 
-		// Token: 0x060182D3 RID: 99027 RVA: 0x0037B9B2 File Offset: 0x00379BB2
+		// Token: 0x06019974 RID: 104820 RVA: 0x003A5902 File Offset: 0x003A3B02
 		public static IRoleTowerConditionStepBase_UnionUnion FromIRoleTowerConditionStepSettle(IRoleTowerConditionStepSettleT _iroletowerconditionstepsettle)
 		{
 			return new IRoleTowerConditionStepBase_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060182D4 RID: 99028 RVA: 0x0037B9C7 File Offset: 0x00379BC7
+		// Token: 0x06019975 RID: 104821 RVA: 0x003A5917 File Offset: 0x003A3B17
 		public IRoleTowerConditionStepTeamUpgradeT AsIRoleTowerConditionStepTeamUpgrade()
 		{
 			return this.As<IRoleTowerConditionStepTeamUpgradeT>();
 		}
 
-		// Token: 0x060182D5 RID: 99029 RVA: 0x0037B9CF File Offset: 0x00379BCF
+		// Token: 0x06019976 RID: 104822 RVA: 0x003A591F File Offset: 0x003A3B1F
 		public static IRoleTowerConditionStepBase_UnionUnion FromIRoleTowerConditionStepTeamUpgrade(IRoleTowerConditionStepTeamUpgradeT _iroletowerconditionstepteamupgrade)
 		{
 			return new IRoleTowerConditionStepBase_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060182D6 RID: 99030 RVA: 0x0037B9E4 File Offset: 0x00379BE4
+		// Token: 0x06019977 RID: 104823 RVA: 0x003A5934 File Offset: 0x003A3B34
 		public IRoleTowerConditionStepLoadSubLevelT AsIRoleTowerConditionStepLoadSubLevel()
 		{
 			return this.As<IRoleTowerConditionStepLoadSubLevelT>();
 		}
 
-		// Token: 0x060182D7 RID: 99031 RVA: 0x0037B9EC File Offset: 0x00379BEC
+		// Token: 0x06019978 RID: 104824 RVA: 0x003A593C File Offset: 0x003A3B3C
 		public static IRoleTowerConditionStepBase_UnionUnion FromIRoleTowerConditionStepLoadSubLevel(IRoleTowerConditionStepLoadSubLevelT _iroletowerconditionsteploadsublevel)
 		{
 			return new IRoleTowerConditionStepBase_UnionUnion
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060182D8 RID: 99032 RVA: 0x0037BA04 File Offset: 0x00379C04
+		// Token: 0x06019979 RID: 104825 RVA: 0x003A5954 File Offset: 0x003A3B54
 		public static int Pack(FlatBufferBuilder builder, IRoleTowerConditionStepBase_UnionUnion _o)
 		{
 			switch (_o.Type)

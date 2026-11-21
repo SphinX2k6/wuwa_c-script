@@ -4,13 +4,13 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000063 RID: 99
+	// Token: 0x02000048 RID: 72
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class NativeArrayProcessorFactory<[Nullable(2)] T>
 	{
-		// Token: 0x17000499 RID: 1177
-		// (get) Token: 0x06000DA1 RID: 3489 RVA: 0x000139D4 File Offset: 0x00011BD4
+		// Token: 0x170000A1 RID: 161
+		// (get) Token: 0x0600092F RID: 2351 RVA: 0x0000E67C File Offset: 0x0000C87C
 		public static NativeArrayProcessorBase<T> Processor
 		{
 			get
@@ -38,8 +38,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700049A RID: 1178
-		// (get) Token: 0x06000DA2 RID: 3490 RVA: 0x00013A4C File Offset: 0x00011C4C
+		// Token: 0x170000A2 RID: 162
+		// (get) Token: 0x06000930 RID: 2352 RVA: 0x0000E6F4 File Offset: 0x0000C8F4
 		public static NativeArrayProcessorBase<T> HashProcessor
 		{
 			get

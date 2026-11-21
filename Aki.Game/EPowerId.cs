@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02002013 RID: 8211
+// Token: 0x020014E6 RID: 5350
 public enum EPowerId
 {
-	// Token: 0x04007730 RID: 30512
+	// Token: 0x04007819 RID: 30745
 	MoonChasingPower = 14
 }

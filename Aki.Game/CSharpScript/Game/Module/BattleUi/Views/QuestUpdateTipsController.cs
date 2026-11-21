@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D8B RID: 23947
+	// Token: 0x02004D6D RID: 19821
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestUpdateTipsController : MissionPanelControllerBase
 	{
-		// Token: 0x17008E61 RID: 36449
-		// (get) Token: 0x0603CC64 RID: 248932 RVA: 0x00E9743D File Offset: 0x00E9563D
+		// Token: 0x17006233 RID: 25139
+		// (get) Token: 0x06031BC0 RID: 203712 RVA: 0x00DE7C85 File Offset: 0x00DE5E85
 		protected override EMissionPanelControllerType ControllerType
 		{
 			get
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC65 RID: 248933 RVA: 0x00E97440 File Offset: 0x00E95640
+		// Token: 0x06031BC1 RID: 203713 RVA: 0x00DE7C88 File Offset: 0x00DE5E88
 		public QuestUpdateTipsController(LevelSequencePlayer sequencePlayer, BattleQuestUpdateTipsView questUpdateTipsView, Func<bool> checkMissionItemViewShowEmptyHandle, UUIItem missionItemViewRootNode)
 		{
 			this.SequencePlayer = sequencePlayer;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 		}
 
-		// Token: 0x0603CC66 RID: 248934 RVA: 0x00E97480 File Offset: 0x00E95680
+		// Token: 0x06031BC2 RID: 203714 RVA: 0x00DE7CC8 File Offset: 0x00DE5EC8
 		public override void OnDestroy()
 		{
 			this.SequencePlayer.Clear();
@@ -48,19 +48,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC67 RID: 248935 RVA: 0x00E974CF File Offset: 0x00E956CF
+		// Token: 0x06031BC3 RID: 203715 RVA: 0x00DE7D17 File Offset: 0x00DE5F17
 		public override void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.QuestUpdateTipsClickTrack, new Action(this.OnQuestUpdateTipsClickTrack));
 		}
 
-		// Token: 0x0603CC68 RID: 248936 RVA: 0x00E974ED File Offset: 0x00E956ED
+		// Token: 0x06031BC4 RID: 203716 RVA: 0x00DE7D35 File Offset: 0x00DE5F35
 		public override void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.QuestUpdateTipsClickTrack, new Action(this.OnQuestUpdateTipsClickTrack));
 		}
 
-		// Token: 0x0603CC69 RID: 248937 RVA: 0x00E9750C File Offset: 0x00E9570C
+		// Token: 0x06031BC5 RID: 203717 RVA: 0x00DE7D54 File Offset: 0x00DE5F54
 		public void OnPanelShow()
 		{
 			this.SequencePlayer.ResumeSequence();
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC6A RID: 248938 RVA: 0x00E97559 File Offset: 0x00E95759
+		// Token: 0x06031BC6 RID: 203718 RVA: 0x00DE7DA1 File Offset: 0x00DE5FA1
 		public void OnPanelHide()
 		{
 			this.SequencePlayer.PauseSequence();
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC6B RID: 248939 RVA: 0x00E9758C File Offset: 0x00E9578C
+		// Token: 0x06031BC7 RID: 203719 RVA: 0x00DE7DD4 File Offset: 0x00DE5FD4
 		[NullableContext(0)]
 		public UniTask<bool> ShowQuestUpdateTipsHandle([Nullable(1)] ShowQuestUpdateTipsProcess process)
 		{
@@ -93,14 +93,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <ShowQuestUpdateTipsHandle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC6C RID: 248940 RVA: 0x00E975D7 File Offset: 0x00E957D7
+		// Token: 0x06031BC8 RID: 203720 RVA: 0x00DE7E1F File Offset: 0x00DE601F
 		private void SetQuestUpdateTipsViewVisible(bool bVisible)
 		{
 			this.QuestUpdateTipsView.SetUiActive(bVisible);
 			this.MissionItemViewRootNode.SetUIActive(!bVisible);
 		}
 
-		// Token: 0x0603CC6D RID: 248941 RVA: 0x00E975F4 File Offset: 0x00E957F4
+		// Token: 0x06031BC9 RID: 203721 RVA: 0x00DE7E3C File Offset: 0x00DE603C
 		private float GetTimerStayTime(int questId)
 		{
 			Quest quest = QuestNewModel.Instance.GetQuest(questId);
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return (float)(questUpdateShowTime.Value * 1000);
 		}
 
-		// Token: 0x0603CC6E RID: 248942 RVA: 0x00E97644 File Offset: 0x00E95844
+		// Token: 0x06031BCA RID: 203722 RVA: 0x00DE7E8C File Offset: 0x00DE608C
 		private void OnSequenceClose(string sequenceName)
 		{
 			if (!(sequenceName == "MissionIn"))
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC6F RID: 248943 RVA: 0x00E97718 File Offset: 0x00E95918
+		// Token: 0x06031BCB RID: 203723 RVA: 0x00DE7F60 File Offset: 0x00DE6160
 		private void QuestUpdateTipsEnd(ShowQuestUpdateTipsProcess process)
 		{
 			Log instance = Log.Instance;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.QuestUpdateTipsTrackBtnClick = false;
 		}
 
-		// Token: 0x0603CC70 RID: 248944 RVA: 0x00E97774 File Offset: 0x00E95974
+		// Token: 0x06031BCC RID: 203724 RVA: 0x00DE7FBC File Offset: 0x00DE61BC
 		private void OnQuestUpdateTipsClickTrack()
 		{
 			Log.Instance.Info(ELogModule.Log, ELogAuthor.YSQ, "MissionPanel:Press Track", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -203,46 +203,46 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.QuestUpdateTipsTrackBtnClick = true;
 		}
 
-		// Token: 0x0401FA87 RID: 129671
+		// Token: 0x0401A53F RID: 107839
 		private EQuestUpdateTipsStep MissionSequenceType;
 
-		// Token: 0x0401FA88 RID: 129672
+		// Token: 0x0401A540 RID: 107840
 		[Nullable(2)]
 		private TimerHandle StayTimer;
 
-		// Token: 0x0401FA89 RID: 129673
+		// Token: 0x0401A541 RID: 107841
 		[Nullable(2)]
 		private CustomPromise<bool> QuestUpdateStartMissionOutPromise;
 
-		// Token: 0x0401FA8A RID: 129674
+		// Token: 0x0401A542 RID: 107842
 		[Nullable(2)]
 		private CustomPromise<bool> QuestUpdateStartMissionInPromise;
 
-		// Token: 0x0401FA8B RID: 129675
+		// Token: 0x0401A543 RID: 107843
 		[Nullable(2)]
 		private CustomPromise<bool> QuestUpdateStayPromise;
 
-		// Token: 0x0401FA8C RID: 129676
+		// Token: 0x0401A544 RID: 107844
 		[Nullable(2)]
 		private CustomPromise<bool> QuestUpdateEndMissionOutPromise;
 
-		// Token: 0x0401FA8D RID: 129677
+		// Token: 0x0401A545 RID: 107845
 		[Nullable(2)]
 		private CustomPromise<bool> QuestUpdateEndMissionInPromise;
 
-		// Token: 0x0401FA8E RID: 129678
+		// Token: 0x0401A546 RID: 107846
 		private bool QuestUpdateTipsTrackBtnClick;
 
-		// Token: 0x0401FA8F RID: 129679
+		// Token: 0x0401A547 RID: 107847
 		private readonly LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401FA90 RID: 129680
+		// Token: 0x0401A548 RID: 107848
 		private readonly BattleQuestUpdateTipsView QuestUpdateTipsView;
 
-		// Token: 0x0401FA91 RID: 129681
+		// Token: 0x0401A549 RID: 107849
 		private readonly Func<bool> CheckMissionItemViewShowEmptyHandle;
 
-		// Token: 0x0401FA92 RID: 129682
+		// Token: 0x0401A54A RID: 107850
 		private readonly UUIItem MissionItemViewRootNode;
 	}
 }

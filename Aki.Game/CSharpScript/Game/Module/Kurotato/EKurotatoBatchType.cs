@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056D8 RID: 22232
+	// Token: 0x020046AF RID: 18095
 	public enum EKurotatoBatchType
 	{
-		// Token: 0x0401DB45 RID: 121669
+		// Token: 0x040185DB RID: 99803
 		Normal,
-		// Token: 0x0401DB46 RID: 121670
+		// Token: 0x040185DC RID: 99804
 		Special,
-		// Token: 0x0401DB47 RID: 121671
+		// Token: 0x040185DD RID: 99805
 		Endless
 	}
 }

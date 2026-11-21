@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FA9 RID: 8105
+	// Token: 0x020021EC RID: 8684
 	public class ITeleportTransitionWithCenterText_SetValue
 	{
-		// Token: 0x04006BA6 RID: 27558
+		// Token: 0x040071A1 RID: 29089
 		public ETeleportTransitionType Type;
 
-		// Token: 0x04006BA7 RID: 27559
-		[Nullable(1)]
+		// Token: 0x040071A2 RID: 29090
 		public PlayFlow CenterTextFlow;
 	}
 }

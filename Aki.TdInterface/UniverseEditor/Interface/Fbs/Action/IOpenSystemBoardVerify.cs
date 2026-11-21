@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C38 RID: 27704
+	// Token: 0x0200739F RID: 29599
 	public static class IOpenSystemBoardVerify
 	{
-		// Token: 0x06030CCA RID: 199882 RVA: 0x006A0E54 File Offset: 0x0069F054
+		// Token: 0x06033C22 RID: 212002 RVA: 0x006FB2BC File Offset: 0x006F94BC
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 4UL, 4UL, false) && verifier.VerifyString(tablePos, 8, false) && verifier.VerifyVectorOfData(tablePos, 10, 1UL, false) && verifier.VerifyString(tablePos, 14, false))
@@ -100,35 +100,35 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return false;
 		}
 
-		// Token: 0x02007DDD RID: 32221
+		// Token: 0x02008667 RID: 34407
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013985 RID: 80261
+			// Token: 0x04014A47 RID: 84551
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x04013986 RID: 80262
+			// Token: 0x04014A48 RID: 84552
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x04013987 RID: 80263
+			// Token: 0x04014A49 RID: 84553
 			public static VerifyTableAction <2>__Verify;
 
-			// Token: 0x04013988 RID: 80264
+			// Token: 0x04014A4A RID: 84554
 			public static VerifyUnionAction <3>__Verify;
 
-			// Token: 0x04013989 RID: 80265
+			// Token: 0x04014A4B RID: 84555
 			public static VerifyTableAction <4>__Verify;
 
-			// Token: 0x0401398A RID: 80266
+			// Token: 0x04014A4C RID: 84556
 			public static VerifyUnionAction <5>__Verify;
 
-			// Token: 0x0401398B RID: 80267
+			// Token: 0x04014A4D RID: 84557
 			public static VerifyTableAction <6>__Verify;
 
-			// Token: 0x0401398C RID: 80268
+			// Token: 0x04014A4E RID: 84558
 			public static VerifyTableAction <7>__Verify;
 
-			// Token: 0x0401398D RID: 80269
+			// Token: 0x04014A4F RID: 84559
 			public static VerifyTableAction <8>__Verify;
 		}
 	}

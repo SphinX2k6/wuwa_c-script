@@ -5,16 +5,16 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200177C RID: 6012
+// Token: 0x02000C35 RID: 3125
 public class CalabashUpgradeSuccessView : UiViewBase
 {
-	// Token: 0x0600AEC4 RID: 44740 RVA: 0x00277AC0 File Offset: 0x00275CC0
+	// Token: 0x060082AB RID: 33451 RVA: 0x00281F84 File Offset: 0x00280184
 	[NullableContext(1)]
 	public CalabashUpgradeSuccessView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600AEC5 RID: 44741 RVA: 0x00277B04 File Offset: 0x00275D04
+	// Token: 0x060082AC RID: 33452 RVA: 0x00281FC8 File Offset: 0x002801C8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class CalabashUpgradeSuccessView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600AEC6 RID: 44742 RVA: 0x00277BCC File Offset: 0x00275DCC
+	// Token: 0x060082AD RID: 33453 RVA: 0x00282090 File Offset: 0x00280290
 	protected override void OnStart()
 	{
 		ICalabashUpgradeSuccessViedData calabashUpgradeSuccessViedData = this.OpenParam as ICalabashUpgradeSuccessViedData;
@@ -70,8 +70,8 @@ public class CalabashUpgradeSuccessView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x17000E7F RID: 3711
-	// (get) Token: 0x0600AEC7 RID: 44743 RVA: 0x00277D8E File Offset: 0x00275F8E
+	// Token: 0x17000EA2 RID: 3746
+	// (get) Token: 0x060082AE RID: 33454 RVA: 0x00282252 File Offset: 0x00280452
 	private bool IsOverLoop
 	{
 		get
@@ -80,7 +80,7 @@ public class CalabashUpgradeSuccessView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600AEC8 RID: 44744 RVA: 0x00277DAC File Offset: 0x00275FAC
+	// Token: 0x060082AF RID: 33455 RVA: 0x00282270 File Offset: 0x00280470
 	private void RefreshExp()
 	{
 		float num = this.IsOverLoop ? (this.ShowingExp - this.PreMaxExp) : this.ShowingExp;
@@ -99,7 +99,7 @@ public class CalabashUpgradeSuccessView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600AEC9 RID: 44745 RVA: 0x00277E72 File Offset: 0x00276072
+	// Token: 0x060082B0 RID: 33456 RVA: 0x00282336 File Offset: 0x00280536
 	private void RemoveTimer()
 	{
 		if (this.AnimTimer != null)
@@ -109,7 +109,7 @@ public class CalabashUpgradeSuccessView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600AECA RID: 44746 RVA: 0x00277E94 File Offset: 0x00276094
+	// Token: 0x060082B1 RID: 33457 RVA: 0x00282358 File Offset: 0x00280558
 	protected override void OnAfterPlayStartSequence()
 	{
 		if (this.IsExpUp)
@@ -124,7 +124,7 @@ public class CalabashUpgradeSuccessView : UiViewBase
 		}, (float)this.CloseTime, null, null, true, 1f);
 	}
 
-	// Token: 0x0600AECB RID: 44747 RVA: 0x00277F00 File Offset: 0x00276100
+	// Token: 0x060082B2 RID: 33458 RVA: 0x002823C4 File Offset: 0x002805C4
 	private void BarExpAnime(float delta)
 	{
 		this.ShowingExp += this.AddExp * delta;
@@ -150,58 +150,58 @@ public class CalabashUpgradeSuccessView : UiViewBase
 		this.RefreshExp();
 	}
 
-	// Token: 0x04004F52 RID: 20306
+	// Token: 0x04004FFC RID: 20476
 	private bool IsLevelUp;
 
-	// Token: 0x04004F53 RID: 20307
+	// Token: 0x04004FFD RID: 20477
 	private bool IsExpUp;
 
-	// Token: 0x04004F54 RID: 20308
+	// Token: 0x04004FFE RID: 20478
 	private bool IsOverLevel;
 
-	// Token: 0x04004F55 RID: 20309
+	// Token: 0x04004FFF RID: 20479
 	private float ShowingExp;
 
-	// Token: 0x04004F56 RID: 20310
+	// Token: 0x04005000 RID: 20480
 	private float PreMaxExp;
 
-	// Token: 0x04004F57 RID: 20311
+	// Token: 0x04005001 RID: 20481
 	private float TargetExp;
 
-	// Token: 0x04004F58 RID: 20312
+	// Token: 0x04005002 RID: 20482
 	private float CurMaxExp;
 
-	// Token: 0x04004F59 RID: 20313
+	// Token: 0x04005003 RID: 20483
 	private float AddExp;
 
-	// Token: 0x04004F5A RID: 20314
+	// Token: 0x04005004 RID: 20484
 	[Nullable(2)]
 	private TimerHandle AnimTimer;
 
-	// Token: 0x04004F5B RID: 20315
+	// Token: 0x04005005 RID: 20485
 	private readonly int AnimeTime = ConfigCommonParamById.GetIntConfig("ExpDisplayTime").Value;
 
-	// Token: 0x04004F5C RID: 20316
+	// Token: 0x04005006 RID: 20486
 	private readonly int CloseTime = ConfigCommonParamById.GetIntConfig("ExpDisplayCloseTime").Value;
 
-	// Token: 0x02007D85 RID: 32133
+	// Token: 0x02006F0B RID: 28427
 	private enum ECalabashUpgradeSuccessDefine
 	{
-		// Token: 0x040291A6 RID: 168358
+		// Token: 0x040244D1 RID: 148689
 		PreLevelTxt,
-		// Token: 0x040291A7 RID: 168359
+		// Token: 0x040244D2 RID: 148690
 		TxtExp,
-		// Token: 0x040291A8 RID: 168360
+		// Token: 0x040244D3 RID: 148691
 		BarExp,
-		// Token: 0x040291A9 RID: 168361
+		// Token: 0x040244D4 RID: 148692
 		CurLevelTxt,
-		// Token: 0x040291AA RID: 168362
+		// Token: 0x040244D5 RID: 148693
 		LevelDesc,
-		// Token: 0x040291AB RID: 168363
+		// Token: 0x040244D6 RID: 148694
 		PanelExp,
-		// Token: 0x040291AC RID: 168364
+		// Token: 0x040244D7 RID: 148695
 		PanelLevel,
-		// Token: 0x040291AD RID: 168365
+		// Token: 0x040244D8 RID: 148696
 		LevelUpItem
 	}
 }

@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.PayShop;
 
-// Token: 0x0200233D RID: 9021
+// Token: 0x02001822 RID: 6178
 public class CommonGameplayExchangeShopItemProxy : CommonGameplayShopItemProxy
 {
-	// Token: 0x06011E21 RID: 73249 RVA: 0x0046651D File Offset: 0x0046471D
+	// Token: 0x0600F2D1 RID: 62161 RVA: 0x004735E5 File Offset: 0x004717E5
 	[NullableContext(1)]
 	public override void UpdateFromPayShopGoods(PayShopGoods data)
 	{
@@ -20,31 +20,31 @@ public class CommonGameplayExchangeShopItemProxy : CommonGameplayShopItemProxy
 		this.UpdateSoldOutData();
 	}
 
-	// Token: 0x06011E22 RID: 73250 RVA: 0x00466556 File Offset: 0x00464756
+	// Token: 0x0600F2D2 RID: 62162 RVA: 0x0047361E File Offset: 0x0047181E
 	public new void UpdateBottomBgVisible()
 	{
 		base.BottomBgVisible = false;
 	}
 
-	// Token: 0x06011E23 RID: 73251 RVA: 0x0046655F File Offset: 0x0046475F
+	// Token: 0x0600F2D3 RID: 62163 RVA: 0x00473627 File Offset: 0x00471827
 	public new void UpdateRaycastTarget()
 	{
 		base.RaycastTarget = false;
 	}
 
-	// Token: 0x06011E24 RID: 73252 RVA: 0x00466568 File Offset: 0x00464768
+	// Token: 0x0600F2D4 RID: 62164 RVA: 0x00473630 File Offset: 0x00471830
 	public new void UpdateRedDot()
 	{
 		base.RedDotVisible = false;
 	}
 
-	// Token: 0x06011E25 RID: 73253 RVA: 0x00466571 File Offset: 0x00464771
+	// Token: 0x0600F2D5 RID: 62165 RVA: 0x00473639 File Offset: 0x00471839
 	public new void UpdatePriceData()
 	{
 		base.PriceItemVisible = false;
 	}
 
-	// Token: 0x06011E26 RID: 73254 RVA: 0x0046657A File Offset: 0x0046477A
+	// Token: 0x0600F2D6 RID: 62166 RVA: 0x00473642 File Offset: 0x00471842
 	public override void UpdateItemName()
 	{
 		if (this.GoodsData == null)
@@ -54,7 +54,7 @@ public class CommonGameplayExchangeShopItemProxy : CommonGameplayShopItemProxy
 		base.ItemNameTextData.SetContent(this.GoodsData.GetGoodsData().GetGoodsName(LanguageSystem.Instance.PackageLanguage));
 	}
 
-	// Token: 0x06011E27 RID: 73255 RVA: 0x004665AC File Offset: 0x004647AC
+	// Token: 0x0600F2D7 RID: 62167 RVA: 0x00473674 File Offset: 0x00471874
 	public override void UpdateQualityData()
 	{
 		if (this.GoodsData == null)
@@ -70,7 +70,7 @@ public class CommonGameplayExchangeShopItemProxy : CommonGameplayShopItemProxy
 		base.QualitySpritePath = payShopItemQualitySpriteByItemIdAndQuality;
 	}
 
-	// Token: 0x06011E28 RID: 73256 RVA: 0x004665F0 File Offset: 0x004647F0
+	// Token: 0x0600F2D8 RID: 62168 RVA: 0x004736B8 File Offset: 0x004718B8
 	public override void UpdateItemIconData()
 	{
 		if (this.GoodsData == null)
@@ -80,7 +80,7 @@ public class CommonGameplayExchangeShopItemProxy : CommonGameplayShopItemProxy
 		base.ItemId = this.GoodsData.GetGoodsData().ItemId;
 	}
 
-	// Token: 0x06011E29 RID: 73257 RVA: 0x00466614 File Offset: 0x00464814
+	// Token: 0x0600F2D9 RID: 62169 RVA: 0x004736DC File Offset: 0x004718DC
 	public override void UpdateSoldOutData()
 	{
 		if (this.GoodsData == null)

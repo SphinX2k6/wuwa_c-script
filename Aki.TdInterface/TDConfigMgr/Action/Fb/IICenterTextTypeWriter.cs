@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026CF RID: 9935
+	// Token: 0x02002993 RID: 10643
 	public class IICenterTextTypeWriter : ICenterTextShowType
 	{
-		// Token: 0x0600DE19 RID: 56857 RVA: 0x0020F61C File Offset: 0x0020D81C
-		[NullableContext(1)]
+		// Token: 0x0600EBF5 RID: 60405 RVA: 0x0022BE5C File Offset: 0x0022A05C
 		public static IICenterTextTypeWriter Create(IICenterTextTypeWriter? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700423D RID: 16957
-		// (get) Token: 0x0600DE1A RID: 56858 RVA: 0x0020F63B File Offset: 0x0020D83B
+		// Token: 0x1700457D RID: 17789
+		// (get) Token: 0x0600EBF6 RID: 60406 RVA: 0x0022BE7B File Offset: 0x0022A07B
 		public override ECenterTextShowAnim Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700423E RID: 16958
-		// (get) Token: 0x0600DE1B RID: 56859 RVA: 0x0020F648 File Offset: 0x0020D848
+		// Token: 0x1700457E RID: 17790
+		// (get) Token: 0x0600EBF7 RID: 60407 RVA: 0x0022BE88 File Offset: 0x0022A088
 		public virtual int TextCountPerSecond
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B4D RID: 31565
+		// Token: 0x040081ED RID: 33261
 		private IICenterTextTypeWriter Instance;
 	}
 }

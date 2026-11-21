@@ -8,22 +8,22 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.AI.StateMachine.Task
 {
-	// Token: 0x02007321 RID: 29473
+	// Token: 0x020064A4 RID: 25764
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineTaskSkill : AiStateMachineTask
 	{
-		// Token: 0x06048587 RID: 296327 RVA: 0x0129BFBA File Offset: 0x0129A1BA
+		// Token: 0x0603E9D4 RID: 256468 RVA: 0x0123EA3A File Offset: 0x0123CC3A
 		public AiStateMachineTaskSkill(AiStateMachineBase StateMachineNode, CombatStateMachineDefine.Fsm.Task State) : base(StateMachineNode, State)
 		{
 		}
 
-		// Token: 0x17009F8C RID: 40844
-		// (get) Token: 0x06048588 RID: 296328 RVA: 0x0129BFE1 File Offset: 0x0129A1E1
-		// (set) Token: 0x06048589 RID: 296329 RVA: 0x0129BFE9 File Offset: 0x0129A1E9
+		// Token: 0x1700772A RID: 30506
+		// (get) Token: 0x0603E9D5 RID: 256469 RVA: 0x0123EA61 File Offset: 0x0123CC61
+		// (set) Token: 0x0603E9D6 RID: 256470 RVA: 0x0123EA69 File Offset: 0x0123CC69
 		public override bool IsAsyncTask { get; set; } = true;
 
-		// Token: 0x0604858A RID: 296330 RVA: 0x0129BFF4 File Offset: 0x0129A1F4
+		// Token: 0x0603E9D7 RID: 256471 RVA: 0x0123EA74 File Offset: 0x0123CC74
 		protected unsafe override bool OnInit(CombatStateMachineDefine.Fsm.Task state)
 		{
 			if (this.Node.SkillId != 0L)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			return true;
 		}
 
-		// Token: 0x0604858B RID: 296331 RVA: 0x0129C2EC File Offset: 0x0129A4EC
+		// Token: 0x0603E9D8 RID: 256472 RVA: 0x0123ED6C File Offset: 0x0123CF6C
 		public override void OnEnter(long? contextId = null)
 		{
 			if (this.SkillId == 0)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x0604858C RID: 296332 RVA: 0x0129C460 File Offset: 0x0129A660
+		// Token: 0x0603E9D9 RID: 256473 RVA: 0x0123EEE0 File Offset: 0x0123D0E0
 		protected override void OnTick(float deltaSeconds, long? contextId = null)
 		{
 			if (this.Entered && !this.WaitingBeginSkill && !this.Done && (this.Node.ActorComponent.IsAutonomousProxy || this.PreExecution))
@@ -164,41 +164,41 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x0604858D RID: 296333 RVA: 0x0129C5C9 File Offset: 0x0129A7C9
+		// Token: 0x0603E9DA RID: 256474 RVA: 0x0123F049 File Offset: 0x0123D249
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x04026407 RID: 156679
+		// Token: 0x040216F4 RID: 136948
 		public string SkillName = "";
 
-		// Token: 0x04026408 RID: 156680
+		// Token: 0x040216F5 RID: 136949
 		public int SkillId;
 
-		// Token: 0x04026409 RID: 156681
+		// Token: 0x040216F6 RID: 136950
 		public int ConfigReplaceTagId;
 
-		// Token: 0x0402640A RID: 156682
+		// Token: 0x040216F7 RID: 136951
 		public string ConfigReplaceTagName = "";
 
-		// Token: 0x0402640B RID: 156683
+		// Token: 0x040216F8 RID: 136952
 		[Nullable(2)]
 		private IStateRepPerfBase ReplaceConfig;
 
-		// Token: 0x0402640C RID: 156684
+		// Token: 0x040216F9 RID: 136953
 		public int Timeout;
 
-		// Token: 0x0402640D RID: 156685
+		// Token: 0x040216FA RID: 136954
 		public bool Done;
 
-		// Token: 0x0402640E RID: 156686
+		// Token: 0x040216FB RID: 136955
 		public bool Entered;
 
-		// Token: 0x0402640F RID: 156687
+		// Token: 0x040216FC RID: 136956
 		private bool WaitingBeginSkill;
 
-		// Token: 0x04026410 RID: 156688
+		// Token: 0x040216FD RID: 136957
 		public bool PreExecution;
 	}
 }

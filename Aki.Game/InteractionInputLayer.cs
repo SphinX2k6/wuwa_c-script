@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.Input.Structures;
 using CSharpScript.Game.Input;
 
-// Token: 0x020030C7 RID: 12487
+// Token: 0x0200261F RID: 9759
 [NullableContext(2)]
 [Nullable(0)]
 public class InteractionInputLayer : InputLayer
 {
-	// Token: 0x0601ABDB RID: 109531 RVA: 0x00735540 File Offset: 0x00733740
+	// Token: 0x060185EF RID: 99823 RVA: 0x0075B19C File Offset: 0x0075939C
 	[NullableContext(1)]
 	public void Init(Func<EInputAction?> getTriggerAction, Action onPress, Action onRelease)
 	{
@@ -17,7 +17,7 @@ public class InteractionInputLayer : InputLayer
 		this.OnRelease = onRelease;
 	}
 
-	// Token: 0x0601ABDC RID: 109532 RVA: 0x00735557 File Offset: 0x00733757
+	// Token: 0x060185F0 RID: 99824 RVA: 0x0075B1B3 File Offset: 0x007593B3
 	public override void Clear()
 	{
 		this.GetTriggerAction = null;
@@ -26,13 +26,13 @@ public class InteractionInputLayer : InputLayer
 		this.PressedAction = EInputAction.None;
 	}
 
-	// Token: 0x0601ABDD RID: 109533 RVA: 0x00735579 File Offset: 0x00733779
+	// Token: 0x060185F1 RID: 99825 RVA: 0x0075B1D5 File Offset: 0x007593D5
 	public override EInputLayer GetLayerType()
 	{
 		return EInputLayer.Interaction;
 	}
 
-	// Token: 0x0601ABDE RID: 109534 RVA: 0x0073557C File Offset: 0x0073377C
+	// Token: 0x060185F2 RID: 99826 RVA: 0x0075B1D8 File Offset: 0x007593D8
 	private bool Matches(EInputAction action)
 	{
 		if (action == EInputAction.None)
@@ -43,7 +43,7 @@ public class InteractionInputLayer : InputLayer
 		return getTriggerAction != null && getTriggerAction() == action;
 	}
 
-	// Token: 0x0601ABDF RID: 109535 RVA: 0x007355C4 File Offset: 0x007337C4
+	// Token: 0x060185F3 RID: 99827 RVA: 0x0075B220 File Offset: 0x00759420
 	public override SInputCommand HandlePress(EInputAction action, float time)
 	{
 		if (this.Matches(action))
@@ -59,7 +59,7 @@ public class InteractionInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601ABE0 RID: 109536 RVA: 0x007355F0 File Offset: 0x007337F0
+	// Token: 0x060185F4 RID: 99828 RVA: 0x0075B24C File Offset: 0x0075944C
 	public override SInputCommand HandleRelease(EInputAction action, float time)
 	{
 		if (this.PressedAction != EInputAction.None && action == this.PressedAction)
@@ -75,7 +75,7 @@ public class InteractionInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601ABE1 RID: 109537 RVA: 0x00735640 File Offset: 0x00733840
+	// Token: 0x060185F5 RID: 99829 RVA: 0x0075B29C File Offset: 0x0075949C
 	public override SInputCommand HandleHold(EInputAction action, float time)
 	{
 		if (this.PressedAction != EInputAction.None && action == this.PressedAction)
@@ -85,15 +85,15 @@ public class InteractionInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0400CE77 RID: 52855
+	// Token: 0x0400D265 RID: 53861
 	private Func<EInputAction?> GetTriggerAction;
 
-	// Token: 0x0400CE78 RID: 52856
+	// Token: 0x0400D266 RID: 53862
 	private Action OnPress;
 
-	// Token: 0x0400CE79 RID: 52857
+	// Token: 0x0400D267 RID: 53863
 	private Action OnRelease;
 
-	// Token: 0x0400CE7A RID: 52858
+	// Token: 0x0400D268 RID: 53864
 	private EInputAction PressedAction = EInputAction.None;
 }

@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200326D RID: 12909
+// Token: 0x020027DC RID: 10204
 public static class BasePlatformController
 {
-	// Token: 0x0601BE6B RID: 114283 RVA: 0x007BCC40 File Offset: 0x007BAE40
+	// Token: 0x06019A46 RID: 105030 RVA: 0x007E4518 File Offset: 0x007E2718
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public static BasePlatform GetBasePlatformByBasedMovementInfo(FBasedMovementInfo basedMovement)
@@ -29,7 +29,7 @@ public static class BasePlatformController
 		return null;
 	}
 
-	// Token: 0x0601BE6C RID: 114284 RVA: 0x007BCC88 File Offset: 0x007BAE88
+	// Token: 0x06019A47 RID: 105031 RVA: 0x007E4560 File Offset: 0x007E2760
 	[NullableContext(2)]
 	public static BasePlatform GetBasePlatformByEntity(EntityHandle entityHandle)
 	{

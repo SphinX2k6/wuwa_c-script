@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F5A RID: 8026
+// Token: 0x0200141C RID: 5148
 [NullableContext(1)]
 [Nullable(0)]
 public class FlyStrengthItem : StrengthItemBase
 {
-	// Token: 0x0600F87C RID: 63612 RVA: 0x003C2819 File Offset: 0x003C0A19
+	// Token: 0x0600CC9B RID: 52379 RVA: 0x003CE305 File Offset: 0x003CC505
 	protected override string GetResourceId()
 	{
 		return "UiItem_EnergyFly";
 	}
 
-	// Token: 0x0600F87D RID: 63613 RVA: 0x003C2820 File Offset: 0x003C0A20
+	// Token: 0x0600CC9C RID: 52380 RVA: 0x003CE30C File Offset: 0x003CC50C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -46,7 +46,7 @@ public class FlyStrengthItem : StrengthItemBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F87E RID: 63614 RVA: 0x003C2974 File Offset: 0x003C0B74
+	// Token: 0x0600CC9D RID: 52381 RVA: 0x003CE460 File Offset: 0x003CC660
 	protected override void OnStart()
 	{
 		for (int i = 0; i < 3; i++)
@@ -63,7 +63,7 @@ public class FlyStrengthItem : StrengthItemBase
 		this.RefreshStrengthPercent(true);
 	}
 
-	// Token: 0x0600F87F RID: 63615 RVA: 0x003C2A29 File Offset: 0x003C0C29
+	// Token: 0x0600CC9E RID: 52382 RVA: 0x003CE515 File Offset: 0x003CC715
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
@@ -71,7 +71,7 @@ public class FlyStrengthItem : StrengthItemBase
 		base.PlayTweenAnim(7);
 	}
 
-	// Token: 0x0600F880 RID: 63616 RVA: 0x003C2A40 File Offset: 0x003C0C40
+	// Token: 0x0600CC9F RID: 52383 RVA: 0x003CE52C File Offset: 0x003CC72C
 	protected override UniTask OnBeforeHideAsync()
 	{
 		FlyStrengthItem.<OnBeforeHideAsync>d__28 <OnBeforeHideAsync>d__;
@@ -82,14 +82,14 @@ public class FlyStrengthItem : StrengthItemBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F881 RID: 63617 RVA: 0x003C2A83 File Offset: 0x003C0C83
+	// Token: 0x0600CCA0 RID: 52384 RVA: 0x003CE56F File Offset: 0x003CC76F
 	protected override void OnBeforeDestroy()
 	{
 		this.DestroyCloseAnimTimer();
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600F882 RID: 63618 RVA: 0x003C2A91 File Offset: 0x003C0C91
+	// Token: 0x0600CCA1 RID: 52385 RVA: 0x003CE57D File Offset: 0x003CC77D
 	public override void Tick(float delta)
 	{
 		if (!base.GetUiVisible())
@@ -104,21 +104,21 @@ public class FlyStrengthItem : StrengthItemBase
 		this.UpdateTailProgress();
 	}
 
-	// Token: 0x0600F883 RID: 63619 RVA: 0x003C2AC6 File Offset: 0x003C0CC6
+	// Token: 0x0600CCA2 RID: 52386 RVA: 0x003CE5B2 File Offset: 0x003CC7B2
 	protected override void OnAddEvents()
 	{
 		FormationAttributeController.Instance.AddValueListener(this.StrengthAttributeId, new TValueListener(this.OnStrengthChanged), null);
 		FormationAttributeController.Instance.AddMaxListener(this.StrengthAttributeId, new TValueListener(this.OnStrengthMaxChanged), null);
 	}
 
-	// Token: 0x0600F884 RID: 63620 RVA: 0x003C2B02 File Offset: 0x003C0D02
+	// Token: 0x0600CCA3 RID: 52387 RVA: 0x003CE5EE File Offset: 0x003CC7EE
 	protected override void OnRemoveEvents()
 	{
 		FormationAttributeController.Instance.RemoveValueListener(this.StrengthAttributeId, new TValueListener(this.OnStrengthChanged));
 		FormationAttributeController.Instance.RemoveMaxListener(this.StrengthAttributeId, new TValueListener(this.OnStrengthMaxChanged));
 	}
 
-	// Token: 0x0600F885 RID: 63621 RVA: 0x003C2B3C File Offset: 0x003C0D3C
+	// Token: 0x0600CCA4 RID: 52388 RVA: 0x003CE628 File Offset: 0x003CC828
 	protected override void OnAddEntityEvents()
 	{
 		if (this.RoleData == null)
@@ -138,7 +138,7 @@ public class FlyStrengthItem : StrengthItemBase
 		base.ListenForTagAddOrRemove(gameplayTagComponent, new int?(GameplayTagDefine.EGameplayTagId["功能.功能制作.翱翔体力隐藏"]), new Action<int, bool>(this.OnHideTagChanged));
 	}
 
-	// Token: 0x0600F886 RID: 63622 RVA: 0x003C2C4C File Offset: 0x003C0E4C
+	// Token: 0x0600CCA5 RID: 52389 RVA: 0x003CE738 File Offset: 0x003CC938
 	protected override void OnRefreshRoleData()
 	{
 		if (this.RoleData == null)
@@ -164,25 +164,25 @@ public class FlyStrengthItem : StrengthItemBase
 		this.RefreshVisible();
 	}
 
-	// Token: 0x0600F887 RID: 63623 RVA: 0x003C2DAA File Offset: 0x003C0FAA
+	// Token: 0x0600CCA6 RID: 52390 RVA: 0x003CE896 File Offset: 0x003CCA96
 	protected override void OnEnableByHighPriority(bool b)
 	{
 		this.RefreshVisible();
 	}
 
-	// Token: 0x0600F888 RID: 63624 RVA: 0x003C2DB2 File Offset: 0x003C0FB2
+	// Token: 0x0600CCA7 RID: 52391 RVA: 0x003CE89E File Offset: 0x003CCA9E
 	private void OnStrengthChanged(EFormationAttributeId attributeId, float newValue, float oldValue)
 	{
 		this.RefreshStrengthPercent(false);
 	}
 
-	// Token: 0x0600F889 RID: 63625 RVA: 0x003C2DBB File Offset: 0x003C0FBB
+	// Token: 0x0600CCA8 RID: 52392 RVA: 0x003CE8A7 File Offset: 0x003CCAA7
 	private void OnStrengthMaxChanged(EFormationAttributeId attributeId, float newValue, float oldValue)
 	{
 		this.RefreshStrengthPercent(false);
 	}
 
-	// Token: 0x0600F88A RID: 63626 RVA: 0x003C2DC4 File Offset: 0x003C0FC4
+	// Token: 0x0600CCA9 RID: 52393 RVA: 0x003CE8B0 File Offset: 0x003CCAB0
 	protected void OnFlyTagChanged(int tagId, bool tagExists)
 	{
 		this.IsFlyTag = tagExists;
@@ -193,7 +193,7 @@ public class FlyStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F88B RID: 63627 RVA: 0x003C2DFB File Offset: 0x003C0FFB
+	// Token: 0x0600CCAA RID: 52394 RVA: 0x003CE8E7 File Offset: 0x003CCAE7
 	protected void OnFlyStrengthTagChanged(int tagId, bool tagExists)
 	{
 		this.IsFlyStrengthTag = tagExists;
@@ -204,7 +204,7 @@ public class FlyStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F88C RID: 63628 RVA: 0x003C2E32 File Offset: 0x003C1032
+	// Token: 0x0600CCAB RID: 52395 RVA: 0x003CE91E File Offset: 0x003CCB1E
 	protected void OnSpeedUpTagChanged(int tagId, bool tagExists)
 	{
 		this.IsSpeedUpTag = tagExists;
@@ -215,7 +215,7 @@ public class FlyStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F88D RID: 63629 RVA: 0x003C2E69 File Offset: 0x003C1069
+	// Token: 0x0600CCAC RID: 52396 RVA: 0x003CE955 File Offset: 0x003CCB55
 	protected void OnBaseSpeedUpTagChanged(int tagId, bool tagExists)
 	{
 		this.IsBaseSpeedUpTag = tagExists;
@@ -226,7 +226,7 @@ public class FlyStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F88E RID: 63630 RVA: 0x003C2EA0 File Offset: 0x003C10A0
+	// Token: 0x0600CCAD RID: 52397 RVA: 0x003CE98C File Offset: 0x003CCB8C
 	protected void OnLockTagChanged(int tagId, bool tagExists)
 	{
 		if (this.IsLock != tagExists)
@@ -236,7 +236,7 @@ public class FlyStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F88F RID: 63631 RVA: 0x003C2EB8 File Offset: 0x003C10B8
+	// Token: 0x0600CCAE RID: 52398 RVA: 0x003CE9A4 File Offset: 0x003CCBA4
 	protected void OnHideTagChanged(int tagId, bool tagExists)
 	{
 		if (this.IsHideTag != tagExists)
@@ -246,7 +246,7 @@ public class FlyStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F890 RID: 63632 RVA: 0x003C2ED0 File Offset: 0x003C10D0
+	// Token: 0x0600CCAF RID: 52399 RVA: 0x003CE9BC File Offset: 0x003CCBBC
 	private UUIItem AddSingleStrengthItem(bool isFirst = false)
 	{
 		UUIItem item = base.GetItem(3);
@@ -264,7 +264,7 @@ public class FlyStrengthItem : StrengthItemBase
 		return uuiitem;
 	}
 
-	// Token: 0x0600F891 RID: 63633 RVA: 0x003C2F28 File Offset: 0x003C1128
+	// Token: 0x0600CCB0 RID: 52400 RVA: 0x003CEA14 File Offset: 0x003CCC14
 	private void RefreshStrengthPercent(bool bForce = false)
 	{
 		float value = FormationAttributeController.Instance.GetValue(this.StrengthAttributeId);
@@ -291,7 +291,7 @@ public class FlyStrengthItem : StrengthItemBase
 		this.RefreshStrengthState(bForce);
 	}
 
-	// Token: 0x0600F892 RID: 63634 RVA: 0x003C2FC4 File Offset: 0x003C11C4
+	// Token: 0x0600CCB1 RID: 52401 RVA: 0x003CEAB0 File Offset: 0x003CCCB0
 	private void RefreshSingleStrengthItemVisible(float maxStrength)
 	{
 		int num = (int)Math.Floor((double)(maxStrength / this.SingleStrengthValue));
@@ -311,7 +311,7 @@ public class FlyStrengthItem : StrengthItemBase
 		this.RefreshSingleStrengthItemRotation();
 	}
 
-	// Token: 0x0600F893 RID: 63635 RVA: 0x003C3030 File Offset: 0x003C1230
+	// Token: 0x0600CCB2 RID: 52402 RVA: 0x003CEB1C File Offset: 0x003CCD1C
 	private void RefreshSingleStrengthItemRotation()
 	{
 		int num = (int)Math.Floor((double)(this.MaxStrengthCurrentValue / this.SingleStrengthValue));
@@ -335,7 +335,7 @@ public class FlyStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F894 RID: 63636 RVA: 0x003C30C8 File Offset: 0x003C12C8
+	// Token: 0x0600CCB3 RID: 52403 RVA: 0x003CEBB4 File Offset: 0x003CCDB4
 	private void RefreshStrengthState(bool bForce = false)
 	{
 		float strengthCurrentValue = this.StrengthCurrentValue;
@@ -350,7 +350,7 @@ public class FlyStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F895 RID: 63637 RVA: 0x003C311C File Offset: 0x003C131C
+	// Token: 0x0600CCB4 RID: 52404 RVA: 0x003CEC08 File Offset: 0x003CCE08
 	private void SetNormal(bool bNormal, bool bForce = false)
 	{
 		if (this.IsNormalState == bNormal && !bForce)
@@ -370,14 +370,14 @@ public class FlyStrengthItem : StrengthItemBase
 		uuiitem2.SetChangeColor(bUseChangeColor2, fcolor);
 	}
 
-	// Token: 0x0600F896 RID: 63638 RVA: 0x003C3180 File Offset: 0x003C1380
+	// Token: 0x0600CCB5 RID: 52405 RVA: 0x003CEC6C File Offset: 0x003CCE6C
 	protected virtual void RefreshVisible()
 	{
 		bool active = !this.IsHideTag && (this.IsFlying || !this.IsFullState) && this.EnableByHighPriority;
 		this.SetActive(active);
 	}
 
-	// Token: 0x0600F897 RID: 63639 RVA: 0x003C31B8 File Offset: 0x003C13B8
+	// Token: 0x0600CCB6 RID: 52406 RVA: 0x003CECA4 File Offset: 0x003CCEA4
 	protected void RefreshSpeedUp()
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -398,7 +398,7 @@ public class FlyStrengthItem : StrengthItemBase
 		item.SetUIActive(true);
 	}
 
-	// Token: 0x0600F898 RID: 63640 RVA: 0x003C3224 File Offset: 0x003C1424
+	// Token: 0x0600CCB7 RID: 52407 RVA: 0x003CED10 File Offset: 0x003CCF10
 	private void UpdateTailProgress()
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -410,7 +410,7 @@ public class FlyStrengthItem : StrengthItemBase
 		uuiitem.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x0600F899 RID: 63641 RVA: 0x003C327F File Offset: 0x003C147F
+	// Token: 0x0600CCB8 RID: 52408 RVA: 0x003CED6B File Offset: 0x003CCF6B
 	protected void RefreshLockState()
 	{
 		UUIItem item = base.GetItem(6);
@@ -421,7 +421,7 @@ public class FlyStrengthItem : StrengthItemBase
 		item.SetUIActive(this.IsLock);
 	}
 
-	// Token: 0x0600F89A RID: 63642 RVA: 0x003C3298 File Offset: 0x003C1498
+	// Token: 0x0600CCB9 RID: 52409 RVA: 0x003CED84 File Offset: 0x003CCF84
 	private void DestroyCloseAnimTimer()
 	{
 		if (this.CloseAnimTimer != null)
@@ -436,78 +436,78 @@ public class FlyStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x04007387 RID: 29575
+	// Token: 0x04007468 RID: 29800
 	private const int CLOSE_ANIM_TIME = 250;
 
-	// Token: 0x04007388 RID: 29576
+	// Token: 0x04007469 RID: 29801
 	private const int PRELOAD_SINGLE_STRENGTH_ITEM_COUNT = 3;
 
-	// Token: 0x04007389 RID: 29577
+	// Token: 0x0400746A RID: 29802
 	protected EFormationAttributeId StrengthAttributeId = EFormationAttributeId.SoarStrength;
 
-	// Token: 0x0400738A RID: 29578
+	// Token: 0x0400746B RID: 29803
 	private bool IsNormalState = true;
 
-	// Token: 0x0400738B RID: 29579
+	// Token: 0x0400746C RID: 29804
 	protected bool IsFullState = true;
 
-	// Token: 0x0400738C RID: 29580
+	// Token: 0x0400746D RID: 29805
 	protected bool IsFlying;
 
-	// Token: 0x0400738D RID: 29581
+	// Token: 0x0400746E RID: 29806
 	protected bool IsSpeedUp;
 
-	// Token: 0x0400738E RID: 29582
+	// Token: 0x0400746F RID: 29807
 	protected bool IsLock;
 
-	// Token: 0x0400738F RID: 29583
+	// Token: 0x04007470 RID: 29808
 	protected bool IsHideTag;
 
-	// Token: 0x04007390 RID: 29584
+	// Token: 0x04007471 RID: 29809
 	private bool IsFlyTag;
 
-	// Token: 0x04007391 RID: 29585
+	// Token: 0x04007472 RID: 29810
 	private bool IsFlyStrengthTag;
 
-	// Token: 0x04007392 RID: 29586
+	// Token: 0x04007473 RID: 29811
 	private bool IsSpeedUpTag;
 
-	// Token: 0x04007393 RID: 29587
+	// Token: 0x04007474 RID: 29812
 	private bool IsBaseSpeedUpTag;
 
-	// Token: 0x04007394 RID: 29588
+	// Token: 0x04007475 RID: 29813
 	private float LowEndurancePercent;
 
-	// Token: 0x04007395 RID: 29589
+	// Token: 0x04007476 RID: 29814
 	private float SingleStrengthValue;
 
-	// Token: 0x04007396 RID: 29590
+	// Token: 0x04007477 RID: 29815
 	private int MaxSingleStrengthItemCount = 1;
 
-	// Token: 0x04007397 RID: 29591
+	// Token: 0x04007478 RID: 29816
 	private float TailSpeed = 0.1f;
 
-	// Token: 0x04007398 RID: 29592
+	// Token: 0x04007479 RID: 29817
 	private readonly List<UUIItem> StrengthSingleLineActorList = new List<UUIItem>();
 
-	// Token: 0x04007399 RID: 29593
+	// Token: 0x0400747A RID: 29818
 	private float StrengthCurrentValue;
 
-	// Token: 0x0400739A RID: 29594
+	// Token: 0x0400747B RID: 29819
 	private float MaxStrengthCurrentValue;
 
-	// Token: 0x0400739B RID: 29595
+	// Token: 0x0400747C RID: 29820
 	private float TailStrengthCurrentValue;
 
-	// Token: 0x0400739C RID: 29596
+	// Token: 0x0400747D RID: 29821
 	[Nullable(2)]
 	private TimerHandle CloseAnimTimer;
 
-	// Token: 0x0400739D RID: 29597
+	// Token: 0x0400747E RID: 29822
 	[Nullable(2)]
 	private CustomPromise CloseAnimPromise;
 
-	// Token: 0x0400739E RID: 29598
+	// Token: 0x0400747F RID: 29823
 	[StaticVariableRuleIgnore]
 	private static readonly Stat CloseAnimTimerStat = Stat.Create("StrengthCloseAnim", "", "");
 }

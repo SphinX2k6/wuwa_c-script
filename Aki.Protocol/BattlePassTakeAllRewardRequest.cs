@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000172 RID: 370
+	// Token: 0x02000175 RID: 373
 	[NetMessage(EMessageId.BattlePassTakeAllRewardRequest)]
 	public sealed class BattlePassTakeAllRewardRequest : IMessage<BattlePassTakeAllRewardRequest>, IMessage, IEquatable<BattlePassTakeAllRewardRequest>, IDeepCloneable<BattlePassTakeAllRewardRequest>, IBufferMessage
 	{
-		// Token: 0x06002D74 RID: 11636 RVA: 0x00075967 File Offset: 0x00073B67
+		// Token: 0x06002DEB RID: 11755 RVA: 0x00076D93 File Offset: 0x00074F93
 		[NullableContext(1)]
 		public static BattlePassTakeAllRewardRequest Create()
 		{
 			return new BattlePassTakeAllRewardRequest();
 		}
 
-		// Token: 0x170006E3 RID: 1763
-		// (get) Token: 0x06002D75 RID: 11637 RVA: 0x0007596E File Offset: 0x00073B6E
+		// Token: 0x170006F7 RID: 1783
+		// (get) Token: 0x06002DEC RID: 11756 RVA: 0x00076D9A File Offset: 0x00074F9A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170006E4 RID: 1764
-		// (get) Token: 0x06002D76 RID: 11638 RVA: 0x00075971 File Offset: 0x00073B71
+		// Token: 0x170006F8 RID: 1784
+		// (get) Token: 0x06002DED RID: 11757 RVA: 0x00076D9D File Offset: 0x00074F9D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002D77 RID: 11639 RVA: 0x00075978 File Offset: 0x00073B78
+		// Token: 0x06002DEE RID: 11758 RVA: 0x00076DA4 File Offset: 0x00074FA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattlePassTakeAllRewardRequest()
 		{
 		}
 
-		// Token: 0x06002D78 RID: 11640 RVA: 0x00075980 File Offset: 0x00073B80
+		// Token: 0x06002DEF RID: 11759 RVA: 0x00076DAC File Offset: 0x00074FAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattlePassTakeAllRewardRequest(BattlePassTakeAllRewardRequest other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06002D79 RID: 11641 RVA: 0x00075999 File Offset: 0x00073B99
+		// Token: 0x06002DF0 RID: 11760 RVA: 0x00076DC5 File Offset: 0x00074FC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattlePassTakeAllRewardRequest Clone()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			return new BattlePassTakeAllRewardRequest(this);
 		}
 
-		// Token: 0x06002D7A RID: 11642 RVA: 0x000759A1 File Offset: 0x00073BA1
+		// Token: 0x06002DF1 RID: 11761 RVA: 0x00076DCD File Offset: 0x00074FCD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BattlePassTakeAllRewardRequest);
 		}
 
-		// Token: 0x06002D7B RID: 11643 RVA: 0x000759AF File Offset: 0x00073BAF
+		// Token: 0x06002DF2 RID: 11762 RVA: 0x00076DDB File Offset: 0x00074FDB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BattlePassTakeAllRewardRequest other)
@@ -81,7 +81,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x06002D7C RID: 11644 RVA: 0x000759D0 File Offset: 0x00073BD0
+		// Token: 0x06002DF3 RID: 11763 RVA: 0x00076DFC File Offset: 0x00074FFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002D7D RID: 11645 RVA: 0x000759F6 File Offset: 0x00073BF6
+		// Token: 0x06002DF4 RID: 11764 RVA: 0x00076E22 File Offset: 0x00075022
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -102,7 +102,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002D7E RID: 11646 RVA: 0x00075A03 File Offset: 0x00073C03
+		// Token: 0x06002DF5 RID: 11765 RVA: 0x00076E2F File Offset: 0x0007502F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002D7F RID: 11647 RVA: 0x00075A0C File Offset: 0x00073C0C
+		// Token: 0x06002DF6 RID: 11766 RVA: 0x00076E38 File Offset: 0x00075038
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -121,7 +121,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002D80 RID: 11648 RVA: 0x00075A24 File Offset: 0x00073C24
+		// Token: 0x06002DF7 RID: 11767 RVA: 0x00076E50 File Offset: 0x00075050
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002D81 RID: 11649 RVA: 0x00075A4A File Offset: 0x00073C4A
+		// Token: 0x06002DF8 RID: 11768 RVA: 0x00076E76 File Offset: 0x00075076
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BattlePassTakeAllRewardRequest other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06002D82 RID: 11650 RVA: 0x00075A67 File Offset: 0x00073C67
+		// Token: 0x06002DF9 RID: 11769 RVA: 0x00076E93 File Offset: 0x00075093
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06002D83 RID: 11651 RVA: 0x00075A70 File Offset: 0x00073C70
+		// Token: 0x06002DFA RID: 11770 RVA: 0x00076E9C File Offset: 0x0007509C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -170,7 +170,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002834 RID: 10292
+		// Token: 0x040028A8 RID: 10408
 		private UnknownFieldSet _unknownFields;
 	}
 }

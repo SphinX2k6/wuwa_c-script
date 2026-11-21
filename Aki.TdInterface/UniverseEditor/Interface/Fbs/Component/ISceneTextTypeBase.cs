@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058EB RID: 22763
+	// Token: 0x02005EF8 RID: 24312
 	public struct ISceneTextTypeBase : IFlatbufferObject
 	{
-		// Token: 0x1700AA91 RID: 43665
-		// (get) Token: 0x0602672A RID: 157482 RVA: 0x0054C51D File Offset: 0x0054A71D
+		// Token: 0x1700B3C5 RID: 46021
+		// (get) Token: 0x06028C94 RID: 167060 RVA: 0x0059318C File Offset: 0x0059138C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602672B RID: 157483 RVA: 0x0054C52A File Offset: 0x0054A72A
+		// Token: 0x06028C95 RID: 167061 RVA: 0x00593199 File Offset: 0x00591399
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602672C RID: 157484 RVA: 0x0054C534 File Offset: 0x0054A734
+		// Token: 0x06028C96 RID: 167062 RVA: 0x005931A0 File Offset: 0x005913A0
 		public static ISceneTextTypeBase GetRootAsISceneTextTypeBase(ByteBuffer _bb)
 		{
 			return ISceneTextTypeBase.GetRootAsISceneTextTypeBase(_bb, default(ISceneTextTypeBase));
 		}
 
-		// Token: 0x0602672D RID: 157485 RVA: 0x0054C550 File Offset: 0x0054A750
+		// Token: 0x06028C97 RID: 167063 RVA: 0x005931BC File Offset: 0x005913BC
 		public static ISceneTextTypeBase GetRootAsISceneTextTypeBase(ByteBuffer _bb, ISceneTextTypeBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602672E RID: 157486 RVA: 0x0054C56D File Offset: 0x0054A76D
+		// Token: 0x06028C98 RID: 167064 RVA: 0x005931D9 File Offset: 0x005913D9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602672F RID: 157487 RVA: 0x0054C57C File Offset: 0x0054A77C
+		// Token: 0x06028C99 RID: 167065 RVA: 0x005931E8 File Offset: 0x005913E8
 		public ISceneTextTypeBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AA92 RID: 43666
-		// (get) Token: 0x06026730 RID: 157488 RVA: 0x0054C58C File Offset: 0x0054A78C
+		// Token: 0x1700B3C6 RID: 46022
+		// (get) Token: 0x06028C9A RID: 167066 RVA: 0x005931F8 File Offset: 0x005913F8
 		public ESceneTextType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026731 RID: 157489 RVA: 0x0054C5C8 File Offset: 0x0054A7C8
+		// Token: 0x06028C9B RID: 167067 RVA: 0x00593234 File Offset: 0x00591434
 		public static Offset<ISceneTextTypeBase> CreateISceneTextTypeBase(FlatBufferBuilder builder, ESceneTextType Type = ESceneTextType.SubtitleWithVoice)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISceneTextTypeBase.EndISceneTextTypeBase(builder);
 		}
 
-		// Token: 0x06026732 RID: 157490 RVA: 0x0054C5DE File Offset: 0x0054A7DE
+		// Token: 0x06028C9C RID: 167068 RVA: 0x0059324A File Offset: 0x0059144A
 		public static void StartISceneTextTypeBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06026733 RID: 157491 RVA: 0x0054C5E7 File Offset: 0x0054A7E7
+		// Token: 0x06028C9D RID: 167069 RVA: 0x00593253 File Offset: 0x00591453
 		public static void AddType(FlatBufferBuilder builder, ESceneTextType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06026734 RID: 157492 RVA: 0x0054C5F2 File Offset: 0x0054A7F2
+		// Token: 0x06028C9E RID: 167070 RVA: 0x0059325E File Offset: 0x0059145E
 		public static Offset<ISceneTextTypeBase> EndISceneTextTypeBase(FlatBufferBuilder builder)
 		{
 			return new Offset<ISceneTextTypeBase>(builder.EndTable());
 		}
 
-		// Token: 0x06026735 RID: 157493 RVA: 0x0054C600 File Offset: 0x0054A800
+		// Token: 0x06028C9F RID: 167071 RVA: 0x0059326C File Offset: 0x0059146C
 		public ISceneTextTypeBaseT UnPack()
 		{
 			ISceneTextTypeBaseT sceneTextTypeBaseT = new ISceneTextTypeBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return sceneTextTypeBaseT;
 		}
 
-		// Token: 0x06026736 RID: 157494 RVA: 0x0054C61B File Offset: 0x0054A81B
+		// Token: 0x06028CA0 RID: 167072 RVA: 0x00593287 File Offset: 0x00591487
 		public void UnPackTo(ISceneTextTypeBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06026737 RID: 157495 RVA: 0x0054C62C File Offset: 0x0054A82C
+		// Token: 0x06028CA1 RID: 167073 RVA: 0x00593298 File Offset: 0x00591498
 		public static Offset<ISceneTextTypeBase> Pack(FlatBufferBuilder builder, ISceneTextTypeBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISceneTextTypeBase.CreateISceneTextTypeBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400EE7C RID: 61052
+		// Token: 0x0400FB71 RID: 64369
 		private Table __p;
 	}
 }

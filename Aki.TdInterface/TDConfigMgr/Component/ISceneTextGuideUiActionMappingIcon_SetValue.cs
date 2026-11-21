@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006AF RID: 1711
+	// Token: 0x02000750 RID: 1872
 	public class ISceneTextGuideUiActionMappingIcon_SetValue
 	{
-		// Token: 0x04001929 RID: 6441
+		// Token: 0x04001B26 RID: 6950
 		public int Id;
 
-		// Token: 0x0400192A RID: 6442
-		[Nullable(1)]
+		// Token: 0x04001B27 RID: 6951
 		public string ActionName;
 	}
 }

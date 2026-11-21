@@ -4,28 +4,28 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.Input.Blueprints;
 using UnrealEngine;
 
-// Token: 0x020030E7 RID: 12519
+// Token: 0x0200263F RID: 9791
 [NullableContext(2)]
 public interface IMorphData
 {
-	// Token: 0x170024D5 RID: 9429
-	// (get) Token: 0x0601ACEE RID: 109806
-	// (set) Token: 0x0601ACEF RID: 109807
+	// Token: 0x1700265F RID: 9823
+	// (get) Token: 0x0601870A RID: 100106
+	// (set) Token: 0x0601870B RID: 100107
 	int ModelId { get; set; }
 
-	// Token: 0x170024D6 RID: 9430
-	// (get) Token: 0x0601ACF0 RID: 109808
-	// (set) Token: 0x0601ACF1 RID: 109809
+	// Token: 0x17002660 RID: 9824
+	// (get) Token: 0x0601870C RID: 100108
+	// (set) Token: 0x0601870D RID: 100109
 	USkeletalMesh SkeletalMesh { get; set; }
 
-	// Token: 0x170024D7 RID: 9431
-	// (get) Token: 0x0601ACF2 RID: 109810
-	// (set) Token: 0x0601ACF3 RID: 109811
+	// Token: 0x17002661 RID: 9825
+	// (get) Token: 0x0601870E RID: 100110
+	// (set) Token: 0x0601870F RID: 100111
 	UClass AnimClass { get; set; }
 
-	// Token: 0x170024D8 RID: 9432
-	// (get) Token: 0x0601ACF4 RID: 109812
-	// (set) Token: 0x0601ACF5 RID: 109813
+	// Token: 0x17002662 RID: 9826
+	// (get) Token: 0x06018710 RID: 100112
+	// (set) Token: 0x06018711 RID: 100113
 	[Nullable(new byte[]
 	{
 		2,
@@ -41,9 +41,9 @@ public interface IMorphData
 		1
 	})] set; }
 
-	// Token: 0x170024D9 RID: 9433
-	// (get) Token: 0x0601ACF6 RID: 109814
-	// (set) Token: 0x0601ACF7 RID: 109815
+	// Token: 0x17002663 RID: 9827
+	// (get) Token: 0x06018712 RID: 100114
+	// (set) Token: 0x06018713 RID: 100115
 	[Nullable(new byte[]
 	{
 		2,
@@ -59,29 +59,29 @@ public interface IMorphData
 		1
 	})] set; }
 
-	// Token: 0x170024DA RID: 9434
-	// (get) Token: 0x0601ACF8 RID: 109816
-	// (set) Token: 0x0601ACF9 RID: 109817
+	// Token: 0x17002664 RID: 9828
+	// (get) Token: 0x06018714 RID: 100116
+	// (set) Token: 0x06018715 RID: 100117
 	FSoftClassPath InputComponentClass { get; set; }
 
-	// Token: 0x170024DB RID: 9435
-	// (get) Token: 0x0601ACFA RID: 109818
-	// (set) Token: 0x0601ACFB RID: 109819
+	// Token: 0x17002665 RID: 9829
+	// (get) Token: 0x06018716 RID: 100118
+	// (set) Token: 0x06018717 RID: 100119
 	UDataTable BaseMovementSetting { get; set; }
 
-	// Token: 0x170024DC RID: 9436
-	// (get) Token: 0x0601ACFC RID: 109820
-	// (set) Token: 0x0601ACFD RID: 109821
+	// Token: 0x17002666 RID: 9830
+	// (get) Token: 0x06018718 RID: 100120
+	// (set) Token: 0x06018719 RID: 100121
 	UDataTable CameraConfig { get; set; }
 
-	// Token: 0x170024DD RID: 9437
-	// (get) Token: 0x0601ACFE RID: 109822
-	// (set) Token: 0x0601ACFF RID: 109823
+	// Token: 0x17002667 RID: 9831
+	// (get) Token: 0x0601871A RID: 100122
+	// (set) Token: 0x0601871B RID: 100123
 	BP_InputBase_C InputComponent { get; set; }
 
-	// Token: 0x170024DE RID: 9438
-	// (get) Token: 0x0601AD00 RID: 109824
-	// (set) Token: 0x0601AD01 RID: 109825
+	// Token: 0x17002668 RID: 9832
+	// (get) Token: 0x0601871C RID: 100124
+	// (set) Token: 0x0601871D RID: 100125
 	[Nullable(new byte[]
 	{
 		2,
@@ -103,9 +103,9 @@ public interface IMorphData
 		1
 	})] set; }
 
-	// Token: 0x170024DF RID: 9439
-	// (get) Token: 0x0601AD02 RID: 109826
-	// (set) Token: 0x0601AD03 RID: 109827
+	// Token: 0x17002669 RID: 9833
+	// (get) Token: 0x0601871E RID: 100126
+	// (set) Token: 0x0601871F RID: 100127
 	[Nullable(new byte[]
 	{
 		2,
@@ -130,9 +130,9 @@ public interface IMorphData
 		1
 	})] set; }
 
-	// Token: 0x170024E0 RID: 9440
-	// (get) Token: 0x0601AD04 RID: 109828
-	// (set) Token: 0x0601AD05 RID: 109829
+	// Token: 0x1700266A RID: 9834
+	// (get) Token: 0x06018720 RID: 100128
+	// (set) Token: 0x06018721 RID: 100129
 	[Nullable(new byte[]
 	{
 		2,
@@ -157,8 +157,8 @@ public interface IMorphData
 		1
 	})] set; }
 
-	// Token: 0x170024E1 RID: 9441
-	// (get) Token: 0x0601AD06 RID: 109830
-	// (set) Token: 0x0601AD07 RID: 109831
+	// Token: 0x1700266B RID: 9835
+	// (get) Token: 0x06018722 RID: 100130
+	// (set) Token: 0x06018723 RID: 100131
 	Vector CenterActorLocationOffset { get; set; }
 }

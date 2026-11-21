@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CEF RID: 7407
+	// Token: 0x02001EFE RID: 7934
 	public class IPhotographicTip_SetValue
 	{
-		// Token: 0x04006003 RID: 24579
+		// Token: 0x04006576 RID: 25974
 		public ECommonTipType Type;
 
-		// Token: 0x04006004 RID: 24580
-		[Nullable(1)]
+		// Token: 0x04006577 RID: 25975
 		public string MainText;
 	}
 }

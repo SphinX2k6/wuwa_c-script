@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002A04 RID: 10756
+// Token: 0x02001F7F RID: 8063
 [NullableContext(2)]
 [Nullable(0)]
 public class ShowerRoleItem : UiPanelBase
 {
-	// Token: 0x06016517 RID: 91415 RVA: 0x005A5E48 File Offset: 0x005A4048
+	// Token: 0x06013F1E RID: 81694 RVA: 0x005D0E20 File Offset: 0x005CF020
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class ShowerRoleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016518 RID: 91416 RVA: 0x005A5EF4 File Offset: 0x005A40F4
+	// Token: 0x06013F1F RID: 81695 RVA: 0x005D0ECC File Offset: 0x005CF0CC
 	public void RefreshRoleInfo(int curSelectPosIndex, RoleInstance roleInstance)
 	{
 		if (this.PosIndex < 0)
@@ -78,7 +78,7 @@ public class ShowerRoleItem : UiPanelBase
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06016519 RID: 91417 RVA: 0x005A600C File Offset: 0x005A420C
+	// Token: 0x06013F20 RID: 81696 RVA: 0x005D0FE4 File Offset: 0x005CF1E4
 	public bool SetPos(int posIndex, WorldEntity entity)
 	{
 		if (entity == null)
@@ -96,14 +96,14 @@ public class ShowerRoleItem : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x0601651A RID: 91418 RVA: 0x005A605A File Offset: 0x005A425A
+	// Token: 0x06013F21 RID: 81697 RVA: 0x005D1032 File Offset: 0x005CF232
 	[NullableContext(1)]
 	public void BindPosChangeCallback(Action<int> callback)
 	{
 		this.PosChangeCallback = callback;
 	}
 
-	// Token: 0x0601651B RID: 91419 RVA: 0x005A6063 File Offset: 0x005A4263
+	// Token: 0x06013F22 RID: 81698 RVA: 0x005D103B File Offset: 0x005CF23B
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		if (this.PosChangeCallback != null)
@@ -112,29 +112,29 @@ public class ShowerRoleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400A5FD RID: 42493
+	// Token: 0x0400A9E7 RID: 43495
 	private int PosIndex = -1;
 
-	// Token: 0x0400A5FE RID: 42494
+	// Token: 0x0400A9E8 RID: 43496
 	private Action<int> PosChangeCallback;
 
-	// Token: 0x0200903F RID: 36927
+	// Token: 0x02008286 RID: 33414
 	[NullableContext(0)]
 	private class EShowerRoleItemDefine
 	{
-		// Token: 0x0402EB4D RID: 191309
+		// Token: 0x0402A245 RID: 172613
 		public const int Toggle = 0;
 
-		// Token: 0x0402EB4E RID: 191310
+		// Token: 0x0402A246 RID: 172614
 		public const int EmptyTexture = 1;
 
-		// Token: 0x0402EB4F RID: 191311
+		// Token: 0x0402A247 RID: 172615
 		public const int RoleIconTexture = 2;
 
-		// Token: 0x0402EB50 RID: 191312
+		// Token: 0x0402A248 RID: 172616
 		public const int BathNumPanel = 3;
 
-		// Token: 0x0402EB51 RID: 191313
+		// Token: 0x0402A249 RID: 172617
 		public const int BathNumText = 4;
 	}
 }

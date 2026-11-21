@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C78 RID: 3192
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D57 RID: 3415
 	public class TurntableControlComponent : IComponentBase
 	{
-		// Token: 0x06004923 RID: 18723 RVA: 0x000B7889 File Offset: 0x000B5A89
+		// Token: 0x06004DC2 RID: 19906 RVA: 0x000C208D File Offset: 0x000C028D
 		public static TurntableControlComponent Create(ITurntableControlComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015F0 RID: 5616
-		// (get) Token: 0x06004924 RID: 18724 RVA: 0x000B78A8 File Offset: 0x000B5AA8
+		// Token: 0x1700170F RID: 5903
+		// (get) Token: 0x06004DC3 RID: 19907 RVA: 0x000C20AC File Offset: 0x000C02AC
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015F1 RID: 5617
-		// (get) Token: 0x06004925 RID: 18725 RVA: 0x000B78E0 File Offset: 0x000B5AE0
+		// Token: 0x17001710 RID: 5904
+		// (get) Token: 0x06004DC4 RID: 19908 RVA: 0x000C20E4 File Offset: 0x000C02E4
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015F2 RID: 5618
-		// (get) Token: 0x06004926 RID: 18726 RVA: 0x000B78F6 File Offset: 0x000B5AF6
+		// Token: 0x17001711 RID: 5905
+		// (get) Token: 0x06004DC5 RID: 19909 RVA: 0x000C20FA File Offset: 0x000C02FA
 		public virtual ITurntableControlType Config
 		{
 			get
@@ -62,13 +59,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029B7 RID: 10679
+		// Token: 0x04002C24 RID: 11300
 		private ITurntableControlComponent Instance;
 
-		// Token: 0x040029B8 RID: 10680
+		// Token: 0x04002C25 RID: 11301
 		private ITurntableControlType _ConfigCache;
 
-		// Token: 0x040029B9 RID: 10681
+		// Token: 0x04002C26 RID: 11302
 		private bool _ConfigInited;
 	}
 }

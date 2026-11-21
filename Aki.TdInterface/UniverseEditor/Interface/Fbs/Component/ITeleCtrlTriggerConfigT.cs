@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A47 RID: 23111
+	// Token: 0x02006054 RID: 24660
 	public class ITeleCtrlTriggerConfigT
 	{
-		// Token: 0x1700ADDB RID: 44507
-		// (get) Token: 0x060274D2 RID: 160978 RVA: 0x005686D6 File Offset: 0x005668D6
-		// (set) Token: 0x060274D3 RID: 160979 RVA: 0x005686DE File Offset: 0x005668DE
+		// Token: 0x1700B713 RID: 46867
+		// (get) Token: 0x06029A4A RID: 170570 RVA: 0x005AF6E2 File Offset: 0x005AD8E2
+		// (set) Token: 0x06029A4B RID: 170571 RVA: 0x005AF6EA File Offset: 0x005AD8EA
 		public ETeleCtrlTriggerType Type { get; set; }
 
-		// Token: 0x060274D4 RID: 160980 RVA: 0x005686E7 File Offset: 0x005668E7
+		// Token: 0x06029A4C RID: 170572 RVA: 0x005AF6F3 File Offset: 0x005AD8F3
 		public ITeleCtrlTriggerConfigT()
 		{
 			this.Type = ETeleCtrlTriggerType.MechascoutJavelin;

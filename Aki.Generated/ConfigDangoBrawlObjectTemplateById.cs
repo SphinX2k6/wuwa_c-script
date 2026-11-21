@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001D2 RID: 466
+	// Token: 0x020001E4 RID: 484
 	public class ConfigDangoBrawlObjectTemplateById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000AEF RID: 2799 RVA: 0x000975E0 File Offset: 0x000957E0
+		// Token: 0x06000B5B RID: 2907 RVA: 0x0009D518 File Offset: 0x0009B718
 		static ConfigDangoBrawlObjectTemplateById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDangoBrawlObjectTemplateById.CreateStaticDefaultValue), new Action(ConfigDangoBrawlObjectTemplateById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000AF0 RID: 2800 RVA: 0x00097600 File Offset: 0x00095800
+		// Token: 0x06000B5C RID: 2908 RVA: 0x0009D538 File Offset: 0x0009B738
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDangoBrawlObjectTemplateById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000AF1 RID: 2801 RVA: 0x0009767F File Offset: 0x0009587F
+		// Token: 0x06000B5D RID: 2909 RVA: 0x0009D5B7 File Offset: 0x0009B7B7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDangoBrawlObjectTemplateById.LogPair = null;
 			ConfigDangoBrawlObjectTemplateById.HandleId = 0;
 		}
 
-		// Token: 0x06000AF2 RID: 2802 RVA: 0x0009768D File Offset: 0x0009588D
+		// Token: 0x06000B5E RID: 2910 RVA: 0x0009D5C5 File Offset: 0x0009B7C5
 		public static void Init()
 		{
 			ConfigDangoBrawlObjectTemplateById.HandleId = ConfigCommon.InitDataStatement(ConfigDangoBrawlObjectTemplateById.HandleId, "db_dangobrawlobjecttemplate.db", "select BinData from `DangoBrawlObjectTemplate` where Id=?");
 		}
 
-		// Token: 0x06000AF3 RID: 2803 RVA: 0x000976A8 File Offset: 0x000958A8
+		// Token: 0x06000B5F RID: 2911 RVA: 0x0009D5E0 File Offset: 0x0009B7E0
 		public static DangoBrawlObjectTemplate? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDangoBrawlObjectTemplateById.HandleId, ConfigDangoBrawlObjectTemplateById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DangoBrawlObjectTemplate?(rootAsDangoBrawlObjectTemplate);
 		}
 
-		// Token: 0x04000CA2 RID: 3234
+		// Token: 0x04000D20 RID: 3360
 		private const string DB = "db_dangobrawlobjecttemplate.db";
 
-		// Token: 0x04000CA3 RID: 3235
+		// Token: 0x04000D21 RID: 3361
 		private const string FILE = "UniverseEditor/DangoBrawlObjectTemplate.csv";
 
-		// Token: 0x04000CA4 RID: 3236
+		// Token: 0x04000D22 RID: 3362
 		private const string TABLE = "DangoBrawlObjectTemplate";
 
-		// Token: 0x04000CA5 RID: 3237
+		// Token: 0x04000D23 RID: 3363
 		private const string COMMAND = "select BinData from `DangoBrawlObjectTemplate` where Id=?";
 
-		// Token: 0x04000CA6 RID: 3238
+		// Token: 0x04000D24 RID: 3364
 		private const string KEY_PREFIX = "DangoBrawlObjectTemplateById";
 
-		// Token: 0x04000CA7 RID: 3239
+		// Token: 0x04000D25 RID: 3365
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000CA8 RID: 3240
+		// Token: 0x04000D26 RID: 3366
 		private static int HandleId;
 	}
 }

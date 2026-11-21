@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020009F6 RID: 2550
+	// Token: 0x020001CC RID: 460
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EAttachLocation")]
 	public enum EAttachLocation
 	{
-		// Token: 0x04004463 RID: 17507
+		// Token: 0x04000B3B RID: 2875
 		KeepRelativeOffset,
-		// Token: 0x04004464 RID: 17508
+		// Token: 0x04000B3C RID: 2876
 		KeepWorldPosition,
-		// Token: 0x04004465 RID: 17509
+		// Token: 0x04000B3D RID: 2877
 		SnapToTarget,
-		// Token: 0x04004466 RID: 17510
+		// Token: 0x04000B3E RID: 2878
 		SnapToTargetIncludingScale,
-		// Token: 0x04004467 RID: 17511
+		// Token: 0x04000B3F RID: 2879
 		EAttachLocation_MAX
 	}
 }

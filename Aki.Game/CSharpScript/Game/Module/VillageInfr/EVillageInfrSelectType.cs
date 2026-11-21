@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x02004890 RID: 18576
+	// Token: 0x02003807 RID: 14343
 	public enum EVillageInfrSelectType
 	{
-		// Token: 0x0401A1B7 RID: 106935
+		// Token: 0x04014A2A RID: 84522
 		None,
-		// Token: 0x0401A1B8 RID: 106936
+		// Token: 0x04014A2B RID: 84523
 		Tree,
-		// Token: 0x0401A1B9 RID: 106937
+		// Token: 0x04014A2C RID: 84524
 		Village
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A70 RID: 10864
+	// Token: 0x02002D64 RID: 11620
 	public class IOverrideLookAtType
 	{
-		// Token: 0x0600EEE5 RID: 61157 RVA: 0x0022C101 File Offset: 0x0022A301
-		[NullableContext(1)]
+		// Token: 0x0600FD9B RID: 64923 RVA: 0x00249E0D File Offset: 0x0024800D
 		public static IOverrideLookAtType Create(IOverrideLookAtType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BC7 RID: 19399
-		// (get) Token: 0x0600EEE6 RID: 61158 RVA: 0x0022C120 File Offset: 0x0022A320
+		// Token: 0x17004F81 RID: 20353
+		// (get) Token: 0x0600FD9C RID: 64924 RVA: 0x00249E2C File Offset: 0x0024802C
 		public virtual EOverrideLookAtType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400836C RID: 33644
+		// Token: 0x04008A70 RID: 35440
 		private IOverrideLookAtType Instance;
 	}
 }

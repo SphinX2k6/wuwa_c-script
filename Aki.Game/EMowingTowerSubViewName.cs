@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001383 RID: 4995
+// Token: 0x02000837 RID: 2103
 public enum EMowingTowerSubViewName
 {
-	// Token: 0x04003E0A RID: 15882
+	// Token: 0x04003EA2 RID: 16034
 	SelectView,
-	// Token: 0x04003E0B RID: 15883
+	// Token: 0x04003EA3 RID: 16035
 	LevelView
 }

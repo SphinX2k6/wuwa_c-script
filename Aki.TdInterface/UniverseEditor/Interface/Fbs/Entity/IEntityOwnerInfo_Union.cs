@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x020047C0 RID: 18368
+	// Token: 0x02004C28 RID: 19496
 	public enum IEntityOwnerInfo_Union : byte
 	{
-		// Token: 0x0400CC45 RID: 52293
+		// Token: 0x0400D67B RID: 54907
 		NONE,
-		// Token: 0x0400CC46 RID: 52294
+		// Token: 0x0400D67C RID: 54908
 		IEntityOwnerInfo,
-		// Token: 0x0400CC47 RID: 52295
+		// Token: 0x0400D67D RID: 54909
 		IEntityOwnerQuest,
-		// Token: 0x0400CC48 RID: 52296
+		// Token: 0x0400D67E RID: 54910
 		IEntityOwnerLevelPlay,
-		// Token: 0x0400CC49 RID: 52297
+		// Token: 0x0400D67F RID: 54911
 		IEntityOwnerEntity
 	}
 }

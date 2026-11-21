@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002D37 RID: 11575
+// Token: 0x02002291 RID: 8849
 public class WeeklyRogueRewardFetterItem : GridProxyAbstract<int>
 {
-	// Token: 0x0601855B RID: 99675 RVA: 0x00631B84 File Offset: 0x0062FD84
+	// Token: 0x06015DFD RID: 89597 RVA: 0x00657B94 File Offset: 0x00655D94
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,7 +16,7 @@ public class WeeklyRogueRewardFetterItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0601855C RID: 99676 RVA: 0x00631BBD File Offset: 0x0062FDBD
+	// Token: 0x06015DFE RID: 89598 RVA: 0x00657BCD File Offset: 0x00655DCD
 	protected override void OnStart()
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -27,19 +27,19 @@ public class WeeklyRogueRewardFetterItem : GridProxyAbstract<int>
 		sprite.SetUIActive(false);
 	}
 
-	// Token: 0x0601855D RID: 99677 RVA: 0x00631BD4 File Offset: 0x0062FDD4
+	// Token: 0x06015DFF RID: 89599 RVA: 0x00657BE4 File Offset: 0x00655DE4
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		string fetterElementPath = PhantomBattleConfig.Instance.GetFetterGroupById(data).FetterElementPath;
 		base.SetTextureByPath(fetterElementPath, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x020092C6 RID: 37574
+	// Token: 0x020084ED RID: 34029
 	private enum EFetter
 	{
-		// Token: 0x0402F717 RID: 194327
+		// Token: 0x0402AD9F RID: 175519
 		Sprite,
-		// Token: 0x0402F718 RID: 194328
+		// Token: 0x0402ADA0 RID: 175520
 		Texture
 	}
 }

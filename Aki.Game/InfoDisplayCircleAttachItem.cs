@@ -6,7 +6,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.AutoAttach;
 using UnrealEngine;
 
-// Token: 0x02001F97 RID: 8087
+// Token: 0x02001459 RID: 5209
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,12 +15,12 @@ using UnrealEngine;
 })]
 public class InfoDisplayCircleAttachItem : AutoAttachItem<string>
 {
-	// Token: 0x0600FB2D RID: 64301 RVA: 0x003CD874 File Offset: 0x003CBA74
+	// Token: 0x0600CF4F RID: 53071 RVA: 0x003D9434 File Offset: 0x003D7634
 	public InfoDisplayCircleAttachItem(AActor actor) : base(actor)
 	{
 	}
 
-	// Token: 0x0600FB2E RID: 64302 RVA: 0x003CD8A4 File Offset: 0x003CBAA4
+	// Token: 0x0600CF50 RID: 53072 RVA: 0x003D9464 File Offset: 0x003D7664
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -41,7 +41,7 @@ public class InfoDisplayCircleAttachItem : AutoAttachItem<string>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FB2F RID: 64303 RVA: 0x003CD94C File Offset: 0x003CBB4C
+	// Token: 0x0600CF51 RID: 53073 RVA: 0x003D950C File Offset: 0x003D770C
 	protected override void OnRefreshItem(string data)
 	{
 		this.CurrentItemData = data;
@@ -53,7 +53,7 @@ public class InfoDisplayCircleAttachItem : AutoAttachItem<string>
 		}
 	}
 
-	// Token: 0x0600FB30 RID: 64304 RVA: 0x003CD978 File Offset: 0x003CBB78
+	// Token: 0x0600CF52 RID: 53074 RVA: 0x003D9538 File Offset: 0x003D7738
 	protected override void OnMoveItem()
 	{
 		float currentMovePercentage = base.GetCurrentMovePercentage();
@@ -91,7 +91,7 @@ public class InfoDisplayCircleAttachItem : AutoAttachItem<string>
 		}
 	}
 
-	// Token: 0x0600FB31 RID: 64305 RVA: 0x003CDA84 File Offset: 0x003CBC84
+	// Token: 0x0600CF53 RID: 53075 RVA: 0x003D9644 File Offset: 0x003D7844
 	private void RefreshTexture()
 	{
 		if (this.CurrentItemData != "")
@@ -104,17 +104,17 @@ public class InfoDisplayCircleAttachItem : AutoAttachItem<string>
 		}
 	}
 
-	// Token: 0x0600FB32 RID: 64306 RVA: 0x003CDAC5 File Offset: 0x003CBCC5
+	// Token: 0x0600CF54 RID: 53076 RVA: 0x003D9685 File Offset: 0x003D7885
 	public override void OnSelect()
 	{
 	}
 
-	// Token: 0x0600FB33 RID: 64307 RVA: 0x003CDAC7 File Offset: 0x003CBCC7
+	// Token: 0x0600CF55 RID: 53077 RVA: 0x003D9687 File Offset: 0x003D7887
 	protected override void OnUnSelect()
 	{
 	}
 
-	// Token: 0x0600FB34 RID: 64308 RVA: 0x003CDACC File Offset: 0x003CBCCC
+	// Token: 0x0600CF56 RID: 53078 RVA: 0x003D968C File Offset: 0x003D788C
 	private void OnClickItem()
 	{
 		float currentMovePercentage = base.GetCurrentMovePercentage();
@@ -127,35 +127,35 @@ public class InfoDisplayCircleAttachItem : AutoAttachItem<string>
 		EventSystem.Instance.Emit<AutoAttachItem<string>>(EEventName.ClickDisplayItem, this);
 	}
 
-	// Token: 0x040074DD RID: 29917
+	// Token: 0x040075BF RID: 30143
 	private const int FRONT_HIERACHY = 3;
 
-	// Token: 0x040074DE RID: 29918
+	// Token: 0x040075C0 RID: 30144
 	private const float ANIMAL_SCALE = 0.8f;
 
-	// Token: 0x040074DF RID: 29919
+	// Token: 0x040075C1 RID: 30145
 	private const float LEFT_RANGE = 0.4f;
 
-	// Token: 0x040074E0 RID: 29920
+	// Token: 0x040075C2 RID: 30146
 	private const float MIDDLE_RANGE = 0.5f;
 
-	// Token: 0x040074E1 RID: 29921
+	// Token: 0x040075C3 RID: 30147
 	private const float RIGHT_RANGE = 0.6f;
 
-	// Token: 0x040074E2 RID: 29922
+	// Token: 0x040075C4 RID: 30148
 	private string CurrentItemData = "";
 
-	// Token: 0x040074E3 RID: 29923
+	// Token: 0x040075C5 RID: 30149
 	private readonly FVector DefaultScale = new FVector(0.8f, 0.8f, 0.8f);
 
-	// Token: 0x02008585 RID: 34181
+	// Token: 0x0200770A RID: 30474
 	[NullableContext(0)]
 	private class EInfoDisplayNoCircleItemComponents
 	{
-		// Token: 0x0402B78E RID: 178062
+		// Token: 0x04026AB1 RID: 158385
 		public const int Btn = 0;
 
-		// Token: 0x0402B78F RID: 178063
+		// Token: 0x04026AB2 RID: 158386
 		public const int Texture = 1;
 	}
 }

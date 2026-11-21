@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BCB RID: 3019
+	// Token: 0x02000C99 RID: 3225
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class INpcPerformStateConfig
 	{
-		// Token: 0x0600456C RID: 17772 RVA: 0x000AFD03 File Offset: 0x000ADF03
-		[NullableContext(1)]
+		// Token: 0x060049C5 RID: 18885 RVA: 0x000B9DC7 File Offset: 0x000B7FC7
+		[NullableContext(0)]
 		public static INpcPerformStateConfig Create(INpcPerformStateConfig? instance)
 		{
 			if (instance == null)
@@ -24,20 +24,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001393 RID: 5011
-		// (get) Token: 0x0600456D RID: 17773 RVA: 0x000AFD22 File Offset: 0x000ADF22
-		[Nullable(1)]
+		// Token: 0x1700148E RID: 5262
+		// (get) Token: 0x060049C6 RID: 18886 RVA: 0x000B9DE6 File Offset: 0x000B7FE6
+		[Nullable(0)]
 		public virtual string State
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.State;
 			}
 		}
 
-		// Token: 0x17001394 RID: 5012
-		// (get) Token: 0x0600456E RID: 17774 RVA: 0x000AFD2F File Offset: 0x000ADF2F
+		// Token: 0x1700148F RID: 5263
+		// (get) Token: 0x060049C7 RID: 18887 RVA: 0x000B9DF3 File Offset: 0x000B7FF3
 		public virtual string MaterialDa
 		{
 			get
@@ -46,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001395 RID: 5013
-		// (get) Token: 0x0600456F RID: 17775 RVA: 0x000AFD3C File Offset: 0x000ADF3C
+		// Token: 0x17001490 RID: 5264
+		// (get) Token: 0x060049C8 RID: 18888 RVA: 0x000B9E00 File Offset: 0x000B8000
 		public virtual List<int> BuffEffectIds
 		{
 			get
@@ -71,13 +71,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400277C RID: 10108
+		// Token: 0x040029C4 RID: 10692
 		private INpcPerformStateConfig Instance;
 
-		// Token: 0x0400277D RID: 10109
+		// Token: 0x040029C5 RID: 10693
 		private List<int> _BuffEffectIdsCache;
 
-		// Token: 0x0400277E RID: 10110
+		// Token: 0x040029C6 RID: 10694
 		private bool _BuffEffectIdsInited;
 	}
 }

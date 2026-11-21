@@ -5,30 +5,30 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Action
 {
-	// Token: 0x02007354 RID: 29524
+	// Token: 0x020064D7 RID: 25815
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineActionRemoveBuff : AiStateMachineAction
 	{
-		// Token: 0x060486B5 RID: 296629 RVA: 0x012A0D7E File Offset: 0x0129EF7E
+		// Token: 0x0603EB02 RID: 256770 RVA: 0x01243806 File Offset: 0x01241A06
 		public AiStateMachineActionRemoveBuff(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.Action action) : base(stateMachineNode, action)
 		{
 		}
 
-		// Token: 0x060486B6 RID: 296630 RVA: 0x012A0D88 File Offset: 0x0129EF88
+		// Token: 0x0603EB03 RID: 256771 RVA: 0x01243810 File Offset: 0x01241A10
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Action action)
 		{
 			this.BuffId = new long?(action.ActionRemoveBuff.BuffId);
 			return true;
 		}
 
-		// Token: 0x060486B7 RID: 296631 RVA: 0x012A0DA1 File Offset: 0x0129EFA1
+		// Token: 0x0603EB04 RID: 256772 RVA: 0x01243829 File Offset: 0x01241A29
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x04026481 RID: 156801
+		// Token: 0x0402176E RID: 137070
 		public long? BuffId;
 	}
 }

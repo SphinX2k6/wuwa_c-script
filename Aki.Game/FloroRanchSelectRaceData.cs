@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001B36 RID: 6966
+// Token: 0x02000FF5 RID: 4085
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchSelectRaceData
 {
-	// Token: 0x0600CEAA RID: 52906 RVA: 0x002F1630 File Offset: 0x002EF830
+	// Token: 0x0600A2BB RID: 41659 RVA: 0x002FC710 File Offset: 0x002FA910
 	public FloroRanchSelectRaceData(int raceId, FloroRanchSubDungeonData subDungeonData, EFloroRanchActivityDataType activityDataType)
 	{
 		this.RaceId = raceId;
@@ -14,18 +14,18 @@ public class FloroRanchSelectRaceData
 		this.ActivityDataType = activityDataType;
 	}
 
-	// Token: 0x17001139 RID: 4409
-	// (get) Token: 0x0600CEAB RID: 52907 RVA: 0x002F164D File Offset: 0x002EF84D
-	// (set) Token: 0x0600CEAC RID: 52908 RVA: 0x002F1655 File Offset: 0x002EF855
+	// Token: 0x1700115E RID: 4446
+	// (get) Token: 0x0600A2BC RID: 41660 RVA: 0x002FC72D File Offset: 0x002FA92D
+	// (set) Token: 0x0600A2BD RID: 41661 RVA: 0x002FC735 File Offset: 0x002FA935
 	public int RaceId { get; set; }
 
-	// Token: 0x1700113A RID: 4410
-	// (get) Token: 0x0600CEAD RID: 52909 RVA: 0x002F165E File Offset: 0x002EF85E
-	// (set) Token: 0x0600CEAE RID: 52910 RVA: 0x002F1666 File Offset: 0x002EF866
+	// Token: 0x1700115F RID: 4447
+	// (get) Token: 0x0600A2BE RID: 41662 RVA: 0x002FC73E File Offset: 0x002FA93E
+	// (set) Token: 0x0600A2BF RID: 41663 RVA: 0x002FC746 File Offset: 0x002FA946
 	public FloroRanchSubDungeonData SubDungeonData { get; set; }
 
-	// Token: 0x1700113B RID: 4411
-	// (get) Token: 0x0600CEAF RID: 52911 RVA: 0x002F166F File Offset: 0x002EF86F
-	// (set) Token: 0x0600CEB0 RID: 52912 RVA: 0x002F1677 File Offset: 0x002EF877
+	// Token: 0x17001160 RID: 4448
+	// (get) Token: 0x0600A2C0 RID: 41664 RVA: 0x002FC74F File Offset: 0x002FA94F
+	// (set) Token: 0x0600A2C1 RID: 41665 RVA: 0x002FC757 File Offset: 0x002FA957
 	public EFloroRanchActivityDataType ActivityDataType { get; set; }
 }

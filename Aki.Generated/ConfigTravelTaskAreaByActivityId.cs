@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A4B RID: 2635
+	// Token: 0x02000B20 RID: 2848
 	public class ConfigTravelTaskAreaByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003DD6 RID: 15830 RVA: 0x001B7890 File Offset: 0x001B5A90
+		// Token: 0x060042D4 RID: 17108 RVA: 0x001D6C24 File Offset: 0x001D4E24
 		static ConfigTravelTaskAreaByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTravelTaskAreaByActivityId.CreateStaticDefaultValue), new Action(ConfigTravelTaskAreaByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003DD7 RID: 15831 RVA: 0x001B78B0 File Offset: 0x001B5AB0
+		// Token: 0x060042D5 RID: 17109 RVA: 0x001D6C44 File Offset: 0x001D4E44
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTravelTaskAreaByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003DD8 RID: 15832 RVA: 0x001B792F File Offset: 0x001B5B2F
+		// Token: 0x060042D6 RID: 17110 RVA: 0x001D6CC3 File Offset: 0x001D4EC3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTravelTaskAreaByActivityId.LogPair = null;
 			ConfigTravelTaskAreaByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06003DD9 RID: 15833 RVA: 0x001B793D File Offset: 0x001B5B3D
+		// Token: 0x060042D7 RID: 17111 RVA: 0x001D6CD1 File Offset: 0x001D4ED1
 		public static void Init()
 		{
 			ConfigTravelTaskAreaByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigTravelTaskAreaByActivityId.HandleId, "db_activitymaptravel.db", "select BinData from `TravelTaskArea` where ActivityId=?");
 		}
 
-		// Token: 0x06003DDA RID: 15834 RVA: 0x001B7958 File Offset: 0x001B5B58
+		// Token: 0x060042D8 RID: 17112 RVA: 0x001D6CEC File Offset: 0x001D4EEC
 		[NullableContext(2)]
 		public static IReadOnlyList<TravelTaskArea> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040047F3 RID: 18419
+		// Token: 0x04004DC6 RID: 19910
 		private const string DB = "db_activitymaptravel.db";
 
-		// Token: 0x040047F4 RID: 18420
+		// Token: 0x04004DC7 RID: 19911
 		private const string FILE = "d.地图主题活动.xlsx";
 
-		// Token: 0x040047F5 RID: 18421
+		// Token: 0x04004DC8 RID: 19912
 		private const string TABLE = "TravelTaskArea";
 
-		// Token: 0x040047F6 RID: 18422
+		// Token: 0x04004DC9 RID: 19913
 		private const string COMMAND = "select BinData from `TravelTaskArea` where ActivityId=?";
 
-		// Token: 0x040047F7 RID: 18423
+		// Token: 0x04004DCA RID: 19914
 		private const string KEY_PREFIX = "TravelTaskAreaByActivityId";
 
-		// Token: 0x040047F8 RID: 18424
+		// Token: 0x04004DCB RID: 19915
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040047F9 RID: 18425
+		// Token: 0x04004DCC RID: 19916
 		private static int HandleId;
 	}
 }

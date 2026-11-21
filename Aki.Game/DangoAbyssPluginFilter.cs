@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using FilterDefine;
 
-// Token: 0x02001839 RID: 6201
+// Token: 0x02000CF2 RID: 3314
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoAbyssPluginFilter : CommonFilter
 {
-	// Token: 0x0600B5D6 RID: 46550 RVA: 0x00291EC9 File Offset: 0x002900C9
+	// Token: 0x060089C1 RID: 35265 RVA: 0x0029C5E9 File Offset: 0x0029A7E9
 	protected object GetDangoAbyssPluginQuality(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return ((AbyssPluginItemInfo)data).GetQuality();
 	}
 
-	// Token: 0x0600B5D7 RID: 46551 RVA: 0x00291EDC File Offset: 0x002900DC
+	// Token: 0x060089C2 RID: 35266 RVA: 0x0029C5FC File Offset: 0x0029A7FC
 	protected object GetDangoAbyssPluginProp(object data, Dictionary<int, string> currentSelectMap)
 	{
 		ConfigPropValue[] prop = ((AbyssPluginItemInfo)data).GetProp();
@@ -27,7 +27,7 @@ public class DangoAbyssPluginFilter : CommonFilter
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5D8 RID: 46552 RVA: 0x00291F24 File Offset: 0x00290124
+	// Token: 0x060089C3 RID: 35267 RVA: 0x0029C644 File Offset: 0x0029A844
 	protected object GetDangoAbyssPluginTag(object data, Dictionary<int, string> currentSelectMap)
 	{
 		AbyssItem? abyssItem = ((AbyssPluginItemInfo)data).GetConfig().As<AbyssItem>();
@@ -39,25 +39,25 @@ public class DangoAbyssPluginFilter : CommonFilter
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5D9 RID: 46553 RVA: 0x00291FA4 File Offset: 0x002901A4
+	// Token: 0x060089C4 RID: 35268 RVA: 0x0029C6C4 File Offset: 0x0029A8C4
 	protected object GetDangoAbyssPluginEquipState(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return (((AbyssPluginItemInfo)data).GetRoleId() > 0) ? 1 : -1;
 	}
 
-	// Token: 0x0600B5DA RID: 46554 RVA: 0x00291FBD File Offset: 0x002901BD
+	// Token: 0x060089C5 RID: 35269 RVA: 0x0029C6DD File Offset: 0x0029A8DD
 	protected object GetDangoAbyssPluginLockState(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return ((AbyssPluginItemInfo)data).GetIsLock() ? 1 : -1;
 	}
 
-	// Token: 0x0600B5DB RID: 46555 RVA: 0x00291FD5 File Offset: 0x002901D5
+	// Token: 0x060089C6 RID: 35270 RVA: 0x0029C6F5 File Offset: 0x0029A8F5
 	protected object GetDangoAbyssPluginDeprecateState(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return ((AbyssPluginItemInfo)data).GetIsDeprecated() ? 1 : -1;
 	}
 
-	// Token: 0x0600B5DC RID: 46556 RVA: 0x00291FF0 File Offset: 0x002901F0
+	// Token: 0x060089C7 RID: 35271 RVA: 0x0029C710 File Offset: 0x0029A910
 	protected override void OnInitFilterMap()
 	{
 		this.FilterMap.Add(FilterDefine.EFilterType.DangoAbyssPluginQuality, new TFilterConfig(this.GetDangoAbyssPluginQuality));

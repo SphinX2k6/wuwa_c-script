@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Process
 {
-	// Token: 0x0200528B RID: 21131
+	// Token: 0x0200425B RID: 16987
 	public enum EPlayingCardProcessState
 	{
-		// Token: 0x0401C9BF RID: 117183
+		// Token: 0x040173F4 RID: 95220
 		None,
-		// Token: 0x0401C9C0 RID: 117184
+		// Token: 0x040173F5 RID: 95221
 		TimeStart,
-		// Token: 0x0401C9C1 RID: 117185
+		// Token: 0x040173F6 RID: 95222
 		OwnChangeCard,
-		// Token: 0x0401C9C2 RID: 117186
+		// Token: 0x040173F7 RID: 95223
 		BothDrawCard,
-		// Token: 0x0401C9C3 RID: 117187
+		// Token: 0x040173F8 RID: 95224
 		OpponentTimeStart,
-		// Token: 0x0401C9C4 RID: 117188
+		// Token: 0x040173F9 RID: 95225
 		OpponentPlaying,
-		// Token: 0x0401C9C5 RID: 117189
+		// Token: 0x040173FA RID: 95226
 		GameOverByOpponent,
-		// Token: 0x0401C9C6 RID: 117190
+		// Token: 0x040173FB RID: 95227
 		OwnTimeStart,
-		// Token: 0x0401C9C7 RID: 117191
+		// Token: 0x040173FC RID: 95228
 		ShowOwnCoreCard,
-		// Token: 0x0401C9C8 RID: 117192
+		// Token: 0x040173FD RID: 95229
 		OwnPlaying,
-		// Token: 0x0401C9C9 RID: 117193
+		// Token: 0x040173FE RID: 95230
 		TimeEnd,
-		// Token: 0x0401C9CA RID: 117194
+		// Token: 0x040173FF RID: 95231
 		JumpLoading
 	}
 }

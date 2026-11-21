@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using UnrealEngine;
 
-// Token: 0x02003051 RID: 12369
+// Token: 0x020025A7 RID: 9639
 [NullableContext(2)]
 [Nullable(0)]
 public class CaughtBindingInfo
 {
-	// Token: 0x1700242F RID: 9263
-	// (get) Token: 0x0601A496 RID: 107670 RVA: 0x006F3DF1 File Offset: 0x006F1FF1
+	// Token: 0x17002541 RID: 9537
+	// (get) Token: 0x06017E28 RID: 97832 RVA: 0x0071B045 File Offset: 0x00719245
 	public BulletEntity BulletEntity
 	{
 		get
@@ -23,7 +23,7 @@ public class CaughtBindingInfo
 		}
 	}
 
-	// Token: 0x0601A497 RID: 107671 RVA: 0x006F3E1C File Offset: 0x006F201C
+	// Token: 0x06017E29 RID: 97833 RVA: 0x0071B070 File Offset: 0x00719270
 	[NullableContext(1)]
 	public CaughtBindingInfo(string id, SCaughtInfo info, CharacterActorComponent entityActorComp, CharacterCaughtNewComponent caughtComp, int skillId)
 	{
@@ -39,7 +39,7 @@ public class CaughtBindingInfo
 		this.BulletActorComponent = ((bulletEntity != null) ? bulletEntity.GetComponent<BulletActorComponent>() : null);
 	}
 
-	// Token: 0x0601A498 RID: 107672 RVA: 0x006F3EDB File Offset: 0x006F20DB
+	// Token: 0x06017E2A RID: 97834 RVA: 0x0071B12F File Offset: 0x0071932F
 	public void Clear()
 	{
 		this.CaughtId = "";
@@ -49,23 +49,23 @@ public class CaughtBindingInfo
 		this.BulletActorComponent = null;
 	}
 
-	// Token: 0x0400C867 RID: 51303
+	// Token: 0x0400CC40 RID: 52288
 	[Nullable(1)]
 	public string CaughtId;
 
-	// Token: 0x0400C868 RID: 51304
+	// Token: 0x0400CC41 RID: 52289
 	private SCaughtInfo CaughtInfo;
 
-	// Token: 0x0400C869 RID: 51305
+	// Token: 0x0400CC42 RID: 52290
 	public SCaughtBindingInfo BindingInfo;
 
-	// Token: 0x0400C86A RID: 51306
+	// Token: 0x0400CC43 RID: 52291
 	public int? BulletEntityId;
 
-	// Token: 0x0400C86B RID: 51307
+	// Token: 0x0400CC44 RID: 52292
 	public BulletActorComponent BulletActorComponent;
 
-	// Token: 0x0400C86C RID: 51308
+	// Token: 0x0400CC45 RID: 52293
 	[Nullable(1)]
 	public List<Entity> Targets = new List<Entity>();
 }

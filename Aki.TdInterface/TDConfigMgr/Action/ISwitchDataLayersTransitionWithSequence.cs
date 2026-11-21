@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EFD RID: 7933
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002136 RID: 8502
 	public class ISwitchDataLayersTransitionWithSequence : ISwitchDataLayersTransitionType
 	{
-		// Token: 0x0600A9A2 RID: 43426 RVA: 0x0017E5B4 File Offset: 0x0017C7B4
+		// Token: 0x0600B474 RID: 46196 RVA: 0x001945AC File Offset: 0x001927AC
 		private ISwitchDataLayersTransitionWithSequence_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A9A3 RID: 43427 RVA: 0x0017E5EC File Offset: 0x0017C7EC
+		// Token: 0x0600B475 RID: 46197 RVA: 0x001945E4 File Offset: 0x001927E4
 		public static ISwitchDataLayersTransitionWithSequence Create([Nullable(2)] ISwitchDataLayersTransitionWithSequence instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A9A4 RID: 43428 RVA: 0x0017E5FF File Offset: 0x0017C7FF
+		// Token: 0x0600B476 RID: 46198 RVA: 0x001945F7 File Offset: 0x001927F7
 		public static ISwitchDataLayersTransitionWithSequence CreateFromSetValue([Nullable(2)] ISwitchDataLayersTransitionWithSequence_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A9A5 RID: 43429 RVA: 0x0017E612 File Offset: 0x0017C812
+		// Token: 0x0600B477 RID: 46199 RVA: 0x0019460A File Offset: 0x0019280A
 		public new ISwitchDataLayersTransitionWithSequence_SetValue ToSetValue()
 		{
 			return new ISwitchDataLayersTransitionWithSequence_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033AD RID: 13229
-		// (get) Token: 0x0600A9A6 RID: 43430 RVA: 0x0017E63D File Offset: 0x0017C83D
-		// (set) Token: 0x0600A9A7 RID: 43431 RVA: 0x0017E668 File Offset: 0x0017C868
+		// Token: 0x17003678 RID: 13944
+		// (get) Token: 0x0600B478 RID: 46200 RVA: 0x00194635 File Offset: 0x00192835
+		// (set) Token: 0x0600B479 RID: 46201 RVA: 0x00194660 File Offset: 0x00192860
 		public override ESwitchDataLayersTransitionType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033AE RID: 13230
-		// (get) Token: 0x0600A9A8 RID: 43432 RVA: 0x0017E676 File Offset: 0x0017C876
-		// (set) Token: 0x0600A9A9 RID: 43433 RVA: 0x0017E6A1 File Offset: 0x0017C8A1
+		// Token: 0x17003679 RID: 13945
+		// (get) Token: 0x0600B47A RID: 46202 RVA: 0x0019466E File Offset: 0x0019286E
+		// (set) Token: 0x0600B47B RID: 46203 RVA: 0x00194699 File Offset: 0x00192899
 		public virtual string SequencePath
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033AF RID: 13231
-		// (get) Token: 0x0600A9AA RID: 43434 RVA: 0x0017E6AF File Offset: 0x0017C8AF
-		// (set) Token: 0x0600A9AB RID: 43435 RVA: 0x0017E6D6 File Offset: 0x0017C8D6
+		// Token: 0x1700367A RID: 13946
+		// (get) Token: 0x0600B47C RID: 46204 RVA: 0x001946A7 File Offset: 0x001928A7
+		// (set) Token: 0x0600B47D RID: 46205 RVA: 0x001946CE File Offset: 0x001928CE
 		[Nullable(2)]
 		public virtual string SeqMarkBeforeModifyMat
 		{
@@ -134,11 +132,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064E2 RID: 25826
+		// Token: 0x04006AD1 RID: 27345
 		[Nullable(2)]
 		protected new ISwitchDataLayersTransitionWithSequence FbInstance;
 
-		// Token: 0x040064E3 RID: 25827
+		// Token: 0x04006AD2 RID: 27346
 		[Nullable(2)]
 		protected new ISwitchDataLayersTransitionWithSequence_SetValue PocoInterface;
 	}

@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055F5 RID: 22005
+	// Token: 0x020045CB RID: 17867
 	[NullableContext(1)]
 	public interface IRogueTipsData
 	{
-		// Token: 0x1700870E RID: 34574
-		// (get) Token: 0x0603806E RID: 229486
-		// (set) Token: 0x0603806F RID: 229487
+		// Token: 0x17005AD5 RID: 23253
+		// (get) Token: 0x0602CF6C RID: 184172
+		// (set) Token: 0x0602CF6D RID: 184173
 		string TextId { get; set; }
 
-		// Token: 0x1700870F RID: 34575
-		// (get) Token: 0x06038070 RID: 229488
-		// (set) Token: 0x06038071 RID: 229489
+		// Token: 0x17005AD6 RID: 23254
+		// (get) Token: 0x0602CF6E RID: 184174
+		// (set) Token: 0x0602CF6F RID: 184175
 		string[] TextParam { get; set; }
 
-		// Token: 0x17008710 RID: 34576
-		// (get) Token: 0x06038072 RID: 229490
-		// (set) Token: 0x06038073 RID: 229491
+		// Token: 0x17005AD7 RID: 23255
+		// (get) Token: 0x0602CF70 RID: 184176
+		// (set) Token: 0x0602CF71 RID: 184177
 		[Nullable(2)]
 		Action FinishCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A7F RID: 23167
+	// Token: 0x0200608C RID: 24716
 	public struct ITimelineTrackControlData : IFlatbufferObject
 	{
-		// Token: 0x1700AE81 RID: 44673
-		// (get) Token: 0x0602775B RID: 161627 RVA: 0x0056E0E3 File Offset: 0x0056C2E3
+		// Token: 0x1700B7B9 RID: 47033
+		// (get) Token: 0x06029CD3 RID: 171219 RVA: 0x005B50EF File Offset: 0x005B32EF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602775C RID: 161628 RVA: 0x0056E0F0 File Offset: 0x0056C2F0
+		// Token: 0x06029CD4 RID: 171220 RVA: 0x005B50FC File Offset: 0x005B32FC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602775D RID: 161629 RVA: 0x0056E0F8 File Offset: 0x0056C2F8
+		// Token: 0x06029CD5 RID: 171221 RVA: 0x005B5104 File Offset: 0x005B3304
 		public static ITimelineTrackControlData GetRootAsITimelineTrackControlData(ByteBuffer _bb)
 		{
 			return ITimelineTrackControlData.GetRootAsITimelineTrackControlData(_bb, default(ITimelineTrackControlData));
 		}
 
-		// Token: 0x0602775E RID: 161630 RVA: 0x0056E114 File Offset: 0x0056C314
+		// Token: 0x06029CD6 RID: 171222 RVA: 0x005B5120 File Offset: 0x005B3320
 		public static ITimelineTrackControlData GetRootAsITimelineTrackControlData(ByteBuffer _bb, ITimelineTrackControlData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602775F RID: 161631 RVA: 0x0056E131 File Offset: 0x0056C331
+		// Token: 0x06029CD7 RID: 171223 RVA: 0x005B513D File Offset: 0x005B333D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027760 RID: 161632 RVA: 0x0056E140 File Offset: 0x0056C340
+		// Token: 0x06029CD8 RID: 171224 RVA: 0x005B514C File Offset: 0x005B334C
 		public ITimelineTrackControlData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AE82 RID: 44674
-		// (get) Token: 0x06027761 RID: 161633 RVA: 0x0056E150 File Offset: 0x0056C350
+		// Token: 0x1700B7BA RID: 47034
+		// (get) Token: 0x06029CD9 RID: 171225 RVA: 0x005B515C File Offset: 0x005B335C
 		public ETrackControlMode Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027762 RID: 161634 RVA: 0x0056E18C File Offset: 0x0056C38C
+		// Token: 0x06029CDA RID: 171226 RVA: 0x005B5198 File Offset: 0x005B3398
 		public static Offset<ITimelineTrackControlData> CreateITimelineTrackControlData(FlatBufferBuilder builder, ETrackControlMode Type = ETrackControlMode.Sequence)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITimelineTrackControlData.EndITimelineTrackControlData(builder);
 		}
 
-		// Token: 0x06027763 RID: 161635 RVA: 0x0056E1A2 File Offset: 0x0056C3A2
+		// Token: 0x06029CDB RID: 171227 RVA: 0x005B51AE File Offset: 0x005B33AE
 		public static void StartITimelineTrackControlData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06027764 RID: 161636 RVA: 0x0056E1AB File Offset: 0x0056C3AB
+		// Token: 0x06029CDC RID: 171228 RVA: 0x005B51B7 File Offset: 0x005B33B7
 		public static void AddType(FlatBufferBuilder builder, ETrackControlMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06027765 RID: 161637 RVA: 0x0056E1B6 File Offset: 0x0056C3B6
+		// Token: 0x06029CDD RID: 171229 RVA: 0x005B51C2 File Offset: 0x005B33C2
 		public static Offset<ITimelineTrackControlData> EndITimelineTrackControlData(FlatBufferBuilder builder)
 		{
 			return new Offset<ITimelineTrackControlData>(builder.EndTable());
 		}
 
-		// Token: 0x06027766 RID: 161638 RVA: 0x0056E1C4 File Offset: 0x0056C3C4
+		// Token: 0x06029CDE RID: 171230 RVA: 0x005B51D0 File Offset: 0x005B33D0
 		public ITimelineTrackControlDataT UnPack()
 		{
 			ITimelineTrackControlDataT timelineTrackControlDataT = new ITimelineTrackControlDataT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return timelineTrackControlDataT;
 		}
 
-		// Token: 0x06027767 RID: 161639 RVA: 0x0056E1DF File Offset: 0x0056C3DF
+		// Token: 0x06029CDF RID: 171231 RVA: 0x005B51EB File Offset: 0x005B33EB
 		public void UnPackTo(ITimelineTrackControlDataT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06027768 RID: 161640 RVA: 0x0056E1F0 File Offset: 0x0056C3F0
+		// Token: 0x06029CE0 RID: 171232 RVA: 0x005B51FC File Offset: 0x005B33FC
 		public static Offset<ITimelineTrackControlData> Pack(FlatBufferBuilder builder, ITimelineTrackControlDataT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITimelineTrackControlData.CreateITimelineTrackControlData(builder, _o.Type);
 		}
 
-		// Token: 0x0400F131 RID: 61745
+		// Token: 0x0400FE28 RID: 65064
 		private Table __p;
 	}
 }

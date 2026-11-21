@@ -4,23 +4,23 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.BattleUi;
 
-// Token: 0x02001F3B RID: 7995
+// Token: 0x020013FD RID: 5117
 public class SlowTimeHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F6E1 RID: 63201 RVA: 0x003BA777 File Offset: 0x003B8977
+	// Token: 0x0600CB00 RID: 51968 RVA: 0x003C6263 File Offset: 0x003C4463
 	protected override void OnInitialize()
 	{
 		base.OnInitialize();
 		this.IsSlowTimeState = BattleUiModel.Instance.GetRoleSpecialState(ERoleSpecialState.SlowTimeWorld);
 	}
 
-	// Token: 0x0600F6E2 RID: 63202 RVA: 0x003BA790 File Offset: 0x003B8990
+	// Token: 0x0600CB01 RID: 51969 RVA: 0x003C627C File Offset: 0x003C447C
 	protected override void OnDestroyed()
 	{
 		this.DestroyUnit();
 	}
 
-	// Token: 0x0600F6E3 RID: 63203 RVA: 0x003BA798 File Offset: 0x003B8998
+	// Token: 0x0600CB02 RID: 51970 RVA: 0x003C6284 File Offset: 0x003C4484
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<ESelfCenteredMode, float>(EEventName.OnSwitchSelfCenteredMode, new Action<ESelfCenteredMode, float>(this.OnSwitchSelfCenteredMode));
@@ -29,7 +29,7 @@ public class SlowTimeHandle : HudUnitHandleBase
 		FormationAttributeController.Instance.AddMaxListener(EFormationAttributeId.TimeScaleStrength, new TValueListener(this.OnStrengthChanged), null);
 	}
 
-	// Token: 0x0600F6E4 RID: 63204 RVA: 0x003BA810 File Offset: 0x003B8A10
+	// Token: 0x0600CB03 RID: 51971 RVA: 0x003C62FC File Offset: 0x003C44FC
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<ESelfCenteredMode, float>(EEventName.OnSwitchSelfCenteredMode, new Action<ESelfCenteredMode, float>(this.OnSwitchSelfCenteredMode));
@@ -38,14 +38,14 @@ public class SlowTimeHandle : HudUnitHandleBase
 		FormationAttributeController.Instance.RemoveMaxListener(EFormationAttributeId.TimeScaleStrength, new TValueListener(this.OnStrengthChanged));
 	}
 
-	// Token: 0x0600F6E5 RID: 63205 RVA: 0x003BA885 File Offset: 0x003B8A85
+	// Token: 0x0600CB04 RID: 51972 RVA: 0x003C6371 File Offset: 0x003C4571
 	private void OnSwitchSelfCenteredMode(ESelfCenteredMode selfCenteredMode, float globalTimeDilation)
 	{
 		this.IsInSelfCenteredMode = (selfCenteredMode == ESelfCenteredMode.Skill);
 		this.RefreshUnitVisible();
 	}
 
-	// Token: 0x0600F6E6 RID: 63206 RVA: 0x003BA897 File Offset: 0x003B8A97
+	// Token: 0x0600CB05 RID: 51973 RVA: 0x003C6383 File Offset: 0x003C4583
 	private void OnRoleSpecialStateChanged(ERoleSpecialState state, bool enable)
 	{
 		if (state != ERoleSpecialState.SlowTimeWorld)
@@ -56,7 +56,7 @@ public class SlowTimeHandle : HudUnitHandleBase
 		this.RefreshUnitVisible();
 	}
 
-	// Token: 0x0600F6E7 RID: 63207 RVA: 0x003BA8AC File Offset: 0x003B8AAC
+	// Token: 0x0600CB06 RID: 51974 RVA: 0x003C6398 File Offset: 0x003C4598
 	private void RefreshUnitVisible()
 	{
 		this.NeedShow = (this.IsInSelfCenteredMode || this.IsSlowTimeState);
@@ -84,13 +84,13 @@ public class SlowTimeHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F6E8 RID: 63208 RVA: 0x003BA907 File Offset: 0x003B8B07
+	// Token: 0x0600CB07 RID: 51975 RVA: 0x003C63F3 File Offset: 0x003C45F3
 	private void OnStrengthChanged(EFormationAttributeId attributeId, float newValue, float oldValue)
 	{
 		this.UpdateStrength();
 	}
 
-	// Token: 0x0600F6E9 RID: 63209 RVA: 0x003BA910 File Offset: 0x003B8B10
+	// Token: 0x0600CB08 RID: 51976 RVA: 0x003C63FC File Offset: 0x003C45FC
 	private void UpdateStrength()
 	{
 		float max = FormationAttributeController.Instance.GetMax(EFormationAttributeId.TimeScaleStrength);
@@ -104,7 +104,7 @@ public class SlowTimeHandle : HudUnitHandleBase
 		this.CheckDestroyUnit();
 	}
 
-	// Token: 0x0600F6EA RID: 63210 RVA: 0x003BA960 File Offset: 0x003B8B60
+	// Token: 0x0600CB09 RID: 51977 RVA: 0x003C644C File Offset: 0x003C464C
 	private void NewUnit()
 	{
 		if (this.Unit != null)
@@ -127,7 +127,7 @@ public class SlowTimeHandle : HudUnitHandleBase
 		EventSystem.Instance.Emit<bool>(EEventName.BattleUiSlowTimeVisibleChanged, true);
 	}
 
-	// Token: 0x0600F6EB RID: 63211 RVA: 0x003BA9B0 File Offset: 0x003B8BB0
+	// Token: 0x0600CB0A RID: 51978 RVA: 0x003C649C File Offset: 0x003C469C
 	private void CheckDestroyUnit()
 	{
 		if (!this.NeedShow && this.IsFull)
@@ -136,7 +136,7 @@ public class SlowTimeHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F6EC RID: 63212 RVA: 0x003BA9C8 File Offset: 0x003B8BC8
+	// Token: 0x0600CB0B RID: 51979 RVA: 0x003C64B4 File Offset: 0x003C46B4
 	private void DestroyUnit()
 	{
 		if (this.Unit == null)
@@ -148,19 +148,19 @@ public class SlowTimeHandle : HudUnitHandleBase
 		EventSystem.Instance.Emit<bool>(EEventName.BattleUiSlowTimeVisibleChanged, false);
 	}
 
-	// Token: 0x04007250 RID: 29264
+	// Token: 0x04007331 RID: 29489
 	[Nullable(2)]
 	private SlowTimeUnit Unit;
 
-	// Token: 0x04007251 RID: 29265
+	// Token: 0x04007332 RID: 29490
 	private bool IsInSelfCenteredMode;
 
-	// Token: 0x04007252 RID: 29266
+	// Token: 0x04007333 RID: 29491
 	private bool IsSlowTimeState;
 
-	// Token: 0x04007253 RID: 29267
+	// Token: 0x04007334 RID: 29492
 	private bool NeedShow;
 
-	// Token: 0x04007254 RID: 29268
+	// Token: 0x04007335 RID: 29493
 	private bool IsFull;
 }

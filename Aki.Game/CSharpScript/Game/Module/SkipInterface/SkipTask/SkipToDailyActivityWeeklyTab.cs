@@ -5,10 +5,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BC5 RID: 19397
+	// Token: 0x02003B6F RID: 15215
 	public class SkipToDailyActivityWeeklyTab : SkipTask
 	{
-		// Token: 0x06032319 RID: 205593 RVA: 0x00BA9FC4 File Offset: 0x00BA81C4
+		// Token: 0x060270AA RID: 159914 RVA: 0x00AEE270 File Offset: 0x00AEC470
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 				return;
 			}
 			base.Finish();
-			AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(EUiTabViewName.DailyActivityTabView), new int?(2), null);
+			AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(EUiTabViewName.DailyActivityTabView), new int?(2), null, null);
 		}
 	}
 }

@@ -2,28 +2,28 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020034B9 RID: 13497
+// Token: 0x02002A2D RID: 10797
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class Filter<[Nullable(2)] T>
 {
-	// Token: 0x170028BF RID: 10431
-	// (get) Token: 0x0601D647 RID: 120391 RVA: 0x0083327F File Offset: 0x0083147F
-	// (set) Token: 0x0601D648 RID: 120392 RVA: 0x00833287 File Offset: 0x00831487
+	// Token: 0x17002C57 RID: 11351
+	// (get) Token: 0x0601B346 RID: 111430 RVA: 0x0085A69F File Offset: 0x0085889F
+	// (set) Token: 0x0601B347 RID: 111431 RVA: 0x0085A6A7 File Offset: 0x008588A7
 	protected virtual Func<T, bool> TargetCriteriaInternal { get; set; }
 
-	// Token: 0x170028C0 RID: 10432
-	// (get) Token: 0x0601D649 RID: 120393
+	// Token: 0x17002C58 RID: 11352
+	// (get) Token: 0x0601B348 RID: 111432
 	public abstract string DebugName { get; }
 
-	// Token: 0x170028C1 RID: 10433
-	// (get) Token: 0x0601D64A RID: 120394 RVA: 0x00833290 File Offset: 0x00831490
-	// (set) Token: 0x0601D64B RID: 120395 RVA: 0x00833298 File Offset: 0x00831498
+	// Token: 0x17002C59 RID: 11353
+	// (get) Token: 0x0601B349 RID: 111433 RVA: 0x0085A6B0 File Offset: 0x008588B0
+	// (set) Token: 0x0601B34A RID: 111434 RVA: 0x0085A6B8 File Offset: 0x008588B8
 	public virtual EFilterType FilterType { get; set; }
 
-	// Token: 0x170028C2 RID: 10434
-	// (get) Token: 0x0601D64C RID: 120396 RVA: 0x008332A1 File Offset: 0x008314A1
-	// (set) Token: 0x0601D64D RID: 120397 RVA: 0x008332A9 File Offset: 0x008314A9
+	// Token: 0x17002C5A RID: 11354
+	// (get) Token: 0x0601B34B RID: 111435 RVA: 0x0085A6C1 File Offset: 0x008588C1
+	// (set) Token: 0x0601B34C RID: 111436 RVA: 0x0085A6C9 File Offset: 0x008588C9
 	public Func<T, bool> Criteria
 	{
 		get
@@ -37,7 +37,7 @@ public abstract class Filter<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x0601D64E RID: 120398 RVA: 0x008332C3 File Offset: 0x008314C3
+	// Token: 0x0601B34D RID: 111437 RVA: 0x0085A6E3 File Offset: 0x008588E3
 	protected Filter()
 	{
 		Func<T, bool> targetCriteriaInternal;
@@ -50,31 +50,31 @@ public abstract class Filter<[Nullable(2)] T>
 		base..ctor();
 	}
 
-	// Token: 0x0601D64F RID: 120399 RVA: 0x008332F3 File Offset: 0x008314F3
+	// Token: 0x0601B34E RID: 111438 RVA: 0x0085A713 File Offset: 0x00858913
 	public virtual void Init()
 	{
 		FilterTypeHelper.TryCatchWrapper<bool>(new Func<bool>(this.OnInit), "[Filter] OnInit执行出错", base.GetType().Name);
 	}
 
-	// Token: 0x0601D650 RID: 120400 RVA: 0x00833318 File Offset: 0x00831518
+	// Token: 0x0601B34F RID: 111439 RVA: 0x0085A738 File Offset: 0x00858938
 	protected virtual bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0601D651 RID: 120401 RVA: 0x0083331B File Offset: 0x0083151B
+	// Token: 0x0601B350 RID: 111440 RVA: 0x0085A73B File Offset: 0x0085893B
 	public virtual void Cleanup()
 	{
 		FilterTypeHelper.TryCatchWrapper<bool>(new Func<bool>(this.OnCleanup), "[Filter] OnCleanup执行出错", base.GetType().Name);
 	}
 
-	// Token: 0x0601D652 RID: 120402 RVA: 0x00833340 File Offset: 0x00831540
+	// Token: 0x0601B351 RID: 111441 RVA: 0x0085A760 File Offset: 0x00858960
 	protected virtual bool OnCleanup()
 	{
 		return true;
 	}
 
-	// Token: 0x0601D653 RID: 120403 RVA: 0x00833344 File Offset: 0x00831544
+	// Token: 0x0601B352 RID: 111442 RVA: 0x0085A764 File Offset: 0x00858964
 	public unsafe bool ExecuteCriteria(T target)
 	{
 		try
@@ -109,11 +109,11 @@ public abstract class Filter<[Nullable(2)] T>
 		return false;
 	}
 
-	// Token: 0x0200986D RID: 39021
+	// Token: 0x02008A88 RID: 35464
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04030926 RID: 198950
+		// Token: 0x0402BFAB RID: 180139
 		[Nullable(new byte[]
 		{
 			0,

@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200204E RID: 8270
+// Token: 0x02001521 RID: 5409
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class KuroFastCollisionController : ControllerBase
 {
-	// Token: 0x06010403 RID: 66563 RVA: 0x003F67FC File Offset: 0x003F49FC
+	// Token: 0x0600D86B RID: 55403 RVA: 0x00402DC8 File Offset: 0x00400FC8
 	[return: Nullable(2)]
 	public unsafe UKuroFastCollisionAlgorithm CreateAlgorithm(UClass algorithmClass, bool tickEnabled)
 	{
@@ -35,7 +35,7 @@ public class KuroFastCollisionController : ControllerBase
 		return ukuroFastCollisionAlgorithm;
 	}
 
-	// Token: 0x06010404 RID: 66564 RVA: 0x003F68AC File Offset: 0x003F4AAC
+	// Token: 0x0600D86C RID: 55404 RVA: 0x00402E78 File Offset: 0x00401078
 	[NullableContext(2)]
 	public void DestroyAlgorithm(UKuroFastCollisionAlgorithm algorithm)
 	{
@@ -52,15 +52,15 @@ public class KuroFastCollisionController : ControllerBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06010405 RID: 66565 RVA: 0x003F68F5 File Offset: 0x003F4AF5
+	// Token: 0x0600D86D RID: 55405 RVA: 0x00402EC1 File Offset: 0x004010C1
 	[NullableContext(2)]
 	private UKuroFastCollisionSubsystem GetKfcSubsystem()
 	{
 		return UKuroFastCollisionSubsystem.Get(GlobalData.World);
 	}
 
-	// Token: 0x170013F2 RID: 5106
-	// (get) Token: 0x06010406 RID: 66566 RVA: 0x003F6901 File Offset: 0x003F4B01
+	// Token: 0x1700141F RID: 5151
+	// (get) Token: 0x0600D86E RID: 55406 RVA: 0x00402ECD File Offset: 0x004010CD
 	public static KuroFastCollisionController Instance
 	{
 		get
@@ -69,7 +69,7 @@ public class KuroFastCollisionController : ControllerBase
 		}
 	}
 
-	// Token: 0x06010407 RID: 66567 RVA: 0x003F6908 File Offset: 0x003F4B08
+	// Token: 0x0600D86F RID: 55407 RVA: 0x00402ED4 File Offset: 0x004010D4
 	public static KuroFastCollisionController GetOrCreateInstance()
 	{
 		if (KuroFastCollisionController._Instance == null)
@@ -79,7 +79,7 @@ public class KuroFastCollisionController : ControllerBase
 		return KuroFastCollisionController._Instance;
 	}
 
-	// Token: 0x06010408 RID: 66568 RVA: 0x003F691C File Offset: 0x003F4B1C
+	// Token: 0x0600D870 RID: 55408 RVA: 0x00402EE8 File Offset: 0x004010E8
 	public static bool CreateInstance()
 	{
 		if (KuroFastCollisionController._Instance != null)
@@ -90,24 +90,24 @@ public class KuroFastCollisionController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06010409 RID: 66569 RVA: 0x003F6932 File Offset: 0x003F4B32
+	// Token: 0x0600D871 RID: 55409 RVA: 0x00402EFE File Offset: 0x004010FE
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601040A RID: 66570 RVA: 0x003F6934 File Offset: 0x003F4B34
+	// Token: 0x0600D872 RID: 55410 RVA: 0x00402F00 File Offset: 0x00401100
 	public static void ResetStaticDefaultValue()
 	{
 		KuroFastCollisionController._Instance = null;
 	}
 
-	// Token: 0x0601040B RID: 66571 RVA: 0x003F693C File Offset: 0x003F4B3C
+	// Token: 0x0600D873 RID: 55411 RVA: 0x00402F08 File Offset: 0x00401108
 	static KuroFastCollisionController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(KuroFastCollisionController.CreateStaticDefaultValue), new Action(KuroFastCollisionController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400782E RID: 30766
+	// Token: 0x04007917 RID: 30999
 	[Nullable(2)]
 	private static KuroFastCollisionController _Instance;
 }

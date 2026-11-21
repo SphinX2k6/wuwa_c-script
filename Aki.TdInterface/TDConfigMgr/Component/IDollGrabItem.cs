@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002C5 RID: 709
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200030C RID: 780
 	public class IDollGrabItem
 	{
-		// Token: 0x06000D59 RID: 3417 RVA: 0x00031F80 File Offset: 0x00030180
+		// Token: 0x06000E89 RID: 3721 RVA: 0x00034EB4 File Offset: 0x000330B4
 		private IDollGrabItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000D5A RID: 3418 RVA: 0x00031FB8 File Offset: 0x000301B8
+		// Token: 0x06000E8A RID: 3722 RVA: 0x00034EEC File Offset: 0x000330EC
 		public static IDollGrabItem Create([Nullable(2)] IDollGrabItem instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D5B RID: 3419 RVA: 0x00031FCB File Offset: 0x000301CB
+		// Token: 0x06000E8B RID: 3723 RVA: 0x00034EFF File Offset: 0x000330FF
 		public static IDollGrabItem CreateFromSetValue([Nullable(2)] IDollGrabItem_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D5C RID: 3420 RVA: 0x00031FDE File Offset: 0x000301DE
+		// Token: 0x06000E8C RID: 3724 RVA: 0x00034F12 File Offset: 0x00033112
 		public IDollGrabItem_SetValue ToSetValue()
 		{
 			return new IDollGrabItem_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003E2 RID: 994
-		// (get) Token: 0x06000D5D RID: 3421 RVA: 0x00031FFD File Offset: 0x000301FD
-		// (set) Token: 0x06000D5E RID: 3422 RVA: 0x00032028 File Offset: 0x00030228
+		// Token: 0x1700042F RID: 1071
+		// (get) Token: 0x06000E8D RID: 3725 RVA: 0x00034F31 File Offset: 0x00033131
+		// (set) Token: 0x06000E8E RID: 3726 RVA: 0x00034F5C File Offset: 0x0003315C
 		public virtual int Id
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003E3 RID: 995
-		// (get) Token: 0x06000D5F RID: 3423 RVA: 0x00032036 File Offset: 0x00030236
-		// (set) Token: 0x06000D60 RID: 3424 RVA: 0x00032061 File Offset: 0x00030261
+		// Token: 0x17000430 RID: 1072
+		// (get) Token: 0x06000E8F RID: 3727 RVA: 0x00034F6A File Offset: 0x0003316A
+		// (set) Token: 0x06000E90 RID: 3728 RVA: 0x00034F95 File Offset: 0x00033195
 		public virtual int ItemId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000C23 RID: 3107
+		// Token: 0x04000D0D RID: 3341
 		[Nullable(2)]
 		protected IDollGrabItem FbInstance;
 
-		// Token: 0x04000C24 RID: 3108
+		// Token: 0x04000D0E RID: 3342
 		[Nullable(2)]
 		protected IDollGrabItem_SetValue PocoInterface;
 	}

@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x0200519F RID: 20895
+	// Token: 0x0200416F RID: 16751
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 	})]
 	public class DeckBuilderQuicklyBuildItem : GridProxyAbstract<DeckInfo>
 	{
-		// Token: 0x0603576B RID: 218987 RVA: 0x00CA8120 File Offset: 0x00CA6320
+		// Token: 0x0602A666 RID: 173670 RVA: 0x00BF573C File Offset: 0x00BF393C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x0603576C RID: 218988 RVA: 0x00CA81CC File Offset: 0x00CA63CC
+		// Token: 0x0602A667 RID: 173671 RVA: 0x00BF57E8 File Offset: 0x00BF39E8
 		protected override void OnStart()
 		{
 			for (int i = 3; i <= 4; i++)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x0603576D RID: 218989 RVA: 0x00CA81F8 File Offset: 0x00CA63F8
+		// Token: 0x0602A668 RID: 173672 RVA: 0x00BF5814 File Offset: 0x00BF3A14
 		public override void Refresh(DeckInfo data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x0603576E RID: 218990 RVA: 0x00CA8304 File Offset: 0x00CA6504
+		// Token: 0x0602A669 RID: 173673 RVA: 0x00BF5920 File Offset: 0x00BF3B20
 		public void RefreshCountText()
 		{
 			if (this.Data == null)
@@ -91,19 +91,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}));
 		}
 
-		// Token: 0x0603576F RID: 218991 RVA: 0x00CA83A8 File Offset: 0x00CA65A8
+		// Token: 0x0602A66A RID: 173674 RVA: 0x00BF59C4 File Offset: 0x00BF3BC4
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x06035770 RID: 218992 RVA: 0x00CA83BB File Offset: 0x00CA65BB
+		// Token: 0x0602A66B RID: 173675 RVA: 0x00BF59D7 File Offset: 0x00BF3BD7
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x06035771 RID: 218993 RVA: 0x00CA83CE File Offset: 0x00CA65CE
+		// Token: 0x0602A66C RID: 173676 RVA: 0x00BF59EA File Offset: 0x00BF3BEA
 		private void OnToggleStateChangeInternal(EToggleState toggleState)
 		{
 			if (this.OnToggleStateChange != null)
@@ -112,34 +112,34 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x0401C666 RID: 116326
+		// Token: 0x0401709B RID: 94363
 		[Nullable(2)]
 		protected DeckInfo Data;
 
-		// Token: 0x0401C667 RID: 116327
+		// Token: 0x0401709C RID: 94364
 		protected List<UUITexture> CardTextureList = new List<UUITexture>();
 
-		// Token: 0x0401C668 RID: 116328
+		// Token: 0x0401709D RID: 94365
 		[Nullable(2)]
 		public Action<int> OnToggleStateChange;
 
-		// Token: 0x0200B30F RID: 45839
+		// Token: 0x02009D48 RID: 40264
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x04036453 RID: 222291
+			// Token: 0x04030EA8 RID: 200360
 			public const int ItemToggle = 0;
 
-			// Token: 0x04036454 RID: 222292
+			// Token: 0x04030EA9 RID: 200361
 			public const int DeckNameText = 1;
 
-			// Token: 0x04036455 RID: 222293
+			// Token: 0x04030EAA RID: 200362
 			public const int CardCountText = 2;
 
-			// Token: 0x04036456 RID: 222294
+			// Token: 0x04030EAB RID: 200363
 			public const int ElementTexture1 = 3;
 
-			// Token: 0x04036457 RID: 222295
+			// Token: 0x04030EAC RID: 200364
 			public const int ElementTexture2 = 4;
 		}
 	}

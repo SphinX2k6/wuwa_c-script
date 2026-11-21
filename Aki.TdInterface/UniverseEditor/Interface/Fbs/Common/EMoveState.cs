@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D00 RID: 23808
+	// Token: 0x02006334 RID: 25396
 	public enum EMoveState : byte
 	{
-		// Token: 0x0400F669 RID: 63081
+		// Token: 0x040103B8 RID: 66488
 		None,
-		// Token: 0x0400F66A RID: 63082
+		// Token: 0x040103B9 RID: 66489
 		Walk,
-		// Token: 0x0400F66B RID: 63083
+		// Token: 0x040103BA RID: 66490
 		Run,
-		// Token: 0x0400F66C RID: 63084
+		// Token: 0x040103BB RID: 66491
 		Sprint
 	}
 }

@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Dango
 {
-	// Token: 0x02005AE2 RID: 23266
+	// Token: 0x02004AC3 RID: 19139
 	internal class SkillPanel : UiPanelBase
 	{
-		// Token: 0x0603AE9A RID: 241306 RVA: 0x00E0BDEE File Offset: 0x00E09FEE
+		// Token: 0x0602FE0C RID: 196108 RVA: 0x00D5CAD6 File Offset: 0x00D5ACD6
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +19,7 @@ namespace CSharpScript.Game.Module.Dango
 			};
 		}
 
-		// Token: 0x0603AE9B RID: 241307 RVA: 0x00E0BE28 File Offset: 0x00E0A028
+		// Token: 0x0602FE0D RID: 196109 RVA: 0x00D5CB10 File Offset: 0x00D5AD10
 		[NullableContext(1)]
 		public void Refresh(AbyssDangoRoleData data)
 		{
@@ -28,7 +27,7 @@ namespace CSharpScript.Game.Module.Dango
 			{
 				string skillDesc = data.GetSkillDesc();
 				string[] skillDescAddition = data.GetSkillDescAddition();
-				LguiUtil.Instance.SetLocalTextNew(base.GetText(1), skillDesc, skillDescAddition.ToArray<string>());
+				LguiUtil.Instance.SetLocalTextNew(base.GetText(1), skillDesc, skillDescAddition);
 				this.SetActive(true);
 				return;
 			}
@@ -47,7 +46,7 @@ namespace CSharpScript.Game.Module.Dango
 			this.SetActive(effectPassiveSkillDescList.Length != 0);
 		}
 
-		// Token: 0x0401EBFA RID: 125946
+		// Token: 0x040196B6 RID: 104118
 		public ESkillShowType SkillType;
 	}
 }

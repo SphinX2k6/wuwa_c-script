@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019AA RID: 6570
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B31 RID: 6961
 	[JsonConverter(typeof(IDisableCharacterSectionalSkillOptionConverter))]
 	public class IDisableCharacterSectionalSkillOption
 	{
-		// Token: 0x06008C93 RID: 35987 RVA: 0x00149BDC File Offset: 0x00147DDC
+		// Token: 0x060093B7 RID: 37815 RVA: 0x001593EC File Offset: 0x001575EC
 		private IDisableCharacterSectionalSkillOption_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008C94 RID: 35988 RVA: 0x00149C14 File Offset: 0x00147E14
+		// Token: 0x060093B8 RID: 37816 RVA: 0x00159424 File Offset: 0x00157624
 		public static IDisableCharacterSectionalSkillOption Create([Nullable(2)] IDisableCharacterSectionalSkillOption instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C95 RID: 35989 RVA: 0x00149C27 File Offset: 0x00147E27
+		// Token: 0x060093B9 RID: 37817 RVA: 0x00159437 File Offset: 0x00157637
 		public static IDisableCharacterSectionalSkillOption CreateFromSetValue([Nullable(2)] IDisableCharacterSectionalSkillOption_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C96 RID: 35990 RVA: 0x00149C3C File Offset: 0x00147E3C
+		// Token: 0x060093BA RID: 37818 RVA: 0x0015944C File Offset: 0x0015764C
 		public IDisableCharacterSectionalSkillOption_SetValue ToSetValue()
 		{
 			return new IDisableCharacterSectionalSkillOption_SetValue
@@ -72,9 +70,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D1F RID: 11551
-		// (get) Token: 0x06008C97 RID: 35991 RVA: 0x00149CE0 File Offset: 0x00147EE0
-		// (set) Token: 0x06008C98 RID: 35992 RVA: 0x00149D1A File Offset: 0x00147F1A
+		// Token: 0x17002F1E RID: 12062
+		// (get) Token: 0x060093BB RID: 37819 RVA: 0x001594F0 File Offset: 0x001576F0
+		// (set) Token: 0x060093BC RID: 37820 RVA: 0x0015952A File Offset: 0x0015772A
 		public virtual bool? DisableJump
 		{
 			get
@@ -96,9 +94,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D20 RID: 11552
-		// (get) Token: 0x06008C99 RID: 35993 RVA: 0x00149D28 File Offset: 0x00147F28
-		// (set) Token: 0x06008C9A RID: 35994 RVA: 0x00149D62 File Offset: 0x00147F62
+		// Token: 0x17002F1F RID: 12063
+		// (get) Token: 0x060093BD RID: 37821 RVA: 0x00159538 File Offset: 0x00157738
+		// (set) Token: 0x060093BE RID: 37822 RVA: 0x00159572 File Offset: 0x00157772
 		public virtual bool? DisableShowClimb
 		{
 			get
@@ -120,9 +118,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D21 RID: 11553
-		// (get) Token: 0x06008C9B RID: 35995 RVA: 0x00149D70 File Offset: 0x00147F70
-		// (set) Token: 0x06008C9C RID: 35996 RVA: 0x00149DAA File Offset: 0x00147FAA
+		// Token: 0x17002F20 RID: 12064
+		// (get) Token: 0x060093BF RID: 37823 RVA: 0x00159580 File Offset: 0x00157780
+		// (set) Token: 0x060093C0 RID: 37824 RVA: 0x001595BA File Offset: 0x001577BA
 		public virtual bool? DisableAttack
 		{
 			get
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D22 RID: 11554
-		// (get) Token: 0x06008C9D RID: 35997 RVA: 0x00149DB8 File Offset: 0x00147FB8
-		// (set) Token: 0x06008C9E RID: 35998 RVA: 0x00149DF2 File Offset: 0x00147FF2
+		// Token: 0x17002F21 RID: 12065
+		// (get) Token: 0x060093C1 RID: 37825 RVA: 0x001595C8 File Offset: 0x001577C8
+		// (set) Token: 0x060093C2 RID: 37826 RVA: 0x00159602 File Offset: 0x00157802
 		public virtual bool? DisableDodge
 		{
 			get
@@ -168,9 +166,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D23 RID: 11555
-		// (get) Token: 0x06008C9F RID: 35999 RVA: 0x00149E00 File Offset: 0x00148000
-		// (set) Token: 0x06008CA0 RID: 36000 RVA: 0x00149E3A File Offset: 0x0014803A
+		// Token: 0x17002F22 RID: 12066
+		// (get) Token: 0x060093C3 RID: 37827 RVA: 0x00159610 File Offset: 0x00157810
+		// (set) Token: 0x060093C4 RID: 37828 RVA: 0x0015964A File Offset: 0x0015784A
 		public virtual bool? DisableSkill1
 		{
 			get
@@ -192,9 +190,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D24 RID: 11556
-		// (get) Token: 0x06008CA1 RID: 36001 RVA: 0x00149E48 File Offset: 0x00148048
-		// (set) Token: 0x06008CA2 RID: 36002 RVA: 0x00149E82 File Offset: 0x00148082
+		// Token: 0x17002F23 RID: 12067
+		// (get) Token: 0x060093C5 RID: 37829 RVA: 0x00159658 File Offset: 0x00157858
+		// (set) Token: 0x060093C6 RID: 37830 RVA: 0x00159692 File Offset: 0x00157892
 		public virtual bool? DisableUltimateSkill
 		{
 			get
@@ -216,9 +214,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D25 RID: 11557
-		// (get) Token: 0x06008CA3 RID: 36003 RVA: 0x00149E90 File Offset: 0x00148090
-		// (set) Token: 0x06008CA4 RID: 36004 RVA: 0x00149ECA File Offset: 0x001480CA
+		// Token: 0x17002F24 RID: 12068
+		// (get) Token: 0x060093C7 RID: 37831 RVA: 0x001596A0 File Offset: 0x001578A0
+		// (set) Token: 0x060093C8 RID: 37832 RVA: 0x001596DA File Offset: 0x001578DA
 		public virtual bool? DisableExploreInput
 		{
 			get
@@ -240,9 +238,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D26 RID: 11558
-		// (get) Token: 0x06008CA5 RID: 36005 RVA: 0x00149ED8 File Offset: 0x001480D8
-		// (set) Token: 0x06008CA6 RID: 36006 RVA: 0x00149F12 File Offset: 0x00148112
+		// Token: 0x17002F25 RID: 12069
+		// (get) Token: 0x060093C9 RID: 37833 RVA: 0x001596E8 File Offset: 0x001578E8
+		// (set) Token: 0x060093CA RID: 37834 RVA: 0x00159722 File Offset: 0x00157922
 		public virtual bool? DisableSwitchRole1
 		{
 			get
@@ -264,9 +262,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D27 RID: 11559
-		// (get) Token: 0x06008CA7 RID: 36007 RVA: 0x00149F20 File Offset: 0x00148120
-		// (set) Token: 0x06008CA8 RID: 36008 RVA: 0x00149F5A File Offset: 0x0014815A
+		// Token: 0x17002F26 RID: 12070
+		// (get) Token: 0x060093CB RID: 37835 RVA: 0x00159730 File Offset: 0x00157930
+		// (set) Token: 0x060093CC RID: 37836 RVA: 0x0015976A File Offset: 0x0015796A
 		public virtual bool? DisableSwitchRole2
 		{
 			get
@@ -288,9 +286,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D28 RID: 11560
-		// (get) Token: 0x06008CA9 RID: 36009 RVA: 0x00149F68 File Offset: 0x00148168
-		// (set) Token: 0x06008CAA RID: 36010 RVA: 0x00149FA2 File Offset: 0x001481A2
+		// Token: 0x17002F27 RID: 12071
+		// (get) Token: 0x060093CD RID: 37837 RVA: 0x00159778 File Offset: 0x00157978
+		// (set) Token: 0x060093CE RID: 37838 RVA: 0x001597B2 File Offset: 0x001579B2
 		public virtual bool? DisableSwitchRole3
 		{
 			get
@@ -312,9 +310,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D29 RID: 11561
-		// (get) Token: 0x06008CAB RID: 36011 RVA: 0x00149FB0 File Offset: 0x001481B0
-		// (set) Token: 0x06008CAC RID: 36012 RVA: 0x00149FEA File Offset: 0x001481EA
+		// Token: 0x17002F28 RID: 12072
+		// (get) Token: 0x060093CF RID: 37839 RVA: 0x001597C0 File Offset: 0x001579C0
+		// (set) Token: 0x060093D0 RID: 37840 RVA: 0x001597FA File Offset: 0x001579FA
 		public virtual bool? DisableLock
 		{
 			get
@@ -336,9 +334,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D2A RID: 11562
-		// (get) Token: 0x06008CAD RID: 36013 RVA: 0x00149FF8 File Offset: 0x001481F8
-		// (set) Token: 0x06008CAE RID: 36014 RVA: 0x0014A032 File Offset: 0x00148232
+		// Token: 0x17002F29 RID: 12073
+		// (get) Token: 0x060093D1 RID: 37841 RVA: 0x00159808 File Offset: 0x00157A08
+		// (set) Token: 0x060093D2 RID: 37842 RVA: 0x00159842 File Offset: 0x00157A42
 		public virtual bool? DisableAim
 		{
 			get
@@ -360,11 +358,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400577A RID: 22394
+		// Token: 0x04005BC3 RID: 23491
 		[Nullable(2)]
 		protected IDisableCharacterSectionalSkillOption FbInstance;
 
-		// Token: 0x0400577B RID: 22395
+		// Token: 0x04005BC4 RID: 23492
 		[Nullable(2)]
 		protected IDisableCharacterSectionalSkillOption_SetValue PocoInterface;
 	}

@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002AC1 RID: 10945
+// Token: 0x0200203D RID: 8253
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsActivitySubView : ActivitySubViewBase
 {
-	// Token: 0x06016C91 RID: 93329 RVA: 0x005C949C File Offset: 0x005C769C
+	// Token: 0x060146C2 RID: 83650 RVA: 0x005F5FF0 File Offset: 0x005F41F0
 	protected override void OnSetData()
 	{
 		this.ActivityData = (SurvivorsActivityData)this.ActivityBaseData;
 	}
 
-	// Token: 0x06016C92 RID: 93330 RVA: 0x005C94B0 File Offset: 0x005C76B0
+	// Token: 0x060146C3 RID: 83651 RVA: 0x005F6004 File Offset: 0x005F4204
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ public class SurvivorsActivitySubView : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06016C93 RID: 93331 RVA: 0x005C9588 File Offset: 0x005C7788
+	// Token: 0x060146C4 RID: 83652 RVA: 0x005F60DC File Offset: 0x005F42DC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsActivitySubView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ public class SurvivorsActivitySubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016C94 RID: 93332 RVA: 0x005C95CC File Offset: 0x005C77CC
+	// Token: 0x060146C5 RID: 83653 RVA: 0x005F6120 File Offset: 0x005F4320
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.ActivityData.LocalConfig;
@@ -76,19 +76,19 @@ public class SurvivorsActivitySubView : ActivitySubViewBase
 		this.OnRefreshView();
 	}
 
-	// Token: 0x06016C95 RID: 93333 RVA: 0x005C96E1 File Offset: 0x005C78E1
+	// Token: 0x060146C6 RID: 83654 RVA: 0x005F6235 File Offset: 0x005F4435
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
 	}
 
-	// Token: 0x06016C96 RID: 93334 RVA: 0x005C96FF File Offset: 0x005C78FF
+	// Token: 0x060146C7 RID: 83655 RVA: 0x005F6253 File Offset: 0x005F4453
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
 	}
 
-	// Token: 0x06016C97 RID: 93335 RVA: 0x005C971D File Offset: 0x005C791D
+	// Token: 0x060146C8 RID: 83656 RVA: 0x005F6271 File Offset: 0x005F4471
 	private void OnRefreshRedDot(int activityId)
 	{
 		if (this.ActivityData.Id != activityId)
@@ -99,7 +99,7 @@ public class SurvivorsActivitySubView : ActivitySubViewBase
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06016C98 RID: 93336 RVA: 0x005C973A File Offset: 0x005C793A
+	// Token: 0x060146C9 RID: 83657 RVA: 0x005F628E File Offset: 0x005F448E
 	protected override void OnRefreshView()
 	{
 		this.RefreshTimerText();
@@ -107,20 +107,20 @@ public class SurvivorsActivitySubView : ActivitySubViewBase
 		this.RefreshCondition();
 	}
 
-	// Token: 0x06016C99 RID: 93337 RVA: 0x005C974E File Offset: 0x005C794E
+	// Token: 0x060146CA RID: 83658 RVA: 0x005F62A2 File Offset: 0x005F44A2
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x06016C9A RID: 93338 RVA: 0x005C9756 File Offset: 0x005C7956
+	// Token: 0x060146CB RID: 83659 RVA: 0x005F62AA File Offset: 0x005F44AA
 	private void RefreshRedDot()
 	{
 		base.GetItem(6).SetUIActive(this.ActivityData.GetRewardRedDotState());
 		this.FunctionalComponent.SetFunctionRedDotVisible(this.ActivityData.GetActivityRedDotState());
 	}
 
-	// Token: 0x06016C9B RID: 93339 RVA: 0x005C9788 File Offset: 0x005C7988
+	// Token: 0x060146CC RID: 83660 RVA: 0x005F62DC File Offset: 0x005F44DC
 	private void RefreshTimerText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -133,7 +133,7 @@ public class SurvivorsActivitySubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06016C9C RID: 93340 RVA: 0x005C97C4 File Offset: 0x005C79C4
+	// Token: 0x060146CD RID: 83661 RVA: 0x005F6318 File Offset: 0x005F4518
 	private void RefreshCondition()
 	{
 		this.RefreshRewardInfo();
@@ -150,7 +150,7 @@ public class SurvivorsActivitySubView : ActivitySubViewBase
 		this.FunctionalComponent.SetPanelTipVisible(levelUnlockRedDotState);
 	}
 
-	// Token: 0x06016C9D RID: 93341 RVA: 0x005C982C File Offset: 0x005C7A2C
+	// Token: 0x060146CE RID: 83662 RVA: 0x005F6380 File Offset: 0x005F4580
 	private void RefreshRewardInfo()
 	{
 		int finishedRewardTaskCount = this.ActivityData.GetFinishedRewardTaskCount();
@@ -162,7 +162,7 @@ public class SurvivorsActivitySubView : ActivitySubViewBase
 		}));
 	}
 
-	// Token: 0x06016C9E RID: 93342 RVA: 0x005C9889 File Offset: 0x005C7A89
+	// Token: 0x060146CF RID: 83663 RVA: 0x005F63DD File Offset: 0x005F45DD
 	private void OnBtnScore()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsRogueRewardView, null, delegate(bool success, int viewId)
@@ -179,7 +179,7 @@ public class SurvivorsActivitySubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06016C9F RID: 93343 RVA: 0x005C98BA File Offset: 0x005C7ABA
+	// Token: 0x060146D0 RID: 83664 RVA: 0x005F640E File Offset: 0x005F460E
 	private void FunctionExecute()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -203,17 +203,17 @@ public class SurvivorsActivitySubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0400A941 RID: 43329
+	// Token: 0x0400AD47 RID: 44359
 	[Nullable(1)]
 	private SurvivorsActivityData ActivityData;
 
-	// Token: 0x0400A942 RID: 43330
+	// Token: 0x0400AD48 RID: 44360
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x0400A943 RID: 43331
+	// Token: 0x0400AD49 RID: 44361
 	private ActivityDescriptionTypeA DescriptionComponent;
 
-	// Token: 0x0400A944 RID: 43332
+	// Token: 0x0400AD4A RID: 44362
 	[Nullable(new byte[]
 	{
 		2,
@@ -221,32 +221,32 @@ public class SurvivorsActivitySubView : ActivitySubViewBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-	// Token: 0x0400A945 RID: 43333
+	// Token: 0x0400AD4B RID: 44363
 	private ActivityFunctionalTypeA FunctionalComponent;
 
-	// Token: 0x020090EE RID: 37102
+	// Token: 0x02008332 RID: 33586
 	[NullableContext(0)]
 	private static class EComponents
 	{
-		// Token: 0x0402EF31 RID: 192305
+		// Token: 0x0402A637 RID: 173623
 		public const int TitleItem = 0;
 
-		// Token: 0x0402EF32 RID: 192306
+		// Token: 0x0402A638 RID: 173624
 		public const int DescriptionItem = 1;
 
-		// Token: 0x0402EF33 RID: 192307
+		// Token: 0x0402A639 RID: 173625
 		public const int RewardListItem = 2;
 
-		// Token: 0x0402EF34 RID: 192308
+		// Token: 0x0402A63A RID: 173626
 		public const int FunctionArea = 3;
 
-		// Token: 0x0402EF35 RID: 192309
+		// Token: 0x0402A63B RID: 173627
 		public const int BtnReward = 4;
 
-		// Token: 0x0402EF36 RID: 192310
+		// Token: 0x0402A63C RID: 173628
 		public const int TxtReward = 5;
 
-		// Token: 0x0402EF37 RID: 192311
+		// Token: 0x0402A63D RID: 173629
 		public const int BtnRewardRedDot = 6;
 	}
 }

@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E71 RID: 20081
+	// Token: 0x02003E3A RID: 15930
 	public class RogueBattleMapRoleAttributeFettersItem : UiPanelBase
 	{
-		// Token: 0x06033B12 RID: 211730 RVA: 0x00C1B014 File Offset: 0x00C19214
+		// Token: 0x0602897D RID: 166269 RVA: 0x00B64538 File Offset: 0x00B62738
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,26 +24,26 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B13 RID: 211731 RVA: 0x00C1B06E File Offset: 0x00C1926E
+		// Token: 0x0602897E RID: 166270 RVA: 0x00B64592 File Offset: 0x00B62792
 		protected override void OnStart()
 		{
 			this.FettersLayout = new GenericLayout<RougeBattleAttributeFetterItem, IRogueBattleMapAttrFettersInfo>(base.GetHorizontalLayout(1), new Func<RougeBattleAttributeFetterItem>(this.CreateElement), null, false, true);
 		}
 
-		// Token: 0x06033B14 RID: 211732 RVA: 0x00C1B091 File Offset: 0x00C19291
+		// Token: 0x0602897F RID: 166271 RVA: 0x00B645B5 File Offset: 0x00B627B5
 		[NullableContext(1)]
 		private RougeBattleAttributeFetterItem CreateElement()
 		{
 			return new RougeBattleAttributeFetterItem();
 		}
 
-		// Token: 0x06033B15 RID: 211733 RVA: 0x00C1B098 File Offset: 0x00C19298
+		// Token: 0x06028980 RID: 166272 RVA: 0x00B645BC File Offset: 0x00B627BC
 		protected override void OnBeforeDestroy()
 		{
 			this.FettersLayout = null;
 		}
 
-		// Token: 0x06033B16 RID: 211734 RVA: 0x00C1B0A4 File Offset: 0x00C192A4
+		// Token: 0x06028981 RID: 166273 RVA: 0x00B645C8 File Offset: 0x00B627C8
 		public void Refresh(int roleId)
 		{
 			bool flag = RogueBattleModel.Instance.IsRoleGot(roleId);
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			fettersLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0401B6E3 RID: 112355
+		// Token: 0x040160B6 RID: 90294
 		[Nullable(new byte[]
 		{
 			2,

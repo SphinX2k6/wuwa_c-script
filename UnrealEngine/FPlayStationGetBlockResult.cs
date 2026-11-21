@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EFE RID: 7934
+	// Token: 0x0200060B RID: 1547
 	public sealed class FPlayStationGetBlockResult : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E202 RID: 123394 RVA: 0x002CC5DE File Offset: 0x002CA7DE
+		// Token: 0x06008842 RID: 34882 RVA: 0x000CD566 File Offset: 0x000CB766
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FPlayStationGetBlockResult.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E203 RID: 123395 RVA: 0x002CC5EA File Offset: 0x002CA7EA
+		// Token: 0x06008843 RID: 34883 RVA: 0x000CD572 File Offset: 0x000CB772
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FPlayStationGetBlockResult._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FPlayStationGetBlockResult._FunctionPtr;
 		}
 
-		// Token: 0x0601E204 RID: 123396 RVA: 0x002CC60D File Offset: 0x002CA80D
+		// Token: 0x06008844 RID: 34884 RVA: 0x000CD595 File Offset: 0x000CB795
 		public FPlayStationGetBlockResult()
 		{
 		}
 
-		// Token: 0x0601E205 RID: 123397 RVA: 0x002CC615 File Offset: 0x002CA815
+		// Token: 0x06008845 RID: 34885 RVA: 0x000CD59D File Offset: 0x000CB79D
 		[NullableContext(2)]
 		public FPlayStationGetBlockResult(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E206 RID: 123398 RVA: 0x002CC61F File Offset: 0x002CA81F
+		// Token: 0x06008846 RID: 34886 RVA: 0x000CD5A7 File Offset: 0x000CB7A7
 		public FPlayStationGetBlockResult(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E207 RID: 123399 RVA: 0x002CC62A File Offset: 0x002CA82A
+		// Token: 0x06008847 RID: 34887 RVA: 0x000CD5B2 File Offset: 0x000CB7B2
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FBlockUserData>) ?? ((Action<FBlockUserData>)Delegate.CreateDelegate(typeof(Action<FBlockUserData>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E208 RID: 123400 RVA: 0x002CC65C File Offset: 0x002CA85C
+		// Token: 0x06008848 RID: 34888 RVA: 0x000CD5E4 File Offset: 0x000CB7E4
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FBlockUserData> Callback)
 		{
 			if (FPlayStationGetBlockResult.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FPlayStationGetBlockResult.RegisterId);
 		}
 
-		// Token: 0x0601E209 RID: 123401 RVA: 0x002CC698 File Offset: 0x002CA898
+		// Token: 0x06008849 RID: 34889 RVA: 0x000CD620 File Offset: 0x000CB820
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(FBlockUserData data)
 		{
 			FPlayStationGetBlockResult.__FPlayStationGetBlockResult_DelegateParams* ptr = stackalloc FPlayStationGetBlockResult.__FPlayStationGetBlockResult_DelegateParams[(UIntPtr)39] + 15L / (long)sizeof(FPlayStationGetBlockResult.__FPlayStationGetBlockResult_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FPlayStationGetBlockResult._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601E20A RID: 123402 RVA: 0x002CC704 File Offset: 0x002CA904
+		// Token: 0x0600884A RID: 34890 RVA: 0x000CD68C File Offset: 0x000CB88C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FBlockUserData> action = target as Action<FBlockUserData>;
@@ -96,31 +93,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x0401045A RID: 66650
+		// Token: 0x04003B2C RID: 15148
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0401045B RID: 66651
+		// Token: 0x04003B2D RID: 15149
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.PlayStationGetBlockResult__DelegateSignature";
 
-		// Token: 0x0401045C RID: 66652
+		// Token: 0x04003B2E RID: 15150
 		private static int RegisterId;
 
-		// Token: 0x020033E7 RID: 13287
+		// Token: 0x02000E36 RID: 3638
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FPlayStationGetBlockResult_DelegateParams
+		private ref struct __FPlayStationGetBlockResult_DelegateParams
 		{
-			// Token: 0x040173A0 RID: 95136
+			// Token: 0x040061CF RID: 25039
 			[FieldOffset(0)]
 			public byte data;
 		}
 
-		// Token: 0x020033E8 RID: 13288
+		// Token: 0x02000E37 RID: 3639
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040173A1 RID: 95137
+			// Token: 0x040061D0 RID: 25040
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

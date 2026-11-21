@@ -11,19 +11,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.GameMode
 {
-	// Token: 0x0200477B RID: 18299
+	// Token: 0x020036AC RID: 13996
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WuWaGoNormalGameMode : WuWaGoGameModeBase
 	{
-		// Token: 0x0602FDAE RID: 196014 RVA: 0x00B1706B File Offset: 0x00B1526B
+		// Token: 0x06024578 RID: 148856 RVA: 0x00A470CB File Offset: 0x00A452CB
 		protected override bool OnStart()
 		{
 			this.PrimeFollowCameraToMainControl();
 			return true;
 		}
 
-		// Token: 0x0602FDAF RID: 196015 RVA: 0x00B17074 File Offset: 0x00B15274
+		// Token: 0x06024579 RID: 148857 RVA: 0x00A470D4 File Offset: 0x00A452D4
 		protected override bool OnEnd()
 		{
 			FightCamera fightCamera = CameraController.Instance.MainModel.FightCamera;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameMode
 			return true;
 		}
 
-		// Token: 0x0602FDB0 RID: 196016 RVA: 0x00B170A5 File Offset: 0x00B152A5
+		// Token: 0x0602457A RID: 148858 RVA: 0x00A47105 File Offset: 0x00A45305
 		protected override void OnTick(float delta)
 		{
 			if (WuWaGoModel.Instance.EnableDebug)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameMode
 			this.RoundManager.Tick(delta);
 		}
 
-		// Token: 0x0602FDB1 RID: 196017 RVA: 0x00B170E3 File Offset: 0x00B152E3
+		// Token: 0x0602457B RID: 148859 RVA: 0x00A47143 File Offset: 0x00A45343
 		private void PrimeFollowCameraToMainControl()
 		{
 			if (!this.UpdateFollowCameraToMainControl())
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameMode
 			component.SnapZoneFollowToCurrentTarget();
 		}
 
-		// Token: 0x0602FDB2 RID: 196018 RVA: 0x00B17114 File Offset: 0x00B15314
+		// Token: 0x0602457C RID: 148860 RVA: 0x00A47174 File Offset: 0x00A45374
 		private bool UpdateFollowCameraToMainControl()
 		{
 			FightCamera fightCamera = CameraController.Instance.MainModel.FightCamera;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameMode
 			return true;
 		}
 
-		// Token: 0x0602FDB3 RID: 196019 RVA: 0x00B1718D File Offset: 0x00B1538D
+		// Token: 0x0602457D RID: 148861 RVA: 0x00A471ED File Offset: 0x00A453ED
 		private void DrawDebug(WuWaGoGameData gameData)
 		{
 			this.DrawMainControlCoordinateText(gameData);
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameMode
 			this.DrawAllGridLinks(gameData);
 		}
 
-		// Token: 0x0602FDB4 RID: 196020 RVA: 0x00B171A4 File Offset: 0x00B153A4
+		// Token: 0x0602457E RID: 148862 RVA: 0x00A47204 File Offset: 0x00A45404
 		private void DrawMainControlCoordinateText(WuWaGoGameData gameData)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameMode
 			UKismetSystemLibrary.D_DrawDebugString(world, textLocation, defaultInterpolatedStringHandler.ToStringAndClear(), null, new FLinearColor?(WuWaGoNormalGameMode.DebugColorGreen), 0f);
 		}
 
-		// Token: 0x0602FDB5 RID: 196021 RVA: 0x00B17298 File Offset: 0x00B15498
+		// Token: 0x0602457F RID: 148863 RVA: 0x00A472F8 File Offset: 0x00A454F8
 		private void DrawCurProcessUnitArrow(WuWaGoGameData gameData)
 		{
 			WuWaGoRoleController curProcessUnit = this.RoundManager.CurProcessUnit;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameMode
 			UKismetSystemLibrary.D_DrawDebugArrow(GlobalData.World, worldPositionByCoordinate.ToUeVector(false), vector.ToUeVector(false), 100f, WuWaGoNormalGameMode.DebugColorGreen, 1f, 25f);
 		}
 
-		// Token: 0x0602FDB6 RID: 196022 RVA: 0x00B17334 File Offset: 0x00B15534
+		// Token: 0x06024580 RID: 148864 RVA: 0x00A47394 File Offset: 0x00A45594
 		private void DrawAllGridLinks(WuWaGoGameData gameData)
 		{
 			foreach (KeyValuePair<string, WuWaGoGrid> keyValuePair in gameData.Girds)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameMode
 			}
 		}
 
-		// Token: 0x0602FDB7 RID: 196023 RVA: 0x00B173A4 File Offset: 0x00B155A4
+		// Token: 0x06024581 RID: 148865 RVA: 0x00A47404 File Offset: 0x00A45604
 		private void DrawGearTrackLinks(WuWaGoGameData gameData)
 		{
 			foreach (WuWaGoGrid wuWaGoGrid in this.CollectGearTrackGrids(gameData))
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameMode
 			}
 		}
 
-		// Token: 0x0602FDB8 RID: 196024 RVA: 0x00B17400 File Offset: 0x00B15600
+		// Token: 0x06024582 RID: 148866 RVA: 0x00A47460 File Offset: 0x00A45660
 		private IReadOnlyList<WuWaGoGrid> CollectGearTrackGrids(WuWaGoGameData gameData)
 		{
 			this.DebugGearGridKeys.Clear();
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameMode
 			return list;
 		}
 
-		// Token: 0x0602FDB9 RID: 196025 RVA: 0x00B174D4 File Offset: 0x00B156D4
+		// Token: 0x06024583 RID: 148867 RVA: 0x00A47534 File Offset: 0x00A45734
 		private void DrawGridLinkDebug(WuWaGoGameData gameData, WuWaGoGrid grid, IReadOnlyList<Vector> directions, FLinearColor color)
 		{
 			IWallFrame wallFrame = (grid.GridShape == EGridShape.Vertical) ? grid.WallFrame : null;
@@ -239,46 +239,46 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameMode
 			}
 		}
 
-		// Token: 0x04019CEF RID: 105711
+		// Token: 0x0401439F RID: 82847
 		private readonly Vector FollowCameraTargetScratch = Vector.Create();
 
-		// Token: 0x04019CF0 RID: 105712
+		// Token: 0x040143A0 RID: 82848
 		private const bool ENABLE_GRID_LINK_DEBUG = true;
 
-		// Token: 0x04019CF1 RID: 105713
+		// Token: 0x040143A1 RID: 82849
 		private const bool ENABLE_GEAR_TRACK_DEBUG = false;
 
-		// Token: 0x04019CF2 RID: 105714
+		// Token: 0x040143A2 RID: 82850
 		[StaticVariableRuleIgnore]
 		private static readonly Vector DebugLocalUpStep = Vector.Create(0.0, 0.0, 20.0);
 
-		// Token: 0x04019CF3 RID: 105715
+		// Token: 0x040143A3 RID: 82851
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor DebugColorGreen = new FLinearColor(0f, 1f, 0f, 1f);
 
-		// Token: 0x04019CF4 RID: 105716
+		// Token: 0x040143A4 RID: 82852
 		[StaticVariableRuleIgnore]
 		private static readonly FLinearColor DebugColorGear = new FLinearColor(1f, 0.4f, 0f, 1f);
 
-		// Token: 0x04019CF5 RID: 105717
+		// Token: 0x040143A5 RID: 82853
 		private readonly HashSet<string> DebugGearGridKeys = new HashSet<string>();
 
-		// Token: 0x04019CF6 RID: 105718
+		// Token: 0x040143A6 RID: 82854
 		private readonly Vector DebugScratchArrowOrigin = Vector.Create();
 
-		// Token: 0x04019CF7 RID: 105719
+		// Token: 0x040143A7 RID: 82855
 		private readonly Vector DebugScratchLocalUp = Vector.Create();
 
-		// Token: 0x04019CF8 RID: 105720
+		// Token: 0x040143A8 RID: 82856
 		private readonly Vector DebugScratchLocalHalfDelta = Vector.Create();
 
-		// Token: 0x04019CF9 RID: 105721
+		// Token: 0x040143A9 RID: 82857
 		private readonly Vector DebugScratchHalfDeltaWorld = Vector.Create();
 
-		// Token: 0x04019CFA RID: 105722
+		// Token: 0x040143AA RID: 82858
 		private readonly Vector DebugScratchArrowHalfEnd = Vector.Create();
 
-		// Token: 0x04019CFB RID: 105723
+		// Token: 0x040143AB RID: 82859
 		private readonly Quat DebugScratchQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 	}
 }

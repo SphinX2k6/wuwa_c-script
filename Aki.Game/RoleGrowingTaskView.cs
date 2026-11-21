@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012AA RID: 4778
+// Token: 0x0200075E RID: 1886
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleGrowingTaskView : UiViewBase
 {
-	// Token: 0x06008321 RID: 33569 RVA: 0x001BE390 File Offset: 0x001BC590
+	// Token: 0x060056B8 RID: 22200 RVA: 0x001C7120 File Offset: 0x001C5320
 	public RoleGrowingTaskView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06008322 RID: 33570 RVA: 0x001BE39C File Offset: 0x001BC59C
+	// Token: 0x060056B9 RID: 22201 RVA: 0x001C712C File Offset: 0x001C532C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -59,7 +58,7 @@ public class RoleGrowingTaskView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008323 RID: 33571 RVA: 0x001BE550 File Offset: 0x001BC750
+	// Token: 0x060056BA RID: 22202 RVA: 0x001C72E0 File Offset: 0x001C54E0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleGrowingTaskView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -70,26 +69,26 @@ public class RoleGrowingTaskView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008324 RID: 33572 RVA: 0x001BE594 File Offset: 0x001BC794
+	// Token: 0x060056BB RID: 22203 RVA: 0x001C7324 File Offset: 0x001C5524
 	protected override void OnBeforeShow()
 	{
 		ActivityController.Instance.CheckIsActivityClose(null, new int?(this.ActivityBaseData.Id));
 		this.RefreshView(this.CurrentIndex);
 	}
 
-	// Token: 0x06008325 RID: 33573 RVA: 0x001BE5D0 File Offset: 0x001BC7D0
+	// Token: 0x060056BC RID: 22204 RVA: 0x001C7360 File Offset: 0x001C5560
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.LongShanUpdate, new Action(this.RefreshTasks));
 	}
 
-	// Token: 0x06008326 RID: 33574 RVA: 0x001BE5EE File Offset: 0x001BC7EE
+	// Token: 0x060056BD RID: 22205 RVA: 0x001C737E File Offset: 0x001C557E
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.LongShanUpdate, new Action(this.RefreshTasks));
 	}
 
-	// Token: 0x06008327 RID: 33575 RVA: 0x001BE60C File Offset: 0x001BC80C
+	// Token: 0x060056BE RID: 22206 RVA: 0x001C739C File Offset: 0x001C559C
 	protected void RefreshView(int newIndex)
 	{
 		this.PageDotLayout.GetLayoutItemByIndex(this.CurrentIndex).UpdateShow(false);
@@ -105,37 +104,37 @@ public class RoleGrowingTaskView : UiViewBase
 		this.ActivityBaseData.SaveNewStageFlag(num);
 	}
 
-	// Token: 0x06008328 RID: 33576 RVA: 0x001BE714 File Offset: 0x001BC914
+	// Token: 0x060056BF RID: 22207 RVA: 0x001C74A4 File Offset: 0x001C56A4
 	private void RefreshTasks()
 	{
 		ActivityLongShanData activity = this.ActivityBaseData;
 		int id = activity.StageIds[this.CurrentIndex];
 		int progress = activity.GetProgress(id);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "LongShanStage_ProgressPercentage", new <>z__ReadOnlySingleElementList<object>(progress));
-		List<LongShanTaskInfo> list = activity.GetStageInfoById(id).Tasks.ToList<LongShanTaskInfo>();
+		List<LongShanTaskInfo> list = new List<LongShanTaskInfo>(activity.GetStageInfoById(id).Tasks);
 		list.Sort((LongShanTaskInfo task1, LongShanTaskInfo task2) => activity.TaskSort(task1, task2));
 		this.TaskScroll.RefreshByData(list, null, true);
 	}
 
-	// Token: 0x06008329 RID: 33577 RVA: 0x001BE7AB File Offset: 0x001BC9AB
+	// Token: 0x060056C0 RID: 22208 RVA: 0x001C753B File Offset: 0x001C573B
 	private LongShanTaskItem CreateTaskItem()
 	{
 		return new LongShanTaskItem();
 	}
 
-	// Token: 0x0600832A RID: 33578 RVA: 0x001BE7B2 File Offset: 0x001BC9B2
+	// Token: 0x060056C1 RID: 22209 RVA: 0x001C7542 File Offset: 0x001C5742
 	private PageDot<int> InitPageDot()
 	{
 		return new PageDot<int>();
 	}
 
-	// Token: 0x0600832B RID: 33579 RVA: 0x001BE7B9 File Offset: 0x001BC9B9
+	// Token: 0x060056C2 RID: 22210 RVA: 0x001C7549 File Offset: 0x001C5749
 	private void OnClickPre()
 	{
 		this.RefreshView(this.CurrentIndex - 1);
 	}
 
-	// Token: 0x0600832C RID: 33580 RVA: 0x001BE7CC File Offset: 0x001BC9CC
+	// Token: 0x060056C3 RID: 22211 RVA: 0x001C755C File Offset: 0x001C575C
 	private void OnClickNext()
 	{
 		int num = this.ActivityBaseData.StageIds[this.CurrentIndex + 1];
@@ -147,18 +146,18 @@ public class RoleGrowingTaskView : UiViewBase
 		ActivityLongShanController.Instance.ShowUnlockTip(num);
 	}
 
-	// Token: 0x04003B18 RID: 15128
+	// Token: 0x04003BB0 RID: 15280
 	[Nullable(2)]
 	protected ActivityLongShanData ActivityBaseData;
 
-	// Token: 0x04003B19 RID: 15129
+	// Token: 0x04003BB1 RID: 15281
 	protected int CurrentIndex;
 
-	// Token: 0x04003B1A RID: 15130
+	// Token: 0x04003BB2 RID: 15282
 	[Nullable(2)]
 	protected PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003B1B RID: 15131
+	// Token: 0x04003BB3 RID: 15283
 	[Nullable(new byte[]
 	{
 		2,
@@ -166,7 +165,7 @@ public class RoleGrowingTaskView : UiViewBase
 	})]
 	protected GenericLayout<PageDot<int>, int> PageDotLayout;
 
-	// Token: 0x04003B1C RID: 15132
+	// Token: 0x04003BB4 RID: 15284
 	[Nullable(new byte[]
 	{
 		2,
@@ -175,35 +174,35 @@ public class RoleGrowingTaskView : UiViewBase
 	})]
 	protected GenericScrollViewNew<LongShanTaskItem, LongShanTaskInfo> TaskScroll;
 
-	// Token: 0x020078C7 RID: 30919
+	// Token: 0x02006A51 RID: 27217
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027CA2 RID: 162978
+		// Token: 0x04022FD0 RID: 143312
 		public const int CaptionItem = 0;
 
-		// Token: 0x04027CA3 RID: 162979
+		// Token: 0x04022FD1 RID: 143313
 		public const int TxtName = 1;
 
-		// Token: 0x04027CA4 RID: 162980
+		// Token: 0x04022FD2 RID: 143314
 		public const int TxtProgress = 2;
 
-		// Token: 0x04027CA5 RID: 162981
+		// Token: 0x04022FD3 RID: 143315
 		public const int LabelFinish = 3;
 
-		// Token: 0x04027CA6 RID: 162982
+		// Token: 0x04022FD4 RID: 143316
 		public const int TaskParent = 4;
 
-		// Token: 0x04027CA7 RID: 162983
+		// Token: 0x04022FD5 RID: 143317
 		public const int BtnPre = 5;
 
-		// Token: 0x04027CA8 RID: 162984
+		// Token: 0x04022FD6 RID: 143318
 		public const int BtnNext = 6;
 
-		// Token: 0x04027CA9 RID: 162985
+		// Token: 0x04022FD7 RID: 143319
 		public const int PageDotLayout = 7;
 
-		// Token: 0x04027CAA RID: 162986
+		// Token: 0x04022FD8 RID: 143320
 		public const int SpriteIcon = 8;
 	}
 }

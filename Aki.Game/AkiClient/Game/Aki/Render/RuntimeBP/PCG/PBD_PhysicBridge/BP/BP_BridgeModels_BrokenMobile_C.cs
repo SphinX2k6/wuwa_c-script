@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.PBD_PhysicBridge.BP
 {
-	// Token: 0x02003C3F RID: 15423
+	// Token: 0x020030E2 RID: 12514
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/PCG/PBD_PhysicBridge/BP/BP_BridgeModels_BrokenMobile.BP_BridgeModels_BrokenMobile_C")]
 	[UnrealStructLayout(1536, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1536)]
 	public class BP_BridgeModels_BrokenMobile_C : AKuroBPActor, IUnrealUObject, IUnrealObject, IBPI_BridgeModels_BrokenMobile_C, IUnrealBlueprintInterface, IUnrealInterface
 	{
-		// Token: 0x06023901 RID: 145665 RVA: 0x00926D87 File Offset: 0x00924F87
+		// Token: 0x0601E3E1 RID: 123873 RVA: 0x0090EEDD File Offset: 0x0090D0DD
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_BridgeModels_BrokenMobile_C._ClassPtr == IntPtr.Zero)
@@ -25,110 +25,110 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.PBD_PhysicBridge.BP
 			return BP_BridgeModels_BrokenMobile_C._ClassPtr;
 		}
 
-		// Token: 0x06023902 RID: 145666 RVA: 0x00926DAC File Offset: 0x00924FAC
+		// Token: 0x0601E3E2 RID: 123874 RVA: 0x0090EF04 File Offset: 0x0090D104
 		public BP_BridgeModels_BrokenMobile_C() : this(BuiltinUtils.AllocNativeUObject(BP_BridgeModels_BrokenMobile_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06023903 RID: 145667 RVA: 0x00926DD4 File Offset: 0x00924FD4
+		// Token: 0x0601E3E3 RID: 123875 RVA: 0x0090EF2C File Offset: 0x0090D12C
 		[NullableContext(1)]
 		public BP_BridgeModels_BrokenMobile_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_BridgeModels_BrokenMobile_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17004220 RID: 16928
-		// (get) Token: 0x06023904 RID: 145668 RVA: 0x00926E07 File Offset: 0x00925007
-		// (set) Token: 0x06023905 RID: 145669 RVA: 0x00926E1B File Offset: 0x0092501B
+		// Token: 0x170032A7 RID: 12967
+		// (get) Token: 0x0601E3E4 RID: 123876 RVA: 0x0090EF5F File Offset: 0x0090D15F
+		// (set) Token: 0x0601E3E5 RID: 123877 RVA: 0x0090EF73 File Offset: 0x0090D173
 		public unsafe UBoxComponent Box
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UBoxComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UBoxComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_Box);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_Box, value);
 			}
 		}
 
-		// Token: 0x17004221 RID: 16929
-		// (get) Token: 0x06023906 RID: 145670 RVA: 0x00926E30 File Offset: 0x00925030
-		// (set) Token: 0x06023907 RID: 145671 RVA: 0x00926E44 File Offset: 0x00925044
+		// Token: 0x170032A8 RID: 12968
+		// (get) Token: 0x0601E3E6 RID: 123878 RVA: 0x0090EF88 File Offset: 0x0090D188
+		// (set) Token: 0x0601E3E7 RID: 123879 RVA: 0x0090EF9C File Offset: 0x0090D19C
 		public unsafe UStaticMeshComponent SM_Gel_Pro_305AM_FX
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_SM_Gel_Pro_305AM_FX);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_SM_Gel_Pro_305AM_FX, value);
 			}
 		}
 
-		// Token: 0x17004222 RID: 16930
-		// (get) Token: 0x06023908 RID: 145672 RVA: 0x00926E59 File Offset: 0x00925059
-		// (set) Token: 0x06023909 RID: 145673 RVA: 0x00926E6D File Offset: 0x0092506D
+		// Token: 0x170032A9 RID: 12969
+		// (get) Token: 0x0601E3E8 RID: 123880 RVA: 0x0090EFB1 File Offset: 0x0090D1B1
+		// (set) Token: 0x0601E3E9 RID: 123881 RVA: 0x0090EFC5 File Offset: 0x0090D1C5
 		public unsafe UStaticMeshComponent SM_Gel_Pro_304AM_FX
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_SM_Gel_Pro_304AM_FX);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_SM_Gel_Pro_304AM_FX, value);
 			}
 		}
 
-		// Token: 0x17004223 RID: 16931
-		// (get) Token: 0x0602390A RID: 145674 RVA: 0x00926E82 File Offset: 0x00925082
-		// (set) Token: 0x0602390B RID: 145675 RVA: 0x00926E96 File Offset: 0x00925096
+		// Token: 0x170032AA RID: 12970
+		// (get) Token: 0x0601E3EA RID: 123882 RVA: 0x0090EFDA File Offset: 0x0090D1DA
+		// (set) Token: 0x0601E3EB RID: 123883 RVA: 0x0090EFEE File Offset: 0x0090D1EE
 		public unsafe UStaticMeshComponent SM_MB_Gel_Bri_04TL
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_4);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_SM_MB_Gel_Bri_04TL);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_4, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_SM_MB_Gel_Bri_04TL, value);
 			}
 		}
 
-		// Token: 0x17004224 RID: 16932
-		// (get) Token: 0x0602390C RID: 145676 RVA: 0x00926EAB File Offset: 0x009250AB
-		// (set) Token: 0x0602390D RID: 145677 RVA: 0x00926EBF File Offset: 0x009250BF
+		// Token: 0x170032AB RID: 12971
+		// (get) Token: 0x0601E3EC RID: 123884 RVA: 0x0090F003 File Offset: 0x0090D203
+		// (set) Token: 0x0601E3ED RID: 123885 RVA: 0x0090F017 File Offset: 0x0090D217
 		public unsafe UStaticMeshComponent SM_Gel_Bri_04IL
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_SM_Gel_Bri_04IL);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_SM_Gel_Bri_04IL, value);
 			}
 		}
 
-		// Token: 0x17004225 RID: 16933
-		// (get) Token: 0x0602390E RID: 145678 RVA: 0x00926ED4 File Offset: 0x009250D4
-		// (set) Token: 0x0602390F RID: 145679 RVA: 0x00926EE8 File Offset: 0x009250E8
+		// Token: 0x170032AC RID: 12972
+		// (get) Token: 0x0601E3EE RID: 123886 RVA: 0x0090F02C File Offset: 0x0090D22C
+		// (set) Token: 0x0601E3EF RID: 123887 RVA: 0x0090F040 File Offset: 0x0090D240
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_6);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_6, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_BridgeModels_BrokenMobile_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17004226 RID: 16934
-		// (get) Token: 0x06023910 RID: 145680 RVA: 0x00926F00 File Offset: 0x00925100
-		// (set) Token: 0x06023911 RID: 145681 RVA: 0x00926F39 File Offset: 0x00925139
+		// Token: 0x170032AD RID: 12973
+		// (get) Token: 0x0601E3F0 RID: 123888 RVA: 0x0090F058 File Offset: 0x0090D258
+		// (set) Token: 0x0601E3F1 RID: 123889 RVA: 0x0090F091 File Offset: 0x0090D291
 		[Nullable(1)]
 		public custom custom
 		{
@@ -139,96 +139,93 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.PBD_PhysicBridge.BP
 				custom result;
 				if ((result = this._custom) == null)
 				{
-					result = (this._custom = new custom(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_7, this));
+					result = (this._custom = new custom(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_custom, this));
 				}
 				return result;
 			}
 			[NullableContext(1)]
 			set
 			{
-				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_7, (value != null) ? value.NativePtr : ((IntPtr)0));
+				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_custom, (value != null) ? value.NativePtr : ((IntPtr)0));
 			}
 		}
 
-		// Token: 0x17004227 RID: 16935
-		// (get) Token: 0x06023912 RID: 145682 RVA: 0x00926F5A File Offset: 0x0092515A
-		// (set) Token: 0x06023913 RID: 145683 RVA: 0x00926F6E File Offset: 0x0092516E
+		// Token: 0x170032AE RID: 12974
+		// (get) Token: 0x0601E3F2 RID: 123890 RVA: 0x0090F0B2 File Offset: 0x0090D2B2
+		// (set) Token: 0x0601E3F3 RID: 123891 RVA: 0x0090F0C6 File Offset: 0x0090D2C6
 		public unsafe FVector NewVar_0
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_NewVar_0);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_NewVar_0) = value;
 			}
 		}
 
-		// Token: 0x17004228 RID: 16936
-		// (get) Token: 0x06023914 RID: 145684 RVA: 0x00926F83 File Offset: 0x00925183
-		// (set) Token: 0x06023915 RID: 145685 RVA: 0x00926F93 File Offset: 0x00925193
+		// Token: 0x170032AF RID: 12975
+		// (get) Token: 0x0601E3F4 RID: 123892 RVA: 0x0090F0DB File Offset: 0x0090D2DB
+		// (set) Token: 0x0601E3F5 RID: 123893 RVA: 0x0090F0EB File Offset: 0x0090D2EB
 		public unsafe float CustomTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_CustomTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_CustomTime) = value;
 			}
 		}
 
-		// Token: 0x17004229 RID: 16937
-		// (get) Token: 0x06023916 RID: 145686 RVA: 0x00926FA4 File Offset: 0x009251A4
-		// (set) Token: 0x06023917 RID: 145687 RVA: 0x00926FB4 File Offset: 0x009251B4
+		// Token: 0x170032B0 RID: 12976
+		// (get) Token: 0x0601E3F6 RID: 123894 RVA: 0x0090F0FC File Offset: 0x0090D2FC
+		// (set) Token: 0x0601E3F7 RID: 123895 RVA: 0x0090F10C File Offset: 0x0090D30C
 		public unsafe bool IsBroken
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_10) != 0;
+				return *(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_IsBroken) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_10) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_IsBroken) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700422A RID: 16938
-		// (get) Token: 0x06023918 RID: 145688 RVA: 0x00926FC5 File Offset: 0x009251C5
-		// (set) Token: 0x06023919 RID: 145689 RVA: 0x00926FD5 File Offset: 0x009251D5
+		// Token: 0x170032B1 RID: 12977
+		// (get) Token: 0x0601E3F8 RID: 123896 RVA: 0x0090F11D File Offset: 0x0090D31D
+		// (set) Token: 0x0601E3F9 RID: 123897 RVA: 0x0090F12D File Offset: 0x0090D32D
 		public unsafe float InterpTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_InterpTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_BridgeModels_BrokenMobile_C.__PropertyOffset_InterpTime) = value;
 			}
 		}
 
-		// Token: 0x0602391A RID: 145690 RVA: 0x00926FE6 File Offset: 0x009251E6
+		// Token: 0x0601E3FA RID: 123898 RVA: 0x0090F13E File Offset: 0x0090D33E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void BreakTest()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__BreakTest_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602391B RID: 145691 RVA: 0x00926FFA File Offset: 0x009251FA
+		// Token: 0x0601E3FB RID: 123899 RVA: 0x0090F152 File Offset: 0x0090D352
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void Reset()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__Reset_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602391C RID: 145692 RVA: 0x00927010 File Offset: 0x00925210
+		// Token: 0x0601E3FC RID: 123900 RVA: 0x0090F168 File Offset: 0x0090D368
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetBridgeLink(int idx, [Nullable(new byte[]
 		{
 			2,
@@ -252,25 +249,22 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.PBD_PhysicBridge.BP
 			UnrealReflectionUtils.DestroyStruct(BP_BridgeModels_BrokenMobile_C.__GetBridgeLink_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602391D RID: 145693 RVA: 0x00927092 File Offset: 0x00925292
+		// Token: 0x0601E3FD RID: 123901 RVA: 0x0090F1EA File Offset: 0x0090D3EA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602391E RID: 145694 RVA: 0x009270A6 File Offset: 0x009252A6
+		// Token: 0x0601E3FE RID: 123902 RVA: 0x0090F1FE File Offset: 0x0090D3FE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602391F RID: 145695 RVA: 0x009270BC File Offset: 0x009252BC
+		// Token: 0x0601E3FF RID: 123903 RVA: 0x0090F214 File Offset: 0x0090D414
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Completed_92BA8E5D417BEAC0CD4FF88EAA5B9EC5(int PlayingID)
 		{
 			BP_BridgeModels_BrokenMobile_C.__Completed_92BA8E5D417BEAC0CD4FF88EAA5B9EC5_FunctionParams* ptr = stackalloc BP_BridgeModels_BrokenMobile_C.__Completed_92BA8E5D417BEAC0CD4FF88EAA5B9EC5_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_BridgeModels_BrokenMobile_C.__Completed_92BA8E5D417BEAC0CD4FF88EAA5B9EC5_FunctionParams) & -16L;
@@ -279,25 +273,22 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.PBD_PhysicBridge.BP
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__Completed_92BA8E5D417BEAC0CD4FF88EAA5B9EC5_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023920 RID: 145696 RVA: 0x00927102 File Offset: 0x00925302
+		// Token: 0x0601E400 RID: 123904 RVA: 0x0090F25A File Offset: 0x0090D45A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06023921 RID: 145697 RVA: 0x00927116 File Offset: 0x00925316
+		// Token: 0x0601E401 RID: 123905 RVA: 0x0090F26E File Offset: 0x0090D46E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06023922 RID: 145698 RVA: 0x0092712C File Offset: 0x0092532C
+		// Token: 0x0601E402 RID: 123906 RVA: 0x0090F284 File Offset: 0x0090D484
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_BridgeModels_BrokenMobile_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_BridgeModels_BrokenMobile_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_BridgeModels_BrokenMobile_C.__ReceiveTick_FunctionParams) & -16L;
@@ -306,36 +297,32 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.PBD_PhysicBridge.BP
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023923 RID: 145699 RVA: 0x00927174 File Offset: 0x00925374
+		// Token: 0x0601E403 RID: 123907 RVA: 0x0090F2CC File Offset: 0x0090D4CC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_BridgeModels_BrokenMobile_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_BridgeModels_BrokenMobile_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_BridgeModels_BrokenMobile_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_BridgeModels_BrokenMobile_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023924 RID: 145700 RVA: 0x009271BB File Offset: 0x009253BB
+		// Token: 0x0601E404 RID: 123908 RVA: 0x0090F312 File Offset: 0x0090D512
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void BreakEvent()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__BreakEvent_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06023925 RID: 145701 RVA: 0x009271CF File Offset: 0x009253CF
+		// Token: 0x0601E405 RID: 123909 RVA: 0x0090F326 File Offset: 0x0090D526
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void BreakTrigger()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__BreakTrigger_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06023926 RID: 145702 RVA: 0x009271E4 File Offset: 0x009253E4
+		// Token: 0x0601E406 RID: 123910 RVA: 0x0090F33C File Offset: 0x0090D53C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(UPrimitiveComponent OverlappedComponent, AActor OtherActor, UPrimitiveComponent OtherComp, int OtherBodyIndex, bool bFromSweep, in FHitResult SweepResult)
 		{
 			BP_BridgeModels_BrokenMobile_C.__BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature_FunctionParams* ptr = stackalloc BP_BridgeModels_BrokenMobile_C.__BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature_FunctionParams[(UIntPtr)199] + 15L / (long)sizeof(BP_BridgeModels_BrokenMobile_C.__BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature_FunctionParams) & -16L;
@@ -352,9 +339,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.PBD_PhysicBridge.BP
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023927 RID: 145703 RVA: 0x009272A0 File Offset: 0x009254A0
+		// Token: 0x0601E407 RID: 123911 RVA: 0x0090F3F8 File Offset: 0x0090D5F8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature(UPrimitiveComponent OverlappedComponent, AActor OtherActor, UPrimitiveComponent OtherComp, int OtherBodyIndex)
 		{
 			BP_BridgeModels_BrokenMobile_C.__BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature_FunctionParams* ptr = stackalloc BP_BridgeModels_BrokenMobile_C.__BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(BP_BridgeModels_BrokenMobile_C.__BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature_FunctionParams) & -16L;
@@ -366,180 +352,180 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.PBD_PhysicBridge.BP
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_BridgeModels_BrokenMobile_C.__BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023928 RID: 145704 RVA: 0x00927329 File Offset: 0x00925529
+		// Token: 0x0601E408 RID: 123912 RVA: 0x0090F481 File Offset: 0x0090D681
 		protected BP_BridgeModels_BrokenMobile_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040118F1 RID: 71921
+		// Token: 0x04010012 RID: 65554
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/PCG/PBD_PhysicBridge/BP/BP_BridgeModels_BrokenMobile.BP_BridgeModels_BrokenMobile_C";
 
-		// Token: 0x040118F2 RID: 71922
+		// Token: 0x04010013 RID: 65555
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040118F3 RID: 71923
+		// Token: 0x04010014 RID: 65556
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040118F4 RID: 71924
+		// Token: 0x04010015 RID: 65557
 		public static IntPtr __custom__DelegateSignature_NativeFunctionPtr;
 
-		// Token: 0x040118F5 RID: 71925
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010016 RID: 65558
+		internal static int __PropertyOffset_Box;
 
-		// Token: 0x040118F6 RID: 71926
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010017 RID: 65559
+		internal static int __PropertyOffset_SM_Gel_Pro_305AM_FX;
 
-		// Token: 0x040118F7 RID: 71927
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010018 RID: 65560
+		internal static int __PropertyOffset_SM_Gel_Pro_304AM_FX;
 
-		// Token: 0x040118F8 RID: 71928
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010019 RID: 65561
+		internal static int __PropertyOffset_SM_MB_Gel_Bri_04TL;
 
-		// Token: 0x040118F9 RID: 71929
-		internal static int __PropertyOffset_5;
+		// Token: 0x0401001A RID: 65562
+		internal static int __PropertyOffset_SM_Gel_Bri_04IL;
 
-		// Token: 0x040118FA RID: 71930
-		internal static int __PropertyOffset_6;
+		// Token: 0x0401001B RID: 65563
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x040118FB RID: 71931
-		internal static int __PropertyOffset_7;
+		// Token: 0x0401001C RID: 65564
+		internal static int __PropertyOffset_custom;
 
-		// Token: 0x040118FC RID: 71932
+		// Token: 0x0401001D RID: 65565
 		private custom _custom;
 
-		// Token: 0x040118FD RID: 71933
-		internal static int __PropertyOffset_8;
+		// Token: 0x0401001E RID: 65566
+		internal static int __PropertyOffset_NewVar_0;
 
-		// Token: 0x040118FE RID: 71934
-		internal static int __PropertyOffset_9;
+		// Token: 0x0401001F RID: 65567
+		internal static int __PropertyOffset_CustomTime;
 
-		// Token: 0x040118FF RID: 71935
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010020 RID: 65568
+		internal static int __PropertyOffset_IsBroken;
 
-		// Token: 0x04011900 RID: 71936
-		internal static int __PropertyOffset_11;
+		// Token: 0x04010021 RID: 65569
+		internal static int __PropertyOffset_InterpTime;
 
-		// Token: 0x04011901 RID: 71937
+		// Token: 0x04010022 RID: 65570
 		private static IntPtr __BreakTest_NativeFunctionPtr;
 
-		// Token: 0x04011902 RID: 71938
+		// Token: 0x04010023 RID: 65571
 		private static IntPtr __Reset_NativeFunctionPtr;
 
-		// Token: 0x04011903 RID: 71939
+		// Token: 0x04010024 RID: 65572
 		private static IntPtr __GetBridgeLink_NativeFunctionPtr;
 
-		// Token: 0x04011904 RID: 71940
+		// Token: 0x04010025 RID: 65573
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x04011905 RID: 71941
+		// Token: 0x04010026 RID: 65574
 		private static IntPtr __Completed_92BA8E5D417BEAC0CD4FF88EAA5B9EC5_NativeFunctionPtr;
 
-		// Token: 0x04011906 RID: 71942
+		// Token: 0x04010027 RID: 65575
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x04011907 RID: 71943
+		// Token: 0x04010028 RID: 65576
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x04011908 RID: 71944
+		// Token: 0x04010029 RID: 65577
 		private static IntPtr __BreakEvent_NativeFunctionPtr;
 
-		// Token: 0x04011909 RID: 71945
+		// Token: 0x0401002A RID: 65578
 		private static IntPtr __BreakTrigger_NativeFunctionPtr;
 
-		// Token: 0x0401190A RID: 71946
+		// Token: 0x0401002B RID: 65579
 		private static IntPtr __BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature_NativeFunctionPtr;
 
-		// Token: 0x0401190B RID: 71947
+		// Token: 0x0401002C RID: 65580
 		private static IntPtr __BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature_NativeFunctionPtr;
 
-		// Token: 0x02009E77 RID: 40567
+		// Token: 0x02008E4E RID: 36430
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 560)]
 		protected ref struct __GetBridgeLink_FunctionParams
 		{
-			// Token: 0x0403170C RID: 202508
+			// Token: 0x0402CA8F RID: 182927
 			[FieldOffset(0)]
 			public int idx;
 
-			// Token: 0x0403170D RID: 202509
+			// Token: 0x0402CA90 RID: 182928
 			[FieldOffset(8)]
 			public byte tempArray1;
 		}
 
-		// Token: 0x02009E78 RID: 40568
+		// Token: 0x02008E4F RID: 36431
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __Completed_92BA8E5D417BEAC0CD4FF88EAA5B9EC5_FunctionParams
 		{
-			// Token: 0x0403170E RID: 202510
+			// Token: 0x0402CA91 RID: 182929
 			[FieldOffset(0)]
 			public int PlayingID;
 		}
 
-		// Token: 0x02009E79 RID: 40569
+		// Token: 0x02008E50 RID: 36432
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x0403170F RID: 202511
+			// Token: 0x0402CA92 RID: 182930
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x02009E7A RID: 40570
+		// Token: 0x02008E51 RID: 36433
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 184)]
 		protected ref struct __BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature_FunctionParams
 		{
-			// Token: 0x04031710 RID: 202512
+			// Token: 0x0402CA93 RID: 182931
 			[FieldOffset(0)]
 			public IntPtr OverlappedComponent;
 
-			// Token: 0x04031711 RID: 202513
+			// Token: 0x0402CA94 RID: 182932
 			[FieldOffset(8)]
 			public IntPtr OtherActor;
 
-			// Token: 0x04031712 RID: 202514
+			// Token: 0x0402CA95 RID: 182933
 			[FieldOffset(16)]
 			public IntPtr OtherComp;
 
-			// Token: 0x04031713 RID: 202515
+			// Token: 0x0402CA96 RID: 182934
 			[FieldOffset(24)]
 			public int OtherBodyIndex;
 
-			// Token: 0x04031714 RID: 202516
+			// Token: 0x0402CA97 RID: 182935
 			[FieldOffset(28)]
 			public bool bFromSweep;
 
-			// Token: 0x04031715 RID: 202517
+			// Token: 0x0402CA98 RID: 182936
 			[FieldOffset(32)]
 			public byte SweepResult;
 		}
 
-		// Token: 0x02009E7B RID: 40571
+		// Token: 0x02008E52 RID: 36434
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __BndEvt__BP_BridgeModels_BrokenMobile_Box_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature_FunctionParams
 		{
-			// Token: 0x04031716 RID: 202518
+			// Token: 0x0402CA99 RID: 182937
 			[FieldOffset(0)]
 			public IntPtr OverlappedComponent;
 
-			// Token: 0x04031717 RID: 202519
+			// Token: 0x0402CA9A RID: 182938
 			[FieldOffset(8)]
 			public IntPtr OtherActor;
 
-			// Token: 0x04031718 RID: 202520
+			// Token: 0x0402CA9B RID: 182939
 			[FieldOffset(16)]
 			public IntPtr OtherComp;
 
-			// Token: 0x04031719 RID: 202521
+			// Token: 0x0402CA9C RID: 182940
 			[FieldOffset(24)]
 			public int OtherBodyIndex;
 		}

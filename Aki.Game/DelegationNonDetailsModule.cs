@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001315 RID: 4885
+// Token: 0x020007C9 RID: 1993
 [NullableContext(1)]
 [Nullable(0)]
 public class DelegationNonDetailsModule : UiPanelBase
 {
-	// Token: 0x06008771 RID: 34673 RVA: 0x001CE768 File Offset: 0x001CC968
+	// Token: 0x06005B0C RID: 23308 RVA: 0x001D75D4 File Offset: 0x001D57D4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ public class DelegationNonDetailsModule : UiPanelBase
 		};
 	}
 
-	// Token: 0x06008772 RID: 34674 RVA: 0x001CE8C8 File Offset: 0x001CCAC8
+	// Token: 0x06005B0D RID: 23309 RVA: 0x001D7734 File Offset: 0x001D5934
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DelegationNonDetailsModule.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ public class DelegationNonDetailsModule : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008773 RID: 34675 RVA: 0x001CE90C File Offset: 0x001CCB0C
+	// Token: 0x06005B0E RID: 23310 RVA: 0x001D7778 File Offset: 0x001D5978
 	private void OnButton()
 	{
 		if (!this.Data.IsVisible)
@@ -106,13 +106,13 @@ public class DelegationNonDetailsModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008774 RID: 34676 RVA: 0x001CE9BC File Offset: 0x001CCBBC
+	// Token: 0x06005B0F RID: 23311 RVA: 0x001D7828 File Offset: 0x001D5A28
 	private DelegationNonDetailsModuleStarItem InitStarItem()
 	{
 		return new DelegationNonDetailsModuleStarItem();
 	}
 
-	// Token: 0x06008775 RID: 34677 RVA: 0x001CE9C4 File Offset: 0x001CCBC4
+	// Token: 0x06005B10 RID: 23312 RVA: 0x001D7830 File Offset: 0x001D5A30
 	private void RefreshLockState()
 	{
 		bool isVisible = this.Data.IsVisible;
@@ -129,7 +129,7 @@ public class DelegationNonDetailsModule : UiPanelBase
 		item2.SetUIActive(isVisible);
 	}
 
-	// Token: 0x06008776 RID: 34678 RVA: 0x001CEA05 File Offset: 0x001CCC05
+	// Token: 0x06005B11 RID: 23313 RVA: 0x001D7871 File Offset: 0x001D5A71
 	private void RefreshLockCondition()
 	{
 		UUIText text = base.GetText(2);
@@ -140,28 +140,28 @@ public class DelegationNonDetailsModule : UiPanelBase
 		text.SetText(this.Data.GetLockText(), true);
 	}
 
-	// Token: 0x06008777 RID: 34679 RVA: 0x001CEA24 File Offset: 0x001CCC24
+	// Token: 0x06005B12 RID: 23314 RVA: 0x001D7890 File Offset: 0x001D5A90
 	private void RefreshConsumePrivate()
 	{
 		IItemData itemData = this.Data.GetConsumeList()[1];
 		this.SecondCurrency.UpdateItem(itemData.ItemId, itemData.Count);
 	}
 
-	// Token: 0x06008778 RID: 34680 RVA: 0x001CEA5C File Offset: 0x001CCC5C
+	// Token: 0x06005B13 RID: 23315 RVA: 0x001D78C8 File Offset: 0x001D5AC8
 	private void RefreshTitle()
 	{
 		TrackMoonEntrust delegationConfig = BusinessConfig.Instance.GetDelegationConfig(this.Data.Id);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), delegationConfig.Title, Array.Empty<object>());
 	}
 
-	// Token: 0x06008779 RID: 34681 RVA: 0x001CEA9C File Offset: 0x001CCC9C
+	// Token: 0x06005B14 RID: 23316 RVA: 0x001D7908 File Offset: 0x001D5B08
 	private void RefreshStar()
 	{
 		TrackMoonEntrust delegationConfig = BusinessConfig.Instance.GetDelegationConfig(this.Data.Id);
 		this.StarLayout.RefreshByDataAsync(new List<object>(), false, new int?(delegationConfig.Star)).Forget();
 	}
 
-	// Token: 0x0600877A RID: 34682 RVA: 0x001CEAE4 File Offset: 0x001CCCE4
+	// Token: 0x06005B15 RID: 23317 RVA: 0x001D7950 File Offset: 0x001D5B50
 	private void RefreshEvaluate()
 	{
 		base.GetItem(7).SetUIActive(this.Data.HasBestEvaluate());
@@ -171,7 +171,7 @@ public class DelegationNonDetailsModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600877B RID: 34683 RVA: 0x001CEB4C File Offset: 0x001CCD4C
+	// Token: 0x06005B16 RID: 23318 RVA: 0x001D79B8 File Offset: 0x001D5BB8
 	private void RefreshIcon()
 	{
 		TrackMoonEntrust delegationConfig = BusinessConfig.Instance.GetDelegationConfig(this.Data.Id);
@@ -184,7 +184,7 @@ public class DelegationNonDetailsModule : UiPanelBase
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x0600877C RID: 34684 RVA: 0x001CEBC5 File Offset: 0x001CCDC5
+	// Token: 0x06005B17 RID: 23319 RVA: 0x001D7A31 File Offset: 0x001D5C31
 	private void RefreshNewTag()
 	{
 		UUIItem item = base.GetItem(12);
@@ -195,7 +195,7 @@ public class DelegationNonDetailsModule : UiPanelBase
 		item.SetUIActive(!this.Data.HasBestEvaluate());
 	}
 
-	// Token: 0x0600877D RID: 34685 RVA: 0x001CEBE8 File Offset: 0x001CCDE8
+	// Token: 0x06005B18 RID: 23320 RVA: 0x001D7A54 File Offset: 0x001D5C54
 	public void Refresh(DelegationData data)
 	{
 		this.Data = data;
@@ -215,7 +215,7 @@ public class DelegationNonDetailsModule : UiPanelBase
 		this.RefreshNewTag();
 	}
 
-	// Token: 0x0600877E RID: 34686 RVA: 0x001CEC46 File Offset: 0x001CCE46
+	// Token: 0x06005B19 RID: 23321 RVA: 0x001D7AB2 File Offset: 0x001D5CB2
 	public void RefreshConsume()
 	{
 		if (this.Data.IsVisible)
@@ -224,19 +224,19 @@ public class DelegationNonDetailsModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600877F RID: 34687 RVA: 0x001CEC5B File Offset: 0x001CCE5B
+	// Token: 0x06005B1A RID: 23322 RVA: 0x001D7AC7 File Offset: 0x001D5CC7
 	public void RegisterViewController(BusinessViewController vc)
 	{
 		this.Vc = vc;
 	}
 
-	// Token: 0x04003C6E RID: 15470
+	// Token: 0x04003D06 RID: 15622
 	protected DelegationNonDetailsModuleCostItem SecondCurrency;
 
-	// Token: 0x04003C6F RID: 15471
+	// Token: 0x04003D07 RID: 15623
 	protected DelegationData Data;
 
-	// Token: 0x04003C70 RID: 15472
+	// Token: 0x04003D08 RID: 15624
 	[Nullable(new byte[]
 	{
 		1,
@@ -245,51 +245,51 @@ public class DelegationNonDetailsModule : UiPanelBase
 	})]
 	protected GenericLayout<DelegationNonDetailsModuleStarItem, object> StarLayout;
 
-	// Token: 0x04003C71 RID: 15473
+	// Token: 0x04003D09 RID: 15625
 	[Nullable(2)]
 	private BusinessViewController Vc;
 
-	// Token: 0x0200795D RID: 31069
+	// Token: 0x02006AE7 RID: 27367
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04027F88 RID: 163720
+		// Token: 0x040232B5 RID: 144053
 		public const int Button = 0;
 
-		// Token: 0x04027F89 RID: 163721
+		// Token: 0x040232B6 RID: 144054
 		public const int LockItem = 1;
 
-		// Token: 0x04027F8A RID: 163722
+		// Token: 0x040232B7 RID: 144055
 		public const int LockText = 2;
 
-		// Token: 0x04027F8B RID: 163723
+		// Token: 0x040232B8 RID: 144056
 		public const int UnLockItem = 3;
 
-		// Token: 0x04027F8C RID: 163724
+		// Token: 0x040232B9 RID: 144057
 		public const int Title = 4;
 
-		// Token: 0x04027F8D RID: 163725
+		// Token: 0x040232BA RID: 144058
 		public const int StarLayout = 5;
 
-		// Token: 0x04027F8E RID: 163726
+		// Token: 0x040232BB RID: 144059
 		public const int StarItem = 6;
 
-		// Token: 0x04027F8F RID: 163727
+		// Token: 0x040232BC RID: 144060
 		public const int BestEvaluateItem = 7;
 
-		// Token: 0x04027F90 RID: 163728
+		// Token: 0x040232BD RID: 144061
 		public const int BestEvaluateTexture = 8;
 
-		// Token: 0x04027F91 RID: 163729
+		// Token: 0x040232BE RID: 144062
 		public const int FirstCost = 9;
 
-		// Token: 0x04027F92 RID: 163730
+		// Token: 0x040232BF RID: 144063
 		public const int SecondCost = 10;
 
-		// Token: 0x04027F93 RID: 163731
+		// Token: 0x040232C0 RID: 144064
 		public const int Icon = 11;
 
-		// Token: 0x04027F94 RID: 163732
+		// Token: 0x040232C1 RID: 144065
 		public const int NewTag = 12;
 	}
 }

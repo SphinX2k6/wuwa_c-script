@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002745 RID: 10053
+// Token: 0x02001C30 RID: 7216
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class RecommendQualityItem : GridProxyAbstract<IRecommendQualityItemData>
 {
-	// Token: 0x06014A01 RID: 84481 RVA: 0x00537D38 File Offset: 0x00535F38
+	// Token: 0x06011EE3 RID: 73443 RVA: 0x00546B0C File Offset: 0x00544D0C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -38,7 +38,7 @@ public class RecommendQualityItem : GridProxyAbstract<IRecommendQualityItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014A02 RID: 84482 RVA: 0x00537E20 File Offset: 0x00536020
+	// Token: 0x06011EE4 RID: 73444 RVA: 0x00546BF4 File Offset: 0x00544DF4
 	[NullableContext(1)]
 	public override void Refresh(IRecommendQualityItemData data, bool isSelected, int gridIndex)
 	{
@@ -56,7 +56,7 @@ public class RecommendQualityItem : GridProxyAbstract<IRecommendQualityItemData>
 		sprite.SetUIActive(data.IsRecommend);
 	}
 
-	// Token: 0x06014A03 RID: 84483 RVA: 0x00537E70 File Offset: 0x00536070
+	// Token: 0x06011EE5 RID: 73445 RVA: 0x00546C44 File Offset: 0x00544E44
 	private void OnToggleRoot(EToggleState check)
 	{
 		if (check == EToggleState.ETT_Checked)
@@ -70,7 +70,7 @@ public class RecommendQualityItem : GridProxyAbstract<IRecommendQualityItemData>
 		}
 	}
 
-	// Token: 0x06014A04 RID: 84484 RVA: 0x00537E93 File Offset: 0x00536093
+	// Token: 0x06011EE6 RID: 73446 RVA: 0x00546C67 File Offset: 0x00544E67
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -81,7 +81,7 @@ public class RecommendQualityItem : GridProxyAbstract<IRecommendQualityItemData>
 		extendToggle.SetToggleState(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06014A05 RID: 84485 RVA: 0x00537EAB File Offset: 0x005360AB
+	// Token: 0x06011EE7 RID: 73447 RVA: 0x00546C7F File Offset: 0x00544E7F
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -92,19 +92,19 @@ public class RecommendQualityItem : GridProxyAbstract<IRecommendQualityItemData>
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x02008DB2 RID: 36274
+	// Token: 0x02007F3B RID: 32571
 	private class EChildType
 	{
-		// Token: 0x0402DFEB RID: 188395
+		// Token: 0x04029302 RID: 168706
 		public const int Root = 0;
 
-		// Token: 0x0402DFEC RID: 188396
+		// Token: 0x04029303 RID: 168707
 		public const int Bg = 1;
 
-		// Token: 0x0402DFED RID: 188397
+		// Token: 0x04029304 RID: 168708
 		public const int Name = 2;
 
-		// Token: 0x0402DFEE RID: 188398
+		// Token: 0x04029305 RID: 168709
 		public const int RecommendIcon = 3;
 	}
 }

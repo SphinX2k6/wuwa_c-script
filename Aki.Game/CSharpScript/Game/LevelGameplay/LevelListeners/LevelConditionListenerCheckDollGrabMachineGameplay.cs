@@ -5,10 +5,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006AD9 RID: 27353
+	// Token: 0x02005C51 RID: 23633
 	public class LevelConditionListenerCheckDollGrabMachineGameplay : LevelListenerBase
 	{
-		// Token: 0x06043F59 RID: 278361 RVA: 0x010AB15E File Offset: 0x010A935E
+		// Token: 0x0603A0A2 RID: 237730 RVA: 0x0105480E File Offset: 0x01052A0E
 		private void DollGrabMachineGameplayStateChangeEventHandle(int entityId, bool isInGameplay)
 		{
 			TListenerCallbackFunc callback = this.Callback;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}), Array.Empty<object>());
 		}
 
-		// Token: 0x06043F5A RID: 278362 RVA: 0x010AB198 File Offset: 0x010A9398
+		// Token: 0x0603A0A3 RID: 237731 RVA: 0x01054848 File Offset: 0x01052A48
 		[NullableContext(1)]
 		protected override void OnListen(object listeningInfo, TListenerCallbackFunc callback, [Nullable(2)] GeneralContext context = null, params object[] otherParams)
 		{
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F5B RID: 278363 RVA: 0x010AB1F4 File Offset: 0x010A93F4
+		// Token: 0x0603A0A4 RID: 237732 RVA: 0x010548A4 File Offset: 0x01052AA4
 		protected override void OnUnListen()
 		{
 			bool flag = (this.EntityId ?? 0) == 0;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x0402385A RID: 145498
+		// Token: 0x0401EAFA RID: 125690
 		private int? EntityId;
 	}
 }

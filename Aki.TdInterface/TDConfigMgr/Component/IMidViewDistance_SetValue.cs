@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004F7 RID: 1271
+	// Token: 0x02000558 RID: 1368
 	public class IMidViewDistance_SetValue
 	{
-		// Token: 0x040012E9 RID: 4841
+		// Token: 0x04001449 RID: 5193
 		public EViewDistanceType Type;
 	}
 }

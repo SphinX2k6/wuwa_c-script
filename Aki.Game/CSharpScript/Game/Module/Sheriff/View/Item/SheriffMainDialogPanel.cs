@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C6F RID: 19567
+	// Token: 0x02003C20 RID: 15392
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffMainDialogPanel : UiPanelBase
 	{
-		// Token: 0x06032939 RID: 207161 RVA: 0x00BC9C21 File Offset: 0x00BC7E21
+		// Token: 0x060276EC RID: 161516 RVA: 0x00B0E885 File Offset: 0x00B0CA85
 		public SheriffMainDialogPanel(TsUiBlur uiBlur)
 		{
 			this.UiBlur = uiBlur;
 		}
 
-		// Token: 0x0603293A RID: 207162 RVA: 0x00BC9C3C File Offset: 0x00BC7E3C
+		// Token: 0x060276ED RID: 161517 RVA: 0x00B0E8A0 File Offset: 0x00B0CAA0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603293B RID: 207163 RVA: 0x00BC9DCC File Offset: 0x00BC7FCC
+		// Token: 0x060276EE RID: 161518 RVA: 0x00B0EA30 File Offset: 0x00B0CC30
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			base.SetTextureByPath(resourcePath, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x0603293C RID: 207164 RVA: 0x00BC9E9C File Offset: 0x00BC809C
+		// Token: 0x060276EF RID: 161519 RVA: 0x00B0EB00 File Offset: 0x00B0CD00
 		public void Refresh(List<string> stateIds)
 		{
 			if (stateIds.Count == 0)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.ShowTalk();
 		}
 
-		// Token: 0x0603293D RID: 207165 RVA: 0x00BC9FD4 File Offset: 0x00BC81D4
+		// Token: 0x060276F0 RID: 161520 RVA: 0x00B0EC38 File Offset: 0x00B0CE38
 		private void ShowTalk()
 		{
 			if (this.CurTalkIndex >= this.TalkList.Count)
@@ -142,14 +142,14 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			text.ShowTextNew(key);
 		}
 
-		// Token: 0x0603293E RID: 207166 RVA: 0x00BCA077 File Offset: 0x00BC8277
+		// Token: 0x060276F1 RID: 161521 RVA: 0x00B0ECDB File Offset: 0x00B0CEDB
 		private void OnClickBtnNextPage()
 		{
 			this.CurTalkIndex++;
 			this.ShowTalk();
 		}
 
-		// Token: 0x0603293F RID: 207167 RVA: 0x00BCA08D File Offset: 0x00BC828D
+		// Token: 0x060276F2 RID: 161522 RVA: 0x00B0ECF1 File Offset: 0x00B0CEF1
 		private void OnCloseSeqEnd(string seqName)
 		{
 			if (seqName == "Close")
@@ -159,47 +159,47 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}
 		}
 
-		// Token: 0x0401AE9A RID: 110234
+		// Token: 0x040157F7 RID: 88055
 		protected List<string> TalkList = new List<string>();
 
-		// Token: 0x0401AE9B RID: 110235
+		// Token: 0x040157F8 RID: 88056
 		protected int CurTalkIndex;
 
-		// Token: 0x0401AE9C RID: 110236
+		// Token: 0x040157F9 RID: 88057
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401AE9D RID: 110237
+		// Token: 0x040157FA RID: 88058
 		protected TsUiBlur UiBlur;
 
-		// Token: 0x0200AE22 RID: 44578
+		// Token: 0x02009840 RID: 38976
 		[NullableContext(0)]
 		private static class EDefine
 		{
-			// Token: 0x04034E27 RID: 216615
+			// Token: 0x0402F7CC RID: 194508
 			public const int TexRole = 0;
 
-			// Token: 0x04034E28 RID: 216616
+			// Token: 0x0402F7CD RID: 194509
 			public const int BtnNextPage = 1;
 
-			// Token: 0x04034E29 RID: 216617
+			// Token: 0x0402F7CE RID: 194510
 			public const int PanelTitle = 2;
 
-			// Token: 0x04034E2A RID: 216618
+			// Token: 0x0402F7CF RID: 194511
 			public const int TxtTitle = 3;
 
-			// Token: 0x04034E2B RID: 216619
+			// Token: 0x0402F7D0 RID: 194512
 			public const int TxtList = 4;
 
-			// Token: 0x04034E2C RID: 216620
+			// Token: 0x0402F7D1 RID: 194513
 			public const int PanelButton = 5;
 
-			// Token: 0x04034E2D RID: 216621
+			// Token: 0x0402F7D2 RID: 194514
 			public const int BtnLeft = 6;
 
-			// Token: 0x04034E2E RID: 216622
+			// Token: 0x0402F7D3 RID: 194515
 			public const int BtnRight = 7;
 
-			// Token: 0x04034E2F RID: 216623
+			// Token: 0x0402F7D4 RID: 194516
 			public const int SpriteArrow = 8;
 		}
 	}

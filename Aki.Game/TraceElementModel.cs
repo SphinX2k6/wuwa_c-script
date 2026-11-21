@@ -5,13 +5,13 @@ using CSharpScript.Game.Utils;
 using UnrealEngine;
 using UnrealEngine.Interface;
 
-// Token: 0x0200352A RID: 13610
+// Token: 0x02002A9F RID: 10911
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class TraceElementModel : ModelBase
 {
-	// Token: 0x0601DE95 RID: 122517 RVA: 0x00862D64 File Offset: 0x00860F64
+	// Token: 0x0601BBBD RID: 113597 RVA: 0x0088A99C File Offset: 0x00888B9C
 	protected override bool OnClear()
 	{
 		if (this.SpecificTraceTypeElement != null)
@@ -41,7 +41,7 @@ public class TraceElementModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DE96 RID: 122518 RVA: 0x00862E24 File Offset: 0x00861024
+	// Token: 0x0601BBBE RID: 113598 RVA: 0x0088AA5C File Offset: 0x00888C5C
 	[NullableContext(2)]
 	[Obsolete]
 	public UTraceSphereElement GetActorTrace()
@@ -53,7 +53,7 @@ public class TraceElementModel : ModelBase
 		return this.ActorTrace;
 	}
 
-	// Token: 0x0601DE97 RID: 122519 RVA: 0x00862E3A File Offset: 0x0086103A
+	// Token: 0x0601BBBF RID: 113599 RVA: 0x0088AA72 File Offset: 0x00888C72
 	[Obsolete]
 	public void ClearActorTrace()
 	{
@@ -64,7 +64,7 @@ public class TraceElementModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE98 RID: 122520 RVA: 0x00862E64 File Offset: 0x00861064
+	// Token: 0x0601BBC0 RID: 113600 RVA: 0x0088AA9C File Offset: 0x00888C9C
 	private void InitActorTraceInternal()
 	{
 		UTraceSphereElement utraceSphereElement = new UTraceSphereElement();
@@ -76,7 +76,7 @@ public class TraceElementModel : ModelBase
 		this.ActorTrace = utraceSphereElement;
 	}
 
-	// Token: 0x0601DE99 RID: 122521 RVA: 0x00862EB7 File Offset: 0x008610B7
+	// Token: 0x0601BBC1 RID: 113601 RVA: 0x0088AAEF File Offset: 0x00888CEF
 	[NullableContext(2)]
 	[Obsolete]
 	public UTraceLineElement GetLineTrace()
@@ -88,7 +88,7 @@ public class TraceElementModel : ModelBase
 		return this.LineTrace;
 	}
 
-	// Token: 0x0601DE9A RID: 122522 RVA: 0x00862ECD File Offset: 0x008610CD
+	// Token: 0x0601BBC2 RID: 113602 RVA: 0x0088AB05 File Offset: 0x00888D05
 	[Obsolete]
 	public void ClearLineTrace()
 	{
@@ -99,7 +99,7 @@ public class TraceElementModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE9B RID: 122523 RVA: 0x00862EF4 File Offset: 0x008610F4
+	// Token: 0x0601BBC3 RID: 113603 RVA: 0x0088AB2C File Offset: 0x00888D2C
 	private void InitLineTraceInternal()
 	{
 		UTraceLineElement utraceLineElement = new UTraceLineElement();
@@ -111,7 +111,7 @@ public class TraceElementModel : ModelBase
 		this.LineTrace = utraceLineElement;
 	}
 
-	// Token: 0x0601DE9C RID: 122524 RVA: 0x00862F47 File Offset: 0x00861147
+	// Token: 0x0601BBC4 RID: 113604 RVA: 0x0088AB7F File Offset: 0x00888D7F
 	[NullableContext(2)]
 	[Obsolete]
 	public UTraceBoxElement GetBoxTrace()
@@ -123,7 +123,7 @@ public class TraceElementModel : ModelBase
 		return this.BoxTrace;
 	}
 
-	// Token: 0x0601DE9D RID: 122525 RVA: 0x00862F5D File Offset: 0x0086115D
+	// Token: 0x0601BBC5 RID: 113605 RVA: 0x0088AB95 File Offset: 0x00888D95
 	[Obsolete]
 	public void ClearBoxTrace()
 	{
@@ -134,7 +134,7 @@ public class TraceElementModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE9E RID: 122526 RVA: 0x00862F84 File Offset: 0x00861184
+	// Token: 0x0601BBC6 RID: 113606 RVA: 0x0088ABBC File Offset: 0x00888DBC
 	private void InitBoxTraceInternal()
 	{
 		UTraceBoxElement utraceBoxElement = new UTraceBoxElement();
@@ -146,7 +146,7 @@ public class TraceElementModel : ModelBase
 		this.BoxTrace = utraceBoxElement;
 	}
 
-	// Token: 0x0601DE9F RID: 122527 RVA: 0x00862FD7 File Offset: 0x008611D7
+	// Token: 0x0601BBC7 RID: 113607 RVA: 0x0088AC0F File Offset: 0x00888E0F
 	[NullableContext(2)]
 	[Obsolete]
 	public UTraceCapsuleElement GetCapsuleTrace()
@@ -158,7 +158,7 @@ public class TraceElementModel : ModelBase
 		return this.CapsuleTrace;
 	}
 
-	// Token: 0x0601DEA0 RID: 122528 RVA: 0x00862FED File Offset: 0x008611ED
+	// Token: 0x0601BBC8 RID: 113608 RVA: 0x0088AC25 File Offset: 0x00888E25
 	[Obsolete]
 	public void ClearCapsuleTrace()
 	{
@@ -169,7 +169,7 @@ public class TraceElementModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601DEA1 RID: 122529 RVA: 0x00863014 File Offset: 0x00861214
+	// Token: 0x0601BBC9 RID: 113609 RVA: 0x0088AC4C File Offset: 0x00888E4C
 	private void InitCapsuleTraceInternal()
 	{
 		UTraceCapsuleElement utraceCapsuleElement = new UTraceCapsuleElement();
@@ -181,7 +181,7 @@ public class TraceElementModel : ModelBase
 		this.CapsuleTrace = utraceCapsuleElement;
 	}
 
-	// Token: 0x0601DEA2 RID: 122530 RVA: 0x00863068 File Offset: 0x00861268
+	// Token: 0x0601BBCA RID: 113610 RVA: 0x0088ACA0 File Offset: 0x00888EA0
 	private T GetElement<[Nullable(0)] T>(UObject worldContextObject, bool isSingle, bool ignoreSelf) where T : UTraceBaseElement, IUnrealUObject
 	{
 		if (this.SpecificTraceTypeElement == null)
@@ -209,7 +209,7 @@ public class TraceElementModel : ModelBase
 		return t2;
 	}
 
-	// Token: 0x0601DEA3 RID: 122531 RVA: 0x0086314E File Offset: 0x0086134E
+	// Token: 0x0601BBCB RID: 113611 RVA: 0x0088AD86 File Offset: 0x00888F86
 	public T GetTraceTypeElement<[Nullable(0)] T>(ETraceTypeQuery traceTypeQuery, UObject worldContextObject, bool isSingle = true, bool ignoreSelf = true) where T : UTraceBaseElement, IUnrealUObject
 	{
 		T element = this.GetElement<T>(worldContextObject, isSingle, ignoreSelf);
@@ -217,7 +217,7 @@ public class TraceElementModel : ModelBase
 		return element;
 	}
 
-	// Token: 0x0601DEA4 RID: 122532 RVA: 0x00863168 File Offset: 0x00861368
+	// Token: 0x0601BBCC RID: 113612 RVA: 0x0088ADA0 File Offset: 0x00888FA0
 	public T GetObjectTypeElement<[Nullable(0)] T>(EObjectTypeQuery[] objectTypeQueries, UObject worldContextObject, bool isSingle = true, bool ignoreSelf = true) where T : UTraceBaseElement, IUnrealUObject
 	{
 		T element = this.GetElement<T>(worldContextObject, isSingle, ignoreSelf);
@@ -230,7 +230,7 @@ public class TraceElementModel : ModelBase
 		return element;
 	}
 
-	// Token: 0x0601DEA5 RID: 122533 RVA: 0x008631B6 File Offset: 0x008613B6
+	// Token: 0x0601BBCD RID: 113613 RVA: 0x0088ADEE File Offset: 0x00888FEE
 	public T GetObjectTypeElement<[Nullable(0)] T>(EObjectTypeQuery objectTypeQuery, UObject worldContextObject, bool isSingle = true, bool ignoreSelf = true) where T : UTraceBaseElement, IUnrealUObject
 	{
 		return this.GetObjectTypeElement<T>(new EObjectTypeQuery[]
@@ -239,8 +239,8 @@ public class TraceElementModel : ModelBase
 		}, worldContextObject, isSingle, ignoreSelf);
 	}
 
-	// Token: 0x1700295E RID: 10590
-	// (get) Token: 0x0601DEA6 RID: 122534 RVA: 0x008631CC File Offset: 0x008613CC
+	// Token: 0x17002CF7 RID: 11511
+	// (get) Token: 0x0601BBCE RID: 113614 RVA: 0x0088AE04 File Offset: 0x00889004
 	public static TraceElementModel Instance
 	{
 		get
@@ -249,7 +249,7 @@ public class TraceElementModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601DEA7 RID: 122535 RVA: 0x008631D3 File Offset: 0x008613D3
+	// Token: 0x0601BBCF RID: 113615 RVA: 0x0088AE0B File Offset: 0x0088900B
 	public static TraceElementModel GetOrCreateInstance()
 	{
 		if (TraceElementModel._Instance == null)
@@ -259,7 +259,7 @@ public class TraceElementModel : ModelBase
 		return TraceElementModel._Instance;
 	}
 
-	// Token: 0x0601DEA8 RID: 122536 RVA: 0x008631E7 File Offset: 0x008613E7
+	// Token: 0x0601BBD0 RID: 113616 RVA: 0x0088AE1F File Offset: 0x0088901F
 	public static bool CreateInstance()
 	{
 		if (TraceElementModel._Instance != null)
@@ -270,49 +270,49 @@ public class TraceElementModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DEA9 RID: 122537 RVA: 0x008631FD File Offset: 0x008613FD
+	// Token: 0x0601BBD1 RID: 113617 RVA: 0x0088AE35 File Offset: 0x00889035
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DEAA RID: 122538 RVA: 0x008631FF File Offset: 0x008613FF
+	// Token: 0x0601BBD2 RID: 113618 RVA: 0x0088AE37 File Offset: 0x00889037
 	public static void ResetStaticDefaultValue()
 	{
 		TraceElementModel._Instance = null;
 	}
 
-	// Token: 0x0601DEAB RID: 122539 RVA: 0x00863207 File Offset: 0x00861407
+	// Token: 0x0601BBD3 RID: 113619 RVA: 0x0088AE3F File Offset: 0x0088903F
 	static TraceElementModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TraceElementModel.CreateStaticDefaultValue), new Action(TraceElementModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400EAE1 RID: 60129
+	// Token: 0x0400EF9E RID: 61342
 	[Nullable(2)]
 	private UTraceSphereElement ActorTrace;
 
-	// Token: 0x0400EAE2 RID: 60130
+	// Token: 0x0400EF9F RID: 61343
 	[Nullable(2)]
 	private UTraceLineElement LineTrace;
 
-	// Token: 0x0400EAE3 RID: 60131
+	// Token: 0x0400EFA0 RID: 61344
 	public Vector CommonStartLocation = Vector.Create();
 
-	// Token: 0x0400EAE4 RID: 60132
+	// Token: 0x0400EFA1 RID: 61345
 	public Vector CommonEndLocation = Vector.Create();
 
-	// Token: 0x0400EAE5 RID: 60133
+	// Token: 0x0400EFA2 RID: 61346
 	public Vector CommonHitLocation = Vector.Create();
 
-	// Token: 0x0400EAE6 RID: 60134
+	// Token: 0x0400EFA3 RID: 61347
 	[Nullable(2)]
 	private UTraceBoxElement BoxTrace;
 
-	// Token: 0x0400EAE7 RID: 60135
+	// Token: 0x0400EFA4 RID: 61348
 	[Nullable(2)]
 	private UTraceCapsuleElement CapsuleTrace;
 
-	// Token: 0x0400EAE8 RID: 60136
+	// Token: 0x0400EFA5 RID: 61349
 	[Nullable(new byte[]
 	{
 		2,
@@ -321,10 +321,10 @@ public class TraceElementModel : ModelBase
 	})]
 	private Dictionary<Type, UTraceBaseElement> SpecificTraceTypeElement;
 
-	// Token: 0x0400EAE9 RID: 60137
+	// Token: 0x0400EFA6 RID: 61350
 	public bool ShowDebugTrace;
 
-	// Token: 0x0400EAEA RID: 60138
+	// Token: 0x0400EFA7 RID: 61351
 	[Nullable(2)]
 	private static TraceElementModel _Instance;
 }

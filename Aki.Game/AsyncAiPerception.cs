@@ -13,13 +13,13 @@ using UnrealEngine;
 [Nullable(0)]
 public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 {
-	// Token: 0x06000E1B RID: 3611 RVA: 0x00050794 File Offset: 0x0004E994
+	// Token: 0x06000E21 RID: 3617 RVA: 0x00051324 File Offset: 0x0004F524
 	static AsyncAiPerception()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AsyncAiPerception.CreateStaticDefaultValue), new Action(AsyncAiPerception.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06000E1C RID: 3612 RVA: 0x000507B4 File Offset: 0x0004E9B4
+	// Token: 0x06000E22 RID: 3618 RVA: 0x00051344 File Offset: 0x0004F544
 	public static void CreateStaticDefaultValue()
 	{
 		AsyncAiPerception.AfterAsyncTaskStat = Stat.Create("AsyncAiPerception.AfterAsyncTask", "", "");
@@ -28,7 +28,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		AsyncAiPerception.RefreshAllEnemiesStat = Stat.Create("AsyncAiPerception.RefreshAllEnemies", "", "");
 	}
 
-	// Token: 0x06000E1D RID: 3613 RVA: 0x00050825 File Offset: 0x0004EA25
+	// Token: 0x06000E23 RID: 3619 RVA: 0x000513B5 File Offset: 0x0004F5B5
 	public static void ResetStaticDefaultValue()
 	{
 		AsyncAiPerception.AfterAsyncTaskStat = null;
@@ -37,7 +37,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		AsyncAiPerception.RefreshAllEnemiesStat = null;
 	}
 
-	// Token: 0x06000E1E RID: 3614 RVA: 0x00050840 File Offset: 0x0004EA40
+	// Token: 0x06000E24 RID: 3620 RVA: 0x000513D0 File Offset: 0x0004F5D0
 	public unsafe AsyncAiPerception(AiController aiController, AiSenseGroup aiSenseGroup, AiSense[] aiSenses)
 	{
 		this.AiController = aiController;
@@ -110,7 +110,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		this.OnLastDemotableTickHandle = TickProcessSystem.Instance.RegisterTickProcess(ETickingGroup.TG_LastDemotable, true, new Action<float>(this.OnLastDemotableTick), "AsyncAiPerception");
 	}
 
-	// Token: 0x06000E1F RID: 3615 RVA: 0x00050C28 File Offset: 0x0004EE28
+	// Token: 0x06000E25 RID: 3621 RVA: 0x000517B8 File Offset: 0x0004F9B8
 	public override void Tick()
 	{
 		if (Time.Instance.Frame == Time.Instance.LastPauseTimeFrame || Time.Instance.Frame == Time.Instance.LastResumeTimeFrame || Time.Instance.Frame == Time.Instance.LastResumeTimeFrame + 1)
@@ -140,7 +140,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		this.StartAsyncTask();
 	}
 
-	// Token: 0x06000E20 RID: 3616 RVA: 0x00050CFC File Offset: 0x0004EEFC
+	// Token: 0x06000E26 RID: 3622 RVA: 0x0005188C File Offset: 0x0004FA8C
 	private void StartAsyncTask()
 	{
 		if (this.AiPerceptionDataHandle == 0)
@@ -168,7 +168,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		this.AfterAsyncTask();
 	}
 
-	// Token: 0x06000E21 RID: 3617 RVA: 0x00050DB0 File Offset: 0x0004EFB0
+	// Token: 0x06000E27 RID: 3623 RVA: 0x00051940 File Offset: 0x0004FB40
 	private void AfterAsyncTask()
 	{
 		if (this.AiPerceptionDataHandle == 0)
@@ -239,7 +239,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		this.RefreshAllEnemies();
 	}
 
-	// Token: 0x06000E22 RID: 3618 RVA: 0x00051008 File Offset: 0x0004F208
+	// Token: 0x06000E28 RID: 3624 RVA: 0x00051B9C File Offset: 0x0004FD9C
 	private void SenseActor(Entity entity, bool inSense)
 	{
 		int id = entity.Id;
@@ -293,7 +293,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000E23 RID: 3619 RVA: 0x00051118 File Offset: 0x0004F318
+	// Token: 0x06000E29 RID: 3625 RVA: 0x00051CAC File Offset: 0x0004FEAC
 	private void FindShareAlly()
 	{
 		if (this.AiSenseGroup.Value.ShareDis <= 0f)
@@ -353,7 +353,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		this.ShareAllyLink = newShareAllyLink;
 	}
 
-	// Token: 0x06000E24 RID: 3620 RVA: 0x000513CC File Offset: 0x0004F5CC
+	// Token: 0x06000E2A RID: 3626 RVA: 0x00051F60 File Offset: 0x00050160
 	private void RefreshAllEnemies()
 	{
 		this.AllEnemies.Clear();
@@ -409,7 +409,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		goto IL_BA;
 	}
 
-	// Token: 0x06000E25 RID: 3621 RVA: 0x00051604 File Offset: 0x0004F804
+	// Token: 0x06000E2B RID: 3627 RVA: 0x00052198 File Offset: 0x00050398
 	public override void OnEntityCampModified(Entity entity, ECamp oldCamp, ECamp newCamp)
 	{
 		if (this.AiPerceptionDataHandle == 0)
@@ -476,7 +476,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000E26 RID: 3622 RVA: 0x000517A0 File Offset: 0x0004F9A0
+	// Token: 0x06000E2C RID: 3628 RVA: 0x00052334 File Offset: 0x00050534
 	public unsafe override string GetEnableAiSenseDebug()
 	{
 		string text = "感知配置激活情况: ";
@@ -498,13 +498,13 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		return text;
 	}
 
-	// Token: 0x06000E27 RID: 3623 RVA: 0x000518E8 File Offset: 0x0004FAE8
+	// Token: 0x06000E2D RID: 3629 RVA: 0x0005247C File Offset: 0x0005067C
 	private void EnableAiSenseInternal(AsyncAiSenseObject aiSenseObject, bool enable)
 	{
 		this.EnableAiSenseObjectMap[aiSenseObject] = enable;
 	}
 
-	// Token: 0x06000E28 RID: 3624 RVA: 0x000518F8 File Offset: 0x0004FAF8
+	// Token: 0x06000E2E RID: 3630 RVA: 0x0005248C File Offset: 0x0005068C
 	private unsafe void OnLastEnableAiSenseInternal(AsyncAiSenseObject aiSenseObject, bool enable)
 	{
 		if (FKuroJsModelCSharpInterface.ContainsActivateAiSenseObjects(this.AiPerceptionDataHandle, (byte)aiSenseObject.AiSense.SenseTarget, (void*)aiSenseObject.AiSenseObjectData) == enable)
@@ -545,7 +545,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		FKuroJsModelCSharpInterface.RemoveActivateAiSenseObjects(this.AiPerceptionDataHandle, (byte)aiSenseObject.AiSense.SenseTarget, (void*)aiSenseObject.AiSenseObjectData);
 	}
 
-	// Token: 0x06000E29 RID: 3625 RVA: 0x00051A6E File Offset: 0x0004FC6E
+	// Token: 0x06000E2F RID: 3631 RVA: 0x00052602 File Offset: 0x00050802
 	public override void SetAiSenseEnable(int index, bool enable)
 	{
 		if (index < 0 || this.AiSenseObjects.Count <= index)
@@ -555,7 +555,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		this.EnableAiSenseInternal(this.AiSenseObjects[index], enable);
 	}
 
-	// Token: 0x06000E2A RID: 3626 RVA: 0x00051A98 File Offset: 0x0004FC98
+	// Token: 0x06000E30 RID: 3632 RVA: 0x0005262C File Offset: 0x0005082C
 	public override void SetAiSenseEnableWithoutForbidAllSense(bool enable)
 	{
 		if (this.AiSenseObjects.Count <= 0)
@@ -568,7 +568,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000E2B RID: 3627 RVA: 0x00051AFC File Offset: 0x0004FCFC
+	// Token: 0x06000E31 RID: 3633 RVA: 0x00052690 File Offset: 0x00050890
 	public override void SetAllAiSenseEnable(bool enable)
 	{
 		if (!enable)
@@ -585,7 +585,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		instance.Info(flag, entity, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06000E2C RID: 3628 RVA: 0x00051B6C File Offset: 0x0004FD6C
+	// Token: 0x06000E32 RID: 3634 RVA: 0x00052700 File Offset: 0x00050900
 	private void OnLastSetAllAiSenseEnable(float deltaTime)
 	{
 		if (this.AiPerceptionDataHandle == 0)
@@ -615,7 +615,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000E2D RID: 3629 RVA: 0x00051C44 File Offset: 0x0004FE44
+	// Token: 0x06000E33 RID: 3635 RVA: 0x000527D8 File Offset: 0x000509D8
 	public override void AddOrRemoveAiSense(int aiSenseId, bool add)
 	{
 		if (add && !this.ExtraAiSenseObjects.ContainsKey(aiSenseId))
@@ -633,7 +633,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000E2E RID: 3630 RVA: 0x00051CB0 File Offset: 0x0004FEB0
+	// Token: 0x06000E34 RID: 3636 RVA: 0x00052844 File Offset: 0x00050A44
 	public override void EnableAiSenseByType(int type, bool enable)
 	{
 		foreach (AsyncAiSenseObject asyncAiSenseObject in this.AiSenseObjects)
@@ -652,7 +652,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000E2F RID: 3631 RVA: 0x00051D74 File Offset: 0x0004FF74
+	// Token: 0x06000E35 RID: 3637 RVA: 0x00052908 File Offset: 0x00050B08
 	public override void Clear(bool allClear = true, bool collectEvent = false)
 	{
 		if (collectEvent)
@@ -702,7 +702,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000E30 RID: 3632 RVA: 0x00051F74 File Offset: 0x00050174
+	// Token: 0x06000E36 RID: 3638 RVA: 0x00052B08 File Offset: 0x00050D08
 	private void OnLastClear(float deltaTime)
 	{
 		if (this.AiPerceptionDataHandle == 0)
@@ -714,7 +714,7 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		this.EntitiesToAdd.Empty(0);
 	}
 
-	// Token: 0x06000E31 RID: 3633 RVA: 0x00051FAC File Offset: 0x000501AC
+	// Token: 0x06000E37 RID: 3639 RVA: 0x00052B40 File Offset: 0x00050D40
 	private void OnLastDemotableTick(float deltaTime)
 	{
 		if (this.ClearFrame != -1 && this.ClearFrame <= Time.Instance.Frame)
@@ -736,95 +736,95 @@ public class AsyncAiPerception : IAiPerception, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x04000B7C RID: 2940
+	// Token: 0x04000B84 RID: 2948
 	public int AiPerceptionDataHandle;
 
-	// Token: 0x04000B7D RID: 2941
+	// Token: 0x04000B85 RID: 2949
 	public readonly HashSet<int> SceneItems = new HashSet<int>();
 
-	// Token: 0x04000B7E RID: 2942
+	// Token: 0x04000B86 RID: 2950
 	private HashSet<int> NewShareAllyLink = new HashSet<int>();
 
-	// Token: 0x04000B7F RID: 2943
+	// Token: 0x04000B87 RID: 2951
 	private readonly HashSet<int> BeShared = new HashSet<int>();
 
-	// Token: 0x04000B80 RID: 2944
+	// Token: 0x04000B88 RID: 2952
 	private readonly HashSet<int> AddedBeShared = new HashSet<int>();
 
-	// Token: 0x04000B81 RID: 2945
+	// Token: 0x04000B89 RID: 2953
 	private readonly List<int> Pending = new List<int>();
 
-	// Token: 0x04000B82 RID: 2946
+	// Token: 0x04000B8A RID: 2954
 	private TMap<int, byte> EntitiesInSense;
 
-	// Token: 0x04000B83 RID: 2947
+	// Token: 0x04000B8B RID: 2955
 	private TMap<int, byte> EntitiesToAdd;
 
-	// Token: 0x04000B84 RID: 2948
+	// Token: 0x04000B8C RID: 2956
 	private TArray<int> EntitiesNotSense;
 
-	// Token: 0x04000B85 RID: 2949
+	// Token: 0x04000B8D RID: 2957
 	private TMap<int, double> EntitiesRemoveTime;
 
-	// Token: 0x04000B86 RID: 2950
+	// Token: 0x04000B8E RID: 2958
 	private readonly List<EntityHandle> TmpHandles = new List<EntityHandle>();
 
-	// Token: 0x04000B87 RID: 2951
+	// Token: 0x04000B8F RID: 2959
 	private ECamp Camp;
 
-	// Token: 0x04000B88 RID: 2952
+	// Token: 0x04000B90 RID: 2960
 	private readonly int EntityId;
 
-	// Token: 0x04000B89 RID: 2953
+	// Token: 0x04000B91 RID: 2961
 	private readonly List<AsyncAiSenseObject> AiSenseObjects = new List<AsyncAiSenseObject>();
 
-	// Token: 0x04000B8A RID: 2954
+	// Token: 0x04000B92 RID: 2962
 	private readonly Dictionary<int, AsyncAiSenseObject> ExtraAiSenseObjects = new Dictionary<int, AsyncAiSenseObject>();
 
-	// Token: 0x04000B8B RID: 2955
+	// Token: 0x04000B93 RID: 2963
 	private readonly float SquaredShareDist;
 
-	// Token: 0x04000B8C RID: 2956
+	// Token: 0x04000B94 RID: 2964
 	private bool ForbidAllSense;
 
-	// Token: 0x04000B8D RID: 2957
+	// Token: 0x04000B95 RID: 2965
 	private int OnLastDemotableTickHandle;
 
-	// Token: 0x04000B8E RID: 2958
+	// Token: 0x04000B96 RID: 2966
 	private readonly Dictionary<AsyncAiSenseObject, bool> EnableAiSenseObjectMap = new Dictionary<AsyncAiSenseObject, bool>();
 
-	// Token: 0x04000B8F RID: 2959
+	// Token: 0x04000B97 RID: 2967
 	private readonly AiController AiController;
 
-	// Token: 0x04000B90 RID: 2960
+	// Token: 0x04000B98 RID: 2968
 	public readonly AiSenseGroup? AiSenseGroup;
 
-	// Token: 0x04000B91 RID: 2961
+	// Token: 0x04000B99 RID: 2969
 	private int LastTickFrame = -1;
 
-	// Token: 0x04000B92 RID: 2962
+	// Token: 0x04000B9A RID: 2970
 	[Nullable(2)]
 	private UTraceLineElement LineTrace;
 
-	// Token: 0x04000B93 RID: 2963
+	// Token: 0x04000B9B RID: 2971
 	[Nullable(2)]
 	private FAIAsyncPerceptionCallback _asyncPerceptionCallback;
 
-	// Token: 0x04000B94 RID: 2964
+	// Token: 0x04000B9C RID: 2972
 	private static Stat AfterAsyncTaskStat;
 
-	// Token: 0x04000B95 RID: 2965
+	// Token: 0x04000B9D RID: 2973
 	private static Stat SenseActorStat;
 
-	// Token: 0x04000B96 RID: 2966
+	// Token: 0x04000B9E RID: 2974
 	private static Stat FindShareAllyStat;
 
-	// Token: 0x04000B97 RID: 2967
+	// Token: 0x04000B9F RID: 2975
 	private static Stat RefreshAllEnemiesStat;
 
-	// Token: 0x04000B98 RID: 2968
+	// Token: 0x04000BA0 RID: 2976
 	private int DisableAllAiSenseFrame = -1;
 
-	// Token: 0x04000B99 RID: 2969
+	// Token: 0x04000BA1 RID: 2977
 	private int ClearFrame = -1;
 }

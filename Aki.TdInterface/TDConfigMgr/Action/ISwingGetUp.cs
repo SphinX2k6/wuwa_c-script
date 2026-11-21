@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EF9 RID: 7929
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002132 RID: 8498
 	public class ISwingGetUp : ILeisureInteractType
 	{
-		// Token: 0x0600A992 RID: 43410 RVA: 0x0017E43C File Offset: 0x0017C63C
+		// Token: 0x0600B464 RID: 46180 RVA: 0x00194434 File Offset: 0x00192634
 		private ISwingGetUp_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A993 RID: 43411 RVA: 0x0017E474 File Offset: 0x0017C674
+		// Token: 0x0600B465 RID: 46181 RVA: 0x0019446C File Offset: 0x0019266C
 		public static ISwingGetUp Create([Nullable(2)] ISwingGetUp instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A994 RID: 43412 RVA: 0x0017E487 File Offset: 0x0017C687
+		// Token: 0x0600B466 RID: 46182 RVA: 0x0019447F File Offset: 0x0019267F
 		public static ISwingGetUp CreateFromSetValue([Nullable(2)] ISwingGetUp_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A995 RID: 43413 RVA: 0x0017E49A File Offset: 0x0017C69A
+		// Token: 0x0600B467 RID: 46183 RVA: 0x00194492 File Offset: 0x00192692
 		public new ISwingGetUp_SetValue ToSetValue()
 		{
 			return new ISwingGetUp_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033AB RID: 13227
-		// (get) Token: 0x0600A996 RID: 43414 RVA: 0x0017E4AD File Offset: 0x0017C6AD
-		// (set) Token: 0x0600A997 RID: 43415 RVA: 0x0017E4D8 File Offset: 0x0017C6D8
+		// Token: 0x17003676 RID: 13942
+		// (get) Token: 0x0600B468 RID: 46184 RVA: 0x001944A5 File Offset: 0x001926A5
+		// (set) Token: 0x0600B469 RID: 46185 RVA: 0x001944D0 File Offset: 0x001926D0
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064DC RID: 25820
+		// Token: 0x04006ACB RID: 27339
 		[Nullable(2)]
 		protected new ISwingGetUp FbInstance;
 
-		// Token: 0x040064DD RID: 25821
+		// Token: 0x04006ACC RID: 27340
 		[Nullable(2)]
 		protected new ISwingGetUp_SetValue PocoInterface;
 	}

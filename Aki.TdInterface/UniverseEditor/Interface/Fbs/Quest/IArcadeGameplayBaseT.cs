@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D02 RID: 15618
+	// Token: 0x02004119 RID: 16665
 	public class IArcadeGameplayBaseT
 	{
-		// Token: 0x17006B2B RID: 27435
-		// (get) Token: 0x060158B1 RID: 88241 RVA: 0x0031CEEE File Offset: 0x0031B0EE
-		// (set) Token: 0x060158B2 RID: 88242 RVA: 0x0031CEF6 File Offset: 0x0031B0F6
+		// Token: 0x170070E5 RID: 28901
+		// (get) Token: 0x06016DE9 RID: 93673 RVA: 0x00344166 File Offset: 0x00342366
+		// (set) Token: 0x06016DEA RID: 93674 RVA: 0x0034416E File Offset: 0x0034236E
 		public EArcadeGameplayType Type { get; set; }
 
-		// Token: 0x060158B3 RID: 88243 RVA: 0x0031CEFF File Offset: 0x0031B0FF
+		// Token: 0x06016DEB RID: 93675 RVA: 0x00344177 File Offset: 0x00342377
 		public IArcadeGameplayBaseT()
 		{
 			this.Type = EArcadeGameplayType.DropCatch;

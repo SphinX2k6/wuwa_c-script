@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E15 RID: 19989
+	// Token: 0x02003DDE RID: 15838
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RoguelikeRandomEventItem : GridProxyAbstract<RogueGainEntry>
 	{
-		// Token: 0x06033904 RID: 211204 RVA: 0x00C0DE4C File Offset: 0x00C0C04C
+		// Token: 0x0602876F RID: 165743 RVA: 0x00B57358 File Offset: 0x00B55558
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,14 +33,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033905 RID: 211205 RVA: 0x00C0DED6 File Offset: 0x00C0C0D6
+		// Token: 0x06028770 RID: 165744 RVA: 0x00B573E2 File Offset: 0x00B555E2
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).OnStateChange.Clear();
 			base.GetExtendToggle(0).OnStateChange.Add(new Action<EToggleState>(this.OnClickEvent));
 		}
 
-		// Token: 0x06033906 RID: 211206 RVA: 0x00C0DF06 File Offset: 0x00C0C106
+		// Token: 0x06028771 RID: 165745 RVA: 0x00B57412 File Offset: 0x00B55612
 		protected void OnClickEvent(EToggleState toggleState)
 		{
 			RoguelikeModel.Instance.CurrentRogueGainEntry = ((toggleState == EToggleState.ETT_Checked) ? this.Data : null);
@@ -50,25 +50,25 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033907 RID: 211207 RVA: 0x00C0DF34 File Offset: 0x00C0C134
+		// Token: 0x06028772 RID: 165746 RVA: 0x00B57440 File Offset: 0x00B55640
 		public void SetButtonState(bool isSelected)
 		{
 			base.GetExtendToggle(0).SetSelfInteractive(isSelected);
 		}
 
-		// Token: 0x06033908 RID: 211208 RVA: 0x00C0DF43 File Offset: 0x00C0C143
+		// Token: 0x06028773 RID: 165747 RVA: 0x00B5744F File Offset: 0x00B5564F
 		public void SetToggleState(bool isSelected)
 		{
 			base.GetExtendToggle(0).SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06033909 RID: 211209 RVA: 0x00C0DF5C File Offset: 0x00C0C15C
+		// Token: 0x06028774 RID: 165748 RVA: 0x00B57468 File Offset: 0x00B55668
 		public EToggleState GetToggleState()
 		{
 			return base.GetExtendToggle(0).GetToggleState();
 		}
 
-		// Token: 0x0603390A RID: 211210 RVA: 0x00C0DF6C File Offset: 0x00C0C16C
+		// Token: 0x06028775 RID: 165749 RVA: 0x00B57478 File Offset: 0x00B55678
 		public override void Refresh(RogueGainEntry entry, bool isSelected, int gridIndex)
 		{
 			this.Data = entry;
@@ -79,10 +79,10 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.SetButtonState(!entry.IsSelect && flag);
 		}
 
-		// Token: 0x0401B597 RID: 112023
+		// Token: 0x04015F6A RID: 89962
 		public RogueGainEntry Data;
 
-		// Token: 0x0401B598 RID: 112024
+		// Token: 0x04015F6B RID: 89963
 		[Nullable(new byte[]
 		{
 			2,
@@ -90,17 +90,17 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		public Action<RoguelikeRandomEventItem, EToggleState> OnSelectHandle;
 
-		// Token: 0x0200AFAD RID: 44973
+		// Token: 0x020099E2 RID: 39394
 		[NullableContext(0)]
 		private class ERoguelikeRandomEventItemDefine
 		{
-			// Token: 0x04035559 RID: 218457
+			// Token: 0x0402FF8C RID: 196492
 			public const int BtnEvent = 0;
 
-			// Token: 0x0403555A RID: 218458
+			// Token: 0x0402FF8D RID: 196493
 			public const int TxtTitle = 1;
 
-			// Token: 0x0403555B RID: 218459
+			// Token: 0x0402FF8E RID: 196494
 			public const int TxtDesc = 2;
 		}
 	}

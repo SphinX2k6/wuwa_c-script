@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001841 RID: 6209
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019CC RID: 6604
 	public class ICameraLockConfig_SetValue
 	{
-		// Token: 0x04005434 RID: 21556
+		// Token: 0x04005880 RID: 22656
 		public ICameraLockTargetPosition LockTarget;
 
-		// Token: 0x04005435 RID: 21557
+		// Token: 0x04005881 RID: 22657
 		public ICameraLockParams CameraParams;
 	}
 }

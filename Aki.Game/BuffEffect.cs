@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002EFE RID: 12030
+// Token: 0x02002451 RID: 9297
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class BuffEffect : BuffEffectBase
 {
-	// Token: 0x17002393 RID: 9107
-	// (get) Token: 0x06019B2E RID: 105262 RVA: 0x006B16A2 File Offset: 0x006AF8A2
+	// Token: 0x17002455 RID: 9301
+	// (get) Token: 0x06017439 RID: 95289 RVA: 0x006D79BA File Offset: 0x006D5BBA
 	public double RemainCd
 	{
 		get
@@ -21,8 +21,8 @@ public abstract class BuffEffect : BuffEffectBase
 		}
 	}
 
-	// Token: 0x17002394 RID: 9108
-	// (get) Token: 0x06019B2F RID: 105263 RVA: 0x006B16CC File Offset: 0x006AF8CC
+	// Token: 0x17002456 RID: 9302
+	// (get) Token: 0x0601743A RID: 95290 RVA: 0x006D79E4 File Offset: 0x006D5BE4
 	public double RemainCdForTarget
 	{
 		get
@@ -40,8 +40,8 @@ public abstract class BuffEffect : BuffEffectBase
 		}
 	}
 
-	// Token: 0x17002395 RID: 9109
-	// (get) Token: 0x06019B30 RID: 105264 RVA: 0x006B1725 File Offset: 0x006AF925
+	// Token: 0x17002457 RID: 9303
+	// (get) Token: 0x0601743B RID: 95291 RVA: 0x006D7A3D File Offset: 0x006D5C3D
 	[Nullable(2)]
 	protected IActiveBuff Buff
 	{
@@ -57,8 +57,8 @@ public abstract class BuffEffect : BuffEffectBase
 		}
 	}
 
-	// Token: 0x17002396 RID: 9110
-	// (get) Token: 0x06019B31 RID: 105265 RVA: 0x006B173E File Offset: 0x006AF93E
+	// Token: 0x17002458 RID: 9304
+	// (get) Token: 0x0601743C RID: 95292 RVA: 0x006D7A56 File Offset: 0x006D5C56
 	[Nullable(2)]
 	protected IActiveBuff PendingBuff
 	{
@@ -74,7 +74,7 @@ public abstract class BuffEffect : BuffEffectBase
 		}
 	}
 
-	// Token: 0x06019B32 RID: 105266 RVA: 0x006B1758 File Offset: 0x006AF958
+	// Token: 0x0601743D RID: 95293 RVA: 0x006D7A70 File Offset: 0x006D5C70
 	protected BuffEffect(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(requireAndLimits)
 	{
 		this.ActiveHandleId = activeHandleId;
@@ -93,7 +93,7 @@ public abstract class BuffEffect : BuffEffectBase
 		}
 	}
 
-	// Token: 0x06019B33 RID: 105267 RVA: 0x006B17C8 File Offset: 0x006AF9C8
+	// Token: 0x0601743E RID: 95294 RVA: 0x006D7AE0 File Offset: 0x006D5CE0
 	public static BuffEffect Create(Type typeOfBuffEffect, int handleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent, [Nullable(2)] ExtraEffectParameters parameters = null)
 	{
 		BuffEffect buffEffect = (BuffEffect)Activator.CreateInstance(typeOfBuffEffect, new object[]
@@ -111,37 +111,37 @@ public abstract class BuffEffect : BuffEffectBase
 		return buffEffect;
 	}
 
-	// Token: 0x06019B34 RID: 105268 RVA: 0x006B1814 File Offset: 0x006AFA14
+	// Token: 0x0601743F RID: 95295 RVA: 0x006D7B2C File Offset: 0x006D5D2C
 	public virtual void OnCreated()
 	{
 	}
 
-	// Token: 0x06019B35 RID: 105269 RVA: 0x006B1816 File Offset: 0x006AFA16
+	// Token: 0x06017440 RID: 95296 RVA: 0x006D7B2E File Offset: 0x006D5D2E
 	public virtual void OnRemoved(bool bPremature)
 	{
 	}
 
-	// Token: 0x06019B36 RID: 105270 RVA: 0x006B1818 File Offset: 0x006AFA18
+	// Token: 0x06017441 RID: 95297 RVA: 0x006D7B30 File Offset: 0x006D5D30
 	public virtual void OnStackDecreased(int newCount, int oldCount, bool bPremature)
 	{
 	}
 
-	// Token: 0x06019B37 RID: 105271 RVA: 0x006B181A File Offset: 0x006AFA1A
+	// Token: 0x06017442 RID: 95298 RVA: 0x006D7B32 File Offset: 0x006D5D32
 	public virtual void OnStackIncreased(int newCount, int oldCount, long? instigatorId)
 	{
 	}
 
-	// Token: 0x06019B38 RID: 105272 RVA: 0x006B181C File Offset: 0x006AFA1C
+	// Token: 0x06017443 RID: 95299 RVA: 0x006D7B34 File Offset: 0x006D5D34
 	public virtual void OnPeriodCallback()
 	{
 	}
 
-	// Token: 0x06019B39 RID: 105273 RVA: 0x006B181E File Offset: 0x006AFA1E
+	// Token: 0x06017444 RID: 95300 RVA: 0x006D7B36 File Offset: 0x006D5D36
 	public override void OnBuffStackOverflow(ActiveBuffInternal buff, int oldStack, int newStack, int stackLimitMax)
 	{
 	}
 
-	// Token: 0x06019B3A RID: 105274 RVA: 0x006B1820 File Offset: 0x006AFA20
+	// Token: 0x06017445 RID: 95301 RVA: 0x006D7B38 File Offset: 0x006D5D38
 	public bool TryExecute(Partial_RequirementPayload context, IBuffComponent opponent, params object[] parameters)
 	{
 		if (!this.Check(context, opponent))
@@ -154,7 +154,7 @@ public abstract class BuffEffect : BuffEffectBase
 		return true;
 	}
 
-	// Token: 0x06019B3B RID: 105275 RVA: 0x006B1848 File Offset: 0x006AFA48
+	// Token: 0x06017446 RID: 95302 RVA: 0x006D7B60 File Offset: 0x006D5D60
 	public bool Check(Partial_RequirementPayload context, IBuffComponent opponent)
 	{
 		if (!this.CheckExecutable())
@@ -166,7 +166,7 @@ public abstract class BuffEffect : BuffEffectBase
 		return base.CheckLoop() && base.CheckRequirements(context) && (this.ActiveHandleId < 0 || (this.RemainCd <= 0.0 && this.RemainCdForTarget <= 0.0 && RandomSystem.GetRandomPercent() <= this.RequireAndLimits.Limits.ExtraEffectProbability));
 	}
 
-	// Token: 0x06019B3C RID: 105276 RVA: 0x006B18D7 File Offset: 0x006AFAD7
+	// Token: 0x06017447 RID: 95303 RVA: 0x006D7BEF File Offset: 0x006D5DEF
 	[return: Nullable(2)]
 	public object Execute(params object[] parameters)
 	{
@@ -177,11 +177,11 @@ public abstract class BuffEffect : BuffEffectBase
 		return result;
 	}
 
-	// Token: 0x06019B3D RID: 105277
+	// Token: 0x06017448 RID: 95304
 	[return: Nullable(2)]
 	public abstract object OnExecute(params object[] parameters);
 
-	// Token: 0x06019B3E RID: 105278 RVA: 0x006B1900 File Offset: 0x006AFB00
+	// Token: 0x06017449 RID: 95305 RVA: 0x006D7C18 File Offset: 0x006D5E18
 	protected virtual void PostExecuted()
 	{
 		if (this.ActiveHandleId < 0 || this.OwnerBuffComponent == null)
@@ -205,16 +205,16 @@ public abstract class BuffEffect : BuffEffectBase
 		}
 	}
 
-	// Token: 0x0400C0D9 RID: 49369
+	// Token: 0x0400C47A RID: 50298
 	protected int Timeout;
 
-	// Token: 0x0400C0DA RID: 49370
+	// Token: 0x0400C47B RID: 50299
 	[Nullable(2)]
 	protected Partial_RequirementPayload ExecuteContext;
 
-	// Token: 0x0400C0DB RID: 49371
+	// Token: 0x0400C47C RID: 50300
 	public readonly int ActiveHandleId;
 
-	// Token: 0x0400C0DC RID: 49372
+	// Token: 0x0400C47D RID: 50301
 	public readonly int Index;
 }

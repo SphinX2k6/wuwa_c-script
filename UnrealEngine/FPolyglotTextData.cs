@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200075B RID: 1883
+	// Token: 0x02000141 RID: 321
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/CoreUObject.PolyglotTextData")]
 	[UnrealStructLayout(184, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 184)]
 	public class FPolyglotTextData : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06006348 RID: 25416 RVA: 0x0008E89C File Offset: 0x0008CA9C
+		// Token: 0x060012A4 RID: 4772 RVA: 0x0001D81C File Offset: 0x0001BA1C
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FPolyglotTextData._ScriptStructPtr != 0) ? FPolyglotTextData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.PolyglotTextData", ref FPolyglotTextData._ScriptStructPtr);
 		}
 
-		// Token: 0x1700179F RID: 6047
-		// (get) Token: 0x06006349 RID: 25417 RVA: 0x0008E8C0 File Offset: 0x0008CAC0
-		// (set) Token: 0x0600634A RID: 25418 RVA: 0x0008E8D0 File Offset: 0x0008CAD0
+		// Token: 0x170001D0 RID: 464
+		// (get) Token: 0x060012A5 RID: 4773 RVA: 0x0001D840 File Offset: 0x0001BA40
+		// (set) Token: 0x060012A6 RID: 4774 RVA: 0x0001D850 File Offset: 0x0001BA50
 		public unsafe ELocalizedTextSourceCategory Category
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017A0 RID: 6048
-		// (get) Token: 0x0600634B RID: 25419 RVA: 0x0008E8E1 File Offset: 0x0008CAE1
-		// (set) Token: 0x0600634C RID: 25420 RVA: 0x0008E8F5 File Offset: 0x0008CAF5
+		// Token: 0x170001D1 RID: 465
+		// (get) Token: 0x060012A7 RID: 4775 RVA: 0x0001D861 File Offset: 0x0001BA61
+		// (set) Token: 0x060012A8 RID: 4776 RVA: 0x0001D875 File Offset: 0x0001BA75
 		public unsafe string NativeCulture
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017A1 RID: 6049
-		// (get) Token: 0x0600634D RID: 25421 RVA: 0x0008E90A File Offset: 0x0008CB0A
-		// (set) Token: 0x0600634E RID: 25422 RVA: 0x0008E91E File Offset: 0x0008CB1E
+		// Token: 0x170001D2 RID: 466
+		// (get) Token: 0x060012A9 RID: 4777 RVA: 0x0001D88A File Offset: 0x0001BA8A
+		// (set) Token: 0x060012AA RID: 4778 RVA: 0x0001D89E File Offset: 0x0001BA9E
 		public unsafe string Namespace
 		{
 			get
@@ -63,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017A2 RID: 6050
-		// (get) Token: 0x0600634F RID: 25423 RVA: 0x0008E933 File Offset: 0x0008CB33
-		// (set) Token: 0x06006350 RID: 25424 RVA: 0x0008E947 File Offset: 0x0008CB47
+		// Token: 0x170001D3 RID: 467
+		// (get) Token: 0x060012AB RID: 4779 RVA: 0x0001D8B3 File Offset: 0x0001BAB3
+		// (set) Token: 0x060012AC RID: 4780 RVA: 0x0001D8C7 File Offset: 0x0001BAC7
 		public unsafe string Key
 		{
 			get
@@ -78,9 +78,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017A3 RID: 6051
-		// (get) Token: 0x06006351 RID: 25425 RVA: 0x0008E95C File Offset: 0x0008CB5C
-		// (set) Token: 0x06006352 RID: 25426 RVA: 0x0008E970 File Offset: 0x0008CB70
+		// Token: 0x170001D4 RID: 468
+		// (get) Token: 0x060012AD RID: 4781 RVA: 0x0001D8DC File Offset: 0x0001BADC
+		// (set) Token: 0x060012AE RID: 4782 RVA: 0x0001D8F0 File Offset: 0x0001BAF0
 		public unsafe string NativeString
 		{
 			get
@@ -93,9 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017A4 RID: 6052
-		// (get) Token: 0x06006353 RID: 25427 RVA: 0x0008E988 File Offset: 0x0008CB88
-		// (set) Token: 0x06006354 RID: 25428 RVA: 0x0008E9CB File Offset: 0x0008CBCB
+		// Token: 0x170001D5 RID: 469
+		// (get) Token: 0x060012AF RID: 4783 RVA: 0x0001D908 File Offset: 0x0001BB08
+		// (set) Token: 0x060012B0 RID: 4784 RVA: 0x0001D94B File Offset: 0x0001BB4B
 		public TMap<string, string> LocalizedStrings
 		{
 			get
@@ -114,9 +114,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017A5 RID: 6053
-		// (get) Token: 0x06006355 RID: 25429 RVA: 0x0008E9D9 File Offset: 0x0008CBD9
-		// (set) Token: 0x06006356 RID: 25430 RVA: 0x0008E9E9 File Offset: 0x0008CBE9
+		// Token: 0x170001D6 RID: 470
+		// (get) Token: 0x060012B1 RID: 4785 RVA: 0x0001D959 File Offset: 0x0001BB59
+		// (set) Token: 0x060012B2 RID: 4786 RVA: 0x0001D969 File Offset: 0x0001BB69
 		public unsafe bool bIsMinimalPatch
 		{
 			get
@@ -129,9 +129,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170017A6 RID: 6054
-		// (get) Token: 0x06006357 RID: 25431 RVA: 0x0008E9FC File Offset: 0x0008CBFC
-		// (set) Token: 0x06006358 RID: 25432 RVA: 0x0008EA3F File Offset: 0x0008CC3F
+		// Token: 0x170001D7 RID: 471
+		// (get) Token: 0x060012B3 RID: 4787 RVA: 0x0001D97C File Offset: 0x0001BB7C
+		// (set) Token: 0x060012B4 RID: 4788 RVA: 0x0001D9BF File Offset: 0x0001BBBF
 		public unsafe FText CachedText
 		{
 			get
@@ -150,78 +150,65 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06006359 RID: 25433 RVA: 0x0008EA5A File Offset: 0x0008CC5A
+		// Token: 0x060012B5 RID: 4789 RVA: 0x0001D9DA File Offset: 0x0001BBDA
 		public FPolyglotTextData()
 		{
 		}
 
-		// Token: 0x0600635A RID: 25434 RVA: 0x0008EA64 File Offset: 0x0008CC64
-		public FPolyglotTextData(ELocalizedTextSourceCategory Category, string NativeCulture, string Namespace, string Key, string NativeString, TMap<string, string> LocalizedStrings, bool bIsMinimalPatch, FText CachedText)
-		{
-			this.Category = Category;
-			this.NativeCulture = NativeCulture;
-			this.Namespace = Namespace;
-			this.Key = Key;
-			this.NativeString = NativeString;
-			this.LocalizedStrings = LocalizedStrings;
-			this.bIsMinimalPatch = bIsMinimalPatch;
-			this.CachedText = CachedText;
-		}
-
-		// Token: 0x0600635B RID: 25435 RVA: 0x0008EAB4 File Offset: 0x0008CCB4
+		// Token: 0x060012B6 RID: 4790 RVA: 0x0001D9E2 File Offset: 0x0001BBE2
 		protected override IntPtr GetUStructPtr()
 		{
 			return FPolyglotTextData.StaticStruct();
 		}
 
-		// Token: 0x0600635C RID: 25436 RVA: 0x0008EAC0 File Offset: 0x0008CCC0
+		// Token: 0x060012B7 RID: 4791 RVA: 0x0001D9EE File Offset: 0x0001BBEE
 		[NullableContext(2)]
 		public FPolyglotTextData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600635D RID: 25437 RVA: 0x0008EACA File Offset: 0x0008CCCA
+		// Token: 0x060012B8 RID: 4792 RVA: 0x0001D9F8 File Offset: 0x0001BBF8
 		public FPolyglotTextData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600635E RID: 25438 RVA: 0x0008EAD5 File Offset: 0x0008CCD5
+		// Token: 0x060012B9 RID: 4793 RVA: 0x0001DA03 File Offset: 0x0001BC03
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FPolyglotTextData(Pointer, false, true);
 		}
 
-		// Token: 0x0600635F RID: 25439 RVA: 0x0008EADF File Offset: 0x0008CCDF
+		// Token: 0x060012BA RID: 4794 RVA: 0x0001DA0D File Offset: 0x0001BC0D
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FPolyglotTextData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04002F94 RID: 12180
+		// Token: 0x040005CA RID: 1482
 		public const string __ObjectPath = "/Script/CoreUObject.PolyglotTextData";
 
-		// Token: 0x04002F95 RID: 12181
+		// Token: 0x040005CB RID: 1483
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04002F96 RID: 12182
+		// Token: 0x040005CC RID: 1484
 		internal static int __PropertyOffset_Category;
 
-		// Token: 0x04002F97 RID: 12183
+		// Token: 0x040005CD RID: 1485
 		internal static int __PropertyOffset_NativeCulture;
 
-		// Token: 0x04002F98 RID: 12184
+		// Token: 0x040005CE RID: 1486
 		internal static int __PropertyOffset_Namespace;
 
-		// Token: 0x04002F99 RID: 12185
+		// Token: 0x040005CF RID: 1487
 		internal static int __PropertyOffset_Key;
 
-		// Token: 0x04002F9A RID: 12186
+		// Token: 0x040005D0 RID: 1488
 		internal static int __PropertyOffset_NativeString;
 
-		// Token: 0x04002F9B RID: 12187
+		// Token: 0x040005D1 RID: 1489
 		internal static int __PropertyOffset_LocalizedStrings;
 
-		// Token: 0x04002F9C RID: 12188
+		// Token: 0x040005D2 RID: 1490
 		[Nullable(new byte[]
 		{
 			2,
@@ -230,13 +217,13 @@ namespace UnrealEngine
 		})]
 		private TMap<string, string> _LocalizedStrings;
 
-		// Token: 0x04002F9D RID: 12189
+		// Token: 0x040005D3 RID: 1491
 		internal static int __PropertyOffset_bIsMinimalPatch;
 
-		// Token: 0x04002F9E RID: 12190
+		// Token: 0x040005D4 RID: 1492
 		internal static int __PropertyOffset_CachedText;
 
-		// Token: 0x04002F9F RID: 12191
+		// Token: 0x040005D5 RID: 1493
 		[Nullable(2)]
 		private FText _CachedText;
 	}

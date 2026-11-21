@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Sequence.Manager
 {
-	// Token: 0x02003A2C RID: 14892
+	// Token: 0x02003075 RID: 12405
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Sequence/Manager/EPlotState.EPlotState")]
 	public enum EPlotState : byte
 	{
-		// Token: 0x0400F0DE RID: 61662
+		// Token: 0x0400F960 RID: 63840
 		Start,
-		// Token: 0x0400F0DF RID: 61663
+		// Token: 0x0400F961 RID: 63841
 		End,
-		// Token: 0x0400F0E0 RID: 61664
+		// Token: 0x0400F962 RID: 63842
 		EPlotState_MAX
 	}
 }

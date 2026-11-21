@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029DA RID: 10714
+// Token: 0x02001F55 RID: 8021
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class ShipTowerTeamRecommendItem : GridProxyAbstract<ShipTowerTeamRecommendItemData>
 {
-	// Token: 0x06016335 RID: 90933 RVA: 0x0059D858 File Offset: 0x0059BA58
+	// Token: 0x06013D3B RID: 81211 RVA: 0x005C8810 File Offset: 0x005C6A10
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class ShipTowerTeamRecommendItem : GridProxyAbstract<ShipTowerTeamRecomme
 		};
 	}
 
-	// Token: 0x06016336 RID: 90934 RVA: 0x0059D8E0 File Offset: 0x0059BAE0
+	// Token: 0x06013D3C RID: 81212 RVA: 0x005C8898 File Offset: 0x005C6A98
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerTeamRecommendItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -39,12 +39,12 @@ public class ShipTowerTeamRecommendItem : GridProxyAbstract<ShipTowerTeamRecomme
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016337 RID: 90935 RVA: 0x0059D923 File Offset: 0x0059BB23
+	// Token: 0x06013D3D RID: 81213 RVA: 0x005C88DB File Offset: 0x005C6ADB
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06016338 RID: 90936 RVA: 0x0059D928 File Offset: 0x0059BB28
+	// Token: 0x06013D3E RID: 81214 RVA: 0x005C88E0 File Offset: 0x005C6AE0
 	public override void Refresh(ShipTowerTeamRecommendItemData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -96,7 +96,7 @@ public class ShipTowerTeamRecommendItem : GridProxyAbstract<ShipTowerTeamRecomme
 		this.BtnUse.SetEnableClick(enableClick);
 	}
 
-	// Token: 0x06016339 RID: 90937 RVA: 0x0059DA9B File Offset: 0x0059BC9B
+	// Token: 0x06013D3F RID: 81215 RVA: 0x005C8A53 File Offset: 0x005C6C53
 	private void OnClickUse()
 	{
 		Action<ShipTowerTeamRecommendItemData> clickCallBack = this.ClickCallBack;
@@ -107,7 +107,7 @@ public class ShipTowerTeamRecommendItem : GridProxyAbstract<ShipTowerTeamRecomme
 		clickCallBack(this.ItemData);
 	}
 
-	// Token: 0x0601633A RID: 90938 RVA: 0x0059DAB3 File Offset: 0x0059BCB3
+	// Token: 0x06013D40 RID: 81216 RVA: 0x005C8A6B File Offset: 0x005C6C6B
 	private ShipTowerMediumItem CreateRecommendRoleItem()
 	{
 		ShipTowerMediumItem shipTowerMediumItem = new ShipTowerMediumItem();
@@ -116,7 +116,7 @@ public class ShipTowerTeamRecommendItem : GridProxyAbstract<ShipTowerTeamRecomme
 		return shipTowerMediumItem;
 	}
 
-	// Token: 0x0601633B RID: 90939 RVA: 0x0059DAE0 File Offset: 0x0059BCE0
+	// Token: 0x06013D41 RID: 81217 RVA: 0x005C8A98 File Offset: 0x005C6C98
 	private int? GetStageIdCallback()
 	{
 		ShipTowerStageData stageData = this.ItemData.StageData;
@@ -127,10 +127,10 @@ public class ShipTowerTeamRecommendItem : GridProxyAbstract<ShipTowerTeamRecomme
 		return new int?(stageData.Id);
 	}
 
-	// Token: 0x0400A544 RID: 42308
+	// Token: 0x0400A92E RID: 43310
 	private ShipTowerTeamRecommendItemData ItemData;
 
-	// Token: 0x0400A545 RID: 42309
+	// Token: 0x0400A92F RID: 43311
 	[Nullable(new byte[]
 	{
 		2,
@@ -139,7 +139,7 @@ public class ShipTowerTeamRecommendItem : GridProxyAbstract<ShipTowerTeamRecomme
 	})]
 	private GenericLayout<ShipTowerMediumItem, ShipTowerMediumItemData> LayoutTeam1;
 
-	// Token: 0x0400A546 RID: 42310
+	// Token: 0x0400A930 RID: 43312
 	[Nullable(new byte[]
 	{
 		2,
@@ -148,7 +148,7 @@ public class ShipTowerTeamRecommendItem : GridProxyAbstract<ShipTowerTeamRecomme
 	})]
 	private GenericLayout<ShipTowerMediumItem, ShipTowerMediumItemData> LayoutTeam2;
 
-	// Token: 0x0400A547 RID: 42311
+	// Token: 0x0400A931 RID: 43313
 	[Nullable(new byte[]
 	{
 		2,
@@ -156,27 +156,27 @@ public class ShipTowerTeamRecommendItem : GridProxyAbstract<ShipTowerTeamRecomme
 	})]
 	public Action<ShipTowerTeamRecommendItemData> ClickCallBack;
 
-	// Token: 0x0400A548 RID: 42312
+	// Token: 0x0400A932 RID: 43314
 	[Nullable(2)]
 	private ButtonItem BtnUse;
 
-	// Token: 0x02009007 RID: 36871
+	// Token: 0x0200824E RID: 33358
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402EA2C RID: 191020
+		// Token: 0x0402A124 RID: 172324
 		public const int TextName = 0;
 
-		// Token: 0x0402EA2D RID: 191021
+		// Token: 0x0402A125 RID: 172325
 		public const int TextUseRate = 1;
 
-		// Token: 0x0402EA2E RID: 191022
+		// Token: 0x0402A126 RID: 172326
 		public const int HLayoutTeam1 = 2;
 
-		// Token: 0x0402EA2F RID: 191023
+		// Token: 0x0402A127 RID: 172327
 		public const int HLayoutTeam2 = 3;
 
-		// Token: 0x0402EA30 RID: 191024
+		// Token: 0x0402A128 RID: 172328
 		public const int BtnUse = 4;
 	}
 }

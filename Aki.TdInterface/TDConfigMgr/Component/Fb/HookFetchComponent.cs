@@ -8,12 +8,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B23 RID: 2851
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000BF1 RID: 3057
 	public class HookFetchComponent : IComponentBase
 	{
-		// Token: 0x060041D3 RID: 16851 RVA: 0x000A8D03 File Offset: 0x000A6F03
+		// Token: 0x0600462C RID: 17964 RVA: 0x000B2DC7 File Offset: 0x000B0FC7
 		public static HookFetchComponent Create(IHookFetchComponent? instance)
 		{
 			if (instance == null)
@@ -26,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700114A RID: 4426
-		// (get) Token: 0x060041D4 RID: 16852 RVA: 0x000A8D24 File Offset: 0x000A6F24
+		// Token: 0x17001245 RID: 4677
+		// (get) Token: 0x0600462D RID: 17965 RVA: 0x000B2DE8 File Offset: 0x000B0FE8
 		public override bool? Disabled
 		{
 			get
@@ -40,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700114B RID: 4427
-		// (get) Token: 0x060041D5 RID: 16853 RVA: 0x000A8D5C File Offset: 0x000A6F5C
+		// Token: 0x17001246 RID: 4678
+		// (get) Token: 0x0600462E RID: 17966 RVA: 0x000B2E20 File Offset: 0x000B1020
 		public override bool? EdIsLocked
 		{
 			get
@@ -50,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700114C RID: 4428
-		// (get) Token: 0x060041D6 RID: 16854 RVA: 0x000A8D72 File Offset: 0x000A6F72
+		// Token: 0x17001247 RID: 4679
+		// (get) Token: 0x0600462F RID: 17967 RVA: 0x000B2E36 File Offset: 0x000B1036
 		public virtual ISphereTriggerShape Range
 		{
 			get
@@ -66,8 +64,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700114D RID: 4429
-		// (get) Token: 0x060041D7 RID: 16855 RVA: 0x000A8DA8 File Offset: 0x000A6FA8
+		// Token: 0x17001248 RID: 4680
+		// (get) Token: 0x06004630 RID: 17968 RVA: 0x000B2E6C File Offset: 0x000B106C
 		public virtual bool? UseRangeComponent
 		{
 			get
@@ -80,8 +78,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700114E RID: 4430
-		// (get) Token: 0x060041D8 RID: 16856 RVA: 0x000A8DDE File Offset: 0x000A6FDE
+		// Token: 0x17001249 RID: 4681
+		// (get) Token: 0x06004631 RID: 17969 RVA: 0x000B2EA2 File Offset: 0x000B10A2
 		public virtual IHookFetchMoveUniform MoveMode
 		{
 			get
@@ -96,8 +94,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700114F RID: 4431
-		// (get) Token: 0x060041D9 RID: 16857 RVA: 0x000A8E12 File Offset: 0x000A7012
+		// Token: 0x1700124A RID: 4682
+		// (get) Token: 0x06004632 RID: 17970 RVA: 0x000B2ED6 File Offset: 0x000B10D6
 		[Nullable(2)]
 		public virtual IConditionGroup HookEnableCondition
 		{
@@ -114,19 +112,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001150 RID: 4432
-		// (get) Token: 0x060041DA RID: 16858 RVA: 0x000A8E48 File Offset: 0x000A7048
+		// Token: 0x1700124B RID: 4683
+		// (get) Token: 0x06004633 RID: 17971 RVA: 0x000B2F0C File Offset: 0x000B110C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> HookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -149,19 +147,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001151 RID: 4433
-		// (get) Token: 0x060041DB RID: 16859 RVA: 0x000A8EC4 File Offset: 0x000A70C4
+		// Token: 0x1700124C RID: 4684
+		// (get) Token: 0x06004634 RID: 17972 RVA: 0x000B2F88 File Offset: 0x000B1188
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> FinishActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -184,50 +182,50 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400251C RID: 9500
+		// Token: 0x04002764 RID: 10084
 		private IHookFetchComponent Instance;
 
-		// Token: 0x0400251D RID: 9501
+		// Token: 0x04002765 RID: 10085
 		[Nullable(2)]
 		private ISphereTriggerShape _RangeCache;
 
-		// Token: 0x0400251E RID: 9502
+		// Token: 0x04002766 RID: 10086
 		private bool _RangeInited;
 
-		// Token: 0x0400251F RID: 9503
+		// Token: 0x04002767 RID: 10087
 		[Nullable(2)]
 		private IHookFetchMoveUniform _MoveModeCache;
 
-		// Token: 0x04002520 RID: 9504
+		// Token: 0x04002768 RID: 10088
 		private bool _MoveModeInited;
 
-		// Token: 0x04002521 RID: 9505
+		// Token: 0x04002769 RID: 10089
 		[Nullable(2)]
 		private IConditionGroup _HookEnableConditionCache;
 
-		// Token: 0x04002522 RID: 9506
+		// Token: 0x0400276A RID: 10090
 		private bool _HookEnableConditionInited;
 
-		// Token: 0x04002523 RID: 9507
+		// Token: 0x0400276B RID: 10091
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _HookActionsCache;
 
-		// Token: 0x04002524 RID: 9508
+		// Token: 0x0400276C RID: 10092
 		private bool _HookActionsInited;
 
-		// Token: 0x04002525 RID: 9509
+		// Token: 0x0400276D RID: 10093
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _FinishActionsCache;
 
-		// Token: 0x04002526 RID: 9510
+		// Token: 0x0400276E RID: 10094
 		private bool _FinishActionsInited;
 	}
 }

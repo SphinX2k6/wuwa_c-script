@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C40 RID: 7232
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E37 RID: 7735
 	public class IMovieCameraConfig
 	{
-		// Token: 0x06009B27 RID: 39719 RVA: 0x00164800 File Offset: 0x00162A00
+		// Token: 0x0600A47F RID: 42111 RVA: 0x00177B40 File Offset: 0x00175D40
 		private IMovieCameraConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009B28 RID: 39720 RVA: 0x00164838 File Offset: 0x00162A38
+		// Token: 0x0600A480 RID: 42112 RVA: 0x00177B78 File Offset: 0x00175D78
 		public static IMovieCameraConfig Create([Nullable(2)] IMovieCameraConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B29 RID: 39721 RVA: 0x0016484B File Offset: 0x00162A4B
+		// Token: 0x0600A481 RID: 42113 RVA: 0x00177B8B File Offset: 0x00175D8B
 		public static IMovieCameraConfig CreateFromSetValue([Nullable(2)] IMovieCameraConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B2A RID: 39722 RVA: 0x0016485E File Offset: 0x00162A5E
+		// Token: 0x0600A482 RID: 42114 RVA: 0x00177B9E File Offset: 0x00175D9E
 		public IMovieCameraConfig_SetValue ToSetValue()
 		{
 			return new IMovieCameraConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700308A RID: 12426
-		// (get) Token: 0x06009B2B RID: 39723 RVA: 0x00164871 File Offset: 0x00162A71
-		// (set) Token: 0x06009B2C RID: 39724 RVA: 0x00164898 File Offset: 0x00162A98
+		// Token: 0x170032FB RID: 13051
+		// (get) Token: 0x0600A483 RID: 42115 RVA: 0x00177BB1 File Offset: 0x00175DB1
+		// (set) Token: 0x0600A484 RID: 42116 RVA: 0x00177BD8 File Offset: 0x00175DD8
 		public virtual IEnterMovieCameraType MovieCameraType
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E47 RID: 24135
+		// Token: 0x0400637E RID: 25470
 		[Nullable(2)]
 		protected IMovieCameraConfig FbInstance;
 
-		// Token: 0x04005E48 RID: 24136
+		// Token: 0x0400637F RID: 25471
 		[Nullable(2)]
 		protected IMovieCameraConfig_SetValue PocoInterface;
 	}

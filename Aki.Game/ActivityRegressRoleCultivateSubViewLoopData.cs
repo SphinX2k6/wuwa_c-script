@@ -1,11 +1,11 @@
 ﻿using System;
 using Aki.Config;
 
-// Token: 0x020014B5 RID: 5301
+// Token: 0x02000969 RID: 2409
 public class ActivityRegressRoleCultivateSubViewLoopData : IActivityRegressRoleCultivateSubViewLoopData
 {
-	// Token: 0x17000D04 RID: 3332
-	// (get) Token: 0x06009633 RID: 38451 RVA: 0x00206CDA File Offset: 0x00204EDA
-	// (set) Token: 0x06009634 RID: 38452 RVA: 0x00206CE2 File Offset: 0x00204EE2
+	// Token: 0x17000D24 RID: 3364
+	// (get) Token: 0x060069C8 RID: 27080 RVA: 0x0020FC46 File Offset: 0x0020DE46
+	// (set) Token: 0x060069C9 RID: 27081 RVA: 0x0020FC4E File Offset: 0x0020DE4E
 	public RegressQuest Config { get; set; }
 }

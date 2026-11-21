@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CAF RID: 23727
+	// Token: 0x02004C91 RID: 19601
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AlterMarksView : BattleChildView
 	{
-		// Token: 0x0603BF0E RID: 245518 RVA: 0x00E52FB4 File Offset: 0x00E511B4
+		// Token: 0x06030E61 RID: 200289 RVA: 0x00DA365C File Offset: 0x00DA185C
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetActive(false);
 		}
 
-		// Token: 0x0603BF0F RID: 245519 RVA: 0x00E530EC File Offset: 0x00E512EC
+		// Token: 0x06030E62 RID: 200290 RVA: 0x00DA3794 File Offset: 0x00DA1994
 		[NullableContext(2)]
 		private void UpdateListenTagTask(BattleUiRoleData roleData)
 		{
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ListenTagTask = baseTagComponent.ListenForTagAddOrRemove(new int?(GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.潜行状态"]), new BaseTagComponent.TTagSwitchedCallback(this.OnTagChange), AlterMarksView.ListenTagStat);
 		}
 
-		// Token: 0x0603BF10 RID: 245520 RVA: 0x00E53168 File Offset: 0x00E51368
+		// Token: 0x06030E63 RID: 200291 RVA: 0x00DA3810 File Offset: 0x00DA1A10
 		public override void Reset()
 		{
 			base.Reset();
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StalkAlertMarks.Clear();
 		}
 
-		// Token: 0x0603BF11 RID: 245521 RVA: 0x00E53310 File Offset: 0x00E51510
+		// Token: 0x06030E64 RID: 200292 RVA: 0x00DA39B8 File Offset: 0x00DA1BB8
 		public void Update(float delta)
 		{
 			this.UpdateAddMark();
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF12 RID: 245522 RVA: 0x00E534B4 File Offset: 0x00E516B4
+		// Token: 0x06030E65 RID: 200293 RVA: 0x00DA3B5C File Offset: 0x00DA1D5C
 		private void UpdateAddMark()
 		{
 			foreach (KeyValuePair<int, AlterMarksView.WaitOperationUnit> keyValuePair in this.WaitOperationMarks)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.WaitOperationMarks.Clear();
 		}
 
-		// Token: 0x0603BF13 RID: 245523 RVA: 0x00E53588 File Offset: 0x00E51788
+		// Token: 0x06030E66 RID: 200294 RVA: 0x00DA3C30 File Offset: 0x00DA1E30
 		private void AddMark(int id, global::Vector originPosition, AActor trackActor)
 		{
 			if (!this.AlterMarks.ContainsKey(id))
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF14 RID: 245524 RVA: 0x00E535F0 File Offset: 0x00E517F0
+		// Token: 0x06030E67 RID: 200295 RVA: 0x00DA3C98 File Offset: 0x00DA1E98
 		private void RemoveMark(int id)
 		{
 			bool flag = this.AlterMarks.ContainsKey(id);
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF15 RID: 245525 RVA: 0x00E53658 File Offset: 0x00E51858
+		// Token: 0x06030E68 RID: 200296 RVA: 0x00DA3D00 File Offset: 0x00DA1F00
 		private void AddStalkAlertMark(int id, AActor trackActor)
 		{
 			if (!this.StalkAlertMarks.ContainsKey(id))
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF16 RID: 245526 RVA: 0x00E536A8 File Offset: 0x00E518A8
+		// Token: 0x06030E69 RID: 200297 RVA: 0x00DA3D50 File Offset: 0x00DA1F50
 		private void RemoveStalkAlertMark(int id)
 		{
 			StalkAlertMark stalkAlertMark;
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF17 RID: 245527 RVA: 0x00E536FC File Offset: 0x00E518FC
+		// Token: 0x06030E6A RID: 200298 RVA: 0x00DA3DA4 File Offset: 0x00DA1FA4
 		private void AddEavesdropMark(int id, AActor trackActor, float showDist)
 		{
 			if (!this.EavesdropMarks.ContainsKey(id))
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF18 RID: 245528 RVA: 0x00E53740 File Offset: 0x00E51940
+		// Token: 0x06030E6B RID: 200299 RVA: 0x00DA3DE8 File Offset: 0x00DA1FE8
 		private void RemoveEavesdropMark(int id)
 		{
 			EavesdropMark eavesdropMark;
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF19 RID: 245529 RVA: 0x00E53774 File Offset: 0x00E51974
+		// Token: 0x06030E6C RID: 200300 RVA: 0x00DA3E1C File Offset: 0x00DA201C
 		private void OnEavesdropFound(int id)
 		{
 			foreach (KeyValuePair<int, EavesdropMark> keyValuePair in this.EavesdropMarks)
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF1A RID: 245530 RVA: 0x00E537E0 File Offset: 0x00E519E0
+		// Token: 0x06030E6D RID: 200301 RVA: 0x00DA3E88 File Offset: 0x00DA2088
 		private void HideCountdown()
 		{
 			if (!this.IsCountdown)
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TimeItem.SetUiActive(this.IsCountdown);
 		}
 
-		// Token: 0x0603BF1B RID: 245531 RVA: 0x00E53804 File Offset: 0x00E51A04
+		// Token: 0x06030E6E RID: 200302 RVA: 0x00DA3EAC File Offset: 0x00DA20AC
 		private void OnFoundStateChange(bool isFound, long endTimeStamp)
 		{
 			if (isFound)
@@ -347,13 +347,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnBattleStateChanged(isFound);
 		}
 
-		// Token: 0x0603BF1C RID: 245532 RVA: 0x00E53940 File Offset: 0x00E51B40
+		// Token: 0x06030E6F RID: 200303 RVA: 0x00DA3FE8 File Offset: 0x00DA21E8
 		private void OnFinish()
 		{
 			this.HideCountdown();
 		}
 
-		// Token: 0x0603BF1D RID: 245533 RVA: 0x00E53948 File Offset: 0x00E51B48
+		// Token: 0x06030E70 RID: 200304 RVA: 0x00DA3FF0 File Offset: 0x00DA21F0
 		private void BindEavesdropEvents()
 		{
 			EventSystem.Instance.Add(EEventName.AddEavesdropMark, new Action<int, AActor, float>(this.AddEavesdropMark));
@@ -361,7 +361,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.OnEavesdropFound, new Action<int>(this.OnEavesdropFound));
 		}
 
-		// Token: 0x0603BF1E RID: 245534 RVA: 0x00E539AC File Offset: 0x00E51BAC
+		// Token: 0x06030E71 RID: 200305 RVA: 0x00DA4054 File Offset: 0x00DA2254
 		private void UnbindEavesdropEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.AddEavesdropMark, new Action<int, AActor, float>(this.AddEavesdropMark));
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.OnEavesdropFound, new Action<int>(this.OnEavesdropFound));
 		}
 
-		// Token: 0x0603BF1F RID: 245535 RVA: 0x00E53A10 File Offset: 0x00E51C10
+		// Token: 0x06030E72 RID: 200306 RVA: 0x00DA40B8 File Offset: 0x00DA22B8
 		private void BindStalkEvents()
 		{
 			EventSystem.Instance.Add(EEventName.AddStalkAlertMark, new Action<int, AActor>(this.AddStalkAlertMark));
@@ -378,7 +378,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.OnStalkFailed, new Action(this.OnStalkFailed));
 		}
 
-		// Token: 0x0603BF20 RID: 245536 RVA: 0x00E53A90 File Offset: 0x00E51C90
+		// Token: 0x06030E73 RID: 200307 RVA: 0x00DA4138 File Offset: 0x00DA2338
 		private void UnbindStalkEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.AddStalkAlertMark, new Action<int, AActor>(this.AddStalkAlertMark));
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.OnStalkFailed, new Action(this.OnStalkFailed));
 		}
 
-		// Token: 0x0603BF21 RID: 245537 RVA: 0x00E53B10 File Offset: 0x00E51D10
+		// Token: 0x06030E74 RID: 200308 RVA: 0x00DA41B8 File Offset: 0x00DA23B8
 		private void BindMarksEvents()
 		{
 			EventSystem.Instance.Add(EEventName.AddAlterMark, new Action<int, global::Vector, AActor>(this.AddMark));
@@ -395,7 +395,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsBindMarkEvent = true;
 		}
 
-		// Token: 0x0603BF22 RID: 245538 RVA: 0x00E53B5C File Offset: 0x00E51D5C
+		// Token: 0x06030E75 RID: 200309 RVA: 0x00DA4204 File Offset: 0x00DA2404
 		private void UnbindMarksEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.AddAlterMark, new Action<int, global::Vector, AActor>(this.AddMark));
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsBindMarkEvent = false;
 		}
 
-		// Token: 0x0603BF23 RID: 245539 RVA: 0x00E53BA8 File Offset: 0x00E51DA8
+		// Token: 0x06030E76 RID: 200310 RVA: 0x00DA4250 File Offset: 0x00DA2450
 		private void OnTagChange(int tagId, bool tagExists)
 		{
 			UUIItem maskItem = this.MaskItem;
@@ -414,7 +414,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			maskItem.SetUIActive(tagExists);
 		}
 
-		// Token: 0x0603BF24 RID: 245540 RVA: 0x00E53BBC File Offset: 0x00E51DBC
+		// Token: 0x06030E77 RID: 200311 RVA: 0x00DA4264 File Offset: 0x00DA2464
 		private void OnChangeRole(int i, int i1)
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -425,13 +425,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF25 RID: 245541 RVA: 0x00E53BEF File Offset: 0x00E51DEF
+		// Token: 0x06030E78 RID: 200312 RVA: 0x00DA4297 File Offset: 0x00DA2497
 		private void OnSneakStart()
 		{
 			this.SetActive(true);
 		}
 
-		// Token: 0x0603BF26 RID: 245542 RVA: 0x00E53BF8 File Offset: 0x00E51DF8
+		// Token: 0x06030E79 RID: 200313 RVA: 0x00DA42A0 File Offset: 0x00DA24A0
 		private void OnSneakEnd()
 		{
 			if (this.StalkAlertMarks.Count == 0)
@@ -440,7 +440,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF27 RID: 245543 RVA: 0x00E53C10 File Offset: 0x00E51E10
+		// Token: 0x06030E7A RID: 200314 RVA: 0x00DA42B8 File Offset: 0x00DA24B8
 		private void OnBattleStateChanged(bool isInBattleState)
 		{
 			foreach (AlterTipMark alterTipMark in this.AlterTipMarks.Values)
@@ -490,7 +490,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF28 RID: 245544 RVA: 0x00E53DAC File Offset: 0x00E51FAC
+		// Token: 0x06030E7B RID: 200315 RVA: 0x00DA4454 File Offset: 0x00DA2654
 		private void OnAiHateChanged(bool addOrRemove, AiController from)
 		{
 			AActor owner = from.CharActorComp.Owner;
@@ -503,7 +503,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF29 RID: 245545 RVA: 0x00E53E14 File Offset: 0x00E52014
+		// Token: 0x06030E7C RID: 200316 RVA: 0x00DA44BC File Offset: 0x00DA26BC
 		private void UpdateAiHateChangedEvent(EntityHandle newEntityHandle)
 		{
 			if (EventSystem.Instance.HasWithTarget(this.CurPlayerEntity.Entity, EEventName.AiHateAddOrRemove, new Action<bool, AiController>(this.OnAiHateChanged)))
@@ -514,7 +514,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF2A RID: 245546 RVA: 0x00E53EA0 File Offset: 0x00E520A0
+		// Token: 0x06030E7D RID: 200317 RVA: 0x00DA4548 File Offset: 0x00DA2748
 		private void OnStalkFound(int id)
 		{
 			StalkAlertMark stalkAlertMark;
@@ -526,7 +526,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF2B RID: 245547 RVA: 0x00E53ED4 File Offset: 0x00E520D4
+		// Token: 0x06030E7E RID: 200318 RVA: 0x00DA457C File Offset: 0x00DA277C
 		private void OnStalkFailed()
 		{
 			foreach (StalkAlertMark stalkAlertMark in this.StalkAlertMarks.Values)
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StalkAlertMarks.Clear();
 		}
 
-		// Token: 0x0603BF2C RID: 245548 RVA: 0x00E53F38 File Offset: 0x00E52138
+		// Token: 0x06030E7F RID: 200319 RVA: 0x00DA45E0 File Offset: 0x00DA27E0
 		public void ProcessPendingMarkInfo()
 		{
 			if (AlertMarkModel.Instance.PendingMarkInfos.Count == 0)
@@ -568,7 +568,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			AlertMarkModel.Instance.PendingMarkInfos.Clear();
 		}
 
-		// Token: 0x0603BF2D RID: 245549 RVA: 0x00E53FF0 File Offset: 0x00E521F0
+		// Token: 0x06030E80 RID: 200320 RVA: 0x00DA4698 File Offset: 0x00DA2898
 		public void OnBattleHudVisibleChanged(bool visible)
 		{
 			if (SneakController.Instance.IsSneaking)
@@ -577,78 +577,78 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F483 RID: 128131
+		// Token: 0x04019F3C RID: 106300
 		[StaticVariableRuleIgnore]
 		private static readonly Stat ListenTagStat = Stat.Create("[AlterMarksView]ListenTag", "", "");
 
-		// Token: 0x0401F484 RID: 128132
+		// Token: 0x04019F3D RID: 106301
 		private readonly Dictionary<int, AlterMark> AlterMarks = new Dictionary<int, AlterMark>();
 
-		// Token: 0x0401F485 RID: 128133
+		// Token: 0x04019F3E RID: 106302
 		private readonly Dictionary<int, AlterTipMark> AlterTipMarks = new Dictionary<int, AlterTipMark>();
 
-		// Token: 0x0401F486 RID: 128134
+		// Token: 0x04019F3F RID: 106303
 		private readonly Dictionary<int, StalkAlertMark> StalkAlertMarks = new Dictionary<int, StalkAlertMark>();
 
-		// Token: 0x0401F487 RID: 128135
+		// Token: 0x04019F40 RID: 106304
 		private readonly Dictionary<int, EavesdropMark> EavesdropMarks = new Dictionary<int, EavesdropMark>();
 
-		// Token: 0x0401F488 RID: 128136
+		// Token: 0x04019F41 RID: 106305
 		private readonly Dictionary<int, AlterMarksView.WaitOperationUnit> WaitOperationMarks = new Dictionary<int, AlterMarksView.WaitOperationUnit>();
 
-		// Token: 0x0401F489 RID: 128137
+		// Token: 0x04019F42 RID: 106306
 		private bool IsCountdown;
 
-		// Token: 0x0401F48A RID: 128138
+		// Token: 0x04019F43 RID: 106307
 		private long EndTimeStamp;
 
-		// Token: 0x0401F48B RID: 128139
+		// Token: 0x04019F44 RID: 106308
 		private double CountdownTime;
 
-		// Token: 0x0401F48C RID: 128140
+		// Token: 0x04019F45 RID: 106309
 		private double CurTimeStamp;
 
-		// Token: 0x0401F48D RID: 128141
+		// Token: 0x04019F46 RID: 106310
 		[Nullable(2)]
 		private UUIItem MaskItem;
 
-		// Token: 0x0401F48E RID: 128142
+		// Token: 0x04019F47 RID: 106311
 		[Nullable(2)]
 		private AlterTime TimeItem;
 
-		// Token: 0x0401F48F RID: 128143
+		// Token: 0x04019F48 RID: 106312
 		[Nullable(2)]
 		private ITagTask ListenTagTask;
 
-		// Token: 0x0401F490 RID: 128144
+		// Token: 0x04019F49 RID: 106313
 		[Nullable(2)]
 		private EntityHandle CurPlayerEntity;
 
-		// Token: 0x0401F491 RID: 128145
+		// Token: 0x04019F4A RID: 106314
 		private bool IsBindMarkEvent;
 
-		// Token: 0x0200BE88 RID: 48776
+		// Token: 0x0200A88E RID: 43150
 		[NullableContext(0)]
 		private enum EOperationType
 		{
-			// Token: 0x04039759 RID: 235353
+			// Token: 0x0403411A RID: 213274
 			Add,
-			// Token: 0x0403975A RID: 235354
+			// Token: 0x0403411B RID: 213275
 			Delete
 		}
 
-		// Token: 0x0200BE89 RID: 48777
+		// Token: 0x0200A88F RID: 43151
 		[NullableContext(2)]
 		[Nullable(0)]
 		private class WaitOperationUnit
 		{
-			// Token: 0x0403975B RID: 235355
+			// Token: 0x0403411C RID: 213276
 			public AlterMarksView.EOperationType Type;
 
-			// Token: 0x0403975C RID: 235356
+			// Token: 0x0403411D RID: 213277
 			public global::Vector OriginPosition;
 
-			// Token: 0x0403975D RID: 235357
+			// Token: 0x0403411E RID: 213278
 			public AActor TrackActor;
 		}
 	}

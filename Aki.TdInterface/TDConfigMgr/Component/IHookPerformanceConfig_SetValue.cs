@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000445 RID: 1093
+	// Token: 0x0200049E RID: 1182
 	public class IHookPerformanceConfig_SetValue
 	{
-		// Token: 0x040010E8 RID: 4328
+		// Token: 0x0400120A RID: 4618
 		public long? HookEffectBuffId;
 	}
 }

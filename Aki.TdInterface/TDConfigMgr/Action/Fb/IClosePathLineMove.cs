@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028E7 RID: 10471
+	// Token: 0x02002BBF RID: 11199
 	public class IClosePathLineMove : ICloseSplineMovePattern
 	{
-		// Token: 0x0600E8A5 RID: 59557 RVA: 0x002223FE File Offset: 0x002205FE
-		[NullableContext(1)]
+		// Token: 0x0600F6E6 RID: 63206 RVA: 0x0023F5B6 File Offset: 0x0023D7B6
 		public static IClosePathLineMove Create(IClosePathLineMove? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004899 RID: 18585
-		// (get) Token: 0x0600E8A6 RID: 59558 RVA: 0x0022241D File Offset: 0x0022061D
+		// Token: 0x17004C16 RID: 19478
+		// (get) Token: 0x0600F6E7 RID: 63207 RVA: 0x0023F5D5 File Offset: 0x0023D7D5
 		public override ESplineMovePattern Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700489A RID: 18586
-		// (get) Token: 0x0600E8A7 RID: 59559 RVA: 0x0022242C File Offset: 0x0022062C
+		// Token: 0x17004C17 RID: 19479
+		// (get) Token: 0x0600F6E8 RID: 63208 RVA: 0x0023F5E4 File Offset: 0x0023D7E4
 		public override float? GravitySwitchAngularVelocity
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008071 RID: 32881
+		// Token: 0x04008735 RID: 34613
 		private IClosePathLineMove Instance;
 	}
 }

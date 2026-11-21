@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200021D RID: 541
+	// Token: 0x02000244 RID: 580
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ICategoryMatchingCondition
 	{
-		// Token: 0x06000942 RID: 2370 RVA: 0x00028AB8 File Offset: 0x00026CB8
-		[NullableContext(1)]
+		// Token: 0x060009B6 RID: 2486 RVA: 0x0002A278 File Offset: 0x00028478
+		[NullableContext(0)]
 		private ICategoryMatchingCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000943 RID: 2371 RVA: 0x00028AF0 File Offset: 0x00026CF0
-		[NullableContext(1)]
+		// Token: 0x060009B7 RID: 2487 RVA: 0x0002A2B0 File Offset: 0x000284B0
+		[NullableContext(0)]
 		public static ICategoryMatchingCondition Create([Nullable(2)] ICategoryMatchingCondition instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000944 RID: 2372 RVA: 0x00028B03 File Offset: 0x00026D03
-		[NullableContext(1)]
+		// Token: 0x060009B8 RID: 2488 RVA: 0x0002A2C3 File Offset: 0x000284C3
+		[NullableContext(0)]
 		public static ICategoryMatchingCondition CreateFromSetValue([Nullable(2)] ICategoryMatchingCondition_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000945 RID: 2373 RVA: 0x00028B16 File Offset: 0x00026D16
-		[NullableContext(1)]
+		// Token: 0x060009B9 RID: 2489 RVA: 0x0002A2D6 File Offset: 0x000284D6
+		[NullableContext(0)]
 		public ICategoryMatchingCondition_SetValue ToSetValue()
 		{
 			return new ICategoryMatchingCondition_SetValue
@@ -64,9 +64,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170002D3 RID: 723
-		// (get) Token: 0x06000946 RID: 2374 RVA: 0x00028B38 File Offset: 0x00026D38
-		// (set) Token: 0x06000947 RID: 2375 RVA: 0x00028B99 File Offset: 0x00026D99
+		// Token: 0x170002F2 RID: 754
+		// (get) Token: 0x060009BA RID: 2490 RVA: 0x0002A2F8 File Offset: 0x000284F8
+		// (set) Token: 0x060009BB RID: 2491 RVA: 0x0002A359 File Offset: 0x00028559
 		public virtual IDynamicEntityMatch EntityMatch
 		{
 			get
@@ -94,9 +94,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002D4 RID: 724
-		// (get) Token: 0x06000948 RID: 2376 RVA: 0x00028BAE File Offset: 0x00026DAE
-		// (set) Token: 0x06000949 RID: 2377 RVA: 0x00028BD5 File Offset: 0x00026DD5
+		// Token: 0x170002F3 RID: 755
+		// (get) Token: 0x060009BC RID: 2492 RVA: 0x0002A36E File Offset: 0x0002856E
+		// (set) Token: 0x060009BD RID: 2493 RVA: 0x0002A395 File Offset: 0x00028595
 		public virtual string SelfState
 		{
 			get
@@ -118,17 +118,17 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040009A7 RID: 2471
+		// Token: 0x04000A31 RID: 2609
 		protected ICategoryMatchingCondition FbInstance;
 
-		// Token: 0x040009A8 RID: 2472
+		// Token: 0x04000A32 RID: 2610
 		protected ICategoryMatchingCondition_SetValue PocoInterface;
 
-		// Token: 0x040009A9 RID: 2473
-		[Nullable(1)]
+		// Token: 0x04000A33 RID: 2611
+		[Nullable(0)]
 		private IDynamicEntityMatch _EntityMatchCache;
 
-		// Token: 0x040009AA RID: 2474
+		// Token: 0x04000A34 RID: 2612
 		private bool _EntityMatchInited;
 	}
 }

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A79 RID: 23161
+	// Token: 0x02004A55 RID: 19029
 	public class FlagChallengeCompleteItem : UiPanelBase
 	{
-		// Token: 0x0603AAD2 RID: 240338 RVA: 0x00DF9605 File Offset: 0x00DF7805
+		// Token: 0x0602FA1B RID: 195099 RVA: 0x00D49B99 File Offset: 0x00D47D99
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AAD3 RID: 240339 RVA: 0x00DF963E File Offset: 0x00DF783E
+		// Token: 0x0602FA1C RID: 195100 RVA: 0x00D49BD2 File Offset: 0x00D47DD2
 		[NullableContext(1)]
 		public void SetText(string key)
 		{

@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001752 RID: 5970
+// Token: 0x02000C0B RID: 3083
 [NullableContext(1)]
 [Nullable(0)]
 public class CalabashLevelUpTabView : UiTabViewBase
 {
-	// Token: 0x0600AC8C RID: 44172 RVA: 0x0026B84C File Offset: 0x00269A4C
+	// Token: 0x06008073 RID: 32883 RVA: 0x00275C94 File Offset: 0x00273E94
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,28 +43,28 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x0600AC8D RID: 44173 RVA: 0x0026B9C4 File Offset: 0x00269BC4
+	// Token: 0x06008074 RID: 32884 RVA: 0x00275E0C File Offset: 0x0027400C
 	private void OnHelpBtnClick()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.CalabashExpTipId);
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600AC8E RID: 44174 RVA: 0x0026B9E8 File Offset: 0x00269BE8
+	// Token: 0x06008075 RID: 32885 RVA: 0x00275E30 File Offset: 0x00274030
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.GetCalabashReward, new Action(this.RefreshCalabash));
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnRewardViewClose));
 	}
 
-	// Token: 0x0600AC8F RID: 44175 RVA: 0x0026BA1F File Offset: 0x00269C1F
+	// Token: 0x06008076 RID: 32886 RVA: 0x00275E67 File Offset: 0x00274067
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.GetCalabashReward, new Action(this.RefreshCalabash));
 		EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnRewardViewClose));
 	}
 
-	// Token: 0x0600AC90 RID: 44176 RVA: 0x0026BA58 File Offset: 0x00269C58
+	// Token: 0x06008077 RID: 32887 RVA: 0x00275EA0 File Offset: 0x002740A0
 	protected override UniTask OnCreateAsync()
 	{
 		CalabashLevelUpTabView.<OnCreateAsync>d__16 <OnCreateAsync>d__;
@@ -75,7 +75,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		return <OnCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AC91 RID: 44177 RVA: 0x0026BA9C File Offset: 0x00269C9C
+	// Token: 0x06008078 RID: 32888 RVA: 0x00275EE4 File Offset: 0x002740E4
 	protected override void OnStart()
 	{
 		this.CurrentSelectDetailType = ECalabashAttributeDataType.Default;
@@ -87,7 +87,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		this.AttributeLayout = new GenericLayout<CalabashAttributeItem, CalabashAttributeData>(base.GetVerticalLayout(4), new Func<CalabashAttributeItem>(this.CreateAttributeItem), null, false, true);
 	}
 
-	// Token: 0x0600AC92 RID: 44178 RVA: 0x0026BB3C File Offset: 0x00269D3C
+	// Token: 0x06008079 RID: 32889 RVA: 0x00275F84 File Offset: 0x00274184
 	private CalabashGrid InitGrid(AActor actor, int index, int showNum)
 	{
 		CalabashGrid calabashGrid = new CalabashGrid();
@@ -98,25 +98,25 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		return calabashGrid;
 	}
 
-	// Token: 0x0600AC93 RID: 44179 RVA: 0x0026BB7B File Offset: 0x00269D7B
+	// Token: 0x0600807A RID: 32890 RVA: 0x00275FC3 File Offset: 0x002741C3
 	private bool CheckToggleCanClick()
 	{
 		return !this.NoCircleExhibitionView.MovingState();
 	}
 
-	// Token: 0x0600AC94 RID: 44180 RVA: 0x0026BB8B File Offset: 0x00269D8B
+	// Token: 0x0600807B RID: 32891 RVA: 0x00275FD3 File Offset: 0x002741D3
 	private CalabashLevelUpRewardItemGrid CreateRewardItem()
 	{
 		return new CalabashLevelUpRewardItemGrid();
 	}
 
-	// Token: 0x0600AC95 RID: 44181 RVA: 0x0026BB92 File Offset: 0x00269D92
+	// Token: 0x0600807C RID: 32892 RVA: 0x00275FDA File Offset: 0x002741DA
 	private CalabashAttributeItem CreateAttributeItem()
 	{
 		return new CalabashAttributeItem();
 	}
 
-	// Token: 0x0600AC96 RID: 44182 RVA: 0x0026BB99 File Offset: 0x00269D99
+	// Token: 0x0600807D RID: 32893 RVA: 0x00275FE1 File Offset: 0x002741E1
 	protected override void OnBeforeShow()
 	{
 		this.RefreshNoCircleExhibitionView(this.NeedInitExhibition);
@@ -124,7 +124,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		this.RefreshCalabashPlayerInfo();
 	}
 
-	// Token: 0x0600AC97 RID: 44183 RVA: 0x0026BBB4 File Offset: 0x00269DB4
+	// Token: 0x0600807E RID: 32894 RVA: 0x00275FFC File Offset: 0x002741FC
 	private void OnRewardBtnClick()
 	{
 		int calabashLevel = CalabashModel.Instance.GetCalabashLevel();
@@ -139,7 +139,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		CalabashController.Instance.RequestMultiCalabashLevelReward(list.ToArray());
 	}
 
-	// Token: 0x0600AC98 RID: 44184 RVA: 0x0026BC04 File Offset: 0x00269E04
+	// Token: 0x0600807F RID: 32895 RVA: 0x0027604C File Offset: 0x0027424C
 	private void OnRewardViewClose(EUiViewName viewName, int _)
 	{
 		if (viewName != EUiViewName.CommonRewardView)
@@ -216,7 +216,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		this.RefreshStrengthItemNum();
 	}
 
-	// Token: 0x0600AC99 RID: 44185 RVA: 0x0026BE58 File Offset: 0x0026A058
+	// Token: 0x06008080 RID: 32896 RVA: 0x002762A0 File Offset: 0x002744A0
 	private void MoveCalabashGrid(int showIndex)
 	{
 		this.CurrentSelectedLevel = showIndex;
@@ -227,14 +227,14 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		this.OnSelectedLevelChange();
 	}
 
-	// Token: 0x0600AC9A RID: 44186 RVA: 0x0026BE82 File Offset: 0x0026A082
+	// Token: 0x06008081 RID: 32897 RVA: 0x002762CA File Offset: 0x002744CA
 	private void OnSelectedLevelChange()
 	{
 		this.RefreshSelectedLevelInfo();
 		this.RefreshStrengthItemNum();
 	}
 
-	// Token: 0x0600AC9B RID: 44187 RVA: 0x0026BE90 File Offset: 0x0026A090
+	// Token: 0x06008082 RID: 32898 RVA: 0x002762D8 File Offset: 0x002744D8
 	private void RefreshSelectedLevelInfo()
 	{
 		this.RefreshReward();
@@ -242,7 +242,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		this.RefreshAttribute();
 	}
 
-	// Token: 0x0600AC9C RID: 44188 RVA: 0x0026BEA4 File Offset: 0x0026A0A4
+	// Token: 0x06008083 RID: 32899 RVA: 0x002762EC File Offset: 0x002744EC
 	private void RefreshCalabashPlayerInfo()
 	{
 		int calabashLevel = CalabashModel.Instance.GetCalabashLevel();
@@ -257,7 +257,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		this.RefreshExpText(calabashLevel);
 	}
 
-	// Token: 0x0600AC9D RID: 44189 RVA: 0x0026BF30 File Offset: 0x0026A130
+	// Token: 0x06008084 RID: 32900 RVA: 0x00276378 File Offset: 0x00274578
 	private void RefreshReward()
 	{
 		int rewardId = CalabashConfig.Instance.GetCalabashConfigByLevel(this.CurrentSelectedLevel).Value.RewardId;
@@ -304,7 +304,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		rewardLayout3.RefreshByData(this.RewardDataList, null, false);
 	}
 
-	// Token: 0x0600AC9E RID: 44190 RVA: 0x0026C07C File Offset: 0x0026A27C
+	// Token: 0x06008085 RID: 32901 RVA: 0x002764C4 File Offset: 0x002746C4
 	private void RefreshStrengthItemNum()
 	{
 		this.AchieveStrengthItemNum = 0;
@@ -330,7 +330,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AC9F RID: 44191 RVA: 0x0026C15C File Offset: 0x0026A35C
+	// Token: 0x06008086 RID: 32902 RVA: 0x002765A4 File Offset: 0x002747A4
 	private void RefreshButtonState()
 	{
 		ECalabashRewardState receiveRewardStateByLevel = CalabashModel.Instance.GetReceiveRewardStateByLevel(this.CurrentSelectedLevel);
@@ -350,7 +350,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600ACA0 RID: 44192 RVA: 0x0026C238 File Offset: 0x0026A438
+	// Token: 0x06008087 RID: 32903 RVA: 0x00276680 File Offset: 0x00274880
 	private void RefreshAttribute()
 	{
 		this.ClearAttributeData();
@@ -373,7 +373,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		attributeLayout.RefreshByData(this.AttributeDataList, null, false);
 	}
 
-	// Token: 0x0600ACA1 RID: 44193 RVA: 0x0026C2F4 File Offset: 0x0026A4F4
+	// Token: 0x06008088 RID: 32904 RVA: 0x0027673C File Offset: 0x0027493C
 	private void CreateBasicAbsorptionData()
 	{
 		int calabashLevel = CalabashModel.Instance.GetCalabashLevel();
@@ -393,7 +393,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600ACA2 RID: 44194 RVA: 0x0026C3A0 File Offset: 0x0026A5A0
+	// Token: 0x06008089 RID: 32905 RVA: 0x002767E8 File Offset: 0x002749E8
 	private void CreateUpAbsorptionData()
 	{
 		int calabashLevel = CalabashModel.Instance.GetCalabashLevel();
@@ -443,7 +443,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600ACA3 RID: 44195 RVA: 0x0026C54C File Offset: 0x0026A74C
+	// Token: 0x0600808A RID: 32906 RVA: 0x00276994 File Offset: 0x00274B94
 	private void CreateLowCostAbsorptionData()
 	{
 		CalabashConfig instance = CalabashConfig.Instance;
@@ -471,7 +471,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600ACA4 RID: 44196 RVA: 0x0026C634 File Offset: 0x0026A834
+	// Token: 0x0600808B RID: 32907 RVA: 0x00276A7C File Offset: 0x00274C7C
 	private void CreateMaxQualityData()
 	{
 		int calabashLevel = CalabashModel.Instance.GetCalabashLevel();
@@ -515,7 +515,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		attributeData.IsToggleRaycast = true;
 	}
 
-	// Token: 0x0600ACA5 RID: 44197 RVA: 0x0026C78C File Offset: 0x0026A98C
+	// Token: 0x0600808C RID: 32908 RVA: 0x00276BD4 File Offset: 0x00274DD4
 	private void CreateMaxCostData()
 	{
 		int calabashLevel = CalabashModel.Instance.GetCalabashLevel();
@@ -559,7 +559,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		attributeData.IsToggleRaycast = false;
 	}
 
-	// Token: 0x0600ACA6 RID: 44198 RVA: 0x0026C8D8 File Offset: 0x0026AAD8
+	// Token: 0x0600808D RID: 32909 RVA: 0x00276D20 File Offset: 0x00274F20
 	private void ClearAttributeData()
 	{
 		foreach (CalabashAttributeData item in this.AttributeDataList)
@@ -569,7 +569,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		this.AttributeDataList.Clear();
 	}
 
-	// Token: 0x0600ACA7 RID: 44199 RVA: 0x0026C93C File Offset: 0x0026AB3C
+	// Token: 0x0600808E RID: 32910 RVA: 0x00276D84 File Offset: 0x00274F84
 	private CalabashAttributeData GetAttributeData()
 	{
 		CalabashAttributeData calabashAttributeData = null;
@@ -586,14 +586,14 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		return calabashAttributeData;
 	}
 
-	// Token: 0x0600ACA8 RID: 44200 RVA: 0x0026C988 File Offset: 0x0026AB88
+	// Token: 0x0600808F RID: 32911 RVA: 0x00276DD0 File Offset: 0x00274FD0
 	private void OnClickDetailItem(CalabashAttributeData data)
 	{
 		this.CurrentSelectDetailType = ((data.Type == this.CurrentSelectDetailType) ? ECalabashAttributeDataType.Default : data.Type);
 		this.RefreshAttribute();
 	}
 
-	// Token: 0x0600ACA9 RID: 44201 RVA: 0x0026C9AD File Offset: 0x0026ABAD
+	// Token: 0x06008090 RID: 32912 RVA: 0x00276DF5 File Offset: 0x00274FF5
 	private void RefreshCalabash()
 	{
 		this.RefreshNoCircleExhibitionView(false);
@@ -601,7 +601,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		this.RefreshCalabashPlayerInfo();
 	}
 
-	// Token: 0x0600ACAA RID: 44202 RVA: 0x0026C9C4 File Offset: 0x0026ABC4
+	// Token: 0x06008091 RID: 32913 RVA: 0x00276E0C File Offset: 0x0027500C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -633,7 +633,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		return null;
 	}
 
-	// Token: 0x0600ACAB RID: 44203 RVA: 0x0026CA3C File Offset: 0x0026AC3C
+	// Token: 0x06008092 RID: 32914 RVA: 0x00276E84 File Offset: 0x00275084
 	private void RefreshNoCircleExhibitionView(bool isInit = false)
 	{
 		int calabashLevel = CalabashModel.Instance.GetCalabashLevel();
@@ -694,7 +694,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600ACAC RID: 44204 RVA: 0x0026CBE4 File Offset: 0x0026ADE4
+	// Token: 0x06008093 RID: 32915 RVA: 0x0027702C File Offset: 0x0027522C
 	private void RefreshExpText(int curLevel)
 	{
 		int calabashMaxLevel = CalabashModel.Instance.GetCalabashMaxLevel();
@@ -713,7 +713,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 		}));
 	}
 
-	// Token: 0x04004E88 RID: 20104
+	// Token: 0x04004F31 RID: 20273
 	[Nullable(new byte[]
 	{
 		2,
@@ -722,7 +722,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 	})]
 	private NoCircleAttachView<CalabashGridData, CalabashGrid> NoCircleExhibitionView;
 
-	// Token: 0x04004E89 RID: 20105
+	// Token: 0x04004F32 RID: 20274
 	[Nullable(new byte[]
 	{
 		2,
@@ -730,7 +730,7 @@ public class CalabashLevelUpTabView : UiTabViewBase
 	})]
 	private CalabashGridData[] CalabashGridDataList;
 
-	// Token: 0x04004E8A RID: 20106
+	// Token: 0x04004F33 RID: 20275
 	[Nullable(new byte[]
 	{
 		2,
@@ -739,13 +739,13 @@ public class CalabashLevelUpTabView : UiTabViewBase
 	})]
 	private GenericLayout<CalabashAttributeItem, CalabashAttributeData> AttributeLayout;
 
-	// Token: 0x04004E8B RID: 20107
+	// Token: 0x04004F34 RID: 20276
 	private readonly List<CalabashAttributeData> AttributeDataList = new List<CalabashAttributeData>();
 
-	// Token: 0x04004E8C RID: 20108
+	// Token: 0x04004F35 RID: 20277
 	private readonly List<CalabashAttributeData> AttributeDataListPool = new List<CalabashAttributeData>();
 
-	// Token: 0x04004E8D RID: 20109
+	// Token: 0x04004F36 RID: 20278
 	[Nullable(new byte[]
 	{
 		2,
@@ -754,22 +754,22 @@ public class CalabashLevelUpTabView : UiTabViewBase
 	})]
 	private GenericLayout<CalabashLevelUpRewardItemGrid, CalabashRewardItemData> RewardLayout;
 
-	// Token: 0x04004E8E RID: 20110
+	// Token: 0x04004F37 RID: 20279
 	private int AchieveStrengthItemNum;
 
-	// Token: 0x04004E8F RID: 20111
+	// Token: 0x04004F38 RID: 20280
 	private readonly List<CalabashRewardItemData> RewardDataList = new List<CalabashRewardItemData>();
 
-	// Token: 0x04004E90 RID: 20112
+	// Token: 0x04004F39 RID: 20281
 	[Nullable(2)]
 	private UCurveFloat ItemCurve;
 
-	// Token: 0x04004E91 RID: 20113
+	// Token: 0x04004F3A RID: 20282
 	private int CurrentSelectedLevel;
 
-	// Token: 0x04004E92 RID: 20114
+	// Token: 0x04004F3B RID: 20283
 	private ECalabashAttributeDataType CurrentSelectDetailType = ECalabashAttributeDataType.Default;
 
-	// Token: 0x04004E93 RID: 20115
+	// Token: 0x04004F3C RID: 20284
 	private bool NeedInitExhibition = true;
 }

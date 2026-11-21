@@ -5,45 +5,45 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068E3 RID: 26851
+	// Token: 0x02006F93 RID: 28563
 	public class IHideByRangeInFlowT
 	{
-		// Token: 0x1700C738 RID: 51000
-		// (get) Token: 0x0602ED66 RID: 191846 RVA: 0x00663EEE File Offset: 0x006620EE
-		// (set) Token: 0x0602ED67 RID: 191847 RVA: 0x00663EF6 File Offset: 0x006620F6
+		// Token: 0x1700D132 RID: 53554
+		// (get) Token: 0x06031718 RID: 202520 RVA: 0x006B4036 File Offset: 0x006B2236
+		// (set) Token: 0x06031719 RID: 202521 RVA: 0x006B403E File Offset: 0x006B223E
 		public ETriggerShape Type { get; set; }
 
-		// Token: 0x1700C739 RID: 51001
-		// (get) Token: 0x0602ED68 RID: 191848 RVA: 0x00663EFF File Offset: 0x006620FF
-		// (set) Token: 0x0602ED69 RID: 191849 RVA: 0x00663F07 File Offset: 0x00662107
+		// Token: 0x1700D133 RID: 53555
+		// (get) Token: 0x0603171A RID: 202522 RVA: 0x006B4047 File Offset: 0x006B2247
+		// (set) Token: 0x0603171B RID: 202523 RVA: 0x006B404F File Offset: 0x006B224F
 		public IVectorInfoT Center { get; set; }
 
-		// Token: 0x1700C73A RID: 51002
-		// (get) Token: 0x0602ED6A RID: 191850 RVA: 0x00663F10 File Offset: 0x00662110
-		// (set) Token: 0x0602ED6B RID: 191851 RVA: 0x00663F18 File Offset: 0x00662118
+		// Token: 0x1700D134 RID: 53556
+		// (get) Token: 0x0603171C RID: 202524 RVA: 0x006B4058 File Offset: 0x006B2258
+		// (set) Token: 0x0603171D RID: 202525 RVA: 0x006B4060 File Offset: 0x006B2260
 		public int Radius { get; set; }
 
-		// Token: 0x1700C73B RID: 51003
-		// (get) Token: 0x0602ED6C RID: 191852 RVA: 0x00663F21 File Offset: 0x00662121
-		// (set) Token: 0x0602ED6D RID: 191853 RVA: 0x00663F29 File Offset: 0x00662129
+		// Token: 0x1700D135 RID: 53557
+		// (get) Token: 0x0603171E RID: 202526 RVA: 0x006B4069 File Offset: 0x006B2269
+		// (set) Token: 0x0603171F RID: 202527 RVA: 0x006B4071 File Offset: 0x006B2271
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x1700C73C RID: 51004
-		// (get) Token: 0x0602ED6E RID: 191854 RVA: 0x00663F32 File Offset: 0x00662132
-		// (set) Token: 0x0602ED6F RID: 191855 RVA: 0x00663F3A File Offset: 0x0066213A
+		// Token: 0x1700D136 RID: 53558
+		// (get) Token: 0x06031720 RID: 202528 RVA: 0x006B407A File Offset: 0x006B227A
+		// (set) Token: 0x06031721 RID: 202529 RVA: 0x006B4082 File Offset: 0x006B2282
 		public bool IsCleanSimpleNpc { get; set; }
 
-		// Token: 0x1700C73D RID: 51005
-		// (get) Token: 0x0602ED70 RID: 191856 RVA: 0x00663F43 File Offset: 0x00662143
-		// (set) Token: 0x0602ED71 RID: 191857 RVA: 0x00663F4B File Offset: 0x0066214B
+		// Token: 0x1700D137 RID: 53559
+		// (get) Token: 0x06031722 RID: 202530 RVA: 0x006B408B File Offset: 0x006B228B
+		// (set) Token: 0x06031723 RID: 202531 RVA: 0x006B4093 File Offset: 0x006B2293
 		public bool IsCleanPasserByNpc { get; set; }
 
-		// Token: 0x1700C73E RID: 51006
-		// (get) Token: 0x0602ED72 RID: 191858 RVA: 0x00663F54 File Offset: 0x00662154
-		// (set) Token: 0x0602ED73 RID: 191859 RVA: 0x00663F5C File Offset: 0x0066215C
+		// Token: 0x1700D138 RID: 53560
+		// (get) Token: 0x06031724 RID: 202532 RVA: 0x006B409C File Offset: 0x006B229C
+		// (set) Token: 0x06031725 RID: 202533 RVA: 0x006B40A4 File Offset: 0x006B22A4
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602ED74 RID: 191860 RVA: 0x00663F65 File Offset: 0x00662165
+		// Token: 0x06031726 RID: 202534 RVA: 0x006B40AD File Offset: 0x006B22AD
 		public IHideByRangeInFlowT()
 		{
 			this.Type = ETriggerShape.Box;

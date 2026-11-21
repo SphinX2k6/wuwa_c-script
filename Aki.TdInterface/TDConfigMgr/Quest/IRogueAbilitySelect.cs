@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010F6 RID: 4342
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001224 RID: 4644
 	public class IRogueAbilitySelect : IShowUi
 	{
-		// Token: 0x0600623A RID: 25146 RVA: 0x000ECBC8 File Offset: 0x000EADC8
+		// Token: 0x06006835 RID: 26677 RVA: 0x000F9D3C File Offset: 0x000F7F3C
 		private IRogueAbilitySelect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600623B RID: 25147 RVA: 0x000ECC00 File Offset: 0x000EAE00
+		// Token: 0x06006836 RID: 26678 RVA: 0x000F9D74 File Offset: 0x000F7F74
 		public static IRogueAbilitySelect Create([Nullable(2)] IRogueAbilitySelect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600623C RID: 25148 RVA: 0x000ECC13 File Offset: 0x000EAE13
+		// Token: 0x06006837 RID: 26679 RVA: 0x000F9D87 File Offset: 0x000F7F87
 		public static IRogueAbilitySelect CreateFromSetValue([Nullable(2)] IRogueAbilitySelect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600623D RID: 25149 RVA: 0x000ECC26 File Offset: 0x000EAE26
+		// Token: 0x06006838 RID: 26680 RVA: 0x000F9D9A File Offset: 0x000F7F9A
 		public new IRogueAbilitySelect_SetValue ToSetValue()
 		{
 			return new IRogueAbilitySelect_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002030 RID: 8240
-		// (get) Token: 0x0600623E RID: 25150 RVA: 0x000ECC51 File Offset: 0x000EAE51
-		// (set) Token: 0x0600623F RID: 25151 RVA: 0x000ECC7C File Offset: 0x000EAE7C
+		// Token: 0x170021E3 RID: 8675
+		// (get) Token: 0x06006839 RID: 26681 RVA: 0x000F9DC5 File Offset: 0x000F7FC5
+		// (set) Token: 0x0600683A RID: 26682 RVA: 0x000F9DF0 File Offset: 0x000F7FF0
 		public override EShowUiType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002031 RID: 8241
-		// (get) Token: 0x06006240 RID: 25152 RVA: 0x000ECC8A File Offset: 0x000EAE8A
-		// (set) Token: 0x06006241 RID: 25153 RVA: 0x000ECCB5 File Offset: 0x000EAEB5
+		// Token: 0x170021E4 RID: 8676
+		// (get) Token: 0x0600683B RID: 26683 RVA: 0x000F9DFE File Offset: 0x000F7FFE
+		// (set) Token: 0x0600683C RID: 26684 RVA: 0x000F9E29 File Offset: 0x000F8029
 		public virtual ERogueAbilityType AbilityType
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002032 RID: 8242
-		// (get) Token: 0x06006242 RID: 25154 RVA: 0x000ECCC3 File Offset: 0x000EAEC3
-		// (set) Token: 0x06006243 RID: 25155 RVA: 0x000ECCEE File Offset: 0x000EAEEE
+		// Token: 0x170021E5 RID: 8677
+		// (get) Token: 0x0600683D RID: 26685 RVA: 0x000F9E37 File Offset: 0x000F8037
+		// (set) Token: 0x0600683E RID: 26686 RVA: 0x000F9E62 File Offset: 0x000F8062
 		public virtual int BindId
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B07 RID: 15111
+		// Token: 0x04003E55 RID: 15957
 		[Nullable(2)]
 		protected new IRogueAbilitySelect FbInstance;
 
-		// Token: 0x04003B08 RID: 15112
+		// Token: 0x04003E56 RID: 15958
 		[Nullable(2)]
 		protected new IRogueAbilitySelect_SetValue PocoInterface;
 	}

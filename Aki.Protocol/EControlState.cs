@@ -3,19 +3,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200164A RID: 5706
+	// Token: 0x020016C0 RID: 5824
 	public enum EControlState
 	{
-		// Token: 0x0400C0F3 RID: 49395
+		// Token: 0x0400C5FA RID: 50682
 		[OriginalName("EControlStateLetGo")]
 		LetGo,
-		// Token: 0x0400C0F4 RID: 49396
+		// Token: 0x0400C5FB RID: 50683
 		[OriginalName("EControlStateFreeThrowing")]
 		FreeThrowing,
-		// Token: 0x0400C0F5 RID: 49397
+		// Token: 0x0400C5FC RID: 50684
 		[OriginalName("EControlStateLockBaseThrowing")]
 		LockBaseThrowing,
-		// Token: 0x0400C0F6 RID: 49398
+		// Token: 0x0400C5FD RID: 50685
 		[OriginalName("EControlStateLockEntityThrowing")]
 		LockEntityThrowing
 	}

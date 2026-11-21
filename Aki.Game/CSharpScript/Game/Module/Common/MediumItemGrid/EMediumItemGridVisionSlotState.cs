@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Common.MediumItemGrid
 {
-	// Token: 0x02005B63 RID: 23395
+	// Token: 0x02004B42 RID: 19266
 	public enum EMediumItemGridVisionSlotState
 	{
-		// Token: 0x0401EE15 RID: 126485
+		// Token: 0x040198C4 RID: 104644
 		Lock,
-		// Token: 0x0401EE16 RID: 126486
+		// Token: 0x040198C5 RID: 104645
 		UnlockAndNoProp,
-		// Token: 0x0401EE17 RID: 126487
+		// Token: 0x040198C6 RID: 104646
 		PreviewUnLock,
-		// Token: 0x0401EE18 RID: 126488
+		// Token: 0x040198C7 RID: 104647
 		UnlockAndHaveProp
 	}
 }

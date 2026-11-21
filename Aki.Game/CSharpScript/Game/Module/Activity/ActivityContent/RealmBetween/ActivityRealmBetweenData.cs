@@ -7,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006261 RID: 25185
+	// Token: 0x020051DF RID: 20959
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityRealmBetweenData : ActivityBaseData
 	{
-		// Token: 0x0603F6DC RID: 259804 RVA: 0x00F5552C File Offset: 0x00F5372C
+		// Token: 0x0603439D RID: 213917 RVA: 0x00E9C488 File Offset: 0x00E9A688
 		protected override void OnInit(ActivityData data)
 		{
 			this.InitTravelLevelData();
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.LastExpCountInternal = this.GetExpItemCount();
 		}
 
-		// Token: 0x0603F6DD RID: 259805 RVA: 0x00F5558C File Offset: 0x00F5378C
+		// Token: 0x0603439E RID: 213918 RVA: 0x00E9C4E8 File Offset: 0x00E9A6E8
 		protected override void PhraseEx(ActivityData data)
 		{
 			RealmBetweenActivityInfo realmBetweenActivityInfo = data.RealmBetweenActivityInfo;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.RefreshRealmBetweenData(realmBetweenActivityInfo);
 		}
 
-		// Token: 0x0603F6DE RID: 259806 RVA: 0x00F555AC File Offset: 0x00F537AC
+		// Token: 0x0603439F RID: 213919 RVA: 0x00E9C508 File Offset: 0x00E9A708
 		protected void RefreshRealmBetweenData(RealmBetweenActivityInfo info)
 		{
 			this.TravelLevel = info.RealmBetweenLevel;
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F6DF RID: 259807 RVA: 0x00F556D0 File Offset: 0x00F538D0
+		// Token: 0x060343A0 RID: 213920 RVA: 0x00E9C62C File Offset: 0x00E9A82C
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.CanTravelLevelUp() || this.GetTaskRedDotState(true) || this.GetAllMotorItemRedDot();
 		}
 
-		// Token: 0x0603F6E0 RID: 259808 RVA: 0x00F556F4 File Offset: 0x00F538F4
+		// Token: 0x060343A1 RID: 213921 RVA: 0x00E9C650 File Offset: 0x00E9A850
 		protected override bool GetExDataFinishShowState()
 		{
 			if (this.MaxTravelLevel != this.TravelLevel)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return true;
 		}
 
-		// Token: 0x0603F6E1 RID: 259809 RVA: 0x00F557C8 File Offset: 0x00F539C8
+		// Token: 0x060343A2 RID: 213922 RVA: 0x00E9C724 File Offset: 0x00E9A924
 		public bool SaveFirstCheckRedDotState(ERealmBetweenSaveFlag saveFlag, int id = 0)
 		{
 			if (ActivityModel.Instance.GetActivityCacheData(base.Id, 0, (int)saveFlag, id, 0) == 1)
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return false;
 		}
 
-		// Token: 0x0603F6E2 RID: 259810 RVA: 0x00F55800 File Offset: 0x00F53A00
+		// Token: 0x060343A3 RID: 213923 RVA: 0x00E9C75C File Offset: 0x00E9A95C
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return new ValueTuple<int, int>(num, item);
 		}
 
-		// Token: 0x0603F6E3 RID: 259811 RVA: 0x00F558FC File Offset: 0x00F53AFC
+		// Token: 0x060343A4 RID: 213924 RVA: 0x00E9C858 File Offset: 0x00E9AA58
 		public bool GetTypeRedDotState(ERealmBetweenSubType subType)
 		{
 			if (subType != ERealmBetweenSubType.TravelTask)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return this.GetTaskRedDotState(false);
 		}
 
-		// Token: 0x0603F6E4 RID: 259812 RVA: 0x00F55918 File Offset: 0x00F53B18
+		// Token: 0x060343A5 RID: 213925 RVA: 0x00E9C874 File Offset: 0x00E9AA74
 		public bool GetTypeNewState(ERealmBetweenSubType subType)
 		{
 			switch (subType)
@@ -194,19 +194,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return false;
 		}
 
-		// Token: 0x0603F6E5 RID: 259813 RVA: 0x00F5594A File Offset: 0x00F53B4A
+		// Token: 0x060343A6 RID: 213926 RVA: 0x00E9C8A6 File Offset: 0x00E9AAA6
 		public void RefreshActivityRedDotState()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603F6E6 RID: 259814 RVA: 0x00F55964 File Offset: 0x00F53B64
+		// Token: 0x060343A7 RID: 213927 RVA: 0x00E9C8C0 File Offset: 0x00E9AAC0
 		public RealmBetweenConfig GetActivityConfig()
 		{
 			return ActivityRealmBetweenConfig.Instance.GetActivityConfig(base.Id).Value;
 		}
 
-		// Token: 0x0603F6E7 RID: 259815 RVA: 0x00F55989 File Offset: 0x00F53B89
+		// Token: 0x060343A8 RID: 213928 RVA: 0x00E9C8E5 File Offset: 0x00E9AAE5
 		private Comparison<global::ActivityTaskData> SortTaskData()
 		{
 			return delegate(global::ActivityTaskData a, global::ActivityTaskData b)
@@ -219,8 +219,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x1700925D RID: 37469
-		// (get) Token: 0x0603F6E8 RID: 259816 RVA: 0x00F559AA File Offset: 0x00F53BAA
+		// Token: 0x170065BF RID: 26047
+		// (get) Token: 0x060343A9 RID: 213929 RVA: 0x00E9C906 File Offset: 0x00E9AB06
 		public int LastTravelLevel
 		{
 			get
@@ -231,8 +231,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x1700925E RID: 37470
-		// (get) Token: 0x0603F6E9 RID: 259817 RVA: 0x00F559BE File Offset: 0x00F53BBE
+		// Token: 0x170065C0 RID: 26048
+		// (get) Token: 0x060343AA RID: 213930 RVA: 0x00E9C91A File Offset: 0x00E9AB1A
 		public int LastCurrentExpCount
 		{
 			get
@@ -243,8 +243,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x1700925F RID: 37471
-		// (get) Token: 0x0603F6EA RID: 259818 RVA: 0x00F559D2 File Offset: 0x00F53BD2
+		// Token: 0x170065C1 RID: 26049
+		// (get) Token: 0x060343AB RID: 213931 RVA: 0x00E9C92E File Offset: 0x00E9AB2E
 		public int LastExpCount
 		{
 			get
@@ -255,8 +255,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x17009260 RID: 37472
-		// (get) Token: 0x0603F6EB RID: 259819 RVA: 0x00F559E8 File Offset: 0x00F53BE8
+		// Token: 0x170065C2 RID: 26050
+		// (get) Token: 0x060343AC RID: 213932 RVA: 0x00E9C944 File Offset: 0x00E9AB44
 		public int MaxTravelLevel
 		{
 			get
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F6EC RID: 259820 RVA: 0x00F55A04 File Offset: 0x00F53C04
+		// Token: 0x060343AD RID: 213933 RVA: 0x00E9C960 File Offset: 0x00E9AB60
 		private void InitTravelLevelData()
 		{
 			this.TravelLevelData.Clear();
@@ -285,14 +285,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F6ED RID: 259821 RVA: 0x00F55AB4 File Offset: 0x00F53CB4
+		// Token: 0x060343AE RID: 213934 RVA: 0x00E9CA10 File Offset: 0x00E9AC10
 		public int GetExpItemCount()
 		{
 			int expItemId = this.GetActivityConfig().ExpItemId;
 			return InventoryModel.Instance.GetItemCountByConfigId(expItemId, 0);
 		}
 
-		// Token: 0x0603F6EE RID: 259822 RVA: 0x00F55ADC File Offset: 0x00F53CDC
+		// Token: 0x060343AF RID: 213935 RVA: 0x00E9CA38 File Offset: 0x00E9AC38
 		public int GetCurrentExp()
 		{
 			int expItemCount = this.GetExpItemCount();
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return expItemCount - num;
 		}
 
-		// Token: 0x0603F6EF RID: 259823 RVA: 0x00F55B10 File Offset: 0x00F53D10
+		// Token: 0x060343B0 RID: 213936 RVA: 0x00E9CA6C File Offset: 0x00E9AC6C
 		public int GetCurrentTargetExp()
 		{
 			bool flag = this.MaxTravelLevel == this.TravelLevel;
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return realmBetweenLevelData.AccumulateExp;
 		}
 
-		// Token: 0x0603F6F0 RID: 259824 RVA: 0x00F55B4C File Offset: 0x00F53D4C
+		// Token: 0x060343B1 RID: 213937 RVA: 0x00E9CAA8 File Offset: 0x00E9ACA8
 		public bool CanTravelLevelUp()
 		{
 			if (this.MaxTravelLevel == this.TravelLevel)
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return expItemCount >= num;
 		}
 
-		// Token: 0x0603F6F1 RID: 259825 RVA: 0x00F55BA0 File Offset: 0x00F53DA0
+		// Token: 0x060343B2 RID: 213938 RVA: 0x00E9CAFC File Offset: 0x00E9ACFC
 		private void InitTravelAreaData()
 		{
 			this.AreaDataMap.Clear();
@@ -344,7 +344,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F6F2 RID: 259826 RVA: 0x00F55C48 File Offset: 0x00F53E48
+		// Token: 0x060343B3 RID: 213939 RVA: 0x00E9CBA4 File Offset: 0x00E9ADA4
 		public void UnlockAreaData(int areaId)
 		{
 			RealmBetweenAreaData realmBetweenAreaData;
@@ -355,14 +355,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			realmBetweenAreaData.IsUnlock = true;
 		}
 
-		// Token: 0x0603F6F3 RID: 259827 RVA: 0x00F55C6D File Offset: 0x00F53E6D
+		// Token: 0x060343B4 RID: 213940 RVA: 0x00E9CBC9 File Offset: 0x00E9ADC9
 		public void OnNewAreaUnlocked(int areaId)
 		{
 			this.UnlockAreaData(areaId);
 			ActivityModel.Instance.SaveActivityData(base.Id, 5, areaId, 0, 0);
 		}
 
-		// Token: 0x0603F6F4 RID: 259828 RVA: 0x00F55C8A File Offset: 0x00F53E8A
+		// Token: 0x060343B5 RID: 213941 RVA: 0x00E9CBE6 File Offset: 0x00E9ADE6
 		public List<RealmBetweenAreaData> GetAllAreaData()
 		{
 			List<RealmBetweenAreaData> list = new List<RealmBetweenAreaData>(this.AreaDataMap.Values);
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return list;
 		}
 
-		// Token: 0x0603F6F5 RID: 259829 RVA: 0x00F55CC4 File Offset: 0x00F53EC4
+		// Token: 0x060343B6 RID: 213942 RVA: 0x00E9CC20 File Offset: 0x00E9AE20
 		public bool GetAllAreaNewUnlockState()
 		{
 			foreach (int areaId in this.AreaDataMap.Keys)
@@ -392,7 +392,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return false;
 		}
 
-		// Token: 0x0603F6F6 RID: 259830 RVA: 0x00F55D28 File Offset: 0x00F53F28
+		// Token: 0x060343B7 RID: 213943 RVA: 0x00E9CC84 File Offset: 0x00E9AE84
 		public void RefreshTravelTaskData(ConditionTask task)
 		{
 			global::ActivityTaskData activityTaskData;
@@ -416,14 +416,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			});
 		}
 
-		// Token: 0x0603F6F7 RID: 259831 RVA: 0x00F55DDE File Offset: 0x00F53FDE
+		// Token: 0x060343B8 RID: 213944 RVA: 0x00E9CD3A File Offset: 0x00E9AF3A
 		public void SetTravelTaskDataDone(int taskId)
 		{
 			this.AreaTaskMap[taskId].Status = EActivityTaskState.FinishedAndClaimed;
 			this.TaskFinalRewardData.FinishedIdSet.Add(taskId);
 		}
 
-		// Token: 0x0603F6F8 RID: 259832 RVA: 0x00F55E04 File Offset: 0x00F54004
+		// Token: 0x060343B9 RID: 213945 RVA: 0x00E9CD60 File Offset: 0x00E9AF60
 		public bool IsAreaTaskFinish(int areaId)
 		{
 			foreach (int key in this.AreaDataMap[areaId].TravelTaskIdSet)
@@ -436,7 +436,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return true;
 		}
 
-		// Token: 0x0603F6F9 RID: 259833 RVA: 0x00F55E78 File Offset: 0x00F54078
+		// Token: 0x060343BA RID: 213946 RVA: 0x00E9CDD4 File Offset: 0x00E9AFD4
 		public int GetFinishedAreaTaskCount()
 		{
 			int num = 0;
@@ -453,7 +453,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return num;
 		}
 
-		// Token: 0x0603F6FA RID: 259834 RVA: 0x00F55ED8 File Offset: 0x00F540D8
+		// Token: 0x060343BB RID: 213947 RVA: 0x00E9CE34 File Offset: 0x00E9B034
 		public List<global::ActivityTaskData> GetAreaTaskDataList(int areaId)
 		{
 			List<global::ActivityTaskData> list = new List<global::ActivityTaskData>();
@@ -466,7 +466,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return list;
 		}
 
-		// Token: 0x0603F6FB RID: 259835 RVA: 0x00F55F58 File Offset: 0x00F54158
+		// Token: 0x060343BC RID: 213948 RVA: 0x00E9CEB4 File Offset: 0x00E9B0B4
 		public bool GetAreaNewUnlockState(int areaId)
 		{
 			bool isUnlock = this.AreaDataMap[areaId].IsUnlock;
@@ -475,7 +475,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return isUnlock && !flag2 && flag && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 5, areaId, 0) == 0;
 		}
 
-		// Token: 0x0603F6FC RID: 259836 RVA: 0x00F55FC0 File Offset: 0x00F541C0
+		// Token: 0x060343BD RID: 213949 RVA: 0x00E9CF1C File Offset: 0x00E9B11C
 		public bool GetAreaRewardState(int areaId)
 		{
 			RealmBetweenAreaData realmBetweenAreaData = this.AreaDataMap[areaId];
@@ -493,7 +493,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return false;
 		}
 
-		// Token: 0x0603F6FD RID: 259837 RVA: 0x00F56040 File Offset: 0x00F54240
+		// Token: 0x060343BE RID: 213950 RVA: 0x00E9CF9C File Offset: 0x00E9B19C
 		public bool GetTaskRedDotState(bool checkAreaUnlock = false)
 		{
 			if (this.TaskFinalRewardData != null && this.TaskFinalRewardData.CanReceive())
@@ -514,7 +514,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return false;
 		}
 
-		// Token: 0x0603F6FE RID: 259838 RVA: 0x00F560C8 File Offset: 0x00F542C8
+		// Token: 0x060343BF RID: 213951 RVA: 0x00E9D024 File Offset: 0x00E9B224
 		private void InitPhantomData()
 		{
 			this.PhantomDataMap.Clear();
@@ -524,13 +524,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F6FF RID: 259839 RVA: 0x00F56138 File Offset: 0x00F54338
+		// Token: 0x060343C0 RID: 213952 RVA: 0x00E9D094 File Offset: 0x00E9B294
 		public void UnlockPhantom(int phantomId)
 		{
 			this.PhantomDataMap[phantomId] = true;
 		}
 
-		// Token: 0x0603F700 RID: 259840 RVA: 0x00F56148 File Offset: 0x00F54348
+		// Token: 0x060343C1 RID: 213953 RVA: 0x00E9D0A4 File Offset: 0x00E9B2A4
 		public bool GetAllPhantomNewUnlockState()
 		{
 			foreach (KeyValuePair<int, bool> keyValuePair in this.PhantomDataMap)
@@ -543,14 +543,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return false;
 		}
 
-		// Token: 0x0603F701 RID: 259841 RVA: 0x00F561B4 File Offset: 0x00F543B4
+		// Token: 0x060343C2 RID: 213954 RVA: 0x00E9D110 File Offset: 0x00E9B310
 		public bool GetPhantomNewUnlockState(int phantomId)
 		{
 			int key = phantomId - 6000000;
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 4, key, 0) == 0;
 		}
 
-		// Token: 0x0603F702 RID: 259842 RVA: 0x00F561E0 File Offset: 0x00F543E0
+		// Token: 0x060343C3 RID: 213955 RVA: 0x00E9D13C File Offset: 0x00E9B33C
 		private void InitMotorChallengeData()
 		{
 			this.MotorChallengeRewardDataMap.Clear();
@@ -579,7 +579,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F703 RID: 259843 RVA: 0x00F56324 File Offset: 0x00F54524
+		// Token: 0x060343C4 RID: 213956 RVA: 0x00E9D280 File Offset: 0x00E9B480
 		public void RefreshMotorChallengePlayData(RealmBetweenMotorcycleInfo challengeInfo)
 		{
 			MotorChallengePlayData motorChallengePlayData;
@@ -617,13 +617,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F704 RID: 259844 RVA: 0x00F56414 File Offset: 0x00F54614
+		// Token: 0x060343C5 RID: 213957 RVA: 0x00E9D370 File Offset: 0x00E9B570
 		public void SetMotorChallengeRewardDone(int rewardId)
 		{
 			this.MotorChallengeRewardDataMap[rewardId].Status = EActivityTaskState.FinishedAndClaimed;
 		}
 
-		// Token: 0x0603F705 RID: 259845 RVA: 0x00F56428 File Offset: 0x00F54628
+		// Token: 0x060343C6 RID: 213958 RVA: 0x00E9D384 File Offset: 0x00E9B584
 		protected void RefreshMotorChallengeUnlockState(int playId)
 		{
 			MotorChallengePlayData motorChallengePlayData = this.MotorChallengePlayDataMap[playId];
@@ -645,20 +645,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			motorChallengePlayData.IsNew = this.GetMotorItemNewUnlockState(playId);
 		}
 
-		// Token: 0x0603F706 RID: 259846 RVA: 0x00F564B0 File Offset: 0x00F546B0
+		// Token: 0x060343C7 RID: 213959 RVA: 0x00E9D40C File Offset: 0x00E9B60C
 		public string GetMotorPlayLockTips(int playId)
 		{
 			MotorChallengePlayData motorChallengePlayData = this.MotorChallengePlayDataMap[playId];
 			return ActivityRealmBetweenConfig.Instance.GetMotorChallengeConfig(motorChallengePlayData.RewardIds[0]).Value.LockTips;
 		}
 
-		// Token: 0x0603F707 RID: 259847 RVA: 0x00F564F0 File Offset: 0x00F546F0
+		// Token: 0x060343C8 RID: 213960 RVA: 0x00E9D44C File Offset: 0x00E9B64C
 		public List<MotorChallengePlayData> GetAllMotorTabData()
 		{
 			return new List<MotorChallengePlayData>(this.MotorChallengePlayDataMap.Values);
 		}
 
-		// Token: 0x0603F708 RID: 259848 RVA: 0x00F56504 File Offset: 0x00F54704
+		// Token: 0x060343C9 RID: 213961 RVA: 0x00E9D460 File Offset: 0x00E9B660
 		public List<global::ActivityTaskData> GetMotorItemDataList(List<int> ids)
 		{
 			List<global::ActivityTaskData> list = new List<global::ActivityTaskData>();
@@ -674,7 +674,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return list;
 		}
 
-		// Token: 0x0603F709 RID: 259849 RVA: 0x00F56578 File Offset: 0x00F54778
+		// Token: 0x060343CA RID: 213962 RVA: 0x00E9D4D4 File Offset: 0x00E9B6D4
 		protected bool GetAllMotorItemRedDot()
 		{
 			using (Dictionary<int, global::ActivityTaskData>.ValueCollection.Enumerator enumerator = this.MotorChallengeRewardDataMap.Values.GetEnumerator())
@@ -690,7 +690,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return false;
 		}
 
-		// Token: 0x0603F70A RID: 259850 RVA: 0x00F565D8 File Offset: 0x00F547D8
+		// Token: 0x060343CB RID: 213963 RVA: 0x00E9D534 File Offset: 0x00E9B734
 		protected bool RefreshAndGetAllMotorItemNewUnlock()
 		{
 			bool flag = false;
@@ -705,14 +705,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return flag;
 		}
 
-		// Token: 0x0603F70B RID: 259851 RVA: 0x00F56644 File Offset: 0x00F54844
+		// Token: 0x060343CC RID: 213964 RVA: 0x00E9D5A0 File Offset: 0x00E9B7A0
 		public bool GetMotorItemNewUnlockState(int playId)
 		{
 			MotorChallengePlayData motorChallengePlayData = this.MotorChallengePlayDataMap[playId];
 			return motorChallengePlayData.IsUnlock && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 7, motorChallengePlayData.TabIndex, 0) == 0;
 		}
 
-		// Token: 0x0603F70C RID: 259852 RVA: 0x00F56684 File Offset: 0x00F54884
+		// Token: 0x060343CD RID: 213965 RVA: 0x00E9D5E0 File Offset: 0x00E9B7E0
 		protected bool CheckMotorItemRedDot(int[] ids)
 		{
 			foreach (int key in ids)
@@ -726,7 +726,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return false;
 		}
 
-		// Token: 0x0603F70D RID: 259853 RVA: 0x00F566C0 File Offset: 0x00F548C0
+		// Token: 0x060343CE RID: 213966 RVA: 0x00E9D61C File Offset: 0x00E9B81C
 		protected bool CheckMotorItemFinished(int[] ids)
 		{
 			foreach (int key in ids)
@@ -740,41 +740,41 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return true;
 		}
 
-		// Token: 0x04021216 RID: 135702
+		// Token: 0x0401BB45 RID: 113477
 		public const int PHANTOM_ID_OFFSET = 6000000;
 
-		// Token: 0x04021217 RID: 135703
+		// Token: 0x0401BB46 RID: 113478
 		public readonly Dictionary<int, IRealmBetweenLevelData> TravelLevelData = new Dictionary<int, IRealmBetweenLevelData>();
 
-		// Token: 0x04021218 RID: 135704
+		// Token: 0x0401BB47 RID: 113479
 		public int TravelLevel;
 
-		// Token: 0x04021219 RID: 135705
+		// Token: 0x0401BB48 RID: 113480
 		private int LastTravelLevelInternal;
 
-		// Token: 0x0402121A RID: 135706
+		// Token: 0x0401BB49 RID: 113481
 		private int LastExpCountInternal;
 
-		// Token: 0x0402121B RID: 135707
+		// Token: 0x0401BB4A RID: 113482
 		private int LastCurrentExpCountInternal;
 
-		// Token: 0x0402121C RID: 135708
+		// Token: 0x0401BB4B RID: 113483
 		protected Dictionary<int, RealmBetweenAreaData> AreaDataMap = new Dictionary<int, RealmBetweenAreaData>();
 
-		// Token: 0x0402121D RID: 135709
+		// Token: 0x0401BB4C RID: 113484
 		public Dictionary<int, global::ActivityTaskData> AreaTaskMap = new Dictionary<int, global::ActivityTaskData>();
 
-		// Token: 0x0402121E RID: 135710
+		// Token: 0x0401BB4D RID: 113485
 		[Nullable(2)]
 		public FinalTravelTaskData TaskFinalRewardData;
 
-		// Token: 0x0402121F RID: 135711
+		// Token: 0x0401BB4E RID: 113486
 		public Dictionary<int, bool> PhantomDataMap = new Dictionary<int, bool>();
 
-		// Token: 0x04021220 RID: 135712
+		// Token: 0x0401BB4F RID: 113487
 		public Dictionary<int, global::ActivityTaskData> MotorChallengeRewardDataMap = new Dictionary<int, global::ActivityTaskData>();
 
-		// Token: 0x04021221 RID: 135713
+		// Token: 0x0401BB50 RID: 113488
 		public Dictionary<int, MotorChallengePlayData> MotorChallengePlayDataMap = new Dictionary<int, MotorChallengePlayData>();
 	}
 }

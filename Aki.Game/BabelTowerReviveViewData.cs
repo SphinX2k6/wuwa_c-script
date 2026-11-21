@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200113B RID: 4411
+// Token: 0x020005EF RID: 1519
 public class BabelTowerReviveViewData : IBabelTowerReviveViewData
 {
-	// Token: 0x17000A05 RID: 2565
-	// (get) Token: 0x060073E2 RID: 29666 RVA: 0x0017BBD4 File Offset: 0x00179DD4
-	// (set) Token: 0x060073E3 RID: 29667 RVA: 0x0017BBDC File Offset: 0x00179DDC
+	// Token: 0x17000A25 RID: 2597
+	// (get) Token: 0x06004779 RID: 18297 RVA: 0x00184722 File Offset: 0x00182922
+	// (set) Token: 0x0600477A RID: 18298 RVA: 0x0018472A File Offset: 0x0018292A
 	public int LevelId { get; set; }
 
-	// Token: 0x17000A06 RID: 2566
-	// (get) Token: 0x060073E4 RID: 29668 RVA: 0x0017BBE5 File Offset: 0x00179DE5
-	// (set) Token: 0x060073E5 RID: 29669 RVA: 0x0017BBED File Offset: 0x00179DED
+	// Token: 0x17000A26 RID: 2598
+	// (get) Token: 0x0600477B RID: 18299 RVA: 0x00184733 File Offset: 0x00182933
+	// (set) Token: 0x0600477C RID: 18300 RVA: 0x0018473B File Offset: 0x0018293B
 	public int StarNum { get; set; }
 }

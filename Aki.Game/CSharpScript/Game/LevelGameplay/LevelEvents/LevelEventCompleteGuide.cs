@@ -5,15 +5,15 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B0D RID: 27405
+	// Token: 0x02005C85 RID: 23685
 	public class LevelEventCompleteGuide : LevelEventBase
 	{
-		// Token: 0x06044080 RID: 278656 RVA: 0x010B86FC File Offset: 0x010B68FC
+		// Token: 0x0603A1D2 RID: 238034 RVA: 0x01061F88 File Offset: 0x01060188
 		public LevelEventCompleteGuide(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044081 RID: 278657 RVA: 0x010B8708 File Offset: 0x010B6908
+		// Token: 0x0603A1D3 RID: 238035 RVA: 0x01061F94 File Offset: 0x01060194
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, [Nullable(2)] GeneralContext context = null, int? actionId = null)
 		{
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.FinishGuide(completeGuide.GuideId);
 		}
 
-		// Token: 0x06044082 RID: 278658 RVA: 0x010B8768 File Offset: 0x010B6968
+		// Token: 0x0603A1D4 RID: 238036 RVA: 0x01061FF4 File Offset: 0x010601F4
 		private void FinishGuide(int groupId)
 		{
 			if (!GuideController.Instance.TryFinishGuide(groupId))
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.Add(EEventName.GuideGroupRest, new Action<int>(this.OnGuideFinish));
 		}
 
-		// Token: 0x06044083 RID: 278659 RVA: 0x010B8840 File Offset: 0x010B6A40
+		// Token: 0x0603A1D5 RID: 238037 RVA: 0x010620CC File Offset: 0x010602CC
 		private void OnGuideFinish(int groupId)
 		{
 			if (groupId != this.GuideGroupId)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x040238D5 RID: 145621
+		// Token: 0x0401EB77 RID: 125815
 		private int GuideGroupId;
 	}
 }

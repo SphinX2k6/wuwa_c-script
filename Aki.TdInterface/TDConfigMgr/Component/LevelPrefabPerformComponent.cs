@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000825 RID: 2085
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008C8 RID: 2248
 	public class LevelPrefabPerformComponent : IComponentBase
 	{
-		// Token: 0x06002D5D RID: 11613 RVA: 0x00075810 File Offset: 0x00073A10
+		// Token: 0x0600308D RID: 12429 RVA: 0x0007CB74 File Offset: 0x0007AD74
 		private LevelPrefabPerformComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002D5E RID: 11614 RVA: 0x00075848 File Offset: 0x00073A48
+		// Token: 0x0600308E RID: 12430 RVA: 0x0007CBAC File Offset: 0x0007ADAC
 		public static LevelPrefabPerformComponent Create([Nullable(2)] LevelPrefabPerformComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002D5F RID: 11615 RVA: 0x0007585B File Offset: 0x00073A5B
+		// Token: 0x0600308F RID: 12431 RVA: 0x0007CBBF File Offset: 0x0007ADBF
 		public static LevelPrefabPerformComponent CreateFromSetValue([Nullable(2)] LevelPrefabPerformComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002D60 RID: 11616 RVA: 0x00075870 File Offset: 0x00073A70
+		// Token: 0x06003090 RID: 12432 RVA: 0x0007CBD4 File Offset: 0x0007ADD4
 		public new LevelPrefabPerformComponent_SetValue ToSetValue()
 		{
 			return new LevelPrefabPerformComponent_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BDA RID: 3034
-		// (get) Token: 0x06002D61 RID: 11617 RVA: 0x000758C0 File Offset: 0x00073AC0
-		// (set) Token: 0x06002D62 RID: 11618 RVA: 0x000758FA File Offset: 0x00073AFA
+		// Token: 0x17000C9D RID: 3229
+		// (get) Token: 0x06003091 RID: 12433 RVA: 0x0007CC24 File Offset: 0x0007AE24
+		// (set) Token: 0x06003092 RID: 12434 RVA: 0x0007CC5E File Offset: 0x0007AE5E
 		public override bool? Disabled
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BDB RID: 3035
-		// (get) Token: 0x06002D63 RID: 11619 RVA: 0x00075908 File Offset: 0x00073B08
-		// (set) Token: 0x06002D64 RID: 11620 RVA: 0x00075932 File Offset: 0x00073B32
+		// Token: 0x17000C9E RID: 3230
+		// (get) Token: 0x06003093 RID: 12435 RVA: 0x0007CC6C File Offset: 0x0007AE6C
+		// (set) Token: 0x06003094 RID: 12436 RVA: 0x0007CC96 File Offset: 0x0007AE96
 		public override bool? EdIsLocked
 		{
 			get
@@ -107,20 +105,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BDC RID: 3036
-		// (get) Token: 0x06002D65 RID: 11621 RVA: 0x00075940 File Offset: 0x00073B40
-		// (set) Token: 0x06002D66 RID: 11622 RVA: 0x000759D3 File Offset: 0x00073BD3
+		// Token: 0x17000C9F RID: 3231
+		// (get) Token: 0x06003095 RID: 12437 RVA: 0x0007CCA4 File Offset: 0x0007AEA4
+		// (set) Token: 0x06003096 RID: 12438 RVA: 0x0007CD37 File Offset: 0x0007AF37
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ITowardEntityConfig> TowardEntity
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -151,7 +149,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -160,9 +158,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BDD RID: 3037
-		// (get) Token: 0x06002D67 RID: 11623 RVA: 0x000759E8 File Offset: 0x00073BE8
-		// (set) Token: 0x06002D68 RID: 11624 RVA: 0x00075A49 File Offset: 0x00073C49
+		// Token: 0x17000CA0 RID: 3232
+		// (get) Token: 0x06003097 RID: 12439 RVA: 0x0007CD4C File Offset: 0x0007AF4C
+		// (set) Token: 0x06003098 RID: 12440 RVA: 0x0007CDAD File Offset: 0x0007AFAD
 		[Nullable(2)]
 		public virtual ILevelPrefabParamsConfig PrefabParams
 		{
@@ -193,20 +191,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BDE RID: 3038
-		// (get) Token: 0x06002D69 RID: 11625 RVA: 0x00075A60 File Offset: 0x00073C60
-		// (set) Token: 0x06002D6A RID: 11626 RVA: 0x00075AF3 File Offset: 0x00073CF3
+		// Token: 0x17000CA1 RID: 3233
+		// (get) Token: 0x06003099 RID: 12441 RVA: 0x0007CDC4 File Offset: 0x0007AFC4
+		// (set) Token: 0x0600309A RID: 12442 RVA: 0x0007CE57 File Offset: 0x0007B057
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IPrefabCompTransform> CompTransform
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -237,7 +235,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -246,40 +244,40 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001E04 RID: 7684
+		// Token: 0x04002010 RID: 8208
 		[Nullable(2)]
 		protected new LevelPrefabPerformComponent FbInstance;
 
-		// Token: 0x04001E05 RID: 7685
+		// Token: 0x04002011 RID: 8209
 		[Nullable(2)]
 		protected new LevelPrefabPerformComponent_SetValue PocoInterface;
 
-		// Token: 0x04001E06 RID: 7686
+		// Token: 0x04002012 RID: 8210
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ITowardEntityConfig> _TowardEntityCache;
 
-		// Token: 0x04001E07 RID: 7687
+		// Token: 0x04002013 RID: 8211
 		private bool _TowardEntityInited;
 
-		// Token: 0x04001E08 RID: 7688
+		// Token: 0x04002014 RID: 8212
 		private ILevelPrefabParamsConfig _PrefabParamsCache;
 
-		// Token: 0x04001E09 RID: 7689
+		// Token: 0x04002015 RID: 8213
 		private bool _PrefabParamsInited;
 
-		// Token: 0x04001E0A RID: 7690
+		// Token: 0x04002016 RID: 8214
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IPrefabCompTransform> _CompTransformCache;
 
-		// Token: 0x04001E0B RID: 7691
+		// Token: 0x04002017 RID: 8215
 		private bool _CompTransformInited;
 	}
 }

@@ -5,19 +5,19 @@ using CSharpScript.Game.Input.BattleInputData;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004678 RID: 18040
+	// Token: 0x020035A9 RID: 13737
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputIdentification
 	{
-		// Token: 0x0602E8F6 RID: 190710 RVA: 0x00AC73C5 File Offset: 0x00AC55C5
+		// Token: 0x06023040 RID: 143424 RVA: 0x009F4F25 File Offset: 0x009F3125
 		public InputIdentification(string name)
 		{
 			this.NameInternal = name;
 		}
 
-		// Token: 0x1700762E RID: 30254
-		// (get) Token: 0x0602E8F7 RID: 190711 RVA: 0x00AC73EA File Offset: 0x00AC55EA
+		// Token: 0x170048EA RID: 18666
+		// (get) Token: 0x06023041 RID: 143425 RVA: 0x009F4F4A File Offset: 0x009F314A
 		public string Name
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E8F8 RID: 190712 RVA: 0x00AC73F4 File Offset: 0x00AC55F4
+		// Token: 0x06023042 RID: 143426 RVA: 0x009F4F54 File Offset: 0x009F3154
 		[NullableContext(2)]
 		public EInputAction? GetInputAction(BattleInputData inputData)
 		{
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Ui
 			return new EInputAction?(this.InputActionInternal);
 		}
 
-		// Token: 0x0602E8F9 RID: 190713 RVA: 0x00AC7464 File Offset: 0x00AC5664
+		// Token: 0x06023043 RID: 143427 RVA: 0x009F4FC4 File Offset: 0x009F31C4
 		[NullableContext(2)]
 		public EInputAxis? GetInputAxis(BattleInputData inputData)
 		{
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.Ui
 			return new EInputAxis?(this.InputAxisInternal);
 		}
 
-		// Token: 0x04019522 RID: 103714
+		// Token: 0x04013BC9 RID: 80841
 		private readonly string NameInternal;
 
-		// Token: 0x04019523 RID: 103715
+		// Token: 0x04013BCA RID: 80842
 		private EInputAction InputActionInternal = EInputAction.None;
 
-		// Token: 0x04019524 RID: 103716
+		// Token: 0x04013BCB RID: 80843
 		private EInputAxis InputAxisInternal = EInputAxis.None;
 	}
 }

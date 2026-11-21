@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 {
-	// Token: 0x02005228 RID: 21032
+	// Token: 0x020041F8 RID: 16888
 	public class CardDetailTaskDescItem : UiPanelBase
 	{
-		// Token: 0x06035C38 RID: 220216 RVA: 0x00CB9611 File Offset: 0x00CB7811
+		// Token: 0x0602AB33 RID: 174899 RVA: 0x00C06C51 File Offset: 0x00C04E51
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,17 +18,17 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 			};
 		}
 
-		// Token: 0x06035C39 RID: 220217 RVA: 0x00CB9634 File Offset: 0x00CB7834
+		// Token: 0x0602AB34 RID: 174900 RVA: 0x00C06C74 File Offset: 0x00C04E74
 		[NullableContext(1)]
 		public void Refresh(ICardDetailTaskData data)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.Desc, new <>z__ReadOnlySingleElementList<object>(data.CurrentProgress));
 		}
 
-		// Token: 0x0200B3BB RID: 46011
+		// Token: 0x02009DF3 RID: 40435
 		private static class EDescItemComponents
 		{
-			// Token: 0x04036791 RID: 223121
+			// Token: 0x040311E4 RID: 201188
 			public const int DescText = 0;
 		}
 	}

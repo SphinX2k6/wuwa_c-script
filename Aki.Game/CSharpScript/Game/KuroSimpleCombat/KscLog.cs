@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.KuroSimpleCombat
 {
-	// Token: 0x02006FBA RID: 28602
+	// Token: 0x0200613B RID: 24891
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KscLog
 	{
-		// Token: 0x0604581F RID: 284703 RVA: 0x0113E6FC File Offset: 0x0113C8FC
+		// Token: 0x0603B9CF RID: 244175 RVA: 0x010E84CC File Offset: 0x010E66CC
 		private static void Log(KscLog.ELogType logType, ELogAuthor logAuthor, KscLog.EModule flag, [Nullable(2)] UObject obj, string log, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			}
 		}
 
-		// Token: 0x06045820 RID: 284704 RVA: 0x0113E7B5 File Offset: 0x0113C9B5
+		// Token: 0x0603B9D0 RID: 244176 RVA: 0x010E8585 File Offset: 0x010E6785
 		[Conditional("DEBUG")]
 		[MethodImpl(MethodImplOptions.NoInlining)]
 		public static void Debug(KscLog.EModule flag, ELogAuthor author, [Nullable(2)] UObject obj, string log, [ParamCollection] [ScopedRef] [Nullable(new byte[]
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.KuroSimpleCombat
 		{
 		}
 
-		// Token: 0x06045821 RID: 284705 RVA: 0x0113E7B7 File Offset: 0x0113C9B7
+		// Token: 0x0603B9D1 RID: 244177 RVA: 0x010E8587 File Offset: 0x010E6787
 		public static void Info(KscLog.EModule flag, ELogAuthor author, [Nullable(2)] UObject obj, string log, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			KscLog.Log(KscLog.ELogType.Info, author, flag, obj, log, pairs);
 		}
 
-		// Token: 0x06045822 RID: 284706 RVA: 0x0113E7C5 File Offset: 0x0113C9C5
+		// Token: 0x0603B9D2 RID: 244178 RVA: 0x010E8595 File Offset: 0x010E6795
 		public static void Warn(KscLog.EModule flag, ELogAuthor author, [Nullable(2)] UObject obj, string log, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			KscLog.Log(KscLog.ELogType.Warn, author, flag, obj, log, pairs);
 		}
 
-		// Token: 0x06045823 RID: 284707 RVA: 0x0113E7D3 File Offset: 0x0113C9D3
+		// Token: 0x0603B9D3 RID: 244179 RVA: 0x010E85A3 File Offset: 0x010E67A3
 		public static void Error(KscLog.EModule flag, ELogAuthor author, [Nullable(2)] UObject obj, string log, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			KscLog.Log(KscLog.ELogType.Error, author, flag, obj, log, pairs);
 		}
 
-		// Token: 0x06045824 RID: 284708 RVA: 0x0113E7E1 File Offset: 0x0113C9E1
+		// Token: 0x0603B9D4 RID: 244180 RVA: 0x010E85B1 File Offset: 0x010E67B1
 		[Conditional("DEBUG")]
 		private static void PrintOnScreen(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
@@ -107,37 +107,37 @@ namespace CSharpScript.Game.KuroSimpleCombat
 		{
 		}
 
-		// Token: 0x0402444A RID: 148554
+		// Token: 0x0401F6FF RID: 128767
 		[StaticVariableRuleIgnore]
 		private static readonly StringBuilder Sb = new StringBuilder(256);
 
-		// Token: 0x0200CDB6 RID: 52662
+		// Token: 0x0200B9A8 RID: 47528
 		[NullableContext(0)]
 		private enum ELogType
 		{
-			// Token: 0x0403DF8B RID: 253835
+			// Token: 0x040393BA RID: 234426
 			Debug,
-			// Token: 0x0403DF8C RID: 253836
+			// Token: 0x040393BB RID: 234427
 			Info,
-			// Token: 0x0403DF8D RID: 253837
+			// Token: 0x040393BC RID: 234428
 			Warn,
-			// Token: 0x0403DF8E RID: 253838
+			// Token: 0x040393BD RID: 234429
 			Error
 		}
 
-		// Token: 0x0200CDB7 RID: 52663
+		// Token: 0x0200B9A9 RID: 47529
 		[NullableContext(0)]
 		public enum EModule
 		{
-			// Token: 0x0403DF90 RID: 253840
+			// Token: 0x040393BF RID: 234431
 			Common,
-			// Token: 0x0403DF91 RID: 253841
+			// Token: 0x040393C0 RID: 234432
 			Load,
-			// Token: 0x0403DF92 RID: 253842
+			// Token: 0x040393C1 RID: 234433
 			Attr,
-			// Token: 0x0403DF93 RID: 253843
+			// Token: 0x040393C2 RID: 234434
 			Input,
-			// Token: 0x0403DF94 RID: 253844
+			// Token: 0x040393C3 RID: 234435
 			Skill
 		}
 	}

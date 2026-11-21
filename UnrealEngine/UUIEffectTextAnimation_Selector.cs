@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002162 RID: 8546
+	// Token: 0x020006FD RID: 1789
 	[UnrealObjectPath("/Script/LGUI.UIEffectTextAnimation_Selector")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 56)]
 	public abstract class UUIEffectTextAnimation_Selector : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060203B6 RID: 132022 RVA: 0x002FDC1A File Offset: 0x002FBE1A
+		// Token: 0x06009868 RID: 39016 RVA: 0x000E56FB File Offset: 0x000E38FB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIEffectTextAnimation_Selector._ClassPtr;
 		}
 
-		// Token: 0x17007E60 RID: 32352
-		// (get) Token: 0x060203B7 RID: 132023 RVA: 0x002FDC26 File Offset: 0x002FBE26
-		// (set) Token: 0x060203B8 RID: 132024 RVA: 0x002FDC36 File Offset: 0x002FBE36
+		// Token: 0x17001C4B RID: 7243
+		// (get) Token: 0x06009869 RID: 39017 RVA: 0x000E5707 File Offset: 0x000E3907
+		// (set) Token: 0x0600986A RID: 39018 RVA: 0x000E5717 File Offset: 0x000E3917
 		public unsafe float offset
 		{
 			get
@@ -32,53 +32,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060203B9 RID: 132025 RVA: 0x002FDC47 File Offset: 0x002FBE47
+		// Token: 0x0600986B RID: 39019 RVA: 0x000E5728 File Offset: 0x000E3928
 		public void SetOffset(float value)
 		{
 			UUIEffectTextAnimation_Selector.__SetOffset_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x060203BA RID: 132026 RVA: 0x002FDC55 File Offset: 0x002FBE55
+		// Token: 0x0600986C RID: 39020 RVA: 0x000E5736 File Offset: 0x000E3936
 		public float GetOffset()
 		{
 			return UUIEffectTextAnimation_Selector.__GetOffset_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060203BB RID: 132027
+		// Token: 0x0600986D RID: 39021
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetOffset_Internal(IntPtr @this, float value);
 
-		// Token: 0x060203BC RID: 132028
+		// Token: 0x0600986E RID: 39022
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetOffset_Internal(IntPtr @this);
 
-		// Token: 0x060203BD RID: 132029 RVA: 0x002FDC62 File Offset: 0x002FBE62
+		// Token: 0x0600986F RID: 39023 RVA: 0x000E5743 File Offset: 0x000E3943
 		static UUIEffectTextAnimation_Selector()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIEffectTextAnimation_Selector");
 		}
 
-		// Token: 0x060203BE RID: 132030 RVA: 0x002FDC70 File Offset: 0x002FBE70
+		// Token: 0x06009870 RID: 39024 RVA: 0x000E5754 File Offset: 0x000E3954
 		protected UUIEffectTextAnimation_Selector() : this(BuiltinUtils.AllocNativeUObject(UUIEffectTextAnimation_Selector.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060203BF RID: 132031 RVA: 0x002FDC98 File Offset: 0x002FBE98
+		// Token: 0x06009871 RID: 39025 RVA: 0x000E577C File Offset: 0x000E397C
 		protected UUIEffectTextAnimation_Selector(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011514 RID: 70932
+		// Token: 0x0400422F RID: 16943
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UIEffectTextAnimation_Selector";
 
-		// Token: 0x04011515 RID: 70933
+		// Token: 0x04004230 RID: 16944
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011516 RID: 70934
+		// Token: 0x04004231 RID: 16945
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011517 RID: 70935
+		// Token: 0x04004232 RID: 16946
 		internal static int __PropertyOffset_offset;
 	}
 }

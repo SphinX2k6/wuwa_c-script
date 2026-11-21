@@ -3,31 +3,31 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FAF RID: 8111
+	// Token: 0x020021F2 RID: 8690
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITeleportTransitionWithCustomScreen_SetValue
 	{
-		// Token: 0x04006BB8 RID: 27576
+		// Token: 0x040071B3 RID: 29107
 		public ETeleportTransitionType Type;
 
-		// Token: 0x04006BB9 RID: 27577
-		[Nullable(1)]
+		// Token: 0x040071B4 RID: 29108
+		[Nullable(0)]
 		public ICustomScreenTypeBase ScreenType;
 
-		// Token: 0x04006BBA RID: 27578
+		// Token: 0x040071B5 RID: 29109
 		public IFadeBackgroundFadeInEffect FadeInEffect;
 
-		// Token: 0x04006BBB RID: 27579
+		// Token: 0x040071B6 RID: 29110
 		public IFadeBackgroundFadeOutEffect FadeOutEffect;
 
-		// Token: 0x04006BBC RID: 27580
+		// Token: 0x040071B7 RID: 29111
 		public float? KeepTime;
 
-		// Token: 0x04006BBD RID: 27581
+		// Token: 0x040071B8 RID: 29112
 		public ICustomShowUi CustomShowUi;
 
-		// Token: 0x04006BBE RID: 27582
+		// Token: 0x040071B9 RID: 29113
 		public string StartAkEvent;
 	}
 }

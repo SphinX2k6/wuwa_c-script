@@ -5,13 +5,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061BD RID: 25021
+	// Token: 0x0200513B RID: 20795
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class ActivityRoadBookConfig : ConfigBase
 	{
-		// Token: 0x0603F33A RID: 258874 RVA: 0x00F4589C File Offset: 0x00F43A9C
+		// Token: 0x06033FFB RID: 212987 RVA: 0x00E8C7F4 File Offset: 0x00E8A9F4
 		public RoadBookConfig? GetActivityConfig(int activityId)
 		{
 			RoadBookConfig? config = ConfigRoadBookConfigByActivityId.GetConfig(activityId, true);
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return null;
 		}
 
-		// Token: 0x0603F33B RID: 258875 RVA: 0x00F458D0 File Offset: 0x00F43AD0
+		// Token: 0x06033FFC RID: 212988 RVA: 0x00E8C828 File Offset: 0x00E8AA28
 		public RoadBookLevelExp? GetLevelExpConfig(int id)
 		{
 			RoadBookLevelExp? config = ConfigRoadBookLevelExpById.GetConfig(id, true);
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return null;
 		}
 
-		// Token: 0x0603F33C RID: 258876 RVA: 0x00F45904 File Offset: 0x00F43B04
+		// Token: 0x06033FFD RID: 212989 RVA: 0x00E8C85C File Offset: 0x00E8AA5C
 		public IReadOnlyList<RoadBookLevelExp> GetAllLevelExpConfig(int activityId)
 		{
 			return ConfigRoadBookLevelExpByActivityId.GetConfigList(activityId, true) ?? new List<RoadBookLevelExp>();
 		}
 
-		// Token: 0x0603F33D RID: 258877 RVA: 0x00F45918 File Offset: 0x00F43B18
+		// Token: 0x06033FFE RID: 212990 RVA: 0x00E8C870 File Offset: 0x00E8AA70
 		public RoadBookTask? GetRoadBookTaskConfig(int taskId)
 		{
 			RoadBookTask? config = ConfigRoadBookTaskByTaskId.GetConfig(taskId, true);
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return null;
 		}
 
-		// Token: 0x0603F33E RID: 258878 RVA: 0x00F4594C File Offset: 0x00F43B4C
+		// Token: 0x06033FFF RID: 212991 RVA: 0x00E8C8A4 File Offset: 0x00E8AAA4
 		public IReadOnlyList<RoadBookTask> GetAllRoadBookTaskConfig(int activityId)
 		{
 			return ConfigRoadBookTaskByActivityId.GetConfigList(activityId, true) ?? new List<RoadBookTask>();
 		}
 
-		// Token: 0x0603F33F RID: 258879 RVA: 0x00F45960 File Offset: 0x00F43B60
+		// Token: 0x06034000 RID: 212992 RVA: 0x00E8C8B8 File Offset: 0x00E8AAB8
 		public RoadBookArea? GetAreaConfig(int id)
 		{
 			RoadBookArea? config = ConfigRoadBookAreaById.GetConfig(id, true);
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return null;
 		}
 
-		// Token: 0x0603F340 RID: 258880 RVA: 0x00F45994 File Offset: 0x00F43B94
+		// Token: 0x06034001 RID: 212993 RVA: 0x00E8C8EC File Offset: 0x00E8AAEC
 		public IReadOnlyList<RoadBookArea> GetAllAreaConfig(int activityId)
 		{
 			return ConfigRoadBookAreaByActivityId.GetConfigList(activityId, true) ?? new List<RoadBookArea>();
 		}
 
-		// Token: 0x0603F341 RID: 258881 RVA: 0x00F459A8 File Offset: 0x00F43BA8
+		// Token: 0x06034002 RID: 212994 RVA: 0x00E8C900 File Offset: 0x00E8AB00
 		public RoadBookPhantomGain? GetPhantomConfig(int id)
 		{
 			RoadBookPhantomGain? config = ConfigRoadBookPhantomGainById.GetConfig(id, true);
@@ -84,19 +84,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return null;
 		}
 
-		// Token: 0x0603F342 RID: 258882 RVA: 0x00F459DC File Offset: 0x00F43BDC
+		// Token: 0x06034003 RID: 212995 RVA: 0x00E8C934 File Offset: 0x00E8AB34
 		public IReadOnlyList<RoadBookPhantomGain> GetAllPhantomConfig(int activityId)
 		{
 			return ConfigRoadBookPhantomGainByActivityId.GetConfigList(activityId, true) ?? new List<RoadBookPhantomGain>();
 		}
 
-		// Token: 0x0603F343 RID: 258883 RVA: 0x00F459EE File Offset: 0x00F43BEE
+		// Token: 0x06034004 RID: 212996 RVA: 0x00E8C946 File Offset: 0x00E8AB46
 		public IReadOnlyList<MotorcycleChallenge> GetAllMotorChallengeConfig()
 		{
 			return ConfigMotorcycleChallengeAll.GetConfigList(true) ?? new List<MotorcycleChallenge>();
 		}
 
-		// Token: 0x0603F344 RID: 258884 RVA: 0x00F45A00 File Offset: 0x00F43C00
+		// Token: 0x06034005 RID: 212997 RVA: 0x00E8C958 File Offset: 0x00E8AB58
 		public MotorcycleChallenge? GetMotorChallengeConfig(int id)
 		{
 			MotorcycleChallenge? config = ConfigMotorcycleChallengeById.GetConfig(id, true);
@@ -107,8 +107,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return null;
 		}
 
-		// Token: 0x17009218 RID: 37400
-		// (get) Token: 0x0603F345 RID: 258885 RVA: 0x00F45A34 File Offset: 0x00F43C34
+		// Token: 0x1700657A RID: 25978
+		// (get) Token: 0x06034006 RID: 212998 RVA: 0x00E8C98C File Offset: 0x00E8AB8C
 		public static ActivityRoadBookConfig Instance
 		{
 			get
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F346 RID: 258886 RVA: 0x00F45A3B File Offset: 0x00F43C3B
+		// Token: 0x06034007 RID: 212999 RVA: 0x00E8C993 File Offset: 0x00E8AB93
 		public static ActivityRoadBookConfig GetOrCreateInstance()
 		{
 			if (ActivityRoadBookConfig._Instance == null)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return ActivityRoadBookConfig._Instance;
 		}
 
-		// Token: 0x0603F347 RID: 258887 RVA: 0x00F45A4F File Offset: 0x00F43C4F
+		// Token: 0x06034008 RID: 213000 RVA: 0x00E8C9A7 File Offset: 0x00E8ABA7
 		public static bool CreateInstance()
 		{
 			if (ActivityRoadBookConfig._Instance != null)
@@ -138,24 +138,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return true;
 		}
 
-		// Token: 0x0603F348 RID: 258888 RVA: 0x00F45A65 File Offset: 0x00F43C65
+		// Token: 0x06034009 RID: 213001 RVA: 0x00E8C9BD File Offset: 0x00E8ABBD
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603F349 RID: 258889 RVA: 0x00F45A67 File Offset: 0x00F43C67
+		// Token: 0x0603400A RID: 213002 RVA: 0x00E8C9BF File Offset: 0x00E8ABBF
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityRoadBookConfig._Instance = null;
 		}
 
-		// Token: 0x0603F34A RID: 258890 RVA: 0x00F45A6F File Offset: 0x00F43C6F
+		// Token: 0x0603400B RID: 213003 RVA: 0x00E8C9C7 File Offset: 0x00E8ABC7
 		static ActivityRoadBookConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityRoadBookConfig.CreateStaticDefaultValue), new Action(ActivityRoadBookConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04020F0A RID: 134922
+		// Token: 0x0401B839 RID: 112697
 		[Nullable(2)]
 		private static ActivityRoadBookConfig _Instance;
 	}

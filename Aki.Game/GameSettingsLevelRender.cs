@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02000DDA RID: 3546
+// Token: 0x0200028C RID: 652
 [NullableContext(1)]
 [Nullable(0)]
 public class GameSettingsLevelRender : Singleton
 {
-	// Token: 0x060054B4 RID: 21684 RVA: 0x000F06C2 File Offset: 0x000EE8C2
+	// Token: 0x0600283C RID: 10300 RVA: 0x000F7487 File Offset: 0x000F5687
 	protected override bool OnInit()
 	{
 		this.SetLevelRenderSettingsStat = Stat.Create("Render_LevelRenderSettingsManager_SetLevelRenderSettings", "", "");
@@ -17,7 +17,7 @@ public class GameSettingsLevelRender : Singleton
 		return true;
 	}
 
-	// Token: 0x060054B5 RID: 21685 RVA: 0x000F06FC File Offset: 0x000EE8FC
+	// Token: 0x0600283D RID: 10301 RVA: 0x000F74C0 File Offset: 0x000F56C0
 	public unsafe void SetLevelRenderSettings()
 	{
 		InstanceDungeon? instanceDungeon = GameModeModel.Instance.InstanceDungeon;
@@ -50,7 +50,7 @@ public class GameSettingsLevelRender : Singleton
 		}
 	}
 
-	// Token: 0x060054B6 RID: 21686 RVA: 0x000F0864 File Offset: 0x000EEA64
+	// Token: 0x0600283E RID: 10302 RVA: 0x000F7628 File Offset: 0x000F5828
 	public unsafe void RevertLevelRenderSetting()
 	{
 		InstanceDungeon? instanceDungeon = GameModeModel.Instance.InstanceDungeon;
@@ -82,8 +82,8 @@ public class GameSettingsLevelRender : Singleton
 		}
 	}
 
-	// Token: 0x170005EB RID: 1515
-	// (get) Token: 0x060054B7 RID: 21687 RVA: 0x000F09B8 File Offset: 0x000EEBB8
+	// Token: 0x17000611 RID: 1553
+	// (get) Token: 0x0600283F RID: 10303 RVA: 0x000F777C File Offset: 0x000F597C
 	public static GameSettingsLevelRender Instance
 	{
 		get
@@ -97,12 +97,12 @@ public class GameSettingsLevelRender : Singleton
 		}
 	}
 
-	// Token: 0x060054B8 RID: 21688 RVA: 0x000F09DB File Offset: 0x000EEBDB
+	// Token: 0x06002840 RID: 10304 RVA: 0x000F779F File Offset: 0x000F599F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060054B9 RID: 21689 RVA: 0x000F09DD File Offset: 0x000EEBDD
+	// Token: 0x06002841 RID: 10305 RVA: 0x000F77A1 File Offset: 0x000F59A1
 	public static void ResetStaticDefaultValue()
 	{
 		GameSettingsLevelRender instance = GameSettingsLevelRender._instance;
@@ -113,13 +113,13 @@ public class GameSettingsLevelRender : Singleton
 		GameSettingsLevelRender._instance = null;
 	}
 
-	// Token: 0x060054BA RID: 21690 RVA: 0x000F09F6 File Offset: 0x000EEBF6
+	// Token: 0x06002842 RID: 10306 RVA: 0x000F77BA File Offset: 0x000F59BA
 	static GameSettingsLevelRender()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GameSettingsLevelRender.CreateStaticDefaultValue), new Action(GameSettingsLevelRender.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040026A8 RID: 9896
+	// Token: 0x04002733 RID: 10035
 	private readonly Dictionary<int, string> LevelRenderSettingCommands = new Dictionary<int, string>
 	{
 		{
@@ -140,7 +140,7 @@ public class GameSettingsLevelRender : Singleton
 		}
 	};
 
-	// Token: 0x040026A9 RID: 9897
+	// Token: 0x04002734 RID: 10036
 	private readonly Dictionary<int, float> LevelRenderSettingCommandsDefaultValue = new Dictionary<int, float>
 	{
 		{
@@ -161,15 +161,15 @@ public class GameSettingsLevelRender : Singleton
 		}
 	};
 
-	// Token: 0x040026AA RID: 9898
+	// Token: 0x04002735 RID: 10037
 	[Nullable(2)]
 	public Stat SetLevelRenderSettingsStat;
 
-	// Token: 0x040026AB RID: 9899
+	// Token: 0x04002736 RID: 10038
 	[Nullable(2)]
 	public Stat RevertLevelRenderSettingsStat;
 
-	// Token: 0x040026AC RID: 9900
+	// Token: 0x04002737 RID: 10039
 	[Nullable(2)]
 	private static GameSettingsLevelRender _instance;
 }

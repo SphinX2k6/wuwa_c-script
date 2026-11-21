@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E18 RID: 7704
+// Token: 0x020012DA RID: 4826
 [NullableContext(1)]
 [Nullable(0)]
 public class PlotNodeItem : UiPanelBase
 {
-	// Token: 0x0600EA40 RID: 59968 RVA: 0x00376F3C File Offset: 0x0037513C
+	// Token: 0x0600BE5F RID: 48735 RVA: 0x00382C44 File Offset: 0x00380E44
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,14 +24,14 @@ public class PlotNodeItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600EA41 RID: 59969 RVA: 0x00376FB9 File Offset: 0x003751B9
+	// Token: 0x0600BE60 RID: 48736 RVA: 0x00382CC1 File Offset: 0x00380EC1
 	protected override void OnStart()
 	{
 		this.ExtendToggle = base.GetExtendToggle(0);
 		this.ExtendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600EA42 RID: 59970 RVA: 0x00376FD8 File Offset: 0x003751D8
+	// Token: 0x0600BE61 RID: 48737 RVA: 0x00382CE0 File Offset: 0x00380EE0
 	private void OnClickExtendToggle(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -44,13 +44,13 @@ public class PlotNodeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600EA43 RID: 59971 RVA: 0x00376FFE File Offset: 0x003751FE
+	// Token: 0x0600BE62 RID: 48738 RVA: 0x00382D06 File Offset: 0x00380F06
 	public void BindClickCallback(TSelectedCallback onClickCallback)
 	{
 		this.OnCallBack = onClickCallback;
 	}
 
-	// Token: 0x0600EA44 RID: 59972 RVA: 0x00377008 File Offset: 0x00375208
+	// Token: 0x0600BE63 RID: 48739 RVA: 0x00382D10 File Offset: 0x00380F10
 	public void Update(string data, bool isSelect)
 	{
 		this.TidText = data;
@@ -68,13 +68,13 @@ public class PlotNodeItem : UiPanelBase
 		extendToggle.SetToggleStateForce(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600EA45 RID: 59973 RVA: 0x00377074 File Offset: 0x00375274
+	// Token: 0x0600BE64 RID: 48740 RVA: 0x00382D7C File Offset: 0x00380F7C
 	public string GetTidText()
 	{
 		return this.TidText;
 	}
 
-	// Token: 0x0600EA46 RID: 59974 RVA: 0x0037707C File Offset: 0x0037527C
+	// Token: 0x0600BE65 RID: 48741 RVA: 0x00382D84 File Offset: 0x00380F84
 	public void SetToggleState(EToggleState state)
 	{
 		UUIExtendToggle extendToggle = this.ExtendToggle;
@@ -85,20 +85,20 @@ public class PlotNodeItem : UiPanelBase
 		extendToggle.SetToggleStateForce(state, false, false, false);
 	}
 
-	// Token: 0x0600EA47 RID: 59975 RVA: 0x00377092 File Offset: 0x00375292
+	// Token: 0x0600BE66 RID: 48742 RVA: 0x00382D9A File Offset: 0x00380F9A
 	public UUIExtendToggle GetNodeToggle()
 	{
 		return this.ExtendToggle;
 	}
 
-	// Token: 0x04006CB1 RID: 27825
+	// Token: 0x04006D92 RID: 28050
 	[Nullable(2)]
 	private TSelectedCallback OnCallBack;
 
-	// Token: 0x04006CB2 RID: 27826
+	// Token: 0x04006D93 RID: 28051
 	[Nullable(2)]
 	private UUIExtendToggle ExtendToggle;
 
-	// Token: 0x04006CB3 RID: 27827
+	// Token: 0x04006D94 RID: 28052
 	private string TidText = "";
 }

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B27 RID: 2855
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000BF5 RID: 3061
 	public class ItemFoundation : IComponentBase
 	{
-		// Token: 0x060041E7 RID: 16871 RVA: 0x000A90C0 File Offset: 0x000A72C0
+		// Token: 0x06004640 RID: 17984 RVA: 0x000B3184 File Offset: 0x000B1384
 		public static ItemFoundation Create(IItemFoundation? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001156 RID: 4438
-		// (get) Token: 0x060041E8 RID: 16872 RVA: 0x000A90E0 File Offset: 0x000A72E0
+		// Token: 0x17001251 RID: 4689
+		// (get) Token: 0x06004641 RID: 17985 RVA: 0x000B31A4 File Offset: 0x000B13A4
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001157 RID: 4439
-		// (get) Token: 0x060041E9 RID: 16873 RVA: 0x000A9118 File Offset: 0x000A7318
+		// Token: 0x17001252 RID: 4690
+		// (get) Token: 0x06004642 RID: 17986 RVA: 0x000B31DC File Offset: 0x000B13DC
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001158 RID: 4440
-		// (get) Token: 0x060041EA RID: 16874 RVA: 0x000A912E File Offset: 0x000A732E
+		// Token: 0x17001253 RID: 4691
+		// (get) Token: 0x06004643 RID: 17987 RVA: 0x000B31F2 File Offset: 0x000B13F2
 		public virtual IAdsortTransform AdsorptionPoint
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001159 RID: 4441
-		// (get) Token: 0x060041EB RID: 16875 RVA: 0x000A9162 File Offset: 0x000A7362
+		// Token: 0x17001254 RID: 4692
+		// (get) Token: 0x06004644 RID: 17988 RVA: 0x000B3226 File Offset: 0x000B1426
 		public virtual IEntityMatch AdsorptionMatch
 		{
 			get
@@ -78,8 +76,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700115A RID: 4442
-		// (get) Token: 0x060041EC RID: 16876 RVA: 0x000A9196 File Offset: 0x000A7396
+		// Token: 0x17001255 RID: 4693
+		// (get) Token: 0x06004645 RID: 17989 RVA: 0x000B325A File Offset: 0x000B145A
 		public virtual IEntityMatch ActiveMatch
 		{
 			get
@@ -94,8 +92,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700115B RID: 4443
-		// (get) Token: 0x060041ED RID: 16877 RVA: 0x000A91CA File Offset: 0x000A73CA
+		// Token: 0x17001256 RID: 4694
+		// (get) Token: 0x06004646 RID: 17990 RVA: 0x000B328E File Offset: 0x000B148E
 		public virtual bool IsSilent
 		{
 			get
@@ -104,8 +102,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700115C RID: 4444
-		// (get) Token: 0x060041EE RID: 16878 RVA: 0x000A91D7 File Offset: 0x000A73D7
+		// Token: 0x17001257 RID: 4695
+		// (get) Token: 0x06004647 RID: 17991 RVA: 0x000B329B File Offset: 0x000B149B
 		public virtual bool IsDestroy
 		{
 			get
@@ -114,8 +112,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700115D RID: 4445
-		// (get) Token: 0x060041EF RID: 16879 RVA: 0x000A91E4 File Offset: 0x000A73E4
+		// Token: 0x17001258 RID: 4696
+		// (get) Token: 0x06004648 RID: 17992 RVA: 0x000B32A8 File Offset: 0x000B14A8
 		[Nullable(2)]
 		public virtual IItemChangeAdsorbateState ChangeAdsorbateState
 		{
@@ -132,35 +130,35 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002532 RID: 9522
+		// Token: 0x0400277A RID: 10106
 		private IItemFoundation Instance;
 
-		// Token: 0x04002533 RID: 9523
+		// Token: 0x0400277B RID: 10107
 		[Nullable(2)]
 		private IAdsortTransform _AdsorptionPointCache;
 
-		// Token: 0x04002534 RID: 9524
+		// Token: 0x0400277C RID: 10108
 		private bool _AdsorptionPointInited;
 
-		// Token: 0x04002535 RID: 9525
+		// Token: 0x0400277D RID: 10109
 		[Nullable(2)]
 		private IEntityMatch _AdsorptionMatchCache;
 
-		// Token: 0x04002536 RID: 9526
+		// Token: 0x0400277E RID: 10110
 		private bool _AdsorptionMatchInited;
 
-		// Token: 0x04002537 RID: 9527
+		// Token: 0x0400277F RID: 10111
 		[Nullable(2)]
 		private IEntityMatch _ActiveMatchCache;
 
-		// Token: 0x04002538 RID: 9528
+		// Token: 0x04002780 RID: 10112
 		private bool _ActiveMatchInited;
 
-		// Token: 0x04002539 RID: 9529
+		// Token: 0x04002781 RID: 10113
 		[Nullable(2)]
 		private IItemChangeAdsorbateState _ChangeAdsorbateStateCache;
 
-		// Token: 0x0400253A RID: 9530
+		// Token: 0x04002782 RID: 10114
 		private bool _ChangeAdsorbateStateInited;
 	}
 }

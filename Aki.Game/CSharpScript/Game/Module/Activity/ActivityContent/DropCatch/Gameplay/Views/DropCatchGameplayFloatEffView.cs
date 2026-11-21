@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x020066F8 RID: 26360
+	// Token: 0x02005648 RID: 22088
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchGameplayFloatEffView : DropCatchGameplayPoolPanelBase
 	{
-		// Token: 0x06041DC3 RID: 269763 RVA: 0x00FF8C10 File Offset: 0x00FF6E10
+		// Token: 0x0603690F RID: 223503 RVA: 0x00F3A004 File Offset: 0x00F38204
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,13 +24,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			};
 		}
 
-		// Token: 0x06041DC4 RID: 269764 RVA: 0x00FF8CAC File Offset: 0x00FF6EAC
+		// Token: 0x06036910 RID: 223504 RVA: 0x00F3A0A0 File Offset: 0x00F382A0
 		protected override void OnStart()
 		{
 			this.PosDelegate = DelegateUtils.ToManualReleaseDelegate<FLTweenVector2SetterDynamic>(new Action<FVector2D>(this.OnPosTweenUpdate));
 		}
 
-		// Token: 0x06041DC5 RID: 269765 RVA: 0x00FF8CC8 File Offset: 0x00FF6EC8
+		// Token: 0x06036911 RID: 223505 RVA: 0x00F3A0BC File Offset: 0x00F382BC
 		protected override void OnBeforeShow()
 		{
 			IDropCatchGameplayFloatEffViewParams dropCatchGameplayFloatEffViewParams = this.OpenParam as IDropCatchGameplayFloatEffViewParams;
@@ -106,13 +106,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			item8.SetUIActive(false);
 		}
 
-		// Token: 0x06041DC6 RID: 269766 RVA: 0x00FF8E26 File Offset: 0x00FF7026
+		// Token: 0x06036912 RID: 223506 RVA: 0x00F3A21A File Offset: 0x00F3841A
 		private void OnPosTweenUpdate(FVector2D targetPos)
 		{
 			base.GetRootItem().SetAnchorOffset(targetPos);
 		}
 
-		// Token: 0x06041DC7 RID: 269767 RVA: 0x00FF8E34 File Offset: 0x00FF7034
+		// Token: 0x06036913 RID: 223507 RVA: 0x00F3A228 File Offset: 0x00F38428
 		protected void InitPos(Vector2D pos)
 		{
 			this.StartPos.Set(pos.X, pos.Y);
@@ -120,14 +120,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			base.GetRootItem().SetAnchorOffset(pos.ToUeVector2D(false));
 		}
 
-		// Token: 0x06041DC8 RID: 269768 RVA: 0x00FF8E8B File Offset: 0x00FF708B
+		// Token: 0x06036914 RID: 223508 RVA: 0x00F3A27F File Offset: 0x00F3847F
 		protected override void OnAfterShow()
 		{
 			this.PlayPosTween(this.StartPos, this.EndPos, DropCatchGameplayFloatEffView.TWEENTIME, LTweenEase.OutCubic);
 			this.PlayAlphaTween();
 		}
 
-		// Token: 0x06041DC9 RID: 269769 RVA: 0x00FF8EAC File Offset: 0x00FF70AC
+		// Token: 0x06036915 RID: 223509 RVA: 0x00F3A2A0 File Offset: 0x00F384A0
 		private void PlayPosTween(Vector2D startPos, Vector2D endPos, float tweenTime, LTweenEase tweenEase)
 		{
 			this.KillPosTweener();
@@ -143,13 +143,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			});
 		}
 
-		// Token: 0x06041DCA RID: 269770 RVA: 0x00FF8F07 File Offset: 0x00FF7107
+		// Token: 0x06036916 RID: 223510 RVA: 0x00F3A2FB File Offset: 0x00F384FB
 		private void PlayAlphaTween()
 		{
 			base.GetRootItem().PlayUIItemAlphaTween(1f, 0f, DropCatchGameplayFloatEffView.TWEENTIME);
 		}
 
-		// Token: 0x06041DCB RID: 269771 RVA: 0x00FF8F23 File Offset: 0x00FF7123
+		// Token: 0x06036917 RID: 223511 RVA: 0x00F3A317 File Offset: 0x00F38517
 		private void KillPosTweener()
 		{
 			if (this.PosTweener != null)
@@ -159,28 +159,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			}
 		}
 
-		// Token: 0x06041DCC RID: 269772 RVA: 0x00FF8F40 File Offset: 0x00FF7140
+		// Token: 0x06036918 RID: 223512 RVA: 0x00F3A334 File Offset: 0x00F38534
 		protected override void OnBeforeDestroy()
 		{
 			this.KillPosTweener();
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<FVector2D>(this.OnPosTweenUpdate));
 		}
 
-		// Token: 0x040224E8 RID: 140520
+		// Token: 0x0401CD41 RID: 118081
 		private static readonly float TWEENTIME = 1.2f;
 
-		// Token: 0x040224E9 RID: 140521
+		// Token: 0x0401CD42 RID: 118082
 		[Nullable(2)]
 		private ULTweener PosTweener;
 
-		// Token: 0x040224EA RID: 140522
+		// Token: 0x0401CD43 RID: 118083
 		[Nullable(2)]
 		private FLTweenVector2SetterDynamic PosDelegate;
 
-		// Token: 0x040224EB RID: 140523
+		// Token: 0x0401CD44 RID: 118084
 		private readonly Vector2D StartPos = Vector2D.Create();
 
-		// Token: 0x040224EC RID: 140524
+		// Token: 0x0401CD45 RID: 118085
 		private readonly Vector2D EndPos = Vector2D.Create();
 	}
 }

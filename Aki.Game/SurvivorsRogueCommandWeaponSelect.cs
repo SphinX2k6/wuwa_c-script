@@ -1,25 +1,25 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
+using Google.Protobuf.Collections;
 
-// Token: 0x02002AEB RID: 10987
+// Token: 0x02002067 RID: 8295
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueCommandWeaponSelect : SurvivorsRogueCommandBaseObtain
 {
-	// Token: 0x06016DC9 RID: 93641 RVA: 0x005CD20F File Offset: 0x005CB40F
+	// Token: 0x060147FA RID: 83962 RVA: 0x005F9D5F File Offset: 0x005F7F5F
 	public SurvivorsRogueCommandWeaponSelect(ESurvivorsRogueCommandType type) : base(type)
 	{
 	}
 
-	// Token: 0x06016DCA RID: 93642 RVA: 0x005CD218 File Offset: 0x005CB418
+	// Token: 0x060147FB RID: 83963 RVA: 0x005F9D68 File Offset: 0x005F7F68
 	protected override void OnUpdate()
 	{
 		this.CurrentUnlockWeaponIndex = SurvivorsRogueModel.Instance.GainData.WeaponGainMap.Count;
 	}
 
-	// Token: 0x06016DCB RID: 93643 RVA: 0x005CD234 File Offset: 0x005CB434
+	// Token: 0x060147FC RID: 83964 RVA: 0x005F9D84 File Offset: 0x005F7F84
 	protected override void OnBindView()
 	{
 		if (base.ObtainViewProxy != null)
@@ -29,7 +29,7 @@ public class SurvivorsRogueCommandWeaponSelect : SurvivorsRogueCommandBaseObtain
 		}
 	}
 
-	// Token: 0x06016DCC RID: 93644 RVA: 0x005CD26C File Offset: 0x005CB46C
+	// Token: 0x060147FD RID: 83965 RVA: 0x005F9DBC File Offset: 0x005F7FBC
 	public override string ToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(23, 1);
@@ -39,13 +39,13 @@ public class SurvivorsRogueCommandWeaponSelect : SurvivorsRogueCommandBaseObtain
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06016DCD RID: 93645 RVA: 0x005CD2B9 File Offset: 0x005CB4B9
+	// Token: 0x060147FE RID: 83966 RVA: 0x005F9E09 File Offset: 0x005F8009
 	private SurvivorsOption GetSurvivorsOption()
 	{
 		return this.Data.WeaponSelectView.SurvivorsOption;
 	}
 
-	// Token: 0x06016DCE RID: 93646 RVA: 0x005CD2CB File Offset: 0x005CB4CB
+	// Token: 0x060147FF RID: 83967 RVA: 0x005F9E1B File Offset: 0x005F801B
 	private void OnSeqStartFinished()
 	{
 		SurvivorsRogueGeneralObtainView obtainViewProxy = base.ObtainViewProxy;
@@ -66,7 +66,7 @@ public class SurvivorsRogueCommandWeaponSelect : SurvivorsRogueCommandBaseObtain
 		weaponGridByIndex.SetSingleAnim(ESurvivorsSequenceName.Unlock.ToString());
 	}
 
-	// Token: 0x06016DCF RID: 93647 RVA: 0x005CD308 File Offset: 0x005CB508
+	// Token: 0x06014800 RID: 83968 RVA: 0x005F9E58 File Offset: 0x005F8058
 	private void OnGoodsSelected(int incId, bool bSelected)
 	{
 		if (!bSelected || base.ObtainViewProxy == null)
@@ -74,11 +74,17 @@ public class SurvivorsRogueCommandWeaponSelect : SurvivorsRogueCommandBaseObtain
 			return;
 		}
 		SurvivorsRogueRoleStatePanel roleStatePanel = base.ObtainViewProxy.GetRoleStatePanel();
-		GoodsDetail goodsDetail = this.GetSurvivorsOption().GoodsDetails.FirstOrDefault(delegate(GoodsDetail item)
+		RepeatedField<GoodsDetail> goodsDetails = this.GetSurvivorsOption().GoodsDetails;
+		GoodsDetail goodsDetail = null;
+		foreach (GoodsDetail goodsDetail2 in goodsDetails)
 		{
-			Aki.Protocol.SurvivorsGainData survivorsGainData = item.SurvivorsGainData;
-			return survivorsGainData != null && survivorsGainData.IncId == incId;
-		});
+			Aki.Protocol.SurvivorsGainData survivorsGainData = goodsDetail2.SurvivorsGainData;
+			if (survivorsGainData != null && survivorsGainData.IncId == incId)
+			{
+				goodsDetail = goodsDetail2;
+				break;
+			}
+		}
 		if (goodsDetail == null)
 		{
 			return;
@@ -121,7 +127,7 @@ public class SurvivorsRogueCommandWeaponSelect : SurvivorsRogueCommandBaseObtain
 		}
 	}
 
-	// Token: 0x06016DD0 RID: 93648 RVA: 0x005CD4D0 File Offset: 0x005CB6D0
+	// Token: 0x06014801 RID: 83969 RVA: 0x005FA050 File Offset: 0x005F8250
 	[NullableContext(2)]
 	public override ISurvivorsObtainViewInfo GetViewInfo()
 	{
@@ -136,6 +142,6 @@ public class SurvivorsRogueCommandWeaponSelect : SurvivorsRogueCommandBaseObtain
 		};
 	}
 
-	// Token: 0x0400A9C2 RID: 43458
+	// Token: 0x0400ADC8 RID: 44488
 	private int CurrentUnlockWeaponIndex;
 }

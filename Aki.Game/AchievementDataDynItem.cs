@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F1E RID: 3870
+// Token: 0x020003D3 RID: 979
 [NullableContext(1)]
 [Nullable(0)]
 public class AchievementDataDynItem : UiPanelBase, IDynamicScrollBaseItem<AchievementData>
 {
-	// Token: 0x060061E7 RID: 25063 RVA: 0x00131C88 File Offset: 0x0012FE88
+	// Token: 0x0600357F RID: 13695 RVA: 0x0013A5AC File Offset: 0x001387AC
 	public UniTask Init(UUIItem actor)
 	{
 		AchievementDataDynItem.<Init>d__1 <Init>d__;
@@ -23,7 +23,7 @@ public class AchievementDataDynItem : UiPanelBase, IDynamicScrollBaseItem<Achiev
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060061E8 RID: 25064 RVA: 0x00131CD4 File Offset: 0x0012FED4
+	// Token: 0x06003580 RID: 13696 RVA: 0x0013A5F8 File Offset: 0x001387F8
 	public FVector2D GetItemSize(AchievementData data)
 	{
 		if (this.ItemSizeVector == null)
@@ -35,12 +35,12 @@ public class AchievementDataDynItem : UiPanelBase, IDynamicScrollBaseItem<Achiev
 		return this.ItemSizeVector.ToUeVector2D(false);
 	}
 
-	// Token: 0x060061E9 RID: 25065 RVA: 0x00131D20 File Offset: 0x0012FF20
+	// Token: 0x06003581 RID: 13697 RVA: 0x0013A644 File Offset: 0x00138844
 	public void ClearItem()
 	{
 	}
 
-	// Token: 0x04002C7D RID: 11389
+	// Token: 0x04002D16 RID: 11542
 	[Nullable(2)]
 	private Vector2D ItemSizeVector;
 }

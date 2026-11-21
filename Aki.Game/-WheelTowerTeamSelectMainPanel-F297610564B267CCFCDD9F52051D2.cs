@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x020015F5 RID: 5621
+// Token: 0x02000AAD RID: 2733
 internal enum <WheelTowerTeamSelectMainPanel>F297610564B267CCFCDD9F52051D213548AE948ED3EF99711C57AA83272B297E5__EWheelTowerTeamSelectMainPanelComponent
 {
-	// Token: 0x040046E5 RID: 18149
+	// Token: 0x0400478B RID: 18315
 	TabLayout,
-	// Token: 0x040046E6 RID: 18150
+	// Token: 0x0400478C RID: 18316
 	TabItem,
-	// Token: 0x040046E7 RID: 18151
+	// Token: 0x0400478D RID: 18317
 	RoleSelect,
-	// Token: 0x040046E8 RID: 18152
+	// Token: 0x0400478E RID: 18318
 	TeamSelect,
-	// Token: 0x040046E9 RID: 18153
+	// Token: 0x0400478F RID: 18319
 	TemplateSelect
 }

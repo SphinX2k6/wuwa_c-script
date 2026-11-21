@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200186A RID: 6250
+// Token: 0x02000D23 RID: 3363
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class PropertyToggleGridProxy : GridProxyAbstract<FilterItemData>
 {
-	// Token: 0x0600B75B RID: 46939 RVA: 0x00297338 File Offset: 0x00295538
+	// Token: 0x06008B44 RID: 35652 RVA: 0x002A1A5C File Offset: 0x0029FC5C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -39,14 +39,14 @@ public class PropertyToggleGridProxy : GridProxyAbstract<FilterItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B75C RID: 46940 RVA: 0x00297420 File Offset: 0x00295620
+	// Token: 0x06008B45 RID: 35653 RVA: 0x002A1B44 File Offset: 0x0029FD44
 	protected override void OnStart()
 	{
 		base.GetTexture(2).SetUIActive(true);
 		base.GetSprite(3).SetUIActive(false);
 	}
 
-	// Token: 0x0600B75D RID: 46941 RVA: 0x0029743C File Offset: 0x0029563C
+	// Token: 0x06008B46 RID: 35654 RVA: 0x002A1B60 File Offset: 0x0029FD60
 	private void OnToggleChanged(EToggleState state)
 	{
 		bool isChecked = state == EToggleState.ETT_Checked;
@@ -56,7 +56,7 @@ public class PropertyToggleGridProxy : GridProxyAbstract<FilterItemData>
 		}
 	}
 
-	// Token: 0x0600B75E RID: 46942 RVA: 0x00297484 File Offset: 0x00295684
+	// Token: 0x06008B47 RID: 35655 RVA: 0x002A1BA8 File Offset: 0x0029FDA8
 	public override void Refresh(FilterItemData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -77,13 +77,13 @@ public class PropertyToggleGridProxy : GridProxyAbstract<FilterItemData>
 		}
 	}
 
-	// Token: 0x0600B75F RID: 46943 RVA: 0x00297500 File Offset: 0x00295700
+	// Token: 0x06008B48 RID: 35656 RVA: 0x002A1C24 File Offset: 0x0029FE24
 	public void SetToggleFunction(TPropertyToggleFunction func)
 	{
 		this.ToggleFunction = func;
 	}
 
-	// Token: 0x0600B760 RID: 46944 RVA: 0x0029750C File Offset: 0x0029570C
+	// Token: 0x06008B49 RID: 35657 RVA: 0x002A1C30 File Offset: 0x0029FE30
 	public void SetSelectedState(bool isSelected)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -93,28 +93,28 @@ public class PropertyToggleGridProxy : GridProxyAbstract<FilterItemData>
 		}
 	}
 
-	// Token: 0x040052BC RID: 21180
+	// Token: 0x04005367 RID: 21351
 	[Nullable(2)]
 	private TPropertyToggleFunction ToggleFunction;
 
-	// Token: 0x040052BD RID: 21181
+	// Token: 0x04005368 RID: 21352
 	[Nullable(2)]
 	public FilterItemData Data;
 
-	// Token: 0x02007E2D RID: 32301
+	// Token: 0x02006FB4 RID: 28596
 	[NullableContext(0)]
 	private class EPropertyToggleDefine
 	{
-		// Token: 0x040294B7 RID: 169143
+		// Token: 0x040247E4 RID: 149476
 		public const int Toggle = 0;
 
-		// Token: 0x040294B8 RID: 169144
+		// Token: 0x040247E5 RID: 149477
 		public const int TexIcon = 2;
 
-		// Token: 0x040294B9 RID: 169145
+		// Token: 0x040247E6 RID: 149478
 		public const int SpriteIcon = 3;
 
-		// Token: 0x040294BA RID: 169146
+		// Token: 0x040247E7 RID: 149479
 		public const int PropertyText = 4;
 	}
 }

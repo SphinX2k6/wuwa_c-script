@@ -5,16 +5,16 @@ using AkiClient.Game.Aki.Data.UiRoleCamera.Struct;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.InputSetting;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200249A RID: 9370
+// Token: 0x02001981 RID: 6529
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionCameraInputItem : UiPanelBase
 {
-	// Token: 0x06012CF0 RID: 77040 RVA: 0x004A4763 File Offset: 0x004A2963
+	// Token: 0x060101B1 RID: 65969 RVA: 0x004B2253 File Offset: 0x004B0453
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class VisionCameraInputItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012CF1 RID: 77041 RVA: 0x004A4788 File Offset: 0x004A2988
+	// Token: 0x060101B2 RID: 65970 RVA: 0x004B2278 File Offset: 0x004B0478
 	protected void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<UiCameraHandleData, UiCameraHandleData, string>(EEventName.OnPlayCameraAnimationStart, new Action<UiCameraHandleData, UiCameraHandleData, string>(this.OnPlayCameraAnimationStart));
@@ -44,7 +44,7 @@ public class VisionCameraInputItem : UiPanelBase
 		}, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 	}
 
-	// Token: 0x06012CF2 RID: 77042 RVA: 0x004A48BC File Offset: 0x004A2ABC
+	// Token: 0x060101B3 RID: 65971 RVA: 0x004B23AC File Offset: 0x004B05AC
 	protected void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPlayCameraAnimationStart, new Action<UiCameraHandleData, UiCameraHandleData, string>(this.OnPlayCameraAnimationStart));
@@ -65,91 +65,98 @@ public class VisionCameraInputItem : UiPanelBase
 		}), new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 	}
 
-	// Token: 0x06012CF3 RID: 77043 RVA: 0x004A49C4 File Offset: 0x004A2BC4
+	// Token: 0x060101B4 RID: 65972 RVA: 0x004B24B4 File Offset: 0x004B06B4
 	protected override void OnStart()
 	{
 		this.InitCameraComponent();
 	}
 
-	// Token: 0x06012CF4 RID: 77044 RVA: 0x004A49CC File Offset: 0x004A2BCC
+	// Token: 0x060101B5 RID: 65973 RVA: 0x004B24BC File Offset: 0x004B06BC
 	protected override void OnBeforeShow()
 	{
 		this.OnActivateUiCameraAnimationHandle(null);
 		this.OnAddEventListener();
 	}
 
-	// Token: 0x06012CF5 RID: 77045 RVA: 0x004A49DB File Offset: 0x004A2BDB
+	// Token: 0x060101B6 RID: 65974 RVA: 0x004B24CB File Offset: 0x004B06CB
 	protected override void OnBeforeHide()
 	{
-		UiCameraControlRotationComponent uiCameraControlRotationComponent = this.UiCameraControlRotationComponent;
-		if (uiCameraControlRotationComponent != null)
+		UiCameraInputComponent uiCameraInputComponent = this.UiCameraInputComponent;
+		if (uiCameraInputComponent != null)
 		{
-			uiCameraControlRotationComponent.Deactivate();
+			uiCameraInputComponent.Deactivate();
 		}
 		this.OnRemoveEventListener();
 		this.CanCameraInput = false;
 	}
 
-	// Token: 0x06012CF6 RID: 77046 RVA: 0x004A49FB File Offset: 0x004A2BFB
+	// Token: 0x060101B7 RID: 65975 RVA: 0x004B24EB File Offset: 0x004B06EB
 	protected override void OnBeforeDestroy()
 	{
 		this.DestroyCameraComponent();
 	}
 
-	// Token: 0x06012CF7 RID: 77047 RVA: 0x004A4A03 File Offset: 0x004A2C03
+	// Token: 0x060101B8 RID: 65976 RVA: 0x004B24F3 File Offset: 0x004B06F3
 	public void OnPlayCameraAnimationStart(UiCameraHandleData uiCameraHandleData, UiCameraHandleData cameraHandleData, string arg3)
 	{
 		this.Pause();
 	}
 
-	// Token: 0x06012CF8 RID: 77048 RVA: 0x004A4A0B File Offset: 0x004A2C0B
+	// Token: 0x060101B9 RID: 65977 RVA: 0x004B24FB File Offset: 0x004B06FB
 	public void Pause()
 	{
 		this.CanCameraInput = false;
-		UiCameraControlRotationComponent uiCameraControlRotationComponent = this.UiCameraControlRotationComponent;
-		if (uiCameraControlRotationComponent == null)
+		UiCameraInputComponent uiCameraInputComponent = this.UiCameraInputComponent;
+		if (uiCameraInputComponent == null)
 		{
 			return;
 		}
-		uiCameraControlRotationComponent.PauseTick();
+		uiCameraInputComponent.PauseTick();
 	}
 
-	// Token: 0x06012CF9 RID: 77049 RVA: 0x004A4A24 File Offset: 0x004A2C24
+	// Token: 0x060101BA RID: 65978 RVA: 0x004B2514 File Offset: 0x004B0714
 	private void InitCameraComponent()
 	{
-		UiCamera uiCamera = UiCameraManager.Get();
-		this.UiCameraControlRotationComponent = (uiCamera.AddUiCameraComponent(typeof(UiCameraControlRotationComponent), false) as UiCameraControlRotationComponent);
+		UiCamera orCreateCamera = UiCameraModel.Instance.GetOrCreateCamera();
+		this.UiCameraInputComponent = orCreateCamera.GetUiCameraComponent<UiCameraInputComponent>();
+		this.UiCameraLogicComponent = orCreateCamera.GetUiCameraComponent<UiCameraLogicComponent>();
 		SUiRoleCameraSetting? roleCameraConfig = UiRoleCameraConfig.Instance.GetRoleCameraConfig("声骸");
-		this.UiCameraControlRotationComponent.InitDataByConfig(roleCameraConfig.Value);
+		this.UiCameraLogicComponent.InitDataByConfig(roleCameraConfig.Value);
 	}
 
-	// Token: 0x06012CFA RID: 77050 RVA: 0x004A4A75 File Offset: 0x004A2C75
+	// Token: 0x060101BB RID: 65979 RVA: 0x004B2566 File Offset: 0x004B0766
 	private void DestroyCameraComponent()
 	{
-		UiCameraManager.Get().DestroyUiCameraComponent(typeof(UiCameraControlRotationComponent));
-		this.UiCameraControlRotationComponent = null;
+		UiCameraModel.Instance.GetOrCreateCamera();
+		UiCameraInputComponent uiCameraInputComponent = this.UiCameraInputComponent;
+		if (uiCameraInputComponent != null)
+		{
+			uiCameraInputComponent.Deactivate();
+		}
+		this.UiCameraInputComponent = null;
+		this.UiCameraLogicComponent = null;
 	}
 
-	// Token: 0x06012CFB RID: 77051 RVA: 0x004A4A94 File Offset: 0x004A2C94
+	// Token: 0x060101BC RID: 65980 RVA: 0x004B2594 File Offset: 0x004B0794
 	public void OnActivateUiCameraAnimationHandle(UiCameraHandleData uiCameraHandleData)
 	{
 		this.CanCameraInput = this.CheckCanCameraInput();
-		if (this.CanCameraInput && this.UiCameraControlRotationComponent != null)
+		if (this.CanCameraInput && this.UiCameraInputComponent != null && this.UiCameraLogicComponent != null)
 		{
 			FVectorDouble sourceLocation = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("MonsterCase").Value, ECollectActorType.UI).D_K2_GetActorLocation();
-			this.UiCameraControlRotationComponent.UpdateData(sourceLocation, 0f, 0f, 0f, 0f);
-			this.UiCameraControlRotationComponent.Activate();
-			this.UiCameraControlRotationComponent.ResumeTick();
+			this.UiCameraLogicComponent.UpdateData(sourceLocation, 0f, 0f, 0f, 0f);
+			this.UiCameraInputComponent.Activate();
+			this.UiCameraInputComponent.ResumeTick();
 		}
 	}
 
-	// Token: 0x06012CFC RID: 77052 RVA: 0x004A4B11 File Offset: 0x004A2D11
+	// Token: 0x060101BD RID: 65981 RVA: 0x004B2619 File Offset: 0x004B0819
 	private bool CheckCanCameraInput()
 	{
-		return !UiCameraAnimationManager.Instance.IsPlayingAnimation();
+		return !UiCameraModel.Instance.IsPlayingAnimation();
 	}
 
-	// Token: 0x06012CFD RID: 77053 RVA: 0x004A4B20 File Offset: 0x004A2D20
+	// Token: 0x060101BE RID: 65982 RVA: 0x004B2628 File Offset: 0x004B0828
 	[NullableContext(2)]
 	private void OnPointerBeginDragCallBack(ULGUIPointerEventData eventData)
 	{
@@ -160,7 +167,7 @@ public class VisionCameraInputItem : UiPanelBase
 		this.CurrentDragPosition = new FVector?(eventData.GetLocalPointInPlane());
 	}
 
-	// Token: 0x06012CFE RID: 77054 RVA: 0x004A4B3C File Offset: 0x004A2D3C
+	// Token: 0x060101BF RID: 65983 RVA: 0x004B2644 File Offset: 0x004B0844
 	[NullableContext(2)]
 	private void OnPointerDragCallBack(ULGUIPointerEventData eventData)
 	{
@@ -178,16 +185,16 @@ public class VisionCameraInputItem : UiPanelBase
 		float num = this.CurrentDragPosition.Value.X - currentDragPosition.Value.X;
 		if (num != 0f)
 		{
-			this.UiCameraControlRotationComponent.AddYawInput(num);
+			this.UiCameraInputComponent.AddYawInput(num);
 		}
 		float num2 = this.CurrentDragPosition.Value.Y - currentDragPosition.Value.Y;
 		if (num2 != 0f && this.CanPitchInput)
 		{
-			this.UiCameraControlRotationComponent.AddPitchInput(num2);
+			this.UiCameraInputComponent.AddPitchInput(num2);
 		}
 	}
 
-	// Token: 0x06012CFF RID: 77055 RVA: 0x004A4C0A File Offset: 0x004A2E0A
+	// Token: 0x060101C0 RID: 65984 RVA: 0x004B2712 File Offset: 0x004B0912
 	[NullableContext(2)]
 	private void OnPointerEndDragCallBack(ULGUIPointerEventData eventData)
 	{
@@ -198,27 +205,27 @@ public class VisionCameraInputItem : UiPanelBase
 		this.CurrentDragPosition = null;
 	}
 
-	// Token: 0x06012D00 RID: 77056 RVA: 0x004A4C21 File Offset: 0x004A2E21
+	// Token: 0x060101C1 RID: 65985 RVA: 0x004B2729 File Offset: 0x004B0929
 	private void OnInputUiLookUp(string axisName, float value, InputIdentification _)
 	{
 		if (value == 0f || !this.CanCameraInput || !Info.Instance.IsInGamepad() || !this.CanPitchInput)
 		{
 			return;
 		}
-		this.UiCameraControlRotationComponent.AddPitchInput(-value);
+		this.UiCameraInputComponent.AddPitchInput(-value);
 	}
 
-	// Token: 0x06012D01 RID: 77057 RVA: 0x004A4C55 File Offset: 0x004A2E55
+	// Token: 0x060101C2 RID: 65986 RVA: 0x004B275D File Offset: 0x004B095D
 	private void OnInputUiTurn(string axisName, float value, InputIdentification _)
 	{
 		if (value == 0f || !this.CanCameraInput || !Info.Instance.IsInGamepad())
 		{
 			return;
 		}
-		this.UiCameraControlRotationComponent.AddYawInput(value);
+		this.UiCameraInputComponent.AddYawInput(value);
 	}
 
-	// Token: 0x06012D02 RID: 77058 RVA: 0x004A4C80 File Offset: 0x004A2E80
+	// Token: 0x060101C3 RID: 65987 RVA: 0x004B2788 File Offset: 0x004B0988
 	[NullableContext(2)]
 	private void OnPointerScrollCallBack(ULGUIPointerEventData eventData)
 	{
@@ -228,31 +235,31 @@ public class VisionCameraInputItem : UiPanelBase
 		}
 		if (eventData.scrollAxisValue != 0f)
 		{
-			this.UiCameraControlRotationComponent.AddZoomInput(-eventData.scrollAxisValue);
+			this.UiCameraInputComponent.AddZoomInput(-eventData.scrollAxisValue);
 		}
 	}
 
-	// Token: 0x06012D03 RID: 77059 RVA: 0x004A4CAA File Offset: 0x004A2EAA
+	// Token: 0x060101C4 RID: 65988 RVA: 0x004B27B2 File Offset: 0x004B09B2
 	private void OnInputUiIncrease(string axisName, float value, InputIdentification _)
 	{
 		if (value == 0f || !this.CanCameraInput || !Info.Instance.IsInGamepad())
 		{
 			return;
 		}
-		this.UiCameraControlRotationComponent.AddZoomInput(value);
+		this.UiCameraInputComponent.AddZoomInput(value);
 	}
 
-	// Token: 0x06012D04 RID: 77060 RVA: 0x004A4CD5 File Offset: 0x004A2ED5
+	// Token: 0x060101C5 RID: 65989 RVA: 0x004B27DD File Offset: 0x004B09DD
 	private void OnInputUiReduce(string axisName, float value, InputIdentification _)
 	{
 		if (value == 0f || !this.CanCameraInput || !Info.Instance.IsInGamepad())
 		{
 			return;
 		}
-		this.UiCameraControlRotationComponent.AddZoomInput(value);
+		this.UiCameraInputComponent.AddZoomInput(value);
 	}
 
-	// Token: 0x06012D05 RID: 77061 RVA: 0x004A4D00 File Offset: 0x004A2F00
+	// Token: 0x060101C6 RID: 65990 RVA: 0x004B2808 File Offset: 0x004B0A08
 	private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification _)
 	{
 		if (!this.CanCameraInput)
@@ -265,34 +272,38 @@ public class VisionCameraInputItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012D06 RID: 77062 RVA: 0x004A4D1C File Offset: 0x004A2F1C
+	// Token: 0x060101C7 RID: 65991 RVA: 0x004B2824 File Offset: 0x004B0A24
 	private void TouchMoved()
 	{
 		if (TouchFingerManager.Instance.GetTouchFingerCount() > 1)
 		{
 			float fingerExpandCloseValue = TouchFingerManager.Instance.GetFingerExpandCloseValue(EFingerIndex.One, EFingerIndex.Two);
-			this.UiCameraControlRotationComponent.AddZoomInput(-fingerExpandCloseValue);
+			this.UiCameraInputComponent.AddZoomInput(-fingerExpandCloseValue);
 		}
 	}
 
-	// Token: 0x04008DA8 RID: 36264
+	// Token: 0x04008EF1 RID: 36593
 	private bool CanCameraInput;
 
-	// Token: 0x04008DA9 RID: 36265
+	// Token: 0x04008EF2 RID: 36594
 	public bool CanPitchInput;
 
-	// Token: 0x04008DAA RID: 36266
+	// Token: 0x04008EF3 RID: 36595
 	[Nullable(2)]
-	private UiCameraControlRotationComponent UiCameraControlRotationComponent;
+	private UiCameraInputComponent UiCameraInputComponent;
 
-	// Token: 0x04008DAB RID: 36267
+	// Token: 0x04008EF4 RID: 36596
+	[Nullable(2)]
+	private UiCameraLogicComponent UiCameraLogicComponent;
+
+	// Token: 0x04008EF5 RID: 36597
 	private FVector? CurrentDragPosition;
 
-	// Token: 0x02008A19 RID: 35353
+	// Token: 0x02007BA3 RID: 31651
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CD8D RID: 183693
+		// Token: 0x040280AD RID: 164013
 		DragItem
 	}
 }

@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002364 RID: 9060
+// Token: 0x02001849 RID: 6217
 [NullableContext(1)]
 public interface IPreviewPayGiftEntry
 {
-	// Token: 0x17001797 RID: 6039
-	// (get) Token: 0x06012106 RID: 73990
-	// (set) Token: 0x06012107 RID: 73991
+	// Token: 0x170017D1 RID: 6097
+	// (get) Token: 0x0600F5B6 RID: 62902
+	// (set) Token: 0x0600F5B7 RID: 62903
 	long EndStampSec { get; set; }
 
-	// Token: 0x17001798 RID: 6040
-	// (get) Token: 0x06012108 RID: 73992
-	// (set) Token: 0x06012109 RID: 73993
+	// Token: 0x170017D2 RID: 6098
+	// (get) Token: 0x0600F5B8 RID: 62904
+	// (set) Token: 0x0600F5B9 RID: 62905
 	string Title { get; set; }
 
-	// Token: 0x17001799 RID: 6041
-	// (get) Token: 0x0601210A RID: 73994
-	// (set) Token: 0x0601210B RID: 73995
+	// Token: 0x170017D3 RID: 6099
+	// (get) Token: 0x0600F5BA RID: 62906
+	// (set) Token: 0x0600F5BB RID: 62907
 	string RewardListDesc { get; set; }
 }

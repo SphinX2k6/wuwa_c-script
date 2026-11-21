@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004584 RID: 17796
+	// Token: 0x020049EC RID: 18924
 	public enum IRollBlockHintStepBase_Union : byte
 	{
-		// Token: 0x0400C639 RID: 50745
+		// Token: 0x0400D068 RID: 53352
 		NONE,
-		// Token: 0x0400C63A RID: 50746
+		// Token: 0x0400D069 RID: 53353
 		IRollBlockHintStepBase,
-		// Token: 0x0400C63B RID: 50747
+		// Token: 0x0400D06A RID: 53354
 		IRollBlockHintStepRoll,
-		// Token: 0x0400C63C RID: 50748
+		// Token: 0x0400D06B RID: 53355
 		IRollBlockHintStepJump,
-		// Token: 0x0400C63D RID: 50749
+		// Token: 0x0400D06C RID: 53356
 		IRollBlockHintStepOperation
 	}
 }

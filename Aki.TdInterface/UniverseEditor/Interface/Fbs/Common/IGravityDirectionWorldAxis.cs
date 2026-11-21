@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E03 RID: 24067
+	// Token: 0x02006440 RID: 25664
 	public struct IGravityDirectionWorldAxis : IFlatbufferObject
 	{
-		// Token: 0x1700B411 RID: 46097
-		// (get) Token: 0x0602931C RID: 168732 RVA: 0x005A6C48 File Offset: 0x005A4E48
+		// Token: 0x1700BD77 RID: 48503
+		// (get) Token: 0x0602B9A6 RID: 178598 RVA: 0x005EF978 File Offset: 0x005EDB78
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x0602931D RID: 168733 RVA: 0x005A6C55 File Offset: 0x005A4E55
+		// Token: 0x0602B9A7 RID: 178599 RVA: 0x005EF985 File Offset: 0x005EDB85
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602931E RID: 168734 RVA: 0x005A6C5C File Offset: 0x005A4E5C
+		// Token: 0x0602B9A8 RID: 178600 RVA: 0x005EF98C File Offset: 0x005EDB8C
 		public static IGravityDirectionWorldAxis GetRootAsIGravityDirectionWorldAxis(ByteBuffer _bb)
 		{
 			return IGravityDirectionWorldAxis.GetRootAsIGravityDirectionWorldAxis(_bb, default(IGravityDirectionWorldAxis));
 		}
 
-		// Token: 0x0602931F RID: 168735 RVA: 0x005A6C78 File Offset: 0x005A4E78
+		// Token: 0x0602B9A9 RID: 178601 RVA: 0x005EF9A8 File Offset: 0x005EDBA8
 		public static IGravityDirectionWorldAxis GetRootAsIGravityDirectionWorldAxis(ByteBuffer _bb, IGravityDirectionWorldAxis obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06029320 RID: 168736 RVA: 0x005A6C95 File Offset: 0x005A4E95
+		// Token: 0x0602B9AA RID: 178602 RVA: 0x005EF9C5 File Offset: 0x005EDBC5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06029321 RID: 168737 RVA: 0x005A6CA4 File Offset: 0x005A4EA4
+		// Token: 0x0602B9AB RID: 178603 RVA: 0x005EF9D4 File Offset: 0x005EDBD4
 		public IGravityDirectionWorldAxis __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B412 RID: 46098
-		// (get) Token: 0x06029322 RID: 168738 RVA: 0x005A6CB4 File Offset: 0x005A4EB4
+		// Token: 0x1700BD78 RID: 48504
+		// (get) Token: 0x0602B9AC RID: 178604 RVA: 0x005EF9E4 File Offset: 0x005EDBE4
 		public EGravityDirectionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B413 RID: 46099
-		// (get) Token: 0x06029323 RID: 168739 RVA: 0x005A6CF0 File Offset: 0x005A4EF0
+		// Token: 0x1700BD79 RID: 48505
+		// (get) Token: 0x0602B9AD RID: 178605 RVA: 0x005EFA20 File Offset: 0x005EDC20
 		public EWorldAxisType WorldAxis
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029324 RID: 168740 RVA: 0x005A6D2C File Offset: 0x005A4F2C
+		// Token: 0x0602B9AE RID: 178606 RVA: 0x005EFA5C File Offset: 0x005EDC5C
 		public static Offset<IGravityDirectionWorldAxis> CreateIGravityDirectionWorldAxis(FlatBufferBuilder builder, EGravityDirectionType Type = EGravityDirectionType.SelfRotation, EWorldAxisType WorldAxis = EWorldAxisType.PositiveX)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IGravityDirectionWorldAxis.EndIGravityDirectionWorldAxis(builder);
 		}
 
-		// Token: 0x06029325 RID: 168741 RVA: 0x005A6D49 File Offset: 0x005A4F49
+		// Token: 0x0602B9AF RID: 178607 RVA: 0x005EFA79 File Offset: 0x005EDC79
 		public static void StartIGravityDirectionWorldAxis(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06029326 RID: 168742 RVA: 0x005A6D52 File Offset: 0x005A4F52
+		// Token: 0x0602B9B0 RID: 178608 RVA: 0x005EFA82 File Offset: 0x005EDC82
 		public static void AddType(FlatBufferBuilder builder, EGravityDirectionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06029327 RID: 168743 RVA: 0x005A6D5D File Offset: 0x005A4F5D
+		// Token: 0x0602B9B1 RID: 178609 RVA: 0x005EFA8D File Offset: 0x005EDC8D
 		public static void AddWorldAxis(FlatBufferBuilder builder, EWorldAxisType worldAxis)
 		{
 			builder.AddByte(1, (byte)worldAxis, 0);
 		}
 
-		// Token: 0x06029328 RID: 168744 RVA: 0x005A6D68 File Offset: 0x005A4F68
+		// Token: 0x0602B9B2 RID: 178610 RVA: 0x005EFA98 File Offset: 0x005EDC98
 		public static Offset<IGravityDirectionWorldAxis> EndIGravityDirectionWorldAxis(FlatBufferBuilder builder)
 		{
 			return new Offset<IGravityDirectionWorldAxis>(builder.EndTable());
 		}
 
-		// Token: 0x06029329 RID: 168745 RVA: 0x005A6D78 File Offset: 0x005A4F78
+		// Token: 0x0602B9B3 RID: 178611 RVA: 0x005EFAA8 File Offset: 0x005EDCA8
 		public IGravityDirectionWorldAxisT UnPack()
 		{
 			IGravityDirectionWorldAxisT gravityDirectionWorldAxisT = new IGravityDirectionWorldAxisT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return gravityDirectionWorldAxisT;
 		}
 
-		// Token: 0x0602932A RID: 168746 RVA: 0x005A6D93 File Offset: 0x005A4F93
+		// Token: 0x0602B9B4 RID: 178612 RVA: 0x005EFAC3 File Offset: 0x005EDCC3
 		public void UnPackTo(IGravityDirectionWorldAxisT _o)
 		{
 			_o.Type = this.Type;
 			_o.WorldAxis = this.WorldAxis;
 		}
 
-		// Token: 0x0602932B RID: 168747 RVA: 0x005A6DB0 File Offset: 0x005A4FB0
+		// Token: 0x0602B9B5 RID: 178613 RVA: 0x005EFAE0 File Offset: 0x005EDCE0
 		public static Offset<IGravityDirectionWorldAxis> Pack(FlatBufferBuilder builder, IGravityDirectionWorldAxisT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IGravityDirectionWorldAxis.CreateIGravityDirectionWorldAxis(builder, _o.Type, _o.WorldAxis);
 		}
 
-		// Token: 0x0400F7F5 RID: 63477
+		// Token: 0x04010550 RID: 66896
 		private Table __p;
 	}
 }

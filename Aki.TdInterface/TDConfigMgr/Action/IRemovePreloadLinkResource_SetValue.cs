@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D99 RID: 7577
+	// Token: 0x02001FAE RID: 8110
 	public class IRemovePreloadLinkResource_SetValue
 	{
-		// Token: 0x0400618C RID: 24972
+		// Token: 0x04006710 RID: 26384
 		public ERemovePreloadResourceObjectType Type;
 
-		// Token: 0x0400618D RID: 24973
+		// Token: 0x04006711 RID: 26385
 		public int LinkResourceId;
 	}
 }

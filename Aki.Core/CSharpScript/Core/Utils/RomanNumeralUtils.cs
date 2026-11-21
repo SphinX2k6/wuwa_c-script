@@ -4,16 +4,16 @@ using System.Text;
 
 namespace CSharpScript.Core.Utils
 {
-	// Token: 0x0200012A RID: 298
+	// Token: 0x0200012B RID: 299
 	public class RomanNumeralUtils : IStaticVariableResetter
 	{
-		// Token: 0x06000AB3 RID: 2739 RVA: 0x0003439F File Offset: 0x0003259F
+		// Token: 0x06000B0A RID: 2826 RVA: 0x00034E13 File Offset: 0x00033013
 		static RomanNumeralUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RomanNumeralUtils.CreateStaticDefaultValue), new Action(RomanNumeralUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000AB4 RID: 2740 RVA: 0x000343C0 File Offset: 0x000325C0
+		// Token: 0x06000B0B RID: 2827 RVA: 0x00034E34 File Offset: 0x00033034
 		public static void CreateStaticDefaultValue()
 		{
 			RomanNumeralUtils.MaxRomanNumeral = 3999;
@@ -36,7 +36,7 @@ namespace CSharpScript.Core.Utils
 			};
 		}
 
-		// Token: 0x06000AB5 RID: 2741 RVA: 0x000344F1 File Offset: 0x000326F1
+		// Token: 0x06000B0C RID: 2828 RVA: 0x00034F65 File Offset: 0x00033165
 		public static void ResetStaticDefaultValue()
 		{
 			RomanNumeralUtils.MaxRomanNumeral = 0;
@@ -44,7 +44,7 @@ namespace CSharpScript.Core.Utils
 			RomanNumeralUtils.StaticBuilder = null;
 		}
 
-		// Token: 0x06000AB6 RID: 2742 RVA: 0x00034508 File Offset: 0x00032708
+		// Token: 0x06000B0D RID: 2829 RVA: 0x00034F7C File Offset: 0x0003317C
 		[NullableContext(1)]
 		public static string ConvertToRoman(int number)
 		{
@@ -70,23 +70,23 @@ namespace CSharpScript.Core.Utils
 			return staticBuilder.ToString();
 		}
 
-		// Token: 0x06000AB7 RID: 2743 RVA: 0x00034591 File Offset: 0x00032791
+		// Token: 0x06000B0E RID: 2830 RVA: 0x00035005 File Offset: 0x00033205
 		private static bool IsValidInput(int number)
 		{
 			return number > 0 && number <= RomanNumeralUtils.MaxRomanNumeral;
 		}
 
-		// Token: 0x06000AB8 RID: 2744 RVA: 0x000345A4 File Offset: 0x000327A4
+		// Token: 0x06000B0F RID: 2831 RVA: 0x00035018 File Offset: 0x00033218
 		public static bool IsValidRange(int number)
 		{
 			return RomanNumeralUtils.IsValidInput(number);
 		}
 
-		// Token: 0x040006A6 RID: 1702
+		// Token: 0x040006B4 RID: 1716
 		[Nullable(2)]
 		private static StringBuilder StaticBuilder;
 
-		// Token: 0x040006A7 RID: 1703
+		// Token: 0x040006B5 RID: 1717
 		[TupleElementNames(new string[]
 		{
 			"Value",
@@ -100,7 +100,7 @@ namespace CSharpScript.Core.Utils
 		})]
 		private static ValueTuple<int, string>[] RomanNumerals;
 
-		// Token: 0x040006A8 RID: 1704
+		// Token: 0x040006B6 RID: 1718
 		private static int MaxRomanNumeral;
 	}
 }

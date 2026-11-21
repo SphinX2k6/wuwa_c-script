@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003170 RID: 12656
+// Token: 0x020026DD RID: 9949
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,12 +11,12 @@ using UnrealEngine;
 })]
 public class CodeFunctionAnimalFoxTrySwitchWalkRun : CodeFunctionBase<SpecialSkillAnimalFox>
 {
-	// Token: 0x0601B39C RID: 111516 RVA: 0x0076D924 File Offset: 0x0076BB24
+	// Token: 0x06018EA1 RID: 102049 RVA: 0x00795288 File Offset: 0x00793488
 	public CodeFunctionAnimalFoxTrySwitchWalkRun(SpecialSkillAnimalFox specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B39D RID: 111517 RVA: 0x0076D930 File Offset: 0x0076BB30
+	// Token: 0x06018EA2 RID: 102050 RVA: 0x00795294 File Offset: 0x00793494
 	public override FKuroCodeFunctionResult Execute(FKuroCodeFunctionPayload payload)
 	{
 		CharacterUnifiedStateComponent component = this.SpecialSkill.GetOwnerEntity().GetComponent<CharacterUnifiedStateComponent>();
@@ -28,6 +28,6 @@ public class CodeFunctionAnimalFoxTrySwitchWalkRun : CodeFunctionBase<SpecialSki
 		return base.GetDefaultSuccessResult();
 	}
 
-	// Token: 0x0400D46A RID: 54378
+	// Token: 0x0400D8CD RID: 55501
 	public static readonly string FunctionName = "AnimalFox.TrySwitchWalkRun";
 }

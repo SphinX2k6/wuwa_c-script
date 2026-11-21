@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D1C RID: 7452
+// Token: 0x020011DE RID: 4574
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueCountDownTipsPanel : SurvivorsRogueTipsPanelBase
 {
-	// Token: 0x0600E161 RID: 57697 RVA: 0x0034E3E0 File Offset: 0x0034C5E0
+	// Token: 0x0600B57E RID: 46462 RVA: 0x00359E10 File Offset: 0x00358010
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ public class SurvivorsRogueCountDownTipsPanel : SurvivorsRogueTipsPanelBase
 		};
 	}
 
-	// Token: 0x0600E162 RID: 57698 RVA: 0x0034E468 File Offset: 0x0034C668
+	// Token: 0x0600B57F RID: 46463 RVA: 0x00359E98 File Offset: 0x00358098
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -41,21 +41,21 @@ public class SurvivorsRogueCountDownTipsPanel : SurvivorsRogueTipsPanelBase
 		}, ResourceSystem.EResourceLoadPriority.Default, this.MemoryTag);
 	}
 
-	// Token: 0x0600E163 RID: 57699 RVA: 0x0034E4DE File Offset: 0x0034C6DE
+	// Token: 0x0600B580 RID: 46464 RVA: 0x00359F0E File Offset: 0x0035810E
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
 		this.TickEnabled = true;
 	}
 
-	// Token: 0x0600E164 RID: 57700 RVA: 0x0034E4ED File Offset: 0x0034C6ED
+	// Token: 0x0600B581 RID: 46465 RVA: 0x00359F1D File Offset: 0x0035811D
 	protected override void OnBeforeHide()
 	{
 		base.OnBeforeHide();
 		this.TickEnabled = false;
 	}
 
-	// Token: 0x0600E165 RID: 57701 RVA: 0x0034E4FC File Offset: 0x0034C6FC
+	// Token: 0x0600B582 RID: 46466 RVA: 0x00359F2C File Offset: 0x0035812C
 	public override void ShowTips()
 	{
 		base.Show(null);
@@ -63,7 +63,7 @@ public class SurvivorsRogueCountDownTipsPanel : SurvivorsRogueTipsPanelBase
 		this.SequencePlayer.PlayLevelSequenceByName("Start01", false, null, false);
 	}
 
-	// Token: 0x0600E166 RID: 57702 RVA: 0x0034E538 File Offset: 0x0034C738
+	// Token: 0x0600B583 RID: 46467 RVA: 0x00359F68 File Offset: 0x00358168
 	public void InitCountDown(float remainTime, bool endlessWave)
 	{
 		this.RemainTime = remainTime;
@@ -74,7 +74,7 @@ public class SurvivorsRogueCountDownTipsPanel : SurvivorsRogueTipsPanelBase
 		this.TitleText.SetText("", true);
 	}
 
-	// Token: 0x0600E167 RID: 57703 RVA: 0x0034E58B File Offset: 0x0034C78B
+	// Token: 0x0600B584 RID: 46468 RVA: 0x00359FBB File Offset: 0x003581BB
 	public void OnTick(float delta)
 	{
 		if (!this.TickEnabled || !this.NeedTick)
@@ -89,7 +89,7 @@ public class SurvivorsRogueCountDownTipsPanel : SurvivorsRogueTipsPanelBase
 		this.TickNormalWave(delta);
 	}
 
-	// Token: 0x0600E168 RID: 57704 RVA: 0x0034E5B8 File Offset: 0x0034C7B8
+	// Token: 0x0600B585 RID: 46469 RVA: 0x00359FE8 File Offset: 0x003581E8
 	private void TickEndlessWave(float delta)
 	{
 		this.ElapsedTime += delta * (float)TimeUtil.Instance.Millisecond;
@@ -110,7 +110,7 @@ public class SurvivorsRogueCountDownTipsPanel : SurvivorsRogueTipsPanelBase
 		}));
 	}
 
-	// Token: 0x0600E169 RID: 57705 RVA: 0x0034E6C4 File Offset: 0x0034C8C4
+	// Token: 0x0600B586 RID: 46470 RVA: 0x0035A0F4 File Offset: 0x003582F4
 	private void TickNormalWave(float delta)
 	{
 		if (this.RemainTime <= 0f)
@@ -123,56 +123,56 @@ public class SurvivorsRogueCountDownTipsPanel : SurvivorsRogueTipsPanelBase
 		this.RemainTime -= delta * (float)TimeUtil.Instance.Millisecond;
 	}
 
-	// Token: 0x04006824 RID: 26660
+	// Token: 0x04006903 RID: 26883
 	private const int ONE_HUNDRED = 100;
 
-	// Token: 0x04006825 RID: 26661
+	// Token: 0x04006904 RID: 26884
 	private const int ELAPSED_ANCHOR_OFFSET_Y = -30;
 
-	// Token: 0x04006826 RID: 26662
+	// Token: 0x04006905 RID: 26885
 	private const int COUNT_DOWN_ANCHOR_OFFSET_Y = -100;
 
-	// Token: 0x04006827 RID: 26663
+	// Token: 0x04006906 RID: 26886
 	private float RemainTime;
 
-	// Token: 0x04006828 RID: 26664
+	// Token: 0x04006907 RID: 26887
 	private float ElapsedTime;
 
-	// Token: 0x04006829 RID: 26665
+	// Token: 0x04006908 RID: 26888
 	private UUIText TitleText;
 
-	// Token: 0x0400682A RID: 26666
+	// Token: 0x04006909 RID: 26889
 	private UUIArtText CountDownText;
 
-	// Token: 0x0400682B RID: 26667
+	// Token: 0x0400690A RID: 26890
 	private UUIItem ParentPanel;
 
-	// Token: 0x0400682C RID: 26668
+	// Token: 0x0400690B RID: 26891
 	private bool NeedTick;
 
-	// Token: 0x0400682D RID: 26669
+	// Token: 0x0400690C RID: 26892
 	private bool TickEnabled;
 
-	// Token: 0x0400682E RID: 26670
+	// Token: 0x0400690D RID: 26893
 	private bool EndlessWave;
 
-	// Token: 0x02008314 RID: 33556
+	// Token: 0x0200749D RID: 29853
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AC03 RID: 175107
+		// Token: 0x04025F2B RID: 155435
 		public const int BgTexture = 0;
 
-		// Token: 0x0402AC04 RID: 175108
+		// Token: 0x04025F2C RID: 155436
 		public const int TipsText = 1;
 
-		// Token: 0x0402AC05 RID: 175109
+		// Token: 0x04025F2D RID: 155437
 		public const int CountDownText = 2;
 
-		// Token: 0x0402AC06 RID: 175110
+		// Token: 0x04025F2E RID: 155438
 		public const int ChangeText = 3;
 
-		// Token: 0x0402AC07 RID: 175111
+		// Token: 0x04025F2F RID: 155439
 		public const int ParentPanel = 4;
 	}
 }

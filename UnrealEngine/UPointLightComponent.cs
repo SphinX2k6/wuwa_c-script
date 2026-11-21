@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001017 RID: 4119
+	// Token: 0x02000265 RID: 613
 	[UnrealObjectPath("/Script/Engine.PointLightComponent")]
-	[UnrealStructLayout(1248, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1248)]
+	[UnrealStructLayout(1264, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1264)]
 	public class UPointLightComponent : ULocalLightComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600E126 RID: 57638 RVA: 0x0014B047 File Offset: 0x00149247
+		// Token: 0x06003672 RID: 13938 RVA: 0x0004CCAB File Offset: 0x0004AEAB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UPointLightComponent._ClassPtr;
 		}
 
-		// Token: 0x0600E127 RID: 57639 RVA: 0x0014B054 File Offset: 0x00149254
+		// Token: 0x06003673 RID: 13939 RVA: 0x0004CCB8 File Offset: 0x0004AEB8
 		public UPointLightComponent() : this(BuiltinUtils.AllocNativeUObject(UPointLightComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600E128 RID: 57640 RVA: 0x0014B07C File Offset: 0x0014927C
+		// Token: 0x06003674 RID: 13940 RVA: 0x0004CCE0 File Offset: 0x0004AEE0
 		[NullableContext(1)]
 		public UPointLightComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UPointLightComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170034DC RID: 13532
-		// (get) Token: 0x0600E129 RID: 57641 RVA: 0x0014B0AF File Offset: 0x001492AF
-		// (set) Token: 0x0600E12A RID: 57642 RVA: 0x0014B0BF File Offset: 0x001492BF
+		// Token: 0x170007BA RID: 1978
+		// (get) Token: 0x06003675 RID: 13941 RVA: 0x0004CD13 File Offset: 0x0004AF13
+		// (set) Token: 0x06003676 RID: 13942 RVA: 0x0004CD23 File Offset: 0x0004AF23
 		public unsafe float PointLightShadowDistance
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034DD RID: 13533
-		// (get) Token: 0x0600E12B RID: 57643 RVA: 0x0014B0D0 File Offset: 0x001492D0
-		// (set) Token: 0x0600E12C RID: 57644 RVA: 0x0014B0E0 File Offset: 0x001492E0
+		// Token: 0x170007BB RID: 1979
+		// (get) Token: 0x06003677 RID: 13943 RVA: 0x0004CD34 File Offset: 0x0004AF34
+		// (set) Token: 0x06003678 RID: 13944 RVA: 0x0004CD44 File Offset: 0x0004AF44
 		public unsafe float PointShadowFadeDistancePercent
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034DE RID: 13534
-		// (get) Token: 0x0600E12D RID: 57645 RVA: 0x0014B0F1 File Offset: 0x001492F1
-		// (set) Token: 0x0600E12E RID: 57646 RVA: 0x0014B10A File Offset: 0x0014930A
+		// Token: 0x170007BC RID: 1980
+		// (get) Token: 0x06003679 RID: 13945 RVA: 0x0004CD55 File Offset: 0x0004AF55
+		// (set) Token: 0x0600367A RID: 13946 RVA: 0x0004CD6E File Offset: 0x0004AF6E
 		public unsafe bool bUseInverseSquaredFalloff
 		{
 			get
@@ -73,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034DF RID: 13535
-		// (get) Token: 0x0600E12F RID: 57647 RVA: 0x0014B13A File Offset: 0x0014933A
-		// (set) Token: 0x0600E130 RID: 57648 RVA: 0x0014B14A File Offset: 0x0014934A
+		// Token: 0x170007BD RID: 1981
+		// (get) Token: 0x0600367B RID: 13947 RVA: 0x0004CD9E File Offset: 0x0004AF9E
+		// (set) Token: 0x0600367C RID: 13948 RVA: 0x0004CDAE File Offset: 0x0004AFAE
 		public unsafe float LightFalloffExponent
 		{
 			get
@@ -88,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034E0 RID: 13536
-		// (get) Token: 0x0600E131 RID: 57649 RVA: 0x0014B15B File Offset: 0x0014935B
-		// (set) Token: 0x0600E132 RID: 57650 RVA: 0x0014B16B File Offset: 0x0014936B
+		// Token: 0x170007BE RID: 1982
+		// (get) Token: 0x0600367D RID: 13949 RVA: 0x0004CDBF File Offset: 0x0004AFBF
+		// (set) Token: 0x0600367E RID: 13950 RVA: 0x0004CDCF File Offset: 0x0004AFCF
 		public unsafe float SourceRadius
 		{
 			get
@@ -103,9 +103,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034E1 RID: 13537
-		// (get) Token: 0x0600E133 RID: 57651 RVA: 0x0014B17C File Offset: 0x0014937C
-		// (set) Token: 0x0600E134 RID: 57652 RVA: 0x0014B18C File Offset: 0x0014938C
+		// Token: 0x170007BF RID: 1983
+		// (get) Token: 0x0600367F RID: 13951 RVA: 0x0004CDE0 File Offset: 0x0004AFE0
+		// (set) Token: 0x06003680 RID: 13952 RVA: 0x0004CDF0 File Offset: 0x0004AFF0
 		public unsafe float SoftSourceRadius
 		{
 			get
@@ -118,9 +118,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034E2 RID: 13538
-		// (get) Token: 0x0600E135 RID: 57653 RVA: 0x0014B19D File Offset: 0x0014939D
-		// (set) Token: 0x0600E136 RID: 57654 RVA: 0x0014B1AD File Offset: 0x001493AD
+		// Token: 0x170007C0 RID: 1984
+		// (get) Token: 0x06003681 RID: 13953 RVA: 0x0004CE01 File Offset: 0x0004B001
+		// (set) Token: 0x06003682 RID: 13954 RVA: 0x0004CE11 File Offset: 0x0004B011
 		public unsafe float SourceLength
 		{
 			get
@@ -133,9 +133,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034E3 RID: 13539
-		// (get) Token: 0x0600E137 RID: 57655 RVA: 0x0014B1BE File Offset: 0x001493BE
-		// (set) Token: 0x0600E138 RID: 57656 RVA: 0x0014B1CE File Offset: 0x001493CE
+		// Token: 0x170007C1 RID: 1985
+		// (get) Token: 0x06003683 RID: 13955 RVA: 0x0004CE22 File Offset: 0x0004B022
+		// (set) Token: 0x06003684 RID: 13956 RVA: 0x0004CE32 File Offset: 0x0004B032
 		public unsafe bool bEnableRainLightParameter
 		{
 			get
@@ -148,9 +148,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034E4 RID: 13540
-		// (get) Token: 0x0600E139 RID: 57657 RVA: 0x0014B1DF File Offset: 0x001493DF
-		// (set) Token: 0x0600E13A RID: 57658 RVA: 0x0014B1EF File Offset: 0x001493EF
+		// Token: 0x170007C2 RID: 1986
+		// (get) Token: 0x06003685 RID: 13957 RVA: 0x0004CE43 File Offset: 0x0004B043
+		// (set) Token: 0x06003686 RID: 13958 RVA: 0x0004CE53 File Offset: 0x0004B053
 		public unsafe float SourceRadius_Rain
 		{
 			get
@@ -163,9 +163,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034E5 RID: 13541
-		// (get) Token: 0x0600E13B RID: 57659 RVA: 0x0014B200 File Offset: 0x00149400
-		// (set) Token: 0x0600E13C RID: 57660 RVA: 0x0014B210 File Offset: 0x00149410
+		// Token: 0x170007C3 RID: 1987
+		// (get) Token: 0x06003687 RID: 13959 RVA: 0x0004CE64 File Offset: 0x0004B064
+		// (set) Token: 0x06003688 RID: 13960 RVA: 0x0004CE74 File Offset: 0x0004B074
 		public unsafe float SoftSourceRadius_Rain
 		{
 			get
@@ -178,9 +178,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034E6 RID: 13542
-		// (get) Token: 0x0600E13D RID: 57661 RVA: 0x0014B221 File Offset: 0x00149421
-		// (set) Token: 0x0600E13E RID: 57662 RVA: 0x0014B231 File Offset: 0x00149431
+		// Token: 0x170007C4 RID: 1988
+		// (get) Token: 0x06003689 RID: 13961 RVA: 0x0004CE85 File Offset: 0x0004B085
+		// (set) Token: 0x0600368A RID: 13962 RVA: 0x0004CE95 File Offset: 0x0004B095
 		public unsafe float SourceLength_Rain
 		{
 			get
@@ -193,9 +193,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034E7 RID: 13543
-		// (get) Token: 0x0600E13F RID: 57663 RVA: 0x0014B242 File Offset: 0x00149442
-		// (set) Token: 0x0600E140 RID: 57664 RVA: 0x0014B25B File Offset: 0x0014945B
+		// Token: 0x170007C5 RID: 1989
+		// (get) Token: 0x0600368B RID: 13963 RVA: 0x0004CEA6 File Offset: 0x0004B0A6
+		// (set) Token: 0x0600368C RID: 13964 RVA: 0x0004CEBF File Offset: 0x0004B0BF
 		public unsafe bool bCastSpecialPrimShadow
 		{
 			get
@@ -208,9 +208,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034E8 RID: 13544
-		// (get) Token: 0x0600E141 RID: 57665 RVA: 0x0014B28B File Offset: 0x0014948B
-		// (set) Token: 0x0600E142 RID: 57666 RVA: 0x0014B29B File Offset: 0x0014949B
+		// Token: 0x170007C6 RID: 1990
+		// (get) Token: 0x0600368D RID: 13965 RVA: 0x0004CEEF File Offset: 0x0004B0EF
+		// (set) Token: 0x0600368E RID: 13966 RVA: 0x0004CEFF File Offset: 0x0004B0FF
 		public unsafe bool bExcludeFromTODLightManager
 		{
 			get
@@ -223,9 +223,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034E9 RID: 13545
-		// (get) Token: 0x0600E143 RID: 57667 RVA: 0x0014B2AC File Offset: 0x001494AC
-		// (set) Token: 0x0600E144 RID: 57668 RVA: 0x0014B2BC File Offset: 0x001494BC
+		// Token: 0x170007C7 RID: 1991
+		// (get) Token: 0x0600368F RID: 13967 RVA: 0x0004CF10 File Offset: 0x0004B110
+		// (set) Token: 0x06003690 RID: 13968 RVA: 0x0004CF20 File Offset: 0x0004B120
 		public unsafe bool bKuroMirrorAttenuation
 		{
 			get
@@ -238,9 +238,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034EA RID: 13546
-		// (get) Token: 0x0600E145 RID: 57669 RVA: 0x0014B2CD File Offset: 0x001494CD
-		// (set) Token: 0x0600E146 RID: 57670 RVA: 0x0014B2DD File Offset: 0x001494DD
+		// Token: 0x170007C8 RID: 1992
+		// (get) Token: 0x06003691 RID: 13969 RVA: 0x0004CF31 File Offset: 0x0004B131
+		// (set) Token: 0x06003692 RID: 13970 RVA: 0x0004CF41 File Offset: 0x0004B141
 		public unsafe float KuroAttenuationNearDist
 		{
 			get
@@ -253,9 +253,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034EB RID: 13547
-		// (get) Token: 0x0600E147 RID: 57671 RVA: 0x0014B2EE File Offset: 0x001494EE
-		// (set) Token: 0x0600E148 RID: 57672 RVA: 0x0014B2FE File Offset: 0x001494FE
+		// Token: 0x170007C9 RID: 1993
+		// (get) Token: 0x06003693 RID: 13971 RVA: 0x0004CF52 File Offset: 0x0004B152
+		// (set) Token: 0x06003694 RID: 13972 RVA: 0x0004CF62 File Offset: 0x0004B162
 		public unsafe float KuroAttenuationNearBlur
 		{
 			get
@@ -268,24 +268,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034EC RID: 13548
-		// (get) Token: 0x0600E149 RID: 57673 RVA: 0x0014B30F File Offset: 0x0014950F
-		// (set) Token: 0x0600E14A RID: 57674 RVA: 0x0014B31F File Offset: 0x0014951F
-		public unsafe EKuroLightAttenuationShape KuroLightAttenuationShape
-		{
-			get
-			{
-				return (EKuroLightAttenuationShape)(*(base.NativePtr + (IntPtr)UPointLightComponent.__PropertyOffset_KuroLightAttenuationShape));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UPointLightComponent.__PropertyOffset_KuroLightAttenuationShape) = (byte)value;
-			}
-		}
-
-		// Token: 0x170034ED RID: 13549
-		// (get) Token: 0x0600E14B RID: 57675 RVA: 0x0014B330 File Offset: 0x00149530
-		// (set) Token: 0x0600E14C RID: 57676 RVA: 0x0014B340 File Offset: 0x00149540
+		// Token: 0x170007CA RID: 1994
+		// (get) Token: 0x06003695 RID: 13973 RVA: 0x0004CF73 File Offset: 0x0004B173
+		// (set) Token: 0x06003696 RID: 13974 RVA: 0x0004CF83 File Offset: 0x0004B183
 		public unsafe float KuroConeSize
 		{
 			get
@@ -298,9 +283,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034EE RID: 13550
-		// (get) Token: 0x0600E14D RID: 57677 RVA: 0x0014B351 File Offset: 0x00149551
-		// (set) Token: 0x0600E14E RID: 57678 RVA: 0x0014B361 File Offset: 0x00149561
+		// Token: 0x170007CB RID: 1995
+		// (get) Token: 0x06003697 RID: 13975 RVA: 0x0004CF94 File Offset: 0x0004B194
+		// (set) Token: 0x06003698 RID: 13976 RVA: 0x0004CFA4 File Offset: 0x0004B1A4
 		public unsafe float KuroConeBlurSize
 		{
 			get
@@ -313,9 +298,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034EF RID: 13551
-		// (get) Token: 0x0600E14F RID: 57679 RVA: 0x0014B372 File Offset: 0x00149572
-		// (set) Token: 0x0600E150 RID: 57680 RVA: 0x0014B382 File Offset: 0x00149582
+		// Token: 0x170007CC RID: 1996
+		// (get) Token: 0x06003699 RID: 13977 RVA: 0x0004CFB5 File Offset: 0x0004B1B5
+		// (set) Token: 0x0600369A RID: 13978 RVA: 0x0004CFC5 File Offset: 0x0004B1C5
 		public unsafe float KuroRectSize
 		{
 			get
@@ -328,9 +313,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170034F0 RID: 13552
-		// (get) Token: 0x0600E151 RID: 57681 RVA: 0x0014B393 File Offset: 0x00149593
-		// (set) Token: 0x0600E152 RID: 57682 RVA: 0x0014B3A3 File Offset: 0x001495A3
+		// Token: 0x170007CD RID: 1997
+		// (get) Token: 0x0600369B RID: 13979 RVA: 0x0004CFD6 File Offset: 0x0004B1D6
+		// (set) Token: 0x0600369C RID: 13980 RVA: 0x0004CFE6 File Offset: 0x0004B1E6
 		public unsafe float KuroRectBlurSize
 		{
 			get
@@ -343,144 +328,141 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600E153 RID: 57683 RVA: 0x0014B3B4 File Offset: 0x001495B4
+		// Token: 0x0600369D RID: 13981 RVA: 0x0004CFF7 File Offset: 0x0004B1F7
 		public void SetSourceRadius(float bNewValue)
 		{
 			UPointLightComponent.__SetSourceRadius_Internal(base.NativePtr, bNewValue);
 		}
 
-		// Token: 0x0600E154 RID: 57684 RVA: 0x0014B3C2 File Offset: 0x001495C2
+		// Token: 0x0600369E RID: 13982 RVA: 0x0004D005 File Offset: 0x0004B205
 		public void SetSourceLength(float NewValue)
 		{
 			UPointLightComponent.__SetSourceLength_Internal(base.NativePtr, NewValue);
 		}
 
-		// Token: 0x0600E155 RID: 57685 RVA: 0x0014B3D0 File Offset: 0x001495D0
+		// Token: 0x0600369F RID: 13983 RVA: 0x0004D013 File Offset: 0x0004B213
 		public void SetSoftSourceRadius(float bNewValue)
 		{
 			UPointLightComponent.__SetSoftSourceRadius_Internal(base.NativePtr, bNewValue);
 		}
 
-		// Token: 0x0600E156 RID: 57686 RVA: 0x0014B3DE File Offset: 0x001495DE
+		// Token: 0x060036A0 RID: 13984 RVA: 0x0004D021 File Offset: 0x0004B221
 		public void SetRainLerp(float NewValue)
 		{
 			UPointLightComponent.__SetRainLerp_Internal(base.NativePtr, NewValue);
 		}
 
-		// Token: 0x0600E157 RID: 57687 RVA: 0x0014B3EC File Offset: 0x001495EC
+		// Token: 0x060036A1 RID: 13985 RVA: 0x0004D02F File Offset: 0x0004B22F
 		public void SetLightFalloffExponent(float NewLightFalloffExponent)
 		{
 			UPointLightComponent.__SetLightFalloffExponent_Internal(base.NativePtr, NewLightFalloffExponent);
 		}
 
-		// Token: 0x0600E158 RID: 57688
+		// Token: 0x060036A2 RID: 13986
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSourceRadius_Internal(IntPtr @this, float bNewValue);
 
-		// Token: 0x0600E159 RID: 57689
+		// Token: 0x060036A3 RID: 13987
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSourceLength_Internal(IntPtr @this, float NewValue);
 
-		// Token: 0x0600E15A RID: 57690
+		// Token: 0x060036A4 RID: 13988
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSoftSourceRadius_Internal(IntPtr @this, float bNewValue);
 
-		// Token: 0x0600E15B RID: 57691
+		// Token: 0x060036A5 RID: 13989
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetRainLerp_Internal(IntPtr @this, float NewValue);
 
-		// Token: 0x0600E15C RID: 57692
+		// Token: 0x060036A6 RID: 13990
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLightFalloffExponent_Internal(IntPtr @this, float NewLightFalloffExponent);
 
-		// Token: 0x0600E15D RID: 57693 RVA: 0x0014B3FA File Offset: 0x001495FA
+		// Token: 0x060036A7 RID: 13991 RVA: 0x0004D03D File Offset: 0x0004B23D
 		static UPointLightComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.PointLightComponent");
 		}
 
-		// Token: 0x0600E15E RID: 57694 RVA: 0x0014B408 File Offset: 0x00149608
+		// Token: 0x060036A8 RID: 13992 RVA: 0x0004D04B File Offset: 0x0004B24B
 		protected UPointLightComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040078EB RID: 30955
+		// Token: 0x040012BD RID: 4797
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.PointLightComponent";
 
-		// Token: 0x040078EC RID: 30956
+		// Token: 0x040012BE RID: 4798
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040078ED RID: 30957
+		// Token: 0x040012BF RID: 4799
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040078EE RID: 30958
+		// Token: 0x040012C0 RID: 4800
 		internal static int __PropertyOffset_PointLightShadowDistance;
 
-		// Token: 0x040078EF RID: 30959
+		// Token: 0x040012C1 RID: 4801
 		internal static int __PropertyOffset_PointShadowFadeDistancePercent;
 
-		// Token: 0x040078F0 RID: 30960
+		// Token: 0x040012C2 RID: 4802
 		internal static int __PropertyOffset_bUseInverseSquaredFalloff;
 
-		// Token: 0x040078F1 RID: 30961
+		// Token: 0x040012C3 RID: 4803
 		internal static byte __PropertyMask_bUseInverseSquaredFalloff;
 
-		// Token: 0x040078F2 RID: 30962
+		// Token: 0x040012C4 RID: 4804
 		internal static int __PropertyOffset_LightFalloffExponent;
 
-		// Token: 0x040078F3 RID: 30963
+		// Token: 0x040012C5 RID: 4805
 		internal static int __PropertyOffset_SourceRadius;
 
-		// Token: 0x040078F4 RID: 30964
+		// Token: 0x040012C6 RID: 4806
 		internal static int __PropertyOffset_SoftSourceRadius;
 
-		// Token: 0x040078F5 RID: 30965
+		// Token: 0x040012C7 RID: 4807
 		internal static int __PropertyOffset_SourceLength;
 
-		// Token: 0x040078F6 RID: 30966
+		// Token: 0x040012C8 RID: 4808
 		internal static int __PropertyOffset_bEnableRainLightParameter;
 
-		// Token: 0x040078F7 RID: 30967
+		// Token: 0x040012C9 RID: 4809
 		internal static int __PropertyOffset_SourceRadius_Rain;
 
-		// Token: 0x040078F8 RID: 30968
+		// Token: 0x040012CA RID: 4810
 		internal static int __PropertyOffset_SoftSourceRadius_Rain;
 
-		// Token: 0x040078F9 RID: 30969
+		// Token: 0x040012CB RID: 4811
 		internal static int __PropertyOffset_SourceLength_Rain;
 
-		// Token: 0x040078FA RID: 30970
+		// Token: 0x040012CC RID: 4812
 		internal static int __PropertyOffset_bCastSpecialPrimShadow;
 
-		// Token: 0x040078FB RID: 30971
+		// Token: 0x040012CD RID: 4813
 		internal static byte __PropertyMask_bCastSpecialPrimShadow;
 
-		// Token: 0x040078FC RID: 30972
+		// Token: 0x040012CE RID: 4814
 		internal static int __PropertyOffset_bExcludeFromTODLightManager;
 
-		// Token: 0x040078FD RID: 30973
+		// Token: 0x040012CF RID: 4815
 		internal static int __PropertyOffset_bKuroMirrorAttenuation;
 
-		// Token: 0x040078FE RID: 30974
+		// Token: 0x040012D0 RID: 4816
 		internal static int __PropertyOffset_KuroAttenuationNearDist;
 
-		// Token: 0x040078FF RID: 30975
+		// Token: 0x040012D1 RID: 4817
 		internal static int __PropertyOffset_KuroAttenuationNearBlur;
 
-		// Token: 0x04007900 RID: 30976
-		internal static int __PropertyOffset_KuroLightAttenuationShape;
-
-		// Token: 0x04007901 RID: 30977
+		// Token: 0x040012D2 RID: 4818
 		internal static int __PropertyOffset_KuroConeSize;
 
-		// Token: 0x04007902 RID: 30978
+		// Token: 0x040012D3 RID: 4819
 		internal static int __PropertyOffset_KuroConeBlurSize;
 
-		// Token: 0x04007903 RID: 30979
+		// Token: 0x040012D4 RID: 4820
 		internal static int __PropertyOffset_KuroRectSize;
 
-		// Token: 0x04007904 RID: 30980
+		// Token: 0x040012D5 RID: 4821
 		internal static int __PropertyOffset_KuroRectBlurSize;
 	}
 }

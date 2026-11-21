@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -31,13 +30,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x0200205F RID: 8287
+// Token: 0x02001532 RID: 5426
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class LevelPlayController : ControllerWithAssistantBase
 {
-	// Token: 0x060104BF RID: 66751 RVA: 0x003F8FFC File Offset: 0x003F71FC
+	// Token: 0x0600D927 RID: 55591 RVA: 0x00405568 File Offset: 0x00403768
 	protected override void OnRegisterNetEvent()
 	{
 		base.OnRegisterNetEvent();
@@ -51,7 +50,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		Net.Instance.Register(ENotifyMessageId.LevelPlayerRewardHintNotify, new Action<IMessage, Net.CallbackStatus>(this.OnLevelPlayerRewardHintNotify));
 	}
 
-	// Token: 0x060104C0 RID: 66752 RVA: 0x003F90F0 File Offset: 0x003F72F0
+	// Token: 0x0600D928 RID: 55592 RVA: 0x0040565C File Offset: 0x0040385C
 	protected override void OnUnRegisterNetEvent()
 	{
 		base.OnUnRegisterNetEvent();
@@ -65,7 +64,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		Net.Instance.UnRegister(ENotifyMessageId.LevelPlayerRewardHintNotify);
 	}
 
-	// Token: 0x060104C1 RID: 66753 RVA: 0x003F9184 File Offset: 0x003F7384
+	// Token: 0x0600D929 RID: 55593 RVA: 0x004056F0 File Offset: 0x004038F0
 	protected override void OnAddEvents()
 	{
 		base.OnAddEvents();
@@ -75,7 +74,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 	}
 
-	// Token: 0x060104C2 RID: 66754 RVA: 0x003F9208 File Offset: 0x003F7408
+	// Token: 0x0600D92A RID: 55594 RVA: 0x00405774 File Offset: 0x00403974
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<Entity, global::Vector, bool>(EEventName.AnyCharGravityDirectChanged, new Action<Entity, global::Vector, bool>(this.OnAnyCharGravityDirectChanged));
@@ -85,13 +84,13 @@ public class LevelPlayController : ControllerWithAssistantBase
 		base.OnRemoveEvents();
 	}
 
-	// Token: 0x060104C3 RID: 66755 RVA: 0x003F928B File Offset: 0x003F748B
+	// Token: 0x0600D92B RID: 55595 RVA: 0x004057F7 File Offset: 0x004039F7
 	protected override void RegisterAssistant()
 	{
 		base.AddAssistant(0, new GuideLineAssistant(new <>z__ReadOnlySingleElementList<BtType>(BtType.LevelPlay)));
 	}
 
-	// Token: 0x060104C4 RID: 66756 RVA: 0x003F92A0 File Offset: 0x003F74A0
+	// Token: 0x0600D92C RID: 55596 RVA: 0x0040580C File Offset: 0x00403A0C
 	[NullableContext(2)]
 	private GuideLineAssistant GetAssistant(LevelPlayController.EAssistantType type)
 	{
@@ -107,14 +106,14 @@ public class LevelPlayController : ControllerWithAssistantBase
 		return controllerAssistantBase as GuideLineAssistant;
 	}
 
-	// Token: 0x060104C5 RID: 66757 RVA: 0x003F92CF File Offset: 0x003F74CF
+	// Token: 0x0600D92D RID: 55597 RVA: 0x0040583B File Offset: 0x00403A3B
 	protected override bool OnInit()
 	{
 		base.InitTickOptimize(60, 120);
 		return base.OnInit();
 	}
 
-	// Token: 0x060104C6 RID: 66758 RVA: 0x003F92E1 File Offset: 0x003F74E1
+	// Token: 0x0600D92E RID: 55598 RVA: 0x0040584D File Offset: 0x00403A4D
 	protected override void OnTick(float delta)
 	{
 		if (!GeneralLogicTreeModel.Instance.IsWakeUp)
@@ -131,7 +130,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		assistant.Tick(delta);
 	}
 
-	// Token: 0x060104C7 RID: 66759 RVA: 0x003F9310 File Offset: 0x003F7510
+	// Token: 0x0600D92F RID: 55599 RVA: 0x0040587C File Offset: 0x00403A7C
 	private void UpdateLevelPlayTrack()
 	{
 		global::Vector playerLocation = GeneralLogicTreeUtil.Instance.GetPlayerLocation();
@@ -255,7 +254,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		instance.SetTrackLevelPlayId(trackLevelPlayId2);
 	}
 
-	// Token: 0x060104C8 RID: 66760 RVA: 0x003F9578 File Offset: 0x003F7778
+	// Token: 0x0600D930 RID: 55600 RVA: 0x00405AE4 File Offset: 0x00403CE4
 	private void UpdateBoundLevelPlayTrack()
 	{
 		global::Vector playerLocation = GeneralLogicTreeUtil.Instance.GetPlayerLocation();
@@ -399,7 +398,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		instance.SetTrackBoundLevelPlayId(trackBoundLevelPlayId2);
 	}
 
-	// Token: 0x060104C9 RID: 66761 RVA: 0x003F9800 File Offset: 0x003F7A00
+	// Token: 0x0600D931 RID: 55601 RVA: 0x00405D6C File Offset: 0x00403F6C
 	[NullableContext(2)]
 	private unsafe void OnLevelPlayInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -426,7 +425,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104CA RID: 66762 RVA: 0x003F997C File Offset: 0x003F7B7C
+	// Token: 0x0600D932 RID: 55602 RVA: 0x00405EE8 File Offset: 0x004040E8
 	[NullableContext(2)]
 	private void OnLevelPlayFirstNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -462,7 +461,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 	}
 
-	// Token: 0x060104CB RID: 66763 RVA: 0x003F9A9C File Offset: 0x003F7C9C
+	// Token: 0x0600D933 RID: 55603 RVA: 0x00406008 File Offset: 0x00404208
 	[NullableContext(2)]
 	private void OnPlayInstShareFirstInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -472,7 +471,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104CC RID: 66764 RVA: 0x003F9AFC File Offset: 0x003F7CFC
+	// Token: 0x0600D934 RID: 55604 RVA: 0x00406068 File Offset: 0x00404268
 	[NullableContext(2)]
 	private void OnLevelPlayStateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -518,7 +517,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104CD RID: 66765 RVA: 0x003F9BE0 File Offset: 0x003F7DE0
+	// Token: 0x0600D935 RID: 55605 RVA: 0x0040614C File Offset: 0x0040434C
 	[NullableContext(2)]
 	private void OnEnterLevelPlayNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -543,7 +542,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		EventSystem.Instance.Emit<int>(EEventName.OnEnterLevelPlayNotify, id);
 	}
 
-	// Token: 0x060104CE RID: 66766 RVA: 0x003F9CD0 File Offset: 0x003F7ED0
+	// Token: 0x0600D936 RID: 55606 RVA: 0x0040623C File Offset: 0x0040443C
 	[NullableContext(2)]
 	private void OnLeaveLevelPlayNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -563,7 +562,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060104CF RID: 66767 RVA: 0x003F9D48 File Offset: 0x003F7F48
+	// Token: 0x0600D937 RID: 55607 RVA: 0x004062B4 File Offset: 0x004044B4
 	[NullableContext(2)]
 	private void OnLevelPlayerRewardHintNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -581,7 +580,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}));
 	}
 
-	// Token: 0x060104D0 RID: 66768 RVA: 0x003F9DB8 File Offset: 0x003F7FB8
+	// Token: 0x0600D938 RID: 55608 RVA: 0x00406324 File Offset: 0x00404524
 	[NullableContext(2)]
 	private void OnLevelPlayOpenTimeNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -590,7 +589,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		LevelPlayModel.Instance.SafeCreateLevelPlayInfo(id).UpdateRefreshTime(levelPlayOpenTimeNotify.OpenTime);
 	}
 
-	// Token: 0x060104D1 RID: 66769 RVA: 0x003F9DE9 File Offset: 0x003F7FE9
+	// Token: 0x0600D939 RID: 55609 RVA: 0x00406355 File Offset: 0x00404555
 	private void CancelLevelPlayTrack(int markId)
 	{
 		if (TrackModel.Instance.IsTracking(ETrackSource.SceneGameplay, markId))
@@ -604,7 +603,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104D2 RID: 66770 RVA: 0x003F9E20 File Offset: 0x003F8020
+	// Token: 0x0600D93A RID: 55610 RVA: 0x0040638C File Offset: 0x0040458C
 	public void ReceiveReward(long creatureDataId, int playId)
 	{
 		LevelPlayController.<>c__DisplayClass21_0 CS$<>8__locals1 = new LevelPlayController.<>c__DisplayClass21_0();
@@ -678,27 +677,36 @@ public class LevelPlayController : ControllerWithAssistantBase
 			}
 		}
 		FunctionModel instance = FunctionModel.Instance;
-		if (!item && !flag2 && instance.IsOpen(EFunctionType.PowerMagnificationReward))
+		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("MultiExchangeLevelPlayType");
+		bool flag3 = false;
+		if (intArrayConfig != null)
 		{
-			IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("MultiExchangeLevelPlayType");
-			if (intArrayConfig != null && intArrayConfig.Contains(CS$<>8__locals1.levelPlayInfo.LevelPlayTypeNumber))
+			for (int i = 0; i < intArrayConfig.Count; i++)
 			{
-				PowerMagnificationRewardPopViewData powerMagnificationRewardPopViewData = new PowerMagnificationRewardPopViewData
+				if (intArrayConfig[i] == CS$<>8__locals1.levelPlayInfo.LevelPlayTypeNumber)
 				{
-					SinglePowerCost = CS$<>8__locals1.costPower,
-					RewardCallBack = delegate(int count)
-					{
-						CS$<>8__locals1.<>4__this.RequestReceiveReward(CS$<>8__locals1.creatureDataId, count, CS$<>8__locals1.levelPlayInfo);
-					},
-					NeedResetLevelPlayModelRewardFlag = new bool?(true)
-				};
-				if (flag && activityDoubleRewardData != null)
-				{
-					powerMagnificationRewardPopViewData.Tip = activityDoubleRewardData.GetFullTip();
+					flag3 = true;
+					break;
 				}
-				UiManager.Instance.OpenView(EUiViewName.PowerMagnificationRewardPopView, powerMagnificationRewardPopViewData, null);
-				return;
 			}
+		}
+		if (!item && !flag2 && instance.IsOpen(EFunctionType.PowerMagnificationReward) && flag3)
+		{
+			PowerMagnificationRewardPopViewData powerMagnificationRewardPopViewData = new PowerMagnificationRewardPopViewData
+			{
+				SinglePowerCost = CS$<>8__locals1.costPower,
+				RewardCallBack = delegate(int count)
+				{
+					CS$<>8__locals1.<>4__this.RequestReceiveReward(CS$<>8__locals1.creatureDataId, count, CS$<>8__locals1.levelPlayInfo);
+				},
+				NeedResetLevelPlayModelRewardFlag = new bool?(true)
+			};
+			if (flag && activityDoubleRewardData != null)
+			{
+				powerMagnificationRewardPopViewData.Tip = activityDoubleRewardData.GetFullTip();
+			}
+			UiManager.Instance.OpenView(EUiViewName.PowerMagnificationRewardPopView, powerMagnificationRewardPopViewData, null);
+			return;
 		}
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ReceiveLevelPlayReward)
 		{
@@ -770,7 +778,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060104D3 RID: 66771 RVA: 0x003FA21C File Offset: 0x003F841C
+	// Token: 0x0600D93B RID: 55611 RVA: 0x004067AC File Offset: 0x004049AC
 	private int GetRestartBattleInteractIndex(CreatureDataComponent creatureDataComponent)
 	{
 		IEntityData pbEntityInitData = creatureDataComponent.GetPbEntityInitData();
@@ -798,7 +806,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		return -1;
 	}
 
-	// Token: 0x060104D4 RID: 66772 RVA: 0x003FA2BC File Offset: 0x003F84BC
+	// Token: 0x0600D93C RID: 55612 RVA: 0x0040684C File Offset: 0x00404A4C
 	public void RequestReceiveReward(long creatureDataId, int exchangeCount, global::LevelPlayInfo levelPlayInfo)
 	{
 		LevelPlayRewardRequest levelPlayRewardRequest = LevelPlayRewardRequest.Create();
@@ -819,7 +827,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}, 0);
 	}
 
-	// Token: 0x060104D5 RID: 66773 RVA: 0x003FA328 File Offset: 0x003F8528
+	// Token: 0x0600D93D RID: 55613 RVA: 0x004068B8 File Offset: 0x00404AB8
 	private bool CheckPowerEnough(int costPower)
 	{
 		if (!PowerModel.Instance.IsPowerEnough(new int?(costPower)))
@@ -832,7 +840,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		return true;
 	}
 
-	// Token: 0x060104D6 RID: 66774 RVA: 0x003FA380 File Offset: 0x003F8580
+	// Token: 0x0600D93E RID: 55614 RVA: 0x00406910 File Offset: 0x00404B10
 	private void OnAnyCharGravityDirectChanged(Entity entity, global::Vector newGravityDirect, bool isStandardGravity)
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -847,13 +855,13 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104D7 RID: 66775 RVA: 0x003FA3CF File Offset: 0x003F85CF
+	// Token: 0x0600D93F RID: 55615 RVA: 0x0040695F File Offset: 0x00404B5F
 	private void OnUpdateSceneTeam()
 	{
 		this.ProcessAllItems();
 	}
 
-	// Token: 0x060104D8 RID: 66776 RVA: 0x003FA3D8 File Offset: 0x003F85D8
+	// Token: 0x0600D940 RID: 55616 RVA: 0x00406968 File Offset: 0x00404B68
 	private void ProcessAllItems()
 	{
 		UKuroLevelPlaySubsystem ukuroLevelPlaySubsystem = UKuroRenderingRuntimeBPPluginBPLibrary.GetSubsystem(GlobalData.World, UKuroLevelPlaySubsystem.StaticClass()) as UKuroLevelPlaySubsystem;
@@ -863,7 +871,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104D9 RID: 66777 RVA: 0x003FA410 File Offset: 0x003F8610
+	// Token: 0x0600D941 RID: 55617 RVA: 0x004069A0 File Offset: 0x00404BA0
 	private UniTask TryBatchAbsorbPhantom(List<int> entityIds)
 	{
 		LevelPlayController.<TryBatchAbsorbPhantom>d__28 <TryBatchAbsorbPhantom>d__;
@@ -874,7 +882,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		return <TryBatchAbsorbPhantom>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060104DA RID: 66778 RVA: 0x003FA454 File Offset: 0x003F8654
+	// Token: 0x0600D942 RID: 55618 RVA: 0x004069E4 File Offset: 0x00404BE4
 	private void ExecuteAbsorbPhantom(global::LevelPlayInfo levelPlayInfo, float deltaTime = -1f)
 	{
 		List<int> list = new List<int>();
@@ -903,7 +911,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		this.TryBatchAbsorbPhantom(list);
 	}
 
-	// Token: 0x060104DB RID: 66779 RVA: 0x003FA55C File Offset: 0x003F875C
+	// Token: 0x0600D943 RID: 55619 RVA: 0x00406AEC File Offset: 0x00404CEC
 	private void RestrictEntityTagThenRelayEvent([Nullable(2)] AActor actor, FGameplayTagContainer gameplayTags, FGameplayTagContainer restrictGameplayTags)
 	{
 		if (restrictGameplayTags.GameplayTags.Num() > 0)
@@ -934,19 +942,19 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104DC RID: 66780 RVA: 0x003FA61D File Offset: 0x003F881D
+	// Token: 0x0600D944 RID: 55620 RVA: 0x00406BAD File Offset: 0x00404DAD
 	private void OnSpecificTagActorBeginOverlap([Nullable(2)] AActor selfActor, [Nullable(2)] AActor otherActor, FGameplayTagContainer gameplayTags, FGameplayTagContainer restrictGameplayTags)
 	{
 		this.RestrictEntityTagThenRelayEvent(otherActor, gameplayTags, restrictGameplayTags);
 	}
 
-	// Token: 0x060104DD RID: 66781 RVA: 0x003FA629 File Offset: 0x003F8829
+	// Token: 0x0600D945 RID: 55621 RVA: 0x00406BB9 File Offset: 0x00404DB9
 	private void OnSpecificTagActorHit([Nullable(2)] AActor selfActor, [Nullable(2)] AActor otherActor, FVector normalImpulse, FHitResult hitResult, FGameplayTagContainer gameplayTags, FGameplayTagContainer restrictGameplayTags)
 	{
 		this.RestrictEntityTagThenRelayEvent(otherActor, gameplayTags, restrictGameplayTags);
 	}
 
-	// Token: 0x060104DE RID: 66782 RVA: 0x003FA638 File Offset: 0x003F8838
+	// Token: 0x0600D946 RID: 55622 RVA: 0x00406BC8 File Offset: 0x00404DC8
 	private void OnWorldDone()
 	{
 		UKuroLevelPlaySubsystem ukuroLevelPlaySubsystem = UKuroRenderingRuntimeBPPluginBPLibrary.GetSubsystem(Global.BaseCharacter, UKuroLevelPlaySubsystem.StaticClass()) as UKuroLevelPlaySubsystem;
@@ -959,7 +967,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104DF RID: 66783 RVA: 0x003FA6B0 File Offset: 0x003F88B0
+	// Token: 0x0600D947 RID: 55623 RVA: 0x00406C40 File Offset: 0x00404E40
 	private void OnCharOnRoleDead(int entityId)
 	{
 		int creaturePbDataId = CreatureModel.Instance.GetCreaturePbDataId(entityId);
@@ -1002,7 +1010,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104E0 RID: 66784 RVA: 0x003FA878 File Offset: 0x003F8A78
+	// Token: 0x0600D948 RID: 55624 RVA: 0x00406E08 File Offset: 0x00405008
 	private void EnableRangeAbsorbPhantom(global::LevelPlayInfo levelPlayInfo)
 	{
 		if (levelPlayInfo.Children == null)
@@ -1054,7 +1062,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104E1 RID: 66785 RVA: 0x003FAA90 File Offset: 0x003F8C90
+	// Token: 0x0600D949 RID: 55625 RVA: 0x00407020 File Offset: 0x00405220
 	private void DisableRangeAbsorbPhantom(global::LevelPlayInfo levelPlayInfo)
 	{
 		Dictionary<int, NightmareKillInfo> nightmareLevelPlayInfos = LevelPlayModel.Instance.NightmareLevelPlayInfos;
@@ -1068,7 +1076,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104E2 RID: 66786 RVA: 0x003FAACC File Offset: 0x003F8CCC
+	// Token: 0x0600D94A RID: 55626 RVA: 0x0040705C File Offset: 0x0040525C
 	private void ClearRangeAbsorbPhantom(global::LevelPlayInfo levelPlayInfo)
 	{
 		Dictionary<int, NightmareKillInfo> nightmareLevelPlayInfos = LevelPlayModel.Instance.NightmareLevelPlayInfos;
@@ -1079,7 +1087,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		nightmareLevelPlayInfos.Remove(levelPlayInfo.Id);
 	}
 
-	// Token: 0x060104E3 RID: 66787 RVA: 0x003FAAEC File Offset: 0x003F8CEC
+	// Token: 0x0600D94B RID: 55627 RVA: 0x0040707C File Offset: 0x0040527C
 	private void OnEntityInOutRangeLocal(global::LevelPlayInfo levelPlayInfo, bool isEnter, EntityHandle handle)
 	{
 		if (handle == null || !handle.Valid)
@@ -1098,7 +1106,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104E4 RID: 66788 RVA: 0x003FAB34 File Offset: 0x003F8D34
+	// Token: 0x0600D94C RID: 55628 RVA: 0x004070C4 File Offset: 0x004052C4
 	private unsafe void RegisterPlayerRange(global::LevelPlayInfo levelPlayInfo)
 	{
 		int playerActiveFuncRangeEntity = levelPlayInfo.RangeAbsorbPhantom.PlayerActiveFuncRangeEntity;
@@ -1131,7 +1139,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		});
 	}
 
-	// Token: 0x060104E5 RID: 66789 RVA: 0x003FAC4C File Offset: 0x003F8E4C
+	// Token: 0x0600D94D RID: 55629 RVA: 0x004071DC File Offset: 0x004053DC
 	private void RegisterNightmareRangeEntity(global::LevelPlayInfo levelPlayInfo)
 	{
 		if (!(levelPlayInfo.LevelPlayType != ELevelPlayType.NightmareSpawnPoint) && levelPlayInfo.RangeAbsorbPhantom != null)
@@ -1172,7 +1180,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104E6 RID: 66790 RVA: 0x003FAD54 File Offset: 0x003F8F54
+	// Token: 0x0600D94E RID: 55630 RVA: 0x004072E4 File Offset: 0x004054E4
 	private void UnRegisterNightmareRangeEntity(global::LevelPlayInfo levelPlayInfo)
 	{
 		Dictionary<int, WaitEntityTask> nightmareLevelPlayWaitEntityTask = LevelPlayModel.Instance.NightmareLevelPlayWaitEntityTask;
@@ -1185,7 +1193,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		this.ClearRangeAbsorbPhantom(levelPlayInfo);
 	}
 
-	// Token: 0x060104E7 RID: 66791 RVA: 0x003FADB0 File Offset: 0x003F8FB0
+	// Token: 0x0600D94F RID: 55631 RVA: 0x00407340 File Offset: 0x00405540
 	public void LogReportMotorcycleLevelPlay(int pbDataId, EMotorcycleLevelPlayType levelPlayType, bool? drivingMotorcycle, int result = 2, int interactionCount = 1)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -1214,8 +1222,8 @@ public class LevelPlayController : ControllerWithAssistantBase
 		LogReportController.Instance.LogReport(exploreEntityLogEvent);
 	}
 
-	// Token: 0x17001419 RID: 5145
-	// (get) Token: 0x060104E8 RID: 66792 RVA: 0x003FAECA File Offset: 0x003F90CA
+	// Token: 0x17001446 RID: 5190
+	// (get) Token: 0x0600D950 RID: 55632 RVA: 0x0040745A File Offset: 0x0040565A
 	public static LevelPlayController Instance
 	{
 		get
@@ -1224,7 +1232,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x060104E9 RID: 66793 RVA: 0x003FAED1 File Offset: 0x003F90D1
+	// Token: 0x0600D951 RID: 55633 RVA: 0x00407461 File Offset: 0x00405661
 	public static LevelPlayController GetOrCreateInstance()
 	{
 		if (LevelPlayController._Instance == null)
@@ -1234,7 +1242,7 @@ public class LevelPlayController : ControllerWithAssistantBase
 		return LevelPlayController._Instance;
 	}
 
-	// Token: 0x060104EA RID: 66794 RVA: 0x003FAEE5 File Offset: 0x003F90E5
+	// Token: 0x0600D952 RID: 55634 RVA: 0x00407475 File Offset: 0x00405675
 	public static bool CreateInstance()
 	{
 		if (LevelPlayController._Instance != null)
@@ -1245,35 +1253,35 @@ public class LevelPlayController : ControllerWithAssistantBase
 		return true;
 	}
 
-	// Token: 0x060104EB RID: 66795 RVA: 0x003FAEFB File Offset: 0x003F90FB
+	// Token: 0x0600D953 RID: 55635 RVA: 0x0040748B File Offset: 0x0040568B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060104EC RID: 66796 RVA: 0x003FAEFD File Offset: 0x003F90FD
+	// Token: 0x0600D954 RID: 55636 RVA: 0x0040748D File Offset: 0x0040568D
 	public static void ResetStaticDefaultValue()
 	{
 		LevelPlayController._Instance = null;
 	}
 
-	// Token: 0x060104ED RID: 66797 RVA: 0x003FAF05 File Offset: 0x003F9105
+	// Token: 0x0600D955 RID: 55637 RVA: 0x00407495 File Offset: 0x00405695
 	static LevelPlayController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LevelPlayController.CreateStaticDefaultValue), new Action(LevelPlayController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400787C RID: 30844
+	// Token: 0x04007965 RID: 31077
 	private const int WAIT_ENTITY_OVER_TIME = 90000;
 
-	// Token: 0x0400787D RID: 30845
+	// Token: 0x04007966 RID: 31078
 	[Nullable(2)]
 	private static LevelPlayController _Instance;
 
-	// Token: 0x02008650 RID: 34384
+	// Token: 0x020077D7 RID: 30679
 	[NullableContext(0)]
 	private enum EAssistantType
 	{
-		// Token: 0x0402BB60 RID: 179040
+		// Token: 0x04026E6F RID: 159343
 		GuideLine
 	}
 }

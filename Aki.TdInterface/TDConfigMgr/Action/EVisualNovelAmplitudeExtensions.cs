@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020024A1 RID: 9377
+	// Token: 0x02002744 RID: 10052
 	public static class EVisualNovelAmplitudeExtensions
 	{
-		// Token: 0x0600CB53 RID: 52051 RVA: 0x001DEE44 File Offset: 0x001DD044
+		// Token: 0x0600D80C RID: 55308 RVA: 0x001F900C File Offset: 0x001F720C
 		public static string ToEnumString(this EVisualNovelAmplitude value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB54 RID: 52052 RVA: 0x001DEE8C File Offset: 0x001DD08C
+		// Token: 0x0600D80D RID: 55309 RVA: 0x001F9054 File Offset: 0x001F7254
 		public static EVisualNovelAmplitude FromString(string name)
 		{
 			EVisualNovelAmplitude result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB55 RID: 52053 RVA: 0x001DEEB8 File Offset: 0x001DD0B8
+		// Token: 0x0600D80E RID: 55310 RVA: 0x001F9080 File Offset: 0x001F7280
 		public static bool TryFromString(string name, out EVisualNovelAmplitude value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CB56 RID: 52054 RVA: 0x001DEF0E File Offset: 0x001DD10E
+		// Token: 0x0600D80F RID: 55311 RVA: 0x001F90D6 File Offset: 0x001F72D6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CB57 RID: 52055 RVA: 0x001DEF2E File Offset: 0x001DD12E
+		// Token: 0x0600D810 RID: 55312 RVA: 0x001F90F6 File Offset: 0x001F72F6
 		public static EVisualNovelAmplitude[] GetValues()
 		{
 			return new EVisualNovelAmplitude[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CB58 RID: 52056 RVA: 0x001DEF3E File Offset: 0x001DD13E
+		// Token: 0x0600D811 RID: 55313 RVA: 0x001F9106 File Offset: 0x001F7306
 		public static string[] GetNames()
 		{
 			return new string[]

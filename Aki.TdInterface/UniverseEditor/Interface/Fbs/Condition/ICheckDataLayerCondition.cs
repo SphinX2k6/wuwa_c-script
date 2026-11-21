@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049C4 RID: 18884
+	// Token: 0x02004E81 RID: 20097
 	public struct ICheckDataLayerCondition : IFlatbufferObject
 	{
-		// Token: 0x17008887 RID: 34951
-		// (get) Token: 0x0601D7B2 RID: 120754 RVA: 0x00427056 File Offset: 0x00425256
+		// Token: 0x17008F50 RID: 36688
+		// (get) Token: 0x0601F20B RID: 127499 RVA: 0x00457A32 File Offset: 0x00455C32
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D7B3 RID: 120755 RVA: 0x00427063 File Offset: 0x00425263
+		// Token: 0x0601F20C RID: 127500 RVA: 0x00457A3F File Offset: 0x00455C3F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D7B4 RID: 120756 RVA: 0x0042706C File Offset: 0x0042526C
+		// Token: 0x0601F20D RID: 127501 RVA: 0x00457A48 File Offset: 0x00455C48
 		public static ICheckDataLayerCondition GetRootAsICheckDataLayerCondition(ByteBuffer _bb)
 		{
 			return ICheckDataLayerCondition.GetRootAsICheckDataLayerCondition(_bb, default(ICheckDataLayerCondition));
 		}
 
-		// Token: 0x0601D7B5 RID: 120757 RVA: 0x00427088 File Offset: 0x00425288
+		// Token: 0x0601F20E RID: 127502 RVA: 0x00457A64 File Offset: 0x00455C64
 		public static ICheckDataLayerCondition GetRootAsICheckDataLayerCondition(ByteBuffer _bb, ICheckDataLayerCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D7B6 RID: 120758 RVA: 0x004270A5 File Offset: 0x004252A5
+		// Token: 0x0601F20F RID: 127503 RVA: 0x00457A81 File Offset: 0x00455C81
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D7B7 RID: 120759 RVA: 0x004270B4 File Offset: 0x004252B4
+		// Token: 0x0601F210 RID: 127504 RVA: 0x00457A90 File Offset: 0x00455C90
 		public ICheckDataLayerCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008888 RID: 34952
-		// (get) Token: 0x0601D7B8 RID: 120760 RVA: 0x004270C4 File Offset: 0x004252C4
+		// Token: 0x17008F51 RID: 36689
+		// (get) Token: 0x0601F211 RID: 127505 RVA: 0x00457AA0 File Offset: 0x00455CA0
 		public int DataLayerId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008889 RID: 34953
-		// (get) Token: 0x0601D7B9 RID: 120761 RVA: 0x00427100 File Offset: 0x00425300
+		// Token: 0x17008F52 RID: 36690
+		// (get) Token: 0x0601F212 RID: 127506 RVA: 0x00457ADC File Offset: 0x00455CDC
 		public bool IsLoad
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700888A RID: 34954
-		// (get) Token: 0x0601D7BA RID: 120762 RVA: 0x00427140 File Offset: 0x00425340
+		// Token: 0x17008F53 RID: 36691
+		// (get) Token: 0x0601F213 RID: 127507 RVA: 0x00457B1C File Offset: 0x00455D1C
 		public ECondition Type
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D7BB RID: 120763 RVA: 0x0042717C File Offset: 0x0042537C
+		// Token: 0x0601F214 RID: 127508 RVA: 0x00457B58 File Offset: 0x00455D58
 		public static Offset<ICheckDataLayerCondition> CreateICheckDataLayerCondition(FlatBufferBuilder builder, int DataLayerId = 0, bool IsLoad = false, ECondition Type = ECondition.CompareVar)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckDataLayerCondition.EndICheckDataLayerCondition(builder);
 		}
 
-		// Token: 0x0601D7BC RID: 120764 RVA: 0x004271A0 File Offset: 0x004253A0
+		// Token: 0x0601F215 RID: 127509 RVA: 0x00457B7C File Offset: 0x00455D7C
 		public static void StartICheckDataLayerCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601D7BD RID: 120765 RVA: 0x004271A9 File Offset: 0x004253A9
+		// Token: 0x0601F216 RID: 127510 RVA: 0x00457B85 File Offset: 0x00455D85
 		public static void AddDataLayerId(FlatBufferBuilder builder, int dataLayerId)
 		{
 			builder.AddInt(0, dataLayerId, 0);
 		}
 
-		// Token: 0x0601D7BE RID: 120766 RVA: 0x004271B4 File Offset: 0x004253B4
+		// Token: 0x0601F217 RID: 127511 RVA: 0x00457B90 File Offset: 0x00455D90
 		public static void AddIsLoad(FlatBufferBuilder builder, bool isLoad)
 		{
 			builder.AddBool(1, isLoad, false);
 		}
 
-		// Token: 0x0601D7BF RID: 120767 RVA: 0x004271BF File Offset: 0x004253BF
+		// Token: 0x0601F218 RID: 127512 RVA: 0x00457B9B File Offset: 0x00455D9B
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(2, (byte)type, 0);
 		}
 
-		// Token: 0x0601D7C0 RID: 120768 RVA: 0x004271CA File Offset: 0x004253CA
+		// Token: 0x0601F219 RID: 127513 RVA: 0x00457BA6 File Offset: 0x00455DA6
 		public static Offset<ICheckDataLayerCondition> EndICheckDataLayerCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckDataLayerCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601D7C1 RID: 120769 RVA: 0x004271D8 File Offset: 0x004253D8
+		// Token: 0x0601F21A RID: 127514 RVA: 0x00457BB4 File Offset: 0x00455DB4
 		public ICheckDataLayerConditionT UnPack()
 		{
 			ICheckDataLayerConditionT checkDataLayerConditionT = new ICheckDataLayerConditionT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkDataLayerConditionT;
 		}
 
-		// Token: 0x0601D7C2 RID: 120770 RVA: 0x004271F3 File Offset: 0x004253F3
+		// Token: 0x0601F21B RID: 127515 RVA: 0x00457BCF File Offset: 0x00455DCF
 		public void UnPackTo(ICheckDataLayerConditionT _o)
 		{
 			_o.DataLayerId = this.DataLayerId;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601D7C3 RID: 120771 RVA: 0x0042721C File Offset: 0x0042541C
+		// Token: 0x0601F21C RID: 127516 RVA: 0x00457BF8 File Offset: 0x00455DF8
 		public static Offset<ICheckDataLayerCondition> Pack(FlatBufferBuilder builder, ICheckDataLayerConditionT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckDataLayerCondition.CreateICheckDataLayerCondition(builder, _o.DataLayerId, _o.IsLoad, _o.Type);
 		}
 
-		// Token: 0x0400D1EC RID: 53740
+		// Token: 0x0400DCBC RID: 56508
 		private Table __p;
 	}
 }

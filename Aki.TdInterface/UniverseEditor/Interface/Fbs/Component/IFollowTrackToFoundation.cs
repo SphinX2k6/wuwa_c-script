@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052B2 RID: 21170
+	// Token: 0x0200581D RID: 22557
 	public struct IFollowTrackToFoundation : IFlatbufferObject
 	{
-		// Token: 0x17009B3B RID: 39739
-		// (get) Token: 0x06022837 RID: 141367 RVA: 0x004C8B96 File Offset: 0x004C6D96
+		// Token: 0x1700A344 RID: 41796
+		// (get) Token: 0x060247FB RID: 149499 RVA: 0x00503C92 File Offset: 0x00501E92
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022838 RID: 141368 RVA: 0x004C8BA3 File Offset: 0x004C6DA3
+		// Token: 0x060247FC RID: 149500 RVA: 0x00503C9F File Offset: 0x00501E9F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022839 RID: 141369 RVA: 0x004C8BAC File Offset: 0x004C6DAC
+		// Token: 0x060247FD RID: 149501 RVA: 0x00503CA8 File Offset: 0x00501EA8
 		public static IFollowTrackToFoundation GetRootAsIFollowTrackToFoundation(ByteBuffer _bb)
 		{
 			return IFollowTrackToFoundation.GetRootAsIFollowTrackToFoundation(_bb, default(IFollowTrackToFoundation));
 		}
 
-		// Token: 0x0602283A RID: 141370 RVA: 0x004C8BC8 File Offset: 0x004C6DC8
+		// Token: 0x060247FE RID: 149502 RVA: 0x00503CC4 File Offset: 0x00501EC4
 		public static IFollowTrackToFoundation GetRootAsIFollowTrackToFoundation(ByteBuffer _bb, IFollowTrackToFoundation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602283B RID: 141371 RVA: 0x004C8BE5 File Offset: 0x004C6DE5
+		// Token: 0x060247FF RID: 149503 RVA: 0x00503CE1 File Offset: 0x00501EE1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602283C RID: 141372 RVA: 0x004C8BF4 File Offset: 0x004C6DF4
+		// Token: 0x06024800 RID: 149504 RVA: 0x00503CF0 File Offset: 0x00501EF0
 		public IFollowTrackToFoundation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009B3C RID: 39740
-		// (get) Token: 0x0602283D RID: 141373 RVA: 0x004C8C04 File Offset: 0x004C6E04
+		// Token: 0x1700A345 RID: 41797
+		// (get) Token: 0x06024801 RID: 149505 RVA: 0x00503D00 File Offset: 0x00501F00
 		public EFollowTrackEndType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B3D RID: 39741
-		// (get) Token: 0x0602283E RID: 141374 RVA: 0x004C8C40 File Offset: 0x004C6E40
+		// Token: 0x1700A346 RID: 41798
+		// (get) Token: 0x06024802 RID: 149506 RVA: 0x00503D3C File Offset: 0x00501F3C
 		public int FoundationId
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B3E RID: 39742
-		// (get) Token: 0x0602283F RID: 141375 RVA: 0x004C8C7C File Offset: 0x004C6E7C
+		// Token: 0x1700A347 RID: 41799
+		// (get) Token: 0x06024803 RID: 149507 RVA: 0x00503D78 File Offset: 0x00501F78
 		public IVectorInfo? FinalOffset
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022840 RID: 141376 RVA: 0x004C8CD9 File Offset: 0x004C6ED9
+		// Token: 0x06024804 RID: 149508 RVA: 0x00503DD5 File Offset: 0x00501FD5
 		public static Offset<IFollowTrackToFoundation> CreateIFollowTrackToFoundation(FlatBufferBuilder builder, EFollowTrackEndType Type = EFollowTrackEndType.ToStart, int FoundationId = 0, Offset<IVectorInfo> FinalOffsetOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFollowTrackToFoundation.EndIFollowTrackToFoundation(builder);
 		}
 
-		// Token: 0x06022841 RID: 141377 RVA: 0x004C8CFD File Offset: 0x004C6EFD
+		// Token: 0x06024805 RID: 149509 RVA: 0x00503DF9 File Offset: 0x00501FF9
 		public static void StartIFollowTrackToFoundation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06022842 RID: 141378 RVA: 0x004C8D06 File Offset: 0x004C6F06
+		// Token: 0x06024806 RID: 149510 RVA: 0x00503E02 File Offset: 0x00502002
 		public static void AddType(FlatBufferBuilder builder, EFollowTrackEndType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06022843 RID: 141379 RVA: 0x004C8D11 File Offset: 0x004C6F11
+		// Token: 0x06024807 RID: 149511 RVA: 0x00503E0D File Offset: 0x0050200D
 		public static void AddFoundationId(FlatBufferBuilder builder, int foundationId)
 		{
 			builder.AddInt(1, foundationId, 0);
 		}
 
-		// Token: 0x06022844 RID: 141380 RVA: 0x004C8D1C File Offset: 0x004C6F1C
+		// Token: 0x06024808 RID: 149512 RVA: 0x00503E18 File Offset: 0x00502018
 		public static void AddFinalOffset(FlatBufferBuilder builder, Offset<IVectorInfo> finalOffsetOffset)
 		{
 			builder.AddOffset(2, finalOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x06022845 RID: 141381 RVA: 0x004C8D2C File Offset: 0x004C6F2C
+		// Token: 0x06024809 RID: 149513 RVA: 0x00503E28 File Offset: 0x00502028
 		public static Offset<IFollowTrackToFoundation> EndIFollowTrackToFoundation(FlatBufferBuilder builder)
 		{
 			return new Offset<IFollowTrackToFoundation>(builder.EndTable());
 		}
 
-		// Token: 0x06022846 RID: 141382 RVA: 0x004C8D3C File Offset: 0x004C6F3C
+		// Token: 0x0602480A RID: 149514 RVA: 0x00503E38 File Offset: 0x00502038
 		public IFollowTrackToFoundationT UnPack()
 		{
 			IFollowTrackToFoundationT followTrackToFoundationT = new IFollowTrackToFoundationT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return followTrackToFoundationT;
 		}
 
-		// Token: 0x06022847 RID: 141383 RVA: 0x004C8D58 File Offset: 0x004C6F58
+		// Token: 0x0602480B RID: 149515 RVA: 0x00503E54 File Offset: 0x00502054
 		public void UnPackTo(IFollowTrackToFoundationT _o)
 		{
 			_o.Type = this.Type;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.FinalOffset = ((this.FinalOffset != null) ? this.FinalOffset.Value.UnPack() : null);
 		}
 
-		// Token: 0x06022848 RID: 141384 RVA: 0x004C8DAC File Offset: 0x004C6FAC
+		// Token: 0x0602480C RID: 149516 RVA: 0x00503EA8 File Offset: 0x005020A8
 		public static Offset<IFollowTrackToFoundation> Pack(FlatBufferBuilder builder, IFollowTrackToFoundationT _o)
 		{
 			if (_o == null)
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFollowTrackToFoundation.CreateIFollowTrackToFoundation(builder, _o.Type, _o.FoundationId, finalOffsetOffset);
 		}
 
-		// Token: 0x0400E432 RID: 58418
+		// Token: 0x0400F03F RID: 61503
 		private Table __p;
 	}
 }

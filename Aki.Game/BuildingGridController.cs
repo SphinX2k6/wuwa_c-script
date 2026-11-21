@@ -1,34 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x0200171C RID: 5916
+// Token: 0x02000BD4 RID: 3028
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class BuildingGridController : ControllerBase
 {
-	// Token: 0x0600AAD4 RID: 43732 RVA: 0x0026646D File Offset: 0x0026466D
+	// Token: 0x06007EB7 RID: 32439 RVA: 0x002709BD File Offset: 0x0026EBBD
 	protected override bool OnInit()
 	{
-		Net.Instance.Register(ENotifyMessageId.GridCellUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnGridCellUpdateNotify));
+		Net instance = Net.Instance;
+		ENotifyMessageId id = ENotifyMessageId.GridCellUpdateNotify;
+		Action<IMessage, Net.CallbackStatus> callback;
+		if ((callback = BuildingGridController.<>O.<0>__OnGridCellUpdateNotify) == null)
+		{
+			callback = (BuildingGridController.<>O.<0>__OnGridCellUpdateNotify = new Action<IMessage, Net.CallbackStatus>(BuildingGridController.OnGridCellUpdateNotify));
+		}
+		instance.Register(id, callback);
 		return true;
 	}
 
-	// Token: 0x0600AAD5 RID: 43733 RVA: 0x0026648C File Offset: 0x0026468C
+	// Token: 0x06007EB8 RID: 32440 RVA: 0x002709EB File Offset: 0x0026EBEB
 	protected override bool OnClear()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.GridCellUpdateNotify);
 		return true;
 	}
 
-	// Token: 0x0600AAD6 RID: 43734 RVA: 0x002664A0 File Offset: 0x002646A0
+	// Token: 0x06007EB9 RID: 32441 RVA: 0x00270A00 File Offset: 0x0026EC00
 	[NullableContext(2)]
-	private void OnGridCellUpdateNotify(IMessage msg, Net.CallbackStatus _)
+	private static void OnGridCellUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		GridCellUpdateNotify gridCellUpdateNotify = (GridCellUpdateNotify)msg;
 		if (gridCellUpdateNotify != null)
@@ -37,83 +43,21 @@ public class BuildingGridController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600AAD7 RID: 43735 RVA: 0x002664C4 File Offset: 0x002646C4
-	private void ForEachGridCell(global::Vector position, int radius, bool useDirMask, int dirMask, Action<string, FKuroBuildingGridCellVector, int> callback)
+	// Token: 0x06007EBA RID: 32442 RVA: 0x00270A24 File Offset: 0x0026EC24
+	private static void ForEachGridCell(global::Vector position, int radius, bool useDirMask, int dirMask, Action<string, FKuroBuildingGridCellVector, int> callback)
 	{
-		if (BuildingGridController.ForEachIntersectingCellMethod == null)
-		{
-			return;
-		}
-		ParameterInfo[] parameters = BuildingGridController.ForEachIntersectingCellMethod.GetParameters();
-		if (parameters.Length == 0)
-		{
-			return;
-		}
-		ParameterInfo[] array = parameters;
-		Type parameterType = array[array.Length - 1].ParameterType;
-		MethodInfo method = typeof(DelegateUtils).GetMethod("ToManualReleaseDelegate");
-		MethodInfo methodInfo = (method != null) ? method.MakeGenericMethod(new Type[]
-		{
-			parameterType
-		}) : null;
-		if (methodInfo == null)
-		{
-			return;
-		}
-		object obj = methodInfo.Invoke(null, new object[]
-		{
-			callback
-		});
-		try
-		{
-			object[] array2 = new object[]
-			{
-				GlobalData.World,
-				position.ToUeVector(false),
-				radius,
-				useDirMask,
-				dirMask,
-				obj
-			};
-			BuildingGridController.CoerceArgsToParameterTypes(array2, parameters);
-			BuildingGridController.ForEachIntersectingCellMethod.Invoke(null, array2);
-		}
-		finally
-		{
-			DelegateUtils.ReleaseManualReleaseDelegate(callback);
-		}
+		FKuroBuildingGridIntersectingCellDelegate fkuroBuildingGridIntersectingCellDelegate = new FKuroBuildingGridIntersectingCellDelegate();
+		fkuroBuildingGridIntersectingCellDelegate.Bind(callback);
+		UObject world = GlobalData.World;
+		FVectorDouble fvectorDouble = position.ToUeVector(false);
+		double num = (double)radius;
+		UKuroBuildingGridSubsystem.K2_ForEachIntersectingCell(world, fvectorDouble, num, useDirMask, dirMask, fkuroBuildingGridIntersectingCellDelegate);
 	}
 
-	// Token: 0x0600AAD8 RID: 43736 RVA: 0x002665B4 File Offset: 0x002647B4
-	private static void CoerceArgsToParameterTypes([Nullable(new byte[]
-	{
-		1,
-		2
-	})] object[] args, ParameterInfo[] parameters)
-	{
-		int num = Math.Min(args.Length, parameters.Length);
-		for (int i = 0; i < num; i++)
-		{
-			object obj = args[i];
-			if (obj != null)
-			{
-				Type type = parameters[i].ParameterType;
-				if (type.IsByRef)
-				{
-					type = type.GetElementType();
-				}
-				if (!(obj.GetType() == type) && obj is IConvertible && (type == typeof(double) || type == typeof(float) || type == typeof(int) || type == typeof(long)))
-				{
-					args[i] = Convert.ChangeType(obj, type);
-				}
-			}
-		}
-	}
-
-	// Token: 0x0600AAD9 RID: 43737 RVA: 0x0026666C File Offset: 0x0026486C
+	// Token: 0x06007EBB RID: 32443 RVA: 0x00270A5C File Offset: 0x0026EC5C
 	public void LandFireGrids(global::Vector position, int radius, bool clearCell, Action<string, FKuroBuildingGridCellVector> callback)
 	{
-		this.ForEachGridCell(position, radius, true, 1, delegate(string gridId, FKuroBuildingGridCellVector coords, int cellIndex)
+		BuildingGridController.ForEachGridCell(position, radius, true, 1, delegate(string gridId, FKuroBuildingGridCellVector coords, int cellIndex)
 		{
 			if (clearCell && BuildingGridModel.Instance.IsCellPolluted(gridId, cellIndex) > 0)
 			{
@@ -123,11 +67,11 @@ public class BuildingGridController : ControllerBase
 		});
 	}
 
-	// Token: 0x0600AADA RID: 43738 RVA: 0x002666A4 File Offset: 0x002648A4
+	// Token: 0x06007EBC RID: 32444 RVA: 0x00270A94 File Offset: 0x0026EC94
 	public List<GridPlacementPbInfo> PolluteGrids(global::Vector position, int radius)
 	{
 		List<GridPlacementPbInfo> gridCells = new List<GridPlacementPbInfo>();
-		this.ForEachGridCell(position, radius, true, 7, delegate(string gridId, FKuroBuildingGridCellVector coords, int cellIndex)
+		BuildingGridController.ForEachGridCell(position, radius, true, 7, delegate(string gridId, FKuroBuildingGridCellVector coords, int cellIndex)
 		{
 			if (BuildingGridModel.Instance.IsCellPolluted(gridId, cellIndex) > 0)
 			{
@@ -143,8 +87,8 @@ public class BuildingGridController : ControllerBase
 		return gridCells;
 	}
 
-	// Token: 0x17000E0A RID: 3594
-	// (get) Token: 0x0600AADB RID: 43739 RVA: 0x002666DE File Offset: 0x002648DE
+	// Token: 0x17000E2B RID: 3627
+	// (get) Token: 0x06007EBD RID: 32445 RVA: 0x00270ACD File Offset: 0x0026ECCD
 	public static BuildingGridController Instance
 	{
 		get
@@ -153,7 +97,7 @@ public class BuildingGridController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600AADC RID: 43740 RVA: 0x002666E5 File Offset: 0x002648E5
+	// Token: 0x06007EBE RID: 32446 RVA: 0x00270AD4 File Offset: 0x0026ECD4
 	public static BuildingGridController GetOrCreateInstance()
 	{
 		if (BuildingGridController._Instance == null)
@@ -163,7 +107,7 @@ public class BuildingGridController : ControllerBase
 		return BuildingGridController._Instance;
 	}
 
-	// Token: 0x0600AADD RID: 43741 RVA: 0x002666F9 File Offset: 0x002648F9
+	// Token: 0x06007EBF RID: 32447 RVA: 0x00270AE8 File Offset: 0x0026ECE8
 	public static bool CreateInstance()
 	{
 		if (BuildingGridController._Instance != null)
@@ -174,29 +118,38 @@ public class BuildingGridController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600AADE RID: 43742 RVA: 0x0026670F File Offset: 0x0026490F
+	// Token: 0x06007EC0 RID: 32448 RVA: 0x00270AFE File Offset: 0x0026ECFE
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600AADF RID: 43743 RVA: 0x00266711 File Offset: 0x00264911
+	// Token: 0x06007EC1 RID: 32449 RVA: 0x00270B00 File Offset: 0x0026ED00
 	public static void ResetStaticDefaultValue()
 	{
 		BuildingGridController._Instance = null;
 	}
 
-	// Token: 0x0600AAE0 RID: 43744 RVA: 0x00266719 File Offset: 0x00264919
+	// Token: 0x06007EC2 RID: 32450 RVA: 0x00270B08 File Offset: 0x0026ED08
 	static BuildingGridController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BuildingGridController.CreateStaticDefaultValue), new Action(BuildingGridController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004D84 RID: 19844
-	[Nullable(2)]
-	[StaticVariableRuleIgnore]
-	private static readonly MethodInfo ForEachIntersectingCellMethod = typeof(UKuroBuildingGridSubsystem).GetMethod("K2_ForEachIntersectingCell");
-
-	// Token: 0x04004D85 RID: 19845
+	// Token: 0x04004E2C RID: 20012
 	[Nullable(2)]
 	private static BuildingGridController _Instance;
+
+	// Token: 0x02006EA0 RID: 28320
+	[CompilerGenerated]
+	private static class <>O
+	{
+		// Token: 0x040242BE RID: 148158
+		[Nullable(new byte[]
+		{
+			0,
+			2,
+			2
+		})]
+		public static Action<IMessage, Net.CallbackStatus> <0>__OnGridCellUpdateNotify;
+	}
 }

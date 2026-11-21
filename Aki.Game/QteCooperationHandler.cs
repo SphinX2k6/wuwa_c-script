@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Fight.Struct;
 
-// Token: 0x02001700 RID: 5888
+// Token: 0x02000BB8 RID: 3000
 public class QteCooperationHandler : ICooperationHandler
 {
-	// Token: 0x0600A8DA RID: 43226 RVA: 0x002600AC File Offset: 0x0025E2AC
+	// Token: 0x06007CBA RID: 31930 RVA: 0x0026A4C8 File Offset: 0x002686C8
 	[NullableContext(1)]
 	public unsafe bool Trigger(SceneTeamItem goDownRole, SceneTeamItem goBattleRole)
 	{
@@ -49,7 +49,7 @@ public class QteCooperationHandler : ICooperationHandler
 		return !(flag2 ? qteTagData.ChangeRoleOnQte : qteTagData.ChangeRole);
 	}
 
-	// Token: 0x0600A8DB RID: 43227 RVA: 0x002601D7 File Offset: 0x0025E3D7
+	// Token: 0x06007CBB RID: 31931 RVA: 0x0026A5F3 File Offset: 0x002687F3
 	public void Clear()
 	{
 	}

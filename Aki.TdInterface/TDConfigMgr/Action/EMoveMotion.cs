@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001626 RID: 5670
+	// Token: 0x02001793 RID: 6035
 	[EnumExtensions]
 	public enum EMoveMotion
 	{
-		// Token: 0x04004C1B RID: 19483
+		// Token: 0x0400500F RID: 20495
 		UniformMotion,
-		// Token: 0x04004C1C RID: 19484
+		// Token: 0x04005010 RID: 20496
 		VariableMotion
 	}
 }

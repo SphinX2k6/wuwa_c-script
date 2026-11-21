@@ -11,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VehicleStream.StateMachineContainer
 {
-	// Token: 0x020048C0 RID: 18624
+	// Token: 0x02003837 RID: 14391
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VehicleTeamMember : StateMachineContainer
 	{
-		// Token: 0x1700797C RID: 31100
-		// (get) Token: 0x06030ACC RID: 199372 RVA: 0x00B4DD1E File Offset: 0x00B4BF1E
+		// Token: 0x17004CE4 RID: 19684
+		// (get) Token: 0x060255F8 RID: 153080 RVA: 0x00A88B26 File Offset: 0x00A86D26
 		public override EStateContainerType Type
 		{
 			get
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachineContainer
 			}
 		}
 
-		// Token: 0x1700797D RID: 31101
-		// (get) Token: 0x06030ACD RID: 199373 RVA: 0x00B4DD21 File Offset: 0x00B4BF21
+		// Token: 0x17004CE5 RID: 19685
+		// (get) Token: 0x060255F9 RID: 153081 RVA: 0x00A88B29 File Offset: 0x00A86D29
 		public override int Id
 		{
 			get
@@ -36,8 +36,8 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachineContainer
 			}
 		}
 
-		// Token: 0x1700797E RID: 31102
-		// (get) Token: 0x06030ACE RID: 199374 RVA: 0x00B4DD2E File Offset: 0x00B4BF2E
+		// Token: 0x17004CE6 RID: 19686
+		// (get) Token: 0x060255FA RID: 153082 RVA: 0x00A88B36 File Offset: 0x00A86D36
 		public int TeamId
 		{
 			get
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachineContainer
 			}
 		}
 
-		// Token: 0x06030ACF RID: 199375 RVA: 0x00B4DD3C File Offset: 0x00B4BF3C
+		// Token: 0x060255FB RID: 153083 RVA: 0x00A88B44 File Offset: 0x00A86D44
 		public VehicleTeamMember(int teamId, int memberId, long creatureDataId, int pbDataId, global::Vector startActorLocation, global::Rotator startActorRotator, global::Vector destinationLocation, int destRoadId, int destIndex, ITrafficNavigationConfig baseConfig, ITransportFindPathResult result)
 		{
 			UKuroTransportNetworkSubsystem transportSystem = TransportNetworkController.Instance.GetTransportSystem();
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachineContainer
 			this.BlackBoard = new VehicleSmBlackBoard(teamId, memberId, creatureDataId, pbDataId, startActorLocation, startActorRotator, destinationLocation, list, vector, vector3, destRoadId, destIndex, component, baseConfig, new VehicleSmBlackBoard.SwitchStateHandleType(this.SwitchState));
 		}
 
-		// Token: 0x06030AD0 RID: 199376 RVA: 0x00B4DE6C File Offset: 0x00B4C06C
+		// Token: 0x060255FC RID: 153084 RVA: 0x00A88C74 File Offset: 0x00A86E74
 		private void AddState<[Nullable(0)] T>(EVehicleStateType stateType, Func<VehicleSmBlackBoard, T> ctor) where T : VehicleStateBase
 		{
 			T t = ctor(this.BlackBoard);
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachineContainer
 			this.StateMachine.AddState(stateType, t);
 		}
 
-		// Token: 0x06030AD1 RID: 199377 RVA: 0x00B4DEA4 File Offset: 0x00B4C0A4
+		// Token: 0x060255FD RID: 153085 RVA: 0x00A88CAC File Offset: 0x00A86EAC
 		public void Init()
 		{
 			this.AddState<BornState>(EVehicleStateType.Born, (VehicleSmBlackBoard board) => new BornState(board));
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachineContainer
 			this.StateMachine.Start(EVehicleStateType.Born);
 		}
 
-		// Token: 0x06030AD2 RID: 199378 RVA: 0x00B4DF58 File Offset: 0x00B4C158
+		// Token: 0x060255FE RID: 153086 RVA: 0x00A88D60 File Offset: 0x00A86F60
 		public void Launch(USkeletalMeshComponent skeletalMeshComponent)
 		{
 			this.BlackBoard.SkeletalMeshComponent = skeletalMeshComponent;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachineContainer
 			this.BlackBoard.IsLaunch = true;
 		}
 
-		// Token: 0x06030AD3 RID: 199379 RVA: 0x00B4E060 File Offset: 0x00B4C260
+		// Token: 0x060255FF RID: 153087 RVA: 0x00A88E68 File Offset: 0x00A87068
 		public void Destroy()
 		{
 			this.StateMachine.Destroy();
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachineContainer
 			}
 		}
 
-		// Token: 0x06030AD4 RID: 199380 RVA: 0x00B4E0A4 File Offset: 0x00B4C2A4
+		// Token: 0x06025600 RID: 153088 RVA: 0x00A88EAC File Offset: 0x00A870AC
 		public void OnForceTick(float delta)
 		{
 			this.BlackBoard.TickNum++;
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachineContainer
 			UKismetSystemLibrary.D_DrawDebugString(world, textLocation, str + defaultInterpolatedStringHandler.ToStringAndClear(), null, new FLinearColor?(flinearColor), 0f);
 		}
 
-		// Token: 0x06030AD5 RID: 199381 RVA: 0x00B4E27C File Offset: 0x00B4C47C
+		// Token: 0x06025601 RID: 153089 RVA: 0x00A89084 File Offset: 0x00A87284
 		public void OnTick(ETickType tickType, float delta, int tickInterval)
 		{
 			if (this.BlackBoard.LastTickNum == this.BlackBoard.TickNum)
@@ -179,14 +179,14 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachineContainer
 			this.BlackBoard.LastTickNum = this.BlackBoard.TickNum;
 		}
 
-		// Token: 0x06030AD6 RID: 199382 RVA: 0x00B4E2FD File Offset: 0x00B4C4FD
+		// Token: 0x06025602 RID: 153090 RVA: 0x00A89105 File Offset: 0x00A87305
 		public void OnEnterPlayerRange()
 		{
 			this.BlackBoard.IsInPlayerRange = true;
 			this.StateMachine.OnEnterPlayerRange();
 		}
 
-		// Token: 0x06030AD7 RID: 199383 RVA: 0x00B4E318 File Offset: 0x00B4C518
+		// Token: 0x06025603 RID: 153091 RVA: 0x00A89120 File Offset: 0x00A87320
 		public void OnLeavePlayerRange()
 		{
 			this.BlackBoard.IsInPlayerRange = false;
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachineContainer
 			this.BlackBoard.AudioHandleSet.Clear();
 		}
 
-		// Token: 0x06030AD8 RID: 199384 RVA: 0x00B4E3A0 File Offset: 0x00B4C5A0
+		// Token: 0x06025604 RID: 153092 RVA: 0x00A891A8 File Offset: 0x00A873A8
 		private bool CheckWaitModelBuffer()
 		{
 			CSharpScript.Game.NewWorld.Common.Component.RoadNetworkNavigationComponent roadNetworkNavigationComponent = this.BlackBoard.RoadNetworkNavigationComponent;
@@ -216,95 +216,95 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachineContainer
 			return this.BlackBoard.WaitingModelBuffer;
 		}
 
-		// Token: 0x06030AD9 RID: 199385 RVA: 0x00B4E41E File Offset: 0x00B4C61E
+		// Token: 0x06025605 RID: 153093 RVA: 0x00A89226 File Offset: 0x00A87426
 		private void UpdateActorLocationAndRotation(ETickType tickType, float delta, int tickInterval)
 		{
 			this.BlackBoard.RoadNetworkNavigationComponent.SetLocationAndRotation(this.BlackBoard.DesireLocation.ToUeVector(false), this.BlackBoard.DesireRotator.ToUeRotator(), tickType, delta, tickInterval);
 		}
 
-		// Token: 0x06030ADA RID: 199386 RVA: 0x00B4E454 File Offset: 0x00B4C654
+		// Token: 0x06025606 RID: 153094 RVA: 0x00A8925C File Offset: 0x00A8745C
 		[NullableContext(2)]
 		private bool SwitchState(EVehicleStateType state, string reason = null)
 		{
 			return this.StateMachine.Switch(state, reason);
 		}
 
-		// Token: 0x06030ADB RID: 199387 RVA: 0x00B4E463 File Offset: 0x00B4C663
+		// Token: 0x06025607 RID: 153095 RVA: 0x00A8926B File Offset: 0x00A8746B
 		public float GetCurrentRootDistance()
 		{
 			return this.BlackBoard.CurrentRootDistance;
 		}
 
-		// Token: 0x06030ADC RID: 199388 RVA: 0x00B4E470 File Offset: 0x00B4C670
+		// Token: 0x06025608 RID: 153096 RVA: 0x00A89278 File Offset: 0x00A87478
 		public float GetCurrentMeshCenterDistance()
 		{
 			return this.BlackBoard.CurrentMeshCenterDistance;
 		}
 
-		// Token: 0x06030ADD RID: 199389 RVA: 0x00B4E47D File Offset: 0x00B4C67D
+		// Token: 0x06025609 RID: 153097 RVA: 0x00A89285 File Offset: 0x00A87485
 		public float GetCurrentMeshHeadDistance()
 		{
 			return this.BlackBoard.CurrentMeshHeadDistance;
 		}
 
-		// Token: 0x06030ADE RID: 199390 RVA: 0x00B4E48A File Offset: 0x00B4C68A
+		// Token: 0x0602560A RID: 153098 RVA: 0x00A89292 File Offset: 0x00A87492
 		public float GetCurrentMeshTailDistance()
 		{
 			return this.BlackBoard.CurrentMeshTailDistance;
 		}
 
-		// Token: 0x06030ADF RID: 199391 RVA: 0x00B4E497 File Offset: 0x00B4C697
+		// Token: 0x0602560B RID: 153099 RVA: 0x00A8929F File Offset: 0x00A8749F
 		public global::Vector GetRelativeLocation()
 		{
 			return this.BlackBoard.RelativeLocationToStart;
 		}
 
-		// Token: 0x06030AE0 RID: 199392 RVA: 0x00B4E4A4 File Offset: 0x00B4C6A4
+		// Token: 0x0602560C RID: 153100 RVA: 0x00A892AC File Offset: 0x00A874AC
 		public global::Vector GetDesireLocation()
 		{
 			return this.BlackBoard.DesireLocation;
 		}
 
-		// Token: 0x06030AE1 RID: 199393 RVA: 0x00B4E4B1 File Offset: 0x00B4C6B1
+		// Token: 0x0602560D RID: 153101 RVA: 0x00A892B9 File Offset: 0x00A874B9
 		public global::Rotator GetDesireRotator()
 		{
 			return this.BlackBoard.DesireRotator;
 		}
 
-		// Token: 0x06030AE2 RID: 199394 RVA: 0x00B4E4BE File Offset: 0x00B4C6BE
+		// Token: 0x0602560E RID: 153102 RVA: 0x00A892C6 File Offset: 0x00A874C6
 		public global::Vector GetVehicleSize()
 		{
 			return this.BlackBoard.VehicleSize;
 		}
 
-		// Token: 0x06030AE3 RID: 199395 RVA: 0x00B4E4CB File Offset: 0x00B4C6CB
+		// Token: 0x0602560F RID: 153103 RVA: 0x00A892D3 File Offset: 0x00A874D3
 		public float GetMeshCenterToTail()
 		{
 			return this.BlackBoard.MeshCenterToTail;
 		}
 
-		// Token: 0x06030AE4 RID: 199396 RVA: 0x00B4E4D8 File Offset: 0x00B4C6D8
+		// Token: 0x06025610 RID: 153104 RVA: 0x00A892E0 File Offset: 0x00A874E0
 		public float GetSpeed()
 		{
 			return this.BlackBoard.CurrentSpeed;
 		}
 
-		// Token: 0x06030AE5 RID: 199397 RVA: 0x00B4E4E5 File Offset: 0x00B4C6E5
+		// Token: 0x06025611 RID: 153105 RVA: 0x00A892ED File Offset: 0x00A874ED
 		public EEntityType? GetBlockTarget()
 		{
 			return this.BlackBoard.BlockTarget;
 		}
 
-		// Token: 0x06030AE6 RID: 199398 RVA: 0x00B4E4F2 File Offset: 0x00B4C6F2
+		// Token: 0x06025612 RID: 153106 RVA: 0x00A892FA File Offset: 0x00A874FA
 		public bool IsInBrakeState()
 		{
 			return this.StateMachine.GetCurrentState() == EVehicleStateType.Braking;
 		}
 
-		// Token: 0x0401A295 RID: 107157
+		// Token: 0x04014B08 RID: 84744
 		private readonly VehicleStateMachine StateMachine = new VehicleStateMachine();
 
-		// Token: 0x0401A296 RID: 107158
+		// Token: 0x04014B09 RID: 84745
 		[Nullable(2)]
 		private readonly VehicleSmBlackBoard BlackBoard;
 	}

@@ -1,16 +1,16 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003355 RID: 13141
+// Token: 0x020028C7 RID: 10439
 public class RedDotAdventureDailyActivityTabDaily : RedDotBase
 {
-	// Token: 0x0601C9CA RID: 117194 RVA: 0x00804DE7 File Offset: 0x00802FE7
+	// Token: 0x0601A6C2 RID: 108226 RVA: 0x0082B3AB File Offset: 0x008295AB
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.AdventureDailyActivityTab);
 	}
 
-	// Token: 0x0601C9CB RID: 117195 RVA: 0x00804DF0 File Offset: 0x00802FF0
+	// Token: 0x0601A6C3 RID: 108227 RVA: 0x0082B3B4 File Offset: 0x008295B4
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.DailyActivityRefresh, new Action(base.EventCheck));
@@ -19,7 +19,7 @@ public class RedDotAdventureDailyActivityTabDaily : RedDotBase
 		EventSystem.Instance.Add(EEventName.OnServerStorageInfoInited, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C9CC RID: 117196 RVA: 0x00804E70 File Offset: 0x00803070
+	// Token: 0x0601A6C4 RID: 108228 RVA: 0x0082B434 File Offset: 0x00829634
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.DailyActivityRefresh, new Action(base.EventCheck));
@@ -28,13 +28,13 @@ public class RedDotAdventureDailyActivityTabDaily : RedDotBase
 		EventSystem.Instance.Remove(EEventName.OnServerStorageInfoInited, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C9CD RID: 117197 RVA: 0x00804EED File Offset: 0x008030ED
+	// Token: 0x0601A6C5 RID: 108229 RVA: 0x0082B4B1 File Offset: 0x008296B1
 	private void OnDailyActivityMainTabOpened(int tab)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601C9CE RID: 117198 RVA: 0x00804EF8 File Offset: 0x008030F8
+	// Token: 0x0601A6C6 RID: 108230 RVA: 0x0082B4BC File Offset: 0x008296BC
 	protected override bool OnCheck(int uId = 0)
 	{
 		if (!FunctionModel.Instance.IsOpen(EFunctionType.AdventureGuide) || !FunctionModel.Instance.IsOpen(EFunctionType.DailyActivity))

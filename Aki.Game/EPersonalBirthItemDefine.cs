@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x020023C2 RID: 9154
+// Token: 0x020018A7 RID: 6311
 public enum EPersonalBirthItemDefine
 {
-	// Token: 0x04008A46 RID: 35398
+	// Token: 0x04008B8D RID: 35725
 	NumText
 }

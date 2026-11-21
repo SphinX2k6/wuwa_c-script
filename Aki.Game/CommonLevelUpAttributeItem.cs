@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020017F8 RID: 6136
+// Token: 0x02000CB1 RID: 3249
 [Nullable(new byte[]
 {
 	0,
@@ -12,7 +12,7 @@ using UnrealEngine;
 })]
 public class CommonLevelUpAttributeItem : GridProxyAbstract<IAttributeInfo>
 {
-	// Token: 0x0600B3B8 RID: 46008 RVA: 0x00289CBC File Offset: 0x00287EBC
+	// Token: 0x060087A2 RID: 34722 RVA: 0x002943B8 File Offset: 0x002925B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class CommonLevelUpAttributeItem : GridProxyAbstract<IAttributeInfo>
 		};
 	}
 
-	// Token: 0x0600B3B9 RID: 46009 RVA: 0x00289D44 File Offset: 0x00287F44
+	// Token: 0x060087A3 RID: 34723 RVA: 0x00294440 File Offset: 0x00292640
 	[NullableContext(1)]
 	public override void Refresh(IAttributeInfo data, bool isSelected, int gridIndex)
 	{
@@ -52,18 +52,18 @@ public class CommonLevelUpAttributeItem : GridProxyAbstract<IAttributeInfo>
 		base.GetText(3).SetUIActive(false);
 	}
 
-	// Token: 0x02007DF4 RID: 32244
+	// Token: 0x02006F7A RID: 28538
 	private enum EComponent
 	{
-		// Token: 0x0402938B RID: 168843
+		// Token: 0x040246B6 RID: 149174
 		AttributeText,
-		// Token: 0x0402938C RID: 168844
+		// Token: 0x040246B7 RID: 149175
 		BeforeText,
-		// Token: 0x0402938D RID: 168845
+		// Token: 0x040246B8 RID: 149176
 		ArrowItem,
-		// Token: 0x0402938E RID: 168846
+		// Token: 0x040246B9 RID: 149177
 		AfterText,
-		// Token: 0x0402938F RID: 168847
+		// Token: 0x040246BA RID: 149178
 		AttributeTexture
 	}
 }

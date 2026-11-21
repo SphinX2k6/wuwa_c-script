@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200189A RID: 6298
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A25 RID: 6693
 	public class ICipherGameplay : IUiGame
 	{
-		// Token: 0x0600873B RID: 34619 RVA: 0x00140BCC File Offset: 0x0013EDCC
+		// Token: 0x06008E63 RID: 36451 RVA: 0x00150400 File Offset: 0x0014E600
 		private ICipherGameplay_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600873C RID: 34620 RVA: 0x00140C04 File Offset: 0x0013EE04
+		// Token: 0x06008E64 RID: 36452 RVA: 0x00150438 File Offset: 0x0014E638
 		public static ICipherGameplay Create([Nullable(2)] ICipherGameplay instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600873D RID: 34621 RVA: 0x00140C17 File Offset: 0x0013EE17
+		// Token: 0x06008E65 RID: 36453 RVA: 0x0015044B File Offset: 0x0014E64B
 		public static ICipherGameplay CreateFromSetValue([Nullable(2)] ICipherGameplay_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600873E RID: 34622 RVA: 0x00140C2A File Offset: 0x0013EE2A
+		// Token: 0x06008E66 RID: 36454 RVA: 0x0015045E File Offset: 0x0014E65E
 		public new ICipherGameplay_SetValue ToSetValue()
 		{
 			return new ICipherGameplay_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C0B RID: 11275
-		// (get) Token: 0x0600873F RID: 34623 RVA: 0x00140C49 File Offset: 0x0013EE49
-		// (set) Token: 0x06008740 RID: 34624 RVA: 0x00140C74 File Offset: 0x0013EE74
+		// Token: 0x17002E06 RID: 11782
+		// (get) Token: 0x06008E67 RID: 36455 RVA: 0x0015047D File Offset: 0x0014E67D
+		// (set) Token: 0x06008E68 RID: 36456 RVA: 0x001504A8 File Offset: 0x0014E6A8
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C0C RID: 11276
-		// (get) Token: 0x06008741 RID: 34625 RVA: 0x00140C82 File Offset: 0x0013EE82
-		// (set) Token: 0x06008742 RID: 34626 RVA: 0x00140CAD File Offset: 0x0013EEAD
+		// Token: 0x17002E07 RID: 11783
+		// (get) Token: 0x06008E69 RID: 36457 RVA: 0x001504B6 File Offset: 0x0014E6B6
+		// (set) Token: 0x06008E6A RID: 36458 RVA: 0x001504E1 File Offset: 0x0014E6E1
 		public virtual string CipherId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005528 RID: 21800
+		// Token: 0x04005975 RID: 22901
 		[Nullable(2)]
 		protected new ICipherGameplay FbInstance;
 
-		// Token: 0x04005529 RID: 21801
+		// Token: 0x04005976 RID: 22902
 		[Nullable(2)]
 		protected new ICipherGameplay_SetValue PocoInterface;
 	}

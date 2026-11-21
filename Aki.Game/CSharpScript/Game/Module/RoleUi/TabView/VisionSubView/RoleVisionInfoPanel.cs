@@ -11,19 +11,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 {
-	// Token: 0x02004CF3 RID: 19699
+	// Token: 0x02003CA5 RID: 15525
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoleVisionInfoPanel : UiPanelBase
 	{
-		// Token: 0x06032E55 RID: 208469 RVA: 0x00BDC877 File Offset: 0x00BDAA77
+		// Token: 0x06027C30 RID: 162864 RVA: 0x00B2217F File Offset: 0x00B2037F
 		[NullableContext(1)]
 		public RoleVisionInfoPanel(UUIItem uiItem)
 		{
 			this.SourceItem = uiItem;
 		}
 
-		// Token: 0x06032E56 RID: 208470 RVA: 0x00BDC888 File Offset: 0x00BDAA88
+		// Token: 0x06027C31 RID: 162865 RVA: 0x00B22190 File Offset: 0x00B20390
 		public UniTask Init()
 		{
 			RoleVisionInfoPanel.<Init>d__7 <Init>d__;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032E57 RID: 208471 RVA: 0x00BDC8CC File Offset: 0x00BDAACC
+		// Token: 0x06027C32 RID: 162866 RVA: 0x00B221D4 File Offset: 0x00B203D4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			};
 		}
 
-		// Token: 0x06032E58 RID: 208472 RVA: 0x00BDC9EC File Offset: 0x00BDABEC
+		// Token: 0x06027C33 RID: 162867 RVA: 0x00B222F4 File Offset: 0x00B204F4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleVisionInfoPanel.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032E59 RID: 208473 RVA: 0x00BDCA2F File Offset: 0x00BDAC2F
+		// Token: 0x06027C34 RID: 162868 RVA: 0x00B22337 File Offset: 0x00B20537
 		protected override void OnStart()
 		{
 			this.VisionDetailDescComponent.SetActive(true);
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.AddEventListener();
 		}
 
-		// Token: 0x06032E5A RID: 208474 RVA: 0x00BDCA60 File Offset: 0x00BDAC60
+		// Token: 0x06027C35 RID: 162869 RVA: 0x00B22368 File Offset: 0x00B20568
 		private void BindRedDot()
 		{
 			if (!this.RedDotBindState)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032E5B RID: 208475 RVA: 0x00BDCA9D File Offset: 0x00BDAC9D
+		// Token: 0x06027C36 RID: 162870 RVA: 0x00B223A5 File Offset: 0x00B205A5
 		private void UnBindRedDot()
 		{
 			if (this.RedDotBindState)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032E5C RID: 208476 RVA: 0x00BDCAC2 File Offset: 0x00BDACC2
+		// Token: 0x06027C37 RID: 162871 RVA: 0x00B223CA File Offset: 0x00B205CA
 		public UUIItem GetTxtItemByIndex(int index)
 		{
 			VisionDetailDescComponent visionDetailDescComponent = this.VisionDetailDescComponent;
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			return visionDetailDescComponent.GetTxtItemByIndex(index);
 		}
 
-		// Token: 0x06032E5D RID: 208477 RVA: 0x00BDCAD8 File Offset: 0x00BDACD8
+		// Token: 0x06027C38 RID: 162872 RVA: 0x00B223E0 File Offset: 0x00B205E0
 		private void OnOneKeyDownEquipmentButton()
 		{
 			RoleDataBase roleInstance = this.RoleViewAgent.GetCurSelectRoleData();
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06032E5E RID: 208478 RVA: 0x00BDCB64 File Offset: 0x00BDAD64
+		// Token: 0x06027C39 RID: 162873 RVA: 0x00B2246C File Offset: 0x00B2066C
 		private void OnOneKeyUpEquipmentButton()
 		{
 			int curSelectRoleId = this.RoleViewAgent.GetCurSelectRoleId();
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			UiManager.Instance.OpenView(EUiViewName.VisionNewRecommendView, param, null);
 		}
 
-		// Token: 0x06032E5F RID: 208479 RVA: 0x00BDCBA4 File Offset: 0x00BDADA4
+		// Token: 0x06027C3A RID: 162874 RVA: 0x00B224AC File Offset: 0x00B206AC
 		private void OnClickMoreButton()
 		{
 			RoleDataBase curSelectRoleData = this.RoleViewAgent.GetCurSelectRoleData();
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			UiManager.Instance.OpenView(EUiViewName.RoleAttributeDetailView, extraAttrList, null);
 		}
 
-		// Token: 0x06032E60 RID: 208480 RVA: 0x00BDCBE3 File Offset: 0x00BDADE3
+		// Token: 0x06027C3B RID: 162875 RVA: 0x00B224EB File Offset: 0x00B206EB
 		private void OnClickConfirmButton()
 		{
 			Action onClickConfirmCall = this.OnClickConfirmCall;
@@ -162,14 +162,14 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			onClickConfirmCall();
 		}
 
-		// Token: 0x06032E61 RID: 208481 RVA: 0x00BDCBF5 File Offset: 0x00BDADF5
+		// Token: 0x06027C3C RID: 162876 RVA: 0x00B224FD File Offset: 0x00B206FD
 		[NullableContext(1)]
 		public void SetConfirmButtonCall(Action call)
 		{
 			this.OnClickConfirmCall = call;
 		}
 
-		// Token: 0x06032E62 RID: 208482 RVA: 0x00BDCC00 File Offset: 0x00BDAE00
+		// Token: 0x06027C3D RID: 162877 RVA: 0x00B22508 File Offset: 0x00B20708
 		public void RefreshButtonShowState()
 		{
 			bool flag = this.RoleViewAgent.GetCurSelectRoleData().IsTrialRole();
@@ -177,31 +177,31 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.RefreshOneKeyButtonState(!flag);
 		}
 
-		// Token: 0x06032E63 RID: 208483 RVA: 0x00BDCC34 File Offset: 0x00BDAE34
+		// Token: 0x06027C3E RID: 162878 RVA: 0x00B2253C File Offset: 0x00B2073C
 		public void RefreshConfirmButtonState(bool state)
 		{
 			base.GetButton(3).RootUIComp.Get().SetUIActive(state);
 		}
 
-		// Token: 0x06032E64 RID: 208484 RVA: 0x00BDCC5C File Offset: 0x00BDAE5C
+		// Token: 0x06027C3F RID: 162879 RVA: 0x00B22564 File Offset: 0x00B20764
 		public void RefreshOneKeyButtonState(bool state)
 		{
 			base.GetButton(5).RootUIComp.Get().SetUIActive(state);
 		}
 
-		// Token: 0x06032E65 RID: 208485 RVA: 0x00BDCC83 File Offset: 0x00BDAE83
+		// Token: 0x06027C40 RID: 162880 RVA: 0x00B2258B File Offset: 0x00B2078B
 		protected void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.PhantomEquip, new Action(this.OnPhantomEquip));
 		}
 
-		// Token: 0x06032E66 RID: 208486 RVA: 0x00BDCCA1 File Offset: 0x00BDAEA1
+		// Token: 0x06027C41 RID: 162881 RVA: 0x00B225A9 File Offset: 0x00B207A9
 		protected void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.PhantomEquip, new Action(this.OnPhantomEquip));
 		}
 
-		// Token: 0x06032E67 RID: 208487 RVA: 0x00BDCCBF File Offset: 0x00BDAEBF
+		// Token: 0x06027C42 RID: 162882 RVA: 0x00B225C7 File Offset: 0x00B207C7
 		[NullableContext(1)]
 		public void RefreshView(RoleViewAgent roleViewAgent)
 		{
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.RefreshUi();
 		}
 
-		// Token: 0x06032E68 RID: 208488 RVA: 0x00BDCCCE File Offset: 0x00BDAECE
+		// Token: 0x06027C43 RID: 162883 RVA: 0x00B225D6 File Offset: 0x00B207D6
 		private void RefreshUi()
 		{
 			this.RefreshAttribute();
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.BindRedDot();
 		}
 
-		// Token: 0x06032E69 RID: 208489 RVA: 0x00BDCCF4 File Offset: 0x00BDAEF4
+		// Token: 0x06027C44 RID: 162884 RVA: 0x00B225FC File Offset: 0x00B207FC
 		private void RefreshAttribute()
 		{
 			RoleDataBase curSelectRoleData = this.RoleViewAgent.GetCurSelectRoleData();
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.RoleVisionAttribute.Refresh(list2, true);
 		}
 
-		// Token: 0x06032E6A RID: 208490 RVA: 0x00BDCE04 File Offset: 0x00BDB004
+		// Token: 0x06027C45 RID: 162885 RVA: 0x00B2270C File Offset: 0x00B2090C
 		private void RefreshDetailComponent()
 		{
 			RoleDataBase curSelectRoleData = this.RoleViewAgent.GetCurSelectRoleData();
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.VisionDetailDescComponent.Refresh(list, false);
 		}
 
-		// Token: 0x06032E6B RID: 208491 RVA: 0x00BDCFD0 File Offset: 0x00BDB1D0
+		// Token: 0x06027C46 RID: 162886 RVA: 0x00B228D8 File Offset: 0x00B20AD8
 		private void RefreshOneKeyDownButtonState()
 		{
 			RoleDataBase curSelectRoleData = this.RoleViewAgent.GetCurSelectRoleData();
@@ -319,54 +319,54 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			base.GetButton(4).RootUIComp.Get().SetUIActive(num >= 1);
 		}
 
-		// Token: 0x06032E6C RID: 208492 RVA: 0x00BDD088 File Offset: 0x00BDB288
+		// Token: 0x06027C47 RID: 162887 RVA: 0x00B22990 File Offset: 0x00B20B90
 		private void OnPhantomEquip()
 		{
 			this.RefreshUi();
 		}
 
-		// Token: 0x06032E6D RID: 208493 RVA: 0x00BDD090 File Offset: 0x00BDB290
+		// Token: 0x06027C48 RID: 162888 RVA: 0x00B22998 File Offset: 0x00B20B98
 		protected override void OnBeforeDestroy()
 		{
 			this.UnBindRedDot();
 			this.RemoveEventListener();
 		}
 
-		// Token: 0x0401B119 RID: 110873
+		// Token: 0x04015A9E RID: 88734
 		private RoleViewAgent RoleViewAgent;
 
-		// Token: 0x0401B11A RID: 110874
+		// Token: 0x04015A9F RID: 88735
 		private RoleVisionAttribute RoleVisionAttribute;
 
-		// Token: 0x0401B11B RID: 110875
+		// Token: 0x04015AA0 RID: 88736
 		private VisionDetailDescComponent VisionDetailDescComponent;
 
-		// Token: 0x0401B11C RID: 110876
+		// Token: 0x04015AA1 RID: 88737
 		private Action OnClickConfirmCall;
 
-		// Token: 0x0401B11D RID: 110877
+		// Token: 0x04015AA2 RID: 88738
 		private readonly UUIItem SourceItem;
 
-		// Token: 0x0401B11E RID: 110878
+		// Token: 0x04015AA3 RID: 88739
 		private bool RedDotBindState;
 
-		// Token: 0x0200AE80 RID: 44672
+		// Token: 0x0200989E RID: 39070
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x04034FC6 RID: 217030
+			// Token: 0x0402F96E RID: 194926
 			AttributeItem,
-			// Token: 0x04034FC7 RID: 217031
+			// Token: 0x0402F96F RID: 194927
 			MoreButton,
-			// Token: 0x04034FC8 RID: 217032
+			// Token: 0x0402F970 RID: 194928
 			DetailContent,
-			// Token: 0x04034FC9 RID: 217033
+			// Token: 0x0402F971 RID: 194929
 			ConfirmButton,
-			// Token: 0x04034FCA RID: 217034
+			// Token: 0x0402F972 RID: 194930
 			OneKeyDownEquipmentButton,
-			// Token: 0x04034FCB RID: 217035
+			// Token: 0x0402F973 RID: 194931
 			OneKeyUpEquipmentButton,
-			// Token: 0x04034FCC RID: 217036
+			// Token: 0x0402F974 RID: 194932
 			OneKeyEquipRedItem
 		}
 	}

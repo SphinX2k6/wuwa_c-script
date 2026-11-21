@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 {
-	// Token: 0x020051DA RID: 20954
+	// Token: 0x020041AA RID: 16810
 	[RequiredMember]
 	public class DetailViewCardItemData : CardInfoBase
 	{
-		// Token: 0x06035A07 RID: 219655 RVA: 0x00CB4781 File Offset: 0x00CB2981
+		// Token: 0x0602A902 RID: 174338 RVA: 0x00C01DBD File Offset: 0x00BFFFBD
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public DetailViewCardItemData()
 		{
 		}
 
-		// Token: 0x0401C75E RID: 116574
+		// Token: 0x04017193 RID: 94611
 		[RequiredMember]
 		public bool IsLock;
 	}

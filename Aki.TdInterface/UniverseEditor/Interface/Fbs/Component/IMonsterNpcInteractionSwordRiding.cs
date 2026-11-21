@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005590 RID: 21904
+	// Token: 0x02005B2E RID: 23342
 	public struct IMonsterNpcInteractionSwordRiding : IFlatbufferObject
 	{
-		// Token: 0x1700A1D5 RID: 41429
-		// (get) Token: 0x0602442F RID: 148527 RVA: 0x00501D6D File Offset: 0x004FFF6D
+		// Token: 0x1700AA5D RID: 43613
+		// (get) Token: 0x0602663C RID: 157244 RVA: 0x005422E5 File Offset: 0x005404E5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024430 RID: 148528 RVA: 0x00501D7A File Offset: 0x004FFF7A
+		// Token: 0x0602663D RID: 157245 RVA: 0x005422F2 File Offset: 0x005404F2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06024431 RID: 148529 RVA: 0x00501D84 File Offset: 0x004FFF84
+		// Token: 0x0602663E RID: 157246 RVA: 0x005422FC File Offset: 0x005404FC
 		public static IMonsterNpcInteractionSwordRiding GetRootAsIMonsterNpcInteractionSwordRiding(ByteBuffer _bb)
 		{
 			return IMonsterNpcInteractionSwordRiding.GetRootAsIMonsterNpcInteractionSwordRiding(_bb, default(IMonsterNpcInteractionSwordRiding));
 		}
 
-		// Token: 0x06024432 RID: 148530 RVA: 0x00501DA0 File Offset: 0x004FFFA0
+		// Token: 0x0602663F RID: 157247 RVA: 0x00542318 File Offset: 0x00540518
 		public static IMonsterNpcInteractionSwordRiding GetRootAsIMonsterNpcInteractionSwordRiding(ByteBuffer _bb, IMonsterNpcInteractionSwordRiding obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06024433 RID: 148531 RVA: 0x00501DBD File Offset: 0x004FFFBD
+		// Token: 0x06026640 RID: 157248 RVA: 0x00542335 File Offset: 0x00540535
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06024434 RID: 148532 RVA: 0x00501DCC File Offset: 0x004FFFCC
+		// Token: 0x06026641 RID: 157249 RVA: 0x00542344 File Offset: 0x00540544
 		public IMonsterNpcInteractionSwordRiding __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A1D6 RID: 41430
-		// (get) Token: 0x06024435 RID: 148533 RVA: 0x00501DDC File Offset: 0x004FFFDC
+		// Token: 0x1700AA5E RID: 43614
+		// (get) Token: 0x06026642 RID: 157250 RVA: 0x00542354 File Offset: 0x00540554
 		public EMonsterNpcInteractionType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024436 RID: 148534 RVA: 0x00501E18 File Offset: 0x00500018
+		// Token: 0x06026643 RID: 157251 RVA: 0x00542390 File Offset: 0x00540590
 		public static Offset<IMonsterNpcInteractionSwordRiding> CreateIMonsterNpcInteractionSwordRiding(FlatBufferBuilder builder, EMonsterNpcInteractionType Type = EMonsterNpcInteractionType.WallRun)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterNpcInteractionSwordRiding.EndIMonsterNpcInteractionSwordRiding(builder);
 		}
 
-		// Token: 0x06024437 RID: 148535 RVA: 0x00501E2E File Offset: 0x0050002E
+		// Token: 0x06026644 RID: 157252 RVA: 0x005423A6 File Offset: 0x005405A6
 		public static void StartIMonsterNpcInteractionSwordRiding(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06024438 RID: 148536 RVA: 0x00501E37 File Offset: 0x00500037
+		// Token: 0x06026645 RID: 157253 RVA: 0x005423AF File Offset: 0x005405AF
 		public static void AddType(FlatBufferBuilder builder, EMonsterNpcInteractionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06024439 RID: 148537 RVA: 0x00501E42 File Offset: 0x00500042
+		// Token: 0x06026646 RID: 157254 RVA: 0x005423BA File Offset: 0x005405BA
 		public static Offset<IMonsterNpcInteractionSwordRiding> EndIMonsterNpcInteractionSwordRiding(FlatBufferBuilder builder)
 		{
 			return new Offset<IMonsterNpcInteractionSwordRiding>(builder.EndTable());
 		}
 
-		// Token: 0x0602443A RID: 148538 RVA: 0x00501E50 File Offset: 0x00500050
+		// Token: 0x06026647 RID: 157255 RVA: 0x005423C8 File Offset: 0x005405C8
 		public IMonsterNpcInteractionSwordRidingT UnPack()
 		{
 			IMonsterNpcInteractionSwordRidingT monsterNpcInteractionSwordRidingT = new IMonsterNpcInteractionSwordRidingT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return monsterNpcInteractionSwordRidingT;
 		}
 
-		// Token: 0x0602443B RID: 148539 RVA: 0x00501E6B File Offset: 0x0050006B
+		// Token: 0x06026648 RID: 157256 RVA: 0x005423E3 File Offset: 0x005405E3
 		public void UnPackTo(IMonsterNpcInteractionSwordRidingT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602443C RID: 148540 RVA: 0x00501E7C File Offset: 0x0050007C
+		// Token: 0x06026649 RID: 157257 RVA: 0x005423F4 File Offset: 0x005405F4
 		public static Offset<IMonsterNpcInteractionSwordRiding> Pack(FlatBufferBuilder builder, IMonsterNpcInteractionSwordRidingT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterNpcInteractionSwordRiding.CreateIMonsterNpcInteractionSwordRiding(builder, _o.Type);
 		}
 
-		// Token: 0x0400E8C1 RID: 59585
+		// Token: 0x0400F523 RID: 62755
 		private Table __p;
 	}
 }

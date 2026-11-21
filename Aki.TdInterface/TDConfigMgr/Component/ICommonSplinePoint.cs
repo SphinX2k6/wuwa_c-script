@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000255 RID: 597
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000298 RID: 664
 	public class ICommonSplinePoint : IBaseSplinePointType
 	{
-		// Token: 0x06000AC8 RID: 2760 RVA: 0x0002C2B8 File Offset: 0x0002A4B8
+		// Token: 0x06000BE2 RID: 3042 RVA: 0x0002EFA8 File Offset: 0x0002D1A8
 		private ICommonSplinePoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000AC9 RID: 2761 RVA: 0x0002C2F0 File Offset: 0x0002A4F0
+		// Token: 0x06000BE3 RID: 3043 RVA: 0x0002EFE0 File Offset: 0x0002D1E0
 		public static ICommonSplinePoint Create([Nullable(2)] ICommonSplinePoint instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000ACA RID: 2762 RVA: 0x0002C303 File Offset: 0x0002A503
+		// Token: 0x06000BE4 RID: 3044 RVA: 0x0002EFF3 File Offset: 0x0002D1F3
 		public static ICommonSplinePoint CreateFromSetValue([Nullable(2)] ICommonSplinePoint_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000ACB RID: 2763 RVA: 0x0002C318 File Offset: 0x0002A518
+		// Token: 0x06000BE5 RID: 3045 RVA: 0x0002F008 File Offset: 0x0002D208
 		public new ICommonSplinePoint_SetValue ToSetValue()
 		{
 			return new ICommonSplinePoint_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000342 RID: 834
-		// (get) Token: 0x06000ACC RID: 2764 RVA: 0x0002C368 File Offset: 0x0002A568
-		// (set) Token: 0x06000ACD RID: 2765 RVA: 0x0002C3C9 File Offset: 0x0002A5C9
+		// Token: 0x1700038A RID: 906
+		// (get) Token: 0x06000BE6 RID: 3046 RVA: 0x0002F058 File Offset: 0x0002D258
+		// (set) Token: 0x06000BE7 RID: 3047 RVA: 0x0002F0B9 File Offset: 0x0002D2B9
 		public override VectorInfo Position
 		{
 			get
@@ -94,9 +92,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000343 RID: 835
-		// (get) Token: 0x06000ACE RID: 2766 RVA: 0x0002C3E0 File Offset: 0x0002A5E0
-		// (set) Token: 0x06000ACF RID: 2767 RVA: 0x0002C441 File Offset: 0x0002A641
+		// Token: 0x1700038B RID: 907
+		// (get) Token: 0x06000BE8 RID: 3048 RVA: 0x0002F0D0 File Offset: 0x0002D2D0
+		// (set) Token: 0x06000BE9 RID: 3049 RVA: 0x0002F131 File Offset: 0x0002D331
 		public override VectorInfo ArriveTangent
 		{
 			get
@@ -124,9 +122,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000344 RID: 836
-		// (get) Token: 0x06000AD0 RID: 2768 RVA: 0x0002C458 File Offset: 0x0002A658
-		// (set) Token: 0x06000AD1 RID: 2769 RVA: 0x0002C4B9 File Offset: 0x0002A6B9
+		// Token: 0x1700038C RID: 908
+		// (get) Token: 0x06000BEA RID: 3050 RVA: 0x0002F148 File Offset: 0x0002D348
+		// (set) Token: 0x06000BEB RID: 3051 RVA: 0x0002F1A9 File Offset: 0x0002D3A9
 		public override VectorInfo LeaveTangent
 		{
 			get
@@ -154,9 +152,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000345 RID: 837
-		// (get) Token: 0x06000AD2 RID: 2770 RVA: 0x0002C4CE File Offset: 0x0002A6CE
-		// (set) Token: 0x06000AD3 RID: 2771 RVA: 0x0002C4F9 File Offset: 0x0002A6F9
+		// Token: 0x1700038D RID: 909
+		// (get) Token: 0x06000BEC RID: 3052 RVA: 0x0002F1BE File Offset: 0x0002D3BE
+		// (set) Token: 0x06000BED RID: 3053 RVA: 0x0002F1E9 File Offset: 0x0002D3E9
 		public override ESplineLine LineType
 		{
 			get
@@ -177,9 +175,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000346 RID: 838
-		// (get) Token: 0x06000AD4 RID: 2772 RVA: 0x0002C508 File Offset: 0x0002A708
-		// (set) Token: 0x06000AD5 RID: 2773 RVA: 0x0002C569 File Offset: 0x0002A769
+		// Token: 0x1700038E RID: 910
+		// (get) Token: 0x06000BEE RID: 3054 RVA: 0x0002F1F8 File Offset: 0x0002D3F8
+		// (set) Token: 0x06000BEF RID: 3055 RVA: 0x0002F259 File Offset: 0x0002D459
 		[Nullable(2)]
 		public override VectorInfo Rotation
 		{
@@ -210,36 +208,36 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000A98 RID: 2712
+		// Token: 0x04000B79 RID: 2937
 		[Nullable(2)]
 		protected new ICommonSplinePoint FbInstance;
 
-		// Token: 0x04000A99 RID: 2713
+		// Token: 0x04000B7A RID: 2938
 		[Nullable(2)]
 		protected new ICommonSplinePoint_SetValue PocoInterface;
 
-		// Token: 0x04000A9A RID: 2714
+		// Token: 0x04000B7B RID: 2939
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04000A9B RID: 2715
+		// Token: 0x04000B7C RID: 2940
 		private bool _PositionInited;
 
-		// Token: 0x04000A9C RID: 2716
+		// Token: 0x04000B7D RID: 2941
 		private VectorInfo _ArriveTangentCache;
 
-		// Token: 0x04000A9D RID: 2717
+		// Token: 0x04000B7E RID: 2942
 		private bool _ArriveTangentInited;
 
-		// Token: 0x04000A9E RID: 2718
+		// Token: 0x04000B7F RID: 2943
 		private VectorInfo _LeaveTangentCache;
 
-		// Token: 0x04000A9F RID: 2719
+		// Token: 0x04000B80 RID: 2944
 		private bool _LeaveTangentInited;
 
-		// Token: 0x04000AA0 RID: 2720
+		// Token: 0x04000B81 RID: 2945
 		private VectorInfo _RotationCache;
 
-		// Token: 0x04000AA1 RID: 2721
+		// Token: 0x04000B82 RID: 2946
 		private bool _RotationInited;
 	}
 }

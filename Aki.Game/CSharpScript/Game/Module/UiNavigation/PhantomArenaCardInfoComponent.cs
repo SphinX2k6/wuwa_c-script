@@ -6,15 +6,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049AC RID: 18860
+	// Token: 0x02003926 RID: 14630
 	public class PhantomArenaCardInfoComponent : HotKeyComponent
 	{
-		// Token: 0x06031186 RID: 201094 RVA: 0x00B64633 File Offset: 0x00B62833
+		// Token: 0x06025CBC RID: 154812 RVA: 0x00A9F583 File Offset: 0x00A9D783
 		public PhantomArenaCardInfoComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031187 RID: 201095 RVA: 0x00B6463C File Offset: 0x00B6283C
+		// Token: 0x06025CBD RID: 154813 RVA: 0x00A9F58C File Offset: 0x00A9D78C
 		protected override void OnPress(HotKeyMap _)
 		{
 			TsUiNavigationBehaviorListener currentNavigationFocusListener = UiNavigationNewController.Instance.GetCurrentNavigationFocusListener();
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06031188 RID: 201096 RVA: 0x00B64678 File Offset: 0x00B62878
+		// Token: 0x06025CBE RID: 154814 RVA: 0x00A9F5C8 File Offset: 0x00A9D7C8
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

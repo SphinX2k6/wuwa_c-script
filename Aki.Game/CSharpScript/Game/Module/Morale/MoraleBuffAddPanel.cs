@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053A9 RID: 21417
+	// Token: 0x0200438C RID: 17292
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleBuffAddPanel : UiPanelBase
 	{
-		// Token: 0x06036B9F RID: 224159 RVA: 0x00CF3A74 File Offset: 0x00CF1C74
+		// Token: 0x0602BAE5 RID: 178917 RVA: 0x00C42B1C File Offset: 0x00C40D1C
 		public UniTask Init(UUIItem item)
 		{
 			MoraleBuffAddPanel.<Init>d__4 <Init>d__;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036BA0 RID: 224160 RVA: 0x00CF3AC0 File Offset: 0x00CF1CC0
+		// Token: 0x0602BAE6 RID: 178918 RVA: 0x00C42B68 File Offset: 0x00C40D68
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036BA1 RID: 224161 RVA: 0x00CF3BC4 File Offset: 0x00CF1DC4
+		// Token: 0x0602BAE7 RID: 178919 RVA: 0x00C42C6C File Offset: 0x00C40E6C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleBuffAddPanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -60,13 +60,13 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036BA2 RID: 224162 RVA: 0x00CF3C07 File Offset: 0x00CF1E07
+		// Token: 0x0602BAE8 RID: 178920 RVA: 0x00C42CAF File Offset: 0x00C40EAF
 		protected override void OnBeforeShow()
 		{
 			this.UpdateData();
 		}
 
-		// Token: 0x06036BA3 RID: 224163 RVA: 0x00CF3C0F File Offset: 0x00CF1E0F
+		// Token: 0x0602BAE9 RID: 178921 RVA: 0x00C42CB7 File Offset: 0x00C40EB7
 		protected override void OnBeforeDestroy()
 		{
 			if (base.GetActive())
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036BA4 RID: 224164 RVA: 0x00CF3C29 File Offset: 0x00CF1E29
+		// Token: 0x0602BAEA RID: 178922 RVA: 0x00C42CD1 File Offset: 0x00C40ED1
 		private void OnBtnMask()
 		{
 			this.SetActive(false);
@@ -92,19 +92,19 @@ namespace CSharpScript.Game.Module.Morale
 			closeCallback();
 		}
 
-		// Token: 0x06036BA5 RID: 224165 RVA: 0x00CF3C42 File Offset: 0x00CF1E42
+		// Token: 0x0602BAEB RID: 178923 RVA: 0x00C42CEA File Offset: 0x00C40EEA
 		private MoraleBuffAddItem CreateItem()
 		{
 			return new MoraleBuffAddItem();
 		}
 
-		// Token: 0x06036BA6 RID: 224166 RVA: 0x00CF3C49 File Offset: 0x00CF1E49
+		// Token: 0x0602BAEC RID: 178924 RVA: 0x00C42CF1 File Offset: 0x00C40EF1
 		private MoraleBuffAddAreaItem CreateAreaItem()
 		{
 			return new MoraleBuffAddAreaItem();
 		}
 
-		// Token: 0x06036BA7 RID: 224167 RVA: 0x00CF3C50 File Offset: 0x00CF1E50
+		// Token: 0x0602BAED RID: 178925 RVA: 0x00C42CF8 File Offset: 0x00C40EF8
 		public void UpdateData()
 		{
 			this.UpdateTitle();
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UpdateAreaList();
 		}
 
-		// Token: 0x06036BA8 RID: 224168 RVA: 0x00CF3C6C File Offset: 0x00CF1E6C
+		// Token: 0x0602BAEE RID: 178926 RVA: 0x00C42D14 File Offset: 0x00C40F14
 		public void UpdateTitle()
 		{
 			string key = "Morale_title_22";
@@ -131,21 +131,21 @@ namespace CSharpScript.Game.Module.Morale
 			text2.ShowTextNew(key2);
 		}
 
-		// Token: 0x06036BA9 RID: 224169 RVA: 0x00CF3CAC File Offset: 0x00CF1EAC
+		// Token: 0x0602BAEF RID: 178927 RVA: 0x00C42D54 File Offset: 0x00C40F54
 		public void UpdateList()
 		{
 			List<IMoraleBuffAddItemData> allRoleAttrAddList = MoraleModel.Instance.GetAllRoleAttrAddList();
 			this.ItemLayout.RefreshByData(allRoleAttrAddList, null, false);
 		}
 
-		// Token: 0x06036BAA RID: 224170 RVA: 0x00CF3CD4 File Offset: 0x00CF1ED4
+		// Token: 0x0602BAF0 RID: 178928 RVA: 0x00C42D7C File Offset: 0x00C40F7C
 		public void UpdateAreaList()
 		{
 			List<MoraleAreaData> areaDataList = MoraleModel.Instance.AreaDataList;
 			this.AreaBuffLayout.RefreshByData(areaDataList, null, false);
 		}
 
-		// Token: 0x06036BAB RID: 224171 RVA: 0x00CF3CFC File Offset: 0x00CF1EFC
+		// Token: 0x0602BAF1 RID: 178929 RVA: 0x00C42DA4 File Offset: 0x00C40FA4
 		public void UpdateLvAddDesc()
 		{
 			int moraleLevel = MoraleBattleModel.Instance.GetMoraleLevel();
@@ -158,45 +158,45 @@ namespace CSharpScript.Game.Module.Morale
 			base.GetText(5).ShowTextNew(moraleKeepLevel.Value.LvAddDesc);
 		}
 
-		// Token: 0x0401CE57 RID: 118359
+		// Token: 0x040178EF RID: 96495
 		public GenericLayout<MoraleBuffAddItem, IMoraleBuffAddItemData> ItemLayout;
 
-		// Token: 0x0401CE58 RID: 118360
+		// Token: 0x040178F0 RID: 96496
 		public GenericLayout<MoraleBuffAddAreaItem, MoraleAreaData> AreaBuffLayout;
 
-		// Token: 0x0401CE59 RID: 118361
+		// Token: 0x040178F1 RID: 96497
 		[Nullable(2)]
 		public Action CloseCallback;
 
-		// Token: 0x0200B639 RID: 46649
+		// Token: 0x0200A071 RID: 41073
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04037330 RID: 226096
+			// Token: 0x04031D85 RID: 204165
 			public const int BtnMask = 0;
 
-			// Token: 0x04037331 RID: 226097
+			// Token: 0x04031D86 RID: 204166
 			public const int LayoutContainer = 1;
 
-			// Token: 0x04037332 RID: 226098
+			// Token: 0x04031D87 RID: 204167
 			public const int ItemInfoTemplate = 2;
 
-			// Token: 0x04037333 RID: 226099
+			// Token: 0x04031D88 RID: 204168
 			public const int ItemRoot = 3;
 
-			// Token: 0x04037334 RID: 226100
+			// Token: 0x04031D89 RID: 204169
 			public const int TextTitle = 4;
 
-			// Token: 0x04037335 RID: 226101
+			// Token: 0x04031D8A RID: 204170
 			public const int TextSubTitle = 5;
 
-			// Token: 0x04037336 RID: 226102
+			// Token: 0x04031D8B RID: 204171
 			public const int LayoutAreaBuffRoot = 6;
 
-			// Token: 0x04037337 RID: 226103
+			// Token: 0x04031D8C RID: 204172
 			public const int ItemAreaBuffTemplate = 7;
 
-			// Token: 0x04037338 RID: 226104
+			// Token: 0x04031D8D RID: 204173
 			public const int TextAreaTitle = 8;
 		}
 	}

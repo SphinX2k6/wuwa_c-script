@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002567 RID: 9575
+	// Token: 0x02002810 RID: 10256
 	public class IVisualNovelCgLoadImage : IVisualNovelCgBase
 	{
-		// Token: 0x0600D6F4 RID: 55028 RVA: 0x002008CD File Offset: 0x001FEACD
-		[NullableContext(1)]
+		// Token: 0x0600E45F RID: 58463 RVA: 0x0021C4D6 File Offset: 0x0021A6D6
 		public static IVisualNovelCgLoadImage Create(IVisualNovelCgLoadImage? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003DE8 RID: 15848
-		// (get) Token: 0x0600D6F5 RID: 55029 RVA: 0x002008EC File Offset: 0x001FEAEC
+		// Token: 0x170040ED RID: 16621
+		// (get) Token: 0x0600E460 RID: 58464 RVA: 0x0021C4F5 File Offset: 0x0021A6F5
 		public override EVisualNovelCgType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003DE9 RID: 15849
-		// (get) Token: 0x0600D6F6 RID: 55030 RVA: 0x002008F9 File Offset: 0x001FEAF9
+		// Token: 0x170040EE RID: 16622
+		// (get) Token: 0x0600E461 RID: 58465 RVA: 0x0021C502 File Offset: 0x0021A702
 		public virtual int ImageId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007709 RID: 30473
+		// Token: 0x04007D66 RID: 32102
 		private IVisualNovelCgLoadImage Instance;
 	}
 }

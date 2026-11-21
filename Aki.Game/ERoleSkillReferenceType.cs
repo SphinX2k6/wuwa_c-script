@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020027B6 RID: 10166
+// Token: 0x02001D31 RID: 7473
 public enum ERoleSkillReferenceType
 {
-	// Token: 0x04009D0E RID: 40206
+	// Token: 0x0400A0F1 RID: 41201
 	SkillInfo,
-	// Token: 0x04009D0F RID: 40207
+	// Token: 0x0400A0F2 RID: 41202
 	Buff,
-	// Token: 0x04009D10 RID: 40208
+	// Token: 0x0400A0F3 RID: 41203
 	Damage
 }

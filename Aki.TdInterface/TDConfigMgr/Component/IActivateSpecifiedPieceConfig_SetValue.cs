@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001A2 RID: 418
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001B9 RID: 441
 	public class IActivateSpecifiedPieceConfig_SetValue
 	{
-		// Token: 0x0400080A RID: 2058
+		// Token: 0x04000863 RID: 2147
 		public IJigsawConfig Jigsaw;
 
-		// Token: 0x0400080B RID: 2059
+		// Token: 0x04000864 RID: 2148
 		public string SelfState;
 	}
 }

@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DF6 RID: 15862
+	// Token: 0x02004231 RID: 16945
 	public static class IEnableSystemConfig_UnionVerify
 	{
-		// Token: 0x060162F0 RID: 90864 RVA: 0x003342FC File Offset: 0x003324FC
+		// Token: 0x0601791D RID: 96541 RVA: 0x0035CEE4 File Offset: 0x0035B0E4
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -56,6 +56,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 				break;
 			case 15:
 				result = IKuroSimpleCombatKillMonsterSystemConfigVerify.Verify(verifier, tablePos);
+				break;
+			case 16:
+				result = IDarkTideSystemConfigVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

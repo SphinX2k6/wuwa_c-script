@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004930 RID: 18736
+	// Token: 0x020038A7 RID: 14503
 	public class NavigationRoleSkillPreviewToggle : NavigationToggle
 	{
-		// Token: 0x06030ECD RID: 200397 RVA: 0x00B5BBCE File Offset: 0x00B59DCE
+		// Token: 0x060259FA RID: 154106 RVA: 0x00A96A3E File Offset: 0x00A94C3E
 		[NullableContext(1)]
 		public NavigationRoleSkillPreviewToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030ECE RID: 200398 RVA: 0x00B5BBDC File Offset: 0x00B59DDC
+		// Token: 0x060259FB RID: 154107 RVA: 0x00A96A4C File Offset: 0x00A94C4C
 		protected override void OnToggleClick(EToggleState state)
 		{
 			UiNavigationViewHandle currentViewHandle = UiNavigationViewManager.Instance.GetCurrentViewHandle();

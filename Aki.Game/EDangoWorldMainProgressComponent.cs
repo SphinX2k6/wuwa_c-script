@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001A67 RID: 6759
+// Token: 0x02000F26 RID: 3878
 internal enum EDangoWorldMainProgressComponent
 {
-	// Token: 0x04005BAC RID: 23468
+	// Token: 0x04005C7B RID: 23675
 	Desc,
-	// Token: 0x04005BAD RID: 23469
+	// Token: 0x04005C7C RID: 23676
 	ProgressText,
-	// Token: 0x04005BAE RID: 23470
+	// Token: 0x04005C7D RID: 23677
 	ProgressFillSprite
 }

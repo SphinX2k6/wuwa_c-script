@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028CE RID: 10446
+	// Token: 0x02002BA3 RID: 11171
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class UsePhantomSkill : ActionParams
 	{
-		// Token: 0x0600E803 RID: 59395 RVA: 0x00220E7E File Offset: 0x0021F07E
-		[NullableContext(1)]
+		// Token: 0x0600F632 RID: 63026 RVA: 0x0023DDFE File Offset: 0x0023BFFE
+		[NullableContext(0)]
 		public static UsePhantomSkill Create(IUsePhantomSkill? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004829 RID: 18473
-		// (get) Token: 0x0600E804 RID: 59396 RVA: 0x00220E9D File Offset: 0x0021F09D
+		// Token: 0x17004B9A RID: 19354
+		// (get) Token: 0x0600F633 RID: 63027 RVA: 0x0023DE1D File Offset: 0x0023C01D
 		public virtual EPhantomSkillType SkillType
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700482A RID: 18474
-		// (get) Token: 0x0600E805 RID: 59397 RVA: 0x00220EAA File Offset: 0x0021F0AA
+		// Token: 0x17004B9B RID: 19355
+		// (get) Token: 0x0600F634 RID: 63028 RVA: 0x0023DE2A File Offset: 0x0023C02A
 		public virtual ISkillBlackboardVector BlackboardPos
 		{
 			get
@@ -49,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700482B RID: 18475
-		// (get) Token: 0x0600E806 RID: 59398 RVA: 0x00220EDE File Offset: 0x0021F0DE
+		// Token: 0x17004B9C RID: 19356
+		// (get) Token: 0x0600F635 RID: 63029 RVA: 0x0023DE5E File Offset: 0x0023C05E
 		public virtual ISkillBlackboardVector BlackboardRot
 		{
 			get
@@ -65,19 +65,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008042 RID: 32834
+		// Token: 0x04008701 RID: 34561
 		private IUsePhantomSkill Instance;
 
-		// Token: 0x04008043 RID: 32835
+		// Token: 0x04008702 RID: 34562
 		private ISkillBlackboardVector _BlackboardPosCache;
 
-		// Token: 0x04008044 RID: 32836
+		// Token: 0x04008703 RID: 34563
 		private bool _BlackboardPosInited;
 
-		// Token: 0x04008045 RID: 32837
+		// Token: 0x04008704 RID: 34564
 		private ISkillBlackboardVector _BlackboardRotCache;
 
-		// Token: 0x04008046 RID: 32838
+		// Token: 0x04008705 RID: 34565
 		private bool _BlackboardRotInited;
 	}
 }

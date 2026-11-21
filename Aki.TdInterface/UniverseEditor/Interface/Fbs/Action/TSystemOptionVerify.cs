@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077BE RID: 30654
+	// Token: 0x02007FF6 RID: 32758
 	public static class TSystemOptionVerify
 	{
-		// Token: 0x060379DB RID: 227803 RVA: 0x00785C14 File Offset: 0x00783E14
+		// Token: 0x0603AF5E RID: 241502 RVA: 0x007EB218 File Offset: 0x007E9418
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -16,9 +16,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				result = IGravityControlOptionVerify.Verify(verifier, tablePos);
 				break;
 			case 2:
-				result = IPermanentRogueRandomEventVerify.Verify(verifier, tablePos);
+				result = ILiveInteractScOptionVerify.Verify(verifier, tablePos);
 				break;
 			case 3:
+				result = IPermanentRogueRandomEventVerify.Verify(verifier, tablePos);
+				break;
+			case 4:
 				result = IRogueRandomEventOptionVerify.Verify(verifier, tablePos);
 				break;
 			default:

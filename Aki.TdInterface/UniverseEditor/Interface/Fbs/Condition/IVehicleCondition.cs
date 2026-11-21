@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D0C RID: 19724
+	// Token: 0x02005208 RID: 21000
 	public struct IVehicleCondition : IFlatbufferObject
 	{
-		// Token: 0x17008F11 RID: 36625
-		// (get) Token: 0x0601F4E4 RID: 128228 RVA: 0x0045DCED File Offset: 0x0045BEED
+		// Token: 0x1700964A RID: 38474
+		// (get) Token: 0x06021129 RID: 135465 RVA: 0x00491C3D File Offset: 0x0048FE3D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F4E5 RID: 128229 RVA: 0x0045DCFA File Offset: 0x0045BEFA
+		// Token: 0x0602112A RID: 135466 RVA: 0x00491C4A File Offset: 0x0048FE4A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F4E6 RID: 128230 RVA: 0x0045DD04 File Offset: 0x0045BF04
+		// Token: 0x0602112B RID: 135467 RVA: 0x00491C54 File Offset: 0x0048FE54
 		public static IVehicleCondition GetRootAsIVehicleCondition(ByteBuffer _bb)
 		{
 			return IVehicleCondition.GetRootAsIVehicleCondition(_bb, default(IVehicleCondition));
 		}
 
-		// Token: 0x0601F4E7 RID: 128231 RVA: 0x0045DD20 File Offset: 0x0045BF20
+		// Token: 0x0602112C RID: 135468 RVA: 0x00491C70 File Offset: 0x0048FE70
 		public static IVehicleCondition GetRootAsIVehicleCondition(ByteBuffer _bb, IVehicleCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F4E8 RID: 128232 RVA: 0x0045DD3D File Offset: 0x0045BF3D
+		// Token: 0x0602112D RID: 135469 RVA: 0x00491C8D File Offset: 0x0048FE8D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F4E9 RID: 128233 RVA: 0x0045DD4C File Offset: 0x0045BF4C
+		// Token: 0x0602112E RID: 135470 RVA: 0x00491C9C File Offset: 0x0048FE9C
 		public IVehicleCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008F12 RID: 36626
-		// (get) Token: 0x0601F4EA RID: 128234 RVA: 0x0045DD5C File Offset: 0x0045BF5C
+		// Token: 0x1700964B RID: 38475
+		// (get) Token: 0x0602112F RID: 135471 RVA: 0x00491CAC File Offset: 0x0048FEAC
 		public EVehicleConditionType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F4EB RID: 128235 RVA: 0x0045DD98 File Offset: 0x0045BF98
+		// Token: 0x06021130 RID: 135472 RVA: 0x00491CE8 File Offset: 0x0048FEE8
 		public static Offset<IVehicleCondition> CreateIVehicleCondition(FlatBufferBuilder builder, EVehicleConditionType Type = EVehicleConditionType.UsingVehicle)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IVehicleCondition.EndIVehicleCondition(builder);
 		}
 
-		// Token: 0x0601F4EC RID: 128236 RVA: 0x0045DDAE File Offset: 0x0045BFAE
+		// Token: 0x06021131 RID: 135473 RVA: 0x00491CFE File Offset: 0x0048FEFE
 		public static void StartIVehicleCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601F4ED RID: 128237 RVA: 0x0045DDB7 File Offset: 0x0045BFB7
+		// Token: 0x06021132 RID: 135474 RVA: 0x00491D07 File Offset: 0x0048FF07
 		public static void AddType(FlatBufferBuilder builder, EVehicleConditionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601F4EE RID: 128238 RVA: 0x0045DDC2 File Offset: 0x0045BFC2
+		// Token: 0x06021133 RID: 135475 RVA: 0x00491D12 File Offset: 0x0048FF12
 		public static Offset<IVehicleCondition> EndIVehicleCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IVehicleCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601F4EF RID: 128239 RVA: 0x0045DDD0 File Offset: 0x0045BFD0
+		// Token: 0x06021134 RID: 135476 RVA: 0x00491D20 File Offset: 0x0048FF20
 		public IVehicleConditionT UnPack()
 		{
 			IVehicleConditionT vehicleConditionT = new IVehicleConditionT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return vehicleConditionT;
 		}
 
-		// Token: 0x0601F4F0 RID: 128240 RVA: 0x0045DDEB File Offset: 0x0045BFEB
+		// Token: 0x06021135 RID: 135477 RVA: 0x00491D3B File Offset: 0x0048FF3B
 		public void UnPackTo(IVehicleConditionT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601F4F1 RID: 128241 RVA: 0x0045DDFC File Offset: 0x0045BFFC
+		// Token: 0x06021136 RID: 135478 RVA: 0x00491D4C File Offset: 0x0048FF4C
 		public static Offset<IVehicleCondition> Pack(FlatBufferBuilder builder, IVehicleConditionT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IVehicleCondition.CreateIVehicleCondition(builder, _o.Type);
 		}
 
-		// Token: 0x0400D6E8 RID: 55016
+		// Token: 0x0400E215 RID: 57877
 		private Table __p;
 	}
 }

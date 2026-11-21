@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Skin.Skip
 {
-	// Token: 0x02004BF1 RID: 19441
+	// Token: 0x02003BA2 RID: 15266
 	public enum ESkinSkipType
 	{
-		// Token: 0x0401ABDA RID: 109530
+		// Token: 0x04015535 RID: 87349
 		Locked = 1,
-		// Token: 0x0401ABDB RID: 109531
+		// Token: 0x04015536 RID: 87350
 		CanJump
 	}
 }

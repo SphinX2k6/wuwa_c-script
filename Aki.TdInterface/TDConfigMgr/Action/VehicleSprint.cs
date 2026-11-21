@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002279 RID: 8825
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024E6 RID: 9446
 	public class VehicleSprint : ActionParams
 	{
-		// Token: 0x0600C19A RID: 49562 RVA: 0x001BC31C File Offset: 0x001BA51C
+		// Token: 0x0600CD60 RID: 52576 RVA: 0x001D3AA0 File Offset: 0x001D1CA0
 		private VehicleSprint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C19B RID: 49563 RVA: 0x001BC354 File Offset: 0x001BA554
+		// Token: 0x0600CD61 RID: 52577 RVA: 0x001D3AD8 File Offset: 0x001D1CD8
 		public static VehicleSprint Create([Nullable(2)] VehicleSprint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C19C RID: 49564 RVA: 0x001BC367 File Offset: 0x001BA567
+		// Token: 0x0600CD62 RID: 52578 RVA: 0x001D3AEB File Offset: 0x001D1CEB
 		public static VehicleSprint CreateFromSetValue([Nullable(2)] VehicleSprint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C19D RID: 49565 RVA: 0x001BC37A File Offset: 0x001BA57A
+		// Token: 0x0600CD63 RID: 52579 RVA: 0x001D3AFE File Offset: 0x001D1CFE
 		public VehicleSprint_SetValue ToSetValue()
 		{
 			return new VehicleSprint_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A85 RID: 14981
-		// (get) Token: 0x0600C19E RID: 49566 RVA: 0x001BC38D File Offset: 0x001BA58D
-		// (set) Token: 0x0600C19F RID: 49567 RVA: 0x001BC3B4 File Offset: 0x001BA5B4
+		// Token: 0x17003D7C RID: 15740
+		// (get) Token: 0x0600CD64 RID: 52580 RVA: 0x001D3B11 File Offset: 0x001D1D11
+		// (set) Token: 0x0600CD65 RID: 52581 RVA: 0x001D3B38 File Offset: 0x001D1D38
 		public virtual ITargetVehicle TargetVehicle
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007352 RID: 29522
+		// Token: 0x0400799F RID: 31135
 		[Nullable(2)]
 		protected new VehicleSprint FbInstance;
 
-		// Token: 0x04007353 RID: 29523
+		// Token: 0x040079A0 RID: 31136
 		[Nullable(2)]
 		protected VehicleSprint_SetValue PocoInterface;
 	}

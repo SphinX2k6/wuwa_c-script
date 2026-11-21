@@ -6,13 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A9E RID: 2718
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000B68 RID: 2920
 	public class IEntityCategory
 	{
-		// Token: 0x06003E85 RID: 16005 RVA: 0x0009FEF4 File Offset: 0x0009E0F4
-		[NullableContext(1)]
+		// Token: 0x060042AE RID: 17070 RVA: 0x000A94AC File Offset: 0x000A76AC
 		public static IEntityCategory Create(IEntityCategory? instance)
 		{
 			if (instance == null)
@@ -25,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F06 RID: 3846
-		// (get) Token: 0x06003E86 RID: 16006 RVA: 0x0009FF14 File Offset: 0x0009E114
+		// Token: 0x17000FD9 RID: 4057
+		// (get) Token: 0x060042AF RID: 17071 RVA: 0x000A94CC File Offset: 0x000A76CC
 		public virtual EEntityMainType? MainType
 		{
 			get
@@ -39,18 +36,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F07 RID: 3847
-		// (get) Token: 0x06003E87 RID: 16007 RVA: 0x0009FF4A File Offset: 0x0009E14A
+		// Token: 0x17000FDA RID: 4058
+		// (get) Token: 0x060042B0 RID: 17072 RVA: 0x000A9502 File Offset: 0x000A7702
+		[Nullable(2)]
 		public virtual string EntityPlotBindingType
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.Instance.EntityPlotBindingType;
 			}
 		}
 
-		// Token: 0x17000F08 RID: 3848
-		// (get) Token: 0x06003E88 RID: 16008 RVA: 0x0009FF58 File Offset: 0x0009E158
+		// Token: 0x17000FDB RID: 4059
+		// (get) Token: 0x060042B1 RID: 17073 RVA: 0x000A9510 File Offset: 0x000A7710
 		public virtual EControlMatchType? ControlMatchType
 		{
 			get
@@ -63,8 +62,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F09 RID: 3849
-		// (get) Token: 0x06003E89 RID: 16009 RVA: 0x0009FF90 File Offset: 0x0009E190
+		// Token: 0x17000FDC RID: 4060
+		// (get) Token: 0x060042B2 RID: 17074 RVA: 0x000A9548 File Offset: 0x000A7748
 		public virtual EMonsterMatchType? MonsterMatchType
 		{
 			get
@@ -77,8 +76,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F0A RID: 3850
-		// (get) Token: 0x06003E8A RID: 16010 RVA: 0x0009FFC8 File Offset: 0x0009E1C8
+		// Token: 0x17000FDD RID: 4061
+		// (get) Token: 0x060042B3 RID: 17075 RVA: 0x000A9580 File Offset: 0x000A7780
 		public virtual EItemFoundationMatchType? ItemFoundation
 		{
 			get
@@ -91,8 +90,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F0B RID: 3851
-		// (get) Token: 0x06003E8B RID: 16011 RVA: 0x000A0000 File Offset: 0x0009E200
+		// Token: 0x17000FDE RID: 4062
+		// (get) Token: 0x060042B4 RID: 17076 RVA: 0x000A95B8 File Offset: 0x000A77B8
 		public virtual EHideInFlowType? HideInFlowType
 		{
 			get
@@ -105,8 +104,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F0C RID: 3852
-		// (get) Token: 0x06003E8C RID: 16012 RVA: 0x000A0038 File Offset: 0x0009E238
+		// Token: 0x17000FDF RID: 4063
+		// (get) Token: 0x060042B5 RID: 17077 RVA: 0x000A95F0 File Offset: 0x000A77F0
 		public virtual int? ExploratoryDegree
 		{
 			get
@@ -119,8 +118,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F0D RID: 3853
-		// (get) Token: 0x06003E8D RID: 16013 RVA: 0x000A0070 File Offset: 0x0009E270
+		// Token: 0x17000FE0 RID: 4064
+		// (get) Token: 0x060042B6 RID: 17078 RVA: 0x000A9628 File Offset: 0x000A7828
 		public virtual ETraceMatchType? TraceMatchType
 		{
 			get
@@ -133,8 +132,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F0E RID: 3854
-		// (get) Token: 0x06003E8E RID: 16014 RVA: 0x000A00A8 File Offset: 0x0009E2A8
+		// Token: 0x17000FE1 RID: 4065
+		// (get) Token: 0x060042B7 RID: 17079 RVA: 0x000A9660 File Offset: 0x000A7860
 		public virtual EDestructibleType? DestructibleType
 		{
 			get
@@ -147,8 +146,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F0F RID: 3855
-		// (get) Token: 0x06003E8F RID: 16015 RVA: 0x000A00E4 File Offset: 0x0009E2E4
+		// Token: 0x17000FE2 RID: 4066
+		// (get) Token: 0x060042B8 RID: 17080 RVA: 0x000A969C File Offset: 0x000A789C
 		public virtual ECollectType? CollectType
 		{
 			get
@@ -161,8 +160,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F10 RID: 3856
-		// (get) Token: 0x06003E90 RID: 16016 RVA: 0x000A0120 File Offset: 0x0009E320
+		// Token: 0x17000FE3 RID: 4067
+		// (get) Token: 0x060042B9 RID: 17081 RVA: 0x000A96D8 File Offset: 0x000A78D8
 		public virtual ETreasureChestStatType? TreasureChestStatType
 		{
 			get
@@ -175,8 +174,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F11 RID: 3857
-		// (get) Token: 0x06003E91 RID: 16017 RVA: 0x000A015C File Offset: 0x0009E35C
+		// Token: 0x17000FE4 RID: 4068
+		// (get) Token: 0x060042BA RID: 17082 RVA: 0x000A9714 File Offset: 0x000A7914
 		public virtual ENpcType? NpcType
 		{
 			get
@@ -189,8 +188,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F12 RID: 3858
-		// (get) Token: 0x06003E92 RID: 16018 RVA: 0x000A0198 File Offset: 0x0009E398
+		// Token: 0x17000FE5 RID: 4069
+		// (get) Token: 0x060042BB RID: 17083 RVA: 0x000A9750 File Offset: 0x000A7950
 		public virtual EBulletPenetrationType? BulletPenetrationType
 		{
 			get
@@ -203,8 +202,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F13 RID: 3859
-		// (get) Token: 0x06003E93 RID: 16019 RVA: 0x000A01D4 File Offset: 0x0009E3D4
+		// Token: 0x17000FE6 RID: 4070
+		// (get) Token: 0x060042BC RID: 17084 RVA: 0x000A978C File Offset: 0x000A798C
 		public virtual EMechanismType? MechanismType
 		{
 			get
@@ -217,8 +216,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F14 RID: 3860
-		// (get) Token: 0x06003E94 RID: 16020 RVA: 0x000A0210 File Offset: 0x0009E410
+		// Token: 0x17000FE7 RID: 4071
+		// (get) Token: 0x060042BD RID: 17085 RVA: 0x000A97C8 File Offset: 0x000A79C8
 		public virtual EInhaledItemType? InhaledItemType
 		{
 			get
@@ -231,8 +230,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F15 RID: 3861
-		// (get) Token: 0x06003E95 RID: 16021 RVA: 0x000A024C File Offset: 0x0009E44C
+		// Token: 0x17000FE8 RID: 4072
+		// (get) Token: 0x060042BE RID: 17086 RVA: 0x000A9804 File Offset: 0x000A7A04
 		public virtual EPullStatueMatchType? PullStatueMatchType
 		{
 			get
@@ -245,8 +244,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F16 RID: 3862
-		// (get) Token: 0x06003E96 RID: 16022 RVA: 0x000A0288 File Offset: 0x0009E488
+		// Token: 0x17000FE9 RID: 4073
+		// (get) Token: 0x060042BF RID: 17087 RVA: 0x000A9840 File Offset: 0x000A7A40
 		public virtual EVehicleType? VehicleType
 		{
 			get
@@ -259,8 +258,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F17 RID: 3863
-		// (get) Token: 0x06003E97 RID: 16023 RVA: 0x000A02C4 File Offset: 0x0009E4C4
+		// Token: 0x17000FEA RID: 4074
+		// (get) Token: 0x060042C0 RID: 17088 RVA: 0x000A987C File Offset: 0x000A7A7C
 		public virtual EFishingMechanismType? FishingMechanismType
 		{
 			get
@@ -273,8 +272,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F18 RID: 3864
-		// (get) Token: 0x06003E98 RID: 16024 RVA: 0x000A0300 File Offset: 0x0009E500
+		// Token: 0x17000FEB RID: 4075
+		// (get) Token: 0x060042C1 RID: 17089 RVA: 0x000A98B8 File Offset: 0x000A7AB8
 		public virtual EHonamiStoryMapMarkType? HonamiStoryMapMarkType
 		{
 			get
@@ -287,8 +286,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F19 RID: 3865
-		// (get) Token: 0x06003E99 RID: 16025 RVA: 0x000A033C File Offset: 0x0009E53C
+		// Token: 0x17000FEC RID: 4076
+		// (get) Token: 0x060042C2 RID: 17090 RVA: 0x000A98F4 File Offset: 0x000A7AF4
 		public virtual EVisionDisplayType? VisionDisplayType
 		{
 			get
@@ -301,8 +300,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F1A RID: 3866
-		// (get) Token: 0x06003E9A RID: 16026 RVA: 0x000A0378 File Offset: 0x0009E578
+		// Token: 0x17000FED RID: 4077
+		// (get) Token: 0x060042C3 RID: 17091 RVA: 0x000A9930 File Offset: 0x000A7B30
 		public virtual ESunSpiritInteractType? SunSpiritInteractType
 		{
 			get
@@ -315,8 +314,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F1B RID: 3867
-		// (get) Token: 0x06003E9B RID: 16027 RVA: 0x000A03B4 File Offset: 0x0009E5B4
+		// Token: 0x17000FEE RID: 4078
+		// (get) Token: 0x060042C4 RID: 17092 RVA: 0x000A996C File Offset: 0x000A7B6C
 		public virtual EAnimalType? AnimalType
 		{
 			get
@@ -329,8 +328,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F1C RID: 3868
-		// (get) Token: 0x06003E9C RID: 16028 RVA: 0x000A03F0 File Offset: 0x0009E5F0
+		// Token: 0x17000FEF RID: 4079
+		// (get) Token: 0x060042C5 RID: 17093 RVA: 0x000A99A8 File Offset: 0x000A7BA8
 		public virtual ERegionType? RegionType
 		{
 			get
@@ -343,8 +342,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F1D RID: 3869
-		// (get) Token: 0x06003E9D RID: 16029 RVA: 0x000A042C File Offset: 0x0009E62C
+		// Token: 0x17000FF0 RID: 4080
+		// (get) Token: 0x060042C6 RID: 17094 RVA: 0x000A99E4 File Offset: 0x000A7BE4
 		public virtual ERaceType? RaceType
 		{
 			get
@@ -357,8 +356,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F1E RID: 3870
-		// (get) Token: 0x06003E9E RID: 16030 RVA: 0x000A0468 File Offset: 0x0009E668
+		// Token: 0x17000FF1 RID: 4081
+		// (get) Token: 0x060042C7 RID: 17095 RVA: 0x000A9A20 File Offset: 0x000A7C20
 		public virtual EProfessionType? ProfessionType
 		{
 			get
@@ -371,8 +370,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F1F RID: 3871
-		// (get) Token: 0x06003E9F RID: 16031 RVA: 0x000A04A4 File Offset: 0x0009E6A4
+		// Token: 0x17000FF2 RID: 4082
+		// (get) Token: 0x060042C8 RID: 17096 RVA: 0x000A9A5C File Offset: 0x000A7C5C
 		public virtual EGenderType? GenderType
 		{
 			get
@@ -385,7 +384,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022CD RID: 8909
+		// Token: 0x17000FF3 RID: 4083
+		// (get) Token: 0x060042C9 RID: 17097 RVA: 0x000A9A98 File Offset: 0x000A7C98
+		public virtual int? CollectiblesDetectionId
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 33554432U) == 0U)
+				{
+					return null;
+				}
+				return new int?(this.Instance.CollectiblesDetectionId);
+			}
+		}
+
+		// Token: 0x040024E9 RID: 9449
 		private IEntityCategory Instance;
 	}
 }

@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004963 RID: 18787
+	// Token: 0x02004E1A RID: 19994
 	public enum EWeather : byte
 	{
-		// Token: 0x0400D157 RID: 53591
+		// Token: 0x0400DC1F RID: 56351
 		Sunny,
-		// Token: 0x0400D158 RID: 53592
+		// Token: 0x0400DC20 RID: 56352
 		Cloudy,
-		// Token: 0x0400D159 RID: 53593
+		// Token: 0x0400DC21 RID: 56353
 		Rain,
-		// Token: 0x0400D15A RID: 53594
+		// Token: 0x0400DC22 RID: 56354
 		Thunderstorm,
-		// Token: 0x0400D15B RID: 53595
+		// Token: 0x0400DC23 RID: 56355
 		Snow
 	}
 }

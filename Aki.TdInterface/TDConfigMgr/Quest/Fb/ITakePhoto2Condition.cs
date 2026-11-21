@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013BB RID: 5051
+	// Token: 0x02001511 RID: 5393
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITakePhoto2Condition : IQuestCondition
 	{
-		// Token: 0x0600735A RID: 29530 RVA: 0x00114ED4 File Offset: 0x001130D4
-		[NullableContext(1)]
+		// Token: 0x06007A11 RID: 31249 RVA: 0x001236C3 File Offset: 0x001218C3
+		[NullableContext(0)]
 		public static ITakePhoto2Condition Create(ITakePhoto2Condition? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025B7 RID: 9655
-		// (get) Token: 0x0600735B RID: 29531 RVA: 0x00114EF3 File Offset: 0x001130F3
+		// Token: 0x17002791 RID: 10129
+		// (get) Token: 0x06007A12 RID: 31250 RVA: 0x001236E2 File Offset: 0x001218E2
 		public override EChildQuest Type
 		{
 			get
@@ -35,8 +35,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025B8 RID: 9656
-		// (get) Token: 0x0600735C RID: 29532 RVA: 0x00114F00 File Offset: 0x00113100
+		// Token: 0x17002792 RID: 10130
+		// (get) Token: 0x06007A13 RID: 31251 RVA: 0x001236EF File Offset: 0x001218EF
 		public override IConditionGroup PreConditions
 		{
 			get
@@ -51,20 +51,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025B9 RID: 9657
-		// (get) Token: 0x0600735D RID: 29533 RVA: 0x00114F34 File Offset: 0x00113134
-		[Nullable(1)]
+		// Token: 0x17002793 RID: 10131
+		// (get) Token: 0x06007A14 RID: 31252 RVA: 0x00123723 File Offset: 0x00121923
+		[Nullable(0)]
 		public virtual string TidConditionDescription
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.TidConditionDescription;
 			}
 		}
 
-		// Token: 0x170025BA RID: 9658
-		// (get) Token: 0x0600735E RID: 29534 RVA: 0x00114F41 File Offset: 0x00113141
+		// Token: 0x17002794 RID: 10132
+		// (get) Token: 0x06007A15 RID: 31253 RVA: 0x00123730 File Offset: 0x00121930
 		public virtual string TargetPreviewImagePath
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025BB RID: 9659
-		// (get) Token: 0x0600735F RID: 29535 RVA: 0x00114F4E File Offset: 0x0011314E
+		// Token: 0x17002795 RID: 10133
+		// (get) Token: 0x06007A16 RID: 31254 RVA: 0x0012373D File Offset: 0x0012193D
 		public virtual ITakePhoto2TimeCondition TimeCondition
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025BC RID: 9660
-		// (get) Token: 0x06007360 RID: 29536 RVA: 0x00114F82 File Offset: 0x00113182
+		// Token: 0x17002796 RID: 10134
+		// (get) Token: 0x06007A17 RID: 31255 RVA: 0x00123771 File Offset: 0x00121971
 		public virtual ITakePhoto2PosCondition PosCondition
 		{
 			get
@@ -105,8 +105,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025BD RID: 9661
-		// (get) Token: 0x06007361 RID: 29537 RVA: 0x00114FB6 File Offset: 0x001131B6
+		// Token: 0x17002797 RID: 10135
+		// (get) Token: 0x06007A18 RID: 31256 RVA: 0x001237A5 File Offset: 0x001219A5
 		public virtual ITakePhoto2CameraFovCondition FovCondition
 		{
 			get
@@ -121,8 +121,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025BE RID: 9662
-		// (get) Token: 0x06007362 RID: 29538 RVA: 0x00114FEA File Offset: 0x001131EA
+		// Token: 0x17002798 RID: 10136
+		// (get) Token: 0x06007A19 RID: 31257 RVA: 0x001237D9 File Offset: 0x001219D9
 		public virtual ITakePhoto2SequenceCondition SequenceCondition
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025BF RID: 9663
-		// (get) Token: 0x06007363 RID: 29539 RVA: 0x0011501E File Offset: 0x0011321E
+		// Token: 0x17002799 RID: 10137
+		// (get) Token: 0x06007A1A RID: 31258 RVA: 0x0012380D File Offset: 0x00121A0D
 		public virtual string BoundCameraSeqPath
 		{
 			get
@@ -147,12 +147,22 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025C0 RID: 9664
-		// (get) Token: 0x06007364 RID: 29540 RVA: 0x0011502B File Offset: 0x0011322B
-		[Nullable(1)]
+		// Token: 0x1700279A RID: 10138
+		// (get) Token: 0x06007A1B RID: 31259 RVA: 0x0012381A File Offset: 0x00121A1A
+		public virtual string BackgroundImagePath
+		{
+			get
+			{
+				return this.Instance.BackgroundImagePath;
+			}
+		}
+
+		// Token: 0x1700279B RID: 10139
+		// (get) Token: 0x06007A1C RID: 31260 RVA: 0x00123827 File Offset: 0x00121A27
+		[Nullable(0)]
 		public virtual List<ITakePhoto2Target> PhotoTargets
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._PhotoTargetsInited)
@@ -165,8 +175,38 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025C1 RID: 9665
-		// (get) Token: 0x06007365 RID: 29541 RVA: 0x0011505A File Offset: 0x0011325A
+		// Token: 0x1700279C RID: 10140
+		// (get) Token: 0x06007A1D RID: 31261 RVA: 0x00123856 File Offset: 0x00121A56
+		public virtual ITakePhoto2BeforeYourEyesMode PhotoMode
+		{
+			get
+			{
+				if (this._PhotoModeInited)
+				{
+					return this._PhotoModeCache;
+				}
+				this._PhotoModeInited = true;
+				this._PhotoModeCache = ITakePhoto2BeforeYourEyesMode.Create(this.Instance.PhotoMode);
+				return this._PhotoModeCache;
+			}
+		}
+
+		// Token: 0x1700279D RID: 10141
+		// (get) Token: 0x06007A1E RID: 31262 RVA: 0x0012388C File Offset: 0x00121A8C
+		public virtual bool? CanDetectWhenNotTracking
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 1) == 0)
+				{
+					return null;
+				}
+				return new bool?(this.Instance.CanDetectWhenNotTracking);
+			}
+		}
+
+		// Token: 0x1700279E RID: 10142
+		// (get) Token: 0x06007A1F RID: 31263 RVA: 0x001238C2 File Offset: 0x00121AC2
 		public virtual string EdTidConditionDescription
 		{
 			get
@@ -175,44 +215,50 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040042BF RID: 17087
+		// Token: 0x04004647 RID: 17991
 		private ITakePhoto2Condition Instance;
 
-		// Token: 0x040042C0 RID: 17088
+		// Token: 0x04004648 RID: 17992
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040042C1 RID: 17089
+		// Token: 0x04004649 RID: 17993
 		private bool _PreConditionsInited;
 
-		// Token: 0x040042C2 RID: 17090
+		// Token: 0x0400464A RID: 17994
 		private ITakePhoto2TimeCondition _TimeConditionCache;
 
-		// Token: 0x040042C3 RID: 17091
+		// Token: 0x0400464B RID: 17995
 		private bool _TimeConditionInited;
 
-		// Token: 0x040042C4 RID: 17092
+		// Token: 0x0400464C RID: 17996
 		private ITakePhoto2PosCondition _PosConditionCache;
 
-		// Token: 0x040042C5 RID: 17093
+		// Token: 0x0400464D RID: 17997
 		private bool _PosConditionInited;
 
-		// Token: 0x040042C6 RID: 17094
+		// Token: 0x0400464E RID: 17998
 		private ITakePhoto2CameraFovCondition _FovConditionCache;
 
-		// Token: 0x040042C7 RID: 17095
+		// Token: 0x0400464F RID: 17999
 		private bool _FovConditionInited;
 
-		// Token: 0x040042C8 RID: 17096
+		// Token: 0x04004650 RID: 18000
 		private ITakePhoto2SequenceCondition _SequenceConditionCache;
 
-		// Token: 0x040042C9 RID: 17097
+		// Token: 0x04004651 RID: 18001
 		private bool _SequenceConditionInited;
 
-		// Token: 0x040042CA RID: 17098
-		[Nullable(1)]
+		// Token: 0x04004652 RID: 18002
+		[Nullable(0)]
 		private List<ITakePhoto2Target> _PhotoTargetsCache;
 
-		// Token: 0x040042CB RID: 17099
+		// Token: 0x04004653 RID: 18003
 		private bool _PhotoTargetsInited;
+
+		// Token: 0x04004654 RID: 18004
+		private ITakePhoto2BeforeYourEyesMode _PhotoModeCache;
+
+		// Token: 0x04004655 RID: 18005
+		private bool _PhotoModeInited;
 	}
 }

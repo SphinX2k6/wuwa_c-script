@@ -4,42 +4,42 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006604 RID: 26116
+	// Token: 0x02005582 RID: 21890
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingHandBookItemData : IFishingHandBookItemData
 	{
-		// Token: 0x170095F4 RID: 38388
-		// (get) Token: 0x06041741 RID: 268097 RVA: 0x00FD9BCD File Offset: 0x00FD7DCD
-		// (set) Token: 0x06041742 RID: 268098 RVA: 0x00FD9BD5 File Offset: 0x00FD7DD5
+		// Token: 0x17006956 RID: 26966
+		// (get) Token: 0x06036406 RID: 222214 RVA: 0x00F20C4D File Offset: 0x00F1EE4D
+		// (set) Token: 0x06036407 RID: 222215 RVA: 0x00F20C55 File Offset: 0x00F1EE55
 		public int Id { get; set; }
 
-		// Token: 0x170095F5 RID: 38389
-		// (get) Token: 0x06041743 RID: 268099 RVA: 0x00FD9BDE File Offset: 0x00FD7DDE
-		// (set) Token: 0x06041744 RID: 268100 RVA: 0x00FD9BE6 File Offset: 0x00FD7DE6
+		// Token: 0x17006957 RID: 26967
+		// (get) Token: 0x06036408 RID: 222216 RVA: 0x00F20C5E File Offset: 0x00F1EE5E
+		// (set) Token: 0x06036409 RID: 222217 RVA: 0x00F20C66 File Offset: 0x00F1EE66
 		public int Type { get; set; }
 
-		// Token: 0x170095F6 RID: 38390
-		// (get) Token: 0x06041745 RID: 268101 RVA: 0x00FD9BEF File Offset: 0x00FD7DEF
-		// (set) Token: 0x06041746 RID: 268102 RVA: 0x00FD9BF7 File Offset: 0x00FD7DF7
+		// Token: 0x17006958 RID: 26968
+		// (get) Token: 0x0603640A RID: 222218 RVA: 0x00F20C6F File Offset: 0x00F1EE6F
+		// (set) Token: 0x0603640B RID: 222219 RVA: 0x00F20C77 File Offset: 0x00F1EE77
 		public int Time { get; set; }
 
-		// Token: 0x170095F7 RID: 38391
-		// (get) Token: 0x06041747 RID: 268103 RVA: 0x00FD9C00 File Offset: 0x00FD7E00
-		// (set) Token: 0x06041748 RID: 268104 RVA: 0x00FD9C08 File Offset: 0x00FD7E08
+		// Token: 0x17006959 RID: 26969
+		// (get) Token: 0x0603640C RID: 222220 RVA: 0x00F20C80 File Offset: 0x00F1EE80
+		// (set) Token: 0x0603640D RID: 222221 RVA: 0x00F20C88 File Offset: 0x00F1EE88
 		public List<int> Tech { get; set; }
 
-		// Token: 0x170095F8 RID: 38392
-		// (get) Token: 0x06041749 RID: 268105 RVA: 0x00FD9C11 File Offset: 0x00FD7E11
-		// (set) Token: 0x0604174A RID: 268106 RVA: 0x00FD9C19 File Offset: 0x00FD7E19
+		// Token: 0x1700695A RID: 26970
+		// (get) Token: 0x0603640E RID: 222222 RVA: 0x00F20C91 File Offset: 0x00F1EE91
+		// (set) Token: 0x0603640F RID: 222223 RVA: 0x00F20C99 File Offset: 0x00F1EE99
 		public List<int> Area { get; set; }
 
-		// Token: 0x170095F9 RID: 38393
-		// (get) Token: 0x0604174B RID: 268107 RVA: 0x00FD9C22 File Offset: 0x00FD7E22
-		// (set) Token: 0x0604174C RID: 268108 RVA: 0x00FD9C2A File Offset: 0x00FD7E2A
+		// Token: 0x1700695B RID: 26971
+		// (get) Token: 0x06036410 RID: 222224 RVA: 0x00F20CA2 File Offset: 0x00F1EEA2
+		// (set) Token: 0x06036411 RID: 222225 RVA: 0x00F20CAA File Offset: 0x00F1EEAA
 		public int HandBookId { get; set; }
 
-		// Token: 0x0604174D RID: 268109 RVA: 0x00FD9C33 File Offset: 0x00FD7E33
+		// Token: 0x06036412 RID: 222226 RVA: 0x00F20CB3 File Offset: 0x00F1EEB3
 		public FishingHandBookItemData()
 		{
 			this.Tech = new List<int>();

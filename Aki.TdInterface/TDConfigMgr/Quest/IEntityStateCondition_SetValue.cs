@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F62 RID: 3938
+	// Token: 0x0200108C RID: 4236
 	public class IEntityStateCondition_SetValue
 	{
-		// Token: 0x040034EB RID: 13547
+		// Token: 0x0400381C RID: 14364
 		public int EntityId;
 
-		// Token: 0x040034EC RID: 13548
-		[Nullable(1)]
+		// Token: 0x0400381D RID: 14365
 		public string State;
 	}
 }

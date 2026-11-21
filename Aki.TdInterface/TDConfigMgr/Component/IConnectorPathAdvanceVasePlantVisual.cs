@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000279 RID: 633
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002BC RID: 700
 	public class IConnectorPathAdvanceVasePlantVisual : IConnectorPathAdvanceVisual
 	{
-		// Token: 0x06000B9B RID: 2971 RVA: 0x0002E448 File Offset: 0x0002C648
+		// Token: 0x06000CB5 RID: 3253 RVA: 0x00031138 File Offset: 0x0002F338
 		private IConnectorPathAdvanceVasePlantVisual_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000B9C RID: 2972 RVA: 0x0002E480 File Offset: 0x0002C680
+		// Token: 0x06000CB6 RID: 3254 RVA: 0x00031170 File Offset: 0x0002F370
 		public static IConnectorPathAdvanceVasePlantVisual Create([Nullable(2)] IConnectorPathAdvanceVasePlantVisual instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B9D RID: 2973 RVA: 0x0002E493 File Offset: 0x0002C693
+		// Token: 0x06000CB7 RID: 3255 RVA: 0x00031183 File Offset: 0x0002F383
 		public static IConnectorPathAdvanceVasePlantVisual CreateFromSetValue([Nullable(2)] IConnectorPathAdvanceVasePlantVisual_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B9E RID: 2974 RVA: 0x0002E4A8 File Offset: 0x0002C6A8
+		// Token: 0x06000CB8 RID: 3256 RVA: 0x00031198 File Offset: 0x0002F398
 		public new IConnectorPathAdvanceVasePlantVisual_SetValue ToSetValue()
 		{
 			return new IConnectorPathAdvanceVasePlantVisual_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000375 RID: 885
-		// (get) Token: 0x06000B9F RID: 2975 RVA: 0x0002E502 File Offset: 0x0002C702
-		// (set) Token: 0x06000BA0 RID: 2976 RVA: 0x0002E52D File Offset: 0x0002C72D
+		// Token: 0x170003BD RID: 957
+		// (get) Token: 0x06000CB9 RID: 3257 RVA: 0x000311F2 File Offset: 0x0002F3F2
+		// (set) Token: 0x06000CBA RID: 3258 RVA: 0x0003121D File Offset: 0x0002F41D
 		public override EConnectorPathAdvanceVisualType Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000376 RID: 886
-		// (get) Token: 0x06000BA1 RID: 2977 RVA: 0x0002E53C File Offset: 0x0002C73C
-		// (set) Token: 0x06000BA2 RID: 2978 RVA: 0x0002E576 File Offset: 0x0002C776
+		// Token: 0x170003BE RID: 958
+		// (get) Token: 0x06000CBB RID: 3259 RVA: 0x0003122C File Offset: 0x0002F42C
+		// (set) Token: 0x06000CBC RID: 3260 RVA: 0x00031266 File Offset: 0x0002F466
 		public virtual float? ScatterWidth
 		{
 			get
@@ -112,9 +110,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000377 RID: 887
-		// (get) Token: 0x06000BA3 RID: 2979 RVA: 0x0002E584 File Offset: 0x0002C784
-		// (set) Token: 0x06000BA4 RID: 2980 RVA: 0x0002E5BE File Offset: 0x0002C7BE
+		// Token: 0x170003BF RID: 959
+		// (get) Token: 0x06000CBD RID: 3261 RVA: 0x00031274 File Offset: 0x0002F474
+		// (set) Token: 0x06000CBE RID: 3262 RVA: 0x000312AE File Offset: 0x0002F4AE
 		public virtual float? ScatterDensity
 		{
 			get
@@ -136,9 +134,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000378 RID: 888
-		// (get) Token: 0x06000BA5 RID: 2981 RVA: 0x0002E5CC File Offset: 0x0002C7CC
-		// (set) Token: 0x06000BA6 RID: 2982 RVA: 0x0002E606 File Offset: 0x0002C806
+		// Token: 0x170003C0 RID: 960
+		// (get) Token: 0x06000CBF RID: 3263 RVA: 0x000312BC File Offset: 0x0002F4BC
+		// (set) Token: 0x06000CC0 RID: 3264 RVA: 0x000312F6 File Offset: 0x0002F4F6
 		public virtual float? Scale
 		{
 			get
@@ -160,9 +158,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000379 RID: 889
-		// (get) Token: 0x06000BA7 RID: 2983 RVA: 0x0002E614 File Offset: 0x0002C814
-		// (set) Token: 0x06000BA8 RID: 2984 RVA: 0x0002E64E File Offset: 0x0002C84E
+		// Token: 0x170003C1 RID: 961
+		// (get) Token: 0x06000CC1 RID: 3265 RVA: 0x00031304 File Offset: 0x0002F504
+		// (set) Token: 0x06000CC2 RID: 3266 RVA: 0x0003133E File Offset: 0x0002F53E
 		public virtual bool? SnapToSurface
 		{
 			get
@@ -184,20 +182,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700037A RID: 890
-		// (get) Token: 0x06000BA9 RID: 2985 RVA: 0x0002E65C File Offset: 0x0002C85C
-		// (set) Token: 0x06000BAA RID: 2986 RVA: 0x0002E683 File Offset: 0x0002C883
+		// Token: 0x170003C2 RID: 962
+		// (get) Token: 0x06000CC3 RID: 3267 RVA: 0x0003134C File Offset: 0x0002F54C
+		// (set) Token: 0x06000CC4 RID: 3268 RVA: 0x00031373 File Offset: 0x0002F573
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> PathRtList
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -215,7 +213,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -223,11 +221,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000B28 RID: 2856
+		// Token: 0x04000C09 RID: 3081
 		[Nullable(2)]
 		protected new IConnectorPathAdvanceVasePlantVisual FbInstance;
 
-		// Token: 0x04000B29 RID: 2857
+		// Token: 0x04000C0A RID: 3082
 		[Nullable(2)]
 		protected new IConnectorPathAdvanceVasePlantVisual_SetValue PocoInterface;
 	}

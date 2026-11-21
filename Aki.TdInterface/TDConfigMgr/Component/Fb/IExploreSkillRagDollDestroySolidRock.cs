@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CB2 RID: 3250
+	// Token: 0x02000D94 RID: 3476
 	public class IExploreSkillRagDollDestroySolidRock : IExploreSkillInteractType
 	{
-		// Token: 0x06004A60 RID: 19040 RVA: 0x000BA2C1 File Offset: 0x000B84C1
-		[NullableContext(1)]
+		// Token: 0x06004F0E RID: 20238 RVA: 0x000C4CD1 File Offset: 0x000C2ED1
 		public static IExploreSkillRagDollDestroySolidRock Create(IExploreSkillRagDollDestroySolidRock? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016B9 RID: 5817
-		// (get) Token: 0x06004A61 RID: 19041 RVA: 0x000BA2E0 File Offset: 0x000B84E0
+		// Token: 0x170017E1 RID: 6113
+		// (get) Token: 0x06004F0F RID: 20239 RVA: 0x000C4CF0 File Offset: 0x000C2EF0
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A71 RID: 10865
+		// Token: 0x04002CEB RID: 11499
 		private IExploreSkillRagDollDestroySolidRock Instance;
 	}
 }

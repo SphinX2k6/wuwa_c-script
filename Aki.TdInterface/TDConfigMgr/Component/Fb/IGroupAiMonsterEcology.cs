@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D5B RID: 3419
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E55 RID: 3669
 	public class IGroupAiMonsterEcology : IGroupAiMode
 	{
-		// Token: 0x06004DE8 RID: 19944 RVA: 0x000C1952 File Offset: 0x000BFB52
+		// Token: 0x06005304 RID: 21252 RVA: 0x000CD096 File Offset: 0x000CB296
 		public static IGroupAiMonsterEcology Create(IGroupAiMonsterEcology? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018EF RID: 6383
-		// (get) Token: 0x06004DE9 RID: 19945 RVA: 0x000C1971 File Offset: 0x000BFB71
+		// Token: 0x17001A55 RID: 6741
+		// (get) Token: 0x06005305 RID: 21253 RVA: 0x000CD0B5 File Offset: 0x000CB2B5
 		public override EGroupAiMode Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018F0 RID: 6384
-		// (get) Token: 0x06004DEA RID: 19946 RVA: 0x000C197E File Offset: 0x000BFB7E
+		// Token: 0x17001A56 RID: 6742
+		// (get) Token: 0x06005306 RID: 21254 RVA: 0x000CD0C2 File Offset: 0x000CB2C2
 		public virtual int Leader
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018F1 RID: 6385
-		// (get) Token: 0x06004DEB RID: 19947 RVA: 0x000C198C File Offset: 0x000BFB8C
+		// Token: 0x17001A57 RID: 6743
+		// (get) Token: 0x06005307 RID: 21255 RVA: 0x000CD0D0 File Offset: 0x000CB2D0
 		public virtual List<IGroupAiMonsterMember> Members
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CA6 RID: 11430
+		// Token: 0x04002F66 RID: 12134
 		private IGroupAiMonsterEcology Instance;
 
-		// Token: 0x04002CA7 RID: 11431
+		// Token: 0x04002F67 RID: 12135
 		private List<IGroupAiMonsterMember> _MembersCache;
 
-		// Token: 0x04002CA8 RID: 11432
+		// Token: 0x04002F68 RID: 12136
 		private bool _MembersInited;
 	}
 }

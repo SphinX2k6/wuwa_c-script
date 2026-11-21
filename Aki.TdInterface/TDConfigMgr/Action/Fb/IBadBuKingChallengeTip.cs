@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002752 RID: 10066
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A1E RID: 10782
 	public class IBadBuKingChallengeTip : ICommonTipType
 	{
-		// Token: 0x0600E041 RID: 57409 RVA: 0x00212DB5 File Offset: 0x00210FB5
+		// Token: 0x0600EE41 RID: 60993 RVA: 0x0022F8ED File Offset: 0x0022DAED
 		public static IBadBuKingChallengeTip Create(IBadBuKingChallengeTip? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700435F RID: 17247
-		// (get) Token: 0x0600E042 RID: 57410 RVA: 0x00212DD4 File Offset: 0x00210FD4
+		// Token: 0x170046B3 RID: 18099
+		// (get) Token: 0x0600EE42 RID: 60994 RVA: 0x0022F90C File Offset: 0x0022DB0C
 		public override ECommonTipType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004360 RID: 17248
-		// (get) Token: 0x0600E043 RID: 57411 RVA: 0x00212DE1 File Offset: 0x00210FE1
+		// Token: 0x170046B4 RID: 18100
+		// (get) Token: 0x0600EE43 RID: 60995 RVA: 0x0022F919 File Offset: 0x0022DB19
 		public virtual string WarningText
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C50 RID: 31824
+		// Token: 0x040082FE RID: 33534
 		private IBadBuKingChallengeTip Instance;
 	}
 }

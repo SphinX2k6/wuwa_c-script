@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x02005705 RID: 22277
+	// Token: 0x020046DC RID: 18140
 	public enum EKurotatoRiskType
 	{
-		// Token: 0x0401DBBB RID: 121787
+		// Token: 0x04018651 RID: 99921
 		Minions = 1,
-		// Token: 0x0401DBBC RID: 121788
+		// Token: 0x04018652 RID: 99922
 		Elite,
-		// Token: 0x0401DBBD RID: 121789
+		// Token: 0x04018653 RID: 99923
 		BOSS,
-		// Token: 0x0401DBBE RID: 121790
+		// Token: 0x04018654 RID: 99924
 		Chest,
-		// Token: 0x0401DBBF RID: 121791
+		// Token: 0x04018655 RID: 99925
 		Destructible
 	}
 }

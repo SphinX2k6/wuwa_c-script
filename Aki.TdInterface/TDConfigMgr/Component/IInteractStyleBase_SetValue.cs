@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000492 RID: 1170
+	// Token: 0x020004EB RID: 1259
 	public class IInteractStyleBase_SetValue
 	{
-		// Token: 0x04001198 RID: 4504
+		// Token: 0x040012BA RID: 4794
 		public EInteractStyleType Type;
 	}
 }

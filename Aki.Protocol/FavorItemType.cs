@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015B0 RID: 5552
+	// Token: 0x02001622 RID: 5666
 	public enum FavorItemType
 	{
-		// Token: 0x0400BC65 RID: 48229
+		// Token: 0x0400C158 RID: 49496
 		[OriginalName("Word")]
 		Word,
-		// Token: 0x0400BC66 RID: 48230
+		// Token: 0x0400C159 RID: 49497
 		[OriginalName("Story")]
 		Story,
-		// Token: 0x0400BC67 RID: 48231
+		// Token: 0x0400C15A RID: 49498
 		[OriginalName("Goods")]
 		Goods
 	}

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020013F4 RID: 5108
+	// Token: 0x02001467 RID: 5223
 	[NetMessage(EMessageId.TrampleGearTransitionNotify)]
 	public sealed class TrampleGearTransitionNotify : IMessage<TrampleGearTransitionNotify>, IMessage, IEquatable<TrampleGearTransitionNotify>, IDeepCloneable<TrampleGearTransitionNotify>, IBufferMessage
 	{
-		// Token: 0x0601B111 RID: 110865 RVA: 0x003EB558 File Offset: 0x003E9758
+		// Token: 0x0601BB9C RID: 113564 RVA: 0x0040682C File Offset: 0x00404A2C
 		[NullableContext(1)]
 		public static TrampleGearTransitionNotify Create()
 		{
 			return new TrampleGearTransitionNotify();
 		}
 
-		// Token: 0x17005B35 RID: 23349
-		// (get) Token: 0x0601B112 RID: 110866 RVA: 0x003EB55F File Offset: 0x003E975F
+		// Token: 0x17005DCA RID: 24010
+		// (get) Token: 0x0601BB9D RID: 113565 RVA: 0x00406833 File Offset: 0x00404A33
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B36 RID: 23350
-		// (get) Token: 0x0601B113 RID: 110867 RVA: 0x003EB562 File Offset: 0x003E9762
+		// Token: 0x17005DCB RID: 24011
+		// (get) Token: 0x0601BB9E RID: 113566 RVA: 0x00406836 File Offset: 0x00404A36
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B114 RID: 110868 RVA: 0x003EB569 File Offset: 0x003E9769
+		// Token: 0x0601BB9F RID: 113567 RVA: 0x0040683D File Offset: 0x00404A3D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrampleGearTransitionNotify()
 		{
 		}
 
-		// Token: 0x0601B115 RID: 110869 RVA: 0x003EB571 File Offset: 0x003E9771
+		// Token: 0x0601BBA0 RID: 113568 RVA: 0x00406845 File Offset: 0x00404A45
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrampleGearTransitionNotify(TrampleGearTransitionNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B116 RID: 110870 RVA: 0x003EB5A2 File Offset: 0x003E97A2
+		// Token: 0x0601BBA1 RID: 113569 RVA: 0x00406876 File Offset: 0x00404A76
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrampleGearTransitionNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new TrampleGearTransitionNotify(this);
 		}
 
-		// Token: 0x17005B37 RID: 23351
-		// (get) Token: 0x0601B117 RID: 110871 RVA: 0x003EB5AA File Offset: 0x003E97AA
-		// (set) Token: 0x0601B118 RID: 110872 RVA: 0x003EB5B2 File Offset: 0x003E97B2
+		// Token: 0x17005DCC RID: 24012
+		// (get) Token: 0x0601BBA2 RID: 113570 RVA: 0x0040687E File Offset: 0x00404A7E
+		// (set) Token: 0x0601BBA3 RID: 113571 RVA: 0x00406886 File Offset: 0x00404A86
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long TrampleGearEntiyId
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B38 RID: 23352
-		// (get) Token: 0x0601B119 RID: 110873 RVA: 0x003EB5BB File Offset: 0x003E97BB
-		// (set) Token: 0x0601B11A RID: 110874 RVA: 0x003EB5C3 File Offset: 0x003E97C3
+		// Token: 0x17005DCD RID: 24013
+		// (get) Token: 0x0601BBA4 RID: 113572 RVA: 0x0040688F File Offset: 0x00404A8F
+		// (set) Token: 0x0601BBA5 RID: 113573 RVA: 0x00406897 File Offset: 0x00404A97
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrampleGearTransition TrampleGearTransition
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B11B RID: 110875 RVA: 0x003EB5CC File Offset: 0x003E97CC
+		// Token: 0x0601BBA6 RID: 113574 RVA: 0x004068A0 File Offset: 0x00404AA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TrampleGearTransitionNotify);
 		}
 
-		// Token: 0x0601B11C RID: 110876 RVA: 0x003EB5DA File Offset: 0x003E97DA
+		// Token: 0x0601BBA7 RID: 113575 RVA: 0x004068AE File Offset: 0x00404AAE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TrampleGearTransitionNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.TrampleGearEntiyId == other.TrampleGearEntiyId && this.TrampleGearTransition == other.TrampleGearTransition && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601B11D RID: 110877 RVA: 0x003EB618 File Offset: 0x003E9818
+		// Token: 0x0601BBA8 RID: 113576 RVA: 0x004068EC File Offset: 0x00404AEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B11E RID: 110878 RVA: 0x003EB676 File Offset: 0x003E9876
+		// Token: 0x0601BBA9 RID: 113577 RVA: 0x0040694A File Offset: 0x00404B4A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B11F RID: 110879 RVA: 0x003EB683 File Offset: 0x003E9883
+		// Token: 0x0601BBAA RID: 113578 RVA: 0x00406957 File Offset: 0x00404B57
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B120 RID: 110880 RVA: 0x003EB68C File Offset: 0x003E988C
+		// Token: 0x0601BBAB RID: 113579 RVA: 0x00406960 File Offset: 0x00404B60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.TrampleGearEntiyId != 0L)
-			{
-				output.WriteRawTag(48);
-				output.WriteInt64(this.TrampleGearEntiyId);
-			}
 			if (this.TrampleGearTransition != TrampleGearTransition.Up)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(24);
 				output.WriteEnum((int)this.TrampleGearTransition);
+			}
+			if (this.TrampleGearEntiyId != 0L)
+			{
+				output.WriteRawTag(112);
+				output.WriteInt64(this.TrampleGearEntiyId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B121 RID: 110881 RVA: 0x003EB6E8 File Offset: 0x003E98E8
+		// Token: 0x0601BBAC RID: 113580 RVA: 0x004069BC File Offset: 0x00404BBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B122 RID: 110882 RVA: 0x003EB740 File Offset: 0x003E9940
+		// Token: 0x0601BBAD RID: 113581 RVA: 0x00406A14 File Offset: 0x00404C14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TrampleGearTransitionNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B123 RID: 110883 RVA: 0x003EB790 File Offset: 0x003E9990
+		// Token: 0x0601BBAE RID: 113582 RVA: 0x00406A64 File Offset: 0x00404C64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B124 RID: 110884 RVA: 0x003EB79C File Offset: 0x003E999C
+		// Token: 0x0601BBAF RID: 113583 RVA: 0x00406A70 File Offset: 0x00404C70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,37 +236,37 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 48U)
+				if (num != 24U)
 				{
-					if (num != 120U)
+					if (num != 112U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.TrampleGearTransition = (TrampleGearTransition)input.ReadEnum();
+						this.TrampleGearEntiyId = input.ReadInt64();
 					}
 				}
 				else
 				{
-					this.TrampleGearEntiyId = input.ReadInt64();
+					this.TrampleGearTransition = (TrampleGearTransition)input.ReadEnum();
 				}
 			}
 		}
 
-		// Token: 0x04009C97 RID: 40087
+		// Token: 0x0400A0DE RID: 41182
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009C98 RID: 40088
-		public const int TrampleGearEntiyIdFieldNumber = 6;
+		// Token: 0x0400A0DF RID: 41183
+		public const int TrampleGearEntiyIdFieldNumber = 14;
 
-		// Token: 0x04009C99 RID: 40089
+		// Token: 0x0400A0E0 RID: 41184
 		private long trampleGearEntiyId_;
 
-		// Token: 0x04009C9A RID: 40090
-		public const int TrampleGearTransitionFieldNumber = 15;
+		// Token: 0x0400A0E1 RID: 41185
+		public const int TrampleGearTransitionFieldNumber = 3;
 
-		// Token: 0x04009C9B RID: 40091
+		// Token: 0x0400A0E2 RID: 41186
 		private TrampleGearTransition trampleGearTransition_;
 	}
 }

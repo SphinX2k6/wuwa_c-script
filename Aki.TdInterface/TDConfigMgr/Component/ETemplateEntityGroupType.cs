@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000151 RID: 337
+	// Token: 0x02000164 RID: 356
 	public enum ETemplateEntityGroupType
 	{
-		// Token: 0x04000677 RID: 1655
+		// Token: 0x040006BC RID: 1724
 		A = 1,
-		// Token: 0x04000678 RID: 1656
+		// Token: 0x040006BD RID: 1725
 		B,
-		// Token: 0x04000679 RID: 1657
+		// Token: 0x040006BE RID: 1726
 		C,
-		// Token: 0x0400067A RID: 1658
+		// Token: 0x040006BF RID: 1727
 		D
 	}
 }

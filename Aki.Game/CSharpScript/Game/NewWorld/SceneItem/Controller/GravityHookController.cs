@@ -15,13 +15,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 {
-	// Token: 0x0200723A RID: 29242
+	// Token: 0x020062EF RID: 25327
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class GravityHookController : ControllerBase
 	{
-		// Token: 0x06047AA2 RID: 293538 RVA: 0x01256CA4 File Offset: 0x01254EA4
+		// Token: 0x0603D404 RID: 250884 RVA: 0x011AF944 File Offset: 0x011ADB44
 		public void ChangeGravity(int entityId, float angleRangeMin, float angleRangeMax, float smoothSecondMin, float smoothSecondMax, bool isLerpCamera)
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(entityId);
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			this.ChangeGravityForCharacter(entity, angleRangeMin, angleRangeMax, smoothSecondMin, smoothSecondMax, isLerpCamera);
 		}
 
-		// Token: 0x06047AA3 RID: 293539 RVA: 0x01256D0C File Offset: 0x01254F0C
+		// Token: 0x0603D405 RID: 250885 RVA: 0x011AF9AC File Offset: 0x011ADBAC
 		private void ChangeGravityForCharacter(Entity entity, float angleRangeMin, float angleRangeMax, float smoothSecondMin, float smoothSecondMax, bool isLerpCamera)
 		{
 			CharacterMoveComponent component = entity.GetComponent<CharacterMoveComponent>();
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}, 0);
 		}
 
-		// Token: 0x06047AA4 RID: 293540 RVA: 0x01256ECC File Offset: 0x012550CC
+		// Token: 0x0603D406 RID: 250886 RVA: 0x011AFB74 File Offset: 0x011ADD74
 		private void ChangeGravityForVehicle(Entity entity, float angleRangeMin, float angleRangeMax, float smoothSecondMin, float smoothSecondMax, bool isLerpCamera)
 		{
 			VehiclePerformComponent component = entity.GetComponent<VehiclePerformComponent>();
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047AA5 RID: 293541 RVA: 0x012570D8 File Offset: 0x012552D8
+		// Token: 0x0603D407 RID: 250887 RVA: 0x011AFD88 File Offset: 0x011ADF88
 		public SGravityHookLockInfo GetGravityHookLockInfo(int entityId)
 		{
 			global::Vector gravityHookLookAtConfig = this.GetGravityHookLookAtConfig(entityId);
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return result;
 		}
 
-		// Token: 0x06047AA6 RID: 293542 RVA: 0x01257128 File Offset: 0x01255328
+		// Token: 0x0603D408 RID: 250888 RVA: 0x011AFDD8 File Offset: 0x011ADFD8
 		[NullableContext(2)]
 		private global::Vector GetGravityHookLookAtConfig(int entityId)
 		{
@@ -260,8 +260,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return null;
 		}
 
-		// Token: 0x17009E41 RID: 40513
-		// (get) Token: 0x06047AA7 RID: 293543 RVA: 0x01257245 File Offset: 0x01255445
+		// Token: 0x170073F8 RID: 29688
+		// (get) Token: 0x0603D409 RID: 250889 RVA: 0x011AFEF5 File Offset: 0x011AE0F5
 		public static GravityHookController Instance
 		{
 			get
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			}
 		}
 
-		// Token: 0x06047AA8 RID: 293544 RVA: 0x0125724C File Offset: 0x0125544C
+		// Token: 0x0603D40A RID: 250890 RVA: 0x011AFEFC File Offset: 0x011AE0FC
 		public static GravityHookController GetOrCreateInstance()
 		{
 			if (GravityHookController._Instance == null)
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return GravityHookController._Instance;
 		}
 
-		// Token: 0x06047AA9 RID: 293545 RVA: 0x01257260 File Offset: 0x01255460
+		// Token: 0x0603D40B RID: 250891 RVA: 0x011AFF10 File Offset: 0x011AE110
 		public static bool CreateInstance()
 		{
 			if (GravityHookController._Instance != null)
@@ -291,24 +291,24 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Controller
 			return true;
 		}
 
-		// Token: 0x06047AAA RID: 293546 RVA: 0x01257276 File Offset: 0x01255476
+		// Token: 0x0603D40C RID: 250892 RVA: 0x011AFF26 File Offset: 0x011AE126
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047AAB RID: 293547 RVA: 0x01257278 File Offset: 0x01255478
+		// Token: 0x0603D40D RID: 250893 RVA: 0x011AFF28 File Offset: 0x011AE128
 		public static void ResetStaticDefaultValue()
 		{
 			GravityHookController._Instance = null;
 		}
 
-		// Token: 0x06047AAC RID: 293548 RVA: 0x01257280 File Offset: 0x01255480
+		// Token: 0x0603D40E RID: 250894 RVA: 0x011AFF30 File Offset: 0x011AE130
 		static GravityHookController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GravityHookController.CreateStaticDefaultValue), new Action(GravityHookController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025B54 RID: 154452
+		// Token: 0x040207C3 RID: 133059
 		[Nullable(2)]
 		private static GravityHookController _Instance;
 	}

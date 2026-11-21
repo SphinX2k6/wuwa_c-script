@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007647 RID: 30279
+	// Token: 0x02007E55 RID: 32341
 	public enum TBattleStatePerceptionBehavior : byte
 	{
-		// Token: 0x040125F1 RID: 75249
+		// Token: 0x0401363B RID: 79419
 		NONE,
-		// Token: 0x040125F2 RID: 75250
+		// Token: 0x0401363C RID: 79420
 		IPerceptionNotifyGatherToEntity,
-		// Token: 0x040125F3 RID: 75251
+		// Token: 0x0401363D RID: 79421
 		IPerceptionNotifyGatherToPlayer
 	}
 }

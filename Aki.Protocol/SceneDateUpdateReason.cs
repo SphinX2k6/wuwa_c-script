@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001649 RID: 5705
+	// Token: 0x020016BF RID: 5823
 	public enum SceneDateUpdateReason
 	{
-		// Token: 0x0400C0EF RID: 49391
+		// Token: 0x0400C5F6 RID: 50678
 		[OriginalName("TimeFlowAuto")]
 		TimeFlowAuto,
-		// Token: 0x0400C0F0 RID: 49392
+		// Token: 0x0400C5F7 RID: 50679
 		[OriginalName("LevelPlayAuto")]
 		LevelPlayAuto,
-		// Token: 0x0400C0F1 RID: 49393
+		// Token: 0x0400C5F8 RID: 50680
 		[OriginalName("PlayerOperate")]
 		PlayerOperate
 	}

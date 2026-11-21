@@ -5,12 +5,12 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Launcher.Util.Json
 {
-	// Token: 0x02000082 RID: 130
+	// Token: 0x02000085 RID: 133
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TsBigIntJsonConverter : JsonConverter<long>
 	{
-		// Token: 0x06000370 RID: 880 RVA: 0x00012B48 File Offset: 0x00010D48
+		// Token: 0x06000381 RID: 897 RVA: 0x00013AA4 File Offset: 0x00011CA4
 		public override long Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			if (reader.TokenType == JsonTokenType.Number)
@@ -34,7 +34,7 @@ namespace CSharpScript.Launcher.Util.Json
 			return 0L;
 		}
 
-		// Token: 0x06000371 RID: 881 RVA: 0x00012BB0 File Offset: 0x00010DB0
+		// Token: 0x06000382 RID: 898 RVA: 0x00013B0C File Offset: 0x00011D0C
 		public override void Write(Utf8JsonWriter writer, long value, JsonSerializerOptions options)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 2);

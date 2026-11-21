@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020B3 RID: 8371
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002308 RID: 8968
 	public class IWaitMovieModeFixedTime : IEnterMovieModeDurationType
 	{
-		// Token: 0x0600B818 RID: 47128 RVA: 0x001AA410 File Offset: 0x001A8610
+		// Token: 0x0600C370 RID: 50032 RVA: 0x001C1058 File Offset: 0x001BF258
 		private IWaitMovieModeFixedTime_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B819 RID: 47129 RVA: 0x001AA448 File Offset: 0x001A8648
+		// Token: 0x0600C371 RID: 50033 RVA: 0x001C1090 File Offset: 0x001BF290
 		public static IWaitMovieModeFixedTime Create([Nullable(2)] IWaitMovieModeFixedTime instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B81A RID: 47130 RVA: 0x001AA45B File Offset: 0x001A865B
+		// Token: 0x0600C372 RID: 50034 RVA: 0x001C10A3 File Offset: 0x001BF2A3
 		public static IWaitMovieModeFixedTime CreateFromSetValue([Nullable(2)] IWaitMovieModeFixedTime_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B81B RID: 47131 RVA: 0x001AA46E File Offset: 0x001A866E
+		// Token: 0x0600C373 RID: 50035 RVA: 0x001C10B6 File Offset: 0x001BF2B6
 		public new IWaitMovieModeFixedTime_SetValue ToSetValue()
 		{
 			return new IWaitMovieModeFixedTime_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003858 RID: 14424
-		// (get) Token: 0x0600B81C RID: 47132 RVA: 0x001AA48D File Offset: 0x001A868D
-		// (set) Token: 0x0600B81D RID: 47133 RVA: 0x001AA4B8 File Offset: 0x001A86B8
+		// Token: 0x17003B3C RID: 15164
+		// (get) Token: 0x0600C374 RID: 50036 RVA: 0x001C10D5 File Offset: 0x001BF2D5
+		// (set) Token: 0x0600C375 RID: 50037 RVA: 0x001C1100 File Offset: 0x001BF300
 		public override EEnterMovieModeDurationType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003859 RID: 14425
-		// (get) Token: 0x0600B81E RID: 47134 RVA: 0x001AA4C6 File Offset: 0x001A86C6
-		// (set) Token: 0x0600B81F RID: 47135 RVA: 0x001AA4F5 File Offset: 0x001A86F5
+		// Token: 0x17003B3D RID: 15165
+		// (get) Token: 0x0600C376 RID: 50038 RVA: 0x001C110E File Offset: 0x001BF30E
+		// (set) Token: 0x0600C377 RID: 50039 RVA: 0x001C113D File Offset: 0x001BF33D
 		public virtual float Duration
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E69 RID: 28265
+		// Token: 0x04007487 RID: 29831
 		[Nullable(2)]
 		protected new IWaitMovieModeFixedTime FbInstance;
 
-		// Token: 0x04006E6A RID: 28266
+		// Token: 0x04007488 RID: 29832
 		[Nullable(2)]
 		protected new IWaitMovieModeFixedTime_SetValue PocoInterface;
 	}

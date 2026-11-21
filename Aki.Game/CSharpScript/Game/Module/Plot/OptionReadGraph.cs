@@ -5,33 +5,33 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FFE RID: 20478
+	// Token: 0x02003FC8 RID: 16328
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class OptionReadGraph
 	{
-		// Token: 0x0603460D RID: 214541 RVA: 0x00C4F414 File Offset: 0x00C4D614
+		// Token: 0x06029498 RID: 169112 RVA: 0x00B99488 File Offset: 0x00B97688
 		[NullableContext(2)]
 		public OptionReadGraph(ShowTalk config)
 		{
 			this.ShowTalk = config;
 		}
 
-		// Token: 0x0603460E RID: 214542 RVA: 0x00C4F470 File Offset: 0x00C4D670
+		// Token: 0x06029499 RID: 169113 RVA: 0x00B994E4 File Offset: 0x00B976E4
 		public void Init()
 		{
 			this.InitNodes();
 			this.BuildGraph();
 		}
 
-		// Token: 0x0603460F RID: 214543 RVA: 0x00C4F480 File Offset: 0x00C4D680
+		// Token: 0x0602949A RID: 169114 RVA: 0x00B994F4 File Offset: 0x00B976F4
 		public bool IsOptionEntryFullyRead(int talkId, int optionIndex, Dictionary<int, HashSet<int>> grayOptionMap, Func<ITalkOption, int, ITalkItem, bool> checkOptionCondition)
 		{
 			int? optionNodeIndex = this.GetOptionNodeIndex(talkId, optionIndex);
 			return optionNodeIndex != null && this.IsOptionNodeFullyRead(optionNodeIndex.Value, grayOptionMap, checkOptionCondition, new HashSet<int>());
 		}
 
-		// Token: 0x06034610 RID: 214544 RVA: 0x00C4F4B8 File Offset: 0x00C4D6B8
+		// Token: 0x0602949B RID: 169115 RVA: 0x00B9952C File Offset: 0x00B9772C
 		private void InitNodes()
 		{
 			ShowTalk showTalk = this.ShowTalk;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x06034611 RID: 214545 RVA: 0x00C4F5DC File Offset: 0x00C4D7DC
+		// Token: 0x0602949C RID: 169116 RVA: 0x00B99650 File Offset: 0x00B97850
 		private void BuildGraph()
 		{
 			ShowTalk showTalk = this.ShowTalk;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x06034612 RID: 214546 RVA: 0x00C4F690 File Offset: 0x00C4D890
+		// Token: 0x0602949D RID: 169117 RVA: 0x00B99704 File Offset: 0x00B97904
 		private void BuildGroup(int groupIndex, HashSet<int> groupStack)
 		{
 			if (groupStack.Contains(groupIndex) || this.BuiltGroupIndices.Contains(groupIndex))
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.BuiltGroupIndices.Add(groupIndex);
 		}
 
-		// Token: 0x06034613 RID: 214547 RVA: 0x00C4F73C File Offset: 0x00C4D93C
+		// Token: 0x0602949E RID: 169118 RVA: 0x00B997B0 File Offset: 0x00B979B0
 		private void BuildOptionNode(int optionNodeIndex, OptionReadGroup group, HashSet<int> groupStack)
 		{
 			if (optionNodeIndex < 0 || optionNodeIndex >= this.Options.Count)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x06034614 RID: 214548 RVA: 0x00C4F820 File Offset: 0x00C4DA20
+		// Token: 0x0602949F RID: 169119 RVA: 0x00B99894 File Offset: 0x00B97A94
 		private List<int> GetNextOptionGroupIndices(List<int> startTalkItemIndices, HashSet<int> groupStack)
 		{
 			List<int> list = new List<int>();
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Plot
 			return list;
 		}
 
-		// Token: 0x06034615 RID: 214549 RVA: 0x00C4F984 File Offset: 0x00C4DB84
+		// Token: 0x060294A0 RID: 169120 RVA: 0x00B999F8 File Offset: 0x00B97BF8
 		private List<int> GetNextTalkIndicesAfterSubActions(int talkItemIndex, [Nullable(new byte[]
 		{
 			2,
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Plot
 			return this.GetTalkIndicesByBreakAction(actions) ?? this.GetNextSequentialTalkIndices(talkItemIndex);
 		}
 
-		// Token: 0x06034616 RID: 214550 RVA: 0x00C4F998 File Offset: 0x00C4DB98
+		// Token: 0x060294A1 RID: 169121 RVA: 0x00B99A0C File Offset: 0x00B97C0C
 		[NullableContext(2)]
 		private List<int> GetTalkIndicesByBreakAction([Nullable(new byte[]
 		{
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.Plot
 			return null;
 		}
 
-		// Token: 0x06034617 RID: 214551 RVA: 0x00C4FA6C File Offset: 0x00C4DC6C
+		// Token: 0x060294A2 RID: 169122 RVA: 0x00B99AE0 File Offset: 0x00B97CE0
 		private List<int> GetNextSequentialTalkIndices(int talkItemIndex)
 		{
 			if (this.ShowTalk == null)
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Plot
 			};
 		}
 
-		// Token: 0x06034618 RID: 214552 RVA: 0x00C4FAB0 File Offset: 0x00C4DCB0
+		// Token: 0x060294A3 RID: 169123 RVA: 0x00B99B24 File Offset: 0x00B97D24
 		private bool IsOptionNodeFullyRead(int optionNodeIndex, Dictionary<int, HashSet<int>> grayOptionMap, Func<ITalkOption, int, ITalkItem, bool> checkOptionCondition, HashSet<int> checkingOptionNodeIndices)
 		{
 			if (checkingOptionNodeIndices.Contains(optionNodeIndex))
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.Plot
 			return true;
 		}
 
-		// Token: 0x06034619 RID: 214553 RVA: 0x00C4FB58 File Offset: 0x00C4DD58
+		// Token: 0x060294A4 RID: 169124 RVA: 0x00B99BCC File Offset: 0x00B97DCC
 		private bool IsOptionGroupFullyRead(int groupIndex, Dictionary<int, HashSet<int>> grayOptionMap, Func<ITalkOption, int, ITalkItem, bool> checkOptionCondition, HashSet<int> checkingOptionNodeIndices)
 		{
 			if (groupIndex < 0 || groupIndex >= this.Groups.Count)
@@ -310,13 +310,13 @@ namespace CSharpScript.Game.Module.Plot
 			return true;
 		}
 
-		// Token: 0x0603461A RID: 214554 RVA: 0x00C4FC7C File Offset: 0x00C4DE7C
+		// Token: 0x060294A5 RID: 169125 RVA: 0x00B99CF0 File Offset: 0x00B97EF0
 		private bool IsOptionVisibleForReadCheck([Nullable(2)] ITalkOption option, int index, ITalkItem talkItem, Func<ITalkOption, int, ITalkItem, bool> checkOptionCondition)
 		{
 			return option != null && !option.HiddenOption.GetValueOrDefault() && (checkOptionCondition(option, index, talkItem) || option.OptionLockTip != null);
 		}
 
-		// Token: 0x0603461B RID: 214555 RVA: 0x00C4FCB8 File Offset: 0x00C4DEB8
+		// Token: 0x060294A6 RID: 169126 RVA: 0x00B99D2C File Offset: 0x00B97F2C
 		private int? GetOptionNodeIndex(int talkId, int optionIndex)
 		{
 			Dictionary<int, int> dictionary;
@@ -332,26 +332,26 @@ namespace CSharpScript.Game.Module.Plot
 			return new int?(value);
 		}
 
-		// Token: 0x0401BE1F RID: 114207
+		// Token: 0x040167FC RID: 92156
 		[Nullable(2)]
 		private readonly ShowTalk ShowTalk;
 
-		// Token: 0x0401BE20 RID: 114208
+		// Token: 0x040167FD RID: 92157
 		private readonly List<OptionReadGroup> Groups = new List<OptionReadGroup>();
 
-		// Token: 0x0401BE21 RID: 114209
+		// Token: 0x040167FE RID: 92158
 		private readonly List<OptionReadNode> Options = new List<OptionReadNode>();
 
-		// Token: 0x0401BE22 RID: 114210
+		// Token: 0x040167FF RID: 92159
 		private readonly Dictionary<int, int> GroupIndexByTalkItemId = new Dictionary<int, int>();
 
-		// Token: 0x0401BE23 RID: 114211
+		// Token: 0x04016800 RID: 92160
 		private readonly Dictionary<int, Dictionary<int, int>> OptionNodeIndexByTalkItemId = new Dictionary<int, Dictionary<int, int>>();
 
-		// Token: 0x0401BE24 RID: 114212
+		// Token: 0x04016801 RID: 92161
 		private readonly Dictionary<int, int> TalkItemIndexById = new Dictionary<int, int>();
 
-		// Token: 0x0401BE25 RID: 114213
+		// Token: 0x04016802 RID: 92162
 		private readonly HashSet<int> BuiltGroupIndices = new HashSet<int>();
 	}
 }

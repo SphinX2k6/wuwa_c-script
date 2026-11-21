@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F24 RID: 3876
+// Token: 0x020003D9 RID: 985
 [NullableContext(1)]
 [Nullable(0)]
 public class AchievementGroupDataItem : UiPanelBase
 {
-	// Token: 0x06006227 RID: 25127 RVA: 0x00132D7A File Offset: 0x00130F7A
+	// Token: 0x060035BF RID: 13759 RVA: 0x0013B6A2 File Offset: 0x001398A2
 	public AchievementGroupDataItem(UUIItem uiItem)
 	{
 		this.SourceItem = uiItem;
 	}
 
-	// Token: 0x06006228 RID: 25128 RVA: 0x00132D8C File Offset: 0x00130F8C
+	// Token: 0x060035C0 RID: 13760 RVA: 0x0013B6B4 File Offset: 0x001398B4
 	public UniTask Init()
 	{
 		AchievementGroupDataItem.<Init>d__4 <Init>d__;
@@ -30,7 +30,7 @@ public class AchievementGroupDataItem : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006229 RID: 25129 RVA: 0x00132DD0 File Offset: 0x00130FD0
+	// Token: 0x060035C1 RID: 13761 RVA: 0x0013B6F8 File Offset: 0x001398F8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -44,13 +44,13 @@ public class AchievementGroupDataItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600622A RID: 25130 RVA: 0x00132E39 File Offset: 0x00131039
+	// Token: 0x060035C2 RID: 13762 RVA: 0x0013B761 File Offset: 0x00139961
 	protected override void OnStart()
 	{
 		this.ScrollView = new LoopScrollView<AchievementDataItem, AchievementData>(base.GetLoopScrollViewComponent(0), (AUIBaseActor)base.GetItem(1).GetOwner(), new Func<AchievementDataItem>(this.CreateItem), false);
 	}
 
-	// Token: 0x0600622B RID: 25131 RVA: 0x00132E6C File Offset: 0x0013106C
+	// Token: 0x060035C3 RID: 13763 RVA: 0x0013B794 File Offset: 0x00139994
 	public void Update(AchievementGroupData groupData)
 	{
 		List<AchievementData> groupAchievements = AchievementModel.Instance.GetGroupAchievements(groupData.GetId(), true);
@@ -58,7 +58,7 @@ public class AchievementGroupDataItem : UiPanelBase
 		this.RefreshScroller(groupAchievements);
 	}
 
-	// Token: 0x0600622C RID: 25132 RVA: 0x00132EA4 File Offset: 0x001310A4
+	// Token: 0x060035C4 RID: 13764 RVA: 0x0013B7CC File Offset: 0x001399CC
 	private void RefreshScroller(List<AchievementData> dataList)
 	{
 		this.ScrollView.RefreshByData(dataList, true, null, false);
@@ -69,7 +69,7 @@ public class AchievementGroupDataItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600622D RID: 25133 RVA: 0x00132EE0 File Offset: 0x001310E0
+	// Token: 0x060035C5 RID: 13765 RVA: 0x0013B808 File Offset: 0x00139A08
 	private int GetSelectAchievementIndex(List<AchievementData> dataList)
 	{
 		if (AchievementModel.Instance.CurrentSelectAchievementId == -1)
@@ -90,13 +90,13 @@ public class AchievementGroupDataItem : UiPanelBase
 		return result;
 	}
 
-	// Token: 0x0600622E RID: 25134 RVA: 0x00132F39 File Offset: 0x00131139
+	// Token: 0x060035C6 RID: 13766 RVA: 0x0013B861 File Offset: 0x00139A61
 	private AchievementDataItem CreateItem()
 	{
 		return new AchievementDataItem();
 	}
 
-	// Token: 0x04002C93 RID: 11411
+	// Token: 0x04002D2C RID: 11564
 	[Nullable(new byte[]
 	{
 		2,
@@ -105,17 +105,17 @@ public class AchievementGroupDataItem : UiPanelBase
 	})]
 	private LoopScrollView<AchievementDataItem, AchievementData> ScrollView;
 
-	// Token: 0x04002C94 RID: 11412
+	// Token: 0x04002D2D RID: 11565
 	[Nullable(2)]
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x0200756B RID: 30059
+	// Token: 0x020066FF RID: 26367
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04026D26 RID: 159014
+		// Token: 0x04022071 RID: 139377
 		ItemScroller,
-		// Token: 0x04026D27 RID: 159015
+		// Token: 0x04022072 RID: 139378
 		ItemPrefab
 	}
 }

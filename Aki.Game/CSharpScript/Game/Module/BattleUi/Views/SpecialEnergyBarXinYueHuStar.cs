@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E10 RID: 24080
+	// Token: 0x02004DF5 RID: 19957
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class SpecialEnergyBarXinYueHuStar : UiPanelBase
 	{
-		// Token: 0x0603D3C3 RID: 250819 RVA: 0x00EC1410 File Offset: 0x00EBF610
+		// Token: 0x06032352 RID: 205650 RVA: 0x00E12970 File Offset: 0x00E10B70
 		protected override void OnRegisterComponent()
 		{
 			this.ItemNum = 6;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D3C4 RID: 250820 RVA: 0x00EC1450 File Offset: 0x00EBF650
+		// Token: 0x06032353 RID: 205651 RVA: 0x00E129B0 File Offset: 0x00E10BB0
 		protected override void OnStart()
 		{
 			for (int i = 0; i < this.ItemNum; i++)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AlphaSpeed = 0.0033333334f;
 		}
 
-		// Token: 0x0603D3C5 RID: 250821 RVA: 0x00EC149C File Offset: 0x00EBF69C
+		// Token: 0x06032354 RID: 205652 RVA: 0x00E129FC File Offset: 0x00E10BFC
 		public void SetStarNum(int starNum)
 		{
 			if (this.CurStarNum == starNum)
@@ -70,14 +70,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurStarNum = starNum;
 		}
 
-		// Token: 0x0603D3C6 RID: 250822 RVA: 0x00EC154B File Offset: 0x00EBF74B
+		// Token: 0x06032355 RID: 205653 RVA: 0x00E12AAB File Offset: 0x00E10CAB
 		private void PlayStarHideAnim(int index)
 		{
 			this.TargetAlphaList[index] = 0f;
 			this.IsAnyEffectPlaying = true;
 		}
 
-		// Token: 0x0603D3C7 RID: 250823 RVA: 0x00EC1565 File Offset: 0x00EBF765
+		// Token: 0x06032356 RID: 205654 RVA: 0x00E12AC5 File Offset: 0x00E10CC5
 		private void StopStarHideAnim(int index)
 		{
 			this.TargetAlphaList[index] = 1f;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(index).SetAlpha(1f);
 		}
 
-		// Token: 0x0603D3C8 RID: 250824 RVA: 0x00EC159C File Offset: 0x00EBF79C
+		// Token: 0x06032357 RID: 205655 RVA: 0x00E12AFC File Offset: 0x00E10CFC
 		public void Tick(float delta)
 		{
 			if (!this.IsAnyEffectPlaying)
@@ -125,28 +125,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FEE7 RID: 130791
+		// Token: 0x0401A9AE RID: 108974
 		private const int ALPHA_ANIM_TIME = 300;
 
-		// Token: 0x0401FEE8 RID: 130792
+		// Token: 0x0401A9AF RID: 108975
 		public const int StarTotalNum = 6;
 
-		// Token: 0x0401FEE9 RID: 130793
+		// Token: 0x0401A9B0 RID: 108976
 		private int ItemNum;
 
-		// Token: 0x0401FEEA RID: 130794
+		// Token: 0x0401A9B1 RID: 108977
 		private int CurStarNum = -1;
 
-		// Token: 0x0401FEEB RID: 130795
+		// Token: 0x0401A9B2 RID: 108978
 		private readonly List<float> TargetAlphaList = new List<float>();
 
-		// Token: 0x0401FEEC RID: 130796
+		// Token: 0x0401A9B3 RID: 108979
 		private readonly List<float> CurAlphaList = new List<float>();
 
-		// Token: 0x0401FEED RID: 130797
+		// Token: 0x0401A9B4 RID: 108980
 		private bool IsAnyEffectPlaying;
 
-		// Token: 0x0401FEEE RID: 130798
+		// Token: 0x0401A9B5 RID: 108981
 		private float AlphaSpeed = 1f;
 	}
 }

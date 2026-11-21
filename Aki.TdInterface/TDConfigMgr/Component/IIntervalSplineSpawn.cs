@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000497 RID: 1175
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004F0 RID: 1264
 	public class IIntervalSplineSpawn : IPathDrivenActorSpawnBase
 	{
-		// Token: 0x060017A6 RID: 6054 RVA: 0x00047614 File Offset: 0x00045814
+		// Token: 0x06001940 RID: 6464 RVA: 0x0004B35C File Offset: 0x0004955C
 		private IIntervalSplineSpawn_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060017A7 RID: 6055 RVA: 0x0004764C File Offset: 0x0004584C
+		// Token: 0x06001941 RID: 6465 RVA: 0x0004B394 File Offset: 0x00049594
 		public static IIntervalSplineSpawn Create([Nullable(2)] IIntervalSplineSpawn instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060017A8 RID: 6056 RVA: 0x0004765F File Offset: 0x0004585F
+		// Token: 0x06001942 RID: 6466 RVA: 0x0004B3A7 File Offset: 0x000495A7
 		public static IIntervalSplineSpawn CreateFromSetValue([Nullable(2)] IIntervalSplineSpawn_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060017A9 RID: 6057 RVA: 0x00047674 File Offset: 0x00045874
+		// Token: 0x06001943 RID: 6467 RVA: 0x0004B3BC File Offset: 0x000495BC
 		public new IIntervalSplineSpawn_SetValue ToSetValue()
 		{
 			return new IIntervalSplineSpawn_SetValue
@@ -66,9 +64,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700064F RID: 1615
-		// (get) Token: 0x060017AA RID: 6058 RVA: 0x000476E6 File Offset: 0x000458E6
-		// (set) Token: 0x060017AB RID: 6059 RVA: 0x00047711 File Offset: 0x00045911
+		// Token: 0x170006B6 RID: 1718
+		// (get) Token: 0x06001944 RID: 6468 RVA: 0x0004B42E File Offset: 0x0004962E
+		// (set) Token: 0x06001945 RID: 6469 RVA: 0x0004B459 File Offset: 0x00049659
 		public override EPathDrivenActorSpawnType Type
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000650 RID: 1616
-		// (get) Token: 0x060017AC RID: 6060 RVA: 0x0004771F File Offset: 0x0004591F
-		// (set) Token: 0x060017AD RID: 6061 RVA: 0x0004774A File Offset: 0x0004594A
+		// Token: 0x170006B7 RID: 1719
+		// (get) Token: 0x06001946 RID: 6470 RVA: 0x0004B467 File Offset: 0x00049667
+		// (set) Token: 0x06001947 RID: 6471 RVA: 0x0004B492 File Offset: 0x00049692
 		public virtual string ActorBlueprintPath
 		{
 			get
@@ -112,9 +110,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000651 RID: 1617
-		// (get) Token: 0x060017AE RID: 6062 RVA: 0x00047758 File Offset: 0x00045958
-		// (set) Token: 0x060017AF RID: 6063 RVA: 0x000477B9 File Offset: 0x000459B9
+		// Token: 0x170006B8 RID: 1720
+		// (get) Token: 0x06001948 RID: 6472 RVA: 0x0004B4A0 File Offset: 0x000496A0
+		// (set) Token: 0x06001949 RID: 6473 RVA: 0x0004B501 File Offset: 0x00049701
 		public virtual IPathDrivenActorSplineMove MoveMode
 		{
 			get
@@ -142,9 +140,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000652 RID: 1618
-		// (get) Token: 0x060017B0 RID: 6064 RVA: 0x000477CE File Offset: 0x000459CE
-		// (set) Token: 0x060017B1 RID: 6065 RVA: 0x000477FD File Offset: 0x000459FD
+		// Token: 0x170006B9 RID: 1721
+		// (get) Token: 0x0600194A RID: 6474 RVA: 0x0004B516 File Offset: 0x00049716
+		// (set) Token: 0x0600194B RID: 6475 RVA: 0x0004B545 File Offset: 0x00049745
 		public virtual float SpawnInterval
 		{
 			get
@@ -165,9 +163,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000653 RID: 1619
-		// (get) Token: 0x060017B2 RID: 6066 RVA: 0x0004780C File Offset: 0x00045A0C
-		// (set) Token: 0x060017B3 RID: 6067 RVA: 0x00047846 File Offset: 0x00045A46
+		// Token: 0x170006BA RID: 1722
+		// (get) Token: 0x0600194C RID: 6476 RVA: 0x0004B554 File Offset: 0x00049754
+		// (set) Token: 0x0600194D RID: 6477 RVA: 0x0004B58E File Offset: 0x0004978E
 		public virtual int? MaxActiveCount
 		{
 			get
@@ -189,9 +187,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000654 RID: 1620
-		// (get) Token: 0x060017B4 RID: 6068 RVA: 0x00047854 File Offset: 0x00045A54
-		// (set) Token: 0x060017B5 RID: 6069 RVA: 0x0004788E File Offset: 0x00045A8E
+		// Token: 0x170006BB RID: 1723
+		// (get) Token: 0x0600194E RID: 6478 RVA: 0x0004B59C File Offset: 0x0004979C
+		// (set) Token: 0x0600194F RID: 6479 RVA: 0x0004B5D6 File Offset: 0x000497D6
 		public virtual float? MaxSpawnInterval
 		{
 			get
@@ -213,9 +211,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000655 RID: 1621
-		// (get) Token: 0x060017B6 RID: 6070 RVA: 0x0004789C File Offset: 0x00045A9C
-		// (set) Token: 0x060017B7 RID: 6071 RVA: 0x000478FD File Offset: 0x00045AFD
+		// Token: 0x170006BC RID: 1724
+		// (get) Token: 0x06001950 RID: 6480 RVA: 0x0004B5E4 File Offset: 0x000497E4
+		// (set) Token: 0x06001951 RID: 6481 RVA: 0x0004B645 File Offset: 0x00049845
 		[Nullable(2)]
 		public virtual IPathDrivenActorInitialSpawnConfig InitialSpawnConfig
 		{
@@ -246,9 +244,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000656 RID: 1622
-		// (get) Token: 0x060017B8 RID: 6072 RVA: 0x00047914 File Offset: 0x00045B14
-		// (set) Token: 0x060017B9 RID: 6073 RVA: 0x00047975 File Offset: 0x00045B75
+		// Token: 0x170006BD RID: 1725
+		// (get) Token: 0x06001952 RID: 6482 RVA: 0x0004B65C File Offset: 0x0004985C
+		// (set) Token: 0x06001953 RID: 6483 RVA: 0x0004B6BD File Offset: 0x000498BD
 		[Nullable(2)]
 		public virtual IIntervalSplineSpawnAllActorAudio AudioConfig
 		{
@@ -279,30 +277,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040011A8 RID: 4520
+		// Token: 0x040012CA RID: 4810
 		[Nullable(2)]
 		protected new IIntervalSplineSpawn FbInstance;
 
-		// Token: 0x040011A9 RID: 4521
+		// Token: 0x040012CB RID: 4811
 		[Nullable(2)]
 		protected new IIntervalSplineSpawn_SetValue PocoInterface;
 
-		// Token: 0x040011AA RID: 4522
+		// Token: 0x040012CC RID: 4812
 		private IPathDrivenActorSplineMove _MoveModeCache;
 
-		// Token: 0x040011AB RID: 4523
+		// Token: 0x040012CD RID: 4813
 		private bool _MoveModeInited;
 
-		// Token: 0x040011AC RID: 4524
+		// Token: 0x040012CE RID: 4814
 		private IPathDrivenActorInitialSpawnConfig _InitialSpawnConfigCache;
 
-		// Token: 0x040011AD RID: 4525
+		// Token: 0x040012CF RID: 4815
 		private bool _InitialSpawnConfigInited;
 
-		// Token: 0x040011AE RID: 4526
+		// Token: 0x040012D0 RID: 4816
 		private IIntervalSplineSpawnAllActorAudio _AudioConfigCache;
 
-		// Token: 0x040011AF RID: 4527
+		// Token: 0x040012D1 RID: 4817
 		private bool _AudioConfigInited;
 	}
 }

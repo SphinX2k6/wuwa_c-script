@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Core.Common;
@@ -11,27 +10,27 @@ using CSharpScript.Game.Ui;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x020025ED RID: 9709
+// Token: 0x02001AD8 RID: 6872
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PlayerInfoController : UiControllerBase
 {
-	// Token: 0x06013BDD RID: 80861 RVA: 0x004F3521 File Offset: 0x004F1721
+	// Token: 0x060110BF RID: 69823 RVA: 0x00502299 File Offset: 0x00500499
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.BasicInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.BasicInfoNotifyHandle));
 		Net.Instance.Register(ENotifyMessageId.PlayerAttrNotify, new Action<IMessage, Net.CallbackStatus>(this.PlayerAttrNotifyHandle));
 	}
 
-	// Token: 0x06013BDE RID: 80862 RVA: 0x004F355B File Offset: 0x004F175B
+	// Token: 0x060110C0 RID: 69824 RVA: 0x005022D3 File Offset: 0x005004D3
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.BasicInfoNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.PlayerAttrNotify);
 	}
 
-	// Token: 0x06013BDF RID: 80863 RVA: 0x004F3580 File Offset: 0x004F1780
+	// Token: 0x060110C1 RID: 69825 RVA: 0x005022F8 File Offset: 0x005004F8
 	[NullableContext(2)]
 	private void BasicInfoNotifyHandle(IMessage msg, Net.CallbackStatus status)
 	{
@@ -65,11 +64,13 @@ public class PlayerInfoController : UiControllerBase
 		instance.SetStringProp(dictionary2);
 		instance.RandomSeed = basicInfoNotify.RandomSeed;
 		MingSuModel.Instance.UpdateDragonPoolInfoMap(basicInfoNotify.DragonPoolInfos);
-		PersonalModel.Instance.SetRoleShowList(basicInfoNotify.RoleShowList.ToList<Aki.Protocol.RoleShowEntry>());
+		PersonalModel.Instance.SetRoleShowList(basicInfoNotify.RoleShowList);
 		PersonalModel.Instance.SetCurCardId(basicInfoNotify.CurCardId);
 		PersonalModel.Instance.SetBirthday(basicInfoNotify.Birthday);
 		PersonalModel.Instance.SetBirthdayDisplay(basicInfoNotify.DisplayBirthDay);
-		PersonalModel.Instance.SetCardUnlockList(basicInfoNotify.CardUnlockList.ToArray<CardShowEntry>());
+		CardShowEntry[] array = new CardShowEntry[basicInfoNotify.CardUnlockList.Count];
+		basicInfoNotify.CardUnlockList.CopyTo(array, 0);
+		PersonalModel.Instance.SetCardUnlockList(array);
 		PersonalModel.Instance.SetName(FunctionModel.Instance.GetPlayerName());
 		PersonalModel.Instance.SetPlayerId(PlayerInfoModel.Instance.GetId().Value);
 		PersonalModel.Instance.SetModifyNameInfo(basicInfoNotify.LastModifyNameTime, basicInfoNotify.ModifyName);
@@ -113,7 +114,7 @@ public class PlayerInfoController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnGetPlayerBasicInfo);
 	}
 
-	// Token: 0x06013BE0 RID: 80864 RVA: 0x004F38D0 File Offset: 0x004F1AD0
+	// Token: 0x060110C2 RID: 69826 RVA: 0x0050265C File Offset: 0x0050085C
 	[NullableContext(2)]
 	private void PlayerAttrNotifyHandle(IMessage msg, Net.CallbackStatus status)
 	{
@@ -144,7 +145,7 @@ public class PlayerInfoController : UiControllerBase
 		PlayerInfoModel.Instance.UpdatePlayerAttributeStringInfo(dictionary2);
 	}
 
-	// Token: 0x06013BE1 RID: 80865 RVA: 0x004F3990 File Offset: 0x004F1B90
+	// Token: 0x060110C3 RID: 69827 RVA: 0x0050271C File Offset: 0x0050091C
 	private void SetAudioPlayerGenderState()
 	{
 		int? numberPropById = PlayerInfoModel.Instance.GetNumberPropById(EPlayerInfoNumber.Sex);
@@ -160,8 +161,8 @@ public class PlayerInfoController : UiControllerBase
 		AudioSystem.Instance.SetState("player_rover_gender", "female", true);
 	}
 
-	// Token: 0x1700194F RID: 6479
-	// (get) Token: 0x06013BE2 RID: 80866 RVA: 0x004F39F2 File Offset: 0x004F1BF2
+	// Token: 0x17001987 RID: 6535
+	// (get) Token: 0x060110C4 RID: 69828 RVA: 0x0050277E File Offset: 0x0050097E
 	public static PlayerInfoController Instance
 	{
 		get
@@ -170,7 +171,7 @@ public class PlayerInfoController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06013BE3 RID: 80867 RVA: 0x004F39F9 File Offset: 0x004F1BF9
+	// Token: 0x060110C5 RID: 69829 RVA: 0x00502785 File Offset: 0x00500985
 	public static PlayerInfoController GetOrCreateInstance()
 	{
 		if (PlayerInfoController._Instance == null)
@@ -180,7 +181,7 @@ public class PlayerInfoController : UiControllerBase
 		return PlayerInfoController._Instance;
 	}
 
-	// Token: 0x06013BE4 RID: 80868 RVA: 0x004F3A0D File Offset: 0x004F1C0D
+	// Token: 0x060110C6 RID: 69830 RVA: 0x00502799 File Offset: 0x00500999
 	public static bool CreateInstance()
 	{
 		if (PlayerInfoController._Instance != null)
@@ -191,24 +192,24 @@ public class PlayerInfoController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06013BE5 RID: 80869 RVA: 0x004F3A23 File Offset: 0x004F1C23
+	// Token: 0x060110C7 RID: 69831 RVA: 0x005027AF File Offset: 0x005009AF
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013BE6 RID: 80870 RVA: 0x004F3A25 File Offset: 0x004F1C25
+	// Token: 0x060110C8 RID: 69832 RVA: 0x005027B1 File Offset: 0x005009B1
 	public static void ResetStaticDefaultValue()
 	{
 		PlayerInfoController._Instance = null;
 	}
 
-	// Token: 0x06013BE7 RID: 80871 RVA: 0x004F3A2D File Offset: 0x004F1C2D
+	// Token: 0x060110C9 RID: 69833 RVA: 0x005027B9 File Offset: 0x005009B9
 	static PlayerInfoController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PlayerInfoController.CreateStaticDefaultValue), new Action(PlayerInfoController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040094CE RID: 38094
+	// Token: 0x04009625 RID: 38437
 	[Nullable(2)]
 	private static PlayerInfoController _Instance;
 }

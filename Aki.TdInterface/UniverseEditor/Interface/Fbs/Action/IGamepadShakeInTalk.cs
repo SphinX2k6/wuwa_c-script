@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006873 RID: 26739
+	// Token: 0x02006F14 RID: 28436
 	public struct IGamepadShakeInTalk : IFlatbufferObject
 	{
-		// Token: 0x1700C69A RID: 50842
-		// (get) Token: 0x0602EA19 RID: 191001 RVA: 0x0065C030 File Offset: 0x0065A230
+		// Token: 0x1700D080 RID: 53376
+		// (get) Token: 0x06031353 RID: 201555 RVA: 0x006AB0B0 File Offset: 0x006A92B0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EA1A RID: 191002 RVA: 0x0065C03D File Offset: 0x0065A23D
+		// Token: 0x06031354 RID: 201556 RVA: 0x006AB0BD File Offset: 0x006A92BD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602EA1B RID: 191003 RVA: 0x0065C044 File Offset: 0x0065A244
+		// Token: 0x06031355 RID: 201557 RVA: 0x006AB0C4 File Offset: 0x006A92C4
 		public static IGamepadShakeInTalk GetRootAsIGamepadShakeInTalk(ByteBuffer _bb)
 		{
 			return IGamepadShakeInTalk.GetRootAsIGamepadShakeInTalk(_bb, default(IGamepadShakeInTalk));
 		}
 
-		// Token: 0x0602EA1C RID: 191004 RVA: 0x0065C060 File Offset: 0x0065A260
+		// Token: 0x06031356 RID: 201558 RVA: 0x006AB0E0 File Offset: 0x006A92E0
 		public static IGamepadShakeInTalk GetRootAsIGamepadShakeInTalk(ByteBuffer _bb, IGamepadShakeInTalk obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602EA1D RID: 191005 RVA: 0x0065C07D File Offset: 0x0065A27D
+		// Token: 0x06031357 RID: 201559 RVA: 0x006AB0FD File Offset: 0x006A92FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602EA1E RID: 191006 RVA: 0x0065C08C File Offset: 0x0065A28C
+		// Token: 0x06031358 RID: 201560 RVA: 0x006AB10C File Offset: 0x006A930C
 		public IGamepadShakeInTalk __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C69B RID: 50843
-		// (get) Token: 0x0602EA1F RID: 191007 RVA: 0x0065C09C File Offset: 0x0065A29C
+		// Token: 0x1700D081 RID: 53377
+		// (get) Token: 0x06031359 RID: 201561 RVA: 0x006AB11C File Offset: 0x006A931C
 		public float DelayTime
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C69C RID: 50844
-		// (get) Token: 0x0602EA20 RID: 191008 RVA: 0x0065C0DC File Offset: 0x0065A2DC
+		// Token: 0x1700D082 RID: 53378
+		// (get) Token: 0x0603135A RID: 201562 RVA: 0x006AB15C File Offset: 0x006A935C
 		public IGamepadShakeOptions? Options
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EA21 RID: 191009 RVA: 0x0065C139 File Offset: 0x0065A339
+		// Token: 0x0603135B RID: 201563 RVA: 0x006AB1B9 File Offset: 0x006A93B9
 		public static Offset<IGamepadShakeInTalk> CreateIGamepadShakeInTalk(FlatBufferBuilder builder, float DelayTime = 0f, Offset<IGamepadShakeOptions> OptionsOffset = default(Offset<IGamepadShakeOptions>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGamepadShakeInTalk.EndIGamepadShakeInTalk(builder);
 		}
 
-		// Token: 0x0602EA22 RID: 191010 RVA: 0x0065C156 File Offset: 0x0065A356
+		// Token: 0x0603135C RID: 201564 RVA: 0x006AB1D6 File Offset: 0x006A93D6
 		public static void StartIGamepadShakeInTalk(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602EA23 RID: 191011 RVA: 0x0065C15F File Offset: 0x0065A35F
+		// Token: 0x0603135D RID: 201565 RVA: 0x006AB1DF File Offset: 0x006A93DF
 		public static void AddDelayTime(FlatBufferBuilder builder, float delayTime)
 		{
 			builder.AddFloat(0, delayTime, 0.0);
 		}
 
-		// Token: 0x0602EA24 RID: 191012 RVA: 0x0065C172 File Offset: 0x0065A372
+		// Token: 0x0603135E RID: 201566 RVA: 0x006AB1F2 File Offset: 0x006A93F2
 		public static void AddOptions(FlatBufferBuilder builder, Offset<IGamepadShakeOptions> optionsOffset)
 		{
 			builder.AddOffset(1, optionsOffset.Value, 0);
 		}
 
-		// Token: 0x0602EA25 RID: 191013 RVA: 0x0065C182 File Offset: 0x0065A382
+		// Token: 0x0603135F RID: 201567 RVA: 0x006AB202 File Offset: 0x006A9402
 		public static Offset<IGamepadShakeInTalk> EndIGamepadShakeInTalk(FlatBufferBuilder builder)
 		{
 			return new Offset<IGamepadShakeInTalk>(builder.EndTable());
 		}
 
-		// Token: 0x0602EA26 RID: 191014 RVA: 0x0065C190 File Offset: 0x0065A390
+		// Token: 0x06031360 RID: 201568 RVA: 0x006AB210 File Offset: 0x006A9410
 		public IGamepadShakeInTalkT UnPack()
 		{
 			IGamepadShakeInTalkT gamepadShakeInTalkT = new IGamepadShakeInTalkT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return gamepadShakeInTalkT;
 		}
 
-		// Token: 0x0602EA27 RID: 191015 RVA: 0x0065C1AC File Offset: 0x0065A3AC
+		// Token: 0x06031361 RID: 201569 RVA: 0x006AB22C File Offset: 0x006A942C
 		public void UnPackTo(IGamepadShakeInTalkT _o)
 		{
 			_o.DelayTime = this.DelayTime;
 			_o.Options = ((this.Options != null) ? this.Options.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602EA28 RID: 191016 RVA: 0x0065C1F4 File Offset: 0x0065A3F4
+		// Token: 0x06031362 RID: 201570 RVA: 0x006AB274 File Offset: 0x006A9474
 		public static Offset<IGamepadShakeInTalk> Pack(FlatBufferBuilder builder, IGamepadShakeInTalkT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGamepadShakeInTalk.CreateIGamepadShakeInTalk(builder, _o.DelayTime, optionsOffset);
 		}
 
-		// Token: 0x04010FCA RID: 69578
+		// Token: 0x04011E1F RID: 73247
 		private Table __p;
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046A7 RID: 18087
+	// Token: 0x020035D8 RID: 13784
 	public enum EMouseCursorVisibleType
 	{
-		// Token: 0x04019679 RID: 104057
+		// Token: 0x04013D1E RID: 81182
 		None,
-		// Token: 0x0401967A RID: 104058
+		// Token: 0x04013D1F RID: 81183
 		AlwaysVisible,
-		// Token: 0x0401967B RID: 104059
+		// Token: 0x04013D20 RID: 81184
 		AlwaysHide
 	}
 }

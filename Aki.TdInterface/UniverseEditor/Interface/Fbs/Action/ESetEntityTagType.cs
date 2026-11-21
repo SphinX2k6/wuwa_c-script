@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FF5 RID: 24565
+	// Token: 0x02006653 RID: 26195
 	public enum ESetEntityTagType : byte
 	{
-		// Token: 0x0400FFC7 RID: 65479
+		// Token: 0x04010DA4 RID: 69028
 		Add,
-		// Token: 0x0400FFC8 RID: 65480
+		// Token: 0x04010DA5 RID: 69029
 		Remove
 	}
 }

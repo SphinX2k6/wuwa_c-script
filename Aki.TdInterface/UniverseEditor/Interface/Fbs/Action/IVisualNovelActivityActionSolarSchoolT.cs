@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007557 RID: 30039
+	// Token: 0x02007D4D RID: 32077
 	public class IVisualNovelActivityActionSolarSchoolT
 	{
-		// Token: 0x1700E3E4 RID: 58340
-		// (get) Token: 0x06036A74 RID: 223860 RVA: 0x0076C5A8 File Offset: 0x0076A7A8
-		// (set) Token: 0x06036A75 RID: 223861 RVA: 0x0076C5B0 File Offset: 0x0076A7B0
+		// Token: 0x1700F00E RID: 61454
+		// (get) Token: 0x06039E8A RID: 237194 RVA: 0x007CF850 File Offset: 0x007CDA50
+		// (set) Token: 0x06039E8B RID: 237195 RVA: 0x007CF858 File Offset: 0x007CDA58
 		public EVisualNovelSubType Type { get; set; }
 
-		// Token: 0x1700E3E5 RID: 58341
-		// (get) Token: 0x06036A76 RID: 223862 RVA: 0x0076C5B9 File Offset: 0x0076A7B9
-		// (set) Token: 0x06036A77 RID: 223863 RVA: 0x0076C5C1 File Offset: 0x0076A7C1
+		// Token: 0x1700F00F RID: 61455
+		// (get) Token: 0x06039E8C RID: 237196 RVA: 0x007CF861 File Offset: 0x007CDA61
+		// (set) Token: 0x06039E8D RID: 237197 RVA: 0x007CF869 File Offset: 0x007CDA69
 		public int SolarSchoolActionId { get; set; }
 
-		// Token: 0x06036A78 RID: 223864 RVA: 0x0076C5CA File Offset: 0x0076A7CA
+		// Token: 0x06039E8E RID: 237198 RVA: 0x007CF872 File Offset: 0x007CDA72
 		public IVisualNovelActivityActionSolarSchoolT()
 		{
 			this.Type = EVisualNovelSubType.SolarSchool;

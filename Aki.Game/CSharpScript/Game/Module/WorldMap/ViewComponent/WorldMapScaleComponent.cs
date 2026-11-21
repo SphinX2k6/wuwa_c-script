@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 {
-	// Token: 0x020047B4 RID: 18356
+	// Token: 0x020036E5 RID: 14053
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WorldMapScaleComponent : MapComponent
 	{
-		// Token: 0x06030119 RID: 196889 RVA: 0x00B242E3 File Offset: 0x00B224E3
+		// Token: 0x060248E8 RID: 149736 RVA: 0x00A54265 File Offset: 0x00A52465
 		public WorldMapScaleComponent([Nullable(new byte[]
 		{
 			0,
@@ -22,8 +22,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 		{
 		}
 
-		// Token: 0x17007862 RID: 30818
-		// (get) Token: 0x0603011A RID: 196890 RVA: 0x00B242EC File Offset: 0x00B224EC
+		// Token: 0x17004B1E RID: 19230
+		// (get) Token: 0x060248E9 RID: 149737 RVA: 0x00A5426E File Offset: 0x00A5246E
 		public override EMapComponent ComponentType
 		{
 			get
@@ -32,9 +32,9 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007863 RID: 30819
-		// (get) Token: 0x0603011B RID: 196891 RVA: 0x00B242EF File Offset: 0x00B224EF
-		// (set) Token: 0x0603011C RID: 196892 RVA: 0x00B242F7 File Offset: 0x00B224F7
+		// Token: 0x17004B1F RID: 19231
+		// (get) Token: 0x060248EA RID: 149738 RVA: 0x00A54271 File Offset: 0x00A52471
+		// (set) Token: 0x060248EB RID: 149739 RVA: 0x00A54279 File Offset: 0x00A52479
 		public float MapScale
 		{
 			get
@@ -52,8 +52,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007864 RID: 30820
-		// (get) Token: 0x0603011D RID: 196893 RVA: 0x00B24316 File Offset: 0x00B22516
+		// Token: 0x17004B20 RID: 19232
+		// (get) Token: 0x060248EC RID: 149740 RVA: 0x00A54298 File Offset: 0x00A52498
 		public bool IsScaleDirty
 		{
 			get
@@ -62,14 +62,14 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x0603011E RID: 196894 RVA: 0x00B2431E File Offset: 0x00B2251E
+		// Token: 0x060248ED RID: 149741 RVA: 0x00A542A0 File Offset: 0x00A524A0
 		public void FlushScaleDirty()
 		{
 			this._mapScaleDirty = false;
 		}
 
-		// Token: 0x17007865 RID: 30821
-		// (get) Token: 0x0603011F RID: 196895 RVA: 0x00B24328 File Offset: 0x00B22528
+		// Token: 0x17004B21 RID: 19233
+		// (get) Token: 0x060248EE RID: 149742 RVA: 0x00A542AC File Offset: 0x00A524AC
 		private WorldMapUiEntity WorldMapUiComponent
 		{
 			get
@@ -84,44 +84,44 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x17007866 RID: 30822
-		// (get) Token: 0x06030120 RID: 196896 RVA: 0x00B24365 File Offset: 0x00B22565
-		// (set) Token: 0x06030121 RID: 196897 RVA: 0x00B2436D File Offset: 0x00B2256D
+		// Token: 0x17004B22 RID: 19234
+		// (get) Token: 0x060248EF RID: 149743 RVA: 0x00A542E9 File Offset: 0x00A524E9
+		// (set) Token: 0x060248F0 RID: 149744 RVA: 0x00A542F1 File Offset: 0x00A524F1
 		public WorldMapScaleComponent.TScaleChangeEvent ScaleChangeEvent { get; set; }
 
-		// Token: 0x17007867 RID: 30823
-		// (get) Token: 0x06030122 RID: 196898 RVA: 0x00B24376 File Offset: 0x00B22576
-		// (set) Token: 0x06030123 RID: 196899 RVA: 0x00B2437E File Offset: 0x00B2257E
+		// Token: 0x17004B23 RID: 19235
+		// (get) Token: 0x060248F1 RID: 149745 RVA: 0x00A542FA File Offset: 0x00A524FA
+		// (set) Token: 0x060248F2 RID: 149746 RVA: 0x00A54302 File Offset: 0x00A52502
 		public UUISliderComponent ScaleSlider { get; set; }
 
-		// Token: 0x17007868 RID: 30824
-		// (get) Token: 0x06030124 RID: 196900 RVA: 0x00B24387 File Offset: 0x00B22587
-		// (set) Token: 0x06030125 RID: 196901 RVA: 0x00B2438F File Offset: 0x00B2258F
+		// Token: 0x17004B24 RID: 19236
+		// (get) Token: 0x060248F3 RID: 149747 RVA: 0x00A5430B File Offset: 0x00A5250B
+		// (set) Token: 0x060248F4 RID: 149748 RVA: 0x00A54313 File Offset: 0x00A52513
 		public UUIItem BoxPanel { get; set; }
 
-		// Token: 0x17007869 RID: 30825
-		// (get) Token: 0x06030126 RID: 196902 RVA: 0x00B24398 File Offset: 0x00B22598
-		// (set) Token: 0x06030127 RID: 196903 RVA: 0x00B243A0 File Offset: 0x00B225A0
+		// Token: 0x17004B25 RID: 19237
+		// (get) Token: 0x060248F5 RID: 149749 RVA: 0x00A5431C File Offset: 0x00A5251C
+		// (set) Token: 0x060248F6 RID: 149750 RVA: 0x00A54324 File Offset: 0x00A52524
 		public UUISprite BoxThresholdSprite { get; set; }
 
-		// Token: 0x1700786A RID: 30826
-		// (get) Token: 0x06030128 RID: 196904 RVA: 0x00B243A9 File Offset: 0x00B225A9
-		// (set) Token: 0x06030129 RID: 196905 RVA: 0x00B243B1 File Offset: 0x00B225B1
+		// Token: 0x17004B26 RID: 19238
+		// (get) Token: 0x060248F7 RID: 149751 RVA: 0x00A5432D File Offset: 0x00A5252D
+		// (set) Token: 0x060248F8 RID: 149752 RVA: 0x00A54335 File Offset: 0x00A52535
 		public UUITexture BoxHandleTexture { get; set; }
 
-		// Token: 0x1700786B RID: 30827
-		// (get) Token: 0x0603012A RID: 196906 RVA: 0x00B243BA File Offset: 0x00B225BA
-		// (set) Token: 0x0603012B RID: 196907 RVA: 0x00B243C2 File Offset: 0x00B225C2
+		// Token: 0x17004B27 RID: 19239
+		// (get) Token: 0x060248F9 RID: 149753 RVA: 0x00A5433E File Offset: 0x00A5253E
+		// (set) Token: 0x060248FA RID: 149754 RVA: 0x00A54346 File Offset: 0x00A52546
 		public ButtonItem BoxSwitchButton { get; set; }
 
-		// Token: 0x1700786C RID: 30828
-		// (get) Token: 0x0603012C RID: 196908 RVA: 0x00B243CB File Offset: 0x00B225CB
-		// (set) Token: 0x0603012D RID: 196909 RVA: 0x00B243D3 File Offset: 0x00B225D3
+		// Token: 0x17004B28 RID: 19240
+		// (get) Token: 0x060248FB RID: 149755 RVA: 0x00A5434F File Offset: 0x00A5254F
+		// (set) Token: 0x060248FC RID: 149756 RVA: 0x00A54357 File Offset: 0x00A52557
 		public LevelSequencePlayer BoxBarSequencer { get; set; }
 
-		// Token: 0x1700786D RID: 30829
-		// (get) Token: 0x0603012E RID: 196910 RVA: 0x00B243DC File Offset: 0x00B225DC
-		// (set) Token: 0x0603012F RID: 196911 RVA: 0x00B243E4 File Offset: 0x00B225E4
+		// Token: 0x17004B29 RID: 19241
+		// (get) Token: 0x060248FD RID: 149757 RVA: 0x00A54360 File Offset: 0x00A52560
+		// (set) Token: 0x060248FE RID: 149758 RVA: 0x00A54368 File Offset: 0x00A52568
 		[Nullable(new byte[]
 		{
 			2,
@@ -140,8 +140,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			1
 		})] set; }
 
-		// Token: 0x1700786E RID: 30830
-		// (get) Token: 0x06030130 RID: 196912 RVA: 0x00B243F0 File Offset: 0x00B225F0
+		// Token: 0x17004B2A RID: 19242
+		// (get) Token: 0x060248FF RID: 149759 RVA: 0x00A54374 File Offset: 0x00A52574
 		private static float BoxThresholdWidth
 		{
 			get
@@ -155,8 +155,8 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x1700786F RID: 30831
-		// (get) Token: 0x06030131 RID: 196913 RVA: 0x00B24424 File Offset: 0x00B22624
+		// Token: 0x17004B2B RID: 19243
+		// (get) Token: 0x06024900 RID: 149760 RVA: 0x00A543A8 File Offset: 0x00A525A8
 		private static float SliderMinValue
 		{
 			get
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			}
 		}
 
-		// Token: 0x06030132 RID: 196914 RVA: 0x00B24436 File Offset: 0x00B22636
+		// Token: 0x06024901 RID: 149761 RVA: 0x00A543BA File Offset: 0x00A525BA
 		private static float SliderValueOf(EWorldMapScaleTier tier, float scale)
 		{
 			if (tier != EWorldMapScaleTier.OutBox)
@@ -175,13 +175,13 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			return WorldMapScaleComponent.SliderMinValue;
 		}
 
-		// Token: 0x06030133 RID: 196915 RVA: 0x00B24443 File Offset: 0x00B22643
+		// Token: 0x06024902 RID: 149762 RVA: 0x00A543C7 File Offset: 0x00A525C7
 		private static bool IsInOutBoxThreshold(float value)
 		{
 			return WorldMapScaleComponent.BoxThresholdWidth > 1E-08f && value < WorldMapModel.Instance.MapScaleMin;
 		}
 
-		// Token: 0x06030134 RID: 196916 RVA: 0x00B24460 File Offset: 0x00B22660
+		// Token: 0x06024903 RID: 149763 RVA: 0x00A543E4 File Offset: 0x00A525E4
 		public void Initialize()
 		{
 			WorldMapModel instance = WorldMapModel.Instance;
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.ScaleSlider.SetValue(WorldMapScaleComponent.SliderValueOf(instance.ScaleTier, this.MapScale), false);
 		}
 
-		// Token: 0x06030135 RID: 196917 RVA: 0x00B24524 File Offset: 0x00B22724
+		// Token: 0x06024904 RID: 149764 RVA: 0x00A544A8 File Offset: 0x00A526A8
 		private void InitializeBoxBar()
 		{
 			WorldMapModel instance = WorldMapModel.Instance;
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.RefreshBoxSwitchButtonText();
 		}
 
-		// Token: 0x06030136 RID: 196918 RVA: 0x00B24598 File Offset: 0x00B22798
+		// Token: 0x06024905 RID: 149765 RVA: 0x00A5451C File Offset: 0x00A5271C
 		private void OnScaleSliderValueChanged(float value)
 		{
 			WorldMapModel instance = WorldMapModel.Instance;
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.ApplyTierAndScale(instance.ScaleTier, value, EMapScaleSetType.Slider, true, false);
 		}
 
-		// Token: 0x06030137 RID: 196919 RVA: 0x00B245E8 File Offset: 0x00B227E8
+		// Token: 0x06024906 RID: 149766 RVA: 0x00A5456C File Offset: 0x00A5276C
 		private void OnScaleSliderPointUp(ULGUIPointerEventData _)
 		{
 			if (WorldMapModel.Instance.ScaleTier == EWorldMapScaleTier.Other)
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.ApplyTierAndScale(tier, value, EMapScaleSetType.Slider, true, true);
 		}
 
-		// Token: 0x06030138 RID: 196920 RVA: 0x00B24628 File Offset: 0x00B22828
+		// Token: 0x06024907 RID: 149767 RVA: 0x00A545AC File Offset: 0x00A527AC
 		public void OnScaleTierChanged()
 		{
 			WorldMapModel instance = WorldMapModel.Instance;
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			boxBarSequencer.PlayOrReplaySequenceByName(flag ? "BoxSwitchIn" : "BoxSwitchOut", false, null);
 		}
 
-		// Token: 0x06030139 RID: 196921 RVA: 0x00B246B8 File Offset: 0x00B228B8
+		// Token: 0x06024908 RID: 149768 RVA: 0x00A5463C File Offset: 0x00A5283C
 		private void RefreshBoxSwitchButtonText()
 		{
 			bool flag = WorldMapModel.Instance.ScaleTier == EWorldMapScaleTier.OutBox;
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			boxSwitchButton.SetLocalTextNew(flag ? "BoxMapChangeIn_Text" : "BoxMapChangeOut_Text", Array.Empty<object>());
 		}
 
-		// Token: 0x0603013A RID: 196922 RVA: 0x00B246F8 File Offset: 0x00B228F8
+		// Token: 0x06024909 RID: 149769 RVA: 0x00A5467C File Offset: 0x00A5287C
 		private void RefreshBoxHandleImage()
 		{
 			if (this.BoxHandleTexture == null || this.SetHandleTextureFunction == null)
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.SetHandleTextureFunction(UiResourceConfig.Instance.GetResourcePath(resourceId), this.BoxHandleTexture);
 		}
 
-		// Token: 0x0603013B RID: 196923 RVA: 0x00B24750 File Offset: 0x00B22950
+		// Token: 0x0602490A RID: 149770 RVA: 0x00A546D4 File Offset: 0x00A528D4
 		public void AddMapScale(float delta, EMapScaleSetType type)
 		{
 			WorldMapModel instance = WorldMapModel.Instance;
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.SetMapScale(this.MapScale + delta, type, true, true);
 		}
 
-		// Token: 0x0603013C RID: 196924 RVA: 0x00B247C8 File Offset: 0x00B229C8
+		// Token: 0x0602490B RID: 149771 RVA: 0x00A5474C File Offset: 0x00A5294C
 		public void SetScaleTier(EWorldMapScaleTier tier, EMapScaleSetType type)
 		{
 			WorldMapModel instance = WorldMapModel.Instance;
@@ -327,13 +327,13 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			this.ApplyTierAndScale(tier, value, type, true, true);
 		}
 
-		// Token: 0x0603013D RID: 196925 RVA: 0x00B24806 File Offset: 0x00B22A06
+		// Token: 0x0602490C RID: 149772 RVA: 0x00A5478A File Offset: 0x00A5298A
 		public void SetMapScale(float value, EMapScaleSetType type, bool sendEvent = true, bool reAssign = true)
 		{
 			this.ApplyTierAndScale(WorldMapModel.Instance.ScaleTier, value, type, sendEvent, reAssign);
 		}
 
-		// Token: 0x0603013E RID: 196926 RVA: 0x00B24820 File Offset: 0x00B22A20
+		// Token: 0x0602490D RID: 149773 RVA: 0x00A547A4 File Offset: 0x00A529A4
 		public void ApplyMapScaleToView()
 		{
 			BaseMap map = this.WorldMapUiComponent.Map;
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			map.SelfPlayerNode.D_SetRelativeScale3D(new FVectorDouble((double)(1f / this.MapScale), (double)(1f / this.MapScale), (double)(1f / this.MapScale)));
 		}
 
-		// Token: 0x0603013F RID: 196927 RVA: 0x00B2487C File Offset: 0x00B22A7C
+		// Token: 0x0602490E RID: 149774 RVA: 0x00A54800 File Offset: 0x00A52A00
 		private void ApplyTierAndScale(EWorldMapScaleTier tier, float value, EMapScaleSetType type, bool sendEvent = true, bool reAssign = true)
 		{
 			WorldMapModel instance = WorldMapModel.Instance;
@@ -379,17 +379,17 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			instance.SetScaleTier(tier, type);
 		}
 
-		// Token: 0x04019EAC RID: 106156
+		// Token: 0x0401455C RID: 83292
 		private float _mapScaleInner;
 
-		// Token: 0x04019EAD RID: 106157
+		// Token: 0x0401455D RID: 83293
 		private bool _mapScaleDirty;
 
-		// Token: 0x04019EB6 RID: 106166
+		// Token: 0x04014566 RID: 83302
 		private const float BOX_THRESHOLD_RATIO = 0.2f;
 
-		// Token: 0x0200AA6D RID: 43629
-		// (Invoke) Token: 0x0604D8E5 RID: 317669
+		// Token: 0x02009421 RID: 37921
+		// (Invoke) Token: 0x06043DF4 RID: 278004
 		[NullableContext(0)]
 		public delegate void TScaleChangeEvent(float oldScale, float newScale, EMapScaleSetType type);
 	}

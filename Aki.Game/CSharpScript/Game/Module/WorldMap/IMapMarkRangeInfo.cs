@@ -4,33 +4,33 @@ using CSharpScript.Game.Module.Map.MapDefine;
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x02004795 RID: 18325
+	// Token: 0x020036C6 RID: 14022
 	[NullableContext(1)]
 	public interface IMapMarkRangeInfo
 	{
-		// Token: 0x170077E4 RID: 30692
-		// (get) Token: 0x0602FEE9 RID: 196329
-		// (set) Token: 0x0602FEEA RID: 196330
+		// Token: 0x17004AA0 RID: 19104
+		// (get) Token: 0x060246B4 RID: 149172
+		// (set) Token: 0x060246B5 RID: 149173
 		Vector2D Position { get; set; }
 
-		// Token: 0x170077E5 RID: 30693
-		// (get) Token: 0x0602FEEB RID: 196331
-		// (set) Token: 0x0602FEEC RID: 196332
+		// Token: 0x17004AA1 RID: 19105
+		// (get) Token: 0x060246B6 RID: 149174
+		// (set) Token: 0x060246B7 RID: 149175
 		int? MapId { get; set; }
 
-		// Token: 0x170077E6 RID: 30694
-		// (get) Token: 0x0602FEED RID: 196333
-		// (set) Token: 0x0602FEEE RID: 196334
+		// Token: 0x17004AA2 RID: 19106
+		// (get) Token: 0x060246B8 RID: 149176
+		// (set) Token: 0x060246B9 RID: 149177
 		EMapGravityDirection? Gravity { get; set; }
 
-		// Token: 0x170077E7 RID: 30695
-		// (get) Token: 0x0602FEEF RID: 196335
-		// (set) Token: 0x0602FEF0 RID: 196336
+		// Token: 0x17004AA3 RID: 19107
+		// (get) Token: 0x060246BA RID: 149178
+		// (set) Token: 0x060246BB RID: 149179
 		float? Width { get; set; }
 
-		// Token: 0x170077E8 RID: 30696
-		// (get) Token: 0x0602FEF1 RID: 196337
-		// (set) Token: 0x0602FEF2 RID: 196338
+		// Token: 0x17004AA4 RID: 19108
+		// (get) Token: 0x060246BC RID: 149180
+		// (set) Token: 0x060246BD RID: 149181
 		float? Height { get; set; }
 	}
 }

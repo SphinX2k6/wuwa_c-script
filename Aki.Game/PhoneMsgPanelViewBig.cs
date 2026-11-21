@@ -4,32 +4,31 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.PhoneMessage;
-using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using CSharpScript.Game.Ui.PhoneMessage.View;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002519 RID: 9497
+// Token: 0x02001A00 RID: 6656
 [NullableContext(2)]
 [Nullable(0)]
 public class PhoneMsgPanelViewBig : UiViewBase
 {
-	// Token: 0x06013159 RID: 78169 RVA: 0x004BADEC File Offset: 0x004B8FEC
+	// Token: 0x06010618 RID: 67096 RVA: 0x004C8B50 File Offset: 0x004C6D50
 	[NullableContext(1)]
 	public PhoneMsgPanelViewBig(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601315A RID: 78170 RVA: 0x004BAE4C File Offset: 0x004B904C
+	// Token: 0x06010619 RID: 67097 RVA: 0x004C8BA8 File Offset: 0x004C6DA8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
 		{
 			new ValueTuple<int, Type>(0, typeof(UUIItem)),
 			new ValueTuple<int, Type>(1, typeof(UUIItem)),
-			new ValueTuple<int, Type>(2, typeof(UUIScrollViewWithScrollbarComponent)),
+			new ValueTuple<int, Type>(2, typeof(UUIMultiTemplateScrollViewComponent)),
 			new ValueTuple<int, Type>(3, typeof(UUIItem)),
 			new ValueTuple<int, Type>(4, typeof(UUIItem)),
 			new ValueTuple<int, Type>(5, typeof(UUIButtonComponent)),
@@ -56,7 +55,7 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		};
 	}
 
-	// Token: 0x0601315B RID: 78171 RVA: 0x004BB078 File Offset: 0x004B9278
+	// Token: 0x0601061A RID: 67098 RVA: 0x004C8DD4 File Offset: 0x004C6FD4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhoneMsgPanelViewBig.<OnBeforeStartAsync>d__24 <OnBeforeStartAsync>d__;
@@ -67,14 +66,14 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601315C RID: 78172 RVA: 0x004BB0BB File Offset: 0x004B92BB
+	// Token: 0x0601061B RID: 67099 RVA: 0x004C8E17 File Offset: 0x004C7017
 	protected override void OnBeforeShow()
 	{
 		this.RefreshRedDot();
 		this.RefreshChatShow();
 	}
 
-	// Token: 0x0601315D RID: 78173 RVA: 0x004BB0CC File Offset: 0x004B92CC
+	// Token: 0x0601061C RID: 67100 RVA: 0x004C8E28 File Offset: 0x004C7028
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnPhoneHaveMsgToRemove, new Action(this.OnHandleMessagesToDelete));
@@ -84,7 +83,7 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		EventSystem.Instance.Add(EEventName.OnPhoneMsgChatShowChange, new Action(this.RefreshChatShow));
 	}
 
-	// Token: 0x0601315E RID: 78174 RVA: 0x004BB168 File Offset: 0x004B9368
+	// Token: 0x0601061D RID: 67101 RVA: 0x004C8EC4 File Offset: 0x004C70C4
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPhoneHaveMsgToRemove, new Action(this.OnHandleMessagesToDelete));
@@ -94,14 +93,14 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnPhoneMsgChatShowChange, new Action(this.RefreshChatShow));
 	}
 
-	// Token: 0x0601315F RID: 78175 RVA: 0x004BB201 File Offset: 0x004B9401
+	// Token: 0x0601061E RID: 67102 RVA: 0x004C8F5D File Offset: 0x004C715D
 	private void RefreshChatShow()
 	{
 		this.RefreshByTheme(PhoneMsgModel.Instance.CurrentUsingChatThemeId);
 		this.SetSpineByCharmId(PhoneMsgModel.Instance.CurrentUsingChatCharmId);
 	}
 
-	// Token: 0x06013160 RID: 78176 RVA: 0x004BB224 File Offset: 0x004B9424
+	// Token: 0x0601061F RID: 67103 RVA: 0x004C8F80 File Offset: 0x004C7180
 	public void SetSpineByCharmId(int charmId)
 	{
 		ChatCharm? chatCharmConfig = PhoneMsgConfig.Instance.GetChatCharmConfig(charmId);
@@ -162,7 +161,7 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		}
 	}
 
-	// Token: 0x06013161 RID: 78177 RVA: 0x004BB2F8 File Offset: 0x004B94F8
+	// Token: 0x06010620 RID: 67104 RVA: 0x004C9054 File Offset: 0x004C7254
 	[NullableContext(1)]
 	private UniTask CreateCharmAndPlayAsync(string spinepre, UUIItem petItem, int charmId)
 	{
@@ -177,7 +176,7 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		return <CreateCharmAndPlayAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013162 RID: 78178 RVA: 0x004BB354 File Offset: 0x004B9554
+	// Token: 0x06010621 RID: 67105 RVA: 0x004C90B0 File Offset: 0x004C72B0
 	private void RefreshByTheme(int themeId)
 	{
 		ChatTheme? chatThemeConfig = PhoneMsgConfig.Instance.GetChatThemeConfig(themeId);
@@ -321,7 +320,7 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		texture5.SetUIActive(!flag);
 	}
 
-	// Token: 0x06013163 RID: 78179 RVA: 0x004BB788 File Offset: 0x004B9988
+	// Token: 0x06010622 RID: 67106 RVA: 0x004C94E4 File Offset: 0x004C76E4
 	[NullableContext(1)]
 	private UniTask CreateTitle1AndPlayAsync(string prefabPath, UUIItem parentItem)
 	{
@@ -335,7 +334,7 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		return <CreateTitle1AndPlayAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013164 RID: 78180 RVA: 0x004BB7DC File Offset: 0x004B99DC
+	// Token: 0x06010623 RID: 67107 RVA: 0x004C9538 File Offset: 0x004C7738
 	[NullableContext(1)]
 	private UniTask CreateRightEmptyAndPlayAsync(string prefabPath, UUIItem parentItem)
 	{
@@ -349,13 +348,13 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		return <CreateRightEmptyAndPlayAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013165 RID: 78181 RVA: 0x004BB82F File Offset: 0x004B9A2F
+	// Token: 0x06010624 RID: 67108 RVA: 0x004C958B File Offset: 0x004C778B
 	private void RefreshRedDot()
 	{
 		base.GetItem(8).SetUIActive(PhoneMsgModel.Instance.IsChatShowHasRedDot());
 	}
 
-	// Token: 0x06013166 RID: 78182 RVA: 0x004BB848 File Offset: 0x004B9A48
+	// Token: 0x06010625 RID: 67109 RVA: 0x004C95A4 File Offset: 0x004C77A4
 	private void OnFilterChanged()
 	{
 		PhoneMsgModel.Instance.SortChatPartnerAndMessages();
@@ -383,19 +382,16 @@ public class PhoneMsgPanelViewBig : UiViewBase
 			this.CurrentShowShortMessageId = 0;
 			EventSystem.Instance.Emit<int, int>(EEventName.OnPhoneMsgChatTabClick, 0, 0);
 		}
-		GenericScrollViewNew<PhoneSystemChatPartnerTabItem, ChatPartnerTabItemData> chatPartnerTabItemList = this.ChatPartnerTabItemList;
-		if (chatPartnerTabItemList != null)
+		PhoneSystemChatPartnerTabScroll chatPartnerTabScroll = this.ChatPartnerTabScroll;
+		if (chatPartnerTabScroll != null)
 		{
-			GenericLayout<PhoneSystemChatPartnerTabItem, ChatPartnerTabItemData> genericLayout = chatPartnerTabItemList.GetGenericLayout();
-			if (genericLayout != null)
-			{
-				genericLayout.DeselectCurrentGridProxy();
-			}
+			chatPartnerTabScroll.DeselectPartner();
 		}
+		this.CurSelectPartnerId = 0;
 		this.RefreshTabsAndReselectAsync().Forget();
 	}
 
-	// Token: 0x06013167 RID: 78183 RVA: 0x004BB92C File Offset: 0x004B9B2C
+	// Token: 0x06010626 RID: 67110 RVA: 0x004C9684 File Offset: 0x004C7884
 	private UniTask RefreshTabsAndReselectAsync()
 	{
 		PhoneMsgPanelViewBig.<RefreshTabsAndReselectAsync>d__36 <RefreshTabsAndReselectAsync>d__;
@@ -406,7 +402,7 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		return <RefreshTabsAndReselectAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013168 RID: 78184 RVA: 0x004BB970 File Offset: 0x004B9B70
+	// Token: 0x06010627 RID: 67111 RVA: 0x004C96C8 File Offset: 0x004C78C8
 	protected override void OnBeforeDestroy()
 	{
 		PhoneSystemCharm charmPanel = this.CharmPanel;
@@ -435,13 +431,13 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		this.rightEmptySeqPlayer = null;
 	}
 
-	// Token: 0x06013169 RID: 78185 RVA: 0x004BB9DE File Offset: 0x004B9BDE
+	// Token: 0x06010628 RID: 67112 RVA: 0x004C9736 File Offset: 0x004C7936
 	private void OnInputControllerMainTypeChange(EInputControllerMainType last, EInputControllerMainType now)
 	{
 		this.SetChatSelectPanelBlackMarkEnable(false);
 	}
 
-	// Token: 0x0601316A RID: 78186 RVA: 0x004BB9E8 File Offset: 0x004B9BE8
+	// Token: 0x06010629 RID: 67113 RVA: 0x004C9740 File Offset: 0x004C7940
 	private void InitChatPartnerTabDataList()
 	{
 		PhoneMsgModel.Instance.SortChatPartnerAndMessages();
@@ -455,7 +451,7 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		}
 	}
 
-	// Token: 0x0601316B RID: 78187 RVA: 0x004BBA44 File Offset: 0x004B9C44
+	// Token: 0x0601062A RID: 67114 RVA: 0x004C979C File Offset: 0x004C799C
 	private UniTask CreateAndRefreshChatPartnerTab()
 	{
 		PhoneMsgPanelViewBig.<CreateAndRefreshChatPartnerTab>d__40 <CreateAndRefreshChatPartnerTab>d__;
@@ -466,67 +462,57 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		return <CreateAndRefreshChatPartnerTab>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601316C RID: 78188 RVA: 0x004BBA87 File Offset: 0x004B9C87
-	[NullableContext(1)]
-	private PhoneSystemChatPartnerTabItem CreateChatPartnerTabItem()
+	// Token: 0x0601062B RID: 67115 RVA: 0x004C97DF File Offset: 0x004C79DF
+	private void HandleSelectGridProxy(int partnerId)
 	{
-		PhoneSystemChatPartnerTabItem phoneSystemChatPartnerTabItem = new PhoneSystemChatPartnerTabItem();
-		phoneSystemChatPartnerTabItem.SetClickCallBack(new Action<int>(this.HandleSelectGridProxy));
-		phoneSystemChatPartnerTabItem.OnSetSelectCallBack = new Action(this.AfterHandleSelectGridProxy);
-		phoneSystemChatPartnerTabItem.SetRefreshMainPanelFunc(new Action<int, TogChatTalkItem>(this.OnSelectUpdateChatPanel));
-		return phoneSystemChatPartnerTabItem;
-	}
-
-	// Token: 0x0601316D RID: 78189 RVA: 0x004BBAC4 File Offset: 0x004B9CC4
-	private void HandleSelectGridProxy(int index)
-	{
-		if (this.ChatPartnerTabItemList.GetSelectedIndex() == index)
+		if (this.CurSelectPartnerId == partnerId)
 		{
-			this.ChatPartnerTabItemList.GetGenericLayout().DeselectCurrentGridProxy();
+			this.ChatPartnerTabScroll.DeselectPartner();
+			this.CurSelectPartnerId = 0;
 			return;
 		}
-		this.CurrentIndex = index;
-		this.ChatPartnerTabItemList.SelectGridProxy(index, false);
+		this.CurSelectPartnerId = partnerId;
+		this.ChatPartnerTabScroll.SelectPartner(partnerId);
+		this.ChatPartnerTabScroll.TryScrollToPartner(partnerId);
 	}
 
-	// Token: 0x0601316E RID: 78190 RVA: 0x004BBAF9 File Offset: 0x004B9CF9
-	private void AfterHandleSelectGridProxy()
+	// Token: 0x0601062C RID: 67116 RVA: 0x004C981C File Offset: 0x004C7A1C
+	[NullableContext(1)]
+	public void OnGamepadFocusPartner(UUISelectableComponent component)
 	{
-		this.TryScrollToCanSee(this.CurrentIndex);
-	}
-
-	// Token: 0x0601316F RID: 78191 RVA: 0x004BBB08 File Offset: 0x004B9D08
-	private void TryScrollToCanSee(int index)
-	{
-		UUIItem item = this.ChatPartnerTabItemList.GetItemByIndex(index);
-		if (item != null)
+		if (this.ChatPartnerTabScroll == null)
 		{
-			TTimerAction <>9__1;
-			this.ChatPartnerTabItemList.BindLateUpdate(delegate(float delta)
-			{
-				TimerSystemInstance gameplayTimeInstance = TimerSystem.GameplayTimeInstance;
-				TTimerAction action;
-				if ((action = <>9__1) == null)
-				{
-					action = (<>9__1 = delegate(float _)
-					{
-						if (this.ChatPartnerTabItemList.IsItemInViewport(item, 1f) != EOutOfBoundsType.NotOut)
-						{
-							this.ChatPartnerTabItemList.ScrollToTopByIndex(index);
-						}
-					});
-				}
-				gameplayTimeInstance.Next(action, null, null);
-				this.ChatPartnerTabItemList.UnBindLateUpdate();
-			});
+			return;
 		}
+		int partnerIdByComponent = this.ChatPartnerTabScroll.GetPartnerIdByComponent(component);
+		if (partnerIdByComponent == 0)
+		{
+			return;
+		}
+		if (this.LastFocusedPartnerId == partnerIdByComponent)
+		{
+			return;
+		}
+		this.LastFocusedPartnerId = partnerIdByComponent;
+		if (this.CurSelectPartnerId == partnerIdByComponent)
+		{
+			return;
+		}
+		this.CurSelectPartnerId = partnerIdByComponent;
+		this.ChatPartnerTabScroll.SelectPartner(partnerIdByComponent);
+		this.ChatPartnerTabScroll.TryScrollToPartner(partnerIdByComponent);
 	}
 
-	// Token: 0x06013170 RID: 78192 RVA: 0x004BBB5F File Offset: 0x004B9D5F
+	// Token: 0x0601062D RID: 67117 RVA: 0x004C987D File Offset: 0x004C7A7D
 	[NullableContext(1)]
 	public void OnSelectUpdateChatPanel(int shortMessageId, TogChatTalkItem tog)
 	{
 		this.CurSelectTogChatItem = tog;
+		PhoneSystemChatPartnerTabScroll chatPartnerTabScroll = this.ChatPartnerTabScroll;
+		if (chatPartnerTabScroll != null)
+		{
+			chatPartnerTabScroll.SetSelectedShortMsgId(shortMessageId);
+		}
 		this.CheckAndCloseTips(shortMessageId);
 		if (this.CurrentShowShortMessageId == shortMessageId)
 		{
@@ -535,19 +521,19 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		this.UpdateChatPanel(shortMessageId);
 	}
 
-	// Token: 0x06013171 RID: 78193 RVA: 0x004BBB81 File Offset: 0x004B9D81
+	// Token: 0x0601062E RID: 67118 RVA: 0x004C98B1 File Offset: 0x004C7AB1
 	public void CheckAndCloseTips(int shortMessageId)
 	{
 	}
 
-	// Token: 0x06013172 RID: 78194 RVA: 0x004BBB83 File Offset: 0x004B9D83
+	// Token: 0x0601062F RID: 67119 RVA: 0x004C98B3 File Offset: 0x004C7AB3
 	public void OnHandleMessagesToDelete()
 	{
 		ScrollingTipsController.Instance.ShowTipsByTextId("Message_ForceCloseTips", Array.Empty<object>());
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06013173 RID: 78195 RVA: 0x004BBBA0 File Offset: 0x004B9DA0
+	// Token: 0x06010630 RID: 67120 RVA: 0x004C98D0 File Offset: 0x004C7AD0
 	[NullableContext(1)]
 	public void RefreshCurSelectChatTabTextShow(string lastChatText)
 	{
@@ -555,10 +541,14 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		{
 			return;
 		}
+		if (this.CurSelectTogChatItem.ShortMsgId != this.CurrentShowShortMessageId)
+		{
+			return;
+		}
 		this.CurSelectTogChatItem.SetShowChatText(lastChatText);
 	}
 
-	// Token: 0x06013174 RID: 78196 RVA: 0x004BBBB8 File Offset: 0x004B9DB8
+	// Token: 0x06010631 RID: 67121 RVA: 0x004C98FC File Offset: 0x004C7AFC
 	public void RefreshTargetChatItemText(int shortMessageId)
 	{
 		if (this.CurrentShowShortMessageId == shortMessageId)
@@ -571,35 +561,33 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		{
 			return;
 		}
-		GenericScrollViewNew<PhoneSystemChatPartnerTabItem, ChatPartnerTabItemData> chatPartnerTabItemList = this.ChatPartnerTabItemList;
-		PhoneSystemChatPartnerTabItem phoneSystemChatPartnerTabItem = (chatPartnerTabItemList != null) ? chatPartnerTabItemList.GetScrollItemByKey(num.Value) : null;
-		if (phoneSystemChatPartnerTabItem == null)
+		PhoneSystemChatPartnerTabScroll chatPartnerTabScroll = this.ChatPartnerTabScroll;
+		if (chatPartnerTabScroll != null)
 		{
-			return;
+			chatPartnerTabScroll.RefreshPartnerChatText(num.Value, shortMessageId, EGetLastChatTextType.FromLastCanReadIndex);
 		}
-		phoneSystemChatPartnerTabItem.RefreshShowChatText(shortMessageId, EGetLastChatTextType.FromLastCanReadIndex);
 		this.CurrentShowShortMessageId = shortMessageId;
 	}
 
-	// Token: 0x06013175 RID: 78197 RVA: 0x004BBC44 File Offset: 0x004B9E44
+	// Token: 0x06010632 RID: 67122 RVA: 0x004C9974 File Offset: 0x004C7B74
 	public UniTask UpdateChatPanel(int shortMessageId)
 	{
-		PhoneMsgPanelViewBig.<UpdateChatPanel>d__51 <UpdateChatPanel>d__;
+		PhoneMsgPanelViewBig.<UpdateChatPanel>d__50 <UpdateChatPanel>d__;
 		<UpdateChatPanel>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<UpdateChatPanel>d__.<>4__this = this;
 		<UpdateChatPanel>d__.shortMessageId = shortMessageId;
 		<UpdateChatPanel>d__.<>1__state = -1;
-		<UpdateChatPanel>d__.<>t__builder.Start<PhoneMsgPanelViewBig.<UpdateChatPanel>d__51>(ref <UpdateChatPanel>d__);
+		<UpdateChatPanel>d__.<>t__builder.Start<PhoneMsgPanelViewBig.<UpdateChatPanel>d__50>(ref <UpdateChatPanel>d__);
 		return <UpdateChatPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013176 RID: 78198 RVA: 0x004BBC8F File Offset: 0x004B9E8F
+	// Token: 0x06010633 RID: 67123 RVA: 0x004C99BF File Offset: 0x004C7BBF
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06013177 RID: 78199 RVA: 0x004BBC98 File Offset: 0x004B9E98
+	// Token: 0x06010634 RID: 67124 RVA: 0x004C99C8 File Offset: 0x004C7BC8
 	private void OnSetClick()
 	{
 		if (this.ChatPanel != null && this.ChatPanel.GetIsPlaying)
@@ -610,7 +598,7 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.PhoneMsgSettingView, null, null);
 	}
 
-	// Token: 0x06013178 RID: 78200 RVA: 0x004BBCD8 File Offset: 0x004B9ED8
+	// Token: 0x06010635 RID: 67125 RVA: 0x004C9A08 File Offset: 0x004C7C08
 	private void LogReportOpenPhoneView(EPhoneMsgOpenWay openWay, EPhoneMsgViewType reason)
 	{
 		OnOpenPhoneViewLogEvent onOpenPhoneViewLogEvent = new OnOpenPhoneViewLogEvent();
@@ -619,157 +607,158 @@ public class PhoneMsgPanelViewBig : UiViewBase
 		LogReportController.Instance.LogReport(onOpenPhoneViewLogEvent);
 	}
 
-	// Token: 0x06013179 RID: 78201 RVA: 0x004BBD04 File Offset: 0x004B9F04
+	// Token: 0x06010636 RID: 67126 RVA: 0x004C9A34 File Offset: 0x004C7C34
 	[NullableContext(1)]
 	public PhoneSystemChatProxy GetProxy()
 	{
 		return this.Proxy;
 	}
 
-	// Token: 0x0601317A RID: 78202 RVA: 0x004BBD0C File Offset: 0x004B9F0C
+	// Token: 0x06010637 RID: 67127 RVA: 0x004C9A3C File Offset: 0x004C7C3C
 	public void SetChatSelectPanelBlackMarkEnable(bool isEnable)
 	{
-		foreach (PhoneSystemChatPartnerTabItem phoneSystemChatPartnerTabItem in this.ChatPartnerTabItemList.GetScrollItemList())
+		PhoneSystemChatPartnerTabScroll chatPartnerTabScroll = this.ChatPartnerTabScroll;
+		if (chatPartnerTabScroll == null)
 		{
-			phoneSystemChatPartnerTabItem.SetChangeAlpha(isEnable);
+			return;
 		}
+		chatPartnerTabScroll.SetAllDisplayingBlackMark(isEnable);
 	}
 
-	// Token: 0x0601317B RID: 78203 RVA: 0x004BBD64 File Offset: 0x004B9F64
+	// Token: 0x06010638 RID: 67128 RVA: 0x004C9A4F File Offset: 0x004C7C4F
 	private void SelectAndScrollToChatPartner(int chatPartnerId)
 	{
-		for (int i = 0; i < this.ChatPartnerTabItemDataList.Count; i++)
+		if (this.ChatPartnerTabScroll == null)
 		{
-			if (this.ChatPartnerTabItemDataList[i].ChatPartnerId == chatPartnerId)
-			{
-				this.ChatPartnerTabItemList.SelectGridProxy(i, false);
-				this.TryScrollToCanSee(i);
-			}
+			return;
 		}
+		if (this.ChatPartnerTabScroll.GetGridIndexByPartnerId(chatPartnerId) < 0)
+		{
+			return;
+		}
+		this.CurSelectPartnerId = chatPartnerId;
+		this.ChatPartnerTabScroll.SelectPartner(chatPartnerId);
 	}
 
-	// Token: 0x04009010 RID: 36880
+	// Token: 0x04009164 RID: 37220
 	private int CurrentShowShortMessageId;
 
-	// Token: 0x04009011 RID: 36881
+	// Token: 0x04009165 RID: 37221
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04009012 RID: 36882
+	// Token: 0x04009166 RID: 37222
 	private PhoneSystemChatPanel ChatPanel;
 
-	// Token: 0x04009013 RID: 36883
+	// Token: 0x04009167 RID: 37223
 	private TogChatTalkItem CurSelectTogChatItem;
 
-	// Token: 0x04009014 RID: 36884
-	[Nullable(new byte[]
-	{
-		2,
-		1,
-		1
-	})]
-	private GenericScrollViewNew<PhoneSystemChatPartnerTabItem, ChatPartnerTabItemData> ChatPartnerTabItemList;
+	// Token: 0x04009168 RID: 37224
+	private PhoneSystemChatPartnerTabScroll ChatPartnerTabScroll;
 
-	// Token: 0x04009015 RID: 36885
+	// Token: 0x04009169 RID: 37225
 	[Nullable(1)]
 	private List<ChatPartnerTabItemData> ChatPartnerTabItemDataList = new List<ChatPartnerTabItemData>();
 
-	// Token: 0x04009016 RID: 36886
+	// Token: 0x0400916A RID: 37226
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04009017 RID: 36887
+	// Token: 0x0400916B RID: 37227
 	private LevelSequencePlayer title1SeqPlayer;
 
-	// Token: 0x04009018 RID: 36888
+	// Token: 0x0400916C RID: 37228
 	private LevelSequencePlayer rightEmptySeqPlayer;
 
-	// Token: 0x04009019 RID: 36889
+	// Token: 0x0400916D RID: 37229
 	[Nullable(1)]
 	private PhoneSystemChatProxy Proxy;
 
-	// Token: 0x0400901A RID: 36890
+	// Token: 0x0400916E RID: 37230
 	private PhoneViewFilterEntry FilterPanel;
 
-	// Token: 0x0400901B RID: 36891
+	// Token: 0x0400916F RID: 37231
 	private PhoneSystemCharm CharmPanel;
 
-	// Token: 0x0400901C RID: 36892
+	// Token: 0x04009170 RID: 37232
 	private string charmPrepath = "";
 
-	// Token: 0x0400901D RID: 36893
+	// Token: 0x04009171 RID: 37233
 	private UiPanelBase title1pre;
 
-	// Token: 0x0400901E RID: 36894
+	// Token: 0x04009172 RID: 37234
 	private UiPanelBase leftchatpre;
 
-	// Token: 0x0400901F RID: 36895
+	// Token: 0x04009173 RID: 37235
 	private UiPanelBase rightchatpre;
 
-	// Token: 0x04009020 RID: 36896
+	// Token: 0x04009174 RID: 37236
 	private UiPanelBase rightemptypre;
 
-	// Token: 0x04009021 RID: 36897
+	// Token: 0x04009175 RID: 37237
 	[Nullable(1)]
 	private string title1prepath = "";
 
-	// Token: 0x04009022 RID: 36898
+	// Token: 0x04009176 RID: 37238
 	private string leftchatprepath = "";
 
-	// Token: 0x04009023 RID: 36899
+	// Token: 0x04009177 RID: 37239
 	private string rightchatprepath = "";
 
-	// Token: 0x04009024 RID: 36900
+	// Token: 0x04009178 RID: 37240
 	private string rightemptyprepath = "";
 
-	// Token: 0x04009025 RID: 36901
-	private int CurrentIndex = -1;
+	// Token: 0x04009179 RID: 37241
+	private int CurSelectPartnerId;
 
-	// Token: 0x02008A9C RID: 35484
+	// Token: 0x0400917A RID: 37242
+	private int LastFocusedPartnerId;
+
+	// Token: 0x02007C24 RID: 31780
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402D01C RID: 184348
+		// Token: 0x04028334 RID: 164660
 		ItemCaption,
-		// Token: 0x0402D01D RID: 184349
+		// Token: 0x04028335 RID: 164661
 		PanelNull,
-		// Token: 0x0402D01E RID: 184350
+		// Token: 0x04028336 RID: 164662
 		TabScroll,
-		// Token: 0x0402D01F RID: 184351
+		// Token: 0x04028337 RID: 164663
 		Content,
-		// Token: 0x0402D020 RID: 184352
+		// Token: 0x04028338 RID: 164664
 		ChatPartnerTabItem,
-		// Token: 0x0402D021 RID: 184353
+		// Token: 0x04028339 RID: 164665
 		BtnSet,
-		// Token: 0x0402D022 RID: 184354
+		// Token: 0x0402833A RID: 164666
 		PanelPhoneSystemChatPanel,
-		// Token: 0x0402D023 RID: 184355
+		// Token: 0x0402833B RID: 164667
 		Null,
-		// Token: 0x0402D024 RID: 184356
+		// Token: 0x0402833C RID: 164668
 		SettingBtnRedDotItem,
-		// Token: 0x0402D025 RID: 184357
+		// Token: 0x0402833D RID: 164669
 		ItemFilter,
-		// Token: 0x0402D026 RID: 184358
+		// Token: 0x0402833E RID: 164670
 		PartnerEmpty,
-		// Token: 0x0402D027 RID: 184359
+		// Token: 0x0402833F RID: 164671
 		TexPanelL,
-		// Token: 0x0402D028 RID: 184360
+		// Token: 0x04028340 RID: 164672
 		TexModelT,
-		// Token: 0x0402D029 RID: 184361
+		// Token: 0x04028341 RID: 164673
 		TexSkinEmptyBg,
-		// Token: 0x0402D02A RID: 184362
+		// Token: 0x04028342 RID: 164674
 		SprBg,
-		// Token: 0x0402D02B RID: 184363
+		// Token: 0x04028343 RID: 164675
 		TxtTitle,
-		// Token: 0x0402D02C RID: 184364
+		// Token: 0x04028344 RID: 164676
 		PnlContentSkinL,
-		// Token: 0x0402D02D RID: 184365
+		// Token: 0x04028345 RID: 164677
 		PnlContentSkinTitle,
-		// Token: 0x0402D02E RID: 184366
+		// Token: 0x04028346 RID: 164678
 		PnlContentSkinEmptyR,
-		// Token: 0x0402D02F RID: 184367
+		// Token: 0x04028347 RID: 164679
 		TexSkinR,
-		// Token: 0x0402D030 RID: 184368
+		// Token: 0x04028348 RID: 164680
 		TexSkinRTopicShow,
-		// Token: 0x0402D031 RID: 184369
+		// Token: 0x04028349 RID: 164681
 		PnlPetContent
 	}
 }

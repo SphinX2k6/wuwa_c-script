@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200150C RID: 5388
+	// Token: 0x02001667 RID: 5735
 	public class ClientUnlockAchievementSystemItem_SetValue
 	{
-		// Token: 0x040046EF RID: 18159
+		// Token: 0x04004A8E RID: 19086
 		public int Id;
 	}
 }

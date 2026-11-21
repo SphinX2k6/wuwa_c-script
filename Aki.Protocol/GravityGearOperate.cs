@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200164B RID: 5707
+	// Token: 0x020016C1 RID: 5825
 	public enum GravityGearOperate
 	{
-		// Token: 0x0400C0F8 RID: 49400
+		// Token: 0x0400C5FF RID: 50687
 		[OriginalName("InActive")]
 		InActive,
-		// Token: 0x0400C0F9 RID: 49401
+		// Token: 0x0400C600 RID: 50688
 		[OriginalName("Active")]
 		Active
 	}

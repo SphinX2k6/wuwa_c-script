@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200092E RID: 2350
+	// Token: 0x02000979 RID: 2425
 	public class ConfigSilentAreaDetectionById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003727 RID: 14119 RVA: 0x001912DF File Offset: 0x0018F4DF
+		// Token: 0x060038E9 RID: 14569 RVA: 0x0019E4FF File Offset: 0x0019C6FF
 		static ConfigSilentAreaDetectionById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSilentAreaDetectionById.CreateStaticDefaultValue), new Action(ConfigSilentAreaDetectionById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003728 RID: 14120 RVA: 0x00191300 File Offset: 0x0018F500
+		// Token: 0x060038EA RID: 14570 RVA: 0x0019E520 File Offset: 0x0019C720
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSilentAreaDetectionById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003729 RID: 14121 RVA: 0x0019137F File Offset: 0x0018F57F
+		// Token: 0x060038EB RID: 14571 RVA: 0x0019E59F File Offset: 0x0019C79F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSilentAreaDetectionById.LogPair = null;
 			ConfigSilentAreaDetectionById.HandleId = 0;
 		}
 
-		// Token: 0x0600372A RID: 14122 RVA: 0x0019138D File Offset: 0x0018F58D
+		// Token: 0x060038EC RID: 14572 RVA: 0x0019E5AD File Offset: 0x0019C7AD
 		public static void Init()
 		{
 			ConfigSilentAreaDetectionById.HandleId = ConfigCommon.InitDataStatement(ConfigSilentAreaDetectionById.HandleId, "db_adventure_detect.db", "select BinData from `SilentAreaDetection` where id=?");
 		}
 
-		// Token: 0x0600372B RID: 14123 RVA: 0x001913A8 File Offset: 0x0018F5A8
+		// Token: 0x060038ED RID: 14573 RVA: 0x0019E5C8 File Offset: 0x0019C7C8
 		public static SilentAreaDetection? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSilentAreaDetectionById.HandleId, ConfigSilentAreaDetectionById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SilentAreaDetection?(rootAsSilentAreaDetection);
 		}
 
-		// Token: 0x04004028 RID: 16424
+		// Token: 0x04004235 RID: 16949
 		private const string DB = "db_adventure_detect.db";
 
-		// Token: 0x04004029 RID: 16425
+		// Token: 0x04004236 RID: 16950
 		private const string FILE = "k.开拓探测.xlsx";
 
-		// Token: 0x0400402A RID: 16426
+		// Token: 0x04004237 RID: 16951
 		private const string TABLE = "SilentAreaDetection";
 
-		// Token: 0x0400402B RID: 16427
+		// Token: 0x04004238 RID: 16952
 		private const string COMMAND = "select BinData from `SilentAreaDetection` where id=?";
 
-		// Token: 0x0400402C RID: 16428
+		// Token: 0x04004239 RID: 16953
 		private const string KEY_PREFIX = "SilentAreaDetectionById";
 
-		// Token: 0x0400402D RID: 16429
+		// Token: 0x0400423A RID: 16954
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400402E RID: 16430
+		// Token: 0x0400423B RID: 16955
 		private static int HandleId;
 	}
 }

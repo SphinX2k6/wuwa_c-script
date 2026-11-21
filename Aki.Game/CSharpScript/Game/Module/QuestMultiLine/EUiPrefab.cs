@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.QuestMultiLine
 {
-	// Token: 0x02004FA3 RID: 20387
+	// Token: 0x02003F6C RID: 16236
 	public enum EUiPrefab
 	{
-		// Token: 0x0401BC02 RID: 113666
+		// Token: 0x040165D7 RID: 91607
 		ComponentId,
-		// Token: 0x0401BC03 RID: 113667
+		// Token: 0x040165D8 RID: 91608
 		DialogueLeft,
-		// Token: 0x0401BC04 RID: 113668
+		// Token: 0x040165D9 RID: 91609
 		DialogueRight
 	}
 }

@@ -6,61 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200229C RID: 8860
+	// Token: 0x02000752 RID: 1874
+	[NullableContext(2)]
+	[Nullable(0)]
 	[UnrealObjectPath("/Script/MediaAssets.MediaTexture")]
-	[UnrealStructLayout(4128, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 4128)]
+	[UnrealStructLayout(4336, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 4336)]
 	public class UMediaTexture : UTexture, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06021B49 RID: 138057 RVA: 0x0031D589 File Offset: 0x0031B789
+		// Token: 0x0600A3C2 RID: 41922 RVA: 0x000F1C05 File Offset: 0x000EFE05
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMediaTexture._ClassPtr;
 		}
 
-		// Token: 0x06021B4A RID: 138058 RVA: 0x0031D598 File Offset: 0x0031B798
+		// Token: 0x0600A3C3 RID: 41923 RVA: 0x000F1C14 File Offset: 0x000EFE14
 		public UMediaTexture() : this(BuiltinUtils.AllocNativeUObject(UMediaTexture.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06021B4B RID: 138059 RVA: 0x0031D5C0 File Offset: 0x0031B7C0
+		// Token: 0x0600A3C4 RID: 41924 RVA: 0x000F1C3C File Offset: 0x000EFE3C
 		[NullableContext(1)]
 		public UMediaTexture(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMediaTexture.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170082C5 RID: 33477
-		// (get) Token: 0x06021B4C RID: 138060 RVA: 0x0031D5F3 File Offset: 0x0031B7F3
-		// (set) Token: 0x06021B4D RID: 138061 RVA: 0x0031D607 File Offset: 0x0031B807
-		public unsafe TEnumAsByte<TextureAddress> AddressX
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UMediaTexture.__PropertyOffset_AddressX);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UMediaTexture.__PropertyOffset_AddressX) = value;
-			}
-		}
-
-		// Token: 0x170082C6 RID: 33478
-		// (get) Token: 0x06021B4E RID: 138062 RVA: 0x0031D61C File Offset: 0x0031B81C
-		// (set) Token: 0x06021B4F RID: 138063 RVA: 0x0031D630 File Offset: 0x0031B830
-		public unsafe TEnumAsByte<TextureAddress> AddressY
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UMediaTexture.__PropertyOffset_AddressY);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UMediaTexture.__PropertyOffset_AddressY) = value;
-			}
-		}
-
-		// Token: 0x170082C7 RID: 33479
-		// (get) Token: 0x06021B50 RID: 138064 RVA: 0x0031D645 File Offset: 0x0031B845
-		// (set) Token: 0x06021B51 RID: 138065 RVA: 0x0031D655 File Offset: 0x0031B855
+		// Token: 0x17001E5A RID: 7770
+		// (get) Token: 0x0600A3C5 RID: 41925 RVA: 0x000F1C6F File Offset: 0x000EFE6F
+		// (set) Token: 0x0600A3C6 RID: 41926 RVA: 0x000F1C7F File Offset: 0x000EFE7F
 		public unsafe bool AutoClear
 		{
 			get
@@ -73,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170082C8 RID: 33480
-		// (get) Token: 0x06021B52 RID: 138066 RVA: 0x0031D666 File Offset: 0x0031B866
-		// (set) Token: 0x06021B53 RID: 138067 RVA: 0x0031D67A File Offset: 0x0031B87A
+		// Token: 0x17001E5B RID: 7771
+		// (get) Token: 0x0600A3C7 RID: 41927 RVA: 0x000F1C90 File Offset: 0x000EFE90
+		// (set) Token: 0x0600A3C8 RID: 41928 RVA: 0x000F1CA4 File Offset: 0x000EFEA4
 		public unsafe FLinearColor ClearColor
 		{
 			get
@@ -88,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170082C9 RID: 33481
-		// (get) Token: 0x06021B54 RID: 138068 RVA: 0x0031D68F File Offset: 0x0031B88F
-		// (set) Token: 0x06021B55 RID: 138069 RVA: 0x0031D69F File Offset: 0x0031B89F
+		// Token: 0x17001E5C RID: 7772
+		// (get) Token: 0x0600A3C9 RID: 41929 RVA: 0x000F1CB9 File Offset: 0x000EFEB9
+		// (set) Token: 0x0600A3CA RID: 41930 RVA: 0x000F1CC9 File Offset: 0x000EFEC9
 		public unsafe bool EnableGenMips
 		{
 			get
@@ -103,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170082CA RID: 33482
-		// (get) Token: 0x06021B56 RID: 138070 RVA: 0x0031D6B0 File Offset: 0x0031B8B0
-		// (set) Token: 0x06021B57 RID: 138071 RVA: 0x0031D6C0 File Offset: 0x0031B8C0
+		// Token: 0x17001E5D RID: 7773
+		// (get) Token: 0x0600A3CB RID: 41931 RVA: 0x000F1CDA File Offset: 0x000EFEDA
+		// (set) Token: 0x0600A3CC RID: 41932 RVA: 0x000F1CEA File Offset: 0x000EFEEA
 		public unsafe byte NumMips
 		{
 			get
@@ -118,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170082CB RID: 33483
-		// (get) Token: 0x06021B58 RID: 138072 RVA: 0x0031D6D1 File Offset: 0x0031B8D1
-		// (set) Token: 0x06021B59 RID: 138073 RVA: 0x0031D6E1 File Offset: 0x0031B8E1
+		// Token: 0x17001E5E RID: 7774
+		// (get) Token: 0x0600A3CD RID: 41933 RVA: 0x000F1CFB File Offset: 0x000EFEFB
+		// (set) Token: 0x0600A3CE RID: 41934 RVA: 0x000F1D0B File Offset: 0x000EFF0B
 		public unsafe bool NewStyleOutput
 		{
 			get
@@ -133,24 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170082CC RID: 33484
-		// (get) Token: 0x06021B5A RID: 138074 RVA: 0x0031D6F2 File Offset: 0x0031B8F2
-		// (set) Token: 0x06021B5B RID: 138075 RVA: 0x0031D706 File Offset: 0x0031B906
-		public unsafe TEnumAsByte<MediaTextureOutputFormat> OutputFormat
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UMediaTexture.__PropertyOffset_OutputFormat);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UMediaTexture.__PropertyOffset_OutputFormat) = value;
-			}
-		}
-
-		// Token: 0x170082CD RID: 33485
-		// (get) Token: 0x06021B5C RID: 138076 RVA: 0x0031D71B File Offset: 0x0031B91B
-		// (set) Token: 0x06021B5D RID: 138077 RVA: 0x0031D72B File Offset: 0x0031B92B
+		// Token: 0x17001E5F RID: 7775
+		// (get) Token: 0x0600A3CF RID: 41935 RVA: 0x000F1D1C File Offset: 0x000EFF1C
+		// (set) Token: 0x0600A3D0 RID: 41936 RVA: 0x000F1D2C File Offset: 0x000EFF2C
 		public unsafe float CurrentAspectRatio
 		{
 			get
@@ -163,143 +120,111 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170082CE RID: 33486
-		// (get) Token: 0x06021B5E RID: 138078 RVA: 0x0031D73C File Offset: 0x0031B93C
-		// (set) Token: 0x06021B5F RID: 138079 RVA: 0x0031D750 File Offset: 0x0031B950
-		public unsafe TEnumAsByte<MediaTextureOrientation> CurrentOrientation
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UMediaTexture.__PropertyOffset_CurrentOrientation);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UMediaTexture.__PropertyOffset_CurrentOrientation) = value;
-			}
-		}
-
-		// Token: 0x170082CF RID: 33487
-		// (get) Token: 0x06021B60 RID: 138080 RVA: 0x0031D765 File Offset: 0x0031B965
-		// (set) Token: 0x06021B61 RID: 138081 RVA: 0x0031D779 File Offset: 0x0031B979
-		[Nullable(2)]
+		// Token: 0x17001E60 RID: 7776
+		// (get) Token: 0x0600A3D1 RID: 41937 RVA: 0x000F1D3D File Offset: 0x000EFF3D
+		// (set) Token: 0x0600A3D2 RID: 41938 RVA: 0x000F1D51 File Offset: 0x000EFF51
 		public unsafe UMediaPlayer MediaPlayer
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UMediaPlayer>(base.NativePtr / (IntPtr)sizeof(void*) + UMediaTexture.__PropertyOffset_MediaPlayer);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UMediaTexture.__PropertyOffset_MediaPlayer, value);
 			}
 		}
 
-		// Token: 0x06021B62 RID: 138082 RVA: 0x0031D78E File Offset: 0x0031B98E
-		[NullableContext(2)]
+		// Token: 0x0600A3D3 RID: 41939 RVA: 0x000F1D66 File Offset: 0x000EFF66
 		public void SetMediaPlayer(UMediaPlayer NewMediaPlayer)
 		{
 			UMediaTexture.__SetMediaPlayer_Internal(base.NativePtr, (NewMediaPlayer != null) ? NewMediaPlayer.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06021B63 RID: 138083 RVA: 0x0031D7AB File Offset: 0x0031B9AB
+		// Token: 0x0600A3D4 RID: 41940 RVA: 0x000F1D83 File Offset: 0x000EFF83
 		public int GetWidth()
 		{
 			return UMediaTexture.__GetWidth_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06021B64 RID: 138084 RVA: 0x0031D7B8 File Offset: 0x0031B9B8
-		[NullableContext(2)]
+		// Token: 0x0600A3D5 RID: 41941 RVA: 0x000F1D90 File Offset: 0x000EFF90
 		public UMediaPlayer GetMediaPlayer()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UMediaPlayer>(UMediaTexture.__GetMediaPlayer_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06021B65 RID: 138085 RVA: 0x0031D7CA File Offset: 0x0031B9CA
+		// Token: 0x0600A3D6 RID: 41942 RVA: 0x000F1DA2 File Offset: 0x000EFFA2
 		public int GetHeight()
 		{
 			return UMediaTexture.__GetHeight_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06021B66 RID: 138086 RVA: 0x0031D7D7 File Offset: 0x0031B9D7
+		// Token: 0x0600A3D7 RID: 41943 RVA: 0x000F1DAF File Offset: 0x000EFFAF
 		public float GetAspectRatio()
 		{
 			return UMediaTexture.__GetAspectRatio_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06021B67 RID: 138087
+		// Token: 0x0600A3D8 RID: 41944
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMediaPlayer_Internal(IntPtr @this, IntPtr NewMediaPlayer);
 
-		// Token: 0x06021B68 RID: 138088
+		// Token: 0x0600A3D9 RID: 41945
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetWidth_Internal(IntPtr @this);
 
-		// Token: 0x06021B69 RID: 138089
+		// Token: 0x0600A3DA RID: 41946
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetMediaPlayer_Internal(IntPtr @this);
 
-		// Token: 0x06021B6A RID: 138090
+		// Token: 0x0600A3DB RID: 41947
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetHeight_Internal(IntPtr @this);
 
-		// Token: 0x06021B6B RID: 138091
+		// Token: 0x0600A3DC RID: 41948
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetAspectRatio_Internal(IntPtr @this);
 
-		// Token: 0x06021B6C RID: 138092 RVA: 0x0031D7E4 File Offset: 0x0031B9E4
+		// Token: 0x0600A3DD RID: 41949 RVA: 0x000F1DBC File Offset: 0x000EFFBC
 		static UMediaTexture()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MediaAssets.MediaTexture");
 		}
 
-		// Token: 0x06021B6D RID: 138093 RVA: 0x0031D7F2 File Offset: 0x0031B9F2
+		// Token: 0x0600A3DE RID: 41950 RVA: 0x000F1DCA File Offset: 0x000EFFCA
 		protected UMediaTexture(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011FB0 RID: 73648
+		// Token: 0x040045DE RID: 17886
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/MediaAssets.MediaTexture";
 
-		// Token: 0x04011FB1 RID: 73649
+		// Token: 0x040045DF RID: 17887
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011FB2 RID: 73650
+		// Token: 0x040045E0 RID: 17888
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011FB3 RID: 73651
-		internal static int __PropertyOffset_AddressX;
-
-		// Token: 0x04011FB4 RID: 73652
-		internal static int __PropertyOffset_AddressY;
-
-		// Token: 0x04011FB5 RID: 73653
+		// Token: 0x040045E1 RID: 17889
 		internal static int __PropertyOffset_AutoClear;
 
-		// Token: 0x04011FB6 RID: 73654
+		// Token: 0x040045E2 RID: 17890
 		internal static int __PropertyOffset_ClearColor;
 
-		// Token: 0x04011FB7 RID: 73655
+		// Token: 0x040045E3 RID: 17891
 		internal static int __PropertyOffset_EnableGenMips;
 
-		// Token: 0x04011FB8 RID: 73656
+		// Token: 0x040045E4 RID: 17892
 		internal static int __PropertyOffset_NumMips;
 
-		// Token: 0x04011FB9 RID: 73657
+		// Token: 0x040045E5 RID: 17893
 		internal static int __PropertyOffset_NewStyleOutput;
 
-		// Token: 0x04011FBA RID: 73658
-		internal static int __PropertyOffset_OutputFormat;
-
-		// Token: 0x04011FBB RID: 73659
+		// Token: 0x040045E6 RID: 17894
 		internal static int __PropertyOffset_CurrentAspectRatio;
 
-		// Token: 0x04011FBC RID: 73660
-		internal static int __PropertyOffset_CurrentOrientation;
-
-		// Token: 0x04011FBD RID: 73661
+		// Token: 0x040045E7 RID: 17895
 		internal static int __PropertyOffset_MediaPlayer;
 	}
 }

@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063D7 RID: 25559
+	// Token: 0x02005355 RID: 21333
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 	})]
 	public class MowingBuffGridItem : GridProxyAbstract<IMowingBuffGridItemData>
 	{
-		// Token: 0x06040499 RID: 263321 RVA: 0x00F8C310 File Offset: 0x00F8A510
+		// Token: 0x0603515A RID: 217434 RVA: 0x00ED32A8 File Offset: 0x00ED14A8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604049A RID: 263322 RVA: 0x00F8C4C0 File Offset: 0x00F8A6C0
+		// Token: 0x0603515B RID: 217435 RVA: 0x00ED3458 File Offset: 0x00ED1658
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MowingBuffGridItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -68,19 +68,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604049B RID: 263323 RVA: 0x00F8C503 File Offset: 0x00F8A703
+		// Token: 0x0603515C RID: 217436 RVA: 0x00ED349B File Offset: 0x00ED169B
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(6).CanExecuteChange.Bind(new Func<bool>(this.HandleCanExecuteChange));
 		}
 
-		// Token: 0x0604049C RID: 263324 RVA: 0x00F8C522 File Offset: 0x00F8A722
+		// Token: 0x0603515D RID: 217437 RVA: 0x00ED34BA File Offset: 0x00ED16BA
 		protected override void OnBeforeDestroy()
 		{
 			base.GetExtendToggle(6).CanExecuteChange.Unbind();
 		}
 
-		// Token: 0x0604049D RID: 263325 RVA: 0x00F8C538 File Offset: 0x00F8A738
+		// Token: 0x0603515E RID: 217438 RVA: 0x00ED34D0 File Offset: 0x00ED16D0
 		public override void Refresh(IMowingBuffGridItemData data, bool isSelected, int gridIndex)
 		{
 			this.PassData = data;
@@ -124,26 +124,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			base.GetItem(9).SetUIActive(false);
 		}
 
-		// Token: 0x0604049E RID: 263326 RVA: 0x00F8C691 File Offset: 0x00F8A891
+		// Token: 0x0603515F RID: 217439 RVA: 0x00ED3629 File Offset: 0x00ED1829
 		private void OnClick(EToggleState _)
 		{
 			MowingRiskModel.Instance.CurrentChosenOverviewBuffId = new int?(this.PassData.BuffId);
 			EventSystem.Instance.Emit(EEventName.MowingBasicBuffGridItemClick);
 		}
 
-		// Token: 0x0604049F RID: 263327 RVA: 0x00F8C6BD File Offset: 0x00F8A8BD
+		// Token: 0x06035160 RID: 217440 RVA: 0x00ED3655 File Offset: 0x00ED1855
 		private bool HandleCanExecuteChange()
 		{
 			return !this.PassData.IsChosen;
 		}
 
-		// Token: 0x060404A0 RID: 263328 RVA: 0x00F8C6CD File Offset: 0x00F8A8CD
+		// Token: 0x06035161 RID: 217441 RVA: 0x00ED3665 File Offset: 0x00ED1865
 		public bool CheckNeedPlayUnlockSequence()
 		{
 			return !MowingRiskModel.Instance.HasBuffIdRecord(this.PassData.BuffId);
 		}
 
-		// Token: 0x060404A1 RID: 263329 RVA: 0x00F8C6E8 File Offset: 0x00F8A8E8
+		// Token: 0x06035162 RID: 217442 RVA: 0x00ED3680 File Offset: 0x00ED1880
 		public void PlayUnlockEffect()
 		{
 			MowingRiskModel instance = MowingRiskModel.Instance;
@@ -171,49 +171,49 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			}
 		}
 
-		// Token: 0x04021746 RID: 137030
+		// Token: 0x0401C075 RID: 114805
 		private IMowingBuffGridItemData PassData;
 
-		// Token: 0x04021747 RID: 137031
+		// Token: 0x0401C076 RID: 114806
 		[Nullable(2)]
 		private UiPanelBase LockPanel;
 
-		// Token: 0x04021748 RID: 137032
+		// Token: 0x0401C077 RID: 114807
 		[Nullable(2)]
 		private MowingBuffLevelPanel LevelPanel;
 
-		// Token: 0x0200C5D6 RID: 50646
+		// Token: 0x0200AFBD RID: 44989
 		[NullableContext(0)]
 		private class EItemComponent
 		{
-			// Token: 0x0403BBB2 RID: 244658
+			// Token: 0x04036511 RID: 222481
 			public const int QualitySprite = 0;
 
-			// Token: 0x0403BBB3 RID: 244659
+			// Token: 0x04036512 RID: 222482
 			public const int ItemTexture = 1;
 
-			// Token: 0x0403BBB4 RID: 244660
+			// Token: 0x04036513 RID: 222483
 			public const int BottomText = 2;
 
-			// Token: 0x0403BBB5 RID: 244661
+			// Token: 0x04036514 RID: 222484
 			public const int BgSprite = 3;
 
-			// Token: 0x0403BBB6 RID: 244662
+			// Token: 0x04036515 RID: 222485
 			public const int TopAdditionItem = 4;
 
-			// Token: 0x0403BBB7 RID: 244663
+			// Token: 0x04036516 RID: 222486
 			public const int BottomAdditionItem = 5;
 
-			// Token: 0x0403BBB8 RID: 244664
+			// Token: 0x04036517 RID: 222487
 			public const int ExtendToggle = 6;
 
-			// Token: 0x0403BBB9 RID: 244665
+			// Token: 0x04036518 RID: 222488
 			public const int UnlockBlueEffectItem = 7;
 
-			// Token: 0x0403BBBA RID: 244666
+			// Token: 0x04036519 RID: 222489
 			public const int UnlockPurpleEffectItem = 8;
 
-			// Token: 0x0403BBBB RID: 244667
+			// Token: 0x0403651A RID: 222490
 			public const int UnlockGoldEffectItem = 9;
 		}
 	}

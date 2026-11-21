@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002481 RID: 9345
+// Token: 0x02001966 RID: 6502
 public class PhantomInteractListItemSlotIndexPanel : UiPanelBase
 {
-	// Token: 0x06012C08 RID: 76808 RVA: 0x004A026A File Offset: 0x0049E46A
+	// Token: 0x060100BF RID: 65727 RVA: 0x004AD9C2 File Offset: 0x004ABBC2
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -15,7 +15,7 @@ public class PhantomInteractListItemSlotIndexPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012C09 RID: 76809 RVA: 0x004A0290 File Offset: 0x0049E490
+	// Token: 0x060100C0 RID: 65728 RVA: 0x004AD9E8 File Offset: 0x004ABBE8
 	public void SetIndex(int index)
 	{
 		UUIText text = base.GetText(0);
@@ -25,10 +25,10 @@ public class PhantomInteractListItemSlotIndexPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x020089F7 RID: 35319
+	// Token: 0x02007B7E RID: 31614
 	private enum EComponent
 	{
-		// Token: 0x0402CCE1 RID: 183521
+		// Token: 0x04027FF7 RID: 163831
 		TxtNum
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002031 RID: 8241
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200227A RID: 8826
 	public class IVehicleControlType
 	{
-		// Token: 0x0600B522 RID: 46370 RVA: 0x001A4C84 File Offset: 0x001A2E84
+		// Token: 0x0600C048 RID: 49224 RVA: 0x001BB3F0 File Offset: 0x001B95F0
 		private IVehicleControlType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B523 RID: 46371 RVA: 0x001A4CBC File Offset: 0x001A2EBC
+		// Token: 0x0600C049 RID: 49225 RVA: 0x001BB428 File Offset: 0x001B9628
 		public static IVehicleControlType Create([Nullable(2)] IVehicleControlType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B524 RID: 46372 RVA: 0x001A4CCF File Offset: 0x001A2ECF
+		// Token: 0x0600C04A RID: 49226 RVA: 0x001BB43B File Offset: 0x001B963B
 		public static IVehicleControlType CreateFromSetValue([Nullable(2)] IVehicleControlType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B525 RID: 46373 RVA: 0x001A4CE2 File Offset: 0x001A2EE2
+		// Token: 0x0600C04B RID: 49227 RVA: 0x001BB44E File Offset: 0x001B964E
 		public IVehicleControlType_SetValue ToSetValue()
 		{
 			return new IVehicleControlType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037A0 RID: 14240
-		// (get) Token: 0x0600B526 RID: 46374 RVA: 0x001A4CF5 File Offset: 0x001A2EF5
-		// (set) Token: 0x0600B527 RID: 46375 RVA: 0x001A4D20 File Offset: 0x001A2F20
+		// Token: 0x17003A7D RID: 14973
+		// (get) Token: 0x0600C04C RID: 49228 RVA: 0x001BB461 File Offset: 0x001B9661
+		// (set) Token: 0x0600C04D RID: 49229 RVA: 0x001BB48C File Offset: 0x001B968C
 		public virtual EVehicleControlType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D0B RID: 27915
+		// Token: 0x04007314 RID: 29460
 		[Nullable(2)]
 		protected IVehicleControlType FbInstance;
 
-		// Token: 0x04006D0C RID: 27916
+		// Token: 0x04007315 RID: 29461
 		[Nullable(2)]
 		protected IVehicleControlType_SetValue PocoInterface;
 	}

@@ -2,75 +2,75 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FFF RID: 8191
+// Token: 0x020014D2 RID: 5330
 [NullableContext(2)]
 public interface IItemHintPanelData<[Nullable(0)] T, TData> where T : ItemHintItemBase<TData>
 {
-	// Token: 0x17001370 RID: 4976
-	// (get) Token: 0x060100E3 RID: 65763
-	// (set) Token: 0x060100E4 RID: 65764
+	// Token: 0x1700139D RID: 5021
+	// (get) Token: 0x0600D54B RID: 54603
+	// (set) Token: 0x0600D54C RID: 54604
 	[Nullable(1)]
 	Func<TData> ShiftItem { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17001371 RID: 4977
-	// (get) Token: 0x060100E5 RID: 65765
-	// (set) Token: 0x060100E6 RID: 65766
+	// Token: 0x1700139E RID: 5022
+	// (get) Token: 0x0600D54D RID: 54605
+	// (set) Token: 0x0600D54E RID: 54606
 	[Nullable(1)]
 	Func<bool> CheckNext { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17001372 RID: 4978
-	// (get) Token: 0x060100E7 RID: 65767
-	// (set) Token: 0x060100E8 RID: 65768
+	// Token: 0x1700139F RID: 5023
+	// (get) Token: 0x0600D54F RID: 54607
+	// (set) Token: 0x0600D550 RID: 54608
 	[Nullable(1)]
 	Func<T> CreateProxyFunction { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17001373 RID: 4979
-	// (get) Token: 0x060100E9 RID: 65769
-	// (set) Token: 0x060100EA RID: 65770
+	// Token: 0x170013A0 RID: 5024
+	// (get) Token: 0x0600D551 RID: 54609
+	// (set) Token: 0x0600D552 RID: 54610
 	UUIItem ChildTemplate { get; set; }
 
-	// Token: 0x17001374 RID: 4980
-	// (get) Token: 0x060100EB RID: 65771
-	// (set) Token: 0x060100EC RID: 65772
+	// Token: 0x170013A1 RID: 5025
+	// (get) Token: 0x0600D553 RID: 54611
+	// (set) Token: 0x0600D554 RID: 54612
 	string ChildResourceId { get; set; }
 
-	// Token: 0x17001375 RID: 4981
-	// (get) Token: 0x060100ED RID: 65773
-	// (set) Token: 0x060100EE RID: 65774
+	// Token: 0x170013A2 RID: 5026
+	// (get) Token: 0x0600D555 RID: 54613
+	// (set) Token: 0x0600D556 RID: 54614
 	string TitleTextId { get; set; }
 
-	// Token: 0x17001376 RID: 4982
-	// (get) Token: 0x060100EF RID: 65775
-	// (set) Token: 0x060100F0 RID: 65776
+	// Token: 0x170013A3 RID: 5027
+	// (get) Token: 0x0600D557 RID: 54615
+	// (set) Token: 0x0600D558 RID: 54616
 	int? MaxShowCount { get; set; }
 
-	// Token: 0x17001377 RID: 4983
-	// (get) Token: 0x060100F1 RID: 65777
-	// (set) Token: 0x060100F2 RID: 65778
+	// Token: 0x170013A4 RID: 5028
+	// (get) Token: 0x0600D559 RID: 54617
+	// (set) Token: 0x0600D55A RID: 54618
 	int? AddItemTime { get; set; }
 
-	// Token: 0x17001378 RID: 4984
-	// (get) Token: 0x060100F3 RID: 65779
-	// (set) Token: 0x060100F4 RID: 65780
+	// Token: 0x170013A5 RID: 5029
+	// (get) Token: 0x0600D55B RID: 54619
+	// (set) Token: 0x0600D55C RID: 54620
 	int? ItemSliderTime { get; set; }
 
-	// Token: 0x17001379 RID: 4985
-	// (get) Token: 0x060100F5 RID: 65781
-	// (set) Token: 0x060100F6 RID: 65782
+	// Token: 0x170013A6 RID: 5030
+	// (get) Token: 0x0600D55D RID: 54621
+	// (set) Token: 0x0600D55E RID: 54622
 	int? ItemShowTime { get; set; }
 
-	// Token: 0x1700137A RID: 4986
-	// (get) Token: 0x060100F7 RID: 65783
-	// (set) Token: 0x060100F8 RID: 65784
+	// Token: 0x170013A7 RID: 5031
+	// (get) Token: 0x0600D55F RID: 54623
+	// (set) Token: 0x0600D560 RID: 54624
 	ESliderMode? SliderMode { get; set; }
 
-	// Token: 0x1700137B RID: 4987
-	// (get) Token: 0x060100F9 RID: 65785
-	// (set) Token: 0x060100FA RID: 65786
+	// Token: 0x170013A8 RID: 5032
+	// (get) Token: 0x0600D561 RID: 54625
+	// (set) Token: 0x0600D562 RID: 54626
 	ETickItemMode? TickMode { get; set; }
 
-	// Token: 0x1700137C RID: 4988
-	// (get) Token: 0x060100FB RID: 65787
-	// (set) Token: 0x060100FC RID: 65788
+	// Token: 0x170013A9 RID: 5033
+	// (get) Token: 0x0600D563 RID: 54627
+	// (set) Token: 0x0600D564 RID: 54628
 	Action FinishCallback { get; set; }
 }

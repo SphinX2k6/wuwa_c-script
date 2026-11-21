@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073B2 RID: 29618
+	// Token: 0x02007B99 RID: 31641
 	public struct ITeleportTransitionWithCustomScreen : IFlatbufferObject
 	{
-		// Token: 0x1700E0D3 RID: 57555
-		// (get) Token: 0x06035C47 RID: 220231 RVA: 0x00751776 File Offset: 0x0074F976
+		// Token: 0x1700ECE3 RID: 60643
+		// (get) Token: 0x06038FE2 RID: 233442 RVA: 0x007B3CB6 File Offset: 0x007B1EB6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035C48 RID: 220232 RVA: 0x00751783 File Offset: 0x0074F983
+		// Token: 0x06038FE3 RID: 233443 RVA: 0x007B3CC3 File Offset: 0x007B1EC3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035C49 RID: 220233 RVA: 0x0075178C File Offset: 0x0074F98C
+		// Token: 0x06038FE4 RID: 233444 RVA: 0x007B3CCC File Offset: 0x007B1ECC
 		public static ITeleportTransitionWithCustomScreen GetRootAsITeleportTransitionWithCustomScreen(ByteBuffer _bb)
 		{
 			return ITeleportTransitionWithCustomScreen.GetRootAsITeleportTransitionWithCustomScreen(_bb, default(ITeleportTransitionWithCustomScreen));
 		}
 
-		// Token: 0x06035C4A RID: 220234 RVA: 0x007517A8 File Offset: 0x0074F9A8
+		// Token: 0x06038FE5 RID: 233445 RVA: 0x007B3CE8 File Offset: 0x007B1EE8
 		public static ITeleportTransitionWithCustomScreen GetRootAsITeleportTransitionWithCustomScreen(ByteBuffer _bb, ITeleportTransitionWithCustomScreen obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035C4B RID: 220235 RVA: 0x007517C5 File Offset: 0x0074F9C5
+		// Token: 0x06038FE6 RID: 233446 RVA: 0x007B3D05 File Offset: 0x007B1F05
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035C4C RID: 220236 RVA: 0x007517D4 File Offset: 0x0074F9D4
+		// Token: 0x06038FE7 RID: 233447 RVA: 0x007B3D14 File Offset: 0x007B1F14
 		public ITeleportTransitionWithCustomScreen __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E0D4 RID: 57556
-		// (get) Token: 0x06035C4D RID: 220237 RVA: 0x007517E4 File Offset: 0x0074F9E4
+		// Token: 0x1700ECE4 RID: 60644
+		// (get) Token: 0x06038FE8 RID: 233448 RVA: 0x007B3D24 File Offset: 0x007B1F24
 		public ETeleportTransitionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E0D5 RID: 57557
-		// (get) Token: 0x06035C4E RID: 220238 RVA: 0x00751820 File Offset: 0x0074FA20
+		// Token: 0x1700ECE5 RID: 60645
+		// (get) Token: 0x06038FE9 RID: 233449 RVA: 0x007B3D60 File Offset: 0x007B1F60
 		public TCustomScreen ScreenTypeType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035C4F RID: 220239 RVA: 0x0075185C File Offset: 0x0074FA5C
+		// Token: 0x06038FEA RID: 233450 RVA: 0x007B3D9C File Offset: 0x007B1F9C
 		public TTable? ScreenType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,26 +88,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06035C50 RID: 220240 RVA: 0x007518A0 File Offset: 0x0074FAA0
+		// Token: 0x06038FEB RID: 233451 RVA: 0x007B3DE0 File Offset: 0x007B1FE0
 		public ICustomScreenBackgroundImage ScreenTypeAsICustomScreenBackgroundImage()
 		{
 			return this.ScreenType<ICustomScreenBackgroundImage>().Value;
 		}
 
-		// Token: 0x06035C51 RID: 220241 RVA: 0x007518BC File Offset: 0x0074FABC
+		// Token: 0x06038FEC RID: 233452 RVA: 0x007B3DFC File Offset: 0x007B1FFC
 		public ICustomScreenLoading ScreenTypeAsICustomScreenLoading()
 		{
 			return this.ScreenType<ICustomScreenLoading>().Value;
 		}
 
-		// Token: 0x06035C52 RID: 220242 RVA: 0x007518D8 File Offset: 0x0074FAD8
+		// Token: 0x06038FED RID: 233453 RVA: 0x007B3E18 File Offset: 0x007B2018
 		public ICustomScreenSpine ScreenTypeAsICustomScreenSpine()
 		{
 			return this.ScreenType<ICustomScreenSpine>().Value;
 		}
 
-		// Token: 0x1700E0D6 RID: 57558
-		// (get) Token: 0x06035C53 RID: 220243 RVA: 0x007518F4 File Offset: 0x0074FAF4
+		// Token: 0x1700ECE6 RID: 60646
+		// (get) Token: 0x06038FEE RID: 233454 RVA: 0x007B3E34 File Offset: 0x007B2034
 		public IFadeBackgroundFadeInEffect? FadeInEffect
 		{
 			get
@@ -121,8 +121,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E0D7 RID: 57559
-		// (get) Token: 0x06035C54 RID: 220244 RVA: 0x00751954 File Offset: 0x0074FB54
+		// Token: 0x1700ECE7 RID: 60647
+		// (get) Token: 0x06038FEF RID: 233455 RVA: 0x007B3E94 File Offset: 0x007B2094
 		public IFadeBackgroundFadeOutEffect? FadeOutEffect
 		{
 			get
@@ -136,8 +136,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E0D8 RID: 57560
-		// (get) Token: 0x06035C55 RID: 220245 RVA: 0x007519B4 File Offset: 0x0074FBB4
+		// Token: 0x1700ECE8 RID: 60648
+		// (get) Token: 0x06038FF0 RID: 233456 RVA: 0x007B3EF4 File Offset: 0x007B20F4
 		public float KeepTime
 		{
 			get
@@ -151,8 +151,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E0D9 RID: 57561
-		// (get) Token: 0x06035C56 RID: 220246 RVA: 0x007519F8 File Offset: 0x0074FBF8
+		// Token: 0x1700ECE9 RID: 60649
+		// (get) Token: 0x06038FF1 RID: 233457 RVA: 0x007B3F38 File Offset: 0x007B2138
 		public ICustomShowUi? CustomShowUi
 		{
 			get
@@ -166,8 +166,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E0DA RID: 57562
-		// (get) Token: 0x06035C57 RID: 220247 RVA: 0x00751A58 File Offset: 0x0074FC58
+		// Token: 0x1700ECEA RID: 60650
+		// (get) Token: 0x06038FF2 RID: 233458 RVA: 0x007B3F98 File Offset: 0x007B2198
 		public string StartAkEvent
 		{
 			get
@@ -181,20 +181,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035C58 RID: 220248 RVA: 0x00751A90 File Offset: 0x0074FC90
+		// Token: 0x06038FF3 RID: 233459 RVA: 0x007B3FD0 File Offset: 0x007B21D0
 		public Span<byte> GetStartAkEventBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x06035C59 RID: 220249 RVA: 0x00751AA0 File Offset: 0x0074FCA0
+		// Token: 0x06038FF4 RID: 233460 RVA: 0x007B3FE0 File Offset: 0x007B21E0
 		public byte[] GetStartAkEventArray()
 		{
 			return this.__p.__vector_as_array<byte>(18);
 		}
 
-		// Token: 0x1700E0DB RID: 57563
-		// (get) Token: 0x06035C5A RID: 220250 RVA: 0x00751AB0 File Offset: 0x0074FCB0
+		// Token: 0x1700ECEB RID: 60651
+		// (get) Token: 0x06038FF5 RID: 233461 RVA: 0x007B3FF0 File Offset: 0x007B21F0
 		public byte NullMask
 		{
 			get
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035C5B RID: 220251 RVA: 0x00751AF0 File Offset: 0x0074FCF0
+		// Token: 0x06038FF6 RID: 233462 RVA: 0x007B4030 File Offset: 0x007B2230
 		public static Offset<ITeleportTransitionWithCustomScreen> CreateITeleportTransitionWithCustomScreen(FlatBufferBuilder builder, ETeleportTransitionType Type = ETeleportTransitionType.PlayMp4, TCustomScreen ScreenType_type = TCustomScreen.NONE, int ScreenTypeOffset = 0, Offset<IFadeBackgroundFadeInEffect> FadeInEffectOffset = default(Offset<IFadeBackgroundFadeInEffect>), Offset<IFadeBackgroundFadeOutEffect> FadeOutEffectOffset = default(Offset<IFadeBackgroundFadeOutEffect>), float KeepTime = 0f, Offset<ICustomShowUi> CustomShowUiOffset = default(Offset<ICustomShowUi>), StringOffset StartAkEventOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(9);
@@ -224,73 +224,73 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportTransitionWithCustomScreen.EndITeleportTransitionWithCustomScreen(builder);
 		}
 
-		// Token: 0x06035C5C RID: 220252 RVA: 0x00751B50 File Offset: 0x0074FD50
+		// Token: 0x06038FF7 RID: 233463 RVA: 0x007B4090 File Offset: 0x007B2290
 		public static void StartITeleportTransitionWithCustomScreen(FlatBufferBuilder builder)
 		{
 			builder.StartTable(9);
 		}
 
-		// Token: 0x06035C5D RID: 220253 RVA: 0x00751B5A File Offset: 0x0074FD5A
+		// Token: 0x06038FF8 RID: 233464 RVA: 0x007B409A File Offset: 0x007B229A
 		public static void AddType(FlatBufferBuilder builder, ETeleportTransitionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035C5E RID: 220254 RVA: 0x00751B65 File Offset: 0x0074FD65
+		// Token: 0x06038FF9 RID: 233465 RVA: 0x007B40A5 File Offset: 0x007B22A5
 		public static void AddScreenTypeType(FlatBufferBuilder builder, TCustomScreen screenTypeType)
 		{
 			builder.AddByte(1, (byte)screenTypeType, 0);
 		}
 
-		// Token: 0x06035C5F RID: 220255 RVA: 0x00751B70 File Offset: 0x0074FD70
+		// Token: 0x06038FFA RID: 233466 RVA: 0x007B40B0 File Offset: 0x007B22B0
 		public static void AddScreenType(FlatBufferBuilder builder, int screenTypeOffset)
 		{
 			builder.AddOffset(2, screenTypeOffset, 0);
 		}
 
-		// Token: 0x06035C60 RID: 220256 RVA: 0x00751B7B File Offset: 0x0074FD7B
+		// Token: 0x06038FFB RID: 233467 RVA: 0x007B40BB File Offset: 0x007B22BB
 		public static void AddFadeInEffect(FlatBufferBuilder builder, Offset<IFadeBackgroundFadeInEffect> fadeInEffectOffset)
 		{
 			builder.AddOffset(3, fadeInEffectOffset.Value, 0);
 		}
 
-		// Token: 0x06035C61 RID: 220257 RVA: 0x00751B8B File Offset: 0x0074FD8B
+		// Token: 0x06038FFC RID: 233468 RVA: 0x007B40CB File Offset: 0x007B22CB
 		public static void AddFadeOutEffect(FlatBufferBuilder builder, Offset<IFadeBackgroundFadeOutEffect> fadeOutEffectOffset)
 		{
 			builder.AddOffset(4, fadeOutEffectOffset.Value, 0);
 		}
 
-		// Token: 0x06035C62 RID: 220258 RVA: 0x00751B9B File Offset: 0x0074FD9B
+		// Token: 0x06038FFD RID: 233469 RVA: 0x007B40DB File Offset: 0x007B22DB
 		public static void AddKeepTime(FlatBufferBuilder builder, float keepTime)
 		{
 			builder.AddFloat(5, keepTime, 0.0);
 		}
 
-		// Token: 0x06035C63 RID: 220259 RVA: 0x00751BAE File Offset: 0x0074FDAE
+		// Token: 0x06038FFE RID: 233470 RVA: 0x007B40EE File Offset: 0x007B22EE
 		public static void AddCustomShowUi(FlatBufferBuilder builder, Offset<ICustomShowUi> customShowUiOffset)
 		{
 			builder.AddOffset(6, customShowUiOffset.Value, 0);
 		}
 
-		// Token: 0x06035C64 RID: 220260 RVA: 0x00751BBE File Offset: 0x0074FDBE
+		// Token: 0x06038FFF RID: 233471 RVA: 0x007B40FE File Offset: 0x007B22FE
 		public static void AddStartAkEvent(FlatBufferBuilder builder, StringOffset startAkEventOffset)
 		{
 			builder.AddOffset(7, startAkEventOffset.Value, 0);
 		}
 
-		// Token: 0x06035C65 RID: 220261 RVA: 0x00751BCE File Offset: 0x0074FDCE
+		// Token: 0x06039000 RID: 233472 RVA: 0x007B410E File Offset: 0x007B230E
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(8, nullMask, 0);
 		}
 
-		// Token: 0x06035C66 RID: 220262 RVA: 0x00751BD9 File Offset: 0x0074FDD9
+		// Token: 0x06039001 RID: 233473 RVA: 0x007B4119 File Offset: 0x007B2319
 		public static Offset<ITeleportTransitionWithCustomScreen> EndITeleportTransitionWithCustomScreen(FlatBufferBuilder builder)
 		{
 			return new Offset<ITeleportTransitionWithCustomScreen>(builder.EndTable());
 		}
 
-		// Token: 0x06035C67 RID: 220263 RVA: 0x00751BE8 File Offset: 0x0074FDE8
+		// Token: 0x06039002 RID: 233474 RVA: 0x007B4128 File Offset: 0x007B2328
 		public ITeleportTransitionWithCustomScreenT UnPack()
 		{
 			ITeleportTransitionWithCustomScreenT teleportTransitionWithCustomScreenT = new ITeleportTransitionWithCustomScreenT();
@@ -298,7 +298,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return teleportTransitionWithCustomScreenT;
 		}
 
-		// Token: 0x06035C68 RID: 220264 RVA: 0x00751C04 File Offset: 0x0074FE04
+		// Token: 0x06039003 RID: 233475 RVA: 0x007B4144 File Offset: 0x007B2344
 		public void UnPackTo(ITeleportTransitionWithCustomScreenT _o)
 		{
 			_o.Type = this.Type;
@@ -324,7 +324,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06035C69 RID: 220265 RVA: 0x00751DB8 File Offset: 0x0074FFB8
+		// Token: 0x06039004 RID: 233476 RVA: 0x007B42F8 File Offset: 0x007B24F8
 		public static Offset<ITeleportTransitionWithCustomScreen> Pack(FlatBufferBuilder builder, ITeleportTransitionWithCustomScreenT _o)
 		{
 			if (_o == null)
@@ -340,7 +340,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportTransitionWithCustomScreen.CreateITeleportTransitionWithCustomScreen(builder, _o.Type, screenType_type, screenTypeOffset, fadeInEffectOffset, fadeOutEffectOffset, _o.KeepTime, customShowUiOffset, startAkEventOffset, _o.NullMask);
 		}
 
-		// Token: 0x040121E6 RID: 74214
+		// Token: 0x040131FF RID: 78335
 		private Table __p;
 	}
 }

@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200257A RID: 9594
+// Token: 0x02001A65 RID: 6757
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoMoveCtrlPanel : UiPanelBase
 {
-	// Token: 0x06013617 RID: 79383 RVA: 0x004D2A08 File Offset: 0x004D0C08
+	// Token: 0x06010AFA RID: 68346 RVA: 0x004E1670 File Offset: 0x004DF870
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class PhotoMoveCtrlPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013618 RID: 79384 RVA: 0x004D2AE8 File Offset: 0x004D0CE8
+	// Token: 0x06010AFB RID: 68347 RVA: 0x004E1750 File Offset: 0x004DF950
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhotoMoveCtrlPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ public class PhotoMoveCtrlPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013619 RID: 79385 RVA: 0x004D2B2C File Offset: 0x004D0D2C
+	// Token: 0x06010AFC RID: 68348 RVA: 0x004E1794 File Offset: 0x004DF994
 	protected override void OnStart()
 	{
 		this.BindMoveButton(PhotoMoveCtrlPanel.EComponents.BtnFront, "PhotoMoveForward", 1f);
@@ -52,7 +52,7 @@ public class PhotoMoveCtrlPanel : UiPanelBase
 		this.BindMoveButton(PhotoMoveCtrlPanel.EComponents.BtnDown, "PhotoMoveUp", -1f);
 	}
 
-	// Token: 0x0601361A RID: 79386 RVA: 0x004D2B9F File Offset: 0x004D0D9F
+	// Token: 0x06010AFD RID: 68349 RVA: 0x004E1807 File Offset: 0x004DFA07
 	public void TickJoystick(float delta)
 	{
 		PhotoJoystickPanel joystickPanel = this.JoystickPanel;
@@ -63,7 +63,7 @@ public class PhotoMoveCtrlPanel : UiPanelBase
 		joystickPanel.Tick(delta);
 	}
 
-	// Token: 0x0601361B RID: 79387 RVA: 0x004D2BB4 File Offset: 0x004D0DB4
+	// Token: 0x06010AFE RID: 68350 RVA: 0x004E181C File Offset: 0x004DFA1C
 	public void RefreshByMode(PhotoCameraType mode)
 	{
 		bool flag = PhotoCameraUtil.IsModeAllowCharacterMove(new PhotoCameraType?(mode));
@@ -101,7 +101,7 @@ public class PhotoMoveCtrlPanel : UiPanelBase
 		item3.SetUIActive(!flag);
 	}
 
-	// Token: 0x0601361C RID: 79388 RVA: 0x004D2C30 File Offset: 0x004D0E30
+	// Token: 0x06010AFF RID: 68351 RVA: 0x004E1898 File Offset: 0x004DFA98
 	protected override void OnBeforeDestroy()
 	{
 		this.JoystickPanel = null;
@@ -116,7 +116,7 @@ public class PhotoMoveCtrlPanel : UiPanelBase
 		this.ViewModel.MoveUpInputValue = 0f;
 	}
 
-	// Token: 0x0601361D RID: 79389 RVA: 0x004D2CA0 File Offset: 0x004D0EA0
+	// Token: 0x06010B00 RID: 68352 RVA: 0x004E1908 File Offset: 0x004DFB08
 	private void BindMoveButton(PhotoMoveCtrlPanel.EComponents comp, string axisName, float value)
 	{
 		UUIButtonComponent button = base.GetButton((int)comp);
@@ -138,7 +138,7 @@ public class PhotoMoveCtrlPanel : UiPanelBase
 		});
 	}
 
-	// Token: 0x0601361E RID: 79390 RVA: 0x004D2D1C File Offset: 0x004D0F1C
+	// Token: 0x06010B01 RID: 68353 RVA: 0x004E1984 File Offset: 0x004DFB84
 	private void SetMoveInput(string axisName, float value)
 	{
 		if (axisName == "PhotoMoveForward")
@@ -157,14 +157,14 @@ public class PhotoMoveCtrlPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601361F RID: 79391 RVA: 0x004D2D76 File Offset: 0x004D0F76
+	// Token: 0x06010B02 RID: 68354 RVA: 0x004E19DE File Offset: 0x004DFBDE
 	private void ReleaseMoveInput(string axisName)
 	{
 		this.SetMoveInput(axisName, 0f);
 		InputDistributeController.Instance.InputAxis(axisName, 0f, false);
 	}
 
-	// Token: 0x06013620 RID: 79392 RVA: 0x004D2D98 File Offset: 0x004D0F98
+	// Token: 0x06010B03 RID: 68355 RVA: 0x004E1A00 File Offset: 0x004DFC00
 	private void UnbindMoveButton(PhotoMoveCtrlPanel.EComponents comp)
 	{
 		UUIButtonComponent button = base.GetButton((int)comp);
@@ -177,43 +177,43 @@ public class PhotoMoveCtrlPanel : UiPanelBase
 		button.OnPointCancelCallBack.Unbind();
 	}
 
-	// Token: 0x06013621 RID: 79393 RVA: 0x004D2DD2 File Offset: 0x004D0FD2
+	// Token: 0x06010B04 RID: 68356 RVA: 0x004E1A3A File Offset: 0x004DFC3A
 	public void SetViewModel(PhotoMainViewModel viewModel)
 	{
 		this.ViewModel = viewModel;
 	}
 
-	// Token: 0x040091EE RID: 37358
+	// Token: 0x04009347 RID: 37703
 	private PhotoMainViewModel ViewModel;
 
-	// Token: 0x040091EF RID: 37359
+	// Token: 0x04009348 RID: 37704
 	[Nullable(2)]
 	private PhotoJoystickPanel JoystickPanel;
 
-	// Token: 0x040091F0 RID: 37360
+	// Token: 0x04009349 RID: 37705
 	private const float MOVE_AXIS_VALUE = 1f;
 
-	// Token: 0x02008B71 RID: 35697
+	// Token: 0x02007CF7 RID: 31991
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D472 RID: 185458
+		// Token: 0x0402877F RID: 165759
 		BtnUp,
-		// Token: 0x0402D473 RID: 185459
+		// Token: 0x04028780 RID: 165760
 		BtnDown,
-		// Token: 0x0402D474 RID: 185460
+		// Token: 0x04028781 RID: 165761
 		BtnLeft,
-		// Token: 0x0402D475 RID: 185461
+		// Token: 0x04028782 RID: 165762
 		BtnRight,
-		// Token: 0x0402D476 RID: 185462
+		// Token: 0x04028783 RID: 165763
 		BtnFront,
-		// Token: 0x0402D477 RID: 185463
+		// Token: 0x04028784 RID: 165764
 		BtnBack,
-		// Token: 0x0402D478 RID: 185464
+		// Token: 0x04028785 RID: 165765
 		ItemMoveCharacter,
-		// Token: 0x0402D479 RID: 185465
+		// Token: 0x04028786 RID: 165766
 		ItemJoystick,
-		// Token: 0x0402D47A RID: 185466
+		// Token: 0x04028787 RID: 165767
 		ItemMoveCamera
 	}
 }

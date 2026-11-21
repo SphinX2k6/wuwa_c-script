@@ -4,13 +4,13 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020026D0 RID: 9936
+// Token: 0x02001BBB RID: 7099
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsDangoMoveCommand : RacingBetsCommandBase
 {
-	// Token: 0x17001A69 RID: 6761
-	// (get) Token: 0x0601460E RID: 83470 RVA: 0x00527642 File Offset: 0x00525842
+	// Token: 0x17001AA1 RID: 6817
+	// (get) Token: 0x06011AF0 RID: 72432 RVA: 0x0053637A File Offset: 0x0053457A
 	public override ERacingBetsCommandType CommandType
 	{
 		get
@@ -19,13 +19,13 @@ public class RacingBetsDangoMoveCommand : RacingBetsCommandBase
 		}
 	}
 
-	// Token: 0x0601460F RID: 83471 RVA: 0x00527645 File Offset: 0x00525845
+	// Token: 0x06011AF1 RID: 72433 RVA: 0x0053637D File Offset: 0x0053457D
 	public void Init(RacingBetsDangoActionMove moveAction)
 	{
 		this.MoveAction = moveAction;
 	}
 
-	// Token: 0x06014610 RID: 83472 RVA: 0x00527650 File Offset: 0x00525850
+	// Token: 0x06011AF2 RID: 72434 RVA: 0x00536388 File Offset: 0x00534588
 	public override UniTask OnExecute()
 	{
 		RacingBetsDangoMoveCommand.<OnExecute>d__5 <OnExecute>d__;
@@ -36,15 +36,15 @@ public class RacingBetsDangoMoveCommand : RacingBetsCommandBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014611 RID: 83473 RVA: 0x00527693 File Offset: 0x00525893
+	// Token: 0x06011AF3 RID: 72435 RVA: 0x005363CB File Offset: 0x005345CB
 	public override string LogInfo()
 	{
 		return "RacingBetsDangoMoveCommand";
 	}
 
-	// Token: 0x0400991B RID: 39195
+	// Token: 0x04009A73 RID: 39539
 	private const int DANGO_MOVE_EFFECT_REFRESH_DELAY_MS = 500;
 
-	// Token: 0x0400991C RID: 39196
+	// Token: 0x04009A74 RID: 39540
 	private RacingBetsDangoActionMove MoveAction;
 }

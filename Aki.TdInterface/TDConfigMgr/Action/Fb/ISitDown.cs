@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027D4 RID: 10196
+	// Token: 0x02002AA7 RID: 10919
 	public class ISitDown : ILeisureInteractType
 	{
-		// Token: 0x0600E2A3 RID: 58019 RVA: 0x00217510 File Offset: 0x00215710
-		[NullableContext(1)]
+		// Token: 0x0600F0C6 RID: 61638 RVA: 0x00234313 File Offset: 0x00232513
 		public static ISitDown Create(ISitDown? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044BD RID: 17597
-		// (get) Token: 0x0600E2A4 RID: 58020 RVA: 0x0021752F File Offset: 0x0021572F
+		// Token: 0x17004826 RID: 18470
+		// (get) Token: 0x0600F0C7 RID: 61639 RVA: 0x00234332 File Offset: 0x00232532
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044BE RID: 17598
-		// (get) Token: 0x0600E2A5 RID: 58021 RVA: 0x0021753C File Offset: 0x0021573C
+		// Token: 0x17004827 RID: 18471
+		// (get) Token: 0x0600F0C8 RID: 61640 RVA: 0x00234340 File Offset: 0x00232540
 		public virtual bool? OnlyAllowForwardStandUp
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DA6 RID: 32166
+		// Token: 0x0400845F RID: 33887
 		private ISitDown Instance;
 	}
 }

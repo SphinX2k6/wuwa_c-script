@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001DE1 RID: 7649
+// Token: 0x020012A3 RID: 4771
 public interface IGeographyHandBookViewParam
 {
-	// Token: 0x1700127E RID: 4734
-	// (get) Token: 0x0600E8CC RID: 59596
-	// (set) Token: 0x0600E8CD RID: 59597
+	// Token: 0x170012A8 RID: 4776
+	// (get) Token: 0x0600BCEB RID: 48363
+	// (set) Token: 0x0600BCEC RID: 48364
 	int SelectedId { get; set; }
 }

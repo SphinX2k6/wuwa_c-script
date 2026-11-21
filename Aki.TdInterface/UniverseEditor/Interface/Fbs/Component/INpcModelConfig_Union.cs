@@ -2,16 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200562C RID: 22060
+	// Token: 0x02005BCA RID: 23498
 	public enum INpcModelConfig_Union : byte
 	{
-		// Token: 0x0400E9B8 RID: 59832
+		// Token: 0x0400F61B RID: 63003
 		NONE,
-		// Token: 0x0400E9B9 RID: 59833
+		// Token: 0x0400F61C RID: 63004
 		INpcModelConfig,
-		// Token: 0x0400E9BA RID: 59834
+		// Token: 0x0400F61D RID: 63005
 		IMeshNpcModel,
-		// Token: 0x0400E9BB RID: 59835
-		IDaNpcModel
+		// Token: 0x0400F61E RID: 63006
+		IDaNpcModel,
+		// Token: 0x0400F61F RID: 63007
+		ICombineDaNpcModel
 	}
 }

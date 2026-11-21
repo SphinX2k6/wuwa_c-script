@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B7D RID: 2941
+	// Token: 0x02000C5E RID: 3166
 	public struct CipherGameplay : IFlatbufferObject
 	{
-		// Token: 0x1700082A RID: 2090
-		// (get) Token: 0x060055AF RID: 21935 RVA: 0x001F6521 File Offset: 0x001F4721
+		// Token: 0x1700086D RID: 2157
+		// (get) Token: 0x06005B7D RID: 23421 RVA: 0x002162F5 File Offset: 0x002144F5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060055B0 RID: 21936 RVA: 0x001F652E File Offset: 0x001F472E
+		// Token: 0x06005B7E RID: 23422 RVA: 0x00216302 File Offset: 0x00214502
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060055B1 RID: 21937 RVA: 0x001F6538 File Offset: 0x001F4738
+		// Token: 0x06005B7F RID: 23423 RVA: 0x0021630C File Offset: 0x0021450C
 		public static CipherGameplay GetRootAsCipherGameplay(ByteBuffer _bb)
 		{
 			return CipherGameplay.GetRootAsCipherGameplay(_bb, default(CipherGameplay));
 		}
 
-		// Token: 0x060055B2 RID: 21938 RVA: 0x001F6554 File Offset: 0x001F4754
+		// Token: 0x06005B80 RID: 23424 RVA: 0x00216328 File Offset: 0x00214528
 		public static CipherGameplay GetRootAsCipherGameplay(ByteBuffer _bb, CipherGameplay obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060055B3 RID: 21939 RVA: 0x001F6571 File Offset: 0x001F4771
+		// Token: 0x06005B81 RID: 23425 RVA: 0x00216345 File Offset: 0x00214545
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060055B4 RID: 21940 RVA: 0x001F6580 File Offset: 0x001F4780
+		// Token: 0x06005B82 RID: 23426 RVA: 0x00216354 File Offset: 0x00214554
 		public CipherGameplay __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700082B RID: 2091
-		// (get) Token: 0x060055B5 RID: 21941 RVA: 0x001F6590 File Offset: 0x001F4790
+		// Token: 0x1700086E RID: 2158
+		// (get) Token: 0x06005B83 RID: 23427 RVA: 0x00216364 File Offset: 0x00214564
 		public string Id
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060055B6 RID: 21942 RVA: 0x001F65C7 File Offset: 0x001F47C7
+		// Token: 0x06005B84 RID: 23428 RVA: 0x0021639B File Offset: 0x0021459B
 		public Span<byte> GetIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x060055B7 RID: 21943 RVA: 0x001F65D6 File Offset: 0x001F47D6
+		// Token: 0x06005B85 RID: 23429 RVA: 0x002163AA File Offset: 0x002145AA
 		public byte[] GetIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700082C RID: 2092
-		// (get) Token: 0x060055B8 RID: 21944 RVA: 0x001F65F0 File Offset: 0x001F47F0
+		// Token: 0x1700086F RID: 2159
+		// (get) Token: 0x06005B86 RID: 23430 RVA: 0x002163C4 File Offset: 0x002145C4
 		public int Password
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004B81 RID: 19329
+		// Token: 0x04005162 RID: 20834
 		private Table __p;
 	}
 }

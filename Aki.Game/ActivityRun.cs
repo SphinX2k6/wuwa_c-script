@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x020014D4 RID: 5332
+// Token: 0x0200098C RID: 2444
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRun : ActivityBaseData
 {
-	// Token: 0x06009796 RID: 38806 RVA: 0x0020BFEC File Offset: 0x0020A1EC
+	// Token: 0x06006B70 RID: 27504 RVA: 0x00215D2C File Offset: 0x00213F2C
 	protected override void PhraseEx(ActivityData data)
 	{
 		this.CurrentChallenges = new List<ActivityRunData>();
@@ -25,7 +25,7 @@ public class ActivityRun : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06009797 RID: 38807 RVA: 0x0020C09C File Offset: 0x0020A29C
+	// Token: 0x06006B71 RID: 27505 RVA: 0x00215DDC File Offset: 0x00213FDC
 	public long GetChallengeActivityId(long challengeId)
 	{
 		long result;
@@ -36,25 +36,25 @@ public class ActivityRun : ActivityBaseData
 		return 0L;
 	}
 
-	// Token: 0x06009798 RID: 38808 RVA: 0x0020C0BD File Offset: 0x0020A2BD
+	// Token: 0x06006B72 RID: 27506 RVA: 0x00215DFD File Offset: 0x00213FFD
 	public List<ActivityRunData> GetChallengeDataArray()
 	{
 		return this.CurrentChallenges;
 	}
 
-	// Token: 0x06009799 RID: 38809 RVA: 0x0020C0C5 File Offset: 0x0020A2C5
+	// Token: 0x06006B73 RID: 27507 RVA: 0x00215E05 File Offset: 0x00214005
 	public void SetActivityContentIndex(int index)
 	{
 		ActivityModel.Instance.SaveActivityData(base.Id, -256, base.Id, 0, index);
 	}
 
-	// Token: 0x0600979A RID: 38810 RVA: 0x0020C0E4 File Offset: 0x0020A2E4
+	// Token: 0x06006B74 RID: 27508 RVA: 0x00215E24 File Offset: 0x00214024
 	public int GetActivityContentIndex()
 	{
 		return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, -256, base.Id, 0);
 	}
 
-	// Token: 0x0600979B RID: 38811 RVA: 0x0020C104 File Offset: 0x0020A304
+	// Token: 0x06006B75 RID: 27509 RVA: 0x00215E44 File Offset: 0x00214044
 	public override bool GetExDataRedPointShowState()
 	{
 		int count = this.CurrentChallenges.Count;
@@ -68,13 +68,13 @@ public class ActivityRun : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600979C RID: 38812 RVA: 0x0020C13F File Offset: 0x0020A33F
+	// Token: 0x06006B76 RID: 27510 RVA: 0x00215E7F File Offset: 0x0021407F
 	public override bool NeedSelfControlFirstRedPoint()
 	{
 		return false;
 	}
 
-	// Token: 0x0600979D RID: 38813 RVA: 0x0020C144 File Offset: 0x0020A344
+	// Token: 0x06006B77 RID: 27511 RVA: 0x00215E84 File Offset: 0x00214084
 	public bool IfAllFinish()
 	{
 		int count = this.CurrentChallenges.Count;
@@ -88,12 +88,12 @@ public class ActivityRun : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x040042B4 RID: 17076
+	// Token: 0x04004359 RID: 17241
 	private const int ACTIVITYSELECTCACHEKEY = -256;
 
-	// Token: 0x040042B5 RID: 17077
+	// Token: 0x0400435A RID: 17242
 	private readonly Dictionary<long, long> ChallengeActivityMap = new Dictionary<long, long>();
 
-	// Token: 0x040042B6 RID: 17078
+	// Token: 0x0400435B RID: 17243
 	private List<ActivityRunData> CurrentChallenges = new List<ActivityRunData>();
 }

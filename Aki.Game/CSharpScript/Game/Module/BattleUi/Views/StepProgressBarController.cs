@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D90 RID: 23952
+	// Token: 0x02004D72 RID: 19826
 	public class StepProgressBarController : StepControllerBase
 	{
-		// Token: 0x0603CCA1 RID: 248993 RVA: 0x00E9886C File Offset: 0x00E96A6C
+		// Token: 0x06031BFD RID: 203773 RVA: 0x00DE90B4 File Offset: 0x00DE72B4
 		[NullableContext(1)]
 		public StepProgressBarController(UUIItem uiParent)
 		{
 		}
 
-		// Token: 0x17008E66 RID: 36454
-		// (get) Token: 0x0603CCA2 RID: 248994 RVA: 0x00E9887B File Offset: 0x00E96A7B
+		// Token: 0x17006238 RID: 25144
+		// (get) Token: 0x06031BFE RID: 203774 RVA: 0x00DE90C3 File Offset: 0x00DE72C3
 		public override bool Enable
 		{
 			get
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CCA3 RID: 248995 RVA: 0x00E98880 File Offset: 0x00E96A80
+		// Token: 0x06031BFF RID: 203775 RVA: 0x00DE90C8 File Offset: 0x00DE72C8
 		public unsafe override void OnTick(float delta)
 		{
 			if (this.Config != null && this.ShowData != null)
@@ -71,25 +71,22 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 									{
 										return;
 									}
-									object varValue = LevelGamePlayUtils.GetVarValue((progressBar.ProgressCalculate.VarLeft as IUseVar).Var, GeneralLogicTreeContext.Create(behaviorTreeViewShowData.BtType, behaviorTreeViewShowData.Id, behaviorTreeViewShowData.TreeConfigId, 0, null));
-									if (varValue is float)
-									{
-										float value = (float)varValue;
-										num = new float?(value);
-									}
+									num = StepProgressBarController.GetProgressValue(LevelGamePlayUtils.GetVarValue((progressBar.ProgressCalculate.VarLeft as IUseVar).Var, GeneralLogicTreeContext.Create(behaviorTreeViewShowData.BtType, behaviorTreeViewShowData.Id, behaviorTreeViewShowData.TreeConfigId, 0, null)));
 								}
 								else
 								{
 									num = new float?((float)TreeExpressAssistant.GetQCount(this.ShowData.Id, behaviorTreeStepTextInfo.QuestScheduleType));
 								}
-								object varValue2 = LevelGamePlayUtils.GetVarValue(progressBar.ProgressCalculate.VarRight, context);
-								if (varValue2 is float)
+								object varValue = LevelGamePlayUtils.GetVarValue(progressBar.ProgressCalculate.VarRight, context);
+								float? progressValue = StepProgressBarController.GetProgressValue(varValue);
+								if (progressValue != null && num != null)
 								{
-									float num2 = (float)varValue2;
-									if (num != null && num2 != 0f)
+									float? num2 = progressValue;
+									float num3 = 0f;
+									if (!(num2.GetValueOrDefault() == num3 & num2 != null))
 									{
 										bool flag2 = LevelGeneralController.Instance.CheckConditionNew(conditionGroup, null, context, null);
-										this.UpdateDefaultProgressBar(flag && flag2, num.Value / num2);
+										this.UpdateDefaultProgressBar(flag && flag2, num.Value / progressValue.Value);
 										return;
 									}
 								}
@@ -99,7 +96,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 								string message = "任务节点标题进度条参数错误";
 								<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
 								*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("left", num);
-								*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("right", varValue2);
+								*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("right", varValue);
 								instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 								return;
 							}
@@ -114,7 +111,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CCA4 RID: 248996 RVA: 0x00E98B18 File Offset: 0x00E96D18
+		// Token: 0x06031C00 RID: 203776 RVA: 0x00DE9364 File Offset: 0x00DE7564
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -126,13 +123,40 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CCA5 RID: 248997 RVA: 0x00E98B60 File Offset: 0x00E96D60
+		// Token: 0x06031C01 RID: 203777 RVA: 0x00DE93AC File Offset: 0x00DE75AC
 		protected override void OnStart()
 		{
 			this.UpdateDefaultProgressBar(false, 0f);
 		}
 
-		// Token: 0x0603CCA6 RID: 248998 RVA: 0x00E98B70 File Offset: 0x00E96D70
+		// Token: 0x06031C02 RID: 203778 RVA: 0x00DE93BC File Offset: 0x00DE75BC
+		[NullableContext(2)]
+		private static float? GetProgressValue(object value)
+		{
+			float? result;
+			if (value is int)
+			{
+				int num = (int)value;
+				result = new float?((float)num);
+			}
+			else if (value is long)
+			{
+				long num2 = (long)value;
+				result = new float?((float)num2);
+			}
+			else if (value is float)
+			{
+				float value2 = (float)value;
+				result = new float?(value2);
+			}
+			else
+			{
+				result = null;
+			}
+			return result;
+		}
+
+		// Token: 0x06031C03 RID: 203779 RVA: 0x00DE9428 File Offset: 0x00DE7628
 		private void UpdateDefaultProgressBar(bool active, float progress)
 		{
 			if (this.UiParent.IsUIActiveInHierarchy() != active)
@@ -159,14 +183,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FAB1 RID: 129713
+		// Token: 0x0401A569 RID: 107881
 		[Nullable(1)]
 		public readonly UUIItem UiParent = uiParent;
 
-		// Token: 0x0200C04A RID: 49226
+		// Token: 0x0200AA50 RID: 43600
 		private enum EDefaultProgressBarComponent
 		{
-			// Token: 0x0403A07F RID: 237695
+			// Token: 0x04034A42 RID: 215618
 			ProgressSlider
 		}
 	}

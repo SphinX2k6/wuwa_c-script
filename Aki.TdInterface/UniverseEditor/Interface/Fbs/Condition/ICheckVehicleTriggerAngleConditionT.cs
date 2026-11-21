@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B6F RID: 19311
+	// Token: 0x02005056 RID: 20566
 	public class ICheckVehicleTriggerAngleConditionT
 	{
-		// Token: 0x17008C25 RID: 35877
-		// (get) Token: 0x0601E6E3 RID: 124643 RVA: 0x0044310E File Offset: 0x0044130E
-		// (set) Token: 0x0601E6E4 RID: 124644 RVA: 0x00443116 File Offset: 0x00441316
+		// Token: 0x17009335 RID: 37685
+		// (get) Token: 0x06020271 RID: 131697 RVA: 0x0047595A File Offset: 0x00473B5A
+		// (set) Token: 0x06020272 RID: 131698 RVA: 0x00475962 File Offset: 0x00473B62
 		public EVehicleConditionType Type { get; set; }
 
-		// Token: 0x17008C26 RID: 35878
-		// (get) Token: 0x0601E6E5 RID: 124645 RVA: 0x0044311F File Offset: 0x0044131F
-		// (set) Token: 0x0601E6E6 RID: 124646 RVA: 0x00443127 File Offset: 0x00441327
+		// Token: 0x17009336 RID: 37686
+		// (get) Token: 0x06020273 RID: 131699 RVA: 0x0047596B File Offset: 0x00473B6B
+		// (set) Token: 0x06020274 RID: 131700 RVA: 0x00475973 File Offset: 0x00473B73
 		public float HorizontalAngle { get; set; }
 
-		// Token: 0x17008C27 RID: 35879
-		// (get) Token: 0x0601E6E7 RID: 124647 RVA: 0x00443130 File Offset: 0x00441330
-		// (set) Token: 0x0601E6E8 RID: 124648 RVA: 0x00443138 File Offset: 0x00441338
+		// Token: 0x17009337 RID: 37687
+		// (get) Token: 0x06020275 RID: 131701 RVA: 0x0047597C File Offset: 0x00473B7C
+		// (set) Token: 0x06020276 RID: 131702 RVA: 0x00475984 File Offset: 0x00473B84
 		public float VerticalAngle { get; set; }
 
-		// Token: 0x0601E6E9 RID: 124649 RVA: 0x00443141 File Offset: 0x00441341
+		// Token: 0x06020277 RID: 131703 RVA: 0x0047598D File Offset: 0x00473B8D
 		public ICheckVehicleTriggerAngleConditionT()
 		{
 			this.Type = EVehicleConditionType.UsingVehicle;

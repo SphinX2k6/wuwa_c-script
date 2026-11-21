@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200118E RID: 4494
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012C8 RID: 4808
 	public class ITetrisBoard
 	{
-		// Token: 0x06006612 RID: 26130 RVA: 0x000F4BEC File Offset: 0x000F2DEC
+		// Token: 0x06006C49 RID: 27721 RVA: 0x001023B8 File Offset: 0x001005B8
 		private ITetrisBoard_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006613 RID: 26131 RVA: 0x000F4C24 File Offset: 0x000F2E24
+		// Token: 0x06006C4A RID: 27722 RVA: 0x001023F0 File Offset: 0x001005F0
 		public static ITetrisBoard Create([Nullable(2)] ITetrisBoard instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006614 RID: 26132 RVA: 0x000F4C37 File Offset: 0x000F2E37
+		// Token: 0x06006C4B RID: 27723 RVA: 0x00102403 File Offset: 0x00100603
 		public static ITetrisBoard CreateFromSetValue([Nullable(2)] ITetrisBoard_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006615 RID: 26133 RVA: 0x000F4C4A File Offset: 0x000F2E4A
+		// Token: 0x06006C4C RID: 27724 RVA: 0x00102416 File Offset: 0x00100616
 		public ITetrisBoard_SetValue ToSetValue()
 		{
 			return new ITetrisBoard_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002139 RID: 8505
-		// (get) Token: 0x06006616 RID: 26134 RVA: 0x000F4C6C File Offset: 0x000F2E6C
-		// (set) Token: 0x06006617 RID: 26135 RVA: 0x000F4CFF File Offset: 0x000F2EFF
+		// Token: 0x170022F8 RID: 8952
+		// (get) Token: 0x06006C4D RID: 27725 RVA: 0x00102438 File Offset: 0x00100638
+		// (set) Token: 0x06006C4E RID: 27726 RVA: 0x001024CB File Offset: 0x001006CB
 		public virtual List<ITetrisSingleGrid> Grids
 		{
 			get
@@ -100,9 +98,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700213A RID: 8506
-		// (get) Token: 0x06006618 RID: 26136 RVA: 0x000F4D14 File Offset: 0x000F2F14
-		// (set) Token: 0x06006619 RID: 26137 RVA: 0x000F4D75 File Offset: 0x000F2F75
+		// Token: 0x170022F9 RID: 8953
+		// (get) Token: 0x06006C4F RID: 27727 RVA: 0x001024E0 File Offset: 0x001006E0
+		// (set) Token: 0x06006C50 RID: 27728 RVA: 0x00102541 File Offset: 0x00100741
 		public virtual IRequiredVector2 BoardSize
 		{
 			get
@@ -130,24 +128,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003D42 RID: 15682
+		// Token: 0x040040AA RID: 16554
 		[Nullable(2)]
 		protected ITetrisBoard FbInstance;
 
-		// Token: 0x04003D43 RID: 15683
+		// Token: 0x040040AB RID: 16555
 		[Nullable(2)]
 		protected ITetrisBoard_SetValue PocoInterface;
 
-		// Token: 0x04003D44 RID: 15684
+		// Token: 0x040040AC RID: 16556
 		private List<ITetrisSingleGrid> _GridsCache;
 
-		// Token: 0x04003D45 RID: 15685
+		// Token: 0x040040AD RID: 16557
 		private bool _GridsInited;
 
-		// Token: 0x04003D46 RID: 15686
+		// Token: 0x040040AE RID: 16558
 		private IRequiredVector2 _BoardSizeCache;
 
-		// Token: 0x04003D47 RID: 15687
+		// Token: 0x040040AF RID: 16559
 		private bool _BoardSizeInited;
 	}
 }

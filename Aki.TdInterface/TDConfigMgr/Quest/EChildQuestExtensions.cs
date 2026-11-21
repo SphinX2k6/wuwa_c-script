@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001232 RID: 4658
+	// Token: 0x0200136E RID: 4974
 	public static class EChildQuestExtensions
 	{
-		// Token: 0x06006988 RID: 27016 RVA: 0x000FB870 File Offset: 0x000F9A70
+		// Token: 0x06006FC9 RID: 28617 RVA: 0x0010917C File Offset: 0x0010737C
 		public static string ToEnumString(this EChildQuest value)
 		{
 			string result;
@@ -213,7 +213,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006989 RID: 27017 RVA: 0x000FBC3C File Offset: 0x000F9E3C
+		// Token: 0x06006FCA RID: 28618 RVA: 0x00109548 File Offset: 0x00107748
 		public static EChildQuest FromString(string name)
 		{
 			EChildQuest result;
@@ -224,7 +224,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600698A RID: 27018 RVA: 0x000FBC68 File Offset: 0x000F9E68
+		// Token: 0x06006FCB RID: 28619 RVA: 0x00109574 File Offset: 0x00107774
 		public static bool TryFromString(string name, out EChildQuest value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -858,7 +858,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x0600698B RID: 27019 RVA: 0x000FC6F4 File Offset: 0x000FA8F4
+		// Token: 0x06006FCC RID: 28620 RVA: 0x0010A000 File Offset: 0x00108200
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -931,7 +931,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600698C RID: 27020 RVA: 0x000FC948 File Offset: 0x000FAB48
+		// Token: 0x06006FCD RID: 28621 RVA: 0x0010A254 File Offset: 0x00108454
 		public static EChildQuest[] GetValues()
 		{
 			return new EChildQuest[]
@@ -1004,7 +1004,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600698D RID: 27021 RVA: 0x000FC95C File Offset: 0x000FAB5C
+		// Token: 0x06006FCE RID: 28622 RVA: 0x0010A268 File Offset: 0x00108468
 		public static string[] GetNames()
 		{
 			return new string[]

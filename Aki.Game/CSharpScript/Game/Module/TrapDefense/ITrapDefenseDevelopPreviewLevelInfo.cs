@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A4F RID: 19023
+	// Token: 0x020039F7 RID: 14839
 	public interface ITrapDefenseDevelopPreviewLevelInfo
 	{
-		// Token: 0x17007A5E RID: 31326
-		// (get) Token: 0x060315B6 RID: 202166
-		// (set) Token: 0x060315B7 RID: 202167
+		// Token: 0x17004E0B RID: 19979
+		// (get) Token: 0x06026346 RID: 156486
+		// (set) Token: 0x06026347 RID: 156487
 		int Id { get; set; }
 
-		// Token: 0x17007A5F RID: 31327
-		// (get) Token: 0x060315B8 RID: 202168
-		// (set) Token: 0x060315B9 RID: 202169
+		// Token: 0x17004E0C RID: 19980
+		// (get) Token: 0x06026348 RID: 156488
+		// (set) Token: 0x06026349 RID: 156489
 		bool IsCurLevel { get; set; }
 
-		// Token: 0x17007A60 RID: 31328
-		// (get) Token: 0x060315BA RID: 202170
-		// (set) Token: 0x060315BB RID: 202171
+		// Token: 0x17004E0D RID: 19981
+		// (get) Token: 0x0602634A RID: 156490
+		// (set) Token: 0x0602634B RID: 156491
 		bool? NeedAlpha { get; set; }
 	}
 }

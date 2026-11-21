@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002165 RID: 8549
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023C6 RID: 9158
 	public class ResetPlayerPosWithPresentation_SetValue
 	{
-		// Token: 0x0400705F RID: 28767
+		// Token: 0x04007694 RID: 30356
 		public IResetPresentationFailure Presentation;
 
-		// Token: 0x04007060 RID: 28768
+		// Token: 0x04007695 RID: 30357
 		public IResetPosType ResetPosConfig;
 
-		// Token: 0x04007061 RID: 28769
+		// Token: 0x04007696 RID: 30358
 		public bool? NeedWaitResetPos;
 	}
 }

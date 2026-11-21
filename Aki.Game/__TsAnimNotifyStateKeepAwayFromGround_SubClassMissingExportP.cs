@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x0200374D RID: 14157
+// Token: 0x02002CC6 RID: 11462
 public class __TsAnimNotifyStateKeepAwayFromGround_SubClassMissingExportProxy : __TsAnimNotifyStateKeepAwayFromGround_InheritProxy
 {
-	// Token: 0x0601E5CD RID: 124365 RVA: 0x0088B598 File Offset: 0x00889798
+	// Token: 0x0601C2C6 RID: 115398 RVA: 0x008B1994 File Offset: 0x008AFB94
 	[NullableContext(1)]
 	protected __TsAnimNotifyStateKeepAwayFromGround_SubClassMissingExportProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateKeepAwayFromGround.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E5CE RID: 124366 RVA: 0x0088B5CB File Offset: 0x008897CB
+	// Token: 0x0601C2C7 RID: 115399 RVA: 0x008B19C7 File Offset: 0x008AFBC7
 	protected __TsAnimNotifyStateKeepAwayFromGround_SubClassMissingExportProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}

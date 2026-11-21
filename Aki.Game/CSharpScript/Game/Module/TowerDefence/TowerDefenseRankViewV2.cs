@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B26 RID: 19238
+	// Token: 0x02003ACE RID: 15054
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseRankViewV2 : UiViewBase
 	{
-		// Token: 0x06031D38 RID: 204088 RVA: 0x00B911B5 File Offset: 0x00B8F3B5
+		// Token: 0x06026AC8 RID: 158408 RVA: 0x00AD5219 File Offset: 0x00AD3419
 		public TowerDefenseRankViewV2(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06031D39 RID: 204089 RVA: 0x00B911C0 File Offset: 0x00B8F3C0
+		// Token: 0x06026AC9 RID: 158409 RVA: 0x00AD5224 File Offset: 0x00AD3424
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.Vm = (this.OpenParam as TowerDefenseRankViewModelV2);
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031D3A RID: 204090 RVA: 0x00B912EC File Offset: 0x00B8F4EC
+		// Token: 0x06026ACA RID: 158410 RVA: 0x00AD5350 File Offset: 0x00AD3550
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TowerDefenseRankViewV2.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031D3B RID: 204091 RVA: 0x00B91330 File Offset: 0x00B8F530
+		// Token: 0x06026ACB RID: 158411 RVA: 0x00AD5394 File Offset: 0x00AD3594
 		private UniTask InitCaption()
 		{
 			TowerDefenseRankViewV2.<InitCaption>d__11 <InitCaption>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <InitCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031D3C RID: 204092 RVA: 0x00B91374 File Offset: 0x00B8F574
+		// Token: 0x06026ACC RID: 158412 RVA: 0x00AD53D8 File Offset: 0x00AD35D8
 		private UniTask InitAnonymousToggle()
 		{
 			TowerDefenseRankViewV2.<InitAnonymousToggle>d__12 <InitAnonymousToggle>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <InitAnonymousToggle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031D3D RID: 204093 RVA: 0x00B913B8 File Offset: 0x00B8F5B8
+		// Token: 0x06026ACD RID: 158413 RVA: 0x00AD541C File Offset: 0x00AD361C
 		private void InitAnonymousToggleState()
 		{
 			EToggleState toggleState = TowerDefenseModel.Instance.RankData.IsOpenAnonymousName ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -91,13 +91,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			anonymousToggle.InitToggleState(toggleState);
 		}
 
-		// Token: 0x06031D3E RID: 204094 RVA: 0x00B913EC File Offset: 0x00B8F5EC
+		// Token: 0x06026ACE RID: 158414 RVA: 0x00AD5450 File Offset: 0x00AD3650
 		private void OnClickBackBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06031D3F RID: 204095 RVA: 0x00B913F8 File Offset: 0x00B8F5F8
+		// Token: 0x06026ACF RID: 158415 RVA: 0x00AD545C File Offset: 0x00AD365C
 		protected override void OnStart()
 		{
 			bool flag = TowerDefenseModel.Instance.RankData.IsOwnSingleBestRecord(this.Vm.InstanceId);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			layoutItemByIndex.SetToggleState(true, true);
 		}
 
-		// Token: 0x06031D40 RID: 204096 RVA: 0x00B91440 File Offset: 0x00B8F640
+		// Token: 0x06026AD0 RID: 158416 RVA: 0x00AD54A4 File Offset: 0x00AD36A4
 		private UniTask InitTabLayout()
 		{
 			TowerDefenseRankViewV2.<InitTabLayout>d__16 <InitTabLayout>d__;
@@ -120,13 +120,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <InitTabLayout>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031D41 RID: 204097 RVA: 0x00B91483 File Offset: 0x00B8F683
+		// Token: 0x06026AD1 RID: 158417 RVA: 0x00AD54E7 File Offset: 0x00AD36E7
 		private void InitRankScroll()
 		{
 			this.RankScroll = new LoopScrollView<TowerDefenseRankItemV2, TowerDefenseRankItemData>(base.GetLoopScrollViewComponent(1), base.GetItem(2).GetOwner() as AUIBaseActor, new Func<TowerDefenseRankItemV2>(this.InitRankItem), false);
 		}
 
-		// Token: 0x06031D42 RID: 204098 RVA: 0x00B914B8 File Offset: 0x00B8F6B8
+		// Token: 0x06026AD2 RID: 158418 RVA: 0x00AD551C File Offset: 0x00AD371C
 		private UniTask InitOwnRankItem()
 		{
 			TowerDefenseRankViewV2.<InitOwnRankItem>d__18 <InitOwnRankItem>d__;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <InitOwnRankItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031D43 RID: 204099 RVA: 0x00B914FB File Offset: 0x00B8F6FB
+		// Token: 0x06026AD3 RID: 158419 RVA: 0x00AD555F File Offset: 0x00AD375F
 		private TowerDefenseRankTabItemV2 InitTabItem()
 		{
 			return new TowerDefenseRankTabItemV2
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			};
 		}
 
-		// Token: 0x06031D44 RID: 204100 RVA: 0x00B9150E File Offset: 0x00B8F70E
+		// Token: 0x06026AD4 RID: 158420 RVA: 0x00AD5572 File Offset: 0x00AD3772
 		private TowerDefenseRankItemV2 InitRankItem()
 		{
 			return new TowerDefenseRankItemV2
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			};
 		}
 
-		// Token: 0x06031D45 RID: 204101 RVA: 0x00B91524 File Offset: 0x00B8F724
+		// Token: 0x06026AD5 RID: 158421 RVA: 0x00AD5588 File Offset: 0x00AD3788
 		private UniTask RefreshRankLayout(TowerDefenceDefine.ETabType tabType, bool playGridAnim)
 		{
 			TowerDefenseRankViewV2.<RefreshRankLayout>d__21 <RefreshRankLayout>d__;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <RefreshRankLayout>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031D46 RID: 204102 RVA: 0x00B91577 File Offset: 0x00B8F777
+		// Token: 0x06026AD6 RID: 158422 RVA: 0x00AD55DB File Offset: 0x00AD37DB
 		public void ResetLastTabItemSelected(TowerDefenceDefine.ETabType tabType)
 		{
 			TowerDefenseRankTabItemV2 layoutItemByIndex = this.TabLayout.GetLayoutItemByIndex((int)tabType);
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			layoutItemByIndex.SetToggleState(false, false);
 		}
 
-		// Token: 0x06031D47 RID: 204103 RVA: 0x00B91594 File Offset: 0x00B8F794
+		// Token: 0x06026AD7 RID: 158423 RVA: 0x00AD55F8 File Offset: 0x00AD37F8
 		public void RefreshContent(TowerDefenceDefine.ETabType tabType)
 		{
 			TowerDefenseRankViewV2.<>c__DisplayClass23_0 CS$<>8__locals1 = new TowerDefenseRankViewV2.<>c__DisplayClass23_0();
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshAnonymousToggle(CS$<>8__locals1.tabType);
 		}
 
-		// Token: 0x06031D48 RID: 204104 RVA: 0x00B91638 File Offset: 0x00B8F838
+		// Token: 0x06026AD8 RID: 158424 RVA: 0x00AD569C File Offset: 0x00AD389C
 		private void RefreshAnonymousToggle(TowerDefenceDefine.ETabType tabType)
 		{
 			TowerDefenseRankItemData selfRankDataByTabType = TowerDefenseModel.Instance.RankData.GetSelfRankDataByTabType(tabType);
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			anonymousToggle.SetUiActive(selfRankDataByTabType.IsInRank);
 		}
 
-		// Token: 0x06031D49 RID: 204105 RVA: 0x00B9166C File Offset: 0x00B8F86C
+		// Token: 0x06026AD9 RID: 158425 RVA: 0x00AD56D0 File Offset: 0x00AD38D0
 		public void RefreshContentShowName()
 		{
 			this.OwnRankItem.RefreshPlayerName();
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031D4A RID: 204106 RVA: 0x00B916CB File Offset: 0x00B8F8CB
+		// Token: 0x06026ADA RID: 158426 RVA: 0x00AD572F File Offset: 0x00AD392F
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -252,56 +252,56 @@ namespace CSharpScript.Game.Module.TowerDefence
 			sequencePlayer.Clear();
 		}
 
-		// Token: 0x0401A971 RID: 108913
+		// Token: 0x040152C3 RID: 86723
 		[Nullable(2)]
 		private PopupCaptionItem Caption;
 
-		// Token: 0x0401A972 RID: 108914
+		// Token: 0x040152C4 RID: 86724
 		[Nullable(2)]
 		private PopupCaptionToggleItem AnonymousToggle;
 
-		// Token: 0x0401A973 RID: 108915
+		// Token: 0x040152C5 RID: 86725
 		private GenericLayout<TowerDefenseRankTabItemV2, TowerDefenceDefine.ETabType> TabLayout;
 
-		// Token: 0x0401A974 RID: 108916
+		// Token: 0x040152C6 RID: 86726
 		private LoopScrollView<TowerDefenseRankItemV2, TowerDefenseRankItemData> RankScroll;
 
-		// Token: 0x0401A975 RID: 108917
+		// Token: 0x040152C7 RID: 86727
 		private TowerDefenseRankItemV2 OwnRankItem;
 
-		// Token: 0x0401A976 RID: 108918
+		// Token: 0x040152C8 RID: 86728
 		private TowerDefenseRankViewModelV2 Vm;
 
-		// Token: 0x0401A977 RID: 108919
+		// Token: 0x040152C9 RID: 86729
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401A978 RID: 108920
+		// Token: 0x040152CA RID: 86730
 		private bool HasPlayedListAnim;
 
-		// Token: 0x0200ACAE RID: 44206
+		// Token: 0x020096CE RID: 38606
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04034770 RID: 214896
+			// Token: 0x0402F121 RID: 192801
 			public const int CaptionItem = 0;
 
-			// Token: 0x04034771 RID: 214897
+			// Token: 0x0402F122 RID: 192802
 			public const int LoopScrollView = 1;
 
-			// Token: 0x04034772 RID: 214898
+			// Token: 0x0402F123 RID: 192803
 			public const int RankItem = 2;
 
-			// Token: 0x04034773 RID: 214899
+			// Token: 0x0402F124 RID: 192804
 			public const int EmptyItem = 3;
 
-			// Token: 0x04034774 RID: 214900
+			// Token: 0x0402F125 RID: 192805
 			public const int OwnerItem = 4;
 
-			// Token: 0x04034775 RID: 214901
+			// Token: 0x0402F126 RID: 192806
 			public const int TabLayout = 5;
 
-			// Token: 0x04034776 RID: 214902
+			// Token: 0x0402F127 RID: 192807
 			public const int TabItem = 6;
 		}
 	}

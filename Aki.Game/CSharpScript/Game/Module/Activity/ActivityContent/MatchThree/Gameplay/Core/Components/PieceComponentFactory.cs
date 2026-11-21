@@ -4,10 +4,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Core.Components
 {
-	// Token: 0x0200653C RID: 25916
+	// Token: 0x020054BA RID: 21690
 	public static class PieceComponentFactory
 	{
-		// Token: 0x06040F36 RID: 266038 RVA: 0x00FBCCE0 File Offset: 0x00FBAEE0
+		// Token: 0x06035BFB RID: 220155 RVA: 0x00F03D24 File Offset: 0x00F01F24
 		[NullableContext(2)]
 		public unsafe static IPieceComponent Create(int componentId)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return null;
 		}
 
-		// Token: 0x06040F37 RID: 266039 RVA: 0x00FBCEA8 File Offset: 0x00FBB0A8
+		// Token: 0x06035BFC RID: 220156 RVA: 0x00F03EEC File Offset: 0x00F020EC
 		[NullableContext(1)]
 		public static EPieceComponentType GetComponentType(IPieceComponent comp)
 		{

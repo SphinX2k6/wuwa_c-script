@@ -7,19 +7,19 @@ using CSharpScript.Game.NewWorld.SceneItem;
 using CSharpScript.Game.NewWorld.SceneItem.Model;
 using UnrealEngine;
 
-// Token: 0x02003077 RID: 12407
+// Token: 0x020025CE RID: 9678
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterLevelShootComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601A791 RID: 108433 RVA: 0x00712198 File Offset: 0x00710398
+	// Token: 0x06018154 RID: 98644 RVA: 0x00738725 File Offset: 0x00736925
 	static CharacterLevelShootComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterLevelShootComponent.CreateStaticDefaultValue), new Action(CharacterLevelShootComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700246E RID: 9326
-	// (get) Token: 0x0601A792 RID: 108434 RVA: 0x007121C1 File Offset: 0x007103C1
+	// Token: 0x170025AA RID: 9642
+	// (get) Token: 0x06018155 RID: 98645 RVA: 0x0073874E File Offset: 0x0073694E
 	private static List<Vector> VectorPool
 	{
 		get
@@ -28,8 +28,8 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x1700246F RID: 9327
-	// (get) Token: 0x0601A793 RID: 108435 RVA: 0x007121C8 File Offset: 0x007103C8
+	// Token: 0x170025AB RID: 9643
+	// (get) Token: 0x06018156 RID: 98646 RVA: 0x00738755 File Offset: 0x00736955
 	private static List<List<Vector>> VectorArrayPool
 	{
 		get
@@ -38,7 +38,7 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601A794 RID: 108436 RVA: 0x007121D0 File Offset: 0x007103D0
+	// Token: 0x06018157 RID: 98647 RVA: 0x0073875C File Offset: 0x0073695C
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -54,14 +54,14 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 		return true;
 	}
 
-	// Token: 0x0601A795 RID: 108437 RVA: 0x0071224D File Offset: 0x0071044D
+	// Token: 0x06018158 RID: 98648 RVA: 0x007387D9 File Offset: 0x007369D9
 	protected override void OnActivate()
 	{
 		this.InitBulletTraceElement();
 		this.OnArmFireBulletTask = this.TagComp.ListenForTagAddOrRemove(new int?(GameplayTagDefine.EGameplayTagId["功能.功能制作.瞄准模式.射击通知"]), new BaseTagComponent.TTagSwitchedCallback(this.OnArmShoot), null);
 	}
 
-	// Token: 0x0601A796 RID: 108438 RVA: 0x00712288 File Offset: 0x00710488
+	// Token: 0x06018159 RID: 98649 RVA: 0x00738814 File Offset: 0x00736A14
 	public override bool End()
 	{
 		this.ActorComp = null;
@@ -83,7 +83,7 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 		return true;
 	}
 
-	// Token: 0x0601A797 RID: 108439 RVA: 0x007122F4 File Offset: 0x007104F4
+	// Token: 0x0601815A RID: 98650 RVA: 0x00738880 File Offset: 0x00736A80
 	private void InitBulletTraceElement()
 	{
 		if (this.BulletTraceElement == null)
@@ -96,7 +96,7 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 		this.BulletTraceElement.WorldContextObject = this.ActorComp.Owner;
 	}
 
-	// Token: 0x0601A798 RID: 108440 RVA: 0x00712352 File Offset: 0x00710552
+	// Token: 0x0601815B RID: 98651 RVA: 0x007388DE File Offset: 0x00736ADE
 	public void OnEnterAimShoot()
 	{
 		if (!this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["角色.Common.探索技能.显示射击轨迹"]))
@@ -111,7 +111,7 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 		LevelAimLineController.Instance.PlayEffect("/Game/Aki/Effect/EffectGroup/BigWorld/DA_Fx_Group_SignalSpline.DA_Fx_Group_SignalSpline");
 	}
 
-	// Token: 0x0601A799 RID: 108441 RVA: 0x00712391 File Offset: 0x00710591
+	// Token: 0x0601815C RID: 98652 RVA: 0x0073891D File Offset: 0x00736B1D
 	public void OnExitAimShoot()
 	{
 		if (!this.IsActive)
@@ -122,12 +122,12 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 		LevelAimLineController.Instance.StopEffect();
 	}
 
-	// Token: 0x0601A79A RID: 108442 RVA: 0x007123AE File Offset: 0x007105AE
+	// Token: 0x0601815D RID: 98653 RVA: 0x0073893A File Offset: 0x00736B3A
 	private void OnArmShoot(int tagId, bool tagExist)
 	{
 	}
 
-	// Token: 0x0601A79B RID: 108443 RVA: 0x007123B0 File Offset: 0x007105B0
+	// Token: 0x0601815E RID: 98654 RVA: 0x0073893C File Offset: 0x00736B3C
 	protected override void OnTick(float delta)
 	{
 		if (!this.IsActive)
@@ -137,7 +137,7 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 		this.UpdateAimInstructionSpline();
 	}
 
-	// Token: 0x0601A79C RID: 108444 RVA: 0x007123C1 File Offset: 0x007105C1
+	// Token: 0x0601815F RID: 98655 RVA: 0x0073894D File Offset: 0x00736B4D
 	public Vector GetEndPointPosition(Vector start, Vector dir)
 	{
 		dir.Multiply((double)this.TrackLength, this.EndTrackLocation);
@@ -145,7 +145,7 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 		return this.EndTrackLocation;
 	}
 
-	// Token: 0x0601A79D RID: 108445 RVA: 0x007123F0 File Offset: 0x007105F0
+	// Token: 0x06018160 RID: 98656 RVA: 0x0073897C File Offset: 0x00736B7C
 	private Vector GetVector()
 	{
 		if (CharacterLevelShootComponent.VectorPool.Count < 1)
@@ -158,14 +158,14 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 		return result;
 	}
 
-	// Token: 0x0601A79E RID: 108446 RVA: 0x0071242D File Offset: 0x0071062D
+	// Token: 0x06018161 RID: 98657 RVA: 0x007389B9 File Offset: 0x00736BB9
 	private void ReleaseVector(Vector value)
 	{
 		value.Set(0.0, 0.0, 0.0);
 		CharacterLevelShootComponent.VectorPool.Add(value);
 	}
 
-	// Token: 0x0601A79F RID: 108447 RVA: 0x0071245B File Offset: 0x0071065B
+	// Token: 0x06018162 RID: 98658 RVA: 0x007389E7 File Offset: 0x00736BE7
 	private List<Vector> GetVectorArray()
 	{
 		if (CharacterLevelShootComponent.VectorArrayPool.Count < 1)
@@ -178,7 +178,7 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 		return result;
 	}
 
-	// Token: 0x0601A7A0 RID: 108448 RVA: 0x00712498 File Offset: 0x00710698
+	// Token: 0x06018163 RID: 98659 RVA: 0x00738A24 File Offset: 0x00736C24
 	private void ReleaseVectorArray(List<Vector> value)
 	{
 		foreach (Vector value2 in value)
@@ -189,7 +189,7 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 		CharacterLevelShootComponent.VectorArrayPool.Add(value);
 	}
 
-	// Token: 0x0601A7A1 RID: 108449 RVA: 0x007124F8 File Offset: 0x007106F8
+	// Token: 0x06018164 RID: 98660 RVA: 0x00738A84 File Offset: 0x00736C84
 	private void UpdateAimInstructionSpline()
 	{
 		FTransformDouble ftransformDouble = this.ActorComp.SkeletalMesh.D_GetSocketTransform(new FName("WeaponProp01_2"), ERelativeTransformSpace.RTS_World);
@@ -316,21 +316,21 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 		this.HitReboundInfoMap.Clear();
 	}
 
-	// Token: 0x0601A7A2 RID: 108450 RVA: 0x007129EC File Offset: 0x00710BEC
+	// Token: 0x06018165 RID: 98661 RVA: 0x00738F78 File Offset: 0x00737178
 	public static void CreateStaticDefaultValue()
 	{
 		CharacterLevelShootComponent._vectorPool = new List<Vector>();
 		CharacterLevelShootComponent._vectorArrayPool = new List<List<Vector>>();
 	}
 
-	// Token: 0x0601A7A3 RID: 108451 RVA: 0x00712A02 File Offset: 0x00710C02
+	// Token: 0x06018166 RID: 98662 RVA: 0x00738F8E File Offset: 0x0073718E
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterLevelShootComponent._vectorPool = null;
 		CharacterLevelShootComponent._vectorArrayPool = null;
 	}
 
-	// Token: 0x0601A7A4 RID: 108452 RVA: 0x00712A10 File Offset: 0x00710C10
+	// Token: 0x06018167 RID: 98663 RVA: 0x00738F9C File Offset: 0x0073719C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -338,172 +338,156 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 			return false;
 		}
 		CharacterLevelShootComponent characterLevelShootComponent = (CharacterLevelShootComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterLevelShootComponent.ActorComp == null)
 		{
-			if (characterLevelShootComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (characterLevelShootComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsActive"))
+		if (characterLevelShootComponent.TagComp == null)
 		{
-			this.IsActive = characterLevelShootComponent.IsActive;
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("BulletTraceElement"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			if (characterLevelShootComponent.BulletTraceElement == null)
-			{
-				this.BulletTraceElement = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceLineElement>(this.BulletTraceElement), "BulletTraceElement"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("SplinePoints"))
+		this.IsActive = characterLevelShootComponent.IsActive;
+		if (characterLevelShootComponent.BulletTraceElement == null)
 		{
-			if (characterLevelShootComponent.SplinePoints == null)
-			{
-				this.SplinePoints = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<Vector>>(this.SplinePoints), "SplinePoints"))
-			{
-				return false;
-			}
+			this.BulletTraceElement = null;
 		}
-		if (base.CanResetComponentProperty("StartTrackLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BulletTraceElement), "BulletTraceElement"))
 		{
-			if (characterLevelShootComponent.StartTrackLocation == null)
-			{
-				this.StartTrackLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.StartTrackLocation), "StartTrackLocation"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TrackDir"))
+		if (characterLevelShootComponent.SplinePoints == null)
 		{
-			if (characterLevelShootComponent.TrackDir == null)
-			{
-				this.TrackDir = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TrackDir), "TrackDir"))
-			{
-				return false;
-			}
+			this.SplinePoints = null;
 		}
-		if (base.CanResetComponentProperty("EndTrackLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplinePoints), "SplinePoints"))
 		{
-			if (characterLevelShootComponent.EndTrackLocation == null)
-			{
-				this.EndTrackLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.EndTrackLocation), "EndTrackLocation"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TempVector"))
+		if (characterLevelShootComponent.StartTrackLocation == null)
 		{
-			if (characterLevelShootComponent.TempVector == null)
-			{
-				this.TempVector = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector), "TempVector"))
-			{
-				return false;
-			}
+			this.StartTrackLocation = null;
 		}
-		if (base.CanResetComponentProperty("HitReboundInfoMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StartTrackLocation), "StartTrackLocation"))
 		{
-			if (characterLevelShootComponent.HitReboundInfoMap == null)
-			{
-				this.HitReboundInfoMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, List<Vector>>>(this.HitReboundInfoMap), "HitReboundInfoMap"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("OnArmFireBulletTask"))
+		if (characterLevelShootComponent.TrackDir == null)
 		{
-			if (characterLevelShootComponent.OnArmFireBulletTask == null)
-			{
-				this.OnArmFireBulletTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.OnArmFireBulletTask), "OnArmFireBulletTask"))
-			{
-				return false;
-			}
+			this.TrackDir = null;
 		}
-		if (base.CanResetComponentProperty("FireVector"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TrackDir), "TrackDir"))
 		{
-			if (characterLevelShootComponent.FireVector == null)
-			{
-				this.FireVector = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.FireVector), "FireVector"))
-			{
-				return false;
-			}
+			return false;
+		}
+		if (characterLevelShootComponent.EndTrackLocation == null)
+		{
+			this.EndTrackLocation = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndTrackLocation), "EndTrackLocation"))
+		{
+			return false;
+		}
+		if (characterLevelShootComponent.TempVector == null)
+		{
+			this.TempVector = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
+		{
+			return false;
+		}
+		if (characterLevelShootComponent.HitReboundInfoMap == null)
+		{
+			this.HitReboundInfoMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitReboundInfoMap), "HitReboundInfoMap"))
+		{
+			return false;
+		}
+		if (characterLevelShootComponent.OnArmFireBulletTask == null)
+		{
+			this.OnArmFireBulletTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnArmFireBulletTask), "OnArmFireBulletTask"))
+		{
+			return false;
+		}
+		if (characterLevelShootComponent.FireVector == null)
+		{
+			this.FireVector = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FireVector), "FireVector"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400CB15 RID: 51989
+	// Token: 0x170025AC RID: 9644
+	// (get) Token: 0x06018168 RID: 98664 RVA: 0x007391A1 File Offset: 0x007373A1
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025AD RID: 9645
+	// (get) Token: 0x06018169 RID: 98665 RVA: 0x007391A4 File Offset: 0x007373A4
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CEF0 RID: 52976
 	private const string PROFILE_BULLECT_TRACK = "CharacterLevelShootComponent_PreCalculateBulletTrack";
 
-	// Token: 0x0400CB16 RID: 51990
+	// Token: 0x0400CEF1 RID: 52977
 	private const string DEMO_LEVEL_AIM_LINE_EFFECT_PATH = "/Game/Aki/Effect/EffectGroup/BigWorld/DA_Fx_Group_SignalSpline.DA_Fx_Group_SignalSpline";
 
-	// Token: 0x0400CB17 RID: 51991
+	// Token: 0x0400CEF2 RID: 52978
 	private const float REFLECT_START_OFFSET = 0.1f;
 
-	// Token: 0x0400CB18 RID: 51992
+	// Token: 0x0400CEF3 RID: 52979
 	private const string BULLET_FIRE_BONE_NAME = "WeaponProp01_2";
 
-	// Token: 0x0400CB19 RID: 51993
+	// Token: 0x0400CEF4 RID: 52980
 	private const int MAX_HIT_COUNT_ON_ONE = 10;
 
-	// Token: 0x0400CB1A RID: 51994
+	// Token: 0x0400CEF5 RID: 52981
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CB1B RID: 51995
+	// Token: 0x0400CEF6 RID: 52982
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400CB1C RID: 51996
+	// Token: 0x0400CEF7 RID: 52983
 	private readonly int TrackLength = 5000;
 
-	// Token: 0x0400CB1D RID: 51997
+	// Token: 0x0400CEF8 RID: 52984
 	[StaticVariableRuleIgnore]
 	private static readonly Vector FireBulletPositionOffset = Vector.ForwardVectorProxy;
 
-	// Token: 0x0400CB1E RID: 51998
+	// Token: 0x0400CEF9 RID: 52985
 	private bool IsActive;
 
-	// Token: 0x0400CB1F RID: 51999
+	// Token: 0x0400CEFA RID: 52986
 	[Nullable(2)]
 	private UTraceLineElement BulletTraceElement;
 
-	// Token: 0x0400CB20 RID: 52000
+	// Token: 0x0400CEFB RID: 52987
 	[Nullable(new byte[]
 	{
 		2,
@@ -511,23 +495,23 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 	})]
 	private List<Vector> SplinePoints;
 
-	// Token: 0x0400CB21 RID: 52001
+	// Token: 0x0400CEFC RID: 52988
 	[Nullable(2)]
 	private Vector StartTrackLocation;
 
-	// Token: 0x0400CB22 RID: 52002
+	// Token: 0x0400CEFD RID: 52989
 	[Nullable(2)]
 	private Vector TrackDir;
 
-	// Token: 0x0400CB23 RID: 52003
+	// Token: 0x0400CEFE RID: 52990
 	[Nullable(2)]
 	private Vector EndTrackLocation;
 
-	// Token: 0x0400CB24 RID: 52004
+	// Token: 0x0400CEFF RID: 52991
 	[Nullable(2)]
 	private Vector TempVector;
 
-	// Token: 0x0400CB25 RID: 52005
+	// Token: 0x0400CF00 RID: 52992
 	[Nullable(new byte[]
 	{
 		2,
@@ -536,7 +520,7 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 	})]
 	private Dictionary<int, List<Vector>> HitReboundInfoMap;
 
-	// Token: 0x0400CB26 RID: 52006
+	// Token: 0x0400CF01 RID: 52993
 	[Nullable(new byte[]
 	{
 		2,
@@ -544,7 +528,7 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 	})]
 	private static List<Vector> _vectorPool;
 
-	// Token: 0x0400CB27 RID: 52007
+	// Token: 0x0400CF02 RID: 52994
 	[Nullable(new byte[]
 	{
 		2,
@@ -553,11 +537,11 @@ public class CharacterLevelShootComponent : EntityComponent, IStaticVariableRese
 	})]
 	private static List<List<Vector>> _vectorArrayPool;
 
-	// Token: 0x0400CB28 RID: 52008
+	// Token: 0x0400CF03 RID: 52995
 	[Nullable(2)]
 	private ITagTask OnArmFireBulletTask;
 
-	// Token: 0x0400CB29 RID: 52009
+	// Token: 0x0400CF04 RID: 52996
 	[Nullable(2)]
 	private Vector FireVector;
 }

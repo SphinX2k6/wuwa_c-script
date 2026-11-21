@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A25 RID: 6693
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BBA RID: 7098
 	public class IExitMonsterMoveWithSpline : IExecBattleActionType
 	{
-		// Token: 0x06008F5C RID: 36700 RVA: 0x0014ED30 File Offset: 0x0014CF30
+		// Token: 0x060096C6 RID: 38598 RVA: 0x0015EC5C File Offset: 0x0015CE5C
 		private IExitMonsterMoveWithSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008F5D RID: 36701 RVA: 0x0014ED68 File Offset: 0x0014CF68
+		// Token: 0x060096C7 RID: 38599 RVA: 0x0015EC94 File Offset: 0x0015CE94
 		public static IExitMonsterMoveWithSpline Create([Nullable(2)] IExitMonsterMoveWithSpline instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008F5E RID: 36702 RVA: 0x0014ED7B File Offset: 0x0014CF7B
+		// Token: 0x060096C8 RID: 38600 RVA: 0x0015ECA7 File Offset: 0x0015CEA7
 		public static IExitMonsterMoveWithSpline CreateFromSetValue([Nullable(2)] IExitMonsterMoveWithSpline_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008F5F RID: 36703 RVA: 0x0014ED8E File Offset: 0x0014CF8E
+		// Token: 0x060096C9 RID: 38601 RVA: 0x0015ECBA File Offset: 0x0015CEBA
 		public new IExitMonsterMoveWithSpline_SetValue ToSetValue()
 		{
 			return new IExitMonsterMoveWithSpline_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DCC RID: 11724
-		// (get) Token: 0x06008F60 RID: 36704 RVA: 0x0014EDAD File Offset: 0x0014CFAD
-		// (set) Token: 0x06008F61 RID: 36705 RVA: 0x0014EDD8 File Offset: 0x0014CFD8
+		// Token: 0x17002FD9 RID: 12249
+		// (get) Token: 0x060096CA RID: 38602 RVA: 0x0015ECD9 File Offset: 0x0015CED9
+		// (set) Token: 0x060096CB RID: 38603 RVA: 0x0015ED04 File Offset: 0x0015CF04
 		public override EExecBattleActionType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DCD RID: 11725
-		// (get) Token: 0x06008F62 RID: 36706 RVA: 0x0014EDE6 File Offset: 0x0014CFE6
-		// (set) Token: 0x06008F63 RID: 36707 RVA: 0x0014EE0D File Offset: 0x0014D00D
+		// Token: 0x17002FDA RID: 12250
+		// (get) Token: 0x060096CC RID: 38604 RVA: 0x0015ED12 File Offset: 0x0015CF12
+		// (set) Token: 0x060096CD RID: 38605 RVA: 0x0015ED39 File Offset: 0x0015CF39
 		public virtual List<int> TargetEntities
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040058B5 RID: 22709
+		// Token: 0x04005D1A RID: 23834
 		[Nullable(2)]
 		protected new IExitMonsterMoveWithSpline FbInstance;
 
-		// Token: 0x040058B6 RID: 22710
+		// Token: 0x04005D1B RID: 23835
 		[Nullable(2)]
 		protected new IExitMonsterMoveWithSpline_SetValue PocoInterface;
 	}

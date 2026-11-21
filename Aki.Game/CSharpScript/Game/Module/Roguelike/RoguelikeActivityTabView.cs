@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -13,10 +12,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E06 RID: 19974
+	// Token: 0x02003DCF RID: 15823
 	public class RoguelikeActivityTabView : UiTabViewBase
 	{
-		// Token: 0x0603388D RID: 211085 RVA: 0x00C0B080 File Offset: 0x00C09280
+		// Token: 0x060286F8 RID: 165624 RVA: 0x00B54590 File Offset: 0x00B52790
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -38,7 +37,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603388E RID: 211086 RVA: 0x00C0B170 File Offset: 0x00C09370
+		// Token: 0x060286F9 RID: 165625 RVA: 0x00B54680 File Offset: 0x00B52880
 		protected override void OnStart()
 		{
 			this.ScrollView = new GenericScrollView<RoguelikeActivityTabInstanceItem>(base.GetScrollViewWithScrollbar(0), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<RoguelikeActivityTabInstanceItem>(this.CreateItem), null);
@@ -58,7 +57,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetItem(5).SetUIActive(false);
 		}
 
-		// Token: 0x0603388F RID: 211087 RVA: 0x00C0B230 File Offset: 0x00C09430
+		// Token: 0x060286FA RID: 165626 RVA: 0x00B54740 File Offset: 0x00B52940
 		[NullableContext(1)]
 		private ILayoutItem<RoguelikeActivityTabInstanceItem> CreateItem(object data, UUIItem uiItem, int index)
 		{
@@ -71,19 +70,19 @@ namespace CSharpScript.Game.Module.Roguelike
 			};
 		}
 
-		// Token: 0x06033890 RID: 211088 RVA: 0x00C0B26E File Offset: 0x00C0946E
+		// Token: 0x060286FB RID: 165627 RVA: 0x00B5477E File Offset: 0x00B5297E
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add<int, int>(EEventName.RoguelikeSelectSeason, new Action<int, int>(this.OnSelectSeason));
 		}
 
-		// Token: 0x06033891 RID: 211089 RVA: 0x00C0B28C File Offset: 0x00C0948C
+		// Token: 0x060286FC RID: 165628 RVA: 0x00B5479C File Offset: 0x00B5299C
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int, int>(EEventName.RoguelikeSelectSeason, new Action<int, int>(this.OnSelectSeason));
 		}
 
-		// Token: 0x06033892 RID: 211090 RVA: 0x00C0B2AC File Offset: 0x00C094AC
+		// Token: 0x060286FD RID: 165629 RVA: 0x00B547BC File Offset: 0x00B529BC
 		protected void OnSelectSeason(int seasonId, int selectIndex)
 		{
 			RoguelikeActivityTabItem roguelikeActivityTabItem = this.TabList[this.SelectIndex];
@@ -101,23 +100,23 @@ namespace CSharpScript.Game.Module.Roguelike
 				paramConfigBySeasonId.Value.PointItemMaxCount
 			}));
 			InstanceDungeonEntrance? config = InstanceDungeonEntranceConfig.Instance.GetConfig(rogueSeasonConfigById.Value.InstanceDungeonEntrance);
-			this.ScrollView.RefreshByData<int>(config.Value.InstanceDungeonList().ToList<int>(), new int?(config.Value.InstanceDungeonListLength));
+			this.ScrollView.RefreshByData<int>(config.Value.InstanceDungeonList(), new int?(config.Value.InstanceDungeonListLength));
 		}
 
-		// Token: 0x06033893 RID: 211091 RVA: 0x00C0B3A8 File Offset: 0x00C095A8
+		// Token: 0x060286FE RID: 165630 RVA: 0x00B548B3 File Offset: 0x00B52AB3
 		protected override void OnBeforeShow()
 		{
 			this.OnSelectSeason(this.TabList[this.SelectIndex].SeasonId, this.SelectIndex);
 		}
 
-		// Token: 0x0401B56E RID: 111982
+		// Token: 0x04015F41 RID: 89921
 		[Nullable(1)]
 		public List<RoguelikeActivityTabItem> TabList = new List<RoguelikeActivityTabItem>();
 
-		// Token: 0x0401B56F RID: 111983
+		// Token: 0x04015F42 RID: 89922
 		public int SelectIndex;
 
-		// Token: 0x0401B570 RID: 111984
+		// Token: 0x04015F43 RID: 89923
 		[Nullable(new byte[]
 		{
 			2,
@@ -125,25 +124,25 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		public GenericScrollView<RoguelikeActivityTabInstanceItem> ScrollView;
 
-		// Token: 0x0200AF96 RID: 44950
+		// Token: 0x020099CB RID: 39371
 		private class ERoguelikeActivityTabViewDefine
 		{
-			// Token: 0x040354F0 RID: 218352
+			// Token: 0x0402FF23 RID: 196387
 			public const int DungeonScrollView = 0;
 
-			// Token: 0x040354F1 RID: 218353
+			// Token: 0x0402FF24 RID: 196388
 			public const int DungeonScrollViewItem = 1;
 
-			// Token: 0x040354F2 RID: 218354
+			// Token: 0x0402FF25 RID: 196389
 			public const int TxtItemCount = 2;
 
-			// Token: 0x040354F3 RID: 218355
+			// Token: 0x0402FF26 RID: 196390
 			public const int TxtTime = 3;
 
-			// Token: 0x040354F4 RID: 218356
+			// Token: 0x0402FF27 RID: 196391
 			public const int TabContent = 4;
 
-			// Token: 0x040354F5 RID: 218357
+			// Token: 0x0402FF28 RID: 196392
 			public const int TabContentItem = 5;
 		}
 	}

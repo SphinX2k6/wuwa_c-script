@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027A2 RID: 10146
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A74 RID: 10868
 	public class ISubScreen : IScreenType
 	{
-		// Token: 0x0600E1C3 RID: 57795 RVA: 0x00215A95 File Offset: 0x00213C95
+		// Token: 0x0600EFE1 RID: 61409 RVA: 0x00232829 File Offset: 0x00230A29
 		public static ISubScreen Create(ISubScreen? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004441 RID: 17473
-		// (get) Token: 0x0600E1C4 RID: 57796 RVA: 0x00215AB4 File Offset: 0x00213CB4
+		// Token: 0x170047A7 RID: 18343
+		// (get) Token: 0x0600EFE2 RID: 61410 RVA: 0x00232848 File Offset: 0x00230A48
 		public override EScreenType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004442 RID: 17474
-		// (get) Token: 0x0600E1C5 RID: 57797 RVA: 0x00215AC1 File Offset: 0x00213CC1
+		// Token: 0x170047A8 RID: 18344
+		// (get) Token: 0x0600EFE3 RID: 61411 RVA: 0x00232855 File Offset: 0x00230A55
 		public virtual string SubScreenKey
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D2E RID: 32046
+		// Token: 0x040083E4 RID: 33764
 		private ISubScreen Instance;
 	}
 }

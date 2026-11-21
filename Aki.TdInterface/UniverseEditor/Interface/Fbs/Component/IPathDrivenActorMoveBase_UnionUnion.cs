@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056F3 RID: 22259
+	// Token: 0x02005CE2 RID: 23778
 	public class IPathDrivenActorMoveBase_UnionUnion
 	{
-		// Token: 0x1700A5B0 RID: 42416
-		// (get) Token: 0x0602532A RID: 152362 RVA: 0x00522389 File Offset: 0x00520589
-		// (set) Token: 0x0602532B RID: 152363 RVA: 0x00522391 File Offset: 0x00520591
+		// Token: 0x1700AEB3 RID: 44723
+		// (get) Token: 0x06027791 RID: 161681 RVA: 0x00566DD5 File Offset: 0x00564FD5
+		// (set) Token: 0x06027792 RID: 161682 RVA: 0x00566DDD File Offset: 0x00564FDD
 		public IPathDrivenActorMoveBase_Union Type { get; set; }
 
-		// Token: 0x1700A5B1 RID: 42417
-		// (get) Token: 0x0602532C RID: 152364 RVA: 0x0052239A File Offset: 0x0052059A
-		// (set) Token: 0x0602532D RID: 152365 RVA: 0x005223A2 File Offset: 0x005205A2
+		// Token: 0x1700AEB4 RID: 44724
+		// (get) Token: 0x06027793 RID: 161683 RVA: 0x00566DE6 File Offset: 0x00564FE6
+		// (set) Token: 0x06027794 RID: 161684 RVA: 0x00566DEE File Offset: 0x00564FEE
 		public object Value { get; set; }
 
-		// Token: 0x0602532E RID: 152366 RVA: 0x005223AB File Offset: 0x005205AB
+		// Token: 0x06027795 RID: 161685 RVA: 0x00566DF7 File Offset: 0x00564FF7
 		public IPathDrivenActorMoveBase_UnionUnion()
 		{
 			this.Type = IPathDrivenActorMoveBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602532F RID: 152367 RVA: 0x005223C1 File Offset: 0x005205C1
+		// Token: 0x06027796 RID: 161686 RVA: 0x00566E0D File Offset: 0x0056500D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06025330 RID: 152368 RVA: 0x005223D3 File Offset: 0x005205D3
+		// Token: 0x06027797 RID: 161687 RVA: 0x00566E1F File Offset: 0x0056501F
 		public IPathDrivenActorMoveBaseT AsIPathDrivenActorMoveBase()
 		{
 			return this.As<IPathDrivenActorMoveBaseT>();
 		}
 
-		// Token: 0x06025331 RID: 152369 RVA: 0x005223DB File Offset: 0x005205DB
+		// Token: 0x06027798 RID: 161688 RVA: 0x00566E27 File Offset: 0x00565027
 		public static IPathDrivenActorMoveBase_UnionUnion FromIPathDrivenActorMoveBase(IPathDrivenActorMoveBaseT _ipathdrivenactormovebase)
 		{
 			return new IPathDrivenActorMoveBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06025332 RID: 152370 RVA: 0x005223F0 File Offset: 0x005205F0
+		// Token: 0x06027799 RID: 161689 RVA: 0x00566E3C File Offset: 0x0056503C
 		public IPathDrivenActorSplineMoveT AsIPathDrivenActorSplineMove()
 		{
 			return this.As<IPathDrivenActorSplineMoveT>();
 		}
 
-		// Token: 0x06025333 RID: 152371 RVA: 0x005223F8 File Offset: 0x005205F8
+		// Token: 0x0602779A RID: 161690 RVA: 0x00566E44 File Offset: 0x00565044
 		public static IPathDrivenActorMoveBase_UnionUnion FromIPathDrivenActorSplineMove(IPathDrivenActorSplineMoveT _ipathdrivenactorsplinemove)
 		{
 			return new IPathDrivenActorMoveBase_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06025334 RID: 152372 RVA: 0x00522410 File Offset: 0x00520610
+		// Token: 0x0602779B RID: 161691 RVA: 0x00566E5C File Offset: 0x0056505C
 		public static int Pack(FlatBufferBuilder builder, IPathDrivenActorMoveBase_UnionUnion _o)
 		{
 			IPathDrivenActorMoveBase_Union type = _o.Type;

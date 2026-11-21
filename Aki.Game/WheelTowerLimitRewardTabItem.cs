@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015D2 RID: 5586
+// Token: 0x02000A8A RID: 2698
 public class WheelTowerLimitRewardTabItem : UiPanelBase
 {
-	// Token: 0x06009E27 RID: 40487 RVA: 0x00226F70 File Offset: 0x00225170
+	// Token: 0x06007205 RID: 29189 RVA: 0x00230D20 File Offset: 0x0022EF20
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -34,7 +34,7 @@ public class WheelTowerLimitRewardTabItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009E28 RID: 40488 RVA: 0x00227058 File Offset: 0x00225258
+	// Token: 0x06007206 RID: 29190 RVA: 0x00230E08 File Offset: 0x0022F008
 	protected override void OnStart()
 	{
 		UUIExtendToggle toggle = base.GetExtendToggle(0);
@@ -42,7 +42,7 @@ public class WheelTowerLimitRewardTabItem : UiPanelBase
 		WheelTowerModel.Instance.ActivityData.RecordReadReward();
 	}
 
-	// Token: 0x06009E29 RID: 40489 RVA: 0x002270A4 File Offset: 0x002252A4
+	// Token: 0x06007207 RID: 29191 RVA: 0x00230E54 File Offset: 0x0022F054
 	public void Refresh(int diff)
 	{
 		this.Diff = diff;
@@ -69,14 +69,14 @@ public class WheelTowerLimitRewardTabItem : UiPanelBase
 		item.SetUIActive(activityData.HasAnyRewardCanReceive(filterMode));
 	}
 
-	// Token: 0x06009E2A RID: 40490 RVA: 0x0022714E File Offset: 0x0022534E
+	// Token: 0x06007208 RID: 29192 RVA: 0x00230EFE File Offset: 0x0022F0FE
 	[NullableContext(1)]
 	public void SetToggleClickCallback(Action<int, UUIExtendToggle> callback)
 	{
 		this.ToggleClickCallback = callback;
 	}
 
-	// Token: 0x06009E2B RID: 40491 RVA: 0x00227157 File Offset: 0x00225357
+	// Token: 0x06007209 RID: 29193 RVA: 0x00230F07 File Offset: 0x0022F107
 	public void SetToggleStateForce(bool isSelected, bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -87,13 +87,13 @@ public class WheelTowerLimitRewardTabItem : UiPanelBase
 		extendToggle.SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x06009E2C RID: 40492 RVA: 0x00227174 File Offset: 0x00225374
+	// Token: 0x0600720A RID: 29194 RVA: 0x00230F24 File Offset: 0x0022F124
 	public void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleStateForce(false, false);
 	}
 
-	// Token: 0x06009E2D RID: 40493 RVA: 0x0022717E File Offset: 0x0022537E
+	// Token: 0x0600720B RID: 29195 RVA: 0x00230F2E File Offset: 0x0022F12E
 	private void OnClickToggle(EToggleState state)
 	{
 		Action<int, UUIExtendToggle> toggleClickCallback = this.ToggleClickCallback;
@@ -104,10 +104,10 @@ public class WheelTowerLimitRewardTabItem : UiPanelBase
 		toggleClickCallback(this.Diff, base.GetExtendToggle(0));
 	}
 
-	// Token: 0x0400464F RID: 17999
+	// Token: 0x040046F5 RID: 18165
 	private int Diff = -1;
 
-	// Token: 0x04004650 RID: 18000
+	// Token: 0x040046F6 RID: 18166
 	[Nullable(new byte[]
 	{
 		2,

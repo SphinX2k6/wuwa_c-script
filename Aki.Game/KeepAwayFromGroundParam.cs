@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02000141 RID: 321
+// Token: 0x02000145 RID: 325
 internal class KeepAwayFromGroundParam
 {
-	// Token: 0x04000E4C RID: 3660
+	// Token: 0x04000E8F RID: 3727
 	public float NowTime;
 
-	// Token: 0x04000E4D RID: 3661
+	// Token: 0x04000E90 RID: 3728
 	public float TotalTime;
 }

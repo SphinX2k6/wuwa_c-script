@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022DA RID: 8922
+	// Token: 0x02002549 RID: 9545
 	public class ECharacterMoveToPointTypeJsonConverter : JsonConverter<ECharacterMoveToPointType>
 	{
-		// Token: 0x0600C355 RID: 50005 RVA: 0x001C8B0C File Offset: 0x001C6D0C
+		// Token: 0x0600CF24 RID: 53028 RVA: 0x001E0914 File Offset: 0x001DEB14
 		public override ECharacterMoveToPointType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ECharacterMoveToPointTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C356 RID: 50006 RVA: 0x001C8B30 File Offset: 0x001C6D30
+		// Token: 0x0600CF25 RID: 53029 RVA: 0x001E0938 File Offset: 0x001DEB38
 		public override void Write(Utf8JsonWriter writer, ECharacterMoveToPointType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

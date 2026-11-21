@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DF8 RID: 7672
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200202B RID: 8235
 	public class ISendBattleEventsForMonsterSummon : IExecBattleActionType
 	{
-		// Token: 0x0600A429 RID: 42025 RVA: 0x00174638 File Offset: 0x00172838
+		// Token: 0x0600AED1 RID: 44753 RVA: 0x0018A040 File Offset: 0x00188240
 		private ISendBattleEventsForMonsterSummon_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A42A RID: 42026 RVA: 0x00174670 File Offset: 0x00172870
+		// Token: 0x0600AED2 RID: 44754 RVA: 0x0018A078 File Offset: 0x00188278
 		public static ISendBattleEventsForMonsterSummon Create([Nullable(2)] ISendBattleEventsForMonsterSummon instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A42B RID: 42027 RVA: 0x00174683 File Offset: 0x00172883
+		// Token: 0x0600AED3 RID: 44755 RVA: 0x0018A08B File Offset: 0x0018828B
 		public static ISendBattleEventsForMonsterSummon CreateFromSetValue([Nullable(2)] ISendBattleEventsForMonsterSummon_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A42C RID: 42028 RVA: 0x00174696 File Offset: 0x00172896
+		// Token: 0x0600AED4 RID: 44756 RVA: 0x0018A09E File Offset: 0x0018829E
 		public new ISendBattleEventsForMonsterSummon_SetValue ToSetValue()
 		{
 			return new ISendBattleEventsForMonsterSummon_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003277 RID: 12919
-		// (get) Token: 0x0600A42D RID: 42029 RVA: 0x001746B5 File Offset: 0x001728B5
-		// (set) Token: 0x0600A42E RID: 42030 RVA: 0x001746E0 File Offset: 0x001728E0
+		// Token: 0x17003536 RID: 13622
+		// (get) Token: 0x0600AED5 RID: 44757 RVA: 0x0018A0BD File Offset: 0x001882BD
+		// (set) Token: 0x0600AED6 RID: 44758 RVA: 0x0018A0E8 File Offset: 0x001882E8
 		public override EExecBattleActionType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003278 RID: 12920
-		// (get) Token: 0x0600A42F RID: 42031 RVA: 0x001746F0 File Offset: 0x001728F0
-		// (set) Token: 0x0600A430 RID: 42032 RVA: 0x00174783 File Offset: 0x00172983
+		// Token: 0x17003537 RID: 13623
+		// (get) Token: 0x0600AED7 RID: 44759 RVA: 0x0018A0F8 File Offset: 0x001882F8
+		// (set) Token: 0x0600AED8 RID: 44760 RVA: 0x0018A18B File Offset: 0x0018838B
 		public virtual List<ISendBattleEventsForMonsterSummonConfig> Configs
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006252 RID: 25170
+		// Token: 0x04006829 RID: 26665
 		[Nullable(2)]
 		protected new ISendBattleEventsForMonsterSummon FbInstance;
 
-		// Token: 0x04006253 RID: 25171
+		// Token: 0x0400682A RID: 26666
 		[Nullable(2)]
 		protected new ISendBattleEventsForMonsterSummon_SetValue PocoInterface;
 
-		// Token: 0x04006254 RID: 25172
+		// Token: 0x0400682B RID: 26667
 		private List<ISendBattleEventsForMonsterSummonConfig> _ConfigsCache;
 
-		// Token: 0x04006255 RID: 25173
+		// Token: 0x0400682C RID: 26668
 		private bool _ConfigsInited;
 	}
 }

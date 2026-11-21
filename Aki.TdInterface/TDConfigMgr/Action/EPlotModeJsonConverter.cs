@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002284 RID: 8836
+	// Token: 0x020024F1 RID: 9457
 	public class EPlotModeJsonConverter : JsonConverter<EPlotMode>
 	{
-		// Token: 0x0600C1D2 RID: 49618 RVA: 0x001BCBCC File Offset: 0x001BADCC
+		// Token: 0x0600CD98 RID: 52632 RVA: 0x001D4350 File Offset: 0x001D2550
 		public override EPlotMode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EPlotModeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C1D3 RID: 49619 RVA: 0x001BCBF0 File Offset: 0x001BADF0
+		// Token: 0x0600CD99 RID: 52633 RVA: 0x001D4374 File Offset: 0x001D2574
 		public override void Write(Utf8JsonWriter writer, EPlotMode value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

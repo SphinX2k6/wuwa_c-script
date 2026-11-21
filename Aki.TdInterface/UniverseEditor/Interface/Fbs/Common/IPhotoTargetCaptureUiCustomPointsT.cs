@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E34 RID: 24116
+	// Token: 0x02006471 RID: 25713
 	public class IPhotoTargetCaptureUiCustomPointsT
 	{
-		// Token: 0x1700B45C RID: 46172
-		// (get) Token: 0x06029494 RID: 169108 RVA: 0x005A9687 File Offset: 0x005A7887
-		// (set) Token: 0x06029495 RID: 169109 RVA: 0x005A968F File Offset: 0x005A788F
+		// Token: 0x1700BDC2 RID: 48578
+		// (get) Token: 0x0602BB1E RID: 178974 RVA: 0x005F23B7 File Offset: 0x005F05B7
+		// (set) Token: 0x0602BB1F RID: 178975 RVA: 0x005F23BF File Offset: 0x005F05BF
 		public EPhotoTargetCaptureUiType Type { get; set; }
 
-		// Token: 0x1700B45D RID: 46173
-		// (get) Token: 0x06029496 RID: 169110 RVA: 0x005A9698 File Offset: 0x005A7898
-		// (set) Token: 0x06029497 RID: 169111 RVA: 0x005A96A0 File Offset: 0x005A78A0
+		// Token: 0x1700BDC3 RID: 48579
+		// (get) Token: 0x0602BB20 RID: 178976 RVA: 0x005F23C8 File Offset: 0x005F05C8
+		// (set) Token: 0x0602BB21 RID: 178977 RVA: 0x005F23D0 File Offset: 0x005F05D0
 		public List<IVectorInfoT> Points { get; set; }
 
-		// Token: 0x06029498 RID: 169112 RVA: 0x005A96A9 File Offset: 0x005A78A9
+		// Token: 0x0602BB22 RID: 178978 RVA: 0x005F23D9 File Offset: 0x005F05D9
 		public IPhotoTargetCaptureUiCustomPointsT()
 		{
 			this.Type = EPhotoTargetCaptureUiType.RequiredPointsCenter;

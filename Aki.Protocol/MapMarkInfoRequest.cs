@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000988 RID: 2440
+	// Token: 0x02000977 RID: 2423
 	[NetMessage(EMessageId.MapMarkInfoRequest)]
 	public sealed class MapMarkInfoRequest : IMessage<MapMarkInfoRequest>, IMessage, IEquatable<MapMarkInfoRequest>, IDeepCloneable<MapMarkInfoRequest>, IBufferMessage
 	{
-		// Token: 0x0600D687 RID: 54919 RVA: 0x001F8DA9 File Offset: 0x001F6FA9
+		// Token: 0x0600D56D RID: 54637 RVA: 0x001F6BC5 File Offset: 0x001F4DC5
 		[NullableContext(1)]
 		public static MapMarkInfoRequest Create()
 		{
 			return new MapMarkInfoRequest();
 		}
 
-		// Token: 0x17002B70 RID: 11120
-		// (get) Token: 0x0600D688 RID: 54920 RVA: 0x001F8DB0 File Offset: 0x001F6FB0
+		// Token: 0x17002B32 RID: 11058
+		// (get) Token: 0x0600D56E RID: 54638 RVA: 0x001F6BCC File Offset: 0x001F4DCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002B71 RID: 11121
-		// (get) Token: 0x0600D689 RID: 54921 RVA: 0x001F8DB3 File Offset: 0x001F6FB3
+		// Token: 0x17002B33 RID: 11059
+		// (get) Token: 0x0600D56F RID: 54639 RVA: 0x001F6BCF File Offset: 0x001F4DCF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D68A RID: 54922 RVA: 0x001F8DBA File Offset: 0x001F6FBA
+		// Token: 0x0600D570 RID: 54640 RVA: 0x001F6BD6 File Offset: 0x001F4DD6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapMarkInfoRequest()
 		{
 		}
 
-		// Token: 0x0600D68B RID: 54923 RVA: 0x001F8DC2 File Offset: 0x001F6FC2
+		// Token: 0x0600D571 RID: 54641 RVA: 0x001F6BDE File Offset: 0x001F4DDE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapMarkInfoRequest(MapMarkInfoRequest other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600D68C RID: 54924 RVA: 0x001F8DDB File Offset: 0x001F6FDB
+		// Token: 0x0600D572 RID: 54642 RVA: 0x001F6BF7 File Offset: 0x001F4DF7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapMarkInfoRequest Clone()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			return new MapMarkInfoRequest(this);
 		}
 
-		// Token: 0x0600D68D RID: 54925 RVA: 0x001F8DE3 File Offset: 0x001F6FE3
+		// Token: 0x0600D573 RID: 54643 RVA: 0x001F6BFF File Offset: 0x001F4DFF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MapMarkInfoRequest);
 		}
 
-		// Token: 0x0600D68E RID: 54926 RVA: 0x001F8DF1 File Offset: 0x001F6FF1
+		// Token: 0x0600D574 RID: 54644 RVA: 0x001F6C0D File Offset: 0x001F4E0D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MapMarkInfoRequest other)
@@ -81,7 +81,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x0600D68F RID: 54927 RVA: 0x001F8E10 File Offset: 0x001F7010
+		// Token: 0x0600D575 RID: 54645 RVA: 0x001F6C2C File Offset: 0x001F4E2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D690 RID: 54928 RVA: 0x001F8E36 File Offset: 0x001F7036
+		// Token: 0x0600D576 RID: 54646 RVA: 0x001F6C52 File Offset: 0x001F4E52
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -102,7 +102,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600D691 RID: 54929 RVA: 0x001F8E43 File Offset: 0x001F7043
+		// Token: 0x0600D577 RID: 54647 RVA: 0x001F6C5F File Offset: 0x001F4E5F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600D692 RID: 54930 RVA: 0x001F8E4C File Offset: 0x001F704C
+		// Token: 0x0600D578 RID: 54648 RVA: 0x001F6C68 File Offset: 0x001F4E68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -121,7 +121,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D693 RID: 54931 RVA: 0x001F8E64 File Offset: 0x001F7064
+		// Token: 0x0600D579 RID: 54649 RVA: 0x001F6C80 File Offset: 0x001F4E80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D694 RID: 54932 RVA: 0x001F8E8A File Offset: 0x001F708A
+		// Token: 0x0600D57A RID: 54650 RVA: 0x001F6CA6 File Offset: 0x001F4EA6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MapMarkInfoRequest other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600D695 RID: 54933 RVA: 0x001F8EA7 File Offset: 0x001F70A7
+		// Token: 0x0600D57B RID: 54651 RVA: 0x001F6CC3 File Offset: 0x001F4EC3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600D696 RID: 54934 RVA: 0x001F8EB0 File Offset: 0x001F70B0
+		// Token: 0x0600D57C RID: 54652 RVA: 0x001F6CCC File Offset: 0x001F4ECC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -170,7 +170,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040059AF RID: 22959
+		// Token: 0x040059B8 RID: 22968
 		private UnknownFieldSet _unknownFields;
 	}
 }

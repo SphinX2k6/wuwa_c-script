@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200732C RID: 29484
+	// Token: 0x02007B04 RID: 31492
 	public class ITalkOptionConditionSystemConfigBase_UnionUnion
 	{
-		// Token: 0x1700DFF9 RID: 57337
-		// (get) Token: 0x06035820 RID: 219168 RVA: 0x0074A339 File Offset: 0x00748539
-		// (set) Token: 0x06035821 RID: 219169 RVA: 0x0074A341 File Offset: 0x00748541
+		// Token: 0x1700EBF5 RID: 60405
+		// (get) Token: 0x06038B53 RID: 232275 RVA: 0x007ABEC1 File Offset: 0x007AA0C1
+		// (set) Token: 0x06038B54 RID: 232276 RVA: 0x007ABEC9 File Offset: 0x007AA0C9
 		public ITalkOptionConditionSystemConfigBase_Union Type { get; set; }
 
-		// Token: 0x1700DFFA RID: 57338
-		// (get) Token: 0x06035822 RID: 219170 RVA: 0x0074A34A File Offset: 0x0074854A
-		// (set) Token: 0x06035823 RID: 219171 RVA: 0x0074A352 File Offset: 0x00748552
+		// Token: 0x1700EBF6 RID: 60406
+		// (get) Token: 0x06038B55 RID: 232277 RVA: 0x007ABED2 File Offset: 0x007AA0D2
+		// (set) Token: 0x06038B56 RID: 232278 RVA: 0x007ABEDA File Offset: 0x007AA0DA
 		public object Value { get; set; }
 
-		// Token: 0x06035824 RID: 219172 RVA: 0x0074A35B File Offset: 0x0074855B
+		// Token: 0x06038B57 RID: 232279 RVA: 0x007ABEE3 File Offset: 0x007AA0E3
 		public ITalkOptionConditionSystemConfigBase_UnionUnion()
 		{
 			this.Type = ITalkOptionConditionSystemConfigBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06035825 RID: 219173 RVA: 0x0074A371 File Offset: 0x00748571
+		// Token: 0x06038B58 RID: 232280 RVA: 0x007ABEF9 File Offset: 0x007AA0F9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06035826 RID: 219174 RVA: 0x0074A383 File Offset: 0x00748583
+		// Token: 0x06038B59 RID: 232281 RVA: 0x007ABF0B File Offset: 0x007AA10B
 		public ITalkOptionConditionSystemConfigBaseT AsITalkOptionConditionSystemConfigBase()
 		{
 			return this.As<ITalkOptionConditionSystemConfigBaseT>();
 		}
 
-		// Token: 0x06035827 RID: 219175 RVA: 0x0074A38B File Offset: 0x0074858B
+		// Token: 0x06038B5A RID: 232282 RVA: 0x007ABF13 File Offset: 0x007AA113
 		public static ITalkOptionConditionSystemConfigBase_UnionUnion FromITalkOptionConditionSystemConfigBase(ITalkOptionConditionSystemConfigBaseT _italkoptionconditionsystemconfigbase)
 		{
 			return new ITalkOptionConditionSystemConfigBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035828 RID: 219176 RVA: 0x0074A3A0 File Offset: 0x007485A0
+		// Token: 0x06038B5B RID: 232283 RVA: 0x007ABF28 File Offset: 0x007AA128
 		public ITalkOptionConditionSolarSchoolT AsITalkOptionConditionSolarSchool()
 		{
 			return this.As<ITalkOptionConditionSolarSchoolT>();
 		}
 
-		// Token: 0x06035829 RID: 219177 RVA: 0x0074A3A8 File Offset: 0x007485A8
+		// Token: 0x06038B5C RID: 232284 RVA: 0x007ABF30 File Offset: 0x007AA130
 		public static ITalkOptionConditionSystemConfigBase_UnionUnion FromITalkOptionConditionSolarSchool(ITalkOptionConditionSolarSchoolT _italkoptionconditionsolarschool)
 		{
 			return new ITalkOptionConditionSystemConfigBase_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603582A RID: 219178 RVA: 0x0074A3C0 File Offset: 0x007485C0
+		// Token: 0x06038B5D RID: 232285 RVA: 0x007ABF48 File Offset: 0x007AA148
 		public static int Pack(FlatBufferBuilder builder, ITalkOptionConditionSystemConfigBase_UnionUnion _o)
 		{
 			ITalkOptionConditionSystemConfigBase_Union type = _o.Type;

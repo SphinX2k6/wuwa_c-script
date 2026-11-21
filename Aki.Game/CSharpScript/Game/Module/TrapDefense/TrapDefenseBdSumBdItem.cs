@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004ADE RID: 19166
+	// Token: 0x02003A86 RID: 14982
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseBdSumBdItem : GridProxyAbstract<TrapDefenseBdData>
 	{
-		// Token: 0x06031A4F RID: 203343 RVA: 0x00B84A44 File Offset: 0x00B82C44
+		// Token: 0x060267DF RID: 157663 RVA: 0x00AC89F8 File Offset: 0x00AC6BF8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -56,13 +56,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031A50 RID: 203344 RVA: 0x00B84BF4 File Offset: 0x00B82DF4
+		// Token: 0x060267E0 RID: 157664 RVA: 0x00AC8BA8 File Offset: 0x00AC6DA8
 		[Conditional("WITH_EDITOR")]
 		private void EditorShowActorLabel()
 		{
 		}
 
-		// Token: 0x06031A51 RID: 203345 RVA: 0x00B84BF8 File Offset: 0x00B82DF8
+		// Token: 0x060267E1 RID: 157665 RVA: 0x00AC8BAC File Offset: 0x00AC6DAC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseBdSumBdItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031A52 RID: 203346 RVA: 0x00B84C3C File Offset: 0x00B82E3C
+		// Token: 0x060267E2 RID: 157666 RVA: 0x00AC8BF0 File Offset: 0x00AC6DF0
 		public override UniTask RefreshAsync(TrapDefenseBdData data, bool isSelected, int gridIndex)
 		{
 			TrapDefenseBdSumBdItem.<RefreshAsync>d__7 <RefreshAsync>d__;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031A53 RID: 203347 RVA: 0x00B84C88 File Offset: 0x00B82E88
+		// Token: 0x060267E3 RID: 157667 RVA: 0x00AC8C3C File Offset: 0x00AC6E3C
 		public UniTask UpdateProgress()
 		{
 			TrapDefenseBdSumBdItem.<UpdateProgress>d__8 <UpdateProgress>d__;
@@ -96,13 +96,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <UpdateProgress>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031A54 RID: 203348 RVA: 0x00B84CCB File Offset: 0x00B82ECB
+		// Token: 0x060267E4 RID: 157668 RVA: 0x00AC8C7F File Offset: 0x00AC6E7F
 		private TrapDefenseBdSumBdProgressItem CreateItemLayoutProgress()
 		{
 			return new TrapDefenseBdSumBdProgressItem();
 		}
 
-		// Token: 0x06031A55 RID: 203349 RVA: 0x00B84CD2 File Offset: 0x00B82ED2
+		// Token: 0x060267E5 RID: 157669 RVA: 0x00AC8C86 File Offset: 0x00AC6E86
 		private void OnClickToggleRoot(EToggleState check)
 		{
 			if (check == EToggleState.ETT_Checked)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A56 RID: 203350 RVA: 0x00B84CF8 File Offset: 0x00B82EF8
+		// Token: 0x060267E6 RID: 157670 RVA: 0x00AC8CAC File Offset: 0x00AC6EAC
 		public override void OnSelected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A57 RID: 203351 RVA: 0x00B84D7C File Offset: 0x00B82F7C
+		// Token: 0x060267E7 RID: 157671 RVA: 0x00AC8D30 File Offset: 0x00AC6F30
 		public override void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -149,47 +149,47 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A836 RID: 108598
+		// Token: 0x04015188 RID: 86408
 		public TrapDefenseBdData ItemData;
 
-		// Token: 0x0401A837 RID: 108599
+		// Token: 0x04015189 RID: 86409
 		public Action<TrapDefenseBdData> ClickCallBack;
 
-		// Token: 0x0401A838 RID: 108600
+		// Token: 0x0401518A RID: 86410
 		public GenericLayout<TrapDefenseBdSumBdProgressItem, ITrapDefenseBdProgressInfo> LayoutProgress;
 
-		// Token: 0x0200AC64 RID: 44132
+		// Token: 0x02009684 RID: 38532
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04034642 RID: 214594
+			// Token: 0x0402EFF3 RID: 192499
 			public const int ToggleRoot = 0;
 
-			// Token: 0x04034643 RID: 214595
+			// Token: 0x0402EFF4 RID: 192500
 			public const int TextureBgQuality = 1;
 
-			// Token: 0x04034644 RID: 214596
+			// Token: 0x0402EFF5 RID: 192501
 			public const int TextureIcon = 2;
 
-			// Token: 0x04034645 RID: 214597
+			// Token: 0x0402EFF6 RID: 192502
 			public const int TextTitle = 3;
 
-			// Token: 0x04034646 RID: 214598
+			// Token: 0x0402EFF7 RID: 192503
 			public const int TextDesc = 4;
 
-			// Token: 0x04034647 RID: 214599
+			// Token: 0x0402EFF8 RID: 192504
 			public const int TextProgress = 5;
 
-			// Token: 0x04034648 RID: 214600
+			// Token: 0x0402EFF9 RID: 192505
 			public const int LayoutProgress = 6;
 
-			// Token: 0x04034649 RID: 214601
+			// Token: 0x0402EFFA RID: 192506
 			public const int ItemLayoutProgress = 7;
 
-			// Token: 0x0403464A RID: 214602
+			// Token: 0x0402EFFB RID: 192507
 			public const int ItemNormalState = 8;
 
-			// Token: 0x0403464B RID: 214603
+			// Token: 0x0402EFFC RID: 192508
 			public const int ItemLockState = 9;
 		}
 	}

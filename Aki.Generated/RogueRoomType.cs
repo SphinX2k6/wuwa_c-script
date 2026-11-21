@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200101E RID: 4126
+	// Token: 0x02001106 RID: 4358
 	public struct RogueRoomType : IFlatbufferObject
 	{
-		// Token: 0x17003106 RID: 12550
-		// (get) Token: 0x0600C4B6 RID: 50358 RVA: 0x002F16C9 File Offset: 0x002EF8C9
+		// Token: 0x17003181 RID: 12673
+		// (get) Token: 0x0600CB00 RID: 51968 RVA: 0x0030D6D1 File Offset: 0x0030B8D1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C4B7 RID: 50359 RVA: 0x002F16D6 File Offset: 0x002EF8D6
+		// Token: 0x0600CB01 RID: 51969 RVA: 0x0030D6DE File Offset: 0x0030B8DE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C4B8 RID: 50360 RVA: 0x002F16E0 File Offset: 0x002EF8E0
+		// Token: 0x0600CB02 RID: 51970 RVA: 0x0030D6E8 File Offset: 0x0030B8E8
 		public static RogueRoomType GetRootAsRogueRoomType(ByteBuffer _bb)
 		{
 			return RogueRoomType.GetRootAsRogueRoomType(_bb, default(RogueRoomType));
 		}
 
-		// Token: 0x0600C4B9 RID: 50361 RVA: 0x002F16FC File Offset: 0x002EF8FC
+		// Token: 0x0600CB03 RID: 51971 RVA: 0x0030D704 File Offset: 0x0030B904
 		public static RogueRoomType GetRootAsRogueRoomType(ByteBuffer _bb, RogueRoomType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C4BA RID: 50362 RVA: 0x002F1719 File Offset: 0x002EF919
+		// Token: 0x0600CB04 RID: 51972 RVA: 0x0030D721 File Offset: 0x0030B921
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C4BB RID: 50363 RVA: 0x002F1728 File Offset: 0x002EF928
+		// Token: 0x0600CB05 RID: 51973 RVA: 0x0030D730 File Offset: 0x0030B930
 		public RogueRoomType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003107 RID: 12551
-		// (get) Token: 0x0600C4BC RID: 50364 RVA: 0x002F1738 File Offset: 0x002EF938
+		// Token: 0x17003182 RID: 12674
+		// (get) Token: 0x0600CB06 RID: 51974 RVA: 0x0030D740 File Offset: 0x0030B940
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003108 RID: 12552
-		// (get) Token: 0x0600C4BD RID: 50365 RVA: 0x002F1774 File Offset: 0x002EF974
+		// Token: 0x17003183 RID: 12675
+		// (get) Token: 0x0600CB07 RID: 51975 RVA: 0x0030D77C File Offset: 0x0030B97C
 		public string RoomType
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C4BE RID: 50366 RVA: 0x002F17AB File Offset: 0x002EF9AB
+		// Token: 0x0600CB08 RID: 51976 RVA: 0x0030D7B3 File Offset: 0x0030B9B3
 		public Span<byte> GetRoomTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600C4BF RID: 50367 RVA: 0x002F17BA File Offset: 0x002EF9BA
+		// Token: 0x0600CB09 RID: 51977 RVA: 0x0030D7C2 File Offset: 0x0030B9C2
 		public byte[] GetRoomTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003109 RID: 12553
-		// (get) Token: 0x0600C4C0 RID: 50368 RVA: 0x002F17D4 File Offset: 0x002EF9D4
+		// Token: 0x17003184 RID: 12676
+		// (get) Token: 0x0600CB0A RID: 51978 RVA: 0x0030D7DC File Offset: 0x0030B9DC
 		public int RoomTipsType
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700310A RID: 12554
-		// (get) Token: 0x0600C4C1 RID: 50369 RVA: 0x002F1810 File Offset: 0x002EFA10
+		// Token: 0x17003185 RID: 12677
+		// (get) Token: 0x0600CB0B RID: 51979 RVA: 0x0030D818 File Offset: 0x0030BA18
 		public string RoomsMusicState
 		{
 			get
@@ -119,19 +119,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C4C2 RID: 50370 RVA: 0x002F1848 File Offset: 0x002EFA48
+		// Token: 0x0600CB0C RID: 51980 RVA: 0x0030D850 File Offset: 0x0030BA50
 		public Span<byte> GetRoomsMusicStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600C4C3 RID: 50371 RVA: 0x002F1858 File Offset: 0x002EFA58
+		// Token: 0x0600CB0D RID: 51981 RVA: 0x0030D860 File Offset: 0x0030BA60
 		public byte[] GetRoomsMusicStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0400510E RID: 20750
+		// Token: 0x040056F6 RID: 22262
 		private Table __p;
 	}
 }

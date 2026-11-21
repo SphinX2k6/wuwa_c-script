@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005AF2 RID: 23282
+	// Token: 0x02004AD3 RID: 19155
 	public enum ECookListType
 	{
-		// Token: 0x0401EC34 RID: 126004
+		// Token: 0x040196F0 RID: 104176
 		Cooking,
-		// Token: 0x0401EC35 RID: 126005
+		// Token: 0x040196F1 RID: 104177
 		Machining
 	}
 }

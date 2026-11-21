@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C76 RID: 19574
+	// Token: 0x02003C27 RID: 15399
 	public class SheriffReportRecordItem : UiTabViewBase
 	{
-		// Token: 0x06032983 RID: 207235 RVA: 0x00BCC310 File Offset: 0x00BCA510
+		// Token: 0x06027736 RID: 161590 RVA: 0x00B10F74 File Offset: 0x00B0F174
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032984 RID: 207236 RVA: 0x00BCC3BC File Offset: 0x00BCA5BC
+		// Token: 0x06027737 RID: 161591 RVA: 0x00B11020 File Offset: 0x00B0F220
 		protected override void OnBeforeShow()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			uiViewSequence.PlayOrReplaySequenceByName("Start", false, null);
 		}
 
-		// Token: 0x06032985 RID: 207237 RVA: 0x00BCC3E8 File Offset: 0x00BCA5E8
+		// Token: 0x06027738 RID: 161592 RVA: 0x00B1104C File Offset: 0x00B0F24C
 		protected override void OnStart()
 		{
 			int criminalId = (int)this.ExtraParams;
@@ -61,19 +61,19 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}));
 		}
 
-		// Token: 0x0200AE2B RID: 44587
+		// Token: 0x02009849 RID: 38985
 		private static class EDefine
 		{
-			// Token: 0x04034E69 RID: 216681
+			// Token: 0x0402F80E RID: 194574
 			public const int TexRecord = 0;
 
-			// Token: 0x04034E6A RID: 216682
+			// Token: 0x0402F80F RID: 194575
 			public const int TxtTime = 1;
 
-			// Token: 0x04034E6B RID: 216683
+			// Token: 0x0402F810 RID: 194576
 			public const int TxtName = 2;
 
-			// Token: 0x04034E6C RID: 216684
+			// Token: 0x0402F811 RID: 194577
 			public const int TxtInfo = 3;
 		}
 	}

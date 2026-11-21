@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E0D RID: 3597
+	// Token: 0x02000F09 RID: 3849
 	public class IWuWaGoBowTrap : IWuWaGoEntityBase
 	{
-		// Token: 0x06005168 RID: 20840 RVA: 0x000C8D94 File Offset: 0x000C6F94
-		[NullableContext(1)]
+		// Token: 0x0600568F RID: 22159 RVA: 0x000D465C File Offset: 0x000D285C
 		public static IWuWaGoBowTrap Create(IWuWaGoBowTrap? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B0B RID: 6923
-		// (get) Token: 0x06005169 RID: 20841 RVA: 0x000C8DB3 File Offset: 0x000C6FB3
+		// Token: 0x17001C78 RID: 7288
+		// (get) Token: 0x06005690 RID: 22160 RVA: 0x000D467B File Offset: 0x000D287B
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EE2 RID: 12002
+		// Token: 0x040031AA RID: 12714
 		private IWuWaGoBowTrap Instance;
 	}
 }

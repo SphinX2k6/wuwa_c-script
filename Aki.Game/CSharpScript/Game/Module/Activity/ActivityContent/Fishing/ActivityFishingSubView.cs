@@ -11,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006581 RID: 25985
+	// Token: 0x020054FF RID: 21759
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityFishingSubView : ActivitySubViewBase
 	{
-		// Token: 0x1700954F RID: 38223
-		// (get) Token: 0x060411FB RID: 266747 RVA: 0x00FC85DA File Offset: 0x00FC67DA
+		// Token: 0x170068B1 RID: 26801
+		// (get) Token: 0x06035EC0 RID: 220864 RVA: 0x00F0F58E File Offset: 0x00F0D78E
 		[Nullable(2)]
 		protected new ActivityFishingData ActivityBaseData
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060411FC RID: 266748 RVA: 0x00FC85E8 File Offset: 0x00FC67E8
+		// Token: 0x06035EC1 RID: 220865 RVA: 0x00F0F59C File Offset: 0x00F0D79C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060411FD RID: 266749 RVA: 0x00FC873C File Offset: 0x00FC693C
+		// Token: 0x06035EC2 RID: 220866 RVA: 0x00F0F6F0 File Offset: 0x00F0D8F0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivityFishingSubView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060411FE RID: 266750 RVA: 0x00FC8780 File Offset: 0x00FC6980
+		// Token: 0x06035EC3 RID: 220867 RVA: 0x00F0F734 File Offset: 0x00F0D934
 		protected override void OnStart()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -91,19 +91,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.SwitchGenderItem();
 		}
 
-		// Token: 0x060411FF RID: 266751 RVA: 0x00FC8896 File Offset: 0x00FC6A96
+		// Token: 0x06035EC4 RID: 220868 RVA: 0x00F0F84A File Offset: 0x00F0DA4A
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnActivityPreOpen, new Action<int>(this.OnActivityPreOpen));
 		}
 
-		// Token: 0x06041200 RID: 266752 RVA: 0x00FC88B4 File Offset: 0x00FC6AB4
+		// Token: 0x06035EC5 RID: 220869 RVA: 0x00F0F868 File Offset: 0x00F0DA68
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivityPreOpen, new Action<int>(this.OnActivityPreOpen));
 		}
 
-		// Token: 0x06041201 RID: 266753 RVA: 0x00FC88D2 File Offset: 0x00FC6AD2
+		// Token: 0x06035EC6 RID: 220870 RVA: 0x00F0F886 File Offset: 0x00F0DA86
 		protected override void OnRefreshView()
 		{
 			this.RefreshTimerText();
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshButton();
 		}
 
-		// Token: 0x06041202 RID: 266754 RVA: 0x00FC88F4 File Offset: 0x00FC6AF4
+		// Token: 0x06035EC7 RID: 220871 RVA: 0x00F0F8A8 File Offset: 0x00F0DAA8
 		protected override UniTask OnBeforeHideSelfAsync()
 		{
 			ActivityFishingSubView.<OnBeforeHideSelfAsync>d__16 <OnBeforeHideSelfAsync>d__;
@@ -124,13 +124,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeHideSelfAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041203 RID: 266755 RVA: 0x00FC8937 File Offset: 0x00FC6B37
+		// Token: 0x06035EC8 RID: 220872 RVA: 0x00F0F8EB File Offset: 0x00F0DAEB
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshTimerText();
 		}
 
-		// Token: 0x06041204 RID: 266756 RVA: 0x00FC8940 File Offset: 0x00FC6B40
+		// Token: 0x06035EC9 RID: 220873 RVA: 0x00F0F8F4 File Offset: 0x00F0DAF4
 		private void SwitchGenderItem()
 		{
 			bool flag = PlayerInfoModel.Instance.GetPlayerGender() == EPlayerGender.Male;
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			item2.SetUIActive(!flag);
 		}
 
-		// Token: 0x06041205 RID: 266757 RVA: 0x00FC8984 File Offset: 0x00FC6B84
+		// Token: 0x06035ECA RID: 220874 RVA: 0x00F0F938 File Offset: 0x00F0DB38
 		private void RefreshCondition()
 		{
 			ActivityFunctionAreaParams parameters = new ActivityFunctionAreaParams
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.FunctionalComponent.RefreshGeneralPerformance(parameters);
 		}
 
-		// Token: 0x06041206 RID: 266758 RVA: 0x00FC89D4 File Offset: 0x00FC6BD4
+		// Token: 0x06035ECB RID: 220875 RVA: 0x00F0F988 File Offset: 0x00F0DB88
 		private void RefreshTimerText()
 		{
 			ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041207 RID: 266759 RVA: 0x00FC8A10 File Offset: 0x00FC6C10
+		// Token: 0x06035ECC RID: 220876 RVA: 0x00F0F9C4 File Offset: 0x00F0DBC4
 		private void RefreshButton()
 		{
 			this.LimitTimeRewardItem.RefreshActive();
@@ -184,14 +184,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.PermanentRewardItem.SetUiActive(flag);
 		}
 
-		// Token: 0x06041208 RID: 266760 RVA: 0x00FC8A50 File Offset: 0x00FC6C50
+		// Token: 0x06035ECD RID: 220877 RVA: 0x00F0FA04 File Offset: 0x00F0DC04
 		private void RefreshRedDot()
 		{
 			bool buttonRedPointShowState = this.ActivityBaseData.GetButtonRedPointShowState();
 			this.FunctionalComponent.SetFunctionRedDotVisible(buttonRedPointShowState);
 		}
 
-		// Token: 0x06041209 RID: 266761 RVA: 0x00FC8A78 File Offset: 0x00FC6C78
+		// Token: 0x06035ECE RID: 220878 RVA: 0x00F0FA2C File Offset: 0x00F0DC2C
 		private void OnRecommendBtnClick()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.DirectTrainRecommendQuest);
@@ -204,13 +204,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0604120A RID: 266762 RVA: 0x00FC8AB6 File Offset: 0x00FC6CB6
+		// Token: 0x06035ECF RID: 220879 RVA: 0x00F0FA6A File Offset: 0x00F0DC6A
 		private bool IsShowRecommend()
 		{
 			return !this.ActivityBaseData.IsRecommendQuestFinished();
 		}
 
-		// Token: 0x0604120B RID: 266763 RVA: 0x00FC8AC8 File Offset: 0x00FC6CC8
+		// Token: 0x06035ED0 RID: 220880 RVA: 0x00F0FA7C File Offset: 0x00F0DC7C
 		private void RefreshRecommendQuestTips()
 		{
 			bool flag = this.IsShowRecommend();
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604120C RID: 266764 RVA: 0x00FC8B10 File Offset: 0x00FC6D10
+		// Token: 0x06035ED1 RID: 220881 RVA: 0x00F0FAC4 File Offset: 0x00F0DCC4
 		private void ExtraButtonFunction()
 		{
 			if (!this.ActivityBaseData.SaveFirstCheckRedDotState(EFishingActivityCheckSaveFlag.PreOpen, 0))
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604120D RID: 266765 RVA: 0x00FC8B28 File Offset: 0x00FC6D28
+		// Token: 0x06035ED2 RID: 220882 RVA: 0x00F0FADC File Offset: 0x00F0DCDC
 		private void OnActivityPreOpen(int activityId)
 		{
 			if (this.ActivityBaseData.Id != activityId)
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604120E RID: 266766 RVA: 0x00FC8B6D File Offset: 0x00FC6D6D
+		// Token: 0x06035ED3 RID: 220883 RVA: 0x00F0FB21 File Offset: 0x00F0DD21
 		private bool BeforeFunctionCheck()
 		{
 			if (GameModeModel.Instance.IsMulti)
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return true;
 		}
 
-		// Token: 0x0604120F RID: 266767 RVA: 0x00FC8B92 File Offset: 0x00FC6D92
+		// Token: 0x06035ED4 RID: 220884 RVA: 0x00F0FB46 File Offset: 0x00F0DD46
 		private void FunctionExecute()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -265,56 +265,56 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			});
 		}
 
-		// Token: 0x04021EDA RID: 138970
+		// Token: 0x0401C80B RID: 116747
 		private ActivityTitleTypeA TitleComponent;
 
-		// Token: 0x04021EDB RID: 138971
+		// Token: 0x0401C80C RID: 116748
 		private ActivityDescriptionTypeA DescriptionComponent;
 
-		// Token: 0x04021EDC RID: 138972
+		// Token: 0x0401C80D RID: 116749
 		private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-		// Token: 0x04021EDD RID: 138973
+		// Token: 0x0401C80E RID: 116750
 		private ActivityFunctionalTypeA FunctionalComponent;
 
-		// Token: 0x04021EDE RID: 138974
+		// Token: 0x0401C80F RID: 116751
 		private FishingRewardLimitTimeButton LimitTimeRewardItem;
 
-		// Token: 0x04021EDF RID: 138975
+		// Token: 0x0401C810 RID: 116752
 		private FishingPermanentRewardButton PermanentRewardItem;
 
-		// Token: 0x04021EE0 RID: 138976
+		// Token: 0x0401C811 RID: 116753
 		private RecommendQuestTipsSubPanel RecommendQuestTipsSubPanel;
 
-		// Token: 0x0200C776 RID: 51062
+		// Token: 0x0200B15B RID: 45403
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403C436 RID: 246838
+			// Token: 0x04036D87 RID: 224647
 			public const int TitleItem = 0;
 
-			// Token: 0x0403C437 RID: 246839
+			// Token: 0x04036D88 RID: 224648
 			public const int DescriptionItem = 1;
 
-			// Token: 0x0403C438 RID: 246840
+			// Token: 0x04036D89 RID: 224649
 			public const int RewardListItem = 2;
 
-			// Token: 0x0403C439 RID: 246841
+			// Token: 0x04036D8A RID: 224650
 			public const int FunctionArea = 3;
 
-			// Token: 0x0403C43A RID: 246842
+			// Token: 0x04036D8B RID: 224651
 			public const int LimitTimeReward = 4;
 
-			// Token: 0x0403C43B RID: 246843
+			// Token: 0x04036D8C RID: 224652
 			public const int PermanentReward = 5;
 
-			// Token: 0x0403C43C RID: 246844
+			// Token: 0x04036D8D RID: 224653
 			public const int RecommendQuestItem = 6;
 
-			// Token: 0x0403C43D RID: 246845
+			// Token: 0x04036D8E RID: 224654
 			public const int MaleItem = 7;
 
-			// Token: 0x0403C43E RID: 246846
+			// Token: 0x04036D8F RID: 224655
 			public const int FemaleItem = 8;
 		}
 	}

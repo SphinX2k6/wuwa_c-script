@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001797 RID: 6039
+	// Token: 0x02001918 RID: 6424
 	public class IActorTurnToData_SetValue
 	{
-		// Token: 0x04005135 RID: 20789
+		// Token: 0x0400556B RID: 21867
 		public EActorTurnToMode Type;
 	}
 }

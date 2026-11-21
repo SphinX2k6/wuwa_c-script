@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004125 RID: 16677
+	// Token: 0x02004566 RID: 17766
 	public class IShowUiCookT
 	{
-		// Token: 0x1700761D RID: 30237
-		// (get) Token: 0x060186F2 RID: 100082 RVA: 0x00386368 File Offset: 0x00384568
-		// (set) Token: 0x060186F3 RID: 100083 RVA: 0x00386370 File Offset: 0x00384570
+		// Token: 0x17007C23 RID: 31779
+		// (get) Token: 0x06019D95 RID: 105877 RVA: 0x003B0370 File Offset: 0x003AE570
+		// (set) Token: 0x06019D96 RID: 105878 RVA: 0x003B0378 File Offset: 0x003AE578
 		public EShowUiType Type { get; set; }
 
-		// Token: 0x1700761E RID: 30238
-		// (get) Token: 0x060186F4 RID: 100084 RVA: 0x00386379 File Offset: 0x00384579
-		// (set) Token: 0x060186F5 RID: 100085 RVA: 0x00386381 File Offset: 0x00384581
+		// Token: 0x17007C24 RID: 31780
+		// (get) Token: 0x06019D97 RID: 105879 RVA: 0x003B0381 File Offset: 0x003AE581
+		// (set) Token: 0x06019D98 RID: 105880 RVA: 0x003B0389 File Offset: 0x003AE589
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x1700761F RID: 30239
-		// (get) Token: 0x060186F6 RID: 100086 RVA: 0x0038638A File Offset: 0x0038458A
-		// (set) Token: 0x060186F7 RID: 100087 RVA: 0x00386392 File Offset: 0x00384592
+		// Token: 0x17007C25 RID: 31781
+		// (get) Token: 0x06019D99 RID: 105881 RVA: 0x003B0392 File Offset: 0x003AE592
+		// (set) Token: 0x06019D9A RID: 105882 RVA: 0x003B039A File Offset: 0x003AE59A
 		public List<int> ProductIds { get; set; }
 
-		// Token: 0x17007620 RID: 30240
-		// (get) Token: 0x060186F8 RID: 100088 RVA: 0x0038639B File Offset: 0x0038459B
-		// (set) Token: 0x060186F9 RID: 100089 RVA: 0x003863A3 File Offset: 0x003845A3
+		// Token: 0x17007C26 RID: 31782
+		// (get) Token: 0x06019D9B RID: 105883 RVA: 0x003B03A3 File Offset: 0x003AE5A3
+		// (set) Token: 0x06019D9C RID: 105884 RVA: 0x003B03AB File Offset: 0x003AE5AB
 		public byte NullMask { get; set; }
 
-		// Token: 0x060186FA RID: 100090 RVA: 0x003863AC File Offset: 0x003845AC
+		// Token: 0x06019D9D RID: 105885 RVA: 0x003B03B4 File Offset: 0x003AE5B4
 		public IShowUiCookT()
 		{
 			this.Type = EShowUiType.All;

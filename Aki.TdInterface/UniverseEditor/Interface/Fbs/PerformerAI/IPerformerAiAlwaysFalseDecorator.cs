@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x02004354 RID: 17236
+	// Token: 0x020047B6 RID: 18358
 	public struct IPerformerAiAlwaysFalseDecorator : IFlatbufferObject
 	{
-		// Token: 0x170079A5 RID: 31141
-		// (get) Token: 0x060198DE RID: 104670 RVA: 0x003A8A88 File Offset: 0x003A6C88
+		// Token: 0x17007FDA RID: 32730
+		// (get) Token: 0x0601B06C RID: 110700 RVA: 0x003D44B0 File Offset: 0x003D26B0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			}
 		}
 
-		// Token: 0x060198DF RID: 104671 RVA: 0x003A8A95 File Offset: 0x003A6C95
+		// Token: 0x0601B06D RID: 110701 RVA: 0x003D44BD File Offset: 0x003D26BD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060198E0 RID: 104672 RVA: 0x003A8A9C File Offset: 0x003A6C9C
+		// Token: 0x0601B06E RID: 110702 RVA: 0x003D44C4 File Offset: 0x003D26C4
 		public static IPerformerAiAlwaysFalseDecorator GetRootAsIPerformerAiAlwaysFalseDecorator(ByteBuffer _bb)
 		{
 			return IPerformerAiAlwaysFalseDecorator.GetRootAsIPerformerAiAlwaysFalseDecorator(_bb, default(IPerformerAiAlwaysFalseDecorator));
 		}
 
-		// Token: 0x060198E1 RID: 104673 RVA: 0x003A8AB8 File Offset: 0x003A6CB8
+		// Token: 0x0601B06F RID: 110703 RVA: 0x003D44E0 File Offset: 0x003D26E0
 		public static IPerformerAiAlwaysFalseDecorator GetRootAsIPerformerAiAlwaysFalseDecorator(ByteBuffer _bb, IPerformerAiAlwaysFalseDecorator obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060198E2 RID: 104674 RVA: 0x003A8AD5 File Offset: 0x003A6CD5
+		// Token: 0x0601B070 RID: 110704 RVA: 0x003D44FD File Offset: 0x003D26FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060198E3 RID: 104675 RVA: 0x003A8AE4 File Offset: 0x003A6CE4
+		// Token: 0x0601B071 RID: 110705 RVA: 0x003D450C File Offset: 0x003D270C
 		public IPerformerAiAlwaysFalseDecorator __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170079A6 RID: 31142
-		// (get) Token: 0x060198E4 RID: 104676 RVA: 0x003A8AF4 File Offset: 0x003A6CF4
+		// Token: 0x17007FDB RID: 32731
+		// (get) Token: 0x0601B072 RID: 110706 RVA: 0x003D451C File Offset: 0x003D271C
 		public EPerformerAiDecoratorType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			}
 		}
 
-		// Token: 0x060198E5 RID: 104677 RVA: 0x003A8B30 File Offset: 0x003A6D30
+		// Token: 0x0601B073 RID: 110707 RVA: 0x003D4558 File Offset: 0x003D2758
 		public static Offset<IPerformerAiAlwaysFalseDecorator> CreateIPerformerAiAlwaysFalseDecorator(FlatBufferBuilder builder, EPerformerAiDecoratorType Type = EPerformerAiDecoratorType.Condition)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			return IPerformerAiAlwaysFalseDecorator.EndIPerformerAiAlwaysFalseDecorator(builder);
 		}
 
-		// Token: 0x060198E6 RID: 104678 RVA: 0x003A8B46 File Offset: 0x003A6D46
+		// Token: 0x0601B074 RID: 110708 RVA: 0x003D456E File Offset: 0x003D276E
 		public static void StartIPerformerAiAlwaysFalseDecorator(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060198E7 RID: 104679 RVA: 0x003A8B4F File Offset: 0x003A6D4F
+		// Token: 0x0601B075 RID: 110709 RVA: 0x003D4577 File Offset: 0x003D2777
 		public static void AddType(FlatBufferBuilder builder, EPerformerAiDecoratorType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060198E8 RID: 104680 RVA: 0x003A8B5A File Offset: 0x003A6D5A
+		// Token: 0x0601B076 RID: 110710 RVA: 0x003D4582 File Offset: 0x003D2782
 		public static Offset<IPerformerAiAlwaysFalseDecorator> EndIPerformerAiAlwaysFalseDecorator(FlatBufferBuilder builder)
 		{
 			return new Offset<IPerformerAiAlwaysFalseDecorator>(builder.EndTable());
 		}
 
-		// Token: 0x060198E9 RID: 104681 RVA: 0x003A8B68 File Offset: 0x003A6D68
+		// Token: 0x0601B077 RID: 110711 RVA: 0x003D4590 File Offset: 0x003D2790
 		public IPerformerAiAlwaysFalseDecoratorT UnPack()
 		{
 			IPerformerAiAlwaysFalseDecoratorT performerAiAlwaysFalseDecoratorT = new IPerformerAiAlwaysFalseDecoratorT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			return performerAiAlwaysFalseDecoratorT;
 		}
 
-		// Token: 0x060198EA RID: 104682 RVA: 0x003A8B83 File Offset: 0x003A6D83
+		// Token: 0x0601B078 RID: 110712 RVA: 0x003D45AB File Offset: 0x003D27AB
 		public void UnPackTo(IPerformerAiAlwaysFalseDecoratorT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060198EB RID: 104683 RVA: 0x003A8B94 File Offset: 0x003A6D94
+		// Token: 0x0601B079 RID: 110713 RVA: 0x003D45BC File Offset: 0x003D27BC
 		public static Offset<IPerformerAiAlwaysFalseDecorator> Pack(FlatBufferBuilder builder, IPerformerAiAlwaysFalseDecoratorT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			return IPerformerAiAlwaysFalseDecorator.CreateIPerformerAiAlwaysFalseDecorator(builder, _o.Type);
 		}
 
-		// Token: 0x0400C145 RID: 49477
+		// Token: 0x0400CB63 RID: 52067
 		private Table __p;
 	}
 }

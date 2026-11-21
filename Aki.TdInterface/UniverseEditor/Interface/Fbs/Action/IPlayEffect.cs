@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CE4 RID: 27876
+	// Token: 0x02007459 RID: 29785
 	public struct IPlayEffect : IFlatbufferObject
 	{
-		// Token: 0x1700CFA5 RID: 53157
-		// (get) Token: 0x06031270 RID: 201328 RVA: 0x006AB5E5 File Offset: 0x006A97E5
+		// Token: 0x1700DAE4 RID: 56036
+		// (get) Token: 0x06034244 RID: 213572 RVA: 0x00706855 File Offset: 0x00704A55
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031271 RID: 201329 RVA: 0x006AB5F2 File Offset: 0x006A97F2
+		// Token: 0x06034245 RID: 213573 RVA: 0x00706862 File Offset: 0x00704A62
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031272 RID: 201330 RVA: 0x006AB5FC File Offset: 0x006A97FC
+		// Token: 0x06034246 RID: 213574 RVA: 0x0070686C File Offset: 0x00704A6C
 		public static IPlayEffect GetRootAsIPlayEffect(ByteBuffer _bb)
 		{
 			return IPlayEffect.GetRootAsIPlayEffect(_bb, default(IPlayEffect));
 		}
 
-		// Token: 0x06031273 RID: 201331 RVA: 0x006AB618 File Offset: 0x006A9818
+		// Token: 0x06034247 RID: 213575 RVA: 0x00706888 File Offset: 0x00704A88
 		public static IPlayEffect GetRootAsIPlayEffect(ByteBuffer _bb, IPlayEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031274 RID: 201332 RVA: 0x006AB635 File Offset: 0x006A9835
+		// Token: 0x06034248 RID: 213576 RVA: 0x007068A5 File Offset: 0x00704AA5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031275 RID: 201333 RVA: 0x006AB644 File Offset: 0x006A9844
+		// Token: 0x06034249 RID: 213577 RVA: 0x007068B4 File Offset: 0x00704AB4
 		public IPlayEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CFA6 RID: 53158
-		// (get) Token: 0x06031276 RID: 201334 RVA: 0x006AB654 File Offset: 0x006A9854
+		// Token: 0x1700DAE5 RID: 56037
+		// (get) Token: 0x0603424A RID: 213578 RVA: 0x007068C4 File Offset: 0x00704AC4
 		public string Path
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031277 RID: 201335 RVA: 0x006AB68B File Offset: 0x006A988B
+		// Token: 0x0603424B RID: 213579 RVA: 0x007068FB File Offset: 0x00704AFB
 		public Span<byte> GetPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06031278 RID: 201336 RVA: 0x006AB69A File Offset: 0x006A989A
+		// Token: 0x0603424C RID: 213580 RVA: 0x0070690A File Offset: 0x00704B0A
 		public byte[] GetPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700CFA7 RID: 53159
-		// (get) Token: 0x06031279 RID: 201337 RVA: 0x006AB6A8 File Offset: 0x006A98A8
+		// Token: 0x1700DAE6 RID: 56038
+		// (get) Token: 0x0603424D RID: 213581 RVA: 0x00706918 File Offset: 0x00704B18
 		public TPos2 Pos2Type
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603127A RID: 201338 RVA: 0x006AB6E4 File Offset: 0x006A98E4
+		// Token: 0x0603424E RID: 213582 RVA: 0x00706954 File Offset: 0x00704B54
 		public TTable? Pos2<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -100,37 +100,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0603127B RID: 201339 RVA: 0x006AB728 File Offset: 0x006A9928
+		// Token: 0x0603424F RID: 213583 RVA: 0x00706998 File Offset: 0x00704B98
 		public IAbsolutePos2 Pos2AsIAbsolutePos2()
 		{
 			return this.Pos2<IAbsolutePos2>().Value;
 		}
 
-		// Token: 0x0603127C RID: 201340 RVA: 0x006AB744 File Offset: 0x006A9944
+		// Token: 0x06034250 RID: 213584 RVA: 0x007069B4 File Offset: 0x00704BB4
 		public IEntityPos2 Pos2AsIEntityPos2()
 		{
 			return this.Pos2<IEntityPos2>().Value;
 		}
 
-		// Token: 0x0603127D RID: 201341 RVA: 0x006AB760 File Offset: 0x006A9960
+		// Token: 0x06034251 RID: 213585 RVA: 0x007069D0 File Offset: 0x00704BD0
 		public IPlayerPos2 Pos2AsIPlayerPos2()
 		{
 			return this.Pos2<IPlayerPos2>().Value;
 		}
 
-		// Token: 0x0603127E RID: 201342 RVA: 0x006AB77C File Offset: 0x006A997C
+		// Token: 0x06034252 RID: 213586 RVA: 0x007069EC File Offset: 0x00704BEC
 		public IEffectPlayerPos2 Pos2AsIEffectPlayerPos2()
 		{
 			return this.Pos2<IEffectPlayerPos2>().Value;
 		}
 
-		// Token: 0x0603127F RID: 201343 RVA: 0x006AB798 File Offset: 0x006A9998
+		// Token: 0x06034253 RID: 213587 RVA: 0x00706A08 File Offset: 0x00704C08
 		public IEffectEntityPos2 Pos2AsIEffectEntityPos2()
 		{
 			return this.Pos2<IEffectEntityPos2>().Value;
 		}
 
-		// Token: 0x06031280 RID: 201344 RVA: 0x006AB7B3 File Offset: 0x006A99B3
+		// Token: 0x06034254 RID: 213588 RVA: 0x00706A23 File Offset: 0x00704C23
 		public static Offset<IPlayEffect> CreateIPlayEffect(FlatBufferBuilder builder, StringOffset PathOffset = default(StringOffset), TPos2 Pos2_type = TPos2.NONE, int Pos2Offset = 0)
 		{
 			builder.StartTable(3);
@@ -140,37 +140,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlayEffect.EndIPlayEffect(builder);
 		}
 
-		// Token: 0x06031281 RID: 201345 RVA: 0x006AB7D7 File Offset: 0x006A99D7
+		// Token: 0x06034255 RID: 213589 RVA: 0x00706A47 File Offset: 0x00704C47
 		public static void StartIPlayEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06031282 RID: 201346 RVA: 0x006AB7E0 File Offset: 0x006A99E0
+		// Token: 0x06034256 RID: 213590 RVA: 0x00706A50 File Offset: 0x00704C50
 		public static void AddPath(FlatBufferBuilder builder, StringOffset pathOffset)
 		{
 			builder.AddOffset(0, pathOffset.Value, 0);
 		}
 
-		// Token: 0x06031283 RID: 201347 RVA: 0x006AB7F0 File Offset: 0x006A99F0
+		// Token: 0x06034257 RID: 213591 RVA: 0x00706A60 File Offset: 0x00704C60
 		public static void AddPos2Type(FlatBufferBuilder builder, TPos2 pos2Type)
 		{
 			builder.AddByte(1, (byte)pos2Type, 0);
 		}
 
-		// Token: 0x06031284 RID: 201348 RVA: 0x006AB7FB File Offset: 0x006A99FB
+		// Token: 0x06034258 RID: 213592 RVA: 0x00706A6B File Offset: 0x00704C6B
 		public static void AddPos2(FlatBufferBuilder builder, int pos2Offset)
 		{
 			builder.AddOffset(2, pos2Offset, 0);
 		}
 
-		// Token: 0x06031285 RID: 201349 RVA: 0x006AB806 File Offset: 0x006A9A06
+		// Token: 0x06034259 RID: 213593 RVA: 0x00706A76 File Offset: 0x00704C76
 		public static Offset<IPlayEffect> EndIPlayEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlayEffect>(builder.EndTable());
 		}
 
-		// Token: 0x06031286 RID: 201350 RVA: 0x006AB814 File Offset: 0x006A9A14
+		// Token: 0x0603425A RID: 213594 RVA: 0x00706A84 File Offset: 0x00704C84
 		public IPlayEffectT UnPack()
 		{
 			IPlayEffectT playEffectT = new IPlayEffectT();
@@ -178,7 +178,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return playEffectT;
 		}
 
-		// Token: 0x06031287 RID: 201351 RVA: 0x006AB830 File Offset: 0x006A9A30
+		// Token: 0x0603425B RID: 213595 RVA: 0x00706AA0 File Offset: 0x00704CA0
 		public void UnPackTo(IPlayEffectT _o)
 		{
 			_o.Path = this.Path;
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031288 RID: 201352 RVA: 0x006AB99C File Offset: 0x006A9B9C
+		// Token: 0x0603425C RID: 213596 RVA: 0x00706C0C File Offset: 0x00704E0C
 		public static Offset<IPlayEffect> Pack(FlatBufferBuilder builder, IPlayEffectT _o)
 		{
 			if (_o == null)
@@ -219,7 +219,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlayEffect.CreateIPlayEffect(builder, pathOffset, pos2_type, pos2Offset);
 		}
 
-		// Token: 0x0401165B RID: 71259
+		// Token: 0x040125CC RID: 75212
 		private Table __p;
 	}
 }

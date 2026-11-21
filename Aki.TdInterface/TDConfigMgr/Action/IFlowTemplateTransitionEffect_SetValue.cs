@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AA2 RID: 6818
+	// Token: 0x02001C3B RID: 7227
 	public class IFlowTemplateTransitionEffect_SetValue
 	{
-		// Token: 0x04005A10 RID: 23056
+		// Token: 0x04005E80 RID: 24192
 		public EFlowTemplateTransitionEffectType Type;
 	}
 }

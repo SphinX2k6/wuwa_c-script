@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002B7 RID: 695
+	// Token: 0x020002CC RID: 716
 	public class ConfigFavorStoryByRoleId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600104F RID: 4175 RVA: 0x000B5A3C File Offset: 0x000B3C3C
+		// Token: 0x060010CD RID: 4301 RVA: 0x000BBF48 File Offset: 0x000BA148
 		static ConfigFavorStoryByRoleId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFavorStoryByRoleId.CreateStaticDefaultValue), new Action(ConfigFavorStoryByRoleId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001050 RID: 4176 RVA: 0x000B5A5C File Offset: 0x000B3C5C
+		// Token: 0x060010CE RID: 4302 RVA: 0x000BBF68 File Offset: 0x000BA168
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFavorStoryByRoleId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001051 RID: 4177 RVA: 0x000B5ADB File Offset: 0x000B3CDB
+		// Token: 0x060010CF RID: 4303 RVA: 0x000BBFE7 File Offset: 0x000BA1E7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFavorStoryByRoleId.LogPair = null;
 			ConfigFavorStoryByRoleId.HandleId = 0;
 		}
 
-		// Token: 0x06001052 RID: 4178 RVA: 0x000B5AE9 File Offset: 0x000B3CE9
+		// Token: 0x060010D0 RID: 4304 RVA: 0x000BBFF5 File Offset: 0x000BA1F5
 		public static void Init()
 		{
 			ConfigFavorStoryByRoleId.HandleId = ConfigCommon.InitDataStatement(ConfigFavorStoryByRoleId.HandleId, "db_favor.db", "select BinData from `FavorStory` where RoleId=?");
 		}
 
-		// Token: 0x06001053 RID: 4179 RVA: 0x000B5B04 File Offset: 0x000B3D04
+		// Token: 0x060010D1 RID: 4305 RVA: 0x000BC010 File Offset: 0x000BA210
 		[NullableContext(2)]
 		public static IReadOnlyList<FavorStory> GetConfigList(int p0RoleId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040012E5 RID: 4837
+		// Token: 0x04001378 RID: 4984
 		private const string DB = "db_favor.db";
 
-		// Token: 0x040012E6 RID: 4838
+		// Token: 0x04001379 RID: 4985
 		private const string FILE = "h.好感度.xlsx";
 
-		// Token: 0x040012E7 RID: 4839
+		// Token: 0x0400137A RID: 4986
 		private const string TABLE = "FavorStory";
 
-		// Token: 0x040012E8 RID: 4840
+		// Token: 0x0400137B RID: 4987
 		private const string COMMAND = "select BinData from `FavorStory` where RoleId=?";
 
-		// Token: 0x040012E9 RID: 4841
+		// Token: 0x0400137C RID: 4988
 		private const string KEY_PREFIX = "FavorStoryByRoleId";
 
-		// Token: 0x040012EA RID: 4842
+		// Token: 0x0400137D RID: 4989
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040012EB RID: 4843
+		// Token: 0x0400137E RID: 4990
 		private static int HandleId;
 	}
 }

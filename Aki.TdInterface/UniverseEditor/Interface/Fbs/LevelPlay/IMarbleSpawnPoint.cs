@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004527 RID: 17703
+	// Token: 0x0200498F RID: 18831
 	public struct IMarbleSpawnPoint : IFlatbufferObject
 	{
-		// Token: 0x17007D8C RID: 32140
-		// (get) Token: 0x0601A9D9 RID: 109017 RVA: 0x003CC9F7 File Offset: 0x003CABF7
+		// Token: 0x170083CD RID: 33741
+		// (get) Token: 0x0601C1AE RID: 115118 RVA: 0x003F8C93 File Offset: 0x003F6E93
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A9DA RID: 109018 RVA: 0x003CCA04 File Offset: 0x003CAC04
+		// Token: 0x0601C1AF RID: 115119 RVA: 0x003F8CA0 File Offset: 0x003F6EA0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A9DB RID: 109019 RVA: 0x003CCA0C File Offset: 0x003CAC0C
+		// Token: 0x0601C1B0 RID: 115120 RVA: 0x003F8CA8 File Offset: 0x003F6EA8
 		public static IMarbleSpawnPoint GetRootAsIMarbleSpawnPoint(ByteBuffer _bb)
 		{
 			return IMarbleSpawnPoint.GetRootAsIMarbleSpawnPoint(_bb, default(IMarbleSpawnPoint));
 		}
 
-		// Token: 0x0601A9DC RID: 109020 RVA: 0x003CCA28 File Offset: 0x003CAC28
+		// Token: 0x0601C1B1 RID: 115121 RVA: 0x003F8CC4 File Offset: 0x003F6EC4
 		public static IMarbleSpawnPoint GetRootAsIMarbleSpawnPoint(ByteBuffer _bb, IMarbleSpawnPoint obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A9DD RID: 109021 RVA: 0x003CCA45 File Offset: 0x003CAC45
+		// Token: 0x0601C1B2 RID: 115122 RVA: 0x003F8CE1 File Offset: 0x003F6EE1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A9DE RID: 109022 RVA: 0x003CCA54 File Offset: 0x003CAC54
+		// Token: 0x0601C1B3 RID: 115123 RVA: 0x003F8CF0 File Offset: 0x003F6EF0
 		public IMarbleSpawnPoint __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007D8D RID: 32141
-		// (get) Token: 0x0601A9DF RID: 109023 RVA: 0x003CCA64 File Offset: 0x003CAC64
+		// Token: 0x170083CE RID: 33742
+		// (get) Token: 0x0601C1B4 RID: 115124 RVA: 0x003F8D00 File Offset: 0x003F6F00
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007D8E RID: 32142
-		// (get) Token: 0x0601A9E0 RID: 109024 RVA: 0x003CCAA0 File Offset: 0x003CACA0
+		// Token: 0x170083CF RID: 33743
+		// (get) Token: 0x0601C1B5 RID: 115125 RVA: 0x003F8D3C File Offset: 0x003F6F3C
 		public ETwoDimensionLevelType Type
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007D8F RID: 32143
-		// (get) Token: 0x0601A9E1 RID: 109025 RVA: 0x003CCADC File Offset: 0x003CACDC
+		// Token: 0x170083D0 RID: 33744
+		// (get) Token: 0x0601C1B6 RID: 115126 RVA: 0x003F8D78 File Offset: 0x003F6F78
 		public ITwoDimensionTransform? Transform
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007D90 RID: 32144
-		// (get) Token: 0x0601A9E2 RID: 109026 RVA: 0x003CCB3C File Offset: 0x003CAD3C
+		// Token: 0x170083D1 RID: 33745
+		// (get) Token: 0x0601C1B7 RID: 115127 RVA: 0x003F8DD8 File Offset: 0x003F6FD8
 		public EMarbleItemType SubType
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A9E3 RID: 109027 RVA: 0x003CCB79 File Offset: 0x003CAD79
+		// Token: 0x0601C1B8 RID: 115128 RVA: 0x003F8E15 File Offset: 0x003F7015
 		public static Offset<IMarbleSpawnPoint> CreateIMarbleSpawnPoint(FlatBufferBuilder builder, int Id = 0, ETwoDimensionLevelType Type = ETwoDimensionLevelType.Marble, Offset<ITwoDimensionTransform> TransformOffset = default(Offset<ITwoDimensionTransform>), EMarbleItemType SubType = EMarbleItemType.CommonItem)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IMarbleSpawnPoint.EndIMarbleSpawnPoint(builder);
 		}
 
-		// Token: 0x0601A9E4 RID: 109028 RVA: 0x003CCBA5 File Offset: 0x003CADA5
+		// Token: 0x0601C1B9 RID: 115129 RVA: 0x003F8E41 File Offset: 0x003F7041
 		public static void StartIMarbleSpawnPoint(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601A9E5 RID: 109029 RVA: 0x003CCBAE File Offset: 0x003CADAE
+		// Token: 0x0601C1BA RID: 115130 RVA: 0x003F8E4A File Offset: 0x003F704A
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601A9E6 RID: 109030 RVA: 0x003CCBB9 File Offset: 0x003CADB9
+		// Token: 0x0601C1BB RID: 115131 RVA: 0x003F8E55 File Offset: 0x003F7055
 		public static void AddType(FlatBufferBuilder builder, ETwoDimensionLevelType type)
 		{
 			builder.AddByte(1, (byte)type, 0);
 		}
 
-		// Token: 0x0601A9E7 RID: 109031 RVA: 0x003CCBC4 File Offset: 0x003CADC4
+		// Token: 0x0601C1BC RID: 115132 RVA: 0x003F8E60 File Offset: 0x003F7060
 		public static void AddTransform(FlatBufferBuilder builder, Offset<ITwoDimensionTransform> transformOffset)
 		{
 			builder.AddOffset(2, transformOffset.Value, 0);
 		}
 
-		// Token: 0x0601A9E8 RID: 109032 RVA: 0x003CCBD4 File Offset: 0x003CADD4
+		// Token: 0x0601C1BD RID: 115133 RVA: 0x003F8E70 File Offset: 0x003F7070
 		public static void AddSubType(FlatBufferBuilder builder, EMarbleItemType subType)
 		{
 			builder.AddByte(3, (byte)subType, 0);
 		}
 
-		// Token: 0x0601A9E9 RID: 109033 RVA: 0x003CCBDF File Offset: 0x003CADDF
+		// Token: 0x0601C1BE RID: 115134 RVA: 0x003F8E7B File Offset: 0x003F707B
 		public static Offset<IMarbleSpawnPoint> EndIMarbleSpawnPoint(FlatBufferBuilder builder)
 		{
 			return new Offset<IMarbleSpawnPoint>(builder.EndTable());
 		}
 
-		// Token: 0x0601A9EA RID: 109034 RVA: 0x003CCBEC File Offset: 0x003CADEC
+		// Token: 0x0601C1BF RID: 115135 RVA: 0x003F8E88 File Offset: 0x003F7088
 		public IMarbleSpawnPointT UnPack()
 		{
 			IMarbleSpawnPointT marbleSpawnPointT = new IMarbleSpawnPointT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return marbleSpawnPointT;
 		}
 
-		// Token: 0x0601A9EB RID: 109035 RVA: 0x003CCC08 File Offset: 0x003CAE08
+		// Token: 0x0601C1C0 RID: 115136 RVA: 0x003F8EA4 File Offset: 0x003F70A4
 		public void UnPackTo(IMarbleSpawnPointT _o)
 		{
 			_o.Id = this.Id;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.SubType = this.SubType;
 		}
 
-		// Token: 0x0601A9EC RID: 109036 RVA: 0x003CCC68 File Offset: 0x003CAE68
+		// Token: 0x0601C1C1 RID: 115137 RVA: 0x003F8F04 File Offset: 0x003F7104
 		public static Offset<IMarbleSpawnPoint> Pack(FlatBufferBuilder builder, IMarbleSpawnPointT _o)
 		{
 			if (_o == null)
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IMarbleSpawnPoint.CreateIMarbleSpawnPoint(builder, _o.Id, _o.Type, transformOffset, _o.SubType);
 		}
 
-		// Token: 0x0400C5A9 RID: 50601
+		// Token: 0x0400CFD8 RID: 53208
 		private Table __p;
 	}
 }

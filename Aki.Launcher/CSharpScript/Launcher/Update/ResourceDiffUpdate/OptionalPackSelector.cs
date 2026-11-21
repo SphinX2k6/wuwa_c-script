@@ -5,12 +5,12 @@ using CSharpScript.Launcher.Util;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 {
-	// Token: 0x0200009D RID: 157
+	// Token: 0x020000A0 RID: 160
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OptionalPackSelector
 	{
-		// Token: 0x0600057E RID: 1406 RVA: 0x00031D50 File Offset: 0x0002FF50
+		// Token: 0x06000595 RID: 1429 RVA: 0x000332B8 File Offset: 0x000314B8
 		public static SelectionDecision Select(IReadOnlyList<IResourceTypeModule> modules, ResourceSelectionContext context, ETier tier = ETier.None)
 		{
 			List<ResPackageInfo> list = new List<ResPackageInfo>();
@@ -34,7 +34,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 			};
 		}
 
-		// Token: 0x0600057F RID: 1407 RVA: 0x00031E00 File Offset: 0x00030000
+		// Token: 0x06000596 RID: 1430 RVA: 0x00033368 File Offset: 0x00031568
 		public static SelectionDecision SelectMax(IReadOnlyList<IResourceTypeModule> modules, ResourceSelectionContext context, ETier tier = ETier.None)
 		{
 			List<ResPackageInfo> list = new List<ResPackageInfo>();

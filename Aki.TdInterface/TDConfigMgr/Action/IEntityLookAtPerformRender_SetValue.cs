@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A11 RID: 6673
+	// Token: 0x02001BA6 RID: 7078
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IEntityLookAtPerformRender_SetValue
 	{
-		// Token: 0x04005887 RID: 22663
+		// Token: 0x04005CEC RID: 23788
 		public int EntityId;
 
-		// Token: 0x04005888 RID: 22664
+		// Token: 0x04005CED RID: 23789
 		public int? FaceExpressionId;
 
-		// Token: 0x04005889 RID: 22665
+		// Token: 0x04005CEE RID: 23790
 		public IMontageId OverlapMontageId;
 
-		// Token: 0x0400588A RID: 22666
+		// Token: 0x04005CEF RID: 23791
 		public ILookAtPerformOverlapMontageConfig OverlapMontageConfig;
 	}
 }

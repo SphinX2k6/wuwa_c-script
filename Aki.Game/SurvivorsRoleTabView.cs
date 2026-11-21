@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B2D RID: 11053
+// Token: 0x020020A9 RID: 8361
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,8 +17,8 @@ using UnrealEngine;
 })]
 public class SurvivorsRoleTabView : SurvivorsTabViewBase<SurvivorsRoleTabItem, SurvivorsHandbookItemDataBase>
 {
-	// Token: 0x17001E9D RID: 7837
-	// (get) Token: 0x06016F10 RID: 93968 RVA: 0x005D29E9 File Offset: 0x005D0BE9
+	// Token: 0x17001EF5 RID: 7925
+	// (get) Token: 0x06014941 RID: 84289 RVA: 0x005FF55D File Offset: 0x005FD75D
 	protected override ESurvivorsRogueItemType ItemType
 	{
 		get
@@ -27,19 +27,19 @@ public class SurvivorsRoleTabView : SurvivorsTabViewBase<SurvivorsRoleTabItem, S
 		}
 	}
 
-	// Token: 0x06016F11 RID: 93969 RVA: 0x005D29EC File Offset: 0x005D0BEC
+	// Token: 0x06014942 RID: 84290 RVA: 0x005FF560 File Offset: 0x005FD760
 	protected override int GetLoopItemIndex()
 	{
 		return 3;
 	}
 
-	// Token: 0x06016F12 RID: 93970 RVA: 0x005D29EF File Offset: 0x005D0BEF
+	// Token: 0x06014943 RID: 84291 RVA: 0x005FF563 File Offset: 0x005FD763
 	protected override int GetLoopScrollComponentIndex()
 	{
 		return 1;
 	}
 
-	// Token: 0x06016F13 RID: 93971 RVA: 0x005D29F4 File Offset: 0x005D0BF4
+	// Token: 0x06014944 RID: 84292 RVA: 0x005FF568 File Offset: 0x005FD768
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -53,7 +53,7 @@ public class SurvivorsRoleTabView : SurvivorsTabViewBase<SurvivorsRoleTabItem, S
 		};
 	}
 
-	// Token: 0x06016F14 RID: 93972 RVA: 0x005D2A90 File Offset: 0x005D0C90
+	// Token: 0x06014945 RID: 84293 RVA: 0x005FF604 File Offset: 0x005FD804
 	protected override UniTask InitSubComponents()
 	{
 		SurvivorsRoleTabView.<InitSubComponents>d__8 <InitSubComponents>d__;
@@ -64,7 +64,7 @@ public class SurvivorsRoleTabView : SurvivorsTabViewBase<SurvivorsRoleTabItem, S
 		return <InitSubComponents>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016F15 RID: 93973 RVA: 0x005D2AD3 File Offset: 0x005D0CD3
+	// Token: 0x06014946 RID: 84294 RVA: 0x005FF647 File Offset: 0x005FD847
 	protected override void OnTriggerSequenceStartEvent()
 	{
 		SurvivorsRoleTabDetail roleDetailItem = this.RoleDetailItem;
@@ -75,7 +75,7 @@ public class SurvivorsRoleTabView : SurvivorsTabViewBase<SurvivorsRoleTabItem, S
 		roleDetailItem.Refresh(this.CurrentItemId.Value, true, 6);
 	}
 
-	// Token: 0x06016F16 RID: 93974 RVA: 0x005D2AF2 File Offset: 0x005D0CF2
+	// Token: 0x06014947 RID: 84295 RVA: 0x005FF666 File Offset: 0x005FD866
 	protected override void OnBeforeShow()
 	{
 		UiModelBase model = UiSceneManager.Instance.GetRoleSystemRoleActor().Model;
@@ -87,7 +87,7 @@ public class SurvivorsRoleTabView : SurvivorsTabViewBase<SurvivorsRoleTabItem, S
 		UiSceneManager.Instance.ShowRoleSystemRoleActor();
 	}
 
-	// Token: 0x06016F17 RID: 93975 RVA: 0x005D2B25 File Offset: 0x005D0D25
+	// Token: 0x06014948 RID: 84296 RVA: 0x005FF699 File Offset: 0x005FD899
 	protected override void OnHideUiTabViewBase(bool fromToggle)
 	{
 		UiSceneManager.Instance.HideRoleSystemRoleActor();
@@ -103,13 +103,13 @@ public class SurvivorsRoleTabView : SurvivorsTabViewBase<SurvivorsRoleTabItem, S
 		}
 	}
 
-	// Token: 0x06016F18 RID: 93976 RVA: 0x005D2B63 File Offset: 0x005D0D63
+	// Token: 0x06014949 RID: 84297 RVA: 0x005FF6D7 File Offset: 0x005FD8D7
 	protected override void OnStart()
 	{
 		this.PanelLock.SetButtonVisible(false);
 	}
 
-	// Token: 0x06016F19 RID: 93977 RVA: 0x005D2B71 File Offset: 0x005D0D71
+	// Token: 0x0601494A RID: 84298 RVA: 0x005FF6E5 File Offset: 0x005FD8E5
 	protected override SurvivorsRoleTabItem CreateLoopItem()
 	{
 		SurvivorsRoleTabItem survivorsRoleTabItem = new SurvivorsRoleTabItem();
@@ -118,7 +118,7 @@ public class SurvivorsRoleTabView : SurvivorsTabViewBase<SurvivorsRoleTabItem, S
 		return survivorsRoleTabItem;
 	}
 
-	// Token: 0x06016F1A RID: 93978 RVA: 0x005D2B9C File Offset: 0x005D0D9C
+	// Token: 0x0601494B RID: 84299 RVA: 0x005FF710 File Offset: 0x005FD910
 	protected override IReadOnlyList<SurvivorsHandbookItemDataBase> GenerateItemUiDataList()
 	{
 		SurvivorsRogueModel instance = SurvivorsRogueModel.Instance;
@@ -143,7 +143,7 @@ public class SurvivorsRoleTabView : SurvivorsTabViewBase<SurvivorsRoleTabItem, S
 		return list;
 	}
 
-	// Token: 0x06016F1B RID: 93979 RVA: 0x005D2C38 File Offset: 0x005D0E38
+	// Token: 0x0601494C RID: 84300 RVA: 0x005FF7AC File Offset: 0x005FD9AC
 	protected override void OnSelectItem(SurvivorsHandbookItemDataBase data, bool isFromClick)
 	{
 		SurvivorsRole value = SurvivorsRogueConfig.Instance.GetSurvivorsRole(data.Id).Value;
@@ -179,7 +179,7 @@ public class SurvivorsRoleTabView : SurvivorsTabViewBase<SurvivorsRoleTabItem, S
 		}
 	}
 
-	// Token: 0x06016F1C RID: 93980 RVA: 0x005D2D18 File Offset: 0x005D0F18
+	// Token: 0x0601494D RID: 84301 RVA: 0x005FF88C File Offset: 0x005FDA8C
 	private void RefreshDisplayModel(int trialRoleId)
 	{
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(trialRoleId, true);
@@ -189,14 +189,14 @@ public class SurvivorsRoleTabView : SurvivorsTabViewBase<SurvivorsRoleTabItem, S
 		}
 	}
 
-	// Token: 0x0400AAD1 RID: 43729
+	// Token: 0x0400AED7 RID: 44759
 	[Nullable(2)]
 	private SurvivorsRoleTabDetail RoleDetailItem;
 
-	// Token: 0x0400AAD2 RID: 43730
+	// Token: 0x0400AED8 RID: 44760
 	[Nullable(2)]
 	private FunctionalPanelConditionLock PanelLock;
 
-	// Token: 0x0400AAD3 RID: 43731
+	// Token: 0x0400AED9 RID: 44761
 	private const int SHOW_ATTRIBUTE_NUM = 6;
 }

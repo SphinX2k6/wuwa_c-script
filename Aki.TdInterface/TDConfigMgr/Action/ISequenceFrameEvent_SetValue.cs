@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E01 RID: 7681
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002034 RID: 8244
 	public class ISequenceFrameEvent_SetValue
 	{
-		// Token: 0x04006269 RID: 25193
+		// Token: 0x04006840 RID: 26688
 		public string EventKey;
 
-		// Token: 0x0400626A RID: 25194
+		// Token: 0x04006841 RID: 26689
 		public List<ActionInfo> EventActions;
 	}
 }

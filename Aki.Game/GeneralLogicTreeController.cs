@@ -14,20 +14,20 @@ using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02001D91 RID: 7569
+// Token: 0x02001253 RID: 4691
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class GeneralLogicTreeController : ControllerWithAssistantBase
 {
-	// Token: 0x0600E56B RID: 58731 RVA: 0x00360AE5 File Offset: 0x0035ECE5
+	// Token: 0x0600B989 RID: 47497 RVA: 0x0036C745 File Offset: 0x0036A945
 	protected override bool OnClear()
 	{
 		this.WaitBattleViewOpen = null;
 		return base.OnClear();
 	}
 
-	// Token: 0x0600E56C RID: 58732 RVA: 0x00360AF4 File Offset: 0x0035ECF4
+	// Token: 0x0600B98A RID: 47498 RVA: 0x0036C754 File Offset: 0x0036A954
 	protected override void RegisterAssistant()
 	{
 		base.AddAssistant(0, new ServerNotifyAssistant());
@@ -36,7 +36,7 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		base.AddAssistant(3, new GuaranteeAssistant());
 	}
 
-	// Token: 0x0600E56D RID: 58733 RVA: 0x00360B28 File Offset: 0x0035ED28
+	// Token: 0x0600B98B RID: 47499 RVA: 0x0036C788 File Offset: 0x0036A988
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	private T GetAssistant<T>(GeneralLogicTreeController.EAssistantType type) where T : ControllerAssistantBase
@@ -48,7 +48,7 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		return this.Assistants.GetValueOrDefault((int)type) as T;
 	}
 
-	// Token: 0x0600E56E RID: 58734 RVA: 0x00360B60 File Offset: 0x0035ED60
+	// Token: 0x0600B98C RID: 47500 RVA: 0x0036C7C0 File Offset: 0x0036A9C0
 	protected override void OnAddEvents()
 	{
 		base.OnAddEvents();
@@ -74,7 +74,7 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		instance2.Add<long, int, EBehaviorTreeSuspendType>(name2, handle2);
 	}
 
-	// Token: 0x0600E56F RID: 58735 RVA: 0x00360C3C File Offset: 0x0035EE3C
+	// Token: 0x0600B98D RID: 47501 RVA: 0x0036C89C File Offset: 0x0036AA9C
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnHandleWorldDone));
@@ -100,7 +100,7 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		base.OnRemoveEvents();
 	}
 
-	// Token: 0x0600E570 RID: 58736 RVA: 0x00360D15 File Offset: 0x0035EF15
+	// Token: 0x0600B98E RID: 47502 RVA: 0x0036C975 File Offset: 0x0036AB75
 	private void OnChangeModeFinish()
 	{
 		this.HandleWorldDone(delegate
@@ -114,13 +114,13 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		});
 	}
 
-	// Token: 0x0600E571 RID: 58737 RVA: 0x00360D3C File Offset: 0x0035EF3C
+	// Token: 0x0600B98F RID: 47503 RVA: 0x0036C99C File Offset: 0x0036AB9C
 	private void OnHandleWorldDone()
 	{
 		this.HandleWorldDone(null);
 	}
 
-	// Token: 0x0600E572 RID: 58738 RVA: 0x00360D48 File Offset: 0x0035EF48
+	// Token: 0x0600B990 RID: 47504 RVA: 0x0036C9A8 File Offset: 0x0036ABA8
 	[NullableContext(2)]
 	private void HandleWorldDone(Action onBattleViewShow)
 	{
@@ -136,7 +136,7 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		this.WaitBattleViewOpen.Promise.AsUniTask().ContinueWith(new Action(CS$<>8__locals1.<HandleWorldDone>g__OnWorldDone|0));
 	}
 
-	// Token: 0x0600E573 RID: 58739 RVA: 0x00360DB1 File Offset: 0x0035EFB1
+	// Token: 0x0600B991 RID: 47505 RVA: 0x0036CA11 File Offset: 0x0036AC11
 	private void OnViewDone()
 	{
 		CustomPromise<bool> waitBattleViewOpen = this.WaitBattleViewOpen;
@@ -147,7 +147,7 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		waitBattleViewOpen.SetResult(true);
 	}
 
-	// Token: 0x0600E574 RID: 58740 RVA: 0x00360DC4 File Offset: 0x0035EFC4
+	// Token: 0x0600B992 RID: 47506 RVA: 0x0036CA24 File Offset: 0x0036AC24
 	private unsafe void OnBehaviorTreeStartActionSession(ActionNotify notify)
 	{
 		GameCtxPb gameCtx = notify.GameCtx;
@@ -221,7 +221,7 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		behaviorTree.DoAction(gameCtx, behaviorTreeCtxPb.NodeId, notify.PlayerId, notify.IncId, notify.StartIndex, notify.EndIndex, notify.NeedFinishReq);
 	}
 
-	// Token: 0x0600E575 RID: 58741 RVA: 0x00360F88 File Offset: 0x0035F188
+	// Token: 0x0600B993 RID: 47507 RVA: 0x0036CBE8 File Offset: 0x0036ADE8
 	private static void OnGeneralLogicTreeTearDown(long treeId, int? _)
 	{
 		BaseBehaviorTree baseBehaviorTree = GeneralLogicTreeModel.Instance.RemoveBehaviorTree(treeId, ETreeRemoveReason.TreeDestroy);
@@ -231,7 +231,7 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x0600E576 RID: 58742 RVA: 0x00360FBC File Offset: 0x0035F1BC
+	// Token: 0x0600B994 RID: 47508 RVA: 0x0036CC1C File Offset: 0x0036AE1C
 	private static void OnGeneralLogicTreeSuspend(long treeId, int nodeId, EBehaviorTreeSuspendType suspendType)
 	{
 		BaseBehaviorTree behaviorTree = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeId), false);
@@ -246,111 +246,111 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		behaviorTree.ExecuteTreeGuaranteeActions(ETreeRemoveReason.TreeDestroy);
 	}
 
-	// Token: 0x0600E577 RID: 58743 RVA: 0x00361030 File Offset: 0x0035F230
+	// Token: 0x0600B995 RID: 47509 RVA: 0x0036CC90 File Offset: 0x0036AE90
 	public void RequestSubmitNode(GeneralLogicTreeContext context, Action<bool> callback, [Nullable(2)] GeneralLogicTreeNodeExtraInfo extraInfo = null)
 	{
 		this.GetAssistant<RequestToServerAssistant>(GeneralLogicTreeController.EAssistantType.RequestToServer).RequestSubmitNode(context, callback, extraInfo);
 	}
 
-	// Token: 0x0600E578 RID: 58744 RVA: 0x00361041 File Offset: 0x0035F241
+	// Token: 0x0600B996 RID: 47510 RVA: 0x0036CCA1 File Offset: 0x0036AEA1
 	public void RequestSubmitAwakeAndLoadEntityNode(GeneralLogicTreeContext context, Action<bool> callback)
 	{
 		this.GetAssistant<RequestToServerAssistant>(GeneralLogicTreeController.EAssistantType.RequestToServer).RequestSubmitAwakeAndLoadEntityNode(context, callback);
 	}
 
-	// Token: 0x0600E579 RID: 58745 RVA: 0x00361051 File Offset: 0x0035F251
+	// Token: 0x0600B997 RID: 47511 RVA: 0x0036CCB1 File Offset: 0x0036AEB1
 	public void RequestSetTimerInfo(long treeIncId, int nodeId, ETimerType timerType, TimerSetType setType, int seconds)
 	{
 		this.GetAssistant<RequestToServerAssistant>(GeneralLogicTreeController.EAssistantType.RequestToServer).RequestSetTimerInfo(treeIncId, nodeId, timerType, setType, seconds);
 	}
 
-	// Token: 0x0600E57A RID: 58746 RVA: 0x00361066 File Offset: 0x0035F266
+	// Token: 0x0600B998 RID: 47512 RVA: 0x0036CCC6 File Offset: 0x0036AEC6
 	public void RequestGiveUp(long treeIncId, Action<bool> callback)
 	{
 		this.GetAssistant<RequestToServerAssistant>(GeneralLogicTreeController.EAssistantType.RequestToServer).RequestGiveUp(treeIncId, callback);
 	}
 
-	// Token: 0x0600E57B RID: 58747 RVA: 0x00361076 File Offset: 0x0035F276
+	// Token: 0x0600B999 RID: 47513 RVA: 0x0036CCD6 File Offset: 0x0036AED6
 	public void RequestQuestFastReturnPos(long treeIncId, int nodeId, Action<bool> callback)
 	{
 		this.GetAssistant<RequestToServerAssistant>(GeneralLogicTreeController.EAssistantType.RequestToServer).RequestQuestFastReturnPos(treeIncId, nodeId, callback);
 	}
 
-	// Token: 0x0600E57C RID: 58748 RVA: 0x00361087 File Offset: 0x0035F287
+	// Token: 0x0600B99A RID: 47514 RVA: 0x0036CCE7 File Offset: 0x0036AEE7
 	public void RequestLevelPlayFastReturnPos(int levelPlayId, long treeIncId, int nodeId, Action<bool> callback)
 	{
 		this.GetAssistant<RequestToServerAssistant>(GeneralLogicTreeController.EAssistantType.RequestToServer).RequestLevelPlayFastReturnPos(levelPlayId, treeIncId, nodeId, callback);
 	}
 
-	// Token: 0x0600E57D RID: 58749 RVA: 0x0036109A File Offset: 0x0035F29A
+	// Token: 0x0600B99B RID: 47515 RVA: 0x0036CCFA File Offset: 0x0036AEFA
 	public void RequestFastReturnDungeon(long treeIncId, int nodeId, bool isContinue, List<int> roleIds, Action<bool> callback)
 	{
 		this.GetAssistant<RequestToServerAssistant>(GeneralLogicTreeController.EAssistantType.RequestToServer).RequestFastReturnDungeon(treeIncId, nodeId, isContinue, roleIds, callback);
 	}
 
-	// Token: 0x0600E57E RID: 58750 RVA: 0x003610AF File Offset: 0x0035F2AF
+	// Token: 0x0600B99C RID: 47516 RVA: 0x0036CD0F File Offset: 0x0036AF0F
 	public UniTask RequestRollback(long treeIncId, FailReason? reason = null)
 	{
 		return this.GetAssistant<RequestToServerAssistant>(GeneralLogicTreeController.EAssistantType.RequestToServer).RequestRollback(treeIncId, reason);
 	}
 
-	// Token: 0x0600E57F RID: 58751 RVA: 0x003610BF File Offset: 0x0035F2BF
+	// Token: 0x0600B99D RID: 47517 RVA: 0x0036CD1F File Offset: 0x0036AF1F
 	public void RequestTimerEnd(long treeIncId, string timerType)
 	{
 		this.GetAssistant<RequestToServerAssistant>(GeneralLogicTreeController.EAssistantType.RequestToServer).RequestTimerEnd(treeIncId, timerType);
 	}
 
-	// Token: 0x0600E580 RID: 58752 RVA: 0x003610CF File Offset: 0x0035F2CF
+	// Token: 0x0600B99E RID: 47518 RVA: 0x0036CD2F File Offset: 0x0036AF2F
 	public void RequestFinishUiGameplay(UiGamePlayType type, string gameplayId)
 	{
 		this.GetAssistant<RequestToServerAssistant>(GeneralLogicTreeController.EAssistantType.RequestToServer).RequestFinishUiGameplay(type, gameplayId);
 	}
 
-	// Token: 0x0600E581 RID: 58753 RVA: 0x003610DF File Offset: 0x0035F2DF
+	// Token: 0x0600B99F RID: 47519 RVA: 0x0036CD3F File Offset: 0x0036AF3F
 	public void RequestForcedOccupation(long treeId, Action callback)
 	{
 		this.GetAssistant<RequestToServerAssistant>(GeneralLogicTreeController.EAssistantType.RequestToServer).RequestForcedOccupation(treeId, callback);
 	}
 
-	// Token: 0x0600E582 RID: 58754 RVA: 0x003610EF File Offset: 0x0035F2EF
+	// Token: 0x0600B9A0 RID: 47520 RVA: 0x0036CD4F File Offset: 0x0036AF4F
 	public global::Vector RequestEntityPosition(int dungeonId, int pbDataId, [Nullable(2)] global::Vector receiveVector = null)
 	{
 		return this.GetAssistant<RequestToServerAssistant>(GeneralLogicTreeController.EAssistantType.RequestToServer).RequestEntityPosition(dungeonId, pbDataId, receiveVector);
 	}
 
-	// Token: 0x0600E583 RID: 58755 RVA: 0x00361100 File Offset: 0x0035F300
+	// Token: 0x0600B9A1 RID: 47521 RVA: 0x0036CD60 File Offset: 0x0036AF60
 	public global::Vector GetEntityPos(EntityHandle handle, bool addHalfCapsule, [Nullable(2)] global::Vector receiveVector = null)
 	{
 		return this.GetAssistant<RequestToServerAssistant>(GeneralLogicTreeController.EAssistantType.RequestToServer).GetEntityPos(handle, addHalfCapsule, receiveVector);
 	}
 
-	// Token: 0x0600E584 RID: 58756 RVA: 0x00361111 File Offset: 0x0035F311
+	// Token: 0x0600B9A2 RID: 47522 RVA: 0x0036CD71 File Offset: 0x0036AF71
 	public bool IsShowNodeStatus(IQuestScheduleType schedule)
 	{
 		return TreeExpressAssistant.IsShowNodeStatus(schedule);
 	}
 
-	// Token: 0x0600E585 RID: 58757 RVA: 0x00361119 File Offset: 0x0035F319
+	// Token: 0x0600B9A3 RID: 47523 RVA: 0x0036CD79 File Offset: 0x0036AF79
 	[NullableContext(2)]
 	public int GetTitleTrackNodeId(IQuestScheduleType schedule)
 	{
 		return TreeExpressAssistant.GetTitleTrackNodeId(schedule);
 	}
 
-	// Token: 0x0600E586 RID: 58758 RVA: 0x00361121 File Offset: 0x0035F321
+	// Token: 0x0600B9A4 RID: 47524 RVA: 0x0036CD81 File Offset: 0x0036AF81
 	[NullableContext(2)]
 	public bool IsShowTrackDistance(long treeIncId, IQuestScheduleType schedule)
 	{
 		return TreeExpressAssistant.IsShowTrackDistance(treeIncId, schedule);
 	}
 
-	// Token: 0x0600E587 RID: 58759 RVA: 0x0036112A File Offset: 0x0035F32A
+	// Token: 0x0600B9A5 RID: 47525 RVA: 0x0036CD8A File Offset: 0x0036AF8A
 	public bool IsShowNodeTrackDistance(long treeIncId, int nodeId)
 	{
 		return TreeExpressAssistant.IsShowNodeTrackDistance(treeIncId, nodeId);
 	}
 
-	// Token: 0x0600E588 RID: 58760 RVA: 0x00361133 File Offset: 0x0035F333
+	// Token: 0x0600B9A6 RID: 47526 RVA: 0x0036CD93 File Offset: 0x0036AF93
 	public string GetTitleText(long treeIncId, string tidTitle, [Nullable(2)] IQuestScheduleType schedule, bool bUsePreStateText, [Nullable(new byte[]
 	{
 		2,
@@ -360,32 +360,32 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		return TreeExpressAssistant.GetTitleText(treeIncId, tidTitle, schedule, bUsePreStateText, customPlaceholderBindingProgressList);
 	}
 
-	// Token: 0x0600E589 RID: 58761 RVA: 0x00361144 File Offset: 0x0035F344
+	// Token: 0x0600B9A7 RID: 47527 RVA: 0x0036CDA4 File Offset: 0x0036AFA4
 	public string GetNodeTrackText(long treeIncId, int nodeId)
 	{
 		return TreeExpressAssistant.GetNodeTrackText(treeIncId, nodeId, null, null, null);
 	}
 
-	// Token: 0x0600E58A RID: 58762 RVA: 0x00361163 File Offset: 0x0035F363
+	// Token: 0x0600B9A8 RID: 47528 RVA: 0x0036CDC3 File Offset: 0x0036AFC3
 	public string FormatStepTextByVarValue(string tidTitle, VarRef varRef, object varValue, bool bShowArtText)
 	{
 		return TreeExpressAssistant.FormatStepTextByVarValueByKey(tidTitle, varRef, varValue, bShowArtText);
 	}
 
-	// Token: 0x0600E58B RID: 58763 RVA: 0x0036116F File Offset: 0x0035F36F
+	// Token: 0x0600B9A9 RID: 47529 RVA: 0x0036CDCF File Offset: 0x0036AFCF
 	public void TryReleaseExpressionOccupation(long treeIncId)
 	{
 		TreeExpressAssistant.TryReleaseExpressionOccupation(treeIncId);
 	}
 
-	// Token: 0x0600E58C RID: 58764 RVA: 0x00361177 File Offset: 0x0035F377
+	// Token: 0x0600B9AA RID: 47530 RVA: 0x0036CDD7 File Offset: 0x0036AFD7
 	public void OpenSystemBoardResultRequest(int result, int incId)
 	{
 		this.GetAssistant<ServerNotifyAssistant>(GeneralLogicTreeController.EAssistantType.ServerNotify).OpenSystemBoardResultRequest(result, incId);
 	}
 
-	// Token: 0x17001255 RID: 4693
-	// (get) Token: 0x0600E58D RID: 58765 RVA: 0x00361187 File Offset: 0x0035F387
+	// Token: 0x1700127F RID: 4735
+	// (get) Token: 0x0600B9AB RID: 47531 RVA: 0x0036CDE7 File Offset: 0x0036AFE7
 	public static GeneralLogicTreeController Instance
 	{
 		get
@@ -394,7 +394,7 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		}
 	}
 
-	// Token: 0x0600E58E RID: 58766 RVA: 0x0036118E File Offset: 0x0035F38E
+	// Token: 0x0600B9AC RID: 47532 RVA: 0x0036CDEE File Offset: 0x0036AFEE
 	public static GeneralLogicTreeController GetOrCreateInstance()
 	{
 		if (GeneralLogicTreeController._Instance == null)
@@ -404,7 +404,7 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		return GeneralLogicTreeController._Instance;
 	}
 
-	// Token: 0x0600E58F RID: 58767 RVA: 0x003611A2 File Offset: 0x0035F3A2
+	// Token: 0x0600B9AD RID: 47533 RVA: 0x0036CE02 File Offset: 0x0036B002
 	public static bool CreateInstance()
 	{
 		if (GeneralLogicTreeController._Instance != null)
@@ -415,54 +415,54 @@ public class GeneralLogicTreeController : ControllerWithAssistantBase
 		return true;
 	}
 
-	// Token: 0x0600E590 RID: 58768 RVA: 0x003611B8 File Offset: 0x0035F3B8
+	// Token: 0x0600B9AE RID: 47534 RVA: 0x0036CE18 File Offset: 0x0036B018
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600E591 RID: 58769 RVA: 0x003611BA File Offset: 0x0035F3BA
+	// Token: 0x0600B9AF RID: 47535 RVA: 0x0036CE1A File Offset: 0x0036B01A
 	public static void ResetStaticDefaultValue()
 	{
 		GeneralLogicTreeController._Instance = null;
 	}
 
-	// Token: 0x0600E592 RID: 58770 RVA: 0x003611C2 File Offset: 0x0035F3C2
+	// Token: 0x0600B9B0 RID: 47536 RVA: 0x0036CE22 File Offset: 0x0036B022
 	static GeneralLogicTreeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GeneralLogicTreeController.CreateStaticDefaultValue), new Action(GeneralLogicTreeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006A46 RID: 27206
+	// Token: 0x04006B27 RID: 27431
 	[Nullable(2)]
 	private CustomPromise<bool> WaitBattleViewOpen;
 
-	// Token: 0x04006A47 RID: 27207
+	// Token: 0x04006B28 RID: 27432
 	[Nullable(2)]
 	private static GeneralLogicTreeController _Instance;
 
-	// Token: 0x02008376 RID: 33654
+	// Token: 0x020074FE RID: 29950
 	[NullableContext(0)]
 	private enum EAssistantType
 	{
-		// Token: 0x0402AD83 RID: 175491
+		// Token: 0x040260A9 RID: 155817
 		ServerNotify,
-		// Token: 0x0402AD84 RID: 175492
+		// Token: 0x040260AA RID: 155818
 		RequestToServer,
-		// Token: 0x0402AD85 RID: 175493
+		// Token: 0x040260AB RID: 155819
 		TreeExpressAssistant,
-		// Token: 0x0402AD86 RID: 175494
+		// Token: 0x040260AC RID: 155820
 		GuaranteeAssistant
 	}
 
-	// Token: 0x02008377 RID: 33655
+	// Token: 0x020074FF RID: 29951
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402AD87 RID: 175495
+		// Token: 0x040260AD RID: 155821
 		[Nullable(0)]
 		public static Action<long, int?> <0>__OnGeneralLogicTreeTearDown;
 
-		// Token: 0x0402AD88 RID: 175496
+		// Token: 0x040260AE RID: 155822
 		[Nullable(0)]
 		public static Action<long, int, EBehaviorTreeSuspendType> <1>__OnGeneralLogicTreeSuspend;
 	}

@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000E19 RID: 3609
+// Token: 0x020002CD RID: 717
 public enum EKuroSdkOpenCustomerServerType
 {
-	// Token: 0x040027C5 RID: 10181
+	// Token: 0x04002858 RID: 10328
 	Unknown,
-	// Token: 0x040027C6 RID: 10182
+	// Token: 0x04002859 RID: 10329
 	Login,
-	// Token: 0x040027C7 RID: 10183
+	// Token: 0x0400285A RID: 10330
 	Setting,
-	// Token: 0x040027C8 RID: 10184
+	// Token: 0x0400285B RID: 10331
 	Pay
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200256B RID: 9579
+	// Token: 0x02002814 RID: 10260
 	public class IVisualNovelBackgroundClean : IVisualNovelBackgroundBase
 	{
-		// Token: 0x0600D702 RID: 55042 RVA: 0x002009B7 File Offset: 0x001FEBB7
-		[NullableContext(1)]
+		// Token: 0x0600E46D RID: 58477 RVA: 0x0021C5C0 File Offset: 0x0021A7C0
 		public static IVisualNovelBackgroundClean Create(IVisualNovelBackgroundClean? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003DEE RID: 15854
-		// (get) Token: 0x0600D703 RID: 55043 RVA: 0x002009D6 File Offset: 0x001FEBD6
+		// Token: 0x170040F3 RID: 16627
+		// (get) Token: 0x0600E46E RID: 58478 RVA: 0x0021C5DF File Offset: 0x0021A7DF
 		public override EVisualNovelBackgroundType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400770D RID: 30477
+		// Token: 0x04007D6A RID: 32106
 		private IVisualNovelBackgroundClean Instance;
 	}
 }

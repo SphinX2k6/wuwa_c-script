@@ -5,19 +5,19 @@ using System.Runtime.CompilerServices;
 using System.Text.Json;
 using Aki.TDConfigMgr.Component;
 
-// Token: 0x020034CB RID: 13515
+// Token: 0x02002A3F RID: 10815
 [NullableContext(1)]
 [Nullable(0)]
 public class TdUtils : IStaticVariableResetter
 {
-	// Token: 0x0601D701 RID: 120577 RVA: 0x00837476 File Offset: 0x00835676
+	// Token: 0x0601B400 RID: 111616 RVA: 0x0085E91E File Offset: 0x0085CB1E
 	static TdUtils()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TdUtils.CreateStaticDefaultValue), new Action(TdUtils.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170028D8 RID: 10456
-	// (get) Token: 0x0601D702 RID: 120578 RVA: 0x00837495 File Offset: 0x00835695
+	// Token: 0x17002C70 RID: 11376
+	// (get) Token: 0x0601B401 RID: 111617 RVA: 0x0085E93D File Offset: 0x0085CB3D
 	public static Dictionary<ELevelPrefabBpType, string> LevelPrefabBpPathConfig
 	{
 		get
@@ -26,7 +26,7 @@ public class TdUtils : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601D703 RID: 120579 RVA: 0x0083749C File Offset: 0x0083569C
+	// Token: 0x0601B402 RID: 111618 RVA: 0x0085E944 File Offset: 0x0085CB44
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	public static T GetComponent<T>([Nullable(new byte[]
@@ -51,7 +51,7 @@ public class TdUtils : IStaticVariableResetter
 		return componentBase as T;
 	}
 
-	// Token: 0x0601D704 RID: 120580 RVA: 0x008374F3 File Offset: 0x008356F3
+	// Token: 0x0601B403 RID: 111619 RVA: 0x0085E99B File Offset: 0x0085CB9B
 	public static void CreateStaticDefaultValue()
 	{
 		TdUtils._levelPrefabBpPathConfig = new Dictionary<ELevelPrefabBpType, string>
@@ -71,37 +71,37 @@ public class TdUtils : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0601D705 RID: 120581 RVA: 0x00837523 File Offset: 0x00835723
+	// Token: 0x0601B404 RID: 111620 RVA: 0x0085E9CB File Offset: 0x0085CBCB
 	public static void ResetStaticDefaultValue()
 	{
 		TdUtils._levelPrefabBpPathConfig = null;
 	}
 
-	// Token: 0x0601D706 RID: 120582 RVA: 0x0083752B File Offset: 0x0083572B
+	// Token: 0x0601B405 RID: 111621 RVA: 0x0085E9D3 File Offset: 0x0085CBD3
 	public static bool IgnoreUnderScore(string key)
 	{
 		return key.StartsWith('_');
 	}
 
-	// Token: 0x0601D707 RID: 120583 RVA: 0x00837535 File Offset: 0x00835735
+	// Token: 0x0601B406 RID: 111622 RVA: 0x0085E9DD File Offset: 0x0085CBDD
 	public static bool IsGuid(string key)
 	{
 		return key == "Guid" || key == "ActionGuid";
 	}
 
-	// Token: 0x0601D708 RID: 120584 RVA: 0x00837551 File Offset: 0x00835751
+	// Token: 0x0601B407 RID: 111623 RVA: 0x0085E9F9 File Offset: 0x0085CBF9
 	public static bool isTemplateOnly(string key)
 	{
 		return key == "EdIsLocked";
 	}
 
-	// Token: 0x0601D709 RID: 120585 RVA: 0x0083755E File Offset: 0x0083575E
+	// Token: 0x0601B408 RID: 111624 RVA: 0x0085EA06 File Offset: 0x0085CC06
 	public static bool EntityDataSerializeIgnoreFunc(string key)
 	{
 		return TdUtils.IgnoreUnderScore(key) || TdUtils.IsGuid(key) || TdUtils.isTemplateOnly(key);
 	}
 
-	// Token: 0x0601D70A RID: 120586 RVA: 0x00837578 File Offset: 0x00835778
+	// Token: 0x0601B409 RID: 111625 RVA: 0x0085EA20 File Offset: 0x0085CC20
 	public static void Merge(JsonElement jElement1, JsonElement jElement2, ArrayBufferWriter<byte> outputBuffer)
 	{
 		outputBuffer.Clear();
@@ -131,7 +131,7 @@ public class TdUtils : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601D70B RID: 120587 RVA: 0x0083766C File Offset: 0x0083586C
+	// Token: 0x0601B40A RID: 111626 RVA: 0x0085EB14 File Offset: 0x0085CD14
 	private static void MergeObjects(Utf8JsonWriter jsonWriter, JsonElement jObject1, JsonElement jObject2)
 	{
 		jsonWriter.WriteStartObject();
@@ -177,7 +177,7 @@ public class TdUtils : IStaticVariableResetter
 		jsonWriter.WriteEndObject();
 	}
 
-	// Token: 0x0400E7ED RID: 59373
+	// Token: 0x0400ECA1 RID: 60577
 	[Nullable(new byte[]
 	{
 		2,

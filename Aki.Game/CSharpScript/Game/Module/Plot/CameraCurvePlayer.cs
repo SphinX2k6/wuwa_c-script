@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FD5 RID: 20437
+	// Token: 0x02003F9F RID: 16287
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CameraCurvePlayer
 	{
-		// Token: 0x060344BF RID: 214207 RVA: 0x00C47C8C File Offset: 0x00C45E8C
+		// Token: 0x06029344 RID: 168772 RVA: 0x00B919E8 File Offset: 0x00B8FBE8
 		public void Play(IShowTalkCameraMotionTween param)
 		{
 			if (this.IsPlaying)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060344C0 RID: 214208 RVA: 0x00C48050 File Offset: 0x00C46250
+		// Token: 0x06029345 RID: 168773 RVA: 0x00B91DAC File Offset: 0x00B8FFAC
 		public void Stop()
 		{
 			if (!this.IsPlaying)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.IsPlaying = false;
 		}
 
-		// Token: 0x060344C1 RID: 214209 RVA: 0x00C480A4 File Offset: 0x00C462A4
+		// Token: 0x06029346 RID: 168774 RVA: 0x00B91E00 File Offset: 0x00B90000
 		public void OnTick(double delta)
 		{
 			if (!this.IsPlaying)
@@ -163,30 +163,30 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0401BD07 RID: 113927
+		// Token: 0x040166E2 RID: 91874
 		[Nullable(2)]
 		private Transform StartPoint;
 
-		// Token: 0x0401BD08 RID: 113928
+		// Token: 0x040166E3 RID: 91875
 		[Nullable(2)]
 		private Transform EndPoint;
 
-		// Token: 0x0401BD09 RID: 113929
+		// Token: 0x040166E4 RID: 91876
 		private readonly CameraParam StartParam = new CameraParam();
 
-		// Token: 0x0401BD0A RID: 113930
+		// Token: 0x040166E5 RID: 91877
 		private readonly CameraParam EndParam = new CameraParam();
 
-		// Token: 0x0401BD0B RID: 113931
+		// Token: 0x040166E6 RID: 91878
 		private readonly Transform CameraTransform = Transform.Create();
 
-		// Token: 0x0401BD0C RID: 113932
+		// Token: 0x040166E7 RID: 91879
 		private double BlendTimes;
 
-		// Token: 0x0401BD0D RID: 113933
+		// Token: 0x040166E8 RID: 91880
 		private double CurTime;
 
-		// Token: 0x0401BD0E RID: 113934
+		// Token: 0x040166E9 RID: 91881
 		private bool IsPlaying;
 	}
 }

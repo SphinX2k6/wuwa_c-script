@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A4F RID: 6735
+// Token: 0x02000F0E RID: 3854
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,13 +16,13 @@ using UnrealEngine;
 })]
 public class DangoAbyssRankItem : GridProxyAbstract<DangoRankItemData>
 {
-	// Token: 0x0600C63A RID: 50746 RVA: 0x002D0F9D File Offset: 0x002CF19D
+	// Token: 0x06009A4A RID: 39498 RVA: 0x002DC0B1 File Offset: 0x002DA2B1
 	public DangoAbyssRankItem(bool isShowInBottom)
 	{
 		this.IsShowInBottom = isShowInBottom;
 	}
 
-	// Token: 0x0600C63B RID: 50747 RVA: 0x002D0FAC File Offset: 0x002CF1AC
+	// Token: 0x06009A4B RID: 39499 RVA: 0x002DC0C0 File Offset: 0x002DA2C0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -52,38 +52,38 @@ public class DangoAbyssRankItem : GridProxyAbstract<DangoRankItemData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C63C RID: 50748 RVA: 0x002D111F File Offset: 0x002CF31F
+	// Token: 0x06009A4C RID: 39500 RVA: 0x002DC233 File Offset: 0x002DA433
 	protected override void OnStart()
 	{
 		this.InitOnlineNameLayout();
 		this.InitRankGridLayout();
 	}
 
-	// Token: 0x0600C63D RID: 50749 RVA: 0x002D112D File Offset: 0x002CF32D
+	// Token: 0x06009A4D RID: 39501 RVA: 0x002DC241 File Offset: 0x002DA441
 	private void InitOnlineNameLayout()
 	{
 		this.OnlineNameLayout = new GenericLayout<OnlineItem, OnlineData>(base.GetLayoutBase(4), new Func<OnlineItem>(this.InitOnlineItem), base.GetItem(5).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x0600C63E RID: 50750 RVA: 0x002D1160 File Offset: 0x002CF360
+	// Token: 0x06009A4E RID: 39502 RVA: 0x002DC274 File Offset: 0x002DA474
 	private void InitRankGridLayout()
 	{
 		this.RankGridLayout = new GenericLayout<RankRoleGridItem, DangoAbyssRankRoleData>(base.GetLayoutBase(7), new Func<RankRoleGridItem>(this.InitRankGridItem), base.GetItem(8).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x0600C63F RID: 50751 RVA: 0x002D1193 File Offset: 0x002CF393
+	// Token: 0x06009A4F RID: 39503 RVA: 0x002DC2A7 File Offset: 0x002DA4A7
 	private OnlineItem InitOnlineItem()
 	{
 		return new OnlineItem(this.IsShowInBottom);
 	}
 
-	// Token: 0x0600C640 RID: 50752 RVA: 0x002D11A0 File Offset: 0x002CF3A0
+	// Token: 0x06009A50 RID: 39504 RVA: 0x002DC2B4 File Offset: 0x002DA4B4
 	private RankRoleGridItem InitRankGridItem()
 	{
 		return new RankRoleGridItem();
 	}
 
-	// Token: 0x0600C641 RID: 50753 RVA: 0x002D11A8 File Offset: 0x002CF3A8
+	// Token: 0x06009A51 RID: 39505 RVA: 0x002DC2BC File Offset: 0x002DA4BC
 	private void RefreshEmpty()
 	{
 		base.GetText(1).SetUIActive(false);
@@ -106,7 +106,7 @@ public class DangoAbyssRankItem : GridProxyAbstract<DangoRankItemData>
 		this.RefreshRankBg();
 	}
 
-	// Token: 0x0600C642 RID: 50754 RVA: 0x002D1250 File Offset: 0x002CF450
+	// Token: 0x06009A52 RID: 39506 RVA: 0x002DC364 File Offset: 0x002DA564
 	private void RefreshRankBg()
 	{
 		base.GetTexture(0).SetUIActive(true);
@@ -115,7 +115,7 @@ public class DangoAbyssRankItem : GridProxyAbstract<DangoRankItemData>
 		base.SetTextureByPath(resourcePath, base.GetTexture(0), null, null);
 	}
 
-	// Token: 0x0600C643 RID: 50755 RVA: 0x002D12B0 File Offset: 0x002CF4B0
+	// Token: 0x06009A53 RID: 39507 RVA: 0x002DC3C4 File Offset: 0x002DA5C4
 	private void RefreshRankNum()
 	{
 		UUIText text = base.GetText(1);
@@ -124,7 +124,7 @@ public class DangoAbyssRankItem : GridProxyAbstract<DangoRankItemData>
 		text.SetText(this.RankItemData.AbyssChallengeInfo.Rank.ToString(), true);
 	}
 
-	// Token: 0x0600C644 RID: 50756 RVA: 0x002D1308 File Offset: 0x002CF508
+	// Token: 0x06009A54 RID: 39508 RVA: 0x002DC41C File Offset: 0x002DA61C
 	private void RefreshTimeScore()
 	{
 		base.GetText(6).SetUIActive(true);
@@ -148,7 +148,7 @@ public class DangoAbyssRankItem : GridProxyAbstract<DangoRankItemData>
 		base.GetText(6).SetText(newText, true);
 	}
 
-	// Token: 0x0600C645 RID: 50757 RVA: 0x002D13F4 File Offset: 0x002CF5F4
+	// Token: 0x06009A55 RID: 39509 RVA: 0x002DC508 File Offset: 0x002DA708
 	public UniTask RefreshPlayerName()
 	{
 		DangoAbyssRankItem.<RefreshPlayerName>d__17 <RefreshPlayerName>d__;
@@ -159,7 +159,7 @@ public class DangoAbyssRankItem : GridProxyAbstract<DangoRankItemData>
 		return <RefreshPlayerName>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C646 RID: 50758 RVA: 0x002D1438 File Offset: 0x002CF638
+	// Token: 0x06009A56 RID: 39510 RVA: 0x002DC54C File Offset: 0x002DA74C
 	private UniTask RefreshRankGrid()
 	{
 		DangoAbyssRankItem.<RefreshRankGrid>d__18 <RefreshRankGrid>d__;
@@ -170,13 +170,13 @@ public class DangoAbyssRankItem : GridProxyAbstract<DangoRankItemData>
 		return <RefreshRankGrid>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C647 RID: 50759 RVA: 0x002D147B File Offset: 0x002CF67B
+	// Token: 0x06009A57 RID: 39511 RVA: 0x002DC58F File Offset: 0x002DA78F
 	public override void Refresh(DangoRankItemData data, bool isSelected = false, int gridIndex = 0)
 	{
 		this.Refresh(data, isSelected, gridIndex, true);
 	}
 
-	// Token: 0x0600C648 RID: 50760 RVA: 0x002D1488 File Offset: 0x002CF688
+	// Token: 0x06009A58 RID: 39512 RVA: 0x002DC59C File Offset: 0x002DA79C
 	public void Refresh(DangoRankItemData data, bool isSelected, int gridIndex, bool ifRankData)
 	{
 		this.IfRankData = ifRankData;
@@ -193,59 +193,59 @@ public class DangoAbyssRankItem : GridProxyAbstract<DangoRankItemData>
 		this.RefreshRankGrid();
 	}
 
-	// Token: 0x0600C649 RID: 50761 RVA: 0x002D14D8 File Offset: 0x002CF6D8
+	// Token: 0x06009A59 RID: 39513 RVA: 0x002DC5EC File Offset: 0x002DA7EC
 	public bool IsSelfItem()
 	{
 		return this.RankItemData.AbyssChallengeInfo.IsSelfInData;
 	}
 
-	// Token: 0x04005B57 RID: 23383
+	// Token: 0x04005C26 RID: 23590
 	private readonly bool IsShowInBottom;
 
-	// Token: 0x04005B58 RID: 23384
+	// Token: 0x04005C27 RID: 23591
 	private bool IfRankData;
 
-	// Token: 0x04005B59 RID: 23385
+	// Token: 0x04005C28 RID: 23592
 	private DangoRankItemData RankItemData;
 
-	// Token: 0x04005B5A RID: 23386
+	// Token: 0x04005C29 RID: 23593
 	private GenericLayout<OnlineItem, OnlineData> OnlineNameLayout;
 
-	// Token: 0x04005B5B RID: 23387
+	// Token: 0x04005C2A RID: 23594
 	private GenericLayout<RankRoleGridItem, DangoAbyssRankRoleData> RankGridLayout;
 
-	// Token: 0x02007F95 RID: 32661
+	// Token: 0x02007124 RID: 28964
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04029A82 RID: 170626
+		// Token: 0x04024DBF RID: 150975
 		public const int RankBg = 0;
 
-		// Token: 0x04029A83 RID: 170627
+		// Token: 0x04024DC0 RID: 150976
 		public const int RankNum = 1;
 
-		// Token: 0x04029A84 RID: 170628
+		// Token: 0x04024DC1 RID: 150977
 		public const int NoneRankItem = 2;
 
-		// Token: 0x04029A85 RID: 170629
+		// Token: 0x04024DC2 RID: 150978
 		public const int Name = 3;
 
-		// Token: 0x04029A86 RID: 170630
+		// Token: 0x04024DC3 RID: 150979
 		public const int OnlineNameLayout = 4;
 
-		// Token: 0x04029A87 RID: 170631
+		// Token: 0x04024DC4 RID: 150980
 		public const int OnlineNameItem = 5;
 
-		// Token: 0x04029A88 RID: 170632
+		// Token: 0x04024DC5 RID: 150981
 		public const int ScoreText = 6;
 
-		// Token: 0x04029A89 RID: 170633
+		// Token: 0x04024DC6 RID: 150982
 		public const int RankGridLayout = 7;
 
-		// Token: 0x04029A8A RID: 170634
+		// Token: 0x04024DC7 RID: 150983
 		public const int RankGridItem = 8;
 
-		// Token: 0x04029A8B RID: 170635
+		// Token: 0x04024DC8 RID: 150984
 		public const int NoneScoreText = 9;
 	}
 }

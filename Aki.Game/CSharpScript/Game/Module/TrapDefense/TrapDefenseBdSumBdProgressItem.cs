@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004ADF RID: 19167
+	// Token: 0x02003A87 RID: 14983
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseBdSumBdProgressItem : GridProxyAbstract<ITrapDefenseBdProgressInfo>
 	{
-		// Token: 0x06031A5A RID: 203354 RVA: 0x00B84DFC File Offset: 0x00B82FFC
+		// Token: 0x060267EA RID: 157674 RVA: 0x00AC8DB0 File Offset: 0x00AC6FB0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031A5B RID: 203355 RVA: 0x00B84E88 File Offset: 0x00B83088
+		// Token: 0x060267EB RID: 157675 RVA: 0x00AC8E3C File Offset: 0x00AC703C
 		public override void Refresh(ITrapDefenseBdProgressInfo data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SetSpriteByPath(resourcePath2, base.GetSprite(2), false, null, null);
 		}
 
-		// Token: 0x06031A5C RID: 203356 RVA: 0x00B84F55 File Offset: 0x00B83155
+		// Token: 0x060267EC RID: 157676 RVA: 0x00AC8F09 File Offset: 0x00AC7109
 		public void SetQualityArrowShow(bool show)
 		{
 			if (!this.ItemData.IsShowQualityArrow)
@@ -73,23 +73,23 @@ namespace CSharpScript.Game.Module.TrapDefense
 			sprite.SetUIActive(show);
 		}
 
-		// Token: 0x0401A839 RID: 108601
+		// Token: 0x0401518B RID: 86411
 		public ITrapDefenseBdProgressInfo ItemData;
 
-		// Token: 0x0401A83A RID: 108602
+		// Token: 0x0401518C RID: 86412
 		public Action<ITrapDefenseBdProgressInfo> ClickCallBack;
 
-		// Token: 0x0200AC68 RID: 44136
+		// Token: 0x02009688 RID: 38536
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04034659 RID: 214617
+			// Token: 0x0402F00A RID: 192522
 			public const int SpriteArrow = 0;
 
-			// Token: 0x0403465A RID: 214618
+			// Token: 0x0402F00B RID: 192523
 			public const int ItemProgressRoot = 1;
 
-			// Token: 0x0403465B RID: 214619
+			// Token: 0x0402F00C RID: 192524
 			public const int SpriteProgress = 2;
 		}
 	}

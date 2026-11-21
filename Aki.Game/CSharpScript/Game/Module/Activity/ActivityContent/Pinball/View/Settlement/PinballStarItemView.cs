@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlement
 {
-	// Token: 0x020062FC RID: 25340
+	// Token: 0x0200527A RID: 21114
 	public class PinballStarItemView : GridProxyAbstract<bool>
 	{
-		// Token: 0x0603FC4C RID: 261196 RVA: 0x00F6E084 File Offset: 0x00F6C284
+		// Token: 0x0603490D RID: 215309 RVA: 0x00EB4FE0 File Offset: 0x00EB31E0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -21,13 +21,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FC4D RID: 261197 RVA: 0x00F6E0CC File Offset: 0x00F6C2CC
+		// Token: 0x0603490E RID: 215310 RVA: 0x00EB5028 File Offset: 0x00EB3228
 		public override void Refresh(bool data, bool isSelected, int gridIndex)
 		{
 			this.Refresh(data);
 		}
 
-		// Token: 0x0603FC4E RID: 261198 RVA: 0x00F6E0D5 File Offset: 0x00F6C2D5
+		// Token: 0x0603490F RID: 215311 RVA: 0x00EB5031 File Offset: 0x00EB3231
 		public void Refresh(bool isActive)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -38,10 +38,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			sprite.SetUIActive(isActive);
 		}
 
-		// Token: 0x0200C4F6 RID: 50422
+		// Token: 0x0200AEDD RID: 44765
 		private enum EStarItemComponent
 		{
-			// Token: 0x0403B70A RID: 243466
+			// Token: 0x0403606C RID: 221292
 			SpriteStar
 		}
 	}

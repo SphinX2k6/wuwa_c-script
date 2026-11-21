@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000565 RID: 1381
+	// Token: 0x020005CC RID: 1484
 	public class INpcPerformBubble_SetValue
 	{
-		// Token: 0x04001435 RID: 5173
-		[Nullable(1)]
+		// Token: 0x0400159F RID: 5535
 		public IBubbleIndex Bubble;
 
-		// Token: 0x04001436 RID: 5174
+		// Token: 0x040015A0 RID: 5536
 		public int Rate;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200226F RID: 8815
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024DC RID: 9436
 	public class VehicleExitNpc : ActionParams
 	{
-		// Token: 0x0600C166 RID: 49510 RVA: 0x001BBD9C File Offset: 0x001B9F9C
+		// Token: 0x0600CD2C RID: 52524 RVA: 0x001D3520 File Offset: 0x001D1720
 		private VehicleExitNpc_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C167 RID: 49511 RVA: 0x001BBDD4 File Offset: 0x001B9FD4
+		// Token: 0x0600CD2D RID: 52525 RVA: 0x001D3558 File Offset: 0x001D1758
 		public static VehicleExitNpc Create([Nullable(2)] VehicleExitNpc instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C168 RID: 49512 RVA: 0x001BBDE7 File Offset: 0x001B9FE7
+		// Token: 0x0600CD2E RID: 52526 RVA: 0x001D356B File Offset: 0x001D176B
 		public static VehicleExitNpc CreateFromSetValue([Nullable(2)] VehicleExitNpc_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C169 RID: 49513 RVA: 0x001BBDFA File Offset: 0x001B9FFA
+		// Token: 0x0600CD2F RID: 52527 RVA: 0x001D357E File Offset: 0x001D177E
 		public VehicleExitNpc_SetValue ToSetValue()
 		{
 			return new VehicleExitNpc_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A7A RID: 14970
-		// (get) Token: 0x0600C16A RID: 49514 RVA: 0x001BBE19 File Offset: 0x001BA019
-		// (set) Token: 0x0600C16B RID: 49515 RVA: 0x001BBE44 File Offset: 0x001BA044
+		// Token: 0x17003D71 RID: 15729
+		// (get) Token: 0x0600CD30 RID: 52528 RVA: 0x001D359D File Offset: 0x001D179D
+		// (set) Token: 0x0600CD31 RID: 52529 RVA: 0x001D35C8 File Offset: 0x001D17C8
 		public virtual int TargetNpc
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A7B RID: 14971
-		// (get) Token: 0x0600C16C RID: 49516 RVA: 0x001BBE52 File Offset: 0x001BA052
-		// (set) Token: 0x0600C16D RID: 49517 RVA: 0x001BBE79 File Offset: 0x001BA079
+		// Token: 0x17003D72 RID: 15730
+		// (get) Token: 0x0600CD32 RID: 52530 RVA: 0x001D35D6 File Offset: 0x001D17D6
+		// (set) Token: 0x0600CD33 RID: 52531 RVA: 0x001D35FD File Offset: 0x001D17FD
 		public virtual IExitVehicleType ExitType
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400733B RID: 29499
+		// Token: 0x04007988 RID: 31112
 		[Nullable(2)]
 		protected new VehicleExitNpc FbInstance;
 
-		// Token: 0x0400733C RID: 29500
+		// Token: 0x04007989 RID: 31113
 		[Nullable(2)]
 		protected VehicleExitNpc_SetValue PocoInterface;
 	}

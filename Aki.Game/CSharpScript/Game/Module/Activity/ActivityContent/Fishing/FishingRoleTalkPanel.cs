@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065CE RID: 26062
+	// Token: 0x0200554C RID: 21836
 	public class FishingRoleTalkPanel : UiPanelBase
 	{
-		// Token: 0x060415DF RID: 267743 RVA: 0x00FD7458 File Offset: 0x00FD5658
+		// Token: 0x060362A4 RID: 221860 RVA: 0x00F1E498 File Offset: 0x00F1C698
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,26 +26,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060415E0 RID: 267744 RVA: 0x00FD74C1 File Offset: 0x00FD56C1
+		// Token: 0x060362A5 RID: 221861 RVA: 0x00F1E501 File Offset: 0x00F1C701
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x060415E1 RID: 267745 RVA: 0x00FD74D4 File Offset: 0x00FD56D4
+		// Token: 0x060362A6 RID: 221862 RVA: 0x00F1E514 File Offset: 0x00F1C714
 		public void SetRoleHead(int roleId)
 		{
 			base.SetRoleIcon(RoleConfig.Instance.GetRoleConfig(roleId).Value.RoleHeadIconCircle, base.GetTexture(0), roleId, null, null);
 		}
 
-		// Token: 0x060415E2 RID: 267746 RVA: 0x00FD7514 File Offset: 0x00FD5714
+		// Token: 0x060362A7 RID: 221863 RVA: 0x00F1E554 File Offset: 0x00F1C754
 		[NullableContext(1)]
 		public void SetTxtInfo(string textId, params object[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, args);
 		}
 
-		// Token: 0x060415E3 RID: 267747 RVA: 0x00FD752C File Offset: 0x00FD572C
+		// Token: 0x060362A8 RID: 221864 RVA: 0x00F1E56C File Offset: 0x00F1C76C
 		[NullableContext(1)]
 		public void PlayAnim(string sequenceName, [Nullable(2)] Action callback = null)
 		{
@@ -61,17 +61,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			});
 		}
 
-		// Token: 0x04022023 RID: 139299
+		// Token: 0x0401C954 RID: 117076
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200C7F6 RID: 51190
+		// Token: 0x0200B1D9 RID: 45529
 		private class EComponentDefine
 		{
-			// Token: 0x0403C643 RID: 247363
+			// Token: 0x04036F91 RID: 225169
 			public const int TexRoleHead = 0;
 
-			// Token: 0x0403C644 RID: 247364
+			// Token: 0x04036F92 RID: 225170
 			public const int TxtInfo = 1;
 		}
 	}

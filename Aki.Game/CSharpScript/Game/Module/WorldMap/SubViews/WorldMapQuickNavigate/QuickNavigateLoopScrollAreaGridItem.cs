@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 {
-	// Token: 0x020047D6 RID: 18390
+	// Token: 0x02003707 RID: 14087
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 	})]
 	public class QuickNavigateLoopScrollAreaGridItem : GridProxyAbstract<QuickNavigateLoopScrollAreaGridItemData>
 	{
-		// Token: 0x060302E4 RID: 197348 RVA: 0x00B2A29C File Offset: 0x00B2849C
+		// Token: 0x06024AB4 RID: 150196 RVA: 0x00A5A138 File Offset: 0x00A58338
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060302E5 RID: 197349 RVA: 0x00B2A3E7 File Offset: 0x00B285E7
+		// Token: 0x06024AB5 RID: 150197 RVA: 0x00A5A283 File Offset: 0x00A58483
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(3).bLockStateOnSelect = false;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			base.GetSprite(6).SetUIActive(false);
 		}
 
-		// Token: 0x060302E6 RID: 197350 RVA: 0x00B2A410 File Offset: 0x00B28610
+		// Token: 0x06024AB6 RID: 150198 RVA: 0x00A5A2AC File Offset: 0x00A584AC
 		public override void Refresh(QuickNavigateLoopScrollAreaGridItemData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -108,21 +108,21 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x060302E7 RID: 197351 RVA: 0x00B2A5C0 File Offset: 0x00B287C0
+		// Token: 0x06024AB7 RID: 150199 RVA: 0x00A5A45C File Offset: 0x00A5865C
 		private void SetNameLocalText(string localTextId)
 		{
 			UUIText text = base.GetText(1);
 			LguiUtil.Instance.SetLocalTextNew(text, localTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x060302E8 RID: 197352 RVA: 0x00B2A5E6 File Offset: 0x00B287E6
+		// Token: 0x06024AB8 RID: 150200 RVA: 0x00A5A482 File Offset: 0x00A58682
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			this.UpdateToggleSetState();
 			EventSystem.Instance.Emit<int>(EEventName.WorldMapSecondNavigateSelect, base.GridIndex);
 		}
 
-		// Token: 0x060302E9 RID: 197353 RVA: 0x00B2A604 File Offset: 0x00B28804
+		// Token: 0x06024AB9 RID: 150201 RVA: 0x00A5A4A0 File Offset: 0x00A586A0
 		private void UpdateToggleSetState()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(3);
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x04019F2A RID: 106282
+		// Token: 0x040145DE RID: 83422
 		[Nullable(2)]
 		private QuickNavigateLoopScrollAreaGridItemData Data;
 	}

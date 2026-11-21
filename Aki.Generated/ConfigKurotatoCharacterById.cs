@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000489 RID: 1161
+	// Token: 0x0200049F RID: 1183
 	public class ConfigKurotatoCharacterById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001B40 RID: 6976 RVA: 0x000F35C7 File Offset: 0x000F17C7
+		// Token: 0x06001BC4 RID: 7108 RVA: 0x000F9D1B File Offset: 0x000F7F1B
 		static ConfigKurotatoCharacterById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKurotatoCharacterById.CreateStaticDefaultValue), new Action(ConfigKurotatoCharacterById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001B41 RID: 6977 RVA: 0x000F35E8 File Offset: 0x000F17E8
+		// Token: 0x06001BC5 RID: 7109 RVA: 0x000F9D3C File Offset: 0x000F7F3C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKurotatoCharacterById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001B42 RID: 6978 RVA: 0x000F3667 File Offset: 0x000F1867
+		// Token: 0x06001BC6 RID: 7110 RVA: 0x000F9DBB File Offset: 0x000F7FBB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKurotatoCharacterById.LogPair = null;
 			ConfigKurotatoCharacterById.HandleId = 0;
 		}
 
-		// Token: 0x06001B43 RID: 6979 RVA: 0x000F3675 File Offset: 0x000F1875
+		// Token: 0x06001BC7 RID: 7111 RVA: 0x000F9DC9 File Offset: 0x000F7FC9
 		public static void Init()
 		{
 			ConfigKurotatoCharacterById.HandleId = ConfigCommon.InitDataStatement(ConfigKurotatoCharacterById.HandleId, "db_kurotato.db", "select BinData from `KurotatoCharacter` where Id=?");
 		}
 
-		// Token: 0x06001B44 RID: 6980 RVA: 0x000F3690 File Offset: 0x000F1890
+		// Token: 0x06001BC8 RID: 7112 RVA: 0x000F9DE4 File Offset: 0x000F7FE4
 		public static KurotatoCharacter? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigKurotatoCharacterById.HandleId, ConfigKurotatoCharacterById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new KurotatoCharacter?(rootAsKurotatoCharacter);
 		}
 
-		// Token: 0x04001FA3 RID: 8099
+		// Token: 0x0400203D RID: 8253
 		private const string DB = "db_kurotato.db";
 
-		// Token: 0x04001FA4 RID: 8100
+		// Token: 0x0400203E RID: 8254
 		private const string FILE = "t.土豆兄弟_角色.xlsx";
 
-		// Token: 0x04001FA5 RID: 8101
+		// Token: 0x0400203F RID: 8255
 		private const string TABLE = "KurotatoCharacter";
 
-		// Token: 0x04001FA6 RID: 8102
+		// Token: 0x04002040 RID: 8256
 		private const string COMMAND = "select BinData from `KurotatoCharacter` where Id=?";
 
-		// Token: 0x04001FA7 RID: 8103
+		// Token: 0x04002041 RID: 8257
 		private const string KEY_PREFIX = "KurotatoCharacterById";
 
-		// Token: 0x04001FA8 RID: 8104
+		// Token: 0x04002042 RID: 8258
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001FA9 RID: 8105
+		// Token: 0x04002043 RID: 8259
 		private static int HandleId;
 	}
 }

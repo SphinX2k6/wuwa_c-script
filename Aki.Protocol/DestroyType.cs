@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001595 RID: 5525
+	// Token: 0x02001607 RID: 5639
 	public enum DestroyType
 	{
-		// Token: 0x0400A7C8 RID: 42952
+		// Token: 0x0400AC47 RID: 44103
 		[OriginalName("NotDelay")]
 		NotDelay,
-		// Token: 0x0400A7C9 RID: 42953
+		// Token: 0x0400AC48 RID: 44104
 		[OriginalName("Delay")]
 		Delay
 	}

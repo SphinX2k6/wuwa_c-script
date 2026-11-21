@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002004 RID: 8196
+// Token: 0x020014D7 RID: 5335
 [NullableContext(1)]
 [Nullable(0)]
 public class ItemHintViewNew : UiTickViewBase
 {
-	// Token: 0x0601012E RID: 65838 RVA: 0x003EA73B File Offset: 0x003E893B
+	// Token: 0x0600D596 RID: 54678 RVA: 0x003F6D33 File Offset: 0x003F4F33
 	public ItemHintViewNew(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601012F RID: 65839 RVA: 0x003EA744 File Offset: 0x003E8944
+	// Token: 0x0600D597 RID: 54679 RVA: 0x003F6D3C File Offset: 0x003F4F3C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,14 +26,14 @@ public class ItemHintViewNew : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06010130 RID: 65840 RVA: 0x003EA7B4 File Offset: 0x003E89B4
+	// Token: 0x0600D598 RID: 54680 RVA: 0x003F6DAC File Offset: 0x003F4FAC
 	protected override void OnBeforeCreate()
 	{
 		base.OnBeforeCreate();
 		this.Data = (this.OpenParam as ItemHintViewNewData);
 	}
 
-	// Token: 0x06010131 RID: 65841 RVA: 0x003EA7CD File Offset: 0x003E89CD
+	// Token: 0x0600D599 RID: 54681 RVA: 0x003F6DC5 File Offset: 0x003F4FC5
 	protected override void OnBeforeDestroy()
 	{
 		if (this.ListSlideControl != null)
@@ -48,7 +48,7 @@ public class ItemHintViewNew : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06010132 RID: 65842 RVA: 0x003EA804 File Offset: 0x003E8A04
+	// Token: 0x0600D59A RID: 54682 RVA: 0x003F6DFC File Offset: 0x003F4FFC
 	protected override void OnStart()
 	{
 		if (!this.CheckNext() && !this.CheckPriorNext())
@@ -125,7 +125,7 @@ public class ItemHintViewNew : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06010133 RID: 65843 RVA: 0x003EABAC File Offset: 0x003E8DAC
+	// Token: 0x0600D59B RID: 54683 RVA: 0x003F71A4 File Offset: 0x003F53A4
 	protected override void OnTick(float delta)
 	{
 		if (this.ListPriorSlideControl != null)
@@ -138,7 +138,7 @@ public class ItemHintViewNew : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06010134 RID: 65844 RVA: 0x003EABD6 File Offset: 0x003E8DD6
+	// Token: 0x0600D59C RID: 54684 RVA: 0x003F71CE File Offset: 0x003F53CE
 	private ItemHintItem CreateItemProxy()
 	{
 		ItemHintItem itemHintItem = new ItemHintItem();
@@ -146,7 +146,7 @@ public class ItemHintViewNew : UiTickViewBase
 		return itemHintItem;
 	}
 
-	// Token: 0x06010135 RID: 65845 RVA: 0x003EABEF File Offset: 0x003E8DEF
+	// Token: 0x0600D59D RID: 54685 RVA: 0x003F71E7 File Offset: 0x003F53E7
 	private ItemPriorHintItem CreatePriorItemProxy()
 	{
 		ItemPriorHintItem itemPriorHintItem = new ItemPriorHintItem();
@@ -154,7 +154,7 @@ public class ItemHintViewNew : UiTickViewBase
 		return itemPriorHintItem;
 	}
 
-	// Token: 0x06010136 RID: 65846 RVA: 0x003EAC08 File Offset: 0x003E8E08
+	// Token: 0x0600D59E RID: 54686 RVA: 0x003F7200 File Offset: 0x003F5400
 	private void FinishCallback()
 	{
 		if (this.ListPriorSlideControl != null)
@@ -176,7 +176,7 @@ public class ItemHintViewNew : UiTickViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06010137 RID: 65847 RVA: 0x003EAC54 File Offset: 0x003E8E54
+	// Token: 0x0600D59F RID: 54687 RVA: 0x003F724C File Offset: 0x003F544C
 	private bool CheckNext()
 	{
 		ItemHintViewNewData data = this.Data;
@@ -194,7 +194,7 @@ public class ItemHintViewNew : UiTickViewBase
 		return flag2.GetValueOrDefault();
 	}
 
-	// Token: 0x06010138 RID: 65848 RVA: 0x003EAC9C File Offset: 0x003E8E9C
+	// Token: 0x0600D5A0 RID: 54688 RVA: 0x003F7294 File Offset: 0x003F5494
 	[NullableContext(2)]
 	private ItemRewardInfo ShiftItem()
 	{
@@ -211,7 +211,7 @@ public class ItemHintViewNew : UiTickViewBase
 		return shiftItem();
 	}
 
-	// Token: 0x06010139 RID: 65849 RVA: 0x003EACBC File Offset: 0x003E8EBC
+	// Token: 0x0600D5A1 RID: 54689 RVA: 0x003F72B4 File Offset: 0x003F54B4
 	private bool CheckPriorNext()
 	{
 		ItemHintViewNewData data = this.Data;
@@ -229,7 +229,7 @@ public class ItemHintViewNew : UiTickViewBase
 		return flag2.GetValueOrDefault();
 	}
 
-	// Token: 0x0601013A RID: 65850 RVA: 0x003EAD04 File Offset: 0x003E8F04
+	// Token: 0x0600D5A2 RID: 54690 RVA: 0x003F72FC File Offset: 0x003F54FC
 	[NullableContext(2)]
 	private ItemRewardInfo ShiftPriorItem()
 	{
@@ -246,7 +246,7 @@ public class ItemHintViewNew : UiTickViewBase
 		return shiftPriorItem();
 	}
 
-	// Token: 0x040076E4 RID: 30436
+	// Token: 0x040077CD RID: 30669
 	[Nullable(new byte[]
 	{
 		2,
@@ -254,7 +254,7 @@ public class ItemHintViewNew : UiTickViewBase
 	})]
 	private ListSliderControl<ItemHintItem> ListSlideControl;
 
-	// Token: 0x040076E5 RID: 30437
+	// Token: 0x040077CE RID: 30670
 	[Nullable(new byte[]
 	{
 		2,
@@ -262,21 +262,21 @@ public class ItemHintViewNew : UiTickViewBase
 	})]
 	private ListSliderControl<ItemPriorHintItem> ListPriorSlideControl;
 
-	// Token: 0x040076E6 RID: 30438
+	// Token: 0x040077CF RID: 30671
 	[Nullable(2)]
 	private ItemHintViewNewData Data;
 
-	// Token: 0x0200860B RID: 34315
+	// Token: 0x02007792 RID: 30610
 	[NullableContext(0)]
 	private enum EItemHintViewCom
 	{
-		// Token: 0x0402BA00 RID: 178688
+		// Token: 0x04026D0F RID: 158991
 		ItemPriorHintItem,
-		// Token: 0x0402BA01 RID: 178689
+		// Token: 0x04026D10 RID: 158992
 		ItemHintItem,
-		// Token: 0x0402BA02 RID: 178690
+		// Token: 0x04026D11 RID: 158993
 		TitleRoot,
-		// Token: 0x0402BA03 RID: 178691
+		// Token: 0x04026D12 RID: 158994
 		TextTitle
 	}
 }

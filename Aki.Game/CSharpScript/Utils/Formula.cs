@@ -6,13 +6,13 @@ using System.Text.Json;
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x0200450A RID: 17674
+	// Token: 0x0200342C RID: 13356
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Formula
 	{
-		// Token: 0x170073E2 RID: 29666
-		// (get) Token: 0x0602D7E8 RID: 186344 RVA: 0x00A43FA0 File Offset: 0x00A421A0
+		// Token: 0x1700469A RID: 18074
+		// (get) Token: 0x06021EB8 RID: 138936 RVA: 0x0096FDB0 File Offset: 0x0096DFB0
 		public string FormulaStr
 		{
 			get
@@ -21,7 +21,7 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D7E9 RID: 186345 RVA: 0x00A43FA8 File Offset: 0x00A421A8
+		// Token: 0x06021EB9 RID: 138937 RVA: 0x0096FDB8 File Offset: 0x0096DFB8
 		public Formula(string formula)
 		{
 			this.FormulaRaw = formula;
@@ -30,7 +30,7 @@ namespace CSharpScript.Utils
 			this.ParamsCacheKey = null;
 		}
 
-		// Token: 0x0602D7EA RID: 186346 RVA: 0x00A44013 File Offset: 0x00A42213
+		// Token: 0x06021EBA RID: 138938 RVA: 0x0096FE23 File Offset: 0x0096E023
 		public void Dispose()
 		{
 			if (!this.IsDisposed)
@@ -45,7 +45,7 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D7EB RID: 186347 RVA: 0x00A44050 File Offset: 0x00A42250
+		// Token: 0x06021EBB RID: 138939 RVA: 0x0096FE60 File Offset: 0x0096E060
 		public Formula SetBuiltinFunctions(Dictionary<string, Func<TFormulaValue[], TFormulaValue>> functions)
 		{
 			this.BuiltinFuncs.Clear();
@@ -56,7 +56,7 @@ namespace CSharpScript.Utils
 			return this;
 		}
 
-		// Token: 0x0602D7EC RID: 186348 RVA: 0x00A440BC File Offset: 0x00A422BC
+		// Token: 0x06021EBC RID: 138940 RVA: 0x0096FECC File Offset: 0x0096E0CC
 		public Formula SetContextBuiltinFunctions(Dictionary<string, Func<TFormulaValue[], TFormulaValue>> functions)
 		{
 			foreach (KeyValuePair<string, Func<TFormulaValue[], TFormulaValue>> keyValuePair in functions)
@@ -67,21 +67,21 @@ namespace CSharpScript.Utils
 			return this;
 		}
 
-		// Token: 0x0602D7ED RID: 186349 RVA: 0x00A44130 File Offset: 0x00A42330
+		// Token: 0x06021EBD RID: 138941 RVA: 0x0096FF40 File Offset: 0x0096E140
 		public Formula AddBuiltinFunction(string name, Func<TFormulaValue[], TFormulaValue> func)
 		{
 			this.BuiltinFuncs[name] = func;
 			return this;
 		}
 
-		// Token: 0x0602D7EE RID: 186350 RVA: 0x00A44140 File Offset: 0x00A42340
+		// Token: 0x06021EBE RID: 138942 RVA: 0x0096FF50 File Offset: 0x0096E150
 		public Formula SetDefaultParams(Dictionary<string, TFormulaValue> @params)
 		{
 			this.Params = new Dictionary<string, TFormulaValue>(@params);
 			return this;
 		}
 
-		// Token: 0x0602D7EF RID: 186351 RVA: 0x00A44150 File Offset: 0x00A42350
+		// Token: 0x06021EBF RID: 138943 RVA: 0x0096FF60 File Offset: 0x0096E160
 		public Formula SetDefaultParams([Nullable(2)] string @params)
 		{
 			if (this.Params != null || this.ParamsCacheKey != null)
@@ -104,7 +104,7 @@ namespace CSharpScript.Utils
 			return this;
 		}
 
-		// Token: 0x0602D7F0 RID: 186352 RVA: 0x00A441C9 File Offset: 0x00A423C9
+		// Token: 0x06021EC0 RID: 138944 RVA: 0x0096FFD9 File Offset: 0x0096E1D9
 		public Formula SetDefaultParam(string key, TFormulaValue value)
 		{
 			if (this.Params == null)
@@ -115,7 +115,7 @@ namespace CSharpScript.Utils
 			return this;
 		}
 
-		// Token: 0x0602D7F1 RID: 186353 RVA: 0x00A441EC File Offset: 0x00A423EC
+		// Token: 0x06021EC1 RID: 138945 RVA: 0x0096FFFC File Offset: 0x0096E1FC
 		internal static TFormulaValue FromJsonElement(JsonElement json)
 		{
 			switch (json.ValueKind)
@@ -183,7 +183,7 @@ namespace CSharpScript.Utils
 			return default(TFormulaValue);
 		}
 
-		// Token: 0x0602D7F2 RID: 186354 RVA: 0x00A44390 File Offset: 0x00A42590
+		// Token: 0x06021EC2 RID: 138946 RVA: 0x009701A0 File Offset: 0x0096E3A0
 		private TFormulaValue EvaluateNode(IAstNode node)
 		{
 			NumberNode numberNode = node as NumberNode;
@@ -437,7 +437,7 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D7F3 RID: 186355 RVA: 0x00A449F0 File Offset: 0x00A42BF0
+		// Token: 0x06021EC3 RID: 138947 RVA: 0x00970800 File Offset: 0x0096EA00
 		[NullableContext(2)]
 		public unsafe TFormulaValue Evaluate([Nullable(new byte[]
 		{
@@ -472,67 +472,67 @@ namespace CSharpScript.Utils
 			return result;
 		}
 
-		// Token: 0x0602D7F4 RID: 186356 RVA: 0x00A44AB8 File Offset: 0x00A42CB8
+		// Token: 0x06021EC4 RID: 138948 RVA: 0x009708C8 File Offset: 0x0096EAC8
 		[Conditional("DEBUG")]
 		public void ResetDebugString()
 		{
 		}
 
-		// Token: 0x0602D7F5 RID: 186357 RVA: 0x00A44ABA File Offset: 0x00A42CBA
+		// Token: 0x06021EC5 RID: 138949 RVA: 0x009708CA File Offset: 0x0096EACA
 		[Conditional("DEBUG")]
 		public void AddDebugString(string key, TFormulaValue value)
 		{
 		}
 
-		// Token: 0x0602D7F6 RID: 186358 RVA: 0x00A44ABC File Offset: 0x00A42CBC
+		// Token: 0x06021EC6 RID: 138950 RVA: 0x009708CC File Offset: 0x0096EACC
 		public bool IsIdentifierNotRecorded(string str)
 		{
 			return false;
 		}
 
-		// Token: 0x0602D7F7 RID: 186359 RVA: 0x00A44ABF File Offset: 0x00A42CBF
+		// Token: 0x06021EC7 RID: 138951 RVA: 0x009708CF File Offset: 0x0096EACF
 		[Conditional("DEBUG")]
 		public void ResetDebugIdentifierMap()
 		{
 		}
 
-		// Token: 0x0602D7F8 RID: 186360 RVA: 0x00A44AC1 File Offset: 0x00A42CC1
+		// Token: 0x06021EC8 RID: 138952 RVA: 0x009708D1 File Offset: 0x0096EAD1
 		[Conditional("DEBUG")]
 		public void RecordIdentifier(string str)
 		{
 		}
 
-		// Token: 0x0602D7F9 RID: 186361 RVA: 0x00A44AC3 File Offset: 0x00A42CC3
+		// Token: 0x06021EC9 RID: 138953 RVA: 0x009708D3 File Offset: 0x0096EAD3
 		public string GetFormulaString(IAstNode node)
 		{
 			return string.Empty;
 		}
 
-		// Token: 0x0602D7FA RID: 186362 RVA: 0x00A44ACA File Offset: 0x00A42CCA
+		// Token: 0x06021ECA RID: 138954 RVA: 0x009708DA File Offset: 0x0096EADA
 		public string GetLastResult()
 		{
 			return string.Empty;
 		}
 
-		// Token: 0x0602D7FB RID: 186363 RVA: 0x00A44AD1 File Offset: 0x00A42CD1
+		// Token: 0x06021ECB RID: 138955 RVA: 0x009708E1 File Offset: 0x0096EAE1
 		public IReadOnlyDictionary<string, string> GetLastResultMap()
 		{
 			return null;
 		}
 
-		// Token: 0x0602D7FC RID: 186364 RVA: 0x00A44AD4 File Offset: 0x00A42CD4
+		// Token: 0x06021ECC RID: 138956 RVA: 0x009708E4 File Offset: 0x0096EAE4
 		public string GetTotalFormulaString()
 		{
 			return string.Empty;
 		}
 
-		// Token: 0x0401850E RID: 99598
+		// Token: 0x04012B36 RID: 76598
 		private readonly IAstNode Ast;
 
-		// Token: 0x0401850F RID: 99599
+		// Token: 0x04012B37 RID: 76599
 		private readonly string FormulaRaw = "";
 
-		// Token: 0x04018510 RID: 99600
+		// Token: 0x04012B38 RID: 76600
 		[Nullable(new byte[]
 		{
 			2,
@@ -540,7 +540,7 @@ namespace CSharpScript.Utils
 		})]
 		public Dictionary<string, TFormulaValue> Params;
 
-		// Token: 0x04018511 RID: 99601
+		// Token: 0x04012B39 RID: 76601
 		[Nullable(new byte[]
 		{
 			2,
@@ -548,27 +548,27 @@ namespace CSharpScript.Utils
 		})]
 		private Dictionary<string, TFormulaValue> ExtraParams;
 
-		// Token: 0x04018512 RID: 99602
+		// Token: 0x04012B3A RID: 76602
 		private readonly Dictionary<string, Func<TFormulaValue[], TFormulaValue>> BuiltinFuncs = new Dictionary<string, Func<TFormulaValue[], TFormulaValue>>();
 
-		// Token: 0x04018513 RID: 99603
+		// Token: 0x04012B3B RID: 76603
 		private readonly HashSet<string> contextDependentFunction = new HashSet<string>();
 
-		// Token: 0x04018514 RID: 99604
+		// Token: 0x04012B3C RID: 76604
 		[Nullable(2)]
 		public ContextParam context;
 
-		// Token: 0x04018515 RID: 99605
+		// Token: 0x04012B3D RID: 76605
 		[Nullable(2)]
 		private string ParamsCacheKey;
 
-		// Token: 0x04018516 RID: 99606
+		// Token: 0x04012B3E RID: 76606
 		private bool IsDisposed;
 
-		// Token: 0x04018517 RID: 99607
+		// Token: 0x04012B3F RID: 76607
 		private readonly Dictionary<string, string> DebugValueMap = new Dictionary<string, string>();
 
-		// Token: 0x04018518 RID: 99608
+		// Token: 0x04012B40 RID: 76608
 		private readonly HashSet<string> DebugRecordedIdentifiers = new HashSet<string>();
 	}
 }

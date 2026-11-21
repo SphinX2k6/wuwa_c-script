@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025E2 RID: 9698
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028A1 RID: 10401
 	public class IEffectEntityPos2 : IEntityPos2
 	{
-		// Token: 0x0600D9F7 RID: 55799 RVA: 0x00207F8D File Offset: 0x0020618D
+		// Token: 0x0600E7C0 RID: 59328 RVA: 0x00224679 File Offset: 0x00222879
 		public static IEffectEntityPos2 Create(IEffectEntityPos2? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FF5 RID: 16373
-		// (get) Token: 0x0600D9F8 RID: 55800 RVA: 0x00207FAC File Offset: 0x002061AC
+		// Token: 0x1700432C RID: 17196
+		// (get) Token: 0x0600E7C1 RID: 59329 RVA: 0x00224698 File Offset: 0x00222898
 		public override EPos2 Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FF6 RID: 16374
-		// (get) Token: 0x0600D9F9 RID: 55801 RVA: 0x00207FB9 File Offset: 0x002061B9
+		// Token: 0x1700432D RID: 17197
+		// (get) Token: 0x0600E7C2 RID: 59330 RVA: 0x002246A5 File Offset: 0x002228A5
 		public override int EntityId
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FF7 RID: 16375
-		// (get) Token: 0x0600D9FA RID: 55802 RVA: 0x00207FC6 File Offset: 0x002061C6
+		// Token: 0x1700432E RID: 17198
+		// (get) Token: 0x0600E7C3 RID: 59331 RVA: 0x002246B2 File Offset: 0x002228B2
 		public override VectorInfo Offset
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FF8 RID: 16376
-		// (get) Token: 0x0600D9FB RID: 55803 RVA: 0x00207FFA File Offset: 0x002061FA
+		// Token: 0x1700432F RID: 17199
+		// (get) Token: 0x0600E7C4 RID: 59332 RVA: 0x002246E6 File Offset: 0x002228E6
 		[Nullable(2)]
 		public virtual string AttachSocket
 		{
@@ -71,14 +69,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400790E RID: 30990
+		// Token: 0x04007FA5 RID: 32677
 		private IEffectEntityPos2 Instance;
 
-		// Token: 0x0400790F RID: 30991
+		// Token: 0x04007FA6 RID: 32678
 		[Nullable(2)]
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04007910 RID: 30992
+		// Token: 0x04007FA7 RID: 32679
 		private bool _OffsetInited;
 	}
 }

@@ -4,23 +4,23 @@ using CSharpScript.Game.Module.WuwaGo.Model.Role;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 {
-	// Token: 0x02004767 RID: 18279
+	// Token: 0x02003698 RID: 13976
 	[NullableContext(2)]
 	public interface IArrowShootResult
 	{
-		// Token: 0x17007757 RID: 30551
-		// (get) Token: 0x0602FC8A RID: 195722
-		// (set) Token: 0x0602FC8B RID: 195723
+		// Token: 0x17004A13 RID: 18963
+		// (get) Token: 0x06024454 RID: 148564
+		// (set) Token: 0x06024455 RID: 148565
 		WuWaGoRole HitRole { get; set; }
 
-		// Token: 0x17007758 RID: 30552
-		// (get) Token: 0x0602FC8C RID: 195724
-		// (set) Token: 0x0602FC8D RID: 195725
+		// Token: 0x17004A14 RID: 18964
+		// (get) Token: 0x06024456 RID: 148566
+		// (set) Token: 0x06024457 RID: 148567
 		bool HitWall { get; set; }
 
-		// Token: 0x17007759 RID: 30553
-		// (get) Token: 0x0602FC8E RID: 195726
-		// (set) Token: 0x0602FC8F RID: 195727
+		// Token: 0x17004A15 RID: 18965
+		// (get) Token: 0x06024458 RID: 148568
+		// (set) Token: 0x06024459 RID: 148569
 		float TargetDistanceMeter { get; set; }
 	}
 }

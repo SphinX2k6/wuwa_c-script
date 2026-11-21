@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002C6B RID: 11371
+// Token: 0x020021C4 RID: 8644
 public enum EUiModelLoadState
 {
-	// Token: 0x0400B0F5 RID: 45301
+	// Token: 0x0400B460 RID: 46176
 	None,
-	// Token: 0x0400B0F6 RID: 45302
+	// Token: 0x0400B461 RID: 46177
 	IsLoading,
-	// Token: 0x0400B0F7 RID: 45303
+	// Token: 0x0400B462 RID: 46178
 	LoadComplete
 }

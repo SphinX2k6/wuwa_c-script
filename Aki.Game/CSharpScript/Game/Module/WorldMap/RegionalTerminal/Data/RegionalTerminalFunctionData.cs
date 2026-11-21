@@ -7,10 +7,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.Data
 {
-	// Token: 0x0200485B RID: 18523
+	// Token: 0x0200378C RID: 14220
 	public class RegionalTerminalFunctionData : RegionalTerminalGameplayData
 	{
-		// Token: 0x060307A7 RID: 198567 RVA: 0x00B41E9A File Offset: 0x00B4009A
+		// Token: 0x06024F76 RID: 151414 RVA: 0x00A720DE File Offset: 0x00A702DE
 		[NullableContext(2)]
 		public override void TerminalFunction(Action<bool> callback = null)
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.Data
 			}
 		}
 
-		// Token: 0x060307A8 RID: 198568 RVA: 0x00B41EB6 File Offset: 0x00B400B6
+		// Token: 0x06024F77 RID: 151415 RVA: 0x00A720FA File Offset: 0x00A702FA
 		public override void BarFunction()
 		{
 			if (this.GetLockState())
@@ -32,13 +32,13 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.Data
 			this.TerminalFunction(null);
 		}
 
-		// Token: 0x060307A9 RID: 198569 RVA: 0x00B41ED8 File Offset: 0x00B400D8
+		// Token: 0x06024F78 RID: 151416 RVA: 0x00A7211C File Offset: 0x00A7031C
 		public override bool GetShowState()
 		{
 			return FunctionModel.Instance.IsShow(this.GameplayId);
 		}
 
-		// Token: 0x060307AA RID: 198570 RVA: 0x00B41EEC File Offset: 0x00B400EC
+		// Token: 0x06024F79 RID: 151417 RVA: 0x00A72130 File Offset: 0x00A70330
 		public override ERedDotName? GetRedDotName()
 		{
 			if (this.GetLockState())
@@ -48,13 +48,13 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.Data
 			return FunctionModel.Instance.GetFunctionItemRedDotName(this.GameplayId);
 		}
 
-		// Token: 0x060307AB RID: 198571 RVA: 0x00B41F1B File Offset: 0x00B4011B
+		// Token: 0x06024F7A RID: 151418 RVA: 0x00A7215F File Offset: 0x00A7035F
 		public override int GetRedDotId()
 		{
 			return 0;
 		}
 
-		// Token: 0x060307AC RID: 198572 RVA: 0x00B41F20 File Offset: 0x00B40120
+		// Token: 0x06024F7B RID: 151419 RVA: 0x00A72164 File Offset: 0x00A70364
 		public override bool GetRedDotState()
 		{
 			if (this.GetLockState())
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.Data
 			return redDot != null && redDot.IsRedDotActive();
 		}
 
-		// Token: 0x060307AD RID: 198573 RVA: 0x00B41F6B File Offset: 0x00B4016B
+		// Token: 0x06024F7C RID: 151420 RVA: 0x00A721AF File Offset: 0x00A703AF
 		public override bool GetLockState()
 		{
 			return !FunctionModel.Instance.IsOpen(this.GameplayId);
 		}
 
-		// Token: 0x060307AE RID: 198574 RVA: 0x00B41F80 File Offset: 0x00B40180
+		// Token: 0x06024F7D RID: 151421 RVA: 0x00A721C4 File Offset: 0x00A703C4
 		[NullableContext(1)]
 		public override IRegionalTerminalViewParams GetViewParams()
 		{
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.Data
 			};
 		}
 
-		// Token: 0x060307AF RID: 198575 RVA: 0x00B42020 File Offset: 0x00B40220
+		// Token: 0x06024F7E RID: 151422 RVA: 0x00A72264 File Offset: 0x00A70464
 		private void OpenFunctionConditionView()
 		{
 			List<IActivityConditionData> list = new List<IActivityConditionData>();

@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001681 RID: 5761
+	// Token: 0x020017F6 RID: 6134
 	public enum EPunishReportShowType
 	{
-		// Token: 0x04004D35 RID: 19765
+		// Token: 0x04005140 RID: 20800
 		Default,
-		// Token: 0x04004D36 RID: 19766
+		// Token: 0x04005141 RID: 20801
 		Storm
 	}
 }

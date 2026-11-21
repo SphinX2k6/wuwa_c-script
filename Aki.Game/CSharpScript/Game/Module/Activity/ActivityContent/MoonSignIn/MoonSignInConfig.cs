@@ -5,39 +5,39 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 {
-	// Token: 0x0200645D RID: 25693
+	// Token: 0x020053DB RID: 21467
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class MoonSignInConfig : ConfigBase
 	{
-		// Token: 0x0604091A RID: 264474 RVA: 0x00FA0D46 File Offset: 0x00F9EF46
+		// Token: 0x060355DB RID: 218587 RVA: 0x00EE7CC2 File Offset: 0x00EE5EC2
 		[NullableContext(2)]
 		public IReadOnlyList<PhaseOfMoon> GetPhaseOfMoonList()
 		{
 			return ConfigPhaseOfMoonAll.GetConfigList(true);
 		}
 
-		// Token: 0x0604091B RID: 264475 RVA: 0x00FA0D4E File Offset: 0x00F9EF4E
+		// Token: 0x060355DC RID: 218588 RVA: 0x00EE7CCA File Offset: 0x00EE5ECA
 		public MoonPhaseReward? GetMoonSignReward(int activityId)
 		{
 			return ConfigMoonPhaseRewardByActivityId.GetConfig(activityId, true);
 		}
 
-		// Token: 0x0604091C RID: 264476 RVA: 0x00FA0D57 File Offset: 0x00F9EF57
+		// Token: 0x060355DD RID: 218589 RVA: 0x00EE7CD3 File Offset: 0x00EE5ED3
 		public PhaseOfMoon? GetPhaseOfMoonById(int moonId)
 		{
 			return ConfigPhaseOfMoonById.GetConfig(moonId, true);
 		}
 
-		// Token: 0x0604091D RID: 264477 RVA: 0x00FA0D60 File Offset: 0x00F9EF60
+		// Token: 0x060355DE RID: 218590 RVA: 0x00EE7CDC File Offset: 0x00EE5EDC
 		public MoonLabel? GetMoonLabelById(int moonId)
 		{
 			return ConfigMoonLabelById.GetConfig(moonId, true);
 		}
 
-		// Token: 0x17009487 RID: 38023
-		// (get) Token: 0x0604091E RID: 264478 RVA: 0x00FA0D69 File Offset: 0x00F9EF69
+		// Token: 0x170067E9 RID: 26601
+		// (get) Token: 0x060355DF RID: 218591 RVA: 0x00EE7CE5 File Offset: 0x00EE5EE5
 		public static MoonSignInConfig Instance
 		{
 			get
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			}
 		}
 
-		// Token: 0x0604091F RID: 264479 RVA: 0x00FA0D70 File Offset: 0x00F9EF70
+		// Token: 0x060355E0 RID: 218592 RVA: 0x00EE7CEC File Offset: 0x00EE5EEC
 		public static MoonSignInConfig GetOrCreateInstance()
 		{
 			if (MoonSignInConfig._Instance == null)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			return MoonSignInConfig._Instance;
 		}
 
-		// Token: 0x06040920 RID: 264480 RVA: 0x00FA0D84 File Offset: 0x00F9EF84
+		// Token: 0x060355E1 RID: 218593 RVA: 0x00EE7D00 File Offset: 0x00EE5F00
 		public static bool CreateInstance()
 		{
 			if (MoonSignInConfig._Instance != null)
@@ -67,24 +67,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			return true;
 		}
 
-		// Token: 0x06040921 RID: 264481 RVA: 0x00FA0D9A File Offset: 0x00F9EF9A
+		// Token: 0x060355E2 RID: 218594 RVA: 0x00EE7D16 File Offset: 0x00EE5F16
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06040922 RID: 264482 RVA: 0x00FA0D9C File Offset: 0x00F9EF9C
+		// Token: 0x060355E3 RID: 218595 RVA: 0x00EE7D18 File Offset: 0x00EE5F18
 		public static void ResetStaticDefaultValue()
 		{
 			MoonSignInConfig._Instance = null;
 		}
 
-		// Token: 0x06040923 RID: 264483 RVA: 0x00FA0DA4 File Offset: 0x00F9EFA4
+		// Token: 0x060355E4 RID: 218596 RVA: 0x00EE7D20 File Offset: 0x00EE5F20
 		static MoonSignInConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MoonSignInConfig.CreateStaticDefaultValue), new Action(MoonSignInConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402193F RID: 137535
+		// Token: 0x0401C26E RID: 115310
 		[Nullable(2)]
 		private static MoonSignInConfig _Instance;
 	}

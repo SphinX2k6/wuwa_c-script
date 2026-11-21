@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024F8 RID: 9464
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200279E RID: 10142
 	public class ISetAreaTimeLock : ISetAreaTimeBase
 	{
-		// Token: 0x0600D34B RID: 54091 RVA: 0x001F5439 File Offset: 0x001F3639
+		// Token: 0x0600E0A7 RID: 57511 RVA: 0x00210E31 File Offset: 0x0020F031
 		public static ISetAreaTimeLock Create(ISetAreaTimeLock? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B1D RID: 15133
-		// (get) Token: 0x0600D34C RID: 54092 RVA: 0x001F5458 File Offset: 0x001F3658
+		// Token: 0x17003E19 RID: 15897
+		// (get) Token: 0x0600E0A8 RID: 57512 RVA: 0x00210E50 File Offset: 0x0020F050
 		public override ESetAreaTime Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B1E RID: 15134
-		// (get) Token: 0x0600D34D RID: 54093 RVA: 0x001F5468 File Offset: 0x001F3668
+		// Token: 0x17003E1A RID: 15898
+		// (get) Token: 0x0600E0A9 RID: 57513 RVA: 0x00210E60 File Offset: 0x0020F060
 		public virtual List<int> AreaIds
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B1F RID: 15135
-		// (get) Token: 0x0600D34E RID: 54094 RVA: 0x001F54CC File Offset: 0x001F36CC
+		// Token: 0x17003E1B RID: 15899
+		// (get) Token: 0x0600E0AA RID: 57514 RVA: 0x00210EC4 File Offset: 0x0020F0C4
 		public virtual IFixedTime LockTime
 		{
 			get
@@ -70,20 +68,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073D6 RID: 29654
+		// Token: 0x04007A28 RID: 31272
 		private ISetAreaTimeLock Instance;
 
-		// Token: 0x040073D7 RID: 29655
+		// Token: 0x04007A29 RID: 31273
 		private List<int> _AreaIdsCache;
 
-		// Token: 0x040073D8 RID: 29656
+		// Token: 0x04007A2A RID: 31274
 		private bool _AreaIdsInited;
 
-		// Token: 0x040073D9 RID: 29657
+		// Token: 0x04007A2B RID: 31275
 		[Nullable(2)]
 		private IFixedTime _LockTimeCache;
 
-		// Token: 0x040073DA RID: 29658
+		// Token: 0x04007A2C RID: 31276
 		private bool _LockTimeInited;
 	}
 }

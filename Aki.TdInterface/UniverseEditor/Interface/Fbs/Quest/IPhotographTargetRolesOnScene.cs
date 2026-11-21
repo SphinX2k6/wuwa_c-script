@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F95 RID: 16277
+	// Token: 0x020043D6 RID: 17366
 	public struct IPhotographTargetRolesOnScene : IFlatbufferObject
 	{
-		// Token: 0x170071A3 RID: 29091
-		// (get) Token: 0x06017400 RID: 95232 RVA: 0x0035A7EB File Offset: 0x003589EB
+		// Token: 0x170077A1 RID: 30625
+		// (get) Token: 0x06018A8F RID: 101007 RVA: 0x00384403 File Offset: 0x00382603
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017401 RID: 95233 RVA: 0x0035A7F8 File Offset: 0x003589F8
+		// Token: 0x06018A90 RID: 101008 RVA: 0x00384410 File Offset: 0x00382610
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017402 RID: 95234 RVA: 0x0035A800 File Offset: 0x00358A00
+		// Token: 0x06018A91 RID: 101009 RVA: 0x00384418 File Offset: 0x00382618
 		public static IPhotographTargetRolesOnScene GetRootAsIPhotographTargetRolesOnScene(ByteBuffer _bb)
 		{
 			return IPhotographTargetRolesOnScene.GetRootAsIPhotographTargetRolesOnScene(_bb, default(IPhotographTargetRolesOnScene));
 		}
 
-		// Token: 0x06017403 RID: 95235 RVA: 0x0035A81C File Offset: 0x00358A1C
+		// Token: 0x06018A92 RID: 101010 RVA: 0x00384434 File Offset: 0x00382634
 		public static IPhotographTargetRolesOnScene GetRootAsIPhotographTargetRolesOnScene(ByteBuffer _bb, IPhotographTargetRolesOnScene obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017404 RID: 95236 RVA: 0x0035A839 File Offset: 0x00358A39
+		// Token: 0x06018A93 RID: 101011 RVA: 0x00384451 File Offset: 0x00382651
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017405 RID: 95237 RVA: 0x0035A848 File Offset: 0x00358A48
+		// Token: 0x06018A94 RID: 101012 RVA: 0x00384460 File Offset: 0x00382660
 		public IPhotographTargetRolesOnScene __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170071A4 RID: 29092
-		// (get) Token: 0x06017406 RID: 95238 RVA: 0x0035A858 File Offset: 0x00358A58
+		// Token: 0x170077A2 RID: 30626
+		// (get) Token: 0x06018A95 RID: 101013 RVA: 0x00384470 File Offset: 0x00382670
 		public EPhotographTargetType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017407 RID: 95239 RVA: 0x0035A894 File Offset: 0x00358A94
+		// Token: 0x06018A96 RID: 101014 RVA: 0x003844AC File Offset: 0x003826AC
 		public static Offset<IPhotographTargetRolesOnScene> CreateIPhotographTargetRolesOnScene(FlatBufferBuilder builder, EPhotographTargetType Type = EPhotographTargetType.Player)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPhotographTargetRolesOnScene.EndIPhotographTargetRolesOnScene(builder);
 		}
 
-		// Token: 0x06017408 RID: 95240 RVA: 0x0035A8AA File Offset: 0x00358AAA
+		// Token: 0x06018A97 RID: 101015 RVA: 0x003844C2 File Offset: 0x003826C2
 		public static void StartIPhotographTargetRolesOnScene(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06017409 RID: 95241 RVA: 0x0035A8B3 File Offset: 0x00358AB3
+		// Token: 0x06018A98 RID: 101016 RVA: 0x003844CB File Offset: 0x003826CB
 		public static void AddType(FlatBufferBuilder builder, EPhotographTargetType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601740A RID: 95242 RVA: 0x0035A8BE File Offset: 0x00358ABE
+		// Token: 0x06018A99 RID: 101017 RVA: 0x003844D6 File Offset: 0x003826D6
 		public static Offset<IPhotographTargetRolesOnScene> EndIPhotographTargetRolesOnScene(FlatBufferBuilder builder)
 		{
 			return new Offset<IPhotographTargetRolesOnScene>(builder.EndTable());
 		}
 
-		// Token: 0x0601740B RID: 95243 RVA: 0x0035A8CC File Offset: 0x00358ACC
+		// Token: 0x06018A9A RID: 101018 RVA: 0x003844E4 File Offset: 0x003826E4
 		public IPhotographTargetRolesOnSceneT UnPack()
 		{
 			IPhotographTargetRolesOnSceneT photographTargetRolesOnSceneT = new IPhotographTargetRolesOnSceneT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return photographTargetRolesOnSceneT;
 		}
 
-		// Token: 0x0601740C RID: 95244 RVA: 0x0035A8E7 File Offset: 0x00358AE7
+		// Token: 0x06018A9B RID: 101019 RVA: 0x003844FF File Offset: 0x003826FF
 		public void UnPackTo(IPhotographTargetRolesOnSceneT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601740D RID: 95245 RVA: 0x0035A8F8 File Offset: 0x00358AF8
+		// Token: 0x06018A9C RID: 101020 RVA: 0x00384510 File Offset: 0x00382710
 		public static Offset<IPhotographTargetRolesOnScene> Pack(FlatBufferBuilder builder, IPhotographTargetRolesOnSceneT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPhotographTargetRolesOnScene.CreateIPhotographTargetRolesOnScene(builder, _o.Type);
 		}
 
-		// Token: 0x0400B9F5 RID: 47605
+		// Token: 0x0400C3DA RID: 50138
 		private Table __p;
 	}
 }

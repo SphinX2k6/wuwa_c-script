@@ -4,68 +4,68 @@ using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.LevelGamePlay;
 
-// Token: 0x020030F3 RID: 12531
+// Token: 0x0200264B RID: 9803
 [NullableContext(2)]
 public interface IPatrolParams
 {
-	// Token: 0x170024F5 RID: 9461
-	// (get) Token: 0x0601AD97 RID: 109975
-	// (set) Token: 0x0601AD98 RID: 109976
+	// Token: 0x17002683 RID: 9859
+	// (get) Token: 0x060187B8 RID: 100280
+	// (set) Token: 0x060187B9 RID: 100281
 	bool? DebugMode { get; set; }
 
-	// Token: 0x170024F6 RID: 9462
-	// (get) Token: 0x0601AD99 RID: 109977
-	// (set) Token: 0x0601AD9A RID: 109978
+	// Token: 0x17002684 RID: 9860
+	// (get) Token: 0x060187BA RID: 100282
+	// (set) Token: 0x060187BB RID: 100283
 	bool? ReturnFalseWhenNavigationFailed { get; set; }
 
-	// Token: 0x170024F7 RID: 9463
-	// (get) Token: 0x0601AD9B RID: 109979
-	// (set) Token: 0x0601AD9C RID: 109980
+	// Token: 0x17002685 RID: 9861
+	// (get) Token: 0x060187BC RID: 100284
+	// (set) Token: 0x060187BD RID: 100285
 	EPatrolStartMode? StartMode { get; set; }
 
-	// Token: 0x170024F8 RID: 9464
-	// (get) Token: 0x0601AD9D RID: 109981
-	// (set) Token: 0x0601AD9E RID: 109982
+	// Token: 0x17002686 RID: 9862
+	// (get) Token: 0x060187BE RID: 100286
+	// (set) Token: 0x060187BF RID: 100287
 	List<double> RandomDistanceRange { get; set; }
 
-	// Token: 0x170024F9 RID: 9465
-	// (get) Token: 0x0601AD9F RID: 109983
-	// (set) Token: 0x0601ADA0 RID: 109984
+	// Token: 0x17002687 RID: 9863
+	// (get) Token: 0x060187C0 RID: 100288
+	// (set) Token: 0x060187C1 RID: 100289
 	bool? IsFollowStrictly { get; set; }
 
-	// Token: 0x170024FA RID: 9466
-	// (get) Token: 0x0601ADA1 RID: 109985
-	// (set) Token: 0x0601ADA2 RID: 109986
+	// Token: 0x17002688 RID: 9864
+	// (get) Token: 0x060187C2 RID: 100290
+	// (set) Token: 0x060187C3 RID: 100291
 	int? StartPointIndex { get; set; }
 
-	// Token: 0x170024FB RID: 9467
-	// (get) Token: 0x0601ADA3 RID: 109987
-	// (set) Token: 0x0601ADA4 RID: 109988
+	// Token: 0x17002689 RID: 9865
+	// (get) Token: 0x060187C4 RID: 100292
+	// (set) Token: 0x060187C5 RID: 100293
 	int? EndPointIndex { get; set; }
 
-	// Token: 0x170024FC RID: 9468
-	// (get) Token: 0x0601ADA5 RID: 109989
-	// (set) Token: 0x0601ADA6 RID: 109990
+	// Token: 0x1700268A RID: 9866
+	// (get) Token: 0x060187C6 RID: 100294
+	// (set) Token: 0x060187C7 RID: 100295
 	bool? NoRequestServer { get; set; }
 
-	// Token: 0x170024FD RID: 9469
-	// (get) Token: 0x0601ADA7 RID: 109991
-	// (set) Token: 0x0601ADA8 RID: 109992
+	// Token: 0x1700268B RID: 9867
+	// (get) Token: 0x060187C8 RID: 100296
+	// (set) Token: 0x060187C9 RID: 100297
 	bool? NoSyncPoint { get; set; }
 
-	// Token: 0x170024FE RID: 9470
-	// (get) Token: 0x0601ADA9 RID: 109993
-	// (set) Token: 0x0601ADAA RID: 109994
+	// Token: 0x1700268C RID: 9868
+	// (get) Token: 0x060187CA RID: 100298
+	// (set) Token: 0x060187CB RID: 100299
 	float? TurnSpeed { get; set; }
 
-	// Token: 0x170024FF RID: 9471
-	// (get) Token: 0x0601ADAB RID: 109995
-	// (set) Token: 0x0601ADAC RID: 109996
+	// Token: 0x1700268D RID: 9869
+	// (get) Token: 0x060187CC RID: 100300
+	// (set) Token: 0x060187CD RID: 100301
 	Action<int> OnArrivePointHandle { get; set; }
 
-	// Token: 0x17002500 RID: 9472
-	// (get) Token: 0x0601ADAD RID: 109997
-	// (set) Token: 0x0601ADAE RID: 109998
+	// Token: 0x1700268E RID: 9870
+	// (get) Token: 0x060187CE RID: 100302
+	// (set) Token: 0x060187CF RID: 100303
 	[Nullable(new byte[]
 	{
 		2,
@@ -84,13 +84,13 @@ public interface IPatrolParams
 		1
 	})] set; }
 
-	// Token: 0x17002501 RID: 9473
-	// (get) Token: 0x0601ADAF RID: 109999
-	// (set) Token: 0x0601ADB0 RID: 110000
+	// Token: 0x1700268F RID: 9871
+	// (get) Token: 0x060187D0 RID: 100304
+	// (set) Token: 0x060187D1 RID: 100305
 	Action<ELevelEventState> OnPatrolEndHandle { get; set; }
 
-	// Token: 0x17002502 RID: 9474
-	// (get) Token: 0x0601ADB1 RID: 110001
-	// (set) Token: 0x0601ADB2 RID: 110002
+	// Token: 0x17002690 RID: 9872
+	// (get) Token: 0x060187D2 RID: 100306
+	// (set) Token: 0x060187D3 RID: 100307
 	Action OnResetLocationCallback { get; set; }
 }

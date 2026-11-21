@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x02004513 RID: 17683
+	// Token: 0x02003435 RID: 13365
 	public enum EContextType
 	{
-		// Token: 0x04018547 RID: 99655
+		// Token: 0x04012B6F RID: 76655
 		BulletDamage,
-		// Token: 0x04018548 RID: 99656
+		// Token: 0x04012B70 RID: 76656
 		BuffDamage,
-		// Token: 0x04018549 RID: 99657
+		// Token: 0x04012B71 RID: 76657
 		BuffShareDamage,
-		// Token: 0x0401854A RID: 99658
+		// Token: 0x04012B72 RID: 76658
 		ReplaceDamage
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C5B RID: 23643
+	// Token: 0x02004C3B RID: 19515
 	public enum ESkillCdPauseReason
 	{
-		// Token: 0x0401F1ED RID: 127469
+		// Token: 0x04019C9E RID: 105630
 		AnsAbsoluteTimeStop
 	}
 }

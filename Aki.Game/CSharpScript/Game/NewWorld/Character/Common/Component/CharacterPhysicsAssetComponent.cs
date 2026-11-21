@@ -8,14 +8,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070D2 RID: 28882
+	// Token: 0x02006336 RID: 25398
 	[NullableContext(1)]
 	[Nullable(0)]
-	public class CharacterPhysicsAssetComponent : EntityComponent, IComponentDependency
+	public class CharacterPhysicsAssetComponent : EntityComponent
 	{
-		// Token: 0x17009CAF RID: 40111
-		// (get) Token: 0x06046791 RID: 288657 RVA: 0x011B234F File Offset: 0x011B054F
-		public static Type[] Dependencies
+		// Token: 0x170074CA RID: 29898
+		// (get) Token: 0x0603D88F RID: 252047 RVA: 0x011D1527 File Offset: 0x011CF727
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -28,13 +28,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046792 RID: 288658 RVA: 0x011B237E File Offset: 0x011B057E
+		// Token: 0x0603D890 RID: 252048 RVA: 0x011D1556 File Offset: 0x011CF756
 		private void OnStateInherit(Entity other, bool notInheritMoveAndAnim)
 		{
 			other.GetComponent<CharacterPhysicsAssetComponent>().PhysicsStateInstance.ClearAnimState();
 		}
 
-		// Token: 0x06046793 RID: 288659 RVA: 0x011B2390 File Offset: 0x011B0590
+		// Token: 0x0603D891 RID: 252049 RVA: 0x011D1568 File Offset: 0x011CF768
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046794 RID: 288660 RVA: 0x011B23AC File Offset: 0x011B05AC
+		// Token: 0x0603D892 RID: 252050 RVA: 0x011D1584 File Offset: 0x011CF784
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046795 RID: 288661 RVA: 0x011B2580 File Offset: 0x011B0780
+		// Token: 0x0603D893 RID: 252051 RVA: 0x011D1758 File Offset: 0x011CF958
 		protected override bool OnClear()
 		{
 			foreach (ITagTask tagTask in this.TagListeners)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046796 RID: 288662 RVA: 0x011B2614 File Offset: 0x011B0814
+		// Token: 0x0603D894 RID: 252052 RVA: 0x011D17EC File Offset: 0x011CF9EC
 		private void OnListenedTagChanged(int tagId, bool tagExist)
 		{
 			if (tagExist)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.SetPhysicsState(true, false);
 		}
 
-		// Token: 0x06046797 RID: 288663 RVA: 0x011B2650 File Offset: 0x011B0850
+		// Token: 0x0603D895 RID: 252053 RVA: 0x011D1828 File Offset: 0x011CFA28
 		private void SetPhysicsState(bool active, bool force = false)
 		{
 			if (this.PhysicsStateInstance.Active == active && !force)
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.PhysicsStateInstance.SetNewState(active);
 		}
 
-		// Token: 0x06046798 RID: 288664 RVA: 0x011B28F0 File Offset: 0x011B0AF0
+		// Token: 0x0603D896 RID: 252054 RVA: 0x011D1AC8 File Offset: 0x011CFCC8
 		public bool GetRagRollQuitState()
 		{
 			bool quitCache = this.PhysicsStateInstance.QuitCache;
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return quitCache;
 		}
 
-		// Token: 0x06046799 RID: 288665 RVA: 0x011B290C File Offset: 0x011B0B0C
+		// Token: 0x0603D897 RID: 252055 RVA: 0x011D1AE4 File Offset: 0x011CFCE4
 		public void SetDebug(bool debug)
 		{
 			this.IsDebug = debug;
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604679A RID: 288666 RVA: 0x011B29D4 File Offset: 0x011B0BD4
+		// Token: 0x0603D898 RID: 252056 RVA: 0x011D1BAC File Offset: 0x011CFDAC
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -244,121 +244,117 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				return false;
 			}
 			CharacterPhysicsAssetComponent characterPhysicsAssetComponent = (CharacterPhysicsAssetComponent)componentTemplate;
-			if (base.CanResetComponentProperty("IsStart"))
+			this.IsStart = characterPhysicsAssetComponent.IsStart;
+			if (characterPhysicsAssetComponent.PhysicsStateInstance == null)
 			{
-				this.IsStart = characterPhysicsAssetComponent.IsStart;
+				this.PhysicsStateInstance = null;
 			}
-			if (base.CanResetComponentProperty("PhysicsStateInstance"))
-			{
-				if (characterPhysicsAssetComponent.PhysicsStateInstance == null)
-				{
-					this.PhysicsStateInstance = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PhysicsState>(this.PhysicsStateInstance), "PhysicsStateInstance"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PhysicsLoader"))
-			{
-				if (characterPhysicsAssetComponent.PhysicsLoader == null)
-				{
-					this.PhysicsLoader = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PhysicsAssetLoader>(this.PhysicsLoader), "PhysicsLoader"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (characterPhysicsAssetComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (characterPhysicsAssetComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("AnimComp"))
-			{
-				if (characterPhysicsAssetComponent.AnimComp == null)
-				{
-					this.AnimComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagListeners") && characterPhysicsAssetComponent.TagListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.TagListeners), "TagListeners"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PhysicsStateInstance), "PhysicsStateInstance"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ListenedTagsCount"))
+			if (characterPhysicsAssetComponent.PhysicsLoader == null)
 			{
-				this.ListenedTagsCount = characterPhysicsAssetComponent.ListenedTagsCount;
+				this.PhysicsLoader = null;
 			}
-			if (base.CanResetComponentProperty("IsDebug"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PhysicsLoader), "PhysicsLoader"))
 			{
-				this.IsDebug = characterPhysicsAssetComponent.IsDebug;
+				return false;
 			}
+			if (characterPhysicsAssetComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
+			{
+				return false;
+			}
+			if (characterPhysicsAssetComponent.TagComp == null)
+			{
+				this.TagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+			{
+				return false;
+			}
+			if (characterPhysicsAssetComponent.AnimComp == null)
+			{
+				this.AnimComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
+			{
+				return false;
+			}
+			if (characterPhysicsAssetComponent.TagListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagListeners), "TagListeners"))
+			{
+				return false;
+			}
+			this.ListenedTagsCount = characterPhysicsAssetComponent.ListenedTagsCount;
+			this.IsDebug = characterPhysicsAssetComponent.IsDebug;
 			return true;
 		}
 
-		// Token: 0x04024F01 RID: 151297
+		// Token: 0x170074CB RID: 29899
+		// (get) Token: 0x0603D899 RID: 252057 RVA: 0x011D1CE9 File Offset: 0x011CFEE9
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074CC RID: 29900
+		// (get) Token: 0x0603D89A RID: 252058 RVA: 0x011D1CEC File Offset: 0x011CFEEC
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020A40 RID: 133696
 		[StaticVariableRuleIgnore]
 		private static readonly FName RagDoll = new FName("RagDoll");
 
-		// Token: 0x04024F02 RID: 151298
+		// Token: 0x04020A41 RID: 133697
 		private bool IsStart;
 
-		// Token: 0x04024F03 RID: 151299
+		// Token: 0x04020A42 RID: 133698
 		[Nullable(2)]
 		private PhysicsState PhysicsStateInstance;
 
-		// Token: 0x04024F04 RID: 151300
+		// Token: 0x04020A43 RID: 133699
 		[Nullable(2)]
 		private PhysicsAssetLoader PhysicsLoader;
 
-		// Token: 0x04024F05 RID: 151301
+		// Token: 0x04020A44 RID: 133700
 		[Nullable(2)]
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x04024F06 RID: 151302
+		// Token: 0x04020A45 RID: 133701
 		[Nullable(2)]
 		private BaseTagComponent TagComp;
 
-		// Token: 0x04024F07 RID: 151303
+		// Token: 0x04020A46 RID: 133702
 		[Nullable(2)]
 		private CharacterAnimationComponent AnimComp;
 
-		// Token: 0x04024F08 RID: 151304
+		// Token: 0x04020A47 RID: 133703
 		private readonly List<ITagTask> TagListeners = new List<ITagTask>();
 
-		// Token: 0x04024F09 RID: 151305
+		// Token: 0x04020A48 RID: 133704
 		[StaticVariableRuleIgnore]
 		private static readonly int[] ListenedTags = new int[]
 		{
 			GameplayTagDefine.EGameplayTagId["行为状态.动作状态.受击.被抓取"]
 		};
 
-		// Token: 0x04024F0A RID: 151306
+		// Token: 0x04020A49 RID: 133705
 		private int ListenedTagsCount;
 
-		// Token: 0x04024F0B RID: 151307
+		// Token: 0x04020A4A RID: 133706
 		private bool IsDebug;
 	}
 }

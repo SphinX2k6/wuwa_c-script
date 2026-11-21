@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002EF3 RID: 12019
+// Token: 0x02002446 RID: 9286
 [NullableContext(1)]
 [Nullable(0)]
 public class AddBuffOnChangeTeam : BuffEffect
 {
-	// Token: 0x06019ADE RID: 105182 RVA: 0x006AE887 File Offset: 0x006ACA87
+	// Token: 0x060173E9 RID: 95209 RVA: 0x006D4B73 File Offset: 0x006D2D73
 	public AddBuffOnChangeTeam(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019ADF RID: 105183 RVA: 0x006AE8A4 File Offset: 0x006ACAA4
+	// Token: 0x060173EA RID: 95210 RVA: 0x006D4B90 File Offset: 0x006D2D90
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] array = parameters.ExtraEffectParameters_[0].Split('#', StringSplitOptions.None);
@@ -30,7 +30,7 @@ public class AddBuffOnChangeTeam : BuffEffect
 		}
 	}
 
-	// Token: 0x06019AE0 RID: 105184 RVA: 0x006AE930 File Offset: 0x006ACB30
+	// Token: 0x060173EB RID: 95211 RVA: 0x006D4C1C File Offset: 0x006D2E1C
 	public override void OnCreated()
 	{
 		if (!this.OwnerBuffComponent.HasBuffAuthority())
@@ -40,7 +40,7 @@ public class AddBuffOnChangeTeam : BuffEffect
 		EventSystem.Instance.Add(EEventName.OnUpdateSceneTeam, new Action(this.OnChangeTeam));
 	}
 
-	// Token: 0x06019AE1 RID: 105185 RVA: 0x006AE95C File Offset: 0x006ACB5C
+	// Token: 0x060173EC RID: 95212 RVA: 0x006D4C48 File Offset: 0x006D2E48
 	public override void OnRemoved(bool bPremature)
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
@@ -51,14 +51,14 @@ public class AddBuffOnChangeTeam : BuffEffect
 		EventSystem.Instance.Remove(EEventName.OnUpdateSceneTeam, new Action(this.OnChangeTeam));
 	}
 
-	// Token: 0x06019AE2 RID: 105186 RVA: 0x006AE992 File Offset: 0x006ACB92
+	// Token: 0x060173ED RID: 95213 RVA: 0x006D4C7E File Offset: 0x006D2E7E
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019AE3 RID: 105187 RVA: 0x006AE998 File Offset: 0x006ACB98
+	// Token: 0x060173EE RID: 95214 RVA: 0x006D4C84 File Offset: 0x006D2E84
 	private void OnChangeTeam()
 	{
 		IActiveBuff buffByHandle = this.OwnerBuffComponent.GetBuffByHandle(this.ActiveHandleId);
@@ -99,10 +99,10 @@ public class AddBuffOnChangeTeam : BuffEffect
 		}
 	}
 
-	// Token: 0x0400C0A8 RID: 49320
+	// Token: 0x0400C449 RID: 50249
 	private long[] BuffIds = Array.Empty<long>();
 
-	// Token: 0x0400C0A9 RID: 49321
+	// Token: 0x0400C44A RID: 50250
 	[Nullable(2)]
 	private int[] TeamEntityIds;
 }

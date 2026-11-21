@@ -7,21 +7,21 @@ using UnrealEngine;
 [Nullable(0)]
 public class DetectStateBox
 {
-	// Token: 0x060011F8 RID: 4600 RVA: 0x0006642B File Offset: 0x0006462B
+	// Token: 0x060011FE RID: 4606 RVA: 0x00067B9F File Offset: 0x00065D9F
 	public DetectStateBox(UTraceBoxElement boxElement)
 	{
 		this.BoxElement = boxElement;
 	}
 
-	// Token: 0x04000D82 RID: 3458
+	// Token: 0x04000D8A RID: 3466
 	public Vector Offset = Vector.Create();
 
-	// Token: 0x04000D83 RID: 3459
+	// Token: 0x04000D8B RID: 3467
 	public Vector CurrentPosition = Vector.Create();
 
-	// Token: 0x04000D84 RID: 3460
+	// Token: 0x04000D8C RID: 3468
 	public Vector LastFramePosition = Vector.Create();
 
-	// Token: 0x04000D85 RID: 3461
+	// Token: 0x04000D8D RID: 3469
 	public readonly UTraceBoxElement BoxElement;
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001291 RID: 4753
+	// Token: 0x020013D1 RID: 5073
 	public class ESpecialGamePlayConfigTypeJsonConverter : JsonConverter<ESpecialGamePlayConfigType>
 	{
-		// Token: 0x06006B35 RID: 27445 RVA: 0x001015BC File Offset: 0x000FF7BC
+		// Token: 0x06007188 RID: 29064 RVA: 0x0010F2B8 File Offset: 0x0010D4B8
 		public override ESpecialGamePlayConfigType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ESpecialGamePlayConfigTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006B36 RID: 27446 RVA: 0x001015E0 File Offset: 0x000FF7E0
+		// Token: 0x06007189 RID: 29065 RVA: 0x0010F2DC File Offset: 0x0010D4DC
 		public override void Write(Utf8JsonWriter writer, ESpecialGamePlayConfigType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

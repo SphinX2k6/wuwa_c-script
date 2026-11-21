@@ -4,12 +4,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D1C RID: 23836
+	// Token: 0x02004CFE RID: 19710
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EntityHeadIconItem : UiPanelBase
 	{
-		// Token: 0x0603C6A5 RID: 247461 RVA: 0x00E7C474 File Offset: 0x00E7A674
+		// Token: 0x060315FE RID: 202238 RVA: 0x00DCCAF4 File Offset: 0x00DCACF4
 		public void InitEntityId(int entityId)
 		{
 			this.EntityId = entityId;
@@ -28,13 +28,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PawnHeadInfoComponent = pawnHeadInfoComponent;
 		}
 
-		// Token: 0x0603C6A6 RID: 247462 RVA: 0x00E7C4B2 File Offset: 0x00E7A6B2
+		// Token: 0x060315FF RID: 202239 RVA: 0x00DCCB32 File Offset: 0x00DCAD32
 		public virtual void Update()
 		{
 			this.RefreshAlpha();
 		}
 
-		// Token: 0x0603C6A7 RID: 247463 RVA: 0x00E7C4BC File Offset: 0x00E7A6BC
+		// Token: 0x06031600 RID: 202240 RVA: 0x00DCCB3C File Offset: 0x00DCAD3C
 		protected void RefreshAlpha()
 		{
 			if (this.RootItem == null)
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RootItem.SetAlpha(headDialogVisible ? 0.2f : 1f);
 		}
 
-		// Token: 0x0603C6A8 RID: 247464 RVA: 0x00E7C504 File Offset: 0x00E7A704
+		// Token: 0x06031601 RID: 202241 RVA: 0x00DCCB84 File Offset: 0x00DCAD84
 		protected bool GetHeadDialogVisible()
 		{
 			EntityHandle entityHandle = this.EntityHandle;
@@ -62,16 +62,16 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return pawnHeadInfoComponent != null && pawnHeadInfoComponent.IsDialogTextActive();
 		}
 
-		// Token: 0x0401F7B1 RID: 128945
+		// Token: 0x0401A26A RID: 107114
 		protected int EntityId;
 
-		// Token: 0x0401F7B2 RID: 128946
+		// Token: 0x0401A26B RID: 107115
 		protected EntityHandle EntityHandle;
 
-		// Token: 0x0401F7B3 RID: 128947
+		// Token: 0x0401A26C RID: 107116
 		protected PawnHeadInfoComponent PawnHeadInfoComponent;
 
-		// Token: 0x0401F7B4 RID: 128948
+		// Token: 0x0401A26D RID: 107117
 		protected bool HeadDialogVisible;
 	}
 }

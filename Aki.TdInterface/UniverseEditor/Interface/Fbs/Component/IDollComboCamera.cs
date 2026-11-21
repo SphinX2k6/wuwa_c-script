@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005090 RID: 20624
+	// Token: 0x020055F5 RID: 22005
 	public struct IDollComboCamera : IFlatbufferObject
 	{
-		// Token: 0x170095C9 RID: 38345
-		// (get) Token: 0x0602119F RID: 135583 RVA: 0x004997CC File Offset: 0x004979CC
+		// Token: 0x17009DB6 RID: 40374
+		// (get) Token: 0x060230F3 RID: 143603 RVA: 0x004D3758 File Offset: 0x004D1958
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060211A0 RID: 135584 RVA: 0x004997D9 File Offset: 0x004979D9
+		// Token: 0x060230F4 RID: 143604 RVA: 0x004D3765 File Offset: 0x004D1965
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060211A1 RID: 135585 RVA: 0x004997E0 File Offset: 0x004979E0
+		// Token: 0x060230F5 RID: 143605 RVA: 0x004D376C File Offset: 0x004D196C
 		public static IDollComboCamera GetRootAsIDollComboCamera(ByteBuffer _bb)
 		{
 			return IDollComboCamera.GetRootAsIDollComboCamera(_bb, default(IDollComboCamera));
 		}
 
-		// Token: 0x060211A2 RID: 135586 RVA: 0x004997FC File Offset: 0x004979FC
+		// Token: 0x060230F6 RID: 143606 RVA: 0x004D3788 File Offset: 0x004D1988
 		public static IDollComboCamera GetRootAsIDollComboCamera(ByteBuffer _bb, IDollComboCamera obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060211A3 RID: 135587 RVA: 0x00499819 File Offset: 0x00497A19
+		// Token: 0x060230F7 RID: 143607 RVA: 0x004D37A5 File Offset: 0x004D19A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060211A4 RID: 135588 RVA: 0x00499828 File Offset: 0x00497A28
+		// Token: 0x060230F8 RID: 143608 RVA: 0x004D37B4 File Offset: 0x004D19B4
 		public IDollComboCamera __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170095CA RID: 38346
-		// (get) Token: 0x060211A5 RID: 135589 RVA: 0x00499838 File Offset: 0x00497A38
+		// Token: 0x17009DB7 RID: 40375
+		// (get) Token: 0x060230F9 RID: 143609 RVA: 0x004D37C4 File Offset: 0x004D19C4
 		public float Fov
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060211A6 RID: 135590 RVA: 0x00499878 File Offset: 0x00497A78
+		// Token: 0x060230FA RID: 143610 RVA: 0x004D3804 File Offset: 0x004D1A04
 		public IDollComboCameraConfig? ComboCameras(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IDollComboCameraConfig?(default(IDollComboCameraConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170095CB RID: 38347
-		// (get) Token: 0x060211A7 RID: 135591 RVA: 0x004998D8 File Offset: 0x00497AD8
+		// Token: 0x17009DB8 RID: 40376
+		// (get) Token: 0x060230FB RID: 143611 RVA: 0x004D3864 File Offset: 0x004D1A64
 		public int ComboCamerasLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060211A8 RID: 135592 RVA: 0x00499903 File Offset: 0x00497B03
+		// Token: 0x060230FC RID: 143612 RVA: 0x004D388F File Offset: 0x004D1A8F
 		public static Offset<IDollComboCamera> CreateIDollComboCamera(FlatBufferBuilder builder, float Fov = 0f, VectorOffset ComboCamerasOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDollComboCamera.EndIDollComboCamera(builder);
 		}
 
-		// Token: 0x060211A9 RID: 135593 RVA: 0x00499920 File Offset: 0x00497B20
+		// Token: 0x060230FD RID: 143613 RVA: 0x004D38AC File Offset: 0x004D1AAC
 		public static void StartIDollComboCamera(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060211AA RID: 135594 RVA: 0x00499929 File Offset: 0x00497B29
+		// Token: 0x060230FE RID: 143614 RVA: 0x004D38B5 File Offset: 0x004D1AB5
 		public static void AddFov(FlatBufferBuilder builder, float fov)
 		{
 			builder.AddFloat(0, fov, 0.0);
 		}
 
-		// Token: 0x060211AB RID: 135595 RVA: 0x0049993C File Offset: 0x00497B3C
+		// Token: 0x060230FF RID: 143615 RVA: 0x004D38C8 File Offset: 0x004D1AC8
 		public static void AddComboCameras(FlatBufferBuilder builder, VectorOffset comboCamerasOffset)
 		{
 			builder.AddOffset(1, comboCamerasOffset.Value, 0);
 		}
 
-		// Token: 0x060211AC RID: 135596 RVA: 0x0049994C File Offset: 0x00497B4C
+		// Token: 0x06023100 RID: 143616 RVA: 0x004D38D8 File Offset: 0x004D1AD8
 		public static VectorOffset CreateComboCamerasVector(FlatBufferBuilder builder, Offset<IDollComboCameraConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211AD RID: 135597 RVA: 0x0049998C File Offset: 0x00497B8C
+		// Token: 0x06023101 RID: 143617 RVA: 0x004D3918 File Offset: 0x004D1B18
 		public static VectorOffset CreateComboCamerasVectorBlock(FlatBufferBuilder builder, Offset<IDollComboCameraConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211AE RID: 135598 RVA: 0x004999A6 File Offset: 0x00497BA6
+		// Token: 0x06023102 RID: 143618 RVA: 0x004D3932 File Offset: 0x004D1B32
 		public static VectorOffset CreateComboCamerasVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IDollComboCameraConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211AF RID: 135599 RVA: 0x004999C4 File Offset: 0x00497BC4
+		// Token: 0x06023103 RID: 143619 RVA: 0x004D3950 File Offset: 0x004D1B50
 		public static VectorOffset CreateComboCamerasVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211B0 RID: 135600 RVA: 0x004999DD File Offset: 0x00497BDD
+		// Token: 0x06023104 RID: 143620 RVA: 0x004D3969 File Offset: 0x004D1B69
 		public static void StartComboCamerasVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060211B1 RID: 135601 RVA: 0x004999E8 File Offset: 0x00497BE8
+		// Token: 0x06023105 RID: 143621 RVA: 0x004D3974 File Offset: 0x004D1B74
 		public static Offset<IDollComboCamera> EndIDollComboCamera(FlatBufferBuilder builder)
 		{
 			return new Offset<IDollComboCamera>(builder.EndTable());
 		}
 
-		// Token: 0x060211B2 RID: 135602 RVA: 0x004999F8 File Offset: 0x00497BF8
+		// Token: 0x06023106 RID: 143622 RVA: 0x004D3984 File Offset: 0x004D1B84
 		public IDollComboCameraT UnPack()
 		{
 			IDollComboCameraT dollComboCameraT = new IDollComboCameraT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return dollComboCameraT;
 		}
 
-		// Token: 0x060211B3 RID: 135603 RVA: 0x00499A14 File Offset: 0x00497C14
+		// Token: 0x06023107 RID: 143623 RVA: 0x004D39A0 File Offset: 0x004D1BA0
 		public void UnPackTo(IDollComboCameraT _o)
 		{
 			_o.Fov = this.Fov;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060211B4 RID: 135604 RVA: 0x00499A80 File Offset: 0x00497C80
+		// Token: 0x06023108 RID: 143624 RVA: 0x004D3A0C File Offset: 0x004D1C0C
 		public static Offset<IDollComboCamera> Pack(FlatBufferBuilder builder, IDollComboCameraT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDollComboCamera.CreateIDollComboCamera(builder, _o.Fov, comboCamerasOffset);
 		}
 
-		// Token: 0x0400E0A9 RID: 57513
+		// Token: 0x0400ECA6 RID: 60582
 		private Table __p;
 	}
 }

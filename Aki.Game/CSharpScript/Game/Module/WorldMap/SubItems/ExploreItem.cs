@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubItems
 {
-	// Token: 0x0200484B RID: 18507
+	// Token: 0x0200377C RID: 14204
 	public class ExploreItem : UiPanelBase
 	{
-		// Token: 0x060306F5 RID: 198389 RVA: 0x00B3ED08 File Offset: 0x00B3CF08
+		// Token: 0x06024EC4 RID: 151236 RVA: 0x00A6EF4C File Offset: 0x00A6D14C
 		[NullableContext(1)]
 		public UniTask Init(UUIItem uiItem)
 		{
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060306F6 RID: 198390 RVA: 0x00B3ED54 File Offset: 0x00B3CF54
+		// Token: 0x06024EC5 RID: 151237 RVA: 0x00A6EF98 File Offset: 0x00A6D198
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060306F7 RID: 198391 RVA: 0x00B3EEA0 File Offset: 0x00B3D0A0
+		// Token: 0x06024EC6 RID: 151238 RVA: 0x00A6F0E4 File Offset: 0x00A6D2E4
 		public void Update(int areaId)
 		{
 			this.AreaId = areaId;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			}
 		}
 
-		// Token: 0x060306F8 RID: 198392 RVA: 0x00B3F00C File Offset: 0x00B3D20C
+		// Token: 0x06024EC7 RID: 151239 RVA: 0x00A6F250 File Offset: 0x00A6D450
 		private void OnClick()
 		{
 			Area? areaInfo = AreaConfig.Instance.GetAreaInfo(this.AreaId);
@@ -122,35 +122,35 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			});
 		}
 
-		// Token: 0x060306F9 RID: 198393 RVA: 0x00B3F0A1 File Offset: 0x00B3D2A1
+		// Token: 0x06024EC8 RID: 151240 RVA: 0x00A6F2E5 File Offset: 0x00A6D4E5
 		protected override void OnBeforeShow()
 		{
 			this.BindRedDot();
 		}
 
-		// Token: 0x060306FA RID: 198394 RVA: 0x00B3F0A9 File Offset: 0x00B3D2A9
+		// Token: 0x06024EC9 RID: 151241 RVA: 0x00A6F2ED File Offset: 0x00A6D4ED
 		protected override void OnBeforeHide()
 		{
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x060306FB RID: 198395 RVA: 0x00B3F0B1 File Offset: 0x00B3D2B1
+		// Token: 0x06024ECA RID: 151242 RVA: 0x00A6F2F5 File Offset: 0x00A6D4F5
 		private void BindRedDot()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.MapAreaExplore, base.GetItem(6), null, 0);
 		}
 
-		// Token: 0x060306FC RID: 198396 RVA: 0x00B3F0C8 File Offset: 0x00B3D2C8
+		// Token: 0x06024ECB RID: 151243 RVA: 0x00A6F30C File Offset: 0x00A6D50C
 		private void UnBindRedDot()
 		{
 			RedDotController.Instance.UnBindRedDot(ERedDotName.MapAreaExplore);
 		}
 
-		// Token: 0x0401A06D RID: 106605
+		// Token: 0x04014721 RID: 83745
 		[Nullable(2)]
 		public ExploreAreaData ExploreData;
 
-		// Token: 0x0401A06E RID: 106606
+		// Token: 0x04014722 RID: 83746
 		public int AreaId;
 	}
 }

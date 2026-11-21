@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A4D RID: 10829
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D3A RID: 11578
 	public class RequestSystemFunction : ActionParams
 	{
-		// Token: 0x0600EE57 RID: 61015 RVA: 0x0022B389 File Offset: 0x00229589
+		// Token: 0x0600FCEF RID: 64751 RVA: 0x00248D3D File Offset: 0x00246F3D
 		public static RequestSystemFunction Create(IRequestSystemFunction? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B7F RID: 19327
-		// (get) Token: 0x0600EE58 RID: 61016 RVA: 0x0022B3A8 File Offset: 0x002295A8
+		// Token: 0x17004F29 RID: 20265
+		// (get) Token: 0x0600FCF0 RID: 64752 RVA: 0x00248D5C File Offset: 0x00246F5C
 		public virtual IBuyGoods SystemFunction
 		{
 			get
@@ -38,14 +36,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008327 RID: 33575
+		// Token: 0x04008A1A RID: 35354
 		private IRequestSystemFunction Instance;
 
-		// Token: 0x04008328 RID: 33576
+		// Token: 0x04008A1B RID: 35355
 		[Nullable(2)]
 		private IBuyGoods _SystemFunctionCache;
 
-		// Token: 0x04008329 RID: 33577
+		// Token: 0x04008A1C RID: 35356
 		private bool _SystemFunctionInited;
 	}
 }

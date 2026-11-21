@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 {
-	// Token: 0x02006204 RID: 25092
+	// Token: 0x02005182 RID: 20866
 	public enum ERhythmShipPlanetType
 	{
-		// Token: 0x0402104E RID: 135246
+		// Token: 0x0401B97D RID: 113021
 		Normal = 1,
-		// Token: 0x0402104F RID: 135247
+		// Token: 0x0401B97E RID: 113022
 		MainLine,
-		// Token: 0x04021050 RID: 135248
+		// Token: 0x0401B97F RID: 113023
 		Linkage
 	}
 }

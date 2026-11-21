@@ -1,30 +1,30 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001058 RID: 4184
+// Token: 0x0200050C RID: 1292
 [NullableContext(1)]
 [Nullable(0)]
 public readonly struct EGuessJokerParamKey : IEquatable<EGuessJokerParamKey>
 {
-	// Token: 0x06006B2A RID: 27434 RVA: 0x00158FCE File Offset: 0x001571CE
+	// Token: 0x06003EBF RID: 16063 RVA: 0x001618F6 File Offset: 0x0015FAF6
 	private EGuessJokerParamKey(string value)
 	{
 		this._Value = value;
 	}
 
-	// Token: 0x06006B2B RID: 27435 RVA: 0x00158FD7 File Offset: 0x001571D7
+	// Token: 0x06003EC0 RID: 16064 RVA: 0x001618FF File Offset: 0x0015FAFF
 	public override string ToString()
 	{
 		return this._Value;
 	}
 
-	// Token: 0x06006B2C RID: 27436 RVA: 0x00158FDF File Offset: 0x001571DF
+	// Token: 0x06003EC1 RID: 16065 RVA: 0x00161907 File Offset: 0x0015FB07
 	public bool Equals(EGuessJokerParamKey other)
 	{
 		return this._Value == other._Value;
 	}
 
-	// Token: 0x06006B2D RID: 27437 RVA: 0x00158FF4 File Offset: 0x001571F4
+	// Token: 0x06003EC2 RID: 16066 RVA: 0x0016191C File Offset: 0x0015FB1C
 	[NullableContext(2)]
 	public override bool Equals(object obj)
 	{
@@ -36,7 +36,7 @@ public readonly struct EGuessJokerParamKey : IEquatable<EGuessJokerParamKey>
 		return false;
 	}
 
-	// Token: 0x06006B2E RID: 27438 RVA: 0x00159019 File Offset: 0x00157219
+	// Token: 0x06003EC3 RID: 16067 RVA: 0x00161941 File Offset: 0x0015FB41
 	public override int GetHashCode()
 	{
 		string value = this._Value;
@@ -47,66 +47,66 @@ public readonly struct EGuessJokerParamKey : IEquatable<EGuessJokerParamKey>
 		return value.GetHashCode();
 	}
 
-	// Token: 0x06006B2F RID: 27439 RVA: 0x0015902C File Offset: 0x0015722C
+	// Token: 0x06003EC4 RID: 16068 RVA: 0x00161954 File Offset: 0x0015FB54
 	public static bool operator ==(EGuessJokerParamKey left, EGuessJokerParamKey right)
 	{
 		return left.Equals(right);
 	}
 
-	// Token: 0x06006B30 RID: 27440 RVA: 0x00159036 File Offset: 0x00157236
+	// Token: 0x06003EC5 RID: 16069 RVA: 0x0016195E File Offset: 0x0015FB5E
 	public static bool operator !=(EGuessJokerParamKey left, EGuessJokerParamKey right)
 	{
 		return !left.Equals(right);
 	}
 
-	// Token: 0x040031A9 RID: 12713
+	// Token: 0x04003242 RID: 12866
 	private readonly string _Value;
 
-	// Token: 0x040031AA RID: 12714
+	// Token: 0x04003243 RID: 12867
 	public static readonly EGuessJokerParamKey GuessJokerCardMoveTime = new EGuessJokerParamKey("GuessJokerMoveCardTime");
 
-	// Token: 0x040031AB RID: 12715
+	// Token: 0x04003244 RID: 12868
 	public static readonly EGuessJokerParamKey GuessJokerCardUpTime = new EGuessJokerParamKey("GuessJokerUpCardTime");
 
-	// Token: 0x040031AC RID: 12716
+	// Token: 0x04003245 RID: 12869
 	public static readonly EGuessJokerParamKey GuessJokerCardRemoveTime = new EGuessJokerParamKey("GuessJokerRemoveCardTime");
 
-	// Token: 0x040031AD RID: 12717
+	// Token: 0x04003246 RID: 12870
 	public static readonly EGuessJokerParamKey GuessJokerAiSkillConsiderTime = new EGuessJokerParamKey("GuessJokerAiSkillConsiderTime");
 
-	// Token: 0x040031AE RID: 12718
+	// Token: 0x04003247 RID: 12871
 	public static readonly EGuessJokerParamKey GuessJokerPlayerSkillConsiderTime = new EGuessJokerParamKey("GuessJokerPlayerSkillConsiderTime");
 
-	// Token: 0x040031AF RID: 12719
+	// Token: 0x04003248 RID: 12872
 	public static readonly EGuessJokerParamKey GuessJokerNpcDrawCardWaitTime = new EGuessJokerParamKey("GuessJokerNpcDrawCardTime");
 
-	// Token: 0x040031B0 RID: 12720
+	// Token: 0x04003249 RID: 12873
 	public static readonly EGuessJokerParamKey GuessJokerCheckCardTime = new EGuessJokerParamKey("GuessJokerCheckCardTime");
 
-	// Token: 0x040031B1 RID: 12721
+	// Token: 0x0400324A RID: 12874
 	public static readonly EGuessJokerParamKey GuessJokerCheckItemMoveTime = new EGuessJokerParamKey("GuessJokerCheckItemMoveTime");
 
-	// Token: 0x040031B2 RID: 12722
+	// Token: 0x0400324B RID: 12875
 	public static readonly EGuessJokerParamKey GuessJokerCheckItemStayTime = new EGuessJokerParamKey("GuessJokerCheckItemStayTime");
 
-	// Token: 0x040031B3 RID: 12723
+	// Token: 0x0400324C RID: 12876
 	public static readonly EGuessJokerParamKey GuessJokerMaxPerformTime = new EGuessJokerParamKey("GuessJokerMaxPerformTime");
 
-	// Token: 0x040031B4 RID: 12724
+	// Token: 0x0400324D RID: 12877
 	public static readonly EGuessJokerParamKey GuessJokerFloatTipTime = new EGuessJokerParamKey("GuessJokerFloatTipTime");
 
-	// Token: 0x040031B5 RID: 12725
+	// Token: 0x0400324E RID: 12878
 	public static readonly EGuessJokerParamKey GuessJokerLuhesiDrawCardWaitTime = new EGuessJokerParamKey("GuessJokerLuhesiDrawCardWaitTime");
 
-	// Token: 0x040031B6 RID: 12726
+	// Token: 0x0400324F RID: 12879
 	public static readonly EGuessJokerParamKey GuessJokerBeChooseAiCardCount = new EGuessJokerParamKey("GuessJokerBeChooseAiCardCount");
 
-	// Token: 0x040031B7 RID: 12727
+	// Token: 0x04003250 RID: 12880
 	public static readonly EGuessJokerParamKey GuessJokerBeDrawAiCardCount = new EGuessJokerParamKey("GuessJokerBeDrawAiCardCount");
 
-	// Token: 0x040031B8 RID: 12728
+	// Token: 0x04003251 RID: 12881
 	public static readonly EGuessJokerParamKey GuessJokerBeDrawPlayerCardCount = new EGuessJokerParamKey("GuessJokerBeDrawPlayerCardCount");
 
-	// Token: 0x040031B9 RID: 12729
+	// Token: 0x04003252 RID: 12882
 	public static readonly EGuessJokerParamKey GuessJokerDrawAiCardCount = new EGuessJokerParamKey("GuessJokerDrawAiCardCount");
 }

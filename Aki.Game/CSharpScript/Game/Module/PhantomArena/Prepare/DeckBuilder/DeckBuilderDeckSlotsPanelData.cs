@@ -4,29 +4,29 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x02005198 RID: 20888
+	// Token: 0x02004168 RID: 16744
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DeckBuilderDeckSlotsPanelData : IDeckBuilderDeckSlotsPanelData
 	{
-		// Token: 0x17008179 RID: 33145
-		// (get) Token: 0x060356DB RID: 218843 RVA: 0x00CA6921 File Offset: 0x00CA4B21
-		// (set) Token: 0x060356DC RID: 218844 RVA: 0x00CA6929 File Offset: 0x00CA4B29
+		// Token: 0x17005539 RID: 21817
+		// (get) Token: 0x0602A5D6 RID: 173526 RVA: 0x00BF3ED5 File Offset: 0x00BF20D5
+		// (set) Token: 0x0602A5D7 RID: 173527 RVA: 0x00BF3EDD File Offset: 0x00BF20DD
 		public DeckInfo DeckInfo { get; set; }
 
-		// Token: 0x1700817A RID: 33146
-		// (get) Token: 0x060356DD RID: 218845 RVA: 0x00CA6932 File Offset: 0x00CA4B32
-		// (set) Token: 0x060356DE RID: 218846 RVA: 0x00CA693A File Offset: 0x00CA4B3A
+		// Token: 0x1700553A RID: 21818
+		// (get) Token: 0x0602A5D8 RID: 173528 RVA: 0x00BF3EE6 File Offset: 0x00BF20E6
+		// (set) Token: 0x0602A5D9 RID: 173529 RVA: 0x00BF3EEE File Offset: 0x00BF20EE
 		public float? SlotLongPressStartTime { get; set; }
 
-		// Token: 0x1700817B RID: 33147
-		// (get) Token: 0x060356DF RID: 218847 RVA: 0x00CA6943 File Offset: 0x00CA4B43
-		// (set) Token: 0x060356E0 RID: 218848 RVA: 0x00CA694B File Offset: 0x00CA4B4B
+		// Token: 0x1700553B RID: 21819
+		// (get) Token: 0x0602A5DA RID: 173530 RVA: 0x00BF3EF7 File Offset: 0x00BF20F7
+		// (set) Token: 0x0602A5DB RID: 173531 RVA: 0x00BF3EFF File Offset: 0x00BF20FF
 		public float? SlotLongPressEndTime { get; set; }
 
-		// Token: 0x1700817C RID: 33148
-		// (get) Token: 0x060356E1 RID: 218849 RVA: 0x00CA6954 File Offset: 0x00CA4B54
-		// (set) Token: 0x060356E2 RID: 218850 RVA: 0x00CA695C File Offset: 0x00CA4B5C
+		// Token: 0x1700553C RID: 21820
+		// (get) Token: 0x0602A5DC RID: 173532 RVA: 0x00BF3F08 File Offset: 0x00BF2108
+		// (set) Token: 0x0602A5DD RID: 173533 RVA: 0x00BF3F10 File Offset: 0x00BF2110
 		[Nullable(new byte[]
 		{
 			2,
@@ -42,9 +42,9 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x1700817D RID: 33149
-		// (get) Token: 0x060356E3 RID: 218851 RVA: 0x00CA6965 File Offset: 0x00CA4B65
-		// (set) Token: 0x060356E4 RID: 218852 RVA: 0x00CA696D File Offset: 0x00CA4B6D
+		// Token: 0x1700553D RID: 21821
+		// (get) Token: 0x0602A5DE RID: 173534 RVA: 0x00BF3F19 File Offset: 0x00BF2119
+		// (set) Token: 0x0602A5DF RID: 173535 RVA: 0x00BF3F21 File Offset: 0x00BF2121
 		[Nullable(new byte[]
 		{
 			2,
@@ -60,15 +60,15 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x1700817E RID: 33150
-		// (get) Token: 0x060356E5 RID: 218853 RVA: 0x00CA6976 File Offset: 0x00CA4B76
-		// (set) Token: 0x060356E6 RID: 218854 RVA: 0x00CA697E File Offset: 0x00CA4B7E
+		// Token: 0x1700553E RID: 21822
+		// (get) Token: 0x0602A5E0 RID: 173536 RVA: 0x00BF3F2A File Offset: 0x00BF212A
+		// (set) Token: 0x0602A5E1 RID: 173537 RVA: 0x00BF3F32 File Offset: 0x00BF2132
 		[Nullable(2)]
 		public Action OnSlotItemLongPressEnd { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700817F RID: 33151
-		// (get) Token: 0x060356E7 RID: 218855 RVA: 0x00CA6987 File Offset: 0x00CA4B87
-		// (set) Token: 0x060356E8 RID: 218856 RVA: 0x00CA698F File Offset: 0x00CA4B8F
+		// Token: 0x1700553F RID: 21823
+		// (get) Token: 0x0602A5E2 RID: 173538 RVA: 0x00BF3F3B File Offset: 0x00BF213B
+		// (set) Token: 0x0602A5E3 RID: 173539 RVA: 0x00BF3F43 File Offset: 0x00BF2143
 		[Nullable(new byte[]
 		{
 			2,
@@ -84,14 +84,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x17008180 RID: 33152
-		// (get) Token: 0x060356E9 RID: 218857 RVA: 0x00CA6998 File Offset: 0x00CA4B98
-		// (set) Token: 0x060356EA RID: 218858 RVA: 0x00CA69A0 File Offset: 0x00CA4BA0
+		// Token: 0x17005540 RID: 21824
+		// (get) Token: 0x0602A5E4 RID: 173540 RVA: 0x00BF3F4C File Offset: 0x00BF214C
+		// (set) Token: 0x0602A5E5 RID: 173541 RVA: 0x00BF3F54 File Offset: 0x00BF2154
 		public Func<DeckBuilderCardSlotItem, bool> CanCoreSlotItemToggleChange { get; set; }
 
-		// Token: 0x17008181 RID: 33153
-		// (get) Token: 0x060356EB RID: 218859 RVA: 0x00CA69A9 File Offset: 0x00CA4BA9
-		// (set) Token: 0x060356EC RID: 218860 RVA: 0x00CA69B1 File Offset: 0x00CA4BB1
+		// Token: 0x17005541 RID: 21825
+		// (get) Token: 0x0602A5E6 RID: 173542 RVA: 0x00BF3F5D File Offset: 0x00BF215D
+		// (set) Token: 0x0602A5E7 RID: 173543 RVA: 0x00BF3F65 File Offset: 0x00BF2165
 		[Nullable(new byte[]
 		{
 			2,
@@ -107,9 +107,9 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x17008182 RID: 33154
-		// (get) Token: 0x060356ED RID: 218861 RVA: 0x00CA69BA File Offset: 0x00CA4BBA
-		// (set) Token: 0x060356EE RID: 218862 RVA: 0x00CA69C2 File Offset: 0x00CA4BC2
+		// Token: 0x17005542 RID: 21826
+		// (get) Token: 0x0602A5E8 RID: 173544 RVA: 0x00BF3F6E File Offset: 0x00BF216E
+		// (set) Token: 0x0602A5E9 RID: 173545 RVA: 0x00BF3F76 File Offset: 0x00BF2176
 		[Nullable(new byte[]
 		{
 			2,
@@ -125,9 +125,9 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x17008183 RID: 33155
-		// (get) Token: 0x060356EF RID: 218863 RVA: 0x00CA69CB File Offset: 0x00CA4BCB
-		// (set) Token: 0x060356F0 RID: 218864 RVA: 0x00CA69D3 File Offset: 0x00CA4BD3
+		// Token: 0x17005543 RID: 21827
+		// (get) Token: 0x0602A5EA RID: 173546 RVA: 0x00BF3F7F File Offset: 0x00BF217F
+		// (set) Token: 0x0602A5EB RID: 173547 RVA: 0x00BF3F87 File Offset: 0x00BF2187
 		[Nullable(new byte[]
 		{
 			2,
@@ -143,14 +143,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x17008184 RID: 33156
-		// (get) Token: 0x060356F1 RID: 218865 RVA: 0x00CA69DC File Offset: 0x00CA4BDC
-		// (set) Token: 0x060356F2 RID: 218866 RVA: 0x00CA69E4 File Offset: 0x00CA4BE4
+		// Token: 0x17005544 RID: 21828
+		// (get) Token: 0x0602A5EC RID: 173548 RVA: 0x00BF3F90 File Offset: 0x00BF2190
+		// (set) Token: 0x0602A5ED RID: 173549 RVA: 0x00BF3F98 File Offset: 0x00BF2198
 		public Func<DeckBuilderCardSlotItem, bool> CanNormalSlotItemToggleChange { get; set; }
 
-		// Token: 0x17008185 RID: 33157
-		// (get) Token: 0x060356F3 RID: 218867 RVA: 0x00CA69ED File Offset: 0x00CA4BED
-		// (set) Token: 0x060356F4 RID: 218868 RVA: 0x00CA69F5 File Offset: 0x00CA4BF5
+		// Token: 0x17005545 RID: 21829
+		// (get) Token: 0x0602A5EE RID: 173550 RVA: 0x00BF3FA1 File Offset: 0x00BF21A1
+		// (set) Token: 0x0602A5EF RID: 173551 RVA: 0x00BF3FA9 File Offset: 0x00BF21A9
 		[Nullable(new byte[]
 		{
 			2,
@@ -166,14 +166,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x17008186 RID: 33158
-		// (get) Token: 0x060356F5 RID: 218869 RVA: 0x00CA69FE File Offset: 0x00CA4BFE
-		// (set) Token: 0x060356F6 RID: 218870 RVA: 0x00CA6A06 File Offset: 0x00CA4C06
+		// Token: 0x17005546 RID: 21830
+		// (get) Token: 0x0602A5F0 RID: 173552 RVA: 0x00BF3FB2 File Offset: 0x00BF21B2
+		// (set) Token: 0x0602A5F1 RID: 173553 RVA: 0x00BF3FBA File Offset: 0x00BF21BA
 		public Func<DeckBuilderCardSlotItem, bool> CanFieldSlotItemToggleChange { get; set; }
 
-		// Token: 0x17008187 RID: 33159
-		// (get) Token: 0x060356F7 RID: 218871 RVA: 0x00CA6A0F File Offset: 0x00CA4C0F
-		// (set) Token: 0x060356F8 RID: 218872 RVA: 0x00CA6A17 File Offset: 0x00CA4C17
+		// Token: 0x17005547 RID: 21831
+		// (get) Token: 0x0602A5F2 RID: 173554 RVA: 0x00BF3FC3 File Offset: 0x00BF21C3
+		// (set) Token: 0x0602A5F3 RID: 173555 RVA: 0x00BF3FCB File Offset: 0x00BF21CB
 		[Nullable(new byte[]
 		{
 			2,
@@ -189,41 +189,41 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x17008188 RID: 33160
-		// (get) Token: 0x060356F9 RID: 218873 RVA: 0x00CA6A20 File Offset: 0x00CA4C20
-		// (set) Token: 0x060356FA RID: 218874 RVA: 0x00CA6A28 File Offset: 0x00CA4C28
+		// Token: 0x17005548 RID: 21832
+		// (get) Token: 0x0602A5F4 RID: 173556 RVA: 0x00BF3FD4 File Offset: 0x00BF21D4
+		// (set) Token: 0x0602A5F5 RID: 173557 RVA: 0x00BF3FDC File Offset: 0x00BF21DC
 		[Nullable(2)]
 		public Action<int> OnSlotCardPointEnterCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008189 RID: 33161
-		// (get) Token: 0x060356FB RID: 218875 RVA: 0x00CA6A31 File Offset: 0x00CA4C31
-		// (set) Token: 0x060356FC RID: 218876 RVA: 0x00CA6A39 File Offset: 0x00CA4C39
+		// Token: 0x17005549 RID: 21833
+		// (get) Token: 0x0602A5F6 RID: 173558 RVA: 0x00BF3FE5 File Offset: 0x00BF21E5
+		// (set) Token: 0x0602A5F7 RID: 173559 RVA: 0x00BF3FED File Offset: 0x00BF21ED
 		[Nullable(2)]
 		public Action OnSlotCardPointExitCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700818A RID: 33162
-		// (get) Token: 0x060356FD RID: 218877 RVA: 0x00CA6A42 File Offset: 0x00CA4C42
-		// (set) Token: 0x060356FE RID: 218878 RVA: 0x00CA6A4A File Offset: 0x00CA4C4A
+		// Token: 0x1700554A RID: 21834
+		// (get) Token: 0x0602A5F8 RID: 173560 RVA: 0x00BF3FF6 File Offset: 0x00BF21F6
+		// (set) Token: 0x0602A5F9 RID: 173561 RVA: 0x00BF3FFE File Offset: 0x00BF21FE
 		public CardSlotSortContext SortContext { get; set; }
 
-		// Token: 0x1700818B RID: 33163
-		// (get) Token: 0x060356FF RID: 218879 RVA: 0x00CA6A53 File Offset: 0x00CA4C53
-		// (set) Token: 0x06035700 RID: 218880 RVA: 0x00CA6A5B File Offset: 0x00CA4C5B
+		// Token: 0x1700554B RID: 21835
+		// (get) Token: 0x0602A5FA RID: 173562 RVA: 0x00BF4007 File Offset: 0x00BF2207
+		// (set) Token: 0x0602A5FB RID: 173563 RVA: 0x00BF400F File Offset: 0x00BF220F
 		public bool ShowLocked { get; set; }
 
-		// Token: 0x1700818C RID: 33164
-		// (get) Token: 0x06035701 RID: 218881 RVA: 0x00CA6A64 File Offset: 0x00CA4C64
-		// (set) Token: 0x06035702 RID: 218882 RVA: 0x00CA6A6C File Offset: 0x00CA4C6C
+		// Token: 0x1700554C RID: 21836
+		// (get) Token: 0x0602A5FC RID: 173564 RVA: 0x00BF4018 File Offset: 0x00BF2218
+		// (set) Token: 0x0602A5FD RID: 173565 RVA: 0x00BF4020 File Offset: 0x00BF2220
 		public bool ShowOutlook { get; set; }
 
-		// Token: 0x1700818D RID: 33165
-		// (get) Token: 0x06035703 RID: 218883 RVA: 0x00CA6A75 File Offset: 0x00CA4C75
-		// (set) Token: 0x06035704 RID: 218884 RVA: 0x00CA6A7D File Offset: 0x00CA4C7D
+		// Token: 0x1700554D RID: 21837
+		// (get) Token: 0x0602A5FE RID: 173566 RVA: 0x00BF4029 File Offset: 0x00BF2229
+		// (set) Token: 0x0602A5FF RID: 173567 RVA: 0x00BF4031 File Offset: 0x00BF2231
 		public bool IsNeedFieldCard { get; set; }
 
-		// Token: 0x1700818E RID: 33166
-		// (get) Token: 0x06035705 RID: 218885 RVA: 0x00CA6A86 File Offset: 0x00CA4C86
-		// (set) Token: 0x06035706 RID: 218886 RVA: 0x00CA6A8E File Offset: 0x00CA4C8E
+		// Token: 0x1700554E RID: 21838
+		// (get) Token: 0x0602A600 RID: 173568 RVA: 0x00BF403A File Offset: 0x00BF223A
+		// (set) Token: 0x0602A601 RID: 173569 RVA: 0x00BF4042 File Offset: 0x00BF2242
 		public bool IsNeedRequestCheckCardSkillUnlock { get; set; }
 	}
 }

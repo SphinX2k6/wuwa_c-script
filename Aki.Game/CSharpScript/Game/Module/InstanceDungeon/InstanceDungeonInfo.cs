@@ -8,13 +8,13 @@ using Aki.TDConfigMgr.Quest;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005879 RID: 22649
+	// Token: 0x02004851 RID: 18513
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InstanceDungeonInfo : LogicTreeContainer
 	{
-		// Token: 0x17008A6A RID: 35434
-		// (get) Token: 0x06039A09 RID: 236041 RVA: 0x00DB1D53 File Offset: 0x00DAFF53
+		// Token: 0x17005E36 RID: 24118
+		// (get) Token: 0x0602E92B RID: 190763 RVA: 0x00D00C62 File Offset: 0x00CFEE62
 		public override bool IsInteractValid
 		{
 			get
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A6B RID: 35435
-		// (get) Token: 0x06039A0A RID: 236042 RVA: 0x00DB1D56 File Offset: 0x00DAFF56
+		// Token: 0x17005E37 RID: 24119
+		// (get) Token: 0x0602E92C RID: 190764 RVA: 0x00D00C65 File Offset: 0x00CFEE65
 		public override int Id
 		{
 			get
@@ -33,8 +33,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A6C RID: 35436
-		// (get) Token: 0x06039A0B RID: 236043 RVA: 0x00DB1D5E File Offset: 0x00DAFF5E
+		// Token: 0x17005E38 RID: 24120
+		// (get) Token: 0x0602E92D RID: 190765 RVA: 0x00D00C6D File Offset: 0x00CFEE6D
 		[Nullable(1)]
 		public override string Name
 		{
@@ -45,8 +45,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A6D RID: 35437
-		// (get) Token: 0x06039A0C RID: 236044 RVA: 0x00DB1D66 File Offset: 0x00DAFF66
+		// Token: 0x17005E39 RID: 24121
+		// (get) Token: 0x0602E92E RID: 190766 RVA: 0x00D00C75 File Offset: 0x00CFEE75
 		public int LevelPlayEntityId
 		{
 			get
@@ -55,8 +55,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A6E RID: 35438
-		// (get) Token: 0x06039A0D RID: 236045 RVA: 0x00DB1D6E File Offset: 0x00DAFF6E
+		// Token: 0x17005E3A RID: 24122
+		// (get) Token: 0x0602E92F RID: 190767 RVA: 0x00D00C7D File Offset: 0x00CFEE7D
 		public int MapId
 		{
 			get
@@ -65,8 +65,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A6F RID: 35439
-		// (get) Token: 0x06039A0E RID: 236046 RVA: 0x00DB1D76 File Offset: 0x00DAFF76
+		// Token: 0x17005E3B RID: 24123
+		// (get) Token: 0x0602E930 RID: 190768 RVA: 0x00D00C85 File Offset: 0x00CFEE85
 		public int? InstanceId
 		{
 			get
@@ -75,8 +75,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A70 RID: 35440
-		// (get) Token: 0x06039A0F RID: 236047 RVA: 0x00DB1D7E File Offset: 0x00DAFF7E
+		// Token: 0x17005E3C RID: 24124
+		// (get) Token: 0x0602E931 RID: 190769 RVA: 0x00D00C8D File Offset: 0x00CFEE8D
 		public ILevelPlayTrack TrackConfig
 		{
 			get
@@ -85,13 +85,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A71 RID: 35441
-		// (get) Token: 0x06039A10 RID: 236048 RVA: 0x00DB1D86 File Offset: 0x00DAFF86
-		// (set) Token: 0x06039A11 RID: 236049 RVA: 0x00DB1D8E File Offset: 0x00DAFF8E
+		// Token: 0x17005E3D RID: 24125
+		// (get) Token: 0x0602E932 RID: 190770 RVA: 0x00D00C95 File Offset: 0x00CFEE95
+		// (set) Token: 0x0602E933 RID: 190771 RVA: 0x00D00C9D File Offset: 0x00CFEE9D
 		public ILevelPlayReward RewardConfig { get; set; }
 
-		// Token: 0x17008A72 RID: 35442
-		// (get) Token: 0x06039A12 RID: 236050 RVA: 0x00DB1D97 File Offset: 0x00DAFF97
+		// Token: 0x17005E3E RID: 24126
+		// (get) Token: 0x0602E934 RID: 190772 RVA: 0x00D00CA6 File Offset: 0x00CFEEA6
 		public int RewardId
 		{
 			get
@@ -100,8 +100,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A73 RID: 35443
-		// (get) Token: 0x06039A13 RID: 236051 RVA: 0x00DB1D9F File Offset: 0x00DAFF9F
+		// Token: 0x17005E3F RID: 24127
+		// (get) Token: 0x0602E935 RID: 190773 RVA: 0x00D00CAE File Offset: 0x00CFEEAE
 		public int RewardEntityId
 		{
 			get
@@ -110,8 +110,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A74 RID: 35444
-		// (get) Token: 0x06039A14 RID: 236052 RVA: 0x00DB1DA7 File Offset: 0x00DAFFA7
+		// Token: 0x17005E40 RID: 24128
+		// (get) Token: 0x0602E936 RID: 190774 RVA: 0x00D00CB6 File Offset: 0x00CFEEB6
 		[Nullable(new byte[]
 		{
 			2,
@@ -130,8 +130,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A75 RID: 35445
-		// (get) Token: 0x06039A15 RID: 236053 RVA: 0x00DB1DAF File Offset: 0x00DAFFAF
+		// Token: 0x17005E41 RID: 24129
+		// (get) Token: 0x0602E937 RID: 190775 RVA: 0x00D00CBE File Offset: 0x00CFEEBE
 		[Nullable(new byte[]
 		{
 			2,
@@ -150,8 +150,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A76 RID: 35446
-		// (get) Token: 0x06039A16 RID: 236054 RVA: 0x00DB1DB7 File Offset: 0x00DAFFB7
+		// Token: 0x17005E42 RID: 24130
+		// (get) Token: 0x0602E938 RID: 190776 RVA: 0x00D00CC6 File Offset: 0x00CFEEC6
 		[Nullable(new byte[]
 		{
 			2,
@@ -170,8 +170,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A77 RID: 35447
-		// (get) Token: 0x06039A17 RID: 236055 RVA: 0x00DB1DBF File Offset: 0x00DAFFBF
+		// Token: 0x17005E43 RID: 24131
+		// (get) Token: 0x0602E939 RID: 190777 RVA: 0x00D00CCE File Offset: 0x00CFEECE
 		public int SubType
 		{
 			get
@@ -180,8 +180,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A78 RID: 35448
-		// (get) Token: 0x06039A18 RID: 236056 RVA: 0x00DB1DC7 File Offset: 0x00DAFFC7
+		// Token: 0x17005E44 RID: 24132
+		// (get) Token: 0x0602E93A RID: 190778 RVA: 0x00D00CD6 File Offset: 0x00CFEED6
 		public ELevelPlayOnlineType OnlineType
 		{
 			get
@@ -190,13 +190,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039A19 RID: 236057 RVA: 0x00DB1DCF File Offset: 0x00DAFFCF
+		// Token: 0x0602E93B RID: 190779 RVA: 0x00D00CDE File Offset: 0x00CFEEDE
 		public InstanceDungeonInfo(int id)
 		{
 			this.InnerId = id;
 		}
 
-		// Token: 0x06039A1A RID: 236058 RVA: 0x00DB1DF8 File Offset: 0x00DAFFF8
+		// Token: 0x0602E93C RID: 190780 RVA: 0x00D00D04 File Offset: 0x00CFEF04
 		public unsafe void InitConfig()
 		{
 			ILevelPlay levelPlayConfig = LevelPlayModel.Instance.GetLevelPlayConfig(this.InnerId);
@@ -249,44 +249,44 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.InnerRewardId = automaticRewardParam.RewardId;
 		}
 
-		// Token: 0x06039A1B RID: 236059 RVA: 0x00DB1FB8 File Offset: 0x00DB01B8
+		// Token: 0x0602E93D RID: 190781 RVA: 0x00D00EC4 File Offset: 0x00CFF0C4
 		public ILevelPlay GetInstanceDungeonConfig()
 		{
 			return LevelPlayModel.Instance.GetLevelPlayConfig(this.InnerId);
 		}
 
-		// Token: 0x06039A1C RID: 236060 RVA: 0x00DB1FCA File Offset: 0x00DB01CA
+		// Token: 0x0602E93E RID: 190782 RVA: 0x00D00ED6 File Offset: 0x00CFF0D6
 		public IBtNode GetInstanceDungeonNodeConfig(int nodeId)
 		{
 			return LevelPlayModel.Instance.GetLevelPlayNodeConfig(this.InnerId, nodeId);
 		}
 
-		// Token: 0x0401E1E7 RID: 123367
+		// Token: 0x04018C84 RID: 101508
 		private readonly int InnerId;
 
-		// Token: 0x0401E1E8 RID: 123368
+		// Token: 0x04018C85 RID: 101509
 		[Nullable(1)]
 		private string InnerName = "";
 
-		// Token: 0x0401E1E9 RID: 123369
+		// Token: 0x04018C86 RID: 101510
 		private int InnerLevelPlayEntityId;
 
-		// Token: 0x0401E1EA RID: 123370
+		// Token: 0x04018C87 RID: 101511
 		private int InnerMapId;
 
-		// Token: 0x0401E1EB RID: 123371
+		// Token: 0x04018C88 RID: 101512
 		private int? InnerInstanceId = new int?(0);
 
-		// Token: 0x0401E1EC RID: 123372
+		// Token: 0x04018C89 RID: 101513
 		private ILevelPlayTrack InnerTrackConfig;
 
-		// Token: 0x0401E1EE RID: 123374
+		// Token: 0x04018C8B RID: 101515
 		private int InnerRewardId;
 
-		// Token: 0x0401E1EF RID: 123375
+		// Token: 0x04018C8C RID: 101516
 		private int InnerRewardEntityId;
 
-		// Token: 0x0401E1F0 RID: 123376
+		// Token: 0x04018C8D RID: 101517
 		[Nullable(new byte[]
 		{
 			2,
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private List<ActionInfo> InnerAfterGetRewardAction;
 
-		// Token: 0x0401E1F1 RID: 123377
+		// Token: 0x04018C8E RID: 101518
 		[Nullable(new byte[]
 		{
 			2,
@@ -302,7 +302,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private List<ActionInfo> InnerLevelPlayOpenAction;
 
-		// Token: 0x0401E1F2 RID: 123378
+		// Token: 0x04018C8F RID: 101519
 		[Nullable(new byte[]
 		{
 			2,
@@ -310,10 +310,10 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private List<ActionInfo> InnerEscAction;
 
-		// Token: 0x0401E1F3 RID: 123379
+		// Token: 0x04018C90 RID: 101520
 		private int InnerInstanceSubType;
 
-		// Token: 0x0401E1F4 RID: 123380
+		// Token: 0x04018C91 RID: 101521
 		private ELevelPlayOnlineType InnerOnlineType;
 	}
 }

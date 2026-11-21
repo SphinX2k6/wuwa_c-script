@@ -1,48 +1,48 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001231 RID: 4657
+// Token: 0x020006E5 RID: 1765
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoMonopolyRoundBuffData : IDangoMonopolyRoundBuffData
 {
-	// Token: 0x17000AA8 RID: 2728
-	// (get) Token: 0x06007DE7 RID: 32231 RVA: 0x001AADA4 File Offset: 0x001A8FA4
-	// (set) Token: 0x06007DE8 RID: 32232 RVA: 0x001AADAC File Offset: 0x001A8FAC
+	// Token: 0x17000AC8 RID: 2760
+	// (get) Token: 0x0600517E RID: 20862 RVA: 0x001B3A64 File Offset: 0x001B1C64
+	// (set) Token: 0x0600517F RID: 20863 RVA: 0x001B3A6C File Offset: 0x001B1C6C
 	public int DangoId { get; set; }
 
-	// Token: 0x17000AA9 RID: 2729
-	// (get) Token: 0x06007DE9 RID: 32233 RVA: 0x001AADB5 File Offset: 0x001A8FB5
-	// (set) Token: 0x06007DEA RID: 32234 RVA: 0x001AADBD File Offset: 0x001A8FBD
+	// Token: 0x17000AC9 RID: 2761
+	// (get) Token: 0x06005180 RID: 20864 RVA: 0x001B3A75 File Offset: 0x001B1C75
+	// (set) Token: 0x06005181 RID: 20865 RVA: 0x001B3A7D File Offset: 0x001B1C7D
 	public int PropertyId { get; set; }
 
-	// Token: 0x17000AAA RID: 2730
-	// (get) Token: 0x06007DEB RID: 32235 RVA: 0x001AADC6 File Offset: 0x001A8FC6
-	// (set) Token: 0x06007DEC RID: 32236 RVA: 0x001AADCE File Offset: 0x001A8FCE
+	// Token: 0x17000ACA RID: 2762
+	// (get) Token: 0x06005182 RID: 20866 RVA: 0x001B3A86 File Offset: 0x001B1C86
+	// (set) Token: 0x06005183 RID: 20867 RVA: 0x001B3A8E File Offset: 0x001B1C8E
 	public int GridId { get; set; }
 
-	// Token: 0x17000AAB RID: 2731
-	// (get) Token: 0x06007DED RID: 32237 RVA: 0x001AADD7 File Offset: 0x001A8FD7
-	// (set) Token: 0x06007DEE RID: 32238 RVA: 0x001AADDF File Offset: 0x001A8FDF
+	// Token: 0x17000ACB RID: 2763
+	// (get) Token: 0x06005184 RID: 20868 RVA: 0x001B3A97 File Offset: 0x001B1C97
+	// (set) Token: 0x06005185 RID: 20869 RVA: 0x001B3A9F File Offset: 0x001B1C9F
 	public bool IsActive { get; set; }
 
-	// Token: 0x17000AAC RID: 2732
-	// (get) Token: 0x06007DEF RID: 32239 RVA: 0x001AADE8 File Offset: 0x001A8FE8
-	// (set) Token: 0x06007DF0 RID: 32240 RVA: 0x001AADF0 File Offset: 0x001A8FF0
+	// Token: 0x17000ACC RID: 2764
+	// (get) Token: 0x06005186 RID: 20870 RVA: 0x001B3AA8 File Offset: 0x001B1CA8
+	// (set) Token: 0x06005187 RID: 20871 RVA: 0x001B3AB0 File Offset: 0x001B1CB0
 	public string DangoIcon { get; set; } = "";
 
-	// Token: 0x17000AAD RID: 2733
-	// (get) Token: 0x06007DF1 RID: 32241 RVA: 0x001AADF9 File Offset: 0x001A8FF9
-	// (set) Token: 0x06007DF2 RID: 32242 RVA: 0x001AAE01 File Offset: 0x001A9001
+	// Token: 0x17000ACD RID: 2765
+	// (get) Token: 0x06005188 RID: 20872 RVA: 0x001B3AB9 File Offset: 0x001B1CB9
+	// (set) Token: 0x06005189 RID: 20873 RVA: 0x001B3AC1 File Offset: 0x001B1CC1
 	public string DangoName { get; set; } = "";
 
-	// Token: 0x17000AAE RID: 2734
-	// (get) Token: 0x06007DF3 RID: 32243 RVA: 0x001AAE0A File Offset: 0x001A900A
-	// (set) Token: 0x06007DF4 RID: 32244 RVA: 0x001AAE12 File Offset: 0x001A9012
+	// Token: 0x17000ACE RID: 2766
+	// (get) Token: 0x0600518A RID: 20874 RVA: 0x001B3ACA File Offset: 0x001B1CCA
+	// (set) Token: 0x0600518B RID: 20875 RVA: 0x001B3AD2 File Offset: 0x001B1CD2
 	public string PropertyDesc { get; set; } = "";
 
-	// Token: 0x17000AAF RID: 2735
-	// (get) Token: 0x06007DF5 RID: 32245 RVA: 0x001AAE1B File Offset: 0x001A901B
-	// (set) Token: 0x06007DF6 RID: 32246 RVA: 0x001AAE23 File Offset: 0x001A9023
+	// Token: 0x17000ACF RID: 2767
+	// (get) Token: 0x0600518C RID: 20876 RVA: 0x001B3ADB File Offset: 0x001B1CDB
+	// (set) Token: 0x0600518D RID: 20877 RVA: 0x001B3AE3 File Offset: 0x001B1CE3
 	public string PropertyTitle { get; set; } = "";
 }

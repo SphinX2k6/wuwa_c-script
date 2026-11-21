@@ -1,24 +1,21 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000569 RID: 1385
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005D0 RID: 1488
 	public class INpcPerformOnMonsterCloseby_SetValue
 	{
-		// Token: 0x04001441 RID: 5185
+		// Token: 0x040015AB RID: 5547
 		public float Range;
 
-		// Token: 0x04001442 RID: 5186
+		// Token: 0x040015AC RID: 5548
 		public IMontageId Montage;
 
-		// Token: 0x04001443 RID: 5187
+		// Token: 0x040015AD RID: 5549
 		public IBubbleIndex Bubble;
 
-		// Token: 0x04001444 RID: 5188
+		// Token: 0x040015AE RID: 5550
 		public int BubbleRate;
 	}
 }

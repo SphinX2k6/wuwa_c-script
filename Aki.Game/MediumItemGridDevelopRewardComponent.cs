@@ -8,10 +8,10 @@ using CSharpScript.Game.Module.Util.Layout;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001910 RID: 6416
+// Token: 0x02000DC9 RID: 3529
 public class MediumItemGridDevelopRewardComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BBFD RID: 48125 RVA: 0x002A9CA8 File Offset: 0x002A7EA8
+	// Token: 0x06008FE7 RID: 36839 RVA: 0x002B4404 File Offset: 0x002B2604
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -25,20 +25,20 @@ public class MediumItemGridDevelopRewardComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BBFE RID: 48126 RVA: 0x002A9D11 File Offset: 0x002A7F11
+	// Token: 0x06008FE8 RID: 36840 RVA: 0x002B446D File Offset: 0x002B266D
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemVisionMap";
 	}
 
-	// Token: 0x0600BBFF RID: 48127 RVA: 0x002A9D18 File Offset: 0x002A7F18
+	// Token: 0x06008FE9 RID: 36841 RVA: 0x002B4474 File Offset: 0x002B2674
 	protected override void OnActivate()
 	{
 		this.Layout = new GenericLayoutNew<DevelopRewardItem>(base.GetLayoutBase(0), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<DevelopRewardItem>(this.InitItem), base.GetItem(1));
 	}
 
-	// Token: 0x0600BC00 RID: 48128 RVA: 0x002A9D3F File Offset: 0x002A7F3F
+	// Token: 0x06008FEA RID: 36842 RVA: 0x002B449B File Offset: 0x002B269B
 	protected override void OnDeactivate()
 	{
 		GenericLayoutNew<DevelopRewardItem> layout = this.Layout;
@@ -49,7 +49,7 @@ public class MediumItemGridDevelopRewardComponent : MediumItemGridComponent
 		this.Layout = null;
 	}
 
-	// Token: 0x0600BC01 RID: 48129 RVA: 0x002A9D5C File Offset: 0x002A7F5C
+	// Token: 0x06008FEB RID: 36843 RVA: 0x002B44B8 File Offset: 0x002B26B8
 	[NullableContext(1)]
 	private ILayoutItem<DevelopRewardItem> InitItem(object data, UUIItem uiItem, int index)
 	{
@@ -66,7 +66,7 @@ public class MediumItemGridDevelopRewardComponent : MediumItemGridComponent
 		};
 	}
 
-	// Token: 0x0600BC02 RID: 48130 RVA: 0x002A9DD4 File Offset: 0x002A7FD4
+	// Token: 0x06008FEC RID: 36844 RVA: 0x002B4530 File Offset: 0x002B2730
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -92,7 +92,7 @@ public class MediumItemGridDevelopRewardComponent : MediumItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x0400552C RID: 21804
+	// Token: 0x040055D7 RID: 21975
 	[Nullable(new byte[]
 	{
 		2,
@@ -100,19 +100,19 @@ public class MediumItemGridDevelopRewardComponent : MediumItemGridComponent
 	})]
 	private GenericLayoutNew<DevelopRewardItem> Layout;
 
-	// Token: 0x0400552D RID: 21805
+	// Token: 0x040055D8 RID: 21976
 	private int DevelopRewardLevel;
 
-	// Token: 0x0400552E RID: 21806
+	// Token: 0x040055D9 RID: 21977
 	private int UnlockLevel;
 
-	// Token: 0x02007E83 RID: 32387
+	// Token: 0x0200700A RID: 28682
 	private class EChildType
 	{
-		// Token: 0x0402964C RID: 169548
+		// Token: 0x04024978 RID: 149880
 		public const int LevelLayout = 0;
 
-		// Token: 0x0402964D RID: 169549
+		// Token: 0x04024979 RID: 149881
 		public const int LevelLayoutItem = 1;
 	}
 }

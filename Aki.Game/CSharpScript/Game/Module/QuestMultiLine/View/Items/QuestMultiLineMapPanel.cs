@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FBA RID: 20410
+	// Token: 0x02003F83 RID: 16259
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestMultiLineMapPanel : UiPanelBase
 	{
-		// Token: 0x060343CB RID: 213963 RVA: 0x00C433F8 File Offset: 0x00C415F8
+		// Token: 0x06029239 RID: 168505 RVA: 0x00B8CBA4 File Offset: 0x00B8ADA4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			};
 		}
 
-		// Token: 0x060343CC RID: 213964 RVA: 0x00C43504 File Offset: 0x00C41704
+		// Token: 0x0602923A RID: 168506 RVA: 0x00B8CCB0 File Offset: 0x00B8AEB0
 		protected override void OnStart()
 		{
 			this.PathItem = base.GetItem(10);
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.InitMapMove();
 		}
 
-		// Token: 0x060343CD RID: 213965 RVA: 0x00C43533 File Offset: 0x00C41733
+		// Token: 0x0602923B RID: 168507 RVA: 0x00B8CCDF File Offset: 0x00B8AEDF
 		protected override void OnBeforeDestroy()
 		{
 			this.StopComponentMoveAlongPath();
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.DestroyMapMove();
 		}
 
-		// Token: 0x060343CE RID: 213966 RVA: 0x00C43548 File Offset: 0x00C41748
+		// Token: 0x0602923C RID: 168508 RVA: 0x00B8CCF4 File Offset: 0x00B8AEF4
 		public void RefreshFightArea(Dictionary<int, bool> fightAreaMap)
 		{
 			int num = 3;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343CF RID: 213967 RVA: 0x00C43584 File Offset: 0x00C41784
+		// Token: 0x0602923D RID: 168509 RVA: 0x00B8CD30 File Offset: 0x00B8AF30
 		private void InitMapMove()
 		{
 			this.MapDraggableItem = base.GetItem(0);
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.LastAnchorOffsetY = anchorOffset.Y;
 		}
 
-		// Token: 0x060343D0 RID: 213968 RVA: 0x00C43664 File Offset: 0x00C41864
+		// Token: 0x0602923E RID: 168510 RVA: 0x00B8CE10 File Offset: 0x00B8B010
 		private void ComputeCenterBounds()
 		{
 			int num = Math.Max(0, ConfigCommonParamById.GetIntConfig("QuestMultiLineDragOffsetX").GetValueOrDefault(100));
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.CenterSafeArea.MaxY = (float)num2;
 		}
 
-		// Token: 0x060343D1 RID: 213969 RVA: 0x00C436E0 File Offset: 0x00C418E0
+		// Token: 0x0602923F RID: 168511 RVA: 0x00B8CE8C File Offset: 0x00B8B08C
 		public void MapShow()
 		{
 			if (this.MoveComponent == null || this.IsMapInputBound)
@@ -119,12 +119,12 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 				return;
 			}
 			this.MoveComponent.AddGamepadEvent();
-			this.MoveComponent.AddMoveListener(true);
+			this.MoveComponent.AddMoveListener(true, false);
 			EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 			this.IsMapInputBound = true;
 		}
 
-		// Token: 0x060343D2 RID: 213970 RVA: 0x00C43738 File Offset: 0x00C41938
+		// Token: 0x06029240 RID: 168512 RVA: 0x00B8CEE8 File Offset: 0x00B8B0E8
 		public void OnTick(float delta)
 		{
 			if (this.MoveComponent == null || this.MapDraggableItem == null)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343D3 RID: 213971 RVA: 0x00C437A8 File Offset: 0x00C419A8
+		// Token: 0x06029241 RID: 168513 RVA: 0x00B8CF58 File Offset: 0x00B8B158
 		public void MapHide()
 		{
 			if (this.MoveComponent == null || !this.IsMapInputBound)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.IsMapInputBound = false;
 		}
 
-		// Token: 0x060343D4 RID: 213972 RVA: 0x00C43800 File Offset: 0x00C41A00
+		// Token: 0x06029242 RID: 168514 RVA: 0x00B8CFB0 File Offset: 0x00B8B1B0
 		private void RefreshMoveSpeed()
 		{
 			if (this.MoveComponent == null)
@@ -172,19 +172,19 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343D5 RID: 213973 RVA: 0x00C43873 File Offset: 0x00C41A73
+		// Token: 0x06029243 RID: 168515 RVA: 0x00B8D023 File Offset: 0x00B8B223
 		private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			this.RefreshMoveSpeed();
 		}
 
-		// Token: 0x060343D6 RID: 213974 RVA: 0x00C4387B File Offset: 0x00C41A7B
+		// Token: 0x06029244 RID: 168516 RVA: 0x00B8D02B File Offset: 0x00B8B22B
 		private void OnMapMoveEnd(ULGUIPointerEventData eventData)
 		{
 			this.RefreshAllDialogueSides();
 		}
 
-		// Token: 0x060343D7 RID: 213975 RVA: 0x00C43883 File Offset: 0x00C41A83
+		// Token: 0x06029245 RID: 168517 RVA: 0x00B8D033 File Offset: 0x00B8B233
 		private void OnCenterTweenUpdate(FVector2D value)
 		{
 			UUIItem mapDraggableItem = this.MapDraggableItem;
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.RefreshAllDialogueSides();
 		}
 
-		// Token: 0x060343D8 RID: 213976 RVA: 0x00C4389D File Offset: 0x00C41A9D
+		// Token: 0x06029246 RID: 168518 RVA: 0x00B8D04D File Offset: 0x00B8B24D
 		private void KillCenterTweener()
 		{
 			if (this.CenterTweener != null)
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343D9 RID: 213977 RVA: 0x00C438BC File Offset: 0x00C41ABC
+		// Token: 0x06029247 RID: 168519 RVA: 0x00B8D06C File Offset: 0x00B8B26C
 		private void RefreshAllDialogueSides()
 		{
 			if (this.ComponentItems == null)
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343DA RID: 213978 RVA: 0x00C43918 File Offset: 0x00C41B18
+		// Token: 0x06029248 RID: 168520 RVA: 0x00B8D0C8 File Offset: 0x00B8B2C8
 		private void DestroyMapMove()
 		{
 			this.KillCenterTweener();
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343DB RID: 213979 RVA: 0x00C4396C File Offset: 0x00C41B6C
+		// Token: 0x06029249 RID: 168521 RVA: 0x00B8D11C File Offset: 0x00B8B31C
 		private UniTask ClearComponents()
 		{
 			QuestMultiLineMapPanel.<ClearComponents>d__34 <ClearComponents>d__;
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <ClearComponents>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343DC RID: 213980 RVA: 0x00C439B0 File Offset: 0x00C41BB0
+		// Token: 0x0602924A RID: 168522 RVA: 0x00B8D160 File Offset: 0x00B8B360
 		private UniTask ClearPathItems()
 		{
 			QuestMultiLineMapPanel.<ClearPathItems>d__35 <ClearPathItems>d__;
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <ClearPathItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343DD RID: 213981 RVA: 0x00C439F4 File Offset: 0x00C41BF4
+		// Token: 0x0602924B RID: 168523 RVA: 0x00B8D1A4 File Offset: 0x00B8B3A4
 		public UniTask RefreshComponents(List<QuestMultiLineComponentData> components)
 		{
 			QuestMultiLineMapPanel.<RefreshComponents>d__36 <RefreshComponents>d__;
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <RefreshComponents>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343DE RID: 213982 RVA: 0x00C43A40 File Offset: 0x00C41C40
+		// Token: 0x0602924C RID: 168524 RVA: 0x00B8D1F0 File Offset: 0x00B8B3F0
 		public UniTask DrawComponentMovePath(List<QuestMultiLineComponentData> components)
 		{
 			QuestMultiLineMapPanel.<DrawComponentMovePath>d__37 <DrawComponentMovePath>d__;
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <DrawComponentMovePath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343DF RID: 213983 RVA: 0x00C43A8C File Offset: 0x00C41C8C
+		// Token: 0x0602924D RID: 168525 RVA: 0x00B8D23C File Offset: 0x00B8B43C
 		public void StopComponentMoveAlongPath()
 		{
 			foreach (TimerHandle timerHandle in this.ComponentMoveTimerHandles.Values)
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.ComponentMoveAbortCallbackMap.Clear();
 		}
 
-		// Token: 0x060343E0 RID: 213984 RVA: 0x00C43B3C File Offset: 0x00C41D3C
+		// Token: 0x0602924E RID: 168526 RVA: 0x00B8D2EC File Offset: 0x00B8B4EC
 		public void PlayComponentMoveAlongPath(QuestMultiLineComponentData componentData, float? speedUiPxPerSec = null, [Nullable(2)] Action onComplete = null)
 		{
 			QuestMultiLineMapPanel.<>c__DisplayClass39_0 CS$<>8__locals1 = new QuestMultiLineMapPanel.<>c__DisplayClass39_0();
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343E1 RID: 213985 RVA: 0x00C43D04 File Offset: 0x00C41F04
+		// Token: 0x0602924F RID: 168527 RVA: 0x00B8D4B4 File Offset: 0x00B8B6B4
 		public UniTask DrawDebugPath(IReadOnlyList<global::Vector> points)
 		{
 			QuestMultiLineMapPanel.<DrawDebugPath>d__40 <DrawDebugPath>d__;
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <DrawDebugPath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343E2 RID: 213986 RVA: 0x00C43D50 File Offset: 0x00C41F50
+		// Token: 0x06029250 RID: 168528 RVA: 0x00B8D500 File Offset: 0x00B8B700
 		public void HideComponentsPath()
 		{
 			foreach (QuestMultiLinePathItem questMultiLinePathItem in this.PathItems)
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343E3 RID: 213987 RVA: 0x00C43DA4 File Offset: 0x00C41FA4
+		// Token: 0x06029251 RID: 168529 RVA: 0x00B8D554 File Offset: 0x00B8B754
 		public void ClearAllComponentSelection()
 		{
 			if (this.ComponentItems == null)
@@ -416,7 +416,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343E4 RID: 213988 RVA: 0x00C43E00 File Offset: 0x00C42000
+		// Token: 0x06029252 RID: 168530 RVA: 0x00B8D5B0 File Offset: 0x00B8B7B0
 		public void RefreshFullScreenNiagara(bool isActive, string path)
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(9);
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343E5 RID: 213989 RVA: 0x00C43E2C File Offset: 0x00C4202C
+		// Token: 0x06029253 RID: 168531 RVA: 0x00B8D5DC File Offset: 0x00B8B7DC
 		public void HideAllForSequencer()
 		{
 			if (this.ComponentItems != null)
@@ -461,7 +461,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			uiNiagara.SetUIActive(false);
 		}
 
-		// Token: 0x060343E6 RID: 213990 RVA: 0x00C43EFC File Offset: 0x00C420FC
+		// Token: 0x06029254 RID: 168532 RVA: 0x00B8D6AC File Offset: 0x00B8B8AC
 		public UniTask PlayComponentAppearAsync(QuestMultiLineComponentData componentData)
 		{
 			QuestMultiLineMapPanel.<PlayComponentAppearAsync>d__45 <PlayComponentAppearAsync>d__;
@@ -473,7 +473,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <PlayComponentAppearAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343E7 RID: 213991 RVA: 0x00C43F48 File Offset: 0x00C42148
+		// Token: 0x06029255 RID: 168533 RVA: 0x00B8D6F8 File Offset: 0x00B8B8F8
 		public UniTask PlayPathAppearAsync(QuestMultiLineComponentData componentData)
 		{
 			QuestMultiLineMapPanel.<PlayPathAppearAsync>d__46 <PlayPathAppearAsync>d__;
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <PlayPathAppearAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343E8 RID: 213992 RVA: 0x00C43F94 File Offset: 0x00C42194
+		// Token: 0x06029256 RID: 168534 RVA: 0x00B8D744 File Offset: 0x00B8B944
 		public void StopAllPathDraw()
 		{
 			foreach (QuestMultiLinePathItem questMultiLinePathItem in this.PathItemMap.Values)
@@ -499,7 +499,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.PathDrawAbortCallbackMap.Clear();
 		}
 
-		// Token: 0x060343E9 RID: 213993 RVA: 0x00C44038 File Offset: 0x00C42238
+		// Token: 0x06029257 RID: 168535 RVA: 0x00B8D7E8 File Offset: 0x00B8B9E8
 		public UniTask PlayComponentMoveAlongPathAsync(QuestMultiLineComponentData componentData, float? speedUiPxPerSec = null)
 		{
 			QuestMultiLineMapPanel.<PlayComponentMoveAlongPathAsync>d__48 <PlayComponentMoveAlongPathAsync>d__;
@@ -512,7 +512,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <PlayComponentMoveAlongPathAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343EA RID: 213994 RVA: 0x00C4408C File Offset: 0x00C4228C
+		// Token: 0x06029258 RID: 168536 RVA: 0x00B8D83C File Offset: 0x00B8BA3C
 		public void ShowFightArea(int areaId)
 		{
 			if (areaId < 1 || areaId > 6)
@@ -528,13 +528,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			item.SetUIActive(true);
 		}
 
-		// Token: 0x060343EB RID: 213995 RVA: 0x00C440BA File Offset: 0x00C422BA
+		// Token: 0x06029259 RID: 168537 RVA: 0x00B8D86A File Offset: 0x00B8BA6A
 		public void ShowScreenEffectInstant(string screenEffectPath)
 		{
 			this.RefreshFullScreenNiagara(!string.IsNullOrEmpty(screenEffectPath), screenEffectPath);
 		}
 
-		// Token: 0x060343EC RID: 213996 RVA: 0x00C440CC File Offset: 0x00C422CC
+		// Token: 0x0602925A RID: 168538 RVA: 0x00B8D87C File Offset: 0x00B8BA7C
 		public Action ApplyZoomPivotOnComponent(QuestMultiLineComponentData componentData)
 		{
 			Action result = delegate()
@@ -576,7 +576,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			};
 		}
 
-		// Token: 0x060343ED RID: 213997 RVA: 0x00C4426C File Offset: 0x00C4246C
+		// Token: 0x0602925B RID: 168539 RVA: 0x00B8DA1C File Offset: 0x00B8BC1C
 		public UniTask PanMapToCenterOnComponentAsync(QuestMultiLineComponentData componentData, bool clampToSafeArea = true)
 		{
 			QuestMultiLineMapPanel.<PanMapToCenterOnComponentAsync>d__52 <PanMapToCenterOnComponentAsync>d__;
@@ -589,7 +589,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <PanMapToCenterOnComponentAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343EE RID: 213998 RVA: 0x00C442C0 File Offset: 0x00C424C0
+		// Token: 0x0602925C RID: 168540 RVA: 0x00B8DA70 File Offset: 0x00B8BC70
 		public void PlayAllComponentsAppearStart()
 		{
 			if (this.ComponentItems == null)
@@ -602,7 +602,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343EF RID: 213999 RVA: 0x00C4431C File Offset: 0x00C4251C
+		// Token: 0x0602925D RID: 168541 RVA: 0x00B8DACC File Offset: 0x00B8BCCC
 		[NullableContext(2)]
 		private QuestMultiLineComponentItem FindComponentItem(int componentId)
 		{
@@ -618,13 +618,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return this.ComponentItems[num];
 		}
 
-		// Token: 0x060343F0 RID: 214000 RVA: 0x00C44372 File Offset: 0x00C42572
+		// Token: 0x0602925E RID: 168542 RVA: 0x00B8DB22 File Offset: 0x00B8BD22
 		public void SetComponentFunction(Action<QuestMultiLineComponentData> componentFunction)
 		{
 			this.ComponentFunction = componentFunction;
 		}
 
-		// Token: 0x060343F1 RID: 214001 RVA: 0x00C4437C File Offset: 0x00C4257C
+		// Token: 0x0602925F RID: 168543 RVA: 0x00B8DB2C File Offset: 0x00B8BD2C
 		public void SetComponentsClickable(bool clickable)
 		{
 			if (this.ComponentItems == null)
@@ -637,7 +637,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343F2 RID: 214002 RVA: 0x00C443D8 File Offset: 0x00C425D8
+		// Token: 0x06029260 RID: 168544 RVA: 0x00B8DB88 File Offset: 0x00B8BD88
 		public void RefreshComponentsClickable()
 		{
 			if (this.ComponentItems == null || this.Components == null)
@@ -656,7 +656,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343F3 RID: 214003 RVA: 0x00C44444 File Offset: 0x00C42644
+		// Token: 0x06029261 RID: 168545 RVA: 0x00B8DBF4 File Offset: 0x00B8BDF4
 		public void PanMapToCenterOnComponent(QuestMultiLineComponentData componentData, bool clampToSafeArea = true)
 		{
 			if (this.MapDraggableItem == null || UiLayer.Instance.UiRootItem == null)
@@ -705,7 +705,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343F4 RID: 214004 RVA: 0x00C445D4 File Offset: 0x00C427D4
+		// Token: 0x06029262 RID: 168546 RVA: 0x00B8DD84 File Offset: 0x00B8BF84
 		[NullableContext(2)]
 		public UUIItem GetGuideComponentUiItem(int componentId)
 		{
@@ -722,7 +722,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return this.ComponentItems[num].GetRootItem();
 		}
 
-		// Token: 0x060343F5 RID: 214005 RVA: 0x00C44650 File Offset: 0x00C42850
+		// Token: 0x06029263 RID: 168547 RVA: 0x00B8DE00 File Offset: 0x00B8C000
 		private void OnClickComponent(QuestMultiLineComponentData timePoint)
 		{
 			for (int i = 0; i < this.Components.Count; i++)
@@ -738,7 +738,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			componentFunction(timePoint);
 		}
 
-		// Token: 0x060343F6 RID: 214006 RVA: 0x00C446AC File Offset: 0x00C428AC
+		// Token: 0x06029264 RID: 168548 RVA: 0x00B8DE5C File Offset: 0x00B8C05C
 		public bool TryClickComponentAtMousePosition()
 		{
 			if (this.ComponentItems == null || this.Components == null)
@@ -750,7 +750,10 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			{
 				return false;
 			}
-			FKey key = new FKey(new FName(EKey.LeftMouseButton));
+			FKey key = new FKey
+			{
+				KeyName = new FName(EKey.LeftMouseButton)
+			};
 			if (!Info.Instance.IsInTouch() && !characterController.IsInputKeyDown(key) && !characterController.WasInputKeyJustReleased(key))
 			{
 				return false;
@@ -793,7 +796,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return false;
 		}
 
-		// Token: 0x0401BC74 RID: 113780
+		// Token: 0x04016649 RID: 91721
 		[Nullable(new byte[]
 		{
 			2,
@@ -801,7 +804,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 		})]
 		private List<QuestMultiLineComponentData> Components;
 
-		// Token: 0x0401BC75 RID: 113781
+		// Token: 0x0401664A RID: 91722
 		[Nullable(new byte[]
 		{
 			2,
@@ -809,21 +812,21 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 		})]
 		private List<QuestMultiLineComponentItem> ComponentItems;
 
-		// Token: 0x0401BC76 RID: 113782
+		// Token: 0x0401664B RID: 91723
 		private List<QuestMultiLinePathItem> PathItems = new List<QuestMultiLinePathItem>();
 
-		// Token: 0x0401BC77 RID: 113783
+		// Token: 0x0401664C RID: 91724
 		private readonly Dictionary<int, QuestMultiLinePathItem> PathItemMap = new Dictionary<int, QuestMultiLinePathItem>();
 
-		// Token: 0x0401BC78 RID: 113784
+		// Token: 0x0401664D RID: 91725
 		[Nullable(2)]
 		private UUIItem PathItem;
 
-		// Token: 0x0401BC79 RID: 113785
+		// Token: 0x0401664E RID: 91726
 		[Nullable(2)]
 		private UUIItem PathItemParent;
 
-		// Token: 0x0401BC7A RID: 113786
+		// Token: 0x0401664F RID: 91727
 		[Nullable(new byte[]
 		{
 			2,
@@ -831,41 +834,41 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 		})]
 		private Action<QuestMultiLineComponentData> ComponentFunction;
 
-		// Token: 0x0401BC7B RID: 113787
+		// Token: 0x04016650 RID: 91728
 		private readonly Dictionary<int, TimerHandle> ComponentMoveTimerHandles = new Dictionary<int, TimerHandle>();
 
-		// Token: 0x0401BC7C RID: 113788
+		// Token: 0x04016651 RID: 91729
 		private readonly Dictionary<int, Action> ComponentMoveAbortCallbackMap = new Dictionary<int, Action>();
 
-		// Token: 0x0401BC7D RID: 113789
+		// Token: 0x04016652 RID: 91730
 		private readonly Dictionary<int, Action> PathDrawAbortCallbackMap = new Dictionary<int, Action>();
 
-		// Token: 0x0401BC7E RID: 113790
+		// Token: 0x04016653 RID: 91731
 		[Nullable(2)]
 		private QuestMultiLineMapMoveComponent MoveComponent;
 
-		// Token: 0x0401BC7F RID: 113791
+		// Token: 0x04016654 RID: 91732
 		[Nullable(2)]
 		private UUIItem MapDraggableItem;
 
-		// Token: 0x0401BC80 RID: 113792
+		// Token: 0x04016655 RID: 91733
 		private bool IsMapInputBound;
 
-		// Token: 0x0401BC81 RID: 113793
+		// Token: 0x04016656 RID: 91734
 		private float LastAnchorOffsetX;
 
-		// Token: 0x0401BC82 RID: 113794
+		// Token: 0x04016657 RID: 91735
 		private float LastAnchorOffsetY;
 
-		// Token: 0x0401BC83 RID: 113795
+		// Token: 0x04016658 RID: 91736
 		[Nullable(2)]
 		private ULTweener CenterTweener;
 
-		// Token: 0x0401BC84 RID: 113796
+		// Token: 0x04016659 RID: 91737
 		[Nullable(2)]
 		private FLTweenVector2SetterDynamic CenterDelegate;
 
-		// Token: 0x0401BC85 RID: 113797
+		// Token: 0x0401665A RID: 91738
 		private IDragArea CenterSafeArea;
 	}
 }

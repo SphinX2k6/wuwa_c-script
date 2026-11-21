@@ -3,45 +3,45 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E84 RID: 20100
+	// Token: 0x02005395 RID: 21397
 	public class IAimPartT
 	{
-		// Token: 0x17009006 RID: 36870
-		// (get) Token: 0x0601F9AC RID: 129452 RVA: 0x00466FAD File Offset: 0x004651AD
-		// (set) Token: 0x0601F9AD RID: 129453 RVA: 0x00466FB5 File Offset: 0x004651B5
+		// Token: 0x1700973F RID: 38719
+		// (get) Token: 0x060215F7 RID: 136695 RVA: 0x0049AFC5 File Offset: 0x004991C5
+		// (set) Token: 0x060215F8 RID: 136696 RVA: 0x0049AFCD File Offset: 0x004991CD
 		public string BoneName { get; set; }
 
-		// Token: 0x17009007 RID: 36871
-		// (get) Token: 0x0601F9AE RID: 129454 RVA: 0x00466FBE File Offset: 0x004651BE
-		// (set) Token: 0x0601F9AF RID: 129455 RVA: 0x00466FC6 File Offset: 0x004651C6
+		// Token: 0x17009740 RID: 38720
+		// (get) Token: 0x060215F9 RID: 136697 RVA: 0x0049AFD6 File Offset: 0x004991D6
+		// (set) Token: 0x060215FA RID: 136698 RVA: 0x0049AFDE File Offset: 0x004991DE
 		public IVectorInfoT Offset { get; set; }
 
-		// Token: 0x17009008 RID: 36872
-		// (get) Token: 0x0601F9B0 RID: 129456 RVA: 0x00466FCF File Offset: 0x004651CF
-		// (set) Token: 0x0601F9B1 RID: 129457 RVA: 0x00466FD7 File Offset: 0x004651D7
+		// Token: 0x17009741 RID: 38721
+		// (get) Token: 0x060215FB RID: 136699 RVA: 0x0049AFE7 File Offset: 0x004991E7
+		// (set) Token: 0x060215FC RID: 136700 RVA: 0x0049AFEF File Offset: 0x004991EF
 		public int RadiusIn { get; set; }
 
-		// Token: 0x17009009 RID: 36873
-		// (get) Token: 0x0601F9B2 RID: 129458 RVA: 0x00466FE0 File Offset: 0x004651E0
-		// (set) Token: 0x0601F9B3 RID: 129459 RVA: 0x00466FE8 File Offset: 0x004651E8
+		// Token: 0x17009742 RID: 38722
+		// (get) Token: 0x060215FD RID: 136701 RVA: 0x0049AFF8 File Offset: 0x004991F8
+		// (set) Token: 0x060215FE RID: 136702 RVA: 0x0049B000 File Offset: 0x00499200
 		public int RadiusOut { get; set; }
 
-		// Token: 0x1700900A RID: 36874
-		// (get) Token: 0x0601F9B4 RID: 129460 RVA: 0x00466FF1 File Offset: 0x004651F1
-		// (set) Token: 0x0601F9B5 RID: 129461 RVA: 0x00466FF9 File Offset: 0x004651F9
+		// Token: 0x17009743 RID: 38723
+		// (get) Token: 0x060215FF RID: 136703 RVA: 0x0049B009 File Offset: 0x00499209
+		// (set) Token: 0x06021600 RID: 136704 RVA: 0x0049B011 File Offset: 0x00499211
 		public int RadiusOutOnStart { get; set; }
 
-		// Token: 0x1700900B RID: 36875
-		// (get) Token: 0x0601F9B6 RID: 129462 RVA: 0x00467002 File Offset: 0x00465202
-		// (set) Token: 0x0601F9B7 RID: 129463 RVA: 0x0046700A File Offset: 0x0046520A
+		// Token: 0x17009744 RID: 38724
+		// (get) Token: 0x06021601 RID: 136705 RVA: 0x0049B01A File Offset: 0x0049921A
+		// (set) Token: 0x06021602 RID: 136706 RVA: 0x0049B022 File Offset: 0x00499222
 		public float MobileCorrect { get; set; }
 
-		// Token: 0x1700900C RID: 36876
-		// (get) Token: 0x0601F9B8 RID: 129464 RVA: 0x00467013 File Offset: 0x00465213
-		// (set) Token: 0x0601F9B9 RID: 129465 RVA: 0x0046701B File Offset: 0x0046521B
+		// Token: 0x17009745 RID: 38725
+		// (get) Token: 0x06021603 RID: 136707 RVA: 0x0049B02B File Offset: 0x0049922B
+		// (set) Token: 0x06021604 RID: 136708 RVA: 0x0049B033 File Offset: 0x00499233
 		public float GamePadCorrect { get; set; }
 
-		// Token: 0x0601F9BA RID: 129466 RVA: 0x00467024 File Offset: 0x00465224
+		// Token: 0x06021605 RID: 136709 RVA: 0x0049B03C File Offset: 0x0049923C
 		public IAimPartT()
 		{
 			this.BoneName = null;

@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Fight.Movement;
 using UnrealEngine;
 
-// Token: 0x0200305F RID: 12383
+// Token: 0x020025B5 RID: 9653
 [NullableContext(1)]
 [Nullable(0)]
 public class SoarConfigParams : IStaticVariableResetter
 {
-	// Token: 0x0601A585 RID: 107909 RVA: 0x006FFD64 File Offset: 0x006FDF64
+	// Token: 0x06017F32 RID: 98098 RVA: 0x00726A64 File Offset: 0x00724C64
 	static SoarConfigParams()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SoarConfigParams.CreateStaticDefaultValue), new Action(SoarConfigParams.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17002443 RID: 9283
-	// (get) Token: 0x0601A586 RID: 107910 RVA: 0x006FFD83 File Offset: 0x006FDF83
+	// Token: 0x1700256F RID: 9583
+	// (get) Token: 0x06017F33 RID: 98099 RVA: 0x00726A83 File Offset: 0x00724C83
 	public static SoarConfigParams SoarConfigBase
 	{
 		get
@@ -29,7 +29,7 @@ public class SoarConfigParams : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A587 RID: 107911 RVA: 0x006FFDB4 File Offset: 0x006FDFB4
+	// Token: 0x06017F34 RID: 98100 RVA: 0x00726AB4 File Offset: 0x00724CB4
 	public static void ReInitSoarConfigBase()
 	{
 		if (SoarConfigParams.SoarConfigBaseInternal == null)
@@ -39,7 +39,7 @@ public class SoarConfigParams : IStaticVariableResetter
 		SoarConfigParams.SoarConfigBaseInternal.Init(ResourceSystem.Instance.GetLoadedAsset<BP_SoarConfig_C>("/Game/Aki/Data/Fight/Movement/DA_SoarConfigBase.DA_SoarConfigBase"));
 	}
 
-	// Token: 0x0601A588 RID: 107912 RVA: 0x006FFDE0 File Offset: 0x006FDFE0
+	// Token: 0x06017F35 RID: 98101 RVA: 0x00726AE0 File Offset: 0x00724CE0
 	public SoarConfigParams()
 	{
 		this.SoarBalanceSpeed = (float)this.SoarBalanceVelocity.Size();
@@ -48,7 +48,7 @@ public class SoarConfigParams : IStaticVariableResetter
 		this.SoarSplineInputDirectMinX = (float)Math.Sin((double)(this.SoarPitchMin * 0.017453292f));
 	}
 
-	// Token: 0x0601A589 RID: 107913 RVA: 0x006FFFF8 File Offset: 0x006FE1F8
+	// Token: 0x06017F36 RID: 98102 RVA: 0x00726CF8 File Offset: 0x00724EF8
 	public void Init(BP_SoarConfig_C ueConfig)
 	{
 		this.SoarInputNormalAngleMin = ueConfig.阻挡面角度极限最小值;
@@ -99,148 +99,148 @@ public class SoarConfigParams : IStaticVariableResetter
 		this.DebugDraw = (GlobalData.IsPlayInEditor && ueConfig.DebugDraw);
 	}
 
-	// Token: 0x0601A58A RID: 107914 RVA: 0x00700250 File Offset: 0x006FE450
+	// Token: 0x06017F37 RID: 98103 RVA: 0x00726F50 File Offset: 0x00725150
 	public static void CreateStaticDefaultValue()
 	{
 		SoarConfigParams.SoarConfigBaseInternal = null;
 	}
 
-	// Token: 0x0601A58B RID: 107915 RVA: 0x00700258 File Offset: 0x006FE458
+	// Token: 0x06017F38 RID: 98104 RVA: 0x00726F58 File Offset: 0x00725158
 	public static void ResetStaticDefaultValue()
 	{
 		SoarConfigParams.SoarConfigBaseInternal = null;
 	}
 
-	// Token: 0x0400C932 RID: 51506
+	// Token: 0x0400CD0C RID: 52492
 	[Nullable(2)]
 	private static SoarConfigParams SoarConfigBaseInternal;
 
-	// Token: 0x0400C933 RID: 51507
+	// Token: 0x0400CD0D RID: 52493
 	public float SoarInputNormalAngleMin = 12.38f;
 
-	// Token: 0x0400C934 RID: 51508
+	// Token: 0x0400CD0E RID: 52494
 	public float SoarInputNormalAngleMax = 45f;
 
-	// Token: 0x0400C935 RID: 51509
+	// Token: 0x0400CD0F RID: 52495
 	public float SoarAerodynamicsMin = 4.9f;
 
-	// Token: 0x0400C936 RID: 51510
+	// Token: 0x0400CD10 RID: 52496
 	public float SoarAerodynamicsMax = 30f;
 
-	// Token: 0x0400C937 RID: 51511
+	// Token: 0x0400CD11 RID: 52497
 	public float SoarSpeedThresholdMin = 1700f;
 
-	// Token: 0x0400C938 RID: 51512
+	// Token: 0x0400CD12 RID: 52498
 	public float SoarSpeedThresholdMax = 2200f;
 
-	// Token: 0x0400C939 RID: 51513
+	// Token: 0x0400CD13 RID: 52499
 	public float SoarPitchMin = 10f;
 
-	// Token: 0x0400C93A RID: 51514
+	// Token: 0x0400CD14 RID: 52500
 	public float SoarPitchMax = 140f;
 
-	// Token: 0x0400C93B RID: 51515
+	// Token: 0x0400CD15 RID: 52501
 	public float SoarNormalSpeedNoInput = 6f;
 
-	// Token: 0x0400C93C RID: 51516
+	// Token: 0x0400CD16 RID: 52502
 	public Vector SoarBalanceVelocity = Vector.Create(1650.0, 0.0, -385.0);
 
-	// Token: 0x0400C93D RID: 51517
+	// Token: 0x0400CD17 RID: 52503
 	public float SoarBalanceSpeed;
 
-	// Token: 0x0400C93E RID: 51518
+	// Token: 0x0400CD18 RID: 52504
 	public float SoarBalanceInputThreshold = -0.8f;
 
-	// Token: 0x0400C93F RID: 51519
+	// Token: 0x0400CD19 RID: 52505
 	public float SoarBalanceAccelMin = 100f;
 
-	// Token: 0x0400C940 RID: 51520
+	// Token: 0x0400CD1A RID: 52506
 	public float SoarBalanceAccelMax = 1000f;
 
-	// Token: 0x0400C941 RID: 51521
+	// Token: 0x0400CD1B RID: 52507
 	public float SoarBalanceAccelOffset = 400f;
 
-	// Token: 0x0400C942 RID: 51522
+	// Token: 0x0400CD1C RID: 52508
 	public float SoarBalanceSpeedThreshold = 1700f;
 
-	// Token: 0x0400C943 RID: 51523
+	// Token: 0x0400CD1D RID: 52509
 	public float SoarBalanceSpeed2 = 1500f;
 
-	// Token: 0x0400C944 RID: 51524
+	// Token: 0x0400CD1E RID: 52510
 	public float SoarBalanceSpeedThreshold2 = 1500f;
 
-	// Token: 0x0400C945 RID: 51525
+	// Token: 0x0400CD1F RID: 52511
 	public float SoarNormalSpeed = 200f;
 
-	// Token: 0x0400C946 RID: 51526
+	// Token: 0x0400CD20 RID: 52512
 	public float SoarNormalLerp = 0.95f;
 
-	// Token: 0x0400C947 RID: 51527
+	// Token: 0x0400CD21 RID: 52513
 	public float SoarRotateSpeed = 65f;
 
-	// Token: 0x0400C948 RID: 51528
+	// Token: 0x0400CD22 RID: 52514
 	public float SoarRotateLerp = 0.98f;
 
-	// Token: 0x0400C949 RID: 51529
+	// Token: 0x0400CD23 RID: 52515
 	public float SoarBoostNormalSpeed = 50f;
 
-	// Token: 0x0400C94A RID: 51530
+	// Token: 0x0400CD24 RID: 52516
 	public float SoarBoostNormalLerp = 0.95f;
 
-	// Token: 0x0400C94B RID: 51531
+	// Token: 0x0400CD25 RID: 52517
 	public float SoarBoostAccel = 5000f;
 
-	// Token: 0x0400C94C RID: 51532
+	// Token: 0x0400CD26 RID: 52518
 	public float SoarSplineMinSpeed = 500f;
 
-	// Token: 0x0400C94D RID: 51533
+	// Token: 0x0400CD27 RID: 52519
 	public float SoarSplineAccel = 500f;
 
-	// Token: 0x0400C94E RID: 51534
+	// Token: 0x0400CD28 RID: 52520
 	public float SoarSplineRotateAngleSpeedWithoutInput = 360f;
 
-	// Token: 0x0400C94F RID: 51535
+	// Token: 0x0400CD29 RID: 52521
 	public float SoarSplineRotateAngleSpeedWithInput = 180f;
 
-	// Token: 0x0400C950 RID: 51536
+	// Token: 0x0400CD2A RID: 52522
 	public float SoarSplineRotateLerp = 0.95f;
 
-	// Token: 0x0400C951 RID: 51537
+	// Token: 0x0400CD2B RID: 52523
 	public float SoarSplinePushCenterDistMin;
 
-	// Token: 0x0400C952 RID: 51538
+	// Token: 0x0400CD2C RID: 52524
 	public float SoarSplinePushCenterDistMax = 800f;
 
-	// Token: 0x0400C953 RID: 51539
+	// Token: 0x0400CD2D RID: 52525
 	public float SoarSplinePushCenterSpeedMin;
 
-	// Token: 0x0400C954 RID: 51540
+	// Token: 0x0400CD2E RID: 52526
 	public float SoarSplinePushCenterSpeedMax = 300f;
 
-	// Token: 0x0400C955 RID: 51541
+	// Token: 0x0400CD2F RID: 52527
 	public float SoarSplineInputAngle = 30f;
 
-	// Token: 0x0400C956 RID: 51542
+	// Token: 0x0400CD30 RID: 52528
 	public float SoarSplineInputAngleCos;
 
-	// Token: 0x0400C957 RID: 51543
+	// Token: 0x0400CD31 RID: 52529
 	public float SoarSplineInputAngleSin;
 
-	// Token: 0x0400C958 RID: 51544
+	// Token: 0x0400CD32 RID: 52530
 	public float SoarSplineInputDirectMinX;
 
-	// Token: 0x0400C959 RID: 51545
+	// Token: 0x0400CD33 RID: 52531
 	public float SoarAirFriction = 0.02f;
 
-	// Token: 0x0400C95A RID: 51546
+	// Token: 0x0400CD34 RID: 52532
 	public float SoarGravityValue = 1900f;
 
-	// Token: 0x0400C95B RID: 51547
+	// Token: 0x0400CD35 RID: 52533
 	public float SoarMaxSpeed = 3000f;
 
-	// Token: 0x0400C95C RID: 51548
+	// Token: 0x0400CD36 RID: 52534
 	public float SoarHitWallExitTimeLength = 1500f;
 
-	// Token: 0x0400C95D RID: 51549
+	// Token: 0x0400CD37 RID: 52535
 	public bool DebugDraw;
 }

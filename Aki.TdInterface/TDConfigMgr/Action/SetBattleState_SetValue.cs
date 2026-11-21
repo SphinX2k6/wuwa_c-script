@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021A0 RID: 8608
+	// Token: 0x0200240B RID: 9227
 	public class SetBattleState_SetValue
 	{
-		// Token: 0x040070D4 RID: 28884
-		[Nullable(1)]
+		// Token: 0x0400771C RID: 30492
 		public ISendBattleStateType StateOption;
 	}
 }

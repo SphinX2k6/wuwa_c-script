@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200007B RID: 123
+// Token: 0x0200007C RID: 124
 [NullableContext(1)]
 [Nullable(0)]
 public readonly struct EntityArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5> : IEntityArgs
 {
-	// Token: 0x0600039C RID: 924 RVA: 0x00016409 File Offset: 0x00014609
+	// Token: 0x060003D5 RID: 981 RVA: 0x00016DE5 File Offset: 0x00014FE5
 	public EntityArgs(T1 p1, T2 p2, T3 p3, T4 p4, T5 p5)
 	{
 		this.<p1>P = p1;
@@ -16,7 +16,7 @@ public readonly struct EntityArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(
 		this.<p5>P = p5;
 	}
 
-	// Token: 0x0600039D RID: 925 RVA: 0x00016430 File Offset: 0x00014630
+	// Token: 0x060003D6 RID: 982 RVA: 0x00016E0C File Offset: 0x0001500C
 	public T GetP1<[Nullable(2)] T>()
 	{
 		T1 t = this.<p1>P;
@@ -33,7 +33,7 @@ public readonly struct EntityArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(
 		throw new InvalidCastException(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x0600039E RID: 926 RVA: 0x000164D4 File Offset: 0x000146D4
+	// Token: 0x060003D7 RID: 983 RVA: 0x00016EB0 File Offset: 0x000150B0
 	public T GetP2<[Nullable(2)] T>()
 	{
 		T2 t = this.<p2>P;
@@ -50,7 +50,7 @@ public readonly struct EntityArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(
 		throw new InvalidCastException(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x0600039F RID: 927 RVA: 0x00016578 File Offset: 0x00014778
+	// Token: 0x060003D8 RID: 984 RVA: 0x00016F54 File Offset: 0x00015154
 	public T GetP3<[Nullable(2)] T>()
 	{
 		T3 t = this.<p3>P;
@@ -67,7 +67,7 @@ public readonly struct EntityArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(
 		throw new InvalidCastException(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x060003A0 RID: 928 RVA: 0x0001661C File Offset: 0x0001481C
+	// Token: 0x060003D9 RID: 985 RVA: 0x00016FF8 File Offset: 0x000151F8
 	public T GetP4<[Nullable(2)] T>()
 	{
 		T4 t = this.<p4>P;
@@ -84,7 +84,7 @@ public readonly struct EntityArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(
 		throw new InvalidCastException(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x060003A1 RID: 929 RVA: 0x000166C0 File Offset: 0x000148C0
+	// Token: 0x060003DA RID: 986 RVA: 0x0001709C File Offset: 0x0001529C
 	public T GetP5<[Nullable(2)] T>()
 	{
 		T5 t = this.<p5>P;
@@ -101,23 +101,23 @@ public readonly struct EntityArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(
 		throw new InvalidCastException(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x04000389 RID: 905
+	// Token: 0x040003A1 RID: 929
 	[CompilerGenerated]
 	private readonly T1 <p1>P;
 
-	// Token: 0x0400038A RID: 906
+	// Token: 0x040003A2 RID: 930
 	[CompilerGenerated]
 	private readonly T2 <p2>P;
 
-	// Token: 0x0400038B RID: 907
+	// Token: 0x040003A3 RID: 931
 	[CompilerGenerated]
 	private readonly T3 <p3>P;
 
-	// Token: 0x0400038C RID: 908
+	// Token: 0x040003A4 RID: 932
 	[CompilerGenerated]
 	private readonly T4 <p4>P;
 
-	// Token: 0x0400038D RID: 909
+	// Token: 0x040003A5 RID: 933
 	[CompilerGenerated]
 	private readonly T5 <p5>P;
 }

@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Core.Container
 {
-	// Token: 0x02000152 RID: 338
+	// Token: 0x02000156 RID: 342
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Graph<[Nullable(2)] TVec>
 	{
-		// Token: 0x06000BB0 RID: 2992 RVA: 0x00037B08 File Offset: 0x00035D08
+		// Token: 0x06000C0C RID: 3084 RVA: 0x000386D8 File Offset: 0x000368D8
 		public Graph(IGraphSpace<TVec> Space, bool Directed = false)
 		{
 			this.Space = Space;
 			this.Directed = Directed;
 		}
 
-		// Token: 0x17000116 RID: 278
-		// (get) Token: 0x06000BB1 RID: 2993 RVA: 0x00037B34 File Offset: 0x00035D34
+		// Token: 0x17000129 RID: 297
+		// (get) Token: 0x06000C0D RID: 3085 RVA: 0x00038704 File Offset: 0x00036904
 		public bool IsDirected
 		{
 			get
@@ -27,8 +26,8 @@ namespace CSharpScript.Core.Container
 			}
 		}
 
-		// Token: 0x17000117 RID: 279
-		// (get) Token: 0x06000BB2 RID: 2994 RVA: 0x00037B3C File Offset: 0x00035D3C
+		// Token: 0x1700012A RID: 298
+		// (get) Token: 0x06000C0E RID: 3086 RVA: 0x0003870C File Offset: 0x0003690C
 		public int NodeCount
 		{
 			get
@@ -37,8 +36,8 @@ namespace CSharpScript.Core.Container
 			}
 		}
 
-		// Token: 0x17000118 RID: 280
-		// (get) Token: 0x06000BB3 RID: 2995 RVA: 0x00037B49 File Offset: 0x00035D49
+		// Token: 0x1700012B RID: 299
+		// (get) Token: 0x06000C0F RID: 3087 RVA: 0x00038719 File Offset: 0x00036919
 		public int EdgeCount
 		{
 			get
@@ -47,7 +46,7 @@ namespace CSharpScript.Core.Container
 			}
 		}
 
-		// Token: 0x06000BB4 RID: 2996 RVA: 0x00037B58 File Offset: 0x00035D58
+		// Token: 0x06000C10 RID: 3088 RVA: 0x00038728 File Offset: 0x00036928
 		public void AddNode(int id, TVec location)
 		{
 			if (this.NodeMap.ContainsKey(id))
@@ -63,7 +62,7 @@ namespace CSharpScript.Core.Container
 			};
 		}
 
-		// Token: 0x06000BB5 RID: 2997 RVA: 0x00037BAC File Offset: 0x00035DAC
+		// Token: 0x06000C11 RID: 3089 RVA: 0x0003877C File Offset: 0x0003697C
 		public void AddEdge(int id, int from, int to)
 		{
 			IGraphRuntimeNode<TVec> graphRuntimeNode;
@@ -89,7 +88,7 @@ namespace CSharpScript.Core.Container
 			}
 		}
 
-		// Token: 0x06000BB6 RID: 2998 RVA: 0x00037C41 File Offset: 0x00035E41
+		// Token: 0x06000C12 RID: 3090 RVA: 0x00038811 File Offset: 0x00036A11
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -100,7 +99,7 @@ namespace CSharpScript.Core.Container
 			return this.NodeMap.GetValueOrDefault(id);
 		}
 
-		// Token: 0x06000BB7 RID: 2999 RVA: 0x00037C50 File Offset: 0x00035E50
+		// Token: 0x06000C13 RID: 3091 RVA: 0x00038820 File Offset: 0x00036A20
 		[NullableContext(2)]
 		public TVec GetNodeLocation(int id)
 		{
@@ -112,7 +111,7 @@ namespace CSharpScript.Core.Container
 			return graphRuntimeNode.Location;
 		}
 
-		// Token: 0x06000BB8 RID: 3000 RVA: 0x00037C80 File Offset: 0x00035E80
+		// Token: 0x06000C14 RID: 3092 RVA: 0x00038850 File Offset: 0x00036A50
 		public List<int> GetNeighborNodeIds(int id)
 		{
 			IGraphRuntimeNode<TVec> graphRuntimeNode;
@@ -123,7 +122,7 @@ namespace CSharpScript.Core.Container
 			return new List<int>(this.Directed ? graphRuntimeNode.OutNeighbors : graphRuntimeNode.Neighbors);
 		}
 
-		// Token: 0x06000BB9 RID: 3001 RVA: 0x00037CC0 File Offset: 0x00035EC0
+		// Token: 0x06000C15 RID: 3093 RVA: 0x00038890 File Offset: 0x00036A90
 		public bool HasEdge(int from, int to)
 		{
 			IGraphRuntimeNode<TVec> graphRuntimeNode;
@@ -138,7 +137,7 @@ namespace CSharpScript.Core.Container
 			return graphRuntimeNode.OutNeighbors.Contains(to);
 		}
 
-		// Token: 0x06000BBA RID: 3002 RVA: 0x00037D00 File Offset: 0x00035F00
+		// Token: 0x06000C16 RID: 3094 RVA: 0x000388D0 File Offset: 0x00036AD0
 		public int? GetNodeIdAtLocation(TVec location, double radius)
 		{
 			double num = radius * radius;
@@ -156,7 +155,7 @@ namespace CSharpScript.Core.Container
 			return result;
 		}
 
-		// Token: 0x06000BBB RID: 3003 RVA: 0x00037D88 File Offset: 0x00035F88
+		// Token: 0x06000C17 RID: 3095 RVA: 0x00038958 File Offset: 0x00036B58
 		public int? GetNearestNodeId(TVec location)
 		{
 			int? result = null;
@@ -173,7 +172,7 @@ namespace CSharpScript.Core.Container
 			return result;
 		}
 
-		// Token: 0x06000BBC RID: 3004 RVA: 0x00037E14 File Offset: 0x00036014
+		// Token: 0x06000C18 RID: 3096 RVA: 0x000389E4 File Offset: 0x00036BE4
 		public double? GetNearestNodeDistSquared(TVec location)
 		{
 			int? nearestNodeId = this.GetNearestNodeId(location);
@@ -184,7 +183,7 @@ namespace CSharpScript.Core.Container
 			return new double?(this.Space.DistSquared(location, this.NodeMap[nearestNodeId.Value].Location));
 		}
 
-		// Token: 0x06000BBD RID: 3005 RVA: 0x00037E64 File Offset: 0x00036064
+		// Token: 0x06000C19 RID: 3097 RVA: 0x00038A34 File Offset: 0x00036C34
 		[NullableContext(0)]
 		public ValueTuple<int, int>? GetCurrentEdge([Nullable(1)] TVec location)
 		{
@@ -209,7 +208,7 @@ namespace CSharpScript.Core.Container
 			return result;
 		}
 
-		// Token: 0x06000BBE RID: 3006 RVA: 0x00037F60 File Offset: 0x00036160
+		// Token: 0x06000C1A RID: 3098 RVA: 0x00038B30 File Offset: 0x00036D30
 		public HashSet<int> CollectConnectedNodeIds(int startId)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -242,18 +241,25 @@ namespace CSharpScript.Core.Container
 			return hashSet;
 		}
 
-		// Token: 0x06000BBF RID: 3007 RVA: 0x00038034 File Offset: 0x00036234
+		// Token: 0x06000C1B RID: 3099 RVA: 0x00038C04 File Offset: 0x00036E04
 		public bool IsFullyConnected()
 		{
 			if (this.NodeMap.Count == 0)
 			{
 				return true;
 			}
-			int startId = this.NodeMap.Keys.First<int>();
+			int startId = 0;
+			using (Dictionary<int, IGraphRuntimeNode<TVec>>.KeyCollection.Enumerator enumerator = this.NodeMap.Keys.GetEnumerator())
+			{
+				if (enumerator.MoveNext())
+				{
+					startId = enumerator.Current;
+				}
+			}
 			return this.CollectConnectedNodeIds(startId).Count == this.NodeMap.Count;
 		}
 
-		// Token: 0x06000BC0 RID: 3008 RVA: 0x0003807A File Offset: 0x0003627A
+		// Token: 0x06000C1C RID: 3100 RVA: 0x00038C84 File Offset: 0x00036E84
 		public IEnumerable<IGraphRuntimeNode<TVec>> GetAllNodes()
 		{
 			Graph<TVec>.<GetAllNodes>d__23 <GetAllNodes>d__ = new Graph<TVec>.<GetAllNodes>d__23(-2);
@@ -261,22 +267,22 @@ namespace CSharpScript.Core.Container
 			return <GetAllNodes>d__;
 		}
 
-		// Token: 0x06000BC1 RID: 3009 RVA: 0x0003808A File Offset: 0x0003628A
+		// Token: 0x06000C1D RID: 3101 RVA: 0x00038C94 File Offset: 0x00036E94
 		public IReadOnlyList<IGraphRuntimeEdge> GetAllEdges()
 		{
 			return this.EdgeList;
 		}
 
-		// Token: 0x040006F0 RID: 1776
+		// Token: 0x040006FE RID: 1790
 		private readonly Dictionary<int, IGraphRuntimeNode<TVec>> NodeMap = new Dictionary<int, IGraphRuntimeNode<TVec>>();
 
-		// Token: 0x040006F1 RID: 1777
+		// Token: 0x040006FF RID: 1791
 		private readonly List<IGraphRuntimeEdge> EdgeList = new List<IGraphRuntimeEdge>();
 
-		// Token: 0x040006F2 RID: 1778
+		// Token: 0x04000700 RID: 1792
 		private readonly IGraphSpace<TVec> Space;
 
-		// Token: 0x040006F3 RID: 1779
+		// Token: 0x04000701 RID: 1793
 		private readonly bool Directed;
 	}
 }

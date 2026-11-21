@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D44 RID: 3396
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E3E RID: 3646
 	public class ISpeedEffectConfig
 	{
-		// Token: 0x06004D74 RID: 19828 RVA: 0x000C0A5D File Offset: 0x000BEC5D
+		// Token: 0x06005290 RID: 21136 RVA: 0x000CC1A1 File Offset: 0x000CA3A1
 		public static ISpeedEffectConfig Create(ISpeedEffectConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018A9 RID: 6313
-		// (get) Token: 0x06004D75 RID: 19829 RVA: 0x000C0A7C File Offset: 0x000BEC7C
+		// Token: 0x17001A0F RID: 6671
+		// (get) Token: 0x06005291 RID: 21137 RVA: 0x000CC1C0 File Offset: 0x000CA3C0
 		public virtual float MinVehicleSpeed
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018AA RID: 6314
-		// (get) Token: 0x06004D76 RID: 19830 RVA: 0x000C0A89 File Offset: 0x000BEC89
+		// Token: 0x17001A10 RID: 6672
+		// (get) Token: 0x06005292 RID: 21138 RVA: 0x000CC1CD File Offset: 0x000CA3CD
 		public virtual float MaxVehicleSpeed
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018AB RID: 6315
-		// (get) Token: 0x06004D77 RID: 19831 RVA: 0x000C0A98 File Offset: 0x000BEC98
+		// Token: 0x17001A11 RID: 6673
+		// (get) Token: 0x06005293 RID: 21139 RVA: 0x000CC1DC File Offset: 0x000CA3DC
 		public virtual List<long> GameplayCueIds
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C65 RID: 11365
+		// Token: 0x04002F25 RID: 12069
 		private ISpeedEffectConfig Instance;
 
-		// Token: 0x04002C66 RID: 11366
+		// Token: 0x04002F26 RID: 12070
 		private List<long> _GameplayCueIdsCache;
 
-		// Token: 0x04002C67 RID: 11367
+		// Token: 0x04002F27 RID: 12071
 		private bool _GameplayCueIdsInited;
 	}
 }

@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015F4 RID: 5620
+// Token: 0x02000AAC RID: 2732
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 internal class StrItem : GridProxyAbstract<WheelTowerStrItemData>
 {
-	// Token: 0x06009E9E RID: 40606 RVA: 0x0022A4A4 File Offset: 0x002286A4
+	// Token: 0x0600727C RID: 29308 RVA: 0x0023427C File Offset: 0x0023247C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -29,7 +29,7 @@ internal class StrItem : GridProxyAbstract<WheelTowerStrItemData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009E9F RID: 40607 RVA: 0x0022A510 File Offset: 0x00228710
+	// Token: 0x0600727D RID: 29309 RVA: 0x002342E8 File Offset: 0x002324E8
 	public override void Refresh(WheelTowerStrItemData data, bool isSelected, int gridIndex)
 	{
 		string item = ConfigMultiTextLang.GetLocalTextNew(data.RoleName, null) ?? string.Empty;

@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Letter.View
 {
-	// Token: 0x020056CC RID: 22220
+	// Token: 0x020046A3 RID: 18083
 	public class LetterBlackScreenSuppressor
 	{
-		// Token: 0x06038842 RID: 231490 RVA: 0x00D6C8D0 File Offset: 0x00D6AAD0
+		// Token: 0x0602D752 RID: 186194 RVA: 0x00CBAE88 File Offset: 0x00CB9088
 		public void Suppress()
 		{
 			if (this.IsSuppressed)
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			LevelLoadingController.Instance.CloseLoading(ELoadingReason.Common, null, null, null);
 		}
 
-		// Token: 0x06038843 RID: 231491 RVA: 0x00D6C940 File Offset: 0x00D6AB40
+		// Token: 0x0602D753 RID: 186195 RVA: 0x00CBAEF8 File Offset: 0x00CB90F8
 		public UniTask Restore()
 		{
 			LetterBlackScreenSuppressor.<Restore>d__4 <Restore>d__;
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.Letter.View
 			return <Restore>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401DAFD RID: 121597
+		// Token: 0x04018593 RID: 99731
 		private const float FadeInDurationSec = 0.001f;
 
-		// Token: 0x0401DAFE RID: 121598
+		// Token: 0x04018594 RID: 99732
 		private bool IsSuppressed;
 
-		// Token: 0x0401DAFF RID: 121599
+		// Token: 0x04018595 RID: 99733
 		private EFadeInScreenShowType SavedScreenType = EFadeInScreenShowType.Black;
 	}
 }

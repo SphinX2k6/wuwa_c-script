@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x02005113 RID: 20755
+	// Token: 0x020040E3 RID: 16611
 	public enum ECollectRewardType
 	{
-		// Token: 0x0401C44E RID: 115790
+		// Token: 0x04016E83 RID: 93827
 		Badge,
-		// Token: 0x0401C44F RID: 115791
+		// Token: 0x04016E84 RID: 93828
 		Card
 	}
 }

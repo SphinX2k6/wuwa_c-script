@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026D2 RID: 9938
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002996 RID: 10646
 	public class AddBuffToTriggeredEntity : ActionParams
 	{
-		// Token: 0x0600DE29 RID: 56873 RVA: 0x0020F88F File Offset: 0x0020DA8F
+		// Token: 0x0600EC05 RID: 60421 RVA: 0x0022C0CF File Offset: 0x0022A2CF
 		public static AddBuffToTriggeredEntity Create(IAddBuffToTriggeredEntity? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004247 RID: 16967
-		// (get) Token: 0x0600DE2A RID: 56874 RVA: 0x0020F8B0 File Offset: 0x0020DAB0
+		// Token: 0x17004587 RID: 17799
+		// (get) Token: 0x0600EC06 RID: 60422 RVA: 0x0022C0F0 File Offset: 0x0022A2F0
 		public virtual List<long> BuffIds
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B56 RID: 31574
+		// Token: 0x040081F6 RID: 33270
 		private IAddBuffToTriggeredEntity Instance;
 
-		// Token: 0x04007B57 RID: 31575
+		// Token: 0x040081F7 RID: 33271
 		private List<long> _BuffIdsCache;
 
-		// Token: 0x04007B58 RID: 31576
+		// Token: 0x040081F8 RID: 33272
 		private bool _BuffIdsInited;
 	}
 }

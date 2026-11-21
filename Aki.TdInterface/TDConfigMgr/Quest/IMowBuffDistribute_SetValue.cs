@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001024 RID: 4132
+	// Token: 0x02001150 RID: 4432
 	public class IMowBuffDistribute_SetValue
 	{
-		// Token: 0x04003777 RID: 14199
+		// Token: 0x04003AB2 RID: 15026
 		public EShowUiType Type;
 
-		// Token: 0x04003778 RID: 14200
+		// Token: 0x04003AB3 RID: 15027
 		public int BoardId;
 	}
 }

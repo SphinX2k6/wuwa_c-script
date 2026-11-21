@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A1B RID: 18971
+	// Token: 0x020039C3 RID: 14787
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseTalentTreeData
 	{
-		// Token: 0x060313F7 RID: 201719 RVA: 0x00B6BD7C File Offset: 0x00B69F7C
+		// Token: 0x06026187 RID: 156039 RVA: 0x00AAFD78 File Offset: 0x00AADF78
 		public static TrapDefenseTalentTreeData Create(int activityId)
 		{
 			TrapDefenseTalentTreeData trapDefenseTalentTreeData = new TrapDefenseTalentTreeData();
@@ -19,19 +19,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseTalentTreeData;
 		}
 
-		// Token: 0x060313F8 RID: 201720 RVA: 0x00B6BD90 File Offset: 0x00B69F90
+		// Token: 0x06026188 RID: 156040 RVA: 0x00AAFD8C File Offset: 0x00AADF8C
 		public void SetRemainPoints(int points)
 		{
 			this.RemainPoints = points;
 		}
 
-		// Token: 0x060313F9 RID: 201721 RVA: 0x00B6BD99 File Offset: 0x00B69F99
+		// Token: 0x06026189 RID: 156041 RVA: 0x00AAFD95 File Offset: 0x00AADF95
 		public void SetMaxPoints(int points)
 		{
 			this.MaxPoints = points;
 		}
 
-		// Token: 0x060313FA RID: 201722 RVA: 0x00B6BDA4 File Offset: 0x00B69FA4
+		// Token: 0x0602618A RID: 156042 RVA: 0x00AAFDA0 File Offset: 0x00AADFA0
 		private void Init()
 		{
 			this.RowDataList = new List<TrapDefenseTalentTreeRowData>();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.RowDataList.Sort((TrapDefenseTalentTreeRowData a, TrapDefenseTalentTreeRowData b) => a.Row.CompareTo(b.Row));
 		}
 
-		// Token: 0x060313FB RID: 201723 RVA: 0x00B6BF2C File Offset: 0x00B6A12C
+		// Token: 0x0602618B RID: 156043 RVA: 0x00AAFF28 File Offset: 0x00AAE128
 		public List<TrapDefenseTalentTreeNodeData> GetNodeDataListByRow(int row)
 		{
 			if (this.NodeRowMap.ContainsKey(row))
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new List<TrapDefenseTalentTreeNodeData>();
 		}
 
-		// Token: 0x060313FC RID: 201724 RVA: 0x00B6BF50 File Offset: 0x00B6A150
+		// Token: 0x0602618C RID: 156044 RVA: 0x00AAFF4C File Offset: 0x00AAE14C
 		public bool CanNodeUnlock(TrapDefenseTalentTreeNodeData node)
 		{
 			if (node.IsUnlock)
@@ -97,14 +97,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return true;
 		}
 
-		// Token: 0x060313FD RID: 201725 RVA: 0x00B6BFC0 File Offset: 0x00B6A1C0
+		// Token: 0x0602618D RID: 156045 RVA: 0x00AAFFBC File Offset: 0x00AAE1BC
 		public bool CanNodeAfford(TrapDefenseTalentTreeNodeData node)
 		{
 			List<ICostData> costData = node.GetCostData();
 			return costData.Count == 0 || costData[0].Count >= costData[0].Cost;
 		}
 
-		// Token: 0x060313FE RID: 201726 RVA: 0x00B6BFFC File Offset: 0x00B6A1FC
+		// Token: 0x0602618E RID: 156046 RVA: 0x00AAFFF8 File Offset: 0x00AAE1F8
 		public bool HasAnyNodeCanUnlockAndAfford()
 		{
 			foreach (List<TrapDefenseTalentTreeNodeData> list in this.NodeRowMap.Values)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return false;
 		}
 
-		// Token: 0x060313FF RID: 201727 RVA: 0x00B6C09C File Offset: 0x00B6A29C
+		// Token: 0x0602618F RID: 156047 RVA: 0x00AB0098 File Offset: 0x00AAE298
 		public List<TrapDefenseTalentTreeNodeData> GetPreNodesByNodeData(TrapDefenseTalentTreeNodeData node)
 		{
 			List<TrapDefenseTalentTreeNodeData> list = new List<TrapDefenseTalentTreeNodeData>();
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x06031400 RID: 201728 RVA: 0x00B6C110 File Offset: 0x00B6A310
+		// Token: 0x06026190 RID: 156048 RVA: 0x00AB010C File Offset: 0x00AAE30C
 		public TrapDefenseTalentTreeNodeData GetDefaultSelectNode()
 		{
 			TrapDefenseTalentTreeNodeData trapDefenseTalentTreeNodeData = null;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return result;
 		}
 
-		// Token: 0x06031401 RID: 201729 RVA: 0x00B6C1DC File Offset: 0x00B6A3DC
+		// Token: 0x06026191 RID: 156049 RVA: 0x00AB01D8 File Offset: 0x00AAE3D8
 		[NullableContext(2)]
 		public TrapDefenseTalentTreeNodeData GetDefaultSelectNodeByFuncType(ETrapDefenseTalentFuncType funcType)
 		{
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return result;
 		}
 
-		// Token: 0x06031402 RID: 201730 RVA: 0x00B6C2A8 File Offset: 0x00B6A4A8
+		// Token: 0x06026192 RID: 156050 RVA: 0x00AB02A4 File Offset: 0x00AAE4A4
 		public bool IsDotVisible(int row, int index)
 		{
 			using (List<TrapDefenseTalentTreeNodeData>.Enumerator enumerator = this.GetNodeDataListByRow(row).GetEnumerator())
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return false;
 		}
 
-		// Token: 0x06031403 RID: 201731 RVA: 0x00B6C34C File Offset: 0x00B6A54C
+		// Token: 0x06026193 RID: 156051 RVA: 0x00AB0348 File Offset: 0x00AAE548
 		private List<Tuple<int, int>> GetPath(TrapDefenseTalentTreeNodeData from, TrapDefenseTalentTreeNodeData to)
 		{
 			List<Tuple<int, int>> list = new List<Tuple<int, int>>();
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x06031404 RID: 201732 RVA: 0x00B6C400 File Offset: 0x00B6A600
+		// Token: 0x06026194 RID: 156052 RVA: 0x00AB03FC File Offset: 0x00AAE5FC
 		private ETrapDefenseTalentTreePathType GetPathType(TrapDefenseTalentTreeNodeData from, TrapDefenseTalentTreeNodeData to)
 		{
 			if (from.IsUnlock && to.IsUnlock)
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return ETrapDefenseTalentTreePathType.Dashed;
 		}
 
-		// Token: 0x06031405 RID: 201733 RVA: 0x00B6C418 File Offset: 0x00B6A618
+		// Token: 0x06026195 RID: 156053 RVA: 0x00AB0414 File Offset: 0x00AAE614
 		public void RefreshLineTypeMap()
 		{
 			foreach (Dictionary<int, ETrapDefenseTalentTreePathType> dictionary in this.LineTypeMap)
@@ -284,28 +284,28 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A54F RID: 107855
+		// Token: 0x04014EA6 RID: 85670
 		private int ActivityId;
 
-		// Token: 0x0401A550 RID: 107856
+		// Token: 0x04014EA7 RID: 85671
 		public int MaxRow;
 
-		// Token: 0x0401A551 RID: 107857
+		// Token: 0x04014EA8 RID: 85672
 		public int RemainPoints;
 
-		// Token: 0x0401A552 RID: 107858
+		// Token: 0x04014EA9 RID: 85673
 		public int MaxPoints;
 
-		// Token: 0x0401A553 RID: 107859
+		// Token: 0x04014EAA RID: 85674
 		public Dictionary<int, List<TrapDefenseTalentTreeNodeData>> NodeRowMap = new Dictionary<int, List<TrapDefenseTalentTreeNodeData>>();
 
-		// Token: 0x0401A554 RID: 107860
+		// Token: 0x04014EAB RID: 85675
 		public Dictionary<int, TrapDefenseTalentTreeNodeData> NodeIdMap = new Dictionary<int, TrapDefenseTalentTreeNodeData>();
 
-		// Token: 0x0401A555 RID: 107861
+		// Token: 0x04014EAC RID: 85676
 		public List<TrapDefenseTalentTreeRowData> RowDataList = new List<TrapDefenseTalentTreeRowData>();
 
-		// Token: 0x0401A556 RID: 107862
+		// Token: 0x04014EAD RID: 85677
 		public List<Dictionary<int, ETrapDefenseTalentTreePathType>> LineTypeMap = new List<Dictionary<int, ETrapDefenseTalentTreePathType>>();
 	}
 }

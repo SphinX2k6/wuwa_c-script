@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001857 RID: 6231
+	// Token: 0x02000391 RID: 913
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroGameBudget.EActorCavernMode")]
 	public enum EActorCavernMode : byte
 	{
-		// Token: 0x0400C76F RID: 51055
+		// Token: 0x040025DE RID: 9694
 		ActorCavernMode_None,
-		// Token: 0x0400C770 RID: 51056
+		// Token: 0x040025DF RID: 9695
 		ActorCavernMode_Outside,
-		// Token: 0x0400C771 RID: 51057
+		// Token: 0x040025E0 RID: 9696
 		ActorCavernMode_Inside,
-		// Token: 0x0400C772 RID: 51058
+		// Token: 0x040025E1 RID: 9697
 		ActorCavernMode_IntermediateZone,
-		// Token: 0x0400C773 RID: 51059
+		// Token: 0x040025E2 RID: 9698
 		ActorCavernMode_MAX
 	}
 }

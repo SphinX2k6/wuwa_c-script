@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007286 RID: 29318
+	// Token: 0x02007A5B RID: 31323
 	public struct ISystemOptionType : IFlatbufferObject
 	{
-		// Token: 0x1700D980 RID: 55680
-		// (get) Token: 0x06034045 RID: 213061 RVA: 0x006FE887 File Offset: 0x006FCA87
+		// Token: 0x1700E579 RID: 58745
+		// (get) Token: 0x06037347 RID: 226119 RVA: 0x0075FBE7 File Offset: 0x0075DDE7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06034046 RID: 213062 RVA: 0x006FE894 File Offset: 0x006FCA94
+		// Token: 0x06037348 RID: 226120 RVA: 0x0075FBF4 File Offset: 0x0075DDF4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06034047 RID: 213063 RVA: 0x006FE89C File Offset: 0x006FCA9C
+		// Token: 0x06037349 RID: 226121 RVA: 0x0075FBFC File Offset: 0x0075DDFC
 		public static ISystemOptionType GetRootAsISystemOptionType(ByteBuffer _bb)
 		{
 			return ISystemOptionType.GetRootAsISystemOptionType(_bb, default(ISystemOptionType));
 		}
 
-		// Token: 0x06034048 RID: 213064 RVA: 0x006FE8B8 File Offset: 0x006FCAB8
+		// Token: 0x0603734A RID: 226122 RVA: 0x0075FC18 File Offset: 0x0075DE18
 		public static ISystemOptionType GetRootAsISystemOptionType(ByteBuffer _bb, ISystemOptionType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06034049 RID: 213065 RVA: 0x006FE8D5 File Offset: 0x006FCAD5
+		// Token: 0x0603734B RID: 226123 RVA: 0x0075FC35 File Offset: 0x0075DE35
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603404A RID: 213066 RVA: 0x006FE8E4 File Offset: 0x006FCAE4
+		// Token: 0x0603734C RID: 226124 RVA: 0x0075FC44 File Offset: 0x0075DE44
 		public ISystemOptionType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D981 RID: 55681
-		// (get) Token: 0x0603404B RID: 213067 RVA: 0x006FE8F4 File Offset: 0x006FCAF4
+		// Token: 0x1700E57A RID: 58746
+		// (get) Token: 0x0603734D RID: 226125 RVA: 0x0075FC54 File Offset: 0x0075DE54
 		public ESystemOptionType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603404C RID: 213068 RVA: 0x006FE930 File Offset: 0x006FCB30
+		// Token: 0x0603734E RID: 226126 RVA: 0x0075FC90 File Offset: 0x0075DE90
 		public ISystemOption? SystemOptions(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new ISystemOption?(default(ISystemOption).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700D982 RID: 55682
-		// (get) Token: 0x0603404D RID: 213069 RVA: 0x006FE990 File Offset: 0x006FCB90
+		// Token: 0x1700E57B RID: 58747
+		// (get) Token: 0x0603734F RID: 226127 RVA: 0x0075FCF0 File Offset: 0x0075DEF0
 		public int SystemOptionsLength
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D983 RID: 55683
-		// (get) Token: 0x0603404E RID: 213070 RVA: 0x006FE9BC File Offset: 0x006FCBBC
+		// Token: 0x1700E57C RID: 58748
+		// (get) Token: 0x06037350 RID: 226128 RVA: 0x0075FD1C File Offset: 0x0075DF1C
 		public bool KeepPreTalkItem
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D984 RID: 55684
-		// (get) Token: 0x0603404F RID: 213071 RVA: 0x006FE9FC File Offset: 0x006FCBFC
+		// Token: 0x1700E57D RID: 58749
+		// (get) Token: 0x06037351 RID: 226129 RVA: 0x0075FD5C File Offset: 0x0075DF5C
 		public byte NullMask
 		{
 			get
@@ -115,7 +115,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06034050 RID: 213072 RVA: 0x006FEA39 File Offset: 0x006FCC39
+		// Token: 0x06037352 RID: 226130 RVA: 0x0075FD99 File Offset: 0x0075DF99
 		public static Offset<ISystemOptionType> CreateISystemOptionType(FlatBufferBuilder builder, ESystemOptionType Type = ESystemOptionType.RogueRandomEvent, VectorOffset SystemOptionsOffset = default(VectorOffset), bool KeepPreTalkItem = false, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -126,25 +126,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISystemOptionType.EndISystemOptionType(builder);
 		}
 
-		// Token: 0x06034051 RID: 213073 RVA: 0x006FEA65 File Offset: 0x006FCC65
+		// Token: 0x06037353 RID: 226131 RVA: 0x0075FDC5 File Offset: 0x0075DFC5
 		public static void StartISystemOptionType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06034052 RID: 213074 RVA: 0x006FEA6E File Offset: 0x006FCC6E
+		// Token: 0x06037354 RID: 226132 RVA: 0x0075FDCE File Offset: 0x0075DFCE
 		public static void AddType(FlatBufferBuilder builder, ESystemOptionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06034053 RID: 213075 RVA: 0x006FEA79 File Offset: 0x006FCC79
+		// Token: 0x06037355 RID: 226133 RVA: 0x0075FDD9 File Offset: 0x0075DFD9
 		public static void AddSystemOptions(FlatBufferBuilder builder, VectorOffset systemOptionsOffset)
 		{
 			builder.AddOffset(1, systemOptionsOffset.Value, 0);
 		}
 
-		// Token: 0x06034054 RID: 213076 RVA: 0x006FEA8C File Offset: 0x006FCC8C
+		// Token: 0x06037356 RID: 226134 RVA: 0x0075FDEC File Offset: 0x0075DFEC
 		public static VectorOffset CreateSystemOptionsVector(FlatBufferBuilder builder, Offset<ISystemOption>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06034055 RID: 213077 RVA: 0x006FEACC File Offset: 0x006FCCCC
+		// Token: 0x06037357 RID: 226135 RVA: 0x0075FE2C File Offset: 0x0075E02C
 		public static VectorOffset CreateSystemOptionsVectorBlock(FlatBufferBuilder builder, Offset<ISystemOption>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06034056 RID: 213078 RVA: 0x006FEAE6 File Offset: 0x006FCCE6
+		// Token: 0x06037358 RID: 226136 RVA: 0x0075FE46 File Offset: 0x0075E046
 		public static VectorOffset CreateSystemOptionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ISystemOption>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06034057 RID: 213079 RVA: 0x006FEB04 File Offset: 0x006FCD04
+		// Token: 0x06037359 RID: 226137 RVA: 0x0075FE64 File Offset: 0x0075E064
 		public static VectorOffset CreateSystemOptionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -179,31 +179,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06034058 RID: 213080 RVA: 0x006FEB1D File Offset: 0x006FCD1D
+		// Token: 0x0603735A RID: 226138 RVA: 0x0075FE7D File Offset: 0x0075E07D
 		public static void StartSystemOptionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06034059 RID: 213081 RVA: 0x006FEB28 File Offset: 0x006FCD28
+		// Token: 0x0603735B RID: 226139 RVA: 0x0075FE88 File Offset: 0x0075E088
 		public static void AddKeepPreTalkItem(FlatBufferBuilder builder, bool keepPreTalkItem)
 		{
 			builder.AddBool(2, keepPreTalkItem, false);
 		}
 
-		// Token: 0x0603405A RID: 213082 RVA: 0x006FEB33 File Offset: 0x006FCD33
+		// Token: 0x0603735C RID: 226140 RVA: 0x0075FE93 File Offset: 0x0075E093
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0603405B RID: 213083 RVA: 0x006FEB3E File Offset: 0x006FCD3E
+		// Token: 0x0603735D RID: 226141 RVA: 0x0075FE9E File Offset: 0x0075E09E
 		public static Offset<ISystemOptionType> EndISystemOptionType(FlatBufferBuilder builder)
 		{
 			return new Offset<ISystemOptionType>(builder.EndTable());
 		}
 
-		// Token: 0x0603405C RID: 213084 RVA: 0x006FEB4C File Offset: 0x006FCD4C
+		// Token: 0x0603735E RID: 226142 RVA: 0x0075FEAC File Offset: 0x0075E0AC
 		public ISystemOptionTypeT UnPack()
 		{
 			ISystemOptionTypeT systemOptionTypeT = new ISystemOptionTypeT();
@@ -211,7 +211,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return systemOptionTypeT;
 		}
 
-		// Token: 0x0603405D RID: 213085 RVA: 0x006FEB68 File Offset: 0x006FCD68
+		// Token: 0x0603735F RID: 226143 RVA: 0x0075FEC8 File Offset: 0x0075E0C8
 		public void UnPackTo(ISystemOptionTypeT _o)
 		{
 			_o.Type = this.Type;
@@ -224,7 +224,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603405E RID: 213086 RVA: 0x006FEBEC File Offset: 0x006FCDEC
+		// Token: 0x06037360 RID: 226144 RVA: 0x0075FF4C File Offset: 0x0075E14C
 		public static Offset<ISystemOptionType> Pack(FlatBufferBuilder builder, ISystemOptionTypeT _o)
 		{
 			if (_o == null)
@@ -244,7 +244,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISystemOptionType.CreateISystemOptionType(builder, _o.Type, systemOptionsOffset, _o.KeepPreTalkItem, _o.NullMask);
 		}
 
-		// Token: 0x04011D8F RID: 73103
+		// Token: 0x04012D91 RID: 77201
 		private Table __p;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005279 RID: 21113
+	// Token: 0x020057E1 RID: 22497
 	public struct IFixSpeed : IFlatbufferObject
 	{
-		// Token: 0x17009AB9 RID: 39609
-		// (get) Token: 0x060225E3 RID: 140771 RVA: 0x004C3AA4 File Offset: 0x004C1CA4
+		// Token: 0x1700A2B7 RID: 41655
+		// (get) Token: 0x0602457D RID: 148861 RVA: 0x004FE614 File Offset: 0x004FC814
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060225E4 RID: 140772 RVA: 0x004C3AB1 File Offset: 0x004C1CB1
+		// Token: 0x0602457E RID: 148862 RVA: 0x004FE621 File Offset: 0x004FC821
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060225E5 RID: 140773 RVA: 0x004C3AB8 File Offset: 0x004C1CB8
+		// Token: 0x0602457F RID: 148863 RVA: 0x004FE628 File Offset: 0x004FC828
 		public static IFixSpeed GetRootAsIFixSpeed(ByteBuffer _bb)
 		{
 			return IFixSpeed.GetRootAsIFixSpeed(_bb, default(IFixSpeed));
 		}
 
-		// Token: 0x060225E6 RID: 140774 RVA: 0x004C3AD4 File Offset: 0x004C1CD4
+		// Token: 0x06024580 RID: 148864 RVA: 0x004FE644 File Offset: 0x004FC844
 		public static IFixSpeed GetRootAsIFixSpeed(ByteBuffer _bb, IFixSpeed obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060225E7 RID: 140775 RVA: 0x004C3AF1 File Offset: 0x004C1CF1
+		// Token: 0x06024581 RID: 148865 RVA: 0x004FE661 File Offset: 0x004FC861
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060225E8 RID: 140776 RVA: 0x004C3B00 File Offset: 0x004C1D00
+		// Token: 0x06024582 RID: 148866 RVA: 0x004FE670 File Offset: 0x004FC870
 		public IFixSpeed __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009ABA RID: 39610
-		// (get) Token: 0x060225E9 RID: 140777 RVA: 0x004C3B10 File Offset: 0x004C1D10
+		// Token: 0x1700A2B8 RID: 41656
+		// (get) Token: 0x06024583 RID: 148867 RVA: 0x004FE680 File Offset: 0x004FC880
 		public EConveyorBeltMoveType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009ABB RID: 39611
-		// (get) Token: 0x060225EA RID: 140778 RVA: 0x004C3B4C File Offset: 0x004C1D4C
+		// Token: 0x1700A2B9 RID: 41657
+		// (get) Token: 0x06024584 RID: 148868 RVA: 0x004FE6BC File Offset: 0x004FC8BC
 		public int Speed
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060225EB RID: 140779 RVA: 0x004C3B88 File Offset: 0x004C1D88
+		// Token: 0x06024585 RID: 148869 RVA: 0x004FE6F8 File Offset: 0x004FC8F8
 		public static Offset<IFixSpeed> CreateIFixSpeed(FlatBufferBuilder builder, EConveyorBeltMoveType Type = EConveyorBeltMoveType.FixSpeed, int Speed = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFixSpeed.EndIFixSpeed(builder);
 		}
 
-		// Token: 0x060225EC RID: 140780 RVA: 0x004C3BA5 File Offset: 0x004C1DA5
+		// Token: 0x06024586 RID: 148870 RVA: 0x004FE715 File Offset: 0x004FC915
 		public static void StartIFixSpeed(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060225ED RID: 140781 RVA: 0x004C3BAE File Offset: 0x004C1DAE
+		// Token: 0x06024587 RID: 148871 RVA: 0x004FE71E File Offset: 0x004FC91E
 		public static void AddType(FlatBufferBuilder builder, EConveyorBeltMoveType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060225EE RID: 140782 RVA: 0x004C3BB9 File Offset: 0x004C1DB9
+		// Token: 0x06024588 RID: 148872 RVA: 0x004FE729 File Offset: 0x004FC929
 		public static void AddSpeed(FlatBufferBuilder builder, int speed)
 		{
 			builder.AddInt(1, speed, 0);
 		}
 
-		// Token: 0x060225EF RID: 140783 RVA: 0x004C3BC4 File Offset: 0x004C1DC4
+		// Token: 0x06024589 RID: 148873 RVA: 0x004FE734 File Offset: 0x004FC934
 		public static Offset<IFixSpeed> EndIFixSpeed(FlatBufferBuilder builder)
 		{
 			return new Offset<IFixSpeed>(builder.EndTable());
 		}
 
-		// Token: 0x060225F0 RID: 140784 RVA: 0x004C3BD4 File Offset: 0x004C1DD4
+		// Token: 0x0602458A RID: 148874 RVA: 0x004FE744 File Offset: 0x004FC944
 		public IFixSpeedT UnPack()
 		{
 			IFixSpeedT fixSpeedT = new IFixSpeedT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return fixSpeedT;
 		}
 
-		// Token: 0x060225F1 RID: 140785 RVA: 0x004C3BEF File Offset: 0x004C1DEF
+		// Token: 0x0602458B RID: 148875 RVA: 0x004FE75F File Offset: 0x004FC95F
 		public void UnPackTo(IFixSpeedT _o)
 		{
 			_o.Type = this.Type;
 			_o.Speed = this.Speed;
 		}
 
-		// Token: 0x060225F2 RID: 140786 RVA: 0x004C3C0C File Offset: 0x004C1E0C
+		// Token: 0x0602458C RID: 148876 RVA: 0x004FE77C File Offset: 0x004FC97C
 		public static Offset<IFixSpeed> Pack(FlatBufferBuilder builder, IFixSpeedT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFixSpeed.CreateIFixSpeed(builder, _o.Type, _o.Speed);
 		}
 
-		// Token: 0x0400E3D8 RID: 58328
+		// Token: 0x0400EFDF RID: 61407
 		private Table __p;
 	}
 }

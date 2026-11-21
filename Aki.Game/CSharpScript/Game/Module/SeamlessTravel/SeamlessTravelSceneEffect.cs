@@ -5,13 +5,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SeamlessTravel
 {
-	// Token: 0x02004C8E RID: 19598
+	// Token: 0x02003C3F RID: 15423
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SeamlessTravelSceneEffect
 	{
-		// Token: 0x17007CFF RID: 31999
-		// (get) Token: 0x06032A76 RID: 207478 RVA: 0x00BD0397 File Offset: 0x00BCE597
+		// Token: 0x170050A9 RID: 20649
+		// (get) Token: 0x06027829 RID: 161833 RVA: 0x00B14FFB File Offset: 0x00B131FB
 		public bool IsInit
 		{
 			get
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A77 RID: 207479 RVA: 0x00BD03A0 File Offset: 0x00BCE5A0
+		// Token: 0x0602782A RID: 161834 RVA: 0x00B15004 File Offset: 0x00B13204
 		public void Init(SeamlessTravelContext config, Action<bool> callback)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			});
 		}
 
-		// Token: 0x06032A78 RID: 207480 RVA: 0x00BD0454 File Offset: 0x00BCE654
+		// Token: 0x0602782B RID: 161835 RVA: 0x00B150B8 File Offset: 0x00B132B8
 		private unsafe void LoadEffectAsset(Action<bool> callback)
 		{
 			if (string.IsNullOrEmpty(this.EffectDaPath))
@@ -82,12 +82,12 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}, 100, "SeamlessTravel.SceneEffect");
 		}
 
-		// Token: 0x06032A79 RID: 207481 RVA: 0x00BD04B3 File Offset: 0x00BCE6B3
+		// Token: 0x0602782C RID: 161836 RVA: 0x00B15117 File Offset: 0x00B13317
 		public void Tick(float delta)
 		{
 		}
 
-		// Token: 0x06032A7A RID: 207482 RVA: 0x00BD04B8 File Offset: 0x00BCE6B8
+		// Token: 0x0602782D RID: 161837 RVA: 0x00B1511C File Offset: 0x00B1331C
 		public void Destroy()
 		{
 			if (this.EffectHandle != null && EffectSystem.Instance.IsValid(this.EffectHandle.Value))
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.KuroCaptureSceneColor.Release", null);
 		}
 
-		// Token: 0x06032A7B RID: 207483 RVA: 0x00BD0538 File Offset: 0x00BCE738
+		// Token: 0x0602782E RID: 161838 RVA: 0x00B1519C File Offset: 0x00B1339C
 		public void AppearEffect(Action<bool> callback)
 		{
 			if (this.IsInit)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			callback(false);
 		}
 
-		// Token: 0x06032A7C RID: 207484 RVA: 0x00BD0630 File Offset: 0x00BCE830
+		// Token: 0x0602782F RID: 161839 RVA: 0x00B15294 File Offset: 0x00B13494
 		public void DisappearEffect(Action<bool> callback)
 		{
 			if (!this.IsInit)
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}, this.EffectEndTimeMs, null, null, true, 1f);
 		}
 
-		// Token: 0x06032A7D RID: 207485 RVA: 0x00BD071A File Offset: 0x00BCE91A
+		// Token: 0x06027830 RID: 161840 RVA: 0x00B1537E File Offset: 0x00B1357E
 		public TArray<AActor> GetSeamlessTravelActors(TArray<AActor> arr)
 		{
 			if (this.EffectActor != null)
@@ -204,36 +204,36 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return arr;
 		}
 
-		// Token: 0x0401AF57 RID: 110423
+		// Token: 0x040158B4 RID: 88244
 		[Nullable(2)]
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x0401AF58 RID: 110424
+		// Token: 0x040158B5 RID: 88245
 		[Nullable(2)]
 		private SeamlessTravelContext Context;
 
-		// Token: 0x0401AF59 RID: 110425
+		// Token: 0x040158B6 RID: 88246
 		[Nullable(2)]
 		private string EffectDaPath;
 
-		// Token: 0x0401AF5A RID: 110426
+		// Token: 0x040158B7 RID: 88247
 		[Nullable(2)]
 		private UEffectModelBase EffectDaAsset;
 
-		// Token: 0x0401AF5B RID: 110427
+		// Token: 0x040158B8 RID: 88248
 		private int? EffectHandle;
 
-		// Token: 0x0401AF5C RID: 110428
+		// Token: 0x040158B9 RID: 88249
 		[Nullable(2)]
 		private AActor EffectActor;
 
-		// Token: 0x0401AF5D RID: 110429
+		// Token: 0x040158BA RID: 88250
 		private bool IsInitInternal;
 
-		// Token: 0x0401AF5E RID: 110430
+		// Token: 0x040158BB RID: 88251
 		private float EffectStartTimeMs;
 
-		// Token: 0x0401AF5F RID: 110431
+		// Token: 0x040158BC RID: 88252
 		private float EffectEndTimeMs;
 	}
 }

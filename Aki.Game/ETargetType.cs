@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002F69 RID: 12137
+// Token: 0x020024BD RID: 9405
 public enum ETargetType
 {
-	// Token: 0x0400C2BB RID: 49851
+	// Token: 0x0400C664 RID: 50788
 	Owner,
-	// Token: 0x0400C2BC RID: 49852
+	// Token: 0x0400C665 RID: 50789
 	Instigator
 }

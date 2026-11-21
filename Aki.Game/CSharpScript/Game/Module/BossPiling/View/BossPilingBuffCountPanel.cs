@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View
 {
-	// Token: 0x02005C13 RID: 23571
+	// Token: 0x02004BF3 RID: 19443
 	public class BossPilingBuffCountPanel : UiPanelBase
 	{
-		// Token: 0x0603B904 RID: 243972 RVA: 0x00E342A0 File Offset: 0x00E324A0
+		// Token: 0x0603084F RID: 198735 RVA: 0x00D845E8 File Offset: 0x00D827E8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -29,13 +29,13 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B905 RID: 243973 RVA: 0x00E3434B File Offset: 0x00E3254B
+		// Token: 0x06030850 RID: 198736 RVA: 0x00D84693 File Offset: 0x00D82893
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x0603B906 RID: 243974 RVA: 0x00E34360 File Offset: 0x00E32560
+		// Token: 0x06030851 RID: 198737 RVA: 0x00D846A8 File Offset: 0x00D828A8
 		public void Refresh(int oldValue, int newValue, long buffId)
 		{
 			Buff value = ConfigBuffById.GetConfig(buffId, true).Value;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			}
 		}
 
-		// Token: 0x0603B907 RID: 243975 RVA: 0x00E3444B File Offset: 0x00E3264B
+		// Token: 0x06030852 RID: 198738 RVA: 0x00D84793 File Offset: 0x00D82993
 		public void PlaySequence(float rate)
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -95,20 +95,20 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			levelSequencePlayer.PlayLevelSequenceByName("Start", false, new float?(rate), false);
 		}
 
-		// Token: 0x0401F03E RID: 127038
+		// Token: 0x04019AEF RID: 105199
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200BDF7 RID: 48631
+		// Token: 0x0200A7FF RID: 43007
 		private enum ECount
 		{
-			// Token: 0x04039476 RID: 234614
+			// Token: 0x04033E39 RID: 212537
 			Title,
-			// Token: 0x04039477 RID: 234615
+			// Token: 0x04033E3A RID: 212538
 			TxtOld,
-			// Token: 0x04039478 RID: 234616
+			// Token: 0x04033E3B RID: 212539
 			PanelArrow,
-			// Token: 0x04039479 RID: 234617
+			// Token: 0x04033E3C RID: 212540
 			TxtNew
 		}
 	}

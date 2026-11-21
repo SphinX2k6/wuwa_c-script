@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ADA RID: 6874
+	// Token: 0x02001C81 RID: 7297
 	public class IGravityControlOption_SetValue
 	{
-		// Token: 0x04005A8F RID: 23183
+		// Token: 0x04005F19 RID: 24345
 		public ESystemOptionType Type;
 
-		// Token: 0x04005A90 RID: 23184
-		[Nullable(1)]
+		// Token: 0x04005F1A RID: 24346
 		public List<ISystemOption> SystemOptions;
 
-		// Token: 0x04005A91 RID: 23185
+		// Token: 0x04005F1B RID: 24347
 		public bool? KeepPreTalkItem;
 	}
 }

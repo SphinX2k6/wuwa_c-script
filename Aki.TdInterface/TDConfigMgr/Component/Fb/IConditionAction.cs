@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AD0 RID: 2768
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B9A RID: 2970
 	public class IConditionAction
 	{
-		// Token: 0x06003FC6 RID: 16326 RVA: 0x000A3087 File Offset: 0x000A1287
+		// Token: 0x060043F0 RID: 17392 RVA: 0x000AC67B File Offset: 0x000AA87B
 		public static IConditionAction Create(IConditionAction? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FE3 RID: 4067
-		// (get) Token: 0x06003FC7 RID: 16327 RVA: 0x000A30A6 File Offset: 0x000A12A6
+		// Token: 0x170010B7 RID: 4279
+		// (get) Token: 0x060043F1 RID: 17393 RVA: 0x000AC69A File Offset: 0x000AA89A
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FE4 RID: 4068
-		// (get) Token: 0x06003FC8 RID: 16328 RVA: 0x000A30DC File Offset: 0x000A12DC
+		// Token: 0x170010B8 RID: 4280
+		// (get) Token: 0x060043F2 RID: 17394 RVA: 0x000AC6D0 File Offset: 0x000AA8D0
 		public virtual List<ActionInfo> Action
 		{
 			get
@@ -62,20 +60,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400237D RID: 9085
+		// Token: 0x04002599 RID: 9625
 		private IConditionAction Instance;
 
-		// Token: 0x0400237E RID: 9086
+		// Token: 0x0400259A RID: 9626
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x0400237F RID: 9087
+		// Token: 0x0400259B RID: 9627
 		private bool _ConditionInited;
 
-		// Token: 0x04002380 RID: 9088
+		// Token: 0x0400259C RID: 9628
 		private List<ActionInfo> _ActionCache;
 
-		// Token: 0x04002381 RID: 9089
+		// Token: 0x0400259D RID: 9629
 		private bool _ActionInited;
 	}
 }

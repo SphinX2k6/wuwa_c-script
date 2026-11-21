@@ -19,17 +19,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B6E RID: 27502
+	// Token: 0x02005CE6 RID: 23782
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventSetActorVisible : LevelEventBase
 	{
-		// Token: 0x06044227 RID: 279079 RVA: 0x010C7073 File Offset: 0x010C5273
+		// Token: 0x0603A379 RID: 238457 RVA: 0x01070CE7 File Offset: 0x0106EEE7
 		public LevelEventSetActorVisible(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044228 RID: 279080 RVA: 0x010C707C File Offset: 0x010C527C
+		// Token: 0x0603A37A RID: 238458 RVA: 0x01070CF0 File Offset: 0x0106EEF0
 		[NullableContext(0)]
 		private static void OnActorEndPlay([Nullable(2)] AActor actor, TEnumAsByte<EEndPlayReason> endPlayReason)
 		{
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044229 RID: 279081 RVA: 0x010C70E4 File Offset: 0x010C52E4
+		// Token: 0x0603A37B RID: 238459 RVA: 0x01070D58 File Offset: 0x0106EF58
 		private static void HookActorForCollisionPreserve(AActor target)
 		{
 			WeakSet<AActor> endPlayHookedActors = LevelGamePlayModel.Instance.EndPlayHookedActors;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			onEndPlay.Add(callback);
 		}
 
-		// Token: 0x0604422A RID: 279082 RVA: 0x010C7148 File Offset: 0x010C5348
+		// Token: 0x0603A37C RID: 238460 RVA: 0x01070DBC File Offset: 0x0106EFBC
 		private static void CancelHookActorForCollisionPreserve(AActor target)
 		{
 			WeakSet<AActor> endPlayHookedActors = LevelGamePlayModel.Instance.EndPlayHookedActors;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			onEndPlay.Remove(callback);
 		}
 
-		// Token: 0x0604422B RID: 279083 RVA: 0x010C71B0 File Offset: 0x010C53B0
+		// Token: 0x0603A37D RID: 238461 RVA: 0x01070E24 File Offset: 0x0106F024
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			EnableActor @params = inParams as EnableActor;
@@ -604,14 +604,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x04023949 RID: 145737
+		// Token: 0x0401EBEB RID: 125931
 		public const int PATH_LENGTH = 3;
 
-		// Token: 0x0200CBFF RID: 52223
+		// Token: 0x0200B7EF RID: 47087
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403D957 RID: 252247
+			// Token: 0x04038D79 RID: 232825
 			[Nullable(new byte[]
 			{
 				0,

@@ -3,28 +3,28 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001A04 RID: 6660
+// Token: 0x02000EC3 RID: 3779
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class DamageUiConfig : ConfigBase
 {
-	// Token: 0x0600C2E9 RID: 49897 RVA: 0x002C0E4D File Offset: 0x002BF04D
+	// Token: 0x060096F7 RID: 38647 RVA: 0x002CBE39 File Offset: 0x002CA039
 	[NullableContext(2)]
 	public IReadOnlyList<DamageText> GetAllDamageTextConfig()
 	{
 		return ConfigDamageTextAll.GetConfigList(true);
 	}
 
-	// Token: 0x0600C2EA RID: 49898 RVA: 0x002C0E55 File Offset: 0x002BF055
+	// Token: 0x060096F8 RID: 38648 RVA: 0x002CBE41 File Offset: 0x002CA041
 	[NullableContext(2)]
 	public IReadOnlyList<DamageTextArea> GetAllDamageTextArea()
 	{
 		return ConfigDamageTextAreaAll.GetConfigList(true);
 	}
 
-	// Token: 0x17001048 RID: 4168
-	// (get) Token: 0x0600C2EB RID: 49899 RVA: 0x002C0E5D File Offset: 0x002BF05D
+	// Token: 0x1700106D RID: 4205
+	// (get) Token: 0x060096F9 RID: 38649 RVA: 0x002CBE49 File Offset: 0x002CA049
 	public static DamageUiConfig Instance
 	{
 		get
@@ -33,7 +33,7 @@ public class DamageUiConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600C2EC RID: 49900 RVA: 0x002C0E64 File Offset: 0x002BF064
+	// Token: 0x060096FA RID: 38650 RVA: 0x002CBE50 File Offset: 0x002CA050
 	public static DamageUiConfig GetOrCreateInstance()
 	{
 		if (DamageUiConfig._Instance == null)
@@ -43,7 +43,7 @@ public class DamageUiConfig : ConfigBase
 		return DamageUiConfig._Instance;
 	}
 
-	// Token: 0x0600C2ED RID: 49901 RVA: 0x002C0E78 File Offset: 0x002BF078
+	// Token: 0x060096FB RID: 38651 RVA: 0x002CBE64 File Offset: 0x002CA064
 	public static bool CreateInstance()
 	{
 		if (DamageUiConfig._Instance != null)
@@ -54,24 +54,24 @@ public class DamageUiConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600C2EE RID: 49902 RVA: 0x002C0E8E File Offset: 0x002BF08E
+	// Token: 0x060096FC RID: 38652 RVA: 0x002CBE7A File Offset: 0x002CA07A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C2EF RID: 49903 RVA: 0x002C0E90 File Offset: 0x002BF090
+	// Token: 0x060096FD RID: 38653 RVA: 0x002CBE7C File Offset: 0x002CA07C
 	public static void ResetStaticDefaultValue()
 	{
 		DamageUiConfig._Instance = null;
 	}
 
-	// Token: 0x0600C2F0 RID: 49904 RVA: 0x002C0E98 File Offset: 0x002BF098
+	// Token: 0x060096FE RID: 38654 RVA: 0x002CBE84 File Offset: 0x002CA084
 	static DamageUiConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DamageUiConfig.CreateStaticDefaultValue), new Action(DamageUiConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040059E8 RID: 23016
+	// Token: 0x04005AB7 RID: 23223
 	[Nullable(2)]
 	private static DamageUiConfig _Instance;
 }

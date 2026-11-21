@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001492 RID: 5266
+// Token: 0x02000946 RID: 2374
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRegressTabGroupPanel
 {
-	// Token: 0x0600952F RID: 38191 RVA: 0x00202E68 File Offset: 0x00201068
+	// Token: 0x060068C4 RID: 26820 RVA: 0x0020BDD0 File Offset: 0x00209FD0
 	public ActivityRegressTabGroupPanel(UUIHorizontalLayout tabLayout, UUIItem tabItem, Action<int> tabCallBack)
 	{
 		this.TabLayout = tabLayout;
@@ -16,19 +16,19 @@ public class ActivityRegressTabGroupPanel
 		this.TabCallBack = tabCallBack;
 	}
 
-	// Token: 0x06009530 RID: 38192 RVA: 0x00202E85 File Offset: 0x00201085
+	// Token: 0x060068C5 RID: 26821 RVA: 0x0020BDED File Offset: 0x00209FED
 	public void Init()
 	{
 		this.TabGroup = new TabComponent<ActivityRegressTabSwitchItemPanel>(this.TabLayout.GetRootComponent(), new Func<UUIItem, int?, ActivityRegressTabSwitchItemPanel>(this.TabItemProxyCreate), new Action<int>(this.ToggleCallBack), this.TabItem);
 	}
 
-	// Token: 0x06009531 RID: 38193 RVA: 0x00202EBB File Offset: 0x002010BB
+	// Token: 0x060068C6 RID: 26822 RVA: 0x0020BE23 File Offset: 0x0020A023
 	private ActivityRegressTabSwitchItemPanel TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new ActivityRegressTabSwitchItemPanel();
 	}
 
-	// Token: 0x06009532 RID: 38194 RVA: 0x00202EC2 File Offset: 0x002010C2
+	// Token: 0x060068C7 RID: 26823 RVA: 0x0020BE2A File Offset: 0x0020A02A
 	private void ToggleCallBack(int gridIndex)
 	{
 		Action<int> tabCallBack = this.TabCallBack;
@@ -39,7 +39,7 @@ public class ActivityRegressTabGroupPanel
 		tabCallBack(gridIndex);
 	}
 
-	// Token: 0x06009533 RID: 38195 RVA: 0x00202ED5 File Offset: 0x002010D5
+	// Token: 0x060068C8 RID: 26824 RVA: 0x0020BE3D File Offset: 0x0020A03D
 	public void RefreshByData(List<ActivityRegressTabSwitchItemCommonData> tabCommonDataList, int subTabIndex)
 	{
 		this.TabCommonDataList = tabCommonDataList;
@@ -49,7 +49,7 @@ public class ActivityRegressTabGroupPanel
 		}
 	}
 
-	// Token: 0x06009534 RID: 38196 RVA: 0x00202EF0 File Offset: 0x002010F0
+	// Token: 0x060068C9 RID: 26825 RVA: 0x0020BE58 File Offset: 0x0020A058
 	private void UpdateTabs(int subTabIndex)
 	{
 		int count = this.TabCommonDataList.Count;
@@ -67,13 +67,13 @@ public class ActivityRegressTabGroupPanel
 		});
 	}
 
-	// Token: 0x06009535 RID: 38197 RVA: 0x00202F35 File Offset: 0x00201135
+	// Token: 0x060068CA RID: 26826 RVA: 0x0020BE9D File Offset: 0x0020A09D
 	public void Destroy()
 	{
 		this.TabGroup.Destroy(null);
 	}
 
-	// Token: 0x040041FF RID: 16895
+	// Token: 0x04004297 RID: 17047
 	[Nullable(new byte[]
 	{
 		2,
@@ -81,7 +81,7 @@ public class ActivityRegressTabGroupPanel
 	})]
 	private TabComponent<ActivityRegressTabSwitchItemPanel> TabGroup;
 
-	// Token: 0x04004200 RID: 16896
+	// Token: 0x04004298 RID: 17048
 	[Nullable(new byte[]
 	{
 		2,
@@ -89,13 +89,13 @@ public class ActivityRegressTabGroupPanel
 	})]
 	private List<ActivityRegressTabSwitchItemCommonData> TabCommonDataList;
 
-	// Token: 0x04004201 RID: 16897
+	// Token: 0x04004299 RID: 17049
 	public UUIHorizontalLayout TabLayout;
 
-	// Token: 0x04004202 RID: 16898
+	// Token: 0x0400429A RID: 17050
 	public UUIItem TabItem;
 
-	// Token: 0x04004203 RID: 16899
+	// Token: 0x0400429B RID: 17051
 	[Nullable(2)]
 	public readonly Action<int> TabCallBack;
 }

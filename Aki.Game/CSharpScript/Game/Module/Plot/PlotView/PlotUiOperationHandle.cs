@@ -4,12 +4,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200506A RID: 20586
+	// Token: 0x0200403A RID: 16442
 	[NullableContext(1)]
 	[Nullable(0)]
 	public sealed class PlotUiOperationHandle
 	{
-		// Token: 0x06034BBC RID: 215996 RVA: 0x00C7A00D File Offset: 0x00C7820D
+		// Token: 0x06029AB0 RID: 170672 RVA: 0x00BC7319 File Offset: 0x00BC5519
 		public PlotUiOperationHandle(string name, EUiViewName targetView, PlotUiAsyncOperation operation, CustomPromise<bool> resultPromise, [Nullable(2)] Action onCancel = null)
 		{
 			this.Name = name;
@@ -19,24 +19,24 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.OnCancel = onCancel;
 		}
 
-		// Token: 0x17008036 RID: 32822
-		// (get) Token: 0x06034BBD RID: 215997 RVA: 0x00C7A03A File Offset: 0x00C7823A
+		// Token: 0x170053F6 RID: 21494
+		// (get) Token: 0x06029AB1 RID: 170673 RVA: 0x00BC7346 File Offset: 0x00BC5546
 		public string Name { get; }
 
-		// Token: 0x17008037 RID: 32823
-		// (get) Token: 0x06034BBE RID: 215998 RVA: 0x00C7A042 File Offset: 0x00C78242
+		// Token: 0x170053F7 RID: 21495
+		// (get) Token: 0x06029AB2 RID: 170674 RVA: 0x00BC734E File Offset: 0x00BC554E
 		public EUiViewName TargetView { get; }
 
-		// Token: 0x17008038 RID: 32824
-		// (get) Token: 0x06034BBF RID: 215999 RVA: 0x00C7A04A File Offset: 0x00C7824A
+		// Token: 0x170053F8 RID: 21496
+		// (get) Token: 0x06029AB3 RID: 170675 RVA: 0x00BC7356 File Offset: 0x00BC5556
 		public PlotUiAsyncOperation Operation { get; }
 
-		// Token: 0x17008039 RID: 32825
-		// (get) Token: 0x06034BC0 RID: 216000 RVA: 0x00C7A052 File Offset: 0x00C78252
+		// Token: 0x170053F9 RID: 21497
+		// (get) Token: 0x06029AB4 RID: 170676 RVA: 0x00BC735E File Offset: 0x00BC555E
 		public CustomPromise<bool> ResultPromise { get; }
 
-		// Token: 0x1700803A RID: 32826
-		// (get) Token: 0x06034BC1 RID: 216001 RVA: 0x00C7A05A File Offset: 0x00C7825A
+		// Token: 0x170053FA RID: 21498
+		// (get) Token: 0x06029AB5 RID: 170677 RVA: 0x00BC7366 File Offset: 0x00BC5566
 		[Nullable(2)]
 		public Action OnCancel { [NullableContext(2)] get; }
 	}

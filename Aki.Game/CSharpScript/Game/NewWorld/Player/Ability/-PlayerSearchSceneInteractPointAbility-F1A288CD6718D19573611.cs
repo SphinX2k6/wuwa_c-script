@@ -4,35 +4,35 @@ using CSharpScript.Game.LevelGamePlay.SceneInteract;
 
 namespace CSharpScript.Game.NewWorld.Player.Ability
 {
-	// Token: 0x0200705D RID: 28765
+	// Token: 0x020061DE RID: 25054
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class <PlayerSearchSceneInteractPointAbility>F1A288CD6718D19573611C8AFEB07CD8B0525D222D3381BA0ED014CAAA637126E__SceneInteractSearchParams : ISceneInteractSearchParams
 	{
-		// Token: 0x17009BF2 RID: 39922
-		// (get) Token: 0x0604602A RID: 286762 RVA: 0x01173E2F File Offset: 0x0117202F
-		// (set) Token: 0x0604602B RID: 286763 RVA: 0x01173E37 File Offset: 0x01172037
+		// Token: 0x17007176 RID: 29046
+		// (get) Token: 0x0603C223 RID: 246307 RVA: 0x0111DA2E File Offset: 0x0111BC2E
+		// (set) Token: 0x0603C224 RID: 246308 RVA: 0x0111DA36 File Offset: 0x0111BC36
 		public Vector CameraLocation { get; set; }
 
-		// Token: 0x17009BF3 RID: 39923
-		// (get) Token: 0x0604602C RID: 286764 RVA: 0x01173E40 File Offset: 0x01172040
-		// (set) Token: 0x0604602D RID: 286765 RVA: 0x01173E48 File Offset: 0x01172048
+		// Token: 0x17007177 RID: 29047
+		// (get) Token: 0x0603C225 RID: 246309 RVA: 0x0111DA3F File Offset: 0x0111BC3F
+		// (set) Token: 0x0603C226 RID: 246310 RVA: 0x0111DA47 File Offset: 0x0111BC47
 		public Vector CameraForward { get; set; }
 
-		// Token: 0x17009BF4 RID: 39924
-		// (get) Token: 0x0604602E RID: 286766 RVA: 0x01173E51 File Offset: 0x01172051
-		// (set) Token: 0x0604602F RID: 286767 RVA: 0x01173E59 File Offset: 0x01172059
+		// Token: 0x17007178 RID: 29048
+		// (get) Token: 0x0603C227 RID: 246311 RVA: 0x0111DA50 File Offset: 0x0111BC50
+		// (set) Token: 0x0603C228 RID: 246312 RVA: 0x0111DA58 File Offset: 0x0111BC58
 		public Vector CurrentRoleLocation { get; set; }
 
-		// Token: 0x17009BF5 RID: 39925
-		// (get) Token: 0x06046030 RID: 286768 RVA: 0x01173E62 File Offset: 0x01172062
-		// (set) Token: 0x06046031 RID: 286769 RVA: 0x01173E6A File Offset: 0x0117206A
+		// Token: 0x17007179 RID: 29049
+		// (get) Token: 0x0603C229 RID: 246313 RVA: 0x0111DA61 File Offset: 0x0111BC61
+		// (set) Token: 0x0603C22A RID: 246314 RVA: 0x0111DA69 File Offset: 0x0111BC69
 		[Nullable(2)]
 		public EntityHandle CurrentRoleEntityHandle { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17009BF6 RID: 39926
-		// (get) Token: 0x06046032 RID: 286770 RVA: 0x01173E73 File Offset: 0x01172073
-		// (set) Token: 0x06046033 RID: 286771 RVA: 0x01173E7B File Offset: 0x0117207B
+		// Token: 0x1700717A RID: 29050
+		// (get) Token: 0x0603C22B RID: 246315 RVA: 0x0111DA72 File Offset: 0x0111BC72
+		// (set) Token: 0x0603C22C RID: 246316 RVA: 0x0111DA7A File Offset: 0x0111BC7A
 		public Func<ISceneInteractPoint, bool> IsInteractingPoint { get; set; }
 	}
 }

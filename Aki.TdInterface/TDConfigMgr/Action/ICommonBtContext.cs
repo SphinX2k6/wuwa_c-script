@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018FC RID: 6396
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A83 RID: 6787
 	public class ICommonBtContext : IVarContext
 	{
-		// Token: 0x0600890D RID: 35085 RVA: 0x00143BC4 File Offset: 0x00141DC4
+		// Token: 0x0600902B RID: 36907 RVA: 0x0015334C File Offset: 0x0015154C
 		private ICommonBtContext_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600890E RID: 35086 RVA: 0x00143BFC File Offset: 0x00141DFC
+		// Token: 0x0600902C RID: 36908 RVA: 0x00153384 File Offset: 0x00151584
 		public static ICommonBtContext Create([Nullable(2)] ICommonBtContext instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600890F RID: 35087 RVA: 0x00143C0F File Offset: 0x00141E0F
+		// Token: 0x0600902D RID: 36909 RVA: 0x00153397 File Offset: 0x00151597
 		public static ICommonBtContext CreateFromSetValue([Nullable(2)] ICommonBtContext_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008910 RID: 35088 RVA: 0x00143C22 File Offset: 0x00141E22
+		// Token: 0x0600902E RID: 36910 RVA: 0x001533AA File Offset: 0x001515AA
 		public new ICommonBtContext_SetValue ToSetValue()
 		{
 			return new ICommonBtContext_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C61 RID: 11361
-		// (get) Token: 0x06008911 RID: 35089 RVA: 0x00143C41 File Offset: 0x00141E41
-		// (set) Token: 0x06008912 RID: 35090 RVA: 0x00143C6C File Offset: 0x00141E6C
+		// Token: 0x17002E5D RID: 11869
+		// (get) Token: 0x0600902F RID: 36911 RVA: 0x001533C9 File Offset: 0x001515C9
+		// (set) Token: 0x06009030 RID: 36912 RVA: 0x001533F4 File Offset: 0x001515F4
 		public override EVarContext Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C62 RID: 11362
-		// (get) Token: 0x06008913 RID: 35091 RVA: 0x00143C7A File Offset: 0x00141E7A
-		// (set) Token: 0x06008914 RID: 35092 RVA: 0x00143CA5 File Offset: 0x00141EA5
+		// Token: 0x17002E5E RID: 11870
+		// (get) Token: 0x06009031 RID: 36913 RVA: 0x00153402 File Offset: 0x00151602
+		// (set) Token: 0x06009032 RID: 36914 RVA: 0x0015342D File Offset: 0x0015162D
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040055EE RID: 21998
+		// Token: 0x04005A38 RID: 23096
 		[Nullable(2)]
 		protected new ICommonBtContext FbInstance;
 
-		// Token: 0x040055EF RID: 21999
+		// Token: 0x04005A39 RID: 23097
 		[Nullable(2)]
 		protected new ICommonBtContext_SetValue PocoInterface;
 	}

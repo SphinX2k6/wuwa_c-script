@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x020051A1 RID: 20897
+	// Token: 0x02004171 RID: 16753
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DeckBuilderQuicklyBuildViewData : IDeckBuilderQuicklyBuildViewData
 	{
-		// Token: 0x1700819F RID: 33183
-		// (get) Token: 0x06035777 RID: 218999 RVA: 0x00CA83FC File Offset: 0x00CA65FC
-		// (set) Token: 0x06035778 RID: 219000 RVA: 0x00CA8404 File Offset: 0x00CA6604
+		// Token: 0x1700555F RID: 21855
+		// (get) Token: 0x0602A672 RID: 173682 RVA: 0x00BF5A18 File Offset: 0x00BF3C18
+		// (set) Token: 0x0602A673 RID: 173683 RVA: 0x00BF5A20 File Offset: 0x00BF3C20
 		public int ActivityId { get; set; }
 
-		// Token: 0x170081A0 RID: 33184
-		// (get) Token: 0x06035779 RID: 219001 RVA: 0x00CA840D File Offset: 0x00CA660D
-		// (set) Token: 0x0603577A RID: 219002 RVA: 0x00CA8415 File Offset: 0x00CA6615
+		// Token: 0x17005560 RID: 21856
+		// (get) Token: 0x0602A674 RID: 173684 RVA: 0x00BF5A29 File Offset: 0x00BF3C29
+		// (set) Token: 0x0602A675 RID: 173685 RVA: 0x00BF5A31 File Offset: 0x00BF3C31
 		public Action<DeckInfo> ConfirmCallback { get; set; }
 	}
 }

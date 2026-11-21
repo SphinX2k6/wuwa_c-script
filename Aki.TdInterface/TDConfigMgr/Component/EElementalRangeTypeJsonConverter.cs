@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200092F RID: 2351
+	// Token: 0x020009DC RID: 2524
 	public class EElementalRangeTypeJsonConverter : JsonConverter<EElementalRangeType>
 	{
-		// Token: 0x06003506 RID: 13574 RVA: 0x0008A800 File Offset: 0x00088A00
+		// Token: 0x06003872 RID: 14450 RVA: 0x00092380 File Offset: 0x00090580
 		public override EElementalRangeType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EElementalRangeTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003507 RID: 13575 RVA: 0x0008A824 File Offset: 0x00088A24
+		// Token: 0x06003873 RID: 14451 RVA: 0x000923A4 File Offset: 0x000905A4
 		public override void Write(Utf8JsonWriter writer, EElementalRangeType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

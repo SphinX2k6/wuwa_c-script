@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005CF9 RID: 23801
+	// Token: 0x0200632D RID: 25389
 	public enum EGiantTriggerType : byte
 	{
-		// Token: 0x0400F648 RID: 63048
+		// Token: 0x04010397 RID: 66455
 		RoleState,
-		// Token: 0x0400F649 RID: 63049
+		// Token: 0x04010398 RID: 66456
 		StableValue,
-		// Token: 0x0400F64A RID: 63050
+		// Token: 0x04010399 RID: 66457
 		EnterArea
 	}
 }

@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001722 RID: 5922
+	// Token: 0x02000333 RID: 819
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroBullet.EBulletHitWorldEntityOperation")]
 	public enum EBulletHitWorldEntityOperation : byte
 	{
-		// Token: 0x0400BA23 RID: 47651
+		// Token: 0x040022DF RID: 8927
 		AddBuff,
-		// Token: 0x0400BA24 RID: 47652
+		// Token: 0x040022E0 RID: 8928
 		Hit,
-		// Token: 0x0400BA25 RID: 47653
+		// Token: 0x040022E1 RID: 8929
 		DodgeBullet,
-		// Token: 0x0400BA26 RID: 47654
+		// Token: 0x040022E2 RID: 8930
 		AddBuffWithRef,
-		// Token: 0x0400BA27 RID: 47655
+		// Token: 0x040022E3 RID: 8931
 		RemoveBuffWithRef,
-		// Token: 0x0400BA28 RID: 47656
+		// Token: 0x040022E4 RID: 8932
 		EBulletHitWorldEntityOperation_MAX
 	}
 }

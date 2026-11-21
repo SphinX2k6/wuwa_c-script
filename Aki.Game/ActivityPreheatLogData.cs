@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020020E5 RID: 8421
+// Token: 0x020015BC RID: 5564
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityPreheatLogData : PlayerCommonLogData
 {
-	// Token: 0x1700148B RID: 5259
-	// (get) Token: 0x060108EB RID: 67819 RVA: 0x0040ADCA File Offset: 0x00408FCA
-	// (set) Token: 0x060108EC RID: 67820 RVA: 0x0040ADD2 File Offset: 0x00408FD2
+	// Token: 0x170014B8 RID: 5304
+	// (get) Token: 0x0600DD5B RID: 56667 RVA: 0x004174DA File Offset: 0x004156DA
+	// (set) Token: 0x0600DD5C RID: 56668 RVA: 0x004174E2 File Offset: 0x004156E2
 	public override string event_id { get; set; } = "1030";
 
-	// Token: 0x04007C11 RID: 31761
+	// Token: 0x04007D10 RID: 32016
 	public int i_activity_id;
 
-	// Token: 0x04007C12 RID: 31762
+	// Token: 0x04007D11 RID: 32017
 	public int i_activity_type;
 
-	// Token: 0x04007C13 RID: 31763
+	// Token: 0x04007D12 RID: 32018
 	public int i_time_left;
 
-	// Token: 0x04007C14 RID: 31764
+	// Token: 0x04007D13 RID: 32019
 	public int i_type;
 }

@@ -1,24 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200108E RID: 4238
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011BC RID: 4540
 	public class IQuestPlayerHitCount_SetValue
 	{
-		// Token: 0x040039A7 RID: 14759
+		// Token: 0x04003CF4 RID: 15604
 		public EPlayerHitStatisticsType Type;
 
-		// Token: 0x040039A8 RID: 14760
+		// Token: 0x04003CF5 RID: 15605
 		public float? Cd;
 
-		// Token: 0x040039A9 RID: 14761
+		// Token: 0x04003CF6 RID: 15606
 		public List<int> EntityIds;
 
-		// Token: 0x040039AA RID: 14762
+		// Token: 0x04003CF7 RID: 15607
 		public List<int> SkillIds;
 	}
 }

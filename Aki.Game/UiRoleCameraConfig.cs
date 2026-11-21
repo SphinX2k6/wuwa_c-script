@@ -4,13 +4,13 @@ using Aki.Config;
 using AkiClient.Game.Aki.Data.UiRoleCamera.Struct;
 using CSharpScript.Game.Module.Skin;
 
-// Token: 0x020028EB RID: 10475
+// Token: 0x02001E66 RID: 7782
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class UiRoleCameraConfig : ConfigBase
 {
-	// Token: 0x06015A0B RID: 88587 RVA: 0x00575828 File Offset: 0x00573A28
+	// Token: 0x0601340F RID: 78863 RVA: 0x005A06F4 File Offset: 0x0059E8F4
 	public SUiRoleCameraSetting? GetRoleCameraConfig(string rowName)
 	{
 		SUiRoleCameraSetting? result;
@@ -18,13 +18,13 @@ public class UiRoleCameraConfig : ConfigBase
 		return result;
 	}
 
-	// Token: 0x06015A0C RID: 88588 RVA: 0x00575841 File Offset: 0x00573A41
+	// Token: 0x06013410 RID: 78864 RVA: 0x005A070D File Offset: 0x0059E90D
 	public SUiRoleCameraSetting? GetRoleCameraConfigBySkin(string rowName, int skinId)
 	{
 		return this.GetRoleCameraConfig(this.GetOverrideRowName(rowName, skinId));
 	}
 
-	// Token: 0x06015A0D RID: 88589 RVA: 0x00575854 File Offset: 0x00573A54
+	// Token: 0x06013411 RID: 78865 RVA: 0x005A0720 File Offset: 0x0059E920
 	private unsafe string GetOverrideRowName(string rowName, int skinId)
 	{
 		if (skinId <= 0)
@@ -58,13 +58,13 @@ public class UiRoleCameraConfig : ConfigBase
 		return rowName;
 	}
 
-	// Token: 0x06015A0E RID: 88590 RVA: 0x00575965 File Offset: 0x00573B65
+	// Token: 0x06013412 RID: 78866 RVA: 0x005A0831 File Offset: 0x0059EA31
 	public SUiRoleCameraSetting? GetDefaultRoleCameraConfig()
 	{
 		return this.GetRoleCameraConfig("默认");
 	}
 
-	// Token: 0x06015A0F RID: 88591 RVA: 0x00575974 File Offset: 0x00573B74
+	// Token: 0x06013413 RID: 78867 RVA: 0x005A0840 File Offset: 0x0059EA40
 	public SUiRoleCameraOffsetSetting? GetRoleCameraOffsetConfig(string roleBody)
 	{
 		SUiRoleCameraOffsetSetting? result;
@@ -72,8 +72,8 @@ public class UiRoleCameraConfig : ConfigBase
 		return result;
 	}
 
-	// Token: 0x17001D0D RID: 7437
-	// (get) Token: 0x06015A10 RID: 88592 RVA: 0x0057598D File Offset: 0x00573B8D
+	// Token: 0x17001D67 RID: 7527
+	// (get) Token: 0x06013414 RID: 78868 RVA: 0x005A0859 File Offset: 0x0059EA59
 	public static UiRoleCameraConfig Instance
 	{
 		get
@@ -82,7 +82,7 @@ public class UiRoleCameraConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06015A11 RID: 88593 RVA: 0x00575994 File Offset: 0x00573B94
+	// Token: 0x06013415 RID: 78869 RVA: 0x005A0860 File Offset: 0x0059EA60
 	public static UiRoleCameraConfig GetOrCreateInstance()
 	{
 		if (UiRoleCameraConfig._Instance == null)
@@ -92,7 +92,7 @@ public class UiRoleCameraConfig : ConfigBase
 		return UiRoleCameraConfig._Instance;
 	}
 
-	// Token: 0x06015A12 RID: 88594 RVA: 0x005759A8 File Offset: 0x00573BA8
+	// Token: 0x06013416 RID: 78870 RVA: 0x005A0874 File Offset: 0x0059EA74
 	public static bool CreateInstance()
 	{
 		if (UiRoleCameraConfig._Instance != null)
@@ -103,24 +103,24 @@ public class UiRoleCameraConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06015A13 RID: 88595 RVA: 0x005759BE File Offset: 0x00573BBE
+	// Token: 0x06013417 RID: 78871 RVA: 0x005A088A File Offset: 0x0059EA8A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06015A14 RID: 88596 RVA: 0x005759C0 File Offset: 0x00573BC0
+	// Token: 0x06013418 RID: 78872 RVA: 0x005A088C File Offset: 0x0059EA8C
 	public static void ResetStaticDefaultValue()
 	{
 		UiRoleCameraConfig._Instance = null;
 	}
 
-	// Token: 0x06015A15 RID: 88597 RVA: 0x005759C8 File Offset: 0x00573BC8
+	// Token: 0x06013419 RID: 78873 RVA: 0x005A0894 File Offset: 0x0059EA94
 	static UiRoleCameraConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiRoleCameraConfig.CreateStaticDefaultValue), new Action(UiRoleCameraConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A0DE RID: 41182
+	// Token: 0x0400A4C8 RID: 42184
 	[Nullable(2)]
 	private static UiRoleCameraConfig _Instance;
 }

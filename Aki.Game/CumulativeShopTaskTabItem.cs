@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001209 RID: 4617
+// Token: 0x020006BD RID: 1725
 public class CumulativeShopTaskTabItem : GridProxyAbstract<int>
 {
-	// Token: 0x06007B98 RID: 31640 RVA: 0x001A13DC File Offset: 0x0019F5DC
+	// Token: 0x06004F2E RID: 20270 RVA: 0x001AA094 File Offset: 0x001A8294
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class CumulativeShopTaskTabItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06007B99 RID: 31641 RVA: 0x001A146F File Offset: 0x0019F66F
+	// Token: 0x06004F2F RID: 20271 RVA: 0x001AA127 File Offset: 0x001A8327
 	private void OnExtendToggleToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -33,7 +33,7 @@ public class CumulativeShopTaskTabItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06007B9A RID: 31642 RVA: 0x001A1490 File Offset: 0x0019F690
+	// Token: 0x06004F30 RID: 20272 RVA: 0x001AA148 File Offset: 0x001A8348
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.TabIndex = data;
@@ -46,19 +46,19 @@ public class CumulativeShopTaskTabItem : GridProxyAbstract<int>
 		RedDotController.Instance.BindRedDot(ERedDotName.CumulativeShopTaskTabRedDot, base.GetItem(2), null, this.TabIndex);
 	}
 
-	// Token: 0x06007B9B RID: 31643 RVA: 0x001A1529 File Offset: 0x0019F729
+	// Token: 0x06004F31 RID: 20273 RVA: 0x001AA1E1 File Offset: 0x001A83E1
 	protected override void OnBeforeDestroy()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.CumulativeShopTaskTabRedDot, base.GetItem(2), 0);
 	}
 
-	// Token: 0x06007B9C RID: 31644 RVA: 0x001A1542 File Offset: 0x0019F742
+	// Token: 0x06004F32 RID: 20274 RVA: 0x001AA1FA File Offset: 0x001A83FA
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_Checked, true, false, false);
 	}
 
-	// Token: 0x040038A3 RID: 14499
+	// Token: 0x0400393C RID: 14652
 	[Nullable(new byte[]
 	{
 		2,
@@ -66,6 +66,6 @@ public class CumulativeShopTaskTabItem : GridProxyAbstract<int>
 	})]
 	public Action<int, UUIExtendToggle> OnClickBack;
 
-	// Token: 0x040038A4 RID: 14500
+	// Token: 0x0400393D RID: 14653
 	public int TabIndex;
 }

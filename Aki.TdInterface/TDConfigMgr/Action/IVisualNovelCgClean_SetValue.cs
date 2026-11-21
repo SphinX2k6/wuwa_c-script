@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002062 RID: 8290
+	// Token: 0x020022AB RID: 8875
 	public class IVisualNovelCgClean_SetValue
 	{
-		// Token: 0x04006D73 RID: 28019
+		// Token: 0x0400737C RID: 29564
 		public EVisualNovelCgType Type;
 	}
 }

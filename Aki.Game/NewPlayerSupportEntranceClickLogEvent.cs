@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002122 RID: 8482
+// Token: 0x020015FA RID: 5626
 [NullableContext(1)]
 [Nullable(0)]
 public class NewPlayerSupportEntranceClickLogEvent : PlayerCommonLogData
 {
-	// Token: 0x170014C8 RID: 5320
-	// (get) Token: 0x060109A2 RID: 68002 RVA: 0x0040B8A8 File Offset: 0x00409AA8
-	// (set) Token: 0x060109A3 RID: 68003 RVA: 0x0040B8B0 File Offset: 0x00409AB0
+	// Token: 0x170014F6 RID: 5366
+	// (get) Token: 0x0600DE15 RID: 56853 RVA: 0x00417FF0 File Offset: 0x004161F0
+	// (set) Token: 0x0600DE16 RID: 56854 RVA: 0x00417FF8 File Offset: 0x004161F8
 	public override string event_id { get; set; } = "2005";
 
-	// Token: 0x04007D07 RID: 32007
+	// Token: 0x04007E15 RID: 32277
 	public int i_entrance_id;
 }

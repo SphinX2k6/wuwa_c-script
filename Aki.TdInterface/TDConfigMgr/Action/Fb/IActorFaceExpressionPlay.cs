@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002526 RID: 9510
+	// Token: 0x020027CD RID: 10189
 	public class IActorFaceExpressionPlay : IActorFaceExpressionType
 	{
-		// Token: 0x0600D40F RID: 54287 RVA: 0x001F67F3 File Offset: 0x001F49F3
-		[NullableContext(1)]
+		// Token: 0x0600E16F RID: 57711 RVA: 0x00212253 File Offset: 0x00210453
 		public static IActorFaceExpressionPlay Create(IActorFaceExpressionPlay? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B85 RID: 15237
-		// (get) Token: 0x0600D410 RID: 54288 RVA: 0x001F6812 File Offset: 0x001F4A12
+		// Token: 0x17003E83 RID: 16003
+		// (get) Token: 0x0600E170 RID: 57712 RVA: 0x00212272 File Offset: 0x00210472
 		public override EActorFaceExpressionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B86 RID: 15238
-		// (get) Token: 0x0600D411 RID: 54289 RVA: 0x001F681F File Offset: 0x001F4A1F
+		// Token: 0x17003E84 RID: 16004
+		// (get) Token: 0x0600E171 RID: 57713 RVA: 0x0021227F File Offset: 0x0021047F
 		public virtual int FaceExpressionId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B87 RID: 15239
-		// (get) Token: 0x0600D412 RID: 54290 RVA: 0x001F682C File Offset: 0x001F4A2C
+		// Token: 0x17003E85 RID: 16005
+		// (get) Token: 0x0600E172 RID: 57714 RVA: 0x0021228C File Offset: 0x0021048C
 		public virtual float? DelayTime
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400742C RID: 29740
+		// Token: 0x04007A81 RID: 31361
 		private IActorFaceExpressionPlay Instance;
 	}
 }

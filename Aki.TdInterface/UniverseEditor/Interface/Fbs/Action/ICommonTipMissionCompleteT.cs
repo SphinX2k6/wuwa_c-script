@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064A2 RID: 25762
+	// Token: 0x02006B0D RID: 27405
 	public class ICommonTipMissionCompleteT
 	{
-		// Token: 0x1700BFB6 RID: 49078
-		// (get) Token: 0x0602CA72 RID: 182898 RVA: 0x006214EC File Offset: 0x0061F6EC
-		// (set) Token: 0x0602CA73 RID: 182899 RVA: 0x006214F4 File Offset: 0x0061F6F4
+		// Token: 0x1700C943 RID: 51523
+		// (get) Token: 0x0602F1EC RID: 193004 RVA: 0x0066D0C0 File Offset: 0x0066B2C0
+		// (set) Token: 0x0602F1ED RID: 193005 RVA: 0x0066D0C8 File Offset: 0x0066B2C8
 		public ECommonTipType Type { get; set; }
 
-		// Token: 0x1700BFB7 RID: 49079
-		// (get) Token: 0x0602CA74 RID: 182900 RVA: 0x006214FD File Offset: 0x0061F6FD
-		// (set) Token: 0x0602CA75 RID: 182901 RVA: 0x00621505 File Offset: 0x0061F705
+		// Token: 0x1700C944 RID: 51524
+		// (get) Token: 0x0602F1EE RID: 193006 RVA: 0x0066D0D1 File Offset: 0x0066B2D1
+		// (set) Token: 0x0602F1EF RID: 193007 RVA: 0x0066D0D9 File Offset: 0x0066B2D9
 		public string TidMainText { get; set; }
 
-		// Token: 0x1700BFB8 RID: 49080
-		// (get) Token: 0x0602CA76 RID: 182902 RVA: 0x0062150E File Offset: 0x0061F70E
-		// (set) Token: 0x0602CA77 RID: 182903 RVA: 0x00621516 File Offset: 0x0061F716
+		// Token: 0x1700C945 RID: 51525
+		// (get) Token: 0x0602F1F0 RID: 193008 RVA: 0x0066D0E2 File Offset: 0x0066B2E2
+		// (set) Token: 0x0602F1F1 RID: 193009 RVA: 0x0066D0EA File Offset: 0x0066B2EA
 		public string TidSubText { get; set; }
 
-		// Token: 0x0602CA78 RID: 182904 RVA: 0x0062151F File Offset: 0x0061F71F
+		// Token: 0x0602F1F2 RID: 193010 RVA: 0x0066D0F3 File Offset: 0x0066B2F3
 		public ICommonTipMissionCompleteT()
 		{
 			this.Type = ECommonTipType.ChallengeCondition;

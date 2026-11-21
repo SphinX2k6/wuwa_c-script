@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A22 RID: 6690
+	// Token: 0x02001BB7 RID: 7095
 	public class IExecuteTag_SetValue
 	{
-		// Token: 0x040058AE RID: 22702
+		// Token: 0x04005D13 RID: 23827
 		public EInteractEffectType Type;
 
-		// Token: 0x040058AF RID: 22703
+		// Token: 0x04005D14 RID: 23828
 		public float? DelayTime;
 
-		// Token: 0x040058B0 RID: 22704
-		[Nullable(1)]
+		// Token: 0x04005D15 RID: 23829
 		public List<int> Tags;
 	}
 }

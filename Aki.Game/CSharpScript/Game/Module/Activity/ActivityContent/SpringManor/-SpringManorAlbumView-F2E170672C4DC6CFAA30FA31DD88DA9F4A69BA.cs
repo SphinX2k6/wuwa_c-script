@@ -2,44 +2,44 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006077 RID: 24695
+	// Token: 0x02004FF5 RID: 20469
 	internal enum <SpringManorAlbumView>F2E170672C4DC6CFAA30FA31DD88DA9F4A69BAEA8B72D930C0A217100F3DC0BED__EComponents
 	{
-		// Token: 0x04020A71 RID: 133745
+		// Token: 0x0401B39E RID: 111518
 		UiItemCaption,
-		// Token: 0x04020A72 RID: 133746
+		// Token: 0x0401B39F RID: 111519
 		TogAlbumA01,
-		// Token: 0x04020A73 RID: 133747
+		// Token: 0x0401B3A0 RID: 111520
 		TogAlbumA02,
-		// Token: 0x04020A74 RID: 133748
+		// Token: 0x0401B3A1 RID: 111521
 		SvDefault,
-		// Token: 0x04020A75 RID: 133749
+		// Token: 0x0401B3A2 RID: 111522
 		TaskContent,
-		// Token: 0x04020A76 RID: 133750
+		// Token: 0x0401B3A3 RID: 111523
 		TogAlbumB,
-		// Token: 0x04020A77 RID: 133751
+		// Token: 0x0401B3A4 RID: 111524
 		PnlNull,
-		// Token: 0x04020A78 RID: 133752
+		// Token: 0x0401B3A5 RID: 111525
 		TexIconRole,
-		// Token: 0x04020A79 RID: 133753
+		// Token: 0x0401B3A6 RID: 111526
 		BtnPic,
-		// Token: 0x04020A7A RID: 133754
+		// Token: 0x0401B3A7 RID: 111527
 		TexIconPic,
-		// Token: 0x04020A7B RID: 133755
+		// Token: 0x0401B3A8 RID: 111528
 		TxtDescri,
-		// Token: 0x04020A7C RID: 133756
+		// Token: 0x0401B3A9 RID: 111529
 		BtnSecConfirmB,
-		// Token: 0x04020A7D RID: 133757
+		// Token: 0x0401B3AA RID: 111530
 		PnlGot,
-		// Token: 0x04020A7E RID: 133758
+		// Token: 0x0401B3AB RID: 111531
 		PnlNotAchieved,
-		// Token: 0x04020A7F RID: 133759
+		// Token: 0x0401B3AC RID: 111532
 		RewardScroll,
-		// Token: 0x04020A80 RID: 133760
+		// Token: 0x0401B3AD RID: 111533
 		RewardContent,
-		// Token: 0x04020A81 RID: 133761
+		// Token: 0x0401B3AE RID: 111534
 		UiItemItemBaseB,
-		// Token: 0x04020A82 RID: 133762
+		// Token: 0x0401B3AF RID: 111535
 		TexNull
 	}
 }

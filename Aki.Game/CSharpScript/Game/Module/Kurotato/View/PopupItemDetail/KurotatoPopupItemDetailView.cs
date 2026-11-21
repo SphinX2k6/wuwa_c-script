@@ -14,17 +14,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 {
-	// Token: 0x02005737 RID: 22327
+	// Token: 0x0200470E RID: 18190
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoPopupItemDetailView : UiViewBase
 	{
-		// Token: 0x06038C27 RID: 232487 RVA: 0x00D79610 File Offset: 0x00D77810
+		// Token: 0x0602DB37 RID: 187191 RVA: 0x00CC7CC0 File Offset: 0x00CC5EC0
 		public KurotatoPopupItemDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038C28 RID: 232488 RVA: 0x00D79674 File Offset: 0x00D77874
+		// Token: 0x0602DB38 RID: 187192 RVA: 0x00CC7D24 File Offset: 0x00CC5F24
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038C29 RID: 232489 RVA: 0x00D79804 File Offset: 0x00D77A04
+		// Token: 0x0602DB39 RID: 187193 RVA: 0x00CC7EB4 File Offset: 0x00CC60B4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoPopupItemDetailView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038C2A RID: 232490 RVA: 0x00D79848 File Offset: 0x00D77A48
+		// Token: 0x0602DB3A RID: 187194 RVA: 0x00CC7EF8 File Offset: 0x00CC60F8
 		private UniTask CreateCaptionAsync()
 		{
 			KurotatoPopupItemDetailView.<CreateCaptionAsync>d__14 <CreateCaptionAsync>d__;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			return <CreateCaptionAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038C2B RID: 232491 RVA: 0x00D7988C File Offset: 0x00D77A8C
+		// Token: 0x0602DB3B RID: 187195 RVA: 0x00CC7F3C File Offset: 0x00CC613C
 		private UniTask CreateWeaponTipAsync()
 		{
 			KurotatoPopupItemDetailView.<CreateWeaponTipAsync>d__15 <CreateWeaponTipAsync>d__;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			return <CreateWeaponTipAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038C2C RID: 232492 RVA: 0x00D798D0 File Offset: 0x00D77AD0
+		// Token: 0x0602DB3C RID: 187196 RVA: 0x00CC7F80 File Offset: 0x00CC6180
 		private UniTask CreateBtnComposeAsync()
 		{
 			KurotatoPopupItemDetailView.<CreateBtnComposeAsync>d__16 <CreateBtnComposeAsync>d__;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			return <CreateBtnComposeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038C2D RID: 232493 RVA: 0x00D79914 File Offset: 0x00D77B14
+		// Token: 0x0602DB3D RID: 187197 RVA: 0x00CC7FC4 File Offset: 0x00CC61C4
 		private UniTask CreateBtnSellAsync()
 		{
 			KurotatoPopupItemDetailView.<CreateBtnSellAsync>d__17 <CreateBtnSellAsync>d__;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			return <CreateBtnSellAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038C2E RID: 232494 RVA: 0x00D79958 File Offset: 0x00D77B58
+		// Token: 0x0602DB3E RID: 187198 RVA: 0x00CC8008 File Offset: 0x00CC6208
 		private UniTask CreateCurrencyAsync()
 		{
 			KurotatoPopupItemDetailView.<CreateCurrencyAsync>d__18 <CreateCurrencyAsync>d__;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			return <CreateCurrencyAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038C2F RID: 232495 RVA: 0x00D7999B File Offset: 0x00D77B9B
+		// Token: 0x0602DB3F RID: 187199 RVA: 0x00CC804B File Offset: 0x00CC624B
 		private void CreateItemLayout()
 		{
 			this.ItemLayout = new GenericLayout<KurotatoWeaponSmallItemGrid, IKurotatoSmallItemGridData>(base.GetHorizontalLayout(4), delegate()
@@ -136,21 +136,21 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			}, null, false, true);
 		}
 
-		// Token: 0x06038C30 RID: 232496 RVA: 0x00D799BE File Offset: 0x00D77BBE
+		// Token: 0x0602DB40 RID: 187200 RVA: 0x00CC806E File Offset: 0x00CC626E
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.KurotatoOnWeaponUpdate, new Action(this.OnUpdateWeapon));
 			EventSystem.Instance.Add<int>(EEventName.KurotatoOnWeaponRefined, new Action<int>(this.OnWeaponRefined));
 		}
 
-		// Token: 0x06038C31 RID: 232497 RVA: 0x00D799F8 File Offset: 0x00D77BF8
+		// Token: 0x0602DB41 RID: 187201 RVA: 0x00CC80A8 File Offset: 0x00CC62A8
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.KurotatoOnWeaponUpdate, new Action(this.OnUpdateWeapon));
 			EventSystem.Instance.Remove<int>(EEventName.KurotatoOnWeaponRefined, new Action<int>(this.OnWeaponRefined));
 		}
 
-		// Token: 0x06038C32 RID: 232498 RVA: 0x00D79A34 File Offset: 0x00D77C34
+		// Token: 0x0602DB42 RID: 187202 RVA: 0x00CC80E4 File Offset: 0x00CC62E4
 		protected override void OnStart()
 		{
 			IKurotatoPopupItemDetailOpenParam kurotatoPopupItemDetailOpenParam = (IKurotatoPopupItemDetailOpenParam)this.OpenParam;
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			this.RefreshBtn();
 		}
 
-		// Token: 0x06038C33 RID: 232499 RVA: 0x00D79A94 File Offset: 0x00D77C94
+		// Token: 0x0602DB43 RID: 187203 RVA: 0x00CC8144 File Offset: 0x00CC6344
 		private void SyncWeaponDataAndRefresh(int? composeIncId = null)
 		{
 			List<IKurotatoWeaponData> holdWeaponData = KurotatoModel.Instance.GetHoldWeaponData();
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			this.RefreshItemLayout(composeIncId);
 		}
 
-		// Token: 0x06038C34 RID: 232500 RVA: 0x00D79BBC File Offset: 0x00D77DBC
+		// Token: 0x0602DB44 RID: 187204 RVA: 0x00CC826C File Offset: 0x00CC646C
 		private bool IsCardDataSame(List<IKurotatoCardTip> newCardData)
 		{
 			if (this.CardData.Count != newCardData.Count)
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			return true;
 		}
 
-		// Token: 0x06038C35 RID: 232501 RVA: 0x00D79C30 File Offset: 0x00D77E30
+		// Token: 0x0602DB45 RID: 187205 RVA: 0x00CC82E0 File Offset: 0x00CC64E0
 		private bool IsPriceSame(List<int> newPrice)
 		{
 			if (this.Price.Count != newPrice.Count)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			return true;
 		}
 
-		// Token: 0x06038C36 RID: 232502 RVA: 0x00D79C7C File Offset: 0x00D77E7C
+		// Token: 0x0602DB46 RID: 187206 RVA: 0x00CC832C File Offset: 0x00CC652C
 		private void RefreshBtn()
 		{
 			if (((IKurotatoPopupItemDetailOpenParam)this.OpenParam).IsOutSide.GetValueOrDefault())
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			this.BtnSellItem.SetEnableClick(holdWeaponData.Count > 1);
 		}
 
-		// Token: 0x06038C37 RID: 232503 RVA: 0x00D79D90 File Offset: 0x00D77F90
+		// Token: 0x0602DB47 RID: 187207 RVA: 0x00CC8440 File Offset: 0x00CC6640
 		private bool CanCompose(int weaponIncId)
 		{
 			IKurotatoWeaponData weaponDataByIncId = KurotatoModel.Instance.GetWeaponDataByIncId(weaponIncId);
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			return false;
 		}
 
-		// Token: 0x06038C38 RID: 232504 RVA: 0x00D79EB4 File Offset: 0x00D780B4
+		// Token: 0x0602DB48 RID: 187208 RVA: 0x00CC8564 File Offset: 0x00CC6764
 		private void RefreshItemLayout(int? composeIncId = null)
 		{
 			KurotatoModel instance = KurotatoModel.Instance;
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			}, false);
 		}
 
-		// Token: 0x06038C39 RID: 232505 RVA: 0x00D7A004 File Offset: 0x00D78204
+		// Token: 0x0602DB49 RID: 187209 RVA: 0x00CC86B4 File Offset: 0x00CC68B4
 		private void RefreshItemTip()
 		{
 			this.Index = Math.Max(0, Math.Min(this.Index, this.CardData.Count - 1));
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			this.RefreshBtn();
 		}
 
-		// Token: 0x06038C3A RID: 232506 RVA: 0x00D7A0C8 File Offset: 0x00D782C8
+		// Token: 0x0602DB4A RID: 187210 RVA: 0x00CC8778 File Offset: 0x00CC6978
 		private void OnClickCompose()
 		{
 			IKurotatoCardTip kurotatoCardTip = this.CardData[this.Index];
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			KurotatoController.Instance.RequestKurotatoRefineWeapon(kurotatoCardTip.SelectId).Forget<bool>();
 		}
 
-		// Token: 0x06038C3B RID: 232507 RVA: 0x00D7A24C File Offset: 0x00D7844C
+		// Token: 0x0602DB4B RID: 187211 RVA: 0x00CC88FC File Offset: 0x00CC6AFC
 		private void OnClickSell()
 		{
 			IKurotatoCardTip kurotatoCardTip = this.CardData[this.Index];
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			}
 		}
 
-		// Token: 0x06038C3C RID: 232508 RVA: 0x00D7A2C4 File Offset: 0x00D784C4
+		// Token: 0x0602DB4C RID: 187212 RVA: 0x00CC8974 File Offset: 0x00CC6B74
 		private void OpenSellWeaponConfirm(int weaponIncId)
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.KurotatoSellWeaponConfirm);
@@ -430,19 +430,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06038C3D RID: 232509 RVA: 0x00D7A3C0 File Offset: 0x00D785C0
+		// Token: 0x0602DB4D RID: 187213 RVA: 0x00CC8A70 File Offset: 0x00CC6C70
 		private void OnToggleSellWeaponConfirm(bool isSelectedOn)
 		{
 			KurotatoModel.Instance.HideSellWeaponConfirmBox = isSelectedOn;
 		}
 
-		// Token: 0x06038C3E RID: 232510 RVA: 0x00D7A3CD File Offset: 0x00D785CD
+		// Token: 0x0602DB4E RID: 187214 RVA: 0x00CC8A7D File Offset: 0x00CC6C7D
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06038C3F RID: 232511 RVA: 0x00D7A3D8 File Offset: 0x00D785D8
+		// Token: 0x0602DB4F RID: 187215 RVA: 0x00CC8A88 File Offset: 0x00CC6C88
 		private UniTask DoSellWeapon(int weaponIncId)
 		{
 			KurotatoPopupItemDetailView.<DoSellWeapon>d__35 <DoSellWeapon>d__;
@@ -453,19 +453,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			return <DoSellWeapon>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038C40 RID: 232512 RVA: 0x00D7A41C File Offset: 0x00D7861C
+		// Token: 0x0602DB50 RID: 187216 RVA: 0x00CC8ACC File Offset: 0x00CC6CCC
 		private void OnUpdateWeapon()
 		{
 			this.SyncWeaponDataAndRefresh(null);
 		}
 
-		// Token: 0x06038C41 RID: 232513 RVA: 0x00D7A438 File Offset: 0x00D78638
+		// Token: 0x0602DB51 RID: 187217 RVA: 0x00CC8AE8 File Offset: 0x00CC6CE8
 		private void OnWeaponRefined(int newWeaponIncId)
 		{
 			this.SyncWeaponDataAndRefresh(new int?(newWeaponIncId));
 		}
 
-		// Token: 0x06038C42 RID: 232514 RVA: 0x00D7A446 File Offset: 0x00D78646
+		// Token: 0x0602DB52 RID: 187218 RVA: 0x00CC8AF6 File Offset: 0x00CC6CF6
 		private void OnClickGrid(IKurotatoSmallItemGridData data, EToggleState state, int gridIndex)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -480,10 +480,10 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			}
 		}
 
-		// Token: 0x0401DC72 RID: 121970
+		// Token: 0x04018708 RID: 100104
 		private readonly PopupCaptionItem CaptionItem = new PopupCaptionItem(null);
 
-		// Token: 0x0401DC73 RID: 121971
+		// Token: 0x04018709 RID: 100105
 		[Nullable(new byte[]
 		{
 			2,
@@ -492,52 +492,52 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 		})]
 		private GenericLayout<KurotatoWeaponSmallItemGrid, IKurotatoSmallItemGridData> ItemLayout;
 
-		// Token: 0x0401DC74 RID: 121972
+		// Token: 0x0401870A RID: 100106
 		[Nullable(2)]
 		private KurotatoWeaponSmallItemGrid SelectItem;
 
-		// Token: 0x0401DC75 RID: 121973
+		// Token: 0x0401870B RID: 100107
 		private readonly KurotatoItemInfoTipPanel ItemTip = new KurotatoItemInfoTipPanel();
 
-		// Token: 0x0401DC76 RID: 121974
+		// Token: 0x0401870C RID: 100108
 		private readonly ButtonItem BtnComposeItem = new ButtonItem(null);
 
-		// Token: 0x0401DC77 RID: 121975
+		// Token: 0x0401870D RID: 100109
 		private readonly ButtonItem BtnSellItem = new ButtonItem(null);
 
-		// Token: 0x0401DC78 RID: 121976
+		// Token: 0x0401870E RID: 100110
 		private readonly KurotatoCurrencyItem CurrencyItem = new KurotatoCurrencyItem();
 
-		// Token: 0x0401DC79 RID: 121977
+		// Token: 0x0401870F RID: 100111
 		private List<IKurotatoCardTip> CardData = new List<IKurotatoCardTip>();
 
-		// Token: 0x0401DC7A RID: 121978
+		// Token: 0x04018710 RID: 100112
 		private List<int> Price = new List<int>();
 
-		// Token: 0x0401DC7B RID: 121979
+		// Token: 0x04018711 RID: 100113
 		private int Index;
 
-		// Token: 0x0200B90E RID: 47374
+		// Token: 0x0200A32F RID: 41775
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04037F8B RID: 229259
+			// Token: 0x0403299B RID: 207259
 			Caption,
-			// Token: 0x04037F8C RID: 229260
+			// Token: 0x0403299C RID: 207260
 			PanelCost,
-			// Token: 0x04037F8D RID: 229261
+			// Token: 0x0403299D RID: 207261
 			BtnBack,
-			// Token: 0x04037F8E RID: 229262
+			// Token: 0x0403299E RID: 207262
 			TipItem,
-			// Token: 0x04037F8F RID: 229263
+			// Token: 0x0403299F RID: 207263
 			HorizontalLayout,
-			// Token: 0x04037F90 RID: 229264
+			// Token: 0x040329A0 RID: 207264
 			WeaponItem,
-			// Token: 0x04037F91 RID: 229265
+			// Token: 0x040329A1 RID: 207265
 			BtnCompose,
-			// Token: 0x04037F92 RID: 229266
+			// Token: 0x040329A2 RID: 207266
 			BtnSell,
-			// Token: 0x04037F93 RID: 229267
+			// Token: 0x040329A3 RID: 207267
 			BtnClose
 		}
 	}

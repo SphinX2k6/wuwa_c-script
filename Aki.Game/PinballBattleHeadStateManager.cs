@@ -6,19 +6,19 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02000EAA RID: 3754
+// Token: 0x0200035F RID: 863
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballBattleHeadStateManager
 {
-	// Token: 0x06005CB1 RID: 23729 RVA: 0x00110DAC File Offset: 0x0010EFAC
+	// Token: 0x06003048 RID: 12360 RVA: 0x00118A48 File Offset: 0x00116C48
 	public void Init()
 	{
 		string stringConfig = ConfigCommonParamById.GetStringConfig("HeadStateScaleCurvePath");
 		this.HeadStateScaleCurve = ResourceSystem.Instance.Load<UCurveFloat>(stringConfig, "js_undefined");
 	}
 
-	// Token: 0x06005CB2 RID: 23730 RVA: 0x00110DDC File Offset: 0x0010EFDC
+	// Token: 0x06003049 RID: 12361 RVA: 0x00118A78 File Offset: 0x00116C78
 	public void Clear()
 	{
 		foreach (PinballBattleHeadStateUiBase pinballBattleHeadStateUiBase in this.HeadStateMap.Values)
@@ -28,7 +28,7 @@ public class PinballBattleHeadStateManager
 		this.HeadStateMap.Clear();
 	}
 
-	// Token: 0x06005CB3 RID: 23731 RVA: 0x00110E44 File Offset: 0x0010F044
+	// Token: 0x0600304A RID: 12362 RVA: 0x00118AE0 File Offset: 0x00116CE0
 	public void UpdateHeadState(FKSC_HeadHpContext headContext)
 	{
 		EKSC_HeadHpContextType actionType = headContext.ActionType;
@@ -44,7 +44,7 @@ public class PinballBattleHeadStateManager
 		this.HandleRemove(headContext);
 	}
 
-	// Token: 0x06005CB4 RID: 23732 RVA: 0x00110E70 File Offset: 0x0010F070
+	// Token: 0x0600304B RID: 12363 RVA: 0x00118B0C File Offset: 0x00116D0C
 	private void HandleAddOrUpdate(FKSC_HeadHpContext headContext)
 	{
 		PinballBattleHeadStateUiBase pinballBattleHeadStateUiBase;
@@ -60,7 +60,7 @@ public class PinballBattleHeadStateManager
 		pinballBattleHeadStateUiBase.UpdateByHeadInfo(headContext);
 	}
 
-	// Token: 0x06005CB5 RID: 23733 RVA: 0x00110EB8 File Offset: 0x0010F0B8
+	// Token: 0x0600304C RID: 12364 RVA: 0x00118B54 File Offset: 0x00116D54
 	private void HandleRemove(FKSC_HeadHpContext headContext)
 	{
 		PinballBattleHeadStateUiBase pinballBattleHeadStateUiBase;
@@ -71,7 +71,7 @@ public class PinballBattleHeadStateManager
 		}
 	}
 
-	// Token: 0x06005CB6 RID: 23734 RVA: 0x00110EF8 File Offset: 0x0010F0F8
+	// Token: 0x0600304D RID: 12365 RVA: 0x00118B94 File Offset: 0x00116D94
 	[return: Nullable(2)]
 	private PinballBattleHeadStateUiBase CreateHeadUiItem(FKSC_HeadHpContext headContext)
 	{
@@ -101,10 +101,10 @@ public class PinballBattleHeadStateManager
 		return pinballBattleHeadStateUiBase;
 	}
 
-	// Token: 0x04002A47 RID: 10823
+	// Token: 0x04002AE2 RID: 10978
 	private readonly Dictionary<int, PinballBattleHeadStateUiBase> HeadStateMap = new Dictionary<int, PinballBattleHeadStateUiBase>();
 
-	// Token: 0x04002A48 RID: 10824
+	// Token: 0x04002AE3 RID: 10979
 	[Nullable(2)]
 	private UCurveFloat HeadStateScaleCurve;
 }

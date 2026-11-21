@@ -1,15 +1,15 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02002D7F RID: 11647
+// Token: 0x020022D9 RID: 8921
 public class BulletActionAttachActor : BulletActionBase
 {
-	// Token: 0x060187B8 RID: 100280 RVA: 0x0063B01D File Offset: 0x0063921D
+	// Token: 0x0601605A RID: 90202 RVA: 0x0066102D File Offset: 0x0065F22D
 	public BulletActionAttachActor(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x060187B9 RID: 100281 RVA: 0x0063B028 File Offset: 0x00639228
+	// Token: 0x0601605B RID: 90203 RVA: 0x00661038 File Offset: 0x0065F238
 	protected unsafe override void OnExecute()
 	{
 		BulletActionInfoAttachActor bulletActionInfoAttachActor = (BulletActionInfoAttachActor)this.ActionInfo;

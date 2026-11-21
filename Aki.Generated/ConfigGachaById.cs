@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200036D RID: 877
+	// Token: 0x02000382 RID: 898
 	public class ConfigGachaById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001493 RID: 5267 RVA: 0x000CDBA3 File Offset: 0x000CBDA3
+		// Token: 0x06001511 RID: 5393 RVA: 0x000D40AF File Offset: 0x000D22AF
 		static ConfigGachaById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGachaById.CreateStaticDefaultValue), new Action(ConfigGachaById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001494 RID: 5268 RVA: 0x000CDBC4 File Offset: 0x000CBDC4
+		// Token: 0x06001512 RID: 5394 RVA: 0x000D40D0 File Offset: 0x000D22D0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGachaById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001495 RID: 5269 RVA: 0x000CDC43 File Offset: 0x000CBE43
+		// Token: 0x06001513 RID: 5395 RVA: 0x000D414F File Offset: 0x000D234F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGachaById.LogPair = null;
 			ConfigGachaById.HandleId = 0;
 		}
 
-		// Token: 0x06001496 RID: 5270 RVA: 0x000CDC51 File Offset: 0x000CBE51
+		// Token: 0x06001514 RID: 5396 RVA: 0x000D415D File Offset: 0x000D235D
 		public static void Init()
 		{
 			ConfigGachaById.HandleId = ConfigCommon.InitDataStatement(ConfigGachaById.HandleId, "db_gacha.db", "select BinData from `Gacha` where Id=?");
 		}
 
-		// Token: 0x06001497 RID: 5271 RVA: 0x000CDC6C File Offset: 0x000CBE6C
+		// Token: 0x06001515 RID: 5397 RVA: 0x000D4178 File Offset: 0x000D2378
 		public static Gacha? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGachaById.HandleId, ConfigGachaById.LogPair))
@@ -89,7 +89,7 @@ namespace Aki.Config
 			return new Gacha?(rootAsGacha);
 		}
 
-		// Token: 0x06001498 RID: 5272 RVA: 0x000CDDE4 File Offset: 0x000CBFE4
+		// Token: 0x06001516 RID: 5398 RVA: 0x000D42F0 File Offset: 0x000D24F0
 		[NullableContext(2)]
 		public static IReadOnlyList<Gacha> GetConfigList(int p0Id, bool useCache = true)
 		{
@@ -142,22 +142,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040017DF RID: 6111
+		// Token: 0x04001872 RID: 6258
 		private const string DB = "db_gacha.db";
 
-		// Token: 0x040017E0 RID: 6112
+		// Token: 0x04001873 RID: 6259
 		private const string FILE = "c.抽卡.xlsx";
 
-		// Token: 0x040017E1 RID: 6113
+		// Token: 0x04001874 RID: 6260
 		private const string TABLE = "Gacha";
 
-		// Token: 0x040017E2 RID: 6114
+		// Token: 0x04001875 RID: 6261
 		private const string COMMAND = "select BinData from `Gacha` where Id=?";
 
-		// Token: 0x040017E3 RID: 6115
+		// Token: 0x04001876 RID: 6262
 		private const string KEY_PREFIX = "GachaById";
 
-		// Token: 0x040017E4 RID: 6116
+		// Token: 0x04001877 RID: 6263
 		[Nullable(new byte[]
 		{
 			2,
@@ -167,7 +167,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040017E5 RID: 6117
+		// Token: 0x04001878 RID: 6264
 		private static int HandleId;
 	}
 }

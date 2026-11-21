@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004172 RID: 16754
+	// Token: 0x020045B6 RID: 17846
 	public struct ISystemPromptType : IFlatbufferObject
 	{
-		// Token: 0x170076A8 RID: 30376
-		// (get) Token: 0x060189C7 RID: 100807 RVA: 0x0038B890 File Offset: 0x00389A90
+		// Token: 0x17007CB7 RID: 31927
+		// (get) Token: 0x0601A08F RID: 106639 RVA: 0x003B5E4C File Offset: 0x003B404C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060189C8 RID: 100808 RVA: 0x0038B89D File Offset: 0x00389A9D
+		// Token: 0x0601A090 RID: 106640 RVA: 0x003B5E59 File Offset: 0x003B4059
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060189C9 RID: 100809 RVA: 0x0038B8A4 File Offset: 0x00389AA4
+		// Token: 0x0601A091 RID: 106641 RVA: 0x003B5E60 File Offset: 0x003B4060
 		public static ISystemPromptType GetRootAsISystemPromptType(ByteBuffer _bb)
 		{
 			return ISystemPromptType.GetRootAsISystemPromptType(_bb, default(ISystemPromptType));
 		}
 
-		// Token: 0x060189CA RID: 100810 RVA: 0x0038B8C0 File Offset: 0x00389AC0
+		// Token: 0x0601A092 RID: 106642 RVA: 0x003B5E7C File Offset: 0x003B407C
 		public static ISystemPromptType GetRootAsISystemPromptType(ByteBuffer _bb, ISystemPromptType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060189CB RID: 100811 RVA: 0x0038B8DD File Offset: 0x00389ADD
+		// Token: 0x0601A093 RID: 106643 RVA: 0x003B5E99 File Offset: 0x003B4099
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060189CC RID: 100812 RVA: 0x0038B8EC File Offset: 0x00389AEC
+		// Token: 0x0601A094 RID: 106644 RVA: 0x003B5EA8 File Offset: 0x003B40A8
 		public ISystemPromptType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170076A9 RID: 30377
-		// (get) Token: 0x060189CD RID: 100813 RVA: 0x0038B8FC File Offset: 0x00389AFC
+		// Token: 0x17007CB8 RID: 31928
+		// (get) Token: 0x0601A095 RID: 106645 RVA: 0x003B5EB8 File Offset: 0x003B40B8
 		public ESystemPromptType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060189CE RID: 100814 RVA: 0x0038B938 File Offset: 0x00389B38
+		// Token: 0x0601A096 RID: 106646 RVA: 0x003B5EF4 File Offset: 0x003B40F4
 		public static Offset<ISystemPromptType> CreateISystemPromptType(FlatBufferBuilder builder, ESystemPromptType Type = ESystemPromptType.AreaName)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ISystemPromptType.EndISystemPromptType(builder);
 		}
 
-		// Token: 0x060189CF RID: 100815 RVA: 0x0038B94E File Offset: 0x00389B4E
+		// Token: 0x0601A097 RID: 106647 RVA: 0x003B5F0A File Offset: 0x003B410A
 		public static void StartISystemPromptType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060189D0 RID: 100816 RVA: 0x0038B957 File Offset: 0x00389B57
+		// Token: 0x0601A098 RID: 106648 RVA: 0x003B5F13 File Offset: 0x003B4113
 		public static void AddType(FlatBufferBuilder builder, ESystemPromptType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060189D1 RID: 100817 RVA: 0x0038B962 File Offset: 0x00389B62
+		// Token: 0x0601A099 RID: 106649 RVA: 0x003B5F1E File Offset: 0x003B411E
 		public static Offset<ISystemPromptType> EndISystemPromptType(FlatBufferBuilder builder)
 		{
 			return new Offset<ISystemPromptType>(builder.EndTable());
 		}
 
-		// Token: 0x060189D2 RID: 100818 RVA: 0x0038B970 File Offset: 0x00389B70
+		// Token: 0x0601A09A RID: 106650 RVA: 0x003B5F2C File Offset: 0x003B412C
 		public ISystemPromptTypeT UnPack()
 		{
 			ISystemPromptTypeT systemPromptTypeT = new ISystemPromptTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return systemPromptTypeT;
 		}
 
-		// Token: 0x060189D3 RID: 100819 RVA: 0x0038B98B File Offset: 0x00389B8B
+		// Token: 0x0601A09B RID: 106651 RVA: 0x003B5F47 File Offset: 0x003B4147
 		public void UnPackTo(ISystemPromptTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060189D4 RID: 100820 RVA: 0x0038B99C File Offset: 0x00389B9C
+		// Token: 0x0601A09C RID: 106652 RVA: 0x003B5F58 File Offset: 0x003B4158
 		public static Offset<ISystemPromptType> Pack(FlatBufferBuilder builder, ISystemPromptTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ISystemPromptType.CreateISystemPromptType(builder, _o.Type);
 		}
 
-		// Token: 0x0400BD8D RID: 48525
+		// Token: 0x0400C77B RID: 51067
 		private Table __p;
 	}
 }

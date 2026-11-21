@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 {
-	// Token: 0x02005ED9 RID: 24281
+	// Token: 0x0200651C RID: 25884
 	public class TCommonBtDecoratorUnion
 	{
-		// Token: 0x1700B5A0 RID: 46496
-		// (get) Token: 0x06029B4E RID: 170830 RVA: 0x005B9755 File Offset: 0x005B7955
-		// (set) Token: 0x06029B4F RID: 170831 RVA: 0x005B975D File Offset: 0x005B795D
+		// Token: 0x1700BF0B RID: 48907
+		// (get) Token: 0x0602C202 RID: 180738 RVA: 0x00602C39 File Offset: 0x00600E39
+		// (set) Token: 0x0602C203 RID: 180739 RVA: 0x00602C41 File Offset: 0x00600E41
 		public TCommonBtDecorator Type { get; set; }
 
-		// Token: 0x1700B5A1 RID: 46497
-		// (get) Token: 0x06029B50 RID: 170832 RVA: 0x005B9766 File Offset: 0x005B7966
-		// (set) Token: 0x06029B51 RID: 170833 RVA: 0x005B976E File Offset: 0x005B796E
+		// Token: 0x1700BF0C RID: 48908
+		// (get) Token: 0x0602C204 RID: 180740 RVA: 0x00602C4A File Offset: 0x00600E4A
+		// (set) Token: 0x0602C205 RID: 180741 RVA: 0x00602C52 File Offset: 0x00600E52
 		public object Value { get; set; }
 
-		// Token: 0x06029B52 RID: 170834 RVA: 0x005B9777 File Offset: 0x005B7977
+		// Token: 0x0602C206 RID: 180742 RVA: 0x00602C5B File Offset: 0x00600E5B
 		public TCommonBtDecoratorUnion()
 		{
 			this.Type = TCommonBtDecorator.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06029B53 RID: 170835 RVA: 0x005B978D File Offset: 0x005B798D
+		// Token: 0x0602C207 RID: 180743 RVA: 0x00602C71 File Offset: 0x00600E71
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06029B54 RID: 170836 RVA: 0x005B979F File Offset: 0x005B799F
+		// Token: 0x0602C208 RID: 180744 RVA: 0x00602C83 File Offset: 0x00600E83
 		public ICommonBtAlwaysFalseDecoratorT AsICommonBtAlwaysFalseDecorator()
 		{
 			return this.As<ICommonBtAlwaysFalseDecoratorT>();
 		}
 
-		// Token: 0x06029B55 RID: 170837 RVA: 0x005B97A7 File Offset: 0x005B79A7
+		// Token: 0x0602C209 RID: 180745 RVA: 0x00602C8B File Offset: 0x00600E8B
 		public static TCommonBtDecoratorUnion FromICommonBtAlwaysFalseDecorator(ICommonBtAlwaysFalseDecoratorT _icommonbtalwaysfalsedecorator)
 		{
 			return new TCommonBtDecoratorUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			};
 		}
 
-		// Token: 0x06029B56 RID: 170838 RVA: 0x005B97BC File Offset: 0x005B79BC
+		// Token: 0x0602C20A RID: 180746 RVA: 0x00602CA0 File Offset: 0x00600EA0
 		public ICommonBtAlwaysTrueDecoratorT AsICommonBtAlwaysTrueDecorator()
 		{
 			return this.As<ICommonBtAlwaysTrueDecoratorT>();
 		}
 
-		// Token: 0x06029B57 RID: 170839 RVA: 0x005B97C4 File Offset: 0x005B79C4
+		// Token: 0x0602C20B RID: 180747 RVA: 0x00602CA8 File Offset: 0x00600EA8
 		public static TCommonBtDecoratorUnion FromICommonBtAlwaysTrueDecorator(ICommonBtAlwaysTrueDecoratorT _icommonbtalwaystruedecorator)
 		{
 			return new TCommonBtDecoratorUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			};
 		}
 
-		// Token: 0x06029B58 RID: 170840 RVA: 0x005B97D9 File Offset: 0x005B79D9
+		// Token: 0x0602C20C RID: 180748 RVA: 0x00602CBD File Offset: 0x00600EBD
 		public ICommonBtConditionDecoratorT AsICommonBtConditionDecorator()
 		{
 			return this.As<ICommonBtConditionDecoratorT>();
 		}
 
-		// Token: 0x06029B59 RID: 170841 RVA: 0x005B97E1 File Offset: 0x005B79E1
+		// Token: 0x0602C20D RID: 180749 RVA: 0x00602CC5 File Offset: 0x00600EC5
 		public static TCommonBtDecoratorUnion FromICommonBtConditionDecorator(ICommonBtConditionDecoratorT _icommonbtconditiondecorator)
 		{
 			return new TCommonBtDecoratorUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			};
 		}
 
-		// Token: 0x06029B5A RID: 170842 RVA: 0x005B97F6 File Offset: 0x005B79F6
+		// Token: 0x0602C20E RID: 180750 RVA: 0x00602CDA File Offset: 0x00600EDA
 		public ICommonBtCoolDownDecoratorT AsICommonBtCoolDownDecorator()
 		{
 			return this.As<ICommonBtCoolDownDecoratorT>();
 		}
 
-		// Token: 0x06029B5B RID: 170843 RVA: 0x005B97FE File Offset: 0x005B79FE
+		// Token: 0x0602C20F RID: 180751 RVA: 0x00602CE2 File Offset: 0x00600EE2
 		public static TCommonBtDecoratorUnion FromICommonBtCoolDownDecorator(ICommonBtCoolDownDecoratorT _icommonbtcooldowndecorator)
 		{
 			return new TCommonBtDecoratorUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			};
 		}
 
-		// Token: 0x06029B5C RID: 170844 RVA: 0x005B9813 File Offset: 0x005B7A13
+		// Token: 0x0602C210 RID: 180752 RVA: 0x00602CF7 File Offset: 0x00600EF7
 		public ICommonBtDoOnceDecoratorT AsICommonBtDoOnceDecorator()
 		{
 			return this.As<ICommonBtDoOnceDecoratorT>();
 		}
 
-		// Token: 0x06029B5D RID: 170845 RVA: 0x005B981B File Offset: 0x005B7A1B
+		// Token: 0x0602C211 RID: 180753 RVA: 0x00602CFF File Offset: 0x00600EFF
 		public static TCommonBtDecoratorUnion FromICommonBtDoOnceDecorator(ICommonBtDoOnceDecoratorT _icommonbtdooncedecorator)
 		{
 			return new TCommonBtDecoratorUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			};
 		}
 
-		// Token: 0x06029B5E RID: 170846 RVA: 0x005B9830 File Offset: 0x005B7A30
+		// Token: 0x0602C212 RID: 180754 RVA: 0x00602D14 File Offset: 0x00600F14
 		public static int Pack(FlatBufferBuilder builder, TCommonBtDecoratorUnion _o)
 		{
 			switch (_o.Type)

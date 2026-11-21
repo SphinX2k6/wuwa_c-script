@@ -8,12 +8,12 @@ using CSharpScript.Game.Input;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 using UnrealEngine;
 
-// Token: 0x020030C5 RID: 12485
+// Token: 0x0200261D RID: 9757
 [NullableContext(2)]
 [Nullable(0)]
 public class FollowShooterInputLayer : InputLayer
 {
-	// Token: 0x0601ABC5 RID: 109509 RVA: 0x00734EC0 File Offset: 0x007330C0
+	// Token: 0x060185D8 RID: 99800 RVA: 0x0075AB08 File Offset: 0x00758D08
 	[NullableContext(1)]
 	public void Start(FollowShooterComponent followShooterComp)
 	{
@@ -52,7 +52,7 @@ public class FollowShooterInputLayer : InputLayer
 		}
 	}
 
-	// Token: 0x0601ABC6 RID: 109510 RVA: 0x00734FF4 File Offset: 0x007331F4
+	// Token: 0x060185D9 RID: 99801 RVA: 0x0075AC3C File Offset: 0x00758E3C
 	private void OnBlockInputTagChanged(int tagId, bool tagExists)
 	{
 		CSharpScript.Game.Input.EInputAction item;
@@ -68,20 +68,20 @@ public class FollowShooterInputLayer : InputLayer
 		this.BlockInputActions.Remove(item);
 	}
 
-	// Token: 0x0601ABC7 RID: 109511 RVA: 0x0073502F File Offset: 0x0073322F
+	// Token: 0x060185DA RID: 99802 RVA: 0x0075AC77 File Offset: 0x00758E77
 	public void ClearInputActions()
 	{
 		this.InputActions.Clear();
 	}
 
-	// Token: 0x0601ABC8 RID: 109512 RVA: 0x0073503C File Offset: 0x0073323C
+	// Token: 0x060185DB RID: 99803 RVA: 0x0075AC84 File Offset: 0x00758E84
 	[NullableContext(0)]
 	public void RegisterInputAction(ValueTuple<AkiClient.Game.Aki.Character.Input.Enum.EInputAction, EInputState> action)
 	{
 		this.InputActions.Add(new ValueTuple<CSharpScript.Game.Input.EInputAction, EInputState>(action.Item1, action.Item2));
 	}
 
-	// Token: 0x0601ABC9 RID: 109513 RVA: 0x0073506D File Offset: 0x0073326D
+	// Token: 0x060185DC RID: 99804 RVA: 0x0075ACB5 File Offset: 0x00758EB5
 	public override void Clear()
 	{
 		this.FollowShooterComp = null;
@@ -89,13 +89,13 @@ public class FollowShooterInputLayer : InputLayer
 		this.InputActions.Clear();
 	}
 
-	// Token: 0x0601ABCA RID: 109514 RVA: 0x00735088 File Offset: 0x00733288
+	// Token: 0x060185DD RID: 99805 RVA: 0x0075ACD0 File Offset: 0x00758ED0
 	public override EInputLayer GetLayerType()
 	{
 		return EInputLayer.FollowShooter;
 	}
 
-	// Token: 0x0601ABCB RID: 109515 RVA: 0x0073508B File Offset: 0x0073328B
+	// Token: 0x060185DE RID: 99806 RVA: 0x0075ACD3 File Offset: 0x00758ED3
 	public override BP_InputBase_C GetBpInputComp()
 	{
 		if (this.BpInputComp != null)
@@ -109,7 +109,17 @@ public class FollowShooterInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601ABCC RID: 109516 RVA: 0x007350B4 File Offset: 0x007332B4
+	// Token: 0x060185DF RID: 99807 RVA: 0x0075ACF9 File Offset: 0x00758EF9
+	public override BP_InputBase_C GetBpInputComp(CSharpScript.Game.Input.EInputAction action, EInputState state)
+	{
+		if (!this.IsNeedInput(action, state))
+		{
+			return null;
+		}
+		return this.BpInputComp;
+	}
+
+	// Token: 0x060185E0 RID: 99808 RVA: 0x0075AD10 File Offset: 0x00758F10
 	public override SInputCommand HandlePress(CSharpScript.Game.Input.EInputAction action, float time)
 	{
 		if (!this.IsNeedInput(action, EInputState.Press))
@@ -139,7 +149,7 @@ public class FollowShooterInputLayer : InputLayer
 		return InputLayer.GetSwallowCommand();
 	}
 
-	// Token: 0x0601ABCD RID: 109517 RVA: 0x00735154 File Offset: 0x00733354
+	// Token: 0x060185E1 RID: 99809 RVA: 0x0075ADB0 File Offset: 0x00758FB0
 	public override SInputCommand HandleHold(CSharpScript.Game.Input.EInputAction action, float time)
 	{
 		if (!this.IsNeedInput(action, EInputState.Hold))
@@ -169,7 +179,7 @@ public class FollowShooterInputLayer : InputLayer
 		return InputLayer.GetSwallowCommand();
 	}
 
-	// Token: 0x0601ABCE RID: 109518 RVA: 0x007351F4 File Offset: 0x007333F4
+	// Token: 0x060185E2 RID: 99810 RVA: 0x0075AE50 File Offset: 0x00759050
 	public override SInputCommand HandleRelease(CSharpScript.Game.Input.EInputAction action, float time)
 	{
 		if (!this.IsNeedInput(action, EInputState.Release))
@@ -199,7 +209,7 @@ public class FollowShooterInputLayer : InputLayer
 		return InputLayer.GetSwallowCommand();
 	}
 
-	// Token: 0x0601ABCF RID: 109519 RVA: 0x00735294 File Offset: 0x00733494
+	// Token: 0x060185E3 RID: 99811 RVA: 0x0075AEF0 File Offset: 0x007590F0
 	private bool IsNeedInput(CSharpScript.Game.Input.EInputAction actionType, EInputState stateType)
 	{
 		if (this.BpInputComp == null)
@@ -227,7 +237,7 @@ public class FollowShooterInputLayer : InputLayer
 		return false;
 	}
 
-	// Token: 0x0601ABD1 RID: 109521 RVA: 0x00735360 File Offset: 0x00733560
+	// Token: 0x060185E5 RID: 99813 RVA: 0x0075AFBC File Offset: 0x007591BC
 	// Note: this type is marked as 'beforefieldinit'.
 	static FollowShooterInputLayer()
 	{
@@ -245,18 +255,18 @@ public class FollowShooterInputLayer : InputLayer
 		FollowShooterInputLayer.BlockInputTagToActionMap = dictionary;
 	}
 
-	// Token: 0x0400CE6E RID: 52846
+	// Token: 0x0400D25C RID: 53852
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly IReadOnlyDictionary<int, CSharpScript.Game.Input.EInputAction> BlockInputTagToActionMap;
 
-	// Token: 0x0400CE6F RID: 52847
+	// Token: 0x0400D25D RID: 53853
 	private FollowShooterComponent FollowShooterComp;
 
-	// Token: 0x0400CE70 RID: 52848
+	// Token: 0x0400D25E RID: 53854
 	private BP_InputBase_C BpInputComp;
 
-	// Token: 0x0400CE71 RID: 52849
+	// Token: 0x0400D25F RID: 53855
 	[Nullable(new byte[]
 	{
 		1,
@@ -264,11 +274,11 @@ public class FollowShooterInputLayer : InputLayer
 	})]
 	private readonly HashSet<ValueTuple<CSharpScript.Game.Input.EInputAction, EInputState>> InputActions = new HashSet<ValueTuple<CSharpScript.Game.Input.EInputAction, EInputState>>();
 
-	// Token: 0x0400CE72 RID: 52850
+	// Token: 0x0400D260 RID: 53856
 	[Nullable(1)]
 	private readonly List<ITagTask> BlockInputTagListeners = new List<ITagTask>();
 
-	// Token: 0x0400CE73 RID: 52851
+	// Token: 0x0400D261 RID: 53857
 	[Nullable(1)]
 	private readonly HashSet<CSharpScript.Game.Input.EInputAction> BlockInputActions = new HashSet<CSharpScript.Game.Input.EInputAction>();
 }

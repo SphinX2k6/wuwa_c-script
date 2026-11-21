@@ -3,45 +3,45 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200588C RID: 22668
+	// Token: 0x02005E99 RID: 24217
 	public class IRotationConfigT
 	{
-		// Token: 0x1700A989 RID: 43401
-		// (get) Token: 0x0602632E RID: 156462 RVA: 0x00543F99 File Offset: 0x00542199
-		// (set) Token: 0x0602632F RID: 156463 RVA: 0x00543FA1 File Offset: 0x005421A1
+		// Token: 0x1700B2B9 RID: 45753
+		// (get) Token: 0x06028890 RID: 166032 RVA: 0x0058AAE5 File Offset: 0x00588CE5
+		// (set) Token: 0x06028891 RID: 166033 RVA: 0x0058AAED File Offset: 0x00588CED
 		public ERotationType Type { get; set; }
 
-		// Token: 0x1700A98A RID: 43402
-		// (get) Token: 0x06026330 RID: 156464 RVA: 0x00543FAA File Offset: 0x005421AA
-		// (set) Token: 0x06026331 RID: 156465 RVA: 0x00543FB2 File Offset: 0x005421B2
+		// Token: 0x1700B2BA RID: 45754
+		// (get) Token: 0x06028892 RID: 166034 RVA: 0x0058AAF6 File Offset: 0x00588CF6
+		// (set) Token: 0x06028893 RID: 166035 RVA: 0x0058AAFE File Offset: 0x00588CFE
 		public float Time { get; set; }
 
-		// Token: 0x1700A98B RID: 43403
-		// (get) Token: 0x06026332 RID: 156466 RVA: 0x00543FBB File Offset: 0x005421BB
-		// (set) Token: 0x06026333 RID: 156467 RVA: 0x00543FC3 File Offset: 0x005421C3
+		// Token: 0x1700B2BB RID: 45755
+		// (get) Token: 0x06028894 RID: 166036 RVA: 0x0058AB07 File Offset: 0x00588D07
+		// (set) Token: 0x06028895 RID: 166037 RVA: 0x0058AB0F File Offset: 0x00588D0F
 		public float Cd { get; set; }
 
-		// Token: 0x1700A98C RID: 43404
-		// (get) Token: 0x06026334 RID: 156468 RVA: 0x00543FCC File Offset: 0x005421CC
-		// (set) Token: 0x06026335 RID: 156469 RVA: 0x00543FD4 File Offset: 0x005421D4
+		// Token: 0x1700B2BC RID: 45756
+		// (get) Token: 0x06028896 RID: 166038 RVA: 0x0058AB18 File Offset: 0x00588D18
+		// (set) Token: 0x06028897 RID: 166039 RVA: 0x0058AB20 File Offset: 0x00588D20
 		public string Curve { get; set; }
 
-		// Token: 0x1700A98D RID: 43405
-		// (get) Token: 0x06026336 RID: 156470 RVA: 0x00543FDD File Offset: 0x005421DD
-		// (set) Token: 0x06026337 RID: 156471 RVA: 0x00543FE5 File Offset: 0x005421E5
+		// Token: 0x1700B2BD RID: 45757
+		// (get) Token: 0x06028898 RID: 166040 RVA: 0x0058AB29 File Offset: 0x00588D29
+		// (set) Token: 0x06028899 RID: 166041 RVA: 0x0058AB31 File Offset: 0x00588D31
 		public IVectorInfoT Axis { get; set; }
 
-		// Token: 0x1700A98E RID: 43406
-		// (get) Token: 0x06026338 RID: 156472 RVA: 0x00543FEE File Offset: 0x005421EE
-		// (set) Token: 0x06026339 RID: 156473 RVA: 0x00543FF6 File Offset: 0x005421F6
+		// Token: 0x1700B2BE RID: 45758
+		// (get) Token: 0x0602889A RID: 166042 RVA: 0x0058AB3A File Offset: 0x00588D3A
+		// (set) Token: 0x0602889B RID: 166043 RVA: 0x0058AB42 File Offset: 0x00588D42
 		public float Angle { get; set; }
 
-		// Token: 0x1700A98F RID: 43407
-		// (get) Token: 0x0602633A RID: 156474 RVA: 0x00543FFF File Offset: 0x005421FF
-		// (set) Token: 0x0602633B RID: 156475 RVA: 0x00544007 File Offset: 0x00542207
+		// Token: 0x1700B2BF RID: 45759
+		// (get) Token: 0x0602889C RID: 166044 RVA: 0x0058AB4B File Offset: 0x00588D4B
+		// (set) Token: 0x0602889D RID: 166045 RVA: 0x0058AB53 File Offset: 0x00588D53
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602633C RID: 156476 RVA: 0x00544010 File Offset: 0x00542210
+		// Token: 0x0602889E RID: 166046 RVA: 0x0058AB5C File Offset: 0x00588D5C
 		public IRotationConfigT()
 		{
 			this.Type = ERotationType.Relative;

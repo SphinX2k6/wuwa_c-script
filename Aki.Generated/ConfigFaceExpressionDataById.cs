@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002A9 RID: 681
+	// Token: 0x020002BE RID: 702
 	public class ConfigFaceExpressionDataById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000FFB RID: 4091 RVA: 0x000B3C41 File Offset: 0x000B1E41
+		// Token: 0x06001079 RID: 4217 RVA: 0x000BA14C File Offset: 0x000B834C
 		static ConfigFaceExpressionDataById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFaceExpressionDataById.CreateStaticDefaultValue), new Action(ConfigFaceExpressionDataById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000FFC RID: 4092 RVA: 0x000B3C60 File Offset: 0x000B1E60
+		// Token: 0x0600107A RID: 4218 RVA: 0x000BA16C File Offset: 0x000B836C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFaceExpressionDataById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000FFD RID: 4093 RVA: 0x000B3CDF File Offset: 0x000B1EDF
+		// Token: 0x0600107B RID: 4219 RVA: 0x000BA1EB File Offset: 0x000B83EB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFaceExpressionDataById.LogPair = null;
 			ConfigFaceExpressionDataById.HandleId = 0;
 		}
 
-		// Token: 0x06000FFE RID: 4094 RVA: 0x000B3CED File Offset: 0x000B1EED
+		// Token: 0x0600107C RID: 4220 RVA: 0x000BA1F9 File Offset: 0x000B83F9
 		public static void Init()
 		{
 			ConfigFaceExpressionDataById.HandleId = ConfigCommon.InitDataStatement(ConfigFaceExpressionDataById.HandleId, "db_faceexpressiondata.db", "select BinData from `FaceExpressionData` where Id=?");
 		}
 
-		// Token: 0x06000FFF RID: 4095 RVA: 0x000B3D08 File Offset: 0x000B1F08
+		// Token: 0x0600107D RID: 4221 RVA: 0x000BA214 File Offset: 0x000B8414
 		public static FaceExpressionData? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFaceExpressionDataById.HandleId, ConfigFaceExpressionDataById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FaceExpressionData?(rootAsFaceExpressionData);
 		}
 
-		// Token: 0x04001283 RID: 4739
+		// Token: 0x04001316 RID: 4886
 		private const string DB = "db_faceexpressiondata.db";
 
-		// Token: 0x04001284 RID: 4740
+		// Token: 0x04001317 RID: 4887
 		private const string FILE = "k.可视化编辑/c.Csv/b.表情/*.csv*";
 
-		// Token: 0x04001285 RID: 4741
+		// Token: 0x04001318 RID: 4888
 		private const string TABLE = "FaceExpressionData";
 
-		// Token: 0x04001286 RID: 4742
+		// Token: 0x04001319 RID: 4889
 		private const string COMMAND = "select BinData from `FaceExpressionData` where Id=?";
 
-		// Token: 0x04001287 RID: 4743
+		// Token: 0x0400131A RID: 4890
 		private const string KEY_PREFIX = "FaceExpressionDataById";
 
-		// Token: 0x04001288 RID: 4744
+		// Token: 0x0400131B RID: 4891
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001289 RID: 4745
+		// Token: 0x0400131C RID: 4892
 		private static int HandleId;
 	}
 }

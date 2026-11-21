@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B87 RID: 2951
+	// Token: 0x02000C55 RID: 3157
 	public class IHitLogicChangeCountDownState : IHitLogicType
 	{
-		// Token: 0x060043E3 RID: 17379 RVA: 0x000ACBAE File Offset: 0x000AADAE
-		[NullableContext(1)]
+		// Token: 0x0600483C RID: 18492 RVA: 0x000B6C72 File Offset: 0x000B4E72
 		public static IHitLogicChangeCountDownState Create(IHitLogicChangeCountDownState? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001292 RID: 4754
-		// (get) Token: 0x060043E4 RID: 17380 RVA: 0x000ACBCD File Offset: 0x000AADCD
+		// Token: 0x1700138D RID: 5005
+		// (get) Token: 0x0600483D RID: 18493 RVA: 0x000B6C91 File Offset: 0x000B4E91
 		public override EHitLogicType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002646 RID: 9798
+		// Token: 0x0400288E RID: 10382
 		private IHitLogicChangeCountDownState Instance;
 	}
 }

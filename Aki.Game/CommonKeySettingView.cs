@@ -6,16 +6,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002032 RID: 8242
+// Token: 0x02001505 RID: 5381
 public class CommonKeySettingView : UiViewBase
 {
-	// Token: 0x060102D1 RID: 66257 RVA: 0x003F08E3 File Offset: 0x003EEAE3
+	// Token: 0x0600D739 RID: 55097 RVA: 0x003FCEDB File Offset: 0x003FB0DB
 	[NullableContext(1)]
 	public CommonKeySettingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060102D2 RID: 66258 RVA: 0x003F08EC File Offset: 0x003EEAEC
+	// Token: 0x0600D73A RID: 55098 RVA: 0x003FCEE4 File Offset: 0x003FB0E4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class CommonKeySettingView : UiViewBase
 		};
 	}
 
-	// Token: 0x060102D3 RID: 66259 RVA: 0x003F0948 File Offset: 0x003EEB48
+	// Token: 0x0600D73B RID: 55099 RVA: 0x003FCF40 File Offset: 0x003FB140
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonKeySettingView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ public class CommonKeySettingView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060102D4 RID: 66260 RVA: 0x003F098C File Offset: 0x003EEB8C
+	// Token: 0x0600D73C RID: 55100 RVA: 0x003FCF84 File Offset: 0x003FB184
 	protected override void OnStart()
 	{
 		ICommonKeySettingViewOpenData commonKeySettingViewOpenData = this.OpenParam as ICommonKeySettingViewOpenData;
@@ -49,24 +49,24 @@ public class CommonKeySettingView : UiViewBase
 		base.SetTextureByPath(resourcePath, base.GetTexture(2), null, null);
 	}
 
-	// Token: 0x0400778B RID: 30603
+	// Token: 0x04007874 RID: 30836
 	[Nullable(2)]
 	private PopupCaptionItem Caption;
 
-	// Token: 0x0400778C RID: 30604
+	// Token: 0x04007875 RID: 30837
 	[Nullable(2)]
 	private CommonKeySettingPanel KeySettingPanel;
 
-	// Token: 0x0200862D RID: 34349
+	// Token: 0x020077B4 RID: 30644
 	private static class EComponentDefine
 	{
-		// Token: 0x0402BA97 RID: 178839
+		// Token: 0x04026DA6 RID: 159142
 		public const int ItemCaption = 0;
 
-		// Token: 0x0402BA98 RID: 178840
+		// Token: 0x04026DA7 RID: 159143
 		public const int ItemAttachParent = 1;
 
-		// Token: 0x0402BA99 RID: 178841
+		// Token: 0x04026DA8 RID: 159144
 		public const int BgTexture = 2;
 	}
 }

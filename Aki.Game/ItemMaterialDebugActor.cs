@@ -8,23 +8,23 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200348C RID: 13452
+// Token: 0x02002A00 RID: 10752
 [NullableContext(2)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Render/Scene/Item/MaterialController/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Scene/Item/MaterialController/ItemMaterialDebugActor.ItemMaterialDebugActor_C")]
 public class ItemMaterialDebugActor : AKuroEffectActor, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601D318 RID: 119576 RVA: 0x00821428 File Offset: 0x0081F628
+	// Token: 0x0601B01E RID: 110622 RVA: 0x00848724 File Offset: 0x00846924
 	public override void EditorTick(float deltaSecond)
 	{
 		ItemMaterialManager.Instance.Tick(deltaSecond * 1000f);
 		this.SimpleMaterialControllerUpdate();
 	}
 
-	// Token: 0x1700286E RID: 10350
-	// (get) Token: 0x0601D319 RID: 119577 RVA: 0x00821441 File Offset: 0x0081F641
-	// (set) Token: 0x0601D31A RID: 119578 RVA: 0x00821455 File Offset: 0x0081F655
+	// Token: 0x17002C0B RID: 11275
+	// (get) Token: 0x0601B01F RID: 110623 RVA: 0x0084873D File Offset: 0x0084693D
+	// (set) Token: 0x0601B020 RID: 110624 RVA: 0x00848751 File Offset: 0x00846951
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe AActor Actor
 	{
@@ -38,9 +38,9 @@ public class ItemMaterialDebugActor : AKuroEffectActor, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x1700286F RID: 10351
-	// (get) Token: 0x0601D31B RID: 119579 RVA: 0x0082146A File Offset: 0x0081F66A
-	// (set) Token: 0x0601D31C RID: 119580 RVA: 0x0082147E File Offset: 0x0081F67E
+	// Token: 0x17002C0C RID: 11276
+	// (get) Token: 0x0601B021 RID: 110625 RVA: 0x00848766 File Offset: 0x00846966
+	// (set) Token: 0x0601B022 RID: 110626 RVA: 0x0084877A File Offset: 0x0084697A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName SimpleScalarNameTest
 	{
@@ -54,9 +54,9 @@ public class ItemMaterialDebugActor : AKuroEffectActor, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17002870 RID: 10352
-	// (get) Token: 0x0601D31D RID: 119581 RVA: 0x00821493 File Offset: 0x0081F693
-	// (set) Token: 0x0601D31E RID: 119582 RVA: 0x008214A3 File Offset: 0x0081F6A3
+	// Token: 0x17002C0D RID: 11277
+	// (get) Token: 0x0601B023 RID: 110627 RVA: 0x0084878F File Offset: 0x0084698F
+	// (set) Token: 0x0601B024 RID: 110628 RVA: 0x0084879F File Offset: 0x0084699F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float SimpleScalarValueTest
 	{
@@ -70,9 +70,9 @@ public class ItemMaterialDebugActor : AKuroEffectActor, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17002871 RID: 10353
-	// (get) Token: 0x0601D31F RID: 119583 RVA: 0x008214B4 File Offset: 0x0081F6B4
-	// (set) Token: 0x0601D320 RID: 119584 RVA: 0x008214C8 File Offset: 0x0081F6C8
+	// Token: 0x17002C0E RID: 11278
+	// (get) Token: 0x0601B025 RID: 110629 RVA: 0x008487B0 File Offset: 0x008469B0
+	// (set) Token: 0x0601B026 RID: 110630 RVA: 0x008487C4 File Offset: 0x008469C4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName SimpleVectorNameTest
 	{
@@ -86,9 +86,9 @@ public class ItemMaterialDebugActor : AKuroEffectActor, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17002872 RID: 10354
-	// (get) Token: 0x0601D321 RID: 119585 RVA: 0x008214DD File Offset: 0x0081F6DD
-	// (set) Token: 0x0601D322 RID: 119586 RVA: 0x008214F1 File Offset: 0x0081F6F1
+	// Token: 0x17002C0F RID: 11279
+	// (get) Token: 0x0601B027 RID: 110631 RVA: 0x008487D9 File Offset: 0x008469D9
+	// (set) Token: 0x0601B028 RID: 110632 RVA: 0x008487ED File Offset: 0x008469ED
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FLinearColor SimpleVectorValueTest
 	{
@@ -102,9 +102,9 @@ public class ItemMaterialDebugActor : AKuroEffectActor, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17002873 RID: 10355
-	// (get) Token: 0x0601D323 RID: 119587 RVA: 0x00821506 File Offset: 0x0081F706
-	// (set) Token: 0x0601D324 RID: 119588 RVA: 0x0082151A File Offset: 0x0081F71A
+	// Token: 0x17002C10 RID: 11280
+	// (get) Token: 0x0601B029 RID: 110633 RVA: 0x00848802 File Offset: 0x00846A02
+	// (set) Token: 0x0601B02A RID: 110634 RVA: 0x00848816 File Offset: 0x00846A16
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ItemMaterialControllerGlobalData GlobalMaterialData
 	{
@@ -118,9 +118,9 @@ public class ItemMaterialDebugActor : AKuroEffectActor, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17002874 RID: 10356
-	// (get) Token: 0x0601D325 RID: 119589 RVA: 0x0082152F File Offset: 0x0081F72F
-	// (set) Token: 0x0601D326 RID: 119590 RVA: 0x00821543 File Offset: 0x0081F743
+	// Token: 0x17002C11 RID: 11281
+	// (get) Token: 0x0601B02B RID: 110635 RVA: 0x0084882B File Offset: 0x00846A2B
+	// (set) Token: 0x0601B02C RID: 110636 RVA: 0x0084883F File Offset: 0x00846A3F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ItemMaterialControllerActorData MaterialData
 	{
@@ -134,9 +134,9 @@ public class ItemMaterialDebugActor : AKuroEffectActor, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17002875 RID: 10357
-	// (get) Token: 0x0601D327 RID: 119591 RVA: 0x00821558 File Offset: 0x0081F758
-	// (set) Token: 0x0601D328 RID: 119592 RVA: 0x00821568 File Offset: 0x0081F768
+	// Token: 0x17002C12 RID: 11282
+	// (get) Token: 0x0601B02D RID: 110637 RVA: 0x00848854 File Offset: 0x00846A54
+	// (set) Token: 0x0601B02E RID: 110638 RVA: 0x00848864 File Offset: 0x00846A64
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ActorMaterialControllerNum
 	{
@@ -150,79 +150,61 @@ public class ItemMaterialDebugActor : AKuroEffectActor, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x0601D329 RID: 119593 RVA: 0x0082157C File Offset: 0x0081F77C
+	// Token: 0x0601B02F RID: 110639 RVA: 0x00848878 File Offset: 0x00846A78
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void DisableAllActorData()
+	public virtual void DisableAllActorData()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("DisableAllActorData"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(ItemMaterialDebugActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("DisableAllActorData"), ItemMaterialDebugActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.DisableAllActorData_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D32A RID: 119594 RVA: 0x008215EC File Offset: 0x0081F7EC
+	// Token: 0x0601B030 RID: 110640 RVA: 0x008488D1 File Offset: 0x00846AD1
 	protected void DisableAllActorData_Implementation()
 	{
 		ItemMaterialManager.Instance.DisableAllActorData();
 	}
 
-	// Token: 0x0601D32B RID: 119595 RVA: 0x008215FC File Offset: 0x0081F7FC
+	// Token: 0x0601B031 RID: 110641 RVA: 0x008488E0 File Offset: 0x00846AE0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void DisableActorData()
+	public virtual void DisableActorData()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("DisableActorData"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(ItemMaterialDebugActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("DisableActorData"), ItemMaterialDebugActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.DisableActorData_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D32C RID: 119596 RVA: 0x0082166C File Offset: 0x0081F86C
+	// Token: 0x0601B032 RID: 110642 RVA: 0x00848939 File Offset: 0x00846B39
 	protected void DisableActorData_Implementation()
 	{
 		ItemMaterialManager.Instance.DisableActorData((int)this.ActorMaterialControllerNum);
 	}
 
-	// Token: 0x0601D32D RID: 119597 RVA: 0x00821680 File Offset: 0x0081F880
+	// Token: 0x0601B033 RID: 110643 RVA: 0x00848950 File Offset: 0x00846B50
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void EnableActorData()
+	public virtual void EnableActorData()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("EnableActorData"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(ItemMaterialDebugActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("EnableActorData"), ItemMaterialDebugActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.EnableActorData_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D32E RID: 119598 RVA: 0x008216F0 File Offset: 0x0081F8F0
+	// Token: 0x0601B034 RID: 110644 RVA: 0x008489A9 File Offset: 0x00846BA9
 	protected void EnableActorData_Implementation()
 	{
 		if (this.Controllers == null)
@@ -235,53 +217,41 @@ public class ItemMaterialDebugActor : AKuroEffectActor, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x0601D32F RID: 119599 RVA: 0x0082172C File Offset: 0x0081F92C
+	// Token: 0x0601B035 RID: 110645 RVA: 0x008489E8 File Offset: 0x00846BE8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void SimpleMaterialControllerDisable()
+	public virtual void SimpleMaterialControllerDisable()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SimpleMaterialControllerDisable"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(ItemMaterialDebugActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SimpleMaterialControllerDisable"), ItemMaterialDebugActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.SimpleMaterialControllerDisable_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D330 RID: 119600 RVA: 0x0082179C File Offset: 0x0081F99C
+	// Token: 0x0601B036 RID: 110646 RVA: 0x00848A41 File Offset: 0x00846C41
 	protected void SimpleMaterialControllerDisable_Implementation()
 	{
 		ItemMaterialManager.Instance.DisableSimpleMaterialController((int)this.ActorMaterialControllerNum);
 	}
 
-	// Token: 0x0601D331 RID: 119601 RVA: 0x008217B0 File Offset: 0x0081F9B0
+	// Token: 0x0601B037 RID: 110647 RVA: 0x00848A58 File Offset: 0x00846C58
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void SimpleMaterialControllerUpdate()
+	public virtual void SimpleMaterialControllerUpdate()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SimpleMaterialControllerUpdate"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(ItemMaterialDebugActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SimpleMaterialControllerUpdate"), ItemMaterialDebugActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.SimpleMaterialControllerUpdate_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D332 RID: 119602 RVA: 0x00821820 File Offset: 0x0081FA20
+	// Token: 0x0601B038 RID: 110648 RVA: 0x00848AB4 File Offset: 0x00846CB4
 	protected void SimpleMaterialControllerUpdate_Implementation()
 	{
 		if (this.Actor != null && this.SimpleScalarNameTest != null && this.SimpleScalarValueTest != 0f && this.SimpleVectorNameTest != null)
@@ -295,7 +265,7 @@ public class ItemMaterialDebugActor : AKuroEffectActor, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x0601D333 RID: 119603 RVA: 0x008218B2 File Offset: 0x0081FAB2
+	// Token: 0x0601B039 RID: 110649 RVA: 0x00848B46 File Offset: 0x00846D46
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (ItemMaterialDebugActor._ClassPtr == IntPtr.Zero)
@@ -305,93 +275,93 @@ public class ItemMaterialDebugActor : AKuroEffectActor, IUnrealUObject, IUnrealO
 		return ItemMaterialDebugActor._ClassPtr;
 	}
 
-	// Token: 0x0601D334 RID: 119604 RVA: 0x008218D8 File Offset: 0x0081FAD8
+	// Token: 0x0601B03A RID: 110650 RVA: 0x00848B6C File Offset: 0x00846D6C
 	public ItemMaterialDebugActor() : this(BuiltinUtils.AllocNativeUObject(ItemMaterialDebugActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D335 RID: 119605 RVA: 0x00821900 File Offset: 0x0081FB00
+	// Token: 0x0601B03B RID: 110651 RVA: 0x00848B94 File Offset: 0x00846D94
 	[NullableContext(1)]
 	public ItemMaterialDebugActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ItemMaterialDebugActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D336 RID: 119606 RVA: 0x00821933 File Offset: 0x0081FB33
+	// Token: 0x0601B03C RID: 110652 RVA: 0x00848BC7 File Offset: 0x00846DC7
 	protected ItemMaterialDebugActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601D337 RID: 119607 RVA: 0x00821947 File Offset: 0x0081FB47
+	// Token: 0x0601B03D RID: 110653 RVA: 0x00848BDB File Offset: 0x00846DDB
 	protected virtual void __CPPCALL_DisableAllActorData_Implementation()
 	{
 		this.DisableAllActorData_Implementation();
 	}
 
-	// Token: 0x0601D338 RID: 119608 RVA: 0x0082194F File Offset: 0x0081FB4F
+	// Token: 0x0601B03E RID: 110654 RVA: 0x00848BE3 File Offset: 0x00846DE3
 	protected virtual void __CPPCALL_DisableActorData_Implementation()
 	{
 		this.DisableActorData_Implementation();
 	}
 
-	// Token: 0x0601D339 RID: 119609 RVA: 0x00821957 File Offset: 0x0081FB57
+	// Token: 0x0601B03F RID: 110655 RVA: 0x00848BEB File Offset: 0x00846DEB
 	protected virtual void __CPPCALL_EnableActorData_Implementation()
 	{
 		this.EnableActorData_Implementation();
 	}
 
-	// Token: 0x0601D33A RID: 119610 RVA: 0x0082195F File Offset: 0x0081FB5F
+	// Token: 0x0601B040 RID: 110656 RVA: 0x00848BF3 File Offset: 0x00846DF3
 	protected virtual void __CPPCALL_SimpleMaterialControllerDisable_Implementation()
 	{
 		this.SimpleMaterialControllerDisable_Implementation();
 	}
 
-	// Token: 0x0601D33B RID: 119611 RVA: 0x00821967 File Offset: 0x0081FB67
+	// Token: 0x0601B041 RID: 110657 RVA: 0x00848BFB File Offset: 0x00846DFB
 	protected virtual void __CPPCALL_SimpleMaterialControllerUpdate_Implementation()
 	{
 		this.SimpleMaterialControllerUpdate_Implementation();
 	}
 
-	// Token: 0x0400E640 RID: 58944
+	// Token: 0x0400EAF6 RID: 60150
 	public int GlobalNum;
 
-	// Token: 0x0400E641 RID: 58945
+	// Token: 0x0400EAF7 RID: 60151
 	public ItemMaterialGlobalController GlobalItemMaterialController;
 
-	// Token: 0x0400E642 RID: 58946
+	// Token: 0x0400EAF8 RID: 60152
 	[Nullable(1)]
 	public List<ItemMaterialActorController> Controllers = new List<ItemMaterialActorController>();
 
-	// Token: 0x0400E643 RID: 58947
+	// Token: 0x0400EAF9 RID: 60153
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Scene/Item/MaterialController/ItemMaterialDebugActor.ItemMaterialDebugActor_C";
 
-	// Token: 0x0400E644 RID: 58948
+	// Token: 0x0400EAFA RID: 60154
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E645 RID: 58949
+	// Token: 0x0400EAFB RID: 60155
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400E646 RID: 58950
+	// Token: 0x0400EAFC RID: 60156
 	private static int __PropertyOffset_Actor;
 
-	// Token: 0x0400E647 RID: 58951
+	// Token: 0x0400EAFD RID: 60157
 	private static int __PropertyOffset_SimpleScalarNameTest;
 
-	// Token: 0x0400E648 RID: 58952
+	// Token: 0x0400EAFE RID: 60158
 	private static int __PropertyOffset_SimpleScalarValueTest;
 
-	// Token: 0x0400E649 RID: 58953
+	// Token: 0x0400EAFF RID: 60159
 	private static int __PropertyOffset_SimpleVectorNameTest;
 
-	// Token: 0x0400E64A RID: 58954
+	// Token: 0x0400EB00 RID: 60160
 	private static int __PropertyOffset_SimpleVectorValueTest;
 
-	// Token: 0x0400E64B RID: 58955
+	// Token: 0x0400EB01 RID: 60161
 	private static int __PropertyOffset_GlobalMaterialData;
 
-	// Token: 0x0400E64C RID: 58956
+	// Token: 0x0400EB02 RID: 60162
 	private static int __PropertyOffset_MaterialData;
 
-	// Token: 0x0400E64D RID: 58957
+	// Token: 0x0400EB03 RID: 60163
 	private static int __PropertyOffset_ActorMaterialControllerNum;
 }

@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020026CC RID: 9932
+// Token: 0x02001BB7 RID: 7095
 public class RacingBetsChangeDangoCameraBlendCommand : RacingBetsCommandBase
 {
-	// Token: 0x17001A62 RID: 6754
-	// (get) Token: 0x060145EC RID: 83436 RVA: 0x0052731D File Offset: 0x0052551D
+	// Token: 0x17001A9A RID: 6810
+	// (get) Token: 0x06011ACE RID: 72398 RVA: 0x00536055 File Offset: 0x00534255
 	public override ERacingBetsCommandType CommandType
 	{
 		get
@@ -16,7 +16,7 @@ public class RacingBetsChangeDangoCameraBlendCommand : RacingBetsCommandBase
 		}
 	}
 
-	// Token: 0x060145ED RID: 83437 RVA: 0x00527324 File Offset: 0x00525524
+	// Token: 0x06011ACF RID: 72399 RVA: 0x0053605C File Offset: 0x0053425C
 	public override UniTask OnExecute()
 	{
 		RacingBetsChangeDangoCameraBlendCommand.<OnExecute>d__3 <OnExecute>d__;
@@ -27,19 +27,19 @@ public class RacingBetsChangeDangoCameraBlendCommand : RacingBetsCommandBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060145EE RID: 83438 RVA: 0x00527367 File Offset: 0x00525567
+	// Token: 0x06011AD0 RID: 72400 RVA: 0x0053609F File Offset: 0x0053429F
 	public void SetDangoId(int dangoId)
 	{
 		this.DangoId = dangoId;
 	}
 
-	// Token: 0x060145EF RID: 83439 RVA: 0x00527370 File Offset: 0x00525570
+	// Token: 0x06011AD1 RID: 72401 RVA: 0x005360A8 File Offset: 0x005342A8
 	[NullableContext(1)]
 	public override string LogInfo()
 	{
 		return "RacingBetsChangeDangoCameraBlendCommand";
 	}
 
-	// Token: 0x04009913 RID: 39187
+	// Token: 0x04009A6B RID: 39531
 	private int DangoId;
 }

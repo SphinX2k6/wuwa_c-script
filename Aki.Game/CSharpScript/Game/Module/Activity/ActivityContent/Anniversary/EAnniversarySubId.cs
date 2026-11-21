@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x02006918 RID: 26904
+	// Token: 0x02005868 RID: 22632
 	public enum EAnniversarySubId
 	{
-		// Token: 0x04022ED3 RID: 143059
+		// Token: 0x0401D72F RID: 120623
 		AnniversaryGift = 1,
-		// Token: 0x04022ED4 RID: 143060
+		// Token: 0x0401D730 RID: 120624
 		Pinball,
-		// Token: 0x04022ED5 RID: 143061
+		// Token: 0x0401D731 RID: 120625
 		WuWuPack,
-		// Token: 0x04022ED6 RID: 143062
+		// Token: 0x0401D732 RID: 120626
 		DangoRun
 	}
 }

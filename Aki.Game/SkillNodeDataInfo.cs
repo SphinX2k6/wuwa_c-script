@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x020027AD RID: 10157
+// Token: 0x02001D28 RID: 7464
 public class SkillNodeDataInfo
 {
-	// Token: 0x17001B2A RID: 6954
-	// (get) Token: 0x06014E31 RID: 85553 RVA: 0x0054E111 File Offset: 0x0054C311
-	// (set) Token: 0x06014E32 RID: 85554 RVA: 0x0054E119 File Offset: 0x0054C319
+	// Token: 0x17001B81 RID: 7041
+	// (get) Token: 0x06012830 RID: 75824 RVA: 0x00578E39 File Offset: 0x00577039
+	// (set) Token: 0x06012831 RID: 75825 RVA: 0x00578E41 File Offset: 0x00577041
 	public int SkillNodeId { get; set; }
 
-	// Token: 0x17001B2B RID: 6955
-	// (get) Token: 0x06014E33 RID: 85555 RVA: 0x0054E122 File Offset: 0x0054C322
-	// (set) Token: 0x06014E34 RID: 85556 RVA: 0x0054E12A File Offset: 0x0054C32A
+	// Token: 0x17001B82 RID: 7042
+	// (get) Token: 0x06012832 RID: 75826 RVA: 0x00578E4A File Offset: 0x0057704A
+	// (set) Token: 0x06012833 RID: 75827 RVA: 0x00578E52 File Offset: 0x00577052
 	public bool IsActive { get; set; }
 
-	// Token: 0x17001B2C RID: 6956
-	// (get) Token: 0x06014E35 RID: 85557 RVA: 0x0054E133 File Offset: 0x0054C333
-	// (set) Token: 0x06014E36 RID: 85558 RVA: 0x0054E13B File Offset: 0x0054C33B
+	// Token: 0x17001B83 RID: 7043
+	// (get) Token: 0x06012834 RID: 75828 RVA: 0x00578E5B File Offset: 0x0057705B
+	// (set) Token: 0x06012835 RID: 75829 RVA: 0x00578E63 File Offset: 0x00577063
 	public int SkillId { get; set; }
 
-	// Token: 0x06014E37 RID: 85559 RVA: 0x0054E144 File Offset: 0x0054C344
+	// Token: 0x06012836 RID: 75830 RVA: 0x00578E6C File Offset: 0x0057706C
 	public SkillNodeDataInfo(int skillNodeId, bool isActive, int skillId)
 	{
 		this.SkillNodeId = skillNodeId;

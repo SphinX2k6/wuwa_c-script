@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020010CF RID: 4303
+// Token: 0x02000583 RID: 1411
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class AdvanceNoticeModel : ModelBase
 {
-	// Token: 0x17000982 RID: 2434
-	// (get) Token: 0x06007015 RID: 28693 RVA: 0x0016D081 File Offset: 0x0016B281
+	// Token: 0x170009A2 RID: 2466
+	// (get) Token: 0x060043AB RID: 17323 RVA: 0x00175A3D File Offset: 0x00173C3D
 	public static AdvanceNoticeModel Instance
 	{
 		get
@@ -17,7 +17,7 @@ public class AdvanceNoticeModel : ModelBase
 		}
 	}
 
-	// Token: 0x06007016 RID: 28694 RVA: 0x0016D088 File Offset: 0x0016B288
+	// Token: 0x060043AC RID: 17324 RVA: 0x00175A44 File Offset: 0x00173C44
 	public static AdvanceNoticeModel GetOrCreateInstance()
 	{
 		if (AdvanceNoticeModel._Instance == null)
@@ -27,7 +27,7 @@ public class AdvanceNoticeModel : ModelBase
 		return AdvanceNoticeModel._Instance;
 	}
 
-	// Token: 0x06007017 RID: 28695 RVA: 0x0016D09C File Offset: 0x0016B29C
+	// Token: 0x060043AD RID: 17325 RVA: 0x00175A58 File Offset: 0x00173C58
 	public static bool CreateInstance()
 	{
 		if (AdvanceNoticeModel._Instance != null)
@@ -38,24 +38,24 @@ public class AdvanceNoticeModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06007018 RID: 28696 RVA: 0x0016D0B2 File Offset: 0x0016B2B2
+	// Token: 0x060043AE RID: 17326 RVA: 0x00175A6E File Offset: 0x00173C6E
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06007019 RID: 28697 RVA: 0x0016D0B4 File Offset: 0x0016B2B4
+	// Token: 0x060043AF RID: 17327 RVA: 0x00175A70 File Offset: 0x00173C70
 	public static void ResetStaticDefaultValue()
 	{
 		AdvanceNoticeModel._Instance = null;
 	}
 
-	// Token: 0x0600701A RID: 28698 RVA: 0x0016D0BC File Offset: 0x0016B2BC
+	// Token: 0x060043B0 RID: 17328 RVA: 0x00175A78 File Offset: 0x00173C78
 	static AdvanceNoticeModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AdvanceNoticeModel.CreateStaticDefaultValue), new Action(AdvanceNoticeModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400340C RID: 13324
+	// Token: 0x040034A5 RID: 13477
 	[Nullable(2)]
 	private static AdvanceNoticeModel _Instance;
 }

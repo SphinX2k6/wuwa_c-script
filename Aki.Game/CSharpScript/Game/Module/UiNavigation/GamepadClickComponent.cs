@@ -5,15 +5,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200496C RID: 18796
+	// Token: 0x020038E4 RID: 14564
 	public class GamepadClickComponent : GamepadInteractComponentBase
 	{
-		// Token: 0x06031055 RID: 200789 RVA: 0x00B6175A File Offset: 0x00B5F95A
+		// Token: 0x06025B85 RID: 154501 RVA: 0x00A9C63A File Offset: 0x00A9A83A
 		public GamepadClickComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031056 RID: 200790 RVA: 0x00B61764 File Offset: 0x00B5F964
+		// Token: 0x06025B86 RID: 154502 RVA: 0x00A9C644 File Offset: 0x00A9A844
 		protected override void OnPress(HotKeyMap config)
 		{
 			UiNavigationViewHandle currentViewHandle = UiNavigationViewManager.Instance.GetCurrentViewHandle();
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06031057 RID: 200791 RVA: 0x00B617B8 File Offset: 0x00B5F9B8
+		// Token: 0x06025B87 RID: 154503 RVA: 0x00A9C698 File Offset: 0x00A9A898
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

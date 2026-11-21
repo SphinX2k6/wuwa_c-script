@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005F8 RID: 1528
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000695 RID: 1685
 	public class IPhantomExhibitConfig : IExhibitItemType
 	{
-		// Token: 0x06002078 RID: 8312 RVA: 0x0005A600 File Offset: 0x00058800
+		// Token: 0x0600237E RID: 9086 RVA: 0x00061314 File Offset: 0x0005F514
 		private IPhantomExhibitConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002079 RID: 8313 RVA: 0x0005A638 File Offset: 0x00058838
+		// Token: 0x0600237F RID: 9087 RVA: 0x0006134C File Offset: 0x0005F54C
 		public static IPhantomExhibitConfig Create([Nullable(2)] IPhantomExhibitConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600207A RID: 8314 RVA: 0x0005A64B File Offset: 0x0005884B
+		// Token: 0x06002380 RID: 9088 RVA: 0x0006135F File Offset: 0x0005F55F
 		public static IPhantomExhibitConfig CreateFromSetValue([Nullable(2)] IPhantomExhibitConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600207B RID: 8315 RVA: 0x0005A65E File Offset: 0x0005885E
+		// Token: 0x06002381 RID: 9089 RVA: 0x00061372 File Offset: 0x0005F572
 		public new IPhantomExhibitConfig_SetValue ToSetValue()
 		{
 			return new IPhantomExhibitConfig_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008A7 RID: 2215
-		// (get) Token: 0x0600207C RID: 8316 RVA: 0x0005A695 File Offset: 0x00058895
-		// (set) Token: 0x0600207D RID: 8317 RVA: 0x0005A6C0 File Offset: 0x000588C0
+		// Token: 0x1700095E RID: 2398
+		// (get) Token: 0x06002382 RID: 9090 RVA: 0x000613A9 File Offset: 0x0005F5A9
+		// (set) Token: 0x06002383 RID: 9091 RVA: 0x000613D4 File Offset: 0x0005F5D4
 		public override EExhibitItemType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008A8 RID: 2216
-		// (get) Token: 0x0600207E RID: 8318 RVA: 0x0005A6CE File Offset: 0x000588CE
-		// (set) Token: 0x0600207F RID: 8319 RVA: 0x0005A6F9 File Offset: 0x000588F9
+		// Token: 0x1700095F RID: 2399
+		// (get) Token: 0x06002384 RID: 9092 RVA: 0x000613E2 File Offset: 0x0005F5E2
+		// (set) Token: 0x06002385 RID: 9093 RVA: 0x0006140D File Offset: 0x0005F60D
 		public virtual EPhantomExhibitSizeType PhantomSize
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008A9 RID: 2217
-		// (get) Token: 0x06002080 RID: 8320 RVA: 0x0005A708 File Offset: 0x00058908
-		// (set) Token: 0x06002081 RID: 8321 RVA: 0x0005A769 File Offset: 0x00058969
+		// Token: 0x17000960 RID: 2400
+		// (get) Token: 0x06002386 RID: 9094 RVA: 0x0006141C File Offset: 0x0005F61C
+		// (set) Token: 0x06002387 RID: 9095 RVA: 0x0006147D File Offset: 0x0005F67D
 		public virtual VectorInfo Offset
 		{
 			get
@@ -139,9 +137,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008AA RID: 2218
-		// (get) Token: 0x06002082 RID: 8322 RVA: 0x0005A780 File Offset: 0x00058980
-		// (set) Token: 0x06002083 RID: 8323 RVA: 0x0005A7E1 File Offset: 0x000589E1
+		// Token: 0x17000961 RID: 2401
+		// (get) Token: 0x06002388 RID: 9096 RVA: 0x00061494 File Offset: 0x0005F694
+		// (set) Token: 0x06002389 RID: 9097 RVA: 0x000614F5 File Offset: 0x0005F6F5
 		[Nullable(2)]
 		public virtual IExhibitEffect ActiveEffect
 		{
@@ -172,24 +170,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040016C5 RID: 5829
+		// Token: 0x040018B7 RID: 6327
 		[Nullable(2)]
 		protected new IPhantomExhibitConfig FbInstance;
 
-		// Token: 0x040016C6 RID: 5830
+		// Token: 0x040018B8 RID: 6328
 		[Nullable(2)]
 		protected new IPhantomExhibitConfig_SetValue PocoInterface;
 
-		// Token: 0x040016C7 RID: 5831
+		// Token: 0x040018B9 RID: 6329
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x040016C8 RID: 5832
+		// Token: 0x040018BA RID: 6330
 		private bool _OffsetInited;
 
-		// Token: 0x040016C9 RID: 5833
+		// Token: 0x040018BB RID: 6331
 		private IExhibitEffect _ActiveEffectCache;
 
-		// Token: 0x040016CA RID: 5834
+		// Token: 0x040018BC RID: 6332
 		private bool _ActiveEffectInited;
 	}
 }

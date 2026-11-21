@@ -2,15 +2,15 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072BE RID: 29374
+	// Token: 0x02006440 RID: 25664
 	public class CameraAbsoluteNearClipConfig : CameraBaseNearClipConfig
 	{
-		// Token: 0x0604810C RID: 295180 RVA: 0x0127A6E8 File Offset: 0x012788E8
+		// Token: 0x0603E500 RID: 255232 RVA: 0x0121CA80 File Offset: 0x0121AC80
 		public CameraAbsoluteNearClipConfig(float distance) : base(ECameraNearClipType.Absolute)
 		{
 		}
 
-		// Token: 0x0402605B RID: 155739
+		// Token: 0x0402133B RID: 135995
 		public readonly float Distance = distance;
 	}
 }

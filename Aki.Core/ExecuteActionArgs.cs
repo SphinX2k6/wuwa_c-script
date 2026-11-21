@@ -7,7 +7,7 @@ using UnrealEngine;
 [Nullable(0)]
 public struct ExecuteActionArgs
 {
-	// Token: 0x060000BB RID: 187 RVA: 0x00006831 File Offset: 0x00004A31
+	// Token: 0x060000BD RID: 189 RVA: 0x000065A9 File Offset: 0x000047A9
 	public ExecuteActionArgs(int? TransitionDuration, EAudioFadeCurve? TransitionFadeCurve, AActor Actor)
 	{
 		this.TransitionDuration = TransitionDuration;
@@ -15,12 +15,12 @@ public struct ExecuteActionArgs
 		this.Actor = Actor;
 	}
 
-	// Token: 0x040000AA RID: 170
+	// Token: 0x040000AB RID: 171
 	public int? TransitionDuration;
 
-	// Token: 0x040000AB RID: 171
+	// Token: 0x040000AC RID: 172
 	public EAudioFadeCurve? TransitionFadeCurve;
 
-	// Token: 0x040000AC RID: 172
+	// Token: 0x040000AD RID: 173
 	public AActor Actor;
 }

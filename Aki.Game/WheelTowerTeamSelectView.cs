@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001654 RID: 5716
+// Token: 0x02000B0C RID: 2828
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerTeamSelectView : UiViewBase
 {
-	// Token: 0x0600A072 RID: 41074 RVA: 0x00235832 File Offset: 0x00233A32
+	// Token: 0x06007450 RID: 29776 RVA: 0x0023F66E File Offset: 0x0023D86E
 	[NullableContext(1)]
 	public WheelTowerTeamSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600A073 RID: 41075 RVA: 0x0023583C File Offset: 0x00233A3C
+	// Token: 0x06007451 RID: 29777 RVA: 0x0023F678 File Offset: 0x0023D878
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -39,7 +39,7 @@ public class WheelTowerTeamSelectView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A074 RID: 41076 RVA: 0x00235908 File Offset: 0x00233B08
+	// Token: 0x06007452 RID: 29778 RVA: 0x0023F744 File Offset: 0x0023D944
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerTeamSelectView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ public class WheelTowerTeamSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A075 RID: 41077 RVA: 0x0023594C File Offset: 0x00233B4C
+	// Token: 0x06007453 RID: 29779 RVA: 0x0023F788 File Offset: 0x0023D988
 	protected override void OnStart()
 	{
 		PopupCaptionItem caption = this.Caption;
@@ -66,7 +66,7 @@ public class WheelTowerTeamSelectView : UiViewBase
 		this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600A076 RID: 41078 RVA: 0x002359A8 File Offset: 0x00233BA8
+	// Token: 0x06007454 RID: 29780 RVA: 0x0023F7E4 File Offset: 0x0023D9E4
 	protected override void OnBeforeShow()
 	{
 		WheelTowerTeamSelectMainPanel selectPanel = this.SelectPanel;
@@ -77,7 +77,7 @@ public class WheelTowerTeamSelectView : UiViewBase
 		this.RefreshInfoPanel(WheelTowerModel.Instance.TmpSelectRoleId, true);
 	}
 
-	// Token: 0x0600A077 RID: 41079 RVA: 0x002359CC File Offset: 0x00233BCC
+	// Token: 0x06007455 RID: 29781 RVA: 0x0023F808 File Offset: 0x0023DA08
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -88,7 +88,7 @@ public class WheelTowerTeamSelectView : UiViewBase
 		seqPlayer.Clear();
 	}
 
-	// Token: 0x0600A078 RID: 41080 RVA: 0x002359E0 File Offset: 0x00233BE0
+	// Token: 0x06007456 RID: 29782 RVA: 0x0023F81C File Offset: 0x0023DA1C
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -115,7 +115,7 @@ public class WheelTowerTeamSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600A079 RID: 41081 RVA: 0x00235A30 File Offset: 0x00233C30
+	// Token: 0x06007457 RID: 29783 RVA: 0x0023F86C File Offset: 0x0023DA6C
 	private void OnRoleSelect(int roleId)
 	{
 		bool force = WheelTowerModel.Instance.SelectedRoleList.Count == 0;
@@ -147,7 +147,7 @@ public class WheelTowerTeamSelectView : UiViewBase
 		this.RefreshInfoPanel(roleId, force);
 	}
 
-	// Token: 0x0600A07A RID: 41082 RVA: 0x00235B1C File Offset: 0x00233D1C
+	// Token: 0x06007458 RID: 29784 RVA: 0x0023F958 File Offset: 0x0023DB58
 	private void OnTeamSelect(int teamId)
 	{
 		int teamMaxRoleCount = WheelTowerModel.Instance.GetTeamMaxRoleCount();
@@ -188,7 +188,7 @@ public class WheelTowerTeamSelectView : UiViewBase
 		strPanel.Refresh();
 	}
 
-	// Token: 0x0600A07B RID: 41083 RVA: 0x00235C98 File Offset: 0x00233E98
+	// Token: 0x06007459 RID: 29785 RVA: 0x0023FAD4 File Offset: 0x0023DCD4
 	private void OnSelectModeChange(ESelectMode selectMode, int roleId)
 	{
 		this.RefreshInfoPanel(roleId, true);
@@ -210,7 +210,7 @@ public class WheelTowerTeamSelectView : UiViewBase
 		infoPanel.SetUiActive(selectMode != ESelectMode.Team);
 	}
 
-	// Token: 0x0600A07C RID: 41084 RVA: 0x00235CEC File Offset: 0x00233EEC
+	// Token: 0x0600745A RID: 29786 RVA: 0x0023FB28 File Offset: 0x0023DD28
 	private void RefreshInfoPanel(int roleId, bool force = false)
 	{
 		WheelTowerRoleInfoPanel infoPanel = this.InfoPanel;
@@ -235,25 +235,25 @@ public class WheelTowerTeamSelectView : UiViewBase
 		infoPanel2.Refresh(roleId);
 	}
 
-	// Token: 0x0600A07D RID: 41085 RVA: 0x00235D55 File Offset: 0x00233F55
+	// Token: 0x0600745B RID: 29787 RVA: 0x0023FB91 File Offset: 0x0023DD91
 	private void OnClickConfirm()
 	{
 		WheelTowerModel.Instance.TmpToSelect();
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04004937 RID: 18743
+	// Token: 0x040049DD RID: 18909
 	private PopupCaptionItem Caption;
 
-	// Token: 0x04004938 RID: 18744
+	// Token: 0x040049DE RID: 18910
 	private WheelTowerTeamSelectMainPanel SelectPanel;
 
-	// Token: 0x04004939 RID: 18745
+	// Token: 0x040049DF RID: 18911
 	private WheelTowerRoleInfoPanel InfoPanel;
 
-	// Token: 0x0400493A RID: 18746
+	// Token: 0x040049E0 RID: 18912
 	private WheelTowerStrShowPanel StrPanel;
 
-	// Token: 0x0400493B RID: 18747
+	// Token: 0x040049E1 RID: 18913
 	private LevelSequencePlayer SeqPlayer;
 }

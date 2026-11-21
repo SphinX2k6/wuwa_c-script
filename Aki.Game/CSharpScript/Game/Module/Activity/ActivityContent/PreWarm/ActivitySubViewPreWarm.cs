@@ -12,13 +12,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 {
-	// Token: 0x020062BF RID: 25279
+	// Token: 0x0200523D RID: 21053
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivitySubViewPreWarm : ActivitySubViewBase
 	{
-		// Token: 0x17009278 RID: 37496
-		// (get) Token: 0x0603F92C RID: 260396 RVA: 0x00F60673 File Offset: 0x00F5E873
+		// Token: 0x170065DA RID: 26074
+		// (get) Token: 0x060345ED RID: 214509 RVA: 0x00EA75CF File Offset: 0x00EA57CF
 		[Nullable(2)]
 		protected new ActivityPreWarmData ActivityBaseData
 		{
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			}
 		}
 
-		// Token: 0x0603F92D RID: 260397 RVA: 0x00F60680 File Offset: 0x00F5E880
+		// Token: 0x060345EE RID: 214510 RVA: 0x00EA75DC File Offset: 0x00EA57DC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 24;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F92E RID: 260398 RVA: 0x00F60A58 File Offset: 0x00F5EC58
+		// Token: 0x060345EF RID: 214511 RVA: 0x00EA79B4 File Offset: 0x00EA5BB4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivitySubViewPreWarm.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F92F RID: 260399 RVA: 0x00F60A9C File Offset: 0x00F5EC9C
+		// Token: 0x060345F0 RID: 214512 RVA: 0x00EA79F8 File Offset: 0x00EA5BF8
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(base.GetRootItem());
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			instance.BindRedDot(name, item4, stateChangeCallback, (activityBaseData != null) ? activityBaseData.Id : 0);
 		}
 
-		// Token: 0x0603F930 RID: 260400 RVA: 0x00F60BA4 File Offset: 0x00F5EDA4
+		// Token: 0x060345F1 RID: 214513 RVA: 0x00EA7B00 File Offset: 0x00EA5D00
 		protected override void OnBeforeShow()
 		{
 			ActivityPreWarmModel instance = ActivityPreWarmModel.Instance;
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			}
 		}
 
-		// Token: 0x0603F931 RID: 260401 RVA: 0x00F60BE0 File Offset: 0x00F5EDE0
+		// Token: 0x060345F2 RID: 214514 RVA: 0x00EA7B3C File Offset: 0x00EA5D3C
 		private UniTask InitActivityTitle()
 		{
 			ActivitySubViewPreWarm.<InitActivityTitle>d__14 <InitActivityTitle>d__;
@@ -172,19 +172,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return <InitActivityTitle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F932 RID: 260402 RVA: 0x00F60C23 File Offset: 0x00F5EE23
+		// Token: 0x060345F3 RID: 214515 RVA: 0x00EA7B7F File Offset: 0x00EA5D7F
 		private void InitRewardScroll()
 		{
 			this.RewardScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(12), new Func<CommonItemSmallItemGrid>(this.CreatePropItem), null, false, null);
 		}
 
-		// Token: 0x0603F933 RID: 260403 RVA: 0x00F60C47 File Offset: 0x00F5EE47
+		// Token: 0x060345F4 RID: 214516 RVA: 0x00EA7BA3 File Offset: 0x00EA5DA3
 		private CommonItemSmallItemGrid CreatePropItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0603F934 RID: 260404 RVA: 0x00F60C50 File Offset: 0x00F5EE50
+		// Token: 0x060345F5 RID: 214517 RVA: 0x00EA7BAC File Offset: 0x00EA5DAC
 		private List<UniTask> InitCollectItems()
 		{
 			List<UniTask> list = new List<UniTask>();
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return list;
 		}
 
-		// Token: 0x0603F935 RID: 260405 RVA: 0x00F60CD0 File Offset: 0x00F5EED0
+		// Token: 0x060345F6 RID: 214518 RVA: 0x00EA7C2C File Offset: 0x00EA5E2C
 		private void OnSelectCallBack(int id)
 		{
 			if (this.CurCollectItemData != null)
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			this.UpdateLockTxtByTimer();
 		}
 
-		// Token: 0x0603F936 RID: 260406 RVA: 0x00F60D80 File Offset: 0x00F5EF80
+		// Token: 0x060345F7 RID: 214519 RVA: 0x00EA7CDC File Offset: 0x00EA5EDC
 		private void RefreshReward()
 		{
 			ActivitySubViewPreWarm.<>c__DisplayClass19_0 CS$<>8__locals1 = new ActivitySubViewPreWarm.<>c__DisplayClass19_0();
@@ -305,8 +305,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			}, false);
 		}
 
-		// Token: 0x17009279 RID: 37497
-		// (get) Token: 0x0603F937 RID: 260407 RVA: 0x00F60EDC File Offset: 0x00F5F0DC
+		// Token: 0x170065DB RID: 26075
+		// (get) Token: 0x060345F8 RID: 214520 RVA: 0x00EA7E38 File Offset: 0x00EA6038
 		private bool IsActivityUnlocked
 		{
 			get
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			}
 		}
 
-		// Token: 0x0603F938 RID: 260408 RVA: 0x00F60EF0 File Offset: 0x00F5F0F0
+		// Token: 0x060345F9 RID: 214521 RVA: 0x00EA7E4C File Offset: 0x00EA604C
 		private void UpdateLockTxtByTimer()
 		{
 			if (!this.IsActivityUnlocked)
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(16), EPreWarmTxt.BtnLockTimeTxt.ToEnumString(), new <>z__ReadOnlySingleElementList<object>((activityPreWarmQuestUnlockState != null) ? activityPreWarmQuestUnlockState.CdTime : null));
 		}
 
-		// Token: 0x0603F939 RID: 260409 RVA: 0x00F60F50 File Offset: 0x00F5F150
+		// Token: 0x060345FA RID: 214522 RVA: 0x00EA7EAC File Offset: 0x00EA60AC
 		private void RefreshBtnState()
 		{
 			UUIButtonComponent button = base.GetButton(22);
@@ -399,7 +399,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			curBtnStateUi2.SetUIActive(true);
 		}
 
-		// Token: 0x0603F93A RID: 260410 RVA: 0x00F61124 File Offset: 0x00F5F324
+		// Token: 0x060345FB RID: 214523 RVA: 0x00EA8080 File Offset: 0x00EA6280
 		private void RefreshTitle()
 		{
 			ActivityPreWarmCollectItemData curCollectItemData = this.CurCollectItemData;
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			instance.TrySetLocalTextNew(text, (curCollectItemData3 != null) ? curCollectItemData3.GetTitle() : null, Array.Empty<object>());
 		}
 
-		// Token: 0x0603F93B RID: 260411 RVA: 0x00F611E0 File Offset: 0x00F5F3E0
+		// Token: 0x060345FC RID: 214524 RVA: 0x00EA813C File Offset: 0x00EA633C
 		private UniTask RefreshCenterInfo()
 		{
 			ActivitySubViewPreWarm.<RefreshCenterInfo>d__25 <RefreshCenterInfo>d__;
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return <RefreshCenterInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F93C RID: 260412 RVA: 0x00F61224 File Offset: 0x00F5F424
+		// Token: 0x060345FD RID: 214525 RVA: 0x00EA8180 File Offset: 0x00EA6380
 		private void RefreshCollectItems()
 		{
 			foreach (ActivityPreWarmCollectItem activityPreWarmCollectItem in this.CollectItemMap.Values)
@@ -439,32 +439,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			}
 		}
 
-		// Token: 0x0603F93D RID: 260413 RVA: 0x00F6127C File Offset: 0x00F5F47C
+		// Token: 0x060345FE RID: 214526 RVA: 0x00EA81D8 File Offset: 0x00EA63D8
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.ActivityCrossDayRefresh, new Action(this.OnActivityCrossDayRefresh));
 		}
 
-		// Token: 0x0603F93E RID: 260414 RVA: 0x00F6129A File Offset: 0x00F5F49A
+		// Token: 0x060345FF RID: 214527 RVA: 0x00EA81F6 File Offset: 0x00EA63F6
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.ActivityCrossDayRefresh, new Action(this.OnActivityCrossDayRefresh));
 		}
 
-		// Token: 0x0603F93F RID: 260415 RVA: 0x00F612B8 File Offset: 0x00F5F4B8
+		// Token: 0x06034600 RID: 214528 RVA: 0x00EA8214 File Offset: 0x00EA6414
 		protected override void OnRefreshView()
 		{
 			this.RefreshPanel();
 		}
 
-		// Token: 0x0603F940 RID: 260416 RVA: 0x00F612C0 File Offset: 0x00F5F4C0
+		// Token: 0x06034601 RID: 214529 RVA: 0x00EA821C File Offset: 0x00EA641C
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshTimerText();
 			this.UpdateLockTxtByTimer();
 		}
 
-		// Token: 0x0603F941 RID: 260417 RVA: 0x00F612D0 File Offset: 0x00F5F4D0
+		// Token: 0x06034602 RID: 214530 RVA: 0x00EA822C File Offset: 0x00EA642C
 		private void RefreshTimerText()
 		{
 			ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -486,13 +486,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			}
 		}
 
-		// Token: 0x0603F942 RID: 260418 RVA: 0x00F61316 File Offset: 0x00F5F516
+		// Token: 0x06034603 RID: 214531 RVA: 0x00EA8272 File Offset: 0x00EA6472
 		private void OnActivityCrossDayRefresh()
 		{
 			this.RefreshPanel();
 		}
 
-		// Token: 0x0603F943 RID: 260419 RVA: 0x00F6131E File Offset: 0x00F5F51E
+		// Token: 0x06034604 RID: 214532 RVA: 0x00EA827A File Offset: 0x00EA647A
 		private void RefreshPanel()
 		{
 			this.RefreshCollectItems();
@@ -500,7 +500,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			this.RefreshCenterInfo();
 		}
 
-		// Token: 0x0603F944 RID: 260420 RVA: 0x00F61333 File Offset: 0x00F5F533
+		// Token: 0x06034605 RID: 214533 RVA: 0x00EA828F File Offset: 0x00EA648F
 		private void OnBtnCollect()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -520,7 +520,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			});
 		}
 
-		// Token: 0x0603F945 RID: 260421 RVA: 0x00F61351 File Offset: 0x00F5F551
+		// Token: 0x06034606 RID: 214534 RVA: 0x00EA82AD File Offset: 0x00EA64AD
 		private void OnBtnPreview()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -542,7 +542,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			});
 		}
 
-		// Token: 0x0603F946 RID: 260422 RVA: 0x00F61370 File Offset: 0x00F5F570
+		// Token: 0x06034607 RID: 214535 RVA: 0x00EA82CC File Offset: 0x00EA64CC
 		private void OnBtnHelp()
 		{
 			if (this.ActivityBaseData == null)
@@ -553,7 +553,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			ActivityController.Instance.OpenActivityConditionView(id);
 		}
 
-		// Token: 0x0603F947 RID: 260423 RVA: 0x00F613A0 File Offset: 0x00F5F5A0
+		// Token: 0x06034608 RID: 214536 RVA: 0x00EA82FC File Offset: 0x00EA64FC
 		private void PlaySwitchAnimation(int? lastSelectId, int curSelectId)
 		{
 			if (lastSelectId == null)
@@ -578,7 +578,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			this.PlaySequence(text, stopKey);
 		}
 
-		// Token: 0x0603F948 RID: 260424 RVA: 0x00F6144C File Offset: 0x00F5F64C
+		// Token: 0x06034609 RID: 214537 RVA: 0x00EA83A8 File Offset: 0x00EA65A8
 		private void PlaySequence(string key, [Nullable(2)] string stopKey = null)
 		{
 			if (!string.IsNullOrEmpty(stopKey))
@@ -603,7 +603,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			sequencePlayer3.PlaySequence(key, false, null);
 		}
 
-		// Token: 0x0603F949 RID: 260425 RVA: 0x00F614B4 File Offset: 0x00F5F6B4
+		// Token: 0x0603460A RID: 214538 RVA: 0x00EA8410 File Offset: 0x00EA6610
 		private void OnEventSequence(string sequenceName, string eventName)
 		{
 			if ((sequenceName == "SwitchDown" && eventName == "SwitchDown") || (sequenceName == "SwitchUp" && eventName == "SwitchUp"))
@@ -617,26 +617,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			}
 		}
 
-		// Token: 0x0603F94A RID: 260426 RVA: 0x00F61505 File Offset: 0x00F5F705
+		// Token: 0x0603460B RID: 214539 RVA: 0x00EA8461 File Offset: 0x00EA6661
 		protected override void OnBeforeDestroy()
 		{
 			this.CollectItemMap.Clear();
 			RedDotController.Instance.UnBindRedDot(ERedDotName.CommonActivityPage);
 		}
 
-		// Token: 0x040213EF RID: 136175
+		// Token: 0x0401BD1E RID: 113950
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-		// Token: 0x040213F0 RID: 136176
+		// Token: 0x0401BD1F RID: 113951
 		private ActivityPreWarmCollectItemData CurCollectItemData;
 
-		// Token: 0x040213F1 RID: 136177
+		// Token: 0x0401BD20 RID: 113952
 		private ActivityTitleTypeA ActivityTitle;
 
-		// Token: 0x040213F2 RID: 136178
+		// Token: 0x0401BD21 RID: 113953
 		private Dictionary<int, ActivityPreWarmCollectItem> CollectItemMap = new Dictionary<int, ActivityPreWarmCollectItem>();
 
-		// Token: 0x040213F3 RID: 136179
+		// Token: 0x0401BD22 RID: 113954
 		private int[] CollectItemComponents = new int[]
 		{
 			5,
@@ -648,92 +648,92 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			11
 		};
 
-		// Token: 0x040213F4 RID: 136180
+		// Token: 0x0401BD23 RID: 113955
 		[Nullable(2)]
 		private UUIItem CurBtnStateUi;
 
-		// Token: 0x040213F5 RID: 136181
+		// Token: 0x0401BD24 RID: 113956
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x040213F6 RID: 136182
+		// Token: 0x0401BD25 RID: 113957
 		[Nullable(2)]
 		private CustomPromise SwitchSequencePromise;
 
-		// Token: 0x0200C492 RID: 50322
+		// Token: 0x0200AE79 RID: 44665
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B4FF RID: 242943
+			// Token: 0x04035E61 RID: 220769
 			public const int BottomDecorate = 0;
 
-			// Token: 0x0403B500 RID: 242944
+			// Token: 0x04035E62 RID: 220770
 			public const int TitleIcon = 1;
 
-			// Token: 0x0403B501 RID: 242945
+			// Token: 0x04035E63 RID: 220771
 			public const int TitleTxt = 2;
 
-			// Token: 0x0403B502 RID: 242946
+			// Token: 0x04035E64 RID: 220772
 			public const int ActivityTitle = 3;
 
-			// Token: 0x0403B503 RID: 242947
+			// Token: 0x04035E65 RID: 220773
 			public const int CenterIcon = 4;
 
-			// Token: 0x0403B504 RID: 242948
+			// Token: 0x04035E66 RID: 220774
 			public const int CollectItem1 = 5;
 
-			// Token: 0x0403B505 RID: 242949
+			// Token: 0x04035E67 RID: 220775
 			public const int CollectItem2 = 6;
 
-			// Token: 0x0403B506 RID: 242950
+			// Token: 0x04035E68 RID: 220776
 			public const int CollectItem3 = 7;
 
-			// Token: 0x0403B507 RID: 242951
+			// Token: 0x04035E69 RID: 220777
 			public const int CollectItem4 = 8;
 
-			// Token: 0x0403B508 RID: 242952
+			// Token: 0x04035E6A RID: 220778
 			public const int CollectItem5 = 9;
 
-			// Token: 0x0403B509 RID: 242953
+			// Token: 0x04035E6B RID: 220779
 			public const int CollectItem6 = 10;
 
-			// Token: 0x0403B50A RID: 242954
+			// Token: 0x04035E6C RID: 220780
 			public const int CollectItem7 = 11;
 
-			// Token: 0x0403B50B RID: 242955
+			// Token: 0x04035E6D RID: 220781
 			public const int ItemScroll = 12;
 
-			// Token: 0x0403B50C RID: 242956
+			// Token: 0x04035E6E RID: 220782
 			public const int BtnCollect = 13;
 
-			// Token: 0x0403B50D RID: 242957
+			// Token: 0x04035E6F RID: 220783
 			public const int BtnPreview = 14;
 
-			// Token: 0x0403B50E RID: 242958
+			// Token: 0x04035E70 RID: 220784
 			public const int LockTips = 15;
 
-			// Token: 0x0403B50F RID: 242959
+			// Token: 0x04035E71 RID: 220785
 			public const int LockTxt = 16;
 
-			// Token: 0x0403B510 RID: 242960
+			// Token: 0x04035E72 RID: 220786
 			public const int RewardTitle = 17;
 
-			// Token: 0x0403B511 RID: 242961
+			// Token: 0x04035E73 RID: 220787
 			public const int TexLockIcon = 18;
 
-			// Token: 0x0403B512 RID: 242962
+			// Token: 0x04035E74 RID: 220788
 			public const int FinishStateItem = 19;
 
-			// Token: 0x0403B513 RID: 242963
+			// Token: 0x04035E75 RID: 220789
 			public const int LockStateItem = 20;
 
-			// Token: 0x0403B514 RID: 242964
+			// Token: 0x04035E76 RID: 220790
 			public const int PreCondition = 21;
 
-			// Token: 0x0403B515 RID: 242965
+			// Token: 0x04035E77 RID: 220791
 			public const int BtnHelp = 22;
 
-			// Token: 0x0403B516 RID: 242966
+			// Token: 0x04035E78 RID: 220792
 			public const int RedDot = 23;
 		}
 	}

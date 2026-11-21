@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005ED8 RID: 24280
+	// Token: 0x02004EBF RID: 20159
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class NewSoundDetectItemData
 	{
-		// Token: 0x040203C5 RID: 132037
+		// Token: 0x0401AE96 RID: 110230
 		public SoundAreaDetectionRecord DetectRecordData;
 
-		// Token: 0x040203C6 RID: 132038
+		// Token: 0x0401AE97 RID: 110231
 		public List<int> TracingList;
 
-		// Token: 0x040203C7 RID: 132039
+		// Token: 0x0401AE98 RID: 110232
 		public int? NightMareParam = new int?(0);
 
-		// Token: 0x040203C8 RID: 132040
+		// Token: 0x0401AE99 RID: 110233
 		public int? JumpToGridId = new int?(0);
 
-		// Token: 0x040203C9 RID: 132041
+		// Token: 0x0401AE9A RID: 110234
 		public double? JumpToGridSquenceStartTimeSecond = new double?(0.0);
 	}
 }

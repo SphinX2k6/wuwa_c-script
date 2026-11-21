@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000606 RID: 1542
+	// Token: 0x020005F1 RID: 1521
 	[NetMessage(EMessageId.FlowStartNotify)]
 	public sealed class FlowStartNotify : IMessage<FlowStartNotify>, IMessage, IEquatable<FlowStartNotify>, IDeepCloneable<FlowStartNotify>, IBufferMessage
 	{
-		// Token: 0x06008E95 RID: 36501 RVA: 0x001598A4 File Offset: 0x00157AA4
+		// Token: 0x06008D2D RID: 36141 RVA: 0x00156CA0 File Offset: 0x00154EA0
 		[NullableContext(1)]
 		public static FlowStartNotify Create()
 		{
 			return new FlowStartNotify();
 		}
 
-		// Token: 0x17001C4A RID: 7242
-		// (get) Token: 0x06008E96 RID: 36502 RVA: 0x001598AB File Offset: 0x00157AAB
+		// Token: 0x17001BFD RID: 7165
+		// (get) Token: 0x06008D2E RID: 36142 RVA: 0x00156CA7 File Offset: 0x00154EA7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C4B RID: 7243
-		// (get) Token: 0x06008E97 RID: 36503 RVA: 0x001598AE File Offset: 0x00157AAE
+		// Token: 0x17001BFE RID: 7166
+		// (get) Token: 0x06008D2F RID: 36143 RVA: 0x00156CAA File Offset: 0x00154EAA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06008E98 RID: 36504 RVA: 0x001598B5 File Offset: 0x00157AB5
+		// Token: 0x06008D30 RID: 36144 RVA: 0x00156CB1 File Offset: 0x00154EB1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlowStartNotify()
 		{
 		}
 
-		// Token: 0x06008E99 RID: 36505 RVA: 0x001598D4 File Offset: 0x00157AD4
+		// Token: 0x06008D31 RID: 36145 RVA: 0x00156CD0 File Offset: 0x00154ED0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlowStartNotify(FlowStartNotify other) : this()
@@ -67,7 +67,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06008E9A RID: 36506 RVA: 0x00159990 File Offset: 0x00157B90
+		// Token: 0x06008D32 RID: 36146 RVA: 0x00156D8C File Offset: 0x00154F8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlowStartNotify Clone()
@@ -75,9 +75,9 @@ namespace Aki.Protocol
 			return new FlowStartNotify(this);
 		}
 
-		// Token: 0x17001C4C RID: 7244
-		// (get) Token: 0x06008E9B RID: 36507 RVA: 0x00159998 File Offset: 0x00157B98
-		// (set) Token: 0x06008E9C RID: 36508 RVA: 0x001599A0 File Offset: 0x00157BA0
+		// Token: 0x17001BFF RID: 7167
+		// (get) Token: 0x06008D33 RID: 36147 RVA: 0x00156D94 File Offset: 0x00154F94
+		// (set) Token: 0x06008D34 RID: 36148 RVA: 0x00156D9C File Offset: 0x00154F9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long FlowIncId
@@ -92,9 +92,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C4D RID: 7245
-		// (get) Token: 0x06008E9D RID: 36509 RVA: 0x001599A9 File Offset: 0x00157BA9
-		// (set) Token: 0x06008E9E RID: 36510 RVA: 0x001599B1 File Offset: 0x00157BB1
+		// Token: 0x17001C00 RID: 7168
+		// (get) Token: 0x06008D35 RID: 36149 RVA: 0x00156DA5 File Offset: 0x00154FA5
+		// (set) Token: 0x06008D36 RID: 36150 RVA: 0x00156DAD File Offset: 0x00154FAD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string FlowListName
@@ -109,9 +109,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C4E RID: 7246
-		// (get) Token: 0x06008E9F RID: 36511 RVA: 0x001599C4 File Offset: 0x00157BC4
-		// (set) Token: 0x06008EA0 RID: 36512 RVA: 0x001599CC File Offset: 0x00157BCC
+		// Token: 0x17001C01 RID: 7169
+		// (get) Token: 0x06008D37 RID: 36151 RVA: 0x00156DC0 File Offset: 0x00154FC0
+		// (set) Token: 0x06008D38 RID: 36152 RVA: 0x00156DC8 File Offset: 0x00154FC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int FlowId
@@ -126,9 +126,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C4F RID: 7247
-		// (get) Token: 0x06008EA1 RID: 36513 RVA: 0x001599D5 File Offset: 0x00157BD5
-		// (set) Token: 0x06008EA2 RID: 36514 RVA: 0x001599DD File Offset: 0x00157BDD
+		// Token: 0x17001C02 RID: 7170
+		// (get) Token: 0x06008D39 RID: 36153 RVA: 0x00156DD1 File Offset: 0x00154FD1
+		// (set) Token: 0x06008D3A RID: 36154 RVA: 0x00156DD9 File Offset: 0x00154FD9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int StateId
@@ -143,9 +143,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C50 RID: 7248
-		// (get) Token: 0x06008EA3 RID: 36515 RVA: 0x001599E6 File Offset: 0x00157BE6
-		// (set) Token: 0x06008EA4 RID: 36516 RVA: 0x001599EE File Offset: 0x00157BEE
+		// Token: 0x17001C03 RID: 7171
+		// (get) Token: 0x06008D3B RID: 36155 RVA: 0x00156DE2 File Offset: 0x00154FE2
+		// (set) Token: 0x06008D3C RID: 36156 RVA: 0x00156DEA File Offset: 0x00154FEA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GameCtxPb GameCtx
@@ -160,9 +160,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C51 RID: 7249
-		// (get) Token: 0x06008EA5 RID: 36517 RVA: 0x001599F7 File Offset: 0x00157BF7
-		// (set) Token: 0x06008EA6 RID: 36518 RVA: 0x001599FF File Offset: 0x00157BFF
+		// Token: 0x17001C04 RID: 7172
+		// (get) Token: 0x06008D3D RID: 36157 RVA: 0x00156DF3 File Offset: 0x00154FF3
+		// (set) Token: 0x06008D3E RID: 36158 RVA: 0x00156DFB File Offset: 0x00154FFB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string PlotMode
@@ -177,9 +177,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C52 RID: 7250
-		// (get) Token: 0x06008EA7 RID: 36519 RVA: 0x00159A12 File Offset: 0x00157C12
-		// (set) Token: 0x06008EA8 RID: 36520 RVA: 0x00159A1A File Offset: 0x00157C1A
+		// Token: 0x17001C05 RID: 7173
+		// (get) Token: 0x06008D3F RID: 36159 RVA: 0x00156E0E File Offset: 0x0015500E
+		// (set) Token: 0x06008D40 RID: 36160 RVA: 0x00156E16 File Offset: 0x00155016
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Async
@@ -194,9 +194,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C53 RID: 7251
-		// (get) Token: 0x06008EA9 RID: 36521 RVA: 0x00159A23 File Offset: 0x00157C23
-		// (set) Token: 0x06008EAA RID: 36522 RVA: 0x00159A2B File Offset: 0x00157C2B
+		// Token: 0x17001C06 RID: 7174
+		// (get) Token: 0x06008D41 RID: 36161 RVA: 0x00156E1F File Offset: 0x0015501F
+		// (set) Token: 0x06008D42 RID: 36162 RVA: 0x00156E27 File Offset: 0x00155027
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsSkip
@@ -211,9 +211,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C54 RID: 7252
-		// (get) Token: 0x06008EAB RID: 36523 RVA: 0x00159A34 File Offset: 0x00157C34
-		// (set) Token: 0x06008EAC RID: 36524 RVA: 0x00159A3C File Offset: 0x00157C3C
+		// Token: 0x17001C07 RID: 7175
+		// (get) Token: 0x06008D43 RID: 36163 RVA: 0x00156E30 File Offset: 0x00155030
+		// (set) Token: 0x06008D44 RID: 36164 RVA: 0x00156E38 File Offset: 0x00155038
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasPlotPos
@@ -228,9 +228,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C55 RID: 7253
-		// (get) Token: 0x06008EAD RID: 36525 RVA: 0x00159A45 File Offset: 0x00157C45
-		// (set) Token: 0x06008EAE RID: 36526 RVA: 0x00159A4D File Offset: 0x00157C4D
+		// Token: 0x17001C08 RID: 7176
+		// (get) Token: 0x06008D45 RID: 36165 RVA: 0x00156E41 File Offset: 0x00155041
+		// (set) Token: 0x06008D46 RID: 36166 RVA: 0x00156E49 File Offset: 0x00155049
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Vector PlotPos
@@ -245,7 +245,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06008EAF RID: 36527 RVA: 0x00159A56 File Offset: 0x00157C56
+		// Token: 0x06008D47 RID: 36167 RVA: 0x00156E52 File Offset: 0x00155052
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -253,7 +253,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FlowStartNotify);
 		}
 
-		// Token: 0x06008EB0 RID: 36528 RVA: 0x00159A64 File Offset: 0x00157C64
+		// Token: 0x06008D48 RID: 36168 RVA: 0x00156E60 File Offset: 0x00155060
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FlowStartNotify other)
@@ -261,7 +261,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.FlowIncId == other.FlowIncId && !(this.FlowListName != other.FlowListName) && this.FlowId == other.FlowId && this.StateId == other.StateId && object.Equals(this.GameCtx, other.GameCtx) && !(this.PlotMode != other.PlotMode) && this.Async == other.Async && this.IsSkip == other.IsSkip && this.HasPlotPos == other.HasPlotPos && object.Equals(this.PlotPos, other.PlotPos) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06008EB1 RID: 36529 RVA: 0x00159B44 File Offset: 0x00157D44
+		// Token: 0x06008D49 RID: 36169 RVA: 0x00156F40 File Offset: 0x00155140
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -314,7 +314,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06008EB2 RID: 36530 RVA: 0x00159C62 File Offset: 0x00157E62
+		// Token: 0x06008D4A RID: 36170 RVA: 0x0015705E File Offset: 0x0015525E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -322,7 +322,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06008EB3 RID: 36531 RVA: 0x00159C6F File Offset: 0x00157E6F
+		// Token: 0x06008D4B RID: 36171 RVA: 0x0015706B File Offset: 0x0015526B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -330,60 +330,60 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06008EB4 RID: 36532 RVA: 0x00159C78 File Offset: 0x00157E78
+		// Token: 0x06008D4C RID: 36172 RVA: 0x00157074 File Offset: 0x00155274
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			if (this.HasPlotPos)
+			{
+				output.WriteRawTag(24);
+				output.WriteBool(this.HasPlotPos);
+			}
+			if (this.StateId != 0)
+			{
+				output.WriteRawTag(32);
+				output.WriteInt32(this.StateId);
+			}
+			if (this.plotPos_ != null)
+			{
+				output.WriteRawTag(42);
+				output.WriteMessage(this.PlotPos);
+			}
+			if (this.FlowIncId != 0L)
+			{
+				output.WriteRawTag(48);
+				output.WriteInt64(this.FlowIncId);
+			}
+			if (this.FlowListName.Length != 0)
+			{
+				output.WriteRawTag(66);
+				output.WriteString(this.FlowListName);
+			}
 			if (this.PlotMode.Length != 0)
 			{
-				output.WriteRawTag(18);
+				output.WriteRawTag(74);
 				output.WriteString(this.PlotMode);
 			}
 			if (this.Async)
 			{
-				output.WriteRawTag(24);
+				output.WriteRawTag(80);
 				output.WriteBool(this.Async);
+			}
+			if (this.FlowId != 0)
+			{
+				output.WriteRawTag(96);
+				output.WriteInt32(this.FlowId);
 			}
 			if (this.gameCtx_ != null)
 			{
-				output.WriteRawTag(34);
+				output.WriteRawTag(114);
 				output.WriteMessage(this.GameCtx);
 			}
 			if (this.IsSkip)
 			{
-				output.WriteRawTag(40);
+				output.WriteRawTag(120);
 				output.WriteBool(this.IsSkip);
-			}
-			if (this.FlowId != 0)
-			{
-				output.WriteRawTag(64);
-				output.WriteInt32(this.FlowId);
-			}
-			if (this.StateId != 0)
-			{
-				output.WriteRawTag(80);
-				output.WriteInt32(this.StateId);
-			}
-			if (this.HasPlotPos)
-			{
-				output.WriteRawTag(88);
-				output.WriteBool(this.HasPlotPos);
-			}
-			if (this.FlowIncId != 0L)
-			{
-				output.WriteRawTag(96);
-				output.WriteInt64(this.FlowIncId);
-			}
-			if (this.plotPos_ != null)
-			{
-				output.WriteRawTag(114);
-				output.WriteMessage(this.PlotPos);
-			}
-			if (this.FlowListName.Length != 0)
-			{
-				output.WriteRawTag(122);
-				output.WriteString(this.FlowListName);
 			}
 			if (this._unknownFields != null)
 			{
@@ -391,7 +391,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06008EB5 RID: 36533 RVA: 0x00159DBC File Offset: 0x00157FBC
+		// Token: 0x06008D4D RID: 36173 RVA: 0x001571B8 File Offset: 0x001553B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -444,7 +444,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06008EB6 RID: 36534 RVA: 0x00159EB8 File Offset: 0x001580B8
+		// Token: 0x06008D4E RID: 36174 RVA: 0x001572B4 File Offset: 0x001554B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FlowStartNotify other)
@@ -504,7 +504,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06008EB7 RID: 36535 RVA: 0x00159FE2 File Offset: 0x001581E2
+		// Token: 0x06008D4F RID: 36175 RVA: 0x001573DE File Offset: 0x001555DE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -512,7 +512,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06008EB8 RID: 36536 RVA: 0x00159FEC File Offset: 0x001581EC
+		// Token: 0x06008D50 RID: 36176 RVA: 0x001573E8 File Offset: 0x001555E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -524,54 +524,54 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 64U)
+				if (num <= 66U)
 				{
-					if (num <= 24U)
+					if (num <= 32U)
 					{
-						if (num == 18U)
-						{
-							this.PlotMode = input.ReadString();
-							continue;
-						}
 						if (num == 24U)
 						{
-							this.Async = input.ReadBool();
+							this.HasPlotPos = input.ReadBool();
+							continue;
+						}
+						if (num == 32U)
+						{
+							this.StateId = input.ReadInt32();
 							continue;
 						}
 					}
 					else
 					{
-						if (num == 34U)
+						if (num == 42U)
 						{
-							if (this.gameCtx_ == null)
+							if (this.plotPos_ == null)
 							{
-								this.GameCtx = new GameCtxPb();
+								this.PlotPos = new Vector();
 							}
-							input.ReadMessage(this.GameCtx);
+							input.ReadMessage(this.PlotPos);
 							continue;
 						}
-						if (num == 40U)
+						if (num == 48U)
 						{
-							this.IsSkip = input.ReadBool();
+							this.FlowIncId = input.ReadInt64();
 							continue;
 						}
-						if (num == 64U)
+						if (num == 66U)
 						{
-							this.FlowId = input.ReadInt32();
+							this.FlowListName = input.ReadString();
 							continue;
 						}
 					}
 				}
-				else if (num <= 88U)
+				else if (num <= 80U)
 				{
-					if (num == 80U)
+					if (num == 74U)
 					{
-						this.StateId = input.ReadInt32();
+						this.PlotMode = input.ReadString();
 						continue;
 					}
-					if (num == 88U)
+					if (num == 80U)
 					{
-						this.HasPlotPos = input.ReadBool();
+						this.Async = input.ReadBool();
 						continue;
 					}
 				}
@@ -579,21 +579,21 @@ namespace Aki.Protocol
 				{
 					if (num == 96U)
 					{
-						this.FlowIncId = input.ReadInt64();
+						this.FlowId = input.ReadInt32();
 						continue;
 					}
 					if (num == 114U)
 					{
-						if (this.plotPos_ == null)
+						if (this.gameCtx_ == null)
 						{
-							this.PlotPos = new Vector();
+							this.GameCtx = new GameCtxPb();
 						}
-						input.ReadMessage(this.PlotPos);
+						input.ReadMessage(this.GameCtx);
 						continue;
 					}
-					if (num == 122U)
+					if (num == 120U)
 					{
-						this.FlowListName = input.ReadString();
+						this.IsSkip = input.ReadBool();
 						continue;
 					}
 				}
@@ -601,67 +601,67 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04004563 RID: 17763
+		// Token: 0x04004559 RID: 17753
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004564 RID: 17764
-		public const int FlowIncIdFieldNumber = 12;
+		// Token: 0x0400455A RID: 17754
+		public const int FlowIncIdFieldNumber = 6;
 
-		// Token: 0x04004565 RID: 17765
+		// Token: 0x0400455B RID: 17755
 		private long flowIncId_;
 
-		// Token: 0x04004566 RID: 17766
-		public const int FlowListNameFieldNumber = 15;
+		// Token: 0x0400455C RID: 17756
+		public const int FlowListNameFieldNumber = 8;
 
-		// Token: 0x04004567 RID: 17767
+		// Token: 0x0400455D RID: 17757
 		private string flowListName_ = "";
 
-		// Token: 0x04004568 RID: 17768
-		public const int FlowIdFieldNumber = 8;
+		// Token: 0x0400455E RID: 17758
+		public const int FlowIdFieldNumber = 12;
 
-		// Token: 0x04004569 RID: 17769
+		// Token: 0x0400455F RID: 17759
 		private int flowId_;
 
-		// Token: 0x0400456A RID: 17770
-		public const int StateIdFieldNumber = 10;
+		// Token: 0x04004560 RID: 17760
+		public const int StateIdFieldNumber = 4;
 
-		// Token: 0x0400456B RID: 17771
+		// Token: 0x04004561 RID: 17761
 		private int stateId_;
 
-		// Token: 0x0400456C RID: 17772
-		public const int GameCtxFieldNumber = 4;
+		// Token: 0x04004562 RID: 17762
+		public const int GameCtxFieldNumber = 14;
 
-		// Token: 0x0400456D RID: 17773
+		// Token: 0x04004563 RID: 17763
 		private GameCtxPb gameCtx_;
 
-		// Token: 0x0400456E RID: 17774
-		public const int PlotModeFieldNumber = 2;
+		// Token: 0x04004564 RID: 17764
+		public const int PlotModeFieldNumber = 9;
 
-		// Token: 0x0400456F RID: 17775
+		// Token: 0x04004565 RID: 17765
 		private string plotMode_ = "";
 
-		// Token: 0x04004570 RID: 17776
-		public const int AsyncFieldNumber = 3;
+		// Token: 0x04004566 RID: 17766
+		public const int AsyncFieldNumber = 10;
 
-		// Token: 0x04004571 RID: 17777
+		// Token: 0x04004567 RID: 17767
 		private bool async_;
 
-		// Token: 0x04004572 RID: 17778
-		public const int IsSkipFieldNumber = 5;
+		// Token: 0x04004568 RID: 17768
+		public const int IsSkipFieldNumber = 15;
 
-		// Token: 0x04004573 RID: 17779
+		// Token: 0x04004569 RID: 17769
 		private bool isSkip_;
 
-		// Token: 0x04004574 RID: 17780
-		public const int HasPlotPosFieldNumber = 11;
+		// Token: 0x0400456A RID: 17770
+		public const int HasPlotPosFieldNumber = 3;
 
-		// Token: 0x04004575 RID: 17781
+		// Token: 0x0400456B RID: 17771
 		private bool hasPlotPos_;
 
-		// Token: 0x04004576 RID: 17782
-		public const int PlotPosFieldNumber = 14;
+		// Token: 0x0400456C RID: 17772
+		public const int PlotPosFieldNumber = 5;
 
-		// Token: 0x04004577 RID: 17783
+		// Token: 0x0400456D RID: 17773
 		private Vector plotPos_;
 	}
 }

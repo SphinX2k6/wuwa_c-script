@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000259 RID: 601
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200029C RID: 668
 	public class IComponentBase
 	{
-		// Token: 0x06000AE8 RID: 2792 RVA: 0x0002C7A8 File Offset: 0x0002A9A8
+		// Token: 0x06000C02 RID: 3074 RVA: 0x0002F498 File Offset: 0x0002D698
 		private IComponentBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000AE9 RID: 2793 RVA: 0x0002C7E0 File Offset: 0x0002A9E0
+		// Token: 0x06000C03 RID: 3075 RVA: 0x0002F4D0 File Offset: 0x0002D6D0
 		public static IComponentBase Create([Nullable(2)] IComponentBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000AEA RID: 2794 RVA: 0x0002C7F3 File Offset: 0x0002A9F3
+		// Token: 0x06000C04 RID: 3076 RVA: 0x0002F4E3 File Offset: 0x0002D6E3
 		public static IComponentBase CreateFromSetValue([Nullable(2)] IComponentBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000AEB RID: 2795 RVA: 0x0002C806 File Offset: 0x0002AA06
+		// Token: 0x06000C05 RID: 3077 RVA: 0x0002F4F6 File Offset: 0x0002D6F6
 		public IComponentBase_SetValue ToSetValue()
 		{
 			return new IComponentBase_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700034C RID: 844
-		// (get) Token: 0x06000AEC RID: 2796 RVA: 0x0002C828 File Offset: 0x0002AA28
-		// (set) Token: 0x06000AED RID: 2797 RVA: 0x0002C862 File Offset: 0x0002AA62
+		// Token: 0x17000394 RID: 916
+		// (get) Token: 0x06000C06 RID: 3078 RVA: 0x0002F518 File Offset: 0x0002D718
+		// (set) Token: 0x06000C07 RID: 3079 RVA: 0x0002F552 File Offset: 0x0002D752
 		public virtual bool? Disabled
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700034D RID: 845
-		// (get) Token: 0x06000AEE RID: 2798 RVA: 0x0002C870 File Offset: 0x0002AA70
-		// (set) Token: 0x06000AEF RID: 2799 RVA: 0x0002C89A File Offset: 0x0002AA9A
+		// Token: 0x17000395 RID: 917
+		// (get) Token: 0x06000C08 RID: 3080 RVA: 0x0002F560 File Offset: 0x0002D760
+		// (set) Token: 0x06000C09 RID: 3081 RVA: 0x0002F58A File Offset: 0x0002D78A
 		public virtual bool? EdIsLocked
 		{
 			get
@@ -103,11 +101,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000AB0 RID: 2736
+		// Token: 0x04000B91 RID: 2961
 		[Nullable(2)]
 		protected IComponentBase FbInstance;
 
-		// Token: 0x04000AB1 RID: 2737
+		// Token: 0x04000B92 RID: 2962
 		[Nullable(2)]
 		protected IComponentBase_SetValue PocoInterface;
 	}

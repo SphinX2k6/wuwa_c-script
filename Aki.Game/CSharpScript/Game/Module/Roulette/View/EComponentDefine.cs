@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Roulette.View
 {
-	// Token: 0x02004CA1 RID: 19617
+	// Token: 0x02003C52 RID: 15442
 	public class EComponentDefine
 	{
-		// Token: 0x0401AFDF RID: 110559
+		// Token: 0x04015940 RID: 88384
 		public const int DescText = 0;
 	}
 }

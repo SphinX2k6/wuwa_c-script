@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Launcher.PreDownload
 {
-	// Token: 0x02000110 RID: 272
+	// Token: 0x02000114 RID: 276
 	public enum EPreDownloadMode
 	{
-		// Token: 0x04000505 RID: 1285
+		// Token: 0x04000540 RID: 1344
 		Normal,
-		// Token: 0x04000506 RID: 1286
+		// Token: 0x04000541 RID: 1345
 		Speed
 	}
 }

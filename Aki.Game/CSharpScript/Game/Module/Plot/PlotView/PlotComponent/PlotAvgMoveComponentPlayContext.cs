@@ -4,34 +4,34 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x02005086 RID: 20614
+	// Token: 0x02004056 RID: 16470
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotAvgMoveComponentPlayContext : IPlotAvgMoveComponentPlayContext
 	{
-		// Token: 0x17008079 RID: 32889
-		// (get) Token: 0x06034CF6 RID: 216310 RVA: 0x00C7DC12 File Offset: 0x00C7BE12
-		// (set) Token: 0x06034CF7 RID: 216311 RVA: 0x00C7DC1A File Offset: 0x00C7BE1A
+		// Token: 0x17005439 RID: 21561
+		// (get) Token: 0x06029BEB RID: 170987 RVA: 0x00BCAFEA File Offset: 0x00BC91EA
+		// (set) Token: 0x06029BEC RID: 170988 RVA: 0x00BCAFF2 File Offset: 0x00BC91F2
 		public IPlotAvgCharacterMove AvgCharacter { get; set; }
 
-		// Token: 0x1700807A RID: 32890
-		// (get) Token: 0x06034CF8 RID: 216312 RVA: 0x00C7DC23 File Offset: 0x00C7BE23
-		// (set) Token: 0x06034CF9 RID: 216313 RVA: 0x00C7DC2B File Offset: 0x00C7BE2B
+		// Token: 0x1700543A RID: 21562
+		// (get) Token: 0x06029BED RID: 170989 RVA: 0x00BCAFFB File Offset: 0x00BC91FB
+		// (set) Token: 0x06029BEE RID: 170990 RVA: 0x00BCB003 File Offset: 0x00BC9203
 		public float StartPosition { get; set; }
 
-		// Token: 0x1700807B RID: 32891
-		// (get) Token: 0x06034CFA RID: 216314 RVA: 0x00C7DC34 File Offset: 0x00C7BE34
-		// (set) Token: 0x06034CFB RID: 216315 RVA: 0x00C7DC3C File Offset: 0x00C7BE3C
+		// Token: 0x1700543B RID: 21563
+		// (get) Token: 0x06029BEF RID: 170991 RVA: 0x00BCB00C File Offset: 0x00BC920C
+		// (set) Token: 0x06029BF0 RID: 170992 RVA: 0x00BCB014 File Offset: 0x00BC9214
 		public float EndPosition { get; set; }
 
-		// Token: 0x1700807C RID: 32892
-		// (get) Token: 0x06034CFC RID: 216316 RVA: 0x00C7DC45 File Offset: 0x00C7BE45
-		// (set) Token: 0x06034CFD RID: 216317 RVA: 0x00C7DC4D File Offset: 0x00C7BE4D
+		// Token: 0x1700543C RID: 21564
+		// (get) Token: 0x06029BF1 RID: 170993 RVA: 0x00BCB01D File Offset: 0x00BC921D
+		// (set) Token: 0x06029BF2 RID: 170994 RVA: 0x00BCB025 File Offset: 0x00BC9225
 		public LTweenEase Ease { get; set; }
 
-		// Token: 0x1700807D RID: 32893
-		// (get) Token: 0x06034CFE RID: 216318 RVA: 0x00C7DC56 File Offset: 0x00C7BE56
-		// (set) Token: 0x06034CFF RID: 216319 RVA: 0x00C7DC5E File Offset: 0x00C7BE5E
+		// Token: 0x1700543D RID: 21565
+		// (get) Token: 0x06029BF3 RID: 170995 RVA: 0x00BCB02E File Offset: 0x00BC922E
+		// (set) Token: 0x06029BF4 RID: 170996 RVA: 0x00BCB036 File Offset: 0x00BC9236
 		public float Duration { get; set; }
 	}
 }

@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FB8 RID: 24504
+	// Token: 0x02004F9F RID: 20383
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUp37View : ActivitySubViewBase
 	{
-		// Token: 0x0603E1C4 RID: 254404 RVA: 0x00EFF9B8 File Offset: 0x00EFDBB8
+		// Token: 0x0603315E RID: 209246 RVA: 0x00E51674 File Offset: 0x00E4F874
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E1C5 RID: 254405 RVA: 0x00EFFC90 File Offset: 0x00EFDE90
+		// Token: 0x0603315F RID: 209247 RVA: 0x00E5194C File Offset: 0x00E4FB4C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TotalTopUp37View.<OnBeforeStartAsync>d__25 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E1C6 RID: 254406 RVA: 0x00EFFCD3 File Offset: 0x00EFDED3
+		// Token: 0x06033160 RID: 209248 RVA: 0x00E5198F File Offset: 0x00E4FB8F
 		private void OnSequencePlayEvent(string sequenceName, string eventName)
 		{
 			if (sequenceName == "Switch" && eventName == "Switch")
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E1C7 RID: 254407 RVA: 0x00EFFCFC File Offset: 0x00EFDEFC
+		// Token: 0x06033161 RID: 209249 RVA: 0x00E519B8 File Offset: 0x00E4FBB8
 		protected override UniTask OnBeforeShowSelfAsync()
 		{
 			TotalTopUp37View.<OnBeforeShowSelfAsync>d__27 <OnBeforeShowSelfAsync>d__;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <OnBeforeShowSelfAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E1C8 RID: 254408 RVA: 0x00EFFD40 File Offset: 0x00EFDF40
+		// Token: 0x06033162 RID: 209250 RVA: 0x00E519FC File Offset: 0x00E4FBFC
 		protected override UniTask OnBeforeHideSelfAsync()
 		{
 			TotalTopUp37View.<OnBeforeHideSelfAsync>d__28 <OnBeforeHideSelfAsync>d__;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <OnBeforeHideSelfAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E1C9 RID: 254409 RVA: 0x00EFFD83 File Offset: 0x00EFDF83
+		// Token: 0x06033163 RID: 209251 RVA: 0x00E51A3F File Offset: 0x00E4FC3F
 		protected override void OnBeforeHide()
 		{
 			this.ApplyVolumeState("mute", "切走活动页暂停视频与音乐");
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.PauseMusic();
 		}
 
-		// Token: 0x0603E1CA RID: 254410 RVA: 0x00EFFDB1 File Offset: 0x00EFDFB1
+		// Token: 0x06033164 RID: 209252 RVA: 0x00E51A6D File Offset: 0x00E4FC6D
 		protected override void OnBeforeShow()
 		{
 			MediaPlayer videoPlayer = this.VideoPlayer;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E1CB RID: 254411 RVA: 0x00EFFDD8 File Offset: 0x00EFDFD8
+		// Token: 0x06033165 RID: 209253 RVA: 0x00E51A94 File Offset: 0x00E4FC94
 		protected override void OnStart()
 		{
 			UUISprite sprite = base.GetSprite(16);
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.StartRotation(totalTopUpData.PageViewModel);
 		}
 
-		// Token: 0x0603E1CC RID: 254412 RVA: 0x00EFFE24 File Offset: 0x00EFE024
+		// Token: 0x06033166 RID: 209254 RVA: 0x00E51AE0 File Offset: 0x00E4FCE0
 		protected override void OnRefreshView()
 		{
 			TotalTopUpUtil.Debug("TotalTopUp37View刷新", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.Refresh(data);
 		}
 
-		// Token: 0x0603E1CD RID: 254413 RVA: 0x00EFFE58 File Offset: 0x00EFE058
+		// Token: 0x06033167 RID: 209255 RVA: 0x00E51B14 File Offset: 0x00E4FD14
 		protected override void OnTimer(float gap)
 		{
 			TotalTopUpData totalTopUpData = this.ActivityBaseData as TotalTopUpData;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.TickRotation(gap);
 		}
 
-		// Token: 0x0603E1CE RID: 254414 RVA: 0x00EFFE98 File Offset: 0x00EFE098
+		// Token: 0x06033168 RID: 209256 RVA: 0x00E51B54 File Offset: 0x00E4FD54
 		private void Refresh(TotalTopUpData data)
 		{
 			TotalTopUpPageViewModel pageViewModel = data.PageViewModel;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.RefreshProgress(pageViewModel);
 		}
 
-		// Token: 0x0603E1CF RID: 254415 RVA: 0x00EFFED4 File Offset: 0x00EFE0D4
+		// Token: 0x06033169 RID: 209257 RVA: 0x00E51B90 File Offset: 0x00E4FD90
 		private void ReapplyCurrentRotationMark()
 		{
 			IReadOnlyList<TotalTopUpRotation> rotationList = this.GetRotationList();
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E1D0 RID: 254416 RVA: 0x00EFFF24 File Offset: 0x00EFE124
+		// Token: 0x0603316A RID: 209258 RVA: 0x00E51BE0 File Offset: 0x00E4FDE0
 		private void RefreshFirstReward(TotalTopUpPageViewModel viewModel)
 		{
 			TotalTopUpPageRewardViewModel totalTopUpPageRewardViewModel = (viewModel.RewardViewModels.Count > 0) ? viewModel.RewardViewModels[0] : null;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			item3.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603E1D1 RID: 254417 RVA: 0x00EFFFAC File Offset: 0x00EFE1AC
+		// Token: 0x0603316B RID: 209259 RVA: 0x00E51C68 File Offset: 0x00E4FE68
 		private unsafe void RefreshProgress(TotalTopUpPageViewModel viewModel)
 		{
 			string message = "TotalTopUp37View进度刷新";
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			item3.SetUIActive(!flag);
 		}
 
-		// Token: 0x0603E1D2 RID: 254418 RVA: 0x00F00110 File Offset: 0x00EFE310
+		// Token: 0x0603316C RID: 209260 RVA: 0x00E51DCC File Offset: 0x00E4FFCC
 		private void RefreshTime(double time)
 		{
 			CommonDefine.ICountDown remainTimeDataFormat = TimeUtil.Instance.GetRemainTimeDataFormat3(time);
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			LguiUtil.Instance.SetLocalTextNew(text, "TotalTopUp_1001", new <>z__ReadOnlySingleElementList<object>(remainTimeDataFormat.CountDownText ?? ""));
 		}
 
-		// Token: 0x0603E1D3 RID: 254419 RVA: 0x00F00158 File Offset: 0x00EFE358
+		// Token: 0x0603316D RID: 209261 RVA: 0x00E51E14 File Offset: 0x00E50014
 		private void StartRotation(TotalTopUpPageViewModel viewModel)
 		{
 			IReadOnlyList<TotalTopUpRotation> rotationList = viewModel.RotationList;
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.ApplyRotationIndex(0);
 		}
 
-		// Token: 0x0603E1D4 RID: 254420 RVA: 0x00F001A8 File Offset: 0x00EFE3A8
+		// Token: 0x0603316E RID: 209262 RVA: 0x00E51E64 File Offset: 0x00E50064
 		private void InitPageDots(int count)
 		{
 			this.PageDotSprites.Clear();
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E1D5 RID: 254421 RVA: 0x00F00216 File Offset: 0x00EFE416
+		// Token: 0x0603316F RID: 209263 RVA: 0x00E51ED2 File Offset: 0x00E500D2
 		[NullableContext(2)]
 		private UUIItem DuplicatePageDot(AActor templateActor, UUIItem parentItem)
 		{
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return ((aactor != null) ? aactor.GetComponentByClass(UUIItem.StaticClass()) : null) as UUIItem;
 		}
 
-		// Token: 0x0603E1D6 RID: 254422 RVA: 0x00F00244 File Offset: 0x00EFE444
+		// Token: 0x06033170 RID: 209264 RVA: 0x00E51F00 File Offset: 0x00E50100
 		private void RefreshPageDot(int currentIndex)
 		{
 			for (int i = 0; i < this.PageDotSprites.Count; i++)
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E1D7 RID: 254423 RVA: 0x00F00284 File Offset: 0x00EFE484
+		// Token: 0x06033171 RID: 209265 RVA: 0x00E51F40 File Offset: 0x00E50140
 		private void TickRotation(float gap)
 		{
 			IReadOnlyList<TotalTopUpRotation> rotationList = this.GetRotationList();
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E1D8 RID: 254424 RVA: 0x00F00310 File Offset: 0x00EFE510
+		// Token: 0x06033172 RID: 209266 RVA: 0x00E51FCC File Offset: 0x00E501CC
 		private void GotoRotationIndex(int index)
 		{
 			double nowSeconds = Time.Instance.NowSeconds;
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.PlaySubViewSequence("Switch", false);
 		}
 
-		// Token: 0x0603E1D9 RID: 254425 RVA: 0x00F00378 File Offset: 0x00EFE578
+		// Token: 0x06033173 RID: 209267 RVA: 0x00E52034 File Offset: 0x00E50234
 		private void ApplyRotationIndex(int index)
 		{
 			IReadOnlyList<TotalTopUpRotation> rotationList = this.GetRotationList();
@@ -381,7 +381,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.ShowRotationPage(rotationList[index]);
 		}
 
-		// Token: 0x0603E1DA RID: 254426 RVA: 0x00F003BC File Offset: 0x00EFE5BC
+		// Token: 0x06033174 RID: 209268 RVA: 0x00E52078 File Offset: 0x00E50278
 		private void ShowRotationPage(TotalTopUpRotation rotation)
 		{
 			this.CurrentMusicName = (rotation.MusicName ?? "");
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.RefreshPreviewScore(rotation.Id);
 		}
 
-		// Token: 0x0603E1DB RID: 254427 RVA: 0x00F00438 File Offset: 0x00EFE638
+		// Token: 0x06033175 RID: 209269 RVA: 0x00E520F4 File Offset: 0x00E502F4
 		private unsafe void ShowPreviewContent(int previewType, string resourcePath)
 		{
 			string message = "TotalTopUp37View轮播切页";
@@ -418,7 +418,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.ShowVideoPreview(resourcePath);
 		}
 
-		// Token: 0x0603E1DC RID: 254428 RVA: 0x00F004D0 File Offset: 0x00EFE6D0
+		// Token: 0x06033176 RID: 209270 RVA: 0x00E5218C File Offset: 0x00E5038C
 		private void ShowImagePreview(string resourcePath)
 		{
 			this.StopVideo();
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E1DD RID: 254429 RVA: 0x00F00550 File Offset: 0x00EFE750
+		// Token: 0x06033177 RID: 209271 RVA: 0x00E5220C File Offset: 0x00E5040C
 		private void ShowVideoPreview(string resourcePath)
 		{
 			UUITexture texture = base.GetTexture(18);
@@ -484,7 +484,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.PlayMusicAndSync();
 		}
 
-		// Token: 0x0603E1DE RID: 254430 RVA: 0x00F00648 File Offset: 0x00EFE848
+		// Token: 0x06033178 RID: 209272 RVA: 0x00E52304 File Offset: 0x00E50504
 		private UniTask LoadVideoMaterial()
 		{
 			TotalTopUp37View.<LoadVideoMaterial>d__50 <LoadVideoMaterial>d__;
@@ -495,7 +495,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <LoadVideoMaterial>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E1DF RID: 254431 RVA: 0x00F0068B File Offset: 0x00EFE88B
+		// Token: 0x06033179 RID: 209273 RVA: 0x00E52347 File Offset: 0x00E50547
 		private void StopVideo()
 		{
 			MediaPlayer videoPlayer = this.VideoPlayer;
@@ -506,7 +506,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			videoPlayer.StopVideo("TotalTopUp37View");
 		}
 
-		// Token: 0x0603E1E0 RID: 254432 RVA: 0x00F006A4 File Offset: 0x00EFE8A4
+		// Token: 0x0603317A RID: 209274 RVA: 0x00E52360 File Offset: 0x00E50560
 		[NullableContext(2)]
 		private void OnVideoLoopEnd(string videoName)
 		{
@@ -514,7 +514,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.PlayMusicAndSync();
 		}
 
-		// Token: 0x0603E1E1 RID: 254433 RVA: 0x00F006CC File Offset: 0x00EFE8CC
+		// Token: 0x0603317B RID: 209275 RVA: 0x00E52388 File Offset: 0x00E50588
 		private unsafe void PlayMusicAndSync()
 		{
 			this.StopMusic();
@@ -544,7 +544,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E1E2 RID: 254434 RVA: 0x00F007E8 File Offset: 0x00EFE9E8
+		// Token: 0x0603317C RID: 209276 RVA: 0x00E524A4 File Offset: 0x00E506A4
 		private unsafe void ApplyVolumeState(string state, string reason)
 		{
 			string message = "[音频]TotalTopUp37View视频音量切换";
@@ -555,7 +555,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			AudioSystem.Instance.SetState("ui_video_volume", state, true);
 		}
 
-		// Token: 0x0603E1E3 RID: 254435 RVA: 0x00F00850 File Offset: 0x00EFEA50
+		// Token: 0x0603317D RID: 209277 RVA: 0x00E5250C File Offset: 0x00E5070C
 		private int GetVideoPositionMs()
 		{
 			MediaPlayer videoPlayer = this.VideoPlayer;
@@ -567,7 +567,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return (int)UKismetMathLibrary.GetTotalMilliseconds(ftimespan);
 		}
 
-		// Token: 0x0603E1E4 RID: 254436 RVA: 0x00F00884 File Offset: 0x00EFEA84
+		// Token: 0x0603317E RID: 209278 RVA: 0x00E52540 File Offset: 0x00E50740
 		private void SeekMusicTo(int positionMs)
 		{
 			if (this.CurrentMusicName.Length <= 0 || this.MusicHandle == 0)
@@ -580,7 +580,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}));
 		}
 
-		// Token: 0x0603E1E5 RID: 254437 RVA: 0x00F008DC File Offset: 0x00EFEADC
+		// Token: 0x0603317F RID: 209279 RVA: 0x00E52598 File Offset: 0x00E50798
 		private void StopMusic()
 		{
 			if (this.MusicHandle == 0)
@@ -597,7 +597,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.MusicHandle = 0;
 		}
 
-		// Token: 0x0603E1E6 RID: 254438 RVA: 0x00F00950 File Offset: 0x00EFEB50
+		// Token: 0x06033180 RID: 209280 RVA: 0x00E5260C File Offset: 0x00E5080C
 		private void PauseMusic()
 		{
 			if (this.MusicHandle == 0)
@@ -613,7 +613,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}));
 		}
 
-		// Token: 0x0603E1E7 RID: 254439 RVA: 0x00F009BC File Offset: 0x00EFEBBC
+		// Token: 0x06033181 RID: 209281 RVA: 0x00E52678 File Offset: 0x00E50878
 		private void ResumeMusic()
 		{
 			if (this.MusicHandle == 0)
@@ -629,13 +629,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}));
 		}
 
-		// Token: 0x0603E1E8 RID: 254440 RVA: 0x00F00A26 File Offset: 0x00EFEC26
+		// Token: 0x06033182 RID: 209282 RVA: 0x00E526E2 File Offset: 0x00E508E2
 		private void RefreshPreviewName(string previewName)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), previewName, Array.Empty<object>());
 		}
 
-		// Token: 0x0603E1E9 RID: 254441 RVA: 0x00F00A40 File Offset: 0x00EFEC40
+		// Token: 0x06033183 RID: 209283 RVA: 0x00E526FC File Offset: 0x00E508FC
 		private void RefreshPreviewScore(int rewardId)
 		{
 			int rewardScore = (this.ActivityBaseData as TotalTopUpData).PageViewModel.GetRewardScore(rewardId);
@@ -649,7 +649,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603E1EA RID: 254442 RVA: 0x00F00A90 File Offset: 0x00EFEC90
+		// Token: 0x06033184 RID: 209284 RVA: 0x00E5274C File Offset: 0x00E5094C
 		private void RefreshArrowActive()
 		{
 			bool value = this.GetRotationList().Count > 1;
@@ -657,32 +657,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			base.SetButtonUiActive(4, value);
 		}
 
-		// Token: 0x0603E1EB RID: 254443 RVA: 0x00F00ABC File Offset: 0x00EFECBC
+		// Token: 0x06033185 RID: 209285 RVA: 0x00E52778 File Offset: 0x00E50978
 		private void SetRotationBoardActive(bool active)
 		{
 			base.SetButtonUiActive(5, active);
 			base.SetButtonUiActive(4, active);
 		}
 
-		// Token: 0x0603E1EC RID: 254444 RVA: 0x00F00ACE File Offset: 0x00EFECCE
+		// Token: 0x06033186 RID: 209286 RVA: 0x00E5278A File Offset: 0x00E5098A
 		private IReadOnlyList<TotalTopUpRotation> GetRotationList()
 		{
 			return (this.ActivityBaseData as TotalTopUpData).PageViewModel.RotationList;
 		}
 
-		// Token: 0x0603E1ED RID: 254445 RVA: 0x00F00AE5 File Offset: 0x00EFECE5
+		// Token: 0x06033187 RID: 209287 RVA: 0x00E527A1 File Offset: 0x00E509A1
 		private void OnClickArrowLeft()
 		{
 			this.GotoRotationIndex(this.WrapRotationIndex(this.CurrentRotationIndex - 1));
 		}
 
-		// Token: 0x0603E1EE RID: 254446 RVA: 0x00F00AFB File Offset: 0x00EFECFB
+		// Token: 0x06033188 RID: 209288 RVA: 0x00E527B7 File Offset: 0x00E509B7
 		private void OnClickArrowRight()
 		{
 			this.GotoRotationIndex(this.WrapRotationIndex(this.CurrentRotationIndex + 1));
 		}
 
-		// Token: 0x0603E1EF RID: 254447 RVA: 0x00F00B14 File Offset: 0x00EFED14
+		// Token: 0x06033189 RID: 209289 RVA: 0x00E527D0 File Offset: 0x00E509D0
 		private int WrapRotationIndex(int index)
 		{
 			int count = this.GetRotationList().Count;
@@ -693,7 +693,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return (index % count + count) % count;
 		}
 
-		// Token: 0x0603E1F0 RID: 254448 RVA: 0x00F00B3C File Offset: 0x00EFED3C
+		// Token: 0x0603318A RID: 209290 RVA: 0x00E527F8 File Offset: 0x00E509F8
 		private void OnClickMagnifier()
 		{
 			if (this.CurrentVideoPath.Length <= 0)
@@ -715,7 +715,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			UiManager.Instance.OpenView(EUiViewName.TotalTopUp37VideoFullScreenView, totalTopUp37VideoFullScreenParam, null);
 		}
 
-		// Token: 0x0603E1F1 RID: 254449 RVA: 0x00F00BCC File Offset: 0x00EFEDCC
+		// Token: 0x0603318B RID: 209291 RVA: 0x00E52888 File Offset: 0x00E50A88
 		private void TryReportVideoOpen()
 		{
 			TotalTopUpData totalTopUpData = this.ActivityBaseData as TotalTopUpData;
@@ -740,7 +740,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			LogReportController.Instance.LogReport(totalTopUpVideoOpenLogData);
 		}
 
-		// Token: 0x0603E1F2 RID: 254450 RVA: 0x00F00C58 File Offset: 0x00EFEE58
+		// Token: 0x0603318C RID: 209292 RVA: 0x00E52914 File Offset: 0x00E50B14
 		private void OnClickPreviewReward()
 		{
 			IReadOnlyList<TotalTopUpRotation> rotationList = this.GetRotationList();
@@ -756,7 +756,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			rewardViewModel.PreviewReward();
 		}
 
-		// Token: 0x0603E1F3 RID: 254451 RVA: 0x00F00CB7 File Offset: 0x00EFEEB7
+		// Token: 0x0603318D RID: 209293 RVA: 0x00E52973 File Offset: 0x00E50B73
 		private void OnFullScreenClose()
 		{
 			this.ApplyVolumeState("mute", "全屏回页签常态");
@@ -764,13 +764,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.AutoRotateEnabled = true;
 		}
 
-		// Token: 0x0603E1F4 RID: 254452 RVA: 0x00F00CDB File Offset: 0x00EFEEDB
+		// Token: 0x0603318E RID: 209294 RVA: 0x00E52997 File Offset: 0x00E50B97
 		private void OnClickHelp()
 		{
 			HelpController.Instance.OpenHelpById(516);
 		}
 
-		// Token: 0x0603E1F5 RID: 254453 RVA: 0x00F00CEC File Offset: 0x00EFEEEC
+		// Token: 0x0603318F RID: 209295 RVA: 0x00E529A8 File Offset: 0x00E50BA8
 		private void OnClickFirstReward()
 		{
 			TotalTopUpData totalTopUpData = this.ActivityBaseData as TotalTopUpData;
@@ -787,7 +787,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			totalTopUpPageRewardViewModel.PreviewReward();
 		}
 
-		// Token: 0x0603E1F6 RID: 254454 RVA: 0x00F00D47 File Offset: 0x00EFEF47
+		// Token: 0x06033190 RID: 209296 RVA: 0x00E52A03 File Offset: 0x00E50C03
 		private void OnClickGotoStore()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -796,7 +796,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			});
 		}
 
-		// Token: 0x0603E1F7 RID: 254455 RVA: 0x00F00D65 File Offset: 0x00EFEF65
+		// Token: 0x06033191 RID: 209297 RVA: 0x00E52A21 File Offset: 0x00E50C21
 		protected override void OnBeforeDestroy()
 		{
 			this.ApplyVolumeState("none", "销毁兜底");
@@ -809,154 +809,154 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.VideoPlayer = null;
 		}
 
-		// Token: 0x0402072B RID: 132907
+		// Token: 0x0401B1FD RID: 111101
 		private const int HELP_ID = 516;
 
-		// Token: 0x0402072C RID: 132908
+		// Token: 0x0401B1FE RID: 111102
 		private const string PROGRESS_SCORE_FORMAT = "<size=64>{0}/</size>{1}";
 
-		// Token: 0x0402072D RID: 132909
+		// Token: 0x0401B1FF RID: 111103
 		private const string VIDEO_NAME = "TotalTopUp37View";
 
-		// Token: 0x0402072E RID: 132910
+		// Token: 0x0401B200 RID: 111104
 		private const string VIDEO_MATERIAL_ID = "M_VideoTextureMat_TextureClip";
 
-		// Token: 0x0402072F RID: 132911
+		// Token: 0x0401B201 RID: 111105
 		private const string SWITCH_SEQUENCE_NAME = "Switch";
 
-		// Token: 0x04020730 RID: 132912
+		// Token: 0x0401B202 RID: 111106
 		private const double ROTATION_SWITCH_INTERVAL = 0.3;
 
-		// Token: 0x04020731 RID: 132913
+		// Token: 0x0401B203 RID: 111107
 		private const string VIDEO_VOLUME_STATE_GROUP = "ui_video_volume";
 
-		// Token: 0x04020732 RID: 132914
+		// Token: 0x0401B204 RID: 111108
 		private const string VIDEO_VOLUME_MUTE = "mute";
 
-		// Token: 0x04020733 RID: 132915
+		// Token: 0x0401B205 RID: 111109
 		private const string VIDEO_VOLUME_NORMAL = "normal";
 
-		// Token: 0x04020734 RID: 132916
+		// Token: 0x0401B206 RID: 111110
 		private const string VIDEO_VOLUME_NONE = "none";
 
-		// Token: 0x04020735 RID: 132917
+		// Token: 0x0401B207 RID: 111111
 		[Nullable(2)]
 		private TotalTopUp37RewardListPanel RewardListPanel;
 
-		// Token: 0x04020736 RID: 132918
+		// Token: 0x0401B208 RID: 111112
 		private float ProgressBarMaxWidth;
 
-		// Token: 0x04020737 RID: 132919
+		// Token: 0x0401B209 RID: 111113
 		private int CurrentRotationIndex;
 
-		// Token: 0x04020738 RID: 132920
+		// Token: 0x0401B20A RID: 111114
 		private int PendingRotationIndex;
 
-		// Token: 0x04020739 RID: 132921
+		// Token: 0x0401B20B RID: 111115
 		private double NextRotationSwitchTime;
 
-		// Token: 0x0402073A RID: 132922
+		// Token: 0x0401B20C RID: 111116
 		private float RotationElapsedMs;
 
-		// Token: 0x0402073B RID: 132923
+		// Token: 0x0401B20D RID: 111117
 		private bool AutoRotateEnabled;
 
-		// Token: 0x0402073C RID: 132924
+		// Token: 0x0401B20E RID: 111118
 		private readonly List<UUIItem> PageDotSprites = new List<UUIItem>();
 
-		// Token: 0x0402073D RID: 132925
+		// Token: 0x0401B20F RID: 111119
 		[Nullable(2)]
 		private MediaPlayer VideoPlayer;
 
-		// Token: 0x0402073E RID: 132926
+		// Token: 0x0401B210 RID: 111120
 		private bool VideoMaterialLoaded;
 
-		// Token: 0x0402073F RID: 132927
+		// Token: 0x0401B211 RID: 111121
 		private string CurrentVideoPath = "";
 
-		// Token: 0x04020740 RID: 132928
+		// Token: 0x0401B212 RID: 111122
 		private string CurrentMusicName = "";
 
-		// Token: 0x04020741 RID: 132929
+		// Token: 0x0401B213 RID: 111123
 		private int MusicHandle;
 
-		// Token: 0x04020742 RID: 132930
+		// Token: 0x0401B214 RID: 111124
 		private bool MusicResumed;
 
-		// Token: 0x0200C28B RID: 49803
+		// Token: 0x0200AC96 RID: 44182
 		[NullableContext(0)]
 		private class ENode
 		{
-			// Token: 0x0403AC47 RID: 240711
+			// Token: 0x04035623 RID: 218659
 			public const int BtnHelpInfo = 0;
 
-			// Token: 0x0403AC48 RID: 240712
+			// Token: 0x04035624 RID: 218660
 			public const int TextTime = 1;
 
-			// Token: 0x0403AC49 RID: 240713
+			// Token: 0x04035625 RID: 218661
 			public const int TextTitle = 2;
 
-			// Token: 0x0403AC4A RID: 240714
+			// Token: 0x04035626 RID: 218662
 			public const int BtnMagnifier = 3;
 
-			// Token: 0x0403AC4B RID: 240715
+			// Token: 0x04035627 RID: 218663
 			public const int BtnArrowRight = 4;
 
-			// Token: 0x0403AC4C RID: 240716
+			// Token: 0x04035628 RID: 218664
 			public const int BtnArrowLeft = 5;
 
-			// Token: 0x0403AC4D RID: 240717
+			// Token: 0x04035629 RID: 218665
 			public const int PanelPageHorizontal = 6;
 
-			// Token: 0x0403AC4E RID: 240718
+			// Token: 0x0403562A RID: 218666
 			public const int PanelPage = 7;
 
-			// Token: 0x0403AC4F RID: 240719
+			// Token: 0x0403562B RID: 218667
 			public const int TextTips = 8;
 
-			// Token: 0x0403AC50 RID: 240720
+			// Token: 0x0403562C RID: 218668
 			public const int BtnCommon = 9;
 
-			// Token: 0x0403AC51 RID: 240721
+			// Token: 0x0403562D RID: 218669
 			public const int ItemRedDot = 10;
 
-			// Token: 0x0403AC52 RID: 240722
+			// Token: 0x0403562E RID: 218670
 			public const int PanelDone = 11;
 
-			// Token: 0x0403AC53 RID: 240723
+			// Token: 0x0403562F RID: 218671
 			public const int PanelItem = 12;
 
-			// Token: 0x0403AC54 RID: 240724
+			// Token: 0x04035630 RID: 218672
 			public const int TextTips2 = 13;
 
-			// Token: 0x0403AC55 RID: 240725
+			// Token: 0x04035631 RID: 218673
 			public const int PanelNum = 14;
 
-			// Token: 0x0403AC56 RID: 240726
+			// Token: 0x04035632 RID: 218674
 			public const int TextCurrentScore = 15;
 
-			// Token: 0x0403AC57 RID: 240727
+			// Token: 0x04035633 RID: 218675
 			public const int SpriteProgressBar = 16;
 
-			// Token: 0x0403AC58 RID: 240728
+			// Token: 0x04035634 RID: 218676
 			public const int BtnCommon2 = 17;
 
-			// Token: 0x0403AC59 RID: 240729
+			// Token: 0x04035635 RID: 218677
 			public const int TextureImage = 18;
 
-			// Token: 0x0403AC5A RID: 240730
+			// Token: 0x04035636 RID: 218678
 			public const int PanelVideo = 19;
 
-			// Token: 0x0403AC5B RID: 240731
+			// Token: 0x04035637 RID: 218679
 			public const int TextureVideo = 20;
 
-			// Token: 0x0403AC5C RID: 240732
+			// Token: 0x04035638 RID: 218680
 			public const int MaxTipsItem = 21;
 
-			// Token: 0x0403AC5D RID: 240733
+			// Token: 0x04035639 RID: 218681
 			public const int FirstRewardEffectItem = 22;
 
-			// Token: 0x0403AC5E RID: 240734
+			// Token: 0x0403563A RID: 218682
 			public const int BtnFullScreen = 23;
 		}
 	}

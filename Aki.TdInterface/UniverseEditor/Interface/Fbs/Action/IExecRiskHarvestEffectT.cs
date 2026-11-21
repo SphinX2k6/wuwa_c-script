@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006715 RID: 26389
+	// Token: 0x02006D95 RID: 28053
 	public class IExecRiskHarvestEffectT
 	{
-		// Token: 0x1700C405 RID: 50181
-		// (get) Token: 0x0602DE63 RID: 188003 RVA: 0x00646A72 File Offset: 0x00644C72
-		// (set) Token: 0x0602DE64 RID: 188004 RVA: 0x00646A7A File Offset: 0x00644C7A
+		// Token: 0x1700CDBB RID: 52667
+		// (get) Token: 0x060306A9 RID: 198313 RVA: 0x006941B6 File Offset: 0x006923B6
+		// (set) Token: 0x060306AA RID: 198314 RVA: 0x006941BE File Offset: 0x006923BE
 		public int Id { get; set; }
 
-		// Token: 0x0602DE65 RID: 188005 RVA: 0x00646A83 File Offset: 0x00644C83
+		// Token: 0x060306AB RID: 198315 RVA: 0x006941C7 File Offset: 0x006923C7
 		public IExecRiskHarvestEffectT()
 		{
 			this.Id = 0;

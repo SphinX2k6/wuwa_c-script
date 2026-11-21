@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B2C RID: 15148
+	// Token: 0x02003F2E RID: 16174
 	public struct IWoodenBoxProliferateParams : IFlatbufferObject
 	{
-		// Token: 0x170067EA RID: 26602
-		// (get) Token: 0x06014B0B RID: 84747 RVA: 0x00302714 File Offset: 0x00300914
+		// Token: 0x17006D85 RID: 28037
+		// (get) Token: 0x06015FB5 RID: 90037 RVA: 0x003289A4 File Offset: 0x00326BA4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014B0C RID: 84748 RVA: 0x00302721 File Offset: 0x00300921
+		// Token: 0x06015FB6 RID: 90038 RVA: 0x003289B1 File Offset: 0x00326BB1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014B0D RID: 84749 RVA: 0x00302728 File Offset: 0x00300928
+		// Token: 0x06015FB7 RID: 90039 RVA: 0x003289B8 File Offset: 0x00326BB8
 		public static IWoodenBoxProliferateParams GetRootAsIWoodenBoxProliferateParams(ByteBuffer _bb)
 		{
 			return IWoodenBoxProliferateParams.GetRootAsIWoodenBoxProliferateParams(_bb, default(IWoodenBoxProliferateParams));
 		}
 
-		// Token: 0x06014B0E RID: 84750 RVA: 0x00302744 File Offset: 0x00300944
+		// Token: 0x06015FB8 RID: 90040 RVA: 0x003289D4 File Offset: 0x00326BD4
 		public static IWoodenBoxProliferateParams GetRootAsIWoodenBoxProliferateParams(ByteBuffer _bb, IWoodenBoxProliferateParams obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014B0F RID: 84751 RVA: 0x00302761 File Offset: 0x00300961
+		// Token: 0x06015FB9 RID: 90041 RVA: 0x003289F1 File Offset: 0x00326BF1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014B10 RID: 84752 RVA: 0x00302770 File Offset: 0x00300970
+		// Token: 0x06015FBA RID: 90042 RVA: 0x00328A00 File Offset: 0x00326C00
 		public IWoodenBoxProliferateParams __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170067EB RID: 26603
-		// (get) Token: 0x06014B11 RID: 84753 RVA: 0x00302780 File Offset: 0x00300980
+		// Token: 0x17006D86 RID: 28038
+		// (get) Token: 0x06015FBB RID: 90043 RVA: 0x00328A10 File Offset: 0x00326C10
 		public EParamsPreset Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x170067EC RID: 26604
-		// (get) Token: 0x06014B12 RID: 84754 RVA: 0x003027BC File Offset: 0x003009BC
+		// Token: 0x17006D87 RID: 28039
+		// (get) Token: 0x06015FBC RID: 90044 RVA: 0x00328A4C File Offset: 0x00326C4C
 		public TWoodenBoxProliferateSpawnConfig SpawnConfigType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014B13 RID: 84755 RVA: 0x003027F8 File Offset: 0x003009F8
+		// Token: 0x06015FBD RID: 90045 RVA: 0x00328A88 File Offset: 0x00326C88
 		public TTable? SpawnConfig<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,20 +88,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06014B14 RID: 84756 RVA: 0x0030283C File Offset: 0x00300A3C
+		// Token: 0x06015FBE RID: 90046 RVA: 0x00328ACC File Offset: 0x00326CCC
 		public IWoodenBoxProliferatePositionList SpawnConfigAsIWoodenBoxProliferatePositionList()
 		{
 			return this.SpawnConfig<IWoodenBoxProliferatePositionList>().Value;
 		}
 
-		// Token: 0x06014B15 RID: 84757 RVA: 0x00302858 File Offset: 0x00300A58
+		// Token: 0x06015FBF RID: 90047 RVA: 0x00328AE8 File Offset: 0x00326CE8
 		public IWoodenBoxProliferateRandomInRange SpawnConfigAsIWoodenBoxProliferateRandomInRange()
 		{
 			return this.SpawnConfig<IWoodenBoxProliferateRandomInRange>().Value;
 		}
 
-		// Token: 0x170067ED RID: 26605
-		// (get) Token: 0x06014B16 RID: 84758 RVA: 0x00302874 File Offset: 0x00300A74
+		// Token: 0x17006D88 RID: 28040
+		// (get) Token: 0x06015FC0 RID: 90048 RVA: 0x00328B04 File Offset: 0x00326D04
 		public EWoodenBoxProliferateVisualType ProliferateVisualType
 		{
 			get
@@ -115,8 +115,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x170067EE RID: 26606
-		// (get) Token: 0x06014B17 RID: 84759 RVA: 0x003028B4 File Offset: 0x00300AB4
+		// Token: 0x17006D89 RID: 28041
+		// (get) Token: 0x06015FC1 RID: 90049 RVA: 0x00328B44 File Offset: 0x00326D44
 		public string ProliferateReadyState
 		{
 			get
@@ -130,20 +130,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014B18 RID: 84760 RVA: 0x003028EC File Offset: 0x00300AEC
+		// Token: 0x06015FC2 RID: 90050 RVA: 0x00328B7C File Offset: 0x00326D7C
 		public Span<byte> GetProliferateReadyStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06014B19 RID: 84761 RVA: 0x003028FC File Offset: 0x00300AFC
+		// Token: 0x06015FC3 RID: 90051 RVA: 0x00328B8C File Offset: 0x00326D8C
 		public byte[] GetProliferateReadyStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x170067EF RID: 26607
-		// (get) Token: 0x06014B1A RID: 84762 RVA: 0x0030290C File Offset: 0x00300B0C
+		// Token: 0x17006D8A RID: 28042
+		// (get) Token: 0x06015FC4 RID: 90052 RVA: 0x00328B9C File Offset: 0x00326D9C
 		public string ProliferatedState
 		{
 			get
@@ -157,20 +157,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014B1B RID: 84763 RVA: 0x00302944 File Offset: 0x00300B44
+		// Token: 0x06015FC5 RID: 90053 RVA: 0x00328BD4 File Offset: 0x00326DD4
 		public Span<byte> GetProliferatedStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x06014B1C RID: 84764 RVA: 0x00302954 File Offset: 0x00300B54
+		// Token: 0x06015FC6 RID: 90054 RVA: 0x00328BE4 File Offset: 0x00326DE4
 		public byte[] GetProliferatedStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(14);
 		}
 
-		// Token: 0x170067F0 RID: 26608
-		// (get) Token: 0x06014B1D RID: 84765 RVA: 0x00302964 File Offset: 0x00300B64
+		// Token: 0x17006D8B RID: 28043
+		// (get) Token: 0x06015FC7 RID: 90055 RVA: 0x00328BF4 File Offset: 0x00326DF4
 		public float ProliferateDuration
 		{
 			get
@@ -184,8 +184,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x170067F1 RID: 26609
-		// (get) Token: 0x06014B1E RID: 84766 RVA: 0x003029A8 File Offset: 0x00300BA8
+		// Token: 0x17006D8C RID: 28044
+		// (get) Token: 0x06015FC8 RID: 90056 RVA: 0x00328C38 File Offset: 0x00326E38
 		public byte NullMask
 		{
 			get
@@ -199,7 +199,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014B1F RID: 84767 RVA: 0x003029E8 File Offset: 0x00300BE8
+		// Token: 0x06015FC9 RID: 90057 RVA: 0x00328C78 File Offset: 0x00326E78
 		public static Offset<IWoodenBoxProliferateParams> CreateIWoodenBoxProliferateParams(FlatBufferBuilder builder, EParamsPreset Type = EParamsPreset.Decal, TWoodenBoxProliferateSpawnConfig SpawnConfig_type = TWoodenBoxProliferateSpawnConfig.NONE, int SpawnConfigOffset = 0, EWoodenBoxProliferateVisualType ProliferateVisualType = EWoodenBoxProliferateVisualType.SlenderJadeBamboo, StringOffset ProliferateReadyStateOffset = default(StringOffset), StringOffset ProliferatedStateOffset = default(StringOffset), float ProliferateDuration = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -214,67 +214,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IWoodenBoxProliferateParams.EndIWoodenBoxProliferateParams(builder);
 		}
 
-		// Token: 0x06014B20 RID: 84768 RVA: 0x00302A3F File Offset: 0x00300C3F
+		// Token: 0x06015FCA RID: 90058 RVA: 0x00328CCF File Offset: 0x00326ECF
 		public static void StartIWoodenBoxProliferateParams(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06014B21 RID: 84769 RVA: 0x00302A48 File Offset: 0x00300C48
+		// Token: 0x06015FCB RID: 90059 RVA: 0x00328CD8 File Offset: 0x00326ED8
 		public static void AddType(FlatBufferBuilder builder, EParamsPreset type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06014B22 RID: 84770 RVA: 0x00302A53 File Offset: 0x00300C53
+		// Token: 0x06015FCC RID: 90060 RVA: 0x00328CE3 File Offset: 0x00326EE3
 		public static void AddSpawnConfigType(FlatBufferBuilder builder, TWoodenBoxProliferateSpawnConfig spawnConfigType)
 		{
 			builder.AddByte(1, (byte)spawnConfigType, 0);
 		}
 
-		// Token: 0x06014B23 RID: 84771 RVA: 0x00302A5E File Offset: 0x00300C5E
+		// Token: 0x06015FCD RID: 90061 RVA: 0x00328CEE File Offset: 0x00326EEE
 		public static void AddSpawnConfig(FlatBufferBuilder builder, int spawnConfigOffset)
 		{
 			builder.AddOffset(2, spawnConfigOffset, 0);
 		}
 
-		// Token: 0x06014B24 RID: 84772 RVA: 0x00302A69 File Offset: 0x00300C69
+		// Token: 0x06015FCE RID: 90062 RVA: 0x00328CF9 File Offset: 0x00326EF9
 		public static void AddProliferateVisualType(FlatBufferBuilder builder, EWoodenBoxProliferateVisualType proliferateVisualType)
 		{
 			builder.AddByte(3, (byte)proliferateVisualType, 0);
 		}
 
-		// Token: 0x06014B25 RID: 84773 RVA: 0x00302A74 File Offset: 0x00300C74
+		// Token: 0x06015FCF RID: 90063 RVA: 0x00328D04 File Offset: 0x00326F04
 		public static void AddProliferateReadyState(FlatBufferBuilder builder, StringOffset proliferateReadyStateOffset)
 		{
 			builder.AddOffset(4, proliferateReadyStateOffset.Value, 0);
 		}
 
-		// Token: 0x06014B26 RID: 84774 RVA: 0x00302A84 File Offset: 0x00300C84
+		// Token: 0x06015FD0 RID: 90064 RVA: 0x00328D14 File Offset: 0x00326F14
 		public static void AddProliferatedState(FlatBufferBuilder builder, StringOffset proliferatedStateOffset)
 		{
 			builder.AddOffset(5, proliferatedStateOffset.Value, 0);
 		}
 
-		// Token: 0x06014B27 RID: 84775 RVA: 0x00302A94 File Offset: 0x00300C94
+		// Token: 0x06015FD1 RID: 90065 RVA: 0x00328D24 File Offset: 0x00326F24
 		public static void AddProliferateDuration(FlatBufferBuilder builder, float proliferateDuration)
 		{
 			builder.AddFloat(6, proliferateDuration, 0.0);
 		}
 
-		// Token: 0x06014B28 RID: 84776 RVA: 0x00302AA7 File Offset: 0x00300CA7
+		// Token: 0x06015FD2 RID: 90066 RVA: 0x00328D37 File Offset: 0x00326F37
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x06014B29 RID: 84777 RVA: 0x00302AB2 File Offset: 0x00300CB2
+		// Token: 0x06015FD3 RID: 90067 RVA: 0x00328D42 File Offset: 0x00326F42
 		public static Offset<IWoodenBoxProliferateParams> EndIWoodenBoxProliferateParams(FlatBufferBuilder builder)
 		{
 			return new Offset<IWoodenBoxProliferateParams>(builder.EndTable());
 		}
 
-		// Token: 0x06014B2A RID: 84778 RVA: 0x00302AC0 File Offset: 0x00300CC0
+		// Token: 0x06015FD4 RID: 90068 RVA: 0x00328D50 File Offset: 0x00326F50
 		public IWoodenBoxProliferateParamsT UnPack()
 		{
 			IWoodenBoxProliferateParamsT woodenBoxProliferateParamsT = new IWoodenBoxProliferateParamsT();
@@ -282,7 +282,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return woodenBoxProliferateParamsT;
 		}
 
-		// Token: 0x06014B2B RID: 84779 RVA: 0x00302ADC File Offset: 0x00300CDC
+		// Token: 0x06015FD5 RID: 90069 RVA: 0x00328D6C File Offset: 0x00326F6C
 		public void UnPackTo(IWoodenBoxProliferateParamsT _o)
 		{
 			_o.Type = this.Type;
@@ -307,7 +307,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06014B2C RID: 84780 RVA: 0x00302BCC File Offset: 0x00300DCC
+		// Token: 0x06015FD6 RID: 90070 RVA: 0x00328E5C File Offset: 0x0032705C
 		public static Offset<IWoodenBoxProliferateParams> Pack(FlatBufferBuilder builder, IWoodenBoxProliferateParamsT _o)
 		{
 			if (_o == null)
@@ -321,7 +321,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IWoodenBoxProliferateParams.CreateIWoodenBoxProliferateParams(builder, _o.Type, spawnConfig_type, spawnConfigOffset, _o.ProliferateVisualType, proliferateReadyStateOffset, proliferatedStateOffset, _o.ProliferateDuration, _o.NullMask);
 		}
 
-		// Token: 0x0400B007 RID: 45063
+		// Token: 0x0400B974 RID: 47476
 		private Table __p;
 	}
 }

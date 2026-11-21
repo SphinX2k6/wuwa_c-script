@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058AF RID: 22703
+	// Token: 0x02004887 RID: 18567
 	public class InstanceDungeonTitleWidelyItem : UiPanelBase
 	{
-		// Token: 0x06039BDD RID: 236509 RVA: 0x00DB9578 File Offset: 0x00DB7778
+		// Token: 0x0602EB00 RID: 191232 RVA: 0x00D08490 File Offset: 0x00D06690
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,17 +22,17 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039BDE RID: 236510 RVA: 0x00DB95C0 File Offset: 0x00DB77C0
+		// Token: 0x0602EB01 RID: 191233 RVA: 0x00D084D8 File Offset: 0x00D066D8
 		[NullableContext(2)]
 		public void RefreshItem(string titleTextId)
 		{
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(0), titleTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x0200BB16 RID: 47894
+		// Token: 0x0200A52F RID: 42287
 		private enum EComponent
 		{
-			// Token: 0x04038846 RID: 231494
+			// Token: 0x04033247 RID: 209479
 			TitleText
 		}
 	}

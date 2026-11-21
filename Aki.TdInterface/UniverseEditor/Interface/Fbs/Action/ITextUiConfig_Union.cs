@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073D6 RID: 29654
+	// Token: 0x02007BBD RID: 31677
 	public enum ITextUiConfig_Union : byte
 	{
-		// Token: 0x0401222A RID: 74282
+		// Token: 0x04013243 RID: 78403
 		NONE,
-		// Token: 0x0401222B RID: 74283
+		// Token: 0x04013244 RID: 78404
 		ITextUiConfig,
-		// Token: 0x0401222C RID: 74284
+		// Token: 0x04013245 RID: 78405
 		IAstrologyTextUiConfig
 	}
 }

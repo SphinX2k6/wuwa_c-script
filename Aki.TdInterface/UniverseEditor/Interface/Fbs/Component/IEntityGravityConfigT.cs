@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005178 RID: 20856
+	// Token: 0x020056DD RID: 22237
 	public class IEntityGravityConfigT
 	{
-		// Token: 0x1700985B RID: 39003
-		// (get) Token: 0x06021B6F RID: 138095 RVA: 0x004ADB83 File Offset: 0x004ABD83
-		// (set) Token: 0x06021B70 RID: 138096 RVA: 0x004ADB8B File Offset: 0x004ABD8B
+		// Token: 0x1700A04A RID: 41034
+		// (get) Token: 0x06023AC7 RID: 146119 RVA: 0x004E7BA3 File Offset: 0x004E5DA3
+		// (set) Token: 0x06023AC8 RID: 146120 RVA: 0x004E7BAB File Offset: 0x004E5DAB
 		public TGravityDirectionUnion GravityDirection { get; set; }
 
-		// Token: 0x1700985C RID: 39004
-		// (get) Token: 0x06021B71 RID: 138097 RVA: 0x004ADB94 File Offset: 0x004ABD94
-		// (set) Token: 0x06021B72 RID: 138098 RVA: 0x004ADB9C File Offset: 0x004ABD9C
+		// Token: 0x1700A04B RID: 41035
+		// (get) Token: 0x06023AC9 RID: 146121 RVA: 0x004E7BB4 File Offset: 0x004E5DB4
+		// (set) Token: 0x06023ACA RID: 146122 RVA: 0x004E7BBC File Offset: 0x004E5DBC
 		public bool SpecifyGravityLoad { get; set; }
 
-		// Token: 0x1700985D RID: 39005
-		// (get) Token: 0x06021B73 RID: 138099 RVA: 0x004ADBA5 File Offset: 0x004ABDA5
-		// (set) Token: 0x06021B74 RID: 138100 RVA: 0x004ADBAD File Offset: 0x004ABDAD
+		// Token: 0x1700A04C RID: 41036
+		// (get) Token: 0x06023ACB RID: 146123 RVA: 0x004E7BC5 File Offset: 0x004E5DC5
+		// (set) Token: 0x06023ACC RID: 146124 RVA: 0x004E7BCD File Offset: 0x004E5DCD
 		public bool SpecifyGravityLock { get; set; }
 
-		// Token: 0x1700985E RID: 39006
-		// (get) Token: 0x06021B75 RID: 138101 RVA: 0x004ADBB6 File Offset: 0x004ABDB6
-		// (set) Token: 0x06021B76 RID: 138102 RVA: 0x004ADBBE File Offset: 0x004ABDBE
+		// Token: 0x1700A04D RID: 41037
+		// (get) Token: 0x06023ACD RID: 146125 RVA: 0x004E7BD6 File Offset: 0x004E5DD6
+		// (set) Token: 0x06023ACE RID: 146126 RVA: 0x004E7BDE File Offset: 0x004E5DDE
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021B77 RID: 138103 RVA: 0x004ADBC7 File Offset: 0x004ABDC7
+		// Token: 0x06023ACF RID: 146127 RVA: 0x004E7BE7 File Offset: 0x004E5DE7
 		public IEntityGravityConfigT()
 		{
 			this.GravityDirection = null;

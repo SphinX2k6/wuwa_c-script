@@ -3,27 +3,26 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002104 RID: 8452
+	// Token: 0x02002365 RID: 9061
 	public class PlayBubble_SetValue
 	{
-		// Token: 0x04006F55 RID: 28501
+		// Token: 0x04007589 RID: 30089
 		public int? EntityId;
 
-		// Token: 0x04006F56 RID: 28502
-		[Nullable(1)]
+		// Token: 0x0400758A RID: 30090
 		public IBubbleIndex Flow;
 
-		// Token: 0x04006F57 RID: 28503
+		// Token: 0x0400758B RID: 30091
 		public bool? IsRangeFollowEntity;
 
-		// Token: 0x04006F58 RID: 28504
+		// Token: 0x0400758C RID: 30092
 		public bool? IsAudioOccludedByScene;
 
-		// Token: 0x04006F59 RID: 28505
+		// Token: 0x0400758D RID: 30093
 		[Nullable(2)]
 		public IBubbleRangeCylinderConfig TriggerCylinderConfig;
 
-		// Token: 0x04006F5A RID: 28506
+		// Token: 0x0400758E RID: 30094
 		public bool? IsPlayMouthAnim;
 	}
 }

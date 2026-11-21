@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B71 RID: 19313
+	// Token: 0x02005058 RID: 20568
 	public struct ICheckVillageInfrLevel : IFlatbufferObject
 	{
-		// Token: 0x17008C28 RID: 35880
-		// (get) Token: 0x0601E6EB RID: 124651 RVA: 0x004431B4 File Offset: 0x004413B4
+		// Token: 0x17009338 RID: 37688
+		// (get) Token: 0x06020279 RID: 131705 RVA: 0x00475A00 File Offset: 0x00473C00
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E6EC RID: 124652 RVA: 0x004431C1 File Offset: 0x004413C1
+		// Token: 0x0602027A RID: 131706 RVA: 0x00475A0D File Offset: 0x00473C0D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E6ED RID: 124653 RVA: 0x004431C8 File Offset: 0x004413C8
+		// Token: 0x0602027B RID: 131707 RVA: 0x00475A14 File Offset: 0x00473C14
 		public static ICheckVillageInfrLevel GetRootAsICheckVillageInfrLevel(ByteBuffer _bb)
 		{
 			return ICheckVillageInfrLevel.GetRootAsICheckVillageInfrLevel(_bb, default(ICheckVillageInfrLevel));
 		}
 
-		// Token: 0x0601E6EE RID: 124654 RVA: 0x004431E4 File Offset: 0x004413E4
+		// Token: 0x0602027C RID: 131708 RVA: 0x00475A30 File Offset: 0x00473C30
 		public static ICheckVillageInfrLevel GetRootAsICheckVillageInfrLevel(ByteBuffer _bb, ICheckVillageInfrLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E6EF RID: 124655 RVA: 0x00443201 File Offset: 0x00441401
+		// Token: 0x0602027D RID: 131709 RVA: 0x00475A4D File Offset: 0x00473C4D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E6F0 RID: 124656 RVA: 0x00443210 File Offset: 0x00441410
+		// Token: 0x0602027E RID: 131710 RVA: 0x00475A5C File Offset: 0x00473C5C
 		public ICheckVillageInfrLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008C29 RID: 35881
-		// (get) Token: 0x0601E6F1 RID: 124657 RVA: 0x00443220 File Offset: 0x00441420
+		// Token: 0x17009339 RID: 37689
+		// (get) Token: 0x0602027F RID: 131711 RVA: 0x00475A6C File Offset: 0x00473C6C
 		public ECheckSystemStateType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008C2A RID: 35882
-		// (get) Token: 0x0601E6F2 RID: 124658 RVA: 0x0044325C File Offset: 0x0044145C
+		// Token: 0x1700933A RID: 37690
+		// (get) Token: 0x06020280 RID: 131712 RVA: 0x00475AA8 File Offset: 0x00473CA8
 		public int Level
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E6F3 RID: 124659 RVA: 0x00443298 File Offset: 0x00441498
+		// Token: 0x06020281 RID: 131713 RVA: 0x00475AE4 File Offset: 0x00473CE4
 		public static Offset<ICheckVillageInfrLevel> CreateICheckVillageInfrLevel(FlatBufferBuilder builder, ECheckSystemStateType Type = ECheckSystemStateType.TrackMoonBuilding, int Level = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckVillageInfrLevel.EndICheckVillageInfrLevel(builder);
 		}
 
-		// Token: 0x0601E6F4 RID: 124660 RVA: 0x004432B5 File Offset: 0x004414B5
+		// Token: 0x06020282 RID: 131714 RVA: 0x00475B01 File Offset: 0x00473D01
 		public static void StartICheckVillageInfrLevel(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601E6F5 RID: 124661 RVA: 0x004432BE File Offset: 0x004414BE
+		// Token: 0x06020283 RID: 131715 RVA: 0x00475B0A File Offset: 0x00473D0A
 		public static void AddType(FlatBufferBuilder builder, ECheckSystemStateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E6F6 RID: 124662 RVA: 0x004432C9 File Offset: 0x004414C9
+		// Token: 0x06020284 RID: 131716 RVA: 0x00475B15 File Offset: 0x00473D15
 		public static void AddLevel(FlatBufferBuilder builder, int level)
 		{
 			builder.AddInt(1, level, 0);
 		}
 
-		// Token: 0x0601E6F7 RID: 124663 RVA: 0x004432D4 File Offset: 0x004414D4
+		// Token: 0x06020285 RID: 131717 RVA: 0x00475B20 File Offset: 0x00473D20
 		public static Offset<ICheckVillageInfrLevel> EndICheckVillageInfrLevel(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckVillageInfrLevel>(builder.EndTable());
 		}
 
-		// Token: 0x0601E6F8 RID: 124664 RVA: 0x004432E4 File Offset: 0x004414E4
+		// Token: 0x06020286 RID: 131718 RVA: 0x00475B30 File Offset: 0x00473D30
 		public ICheckVillageInfrLevelT UnPack()
 		{
 			ICheckVillageInfrLevelT checkVillageInfrLevelT = new ICheckVillageInfrLevelT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkVillageInfrLevelT;
 		}
 
-		// Token: 0x0601E6F9 RID: 124665 RVA: 0x004432FF File Offset: 0x004414FF
+		// Token: 0x06020287 RID: 131719 RVA: 0x00475B4B File Offset: 0x00473D4B
 		public void UnPackTo(ICheckVillageInfrLevelT _o)
 		{
 			_o.Type = this.Type;
 			_o.Level = this.Level;
 		}
 
-		// Token: 0x0601E6FA RID: 124666 RVA: 0x0044331C File Offset: 0x0044151C
+		// Token: 0x06020288 RID: 131720 RVA: 0x00475B68 File Offset: 0x00473D68
 		public static Offset<ICheckVillageInfrLevel> Pack(FlatBufferBuilder builder, ICheckVillageInfrLevelT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckVillageInfrLevel.CreateICheckVillageInfrLevel(builder, _o.Type, _o.Level);
 		}
 
-		// Token: 0x0400D43C RID: 54332
+		// Token: 0x0400DF3C RID: 57148
 		private Table __p;
 	}
 }

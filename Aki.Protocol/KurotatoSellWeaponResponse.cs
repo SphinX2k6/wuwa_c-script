@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020008BE RID: 2238
+	// Token: 0x020008AD RID: 2221
 	[NetMessage(EMessageId.KurotatoSellWeaponResponse)]
 	public sealed class KurotatoSellWeaponResponse : IMessage<KurotatoSellWeaponResponse>, IMessage, IEquatable<KurotatoSellWeaponResponse>, IDeepCloneable<KurotatoSellWeaponResponse>, IBufferMessage
 	{
-		// Token: 0x0600C671 RID: 50801 RVA: 0x001D58D1 File Offset: 0x001D3AD1
+		// Token: 0x0600C555 RID: 50517 RVA: 0x001D35E9 File Offset: 0x001D17E9
 		[NullableContext(1)]
 		public static KurotatoSellWeaponResponse Create()
 		{
 			return new KurotatoSellWeaponResponse();
 		}
 
-		// Token: 0x17002816 RID: 10262
-		// (get) Token: 0x0600C672 RID: 50802 RVA: 0x001D58D8 File Offset: 0x001D3AD8
+		// Token: 0x170027D7 RID: 10199
+		// (get) Token: 0x0600C556 RID: 50518 RVA: 0x001D35F0 File Offset: 0x001D17F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002817 RID: 10263
-		// (get) Token: 0x0600C673 RID: 50803 RVA: 0x001D58DB File Offset: 0x001D3ADB
+		// Token: 0x170027D8 RID: 10200
+		// (get) Token: 0x0600C557 RID: 50519 RVA: 0x001D35F3 File Offset: 0x001D17F3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C674 RID: 50804 RVA: 0x001D58E2 File Offset: 0x001D3AE2
+		// Token: 0x0600C558 RID: 50520 RVA: 0x001D35FA File Offset: 0x001D17FA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoSellWeaponResponse()
 		{
 		}
 
-		// Token: 0x0600C675 RID: 50805 RVA: 0x001D58EC File Offset: 0x001D3AEC
+		// Token: 0x0600C559 RID: 50521 RVA: 0x001D3604 File Offset: 0x001D1804
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoSellWeaponResponse(KurotatoSellWeaponResponse other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600C676 RID: 50806 RVA: 0x001D5938 File Offset: 0x001D3B38
+		// Token: 0x0600C55A RID: 50522 RVA: 0x001D3650 File Offset: 0x001D1850
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoSellWeaponResponse Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new KurotatoSellWeaponResponse(this);
 		}
 
-		// Token: 0x17002818 RID: 10264
-		// (get) Token: 0x0600C677 RID: 50807 RVA: 0x001D5940 File Offset: 0x001D3B40
-		// (set) Token: 0x0600C678 RID: 50808 RVA: 0x001D5948 File Offset: 0x001D3B48
+		// Token: 0x170027D9 RID: 10201
+		// (get) Token: 0x0600C55B RID: 50523 RVA: 0x001D3658 File Offset: 0x001D1858
+		// (set) Token: 0x0600C55C RID: 50524 RVA: 0x001D3660 File Offset: 0x001D1860
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002819 RID: 10265
-		// (get) Token: 0x0600C679 RID: 50809 RVA: 0x001D5951 File Offset: 0x001D3B51
-		// (set) Token: 0x0600C67A RID: 50810 RVA: 0x001D5959 File Offset: 0x001D3B59
+		// Token: 0x170027DA RID: 10202
+		// (get) Token: 0x0600C55D RID: 50525 RVA: 0x001D3669 File Offset: 0x001D1869
+		// (set) Token: 0x0600C55E RID: 50526 RVA: 0x001D3671 File Offset: 0x001D1871
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoWeaponPanelPbData PanelPbData
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C67B RID: 50811 RVA: 0x001D5962 File Offset: 0x001D3B62
+		// Token: 0x0600C55F RID: 50527 RVA: 0x001D367A File Offset: 0x001D187A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as KurotatoSellWeaponResponse);
 		}
 
-		// Token: 0x0600C67C RID: 50812 RVA: 0x001D5970 File Offset: 0x001D3B70
+		// Token: 0x0600C560 RID: 50528 RVA: 0x001D3688 File Offset: 0x001D1888
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(KurotatoSellWeaponResponse other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && object.Equals(this.PanelPbData, other.PanelPbData) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600C67D RID: 50813 RVA: 0x001D59C0 File Offset: 0x001D3BC0
+		// Token: 0x0600C561 RID: 50529 RVA: 0x001D36D8 File Offset: 0x001D18D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C67E RID: 50814 RVA: 0x001D5A1B File Offset: 0x001D3C1B
+		// Token: 0x0600C562 RID: 50530 RVA: 0x001D3733 File Offset: 0x001D1933
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600C67F RID: 50815 RVA: 0x001D5A28 File Offset: 0x001D3C28
+		// Token: 0x0600C563 RID: 50531 RVA: 0x001D3740 File Offset: 0x001D1940
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600C680 RID: 50816 RVA: 0x001D5A34 File Offset: 0x001D3C34
+		// Token: 0x0600C564 RID: 50532 RVA: 0x001D374C File Offset: 0x001D194C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.panelPbData_ != null)
-			{
-				output.WriteRawTag(66);
-				output.WriteMessage(this.PanelPbData);
-			}
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(32);
 				output.WriteEnum((int)this.ErrorCode);
+			}
+			if (this.panelPbData_ != null)
+			{
+				output.WriteRawTag(42);
+				output.WriteMessage(this.PanelPbData);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C681 RID: 50817 RVA: 0x001D5A90 File Offset: 0x001D3C90
+		// Token: 0x0600C565 RID: 50533 RVA: 0x001D37A8 File Offset: 0x001D19A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C682 RID: 50818 RVA: 0x001D5AE8 File Offset: 0x001D3CE8
+		// Token: 0x0600C566 RID: 50534 RVA: 0x001D3800 File Offset: 0x001D1A00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(KurotatoSellWeaponResponse other)
@@ -220,7 +220,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600C683 RID: 50819 RVA: 0x001D5B50 File Offset: 0x001D3D50
+		// Token: 0x0600C567 RID: 50535 RVA: 0x001D3868 File Offset: 0x001D1A68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600C684 RID: 50820 RVA: 0x001D5B5C File Offset: 0x001D3D5C
+		// Token: 0x0600C568 RID: 50536 RVA: 0x001D3874 File Offset: 0x001D1A74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -240,41 +240,41 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 66U)
+				if (num != 32U)
 				{
-					if (num != 120U)
+					if (num != 42U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.ErrorCode = (ErrorCode)input.ReadEnum();
+						if (this.panelPbData_ == null)
+						{
+							this.PanelPbData = new KurotatoWeaponPanelPbData();
+						}
+						input.ReadMessage(this.PanelPbData);
 					}
 				}
 				else
 				{
-					if (this.panelPbData_ == null)
-					{
-						this.PanelPbData = new KurotatoWeaponPanelPbData();
-					}
-					input.ReadMessage(this.PanelPbData);
+					this.ErrorCode = (ErrorCode)input.ReadEnum();
 				}
 			}
 		}
 
-		// Token: 0x0400552F RID: 21807
+		// Token: 0x04005536 RID: 21814
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005530 RID: 21808
-		public const int ErrorCodeFieldNumber = 15;
+		// Token: 0x04005537 RID: 21815
+		public const int ErrorCodeFieldNumber = 4;
 
-		// Token: 0x04005531 RID: 21809
+		// Token: 0x04005538 RID: 21816
 		private ErrorCode errorCode_;
 
-		// Token: 0x04005532 RID: 21810
-		public const int PanelPbDataFieldNumber = 8;
+		// Token: 0x04005539 RID: 21817
+		public const int PanelPbDataFieldNumber = 5;
 
-		// Token: 0x04005533 RID: 21811
+		// Token: 0x0400553A RID: 21818
 		private KurotatoWeaponPanelPbData panelPbData_;
 	}
 }

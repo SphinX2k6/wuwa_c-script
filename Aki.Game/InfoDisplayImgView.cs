@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F9B RID: 8091
+// Token: 0x0200145D RID: 5213
 public class InfoDisplayImgView : UiViewBase
 {
-	// Token: 0x0600FB3F RID: 64319 RVA: 0x003CDEC0 File Offset: 0x003CC0C0
+	// Token: 0x0600CF61 RID: 53089 RVA: 0x003D9A80 File Offset: 0x003D7C80
 	[NullableContext(1)]
 	public InfoDisplayImgView(UiViewInfo uiViewInfo) : base(uiViewInfo)
 	{
 	}
 
-	// Token: 0x0600FB40 RID: 64320 RVA: 0x003CDECC File Offset: 0x003CC0CC
+	// Token: 0x0600CF62 RID: 53090 RVA: 0x003D9A8C File Offset: 0x003D7C8C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -37,19 +37,19 @@ public class InfoDisplayImgView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FB41 RID: 64321 RVA: 0x003CDF93 File Offset: 0x003CC193
+	// Token: 0x0600CF63 RID: 53091 RVA: 0x003D9B53 File Offset: 0x003D7D53
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600FB42 RID: 64322 RVA: 0x003CDF9C File Offset: 0x003CC19C
+	// Token: 0x0600CF64 RID: 53092 RVA: 0x003D9B5C File Offset: 0x003D7D5C
 	protected override void OnStart()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600FB43 RID: 64323 RVA: 0x003CDFA4 File Offset: 0x003CC1A4
+	// Token: 0x0600CF65 RID: 53093 RVA: 0x003D9B64 File Offset: 0x003D7D64
 	private void RefreshView()
 	{
 		string path2 = InfoDisplayModel.Instance.CurrentCurrentInformationTexture();
@@ -63,16 +63,16 @@ public class InfoDisplayImgView : UiViewBase
 		}, 100, this.MemoryTag);
 	}
 
-	// Token: 0x02008587 RID: 34183
+	// Token: 0x0200770C RID: 30476
 	private class EInfoDisplayImgViewComponents
 	{
-		// Token: 0x0402B792 RID: 178066
+		// Token: 0x04026AB5 RID: 158389
 		public const int DetailImg = 0;
 
-		// Token: 0x0402B793 RID: 178067
+		// Token: 0x04026AB6 RID: 158390
 		public const int CloseText = 1;
 
-		// Token: 0x0402B794 RID: 178068
+		// Token: 0x04026AB7 RID: 158391
 		public const int MaskBtn = 2;
 	}
 }

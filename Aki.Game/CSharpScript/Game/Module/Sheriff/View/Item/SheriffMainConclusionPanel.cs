@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C6E RID: 19566
+	// Token: 0x02003C1F RID: 15391
 	public class SheriffMainConclusionPanel : UiTabViewBase
 	{
-		// Token: 0x06032931 RID: 207153 RVA: 0x00BC9A1C File Offset: 0x00BC7C1C
+		// Token: 0x060276E4 RID: 161508 RVA: 0x00B0E680 File Offset: 0x00B0C880
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032932 RID: 207154 RVA: 0x00BC9B28 File Offset: 0x00BC7D28
+		// Token: 0x060276E5 RID: 161509 RVA: 0x00B0E78C File Offset: 0x00B0C98C
 		protected override void OnStart()
 		{
 			this.Proxy = (this.ExtraParams as SheriffMainProxy);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.InfoScrollView.RefreshByData(questionList, null, true);
 		}
 
-		// Token: 0x06032933 RID: 207155 RVA: 0x00BC9BA4 File Offset: 0x00BC7DA4
+		// Token: 0x060276E6 RID: 161510 RVA: 0x00B0E808 File Offset: 0x00B0CA08
 		protected override void OnBeforeShow()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -64,20 +64,20 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			uiViewSequence.PlayOrReplaySequenceByName("Start", false, null);
 		}
 
-		// Token: 0x06032934 RID: 207156 RVA: 0x00BC9BD0 File Offset: 0x00BC7DD0
+		// Token: 0x060276E7 RID: 161511 RVA: 0x00B0E834 File Offset: 0x00B0CA34
 		[NullableContext(1)]
 		private SheriffMainConclusionInfo CreateInfoItem()
 		{
 			return new SheriffMainConclusionInfo(this.Proxy);
 		}
 
-		// Token: 0x06032935 RID: 207157 RVA: 0x00BC9BDD File Offset: 0x00BC7DDD
+		// Token: 0x060276E8 RID: 161512 RVA: 0x00B0E841 File Offset: 0x00B0CA41
 		private void OnClickBtnSkyEyeConfirm()
 		{
 			this.Proxy.RestartGameplay();
 		}
 
-		// Token: 0x06032936 RID: 207158 RVA: 0x00BC9BEA File Offset: 0x00BC7DEA
+		// Token: 0x060276E9 RID: 161513 RVA: 0x00B0E84E File Offset: 0x00B0CA4E
 		private void OnClickBtnSkyEyeConfirmWhile()
 		{
 			this.Proxy.RequestConfirm().Then(delegate(bool value)
@@ -89,11 +89,11 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			});
 		}
 
-		// Token: 0x0401AE98 RID: 110232
+		// Token: 0x040157F5 RID: 88053
 		[Nullable(2)]
 		protected SheriffMainProxy Proxy;
 
-		// Token: 0x0401AE99 RID: 110233
+		// Token: 0x040157F6 RID: 88054
 		[Nullable(new byte[]
 		{
 			2,
@@ -101,19 +101,19 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 		})]
 		private GenericScrollViewNew<SheriffMainConclusionInfo, int> InfoScrollView;
 
-		// Token: 0x0200AE21 RID: 44577
+		// Token: 0x0200983F RID: 38975
 		private static class EDefine
 		{
-			// Token: 0x04034E23 RID: 216611
+			// Token: 0x0402F7C8 RID: 194504
 			public const int SvMulti = 0;
 
-			// Token: 0x04034E24 RID: 216612
+			// Token: 0x0402F7C9 RID: 194505
 			public const int PanelClue = 1;
 
-			// Token: 0x04034E25 RID: 216613
+			// Token: 0x0402F7CA RID: 194506
 			public const int BtnSkyEyeConfirm = 2;
 
-			// Token: 0x04034E26 RID: 216614
+			// Token: 0x0402F7CB RID: 194507
 			public const int BtnSkyEyeConfirmWhile = 3;
 		}
 	}

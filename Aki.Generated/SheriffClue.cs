@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200109D RID: 4253
+	// Token: 0x02001198 RID: 4504
 	public struct SheriffClue : IFlatbufferObject
 	{
-		// Token: 0x17003559 RID: 13657
-		// (get) Token: 0x0600D0B5 RID: 53429 RVA: 0x0030C6CD File Offset: 0x0030A8CD
+		// Token: 0x17003667 RID: 13927
+		// (get) Token: 0x0600D88B RID: 55435 RVA: 0x0032BC6E File Offset: 0x00329E6E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D0B6 RID: 53430 RVA: 0x0030C6DA File Offset: 0x0030A8DA
+		// Token: 0x0600D88C RID: 55436 RVA: 0x0032BC7B File Offset: 0x00329E7B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D0B7 RID: 53431 RVA: 0x0030C6E4 File Offset: 0x0030A8E4
+		// Token: 0x0600D88D RID: 55437 RVA: 0x0032BC84 File Offset: 0x00329E84
 		public static SheriffClue GetRootAsSheriffClue(ByteBuffer _bb)
 		{
 			return SheriffClue.GetRootAsSheriffClue(_bb, default(SheriffClue));
 		}
 
-		// Token: 0x0600D0B8 RID: 53432 RVA: 0x0030C700 File Offset: 0x0030A900
+		// Token: 0x0600D88E RID: 55438 RVA: 0x0032BCA0 File Offset: 0x00329EA0
 		public static SheriffClue GetRootAsSheriffClue(ByteBuffer _bb, SheriffClue obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D0B9 RID: 53433 RVA: 0x0030C71D File Offset: 0x0030A91D
+		// Token: 0x0600D88F RID: 55439 RVA: 0x0032BCBD File Offset: 0x00329EBD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D0BA RID: 53434 RVA: 0x0030C72C File Offset: 0x0030A92C
+		// Token: 0x0600D890 RID: 55440 RVA: 0x0032BCCC File Offset: 0x00329ECC
 		public SheriffClue __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700355A RID: 13658
-		// (get) Token: 0x0600D0BB RID: 53435 RVA: 0x0030C73C File Offset: 0x0030A93C
+		// Token: 0x17003668 RID: 13928
+		// (get) Token: 0x0600D891 RID: 55441 RVA: 0x0032BCDC File Offset: 0x00329EDC
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700355B RID: 13659
-		// (get) Token: 0x0600D0BC RID: 53436 RVA: 0x0030C778 File Offset: 0x0030A978
+		// Token: 0x17003669 RID: 13929
+		// (get) Token: 0x0600D892 RID: 55442 RVA: 0x0032BD18 File Offset: 0x00329F18
 		public int SheriffAnomalyId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700355C RID: 13660
-		// (get) Token: 0x0600D0BD RID: 53437 RVA: 0x0030C7B4 File Offset: 0x0030A9B4
+		// Token: 0x1700366A RID: 13930
+		// (get) Token: 0x0600D893 RID: 55443 RVA: 0x0032BD54 File Offset: 0x00329F54
 		public string Name
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D0BE RID: 53438 RVA: 0x0030C7EB File Offset: 0x0030A9EB
+		// Token: 0x0600D894 RID: 55444 RVA: 0x0032BD8B File Offset: 0x00329F8B
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600D0BF RID: 53439 RVA: 0x0030C7FA File Offset: 0x0030A9FA
+		// Token: 0x0600D895 RID: 55445 RVA: 0x0032BD9A File Offset: 0x00329F9A
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700355D RID: 13661
-		// (get) Token: 0x0600D0C0 RID: 53440 RVA: 0x0030C814 File Offset: 0x0030AA14
+		// Token: 0x1700366B RID: 13931
+		// (get) Token: 0x0600D896 RID: 55446 RVA: 0x0032BDB4 File Offset: 0x00329FB4
 		public string Desc
 		{
 			get
@@ -119,20 +119,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D0C1 RID: 53441 RVA: 0x0030C84C File Offset: 0x0030AA4C
+		// Token: 0x0600D897 RID: 55447 RVA: 0x0032BDEC File Offset: 0x00329FEC
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600D0C2 RID: 53442 RVA: 0x0030C85C File Offset: 0x0030AA5C
+		// Token: 0x0600D898 RID: 55448 RVA: 0x0032BDFC File Offset: 0x00329FFC
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700355E RID: 13662
-		// (get) Token: 0x0600D0C3 RID: 53443 RVA: 0x0030C874 File Offset: 0x0030AA74
+		// Token: 0x1700366C RID: 13932
+		// (get) Token: 0x0600D899 RID: 55449 RVA: 0x0032BE14 File Offset: 0x0032A014
 		public string Icon
 		{
 			get
@@ -146,19 +146,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D0C4 RID: 53444 RVA: 0x0030C8AC File Offset: 0x0030AAAC
+		// Token: 0x0600D89A RID: 55450 RVA: 0x0032BE4C File Offset: 0x0032A04C
 		public Span<byte> GetIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600D0C5 RID: 53445 RVA: 0x0030C8BC File Offset: 0x0030AABC
+		// Token: 0x0600D89B RID: 55451 RVA: 0x0032BE5C File Offset: 0x0032A05C
 		public byte[] GetIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x040051AB RID: 20907
+		// Token: 0x040057AA RID: 22442
 		private Table __p;
 	}
 }

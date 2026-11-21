@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02002624 RID: 9764
+// Token: 0x02001B0F RID: 6927
 public enum ECommonQteContextType
 {
-	// Token: 0x04009672 RID: 38514
+	// Token: 0x040097C9 RID: 38857
 	SingleButtonSingleClick,
-	// Token: 0x04009673 RID: 38515
+	// Token: 0x040097CA RID: 38858
 	SingleButtonContinuousClick,
-	// Token: 0x04009674 RID: 38516
+	// Token: 0x040097CB RID: 38859
 	SingleButtonLongPress,
-	// Token: 0x04009675 RID: 38517
+	// Token: 0x040097CC RID: 38860
 	SingleButtonDrag,
-	// Token: 0x04009676 RID: 38518
+	// Token: 0x040097CD RID: 38861
 	SelectOption,
-	// Token: 0x04009677 RID: 38519
+	// Token: 0x040097CE RID: 38862
 	QteGroup
 }

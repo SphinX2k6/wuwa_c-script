@@ -7,18 +7,18 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BEA RID: 11242
+// Token: 0x02002165 RID: 8549
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerDetailInformationMonsterItem : UiPanelBase
 {
-	// Token: 0x0601759B RID: 95643 RVA: 0x005F0769 File Offset: 0x005EE969
+	// Token: 0x06014FCC RID: 85964 RVA: 0x0061D2C9 File Offset: 0x0061B4C9
 	public TowerDetailInformationMonsterItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0601759C RID: 95644 RVA: 0x005F0780 File Offset: 0x005EE980
+	// Token: 0x06014FCD RID: 85965 RVA: 0x0061D2E0 File Offset: 0x0061B4E0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -34,14 +34,14 @@ public class TowerDetailInformationMonsterItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601759D RID: 95645 RVA: 0x005F080A File Offset: 0x005EEA0A
+	// Token: 0x06014FCE RID: 85966 RVA: 0x0061D36A File Offset: 0x0061B56A
 	protected override void OnStart()
 	{
 		base.GetItem(1).SetUIParent(base.GetGridLayout(2).GetRootComponent(), false);
 		this.MonsterLayout = new GenericLayoutNew<TowerDetailInformationMonsterSubItem>(base.GetGridLayout(2), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<TowerDetailInformationMonsterSubItem>(this.CreateMonsterItem), null);
 	}
 
-	// Token: 0x0601759E RID: 95646 RVA: 0x005F0844 File Offset: 0x005EEA44
+	// Token: 0x06014FCF RID: 85967 RVA: 0x0061D3A4 File Offset: 0x0061B5A4
 	private ILayoutItem<TowerDetailInformationMonsterSubItem> CreateMonsterItem(object tempData, UUIItem uiItem, int index)
 	{
 		TowerDetailMonster towerDetailMonster = (TowerDetailMonster)tempData;
@@ -54,27 +54,27 @@ public class TowerDetailInformationMonsterItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601759F RID: 95647 RVA: 0x005F0889 File Offset: 0x005EEA89
+	// Token: 0x06014FD0 RID: 85968 RVA: 0x0061D3E9 File Offset: 0x0061B5E9
 	public void Update(TowerDetailMonsterData data, ETowerDetailInformationType showType)
 	{
 		this.MonsterData = data;
 		this.RefreshView();
 	}
 
-	// Token: 0x060175A0 RID: 95648 RVA: 0x005F0898 File Offset: 0x005EEA98
+	// Token: 0x06014FD1 RID: 85969 RVA: 0x0061D3F8 File Offset: 0x0061B5F8
 	private void RefreshView()
 	{
 		List<TowerDetailMonster> monsterInfos = this.MonsterData.MonsterInfos;
 		this.MonsterLayout.RebuildLayoutByDataNew<TowerDetailMonster>(monsterInfos, null);
 	}
 
-	// Token: 0x060175A1 RID: 95649 RVA: 0x005F08C6 File Offset: 0x005EEAC6
+	// Token: 0x06014FD2 RID: 85970 RVA: 0x0061D426 File Offset: 0x0061B626
 	protected override void OnBeforeDestroy()
 	{
 		this.MonsterLayout.ClearChildren();
 	}
 
-	// Token: 0x0400AEC6 RID: 44742
+	// Token: 0x0400B2CB RID: 45771
 	[Nullable(new byte[]
 	{
 		2,
@@ -82,21 +82,21 @@ public class TowerDetailInformationMonsterItem : UiPanelBase
 	})]
 	protected GenericLayoutNew<TowerDetailInformationMonsterSubItem> MonsterLayout;
 
-	// Token: 0x0400AEC7 RID: 44743
+	// Token: 0x0400B2CC RID: 45772
 	[Nullable(2)]
 	private TowerDetailMonsterData MonsterData;
 
-	// Token: 0x020091A7 RID: 37287
+	// Token: 0x020083EA RID: 33770
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402F20B RID: 193035
+		// Token: 0x0402A90C RID: 174348
 		public const int TitleText = 0;
 
-		// Token: 0x0402F20C RID: 193036
+		// Token: 0x0402A90D RID: 174349
 		public const int MonsterItem = 1;
 
-		// Token: 0x0402F20D RID: 193037
+		// Token: 0x0402A90E RID: 174350
 		public const int MonsterScroller = 2;
 	}
 }

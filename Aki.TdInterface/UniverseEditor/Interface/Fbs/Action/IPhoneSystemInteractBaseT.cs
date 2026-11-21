@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CAF RID: 27823
+	// Token: 0x02007425 RID: 29733
 	public class IPhoneSystemInteractBaseT
 	{
-		// Token: 0x1700CF29 RID: 53033
-		// (get) Token: 0x06031089 RID: 200841 RVA: 0x006A7BEA File Offset: 0x006A5DEA
-		// (set) Token: 0x0603108A RID: 200842 RVA: 0x006A7BF2 File Offset: 0x006A5DF2
+		// Token: 0x1700DA66 RID: 55910
+		// (get) Token: 0x06034060 RID: 213088 RVA: 0x00702E1E File Offset: 0x0070101E
+		// (set) Token: 0x06034061 RID: 213089 RVA: 0x00702E26 File Offset: 0x00701026
 		public EPhoneSystemInteractType Type { get; set; }
 
-		// Token: 0x0603108B RID: 200843 RVA: 0x006A7BFB File Offset: 0x006A5DFB
+		// Token: 0x06034062 RID: 213090 RVA: 0x00702E2F File Offset: 0x0070102F
 		public IPhoneSystemInteractBaseT()
 		{
 			this.Type = EPhoneSystemInteractType.SendPhoneMessage;

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008CC RID: 2252
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200096F RID: 2415
 	public class TreasureBoxComponent : IComponentBase
 	{
-		// Token: 0x060032D3 RID: 13011 RVA: 0x00082654 File Offset: 0x00080854
+		// Token: 0x0600360F RID: 13839 RVA: 0x00089AFC File Offset: 0x00087CFC
 		private TreasureBoxComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060032D4 RID: 13012 RVA: 0x0008268C File Offset: 0x0008088C
+		// Token: 0x06003610 RID: 13840 RVA: 0x00089B34 File Offset: 0x00087D34
 		public static TreasureBoxComponent Create([Nullable(2)] TreasureBoxComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060032D5 RID: 13013 RVA: 0x0008269F File Offset: 0x0008089F
+		// Token: 0x06003611 RID: 13841 RVA: 0x00089B47 File Offset: 0x00087D47
 		public static TreasureBoxComponent CreateFromSetValue([Nullable(2)] TreasureBoxComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060032D6 RID: 13014 RVA: 0x000826B2 File Offset: 0x000808B2
+		// Token: 0x06003612 RID: 13842 RVA: 0x00089B5A File Offset: 0x00087D5A
 		public new TreasureBoxComponent_SetValue ToSetValue()
 		{
 			return new TreasureBoxComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D9F RID: 3487
-		// (get) Token: 0x060032D7 RID: 13015 RVA: 0x000826EC File Offset: 0x000808EC
-		// (set) Token: 0x060032D8 RID: 13016 RVA: 0x00082726 File Offset: 0x00080926
+		// Token: 0x17000E68 RID: 3688
+		// (get) Token: 0x06003613 RID: 13843 RVA: 0x00089B94 File Offset: 0x00087D94
+		// (set) Token: 0x06003614 RID: 13844 RVA: 0x00089BCE File Offset: 0x00087DCE
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DA0 RID: 3488
-		// (get) Token: 0x060032D9 RID: 13017 RVA: 0x00082734 File Offset: 0x00080934
-		// (set) Token: 0x060032DA RID: 13018 RVA: 0x0008275E File Offset: 0x0008095E
+		// Token: 0x17000E69 RID: 3689
+		// (get) Token: 0x06003615 RID: 13845 RVA: 0x00089BDC File Offset: 0x00087DDC
+		// (set) Token: 0x06003616 RID: 13846 RVA: 0x00089C06 File Offset: 0x00087E06
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DA1 RID: 3489
-		// (get) Token: 0x060032DB RID: 13019 RVA: 0x0008276C File Offset: 0x0008096C
-		// (set) Token: 0x060032DC RID: 13020 RVA: 0x00082797 File Offset: 0x00080997
+		// Token: 0x17000E6A RID: 3690
+		// (get) Token: 0x06003617 RID: 13847 RVA: 0x00089C14 File Offset: 0x00087E14
+		// (set) Token: 0x06003618 RID: 13848 RVA: 0x00089C3F File Offset: 0x00087E3F
 		public virtual int TypeId
 		{
 			get
@@ -128,9 +126,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DA2 RID: 3490
-		// (get) Token: 0x060032DD RID: 13021 RVA: 0x000827A8 File Offset: 0x000809A8
-		// (set) Token: 0x060032DE RID: 13022 RVA: 0x000827E2 File Offset: 0x000809E2
+		// Token: 0x17000E6B RID: 3691
+		// (get) Token: 0x06003619 RID: 13849 RVA: 0x00089C50 File Offset: 0x00087E50
+		// (set) Token: 0x0600361A RID: 13850 RVA: 0x00089C8A File Offset: 0x00087E8A
 		public virtual bool? IsSupportDiscoverDevice
 		{
 			get
@@ -152,11 +150,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04002160 RID: 8544
+		// Token: 0x04002370 RID: 9072
 		[Nullable(2)]
 		protected new TreasureBoxComponent FbInstance;
 
-		// Token: 0x04002161 RID: 8545
+		// Token: 0x04002371 RID: 9073
 		[Nullable(2)]
 		protected new TreasureBoxComponent_SetValue PocoInterface;
 	}

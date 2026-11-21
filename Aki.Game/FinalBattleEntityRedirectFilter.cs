@@ -9,12 +9,12 @@ using CSharpScript.Game.KuroSimpleCombat;
 using CSharpScript.Game.LevelGamePlay.Common;
 using UnrealEngine;
 
-// Token: 0x02000E73 RID: 3699
+// Token: 0x02000328 RID: 808
 [NullableContext(1)]
 [Nullable(0)]
 public class FinalBattleEntityRedirectFilter : KscEntityRedirectFilter
 {
-	// Token: 0x06005A03 RID: 23043 RVA: 0x001061A4 File Offset: 0x001043A4
+	// Token: 0x06002D9A RID: 11674 RVA: 0x0010DE54 File Offset: 0x0010C054
 	protected unsafe override bool OnCreateEntity(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 	{
 		IFinalBattleCombatInfo finalBattleCombatInfo = FinalBattleEntityModelBuilder.Get(entityData, componentDataMap);
@@ -41,7 +41,7 @@ public class FinalBattleEntityRedirectFilter : KscEntityRedirectFilter
 		return true;
 	}
 
-	// Token: 0x06005A04 RID: 23044 RVA: 0x00106268 File Offset: 0x00104468
+	// Token: 0x06002D9B RID: 11675 RVA: 0x0010DF18 File Offset: 0x0010C118
 	private unsafe void CreateEntityFromModel(IFinalBattleCombatInfo model)
 	{
 		IFinalBattleCombatInfo finalBattleCombatInfo = model;
@@ -79,7 +79,7 @@ public class FinalBattleEntityRedirectFilter : KscEntityRedirectFilter
 		this.PendingEntities.Add(finalBattleCombatInfo);
 	}
 
-	// Token: 0x06005A05 RID: 23045 RVA: 0x0010637C File Offset: 0x0010457C
+	// Token: 0x06002D9C RID: 11676 RVA: 0x0010E02C File Offset: 0x0010C22C
 	protected override void OnInstantiateEntities()
 	{
 		foreach (IFinalBattleCombatInfo model in this.PendingEntities)
@@ -89,7 +89,7 @@ public class FinalBattleEntityRedirectFilter : KscEntityRedirectFilter
 		this.PendingEntities.Clear();
 	}
 
-	// Token: 0x06005A06 RID: 23046 RVA: 0x001063DC File Offset: 0x001045DC
+	// Token: 0x06002D9D RID: 11677 RVA: 0x0010E08C File Offset: 0x0010C28C
 	private void InstantiateEntity(IFinalBattleCombatInfo model)
 	{
 		FRotator frotator = model.Rotation.ToUeRotator();
@@ -232,7 +232,7 @@ public class FinalBattleEntityRedirectFilter : KscEntityRedirectFilter
 		});
 	}
 
-	// Token: 0x06005A07 RID: 23047 RVA: 0x00106794 File Offset: 0x00104994
+	// Token: 0x06002D9E RID: 11678 RVA: 0x0010E444 File Offset: 0x0010C644
 	protected override bool OnRemoveEntity(int creatureDataId)
 	{
 		FinalBattleSubModel finalBattleSubModel = KuroSimpleCombatController.Instance.GetSubModel(EKscGameplayType.FinalBattle) as FinalBattleSubModel;
@@ -245,7 +245,7 @@ public class FinalBattleEntityRedirectFilter : KscEntityRedirectFilter
 		return true;
 	}
 
-	// Token: 0x06005A08 RID: 23048 RVA: 0x001067E0 File Offset: 0x001049E0
+	// Token: 0x06002D9F RID: 11679 RVA: 0x0010E490 File Offset: 0x0010C690
 	private void RemoveEntity(IFinalBattleCombatInfo model, EKscEntityRemoveReasonType removeReasonType)
 	{
 		FinalBattleWorldEntityModel finalBattleWorldEntityModel;
@@ -261,7 +261,7 @@ public class FinalBattleEntityRedirectFilter : KscEntityRedirectFilter
 		}
 	}
 
-	// Token: 0x06005A09 RID: 23049 RVA: 0x0010686C File Offset: 0x00104A6C
+	// Token: 0x06002DA0 RID: 11680 RVA: 0x0010E51C File Offset: 0x0010C71C
 	public override void Reset()
 	{
 		FinalBattleSubModel finalBattleSubModel = KuroSimpleCombatController.Instance.GetSubModel(EKscGameplayType.FinalBattle) as FinalBattleSubModel;
@@ -285,7 +285,7 @@ public class FinalBattleEntityRedirectFilter : KscEntityRedirectFilter
 		this.PendingEntities.Clear();
 	}
 
-	// Token: 0x06005A0A RID: 23050 RVA: 0x0010696C File Offset: 0x00104B6C
+	// Token: 0x06002DA1 RID: 11681 RVA: 0x0010E61C File Offset: 0x0010C81C
 	[return: Nullable(2)]
 	public string FillUpModelInfo(IFinalBattleCombatInfo model)
 	{
@@ -310,15 +310,15 @@ public class FinalBattleEntityRedirectFilter : KscEntityRedirectFilter
 		return null;
 	}
 
-	// Token: 0x04002923 RID: 10531
+	// Token: 0x040029BE RID: 10686
 	private static readonly Pool<FinalBattleWorldEntityModel> WorldEntityPool = new Pool<FinalBattleWorldEntityModel>(100, () => new FinalBattleWorldEntityModel(), null);
 
-	// Token: 0x04002924 RID: 10532
+	// Token: 0x040029BF RID: 10687
 	private readonly List<IFinalBattleCombatInfo> PendingEntities = new List<IFinalBattleCombatInfo>();
 
-	// Token: 0x04002925 RID: 10533
+	// Token: 0x040029C0 RID: 10688
 	private readonly List<IFinalBattleCombatInfo> CachedAllEntities = new List<IFinalBattleCombatInfo>();
 
-	// Token: 0x04002926 RID: 10534
+	// Token: 0x040029C1 RID: 10689
 	private readonly Dictionary<int, FinalBattleWorldEntityModel> InitializedEntities = new Dictionary<int, FinalBattleWorldEntityModel>();
 }

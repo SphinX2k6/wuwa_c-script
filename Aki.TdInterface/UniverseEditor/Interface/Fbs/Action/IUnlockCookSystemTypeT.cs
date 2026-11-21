@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074CD RID: 29901
+	// Token: 0x02007CC3 RID: 31939
 	public class IUnlockCookSystemTypeT
 	{
-		// Token: 0x1700E2F0 RID: 58096
-		// (get) Token: 0x060365CF RID: 222671 RVA: 0x00763166 File Offset: 0x00761366
-		// (set) Token: 0x060365D0 RID: 222672 RVA: 0x0076316E File Offset: 0x0076136E
+		// Token: 0x1700EF1A RID: 61210
+		// (get) Token: 0x060399E4 RID: 236004 RVA: 0x007C63B6 File Offset: 0x007C45B6
+		// (set) Token: 0x060399E5 RID: 236005 RVA: 0x007C63BE File Offset: 0x007C45BE
 		public EUnlockCookSystemType Type { get; set; }
 
-		// Token: 0x060365D1 RID: 222673 RVA: 0x00763177 File Offset: 0x00761377
+		// Token: 0x060399E6 RID: 236006 RVA: 0x007C63C7 File Offset: 0x007C45C7
 		public IUnlockCookSystemTypeT()
 		{
 			this.Type = EUnlockCookSystemType.UnlockCookBook;

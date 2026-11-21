@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -30,20 +29,20 @@ using Google.Protobuf;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x020027AA RID: 10154
+// Token: 0x02001D25 RID: 7461
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class RoleController : UiControllerBase
 {
-	// Token: 0x06014DCF RID: 85455 RVA: 0x0054B92C File Offset: 0x00549B2C
+	// Token: 0x060127C9 RID: 75721 RVA: 0x005764B4 File Offset: 0x005746B4
 	protected override bool OnInit()
 	{
 		InputManager.Instance.RegisterOpenViewFunc(EUiViewName.RoleRootView, this.OpenRoleMainViewByInput);
 		return true;
 	}
 
-	// Token: 0x06014DD0 RID: 85456 RVA: 0x0054B944 File Offset: 0x00549B44
+	// Token: 0x060127CA RID: 75722 RVA: 0x005764CC File Offset: 0x005746CC
 	[NullableContext(2)]
 	public bool CanOpenView(EUiViewName viewName, object arg = null)
 	{
@@ -60,7 +59,7 @@ public class RoleController : UiControllerBase
 		return SceneTeamModel.Instance.GetCurrentGroupLivingState(playerId) != ETeamLivingState.Dead || this.CheckInDeadCanOpenInstanceDungeon();
 	}
 
-	// Token: 0x06014DD1 RID: 85457 RVA: 0x0054B9B8 File Offset: 0x00549BB8
+	// Token: 0x060127CB RID: 75723 RVA: 0x00576540 File Offset: 0x00574740
 	private bool CheckInDeadCanOpenInstanceDungeon()
 	{
 		if (TowerModel.Instance.CheckInTower())
@@ -81,7 +80,7 @@ public class RoleController : UiControllerBase
 		return ((instance3 != null) ? new bool?(instance3.CheckInBattleBabelTower()) : null).GetValueOrDefault() || LordGymController.Instance.IsInLordGymDungeon() || BossPilingModel.Instance.CheckIsBossPiling() || AdamSmasherController.Instance.IsInAdamSmasherDungeon();
 	}
 
-	// Token: 0x06014DD2 RID: 85458 RVA: 0x0054BA7C File Offset: 0x00549C7C
+	// Token: 0x060127CC RID: 75724 RVA: 0x00576604 File Offset: 0x00574804
 	[NullableContext(2)]
 	public void OpenRoleMainView(ERoleAgentType agentType, int selectRoleId = 0, List<int> roleIdList = null, EUiTabViewName? openTabView = null, TOpenViewCallBack finishCallback = null)
 	{
@@ -101,19 +100,19 @@ public class RoleController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06014DD3 RID: 85459 RVA: 0x0054BAE0 File Offset: 0x00549CE0
+	// Token: 0x060127CD RID: 75725 RVA: 0x00576668 File Offset: 0x00574868
 	public void OpenRoleMainViewByParam(IOpenRoleMainViewData param)
 	{
 		int valueOrDefault = param.SelectRoleId.GetValueOrDefault();
 		List<int> roleIdList = param.RoleIdList ?? new List<int>();
 		RoleViewAgent roleViewAgent = RoleModel.Instance.GetRoleViewAgent(param.AgentType);
 		ETeamPositionType valueOrDefault2 = param.TeamPositionType.GetValueOrDefault();
-		roleViewAgent.Init(roleIdList, valueOrDefault, param.OpenTabView, param.Source.GetValueOrDefault());
+		roleViewAgent.Init(roleIdList, valueOrDefault, param.OpenTabView, param.Source.GetValueOrDefault(), param.UseMainViewSort);
 		roleViewAgent.TeamPositionType = new ETeamPositionType?(valueOrDefault2);
 		UiManager.Instance.OpenView(EUiViewName.RoleRootView, roleViewAgent, param.FinishCallback);
 	}
 
-	// Token: 0x06014DD4 RID: 85460 RVA: 0x0054BB6D File Offset: 0x00549D6D
+	// Token: 0x060127CE RID: 75726 RVA: 0x005766FB File Offset: 0x005748FB
 	public void OpenRoleViewByViewModel(EUiViewName viewName, RoleViewViewModel viewModel)
 	{
 		if (!this.CheckRoleCanOpenView(viewModel.RoleId, viewName))
@@ -123,7 +122,7 @@ public class RoleController : UiControllerBase
 		UiManager.Instance.OpenView(viewName, viewModel, null);
 	}
 
-	// Token: 0x06014DD5 RID: 85461 RVA: 0x0054BB8C File Offset: 0x00549D8C
+	// Token: 0x060127CF RID: 75727 RVA: 0x0057671A File Offset: 0x0057491A
 	public void CloseAndOpenRoleViewByViewModel(EUiViewName closeViewName, EUiViewName openViewName, RoleViewViewModel viewModel)
 	{
 		if (!this.CheckRoleCanOpenView(viewModel.RoleId, openViewName))
@@ -133,7 +132,7 @@ public class RoleController : UiControllerBase
 		UiManager.Instance.CloseAndOpenView(closeViewName, openViewName, viewModel, null, true);
 	}
 
-	// Token: 0x06014DD6 RID: 85462 RVA: 0x0054BBB0 File Offset: 0x00549DB0
+	// Token: 0x060127D0 RID: 75728 RVA: 0x0057673C File Offset: 0x0057493C
 	private bool CheckRoleCanOpenView(int roleId, EUiViewName viewName)
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(roleId);
@@ -174,7 +173,7 @@ public class RoleController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x06014DD7 RID: 85463 RVA: 0x0054BCA0 File Offset: 0x00549EA0
+	// Token: 0x060127D1 RID: 75729 RVA: 0x0057682C File Offset: 0x00574A2C
 	[NullableContext(2)]
 	public void CloseAndOpenRoleMainView(EUiViewName closeViewName, ERoleAgentType agentType, int selectRoleId = 0, List<int> roleIdList = null, EUiTabViewName? openTabView = null, Action<bool> finishCallback = null)
 	{
@@ -183,11 +182,11 @@ public class RoleController : UiControllerBase
 			roleIdList = new List<int>();
 		}
 		RoleViewAgent roleViewAgent = RoleModel.Instance.GetRoleViewAgent(agentType);
-		roleViewAgent.Init(roleIdList, selectRoleId, openTabView, ERoleViewSource.Normal);
+		roleViewAgent.Init(roleIdList, selectRoleId, openTabView, ERoleViewSource.Normal, false);
 		UiManager.Instance.CloseAndOpenView(closeViewName, EUiViewName.RoleRootView, roleViewAgent, finishCallback, true);
 	}
 
-	// Token: 0x06014DD8 RID: 85464 RVA: 0x0054BCE4 File Offset: 0x00549EE4
+	// Token: 0x060127D2 RID: 75730 RVA: 0x00576874 File Offset: 0x00574A74
 	protected override void OnAddOpenViewCheckFunction()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.RoleRootView, new Func<EUiViewName, object, bool>(this.CanOpenView), "RoleController.CanOpenView");
@@ -195,7 +194,7 @@ public class RoleController : UiControllerBase
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.RoleDevelopSelectTargetView, new Func<EUiViewName, object, bool>(this.CanOpenRoleDevelopView), "RoleController.CanOpenRoleDevelopSelectTargetView");
 	}
 
-	// Token: 0x06014DD9 RID: 85465 RVA: 0x0054BD54 File Offset: 0x00549F54
+	// Token: 0x060127D3 RID: 75731 RVA: 0x005768E4 File Offset: 0x00574AE4
 	protected override void OnRemoveOpenViewCheckFunction()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.RoleRootView, new Func<EUiViewName, object, bool>(this.CanOpenView));
@@ -203,14 +202,14 @@ public class RoleController : UiControllerBase
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.RoleDevelopSelectTargetView, new Func<EUiViewName, object, bool>(this.CanOpenRoleDevelopView));
 	}
 
-	// Token: 0x06014DDA RID: 85466 RVA: 0x0054BDB4 File Offset: 0x00549FB4
+	// Token: 0x060127D4 RID: 75732 RVA: 0x00576944 File Offset: 0x00574B44
 	public bool CheckCharacterInBattleTag(bool useIgnoreList = false)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
 		return (!useIgnoreList || !RoleController.IsInIgnoreBattleTagInst()) && baseCharacter != null && baseCharacter.CharacterActorComponent.Entity.CheckGetComponent<BaseTagComponent>().HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.进入战斗"]);
 	}
 
-	// Token: 0x06014DDB RID: 85467 RVA: 0x0054BDFC File Offset: 0x00549FFC
+	// Token: 0x060127D5 RID: 75733 RVA: 0x0057698C File Offset: 0x00574B8C
 	private unsafe static bool IsInIgnoreBattleTagInst()
 	{
 		IReadOnlyList<int> readOnlyList = ConfigCommonParamById.GetIntArrayConfig("IgnoreInBattleTagInstSubTypeList") ?? Array.Empty<int>();
@@ -228,10 +227,24 @@ public class RoleController : UiControllerBase
 			return true;
 		}
 		InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(instanceId);
-		return config != null && readOnlyList.Contains(config.Value.InstSubType);
+		if (config == null)
+		{
+			return false;
+		}
+		using (IEnumerator<int> enumerator = readOnlyList.GetEnumerator())
+		{
+			while (enumerator.MoveNext())
+			{
+				if (enumerator.Current == config.Value.InstSubType)
+				{
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
-	// Token: 0x06014DDC RID: 85468 RVA: 0x0054BEB2 File Offset: 0x0054A0B2
+	// Token: 0x060127D6 RID: 75734 RVA: 0x00576A80 File Offset: 0x00574C80
 	public bool CheckCharacterInBattleTagAndShowTips(bool useIgnoreList = false)
 	{
 		if (RoleController.Instance.CheckCharacterInBattleTag(useIgnoreList))
@@ -242,7 +255,7 @@ public class RoleController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x06014DDD RID: 85469 RVA: 0x0054BED8 File Offset: 0x0054A0D8
+	// Token: 0x060127D7 RID: 75735 RVA: 0x00576AA8 File Offset: 0x00574CA8
 	public void OnSelectedRoleChange(int roleId, int roleSkinId)
 	{
 		TsUiSceneRoleActor roleSystemRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
@@ -250,7 +263,7 @@ public class RoleController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnSelectedRoleChanged);
 	}
 
-	// Token: 0x06014DDE RID: 85470 RVA: 0x0054BF0C File Offset: 0x0054A10C
+	// Token: 0x060127D8 RID: 75736 RVA: 0x00576ADC File Offset: 0x00574CDC
 	public void SetRoleMorphType(TsUiSceneRoleActor roleActor, EUiModelMorphType morphType)
 	{
 		UiModelBase model = roleActor.Model;
@@ -261,7 +274,7 @@ public class RoleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06014DDF RID: 85471 RVA: 0x0054BF48 File Offset: 0x0054A148
+	// Token: 0x060127D9 RID: 75737 RVA: 0x00576B18 File Offset: 0x00574D18
 	public UniTask RefreshUiSceneRoleActorAsync(TsUiSceneRoleActor roleActor, int roleId, int roleSkinId, Action callback = null)
 	{
 		RoleController.<RefreshUiSceneRoleActorAsync>d__17 <RefreshUiSceneRoleActorAsync>d__;
@@ -276,7 +289,7 @@ public class RoleController : UiControllerBase
 		return <RefreshUiSceneRoleActorAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014DE0 RID: 85472 RVA: 0x0054BFAC File Offset: 0x0054A1AC
+	// Token: 0x060127DA RID: 75738 RVA: 0x00576B7C File Offset: 0x00574D7C
 	public void RefreshUiSceneRoleActor(TsUiSceneRoleActor roleActor, int roleId, int roleSkinId, Action callback = null)
 	{
 		UiModelBase model = roleActor.Model;
@@ -306,14 +319,14 @@ public class RoleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06014DE1 RID: 85473 RVA: 0x0054C062 File Offset: 0x0054A262
+	// Token: 0x060127DB RID: 75739 RVA: 0x00576C32 File Offset: 0x00574E32
 	public void OnSelectedRoleChangeByConfig(int roleId, int skinId, Action callback = null)
 	{
 		this.RefreshUiSceneRoleActorByConfigId(roleId, skinId, callback);
 		EventSystem.Instance.Emit(EEventName.OnSelectedRoleChanged);
 	}
 
-	// Token: 0x06014DE2 RID: 85474 RVA: 0x0054C080 File Offset: 0x0054A280
+	// Token: 0x060127DC RID: 75740 RVA: 0x00576C50 File Offset: 0x00574E50
 	public void RefreshUiSceneRoleActorByConfigId(int roleId, int skinId, Action callback = null)
 	{
 		TsUiSceneRoleActor uiSceneRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
@@ -341,7 +354,7 @@ public class RoleController : UiControllerBase
 		UiSceneManager.Instance.AddUiShowRoomShowActor(uiSceneRoleActor, true);
 	}
 
-	// Token: 0x06014DE3 RID: 85475 RVA: 0x0054C118 File Offset: 0x0054A318
+	// Token: 0x060127DD RID: 75741 RVA: 0x00576CE8 File Offset: 0x00574EE8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -359,7 +372,7 @@ public class RoleController : UiControllerBase
 		return <LoadUiSceneRoleActorByConfigIdAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014DE4 RID: 85476 RVA: 0x0054C16C File Offset: 0x0054A36C
+	// Token: 0x060127DE RID: 75742 RVA: 0x00576D3C File Offset: 0x00574F3C
 	public void ShowUiSceneActorAndShadow(bool isShow)
 	{
 		TsUiSceneRoleActor roleSystemRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
@@ -375,7 +388,7 @@ public class RoleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06014DE5 RID: 85477 RVA: 0x0054C1CC File Offset: 0x0054A3CC
+	// Token: 0x060127DF RID: 75743 RVA: 0x00576D9C File Offset: 0x00574F9C
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.RedDotStart, new Action(this.OnRedDotStartEvent));
@@ -385,7 +398,7 @@ public class RoleController : UiControllerBase
 		EventSystem.Instance.Add(EEventName.OnResponseCommonItemFinished, new Action(this.OnResponseCommonItemFinished));
 	}
 
-	// Token: 0x06014DE6 RID: 85478 RVA: 0x0054C268 File Offset: 0x0054A468
+	// Token: 0x060127E0 RID: 75744 RVA: 0x00576E38 File Offset: 0x00575038
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.RedDotStart, new Action(this.OnRedDotStartEvent));
@@ -395,14 +408,14 @@ public class RoleController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.OnResponseCommonItemFinished, new Action(this.OnResponseCommonItemFinished));
 	}
 
-	// Token: 0x06014DE7 RID: 85479 RVA: 0x0054C301 File Offset: 0x0054A501
+	// Token: 0x060127E1 RID: 75745 RVA: 0x00576ED1 File Offset: 0x005750D1
 	private void OnLoadingNetDataDone()
 	{
 		this.SendRoleFavorListRequest();
 		this.RequestRoleDevelopDependentData().Forget();
 	}
 
-	// Token: 0x06014DE8 RID: 85480 RVA: 0x0054C314 File Offset: 0x0054A514
+	// Token: 0x060127E2 RID: 75746 RVA: 0x00576EE4 File Offset: 0x005750E4
 	private void OnResponseCommonItemFinished()
 	{
 		RoleOrnamentModel instance = RoleOrnamentModel.Instance;
@@ -420,16 +433,16 @@ public class RoleController : UiControllerBase
 		int count = list.Count;
 	}
 
-	// Token: 0x06014DE9 RID: 85481 RVA: 0x0054C390 File Offset: 0x0054A590
+	// Token: 0x060127E3 RID: 75747 RVA: 0x00576F60 File Offset: 0x00575160
 	private void OnRedDotStartEvent()
 	{
-		foreach (int p in RoleModel.Instance.GetRoleIdList())
+		foreach (int p in RoleModel.Instance.GetRoleIdList(null))
 		{
 			EventSystem.Instance.Emit<int>(EEventName.RedDotCreateRole, p);
 		}
 	}
 
-	// Token: 0x06014DEA RID: 85482 RVA: 0x0054C3F4 File Offset: 0x0054A5F4
+	// Token: 0x060127E4 RID: 75748 RVA: 0x00576FC4 File Offset: 0x005751C4
 	private void ResetRoleTrialState()
 	{
 		if (!RoleModel.Instance.IsInRoleTrial)
@@ -442,7 +455,7 @@ public class RoleController : UiControllerBase
 		RoleModel.Instance.IsInRoleTrial = false;
 	}
 
-	// Token: 0x06014DEB RID: 85483 RVA: 0x0054C454 File Offset: 0x0054A654
+	// Token: 0x060127E5 RID: 75749 RVA: 0x00577024 File Offset: 0x00575224
 	private void OnTextLanguageChange(string oldLang, string newLang)
 	{
 		Dictionary<int, RoleInstance> roleMap = RoleModel.Instance.GetRoleMap();
@@ -466,18 +479,24 @@ public class RoleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06014DEC RID: 85484 RVA: 0x0054C558 File Offset: 0x0054A758
+	// Token: 0x060127E6 RID: 75750 RVA: 0x00577128 File Offset: 0x00575328
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.PbGetRoleListNotify, delegate(IMessage msg, Net.CallbackStatus _)
 		{
 			PbGetRoleListNotify pbGetRoleListNotify = (PbGetRoleListNotify)msg;
-			RoleModel.Instance.UpdateRoleInfoByServerData(pbGetRoleListNotify.RoleList.ToArray<roleInfo>());
+			roleInfo[] array = new roleInfo[pbGetRoleListNotify.RoleList.Count];
+			pbGetRoleListNotify.RoleList.CopyTo(array, 0);
+			RoleModel.Instance.UpdateRoleInfoByServerData(array);
 		});
 		Net.Instance.Register(ENotifyMessageId.PbRolePropsNotify, delegate(IMessage msg, Net.CallbackStatus _)
 		{
 			PbRolePropsNotify pbRolePropsNotify = (PbRolePropsNotify)msg;
-			RoleModel.Instance.RoleAttrUpdate(pbRolePropsNotify.RoleId, pbRolePropsNotify.BaseProp.ToArray<ArrayIntInt>(), pbRolePropsNotify.AddProp.ToArray<ArrayIntInt>());
+			ArrayIntInt[] array = new ArrayIntInt[pbRolePropsNotify.BaseProp.Count];
+			pbRolePropsNotify.BaseProp.CopyTo(array, 0);
+			ArrayIntInt[] array2 = new ArrayIntInt[pbRolePropsNotify.AddProp.Count];
+			pbRolePropsNotify.AddProp.CopyTo(array2, 0);
+			RoleModel.Instance.RoleAttrUpdate(pbRolePropsNotify.RoleId, array, array2);
 		});
 		Net.Instance.Register(ENotifyMessageId.PbRoleActiveNotify, delegate(IMessage msg, Net.CallbackStatus _)
 		{
@@ -527,7 +546,9 @@ public class RoleController : UiControllerBase
 				GenericPromptController.Instance.ShowPromptByCode("TrialRoleAdd", Array.Empty<object>());
 			}
 			TeleportModel.Instance.SetAllowTeleportByUi(roleTrialOpenNotify.EnableMapAndTeleport, "TrialRole");
-			InstanceDungeonController.Instance.UpdateTrialRoleDungeonWhiteList(roleTrialOpenNotify.CanEnterDungeonList.ToArray<int>());
+			int[] array = new int[roleTrialOpenNotify.CanEnterDungeonList.Count];
+			roleTrialOpenNotify.CanEnterDungeonList.CopyTo(array, 0);
+			InstanceDungeonController.Instance.UpdateTrialRoleDungeonWhiteList(array);
 			RoleModel.Instance.RoleTrialIdList.Clear();
 			RoleModel.Instance.RoleTrialShowMap.Clear();
 			foreach (TrialRoleItem trialRoleItem in roleTrialOpenNotify.TrialRoleItems)
@@ -549,7 +570,9 @@ public class RoleController : UiControllerBase
 				GenericPromptController.Instance.ShowPromptByCode("TrialRoleDetach", Array.Empty<object>());
 			}
 			TeleportModel.Instance.SetAllowTeleportByUi(roleTrialCloseNotify.EnableMapAndTeleport, "TrialRole");
-			InstanceDungeonController.Instance.UpdateTrialRoleDungeonWhiteList(roleTrialCloseNotify.CanEnterDungeonList.ToArray<int>());
+			int[] array = new int[roleTrialCloseNotify.CanEnterDungeonList.Count];
+			roleTrialCloseNotify.CanEnterDungeonList.CopyTo(array, 0);
+			InstanceDungeonController.Instance.UpdateTrialRoleDungeonWhiteList(array);
 			RoleModel.Instance.RoleTrialIdList.Clear();
 			foreach (int item in roleTrialCloseNotify.RoleIds)
 			{
@@ -573,7 +596,9 @@ public class RoleController : UiControllerBase
 			RoleSkillNodeNotify roleSkillNodeNotify = (RoleSkillNodeNotify)msg;
 			if (roleSkillNodeNotify != null)
 			{
-				RoleModel.Instance.UpdateRoleSkillNodeData(roleSkillNodeNotify.RoleId, roleSkillNodeNotify.SkillNodeState.ToArray<ArraySkillNode>());
+				ArraySkillNode[] array = new ArraySkillNode[roleSkillNodeNotify.SkillNodeState.Count];
+				roleSkillNodeNotify.SkillNodeState.CopyTo(array, 0);
+				RoleModel.Instance.UpdateRoleSkillNodeData(roleSkillNodeNotify.RoleId, array);
 			}
 		});
 		Net.Instance.Register(ENotifyMessageId.RoleFavorListNotify, delegate(IMessage msg, Net.CallbackStatus _)
@@ -589,7 +614,9 @@ public class RoleController : UiControllerBase
 					dictionary[key] = roleConditionInfoMap[num];
 				}
 				RoleModel.Instance.UpdateRoleFavorCondition(dictionary);
-				RoleModel.Instance.UpdateRoleFavorData(roleFavorListNotify.FavorList.ToArray<RoleFavor>());
+				RoleFavor[] array = new RoleFavor[roleFavorListNotify.FavorList.Count];
+				roleFavorListNotify.FavorList.CopyTo(array, 0);
+				RoleModel.Instance.UpdateRoleFavorData(array);
 			}
 		});
 		Net.Instance.Register(ENotifyMessageId.RoleFavorActiveNotify, delegate(IMessage msg, Net.CallbackStatus _)
@@ -666,7 +693,7 @@ public class RoleController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.OrnamentDressInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnOrnamentDressInfoUpdateNotify));
 	}
 
-	// Token: 0x06014DED RID: 85485 RVA: 0x0054C954 File Offset: 0x0054AB54
+	// Token: 0x060127E7 RID: 75751 RVA: 0x00577524 File Offset: 0x00575724
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.PbGetRoleListNotify);
@@ -695,13 +722,13 @@ public class RoleController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.RoleDevelopConfigUpdateNotify);
 	}
 
-	// Token: 0x06014DEE RID: 85486 RVA: 0x0054CAE1 File Offset: 0x0054ACE1
+	// Token: 0x060127E8 RID: 75752 RVA: 0x005776B1 File Offset: 0x005758B1
 	public bool IsInRoleTrial()
 	{
 		return RoleModel.Instance.IsInRoleTrial;
 	}
 
-	// Token: 0x06014DEF RID: 85487 RVA: 0x0054CAF0 File Offset: 0x0054ACF0
+	// Token: 0x060127E9 RID: 75753 RVA: 0x005776C0 File Offset: 0x005758C0
 	public void SendPbUpLevelRoleRequest(int roleId, ArrayIntInt[] itemList, Action successCallback)
 	{
 		if (itemList == null || itemList.Length == 0)
@@ -720,7 +747,7 @@ public class RoleController : UiControllerBase
 			}
 			if (pbUpLevelRoleResponse.Code == Aki.Protocol.ErrorCode.Success)
 			{
-				RoleModel.Instance.RoleLevelUpReceiveItem(pbUpLevelRoleResponse.ItemMap.ToDictionary<int, int>());
+				RoleModel.Instance.RoleLevelUpReceiveItem(new Dictionary<int, int>(pbUpLevelRoleResponse.ItemMap));
 				RoleModel.Instance.RoleLevelUp(pbUpLevelRoleResponse.RoleId, pbUpLevelRoleResponse.Exp, pbUpLevelRoleResponse.Level);
 				successCallback();
 				return;
@@ -729,7 +756,7 @@ public class RoleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06014DF0 RID: 85488 RVA: 0x0054CB48 File Offset: 0x0054AD48
+	// Token: 0x060127EA RID: 75754 RVA: 0x00577718 File Offset: 0x00575918
 	public void SendPbOverRoleRequest(int roleId)
 	{
 		PbOverRoleRequest pbOverRoleRequest = PbOverRoleRequest.Create();
@@ -750,7 +777,7 @@ public class RoleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06014DF1 RID: 85489 RVA: 0x0054CB94 File Offset: 0x0054AD94
+	// Token: 0x060127EB RID: 75755 RVA: 0x00577764 File Offset: 0x00575964
 	public void SendPbUpLevelSkillRequest(int roleId, int skillNodeId)
 	{
 		if (RoleController.Instance.CheckCharacterInBattleTagAndShowTips(false))
@@ -783,7 +810,7 @@ public class RoleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06014DF2 RID: 85490 RVA: 0x0054CC4C File Offset: 0x0054AE4C
+	// Token: 0x060127EC RID: 75756 RVA: 0x0057781C File Offset: 0x00575A1C
 	public static void SendRoleSkillQuickLevelUpRequest(int roleId, int skillNodeId, int targetLevel)
 	{
 		if (RoleController.Instance.CheckCharacterInBattleTagAndShowTips(false))
@@ -820,7 +847,7 @@ public class RoleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06014DF3 RID: 85491 RVA: 0x0054CD10 File Offset: 0x0054AF10
+	// Token: 0x060127ED RID: 75757 RVA: 0x005778E0 File Offset: 0x00575AE0
 	public void SendResonanceUnlockRequest(int roleId)
 	{
 		if (this.CheckCharacterInBattleTagAndShowTips(false))
@@ -866,7 +893,7 @@ public class RoleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06014DF4 RID: 85492 RVA: 0x0054CD78 File Offset: 0x0054AF78
+	// Token: 0x060127EE RID: 75758 RVA: 0x00577948 File Offset: 0x00575B48
 	public void SendRoleSkillViewRequest(int roleId, int skillId, Action callBack = null)
 	{
 		if (RoleModel.Instance.GetRoleInstanceById(roleId) == null)
@@ -882,13 +909,13 @@ public class RoleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06014DF5 RID: 85493 RVA: 0x0054CDCF File Offset: 0x0054AFCF
+	// Token: 0x060127EF RID: 75759 RVA: 0x0057799F File Offset: 0x00575B9F
 	public void OpenTeamRoleSelectView(TeamRoleSelectViewData data)
 	{
 		UiManager.Instance.OpenView(EUiViewName.TeamRoleSelectView, data, null);
 	}
 
-	// Token: 0x06014DF6 RID: 85494 RVA: 0x0054CDE2 File Offset: 0x0054AFE2
+	// Token: 0x060127F0 RID: 75760 RVA: 0x005779B2 File Offset: 0x00575BB2
 	public void PlayRoleMontage(EPerformanceRoleState roleState, bool reLoop = false, bool reLoopFromLoopToStart = false, bool waitLaseStateEnd = false)
 	{
 		TsUiSceneRoleActor roleSystemRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
@@ -910,7 +937,7 @@ public class RoleController : UiControllerBase
 		obj2.SetState(roleState, reLoop, reLoopFromLoopToStart, waitLaseStateEnd);
 	}
 
-	// Token: 0x06014DF7 RID: 85495 RVA: 0x0054CE15 File Offset: 0x0054B015
+	// Token: 0x060127F1 RID: 75761 RVA: 0x005779E5 File Offset: 0x00575BE5
 	public void SetInstantAttributeBlend(bool instantAttributeBlend)
 	{
 		TsUiSceneRoleActor roleSystemRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
@@ -932,7 +959,29 @@ public class RoleController : UiControllerBase
 		obj2.SetInstantAttributeBlend(instantAttributeBlend);
 	}
 
-	// Token: 0x06014DF8 RID: 85496 RVA: 0x0054CE44 File Offset: 0x0054B044
+	// Token: 0x060127F2 RID: 75762 RVA: 0x00577A14 File Offset: 0x00575C14
+	public void SetTriggerElementEnd(bool triggerElementEnd)
+	{
+		TsUiSceneRoleActor roleSystemRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
+		object obj;
+		if (roleSystemRoleActor == null)
+		{
+			obj = null;
+		}
+		else
+		{
+			UiModelBase model = roleSystemRoleActor.Model;
+			obj = ((model != null) ? model.CheckGetComponent<UiRoleStateMachineComponent>() : null);
+		}
+		object obj2 = obj;
+		if (obj2 == null)
+		{
+			return;
+		}
+		obj2.SetTriggerElementEnd(triggerElementEnd);
+	}
+
+	// Token: 0x060127F3 RID: 75763 RVA: 0x00577A44 File Offset: 0x00575C44
 	public void SendRoleActivateSkillRequest(int roleId, int skillNodeId)
 	{
 		if (this.CheckCharacterInBattleTagAndShowTips(false))
@@ -963,7 +1012,7 @@ public class RoleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06014DF9 RID: 85497 RVA: 0x0054CEC4 File Offset: 0x0054B0C4
+	// Token: 0x060127F4 RID: 75764 RVA: 0x00577AC4 File Offset: 0x00575CC4
 	public void SendRoleFavorListRequest()
 	{
 		RoleFavorListRequest message = RoleFavorListRequest.Create();
@@ -976,24 +1025,26 @@ public class RoleController : UiControllerBase
 			}
 			if (roleFavorListResponse.ErrCode == Aki.Protocol.ErrorCode.Success)
 			{
-				RoleModel.Instance.UpdateRoleFavorData(roleFavorListResponse.FavorList.ToArray<RoleFavor>());
+				RoleFavor[] array = new RoleFavor[roleFavorListResponse.FavorList.Count];
+				roleFavorListResponse.FavorList.CopyTo(array, 0);
+				RoleModel.Instance.UpdateRoleFavorData(array);
 				return;
 			}
 			ErrorCodeController.Instance.OpenErrorCodeTipView(roleFavorListResponse.ErrCode, EResponseMessageId.RoleFavorListResponse, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x06014DFA RID: 85498 RVA: 0x0054CF08 File Offset: 0x0054B108
+	// Token: 0x060127F5 RID: 75765 RVA: 0x00577B08 File Offset: 0x00575D08
 	public UniTask SendRoleFavorListRequestAsync()
 	{
-		RoleController.<SendRoleFavorListRequestAsync>d__44 <SendRoleFavorListRequestAsync>d__;
+		RoleController.<SendRoleFavorListRequestAsync>d__45 <SendRoleFavorListRequestAsync>d__;
 		<SendRoleFavorListRequestAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<SendRoleFavorListRequestAsync>d__.<>1__state = -1;
-		<SendRoleFavorListRequestAsync>d__.<>t__builder.Start<RoleController.<SendRoleFavorListRequestAsync>d__44>(ref <SendRoleFavorListRequestAsync>d__);
+		<SendRoleFavorListRequestAsync>d__.<>t__builder.Start<RoleController.<SendRoleFavorListRequestAsync>d__45>(ref <SendRoleFavorListRequestAsync>d__);
 		return <SendRoleFavorListRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014DFB RID: 85499 RVA: 0x0054CF44 File Offset: 0x0054B144
+	// Token: 0x060127F6 RID: 75766 RVA: 0x00577B44 File Offset: 0x00575D44
 	public void SendRoleFavorUnLockRequest(FavorItemType favorItemType, int roleId, int unLockId)
 	{
 		RoleFavorUnLockRequest roleFavorUnLockRequest = RoleFavorUnLockRequest.Create();
@@ -1017,12 +1068,12 @@ public class RoleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06014DFC RID: 85500 RVA: 0x0054CF9B File Offset: 0x0054B19B
+	// Token: 0x060127F7 RID: 75767 RVA: 0x00577B9B File Offset: 0x00575D9B
 	public void SendRoleActiveRequest(int roleId)
 	{
 	}
 
-	// Token: 0x06014DFD RID: 85501 RVA: 0x0054CFA0 File Offset: 0x0054B1A0
+	// Token: 0x060127F8 RID: 75768 RVA: 0x00577BA0 File Offset: 0x00575DA0
 	public bool CheckRoleTargetLevel(int level)
 	{
 		RoleInstance[] allRoleList = RoleModel.Instance.GetAllRoleList();
@@ -1042,7 +1093,7 @@ public class RoleController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x06014DFE RID: 85502 RVA: 0x0054CFE8 File Offset: 0x0054B1E8
+	// Token: 0x060127F9 RID: 75769 RVA: 0x00577BE8 File Offset: 0x00575DE8
 	public bool CheckRoleSkillTargetLevel(int level)
 	{
 		RoleInstance[] allRoleList = RoleModel.Instance.GetAllRoleList();
@@ -1070,7 +1121,7 @@ public class RoleController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x06014DFF RID: 85503 RVA: 0x0054D04C File Offset: 0x0054B24C
+	// Token: 0x060127FA RID: 75770 RVA: 0x00577C4C File Offset: 0x00575E4C
 	public static void ShowSkillTreeLevelUpSuccessView(int skillNodeId, int lastLevel, int roleDataId, int? targetLevel = null)
 	{
 		int nodeType = RoleSkillConfig.Instance.GetSkillTreeNode(skillNodeId).Value.NodeType;
@@ -1094,7 +1145,7 @@ public class RoleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06014E00 RID: 85504 RVA: 0x0054D0E8 File Offset: 0x0054B2E8
+	// Token: 0x060127FB RID: 75771 RVA: 0x00577CE8 File Offset: 0x00575EE8
 	public void ShowAttributeNodeLevelUpSuccessView(int skillNodeId)
 	{
 		SkillTree? skillTreeNode = RoleSkillConfig.Instance.GetSkillTreeNode(skillNodeId);
@@ -1113,7 +1164,7 @@ public class RoleController : UiControllerBase
 		RoleLevelUpSuccessController.Instance.OpenSuccessEffectView(data, null);
 	}
 
-	// Token: 0x06014E01 RID: 85505 RVA: 0x0054D160 File Offset: 0x0054B360
+	// Token: 0x060127FC RID: 75772 RVA: 0x00577D60 File Offset: 0x00575F60
 	public void ShowOuterSkillNodeLevelUpSuccessView(int skillNodeId, int roleDataId)
 	{
 		int skillId = RoleSkillConfig.Instance.GetSkillTreeNode(skillNodeId).Value.SkillId;
@@ -1135,7 +1186,7 @@ public class RoleController : UiControllerBase
 		RoleLevelUpSuccessController.Instance.OpenSuccessEffectView(data, null);
 	}
 
-	// Token: 0x06014E02 RID: 85506 RVA: 0x0054D210 File Offset: 0x0054B410
+	// Token: 0x060127FD RID: 75773 RVA: 0x00577E10 File Offset: 0x00576010
 	public void ShowInnerSkillNodeLevelUpSuccessView(int skillNodeId, int lastLevel, int? targetLevel = null)
 	{
 		List<IAttributeInfo> list = new List<IAttributeInfo>();
@@ -1184,18 +1235,18 @@ public class RoleController : UiControllerBase
 		RoleLevelUpSuccessController.Instance.OpenSuccessAttributeView(data, null);
 	}
 
-	// Token: 0x06014E03 RID: 85507 RVA: 0x0054D3B8 File Offset: 0x0054B5B8
+	// Token: 0x060127FE RID: 75774 RVA: 0x00577FB8 File Offset: 0x005761B8
 	public UniTask RobotRolePropRequest(int[] idList)
 	{
-		RoleController.<RobotRolePropRequest>d__53 <RobotRolePropRequest>d__;
+		RoleController.<RobotRolePropRequest>d__54 <RobotRolePropRequest>d__;
 		<RobotRolePropRequest>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<RobotRolePropRequest>d__.idList = idList;
 		<RobotRolePropRequest>d__.<>1__state = -1;
-		<RobotRolePropRequest>d__.<>t__builder.Start<RoleController.<RobotRolePropRequest>d__53>(ref <RobotRolePropRequest>d__);
+		<RobotRolePropRequest>d__.<>t__builder.Start<RoleController.<RobotRolePropRequest>d__54>(ref <RobotRolePropRequest>d__);
 		return <RobotRolePropRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014E04 RID: 85508 RVA: 0x0054D3FC File Offset: 0x0054B5FC
+	// Token: 0x060127FF RID: 75775 RVA: 0x00577FFC File Offset: 0x005761FC
 	public void RoleSkinChangeRequest(int roleId, int skinId, bool signatureWeapon, Action<int, bool> roleSkinChangeCallBack)
 	{
 		RoleSkinChangeRequest roleSkinChangeRequest = Aki.Protocol.RoleSkinChangeRequest.Create();
@@ -1226,7 +1277,7 @@ public class RoleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06014E05 RID: 85509 RVA: 0x0054D474 File Offset: 0x0054B674
+	// Token: 0x06012800 RID: 75776 RVA: 0x00578074 File Offset: 0x00576274
 	[NullableContext(2)]
 	private void OnRoleSkinChangeNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1237,7 +1288,7 @@ public class RoleController : UiControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.OnRoleSkinChange, roleId);
 	}
 
-	// Token: 0x06014E06 RID: 85510 RVA: 0x0054D4B4 File Offset: 0x0054B6B4
+	// Token: 0x06012801 RID: 75777 RVA: 0x005780B4 File Offset: 0x005762B4
 	public void RoleOperateSelfBgmRequest(int roleId, bool enabled, Action successCallback = null)
 	{
 		RoleOperateSelfBgmRequest roleOperateSelfBgmRequest = new RoleOperateSelfBgmRequest();
@@ -1266,7 +1317,7 @@ public class RoleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06014E07 RID: 85511 RVA: 0x0054D517 File Offset: 0x0054B717
+	// Token: 0x06012802 RID: 75778 RVA: 0x00578117 File Offset: 0x00576317
 	private void UpdateRoleSkillBranch(int roleId, int skillBranch, bool notify = true)
 	{
 		RoleModel.Instance.SetRoleBranch(roleId, skillBranch);
@@ -1277,7 +1328,7 @@ public class RoleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06014E08 RID: 85512 RVA: 0x0054D544 File Offset: 0x0054B744
+	// Token: 0x06012803 RID: 75779 RVA: 0x00578144 File Offset: 0x00576344
 	public void RequestRoleSkillBranchModify(int roleId, int skillBranch)
 	{
 		RoleSkillBranchModifyRequest roleSkillBranchModifyRequest = RoleSkillBranchModifyRequest.Create();
@@ -1288,7 +1339,7 @@ public class RoleController : UiControllerBase
 			RoleSkillBranchModifyResponse roleSkillBranchModifyResponse = (RoleSkillBranchModifyResponse)msg;
 			if (roleSkillBranchModifyResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(roleSkillBranchModifyResponse.ErrorCode, 15261, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(roleSkillBranchModifyResponse.ErrorCode, 25832, null, true, true);
 				return;
 			}
 			this.UpdateRoleSkillBranch(roleId, skillBranch, true);
@@ -1309,7 +1360,7 @@ public class RoleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06014E09 RID: 85513 RVA: 0x0054D5A8 File Offset: 0x0054B7A8
+	// Token: 0x06012804 RID: 75780 RVA: 0x005781A8 File Offset: 0x005763A8
 	public void SynRoleSkillBranchNormalToGamePlay(int roleId, ESkillBranchCacheType type)
 	{
 		RoleModel instance = RoleModel.Instance;
@@ -1317,7 +1368,7 @@ public class RoleController : UiControllerBase
 		instance.SetRoleSkillBranchGamePlayCache(roleId, roleCurrentBranchId, type);
 	}
 
-	// Token: 0x06014E0A RID: 85514 RVA: 0x0054D5CC File Offset: 0x0054B7CC
+	// Token: 0x06012805 RID: 75781 RVA: 0x005781CC File Offset: 0x005763CC
 	public void ModifyRoleSkillBranchInCurrentGamePlay(int roleId, int skillBranch, bool needTips = true)
 	{
 		RoleModel.Instance.SetRoleSkillBranchGamePlayCache(roleId, skillBranch, RoleModel.Instance.RoleSkillBranchCacheType);
@@ -1332,7 +1383,7 @@ public class RoleController : UiControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.OnRoleSkillBranchInGamePlayChanged, roleId);
 	}
 
-	// Token: 0x06014E0B RID: 85515 RVA: 0x0054D644 File Offset: 0x0054B844
+	// Token: 0x06012806 RID: 75782 RVA: 0x00578244 File Offset: 0x00576444
 	[NullableContext(2)]
 	private void OnOrnamentInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1344,31 +1395,43 @@ public class RoleController : UiControllerBase
 		RepeatedField<int> unlockOrnamentIds = ornamentInfo.UnlockOrnamentIds;
 		RepeatedField<OrnamentDressInfo> ornamentDressInfos = ornamentInfo.OrnamentDressInfos;
 		RepeatedField<int> redPointOrnamentIds = ornamentInfo.RedPointOrnamentIds;
-		RoleOrnamentModel.Instance.UpdateOwnOrnament(unlockOrnamentIds.ToArray<int>());
+		int[] array = new int[unlockOrnamentIds.Count];
+		unlockOrnamentIds.CopyTo(array, 0);
+		RoleOrnamentModel.Instance.UpdateOwnOrnament(array);
 		RoleOrnamentModel.Instance.UpdateWearOrnament(ornamentDressInfos);
-		RoleOrnamentModel.Instance.UpdateNewlyAddedOrnament(redPointOrnamentIds.ToArray<int>());
+		int[] array2 = new int[redPointOrnamentIds.Count];
+		redPointOrnamentIds.CopyTo(array2, 0);
+		RoleOrnamentModel.Instance.UpdateNewlyAddedOrnament(array2);
 		if (RoleOrnamentModel.Instance.GetIsCommonItemFinished())
 		{
-			InventoryController.Instance.InitOrnamentItemData(unlockOrnamentIds.ToArray<int>());
+			int[] array3 = new int[unlockOrnamentIds.Count];
+			unlockOrnamentIds.CopyTo(array3, 0);
+			InventoryController.Instance.InitOrnamentItemData(array3);
 			return;
 		}
-		RoleOrnamentModel.Instance.SetPendingOrnamentIdsForInit(unlockOrnamentIds.ToArray<int>());
+		int[] array4 = new int[unlockOrnamentIds.Count];
+		unlockOrnamentIds.CopyTo(array4, 0);
+		RoleOrnamentModel.Instance.SetPendingOrnamentIdsForInit(array4);
 	}
 
-	// Token: 0x06014E0C RID: 85516 RVA: 0x0054D6D0 File Offset: 0x0054B8D0
+	// Token: 0x06012807 RID: 75783 RVA: 0x00578314 File Offset: 0x00576514
 	[NullableContext(2)]
 	private void OnOrnamentUnlockNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RepeatedField<int> unlockOrnamentIds = ((OrnamentUnlockNotify)msg).UnlockOrnamentIds;
 		if (RoleOrnamentModel.Instance.GetIsCommonItemFinished())
 		{
-			RoleController.ProcessOrnamentUnlock(unlockOrnamentIds.ToArray<int>());
+			int[] array = new int[unlockOrnamentIds.Count];
+			unlockOrnamentIds.CopyTo(array, 0);
+			RoleController.ProcessOrnamentUnlock(array);
 			return;
 		}
-		RoleOrnamentModel.Instance.AddPendingOrnamentUnlockBatch(unlockOrnamentIds.ToArray<int>());
+		int[] array2 = new int[unlockOrnamentIds.Count];
+		unlockOrnamentIds.CopyTo(array2, 0);
+		RoleOrnamentModel.Instance.AddPendingOrnamentUnlockBatch(array2);
 	}
 
-	// Token: 0x06014E0D RID: 85517 RVA: 0x0054D714 File Offset: 0x0054B914
+	// Token: 0x06012808 RID: 75784 RVA: 0x00578374 File Offset: 0x00576574
 	private static void ProcessOrnamentUnlock(int[] ids)
 	{
 		RoleOrnamentModel.Instance.UpdateOwnOrnament(ids);
@@ -1384,7 +1447,7 @@ public class RoleController : UiControllerBase
 		EventSystem.Instance.Emit<TItem[]>(EEventName.OnAddOrnamentItemList, list.ToArray());
 	}
 
-	// Token: 0x06014E0E RID: 85518 RVA: 0x0054D79C File Offset: 0x0054B99C
+	// Token: 0x06012809 RID: 75785 RVA: 0x005783FC File Offset: 0x005765FC
 	[NullableContext(2)]
 	private void OnOrnamentDressInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1393,7 +1456,7 @@ public class RoleController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnOrnamentChange);
 	}
 
-	// Token: 0x06014E0F RID: 85519 RVA: 0x0054D7D0 File Offset: 0x0054B9D0
+	// Token: 0x0601280A RID: 75786 RVA: 0x00578430 File Offset: 0x00576630
 	[NullableContext(2)]
 	private void OnEntityDressOrnamentChangeNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1418,7 +1481,7 @@ public class RoleController : UiControllerBase
 		characterOutlookComponent2.OnEntityDressOrnamentChangeNotify(entityDressOrnamentChangeNotify);
 	}
 
-	// Token: 0x06014E10 RID: 85520 RVA: 0x0054D824 File Offset: 0x0054BA24
+	// Token: 0x0601280B RID: 75787 RVA: 0x00578484 File Offset: 0x00576684
 	public void RequestChangeOrnamentRequest(int roleSkinId, int ornamentId, bool isDress)
 	{
 		int normalizedOrnamentSkinId = RoleOrnamentModel.Instance.GetNormalizedOrnamentSkinId(roleSkinId);
@@ -1431,7 +1494,7 @@ public class RoleController : UiControllerBase
 			ChangeOrnamentResponse changeOrnamentResponse = (ChangeOrnamentResponse)msg;
 			if (changeOrnamentResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(changeOrnamentResponse.ErrorCode, 19523, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(changeOrnamentResponse.ErrorCode, 23664, null, true, true);
 				return;
 			}
 			string textId = isDress ? "OrnamentUiText_05" : "OrnamentUiText_06";
@@ -1439,7 +1502,7 @@ public class RoleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06014E11 RID: 85521 RVA: 0x0054D888 File Offset: 0x0054BA88
+	// Token: 0x0601280C RID: 75788 RVA: 0x005784E8 File Offset: 0x005766E8
 	public bool CheckCanWearOrnamentAndShowTip()
 	{
 		BaseTagComponent component = SceneTeamModel.Instance.GetCurrentEntity.Entity.GetComponent<BaseTagComponent>();
@@ -1466,7 +1529,7 @@ public class RoleController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06014E12 RID: 85522 RVA: 0x0054D97C File Offset: 0x0054BB7C
+	// Token: 0x0601280D RID: 75789 RVA: 0x005785DC File Offset: 0x005767DC
 	public void OpenOrnamentPreviewView(int ornamentId, int? skinId)
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.RoleOrnamentShowView))
@@ -1482,7 +1545,7 @@ public class RoleController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.RoleOrnamentShowView, param, null);
 	}
 
-	// Token: 0x06014E13 RID: 85523 RVA: 0x0054D9D4 File Offset: 0x0054BBD4
+	// Token: 0x0601280E RID: 75790 RVA: 0x00578634 File Offset: 0x00576834
 	public void SkipToRoleOrnamentViewByItemId(int itemId, bool skipCameraBlend = true)
 	{
 		if (RoleConfig.Instance.GetOrnamentConfig(itemId) == null)
@@ -1529,7 +1592,7 @@ public class RoleController : UiControllerBase
 		this.OpenRoleOrnamentView(num.Value, skinId, new int?(itemId), null, new bool?(skipCameraBlend));
 	}
 
-	// Token: 0x06014E14 RID: 85524 RVA: 0x0054DAFC File Offset: 0x0054BCFC
+	// Token: 0x0601280F RID: 75791 RVA: 0x0057875C File Offset: 0x0057695C
 	[NullableContext(2)]
 	public void OpenRoleOrnamentView(int roleId, int? skinId = null, int? ornamentId = null, TOpenViewCallBack finishCallback = null, bool? skipCameraBlend = null)
 	{
@@ -1551,7 +1614,7 @@ public class RoleController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.SkinRootView, param, finishCallback);
 	}
 
-	// Token: 0x06014E15 RID: 85525 RVA: 0x0054DB80 File Offset: 0x0054BD80
+	// Token: 0x06012810 RID: 75792 RVA: 0x005787E0 File Offset: 0x005769E0
 	[NullableContext(2)]
 	private void OnRoleUpdateDevelopTargetNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1583,7 +1646,7 @@ public class RoleController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RoleDevTargetRoleIdChange);
 	}
 
-	// Token: 0x06014E16 RID: 85526 RVA: 0x0054DC4C File Offset: 0x0054BE4C
+	// Token: 0x06012811 RID: 75793 RVA: 0x005788AC File Offset: 0x00576AAC
 	[NullableContext(2)]
 	private void OnRoleDevelopConfigUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1596,28 +1659,38 @@ public class RoleController : UiControllerBase
 		RoleDevelopModel.Instance.UpdateRoleDevConfig(configs);
 	}
 
-	// Token: 0x06014E17 RID: 85527 RVA: 0x0054DC94 File Offset: 0x0054BE94
+	// Token: 0x06012812 RID: 75794 RVA: 0x005788F4 File Offset: 0x00576AF4
 	public UniTask RequestRoleDevelopConfig()
 	{
-		RoleController.<RequestRoleDevelopConfig>d__73 <RequestRoleDevelopConfig>d__;
+		RoleController.<RequestRoleDevelopConfig>d__74 <RequestRoleDevelopConfig>d__;
 		<RequestRoleDevelopConfig>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<RequestRoleDevelopConfig>d__.<>1__state = -1;
-		<RequestRoleDevelopConfig>d__.<>t__builder.Start<RoleController.<RequestRoleDevelopConfig>d__73>(ref <RequestRoleDevelopConfig>d__);
+		<RequestRoleDevelopConfig>d__.<>t__builder.Start<RoleController.<RequestRoleDevelopConfig>d__74>(ref <RequestRoleDevelopConfig>d__);
 		return <RequestRoleDevelopConfig>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014E18 RID: 85528 RVA: 0x0054DCD0 File Offset: 0x0054BED0
+	// Token: 0x06012813 RID: 75795 RVA: 0x00578930 File Offset: 0x00576B30
 	public UniTask RequestRoleDevelopDependentData()
 	{
-		RoleController.<RequestRoleDevelopDependentData>d__74 <RequestRoleDevelopDependentData>d__;
+		RoleController.<RequestRoleDevelopDependentData>d__75 <RequestRoleDevelopDependentData>d__;
 		<RequestRoleDevelopDependentData>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<RequestRoleDevelopDependentData>d__.<>4__this = this;
 		<RequestRoleDevelopDependentData>d__.<>1__state = -1;
-		<RequestRoleDevelopDependentData>d__.<>t__builder.Start<RoleController.<RequestRoleDevelopDependentData>d__74>(ref <RequestRoleDevelopDependentData>d__);
+		<RequestRoleDevelopDependentData>d__.<>t__builder.Start<RoleController.<RequestRoleDevelopDependentData>d__75>(ref <RequestRoleDevelopDependentData>d__);
 		return <RequestRoleDevelopDependentData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014E19 RID: 85529 RVA: 0x0054DD14 File Offset: 0x0054BF14
+	// Token: 0x06012814 RID: 75796 RVA: 0x00578974 File Offset: 0x00576B74
+	public UniTask RequestTeamRecommendData()
+	{
+		RoleController.<RequestTeamRecommendData>d__76 <RequestTeamRecommendData>d__;
+		<RequestTeamRecommendData>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+		<RequestTeamRecommendData>d__.<>1__state = -1;
+		<RequestTeamRecommendData>d__.<>t__builder.Start<RoleController.<RequestTeamRecommendData>d__76>(ref <RequestTeamRecommendData>d__);
+		return <RequestTeamRecommendData>d__.<>t__builder.Task;
+	}
+
+	// Token: 0x06012815 RID: 75797 RVA: 0x005789B0 File Offset: 0x00576BB0
 	public void RequestRoleDevelopVisionRecommendData()
 	{
 		foreach (RoleDevelopData roleDevelopData in RoleDevelopModel.Instance.GetNormalRoleDevelopData())
@@ -1628,7 +1701,7 @@ public class RoleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06014E1A RID: 85530 RVA: 0x0054DD80 File Offset: 0x0054BF80
+	// Token: 0x06012816 RID: 75798 RVA: 0x00578A1C File Offset: 0x00576C1C
 	public void RequestUpdateDevelopTarget(int roleId, ERoleDevelopUpdateTargetSource source, int? fetterGroupId = null, int? firstPhantomId = null)
 	{
 		RoleUpdateDevelopTargetRequest roleUpdateDevelopTargetRequest = RoleUpdateDevelopTargetRequest.Create();
@@ -1636,6 +1709,8 @@ public class RoleController : UiControllerBase
 		roleUpdateDevelopTargetRequest.Source = (int)source;
 		roleUpdateDevelopTargetRequest.PlanId = fetterGroupId.GetValueOrDefault();
 		roleUpdateDevelopTargetRequest.FirstPhantomId = firstPhantomId.GetValueOrDefault();
+		int roleId2 = (roleId != 0) ? roleId : RoleDevelopModel.Instance.DevTargetRoleId;
+		roleUpdateDevelopTargetRequest.Core = ((RoleDevelopUtil.IsKeyPropertyReached(roleId2) > false) ? 1 : 0);
 		Net.Instance.Call(ERequestMessageId.RoleUpdateDevelopTargetRequest, roleUpdateDevelopTargetRequest, delegate(IMessage msg, Net.CallbackStatus _)
 		{
 			RoleUpdateDevelopTargetResponse roleUpdateDevelopTargetResponse = (RoleUpdateDevelopTargetResponse)msg;
@@ -1651,12 +1726,12 @@ public class RoleController : UiControllerBase
 			}
 			if (roleUpdateDevelopTargetResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(roleUpdateDevelopTargetResponse.ErrorCode, 29361, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(roleUpdateDevelopTargetResponse.ErrorCode, 29614, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x06014E1B RID: 85531 RVA: 0x0054DDEC File Offset: 0x0054BFEC
+	// Token: 0x06012817 RID: 75799 RVA: 0x00578AA8 File Offset: 0x00576CA8
 	public static void OpenRoleDevelopView(int? roleId)
 	{
 		RoleDevelopRootViewData roleDevelopRootViewData = new RoleDevelopRootViewData();
@@ -1664,7 +1739,7 @@ public class RoleController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.RoleDevelopRootView, roleDevelopRootViewData, null);
 	}
 
-	// Token: 0x06014E1C RID: 85532 RVA: 0x0054DE18 File Offset: 0x0054C018
+	// Token: 0x06012818 RID: 75800 RVA: 0x00578AD4 File Offset: 0x00576CD4
 	public static void OpenRoleDevelopSelectTargetView(ERoleDevelopUpdateTargetSource source, int? roleId = null)
 	{
 		RoleDevelopSelectTargetViewData roleDevelopSelectTargetViewData = new RoleDevelopSelectTargetViewData();
@@ -1673,19 +1748,49 @@ public class RoleController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.RoleDevelopSelectTargetView, roleDevelopSelectTargetViewData, null);
 	}
 
-	// Token: 0x06014E1D RID: 85533 RVA: 0x0054DE4C File Offset: 0x0054C04C
+	// Token: 0x06012819 RID: 75801 RVA: 0x00578B06 File Offset: 0x00576D06
 	public void LogRoleDevelopClick(int roleId, ERoleDevelopCategoryType mainPage, ERoleDevelopLogSubPage subPage, ERoleDevelopLogItemState? itemState = null)
+	{
+		this.PushRoleDevLog(roleId, mainPage, (int)subPage, itemState);
+	}
+
+	// Token: 0x0601281A RID: 75802 RVA: 0x00578B14 File Offset: 0x00576D14
+	public void LogRoleDevelopSwitchPage(int roleId, ERoleDevelopCategoryType mainPage)
+	{
+		this.PushRoleDevLog(roleId, mainPage, 0, null);
+	}
+
+	// Token: 0x0601281B RID: 75803 RVA: 0x00578B34 File Offset: 0x00576D34
+	private void PushRoleDevLog(int roleId, ERoleDevelopCategoryType mainPage, int subPage, ERoleDevelopLogItemState? itemState)
 	{
 		RoleDevLogEvent roleDevLogEvent = new RoleDevLogEvent();
 		roleDevLogEvent.i_role_id = roleId;
 		roleDevLogEvent.i_role_type = ((RoleModel.Instance.IsRoleOwned(roleId) > false) ? 1 : 0);
 		roleDevLogEvent.i_main_page = (int)mainPage;
-		roleDevLogEvent.i_sub_page = (int)subPage;
+		roleDevLogEvent.i_sub_page = subPage;
 		roleDevLogEvent.i_type = (int)((itemState != null) ? itemState.Value : ERoleDevelopLogItemState.Normal);
+		roleDevLogEvent.i_status = RoleController.GetRoleDevelopLogStatus(RoleDevelopUtil.GetCategoryHintType(roleId, mainPage));
+		roleDevLogEvent.i_core = ((RoleDevelopUtil.IsKeyPropertyReached(roleId) > false) ? 1 : 0);
 		LogController.Instance.LogRoleDevPush(roleDevLogEvent);
 	}
 
-	// Token: 0x06014E1E RID: 85534 RVA: 0x0054DEAC File Offset: 0x0054C0AC
+	// Token: 0x0601281C RID: 75804 RVA: 0x00578BB5 File Offset: 0x00576DB5
+	private static int GetRoleDevelopLogStatus(ERoleDevelopCategoryHintType hintType)
+	{
+		switch (hintType)
+		{
+		case ERoleDevelopCategoryHintType.Finish:
+			return 1;
+		case ERoleDevelopCategoryHintType.Upgrade:
+			return 3;
+		case ERoleDevelopCategoryHintType.CanImprove:
+			return 2;
+		default:
+			return 0;
+		}
+	}
+
+	// Token: 0x0601281D RID: 75805 RVA: 0x00578BD4 File Offset: 0x00576DD4
 	public void LogRoleDevelopSkillRecommendClick(int roleId, bool isActive)
 	{
 		RoleDevelopSkillRecommendClickLogEvent roleDevelopSkillRecommendClickLogEvent = new RoleDevelopSkillRecommendClickLogEvent();
@@ -1694,37 +1799,37 @@ public class RoleController : UiControllerBase
 		LogReportController.Instance.LogReport(roleDevelopSkillRecommendClickLogEvent);
 	}
 
-	// Token: 0x06014E1F RID: 85535 RVA: 0x0054DEDB File Offset: 0x0054C0DB
+	// Token: 0x0601281E RID: 75806 RVA: 0x00578C03 File Offset: 0x00576E03
 	public bool CanOpenRoleDevelopView(EUiViewName viewName, object arg = null)
 	{
 		return FunctionModel.Instance.IsOpen(EFunctionType.RoleDev);
 	}
 
-	// Token: 0x06014E20 RID: 85536 RVA: 0x0054DEF4 File Offset: 0x0054C0F4
+	// Token: 0x0601281F RID: 75807 RVA: 0x00578C1C File Offset: 0x00576E1C
 	[NullableContext(0)]
 	public UniTask<bool> RequestPlayerVoiceLanguage()
 	{
-		RoleController.<RequestPlayerVoiceLanguage>d__82 <RequestPlayerVoiceLanguage>d__;
+		RoleController.<RequestPlayerVoiceLanguage>d__87 <RequestPlayerVoiceLanguage>d__;
 		<RequestPlayerVoiceLanguage>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 		<RequestPlayerVoiceLanguage>d__.<>1__state = -1;
-		<RequestPlayerVoiceLanguage>d__.<>t__builder.Start<RoleController.<RequestPlayerVoiceLanguage>d__82>(ref <RequestPlayerVoiceLanguage>d__);
+		<RequestPlayerVoiceLanguage>d__.<>t__builder.Start<RoleController.<RequestPlayerVoiceLanguage>d__87>(ref <RequestPlayerVoiceLanguage>d__);
 		return <RequestPlayerVoiceLanguage>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014E21 RID: 85537 RVA: 0x0054DF30 File Offset: 0x0054C130
+	// Token: 0x06012820 RID: 75808 RVA: 0x00578C58 File Offset: 0x00576E58
 	[NullableContext(0)]
 	public UniTask<bool> RequestPlayerRoleVoiceSet([Nullable(1)] List<RoleVoiceSetting> roleList)
 	{
-		RoleController.<RequestPlayerRoleVoiceSet>d__83 <RequestPlayerRoleVoiceSet>d__;
+		RoleController.<RequestPlayerRoleVoiceSet>d__88 <RequestPlayerRoleVoiceSet>d__;
 		<RequestPlayerRoleVoiceSet>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 		<RequestPlayerRoleVoiceSet>d__.roleList = roleList;
 		<RequestPlayerRoleVoiceSet>d__.<>1__state = -1;
-		<RequestPlayerRoleVoiceSet>d__.<>t__builder.Start<RoleController.<RequestPlayerRoleVoiceSet>d__83>(ref <RequestPlayerRoleVoiceSet>d__);
+		<RequestPlayerRoleVoiceSet>d__.<>t__builder.Start<RoleController.<RequestPlayerRoleVoiceSet>d__88>(ref <RequestPlayerRoleVoiceSet>d__);
 		return <RequestPlayerRoleVoiceSet>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x17001B27 RID: 6951
-	// (get) Token: 0x06014E22 RID: 85538 RVA: 0x0054DF73 File Offset: 0x0054C173
+	// Token: 0x17001B7E RID: 7038
+	// (get) Token: 0x06012821 RID: 75809 RVA: 0x00578C9B File Offset: 0x00576E9B
 	public static RoleController Instance
 	{
 		get
@@ -1733,7 +1838,7 @@ public class RoleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06014E23 RID: 85539 RVA: 0x0054DF7A File Offset: 0x0054C17A
+	// Token: 0x06012822 RID: 75810 RVA: 0x00578CA2 File Offset: 0x00576EA2
 	public static RoleController GetOrCreateInstance()
 	{
 		if (RoleController._Instance == null)
@@ -1743,7 +1848,7 @@ public class RoleController : UiControllerBase
 		return RoleController._Instance;
 	}
 
-	// Token: 0x06014E24 RID: 85540 RVA: 0x0054DF8E File Offset: 0x0054C18E
+	// Token: 0x06012823 RID: 75811 RVA: 0x00578CB6 File Offset: 0x00576EB6
 	public static bool CreateInstance()
 	{
 		if (RoleController._Instance != null)
@@ -1754,30 +1859,34 @@ public class RoleController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06014E25 RID: 85541 RVA: 0x0054DFA4 File Offset: 0x0054C1A4
+	// Token: 0x06012824 RID: 75812 RVA: 0x00578CCC File Offset: 0x00576ECC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06014E26 RID: 85542 RVA: 0x0054DFA6 File Offset: 0x0054C1A6
+	// Token: 0x06012825 RID: 75813 RVA: 0x00578CCE File Offset: 0x00576ECE
 	public static void ResetStaticDefaultValue()
 	{
 		RoleController._Instance = null;
 	}
 
-	// Token: 0x06014E27 RID: 85543 RVA: 0x0054DFAE File Offset: 0x0054C1AE
+	// Token: 0x06012826 RID: 75814 RVA: 0x00578CD6 File Offset: 0x00576ED6
 	static RoleController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleController.CreateStaticDefaultValue), new Action(RoleController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009CF0 RID: 40176
+	// Token: 0x0400A0D3 RID: 41171
 	private readonly Action OpenRoleMainViewByInput = delegate()
 	{
-		RoleController.Instance.OpenRoleMainView(ERoleAgentType.Normal, 0, null, null, null);
+		RoleController.Instance.OpenRoleMainViewByParam(new OpenRoleMainViewData
+		{
+			AgentType = ERoleAgentType.Normal,
+			UseMainViewSort = true
+		});
 	};
 
-	// Token: 0x04009CF1 RID: 40177
+	// Token: 0x0400A0D4 RID: 41172
 	[Nullable(2)]
 	private static RoleController _Instance;
 }

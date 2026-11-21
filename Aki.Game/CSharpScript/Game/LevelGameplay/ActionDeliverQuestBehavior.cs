@@ -6,10 +6,10 @@ using Aki.TDConfigMgr.Quest;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006964 RID: 26980
+	// Token: 0x02005AC0 RID: 23232
 	public class ActionDeliverQuestBehavior : ActionParams
 	{
-		// Token: 0x04022FE7 RID: 143335
+		// Token: 0x0401E1D1 RID: 123345
 		[Nullable(new byte[]
 		{
 			2,
@@ -17,14 +17,14 @@ namespace CSharpScript.Game.LevelGamePlay
 		})]
 		public List<IHandInItem> Items;
 
-		// Token: 0x04022FE8 RID: 143336
+		// Token: 0x0401E1D2 RID: 123346
 		[Nullable(1)]
 		public string DescText = "";
 
-		// Token: 0x04022FE9 RID: 143337
+		// Token: 0x0401E1D3 RID: 123347
 		public int EntityId;
 
-		// Token: 0x04022FEA RID: 143338
+		// Token: 0x0401E1D4 RID: 123348
 		public bool? RepeatItems;
 	}
 }

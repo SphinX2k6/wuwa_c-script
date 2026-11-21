@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D8E RID: 23950
+	// Token: 0x020063CB RID: 25547
 	public struct IDynamicSummonGongduolaDictionary : IFlatbufferObject
 	{
-		// Token: 0x1700B35E RID: 45918
-		// (get) Token: 0x06028FB8 RID: 167864 RVA: 0x005A10F7 File Offset: 0x0059F2F7
+		// Token: 0x1700BCC4 RID: 48324
+		// (get) Token: 0x0602B642 RID: 177730 RVA: 0x005E9E27 File Offset: 0x005E8027
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028FB9 RID: 167865 RVA: 0x005A1104 File Offset: 0x0059F304
+		// Token: 0x0602B643 RID: 177731 RVA: 0x005E9E34 File Offset: 0x005E8034
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028FBA RID: 167866 RVA: 0x005A110C File Offset: 0x0059F30C
+		// Token: 0x0602B644 RID: 177732 RVA: 0x005E9E3C File Offset: 0x005E803C
 		public static IDynamicSummonGongduolaDictionary GetRootAsIDynamicSummonGongduolaDictionary(ByteBuffer _bb)
 		{
 			return IDynamicSummonGongduolaDictionary.GetRootAsIDynamicSummonGongduolaDictionary(_bb, default(IDynamicSummonGongduolaDictionary));
 		}
 
-		// Token: 0x06028FBB RID: 167867 RVA: 0x005A1128 File Offset: 0x0059F328
+		// Token: 0x0602B645 RID: 177733 RVA: 0x005E9E58 File Offset: 0x005E8058
 		public static IDynamicSummonGongduolaDictionary GetRootAsIDynamicSummonGongduolaDictionary(ByteBuffer _bb, IDynamicSummonGongduolaDictionary obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028FBC RID: 167868 RVA: 0x005A1145 File Offset: 0x0059F345
+		// Token: 0x0602B646 RID: 177734 RVA: 0x005E9E75 File Offset: 0x005E8075
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028FBD RID: 167869 RVA: 0x005A1154 File Offset: 0x0059F354
+		// Token: 0x0602B647 RID: 177735 RVA: 0x005E9E84 File Offset: 0x005E8084
 		public IDynamicSummonGongduolaDictionary __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06028FBE RID: 167870 RVA: 0x005A1164 File Offset: 0x0059F364
+		// Token: 0x0602B648 RID: 177736 RVA: 0x005E9E94 File Offset: 0x005E8094
 		public IDynamicSummonGongduolaConfig? Configs(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return new IDynamicSummonGongduolaConfig?(default(IDynamicSummonGongduolaConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700B35F RID: 45919
-		// (get) Token: 0x06028FBF RID: 167871 RVA: 0x005A11C4 File Offset: 0x0059F3C4
+		// Token: 0x1700BCC5 RID: 48325
+		// (get) Token: 0x0602B649 RID: 177737 RVA: 0x005E9EF4 File Offset: 0x005E80F4
 		public int ConfigsLength
 		{
 			get
@@ -74,7 +74,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028FC0 RID: 167872 RVA: 0x005A11EF File Offset: 0x0059F3EF
+		// Token: 0x0602B64A RID: 177738 RVA: 0x005E9F1F File Offset: 0x005E811F
 		public static Offset<IDynamicSummonGongduolaDictionary> CreateIDynamicSummonGongduolaDictionary(FlatBufferBuilder builder, VectorOffset ConfigsOffset = default(VectorOffset))
 		{
 			builder.StartTable(1);
@@ -82,19 +82,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IDynamicSummonGongduolaDictionary.EndIDynamicSummonGongduolaDictionary(builder);
 		}
 
-		// Token: 0x06028FC1 RID: 167873 RVA: 0x005A1205 File Offset: 0x0059F405
+		// Token: 0x0602B64B RID: 177739 RVA: 0x005E9F35 File Offset: 0x005E8135
 		public static void StartIDynamicSummonGongduolaDictionary(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06028FC2 RID: 167874 RVA: 0x005A120E File Offset: 0x0059F40E
+		// Token: 0x0602B64C RID: 177740 RVA: 0x005E9F3E File Offset: 0x005E813E
 		public static void AddConfigs(FlatBufferBuilder builder, VectorOffset configsOffset)
 		{
 			builder.AddOffset(0, configsOffset.Value, 0);
 		}
 
-		// Token: 0x06028FC3 RID: 167875 RVA: 0x005A1220 File Offset: 0x0059F420
+		// Token: 0x0602B64D RID: 177741 RVA: 0x005E9F50 File Offset: 0x005E8150
 		public static VectorOffset CreateConfigsVector(FlatBufferBuilder builder, Offset<IDynamicSummonGongduolaConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x06028FC4 RID: 167876 RVA: 0x005A1260 File Offset: 0x0059F460
+		// Token: 0x0602B64E RID: 177742 RVA: 0x005E9F90 File Offset: 0x005E8190
 		public static VectorOffset CreateConfigsVectorBlock(FlatBufferBuilder builder, Offset<IDynamicSummonGongduolaConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x06028FC5 RID: 167877 RVA: 0x005A127A File Offset: 0x0059F47A
+		// Token: 0x0602B64F RID: 177743 RVA: 0x005E9FAA File Offset: 0x005E81AA
 		public static VectorOffset CreateConfigsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IDynamicSummonGongduolaConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -121,7 +121,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x06028FC6 RID: 167878 RVA: 0x005A1298 File Offset: 0x0059F498
+		// Token: 0x0602B650 RID: 177744 RVA: 0x005E9FC8 File Offset: 0x005E81C8
 		public static VectorOffset CreateConfigsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -129,19 +129,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x06028FC7 RID: 167879 RVA: 0x005A12B1 File Offset: 0x0059F4B1
+		// Token: 0x0602B651 RID: 177745 RVA: 0x005E9FE1 File Offset: 0x005E81E1
 		public static void StartConfigsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06028FC8 RID: 167880 RVA: 0x005A12BC File Offset: 0x0059F4BC
+		// Token: 0x0602B652 RID: 177746 RVA: 0x005E9FEC File Offset: 0x005E81EC
 		public static Offset<IDynamicSummonGongduolaDictionary> EndIDynamicSummonGongduolaDictionary(FlatBufferBuilder builder)
 		{
 			return new Offset<IDynamicSummonGongduolaDictionary>(builder.EndTable());
 		}
 
-		// Token: 0x06028FC9 RID: 167881 RVA: 0x005A12CC File Offset: 0x0059F4CC
+		// Token: 0x0602B653 RID: 177747 RVA: 0x005E9FFC File Offset: 0x005E81FC
 		public IDynamicSummonGongduolaDictionaryT UnPack()
 		{
 			IDynamicSummonGongduolaDictionaryT dynamicSummonGongduolaDictionaryT = new IDynamicSummonGongduolaDictionaryT();
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return dynamicSummonGongduolaDictionaryT;
 		}
 
-		// Token: 0x06028FCA RID: 167882 RVA: 0x005A12E8 File Offset: 0x0059F4E8
+		// Token: 0x0602B654 RID: 177748 RVA: 0x005EA018 File Offset: 0x005E8218
 		public void UnPackTo(IDynamicSummonGongduolaDictionaryT _o)
 		{
 			_o.Configs = new List<IDynamicSummonGongduolaConfigT>();
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028FCB RID: 167883 RVA: 0x005A1348 File Offset: 0x0059F548
+		// Token: 0x0602B655 RID: 177749 RVA: 0x005EA078 File Offset: 0x005E8278
 		public static Offset<IDynamicSummonGongduolaDictionary> Pack(FlatBufferBuilder builder, IDynamicSummonGongduolaDictionaryT _o)
 		{
 			if (_o == null)
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IDynamicSummonGongduolaDictionary.CreateIDynamicSummonGongduolaDictionary(builder, configsOffset);
 		}
 
-		// Token: 0x0400F760 RID: 63328
+		// Token: 0x040104BB RID: 66747
 		private Table __p;
 	}
 }

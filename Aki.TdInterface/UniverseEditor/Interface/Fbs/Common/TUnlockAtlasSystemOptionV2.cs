@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E96 RID: 24214
+	// Token: 0x020064D9 RID: 25817
 	public enum TUnlockAtlasSystemOptionV2 : byte
 	{
-		// Token: 0x0400F8E6 RID: 63718
+		// Token: 0x04010649 RID: 67145
 		NONE,
-		// Token: 0x0400F8E7 RID: 63719
+		// Token: 0x0401064A RID: 67146
 		IUnlockGeographicalAtlasV2,
-		// Token: 0x0400F8E8 RID: 63720
+		// Token: 0x0401064B RID: 67147
 		IUnlockNounAtlasV2,
-		// Token: 0x0400F8E9 RID: 63721
+		// Token: 0x0401064C RID: 67148
 		IUnlockPanoramaAtlasV2,
-		// Token: 0x0400F8EA RID: 63722
+		// Token: 0x0401064D RID: 67149
 		IUnlockPlotPhotoAtlasV2
 	}
 }

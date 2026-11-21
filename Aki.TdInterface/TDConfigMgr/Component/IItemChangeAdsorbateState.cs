@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200049D RID: 1181
+	// Token: 0x020004F6 RID: 1270
 	public class IItemChangeAdsorbateState
 	{
-		// Token: 0x060017D0 RID: 6096 RVA: 0x00047BDA File Offset: 0x00045DDA
-		[NullableContext(1)]
+		// Token: 0x0600196A RID: 6506 RVA: 0x0004B922 File Offset: 0x00049B22
 		public static IItemChangeAdsorbateState Create([Nullable(2)] IItemChangeAdsorbateState instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x040011C2 RID: 4546
+		// Token: 0x040012E4 RID: 4836
 		[Nullable(2)]
 		protected IItemChangeAdsorbateState FbInstance;
 	}

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000054 RID: 84
+// Token: 0x02000056 RID: 86
 [NullableContext(1)]
 [Nullable(0)]
 public class Pool<T> where T : class
 {
-	// Token: 0x17000051 RID: 81
-	// (get) Token: 0x06000264 RID: 612 RVA: 0x0000D6E3 File Offset: 0x0000B8E3
+	// Token: 0x17000058 RID: 88
+	// (get) Token: 0x0600029F RID: 671 RVA: 0x0000E4CD File Offset: 0x0000C6CD
 	public int Size
 	{
 		get
@@ -17,7 +17,7 @@ public class Pool<T> where T : class
 		}
 	}
 
-	// Token: 0x06000265 RID: 613 RVA: 0x0000D6F7 File Offset: 0x0000B8F7
+	// Token: 0x060002A0 RID: 672 RVA: 0x0000E4E1 File Offset: 0x0000C6E1
 	public Pool(int capacity, Func<T> creator, [Nullable(new byte[]
 	{
 		2,
@@ -29,7 +29,7 @@ public class Pool<T> where T : class
 		this.Clearer = clearer;
 	}
 
-	// Token: 0x06000266 RID: 614 RVA: 0x0000D72C File Offset: 0x0000B92C
+	// Token: 0x060002A1 RID: 673 RVA: 0x0000E514 File Offset: 0x0000C714
 	[NullableContext(2)]
 	public T Create()
 	{
@@ -49,7 +49,7 @@ public class Pool<T> where T : class
 		return t;
 	}
 
-	// Token: 0x06000267 RID: 615 RVA: 0x0000D7BC File Offset: 0x0000B9BC
+	// Token: 0x060002A2 RID: 674 RVA: 0x0000E5A4 File Offset: 0x0000C7A4
 	[NullableContext(2)]
 	public T Get()
 	{
@@ -64,7 +64,7 @@ public class Pool<T> where T : class
 		return t;
 	}
 
-	// Token: 0x06000268 RID: 616 RVA: 0x0000D830 File Offset: 0x0000BA30
+	// Token: 0x060002A3 RID: 675 RVA: 0x0000E618 File Offset: 0x0000C818
 	[NullableContext(2)]
 	public bool Put(T value)
 	{
@@ -101,7 +101,7 @@ public class Pool<T> where T : class
 		return false;
 	}
 
-	// Token: 0x06000269 RID: 617 RVA: 0x0000D8EC File Offset: 0x0000BAEC
+	// Token: 0x060002A4 RID: 676 RVA: 0x0000E6D4 File Offset: 0x0000C8D4
 	public void Clear()
 	{
 		foreach (T obj in this.UnusedList)
@@ -116,23 +116,23 @@ public class Pool<T> where T : class
 		this.UsedSet.Clear();
 	}
 
-	// Token: 0x040001DA RID: 474
+	// Token: 0x040001F0 RID: 496
 	private readonly List<T> UnusedList = new List<T>();
 
-	// Token: 0x040001DB RID: 475
+	// Token: 0x040001F1 RID: 497
 	private readonly WeakSet<T> UsedSet = new WeakSet<T>();
 
-	// Token: 0x040001DC RID: 476
+	// Token: 0x040001F2 RID: 498
 	private int UsedSize;
 
-	// Token: 0x040001DD RID: 477
+	// Token: 0x040001F3 RID: 499
 	private readonly int Capacity;
 
-	// Token: 0x040001DE RID: 478
+	// Token: 0x040001F4 RID: 500
 	[Nullable(2)]
 	private readonly Func<T> Creator;
 
-	// Token: 0x040001DF RID: 479
+	// Token: 0x040001F5 RID: 501
 	[Nullable(new byte[]
 	{
 		2,

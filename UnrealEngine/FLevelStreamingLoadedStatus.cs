@@ -6,17 +6,17 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000D3D RID: 3389
+	// Token: 0x02000233 RID: 563
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FLevelStreamingLoadedStatus : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0600B5A6 RID: 46502 RVA: 0x00103252 File Offset: 0x00101452
+		// Token: 0x06002DB4 RID: 11700 RVA: 0x00040A24 File Offset: 0x0003EC24
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLevelStreamingLoadedStatus.StaticFunctionPtr();
 		}
 
-		// Token: 0x0600B5A7 RID: 46503 RVA: 0x0010325E File Offset: 0x0010145E
+		// Token: 0x06002DB5 RID: 11701 RVA: 0x00040A30 File Offset: 0x0003EC30
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLevelStreamingLoadedStatus._FunctionPtr == IntPtr.Zero)
@@ -26,32 +26,31 @@ namespace UnrealEngine
 			return FLevelStreamingLoadedStatus._FunctionPtr;
 		}
 
-		// Token: 0x0600B5A8 RID: 46504 RVA: 0x00103281 File Offset: 0x00101481
+		// Token: 0x06002DB6 RID: 11702 RVA: 0x00040A53 File Offset: 0x0003EC53
 		public FLevelStreamingLoadedStatus()
 		{
 		}
 
-		// Token: 0x0600B5A9 RID: 46505 RVA: 0x00103289 File Offset: 0x00101489
+		// Token: 0x06002DB7 RID: 11703 RVA: 0x00040A5B File Offset: 0x0003EC5B
 		[NullableContext(2)]
 		public FLevelStreamingLoadedStatus(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600B5AA RID: 46506 RVA: 0x00103293 File Offset: 0x00101493
+		// Token: 0x06002DB8 RID: 11704 RVA: 0x00040A65 File Offset: 0x0003EC65
 		public FLevelStreamingLoadedStatus(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600B5AB RID: 46507 RVA: 0x0010329E File Offset: 0x0010149E
+		// Token: 0x06002DB9 RID: 11705 RVA: 0x00040A70 File Offset: 0x0003EC70
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0600B5AC RID: 46508 RVA: 0x001032D0 File Offset: 0x001014D0
+		// Token: 0x06002DBA RID: 11706 RVA: 0x00040AA2 File Offset: 0x0003ECA2
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (FLevelStreamingLoadedStatus.RegisterId == 0)
@@ -66,26 +65,23 @@ namespace UnrealEngine
 			base.Add(Callback, FLevelStreamingLoadedStatus.RegisterId);
 		}
 
-		// Token: 0x0600B5AD RID: 46509 RVA: 0x0010330A File Offset: 0x0010150A
+		// Token: 0x06002DBB RID: 11707 RVA: 0x00040ADC File Offset: 0x0003ECDC
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0600B5AE RID: 46510 RVA: 0x00103313 File Offset: 0x00101513
+		// Token: 0x06002DBC RID: 11708 RVA: 0x00040AE5 File Offset: 0x0003ECE5
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x0600B5AF RID: 46511 RVA: 0x00103320 File Offset: 0x00101520
+		// Token: 0x06002DBD RID: 11709 RVA: 0x00040AF0 File Offset: 0x0003ECF0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -96,21 +92,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x04005F79 RID: 24441
+		// Token: 0x04000EA4 RID: 3748
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04005F7A RID: 24442
+		// Token: 0x04000EA5 RID: 3749
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.LevelStreamingLoadedStatus__DelegateSignature";
 
-		// Token: 0x04005F7B RID: 24443
+		// Token: 0x04000EA6 RID: 3750
 		private static int RegisterId;
 
-		// Token: 0x02002D3E RID: 11582
+		// Token: 0x020009B8 RID: 2488
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016742 RID: 91970
+			// Token: 0x0400593F RID: 22847
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

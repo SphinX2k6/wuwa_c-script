@@ -6,13 +6,13 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Personal;
 
-// Token: 0x02001708 RID: 5896
+// Token: 0x02000BC0 RID: 3008
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class BirthdayModel : ModelBase
 {
-	// Token: 0x0600A90F RID: 43279 RVA: 0x00260A14 File Offset: 0x0025EC14
+	// Token: 0x06007CEF RID: 31983 RVA: 0x0026AE30 File Offset: 0x00269030
 	public bool IsDuringBirthday()
 	{
 		if (!this.IsReset)
@@ -38,7 +38,7 @@ public class BirthdayModel : ModelBase
 		return 0.0 <= num2 && num2 <= (double)num;
 	}
 
-	// Token: 0x0600A910 RID: 43280 RVA: 0x00260AF0 File Offset: 0x0025ECF0
+	// Token: 0x06007CF0 RID: 31984 RVA: 0x0026AF0C File Offset: 0x0026910C
 	public DateTime GetBirthdayDate(int year)
 	{
 		int birthday = PersonalModel.Instance.GetBirthday();
@@ -54,7 +54,7 @@ public class BirthdayModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A911 RID: 43281 RVA: 0x00260B48 File Offset: 0x0025ED48
+	// Token: 0x06007CF1 RID: 31985 RVA: 0x0026AF64 File Offset: 0x00269164
 	public double CalculateDayGapBetweenNow(DateTime birthdayDate)
 	{
 		double num = (TimeUtil.Instance.GetServerTimeStamp() - birthdayDate.Subtract(new DateTime(1970, 1, 1)).TotalMilliseconds) / (double)TimeUtil.Instance.InverseMillisecond;
@@ -62,7 +62,7 @@ public class BirthdayModel : ModelBase
 		return num / num2;
 	}
 
-	// Token: 0x0600A912 RID: 43282 RVA: 0x00260B94 File Offset: 0x0025ED94
+	// Token: 0x06007CF2 RID: 31986 RVA: 0x0026AFB0 File Offset: 0x002691B0
 	public void UpdateBirthdayInfo(BirthDayInfoNotify notify)
 	{
 		this.IsReset = notify.BirthDayReset;
@@ -85,7 +85,7 @@ public class BirthdayModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A913 RID: 43283 RVA: 0x00260C3C File Offset: 0x0025EE3C
+	// Token: 0x06007CF3 RID: 31987 RVA: 0x0026B058 File Offset: 0x00269258
 	public List<int> GetRoleIdList()
 	{
 		List<int> list = new List<int>();
@@ -108,7 +108,7 @@ public class BirthdayModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600A914 RID: 43284 RVA: 0x00260CD0 File Offset: 0x0025EED0
+	// Token: 0x06007CF4 RID: 31988 RVA: 0x0026B0EC File Offset: 0x002692EC
 	public void ResetBirthday()
 	{
 		this.IsReset = true;
@@ -118,7 +118,7 @@ public class BirthdayModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A915 RID: 43285 RVA: 0x00260CEC File Offset: 0x0025EEEC
+	// Token: 0x06007CF5 RID: 31989 RVA: 0x0026B108 File Offset: 0x00269308
 	public bool IsRoleSelected(int roleId)
 	{
 		foreach (KeyValuePair<int, int> keyValuePair in this.BirthdayRoleMap)
@@ -132,7 +132,7 @@ public class BirthdayModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A916 RID: 43286 RVA: 0x00260D4C File Offset: 0x0025EF4C
+	// Token: 0x06007CF6 RID: 31990 RVA: 0x0026B168 File Offset: 0x00269368
 	public int GetBirthdayCount()
 	{
 		int num = 0;
@@ -146,7 +146,7 @@ public class BirthdayModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600A917 RID: 43287 RVA: 0x00260DA8 File Offset: 0x0025EFA8
+	// Token: 0x06007CF7 RID: 31991 RVA: 0x0026B1C4 File Offset: 0x002693C4
 	public int? GetSelectedRoleId(int year)
 	{
 		int value;
@@ -157,38 +157,38 @@ public class BirthdayModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600A918 RID: 43288 RVA: 0x00260DD5 File Offset: 0x0025EFD5
+	// Token: 0x06007CF8 RID: 31992 RVA: 0x0026B1F1 File Offset: 0x002693F1
 	public bool GetBirthdayRedDotState()
 	{
 		return FunctionModel.Instance.IsOpen(10084) && !this.IsReset;
 	}
 
-	// Token: 0x0600A919 RID: 43289 RVA: 0x00260DF3 File Offset: 0x0025EFF3
+	// Token: 0x06007CF9 RID: 31993 RVA: 0x0026B20F File Offset: 0x0026940F
 	public bool GetBirthdayIsReset()
 	{
 		return this.IsReset;
 	}
 
-	// Token: 0x0600A91A RID: 43290 RVA: 0x00260DFB File Offset: 0x0025EFFB
+	// Token: 0x06007CFA RID: 31994 RVA: 0x0026B217 File Offset: 0x00269417
 	public void SetIsReceiveBirthdayReward(bool isReceiveBirthdayReward)
 	{
 		this.IsReceiveBirthdayReward = isReceiveBirthdayReward;
 	}
 
-	// Token: 0x0600A91B RID: 43291 RVA: 0x00260E04 File Offset: 0x0025F004
+	// Token: 0x06007CFB RID: 31995 RVA: 0x0026B220 File Offset: 0x00269420
 	public void SetSelectedRole(int roleId, int year)
 	{
 		this.BirthdayRoleMap[year] = roleId;
 	}
 
-	// Token: 0x0600A91C RID: 43292 RVA: 0x00260E13 File Offset: 0x0025F013
+	// Token: 0x06007CFC RID: 31996 RVA: 0x0026B22F File Offset: 0x0026942F
 	public void SyncTsResetState(bool isReset)
 	{
 		this.IsReset = isReset;
 		EventSystem.Instance.Emit(EEventName.OnBirthChange);
 	}
 
-	// Token: 0x0600A91D RID: 43293 RVA: 0x00260E2C File Offset: 0x0025F02C
+	// Token: 0x06007CFD RID: 31997 RVA: 0x0026B248 File Offset: 0x00269448
 	public string GetLetterViewResource(int year)
 	{
 		if (year == 2025)
@@ -201,7 +201,7 @@ public class BirthdayModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600A91E RID: 43294 RVA: 0x00260E74 File Offset: 0x0025F074
+	// Token: 0x06007CFE RID: 31998 RVA: 0x0026B290 File Offset: 0x00269490
 	public string GetRoleSelectViewResource(int year)
 	{
 		if (year == 2025)
@@ -214,7 +214,7 @@ public class BirthdayModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600A91F RID: 43295 RVA: 0x00260EBC File Offset: 0x0025F0BC
+	// Token: 0x06007CFF RID: 31999 RVA: 0x0026B2D8 File Offset: 0x002694D8
 	public string GetSelectConfirmViewResource(int year)
 	{
 		if (year == 2025)
@@ -227,7 +227,7 @@ public class BirthdayModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600A920 RID: 43296 RVA: 0x00260F04 File Offset: 0x0025F104
+	// Token: 0x06007D00 RID: 32000 RVA: 0x0026B320 File Offset: 0x00269520
 	public string GetLetterViewBgm(int year)
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(19, 1);
@@ -236,7 +236,7 @@ public class BirthdayModel : ModelBase
 		return ConfigCommonParamById.GetStringConfig(defaultInterpolatedStringHandler.ToStringAndClear()) ?? "";
 	}
 
-	// Token: 0x0600A921 RID: 43297 RVA: 0x00260F4C File Offset: 0x0025F14C
+	// Token: 0x06007D01 RID: 32001 RVA: 0x0026B368 File Offset: 0x00269568
 	public EConfirmBoxConfigId GetLetterExitConfirmId(int year)
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(29, 1);
@@ -245,14 +245,14 @@ public class BirthdayModel : ModelBase
 		return (EConfirmBoxConfigId)ConfigCommonParamById.GetIntConfig(defaultInterpolatedStringHandler.ToStringAndClear()).GetValueOrDefault(302);
 	}
 
-	// Token: 0x0600A922 RID: 43298 RVA: 0x00260F98 File Offset: 0x0025F198
+	// Token: 0x06007D02 RID: 32002 RVA: 0x0026B3B4 File Offset: 0x002695B4
 	public float GetPlayTimeOffset()
 	{
 		return ConfigCommonParamById.GetFloatConfig("BirthdayTextPlayTimeOffset").GetValueOrDefault();
 	}
 
-	// Token: 0x17000DFF RID: 3583
-	// (get) Token: 0x0600A923 RID: 43299 RVA: 0x00260FB7 File Offset: 0x0025F1B7
+	// Token: 0x17000E20 RID: 3616
+	// (get) Token: 0x06007D03 RID: 32003 RVA: 0x0026B3D3 File Offset: 0x002695D3
 	public static BirthdayModel Instance
 	{
 		get
@@ -261,7 +261,7 @@ public class BirthdayModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A924 RID: 43300 RVA: 0x00260FBE File Offset: 0x0025F1BE
+	// Token: 0x06007D04 RID: 32004 RVA: 0x0026B3DA File Offset: 0x002695DA
 	public static BirthdayModel GetOrCreateInstance()
 	{
 		if (BirthdayModel._Instance == null)
@@ -271,7 +271,7 @@ public class BirthdayModel : ModelBase
 		return BirthdayModel._Instance;
 	}
 
-	// Token: 0x0600A925 RID: 43301 RVA: 0x00260FD2 File Offset: 0x0025F1D2
+	// Token: 0x06007D05 RID: 32005 RVA: 0x0026B3EE File Offset: 0x002695EE
 	public static bool CreateInstance()
 	{
 		if (BirthdayModel._Instance != null)
@@ -282,45 +282,45 @@ public class BirthdayModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600A926 RID: 43302 RVA: 0x00260FE8 File Offset: 0x0025F1E8
+	// Token: 0x06007D06 RID: 32006 RVA: 0x0026B404 File Offset: 0x00269604
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A927 RID: 43303 RVA: 0x00260FEA File Offset: 0x0025F1EA
+	// Token: 0x06007D07 RID: 32007 RVA: 0x0026B406 File Offset: 0x00269606
 	public static void ResetStaticDefaultValue()
 	{
 		BirthdayModel._Instance = null;
 	}
 
-	// Token: 0x0600A928 RID: 43304 RVA: 0x00260FF2 File Offset: 0x0025F1F2
+	// Token: 0x06007D08 RID: 32008 RVA: 0x0026B40E File Offset: 0x0026960E
 	static BirthdayModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BirthdayModel.CreateStaticDefaultValue), new Action(BirthdayModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004D1A RID: 19738
+	// Token: 0x04004DC1 RID: 19905
 	private bool IsReset;
 
-	// Token: 0x04004D1B RID: 19739
+	// Token: 0x04004DC2 RID: 19906
 	public int ResetYear;
 
-	// Token: 0x04004D1C RID: 19740
+	// Token: 0x04004DC3 RID: 19907
 	private readonly Dictionary<int, int> BirthdayRoleMap = new Dictionary<int, int>();
 
-	// Token: 0x04004D1D RID: 19741
+	// Token: 0x04004DC4 RID: 19908
 	public int ThisBirthdayYear;
 
-	// Token: 0x04004D1E RID: 19742
+	// Token: 0x04004DC5 RID: 19909
 	public bool IsReceiveBirthdayReward;
 
-	// Token: 0x04004D1F RID: 19743
+	// Token: 0x04004DC6 RID: 19910
 	private const int DefaultYear = 2025;
 
-	// Token: 0x04004D20 RID: 19744
+	// Token: 0x04004DC7 RID: 19911
 	private const int TwoThousand = 2000;
 
-	// Token: 0x04004D21 RID: 19745
+	// Token: 0x04004DC8 RID: 19912
 	[Nullable(2)]
 	private static BirthdayModel _Instance;
 }

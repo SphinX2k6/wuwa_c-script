@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053F0 RID: 21488
+	// Token: 0x020043D3 RID: 17363
 	public enum EKeySettingRowType
 	{
-		// Token: 0x0401CFD9 RID: 118745
+		// Token: 0x04017A72 RID: 96882
 		None,
-		// Token: 0x0401CFDA RID: 118746
+		// Token: 0x04017A73 RID: 96883
 		KeyType,
-		// Token: 0x0401CFDB RID: 118747
+		// Token: 0x04017A74 RID: 96884
 		KeySetting
 	}
 }

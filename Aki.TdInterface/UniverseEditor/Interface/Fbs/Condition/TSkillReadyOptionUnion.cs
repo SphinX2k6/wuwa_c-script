@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D58 RID: 19800
+	// Token: 0x02005254 RID: 21076
 	public class TSkillReadyOptionUnion
 	{
-		// Token: 0x17008F55 RID: 36693
-		// (get) Token: 0x0601F6A0 RID: 128672 RVA: 0x00460776 File Offset: 0x0045E976
-		// (set) Token: 0x0601F6A1 RID: 128673 RVA: 0x0046077E File Offset: 0x0045E97E
+		// Token: 0x1700968E RID: 38542
+		// (get) Token: 0x060212E9 RID: 135913 RVA: 0x0049474A File Offset: 0x0049294A
+		// (set) Token: 0x060212EA RID: 135914 RVA: 0x00494752 File Offset: 0x00492952
 		public TSkillReadyOption Type { get; set; }
 
-		// Token: 0x17008F56 RID: 36694
-		// (get) Token: 0x0601F6A2 RID: 128674 RVA: 0x00460787 File Offset: 0x0045E987
-		// (set) Token: 0x0601F6A3 RID: 128675 RVA: 0x0046078F File Offset: 0x0045E98F
+		// Token: 0x1700968F RID: 38543
+		// (get) Token: 0x060212EB RID: 135915 RVA: 0x0049475B File Offset: 0x0049295B
+		// (set) Token: 0x060212EC RID: 135916 RVA: 0x00494763 File Offset: 0x00492963
 		public object Value { get; set; }
 
-		// Token: 0x0601F6A4 RID: 128676 RVA: 0x00460798 File Offset: 0x0045E998
+		// Token: 0x060212ED RID: 135917 RVA: 0x0049476C File Offset: 0x0049296C
 		public TSkillReadyOptionUnion()
 		{
 			this.Type = TSkillReadyOption.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F6A5 RID: 128677 RVA: 0x004607AE File Offset: 0x0045E9AE
+		// Token: 0x060212EE RID: 135918 RVA: 0x00494782 File Offset: 0x00492982
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F6A6 RID: 128678 RVA: 0x004607C0 File Offset: 0x0045E9C0
+		// Token: 0x060212EF RID: 135919 RVA: 0x00494794 File Offset: 0x00492994
 		public IESkillReadyT AsIESkillReady()
 		{
 			return this.As<IESkillReadyT>();
 		}
 
-		// Token: 0x0601F6A7 RID: 128679 RVA: 0x004607C8 File Offset: 0x0045E9C8
+		// Token: 0x060212F0 RID: 135920 RVA: 0x0049479C File Offset: 0x0049299C
 		public static TSkillReadyOptionUnion FromIESkillReady(IESkillReadyT _ieskillready)
 		{
 			return new TSkillReadyOptionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6A8 RID: 128680 RVA: 0x004607DD File Offset: 0x0045E9DD
+		// Token: 0x060212F1 RID: 135921 RVA: 0x004947B1 File Offset: 0x004929B1
 		public IUltimateSkillReadyT AsIUltimateSkillReady()
 		{
 			return this.As<IUltimateSkillReadyT>();
 		}
 
-		// Token: 0x0601F6A9 RID: 128681 RVA: 0x004607E5 File Offset: 0x0045E9E5
+		// Token: 0x060212F2 RID: 135922 RVA: 0x004947B9 File Offset: 0x004929B9
 		public static TSkillReadyOptionUnion FromIUltimateSkillReady(IUltimateSkillReadyT _iultimateskillready)
 		{
 			return new TSkillReadyOptionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6AA RID: 128682 RVA: 0x004607FA File Offset: 0x0045E9FA
+		// Token: 0x060212F3 RID: 135923 RVA: 0x004947CE File Offset: 0x004929CE
 		public IVisionSkillReadyT AsIVisionSkillReady()
 		{
 			return this.As<IVisionSkillReadyT>();
 		}
 
-		// Token: 0x0601F6AB RID: 128683 RVA: 0x00460802 File Offset: 0x0045EA02
+		// Token: 0x060212F4 RID: 135924 RVA: 0x004947D6 File Offset: 0x004929D6
 		public static TSkillReadyOptionUnion FromIVisionSkillReady(IVisionSkillReadyT _ivisionskillready)
 		{
 			return new TSkillReadyOptionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6AC RID: 128684 RVA: 0x00460818 File Offset: 0x0045EA18
+		// Token: 0x060212F5 RID: 135925 RVA: 0x004947EC File Offset: 0x004929EC
 		public static int Pack(FlatBufferBuilder builder, TSkillReadyOptionUnion _o)
 		{
 			switch (_o.Type)

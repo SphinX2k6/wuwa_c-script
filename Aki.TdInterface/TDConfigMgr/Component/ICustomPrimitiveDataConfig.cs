@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200029B RID: 667
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002E0 RID: 736
 	public class ICustomPrimitiveDataConfig : IProceduralMaterialType
 	{
-		// Token: 0x06000C71 RID: 3185 RVA: 0x000302E0 File Offset: 0x0002E4E0
+		// Token: 0x06000D95 RID: 3477 RVA: 0x000330D0 File Offset: 0x000312D0
 		private ICustomPrimitiveDataConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000C72 RID: 3186 RVA: 0x00030318 File Offset: 0x0002E518
+		// Token: 0x06000D96 RID: 3478 RVA: 0x00033108 File Offset: 0x00031308
 		public static ICustomPrimitiveDataConfig Create([Nullable(2)] ICustomPrimitiveDataConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C73 RID: 3187 RVA: 0x0003032B File Offset: 0x0002E52B
+		// Token: 0x06000D97 RID: 3479 RVA: 0x0003311B File Offset: 0x0003131B
 		public static ICustomPrimitiveDataConfig CreateFromSetValue([Nullable(2)] ICustomPrimitiveDataConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C74 RID: 3188 RVA: 0x0003033E File Offset: 0x0002E53E
+		// Token: 0x06000D98 RID: 3480 RVA: 0x0003312E File Offset: 0x0003132E
 		public new ICustomPrimitiveDataConfig_SetValue ToSetValue()
 		{
 			return new ICustomPrimitiveDataConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003AD RID: 941
-		// (get) Token: 0x06000C75 RID: 3189 RVA: 0x00030369 File Offset: 0x0002E569
-		// (set) Token: 0x06000C76 RID: 3190 RVA: 0x00030394 File Offset: 0x0002E594
+		// Token: 0x170003F7 RID: 1015
+		// (get) Token: 0x06000D99 RID: 3481 RVA: 0x00033159 File Offset: 0x00031359
+		// (set) Token: 0x06000D9A RID: 3482 RVA: 0x00033184 File Offset: 0x00031384
 		public override EProceduralMaterialType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003AE RID: 942
-		// (get) Token: 0x06000C77 RID: 3191 RVA: 0x000303A4 File Offset: 0x0002E5A4
-		// (set) Token: 0x06000C78 RID: 3192 RVA: 0x00030437 File Offset: 0x0002E637
+		// Token: 0x170003F8 RID: 1016
+		// (get) Token: 0x06000D9B RID: 3483 RVA: 0x00033194 File Offset: 0x00031394
+		// (set) Token: 0x06000D9C RID: 3484 RVA: 0x00033227 File Offset: 0x00031427
 		public virtual List<ICustomPrimitiveMapping> PrimitiveConfigs
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003AF RID: 943
-		// (get) Token: 0x06000C79 RID: 3193 RVA: 0x0003044C File Offset: 0x0002E64C
-		// (set) Token: 0x06000C7A RID: 3194 RVA: 0x00030486 File Offset: 0x0002E686
+		// Token: 0x170003F9 RID: 1017
+		// (get) Token: 0x06000D9D RID: 3485 RVA: 0x0003323C File Offset: 0x0003143C
+		// (set) Token: 0x06000D9E RID: 3486 RVA: 0x00033276 File Offset: 0x00031476
 		public virtual bool? IsChildEffective
 		{
 			get
@@ -147,18 +145,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BAC RID: 2988
+		// Token: 0x04000C91 RID: 3217
 		[Nullable(2)]
 		protected new ICustomPrimitiveDataConfig FbInstance;
 
-		// Token: 0x04000BAD RID: 2989
+		// Token: 0x04000C92 RID: 3218
 		[Nullable(2)]
 		protected new ICustomPrimitiveDataConfig_SetValue PocoInterface;
 
-		// Token: 0x04000BAE RID: 2990
+		// Token: 0x04000C93 RID: 3219
 		private List<ICustomPrimitiveMapping> _PrimitiveConfigsCache;
 
-		// Token: 0x04000BAF RID: 2991
+		// Token: 0x04000C94 RID: 3220
 		private bool _PrimitiveConfigsInited;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027C3 RID: 10179
+	// Token: 0x02002A96 RID: 10902
 	public class IChangeTimerUiConfig
 	{
-		// Token: 0x0600E268 RID: 57960 RVA: 0x002170A5 File Offset: 0x002152A5
-		[NullableContext(1)]
+		// Token: 0x0600F08A RID: 61578 RVA: 0x00233E79 File Offset: 0x00232079
 		public static IChangeTimerUiConfig Create(IChangeTimerUiConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044A4 RID: 17572
-		// (get) Token: 0x0600E269 RID: 57961 RVA: 0x002170C4 File Offset: 0x002152C4
+		// Token: 0x1700480C RID: 18444
+		// (get) Token: 0x0600F08B RID: 61579 RVA: 0x00233E98 File Offset: 0x00232098
 		public virtual EChangeTimerUiType UiType
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D8F RID: 32143
+		// Token: 0x04008446 RID: 33862
 		private IChangeTimerUiConfig Instance;
 	}
 }

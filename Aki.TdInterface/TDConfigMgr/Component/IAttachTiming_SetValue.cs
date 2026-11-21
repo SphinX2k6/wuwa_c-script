@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001D2 RID: 466
+	// Token: 0x020001F5 RID: 501
 	public class IAttachTiming_SetValue
 	{
-		// Token: 0x040008A6 RID: 2214
+		// Token: 0x0400091A RID: 2330
 		public EAttachTimingType Type;
 	}
 }

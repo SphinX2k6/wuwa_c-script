@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001643 RID: 5699
+	// Token: 0x020017B0 RID: 6064
 	public class EnableLevelPlay_SetValue
 	{
-		// Token: 0x04004C6E RID: 19566
-		[Nullable(1)]
+		// Token: 0x04005062 RID: 20578
 		public List<IEnableLevelPlayConfig> Configs;
 
-		// Token: 0x04004C6F RID: 19567
+		// Token: 0x04005063 RID: 20579
 		public EPlayerType? TargetPlayer;
 	}
 }

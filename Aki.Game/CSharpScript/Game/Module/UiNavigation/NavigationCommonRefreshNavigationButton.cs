@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200490A RID: 18698
+	// Token: 0x02003881 RID: 14465
 	public class NavigationCommonRefreshNavigationButton : NavigationButton
 	{
-		// Token: 0x06030E20 RID: 200224 RVA: 0x00B5A0ED File Offset: 0x00B582ED
+		// Token: 0x0602594D RID: 153933 RVA: 0x00A94F5D File Offset: 0x00A9315D
 		[NullableContext(1)]
 		public NavigationCommonRefreshNavigationButton(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030E21 RID: 200225 RVA: 0x00B5A0F8 File Offset: 0x00B582F8
+		// Token: 0x0602594E RID: 153934 RVA: 0x00A94F68 File Offset: 0x00A93168
 		protected override void OnButtonClick()
 		{
 			UiNavigationNewController.Instance.MarkViewHandleRefreshNavigationDirtyByListener(this.Listener);

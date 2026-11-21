@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020024EF RID: 9455
+// Token: 0x020019D6 RID: 6614
 public class FetterGroupContentData
 {
-	// Token: 0x04008F1E RID: 36638
+	// Token: 0x04009068 RID: 36968
 	public int Index;
 
-	// Token: 0x04008F1F RID: 36639
+	// Token: 0x04009069 RID: 36969
 	public int CurrentSelectIndex;
 
-	// Token: 0x04008F20 RID: 36640
+	// Token: 0x0400906A RID: 36970
 	[Nullable(2)]
 	public VisionFetterRecommendInfo VisionFetterRecommendInfo;
 
-	// Token: 0x04008F21 RID: 36641
+	// Token: 0x0400906B RID: 36971
 	[Nullable(new byte[]
 	{
 		2,

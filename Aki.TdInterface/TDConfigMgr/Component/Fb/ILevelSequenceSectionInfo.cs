@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D7A RID: 3450
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E76 RID: 3702
 	public class ILevelSequenceSectionInfo
 	{
-		// Token: 0x06004E7E RID: 20094 RVA: 0x000C2B56 File Offset: 0x000C0D56
+		// Token: 0x060053A3 RID: 21411 RVA: 0x000CE3A6 File Offset: 0x000CC5A6
 		public static ILevelSequenceSectionInfo Create(ILevelSequenceSectionInfo? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001947 RID: 6471
-		// (get) Token: 0x06004E7F RID: 20095 RVA: 0x000C2B75 File Offset: 0x000C0D75
+		// Token: 0x17001AB2 RID: 6834
+		// (get) Token: 0x060053A4 RID: 21412 RVA: 0x000CE3C5 File Offset: 0x000CC5C5
 		public virtual ELevelSequenceSectionType Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001948 RID: 6472
-		// (get) Token: 0x06004E80 RID: 20096 RVA: 0x000C2B82 File Offset: 0x000C0D82
+		// Token: 0x17001AB3 RID: 6835
+		// (get) Token: 0x060053A5 RID: 21413 RVA: 0x000CE3D2 File Offset: 0x000CC5D2
 		public virtual string Key
 		{
 			get
@@ -44,8 +42,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001949 RID: 6473
-		// (get) Token: 0x06004E81 RID: 20097 RVA: 0x000C2B8F File Offset: 0x000C0D8F
+		// Token: 0x17001AB4 RID: 6836
+		// (get) Token: 0x060053A6 RID: 21414 RVA: 0x000CE3DF File Offset: 0x000CC5DF
 		public virtual int FrameId
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700194A RID: 6474
-		// (get) Token: 0x06004E82 RID: 20098 RVA: 0x000C2B9C File Offset: 0x000C0D9C
+		// Token: 0x17001AB5 RID: 6837
+		// (get) Token: 0x060053A7 RID: 21415 RVA: 0x000CE3EC File Offset: 0x000CC5EC
 		[Nullable(2)]
 		public virtual string State
 		{
@@ -66,19 +64,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700194B RID: 6475
-		// (get) Token: 0x06004E83 RID: 20099 RVA: 0x000C2BAC File Offset: 0x000C0DAC
+		// Token: 0x17001AB6 RID: 6838
+		// (get) Token: 0x060053A8 RID: 21416 RVA: 0x000CE3FC File Offset: 0x000CC5FC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> LoopStates
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -101,19 +99,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700194C RID: 6476
-		// (get) Token: 0x06004E84 RID: 20100 RVA: 0x000C2C24 File Offset: 0x000C0E24
+		// Token: 0x17001AB7 RID: 6839
+		// (get) Token: 0x060053A9 RID: 21417 RVA: 0x000CE474 File Offset: 0x000CC674
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> ActionList
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -136,29 +134,29 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D0D RID: 11533
+		// Token: 0x04002FD3 RID: 12243
 		private ILevelSequenceSectionInfo Instance;
 
-		// Token: 0x04002D0E RID: 11534
+		// Token: 0x04002FD4 RID: 12244
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _LoopStatesCache;
 
-		// Token: 0x04002D0F RID: 11535
+		// Token: 0x04002FD5 RID: 12245
 		private bool _LoopStatesInited;
 
-		// Token: 0x04002D10 RID: 11536
+		// Token: 0x04002FD6 RID: 12246
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ActionListCache;
 
-		// Token: 0x04002D11 RID: 11537
+		// Token: 0x04002FD7 RID: 12247
 		private bool _ActionListInited;
 	}
 }

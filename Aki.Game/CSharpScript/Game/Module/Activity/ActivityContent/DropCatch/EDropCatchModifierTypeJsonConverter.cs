@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066D3 RID: 26323
+	// Token: 0x02005623 RID: 22051
 	public class EDropCatchModifierTypeJsonConverter : JsonConverter<EDropCatchModifierType>
 	{
-		// Token: 0x06041D0A RID: 269578 RVA: 0x00FF67B4 File Offset: 0x00FF49B4
+		// Token: 0x06036856 RID: 223318 RVA: 0x00F37BB8 File Offset: 0x00F35DB8
 		public override EDropCatchModifierType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return EDropCatchModifierTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06041D0B RID: 269579 RVA: 0x00FF67D8 File Offset: 0x00FF49D8
+		// Token: 0x06036857 RID: 223319 RVA: 0x00F37BDC File Offset: 0x00F35DDC
 		public override void Write(Utf8JsonWriter writer, EDropCatchModifierType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

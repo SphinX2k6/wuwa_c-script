@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020025D7 RID: 9687
+// Token: 0x02001AC2 RID: 6850
 public class PhotographValueWithoutTitleSetup : PhotographSetupBase
 {
-	// Token: 0x06013A92 RID: 80530 RVA: 0x004EACE0 File Offset: 0x004E8EE0
+	// Token: 0x06010F72 RID: 69490 RVA: 0x004F98E0 File Offset: 0x004F7AE0
 	protected unsafe override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class PhotographValueWithoutTitleSetup : PhotographSetupBase
 		this.BtnBindInfo = list;
 	}
 
-	// Token: 0x06013A93 RID: 80531 RVA: 0x004EADA4 File Offset: 0x004E8FA4
+	// Token: 0x06010F73 RID: 69491 RVA: 0x004F99A4 File Offset: 0x004F7BA4
 	protected override void OnStart()
 	{
 		base.GetSlider(0).OnValueChangeCb.Bind(new Action<float>(this.OnValueChanged));
@@ -36,7 +36,7 @@ public class PhotographValueWithoutTitleSetup : PhotographSetupBase
 		EventSystem.Instance.Add(EEventName.OnResetPhotographCamera, new Action(this.OnResetPhotographCamera));
 	}
 
-	// Token: 0x06013A94 RID: 80532 RVA: 0x004EADFB File Offset: 0x004E8FFB
+	// Token: 0x06010F74 RID: 69492 RVA: 0x004F99FB File Offset: 0x004F7BFB
 	protected override void OnBeforeDestroy()
 	{
 		base.GetSlider(0).OnValueChangeCb.Unbind();
@@ -44,7 +44,7 @@ public class PhotographValueWithoutTitleSetup : PhotographSetupBase
 		EventSystem.Instance.Remove(EEventName.OnResetPhotographCamera, new Action(this.OnResetPhotographCamera));
 	}
 
-	// Token: 0x06013A95 RID: 80533 RVA: 0x004EAE34 File Offset: 0x004E9034
+	// Token: 0x06010F75 RID: 69493 RVA: 0x004F9A34 File Offset: 0x004F7C34
 	protected override void OnBeforeShow()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -55,7 +55,7 @@ public class PhotographValueWithoutTitleSetup : PhotographSetupBase
 		levelSequencePlayer.PlayLevelSequenceByName("Start01", false, null, false);
 	}
 
-	// Token: 0x06013A96 RID: 80534 RVA: 0x004EAE64 File Offset: 0x004E9064
+	// Token: 0x06010F76 RID: 69494 RVA: 0x004F9A64 File Offset: 0x004F7C64
 	private unsafe void OnValueChanged(float value)
 	{
 		float num = value;
@@ -68,13 +68,13 @@ public class PhotographValueWithoutTitleSetup : PhotographSetupBase
 		this.SetNumText(num);
 	}
 
-	// Token: 0x06013A97 RID: 80535 RVA: 0x004EAF10 File Offset: 0x004E9110
+	// Token: 0x06010F77 RID: 69495 RVA: 0x004F9B10 File Offset: 0x004F7D10
 	private void SetNumText(float value)
 	{
 		base.GetText(2).SetText(MathUtils.Instance.GetFloatPointFloorString((double)value, this.SetupConfig.Value.Digits) + this.SetupConfig.Value.Unit, true);
 	}
 
-	// Token: 0x06013A98 RID: 80536 RVA: 0x004EAF64 File Offset: 0x004E9164
+	// Token: 0x06010F78 RID: 69496 RVA: 0x004F9B64 File Offset: 0x004F7D64
 	public unsafe override void Refresh()
 	{
 		if (this.SetupConfig == null || this.SetupConfig.Value.Type != 3)
@@ -95,7 +95,7 @@ public class PhotographValueWithoutTitleSetup : PhotographSetupBase
 		this.SetNumText(num);
 	}
 
-	// Token: 0x06013A99 RID: 80537 RVA: 0x004EB07C File Offset: 0x004E927C
+	// Token: 0x06010F79 RID: 69497 RVA: 0x004F9C7C File Offset: 0x004F7E7C
 	private unsafe void OnClickReset()
 	{
 		Span<float> valueRangeBytes = this.SetupConfig.Value.GetValueRangeBytes();
@@ -108,7 +108,7 @@ public class PhotographValueWithoutTitleSetup : PhotographSetupBase
 		base.GetSlider(0).SetValue(inValue, true);
 	}
 
-	// Token: 0x06013A9A RID: 80538 RVA: 0x004EB0FC File Offset: 0x004E92FC
+	// Token: 0x06010F7A RID: 69498 RVA: 0x004F9CFC File Offset: 0x004F7EFC
 	private void OnResetPhotographCamera()
 	{
 		if (this.SetupConfig == null)
@@ -118,22 +118,22 @@ public class PhotographValueWithoutTitleSetup : PhotographSetupBase
 		this.Refresh();
 	}
 
-	// Token: 0x0400942D RID: 37933
+	// Token: 0x04009583 RID: 38275
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02008BF1 RID: 35825
+	// Token: 0x02007D79 RID: 32121
 	private enum EChildType
 	{
-		// Token: 0x0402D6E2 RID: 186082
+		// Token: 0x040289F7 RID: 166391
 		ValueSlider,
-		// Token: 0x0402D6E3 RID: 186083
+		// Token: 0x040289F8 RID: 166392
 		SpriteHandle,
-		// Token: 0x0402D6E4 RID: 186084
+		// Token: 0x040289F9 RID: 166393
 		TextNum,
-		// Token: 0x0402D6E5 RID: 186085
+		// Token: 0x040289FA RID: 166394
 		ItemRedDot,
-		// Token: 0x0402D6E6 RID: 186086
+		// Token: 0x040289FB RID: 166395
 		BtnReset
 	}
 }

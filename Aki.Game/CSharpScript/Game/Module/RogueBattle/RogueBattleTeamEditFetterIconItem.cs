@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EAD RID: 20141
+	// Token: 0x02003E76 RID: 15990
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleTeamEditFetterIconItem : GridProxyAbstract<IRogueBattleRoleBondUpdateInfo>
 	{
-		// Token: 0x06033BCA RID: 211914 RVA: 0x00C1EDA0 File Offset: 0x00C1CFA0
+		// Token: 0x06028A35 RID: 166453 RVA: 0x00B682B8 File Offset: 0x00B664B8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033BCB RID: 211915 RVA: 0x00C1EE10 File Offset: 0x00C1D010
+		// Token: 0x06028A36 RID: 166454 RVA: 0x00B68328 File Offset: 0x00B66528
 		public override void Refresh(IRogueBattleRoleBondUpdateInfo data, bool isSelected, int gridIndex)
 		{
 			RoleBondInfo newRoleBondInfo = data.NewRoleBondInfo;
@@ -51,14 +51,14 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.SetLinkEffectOn(false);
 		}
 
-		// Token: 0x06033BCC RID: 211916 RVA: 0x00C1EED3 File Offset: 0x00C1D0D3
+		// Token: 0x06028A37 RID: 166455 RVA: 0x00B683EB File Offset: 0x00B665EB
 		public void SetLinkEffectOn(bool bOn)
 		{
 			base.GetItem(2).SetUIActive(bOn);
 			base.GetItem(3).SetUIActive(bOn);
 		}
 
-		// Token: 0x06033BCD RID: 211917 RVA: 0x00C1EEEF File Offset: 0x00C1D0EF
+		// Token: 0x06028A38 RID: 166456 RVA: 0x00B68407 File Offset: 0x00B66607
 		public override object GetKey(IRogueBattleRoleBondUpdateInfo data, int displayIndex)
 		{
 			return data.NewRoleBondInfo.ConfigId;

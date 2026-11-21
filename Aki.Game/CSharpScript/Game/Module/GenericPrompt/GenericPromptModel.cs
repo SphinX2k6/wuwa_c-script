@@ -5,20 +5,20 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.GenericPrompt
 {
-	// Token: 0x02005997 RID: 22935
+	// Token: 0x02004970 RID: 18800
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class GenericPromptModel : ModelBase
 	{
-		// Token: 0x0603A336 RID: 238390 RVA: 0x00DD4E8F File Offset: 0x00DD308F
+		// Token: 0x0602F25C RID: 193116 RVA: 0x00D2431F File Offset: 0x00D2251F
 		protected override bool OnInit()
 		{
 			EventSystem.Instance.Add(EEventName.OnFinishLoadingState, new Action(this.OnLoadingDone));
 			return true;
 		}
 
-		// Token: 0x0603A337 RID: 238391 RVA: 0x00DD4EAE File Offset: 0x00DD30AE
+		// Token: 0x0602F25D RID: 193117 RVA: 0x00D2433E File Offset: 0x00D2253E
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.OnFinishLoadingState, new Action(this.OnLoadingDone));
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			return true;
 		}
 
-		// Token: 0x0603A338 RID: 238392 RVA: 0x00DD4ED8 File Offset: 0x00DD30D8
+		// Token: 0x0602F25E RID: 193118 RVA: 0x00D24368 File Offset: 0x00D22568
 		private void OnLoadingDone()
 		{
 			int i = 0;
@@ -42,13 +42,13 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			}
 		}
 
-		// Token: 0x0603A339 RID: 238393 RVA: 0x00DD4F37 File Offset: 0x00DD3137
+		// Token: 0x0602F25F RID: 193119 RVA: 0x00D243C7 File Offset: 0x00D225C7
 		private bool NeedAddToWaitQueue()
 		{
 			return LoadingModel.Instance.IsLoading || LoginModel.Instance.HasLoginPromise();
 		}
 
-		// Token: 0x0603A33A RID: 238394 RVA: 0x00DD4F51 File Offset: 0x00DD3151
+		// Token: 0x0602F260 RID: 193120 RVA: 0x00D243E1 File Offset: 0x00D225E1
 		public void ApplyPromptParamHub(IPromptParamHub promptParamHub)
 		{
 			if (this.NeedAddToWaitQueue())
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			EventSystem.Instance.Emit<IPromptParamHub>(EEventName.InsertFloatTips, promptParamHub);
 		}
 
-		// Token: 0x0603A33B RID: 238395 RVA: 0x00DD4F7C File Offset: 0x00DD317C
+		// Token: 0x0602F261 RID: 193121 RVA: 0x00D2440C File Offset: 0x00D2260C
 		public void RemovePromptParamHubByKey(string promptKey)
 		{
 			int size = this.WaitQueue.Size;
@@ -87,8 +87,8 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			EventSystem.Instance.Emit<string>(EEventName.RemoveFloatTips, promptKey);
 		}
 
-		// Token: 0x17008B8A RID: 35722
-		// (get) Token: 0x0603A33C RID: 238396 RVA: 0x00DD5068 File Offset: 0x00DD3268
+		// Token: 0x17005F57 RID: 24407
+		// (get) Token: 0x0602F262 RID: 193122 RVA: 0x00D244F8 File Offset: 0x00D226F8
 		public static GenericPromptModel Instance
 		{
 			get
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			}
 		}
 
-		// Token: 0x0603A33D RID: 238397 RVA: 0x00DD506F File Offset: 0x00DD326F
+		// Token: 0x0602F263 RID: 193123 RVA: 0x00D244FF File Offset: 0x00D226FF
 		public static GenericPromptModel GetOrCreateInstance()
 		{
 			if (GenericPromptModel._Instance == null)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			return GenericPromptModel._Instance;
 		}
 
-		// Token: 0x0603A33E RID: 238398 RVA: 0x00DD5083 File Offset: 0x00DD3283
+		// Token: 0x0602F264 RID: 193124 RVA: 0x00D24513 File Offset: 0x00D22713
 		public static bool CreateInstance()
 		{
 			if (GenericPromptModel._Instance != null)
@@ -118,27 +118,27 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			return true;
 		}
 
-		// Token: 0x0603A33F RID: 238399 RVA: 0x00DD5099 File Offset: 0x00DD3299
+		// Token: 0x0602F265 RID: 193125 RVA: 0x00D24529 File Offset: 0x00D22729
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603A340 RID: 238400 RVA: 0x00DD509B File Offset: 0x00DD329B
+		// Token: 0x0602F266 RID: 193126 RVA: 0x00D2452B File Offset: 0x00D2272B
 		public static void ResetStaticDefaultValue()
 		{
 			GenericPromptModel._Instance = null;
 		}
 
-		// Token: 0x0603A341 RID: 238401 RVA: 0x00DD50A3 File Offset: 0x00DD32A3
+		// Token: 0x0602F267 RID: 193127 RVA: 0x00D24533 File Offset: 0x00D22733
 		static GenericPromptModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GenericPromptModel.CreateStaticDefaultValue), new Action(GenericPromptModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E5D9 RID: 124377
+		// Token: 0x04019077 RID: 102519
 		private readonly Queue<IPromptParamHub> WaitQueue = new Queue<IPromptParamHub>(4);
 
-		// Token: 0x0401E5DA RID: 124378
+		// Token: 0x04019078 RID: 102520
 		[Nullable(2)]
 		private static GenericPromptModel _Instance;
 	}

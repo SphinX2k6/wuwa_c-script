@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game;
 
-// Token: 0x0200320B RID: 12811
+// Token: 0x0200277A RID: 10106
 [NullableContext(1)]
 [Nullable(0)]
 public class InterestItemEntity : InterestItemBase
 {
-	// Token: 0x17002639 RID: 9785
-	// (get) Token: 0x0601BA35 RID: 113205 RVA: 0x00797C9D File Offset: 0x00795E9D
+	// Token: 0x1700287A RID: 10362
+	// (get) Token: 0x060195BA RID: 103866 RVA: 0x007C03FD File Offset: 0x007BE5FD
 	public override EInterestItemType Type
 	{
 		get
@@ -17,7 +17,7 @@ public class InterestItemEntity : InterestItemBase
 		}
 	}
 
-	// Token: 0x0601BA36 RID: 113206 RVA: 0x00797CA0 File Offset: 0x00795EA0
+	// Token: 0x060195BB RID: 103867 RVA: 0x007C0400 File Offset: 0x007BE600
 	public override bool GetLocation(Vector outVector)
 	{
 		Entity entity = this.GetEntity();
@@ -30,13 +30,13 @@ public class InterestItemEntity : InterestItemBase
 		return true;
 	}
 
-	// Token: 0x0601BA37 RID: 113207 RVA: 0x00797CD2 File Offset: 0x00795ED2
+	// Token: 0x060195BC RID: 103868 RVA: 0x007C0432 File Offset: 0x007BE632
 	public override string GetDebugInfo()
 	{
 		return this.PbDataId.ToString();
 	}
 
-	// Token: 0x0601BA38 RID: 113208 RVA: 0x00797CDF File Offset: 0x00795EDF
+	// Token: 0x060195BD RID: 103869 RVA: 0x007C043F File Offset: 0x007BE63F
 	[NullableContext(2)]
 	public Entity GetEntity()
 	{
@@ -60,6 +60,6 @@ public class InterestItemEntity : InterestItemBase
 		}
 	}
 
-	// Token: 0x0400D957 RID: 55639
+	// Token: 0x0400DDF6 RID: 56822
 	public int PbDataId;
 }

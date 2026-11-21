@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200604D RID: 24653
+	// Token: 0x02004FCB RID: 20427
 	public class SpringManorPhantomExhibitViewParams
 	{
-		// Token: 0x17009072 RID: 36978
-		// (get) Token: 0x0603E62B RID: 255531 RVA: 0x00F11315 File Offset: 0x00F0F515
-		// (set) Token: 0x0603E62C RID: 255532 RVA: 0x00F1131D File Offset: 0x00F0F51D
+		// Token: 0x170063D4 RID: 25556
+		// (get) Token: 0x060332EF RID: 209647 RVA: 0x00E580D9 File Offset: 0x00E562D9
+		// (set) Token: 0x060332F0 RID: 209648 RVA: 0x00E580E1 File Offset: 0x00E562E1
 		public int TargetPhantomExhibitEntity { get; set; }
 	}
 }

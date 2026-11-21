@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 
-// Token: 0x02003036 RID: 12342
+// Token: 0x0200258C RID: 9612
 public class RotationSetting : IClear
 {
-	// Token: 0x0601A25E RID: 107102 RVA: 0x006DEBD0 File Offset: 0x006DCDD0
+	// Token: 0x06017BBC RID: 97212 RVA: 0x007068C4 File Offset: 0x00704AC4
 	public bool ClearObject()
 	{
 		this.MinSpeed = 360f;
@@ -16,7 +16,7 @@ public class RotationSetting : IClear
 		return true;
 	}
 
-	// Token: 0x0601A25F RID: 107103 RVA: 0x006DEC0C File Offset: 0x006DCE0C
+	// Token: 0x06017BBD RID: 97213 RVA: 0x00706900 File Offset: 0x00704B00
 	[NullableContext(1)]
 	public void UpdateSettings(SMovementRotationSetting setting)
 	{
@@ -27,38 +27,38 @@ public class RotationSetting : IClear
 		this.Curve = CurveUtils.CreateCurveByStruct(setting.渐变曲线);
 	}
 
-	// Token: 0x0601A260 RID: 107104 RVA: 0x006DEC5A File Offset: 0x006DCE5A
+	// Token: 0x06017BBE RID: 97214 RVA: 0x0070694E File Offset: 0x00704B4E
 	public float GetMaxSpeed()
 	{
 		return this.MaxSpeed;
 	}
 
-	// Token: 0x0601A261 RID: 107105 RVA: 0x006DEC62 File Offset: 0x006DCE62
+	// Token: 0x06017BBF RID: 97215 RVA: 0x00706956 File Offset: 0x00704B56
 	public float GetMaxOffset()
 	{
 		return this.MaxOffset;
 	}
 
-	// Token: 0x0601A262 RID: 107106 RVA: 0x006DEC6C File Offset: 0x006DCE6C
+	// Token: 0x06017BC0 RID: 97216 RVA: 0x00706960 File Offset: 0x00704B60
 	public float GetSpeed(float offset)
 	{
 		float key = (offset - this.MinOffset) / (this.MaxOffset - this.MinOffset);
 		return this.MinSpeed + this.Curve.GetCurrentValue(key) * (this.MaxSpeed - this.MinSpeed);
 	}
 
-	// Token: 0x0400C6A6 RID: 50854
+	// Token: 0x0400CA75 RID: 51829
 	protected float MinSpeed = 360f;
 
-	// Token: 0x0400C6A7 RID: 50855
+	// Token: 0x0400CA76 RID: 51830
 	protected float MaxSpeed = 600f;
 
-	// Token: 0x0400C6A8 RID: 50856
+	// Token: 0x0400CA77 RID: 51831
 	protected float MinOffset;
 
-	// Token: 0x0400C6A9 RID: 50857
+	// Token: 0x0400CA78 RID: 51832
 	protected float MaxOffset = 180f;
 
-	// Token: 0x0400C6AA RID: 50858
+	// Token: 0x0400CA79 RID: 51833
 	[Nullable(1)]
 	protected CurveBase Curve = CurveUtils.DefaultLinear;
 }

@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x020018A0 RID: 6304
+// Token: 0x02000D59 RID: 3417
 [NullableContext(1)]
 [Nullable(0)]
 public class WeaponSort : CommonSort<EWeaponSortWayType>
 {
-	// Token: 0x0600B87B RID: 47227 RVA: 0x0029DD64 File Offset: 0x0029BF64
+	// Token: 0x06008C64 RID: 35940 RVA: 0x002A8480 File Offset: 0x002A6680
 	private int SortLevel(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -33,7 +33,7 @@ public class WeaponSort : CommonSort<EWeaponSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B87C RID: 47228 RVA: 0x0029DE04 File Offset: 0x0029C004
+	// Token: 0x06008C65 RID: 35941 RVA: 0x002A8520 File Offset: 0x002A6720
 	private int SortBreachLevel(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -53,7 +53,7 @@ public class WeaponSort : CommonSort<EWeaponSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B87D RID: 47229 RVA: 0x0029DE74 File Offset: 0x0029C074
+	// Token: 0x06008C66 RID: 35942 RVA: 0x002A8590 File Offset: 0x002A6790
 	private int SortResonanceLevel(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -73,7 +73,7 @@ public class WeaponSort : CommonSort<EWeaponSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B87E RID: 47230 RVA: 0x0029DEE4 File Offset: 0x0029C0E4
+	// Token: 0x06008C67 RID: 35943 RVA: 0x002A8600 File Offset: 0x002A6800
 	private int SortQuality(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -89,7 +89,7 @@ public class WeaponSort : CommonSort<EWeaponSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B87F RID: 47231 RVA: 0x0029DF24 File Offset: 0x0029C124
+	// Token: 0x06008C68 RID: 35944 RVA: 0x002A8640 File Offset: 0x002A6840
 	private int SortLock(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -107,7 +107,7 @@ public class WeaponSort : CommonSort<EWeaponSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B880 RID: 47232 RVA: 0x0029DF68 File Offset: 0x0029C168
+	// Token: 0x06008C69 RID: 35945 RVA: 0x002A8684 File Offset: 0x002A6884
 	private int SortExp(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -125,7 +125,7 @@ public class WeaponSort : CommonSort<EWeaponSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B881 RID: 47233 RVA: 0x0029DFAC File Offset: 0x0029C1AC
+	// Token: 0x06008C6A RID: 35946 RVA: 0x002A86C8 File Offset: 0x002A68C8
 	private int SortUniqueId(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -136,7 +136,7 @@ public class WeaponSort : CommonSort<EWeaponSortWayType>
 		return ((b as ItemDataBase).GetUniqueId() - itemDataBase.GetUniqueId()) * (isAscending ? -1 : 1);
 	}
 
-	// Token: 0x0600B882 RID: 47234 RVA: 0x0029DFDC File Offset: 0x0029C1DC
+	// Token: 0x06008C6B RID: 35947 RVA: 0x002A86F8 File Offset: 0x002A68F8
 	private int SortConfigId(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -147,7 +147,7 @@ public class WeaponSort : CommonSort<EWeaponSortWayType>
 		return ((b as ItemDataBase).GetConfigId() - itemDataBase.GetConfigId()) * (isAscending ? -1 : 1);
 	}
 
-	// Token: 0x0600B883 RID: 47235 RVA: 0x0029E00C File Offset: 0x0029C20C
+	// Token: 0x06008C6C RID: 35948 RVA: 0x002A8728 File Offset: 0x002A6928
 	private int SortExpFirst(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -166,7 +166,7 @@ public class WeaponSort : CommonSort<EWeaponSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B884 RID: 47236 RVA: 0x0029E05C File Offset: 0x0029C25C
+	// Token: 0x06008C6D RID: 35949 RVA: 0x002A8778 File Offset: 0x002A6978
 	private int SortWeaponExpItemType(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -190,7 +190,7 @@ public class WeaponSort : CommonSort<EWeaponSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B885 RID: 47237 RVA: 0x0029E0D8 File Offset: 0x0029C2D8
+	// Token: 0x06008C6E RID: 35950 RVA: 0x002A87F4 File Offset: 0x002A69F4
 	private int SortWeaponFirst(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -209,7 +209,7 @@ public class WeaponSort : CommonSort<EWeaponSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B886 RID: 47238 RVA: 0x0029E128 File Offset: 0x0029C328
+	// Token: 0x06008C6F RID: 35951 RVA: 0x002A8844 File Offset: 0x002A6A44
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(EWeaponSortWayType.Level, new TSortResult(this.SortLevel));
@@ -225,7 +225,7 @@ public class WeaponSort : CommonSort<EWeaponSortWayType>
 		this.SortMap.Add(EWeaponSortWayType.WeaponFirst, new TSortResult(this.SortWeaponFirst));
 	}
 
-	// Token: 0x0600B887 RID: 47239 RVA: 0x0029E240 File Offset: 0x0029C440
+	// Token: 0x06008C70 RID: 35952 RVA: 0x002A895C File Offset: 0x002A6B5C
 	private EWeaponExpItemType? GetWeaponExpItemType(ItemDataBase itemData)
 	{
 		if (itemData == null)

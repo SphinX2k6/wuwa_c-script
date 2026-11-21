@@ -7,19 +7,94 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053E3 RID: 21475
+	// Token: 0x020043C6 RID: 17350
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MenuData
 	{
-		// Token: 0x06036EA3 RID: 224931 RVA: 0x00D04048 File Offset: 0x00D02248
+		// Token: 0x0602BDEA RID: 179690 RVA: 0x00C531BC File Offset: 0x00C513BC
 		public MenuData(MenuConfig metaConfig)
 		{
 			this.MetaConfig = metaConfig;
 		}
 
-		// Token: 0x170083CE RID: 33742
-		// (get) Token: 0x06036EA4 RID: 224932 RVA: 0x00D04062 File Offset: 0x00D02262
+		// Token: 0x0602BDEB RID: 179691 RVA: 0x00C531D8 File Offset: 0x00C513D8
+		[return: TupleElementNames(new string[]
+		{
+			"DeviceId",
+			"Names",
+			"Values"
+		})]
+		[return: Nullable(new byte[]
+		{
+			0,
+			1,
+			1,
+			1
+		})]
+		private ValueTuple<int, string[], int[]>? GetTestImageQualityOptions()
+		{
+			if (this.FunctionId != EFunction.IMAGEQUALITY || !GameSettingsManager.Instance.IsImageQualityUnlockedForTesting())
+			{
+				return null;
+			}
+			EGameDeviceType? imageQualityTestDeviceId = GameSettingsDeviceRender.Instance.GetImageQualityTestDeviceId();
+			if (imageQualityTestDeviceId == null)
+			{
+				return null;
+			}
+			int? num = (this.TestImageQualityOptions != null) ? new int?(this.TestImageQualityOptions.GetValueOrDefault().Item1) : null;
+			int value = (int)imageQualityTestDeviceId.Value;
+			if (!(num.GetValueOrDefault() == value & num != null))
+			{
+				IReadOnlyList<DeviceRenderFeature> deviceRenderFeatureConfigListByDeviceId = GameSettingsConfig.Instance.GetDeviceRenderFeatureConfigListByDeviceId((int)imageQualityTestDeviceId.Value);
+				if (deviceRenderFeatureConfigListByDeviceId == null || deviceRenderFeatureConfigListByDeviceId.Count == 0)
+				{
+					return null;
+				}
+				HashSet<int> hashSet = new HashSet<int>();
+				foreach (DeviceRenderFeature deviceRenderFeature in deviceRenderFeatureConfigListByDeviceId)
+				{
+					hashSet.Add(deviceRenderFeature.QualityType);
+				}
+				IReadOnlyList<MenuConfig> menuConfigListByFunctionId = MenuBaseConfig.Instance.GetMenuConfigListByFunctionId(10);
+				if (menuConfigListByFunctionId == null)
+				{
+					return null;
+				}
+				SortedDictionary<int, string> sortedDictionary = new SortedDictionary<int, string>();
+				foreach (MenuConfig menuConfig in menuConfigListByFunctionId)
+				{
+					string[] array = menuConfig.OptionsName();
+					int[] array2 = menuConfig.OptionsValue();
+					for (int i = 0; i < array2.Length; i++)
+					{
+						if (hashSet.Contains(array2[i]) && i < array.Length)
+						{
+							sortedDictionary[array2[i]] = array[i];
+						}
+					}
+				}
+				if (sortedDictionary.Count == 0)
+				{
+					return null;
+				}
+				string[] array3 = new string[sortedDictionary.Count];
+				int[] array4 = new int[sortedDictionary.Count];
+				int num2 = 0;
+				foreach (KeyValuePair<int, string> keyValuePair in sortedDictionary)
+				{
+					array4[num2] = keyValuePair.Key;
+					array3[num2] = keyValuePair.Value;
+					num2++;
+				}
+				this.TestImageQualityOptions = new ValueTuple<int, string[], int[]>?(new ValueTuple<int, string[], int[]>((int)imageQualityTestDeviceId.Value, array3, array4));
+			}
+			return this.TestImageQualityOptions;
+		}
+
+		// Token: 0x1700579A RID: 22426
+		// (get) Token: 0x0602BDEC RID: 179692 RVA: 0x00C53438 File Offset: 0x00C51638
 		public int ConfigId
 		{
 			get
@@ -28,8 +103,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083CF RID: 33743
-		// (get) Token: 0x06036EA5 RID: 224933 RVA: 0x00D0406F File Offset: 0x00D0226F
+		// Token: 0x1700579B RID: 22427
+		// (get) Token: 0x0602BDED RID: 179693 RVA: 0x00C53445 File Offset: 0x00C51645
 		public int SubType
 		{
 			get
@@ -38,8 +113,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083D0 RID: 33744
-		// (get) Token: 0x06036EA6 RID: 224934 RVA: 0x00D0407C File Offset: 0x00D0227C
+		// Token: 0x1700579C RID: 22428
+		// (get) Token: 0x0602BDEE RID: 179694 RVA: 0x00C53452 File Offset: 0x00C51652
 		public string SubName
 		{
 			get
@@ -48,8 +123,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083D1 RID: 33745
-		// (get) Token: 0x06036EA7 RID: 224935 RVA: 0x00D04089 File Offset: 0x00D02289
+		// Token: 0x1700579D RID: 22429
+		// (get) Token: 0x0602BDEF RID: 179695 RVA: 0x00C5345F File Offset: 0x00C5165F
 		public virtual string FunctionName
 		{
 			get
@@ -58,8 +133,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083D2 RID: 33746
-		// (get) Token: 0x06036EA8 RID: 224936 RVA: 0x00D04096 File Offset: 0x00D02296
+		// Token: 0x1700579E RID: 22430
+		// (get) Token: 0x0602BDF0 RID: 179696 RVA: 0x00C5346C File Offset: 0x00C5166C
 		public int FunctionSort
 		{
 			get
@@ -68,8 +143,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083D3 RID: 33747
-		// (get) Token: 0x06036EA9 RID: 224937 RVA: 0x00D040A3 File Offset: 0x00D022A3
+		// Token: 0x1700579F RID: 22431
+		// (get) Token: 0x0602BDF1 RID: 179697 RVA: 0x00C53479 File Offset: 0x00C51679
 		public int SubSort
 		{
 			get
@@ -78,8 +153,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083D4 RID: 33748
-		// (get) Token: 0x06036EAA RID: 224938 RVA: 0x00D040B0 File Offset: 0x00D022B0
+		// Token: 0x170057A0 RID: 22432
+		// (get) Token: 0x0602BDF2 RID: 179698 RVA: 0x00C53486 File Offset: 0x00C51686
 		public EFunction FunctionId
 		{
 			get
@@ -88,8 +163,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083D5 RID: 33749
-		// (get) Token: 0x06036EAB RID: 224939 RVA: 0x00D040BD File Offset: 0x00D022BD
+		// Token: 0x170057A1 RID: 22433
+		// (get) Token: 0x0602BDF3 RID: 179699 RVA: 0x00C53493 File Offset: 0x00C51693
 		public bool NeedScale
 		{
 			get
@@ -98,8 +173,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083D6 RID: 33750
-		// (get) Token: 0x06036EAC RID: 224940 RVA: 0x00D040CA File Offset: 0x00D022CA
+		// Token: 0x170057A2 RID: 22434
+		// (get) Token: 0x0602BDF4 RID: 179700 RVA: 0x00C534A0 File Offset: 0x00C516A0
 		public ESetType SetType
 		{
 			get
@@ -108,8 +183,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083D7 RID: 33751
-		// (get) Token: 0x06036EAD RID: 224941 RVA: 0x00D040D7 File Offset: 0x00D022D7
+		// Token: 0x170057A3 RID: 22435
+		// (get) Token: 0x0602BDF5 RID: 179701 RVA: 0x00C534AD File Offset: 0x00C516AD
 		public float[] SliderRange
 		{
 			get
@@ -118,8 +193,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083D8 RID: 33752
-		// (get) Token: 0x06036EAE RID: 224942 RVA: 0x00D040E4 File Offset: 0x00D022E4
+		// Token: 0x170057A4 RID: 22436
+		// (get) Token: 0x0602BDF6 RID: 179702 RVA: 0x00C534BA File Offset: 0x00C516BA
 		public float[] SliderRangeDisplay
 		{
 			get
@@ -132,8 +207,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083D9 RID: 33753
-		// (get) Token: 0x06036EAF RID: 224943 RVA: 0x00D0410B File Offset: 0x00D0230B
+		// Token: 0x170057A5 RID: 22437
+		// (get) Token: 0x0602BDF7 RID: 179703 RVA: 0x00C534E1 File Offset: 0x00C516E1
 		public float SliderDefault
 		{
 			get
@@ -142,8 +217,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083DA RID: 33754
-		// (get) Token: 0x06036EB0 RID: 224944 RVA: 0x00D04118 File Offset: 0x00D02318
+		// Token: 0x170057A6 RID: 22438
+		// (get) Token: 0x0602BDF8 RID: 179704 RVA: 0x00C534EE File Offset: 0x00C516EE
 		public int SliderDigits
 		{
 			get
@@ -152,8 +227,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083DB RID: 33755
-		// (get) Token: 0x06036EB1 RID: 224945 RVA: 0x00D04125 File Offset: 0x00D02325
+		// Token: 0x170057A7 RID: 22439
+		// (get) Token: 0x0602BDF9 RID: 179705 RVA: 0x00C534FB File Offset: 0x00C516FB
 		public int OptionsDefault
 		{
 			get
@@ -162,8 +237,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083DC RID: 33756
-		// (get) Token: 0x06036EB2 RID: 224946 RVA: 0x00D04132 File Offset: 0x00D02332
+		// Token: 0x170057A8 RID: 22440
+		// (get) Token: 0x0602BDFA RID: 179706 RVA: 0x00C53508 File Offset: 0x00C51708
 		public bool BtnDisableTipsEnable
 		{
 			get
@@ -172,8 +247,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083DD RID: 33757
-		// (get) Token: 0x06036EB3 RID: 224947 RVA: 0x00D0413F File Offset: 0x00D0233F
+		// Token: 0x170057A9 RID: 22441
+		// (get) Token: 0x0602BDFB RID: 179707 RVA: 0x00C53515 File Offset: 0x00C51715
 		public bool CanShowInLogin
 		{
 			get
@@ -182,27 +257,29 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083DE RID: 33758
-		// (get) Token: 0x06036EB4 RID: 224948 RVA: 0x00D0414C File Offset: 0x00D0234C
+		// Token: 0x170057AA RID: 22442
+		// (get) Token: 0x0602BDFC RID: 179708 RVA: 0x00C53524 File Offset: 0x00C51724
 		protected string[] OptionsNameListInternal
 		{
 			get
 			{
-				return this.FilterImageQualityOptions<string>(this.MetaConfig.OptionsName());
+				ValueTuple<int, string[], int[]>? valueTuple;
+				return ((this.GetTestImageQualityOptions() != null) ? valueTuple.GetValueOrDefault().Item2 : null) ?? this.FilterImageQualityOptions<string>(this.MetaConfig.OptionsName());
 			}
 		}
 
-		// Token: 0x170083DF RID: 33759
-		// (get) Token: 0x06036EB5 RID: 224949 RVA: 0x00D0415F File Offset: 0x00D0235F
+		// Token: 0x170057AB RID: 22443
+		// (get) Token: 0x0602BDFD RID: 179709 RVA: 0x00C53568 File Offset: 0x00C51768
 		protected int[] OptionsValueListInternal
 		{
 			get
 			{
-				return this.FilterImageQualityOptions<int>(this.MetaConfig.OptionsValue());
+				ValueTuple<int, string[], int[]>? valueTuple;
+				return ((this.GetTestImageQualityOptions() != null) ? valueTuple.GetValueOrDefault().Item3 : null) ?? this.FilterImageQualityOptions<int>(this.MetaConfig.OptionsValue());
 			}
 		}
 
-		// Token: 0x06036EB6 RID: 224950 RVA: 0x00D04174 File Offset: 0x00D02374
+		// Token: 0x0602BDFE RID: 179710 RVA: 0x00C535AC File Offset: 0x00C517AC
 		private T[] FilterImageQualityOptions<[Nullable(2)] T>(T[] list)
 		{
 			int? num;
@@ -235,8 +312,8 @@ namespace CSharpScript.Game.Module.Menu
 			return list2.ToArray();
 		}
 
-		// Token: 0x170083E0 RID: 33760
-		// (get) Token: 0x06036EB7 RID: 224951 RVA: 0x00D0422D File Offset: 0x00D0242D
+		// Token: 0x170057AC RID: 22444
+		// (get) Token: 0x0602BDFF RID: 179711 RVA: 0x00C53665 File Offset: 0x00C51865
 		public string SubImage
 		{
 			get
@@ -245,8 +322,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083E1 RID: 33761
-		// (get) Token: 0x06036EB8 RID: 224952 RVA: 0x00D0423A File Offset: 0x00D0243A
+		// Token: 0x170057AD RID: 22445
+		// (get) Token: 0x0602BE00 RID: 179712 RVA: 0x00C53672 File Offset: 0x00C51872
 		public string FunctionImage
 		{
 			get
@@ -255,8 +332,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083E2 RID: 33762
-		// (get) Token: 0x06036EB9 RID: 224953 RVA: 0x00D04247 File Offset: 0x00D02447
+		// Token: 0x170057AE RID: 22446
+		// (get) Token: 0x0602BE01 RID: 179713 RVA: 0x00C5367F File Offset: 0x00C5187F
 		public virtual string ButtonTextId
 		{
 			get
@@ -265,8 +342,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083E3 RID: 33763
-		// (get) Token: 0x06036EBA RID: 224954 RVA: 0x00D04254 File Offset: 0x00D02454
+		// Token: 0x170057AF RID: 22447
+		// (get) Token: 0x0602BE02 RID: 179714 RVA: 0x00C5368C File Offset: 0x00C5188C
 		public string ButtonViewName
 		{
 			get
@@ -275,8 +352,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083E4 RID: 33764
-		// (get) Token: 0x06036EBB RID: 224955 RVA: 0x00D04261 File Offset: 0x00D02461
+		// Token: 0x170057B0 RID: 22448
+		// (get) Token: 0x0602BE03 RID: 179715 RVA: 0x00C53699 File Offset: 0x00C51899
 		public int[] RelationFuncIds
 		{
 			get
@@ -285,8 +362,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083E5 RID: 33765
-		// (get) Token: 0x06036EBC RID: 224956 RVA: 0x00D0426E File Offset: 0x00D0246E
+		// Token: 0x170057B1 RID: 22449
+		// (get) Token: 0x0602BE04 RID: 179716 RVA: 0x00C536A6 File Offset: 0x00C518A6
 		public int[] AffectedValue
 		{
 			get
@@ -295,8 +372,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083E6 RID: 33766
-		// (get) Token: 0x06036EBD RID: 224957 RVA: 0x00D0427B File Offset: 0x00D0247B
+		// Token: 0x170057B2 RID: 22450
+		// (get) Token: 0x0602BE05 RID: 179717 RVA: 0x00C536B3 File Offset: 0x00C518B3
 		public Dictionary<int, int> AffectedFunction
 		{
 			get
@@ -305,8 +382,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083E7 RID: 33767
-		// (get) Token: 0x06036EBE RID: 224958 RVA: 0x00D04288 File Offset: 0x00D02488
+		// Token: 0x170057B3 RID: 22451
+		// (get) Token: 0x0602BE06 RID: 179718 RVA: 0x00C536C0 File Offset: 0x00C518C0
 		public int[] DisableValue
 		{
 			get
@@ -315,8 +392,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083E8 RID: 33768
-		// (get) Token: 0x06036EBF RID: 224959 RVA: 0x00D04295 File Offset: 0x00D02495
+		// Token: 0x170057B4 RID: 22452
+		// (get) Token: 0x0602BE07 RID: 179719 RVA: 0x00C536CD File Offset: 0x00C518CD
 		public int[] DisableFunction
 		{
 			get
@@ -325,8 +402,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083E9 RID: 33769
-		// (get) Token: 0x06036EC0 RID: 224960 RVA: 0x00D042A2 File Offset: 0x00D024A2
+		// Token: 0x170057B5 RID: 22453
+		// (get) Token: 0x0602BE08 RID: 179720 RVA: 0x00C536DA File Offset: 0x00C518DA
 		public string BtnDisableTips
 		{
 			get
@@ -335,8 +412,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083EA RID: 33770
-		// (get) Token: 0x06036EC1 RID: 224961 RVA: 0x00D042AF File Offset: 0x00D024AF
+		// Token: 0x170057B6 RID: 22454
+		// (get) Token: 0x0602BE09 RID: 179721 RVA: 0x00C536E7 File Offset: 0x00C518E7
 		public Dictionary<int, string> ValueTipsMap
 		{
 			get
@@ -345,8 +422,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083EB RID: 33771
-		// (get) Token: 0x06036EC2 RID: 224962 RVA: 0x00D042BC File Offset: 0x00D024BC
+		// Token: 0x170057B7 RID: 22455
+		// (get) Token: 0x0602BE0A RID: 179722 RVA: 0x00C536F4 File Offset: 0x00C518F4
 		public Dictionary<int, int> ClickedTipsMap
 		{
 			get
@@ -355,8 +432,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083EC RID: 33772
-		// (get) Token: 0x06036EC3 RID: 224963 RVA: 0x00D042C9 File Offset: 0x00D024C9
+		// Token: 0x170057B8 RID: 22456
+		// (get) Token: 0x0602BE0B RID: 179723 RVA: 0x00C53701 File Offset: 0x00C51901
 		public bool IsDataCache
 		{
 			get
@@ -365,8 +442,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083ED RID: 33773
-		// (get) Token: 0x06036EC4 RID: 224964 RVA: 0x00D042D6 File Offset: 0x00D024D6
+		// Token: 0x170057B9 RID: 22457
+		// (get) Token: 0x0602BE0C RID: 179724 RVA: 0x00C5370E File Offset: 0x00C5190E
 		public string ClickedTips
 		{
 			get
@@ -375,8 +452,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083EE RID: 33774
-		// (get) Token: 0x06036EC5 RID: 224965 RVA: 0x00D042E3 File Offset: 0x00D024E3
+		// Token: 0x170057BA RID: 22458
+		// (get) Token: 0x0602BE0D RID: 179725 RVA: 0x00C5371B File Offset: 0x00C5191B
 		private string DetailTextId
 		{
 			get
@@ -385,8 +462,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083EF RID: 33775
-		// (get) Token: 0x06036EC6 RID: 224966 RVA: 0x00D042F0 File Offset: 0x00D024F0
+		// Token: 0x170057BB RID: 22459
+		// (get) Token: 0x0602BE0E RID: 179726 RVA: 0x00C53728 File Offset: 0x00C51928
 		public bool CanClickWhenDisable
 		{
 			get
@@ -395,8 +472,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083F0 RID: 33776
-		// (get) Token: 0x06036EC7 RID: 224967 RVA: 0x00D042FD File Offset: 0x00D024FD
+		// Token: 0x170057BC RID: 22460
+		// (get) Token: 0x0602BE0F RID: 179727 RVA: 0x00C53735 File Offset: 0x00C51935
 		[Nullable(new byte[]
 		{
 			2,
@@ -415,7 +492,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036EC8 RID: 224968 RVA: 0x00D04300 File Offset: 0x00D02500
+		// Token: 0x0602BE10 RID: 179728 RVA: 0x00C53738 File Offset: 0x00C51938
 		public bool GetEnable()
 		{
 			if (this.FunctionId == EFunction.MobileGamepadMode)
@@ -455,7 +532,7 @@ namespace CSharpScript.Game.Module.Menu
 			return true;
 		}
 
-		// Token: 0x06036EC9 RID: 224969 RVA: 0x00D04444 File Offset: 0x00D02644
+		// Token: 0x0602BE11 RID: 179729 RVA: 0x00C5387C File Offset: 0x00C51A7C
 		private bool CheckIsDisableFunctionInInstance()
 		{
 			int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -481,8 +558,8 @@ namespace CSharpScript.Game.Module.Menu
 			return array != null && Array.IndexOf<EFunction>(array, this.FunctionId) >= 0;
 		}
 
-		// Token: 0x170083F1 RID: 33777
-		// (get) Token: 0x06036ECA RID: 224970 RVA: 0x00D044F0 File Offset: 0x00D026F0
+		// Token: 0x170057BD RID: 22461
+		// (get) Token: 0x0602BE12 RID: 179730 RVA: 0x00C53928 File Offset: 0x00C51B28
 		public virtual bool EnableRedDot
 		{
 			get
@@ -491,30 +568,30 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036ECB RID: 224971 RVA: 0x00D044F3 File Offset: 0x00D026F3
+		// Token: 0x0602BE13 RID: 179731 RVA: 0x00C5392B File Offset: 0x00C51B2B
 		public virtual void OnRefresh()
 		{
 		}
 
-		// Token: 0x06036ECC RID: 224972 RVA: 0x00D044F5 File Offset: 0x00D026F5
+		// Token: 0x0602BE14 RID: 179732 RVA: 0x00C5392D File Offset: 0x00C51B2D
 		public virtual bool GetButtonEnable()
 		{
 			return true;
 		}
 
-		// Token: 0x06036ECD RID: 224973 RVA: 0x00D044F8 File Offset: 0x00D026F8
+		// Token: 0x0602BE15 RID: 179733 RVA: 0x00C53930 File Offset: 0x00C51B30
 		public void CacheDisableState(EFunction targetFunction, int[] targetValues)
 		{
 			this.OtherFunctionTargetDisableValueCache[targetFunction] = targetValues;
 		}
 
-		// Token: 0x06036ECE RID: 224974 RVA: 0x00D04507 File Offset: 0x00D02707
+		// Token: 0x0602BE16 RID: 179734 RVA: 0x00C5393F File Offset: 0x00C51B3F
 		public void ResetDisableStateCache()
 		{
 			this.OtherFunctionTargetDisableValueCache.Clear();
 		}
 
-		// Token: 0x06036ECF RID: 224975 RVA: 0x00D04514 File Offset: 0x00D02714
+		// Token: 0x0602BE17 RID: 179735 RVA: 0x00C5394C File Offset: 0x00C51B4C
 		[NullableContext(2)]
 		private string GetDisableOverrideTextForTarget(int targetFunctionId)
 		{
@@ -529,7 +606,7 @@ namespace CSharpScript.Game.Module.Menu
 			return null;
 		}
 
-		// Token: 0x06036ED0 RID: 224976 RVA: 0x00D04570 File Offset: 0x00D02770
+		// Token: 0x0602BE18 RID: 179736 RVA: 0x00C539A8 File Offset: 0x00C51BA8
 		[NullableContext(2)]
 		public string GetDisableOverrideText()
 		{
@@ -560,13 +637,13 @@ namespace CSharpScript.Game.Module.Menu
 			return null;
 		}
 
-		// Token: 0x06036ED1 RID: 224977 RVA: 0x00D04644 File Offset: 0x00D02844
+		// Token: 0x0602BE19 RID: 179737 RVA: 0x00C53A7C File Offset: 0x00C51C7C
 		public bool CanAffectedFunction(float value)
 		{
 			return MenuData.ContainsConfiguredValue(this.AffectedValue, value) && this.AffectedFunction.Count > 0;
 		}
 
-		// Token: 0x06036ED2 RID: 224978 RVA: 0x00D04664 File Offset: 0x00D02864
+		// Token: 0x0602BE1A RID: 179738 RVA: 0x00C53A9C File Offset: 0x00C51C9C
 		private static bool ContainsConfiguredValue(int[] configuredValues, float value)
 		{
 			for (int i = 0; i < configuredValues.Length; i++)
@@ -579,14 +656,14 @@ namespace CSharpScript.Game.Module.Menu
 			return false;
 		}
 
-		// Token: 0x06036ED3 RID: 224979 RVA: 0x00D0468B File Offset: 0x00D0288B
+		// Token: 0x0602BE1B RID: 179739 RVA: 0x00C53AC3 File Offset: 0x00C51CC3
 		public bool HasDisableFunction()
 		{
 			return this.DisableFunction.Length != 0;
 		}
 
-		// Token: 0x170083F2 RID: 33778
-		// (get) Token: 0x06036ED4 RID: 224980 RVA: 0x00D04697 File Offset: 0x00D02897
+		// Token: 0x170057BE RID: 22462
+		// (get) Token: 0x0602BE1C RID: 179740 RVA: 0x00C53ACF File Offset: 0x00C51CCF
 		public IReadOnlyList<string> OptionsNameList
 		{
 			get
@@ -595,8 +672,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x170083F3 RID: 33779
-		// (get) Token: 0x06036ED5 RID: 224981 RVA: 0x00D0469F File Offset: 0x00D0289F
+		// Token: 0x170057BF RID: 22463
+		// (get) Token: 0x0602BE1D RID: 179741 RVA: 0x00C53AD7 File Offset: 0x00C51CD7
 		public IReadOnlyList<int> OptionsValueList
 		{
 			get
@@ -605,45 +682,45 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036ED6 RID: 224982 RVA: 0x00D046A8 File Offset: 0x00D028A8
+		// Token: 0x0602BE1E RID: 179742 RVA: 0x00C53AE0 File Offset: 0x00C51CE0
 		public bool HasDetailText()
 		{
 			string detailTextId = this.DetailTextId;
 			return !string.IsNullOrEmpty(detailTextId) && !StringUtils.IsBlank(detailTextId);
 		}
 
-		// Token: 0x06036ED7 RID: 224983 RVA: 0x00D046D1 File Offset: 0x00D028D1
+		// Token: 0x0602BE1F RID: 179743 RVA: 0x00C53B09 File Offset: 0x00C51D09
 		public int GetDetailPopId()
 		{
 			return this.MetaConfig.DetailPop;
 		}
 
-		// Token: 0x06036ED8 RID: 224984 RVA: 0x00D046DE File Offset: 0x00D028DE
+		// Token: 0x0602BE20 RID: 179744 RVA: 0x00C53B16 File Offset: 0x00C51D16
 		public bool ShowHelpBtn()
 		{
 			return this.MetaConfig.DetailPop > 0 || this.HasDetailText();
 		}
 
-		// Token: 0x06036ED9 RID: 224985 RVA: 0x00D046F6 File Offset: 0x00D028F6
+		// Token: 0x0602BE21 RID: 179745 RVA: 0x00C53B2E File Offset: 0x00C51D2E
 		[NullableContext(2)]
 		public string GetDetailTextId()
 		{
 			return this.DetailTextId;
 		}
 
-		// Token: 0x06036EDA RID: 224986 RVA: 0x00D046FE File Offset: 0x00D028FE
+		// Token: 0x0602BE22 RID: 179746 RVA: 0x00C53B36 File Offset: 0x00C51D36
 		public void SetDetailTextVisible(bool bVisible)
 		{
 			this.IsDetailTextVisible = bVisible;
 		}
 
-		// Token: 0x06036EDB RID: 224987 RVA: 0x00D04707 File Offset: 0x00D02907
+		// Token: 0x0602BE23 RID: 179747 RVA: 0x00C53B3F File Offset: 0x00C51D3F
 		public bool GetIsDetailTextVisible()
 		{
 			return this.IsDetailTextVisible;
 		}
 
-		// Token: 0x06036EDC RID: 224988 RVA: 0x00D04710 File Offset: 0x00D02910
+		// Token: 0x0602BE24 RID: 179748 RVA: 0x00C53B48 File Offset: 0x00C51D48
 		public bool IsRecommendIndex(int index)
 		{
 			if (this.FunctionId != EFunction.IMAGEQUALITY)
@@ -658,7 +735,7 @@ namespace CSharpScript.Game.Module.Menu
 			return recommendQualityLv != null && Array.IndexOf<int>(this.OptionsValueListInternal, (int)recommendQualityLv.Value) == index;
 		}
 
-		// Token: 0x06036EDD RID: 224989 RVA: 0x00D04764 File Offset: 0x00D02964
+		// Token: 0x0602BE25 RID: 179749 RVA: 0x00C53B9C File Offset: 0x00C51D9C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -701,13 +778,29 @@ namespace CSharpScript.Game.Module.Menu
 			return new ValueTuple<string, string>(text3 ?? "", text5 ?? "");
 		}
 
-		// Token: 0x0401CF73 RID: 118643
+		// Token: 0x04017A0B RID: 96779
 		private MenuConfig MetaConfig;
 
-		// Token: 0x0401CF74 RID: 118644
+		// Token: 0x04017A0C RID: 96780
+		[TupleElementNames(new string[]
+		{
+			"DeviceId",
+			"Names",
+			"Values"
+		})]
+		[Nullable(new byte[]
+		{
+			0,
+			1,
+			1,
+			1
+		})]
+		private ValueTuple<int, string[], int[]>? TestImageQualityOptions;
+
+		// Token: 0x04017A0D RID: 96781
 		private bool IsDetailTextVisible;
 
-		// Token: 0x0401CF75 RID: 118645
+		// Token: 0x04017A0E RID: 96782
 		private readonly Dictionary<EFunction, int[]> OtherFunctionTargetDisableValueCache = new Dictionary<EFunction, int[]>();
 	}
 }

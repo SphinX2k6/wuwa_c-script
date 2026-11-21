@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002DBA RID: 11706
+// Token: 0x02002314 RID: 8980
 public enum EBulletDestroyReason
 {
-	// Token: 0x0400B6F7 RID: 46839
+	// Token: 0x0400BA71 RID: 47729
 	Normal,
-	// Token: 0x0400B6F8 RID: 46840
+	// Token: 0x0400BA72 RID: 47730
 	ParentDestroy,
-	// Token: 0x0400B6F9 RID: 46841
+	// Token: 0x0400BA73 RID: 47731
 	FromRemote,
-	// Token: 0x0400B6FA RID: 46842
+	// Token: 0x0400BA74 RID: 47732
 	FromPassiveSkill,
-	// Token: 0x0400B6FB RID: 46843
+	// Token: 0x0400BA75 RID: 47733
 	BuffEffect
 }

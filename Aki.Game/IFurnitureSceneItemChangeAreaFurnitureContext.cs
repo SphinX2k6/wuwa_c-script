@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FA6 RID: 4006
+// Token: 0x0200045B RID: 1115
 [NullableContext(1)]
 public interface IFurnitureSceneItemChangeAreaFurnitureContext
 {
-	// Token: 0x17000828 RID: 2088
-	// (get) Token: 0x06006670 RID: 26224
+	// Token: 0x1700084A RID: 2122
+	// (get) Token: 0x06003A08 RID: 14856
 	FurnitureAreaData SourceAreaData { get; }
 
-	// Token: 0x17000829 RID: 2089
-	// (get) Token: 0x06006671 RID: 26225
+	// Token: 0x1700084B RID: 2123
+	// (get) Token: 0x06003A09 RID: 14857
 	FurnitureAreaData TargetAreaData { get; }
 }

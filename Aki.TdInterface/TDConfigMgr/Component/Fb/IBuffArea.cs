@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D0D RID: 3341
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E06 RID: 3590
 	public class IBuffArea : IEffectAreaMode
 	{
-		// Token: 0x06004C47 RID: 19527 RVA: 0x000BE23C File Offset: 0x000BC43C
+		// Token: 0x0600515A RID: 20826 RVA: 0x000C97E4 File Offset: 0x000C79E4
 		public static IBuffArea Create(IBuffArea? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017EA RID: 6122
-		// (get) Token: 0x06004C48 RID: 19528 RVA: 0x000BE25B File Offset: 0x000BC45B
+		// Token: 0x17001949 RID: 6473
+		// (get) Token: 0x0600515B RID: 20827 RVA: 0x000C9803 File Offset: 0x000C7A03
 		public override EEffectAreaType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017EB RID: 6123
-		// (get) Token: 0x06004C49 RID: 19529 RVA: 0x000BE268 File Offset: 0x000BC468
+		// Token: 0x1700194A RID: 6474
+		// (get) Token: 0x0600515C RID: 20828 RVA: 0x000C9810 File Offset: 0x000C7A10
 		public virtual List<IBuffAreaStateConfig> BuffConfigs
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BAA RID: 11178
+		// Token: 0x04002E67 RID: 11879
 		private IBuffArea Instance;
 
-		// Token: 0x04002BAB RID: 11179
+		// Token: 0x04002E68 RID: 11880
 		private List<IBuffAreaStateConfig> _BuffConfigsCache;
 
-		// Token: 0x04002BAC RID: 11180
+		// Token: 0x04002E69 RID: 11881
 		private bool _BuffConfigsInited;
 	}
 }

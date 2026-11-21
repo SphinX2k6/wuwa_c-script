@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000305 RID: 773
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200034C RID: 844
 	public class IEnrichmentEntitySearchTool
 	{
-		// Token: 0x06000EF7 RID: 3831 RVA: 0x00035618 File Offset: 0x00033818
+		// Token: 0x06001027 RID: 4135 RVA: 0x0003854C File Offset: 0x0003674C
 		private IEnrichmentEntitySearchTool_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000EF8 RID: 3832 RVA: 0x00035650 File Offset: 0x00033850
+		// Token: 0x06001028 RID: 4136 RVA: 0x00038584 File Offset: 0x00036784
 		public static IEnrichmentEntitySearchTool Create([Nullable(2)] IEnrichmentEntitySearchTool instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000EF9 RID: 3833 RVA: 0x00035663 File Offset: 0x00033863
+		// Token: 0x06001029 RID: 4137 RVA: 0x00038597 File Offset: 0x00036797
 		public static IEnrichmentEntitySearchTool CreateFromSetValue([Nullable(2)] IEnrichmentEntitySearchTool_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000EFA RID: 3834 RVA: 0x00035676 File Offset: 0x00033876
+		// Token: 0x0600102A RID: 4138 RVA: 0x000385AA File Offset: 0x000367AA
 		public IEnrichmentEntitySearchTool_SetValue ToSetValue()
 		{
 			return new IEnrichmentEntitySearchTool_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000451 RID: 1105
-		// (get) Token: 0x06000EFB RID: 3835 RVA: 0x000356A1 File Offset: 0x000338A1
-		// (set) Token: 0x06000EFC RID: 3836 RVA: 0x000356CC File Offset: 0x000338CC
+		// Token: 0x1700049E RID: 1182
+		// (get) Token: 0x0600102B RID: 4139 RVA: 0x000385D5 File Offset: 0x000367D5
+		// (set) Token: 0x0600102C RID: 4140 RVA: 0x00038600 File Offset: 0x00036800
 		public virtual int TargetType
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000452 RID: 1106
-		// (get) Token: 0x06000EFD RID: 3837 RVA: 0x000356DA File Offset: 0x000338DA
-		// (set) Token: 0x06000EFE RID: 3838 RVA: 0x00035709 File Offset: 0x00033909
+		// Token: 0x1700049F RID: 1183
+		// (get) Token: 0x0600102D RID: 4141 RVA: 0x0003860E File Offset: 0x0003680E
+		// (set) Token: 0x0600102E RID: 4142 RVA: 0x0003863D File Offset: 0x0003683D
 		public virtual float Radius
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000453 RID: 1107
-		// (get) Token: 0x06000EFF RID: 3839 RVA: 0x00035717 File Offset: 0x00033917
-		// (set) Token: 0x06000F00 RID: 3840 RVA: 0x00035746 File Offset: 0x00033946
+		// Token: 0x170004A0 RID: 1184
+		// (get) Token: 0x0600102F RID: 4143 RVA: 0x0003864B File Offset: 0x0003684B
+		// (set) Token: 0x06001030 RID: 4144 RVA: 0x0003867A File Offset: 0x0003687A
 		public virtual float Height
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D0A RID: 3338
+		// Token: 0x04000DF4 RID: 3572
 		[Nullable(2)]
 		protected IEnrichmentEntitySearchTool FbInstance;
 
-		// Token: 0x04000D0B RID: 3339
+		// Token: 0x04000DF5 RID: 3573
 		[Nullable(2)]
 		protected IEnrichmentEntitySearchTool_SetValue PocoInterface;
 	}

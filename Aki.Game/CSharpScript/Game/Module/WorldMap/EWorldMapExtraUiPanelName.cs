@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x020047A3 RID: 18339
+	// Token: 0x020036D4 RID: 14036
 	public enum EWorldMapExtraUiPanelName
 	{
-		// Token: 0x04019E1B RID: 106011
+		// Token: 0x040144CB RID: 83147
 		PhantomArenaMapEntrance,
-		// Token: 0x04019E1C RID: 106012
+		// Token: 0x040144CC RID: 83148
 		SheriffMapPanel
 	}
 }

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200278B RID: 10123
+// Token: 0x02001C76 RID: 7286
 [NullableContext(1)]
 [Nullable(0)]
 public class MultiTeamRoleSelectData
 {
-	// Token: 0x06014C35 RID: 85045 RVA: 0x00540F38 File Offset: 0x0053F138
+	// Token: 0x0601211F RID: 74015 RVA: 0x0054FF18 File Offset: 0x0054E118
 	public List<RoleDataBase> GetSourceRoleList()
 	{
 		List<RoleDataBase> list = new List<RoleDataBase>();
@@ -18,13 +18,13 @@ public class MultiTeamRoleSelectData
 		return list;
 	}
 
-	// Token: 0x06014C36 RID: 85046 RVA: 0x00540F98 File Offset: 0x0053F198
+	// Token: 0x06012120 RID: 74016 RVA: 0x0054FF78 File Offset: 0x0054E178
 	public List<MultiTeamRoleData> GetMultiTeamRoleDataList()
 	{
 		return this.MultiTeamRoleDataList;
 	}
 
-	// Token: 0x06014C37 RID: 85047 RVA: 0x00540FA0 File Offset: 0x0053F1A0
+	// Token: 0x06012121 RID: 74017 RVA: 0x0054FF80 File Offset: 0x0054E180
 	public static MultiTeamRoleSelectData Phrase(EFilterSortGroupId? useWay, int teamLength, int[] initSelectRoleList, [Nullable(2)] Action backCallBack, [Nullable(new byte[]
 	{
 		2,
@@ -54,21 +54,21 @@ public class MultiTeamRoleSelectData
 		return multiTeamRoleSelectData;
 	}
 
-	// Token: 0x06014C38 RID: 85048 RVA: 0x0054101B File Offset: 0x0053F21B
+	// Token: 0x06012122 RID: 74018 RVA: 0x0054FFFB File Offset: 0x0054E1FB
 	public void SetMultiTeamTagData(MultiTeamTagDataItem data)
 	{
 		this.MultiTeamTagData = data;
 		this.NeedShowTag = true;
 	}
 
-	// Token: 0x04009C29 RID: 39977
+	// Token: 0x04009D89 RID: 40329
 	public EFilterSortGroupId? UseWay;
 
-	// Token: 0x04009C2A RID: 39978
+	// Token: 0x04009D8A RID: 40330
 	[Nullable(2)]
 	public Action BackCallBack;
 
-	// Token: 0x04009C2B RID: 39979
+	// Token: 0x04009D8B RID: 40331
 	[Nullable(new byte[]
 	{
 		2,
@@ -76,7 +76,7 @@ public class MultiTeamRoleSelectData
 	})]
 	public Func<int[], bool> CanConfirmFunc;
 
-	// Token: 0x04009C2C RID: 39980
+	// Token: 0x04009D8C RID: 40332
 	[Nullable(new byte[]
 	{
 		2,
@@ -85,11 +85,11 @@ public class MultiTeamRoleSelectData
 	})]
 	public Action<int[], int[]> ConfirmCallBack;
 
-	// Token: 0x04009C2D RID: 39981
+	// Token: 0x04009D8D RID: 40333
 	[Nullable(2)]
 	public Func<int, bool> IsNeedRevive;
 
-	// Token: 0x04009C2E RID: 39982
+	// Token: 0x04009D8E RID: 40334
 	[Nullable(new byte[]
 	{
 		2,
@@ -97,31 +97,43 @@ public class MultiTeamRoleSelectData
 	})]
 	public Func<int, int[], bool> IfCanSelectCheck;
 
-	// Token: 0x04009C2F RID: 39983
+	// Token: 0x04009D8F RID: 40335
 	public int TeamLength;
 
-	// Token: 0x04009C30 RID: 39984
+	// Token: 0x04009D90 RID: 40336
 	public List<int> InitSelectRoleList = new List<int>();
 
-	// Token: 0x04009C31 RID: 39985
+	// Token: 0x04009D91 RID: 40337
 	private readonly List<MultiTeamRoleData> MultiTeamRoleDataList = new List<MultiTeamRoleData>();
 
-	// Token: 0x04009C32 RID: 39986
+	// Token: 0x04009D92 RID: 40338
 	public List<int> UnRecommendRole = new List<int>();
 
-	// Token: 0x04009C33 RID: 39987
+	// Token: 0x04009D93 RID: 40339
+	public bool ShowUnRecommendBtn = true;
+
+	// Token: 0x04009D94 RID: 40340
 	[Nullable(2)]
 	public MultiTeamTagDataItem MultiTeamTagData;
 
-	// Token: 0x04009C34 RID: 39988
+	// Token: 0x04009D95 RID: 40341
 	public bool NeedShowTag;
 
-	// Token: 0x04009C35 RID: 39989
+	// Token: 0x04009D96 RID: 40342
 	public string Tips = "";
 
-	// Token: 0x04009C36 RID: 39990
+	// Token: 0x04009D97 RID: 40343
 	public string ConfirmBtnText = "";
 
-	// Token: 0x04009C37 RID: 39991
+	// Token: 0x04009D98 RID: 40344
 	public ERoleViewSource RoleViewSource;
+
+	// Token: 0x04009D99 RID: 40345
+	public bool ShowDetailButton = true;
+
+	// Token: 0x04009D9A RID: 40346
+	public bool IsSingleSelect;
+
+	// Token: 0x04009D9B RID: 40347
+	public bool ShowInitSelectRoleInfo;
 }

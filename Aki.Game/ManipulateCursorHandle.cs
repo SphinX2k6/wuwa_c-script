@@ -11,12 +11,12 @@ using CSharpScript.Game.Render;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02001F34 RID: 7988
+// Token: 0x020013F6 RID: 5110
 [NullableContext(2)]
 [Nullable(0)]
 public class ManipulateCursorHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F664 RID: 63076 RVA: 0x003B7D08 File Offset: 0x003B5F08
+	// Token: 0x0600CA83 RID: 51843 RVA: 0x003C37F4 File Offset: 0x003C19F4
 	protected override void OnInitialize()
 	{
 		base.InitCursorAxis();
@@ -46,7 +46,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F665 RID: 63077 RVA: 0x003B7DF3 File Offset: 0x003B5FF3
+	// Token: 0x0600CA84 RID: 51844 RVA: 0x003C38DF File Offset: 0x003C1ADF
 	protected override void OnDestroyed()
 	{
 		this.Deactivate();
@@ -58,7 +58,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		this.DisableTagIds.Clear();
 	}
 
-	// Token: 0x0600F666 RID: 63078 RVA: 0x003B7E28 File Offset: 0x003B6028
+	// Token: 0x0600CA85 RID: 51845 RVA: 0x003C3914 File Offset: 0x003C1B14
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRoleCompleted));
@@ -71,7 +71,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		EventSystem.Instance.Add(EEventName.HiddenManipulateUI, new Action(this.OnManipulateEnded));
 	}
 
-	// Token: 0x0600F667 RID: 63079 RVA: 0x003B7F18 File Offset: 0x003B6118
+	// Token: 0x0600CA86 RID: 51846 RVA: 0x003C3A04 File Offset: 0x003C1C04
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRoleCompleted));
@@ -84,7 +84,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		EventSystem.Instance.Remove(EEventName.HiddenManipulateUI, new Action(this.OnManipulateEnded));
 	}
 
-	// Token: 0x0600F668 RID: 63080 RVA: 0x003B8008 File Offset: 0x003B6208
+	// Token: 0x0600CA87 RID: 51847 RVA: 0x003C3AF4 File Offset: 0x003C1CF4
 	[NullableContext(1)]
 	private void OnChangeRoleCompleted(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 	{
@@ -103,7 +103,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F669 RID: 63081 RVA: 0x003B80D0 File Offset: 0x003B62D0
+	// Token: 0x0600CA88 RID: 51848 RVA: 0x003C3BBC File Offset: 0x003C1DBC
 	[NullableContext(1)]
 	private void OnManipulateStart(float time, string resId)
 	{
@@ -117,19 +117,19 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		manipulateCursorUnit.StartProcess(time);
 	}
 
-	// Token: 0x0600F66A RID: 63082 RVA: 0x003B80F6 File Offset: 0x003B62F6
+	// Token: 0x0600CA89 RID: 51849 RVA: 0x003C3BE2 File Offset: 0x003C1DE2
 	private void OnManipulateCancel()
 	{
 		this.ChangeState(EManipulateCursorState.NoTarget);
 	}
 
-	// Token: 0x0600F66B RID: 63083 RVA: 0x003B80FF File Offset: 0x003B62FF
+	// Token: 0x0600CA8A RID: 51850 RVA: 0x003C3BEB File Offset: 0x003C1DEB
 	private void OnManipulateComplete()
 	{
 		this.ChangeState(EManipulateCursorState.Holding);
 	}
 
-	// Token: 0x0600F66C RID: 63084 RVA: 0x003B8108 File Offset: 0x003B6308
+	// Token: 0x0600CA8B RID: 51851 RVA: 0x003C3BF4 File Offset: 0x003C1DF4
 	[NullableContext(1)]
 	private void OnManipulateStartLockCastTarget(Entity lockEntity, CharacterPart lockPart)
 	{
@@ -148,20 +148,20 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		this.Activate(lockEntity);
 	}
 
-	// Token: 0x0600F66D RID: 63085 RVA: 0x003B813F File Offset: 0x003B633F
+	// Token: 0x0600CA8C RID: 51852 RVA: 0x003C3C2B File Offset: 0x003C1E2B
 	private void OnManipulateEndLockCastTarget()
 	{
 		this.IsCastTarget = false;
 		this.ChangeState(EManipulateCursorState.NoTarget);
 	}
 
-	// Token: 0x0600F66E RID: 63086 RVA: 0x003B814F File Offset: 0x003B634F
+	// Token: 0x0600CA8D RID: 51853 RVA: 0x003C3C3B File Offset: 0x003C1E3B
 	private void OnManipulateEnded()
 	{
 		this.ChangeState(EManipulateCursorState.NoTarget);
 	}
 
-	// Token: 0x0600F66F RID: 63087 RVA: 0x003B8158 File Offset: 0x003B6358
+	// Token: 0x0600CA8E RID: 51854 RVA: 0x003C3C44 File Offset: 0x003C1E44
 	public new void OnInputControllerChanged(EInputControllerType last, EInputControllerType now)
 	{
 		if (this.ManipulateCursorUnit == null)
@@ -176,7 +176,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F670 RID: 63088 RVA: 0x003B8188 File Offset: 0x003B6388
+	// Token: 0x0600CA8F RID: 51855 RVA: 0x003C3C74 File Offset: 0x003C1E74
 	private void OnSwitchToNewTarget(bool isActive, Entity entity, bool isCastTarget)
 	{
 		this.IsCastTarget = isCastTarget;
@@ -207,13 +207,13 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F671 RID: 63089 RVA: 0x003B81EA File Offset: 0x003B63EA
+	// Token: 0x0600CA90 RID: 51856 RVA: 0x003C3CD6 File Offset: 0x003C1ED6
 	protected override void OnAfterTick(float delta)
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x0600F672 RID: 63090 RVA: 0x003B81F2 File Offset: 0x003B63F2
+	// Token: 0x0600CA91 RID: 51857 RVA: 0x003C3CDE File Offset: 0x003C1EDE
 	private void OnDisableTagChanged(int tagId, bool tagExists)
 	{
 		if (!tagExists)
@@ -229,7 +229,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		manipulateCursorUnit.SetActive(false);
 	}
 
-	// Token: 0x0600F673 RID: 63091 RVA: 0x003B8210 File Offset: 0x003B6410
+	// Token: 0x0600CA92 RID: 51858 RVA: 0x003C3CFC File Offset: 0x003C1EFC
 	private bool RefreshVisible()
 	{
 		if (this.ManipulateCursorUnit == null)
@@ -248,7 +248,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		return flag;
 	}
 
-	// Token: 0x0600F674 RID: 63092 RVA: 0x003B825C File Offset: 0x003B645C
+	// Token: 0x0600CA93 RID: 51859 RVA: 0x003C3D48 File Offset: 0x003C1F48
 	private bool HasDisableTag()
 	{
 		if (this.DisableTagIds.Count == 0)
@@ -265,7 +265,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		return false;
 	}
 
-	// Token: 0x0600F675 RID: 63093 RVA: 0x003B82CC File Offset: 0x003B64CC
+	// Token: 0x0600CA94 RID: 51860 RVA: 0x003C3DB8 File Offset: 0x003C1FB8
 	private void PlayActivateEffect()
 	{
 		ManipulateCursorUnit manipulateCursorUnit = this.ManipulateCursorUnit;
@@ -276,7 +276,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		manipulateCursorUnit.PlayActivateEffect();
 	}
 
-	// Token: 0x0600F676 RID: 63094 RVA: 0x003B82E0 File Offset: 0x003B64E0
+	// Token: 0x0600CA95 RID: 51861 RVA: 0x003C3DCC File Offset: 0x003C1FCC
 	[NullableContext(1)]
 	private void Activate(Entity entity)
 	{
@@ -311,7 +311,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		this.NewManipulateCursorUnit();
 	}
 
-	// Token: 0x0600F677 RID: 63095 RVA: 0x003B839C File Offset: 0x003B659C
+	// Token: 0x0600CA96 RID: 51862 RVA: 0x003C3E88 File Offset: 0x003C2088
 	private void RefreshIconPath()
 	{
 		if (!Info.Instance.IsInTouch())
@@ -329,7 +329,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		manipulateCursorUnit.SetIconPath(iconPath);
 	}
 
-	// Token: 0x0600F678 RID: 63096 RVA: 0x003B83E6 File Offset: 0x003B65E6
+	// Token: 0x0600CA97 RID: 51863 RVA: 0x003C3ED2 File Offset: 0x003C20D2
 	private void Deactivate()
 	{
 		if (this.ManipulateCursorUnit == null)
@@ -343,7 +343,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		this.SelectActor = null;
 	}
 
-	// Token: 0x0600F679 RID: 63097 RVA: 0x003B841C File Offset: 0x003B661C
+	// Token: 0x0600CA98 RID: 51864 RVA: 0x003C3F08 File Offset: 0x003C2108
 	private void ClearDisableTagTasks()
 	{
 		foreach (ITagTask tagTask in this.DisableTagTasks)
@@ -353,7 +353,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		this.DisableTagTasks.Clear();
 	}
 
-	// Token: 0x0600F67A RID: 63098 RVA: 0x003B8478 File Offset: 0x003B6678
+	// Token: 0x0600CA99 RID: 51865 RVA: 0x003C3F64 File Offset: 0x003C2164
 	private void Refresh()
 	{
 		if (this.ManipulateCursorUnit == null)
@@ -386,13 +386,13 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		this.ManipulateCursorUnit.Refresh(isInScreen, vector2D, this.IsCastTarget);
 	}
 
-	// Token: 0x0600F67B RID: 63099 RVA: 0x003B855E File Offset: 0x003B675E
+	// Token: 0x0600CA9A RID: 51866 RVA: 0x003C404A File Offset: 0x003C224A
 	private global::Vector GetPlayerLocation()
 	{
 		return this.CurrentEntityActorComponent.ActorLocationProxy;
 	}
 
-	// Token: 0x0600F67C RID: 63100 RVA: 0x003B856C File Offset: 0x003B676C
+	// Token: 0x0600CA9B RID: 51867 RVA: 0x003C4058 File Offset: 0x003C2258
 	private global::Vector GetSelectActorLocation()
 	{
 		Entity selectEntity = this.SelectEntity;
@@ -439,7 +439,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		return vector;
 	}
 
-	// Token: 0x0600F67D RID: 63101 RVA: 0x003B868F File Offset: 0x003B688F
+	// Token: 0x0600CA9C RID: 51868 RVA: 0x003C417B File Offset: 0x003C237B
 	private void NewManipulateCursorUnit()
 	{
 		base.NewHudUnitWithReturn<ManipulateCursorUnit>(typeof(ManipulateCursorUnit), "UiItem_ObjControl", out this.ManipulateCursorUnit, true, delegate(ManipulateCursorUnit _)
@@ -461,7 +461,7 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		}, false);
 	}
 
-	// Token: 0x0600F67E RID: 63102 RVA: 0x003B86BC File Offset: 0x003B68BC
+	// Token: 0x0600CA9D RID: 51869 RVA: 0x003C41A8 File Offset: 0x003C23A8
 	private void ChangeState(EManipulateCursorState state)
 	{
 		if (this.State == state)
@@ -515,61 +515,61 @@ public class ManipulateCursorHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0400720E RID: 29198
+	// Token: 0x040072EF RID: 29423
 	private const int COMPLETE_ANIM_TIME = 500;
 
-	// Token: 0x0400720F RID: 29199
+	// Token: 0x040072F0 RID: 29424
 	private const int INTERRUPT_ANIM_TIME = 200;
 
-	// Token: 0x04007210 RID: 29200
+	// Token: 0x040072F1 RID: 29425
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ListenTagStat = Stat.Create("[ManipulateCursorHandle]ListenTag", "", "");
 
-	// Token: 0x04007211 RID: 29201
+	// Token: 0x040072F2 RID: 29426
 	private EManipulateCursorState State;
 
-	// Token: 0x04007212 RID: 29202
+	// Token: 0x040072F3 RID: 29427
 	private ManipulateCursorUnit ManipulateCursorUnit;
 
-	// Token: 0x04007213 RID: 29203
+	// Token: 0x040072F4 RID: 29428
 	private Entity SelectEntity;
 
-	// Token: 0x04007214 RID: 29204
+	// Token: 0x040072F5 RID: 29429
 	private BaseActorComponent SelectActorComponent;
 
-	// Token: 0x04007215 RID: 29205
+	// Token: 0x040072F6 RID: 29430
 	private AActor SelectActor;
 
-	// Token: 0x04007216 RID: 29206
+	// Token: 0x040072F7 RID: 29431
 	private FVector ActorOrigin = new FVector();
 
-	// Token: 0x04007217 RID: 29207
+	// Token: 0x040072F8 RID: 29432
 	private bool IsCastTarget;
 
-	// Token: 0x04007218 RID: 29208
+	// Token: 0x040072F9 RID: 29433
 	private EntityHandle CurrentEntity;
 
-	// Token: 0x04007219 RID: 29209
+	// Token: 0x040072FA RID: 29434
 	private BaseActorComponent CurrentEntityActorComponent;
 
-	// Token: 0x0400721A RID: 29210
+	// Token: 0x040072FB RID: 29435
 	private CharacterManipulateComponent CurrentEntityManipulateComponent;
 
-	// Token: 0x0400721B RID: 29211
+	// Token: 0x040072FC RID: 29436
 	private FightCameraLogicComponent FightCameraLogicComponent;
 
-	// Token: 0x0400721C RID: 29212
+	// Token: 0x040072FD RID: 29437
 	private BaseTagComponent CurrentTagComponent;
 
-	// Token: 0x0400721D RID: 29213
+	// Token: 0x040072FE RID: 29438
 	[Nullable(1)]
 	private readonly List<int> DisableTagIds = new List<int>();
 
-	// Token: 0x0400721E RID: 29214
+	// Token: 0x040072FF RID: 29439
 	[Nullable(1)]
 	private readonly List<ITagTask> DisableTagTasks = new List<ITagTask>();
 
-	// Token: 0x0400721F RID: 29215
+	// Token: 0x04007300 RID: 29440
 	private bool LockEntityAimVisible = true;
 }

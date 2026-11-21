@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200618E RID: 24974
+	// Token: 0x020067F9 RID: 26617
 	public struct IAlertValueSpeedChangeType : IFlatbufferObject
 	{
-		// Token: 0x1700BA30 RID: 47664
-		// (get) Token: 0x0602B044 RID: 176196 RVA: 0x005EF178 File Offset: 0x005ED378
+		// Token: 0x1700C3AE RID: 50094
+		// (get) Token: 0x0602D775 RID: 186229 RVA: 0x006399EC File Offset: 0x00637BEC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B045 RID: 176197 RVA: 0x005EF185 File Offset: 0x005ED385
+		// Token: 0x0602D776 RID: 186230 RVA: 0x006399F9 File Offset: 0x00637BF9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B046 RID: 176198 RVA: 0x005EF18C File Offset: 0x005ED38C
+		// Token: 0x0602D777 RID: 186231 RVA: 0x00639A00 File Offset: 0x00637C00
 		public static IAlertValueSpeedChangeType GetRootAsIAlertValueSpeedChangeType(ByteBuffer _bb)
 		{
 			return IAlertValueSpeedChangeType.GetRootAsIAlertValueSpeedChangeType(_bb, default(IAlertValueSpeedChangeType));
 		}
 
-		// Token: 0x0602B047 RID: 176199 RVA: 0x005EF1A8 File Offset: 0x005ED3A8
+		// Token: 0x0602D778 RID: 186232 RVA: 0x00639A1C File Offset: 0x00637C1C
 		public static IAlertValueSpeedChangeType GetRootAsIAlertValueSpeedChangeType(ByteBuffer _bb, IAlertValueSpeedChangeType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B048 RID: 176200 RVA: 0x005EF1C5 File Offset: 0x005ED3C5
+		// Token: 0x0602D779 RID: 186233 RVA: 0x00639A39 File Offset: 0x00637C39
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B049 RID: 176201 RVA: 0x005EF1D4 File Offset: 0x005ED3D4
+		// Token: 0x0602D77A RID: 186234 RVA: 0x00639A48 File Offset: 0x00637C48
 		public IAlertValueSpeedChangeType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BA31 RID: 47665
-		// (get) Token: 0x0602B04A RID: 176202 RVA: 0x005EF1E4 File Offset: 0x005ED3E4
+		// Token: 0x1700C3AF RID: 50095
+		// (get) Token: 0x0602D77B RID: 186235 RVA: 0x00639A58 File Offset: 0x00637C58
 		public EValueChangeType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B04B RID: 176203 RVA: 0x005EF220 File Offset: 0x005ED420
+		// Token: 0x0602D77C RID: 186236 RVA: 0x00639A94 File Offset: 0x00637C94
 		public static Offset<IAlertValueSpeedChangeType> CreateIAlertValueSpeedChangeType(FlatBufferBuilder builder, EValueChangeType Type = EValueChangeType.AddOrSub)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAlertValueSpeedChangeType.EndIAlertValueSpeedChangeType(builder);
 		}
 
-		// Token: 0x0602B04C RID: 176204 RVA: 0x005EF236 File Offset: 0x005ED436
+		// Token: 0x0602D77D RID: 186237 RVA: 0x00639AAA File Offset: 0x00637CAA
 		public static void StartIAlertValueSpeedChangeType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602B04D RID: 176205 RVA: 0x005EF23F File Offset: 0x005ED43F
+		// Token: 0x0602D77E RID: 186238 RVA: 0x00639AB3 File Offset: 0x00637CB3
 		public static void AddType(FlatBufferBuilder builder, EValueChangeType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602B04E RID: 176206 RVA: 0x005EF24A File Offset: 0x005ED44A
+		// Token: 0x0602D77F RID: 186239 RVA: 0x00639ABE File Offset: 0x00637CBE
 		public static Offset<IAlertValueSpeedChangeType> EndIAlertValueSpeedChangeType(FlatBufferBuilder builder)
 		{
 			return new Offset<IAlertValueSpeedChangeType>(builder.EndTable());
 		}
 
-		// Token: 0x0602B04F RID: 176207 RVA: 0x005EF258 File Offset: 0x005ED458
+		// Token: 0x0602D780 RID: 186240 RVA: 0x00639ACC File Offset: 0x00637CCC
 		public IAlertValueSpeedChangeTypeT UnPack()
 		{
 			IAlertValueSpeedChangeTypeT alertValueSpeedChangeTypeT = new IAlertValueSpeedChangeTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return alertValueSpeedChangeTypeT;
 		}
 
-		// Token: 0x0602B050 RID: 176208 RVA: 0x005EF273 File Offset: 0x005ED473
+		// Token: 0x0602D781 RID: 186241 RVA: 0x00639AE7 File Offset: 0x00637CE7
 		public void UnPackTo(IAlertValueSpeedChangeTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602B051 RID: 176209 RVA: 0x005EF284 File Offset: 0x005ED484
+		// Token: 0x0602D782 RID: 186242 RVA: 0x00639AF8 File Offset: 0x00637CF8
 		public static Offset<IAlertValueSpeedChangeType> Pack(FlatBufferBuilder builder, IAlertValueSpeedChangeTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAlertValueSpeedChangeType.CreateIAlertValueSpeedChangeType(builder, _o.Type);
 		}
 
-		// Token: 0x0401069A RID: 67226
+		// Token: 0x040114A9 RID: 70825
 		private Table __p;
 	}
 }

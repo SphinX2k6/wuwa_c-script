@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C28 RID: 23592
+	// Token: 0x02006247 RID: 25159
 	public class TFoxJumpInteractPointRelationTypeUnion
 	{
-		// Token: 0x1700B1F8 RID: 45560
-		// (get) Token: 0x06028747 RID: 165703 RVA: 0x00591250 File Offset: 0x0058F450
-		// (set) Token: 0x06028748 RID: 165704 RVA: 0x00591258 File Offset: 0x0058F458
+		// Token: 0x1700BB46 RID: 47942
+		// (get) Token: 0x0602AD39 RID: 175417 RVA: 0x005D91E0 File Offset: 0x005D73E0
+		// (set) Token: 0x0602AD3A RID: 175418 RVA: 0x005D91E8 File Offset: 0x005D73E8
 		public TFoxJumpInteractPointRelationType Type { get; set; }
 
-		// Token: 0x1700B1F9 RID: 45561
-		// (get) Token: 0x06028749 RID: 165705 RVA: 0x00591261 File Offset: 0x0058F461
-		// (set) Token: 0x0602874A RID: 165706 RVA: 0x00591269 File Offset: 0x0058F469
+		// Token: 0x1700BB47 RID: 47943
+		// (get) Token: 0x0602AD3B RID: 175419 RVA: 0x005D91F1 File Offset: 0x005D73F1
+		// (set) Token: 0x0602AD3C RID: 175420 RVA: 0x005D91F9 File Offset: 0x005D73F9
 		public object Value { get; set; }
 
-		// Token: 0x0602874B RID: 165707 RVA: 0x00591272 File Offset: 0x0058F472
+		// Token: 0x0602AD3D RID: 175421 RVA: 0x005D9202 File Offset: 0x005D7402
 		public TFoxJumpInteractPointRelationTypeUnion()
 		{
 			this.Type = TFoxJumpInteractPointRelationType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602874C RID: 165708 RVA: 0x00591288 File Offset: 0x0058F488
+		// Token: 0x0602AD3E RID: 175422 RVA: 0x005D9218 File Offset: 0x005D7418
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602874D RID: 165709 RVA: 0x0059129A File Offset: 0x0058F49A
+		// Token: 0x0602AD3F RID: 175423 RVA: 0x005D922A File Offset: 0x005D742A
 		public IFoxJumpPositionOnPathDrivenSpawnedActorT AsIFoxJumpPositionOnPathDrivenSpawnedActor()
 		{
 			return this.As<IFoxJumpPositionOnPathDrivenSpawnedActorT>();
 		}
 
-		// Token: 0x0602874E RID: 165710 RVA: 0x005912A2 File Offset: 0x0058F4A2
+		// Token: 0x0602AD40 RID: 175424 RVA: 0x005D9232 File Offset: 0x005D7432
 		public static TFoxJumpInteractPointRelationTypeUnion FromIFoxJumpPositionOnPathDrivenSpawnedActor(IFoxJumpPositionOnPathDrivenSpawnedActorT _ifoxjumppositiononpathdrivenspawnedactor)
 		{
 			return new TFoxJumpInteractPointRelationTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602874F RID: 165711 RVA: 0x005912B7 File Offset: 0x0058F4B7
+		// Token: 0x0602AD41 RID: 175425 RVA: 0x005D9247 File Offset: 0x005D7447
 		public IFoxJumpPositionOnThisEntityT AsIFoxJumpPositionOnThisEntity()
 		{
 			return this.As<IFoxJumpPositionOnThisEntityT>();
 		}
 
-		// Token: 0x06028750 RID: 165712 RVA: 0x005912BF File Offset: 0x0058F4BF
+		// Token: 0x0602AD42 RID: 175426 RVA: 0x005D924F File Offset: 0x005D744F
 		public static TFoxJumpInteractPointRelationTypeUnion FromIFoxJumpPositionOnThisEntity(IFoxJumpPositionOnThisEntityT _ifoxjumppositiononthisentity)
 		{
 			return new TFoxJumpInteractPointRelationTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028751 RID: 165713 RVA: 0x005912D4 File Offset: 0x0058F4D4
+		// Token: 0x0602AD43 RID: 175427 RVA: 0x005D9264 File Offset: 0x005D7464
 		public static int Pack(FlatBufferBuilder builder, TFoxJumpInteractPointRelationTypeUnion _o)
 		{
 			TFoxJumpInteractPointRelationType type = _o.Type;

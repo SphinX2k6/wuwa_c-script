@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Actor
 {
-	// Token: 0x02005EF8 RID: 24312
+	// Token: 0x0200653B RID: 25915
 	public class IActorRefT
 	{
-		// Token: 0x1700B5C1 RID: 46529
-		// (get) Token: 0x06029C1C RID: 171036 RVA: 0x005BADD2 File Offset: 0x005B8FD2
-		// (set) Token: 0x06029C1D RID: 171037 RVA: 0x005BADDA File Offset: 0x005B8FDA
+		// Token: 0x1700BF2C RID: 48940
+		// (get) Token: 0x0602C2D0 RID: 180944 RVA: 0x006042B6 File Offset: 0x006024B6
+		// (set) Token: 0x0602C2D1 RID: 180945 RVA: 0x006042BE File Offset: 0x006024BE
 		public string ActorName { get; set; }
 
-		// Token: 0x1700B5C2 RID: 46530
-		// (get) Token: 0x06029C1E RID: 171038 RVA: 0x005BADE3 File Offset: 0x005B8FE3
-		// (set) Token: 0x06029C1F RID: 171039 RVA: 0x005BADEB File Offset: 0x005B8FEB
+		// Token: 0x1700BF2D RID: 48941
+		// (get) Token: 0x0602C2D2 RID: 180946 RVA: 0x006042C7 File Offset: 0x006024C7
+		// (set) Token: 0x0602C2D3 RID: 180947 RVA: 0x006042CF File Offset: 0x006024CF
 		public string PathName { get; set; }
 
-		// Token: 0x1700B5C3 RID: 46531
-		// (get) Token: 0x06029C20 RID: 171040 RVA: 0x005BADF4 File Offset: 0x005B8FF4
-		// (set) Token: 0x06029C21 RID: 171041 RVA: 0x005BADFC File Offset: 0x005B8FFC
+		// Token: 0x1700BF2E RID: 48942
+		// (get) Token: 0x0602C2D4 RID: 180948 RVA: 0x006042D8 File Offset: 0x006024D8
+		// (set) Token: 0x0602C2D5 RID: 180949 RVA: 0x006042E0 File Offset: 0x006024E0
 		public EActorPlatform Platform { get; set; }
 
-		// Token: 0x1700B5C4 RID: 46532
-		// (get) Token: 0x06029C22 RID: 171042 RVA: 0x005BAE05 File Offset: 0x005B9005
-		// (set) Token: 0x06029C23 RID: 171043 RVA: 0x005BAE0D File Offset: 0x005B900D
+		// Token: 0x1700BF2F RID: 48943
+		// (get) Token: 0x0602C2D6 RID: 180950 RVA: 0x006042E9 File Offset: 0x006024E9
+		// (set) Token: 0x0602C2D7 RID: 180951 RVA: 0x006042F1 File Offset: 0x006024F1
 		public byte NullMask { get; set; }
 
-		// Token: 0x06029C24 RID: 171044 RVA: 0x005BAE16 File Offset: 0x005B9016
+		// Token: 0x0602C2D8 RID: 180952 RVA: 0x006042FA File Offset: 0x006024FA
 		public IActorRefT()
 		{
 			this.ActorName = null;

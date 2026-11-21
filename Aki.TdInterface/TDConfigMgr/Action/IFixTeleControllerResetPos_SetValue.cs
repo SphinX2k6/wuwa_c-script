@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A74 RID: 6772
+	// Token: 0x02001C09 RID: 7177
 	public class IFixTeleControllerResetPos_SetValue
 	{
-		// Token: 0x0400597D RID: 22909
+		// Token: 0x04005DE2 RID: 24034
 		public int PositionEntityId;
 	}
 }

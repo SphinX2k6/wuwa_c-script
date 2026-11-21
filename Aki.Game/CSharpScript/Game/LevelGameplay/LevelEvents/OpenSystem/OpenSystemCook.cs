@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006BD1 RID: 27601
+	// Token: 0x02005D4A RID: 23882
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemCook : OpenSystemBase
 	{
-		// Token: 0x06044388 RID: 279432 RVA: 0x010D0A81 File Offset: 0x010CEC81
+		// Token: 0x0603A4E0 RID: 238816 RVA: 0x0107A9D5 File Offset: 0x01078BD5
 		public OpenSystemCook(LevelEventOpenSystem eventBase)
 		{
 			Dictionary<int, EUiViewName> dictionary = new Dictionary<int, EUiViewName>();
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			base..ctor(eventBase);
 		}
 
-		// Token: 0x06044389 RID: 279433 RVA: 0x010D0ABC File Offset: 0x010CECBC
+		// Token: 0x0603A4E1 RID: 238817 RVA: 0x0107AA10 File Offset: 0x01078C10
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return <ExecuteOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604438A RID: 279434 RVA: 0x010D0B08 File Offset: 0x010CED08
+		// Token: 0x0603A4E2 RID: 238818 RVA: 0x0107AA5C File Offset: 0x01078C5C
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return new EUiViewName?(EUiViewName.CookRootView);
 		}
 
-		// Token: 0x04023988 RID: 145800
+		// Token: 0x0401EC2A RID: 125994
 		private readonly Dictionary<int, EUiViewName> CookViewMap;
 	}
 }

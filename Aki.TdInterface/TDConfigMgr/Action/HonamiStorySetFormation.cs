@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200174E RID: 5966
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018CF RID: 6351
 	public class HonamiStorySetFormation : ActionParams
 	{
-		// Token: 0x06007E3F RID: 32319 RVA: 0x0012E59C File Offset: 0x0012C79C
+		// Token: 0x0600852F RID: 34095 RVA: 0x0013D7FC File Offset: 0x0013B9FC
 		private HonamiStorySetFormation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007E40 RID: 32320 RVA: 0x0012E5D4 File Offset: 0x0012C7D4
+		// Token: 0x06008530 RID: 34096 RVA: 0x0013D834 File Offset: 0x0013BA34
 		public static HonamiStorySetFormation Create([Nullable(2)] HonamiStorySetFormation instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007E41 RID: 32321 RVA: 0x0012E5E7 File Offset: 0x0012C7E7
+		// Token: 0x06008531 RID: 34097 RVA: 0x0013D847 File Offset: 0x0013BA47
 		public static HonamiStorySetFormation CreateFromSetValue([Nullable(2)] HonamiStorySetFormation_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007E42 RID: 32322 RVA: 0x0012E5FA File Offset: 0x0012C7FA
+		// Token: 0x06008532 RID: 34098 RVA: 0x0013D85A File Offset: 0x0013BA5A
 		public HonamiStorySetFormation_SetValue ToSetValue()
 		{
 			return new HonamiStorySetFormation_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700297F RID: 10623
-		// (get) Token: 0x06007E43 RID: 32323 RVA: 0x0012E631 File Offset: 0x0012C831
-		// (set) Token: 0x06007E44 RID: 32324 RVA: 0x0012E65C File Offset: 0x0012C85C
+		// Token: 0x17002B6D RID: 11117
+		// (get) Token: 0x06008533 RID: 34099 RVA: 0x0013D891 File Offset: 0x0013BA91
+		// (set) Token: 0x06008534 RID: 34100 RVA: 0x0013D8BC File Offset: 0x0013BABC
 		public virtual int ActivityId
 		{
 			get
@@ -86,20 +84,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002980 RID: 10624
-		// (get) Token: 0x06007E45 RID: 32325 RVA: 0x0012E66C File Offset: 0x0012C86C
-		// (set) Token: 0x06007E46 RID: 32326 RVA: 0x0012E6FF File Offset: 0x0012C8FF
+		// Token: 0x17002B6E RID: 11118
+		// (get) Token: 0x06008535 RID: 34101 RVA: 0x0013D8CC File Offset: 0x0013BACC
+		// (set) Token: 0x06008536 RID: 34102 RVA: 0x0013D95F File Offset: 0x0013BB5F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IHonamiStoryRoleSetting> RoleSetting
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -130,7 +128,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -139,20 +137,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002981 RID: 10625
-		// (get) Token: 0x06007E47 RID: 32327 RVA: 0x0012E714 File Offset: 0x0012C914
-		// (set) Token: 0x06007E48 RID: 32328 RVA: 0x0012E7A7 File Offset: 0x0012C9A7
+		// Token: 0x17002B6F RID: 11119
+		// (get) Token: 0x06008537 RID: 34103 RVA: 0x0013D974 File Offset: 0x0013BB74
+		// (set) Token: 0x06008538 RID: 34104 RVA: 0x0013DA07 File Offset: 0x0013BC07
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IHonamiStoryWeaponEquipSetting> WeaponSetting
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -183,7 +181,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -192,20 +190,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002982 RID: 10626
-		// (get) Token: 0x06007E49 RID: 32329 RVA: 0x0012E7BC File Offset: 0x0012C9BC
-		// (set) Token: 0x06007E4A RID: 32330 RVA: 0x0012E84F File Offset: 0x0012CA4F
+		// Token: 0x17002B70 RID: 11120
+		// (get) Token: 0x06008539 RID: 34105 RVA: 0x0013DA1C File Offset: 0x0013BC1C
+		// (set) Token: 0x0600853A RID: 34106 RVA: 0x0013DAAF File Offset: 0x0013BCAF
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IHonamiStoryPluginEquipSetting> PluginSetting
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -236,7 +234,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -245,45 +243,45 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400506C RID: 20588
+		// Token: 0x040054A2 RID: 21666
 		[Nullable(2)]
 		protected new HonamiStorySetFormation FbInstance;
 
-		// Token: 0x0400506D RID: 20589
+		// Token: 0x040054A3 RID: 21667
 		[Nullable(2)]
 		protected HonamiStorySetFormation_SetValue PocoInterface;
 
-		// Token: 0x0400506E RID: 20590
+		// Token: 0x040054A4 RID: 21668
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IHonamiStoryRoleSetting> _RoleSettingCache;
 
-		// Token: 0x0400506F RID: 20591
+		// Token: 0x040054A5 RID: 21669
 		private bool _RoleSettingInited;
 
-		// Token: 0x04005070 RID: 20592
+		// Token: 0x040054A6 RID: 21670
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IHonamiStoryWeaponEquipSetting> _WeaponSettingCache;
 
-		// Token: 0x04005071 RID: 20593
+		// Token: 0x040054A7 RID: 21671
 		private bool _WeaponSettingInited;
 
-		// Token: 0x04005072 RID: 20594
+		// Token: 0x040054A8 RID: 21672
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IHonamiStoryPluginEquipSetting> _PluginSettingCache;
 
-		// Token: 0x04005073 RID: 20595
+		// Token: 0x040054A9 RID: 21673
 		private bool _PluginSettingInited;
 	}
 }

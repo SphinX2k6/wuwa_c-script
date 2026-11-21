@@ -6,17 +6,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029C4 RID: 10692
+// Token: 0x02001F3F RID: 7999
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerResetView : UiViewBase
 {
-	// Token: 0x06016292 RID: 90770 RVA: 0x0059ADDA File Offset: 0x00598FDA
+	// Token: 0x06013C98 RID: 81048 RVA: 0x005C5D92 File Offset: 0x005C3F92
 	public ShipTowerResetView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016293 RID: 90771 RVA: 0x0059ADE4 File Offset: 0x00598FE4
+	// Token: 0x06013C99 RID: 81049 RVA: 0x005C5D9C File Offset: 0x005C3F9C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,12 +33,12 @@ public class ShipTowerResetView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016294 RID: 90772 RVA: 0x0059AE90 File Offset: 0x00599090
+	// Token: 0x06013C9A RID: 81050 RVA: 0x005C5E48 File Offset: 0x005C4048
 	private void InitDataParam()
 	{
 	}
 
-	// Token: 0x06016295 RID: 90773 RVA: 0x0059AE94 File Offset: 0x00599094
+	// Token: 0x06013C9B RID: 81051 RVA: 0x005C5E4C File Offset: 0x005C404C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerResetView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ public class ShipTowerResetView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016296 RID: 90774 RVA: 0x0059AED8 File Offset: 0x005990D8
+	// Token: 0x06013C9C RID: 81052 RVA: 0x005C5E90 File Offset: 0x005C4090
 	protected override void OnBeforeShow()
 	{
 		ShipTowerResetViewParams shipTowerResetViewParams = this.OpenParam as ShipTowerResetViewParams;
@@ -61,7 +61,7 @@ public class ShipTowerResetView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016297 RID: 90775 RVA: 0x0059AF30 File Offset: 0x00599130
+	// Token: 0x06013C9D RID: 81053 RVA: 0x005C5EE8 File Offset: 0x005C40E8
 	private void OnClickSure()
 	{
 		ShipTowerResetViewParams shipTowerResetViewParams = this.OpenParam as ShipTowerResetViewParams;
@@ -73,26 +73,26 @@ public class ShipTowerResetView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400A50F RID: 42255
+	// Token: 0x0400A8F9 RID: 43257
 	private ShipTowerResetItem ResetItem1;
 
-	// Token: 0x0400A510 RID: 42256
+	// Token: 0x0400A8FA RID: 43258
 	private ShipTowerResetItem ResetItem2;
 
-	// Token: 0x02008FE3 RID: 36835
+	// Token: 0x0200822A RID: 33322
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E989 RID: 190857
+		// Token: 0x0402A081 RID: 172161
 		public const int ItemReset1 = 0;
 
-		// Token: 0x0402E98A RID: 190858
+		// Token: 0x0402A082 RID: 172162
 		public const int ItemReset2 = 1;
 
-		// Token: 0x0402E98B RID: 190859
+		// Token: 0x0402A083 RID: 172163
 		public const int BtnCancel = 2;
 
-		// Token: 0x0402E98C RID: 190860
+		// Token: 0x0402A084 RID: 172164
 		public const int BtnSure = 3;
 	}
 }

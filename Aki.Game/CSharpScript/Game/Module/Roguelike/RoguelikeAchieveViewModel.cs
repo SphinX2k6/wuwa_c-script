@@ -4,28 +4,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DBE RID: 19902
+	// Token: 0x02003D87 RID: 15751
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoguelikeAchieveViewModel
 	{
-		// Token: 0x06033609 RID: 210441 RVA: 0x00BFF15C File Offset: 0x00BFD35C
+		// Token: 0x06028476 RID: 164982 RVA: 0x00B4869C File Offset: 0x00B4689C
 		[NullableContext(1)]
 		public void Init(IRoguelikeAchieveViewInfo viewState)
 		{
 			this.ViewStateInternal = viewState;
 		}
 
-		// Token: 0x0603360A RID: 210442 RVA: 0x00BFF165 File Offset: 0x00BFD365
+		// Token: 0x06028477 RID: 164983 RVA: 0x00B486A5 File Offset: 0x00B468A5
 		[NullableContext(1)]
 		public void SetViewState(IRoguelikeAchieveViewInfo viewState)
 		{
 			this.ViewStateInternal = viewState;
 		}
 
-		// Token: 0x17007EA9 RID: 32425
-		// (get) Token: 0x0603360C RID: 210444 RVA: 0x00BFF17C File Offset: 0x00BFD37C
-		// (set) Token: 0x0603360B RID: 210443 RVA: 0x00BFF16E File Offset: 0x00BFD36E
+		// Token: 0x17005259 RID: 21081
+		// (get) Token: 0x06028479 RID: 164985 RVA: 0x00B486BC File Offset: 0x00B468BC
+		// (set) Token: 0x06028478 RID: 164984 RVA: 0x00B486AE File Offset: 0x00B468AE
 		public ERoguelikeAchieveViewMode Mode
 		{
 			get
@@ -38,8 +38,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007EAA RID: 32426
-		// (get) Token: 0x0603360D RID: 210445 RVA: 0x00BFF189 File Offset: 0x00BFD389
+		// Token: 0x1700525A RID: 21082
+		// (get) Token: 0x0602847A RID: 164986 RVA: 0x00B486C9 File Offset: 0x00B468C9
 		public bool IsArchiveMode
 		{
 			get
@@ -48,8 +48,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007EAB RID: 32427
-		// (get) Token: 0x0603360E RID: 210446 RVA: 0x00BFF194 File Offset: 0x00BFD394
+		// Token: 0x1700525B RID: 21083
+		// (get) Token: 0x0602847B RID: 164987 RVA: 0x00B486D4 File Offset: 0x00B468D4
 		public bool IsUseArchiveMode
 		{
 			get
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0603360F RID: 210447 RVA: 0x00BFF1A0 File Offset: 0x00BFD3A0
+		// Token: 0x0602847C RID: 164988 RVA: 0x00B486E0 File Offset: 0x00B468E0
 		public void TempArchiveSaved(int slotId)
 		{
 			this.IsTempRecordSaved = true;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033610 RID: 210448 RVA: 0x00BFF1FC File Offset: 0x00BFD3FC
+		// Token: 0x0602847D RID: 164989 RVA: 0x00B4873C File Offset: 0x00B4693C
 		public RoguelikeAchieveSlotData GetArchiveBySlotId(int slotId)
 		{
 			return this.ArchiveSlotList.Find(delegate(RoguelikeAchieveSlotData data)
@@ -83,9 +83,9 @@ namespace CSharpScript.Game.Module.Roguelike
 			});
 		}
 
-		// Token: 0x17007EAC RID: 32428
-		// (get) Token: 0x06033612 RID: 210450 RVA: 0x00BFF23B File Offset: 0x00BFD43B
-		// (set) Token: 0x06033611 RID: 210449 RVA: 0x00BFF22D File Offset: 0x00BFD42D
+		// Token: 0x1700525C RID: 21084
+		// (get) Token: 0x0602847F RID: 164991 RVA: 0x00B4877B File Offset: 0x00B4697B
+		// (set) Token: 0x0602847E RID: 164990 RVA: 0x00B4876D File Offset: 0x00B4696D
 		public RogueArchiveInfoData TempRecordInfo
 		{
 			get
@@ -98,9 +98,9 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007EAD RID: 32429
-		// (get) Token: 0x06033613 RID: 210451 RVA: 0x00BFF248 File Offset: 0x00BFD448
-		// (set) Token: 0x06033614 RID: 210452 RVA: 0x00BFF250 File Offset: 0x00BFD450
+		// Token: 0x1700525D RID: 21085
+		// (get) Token: 0x06028480 RID: 164992 RVA: 0x00B48788 File Offset: 0x00B46988
+		// (set) Token: 0x06028481 RID: 164993 RVA: 0x00B48790 File Offset: 0x00B46990
 		public bool IsTempRecordSaved
 		{
 			get
@@ -113,8 +113,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007EAE RID: 32430
-		// (get) Token: 0x06033615 RID: 210453 RVA: 0x00BFF259 File Offset: 0x00BFD459
+		// Token: 0x1700525E RID: 21086
+		// (get) Token: 0x06028482 RID: 164994 RVA: 0x00B48799 File Offset: 0x00B46999
 		public bool ShouldShowTempRecord
 		{
 			get
@@ -123,13 +123,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033616 RID: 210454 RVA: 0x00BFF270 File Offset: 0x00BFD470
+		// Token: 0x06028483 RID: 164995 RVA: 0x00B487B0 File Offset: 0x00B469B0
 		public RoguelikeAchieveSlotData GetArchiveSlot(int slotIndex)
 		{
 			return this.ArchiveSlotList.Find((RoguelikeAchieveSlotData slotData) => slotData.SlotIndex == slotIndex);
 		}
 
-		// Token: 0x06033617 RID: 210455 RVA: 0x00BFF2A1 File Offset: 0x00BFD4A1
+		// Token: 0x06028484 RID: 164996 RVA: 0x00B487E1 File Offset: 0x00B469E1
 		public RogueArchiveInfoData GetArchiveInfo(int slotIndex)
 		{
 			RoguelikeAchieveSlotData archiveSlot = this.GetArchiveSlot(slotIndex);
@@ -140,9 +140,9 @@ namespace CSharpScript.Game.Module.Roguelike
 			return archiveSlot.ArchiveInfoData;
 		}
 
-		// Token: 0x17007EAF RID: 32431
-		// (get) Token: 0x06033618 RID: 210456 RVA: 0x00BFF2B5 File Offset: 0x00BFD4B5
-		// (set) Token: 0x06033619 RID: 210457 RVA: 0x00BFF2BD File Offset: 0x00BFD4BD
+		// Token: 0x1700525F RID: 21087
+		// (get) Token: 0x06028485 RID: 164997 RVA: 0x00B487F5 File Offset: 0x00B469F5
+		// (set) Token: 0x06028486 RID: 164998 RVA: 0x00B487FD File Offset: 0x00B469FD
 		public int SelectedRecordGridIndex
 		{
 			get
@@ -155,9 +155,9 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007EB0 RID: 32432
-		// (get) Token: 0x0603361A RID: 210458 RVA: 0x00BFF2C6 File Offset: 0x00BFD4C6
-		// (set) Token: 0x0603361B RID: 210459 RVA: 0x00BFF2CE File Offset: 0x00BFD4CE
+		// Token: 0x17005260 RID: 21088
+		// (get) Token: 0x06028487 RID: 164999 RVA: 0x00B48806 File Offset: 0x00B46A06
+		// (set) Token: 0x06028488 RID: 165000 RVA: 0x00B4880E File Offset: 0x00B46A0E
 		public bool IsTempRecordSelected
 		{
 			get
@@ -170,8 +170,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007EB1 RID: 32433
-		// (get) Token: 0x0603361C RID: 210460 RVA: 0x00BFF2D7 File Offset: 0x00BFD4D7
+		// Token: 0x17005261 RID: 21089
+		// (get) Token: 0x06028489 RID: 165001 RVA: 0x00B48817 File Offset: 0x00B46A17
 		public RogueArchiveInfoData SelectedArchiveInfoData
 		{
 			get
@@ -189,8 +189,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007EB2 RID: 32434
-		// (get) Token: 0x0603361D RID: 210461 RVA: 0x00BFF2F9 File Offset: 0x00BFD4F9
+		// Token: 0x17005262 RID: 21090
+		// (get) Token: 0x0602848A RID: 165002 RVA: 0x00B48839 File Offset: 0x00B46A39
 		public RoguelikeAchieveSlotData SelectedSlotData
 		{
 			get
@@ -207,24 +207,24 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0401B48E RID: 111758
+		// Token: 0x04015E61 RID: 89697
 		public int InstId;
 
-		// Token: 0x0401B48F RID: 111759
+		// Token: 0x04015E62 RID: 89698
 		[Nullable(1)]
 		public List<RoguelikeAchieveSlotData> ArchiveSlotList = new List<RoguelikeAchieveSlotData>();
 
-		// Token: 0x0401B490 RID: 111760
+		// Token: 0x04015E63 RID: 89699
 		private bool IsTempRecordSavedInternal;
 
-		// Token: 0x0401B491 RID: 111761
+		// Token: 0x04015E64 RID: 89700
 		[Nullable(1)]
 		private IRoguelikeAchieveViewInfo ViewStateInternal;
 
-		// Token: 0x0401B492 RID: 111762
+		// Token: 0x04015E65 RID: 89701
 		private int SelectedRecordGridIndexInternal = -1;
 
-		// Token: 0x0401B493 RID: 111763
+		// Token: 0x04015E66 RID: 89702
 		private bool IsTempRecordSelectedInternal;
 	}
 }

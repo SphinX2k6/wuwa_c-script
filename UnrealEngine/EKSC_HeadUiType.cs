@@ -4,26 +4,26 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001CCF RID: 7375
+	// Token: 0x02000553 RID: 1363
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.EKSC_HeadUiType")]
 	public enum EKSC_HeadUiType : byte
 	{
-		// Token: 0x0400F67F RID: 63103
+		// Token: 0x0400365E RID: 13918
 		Default,
-		// Token: 0x0400F680 RID: 63104
+		// Token: 0x0400365F RID: 13919
 		Player,
-		// Token: 0x0400F681 RID: 63105
+		// Token: 0x04003660 RID: 13920
 		Boss,
-		// Token: 0x0400F682 RID: 63106
+		// Token: 0x04003661 RID: 13921
 		BuffGate,
-		// Token: 0x0400F683 RID: 63107
+		// Token: 0x04003662 RID: 13922
 		TopBoss,
-		// Token: 0x0400F684 RID: 63108
+		// Token: 0x04003663 RID: 13923
 		Digital,
-		// Token: 0x0400F685 RID: 63109
+		// Token: 0x04003664 RID: 13924
 		Marble,
-		// Token: 0x0400F686 RID: 63110
+		// Token: 0x04003665 RID: 13925
 		EKSC_MAX
 	}
 }

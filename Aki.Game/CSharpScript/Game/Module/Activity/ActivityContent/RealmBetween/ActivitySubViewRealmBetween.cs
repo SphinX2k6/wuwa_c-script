@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x0200626E RID: 25198
+	// Token: 0x020051EC RID: 20972
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivitySubViewRealmBetween : ActivitySubViewBase
 	{
-		// Token: 0x1700926C RID: 37484
-		// (get) Token: 0x0603F72D RID: 259885 RVA: 0x00F568D7 File Offset: 0x00F54AD7
+		// Token: 0x170065CE RID: 26062
+		// (get) Token: 0x060343EE RID: 213998 RVA: 0x00E9D833 File Offset: 0x00E9BA33
 		protected new ActivityRealmBetweenData ActivityBaseData
 		{
 			get
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F72E RID: 259886 RVA: 0x00F568E4 File Offset: 0x00F54AE4
+		// Token: 0x060343EF RID: 213999 RVA: 0x00E9D840 File Offset: 0x00E9BA40
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F72F RID: 259887 RVA: 0x00F56954 File Offset: 0x00F54B54
+		// Token: 0x060343F0 RID: 214000 RVA: 0x00E9D8B0 File Offset: 0x00E9BAB0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivitySubViewRealmBetween.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -46,14 +46,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F730 RID: 259888 RVA: 0x00F56997 File Offset: 0x00F54B97
+		// Token: 0x060343F1 RID: 214001 RVA: 0x00E9D8F3 File Offset: 0x00E9BAF3
 		protected override void OnRefreshView()
 		{
 			this.RefreshExpComponent();
 			this.RefreshButton();
 		}
 
-		// Token: 0x0603F731 RID: 259889 RVA: 0x00F569A5 File Offset: 0x00F54BA5
+		// Token: 0x060343F2 RID: 214002 RVA: 0x00E9D901 File Offset: 0x00E9BB01
 		private void OnBtnClick(ActivityBaseData _)
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -62,23 +62,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			});
 		}
 
-		// Token: 0x0603F732 RID: 259890 RVA: 0x00F569C4 File Offset: 0x00F54BC4
+		// Token: 0x060343F3 RID: 214003 RVA: 0x00E9D920 File Offset: 0x00E9BB20
 		private void RefreshExpComponent()
 		{
 			this.ExpComponent.SetProgress(this.ActivityBaseData.GetCurrentExp(), this.ActivityBaseData.GetCurrentTargetExp(), this.ActivityBaseData.TravelLevel == this.ActivityBaseData.MaxTravelLevel);
 			this.ExpComponent.SetLevel(this.ActivityBaseData.TravelLevel);
 		}
 
-		// Token: 0x0603F733 RID: 259891 RVA: 0x00F56A20 File Offset: 0x00F54C20
+		// Token: 0x060343F4 RID: 214004 RVA: 0x00E9D97C File Offset: 0x00E9BB7C
 		private void RefreshButton()
 		{
 			this.GeneralActivityInfo.SetFunctionRedDotVisible(this.ActivityBaseData.RedPointShowState);
 		}
 
-		// Token: 0x04021253 RID: 135763
+		// Token: 0x0401BB82 RID: 113538
 		protected ActivitySubViewGeneralInfo GeneralActivityInfo;
 
-		// Token: 0x04021254 RID: 135764
+		// Token: 0x0401BB83 RID: 113539
 		protected RealmBetweenExpComponent ExpComponent;
 	}
 }

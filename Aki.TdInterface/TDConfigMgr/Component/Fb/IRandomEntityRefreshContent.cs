@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000ABF RID: 2751
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B89 RID: 2953
 	public class IRandomEntityRefreshContent : IRefreshContent
 	{
-		// Token: 0x06003F5F RID: 16223 RVA: 0x000A1E2E File Offset: 0x000A002E
+		// Token: 0x06004389 RID: 17289 RVA: 0x000AB422 File Offset: 0x000A9622
 		public static IRandomEntityRefreshContent Create(IRandomEntityRefreshContent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F9E RID: 3998
-		// (get) Token: 0x06003F60 RID: 16224 RVA: 0x000A1E4D File Offset: 0x000A004D
+		// Token: 0x17001072 RID: 4210
+		// (get) Token: 0x0600438A RID: 17290 RVA: 0x000AB441 File Offset: 0x000A9641
 		public override ERefreshContent Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F9F RID: 3999
-		// (get) Token: 0x06003F61 RID: 16225 RVA: 0x000A1E5C File Offset: 0x000A005C
+		// Token: 0x17001073 RID: 4211
+		// (get) Token: 0x0600438B RID: 17291 RVA: 0x000AB450 File Offset: 0x000A9650
 		public virtual List<int> EntityIds
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FA0 RID: 4000
-		// (get) Token: 0x06003F62 RID: 16226 RVA: 0x000A1EC0 File Offset: 0x000A00C0
+		// Token: 0x17001074 RID: 4212
+		// (get) Token: 0x0600438C RID: 17292 RVA: 0x000AB4B4 File Offset: 0x000A96B4
 		public virtual bool? EdEnableSyncCamp
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002330 RID: 9008
+		// Token: 0x0400254C RID: 9548
 		private IRandomEntityRefreshContent Instance;
 
-		// Token: 0x04002331 RID: 9009
+		// Token: 0x0400254D RID: 9549
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04002332 RID: 9010
+		// Token: 0x0400254E RID: 9550
 		private bool _EntityIdsInited;
 	}
 }

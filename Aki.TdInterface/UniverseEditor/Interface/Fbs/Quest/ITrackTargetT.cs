@@ -2,50 +2,50 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200421B RID: 16923
+	// Token: 0x02004677 RID: 18039
 	public class ITrackTargetT
 	{
-		// Token: 0x17007838 RID: 30776
-		// (get) Token: 0x0601903C RID: 102460 RVA: 0x003999A8 File Offset: 0x00397BA8
-		// (set) Token: 0x0601903D RID: 102461 RVA: 0x003999B0 File Offset: 0x00397BB0
+		// Token: 0x17007E69 RID: 32361
+		// (get) Token: 0x0601A7A8 RID: 108456 RVA: 0x003C5080 File Offset: 0x003C3280
+		// (set) Token: 0x0601A7A9 RID: 108457 RVA: 0x003C5088 File Offset: 0x003C3288
 		public TTrackTypeUnion TrackType { get; set; }
 
-		// Token: 0x17007839 RID: 30777
-		// (get) Token: 0x0601903E RID: 102462 RVA: 0x003999B9 File Offset: 0x00397BB9
-		// (set) Token: 0x0601903F RID: 102463 RVA: 0x003999C1 File Offset: 0x00397BC1
+		// Token: 0x17007E6A RID: 32362
+		// (get) Token: 0x0601A7AA RID: 108458 RVA: 0x003C5091 File Offset: 0x003C3291
+		// (set) Token: 0x0601A7AB RID: 108459 RVA: 0x003C5099 File Offset: 0x003C3299
 		public ETrackViewMode TrackViewMode { get; set; }
 
-		// Token: 0x1700783A RID: 30778
-		// (get) Token: 0x06019040 RID: 102464 RVA: 0x003999CA File Offset: 0x00397BCA
-		// (set) Token: 0x06019041 RID: 102465 RVA: 0x003999D2 File Offset: 0x00397BD2
+		// Token: 0x17007E6B RID: 32363
+		// (get) Token: 0x0601A7AC RID: 108460 RVA: 0x003C50A2 File Offset: 0x003C32A2
+		// (set) Token: 0x0601A7AD RID: 108461 RVA: 0x003C50AA File Offset: 0x003C32AA
 		public float Range { get; set; }
 
-		// Token: 0x1700783B RID: 30779
-		// (get) Token: 0x06019042 RID: 102466 RVA: 0x003999DB File Offset: 0x00397BDB
-		// (set) Token: 0x06019043 RID: 102467 RVA: 0x003999E3 File Offset: 0x00397BE3
+		// Token: 0x17007E6C RID: 32364
+		// (get) Token: 0x0601A7AE RID: 108462 RVA: 0x003C50B3 File Offset: 0x003C32B3
+		// (set) Token: 0x0601A7AF RID: 108463 RVA: 0x003C50BB File Offset: 0x003C32BB
 		public float ViewRange { get; set; }
 
-		// Token: 0x1700783C RID: 30780
-		// (get) Token: 0x06019044 RID: 102468 RVA: 0x003999EC File Offset: 0x00397BEC
-		// (set) Token: 0x06019045 RID: 102469 RVA: 0x003999F4 File Offset: 0x00397BF4
+		// Token: 0x17007E6D RID: 32365
+		// (get) Token: 0x0601A7B0 RID: 108464 RVA: 0x003C50C4 File Offset: 0x003C32C4
+		// (set) Token: 0x0601A7B1 RID: 108465 RVA: 0x003C50CC File Offset: 0x003C32CC
 		public IZaxisViewRangeT ZaxisViewRange { get; set; }
 
-		// Token: 0x1700783D RID: 30781
-		// (get) Token: 0x06019046 RID: 102470 RVA: 0x003999FD File Offset: 0x00397BFD
-		// (set) Token: 0x06019047 RID: 102471 RVA: 0x00399A05 File Offset: 0x00397C05
+		// Token: 0x17007E6E RID: 32366
+		// (get) Token: 0x0601A7B2 RID: 108466 RVA: 0x003C50D5 File Offset: 0x003C32D5
+		// (set) Token: 0x0601A7B3 RID: 108467 RVA: 0x003C50DD File Offset: 0x003C32DD
 		public ETrackEffect Effect { get; set; }
 
-		// Token: 0x1700783E RID: 30782
-		// (get) Token: 0x06019048 RID: 102472 RVA: 0x00399A0E File Offset: 0x00397C0E
-		// (set) Token: 0x06019049 RID: 102473 RVA: 0x00399A16 File Offset: 0x00397C16
+		// Token: 0x17007E6F RID: 32367
+		// (get) Token: 0x0601A7B4 RID: 108468 RVA: 0x003C50E6 File Offset: 0x003C32E6
+		// (set) Token: 0x0601A7B5 RID: 108469 RVA: 0x003C50EE File Offset: 0x003C32EE
 		public ITrackEffectAutoChangeT EffectOption { get; set; }
 
-		// Token: 0x1700783F RID: 30783
-		// (get) Token: 0x0601904A RID: 102474 RVA: 0x00399A1F File Offset: 0x00397C1F
-		// (set) Token: 0x0601904B RID: 102475 RVA: 0x00399A27 File Offset: 0x00397C27
+		// Token: 0x17007E70 RID: 32368
+		// (get) Token: 0x0601A7B6 RID: 108470 RVA: 0x003C50F7 File Offset: 0x003C32F7
+		// (set) Token: 0x0601A7B7 RID: 108471 RVA: 0x003C50FF File Offset: 0x003C32FF
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601904C RID: 102476 RVA: 0x00399A30 File Offset: 0x00397C30
+		// Token: 0x0601A7B8 RID: 108472 RVA: 0x003C5108 File Offset: 0x003C3308
 		public ITrackTargetT()
 		{
 			this.TrackType = null;

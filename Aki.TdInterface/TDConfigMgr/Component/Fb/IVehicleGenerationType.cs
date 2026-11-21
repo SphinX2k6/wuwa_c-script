@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C5B RID: 3163
+	// Token: 0x02000D34 RID: 3380
 	public class IVehicleGenerationType
 	{
-		// Token: 0x06004873 RID: 18547 RVA: 0x000B6097 File Offset: 0x000B4297
-		[NullableContext(1)]
+		// Token: 0x06004CF8 RID: 19704 RVA: 0x000C068B File Offset: 0x000BE88B
 		public static IVehicleGenerationType Create(IVehicleGenerationType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700157A RID: 5498
-		// (get) Token: 0x06004874 RID: 18548 RVA: 0x000B60B6 File Offset: 0x000B42B6
+		// Token: 0x1700168B RID: 5771
+		// (get) Token: 0x06004CF9 RID: 19705 RVA: 0x000C06AA File Offset: 0x000BE8AA
 		public virtual EVehicleGenerationType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700157B RID: 5499
-		// (get) Token: 0x06004875 RID: 18549 RVA: 0x000B60C3 File Offset: 0x000B42C3
+		// Token: 0x1700168C RID: 5772
+		// (get) Token: 0x06004CFA RID: 19706 RVA: 0x000C06B7 File Offset: 0x000BE8B7
 		public virtual int Id
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700157C RID: 5500
-		// (get) Token: 0x06004876 RID: 18550 RVA: 0x000B60D0 File Offset: 0x000B42D0
+		// Token: 0x1700168D RID: 5773
+		// (get) Token: 0x06004CFB RID: 19707 RVA: 0x000C06C4 File Offset: 0x000BE8C4
 		public virtual int Weight
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002946 RID: 10566
+		// Token: 0x04002BA7 RID: 11175
 		private IVehicleGenerationType Instance;
 	}
 }

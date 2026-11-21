@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Vision.View
 {
-	// Token: 0x020050FC RID: 20732
+	// Token: 0x020040CC RID: 16588
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AttributeItem : UiPanelBase
 	{
-		// Token: 0x06034FF8 RID: 217080 RVA: 0x00C8D88B File Offset: 0x00C8BA8B
+		// Token: 0x06029EF1 RID: 171761 RVA: 0x00BDAB67 File Offset: 0x00BD8D67
 		public AttributeItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x06034FF9 RID: 217081 RVA: 0x00C8D8A0 File Offset: 0x00C8BAA0
+		// Token: 0x06029EF2 RID: 171762 RVA: 0x00BDAB7C File Offset: 0x00BD8D7C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.Vision.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034FFA RID: 217082 RVA: 0x00C8D9AE File Offset: 0x00C8BBAE
+		// Token: 0x06029EF3 RID: 171763 RVA: 0x00BDAC8A File Offset: 0x00BD8E8A
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayoutNew<AttributePhantomItem>(base.GetLayoutBase(1), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<AttributePhantomItem>(this.InitItem), null);
 		}
 
-		// Token: 0x06034FFB RID: 217083 RVA: 0x00C8D9D0 File Offset: 0x00C8BBD0
+		// Token: 0x06029EF4 RID: 171764 RVA: 0x00BDACAC File Offset: 0x00BD8EAC
 		private ILayoutItem<AttributePhantomItem> InitItem(object data, UUIItem uiItem, int index)
 		{
 			AttributePhantomItem attributePhantomItem = new AttributePhantomItem(uiItem);
@@ -63,13 +63,13 @@ namespace CSharpScript.Game.Module.Vision.View
 			};
 		}
 
-		// Token: 0x06034FFC RID: 217084 RVA: 0x00C8DA13 File Offset: 0x00C8BC13
+		// Token: 0x06029EF5 RID: 171765 RVA: 0x00BDACEF File Offset: 0x00BD8EEF
 		protected override void OnBeforeDestroy()
 		{
 			this.Layout.ClearChildren();
 		}
 
-		// Token: 0x06034FFD RID: 217085 RVA: 0x00C8DA20 File Offset: 0x00C8BC20
+		// Token: 0x06029EF6 RID: 171766 RVA: 0x00BDACFC File Offset: 0x00BD8EFC
 		public void Update(VisionAttributeVariantTwoData data)
 		{
 			base.GetItem(3).SetUIActive(false);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Vision.View
 			base.GetText(2).SetColor(color);
 		}
 
-		// Token: 0x0401C384 RID: 115588
+		// Token: 0x04016DB7 RID: 93623
 		[Nullable(new byte[]
 		{
 			2,
@@ -117,26 +117,26 @@ namespace CSharpScript.Game.Module.Vision.View
 		})]
 		protected GenericLayoutNew<AttributePhantomItem> Layout;
 
-		// Token: 0x0401C385 RID: 115589
+		// Token: 0x04016DB8 RID: 93624
 		private PhantomFetter? CurrentFetter;
 
-		// Token: 0x0200B256 RID: 45654
+		// Token: 0x02009C8F RID: 40079
 		[NullableContext(0)]
 		private enum EAttributeItemComponent
 		{
-			// Token: 0x04036108 RID: 221448
+			// Token: 0x04030B5D RID: 199517
 			Title,
-			// Token: 0x04036109 RID: 221449
+			// Token: 0x04030B5E RID: 199518
 			ItemLayout,
-			// Token: 0x0403610A RID: 221450
+			// Token: 0x04030B5F RID: 199519
 			Desc,
-			// Token: 0x0403610B RID: 221451
+			// Token: 0x04030B60 RID: 199520
 			StateItem1,
-			// Token: 0x0403610C RID: 221452
+			// Token: 0x04030B61 RID: 199521
 			StateItem2,
-			// Token: 0x0403610D RID: 221453
+			// Token: 0x04030B62 RID: 199522
 			StateItem3,
-			// Token: 0x0403610E RID: 221454
+			// Token: 0x04030B63 RID: 199523
 			StateItem4
 		}
 	}

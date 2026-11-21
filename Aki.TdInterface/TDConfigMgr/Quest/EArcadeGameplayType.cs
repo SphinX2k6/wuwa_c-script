@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E54 RID: 3668
+	// Token: 0x02000F65 RID: 3941
 	[EnumExtensions]
 	public enum EArcadeGameplayType
 	{
-		// Token: 0x04002FBB RID: 12219
+		// Token: 0x040032B2 RID: 12978
 		DropCatch,
-		// Token: 0x04002FBC RID: 12220
+		// Token: 0x040032B3 RID: 12979
 		TetrisBoardGame
 	}
 }

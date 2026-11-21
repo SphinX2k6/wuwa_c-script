@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002DF8 RID: 11768
+// Token: 0x02002353 RID: 9043
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataEffectSave.LogicDataEffectSave_C")]
 public class LogicDataEffectSave : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170021E6 RID: 8678
-	// (get) Token: 0x06018B85 RID: 101253 RVA: 0x00658564 File Offset: 0x00656764
-	// (set) Token: 0x06018B86 RID: 101254 RVA: 0x0065859D File Offset: 0x0065679D
+	// Token: 0x1700224A RID: 8778
+	// (get) Token: 0x0601643A RID: 91194 RVA: 0x0067E5E8 File Offset: 0x0067C7E8
+	// (set) Token: 0x0601643B RID: 91195 RVA: 0x0067E621 File Offset: 0x0067C821
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UEffectModelBase> Effect
 	{
@@ -35,7 +35,7 @@ public class LogicDataEffectSave : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06018B87 RID: 101255 RVA: 0x006585C2 File Offset: 0x006567C2
+	// Token: 0x0601643C RID: 91196 RVA: 0x0067E646 File Offset: 0x0067C846
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataEffectSave._ClassPtr == IntPtr.Zero)
@@ -45,34 +45,34 @@ public class LogicDataEffectSave : LogicDataBase, IUnrealUObject, IUnrealObject
 		return LogicDataEffectSave._ClassPtr;
 	}
 
-	// Token: 0x06018B88 RID: 101256 RVA: 0x006585E8 File Offset: 0x006567E8
+	// Token: 0x0601643D RID: 91197 RVA: 0x0067E66C File Offset: 0x0067C86C
 	public LogicDataEffectSave() : this(BuiltinUtils.AllocNativeUObject(LogicDataEffectSave.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018B89 RID: 101257 RVA: 0x00658610 File Offset: 0x00656810
+	// Token: 0x0601643E RID: 91198 RVA: 0x0067E694 File Offset: 0x0067C894
 	public LogicDataEffectSave(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataEffectSave.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018B8A RID: 101258 RVA: 0x00658643 File Offset: 0x00656843
+	// Token: 0x0601643F RID: 91199 RVA: 0x0067E6C7 File Offset: 0x0067C8C7
 	protected LogicDataEffectSave(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B865 RID: 47205
+	// Token: 0x0400BBEB RID: 48107
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataEffectSave.LogicDataEffectSave_C";
 
-	// Token: 0x0400B866 RID: 47206
+	// Token: 0x0400BBEC RID: 48108
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B867 RID: 47207
+	// Token: 0x0400BBED RID: 48109
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B868 RID: 47208
+	// Token: 0x0400BBEE RID: 48110
 	private static int __PropertyOffset_Effect;
 
-	// Token: 0x0400B869 RID: 47209
+	// Token: 0x0400BBEF RID: 48111
 	[Nullable(new byte[]
 	{
 		2,

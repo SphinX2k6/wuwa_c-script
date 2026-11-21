@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using UnrealEngine;
 
-// Token: 0x02003160 RID: 12640
+// Token: 0x020026CD RID: 9933
 [NullableContext(1)]
 [Nullable(0)]
 public class SkillTriggerGameplayTagHandle : SkillTriggerBaseHandle
 {
-	// Token: 0x0601B323 RID: 111395 RVA: 0x007687F0 File Offset: 0x007669F0
+	// Token: 0x06018E28 RID: 101928 RVA: 0x007901BC File Offset: 0x0078E3BC
 	public SkillTriggerGameplayTagHandle(Entity entity) : base(entity)
 	{
 	}
 
-	// Token: 0x0601B324 RID: 111396 RVA: 0x0076880F File Offset: 0x00766A0F
+	// Token: 0x06018E29 RID: 101929 RVA: 0x007901DB File Offset: 0x0078E3DB
 	public override void Create()
 	{
 		this.SkillComp = this.Entity.CheckGetComponent<BaseSkillComponent>();
@@ -22,7 +22,7 @@ public class SkillTriggerGameplayTagHandle : SkillTriggerBaseHandle
 		this.TagComponent = this.Entity.CheckGetComponent<BaseTagComponent>();
 	}
 
-	// Token: 0x0601B325 RID: 111397 RVA: 0x00768844 File Offset: 0x00766A44
+	// Token: 0x06018E2A RID: 101930 RVA: 0x00790210 File Offset: 0x0078E410
 	public override void Destroy()
 	{
 		if (this.GameplayEventTask != null)
@@ -35,7 +35,7 @@ public class SkillTriggerGameplayTagHandle : SkillTriggerBaseHandle
 		}
 	}
 
-	// Token: 0x0601B326 RID: 111398 RVA: 0x007688A8 File Offset: 0x00766AA8
+	// Token: 0x06018E2B RID: 101931 RVA: 0x00790274 File Offset: 0x0078E474
 	public unsafe override void AddSkillTrigger(SkillTriggerBase skillTrigger, int skillId, SSkillInfo info)
 	{
 		SkillTriggerGameplayTag skillTriggerGameplayTag = skillTrigger as SkillTriggerGameplayTag;
@@ -104,7 +104,7 @@ public class SkillTriggerGameplayTagHandle : SkillTriggerBaseHandle
 		instance3.Info(flag3, entity3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 3));
 	}
 
-	// Token: 0x0601B327 RID: 111399 RVA: 0x00768B54 File Offset: 0x00766D54
+	// Token: 0x06018E2C RID: 101932 RVA: 0x00790520 File Offset: 0x0078E720
 	private void GameplayEventCallback(FGameplayTag eventTag, FGameplayEventData payload)
 	{
 		int num = eventTag.TagId();
@@ -125,7 +125,7 @@ public class SkillTriggerGameplayTagHandle : SkillTriggerBaseHandle
 		});
 	}
 
-	// Token: 0x0601B328 RID: 111400 RVA: 0x00768BA4 File Offset: 0x00766DA4
+	// Token: 0x06018E2D RID: 101933 RVA: 0x00790570 File Offset: 0x0078E770
 	private void OnOwnedTagAdded(int tagId, bool bTagExists)
 	{
 		if (!bTagExists)
@@ -145,7 +145,7 @@ public class SkillTriggerGameplayTagHandle : SkillTriggerBaseHandle
 		});
 	}
 
-	// Token: 0x0601B329 RID: 111401 RVA: 0x00768BEC File Offset: 0x00766DEC
+	// Token: 0x06018E2E RID: 101934 RVA: 0x007905B8 File Offset: 0x0078E7B8
 	private void OnOwnedTagPresent(int tagId, bool bTagExists)
 	{
 		ValueTuple<bool, int> valueTuple = this.CheckCondition(EGameplayAbilityTriggerSource.OwnedTagPresent, tagId);
@@ -166,7 +166,7 @@ public class SkillTriggerGameplayTagHandle : SkillTriggerBaseHandle
 		this.SkillComp.EndSkill(item2, "技能触发器OwnedTagPresent");
 	}
 
-	// Token: 0x0601B32A RID: 111402 RVA: 0x00768C44 File Offset: 0x00766E44
+	// Token: 0x06018E2F RID: 101935 RVA: 0x00790610 File Offset: 0x0078E810
 	[NullableContext(0)]
 	private unsafe ValueTuple<bool, int> CheckCondition(EGameplayAbilityTriggerSource triggerSource, int tagId)
 	{
@@ -204,23 +204,23 @@ public class SkillTriggerGameplayTagHandle : SkillTriggerBaseHandle
 		return new ValueTuple<bool, int>(true, item);
 	}
 
-	// Token: 0x0400D3B0 RID: 54192
+	// Token: 0x0400D813 RID: 55315
 	[Nullable(2)]
 	private BaseSkillComponent SkillComp;
 
-	// Token: 0x0400D3B1 RID: 54193
+	// Token: 0x0400D814 RID: 55316
 	[Nullable(2)]
 	private CharacterAbilityComponent AbilityComp;
 
-	// Token: 0x0400D3B2 RID: 54194
+	// Token: 0x0400D815 RID: 55317
 	[Nullable(2)]
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400D3B3 RID: 54195
+	// Token: 0x0400D816 RID: 55318
 	[Nullable(2)]
 	private UAsyncTaskWaitGameplayEvent GameplayEventTask;
 
-	// Token: 0x0400D3B4 RID: 54196
+	// Token: 0x0400D817 RID: 55319
 	[Nullable(new byte[]
 	{
 		1,
@@ -230,6 +230,6 @@ public class SkillTriggerGameplayTagHandle : SkillTriggerBaseHandle
 	})]
 	private readonly Dictionary<EGameplayAbilityTriggerSource, Dictionary<int, ValueTuple<int, SkillTriggerGameplayTag>>> SkillTriggerGameplayTagMap = new Dictionary<EGameplayAbilityTriggerSource, Dictionary<int, ValueTuple<int, SkillTriggerGameplayTag>>>();
 
-	// Token: 0x0400D3B5 RID: 54197
+	// Token: 0x0400D818 RID: 55320
 	private readonly List<ITagTask> TagListeners = new List<ITagTask>();
 }

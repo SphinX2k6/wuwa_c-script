@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007622 RID: 30242
+	// Token: 0x02007E30 RID: 32304
 	public struct Record_Int_ITalkSequenceTransitions : IFlatbufferObject
 	{
-		// Token: 0x1700E5A5 RID: 58789
-		// (get) Token: 0x06037150 RID: 225616 RVA: 0x007787B0 File Offset: 0x007769B0
+		// Token: 0x1700F1E3 RID: 61923
+		// (get) Token: 0x0603A5F5 RID: 239093 RVA: 0x007DC8AC File Offset: 0x007DAAAC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06037151 RID: 225617 RVA: 0x007787BD File Offset: 0x007769BD
+		// Token: 0x0603A5F6 RID: 239094 RVA: 0x007DC8B9 File Offset: 0x007DAAB9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06037152 RID: 225618 RVA: 0x007787C4 File Offset: 0x007769C4
+		// Token: 0x0603A5F7 RID: 239095 RVA: 0x007DC8C0 File Offset: 0x007DAAC0
 		public static Record_Int_ITalkSequenceTransitions GetRootAsRecord_Int_ITalkSequenceTransitions(ByteBuffer _bb)
 		{
 			return Record_Int_ITalkSequenceTransitions.GetRootAsRecord_Int_ITalkSequenceTransitions(_bb, default(Record_Int_ITalkSequenceTransitions));
 		}
 
-		// Token: 0x06037153 RID: 225619 RVA: 0x007787E0 File Offset: 0x007769E0
+		// Token: 0x0603A5F8 RID: 239096 RVA: 0x007DC8DC File Offset: 0x007DAADC
 		public static Record_Int_ITalkSequenceTransitions GetRootAsRecord_Int_ITalkSequenceTransitions(ByteBuffer _bb, Record_Int_ITalkSequenceTransitions obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06037154 RID: 225620 RVA: 0x007787FD File Offset: 0x007769FD
+		// Token: 0x0603A5F9 RID: 239097 RVA: 0x007DC8F9 File Offset: 0x007DAAF9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06037155 RID: 225621 RVA: 0x0077880C File Offset: 0x00776A0C
+		// Token: 0x0603A5FA RID: 239098 RVA: 0x007DC908 File Offset: 0x007DAB08
 		public Record_Int_ITalkSequenceTransitions __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E5A6 RID: 58790
-		// (get) Token: 0x06037156 RID: 225622 RVA: 0x0077881C File Offset: 0x00776A1C
+		// Token: 0x1700F1E4 RID: 61924
+		// (get) Token: 0x0603A5FB RID: 239099 RVA: 0x007DC918 File Offset: 0x007DAB18
 		public int Key
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06037157 RID: 225623 RVA: 0x00778858 File Offset: 0x00776A58
+		// Token: 0x0603A5FC RID: 239100 RVA: 0x007DC954 File Offset: 0x007DAB54
 		public ITalkSequenceTransition? Values(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new ITalkSequenceTransition?(default(ITalkSequenceTransition).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700E5A7 RID: 58791
-		// (get) Token: 0x06037158 RID: 225624 RVA: 0x007788B8 File Offset: 0x00776AB8
+		// Token: 0x1700F1E5 RID: 61925
+		// (get) Token: 0x0603A5FD RID: 239101 RVA: 0x007DC9B4 File Offset: 0x007DABB4
 		public int ValuesLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06037159 RID: 225625 RVA: 0x007788E3 File Offset: 0x00776AE3
+		// Token: 0x0603A5FE RID: 239102 RVA: 0x007DC9DF File Offset: 0x007DABDF
 		public static Offset<Record_Int_ITalkSequenceTransitions> CreateRecord_Int_ITalkSequenceTransitions(FlatBufferBuilder builder, int Key = 0, VectorOffset ValuesOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return Record_Int_ITalkSequenceTransitions.EndRecord_Int_ITalkSequenceTransitions(builder);
 		}
 
-		// Token: 0x0603715A RID: 225626 RVA: 0x00778900 File Offset: 0x00776B00
+		// Token: 0x0603A5FF RID: 239103 RVA: 0x007DC9FC File Offset: 0x007DABFC
 		public static void StartRecord_Int_ITalkSequenceTransitions(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0603715B RID: 225627 RVA: 0x00778909 File Offset: 0x00776B09
+		// Token: 0x0603A600 RID: 239104 RVA: 0x007DCA05 File Offset: 0x007DAC05
 		public static void AddKey(FlatBufferBuilder builder, int key)
 		{
 			builder.AddInt(0, key, 0);
 		}
 
-		// Token: 0x0603715C RID: 225628 RVA: 0x00778914 File Offset: 0x00776B14
+		// Token: 0x0603A601 RID: 239105 RVA: 0x007DCA10 File Offset: 0x007DAC10
 		public static void AddValues(FlatBufferBuilder builder, VectorOffset valuesOffset)
 		{
 			builder.AddOffset(1, valuesOffset.Value, 0);
 		}
 
-		// Token: 0x0603715D RID: 225629 RVA: 0x00778924 File Offset: 0x00776B24
+		// Token: 0x0603A602 RID: 239106 RVA: 0x007DCA20 File Offset: 0x007DAC20
 		public static VectorOffset CreateValuesVector(FlatBufferBuilder builder, Offset<ITalkSequenceTransition>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603715E RID: 225630 RVA: 0x00778964 File Offset: 0x00776B64
+		// Token: 0x0603A603 RID: 239107 RVA: 0x007DCA60 File Offset: 0x007DAC60
 		public static VectorOffset CreateValuesVectorBlock(FlatBufferBuilder builder, Offset<ITalkSequenceTransition>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603715F RID: 225631 RVA: 0x0077897E File Offset: 0x00776B7E
+		// Token: 0x0603A604 RID: 239108 RVA: 0x007DCA7A File Offset: 0x007DAC7A
 		public static VectorOffset CreateValuesVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ITalkSequenceTransition>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06037160 RID: 225632 RVA: 0x0077899C File Offset: 0x00776B9C
+		// Token: 0x0603A605 RID: 239109 RVA: 0x007DCA98 File Offset: 0x007DAC98
 		public static VectorOffset CreateValuesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06037161 RID: 225633 RVA: 0x007789B5 File Offset: 0x00776BB5
+		// Token: 0x0603A606 RID: 239110 RVA: 0x007DCAB1 File Offset: 0x007DACB1
 		public static void StartValuesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06037162 RID: 225634 RVA: 0x007789C0 File Offset: 0x00776BC0
+		// Token: 0x0603A607 RID: 239111 RVA: 0x007DCABC File Offset: 0x007DACBC
 		public static Offset<Record_Int_ITalkSequenceTransitions> EndRecord_Int_ITalkSequenceTransitions(FlatBufferBuilder builder)
 		{
 			return new Offset<Record_Int_ITalkSequenceTransitions>(builder.EndTable());
 		}
 
-		// Token: 0x06037163 RID: 225635 RVA: 0x007789D0 File Offset: 0x00776BD0
+		// Token: 0x0603A608 RID: 239112 RVA: 0x007DCACC File Offset: 0x007DACCC
 		public Record_Int_ITalkSequenceTransitionsT UnPack()
 		{
 			Record_Int_ITalkSequenceTransitionsT record_Int_ITalkSequenceTransitionsT = new Record_Int_ITalkSequenceTransitionsT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return record_Int_ITalkSequenceTransitionsT;
 		}
 
-		// Token: 0x06037164 RID: 225636 RVA: 0x007789EC File Offset: 0x00776BEC
+		// Token: 0x0603A609 RID: 239113 RVA: 0x007DCAE8 File Offset: 0x007DACE8
 		public void UnPackTo(Record_Int_ITalkSequenceTransitionsT _o)
 		{
 			_o.Key = this.Key;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06037165 RID: 225637 RVA: 0x00778A58 File Offset: 0x00776C58
+		// Token: 0x0603A60A RID: 239114 RVA: 0x007DCB54 File Offset: 0x007DAD54
 		public static Offset<Record_Int_ITalkSequenceTransitions> Pack(FlatBufferBuilder builder, Record_Int_ITalkSequenceTransitionsT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return Record_Int_ITalkSequenceTransitions.CreateRecord_Int_ITalkSequenceTransitions(builder, _o.Key, valuesOffset);
 		}
 
-		// Token: 0x0401258E RID: 75150
+		// Token: 0x040135D8 RID: 79320
 		private Table __p;
 	}
 }

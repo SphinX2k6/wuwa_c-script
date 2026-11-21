@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E89 RID: 3721
+	// Token: 0x02000F9C RID: 3996
 	[EnumExtensions]
 	public enum ERecallOperation
 	{
-		// Token: 0x04003144 RID: 12612
+		// Token: 0x04003446 RID: 13382
 		Include,
-		// Token: 0x04003145 RID: 12613
+		// Token: 0x04003447 RID: 13383
 		Exclude
 	}
 }

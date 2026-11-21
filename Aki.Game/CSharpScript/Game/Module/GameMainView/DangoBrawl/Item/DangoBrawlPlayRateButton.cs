@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 {
-	// Token: 0x02005A13 RID: 23059
+	// Token: 0x020049EF RID: 18927
 	public class DangoBrawlPlayRateButton : UiPanelBase
 	{
-		// Token: 0x0603A79F RID: 239519 RVA: 0x00DEA768 File Offset: 0x00DE8968
+		// Token: 0x0602F6E8 RID: 194280 RVA: 0x00D3AD00 File Offset: 0x00D38F00
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A7A0 RID: 239520 RVA: 0x00DEA850 File Offset: 0x00DE8A50
+		// Token: 0x0602F6E9 RID: 194281 RVA: 0x00D3ADE8 File Offset: 0x00D38FE8
 		protected override void OnStart()
 		{
 			this.RefreshPlayRateShow();
 		}
 
-		// Token: 0x0603A7A1 RID: 239521 RVA: 0x00DEA858 File Offset: 0x00DE8A58
+		// Token: 0x0602F6EA RID: 194282 RVA: 0x00D3ADF0 File Offset: 0x00D38FF0
 		public void RefreshPlayRateShow()
 		{
 			float playRate = DangoBrawlModel.Instance.GetPlayRate();
@@ -71,23 +71,23 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			item2.SetUIActive(!flag);
 		}
 
-		// Token: 0x0603A7A2 RID: 239522 RVA: 0x00DEA8E4 File Offset: 0x00DE8AE4
+		// Token: 0x0602F6EB RID: 194283 RVA: 0x00D3AE7C File Offset: 0x00D3907C
 		private void OnClickedSpeed()
 		{
 			DangoBrawlModel.Instance.SetPlayRate();
 			this.RefreshPlayRateShow();
 		}
 
-		// Token: 0x0200BC83 RID: 48259
+		// Token: 0x0200A68C RID: 42636
 		private enum EComp
 		{
-			// Token: 0x04038E05 RID: 232965
+			// Token: 0x040337D0 RID: 210896
 			BtnSpeed,
-			// Token: 0x04038E06 RID: 232966
+			// Token: 0x040337D1 RID: 210897
 			PanelOn,
-			// Token: 0x04038E07 RID: 232967
+			// Token: 0x040337D2 RID: 210898
 			PanelOff,
-			// Token: 0x04038E08 RID: 232968
+			// Token: 0x040337D3 RID: 210899
 			TxtSpeed
 		}
 	}

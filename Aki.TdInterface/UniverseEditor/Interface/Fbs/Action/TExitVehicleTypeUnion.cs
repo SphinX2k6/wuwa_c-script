@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076C3 RID: 30403
+	// Token: 0x02007ED1 RID: 32465
 	public class TExitVehicleTypeUnion
 	{
-		// Token: 0x1700E61B RID: 58907
-		// (get) Token: 0x060374C6 RID: 226502 RVA: 0x0077E12E File Offset: 0x0077C32E
-		// (set) Token: 0x060374C7 RID: 226503 RVA: 0x0077E136 File Offset: 0x0077C336
+		// Token: 0x1700F259 RID: 62041
+		// (get) Token: 0x0603A97B RID: 239995 RVA: 0x007E2440 File Offset: 0x007E0640
+		// (set) Token: 0x0603A97C RID: 239996 RVA: 0x007E2448 File Offset: 0x007E0648
 		public TExitVehicleType Type { get; set; }
 
-		// Token: 0x1700E61C RID: 58908
-		// (get) Token: 0x060374C8 RID: 226504 RVA: 0x0077E13F File Offset: 0x0077C33F
-		// (set) Token: 0x060374C9 RID: 226505 RVA: 0x0077E147 File Offset: 0x0077C347
+		// Token: 0x1700F25A RID: 62042
+		// (get) Token: 0x0603A97D RID: 239997 RVA: 0x007E2451 File Offset: 0x007E0651
+		// (set) Token: 0x0603A97E RID: 239998 RVA: 0x007E2459 File Offset: 0x007E0659
 		public object Value { get; set; }
 
-		// Token: 0x060374CA RID: 226506 RVA: 0x0077E150 File Offset: 0x0077C350
+		// Token: 0x0603A97F RID: 239999 RVA: 0x007E2462 File Offset: 0x007E0662
 		public TExitVehicleTypeUnion()
 		{
 			this.Type = TExitVehicleType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060374CB RID: 226507 RVA: 0x0077E166 File Offset: 0x0077C366
+		// Token: 0x0603A980 RID: 240000 RVA: 0x007E2478 File Offset: 0x007E0678
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060374CC RID: 226508 RVA: 0x0077E178 File Offset: 0x0077C378
+		// Token: 0x0603A981 RID: 240001 RVA: 0x007E248A File Offset: 0x007E068A
 		public IExitVehicleLaunchT AsIExitVehicleLaunch()
 		{
 			return this.As<IExitVehicleLaunchT>();
 		}
 
-		// Token: 0x060374CD RID: 226509 RVA: 0x0077E180 File Offset: 0x0077C380
+		// Token: 0x0603A982 RID: 240002 RVA: 0x007E2492 File Offset: 0x007E0692
 		public static TExitVehicleTypeUnion FromIExitVehicleLaunch(IExitVehicleLaunchT _iexitvehiclelaunch)
 		{
 			return new TExitVehicleTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060374CE RID: 226510 RVA: 0x0077E195 File Offset: 0x0077C395
+		// Token: 0x0603A983 RID: 240003 RVA: 0x007E24A7 File Offset: 0x007E06A7
 		public IExitVehicleSeatStandUpT AsIExitVehicleSeatStandUp()
 		{
 			return this.As<IExitVehicleSeatStandUpT>();
 		}
 
-		// Token: 0x060374CF RID: 226511 RVA: 0x0077E19D File Offset: 0x0077C39D
+		// Token: 0x0603A984 RID: 240004 RVA: 0x007E24AF File Offset: 0x007E06AF
 		public static TExitVehicleTypeUnion FromIExitVehicleSeatStandUp(IExitVehicleSeatStandUpT _iexitvehicleseatstandup)
 		{
 			return new TExitVehicleTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060374D0 RID: 226512 RVA: 0x0077E1B2 File Offset: 0x0077C3B2
+		// Token: 0x0603A985 RID: 240005 RVA: 0x007E24C4 File Offset: 0x007E06C4
 		public IExitVehicleStandUpT AsIExitVehicleStandUp()
 		{
 			return this.As<IExitVehicleStandUpT>();
 		}
 
-		// Token: 0x060374D1 RID: 226513 RVA: 0x0077E1BA File Offset: 0x0077C3BA
+		// Token: 0x0603A986 RID: 240006 RVA: 0x007E24CC File Offset: 0x007E06CC
 		public static TExitVehicleTypeUnion FromIExitVehicleStandUp(IExitVehicleStandUpT _iexitvehiclestandup)
 		{
 			return new TExitVehicleTypeUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060374D2 RID: 226514 RVA: 0x0077E1CF File Offset: 0x0077C3CF
+		// Token: 0x0603A987 RID: 240007 RVA: 0x007E24E1 File Offset: 0x007E06E1
 		public IExitVehicleTeleportT AsIExitVehicleTeleport()
 		{
 			return this.As<IExitVehicleTeleportT>();
 		}
 
-		// Token: 0x060374D3 RID: 226515 RVA: 0x0077E1D7 File Offset: 0x0077C3D7
+		// Token: 0x0603A988 RID: 240008 RVA: 0x007E24E9 File Offset: 0x007E06E9
 		public static TExitVehicleTypeUnion FromIExitVehicleTeleport(IExitVehicleTeleportT _iexitvehicleteleport)
 		{
 			return new TExitVehicleTypeUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060374D4 RID: 226516 RVA: 0x0077E1EC File Offset: 0x0077C3EC
+		// Token: 0x0603A989 RID: 240009 RVA: 0x007E2500 File Offset: 0x007E0700
 		public static int Pack(FlatBufferBuilder builder, TExitVehicleTypeUnion _o)
 		{
 			switch (_o.Type)

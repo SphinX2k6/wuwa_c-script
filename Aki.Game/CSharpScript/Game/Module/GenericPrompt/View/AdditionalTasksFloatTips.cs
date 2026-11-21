@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.GenericPrompt.View
 {
-	// Token: 0x02005999 RID: 22937
+	// Token: 0x02004972 RID: 18802
 	public class AdditionalTasksFloatTips : GenericPromptFloatTipsBase
 	{
-		// Token: 0x0603A352 RID: 238418 RVA: 0x00DD54BF File Offset: 0x00DD36BF
+		// Token: 0x0602F278 RID: 193144 RVA: 0x00D2494F File Offset: 0x00D22B4F
 		[NullableContext(1)]
 		public AdditionalTasksFloatTips(UiViewInfo viewInfo) : base(viewInfo)
 		{

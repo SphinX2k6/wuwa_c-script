@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002C68 RID: 11368
+// Token: 0x020021C1 RID: 8641
 [NullableContext(1)]
 [Nullable(0)]
 public class UiModelComponentDefine : IStaticVariableResetter
 {
-	// Token: 0x06017C1C RID: 97308 RVA: 0x00609EA4 File Offset: 0x006080A4
+	// Token: 0x0601548E RID: 87182 RVA: 0x0062F94C File Offset: 0x0062DB4C
 	static UiModelComponentDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiModelComponentDefine.CreateStaticDefaultValue), new Action(UiModelComponentDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06017C1D RID: 97309 RVA: 0x00609EC3 File Offset: 0x006080C3
+	// Token: 0x0601548F RID: 87183 RVA: 0x0062F96B File Offset: 0x0062DB6B
 	private static T HandlerImp<[Nullable(0)] T>(UiModelBase model) where T : UiModelComponentBase, new()
 	{
 		T t = Activator.CreateInstance<T>();
@@ -21,8 +21,8 @@ public class UiModelComponentDefine : IStaticVariableResetter
 		return t;
 	}
 
-	// Token: 0x17001FDC RID: 8156
-	// (get) Token: 0x06017C1E RID: 97310 RVA: 0x00609ED6 File Offset: 0x006080D6
+	// Token: 0x1700202D RID: 8237
+	// (get) Token: 0x06015490 RID: 87184 RVA: 0x0062F97E File Offset: 0x0062DB7E
 	public static Dictionary<Type, UiModelComponentHandler> Handlers
 	{
 		get
@@ -31,7 +31,7 @@ public class UiModelComponentDefine : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06017C1F RID: 97311 RVA: 0x00609EE0 File Offset: 0x006080E0
+	// Token: 0x06015491 RID: 87185 RVA: 0x0062F988 File Offset: 0x0062DB88
 	public static void CreateStaticDefaultValue()
 	{
 		Dictionary<Type, UiModelComponentHandler> dictionary = new Dictionary<Type, UiModelComponentHandler>();
@@ -360,13 +360,13 @@ public class UiModelComponentDefine : IStaticVariableResetter
 		UiModelComponentDefine._handlers = dictionary;
 	}
 
-	// Token: 0x06017C20 RID: 97312 RVA: 0x0060A6B1 File Offset: 0x006088B1
+	// Token: 0x06015492 RID: 87186 RVA: 0x00630159 File Offset: 0x0062E359
 	public static void ResetStaticDefaultValue()
 	{
 		UiModelComponentDefine._handlers = null;
 	}
 
-	// Token: 0x0400B0E3 RID: 45283
+	// Token: 0x0400B44E RID: 46158
 	[Nullable(new byte[]
 	{
 		2,
@@ -375,191 +375,191 @@ public class UiModelComponentDefine : IStaticVariableResetter
 	})]
 	private static Dictionary<Type, UiModelComponentHandler> _handlers;
 
-	// Token: 0x0200924A RID: 37450
+	// Token: 0x02008474 RID: 33908
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402F503 RID: 193795
+		// Token: 0x0402AB90 RID: 174992
 		[Nullable(0)]
 		public static UiModelComponentHandler <0>__HandlerImp;
 
-		// Token: 0x0402F504 RID: 193796
+		// Token: 0x0402AB91 RID: 174993
 		[Nullable(0)]
 		public static UiModelComponentHandler <1>__HandlerImp;
 
-		// Token: 0x0402F505 RID: 193797
+		// Token: 0x0402AB92 RID: 174994
 		[Nullable(0)]
 		public static UiModelComponentHandler <2>__HandlerImp;
 
-		// Token: 0x0402F506 RID: 193798
+		// Token: 0x0402AB93 RID: 174995
 		[Nullable(0)]
 		public static UiModelComponentHandler <3>__HandlerImp;
 
-		// Token: 0x0402F507 RID: 193799
+		// Token: 0x0402AB94 RID: 174996
 		[Nullable(0)]
 		public static UiModelComponentHandler <4>__HandlerImp;
 
-		// Token: 0x0402F508 RID: 193800
+		// Token: 0x0402AB95 RID: 174997
 		[Nullable(0)]
 		public static UiModelComponentHandler <5>__HandlerImp;
 
-		// Token: 0x0402F509 RID: 193801
+		// Token: 0x0402AB96 RID: 174998
 		[Nullable(0)]
 		public static UiModelComponentHandler <6>__HandlerImp;
 
-		// Token: 0x0402F50A RID: 193802
+		// Token: 0x0402AB97 RID: 174999
 		[Nullable(0)]
 		public static UiModelComponentHandler <7>__HandlerImp;
 
-		// Token: 0x0402F50B RID: 193803
+		// Token: 0x0402AB98 RID: 175000
 		[Nullable(0)]
 		public static UiModelComponentHandler <8>__HandlerImp;
 
-		// Token: 0x0402F50C RID: 193804
+		// Token: 0x0402AB99 RID: 175001
 		[Nullable(0)]
 		public static UiModelComponentHandler <9>__HandlerImp;
 
-		// Token: 0x0402F50D RID: 193805
+		// Token: 0x0402AB9A RID: 175002
 		[Nullable(0)]
 		public static UiModelComponentHandler <10>__HandlerImp;
 
-		// Token: 0x0402F50E RID: 193806
+		// Token: 0x0402AB9B RID: 175003
 		[Nullable(0)]
 		public static UiModelComponentHandler <11>__HandlerImp;
 
-		// Token: 0x0402F50F RID: 193807
+		// Token: 0x0402AB9C RID: 175004
 		[Nullable(0)]
 		public static UiModelComponentHandler <12>__HandlerImp;
 
-		// Token: 0x0402F510 RID: 193808
+		// Token: 0x0402AB9D RID: 175005
 		[Nullable(0)]
 		public static UiModelComponentHandler <13>__HandlerImp;
 
-		// Token: 0x0402F511 RID: 193809
+		// Token: 0x0402AB9E RID: 175006
 		[Nullable(0)]
 		public static UiModelComponentHandler <14>__HandlerImp;
 
-		// Token: 0x0402F512 RID: 193810
+		// Token: 0x0402AB9F RID: 175007
 		[Nullable(0)]
 		public static UiModelComponentHandler <15>__HandlerImp;
 
-		// Token: 0x0402F513 RID: 193811
+		// Token: 0x0402ABA0 RID: 175008
 		[Nullable(0)]
 		public static UiModelComponentHandler <16>__HandlerImp;
 
-		// Token: 0x0402F514 RID: 193812
+		// Token: 0x0402ABA1 RID: 175009
 		[Nullable(0)]
 		public static UiModelComponentHandler <17>__HandlerImp;
 
-		// Token: 0x0402F515 RID: 193813
+		// Token: 0x0402ABA2 RID: 175010
 		[Nullable(0)]
 		public static UiModelComponentHandler <18>__HandlerImp;
 
-		// Token: 0x0402F516 RID: 193814
+		// Token: 0x0402ABA3 RID: 175011
 		[Nullable(0)]
 		public static UiModelComponentHandler <19>__HandlerImp;
 
-		// Token: 0x0402F517 RID: 193815
+		// Token: 0x0402ABA4 RID: 175012
 		[Nullable(0)]
 		public static UiModelComponentHandler <20>__HandlerImp;
 
-		// Token: 0x0402F518 RID: 193816
+		// Token: 0x0402ABA5 RID: 175013
 		[Nullable(0)]
 		public static UiModelComponentHandler <21>__HandlerImp;
 
-		// Token: 0x0402F519 RID: 193817
+		// Token: 0x0402ABA6 RID: 175014
 		[Nullable(0)]
 		public static UiModelComponentHandler <22>__HandlerImp;
 
-		// Token: 0x0402F51A RID: 193818
+		// Token: 0x0402ABA7 RID: 175015
 		[Nullable(0)]
 		public static UiModelComponentHandler <23>__HandlerImp;
 
-		// Token: 0x0402F51B RID: 193819
+		// Token: 0x0402ABA8 RID: 175016
 		[Nullable(0)]
 		public static UiModelComponentHandler <24>__HandlerImp;
 
-		// Token: 0x0402F51C RID: 193820
+		// Token: 0x0402ABA9 RID: 175017
 		[Nullable(0)]
 		public static UiModelComponentHandler <25>__HandlerImp;
 
-		// Token: 0x0402F51D RID: 193821
+		// Token: 0x0402ABAA RID: 175018
 		[Nullable(0)]
 		public static UiModelComponentHandler <26>__HandlerImp;
 
-		// Token: 0x0402F51E RID: 193822
+		// Token: 0x0402ABAB RID: 175019
 		[Nullable(0)]
 		public static UiModelComponentHandler <27>__HandlerImp;
 
-		// Token: 0x0402F51F RID: 193823
+		// Token: 0x0402ABAC RID: 175020
 		[Nullable(0)]
 		public static UiModelComponentHandler <28>__HandlerImp;
 
-		// Token: 0x0402F520 RID: 193824
+		// Token: 0x0402ABAD RID: 175021
 		[Nullable(0)]
 		public static UiModelComponentHandler <29>__HandlerImp;
 
-		// Token: 0x0402F521 RID: 193825
+		// Token: 0x0402ABAE RID: 175022
 		[Nullable(0)]
 		public static UiModelComponentHandler <30>__HandlerImp;
 
-		// Token: 0x0402F522 RID: 193826
+		// Token: 0x0402ABAF RID: 175023
 		[Nullable(0)]
 		public static UiModelComponentHandler <31>__HandlerImp;
 
-		// Token: 0x0402F523 RID: 193827
+		// Token: 0x0402ABB0 RID: 175024
 		[Nullable(0)]
 		public static UiModelComponentHandler <32>__HandlerImp;
 
-		// Token: 0x0402F524 RID: 193828
+		// Token: 0x0402ABB1 RID: 175025
 		[Nullable(0)]
 		public static UiModelComponentHandler <33>__HandlerImp;
 
-		// Token: 0x0402F525 RID: 193829
+		// Token: 0x0402ABB2 RID: 175026
 		[Nullable(0)]
 		public static UiModelComponentHandler <34>__HandlerImp;
 
-		// Token: 0x0402F526 RID: 193830
+		// Token: 0x0402ABB3 RID: 175027
 		[Nullable(0)]
 		public static UiModelComponentHandler <35>__HandlerImp;
 
-		// Token: 0x0402F527 RID: 193831
+		// Token: 0x0402ABB4 RID: 175028
 		[Nullable(0)]
 		public static UiModelComponentHandler <36>__HandlerImp;
 
-		// Token: 0x0402F528 RID: 193832
+		// Token: 0x0402ABB5 RID: 175029
 		[Nullable(0)]
 		public static UiModelComponentHandler <37>__HandlerImp;
 
-		// Token: 0x0402F529 RID: 193833
+		// Token: 0x0402ABB6 RID: 175030
 		[Nullable(0)]
 		public static UiModelComponentHandler <38>__HandlerImp;
 
-		// Token: 0x0402F52A RID: 193834
+		// Token: 0x0402ABB7 RID: 175031
 		[Nullable(0)]
 		public static UiModelComponentHandler <39>__HandlerImp;
 
-		// Token: 0x0402F52B RID: 193835
+		// Token: 0x0402ABB8 RID: 175032
 		[Nullable(0)]
 		public static UiModelComponentHandler <40>__HandlerImp;
 
-		// Token: 0x0402F52C RID: 193836
+		// Token: 0x0402ABB9 RID: 175033
 		[Nullable(0)]
 		public static UiModelComponentHandler <41>__HandlerImp;
 
-		// Token: 0x0402F52D RID: 193837
+		// Token: 0x0402ABBA RID: 175034
 		[Nullable(0)]
 		public static UiModelComponentHandler <42>__HandlerImp;
 
-		// Token: 0x0402F52E RID: 193838
+		// Token: 0x0402ABBB RID: 175035
 		[Nullable(0)]
 		public static UiModelComponentHandler <43>__HandlerImp;
 
-		// Token: 0x0402F52F RID: 193839
+		// Token: 0x0402ABBC RID: 175036
 		[Nullable(0)]
 		public static UiModelComponentHandler <44>__HandlerImp;
 
-		// Token: 0x0402F530 RID: 193840
+		// Token: 0x0402ABBD RID: 175037
 		[Nullable(0)]
 		public static UiModelComponentHandler <45>__HandlerImp;
 	}

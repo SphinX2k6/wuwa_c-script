@@ -2,22 +2,21 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
-using CSharpScript.Core.Common;
 using CSharpScript.Typing;
 
-// Token: 0x02001A8D RID: 6797
+// Token: 0x02000F4C RID: 3916
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ErrorCodeConfig : ConfigBase
 {
-	// Token: 0x0600C88E RID: 51342 RVA: 0x002DBCEC File Offset: 0x002D9EEC
+	// Token: 0x06009C9F RID: 40095 RVA: 0x002E6E94 File Offset: 0x002E5094
 	public void SetForceShowDebugErrorType(int isShipping)
 	{
 		this.ForceShowDebugTextType = isShipping;
 	}
 
-	// Token: 0x0600C88F RID: 51343 RVA: 0x002DBCF8 File Offset: 0x002D9EF8
+	// Token: 0x06009CA0 RID: 40096 RVA: 0x002E6EA0 File Offset: 0x002E50A0
 	public Aki.Config.ErrorCode? GetConfigByCode(Aki.Protocol.ErrorCode code)
 	{
 		Aki.Config.ErrorCode? config = ConfigErrorCodeById.GetConfig((int)code, true);
@@ -33,7 +32,7 @@ public class ErrorCodeConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600C890 RID: 51344 RVA: 0x002DBD44 File Offset: 0x002D9F44
+	// Token: 0x06009CA1 RID: 40097 RVA: 0x002E6EEC File Offset: 0x002E50EC
 	public string GetTextByErrorId(Aki.Protocol.ErrorCode code)
 	{
 		Aki.Config.ErrorCode? configByCode = this.GetConfigByCode(code);
@@ -41,10 +40,7 @@ public class ErrorCodeConfig : ConfigBase
 		{
 			return string.Empty;
 		}
-		if (!KuroApplication.IsBuildShipping() && Info.Instance.IsBuildDevelopmentOrDebug && this.ForceShowDebugTextType == 0)
-		{
-			return configByCode.Value.DebugText;
-		}
+		KuroApplication.IsBuildShipping();
 		if (string.IsNullOrEmpty(configByCode.Value.Text))
 		{
 			return TextConfig.Instance.GetTextById("UnknownErrorCodeText");
@@ -52,7 +48,7 @@ public class ErrorCodeConfig : ConfigBase
 		return ConfigMultiTextLang.GetLocalTextNew(configByCode.Value.Text, null) ?? string.Empty;
 	}
 
-	// Token: 0x0600C891 RID: 51345 RVA: 0x002DBDD8 File Offset: 0x002D9FD8
+	// Token: 0x06009CA2 RID: 40098 RVA: 0x002E6F5C File Offset: 0x002E515C
 	public string GetTextKeyByErrorId(Aki.Protocol.ErrorCode code)
 	{
 		Aki.Config.ErrorCode? configByCode = this.GetConfigByCode(code);
@@ -67,15 +63,15 @@ public class ErrorCodeConfig : ConfigBase
 		return configByCode.Value.Text;
 	}
 
-	// Token: 0x0600C892 RID: 51346 RVA: 0x002DBE34 File Offset: 0x002DA034
+	// Token: 0x06009CA3 RID: 40099 RVA: 0x002E6FB8 File Offset: 0x002E51B8
 	public bool IsTipsOnly(Aki.Protocol.ErrorCode code)
 	{
 		Aki.Config.ErrorCode? configByCode = this.GetConfigByCode(code);
 		return configByCode != null && configByCode.GetValueOrDefault().IsTip;
 	}
 
-	// Token: 0x17001071 RID: 4209
-	// (get) Token: 0x0600C893 RID: 51347 RVA: 0x002DBE63 File Offset: 0x002DA063
+	// Token: 0x17001096 RID: 4246
+	// (get) Token: 0x06009CA4 RID: 40100 RVA: 0x002E6FE7 File Offset: 0x002E51E7
 	public static ErrorCodeConfig Instance
 	{
 		get
@@ -84,7 +80,7 @@ public class ErrorCodeConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600C894 RID: 51348 RVA: 0x002DBE6A File Offset: 0x002DA06A
+	// Token: 0x06009CA5 RID: 40101 RVA: 0x002E6FEE File Offset: 0x002E51EE
 	public static ErrorCodeConfig GetOrCreateInstance()
 	{
 		if (ErrorCodeConfig._Instance == null)
@@ -94,7 +90,7 @@ public class ErrorCodeConfig : ConfigBase
 		return ErrorCodeConfig._Instance;
 	}
 
-	// Token: 0x0600C895 RID: 51349 RVA: 0x002DBE7E File Offset: 0x002DA07E
+	// Token: 0x06009CA6 RID: 40102 RVA: 0x002E7002 File Offset: 0x002E5202
 	public static bool CreateInstance()
 	{
 		if (ErrorCodeConfig._Instance != null)
@@ -105,27 +101,27 @@ public class ErrorCodeConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600C896 RID: 51350 RVA: 0x002DBE94 File Offset: 0x002DA094
+	// Token: 0x06009CA7 RID: 40103 RVA: 0x002E7018 File Offset: 0x002E5218
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C897 RID: 51351 RVA: 0x002DBE96 File Offset: 0x002DA096
+	// Token: 0x06009CA8 RID: 40104 RVA: 0x002E701A File Offset: 0x002E521A
 	public static void ResetStaticDefaultValue()
 	{
 		ErrorCodeConfig._Instance = null;
 	}
 
-	// Token: 0x0600C898 RID: 51352 RVA: 0x002DBE9E File Offset: 0x002DA09E
+	// Token: 0x06009CA9 RID: 40105 RVA: 0x002E7022 File Offset: 0x002E5222
 	static ErrorCodeConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ErrorCodeConfig.CreateStaticDefaultValue), new Action(ErrorCodeConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005C6F RID: 23663
+	// Token: 0x04005D3E RID: 23870
 	private int ForceShowDebugTextType = 1;
 
-	// Token: 0x04005C70 RID: 23664
+	// Token: 0x04005D3F RID: 23871
 	[Nullable(2)]
 	private static ErrorCodeConfig _Instance;
 }

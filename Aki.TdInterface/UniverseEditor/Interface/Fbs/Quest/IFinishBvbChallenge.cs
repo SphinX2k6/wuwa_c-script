@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E30 RID: 15920
+	// Token: 0x0200426B RID: 17003
 	public struct IFinishBvbChallenge : IFlatbufferObject
 	{
-		// Token: 0x17006E13 RID: 28179
-		// (get) Token: 0x06016501 RID: 91393 RVA: 0x00338AA3 File Offset: 0x00336CA3
+		// Token: 0x170073F9 RID: 29689
+		// (get) Token: 0x06017B2E RID: 97070 RVA: 0x0036169B File Offset: 0x0035F89B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016502 RID: 91394 RVA: 0x00338AB0 File Offset: 0x00336CB0
+		// Token: 0x06017B2F RID: 97071 RVA: 0x003616A8 File Offset: 0x0035F8A8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016503 RID: 91395 RVA: 0x00338AB8 File Offset: 0x00336CB8
+		// Token: 0x06017B30 RID: 97072 RVA: 0x003616B0 File Offset: 0x0035F8B0
 		public static IFinishBvbChallenge GetRootAsIFinishBvbChallenge(ByteBuffer _bb)
 		{
 			return IFinishBvbChallenge.GetRootAsIFinishBvbChallenge(_bb, default(IFinishBvbChallenge));
 		}
 
-		// Token: 0x06016504 RID: 91396 RVA: 0x00338AD4 File Offset: 0x00336CD4
+		// Token: 0x06017B31 RID: 97073 RVA: 0x003616CC File Offset: 0x0035F8CC
 		public static IFinishBvbChallenge GetRootAsIFinishBvbChallenge(ByteBuffer _bb, IFinishBvbChallenge obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016505 RID: 91397 RVA: 0x00338AF1 File Offset: 0x00336CF1
+		// Token: 0x06017B32 RID: 97074 RVA: 0x003616E9 File Offset: 0x0035F8E9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016506 RID: 91398 RVA: 0x00338B00 File Offset: 0x00336D00
+		// Token: 0x06017B33 RID: 97075 RVA: 0x003616F8 File Offset: 0x0035F8F8
 		public IFinishBvbChallenge __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006E14 RID: 28180
-		// (get) Token: 0x06016507 RID: 91399 RVA: 0x00338B10 File Offset: 0x00336D10
+		// Token: 0x170073FA RID: 29690
+		// (get) Token: 0x06017B34 RID: 97076 RVA: 0x00361708 File Offset: 0x0035F908
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006E15 RID: 28181
-		// (get) Token: 0x06016508 RID: 91400 RVA: 0x00338B4C File Offset: 0x00336D4C
+		// Token: 0x170073FB RID: 29691
+		// (get) Token: 0x06017B35 RID: 97077 RVA: 0x00361744 File Offset: 0x0035F944
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006E16 RID: 28182
-		// (get) Token: 0x06016509 RID: 91401 RVA: 0x00338BAC File Offset: 0x00336DAC
+		// Token: 0x170073FC RID: 29692
+		// (get) Token: 0x06017B36 RID: 97078 RVA: 0x003617A4 File Offset: 0x0035F9A4
 		public int BvbChallengeId
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601650A RID: 91402 RVA: 0x00338BE8 File Offset: 0x00336DE8
+		// Token: 0x06017B37 RID: 97079 RVA: 0x003617E0 File Offset: 0x0035F9E0
 		public static Offset<IFinishBvbChallenge> CreateIFinishBvbChallenge(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), int BvbChallengeId = 0)
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFinishBvbChallenge.EndIFinishBvbChallenge(builder);
 		}
 
-		// Token: 0x0601650B RID: 91403 RVA: 0x00338C0C File Offset: 0x00336E0C
+		// Token: 0x06017B38 RID: 97080 RVA: 0x00361804 File Offset: 0x0035FA04
 		public static void StartIFinishBvbChallenge(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601650C RID: 91404 RVA: 0x00338C15 File Offset: 0x00336E15
+		// Token: 0x06017B39 RID: 97081 RVA: 0x0036180D File Offset: 0x0035FA0D
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601650D RID: 91405 RVA: 0x00338C20 File Offset: 0x00336E20
+		// Token: 0x06017B3A RID: 97082 RVA: 0x00361818 File Offset: 0x0035FA18
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x0601650E RID: 91406 RVA: 0x00338C30 File Offset: 0x00336E30
+		// Token: 0x06017B3B RID: 97083 RVA: 0x00361828 File Offset: 0x0035FA28
 		public static void AddBvbChallengeId(FlatBufferBuilder builder, int bvbChallengeId)
 		{
 			builder.AddInt(2, bvbChallengeId, 0);
 		}
 
-		// Token: 0x0601650F RID: 91407 RVA: 0x00338C3B File Offset: 0x00336E3B
+		// Token: 0x06017B3C RID: 97084 RVA: 0x00361833 File Offset: 0x0035FA33
 		public static Offset<IFinishBvbChallenge> EndIFinishBvbChallenge(FlatBufferBuilder builder)
 		{
 			return new Offset<IFinishBvbChallenge>(builder.EndTable());
 		}
 
-		// Token: 0x06016510 RID: 91408 RVA: 0x00338C48 File Offset: 0x00336E48
+		// Token: 0x06017B3D RID: 97085 RVA: 0x00361840 File Offset: 0x0035FA40
 		public IFinishBvbChallengeT UnPack()
 		{
 			IFinishBvbChallengeT finishBvbChallengeT = new IFinishBvbChallengeT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return finishBvbChallengeT;
 		}
 
-		// Token: 0x06016511 RID: 91409 RVA: 0x00338C64 File Offset: 0x00336E64
+		// Token: 0x06017B3E RID: 97086 RVA: 0x0036185C File Offset: 0x0035FA5C
 		public void UnPackTo(IFinishBvbChallengeT _o)
 		{
 			_o.Type = this.Type;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.BvbChallengeId = this.BvbChallengeId;
 		}
 
-		// Token: 0x06016512 RID: 91410 RVA: 0x00338CB8 File Offset: 0x00336EB8
+		// Token: 0x06017B3F RID: 97087 RVA: 0x003618B0 File Offset: 0x0035FAB0
 		public static Offset<IFinishBvbChallenge> Pack(FlatBufferBuilder builder, IFinishBvbChallengeT _o)
 		{
 			if (_o == null)
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFinishBvbChallenge.CreateIFinishBvbChallenge(builder, _o.Type, preConditionsOffset, _o.BvbChallengeId);
 		}
 
-		// Token: 0x0400B7B5 RID: 47029
+		// Token: 0x0400C18D RID: 49549
 		private Table __p;
 	}
 }

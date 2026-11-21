@@ -11,7 +11,7 @@ namespace Aki.Protocol
 	[NetMessage(EMessageId.AcceptFocusWaitQuestRequest)]
 	public sealed class AcceptFocusWaitQuestRequest : IMessage<AcceptFocusWaitQuestRequest>, IMessage, IEquatable<AcceptFocusWaitQuestRequest>, IDeepCloneable<AcceptFocusWaitQuestRequest>, IBufferMessage
 	{
-		// Token: 0x060014B1 RID: 5297 RVA: 0x000376FE File Offset: 0x000358FE
+		// Token: 0x060014DC RID: 5340 RVA: 0x00037CB9 File Offset: 0x00035EB9
 		[NullableContext(1)]
 		public static AcceptFocusWaitQuestRequest Create()
 		{
@@ -19,7 +19,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700013C RID: 316
-		// (get) Token: 0x060014B2 RID: 5298 RVA: 0x00037705 File Offset: 0x00035905
+		// (get) Token: 0x060014DD RID: 5341 RVA: 0x00037CC0 File Offset: 0x00035EC0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,7 +31,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700013D RID: 317
-		// (get) Token: 0x060014B3 RID: 5299 RVA: 0x00037708 File Offset: 0x00035908
+		// (get) Token: 0x060014DE RID: 5342 RVA: 0x00037CC3 File Offset: 0x00035EC3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060014B4 RID: 5300 RVA: 0x0003770F File Offset: 0x0003590F
+		// Token: 0x060014DF RID: 5343 RVA: 0x00037CCA File Offset: 0x00035ECA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AcceptFocusWaitQuestRequest()
 		{
 		}
 
-		// Token: 0x060014B5 RID: 5301 RVA: 0x00037717 File Offset: 0x00035917
+		// Token: 0x060014E0 RID: 5344 RVA: 0x00037CD2 File Offset: 0x00035ED2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AcceptFocusWaitQuestRequest(AcceptFocusWaitQuestRequest other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060014B6 RID: 5302 RVA: 0x0003773C File Offset: 0x0003593C
+		// Token: 0x060014E1 RID: 5345 RVA: 0x00037CF7 File Offset: 0x00035EF7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AcceptFocusWaitQuestRequest Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700013E RID: 318
-		// (get) Token: 0x060014B7 RID: 5303 RVA: 0x00037744 File Offset: 0x00035944
-		// (set) Token: 0x060014B8 RID: 5304 RVA: 0x0003774C File Offset: 0x0003594C
+		// (get) Token: 0x060014E2 RID: 5346 RVA: 0x00037CFF File Offset: 0x00035EFF
+		// (set) Token: 0x060014E3 RID: 5347 RVA: 0x00037D07 File Offset: 0x00035F07
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int QuestId
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060014B9 RID: 5305 RVA: 0x00037755 File Offset: 0x00035955
+		// Token: 0x060014E4 RID: 5348 RVA: 0x00037D10 File Offset: 0x00035F10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AcceptFocusWaitQuestRequest);
 		}
 
-		// Token: 0x060014BA RID: 5306 RVA: 0x00037763 File Offset: 0x00035963
+		// Token: 0x060014E5 RID: 5349 RVA: 0x00037D1E File Offset: 0x00035F1E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AcceptFocusWaitQuestRequest other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.QuestId == other.QuestId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060014BB RID: 5307 RVA: 0x00037794 File Offset: 0x00035994
+		// Token: 0x060014E6 RID: 5350 RVA: 0x00037D4C File Offset: 0x00035F4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060014BC RID: 5308 RVA: 0x000377D3 File Offset: 0x000359D3
+		// Token: 0x060014E7 RID: 5351 RVA: 0x00037D8B File Offset: 0x00035F8B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060014BD RID: 5309 RVA: 0x000377E0 File Offset: 0x000359E0
+		// Token: 0x060014E8 RID: 5352 RVA: 0x00037D98 File Offset: 0x00035F98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060014BE RID: 5310 RVA: 0x000377E9 File Offset: 0x000359E9
+		// Token: 0x060014E9 RID: 5353 RVA: 0x00037DA1 File Offset: 0x00035FA1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.QuestId != 0)
 			{
-				output.WriteRawTag(24);
+				output.WriteRawTag(104);
 				output.WriteInt32(this.QuestId);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060014BF RID: 5311 RVA: 0x0003781C File Offset: 0x00035A1C
+		// Token: 0x060014EA RID: 5354 RVA: 0x00037DD4 File Offset: 0x00035FD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060014C0 RID: 5312 RVA: 0x0003785A File Offset: 0x00035A5A
+		// Token: 0x060014EB RID: 5355 RVA: 0x00037E12 File Offset: 0x00036012
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AcceptFocusWaitQuestRequest other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060014C1 RID: 5313 RVA: 0x0003788B File Offset: 0x00035A8B
+		// Token: 0x060014EC RID: 5356 RVA: 0x00037E43 File Offset: 0x00036043
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060014C2 RID: 5314 RVA: 0x00037894 File Offset: 0x00035A94
+		// Token: 0x060014ED RID: 5357 RVA: 0x00037E4C File Offset: 0x0003604C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 24U)
+				if (num != 104U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002073 RID: 8307
+		// Token: 0x040020C9 RID: 8393
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002074 RID: 8308
-		public const int QuestIdFieldNumber = 3;
+		// Token: 0x040020CA RID: 8394
+		public const int QuestIdFieldNumber = 13;
 
-		// Token: 0x04002075 RID: 8309
+		// Token: 0x040020CB RID: 8395
 		private int questId_;
 	}
 }

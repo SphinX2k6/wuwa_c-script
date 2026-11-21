@@ -11,17 +11,17 @@ using CSharpScript.Launcher.Platform;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002432 RID: 9266
+// Token: 0x02001917 RID: 6423
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomManagerConfigSharePopItem : UiViewBase
 {
-	// Token: 0x0601294F RID: 76111 RVA: 0x00494F1B File Offset: 0x0049311B
+	// Token: 0x0600FE05 RID: 65029 RVA: 0x004A24E7 File Offset: 0x004A06E7
 	public PhantomManagerConfigSharePopItem(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06012950 RID: 76112 RVA: 0x00494F24 File Offset: 0x00493124
+	// Token: 0x0600FE06 RID: 65030 RVA: 0x004A24F0 File Offset: 0x004A06F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -62,7 +62,7 @@ public class PhantomManagerConfigSharePopItem : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06012951 RID: 76113 RVA: 0x0049511C File Offset: 0x0049331C
+	// Token: 0x0600FE07 RID: 65031 RVA: 0x004A26E8 File Offset: 0x004A08E8
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(0);
@@ -90,7 +90,7 @@ public class PhantomManagerConfigSharePopItem : UiViewBase
 		this.LevelSequence.PlayLevelSequenceByName("Progressing", false, null, false);
 	}
 
-	// Token: 0x06012952 RID: 76114 RVA: 0x004951E8 File Offset: 0x004933E8
+	// Token: 0x0600FE08 RID: 65032 RVA: 0x004A27B4 File Offset: 0x004A09B4
 	protected bool GetTimeValid()
 	{
 		long lastSharedCheckTime = PhantomBattleModel.Instance.GetPhantomConfigData().LastSharedCheckTime;
@@ -99,7 +99,7 @@ public class PhantomManagerConfigSharePopItem : UiViewBase
 		return now - (double)lastSharedCheckTime >= (double)(phantomSharedCodeCd * 1000);
 	}
 
-	// Token: 0x06012953 RID: 76115 RVA: 0x0049522A File Offset: 0x0049342A
+	// Token: 0x0600FE09 RID: 65033 RVA: 0x004A27F6 File Offset: 0x004A09F6
 	private void OnClickedSelfUpdate()
 	{
 		PhantomBattleController.Instance.RequestPhBaPlanUpdatePlan().ContinueWith(delegate(bool value)
@@ -123,7 +123,7 @@ public class PhantomManagerConfigSharePopItem : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x06012954 RID: 76116 RVA: 0x0049524C File Offset: 0x0049344C
+	// Token: 0x0600FE0A RID: 65034 RVA: 0x004A2818 File Offset: 0x004A0A18
 	private void OnClickedShare()
 	{
 		PhantomManagerConfigData configData = PhantomBattleModel.Instance.GetPhantomConfigData();
@@ -182,14 +182,14 @@ public class PhantomManagerConfigSharePopItem : UiViewBase
 		this.CopySuccess(txtContext);
 	}
 
-	// Token: 0x06012955 RID: 76117 RVA: 0x004953B7 File Offset: 0x004935B7
+	// Token: 0x0600FE0B RID: 65035 RVA: 0x004A2983 File Offset: 0x004A0B83
 	private void CopySuccess(string txt)
 	{
 		ULGUIBPLibrary.ClipBoardCopy(txt);
 		ScrollingTipsController.Instance.ShowTipsByTextId("PhantomProject_ShareImport_Des_8", Array.Empty<object>());
 	}
 
-	// Token: 0x06012956 RID: 76118 RVA: 0x004953D3 File Offset: 0x004935D3
+	// Token: 0x0600FE0C RID: 65036 RVA: 0x004A299F File Offset: 0x004A0B9F
 	private void UpdateSelfAndReset()
 	{
 		PhantomBattleController.Instance.RequestPhBaPlanUpdatePlan().ContinueWith(delegate(bool _)
@@ -209,7 +209,7 @@ public class PhantomManagerConfigSharePopItem : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x06012957 RID: 76119 RVA: 0x004953F8 File Offset: 0x004935F8
+	// Token: 0x0600FE0D RID: 65037 RVA: 0x004A29C4 File Offset: 0x004A0BC4
 	private void OnClickedPaste()
 	{
 		if (Platform.Instance.IsCloudGame())
@@ -244,7 +244,7 @@ public class PhantomManagerConfigSharePopItem : UiViewBase
 		}
 	}
 
-	// Token: 0x06012958 RID: 76120 RVA: 0x0049547C File Offset: 0x0049367C
+	// Token: 0x0600FE0E RID: 65038 RVA: 0x004A2A48 File Offset: 0x004A0C48
 	private void OnClickedImport()
 	{
 		if (!this.GetTimeValid())
@@ -325,7 +325,7 @@ public class PhantomManagerConfigSharePopItem : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x06012959 RID: 76121 RVA: 0x00495544 File Offset: 0x00493744
+	// Token: 0x0600FE0F RID: 65039 RVA: 0x004A2B10 File Offset: 0x004A0D10
 	private bool IsCodeValid(string code)
 	{
 		int phantomManagerShareCodeMax = PhantomBattleConfig.Instance.GetPhantomManagerShareCodeMax();
@@ -333,34 +333,34 @@ public class PhantomManagerConfigSharePopItem : UiViewBase
 		return code.Length >= phantomManagerShareCodeMin && code.Length <= phantomManagerShareCodeMax && StringUtils.CheckIsOnlyLettersAndNumbers(code);
 	}
 
-	// Token: 0x04008C05 RID: 35845
+	// Token: 0x04008D4C RID: 36172
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequence;
 
-	// Token: 0x04008C06 RID: 35846
+	// Token: 0x04008D4D RID: 36173
 	private bool NeedUpdateLoginShowTmp;
 
-	// Token: 0x020089B4 RID: 35252
+	// Token: 0x02007B3B RID: 31547
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x0402CBED RID: 183277
+		// Token: 0x04027F03 RID: 163587
 		TxtCodeNum,
-		// Token: 0x0402CBEE RID: 183278
+		// Token: 0x04027F04 RID: 163588
 		BtnUpdate,
-		// Token: 0x0402CBEF RID: 183279
+		// Token: 0x04027F05 RID: 163589
 		BtnShare,
-		// Token: 0x0402CBF0 RID: 183280
+		// Token: 0x04027F06 RID: 163590
 		PanelNeedUpdate,
-		// Token: 0x0402CBF1 RID: 183281
+		// Token: 0x04027F07 RID: 163591
 		InputBox,
-		// Token: 0x0402CBF2 RID: 183282
+		// Token: 0x04027F08 RID: 163592
 		BtnInputPaste,
-		// Token: 0x0402CBF3 RID: 183283
+		// Token: 0x04027F09 RID: 163593
 		BtnImport,
-		// Token: 0x0402CBF4 RID: 183284
+		// Token: 0x04027F0A RID: 163594
 		PanelInProgress,
-		// Token: 0x0402CBF5 RID: 183285
+		// Token: 0x04027F0B RID: 163595
 		PanelInProgressAnim
 	}
 }

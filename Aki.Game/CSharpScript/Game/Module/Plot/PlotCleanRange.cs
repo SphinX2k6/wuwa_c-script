@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FDF RID: 20447
+	// Token: 0x02003FA9 RID: 16297
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotCleanRange
 	{
-		// Token: 0x06034528 RID: 214312 RVA: 0x00C49F18 File Offset: 0x00C48118
+		// Token: 0x060293B1 RID: 168881 RVA: 0x00B93F60 File Offset: 0x00B92160
 		public void Open(HideByRangeInFlow param)
 		{
 			this.IsCleaned = true;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Plot
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06034529 RID: 214313 RVA: 0x00C4A130 File Offset: 0x00C48330
+		// Token: 0x060293B2 RID: 168882 RVA: 0x00B94178 File Offset: 0x00B92378
 		public void Close()
 		{
 			if (!this.IsCleaned)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Plot
 			global::Log.Instance.Info(ELogModule.Plot, ELogAuthor.FZX, "[PlotCleanRange] 恢复清场", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0603452A RID: 214314 RVA: 0x00C4A21C File Offset: 0x00C4841C
+		// Token: 0x060293B3 RID: 168883 RVA: 0x00B94264 File Offset: 0x00B92464
 		private void CleanSimpleNpc(bool isSimpleNpcCleaned)
 		{
 			if (this.IsSimpleNpcCleaned)
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0603452B RID: 214315 RVA: 0x00C4A264 File Offset: 0x00C48464
+		// Token: 0x060293B4 RID: 168884 RVA: 0x00B942AC File Offset: 0x00B924AC
 		private void RevertCleanSimpleNpc()
 		{
 			if (!this.IsSimpleNpcCleaned)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.IsSimpleNpcCleaned = false;
 		}
 
-		// Token: 0x0603452C RID: 214316 RVA: 0x00C4A2AC File Offset: 0x00C484AC
+		// Token: 0x060293B5 RID: 168885 RVA: 0x00B942F4 File Offset: 0x00B924F4
 		private unsafe void OnCreateEntity(CreatureDataComponent creatureData, EntityHandle handle)
 		{
 			if (!this.CheckNeedClean(handle, null))
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Plot
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x0603452D RID: 214317 RVA: 0x00C4A36C File Offset: 0x00C4856C
+		// Token: 0x060293B6 RID: 168886 RVA: 0x00B943B4 File Offset: 0x00B925B4
 		private bool CheckNeedClean(EntityHandle handle, [Nullable(2)] Range range = null)
 		{
 			if (this.DisableEntityMap.ContainsKey(handle))
@@ -226,33 +226,33 @@ namespace CSharpScript.Game.Module.Plot
 			return result;
 		}
 
-		// Token: 0x0603452E RID: 214318 RVA: 0x00C4A51C File Offset: 0x00C4871C
+		// Token: 0x060293B7 RID: 168887 RVA: 0x00B94564 File Offset: 0x00B92764
 		private bool CheckRange(EntityHandle handle, CreatureDataComponent cdComp, Range range)
 		{
 			return !range.IgnoreList.Contains(cdComp.GetPbDataId()) && global::Vector.DistSquared(this.TmpVector, range.Center) <= range.RadiusSquare;
 		}
 
-		// Token: 0x0603452F RID: 214319 RVA: 0x00C4A54F File Offset: 0x00C4874F
+		// Token: 0x060293B8 RID: 168888 RVA: 0x00B94597 File Offset: 0x00B92797
 		public void OnTick(double delta)
 		{
 		}
 
-		// Token: 0x0401BD30 RID: 113968
+		// Token: 0x0401670B RID: 91915
 		private bool IsCleaned;
 
-		// Token: 0x0401BD31 RID: 113969
+		// Token: 0x0401670C RID: 91916
 		private bool IsSimpleNpcCleaned;
 
-		// Token: 0x0401BD32 RID: 113970
+		// Token: 0x0401670D RID: 91917
 		private readonly Dictionary<EntityHandle, int> DisableEntityMap = new Dictionary<EntityHandle, int>();
 
-		// Token: 0x0401BD33 RID: 113971
+		// Token: 0x0401670E RID: 91918
 		private bool IgnorePasserBy;
 
-		// Token: 0x0401BD34 RID: 113972
+		// Token: 0x0401670F RID: 91919
 		private readonly List<Range> Ranges = new List<Range>();
 
-		// Token: 0x0401BD35 RID: 113973
+		// Token: 0x04016710 RID: 91920
 		private readonly global::Vector TmpVector = global::Vector.Create();
 	}
 }

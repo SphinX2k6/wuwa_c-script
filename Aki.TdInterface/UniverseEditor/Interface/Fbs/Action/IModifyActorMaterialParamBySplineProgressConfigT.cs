@@ -2,23 +2,29 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AAD RID: 27309
+	// Token: 0x020071D8 RID: 29144
 	public class IModifyActorMaterialParamBySplineProgressConfigT
 	{
-		// Token: 0x1700CAA8 RID: 51880
-		// (get) Token: 0x0602FDBC RID: 196028 RVA: 0x00682BC8 File Offset: 0x00680DC8
-		// (set) Token: 0x0602FDBD RID: 196029 RVA: 0x00682BD0 File Offset: 0x00680DD0
+		// Token: 0x1700D561 RID: 54625
+		// (get) Token: 0x06032B26 RID: 207654 RVA: 0x006D93B1 File Offset: 0x006D75B1
+		// (set) Token: 0x06032B27 RID: 207655 RVA: 0x006D93B9 File Offset: 0x006D75B9
 		public EModifyActorMaterialParamBySplineProgressType Type { get; set; }
 
-		// Token: 0x1700CAA9 RID: 51881
-		// (get) Token: 0x0602FDBE RID: 196030 RVA: 0x00682BD9 File Offset: 0x00680DD9
-		// (set) Token: 0x0602FDBF RID: 196031 RVA: 0x00682BE1 File Offset: 0x00680DE1
+		// Token: 0x1700D562 RID: 54626
+		// (get) Token: 0x06032B28 RID: 207656 RVA: 0x006D93C2 File Offset: 0x006D75C2
+		// (set) Token: 0x06032B29 RID: 207657 RVA: 0x006D93CA File Offset: 0x006D75CA
+		public TModifyActorMaterialParamBySplineProgressTargetUnion MoveTarget { get; set; }
+
+		// Token: 0x1700D563 RID: 54627
+		// (get) Token: 0x06032B2A RID: 207658 RVA: 0x006D93D3 File Offset: 0x006D75D3
+		// (set) Token: 0x06032B2B RID: 207659 RVA: 0x006D93DB File Offset: 0x006D75DB
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x0602FDC0 RID: 196032 RVA: 0x00682BEA File Offset: 0x00680DEA
+		// Token: 0x06032B2C RID: 207660 RVA: 0x006D93E4 File Offset: 0x006D75E4
 		public IModifyActorMaterialParamBySplineProgressConfigT()
 		{
 			this.Type = EModifyActorMaterialParamBySplineProgressType.EnterSpline;
+			this.MoveTarget = null;
 			this.SplineEntityId = 0;
 		}
 	}

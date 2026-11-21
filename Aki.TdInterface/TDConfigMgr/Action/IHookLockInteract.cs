@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B1F RID: 6943
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CCE RID: 7374
 	public class IHookLockInteract : ILeisureInteractType
 	{
-		// Token: 0x060094A6 RID: 38054 RVA: 0x00158158 File Offset: 0x00156358
+		// Token: 0x06009C90 RID: 40080 RVA: 0x00168E34 File Offset: 0x00167034
 		private IHookLockInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060094A7 RID: 38055 RVA: 0x00158190 File Offset: 0x00156390
+		// Token: 0x06009C91 RID: 40081 RVA: 0x00168E6C File Offset: 0x0016706C
 		public static IHookLockInteract Create([Nullable(2)] IHookLockInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060094A8 RID: 38056 RVA: 0x001581A3 File Offset: 0x001563A3
+		// Token: 0x06009C92 RID: 40082 RVA: 0x00168E7F File Offset: 0x0016707F
 		public static IHookLockInteract CreateFromSetValue([Nullable(2)] IHookLockInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060094A9 RID: 38057 RVA: 0x001581B6 File Offset: 0x001563B6
+		// Token: 0x06009C93 RID: 40083 RVA: 0x00168E92 File Offset: 0x00167092
 		public new IHookLockInteract_SetValue ToSetValue()
 		{
 			return new IHookLockInteract_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EFA RID: 12026
-		// (get) Token: 0x060094AA RID: 38058 RVA: 0x001581D5 File Offset: 0x001563D5
-		// (set) Token: 0x060094AB RID: 38059 RVA: 0x00158200 File Offset: 0x00156400
+		// Token: 0x17003120 RID: 12576
+		// (get) Token: 0x06009C94 RID: 40084 RVA: 0x00168EB1 File Offset: 0x001670B1
+		// (set) Token: 0x06009C95 RID: 40085 RVA: 0x00168EDC File Offset: 0x001670DC
 		public override ELeisureInteract Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EFB RID: 12027
-		// (get) Token: 0x060094AC RID: 38060 RVA: 0x0015820E File Offset: 0x0015640E
-		// (set) Token: 0x060094AD RID: 38061 RVA: 0x00158239 File Offset: 0x00156439
+		// Token: 0x17003121 RID: 12577
+		// (get) Token: 0x06009C96 RID: 40086 RVA: 0x00168EEA File Offset: 0x001670EA
+		// (set) Token: 0x06009C97 RID: 40087 RVA: 0x00168F15 File Offset: 0x00167115
 		public virtual int EntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B17 RID: 23319
+		// Token: 0x04005FB5 RID: 24501
 		[Nullable(2)]
 		protected new IHookLockInteract FbInstance;
 
-		// Token: 0x04005B18 RID: 23320
+		// Token: 0x04005FB6 RID: 24502
 		[Nullable(2)]
 		protected new IHookLockInteract_SetValue PocoInterface;
 	}

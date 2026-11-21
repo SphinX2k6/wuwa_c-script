@@ -4,15 +4,18 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.PhoneMessage;
-using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002544 RID: 9540
+// Token: 0x02001A2E RID: 6702
 [NullableContext(2)]
-[Nullable(0)]
-public class TogChatPartner : UiPanelBase
+[Nullable(new byte[]
 {
-	// Token: 0x0601334F RID: 78671 RVA: 0x004C5DA4 File Offset: 0x004C3FA4
+	0,
+	1
+})]
+public class TogChatPartner : SyncGridProxyAbstract<ChatPartnerTabItemData>
+{
+	// Token: 0x06010812 RID: 67602 RVA: 0x004D41B8 File Offset: 0x004D23B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +37,69 @@ public class TogChatPartner : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013350 RID: 78672 RVA: 0x004C5EBC File Offset: 0x004C40BC
+	// Token: 0x06010813 RID: 67603 RVA: 0x004D42D0 File Offset: 0x004D24D0
+	protected override void OnStart()
+	{
+		EventSystem.Instance.Add(EEventName.OnPhoneMsgChatTabClick, new Action<int, int>(this.HandleSubItemSelected));
+		EventSystem.Instance.Add(EEventName.OnPhoneMsgChatShowChange, new Action(this.RefreshThemeOnChatShowChange));
+	}
+
+	// Token: 0x06010814 RID: 67604 RVA: 0x004D430A File Offset: 0x004D250A
+	protected override void OnBeforeDestroy()
+	{
+		EventSystem.Instance.Remove(EEventName.OnPhoneMsgChatTabClick, new Action<int, int>(this.HandleSubItemSelected));
+		EventSystem.Instance.Remove(EEventName.OnPhoneMsgChatShowChange, new Action(this.RefreshThemeOnChatShowChange));
+		this.UnBindRedDot();
+	}
+
+	// Token: 0x06010815 RID: 67605 RVA: 0x004D434C File Offset: 0x004D254C
+	[NullableContext(1)]
+	public override void Refresh(ChatPartnerTabItemData data)
+	{
+		this.CurData = data;
+		int chatPartnerId = data.ChatPartnerId;
+		this.RefreshView(chatPartnerId);
+		Func<int, bool> isExpandedProvider = data.IsExpandedProvider;
+		bool selectedState = isExpandedProvider != null && isExpandedProvider(chatPartnerId);
+		Func<int, bool> isSelectedPartnerProvider = data.IsSelectedPartnerProvider;
+		bool selectBgShow = isSelectedPartnerProvider != null && isSelectedPartnerProvider(chatPartnerId);
+		this.SetSelectedState(selectedState);
+		this.SetSelectBgShow(selectBgShow);
+	}
+
+	// Token: 0x06010816 RID: 67606 RVA: 0x004D43A4 File Offset: 0x004D25A4
+	public override void Clear()
+	{
+		this.SetSelectBgShow(false);
+		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
+		this.UnBindRedDot();
+	}
+
+	// Token: 0x06010817 RID: 67607 RVA: 0x004D43C4 File Offset: 0x004D25C4
+	public void OnClickThisItem()
+	{
+		ChatPartnerTabItemData curData = this.CurData;
+		if (curData == null)
+		{
+			return;
+		}
+		Action<int> onClickPartner = curData.OnClickPartner;
+		if (onClickPartner == null)
+		{
+			return;
+		}
+		onClickPartner(this.CurData.ChatPartnerId);
+	}
+
+	// Token: 0x06010818 RID: 67608 RVA: 0x004D43EC File Offset: 0x004D25EC
+	public void SetSelectedState(bool state)
+	{
+		EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
+		base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
+		this.SetSelected(state);
+	}
+
+	// Token: 0x06010819 RID: 67609 RVA: 0x004D441C File Offset: 0x004D261C
 	public void RefreshByTheme(int themeId)
 	{
 		if (this.AppliedThemeId == themeId)
@@ -98,42 +163,33 @@ public class TogChatPartner : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013351 RID: 78673 RVA: 0x004C6192 File Offset: 0x004C4392
-	public void SetChangeAlpha(bool isEnable)
-	{
-		base.GetItem(9).SetAlpha(isEnable ? 0.5f : 1f);
-	}
-
-	// Token: 0x06013352 RID: 78674 RVA: 0x004C61B0 File Offset: 0x004C43B0
-	protected override void OnStart()
-	{
-		EventSystem.Instance.Add(EEventName.OnPhoneMsgChatTabClick, new Action<int, int>(this.HandleSubItemSelected));
-		EventSystem.Instance.Add(EEventName.OnPhoneMsgChatShowChange, new Action(this.RefreshThemeOnChatShowChange));
-	}
-
-	// Token: 0x06013353 RID: 78675 RVA: 0x004C61EA File Offset: 0x004C43EA
+	// Token: 0x0601081A RID: 67610 RVA: 0x004D46F2 File Offset: 0x004D28F2
 	private void RefreshThemeOnChatShowChange()
 	{
 		this.RefreshByTheme(PhoneMsgModel.Instance.CurrentUsingChatThemeId);
 	}
 
-	// Token: 0x06013354 RID: 78676 RVA: 0x004C61FC File Offset: 0x004C43FC
-	protected override void OnBeforeDestroy()
+	// Token: 0x0601081B RID: 67611 RVA: 0x004D4704 File Offset: 0x004D2904
+	public void SetChangeAlpha(bool isEnable)
 	{
-		EventSystem.Instance.Remove(EEventName.OnPhoneMsgChatTabClick, new Action<int, int>(this.HandleSubItemSelected));
-		EventSystem.Instance.Remove(EEventName.OnPhoneMsgChatShowChange, new Action(this.RefreshThemeOnChatShowChange));
+		base.GetItem(9).SetAlpha(isEnable ? 0.5f : 1f);
+	}
+
+	// Token: 0x0601081C RID: 67612 RVA: 0x004D4722 File Offset: 0x004D2922
+	public void UnBindRedDot()
+	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.PhoneMsgChatPartnerRedDot, base.GetItem(3), this.ChatPartnerId);
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.PhoneMsgChatPartnerRedDotGiftIcon, base.GetItem(5), this.ChatPartnerId);
 	}
 
-	// Token: 0x06013355 RID: 78677 RVA: 0x004C6273 File Offset: 0x004C4473
+	// Token: 0x0601081D RID: 67613 RVA: 0x004D4756 File Offset: 0x004D2956
 	public UUIExtendToggle GetTogglePartner()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x06013356 RID: 78678 RVA: 0x004C627C File Offset: 0x004C447C
-	public void RefreshView(int chatPartnerId, bool isSelected, int gridIndex)
+	// Token: 0x0601081E RID: 67614 RVA: 0x004D4760 File Offset: 0x004D2960
+	public void RefreshView(int chatPartnerId)
 	{
 		ChatPartner? chatPartnerConfigNew = PhoneMsgModel.Instance.GetChatPartnerConfigNew(chatPartnerId);
 		if (chatPartnerConfigNew == null)
@@ -155,81 +211,82 @@ public class TogChatPartner : UiPanelBase
 		this.RefreshByTheme(PhoneMsgModel.Instance.CurrentUsingChatThemeId);
 	}
 
-	// Token: 0x06013357 RID: 78679 RVA: 0x004C6396 File Offset: 0x004C4596
+	// Token: 0x0601081F RID: 67615 RVA: 0x004D487A File Offset: 0x004D2A7A
 	[NullableContext(1)]
 	public void SetClickCallBack(Action func)
 	{
-		this.OnClickTogCallBack = func;
 	}
 
-	// Token: 0x06013358 RID: 78680 RVA: 0x004C639F File Offset: 0x004C459F
+	// Token: 0x06010820 RID: 67616 RVA: 0x004D487C File Offset: 0x004D2A7C
 	private void OnClickTogSelf(EToggleState toggleState)
 	{
-		if (this.OnClickTogCallBack != null)
+		ChatPartnerTabItemData curData = this.CurData;
+		if (curData == null)
 		{
-			this.OnClickTogCallBack();
+			return;
 		}
+		Action<int> onClickPartner = curData.OnClickPartner;
+		if (onClickPartner == null)
+		{
+			return;
+		}
+		onClickPartner(this.CurData.ChatPartnerId);
 	}
 
-	// Token: 0x06013359 RID: 78681 RVA: 0x004C63B4 File Offset: 0x004C45B4
+	// Token: 0x06010821 RID: 67617 RVA: 0x004D48A3 File Offset: 0x004D2AA3
 	public void SetSelected(bool isSelected)
 	{
 		base.GetText(2).SetUIActive(!isSelected);
 		base.GetText(8).SetUIActive(isSelected);
 	}
 
-	// Token: 0x0601335A RID: 78682 RVA: 0x004C63D3 File Offset: 0x004C45D3
+	// Token: 0x06010822 RID: 67618 RVA: 0x004D48C2 File Offset: 0x004D2AC2
 	public void HandleSubItemSelected(int messageId, int chatPartnerId)
 	{
-		if (chatPartnerId == this.ChatPartnerId)
-		{
-			this.SetSelectBgShow(true);
-			return;
-		}
-		this.SetSelectBgShow(false);
+		this.SetSelectBgShow(chatPartnerId == this.ChatPartnerId);
 	}
 
-	// Token: 0x0601335B RID: 78683 RVA: 0x004C63ED File Offset: 0x004C45ED
+	// Token: 0x06010823 RID: 67619 RVA: 0x004D48D3 File Offset: 0x004D2AD3
 	public void SetSelectBgShow(bool isShow)
 	{
 		base.GetSprite(7).SetUIActive(isShow);
 	}
 
-	// Token: 0x04009112 RID: 37138
-	private Action OnClickTogCallBack;
-
-	// Token: 0x04009113 RID: 37139
+	// Token: 0x04009262 RID: 37474
 	private int ChatPartnerId;
 
-	// Token: 0x04009114 RID: 37140
+	// Token: 0x04009263 RID: 37475
 	private int AppliedThemeId = -1;
 
-	// Token: 0x04009115 RID: 37141
+	// Token: 0x04009264 RID: 37476
+	private ChatPartnerTabItemData CurData;
+
+	// Token: 0x04009265 RID: 37477
 	public UUIExtendToggle Toggle;
 
-	// Token: 0x02008AFB RID: 35579
+	// Token: 0x02007C81 RID: 31873
 	[NullableContext(0)]
 	private enum EChatPartnerComponent
 	{
-		// Token: 0x0402D1EF RID: 184815
+		// Token: 0x04028500 RID: 165120
 		TogSelf,
-		// Token: 0x0402D1F0 RID: 184816
+		// Token: 0x04028501 RID: 165121
 		TexHeadIcon,
-		// Token: 0x0402D1F1 RID: 184817
+		// Token: 0x04028502 RID: 165122
 		TxtNameNotSelect,
-		// Token: 0x0402D1F2 RID: 184818
+		// Token: 0x04028503 RID: 165123
 		ItemRedDot,
-		// Token: 0x0402D1F3 RID: 184819
+		// Token: 0x04028504 RID: 165124
 		TxtCount,
-		// Token: 0x0402D1F4 RID: 184820
+		// Token: 0x04028505 RID: 165125
 		ItemGiftIcon,
-		// Token: 0x0402D1F5 RID: 184821
+		// Token: 0x04028506 RID: 165126
 		SpriteBgNotSelect,
-		// Token: 0x0402D1F6 RID: 184822
+		// Token: 0x04028507 RID: 165127
 		SpriteBgSelect,
-		// Token: 0x0402D1F7 RID: 184823
+		// Token: 0x04028508 RID: 165128
 		TxtNameSelect,
-		// Token: 0x0402D1F8 RID: 184824
+		// Token: 0x04028509 RID: 165129
 		PanelSetAlpha
 	}
 }

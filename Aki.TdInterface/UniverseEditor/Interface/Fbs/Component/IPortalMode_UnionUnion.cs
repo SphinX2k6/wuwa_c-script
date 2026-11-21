@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005770 RID: 22384
+	// Token: 0x02005D77 RID: 23927
 	public class IPortalMode_UnionUnion
 	{
-		// Token: 0x1700A6F3 RID: 42739
-		// (get) Token: 0x06025833 RID: 153651 RVA: 0x0052CC67 File Offset: 0x0052AE67
-		// (set) Token: 0x06025834 RID: 153652 RVA: 0x0052CC6F File Offset: 0x0052AE6F
+		// Token: 0x1700B017 RID: 45079
+		// (get) Token: 0x06027D53 RID: 163155 RVA: 0x00572DF3 File Offset: 0x00570FF3
+		// (set) Token: 0x06027D54 RID: 163156 RVA: 0x00572DFB File Offset: 0x00570FFB
 		public IPortalMode_Union Type { get; set; }
 
-		// Token: 0x1700A6F4 RID: 42740
-		// (get) Token: 0x06025835 RID: 153653 RVA: 0x0052CC78 File Offset: 0x0052AE78
-		// (set) Token: 0x06025836 RID: 153654 RVA: 0x0052CC80 File Offset: 0x0052AE80
+		// Token: 0x1700B018 RID: 45080
+		// (get) Token: 0x06027D55 RID: 163157 RVA: 0x00572E04 File Offset: 0x00571004
+		// (set) Token: 0x06027D56 RID: 163158 RVA: 0x00572E0C File Offset: 0x0057100C
 		public object Value { get; set; }
 
-		// Token: 0x06025837 RID: 153655 RVA: 0x0052CC89 File Offset: 0x0052AE89
+		// Token: 0x06027D57 RID: 163159 RVA: 0x00572E15 File Offset: 0x00571015
 		public IPortalMode_UnionUnion()
 		{
 			this.Type = IPortalMode_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06025838 RID: 153656 RVA: 0x0052CC9F File Offset: 0x0052AE9F
+		// Token: 0x06027D58 RID: 163160 RVA: 0x00572E2B File Offset: 0x0057102B
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06025839 RID: 153657 RVA: 0x0052CCB1 File Offset: 0x0052AEB1
+		// Token: 0x06027D59 RID: 163161 RVA: 0x00572E3D File Offset: 0x0057103D
 		public IPortalModeT AsIPortalMode()
 		{
 			return this.As<IPortalModeT>();
 		}
 
-		// Token: 0x0602583A RID: 153658 RVA: 0x0052CCB9 File Offset: 0x0052AEB9
+		// Token: 0x06027D5A RID: 163162 RVA: 0x00572E45 File Offset: 0x00571045
 		public static IPortalMode_UnionUnion FromIPortalMode(IPortalModeT _iportalmode)
 		{
 			return new IPortalMode_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602583B RID: 153659 RVA: 0x0052CCCE File Offset: 0x0052AECE
+		// Token: 0x06027D5B RID: 163163 RVA: 0x00572E5A File Offset: 0x0057105A
 		public IStaticPortalT AsIStaticPortal()
 		{
 			return this.As<IStaticPortalT>();
 		}
 
-		// Token: 0x0602583C RID: 153660 RVA: 0x0052CCD6 File Offset: 0x0052AED6
+		// Token: 0x06027D5C RID: 163164 RVA: 0x00572E62 File Offset: 0x00571062
 		public static IPortalMode_UnionUnion FromIStaticPortal(IStaticPortalT _istaticportal)
 		{
 			return new IPortalMode_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602583D RID: 153661 RVA: 0x0052CCEB File Offset: 0x0052AEEB
+		// Token: 0x06027D5D RID: 163165 RVA: 0x00572E77 File Offset: 0x00571077
 		public IDynamicPortalT AsIDynamicPortal()
 		{
 			return this.As<IDynamicPortalT>();
 		}
 
-		// Token: 0x0602583E RID: 153662 RVA: 0x0052CCF3 File Offset: 0x0052AEF3
+		// Token: 0x06027D5E RID: 163166 RVA: 0x00572E7F File Offset: 0x0057107F
 		public static IPortalMode_UnionUnion FromIDynamicPortal(IDynamicPortalT _idynamicportal)
 		{
 			return new IPortalMode_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602583F RID: 153663 RVA: 0x0052CD08 File Offset: 0x0052AF08
+		// Token: 0x06027D5F RID: 163167 RVA: 0x00572E94 File Offset: 0x00571094
 		public static int Pack(FlatBufferBuilder builder, IPortalMode_UnionUnion _o)
 		{
 			switch (_o.Type)

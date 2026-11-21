@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023CB RID: 9163
+	// Token: 0x02002660 RID: 9824
 	public static class EPieceColorTypeExtensions
 	{
-		// Token: 0x0600C790 RID: 51088 RVA: 0x001D365C File Offset: 0x001D185C
+		// Token: 0x0600D40A RID: 54282 RVA: 0x001ECCF4 File Offset: 0x001EAEF4
 		public static string ToEnumString(this EPieceColorType value)
 		{
 			string result;
@@ -36,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C791 RID: 51089 RVA: 0x001D36C8 File Offset: 0x001D18C8
+		// Token: 0x0600D40B RID: 54283 RVA: 0x001ECD60 File Offset: 0x001EAF60
 		public static EPieceColorType FromString(string name)
 		{
 			EPieceColorType result;
@@ -47,7 +47,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C792 RID: 51090 RVA: 0x001D36F4 File Offset: 0x001D18F4
+		// Token: 0x0600D40C RID: 54284 RVA: 0x001ECD8C File Offset: 0x001EAF8C
 		public static bool TryFromString(string name, out EPieceColorType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -89,7 +89,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C793 RID: 51091 RVA: 0x001D3780 File Offset: 0x001D1980
+		// Token: 0x0600D40D RID: 54285 RVA: 0x001ECE18 File Offset: 0x001EB018
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -103,7 +103,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C794 RID: 51092 RVA: 0x001D37B8 File Offset: 0x001D19B8
+		// Token: 0x0600D40E RID: 54286 RVA: 0x001ECE50 File Offset: 0x001EB050
 		public static EPieceColorType[] GetValues()
 		{
 			return new EPieceColorType[]
@@ -117,7 +117,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C795 RID: 51093 RVA: 0x001D37CB File Offset: 0x001D19CB
+		// Token: 0x0600D40F RID: 54287 RVA: 0x001ECE63 File Offset: 0x001EB063
 		public static string[] GetNames()
 		{
 			return new string[]

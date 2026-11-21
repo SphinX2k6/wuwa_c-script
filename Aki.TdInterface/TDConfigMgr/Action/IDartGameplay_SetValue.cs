@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001969 RID: 6505
+	// Token: 0x02001AF4 RID: 6900
 	public class IDartGameplay_SetValue
 	{
-		// Token: 0x040056F3 RID: 22259
+		// Token: 0x04005B47 RID: 23367
 		public ESimpleGameplayType Type;
 
-		// Token: 0x040056F4 RID: 22260
+		// Token: 0x04005B48 RID: 23368
 		public int MachineEntityId;
 
-		// Token: 0x040056F5 RID: 22261
-		[Nullable(1)]
+		// Token: 0x04005B49 RID: 23369
 		public IDartInteractTypeBase InteractType;
 	}
 }

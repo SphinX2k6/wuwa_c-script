@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E73 RID: 3699
+	// Token: 0x02000F86 RID: 3974
 	[EnumExtensions]
 	public enum ENewHandInItemsType
 	{
-		// Token: 0x040030CA RID: 12490
+		// Token: 0x040033CC RID: 13260
 		ProjectionMachine
 	}
 }

@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using UnrealEngine;
 
-// Token: 0x02003196 RID: 12694
+// Token: 0x02002704 RID: 9988
 [NullableContext(1)]
 [Nullable(0)]
 public class SpecialSkillLuPa : SpecialSkillAimingBase
 {
-	// Token: 0x170025C9 RID: 9673
-	// (get) Token: 0x0601B555 RID: 111957 RVA: 0x00776ED4 File Offset: 0x007750D4
+	// Token: 0x170027BA RID: 10170
+	// (get) Token: 0x06019075 RID: 102517 RVA: 0x0079F160 File Offset: 0x0079D360
 	protected override int AimingTagId
 	{
 		get
@@ -18,8 +18,8 @@ public class SpecialSkillLuPa : SpecialSkillAimingBase
 		}
 	}
 
-	// Token: 0x170025CA RID: 9674
-	// (get) Token: 0x0601B556 RID: 111958 RVA: 0x00776EE5 File Offset: 0x007750E5
+	// Token: 0x170027BB RID: 10171
+	// (get) Token: 0x06019076 RID: 102518 RVA: 0x0079F171 File Offset: 0x0079D371
 	protected override EEventName SwitchLockTargetEventName
 	{
 		get
@@ -28,12 +28,12 @@ public class SpecialSkillLuPa : SpecialSkillAimingBase
 		}
 	}
 
-	// Token: 0x0601B557 RID: 111959 RVA: 0x00776EE9 File Offset: 0x007750E9
+	// Token: 0x06019077 RID: 102519 RVA: 0x0079F175 File Offset: 0x0079D375
 	public SpecialSkillLuPa(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B558 RID: 111960 RVA: 0x00776F00 File Offset: 0x00775100
+	// Token: 0x06019078 RID: 102520 RVA: 0x0079F18C File Offset: 0x0079D38C
 	public override void OnStart()
 	{
 		this.SkillComp = this.SpecialSkillComponent.Entity.GetComponent<CharacterSkillComponent>();
@@ -62,13 +62,13 @@ public class SpecialSkillLuPa : SpecialSkillAimingBase
 		base.OnStart();
 	}
 
-	// Token: 0x0601B559 RID: 111961 RVA: 0x00776F9C File Offset: 0x0077519C
+	// Token: 0x06019079 RID: 102521 RVA: 0x0079F228 File Offset: 0x0079D428
 	protected override void LockOn()
 	{
 		base.LockOnCircle(this.Distance, this.Radius);
 	}
 
-	// Token: 0x0601B55A RID: 111962 RVA: 0x00776FB0 File Offset: 0x007751B0
+	// Token: 0x0601907A RID: 102522 RVA: 0x0079F23C File Offset: 0x0079D43C
 	protected override void DoOnTargetLocked(EntityHandle target, string socketName)
 	{
 		WorldEntity entity = target.Entity;
@@ -86,7 +86,7 @@ public class SpecialSkillLuPa : SpecialSkillAimingBase
 		characterBuffComponent.AddBuff(lockOnBuffId, addBuffParam);
 	}
 
-	// Token: 0x0601B55B RID: 111963 RVA: 0x00777020 File Offset: 0x00775220
+	// Token: 0x0601907B RID: 102523 RVA: 0x0079F2AC File Offset: 0x0079D4AC
 	protected override void DoOnTargetUnlocked(EntityHandle target, string socketName)
 	{
 		if (target.Valid)
@@ -105,24 +105,24 @@ public class SpecialSkillLuPa : SpecialSkillAimingBase
 		}
 	}
 
-	// Token: 0x0400D5C7 RID: 54727
+	// Token: 0x0400DA4A RID: 55882
 	private const int SpecialSkillId = 1207601;
 
-	// Token: 0x0400D5C8 RID: 54728
+	// Token: 0x0400DA4B RID: 55883
 	private readonly int Radius = 500;
 
-	// Token: 0x0400D5C9 RID: 54729
+	// Token: 0x0400DA4C RID: 55884
 	[Nullable(2)]
 	private CharacterSkillComponent SkillComp;
 
-	// Token: 0x0400D5CA RID: 54730
+	// Token: 0x0400DA4D RID: 55885
 	[Nullable(2)]
 	private CreatureDataComponent CreatureDataComp;
 
-	// Token: 0x0400D5CB RID: 54731
+	// Token: 0x0400DA4E RID: 55886
 	[Nullable(2)]
 	private Skill SpecialSkill;
 
-	// Token: 0x0400D5CC RID: 54732
+	// Token: 0x0400DA4F RID: 55887
 	private long LockOnBuffId;
 }

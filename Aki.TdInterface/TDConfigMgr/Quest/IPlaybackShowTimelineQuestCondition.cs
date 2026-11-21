@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200104F RID: 4175
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200117D RID: 4477
 	public class IPlaybackShowTimelineQuestCondition : IQuestCondition
 	{
-		// Token: 0x06005D8A RID: 23946 RVA: 0x000E26B8 File Offset: 0x000E08B8
+		// Token: 0x0600637C RID: 25468 RVA: 0x000EF68C File Offset: 0x000ED88C
 		private IPlaybackShowTimelineQuestCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005D8B RID: 23947 RVA: 0x000E26F0 File Offset: 0x000E08F0
+		// Token: 0x0600637D RID: 25469 RVA: 0x000EF6C4 File Offset: 0x000ED8C4
 		public static IPlaybackShowTimelineQuestCondition Create([Nullable(2)] IPlaybackShowTimelineQuestCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D8C RID: 23948 RVA: 0x000E2703 File Offset: 0x000E0903
+		// Token: 0x0600637E RID: 25470 RVA: 0x000EF6D7 File Offset: 0x000ED8D7
 		public static IPlaybackShowTimelineQuestCondition CreateFromSetValue([Nullable(2)] IPlaybackShowTimelineQuestCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D8D RID: 23949 RVA: 0x000E2716 File Offset: 0x000E0916
+		// Token: 0x0600637F RID: 25471 RVA: 0x000EF6EA File Offset: 0x000ED8EA
 		public new IPlaybackShowTimelineQuestCondition_SetValue ToSetValue()
 		{
 			return new IPlaybackShowTimelineQuestCondition_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001ED0 RID: 7888
-		// (get) Token: 0x06005D8E RID: 23950 RVA: 0x000E2741 File Offset: 0x000E0941
-		// (set) Token: 0x06005D8F RID: 23951 RVA: 0x000E276C File Offset: 0x000E096C
+		// Token: 0x1700207F RID: 8319
+		// (get) Token: 0x06006380 RID: 25472 RVA: 0x000EF715 File Offset: 0x000ED915
+		// (set) Token: 0x06006381 RID: 25473 RVA: 0x000EF740 File Offset: 0x000ED940
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001ED1 RID: 7889
-		// (get) Token: 0x06005D90 RID: 23952 RVA: 0x000E277C File Offset: 0x000E097C
-		// (set) Token: 0x06005D91 RID: 23953 RVA: 0x000E27DD File Offset: 0x000E09DD
+		// Token: 0x17002080 RID: 8320
+		// (get) Token: 0x06006382 RID: 25474 RVA: 0x000EF750 File Offset: 0x000ED950
+		// (set) Token: 0x06006383 RID: 25475 RVA: 0x000EF7B1 File Offset: 0x000ED9B1
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001ED2 RID: 7890
-		// (get) Token: 0x06005D92 RID: 23954 RVA: 0x000E27F2 File Offset: 0x000E09F2
-		// (set) Token: 0x06005D93 RID: 23955 RVA: 0x000E281D File Offset: 0x000E0A1D
+		// Token: 0x17002081 RID: 8321
+		// (get) Token: 0x06006384 RID: 25476 RVA: 0x000EF7C6 File Offset: 0x000ED9C6
+		// (set) Token: 0x06006385 RID: 25477 RVA: 0x000EF7F1 File Offset: 0x000ED9F1
 		public virtual string ShowTimelineFileName
 		{
 			get
@@ -141,18 +139,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003851 RID: 14417
+		// Token: 0x04003B99 RID: 15257
 		[Nullable(2)]
 		protected new IPlaybackShowTimelineQuestCondition FbInstance;
 
-		// Token: 0x04003852 RID: 14418
+		// Token: 0x04003B9A RID: 15258
 		[Nullable(2)]
 		protected new IPlaybackShowTimelineQuestCondition_SetValue PocoInterface;
 
-		// Token: 0x04003853 RID: 14419
+		// Token: 0x04003B9B RID: 15259
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003854 RID: 14420
+		// Token: 0x04003B9C RID: 15260
 		private bool _PreConditionsInited;
 	}
 }

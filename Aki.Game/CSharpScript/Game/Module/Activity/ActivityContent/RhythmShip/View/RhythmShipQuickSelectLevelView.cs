@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200623B RID: 25147
+	// Token: 0x020051B9 RID: 20921
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RhythmShipQuickSelectLevelView : UiViewBase
 	{
-		// Token: 0x0603F616 RID: 259606 RVA: 0x00F52698 File Offset: 0x00F50898
+		// Token: 0x060342D7 RID: 213719 RVA: 0x00E995F4 File Offset: 0x00E977F4
 		public RhythmShipQuickSelectLevelView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F617 RID: 259607 RVA: 0x00F526B3 File Offset: 0x00F508B3
+		// Token: 0x060342D8 RID: 213720 RVA: 0x00E9960F File Offset: 0x00E9780F
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F618 RID: 259608 RVA: 0x00F526EC File Offset: 0x00F508EC
+		// Token: 0x060342D9 RID: 213721 RVA: 0x00E99648 File Offset: 0x00E97848
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RhythmShipQuickSelectLevelView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -41,14 +41,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F619 RID: 259609 RVA: 0x00F5272F File Offset: 0x00F5092F
+		// Token: 0x060342DA RID: 213722 RVA: 0x00E9968B File Offset: 0x00E9788B
 		protected override void OnStart()
 		{
 			IRhythmShipQuickSelectLevelViewData rhythmShipQuickSelectLevelViewData = this.OpenParam as IRhythmShipQuickSelectLevelViewData;
 			this.CurrentShowType = ((rhythmShipQuickSelectLevelViewData != null) ? rhythmShipQuickSelectLevelViewData.OpenShowType : ERhythmShipPlanetType.Normal);
 		}
 
-		// Token: 0x0603F61A RID: 259610 RVA: 0x00F52750 File Offset: 0x00F50950
+		// Token: 0x060342DB RID: 213723 RVA: 0x00E996AC File Offset: 0x00E978AC
 		private void InitScrollViewData()
 		{
 			foreach (int num in RhythmShipConfig.Instance.GetRhythmShipPlanetIdListByType((int)this.CurrentShowType, RhythmShipModel.Instance.ActivityId))
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F61B RID: 259611 RVA: 0x00F52888 File Offset: 0x00F50A88
+		// Token: 0x060342DC RID: 213724 RVA: 0x00E997E4 File Offset: 0x00E979E4
 		private void OnClickLevelItemClick(int levelId)
 		{
 			if (!RhythmShipModel.Instance.GetLevelIsUnlock(levelId))
@@ -97,18 +97,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04021183 RID: 135555
+		// Token: 0x0401BAB2 RID: 113330
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021184 RID: 135556
+		// Token: 0x0401BAB3 RID: 113331
 		[Nullable(2)]
 		private MultiTemplateScrollView PlanetMultiTemplateScrollView;
 
-		// Token: 0x04021185 RID: 135557
+		// Token: 0x0401BAB4 RID: 113332
 		private readonly List<IMultiTemplateGridData> ScrollDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x04021186 RID: 135558
+		// Token: 0x0401BAB5 RID: 113333
 		private ERhythmShipPlanetType CurrentShowType = ERhythmShipPlanetType.Normal;
 	}
 }

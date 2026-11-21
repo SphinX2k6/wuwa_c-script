@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 {
-	// Token: 0x02006AB1 RID: 27313
+	// Token: 0x02005C0E RID: 23566
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RbLightBeamItemLogic : RbItemLogicBase
 	{
-		// Token: 0x06043D98 RID: 277912 RVA: 0x010A058C File Offset: 0x0109E78C
+		// Token: 0x06039DEF RID: 237039 RVA: 0x01044C94 File Offset: 0x01042E94
 		public RbLightBeamItemLogic(RbItemComponent owner) : base(owner)
 		{
 		}
 
-		// Token: 0x06043D99 RID: 277913 RVA: 0x010A0618 File Offset: 0x0109E818
+		// Token: 0x06039DF0 RID: 237040 RVA: 0x01044D20 File Offset: 0x01042F20
 		public override void Start([Nullable(new byte[]
 		{
 			0,
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			EventSystem.Instance.AddWithTarget(this.Owner.Entity, EEventName.OnSceneItemLockPropChange, new Action<bool>(this.OnSceneItemLockPropChange));
 		}
 
-		// Token: 0x06043D9A RID: 277914 RVA: 0x010A06B8 File Offset: 0x0109E8B8
+		// Token: 0x06039DF1 RID: 237041 RVA: 0x01044DC0 File Offset: 0x01042FC0
 		public override void End()
 		{
 			this.StopAllEffect();
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			EventSystem.Instance.RemoveWithTarget(this.Owner.Entity, EEventName.OnSceneItemLockPropChange, new Action<bool>(this.OnSceneItemLockPropChange));
 		}
 
-		// Token: 0x06043D9B RID: 277915 RVA: 0x010A0717 File Offset: 0x0109E917
+		// Token: 0x06039DF2 RID: 237042 RVA: 0x01044E1F File Offset: 0x0104301F
 		public override void OnStateChange(int stateId)
 		{
 			if (stateId == GameplayTagDefine.EGameplayTagId["关卡.Common.状态.销毁"])
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			}
 		}
 
-		// Token: 0x06043D9C RID: 277916 RVA: 0x010A0758 File Offset: 0x0109E958
+		// Token: 0x06039DF3 RID: 237043 RVA: 0x01044E60 File Offset: 0x01043060
 		public override void OnRbItemUpdate([Nullable(new byte[]
 		{
 			0,
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			this.IgnoreOverlap = false;
 		}
 
-		// Token: 0x06043D9D RID: 277917 RVA: 0x010A07AC File Offset: 0x0109E9AC
+		// Token: 0x06039DF4 RID: 237044 RVA: 0x01044EB4 File Offset: 0x010430B4
 		private bool UpdatePoints(IList<Aki.Protocol.Vector> points)
 		{
 			if (points.Count > 0)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			return false;
 		}
 
-		// Token: 0x06043D9E RID: 277918 RVA: 0x010A09A0 File Offset: 0x0109EBA0
+		// Token: 0x06039DF5 RID: 237045 RVA: 0x010450A8 File Offset: 0x010432A8
 		private void UpdateEffectByTrace()
 		{
 			this.ExecuteTrace();
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			this.UpdateLightBeam();
 		}
 
-		// Token: 0x06043D9F RID: 277919 RVA: 0x010A0A4C File Offset: 0x0109EC4C
+		// Token: 0x06039DF6 RID: 237046 RVA: 0x01045154 File Offset: 0x01043354
 		private void UpdateRange()
 		{
 			FVectorDouble fvectorDouble = this.AbsolutePoints.Get(0);
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			this.RangeComp.UpdateBoxRange(location, this.BoxExtent.ToUeVector(false));
 		}
 
-		// Token: 0x06043DA0 RID: 277920 RVA: 0x010A0B14 File Offset: 0x0109ED14
+		// Token: 0x06039DF7 RID: 237047 RVA: 0x0104521C File Offset: 0x0104341C
 		private void ExecuteTrace()
 		{
 			this.InitTraceElement(this.AbsoluteOriginPoint.Get(0), this.AbsoluteOriginPoint.Get(this.AbsoluteOriginPoint.Num() - 1));
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			this.ImpactPoint.Z = this.AbsoluteOriginPoint.Get(index).Z;
 		}
 
-		// Token: 0x06043DA1 RID: 277921 RVA: 0x010A0C3C File Offset: 0x0109EE3C
+		// Token: 0x06039DF8 RID: 237048 RVA: 0x01045344 File Offset: 0x01043544
 		private void UpdateStartEffect()
 		{
 			if (this.StartEffectHandle != null)
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			this.StartEffectHandle = new int?(num);
 		}
 
-		// Token: 0x06043DA2 RID: 277922 RVA: 0x010A0DC4 File Offset: 0x0109EFC4
+		// Token: 0x06039DF9 RID: 237049 RVA: 0x010454D8 File Offset: 0x010436D8
 		private unsafe void UpdateLightBeam()
 		{
 			this.StopBeamEffect();
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			}
 		}
 
-		// Token: 0x06043DA3 RID: 277923 RVA: 0x010A10A0 File Offset: 0x0109F2A0
+		// Token: 0x06039DFA RID: 237050 RVA: 0x010457C0 File Offset: 0x010439C0
 		private void InitTraceElement(FVectorDouble traceStartPoint, FVectorDouble traceEndPoint)
 		{
 			if (this.TraceElement == null)
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			this.TraceElement.SetEndLocation(traceEndPoint.X, traceEndPoint.Y, traceEndPoint.Z);
 		}
 
-		// Token: 0x06043DA4 RID: 277924 RVA: 0x010A11D4 File Offset: 0x0109F3D4
+		// Token: 0x06039DFB RID: 237051 RVA: 0x010458F4 File Offset: 0x01043AF4
 		private void OnActorOverlapCallback(bool isEnter, AActor actor)
 		{
 			if (this.IgnoreOverlap)
@@ -339,7 +339,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			this.UpdateEffectByTrace();
 		}
 
-		// Token: 0x06043DA5 RID: 277925 RVA: 0x010A1214 File Offset: 0x0109F414
+		// Token: 0x06039DFC RID: 237052 RVA: 0x01045934 File Offset: 0x01043B34
 		[NullableContext(2)]
 		private EntityHandle ExtractEntity(AActor actor)
 		{
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			return CreatureModel.Instance.GetEntityByChildActor(actor);
 		}
 
-		// Token: 0x06043DA6 RID: 277926 RVA: 0x010A122E File Offset: 0x0109F42E
+		// Token: 0x06039DFD RID: 237053 RVA: 0x0104594E File Offset: 0x01043B4E
 		private void OnSceneItemLockPropChange(bool isLock)
 		{
 			if (isLock)
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			this.StartOverlap();
 		}
 
-		// Token: 0x06043DA7 RID: 277927 RVA: 0x010A1264 File Offset: 0x0109F464
+		// Token: 0x06039DFE RID: 237054 RVA: 0x01045984 File Offset: 0x01043B84
 		private void StartOverlap()
 		{
 			if (!EventSystem.Instance.HasWithTarget(this.Owner.Entity, EEventName.OnActorInOutRangeLocal, new Action<bool, AActor>(this.OnActorOverlapCallback)))
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			}
 		}
 
-		// Token: 0x06043DA8 RID: 277928 RVA: 0x010A12C0 File Offset: 0x0109F4C0
+		// Token: 0x06039DFF RID: 237055 RVA: 0x010459E0 File Offset: 0x01043BE0
 		private void StopOverlap()
 		{
 			if (EventSystem.Instance.HasWithTarget(this.Owner.Entity, EEventName.OnActorInOutRangeLocal, new Action<bool, AActor>(this.OnActorOverlapCallback)))
@@ -383,7 +383,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			}
 		}
 
-		// Token: 0x06043DA9 RID: 277929 RVA: 0x010A131C File Offset: 0x0109F51C
+		// Token: 0x06039E00 RID: 237056 RVA: 0x01045A3C File Offset: 0x01043C3C
 		private void StopAllEffect()
 		{
 			this.StopBeamEffect();
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			}
 		}
 
-		// Token: 0x06043DAA RID: 277930 RVA: 0x010A1370 File Offset: 0x0109F570
+		// Token: 0x06039E01 RID: 237057 RVA: 0x01045A90 File Offset: 0x01043C90
 		private void StopBeamEffect()
 		{
 			if (this.EffectHandle != null)
@@ -409,51 +409,51 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			}
 		}
 
-		// Token: 0x0402375C RID: 145244
+		// Token: 0x0401E94E RID: 125262
 		private const int LIGHT_BEAM_BOX_EXTENT_WIDTH = 5;
 
-		// Token: 0x0402375D RID: 145245
+		// Token: 0x0401E94F RID: 125263
 		private const int LIGHT_BEAM_BOX_EXTENT_HEIGHT = 5;
 
-		// Token: 0x0402375E RID: 145246
+		// Token: 0x0401E950 RID: 125264
 		private FVectorDouble? OriginLocation;
 
-		// Token: 0x0402375F RID: 145247
+		// Token: 0x0401E951 RID: 125265
 		private int? EffectHandle;
 
-		// Token: 0x04023760 RID: 145248
+		// Token: 0x0401E952 RID: 125266
 		private int? HitEffectHandle;
 
-		// Token: 0x04023761 RID: 145249
+		// Token: 0x0401E953 RID: 125267
 		private int? StartEffectHandle;
 
-		// Token: 0x04023762 RID: 145250
+		// Token: 0x0401E954 RID: 125268
 		private readonly TArray<FVectorDouble> RelativePoints = new TArray<FVectorDouble>();
 
-		// Token: 0x04023763 RID: 145251
+		// Token: 0x0401E955 RID: 125269
 		private readonly global::Vector Location = global::Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x04023764 RID: 145252
+		// Token: 0x0401E956 RID: 125270
 		[Nullable(2)]
 		private UTraceBoxElement TraceElement;
 
-		// Token: 0x04023765 RID: 145253
+		// Token: 0x0401E957 RID: 125271
 		[Nullable(2)]
 		private RangeComponent RangeComp;
 
-		// Token: 0x04023766 RID: 145254
+		// Token: 0x0401E958 RID: 125272
 		private readonly global::Vector BoxExtent = global::Vector.Create(0.0, 5.0, 5.0);
 
-		// Token: 0x04023767 RID: 145255
+		// Token: 0x0401E959 RID: 125273
 		private readonly TArray<FVectorDouble> AbsolutePoints = new TArray<FVectorDouble>();
 
-		// Token: 0x04023768 RID: 145256
+		// Token: 0x0401E95A RID: 125274
 		private readonly TArray<FVectorDouble> AbsoluteOriginPoint = new TArray<FVectorDouble>();
 
-		// Token: 0x04023769 RID: 145257
+		// Token: 0x0401E95B RID: 125275
 		private FVectorDouble ImpactPoint = new FVectorDouble();
 
-		// Token: 0x0402376A RID: 145258
+		// Token: 0x0401E95C RID: 125276
 		private bool IgnoreOverlap;
 	}
 }

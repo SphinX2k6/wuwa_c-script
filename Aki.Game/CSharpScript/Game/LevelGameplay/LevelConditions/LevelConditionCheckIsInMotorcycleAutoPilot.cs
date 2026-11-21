@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CB4 RID: 27828
+	// Token: 0x02005E2E RID: 24110
 	public class LevelConditionCheckIsInMotorcycleAutoPilot : LevelConditionBase
 	{
-		// Token: 0x060445FB RID: 280059 RVA: 0x010DC658 File Offset: 0x010DA858
+		// Token: 0x0603A755 RID: 239445 RVA: 0x01086604 File Offset: 0x01084804
 		[NullableContext(1)]
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

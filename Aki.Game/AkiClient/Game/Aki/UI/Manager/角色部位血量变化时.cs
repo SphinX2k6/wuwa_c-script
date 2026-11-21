@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x02003A05 RID: 14853
+	// Token: 0x0200305C RID: 12380
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 角色部位血量变化时 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F1E2 RID: 127458 RVA: 0x008AB3AD File Offset: 0x008A95AD
+		// Token: 0x0601D643 RID: 120387 RVA: 0x008F3A0D File Offset: 0x008F1C0D
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 角色部位血量变化时.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F1E3 RID: 127459 RVA: 0x008AB3B9 File Offset: 0x008A95B9
+		// Token: 0x0601D644 RID: 120388 RVA: 0x008F3A19 File Offset: 0x008F1C19
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__角色部位血量变化时__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,31 +28,30 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__角色部位血量变化时__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F1E4 RID: 127460 RVA: 0x008AB3DC File Offset: 0x008A95DC
+		// Token: 0x0601D645 RID: 120389 RVA: 0x008F3A3C File Offset: 0x008F1C3C
 		public 角色部位血量变化时()
 		{
 		}
 
-		// Token: 0x0601F1E5 RID: 127461 RVA: 0x008AB3E4 File Offset: 0x008A95E4
+		// Token: 0x0601D646 RID: 120390 RVA: 0x008F3A44 File Offset: 0x008F1C44
 		[NullableContext(2)]
 		public 角色部位血量变化时(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F1E6 RID: 127462 RVA: 0x008AB3EE File Offset: 0x008A95EE
+		// Token: 0x0601D647 RID: 120391 RVA: 0x008F3A4E File Offset: 0x008F1C4E
 		public 角色部位血量变化时(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F1E7 RID: 127463 RVA: 0x008AB3F9 File Offset: 0x008A95F9
+		// Token: 0x0601D648 RID: 120392 RVA: 0x008F3A59 File Offset: 0x008F1C59
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<TsBaseCharacter, FGameplayTag, float, float>) ?? ((Action<TsBaseCharacter, FGameplayTag, float, float>)Delegate.CreateDelegate(typeof(Action<TsBaseCharacter, FGameplayTag, float, float>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F1E8 RID: 127464 RVA: 0x008AB42B File Offset: 0x008A962B
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D649 RID: 120393 RVA: 0x008F3A8B File Offset: 0x008F1C8B
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 角色部位血量变化时.RegisterId);
 		}
 
-		// Token: 0x0601F1E9 RID: 127465 RVA: 0x008AB465 File Offset: 0x008A9665
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D64A RID: 120394 RVA: 0x008F3AC5 File Offset: 0x008F1CC5
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -82,10 +80,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F1EA RID: 127466 RVA: 0x008AB470 File Offset: 0x008A9670
+		// Token: 0x0601D64B RID: 120395 RVA: 0x008F3AD0 File Offset: 0x008F1CD0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(TsBaseCharacter 角色, FGameplayTag 部位Tag, float 变化前血量比例, float 变化后血量比例)
 		{
 			角色部位血量变化时.__角色部位血量变化时_DelegateParams* ptr = stackalloc 角色部位血量变化时.__角色部位血量变化时_DelegateParams[(UIntPtr)47] + 15L / (long)sizeof(角色部位血量变化时.__角色部位血量变化时_DelegateParams) & -16L;
@@ -97,10 +94,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F1EB RID: 127467 RVA: 0x008AB4D4 File Offset: 0x008A96D4
+		// Token: 0x0601D64C RID: 120396 RVA: 0x008F3B34 File Offset: 0x008F1D34
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<TsBaseCharacter, FGameplayTag, float, float> action = target as Action<TsBaseCharacter, FGameplayTag, float, float>;
@@ -112,40 +108,40 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(orCreateUObjectByNativePointer, ((角色部位血量变化时.__角色部位血量变化时_DelegateParams*)__Parameters)->部位Tag, ((角色部位血量变化时.__角色部位血量变化时_DelegateParams*)__Parameters)->变化前血量比例, ((角色部位血量变化时.__角色部位血量变化时_DelegateParams*)__Parameters)->变化后血量比例);
 		}
 
-		// Token: 0x0400EE4C RID: 61004
+		// Token: 0x0400F774 RID: 63348
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:角色部位血量变化时__DelegateSignature";
 
-		// Token: 0x0400EE4D RID: 61005
+		// Token: 0x0400F775 RID: 63349
 		private static int RegisterId;
 
-		// Token: 0x02009A14 RID: 39444
+		// Token: 0x02008CC8 RID: 36040
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __角色部位血量变化时_DelegateParams
+		private ref struct __角色部位血量变化时_DelegateParams
 		{
-			// Token: 0x04030EFB RID: 200443
+			// Token: 0x0402C7DB RID: 182235
 			[FieldOffset(0)]
 			public IntPtr 角色;
 
-			// Token: 0x04030EFC RID: 200444
+			// Token: 0x0402C7DC RID: 182236
 			[FieldOffset(8)]
 			public FGameplayTag 部位Tag;
 
-			// Token: 0x04030EFD RID: 200445
+			// Token: 0x0402C7DD RID: 182237
 			[FieldOffset(20)]
 			public float 变化前血量比例;
 
-			// Token: 0x04030EFE RID: 200446
+			// Token: 0x0402C7DE RID: 182238
 			[FieldOffset(24)]
 			public float 变化后血量比例;
 		}
 
-		// Token: 0x02009A15 RID: 39445
+		// Token: 0x02008CC9 RID: 36041
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EFF RID: 200447
+			// Token: 0x0402C7DF RID: 182239
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

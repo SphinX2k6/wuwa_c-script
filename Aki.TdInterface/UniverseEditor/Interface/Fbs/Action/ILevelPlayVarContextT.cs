@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069EE RID: 27118
+	// Token: 0x0200709E RID: 28830
 	public class ILevelPlayVarContextT
 	{
-		// Token: 0x1700C931 RID: 51505
-		// (get) Token: 0x0602F71D RID: 194333 RVA: 0x006764D8 File Offset: 0x006746D8
-		// (set) Token: 0x0602F71E RID: 194334 RVA: 0x006764E0 File Offset: 0x006746E0
+		// Token: 0x1700D331 RID: 54065
+		// (get) Token: 0x060320DD RID: 205021 RVA: 0x006C6830 File Offset: 0x006C4A30
+		// (set) Token: 0x060320DE RID: 205022 RVA: 0x006C6838 File Offset: 0x006C4A38
 		public EVarContext Type { get; set; }
 
-		// Token: 0x1700C932 RID: 51506
-		// (get) Token: 0x0602F71F RID: 194335 RVA: 0x006764E9 File Offset: 0x006746E9
-		// (set) Token: 0x0602F720 RID: 194336 RVA: 0x006764F1 File Offset: 0x006746F1
+		// Token: 0x1700D332 RID: 54066
+		// (get) Token: 0x060320DF RID: 205023 RVA: 0x006C6841 File Offset: 0x006C4A41
+		// (set) Token: 0x060320E0 RID: 205024 RVA: 0x006C6849 File Offset: 0x006C4A49
 		public int Id { get; set; }
 
-		// Token: 0x0602F721 RID: 194337 RVA: 0x006764FA File Offset: 0x006746FA
+		// Token: 0x060320E1 RID: 205025 RVA: 0x006C6852 File Offset: 0x006C4A52
 		public ILevelPlayVarContextT()
 		{
 			this.Type = EVarContext.None;

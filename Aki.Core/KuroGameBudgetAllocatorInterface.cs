@@ -2,10 +2,10 @@
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x020000AE RID: 174
+// Token: 0x020000B0 RID: 176
 public static class KuroGameBudgetAllocatorInterface
 {
-	// Token: 0x06000540 RID: 1344 RVA: 0x0001C100 File Offset: 0x0001A300
+	// Token: 0x06000581 RID: 1409 RVA: 0x0001C7E8 File Offset: 0x0001A9E8
 	public static void OnObjectUpdate(IntPtr gcHandlePtr, float deltaSeconds, int deltaFrames, float distance)
 	{
 		IGameBudgetManagedObject gameBudgetManagedObject = GCHandle.FromIntPtr(gcHandlePtr).Target as IGameBudgetManagedObject;
@@ -15,7 +15,7 @@ public static class KuroGameBudgetAllocatorInterface
 		}
 	}
 
-	// Token: 0x06000541 RID: 1345 RVA: 0x0001C130 File Offset: 0x0001A330
+	// Token: 0x06000582 RID: 1410 RVA: 0x0001C818 File Offset: 0x0001AA18
 	public static void OnObjectLateUpdate(IntPtr gcHandlePtr, float deltaSeconds, int deltaFrames, float distance)
 	{
 		IGameBudgetManagedObject gameBudgetManagedObject = GCHandle.FromIntPtr(gcHandlePtr).Target as IGameBudgetManagedObject;
@@ -25,7 +25,7 @@ public static class KuroGameBudgetAllocatorInterface
 		}
 	}
 
-	// Token: 0x06000542 RID: 1346 RVA: 0x0001C160 File Offset: 0x0001A360
+	// Token: 0x06000583 RID: 1411 RVA: 0x0001C848 File Offset: 0x0001AA48
 	public static void OnObjectEnabledChange(IntPtr gcHandlePtr, bool enable, float distance)
 	{
 		IGameBudgetManagedObject gameBudgetManagedObject = GCHandle.FromIntPtr(gcHandlePtr).Target as IGameBudgetManagedObject;
@@ -35,7 +35,7 @@ public static class KuroGameBudgetAllocatorInterface
 		}
 	}
 
-	// Token: 0x06000543 RID: 1347 RVA: 0x0001C18C File Offset: 0x0001A38C
+	// Token: 0x06000584 RID: 1412 RVA: 0x0001C874 File Offset: 0x0001AA74
 	public static void OnObjectWasRecentlyRenderedChange(IntPtr gcHandlePtr, bool wasRecentlyRendered)
 	{
 		IGameBudgetManagedObject gameBudgetManagedObject = GCHandle.FromIntPtr(gcHandlePtr).Target as IGameBudgetManagedObject;
@@ -45,7 +45,7 @@ public static class KuroGameBudgetAllocatorInterface
 		}
 	}
 
-	// Token: 0x06000544 RID: 1348 RVA: 0x0001C1B8 File Offset: 0x0001A3B8
+	// Token: 0x06000585 RID: 1413 RVA: 0x0001C8A0 File Offset: 0x0001AAA0
 	public unsafe static void ObjectLocationProxyFunction(IntPtr gcHandlePtr, void* inLocationPtr)
 	{
 		IGameBudgetManagedObject gameBudgetManagedObject = GCHandle.FromIntPtr(gcHandlePtr).Target as IGameBudgetManagedObject;
@@ -61,7 +61,7 @@ public static class KuroGameBudgetAllocatorInterface
 		}
 	}
 
-	// Token: 0x06000545 RID: 1349 RVA: 0x0001C224 File Offset: 0x0001A424
+	// Token: 0x06000586 RID: 1414 RVA: 0x0001C90C File Offset: 0x0001AB0C
 	public unsafe static void OnceTaskIsEmptyFunction(void* inGroupIdPtr, void** inResultPtr)
 	{
 		IGameBudgetOnceTaskGroup onceTaskGroupById = GameBudgetInterfaceController.Instance.GetOnceTaskGroupById(*(FName*)inGroupIdPtr);
@@ -71,7 +71,7 @@ public static class KuroGameBudgetAllocatorInterface
 		}
 	}
 
-	// Token: 0x06000546 RID: 1350 RVA: 0x0001C254 File Offset: 0x0001A454
+	// Token: 0x06000587 RID: 1415 RVA: 0x0001C93C File Offset: 0x0001AB3C
 	public unsafe static void OnceTaskConsumeFunction(void* inGroupIdPtr)
 	{
 		IGameBudgetOnceTaskGroup onceTaskGroupById = GameBudgetInterfaceController.Instance.GetOnceTaskGroupById(*(FName*)inGroupIdPtr);

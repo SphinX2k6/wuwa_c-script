@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.NetworkDetection
 {
-	// Token: 0x02005363 RID: 21347
+	// Token: 0x02004346 RID: 17222
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NetworkDetectionSelectServerItem : UiPanelBase, IDynamicScrollItem<ILoginServersData>
 	{
-		// Token: 0x0603688A RID: 223370 RVA: 0x00CE9773 File Offset: 0x00CE7973
+		// Token: 0x0602B7D0 RID: 178128 RVA: 0x00C385FB File Offset: 0x00C367FB
 		public AUIBaseActor GetUsingItem(ILoginServersData data)
 		{
 			return base.GetRootItem().GetOwner() as AUIBaseActor;
 		}
 
-		// Token: 0x0603688B RID: 223371 RVA: 0x00CE9788 File Offset: 0x00CE7988
+		// Token: 0x0602B7D1 RID: 178129 RVA: 0x00C38610 File Offset: 0x00C36810
 		public UniTask Init(UUIItem actor)
 		{
 			NetworkDetectionSelectServerItem.<Init>d__3 <Init>d__;
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603688C RID: 223372 RVA: 0x00CE97D3 File Offset: 0x00CE79D3
+		// Token: 0x0602B7D2 RID: 178130 RVA: 0x00C3865B File Offset: 0x00C3685B
 		public void ClearItem()
 		{
 			base.Destroy(null);
 		}
 
-		// Token: 0x0603688D RID: 223373 RVA: 0x00CE97DC File Offset: 0x00CE79DC
+		// Token: 0x0602B7D3 RID: 178131 RVA: 0x00C38664 File Offset: 0x00C36864
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -72,14 +72,14 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603688E RID: 223374 RVA: 0x00CE9927 File Offset: 0x00CE7B27
+		// Token: 0x0602B7D4 RID: 178132 RVA: 0x00C387AF File Offset: 0x00C369AF
 		protected override void OnStart()
 		{
 			base.GetItem(7).SetUIActive(false);
 			base.GetItem(4).SetUIActive(false);
 		}
 
-		// Token: 0x0603688F RID: 223375 RVA: 0x00CE9943 File Offset: 0x00CE7B43
+		// Token: 0x0602B7D5 RID: 178133 RVA: 0x00C387CB File Offset: 0x00C369CB
 		private void OnExtendToggleComfirmBtn(EToggleState state)
 		{
 			if (this.Data != null)
@@ -89,19 +89,19 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			}
 		}
 
-		// Token: 0x06036890 RID: 223376 RVA: 0x00CE996A File Offset: 0x00CE7B6A
+		// Token: 0x0602B7D6 RID: 178134 RVA: 0x00C387F2 File Offset: 0x00C369F2
 		private void OnSelectServerItem()
 		{
 			this.RefreshToggleState();
 		}
 
-		// Token: 0x06036891 RID: 223377 RVA: 0x00CE9972 File Offset: 0x00CE7B72
+		// Token: 0x0602B7D7 RID: 178135 RVA: 0x00C387FA File Offset: 0x00C369FA
 		private void RefreshToggleState()
 		{
 			base.GetExtendToggle(0).SetToggleState((NetworkDetectionModel.Instance.CurrentUiSelectSeverData == this.Data) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06036892 RID: 223378 RVA: 0x00CE999A File Offset: 0x00CE7B9A
+		// Token: 0x0602B7D8 RID: 178136 RVA: 0x00C38822 File Offset: 0x00C36A22
 		public void Update(ILoginServersData data, int index)
 		{
 			this.Data = data;
@@ -109,34 +109,34 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			this.RefreshToggleState();
 		}
 
-		// Token: 0x06036893 RID: 223379 RVA: 0x00CE99BC File Offset: 0x00CE7BBC
+		// Token: 0x0602B7D9 RID: 178137 RVA: 0x00C38844 File Offset: 0x00C36A44
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnNetworkDetectionSelectServerItem, new Action(this.OnSelectServerItem));
 			this.Data = null;
 		}
 
-		// Token: 0x0401CD5E RID: 118110
+		// Token: 0x040177F2 RID: 96242
 		[Nullable(2)]
 		private ILoginServersData Data;
 
-		// Token: 0x0200B5C7 RID: 46535
+		// Token: 0x0200A000 RID: 40960
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04037109 RID: 225545
+			// Token: 0x04031B61 RID: 203617
 			ComfirmBtn,
-			// Token: 0x0403710A RID: 225546
+			// Token: 0x04031B62 RID: 203618
 			ServerName,
-			// Token: 0x0403710B RID: 225547
+			// Token: 0x04031B63 RID: 203619
 			ServerInfo,
-			// Token: 0x0403710C RID: 225548
+			// Token: 0x04031B64 RID: 203620
 			Gou,
-			// Token: 0x0403710D RID: 225549
+			// Token: 0x04031B65 RID: 203621
 			RoleNode,
-			// Token: 0x0403710E RID: 225550
+			// Token: 0x04031B66 RID: 203622
 			RoleLevel,
-			// Token: 0x0403710F RID: 225551
+			// Token: 0x04031B67 RID: 203623
 			SuggestLabel = 7
 		}
 	}

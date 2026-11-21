@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066C1 RID: 26305
+	// Token: 0x02005611 RID: 22033
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchRoleDetailView : UiViewBase
 	{
-		// Token: 0x06041CA5 RID: 269477 RVA: 0x00FF48EB File Offset: 0x00FF2AEB
+		// Token: 0x060367F1 RID: 223217 RVA: 0x00F35CEF File Offset: 0x00F33EEF
 		public DropCatchRoleDetailView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06041CA6 RID: 269478 RVA: 0x00FF48F4 File Offset: 0x00FF2AF4
+		// Token: 0x060367F2 RID: 223218 RVA: 0x00F35CF8 File Offset: 0x00F33EF8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			};
 		}
 
-		// Token: 0x06041CA7 RID: 269479 RVA: 0x00FF4A30 File Offset: 0x00FF2C30
+		// Token: 0x060367F3 RID: 223219 RVA: 0x00F35E34 File Offset: 0x00F34034
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DropCatchRoleDetailView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041CA8 RID: 269480 RVA: 0x00FF4A74 File Offset: 0x00FF2C74
+		// Token: 0x060367F4 RID: 223220 RVA: 0x00F35E78 File Offset: 0x00F34078
 		protected override void OnBeforeShow()
 		{
 			DropCatchRoleDetailViewParams dropCatchRoleDetailViewParams = this.OpenParam as DropCatchRoleDetailViewParams;
@@ -75,19 +75,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			this.SetCurrentSelectedRoleDetail();
 		}
 
-		// Token: 0x06041CA9 RID: 269481 RVA: 0x00FF4B04 File Offset: 0x00FF2D04
+		// Token: 0x060367F5 RID: 223221 RVA: 0x00F35F08 File Offset: 0x00F34108
 		protected override void OnBeforeHide()
 		{
 			this.ClearCountdownTimer();
 		}
 
-		// Token: 0x06041CAA RID: 269482 RVA: 0x00FF4B0C File Offset: 0x00FF2D0C
+		// Token: 0x060367F6 RID: 223222 RVA: 0x00F35F10 File Offset: 0x00F34110
 		private DropCatchRoleBook? GetCurBookConfig()
 		{
 			return DropCatchConfig.Instance.GetDropCatchRoleBookById(this.CurBookConfigId);
 		}
 
-		// Token: 0x06041CAB RID: 269483 RVA: 0x00FF4B20 File Offset: 0x00FF2D20
+		// Token: 0x060367F7 RID: 223223 RVA: 0x00F35F24 File Offset: 0x00F34124
 		private DropCatchRole? GetCurRoleConfig()
 		{
 			DropCatchRoleBook? curBookConfig = this.GetCurBookConfig();
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return DropCatchConfig.Instance.GetDropCatchRoleById((curBookConfig != null) ? curBookConfig.GetValueOrDefault().RoleId : 0);
 		}
 
-		// Token: 0x06041CAC RID: 269484 RVA: 0x00FF4B6C File Offset: 0x00FF2D6C
+		// Token: 0x060367F8 RID: 223224 RVA: 0x00F35F70 File Offset: 0x00F34170
 		private DropCatchRoleItem InitRoleItem()
 		{
 			DropCatchRoleItem dropCatchRoleItem = new DropCatchRoleItem();
@@ -106,13 +106,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return dropCatchRoleItem;
 		}
 
-		// Token: 0x06041CAD RID: 269485 RVA: 0x00FF4B85 File Offset: 0x00FF2D85
+		// Token: 0x060367F9 RID: 223225 RVA: 0x00F35F89 File Offset: 0x00F34189
 		private DropCatchRoleInfoItem InitRoleInfoItem()
 		{
 			return new DropCatchRoleInfoItem();
 		}
 
-		// Token: 0x06041CAE RID: 269486 RVA: 0x00FF4B8C File Offset: 0x00FF2D8C
+		// Token: 0x060367FA RID: 223226 RVA: 0x00F35F90 File Offset: 0x00F34190
 		private void OnRoleItemClick(int configId, int index)
 		{
 			this.CurBookConfigId = configId;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			this.SequencePlayer.PlayLevelSequenceByName("Switch", false, null, false);
 		}
 
-		// Token: 0x06041CAF RID: 269487 RVA: 0x00FF4BD0 File Offset: 0x00FF2DD0
+		// Token: 0x060367FB RID: 223227 RVA: 0x00F35FD4 File Offset: 0x00F341D4
 		private void UpdateRoleLayout()
 		{
 			IReadOnlyList<DropCatchRoleBook> dropCatchRoleBookAll = DropCatchConfig.Instance.GetDropCatchRoleBookAll();
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}, false);
 		}
 
-		// Token: 0x06041CB0 RID: 269488 RVA: 0x00FF4D30 File Offset: 0x00FF2F30
+		// Token: 0x060367FC RID: 223228 RVA: 0x00F36134 File Offset: 0x00F34334
 		private void SetCurrentSelectedRoleDetail()
 		{
 			this.ClearCountdownTimer();
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			this.ShowLockDetail();
 		}
 
-		// Token: 0x06041CB1 RID: 269489 RVA: 0x00FF4E80 File Offset: 0x00FF3080
+		// Token: 0x060367FD RID: 223229 RVA: 0x00F36284 File Offset: 0x00F34484
 		private void ShowUnlockDetail()
 		{
 			DropCatchRole? curRoleConfig = this.GetCurRoleConfig();
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			this.RoleInfoLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06041CB2 RID: 269490 RVA: 0x00FF4F80 File Offset: 0x00FF3180
+		// Token: 0x060367FE RID: 223230 RVA: 0x00F36384 File Offset: 0x00F34584
 		private void ShowLockDetail()
 		{
 			DropCatchRole? curRoleConfig = this.GetCurRoleConfig();
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			text2.ShowTextNew("CoinCatch_Character_UnlockInfo");
 		}
 
-		// Token: 0x06041CB3 RID: 269491 RVA: 0x00FF4FF4 File Offset: 0x00FF31F4
+		// Token: 0x060367FF RID: 223231 RVA: 0x00F363F8 File Offset: 0x00F345F8
 		private void RefreshLockTips()
 		{
 			DropCatchActivityData dropCatchActivityData = ActivityModel.Instance.GetActivityById(DropCatchActivityController.Instance.ActivityId) as DropCatchActivityData;
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041CB4 RID: 269492 RVA: 0x00FF50FC File Offset: 0x00FF32FC
+		// Token: 0x06036800 RID: 223232 RVA: 0x00F36500 File Offset: 0x00F34700
 		private void UpdateUnlockText(int configId)
 		{
 			string levelUnlockHintText = (ActivityModel.Instance.GetActivityById(DropCatchActivityController.Instance.ActivityId) as DropCatchActivityData).GetLevelUnlockHintText(configId);
@@ -344,7 +344,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041CB5 RID: 269493 RVA: 0x00FF513B File Offset: 0x00FF333B
+		// Token: 0x06036801 RID: 223233 RVA: 0x00F3653F File Offset: 0x00F3473F
 		private void ClearCountdownTimer()
 		{
 			if (TimerSystem.GameplayTimeInstance.Has(this.CountdownTimerHandle))
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			this.CountdownTimerHandle = null;
 		}
 
-		// Token: 0x06041CB6 RID: 269494 RVA: 0x00FF5168 File Offset: 0x00FF3368
+		// Token: 0x06036802 RID: 223234 RVA: 0x00F3656C File Offset: 0x00F3476C
 		private UniTask UpdateRoleInfo()
 		{
 			DropCatchRoleDetailView.<UpdateRoleInfo>d__26 <UpdateRoleInfo>d__;
@@ -365,11 +365,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return <UpdateRoleInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0402245E RID: 140382
+		// Token: 0x0401CCB7 RID: 117943
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0402245F RID: 140383
+		// Token: 0x0401CCB8 RID: 117944
 		[Nullable(new byte[]
 		{
 			2,
@@ -378,32 +378,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 		})]
 		private GenericLayout<DropCatchRoleItem, IDropCatchRoleItemData> RoleLayout;
 
-		// Token: 0x04022460 RID: 140384
+		// Token: 0x0401CCB9 RID: 117945
 		private GenericLayout<DropCatchRoleInfoItem, float> RoleInfoLayout;
 
-		// Token: 0x04022461 RID: 140385
+		// Token: 0x0401CCBA RID: 117946
 		[Nullable(2)]
 		private TimerHandle CountdownTimerHandle;
 
-		// Token: 0x04022462 RID: 140386
+		// Token: 0x0401CCBB RID: 117947
 		[Nullable(2)]
 		private UUIInturnAnimController AnimationController;
 
-		// Token: 0x04022463 RID: 140387
+		// Token: 0x0401CCBC RID: 117948
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x04022464 RID: 140388
+		// Token: 0x0401CCBD RID: 117949
 		private int CurBookConfigId;
 
-		// Token: 0x04022465 RID: 140389
+		// Token: 0x0401CCBE RID: 117950
 		[Nullable(2)]
 		private DropCatchGameplayRoleView RoleView;
 
-		// Token: 0x04022466 RID: 140390
+		// Token: 0x0401CCBF RID: 117951
 		private bool AlreadyPlayedListAnim;
 
-		// Token: 0x04022467 RID: 140391
+		// Token: 0x0401CCC0 RID: 117952
 		private const string ROME_ICON_PATH = "/Game/Aki/UI/UIResources/Common/Atlas/Num/Roman/RomanB/SP_RomanA0{0}.SP_RomanA0{1}";
 	}
 }

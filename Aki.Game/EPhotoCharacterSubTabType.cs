@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002596 RID: 9622
+// Token: 0x02001A81 RID: 6785
 public enum EPhotoCharacterSubTabType
 {
-	// Token: 0x0400930E RID: 37646
+	// Token: 0x04009466 RID: 37990
 	Motion = 1,
-	// Token: 0x0400930F RID: 37647
+	// Token: 0x04009467 RID: 37991
 	Expression
 }

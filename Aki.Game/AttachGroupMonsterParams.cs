@@ -7,7 +7,7 @@ using CSharpScript.Game.Utils;
 [Nullable(0)]
 internal class AttachGroupMonsterParams
 {
-	// Token: 0x06000FE0 RID: 4064 RVA: 0x0005B44B File Offset: 0x0005964B
+	// Token: 0x06000FE6 RID: 4070 RVA: 0x0005C5F3 File Offset: 0x0005A7F3
 	public void Initialize(CharacterActorComponent actorComp, Vector attachTargetLocation, float totalDuration)
 	{
 		this.ElpasedDuration = 0f;
@@ -17,7 +17,7 @@ internal class AttachGroupMonsterParams
 		this.UpdateAttachLocation(actorComp, attachTargetLocation);
 	}
 
-	// Token: 0x06000FE1 RID: 4065 RVA: 0x0005B48C File Offset: 0x0005968C
+	// Token: 0x06000FE7 RID: 4071 RVA: 0x0005C634 File Offset: 0x0005A834
 	public void UpdateAttachLocation(CharacterActorComponent actorComp, Vector attachEndLocation)
 	{
 		if (attachEndLocation.Equals(this.AttachEndLocation, 0.0001))
@@ -30,7 +30,7 @@ internal class AttachGroupMonsterParams
 		this.UpdateAnimationScale();
 	}
 
-	// Token: 0x06000FE2 RID: 4066 RVA: 0x0005B4EC File Offset: 0x000596EC
+	// Token: 0x06000FE8 RID: 4072 RVA: 0x0005C694 File Offset: 0x0005A894
 	private void UpdateAnimationScale()
 	{
 		Vector tmpVector = AttachGroupMonsterParams.TmpVector1;
@@ -41,7 +41,7 @@ internal class AttachGroupMonsterParams
 		this.AnimScale.Set((!MathUtils.Instance.IsNearlyZero(tmpVector2.X, new double?(0.0001))) ? (tmpVector.X / tmpVector2.X) : 1.0, (!MathUtils.Instance.IsNearlyZero(tmpVector2.Y, new double?(0.0001))) ? (tmpVector.Y / tmpVector2.Y) : 1.0, (!MathUtils.Instance.IsNearlyZero(tmpVector2.Z, new double?(0.0001))) ? (tmpVector.Z / tmpVector2.Z) : 1.0);
 	}
 
-	// Token: 0x06000FE3 RID: 4067 RVA: 0x0005B604 File Offset: 0x00059804
+	// Token: 0x06000FE9 RID: 4073 RVA: 0x0005C7AC File Offset: 0x0005A9AC
 	public Vector StepFrameLocationOffset(CharacterActorComponent actorComp, float frameDeltaTime)
 	{
 		this.ElpasedDuration += frameDeltaTime;
@@ -62,42 +62,42 @@ internal class AttachGroupMonsterParams
 		return tmpVector3;
 	}
 
-	// Token: 0x04000C56 RID: 3158
+	// Token: 0x04000C5E RID: 3166
 	public Vector AttachStartLocation = Vector.Create();
 
-	// Token: 0x04000C57 RID: 3159
+	// Token: 0x04000C5F RID: 3167
 	public Vector AttachEndLocation = Vector.Create();
 
-	// Token: 0x04000C58 RID: 3160
+	// Token: 0x04000C60 RID: 3168
 	public Rotator AttachRotator = Rotator.Create();
 
-	// Token: 0x04000C59 RID: 3161
+	// Token: 0x04000C61 RID: 3169
 	public Vector AnimEndLocation = Vector.Create();
 
-	// Token: 0x04000C5A RID: 3162
+	// Token: 0x04000C62 RID: 3170
 	public Vector AnimDeltaLocation = Vector.Create();
 
-	// Token: 0x04000C5B RID: 3163
+	// Token: 0x04000C63 RID: 3171
 	public Vector AnimScale = Vector.Create();
 
-	// Token: 0x04000C5C RID: 3164
+	// Token: 0x04000C64 RID: 3172
 	public Vector PreFrameAnimLocation = Vector.Create();
 
-	// Token: 0x04000C5D RID: 3165
+	// Token: 0x04000C65 RID: 3173
 	public float TotalAnimDuration;
 
-	// Token: 0x04000C5E RID: 3166
+	// Token: 0x04000C66 RID: 3174
 	public float ElpasedDuration;
 
-	// Token: 0x04000C5F RID: 3167
+	// Token: 0x04000C67 RID: 3175
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector1 = Vector.Create();
 
-	// Token: 0x04000C60 RID: 3168
+	// Token: 0x04000C68 RID: 3176
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector2 = Vector.Create();
 
-	// Token: 0x04000C61 RID: 3169
+	// Token: 0x04000C69 RID: 3177
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector3 = Vector.Create();
 }

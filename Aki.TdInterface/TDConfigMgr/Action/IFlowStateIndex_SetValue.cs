@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A9A RID: 6810
+	// Token: 0x02001C31 RID: 7217
 	public class IFlowStateIndex_SetValue
 	{
-		// Token: 0x040059FD RID: 23037
-		[Nullable(1)]
+		// Token: 0x04005E6A RID: 24170
 		public string FlowListName;
 
-		// Token: 0x040059FE RID: 23038
+		// Token: 0x04005E6B RID: 24171
 		public int FlowId;
 
-		// Token: 0x040059FF RID: 23039
+		// Token: 0x04005E6C RID: 24172
 		public int StateId;
 	}
 }

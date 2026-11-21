@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200044A RID: 1098
+	// Token: 0x02000460 RID: 1120
 	public class ConfigInstanceRandomPlotAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060019C6 RID: 6598 RVA: 0x000EB390 File Offset: 0x000E9590
+		// Token: 0x06001A4A RID: 6730 RVA: 0x000F1AE4 File Offset: 0x000EFCE4
 		static ConfigInstanceRandomPlotAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInstanceRandomPlotAll.CreateStaticDefaultValue), new Action(ConfigInstanceRandomPlotAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060019C7 RID: 6599 RVA: 0x000EB3B0 File Offset: 0x000E95B0
+		// Token: 0x06001A4B RID: 6731 RVA: 0x000F1B04 File Offset: 0x000EFD04
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInstanceRandomPlotAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060019C8 RID: 6600 RVA: 0x000EB42F File Offset: 0x000E962F
+		// Token: 0x06001A4C RID: 6732 RVA: 0x000F1B83 File Offset: 0x000EFD83
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInstanceRandomPlotAll.LogPair = null;
 			ConfigInstanceRandomPlotAll.HandleId = 0;
 		}
 
-		// Token: 0x060019C9 RID: 6601 RVA: 0x000EB43D File Offset: 0x000E963D
+		// Token: 0x06001A4D RID: 6733 RVA: 0x000F1B91 File Offset: 0x000EFD91
 		public static void Init()
 		{
 			ConfigInstanceRandomPlotAll.HandleId = ConfigCommon.InitDataStatement(ConfigInstanceRandomPlotAll.HandleId, "db_randomplot.db", "select BinData from `InstanceRandomPlot`");
 		}
 
-		// Token: 0x060019CA RID: 6602 RVA: 0x000EB458 File Offset: 0x000E9658
+		// Token: 0x06001A4E RID: 6734 RVA: 0x000F1BAC File Offset: 0x000EFDAC
 		[NullableContext(2)]
 		public static IReadOnlyList<InstanceRandomPlot> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001DEA RID: 7658
+		// Token: 0x04001E84 RID: 7812
 		private const string DB = "db_randomplot.db";
 
-		// Token: 0x04001DEB RID: 7659
+		// Token: 0x04001E85 RID: 7813
 		private const string FILE = "x.系统随机剧情.xlsx";
 
-		// Token: 0x04001DEC RID: 7660
+		// Token: 0x04001E86 RID: 7814
 		private const string TABLE = "InstanceRandomPlot";
 
-		// Token: 0x04001DED RID: 7661
+		// Token: 0x04001E87 RID: 7815
 		private const string COMMAND = "select BinData from `InstanceRandomPlot`";
 
-		// Token: 0x04001DEE RID: 7662
+		// Token: 0x04001E88 RID: 7816
 		private const string KEY_PREFIX = "InstanceRandomPlotAll";
 
-		// Token: 0x04001DEF RID: 7663
+		// Token: 0x04001E89 RID: 7817
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001DF0 RID: 7664
+		// Token: 0x04001E8A RID: 7818
 		private static int HandleId;
 	}
 }

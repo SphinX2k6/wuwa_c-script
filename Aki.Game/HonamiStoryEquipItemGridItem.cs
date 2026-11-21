@@ -5,18 +5,18 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001E9F RID: 7839
+// Token: 0x02001361 RID: 4961
 [NullableContext(2)]
 [Nullable(0)]
 public class HonamiStoryEquipItemGridItem : HonamiStoryItemGridItem
 {
-	// Token: 0x0600F0B9 RID: 61625 RVA: 0x0039CE4A File Offset: 0x0039B04A
+	// Token: 0x0600C4D8 RID: 50392 RVA: 0x003A8A06 File Offset: 0x003A6C06
 	public HonamiStoryEquipItemGridItem(HonamiStoryItemDataBase itemData) : base(itemData)
 	{
 		this.ItemData = itemData;
 	}
 
-	// Token: 0x0600F0BA RID: 61626 RVA: 0x0039CE5C File Offset: 0x0039B05C
+	// Token: 0x0600C4D9 RID: 50393 RVA: 0x003A8A18 File Offset: 0x003A6C18
 	protected override void RefreshLogicData()
 	{
 		base.SetLockItemEnable(this.ItemData.IsLock(), false);
@@ -24,7 +24,7 @@ public class HonamiStoryEquipItemGridItem : HonamiStoryItemGridItem
 		this.SetReplaceEnable(backpackLogicState == EHonamiStoryBackpackLogicState.Instead);
 	}
 
-	// Token: 0x0600F0BB RID: 61627 RVA: 0x0039CE90 File Offset: 0x0039B090
+	// Token: 0x0600C4DA RID: 50394 RVA: 0x003A8A4C File Offset: 0x003A6C4C
 	protected override void ExecuteDoubleClickLogic()
 	{
 		EHonamiStoryBackpack toBackpack = HonamiStoryUtil.CheckInHonamiStoryDungeon() ? EHonamiStoryBackpack.Backpack : EHonamiStoryBackpack.Inventory;
@@ -39,7 +39,7 @@ public class HonamiStoryEquipItemGridItem : HonamiStoryItemGridItem
 		}
 	}
 
-	// Token: 0x0600F0BC RID: 61628 RVA: 0x0039CEFC File Offset: 0x0039B0FC
+	// Token: 0x0600C4DB RID: 50395 RVA: 0x003A8AB8 File Offset: 0x003A6CB8
 	protected override void DoLogicStateFunc(EHonamiStoryBackpackLogicState state)
 	{
 		if (state == EHonamiStoryBackpackLogicState.Instead)
@@ -67,7 +67,7 @@ public class HonamiStoryEquipItemGridItem : HonamiStoryItemGridItem
 		}
 	}
 
-	// Token: 0x0600F0BD RID: 61629 RVA: 0x0039CF7C File Offset: 0x0039B17C
+	// Token: 0x0600C4DC RID: 50396 RVA: 0x003A8B38 File Offset: 0x003A6D38
 	protected void SetReplaceEnable(bool isEnable)
 	{
 		UiPanelBase replaceItem = this.ReplaceItem;
@@ -91,6 +91,6 @@ public class HonamiStoryEquipItemGridItem : HonamiStoryItemGridItem
 		}
 	}
 
-	// Token: 0x04006F58 RID: 28504
+	// Token: 0x04007039 RID: 28729
 	private UiPanelBase ReplaceItem;
 }

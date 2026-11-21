@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040A0 RID: 16544
+	// Token: 0x020044E1 RID: 17633
 	public struct IReceiveTelecomChildQuestCondition : IFlatbufferObject
 	{
-		// Token: 0x170074B9 RID: 29881
-		// (get) Token: 0x06018153 RID: 98643 RVA: 0x00378DC2 File Offset: 0x00376FC2
+		// Token: 0x17007ABB RID: 31419
+		// (get) Token: 0x060197EC RID: 104428 RVA: 0x003A2BFA File Offset: 0x003A0DFA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018154 RID: 98644 RVA: 0x00378DCF File Offset: 0x00376FCF
+		// Token: 0x060197ED RID: 104429 RVA: 0x003A2C07 File Offset: 0x003A0E07
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018155 RID: 98645 RVA: 0x00378DD8 File Offset: 0x00376FD8
+		// Token: 0x060197EE RID: 104430 RVA: 0x003A2C10 File Offset: 0x003A0E10
 		public static IReceiveTelecomChildQuestCondition GetRootAsIReceiveTelecomChildQuestCondition(ByteBuffer _bb)
 		{
 			return IReceiveTelecomChildQuestCondition.GetRootAsIReceiveTelecomChildQuestCondition(_bb, default(IReceiveTelecomChildQuestCondition));
 		}
 
-		// Token: 0x06018156 RID: 98646 RVA: 0x00378DF4 File Offset: 0x00376FF4
+		// Token: 0x060197EF RID: 104431 RVA: 0x003A2C2C File Offset: 0x003A0E2C
 		public static IReceiveTelecomChildQuestCondition GetRootAsIReceiveTelecomChildQuestCondition(ByteBuffer _bb, IReceiveTelecomChildQuestCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018157 RID: 98647 RVA: 0x00378E11 File Offset: 0x00377011
+		// Token: 0x060197F0 RID: 104432 RVA: 0x003A2C49 File Offset: 0x003A0E49
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018158 RID: 98648 RVA: 0x00378E20 File Offset: 0x00377020
+		// Token: 0x060197F1 RID: 104433 RVA: 0x003A2C58 File Offset: 0x003A0E58
 		public IReceiveTelecomChildQuestCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170074BA RID: 29882
-		// (get) Token: 0x06018159 RID: 98649 RVA: 0x00378E30 File Offset: 0x00377030
+		// Token: 0x17007ABC RID: 31420
+		// (get) Token: 0x060197F2 RID: 104434 RVA: 0x003A2C68 File Offset: 0x003A0E68
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170074BB RID: 29883
-		// (get) Token: 0x0601815A RID: 98650 RVA: 0x00378E6C File Offset: 0x0037706C
+		// Token: 0x17007ABD RID: 31421
+		// (get) Token: 0x060197F3 RID: 104435 RVA: 0x003A2CA4 File Offset: 0x003A0EA4
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170074BC RID: 29884
-		// (get) Token: 0x0601815B RID: 98651 RVA: 0x00378ECC File Offset: 0x003770CC
+		// Token: 0x17007ABE RID: 31422
+		// (get) Token: 0x060197F4 RID: 104436 RVA: 0x003A2D04 File Offset: 0x003A0F04
 		public int TelecomId
 		{
 			get
@@ -93,47 +93,87 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601815C RID: 98652 RVA: 0x00378F08 File Offset: 0x00377108
-		public static Offset<IReceiveTelecomChildQuestCondition> CreateIReceiveTelecomChildQuestCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), int TelecomId = 0)
+		// Token: 0x17007ABF RID: 31423
+		// (get) Token: 0x060197F5 RID: 104437 RVA: 0x003A2D40 File Offset: 0x003A0F40
+		public bool IsAutoAnswer
 		{
-			builder.StartTable(3);
+			get
+			{
+				int num = this.__p.__offset(10);
+				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
+			}
+		}
+
+		// Token: 0x17007AC0 RID: 31424
+		// (get) Token: 0x060197F6 RID: 104438 RVA: 0x003A2D80 File Offset: 0x003A0F80
+		public byte NullMask
+		{
+			get
+			{
+				int num = this.__p.__offset(12);
+				if (num == 0)
+				{
+					return 0;
+				}
+				return this.__p.bb.Get(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x060197F7 RID: 104439 RVA: 0x003A2DBD File Offset: 0x003A0FBD
+		public static Offset<IReceiveTelecomChildQuestCondition> CreateIReceiveTelecomChildQuestCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), int TelecomId = 0, bool IsAutoAnswer = false, byte NullMask = 0)
+		{
+			builder.StartTable(5);
 			IReceiveTelecomChildQuestCondition.AddTelecomId(builder, TelecomId);
 			IReceiveTelecomChildQuestCondition.AddPreConditions(builder, PreConditionsOffset);
+			IReceiveTelecomChildQuestCondition.AddNullMask(builder, NullMask);
+			IReceiveTelecomChildQuestCondition.AddIsAutoAnswer(builder, IsAutoAnswer);
 			IReceiveTelecomChildQuestCondition.AddType(builder, Type);
 			return IReceiveTelecomChildQuestCondition.EndIReceiveTelecomChildQuestCondition(builder);
 		}
 
-		// Token: 0x0601815D RID: 98653 RVA: 0x00378F2C File Offset: 0x0037712C
+		// Token: 0x060197F8 RID: 104440 RVA: 0x003A2DF1 File Offset: 0x003A0FF1
 		public static void StartIReceiveTelecomChildQuestCondition(FlatBufferBuilder builder)
 		{
-			builder.StartTable(3);
+			builder.StartTable(5);
 		}
 
-		// Token: 0x0601815E RID: 98654 RVA: 0x00378F35 File Offset: 0x00377135
+		// Token: 0x060197F9 RID: 104441 RVA: 0x003A2DFA File Offset: 0x003A0FFA
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601815F RID: 98655 RVA: 0x00378F40 File Offset: 0x00377140
+		// Token: 0x060197FA RID: 104442 RVA: 0x003A2E05 File Offset: 0x003A1005
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06018160 RID: 98656 RVA: 0x00378F50 File Offset: 0x00377150
+		// Token: 0x060197FB RID: 104443 RVA: 0x003A2E15 File Offset: 0x003A1015
 		public static void AddTelecomId(FlatBufferBuilder builder, int telecomId)
 		{
 			builder.AddInt(2, telecomId, 0);
 		}
 
-		// Token: 0x06018161 RID: 98657 RVA: 0x00378F5B File Offset: 0x0037715B
+		// Token: 0x060197FC RID: 104444 RVA: 0x003A2E20 File Offset: 0x003A1020
+		public static void AddIsAutoAnswer(FlatBufferBuilder builder, bool isAutoAnswer)
+		{
+			builder.AddBool(3, isAutoAnswer, false);
+		}
+
+		// Token: 0x060197FD RID: 104445 RVA: 0x003A2E2B File Offset: 0x003A102B
+		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
+		{
+			builder.AddByte(4, nullMask, 0);
+		}
+
+		// Token: 0x060197FE RID: 104446 RVA: 0x003A2E36 File Offset: 0x003A1036
 		public static Offset<IReceiveTelecomChildQuestCondition> EndIReceiveTelecomChildQuestCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IReceiveTelecomChildQuestCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06018162 RID: 98658 RVA: 0x00378F68 File Offset: 0x00377168
+		// Token: 0x060197FF RID: 104447 RVA: 0x003A2E44 File Offset: 0x003A1044
 		public IReceiveTelecomChildQuestConditionT UnPack()
 		{
 			IReceiveTelecomChildQuestConditionT receiveTelecomChildQuestConditionT = new IReceiveTelecomChildQuestConditionT();
@@ -141,15 +181,17 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return receiveTelecomChildQuestConditionT;
 		}
 
-		// Token: 0x06018163 RID: 98659 RVA: 0x00378F84 File Offset: 0x00377184
+		// Token: 0x06019800 RID: 104448 RVA: 0x003A2E60 File Offset: 0x003A1060
 		public void UnPackTo(IReceiveTelecomChildQuestConditionT _o)
 		{
 			_o.Type = this.Type;
 			_o.PreConditions = ((this.PreConditions != null) ? this.PreConditions.Value.UnPack() : null);
 			_o.TelecomId = this.TelecomId;
+			_o.IsAutoAnswer = this.IsAutoAnswer;
+			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06018164 RID: 98660 RVA: 0x00378FD8 File Offset: 0x003771D8
+		// Token: 0x06019801 RID: 104449 RVA: 0x003A2ECC File Offset: 0x003A10CC
 		public static Offset<IReceiveTelecomChildQuestCondition> Pack(FlatBufferBuilder builder, IReceiveTelecomChildQuestConditionT _o)
 		{
 			if (_o == null)
@@ -157,10 +199,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 				return default(Offset<IReceiveTelecomChildQuestCondition>);
 			}
 			Offset<IConditionGroup> preConditionsOffset = (_o.PreConditions == null) ? default(Offset<IConditionGroup>) : IConditionGroup.Pack(builder, _o.PreConditions);
-			return IReceiveTelecomChildQuestCondition.CreateIReceiveTelecomChildQuestCondition(builder, _o.Type, preConditionsOffset, _o.TelecomId);
+			return IReceiveTelecomChildQuestCondition.CreateIReceiveTelecomChildQuestCondition(builder, _o.Type, preConditionsOffset, _o.TelecomId, _o.IsAutoAnswer, _o.NullMask);
 		}
 
-		// Token: 0x0400BC2D RID: 48173
+		// Token: 0x0400C614 RID: 50708
 		private Table __p;
 	}
 }

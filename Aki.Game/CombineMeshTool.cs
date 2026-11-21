@@ -6,12 +6,12 @@ using AkiClient.Game.Aki.Character.NPC.Common;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc;
 using UnrealEngine;
 
-// Token: 0x02002E3A RID: 11834
+// Token: 0x02002396 RID: 9110
 [NullableContext(1)]
 [Nullable(0)]
 public class CombineMeshTool
 {
-	// Token: 0x06018F9F RID: 102303 RVA: 0x0066FAB4 File Offset: 0x0066DCB4
+	// Token: 0x0601686C RID: 92268 RVA: 0x0069594C File Offset: 0x00693B4C
 	[NullableContext(2)]
 	public static void LoadDaConfig(AActor actor, FTransform defaultTransform, USkeletalMeshComponent mainMeshComp, PD_NpcSetupData_C config)
 	{
@@ -53,7 +53,7 @@ public class CombineMeshTool
 		ukuroMaterialControllerComponent.UpdateEffects();
 	}
 
-	// Token: 0x06018FA0 RID: 102304 RVA: 0x0066FC5B File Offset: 0x0066DE5B
+	// Token: 0x0601686D RID: 92269 RVA: 0x00695AF3 File Offset: 0x00693CF3
 	private static void ResetMesh(USkeletalMeshComponent mainMeshComp, PD_NpcSetupData_C config)
 	{
 		mainMeshComp.SetSkeletalMesh(null, true);
@@ -67,7 +67,7 @@ public class CombineMeshTool
 		mainMeshComp.SetSkeletalMesh(config.Skel_Main, true);
 	}
 
-	// Token: 0x06018FA1 RID: 102305 RVA: 0x0066FC98 File Offset: 0x0066DE98
+	// Token: 0x0601686E RID: 92270 RVA: 0x00695B30 File Offset: 0x00693D30
 	[return: Nullable(2)]
 	private static USkeletalMeshComponent SetupPartSkeletalMesh(PD_NpcSetupData_C npcData, AActor actor, FTransform transform, USkeletalMeshComponent mainMeshComp, [Nullable(2)] USkeletalMesh partMesh, FName partMeshName, bool isSocket = false, int index = 0)
 	{
@@ -106,13 +106,18 @@ public class CombineMeshTool
 		return uskeletalMeshComponent;
 	}
 
-	// Token: 0x06018FA2 RID: 102306 RVA: 0x0066FD64 File Offset: 0x0066DF64
+	// Token: 0x0601686F RID: 92271 RVA: 0x00695BFC File Offset: 0x00693DFC
 	private static void LoadHair(AActor actor, FTransform defaultTransform, USkeletalMeshComponent mainMeshComp, USkeletalMesh hairMesh, PD_NpcSetupData_C config, UKuroMaterialControllerComponent controllerComp)
 	{
 		USkeletalMeshComponent uskeletalMeshComponent = CombineMeshTool.SetupPartSkeletalMesh(config, actor, defaultTransform, mainMeshComp, hairMesh, CombineMeshTool.HairName, false, 0);
 		if (uskeletalMeshComponent == null)
 		{
 			return;
+		}
+		FMorphTargetPreviewItem morphTarget = config.MorphTarget;
+		if (!string.IsNullOrWhiteSpace(morphTarget.MorphName))
+		{
+			uskeletalMeshComponent.SetMorphTarget(new FName(morphTarget.MorphName), morphTarget.PreviewValue, true);
 		}
 		uskeletalMeshComponent.bRunPostUpdateTick = false;
 		controllerComp.AddSkeletalMeshComponent(uskeletalMeshComponent, CombineMeshTool.HairName, false);
@@ -135,7 +140,7 @@ public class CombineMeshTool
 		}
 	}
 
-	// Token: 0x06018FA3 RID: 102307 RVA: 0x0066FE4C File Offset: 0x0066E04C
+	// Token: 0x06016870 RID: 92272 RVA: 0x00695D14 File Offset: 0x00693F14
 	private static void LoadFace(AActor actor, FTransform defaultTransform, USkeletalMeshComponent mainMeshComp, USkeletalMesh faceMesh, PD_NpcSetupData_C config, UKuroMaterialControllerComponent controllerComp)
 	{
 		USkeletalMeshComponent uskeletalMeshComponent = CombineMeshTool.SetupPartSkeletalMesh(config, actor, defaultTransform, mainMeshComp, faceMesh, CombineMeshTool.FaceName, false, 0);
@@ -165,7 +170,7 @@ public class CombineMeshTool
 		}
 	}
 
-	// Token: 0x06018FA4 RID: 102308 RVA: 0x0066FF24 File Offset: 0x0066E124
+	// Token: 0x06016871 RID: 92273 RVA: 0x00695DEC File Offset: 0x00693FEC
 	private static void LoadBodyUp(AActor actor, FTransform defaultTransform, USkeletalMeshComponent mainMeshComp, USkeletalMesh bodyUpMesh, PD_NpcSetupData_C config, UKuroMaterialControllerComponent controllerComp)
 	{
 		USkeletalMeshComponent uskeletalMeshComponent = CombineMeshTool.SetupPartSkeletalMesh(config, actor, defaultTransform, mainMeshComp, bodyUpMesh, CombineMeshTool.BodyUpName, false, 0);
@@ -194,7 +199,7 @@ public class CombineMeshTool
 		}
 	}
 
-	// Token: 0x06018FA5 RID: 102309 RVA: 0x0067000C File Offset: 0x0066E20C
+	// Token: 0x06016872 RID: 92274 RVA: 0x00695ED4 File Offset: 0x006940D4
 	private static void LoadBodyDown(AActor actor, FTransform defaultTransform, USkeletalMeshComponent mainMeshComp, USkeletalMesh bodyDownMesh, PD_NpcSetupData_C config, UKuroMaterialControllerComponent controllerComp)
 	{
 		USkeletalMeshComponent uskeletalMeshComponent = CombineMeshTool.SetupPartSkeletalMesh(config, actor, defaultTransform, mainMeshComp, bodyDownMesh, CombineMeshTool.BodyDownName, false, 0);
@@ -223,7 +228,7 @@ public class CombineMeshTool
 		}
 	}
 
-	// Token: 0x06018FA6 RID: 102310 RVA: 0x006700F4 File Offset: 0x0066E2F4
+	// Token: 0x06016873 RID: 92275 RVA: 0x00695FBC File Offset: 0x006941BC
 	private static void LoadBody(AActor actor, FTransform defaultTransform, USkeletalMeshComponent mainMeshComp, USkeletalMesh bodyMesh, PD_NpcSetupData_C config, UKuroMaterialControllerComponent controllerComp)
 	{
 		USkeletalMeshComponent uskeletalMeshComponent = CombineMeshTool.SetupPartSkeletalMesh(config, actor, defaultTransform, mainMeshComp, bodyMesh, CombineMeshTool.BodyName, false, 0);
@@ -255,7 +260,7 @@ public class CombineMeshTool
 		}
 	}
 
-	// Token: 0x06018FA7 RID: 102311 RVA: 0x006701F8 File Offset: 0x0066E3F8
+	// Token: 0x06016874 RID: 92276 RVA: 0x006960C0 File Offset: 0x006942C0
 	private static void SetupMaterialColor(UKuroMaterialControllerComponent controllerComp, FName bodyName, FLinearColor skinColor, FLinearColor? color1 = null, FLinearColor? color2 = null)
 	{
 		if (controllerComp != null)
@@ -272,7 +277,7 @@ public class CombineMeshTool
 		}
 	}
 
-	// Token: 0x06018FA8 RID: 102312 RVA: 0x00670268 File Offset: 0x0066E468
+	// Token: 0x06016875 RID: 92277 RVA: 0x00696130 File Offset: 0x00694330
 	private static void SetupCustomMaterial(UKuroMaterialControllerComponent controllerComp, FName bodyName, [Nullable(2)] UMaterialInstance mat, int index = 0, int numBodySlots = 1, [Nullable(new byte[]
 	{
 		2,
@@ -288,7 +293,7 @@ public class CombineMeshTool
 		CombineMeshTool.SetupOutlineFromRefs(controllerComp, bodyName, index + numBodySlots, candidates, outlineRefs);
 	}
 
-	// Token: 0x06018FA9 RID: 102313 RVA: 0x006702A4 File Offset: 0x0066E4A4
+	// Token: 0x06016876 RID: 92278 RVA: 0x0069616C File Offset: 0x0069436C
 	private static List<string> BuildOutlineCandidates(string matPath)
 	{
 		string[] array = matPath.Split('.', StringSplitOptions.None);
@@ -317,7 +322,7 @@ public class CombineMeshTool
 		return list;
 	}
 
-	// Token: 0x06018FAA RID: 102314 RVA: 0x00670390 File Offset: 0x0066E590
+	// Token: 0x06016877 RID: 92279 RVA: 0x00696258 File Offset: 0x00694458
 	private static void SetupOutlineFromRefs(UKuroMaterialControllerComponent controllerComp, FName bodyName, int slotIndex, List<string> candidates, [Nullable(new byte[]
 	{
 		2,
@@ -347,7 +352,7 @@ public class CombineMeshTool
 		}
 	}
 
-	// Token: 0x06018FAB RID: 102315 RVA: 0x00670448 File Offset: 0x0066E648
+	// Token: 0x06016878 RID: 92280 RVA: 0x00696310 File Offset: 0x00694510
 	private static bool SetupMorphTargets(USkeletalMeshComponent meshComp, TArray<FMorphTargetPreviewItem> morphTargets)
 	{
 		if (!ObjectUtils.IsValid(meshComp))
@@ -367,7 +372,7 @@ public class CombineMeshTool
 		return true;
 	}
 
-	// Token: 0x06018FAC RID: 102316 RVA: 0x006704A4 File Offset: 0x0066E6A4
+	// Token: 0x06016879 RID: 92281 RVA: 0x0069636C File Offset: 0x0069456C
 	private unsafe static void SetupSocket(AActor actor, USkeletalMeshComponent mainMeshComp, TArray<SNpcHookPart> parts, FName socketName, PD_NpcSetupData_C config, UKuroMaterialControllerComponent controllerComp)
 	{
 		if (socketName == FName.NAME_None)
@@ -420,7 +425,7 @@ public class CombineMeshTool
 		}
 	}
 
-	// Token: 0x06018FAD RID: 102317 RVA: 0x006705F0 File Offset: 0x0066E7F0
+	// Token: 0x0601687A RID: 92282 RVA: 0x006964B8 File Offset: 0x006946B8
 	private static void SetupChildPart(AActor actor, USkeletalMeshComponent mainMeshComp, FTransform defaultTransform, TArray<SNpcChildPart> parts, PD_NpcSetupData_C config, UKuroMaterialControllerComponent controllerComp)
 	{
 		if (parts == null || parts.Num() == 0)
@@ -456,7 +461,7 @@ public class CombineMeshTool
 		}
 	}
 
-	// Token: 0x06018FAE RID: 102318 RVA: 0x006706C8 File Offset: 0x0066E8C8
+	// Token: 0x0601687B RID: 92283 RVA: 0x00696590 File Offset: 0x00694790
 	private static void SetupHideBones(USkeletalMeshComponent mainMeshComp, TArray<FName> bonesToHide)
 	{
 		for (int i = 0; i < bonesToHide.Num(); i++)
@@ -465,7 +470,7 @@ public class CombineMeshTool
 		}
 	}
 
-	// Token: 0x06018FAF RID: 102319 RVA: 0x006706F4 File Offset: 0x0066E8F4
+	// Token: 0x0601687C RID: 92284 RVA: 0x006965BC File Offset: 0x006947BC
 	public static void SetFace(TsBaseCharacter actor, USkeletalMesh face)
 	{
 		UKuroMaterialControllerComponent ukuroMaterialControllerComponent = UKuroMaterialControllerComponent.AddOrGetMaterialControllerComponentFromActor(actor);
@@ -497,7 +502,7 @@ public class CombineMeshTool
 		charRenderingComponent3.TempRecoverDither();
 	}
 
-	// Token: 0x06018FB0 RID: 102320 RVA: 0x00670760 File Offset: 0x0066E960
+	// Token: 0x0601687D RID: 92285 RVA: 0x00696628 File Offset: 0x00694828
 	public static FName GetPartMeshName(FName prefix, int index)
 	{
 		if (index == 0)
@@ -512,7 +517,7 @@ public class CombineMeshTool
 		return new FName(str + index.ToString());
 	}
 
-	// Token: 0x06018FB3 RID: 102323 RVA: 0x0067084F File Offset: 0x0066EA4F
+	// Token: 0x06016880 RID: 92288 RVA: 0x00696717 File Offset: 0x00694917
 	[CompilerGenerated]
 	internal static string <BuildOutlineCandidates>g__Build|20_0(string n, ref CombineMeshTool.<>c__DisplayClass20_0 A_1)
 	{
@@ -527,43 +532,43 @@ public class CombineMeshTool
 		});
 	}
 
-	// Token: 0x0400BB7C RID: 47996
+	// Token: 0x0400BF0A RID: 48906
 	[StaticVariableRuleIgnore]
 	private static readonly FName PartMeshComp = new FName("PartMeshComp");
 
-	// Token: 0x0400BB7D RID: 47997
+	// Token: 0x0400BF0B RID: 48907
 	[StaticVariableRuleIgnore]
 	private static readonly FName SkinDyeColor = new FName("5BaseColorTint");
 
-	// Token: 0x0400BB7E RID: 47998
+	// Token: 0x0400BF0C RID: 48908
 	[StaticVariableRuleIgnore]
 	private static readonly FName BaseColorTint1 = new FName("1BaseColorTint");
 
-	// Token: 0x0400BB7F RID: 47999
+	// Token: 0x0400BF0D RID: 48909
 	[StaticVariableRuleIgnore]
 	private static readonly FName BaseColorTint2 = new FName("2BaseColorTint");
 
-	// Token: 0x0400BB80 RID: 48000
+	// Token: 0x0400BF0E RID: 48910
 	[StaticVariableRuleIgnore]
 	private static readonly FName FaceName = new FName("Face");
 
-	// Token: 0x0400BB81 RID: 48001
+	// Token: 0x0400BF0F RID: 48911
 	[StaticVariableRuleIgnore]
 	private static readonly FName HairName = new FName("Hair");
 
-	// Token: 0x0400BB82 RID: 48002
+	// Token: 0x0400BF10 RID: 48912
 	[StaticVariableRuleIgnore]
 	private static readonly FName BodyName = new FName("Body");
 
-	// Token: 0x0400BB83 RID: 48003
+	// Token: 0x0400BF11 RID: 48913
 	[StaticVariableRuleIgnore]
 	private static readonly FName BodyUpName = new FName("BodyUp");
 
-	// Token: 0x0400BB84 RID: 48004
+	// Token: 0x0400BF12 RID: 48914
 	[StaticVariableRuleIgnore]
 	private static readonly FName BodyDownName = new FName("BodyDown");
 
-	// Token: 0x0400BB85 RID: 48005
+	// Token: 0x0400BF13 RID: 48915
 	[StaticVariableRuleIgnore]
 	private static readonly FName ChildPartName = new FName("ChildPart");
 }

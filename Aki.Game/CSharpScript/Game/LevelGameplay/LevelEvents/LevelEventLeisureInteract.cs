@@ -16,17 +16,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B3C RID: 27452
+	// Token: 0x02005CB4 RID: 23732
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventLeisureInteract : LevelEventBase
 	{
-		// Token: 0x0604414D RID: 278861 RVA: 0x010BD502 File Offset: 0x010BB702
+		// Token: 0x0603A29F RID: 238239 RVA: 0x01066D8E File Offset: 0x01064F8E
 		public LevelEventLeisureInteract(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604414E RID: 278862 RVA: 0x010BD518 File Offset: 0x010BB718
+		// Token: 0x0603A2A0 RID: 238240 RVA: 0x01066DA4 File Offset: 0x01064FA4
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			LeisureInteract leisureInteract = inParams as LeisureInteract;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.ExecuteNew(inParams, context, actionId);
 		}
 
-		// Token: 0x0604414F RID: 278863 RVA: 0x010BD574 File Offset: 0x010BB774
+		// Token: 0x0603A2A1 RID: 238241 RVA: 0x01066E00 File Offset: 0x01065000
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			LeisureInteract leisureInteract = inParams as LeisureInteract;
@@ -477,12 +477,32 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 				MotorcycleRailComponent motorcycleRailComponent2 = motorcycleRailComponent;
 				if (motorcycleRailComponent2 == null)
 				{
-					global::Log.Instance.Error(ELogModule.LevelEvent, ELogAuthor.ZYL, " LevelEventLeisureInteract, 没有可用滑轨", default(ReadOnlySpan<ValueTuple<string, object>>));
+					global::Log instance6 = global::Log.Instance;
+					ELogModule module5 = ELogModule.LevelEvent;
+					ELogAuthor author5 = ELogAuthor.ZYL;
+					string message5 = " LevelEventLeisureInteract, 没有可用滑轨";
+					<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("TargetRailPbDataId", motorEnterSlide.EntityId);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("ActionId", actionId);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("Context", context);
+					instance6.Error(module5, author5, message5, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 					base.FinishExecute(false, false, true);
 				}
 				else if (characterDriveVehicleComponent == null || !characterDriveVehicleComponent.IsOnVehicle || !characterDriveVehicleComponent.IsDriver || !characterDriveVehicleComponent.IsVehicleType(EVehicleType.Motorcycle))
 				{
-					global::Log.Instance.Error(ELogModule.LevelEvent, ELogAuthor.ZYL, " LevelEventLeisureInteract, 无法进入滑轨", default(ReadOnlySpan<ValueTuple<string, object>>));
+					global::Log instance7 = global::Log.Instance;
+					ELogModule module6 = ELogModule.LevelEvent;
+					ELogAuthor author6 = ELogAuthor.ZYL;
+					string message6 = " LevelEventLeisureInteract, 无法进入滑轨";
+					<>y__InlineArray7<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray7<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("TargetRailPbDataId", motorEnterSlide.EntityId);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("ActionId", actionId);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("Context", context);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 3) = new ValueTuple<string, object>("HasDriveComponent", characterDriveVehicleComponent != null);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 4) = new ValueTuple<string, object>("IsOnVehicle", (characterDriveVehicleComponent != null) ? new bool?(characterDriveVehicleComponent.IsOnVehicle) : null);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 5) = new ValueTuple<string, object>("IsDriver", (characterDriveVehicleComponent != null) ? new bool?(characterDriveVehicleComponent.IsDriver) : null);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 6) = new ValueTuple<string, object>("IsMotorcycle", (characterDriveVehicleComponent != null) ? new bool?(characterDriveVehicleComponent.IsVehicleType(EVehicleType.Motorcycle)) : null);
+					instance7.Error(module6, author6, message6, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 7));
 					base.FinishExecute(false, false, true);
 				}
 				else
@@ -500,7 +520,15 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 					MotorcycleRailMoveComponent motorcycleRailMoveComponent2 = motorcycleRailMoveComponent;
 					if (motorcycleRailMoveComponent2 == null)
 					{
-						global::Log.Instance.Error(ELogModule.LevelEvent, ELogAuthor.ZYL, " LevelEventLeisureInteract, 无法进入滑轨，缺少摩托样条移动组件", default(ReadOnlySpan<ValueTuple<string, object>>));
+						global::Log instance8 = global::Log.Instance;
+						ELogModule module7 = ELogModule.LevelEvent;
+						ELogAuthor author7 = ELogAuthor.ZYL;
+						string message7 = " LevelEventLeisureInteract, 无法进入滑轨，缺少摩托样条移动组件";
+						<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray3<ValueTuple<string, object>>);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("TargetRailPbDataId", motorEnterSlide.EntityId);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("ActionId", actionId);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 2) = new ValueTuple<string, object>("Context", context);
+						instance8.Error(module7, author7, message7, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 3));
 						base.FinishExecute(false, false, true);
 					}
 					else
@@ -551,7 +579,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 				MotorcycleMoveComponent motorcycleMoveComponent2 = motorcycleMoveComponent;
 				if (motorcycleMoveComponent2 != null)
 				{
-					motorcycleMoveComponent2.SetMotorSubState(EMotorSubState.Soaring);
+					motorcycleMoveComponent2.SetMotorSubState(EMotorSubState.Soaring, ESetMotorSubStateSource.LevelEventLeisureInteract);
 				}
 				break;
 			}
@@ -637,15 +665,15 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 				SpecialSkillAnimalFox specialSkillAnimalFox5 = ((component15 != null) ? component15.SpecialSkill : null) as SpecialSkillAnimalFox;
 				if (component14 == null || specialSkillAnimalFox5 == null || foxAutoJump.LandPosition == null)
 				{
-					global::Log instance6 = global::Log.Instance;
-					ELogModule module5 = ELogModule.LevelEvent;
-					ELogAuthor author5 = ELogAuthor.CWZ;
-					string message5 = "FoxAutoJump: SkillComponent或SpecialSkill或LandPosition不存在";
-					<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("skillComp", component14 != null);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("foxSkill", specialSkillAnimalFox5 != null);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("LandPosition", foxAutoJump.LandPosition);
-					instance6.Error(module5, author5, message5, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
+					global::Log instance9 = global::Log.Instance;
+					ELogModule module8 = ELogModule.LevelEvent;
+					ELogAuthor author8 = ELogAuthor.CWZ;
+					string message8 = "FoxAutoJump: SkillComponent或SpecialSkill或LandPosition不存在";
+					<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray4 = default(<>y__InlineArray3<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 0) = new ValueTuple<string, object>("skillComp", component14 != null);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 1) = new ValueTuple<string, object>("foxSkill", specialSkillAnimalFox5 != null);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 2) = new ValueTuple<string, object>("LandPosition", foxAutoJump.LandPosition);
+					instance9.Error(module8, author8, message8, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 3));
 					base.FinishExecute(false, false, true);
 				}
 				else
@@ -661,7 +689,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.ActionId = 0;
 		}
 
-		// Token: 0x06044150 RID: 278864 RVA: 0x010BE4E4 File Offset: 0x010BC6E4
+		// Token: 0x0603A2A2 RID: 238242 RVA: 0x01067F60 File Offset: 0x01066160
 		private UniTask ExecuteFoxAutoJumpAsync(CharacterSkillComponent skillComp, SpecialSkillAnimalFox foxSkill, int temporaryTargetVersion)
 		{
 			LevelEventLeisureInteract.<ExecuteFoxAutoJumpAsync>d__14 <ExecuteFoxAutoJumpAsync>d__;
@@ -675,7 +703,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <ExecuteFoxAutoJumpAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044151 RID: 278865 RVA: 0x010BE53F File Offset: 0x010BC73F
+		// Token: 0x0603A2A3 RID: 238243 RVA: 0x01067FBB File Offset: 0x010661BB
 		protected override void OnTick(float deltaTime)
 		{
 			if (Global.BaseCharacter != null && this.ParamsCache != null && this.ContextCache != null)
@@ -684,7 +712,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044152 RID: 278866 RVA: 0x010BE575 File Offset: 0x010BC775
+		// Token: 0x0603A2A4 RID: 238244 RVA: 0x01067FF1 File Offset: 0x010661F1
 		private int GetSitDownType(ELeisureInteract type)
 		{
 			if (type == ELeisureInteract.SitDown)
@@ -698,7 +726,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return 2;
 		}
 
-		// Token: 0x06044153 RID: 278867 RVA: 0x010BE588 File Offset: 0x010BC788
+		// Token: 0x0603A2A5 RID: 238245 RVA: 0x01068004 File Offset: 0x01066204
 		[return: Nullable(2)]
 		private Entity ParseSitDownEntity(GeneralContext context, int? pbDataId)
 		{
@@ -723,7 +751,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044154 RID: 278868 RVA: 0x010BE600 File Offset: 0x010BC800
+		// Token: 0x0603A2A6 RID: 238246 RVA: 0x0106807C File Offset: 0x0106627C
 		// Note: this type is marked as 'beforefieldinit'.
 		static LevelEventLeisureInteract()
 		{
@@ -758,41 +786,41 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			LevelEventLeisureInteract.hardCodeMotorSkillId = dictionary2;
 		}
 
-		// Token: 0x04023908 RID: 145672
+		// Token: 0x0401EBAA RID: 125866
 		private const int SKILL_ID_FIX_HOOK_1 = 100020;
 
-		// Token: 0x04023909 RID: 145673
+		// Token: 0x0401EBAB RID: 125867
 		private const int SKILL_ID_FIX_HOOK_2 = 100021;
 
-		// Token: 0x0402390A RID: 145674
+		// Token: 0x0401EBAC RID: 125868
 		private const int SKILL_ID_XA_KITE = 210130;
 
-		// Token: 0x0402390B RID: 145675
+		// Token: 0x0401EBAD RID: 125869
 		private const int SKILL_ID_XA_CHARACTER_DIR = 210330;
 
-		// Token: 0x0402390C RID: 145676
+		// Token: 0x0401EBAE RID: 125870
 		private const int SKILL_ID_FOX_AUTO_JUMP = 391577016;
 
-		// Token: 0x0402390D RID: 145677
+		// Token: 0x0401EBAF RID: 125871
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<ELeisureInteract, int> hardCodePoseId;
 
-		// Token: 0x0402390E RID: 145678
+		// Token: 0x0401EBB0 RID: 125872
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EMotorBounceSkillType, int> hardCodeMotorSkillId;
 
-		// Token: 0x0402390F RID: 145679
+		// Token: 0x0401EBB1 RID: 125873
 		private readonly Rotator tmpRotator = Rotator.Create();
 
-		// Token: 0x04023910 RID: 145680
+		// Token: 0x0401EBB2 RID: 125874
 		[Nullable(2)]
 		private ActionParams ParamsCache;
 
-		// Token: 0x04023911 RID: 145681
+		// Token: 0x0401EBB3 RID: 125875
 		[Nullable(2)]
 		private GeneralContext ContextCache;
 
-		// Token: 0x04023912 RID: 145682
+		// Token: 0x0401EBB4 RID: 125876
 		private int ActionId;
 	}
 }

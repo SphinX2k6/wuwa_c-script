@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E0F RID: 19983
+	// Token: 0x02003DD8 RID: 15832
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeInstanceEntrySelectView : UiViewBase
 	{
-		// Token: 0x060338E3 RID: 211171 RVA: 0x00C0CE24 File Offset: 0x00C0B024
+		// Token: 0x0602874E RID: 165710 RVA: 0x00B56330 File Offset: 0x00B54530
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -46,21 +45,21 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060338E4 RID: 211172 RVA: 0x00C0CF2D File Offset: 0x00C0B12D
+		// Token: 0x0602874F RID: 165711 RVA: 0x00B56439 File Offset: 0x00B54639
 		public RoguelikeInstanceEntrySelectView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060338E5 RID: 211173 RVA: 0x00C0CF36 File Offset: 0x00C0B136
+		// Token: 0x06028750 RID: 165712 RVA: 0x00B56442 File Offset: 0x00B54642
 		private void OnBtnConfirmClick()
 		{
-			RoguelikeController.Instance.RoguelikePopularEntriesChangeRequest((this.OpenParam as PopularEntrie).InstId, RoguelikeInstanceEntrySelectView.SelectIndexList.ToList<int>()).ContinueWith(delegate()
+			RoguelikeController.Instance.RoguelikePopularEntriesChangeRequest((this.OpenParam as PopularEntrie).InstId, new List<int>(RoguelikeInstanceEntrySelectView.SelectIndexList)).ContinueWith(delegate()
 			{
 				base.CloseMe(null);
 			});
 		}
 
-		// Token: 0x060338E6 RID: 211174 RVA: 0x00C0CF70 File Offset: 0x00C0B170
+		// Token: 0x06028751 RID: 165713 RVA: 0x00B5647C File Offset: 0x00B5467C
 		private bool CheckCanExecuteChange(UUIExtendToggle extendToggle)
 		{
 			if (extendToggle.GetToggleState() == EToggleState.ETT_Checked)
@@ -76,7 +75,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return true;
 		}
 
-		// Token: 0x060338E7 RID: 211175 RVA: 0x00C0CFEB File Offset: 0x00C0B1EB
+		// Token: 0x06028752 RID: 165714 RVA: 0x00B564F7 File Offset: 0x00B546F7
 		private void OnSelectBuff(int index, bool isSelected, UUIExtendToggle toggle)
 		{
 			if (!isSelected)
@@ -90,7 +89,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshBuffTxt(false);
 		}
 
-		// Token: 0x060338E8 RID: 211176 RVA: 0x00C0D011 File Offset: 0x00C0B211
+		// Token: 0x06028753 RID: 165715 RVA: 0x00B5651D File Offset: 0x00B5471D
 		private RoguelikeInstanceEntrySelectItem OnCreateBuffItem()
 		{
 			return new RoguelikeInstanceEntrySelectItem
@@ -100,7 +99,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			};
 		}
 
-		// Token: 0x060338E9 RID: 211177 RVA: 0x00C0D03C File Offset: 0x00C0B23C
+		// Token: 0x06028754 RID: 165716 RVA: 0x00B56548 File Offset: 0x00B54748
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeInstanceEntrySelectView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -111,7 +110,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060338EA RID: 211178 RVA: 0x00C0D07F File Offset: 0x00C0B27F
+		// Token: 0x06028755 RID: 165717 RVA: 0x00B5658B File Offset: 0x00B5478B
 		protected override void OnBeforeDestroy()
 		{
 			RoguelikeInstanceEntrySelectView.SelectIndexList = null;
@@ -121,7 +120,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060338EB RID: 211179 RVA: 0x00C0D0A0 File Offset: 0x00C0B2A0
+		// Token: 0x06028756 RID: 165718 RVA: 0x00B565AC File Offset: 0x00B547AC
 		protected void RefreshBuffTxt(bool isFirstIn = false)
 		{
 			float rate = 10000f;
@@ -215,7 +214,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0401B583 RID: 112003
+		// Token: 0x04015F56 RID: 89942
 		[Nullable(new byte[]
 		{
 			2,
@@ -223,7 +222,7 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		public GenericLayout<RoguelikeInstanceEntrySelectItem, RougePopularEntrie> LeftLayout;
 
-		// Token: 0x0401B584 RID: 112004
+		// Token: 0x04015F57 RID: 89943
 		[Nullable(new byte[]
 		{
 			2,
@@ -231,35 +230,35 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		public GenericLayout<RoguelikeInstanceEntrySelectItem, RougePopularEntrie> RightLayout;
 
-		// Token: 0x0401B585 RID: 112005
+		// Token: 0x04015F58 RID: 89944
 		[Nullable(2)]
 		public TimerHandle TextChangeAnimationTimerHandle;
 
-		// Token: 0x0401B586 RID: 112006
+		// Token: 0x04015F59 RID: 89945
 		[Nullable(2)]
 		[StaticVariableRuleIgnore]
 		public static HashSet<int> SelectIndexList;
 
-		// Token: 0x0401B587 RID: 112007
+		// Token: 0x04015F5A RID: 89946
 		public float CurRate;
 
-		// Token: 0x0200AFA7 RID: 44967
+		// Token: 0x020099DC RID: 39388
 		[NullableContext(0)]
 		private class ERoguelikeInstanceEntrySelectView
 		{
-			// Token: 0x0403553A RID: 218426
+			// Token: 0x0402FF6D RID: 196461
 			public const int LeftLayout = 0;
 
-			// Token: 0x0403553B RID: 218427
+			// Token: 0x0402FF6E RID: 196462
 			public const int RightLayout = 1;
 
-			// Token: 0x0403553C RID: 218428
+			// Token: 0x0402FF6F RID: 196463
 			public const int TxtBuffNumber = 2;
 
-			// Token: 0x0403553D RID: 218429
+			// Token: 0x0402FF70 RID: 196464
 			public const int TxtSelectBuffNumber = 3;
 
-			// Token: 0x0403553E RID: 218430
+			// Token: 0x0402FF71 RID: 196465
 			public const int BtnConfirm = 4;
 		}
 	}

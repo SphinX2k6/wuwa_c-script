@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D72 RID: 7538
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F83 RID: 8067
 	public class IQiuyuanQinggongExploration3 : ILeisureInteractType
 	{
-		// Token: 0x0600A199 RID: 41369 RVA: 0x0016FFC4 File Offset: 0x0016E1C4
+		// Token: 0x0600AB85 RID: 43909 RVA: 0x001843E8 File Offset: 0x001825E8
 		private IQiuyuanQinggongExploration3_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A19A RID: 41370 RVA: 0x0016FFFC File Offset: 0x0016E1FC
+		// Token: 0x0600AB86 RID: 43910 RVA: 0x00184420 File Offset: 0x00182620
 		public static IQiuyuanQinggongExploration3 Create([Nullable(2)] IQiuyuanQinggongExploration3 instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A19B RID: 41371 RVA: 0x0017000F File Offset: 0x0016E20F
+		// Token: 0x0600AB87 RID: 43911 RVA: 0x00184433 File Offset: 0x00182633
 		public static IQiuyuanQinggongExploration3 CreateFromSetValue([Nullable(2)] IQiuyuanQinggongExploration3_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A19C RID: 41372 RVA: 0x00170022 File Offset: 0x0016E222
+		// Token: 0x0600AB88 RID: 43912 RVA: 0x00184446 File Offset: 0x00182646
 		public new IQiuyuanQinggongExploration3_SetValue ToSetValue()
 		{
 			return new IQiuyuanQinggongExploration3_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031F8 RID: 12792
-		// (get) Token: 0x0600A19D RID: 41373 RVA: 0x00170035 File Offset: 0x0016E235
-		// (set) Token: 0x0600A19E RID: 41374 RVA: 0x00170060 File Offset: 0x0016E260
+		// Token: 0x1700348C RID: 13452
+		// (get) Token: 0x0600AB89 RID: 43913 RVA: 0x00184459 File Offset: 0x00182659
+		// (set) Token: 0x0600AB8A RID: 43914 RVA: 0x00184484 File Offset: 0x00182684
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006133 RID: 24883
+		// Token: 0x040066AF RID: 26287
 		[Nullable(2)]
 		protected new IQiuyuanQinggongExploration3 FbInstance;
 
-		// Token: 0x04006134 RID: 24884
+		// Token: 0x040066B0 RID: 26288
 		[Nullable(2)]
 		protected new IQiuyuanQinggongExploration3_SetValue PocoInterface;
 	}

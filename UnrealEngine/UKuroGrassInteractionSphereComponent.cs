@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001B1B RID: 6939
+	// Token: 0x020004CC RID: 1228
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.KuroGrassInteractionSphereComponent")]
 	[UnrealStructLayout(576, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 576)]
 	public class UKuroGrassInteractionSphereComponent : USceneComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601A1C3 RID: 106947 RVA: 0x00268959 File Offset: 0x00266B59
+		// Token: 0x06007271 RID: 29297 RVA: 0x000A8453 File Offset: 0x000A6653
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroGrassInteractionSphereComponent._ClassPtr;
 		}
 
-		// Token: 0x0601A1C4 RID: 106948 RVA: 0x00268968 File Offset: 0x00266B68
+		// Token: 0x06007272 RID: 29298 RVA: 0x000A8460 File Offset: 0x000A6660
 		public UKuroGrassInteractionSphereComponent() : this(BuiltinUtils.AllocNativeUObject(UKuroGrassInteractionSphereComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601A1C5 RID: 106949 RVA: 0x00268990 File Offset: 0x00266B90
+		// Token: 0x06007273 RID: 29299 RVA: 0x000A8488 File Offset: 0x000A6688
 		[NullableContext(1)]
 		public UKuroGrassInteractionSphereComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroGrassInteractionSphereComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170068D7 RID: 26839
-		// (get) Token: 0x0601A1C6 RID: 106950 RVA: 0x002689C3 File Offset: 0x00266BC3
-		// (set) Token: 0x0601A1C7 RID: 106951 RVA: 0x002689D3 File Offset: 0x00266BD3
+		// Token: 0x1700168D RID: 5773
+		// (get) Token: 0x06007274 RID: 29300 RVA: 0x000A84BB File Offset: 0x000A66BB
+		// (set) Token: 0x06007275 RID: 29301 RVA: 0x000A84CB File Offset: 0x000A66CB
 		public unsafe float Radius
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170068D8 RID: 26840
-		// (get) Token: 0x0601A1C8 RID: 106952 RVA: 0x002689E4 File Offset: 0x00266BE4
-		// (set) Token: 0x0601A1C9 RID: 106953 RVA: 0x002689F4 File Offset: 0x00266BF4
+		// Token: 0x1700168E RID: 5774
+		// (get) Token: 0x06007276 RID: 29302 RVA: 0x000A84DC File Offset: 0x000A66DC
+		// (set) Token: 0x06007277 RID: 29303 RVA: 0x000A84EC File Offset: 0x000A66EC
 		public unsafe bool bEnabled
 		{
 			get
@@ -58,31 +58,31 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601A1CA RID: 106954 RVA: 0x00268A05 File Offset: 0x00266C05
+		// Token: 0x06007278 RID: 29304 RVA: 0x000A84FD File Offset: 0x000A66FD
 		static UKuroGrassInteractionSphereComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.KuroGrassInteractionSphereComponent");
 		}
 
-		// Token: 0x0601A1CB RID: 106955 RVA: 0x00268A13 File Offset: 0x00266C13
+		// Token: 0x06007279 RID: 29305 RVA: 0x000A850B File Offset: 0x000A670B
 		protected UKuroGrassInteractionSphereComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400E2D9 RID: 58073
+		// Token: 0x0400314B RID: 12619
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroGrassInteractionSphereComponent";
 
-		// Token: 0x0400E2DA RID: 58074
+		// Token: 0x0400314C RID: 12620
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400E2DB RID: 58075
+		// Token: 0x0400314D RID: 12621
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400E2DC RID: 58076
+		// Token: 0x0400314E RID: 12622
 		internal static int __PropertyOffset_Radius;
 
-		// Token: 0x0400E2DD RID: 58077
+		// Token: 0x0400314F RID: 12623
 		internal static int __PropertyOffset_bEnabled;
 	}
 }

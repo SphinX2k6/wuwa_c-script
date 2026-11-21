@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Protocol;
 
-// Token: 0x02001032 RID: 4146
+// Token: 0x020004E6 RID: 1254
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerAiCheckCardTask : GuessJokerTaskBase
 {
-	// Token: 0x06006A79 RID: 27257 RVA: 0x00155DB8 File Offset: 0x00153FB8
+	// Token: 0x06003E0E RID: 15886 RVA: 0x0015E6E0 File Offset: 0x0015C8E0
 	public GuessJokerAiCheckCardTask(JokerGuessDisPlayCardAction data)
 	{
 		this.CardId = data.CardId;
 	}
 
-	// Token: 0x06006A7A RID: 27258 RVA: 0x00155DCC File Offset: 0x00153FCC
+	// Token: 0x06003E0F RID: 15887 RVA: 0x0015E6F4 File Offset: 0x0015C8F4
 	protected override void OnExecute()
 	{
 		if (GuessJokerGamePlayModel.Instance.GetGamePlayView() == null)
@@ -33,7 +33,7 @@ public class GuessJokerAiCheckCardTask : GuessJokerTaskBase
 		GuessJokerGamePlayModel.Instance.PushActions(list);
 	}
 
-	// Token: 0x06006A7B RID: 27259 RVA: 0x00155E50 File Offset: 0x00154050
+	// Token: 0x06003E10 RID: 15888 RVA: 0x0015E778 File Offset: 0x0015C978
 	private unsafe List<int> GetHesitationCardList()
 	{
 		List<GuessJokerCardData> handCardsByPlayer = GuessJokerGamePlayModel.Instance.GetHandCardsByPlayer(EGuessJokerPlayerType.Me);
@@ -105,6 +105,6 @@ public class GuessJokerAiCheckCardTask : GuessJokerTaskBase
 		return list2;
 	}
 
-	// Token: 0x04003112 RID: 12562
+	// Token: 0x040031AB RID: 12715
 	private readonly int CardId;
 }

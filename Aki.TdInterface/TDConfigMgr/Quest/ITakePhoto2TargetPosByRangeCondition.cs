@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001182 RID: 4482
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012BC RID: 4796
 	public class ITakePhoto2TargetPosByRangeCondition
 	{
-		// Token: 0x060065CE RID: 26062 RVA: 0x000F4348 File Offset: 0x000F2548
+		// Token: 0x06006C05 RID: 27653 RVA: 0x00101B14 File Offset: 0x000FFD14
 		private ITakePhoto2TargetPosByRangeCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060065CF RID: 26063 RVA: 0x000F4380 File Offset: 0x000F2580
+		// Token: 0x06006C06 RID: 27654 RVA: 0x00101B4C File Offset: 0x000FFD4C
 		public static ITakePhoto2TargetPosByRangeCondition Create([Nullable(2)] ITakePhoto2TargetPosByRangeCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060065D0 RID: 26064 RVA: 0x000F4393 File Offset: 0x000F2593
+		// Token: 0x06006C07 RID: 27655 RVA: 0x00101B5F File Offset: 0x000FFD5F
 		public static ITakePhoto2TargetPosByRangeCondition CreateFromSetValue([Nullable(2)] ITakePhoto2TargetPosByRangeCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060065D1 RID: 26065 RVA: 0x000F43A6 File Offset: 0x000F25A6
+		// Token: 0x06006C08 RID: 27656 RVA: 0x00101B72 File Offset: 0x000FFD72
 		public ITakePhoto2TargetPosByRangeCondition_SetValue ToSetValue()
 		{
 			return new ITakePhoto2TargetPosByRangeCondition_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002129 RID: 8489
-		// (get) Token: 0x060065D2 RID: 26066 RVA: 0x000F43B9 File Offset: 0x000F25B9
-		// (set) Token: 0x060065D3 RID: 26067 RVA: 0x000F43E0 File Offset: 0x000F25E0
+		// Token: 0x170022E8 RID: 8936
+		// (get) Token: 0x06006C09 RID: 27657 RVA: 0x00101B85 File Offset: 0x000FFD85
+		// (set) Token: 0x06006C0A RID: 27658 RVA: 0x00101BAC File Offset: 0x000FFDAC
 		public virtual IRange Range
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003D1A RID: 15642
+		// Token: 0x04004082 RID: 16514
 		[Nullable(2)]
 		protected ITakePhoto2TargetPosByRangeCondition FbInstance;
 
-		// Token: 0x04003D1B RID: 15643
+		// Token: 0x04004083 RID: 16515
 		[Nullable(2)]
 		protected ITakePhoto2TargetPosByRangeCondition_SetValue PocoInterface;
 	}

@@ -5,27 +5,27 @@ using CSharpScript.Game.Capability;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.LevelplayCapability
 {
-	// Token: 0x02006C32 RID: 27698
+	// Token: 0x02005DAB RID: 23979
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DragActorPlayCameraConfigDataComponent : CapabilityData
 	{
-		// Token: 0x060444AF RID: 279727 RVA: 0x010D327B File Offset: 0x010D147B
+		// Token: 0x0603A607 RID: 239111 RVA: 0x0107D1CF File Offset: 0x0107B3CF
 		public DragActorPlayCameraConfigDataComponent(ICapabilityGameObject ownerGameObject = null) : base(ownerGameObject)
 		{
 		}
 
-		// Token: 0x060444B0 RID: 279728 RVA: 0x010D3284 File Offset: 0x010D1484
+		// Token: 0x0603A608 RID: 239112 RVA: 0x0107D1D8 File Offset: 0x0107B3D8
 		public override void OnAdded()
 		{
 		}
 
-		// Token: 0x060444B1 RID: 279729 RVA: 0x010D3286 File Offset: 0x010D1486
+		// Token: 0x0603A609 RID: 239113 RVA: 0x0107D1DA File Offset: 0x0107B3DA
 		public override void OnRemoved()
 		{
 		}
 
-		// Token: 0x0402398C RID: 145804
+		// Token: 0x0401EC2E RID: 125998
 		public IFixedCameraConfig CameraConfig;
 	}
 }

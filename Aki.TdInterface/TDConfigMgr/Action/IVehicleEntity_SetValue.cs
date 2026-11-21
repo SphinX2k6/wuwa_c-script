@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200203E RID: 8254
+	// Token: 0x02002287 RID: 8839
 	public class IVehicleEntity_SetValue
 	{
-		// Token: 0x04006D29 RID: 27945
+		// Token: 0x04007332 RID: 29490
 		public ETargetEntityType Type;
 
-		// Token: 0x04006D2A RID: 27946
-		[Nullable(1)]
+		// Token: 0x04007333 RID: 29491
 		public ITargetVehicle Vehicle;
 	}
 }

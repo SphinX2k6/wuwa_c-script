@@ -4,48 +4,48 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001CB2 RID: 7346
+	// Token: 0x0200054B RID: 1355
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroSDK.UKuroSDKEventType")]
 	public enum UKuroSDKEventType : byte
 	{
-		// Token: 0x0400F4F8 RID: 62712
+		// Token: 0x04003562 RID: 13666
 		KuroSDKLogin,
-		// Token: 0x0400F4F9 RID: 62713
+		// Token: 0x04003563 RID: 13667
 		KuroSDKKick,
-		// Token: 0x0400F4FA RID: 62714
+		// Token: 0x04003564 RID: 13668
 		KuroSDKSelectedRole,
-		// Token: 0x0400F4FB RID: 62715
+		// Token: 0x04003565 RID: 13669
 		KuroSDKCreateRole,
-		// Token: 0x0400F4FC RID: 62716
+		// Token: 0x04003566 RID: 13670
 		KuroSDKUpgradeRole,
-		// Token: 0x0400F4FD RID: 62717
+		// Token: 0x04003567 RID: 13671
 		KuroSDKExit,
-		// Token: 0x0400F4FE RID: 62718
+		// Token: 0x04003568 RID: 13672
 		KuroSDKLogout,
-		// Token: 0x0400F4FF RID: 62719
+		// Token: 0x04003569 RID: 13673
 		KuroSDKOpenLoginWnd,
-		// Token: 0x0400F500 RID: 62720
+		// Token: 0x0400356A RID: 13674
 		KuroPay,
-		// Token: 0x0400F501 RID: 62721
+		// Token: 0x0400356B RID: 13675
 		KuroOpenSdkUrlWnd,
-		// Token: 0x0400F502 RID: 62722
+		// Token: 0x0400356C RID: 13676
 		KuroInitializePostWebView,
-		// Token: 0x0400F503 RID: 62723
+		// Token: 0x0400356D RID: 13677
 		KuroOpenPostWebView,
-		// Token: 0x0400F504 RID: 62724
+		// Token: 0x0400356E RID: 13678
 		KuroOpenPrivacyClauseWnd,
-		// Token: 0x0400F505 RID: 62725
+		// Token: 0x0400356F RID: 13679
 		KuroOpenUserCenter,
-		// Token: 0x0400F506 RID: 62726
+		// Token: 0x04003570 RID: 13680
 		KuroReadProductInfo,
-		// Token: 0x0400F507 RID: 62727
+		// Token: 0x04003571 RID: 13681
 		KuroShowAgreement,
-		// Token: 0x0400F508 RID: 62728
+		// Token: 0x04003572 RID: 13682
 		KuroNotiLanguage,
-		// Token: 0x0400F509 RID: 62729
+		// Token: 0x04003573 RID: 13683
 		KuroDoInit,
-		// Token: 0x0400F50A RID: 62730
+		// Token: 0x04003574 RID: 13684
 		UKuroSDKEventType_MAX
 	}
 }

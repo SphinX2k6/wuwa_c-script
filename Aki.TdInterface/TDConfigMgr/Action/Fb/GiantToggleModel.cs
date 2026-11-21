@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A36 RID: 10806
+	// Token: 0x02002D23 RID: 11555
 	public class GiantToggleModel : ActionParams
 	{
-		// Token: 0x0600EE07 RID: 60935 RVA: 0x0022AD08 File Offset: 0x00228F08
-		[NullableContext(1)]
+		// Token: 0x0600FC9F RID: 64671 RVA: 0x002486BC File Offset: 0x002468BC
 		public static GiantToggleModel Create(IGiantToggleModel? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B5D RID: 19293
-		// (get) Token: 0x0600EE08 RID: 60936 RVA: 0x0022AD27 File Offset: 0x00228F27
+		// Token: 0x17004F07 RID: 20231
+		// (get) Token: 0x0600FCA0 RID: 64672 RVA: 0x002486DB File Offset: 0x002468DB
 		public virtual bool IsEnabled
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082FE RID: 33534
+		// Token: 0x040089F1 RID: 35313
 		private IGiantToggleModel Instance;
 	}
 }

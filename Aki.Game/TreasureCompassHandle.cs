@@ -5,10 +5,10 @@ using CSharpScript.Game;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.TreasureHunt;
 
-// Token: 0x02001F3E RID: 7998
+// Token: 0x02001400 RID: 5120
 public class TreasureCompassHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F713 RID: 63251 RVA: 0x003BB216 File Offset: 0x003B9416
+	// Token: 0x0600CB32 RID: 52018 RVA: 0x003C6D02 File Offset: 0x003C4F02
 	protected override void OnInitialize()
 	{
 		base.OnInitialize();
@@ -17,7 +17,7 @@ public class TreasureCompassHandle : HudUnitHandleBase
 		this.LoadCompassView();
 	}
 
-	// Token: 0x0600F714 RID: 63252 RVA: 0x003BB23B File Offset: 0x003B943B
+	// Token: 0x0600CB33 RID: 52019 RVA: 0x003C6D27 File Offset: 0x003C4F27
 	protected override void OnDestroyed()
 	{
 		if (this.TreasureCompassUnit != null)
@@ -28,19 +28,19 @@ public class TreasureCompassHandle : HudUnitHandleBase
 		TreasureHuntController.Instance.ClearNearbyTrack();
 	}
 
-	// Token: 0x0600F715 RID: 63253 RVA: 0x003BB262 File Offset: 0x003B9462
+	// Token: 0x0600CB34 RID: 52020 RVA: 0x003C6D4E File Offset: 0x003C4F4E
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.OnUpdateCompassActive, new Action<bool>(this.OnUpdateCompassActive));
 	}
 
-	// Token: 0x0600F716 RID: 63254 RVA: 0x003BB280 File Offset: 0x003B9480
+	// Token: 0x0600CB35 RID: 52021 RVA: 0x003C6D6C File Offset: 0x003C4F6C
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<bool>(EEventName.OnUpdateCompassActive, new Action<bool>(this.OnUpdateCompassActive));
 	}
 
-	// Token: 0x0600F717 RID: 63255 RVA: 0x003BB29E File Offset: 0x003B949E
+	// Token: 0x0600CB36 RID: 52022 RVA: 0x003C6D8A File Offset: 0x003C4F8A
 	private void OnUpdateCompassActive(bool isActive)
 	{
 		this.IsEnableTick = isActive;
@@ -55,7 +55,7 @@ public class TreasureCompassHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F718 RID: 63256 RVA: 0x003BB2BB File Offset: 0x003B94BB
+	// Token: 0x0600CB37 RID: 52023 RVA: 0x003C6DA7 File Offset: 0x003C4FA7
 	private void LoadCompassView()
 	{
 		base.NewHudUnitWithReturn<TreasureCompassUnit>(typeof(TreasureCompassUnit), "UiItem_ShipRing", out this.TreasureCompassUnit, false, delegate(TreasureCompassUnit _)
@@ -69,7 +69,7 @@ public class TreasureCompassHandle : HudUnitHandleBase
 		}, true);
 	}
 
-	// Token: 0x0600F719 RID: 63257 RVA: 0x003BB2E8 File Offset: 0x003B94E8
+	// Token: 0x0600CB38 RID: 52024 RVA: 0x003C6DD4 File Offset: 0x003C4FD4
 	protected override void OnTick(float delta)
 	{
 		if (!this.IsEnableTick)
@@ -139,18 +139,18 @@ public class TreasureCompassHandle : HudUnitHandleBase
 		treasureCompassUnit.RefreshCompass(treasureList, vector2);
 	}
 
-	// Token: 0x04007261 RID: 29281
+	// Token: 0x04007342 RID: 29506
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly Stat TickStatsObject = Stat.Create("TreasureCompassHandleTick", "", "");
 
-	// Token: 0x04007262 RID: 29282
+	// Token: 0x04007343 RID: 29507
 	[Nullable(2)]
 	private TreasureCompassUnit TreasureCompassUnit;
 
-	// Token: 0x04007263 RID: 29283
+	// Token: 0x04007344 RID: 29508
 	private bool IsEnableTick;
 
-	// Token: 0x04007264 RID: 29284
+	// Token: 0x04007345 RID: 29509
 	private int TrackingEntityId;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007EA RID: 2026
+	// Token: 0x0200088D RID: 2189
 	public class IWindSourceBase_SetValue
 	{
-		// Token: 0x04001D30 RID: 7472
+		// Token: 0x04001F3C RID: 7996
 		public EWindSourceType Type;
 	}
 }

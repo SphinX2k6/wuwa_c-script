@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007043 RID: 28739
+	// Token: 0x0200780F RID: 30735
 	public struct ISetNpcTwoPersonPerform : IFlatbufferObject
 	{
-		// Token: 0x1700D56D RID: 54637
-		// (get) Token: 0x06032D86 RID: 208262 RVA: 0x006DBB13 File Offset: 0x006D9D13
+		// Token: 0x1700E14E RID: 57678
+		// (get) Token: 0x06036023 RID: 221219 RVA: 0x0073C03B File Offset: 0x0073A23B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032D87 RID: 208263 RVA: 0x006DBB20 File Offset: 0x006D9D20
+		// Token: 0x06036024 RID: 221220 RVA: 0x0073C048 File Offset: 0x0073A248
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032D88 RID: 208264 RVA: 0x006DBB28 File Offset: 0x006D9D28
+		// Token: 0x06036025 RID: 221221 RVA: 0x0073C050 File Offset: 0x0073A250
 		public static ISetNpcTwoPersonPerform GetRootAsISetNpcTwoPersonPerform(ByteBuffer _bb)
 		{
 			return ISetNpcTwoPersonPerform.GetRootAsISetNpcTwoPersonPerform(_bb, default(ISetNpcTwoPersonPerform));
 		}
 
-		// Token: 0x06032D89 RID: 208265 RVA: 0x006DBB44 File Offset: 0x006D9D44
+		// Token: 0x06036026 RID: 221222 RVA: 0x0073C06C File Offset: 0x0073A26C
 		public static ISetNpcTwoPersonPerform GetRootAsISetNpcTwoPersonPerform(ByteBuffer _bb, ISetNpcTwoPersonPerform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032D8A RID: 208266 RVA: 0x006DBB61 File Offset: 0x006D9D61
+		// Token: 0x06036027 RID: 221223 RVA: 0x0073C089 File Offset: 0x0073A289
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032D8B RID: 208267 RVA: 0x006DBB70 File Offset: 0x006D9D70
+		// Token: 0x06036028 RID: 221224 RVA: 0x0073C098 File Offset: 0x0073A298
 		public ISetNpcTwoPersonPerform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D56E RID: 54638
-		// (get) Token: 0x06032D8C RID: 208268 RVA: 0x006DBB80 File Offset: 0x006D9D80
+		// Token: 0x1700E14F RID: 57679
+		// (get) Token: 0x06036029 RID: 221225 RVA: 0x0073C0A8 File Offset: 0x0073A2A8
 		public ENpcGroupPerformType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D56F RID: 54639
-		// (get) Token: 0x06032D8D RID: 208269 RVA: 0x006DBBBC File Offset: 0x006D9DBC
+		// Token: 0x1700E150 RID: 57680
+		// (get) Token: 0x0603602A RID: 221226 RVA: 0x0073C0E4 File Offset: 0x0073A2E4
 		public IPlayerInitiator? Initiator
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D570 RID: 54640
-		// (get) Token: 0x06032D8E RID: 208270 RVA: 0x006DBC1C File Offset: 0x006D9E1C
+		// Token: 0x1700E151 RID: 57681
+		// (get) Token: 0x0603602B RID: 221227 RVA: 0x0073C144 File Offset: 0x0073A344
 		public int Target
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D571 RID: 54641
-		// (get) Token: 0x06032D8F RID: 208271 RVA: 0x006DBC58 File Offset: 0x006D9E58
+		// Token: 0x1700E152 RID: 57682
+		// (get) Token: 0x0603602C RID: 221228 RVA: 0x0073C180 File Offset: 0x0073A380
 		public string GroupPerformMark
 		{
 			get
@@ -107,20 +107,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032D90 RID: 208272 RVA: 0x006DBC90 File Offset: 0x006D9E90
+		// Token: 0x0603602D RID: 221229 RVA: 0x0073C1B8 File Offset: 0x0073A3B8
 		public Span<byte> GetGroupPerformMarkBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06032D91 RID: 208273 RVA: 0x006DBCA0 File Offset: 0x006D9EA0
+		// Token: 0x0603602E RID: 221230 RVA: 0x0073C1C8 File Offset: 0x0073A3C8
 		public byte[] GetGroupPerformMarkArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700D572 RID: 54642
-		// (get) Token: 0x06032D92 RID: 208274 RVA: 0x006DBCB0 File Offset: 0x006D9EB0
+		// Token: 0x1700E153 RID: 57683
+		// (get) Token: 0x0603602F RID: 221231 RVA: 0x0073C1D8 File Offset: 0x0073A3D8
 		public ENpcGroupPerformNpcType NpcType
 		{
 			get
@@ -134,8 +134,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D573 RID: 54643
-		// (get) Token: 0x06032D93 RID: 208275 RVA: 0x006DBCF0 File Offset: 0x006D9EF0
+		// Token: 0x1700E154 RID: 57684
+		// (get) Token: 0x06036030 RID: 221232 RVA: 0x0073C218 File Offset: 0x0073A418
 		public EWaitInteractNpcMontageWaitType WaitInteractNpcType
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D574 RID: 54644
-		// (get) Token: 0x06032D94 RID: 208276 RVA: 0x006DBD30 File Offset: 0x006D9F30
+		// Token: 0x1700E155 RID: 57685
+		// (get) Token: 0x06036031 RID: 221233 RVA: 0x0073C258 File Offset: 0x0073A458
 		public byte NullMask
 		{
 			get
@@ -164,7 +164,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032D95 RID: 208277 RVA: 0x006DBD70 File Offset: 0x006D9F70
+		// Token: 0x06036032 RID: 221234 RVA: 0x0073C298 File Offset: 0x0073A498
 		public static Offset<ISetNpcTwoPersonPerform> CreateISetNpcTwoPersonPerform(FlatBufferBuilder builder, ENpcGroupPerformType Type = ENpcGroupPerformType.HandInHand, Offset<IPlayerInitiator> InitiatorOffset = default(Offset<IPlayerInitiator>), int Target = 0, StringOffset GroupPerformMarkOffset = default(StringOffset), ENpcGroupPerformNpcType NpcType = ENpcGroupPerformNpcType.LevelBCommonMale, EWaitInteractNpcMontageWaitType WaitInteractNpcType = EWaitInteractNpcMontageWaitType.WaitForMontage, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -178,61 +178,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetNpcTwoPersonPerform.EndISetNpcTwoPersonPerform(builder);
 		}
 
-		// Token: 0x06032D96 RID: 208278 RVA: 0x006DBDBF File Offset: 0x006D9FBF
+		// Token: 0x06036033 RID: 221235 RVA: 0x0073C2E7 File Offset: 0x0073A4E7
 		public static void StartISetNpcTwoPersonPerform(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x06032D97 RID: 208279 RVA: 0x006DBDC8 File Offset: 0x006D9FC8
+		// Token: 0x06036034 RID: 221236 RVA: 0x0073C2F0 File Offset: 0x0073A4F0
 		public static void AddType(FlatBufferBuilder builder, ENpcGroupPerformType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06032D98 RID: 208280 RVA: 0x006DBDD3 File Offset: 0x006D9FD3
+		// Token: 0x06036035 RID: 221237 RVA: 0x0073C2FB File Offset: 0x0073A4FB
 		public static void AddInitiator(FlatBufferBuilder builder, Offset<IPlayerInitiator> initiatorOffset)
 		{
 			builder.AddOffset(1, initiatorOffset.Value, 0);
 		}
 
-		// Token: 0x06032D99 RID: 208281 RVA: 0x006DBDE3 File Offset: 0x006D9FE3
+		// Token: 0x06036036 RID: 221238 RVA: 0x0073C30B File Offset: 0x0073A50B
 		public static void AddTarget(FlatBufferBuilder builder, int target)
 		{
 			builder.AddInt(2, target, 0);
 		}
 
-		// Token: 0x06032D9A RID: 208282 RVA: 0x006DBDEE File Offset: 0x006D9FEE
+		// Token: 0x06036037 RID: 221239 RVA: 0x0073C316 File Offset: 0x0073A516
 		public static void AddGroupPerformMark(FlatBufferBuilder builder, StringOffset groupPerformMarkOffset)
 		{
 			builder.AddOffset(3, groupPerformMarkOffset.Value, 0);
 		}
 
-		// Token: 0x06032D9B RID: 208283 RVA: 0x006DBDFE File Offset: 0x006D9FFE
+		// Token: 0x06036038 RID: 221240 RVA: 0x0073C326 File Offset: 0x0073A526
 		public static void AddNpcType(FlatBufferBuilder builder, ENpcGroupPerformNpcType npcType)
 		{
 			builder.AddByte(4, (byte)npcType, 0);
 		}
 
-		// Token: 0x06032D9C RID: 208284 RVA: 0x006DBE09 File Offset: 0x006DA009
+		// Token: 0x06036039 RID: 221241 RVA: 0x0073C331 File Offset: 0x0073A531
 		public static void AddWaitInteractNpcType(FlatBufferBuilder builder, EWaitInteractNpcMontageWaitType waitInteractNpcType)
 		{
 			builder.AddByte(5, (byte)waitInteractNpcType, 0);
 		}
 
-		// Token: 0x06032D9D RID: 208285 RVA: 0x006DBE14 File Offset: 0x006DA014
+		// Token: 0x0603603A RID: 221242 RVA: 0x0073C33C File Offset: 0x0073A53C
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x06032D9E RID: 208286 RVA: 0x006DBE1F File Offset: 0x006DA01F
+		// Token: 0x0603603B RID: 221243 RVA: 0x0073C347 File Offset: 0x0073A547
 		public static Offset<ISetNpcTwoPersonPerform> EndISetNpcTwoPersonPerform(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetNpcTwoPersonPerform>(builder.EndTable());
 		}
 
-		// Token: 0x06032D9F RID: 208287 RVA: 0x006DBE2C File Offset: 0x006DA02C
+		// Token: 0x0603603C RID: 221244 RVA: 0x0073C354 File Offset: 0x0073A554
 		public ISetNpcTwoPersonPerformT UnPack()
 		{
 			ISetNpcTwoPersonPerformT setNpcTwoPersonPerformT = new ISetNpcTwoPersonPerformT();
@@ -240,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setNpcTwoPersonPerformT;
 		}
 
-		// Token: 0x06032DA0 RID: 208288 RVA: 0x006DBE48 File Offset: 0x006DA048
+		// Token: 0x0603603D RID: 221245 RVA: 0x0073C370 File Offset: 0x0073A570
 		public void UnPackTo(ISetNpcTwoPersonPerformT _o)
 		{
 			_o.Type = this.Type;
@@ -252,7 +252,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06032DA1 RID: 208289 RVA: 0x006DBECC File Offset: 0x006DA0CC
+		// Token: 0x0603603E RID: 221246 RVA: 0x0073C3F4 File Offset: 0x0073A5F4
 		public static Offset<ISetNpcTwoPersonPerform> Pack(FlatBufferBuilder builder, ISetNpcTwoPersonPerformT _o)
 		{
 			if (_o == null)
@@ -264,7 +264,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetNpcTwoPersonPerform.CreateISetNpcTwoPersonPerform(builder, _o.Type, initiatorOffset, _o.Target, groupPerformMarkOffset, _o.NpcType, _o.WaitInteractNpcType, _o.NullMask);
 		}
 
-		// Token: 0x04011A80 RID: 72320
+		// Token: 0x04012A6D RID: 76397
 		private Table __p;
 	}
 }

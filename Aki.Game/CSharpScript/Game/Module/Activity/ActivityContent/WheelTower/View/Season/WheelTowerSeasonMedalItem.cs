@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Season
 {
-	// Token: 0x02005F62 RID: 24418
+	// Token: 0x02004F49 RID: 20297
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 	})]
 	public class WheelTowerSeasonMedalItem : GridProxyAbstract<IWheelTowerMedalItemData>
 	{
-		// Token: 0x0603E00A RID: 253962 RVA: 0x00EF7410 File Offset: 0x00EF5610
+		// Token: 0x06032FA5 RID: 208805 RVA: 0x00E4913C File Offset: 0x00E4733C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603E00B RID: 253963 RVA: 0x00EF75C0 File Offset: 0x00EF57C0
+		// Token: 0x06032FA6 RID: 208806 RVA: 0x00E492EC File Offset: 0x00E474EC
 		protected override void OnStart()
 		{
 			this.ProgressTween.SetCurrentEase(LTweenEase.OutSine);
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			this.SeqPlayer = new UiSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603E00C RID: 253964 RVA: 0x00EF7619 File Offset: 0x00EF5819
+		// Token: 0x06032FA7 RID: 208807 RVA: 0x00E49345 File Offset: 0x00E47545
 		protected override void OnBeforeDestroy()
 		{
 			CustomPromise<bool> tweenPromise = this.TweenPromise;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			this.ProgressTween.Destroy();
 		}
 
-		// Token: 0x0603E00D RID: 253965 RVA: 0x00EF7640 File Offset: 0x00EF5840
+		// Token: 0x06032FA8 RID: 208808 RVA: 0x00E4936C File Offset: 0x00E4756C
 		public void SetPreviewMedalId(int medalId)
 		{
 			this.PreviewMedalId = medalId;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			}
 		}
 
-		// Token: 0x0603E00E RID: 253966 RVA: 0x00EF7668 File Offset: 0x00EF5868
+		// Token: 0x06032FA9 RID: 208809 RVA: 0x00E49394 File Offset: 0x00E47594
 		public override void Refresh(IWheelTowerMedalItemData data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			this.RefreshAppearance(medalGroupData);
 		}
 
-		// Token: 0x0603E00F RID: 253967 RVA: 0x00EF76E0 File Offset: 0x00EF58E0
+		// Token: 0x06032FAA RID: 208810 RVA: 0x00E4940C File Offset: 0x00E4760C
 		public UniTask PlayProgressTweenAsync()
 		{
 			WheelTowerSeasonMedalItem.<PlayProgressTweenAsync>d__13 <PlayProgressTweenAsync>d__;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			return <PlayProgressTweenAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E010 RID: 253968 RVA: 0x00EF7724 File Offset: 0x00EF5924
+		// Token: 0x06032FAB RID: 208811 RVA: 0x00E49450 File Offset: 0x00E47650
 		public UniTask PlayUnlockAsync()
 		{
 			WheelTowerSeasonMedalItem.<PlayUnlockAsync>d__14 <PlayUnlockAsync>d__;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			return <PlayUnlockAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E011 RID: 253969 RVA: 0x00EF7767 File Offset: 0x00EF5967
+		// Token: 0x06032FAC RID: 208812 RVA: 0x00E49493 File Offset: 0x00E47693
 		[NullableContext(2)]
 		private IWheelTowerMedalGroupData GetGroupData()
 		{
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			return WheelTowerModel.Instance.GetMedalGroupData(this.ItemData.GroupId);
 		}
 
-		// Token: 0x0603E012 RID: 253970 RVA: 0x00EF7788 File Offset: 0x00EF5988
+		// Token: 0x06032FAD RID: 208813 RVA: 0x00E494B4 File Offset: 0x00E476B4
 		private void ApplyFlags(IWheelTowerMedalItemData data)
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			item2.SetUIActive(!data.IsLast.GetValueOrDefault());
 		}
 
-		// Token: 0x0603E013 RID: 253971 RVA: 0x00EF7800 File Offset: 0x00EF5A00
+		// Token: 0x06032FAE RID: 208814 RVA: 0x00E4952C File Offset: 0x00E4772C
 		private void RefreshProgress(IWheelTowerMedalGroupData groupData)
 		{
 			int currentTarget = groupData.CurrentTarget;
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			sprite.SetFillAmount(num2);
 		}
 
-		// Token: 0x0603E014 RID: 253972 RVA: 0x00EF78B0 File Offset: 0x00EF5AB0
+		// Token: 0x06032FAF RID: 208815 RVA: 0x00E495DC File Offset: 0x00E477DC
 		private void RefreshAppearance(IWheelTowerMedalGroupData groupData)
 		{
 			this.CurrentMedalId = groupData.CurrentMedalId;
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			base.SetTextureByPath(medalConfigById.Value.Background, base.GetTexture(3), null, null);
 		}
 
-		// Token: 0x0603E015 RID: 253973 RVA: 0x00EF79A4 File Offset: 0x00EF5BA4
+		// Token: 0x06032FB0 RID: 208816 RVA: 0x00E496D0 File Offset: 0x00E478D0
 		private void OnProgressTweenUpdate(float value)
 		{
 			UUISprite sprite = base.GetSprite(8);
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			sprite.SetFillAmount(value);
 		}
 
-		// Token: 0x0603E016 RID: 253974 RVA: 0x00EF79B8 File Offset: 0x00EF5BB8
+		// Token: 0x06032FB1 RID: 208817 RVA: 0x00E496E4 File Offset: 0x00E478E4
 		private void OnProgressTweenComplete()
 		{
 			CustomPromise<bool> tweenPromise = this.TweenPromise;
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			tweenPromise.SetResult(true);
 		}
 
-		// Token: 0x0603E017 RID: 253975 RVA: 0x00EF79D4 File Offset: 0x00EF5BD4
+		// Token: 0x06032FB2 RID: 208818 RVA: 0x00E49700 File Offset: 0x00E47900
 		private void OnMedalBtnClick()
 		{
 			if (this.ItemData == null)
@@ -254,30 +254,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			UiManager.Instance.OpenView(EUiViewName.WheelTowerMedalDetailView, param, null);
 		}
 
-		// Token: 0x040205DB RID: 132571
+		// Token: 0x0401B0AD RID: 110765
 		private const float ProgressTweenDuration = 0.7f;
 
-		// Token: 0x040205DC RID: 132572
+		// Token: 0x0401B0AE RID: 110766
 		[Nullable(2)]
 		private IWheelTowerMedalItemData ItemData;
 
-		// Token: 0x040205DD RID: 132573
+		// Token: 0x0401B0AF RID: 110767
 		private float CurrentProgressRatio;
 
-		// Token: 0x040205DE RID: 132574
+		// Token: 0x0401B0B0 RID: 110768
 		private int CurrentMedalId;
 
-		// Token: 0x040205DF RID: 132575
+		// Token: 0x0401B0B1 RID: 110769
 		private int PreviewMedalId;
 
-		// Token: 0x040205E0 RID: 132576
+		// Token: 0x0401B0B2 RID: 110770
 		private readonly LguiFloatTween ProgressTween = new LguiFloatTween();
 
-		// Token: 0x040205E1 RID: 132577
+		// Token: 0x0401B0B3 RID: 110771
 		[Nullable(2)]
 		private CustomPromise<bool> TweenPromise;
 
-		// Token: 0x040205E2 RID: 132578
+		// Token: 0x0401B0B4 RID: 110772
 		[Nullable(2)]
 		private UiSequencePlayer SeqPlayer;
 	}

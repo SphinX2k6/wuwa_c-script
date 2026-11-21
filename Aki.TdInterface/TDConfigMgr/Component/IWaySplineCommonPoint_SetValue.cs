@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007D4 RID: 2004
+	// Token: 0x02000877 RID: 2167
 	public class IWaySplineCommonPoint_SetValue
 	{
-		// Token: 0x04001CDE RID: 7390
+		// Token: 0x04001EEA RID: 7914
 		public EWaySplinePointType Type;
 	}
 }

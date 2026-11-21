@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048B1 RID: 18609
+	// Token: 0x02004D16 RID: 19734
 	public class ITwoDimensionBgConfigT
 	{
-		// Token: 0x170086EE RID: 34542
-		// (get) Token: 0x0601D0D6 RID: 118998 RVA: 0x0041A3FB File Offset: 0x004185FB
-		// (set) Token: 0x0601D0D7 RID: 118999 RVA: 0x0041A403 File Offset: 0x00418603
+		// Token: 0x17008D36 RID: 36150
+		// (get) Token: 0x0601E8C3 RID: 125123 RVA: 0x00446B97 File Offset: 0x00444D97
+		// (set) Token: 0x0601E8C4 RID: 125124 RVA: 0x00446B9F File Offset: 0x00444D9F
 		public string BgUrl { get; set; }
 
-		// Token: 0x170086EF RID: 34543
-		// (get) Token: 0x0601D0D8 RID: 119000 RVA: 0x0041A40C File Offset: 0x0041860C
-		// (set) Token: 0x0601D0D9 RID: 119001 RVA: 0x0041A414 File Offset: 0x00418614
+		// Token: 0x17008D37 RID: 36151
+		// (get) Token: 0x0601E8C5 RID: 125125 RVA: 0x00446BA8 File Offset: 0x00444DA8
+		// (set) Token: 0x0601E8C6 RID: 125126 RVA: 0x00446BB0 File Offset: 0x00444DB0
 		public int Width { get; set; }
 
-		// Token: 0x170086F0 RID: 34544
-		// (get) Token: 0x0601D0DA RID: 119002 RVA: 0x0041A41D File Offset: 0x0041861D
-		// (set) Token: 0x0601D0DB RID: 119003 RVA: 0x0041A425 File Offset: 0x00418625
+		// Token: 0x17008D38 RID: 36152
+		// (get) Token: 0x0601E8C7 RID: 125127 RVA: 0x00446BB9 File Offset: 0x00444DB9
+		// (set) Token: 0x0601E8C8 RID: 125128 RVA: 0x00446BC1 File Offset: 0x00444DC1
 		public int Height { get; set; }
 
-		// Token: 0x170086F1 RID: 34545
-		// (get) Token: 0x0601D0DC RID: 119004 RVA: 0x0041A42E File Offset: 0x0041862E
-		// (set) Token: 0x0601D0DD RID: 119005 RVA: 0x0041A436 File Offset: 0x00418636
+		// Token: 0x17008D39 RID: 36153
+		// (get) Token: 0x0601E8C9 RID: 125129 RVA: 0x00446BCA File Offset: 0x00444DCA
+		// (set) Token: 0x0601E8CA RID: 125130 RVA: 0x00446BD2 File Offset: 0x00444DD2
 		public float Scale { get; set; }
 
-		// Token: 0x0601D0DE RID: 119006 RVA: 0x0041A43F File Offset: 0x0041863F
+		// Token: 0x0601E8CB RID: 125131 RVA: 0x00446BDB File Offset: 0x00444DDB
 		public ITwoDimensionBgConfigT()
 		{
 			this.BgUrl = null;

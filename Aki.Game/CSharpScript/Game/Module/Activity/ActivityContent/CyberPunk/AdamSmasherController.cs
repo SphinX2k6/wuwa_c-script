@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -14,13 +13,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068A0 RID: 26784
+	// Token: 0x020057F0 RID: 22512
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class AdamSmasherController : ControllerBase
 	{
-		// Token: 0x06042D58 RID: 273752 RVA: 0x01044F06 File Offset: 0x01043106
+		// Token: 0x060378B0 RID: 227504 RVA: 0x00F8647E File Offset: 0x00F8467E
 		protected override bool OnInit()
 		{
 			this.OnRegisterNetEvent();
@@ -28,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return true;
 		}
 
-		// Token: 0x06042D59 RID: 273753 RVA: 0x01044F15 File Offset: 0x01043115
+		// Token: 0x060378B1 RID: 227505 RVA: 0x00F8648D File Offset: 0x00F8468D
 		protected override bool OnClear()
 		{
 			this.OnUnRegisterNetEvent();
@@ -37,37 +36,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return true;
 		}
 
-		// Token: 0x06042D5A RID: 273754 RVA: 0x01044F2A File Offset: 0x0104312A
+		// Token: 0x060378B2 RID: 227506 RVA: 0x00F864A2 File Offset: 0x00F846A2
 		private void ResetAllState()
 		{
 			this.SelectedRoleIdList.Clear();
 		}
 
-		// Token: 0x06042D5B RID: 273755 RVA: 0x01044F37 File Offset: 0x01043137
+		// Token: 0x060378B3 RID: 227507 RVA: 0x00F864AF File Offset: 0x00F846AF
 		protected void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.EdgeRunnerLordGymLevelPlayResultNotify, new Action<IMessage, Net.CallbackStatus>(this.OnAdamSmasherResultNotify));
 		}
 
-		// Token: 0x06042D5C RID: 273756 RVA: 0x01044F55 File Offset: 0x01043155
+		// Token: 0x060378B4 RID: 227508 RVA: 0x00F864CD File Offset: 0x00F846CD
 		protected void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.EdgeRunnerLordGymLevelPlayResultNotify);
 		}
 
-		// Token: 0x06042D5D RID: 273757 RVA: 0x01044F67 File Offset: 0x01043167
+		// Token: 0x060378B5 RID: 227509 RVA: 0x00F864DF File Offset: 0x00F846DF
 		protected void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading));
 		}
 
-		// Token: 0x06042D5E RID: 273758 RVA: 0x01044F85 File Offset: 0x01043185
+		// Token: 0x060378B6 RID: 227510 RVA: 0x00F864FD File Offset: 0x00F846FD
 		protected void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading));
 		}
 
-		// Token: 0x06042D5F RID: 273759 RVA: 0x01044FA4 File Offset: 0x010431A4
+		// Token: 0x060378B7 RID: 227511 RVA: 0x00F8651C File Offset: 0x00F8471C
 		[NullableContext(2)]
 		private void OnAdamSmasherResultNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -172,46 +171,52 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, 0);
 		}
 
-		// Token: 0x06042D60 RID: 273760 RVA: 0x0104526C File Offset: 0x0104346C
+		// Token: 0x060378B8 RID: 227512 RVA: 0x00F867E4 File Offset: 0x00F849E4
 		private void OnWorldDoneAndCloseLoading()
 		{
 			if (GameModeController.Instance.IsInInstance())
 			{
 				return;
 			}
-			using (List<int>.Enumerator enumerator = ActivityRoleTrialController.Instance.CurrentActivityIdList.GetEnumerator())
+			foreach (int num in ActivityRoleTrialController.Instance.CurrentActivityIdList)
 			{
-				while (enumerator.MoveNext())
+				ActivityRoleTrialData activityRoleTrialData = ActivityModel.Instance.GetActivityById(num) as ActivityRoleTrialData;
+				if (activityRoleTrialData != null && activityRoleTrialData.IsRoleInstanceOn())
 				{
-					int trialActivityId = enumerator.Current;
-					ActivityRoleTrialData activityRoleTrialData = ActivityModel.Instance.GetActivityById(trialActivityId) as ActivityRoleTrialData;
-					if (activityRoleTrialData != null && activityRoleTrialData.IsRoleInstanceOn())
+					int currentActivityId = CyberPunkController.Instance.CurrentActivityId;
+					CyberPunkConfig instance = CyberPunkConfig.Instance;
+					IReadOnlyList<EdgeRunnerTrial> readOnlyList = ((instance != null) ? instance.GetTrialRoleListByCyberPunkActivityId(currentActivityId) : null) ?? Array.Empty<EdgeRunnerTrial>();
+					bool flag = false;
+					for (int i = 0; i < readOnlyList.Count; i++)
 					{
-						int currentActivityId = CyberPunkController.Instance.CurrentActivityId;
-						CyberPunkConfig instance = CyberPunkConfig.Instance;
-						if ((((instance != null) ? instance.GetTrialRoleListByCyberPunkActivityId(currentActivityId) : null) ?? Array.Empty<EdgeRunnerTrial>()).Any((EdgeRunnerTrial trialConfig) => trialConfig.ActivityId == trialActivityId))
+						if (readOnlyList[i].ActivityId == num)
 						{
-							activityRoleTrialData.SetRoleTrialState(ERoleTrialFlowState.ActivityOn);
-							if (this.GetCyberPunkData() == null)
-							{
-								break;
-							}
-							ActivityController.Instance.OpenActivityById(currentActivityId, EActivityViewOpenType.Other, null, delegate(bool _)
-							{
-								if (this.GetCyberPunkData() == null)
-								{
-									return;
-								}
-								UiManager.Instance.OpenView(EUiViewName.CyberPunkTrialRoleView, null, null);
-							});
+							flag = true;
 							break;
 						}
+					}
+					if (flag)
+					{
+						activityRoleTrialData.SetRoleTrialState(ERoleTrialFlowState.ActivityOn);
+						if (this.GetCyberPunkData() == null)
+						{
+							break;
+						}
+						ActivityController.Instance.OpenActivityById(currentActivityId, EActivityViewOpenType.Other, null, delegate(bool _)
+						{
+							if (this.GetCyberPunkData() == null)
+							{
+								return;
+							}
+							UiManager.Instance.OpenView(EUiViewName.CyberPunkTrialRoleView, null, null);
+						});
+						break;
 					}
 				}
 			}
 		}
 
-		// Token: 0x06042D61 RID: 273761 RVA: 0x01045364 File Offset: 0x01043564
+		// Token: 0x060378B9 RID: 227513 RVA: 0x00F868F8 File Offset: 0x00F84AF8
 		[NullableContext(0)]
 		public UniTask<bool> OpenAdamSmasherSelectView()
 		{
@@ -222,7 +227,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <OpenAdamSmasherSelectView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042D62 RID: 273762 RVA: 0x010453A0 File Offset: 0x010435A0
+		// Token: 0x060378BA RID: 227514 RVA: 0x00F86934 File Offset: 0x00F84B34
 		public bool IsStageUnlocked(int stageId)
 		{
 			IReadOnlyList<EdgeRunnerLordGym> stageConfigList = this.GetStageConfigList();
@@ -238,7 +243,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return this.IsStageCleared(stageId - 1);
 		}
 
-		// Token: 0x06042D63 RID: 273763 RVA: 0x010453E8 File Offset: 0x010435E8
+		// Token: 0x060378BB RID: 227515 RVA: 0x00F8697C File Offset: 0x00F84B7C
 		public bool IsStageCleared(int stageId)
 		{
 			CyberPunkData cyberPunkData = this.GetCyberPunkData();
@@ -246,7 +251,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return edgeRunnerLordGymPassRecord != null && edgeRunnerLordGymPassRecord.PassTime > 0;
 		}
 
-		// Token: 0x06042D64 RID: 273764 RVA: 0x01045418 File Offset: 0x01043618
+		// Token: 0x060378BC RID: 227516 RVA: 0x00F869AC File Offset: 0x00F84BAC
 		[NullableContext(0)]
 		public UniTask<bool> RequestStartChallenge(int stageId, [Nullable(1)] List<int> roleIdList)
 		{
@@ -260,7 +265,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <RequestStartChallenge>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042D65 RID: 273765 RVA: 0x0104546C File Offset: 0x0104366C
+		// Token: 0x060378BD RID: 227517 RVA: 0x00F86A00 File Offset: 0x00F84C00
 		[NullableContext(0)]
 		public UniTask<bool> ReChallenge(int stageId)
 		{
@@ -271,13 +276,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <ReChallenge>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042D66 RID: 273766 RVA: 0x010454A7 File Offset: 0x010436A7
+		// Token: 0x060378BE RID: 227518 RVA: 0x00F86A3B File Offset: 0x00F84C3B
 		public IReadOnlyList<int> GetSelectedRoleIdList()
 		{
 			return this.SelectedRoleIdList;
 		}
 
-		// Token: 0x06042D67 RID: 273767 RVA: 0x010454B0 File Offset: 0x010436B0
+		// Token: 0x060378BF RID: 227519 RVA: 0x00F86A44 File Offset: 0x00F84C44
 		[NullableContext(0)]
 		public UniTask<bool> EnterAdamSmasherDungeon(int instId)
 		{
@@ -290,7 +295,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <EnterAdamSmasherDungeon>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042D68 RID: 273768 RVA: 0x010454FC File Offset: 0x010436FC
+		// Token: 0x060378C0 RID: 227520 RVA: 0x00F86A90 File Offset: 0x00F84C90
 		[NullableContext(2)]
 		public AdamStageDetailInfo GetStageDetailInfo(int stageId)
 		{
@@ -313,7 +318,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x06042D69 RID: 273769 RVA: 0x010455B8 File Offset: 0x010437B8
+		// Token: 0x060378C1 RID: 227521 RVA: 0x00F86B4C File Offset: 0x00F84D4C
 		public List<TItem> GetSelectedStageRewardPreview(int stageId)
 		{
 			CyberPunkConfig instance = CyberPunkConfig.Instance;
@@ -330,7 +335,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return exchangeRewardPreviewRewardList;
 		}
 
-		// Token: 0x06042D6A RID: 273770 RVA: 0x01045604 File Offset: 0x01043804
+		// Token: 0x060378C2 RID: 227522 RVA: 0x00F86B98 File Offset: 0x00F84D98
 		[NullableContext(2)]
 		public string GetStageRecordText(int stageId)
 		{
@@ -345,7 +350,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return num.ToString("D2") + ":" + num2.ToString("D2");
 		}
 
-		// Token: 0x06042D6B RID: 273771 RVA: 0x0104566C File Offset: 0x0104386C
+		// Token: 0x060378C3 RID: 227523 RVA: 0x00F86C00 File Offset: 0x00F84E00
 		public int[] GetTrialRoleIds(int stageId)
 		{
 			CyberPunkConfig instance = CyberPunkConfig.Instance;
@@ -353,7 +358,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return ((edgeRunnerLordGym != null) ? edgeRunnerLordGym.GetValueOrDefault().GetTrialRoleArray() : null) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06042D6C RID: 273772 RVA: 0x010456B8 File Offset: 0x010438B8
+		// Token: 0x060378C4 RID: 227524 RVA: 0x00F86C4C File Offset: 0x00F84E4C
 		public int[] GetUpRoleIds(int stageId)
 		{
 			CyberPunkConfig instance = CyberPunkConfig.Instance;
@@ -361,7 +366,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return ((edgeRunnerLordGym != null) ? edgeRunnerLordGym.GetValueOrDefault().GetUpRoleArray() : null) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06042D6D RID: 273773 RVA: 0x01045704 File Offset: 0x01043904
+		// Token: 0x060378C5 RID: 227525 RVA: 0x00F86C98 File Offset: 0x00F84E98
 		public bool IsInAdamSmasherDungeon()
 		{
 			GameModeModel instance = GameModeModel.Instance;
@@ -369,7 +374,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return instanceDungeon != null && instanceDungeon.Value.InstSubType == 56;
 		}
 
-		// Token: 0x06042D6E RID: 273774 RVA: 0x0104574C File Offset: 0x0104394C
+		// Token: 0x060378C6 RID: 227526 RVA: 0x00F86CE0 File Offset: 0x00F84EE0
 		private bool IsCyberPunkActivityEnded()
 		{
 			int currentActivityId = CyberPunkController.Instance.CurrentActivityId;
@@ -381,7 +386,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return activityById == null || !activityById.CheckIfInOpenTime();
 		}
 
-		// Token: 0x06042D6F RID: 273775 RVA: 0x01045784 File Offset: 0x01043984
+		// Token: 0x060378C7 RID: 227527 RVA: 0x00F86D18 File Offset: 0x00F84F18
 		private void OpenActivityEndedFailView(EdgeRunnerLordGymLevelPlayResultNotify notify)
 		{
 			int num;
@@ -403,7 +408,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			UiManager.Instance.OpenView(EUiViewName.AdamSmasherChallengeFailView, param, null);
 		}
 
-		// Token: 0x06042D70 RID: 273776 RVA: 0x010457DC File Offset: 0x010439DC
+		// Token: 0x060378C8 RID: 227528 RVA: 0x00F86D70 File Offset: 0x00F84F70
 		[NullableContext(2)]
 		private CyberPunkData GetCyberPunkData()
 		{
@@ -415,7 +420,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return null;
 		}
 
-		// Token: 0x06042D71 RID: 273777 RVA: 0x01045810 File Offset: 0x01043A10
+		// Token: 0x060378C9 RID: 227529 RVA: 0x00F86DA4 File Offset: 0x00F84FA4
 		[NullableContext(2)]
 		private IReadOnlyList<EdgeRunnerLordGym> GetStageConfigList()
 		{
@@ -428,7 +433,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return instance.GetStageConfigList(currentActivityId);
 		}
 
-		// Token: 0x06042D72 RID: 273778 RVA: 0x0104583C File Offset: 0x01043A3C
+		// Token: 0x060378CA RID: 227530 RVA: 0x00F86DD0 File Offset: 0x00F84FD0
 		private int GetNextStageId(int stageId)
 		{
 			IReadOnlyList<EdgeRunnerLordGym> stageConfigList = this.GetStageConfigList();
@@ -452,8 +457,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return stageConfigList[num + 1].Id;
 		}
 
-		// Token: 0x170097C0 RID: 38848
-		// (get) Token: 0x06042D73 RID: 273779 RVA: 0x010458A8 File Offset: 0x01043AA8
+		// Token: 0x17006B00 RID: 27392
+		// (get) Token: 0x060378CB RID: 227531 RVA: 0x00F86E3C File Offset: 0x00F8503C
 		public static AdamSmasherController Instance
 		{
 			get
@@ -462,7 +467,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042D74 RID: 273780 RVA: 0x010458AF File Offset: 0x01043AAF
+		// Token: 0x060378CC RID: 227532 RVA: 0x00F86E43 File Offset: 0x00F85043
 		public static AdamSmasherController GetOrCreateInstance()
 		{
 			if (AdamSmasherController._Instance == null)
@@ -472,7 +477,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return AdamSmasherController._Instance;
 		}
 
-		// Token: 0x06042D75 RID: 273781 RVA: 0x010458C3 File Offset: 0x01043AC3
+		// Token: 0x060378CD RID: 227533 RVA: 0x00F86E57 File Offset: 0x00F85057
 		public static bool CreateInstance()
 		{
 			if (AdamSmasherController._Instance != null)
@@ -483,36 +488,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return true;
 		}
 
-		// Token: 0x06042D76 RID: 273782 RVA: 0x010458D9 File Offset: 0x01043AD9
+		// Token: 0x060378CE RID: 227534 RVA: 0x00F86E6D File Offset: 0x00F8506D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06042D77 RID: 273783 RVA: 0x010458DB File Offset: 0x01043ADB
+		// Token: 0x060378CF RID: 227535 RVA: 0x00F86E6F File Offset: 0x00F8506F
 		public static void ResetStaticDefaultValue()
 		{
 			AdamSmasherController._Instance = null;
 		}
 
-		// Token: 0x06042D78 RID: 273784 RVA: 0x010458E3 File Offset: 0x01043AE3
+		// Token: 0x060378D0 RID: 227536 RVA: 0x00F86E77 File Offset: 0x00F85077
 		static AdamSmasherController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AdamSmasherController.CreateStaticDefaultValue), new Action(AdamSmasherController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04022C7F RID: 142463
+		// Token: 0x0401D4DB RID: 120027
 		private const string LOG_TAG = "[AdamSmasher]";
 
-		// Token: 0x04022C80 RID: 142464
+		// Token: 0x0401D4DC RID: 120028
 		private const int ADAM_SMASHER_ACTIVITY_UID = 0;
 
-		// Token: 0x04022C81 RID: 142465
+		// Token: 0x0401D4DD RID: 120029
 		private const int SECONDS_PER_MINUTE = 60;
 
-		// Token: 0x04022C82 RID: 142466
+		// Token: 0x0401D4DE RID: 120030
 		private List<int> SelectedRoleIdList = new List<int>();
 
-		// Token: 0x04022C83 RID: 142467
+		// Token: 0x0401D4DF RID: 120031
 		[Nullable(2)]
 		private static AdamSmasherController _Instance;
 	}

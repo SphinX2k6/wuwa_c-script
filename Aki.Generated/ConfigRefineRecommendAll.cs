@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007C3 RID: 1987
+	// Token: 0x020007DF RID: 2015
 	public class ConfigRefineRecommendAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002EA4 RID: 11940 RVA: 0x00160FD7 File Offset: 0x0015F1D7
+		// Token: 0x06002F4C RID: 12108 RVA: 0x001682BF File Offset: 0x001664BF
 		static ConfigRefineRecommendAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRefineRecommendAll.CreateStaticDefaultValue), new Action(ConfigRefineRecommendAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002EA5 RID: 11941 RVA: 0x00160FF8 File Offset: 0x0015F1F8
+		// Token: 0x06002F4D RID: 12109 RVA: 0x001682E0 File Offset: 0x001664E0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRefineRecommendAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002EA6 RID: 11942 RVA: 0x00161077 File Offset: 0x0015F277
+		// Token: 0x06002F4E RID: 12110 RVA: 0x0016835F File Offset: 0x0016655F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRefineRecommendAll.LogPair = null;
 			ConfigRefineRecommendAll.HandleId = 0;
 		}
 
-		// Token: 0x06002EA7 RID: 11943 RVA: 0x00161085 File Offset: 0x0015F285
+		// Token: 0x06002F4F RID: 12111 RVA: 0x0016836D File Offset: 0x0016656D
 		public static void Init()
 		{
 			ConfigRefineRecommendAll.HandleId = ConfigCommon.InitDataStatement(ConfigRefineRecommendAll.HandleId, "db_visionrecommend.db", "select BinData from `RefineRecommend`");
 		}
 
-		// Token: 0x06002EA8 RID: 11944 RVA: 0x001610A0 File Offset: 0x0015F2A0
+		// Token: 0x06002F50 RID: 12112 RVA: 0x00168388 File Offset: 0x00166588
 		[NullableContext(2)]
 		public static IReadOnlyList<RefineRecommend> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400363B RID: 13883
+		// Token: 0x040036FF RID: 14079
 		private const string DB = "db_visionrecommend.db";
 
-		// Token: 0x0400363C RID: 13884
+		// Token: 0x04003700 RID: 14080
 		private const string FILE = "h.幻象推荐.xlsx";
 
-		// Token: 0x0400363D RID: 13885
+		// Token: 0x04003701 RID: 14081
 		private const string TABLE = "RefineRecommend";
 
-		// Token: 0x0400363E RID: 13886
+		// Token: 0x04003702 RID: 14082
 		private const string COMMAND = "select BinData from `RefineRecommend`";
 
-		// Token: 0x0400363F RID: 13887
+		// Token: 0x04003703 RID: 14083
 		private const string KEY_PREFIX = "RefineRecommendAll";
 
-		// Token: 0x04003640 RID: 13888
+		// Token: 0x04003704 RID: 14084
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003641 RID: 13889
+		// Token: 0x04003705 RID: 14085
 		private static int HandleId;
 	}
 }

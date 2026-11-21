@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000C4 RID: 196
+	// Token: 0x020000D3 RID: 211
 	public class ConfigAvoidBlockRewardByRewardId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000499 RID: 1177 RVA: 0x00073C1F File Offset: 0x00071E1F
+		// Token: 0x060004F3 RID: 1267 RVA: 0x00079583 File Offset: 0x00077783
 		static ConfigAvoidBlockRewardByRewardId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAvoidBlockRewardByRewardId.CreateStaticDefaultValue), new Action(ConfigAvoidBlockRewardByRewardId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600049A RID: 1178 RVA: 0x00073C40 File Offset: 0x00071E40
+		// Token: 0x060004F4 RID: 1268 RVA: 0x000795A4 File Offset: 0x000777A4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAvoidBlockRewardByRewardId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600049B RID: 1179 RVA: 0x00073CBF File Offset: 0x00071EBF
+		// Token: 0x060004F5 RID: 1269 RVA: 0x00079623 File Offset: 0x00077823
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAvoidBlockRewardByRewardId.LogPair = null;
 			ConfigAvoidBlockRewardByRewardId.HandleId = 0;
 		}
 
-		// Token: 0x0600049C RID: 1180 RVA: 0x00073CCD File Offset: 0x00071ECD
+		// Token: 0x060004F6 RID: 1270 RVA: 0x00079631 File Offset: 0x00077831
 		public static void Init()
 		{
 			ConfigAvoidBlockRewardByRewardId.HandleId = ConfigCommon.InitDataStatement(ConfigAvoidBlockRewardByRewardId.HandleId, "db_avoidblock.db", "select BinData from `AvoidBlockReward` where RewardId=?");
 		}
 
-		// Token: 0x0600049D RID: 1181 RVA: 0x00073CE8 File Offset: 0x00071EE8
+		// Token: 0x060004F7 RID: 1271 RVA: 0x0007964C File Offset: 0x0007784C
 		public static AvoidBlockReward? GetConfig(int p0RewardId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAvoidBlockRewardByRewardId.HandleId, ConfigAvoidBlockRewardByRewardId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AvoidBlockReward?(rootAsAvoidBlockReward);
 		}
 
-		// Token: 0x04000540 RID: 1344
+		// Token: 0x040005A9 RID: 1449
 		private const string DB = "db_avoidblock.db";
 
-		// Token: 0x04000541 RID: 1345
+		// Token: 0x040005AA RID: 1450
 		private const string FILE = "d.躲避方块.xlsx";
 
-		// Token: 0x04000542 RID: 1346
+		// Token: 0x040005AB RID: 1451
 		private const string TABLE = "AvoidBlockReward";
 
-		// Token: 0x04000543 RID: 1347
+		// Token: 0x040005AC RID: 1452
 		private const string COMMAND = "select BinData from `AvoidBlockReward` where RewardId=?";
 
-		// Token: 0x04000544 RID: 1348
+		// Token: 0x040005AD RID: 1453
 		private const string KEY_PREFIX = "AvoidBlockRewardByRewardId";
 
-		// Token: 0x04000545 RID: 1349
+		// Token: 0x040005AE RID: 1454
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000546 RID: 1350
+		// Token: 0x040005AF RID: 1455
 		private static int HandleId;
 	}
 }

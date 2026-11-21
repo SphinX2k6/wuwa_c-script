@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C2D RID: 27693
+	// Token: 0x02007394 RID: 29588
 	public struct IOpenSkiConfig : IFlatbufferObject
 	{
-		// Token: 0x1700CDFC RID: 52732
-		// (get) Token: 0x06030B7F RID: 199551 RVA: 0x0069D6F0 File Offset: 0x0069B8F0
+		// Token: 0x1700D917 RID: 55575
+		// (get) Token: 0x06033AD6 RID: 211670 RVA: 0x006F7B00 File Offset: 0x006F5D00
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030B80 RID: 199552 RVA: 0x0069D6FD File Offset: 0x0069B8FD
+		// Token: 0x06033AD7 RID: 211671 RVA: 0x006F7B0D File Offset: 0x006F5D0D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030B81 RID: 199553 RVA: 0x0069D704 File Offset: 0x0069B904
+		// Token: 0x06033AD8 RID: 211672 RVA: 0x006F7B14 File Offset: 0x006F5D14
 		public static IOpenSkiConfig GetRootAsIOpenSkiConfig(ByteBuffer _bb)
 		{
 			return IOpenSkiConfig.GetRootAsIOpenSkiConfig(_bb, default(IOpenSkiConfig));
 		}
 
-		// Token: 0x06030B82 RID: 199554 RVA: 0x0069D720 File Offset: 0x0069B920
+		// Token: 0x06033AD9 RID: 211673 RVA: 0x006F7B30 File Offset: 0x006F5D30
 		public static IOpenSkiConfig GetRootAsIOpenSkiConfig(ByteBuffer _bb, IOpenSkiConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030B83 RID: 199555 RVA: 0x0069D73D File Offset: 0x0069B93D
+		// Token: 0x06033ADA RID: 211674 RVA: 0x006F7B4D File Offset: 0x006F5D4D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030B84 RID: 199556 RVA: 0x0069D74C File Offset: 0x0069B94C
+		// Token: 0x06033ADB RID: 211675 RVA: 0x006F7B5C File Offset: 0x006F5D5C
 		public IOpenSkiConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CDFD RID: 52733
-		// (get) Token: 0x06030B85 RID: 199557 RVA: 0x0069D75C File Offset: 0x0069B95C
+		// Token: 0x1700D918 RID: 55576
+		// (get) Token: 0x06033ADC RID: 211676 RVA: 0x006F7B6C File Offset: 0x006F5D6C
 		public ESkiConfig Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CDFE RID: 52734
-		// (get) Token: 0x06030B86 RID: 199558 RVA: 0x0069D798 File Offset: 0x0069B998
+		// Token: 0x1700D919 RID: 55577
+		// (get) Token: 0x06033ADD RID: 211677 RVA: 0x006F7BA8 File Offset: 0x006F5DA8
 		public TTargetEntity TargetType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030B87 RID: 199559 RVA: 0x0069D7D4 File Offset: 0x0069B9D4
+		// Token: 0x06033ADE RID: 211678 RVA: 0x006F7BE4 File Offset: 0x006F5DE4
 		public TTable? Target<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,38 +88,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06030B88 RID: 199560 RVA: 0x0069D818 File Offset: 0x0069BA18
+		// Token: 0x06033ADF RID: 211679 RVA: 0x006F7C28 File Offset: 0x006F5E28
 		public IPlayerEntity TargetAsIPlayerEntity()
 		{
 			return this.Target<IPlayerEntity>().Value;
 		}
 
-		// Token: 0x06030B89 RID: 199561 RVA: 0x0069D834 File Offset: 0x0069BA34
+		// Token: 0x06033AE0 RID: 211680 RVA: 0x006F7C44 File Offset: 0x006F5E44
 		public ISelfEntity TargetAsISelfEntity()
 		{
 			return this.Target<ISelfEntity>().Value;
 		}
 
-		// Token: 0x06030B8A RID: 199562 RVA: 0x0069D850 File Offset: 0x0069BA50
+		// Token: 0x06033AE1 RID: 211681 RVA: 0x006F7C60 File Offset: 0x006F5E60
 		public ITargetEntity TargetAsITargetEntity()
 		{
 			return this.Target<ITargetEntity>().Value;
 		}
 
-		// Token: 0x06030B8B RID: 199563 RVA: 0x0069D86C File Offset: 0x0069BA6C
+		// Token: 0x06033AE2 RID: 211682 RVA: 0x006F7C7C File Offset: 0x006F5E7C
 		public ITriggeredEntity TargetAsITriggeredEntity()
 		{
 			return this.Target<ITriggeredEntity>().Value;
 		}
 
-		// Token: 0x06030B8C RID: 199564 RVA: 0x0069D888 File Offset: 0x0069BA88
+		// Token: 0x06033AE3 RID: 211683 RVA: 0x006F7C98 File Offset: 0x006F5E98
 		public IVehicleEntity TargetAsIVehicleEntity()
 		{
 			return this.Target<IVehicleEntity>().Value;
 		}
 
-		// Token: 0x1700CDFF RID: 52735
-		// (get) Token: 0x06030B8D RID: 199565 RVA: 0x0069D8A4 File Offset: 0x0069BAA4
+		// Token: 0x1700D91A RID: 55578
+		// (get) Token: 0x06033AE4 RID: 211684 RVA: 0x006F7CB4 File Offset: 0x006F5EB4
 		public string SkiConfig
 		{
 			get
@@ -133,19 +133,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030B8E RID: 199566 RVA: 0x0069D8DC File Offset: 0x0069BADC
+		// Token: 0x06033AE5 RID: 211685 RVA: 0x006F7CEC File Offset: 0x006F5EEC
 		public Span<byte> GetSkiConfigBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06030B8F RID: 199567 RVA: 0x0069D8EC File Offset: 0x0069BAEC
+		// Token: 0x06033AE6 RID: 211686 RVA: 0x006F7CFC File Offset: 0x006F5EFC
 		public byte[] GetSkiConfigArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x06030B90 RID: 199568 RVA: 0x0069D8FB File Offset: 0x0069BAFB
+		// Token: 0x06033AE7 RID: 211687 RVA: 0x006F7D0B File Offset: 0x006F5F0B
 		public static Offset<IOpenSkiConfig> CreateIOpenSkiConfig(FlatBufferBuilder builder, ESkiConfig Type = ESkiConfig.Open, TTargetEntity Target_type = TTargetEntity.NONE, int TargetOffset = 0, StringOffset SkiConfigOffset = default(StringOffset))
 		{
 			builder.StartTable(4);
@@ -156,43 +156,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenSkiConfig.EndIOpenSkiConfig(builder);
 		}
 
-		// Token: 0x06030B91 RID: 199569 RVA: 0x0069D927 File Offset: 0x0069BB27
+		// Token: 0x06033AE8 RID: 211688 RVA: 0x006F7D37 File Offset: 0x006F5F37
 		public static void StartIOpenSkiConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06030B92 RID: 199570 RVA: 0x0069D930 File Offset: 0x0069BB30
+		// Token: 0x06033AE9 RID: 211689 RVA: 0x006F7D40 File Offset: 0x006F5F40
 		public static void AddType(FlatBufferBuilder builder, ESkiConfig type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06030B93 RID: 199571 RVA: 0x0069D93B File Offset: 0x0069BB3B
+		// Token: 0x06033AEA RID: 211690 RVA: 0x006F7D4B File Offset: 0x006F5F4B
 		public static void AddTargetType(FlatBufferBuilder builder, TTargetEntity targetType)
 		{
 			builder.AddByte(1, (byte)targetType, 0);
 		}
 
-		// Token: 0x06030B94 RID: 199572 RVA: 0x0069D946 File Offset: 0x0069BB46
+		// Token: 0x06033AEB RID: 211691 RVA: 0x006F7D56 File Offset: 0x006F5F56
 		public static void AddTarget(FlatBufferBuilder builder, int targetOffset)
 		{
 			builder.AddOffset(2, targetOffset, 0);
 		}
 
-		// Token: 0x06030B95 RID: 199573 RVA: 0x0069D951 File Offset: 0x0069BB51
+		// Token: 0x06033AEC RID: 211692 RVA: 0x006F7D61 File Offset: 0x006F5F61
 		public static void AddSkiConfig(FlatBufferBuilder builder, StringOffset skiConfigOffset)
 		{
 			builder.AddOffset(3, skiConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06030B96 RID: 199574 RVA: 0x0069D961 File Offset: 0x0069BB61
+		// Token: 0x06033AED RID: 211693 RVA: 0x006F7D71 File Offset: 0x006F5F71
 		public static Offset<IOpenSkiConfig> EndIOpenSkiConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IOpenSkiConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06030B97 RID: 199575 RVA: 0x0069D970 File Offset: 0x0069BB70
+		// Token: 0x06033AEE RID: 211694 RVA: 0x006F7D80 File Offset: 0x006F5F80
 		public IOpenSkiConfigT UnPack()
 		{
 			IOpenSkiConfigT openSkiConfigT = new IOpenSkiConfigT();
@@ -200,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return openSkiConfigT;
 		}
 
-		// Token: 0x06030B98 RID: 199576 RVA: 0x0069D98C File Offset: 0x0069BB8C
+		// Token: 0x06033AEF RID: 211695 RVA: 0x006F7D9C File Offset: 0x006F5F9C
 		public void UnPackTo(IOpenSkiConfigT _o)
 		{
 			_o.Type = this.Type;
@@ -227,7 +227,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.SkiConfig = this.SkiConfig;
 		}
 
-		// Token: 0x06030B99 RID: 199577 RVA: 0x0069DB14 File Offset: 0x0069BD14
+		// Token: 0x06033AF0 RID: 211696 RVA: 0x006F7F24 File Offset: 0x006F6124
 		public static Offset<IOpenSkiConfig> Pack(FlatBufferBuilder builder, IOpenSkiConfigT _o)
 		{
 			if (_o == null)
@@ -240,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenSkiConfig.CreateIOpenSkiConfig(builder, _o.Type, target_type, targetOffset, skiConfigOffset);
 		}
 
-		// Token: 0x0401153B RID: 70971
+		// Token: 0x04012492 RID: 74898
 		private Table __p;
 	}
 }

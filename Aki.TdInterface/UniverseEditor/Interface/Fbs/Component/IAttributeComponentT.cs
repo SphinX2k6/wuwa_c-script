@@ -3,100 +3,100 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EC9 RID: 20169
+	// Token: 0x020053F8 RID: 21496
 	public class IAttributeComponentT
 	{
-		// Token: 0x170090BE RID: 37054
-		// (get) Token: 0x0601FC7D RID: 130173 RVA: 0x0046C9E3 File Offset: 0x0046ABE3
-		// (set) Token: 0x0601FC7E RID: 130174 RVA: 0x0046C9EB File Offset: 0x0046ABEB
+		// Token: 0x17009831 RID: 38961
+		// (get) Token: 0x060219C1 RID: 137665 RVA: 0x004A27B3 File Offset: 0x004A09B3
+		// (set) Token: 0x060219C2 RID: 137666 RVA: 0x004A27BB File Offset: 0x004A09BB
 		public bool Disabled { get; set; }
 
-		// Token: 0x170090BF RID: 37055
-		// (get) Token: 0x0601FC7F RID: 130175 RVA: 0x0046C9F4 File Offset: 0x0046ABF4
-		// (set) Token: 0x0601FC80 RID: 130176 RVA: 0x0046C9FC File Offset: 0x0046ABFC
+		// Token: 0x17009832 RID: 38962
+		// (get) Token: 0x060219C3 RID: 137667 RVA: 0x004A27C4 File Offset: 0x004A09C4
+		// (set) Token: 0x060219C4 RID: 137668 RVA: 0x004A27CC File Offset: 0x004A09CC
 		public int PropertyId { get; set; }
 
-		// Token: 0x170090C0 RID: 37056
-		// (get) Token: 0x0601FC81 RID: 130177 RVA: 0x0046CA05 File Offset: 0x0046AC05
-		// (set) Token: 0x0601FC82 RID: 130178 RVA: 0x0046CA0D File Offset: 0x0046AC0D
+		// Token: 0x17009833 RID: 38963
+		// (get) Token: 0x060219C5 RID: 137669 RVA: 0x004A27D5 File Offset: 0x004A09D5
+		// (set) Token: 0x060219C6 RID: 137670 RVA: 0x004A27DD File Offset: 0x004A09DD
 		public int MonsterPropExtraRateId { get; set; }
 
-		// Token: 0x170090C1 RID: 37057
-		// (get) Token: 0x0601FC83 RID: 130179 RVA: 0x0046CA16 File Offset: 0x0046AC16
-		// (set) Token: 0x0601FC84 RID: 130180 RVA: 0x0046CA1E File Offset: 0x0046AC1E
+		// Token: 0x17009834 RID: 38964
+		// (get) Token: 0x060219C7 RID: 137671 RVA: 0x004A27E6 File Offset: 0x004A09E6
+		// (set) Token: 0x060219C8 RID: 137672 RVA: 0x004A27EE File Offset: 0x004A09EE
 		public int MonsterPropGrowthId { get; set; }
 
-		// Token: 0x170090C2 RID: 37058
-		// (get) Token: 0x0601FC85 RID: 130181 RVA: 0x0046CA27 File Offset: 0x0046AC27
-		// (set) Token: 0x0601FC86 RID: 130182 RVA: 0x0046CA2F File Offset: 0x0046AC2F
+		// Token: 0x17009835 RID: 38965
+		// (get) Token: 0x060219C9 RID: 137673 RVA: 0x004A27F7 File Offset: 0x004A09F7
+		// (set) Token: 0x060219CA RID: 137674 RVA: 0x004A27FF File Offset: 0x004A09FF
 		public int Level { get; set; }
 
-		// Token: 0x170090C3 RID: 37059
-		// (get) Token: 0x0601FC87 RID: 130183 RVA: 0x0046CA38 File Offset: 0x0046AC38
-		// (set) Token: 0x0601FC88 RID: 130184 RVA: 0x0046CA40 File Offset: 0x0046AC40
+		// Token: 0x17009836 RID: 38966
+		// (get) Token: 0x060219CB RID: 137675 RVA: 0x004A2808 File Offset: 0x004A0A08
+		// (set) Token: 0x060219CC RID: 137676 RVA: 0x004A2810 File Offset: 0x004A0A10
 		public int MoraleLevel { get; set; }
 
-		// Token: 0x170090C4 RID: 37060
-		// (get) Token: 0x0601FC89 RID: 130185 RVA: 0x0046CA49 File Offset: 0x0046AC49
-		// (set) Token: 0x0601FC8A RID: 130186 RVA: 0x0046CA51 File Offset: 0x0046AC51
+		// Token: 0x17009837 RID: 38967
+		// (get) Token: 0x060219CD RID: 137677 RVA: 0x004A2819 File Offset: 0x004A0A19
+		// (set) Token: 0x060219CE RID: 137678 RVA: 0x004A2821 File Offset: 0x004A0A21
 		public int HonamiStoryMonsterGrowth { get; set; }
 
-		// Token: 0x170090C5 RID: 37061
-		// (get) Token: 0x0601FC8B RID: 130187 RVA: 0x0046CA5A File Offset: 0x0046AC5A
-		// (set) Token: 0x0601FC8C RID: 130188 RVA: 0x0046CA62 File Offset: 0x0046AC62
+		// Token: 0x17009838 RID: 38968
+		// (get) Token: 0x060219CF RID: 137679 RVA: 0x004A282A File Offset: 0x004A0A2A
+		// (set) Token: 0x060219D0 RID: 137680 RVA: 0x004A2832 File Offset: 0x004A0A32
 		public int FlagChallengeMonsterLevel { get; set; }
 
-		// Token: 0x170090C6 RID: 37062
-		// (get) Token: 0x0601FC8D RID: 130189 RVA: 0x0046CA6B File Offset: 0x0046AC6B
-		// (set) Token: 0x0601FC8E RID: 130190 RVA: 0x0046CA73 File Offset: 0x0046AC73
+		// Token: 0x17009839 RID: 38969
+		// (get) Token: 0x060219D1 RID: 137681 RVA: 0x004A283B File Offset: 0x004A0A3B
+		// (set) Token: 0x060219D2 RID: 137682 RVA: 0x004A2843 File Offset: 0x004A0A43
 		public int RageModeId { get; set; }
 
-		// Token: 0x170090C7 RID: 37063
-		// (get) Token: 0x0601FC8F RID: 130191 RVA: 0x0046CA7C File Offset: 0x0046AC7C
-		// (set) Token: 0x0601FC90 RID: 130192 RVA: 0x0046CA84 File Offset: 0x0046AC84
+		// Token: 0x1700983A RID: 38970
+		// (get) Token: 0x060219D3 RID: 137683 RVA: 0x004A284C File Offset: 0x004A0A4C
+		// (set) Token: 0x060219D4 RID: 137684 RVA: 0x004A2854 File Offset: 0x004A0A54
 		public int HardnessModeId { get; set; }
 
-		// Token: 0x170090C8 RID: 37064
-		// (get) Token: 0x0601FC91 RID: 130193 RVA: 0x0046CA8D File Offset: 0x0046AC8D
-		// (set) Token: 0x0601FC92 RID: 130194 RVA: 0x0046CA95 File Offset: 0x0046AC95
+		// Token: 0x1700983B RID: 38971
+		// (get) Token: 0x060219D5 RID: 137685 RVA: 0x004A285D File Offset: 0x004A0A5D
+		// (set) Token: 0x060219D6 RID: 137686 RVA: 0x004A2865 File Offset: 0x004A0A65
 		public int WorldLevelBonusId { get; set; }
 
-		// Token: 0x170090C9 RID: 37065
-		// (get) Token: 0x0601FC93 RID: 130195 RVA: 0x0046CA9E File Offset: 0x0046AC9E
-		// (set) Token: 0x0601FC94 RID: 130196 RVA: 0x0046CAA6 File Offset: 0x0046ACA6
+		// Token: 0x1700983C RID: 38972
+		// (get) Token: 0x060219D7 RID: 137687 RVA: 0x004A286E File Offset: 0x004A0A6E
+		// (set) Token: 0x060219D8 RID: 137688 RVA: 0x004A2876 File Offset: 0x004A0A76
 		public bool IgnoreFightMusic { get; set; }
 
-		// Token: 0x170090CA RID: 37066
-		// (get) Token: 0x0601FC95 RID: 130197 RVA: 0x0046CAAF File Offset: 0x0046ACAF
-		// (set) Token: 0x0601FC96 RID: 130198 RVA: 0x0046CAB7 File Offset: 0x0046ACB7
+		// Token: 0x1700983D RID: 38973
+		// (get) Token: 0x060219D9 RID: 137689 RVA: 0x004A287F File Offset: 0x004A0A7F
+		// (set) Token: 0x060219DA RID: 137690 RVA: 0x004A2887 File Offset: 0x004A0A87
 		public IFightMusicsSwitchByTagListT FightMusics { get; set; }
 
-		// Token: 0x170090CB RID: 37067
-		// (get) Token: 0x0601FC97 RID: 130199 RVA: 0x0046CAC0 File Offset: 0x0046ACC0
-		// (set) Token: 0x0601FC98 RID: 130200 RVA: 0x0046CAC8 File Offset: 0x0046ACC8
+		// Token: 0x1700983E RID: 38974
+		// (get) Token: 0x060219DB RID: 137691 RVA: 0x004A2890 File Offset: 0x004A0A90
+		// (set) Token: 0x060219DC RID: 137692 RVA: 0x004A2898 File Offset: 0x004A0A98
 		public string FightMusic { get; set; }
 
-		// Token: 0x170090CC RID: 37068
-		// (get) Token: 0x0601FC99 RID: 130201 RVA: 0x0046CAD1 File Offset: 0x0046ACD1
-		// (set) Token: 0x0601FC9A RID: 130202 RVA: 0x0046CAD9 File Offset: 0x0046ACD9
+		// Token: 0x1700983F RID: 38975
+		// (get) Token: 0x060219DD RID: 137693 RVA: 0x004A28A1 File Offset: 0x004A0AA1
+		// (set) Token: 0x060219DE RID: 137694 RVA: 0x004A28A9 File Offset: 0x004A0AA9
 		public bool FightMusicBanRadioMusic { get; set; }
 
-		// Token: 0x170090CD RID: 37069
-		// (get) Token: 0x0601FC9B RID: 130203 RVA: 0x0046CAE2 File Offset: 0x0046ACE2
-		// (set) Token: 0x0601FC9C RID: 130204 RVA: 0x0046CAEA File Offset: 0x0046ACEA
+		// Token: 0x17009840 RID: 38976
+		// (get) Token: 0x060219DF RID: 137695 RVA: 0x004A28B2 File Offset: 0x004A0AB2
+		// (set) Token: 0x060219E0 RID: 137696 RVA: 0x004A28BA File Offset: 0x004A0ABA
 		public List<long> AppendBuffIds { get; set; }
 
-		// Token: 0x170090CE RID: 37070
-		// (get) Token: 0x0601FC9D RID: 130205 RVA: 0x0046CAF3 File Offset: 0x0046ACF3
-		// (set) Token: 0x0601FC9E RID: 130206 RVA: 0x0046CAFB File Offset: 0x0046ACFB
+		// Token: 0x17009841 RID: 38977
+		// (get) Token: 0x060219E1 RID: 137697 RVA: 0x004A28C3 File Offset: 0x004A0AC3
+		// (set) Token: 0x060219E2 RID: 137698 RVA: 0x004A28CB File Offset: 0x004A0ACB
 		public TWorldLevelBonusUnion WorldLevelBonusType { get; set; }
 
-		// Token: 0x170090CF RID: 37071
-		// (get) Token: 0x0601FC9F RID: 130207 RVA: 0x0046CB04 File Offset: 0x0046AD04
-		// (set) Token: 0x0601FCA0 RID: 130208 RVA: 0x0046CB0C File Offset: 0x0046AD0C
+		// Token: 0x17009842 RID: 38978
+		// (get) Token: 0x060219E3 RID: 137699 RVA: 0x004A28D4 File Offset: 0x004A0AD4
+		// (set) Token: 0x060219E4 RID: 137700 RVA: 0x004A28DC File Offset: 0x004A0ADC
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601FCA1 RID: 130209 RVA: 0x0046CB18 File Offset: 0x0046AD18
+		// Token: 0x060219E5 RID: 137701 RVA: 0x004A28E8 File Offset: 0x004A0AE8
 		public IAttributeComponentT()
 		{
 			this.Disabled = false;

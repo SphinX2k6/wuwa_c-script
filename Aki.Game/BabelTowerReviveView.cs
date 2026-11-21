@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001185 RID: 4485
+// Token: 0x02000639 RID: 1593
 [NullableContext(2)]
 [Nullable(0)]
 public class BabelTowerReviveView : UiViewBase
 {
-	// Token: 0x0600769C RID: 30364 RVA: 0x0018AD05 File Offset: 0x00188F05
+	// Token: 0x06004A33 RID: 18995 RVA: 0x001938B5 File Offset: 0x00191AB5
 	[NullableContext(1)]
 	public BabelTowerReviveView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600769D RID: 30365 RVA: 0x0018AD10 File Offset: 0x00188F10
+	// Token: 0x06004A34 RID: 18996 RVA: 0x001938C0 File Offset: 0x00191AC0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -50,7 +50,7 @@ public class BabelTowerReviveView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600769E RID: 30366 RVA: 0x0018AE84 File Offset: 0x00189084
+	// Token: 0x06004A35 RID: 18997 RVA: 0x00193A34 File Offset: 0x00191C34
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerReviveView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -61,21 +61,21 @@ public class BabelTowerReviveView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600769F RID: 30367 RVA: 0x0018AEC7 File Offset: 0x001890C7
+	// Token: 0x06004A36 RID: 18998 RVA: 0x00193A77 File Offset: 0x00191C77
 	private void OnCancelButtonClick()
 	{
 		BabelTowerController.Instance.BabelTowerSettlementRequest();
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060076A0 RID: 30368 RVA: 0x0018AEDC File Offset: 0x001890DC
+	// Token: 0x06004A37 RID: 18999 RVA: 0x00193A8C File Offset: 0x00191C8C
 	private void OnConfirmButtonClick()
 	{
 		DeadReviveController.Instance.ReviveRequest(false, null, null);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060076A1 RID: 30369 RVA: 0x0018AF08 File Offset: 0x00189108
+	// Token: 0x06004A38 RID: 19000 RVA: 0x00193AB8 File Offset: 0x00191CB8
 	public void Refresh()
 	{
 		IBabelTowerReviveViewData data = this.Data;
@@ -108,50 +108,50 @@ public class BabelTowerReviveView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(6), value2.DesText, Array.Empty<object>());
 	}
 
-	// Token: 0x0400366B RID: 13931
+	// Token: 0x04003704 RID: 14084
 	private IBabelTowerReviveViewData Data;
 
-	// Token: 0x0400366C RID: 13932
+	// Token: 0x04003705 RID: 14085
 	private ButtonItem CancelButtonItem;
 
-	// Token: 0x0400366D RID: 13933
+	// Token: 0x04003706 RID: 14086
 	private ButtonItem ConfirmButtonItem;
 
-	// Token: 0x0400366E RID: 13934
+	// Token: 0x04003707 RID: 14087
 	private BabelTowerBuffItem BuffItem;
 
-	// Token: 0x02007760 RID: 30560
+	// Token: 0x020068ED RID: 26861
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027608 RID: 161288
+		// Token: 0x04022941 RID: 141633
 		public const int TitleText = 0;
 
-		// Token: 0x04027609 RID: 161289
+		// Token: 0x04022942 RID: 141634
 		public const int TipText = 1;
 
-		// Token: 0x0402760A RID: 161290
+		// Token: 0x04022943 RID: 141635
 		public const int SrcArtText = 2;
 
-		// Token: 0x0402760B RID: 161291
+		// Token: 0x04022944 RID: 141636
 		public const int DestArtText = 3;
 
-		// Token: 0x0402760C RID: 161292
+		// Token: 0x04022945 RID: 141637
 		public const int BuffItem = 4;
 
-		// Token: 0x0402760D RID: 161293
+		// Token: 0x04022946 RID: 141638
 		public const int BuffNameText = 5;
 
-		// Token: 0x0402760E RID: 161294
+		// Token: 0x04022947 RID: 141639
 		public const int BuffDescText = 6;
 
-		// Token: 0x0402760F RID: 161295
+		// Token: 0x04022948 RID: 141640
 		public const int CancelButtonItem = 7;
 
-		// Token: 0x04027610 RID: 161296
+		// Token: 0x04022949 RID: 141641
 		public const int ConfirmButtonItem = 8;
 
-		// Token: 0x04027611 RID: 161297
+		// Token: 0x0402294A RID: 141642
 		public const int LowStarTipItem = 9;
 	}
 }

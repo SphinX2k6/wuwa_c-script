@@ -6,62 +6,58 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002755 RID: 10069
+	// Token: 0x02000809 RID: 2057
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Sharphereal.CSharpBlueprintFunctionLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UCSharpBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06025A46 RID: 154182 RVA: 0x00390D76 File Offset: 0x0038EF76
+		// Token: 0x0600B523 RID: 46371 RVA: 0x00120145 File Offset: 0x0011E345
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UCSharpBlueprintFunctionLibrary._ClassPtr;
 		}
 
-		// Token: 0x06025A47 RID: 154183 RVA: 0x00390D84 File Offset: 0x0038EF84
+		// Token: 0x0600B524 RID: 46372 RVA: 0x00120154 File Offset: 0x0011E354
 		public UCSharpBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(UCSharpBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06025A48 RID: 154184 RVA: 0x00390DAC File Offset: 0x0038EFAC
+		// Token: 0x0600B525 RID: 46373 RVA: 0x0012017C File Offset: 0x0011E37C
 		public UCSharpBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UCSharpBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06025A49 RID: 154185
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		public static extern void Test2(ETestEnumInt32BlueprintType TestEnumInt32BlueprintType);
-
-		// Token: 0x06025A4A RID: 154186
+		// Token: 0x0600B526 RID: 46374
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void LoadDeferredRuntimeAssemblies();
 
-		// Token: 0x06025A4B RID: 154187
+		// Token: 0x0600B527 RID: 46375
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsPak1RestartPending();
 
-		// Token: 0x06025A4C RID: 154188
+		// Token: 0x0600B528 RID: 46376
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void InitializeMonoEnvironment();
 
-		// Token: 0x06025A4D RID: 154189
+		// Token: 0x0600B529 RID: 46377
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool HasSharpherealModuleStartup();
 
-		// Token: 0x06025A4E RID: 154190
+		// Token: 0x0600B52A RID: 46378
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool HasSharpherealModuleGreyBoxHit();
 
-		// Token: 0x06025A4F RID: 154191
+		// Token: 0x0600B52B RID: 46379
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool HasEnableCSharpEnv();
 
-		// Token: 0x06025A50 RID: 154192
+		// Token: 0x0600B52C RID: 46380
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool HasCSharpEnvironmentInitialized();
 
-		// Token: 0x06025A51 RID: 154193 RVA: 0x00390DE0 File Offset: 0x0038EFE0
+		// Token: 0x0600B52D RID: 46381 RVA: 0x001201B0 File Offset: 0x0011E3B0
 		public unsafe static void CSharpTestSceneLogin(string LevelName)
 		{
 			FString fstring = FString.AllocTemp(LevelName);
@@ -69,14 +65,14 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06025A52 RID: 154194 RVA: 0x00390E04 File Offset: 0x0038F004
+		// Token: 0x0600B52E RID: 46382 RVA: 0x001201D4 File Offset: 0x0011E3D4
 		[NullableContext(2)]
 		public static void CSharpDoMain(UGameInstance GameInstance)
 		{
 			UCSharpBlueprintFunctionLibrary.__CSharpDoMain_Internal((GameInstance != null) ? GameInstance.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06025A53 RID: 154195 RVA: 0x00390E1C File Offset: 0x0038F01C
+		// Token: 0x0600B52F RID: 46383 RVA: 0x001201EC File Offset: 0x0011E3EC
 		public unsafe static void CallCSharpFunction(string ImageName, string NameSpaceName, string ClassName, string MethodName, int ParamsCount, [Nullable(2)] UGameInstance GameInstance)
 		{
 			FString fstring = FString.AllocTemp(ImageName);
@@ -90,36 +86,36 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring4, 1);
 		}
 
-		// Token: 0x06025A54 RID: 154196
+		// Token: 0x0600B530 RID: 46384
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CSharpTestSceneLogin_Internal(in FString LevelName);
 
-		// Token: 0x06025A55 RID: 154197
+		// Token: 0x0600B531 RID: 46385
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CSharpDoMain_Internal(IntPtr GameInstance);
 
-		// Token: 0x06025A56 RID: 154198
+		// Token: 0x0600B532 RID: 46386
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CallCSharpFunction_Internal(in FString ImageName, in FString NameSpaceName, in FString ClassName, in FString MethodName, int ParamsCount, IntPtr GameInstance);
 
-		// Token: 0x06025A57 RID: 154199 RVA: 0x00390E8A File Offset: 0x0038F08A
+		// Token: 0x0600B533 RID: 46387 RVA: 0x0012025A File Offset: 0x0011E45A
 		static UCSharpBlueprintFunctionLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Sharphereal.CSharpBlueprintFunctionLibrary");
 		}
 
-		// Token: 0x06025A58 RID: 154200 RVA: 0x00390E98 File Offset: 0x0038F098
+		// Token: 0x0600B534 RID: 46388 RVA: 0x00120268 File Offset: 0x0011E468
 		protected UCSharpBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401473F RID: 83775
+		// Token: 0x0400519E RID: 20894
 		public new const string __ObjectPath = "/Script/Sharphereal.CSharpBlueprintFunctionLibrary";
 
-		// Token: 0x04014740 RID: 83776
+		// Token: 0x0400519F RID: 20895
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014741 RID: 83777
+		// Token: 0x040051A0 RID: 20896
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

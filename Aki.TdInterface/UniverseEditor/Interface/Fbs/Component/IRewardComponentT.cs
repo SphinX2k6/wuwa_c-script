@@ -3,45 +3,45 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005868 RID: 22632
+	// Token: 0x02005E75 RID: 24181
 	public class IRewardComponentT
 	{
-		// Token: 0x1700A943 RID: 43331
-		// (get) Token: 0x0602620F RID: 156175 RVA: 0x00541F2E File Offset: 0x0054012E
-		// (set) Token: 0x06026210 RID: 156176 RVA: 0x00541F36 File Offset: 0x00540136
+		// Token: 0x1700B273 RID: 45683
+		// (get) Token: 0x06028771 RID: 165745 RVA: 0x00588A7A File Offset: 0x00586C7A
+		// (set) Token: 0x06028772 RID: 165746 RVA: 0x00588A82 File Offset: 0x00586C82
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A944 RID: 43332
-		// (get) Token: 0x06026211 RID: 156177 RVA: 0x00541F3F File Offset: 0x0054013F
-		// (set) Token: 0x06026212 RID: 156178 RVA: 0x00541F47 File Offset: 0x00540147
+		// Token: 0x1700B274 RID: 45684
+		// (get) Token: 0x06028773 RID: 165747 RVA: 0x00588A8B File Offset: 0x00586C8B
+		// (set) Token: 0x06028774 RID: 165748 RVA: 0x00588A93 File Offset: 0x00586C93
 		public int RewardId { get; set; }
 
-		// Token: 0x1700A945 RID: 43333
-		// (get) Token: 0x06026213 RID: 156179 RVA: 0x00541F50 File Offset: 0x00540150
-		// (set) Token: 0x06026214 RID: 156180 RVA: 0x00541F58 File Offset: 0x00540158
+		// Token: 0x1700B275 RID: 45685
+		// (get) Token: 0x06028775 RID: 165749 RVA: 0x00588A9C File Offset: 0x00586C9C
+		// (set) Token: 0x06028776 RID: 165750 RVA: 0x00588AA4 File Offset: 0x00586CA4
 		public ERewardType RewardType { get; set; }
 
-		// Token: 0x1700A946 RID: 43334
-		// (get) Token: 0x06026215 RID: 156181 RVA: 0x00541F61 File Offset: 0x00540161
-		// (set) Token: 0x06026216 RID: 156182 RVA: 0x00541F69 File Offset: 0x00540169
+		// Token: 0x1700B276 RID: 45686
+		// (get) Token: 0x06028777 RID: 165751 RVA: 0x00588AAD File Offset: 0x00586CAD
+		// (set) Token: 0x06028778 RID: 165752 RVA: 0x00588AB5 File Offset: 0x00586CB5
 		public EDropEvent DropOnEvent { get; set; }
 
-		// Token: 0x1700A947 RID: 43335
-		// (get) Token: 0x06026217 RID: 156183 RVA: 0x00541F72 File Offset: 0x00540172
-		// (set) Token: 0x06026218 RID: 156184 RVA: 0x00541F7A File Offset: 0x0054017A
+		// Token: 0x1700B277 RID: 45687
+		// (get) Token: 0x06028779 RID: 165753 RVA: 0x00588ABE File Offset: 0x00586CBE
+		// (set) Token: 0x0602877A RID: 165754 RVA: 0x00588AC6 File Offset: 0x00586CC6
 		public IRewardRefreshConfigT RefreshConfig { get; set; }
 
-		// Token: 0x1700A948 RID: 43336
-		// (get) Token: 0x06026219 RID: 156185 RVA: 0x00541F83 File Offset: 0x00540183
-		// (set) Token: 0x0602621A RID: 156186 RVA: 0x00541F8B File Offset: 0x0054018B
+		// Token: 0x1700B278 RID: 45688
+		// (get) Token: 0x0602877B RID: 165755 RVA: 0x00588ACF File Offset: 0x00586CCF
+		// (set) Token: 0x0602877C RID: 165756 RVA: 0x00588AD7 File Offset: 0x00586CD7
 		public List<int> RewardIdList { get; set; }
 
-		// Token: 0x1700A949 RID: 43337
-		// (get) Token: 0x0602621B RID: 156187 RVA: 0x00541F94 File Offset: 0x00540194
-		// (set) Token: 0x0602621C RID: 156188 RVA: 0x00541F9C File Offset: 0x0054019C
+		// Token: 0x1700B279 RID: 45689
+		// (get) Token: 0x0602877D RID: 165757 RVA: 0x00588AE0 File Offset: 0x00586CE0
+		// (set) Token: 0x0602877E RID: 165758 RVA: 0x00588AE8 File Offset: 0x00586CE8
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602621D RID: 156189 RVA: 0x00541FA5 File Offset: 0x005401A5
+		// Token: 0x0602877F RID: 165759 RVA: 0x00588AF1 File Offset: 0x00586CF1
 		public IRewardComponentT()
 		{
 			this.Disabled = false;

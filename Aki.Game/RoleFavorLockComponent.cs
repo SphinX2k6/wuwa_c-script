@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200286E RID: 10350
+// Token: 0x02001DE9 RID: 7657
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleFavorLockComponent : RoleFavorViewComponentBase
 {
-	// Token: 0x060154D9 RID: 87257 RVA: 0x00561670 File Offset: 0x0055F870
+	// Token: 0x06012ED7 RID: 77527 RVA: 0x0058C3CC File Offset: 0x0058A5CC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,26 +24,26 @@ public class RoleFavorLockComponent : RoleFavorViewComponentBase
 		};
 	}
 
-	// Token: 0x060154DA RID: 87258 RVA: 0x0056170C File Offset: 0x0055F90C
+	// Token: 0x06012ED8 RID: 77528 RVA: 0x0058C468 File Offset: 0x0058A668
 	protected override void OnStart()
 	{
 		this.GenericLayout = new GenericLayout<RoleFavorLockItem, RoleFavorLockItemData>(base.GetVerticalLayout(0), new Func<RoleFavorLockItem>(this.CreateLockItem), base.GetItem(5).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x060154DB RID: 87259 RVA: 0x0056173F File Offset: 0x0055F93F
+	// Token: 0x06012ED9 RID: 77529 RVA: 0x0058C49B File Offset: 0x0058A69B
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearGenericLayout();
 		this.RoleFavorLockItemData = new List<RoleFavorLockItemData>();
 	}
 
-	// Token: 0x060154DC RID: 87260 RVA: 0x00561752 File Offset: 0x0055F952
+	// Token: 0x06012EDA RID: 77530 RVA: 0x0058C4AE File Offset: 0x0058A6AE
 	protected override void OnSetData(RoleFavorContentDataBase contentData)
 	{
 		this.RoleFavorLockItemData = new List<RoleFavorLockItemData>();
 	}
 
-	// Token: 0x060154DD RID: 87261 RVA: 0x0056175F File Offset: 0x0055F95F
+	// Token: 0x06012EDB RID: 77531 RVA: 0x0058C4BB File Offset: 0x0058A6BB
 	protected override void OnRefreshView()
 	{
 		this.SetTitleText();
@@ -51,7 +51,7 @@ public class RoleFavorLockComponent : RoleFavorViewComponentBase
 		this.SetConditionDesc();
 	}
 
-	// Token: 0x060154DE RID: 87262 RVA: 0x00561773 File Offset: 0x0055F973
+	// Token: 0x06012EDC RID: 77532 RVA: 0x0058C4CF File Offset: 0x0058A6CF
 	private void ClearGenericLayout()
 	{
 		if (this.GenericLayout != null)
@@ -61,7 +61,7 @@ public class RoleFavorLockComponent : RoleFavorViewComponentBase
 		}
 	}
 
-	// Token: 0x060154DF RID: 87263 RVA: 0x0056178F File Offset: 0x0055F98F
+	// Token: 0x06012EDD RID: 77533 RVA: 0x0058C4EB File Offset: 0x0058A6EB
 	private void SetConditionDesc()
 	{
 		this.RoleFavorLockItemData = this.GetRoleFavorLockItemData();
@@ -73,20 +73,20 @@ public class RoleFavorLockComponent : RoleFavorViewComponentBase
 		genericLayout.RefreshByData(this.RoleFavorLockItemData, null, false);
 	}
 
-	// Token: 0x060154E0 RID: 87264 RVA: 0x005617B5 File Offset: 0x0055F9B5
+	// Token: 0x06012EDE RID: 77534 RVA: 0x0058C511 File Offset: 0x0058A711
 	private RoleFavorLockItem CreateLockItem()
 	{
 		return new RoleFavorLockItem();
 	}
 
-	// Token: 0x060154E1 RID: 87265 RVA: 0x005617BC File Offset: 0x0055F9BC
+	// Token: 0x06012EDF RID: 77535 RVA: 0x0058C518 File Offset: 0x0058A718
 	private void SetTitleText()
 	{
 		string titleTableId = this.GetTitleTableId();
 		LguiUtil.Instance.SetLocalText(base.GetText(2), titleTableId, Array.Empty<object>());
 	}
 
-	// Token: 0x060154E2 RID: 87266 RVA: 0x005617E8 File Offset: 0x0055F9E8
+	// Token: 0x06012EE0 RID: 77536 RVA: 0x0058C544 File Offset: 0x0058A744
 	private void SetTipsText()
 	{
 		UUIItem item = base.GetItem(4);
@@ -118,7 +118,7 @@ public class RoleFavorLockComponent : RoleFavorViewComponentBase
 		}
 	}
 
-	// Token: 0x060154E3 RID: 87267 RVA: 0x00561878 File Offset: 0x0055FA78
+	// Token: 0x06012EE1 RID: 77537 RVA: 0x0058C5D4 File Offset: 0x0058A7D4
 	private string GetTitleTableId()
 	{
 		string result = "";
@@ -145,7 +145,7 @@ public class RoleFavorLockComponent : RoleFavorViewComponentBase
 		return result;
 	}
 
-	// Token: 0x060154E4 RID: 87268 RVA: 0x005618DC File Offset: 0x0055FADC
+	// Token: 0x06012EE2 RID: 77538 RVA: 0x0058C638 File Offset: 0x0058A838
 	private List<RoleFavorLockItemData> GetRoleFavorLockItemData()
 	{
 		List<RoleFavorLockItemData> result = new List<RoleFavorLockItemData>();
@@ -158,7 +158,7 @@ public class RoleFavorLockComponent : RoleFavorViewComponentBase
 		return this.GetRoleFavorLockItemDataByConfig(configId, configConGroupId);
 	}
 
-	// Token: 0x060154E5 RID: 87269 RVA: 0x0056191C File Offset: 0x0055FB1C
+	// Token: 0x06012EE3 RID: 77539 RVA: 0x0058C678 File Offset: 0x0058A878
 	private List<RoleFavorLockItemData> GetRoleFavorLockItemDataByConfig(int id, int condGroupId)
 	{
 		List<RoleFavorLockItemData> list = new List<RoleFavorLockItemData>();
@@ -194,7 +194,7 @@ public class RoleFavorLockComponent : RoleFavorViewComponentBase
 		return list;
 	}
 
-	// Token: 0x04009F33 RID: 40755
+	// Token: 0x0400A31C RID: 41756
 	[Nullable(new byte[]
 	{
 		2,
@@ -203,6 +203,6 @@ public class RoleFavorLockComponent : RoleFavorViewComponentBase
 	})]
 	private GenericLayout<RoleFavorLockItem, RoleFavorLockItemData> GenericLayout;
 
-	// Token: 0x04009F34 RID: 40756
+	// Token: 0x0400A31D RID: 41757
 	private List<RoleFavorLockItemData> RoleFavorLockItemData = new List<RoleFavorLockItemData>();
 }

@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace KuroSimpleCombat.KscAction
 {
-	// Token: 0x020044E6 RID: 17638
+	// Token: 0x02003032 RID: 12338
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KscActionEntityAdd : KscActionBase
 	{
-		// Token: 0x0602D6E5 RID: 186085 RVA: 0x00A413CD File Offset: 0x00A3F5CD
+		// Token: 0x0601D42F RID: 119855 RVA: 0x008EF265 File Offset: 0x008ED465
 		public KscActionEntityAdd(IKscEntityParam params_) : base(params_.CreatureId)
 		{
 			this.Params = params_;
 		}
 
-		// Token: 0x0602D6E6 RID: 186086 RVA: 0x00A413E2 File Offset: 0x00A3F5E2
+		// Token: 0x0601D430 RID: 119856 RVA: 0x008EF27A File Offset: 0x008ED47A
 		protected override void CancelContent()
 		{
 			if (this.WarningTimerHandle != null)
@@ -37,7 +37,7 @@ namespace KuroSimpleCombat.KscAction
 			warningPromise.TrySetResult();
 		}
 
-		// Token: 0x0602D6E7 RID: 186087 RVA: 0x00A4141C File Offset: 0x00A3F61C
+		// Token: 0x0601D431 RID: 119857 RVA: 0x008EF2B4 File Offset: 0x008ED4B4
 		protected override UniTask RunContent()
 		{
 			KscActionEntityAdd.<RunContent>d__6 <RunContent>d__;
@@ -48,7 +48,7 @@ namespace KuroSimpleCombat.KscAction
 			return <RunContent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D6E8 RID: 186088 RVA: 0x00A41460 File Offset: 0x00A3F660
+		// Token: 0x0601D432 RID: 119858 RVA: 0x008EF2F8 File Offset: 0x008ED4F8
 		private unsafe void LoadKscAssetCallback(UKSC_DA_Entity resultAsset)
 		{
 			if (!this.KscCtrl.WorldInit)
@@ -94,13 +94,13 @@ namespace KuroSimpleCombat.KscAction
 			}, true);
 		}
 
-		// Token: 0x0602D6E9 RID: 186089 RVA: 0x00A41582 File Offset: 0x00A3F782
+		// Token: 0x0601D433 RID: 119859 RVA: 0x008EF41A File Offset: 0x008ED61A
 		private void LoadKscAssetFailCallback(string error)
 		{
 			base.SetResult();
 		}
 
-		// Token: 0x0602D6EA RID: 186090 RVA: 0x00A4158C File Offset: 0x00A3F78C
+		// Token: 0x0601D434 RID: 119860 RVA: 0x008EF424 File Offset: 0x008ED624
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -118,7 +118,7 @@ namespace KuroSimpleCombat.KscAction
 			return <AddEntitySafe>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D6EB RID: 186091 RVA: 0x00A415E0 File Offset: 0x00A3F7E0
+		// Token: 0x0601D435 RID: 119861 RVA: 0x008EF478 File Offset: 0x008ED678
 		private UniTask PlayAppearWarning(UKSC_DA_Entity asset, IKscEntityParam params_)
 		{
 			KscActionEntityAdd.<PlayAppearWarning>d__10 <PlayAppearWarning>d__;
@@ -131,7 +131,7 @@ namespace KuroSimpleCombat.KscAction
 			return <PlayAppearWarning>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D6EC RID: 186092 RVA: 0x00A41633 File Offset: 0x00A3F833
+		// Token: 0x0601D436 RID: 119862 RVA: 0x008EF4CB File Offset: 0x008ED6CB
 		private void StopWarningEffect()
 		{
 			if (this.WarningEffectId != 0)
@@ -141,18 +141,18 @@ namespace KuroSimpleCombat.KscAction
 			}
 		}
 
-		// Token: 0x040184B3 RID: 99507
+		// Token: 0x0400F67E RID: 63102
 		public IKscEntityParam Params;
 
-		// Token: 0x040184B4 RID: 99508
+		// Token: 0x0400F67F RID: 63103
 		[Nullable(2)]
 		private UniTaskCompletionSource WarningPromise;
 
-		// Token: 0x040184B5 RID: 99509
+		// Token: 0x0400F680 RID: 63104
 		[Nullable(2)]
 		private TimerHandle WarningTimerHandle;
 
-		// Token: 0x040184B6 RID: 99510
+		// Token: 0x0400F681 RID: 63105
 		private int WarningEffectId;
 	}
 }

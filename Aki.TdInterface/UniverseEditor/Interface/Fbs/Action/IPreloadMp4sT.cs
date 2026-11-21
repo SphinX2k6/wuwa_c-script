@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D99 RID: 28057
+	// Token: 0x02007514 RID: 29972
 	public class IPreloadMp4sT
 	{
-		// Token: 0x1700D149 RID: 53577
-		// (get) Token: 0x06031907 RID: 203015 RVA: 0x006B7B67 File Offset: 0x006B5D67
-		// (set) Token: 0x06031908 RID: 203016 RVA: 0x006B7B6F File Offset: 0x006B5D6F
+		// Token: 0x1700DC91 RID: 56465
+		// (get) Token: 0x06034903 RID: 215299 RVA: 0x0071324F File Offset: 0x0071144F
+		// (set) Token: 0x06034904 RID: 215300 RVA: 0x00713257 File Offset: 0x00711457
 		public EPreloadObjectType Type { get; set; }
 
-		// Token: 0x1700D14A RID: 53578
-		// (get) Token: 0x06031909 RID: 203017 RVA: 0x006B7B78 File Offset: 0x006B5D78
-		// (set) Token: 0x0603190A RID: 203018 RVA: 0x006B7B80 File Offset: 0x006B5D80
+		// Token: 0x1700DC92 RID: 56466
+		// (get) Token: 0x06034905 RID: 215301 RVA: 0x00713260 File Offset: 0x00711460
+		// (set) Token: 0x06034906 RID: 215302 RVA: 0x00713268 File Offset: 0x00711468
 		public List<string> Mp4s { get; set; }
 
-		// Token: 0x0603190B RID: 203019 RVA: 0x006B7B89 File Offset: 0x006B5D89
+		// Token: 0x06034907 RID: 215303 RVA: 0x00713271 File Offset: 0x00711471
 		public IPreloadMp4sT()
 		{
 			this.Type = EPreloadObjectType.PreloadTrialCharacterForSkill;

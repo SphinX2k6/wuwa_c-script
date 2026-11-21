@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020029AF RID: 10671
+// Token: 0x02001F2A RID: 7978
 [NullableContext(2)]
 [Nullable(0)]
 public class ShipTowerGetBuffViewParams
 {
-	// Token: 0x0400A4EA RID: 42218
+	// Token: 0x0400A8D4 RID: 43220
 	public List<TItem> ItemDataList;
 
-	// Token: 0x0400A4EB RID: 42219
+	// Token: 0x0400A8D5 RID: 43221
 	public CustomPromise<bool> Promise;
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,15 +7,15 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002B82 RID: 11138
+// Token: 0x020020FE RID: 8446
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class SurvivorsRogueModel : ModelBase
 {
-	// Token: 0x17001EC8 RID: 7880
-	// (get) Token: 0x06017152 RID: 94546 RVA: 0x005DC145 File Offset: 0x005DA345
-	// (set) Token: 0x06017153 RID: 94547 RVA: 0x005DC150 File Offset: 0x005DA350
+	// Token: 0x17001F20 RID: 7968
+	// (get) Token: 0x06014B83 RID: 84867 RVA: 0x00608D21 File Offset: 0x00606F21
+	// (set) Token: 0x06014B84 RID: 84868 RVA: 0x00608D2C File Offset: 0x00606F2C
 	public int CurLevelId
 	{
 		get
@@ -36,8 +35,8 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001EC9 RID: 7881
-	// (get) Token: 0x06017154 RID: 94548 RVA: 0x005DC1BE File Offset: 0x005DA3BE
+	// Token: 0x17001F21 RID: 7969
+	// (get) Token: 0x06014B85 RID: 84869 RVA: 0x00608D9A File Offset: 0x00606F9A
 	public int CurRoleId
 	{
 		get
@@ -51,8 +50,8 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001ECA RID: 7882
-	// (get) Token: 0x06017155 RID: 94549 RVA: 0x005DC1D6 File Offset: 0x005DA3D6
+	// Token: 0x17001F22 RID: 7970
+	// (get) Token: 0x06014B86 RID: 84870 RVA: 0x00608DB2 File Offset: 0x00606FB2
 	public int CurRoleLevel
 	{
 		get
@@ -66,8 +65,8 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001ECB RID: 7883
-	// (get) Token: 0x06017156 RID: 94550 RVA: 0x005DC1F3 File Offset: 0x005DA3F3
+	// Token: 0x17001F23 RID: 7971
+	// (get) Token: 0x06014B87 RID: 84871 RVA: 0x00608DCF File Offset: 0x00606FCF
 	public int CurWaveRemainTime
 	{
 		get
@@ -76,8 +75,8 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001ECC RID: 7884
-	// (get) Token: 0x06017157 RID: 94551 RVA: 0x005DC20B File Offset: 0x005DA40B
+	// Token: 0x17001F24 RID: 7972
+	// (get) Token: 0x06014B88 RID: 84872 RVA: 0x00608DE7 File Offset: 0x00606FE7
 	public bool IsEndlessWave
 	{
 		get
@@ -86,8 +85,8 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001ECD RID: 7885
-	// (get) Token: 0x06017158 RID: 94552 RVA: 0x005DC233 File Offset: 0x005DA433
+	// Token: 0x17001F25 RID: 7973
+	// (get) Token: 0x06014B89 RID: 84873 RVA: 0x00608E0F File Offset: 0x0060700F
 	public bool IsBonusWave
 	{
 		get
@@ -96,8 +95,8 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001ECE RID: 7886
-	// (get) Token: 0x06017159 RID: 94553 RVA: 0x005DC24B File Offset: 0x005DA44B
+	// Token: 0x17001F26 RID: 7974
+	// (get) Token: 0x06014B8A RID: 84874 RVA: 0x00608E27 File Offset: 0x00607027
 	public int CurWaveNum
 	{
 		get
@@ -106,7 +105,7 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601715A RID: 94554 RVA: 0x005DC258 File Offset: 0x005DA458
+	// Token: 0x06014B8B RID: 84875 RVA: 0x00608E34 File Offset: 0x00607034
 	public unsafe void InitComboEnhanceCfg(IList<ComboParamInfo> params_)
 	{
 		if (params_ == null || params_.Count != 4)
@@ -128,9 +127,9 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001ECF RID: 7887
-	// (get) Token: 0x0601715B RID: 94555 RVA: 0x005DC311 File Offset: 0x005DA511
-	// (set) Token: 0x0601715C RID: 94556 RVA: 0x005DC31C File Offset: 0x005DA51C
+	// Token: 0x17001F27 RID: 7975
+	// (get) Token: 0x06014B8C RID: 84876 RVA: 0x00608EED File Offset: 0x006070ED
+	// (set) Token: 0x06014B8D RID: 84877 RVA: 0x00608EF8 File Offset: 0x006070F8
 	public SurvivorsRogueModel.EWaveTipsState WaveTipsState
 	{
 		get
@@ -154,8 +153,8 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001ED0 RID: 7888
-	// (get) Token: 0x0601715D RID: 94557 RVA: 0x005DC37A File Offset: 0x005DA57A
+	// Token: 0x17001F28 RID: 7976
+	// (get) Token: 0x06014B8E RID: 84878 RVA: 0x00608F56 File Offset: 0x00607156
 	public bool NeedOpenActivityMainView
 	{
 		get
@@ -166,20 +165,20 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601715E RID: 94558 RVA: 0x005DC389 File Offset: 0x005DA589
+	// Token: 0x06014B8F RID: 84879 RVA: 0x00608F65 File Offset: 0x00607165
 	public void SetCurrentActivityId(int id)
 	{
 		this.CurrentActivityIdInternal = id;
 	}
 
-	// Token: 0x0601715F RID: 94559 RVA: 0x005DC392 File Offset: 0x005DA592
+	// Token: 0x06014B90 RID: 84880 RVA: 0x00608F6E File Offset: 0x0060716E
 	public bool IsActivityOn()
 	{
 		return this.CurrentActivityIdInternal != 0;
 	}
 
-	// Token: 0x17001ED1 RID: 7889
-	// (get) Token: 0x06017160 RID: 94560 RVA: 0x005DC39D File Offset: 0x005DA59D
+	// Token: 0x17001F29 RID: 7977
+	// (get) Token: 0x06014B91 RID: 84881 RVA: 0x00608F79 File Offset: 0x00607179
 	[Nullable(2)]
 	public global::SurvivorsActivityData ActivityData
 	{
@@ -194,14 +193,14 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x06017161 RID: 94561 RVA: 0x005DC3BE File Offset: 0x005DA5BE
+	// Token: 0x06014B92 RID: 84882 RVA: 0x00608F9A File Offset: 0x0060719A
 	public void InitCommandQueue()
 	{
 		this.ClearCommandQueue();
 		this.CommandQueue = new SurvivorsRogueCommandQueue();
 	}
 
-	// Token: 0x06017162 RID: 94562 RVA: 0x005DC3D1 File Offset: 0x005DA5D1
+	// Token: 0x06014B93 RID: 84883 RVA: 0x00608FAD File Offset: 0x006071AD
 	public void ClearCommandQueue()
 	{
 		if (this.CommandQueue != null)
@@ -211,7 +210,7 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x06017163 RID: 94563 RVA: 0x005DC3F0 File Offset: 0x005DA5F0
+	// Token: 0x06014B94 RID: 84884 RVA: 0x00608FCC File Offset: 0x006071CC
 	public void ClearGlobal()
 	{
 		this.ClearCommandQueue();
@@ -230,7 +229,7 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x06017164 RID: 94564 RVA: 0x005DC468 File Offset: 0x005DA668
+	// Token: 0x06014B95 RID: 84885 RVA: 0x00609044 File Offset: 0x00607244
 	public int GetRogueCurrencyItemId()
 	{
 		if (this.GetRogueActivityConfig() == null)
@@ -241,7 +240,7 @@ public class SurvivorsRogueModel : ModelBase
 		return survivorsActivityConfig.GetValueOrDefault().CurrencyItemId;
 	}
 
-	// Token: 0x06017165 RID: 94565 RVA: 0x005DC498 File Offset: 0x005DA698
+	// Token: 0x06014B96 RID: 84886 RVA: 0x00609074 File Offset: 0x00607274
 	public SurvivorsActivityConfig? GetRogueActivityConfig()
 	{
 		if (!this.IsActivityOn())
@@ -251,19 +250,19 @@ public class SurvivorsRogueModel : ModelBase
 		return SurvivorsRogueConfig.Instance.GetSurvivorsActivityConfigByActivityId(this.CurrentActivityIdInternal);
 	}
 
-	// Token: 0x06017166 RID: 94566 RVA: 0x005DC4C7 File Offset: 0x005DA6C7
+	// Token: 0x06014B97 RID: 84887 RVA: 0x006090A3 File Offset: 0x006072A3
 	public bool GetDebugMode()
 	{
 		return false;
 	}
 
-	// Token: 0x06017167 RID: 94567 RVA: 0x005DC4CA File Offset: 0x005DA6CA
+	// Token: 0x06014B98 RID: 84888 RVA: 0x006090A6 File Offset: 0x006072A6
 	public void SetDebugMode(bool bOn)
 	{
 		this.DebugMode = bOn;
 	}
 
-	// Token: 0x06017168 RID: 94568 RVA: 0x005DC4D3 File Offset: 0x005DA6D3
+	// Token: 0x06014B99 RID: 84889 RVA: 0x006090AF File Offset: 0x006072AF
 	public void SaveCacheHandbookClickedMap()
 	{
 		if (this.HandbookClickedMap != null)
@@ -272,7 +271,7 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x06017169 RID: 94569 RVA: 0x005DC4F0 File Offset: 0x005DA6F0
+	// Token: 0x06014B9A RID: 84890 RVA: 0x006090CC File Offset: 0x006072CC
 	public bool GetItemIsNew(ESurvivorsRogueItemType type, int id)
 	{
 		if (this.HandbookClickedMap == null)
@@ -284,7 +283,7 @@ public class SurvivorsRogueModel : ModelBase
 		return !this.GetItemIsLock(type, id) && (this.HandbookClickedMap == null || !this.HandbookClickedMap.TryGetValue(this.CurrentActivityIdInternal, out dictionary) || !dictionary.TryGetValue((int)type, out hashSet) || !hashSet.Contains(id));
 	}
 
-	// Token: 0x0601716A RID: 94570 RVA: 0x005DC55C File Offset: 0x005DA75C
+	// Token: 0x06014B9B RID: 84891 RVA: 0x00609138 File Offset: 0x00607338
 	public void SetItemClicked(ESurvivorsRogueItemType type, int id)
 	{
 		if (this.HandbookClickedMap == null)
@@ -311,7 +310,7 @@ public class SurvivorsRogueModel : ModelBase
 		hashSet.Add(id);
 	}
 
-	// Token: 0x0601716B RID: 94571 RVA: 0x005DC5D4 File Offset: 0x005DA7D4
+	// Token: 0x06014B9C RID: 84892 RVA: 0x006091B0 File Offset: 0x006073B0
 	public bool GetItemIsLock(ESurvivorsRogueItemType type, int id)
 	{
 		IReadOnlyDictionary<int, bool> readOnlyDictionary = null;
@@ -334,7 +333,7 @@ public class SurvivorsRogueModel : ModelBase
 		return readOnlyDictionary == null || !readOnlyDictionary.TryGetValue(id, out flag) || !flag;
 	}
 
-	// Token: 0x0601716C RID: 94572 RVA: 0x005DC644 File Offset: 0x005DA844
+	// Token: 0x06014B9D RID: 84893 RVA: 0x00609220 File Offset: 0x00607420
 	public List<ISurvivorsAttributeUiData> GetRoleDefaultAttributeList(int roleId, [Nullable(2)] IList<int> propertyIds)
 	{
 		Aki.Config.SurvivorsRole? survivorsRole = SurvivorsRogueConfig.Instance.GetSurvivorsRole(roleId);
@@ -352,7 +351,7 @@ public class SurvivorsRogueModel : ModelBase
 			SurvivorsProperty? propertyConfig = SurvivorsRogueConfig.Instance.GetPropertyConfig(num);
 			float num3;
 			float num2 = (attrsDataByPropertyConfig != null && attrsDataByPropertyConfig.TryGetValue((EKSC_AttrType)num, out num3)) ? num3 : 0f;
-			bool isRecommend = recommendPropertyArray != null && recommendPropertyArray.Contains(num);
+			bool isRecommend = recommendPropertyArray != null && Array.IndexOf<int>(recommendPropertyArray, num) >= 0;
 			SurvivorsAttributeUiData item = new SurvivorsAttributeUiData
 			{
 				AttrId = propertyConfig.Value.Id,
@@ -378,8 +377,8 @@ public class SurvivorsRogueModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x17001ED2 RID: 7890
-	// (get) Token: 0x0601716D RID: 94573 RVA: 0x005DC778 File Offset: 0x005DA978
+	// Token: 0x17001F2A RID: 7978
+	// (get) Token: 0x06014B9E RID: 84894 RVA: 0x0060935A File Offset: 0x0060755A
 	public static SurvivorsRogueModel Instance
 	{
 		get
@@ -388,7 +387,7 @@ public class SurvivorsRogueModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601716E RID: 94574 RVA: 0x005DC77F File Offset: 0x005DA97F
+	// Token: 0x06014B9F RID: 84895 RVA: 0x00609361 File Offset: 0x00607561
 	public static SurvivorsRogueModel GetOrCreateInstance()
 	{
 		if (SurvivorsRogueModel._Instance == null)
@@ -398,7 +397,7 @@ public class SurvivorsRogueModel : ModelBase
 		return SurvivorsRogueModel._Instance;
 	}
 
-	// Token: 0x0601716F RID: 94575 RVA: 0x005DC793 File Offset: 0x005DA993
+	// Token: 0x06014BA0 RID: 84896 RVA: 0x00609375 File Offset: 0x00607575
 	public static bool CreateInstance()
 	{
 		if (SurvivorsRogueModel._Instance != null)
@@ -409,77 +408,77 @@ public class SurvivorsRogueModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06017170 RID: 94576 RVA: 0x005DC7A9 File Offset: 0x005DA9A9
+	// Token: 0x06014BA1 RID: 84897 RVA: 0x0060938B File Offset: 0x0060758B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06017171 RID: 94577 RVA: 0x005DC7AB File Offset: 0x005DA9AB
+	// Token: 0x06014BA2 RID: 84898 RVA: 0x0060938D File Offset: 0x0060758D
 	public static void ResetStaticDefaultValue()
 	{
 		SurvivorsRogueModel._Instance = null;
 	}
 
-	// Token: 0x06017172 RID: 94578 RVA: 0x005DC7B3 File Offset: 0x005DA9B3
+	// Token: 0x06014BA3 RID: 84899 RVA: 0x00609395 File Offset: 0x00607595
 	static SurvivorsRogueModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SurvivorsRogueModel.CreateStaticDefaultValue), new Action(SurvivorsRogueModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400ACB3 RID: 44211
+	// Token: 0x0400B0BA RID: 45242
 	public const int COMBO_LEVEL_CONFIG_LENGTH = 4;
 
-	// Token: 0x0400ACB4 RID: 44212
+	// Token: 0x0400B0BB RID: 45243
 	public const int PERMYRIAD_RATIO = 10000;
 
-	// Token: 0x0400ACB5 RID: 44213
+	// Token: 0x0400B0BC RID: 45244
 	private int CurLevelIdInternal;
 
-	// Token: 0x0400ACB6 RID: 44214
+	// Token: 0x0400B0BD RID: 45245
 	public SurvivorsCombo? CurComboConfig;
 
-	// Token: 0x0400ACB7 RID: 44215
+	// Token: 0x0400B0BE RID: 45246
 	public int MaxWaveNum;
 
-	// Token: 0x0400ACB8 RID: 44216
+	// Token: 0x0400B0BF RID: 45247
 	public int[] WaveTypeArray = Array.Empty<int>();
 
-	// Token: 0x0400ACB9 RID: 44217
+	// Token: 0x0400B0C0 RID: 45248
 	public readonly int[] ComboTimerFreezeTimeCfg = new int[4];
 
-	// Token: 0x0400ACBA RID: 44218
+	// Token: 0x0400B0C1 RID: 45249
 	public readonly int[] ComboDurationAdditionCfg = new int[4];
 
-	// Token: 0x0400ACBB RID: 44219
+	// Token: 0x0400B0C2 RID: 45250
 	private SurvivorsRogueModel.EWaveTipsState WaveTipsStateInternal;
 
-	// Token: 0x0400ACBC RID: 44220
+	// Token: 0x0400B0C3 RID: 45251
 	public bool HasNewSettle;
 
-	// Token: 0x0400ACBD RID: 44221
+	// Token: 0x0400B0C4 RID: 45252
 	private int CurrentActivityIdInternal;
 
-	// Token: 0x0400ACBE RID: 44222
+	// Token: 0x0400B0C5 RID: 45253
 	[Nullable(2)]
 	public SurvivorsActivityDefine.SurvivorsLevelInfo SelectLevelInfo;
 
-	// Token: 0x0400ACBF RID: 44223
+	// Token: 0x0400B0C6 RID: 45254
 	public bool NotTipsShopPurchaseAvailable;
 
-	// Token: 0x0400ACC0 RID: 44224
+	// Token: 0x0400B0C7 RID: 45255
 	public SurvivorsRogueBattleData BattleData = SurvivorsRogueBattleData.Create();
 
-	// Token: 0x0400ACC1 RID: 44225
+	// Token: 0x0400B0C8 RID: 45256
 	public SurvivorsRogueGainData GainData = SurvivorsRogueGainData.Create();
 
-	// Token: 0x0400ACC2 RID: 44226
+	// Token: 0x0400B0C9 RID: 45257
 	[Nullable(2)]
 	public SurvivorsRogueCommandQueue CommandQueue;
 
-	// Token: 0x0400ACC3 RID: 44227
+	// Token: 0x0400B0CA RID: 45258
 	private bool DebugMode;
 
-	// Token: 0x0400ACC4 RID: 44228
+	// Token: 0x0400B0CB RID: 45259
 	[Nullable(new byte[]
 	{
 		2,
@@ -488,21 +487,21 @@ public class SurvivorsRogueModel : ModelBase
 	})]
 	private Dictionary<int, Dictionary<int, HashSet<int>>> HandbookClickedMap;
 
-	// Token: 0x0400ACC5 RID: 44229
+	// Token: 0x0400B0CC RID: 45260
 	[Nullable(2)]
 	private static SurvivorsRogueModel _Instance;
 
-	// Token: 0x02009161 RID: 37217
+	// Token: 0x020083A4 RID: 33700
 	[NullableContext(0)]
 	public enum EWaveTipsState
 	{
-		// Token: 0x0402F0ED RID: 192749
+		// Token: 0x0402A7F2 RID: 174066
 		Default,
-		// Token: 0x0402F0EE RID: 192750
+		// Token: 0x0402A7F3 RID: 174067
 		PopWaveTips,
-		// Token: 0x0402F0EF RID: 192751
+		// Token: 0x0402A7F4 RID: 174068
 		ResidentWaveTips,
-		// Token: 0x0402F0F0 RID: 192752
+		// Token: 0x0402A7F5 RID: 174069
 		WaveCompleteTips
 	}
 }

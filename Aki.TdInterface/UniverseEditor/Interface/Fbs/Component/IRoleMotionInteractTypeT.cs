@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200587D RID: 22653
+	// Token: 0x02005E8A RID: 24202
 	public class IRoleMotionInteractTypeT
 	{
-		// Token: 0x1700A96F RID: 43375
-		// (get) Token: 0x060262C0 RID: 156352 RVA: 0x005433F2 File Offset: 0x005415F2
-		// (set) Token: 0x060262C1 RID: 156353 RVA: 0x005433FA File Offset: 0x005415FA
+		// Token: 0x1700B29F RID: 45727
+		// (get) Token: 0x06028822 RID: 165922 RVA: 0x00589F3E File Offset: 0x0058813E
+		// (set) Token: 0x06028823 RID: 165923 RVA: 0x00589F46 File Offset: 0x00588146
 		public ERoleMotionInteractType Type { get; set; }
 
-		// Token: 0x060262C2 RID: 156354 RVA: 0x00543403 File Offset: 0x00541603
+		// Token: 0x06028824 RID: 165924 RVA: 0x00589F4F File Offset: 0x0058814F
 		public IRoleMotionInteractTypeT()
 		{
 			this.Type = ERoleMotionInteractType.PetalGrab;

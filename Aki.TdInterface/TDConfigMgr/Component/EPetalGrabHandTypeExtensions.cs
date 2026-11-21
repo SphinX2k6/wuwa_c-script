@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009CC RID: 2508
+	// Token: 0x02000A91 RID: 2705
 	public static class EPetalGrabHandTypeExtensions
 	{
-		// Token: 0x060037C7 RID: 14279 RVA: 0x00090E0C File Offset: 0x0008F00C
+		// Token: 0x06003B9F RID: 15263 RVA: 0x000996CC File Offset: 0x000978CC
 		public static string ToEnumString(this EPetalGrabHandType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037C8 RID: 14280 RVA: 0x00090E54 File Offset: 0x0008F054
+		// Token: 0x06003BA0 RID: 15264 RVA: 0x00099714 File Offset: 0x00097914
 		public static EPetalGrabHandType FromString(string name)
 		{
 			EPetalGrabHandType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037C9 RID: 14281 RVA: 0x00090E80 File Offset: 0x0008F080
+		// Token: 0x06003BA1 RID: 15265 RVA: 0x00099740 File Offset: 0x00097940
 		public static bool TryFromString(string name, out EPetalGrabHandType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060037CA RID: 14282 RVA: 0x00090ED6 File Offset: 0x0008F0D6
+		// Token: 0x06003BA2 RID: 15266 RVA: 0x00099796 File Offset: 0x00097996
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037CB RID: 14283 RVA: 0x00090EF6 File Offset: 0x0008F0F6
+		// Token: 0x06003BA3 RID: 15267 RVA: 0x000997B6 File Offset: 0x000979B6
 		public static EPetalGrabHandType[] GetValues()
 		{
 			return new EPetalGrabHandType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037CC RID: 14284 RVA: 0x00090F06 File Offset: 0x0008F106
+		// Token: 0x06003BA4 RID: 15268 RVA: 0x000997C6 File Offset: 0x000979C6
 		public static string[] GetNames()
 		{
 			return new string[]

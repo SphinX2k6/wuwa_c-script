@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Core.Common
 {
-	// Token: 0x02000167 RID: 359
-	// (Invoke) Token: 0x06000C44 RID: 3140
+	// Token: 0x0200016C RID: 364
+	// (Invoke) Token: 0x06000CA3 RID: 3235
 	public delegate void TInputTypeChange(EInputControllerType last, EInputControllerType now);
 }

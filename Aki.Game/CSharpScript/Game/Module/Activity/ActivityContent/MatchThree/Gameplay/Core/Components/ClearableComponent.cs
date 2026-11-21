@@ -2,11 +2,11 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Core.Components
 {
-	// Token: 0x02006530 RID: 25904
+	// Token: 0x020054AE RID: 21678
 	public sealed class ClearableComponent : IPieceComponent
 	{
-		// Token: 0x1700952B RID: 38187
-		// (get) Token: 0x06040F14 RID: 266004 RVA: 0x00FBCB78 File Offset: 0x00FBAD78
+		// Token: 0x1700688D RID: 26765
+		// (get) Token: 0x06035BD9 RID: 220121 RVA: 0x00F03BBC File Offset: 0x00F01DBC
 		public EPieceCaps Caps
 		{
 			get

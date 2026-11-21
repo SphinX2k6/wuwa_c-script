@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002888 RID: 10376
+	// Token: 0x02002B5D RID: 11101
 	public class IMontageConfig
 	{
-		// Token: 0x0600E5E0 RID: 58848 RVA: 0x0021CACF File Offset: 0x0021ACCF
-		[NullableContext(1)]
+		// Token: 0x0600F40F RID: 62479 RVA: 0x00239A4F File Offset: 0x00237C4F
 		public static IMontageConfig Create(IMontageConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004692 RID: 18066
-		// (get) Token: 0x0600E5E1 RID: 58849 RVA: 0x0021CAEE File Offset: 0x0021ACEE
+		// Token: 0x17004A03 RID: 18947
+		// (get) Token: 0x0600F410 RID: 62480 RVA: 0x00239A6E File Offset: 0x00237C6E
 		public virtual EMontageConfigType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F18 RID: 32536
+		// Token: 0x040085D7 RID: 34263
 		private IMontageConfig Instance;
 	}
 }

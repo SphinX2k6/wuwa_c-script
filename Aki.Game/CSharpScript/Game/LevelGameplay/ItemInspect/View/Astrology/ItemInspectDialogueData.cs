@@ -4,25 +4,25 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 {
-	// Token: 0x02006DE9 RID: 28137
+	// Token: 0x02005F68 RID: 24424
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class ItemInspectDialogueData
 	{
-		// Token: 0x170099D9 RID: 39385
-		// (get) Token: 0x06044A48 RID: 281160 RVA: 0x010F090B File Offset: 0x010EEB0B
-		// (set) Token: 0x06044A49 RID: 281161 RVA: 0x010F0913 File Offset: 0x010EEB13
+		// Token: 0x17006EDC RID: 28380
+		// (get) Token: 0x0603ABAC RID: 240556 RVA: 0x0109AB57 File Offset: 0x01098D57
+		// (set) Token: 0x0603ABAD RID: 240557 RVA: 0x0109AB5F File Offset: 0x01098D5F
 		[RequiredMember]
 		public string TextKey { get; set; }
 
-		// Token: 0x170099DA RID: 39386
-		// (get) Token: 0x06044A4A RID: 281162 RVA: 0x010F091C File Offset: 0x010EEB1C
-		// (set) Token: 0x06044A4B RID: 281163 RVA: 0x010F0924 File Offset: 0x010EEB24
+		// Token: 0x17006EDD RID: 28381
+		// (get) Token: 0x0603ABAE RID: 240558 RVA: 0x0109AB68 File Offset: 0x01098D68
+		// (set) Token: 0x0603ABAF RID: 240559 RVA: 0x0109AB70 File Offset: 0x01098D70
 		[Nullable(2)]
 		public ITalkItem VoiceTalkItem { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x06044A4C RID: 281164 RVA: 0x010F092D File Offset: 0x010EEB2D
+		// Token: 0x0603ABB0 RID: 240560 RVA: 0x0109AB79 File Offset: 0x01098D79
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public ItemInspectDialogueData()

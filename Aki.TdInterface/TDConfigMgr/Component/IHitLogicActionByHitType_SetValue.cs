@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200041F RID: 1055
+	// Token: 0x02000478 RID: 1144
 	public class IHitLogicActionByHitType_SetValue
 	{
-		// Token: 0x04001082 RID: 4226
+		// Token: 0x040011A4 RID: 4516
 		public EHitLogicType Type;
 
-		// Token: 0x04001083 RID: 4227
-		[Nullable(1)]
+		// Token: 0x040011A5 RID: 4517
 		public List<IActionByHitTypeConfig> Configs;
 	}
 }

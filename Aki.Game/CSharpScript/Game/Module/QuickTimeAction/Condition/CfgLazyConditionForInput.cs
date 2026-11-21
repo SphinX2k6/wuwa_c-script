@@ -4,18 +4,18 @@ using AkiClient.Game.Aki.Data.QuickTimeAction;
 
 namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 {
-	// Token: 0x02004F57 RID: 20311
+	// Token: 0x02003F20 RID: 16160
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CfgLazyConditionForInput : CfgLazyConditionBase
 	{
-		// Token: 0x06034105 RID: 213253 RVA: 0x00C35FF5 File Offset: 0x00C341F5
+		// Token: 0x06028F73 RID: 167795 RVA: 0x00B7F795 File Offset: 0x00B7D995
 		public CfgLazyConditionForInput()
 		{
 			this.ConditionType = new ELazyConditionType?(ELazyConditionType.输入检测);
 		}
 
-		// Token: 0x06034106 RID: 213254 RVA: 0x00C3601B File Offset: 0x00C3421B
+		// Token: 0x06028F74 RID: 167796 RVA: 0x00B7F7BB File Offset: 0x00B7D9BB
 		public void InitForQta(string actionName, SQtaCondition_Content ueCondition)
 		{
 			this.ActionName = actionName;
@@ -23,13 +23,13 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			this.Reverse = ueCondition.Reverse;
 		}
 
-		// Token: 0x0401BA93 RID: 113299
+		// Token: 0x04016468 RID: 91240
 		public string ActionName = string.Empty;
 
-		// Token: 0x0401BA94 RID: 113300
+		// Token: 0x04016469 RID: 91241
 		public ELazyConditionKeyMatchType KeyMatchType = ELazyConditionKeyMatchType.没按键;
 
-		// Token: 0x0401BA95 RID: 113301
+		// Token: 0x0401646A RID: 91242
 		public bool Reverse;
 	}
 }

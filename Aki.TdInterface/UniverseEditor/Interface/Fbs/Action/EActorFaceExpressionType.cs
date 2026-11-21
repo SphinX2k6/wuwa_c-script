@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F07 RID: 24327
+	// Token: 0x0200654A RID: 25930
 	public enum EActorFaceExpressionType : byte
 	{
-		// Token: 0x0400FBAA RID: 64426
+		// Token: 0x0401091D RID: 67869
 		Play,
-		// Token: 0x0400FBAB RID: 64427
+		// Token: 0x0401091E RID: 67870
 		Stop
 	}
 }

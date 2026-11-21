@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B6A RID: 7018
+// Token: 0x02001029 RID: 4137
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchLimitRewardView : UiViewBase
 {
-	// Token: 0x0600D0A0 RID: 53408 RVA: 0x002FA6D3 File Offset: 0x002F88D3
+	// Token: 0x0600A4B1 RID: 42161 RVA: 0x003057AB File Offset: 0x003039AB
 	public FloroRanchLimitRewardView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D0A1 RID: 53409 RVA: 0x002FA6E4 File Offset: 0x002F88E4
+	// Token: 0x0600A4B2 RID: 42162 RVA: 0x003057BC File Offset: 0x003039BC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -58,7 +58,7 @@ public class FloroRanchLimitRewardView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D0A2 RID: 53410 RVA: 0x002FA894 File Offset: 0x002F8A94
+	// Token: 0x0600A4B3 RID: 42163 RVA: 0x0030596C File Offset: 0x00303B6C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchLimitRewardView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -69,19 +69,19 @@ public class FloroRanchLimitRewardView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D0A3 RID: 53411 RVA: 0x002FA8D7 File Offset: 0x002F8AD7
+	// Token: 0x0600A4B4 RID: 42164 RVA: 0x003059AF File Offset: 0x00303BAF
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshView));
 	}
 
-	// Token: 0x0600D0A4 RID: 53412 RVA: 0x002FA8F5 File Offset: 0x002F8AF5
+	// Token: 0x0600A4B5 RID: 42165 RVA: 0x003059CD File Offset: 0x00303BCD
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshView));
 	}
 
-	// Token: 0x0600D0A5 RID: 53413 RVA: 0x002FA914 File Offset: 0x002F8B14
+	// Token: 0x0600A4B6 RID: 42166 RVA: 0x003059EC File Offset: 0x00303BEC
 	private void RefreshTaskLayout()
 	{
 		List<FloroRanchTaskData> taskDataByTabType = FloroRanchModel.Instance.GetActivityData(EFloroRanchActivityDataType.Normal, true).GetTaskDataByTabType(this.CurTaskTabType);
@@ -91,7 +91,7 @@ public class FloroRanchLimitRewardView : UiViewBase
 		}, true);
 	}
 
-	// Token: 0x0600D0A6 RID: 53414 RVA: 0x002FA954 File Offset: 0x002F8B54
+	// Token: 0x0600A4B7 RID: 42167 RVA: 0x00305A2C File Offset: 0x00303C2C
 	private void RefreshProgressItem()
 	{
 		List<FloroRanchMilestoneData> floroRanchMilestoneDataList = this.ActivityData.GetFloroRanchMilestoneDataList();
@@ -99,7 +99,7 @@ public class FloroRanchLimitRewardView : UiViewBase
 		this.ProgressItem.RefreshProgressItem((float)milestoneItemCount, floroRanchMilestoneDataList);
 	}
 
-	// Token: 0x0600D0A7 RID: 53415 RVA: 0x002FA988 File Offset: 0x002F8B88
+	// Token: 0x0600A4B8 RID: 42168 RVA: 0x00305A60 File Offset: 0x00303C60
 	private void RefreshTimeText()
 	{
 		if (!this.ActivityData.IsInLimitTime())
@@ -118,7 +118,7 @@ public class FloroRanchLimitRewardView : UiViewBase
 		text.SetText(remainTimeText, true);
 	}
 
-	// Token: 0x0600D0A8 RID: 53416 RVA: 0x002FA9EA File Offset: 0x002F8BEA
+	// Token: 0x0600A4B9 RID: 42169 RVA: 0x00305AC2 File Offset: 0x00303CC2
 	private void RemoveTimeHandle()
 	{
 		if (this.TimerHandle != null)
@@ -128,13 +128,13 @@ public class FloroRanchLimitRewardView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D0A9 RID: 53417 RVA: 0x002FAA0C File Offset: 0x002F8C0C
+	// Token: 0x0600A4BA RID: 42170 RVA: 0x00305AE4 File Offset: 0x00303CE4
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveTimeHandle();
 	}
 
-	// Token: 0x0600D0AA RID: 53418 RVA: 0x002FAA14 File Offset: 0x002F8C14
+	// Token: 0x0600A4BB RID: 42171 RVA: 0x00305AEC File Offset: 0x00303CEC
 	private void OnRefreshView(int activityId)
 	{
 		if (this.ActivityData.Id == activityId)
@@ -145,7 +145,7 @@ public class FloroRanchLimitRewardView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D0AB RID: 53419 RVA: 0x002FAA3B File Offset: 0x002F8C3B
+	// Token: 0x0600A4BC RID: 42172 RVA: 0x00305B13 File Offset: 0x00303D13
 	private void OnTabClickCallBack(int gridIndex, EFloroRanchTaskTabType taskTabType)
 	{
 		this.TabLayout.SelectGridProxy(gridIndex, false);
@@ -153,14 +153,14 @@ public class FloroRanchLimitRewardView : UiViewBase
 		this.RefreshTaskLayout();
 	}
 
-	// Token: 0x0600D0AC RID: 53420 RVA: 0x002FAA58 File Offset: 0x002F8C58
+	// Token: 0x0600A4BD RID: 42173 RVA: 0x00305B30 File Offset: 0x00303D30
 	private void OnTaskClickCallBack()
 	{
 		List<int> floroRanchReceivableTaskIds = this.ActivityData.GetFloroRanchReceivableTaskIds(true, this.CurTaskTabType);
 		FloroRanchController.Instance.RequestTaskReward(floroRanchReceivableTaskIds.ToArray());
 	}
 
-	// Token: 0x0600D0AD RID: 53421 RVA: 0x002FAA88 File Offset: 0x002F8C88
+	// Token: 0x0600A4BE RID: 42174 RVA: 0x00305B60 File Offset: 0x00303D60
 	private void OnClickGetProgressReward()
 	{
 		List<int> floroRanchReceivableMilestoneIds = this.ActivityData.GetFloroRanchReceivableMilestoneIds();
@@ -170,7 +170,7 @@ public class FloroRanchLimitRewardView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D0AE RID: 53422 RVA: 0x002FAABA File Offset: 0x002F8CBA
+	// Token: 0x0600A4BF RID: 42175 RVA: 0x00305B92 File Offset: 0x00303D92
 	private FloroRanchTaskTabItem CreateTabItem()
 	{
 		return new FloroRanchTaskTabItem
@@ -179,7 +179,7 @@ public class FloroRanchLimitRewardView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600D0AF RID: 53423 RVA: 0x002FAAD3 File Offset: 0x002F8CD3
+	// Token: 0x0600A4C0 RID: 42176 RVA: 0x00305BAB File Offset: 0x00303DAB
 	private FloroRanchTaskItem CreateTaskItem()
 	{
 		return new FloroRanchTaskItem
@@ -188,69 +188,69 @@ public class FloroRanchLimitRewardView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600D0B0 RID: 53424 RVA: 0x002FAAEC File Offset: 0x002F8CEC
+	// Token: 0x0600A4C1 RID: 42177 RVA: 0x00305BC4 File Offset: 0x00303DC4
 	private void OnCardDetailBtnClick()
 	{
 		int cardItemId = this.ActivityData.GetFloroRanchParamConfig().CardItemId;
-		ItemController.Instance.OpenItemTipsByItemId(cardItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(cardItemId, true, null, false);
 	}
 
-	// Token: 0x0600D0B1 RID: 53425 RVA: 0x002FAB1A File Offset: 0x002F8D1A
+	// Token: 0x0600A4C2 RID: 42178 RVA: 0x00305BF3 File Offset: 0x00303DF3
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04005FC7 RID: 24519
+	// Token: 0x04006096 RID: 24726
 	private FloroRanchActivityData ActivityData;
 
-	// Token: 0x04005FC8 RID: 24520
+	// Token: 0x04006097 RID: 24727
 	private EFloroRanchTaskTabType CurTaskTabType = EFloroRanchTaskTabType.Dungeon;
 
-	// Token: 0x04005FC9 RID: 24521
+	// Token: 0x04006098 RID: 24728
 	private GenericLayout<FloroRanchTaskTabItem, FloroRanchTaskTab> TabLayout;
 
-	// Token: 0x04005FCA RID: 24522
+	// Token: 0x04006099 RID: 24729
 	private GenericScrollViewNew<FloroRanchTaskItem, FloroRanchTaskData> TaskLayout;
 
-	// Token: 0x04005FCB RID: 24523
+	// Token: 0x0400609A RID: 24730
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04005FCC RID: 24524
+	// Token: 0x0400609B RID: 24731
 	private FloroRanchMilestoneItem ProgressItem;
 
-	// Token: 0x020080D8 RID: 32984
+	// Token: 0x02007266 RID: 29286
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A097 RID: 172183
+		// Token: 0x040253CB RID: 152523
 		public const int ItemCaption = 0;
 
-		// Token: 0x0402A098 RID: 172184
+		// Token: 0x040253CC RID: 152524
 		public const int TextureCardImage = 1;
 
-		// Token: 0x0402A099 RID: 172185
+		// Token: 0x040253CD RID: 152525
 		public const int TextCardName = 2;
 
-		// Token: 0x0402A09A RID: 172186
+		// Token: 0x040253CE RID: 152526
 		public const int ScrollLayoutTask = 3;
 
-		// Token: 0x0402A09B RID: 172187
+		// Token: 0x040253CF RID: 152527
 		public const int ItemTask = 4;
 
-		// Token: 0x0402A09C RID: 172188
+		// Token: 0x040253D0 RID: 152528
 		public const int ButtonCardDetail = 5;
 
-		// Token: 0x0402A09D RID: 172189
+		// Token: 0x040253D1 RID: 152529
 		public const int LayoutTab = 6;
 
-		// Token: 0x0402A09E RID: 172190
+		// Token: 0x040253D2 RID: 152530
 		public const int ItemTab = 7;
 
-		// Token: 0x0402A09F RID: 172191
+		// Token: 0x040253D3 RID: 152531
 		public const int ItemProgress = 8;
 
-		// Token: 0x0402A0A0 RID: 172192
+		// Token: 0x040253D4 RID: 152532
 		public const int TextRemainTime = 9;
 	}
 }

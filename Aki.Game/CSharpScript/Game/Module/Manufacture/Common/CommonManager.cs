@@ -9,24 +9,24 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x0200568C RID: 22156
+	// Token: 0x02004662 RID: 18018
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonManager : Singleton
 	{
-		// Token: 0x060385F7 RID: 230903 RVA: 0x00D62340 File Offset: 0x00D60540
+		// Token: 0x0602D4F4 RID: 185588 RVA: 0x00CB0490 File Offset: 0x00CAE690
 		public void SetCurrentSystem(ESystemType currentSystem)
 		{
 			this.CurrentSystem = currentSystem;
 		}
 
-		// Token: 0x060385F8 RID: 230904 RVA: 0x00D62349 File Offset: 0x00D60549
+		// Token: 0x0602D4F5 RID: 185589 RVA: 0x00CB0499 File Offset: 0x00CAE699
 		public ESystemType GetCurrentSystem()
 		{
 			return this.CurrentSystem;
 		}
 
-		// Token: 0x060385F9 RID: 230905 RVA: 0x00D62354 File Offset: 0x00D60554
+		// Token: 0x0602D4F6 RID: 185590 RVA: 0x00CB04A4 File Offset: 0x00CAE6A4
 		public bool CheckIsBuff(int roleId, int itemId)
 		{
 			ESystemType currentSystem = this.CurrentSystem;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return ComposeController.Instance.CheckIsBuff(roleId, itemId);
 		}
 
-		// Token: 0x060385FA RID: 230906 RVA: 0x00D62390 File Offset: 0x00D60590
+		// Token: 0x0602D4F7 RID: 185591 RVA: 0x00CB04E0 File Offset: 0x00CAE6E0
 		public string GetInfoText(int roleId)
 		{
 			ESystemType currentSystem = this.CurrentSystem;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return ForgingController.Instance.GetForgingInfoText(roleId);
 		}
 
-		// Token: 0x060385FB RID: 230907 RVA: 0x00D623CC File Offset: 0x00D605CC
+		// Token: 0x0602D4F8 RID: 185592 RVA: 0x00CB051C File Offset: 0x00CAE71C
 		public string GetDefaultRoleText()
 		{
 			ESystemType currentSystem = this.CurrentSystem;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return "DefaultForgingHelperText";
 		}
 
-		// Token: 0x060385FC RID: 230908 RVA: 0x00D623FC File Offset: 0x00D605FC
+		// Token: 0x0602D4F9 RID: 185593 RVA: 0x00CB054C File Offset: 0x00CAE74C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -87,25 +87,25 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return ForgingController.Instance.GetForgingItemList();
 		}
 
-		// Token: 0x060385FD RID: 230909 RVA: 0x00D62431 File Offset: 0x00D60631
+		// Token: 0x0602D4FA RID: 185594 RVA: 0x00CB0581 File Offset: 0x00CAE781
 		public int GetCurrentFixId()
 		{
 			return CookController.Instance.GetCurrentFixId();
 		}
 
-		// Token: 0x060385FE RID: 230910 RVA: 0x00D6243D File Offset: 0x00D6063D
+		// Token: 0x0602D4FB RID: 185595 RVA: 0x00CB058D File Offset: 0x00CAE78D
 		public bool CheckCanFix()
 		{
 			return CookController.Instance.CheckCanFix();
 		}
 
-		// Token: 0x060385FF RID: 230911 RVA: 0x00D6244C File Offset: 0x00D6064C
+		// Token: 0x0602D4FC RID: 185596 RVA: 0x00CB059C File Offset: 0x00CAE79C
 		public void SendFixToolRequest()
 		{
 			CookController.Instance.SendFixToolRequest(CookController.Instance.GetCurrentFixId(), CookController.Instance.GetCurrentEntityId().Value);
 		}
 
-		// Token: 0x06038600 RID: 230912 RVA: 0x00D62480 File Offset: 0x00D60680
+		// Token: 0x0602D4FD RID: 185597 RVA: 0x00CB05D0 File Offset: 0x00CAE7D0
 		public int? GetSelectedLevel()
 		{
 			if (this.CurrentSystem == ESystemType.ComposeSystem)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return null;
 		}
 
-		// Token: 0x06038601 RID: 230913 RVA: 0x00D624AF File Offset: 0x00D606AF
+		// Token: 0x0602D4FE RID: 185598 RVA: 0x00CB05FF File Offset: 0x00CAE7FF
 		public void SetSelectedLevel(int level)
 		{
 			if (this.CurrentSystem == ESystemType.ComposeSystem)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x06038602 RID: 230914 RVA: 0x00D624C8 File Offset: 0x00D606C8
+		// Token: 0x0602D4FF RID: 185599 RVA: 0x00CB0618 File Offset: 0x00CAE818
 		public int? GetCurrentRewardLevel()
 		{
 			if (this.CurrentSystem == ESystemType.ComposeSystem)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return null;
 		}
 
-		// Token: 0x06038603 RID: 230915 RVA: 0x00D624FC File Offset: 0x00D606FC
+		// Token: 0x0602D500 RID: 185600 RVA: 0x00CB064C File Offset: 0x00CAE84C
 		public int? GetCurrentRewardTotalProficiency()
 		{
 			if (this.CurrentSystem == ESystemType.ComposeSystem)
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return null;
 		}
 
-		// Token: 0x06038604 RID: 230916 RVA: 0x00D62530 File Offset: 0x00D60730
+		// Token: 0x0602D501 RID: 185601 RVA: 0x00CB0680 File Offset: 0x00CAE880
 		public int? GetCurrentRewardAddExp()
 		{
 			if (this.CurrentSystem == ESystemType.ComposeSystem)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return null;
 		}
 
-		// Token: 0x06038605 RID: 230917 RVA: 0x00D62564 File Offset: 0x00D60764
+		// Token: 0x0602D502 RID: 185602 RVA: 0x00CB06B4 File Offset: 0x00CAE8B4
 		public SynthesisLevel? GetComposeLevelByLevel(int level)
 		{
 			if (this.CurrentSystem == ESystemType.ComposeSystem)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return null;
 		}
 
-		// Token: 0x06038606 RID: 230918 RVA: 0x00D62590 File Offset: 0x00D60790
+		// Token: 0x0602D503 RID: 185603 RVA: 0x00CB06E0 File Offset: 0x00CAE8E0
 		[NullableContext(2)]
 		public string GetLevelUpgradeTypeTexture(int level)
 		{
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return null;
 		}
 
-		// Token: 0x06038607 RID: 230919 RVA: 0x00D625D0 File Offset: 0x00D607D0
+		// Token: 0x0602D504 RID: 185604 RVA: 0x00CB0720 File Offset: 0x00CAE920
 		public int? GetSumExpByLevel(int level)
 		{
 			if (this.CurrentSystem == ESystemType.ComposeSystem)
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return null;
 		}
 
-		// Token: 0x06038608 RID: 230920 RVA: 0x00D62600 File Offset: 0x00D60800
+		// Token: 0x0602D505 RID: 185605 RVA: 0x00CB0750 File Offset: 0x00CAE950
 		public int? GetDropIdByLevel(int level)
 		{
 			if (this.CurrentSystem == ESystemType.ComposeSystem)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return null;
 		}
 
-		// Token: 0x06038609 RID: 230921 RVA: 0x00D62630 File Offset: 0x00D60830
+		// Token: 0x0602D506 RID: 185606 RVA: 0x00CB0780 File Offset: 0x00CAE980
 		public int? GetComposeMaxLevel()
 		{
 			if (this.CurrentSystem == ESystemType.ComposeSystem)
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return null;
 		}
 
-		// Token: 0x0603860A RID: 230922 RVA: 0x00D6265F File Offset: 0x00D6085F
+		// Token: 0x0602D507 RID: 185607 RVA: 0x00CB07AF File Offset: 0x00CAE9AF
 		public void SendLevelRewardRequest()
 		{
 			if (this.CurrentSystem == ESystemType.ComposeSystem)
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x0603860B RID: 230923 RVA: 0x00D62674 File Offset: 0x00D60874
+		// Token: 0x0602D508 RID: 185608 RVA: 0x00CB07C4 File Offset: 0x00CAE9C4
 		public bool CheckIsBuffEx(int roleId, int itemId)
 		{
 			ESystemType currentSystem = this.CurrentSystem;
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return ComposeController.Instance.CheckIsBuffEx(roleId, itemId);
 		}
 
-		// Token: 0x0603860C RID: 230924 RVA: 0x00D626B0 File Offset: 0x00D608B0
+		// Token: 0x0602D509 RID: 185609 RVA: 0x00CB0800 File Offset: 0x00CAEA00
 		[NullableContext(2)]
 		public string GetCommonManufactureText(int itemId)
 		{
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return ForgingController.Instance.GetForgingText(itemId);
 		}
 
-		// Token: 0x0603860D RID: 230925 RVA: 0x00D626E8 File Offset: 0x00D608E8
+		// Token: 0x0602D50A RID: 185610 RVA: 0x00CB0838 File Offset: 0x00CAEA38
 		public int? GetCommonManufactureId(int id)
 		{
 			ESystemType currentSystem = this.CurrentSystem;
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return new int?(ForgingController.Instance.GetForgingId(id));
 		}
 
-		// Token: 0x0603860E RID: 230926 RVA: 0x00D62734 File Offset: 0x00D60934
+		// Token: 0x0602D50B RID: 185611 RVA: 0x00CB0884 File Offset: 0x00CAEA84
 		public bool? CheckShowRoleView()
 		{
 			ESystemType currentSystem = this.CurrentSystem;
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return new bool?(ForgingController.Instance.CheckShowRoleView());
 		}
 
-		// Token: 0x0603860F RID: 230927 RVA: 0x00D6277B File Offset: 0x00D6097B
+		// Token: 0x0602D50C RID: 185612 RVA: 0x00CB08CB File Offset: 0x00CAEACB
 		public int GetMaxCreateCount(int itemId)
 		{
 			if (this.CurrentSystem == ESystemType.ComposeSystem)
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return ForgingController.Instance.GetMaxCreateCount(itemId);
 		}
 
-		// Token: 0x06038610 RID: 230928 RVA: 0x00D627A0 File Offset: 0x00D609A0
+		// Token: 0x0602D50D RID: 185613 RVA: 0x00CB08F0 File Offset: 0x00CAEAF0
 		public bool? CheckCanManufacture(int itemId)
 		{
 			if (this.CurrentSystem == ESystemType.ForgingSystem)
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return null;
 		}
 
-		// Token: 0x06038611 RID: 230929 RVA: 0x00D627D0 File Offset: 0x00D609D0
+		// Token: 0x0602D50E RID: 185614 RVA: 0x00CB0920 File Offset: 0x00CAEB20
 		public void SendManufacture(int itemId, int count)
 		{
 			ESystemType currentSystem = this.CurrentSystem;
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			ForgingController.Instance.SendManufacture(itemId, count);
 		}
 
-		// Token: 0x06038612 RID: 230930 RVA: 0x00D6280C File Offset: 0x00D60A0C
+		// Token: 0x0602D50F RID: 185615 RVA: 0x00CB095C File Offset: 0x00CAEB5C
 		public int? GetCurrentRoleId()
 		{
 			ESystemType currentSystem = this.CurrentSystem;
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return new int?(ForgingController.Instance.GetCurrentRoleId());
 		}
 
-		// Token: 0x06038613 RID: 230931 RVA: 0x00D62854 File Offset: 0x00D60A54
+		// Token: 0x0602D510 RID: 185616 RVA: 0x00CB09A4 File Offset: 0x00CAEBA4
 		public void SetCurrentRoleId(int roleId)
 		{
 			ESystemType currentSystem = this.CurrentSystem;
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			ForgingController.Instance.SetCurrentRoleId(roleId);
 		}
 
-		// Token: 0x06038614 RID: 230932 RVA: 0x00D62888 File Offset: 0x00D60A88
+		// Token: 0x0602D511 RID: 185617 RVA: 0x00CB09D8 File Offset: 0x00CAEBD8
 		public int? GetManufactureRoleId(int itemId)
 		{
 			ESystemType currentSystem = this.CurrentSystem;
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return new int?(ForgingController.Instance.GetForgingRoleId(itemId));
 		}
 
-		// Token: 0x06038615 RID: 230933 RVA: 0x00D628D4 File Offset: 0x00D60AD4
+		// Token: 0x0602D512 RID: 185618 RVA: 0x00CB0A24 File Offset: 0x00CAEC24
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -376,7 +376,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return ForgingController.Instance.GetForgingMaterialList(itemId);
 		}
 
-		// Token: 0x06038616 RID: 230934 RVA: 0x00D6290C File Offset: 0x00D60B0C
+		// Token: 0x0602D513 RID: 185619 RVA: 0x00CB0A5C File Offset: 0x00CAEC5C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return ForgingController.Instance.GetHelpRoleItemDataList(itemId);
 		}
 
-		// Token: 0x06038617 RID: 230935 RVA: 0x00D62944 File Offset: 0x00D60B44
+		// Token: 0x0602D514 RID: 185620 RVA: 0x00CB0A94 File Offset: 0x00CAEC94
 		public bool? CheckCanShowExpItem()
 		{
 			if (this.CurrentSystem == ESystemType.ComposeSystem)
@@ -406,7 +406,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return null;
 		}
 
-		// Token: 0x06038618 RID: 230936 RVA: 0x00D62974 File Offset: 0x00D60B74
+		// Token: 0x0602D515 RID: 185621 RVA: 0x00CB0AC4 File Offset: 0x00CAECC4
 		public bool? CheckShowAmountItem()
 		{
 			ESystemType currentSystem = this.CurrentSystem;
@@ -421,8 +421,8 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return new bool?(false);
 		}
 
-		// Token: 0x1700877D RID: 34685
-		// (get) Token: 0x06038619 RID: 230937 RVA: 0x00D629A9 File Offset: 0x00D60BA9
+		// Token: 0x17005B44 RID: 23364
+		// (get) Token: 0x0602D516 RID: 185622 RVA: 0x00CB0AF9 File Offset: 0x00CAECF9
 		public static CommonManager Instance
 		{
 			get
@@ -436,12 +436,12 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x0603861A RID: 230938 RVA: 0x00D629CC File Offset: 0x00D60BCC
+		// Token: 0x0602D517 RID: 185623 RVA: 0x00CB0B1C File Offset: 0x00CAED1C
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603861B RID: 230939 RVA: 0x00D629CE File Offset: 0x00D60BCE
+		// Token: 0x0602D518 RID: 185624 RVA: 0x00CB0B1E File Offset: 0x00CAED1E
 		public static void ResetStaticDefaultValue()
 		{
 			CommonManager instance = CommonManager._instance;
@@ -452,16 +452,16 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			CommonManager._instance = null;
 		}
 
-		// Token: 0x0603861C RID: 230940 RVA: 0x00D629E7 File Offset: 0x00D60BE7
+		// Token: 0x0602D519 RID: 185625 RVA: 0x00CB0B37 File Offset: 0x00CAED37
 		static CommonManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CommonManager.CreateStaticDefaultValue), new Action(CommonManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401D9FE RID: 121342
+		// Token: 0x04018489 RID: 99465
 		private ESystemType CurrentSystem;
 
-		// Token: 0x0401D9FF RID: 121343
+		// Token: 0x0401848A RID: 99466
 		[Nullable(2)]
 		private static CommonManager _instance;
 	}

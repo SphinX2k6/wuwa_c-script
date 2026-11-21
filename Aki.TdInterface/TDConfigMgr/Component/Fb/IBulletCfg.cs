@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B3F RID: 2879
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C0D RID: 3085
 	public class IBulletCfg
 	{
-		// Token: 0x06004267 RID: 16999 RVA: 0x000A9E16 File Offset: 0x000A8016
+		// Token: 0x060046C0 RID: 18112 RVA: 0x000B3EDA File Offset: 0x000B20DA
 		public static IBulletCfg Create(IBulletCfg? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011A6 RID: 4518
-		// (get) Token: 0x06004268 RID: 17000 RVA: 0x000A9E35 File Offset: 0x000A8035
+		// Token: 0x170012A1 RID: 4769
+		// (get) Token: 0x060046C1 RID: 18113 RVA: 0x000B3EF9 File Offset: 0x000B20F9
 		public virtual List<IBulletCreateCondition> CreateConditions
 		{
 			get
@@ -39,13 +36,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400256A RID: 9578
+		// Token: 0x040027B2 RID: 10162
 		private IBulletCfg Instance;
 
-		// Token: 0x0400256B RID: 9579
+		// Token: 0x040027B3 RID: 10163
 		private List<IBulletCreateCondition> _CreateConditionsCache;
 
-		// Token: 0x0400256C RID: 9580
+		// Token: 0x040027B4 RID: 10164
 		private bool _CreateConditionsInited;
 	}
 }

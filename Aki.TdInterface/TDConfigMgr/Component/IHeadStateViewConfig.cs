@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000408 RID: 1032
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000461 RID: 1121
 	public class IHeadStateViewConfig
 	{
-		// Token: 0x060014D5 RID: 5333 RVA: 0x00042150 File Offset: 0x00040350
-		[NullableContext(1)]
+		// Token: 0x0600166F RID: 5743 RVA: 0x00045E98 File Offset: 0x00044098
 		private IHeadStateViewConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060014D6 RID: 5334 RVA: 0x00042188 File Offset: 0x00040388
-		[NullableContext(1)]
+		// Token: 0x06001670 RID: 5744 RVA: 0x00045ED0 File Offset: 0x000440D0
 		public static IHeadStateViewConfig Create([Nullable(2)] IHeadStateViewConfig instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014D7 RID: 5335 RVA: 0x0004219B File Offset: 0x0004039B
-		[NullableContext(1)]
+		// Token: 0x06001671 RID: 5745 RVA: 0x00045EE3 File Offset: 0x000440E3
 		public static IHeadStateViewConfig CreateFromSetValue([Nullable(2)] IHeadStateViewConfig_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014D8 RID: 5336 RVA: 0x000421AE File Offset: 0x000403AE
-		[NullableContext(1)]
+		// Token: 0x06001672 RID: 5746 RVA: 0x00045EF6 File Offset: 0x000440F6
 		public IHeadStateViewConfig_SetValue ToSetValue()
 		{
 			return new IHeadStateViewConfig_SetValue
@@ -67,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005BC RID: 1468
-		// (get) Token: 0x060014D9 RID: 5337 RVA: 0x000421E5 File Offset: 0x000403E5
-		// (set) Token: 0x060014DA RID: 5338 RVA: 0x00042210 File Offset: 0x00040410
+		// Token: 0x17000623 RID: 1571
+		// (get) Token: 0x06001673 RID: 5747 RVA: 0x00045F2D File Offset: 0x0004412D
+		// (set) Token: 0x06001674 RID: 5748 RVA: 0x00045F58 File Offset: 0x00044158
 		public virtual EHeadStateViewType HeadStateViewType
 		{
 			get
@@ -90,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005BD RID: 1469
-		// (get) Token: 0x060014DB RID: 5339 RVA: 0x0004221E File Offset: 0x0004041E
-		// (set) Token: 0x060014DC RID: 5340 RVA: 0x00042249 File Offset: 0x00040449
+		// Token: 0x17000624 RID: 1572
+		// (get) Token: 0x06001675 RID: 5749 RVA: 0x00045F66 File Offset: 0x00044166
+		// (set) Token: 0x06001676 RID: 5750 RVA: 0x00045F91 File Offset: 0x00044191
 		public virtual int ZOffset
 		{
 			get
@@ -113,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005BE RID: 1470
-		// (get) Token: 0x060014DD RID: 5341 RVA: 0x00042257 File Offset: 0x00040457
-		// (set) Token: 0x060014DE RID: 5342 RVA: 0x00042282 File Offset: 0x00040482
+		// Token: 0x17000625 RID: 1573
+		// (get) Token: 0x06001677 RID: 5751 RVA: 0x00045F9F File Offset: 0x0004419F
+		// (set) Token: 0x06001678 RID: 5752 RVA: 0x00045FCA File Offset: 0x000441CA
 		public virtual int ForwardOffset
 		{
 			get
@@ -136,11 +130,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005BF RID: 1471
-		// (get) Token: 0x060014DF RID: 5343 RVA: 0x00042290 File Offset: 0x00040490
-		// (set) Token: 0x060014E0 RID: 5344 RVA: 0x000422B7 File Offset: 0x000404B7
+		// Token: 0x17000626 RID: 1574
+		// (get) Token: 0x06001679 RID: 5753 RVA: 0x00045FD8 File Offset: 0x000441D8
+		// (set) Token: 0x0600167A RID: 5754 RVA: 0x00045FFF File Offset: 0x000441FF
+		[Nullable(2)]
 		public virtual string HeadStateSocketName
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -154,16 +150,19 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.HeadStateSocketName;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().HeadStateSocketName = value;
 			}
 		}
 
-		// Token: 0x04001049 RID: 4169
+		// Token: 0x0400116B RID: 4459
+		[Nullable(2)]
 		protected IHeadStateViewConfig FbInstance;
 
-		// Token: 0x0400104A RID: 4170
+		// Token: 0x0400116C RID: 4460
+		[Nullable(2)]
 		protected IHeadStateViewConfig_SetValue PocoInterface;
 	}
 }

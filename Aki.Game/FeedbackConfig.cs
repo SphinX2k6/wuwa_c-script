@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001AD8 RID: 6872
+// Token: 0x02000F97 RID: 3991
 [NullableContext(2)]
 [Nullable(0)]
 public class FeedbackConfig
 {
-	// Token: 0x0600CBED RID: 52205 RVA: 0x002E8BCC File Offset: 0x002E6DCC
+	// Token: 0x06009FFE RID: 40958 RVA: 0x002F3D60 File Offset: 0x002F1F60
 	public static string GetFeedbackTitle()
 	{
 		return ConfigCommonParamLang.GetLocalText(ConfigCommonParamById.GetIntConfig("FeedbackTitle").GetValueOrDefault(), null);
 	}
 
-	// Token: 0x0600CBEE RID: 52206 RVA: 0x002E8BF1 File Offset: 0x002E6DF1
+	// Token: 0x06009FFF RID: 40959 RVA: 0x002F3D85 File Offset: 0x002F1F85
 	public static string GetFeedbackPreUrl()
 	{
 		return ConfigCommonParamById.GetStringConfig("FeedbackUrl");

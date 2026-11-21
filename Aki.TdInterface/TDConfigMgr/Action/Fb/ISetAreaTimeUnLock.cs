@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024F9 RID: 9465
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200279F RID: 10143
 	public class ISetAreaTimeUnLock : ISetAreaTimeBase
 	{
-		// Token: 0x0600D350 RID: 54096 RVA: 0x001F5508 File Offset: 0x001F3708
+		// Token: 0x0600E0AC RID: 57516 RVA: 0x00210F00 File Offset: 0x0020F100
 		public static ISetAreaTimeUnLock Create(ISetAreaTimeUnLock? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B20 RID: 15136
-		// (get) Token: 0x0600D351 RID: 54097 RVA: 0x001F5527 File Offset: 0x001F3727
+		// Token: 0x17003E1C RID: 15900
+		// (get) Token: 0x0600E0AD RID: 57517 RVA: 0x00210F1F File Offset: 0x0020F11F
 		public override ESetAreaTime Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B21 RID: 15137
-		// (get) Token: 0x0600D352 RID: 54098 RVA: 0x001F5534 File Offset: 0x001F3734
+		// Token: 0x17003E1D RID: 15901
+		// (get) Token: 0x0600E0AE RID: 57518 RVA: 0x00210F2C File Offset: 0x0020F12C
 		public virtual List<int> AreaIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073DB RID: 29659
+		// Token: 0x04007A2D RID: 31277
 		private ISetAreaTimeUnLock Instance;
 
-		// Token: 0x040073DC RID: 29660
+		// Token: 0x04007A2E RID: 31278
 		private List<int> _AreaIdsCache;
 
-		// Token: 0x040073DD RID: 29661
+		// Token: 0x04007A2F RID: 31279
 		private bool _AreaIdsInited;
 	}
 }

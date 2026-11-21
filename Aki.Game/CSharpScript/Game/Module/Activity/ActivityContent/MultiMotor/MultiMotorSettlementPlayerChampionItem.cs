@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x020063A0 RID: 25504
+	// Token: 0x0200531E RID: 21278
 	public class MultiMotorSettlementPlayerChampionItem : MultiMotorSettlementPlayerItem
 	{
-		// Token: 0x06040250 RID: 262736 RVA: 0x00F87988 File Offset: 0x00F85B88
+		// Token: 0x06034F11 RID: 216849 RVA: 0x00ECE8C0 File Offset: 0x00ECCAC0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040251 RID: 262737 RVA: 0x00F87B3C File Offset: 0x00F85D3C
+		// Token: 0x06034F12 RID: 216850 RVA: 0x00ECEA74 File Offset: 0x00ECCC74
 		protected override void RefreshTime(int time, bool isFinish)
 		{
 			if (time <= 0 || !isFinish)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			base.GetText(3).SetText(remainTimeDataFormat, true);
 		}
 
-		// Token: 0x06040252 RID: 262738 RVA: 0x00F87B94 File Offset: 0x00F85D94
+		// Token: 0x06034F13 RID: 216851 RVA: 0x00ECEACC File Offset: 0x00ECCCCC
 		protected override void RefreshRoleTexture(int skinId)
 		{
 			MotorOnlineRoleSkin? motorOnlineRoleSkinBySkinId = MultiMotorConfig.Instance.GetMotorOnlineRoleSkinBySkinId(skinId);
@@ -71,50 +71,50 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			base.SetTextureByPath(motorOnlineRoleSkinBySkinId.Value.RoleStand, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x06040253 RID: 262739 RVA: 0x00F87BDD File Offset: 0x00F85DDD
+		// Token: 0x06034F14 RID: 216852 RVA: 0x00ECEB15 File Offset: 0x00ECCD15
 		[NullableContext(1)]
 		protected override void RefreshChampionInfo(OnlineMotorSettleInfo data)
 		{
 			this.RefreshChampionCount(data.ChampionExtra.FirstCount);
 		}
 
-		// Token: 0x06040254 RID: 262740 RVA: 0x00F87BF0 File Offset: 0x00F85DF0
+		// Token: 0x06034F15 RID: 216853 RVA: 0x00ECEB28 File Offset: 0x00ECCD28
 		private void RefreshChampionCount(int count)
 		{
 			base.GetText(9).SetText(count.ToString(), true);
 		}
 
-		// Token: 0x0200C5BD RID: 50621
+		// Token: 0x0200AFA4 RID: 44964
 		private class EChampionComponents
 		{
-			// Token: 0x0403BB3D RID: 244541
+			// Token: 0x0403649C RID: 222364
 			public const int RoleTexture = 0;
 
-			// Token: 0x0403BB3E RID: 244542
+			// Token: 0x0403649D RID: 222365
 			public const int TagText = 1;
 
-			// Token: 0x0403BB3F RID: 244543
+			// Token: 0x0403649E RID: 222366
 			public const int Tag2Text = 2;
 
-			// Token: 0x0403BB40 RID: 244544
+			// Token: 0x0403649F RID: 222367
 			public const int TimeText = 3;
 
-			// Token: 0x0403BB41 RID: 244545
+			// Token: 0x040364A0 RID: 222368
 			public const int OnlineNumberSprite = 4;
 
-			// Token: 0x0403BB42 RID: 244546
+			// Token: 0x040364A1 RID: 222369
 			public const int PlayerNameText = 5;
 
-			// Token: 0x0403BB43 RID: 244547
+			// Token: 0x040364A2 RID: 222370
 			public const int AddFriendBtn = 6;
 
-			// Token: 0x0403BB44 RID: 244548
+			// Token: 0x040364A3 RID: 222371
 			public const int HaveApplyItem = 7;
 
-			// Token: 0x0403BB45 RID: 244549
+			// Token: 0x040364A4 RID: 222372
 			public const int TagTextItem = 8;
 
-			// Token: 0x0403BB46 RID: 244550
+			// Token: 0x040364A5 RID: 222373
 			public const int ChampionCountText = 9;
 		}
 	}

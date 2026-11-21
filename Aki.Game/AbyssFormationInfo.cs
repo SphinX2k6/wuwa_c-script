@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001A14 RID: 6676
+// Token: 0x02000ED3 RID: 3795
 [NullableContext(1)]
 [Nullable(0)]
 public class AbyssFormationInfo
 {
-	// Token: 0x0600C3F6 RID: 50166 RVA: 0x002C5DE8 File Offset: 0x002C3FE8
+	// Token: 0x06009806 RID: 38918 RVA: 0x002D0E40 File Offset: 0x002CF040
 	public void Phrase(AbyssRoleSelectUpdateNotify data)
 	{
 		this.RoleInfoList = Array.Empty<AbyssFormationRoleSelectInfo>();
@@ -23,6 +23,6 @@ public class AbyssFormationInfo
 		this.RoleInfoList = list.ToArray();
 	}
 
-	// Token: 0x04005A62 RID: 23138
+	// Token: 0x04005B31 RID: 23345
 	private AbyssFormationRoleSelectInfo[] RoleInfoList = Array.Empty<AbyssFormationRoleSelectInfo>();
 }

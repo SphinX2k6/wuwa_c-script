@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005488 RID: 21640
+	// Token: 0x02005A0E RID: 23054
 	public struct IIntervalSplineSpawnAudioConfigBase : IFlatbufferObject
 	{
-		// Token: 0x17009F5B RID: 40795
-		// (get) Token: 0x060239CD RID: 145869 RVA: 0x004ECA4F File Offset: 0x004EAC4F
+		// Token: 0x1700A795 RID: 42901
+		// (get) Token: 0x06025A85 RID: 154245 RVA: 0x00529AC3 File Offset: 0x00527CC3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060239CE RID: 145870 RVA: 0x004ECA5C File Offset: 0x004EAC5C
+		// Token: 0x06025A86 RID: 154246 RVA: 0x00529AD0 File Offset: 0x00527CD0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060239CF RID: 145871 RVA: 0x004ECA64 File Offset: 0x004EAC64
+		// Token: 0x06025A87 RID: 154247 RVA: 0x00529AD8 File Offset: 0x00527CD8
 		public static IIntervalSplineSpawnAudioConfigBase GetRootAsIIntervalSplineSpawnAudioConfigBase(ByteBuffer _bb)
 		{
 			return IIntervalSplineSpawnAudioConfigBase.GetRootAsIIntervalSplineSpawnAudioConfigBase(_bb, default(IIntervalSplineSpawnAudioConfigBase));
 		}
 
-		// Token: 0x060239D0 RID: 145872 RVA: 0x004ECA80 File Offset: 0x004EAC80
+		// Token: 0x06025A88 RID: 154248 RVA: 0x00529AF4 File Offset: 0x00527CF4
 		public static IIntervalSplineSpawnAudioConfigBase GetRootAsIIntervalSplineSpawnAudioConfigBase(ByteBuffer _bb, IIntervalSplineSpawnAudioConfigBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060239D1 RID: 145873 RVA: 0x004ECA9D File Offset: 0x004EAC9D
+		// Token: 0x06025A89 RID: 154249 RVA: 0x00529B11 File Offset: 0x00527D11
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060239D2 RID: 145874 RVA: 0x004ECAAC File Offset: 0x004EACAC
+		// Token: 0x06025A8A RID: 154250 RVA: 0x00529B20 File Offset: 0x00527D20
 		public IIntervalSplineSpawnAudioConfigBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009F5C RID: 40796
-		// (get) Token: 0x060239D3 RID: 145875 RVA: 0x004ECABC File Offset: 0x004EACBC
+		// Token: 0x1700A796 RID: 42902
+		// (get) Token: 0x06025A8B RID: 154251 RVA: 0x00529B30 File Offset: 0x00527D30
 		public EIntervalSplineSpawnAudioConfigType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060239D4 RID: 145876 RVA: 0x004ECAF8 File Offset: 0x004EACF8
+		// Token: 0x06025A8C RID: 154252 RVA: 0x00529B6C File Offset: 0x00527D6C
 		public static Offset<IIntervalSplineSpawnAudioConfigBase> CreateIIntervalSplineSpawnAudioConfigBase(FlatBufferBuilder builder, EIntervalSplineSpawnAudioConfigType Type = EIntervalSplineSpawnAudioConfigType.AllActorAddAudio)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IIntervalSplineSpawnAudioConfigBase.EndIIntervalSplineSpawnAudioConfigBase(builder);
 		}
 
-		// Token: 0x060239D5 RID: 145877 RVA: 0x004ECB0E File Offset: 0x004EAD0E
+		// Token: 0x06025A8D RID: 154253 RVA: 0x00529B82 File Offset: 0x00527D82
 		public static void StartIIntervalSplineSpawnAudioConfigBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060239D6 RID: 145878 RVA: 0x004ECB17 File Offset: 0x004EAD17
+		// Token: 0x06025A8E RID: 154254 RVA: 0x00529B8B File Offset: 0x00527D8B
 		public static void AddType(FlatBufferBuilder builder, EIntervalSplineSpawnAudioConfigType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060239D7 RID: 145879 RVA: 0x004ECB22 File Offset: 0x004EAD22
+		// Token: 0x06025A8F RID: 154255 RVA: 0x00529B96 File Offset: 0x00527D96
 		public static Offset<IIntervalSplineSpawnAudioConfigBase> EndIIntervalSplineSpawnAudioConfigBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IIntervalSplineSpawnAudioConfigBase>(builder.EndTable());
 		}
 
-		// Token: 0x060239D8 RID: 145880 RVA: 0x004ECB30 File Offset: 0x004EAD30
+		// Token: 0x06025A90 RID: 154256 RVA: 0x00529BA4 File Offset: 0x00527DA4
 		public IIntervalSplineSpawnAudioConfigBaseT UnPack()
 		{
 			IIntervalSplineSpawnAudioConfigBaseT intervalSplineSpawnAudioConfigBaseT = new IIntervalSplineSpawnAudioConfigBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return intervalSplineSpawnAudioConfigBaseT;
 		}
 
-		// Token: 0x060239D9 RID: 145881 RVA: 0x004ECB4B File Offset: 0x004EAD4B
+		// Token: 0x06025A91 RID: 154257 RVA: 0x00529BBF File Offset: 0x00527DBF
 		public void UnPackTo(IIntervalSplineSpawnAudioConfigBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060239DA RID: 145882 RVA: 0x004ECB5C File Offset: 0x004EAD5C
+		// Token: 0x06025A92 RID: 154258 RVA: 0x00529BD0 File Offset: 0x00527DD0
 		public static Offset<IIntervalSplineSpawnAudioConfigBase> Pack(FlatBufferBuilder builder, IIntervalSplineSpawnAudioConfigBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IIntervalSplineSpawnAudioConfigBase.CreateIIntervalSplineSpawnAudioConfigBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400E717 RID: 59159
+		// Token: 0x0400F348 RID: 62280
 		private Table __p;
 	}
 }

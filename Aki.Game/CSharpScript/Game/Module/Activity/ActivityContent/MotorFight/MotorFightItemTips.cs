@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006427 RID: 25639
+	// Token: 0x020053A5 RID: 21413
 	public class MotorFightItemTips : UiViewBase
 	{
-		// Token: 0x06040779 RID: 264057 RVA: 0x00F99B00 File Offset: 0x00F97D00
+		// Token: 0x0603543A RID: 218170 RVA: 0x00EE0AA0 File Offset: 0x00EDECA0
 		[NullableContext(1)]
 		public MotorFightItemTips(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0604077A RID: 264058 RVA: 0x00F99B0C File Offset: 0x00F97D0C
+		// Token: 0x0603543B RID: 218171 RVA: 0x00EE0AAC File Offset: 0x00EDECAC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604077B RID: 264059 RVA: 0x00F99BB4 File Offset: 0x00F97DB4
+		// Token: 0x0603543C RID: 218172 RVA: 0x00EE0B54 File Offset: 0x00EDED54
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorFightItemTips.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -50,27 +50,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604077C RID: 264060 RVA: 0x00F99BF7 File Offset: 0x00F97DF7
+		// Token: 0x0603543D RID: 218173 RVA: 0x00EE0B97 File Offset: 0x00EDED97
 		private void OnClickBtnClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0402183F RID: 137279
+		// Token: 0x0401C16E RID: 115054
 		[Nullable(2)]
 		protected MotorFightItemDetailPanel CollectionItem;
 
-		// Token: 0x04021840 RID: 137280
+		// Token: 0x0401C16F RID: 115055
 		[Nullable(2)]
 		protected MotorFightItemData Data;
 
-		// Token: 0x0200C65C RID: 50780
+		// Token: 0x0200B043 RID: 45123
 		private class EComponentDefine
 		{
-			// Token: 0x0403BE1B RID: 245275
+			// Token: 0x04036778 RID: 223096
 			public const int ButtonClose = 0;
 
-			// Token: 0x0403BE1C RID: 245276
+			// Token: 0x04036779 RID: 223097
 			public const int ItemTopCollection = 1;
 		}
 	}

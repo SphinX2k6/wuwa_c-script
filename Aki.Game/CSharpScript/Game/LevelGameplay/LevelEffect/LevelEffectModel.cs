@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEffect
 {
-	// Token: 0x02006C37 RID: 27703
+	// Token: 0x02005DB0 RID: 23984
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class LevelEffectModel : ModelBase
 	{
-		// Token: 0x060444C2 RID: 279746 RVA: 0x010D3826 File Offset: 0x010D1A26
+		// Token: 0x0603A61A RID: 239130 RVA: 0x0107D6D9 File Offset: 0x0107B8D9
 		public void AcquireMpcParam(string key, int effectId)
 		{
 			this.MpcParamOwners[key] = effectId;
 		}
 
-		// Token: 0x060444C3 RID: 279747 RVA: 0x010D3838 File Offset: 0x010D1A38
+		// Token: 0x0603A61B RID: 239131 RVA: 0x0107D6E8 File Offset: 0x0107B8E8
 		public bool ReleaseMpcParamIfOwner(string key, int effectId)
 		{
 			int num;
@@ -28,22 +28,22 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEffect
 			return true;
 		}
 
-		// Token: 0x060444C4 RID: 279748 RVA: 0x010D3869 File Offset: 0x010D1A69
+		// Token: 0x0603A61C RID: 239132 RVA: 0x0107D719 File Offset: 0x0107B919
 		protected override bool OnLeaveLevel()
 		{
 			this.MpcParamOwners.Clear();
 			return true;
 		}
 
-		// Token: 0x060444C5 RID: 279749 RVA: 0x010D3877 File Offset: 0x010D1A77
+		// Token: 0x0603A61D RID: 239133 RVA: 0x0107D727 File Offset: 0x0107B927
 		protected override bool OnClear()
 		{
 			this.MpcParamOwners.Clear();
 			return true;
 		}
 
-		// Token: 0x170099A7 RID: 39335
-		// (get) Token: 0x060444C6 RID: 279750 RVA: 0x010D3885 File Offset: 0x010D1A85
+		// Token: 0x17006EAA RID: 28330
+		// (get) Token: 0x0603A61E RID: 239134 RVA: 0x0107D735 File Offset: 0x0107B935
 		public static LevelEffectModel Instance
 		{
 			get
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEffect
 			}
 		}
 
-		// Token: 0x060444C7 RID: 279751 RVA: 0x010D388C File Offset: 0x010D1A8C
+		// Token: 0x0603A61F RID: 239135 RVA: 0x0107D73C File Offset: 0x0107B93C
 		public static LevelEffectModel GetOrCreateInstance()
 		{
 			if (LevelEffectModel._Instance == null)
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEffect
 			return LevelEffectModel._Instance;
 		}
 
-		// Token: 0x060444C8 RID: 279752 RVA: 0x010D38A0 File Offset: 0x010D1AA0
+		// Token: 0x0603A620 RID: 239136 RVA: 0x0107D750 File Offset: 0x0107B950
 		public static bool CreateInstance()
 		{
 			if (LevelEffectModel._Instance != null)
@@ -73,27 +73,27 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEffect
 			return true;
 		}
 
-		// Token: 0x060444C9 RID: 279753 RVA: 0x010D38B6 File Offset: 0x010D1AB6
+		// Token: 0x0603A621 RID: 239137 RVA: 0x0107D766 File Offset: 0x0107B966
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060444CA RID: 279754 RVA: 0x010D38B8 File Offset: 0x010D1AB8
+		// Token: 0x0603A622 RID: 239138 RVA: 0x0107D768 File Offset: 0x0107B968
 		public static void ResetStaticDefaultValue()
 		{
 			LevelEffectModel._Instance = null;
 		}
 
-		// Token: 0x060444CB RID: 279755 RVA: 0x010D38C0 File Offset: 0x010D1AC0
+		// Token: 0x0603A623 RID: 239139 RVA: 0x0107D770 File Offset: 0x0107B970
 		static LevelEffectModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelEffectModel.CreateStaticDefaultValue), new Action(LevelEffectModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402398D RID: 145805
+		// Token: 0x0401EC2F RID: 125999
 		private readonly Dictionary<string, int> MpcParamOwners = new Dictionary<string, int>();
 
-		// Token: 0x0402398E RID: 145806
+		// Token: 0x0401EC30 RID: 126000
 		[Nullable(2)]
 		private static LevelEffectModel _Instance;
 	}

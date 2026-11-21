@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001218 RID: 4632
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001354 RID: 4948
 	public class IWordArtResourceType
 	{
-		// Token: 0x0600690E RID: 26894 RVA: 0x000FA798 File Offset: 0x000F8998
+		// Token: 0x06006F4F RID: 28495 RVA: 0x001080A4 File Offset: 0x001062A4
 		private IWordArtResourceType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600690F RID: 26895 RVA: 0x000FA7D0 File Offset: 0x000F89D0
+		// Token: 0x06006F50 RID: 28496 RVA: 0x001080DC File Offset: 0x001062DC
 		public static IWordArtResourceType Create([Nullable(2)] IWordArtResourceType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006910 RID: 26896 RVA: 0x000FA7E3 File Offset: 0x000F89E3
+		// Token: 0x06006F51 RID: 28497 RVA: 0x001080EF File Offset: 0x001062EF
 		public static IWordArtResourceType CreateFromSetValue([Nullable(2)] IWordArtResourceType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006911 RID: 26897 RVA: 0x000FA7F6 File Offset: 0x000F89F6
+		// Token: 0x06006F52 RID: 28498 RVA: 0x00108102 File Offset: 0x00106302
 		public IWordArtResourceType_SetValue ToSetValue()
 		{
 			return new IWordArtResourceType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021E8 RID: 8680
-		// (get) Token: 0x06006912 RID: 26898 RVA: 0x000FA809 File Offset: 0x000F8A09
-		// (set) Token: 0x06006913 RID: 26899 RVA: 0x000FA834 File Offset: 0x000F8A34
+		// Token: 0x170023A9 RID: 9129
+		// (get) Token: 0x06006F53 RID: 28499 RVA: 0x00108115 File Offset: 0x00106315
+		// (set) Token: 0x06006F54 RID: 28500 RVA: 0x00108140 File Offset: 0x00106340
 		public virtual EWordArtResourceType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003ED3 RID: 16083
+		// Token: 0x04004241 RID: 16961
 		[Nullable(2)]
 		protected IWordArtResourceType FbInstance;
 
-		// Token: 0x04003ED4 RID: 16084
+		// Token: 0x04004242 RID: 16962
 		[Nullable(2)]
 		protected IWordArtResourceType_SetValue PocoInterface;
 	}

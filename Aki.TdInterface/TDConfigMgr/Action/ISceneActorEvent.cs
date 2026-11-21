@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DD4 RID: 7636
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FED RID: 8173
 	public class ISceneActorEvent
 	{
-		// Token: 0x0600A381 RID: 41857 RVA: 0x00173388 File Offset: 0x00171588
+		// Token: 0x0600AD97 RID: 44439 RVA: 0x00187BE0 File Offset: 0x00185DE0
 		private ISceneActorEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A382 RID: 41858 RVA: 0x001733C0 File Offset: 0x001715C0
+		// Token: 0x0600AD98 RID: 44440 RVA: 0x00187C18 File Offset: 0x00185E18
 		public static ISceneActorEvent Create([Nullable(2)] ISceneActorEvent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A383 RID: 41859 RVA: 0x001733D3 File Offset: 0x001715D3
+		// Token: 0x0600AD99 RID: 44441 RVA: 0x00187C2B File Offset: 0x00185E2B
 		public static ISceneActorEvent CreateFromSetValue([Nullable(2)] ISceneActorEvent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A384 RID: 41860 RVA: 0x001733E6 File Offset: 0x001715E6
+		// Token: 0x0600AD9A RID: 44442 RVA: 0x00187C3E File Offset: 0x00185E3E
 		public ISceneActorEvent_SetValue ToSetValue()
 		{
 			return new ISceneActorEvent_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003259 RID: 12889
-		// (get) Token: 0x0600A385 RID: 41861 RVA: 0x001733F9 File Offset: 0x001715F9
-		// (set) Token: 0x0600A386 RID: 41862 RVA: 0x00173424 File Offset: 0x00171624
+		// Token: 0x170034F6 RID: 13558
+		// (get) Token: 0x0600AD9B RID: 44443 RVA: 0x00187C51 File Offset: 0x00185E51
+		// (set) Token: 0x0600AD9C RID: 44444 RVA: 0x00187C7C File Offset: 0x00185E7C
 		public virtual ESceneActorEventType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006204 RID: 25092
+		// Token: 0x04006791 RID: 26513
 		[Nullable(2)]
 		protected ISceneActorEvent FbInstance;
 
-		// Token: 0x04006205 RID: 25093
+		// Token: 0x04006792 RID: 26514
 		[Nullable(2)]
 		protected ISceneActorEvent_SetValue PocoInterface;
 	}

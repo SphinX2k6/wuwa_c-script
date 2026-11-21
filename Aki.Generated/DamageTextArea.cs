@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BBA RID: 3002
+	// Token: 0x02000C9C RID: 3228
 	public struct DamageTextArea : IFlatbufferObject
 	{
-		// Token: 0x17000A63 RID: 2659
-		// (get) Token: 0x06005C53 RID: 23635 RVA: 0x00206371 File Offset: 0x00204571
+		// Token: 0x17000AA9 RID: 2729
+		// (get) Token: 0x0600622C RID: 25132 RVA: 0x00225C95 File Offset: 0x00223E95
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005C54 RID: 23636 RVA: 0x0020637E File Offset: 0x0020457E
+		// Token: 0x0600622D RID: 25133 RVA: 0x00225CA2 File Offset: 0x00223EA2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005C55 RID: 23637 RVA: 0x00206388 File Offset: 0x00204588
+		// Token: 0x0600622E RID: 25134 RVA: 0x00225CAC File Offset: 0x00223EAC
 		public static DamageTextArea GetRootAsDamageTextArea(ByteBuffer _bb)
 		{
 			return DamageTextArea.GetRootAsDamageTextArea(_bb, default(DamageTextArea));
 		}
 
-		// Token: 0x06005C56 RID: 23638 RVA: 0x002063A4 File Offset: 0x002045A4
+		// Token: 0x0600622F RID: 25135 RVA: 0x00225CC8 File Offset: 0x00223EC8
 		public static DamageTextArea GetRootAsDamageTextArea(ByteBuffer _bb, DamageTextArea obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005C57 RID: 23639 RVA: 0x002063C1 File Offset: 0x002045C1
+		// Token: 0x06006230 RID: 25136 RVA: 0x00225CE5 File Offset: 0x00223EE5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005C58 RID: 23640 RVA: 0x002063D0 File Offset: 0x002045D0
+		// Token: 0x06006231 RID: 25137 RVA: 0x00225CF4 File Offset: 0x00223EF4
 		public DamageTextArea __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000A64 RID: 2660
-		// (get) Token: 0x06005C59 RID: 23641 RVA: 0x002063E0 File Offset: 0x002045E0
+		// Token: 0x17000AAA RID: 2730
+		// (get) Token: 0x06006232 RID: 25138 RVA: 0x00225D04 File Offset: 0x00223F04
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A65 RID: 2661
-		// (get) Token: 0x06005C5A RID: 23642 RVA: 0x0020641C File Offset: 0x0020461C
+		// Token: 0x17000AAB RID: 2731
+		// (get) Token: 0x06006233 RID: 25139 RVA: 0x00225D40 File Offset: 0x00223F40
 		public int MinDeviationX
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A66 RID: 2662
-		// (get) Token: 0x06005C5B RID: 23643 RVA: 0x00206458 File Offset: 0x00204658
+		// Token: 0x17000AAC RID: 2732
+		// (get) Token: 0x06006234 RID: 25140 RVA: 0x00225D7C File Offset: 0x00223F7C
 		public int MinDeviationY
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A67 RID: 2663
-		// (get) Token: 0x06005C5C RID: 23644 RVA: 0x00206494 File Offset: 0x00204694
+		// Token: 0x17000AAD RID: 2733
+		// (get) Token: 0x06006235 RID: 25141 RVA: 0x00225DB8 File Offset: 0x00223FB8
 		public int MaxDeviationX
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000A68 RID: 2664
-		// (get) Token: 0x06005C5D RID: 23645 RVA: 0x002064D4 File Offset: 0x002046D4
+		// Token: 0x17000AAE RID: 2734
+		// (get) Token: 0x06006236 RID: 25142 RVA: 0x00225DF8 File Offset: 0x00223FF8
 		public int MaxDeviationY
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004BE0 RID: 19424
+		// Token: 0x040051C2 RID: 20930
 		private Table __p;
 	}
 }

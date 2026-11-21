@@ -4,26 +4,14 @@ using CSharpScript.Game.NewWorld.Common.Component;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007218 RID: 29208
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020062CD RID: 25293
 	public class SceneItemDebugComponent : EntityComponent
 	{
-		// Token: 0x06047813 RID: 292883 RVA: 0x01239EE0 File Offset: 0x012380E0
+		// Token: 0x0603D13A RID: 250170 RVA: 0x01193600 File Offset: 0x01191800
+		[NullableContext(1)]
 		public string GetTagDebugStrings()
 		{
 			return base.Entity.GetComponent<LevelTagComponent>().GetTagDebugStrings();
-		}
-
-		// Token: 0x06047814 RID: 292884 RVA: 0x01239EF2 File Offset: 0x012380F2
-		public override bool ClearComponent(EntityComponent componentTemplate)
-		{
-			if (!base.ClearComponent(componentTemplate))
-			{
-				return false;
-			}
-			SceneItemDebugComponent sceneItemDebugComponent = (SceneItemDebugComponent)componentTemplate;
-			return true;
 		}
 	}
 }

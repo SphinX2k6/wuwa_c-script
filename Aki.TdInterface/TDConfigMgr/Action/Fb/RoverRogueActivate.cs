@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A09 RID: 10761
+	// Token: 0x02002CF6 RID: 11510
 	public class RoverRogueActivate : ActionParams
 	{
-		// Token: 0x0600ED63 RID: 60771 RVA: 0x00229CB7 File Offset: 0x00227EB7
-		[NullableContext(1)]
+		// Token: 0x0600FBFA RID: 64506 RVA: 0x0024763B File Offset: 0x0024583B
 		public static RoverRogueActivate Create(IRoverRogueActivate? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B13 RID: 19219
-		// (get) Token: 0x0600ED64 RID: 60772 RVA: 0x00229CD6 File Offset: 0x00227ED6
+		// Token: 0x17004EBC RID: 20156
+		// (get) Token: 0x0600FBFB RID: 64507 RVA: 0x0024765A File Offset: 0x0024585A
 		public virtual ERoverRogueActivateType InteractType
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082AD RID: 33453
+		// Token: 0x0400899E RID: 35230
 		private IRoverRogueActivate Instance;
 	}
 }

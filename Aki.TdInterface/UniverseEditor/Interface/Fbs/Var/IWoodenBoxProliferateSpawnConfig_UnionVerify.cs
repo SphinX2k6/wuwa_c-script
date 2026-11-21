@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B3A RID: 15162
+	// Token: 0x02003F3C RID: 16188
 	public static class IWoodenBoxProliferateSpawnConfig_UnionVerify
 	{
-		// Token: 0x06014B92 RID: 84882 RVA: 0x003036A8 File Offset: 0x003018A8
+		// Token: 0x0601603C RID: 90172 RVA: 0x00329938 File Offset: 0x00327B38
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

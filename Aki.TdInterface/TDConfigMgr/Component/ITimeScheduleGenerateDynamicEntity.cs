@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000789 RID: 1929
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200082A RID: 2090
 	public class ITimeScheduleGenerateDynamicEntity
 	{
-		// Token: 0x060029D2 RID: 10706 RVA: 0x0006E1FC File Offset: 0x0006C3FC
+		// Token: 0x06002CFE RID: 11518 RVA: 0x000755A4 File Offset: 0x000737A4
 		private ITimeScheduleGenerateDynamicEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060029D3 RID: 10707 RVA: 0x0006E234 File Offset: 0x0006C434
+		// Token: 0x06002CFF RID: 11519 RVA: 0x000755DC File Offset: 0x000737DC
 		public static ITimeScheduleGenerateDynamicEntity Create([Nullable(2)] ITimeScheduleGenerateDynamicEntity instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060029D4 RID: 10708 RVA: 0x0006E247 File Offset: 0x0006C447
+		// Token: 0x06002D00 RID: 11520 RVA: 0x000755EF File Offset: 0x000737EF
 		public static ITimeScheduleGenerateDynamicEntity CreateFromSetValue([Nullable(2)] ITimeScheduleGenerateDynamicEntity_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060029D5 RID: 10709 RVA: 0x0006E25A File Offset: 0x0006C45A
+		// Token: 0x06002D01 RID: 11521 RVA: 0x00075602 File Offset: 0x00073802
 		public ITimeScheduleGenerateDynamicEntity_SetValue ToSetValue()
 		{
 			return new ITimeScheduleGenerateDynamicEntity_SetValue
@@ -62,10 +60,10 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AFD RID: 2813
-		// (get) Token: 0x060029D6 RID: 10710 RVA: 0x0006E288 File Offset: 0x0006C488
-		// (set) Token: 0x060029D7 RID: 10711 RVA: 0x0006E2E9 File Offset: 0x0006C4E9
-		public virtual ITimeScheduleGenerateParams GenerateParams
+		// Token: 0x17000BC1 RID: 3009
+		// (get) Token: 0x06002D02 RID: 11522 RVA: 0x00075630 File Offset: 0x00073830
+		// (set) Token: 0x06002D03 RID: 11523 RVA: 0x00075691 File Offset: 0x00073891
+		public virtual ITimeScheduleFixedIntervalRefresh GenerateParams
 		{
 			get
 			{
@@ -76,7 +74,7 @@ namespace Aki.TDConfigMgr.Component
 				this._GenerateParamsInited = true;
 				if (this.FbInstance != null)
 				{
-					this._GenerateParamsCache = ITimeScheduleGenerateParams.Create(this.FbInstance.GenerateParams);
+					this._GenerateParamsCache = ITimeScheduleFixedIntervalRefresh.Create(this.FbInstance.GenerateParams);
 				}
 				else
 				{
@@ -92,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AFE RID: 2814
-		// (get) Token: 0x060029D8 RID: 10712 RVA: 0x0006E300 File Offset: 0x0006C500
-		// (set) Token: 0x060029D9 RID: 10713 RVA: 0x0006E361 File Offset: 0x0006C561
+		// Token: 0x17000BC2 RID: 3010
+		// (get) Token: 0x06002D04 RID: 11524 RVA: 0x000756A8 File Offset: 0x000738A8
+		// (set) Token: 0x06002D05 RID: 11525 RVA: 0x00075709 File Offset: 0x00073909
 		public virtual ITimeScheduleEntityTemplateNpcSource NpcSource
 		{
 			get
@@ -122,9 +120,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AFF RID: 2815
-		// (get) Token: 0x060029DA RID: 10714 RVA: 0x0006E378 File Offset: 0x0006C578
-		// (set) Token: 0x060029DB RID: 10715 RVA: 0x0006E3D9 File Offset: 0x0006C5D9
+		// Token: 0x17000BC3 RID: 3011
+		// (get) Token: 0x06002D06 RID: 11526 RVA: 0x00075720 File Offset: 0x00073920
+		// (set) Token: 0x06002D07 RID: 11527 RVA: 0x00075781 File Offset: 0x00073981
 		[Nullable(2)]
 		public virtual IConditionGroup Conditions
 		{
@@ -155,30 +153,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C02 RID: 7170
+		// Token: 0x04001E11 RID: 7697
 		[Nullable(2)]
 		protected ITimeScheduleGenerateDynamicEntity FbInstance;
 
-		// Token: 0x04001C03 RID: 7171
+		// Token: 0x04001E12 RID: 7698
 		[Nullable(2)]
 		protected ITimeScheduleGenerateDynamicEntity_SetValue PocoInterface;
 
-		// Token: 0x04001C04 RID: 7172
-		private ITimeScheduleGenerateParams _GenerateParamsCache;
+		// Token: 0x04001E13 RID: 7699
+		private ITimeScheduleFixedIntervalRefresh _GenerateParamsCache;
 
-		// Token: 0x04001C05 RID: 7173
+		// Token: 0x04001E14 RID: 7700
 		private bool _GenerateParamsInited;
 
-		// Token: 0x04001C06 RID: 7174
+		// Token: 0x04001E15 RID: 7701
 		private ITimeScheduleEntityTemplateNpcSource _NpcSourceCache;
 
-		// Token: 0x04001C07 RID: 7175
+		// Token: 0x04001E16 RID: 7702
 		private bool _NpcSourceInited;
 
-		// Token: 0x04001C08 RID: 7176
+		// Token: 0x04001E17 RID: 7703
 		private IConditionGroup _ConditionsCache;
 
-		// Token: 0x04001C09 RID: 7177
+		// Token: 0x04001E18 RID: 7704
 		private bool _ConditionsInited;
 	}
 }

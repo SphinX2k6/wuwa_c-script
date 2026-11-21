@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlement
 {
-	// Token: 0x020062F0 RID: 25328
+	// Token: 0x0200526E RID: 21102
 	public class PinballSettleFailTipsView : UiPanelBase
 	{
-		// Token: 0x0603FBC4 RID: 261060 RVA: 0x00F6BE04 File Offset: 0x00F6A004
+		// Token: 0x06034885 RID: 215173 RVA: 0x00EB2D60 File Offset: 0x00EB0F60
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,17 +22,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FBC5 RID: 261061 RVA: 0x00F6BE4C File Offset: 0x00F6A04C
+		// Token: 0x06034886 RID: 215174 RVA: 0x00EB2DA8 File Offset: 0x00EB0FA8
 		[NullableContext(1)]
 		public void ShowTxt(string textId)
 		{
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(0), textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0200C4E6 RID: 50406
+		// Token: 0x0200AECD RID: 44749
 		private enum EComponent
 		{
-			// Token: 0x0403B6B3 RID: 243379
+			// Token: 0x04036015 RID: 221205
 			TextTips
 		}
 	}

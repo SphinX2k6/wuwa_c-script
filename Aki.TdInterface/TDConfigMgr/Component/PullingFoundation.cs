@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000861 RID: 2145
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000904 RID: 2308
 	public class PullingFoundation : IComponentBase
 	{
-		// Token: 0x06002F6D RID: 12141 RVA: 0x0007A638 File Offset: 0x00078838
+		// Token: 0x060032A9 RID: 12969 RVA: 0x00081B20 File Offset: 0x0007FD20
 		private PullingFoundation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002F6E RID: 12142 RVA: 0x0007A670 File Offset: 0x00078870
+		// Token: 0x060032AA RID: 12970 RVA: 0x00081B58 File Offset: 0x0007FD58
 		public static PullingFoundation Create([Nullable(2)] PullingFoundation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F6F RID: 12143 RVA: 0x0007A683 File Offset: 0x00078883
+		// Token: 0x060032AB RID: 12971 RVA: 0x00081B6B File Offset: 0x0007FD6B
 		public static PullingFoundation CreateFromSetValue([Nullable(2)] PullingFoundation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F70 RID: 12144 RVA: 0x0007A696 File Offset: 0x00078896
+		// Token: 0x060032AC RID: 12972 RVA: 0x00081B7E File Offset: 0x0007FD7E
 		public new PullingFoundation_SetValue ToSetValue()
 		{
 			return new PullingFoundation_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C88 RID: 3208
-		// (get) Token: 0x06002F71 RID: 12145 RVA: 0x0007A6C4 File Offset: 0x000788C4
-		// (set) Token: 0x06002F72 RID: 12146 RVA: 0x0007A6FE File Offset: 0x000788FE
+		// Token: 0x17000D51 RID: 3409
+		// (get) Token: 0x060032AD RID: 12973 RVA: 0x00081BAC File Offset: 0x0007FDAC
+		// (set) Token: 0x060032AE RID: 12974 RVA: 0x00081BE6 File Offset: 0x0007FDE6
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C89 RID: 3209
-		// (get) Token: 0x06002F73 RID: 12147 RVA: 0x0007A70C File Offset: 0x0007890C
-		// (set) Token: 0x06002F74 RID: 12148 RVA: 0x0007A736 File Offset: 0x00078936
+		// Token: 0x17000D52 RID: 3410
+		// (get) Token: 0x060032AF RID: 12975 RVA: 0x00081BF4 File Offset: 0x0007FDF4
+		// (set) Token: 0x060032B0 RID: 12976 RVA: 0x00081C1E File Offset: 0x0007FE1E
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C8A RID: 3210
-		// (get) Token: 0x06002F75 RID: 12149 RVA: 0x0007A744 File Offset: 0x00078944
-		// (set) Token: 0x06002F76 RID: 12150 RVA: 0x0007A7A5 File Offset: 0x000789A5
+		// Token: 0x17000D53 RID: 3411
+		// (get) Token: 0x060032B1 RID: 12977 RVA: 0x00081C2C File Offset: 0x0007FE2C
+		// (set) Token: 0x060032B2 RID: 12978 RVA: 0x00081C8D File Offset: 0x0007FE8D
 		public virtual IPullingCategoryMatchingFoundation Config
 		{
 			get
@@ -134,18 +132,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001F4A RID: 8010
+		// Token: 0x0400215C RID: 8540
 		[Nullable(2)]
 		protected new PullingFoundation FbInstance;
 
-		// Token: 0x04001F4B RID: 8011
+		// Token: 0x0400215D RID: 8541
 		[Nullable(2)]
 		protected new PullingFoundation_SetValue PocoInterface;
 
-		// Token: 0x04001F4C RID: 8012
+		// Token: 0x0400215E RID: 8542
 		private IPullingCategoryMatchingFoundation _ConfigCache;
 
-		// Token: 0x04001F4D RID: 8013
+		// Token: 0x0400215F RID: 8543
 		private bool _ConfigInited;
 	}
 }

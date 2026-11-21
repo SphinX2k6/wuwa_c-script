@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062FC RID: 25340
+	// Token: 0x0200696D RID: 26989
 	public struct IChangeFlowTemplate : IFlatbufferObject
 	{
-		// Token: 0x1700BD1F RID: 48415
-		// (get) Token: 0x0602BCE7 RID: 179431 RVA: 0x006065D6 File Offset: 0x006047D6
+		// Token: 0x1700C6A9 RID: 50857
+		// (get) Token: 0x0602E450 RID: 189520 RVA: 0x006515E2 File Offset: 0x0064F7E2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BCE8 RID: 179432 RVA: 0x006065E3 File Offset: 0x006047E3
+		// Token: 0x0602E451 RID: 189521 RVA: 0x006515EF File Offset: 0x0064F7EF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BCE9 RID: 179433 RVA: 0x006065EC File Offset: 0x006047EC
+		// Token: 0x0602E452 RID: 189522 RVA: 0x006515F8 File Offset: 0x0064F7F8
 		public static IChangeFlowTemplate GetRootAsIChangeFlowTemplate(ByteBuffer _bb)
 		{
 			return IChangeFlowTemplate.GetRootAsIChangeFlowTemplate(_bb, default(IChangeFlowTemplate));
 		}
 
-		// Token: 0x0602BCEA RID: 179434 RVA: 0x00606608 File Offset: 0x00604808
+		// Token: 0x0602E453 RID: 189523 RVA: 0x00651614 File Offset: 0x0064F814
 		public static IChangeFlowTemplate GetRootAsIChangeFlowTemplate(ByteBuffer _bb, IChangeFlowTemplate obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BCEB RID: 179435 RVA: 0x00606625 File Offset: 0x00604825
+		// Token: 0x0602E454 RID: 189524 RVA: 0x00651631 File Offset: 0x0064F831
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BCEC RID: 179436 RVA: 0x00606634 File Offset: 0x00604834
+		// Token: 0x0602E455 RID: 189525 RVA: 0x00651640 File Offset: 0x0064F840
 		public IChangeFlowTemplate __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BD20 RID: 48416
-		// (get) Token: 0x0602BCED RID: 179437 RVA: 0x00606644 File Offset: 0x00604844
+		// Token: 0x1700C6AA RID: 50858
+		// (get) Token: 0x0602E456 RID: 189526 RVA: 0x00651650 File Offset: 0x0064F850
 		public IFlowTemplateMode? TemplateMode
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BD21 RID: 48417
-		// (get) Token: 0x0602BCEE RID: 179438 RVA: 0x006066A4 File Offset: 0x006048A4
+		// Token: 0x1700C6AB RID: 50859
+		// (get) Token: 0x0602E457 RID: 189527 RVA: 0x006516B0 File Offset: 0x0064F8B0
 		public IPosA? TargetPos
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BCEF RID: 179439 RVA: 0x00606704 File Offset: 0x00604904
+		// Token: 0x0602E458 RID: 189528 RVA: 0x00651710 File Offset: 0x0064F910
 		public int ActorIdArray(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700BD22 RID: 48418
-		// (get) Token: 0x0602BCF0 RID: 179440 RVA: 0x00606744 File Offset: 0x00604944
+		// Token: 0x1700C6AC RID: 50860
+		// (get) Token: 0x0602E459 RID: 189529 RVA: 0x00651750 File Offset: 0x0064F950
 		public int ActorIdArrayLength
 		{
 			get
@@ -104,19 +104,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BCF1 RID: 179441 RVA: 0x0060676F File Offset: 0x0060496F
+		// Token: 0x0602E45A RID: 189530 RVA: 0x0065177B File Offset: 0x0064F97B
 		public Span<int> GetActorIdArrayBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0602BCF2 RID: 179442 RVA: 0x0060677E File Offset: 0x0060497E
+		// Token: 0x0602E45B RID: 189531 RVA: 0x0065178A File Offset: 0x0064F98A
 		public int[] GetActorIdArrayArray()
 		{
 			return this.__p.__vector_as_array<int>(8);
 		}
 
-		// Token: 0x0602BCF3 RID: 179443 RVA: 0x0060678C File Offset: 0x0060498C
+		// Token: 0x0602E45C RID: 189532 RVA: 0x00651798 File Offset: 0x0064F998
 		public int TalkerIds(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -127,8 +127,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700BD23 RID: 48419
-		// (get) Token: 0x0602BCF4 RID: 179444 RVA: 0x006067CC File Offset: 0x006049CC
+		// Token: 0x1700C6AD RID: 50861
+		// (get) Token: 0x0602E45D RID: 189533 RVA: 0x006517D8 File Offset: 0x0064F9D8
 		public int TalkerIdsLength
 		{
 			get
@@ -142,20 +142,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BCF5 RID: 179445 RVA: 0x006067F8 File Offset: 0x006049F8
+		// Token: 0x0602E45E RID: 189534 RVA: 0x00651804 File Offset: 0x0064FA04
 		public Span<int> GetTalkerIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0602BCF6 RID: 179446 RVA: 0x00606808 File Offset: 0x00604A08
+		// Token: 0x0602E45F RID: 189535 RVA: 0x00651814 File Offset: 0x0064FA14
 		public int[] GetTalkerIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(10);
 		}
 
-		// Token: 0x1700BD24 RID: 48420
-		// (get) Token: 0x0602BCF7 RID: 179447 RVA: 0x00606818 File Offset: 0x00604A18
+		// Token: 0x1700C6AE RID: 50862
+		// (get) Token: 0x0602E460 RID: 189536 RVA: 0x00651824 File Offset: 0x0064FA24
 		public byte NullMask
 		{
 			get
@@ -169,7 +169,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BCF8 RID: 179448 RVA: 0x00606855 File Offset: 0x00604A55
+		// Token: 0x0602E461 RID: 189537 RVA: 0x00651861 File Offset: 0x0064FA61
 		public static Offset<IChangeFlowTemplate> CreateIChangeFlowTemplate(FlatBufferBuilder builder, Offset<IFlowTemplateMode> TemplateModeOffset = default(Offset<IFlowTemplateMode>), Offset<IPosA> TargetPosOffset = default(Offset<IPosA>), VectorOffset ActorIdArrayOffset = default(VectorOffset), VectorOffset TalkerIdsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -181,31 +181,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeFlowTemplate.EndIChangeFlowTemplate(builder);
 		}
 
-		// Token: 0x0602BCF9 RID: 179449 RVA: 0x00606889 File Offset: 0x00604A89
+		// Token: 0x0602E462 RID: 189538 RVA: 0x00651895 File Offset: 0x0064FA95
 		public static void StartIChangeFlowTemplate(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602BCFA RID: 179450 RVA: 0x00606892 File Offset: 0x00604A92
+		// Token: 0x0602E463 RID: 189539 RVA: 0x0065189E File Offset: 0x0064FA9E
 		public static void AddTemplateMode(FlatBufferBuilder builder, Offset<IFlowTemplateMode> templateModeOffset)
 		{
 			builder.AddOffset(0, templateModeOffset.Value, 0);
 		}
 
-		// Token: 0x0602BCFB RID: 179451 RVA: 0x006068A2 File Offset: 0x00604AA2
+		// Token: 0x0602E464 RID: 189540 RVA: 0x006518AE File Offset: 0x0064FAAE
 		public static void AddTargetPos(FlatBufferBuilder builder, Offset<IPosA> targetPosOffset)
 		{
 			builder.AddOffset(1, targetPosOffset.Value, 0);
 		}
 
-		// Token: 0x0602BCFC RID: 179452 RVA: 0x006068B2 File Offset: 0x00604AB2
+		// Token: 0x0602E465 RID: 189541 RVA: 0x006518BE File Offset: 0x0064FABE
 		public static void AddActorIdArray(FlatBufferBuilder builder, VectorOffset actorIdArrayOffset)
 		{
 			builder.AddOffset(2, actorIdArrayOffset.Value, 0);
 		}
 
-		// Token: 0x0602BCFD RID: 179453 RVA: 0x006068C4 File Offset: 0x00604AC4
+		// Token: 0x0602E466 RID: 189542 RVA: 0x006518D0 File Offset: 0x0064FAD0
 		public static VectorOffset CreateActorIdArrayVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BCFE RID: 179454 RVA: 0x006068FB File Offset: 0x00604AFB
+		// Token: 0x0602E467 RID: 189543 RVA: 0x00651907 File Offset: 0x0064FB07
 		public static VectorOffset CreateActorIdArrayVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -224,7 +224,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BCFF RID: 179455 RVA: 0x00606915 File Offset: 0x00604B15
+		// Token: 0x0602E468 RID: 189544 RVA: 0x00651921 File Offset: 0x0064FB21
 		public static VectorOffset CreateActorIdArrayVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BD00 RID: 179456 RVA: 0x00606933 File Offset: 0x00604B33
+		// Token: 0x0602E469 RID: 189545 RVA: 0x0065193F File Offset: 0x0064FB3F
 		public static VectorOffset CreateActorIdArrayVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -240,19 +240,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BD01 RID: 179457 RVA: 0x0060694C File Offset: 0x00604B4C
+		// Token: 0x0602E46A RID: 189546 RVA: 0x00651958 File Offset: 0x0064FB58
 		public static void StartActorIdArrayVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602BD02 RID: 179458 RVA: 0x00606957 File Offset: 0x00604B57
+		// Token: 0x0602E46B RID: 189547 RVA: 0x00651963 File Offset: 0x0064FB63
 		public static void AddTalkerIds(FlatBufferBuilder builder, VectorOffset talkerIdsOffset)
 		{
 			builder.AddOffset(3, talkerIdsOffset.Value, 0);
 		}
 
-		// Token: 0x0602BD03 RID: 179459 RVA: 0x00606968 File Offset: 0x00604B68
+		// Token: 0x0602E46C RID: 189548 RVA: 0x00651974 File Offset: 0x0064FB74
 		public static VectorOffset CreateTalkerIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BD04 RID: 179460 RVA: 0x0060699F File Offset: 0x00604B9F
+		// Token: 0x0602E46D RID: 189549 RVA: 0x006519AB File Offset: 0x0064FBAB
 		public static VectorOffset CreateTalkerIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -271,7 +271,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BD05 RID: 179461 RVA: 0x006069B9 File Offset: 0x00604BB9
+		// Token: 0x0602E46E RID: 189550 RVA: 0x006519C5 File Offset: 0x0064FBC5
 		public static VectorOffset CreateTalkerIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -279,7 +279,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BD06 RID: 179462 RVA: 0x006069D7 File Offset: 0x00604BD7
+		// Token: 0x0602E46F RID: 189551 RVA: 0x006519E3 File Offset: 0x0064FBE3
 		public static VectorOffset CreateTalkerIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -287,25 +287,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BD07 RID: 179463 RVA: 0x006069F0 File Offset: 0x00604BF0
+		// Token: 0x0602E470 RID: 189552 RVA: 0x006519FC File Offset: 0x0064FBFC
 		public static void StartTalkerIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602BD08 RID: 179464 RVA: 0x006069FB File Offset: 0x00604BFB
+		// Token: 0x0602E471 RID: 189553 RVA: 0x00651A07 File Offset: 0x0064FC07
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0602BD09 RID: 179465 RVA: 0x00606A06 File Offset: 0x00604C06
+		// Token: 0x0602E472 RID: 189554 RVA: 0x00651A12 File Offset: 0x0064FC12
 		public static Offset<IChangeFlowTemplate> EndIChangeFlowTemplate(FlatBufferBuilder builder)
 		{
 			return new Offset<IChangeFlowTemplate>(builder.EndTable());
 		}
 
-		// Token: 0x0602BD0A RID: 179466 RVA: 0x00606A14 File Offset: 0x00604C14
+		// Token: 0x0602E473 RID: 189555 RVA: 0x00651A20 File Offset: 0x0064FC20
 		public IChangeFlowTemplateT UnPack()
 		{
 			IChangeFlowTemplateT changeFlowTemplateT = new IChangeFlowTemplateT();
@@ -313,7 +313,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return changeFlowTemplateT;
 		}
 
-		// Token: 0x0602BD0B RID: 179467 RVA: 0x00606A30 File Offset: 0x00604C30
+		// Token: 0x0602E474 RID: 189556 RVA: 0x00651A3C File Offset: 0x0064FC3C
 		public void UnPackTo(IChangeFlowTemplateT _o)
 		{
 			_o.TemplateMode = ((this.TemplateMode != null) ? this.TemplateMode.Value.UnPack() : null);
@@ -331,7 +331,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602BD0C RID: 179468 RVA: 0x00606B10 File Offset: 0x00604D10
+		// Token: 0x0602E475 RID: 189557 RVA: 0x00651B1C File Offset: 0x0064FD1C
 		public static Offset<IChangeFlowTemplate> Pack(FlatBufferBuilder builder, IChangeFlowTemplateT _o)
 		{
 			if (_o == null)
@@ -355,7 +355,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeFlowTemplate.CreateIChangeFlowTemplate(builder, templateModeOffset, targetPosOffset, actorIdArrayOffset, talkerIdsOffset, _o.NullMask);
 		}
 
-		// Token: 0x040108B6 RID: 67766
+		// Token: 0x040116CC RID: 71372
 		private Table __p;
 	}
 }

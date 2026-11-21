@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000287 RID: 647
+	// Token: 0x020000D7 RID: 215
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/AkAudio.MovieSceneAkTrack")]
-	[UnrealStructLayout(216, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 216)]
+	[UnrealStructLayout(232, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 232)]
 	public abstract class UMovieSceneAkTrack : UMovieSceneTrack, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06002451 RID: 9297 RVA: 0x00035DBE File Offset: 0x00033FBE
+		// Token: 0x06000F4F RID: 3919 RVA: 0x00017A4A File Offset: 0x00015C4A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneAkTrack._ClassPtr;
 		}
 
-		// Token: 0x170008B9 RID: 2233
-		// (get) Token: 0x06002452 RID: 9298 RVA: 0x00035DCC File Offset: 0x00033FCC
-		// (set) Token: 0x06002453 RID: 9299 RVA: 0x00035E05 File Offset: 0x00034005
+		// Token: 0x1700015C RID: 348
+		// (get) Token: 0x06000F50 RID: 3920 RVA: 0x00017A58 File Offset: 0x00015C58
+		// (set) Token: 0x06000F51 RID: 3921 RVA: 0x00017A91 File Offset: 0x00015C91
 		public TArray<UMovieSceneSection> Sections
 		{
 			get
@@ -40,9 +40,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170008BA RID: 2234
-		// (get) Token: 0x06002454 RID: 9300 RVA: 0x00035E13 File Offset: 0x00034013
-		// (set) Token: 0x06002455 RID: 9301 RVA: 0x00035E23 File Offset: 0x00034023
+		// Token: 0x1700015D RID: 349
+		// (get) Token: 0x06000F52 RID: 3922 RVA: 0x00017A9F File Offset: 0x00015C9F
+		// (set) Token: 0x06000F53 RID: 3923 RVA: 0x00017AAF File Offset: 0x00015CAF
 		public unsafe bool bIsAMasterTrack
 		{
 			get
@@ -55,35 +55,35 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06002456 RID: 9302 RVA: 0x00035E34 File Offset: 0x00034034
+		// Token: 0x06000F54 RID: 3924 RVA: 0x00017AC0 File Offset: 0x00015CC0
 		static UMovieSceneAkTrack()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/AkAudio.MovieSceneAkTrack");
 		}
 
-		// Token: 0x06002457 RID: 9303 RVA: 0x00035E44 File Offset: 0x00034044
+		// Token: 0x06000F55 RID: 3925 RVA: 0x00017AD0 File Offset: 0x00015CD0
 		protected UMovieSceneAkTrack() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneAkTrack.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06002458 RID: 9304 RVA: 0x00035E6C File Offset: 0x0003406C
+		// Token: 0x06000F56 RID: 3926 RVA: 0x00017AF8 File Offset: 0x00015CF8
 		protected UMovieSceneAkTrack(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04000DCD RID: 3533
+		// Token: 0x04000361 RID: 865
 		public new const string __ObjectPath = "/Script/AkAudio.MovieSceneAkTrack";
 
-		// Token: 0x04000DCE RID: 3534
+		// Token: 0x04000362 RID: 866
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04000DCF RID: 3535
+		// Token: 0x04000363 RID: 867
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04000DD0 RID: 3536
+		// Token: 0x04000364 RID: 868
 		internal static int __PropertyOffset_Sections;
 
-		// Token: 0x04000DD1 RID: 3537
+		// Token: 0x04000365 RID: 869
 		[Nullable(new byte[]
 		{
 			2,
@@ -91,7 +91,7 @@ namespace UnrealEngine
 		})]
 		private TArray<UMovieSceneSection> _Sections;
 
-		// Token: 0x04000DD2 RID: 3538
+		// Token: 0x04000366 RID: 870
 		internal static int __PropertyOffset_bIsAMasterTrack;
 	}
 }

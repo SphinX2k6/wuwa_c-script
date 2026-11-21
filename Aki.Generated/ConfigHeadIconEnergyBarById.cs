@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003D2 RID: 978
+	// Token: 0x020003E8 RID: 1000
 	public class ConfigHeadIconEnergyBarById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060016F3 RID: 5875 RVA: 0x000DB367 File Offset: 0x000D9567
+		// Token: 0x06001777 RID: 6007 RVA: 0x000E1ABB File Offset: 0x000DFCBB
 		static ConfigHeadIconEnergyBarById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHeadIconEnergyBarById.CreateStaticDefaultValue), new Action(ConfigHeadIconEnergyBarById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060016F4 RID: 5876 RVA: 0x000DB388 File Offset: 0x000D9588
+		// Token: 0x06001778 RID: 6008 RVA: 0x000E1ADC File Offset: 0x000DFCDC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHeadIconEnergyBarById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060016F5 RID: 5877 RVA: 0x000DB407 File Offset: 0x000D9607
+		// Token: 0x06001779 RID: 6009 RVA: 0x000E1B5B File Offset: 0x000DFD5B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHeadIconEnergyBarById.LogPair = null;
 			ConfigHeadIconEnergyBarById.HandleId = 0;
 		}
 
-		// Token: 0x060016F6 RID: 5878 RVA: 0x000DB415 File Offset: 0x000D9615
+		// Token: 0x0600177A RID: 6010 RVA: 0x000E1B69 File Offset: 0x000DFD69
 		public static void Init()
 		{
 			ConfigHeadIconEnergyBarById.HandleId = ConfigCommon.InitDataStatement(ConfigHeadIconEnergyBarById.HandleId, "db_battleheadicon.db", "select BinData from `HeadIconEnergyBar` where Id=?");
 		}
 
-		// Token: 0x060016F7 RID: 5879 RVA: 0x000DB430 File Offset: 0x000D9630
+		// Token: 0x0600177B RID: 6011 RVA: 0x000E1B84 File Offset: 0x000DFD84
 		public static HeadIconEnergyBar? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHeadIconEnergyBarById.HandleId, ConfigHeadIconEnergyBarById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new HeadIconEnergyBar?(rootAsHeadIconEnergyBar);
 		}
 
-		// Token: 0x04001AA2 RID: 6818
+		// Token: 0x04001B3C RID: 6972
 		private const string DB = "db_battleheadicon.db";
 
-		// Token: 0x04001AA3 RID: 6819
+		// Token: 0x04001B3D RID: 6973
 		private const string FILE = "j.角色战斗界面头像.xlsx";
 
-		// Token: 0x04001AA4 RID: 6820
+		// Token: 0x04001B3E RID: 6974
 		private const string TABLE = "HeadIconEnergyBar";
 
-		// Token: 0x04001AA5 RID: 6821
+		// Token: 0x04001B3F RID: 6975
 		private const string COMMAND = "select BinData from `HeadIconEnergyBar` where Id=?";
 
-		// Token: 0x04001AA6 RID: 6822
+		// Token: 0x04001B40 RID: 6976
 		private const string KEY_PREFIX = "HeadIconEnergyBarById";
 
-		// Token: 0x04001AA7 RID: 6823
+		// Token: 0x04001B41 RID: 6977
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001AA8 RID: 6824
+		// Token: 0x04001B42 RID: 6978
 		private static int HandleId;
 	}
 }

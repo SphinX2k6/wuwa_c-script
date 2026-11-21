@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053BF RID: 21439
+	// Token: 0x020043A2 RID: 17314
 	public class MoraleUnbreakableLvInfoItem : UiPanelBase
 	{
-		// Token: 0x06036C6F RID: 224367 RVA: 0x00CF6EF4 File Offset: 0x00CF50F4
+		// Token: 0x0602BBB5 RID: 179125 RVA: 0x00C45F9C File Offset: 0x00C4419C
 		[NullableContext(1)]
 		public UniTask Init(UUIItem item)
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C70 RID: 224368 RVA: 0x00CF6F3F File Offset: 0x00CF513F
+		// Token: 0x0602BBB6 RID: 179126 RVA: 0x00C45FE7 File Offset: 0x00C441E7
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036C71 RID: 224369 RVA: 0x00CF6F78 File Offset: 0x00CF5178
+		// Token: 0x0602BBB7 RID: 179127 RVA: 0x00C46020 File Offset: 0x00C44220
 		protected override void OnStart()
 		{
 			this.UpdateData();
 		}
 
-		// Token: 0x06036C72 RID: 224370 RVA: 0x00CF6F80 File Offset: 0x00CF5180
+		// Token: 0x0602BBB8 RID: 179128 RVA: 0x00C46028 File Offset: 0x00C44228
 		public void UpdateData()
 		{
 			base.GetArtText(0).SetText(MoraleBattleModel.Instance.GetMoraleIndomitableLevel().ToString());
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.Module.Morale
 			text.ShowTextNew("Morale_title_3");
 		}
 
-		// Token: 0x0200B669 RID: 46697
+		// Token: 0x0200A0A1 RID: 41121
 		private class EChildType
 		{
-			// Token: 0x04037433 RID: 226355
+			// Token: 0x04031E88 RID: 204424
 			public const int ArtTextUnbreakableLv = 0;
 
-			// Token: 0x04037434 RID: 226356
+			// Token: 0x04031E89 RID: 204425
 			public const int TxtTitle = 1;
 		}
 	}

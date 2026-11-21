@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B41 RID: 15169
+	// Token: 0x02003F43 RID: 16195
 	public struct QuestValue : IFlatbufferObject
 	{
-		// Token: 0x17006810 RID: 26640
-		// (get) Token: 0x06014BB7 RID: 84919 RVA: 0x003039DD File Offset: 0x00301BDD
+		// Token: 0x17006DAB RID: 28075
+		// (get) Token: 0x06016061 RID: 90209 RVA: 0x00329C6D File Offset: 0x00327E6D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014BB8 RID: 84920 RVA: 0x003039EA File Offset: 0x00301BEA
+		// Token: 0x06016062 RID: 90210 RVA: 0x00329C7A File Offset: 0x00327E7A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014BB9 RID: 84921 RVA: 0x003039F4 File Offset: 0x00301BF4
+		// Token: 0x06016063 RID: 90211 RVA: 0x00329C84 File Offset: 0x00327E84
 		public static QuestValue GetRootAsQuestValue(ByteBuffer _bb)
 		{
 			return QuestValue.GetRootAsQuestValue(_bb, default(QuestValue));
 		}
 
-		// Token: 0x06014BBA RID: 84922 RVA: 0x00303A10 File Offset: 0x00301C10
+		// Token: 0x06016064 RID: 90212 RVA: 0x00329CA0 File Offset: 0x00327EA0
 		public static QuestValue GetRootAsQuestValue(ByteBuffer _bb, QuestValue obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014BBB RID: 84923 RVA: 0x00303A2D File Offset: 0x00301C2D
+		// Token: 0x06016065 RID: 90213 RVA: 0x00329CBD File Offset: 0x00327EBD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014BBC RID: 84924 RVA: 0x00303A3C File Offset: 0x00301C3C
+		// Token: 0x06016066 RID: 90214 RVA: 0x00329CCC File Offset: 0x00327ECC
 		public QuestValue __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006811 RID: 26641
-		// (get) Token: 0x06014BBD RID: 84925 RVA: 0x00303A4C File Offset: 0x00301C4C
+		// Token: 0x17006DAC RID: 28076
+		// (get) Token: 0x06016067 RID: 90215 RVA: 0x00329CDC File Offset: 0x00327EDC
 		public int Value
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014BBE RID: 84926 RVA: 0x00303A88 File Offset: 0x00301C88
+		// Token: 0x06016068 RID: 90216 RVA: 0x00329D18 File Offset: 0x00327F18
 		public static Offset<QuestValue> CreateQuestValue(FlatBufferBuilder builder, int value = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return QuestValue.EndQuestValue(builder);
 		}
 
-		// Token: 0x06014BBF RID: 84927 RVA: 0x00303A9E File Offset: 0x00301C9E
+		// Token: 0x06016069 RID: 90217 RVA: 0x00329D2E File Offset: 0x00327F2E
 		public static void StartQuestValue(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06014BC0 RID: 84928 RVA: 0x00303AA7 File Offset: 0x00301CA7
+		// Token: 0x0601606A RID: 90218 RVA: 0x00329D37 File Offset: 0x00327F37
 		public static void AddValue(FlatBufferBuilder builder, int value)
 		{
 			builder.AddInt(0, value, 0);
 		}
 
-		// Token: 0x06014BC1 RID: 84929 RVA: 0x00303AB2 File Offset: 0x00301CB2
+		// Token: 0x0601606B RID: 90219 RVA: 0x00329D42 File Offset: 0x00327F42
 		public static Offset<QuestValue> EndQuestValue(FlatBufferBuilder builder)
 		{
 			return new Offset<QuestValue>(builder.EndTable());
 		}
 
-		// Token: 0x06014BC2 RID: 84930 RVA: 0x00303AC0 File Offset: 0x00301CC0
+		// Token: 0x0601606C RID: 90220 RVA: 0x00329D50 File Offset: 0x00327F50
 		public QuestValueT UnPack()
 		{
 			QuestValueT questValueT = new QuestValueT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return questValueT;
 		}
 
-		// Token: 0x06014BC3 RID: 84931 RVA: 0x00303ADB File Offset: 0x00301CDB
+		// Token: 0x0601606D RID: 90221 RVA: 0x00329D6B File Offset: 0x00327F6B
 		public void UnPackTo(QuestValueT _o)
 		{
 			_o.Value = this.Value;
 		}
 
-		// Token: 0x06014BC4 RID: 84932 RVA: 0x00303AEC File Offset: 0x00301CEC
+		// Token: 0x0601606E RID: 90222 RVA: 0x00329D7C File Offset: 0x00327F7C
 		public static Offset<QuestValue> Pack(FlatBufferBuilder builder, QuestValueT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return QuestValue.CreateQuestValue(builder, _o.Value);
 		}
 
-		// Token: 0x0400B023 RID: 45091
+		// Token: 0x0400B990 RID: 47504
 		private Table __p;
 	}
 }

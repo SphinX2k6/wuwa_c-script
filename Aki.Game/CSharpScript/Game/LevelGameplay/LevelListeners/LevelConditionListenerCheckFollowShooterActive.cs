@@ -4,10 +4,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006ADF RID: 27359
+	// Token: 0x02005C57 RID: 23639
 	public class LevelConditionListenerCheckFollowShooterActive : LevelListenerBase
 	{
-		// Token: 0x06043F78 RID: 278392 RVA: 0x010ABDE3 File Offset: 0x010A9FE3
+		// Token: 0x0603A0CA RID: 237770 RVA: 0x0105565B File Offset: 0x0105385B
 		private void FollowerEnableChangeEventHandle(bool isEnable)
 		{
 			TListenerCallbackFunc callback = this.Callback;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}), Array.Empty<object>());
 		}
 
-		// Token: 0x06043F79 RID: 278393 RVA: 0x010ABE13 File Offset: 0x010AA013
+		// Token: 0x0603A0CB RID: 237771 RVA: 0x0105568B File Offset: 0x0105388B
 		[NullableContext(1)]
 		protected override void OnListen(object listeningInfo, TListenerCallbackFunc callback, [Nullable(2)] GeneralContext context = null, params object[] otherParams)
 		{
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F7A RID: 278394 RVA: 0x010ABE50 File Offset: 0x010AA050
+		// Token: 0x0603A0CC RID: 237772 RVA: 0x010556C8 File Offset: 0x010538C8
 		protected override void OnUnListen()
 		{
 			if (new Action<bool>(this.FollowerEnableChangeEventHandle) != null && EventSystem.Instance.Has(EEventName.OnPlayerFollowerEnableChange, new Action<bool>(this.FollowerEnableChangeEventHandle)))

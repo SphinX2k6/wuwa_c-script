@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -10,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006130 RID: 24880
+	// Token: 0x020050AE RID: 20654
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeOutsidePropTabView : RoverlikeOutsideTabViewBase
 	{
-		// Token: 0x17009192 RID: 37266
-		// (get) Token: 0x0603EE58 RID: 257624 RVA: 0x00F315E7 File Offset: 0x00F2F7E7
+		// Token: 0x170064F4 RID: 25844
+		// (get) Token: 0x06033B1A RID: 211738 RVA: 0x00E783EF File Offset: 0x00E765EF
 		[TupleElementNames(new string[]
 		{
 			"Slot",
@@ -47,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EE59 RID: 257625 RVA: 0x00F315F0 File Offset: 0x00F2F7F0
+		// Token: 0x06033B1B RID: 211739 RVA: 0x00E783F8 File Offset: 0x00E765F8
 		protected override UniTask CreateDetailCardAsync()
 		{
 			RoverlikeOutsidePropTabView.<CreateDetailCardAsync>d__3 <CreateDetailCardAsync>d__;
@@ -58,14 +57,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <CreateDetailCardAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EE5A RID: 257626 RVA: 0x00F31633 File Offset: 0x00F2F833
+		// Token: 0x06033B1C RID: 211740 RVA: 0x00E7843B File Offset: 0x00E7663B
 		[NullableContext(2)]
 		protected override UUIItem GetDetailItemComponent()
 		{
 			return base.GetSlotItem(EOutsideSlot.ItemPropDetail);
 		}
 
-		// Token: 0x0603EE5B RID: 257627 RVA: 0x00F31640 File Offset: 0x00F2F840
+		// Token: 0x06033B1D RID: 211741 RVA: 0x00E78448 File Offset: 0x00E76648
 		protected override void RefreshDetailCard(RoverlikeGainEntry entry)
 		{
 			RoverlikePropItemData data = new RoverlikePropItemData
@@ -81,19 +80,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			detailCard.Refresh(data, false, 0);
 		}
 
-		// Token: 0x0603EE5C RID: 257628 RVA: 0x00F31679 File Offset: 0x00F2F879
+		// Token: 0x06033B1E RID: 211742 RVA: 0x00E78481 File Offset: 0x00E76681
 		protected override bool ShouldShowCollectProgress()
 		{
 			return false;
 		}
 
-		// Token: 0x0603EE5D RID: 257629 RVA: 0x00F3167C File Offset: 0x00F2F87C
+		// Token: 0x06033B1F RID: 211743 RVA: 0x00E78484 File Offset: 0x00E76684
 		protected override int BuildScrollDataList()
 		{
-			List<RoverRogueItem> list = (from cfg in RoverlikeConfig.Instance.GetItemConfigList()
-			where cfg.Classify == 2
-			orderby cfg.Quality descending, cfg.Id descending
-			select cfg).ToList<RoverRogueItem>();
+			List<RoverRogueItem> list = new List<RoverRogueItem>();
+			foreach (RoverRogueItem item in RoverlikeConfig.Instance.GetItemConfigList())
+			{
+				if (item.Classify == 2)
+				{
+					list.Add(item);
+				}
+			}
+			list.Sort(delegate(RoverRogueItem a, RoverRogueItem b)
+			{
+				if (a.Quality != b.Quality)
+				{
+					return b.Quality - a.Quality;
+				}
+				return b.Id - a.Id;
+			});
 			int num = -1;
 			if (list.Count > 0)
 			{
@@ -111,13 +122,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return num;
 		}
 
-		// Token: 0x0603EE5E RID: 257630 RVA: 0x00F31778 File Offset: 0x00F2F978
+		// Token: 0x06033B20 RID: 211744 RVA: 0x00E7857C File Offset: 0x00E7677C
 		protected override bool IsEntryLocked(RoverlikeGainEntry entry)
 		{
 			return false;
 		}
 
-		// Token: 0x04020D65 RID: 134501
+		// Token: 0x0401B692 RID: 112274
 		[Nullable(2)]
 		private RoverlikePropCardItem DetailCard;
 	}

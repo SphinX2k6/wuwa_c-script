@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001641 RID: 5697
+	// Token: 0x020017AE RID: 6062
 	public class EnableKey4Func_SetValue
 	{
-		// Token: 0x04004C68 RID: 19560
+		// Token: 0x0400505C RID: 20572
 		public bool IsEnable;
 
-		// Token: 0x04004C69 RID: 19561
+		// Token: 0x0400505D RID: 20573
 		public EEnableKey4FuncKey FuncKey;
 	}
 }

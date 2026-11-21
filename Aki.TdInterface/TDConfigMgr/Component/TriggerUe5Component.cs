@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008D0 RID: 2256
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000973 RID: 2419
 	public class TriggerUe5Component : IComponentBase
 	{
-		// Token: 0x06003301 RID: 13057 RVA: 0x00082D94 File Offset: 0x00080F94
+		// Token: 0x0600363D RID: 13885 RVA: 0x0008A23C File Offset: 0x0008843C
 		private TriggerUe5Component_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003302 RID: 13058 RVA: 0x00082DCC File Offset: 0x00080FCC
+		// Token: 0x0600363E RID: 13886 RVA: 0x0008A274 File Offset: 0x00088474
 		public static TriggerUe5Component Create([Nullable(2)] TriggerUe5Component instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003303 RID: 13059 RVA: 0x00082DDF File Offset: 0x00080FDF
+		// Token: 0x0600363F RID: 13887 RVA: 0x0008A287 File Offset: 0x00088487
 		public static TriggerUe5Component CreateFromSetValue([Nullable(2)] TriggerUe5Component_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003304 RID: 13060 RVA: 0x00082DF4 File Offset: 0x00080FF4
+		// Token: 0x06003640 RID: 13888 RVA: 0x0008A29C File Offset: 0x0008849C
 		public new TriggerUe5Component_SetValue ToSetValue()
 		{
 			return new TriggerUe5Component_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000DB0 RID: 3504
-		// (get) Token: 0x06003305 RID: 13061 RVA: 0x00082E44 File Offset: 0x00081044
-		// (set) Token: 0x06003306 RID: 13062 RVA: 0x00082E7E File Offset: 0x0008107E
+		// Token: 0x17000E79 RID: 3705
+		// (get) Token: 0x06003641 RID: 13889 RVA: 0x0008A2EC File Offset: 0x000884EC
+		// (set) Token: 0x06003642 RID: 13890 RVA: 0x0008A326 File Offset: 0x00088526
 		public override bool? Disabled
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DB1 RID: 3505
-		// (get) Token: 0x06003307 RID: 13063 RVA: 0x00082E8C File Offset: 0x0008108C
-		// (set) Token: 0x06003308 RID: 13064 RVA: 0x00082EB6 File Offset: 0x000810B6
+		// Token: 0x17000E7A RID: 3706
+		// (get) Token: 0x06003643 RID: 13891 RVA: 0x0008A334 File Offset: 0x00088534
+		// (set) Token: 0x06003644 RID: 13892 RVA: 0x0008A35E File Offset: 0x0008855E
 		public override bool? EdIsLocked
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DB2 RID: 3506
-		// (get) Token: 0x06003309 RID: 13065 RVA: 0x00082EC4 File Offset: 0x000810C4
-		// (set) Token: 0x0600330A RID: 13066 RVA: 0x00082EEF File Offset: 0x000810EF
+		// Token: 0x17000E7B RID: 3707
+		// (get) Token: 0x06003645 RID: 13893 RVA: 0x0008A36C File Offset: 0x0008856C
+		// (set) Token: 0x06003646 RID: 13894 RVA: 0x0008A397 File Offset: 0x00088597
 		public virtual int MaxTriggerTimes
 		{
 			get
@@ -130,9 +128,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DB3 RID: 3507
-		// (get) Token: 0x0600330B RID: 13067 RVA: 0x00082EFD File Offset: 0x000810FD
-		// (set) Token: 0x0600330C RID: 13068 RVA: 0x00082F28 File Offset: 0x00081128
+		// Token: 0x17000E7C RID: 3708
+		// (get) Token: 0x06003647 RID: 13895 RVA: 0x0008A3A5 File Offset: 0x000885A5
+		// (set) Token: 0x06003648 RID: 13896 RVA: 0x0008A3D0 File Offset: 0x000885D0
 		public virtual bool IsNotLoad
 		{
 			get
@@ -149,9 +147,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DB4 RID: 3508
-		// (get) Token: 0x0600330D RID: 13069 RVA: 0x00082F38 File Offset: 0x00081138
-		// (set) Token: 0x0600330E RID: 13070 RVA: 0x00082F99 File Offset: 0x00081199
+		// Token: 0x17000E7D RID: 3709
+		// (get) Token: 0x06003649 RID: 13897 RVA: 0x0008A3E0 File Offset: 0x000885E0
+		// (set) Token: 0x0600364A RID: 13898 RVA: 0x0008A441 File Offset: 0x00088641
 		public virtual ITriggerActions TriggerActions
 		{
 			get
@@ -179,18 +177,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400217D RID: 8573
+		// Token: 0x0400238D RID: 9101
 		[Nullable(2)]
 		protected new TriggerUe5Component FbInstance;
 
-		// Token: 0x0400217E RID: 8574
+		// Token: 0x0400238E RID: 9102
 		[Nullable(2)]
 		protected new TriggerUe5Component_SetValue PocoInterface;
 
-		// Token: 0x0400217F RID: 8575
+		// Token: 0x0400238F RID: 9103
 		private ITriggerActions _TriggerActionsCache;
 
-		// Token: 0x04002180 RID: 8576
+		// Token: 0x04002390 RID: 9104
 		private bool _TriggerActionsInited;
 	}
 }

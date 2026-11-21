@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
 using Aki.Protocol;
@@ -25,12 +24,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 {
-	// Token: 0x02007066 RID: 28774
+	// Token: 0x020061E7 RID: 25063
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PawnInteractController
 	{
-		// Token: 0x06046077 RID: 286839 RVA: 0x01174D9C File Offset: 0x01172F9C
+		// Token: 0x0603C272 RID: 246386 RVA: 0x0111E960 File Offset: 0x0111CB60
 		public void Dispose()
 		{
 			this.ActorComp = null;
@@ -44,6 +43,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			this.PlayerInteractiveRange = null;
 			this.PreTalkConfigs = null;
 			this.SectorRange = null;
+			this.ScreenDetectConfig = null;
 			this.OnInteractionUpdate = null;
 			this.OnInteractActionEnd = null;
 			if (InteractConfirmController.Instance.CheckHandleValid(this.SecondConfirmHandle))
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			this.RangesByTags.Clear();
 		}
 
-		// Token: 0x06046078 RID: 286840 RVA: 0x01174E98 File Offset: 0x01173098
+		// Token: 0x0603C273 RID: 246387 RVA: 0x0111EA64 File Offset: 0x0111CC64
 		public PawnInteractController(PawnInteractNewComponent interactComp)
 		{
 			this.InteractEntity = new InteractEntity(interactComp.Entity);
@@ -70,8 +70,8 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			this.InteractEntity.InteractRange = Math.Max(this.InteractRange, this.InteractExitRange);
 		}
 
-		// Token: 0x17009BFC RID: 39932
-		// (get) Token: 0x06046079 RID: 286841 RVA: 0x01174F80 File Offset: 0x01173180
+		// Token: 0x17007182 RID: 29058
+		// (get) Token: 0x0603C274 RID: 246388 RVA: 0x0111EB4C File Offset: 0x0111CD4C
 		[Nullable(2)]
 		public string DefaultShowOption
 		{
@@ -96,13 +96,13 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x0604607A RID: 286842 RVA: 0x01174FFA File Offset: 0x011731FA
+		// Token: 0x0603C275 RID: 246389 RVA: 0x0111EBC6 File Offset: 0x0111CDC6
 		public EDoInteract GetInteractType()
 		{
 			return this.DefaultInteractType;
 		}
 
-		// Token: 0x0604607B RID: 286843 RVA: 0x01175002 File Offset: 0x01173202
+		// Token: 0x0603C276 RID: 246390 RVA: 0x0111EBCE File Offset: 0x0111CDCE
 		[NullableContext(0)]
 		public OneOf<EInteractDefaultIcon, EInteractIcon> GetInteractIcon()
 		{
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return this.InteractIcon;
 		}
 
-		// Token: 0x0604607C RID: 286844 RVA: 0x01175038 File Offset: 0x01173238
+		// Token: 0x0603C277 RID: 246391 RVA: 0x0111EC04 File Offset: 0x0111CE04
 		private unsafe void InitConfigs()
 		{
 			CreatureDataComponent creatureData = this.ActorComp.CreatureData;
@@ -154,11 +154,12 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 						this.RangesByTags[rangeByTag.Tag] = rangeByTag;
 					}
 				}
+				float? num;
 				if (component.ExitRange != null)
 				{
-					float? exitRange = component.ExitRange;
-					float num = 0f;
-					if (!(exitRange.GetValueOrDefault() == num & exitRange != null))
+					num = component.ExitRange;
+					float num2 = 0f;
+					if (!(num.GetValueOrDefault() == num2 & num != null))
 					{
 						this.DefaultExitRange = component.ExitRange.Value;
 					}
@@ -182,6 +183,15 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 					{
 						this.PlayerInteractiveRange = interactPlayerDiractionToLeisure;
 					}
+				}
+				if (component.ScreenDetectLimit != null)
+				{
+					this.ScreenDetectConfig = component.ScreenDetectLimit;
+				}
+				num = component.ForbiddenRange;
+				if (num != null && num.GetValueOrDefault() != 0f)
+				{
+					this.ForbiddenRange = component.ForbiddenRange.Value;
 				}
 				if (component.InteractPointOffset != null)
 				{
@@ -255,7 +265,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			this.UpdateOptionList();
 		}
 
-		// Token: 0x0604607D RID: 286845 RVA: 0x01175454 File Offset: 0x01173654
+		// Token: 0x0603C278 RID: 246392 RVA: 0x0111F068 File Offset: 0x0111D268
 		[NullableContext(2)]
 		private void InitDynamicOptionList(InteractComponentPb interactCompData)
 		{
@@ -270,7 +280,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x0604607E RID: 286846 RVA: 0x011754DC File Offset: 0x011736DC
+		// Token: 0x0603C279 RID: 246393 RVA: 0x0111F0F0 File Offset: 0x0111D2F0
 		public void ClearDirectOptions()
 		{
 			if (this.InteractEntity == null)
@@ -283,7 +293,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			this.InteractEntity.DirectOptionGray.Clear();
 		}
 
-		// Token: 0x0604607F RID: 286847 RVA: 0x01175534 File Offset: 0x01173734
+		// Token: 0x0603C27A RID: 246394 RVA: 0x0111F148 File Offset: 0x0111D348
 		public bool UpdateDirectOptions(float distance, bool isContinue = true, bool isInteractRange = true, bool checkFlow = false)
 		{
 			if (this.InteractOptions == null)
@@ -320,7 +330,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			if (instance != null && instance.IsInRecallInstance())
 			{
 				IEntityData entityData = CreatureModel.Instance.GetEntityData(new int?(this.GetPbDataId()), null);
-				if (!RecallQuestModel.Instance.CheckIfRecallEntity((entityData != null) ? new int?(entityData.Id) : null) && (entityData == null || !entityData.InSleep.GetValueOrDefault()) && this.PreTalkConfigs == null)
+				if (entityData != null && !RecallQuestModel.Instance.CheckIfRecallEntity(new int?(entityData.Id)) && !entityData.InSleep.GetValueOrDefault() && this.PreTalkConfigs == null)
 				{
 					flag = true;
 					if (!this.InteractOptions.Exists((CommonInteractOption option) => option.KeepInRecall.GetValueOrDefault()))
@@ -344,16 +354,16 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 					{
 						if (this.InteractEntity.EntityId == null)
 						{
-							goto IL_245;
+							goto IL_230;
 						}
 						int? entityId = this.InteractEntity.EntityId;
 						int num = 0;
 						if (entityId.GetValueOrDefault() == num & entityId != null)
 						{
-							goto IL_245;
+							goto IL_230;
 						}
 						bool flag3 = InteractionModel.Instance.CheckOptionUniqueness(this.InteractEntity.EntityId.Value, commonInteractOption, distance);
-						IL_246:
+						IL_231:
 						if (flag3)
 						{
 							this.TempDirectOptionInstances.Add(commonInteractOption);
@@ -380,9 +390,9 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 							continue;
 						}
 						continue;
-						IL_245:
+						IL_230:
 						flag3 = false;
-						goto IL_246;
+						goto IL_231;
 					}
 				}
 			}
@@ -417,7 +427,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return flag2 || this.InteractEntity.DirectOptionInstanceIds.Count > 0;
 		}
 
-		// Token: 0x06046080 RID: 286848 RVA: 0x011759C4 File Offset: 0x01173BC4
+		// Token: 0x0603C27B RID: 246395 RVA: 0x0111F5C4 File Offset: 0x0111D7C4
 		[NullableContext(2)]
 		private void InitRandomOptionList(InteractComponentPb interactCompData, IRandomInteract randomInteractConfig, int pbDataId)
 		{
@@ -444,7 +454,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x06046081 RID: 286849 RVA: 0x01175A90 File Offset: 0x01173C90
+		// Token: 0x0603C27C RID: 246396 RVA: 0x0111F690 File Offset: 0x0111D890
 		private void InitNormalOptionList(InteractComponent config)
 		{
 			if (config.InteractIcon != null)
@@ -473,7 +483,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x06046082 RID: 286850 RVA: 0x01175B54 File Offset: 0x01173D54
+		// Token: 0x0603C27D RID: 246397 RVA: 0x0111F754 File Offset: 0x0111D954
 		public void InitOptionWithOffset(Action<int, float, float, global::Vector, Action, Action> initFunc)
 		{
 			List<CommonInteractOption> interactOptions = this.InteractOptions;
@@ -502,7 +512,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x06046083 RID: 286851 RVA: 0x01175C60 File Offset: 0x01173E60
+		// Token: 0x0603C27E RID: 246398 RVA: 0x0111F860 File Offset: 0x0111DA60
 		private void UpdateOptionList()
 		{
 			this.FindMaxInteractRange();
@@ -518,7 +528,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x06046084 RID: 286852 RVA: 0x01175CA0 File Offset: 0x01173EA0
+		// Token: 0x0603C27F RID: 246399 RVA: 0x0111F8A0 File Offset: 0x0111DAA0
 		public bool IsInSectorRange()
 		{
 			if (this.SectorRange == null)
@@ -572,7 +582,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return false;
 		}
 
-		// Token: 0x06046085 RID: 286853 RVA: 0x01175DE4 File Offset: 0x01173FE4
+		// Token: 0x0603C280 RID: 246400 RVA: 0x0111F9E4 File Offset: 0x0111DBE4
 		public bool IsInPlayerInteractiveRange()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -609,7 +619,32 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return num > (float)this.PlayerInteractiveRange.Begin && num < (float)this.PlayerInteractiveRange.End;
 		}
 
-		// Token: 0x06046086 RID: 286854 RVA: 0x01175EFC File Offset: 0x011740FC
+		// Token: 0x0603C281 RID: 246401 RVA: 0x0111FAFC File Offset: 0x0111DCFC
+		public bool IsInScreenDetectRange()
+		{
+			if (this.ScreenDetectConfig == null)
+			{
+				return true;
+			}
+			TsCharacterController characterController = Global.CharacterController;
+			if (characterController == null)
+			{
+				return true;
+			}
+			APlayerController player = characterController;
+			FVectorDouble fvectorDouble = this.GetInteractPoint().ToUeVector(false);
+			if (!UGameplayStatics.D_ProjectWorldToScreen(player, fvectorDouble, ref PawnInteractController.ScreenPosRef, false))
+			{
+				return false;
+			}
+			FVector2D screenPosRef = PawnInteractController.ScreenPosRef;
+			characterController.GetViewportSize(ref PawnInteractController.ScreenSizeXRef, ref PawnInteractController.ScreenSizeYRef);
+			int screenSizeXRef = PawnInteractController.ScreenSizeXRef;
+			int screenSizeYRef = PawnInteractController.ScreenSizeYRef;
+			return TsInteractionUtils.IsScreenPositionInDetectShape(screenPosRef, screenSizeXRef, screenSizeYRef, this.ScreenDetectConfig);
+		}
+
+		// Token: 0x0603C282 RID: 246402 RVA: 0x0111FB6C File Offset: 0x0111DD6C
 		private bool IsInSectorRangeWithoutStandardGravity()
 		{
 			if (this.SectorRange == null)
@@ -671,7 +706,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return false;
 		}
 
-		// Token: 0x06046087 RID: 286855 RVA: 0x0117609C File Offset: 0x0117429C
+		// Token: 0x0603C283 RID: 246403 RVA: 0x0111FD0C File Offset: 0x0111DF0C
 		private bool IsInPlayerInteractiveRangeWithoutStandardGravity()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -713,7 +748,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return num > (float)this.PlayerInteractiveRange.Begin && num < (float)this.PlayerInteractiveRange.End;
 		}
 
-		// Token: 0x06046088 RID: 286856 RVA: 0x011761E7 File Offset: 0x011743E7
+		// Token: 0x0603C284 RID: 246404 RVA: 0x0111FE57 File Offset: 0x0111E057
 		public bool IsMatchRoleOption()
 		{
 			if (this.MatchRoleOption == null || this.MatchRoleOption.Count <= 0)
@@ -723,7 +758,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return SceneTeamController.Instance.IsMatchRoleOption(this.MatchRoleOption);
 		}
 
-		// Token: 0x06046089 RID: 286857 RVA: 0x01176220 File Offset: 0x01174420
+		// Token: 0x0603C285 RID: 246405 RVA: 0x0111FE90 File Offset: 0x0111E090
 		public global::Vector GetInteractPoint()
 		{
 			this.InteractPoint.DeepCopy(this.ActorComp.ActorLocationProxy);
@@ -750,14 +785,14 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return this.InteractPoint;
 		}
 
-		// Token: 0x0604608A RID: 286858 RVA: 0x01176334 File Offset: 0x01174534
+		// Token: 0x0603C286 RID: 246406 RVA: 0x0111FFA4 File Offset: 0x0111E1A4
 		[NullableContext(2)]
 		public IInteractCameraOffsetConfig GetCameraOffsetConfig()
 		{
 			return this.InteractCameraOffsetConifg;
 		}
 
-		// Token: 0x0604608B RID: 286859 RVA: 0x0117633C File Offset: 0x0117453C
+		// Token: 0x0603C287 RID: 246407 RVA: 0x0111FFAC File Offset: 0x0111E1AC
 		private void FindMaxInteractRange()
 		{
 			this.MaxRange = this.DefaultRange;
@@ -775,7 +810,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x0604608C RID: 286860 RVA: 0x011763D4 File Offset: 0x011745D4
+		// Token: 0x0603C288 RID: 246408 RVA: 0x01120044 File Offset: 0x0111E244
 		private void SortOptionList()
 		{
 			if (this.InteractOptions == null)
@@ -784,13 +819,15 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 			if (this.InteractOptions.Count == 0)
 			{
+				this.CurrentOption = null;
+				this.TempInteractiveOption = null;
 				return;
 			}
 			this.CurrentOption = this.InteractOptions[0];
 			this.TempInteractiveOption = null;
 		}
 
-		// Token: 0x0604608D RID: 286861 RVA: 0x01176408 File Offset: 0x01174608
+		// Token: 0x0603C289 RID: 246409 RVA: 0x01120084 File Offset: 0x0111E284
 		[NullableContext(2)]
 		public CommonInteractOption GetInteractiveOption(bool checkFlow = false)
 		{
@@ -830,7 +867,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return this.TempInteractiveOption;
 		}
 
-		// Token: 0x0604608E RID: 286862 RVA: 0x011764C8 File Offset: 0x011746C8
+		// Token: 0x0603C28A RID: 246410 RVA: 0x01120144 File Offset: 0x0111E344
 		private CommonInteractOption CreateOption(IInteractOption option, EOptionType optionType, [Nullable(2)] GeneralContext context = null, ECustomOptionType customOptionType = ECustomOptionType.None, EInteractContentType optionContentType = EInteractContentType.None, bool delayRemove = false)
 		{
 			float range = option.Range ?? this.DefaultRange;
@@ -846,7 +883,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return commonInteractOption;
 		}
 
-		// Token: 0x0604608F RID: 286863 RVA: 0x0117654C File Offset: 0x0117474C
+		// Token: 0x0603C28B RID: 246411 RVA: 0x011201C8 File Offset: 0x0111E3C8
 		[NullableContext(2)]
 		public int AddDynamicInteractOption([Nullable(1)] IInteractOption option, GeneralContext context = null, string optionText = null, bool delayRemove = false, bool updateOptionList = true)
 		{
@@ -916,7 +953,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return commonInteractOption.InstanceId;
 		}
 
-		// Token: 0x06046090 RID: 286864 RVA: 0x011766EC File Offset: 0x011748EC
+		// Token: 0x0603C28C RID: 246412 RVA: 0x01120368 File Offset: 0x0111E568
 		private void SortQuestOptions()
 		{
 			this.QuestOptions.Sort(delegate(CommonInteractOption a, CommonInteractOption b)
@@ -941,7 +978,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			});
 		}
 
-		// Token: 0x06046091 RID: 286865 RVA: 0x01176718 File Offset: 0x01174918
+		// Token: 0x0603C28D RID: 246413 RVA: 0x01120394 File Offset: 0x0111E594
 		public bool RemoveDynamicInteractOption(string guid)
 		{
 			if (this.InteractOptions == null)
@@ -999,7 +1036,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return flag2;
 		}
 
-		// Token: 0x06046092 RID: 286866 RVA: 0x01176880 File Offset: 0x01174A80
+		// Token: 0x0603C28E RID: 246414 RVA: 0x011204FC File Offset: 0x0111E6FC
 		[NullableContext(2)]
 		public int AddClientInteractOption([Nullable(1)] ActionParams actionParam, IConditionGroup condition = null, EDoInteract? interactType = 1, float? range = null, string tidContent = null, ECustomOptionType? customOptionType = 0, global::Vector offset = null, bool? isPlayerTurn = null)
 		{
@@ -1014,7 +1051,12 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			List<CommonActionInfo> list = new List<CommonActionInfo>();
 			list.Add(commonActionInfo);
 			CommonInteractActions commonInteractActions = new CommonInteractActions();
-			commonInteractActions.Actions = list.Cast<ActionInfo>().ToList<ActionInfo>();
+			List<ActionInfo> list2 = new List<ActionInfo>();
+			foreach (CommonActionInfo item in list)
+			{
+				list2.Add(item);
+			}
+			commonInteractActions.Actions = list2;
 			CommonInteractOption commonInteractOption = new CommonInteractOption();
 			commonInteractOption.Type = commonInteractActions;
 			commonInteractOption.Condition = condition;
@@ -1050,7 +1092,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return commonInteractOption2.InstanceId;
 		}
 
-		// Token: 0x06046093 RID: 286867 RVA: 0x011769A0 File Offset: 0x01174BA0
+		// Token: 0x0603C28F RID: 246415 RVA: 0x01120658 File Offset: 0x0111E858
 		public bool RemoveClientInteractOption(int instanceId)
 		{
 			if (this.InteractOptions == null)
@@ -1076,7 +1118,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return flag;
 		}
 
-		// Token: 0x06046094 RID: 286868 RVA: 0x01176A10 File Offset: 0x01174C10
+		// Token: 0x0603C290 RID: 246416 RVA: 0x011206C8 File Offset: 0x0111E8C8
 		public void OnChangeModeFinish()
 		{
 			if (this.InteractOptions == null)
@@ -1093,7 +1135,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x06046095 RID: 286869 RVA: 0x01176A94 File Offset: 0x01174C94
+		// Token: 0x0603C291 RID: 246417 RVA: 0x0112074C File Offset: 0x0111E94C
 		public void ChangeOptionText(string guid, string text)
 		{
 			if (this.InteractOptions == null)
@@ -1116,7 +1158,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			commonInteractOption.TidContent = text;
 		}
 
-		// Token: 0x06046096 RID: 286870 RVA: 0x01176B08 File Offset: 0x01174D08
+		// Token: 0x0603C292 RID: 246418 RVA: 0x011207C0 File Offset: 0x0111E9C0
 		public void ChangeOptionDisabled(int instanceId, bool disabled)
 		{
 			if (this.InteractOptions == null)
@@ -1139,7 +1181,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			commonInteractOption.SetDisable(disabled);
 		}
 
-		// Token: 0x06046097 RID: 286871 RVA: 0x01176B78 File Offset: 0x01174D78
+		// Token: 0x0603C293 RID: 246419 RVA: 0x01120830 File Offset: 0x0111EA30
 		public void ChangeOptiontRange(int instanceId, int range, int exitRange = 0)
 		{
 			if (this.InteractOptions == null)
@@ -1163,14 +1205,14 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			this.UpdateOptionList();
 		}
 
-		// Token: 0x06046098 RID: 286872 RVA: 0x01176BF4 File Offset: 0x01174DF4
+		// Token: 0x0603C294 RID: 246420 RVA: 0x011208AC File Offset: 0x0111EAAC
 		public void ChangeInteractOption(CommonInteractOption newOption)
 		{
 			this.CurrentOption = newOption;
 		}
 
-		// Token: 0x17009BFD RID: 39933
-		// (get) Token: 0x06046099 RID: 286873 RVA: 0x01176BFD File Offset: 0x01174DFD
+		// Token: 0x17007183 RID: 29059
+		// (get) Token: 0x0603C295 RID: 246421 RVA: 0x011208B5 File Offset: 0x0111EAB5
 		public CommonInteractOption CurrentInteractOption
 		{
 			get
@@ -1179,8 +1221,8 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x17009BFE RID: 39934
-		// (get) Token: 0x0604609A RID: 286874 RVA: 0x01176C08 File Offset: 0x01174E08
+		// Token: 0x17007184 RID: 29060
+		// (get) Token: 0x0603C296 RID: 246422 RVA: 0x011208C0 File Offset: 0x0111EAC0
 		public List<CommonInteractOption> Options
 		{
 			get
@@ -1204,8 +1246,8 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x17009BFF RID: 39935
-		// (get) Token: 0x0604609B RID: 286875 RVA: 0x01176C6F File Offset: 0x01174E6F
+		// Token: 0x17007185 RID: 29061
+		// (get) Token: 0x0603C297 RID: 246423 RVA: 0x01120927 File Offset: 0x0111EB27
 		public List<CommonInteractOption> QuestOptionList
 		{
 			get
@@ -1214,8 +1256,8 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x17009C00 RID: 39936
-		// (get) Token: 0x0604609C RID: 286876 RVA: 0x01176C78 File Offset: 0x01174E78
+		// Token: 0x17007186 RID: 29062
+		// (get) Token: 0x0603C298 RID: 246424 RVA: 0x01120930 File Offset: 0x0111EB30
 		[Nullable(new byte[]
 		{
 			1,
@@ -1236,7 +1278,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 				if (instance != null && instance.IsInRecallInstance())
 				{
 					IEntityData entityData = CreatureModel.Instance.GetEntityData(new int?(this.GetPbDataId()), null);
-					if (entityData == null || !entityData.InSleep.GetValueOrDefault())
+					if (entityData != null && !entityData.InSleep.GetValueOrDefault())
 					{
 						flag = true;
 					}
@@ -1264,8 +1306,8 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x17009C01 RID: 39937
-		// (get) Token: 0x0604609D RID: 286877 RVA: 0x01176DF0 File Offset: 0x01174FF0
+		// Token: 0x17007187 RID: 29063
+		// (get) Token: 0x0603C299 RID: 246425 RVA: 0x01120AA4 File Offset: 0x0111ECA4
 		public bool HasDynamicOption
 		{
 			get
@@ -1274,8 +1316,8 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x17009C02 RID: 39938
-		// (get) Token: 0x0604609E RID: 286878 RVA: 0x01176E00 File Offset: 0x01175000
+		// Token: 0x17007188 RID: 29064
+		// (get) Token: 0x0603C29A RID: 246426 RVA: 0x01120AB4 File Offset: 0x0111ECB4
 		[Nullable(2)]
 		public AActor Owner
 		{
@@ -1291,8 +1333,8 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x17009C03 RID: 39939
-		// (get) Token: 0x0604609F RID: 286879 RVA: 0x01176E14 File Offset: 0x01175014
+		// Token: 0x17007189 RID: 29065
+		// (get) Token: 0x0603C29B RID: 246427 RVA: 0x01120AC8 File Offset: 0x0111ECC8
 		public int? EntityId
 		{
 			get
@@ -1311,8 +1353,8 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x17009C04 RID: 39940
-		// (get) Token: 0x060460A0 RID: 286880 RVA: 0x01176E52 File Offset: 0x01175052
+		// Token: 0x1700718A RID: 29066
+		// (get) Token: 0x0603C29C RID: 246428 RVA: 0x01120B06 File Offset: 0x0111ED06
 		[Nullable(2)]
 		public CreatureDataComponent CreatureData
 		{
@@ -1328,7 +1370,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x060460A1 RID: 286881 RVA: 0x01176E65 File Offset: 0x01175065
+		// Token: 0x0603C29D RID: 246429 RVA: 0x01120B19 File Offset: 0x0111ED19
 		public bool HasInteractOptions()
 		{
 			List<CommonInteractOption> interactOptions = this.InteractOptions;
@@ -1350,8 +1392,8 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return false;
 		}
 
-		// Token: 0x17009C05 RID: 39941
-		// (get) Token: 0x060460A2 RID: 286882 RVA: 0x01176E93 File Offset: 0x01175093
+		// Token: 0x1700718B RID: 29067
+		// (get) Token: 0x0603C29E RID: 246430 RVA: 0x01120B47 File Offset: 0x0111ED47
 		public float InteractRange
 		{
 			get
@@ -1360,8 +1402,8 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x17009C06 RID: 39942
-		// (get) Token: 0x060460A3 RID: 286883 RVA: 0x01176E9B File Offset: 0x0117509B
+		// Token: 0x1700718C RID: 29068
+		// (get) Token: 0x0603C29F RID: 246431 RVA: 0x01120B4F File Offset: 0x0111ED4F
 		public float InteractExitRange
 		{
 			get
@@ -1374,7 +1416,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x060460A4 RID: 286884 RVA: 0x01176EB8 File Offset: 0x011750B8
+		// Token: 0x0603C2A0 RID: 246432 RVA: 0x01120B6C File Offset: 0x0111ED6C
 		[NullableContext(2)]
 		public CommonInteractOption GetAutoTriggerOption()
 		{
@@ -1396,7 +1438,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return null;
 		}
 
-		// Token: 0x060460A5 RID: 286885 RVA: 0x01176F14 File Offset: 0x01175114
+		// Token: 0x0603C2A1 RID: 246433 RVA: 0x01120BC8 File Offset: 0x0111EDC8
 		public void InteractOption(int index = 0)
 		{
 			if (index >= this.InteractOptions.Count)
@@ -1412,7 +1454,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			TsInteractionUtils.HandleInteractionOptionNew(commonInteractOption, this);
 		}
 
-		// Token: 0x060460A6 RID: 286886 RVA: 0x01176F70 File Offset: 0x01175170
+		// Token: 0x0603C2A2 RID: 246434 RVA: 0x01120C24 File Offset: 0x0111EE24
 		private bool IsSummonedChairTransitionBlockingOption(CommonInteractOption option)
 		{
 			EDoInteract? doIntactType = option.DoIntactType;
@@ -1488,7 +1530,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return false;
 		}
 
-		// Token: 0x060460A7 RID: 286887 RVA: 0x01177128 File Offset: 0x01175328
+		// Token: 0x0603C2A3 RID: 246435 RVA: 0x01120DDC File Offset: 0x0111EFDC
 		private bool CheckOptionCondition(CommonInteractOption option)
 		{
 			if (this.IsSummonedChairTransitionBlockingOption(option))
@@ -1563,19 +1605,19 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return true;
 		}
 
-		// Token: 0x060460A8 RID: 286888 RVA: 0x01177348 File Offset: 0x01175548
+		// Token: 0x0603C2A4 RID: 246436 RVA: 0x01120FFC File Offset: 0x0111F1FC
 		private bool CheckOptionWithOffsetInRange(CommonInteractOption option, bool isInInteractRange = true)
 		{
 			return ((option.Offset == null || option.Offset.IsNearlyZero(9.999999747378752E-05)) && isInInteractRange) || (this.OptionWithOffsetInRange != null && this.OptionWithOffsetInRange.Contains(option.InstanceId));
 		}
 
-		// Token: 0x060460A9 RID: 286889 RVA: 0x0117739A File Offset: 0x0117559A
+		// Token: 0x0603C2A5 RID: 246437 RVA: 0x0112104E File Offset: 0x0111F24E
 		public bool InAnyOptionWithOffsetRange()
 		{
 			return this.OptionWithOffsetInRange.Count > 0;
 		}
 
-		// Token: 0x060460AA RID: 286890 RVA: 0x011773AC File Offset: 0x011755AC
+		// Token: 0x0603C2A6 RID: 246438 RVA: 0x01121060 File Offset: 0x0111F260
 		private bool CheckVisibleBlockFromPlayer()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -1611,19 +1653,19 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return TraceElementCommon.Instance.LineTrace(utraceLineElement, "PawnInteractController_DetectVisibleBlock");
 		}
 
-		// Token: 0x060460AB RID: 286891 RVA: 0x01177507 File Offset: 0x01175707
+		// Token: 0x0603C2A7 RID: 246439 RVA: 0x011211BB File Offset: 0x0111F3BB
 		public void HandlePreInterativeLogic()
 		{
 			PlayFlow preTalkConfigs = this.PreTalkConfigs;
 		}
 
-		// Token: 0x060460AC RID: 286892 RVA: 0x01177510 File Offset: 0x01175710
+		// Token: 0x0603C2A8 RID: 246440 RVA: 0x011211C4 File Offset: 0x0111F3C4
 		public void RecordInteraction()
 		{
 			this.InteractCount++;
 		}
 
-		// Token: 0x060460AD RID: 286893 RVA: 0x01177520 File Offset: 0x01175720
+		// Token: 0x0603C2A9 RID: 246441 RVA: 0x011211D4 File Offset: 0x0111F3D4
 		public bool HasDynamicOptionType(List<EChildQuest> typeList)
 		{
 			foreach (CommonInteractOption commonInteractOption in this.DynamicOptions)
@@ -1648,7 +1690,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return false;
 		}
 
-		// Token: 0x060460AE RID: 286894 RVA: 0x0117761C File Offset: 0x0117581C
+		// Token: 0x0603C2AA RID: 246442 RVA: 0x011212D0 File Offset: 0x0111F4D0
 		public bool HasDynamicOptionTask()
 		{
 			foreach (CommonInteractOption commonInteractOption in this.DynamicOptions)
@@ -1661,7 +1703,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return false;
 		}
 
-		// Token: 0x060460AF RID: 286895 RVA: 0x01177694 File Offset: 0x01175894
+		// Token: 0x0603C2AB RID: 246443 RVA: 0x01121348 File Offset: 0x0111F548
 		public bool CheckInteractCount(int value, EArithmeticKeyOperation type)
 		{
 			switch (type)
@@ -1683,7 +1725,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x060460B0 RID: 286896 RVA: 0x01177707 File Offset: 0x01175907
+		// Token: 0x0603C2AC RID: 246444 RVA: 0x011213BB File Offset: 0x0111F5BB
 		public int GetPbDataId()
 		{
 			BaseActorComponent actorComp = this.ActorComp;
@@ -1694,7 +1736,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return actorComp.CreatureData.GetPbDataId();
 		}
 
-		// Token: 0x060460B1 RID: 286897 RVA: 0x01177720 File Offset: 0x01175920
+		// Token: 0x0603C2AD RID: 246445 RVA: 0x011213D4 File Offset: 0x0111F5D4
 		[NullableContext(2)]
 		public CommonInteractOption GetOptionByIndex(int index)
 		{
@@ -1712,7 +1754,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return null;
 		}
 
-		// Token: 0x060460B2 RID: 286898 RVA: 0x01177788 File Offset: 0x01175988
+		// Token: 0x0603C2AE RID: 246446 RVA: 0x0112143C File Offset: 0x0111F63C
 		[NullableContext(2)]
 		public CommonInteractOption GetOptionByInstanceId(int index)
 		{
@@ -1729,7 +1771,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return null;
 		}
 
-		// Token: 0x060460B3 RID: 286899 RVA: 0x011777EC File Offset: 0x011759EC
+		// Token: 0x0603C2AF RID: 246447 RVA: 0x011214A0 File Offset: 0x0111F6A0
 		[return: Nullable(2)]
 		public CommonInteractOption GetOptionByGuid(string guid)
 		{
@@ -1750,7 +1792,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return null;
 		}
 
-		// Token: 0x060460B4 RID: 286900 RVA: 0x01177860 File Offset: 0x01175A60
+		// Token: 0x0603C2B0 RID: 246448 RVA: 0x01121514 File Offset: 0x0111F714
 		public void HandleInteractRequest()
 		{
 			PawnInteractNewComponent interactComp = this.InteractComp;
@@ -1774,7 +1816,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x060460B5 RID: 286901 RVA: 0x011778F0 File Offset: 0x01175AF0
+		// Token: 0x0603C2B1 RID: 246449 RVA: 0x011215A4 File Offset: 0x0111F7A4
 		public void HandleInteractResponse(ErrorCode errorCode, bool interacting)
 		{
 			PawnInteractNewComponent interactComp = this.InteractComp;
@@ -1791,10 +1833,14 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 				string message = "交互失败";
 				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("errorCode", errorCode);
 				instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-				this.InteractComp.SetServerLockInteract(false, "交互失败");
+				PawnInteractNewComponent interactComp2 = this.InteractComp;
+				if (interactComp2 != null && interactComp2.Valid)
+				{
+					this.InteractComp.SetServerLockInteract(false, "交互失败");
+				}
 				if (errorCode != ErrorCode.ErrSceneEntityNotExist && errorCode != ErrorCode.ErrInteractRange && errorCode != ErrorCode.ErrInteractCd && errorCode != ErrorCode.ErrPreCondition && errorCode != ErrorCode.ErrInteractOptionGuidInvalid && errorCode != ErrorCode.ErrInteractIsNotParticipant && errorCode != ErrorCode.ErrInteracTreeSuspend && errorCode != ErrorCode.ErrorBanInteractEntity)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(errorCode, 29908, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(errorCode, 29979, null, true, true);
 				}
 				if (!PlotModel.Instance.IsInPlot && UiManager.Instance.IsViewShow(EUiViewName.PlotView))
 				{
@@ -1821,7 +1867,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			EventSystem.Instance.Emit(EEventName.OnInteractDropItemSuccess);
 		}
 
-		// Token: 0x060460B6 RID: 286902 RVA: 0x01177A2E File Offset: 0x01175C2E
+		// Token: 0x0603C2B2 RID: 246450 RVA: 0x011216F6 File Offset: 0x0111F8F6
 		public void HandleInteractClientAction()
 		{
 			PawnInteractNewComponent interactComp = this.InteractComp;
@@ -1832,7 +1878,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x060460B7 RID: 286903 RVA: 0x01177A5F File Offset: 0x01175C5F
+		// Token: 0x0603C2B3 RID: 246451 RVA: 0x01121727 File Offset: 0x0111F927
 		public void FinishInteractClientAction()
 		{
 			PawnInteractNewComponent interactComp = this.InteractComp;
@@ -1843,7 +1889,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x060460B8 RID: 286904 RVA: 0x01177A90 File Offset: 0x01175C90
+		// Token: 0x0603C2B4 RID: 246452 RVA: 0x01121758 File Offset: 0x0111F958
 		[NullableContext(2)]
 		private bool CheckDynamicInteractOptionValid(GeneralContext context)
 		{
@@ -1889,13 +1935,13 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return result;
 		}
 
-		// Token: 0x060460B9 RID: 286905 RVA: 0x01177B53 File Offset: 0x01175D53
+		// Token: 0x0603C2B5 RID: 246453 RVA: 0x0112181B File Offset: 0x0111FA1B
 		public EInteractAdditionalInfoType? GetInteractAdditionalInfoType()
 		{
 			return this.InteractAdditionalInfoType;
 		}
 
-		// Token: 0x060460BA RID: 286906 RVA: 0x01177B5C File Offset: 0x01175D5C
+		// Token: 0x0603C2B6 RID: 246454 RVA: 0x01121824 File Offset: 0x0111FA24
 		public string GetInteractionDebugInfos()
 		{
 			if (this.InteractOptions != null)
@@ -1950,7 +1996,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return "无";
 		}
 
-		// Token: 0x060460BB RID: 286907 RVA: 0x01177DA8 File Offset: 0x01175FA8
+		// Token: 0x0603C2B7 RID: 246455 RVA: 0x01121A70 File Offset: 0x0111FC70
 		public void InitInteractPerceptionWithOffset([Nullable(new byte[]
 		{
 			1,
@@ -2034,13 +2080,13 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x060460BC RID: 286908 RVA: 0x01177E88 File Offset: 0x01176088
+		// Token: 0x0603C2B8 RID: 246456 RVA: 0x01121B50 File Offset: 0x0111FD50
 		public bool IsAnyTagCheckInRange()
 		{
 			return this.TagCheckInRange.Count > 0;
 		}
 
-		// Token: 0x060460BD RID: 286909 RVA: 0x01177E98 File Offset: 0x01176098
+		// Token: 0x0603C2B9 RID: 246457 RVA: 0x01121B60 File Offset: 0x0111FD60
 		public bool IsHasTagInTagCheckRange()
 		{
 			foreach (int tagId in this.TagCheckInRange)
@@ -2064,7 +2110,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return false;
 		}
 
-		// Token: 0x060460BE RID: 286910 RVA: 0x01177F24 File Offset: 0x01176124
+		// Token: 0x0603C2BA RID: 246458 RVA: 0x01121BEC File Offset: 0x0111FDEC
 		private void OnTagChangeInRange(int tagId, bool bTagExists)
 		{
 			if (bTagExists || !this.TagCheckInRange.Contains(tagId))
@@ -2090,30 +2136,30 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			interactComp2.ForceUpdate();
 		}
 
-		// Token: 0x04024A9E RID: 150174
+		// Token: 0x0401FD54 RID: 130388
 		private const int DEFAULT_INTERACT_RANGE = 300;
 
-		// Token: 0x04024A9F RID: 150175
+		// Token: 0x0401FD55 RID: 130389
 		private const string PROFILE_DETECT_VISIBLE_BLOCK = "PawnInteractController_DetectVisibleBlock";
 
-		// Token: 0x04024AA0 RID: 150176
+		// Token: 0x0401FD56 RID: 130390
 		private const int DETECT_VISIBLE_BLOCK_HEIGHT_OFFSET = 10;
 
-		// Token: 0x04024AA1 RID: 150177
+		// Token: 0x0401FD57 RID: 130391
 		private const int EXECUTION_MAX_HEIGHT_DIFF = 50;
 
-		// Token: 0x04024AA2 RID: 150178
+		// Token: 0x0401FD58 RID: 130392
 		private const int PI_DEG = 180;
 
-		// Token: 0x04024AA3 RID: 150179
+		// Token: 0x0401FD59 RID: 130393
 		[Nullable(2)]
 		private BaseActorComponent ActorComp;
 
-		// Token: 0x04024AA4 RID: 150180
+		// Token: 0x0401FD5A RID: 130394
 		[Nullable(2)]
 		private PawnInteractNewComponent InteractComp;
 
-		// Token: 0x04024AA5 RID: 150181
+		// Token: 0x0401FD5B RID: 130395
 		[Nullable(new byte[]
 		{
 			2,
@@ -2121,7 +2167,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 		})]
 		private List<CommonInteractOption> InteractOptions;
 
-		// Token: 0x04024AA6 RID: 150182
+		// Token: 0x0401FD5C RID: 130396
 		[Nullable(new byte[]
 		{
 			2,
@@ -2129,7 +2175,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 		})]
 		private List<CommonInteractOption> ShowInteractOptions;
 
-		// Token: 0x04024AA7 RID: 150183
+		// Token: 0x0401FD5D RID: 130397
 		[Nullable(new byte[]
 		{
 			2,
@@ -2137,7 +2183,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 		})]
 		private List<CommonInteractOption> DynamicOptions;
 
-		// Token: 0x04024AA8 RID: 150184
+		// Token: 0x0401FD5E RID: 130398
 		[Nullable(new byte[]
 		{
 			2,
@@ -2145,114 +2191,133 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 		})]
 		private List<CommonInteractOption> QuestOptions;
 
-		// Token: 0x04024AA9 RID: 150185
+		// Token: 0x0401FD5F RID: 130399
 		[Nullable(2)]
 		private CommonInteractOption CurrentOption;
 
-		// Token: 0x04024AAA RID: 150186
+		// Token: 0x0401FD60 RID: 130400
 		private string BaseContent = "";
 
-		// Token: 0x04024AAB RID: 150187
+		// Token: 0x0401FD61 RID: 130401
 		private float DefaultRange = 300f;
 
-		// Token: 0x04024AAC RID: 150188
+		// Token: 0x0401FD62 RID: 130402
 		private float DefaultExitRange = -1f;
 
-		// Token: 0x04024AAD RID: 150189
+		// Token: 0x0401FD63 RID: 130403
 		private readonly Dictionary<int, IRangeByTag> RangesByTags = new Dictionary<int, IRangeByTag>();
 
-		// Token: 0x04024AAE RID: 150190
+		// Token: 0x0401FD64 RID: 130404
 		[Nullable(2)]
 		public IInteractSectorRange SectorRange;
 
-		// Token: 0x04024AAF RID: 150191
+		// Token: 0x0401FD65 RID: 130405
 		[Nullable(2)]
 		public global::Vector LocationOffset;
 
-		// Token: 0x04024AB0 RID: 150192
+		// Token: 0x0401FD66 RID: 130406
 		[Nullable(2)]
 		public IInteractCameraOffsetConfig InteractCameraOffsetConifg;
 
-		// Token: 0x04024AB1 RID: 150193
+		// Token: 0x0401FD67 RID: 130407
 		private float MaxRange;
 
-		// Token: 0x04024AB2 RID: 150194
+		// Token: 0x0401FD68 RID: 130408
 		private EDoInteract DefaultInteractType = EDoInteract.Option;
 
-		// Token: 0x04024AB3 RID: 150195
+		// Token: 0x0401FD69 RID: 130409
 		private EInteractAdditionalInfoType? InteractAdditionalInfoType;
 
-		// Token: 0x04024AB4 RID: 150196
+		// Token: 0x0401FD6A RID: 130410
 		public bool IsTurnAround;
 
-		// Token: 0x04024AB5 RID: 150197
+		// Token: 0x0401FD6B RID: 130411
 		public bool IsTurnRecoveryImmediately;
 
-		// Token: 0x04024AB6 RID: 150198
+		// Token: 0x0401FD6C RID: 130412
 		public bool IsWaitTurnComplete;
 
-		// Token: 0x04024AB7 RID: 150199
+		// Token: 0x0401FD6D RID: 130413
 		public EInterruptMontageType? IsWaitMontageFinish;
 
-		// Token: 0x04024AB8 RID: 150200
+		// Token: 0x0401FD6E RID: 130414
 		[Nullable(0)]
 		private OneOf<EInteractDefaultIcon, EInteractIcon> InteractIcon = EInteractIcon.Dialog;
 
-		// Token: 0x04024AB9 RID: 150201
+		// Token: 0x0401FD6F RID: 130415
 		[Nullable(2)]
 		private string DynamicDirectOptionGuid;
 
-		// Token: 0x04024ABA RID: 150202
+		// Token: 0x0401FD70 RID: 130416
 		private EInteractIcon? DynamicDirectOptionIconType;
 
-		// Token: 0x04024ABB RID: 150203
+		// Token: 0x0401FD71 RID: 130417
 		[Nullable(2)]
 		public PlayFlow PreTalkConfigs;
 
-		// Token: 0x04024ABC RID: 150204
+		// Token: 0x0401FD72 RID: 130418
 		[Nullable(2)]
 		public IInteractPlayerDiractionToLeisure PlayerInteractiveRange;
 
-		// Token: 0x04024ABD RID: 150205
+		// Token: 0x0401FD73 RID: 130419
+		[Nullable(2)]
+		private IInteractScreenDetectShapeCircle ScreenDetectConfig;
+
+		// Token: 0x0401FD74 RID: 130420
+		public float ForbiddenRange;
+
+		// Token: 0x0401FD75 RID: 130421
 		public bool IsPlayerTurnAround;
 
-		// Token: 0x04024ABE RID: 150206
+		// Token: 0x0401FD76 RID: 130422
 		private int InstanceId;
 
-		// Token: 0x04024ABF RID: 150207
+		// Token: 0x0401FD77 RID: 130423
 		private int InteractCount;
 
-		// Token: 0x04024AC0 RID: 150208
+		// Token: 0x0401FD78 RID: 130424
 		private int TempFrame;
 
-		// Token: 0x04024AC1 RID: 150209
+		// Token: 0x0401FD79 RID: 130425
 		[Nullable(2)]
 		public InteractEntity InteractEntity;
 
-		// Token: 0x04024AC2 RID: 150210
+		// Token: 0x0401FD7A RID: 130426
 		[Nullable(2)]
 		private CommonInteractOption TempInteractiveOption;
 
-		// Token: 0x04024AC3 RID: 150211
+		// Token: 0x0401FD7B RID: 130427
 		private readonly global::Vector InteractPoint = global::Vector.Create();
 
-		// Token: 0x04024AC4 RID: 150212
+		// Token: 0x0401FD7C RID: 130428
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TempVector = global::Vector.Create();
 
-		// Token: 0x04024AC5 RID: 150213
+		// Token: 0x0401FD7D RID: 130429
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TempVector2 = global::Vector.Create();
 
-		// Token: 0x04024AC6 RID: 150214
+		// Token: 0x0401FD7E RID: 130430
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TempVector3 = global::Vector.Create();
 
-		// Token: 0x04024AC7 RID: 150215
+		// Token: 0x0401FD7F RID: 130431
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TempVector4 = global::Vector.Create();
 
-		// Token: 0x04024AC8 RID: 150216
+		// Token: 0x0401FD80 RID: 130432
+		[StaticVariableRuleIgnore]
+		private static FVector2D ScreenPosRef;
+
+		// Token: 0x0401FD81 RID: 130433
+		[StaticVariableRuleIgnore]
+		private static int ScreenSizeXRef;
+
+		// Token: 0x0401FD82 RID: 130434
+		[StaticVariableRuleIgnore]
+		private static int ScreenSizeYRef;
+
+		// Token: 0x0401FD83 RID: 130435
 		[Nullable(new byte[]
 		{
 			2,
@@ -2260,33 +2325,33 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 		})]
 		private List<IMatchRoleType> MatchRoleOption;
 
-		// Token: 0x04024AC9 RID: 150217
+		// Token: 0x0401FD84 RID: 130436
 		public readonly List<CommonInteractOption> TempDirectOptionInstances = new List<CommonInteractOption>();
 
-		// Token: 0x04024ACA RID: 150218
+		// Token: 0x0401FD85 RID: 130437
 		public readonly List<CommonInteractOption> PreDirectOptionInstances = new List<CommonInteractOption>();
 
-		// Token: 0x04024ACB RID: 150219
+		// Token: 0x0401FD86 RID: 130438
 		[Nullable(2)]
 		public Action OnInteractionUpdate;
 
-		// Token: 0x04024ACC RID: 150220
+		// Token: 0x0401FD87 RID: 130439
 		[Nullable(2)]
 		public Action OnInteractActionEnd;
 
-		// Token: 0x04024ACD RID: 150221
+		// Token: 0x0401FD88 RID: 130440
 		private readonly HashSet<int> OptionWithOffsetInRange = new HashSet<int>();
 
-		// Token: 0x04024ACE RID: 150222
+		// Token: 0x0401FD89 RID: 130441
 		private readonly HashSet<int> TagCheckInRange = new HashSet<int>();
 
-		// Token: 0x04024ACF RID: 150223
+		// Token: 0x0401FD8A RID: 130442
 		private readonly Dictionary<int, ITagTask> TagCheckInRangeTaskList = new Dictionary<int, ITagTask>();
 
-		// Token: 0x04024AD0 RID: 150224
+		// Token: 0x0401FD8B RID: 130443
 		public int SecondConfirmHandle;
 
-		// Token: 0x04024AD1 RID: 150225
+		// Token: 0x0401FD8C RID: 130444
 		public bool NeedActiveUi = true;
 	}
 }

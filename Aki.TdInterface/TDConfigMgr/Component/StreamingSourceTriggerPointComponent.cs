@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008A9 RID: 2217
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200094C RID: 2380
 	public class StreamingSourceTriggerPointComponent : IComponentBase
 	{
-		// Token: 0x060031A9 RID: 12713 RVA: 0x0007F7D0 File Offset: 0x0007D9D0
+		// Token: 0x060034E5 RID: 13541 RVA: 0x00086CB8 File Offset: 0x00084EB8
 		private StreamingSourceTriggerPointComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060031AA RID: 12714 RVA: 0x0007F808 File Offset: 0x0007DA08
+		// Token: 0x060034E6 RID: 13542 RVA: 0x00086CF0 File Offset: 0x00084EF0
 		public static StreamingSourceTriggerPointComponent Create([Nullable(2)] StreamingSourceTriggerPointComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060031AB RID: 12715 RVA: 0x0007F81B File Offset: 0x0007DA1B
+		// Token: 0x060034E7 RID: 13543 RVA: 0x00086D03 File Offset: 0x00084F03
 		public static StreamingSourceTriggerPointComponent CreateFromSetValue([Nullable(2)] StreamingSourceTriggerPointComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060031AC RID: 12716 RVA: 0x0007F82E File Offset: 0x0007DA2E
+		// Token: 0x060034E8 RID: 13544 RVA: 0x00086D16 File Offset: 0x00084F16
 		public new StreamingSourceTriggerPointComponent_SetValue ToSetValue()
 		{
 			return new StreamingSourceTriggerPointComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D3A RID: 3386
-		// (get) Token: 0x060031AD RID: 12717 RVA: 0x0007F868 File Offset: 0x0007DA68
-		// (set) Token: 0x060031AE RID: 12718 RVA: 0x0007F8A2 File Offset: 0x0007DAA2
+		// Token: 0x17000E03 RID: 3587
+		// (get) Token: 0x060034E9 RID: 13545 RVA: 0x00086D50 File Offset: 0x00084F50
+		// (set) Token: 0x060034EA RID: 13546 RVA: 0x00086D8A File Offset: 0x00084F8A
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D3B RID: 3387
-		// (get) Token: 0x060031AF RID: 12719 RVA: 0x0007F8B0 File Offset: 0x0007DAB0
-		// (set) Token: 0x060031B0 RID: 12720 RVA: 0x0007F8DA File Offset: 0x0007DADA
+		// Token: 0x17000E04 RID: 3588
+		// (get) Token: 0x060034EB RID: 13547 RVA: 0x00086D98 File Offset: 0x00084F98
+		// (set) Token: 0x060034EC RID: 13548 RVA: 0x00086DC2 File Offset: 0x00084FC2
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D3C RID: 3388
-		// (get) Token: 0x060031B1 RID: 12721 RVA: 0x0007F8E8 File Offset: 0x0007DAE8
-		// (set) Token: 0x060031B2 RID: 12722 RVA: 0x0007F922 File Offset: 0x0007DB22
+		// Token: 0x17000E05 RID: 3589
+		// (get) Token: 0x060034ED RID: 13549 RVA: 0x00086DD0 File Offset: 0x00084FD0
+		// (set) Token: 0x060034EE RID: 13550 RVA: 0x00086E0A File Offset: 0x0008500A
 		public virtual int? Radius
 		{
 			get
@@ -129,9 +127,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D3D RID: 3389
-		// (get) Token: 0x060031B3 RID: 12723 RVA: 0x0007F930 File Offset: 0x0007DB30
-		// (set) Token: 0x060031B4 RID: 12724 RVA: 0x0007F957 File Offset: 0x0007DB57
+		// Token: 0x17000E06 RID: 3590
+		// (get) Token: 0x060034EF RID: 13551 RVA: 0x00086E18 File Offset: 0x00085018
+		// (set) Token: 0x060034F0 RID: 13552 RVA: 0x00086E3F File Offset: 0x0008503F
 		public virtual IStreamingSourceConfigBase StreamingSource
 		{
 			get
@@ -153,11 +151,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04002098 RID: 8344
+		// Token: 0x040022AA RID: 8874
 		[Nullable(2)]
 		protected new StreamingSourceTriggerPointComponent FbInstance;
 
-		// Token: 0x04002099 RID: 8345
+		// Token: 0x040022AB RID: 8875
 		[Nullable(2)]
 		protected new StreamingSourceTriggerPointComponent_SetValue PocoInterface;
 	}

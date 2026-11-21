@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059D5 RID: 22997
+	// Token: 0x02005FE2 RID: 24546
 	public class IStreamingSourceConfigT
 	{
-		// Token: 0x1700ACCB RID: 44235
-		// (get) Token: 0x0602703E RID: 159806 RVA: 0x0055E6C6 File Offset: 0x0055C8C6
-		// (set) Token: 0x0602703F RID: 159807 RVA: 0x0055E6CE File Offset: 0x0055C8CE
+		// Token: 0x1700B603 RID: 46595
+		// (get) Token: 0x060295B6 RID: 169398 RVA: 0x005A568A File Offset: 0x005A388A
+		// (set) Token: 0x060295B7 RID: 169399 RVA: 0x005A5692 File Offset: 0x005A3892
 		public int StreamingSourceTargetEntityId { get; set; }
 
-		// Token: 0x1700ACCC RID: 44236
-		// (get) Token: 0x06027040 RID: 159808 RVA: 0x0055E6D7 File Offset: 0x0055C8D7
-		// (set) Token: 0x06027041 RID: 159809 RVA: 0x0055E6DF File Offset: 0x0055C8DF
+		// Token: 0x1700B604 RID: 46596
+		// (get) Token: 0x060295B8 RID: 169400 RVA: 0x005A569B File Offset: 0x005A389B
+		// (set) Token: 0x060295B9 RID: 169401 RVA: 0x005A56A3 File Offset: 0x005A38A3
 		public bool IsNoRenderStreaming { get; set; }
 
-		// Token: 0x1700ACCD RID: 44237
-		// (get) Token: 0x06027042 RID: 159810 RVA: 0x0055E6E8 File Offset: 0x0055C8E8
-		// (set) Token: 0x06027043 RID: 159811 RVA: 0x0055E6F0 File Offset: 0x0055C8F0
+		// Token: 0x1700B605 RID: 46597
+		// (get) Token: 0x060295BA RID: 169402 RVA: 0x005A56AC File Offset: 0x005A38AC
+		// (set) Token: 0x060295BB RID: 169403 RVA: 0x005A56B4 File Offset: 0x005A38B4
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027044 RID: 159812 RVA: 0x0055E6F9 File Offset: 0x0055C8F9
+		// Token: 0x060295BC RID: 169404 RVA: 0x005A56BD File Offset: 0x005A38BD
 		public IStreamingSourceConfigT()
 		{
 			this.StreamingSourceTargetEntityId = 0;

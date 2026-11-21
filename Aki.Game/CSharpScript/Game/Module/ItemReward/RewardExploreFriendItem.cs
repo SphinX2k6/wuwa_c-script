@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057FE RID: 22526
+	// Token: 0x020047D5 RID: 18389
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.ItemReward
 	})]
 	public class RewardExploreFriendItem : GridProxyAbstract<IRewardExploreFriendData>
 	{
-		// Token: 0x06039455 RID: 234581 RVA: 0x00D94CB0 File Offset: 0x00D92EB0
+		// Token: 0x0602E369 RID: 189289 RVA: 0x00CE3AFC File Offset: 0x00CE1CFC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -47,21 +47,21 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039456 RID: 234582 RVA: 0x00D94DFB File Offset: 0x00D92FFB
+		// Token: 0x0602E36A RID: 189290 RVA: 0x00CE3C47 File Offset: 0x00CE1E47
 		protected override void OnAfterShow()
 		{
 			base.OnAfterShow();
 			EventSystem.Instance.Add<int>(EEventName.ApplicationSent, new Action<int>(this.ApplicationSent));
 		}
 
-		// Token: 0x06039457 RID: 234583 RVA: 0x00D94E1F File Offset: 0x00D9301F
+		// Token: 0x0602E36B RID: 189291 RVA: 0x00CE3C6B File Offset: 0x00CE1E6B
 		protected override void OnBeforeHide()
 		{
 			base.OnBeforeHide();
 			EventSystem.Instance.Remove(EEventName.ApplicationSent, new Action<int>(this.ApplicationSent));
 		}
 
-		// Token: 0x06039458 RID: 234584 RVA: 0x00D94E44 File Offset: 0x00D93044
+		// Token: 0x0602E36C RID: 189292 RVA: 0x00CE3C90 File Offset: 0x00CE1E90
 		[NullableContext(1)]
 		public override void Refresh(IRewardExploreFriendData data, bool isSelected, int gridIndex)
 		{
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "TowerDefence_Rolename", new <>z__ReadOnlySingleElementList<object>(data.PlayerLevel));
 		}
 
-		// Token: 0x06039459 RID: 234585 RVA: 0x00D94EF8 File Offset: 0x00D930F8
+		// Token: 0x0602E36D RID: 189293 RVA: 0x00CE3D44 File Offset: 0x00CE1F44
 		private void OnClickAddButton()
 		{
 			int playerId = this.DataCache.PlayerId;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x0603945A RID: 234586 RVA: 0x00D94F51 File Offset: 0x00D93151
+		// Token: 0x0602E36E RID: 189294 RVA: 0x00CE3D9D File Offset: 0x00CE1F9D
 		private void ApplicationSent(int playerId)
 		{
 			if (playerId == this.DataCache.PlayerId)
@@ -98,32 +98,32 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x0401DF3C RID: 122684
+		// Token: 0x040189D3 RID: 100819
 		[Nullable(2)]
 		private IRewardExploreFriendData DataCache;
 
-		// Token: 0x0200B9F4 RID: 47604
+		// Token: 0x0200A40A RID: 41994
 		private class EComponent
 		{
-			// Token: 0x04038376 RID: 230262
+			// Token: 0x04032D63 RID: 208227
 			public const int PlayerIconTexture = 0;
 
-			// Token: 0x04038377 RID: 230263
+			// Token: 0x04032D64 RID: 208228
 			public const int PlayerIndexTexture = 1;
 
-			// Token: 0x04038378 RID: 230264
+			// Token: 0x04032D65 RID: 208229
 			public const int PlayerNameText = 2;
 
-			// Token: 0x04038379 RID: 230265
+			// Token: 0x04032D66 RID: 208230
 			public const int PlayerDescText = 3;
 
-			// Token: 0x0403837A RID: 230266
+			// Token: 0x04032D67 RID: 208231
 			public const int AddButton = 4;
 
-			// Token: 0x0403837B RID: 230267
+			// Token: 0x04032D68 RID: 208232
 			public const int DoneSprite = 5;
 
-			// Token: 0x0403837C RID: 230268
+			// Token: 0x04032D69 RID: 208233
 			public const int DoneMaskTexture = 6;
 		}
 	}

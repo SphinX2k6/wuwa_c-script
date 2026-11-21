@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 {
-	// Token: 0x02007027 RID: 28711
+	// Token: 0x020061A8 RID: 25000
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleRoadwayComponent : EntityComponent
 	{
-		// Token: 0x17009BC9 RID: 39881
-		// (get) Token: 0x06045E57 RID: 286295 RVA: 0x01164C4E File Offset: 0x01162E4E
+		// Token: 0x17007129 RID: 28969
+		// (get) Token: 0x0603C02B RID: 245803 RVA: 0x0110EC3A File Offset: 0x0110CE3A
 		public UKuroTransportNetworkSubsystem TransportSystem
 		{
 			get
@@ -27,9 +27,9 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x17009BCA RID: 39882
-		// (get) Token: 0x06045E58 RID: 286296 RVA: 0x01164C7B File Offset: 0x01162E7B
-		public new static Type[] Dependencies
+		// Token: 0x1700712A RID: 28970
+		// (get) Token: 0x0603C02C RID: 245804 RVA: 0x0110EC67 File Offset: 0x0110CE67
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E59 RID: 286297 RVA: 0x01164CA0 File Offset: 0x01162EA0
+		// Token: 0x0603C02D RID: 245805 RVA: 0x0110EC8C File Offset: 0x0110CE8C
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<VehicleActorComponent>();
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E5A RID: 286298 RVA: 0x01164D40 File Offset: 0x01162F40
+		// Token: 0x0603C02E RID: 245806 RVA: 0x0110ED2C File Offset: 0x0110CF2C
 		protected override bool OnEnd()
 		{
 			this.ActorComp = null;
@@ -71,14 +71,14 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E5B RID: 286299 RVA: 0x01164DC2 File Offset: 0x01162FC2
+		// Token: 0x0603C02F RID: 245807 RVA: 0x0110EDAE File Offset: 0x0110CFAE
 		protected override void OnTick(float delta)
 		{
 			this.OnTickNearestRoadway();
 			this.CheckAddOrRemoveUnlimitedNitroTag();
 		}
 
-		// Token: 0x06045E5C RID: 286300 RVA: 0x01164DD0 File Offset: 0x01162FD0
+		// Token: 0x0603C030 RID: 245808 RVA: 0x0110EDBC File Offset: 0x0110CFBC
 		private void OnVehicleBeenEntered(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsDriver || info.VehicleType != EVehicleType.Motorcycle || !info.IsRolePassenger(true))
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.DisableHandle = null;
 		}
 
-		// Token: 0x06045E5D RID: 286301 RVA: 0x01164E2D File Offset: 0x0116302D
+		// Token: 0x0603C031 RID: 245809 RVA: 0x0110EE19 File Offset: 0x0110D019
 		private void OnVehicleBeenLeaved(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsDriver || info.VehicleType != EVehicleType.Motorcycle || !info.IsRolePassenger(true))
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.DisableHandle = new int?(base.Disable("OnVehicleBeenEntered"));
 		}
 
-		// Token: 0x06045E5E RID: 286302 RVA: 0x01164E60 File Offset: 0x01163060
+		// Token: 0x0603C032 RID: 245810 RVA: 0x0110EE4C File Offset: 0x0110D04C
 		private void OnTickNearestRoadway()
 		{
 			if (this.ActorComp == null)
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.SetNearestRoadway(nearestPos, ukuroRoadway);
 		}
 
-		// Token: 0x06045E5F RID: 286303 RVA: 0x01164F14 File Offset: 0x01163114
+		// Token: 0x0603C033 RID: 245811 RVA: 0x0110EF00 File Offset: 0x0110D100
 		private void CheckAddOrRemoveUnlimitedNitroTag()
 		{
 			if (this.DisableUnlimitedNitro)
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.TryRemoveMotorBuff();
 		}
 
-		// Token: 0x06045E60 RID: 286304 RVA: 0x01164F5E File Offset: 0x0116315E
+		// Token: 0x0603C034 RID: 245812 RVA: 0x0110EF4A File Offset: 0x0110D14A
 		private void TryAddMotorBuff()
 		{
 			BaseTagComponent tagComp = this.TagComp;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E61 RID: 286305 RVA: 0x01164F96 File Offset: 0x01163196
+		// Token: 0x0603C035 RID: 245813 RVA: 0x0110EF82 File Offset: 0x0110D182
 		private void TryRemoveMotorBuff()
 		{
 			BaseTagComponent tagComp = this.TagComp;
@@ -180,19 +180,19 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E62 RID: 286306 RVA: 0x01164FCC File Offset: 0x011631CC
+		// Token: 0x0603C036 RID: 245814 RVA: 0x0110EFB8 File Offset: 0x0110D1B8
 		private void OnBanRoadUnlimitedNitroTagChange(int tagId, bool tagExists)
 		{
 			this.DisableUnlimitedNitro = tagExists;
 		}
 
-		// Token: 0x06045E63 RID: 286307 RVA: 0x01164FD5 File Offset: 0x011631D5
+		// Token: 0x0603C037 RID: 245815 RVA: 0x0110EFC1 File Offset: 0x0110D1C1
 		public NearestRoadway GetNearestRoadway()
 		{
 			return this.NearestRoadway;
 		}
 
-		// Token: 0x06045E64 RID: 286308 RVA: 0x01164FE0 File Offset: 0x011631E0
+		// Token: 0x0603C038 RID: 245816 RVA: 0x0110EFCC File Offset: 0x0110D1CC
 		[NullableContext(2)]
 		public void SetNearestRoadway(FVectorDouble? nearestPos, UKuroRoadway nearestRoadway)
 		{
@@ -224,13 +224,13 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.IsOnNearestRoadway = true;
 		}
 
-		// Token: 0x06045E65 RID: 286309 RVA: 0x011650A9 File Offset: 0x011632A9
+		// Token: 0x0603C039 RID: 245817 RVA: 0x0110F095 File Offset: 0x0110D295
 		public bool GetIsOnNearestRoadway()
 		{
 			return this.IsOnNearestRoadway;
 		}
 
-		// Token: 0x06045E66 RID: 286310 RVA: 0x011650B4 File Offset: 0x011632B4
+		// Token: 0x0603C03A RID: 245818 RVA: 0x0110F0A0 File Offset: 0x0110D2A0
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -238,99 +238,108 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				return false;
 			}
 			MotorcycleRoadwayComponent motorcycleRoadwayComponent = (MotorcycleRoadwayComponent)componentTemplate;
-			if (base.CanResetComponentProperty("DisableHandle"))
+			this.DisableHandle = motorcycleRoadwayComponent.DisableHandle;
+			this.DisableUnlimitedNitro = motorcycleRoadwayComponent.DisableUnlimitedNitro;
+			if (motorcycleRoadwayComponent.TransportSystemInner == null)
 			{
-				this.DisableHandle = motorcycleRoadwayComponent.DisableHandle;
+				this.TransportSystemInner = null;
 			}
-			if (base.CanResetComponentProperty("DisableUnlimitedNitro"))
-			{
-				this.DisableUnlimitedNitro = motorcycleRoadwayComponent.DisableUnlimitedNitro;
-			}
-			if (base.CanResetComponentProperty("TransportSystemInner"))
-			{
-				if (motorcycleRoadwayComponent.TransportSystemInner == null)
-				{
-					this.TransportSystemInner = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroTransportNetworkSubsystem>(this.TransportSystemInner), "TransportSystemInner"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (motorcycleRoadwayComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (motorcycleRoadwayComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsOnNearestRoadway"))
-			{
-				this.IsOnNearestRoadway = motorcycleRoadwayComponent.IsOnNearestRoadway;
-			}
-			if (base.CanResetComponentProperty("LastPosition") && motorcycleRoadwayComponent.LastPosition != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LastPosition), "LastPosition"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TransportSystemInner), "TransportSystemInner"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("NearestPosRef"))
+			if (motorcycleRoadwayComponent.ActorComp == null)
 			{
-				this.NearestPosRef = motorcycleRoadwayComponent.NearestPosRef;
+				this.ActorComp = null;
 			}
-			return !base.CanResetComponentProperty("NearestRoadway") || motorcycleRoadwayComponent.NearestRoadway == null || base.CheckClearObject(EntityComponentSystem.ClearObject<NearestRoadway>(this.NearestRoadway), "NearestRoadway");
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
+			{
+				return false;
+			}
+			if (motorcycleRoadwayComponent.TagComp == null)
+			{
+				this.TagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+			{
+				return false;
+			}
+			this.IsOnNearestRoadway = motorcycleRoadwayComponent.IsOnNearestRoadway;
+			if (motorcycleRoadwayComponent.LastPosition != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastPosition), "LastPosition"))
+			{
+				return false;
+			}
+			this.NearestPosRef = motorcycleRoadwayComponent.NearestPosRef;
+			return motorcycleRoadwayComponent.NearestRoadway == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.NearestRoadway), "NearestRoadway");
 		}
 
-		// Token: 0x040248BD RID: 149693
+		// Token: 0x1700712B RID: 28971
+		// (get) Token: 0x0603C03B RID: 245819 RVA: 0x0110F1B5 File Offset: 0x0110D3B5
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700712C RID: 28972
+		// (get) Token: 0x0603C03C RID: 245820 RVA: 0x0110F1B8 File Offset: 0x0110D3B8
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700712D RID: 28973
+		// (get) Token: 0x0603C03D RID: 245821 RVA: 0x0110F1BB File Offset: 0x0110D3BB
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FB73 RID: 129907
 		private const string DISABLE_REASON = "OnVehicleBeenEntered";
 
-		// Token: 0x040248BE RID: 149694
+		// Token: 0x0401FB74 RID: 129908
 		private static readonly int MotorRoadUnlimitedNitroTag = GameplayTagDefine.EGameplayTagId["载具.摩托.功能开关.无限氮气.路网"];
 
-		// Token: 0x040248BF RID: 149695
+		// Token: 0x0401FB75 RID: 129909
 		private static readonly int MotorBanRoadUnlimitedNitroTag = GameplayTagDefine.EGameplayTagId["载具.摩托.功能开关.铺装路氮气禁用"];
 
-		// Token: 0x040248C0 RID: 149696
+		// Token: 0x0401FB76 RID: 129910
 		private int? DisableHandle;
 
-		// Token: 0x040248C1 RID: 149697
+		// Token: 0x0401FB77 RID: 129911
 		private bool DisableUnlimitedNitro;
 
-		// Token: 0x040248C2 RID: 149698
+		// Token: 0x0401FB78 RID: 129912
 		[Nullable(2)]
 		private UKuroTransportNetworkSubsystem TransportSystemInner;
 
-		// Token: 0x040248C3 RID: 149699
+		// Token: 0x0401FB79 RID: 129913
 		[Nullable(2)]
 		private VehicleActorComponent ActorComp;
 
-		// Token: 0x040248C4 RID: 149700
+		// Token: 0x0401FB7A RID: 129914
 		[Nullable(2)]
 		private BaseTagComponent TagComp;
 
-		// Token: 0x040248C5 RID: 149701
+		// Token: 0x0401FB7B RID: 129915
 		private bool IsOnNearestRoadway;
 
-		// Token: 0x040248C6 RID: 149702
+		// Token: 0x0401FB7C RID: 129916
 		private readonly Vector LastPosition = Vector.Create();
 
-		// Token: 0x040248C7 RID: 149703
+		// Token: 0x0401FB7D RID: 129917
 		private FVectorDouble NearestPosRef = new FVectorDouble();
 
-		// Token: 0x040248C8 RID: 149704
+		// Token: 0x0401FB7E RID: 129918
 		private readonly NearestRoadway NearestRoadway = new NearestRoadway();
 	}
 }

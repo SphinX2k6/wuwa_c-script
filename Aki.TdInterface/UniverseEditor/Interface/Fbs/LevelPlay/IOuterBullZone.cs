@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004536 RID: 17718
+	// Token: 0x0200499E RID: 18846
 	public struct IOuterBullZone : IFlatbufferObject
 	{
-		// Token: 0x17007DA9 RID: 32169
-		// (get) Token: 0x0601AA4F RID: 109135 RVA: 0x003CD59D File Offset: 0x003CB79D
+		// Token: 0x170083EA RID: 33770
+		// (get) Token: 0x0601C224 RID: 115236 RVA: 0x003F9839 File Offset: 0x003F7A39
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AA50 RID: 109136 RVA: 0x003CD5AA File Offset: 0x003CB7AA
+		// Token: 0x0601C225 RID: 115237 RVA: 0x003F9846 File Offset: 0x003F7A46
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601AA51 RID: 109137 RVA: 0x003CD5B4 File Offset: 0x003CB7B4
+		// Token: 0x0601C226 RID: 115238 RVA: 0x003F9850 File Offset: 0x003F7A50
 		public static IOuterBullZone GetRootAsIOuterBullZone(ByteBuffer _bb)
 		{
 			return IOuterBullZone.GetRootAsIOuterBullZone(_bb, default(IOuterBullZone));
 		}
 
-		// Token: 0x0601AA52 RID: 109138 RVA: 0x003CD5D0 File Offset: 0x003CB7D0
+		// Token: 0x0601C227 RID: 115239 RVA: 0x003F986C File Offset: 0x003F7A6C
 		public static IOuterBullZone GetRootAsIOuterBullZone(ByteBuffer _bb, IOuterBullZone obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601AA53 RID: 109139 RVA: 0x003CD5ED File Offset: 0x003CB7ED
+		// Token: 0x0601C228 RID: 115240 RVA: 0x003F9889 File Offset: 0x003F7A89
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601AA54 RID: 109140 RVA: 0x003CD5FC File Offset: 0x003CB7FC
+		// Token: 0x0601C229 RID: 115241 RVA: 0x003F9898 File Offset: 0x003F7A98
 		public IOuterBullZone __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007DAA RID: 32170
-		// (get) Token: 0x0601AA55 RID: 109141 RVA: 0x003CD60C File Offset: 0x003CB80C
+		// Token: 0x170083EB RID: 33771
+		// (get) Token: 0x0601C22A RID: 115242 RVA: 0x003F98A8 File Offset: 0x003F7AA8
 		public EDartboardZoneType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AA56 RID: 109142 RVA: 0x003CD648 File Offset: 0x003CB848
+		// Token: 0x0601C22B RID: 115243 RVA: 0x003F98E4 File Offset: 0x003F7AE4
 		public static Offset<IOuterBullZone> CreateIOuterBullZone(FlatBufferBuilder builder, EDartboardZoneType Type = EDartboardZoneType.CenterBull)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IOuterBullZone.EndIOuterBullZone(builder);
 		}
 
-		// Token: 0x0601AA57 RID: 109143 RVA: 0x003CD65E File Offset: 0x003CB85E
+		// Token: 0x0601C22C RID: 115244 RVA: 0x003F98FA File Offset: 0x003F7AFA
 		public static void StartIOuterBullZone(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601AA58 RID: 109144 RVA: 0x003CD667 File Offset: 0x003CB867
+		// Token: 0x0601C22D RID: 115245 RVA: 0x003F9903 File Offset: 0x003F7B03
 		public static void AddType(FlatBufferBuilder builder, EDartboardZoneType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601AA59 RID: 109145 RVA: 0x003CD672 File Offset: 0x003CB872
+		// Token: 0x0601C22E RID: 115246 RVA: 0x003F990E File Offset: 0x003F7B0E
 		public static Offset<IOuterBullZone> EndIOuterBullZone(FlatBufferBuilder builder)
 		{
 			return new Offset<IOuterBullZone>(builder.EndTable());
 		}
 
-		// Token: 0x0601AA5A RID: 109146 RVA: 0x003CD680 File Offset: 0x003CB880
+		// Token: 0x0601C22F RID: 115247 RVA: 0x003F991C File Offset: 0x003F7B1C
 		public IOuterBullZoneT UnPack()
 		{
 			IOuterBullZoneT outerBullZoneT = new IOuterBullZoneT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return outerBullZoneT;
 		}
 
-		// Token: 0x0601AA5B RID: 109147 RVA: 0x003CD69B File Offset: 0x003CB89B
+		// Token: 0x0601C230 RID: 115248 RVA: 0x003F9937 File Offset: 0x003F7B37
 		public void UnPackTo(IOuterBullZoneT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601AA5C RID: 109148 RVA: 0x003CD6AC File Offset: 0x003CB8AC
+		// Token: 0x0601C231 RID: 115249 RVA: 0x003F9948 File Offset: 0x003F7B48
 		public static Offset<IOuterBullZone> Pack(FlatBufferBuilder builder, IOuterBullZoneT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IOuterBullZone.CreateIOuterBullZone(builder, _o.Type);
 		}
 
-		// Token: 0x0400C5BA RID: 50618
+		// Token: 0x0400CFE9 RID: 53225
 		private Table __p;
 	}
 }

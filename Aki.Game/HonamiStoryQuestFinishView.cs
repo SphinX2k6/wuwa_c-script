@@ -6,16 +6,16 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EE6 RID: 7910
+// Token: 0x020013A8 RID: 5032
 public class HonamiStoryQuestFinishView : UiViewBase
 {
-	// Token: 0x0600F387 RID: 62343 RVA: 0x003AB4E8 File Offset: 0x003A96E8
+	// Token: 0x0600C7A6 RID: 51110 RVA: 0x003B6FE4 File Offset: 0x003B51E4
 	[NullableContext(1)]
 	public HonamiStoryQuestFinishView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F388 RID: 62344 RVA: 0x003AB4F4 File Offset: 0x003A96F4
+	// Token: 0x0600C7A7 RID: 51111 RVA: 0x003B6FF0 File Offset: 0x003B51F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -29,7 +29,7 @@ public class HonamiStoryQuestFinishView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F389 RID: 62345 RVA: 0x003AB55D File Offset: 0x003A975D
+	// Token: 0x0600C7A8 RID: 51112 RVA: 0x003B7059 File Offset: 0x003B5259
 	protected override void OnStart()
 	{
 		this.QuestData = (HonamiStorySubQuestData)this.OpenParam;
@@ -47,13 +47,13 @@ public class HonamiStoryQuestFinishView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x0600F38A RID: 62346 RVA: 0x003AB592 File Offset: 0x003A9792
+	// Token: 0x0600C7A9 RID: 51113 RVA: 0x003B708E File Offset: 0x003B528E
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600F38B RID: 62347 RVA: 0x003AB59C File Offset: 0x003A979C
+	// Token: 0x0600C7AA RID: 51114 RVA: 0x003B7098 File Offset: 0x003B5298
 	private void RefreshView()
 	{
 		HonamiStorySubQuestData questData = this.QuestData;
@@ -89,16 +89,16 @@ public class HonamiStoryQuestFinishView : UiViewBase
 		}
 	}
 
-	// Token: 0x040070C6 RID: 28870
+	// Token: 0x040071A7 RID: 29095
 	[Nullable(2)]
 	private HonamiStorySubQuestData QuestData;
 
-	// Token: 0x020084DD RID: 34013
+	// Token: 0x02007662 RID: 30306
 	private enum EHonamiStoryQuestComponents
 	{
-		// Token: 0x0402B3CB RID: 177099
+		// Token: 0x040266EF RID: 157423
 		TextTitle,
-		// Token: 0x0402B3CC RID: 177100
+		// Token: 0x040266F0 RID: 157424
 		TextQuestName
 	}
 }

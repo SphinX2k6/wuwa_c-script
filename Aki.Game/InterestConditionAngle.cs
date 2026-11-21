@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200320E RID: 12814
+// Token: 0x0200277D RID: 10109
 [NullableContext(1)]
 [Nullable(0)]
 public class InterestConditionAngle : InterestConditionBase
 {
-	// Token: 0x1700263C RID: 9788
-	// (get) Token: 0x0601BA42 RID: 113218 RVA: 0x00797DD5 File Offset: 0x00795FD5
+	// Token: 0x1700287D RID: 10365
+	// (get) Token: 0x060195C7 RID: 103879 RVA: 0x007C0535 File Offset: 0x007BE735
 	public override EInterestConditionType Type
 	{
 		get
@@ -16,7 +16,7 @@ public class InterestConditionAngle : InterestConditionBase
 		}
 	}
 
-	// Token: 0x0601BA43 RID: 113219 RVA: 0x00797DD8 File Offset: 0x00795FD8
+	// Token: 0x060195C8 RID: 103880 RVA: 0x007C0538 File Offset: 0x007BE738
 	public override bool CheckCondition(Entity entity, InterestItemBase item)
 	{
 		BaseActorComponent component = entity.GetComponent<BaseActorComponent>();
@@ -35,7 +35,7 @@ public class InterestConditionAngle : InterestConditionBase
 		return MathUtils.Instance.GetAngleByVectorDot(InterestConditionBase.TmpVector1, component.ActorForwardProxy) < (double)this.MaxAngle;
 	}
 
-	// Token: 0x0601BA44 RID: 113220 RVA: 0x00797E54 File Offset: 0x00796054
+	// Token: 0x060195C9 RID: 103881 RVA: 0x007C05C0 File Offset: 0x007BE7C0
 	[return: Nullable(2)]
 	private Vector GetLocation(InterestItemBase item)
 	{
@@ -60,6 +60,6 @@ public class InterestConditionAngle : InterestConditionBase
 		}
 	}
 
-	// Token: 0x0400D95A RID: 55642
+	// Token: 0x0400DDF9 RID: 56825
 	public float MaxAngle;
 }

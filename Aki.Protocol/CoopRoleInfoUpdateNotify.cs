@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020002FC RID: 764
+	// Token: 0x02000303 RID: 771
 	[NetMessage(EMessageId.CoopRoleInfoUpdateNotify)]
 	public sealed class CoopRoleInfoUpdateNotify : IMessage<CoopRoleInfoUpdateNotify>, IMessage, IEquatable<CoopRoleInfoUpdateNotify>, IDeepCloneable<CoopRoleInfoUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x06004D47 RID: 19783 RVA: 0x000BBEC0 File Offset: 0x000BA0C0
+		// Token: 0x06004E20 RID: 20000 RVA: 0x000BE2AC File Offset: 0x000BC4AC
 		[NullableContext(1)]
 		public static CoopRoleInfoUpdateNotify Create()
 		{
 			return new CoopRoleInfoUpdateNotify();
 		}
 
-		// Token: 0x17000DA8 RID: 3496
-		// (get) Token: 0x06004D48 RID: 19784 RVA: 0x000BBEC7 File Offset: 0x000BA0C7
+		// Token: 0x17000DD5 RID: 3541
+		// (get) Token: 0x06004E21 RID: 20001 RVA: 0x000BE2B3 File Offset: 0x000BC4B3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000DA9 RID: 3497
-		// (get) Token: 0x06004D49 RID: 19785 RVA: 0x000BBECA File Offset: 0x000BA0CA
+		// Token: 0x17000DD6 RID: 3542
+		// (get) Token: 0x06004E22 RID: 20002 RVA: 0x000BE2B6 File Offset: 0x000BC4B6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,23 +42,23 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004D4A RID: 19786 RVA: 0x000BBED1 File Offset: 0x000BA0D1
+		// Token: 0x06004E23 RID: 20003 RVA: 0x000BE2BD File Offset: 0x000BC4BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CoopRoleInfoUpdateNotify()
 		{
 		}
 
-		// Token: 0x06004D4B RID: 19787 RVA: 0x000BBEDC File Offset: 0x000BA0DC
+		// Token: 0x06004E24 RID: 20004 RVA: 0x000BE2C8 File Offset: 0x000BC4C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CoopRoleInfoUpdateNotify(CoopRoleInfoUpdateNotify other) : this()
 		{
 			this.activityId_ = other.activityId_;
 			CoopRoleInfoUpdateNotify.DataOneofCase dataCase = other.DataCase;
-			if (dataCase != CoopRoleInfoUpdateNotify.DataOneofCase.CoopRoleInfo)
+			if (dataCase != CoopRoleInfoUpdateNotify.DataOneofCase.CoopTaskCompleteInfo)
 			{
-				if (dataCase != CoopRoleInfoUpdateNotify.DataOneofCase.CoopTaskCompleteInfo)
+				if (dataCase != CoopRoleInfoUpdateNotify.DataOneofCase.CoopRoleInfo)
 				{
 					if (dataCase == CoopRoleInfoUpdateNotify.DataOneofCase.PreCompleteId)
 					{
@@ -67,17 +67,17 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					this.CoopTaskCompleteInfo = other.CoopTaskCompleteInfo.Clone();
+					this.CoopRoleInfo = other.CoopRoleInfo.Clone();
 				}
 			}
 			else
 			{
-				this.CoopRoleInfo = other.CoopRoleInfo.Clone();
+				this.CoopTaskCompleteInfo = other.CoopTaskCompleteInfo.Clone();
 			}
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06004D4C RID: 19788 RVA: 0x000BBF54 File Offset: 0x000BA154
+		// Token: 0x06004E25 RID: 20005 RVA: 0x000BE340 File Offset: 0x000BC540
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CoopRoleInfoUpdateNotify Clone()
@@ -85,9 +85,9 @@ namespace Aki.Protocol
 			return new CoopRoleInfoUpdateNotify(this);
 		}
 
-		// Token: 0x17000DAA RID: 3498
-		// (get) Token: 0x06004D4D RID: 19789 RVA: 0x000BBF5C File Offset: 0x000BA15C
-		// (set) Token: 0x06004D4E RID: 19790 RVA: 0x000BBF64 File Offset: 0x000BA164
+		// Token: 0x17000DD7 RID: 3543
+		// (get) Token: 0x06004E26 RID: 20006 RVA: 0x000BE348 File Offset: 0x000BC548
+		// (set) Token: 0x06004E27 RID: 20007 RVA: 0x000BE350 File Offset: 0x000BC550
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -102,9 +102,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000DAB RID: 3499
-		// (get) Token: 0x06004D4F RID: 19791 RVA: 0x000BBF6D File Offset: 0x000BA16D
-		// (set) Token: 0x06004D50 RID: 19792 RVA: 0x000BBF85 File Offset: 0x000BA185
+		// Token: 0x17000DD8 RID: 3544
+		// (get) Token: 0x06004E28 RID: 20008 RVA: 0x000BE359 File Offset: 0x000BC559
+		// (set) Token: 0x06004E29 RID: 20009 RVA: 0x000BE371 File Offset: 0x000BC571
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CoopRoleInfo CoopRoleInfo
@@ -124,9 +124,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000DAC RID: 3500
-		// (get) Token: 0x06004D51 RID: 19793 RVA: 0x000BBF9B File Offset: 0x000BA19B
-		// (set) Token: 0x06004D52 RID: 19794 RVA: 0x000BBFB3 File Offset: 0x000BA1B3
+		// Token: 0x17000DD9 RID: 3545
+		// (get) Token: 0x06004E2A RID: 20010 RVA: 0x000BE387 File Offset: 0x000BC587
+		// (set) Token: 0x06004E2B RID: 20011 RVA: 0x000BE39F File Offset: 0x000BC59F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CoopTaskCompleteInfo CoopTaskCompleteInfo
@@ -146,9 +146,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000DAD RID: 3501
-		// (get) Token: 0x06004D53 RID: 19795 RVA: 0x000BBFC9 File Offset: 0x000BA1C9
-		// (set) Token: 0x06004D54 RID: 19796 RVA: 0x000BBFE0 File Offset: 0x000BA1E0
+		// Token: 0x17000DDA RID: 3546
+		// (get) Token: 0x06004E2C RID: 20012 RVA: 0x000BE3B5 File Offset: 0x000BC5B5
+		// (set) Token: 0x06004E2D RID: 20013 RVA: 0x000BE3CC File Offset: 0x000BC5CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PreCompleteId
@@ -168,8 +168,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000DAE RID: 3502
-		// (get) Token: 0x06004D55 RID: 19797 RVA: 0x000BBFF6 File Offset: 0x000BA1F6
+		// Token: 0x17000DDB RID: 3547
+		// (get) Token: 0x06004E2E RID: 20014 RVA: 0x000BE3E2 File Offset: 0x000BC5E2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasPreCompleteId
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004D56 RID: 19798 RVA: 0x000BC002 File Offset: 0x000BA202
+		// Token: 0x06004E2F RID: 20015 RVA: 0x000BE3EE File Offset: 0x000BC5EE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearPreCompleteId()
@@ -191,8 +191,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000DAF RID: 3503
-		// (get) Token: 0x06004D57 RID: 19799 RVA: 0x000BC012 File Offset: 0x000BA212
+		// Token: 0x17000DDC RID: 3548
+		// (get) Token: 0x06004E30 RID: 20016 RVA: 0x000BE3FE File Offset: 0x000BC5FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CoopRoleInfoUpdateNotify.DataOneofCase DataCase
@@ -203,7 +203,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004D58 RID: 19800 RVA: 0x000BC01A File Offset: 0x000BA21A
+		// Token: 0x06004E31 RID: 20017 RVA: 0x000BE406 File Offset: 0x000BC606
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearData()
@@ -212,7 +212,7 @@ namespace Aki.Protocol
 			this.data_ = null;
 		}
 
-		// Token: 0x06004D59 RID: 19801 RVA: 0x000BC02A File Offset: 0x000BA22A
+		// Token: 0x06004E32 RID: 20018 RVA: 0x000BE416 File Offset: 0x000BC616
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -220,7 +220,7 @@ namespace Aki.Protocol
 			return this.Equals(other as CoopRoleInfoUpdateNotify);
 		}
 
-		// Token: 0x06004D5A RID: 19802 RVA: 0x000BC038 File Offset: 0x000BA238
+		// Token: 0x06004E33 RID: 20019 RVA: 0x000BE424 File Offset: 0x000BC624
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CoopRoleInfoUpdateNotify other)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ActivityId == other.ActivityId && object.Equals(this.CoopRoleInfo, other.CoopRoleInfo) && object.Equals(this.CoopTaskCompleteInfo, other.CoopTaskCompleteInfo) && this.PreCompleteId == other.PreCompleteId && this.DataCase == other.DataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06004D5B RID: 19803 RVA: 0x000BC0BC File Offset: 0x000BA2BC
+		// Token: 0x06004E34 RID: 20020 RVA: 0x000BE4A8 File Offset: 0x000BC6A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004D5C RID: 19804 RVA: 0x000BC14B File Offset: 0x000BA34B
+		// Token: 0x06004E35 RID: 20021 RVA: 0x000BE537 File Offset: 0x000BC737
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -266,7 +266,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06004D5D RID: 19805 RVA: 0x000BC158 File Offset: 0x000BA358
+		// Token: 0x06004E36 RID: 20022 RVA: 0x000BE544 File Offset: 0x000BC744
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -274,30 +274,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06004D5E RID: 19806 RVA: 0x000BC164 File Offset: 0x000BA364
+		// Token: 0x06004E37 RID: 20023 RVA: 0x000BE550 File Offset: 0x000BC750
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.ActivityId != 0)
+			if (this.dataCase_ == CoopRoleInfoUpdateNotify.DataOneofCase.CoopTaskCompleteInfo)
 			{
-				output.WriteRawTag(8);
-				output.WriteInt32(this.ActivityId);
+				output.WriteRawTag(26);
+				output.WriteMessage(this.CoopTaskCompleteInfo);
 			}
 			if (this.dataCase_ == CoopRoleInfoUpdateNotify.DataOneofCase.CoopRoleInfo)
 			{
-				output.WriteRawTag(18);
+				output.WriteRawTag(66);
 				output.WriteMessage(this.CoopRoleInfo);
-			}
-			if (this.dataCase_ == CoopRoleInfoUpdateNotify.DataOneofCase.CoopTaskCompleteInfo)
-			{
-				output.WriteRawTag(50);
-				output.WriteMessage(this.CoopTaskCompleteInfo);
 			}
 			if (this.HasPreCompleteId)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(72);
 				output.WriteInt32(this.PreCompleteId);
+			}
+			if (this.ActivityId != 0)
+			{
+				output.WriteRawTag(120);
+				output.WriteInt32(this.ActivityId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -305,7 +305,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004D5F RID: 19807 RVA: 0x000BC1F8 File Offset: 0x000BA3F8
+		// Token: 0x06004E38 RID: 20024 RVA: 0x000BE5E4 File Offset: 0x000BC7E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -334,7 +334,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004D60 RID: 19808 RVA: 0x000BC280 File Offset: 0x000BA480
+		// Token: 0x06004E39 RID: 20025 RVA: 0x000BE66C File Offset: 0x000BC86C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CoopRoleInfoUpdateNotify other)
@@ -348,9 +348,9 @@ namespace Aki.Protocol
 				this.ActivityId = other.ActivityId;
 			}
 			CoopRoleInfoUpdateNotify.DataOneofCase dataCase = other.DataCase;
-			if (dataCase != CoopRoleInfoUpdateNotify.DataOneofCase.CoopRoleInfo)
+			if (dataCase != CoopRoleInfoUpdateNotify.DataOneofCase.CoopTaskCompleteInfo)
 			{
-				if (dataCase != CoopRoleInfoUpdateNotify.DataOneofCase.CoopTaskCompleteInfo)
+				if (dataCase != CoopRoleInfoUpdateNotify.DataOneofCase.CoopRoleInfo)
 				{
 					if (dataCase == CoopRoleInfoUpdateNotify.DataOneofCase.PreCompleteId)
 					{
@@ -359,25 +359,25 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (this.CoopTaskCompleteInfo == null)
+					if (this.CoopRoleInfo == null)
 					{
-						this.CoopTaskCompleteInfo = new CoopTaskCompleteInfo();
+						this.CoopRoleInfo = new CoopRoleInfo();
 					}
-					this.CoopTaskCompleteInfo.MergeFrom(other.CoopTaskCompleteInfo);
+					this.CoopRoleInfo.MergeFrom(other.CoopRoleInfo);
 				}
 			}
 			else
 			{
-				if (this.CoopRoleInfo == null)
+				if (this.CoopTaskCompleteInfo == null)
 				{
-					this.CoopRoleInfo = new CoopRoleInfo();
+					this.CoopTaskCompleteInfo = new CoopTaskCompleteInfo();
 				}
-				this.CoopRoleInfo.MergeFrom(other.CoopRoleInfo);
+				this.CoopTaskCompleteInfo.MergeFrom(other.CoopTaskCompleteInfo);
 			}
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06004D61 RID: 19809 RVA: 0x000BC32A File Offset: 0x000BA52A
+		// Token: 0x06004E3A RID: 20026 RVA: 0x000BE716 File Offset: 0x000BC916
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -385,7 +385,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06004D62 RID: 19810 RVA: 0x000BC334 File Offset: 0x000BA534
+		// Token: 0x06004E3B RID: 20027 RVA: 0x000BE720 File Offset: 0x000BC920
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -397,14 +397,20 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 18U)
+				if (num <= 66U)
 				{
-					if (num == 8U)
+					if (num == 26U)
 					{
-						this.ActivityId = input.ReadInt32();
+						CoopTaskCompleteInfo coopTaskCompleteInfo = new CoopTaskCompleteInfo();
+						if (this.dataCase_ == CoopRoleInfoUpdateNotify.DataOneofCase.CoopTaskCompleteInfo)
+						{
+							coopTaskCompleteInfo.MergeFrom(this.CoopTaskCompleteInfo);
+						}
+						input.ReadMessage(coopTaskCompleteInfo);
+						this.CoopTaskCompleteInfo = coopTaskCompleteInfo;
 						continue;
 					}
-					if (num == 18U)
+					if (num == 66U)
 					{
 						CoopRoleInfo coopRoleInfo = new CoopRoleInfo();
 						if (this.dataCase_ == CoopRoleInfoUpdateNotify.DataOneofCase.CoopRoleInfo)
@@ -418,20 +424,14 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 50U)
-					{
-						CoopTaskCompleteInfo coopTaskCompleteInfo = new CoopTaskCompleteInfo();
-						if (this.dataCase_ == CoopRoleInfoUpdateNotify.DataOneofCase.CoopTaskCompleteInfo)
-						{
-							coopTaskCompleteInfo.MergeFrom(this.CoopTaskCompleteInfo);
-						}
-						input.ReadMessage(coopTaskCompleteInfo);
-						this.CoopTaskCompleteInfo = coopTaskCompleteInfo;
-						continue;
-					}
-					if (num == 88U)
+					if (num == 72U)
 					{
 						this.PreCompleteId = input.ReadInt32();
+						continue;
+					}
+					if (num == 120U)
+					{
+						this.ActivityId = input.ReadInt32();
 						continue;
 					}
 				}
@@ -439,41 +439,41 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003143 RID: 12611
+		// Token: 0x040031DA RID: 12762
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003144 RID: 12612
-		public const int ActivityIdFieldNumber = 1;
+		// Token: 0x040031DB RID: 12763
+		public const int ActivityIdFieldNumber = 15;
 
-		// Token: 0x04003145 RID: 12613
+		// Token: 0x040031DC RID: 12764
 		private int activityId_;
 
-		// Token: 0x04003146 RID: 12614
-		public const int CoopRoleInfoFieldNumber = 2;
+		// Token: 0x040031DD RID: 12765
+		public const int CoopRoleInfoFieldNumber = 8;
 
-		// Token: 0x04003147 RID: 12615
-		public const int CoopTaskCompleteInfoFieldNumber = 6;
+		// Token: 0x040031DE RID: 12766
+		public const int CoopTaskCompleteInfoFieldNumber = 3;
 
-		// Token: 0x04003148 RID: 12616
-		public const int PreCompleteIdFieldNumber = 11;
+		// Token: 0x040031DF RID: 12767
+		public const int PreCompleteIdFieldNumber = 9;
 
-		// Token: 0x04003149 RID: 12617
+		// Token: 0x040031E0 RID: 12768
 		private object data_;
 
-		// Token: 0x0400314A RID: 12618
+		// Token: 0x040031E1 RID: 12769
 		private CoopRoleInfoUpdateNotify.DataOneofCase dataCase_;
 
-		// Token: 0x02001730 RID: 5936
+		// Token: 0x020017AE RID: 6062
 		public enum DataOneofCase
 		{
-			// Token: 0x0400C596 RID: 50582
+			// Token: 0x0400CACC RID: 51916
 			None,
-			// Token: 0x0400C597 RID: 50583
-			CoopRoleInfo = 2,
-			// Token: 0x0400C598 RID: 50584
-			CoopTaskCompleteInfo = 6,
-			// Token: 0x0400C599 RID: 50585
-			PreCompleteId = 11
+			// Token: 0x0400CACD RID: 51917
+			CoopRoleInfo = 8,
+			// Token: 0x0400CACE RID: 51918
+			CoopTaskCompleteInfo = 3,
+			// Token: 0x0400CACF RID: 51919
+			PreCompleteId = 9
 		}
 	}
 }

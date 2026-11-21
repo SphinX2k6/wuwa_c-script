@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077F5 RID: 30709
+	// Token: 0x02008033 RID: 32819
 	public enum TUiStyleOfLevelD : byte
 	{
-		// Token: 0x04012A60 RID: 76384
+		// Token: 0x04013B2A RID: 80682
 		NONE,
-		// Token: 0x04012A61 RID: 76385
+		// Token: 0x04013B2B RID: 80683
 		IUiStyleGiantSubtitleOfLevelD,
-		// Token: 0x04012A62 RID: 76386
+		// Token: 0x04013B2C RID: 80684
 		IUiStylePlayPianoOfLevelD
 	}
 }

@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02000E83 RID: 3715
+// Token: 0x02000338 RID: 824
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/KuroSimpleCombat/KSCDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/KuroSimpleCombat/KSCDataClass/KscBulletData.KscBulletData_C")]
 public class KscBulletData : KscBpDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170006A3 RID: 1699
-	// (get) Token: 0x06005ABD RID: 23229 RVA: 0x001089DC File Offset: 0x00106BDC
-	// (set) Token: 0x06005ABE RID: 23230 RVA: 0x001089EC File Offset: 0x00106BEC
+	// Token: 0x170006C7 RID: 1735
+	// (get) Token: 0x06002E54 RID: 11860 RVA: 0x0011068C File Offset: 0x0010E88C
+	// (set) Token: 0x06002E55 RID: 11861 RVA: 0x0011069C File Offset: 0x0010E89C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int BulletConfigId
 	{
@@ -29,9 +29,9 @@ public class KscBulletData : KscBpDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170006A4 RID: 1700
-	// (get) Token: 0x06005ABF RID: 23231 RVA: 0x001089FD File Offset: 0x00106BFD
-	// (set) Token: 0x06005AC0 RID: 23232 RVA: 0x00108A11 File Offset: 0x00106C11
+	// Token: 0x170006C8 RID: 1736
+	// (get) Token: 0x06002E56 RID: 11862 RVA: 0x001106AD File Offset: 0x0010E8AD
+	// (set) Token: 0x06002E57 RID: 11863 RVA: 0x001106C1 File Offset: 0x0010E8C1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string LaunchMeshComponentName
 	{
@@ -45,9 +45,9 @@ public class KscBulletData : KscBpDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170006A5 RID: 1701
-	// (get) Token: 0x06005AC1 RID: 23233 RVA: 0x00108A26 File Offset: 0x00106C26
-	// (set) Token: 0x06005AC2 RID: 23234 RVA: 0x00108A3A File Offset: 0x00106C3A
+	// Token: 0x170006C9 RID: 1737
+	// (get) Token: 0x06002E58 RID: 11864 RVA: 0x001106D6 File Offset: 0x0010E8D6
+	// (set) Token: 0x06002E59 RID: 11865 RVA: 0x001106EA File Offset: 0x0010E8EA
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string LaunchBoneOrSocketName
 	{
@@ -61,7 +61,7 @@ public class KscBulletData : KscBpDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06005AC3 RID: 23235 RVA: 0x00108A4F File Offset: 0x00106C4F
+	// Token: 0x06002E5A RID: 11866 RVA: 0x001106FF File Offset: 0x0010E8FF
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (KscBulletData._ClassPtr == IntPtr.Zero)
@@ -71,36 +71,36 @@ public class KscBulletData : KscBpDataBase, IUnrealUObject, IUnrealObject
 		return KscBulletData._ClassPtr;
 	}
 
-	// Token: 0x06005AC4 RID: 23236 RVA: 0x00108A74 File Offset: 0x00106C74
+	// Token: 0x06002E5B RID: 11867 RVA: 0x00110724 File Offset: 0x0010E924
 	public KscBulletData() : this(BuiltinUtils.AllocNativeUObject(KscBulletData.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06005AC5 RID: 23237 RVA: 0x00108A9C File Offset: 0x00106C9C
+	// Token: 0x06002E5C RID: 11868 RVA: 0x0011074C File Offset: 0x0010E94C
 	public KscBulletData(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(KscBulletData.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06005AC6 RID: 23238 RVA: 0x00108ACF File Offset: 0x00106CCF
+	// Token: 0x06002E5D RID: 11869 RVA: 0x0011077F File Offset: 0x0010E97F
 	protected KscBulletData(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x04002977 RID: 10615
+	// Token: 0x04002A12 RID: 10770
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/KuroSimpleCombat/KSCDataClass/KscBulletData.KscBulletData_C";
 
-	// Token: 0x04002978 RID: 10616
+	// Token: 0x04002A13 RID: 10771
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04002979 RID: 10617
+	// Token: 0x04002A14 RID: 10772
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400297A RID: 10618
+	// Token: 0x04002A15 RID: 10773
 	private static int __PropertyOffset_BulletConfigId;
 
-	// Token: 0x0400297B RID: 10619
+	// Token: 0x04002A16 RID: 10774
 	private static int __PropertyOffset_LaunchMeshComponentName;
 
-	// Token: 0x0400297C RID: 10620
+	// Token: 0x04002A17 RID: 10775
 	private static int __PropertyOffset_LaunchBoneOrSocketName;
 }

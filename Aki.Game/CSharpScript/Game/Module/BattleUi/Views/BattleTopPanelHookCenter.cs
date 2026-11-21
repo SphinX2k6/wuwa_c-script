@@ -6,13 +6,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CB5 RID: 23733
+	// Token: 0x02004C97 RID: 19607
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleTopPanelHookCenter
 	{
-		// Token: 0x17008DF1 RID: 36337
-		// (get) Token: 0x0603BF78 RID: 245624 RVA: 0x00E55228 File Offset: 0x00E53428
+		// Token: 0x170061C3 RID: 25027
+		// (get) Token: 0x06030ECB RID: 200395 RVA: 0x00DA58D0 File Offset: 0x00DA3AD0
 		private List<IBattleTopPanelHook> Hooks
 		{
 			get
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF79 RID: 245625 RVA: 0x00E55234 File Offset: 0x00E53434
+		// Token: 0x06030ECC RID: 200396 RVA: 0x00DA58DC File Offset: 0x00DA3ADC
 		public UniTask OnInitAsync(TopPanel topPanel)
 		{
 			BattleTopPanelHookCenter.<OnInitAsync>d__2 <OnInitAsync>d__;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnInitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BF7A RID: 245626 RVA: 0x00E55280 File Offset: 0x00E53480
+		// Token: 0x06030ECD RID: 200397 RVA: 0x00DA5928 File Offset: 0x00DA3B28
 		public void OnShow(TopPanel topPanel)
 		{
 			foreach (IBattleTopPanelHook battleTopPanelHook in this.Hooks)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF7B RID: 245627 RVA: 0x00E552D4 File Offset: 0x00E534D4
+		// Token: 0x06030ECE RID: 200398 RVA: 0x00DA597C File Offset: 0x00DA3B7C
 		public void OnHide(TopPanel topPanel)
 		{
 			foreach (IBattleTopPanelHook battleTopPanelHook in this.Hooks)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF7C RID: 245628 RVA: 0x00E55328 File Offset: 0x00E53528
+		// Token: 0x06030ECF RID: 200399 RVA: 0x00DA59D0 File Offset: 0x00DA3BD0
 		public void OnAddEventListener(TopPanel topPanel)
 		{
 			foreach (IBattleTopPanelHook battleTopPanelHook in this.Hooks)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF7D RID: 245629 RVA: 0x00E5537C File Offset: 0x00E5357C
+		// Token: 0x06030ED0 RID: 200400 RVA: 0x00DA5A24 File Offset: 0x00DA3C24
 		public void OnRemoveEventListener(TopPanel topPanel)
 		{
 			foreach (IBattleTopPanelHook battleTopPanelHook in this.Hooks)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF7E RID: 245630 RVA: 0x00E553D0 File Offset: 0x00E535D0
+		// Token: 0x06030ED1 RID: 200401 RVA: 0x00DA5A78 File Offset: 0x00DA3C78
 		public void OnRefresh(TopPanel topPanel)
 		{
 			foreach (IBattleTopPanelHook battleTopPanelHook in this.Hooks)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF7F RID: 245631 RVA: 0x00E55424 File Offset: 0x00E53624
+		// Token: 0x06030ED2 RID: 200402 RVA: 0x00DA5ACC File Offset: 0x00DA3CCC
 		public void OnReset(TopPanel topPanel)
 		{
 			foreach (IBattleTopPanelHook battleTopPanelHook in this.Hooks)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Clear();
 		}
 
-		// Token: 0x0603BF80 RID: 245632 RVA: 0x00E5547C File Offset: 0x00E5367C
+		// Token: 0x06030ED3 RID: 200403 RVA: 0x00DA5B24 File Offset: 0x00DA3D24
 		public void Clear()
 		{
 			BattleUiModel.Instance.TopPanelHooks.Clear();

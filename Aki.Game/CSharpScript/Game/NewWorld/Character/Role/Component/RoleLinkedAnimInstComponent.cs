@@ -9,25 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Role.Component
 {
-	// Token: 0x02007090 RID: 28816
+	// Token: 0x020062F5 RID: 25333
 	[NullableContext(2)]
 	[Nullable(0)]
-	public class RoleLinkedAnimInstComponent : CharacterLinkedAnimInstComponent, IComponentDependency
+	public class RoleLinkedAnimInstComponent : CharacterLinkedAnimInstComponent
 	{
-		// Token: 0x17009C21 RID: 39969
-		// (get) Token: 0x0604636C RID: 287596 RVA: 0x0118E7D7 File Offset: 0x0118C9D7
-		[Nullable(new byte[]
+		// Token: 0x170073FE RID: 29694
+		// (get) Token: 0x0603D452 RID: 250962 RVA: 0x011B1AAE File Offset: 0x011AFCAE
+		[Nullable(1)]
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
+			[NullableContext(1)]
 			get
 			{
 				return new Type[]
@@ -39,7 +31,7 @@ namespace CSharpScript.Game.NewWorld.Character.Role.Component
 			}
 		}
 
-		// Token: 0x0604636D RID: 287597 RVA: 0x0118E808 File Offset: 0x0118CA08
+		// Token: 0x0603D453 RID: 250963 RVA: 0x011B1AE0 File Offset: 0x011AFCE0
 		protected unsafe void OnPrevTagChanged(int tagId, bool tagExist)
 		{
 			if (!tagExist)
@@ -139,7 +131,7 @@ namespace CSharpScript.Game.NewWorld.Character.Role.Component
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x0604636E RID: 287598 RVA: 0x0118E95C File Offset: 0x0118CB5C
+		// Token: 0x0603D454 RID: 250964 RVA: 0x011B1C34 File Offset: 0x011AFE34
 		protected unsafe void OnActivateTagChanged(int tagId, bool tagExist)
 		{
 			if (!tagExist)
@@ -232,7 +224,7 @@ namespace CSharpScript.Game.NewWorld.Character.Role.Component
 			}
 		}
 
-		// Token: 0x0604636F RID: 287599 RVA: 0x0118EB68 File Offset: 0x0118CD68
+		// Token: 0x0603D455 RID: 250965 RVA: 0x011B1E40 File Offset: 0x011B0040
 		[NullableContext(1)]
 		private void OnCharacterMorphTypeChanged(Entity entity, EMorphType morphType, EMorphType oldMorphType)
 		{
@@ -271,7 +263,7 @@ namespace CSharpScript.Game.NewWorld.Character.Role.Component
 			}
 		}
 
-		// Token: 0x06046370 RID: 287600 RVA: 0x0118EC10 File Offset: 0x0118CE10
+		// Token: 0x0603D456 RID: 250966 RVA: 0x011B1EE8 File Offset: 0x011B00E8
 		protected override bool OnStart()
 		{
 			base.OnStart();
@@ -313,7 +305,7 @@ namespace CSharpScript.Game.NewWorld.Character.Role.Component
 			return true;
 		}
 
-		// Token: 0x06046371 RID: 287601 RVA: 0x0118EDF8 File Offset: 0x0118CFF8
+		// Token: 0x0603D457 RID: 250967 RVA: 0x011B20D0 File Offset: 0x011B02D0
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.OnCharacterMorphTypeChanged, new Action<Entity, EMorphType, EMorphType>(this.OnCharacterMorphTypeChanged));
@@ -331,7 +323,7 @@ namespace CSharpScript.Game.NewWorld.Character.Role.Component
 			return base.OnEnd();
 		}
 
-		// Token: 0x06046372 RID: 287602 RVA: 0x0118EEEC File Offset: 0x0118D0EC
+		// Token: 0x0603D458 RID: 250968 RVA: 0x011B21C4 File Offset: 0x011B03C4
 		public override bool SyncLinkGameplayAnimBlueprint(EGameplayABPType gameplayType)
 		{
 			if (base.SyncLinkGameplayAnimBlueprint(gameplayType))
@@ -343,7 +335,7 @@ namespace CSharpScript.Game.NewWorld.Character.Role.Component
 			return false;
 		}
 
-		// Token: 0x06046373 RID: 287603 RVA: 0x0118EF3C File Offset: 0x0118D13C
+		// Token: 0x0603D459 RID: 250969 RVA: 0x011B2214 File Offset: 0x011B0414
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -352,75 +344,80 @@ namespace CSharpScript.Game.NewWorld.Character.Role.Component
 				return false;
 			}
 			RoleLinkedAnimInstComponent roleLinkedAnimInstComponent = (RoleLinkedAnimInstComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TagComp"))
+			if (roleLinkedAnimInstComponent.TagComp == null)
 			{
-				if (roleLinkedAnimInstComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("MorphComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				if (roleLinkedAnimInstComponent.MorphComp == null)
-				{
-					this.MorphComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMorphComponent>(this.MorphComp), "MorphComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurrentPreload"))
+			if (roleLinkedAnimInstComponent.MorphComp == null)
 			{
-				this.CurrentPreload = roleLinkedAnimInstComponent.CurrentPreload;
+				this.MorphComp = null;
 			}
-			if (base.CanResetComponentProperty("NextValidPreload"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MorphComp), "MorphComp"))
 			{
-				this.NextValidPreload = roleLinkedAnimInstComponent.NextValidPreload;
+				return false;
 			}
-			if (base.CanResetComponentProperty("LoadedClass"))
+			this.CurrentPreload = roleLinkedAnimInstComponent.CurrentPreload;
+			this.NextValidPreload = roleLinkedAnimInstComponent.NextValidPreload;
+			if (roleLinkedAnimInstComponent.LoadedClass == null)
 			{
-				if (roleLinkedAnimInstComponent.LoadedClass == null)
-				{
-					this.LoadedClass = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UClass>(this.LoadedClass), "LoadedClass"))
-				{
-					return false;
-				}
+				this.LoadedClass = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LoadedClass), "LoadedClass"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024C82 RID: 150658
+		// Token: 0x170073FF RID: 29695
+		// (get) Token: 0x0603D45A RID: 250970 RVA: 0x011B22CD File Offset: 0x011B04CD
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007400 RID: 29696
+		// (get) Token: 0x0603D45B RID: 250971 RVA: 0x011B22D0 File Offset: 0x011B04D0
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040207D4 RID: 133076
 		public BaseTagComponent TagComp;
 
-		// Token: 0x04024C83 RID: 150659
+		// Token: 0x040207D5 RID: 133077
 		public CharacterMorphComponent MorphComp;
 
-		// Token: 0x04024C84 RID: 150660
+		// Token: 0x040207D6 RID: 133078
 		[StaticVariableRuleIgnore]
 		private static bool GameplayABPMapInited;
 
-		// Token: 0x04024C85 RID: 150661
+		// Token: 0x040207D7 RID: 133079
 		[StaticVariableRuleIgnore]
 		public static Dictionary<int, EGameplayABPType> PreloadMap;
 
-		// Token: 0x04024C86 RID: 150662
+		// Token: 0x040207D8 RID: 133080
 		[StaticVariableRuleIgnore]
 		public static Dictionary<int, EGameplayABPType> ActivateMap;
 
-		// Token: 0x04024C87 RID: 150663
+		// Token: 0x040207D9 RID: 133081
 		private EGameplayABPType CurrentPreload;
 
-		// Token: 0x04024C88 RID: 150664
+		// Token: 0x040207DA RID: 133082
 		private EGameplayABPType NextValidPreload;
 
-		// Token: 0x04024C89 RID: 150665
+		// Token: 0x040207DB RID: 133083
 		private UClass LoadedClass;
 	}
 }

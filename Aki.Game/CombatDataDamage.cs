@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002ED8 RID: 11992
+// Token: 0x0200242B RID: 9259
 public class CombatDataDamage : CombatDataBase
 {
-	// Token: 0x060199EF RID: 104943 RVA: 0x006A7870 File Offset: 0x006A5A70
+	// Token: 0x060172EE RID: 94958 RVA: 0x006CDA14 File Offset: 0x006CBC14
 	public CombatDataDamage(int attackerId, long damageId, int damageValue, int skillId, int targetId = 0) : base(attackerId, targetId)
 	{
 		this.DamageId = damageId;
@@ -13,7 +13,7 @@ public class CombatDataDamage : CombatDataBase
 		this.SkillId = skillId;
 	}
 
-	// Token: 0x060199F0 RID: 104944 RVA: 0x006A7894 File Offset: 0x006A5A94
+	// Token: 0x060172EF RID: 94959 RVA: 0x006CDA38 File Offset: 0x006CBC38
 	[NullableContext(1)]
 	public override string ParseToString()
 	{
@@ -35,12 +35,12 @@ public class CombatDataDamage : CombatDataBase
 		});
 	}
 
-	// Token: 0x0400BFDF RID: 49119
+	// Token: 0x0400C37A RID: 50042
 	public readonly long DamageId;
 
-	// Token: 0x0400BFE0 RID: 49120
+	// Token: 0x0400C37B RID: 50043
 	public readonly int DamageValue;
 
-	// Token: 0x0400BFE1 RID: 49121
+	// Token: 0x0400C37C RID: 50044
 	public readonly int SkillId;
 }

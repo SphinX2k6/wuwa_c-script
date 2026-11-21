@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EBA RID: 20154
+	// Token: 0x020053E3 RID: 21475
 	public class IAttachTargetT
 	{
-		// Token: 0x17009096 RID: 37014
-		// (get) Token: 0x0601FBD6 RID: 130006 RVA: 0x0046B14A File Offset: 0x0046934A
-		// (set) Token: 0x0601FBD7 RID: 130007 RVA: 0x0046B152 File Offset: 0x00469352
+		// Token: 0x170097F7 RID: 38903
+		// (get) Token: 0x060218D7 RID: 137431 RVA: 0x004A05C6 File Offset: 0x0049E7C6
+		// (set) Token: 0x060218D8 RID: 137432 RVA: 0x004A05CE File Offset: 0x0049E7CE
 		public EAttachType Type { get; set; }
 
-		// Token: 0x0601FBD8 RID: 130008 RVA: 0x0046B15B File Offset: 0x0046935B
+		// Token: 0x060218D9 RID: 137433 RVA: 0x004A05D7 File Offset: 0x0049E7D7
 		public IAttachTargetT()
 		{
 			this.Type = EAttachType.Actor;

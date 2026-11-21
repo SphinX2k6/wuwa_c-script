@@ -3,20 +3,20 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002C54 RID: 11348
+// Token: 0x020021AD RID: 8621
 [NullableContext(1)]
 [Nullable(0)]
 public class LoadAsyncPromise<[Nullable(0)] T> where T : UObject
 {
-	// Token: 0x06017AF7 RID: 97015 RVA: 0x00605E4A File Offset: 0x0060404A
+	// Token: 0x0601536D RID: 86893 RVA: 0x0062B8EA File Offset: 0x00629AEA
 	public LoadAsyncPromise(string path, ResourceSystem.EResourceLoadPriority priority = ResourceSystem.EResourceLoadPriority.Default)
 	{
 		this.CustomPromiseObject = new CustomPromise<T>();
 		this.LoadAsync(path, priority);
 	}
 
-	// Token: 0x17001FCD RID: 8141
-	// (get) Token: 0x06017AF8 RID: 97016 RVA: 0x00605E6C File Offset: 0x0060406C
+	// Token: 0x17002020 RID: 8224
+	// (get) Token: 0x0601536E RID: 86894 RVA: 0x0062B90C File Offset: 0x00629B0C
 	public CustomPromise<T> CustomPromise
 	{
 		get
@@ -25,8 +25,8 @@ public class LoadAsyncPromise<[Nullable(0)] T> where T : UObject
 		}
 	}
 
-	// Token: 0x17001FCE RID: 8142
-	// (get) Token: 0x06017AF9 RID: 97017 RVA: 0x00605E74 File Offset: 0x00604074
+	// Token: 0x17002021 RID: 8225
+	// (get) Token: 0x0601536F RID: 86895 RVA: 0x0062B914 File Offset: 0x00629B14
 	[Nullable(new byte[]
 	{
 		0,
@@ -45,8 +45,8 @@ public class LoadAsyncPromise<[Nullable(0)] T> where T : UObject
 		}
 	}
 
-	// Token: 0x17001FCF RID: 8143
-	// (get) Token: 0x06017AFA RID: 97018 RVA: 0x00605E81 File Offset: 0x00604081
+	// Token: 0x17002022 RID: 8226
+	// (get) Token: 0x06015370 RID: 86896 RVA: 0x0062B921 File Offset: 0x00629B21
 	public int HandleId
 	{
 		get
@@ -55,7 +55,7 @@ public class LoadAsyncPromise<[Nullable(0)] T> where T : UObject
 		}
 	}
 
-	// Token: 0x06017AFB RID: 97019 RVA: 0x00605E89 File Offset: 0x00604089
+	// Token: 0x06015371 RID: 86897 RVA: 0x0062B929 File Offset: 0x00629B29
 	private void LoadAsync(string path, ResourceSystem.EResourceLoadPriority priority = ResourceSystem.EResourceLoadPriority.Default)
 	{
 		this.HandleIdInternal = ResourceSystem.Instance.LoadAsync<T>(path2, delegate(T asset, string path)
@@ -64,7 +64,7 @@ public class LoadAsyncPromise<[Nullable(0)] T> where T : UObject
 		}, (int)priority, "Ui.LoadAsync");
 	}
 
-	// Token: 0x06017AFC RID: 97020 RVA: 0x00605EB0 File Offset: 0x006040B0
+	// Token: 0x06015372 RID: 86898 RVA: 0x0062B950 File Offset: 0x00629B50
 	public void CancelAsyncLoad()
 	{
 		if (this.HandleId != -1)
@@ -75,9 +75,9 @@ public class LoadAsyncPromise<[Nullable(0)] T> where T : UObject
 		}
 	}
 
-	// Token: 0x0400B075 RID: 45173
+	// Token: 0x0400B3E3 RID: 46051
 	private int HandleIdInternal = -1;
 
-	// Token: 0x0400B076 RID: 45174
+	// Token: 0x0400B3E4 RID: 46052
 	private readonly CustomPromise<T> CustomPromiseObject;
 }

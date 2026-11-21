@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006823 RID: 26659
+	// Token: 0x02006EA9 RID: 28329
 	public class IFlowTemplateBlurTransitionEffectT
 	{
-		// Token: 0x1700C609 RID: 50697
-		// (get) Token: 0x0602E796 RID: 190358 RVA: 0x00657B4C File Offset: 0x00655D4C
-		// (set) Token: 0x0602E797 RID: 190359 RVA: 0x00657B54 File Offset: 0x00655D54
+		// Token: 0x1700CFCD RID: 53197
+		// (get) Token: 0x0603101E RID: 200734 RVA: 0x006A5A8C File Offset: 0x006A3C8C
+		// (set) Token: 0x0603101F RID: 200735 RVA: 0x006A5A94 File Offset: 0x006A3C94
 		public EFlowTemplateTransitionEffectType Type { get; set; }
 
-		// Token: 0x1700C60A RID: 50698
-		// (get) Token: 0x0602E798 RID: 190360 RVA: 0x00657B5D File Offset: 0x00655D5D
-		// (set) Token: 0x0602E799 RID: 190361 RVA: 0x00657B65 File Offset: 0x00655D65
+		// Token: 0x1700CFCE RID: 53198
+		// (get) Token: 0x06031020 RID: 200736 RVA: 0x006A5A9D File Offset: 0x006A3C9D
+		// (set) Token: 0x06031021 RID: 200737 RVA: 0x006A5AA5 File Offset: 0x006A3CA5
 		public float Aperture { get; set; }
 
-		// Token: 0x1700C60B RID: 50699
-		// (get) Token: 0x0602E79A RID: 190362 RVA: 0x00657B6E File Offset: 0x00655D6E
-		// (set) Token: 0x0602E79B RID: 190363 RVA: 0x00657B76 File Offset: 0x00655D76
+		// Token: 0x1700CFCF RID: 53199
+		// (get) Token: 0x06031022 RID: 200738 RVA: 0x006A5AAE File Offset: 0x006A3CAE
+		// (set) Token: 0x06031023 RID: 200739 RVA: 0x006A5AB6 File Offset: 0x006A3CB6
 		public float FadeInTime { get; set; }
 
-		// Token: 0x1700C60C RID: 50700
-		// (get) Token: 0x0602E79C RID: 190364 RVA: 0x00657B7F File Offset: 0x00655D7F
-		// (set) Token: 0x0602E79D RID: 190365 RVA: 0x00657B87 File Offset: 0x00655D87
+		// Token: 0x1700CFD0 RID: 53200
+		// (get) Token: 0x06031024 RID: 200740 RVA: 0x006A5ABF File Offset: 0x006A3CBF
+		// (set) Token: 0x06031025 RID: 200741 RVA: 0x006A5AC7 File Offset: 0x006A3CC7
 		public float FadeOutTime { get; set; }
 
-		// Token: 0x0602E79E RID: 190366 RVA: 0x00657B90 File Offset: 0x00655D90
+		// Token: 0x06031026 RID: 200742 RVA: 0x006A5AD0 File Offset: 0x006A3CD0
 		public IFlowTemplateBlurTransitionEffectT()
 		{
 			this.Type = EFlowTemplateTransitionEffectType.Blur;

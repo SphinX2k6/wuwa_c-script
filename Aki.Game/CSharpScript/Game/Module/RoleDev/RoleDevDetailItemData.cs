@@ -4,39 +4,39 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CBF RID: 19647
+	// Token: 0x02003C70 RID: 15472
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevDetailItemData : IRoleDevDetailItemData
 	{
-		// Token: 0x17007D2B RID: 32043
-		// (get) Token: 0x06032B9B RID: 207771 RVA: 0x00BD5145 File Offset: 0x00BD3345
-		// (set) Token: 0x06032B9C RID: 207772 RVA: 0x00BD514D File Offset: 0x00BD334D
+		// Token: 0x170050D5 RID: 20693
+		// (get) Token: 0x0602794F RID: 162127 RVA: 0x00B19EDD File Offset: 0x00B180DD
+		// (set) Token: 0x06027950 RID: 162128 RVA: 0x00B19EE5 File Offset: 0x00B180E5
 		public int RoleId { get; set; }
 
-		// Token: 0x17007D2C RID: 32044
-		// (get) Token: 0x06032B9D RID: 207773 RVA: 0x00BD5156 File Offset: 0x00BD3356
-		// (set) Token: 0x06032B9E RID: 207774 RVA: 0x00BD515E File Offset: 0x00BD335E
+		// Token: 0x170050D6 RID: 20694
+		// (get) Token: 0x06027951 RID: 162129 RVA: 0x00B19EEE File Offset: 0x00B180EE
+		// (set) Token: 0x06027952 RID: 162130 RVA: 0x00B19EF6 File Offset: 0x00B180F6
 		public ERoleDevMainPage MainPage { get; set; }
 
-		// Token: 0x17007D2D RID: 32045
-		// (get) Token: 0x06032B9F RID: 207775 RVA: 0x00BD5167 File Offset: 0x00BD3367
-		// (set) Token: 0x06032BA0 RID: 207776 RVA: 0x00BD516F File Offset: 0x00BD336F
+		// Token: 0x170050D7 RID: 20695
+		// (get) Token: 0x06027953 RID: 162131 RVA: 0x00B19EFF File Offset: 0x00B180FF
+		// (set) Token: 0x06027954 RID: 162132 RVA: 0x00B19F07 File Offset: 0x00B18107
 		public ERoleDevSubPageButton ButtonType { get; set; }
 
-		// Token: 0x17007D2E RID: 32046
-		// (get) Token: 0x06032BA1 RID: 207777 RVA: 0x00BD5178 File Offset: 0x00BD3378
-		// (set) Token: 0x06032BA2 RID: 207778 RVA: 0x00BD5180 File Offset: 0x00BD3380
+		// Token: 0x170050D8 RID: 20696
+		// (get) Token: 0x06027955 RID: 162133 RVA: 0x00B19F10 File Offset: 0x00B18110
+		// (set) Token: 0x06027956 RID: 162134 RVA: 0x00B19F18 File Offset: 0x00B18118
 		public string Title { get; set; }
 
-		// Token: 0x17007D2F RID: 32047
-		// (get) Token: 0x06032BA3 RID: 207779 RVA: 0x00BD5189 File Offset: 0x00BD3389
-		// (set) Token: 0x06032BA4 RID: 207780 RVA: 0x00BD5191 File Offset: 0x00BD3391
+		// Token: 0x170050D9 RID: 20697
+		// (get) Token: 0x06027957 RID: 162135 RVA: 0x00B19F21 File Offset: 0x00B18121
+		// (set) Token: 0x06027958 RID: 162136 RVA: 0x00B19F29 File Offset: 0x00B18129
 		public int ItemGroupId { get; set; }
 
-		// Token: 0x17007D30 RID: 32048
-		// (get) Token: 0x06032BA5 RID: 207781 RVA: 0x00BD519A File Offset: 0x00BD339A
-		// (set) Token: 0x06032BA6 RID: 207782 RVA: 0x00BD51A2 File Offset: 0x00BD33A2
+		// Token: 0x170050DA RID: 20698
+		// (get) Token: 0x06027959 RID: 162137 RVA: 0x00B19F32 File Offset: 0x00B18132
+		// (set) Token: 0x0602795A RID: 162138 RVA: 0x00B19F3A File Offset: 0x00B1813A
 		public List<IItemMaterial> ItemGroup { get; set; }
 	}
 }

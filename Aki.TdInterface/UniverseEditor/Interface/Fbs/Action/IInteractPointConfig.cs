@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200699C RID: 27036
+	// Token: 0x0200704F RID: 28751
 	public struct IInteractPointConfig : IFlatbufferObject
 	{
-		// Token: 0x1700C89B RID: 51355
-		// (get) Token: 0x0602F3DD RID: 193501 RVA: 0x0066F8A1 File Offset: 0x0066DAA1
+		// Token: 0x1700D2A0 RID: 53920
+		// (get) Token: 0x06031DB9 RID: 204217 RVA: 0x006BFFA5 File Offset: 0x006BE1A5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F3DE RID: 193502 RVA: 0x0066F8AE File Offset: 0x0066DAAE
+		// Token: 0x06031DBA RID: 204218 RVA: 0x006BFFB2 File Offset: 0x006BE1B2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F3DF RID: 193503 RVA: 0x0066F8B8 File Offset: 0x0066DAB8
+		// Token: 0x06031DBB RID: 204219 RVA: 0x006BFFBC File Offset: 0x006BE1BC
 		public static IInteractPointConfig GetRootAsIInteractPointConfig(ByteBuffer _bb)
 		{
 			return IInteractPointConfig.GetRootAsIInteractPointConfig(_bb, default(IInteractPointConfig));
 		}
 
-		// Token: 0x0602F3E0 RID: 193504 RVA: 0x0066F8D4 File Offset: 0x0066DAD4
+		// Token: 0x06031DBC RID: 204220 RVA: 0x006BFFD8 File Offset: 0x006BE1D8
 		public static IInteractPointConfig GetRootAsIInteractPointConfig(ByteBuffer _bb, IInteractPointConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F3E1 RID: 193505 RVA: 0x0066F8F1 File Offset: 0x0066DAF1
+		// Token: 0x06031DBD RID: 204221 RVA: 0x006BFFF5 File Offset: 0x006BE1F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F3E2 RID: 193506 RVA: 0x0066F900 File Offset: 0x0066DB00
+		// Token: 0x06031DBE RID: 204222 RVA: 0x006C0004 File Offset: 0x006BE204
 		public IInteractPointConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C89C RID: 51356
-		// (get) Token: 0x0602F3E3 RID: 193507 RVA: 0x0066F910 File Offset: 0x0066DB10
+		// Token: 0x1700D2A1 RID: 53921
+		// (get) Token: 0x06031DBF RID: 204223 RVA: 0x006C0014 File Offset: 0x006BE214
 		public EInteractUnlockType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F3E4 RID: 193508 RVA: 0x0066F94C File Offset: 0x0066DB4C
+		// Token: 0x06031DC0 RID: 204224 RVA: 0x006C0050 File Offset: 0x006BE250
 		public static Offset<IInteractPointConfig> CreateIInteractPointConfig(FlatBufferBuilder builder, EInteractUnlockType Type = EInteractUnlockType.Sequence)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInteractPointConfig.EndIInteractPointConfig(builder);
 		}
 
-		// Token: 0x0602F3E5 RID: 193509 RVA: 0x0066F962 File Offset: 0x0066DB62
+		// Token: 0x06031DC1 RID: 204225 RVA: 0x006C0066 File Offset: 0x006BE266
 		public static void StartIInteractPointConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602F3E6 RID: 193510 RVA: 0x0066F96B File Offset: 0x0066DB6B
+		// Token: 0x06031DC2 RID: 204226 RVA: 0x006C006F File Offset: 0x006BE26F
 		public static void AddType(FlatBufferBuilder builder, EInteractUnlockType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602F3E7 RID: 193511 RVA: 0x0066F976 File Offset: 0x0066DB76
+		// Token: 0x06031DC3 RID: 204227 RVA: 0x006C007A File Offset: 0x006BE27A
 		public static Offset<IInteractPointConfig> EndIInteractPointConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IInteractPointConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602F3E8 RID: 193512 RVA: 0x0066F984 File Offset: 0x0066DB84
+		// Token: 0x06031DC4 RID: 204228 RVA: 0x006C0088 File Offset: 0x006BE288
 		public IInteractPointConfigT UnPack()
 		{
 			IInteractPointConfigT interactPointConfigT = new IInteractPointConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return interactPointConfigT;
 		}
 
-		// Token: 0x0602F3E9 RID: 193513 RVA: 0x0066F99F File Offset: 0x0066DB9F
+		// Token: 0x06031DC5 RID: 204229 RVA: 0x006C00A3 File Offset: 0x006BE2A3
 		public void UnPackTo(IInteractPointConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602F3EA RID: 193514 RVA: 0x0066F9B0 File Offset: 0x0066DBB0
+		// Token: 0x06031DC6 RID: 204230 RVA: 0x006C00B4 File Offset: 0x006BE2B4
 		public static Offset<IInteractPointConfig> Pack(FlatBufferBuilder builder, IInteractPointConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInteractPointConfig.CreateIInteractPointConfig(builder, _o.Type);
 		}
 
-		// Token: 0x04011140 RID: 69952
+		// Token: 0x04011FAD RID: 73645
 		private Table __p;
 	}
 }

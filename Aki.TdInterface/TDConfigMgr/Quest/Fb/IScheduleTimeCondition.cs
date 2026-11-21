@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001385 RID: 4997
+	// Token: 0x020014D6 RID: 5334
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IScheduleTimeCondition : IQuestCondition
 	{
-		// Token: 0x06007257 RID: 29271 RVA: 0x0011312A File Offset: 0x0011132A
-		[NullableContext(1)]
+		// Token: 0x060078FD RID: 30973 RVA: 0x001217AE File Offset: 0x0011F9AE
+		[NullableContext(0)]
 		public static IScheduleTimeCondition Create(IScheduleTimeCondition? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002520 RID: 9504
-		// (get) Token: 0x06007258 RID: 29272 RVA: 0x00113149 File Offset: 0x00111349
+		// Token: 0x170026F3 RID: 9971
+		// (get) Token: 0x060078FE RID: 30974 RVA: 0x001217CD File Offset: 0x0011F9CD
 		public override EChildQuest Type
 		{
 			get
@@ -35,8 +35,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002521 RID: 9505
-		// (get) Token: 0x06007259 RID: 29273 RVA: 0x00113156 File Offset: 0x00111356
+		// Token: 0x170026F4 RID: 9972
+		// (get) Token: 0x060078FF RID: 30975 RVA: 0x001217DA File Offset: 0x0011F9DA
 		public override IConditionGroup PreConditions
 		{
 			get
@@ -51,12 +51,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002522 RID: 9506
-		// (get) Token: 0x0600725A RID: 29274 RVA: 0x0011318A File Offset: 0x0011138A
-		[Nullable(1)]
+		// Token: 0x170026F5 RID: 9973
+		// (get) Token: 0x06007900 RID: 30976 RVA: 0x0012180E File Offset: 0x0011FA0E
+		[Nullable(0)]
 		public virtual IBaseTime StartTime
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._StartTimeInited)
@@ -69,8 +69,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002523 RID: 9507
-		// (get) Token: 0x0600725B RID: 29275 RVA: 0x001131BE File Offset: 0x001113BE
+		// Token: 0x170026F6 RID: 9974
+		// (get) Token: 0x06007901 RID: 30977 RVA: 0x00121842 File Offset: 0x0011FA42
 		public virtual IBaseTime EndTime
 		{
 			get
@@ -85,8 +85,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002524 RID: 9508
-		// (get) Token: 0x0600725C RID: 29276 RVA: 0x001131F4 File Offset: 0x001113F4
+		// Token: 0x170026F7 RID: 9975
+		// (get) Token: 0x06007902 RID: 30978 RVA: 0x00121878 File Offset: 0x0011FA78
 		public virtual int? Day
 		{
 			get
@@ -99,25 +99,25 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004213 RID: 16915
+		// Token: 0x04004594 RID: 17812
 		private IScheduleTimeCondition Instance;
 
-		// Token: 0x04004214 RID: 16916
+		// Token: 0x04004595 RID: 17813
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004215 RID: 16917
+		// Token: 0x04004596 RID: 17814
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004216 RID: 16918
+		// Token: 0x04004597 RID: 17815
 		private IBaseTime _StartTimeCache;
 
-		// Token: 0x04004217 RID: 16919
+		// Token: 0x04004598 RID: 17816
 		private bool _StartTimeInited;
 
-		// Token: 0x04004218 RID: 16920
+		// Token: 0x04004599 RID: 17817
 		private IBaseTime _EndTimeCache;
 
-		// Token: 0x04004219 RID: 16921
+		// Token: 0x0400459A RID: 17818
 		private bool _EndTimeInited;
 	}
 }

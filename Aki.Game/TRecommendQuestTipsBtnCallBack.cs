@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x0200125B RID: 4699
-// (Invoke) Token: 0x06007FB3 RID: 32691
+// Token: 0x0200070F RID: 1807
+// (Invoke) Token: 0x0600534A RID: 21322
 public delegate void TRecommendQuestTipsBtnCallBack();

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000152 RID: 338
+	// Token: 0x02000161 RID: 353
 	public class ConfigChatFilterTypeAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060007ED RID: 2029 RVA: 0x00086688 File Offset: 0x00084888
+		// Token: 0x06000847 RID: 2119 RVA: 0x0008BFEC File Offset: 0x0008A1EC
 		static ConfigChatFilterTypeAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigChatFilterTypeAll.CreateStaticDefaultValue), new Action(ConfigChatFilterTypeAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060007EE RID: 2030 RVA: 0x000866A8 File Offset: 0x000848A8
+		// Token: 0x06000848 RID: 2120 RVA: 0x0008C00C File Offset: 0x0008A20C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigChatFilterTypeAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060007EF RID: 2031 RVA: 0x00086727 File Offset: 0x00084927
+		// Token: 0x06000849 RID: 2121 RVA: 0x0008C08B File Offset: 0x0008A28B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigChatFilterTypeAll.LogPair = null;
 			ConfigChatFilterTypeAll.HandleId = 0;
 		}
 
-		// Token: 0x060007F0 RID: 2032 RVA: 0x00086735 File Offset: 0x00084935
+		// Token: 0x0600084A RID: 2122 RVA: 0x0008C099 File Offset: 0x0008A299
 		public static void Init()
 		{
 			ConfigChatFilterTypeAll.HandleId = ConfigCommon.InitDataStatement(ConfigChatFilterTypeAll.HandleId, "db_phonemsg.db", "select BinData from `ChatFilterType`");
 		}
 
-		// Token: 0x060007F1 RID: 2033 RVA: 0x00086750 File Offset: 0x00084950
+		// Token: 0x0600084B RID: 2123 RVA: 0x0008C0B4 File Offset: 0x0008A2B4
 		[NullableContext(2)]
 		public static IReadOnlyList<ChatFilterType> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000922 RID: 2338
+		// Token: 0x0400098B RID: 2443
 		private const string DB = "db_phonemsg.db";
 
-		// Token: 0x04000923 RID: 2339
+		// Token: 0x0400098C RID: 2444
 		private const string FILE = "s.手机系统.xlsx";
 
-		// Token: 0x04000924 RID: 2340
+		// Token: 0x0400098D RID: 2445
 		private const string TABLE = "ChatFilterType";
 
-		// Token: 0x04000925 RID: 2341
+		// Token: 0x0400098E RID: 2446
 		private const string COMMAND = "select BinData from `ChatFilterType`";
 
-		// Token: 0x04000926 RID: 2342
+		// Token: 0x0400098F RID: 2447
 		private const string KEY_PREFIX = "ChatFilterTypeAll";
 
-		// Token: 0x04000927 RID: 2343
+		// Token: 0x04000990 RID: 2448
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000928 RID: 2344
+		// Token: 0x04000991 RID: 2449
 		private static int HandleId;
 	}
 }

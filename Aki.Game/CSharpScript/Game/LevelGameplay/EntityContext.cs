@@ -5,24 +5,24 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006999 RID: 27033
+	// Token: 0x02005AF5 RID: 23285
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EntityContext : GeneralContext
 	{
-		// Token: 0x06043437 RID: 275511 RVA: 0x01065C48 File Offset: 0x01063E48
+		// Token: 0x0603946F RID: 234607 RVA: 0x01009EB0 File Offset: 0x010080B0
 		public EntityContext()
 		{
 			this.Type = new EGeneralContextType?(EGeneralContextType.Entity);
 		}
 
-		// Token: 0x06043438 RID: 275512 RVA: 0x01065C68 File Offset: 0x01063E68
+		// Token: 0x06039470 RID: 234608 RVA: 0x01009ED0 File Offset: 0x010080D0
 		public override void Reset()
 		{
 			this.EntityId = new int?(0);
 		}
 
-		// Token: 0x06043439 RID: 275513 RVA: 0x01065C76 File Offset: 0x01063E76
+		// Token: 0x06039471 RID: 234609 RVA: 0x01009EDE File Offset: 0x010080DE
 		[NullableContext(1)]
 		public static EntityContext Create(int entityId = 0, GameCtxType? subType = null)
 		{
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return entityContext;
 		}
 
-		// Token: 0x0604343A RID: 275514 RVA: 0x01065CAF File Offset: 0x01063EAF
+		// Token: 0x06039472 RID: 234610 RVA: 0x01009F17 File Offset: 0x01008117
 		public void AddSubParam(int key, int value)
 		{
 			if (this.SubParamMap == null)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			this.SubParamMap[key] = value;
 		}
 
-		// Token: 0x0604343B RID: 275515 RVA: 0x01065CD4 File Offset: 0x01063ED4
+		// Token: 0x06039473 RID: 234611 RVA: 0x01009F3C File Offset: 0x0100813C
 		public int? GetSubParam(int key)
 		{
 			int value;
@@ -52,16 +52,16 @@ namespace CSharpScript.Game.LevelGamePlay
 			return null;
 		}
 
-		// Token: 0x040230A1 RID: 143521
+		// Token: 0x0401E28B RID: 123531
 		public int? EntityId = new int?(0);
 
-		// Token: 0x040230A2 RID: 143522
+		// Token: 0x0401E28C RID: 123532
 		public bool ClientExecuteActions;
 
-		// Token: 0x040230A3 RID: 143523
+		// Token: 0x0401E28D RID: 123533
 		public string SequencePath;
 
-		// Token: 0x040230A4 RID: 143524
+		// Token: 0x0401E28E RID: 123534
 		private Dictionary<int, int> SubParamMap;
 	}
 }

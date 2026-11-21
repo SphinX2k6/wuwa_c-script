@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AC4 RID: 10948
+	// Token: 0x02002DB8 RID: 11704
 	public class IDeletePhoneMessage : IPhoneSystemInteractBase
 	{
-		// Token: 0x0600F03A RID: 61498 RVA: 0x0022E3AA File Offset: 0x0022C5AA
-		[NullableContext(1)]
+		// Token: 0x0600FEF0 RID: 65264 RVA: 0x0024C0B6 File Offset: 0x0024A2B6
 		public static IDeletePhoneMessage Create(IDeletePhoneMessage? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C74 RID: 19572
-		// (get) Token: 0x0600F03B RID: 61499 RVA: 0x0022E3C9 File Offset: 0x0022C5C9
+		// Token: 0x1700502E RID: 20526
+		// (get) Token: 0x0600FEF1 RID: 65265 RVA: 0x0024C0D5 File Offset: 0x0024A2D5
 		public override EPhoneSystemInteractType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C75 RID: 19573
-		// (get) Token: 0x0600F03C RID: 61500 RVA: 0x0022E3D8 File Offset: 0x0022C5D8
+		// Token: 0x1700502F RID: 20527
+		// (get) Token: 0x0600FEF2 RID: 65266 RVA: 0x0024C0E4 File Offset: 0x0024A2E4
 		public virtual int? PhoneMessageId
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008422 RID: 33826
+		// Token: 0x04008B26 RID: 35622
 		private IDeletePhoneMessage Instance;
 	}
 }

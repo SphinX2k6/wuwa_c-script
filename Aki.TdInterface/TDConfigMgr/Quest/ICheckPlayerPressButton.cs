@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EF6 RID: 3830
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200100C RID: 4108
 	public class ICheckPlayerPressButton : ICheckPlayerInputBase
 	{
-		// Token: 0x06005480 RID: 21632 RVA: 0x000CF71C File Offset: 0x000CD91C
+		// Token: 0x060059FC RID: 23036 RVA: 0x000DB8C4 File Offset: 0x000D9AC4
 		private ICheckPlayerPressButton_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005481 RID: 21633 RVA: 0x000CF754 File Offset: 0x000CD954
+		// Token: 0x060059FD RID: 23037 RVA: 0x000DB8FC File Offset: 0x000D9AFC
 		public static ICheckPlayerPressButton Create([Nullable(2)] ICheckPlayerPressButton instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005482 RID: 21634 RVA: 0x000CF767 File Offset: 0x000CD967
+		// Token: 0x060059FE RID: 23038 RVA: 0x000DB90F File Offset: 0x000D9B0F
 		public static ICheckPlayerPressButton CreateFromSetValue([Nullable(2)] ICheckPlayerPressButton_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005483 RID: 21635 RVA: 0x000CF77A File Offset: 0x000CD97A
+		// Token: 0x060059FF RID: 23039 RVA: 0x000DB922 File Offset: 0x000D9B22
 		public new ICheckPlayerPressButton_SetValue ToSetValue()
 		{
 			return new ICheckPlayerPressButton_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C50 RID: 7248
-		// (get) Token: 0x06005484 RID: 21636 RVA: 0x000CF799 File Offset: 0x000CD999
-		// (set) Token: 0x06005485 RID: 21637 RVA: 0x000CF7C4 File Offset: 0x000CD9C4
+		// Token: 0x17001DE8 RID: 7656
+		// (get) Token: 0x06005A00 RID: 23040 RVA: 0x000DB941 File Offset: 0x000D9B41
+		// (set) Token: 0x06005A01 RID: 23041 RVA: 0x000DB96C File Offset: 0x000D9B6C
 		public override ECheckPlayerInputType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C51 RID: 7249
-		// (get) Token: 0x06005486 RID: 21638 RVA: 0x000CF7D2 File Offset: 0x000CD9D2
-		// (set) Token: 0x06005487 RID: 21639 RVA: 0x000CF7FD File Offset: 0x000CD9FD
+		// Token: 0x17001DE9 RID: 7657
+		// (get) Token: 0x06005A02 RID: 23042 RVA: 0x000DB97A File Offset: 0x000D9B7A
+		// (set) Token: 0x06005A03 RID: 23043 RVA: 0x000DB9A5 File Offset: 0x000D9BA5
 		public virtual EPlayerButtonType ButtonType
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003331 RID: 13105
+		// Token: 0x0400363E RID: 13886
 		[Nullable(2)]
 		protected new ICheckPlayerPressButton FbInstance;
 
-		// Token: 0x04003332 RID: 13106
+		// Token: 0x0400363F RID: 13887
 		[Nullable(2)]
 		protected new ICheckPlayerPressButton_SetValue PocoInterface;
 	}

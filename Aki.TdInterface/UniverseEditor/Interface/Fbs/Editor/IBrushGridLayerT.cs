@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004827 RID: 18471
+	// Token: 0x02004C8F RID: 19599
 	public class IBrushGridLayerT
 	{
-		// Token: 0x17008498 RID: 33944
-		// (get) Token: 0x0601C8DB RID: 116955 RVA: 0x00409D30 File Offset: 0x00407F30
-		// (set) Token: 0x0601C8DC RID: 116956 RVA: 0x00409D38 File Offset: 0x00407F38
+		// Token: 0x17008AE3 RID: 35555
+		// (get) Token: 0x0601E0D8 RID: 123096 RVA: 0x00436680 File Offset: 0x00434880
+		// (set) Token: 0x0601E0D9 RID: 123097 RVA: 0x00436688 File Offset: 0x00434888
 		public string Name { get; set; }
 
-		// Token: 0x17008499 RID: 33945
-		// (get) Token: 0x0601C8DD RID: 116957 RVA: 0x00409D41 File Offset: 0x00407F41
-		// (set) Token: 0x0601C8DE RID: 116958 RVA: 0x00409D49 File Offset: 0x00407F49
+		// Token: 0x17008AE4 RID: 35556
+		// (get) Token: 0x0601E0DA RID: 123098 RVA: 0x00436691 File Offset: 0x00434891
+		// (set) Token: 0x0601E0DB RID: 123099 RVA: 0x00436699 File Offset: 0x00434899
 		public List<IVector2T> Cells { get; set; }
 
-		// Token: 0x0601C8DF RID: 116959 RVA: 0x00409D52 File Offset: 0x00407F52
+		// Token: 0x0601E0DC RID: 123100 RVA: 0x004366A2 File Offset: 0x004348A2
 		public IBrushGridLayerT()
 		{
 			this.Name = null;

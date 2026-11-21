@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200562E RID: 22062
+	// Token: 0x02005BCC RID: 23500
 	public static class INpcModelConfig_UnionVerify
 	{
-		// Token: 0x06024A18 RID: 150040 RVA: 0x0050DA74 File Offset: 0x0050BC74
+		// Token: 0x06026C2B RID: 158763 RVA: 0x0054E124 File Offset: 0x0054C324
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -20,6 +20,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				break;
 			case 3:
 				result = IDaNpcModelVerify.Verify(verifier, tablePos);
+				break;
+			case 4:
+				result = ICombineDaNpcModelVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

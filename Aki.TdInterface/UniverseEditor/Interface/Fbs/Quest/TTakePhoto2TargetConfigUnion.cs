@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200431E RID: 17182
+	// Token: 0x02004780 RID: 18304
 	public class TTakePhoto2TargetConfigUnion
 	{
-		// Token: 0x17007976 RID: 31094
-		// (get) Token: 0x060197B5 RID: 104373 RVA: 0x003A6A90 File Offset: 0x003A4C90
-		// (set) Token: 0x060197B6 RID: 104374 RVA: 0x003A6A98 File Offset: 0x003A4C98
+		// Token: 0x17007FAB RID: 32683
+		// (get) Token: 0x0601AF43 RID: 110403 RVA: 0x003D24BA File Offset: 0x003D06BA
+		// (set) Token: 0x0601AF44 RID: 110404 RVA: 0x003D24C2 File Offset: 0x003D06C2
 		public TTakePhoto2TargetConfig Type { get; set; }
 
-		// Token: 0x17007977 RID: 31095
-		// (get) Token: 0x060197B7 RID: 104375 RVA: 0x003A6AA1 File Offset: 0x003A4CA1
-		// (set) Token: 0x060197B8 RID: 104376 RVA: 0x003A6AA9 File Offset: 0x003A4CA9
+		// Token: 0x17007FAC RID: 32684
+		// (get) Token: 0x0601AF45 RID: 110405 RVA: 0x003D24CB File Offset: 0x003D06CB
+		// (set) Token: 0x0601AF46 RID: 110406 RVA: 0x003D24D3 File Offset: 0x003D06D3
 		public object Value { get; set; }
 
-		// Token: 0x060197B9 RID: 104377 RVA: 0x003A6AB2 File Offset: 0x003A4CB2
+		// Token: 0x0601AF47 RID: 110407 RVA: 0x003D24DC File Offset: 0x003D06DC
 		public TTakePhoto2TargetConfigUnion()
 		{
 			this.Type = TTakePhoto2TargetConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060197BA RID: 104378 RVA: 0x003A6AC8 File Offset: 0x003A4CC8
+		// Token: 0x0601AF48 RID: 110408 RVA: 0x003D24F2 File Offset: 0x003D06F2
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060197BB RID: 104379 RVA: 0x003A6ADA File Offset: 0x003A4CDA
+		// Token: 0x0601AF49 RID: 110409 RVA: 0x003D2504 File Offset: 0x003D0704
 		public ITakePhoto2EntityTargetT AsITakePhoto2EntityTarget()
 		{
 			return this.As<ITakePhoto2EntityTargetT>();
 		}
 
-		// Token: 0x060197BC RID: 104380 RVA: 0x003A6AE2 File Offset: 0x003A4CE2
+		// Token: 0x0601AF4A RID: 110410 RVA: 0x003D250C File Offset: 0x003D070C
 		public static TTakePhoto2TargetConfigUnion FromITakePhoto2EntityTarget(ITakePhoto2EntityTargetT _itakephoto2entitytarget)
 		{
 			return new TTakePhoto2TargetConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197BD RID: 104381 RVA: 0x003A6AF7 File Offset: 0x003A4CF7
+		// Token: 0x0601AF4B RID: 110411 RVA: 0x003D2521 File Offset: 0x003D0721
 		public ITakePhoto2PhotoTargetEntityTargetT AsITakePhoto2PhotoTargetEntityTarget()
 		{
 			return this.As<ITakePhoto2PhotoTargetEntityTargetT>();
 		}
 
-		// Token: 0x060197BE RID: 104382 RVA: 0x003A6AFF File Offset: 0x003A4CFF
+		// Token: 0x0601AF4C RID: 110412 RVA: 0x003D2529 File Offset: 0x003D0729
 		public static TTakePhoto2TargetConfigUnion FromITakePhoto2PhotoTargetEntityTarget(ITakePhoto2PhotoTargetEntityTargetT _itakephoto2phototargetentitytarget)
 		{
 			return new TTakePhoto2TargetConfigUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197BF RID: 104383 RVA: 0x003A6B14 File Offset: 0x003A4D14
+		// Token: 0x0601AF4D RID: 110413 RVA: 0x003D253E File Offset: 0x003D073E
 		public ITakePhoto2TaggedActorTargetT AsITakePhoto2TaggedActorTarget()
 		{
 			return this.As<ITakePhoto2TaggedActorTargetT>();
 		}
 
-		// Token: 0x060197C0 RID: 104384 RVA: 0x003A6B1C File Offset: 0x003A4D1C
+		// Token: 0x0601AF4E RID: 110414 RVA: 0x003D2546 File Offset: 0x003D0746
 		public static TTakePhoto2TargetConfigUnion FromITakePhoto2TaggedActorTarget(ITakePhoto2TaggedActorTargetT _itakephoto2taggedactortarget)
 		{
 			return new TTakePhoto2TargetConfigUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197C1 RID: 104385 RVA: 0x003A6B31 File Offset: 0x003A4D31
+		// Token: 0x0601AF4F RID: 110415 RVA: 0x003D255B File Offset: 0x003D075B
 		public ITakePhoto2TargetEntityTypeT AsITakePhoto2TargetEntityType()
 		{
 			return this.As<ITakePhoto2TargetEntityTypeT>();
 		}
 
-		// Token: 0x060197C2 RID: 104386 RVA: 0x003A6B39 File Offset: 0x003A4D39
+		// Token: 0x0601AF50 RID: 110416 RVA: 0x003D2563 File Offset: 0x003D0763
 		public static TTakePhoto2TargetConfigUnion FromITakePhoto2TargetEntityType(ITakePhoto2TargetEntityTypeT _itakephoto2targetentitytype)
 		{
 			return new TTakePhoto2TargetConfigUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197C3 RID: 104387 RVA: 0x003A6B50 File Offset: 0x003A4D50
+		// Token: 0x0601AF51 RID: 110417 RVA: 0x003D2578 File Offset: 0x003D0778
 		public static int Pack(FlatBufferBuilder builder, TTakePhoto2TargetConfigUnion _o)
 		{
 			switch (_o.Type)

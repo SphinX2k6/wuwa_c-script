@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005417 RID: 21527
+	// Token: 0x020043FA RID: 17402
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 	})]
 	public class DeviceInfoItem : GridProxyAbstract<DeviceInfoItemData>
 	{
-		// Token: 0x06037046 RID: 225350 RVA: 0x00D09680 File Offset: 0x00D07880
+		// Token: 0x0602BF8F RID: 180111 RVA: 0x00C58AA8 File Offset: 0x00C56CA8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,14 +26,14 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			};
 		}
 
-		// Token: 0x06037047 RID: 225351 RVA: 0x00D096DA File Offset: 0x00D078DA
+		// Token: 0x0602BF90 RID: 180112 RVA: 0x00C58B02 File Offset: 0x00C56D02
 		public override void Refresh(DeviceInfoItemData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
 			this.UpdateDisplay();
 		}
 
-		// Token: 0x06037048 RID: 225352 RVA: 0x00D096EC File Offset: 0x00D078EC
+		// Token: 0x0602BF91 RID: 180113 RVA: 0x00C58B14 File Offset: 0x00C56D14
 		private void UpdateDisplay()
 		{
 			if (this.Data == null || string.IsNullOrEmpty(this.Data.Name) || this.Data.GetInfoFunction == null)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x0401D05E RID: 118878
+		// Token: 0x04017AF7 RID: 97015
 		[Nullable(2)]
 		private DeviceInfoItemData Data;
 	}

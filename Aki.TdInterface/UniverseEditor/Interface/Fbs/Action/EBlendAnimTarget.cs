@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F26 RID: 24358
+	// Token: 0x0200656A RID: 25962
 	public enum EBlendAnimTarget : byte
 	{
-		// Token: 0x0400FC46 RID: 64582
+		// Token: 0x040109BC RID: 68028
 		Player
 	}
 }

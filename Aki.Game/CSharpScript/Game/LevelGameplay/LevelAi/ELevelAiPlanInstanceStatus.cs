@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi
 {
-	// Token: 0x02006DAB RID: 28075
+	// Token: 0x02005F2A RID: 24362
 	public enum ELevelAiPlanInstanceStatus
 	{
-		// Token: 0x04023A04 RID: 145924
+		// Token: 0x0401ECA6 RID: 126118
 		NotStarted,
-		// Token: 0x04023A05 RID: 145925
+		// Token: 0x0401ECA7 RID: 126119
 		InProgress,
-		// Token: 0x04023A06 RID: 145926
+		// Token: 0x0401ECA8 RID: 126120
 		Succeeded,
-		// Token: 0x04023A07 RID: 145927
+		// Token: 0x0401ECA9 RID: 126121
 		Failed
 	}
 }

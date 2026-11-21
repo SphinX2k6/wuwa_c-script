@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200251C RID: 9500
+	// Token: 0x020027C3 RID: 10179
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlayMontage : ActionParams
 	{
-		// Token: 0x0600D3E4 RID: 54244 RVA: 0x001F63FA File Offset: 0x001F45FA
-		[NullableContext(1)]
+		// Token: 0x0600E144 RID: 57668 RVA: 0x00211E5A File Offset: 0x0021005A
+		[NullableContext(0)]
 		public static PlayMontage Create(IPlayMontage? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B6E RID: 15214
-		// (get) Token: 0x0600D3E5 RID: 54245 RVA: 0x001F6419 File Offset: 0x001F4619
+		// Token: 0x17003E6C RID: 15980
+		// (get) Token: 0x0600E145 RID: 57669 RVA: 0x00211E79 File Offset: 0x00210079
 		public virtual int EntityId
 		{
 			get
@@ -33,12 +33,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B6F RID: 15215
-		// (get) Token: 0x0600D3E6 RID: 54246 RVA: 0x001F6426 File Offset: 0x001F4626
-		[Nullable(1)]
+		// Token: 0x17003E6D RID: 15981
+		// (get) Token: 0x0600E146 RID: 57670 RVA: 0x00211E86 File Offset: 0x00210086
+		[Nullable(0)]
 		public virtual IActionMontage ActionMontage
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ActionMontageInited)
@@ -51,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B70 RID: 15216
-		// (get) Token: 0x0600D3E7 RID: 54247 RVA: 0x001F645A File Offset: 0x001F465A
+		// Token: 0x17003E6E RID: 15982
+		// (get) Token: 0x0600E147 RID: 57671 RVA: 0x00211EBA File Offset: 0x002100BA
 		public virtual string ExpressionMontage
 		{
 			get
@@ -61,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B71 RID: 15217
-		// (get) Token: 0x0600D3E8 RID: 54248 RVA: 0x001F6467 File Offset: 0x001F4667
+		// Token: 0x17003E6F RID: 15983
+		// (get) Token: 0x0600E148 RID: 57672 RVA: 0x00211EC7 File Offset: 0x002100C7
 		public virtual string MouthSequence
 		{
 			get
@@ -71,8 +71,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B72 RID: 15218
-		// (get) Token: 0x0600D3E9 RID: 54249 RVA: 0x001F6474 File Offset: 0x001F4674
+		// Token: 0x17003E70 RID: 15984
+		// (get) Token: 0x0600E149 RID: 57673 RVA: 0x00211ED4 File Offset: 0x002100D4
 		public virtual int? Duration
 		{
 			get
@@ -85,13 +85,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400741C RID: 29724
+		// Token: 0x04007A71 RID: 31345
 		private IPlayMontage Instance;
 
-		// Token: 0x0400741D RID: 29725
+		// Token: 0x04007A72 RID: 31346
 		private IActionMontage _ActionMontageCache;
 
-		// Token: 0x0400741E RID: 29726
+		// Token: 0x04007A73 RID: 31347
 		private bool _ActionMontageInited;
 	}
 }

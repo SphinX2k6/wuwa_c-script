@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E24 RID: 24100
+	// Token: 0x02004E09 RID: 19977
 	public class SpecialEnergyBarPoint : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D4A3 RID: 251043 RVA: 0x00EC5440 File Offset: 0x00EC3640
+		// Token: 0x06032432 RID: 205874 RVA: 0x00E169A0 File Offset: 0x00E14BA0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D4A4 RID: 251044 RVA: 0x00EC54CC File Offset: 0x00EC36CC
+		// Token: 0x06032433 RID: 205875 RVA: 0x00E16A2C File Offset: 0x00E14C2C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarPoint.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D4A5 RID: 251045 RVA: 0x00EC5510 File Offset: 0x00EC3710
+		// Token: 0x06032434 RID: 205876 RVA: 0x00E16A70 File Offset: 0x00E14C70
 		[NullableContext(1)]
 		protected UniTask InitPointItem(UUIItem pointItem)
 		{
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitPointItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D4A6 RID: 251046 RVA: 0x00EC555C File Offset: 0x00EC375C
+		// Token: 0x06032435 RID: 205877 RVA: 0x00E16ABC File Offset: 0x00E14CBC
 		protected override void OnStart()
 		{
 			if (this.Config == null)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBarPercent(true);
 		}
 
-		// Token: 0x0603D4A7 RID: 251047 RVA: 0x00EC55C8 File Offset: 0x00EC37C8
+		// Token: 0x06032436 RID: 205878 RVA: 0x00E16B28 File Offset: 0x00E14D28
 		protected void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -81,19 +81,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(this.GetKeyEnable(), isStart);
 		}
 
-		// Token: 0x0603D4A8 RID: 251048 RVA: 0x00EC5606 File Offset: 0x00EC3806
+		// Token: 0x06032437 RID: 205879 RVA: 0x00E16B66 File Offset: 0x00E14D66
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D4A9 RID: 251049 RVA: 0x00EC560F File Offset: 0x00EC380F
+		// Token: 0x06032438 RID: 205880 RVA: 0x00E16B6F File Offset: 0x00E14D6F
 		protected override void OnKeyEnableChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D4AA RID: 251050 RVA: 0x00EC5618 File Offset: 0x00EC3818
+		// Token: 0x06032439 RID: 205881 RVA: 0x00E16B78 File Offset: 0x00E14D78
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -105,27 +105,27 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			pointItem.Tick(delta);
 		}
 
-		// Token: 0x0401FF61 RID: 130913
+		// Token: 0x0401AA28 RID: 109096
 		private const int POINT_NUM = 41;
 
-		// Token: 0x0401FF62 RID: 130914
+		// Token: 0x0401AA29 RID: 109097
 		private const float POINT_WIDTH = 9f;
 
-		// Token: 0x0401FF63 RID: 130915
+		// Token: 0x0401AA2A RID: 109098
 		[Nullable(2)]
 		private SpecialEnergyBarPointItem PointItem;
 
-		// Token: 0x0401FF64 RID: 130916
+		// Token: 0x0401AA2B RID: 109099
 		public bool IsMorph;
 
-		// Token: 0x0200C1A0 RID: 49568
+		// Token: 0x0200ABAF RID: 43951
 		private enum EChildType
 		{
-			// Token: 0x0403A826 RID: 239654
+			// Token: 0x04035218 RID: 217624
 			PointItem,
-			// Token: 0x0403A827 RID: 239655
+			// Token: 0x04035219 RID: 217625
 			KeyContainerItem,
-			// Token: 0x0403A828 RID: 239656
+			// Token: 0x0403521A RID: 217626
 			BottomDescItem
 		}
 	}

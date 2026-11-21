@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029A4 RID: 10660
+// Token: 0x02001F1F RID: 7967
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerCoverItem : UiPanelBase
 {
-	// Token: 0x0601619C RID: 90524 RVA: 0x00596878 File Offset: 0x00594A78
+	// Token: 0x06013BA2 RID: 80802 RVA: 0x005C1838 File Offset: 0x005BFA38
 	public UniTask Init(UUIItem item)
 	{
 		ShipTowerCoverItem.<Init>d__9 <Init>d__;
@@ -25,7 +25,7 @@ public class ShipTowerCoverItem : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601619D RID: 90525 RVA: 0x005968C4 File Offset: 0x00594AC4
+	// Token: 0x06013BA3 RID: 80803 RVA: 0x005C1884 File Offset: 0x005BFA84
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class ShipTowerCoverItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601619E RID: 90526 RVA: 0x00596978 File Offset: 0x00594B78
+	// Token: 0x06013BA4 RID: 80804 RVA: 0x005C1938 File Offset: 0x005BFB38
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerCoverItem.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ public class ShipTowerCoverItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601619F RID: 90527 RVA: 0x005969BC File Offset: 0x00594BBC
+	// Token: 0x06013BA5 RID: 80805 RVA: 0x005C197C File Offset: 0x005BFB7C
 	public void UpdateData(ShipTowerStageData data, bool isCover = false)
 	{
 		this.ItemData = data;
@@ -100,7 +100,7 @@ public class ShipTowerCoverItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060161A0 RID: 90528 RVA: 0x00596B85 File Offset: 0x00594D85
+	// Token: 0x06013BA6 RID: 80806 RVA: 0x005C1B45 File Offset: 0x005BFD45
 	private void OnBtnConfirmClick()
 	{
 		Action<ShipTowerStageData, bool> confirmCallback = this.ConfirmCallback;
@@ -111,39 +111,39 @@ public class ShipTowerCoverItem : UiPanelBase
 		confirmCallback(this.ItemData, this.IsCover);
 	}
 
-	// Token: 0x060161A1 RID: 90529 RVA: 0x00596BA3 File Offset: 0x00594DA3
+	// Token: 0x06013BA7 RID: 80807 RVA: 0x005C1B63 File Offset: 0x005BFD63
 	private ShipTowerCoverRoleItem CreateRoleItem()
 	{
 		return new ShipTowerCoverRoleItem();
 	}
 
-	// Token: 0x060161A2 RID: 90530 RVA: 0x00596BAA File Offset: 0x00594DAA
+	// Token: 0x06013BA8 RID: 80808 RVA: 0x005C1B6A File Offset: 0x005BFD6A
 	private void OnClickBuff(MediumItemGridExtendCallback param)
 	{
 	}
 
-	// Token: 0x0400A4B8 RID: 42168
+	// Token: 0x0400A8A2 RID: 43170
 	private ShipTowerStageData ItemData;
 
-	// Token: 0x0400A4B9 RID: 42169
+	// Token: 0x0400A8A3 RID: 43171
 	private bool IsCover;
 
-	// Token: 0x0400A4BA RID: 42170
+	// Token: 0x0400A8A4 RID: 43172
 	private ButtonItem BtnConfirm;
 
-	// Token: 0x0400A4BB RID: 42171
+	// Token: 0x0400A8A5 RID: 43173
 	private GenericLayout<ShipTowerCoverRoleItem, int> LayoutRoleList1;
 
-	// Token: 0x0400A4BC RID: 42172
+	// Token: 0x0400A8A6 RID: 43174
 	private GenericLayout<ShipTowerCoverRoleItem, int> LayoutRoleList2;
 
-	// Token: 0x0400A4BD RID: 42173
+	// Token: 0x0400A8A7 RID: 43175
 	private SmallItemGrid BuffItem1;
 
-	// Token: 0x0400A4BE RID: 42174
+	// Token: 0x0400A8A8 RID: 43176
 	private SmallItemGrid BuffItem2;
 
-	// Token: 0x0400A4BF RID: 42175
+	// Token: 0x0400A8A9 RID: 43177
 	[Nullable(new byte[]
 	{
 		2,
@@ -151,29 +151,29 @@ public class ShipTowerCoverItem : UiPanelBase
 	})]
 	public Action<ShipTowerStageData, bool> ConfirmCallback;
 
-	// Token: 0x02008FB0 RID: 36784
+	// Token: 0x020081F9 RID: 33273
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E895 RID: 190613
+		// Token: 0x04029F94 RID: 171924
 		public const int HLayoutRoleList1 = 0;
 
-		// Token: 0x0402E896 RID: 190614
+		// Token: 0x04029F95 RID: 171925
 		public const int HLayoutRoleList2 = 1;
 
-		// Token: 0x0402E897 RID: 190615
+		// Token: 0x04029F96 RID: 171926
 		public const int ItemBuff1 = 2;
 
-		// Token: 0x0402E898 RID: 190616
+		// Token: 0x04029F97 RID: 171927
 		public const int ItemBuff2 = 3;
 
-		// Token: 0x0402E899 RID: 190617
+		// Token: 0x04029F98 RID: 171928
 		public const int TxtScore = 4;
 
-		// Token: 0x0402E89A RID: 190618
+		// Token: 0x04029F99 RID: 171929
 		public const int TextureGrade = 5;
 
-		// Token: 0x0402E89B RID: 190619
+		// Token: 0x04029F9A RID: 171930
 		public const int ItemConfirm = 6;
 	}
 }

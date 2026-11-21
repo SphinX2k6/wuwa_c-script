@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001666 RID: 5734
+	// Token: 0x020016E2 RID: 5858
 	public enum TetrisState
 	{
-		// Token: 0x0400C185 RID: 49541
+		// Token: 0x0400C6AE RID: 50862
 		[OriginalName("TetrisLocked")]
 		TetrisLocked,
-		// Token: 0x0400C186 RID: 49542
+		// Token: 0x0400C6AF RID: 50863
 		[OriginalName("TetrisUnlocked")]
 		TetrisUnlocked,
-		// Token: 0x0400C187 RID: 49543
+		// Token: 0x0400C6B0 RID: 50864
 		[OriginalName("TetrisFinished")]
 		TetrisFinished
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002041 RID: 8257
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200228A RID: 8842
 	public class IVehicleNewSplineMoveTarget : INewSplineMoveTarget
 	{
-		// Token: 0x0600B576 RID: 46454 RVA: 0x001A558C File Offset: 0x001A378C
+		// Token: 0x0600C09C RID: 49308 RVA: 0x001BBCF8 File Offset: 0x001B9EF8
 		private IVehicleNewSplineMoveTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B577 RID: 46455 RVA: 0x001A55C4 File Offset: 0x001A37C4
+		// Token: 0x0600C09D RID: 49309 RVA: 0x001BBD30 File Offset: 0x001B9F30
 		public static IVehicleNewSplineMoveTarget Create([Nullable(2)] IVehicleNewSplineMoveTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B578 RID: 46456 RVA: 0x001A55D7 File Offset: 0x001A37D7
+		// Token: 0x0600C09E RID: 49310 RVA: 0x001BBD43 File Offset: 0x001B9F43
 		public static IVehicleNewSplineMoveTarget CreateFromSetValue([Nullable(2)] IVehicleNewSplineMoveTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B579 RID: 46457 RVA: 0x001A55EA File Offset: 0x001A37EA
+		// Token: 0x0600C09F RID: 49311 RVA: 0x001BBD56 File Offset: 0x001B9F56
 		public new IVehicleNewSplineMoveTarget_SetValue ToSetValue()
 		{
 			return new IVehicleNewSplineMoveTarget_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037B2 RID: 14258
-		// (get) Token: 0x0600B57A RID: 46458 RVA: 0x001A5615 File Offset: 0x001A3815
-		// (set) Token: 0x0600B57B RID: 46459 RVA: 0x001A5640 File Offset: 0x001A3840
+		// Token: 0x17003A8F RID: 14991
+		// (get) Token: 0x0600C0A0 RID: 49312 RVA: 0x001BBD81 File Offset: 0x001B9F81
+		// (set) Token: 0x0600C0A1 RID: 49313 RVA: 0x001BBDAC File Offset: 0x001B9FAC
 		public override ENewSplineMoveTargetType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037B3 RID: 14259
-		// (get) Token: 0x0600B57C RID: 46460 RVA: 0x001A564E File Offset: 0x001A384E
-		// (set) Token: 0x0600B57D RID: 46461 RVA: 0x001A5675 File Offset: 0x001A3875
+		// Token: 0x17003A90 RID: 14992
+		// (get) Token: 0x0600C0A2 RID: 49314 RVA: 0x001BBDBA File Offset: 0x001B9FBA
+		// (set) Token: 0x0600C0A3 RID: 49315 RVA: 0x001BBDE1 File Offset: 0x001B9FE1
 		public virtual ITargetVehicle TargetVehicle
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037B4 RID: 14260
-		// (get) Token: 0x0600B57E RID: 46462 RVA: 0x001A5684 File Offset: 0x001A3884
-		// (set) Token: 0x0600B57F RID: 46463 RVA: 0x001A56BE File Offset: 0x001A38BE
+		// Token: 0x17003A91 RID: 14993
+		// (get) Token: 0x0600C0A4 RID: 49316 RVA: 0x001BBDF0 File Offset: 0x001B9FF0
+		// (set) Token: 0x0600C0A5 RID: 49317 RVA: 0x001BBE2A File Offset: 0x001BA02A
 		public virtual bool? IsLookDir
 		{
 			get
@@ -132,11 +130,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D2F RID: 27951
+		// Token: 0x04007338 RID: 29496
 		[Nullable(2)]
 		protected new IVehicleNewSplineMoveTarget FbInstance;
 
-		// Token: 0x04006D30 RID: 27952
+		// Token: 0x04007339 RID: 29497
 		[Nullable(2)]
 		protected new IVehicleNewSplineMoveTarget_SetValue PocoInterface;
 	}

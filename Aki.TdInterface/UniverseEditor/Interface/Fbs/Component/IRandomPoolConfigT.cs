@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057F4 RID: 22516
+	// Token: 0x02005DFB RID: 24059
 	public class IRandomPoolConfigT
 	{
-		// Token: 0x1700A82D RID: 43053
-		// (get) Token: 0x06025D7C RID: 155004 RVA: 0x005380C4 File Offset: 0x005362C4
-		// (set) Token: 0x06025D7D RID: 155005 RVA: 0x005380CC File Offset: 0x005362CC
+		// Token: 0x1700B151 RID: 45393
+		// (get) Token: 0x0602829C RID: 164508 RVA: 0x0057E250 File Offset: 0x0057C450
+		// (set) Token: 0x0602829D RID: 164509 RVA: 0x0057E258 File Offset: 0x0057C458
 		public int Id { get; set; }
 
-		// Token: 0x1700A82E RID: 43054
-		// (get) Token: 0x06025D7E RID: 155006 RVA: 0x005380D5 File Offset: 0x005362D5
-		// (set) Token: 0x06025D7F RID: 155007 RVA: 0x005380DD File Offset: 0x005362DD
+		// Token: 0x1700B152 RID: 45394
+		// (get) Token: 0x0602829E RID: 164510 RVA: 0x0057E261 File Offset: 0x0057C461
+		// (set) Token: 0x0602829F RID: 164511 RVA: 0x0057E269 File Offset: 0x0057C469
 		public int Count { get; set; }
 
-		// Token: 0x06025D80 RID: 155008 RVA: 0x005380E6 File Offset: 0x005362E6
+		// Token: 0x060282A0 RID: 164512 RVA: 0x0057E272 File Offset: 0x0057C472
 		public IRandomPoolConfigT()
 		{
 			this.Id = 0;

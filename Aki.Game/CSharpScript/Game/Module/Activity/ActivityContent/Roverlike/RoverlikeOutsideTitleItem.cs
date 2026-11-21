@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006126 RID: 24870
+	// Token: 0x020050A4 RID: 20644
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeOutsideTitleItem : SyncGridProxyAbstract<RoverlikeOutsideTitleData>
 	{
-		// Token: 0x0603EE05 RID: 257541 RVA: 0x00F2F700 File Offset: 0x00F2D900
+		// Token: 0x06033AC7 RID: 211655 RVA: 0x00E76514 File Offset: 0x00E74714
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EE06 RID: 257542 RVA: 0x00F2F78C File Offset: 0x00F2D98C
+		// Token: 0x06033AC8 RID: 211656 RVA: 0x00E765A0 File Offset: 0x00E747A0
 		[NullableContext(1)]
 		public override void Refresh(RoverlikeOutsideTitleData data)
 		{
@@ -56,14 +56,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0200C380 RID: 50048
+		// Token: 0x0200AD68 RID: 44392
 		private enum EComponents
 		{
-			// Token: 0x0403AFF3 RID: 241651
+			// Token: 0x04035958 RID: 219480
 			SprLine,
-			// Token: 0x0403AFF4 RID: 241652
+			// Token: 0x04035959 RID: 219481
 			TexElementIcon,
-			// Token: 0x0403AFF5 RID: 241653
+			// Token: 0x0403595A RID: 219482
 			TxtName
 		}
 	}

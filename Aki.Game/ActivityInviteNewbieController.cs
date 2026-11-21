@@ -5,54 +5,54 @@ using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02001288 RID: 4744
+// Token: 0x0200073C RID: 1852
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityInviteNewbieController : ActivityControllerBase
 {
-	// Token: 0x060081A4 RID: 33188 RVA: 0x001B8365 File Offset: 0x001B6565
+	// Token: 0x0600553B RID: 21819 RVA: 0x001C1035 File Offset: 0x001BF235
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x060081A5 RID: 33189 RVA: 0x001B8367 File Offset: 0x001B6567
+	// Token: 0x0600553C RID: 21820 RVA: 0x001C1037 File Offset: 0x001BF237
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ReferralCampaignMain";
 	}
 
-	// Token: 0x060081A6 RID: 33190 RVA: 0x001B836E File Offset: 0x001B656E
+	// Token: 0x0600553D RID: 21821 RVA: 0x001C103E File Offset: 0x001BF23E
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new InviteNewbieSubView();
 	}
 
-	// Token: 0x060081A7 RID: 33191 RVA: 0x001B8375 File Offset: 0x001B6575
+	// Token: 0x0600553E RID: 21822 RVA: 0x001C1045 File Offset: 0x001BF245
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return InviteNewbieModel.Instance.ActivityData;
 	}
 
-	// Token: 0x060081A8 RID: 33192 RVA: 0x001B8381 File Offset: 0x001B6581
+	// Token: 0x0600553F RID: 21823 RVA: 0x001C1051 File Offset: 0x001BF251
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x060081A9 RID: 33193 RVA: 0x001B8384 File Offset: 0x001B6584
+	// Token: 0x06005540 RID: 21824 RVA: 0x001C1054 File Offset: 0x001BF254
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.H5CircumFluenceActivityDataNotify, new Action<IMessage, Net.CallbackStatus>(this.HandleActivityDataNotify));
 	}
 
-	// Token: 0x060081AA RID: 33194 RVA: 0x001B83A2 File Offset: 0x001B65A2
+	// Token: 0x06005541 RID: 21825 RVA: 0x001C1072 File Offset: 0x001BF272
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.H5CircumFluenceActivityDataNotify);
 	}
 
-	// Token: 0x060081AB RID: 33195 RVA: 0x001B83B4 File Offset: 0x001B65B4
+	// Token: 0x06005542 RID: 21826 RVA: 0x001C1084 File Offset: 0x001BF284
 	[NullableContext(2)]
 	private void HandleActivityDataNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -60,7 +60,7 @@ public class ActivityInviteNewbieController : ActivityControllerBase
 		InviteNewbieModel.Instance.SyncActivityNotify(notify);
 	}
 
-	// Token: 0x060081AC RID: 33196 RVA: 0x001B83D3 File Offset: 0x001B65D3
+	// Token: 0x06005543 RID: 21827 RVA: 0x001C10A3 File Offset: 0x001BF2A3
 	public void HandleOnRewardClick(InviteNewbieProtocolContext activityData)
 	{
 		if (activityData != null)
@@ -70,7 +70,7 @@ public class ActivityInviteNewbieController : ActivityControllerBase
 		this.OpenUrl();
 	}
 
-	// Token: 0x060081AD RID: 33197 RVA: 0x001B83E5 File Offset: 0x001B65E5
+	// Token: 0x06005544 RID: 21828 RVA: 0x001C10B5 File Offset: 0x001BF2B5
 	public void HandleOnEnterClick(InviteNewbieProtocolContext activityData)
 	{
 		if (activityData != null)
@@ -80,7 +80,7 @@ public class ActivityInviteNewbieController : ActivityControllerBase
 		this.OpenUrl();
 	}
 
-	// Token: 0x060081AE RID: 33198 RVA: 0x001B83F7 File Offset: 0x001B65F7
+	// Token: 0x06005545 RID: 21829 RVA: 0x001C10C7 File Offset: 0x001BF2C7
 	public void HandleOnCopyInviteCodeClick()
 	{
 		string inviteCode = InviteNewbieModel.Instance.InviteCode;
@@ -88,7 +88,7 @@ public class ActivityInviteNewbieController : ActivityControllerBase
 		ULGUIBPLibrary.ClipBoardCopy(inviteCode);
 	}
 
-	// Token: 0x060081AF RID: 33199 RVA: 0x001B841C File Offset: 0x001B661C
+	// Token: 0x06005546 RID: 21830 RVA: 0x001C10EC File Offset: 0x001BF2EC
 	private void RequestSaveReadState()
 	{
 		H5CircumFluenceActivityReadRequest message = H5CircumFluenceActivityReadRequest.Create();
@@ -97,7 +97,7 @@ public class ActivityInviteNewbieController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060081B0 RID: 33200 RVA: 0x001B8460 File Offset: 0x001B6660
+	// Token: 0x06005547 RID: 21831 RVA: 0x001C1130 File Offset: 0x001BF330
 	private void OpenUrl()
 	{
 		string rootUrl = InviteNewbieModel.Instance.RootUrl;
@@ -139,8 +139,8 @@ public class ActivityInviteNewbieController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x17000B1B RID: 2843
-	// (get) Token: 0x060081B1 RID: 33201 RVA: 0x001B8588 File Offset: 0x001B6788
+	// Token: 0x17000B3B RID: 2875
+	// (get) Token: 0x06005548 RID: 21832 RVA: 0x001C1258 File Offset: 0x001BF458
 	public static ActivityInviteNewbieController Instance
 	{
 		get
@@ -149,7 +149,7 @@ public class ActivityInviteNewbieController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060081B2 RID: 33202 RVA: 0x001B858F File Offset: 0x001B678F
+	// Token: 0x06005549 RID: 21833 RVA: 0x001C125F File Offset: 0x001BF45F
 	public static ActivityInviteNewbieController GetOrCreateInstance()
 	{
 		if (ActivityInviteNewbieController._Instance == null)
@@ -159,7 +159,7 @@ public class ActivityInviteNewbieController : ActivityControllerBase
 		return ActivityInviteNewbieController._Instance;
 	}
 
-	// Token: 0x060081B3 RID: 33203 RVA: 0x001B85A3 File Offset: 0x001B67A3
+	// Token: 0x0600554A RID: 21834 RVA: 0x001C1273 File Offset: 0x001BF473
 	public static bool CreateInstance()
 	{
 		if (ActivityInviteNewbieController._Instance != null)
@@ -170,24 +170,24 @@ public class ActivityInviteNewbieController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x060081B4 RID: 33204 RVA: 0x001B85B9 File Offset: 0x001B67B9
+	// Token: 0x0600554B RID: 21835 RVA: 0x001C1289 File Offset: 0x001BF489
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060081B5 RID: 33205 RVA: 0x001B85BB File Offset: 0x001B67BB
+	// Token: 0x0600554C RID: 21836 RVA: 0x001C128B File Offset: 0x001BF48B
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityInviteNewbieController._Instance = null;
 	}
 
-	// Token: 0x060081B6 RID: 33206 RVA: 0x001B85C3 File Offset: 0x001B67C3
+	// Token: 0x0600554D RID: 21837 RVA: 0x001C1293 File Offset: 0x001BF493
 	static ActivityInviteNewbieController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityInviteNewbieController.CreateStaticDefaultValue), new Action(ActivityInviteNewbieController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003AB7 RID: 15031
+	// Token: 0x04003B4F RID: 15183
 	[Nullable(2)]
 	private static ActivityInviteNewbieController _Instance;
 }

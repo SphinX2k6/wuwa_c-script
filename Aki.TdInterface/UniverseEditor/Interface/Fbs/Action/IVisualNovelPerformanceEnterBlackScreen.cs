@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075A7 RID: 30119
+	// Token: 0x02007DA0 RID: 32160
 	public struct IVisualNovelPerformanceEnterBlackScreen : IFlatbufferObject
 	{
-		// Token: 0x1700E47B RID: 58491
-		// (get) Token: 0x06036CFC RID: 224508 RVA: 0x00770C6B File Offset: 0x0076EE6B
+		// Token: 0x1700F0A8 RID: 61608
+		// (get) Token: 0x0603A12A RID: 237866 RVA: 0x007D41EB File Offset: 0x007D23EB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036CFD RID: 224509 RVA: 0x00770C78 File Offset: 0x0076EE78
+		// Token: 0x0603A12B RID: 237867 RVA: 0x007D41F8 File Offset: 0x007D23F8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036CFE RID: 224510 RVA: 0x00770C80 File Offset: 0x0076EE80
+		// Token: 0x0603A12C RID: 237868 RVA: 0x007D4200 File Offset: 0x007D2400
 		public static IVisualNovelPerformanceEnterBlackScreen GetRootAsIVisualNovelPerformanceEnterBlackScreen(ByteBuffer _bb)
 		{
 			return IVisualNovelPerformanceEnterBlackScreen.GetRootAsIVisualNovelPerformanceEnterBlackScreen(_bb, default(IVisualNovelPerformanceEnterBlackScreen));
 		}
 
-		// Token: 0x06036CFF RID: 224511 RVA: 0x00770C9C File Offset: 0x0076EE9C
+		// Token: 0x0603A12D RID: 237869 RVA: 0x007D421C File Offset: 0x007D241C
 		public static IVisualNovelPerformanceEnterBlackScreen GetRootAsIVisualNovelPerformanceEnterBlackScreen(ByteBuffer _bb, IVisualNovelPerformanceEnterBlackScreen obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036D00 RID: 224512 RVA: 0x00770CB9 File Offset: 0x0076EEB9
+		// Token: 0x0603A12E RID: 237870 RVA: 0x007D4239 File Offset: 0x007D2439
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036D01 RID: 224513 RVA: 0x00770CC8 File Offset: 0x0076EEC8
+		// Token: 0x0603A12F RID: 237871 RVA: 0x007D4248 File Offset: 0x007D2448
 		public IVisualNovelPerformanceEnterBlackScreen __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E47C RID: 58492
-		// (get) Token: 0x06036D02 RID: 224514 RVA: 0x00770CD8 File Offset: 0x0076EED8
+		// Token: 0x1700F0A9 RID: 61609
+		// (get) Token: 0x0603A130 RID: 237872 RVA: 0x007D4258 File Offset: 0x007D2458
 		public EVisualNovelPerformanceType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E47D RID: 58493
-		// (get) Token: 0x06036D03 RID: 224515 RVA: 0x00770D14 File Offset: 0x0076EF14
+		// Token: 0x1700F0AA RID: 61610
+		// (get) Token: 0x0603A131 RID: 237873 RVA: 0x007D4294 File Offset: 0x007D2494
 		public float StartTime
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E47E RID: 58494
-		// (get) Token: 0x06036D04 RID: 224516 RVA: 0x00770D54 File Offset: 0x0076EF54
+		// Token: 0x1700F0AB RID: 61611
+		// (get) Token: 0x0603A132 RID: 237874 RVA: 0x007D42D4 File Offset: 0x007D24D4
 		public TEaseCurveType EaseCurveType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036D05 RID: 224517 RVA: 0x00770D90 File Offset: 0x0076EF90
+		// Token: 0x0603A133 RID: 237875 RVA: 0x007D4310 File Offset: 0x007D2510
 		public TTable? EaseCurve<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -104,20 +104,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06036D06 RID: 224518 RVA: 0x00770DD8 File Offset: 0x0076EFD8
+		// Token: 0x0603A134 RID: 237876 RVA: 0x007D4358 File Offset: 0x007D2558
 		public IEaseCurveCustom EaseCurveAsIEaseCurveCustom()
 		{
 			return this.EaseCurve<IEaseCurveCustom>().Value;
 		}
 
-		// Token: 0x06036D07 RID: 224519 RVA: 0x00770DF4 File Offset: 0x0076EFF4
+		// Token: 0x0603A135 RID: 237877 RVA: 0x007D4374 File Offset: 0x007D2574
 		public IEaseCurvePreset EaseCurveAsIEaseCurvePreset()
 		{
 			return this.EaseCurve<IEaseCurvePreset>().Value;
 		}
 
-		// Token: 0x1700E47F RID: 58495
-		// (get) Token: 0x06036D08 RID: 224520 RVA: 0x00770E10 File Offset: 0x0076F010
+		// Token: 0x1700F0AC RID: 61612
+		// (get) Token: 0x0603A136 RID: 237878 RVA: 0x007D4390 File Offset: 0x007D2590
 		public float FadeInTime
 		{
 			get
@@ -131,8 +131,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E480 RID: 58496
-		// (get) Token: 0x06036D09 RID: 224521 RVA: 0x00770E54 File Offset: 0x0076F054
+		// Token: 0x1700F0AD RID: 61613
+		// (get) Token: 0x0603A137 RID: 237879 RVA: 0x007D43D4 File Offset: 0x007D25D4
 		public EVisualNovelBlackScreenType ScreenType
 		{
 			get
@@ -146,8 +146,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E481 RID: 58497
-		// (get) Token: 0x06036D0A RID: 224522 RVA: 0x00770E94 File Offset: 0x0076F094
+		// Token: 0x1700F0AE RID: 61614
+		// (get) Token: 0x0603A138 RID: 237880 RVA: 0x007D4414 File Offset: 0x007D2614
 		public byte NullMask
 		{
 			get
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036D0B RID: 224523 RVA: 0x00770ED4 File Offset: 0x0076F0D4
+		// Token: 0x0603A139 RID: 237881 RVA: 0x007D4454 File Offset: 0x007D2654
 		public static Offset<IVisualNovelPerformanceEnterBlackScreen> CreateIVisualNovelPerformanceEnterBlackScreen(FlatBufferBuilder builder, EVisualNovelPerformanceType Type = EVisualNovelPerformanceType.Enter, float StartTime = 0f, TEaseCurveType EaseCurve_type = TEaseCurveType.NONE, int EaseCurveOffset = 0, float FadeInTime = 0f, EVisualNovelBlackScreenType ScreenType = EVisualNovelBlackScreenType.Black, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -175,61 +175,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelPerformanceEnterBlackScreen.EndIVisualNovelPerformanceEnterBlackScreen(builder);
 		}
 
-		// Token: 0x06036D0C RID: 224524 RVA: 0x00770F23 File Offset: 0x0076F123
+		// Token: 0x0603A13A RID: 237882 RVA: 0x007D44A3 File Offset: 0x007D26A3
 		public static void StartIVisualNovelPerformanceEnterBlackScreen(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x06036D0D RID: 224525 RVA: 0x00770F2C File Offset: 0x0076F12C
+		// Token: 0x0603A13B RID: 237883 RVA: 0x007D44AC File Offset: 0x007D26AC
 		public static void AddType(FlatBufferBuilder builder, EVisualNovelPerformanceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036D0E RID: 224526 RVA: 0x00770F37 File Offset: 0x0076F137
+		// Token: 0x0603A13C RID: 237884 RVA: 0x007D44B7 File Offset: 0x007D26B7
 		public static void AddStartTime(FlatBufferBuilder builder, float startTime)
 		{
 			builder.AddFloat(1, startTime, 0.0);
 		}
 
-		// Token: 0x06036D0F RID: 224527 RVA: 0x00770F4A File Offset: 0x0076F14A
+		// Token: 0x0603A13D RID: 237885 RVA: 0x007D44CA File Offset: 0x007D26CA
 		public static void AddEaseCurveType(FlatBufferBuilder builder, TEaseCurveType easeCurveType)
 		{
 			builder.AddByte(2, (byte)easeCurveType, 0);
 		}
 
-		// Token: 0x06036D10 RID: 224528 RVA: 0x00770F55 File Offset: 0x0076F155
+		// Token: 0x0603A13E RID: 237886 RVA: 0x007D44D5 File Offset: 0x007D26D5
 		public static void AddEaseCurve(FlatBufferBuilder builder, int easeCurveOffset)
 		{
 			builder.AddOffset(3, easeCurveOffset, 0);
 		}
 
-		// Token: 0x06036D11 RID: 224529 RVA: 0x00770F60 File Offset: 0x0076F160
+		// Token: 0x0603A13F RID: 237887 RVA: 0x007D44E0 File Offset: 0x007D26E0
 		public static void AddFadeInTime(FlatBufferBuilder builder, float fadeInTime)
 		{
 			builder.AddFloat(4, fadeInTime, 0.0);
 		}
 
-		// Token: 0x06036D12 RID: 224530 RVA: 0x00770F73 File Offset: 0x0076F173
+		// Token: 0x0603A140 RID: 237888 RVA: 0x007D44F3 File Offset: 0x007D26F3
 		public static void AddScreenType(FlatBufferBuilder builder, EVisualNovelBlackScreenType screenType)
 		{
 			builder.AddByte(5, (byte)screenType, 0);
 		}
 
-		// Token: 0x06036D13 RID: 224531 RVA: 0x00770F7E File Offset: 0x0076F17E
+		// Token: 0x0603A141 RID: 237889 RVA: 0x007D44FE File Offset: 0x007D26FE
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x06036D14 RID: 224532 RVA: 0x00770F89 File Offset: 0x0076F189
+		// Token: 0x0603A142 RID: 237890 RVA: 0x007D4509 File Offset: 0x007D2709
 		public static Offset<IVisualNovelPerformanceEnterBlackScreen> EndIVisualNovelPerformanceEnterBlackScreen(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisualNovelPerformanceEnterBlackScreen>(builder.EndTable());
 		}
 
-		// Token: 0x06036D15 RID: 224533 RVA: 0x00770F98 File Offset: 0x0076F198
+		// Token: 0x0603A143 RID: 237891 RVA: 0x007D4518 File Offset: 0x007D2718
 		public IVisualNovelPerformanceEnterBlackScreenT UnPack()
 		{
 			IVisualNovelPerformanceEnterBlackScreenT visualNovelPerformanceEnterBlackScreenT = new IVisualNovelPerformanceEnterBlackScreenT();
@@ -237,7 +237,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return visualNovelPerformanceEnterBlackScreenT;
 		}
 
-		// Token: 0x06036D16 RID: 224534 RVA: 0x00770FB4 File Offset: 0x0076F1B4
+		// Token: 0x0603A144 RID: 237892 RVA: 0x007D4534 File Offset: 0x007D2734
 		public void UnPackTo(IVisualNovelPerformanceEnterBlackScreenT _o)
 		{
 			_o.Type = this.Type;
@@ -261,7 +261,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06036D17 RID: 224535 RVA: 0x00771098 File Offset: 0x0076F298
+		// Token: 0x0603A145 RID: 237893 RVA: 0x007D4618 File Offset: 0x007D2818
 		public static Offset<IVisualNovelPerformanceEnterBlackScreen> Pack(FlatBufferBuilder builder, IVisualNovelPerformanceEnterBlackScreenT _o)
 		{
 			if (_o == null)
@@ -273,7 +273,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelPerformanceEnterBlackScreen.CreateIVisualNovelPerformanceEnterBlackScreen(builder, _o.Type, _o.StartTime, easeCurve_type, easeCurveOffset, _o.FadeInTime, _o.ScreenType, _o.NullMask);
 		}
 
-		// Token: 0x040124D6 RID: 74966
+		// Token: 0x04013509 RID: 79113
 		private Table __p;
 	}
 }

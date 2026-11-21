@@ -1,25 +1,23 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200086E RID: 2158
+	// Token: 0x02000911 RID: 2321
 	public class RefreshSingleComponent_SetValue
 	{
-		// Token: 0x04001F84 RID: 8068
+		// Token: 0x04002196 RID: 8598
 		public bool? Disabled;
 
-		// Token: 0x04001F85 RID: 8069
+		// Token: 0x04002197 RID: 8599
 		public bool? EdIsLocked;
 
-		// Token: 0x04001F86 RID: 8070
+		// Token: 0x04002198 RID: 8600
 		public int RefreshInterval;
 
-		// Token: 0x04001F87 RID: 8071
+		// Token: 0x04002199 RID: 8601
 		public bool DelayRefresh;
 
-		// Token: 0x04001F88 RID: 8072
-		[Nullable(1)]
+		// Token: 0x0400219A RID: 8602
 		public string TemplateGuid;
 	}
 }

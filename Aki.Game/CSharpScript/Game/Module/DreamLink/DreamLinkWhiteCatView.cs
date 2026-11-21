@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,18 +14,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AB6 RID: 23222
+	// Token: 0x02004A92 RID: 19090
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DreamLinkWhiteCatView : UiTickViewBase
 	{
-		// Token: 0x0603AD0E RID: 240910 RVA: 0x00E035AE File Offset: 0x00E017AE
+		// Token: 0x0602FC5A RID: 195674 RVA: 0x00D53B76 File Offset: 0x00D51D76
 		[NullableContext(1)]
 		public DreamLinkWhiteCatView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603AD0F RID: 240911 RVA: 0x00E035B8 File Offset: 0x00E017B8
+		// Token: 0x0602FC5B RID: 195675 RVA: 0x00D53B80 File Offset: 0x00D51D80
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -62,7 +61,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603AD10 RID: 240912 RVA: 0x00E03794 File Offset: 0x00E01994
+		// Token: 0x0602FC5C RID: 195676 RVA: 0x00D53D5C File Offset: 0x00D51F5C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DreamLinkWhiteCatView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -73,7 +72,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AD11 RID: 240913 RVA: 0x00E037D8 File Offset: 0x00E019D8
+		// Token: 0x0602FC5D RID: 195677 RVA: 0x00D53DA0 File Offset: 0x00D51FA0
 		protected override void OnStart()
 		{
 			bool flag = PlayerInfoModel.Instance.GetPlayerGender() == EPlayerGender.Female;
@@ -83,13 +82,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.GetItem(6).SetUIActive(flag);
 		}
 
-		// Token: 0x0603AD12 RID: 240914 RVA: 0x00E0383C File Offset: 0x00E01A3C
+		// Token: 0x0602FC5E RID: 195678 RVA: 0x00D53E04 File Offset: 0x00D52004
 		protected override void OnBeforeShow()
 		{
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0603AD13 RID: 240915 RVA: 0x00E03844 File Offset: 0x00E01A44
+		// Token: 0x0602FC5F RID: 195679 RVA: 0x00D53E0C File Offset: 0x00D5200C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
@@ -97,7 +96,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			EventSystem.Instance.Add(EEventName.DreamLinkRewardRefresh, new Action(this.RefreshRedDot));
 		}
 
-		// Token: 0x0603AD14 RID: 240916 RVA: 0x00E038A8 File Offset: 0x00E01AA8
+		// Token: 0x0602FC60 RID: 195680 RVA: 0x00D53E70 File Offset: 0x00D52070
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
@@ -105,7 +104,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			EventSystem.Instance.Remove(EEventName.DreamLinkRewardRefresh, new Action(this.RefreshRedDot));
 		}
 
-		// Token: 0x0603AD15 RID: 240917 RVA: 0x00E03909 File Offset: 0x00E01B09
+		// Token: 0x0602FC61 RID: 195681 RVA: 0x00D53ED1 File Offset: 0x00D520D1
 		protected override void OnTick(float delta)
 		{
 			if (!this.NeedTickState)
@@ -115,7 +114,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.RefreshFunctionCondition();
 		}
 
-		// Token: 0x0603AD16 RID: 240918 RVA: 0x00E0391C File Offset: 0x00E01B1C
+		// Token: 0x0602FC62 RID: 195682 RVA: 0x00D53EE4 File Offset: 0x00D520E4
 		[NullableContext(1)]
 		private void OnActivitySequenceEmitEvent(string param)
 		{
@@ -130,7 +129,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603AD17 RID: 240919 RVA: 0x00E03982 File Offset: 0x00E01B82
+		// Token: 0x0602FC63 RID: 195683 RVA: 0x00D53F4A File Offset: 0x00D5214A
 		private void OnActivityCrossDayRefresh()
 		{
 			if (this.SelectOnData != null)
@@ -140,13 +139,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603AD18 RID: 240920 RVA: 0x00E039A3 File Offset: 0x00E01BA3
+		// Token: 0x0602FC64 RID: 195684 RVA: 0x00D53F6B File Offset: 0x00D5216B
 		private void RefreshRedDot()
 		{
 			this.ButtonItem.SetRedDotVisible(this.ActivityBaseData.CheckHasBossReward());
 		}
 
-		// Token: 0x0603AD19 RID: 240921 RVA: 0x00E039BB File Offset: 0x00E01BBB
+		// Token: 0x0602FC65 RID: 195685 RVA: 0x00D53F83 File Offset: 0x00D52183
 		[NullableContext(1)]
 		private DreamLinkBossInstanceItem OnCreateInstanceItem()
 		{
@@ -156,7 +155,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			};
 		}
 
-		// Token: 0x0603AD1A RID: 240922 RVA: 0x00E039D4 File Offset: 0x00E01BD4
+		// Token: 0x0602FC66 RID: 195686 RVA: 0x00D53F9C File Offset: 0x00D5219C
 		[NullableContext(1)]
 		private void InstItemSelectOnFunction(DreamLinkBossInstanceData data, int index)
 		{
@@ -171,7 +170,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.LoopScrollView.SelectGridProxy(this.SelectOnIndex, false);
 		}
 
-		// Token: 0x0603AD1B RID: 240923 RVA: 0x00E03A14 File Offset: 0x00E01C14
+		// Token: 0x0602FC67 RID: 195687 RVA: 0x00D53FDC File Offset: 0x00D521DC
 		[NullableContext(1)]
 		private void RefreshFunctionArea(DreamLinkBossInstanceData data)
 		{
@@ -193,7 +192,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(12), config.Value.MonsterTips, Array.Empty<object>());
 		}
 
-		// Token: 0x0603AD1C RID: 240924 RVA: 0x00E03B24 File Offset: 0x00E01D24
+		// Token: 0x0602FC68 RID: 195688 RVA: 0x00D540EC File Offset: 0x00D522EC
 		private void RefreshFunctionCondition()
 		{
 			if (this.SelectOnData != null)
@@ -202,7 +201,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603AD1D RID: 240925 RVA: 0x00E03B44 File Offset: 0x00E01D44
+		// Token: 0x0602FC69 RID: 195689 RVA: 0x00D5410C File Offset: 0x00D5230C
 		private UniTask RefreshLayout()
 		{
 			DreamLinkWhiteCatView.<RefreshLayout>d__25 <RefreshLayout>d__;
@@ -213,7 +212,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <RefreshLayout>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AD1E RID: 240926 RVA: 0x00E03B88 File Offset: 0x00E01D88
+		// Token: 0x0602FC6A RID: 195690 RVA: 0x00D54150 File Offset: 0x00D52350
 		private void OnBtnConfirmClick()
 		{
 			int[] bossRoleIdList = this.SelectOnData.GetBossRoleIdList();
@@ -232,10 +231,10 @@ namespace CSharpScript.Game.Module.DreamLink
 			rogueWhiteCatCtx.IsFirst = false;
 			rogueWhiteCatCtx.Idnex = this.SelectOnData.TypeId;
 			InstanceDungeonModel.Instance.InstanceEnterContentText.RogueWhiteCatCtx = rogueWhiteCatCtx;
-			InstanceDungeonController.Instance.PrewarTeamFightRequest(instId, bossRoleIdList.ToList<int>(), 0, 0, null, null);
+			InstanceDungeonController.Instance.PrewarTeamFightRequest(instId, new List<int>(bossRoleIdList), 0, 0, null, null);
 		}
 
-		// Token: 0x0603AD1F RID: 240927 RVA: 0x00E03C31 File Offset: 0x00E01E31
+		// Token: 0x0602FC6B RID: 195691 RVA: 0x00D541F9 File Offset: 0x00D523F9
 		private void OpenBossReward(int _)
 		{
 			this.ActivityBaseData.SaveFirstCheckRedDotState(7, 0);
@@ -243,19 +242,19 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0401EB17 RID: 125719
+		// Token: 0x040195BE RID: 103870
 		protected DreamLinkData ActivityBaseData;
 
-		// Token: 0x0401EB18 RID: 125720
+		// Token: 0x040195BF RID: 103871
 		private PopupCaptionItem CaptionComponent;
 
-		// Token: 0x0401EB19 RID: 125721
+		// Token: 0x040195C0 RID: 103872
 		private DreamLinkRoleSelectPanel SelectRolePanel;
 
-		// Token: 0x0401EB1A RID: 125722
+		// Token: 0x040195C1 RID: 103873
 		private ButtonItem ButtonItem;
 
-		// Token: 0x0401EB1B RID: 125723
+		// Token: 0x040195C2 RID: 103874
 		[Nullable(new byte[]
 		{
 			2,
@@ -264,59 +263,59 @@ namespace CSharpScript.Game.Module.DreamLink
 		})]
 		private LoopScrollView<DreamLinkBossInstanceItem, DreamLinkBossInstanceData> LoopScrollView;
 
-		// Token: 0x0401EB1C RID: 125724
+		// Token: 0x040195C3 RID: 103875
 		private ActivityFunctionalTypeA FunctionalComponent;
 
-		// Token: 0x0401EB1D RID: 125725
+		// Token: 0x040195C4 RID: 103876
 		private DreamLinkBossInstanceData SelectOnData;
 
-		// Token: 0x0401EB1E RID: 125726
+		// Token: 0x040195C5 RID: 103877
 		private bool NeedTickState;
 
-		// Token: 0x0401EB1F RID: 125727
+		// Token: 0x040195C6 RID: 103878
 		private int SelectOnIndex;
 
-		// Token: 0x0200BD06 RID: 48390
+		// Token: 0x0200A70E RID: 42766
 		[NullableContext(0)]
 		private class EDreamLinkWhiteCatViewDefine
 		{
-			// Token: 0x0403900B RID: 233483
+			// Token: 0x040339D5 RID: 211413
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403900C RID: 233484
+			// Token: 0x040339D6 RID: 211414
 			public const int SelectRolePanel = 1;
 
-			// Token: 0x0403900D RID: 233485
+			// Token: 0x040339D7 RID: 211415
 			public const int FunctionArea = 2;
 
-			// Token: 0x0403900E RID: 233486
+			// Token: 0x040339D8 RID: 211416
 			public const int SpineCat = 3;
 
-			// Token: 0x0403900F RID: 233487
+			// Token: 0x040339D9 RID: 211417
 			public const int SpineCharacter = 4;
 
-			// Token: 0x04039010 RID: 233488
+			// Token: 0x040339DA RID: 211418
 			public const int CharacterMaleItem = 5;
 
-			// Token: 0x04039011 RID: 233489
+			// Token: 0x040339DB RID: 211419
 			public const int CharacterFemaleItem = 6;
 
-			// Token: 0x04039012 RID: 233490
+			// Token: 0x040339DC RID: 211420
 			public const int PanelLayout = 7;
 
-			// Token: 0x04039013 RID: 233491
+			// Token: 0x040339DD RID: 211421
 			public const int InstanceItem = 8;
 
-			// Token: 0x04039014 RID: 233492
+			// Token: 0x040339DE RID: 211422
 			public const int ButtonReward = 9;
 
-			// Token: 0x04039015 RID: 233493
+			// Token: 0x040339DF RID: 211423
 			public const int InstTitle = 10;
 
-			// Token: 0x04039016 RID: 233494
+			// Token: 0x040339E0 RID: 211424
 			public const int InstDescription = 11;
 
-			// Token: 0x04039017 RID: 233495
+			// Token: 0x040339E1 RID: 211425
 			public const int InstAttribute = 12;
 		}
 	}

@@ -10,15 +10,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubItems
 {
-	// Token: 0x02004850 RID: 18512
+	// Token: 0x02003781 RID: 14209
 	public class HonamiMarkSelectPanel : UiPanelBase, IWorldMapItemVisibleControlInterface
 	{
-		// Token: 0x1700790E RID: 30990
-		// (get) Token: 0x06030707 RID: 198407 RVA: 0x00B3F2EF File Offset: 0x00B3D4EF
-		// (set) Token: 0x06030708 RID: 198408 RVA: 0x00B3F2F7 File Offset: 0x00B3D4F7
+		// Token: 0x17004BCB RID: 19403
+		// (get) Token: 0x06024ED6 RID: 151254 RVA: 0x00A6F533 File Offset: 0x00A6D733
+		// (set) Token: 0x06024ED7 RID: 151255 RVA: 0x00A6F53B File Offset: 0x00A6D73B
 		public EWorldMapShowMode ShowMode { get; set; }
 
-		// Token: 0x06030709 RID: 198409 RVA: 0x00B3F300 File Offset: 0x00B3D500
+		// Token: 0x06024ED8 RID: 151256 RVA: 0x00A6F544 File Offset: 0x00A6D744
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603070A RID: 198410 RVA: 0x00B3F36C File Offset: 0x00B3D56C
+		// Token: 0x06024ED9 RID: 151257 RVA: 0x00A6F5B0 File Offset: 0x00A6D7B0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			HonamiMarkSelectPanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -43,19 +43,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603070B RID: 198411 RVA: 0x00B3F3AF File Offset: 0x00B3D5AF
+		// Token: 0x06024EDA RID: 151258 RVA: 0x00A6F5F3 File Offset: 0x00A6D7F3
 		public void SetWorldMapSelfShow(EWorldMapShowMode showMode)
 		{
 			this.ShowMode = showMode;
 		}
 
-		// Token: 0x0603070C RID: 198412 RVA: 0x00B3F3B8 File Offset: 0x00B3D5B8
+		// Token: 0x06024EDB RID: 151259 RVA: 0x00A6F5FC File Offset: 0x00A6D7FC
 		public void RefreshWorldMapSelfShow(EWorldMapShowMode showMode)
 		{
 			base.SetUiActive(showMode == EWorldMapShowMode.HonamiStory);
 		}
 
-		// Token: 0x0401A07D RID: 106621
+		// Token: 0x04014731 RID: 83761
 		[Nullable(new byte[]
 		{
 			2,

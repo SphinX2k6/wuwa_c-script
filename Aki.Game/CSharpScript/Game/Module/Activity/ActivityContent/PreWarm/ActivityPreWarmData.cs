@@ -7,10 +7,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 {
-	// Token: 0x020062B7 RID: 25271
+	// Token: 0x02005235 RID: 21045
 	public class ActivityPreWarmData : ActivityBaseData
 	{
-		// Token: 0x0603F8ED RID: 260333 RVA: 0x00F5F531 File Offset: 0x00F5D731
+		// Token: 0x060345AE RID: 214446 RVA: 0x00EA648D File Offset: 0x00EA468D
 		[NullableContext(1)]
 		protected override void PhraseEx(ActivityData data)
 		{
@@ -22,13 +22,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			instance.CreateCollectItemData(base.Id);
 		}
 
-		// Token: 0x0603F8EE RID: 260334 RVA: 0x00F5F548 File Offset: 0x00F5D748
+		// Token: 0x060345AF RID: 214447 RVA: 0x00EA64A4 File Offset: 0x00EA46A4
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.IsHasNewQuestRedDot();
 		}
 
-		// Token: 0x0603F8EF RID: 260335 RVA: 0x00F5F550 File Offset: 0x00F5D750
+		// Token: 0x060345B0 RID: 214448 RVA: 0x00EA64AC File Offset: 0x00EA46AC
 		public bool IsHasNewQuestRedDot()
 		{
 			ActivityPreWarmModel instance = ActivityPreWarmModel.Instance;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return false;
 		}
 
-		// Token: 0x0603F8F0 RID: 260336 RVA: 0x00F5F618 File Offset: 0x00F5D818
+		// Token: 0x060345B1 RID: 214449 RVA: 0x00EA6574 File Offset: 0x00EA4774
 		public void RemoveQuestRedDot(int questId)
 		{
 			ActivityModel instance = ActivityModel.Instance;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			}
 		}
 
-		// Token: 0x0603F8F1 RID: 260337 RVA: 0x00F5F688 File Offset: 0x00F5D888
+		// Token: 0x060345B2 RID: 214450 RVA: 0x00EA65E4 File Offset: 0x00EA47E4
 		protected override bool GetExDataFinishShowState()
 		{
 			return base.IsUnLock() && base.GetPreGuideQuestFinishState() && ActivityPreWarmModel.Instance.IsAllFinish();

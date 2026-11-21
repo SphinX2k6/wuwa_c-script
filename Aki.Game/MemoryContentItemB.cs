@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200133F RID: 4927
+// Token: 0x020007F3 RID: 2035
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class MemoryContentItemB : GridProxyAbstract<IMemoryItemData>
 {
-	// Token: 0x06008924 RID: 35108 RVA: 0x001D5018 File Offset: 0x001D3218
+	// Token: 0x06005CBF RID: 23743 RVA: 0x001DDE84 File Offset: 0x001DC084
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class MemoryContentItemB : GridProxyAbstract<IMemoryItemData>
 		};
 	}
 
-	// Token: 0x06008925 RID: 35109 RVA: 0x001D50B4 File Offset: 0x001D32B4
+	// Token: 0x06005CC0 RID: 23744 RVA: 0x001DDF20 File Offset: 0x001DC120
 	public override void Refresh(IMemoryItemData data, bool isSelected, int gridIndex)
 	{
 		UUITexture texture = base.GetTexture(2);

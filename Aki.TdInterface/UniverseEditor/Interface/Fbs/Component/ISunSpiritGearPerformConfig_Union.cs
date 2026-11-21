@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059FE RID: 23038
+	// Token: 0x0200600B RID: 24587
 	public enum ISunSpiritGearPerformConfig_Union : byte
 	{
-		// Token: 0x0400F03D RID: 61501
+		// Token: 0x0400FD34 RID: 64820
 		NONE,
-		// Token: 0x0400F03E RID: 61502
+		// Token: 0x0400FD35 RID: 64821
 		ISunSpiritGearPerformConfig,
-		// Token: 0x0400F03F RID: 61503
+		// Token: 0x0400FD36 RID: 64822
 		ISunSpiritGearPerformToGearRelativePos,
-		// Token: 0x0400F040 RID: 61504
+		// Token: 0x0400FD37 RID: 64823
 		ISunSpiritGearPerformScaleUp
 	}
 }

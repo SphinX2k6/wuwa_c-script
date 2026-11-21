@@ -3,10 +3,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200696C RID: 26988
+	// Token: 0x02005AC8 RID: 23240
 	public class ActionBubbleData : IBubbleData
 	{
-		// Token: 0x0604331B RID: 275227 RVA: 0x0106235C File Offset: 0x0106055C
+		// Token: 0x06039353 RID: 234323 RVA: 0x010065C4 File Offset: 0x010047C4
 		public ActionBubbleData()
 		{
 			this.FlowIndex = new IBubbleIndex

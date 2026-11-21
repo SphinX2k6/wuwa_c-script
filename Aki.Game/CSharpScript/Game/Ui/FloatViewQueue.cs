@@ -1,30 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004658 RID: 18008
+	// Token: 0x02003589 RID: 13705
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FloatViewQueue
 	{
-		// Token: 0x0602E7C4 RID: 190404 RVA: 0x00ABCD60 File Offset: 0x00ABAF60
+		// Token: 0x06022F0E RID: 143118 RVA: 0x009EA390 File Offset: 0x009E8590
 		public void Push(UiViewBase view, int priority, bool onlyShowInMain)
 		{
-			this.WaitViewList.Add(new FloatViewQueue.UiViewBaseWrapper
+			int num = this.WaitViewList.Count;
+			while (num > 0 && this.WaitViewList[num - 1].Priority < priority)
+			{
+				num--;
+			}
+			this.WaitViewList.Insert(num, new FloatViewQueue.UiViewBaseWrapper
 			{
 				ViewBase = view,
 				Priority = priority,
 				OnlyShowInMain = onlyShowInMain
 			});
-			this.WaitViewList = (from v in this.WaitViewList
-			orderby v.Priority descending
-			select v).ToList<IUiViewBase>();
 		}
 
-		// Token: 0x0602E7C5 RID: 190405 RVA: 0x00ABCDC8 File Offset: 0x00ABAFC8
+		// Token: 0x06022F0F RID: 143119 RVA: 0x009EA3F0 File Offset: 0x009E85F0
 		public IUiViewBase Pop(bool inMainView)
 		{
 			for (int i = 0; i < this.WaitViewList.Count; i++)
@@ -39,7 +40,7 @@ namespace CSharpScript.Game.Ui
 			return null;
 		}
 
-		// Token: 0x0602E7C6 RID: 190406 RVA: 0x00ABCE10 File Offset: 0x00ABB010
+		// Token: 0x06022F10 RID: 143120 RVA: 0x009EA438 File Offset: 0x009E8638
 		private bool DeleteView(IUiViewBase view)
 		{
 			int num = this.WaitViewList.IndexOf(view);
@@ -51,7 +52,7 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602E7C7 RID: 190407 RVA: 0x00ABCE40 File Offset: 0x00ABB040
+		// Token: 0x06022F11 RID: 143121 RVA: 0x009EA468 File Offset: 0x009E8668
 		public bool Delete(EUiViewName name, int? viewId = null)
 		{
 			for (int i = 0; i < this.WaitViewList.Count; i++)
@@ -67,7 +68,7 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602E7C8 RID: 190408 RVA: 0x00ABCEC8 File Offset: 0x00ABB0C8
+		// Token: 0x06022F12 RID: 143122 RVA: 0x009EA4F0 File Offset: 0x009E86F0
 		public bool Has(EUiViewName name)
 		{
 			for (int i = 0; i < this.WaitViewList.Count; i++)
@@ -80,8 +81,8 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602E7C9 RID: 190409 RVA: 0x00ABCF14 File Offset: 0x00ABB114
-		public void Clear()
+		// Token: 0x06022F13 RID: 143123 RVA: 0x009EA53C File Offset: 0x009E873C
+		public void Clear(List<UiViewBase> droppedViews)
 		{
 			for (int i = this.WaitViewList.Count - 1; i >= 0; i--)
 			{
@@ -90,12 +91,13 @@ namespace CSharpScript.Game.Ui
 				{
 					this.WaitViewList.RemoveAt(i);
 					UiManager.Instance.RemoveView(viewBase.GetViewId());
+					droppedViews.Add(viewBase);
 				}
 			}
 		}
 
-		// Token: 0x17007604 RID: 30212
-		// (get) Token: 0x0602E7CA RID: 190410 RVA: 0x00ABCF74 File Offset: 0x00ABB174
+		// Token: 0x170048C0 RID: 18624
+		// (get) Token: 0x06022F14 RID: 143124 RVA: 0x009EA5A3 File Offset: 0x009E87A3
 		public int Size
 		{
 			get
@@ -104,26 +106,26 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x04018E32 RID: 101938
+		// Token: 0x0401348B RID: 78987
 		private List<IUiViewBase> WaitViewList = new List<IUiViewBase>();
 
-		// Token: 0x0200A8BB RID: 43195
+		// Token: 0x02009277 RID: 37495
 		[Nullable(0)]
 		private class UiViewBaseWrapper : IUiViewBase
 		{
-			// Token: 0x1700A146 RID: 41286
-			// (get) Token: 0x0604D514 RID: 316692 RVA: 0x0144D97E File Offset: 0x0144BB7E
-			// (set) Token: 0x0604D515 RID: 316693 RVA: 0x0144D986 File Offset: 0x0144BB86
+			// Token: 0x170078DC RID: 30940
+			// (get) Token: 0x06043A44 RID: 277060 RVA: 0x013FBD72 File Offset: 0x013F9F72
+			// (set) Token: 0x06043A45 RID: 277061 RVA: 0x013FBD7A File Offset: 0x013F9F7A
 			public UiViewBase ViewBase { get; set; }
 
-			// Token: 0x1700A147 RID: 41287
-			// (get) Token: 0x0604D516 RID: 316694 RVA: 0x0144D98F File Offset: 0x0144BB8F
-			// (set) Token: 0x0604D517 RID: 316695 RVA: 0x0144D997 File Offset: 0x0144BB97
+			// Token: 0x170078DD RID: 30941
+			// (get) Token: 0x06043A46 RID: 277062 RVA: 0x013FBD83 File Offset: 0x013F9F83
+			// (set) Token: 0x06043A47 RID: 277063 RVA: 0x013FBD8B File Offset: 0x013F9F8B
 			public int Priority { get; set; }
 
-			// Token: 0x1700A148 RID: 41288
-			// (get) Token: 0x0604D518 RID: 316696 RVA: 0x0144D9A0 File Offset: 0x0144BBA0
-			// (set) Token: 0x0604D519 RID: 316697 RVA: 0x0144D9A8 File Offset: 0x0144BBA8
+			// Token: 0x170078DE RID: 30942
+			// (get) Token: 0x06043A48 RID: 277064 RVA: 0x013FBD94 File Offset: 0x013F9F94
+			// (set) Token: 0x06043A49 RID: 277065 RVA: 0x013FBD9C File Offset: 0x013F9F9C
 			public bool OnlyShowInMain { get; set; }
 		}
 	}

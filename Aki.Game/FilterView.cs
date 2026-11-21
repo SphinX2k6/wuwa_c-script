@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,16 +11,16 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using FilterDefine;
 using UnrealEngine;
 
-// Token: 0x0200185B RID: 6235
+// Token: 0x02000D14 RID: 3348
 public class FilterView : UiViewBase
 {
-	// Token: 0x0600B6BD RID: 46781 RVA: 0x00294EC1 File Offset: 0x002930C1
+	// Token: 0x06008AA6 RID: 35494 RVA: 0x0029F5ED File Offset: 0x0029D7ED
 	[NullableContext(1)]
 	public FilterView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600B6BE RID: 46782 RVA: 0x00294ECC File Offset: 0x002930CC
+	// Token: 0x06008AA7 RID: 35495 RVA: 0x0029F5F8 File Offset: 0x0029D7F8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -46,7 +45,7 @@ public class FilterView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B6BF RID: 46783 RVA: 0x00294FB8 File Offset: 0x002931B8
+	// Token: 0x06008AA8 RID: 35496 RVA: 0x0029F6E4 File Offset: 0x0029D8E4
 	private void ResetView()
 	{
 		foreach (FilterGroup filterGroup in this.Scroll.GetScrollItemList())
@@ -57,7 +56,7 @@ public class FilterView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B6C0 RID: 46784 RVA: 0x0029501C File Offset: 0x0029321C
+	// Token: 0x06008AA9 RID: 35497 RVA: 0x0029F748 File Offset: 0x0029D948
 	private void SaveDataAndCloseView()
 	{
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(this.ViewData.UniqueId);
@@ -74,13 +73,13 @@ public class FilterView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600B6C1 RID: 46785 RVA: 0x002950C0 File Offset: 0x002932C0
+	// Token: 0x06008AAA RID: 35498 RVA: 0x0029F7EC File Offset: 0x0029D9EC
 	protected override void OnBeforeCreate()
 	{
 		this.ViewData = (this.OpenParam as FilterViewData);
 	}
 
-	// Token: 0x0600B6C2 RID: 46786 RVA: 0x002950D4 File Offset: 0x002932D4
+	// Token: 0x06008AAB RID: 35499 RVA: 0x0029F800 File Offset: 0x0029DA00
 	protected override UniTask OnCreateAsync()
 	{
 		FilterView.<OnCreateAsync>d__9 <OnCreateAsync>d__;
@@ -91,14 +90,14 @@ public class FilterView : UiViewBase
 		return <OnCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B6C3 RID: 46787 RVA: 0x00295117 File Offset: 0x00293317
+	// Token: 0x06008AAC RID: 35500 RVA: 0x0029F843 File Offset: 0x0029DA43
 	protected override void OnStart()
 	{
 		this.LayoutItem.SetUIParent(base.GetScrollViewWithScrollbar(0).ContentUIItem, false);
 		this.InitFilter();
 	}
 
-	// Token: 0x0600B6C4 RID: 46788 RVA: 0x0029513C File Offset: 0x0029333C
+	// Token: 0x06008AAD RID: 35501 RVA: 0x0029F868 File Offset: 0x0029DA68
 	[NullableContext(1)]
 	private ILayoutItem<FilterGroup> InitFilterGroup(object ruleId, UUIItem uiItem, int index)
 	{
@@ -112,22 +111,22 @@ public class FilterView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600B6C5 RID: 46789 RVA: 0x00295186 File Offset: 0x00293386
+	// Token: 0x06008AAE RID: 35502 RVA: 0x0029F8B2 File Offset: 0x0029DAB2
 	protected override void OnBeforeDestroy()
 	{
 		this.Scroll.ClearChildren();
 	}
 
-	// Token: 0x0600B6C6 RID: 46790 RVA: 0x00295194 File Offset: 0x00293394
+	// Token: 0x06008AAF RID: 35503 RVA: 0x0029F8C0 File Offset: 0x0029DAC0
 	private void InitFilter()
 	{
 		this.Scroll = new GenericScrollView<FilterGroup>(base.GetScrollViewWithScrollbar(0), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<FilterGroup>(this.InitFilterGroup), this.LayoutItem);
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(this.ViewData.UniqueId);
 		Filter? filterConfig = FilterConfig.Instance.GetFilterConfig(filterResultData.ConfigId);
-		this.Scroll.RefreshByData<int>(filterConfig.Value.RuleList().ToList<int>(), null);
+		this.Scroll.RefreshByData<int>(filterConfig.Value.RuleList(), null);
 	}
 
-	// Token: 0x0400528F RID: 21135
+	// Token: 0x0400533A RID: 21306
 	[Nullable(new byte[]
 	{
 		2,
@@ -135,22 +134,22 @@ public class FilterView : UiViewBase
 	})]
 	protected GenericScrollView<FilterGroup> Scroll;
 
-	// Token: 0x04005290 RID: 21136
+	// Token: 0x0400533B RID: 21307
 	[Nullable(2)]
 	private FilterViewData ViewData;
 
-	// Token: 0x04005291 RID: 21137
+	// Token: 0x0400533C RID: 21308
 	[Nullable(2)]
 	private UUIItem LayoutItem;
 
-	// Token: 0x02007E1C RID: 32284
+	// Token: 0x02006FA3 RID: 28579
 	private enum ECompDefine
 	{
-		// Token: 0x0402946D RID: 169069
+		// Token: 0x0402479A RID: 149402
 		Scroll,
-		// Token: 0x0402946E RID: 169070
+		// Token: 0x0402479B RID: 149403
 		ClearButton,
-		// Token: 0x0402946F RID: 169071
+		// Token: 0x0402479C RID: 149404
 		ConfirmButton
 	}
 }

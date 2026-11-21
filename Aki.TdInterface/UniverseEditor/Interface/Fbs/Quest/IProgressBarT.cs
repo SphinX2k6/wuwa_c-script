@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FBA RID: 16314
+	// Token: 0x020043FB RID: 17403
 	public class IProgressBarT
 	{
-		// Token: 0x170071F1 RID: 29169
-		// (get) Token: 0x06017542 RID: 95554 RVA: 0x0035CE03 File Offset: 0x0035B003
-		// (set) Token: 0x06017543 RID: 95555 RVA: 0x0035CE0B File Offset: 0x0035B00B
+		// Token: 0x170077EF RID: 30703
+		// (get) Token: 0x06018BD1 RID: 101329 RVA: 0x00386A1B File Offset: 0x00384C1B
+		// (set) Token: 0x06018BD2 RID: 101330 RVA: 0x00386A23 File Offset: 0x00384C23
 		public EProgressBarStyle ProgressStyle { get; set; }
 
-		// Token: 0x170071F2 RID: 29170
-		// (get) Token: 0x06017544 RID: 95556 RVA: 0x0035CE14 File Offset: 0x0035B014
-		// (set) Token: 0x06017545 RID: 95557 RVA: 0x0035CE1C File Offset: 0x0035B01C
+		// Token: 0x170077F0 RID: 30704
+		// (get) Token: 0x06018BD3 RID: 101331 RVA: 0x00386A2C File Offset: 0x00384C2C
+		// (set) Token: 0x06018BD4 RID: 101332 RVA: 0x00386A34 File Offset: 0x00384C34
 		public IProgressCalculateT ProgressCalculate { get; set; }
 
-		// Token: 0x06017546 RID: 95558 RVA: 0x0035CE25 File Offset: 0x0035B025
+		// Token: 0x06018BD5 RID: 101333 RVA: 0x00386A3D File Offset: 0x00384C3D
 		public IProgressBarT()
 		{
 			this.ProgressStyle = EProgressBarStyle.Default;

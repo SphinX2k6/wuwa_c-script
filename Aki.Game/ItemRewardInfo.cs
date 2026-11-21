@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001FF1 RID: 8177
+// Token: 0x020014C4 RID: 5316
 public class ItemRewardInfo
 {
-	// Token: 0x0400769C RID: 30364
+	// Token: 0x04007785 RID: 30597
 	public int? ItemId;
 
-	// Token: 0x0400769D RID: 30365
+	// Token: 0x04007786 RID: 30598
 	public int? ItemCount;
 
-	// Token: 0x0400769E RID: 30366
+	// Token: 0x04007787 RID: 30599
 	public int Quality;
 }

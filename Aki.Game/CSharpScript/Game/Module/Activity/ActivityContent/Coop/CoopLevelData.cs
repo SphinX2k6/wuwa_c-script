@@ -8,13 +8,13 @@ using CSharpScript.Game.ServerStorage.Container;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068C7 RID: 26823
+	// Token: 0x02005817 RID: 22551
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CoopLevelData
 	{
-		// Token: 0x170097D3 RID: 38867
-		// (get) Token: 0x06042F33 RID: 274227 RVA: 0x0104E000 File Offset: 0x0104C200
+		// Token: 0x17006B13 RID: 27411
+		// (get) Token: 0x06037A8B RID: 227979 RVA: 0x00F8F628 File Offset: 0x00F8D828
 		public bool IsShowDoingNew
 		{
 			get
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042F34 RID: 274228 RVA: 0x0104E02C File Offset: 0x0104C22C
+		// Token: 0x06037A8C RID: 227980 RVA: 0x00F8F654 File Offset: 0x00F8D854
 		public CoopLevelData(int id)
 		{
 			this.LevelId = id;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042F35 RID: 274229 RVA: 0x0104E1D8 File Offset: 0x0104C3D8
+		// Token: 0x06037A8D RID: 227981 RVA: 0x00F8F800 File Offset: 0x00F8DA00
 		public void UpdateSubConditionState(CoopTaskCompleteInfo data)
 		{
 			foreach (CoopSubConditionDataBase coopSubConditionDataBase in this.CoopSubConditionDataDict.Values)
@@ -73,13 +73,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042F36 RID: 274230 RVA: 0x0104E230 File Offset: 0x0104C430
+		// Token: 0x06037A8E RID: 227982 RVA: 0x00F8F858 File Offset: 0x00F8DA58
 		public List<CoopSubConditionDataBase> GetSubConditionList()
 		{
 			return new List<CoopSubConditionDataBase>(this.CoopSubConditionDataDict.Values);
 		}
 
-		// Token: 0x06042F37 RID: 274231 RVA: 0x0104E244 File Offset: 0x0104C444
+		// Token: 0x06037A8F RID: 227983 RVA: 0x00F8F86C File Offset: 0x00F8DA6C
 		public bool IsAllSubConditionDone()
 		{
 			if (!this.IsHaveSubCondition)
@@ -99,25 +99,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return true;
 		}
 
-		// Token: 0x04022D29 RID: 142633
+		// Token: 0x0401D585 RID: 120197
 		public int LevelId;
 
-		// Token: 0x04022D2A RID: 142634
+		// Token: 0x0401D586 RID: 120198
 		public int Level;
 
-		// Token: 0x04022D2B RID: 142635
+		// Token: 0x0401D587 RID: 120199
 		public int RoleId;
 
-		// Token: 0x04022D2C RID: 142636
+		// Token: 0x0401D588 RID: 120200
 		public ECoopLevelStatus State;
 
-		// Token: 0x04022D2D RID: 142637
+		// Token: 0x0401D589 RID: 120201
 		public bool IsHaveSubCondition;
 
-		// Token: 0x04022D2E RID: 142638
+		// Token: 0x0401D58A RID: 120202
 		public int SubConditionId;
 
-		// Token: 0x04022D2F RID: 142639
+		// Token: 0x0401D58B RID: 120203
 		public Dictionary<ECoopSubConditionType, CoopSubConditionDataBase> CoopSubConditionDataDict = new Dictionary<ECoopSubConditionType, CoopSubConditionDataBase>();
 	}
 }

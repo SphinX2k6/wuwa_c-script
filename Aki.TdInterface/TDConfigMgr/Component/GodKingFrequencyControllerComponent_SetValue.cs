@@ -1,36 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000182 RID: 386
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000199 RID: 409
 	public class GodKingFrequencyControllerComponent_SetValue
 	{
-		// Token: 0x04000759 RID: 1881
+		// Token: 0x040007AF RID: 1967
 		public bool? Disabled;
 
-		// Token: 0x0400075A RID: 1882
+		// Token: 0x040007B0 RID: 1968
 		public bool? EdIsLocked;
 
-		// Token: 0x0400075B RID: 1883
+		// Token: 0x040007B1 RID: 1969
 		public List<int> StatueEntityIdList;
 
-		// Token: 0x0400075C RID: 1884
+		// Token: 0x040007B2 RID: 1970
 		public int InitialAttachStatue;
 
-		// Token: 0x0400075D RID: 1885
+		// Token: 0x040007B3 RID: 1971
 		public int GodKingFrequencyEntity;
 
-		// Token: 0x0400075E RID: 1886
+		// Token: 0x040007B4 RID: 1972
 		public string AttachSocket;
 
-		// Token: 0x0400075F RID: 1887
+		// Token: 0x040007B5 RID: 1973
 		public float FlySpeed;
 
-		// Token: 0x04000760 RID: 1888
+		// Token: 0x040007B6 RID: 1974
 		public float MaxFlyTime;
 	}
 }

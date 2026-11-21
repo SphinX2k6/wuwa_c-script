@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -16,13 +15,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePanel
 {
-	// Token: 0x02004811 RID: 18449
+	// Token: 0x02003742 RID: 14146
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeEntrancePanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x170078E7 RID: 30951
-		// (get) Token: 0x060304CB RID: 197835 RVA: 0x00B34980 File Offset: 0x00B32B80
+		// Token: 0x17004BA4 RID: 19364
+		// (get) Token: 0x06024C9B RID: 150683 RVA: 0x00A648EC File Offset: 0x00A62AEC
 		private InstanceDungeonEntrance? EntranceConfig
 		{
 			get
@@ -40,13 +39,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x060304CC RID: 197836 RVA: 0x00B349BD File Offset: 0x00B32BBD
+		// Token: 0x06024C9C RID: 150684 RVA: 0x00A64929 File Offset: 0x00A62B29
 		public override string GetResourceId()
 		{
 			return "UiView_InstanceEntranceTip_Prefab";
 		}
 
-		// Token: 0x060304CD RID: 197837 RVA: 0x00B349C4 File Offset: 0x00B32BC4
+		// Token: 0x06024C9D RID: 150685 RVA: 0x00A64930 File Offset: 0x00A62B30
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeEntrancePanel.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -57,7 +56,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060304CE RID: 197838 RVA: 0x00B34A08 File Offset: 0x00B32C08
+		// Token: 0x06024C9E RID: 150686 RVA: 0x00A64974 File Offset: 0x00A62B74
 		protected override void OnStart()
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(5);
@@ -69,7 +68,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			base.OnStart();
 		}
 
-		// Token: 0x060304CF RID: 197839 RVA: 0x00B34A59 File Offset: 0x00B32C59
+		// Token: 0x06024C9F RID: 150687 RVA: 0x00A649C5 File Offset: 0x00A62BC5
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -81,7 +80,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x060304D0 RID: 197840 RVA: 0x00B34A74 File Offset: 0x00B32C74
+		// Token: 0x06024CA0 RID: 150688 RVA: 0x00A649E0 File Offset: 0x00A62BE0
 		protected override void OnBeforeDestroy()
 		{
 			GenericLayoutAdd<InstanceDungeonCostTip> instanceCostTipView = this.InstanceCostTipView;
@@ -96,7 +95,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x060304D1 RID: 197841 RVA: 0x00B34AA8 File Offset: 0x00B32CA8
+		// Token: 0x06024CA1 RID: 150689 RVA: 0x00A64A14 File Offset: 0x00A62C14
 		private ILayoutItem<InstanceDungeonCostTip> OnInstanceRefresh(object data, UUIItem uiItem, int index, int originalItemIndex)
 		{
 			InstanceDungeonCostTip instanceDungeonCostTip = new InstanceDungeonCostTip();
@@ -108,7 +107,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			};
 		}
 
-		// Token: 0x060304D2 RID: 197842 RVA: 0x00B34ADC File Offset: 0x00B32CDC
+		// Token: 0x06024CA2 RID: 150690 RVA: 0x00A64A48 File Offset: 0x00A62C48
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -159,7 +158,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x060304D3 RID: 197843 RVA: 0x00B34C80 File Offset: 0x00B32E80
+		// Token: 0x06024CA3 RID: 150691 RVA: 0x00A64BF0 File Offset: 0x00A62DF0
 		private void InitView()
 		{
 			InstanceDungeonEntrance? entranceConfig = this.EntranceConfig;
@@ -200,7 +199,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			layoutContext.SetConfirmBtnActive(!flag);
 		}
 
-		// Token: 0x060304D4 RID: 197844 RVA: 0x00B34D70 File Offset: 0x00B32F70
+		// Token: 0x06024CA4 RID: 150692 RVA: 0x00A64CE0 File Offset: 0x00A62EE0
 		private void RefreshReward()
 		{
 			ActivityRogueController instance = ActivityRogueController.Instance;
@@ -247,12 +246,12 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 				{
 					return;
 				}
-				rewardsView.RebuildRewardsByData(array.ToList<TItem>());
+				rewardsView.RebuildRewardsByData(new List<TItem>(array));
 				return;
 			}
 		}
 
-		// Token: 0x060304D5 RID: 197845 RVA: 0x00B34E40 File Offset: 0x00B33040
+		// Token: 0x06024CA5 RID: 150693 RVA: 0x00A64DB0 File Offset: 0x00A62FB0
 		private void UpdateInstanceList()
 		{
 			InstanceDungeonEntranceConfig instance = InstanceDungeonEntranceConfig.Instance;
@@ -281,7 +280,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x060304D6 RID: 197846 RVA: 0x00B34EFC File Offset: 0x00B330FC
+		// Token: 0x06024CA6 RID: 150694 RVA: 0x00A64E6C File Offset: 0x00A6306C
 		private void RefreshEmptyItem()
 		{
 			GenericLayoutAdd<InstanceDungeonCostTip> instanceCostTipView = this.InstanceCostTipView;
@@ -305,7 +304,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			instanceDungeonCostTip.SetHelpButtonVisible(false);
 		}
 
-		// Token: 0x060304D7 RID: 197847 RVA: 0x00B34F88 File Offset: 0x00B33188
+		// Token: 0x06024CA7 RID: 150695 RVA: 0x00A64EF8 File Offset: 0x00A630F8
 		private void RefreshTimeItem()
 		{
 			ActivityRogueController instance = ActivityRogueController.Instance;
@@ -354,7 +353,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			instanceDungeonCostTip.SetHelpButtonVisible(false);
 		}
 
-		// Token: 0x060304D8 RID: 197848 RVA: 0x00B3506C File Offset: 0x00B3326C
+		// Token: 0x06024CA8 RID: 150696 RVA: 0x00A64FDC File Offset: 0x00A631DC
 		private unsafe void RefreshDifficultyItem()
 		{
 			ActivityRogueController instance = ActivityRogueController.Instance;
@@ -423,7 +422,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			instanceDungeonCostTip.SetHelpButtonVisible(false);
 		}
 
-		// Token: 0x060304D9 RID: 197849 RVA: 0x00B35280 File Offset: 0x00B33480
+		// Token: 0x06024CA9 RID: 150697 RVA: 0x00A651F0 File Offset: 0x00A633F0
 		private void RefreshAchievementItem()
 		{
 			ActivityRogueController instance = ActivityRogueController.Instance;
@@ -495,7 +494,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			instanceDungeonCostTip.SetHelpButtonVisible(false);
 		}
 
-		// Token: 0x060304DA RID: 197850 RVA: 0x00B35444 File Offset: 0x00B33644
+		// Token: 0x06024CAA RID: 150698 RVA: 0x00A653B4 File Offset: 0x00A635B4
 		private void RefreshShopProgressItem()
 		{
 			ActivityRogueController instance = ActivityRogueController.Instance;
@@ -547,7 +546,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			instanceDungeonCostTip.SetHelpButtonVisible(false);
 		}
 
-		// Token: 0x060304DB RID: 197851 RVA: 0x00B35599 File Offset: 0x00B33799
+		// Token: 0x06024CAB RID: 150699 RVA: 0x00A65509 File Offset: 0x00A63709
 		protected override void OnCloseWorldMapSecondaryUi()
 		{
 			GenericLayoutAdd<InstanceDungeonCostTip> instanceCostTipView = this.InstanceCostTipView;
@@ -558,13 +557,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			instanceCostTipView.ClearChildren();
 		}
 
-		// Token: 0x060304DC RID: 197852 RVA: 0x00B355AB File Offset: 0x00B337AB
+		// Token: 0x06024CAC RID: 150700 RVA: 0x00A6551B File Offset: 0x00A6371B
 		public override UUIItem GetGuideFocusUiItem()
 		{
 			return base.GetButton(11).GetOwner().GetComponentByClass(UUIItem.StaticClass()) as UUIItem;
 		}
 
-		// Token: 0x060304DD RID: 197853 RVA: 0x00B355D0 File Offset: 0x00B337D0
+		// Token: 0x06024CAD RID: 150701 RVA: 0x00A65540 File Offset: 0x00A63740
 		protected string GetRemainTime()
 		{
 			ActivityRogueController instance = ActivityRogueController.Instance;
@@ -597,7 +596,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			return TimeUtil.Instance.GetCountDownDataFormat2(num2, new CommonDefine.ETimeType?(timeTypeData[0]), new CommonDefine.ETimeType?(timeTypeData[1])).CountDownText ?? "";
 		}
 
-		// Token: 0x060304DE RID: 197854 RVA: 0x00B356B0 File Offset: 0x00B338B0
+		// Token: 0x06024CAE RID: 150702 RVA: 0x00A65620 File Offset: 0x00A63820
 		private CommonDefine.ETimeType[] GetTimeTypeData(double remainTime)
 		{
 			if (remainTime > 86400.0)
@@ -625,26 +624,26 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			return new CommonDefine.ETimeType[2];
 		}
 
-		// Token: 0x04019FDE RID: 106462
+		// Token: 0x04014692 RID: 83602
 		private const string ROGUE_SCORE_KEY = "rougeScore";
 
-		// Token: 0x04019FDF RID: 106463
+		// Token: 0x04014693 RID: 83603
 		private const string ROGUE_TIME = "rogueTime";
 
-		// Token: 0x04019FE0 RID: 106464
+		// Token: 0x04014694 RID: 83604
 		private const string ROGUE_ACHIEVEMENT_PROGRESS = "rogueAchievementProgress";
 
-		// Token: 0x04019FE1 RID: 106465
+		// Token: 0x04014695 RID: 83605
 		private const string ROGUE_DIFFICULTY_PROGRESS = "rogueDifficultyProgress";
 
-		// Token: 0x04019FE2 RID: 106466
+		// Token: 0x04014696 RID: 83606
 		private int EntranceId;
 
-		// Token: 0x04019FE3 RID: 106467
+		// Token: 0x04014697 RID: 83607
 		[Nullable(2)]
 		private TeleportMarkItem SelectedMarkItem;
 
-		// Token: 0x04019FE4 RID: 106468
+		// Token: 0x04014698 RID: 83608
 		[Nullable(new byte[]
 		{
 			2,
@@ -652,19 +651,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 		})]
 		private GenericLayoutAdd<InstanceDungeonCostTip> InstanceCostTipView;
 
-		// Token: 0x04019FE5 RID: 106469
+		// Token: 0x04014699 RID: 83609
 		[Nullable(2)]
 		private TimerHandle TimerId;
 
-		// Token: 0x04019FE6 RID: 106470
+		// Token: 0x0401469A RID: 83610
 		[Nullable(2)]
 		protected RewardItemBar RewardsView;
 
-		// Token: 0x0200AADD RID: 43741
+		// Token: 0x0200948E RID: 38030
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F56 RID: 212822
+			// Token: 0x0402E6D9 RID: 190169
 			public const int RoguelikePanel = 0;
 		}
 	}

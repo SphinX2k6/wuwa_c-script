@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002D27 RID: 11559
+// Token: 0x02002281 RID: 8833
 public class WeatherUnlockTipsView : UiViewBase
 {
-	// Token: 0x060184CD RID: 99533 RVA: 0x0062F8D9 File Offset: 0x0062DAD9
+	// Token: 0x06015D6F RID: 89455 RVA: 0x006558ED File Offset: 0x00653AED
 	[NullableContext(1)]
 	public WeatherUnlockTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060184CE RID: 99534 RVA: 0x0062F8E4 File Offset: 0x0062DAE4
+	// Token: 0x06015D70 RID: 89456 RVA: 0x006558F8 File Offset: 0x00653AF8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -39,7 +39,7 @@ public class WeatherUnlockTipsView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060184CF RID: 99535 RVA: 0x0062F9CC File Offset: 0x0062DBCC
+	// Token: 0x06015D71 RID: 89457 RVA: 0x006559E0 File Offset: 0x00653BE0
 	private void OnClickClose()
 	{
 		base.CloseMe(null);

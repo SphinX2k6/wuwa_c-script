@@ -19,9 +19,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskWander.TsTaskWander_C")]
 public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000244 RID: 580
-	// (get) Token: 0x06000C56 RID: 3158 RVA: 0x0003EF33 File Offset: 0x0003D133
-	// (set) Token: 0x06000C57 RID: 3159 RVA: 0x0003EF43 File Offset: 0x0003D143
+	// Token: 0x17000247 RID: 583
+	// (get) Token: 0x06000C5C RID: 3164 RVA: 0x0003FA8B File Offset: 0x0003DC8B
+	// (set) Token: 0x06000C5D RID: 3165 RVA: 0x0003FA9B File Offset: 0x0003DC9B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float RandomRadius
 	{
@@ -35,9 +35,9 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17000245 RID: 581
-	// (get) Token: 0x06000C58 RID: 3160 RVA: 0x0003EF54 File Offset: 0x0003D154
-	// (set) Token: 0x06000C59 RID: 3161 RVA: 0x0003EF64 File Offset: 0x0003D164
+	// Token: 0x17000248 RID: 584
+	// (get) Token: 0x06000C5E RID: 3166 RVA: 0x0003FAAC File Offset: 0x0003DCAC
+	// (set) Token: 0x06000C5F RID: 3167 RVA: 0x0003FABC File Offset: 0x0003DCBC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MinWanderDistance
 	{
@@ -51,9 +51,9 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17000246 RID: 582
-	// (get) Token: 0x06000C5A RID: 3162 RVA: 0x0003EF75 File Offset: 0x0003D175
-	// (set) Token: 0x06000C5B RID: 3163 RVA: 0x0003EF85 File Offset: 0x0003D185
+	// Token: 0x17000249 RID: 585
+	// (get) Token: 0x06000C60 RID: 3168 RVA: 0x0003FACD File Offset: 0x0003DCCD
+	// (set) Token: 0x06000C61 RID: 3169 RVA: 0x0003FADD File Offset: 0x0003DCDD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MaxNavigationMillisecond
 	{
@@ -67,9 +67,9 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17000247 RID: 583
-	// (get) Token: 0x06000C5C RID: 3164 RVA: 0x0003EF96 File Offset: 0x0003D196
-	// (set) Token: 0x06000C5D RID: 3165 RVA: 0x0003EFA6 File Offset: 0x0003D1A6
+	// Token: 0x1700024A RID: 586
+	// (get) Token: 0x06000C62 RID: 3170 RVA: 0x0003FAEE File Offset: 0x0003DCEE
+	// (set) Token: 0x06000C63 RID: 3171 RVA: 0x0003FAFE File Offset: 0x0003DCFE
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool MoveStateForWanderOrReset
 	{
@@ -83,9 +83,9 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17000248 RID: 584
-	// (get) Token: 0x06000C5E RID: 3166 RVA: 0x0003EFB7 File Offset: 0x0003D1B7
-	// (set) Token: 0x06000C5F RID: 3167 RVA: 0x0003EFC7 File Offset: 0x0003D1C7
+	// Token: 0x1700024B RID: 587
+	// (get) Token: 0x06000C64 RID: 3172 RVA: 0x0003FB0F File Offset: 0x0003DD0F
+	// (set) Token: 0x06000C65 RID: 3173 RVA: 0x0003FB1F File Offset: 0x0003DD1F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MaxStopTime
 	{
@@ -99,9 +99,9 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17000249 RID: 585
-	// (get) Token: 0x06000C60 RID: 3168 RVA: 0x0003EFD8 File Offset: 0x0003D1D8
-	// (set) Token: 0x06000C61 RID: 3169 RVA: 0x0003EFE8 File Offset: 0x0003D1E8
+	// Token: 0x1700024C RID: 588
+	// (get) Token: 0x06000C66 RID: 3174 RVA: 0x0003FB30 File Offset: 0x0003DD30
+	// (set) Token: 0x06000C67 RID: 3175 RVA: 0x0003FB40 File Offset: 0x0003DD40
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float BlinkTime
 	{
@@ -115,9 +115,9 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x1700024A RID: 586
-	// (get) Token: 0x06000C62 RID: 3170 RVA: 0x0003EFF9 File Offset: 0x0003D1F9
-	// (set) Token: 0x06000C63 RID: 3171 RVA: 0x0003F009 File Offset: 0x0003D209
+	// Token: 0x1700024D RID: 589
+	// (get) Token: 0x06000C68 RID: 3176 RVA: 0x0003FB51 File Offset: 0x0003DD51
+	// (set) Token: 0x06000C69 RID: 3177 RVA: 0x0003FB61 File Offset: 0x0003DD61
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool UsePatrolPointPriority
 	{
@@ -131,9 +131,9 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x1700024B RID: 587
-	// (get) Token: 0x06000C64 RID: 3172 RVA: 0x0003F01C File Offset: 0x0003D21C
-	// (set) Token: 0x06000C65 RID: 3173 RVA: 0x0003F055 File Offset: 0x0003D255
+	// Token: 0x1700024E RID: 590
+	// (get) Token: 0x06000C6A RID: 3178 RVA: 0x0003FB74 File Offset: 0x0003DD74
+	// (set) Token: 0x06000C6B RID: 3179 RVA: 0x0003FBAD File Offset: 0x0003DDAD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FSoftObjectPath ShowEffectDa
 	{
@@ -153,9 +153,9 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x1700024C RID: 588
-	// (get) Token: 0x06000C66 RID: 3174 RVA: 0x0003F080 File Offset: 0x0003D280
-	// (set) Token: 0x06000C67 RID: 3175 RVA: 0x0003F0B9 File Offset: 0x0003D2B9
+	// Token: 0x1700024F RID: 591
+	// (get) Token: 0x06000C6C RID: 3180 RVA: 0x0003FBD8 File Offset: 0x0003DDD8
+	// (set) Token: 0x06000C6D RID: 3181 RVA: 0x0003FC11 File Offset: 0x0003DE11
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FSoftObjectPath HideEffectDa
 	{
@@ -175,9 +175,9 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x1700024D RID: 589
-	// (get) Token: 0x06000C68 RID: 3176 RVA: 0x0003F0E4 File Offset: 0x0003D2E4
-	// (set) Token: 0x06000C69 RID: 3177 RVA: 0x0003F11D File Offset: 0x0003D31D
+	// Token: 0x17000250 RID: 592
+	// (get) Token: 0x06000C6E RID: 3182 RVA: 0x0003FC3C File Offset: 0x0003DE3C
+	// (set) Token: 0x06000C6F RID: 3183 RVA: 0x0003FC75 File Offset: 0x0003DE75
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FSoftObjectPath ShowMaterialDa
 	{
@@ -197,9 +197,9 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x1700024E RID: 590
-	// (get) Token: 0x06000C6A RID: 3178 RVA: 0x0003F148 File Offset: 0x0003D348
-	// (set) Token: 0x06000C6B RID: 3179 RVA: 0x0003F181 File Offset: 0x0003D381
+	// Token: 0x17000251 RID: 593
+	// (get) Token: 0x06000C70 RID: 3184 RVA: 0x0003FCA0 File Offset: 0x0003DEA0
+	// (set) Token: 0x06000C71 RID: 3185 RVA: 0x0003FCD9 File Offset: 0x0003DED9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FSoftObjectPath HideMaterialDa
 	{
@@ -219,9 +219,9 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x1700024F RID: 591
-	// (get) Token: 0x06000C6C RID: 3180 RVA: 0x0003F1A9 File Offset: 0x0003D3A9
-	// (set) Token: 0x06000C6D RID: 3181 RVA: 0x0003F1B9 File Offset: 0x0003D3B9
+	// Token: 0x17000252 RID: 594
+	// (get) Token: 0x06000C72 RID: 3186 RVA: 0x0003FD01 File Offset: 0x0003DF01
+	// (set) Token: 0x06000C73 RID: 3187 RVA: 0x0003FD11 File Offset: 0x0003DF11
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool Debug
 	{
@@ -235,7 +235,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06000C6E RID: 3182 RVA: 0x0003F1CC File Offset: 0x0003D3CC
+	// Token: 0x06000C74 RID: 3188 RVA: 0x0003FD24 File Offset: 0x0003DF24
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -260,30 +260,27 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06000C6F RID: 3183 RVA: 0x0003F330 File Offset: 0x0003D530
+	// Token: 0x06000C75 RID: 3189 RVA: 0x0003FE88 File Offset: 0x0003E088
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskWander) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskWander.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000C70 RID: 3184 RVA: 0x0003F3CC File Offset: 0x0003D5CC
+	// Token: 0x06000C76 RID: 3190 RVA: 0x0003FF38 File Offset: 0x0003E138
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -413,7 +410,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		this.SetAiSceneEnable(aiController, false);
 	}
 
-	// Token: 0x06000C71 RID: 3185 RVA: 0x0003F768 File Offset: 0x0003D968
+	// Token: 0x06000C77 RID: 3191 RVA: 0x000402D4 File Offset: 0x0003E4D4
 	private void FindNavPoint([Nullable(2)] AAIController ownerController, global::Vector initLocation, CharacterActorComponent character)
 	{
 		int i = 5;
@@ -458,7 +455,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06000C72 RID: 3186 RVA: 0x0003F8E8 File Offset: 0x0003DAE8
+	// Token: 0x06000C78 RID: 3192 RVA: 0x00040454 File Offset: 0x0003E654
 	private void SetAiSceneEnable(AiController aiController, bool enable)
 	{
 		if (!this.TsMoveStateForWanderOrReset)
@@ -471,31 +468,28 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06000C73 RID: 3187 RVA: 0x0003F914 File Offset: 0x0003DB14
+	// Token: 0x06000C79 RID: 3193 RVA: 0x00040480 File Offset: 0x0003E680
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskWander) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskWander.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000C74 RID: 3188 RVA: 0x0003F9B4 File Offset: 0x0003DBB4
+	// Token: 0x06000C7A RID: 3194 RVA: 0x00040538 File Offset: 0x0003E738
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -548,7 +542,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 			}
 		}
 		vector.DivisionEqual(num);
-		charActorComp.SetInputDirect(vector, true);
+		charActorComp.SetInputDirect(vector, true, EInputDirectSpace.World);
 		AiControllerLibrary.TurnToDirect(charActorComp, vector, aiController.AiWanderInfos.AiWander.Value.TurnSpeed, false, 0f);
 		if (!this.TsMoveStateForWanderOrReset && !this.CheckPreLocationDistance(charActorComp, deltaSeconds))
 		{
@@ -562,7 +556,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06000C75 RID: 3189 RVA: 0x0003FB84 File Offset: 0x0003DD84
+	// Token: 0x06000C7B RID: 3195 RVA: 0x0004070C File Offset: 0x0003E90C
 	protected override void OnClear()
 	{
 		TsAiController tsAiController = base.AIOwner as TsAiController;
@@ -611,7 +605,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		this.ShowMaterialData = null;
 	}
 
-	// Token: 0x06000C76 RID: 3190 RVA: 0x0003FCE4 File Offset: 0x0003DEE4
+	// Token: 0x06000C7C RID: 3196 RVA: 0x0004086C File Offset: 0x0003EA6C
 	private bool CheckPreLocationDistance(CharacterActorComponent actor, float deltaSeconds)
 	{
 		if (this.PreLocation == null)
@@ -633,7 +627,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		return this.StopTimeCount <= this.TsMaxStopTime;
 	}
 
-	// Token: 0x06000C77 RID: 3191 RVA: 0x0003FD74 File Offset: 0x0003DF74
+	// Token: 0x06000C7D RID: 3197 RVA: 0x000408FC File Offset: 0x0003EAFC
 	private bool BlinkMoveBegin(CharacterActorComponent actor, bool bForce = false)
 	{
 		if (this.MoveStateActural == 3 || bForce)
@@ -704,7 +698,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		return false;
 	}
 
-	// Token: 0x06000C78 RID: 3192 RVA: 0x0003FF38 File Offset: 0x0003E138
+	// Token: 0x06000C7E RID: 3198 RVA: 0x00040AC0 File Offset: 0x0003ECC0
 	private void BlinkMoveTick(CharacterActorComponent actor, float deltaSeconds)
 	{
 		this.BlinkTimeCount += deltaSeconds;
@@ -771,7 +765,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 			{
 				this.ShowMaterialData = new int?(-1);
 			}
-			actor.SetInputDirect(global::Vector.ZeroVectorProxy, false);
+			actor.SetInputDirect(global::Vector.ZeroVectorProxy, false, EInputDirectSpace.World);
 		}
 		if (this.BlinkTimeCount >= this.TsBlinkTime)
 		{
@@ -779,7 +773,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06000C79 RID: 3193 RVA: 0x000401A4 File Offset: 0x0003E3A4
+	// Token: 0x06000C7F RID: 3199 RVA: 0x00040D2C File Offset: 0x0003EF2C
 	private bool BlinkMoveEnd(CharacterActorComponent actor)
 	{
 		if (this.InBlink)
@@ -806,7 +800,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		return false;
 	}
 
-	// Token: 0x06000C7A RID: 3194 RVA: 0x00040260 File Offset: 0x0003E460
+	// Token: 0x06000C80 RID: 3200 RVA: 0x00040DE8 File Offset: 0x0003EFE8
 	private void UseSkill(CharacterActorComponent actor, AiWander? aiWander)
 	{
 		CharacterSkillComponent component = actor.Entity.GetComponent<CharacterSkillComponent>();
@@ -822,7 +816,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		base.Finish(bSuccess);
 	}
 
-	// Token: 0x06000C7B RID: 3195 RVA: 0x000402C0 File Offset: 0x0003E4C0
+	// Token: 0x06000C81 RID: 3201 RVA: 0x00040E48 File Offset: 0x0003F048
 	private void ResetAiInfo(CharacterActorComponent actor)
 	{
 		CreatureDataComponent component = actor.Entity.GetComponent<CreatureDataComponent>();
@@ -833,7 +827,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06000C7C RID: 3196 RVA: 0x00040310 File Offset: 0x0003E510
+	// Token: 0x06000C82 RID: 3202 RVA: 0x00040E98 File Offset: 0x0003F098
 	private void DrawDebugPath(CharacterActorComponent actor)
 	{
 		int count = this.NavigationPath.Count;
@@ -855,7 +849,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06000C7D RID: 3197 RVA: 0x00040434 File Offset: 0x0003E634
+	// Token: 0x06000C83 RID: 3203 RVA: 0x00040FBC File Offset: 0x0003F1BC
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskWander._ClassPtr == IntPtr.Zero)
@@ -865,22 +859,22 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		return TsTaskWander._ClassPtr;
 	}
 
-	// Token: 0x06000C7E RID: 3198 RVA: 0x00040458 File Offset: 0x0003E658
+	// Token: 0x06000C84 RID: 3204 RVA: 0x00040FE0 File Offset: 0x0003F1E0
 	public TsTaskWander() : this(BuiltinUtils.AllocNativeUObject(TsTaskWander.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000C7F RID: 3199 RVA: 0x00040480 File Offset: 0x0003E680
+	// Token: 0x06000C85 RID: 3205 RVA: 0x00041008 File Offset: 0x0003F208
 	public TsTaskWander(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskWander.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000C80 RID: 3200 RVA: 0x000404B4 File Offset: 0x0003E6B4
+	// Token: 0x06000C86 RID: 3206 RVA: 0x0004103C File Offset: 0x0003F23C
 	protected TsTaskWander(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000C81 RID: 3201 RVA: 0x0004050C File Offset: 0x0003E70C
+	// Token: 0x06000C87 RID: 3207 RVA: 0x00041094 File Offset: 0x0003F294
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -889,7 +883,7 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06000C82 RID: 3202 RVA: 0x0004053C File Offset: 0x0003E73C
+	// Token: 0x06000C88 RID: 3208 RVA: 0x000410C4 File Offset: 0x0003F2C4
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -898,22 +892,22 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x040009D4 RID: 2516
+	// Token: 0x040009DC RID: 2524
 	private const string NONE_PATH = "None";
 
-	// Token: 0x040009D5 RID: 2517
+	// Token: 0x040009DD RID: 2525
 	private const int BLINK_STATE = 3;
 
-	// Token: 0x040009D6 RID: 2518
+	// Token: 0x040009DE RID: 2526
 	private const int SKILL_STATE = 4;
 
-	// Token: 0x040009D7 RID: 2519
+	// Token: 0x040009DF RID: 2527
 	private global::Vector SelectedTargetLocation = global::Vector.Create();
 
-	// Token: 0x040009D8 RID: 2520
+	// Token: 0x040009E0 RID: 2528
 	private bool FoundPath;
 
-	// Token: 0x040009D9 RID: 2521
+	// Token: 0x040009E1 RID: 2529
 	[Nullable(new byte[]
 	{
 		2,
@@ -921,134 +915,134 @@ public class TsTaskWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 	})]
 	private List<global::Vector> NavigationPath;
 
-	// Token: 0x040009DA RID: 2522
+	// Token: 0x040009E2 RID: 2530
 	private int CurrentNavigationIndex;
 
-	// Token: 0x040009DB RID: 2523
+	// Token: 0x040009E3 RID: 2531
 	private double NavigationEndTime;
 
-	// Token: 0x040009DC RID: 2524
+	// Token: 0x040009E4 RID: 2532
 	private bool InBlink;
 
-	// Token: 0x040009DD RID: 2525
+	// Token: 0x040009E5 RID: 2533
 	private float StopTimeCount;
 
-	// Token: 0x040009DE RID: 2526
+	// Token: 0x040009E6 RID: 2534
 	private float BlinkTimeCount;
 
-	// Token: 0x040009DF RID: 2527
+	// Token: 0x040009E7 RID: 2535
 	[Nullable(2)]
 	private global::Vector PreLocation;
 
-	// Token: 0x040009E0 RID: 2528
+	// Token: 0x040009E8 RID: 2536
 	private int? ShowMaterialData;
 
-	// Token: 0x040009E1 RID: 2529
+	// Token: 0x040009E9 RID: 2537
 	private int? HideMaterialData;
 
-	// Token: 0x040009E2 RID: 2530
+	// Token: 0x040009EA RID: 2538
 	private int MoveStateActural;
 
-	// Token: 0x040009E3 RID: 2531
+	// Token: 0x040009EB RID: 2539
 	private bool IsInitTsVariables;
 
-	// Token: 0x040009E4 RID: 2532
+	// Token: 0x040009EC RID: 2540
 	private float TsRandomRadius;
 
-	// Token: 0x040009E5 RID: 2533
+	// Token: 0x040009ED RID: 2541
 	private float TsMinWanderDistance;
 
-	// Token: 0x040009E6 RID: 2534
+	// Token: 0x040009EE RID: 2542
 	private float TsMaxNavigationMillisecond;
 
-	// Token: 0x040009E7 RID: 2535
+	// Token: 0x040009EF RID: 2543
 	private bool TsMoveStateForWanderOrReset;
 
-	// Token: 0x040009E8 RID: 2536
+	// Token: 0x040009F0 RID: 2544
 	private float TsMaxStopTime;
 
-	// Token: 0x040009E9 RID: 2537
+	// Token: 0x040009F1 RID: 2545
 	private float TsBlinkTime;
 
-	// Token: 0x040009EA RID: 2538
+	// Token: 0x040009F2 RID: 2546
 	private bool TsUsePatrolPointPriority;
 
-	// Token: 0x040009EB RID: 2539
+	// Token: 0x040009F3 RID: 2547
 	private string TsShowEffectDa = "";
 
-	// Token: 0x040009EC RID: 2540
+	// Token: 0x040009F4 RID: 2548
 	private string TsHideEffectDa = "";
 
-	// Token: 0x040009ED RID: 2541
+	// Token: 0x040009F5 RID: 2549
 	private string TsShowMaterialDa = "";
 
-	// Token: 0x040009EE RID: 2542
+	// Token: 0x040009F6 RID: 2550
 	private string TsHideMaterialDa = "";
 
-	// Token: 0x040009EF RID: 2543
+	// Token: 0x040009F7 RID: 2551
 	private bool TsDebug;
 
-	// Token: 0x040009F0 RID: 2544
+	// Token: 0x040009F8 RID: 2552
 	private global::Vector CacheVector = global::Vector.Create();
 
-	// Token: 0x040009F1 RID: 2545
+	// Token: 0x040009F9 RID: 2553
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskWander.TsTaskWander_C";
 
-	// Token: 0x040009F2 RID: 2546
+	// Token: 0x040009FA RID: 2554
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040009F3 RID: 2547
+	// Token: 0x040009FB RID: 2555
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040009F4 RID: 2548
+	// Token: 0x040009FC RID: 2556
 	private static int __PropertyOffset_RandomRadius;
 
-	// Token: 0x040009F5 RID: 2549
+	// Token: 0x040009FD RID: 2557
 	private static int __PropertyOffset_MinWanderDistance;
 
-	// Token: 0x040009F6 RID: 2550
+	// Token: 0x040009FE RID: 2558
 	private static int __PropertyOffset_MaxNavigationMillisecond;
 
-	// Token: 0x040009F7 RID: 2551
+	// Token: 0x040009FF RID: 2559
 	private static int __PropertyOffset_MoveStateForWanderOrReset;
 
-	// Token: 0x040009F8 RID: 2552
+	// Token: 0x04000A00 RID: 2560
 	private static int __PropertyOffset_MaxStopTime;
 
-	// Token: 0x040009F9 RID: 2553
+	// Token: 0x04000A01 RID: 2561
 	private static int __PropertyOffset_BlinkTime;
 
-	// Token: 0x040009FA RID: 2554
+	// Token: 0x04000A02 RID: 2562
 	private static int __PropertyOffset_UsePatrolPointPriority;
 
-	// Token: 0x040009FB RID: 2555
+	// Token: 0x04000A03 RID: 2563
 	private static int __PropertyOffset_ShowEffectDa;
 
-	// Token: 0x040009FC RID: 2556
+	// Token: 0x04000A04 RID: 2564
 	[Nullable(2)]
 	private FSoftObjectPath _ShowEffectDa;
 
-	// Token: 0x040009FD RID: 2557
+	// Token: 0x04000A05 RID: 2565
 	private static int __PropertyOffset_HideEffectDa;
 
-	// Token: 0x040009FE RID: 2558
+	// Token: 0x04000A06 RID: 2566
 	[Nullable(2)]
 	private FSoftObjectPath _HideEffectDa;
 
-	// Token: 0x040009FF RID: 2559
+	// Token: 0x04000A07 RID: 2567
 	private static int __PropertyOffset_ShowMaterialDa;
 
-	// Token: 0x04000A00 RID: 2560
+	// Token: 0x04000A08 RID: 2568
 	[Nullable(2)]
 	private FSoftObjectPath _ShowMaterialDa;
 
-	// Token: 0x04000A01 RID: 2561
+	// Token: 0x04000A09 RID: 2569
 	private static int __PropertyOffset_HideMaterialDa;
 
-	// Token: 0x04000A02 RID: 2562
+	// Token: 0x04000A0A RID: 2570
 	[Nullable(2)]
 	private FSoftObjectPath _HideMaterialDa;
 
-	// Token: 0x04000A03 RID: 2563
+	// Token: 0x04000A0B RID: 2571
 	private static int __PropertyOffset_Debug;
 }

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F46 RID: 24390
+	// Token: 0x0200658A RID: 25994
 	public enum ECountDownUiStyle : byte
 	{
-		// Token: 0x0400FCD1 RID: 64721
+		// Token: 0x04010A4D RID: 68173
 		Common,
-		// Token: 0x0400FCD2 RID: 64722
+		// Token: 0x04010A4E RID: 68174
 		MotorRacing,
-		// Token: 0x0400FCD3 RID: 64723
+		// Token: 0x04010A4F RID: 68175
 		MotorFight
 	}
 }

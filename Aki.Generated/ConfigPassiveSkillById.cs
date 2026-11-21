@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000638 RID: 1592
+	// Token: 0x02000650 RID: 1616
 	public class ConfigPassiveSkillById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002560 RID: 9568 RVA: 0x0012CFD8 File Offset: 0x0012B1D8
+		// Token: 0x060025F0 RID: 9712 RVA: 0x00133A54 File Offset: 0x00131C54
 		static ConfigPassiveSkillById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPassiveSkillById.CreateStaticDefaultValue), new Action(ConfigPassiveSkillById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002561 RID: 9569 RVA: 0x0012CFF8 File Offset: 0x0012B1F8
+		// Token: 0x060025F1 RID: 9713 RVA: 0x00133A74 File Offset: 0x00131C74
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPassiveSkillById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002562 RID: 9570 RVA: 0x0012D077 File Offset: 0x0012B277
+		// Token: 0x060025F2 RID: 9714 RVA: 0x00133AF3 File Offset: 0x00131CF3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPassiveSkillById.LogPair = null;
 			ConfigPassiveSkillById.HandleId = 0;
 		}
 
-		// Token: 0x06002563 RID: 9571 RVA: 0x0012D085 File Offset: 0x0012B285
+		// Token: 0x060025F3 RID: 9715 RVA: 0x00133B01 File Offset: 0x00131D01
 		public static void Init()
 		{
 			ConfigPassiveSkillById.HandleId = ConfigCommon.InitDataStatement(ConfigPassiveSkillById.HandleId, "db_passiveskill.db", "select BinData from `PassiveSkill` where Id=?");
 		}
 
-		// Token: 0x06002564 RID: 9572 RVA: 0x0012D0A0 File Offset: 0x0012B2A0
+		// Token: 0x060025F4 RID: 9716 RVA: 0x00133B1C File Offset: 0x00131D1C
 		public static PassiveSkill? GetConfig(long p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPassiveSkillById.HandleId, ConfigPassiveSkillById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PassiveSkill?(rootAsPassiveSkill);
 		}
 
-		// Token: 0x04002B6E RID: 11118
+		// Token: 0x04002C16 RID: 11286
 		private const string DB = "db_passiveskill.db";
 
-		// Token: 0x04002B6F RID: 11119
+		// Token: 0x04002C17 RID: 11287
 		private const string FILE = "b.被动技能.xlsx";
 
-		// Token: 0x04002B70 RID: 11120
+		// Token: 0x04002C18 RID: 11288
 		private const string TABLE = "PassiveSkill";
 
-		// Token: 0x04002B71 RID: 11121
+		// Token: 0x04002C19 RID: 11289
 		private const string COMMAND = "select BinData from `PassiveSkill` where Id=?";
 
-		// Token: 0x04002B72 RID: 11122
+		// Token: 0x04002C1A RID: 11290
 		private const string KEY_PREFIX = "PassiveSkillById";
 
-		// Token: 0x04002B73 RID: 11123
+		// Token: 0x04002C1B RID: 11291
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002B74 RID: 11124
+		// Token: 0x04002C1C RID: 11292
 		private static int HandleId;
 	}
 }

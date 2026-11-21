@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,19 +10,19 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using FilterDefine;
 using UnrealEngine;
 
-// Token: 0x02001855 RID: 6229
+// Token: 0x02000D0E RID: 3342
 [NullableContext(1)]
 [Nullable(0)]
 public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 {
-	// Token: 0x0600B66E RID: 46702 RVA: 0x00293AF4 File Offset: 0x00291CF4
+	// Token: 0x06008A57 RID: 35415 RVA: 0x0029E204 File Offset: 0x0029C404
 	public FilterEntrance(UUIItem uiItem, TUpdateDataListFunction<T> updateDataListFunction)
 	{
 		this.UpdateDataListFunction = updateDataListFunction;
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600B66F RID: 46703 RVA: 0x00293B50 File Offset: 0x00291D50
+	// Token: 0x06008A58 RID: 35416 RVA: 0x0029E260 File Offset: 0x0029C460
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -50,21 +49,21 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B670 RID: 46704 RVA: 0x00293C5C File Offset: 0x00291E5C
+	// Token: 0x06008A59 RID: 35417 RVA: 0x0029E36C File Offset: 0x0029C56C
 	private void OpenFilterView()
 	{
 		FilterViewData viewData = new FilterViewData(this.ResultData.UniqueId, new Action(this.ConfirmFunction));
 		FilterSortController.Instance.OpenFilterView(viewData);
 	}
 
-	// Token: 0x0600B671 RID: 46705 RVA: 0x00293C94 File Offset: 0x00291E94
+	// Token: 0x06008A5A RID: 35418 RVA: 0x0029E3A4 File Offset: 0x0029C5A4
 	private List<IPhantomFilterData> GetFilteredDataList()
 	{
 		Dictionary<FilterDefine.EFilterType, Dictionary<int, string>> selectRuleData = this.ResultData.GetSelectRuleData();
-		return FilterModel.Instance.GetFilterList<T>(this.DataList, this.ConfigId, selectRuleData).Cast<IPhantomFilterData>().ToList<IPhantomFilterData>();
+		return FilterModel.Instance.GetFilterList<T>(this.DataList, this.ConfigId, selectRuleData).ConvertAll<IPhantomFilterData>((T item) => (IPhantomFilterData)((object)item));
 	}
 
-	// Token: 0x0600B672 RID: 46706 RVA: 0x00293CCE File Offset: 0x00291ECE
+	// Token: 0x06008A5B RID: 35419 RVA: 0x0029E3F8 File Offset: 0x0029C5F8
 	private void OnFilterViewClose()
 	{
 		FilterToggleItem toggleItem = this.ToggleItem;
@@ -75,7 +74,7 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		toggleItem.SetToggleState(EToggleState.ETT_UnChecked);
 	}
 
-	// Token: 0x0600B673 RID: 46707 RVA: 0x00293CE1 File Offset: 0x00291EE1
+	// Token: 0x06008A5C RID: 35420 RVA: 0x0029E40B File Offset: 0x0029C60B
 	private void ConfirmFunction()
 	{
 		this.SaveStorage();
@@ -83,7 +82,7 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		this.UpdateDataList(false);
 	}
 
-	// Token: 0x0600B674 RID: 46708 RVA: 0x00293CF6 File Offset: 0x00291EF6
+	// Token: 0x06008A5D RID: 35421 RVA: 0x0029E420 File Offset: 0x0029C620
 	private void OnBtnClearClick()
 	{
 		Action onBtnClearClickCallback = this.OnBtnClearClickCallback;
@@ -94,7 +93,7 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		this.ClearData();
 	}
 
-	// Token: 0x0600B675 RID: 46709 RVA: 0x00293D0F File Offset: 0x00291F0F
+	// Token: 0x06008A5E RID: 35422 RVA: 0x0029E439 File Offset: 0x0029C639
 	private void ClearData()
 	{
 		FilterModel.Instance.ClearData(this.ResultData.UniqueId);
@@ -103,7 +102,7 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		this.UpdateDataList(false);
 	}
 
-	// Token: 0x0600B676 RID: 46710 RVA: 0x00293D40 File Offset: 0x00291F40
+	// Token: 0x06008A5F RID: 35423 RVA: 0x0029E46C File Offset: 0x0029C66C
 	private void OnToggleStateChange(EToggleState state)
 	{
 		if (!this.IsPhantomFilter())
@@ -118,7 +117,7 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		FilterSortController.Instance.OpenPhantomFilterView(viewData);
 	}
 
-	// Token: 0x0600B677 RID: 46711 RVA: 0x00293DA6 File Offset: 0x00291FA6
+	// Token: 0x06008A60 RID: 35424 RVA: 0x0029E4D2 File Offset: 0x0029C6D2
 	public bool TryClearData()
 	{
 		if (this.ConfigId <= 0)
@@ -133,14 +132,14 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x0600B678 RID: 46712 RVA: 0x00293DCE File Offset: 0x00291FCE
+	// Token: 0x06008A61 RID: 35425 RVA: 0x0029E4FA File Offset: 0x0029C6FA
 	protected override void OnStart()
 	{
 		base.GetItem(1).SetUIActive(false);
 		this.AddEventListener();
 	}
 
-	// Token: 0x0600B679 RID: 46713 RVA: 0x00293DE4 File Offset: 0x00291FE4
+	// Token: 0x06008A62 RID: 35426 RVA: 0x0029E510 File Offset: 0x0029C710
 	protected override void OnBeforeDestroy()
 	{
 		foreach (int uniqueId in this.UniqueIdMap.Values)
@@ -157,19 +156,19 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		this.ToggleItem = null;
 	}
 
-	// Token: 0x0600B67A RID: 46714 RVA: 0x00293E6C File Offset: 0x0029206C
+	// Token: 0x06008A63 RID: 35427 RVA: 0x0029E598 File Offset: 0x0029C798
 	public void AddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnFilterDataUpdate, new Action<int>(this.OnFilterDataUpdate));
 	}
 
-	// Token: 0x0600B67B RID: 46715 RVA: 0x00293E8A File Offset: 0x0029208A
+	// Token: 0x06008A64 RID: 35428 RVA: 0x0029E5B6 File Offset: 0x0029C7B6
 	public void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnFilterDataUpdate, new Action<int>(this.OnFilterDataUpdate));
 	}
 
-	// Token: 0x0600B67C RID: 46716 RVA: 0x00293EA8 File Offset: 0x002920A8
+	// Token: 0x06008A65 RID: 35429 RVA: 0x0029E5D4 File Offset: 0x0029C7D4
 	private void OnFilterDataUpdate(int configId)
 	{
 		if (this.ConfigId == configId)
@@ -179,7 +178,7 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B67D RID: 46717 RVA: 0x00293EC0 File Offset: 0x002920C0
+	// Token: 0x06008A66 RID: 35430 RVA: 0x0029E5EC File Offset: 0x0029C7EC
 	private void RefreshName()
 	{
 		string text = this.ResultData.ShowAllFilterContent();
@@ -193,7 +192,7 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		base.GetText(2).SetText(text, true);
 	}
 
-	// Token: 0x0600B67E RID: 46718 RVA: 0x00293F08 File Offset: 0x00292108
+	// Token: 0x06008A67 RID: 35431 RVA: 0x0029E634 File Offset: 0x0029C834
 	private void UpdateDataList(bool isOutSideChange)
 	{
 		Dictionary<FilterDefine.EFilterType, Dictionary<int, string>> selectRuleData = this.ResultData.GetSelectRuleData();
@@ -212,13 +211,13 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		updateDataListFunction(filterList, isOutSideChange, EFilterSortType.Filter);
 	}
 
-	// Token: 0x0600B67F RID: 46719 RVA: 0x00293F8E File Offset: 0x0029218E
+	// Token: 0x06008A68 RID: 35432 RVA: 0x0029E6BA File Offset: 0x0029C8BA
 	public Dictionary<FilterDefine.EFilterType, Dictionary<int, string>> GetSelectRuleDataMap()
 	{
 		return this.ResultData.GetSelectRuleData();
 	}
 
-	// Token: 0x0600B680 RID: 46720 RVA: 0x00293F9B File Offset: 0x0029219B
+	// Token: 0x06008A69 RID: 35433 RVA: 0x0029E6C7 File Offset: 0x0029C8C7
 	[NullableContext(2)]
 	private void InitConfigId(EFilterSortGroupId groupId, EFilterSortConfigId? saveConfigId = null, string saveConfigExtraParam = null)
 	{
@@ -228,7 +227,7 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		this.SaveConfigExtraParam = (saveConfigExtraParam ?? "");
 	}
 
-	// Token: 0x0600B681 RID: 46721 RVA: 0x00293FD4 File Offset: 0x002921D4
+	// Token: 0x06008A6A RID: 35434 RVA: 0x0029E700 File Offset: 0x0029C900
 	private void SaveStorage()
 	{
 		if (this.SaveConfigId != null)
@@ -243,7 +242,7 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B682 RID: 46722 RVA: 0x00294040 File Offset: 0x00292240
+	// Token: 0x06008A6B RID: 35435 RVA: 0x0029E76C File Offset: 0x0029C96C
 	[NullableContext(2)]
 	private void InitResultData(FilterStorageData storageData = null)
 	{
@@ -274,19 +273,19 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B683 RID: 46723 RVA: 0x0029418C File Offset: 0x0029238C
+	// Token: 0x06008A6C RID: 35436 RVA: 0x0029E8B8 File Offset: 0x0029CAB8
 	private void HandleFilterActive()
 	{
 		this.SetActive(this.ConfigId > 0);
 	}
 
-	// Token: 0x0600B684 RID: 46724 RVA: 0x002941A0 File Offset: 0x002923A0
+	// Token: 0x06008A6D RID: 35437 RVA: 0x0029E8CC File Offset: 0x0029CACC
 	private bool IsPhantomFilter()
 	{
 		return this.ConfigId != 0 && FilterConfig.Instance.GetFilterConfig(this.ConfigId).Value.PrefabType == 1;
 	}
 
-	// Token: 0x0600B685 RID: 46725 RVA: 0x002941DC File Offset: 0x002923DC
+	// Token: 0x06008A6E RID: 35438 RVA: 0x0029E908 File Offset: 0x0029CB08
 	private UniTask RefreshToggleButtonActive()
 	{
 		FilterEntrance<T>.<RefreshToggleButtonActive>d__36 <RefreshToggleButtonActive>d__;
@@ -297,7 +296,7 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		return <RefreshToggleButtonActive>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B686 RID: 46726 RVA: 0x00294220 File Offset: 0x00292420
+	// Token: 0x06008A6F RID: 35439 RVA: 0x0029E94C File Offset: 0x0029CB4C
 	public void UpdateData(EFilterSortGroupId groupId, List<T> dataList, params object[] parameters)
 	{
 		this.InitConfigId(groupId, null, null);
@@ -317,7 +316,7 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		this.RefreshToggleButtonActive().Forget();
 	}
 
-	// Token: 0x0600B687 RID: 46727 RVA: 0x00294298 File Offset: 0x00292498
+	// Token: 0x06008A70 RID: 35440 RVA: 0x0029E9C4 File Offset: 0x0029CBC4
 	public void UpdateDataWithConfig(EFilterSortGroupId groupId, EFilterSortConfigId saveConfigId, List<T> dataList, string saveConfigExtraParam = "", params object[] parameters)
 	{
 		FilterSortConfig sortFilterConfig = SortConfig.Instance.GetSortFilterConfig(saveConfigId);
@@ -345,7 +344,7 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		this.RefreshToggleButtonActive().Forget();
 	}
 
-	// Token: 0x0600B688 RID: 46728 RVA: 0x00294358 File Offset: 0x00292558
+	// Token: 0x06008A71 RID: 35441 RVA: 0x0029EA84 File Offset: 0x0029CC84
 	public bool SelectSingleById(int id)
 	{
 		FilterResultData resultData = this.ResultData;
@@ -376,7 +375,7 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x0600B689 RID: 46729 RVA: 0x0029445C File Offset: 0x0029265C
+	// Token: 0x06008A72 RID: 35442 RVA: 0x0029EB88 File Offset: 0x0029CD88
 	public int GetUniqueIdByGroupId(EFilterSortGroupId groupId)
 	{
 		int result;
@@ -387,13 +386,13 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		return -1;
 	}
 
-	// Token: 0x0600B68A RID: 46730 RVA: 0x0029447C File Offset: 0x0029267C
+	// Token: 0x06008A73 RID: 35443 RVA: 0x0029EBA8 File Offset: 0x0029CDA8
 	public void SetSortUniqueId(int uniqueId)
 	{
 		this.SortUniqueId = uniqueId;
 	}
 
-	// Token: 0x0600B68B RID: 46731 RVA: 0x00294485 File Offset: 0x00292685
+	// Token: 0x06008A74 RID: 35444 RVA: 0x0029EBB1 File Offset: 0x0029CDB1
 	[NullableContext(2)]
 	public UUIItem GetFilterToggleItem()
 	{
@@ -405,59 +404,59 @@ public class FilterEntrance<[Nullable(2)] T> : UiPanelBase
 		return toggleItem.GetFilterToggleItem();
 	}
 
-	// Token: 0x04005275 RID: 21109
+	// Token: 0x04005320 RID: 21280
 	private readonly Dictionary<int, int> UniqueIdMap = new Dictionary<int, int>();
 
-	// Token: 0x04005276 RID: 21110
+	// Token: 0x04005321 RID: 21281
 	private int SortUniqueId = -1;
 
-	// Token: 0x04005277 RID: 21111
+	// Token: 0x04005322 RID: 21282
 	[Nullable(2)]
 	private FilterResultData ResultData;
 
-	// Token: 0x04005278 RID: 21112
+	// Token: 0x04005323 RID: 21283
 	private List<T> DataList = new List<T>();
 
-	// Token: 0x04005279 RID: 21113
+	// Token: 0x04005324 RID: 21284
 	private List<object> ExtraParams = new List<object>();
 
-	// Token: 0x0400527A RID: 21114
+	// Token: 0x04005325 RID: 21285
 	private EFilterSortGroupId? GroupId;
 
-	// Token: 0x0400527B RID: 21115
+	// Token: 0x04005326 RID: 21286
 	private int ConfigId;
 
-	// Token: 0x0400527C RID: 21116
+	// Token: 0x04005327 RID: 21287
 	private EFilterSortConfigId? SaveConfigId;
 
-	// Token: 0x0400527D RID: 21117
+	// Token: 0x04005328 RID: 21288
 	private string SaveConfigExtraParam = "";
 
-	// Token: 0x0400527E RID: 21118
+	// Token: 0x04005329 RID: 21289
 	[Nullable(2)]
 	public Action OnBtnClearClickCallback;
 
-	// Token: 0x0400527F RID: 21119
+	// Token: 0x0400532A RID: 21290
 	[Nullable(2)]
 	private FilterToggleItem ToggleItem;
 
-	// Token: 0x04005280 RID: 21120
+	// Token: 0x0400532B RID: 21291
 	protected TUpdateDataListFunction<T> UpdateDataListFunction;
 
-	// Token: 0x02007E17 RID: 32279
+	// Token: 0x02006F9D RID: 28573
 	[NullableContext(0)]
 	private class ECompDefine
 	{
-		// Token: 0x04029457 RID: 169047
+		// Token: 0x04024782 RID: 149378
 		public const int Button = 0;
 
-		// Token: 0x04029458 RID: 169048
+		// Token: 0x04024783 RID: 149379
 		public const int FilterTipsItem = 1;
 
-		// Token: 0x04029459 RID: 169049
+		// Token: 0x04024784 RID: 149380
 		public const int FilterTips = 2;
 
-		// Token: 0x0402945A RID: 169050
+		// Token: 0x04024785 RID: 149381
 		public const int ClearButton = 3;
 	}
 }

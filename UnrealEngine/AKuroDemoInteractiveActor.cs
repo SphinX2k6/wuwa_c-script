@@ -6,30 +6,30 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EB5 RID: 7861
+	// Token: 0x020005D3 RID: 1491
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.KuroDemoInteractiveActor")]
 	[UnrealStructLayout(1040, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1040)]
 	public class AKuroDemoInteractiveActor : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601DD56 RID: 122198 RVA: 0x002C22BA File Offset: 0x002C04BA
+		// Token: 0x06008423 RID: 33827 RVA: 0x000C4356 File Offset: 0x000C2556
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKuroDemoInteractiveActor._ClassPtr;
 		}
 
-		// Token: 0x0601DD57 RID: 122199 RVA: 0x002C22C8 File Offset: 0x002C04C8
+		// Token: 0x06008424 RID: 33828 RVA: 0x000C4364 File Offset: 0x000C2564
 		public AKuroDemoInteractiveActor() : this(BuiltinUtils.AllocNativeUObject(AKuroDemoInteractiveActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601DD58 RID: 122200 RVA: 0x002C22F0 File Offset: 0x002C04F0
+		// Token: 0x06008425 RID: 33829 RVA: 0x000C438C File Offset: 0x000C258C
 		public AKuroDemoInteractiveActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKuroDemoInteractiveActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0601DD59 RID: 122201 RVA: 0x002C2324 File Offset: 0x002C0524
+		// Token: 0x06008426 RID: 33830 RVA: 0x000C43C0 File Offset: 0x000C25C0
 		public unsafe bool SetStringPropertyValue(FName PropertyName, string Value)
 		{
 			FString fstring = FString.AllocTemp(Value);
@@ -38,25 +38,25 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601DD5A RID: 122202 RVA: 0x002C234F File Offset: 0x002C054F
+		// Token: 0x06008427 RID: 33831 RVA: 0x000C43EB File Offset: 0x000C25EB
 		public bool SetIntPropertyValue(FName PropertyName, int Value)
 		{
 			return AKuroDemoInteractiveActor.__SetIntPropertyValue_Internal(base.NativePtr, PropertyName, Value);
 		}
 
-		// Token: 0x0601DD5B RID: 122203 RVA: 0x002C235E File Offset: 0x002C055E
+		// Token: 0x06008428 RID: 33832 RVA: 0x000C43FA File Offset: 0x000C25FA
 		public bool SetFloatPropertyValue(FName PropertyName, float Value)
 		{
 			return AKuroDemoInteractiveActor.__SetFloatPropertyValue_Internal(base.NativePtr, PropertyName, Value);
 		}
 
-		// Token: 0x0601DD5C RID: 122204 RVA: 0x002C236D File Offset: 0x002C056D
+		// Token: 0x06008429 RID: 33833 RVA: 0x000C4409 File Offset: 0x000C2609
 		public bool SetBoolPropertyValue(FName PropertyName, bool Value)
 		{
 			return AKuroDemoInteractiveActor.__SetBoolPropertyValue_Internal(base.NativePtr, PropertyName, Value);
 		}
 
-		// Token: 0x0601DD5D RID: 122205 RVA: 0x002C237C File Offset: 0x002C057C
+		// Token: 0x0600842A RID: 33834 RVA: 0x000C4418 File Offset: 0x000C2618
 		public unsafe bool GetStringPropertyValue(FName PropertyName, ref string OutValue)
 		{
 			FString fstring = FString.AllocTemp(OutValue);
@@ -66,7 +66,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601DD5E RID: 122206 RVA: 0x002C23B4 File Offset: 0x002C05B4
+		// Token: 0x0600842B RID: 33835 RVA: 0x000C4450 File Offset: 0x000C2650
 		public unsafe bool GetPropertyOffsetFromContainer(FName PropertyName, ref int OutOffset)
 		{
 			fixed (int* ptr = &OutOffset)
@@ -76,7 +76,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601DD5F RID: 122207 RVA: 0x002C23D4 File Offset: 0x002C05D4
+		// Token: 0x0600842C RID: 33836 RVA: 0x000C4470 File Offset: 0x000C2670
 		public unsafe bool GetIntPropertyValue(FName PropertyName, ref int OutValue)
 		{
 			fixed (int* ptr = &OutValue)
@@ -86,7 +86,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601DD60 RID: 122208 RVA: 0x002C23F4 File Offset: 0x002C05F4
+		// Token: 0x0600842D RID: 33837 RVA: 0x000C4490 File Offset: 0x000C2690
 		public unsafe bool GetFloatPropertyValue(FName PropertyName, ref float OutValue)
 		{
 			fixed (float* ptr = &OutValue)
@@ -96,7 +96,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601DD61 RID: 122209 RVA: 0x002C2414 File Offset: 0x002C0614
+		// Token: 0x0600842E RID: 33838 RVA: 0x000C44B0 File Offset: 0x000C26B0
 		public unsafe bool GetBoolPropertyValue(FName PropertyName, ref bool OutValue)
 		{
 			fixed (bool* ptr = &OutValue)
@@ -106,90 +106,90 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601DD62 RID: 122210 RVA: 0x002C2433 File Offset: 0x002C0633
+		// Token: 0x0600842F RID: 33839 RVA: 0x000C44CF File Offset: 0x000C26CF
 		public bool ExecuteSingleDelegateProperty(FName PropertyName)
 		{
 			return AKuroDemoInteractiveActor.__ExecuteSingleDelegateProperty_Internal(base.NativePtr, PropertyName);
 		}
 
-		// Token: 0x0601DD63 RID: 122211 RVA: 0x002C2441 File Offset: 0x002C0641
+		// Token: 0x06008430 RID: 33840 RVA: 0x000C44DD File Offset: 0x000C26DD
 		public bool CallFunction(FName FunctionName)
 		{
 			return AKuroDemoInteractiveActor.__CallFunction_Internal(base.NativePtr, FunctionName);
 		}
 
-		// Token: 0x0601DD64 RID: 122212 RVA: 0x002C244F File Offset: 0x002C064F
+		// Token: 0x06008431 RID: 33841 RVA: 0x000C44EB File Offset: 0x000C26EB
 		public bool BroadcastMulticastDelegateProperty(FName PropertyName)
 		{
 			return AKuroDemoInteractiveActor.__BroadcastMulticastDelegateProperty_Internal(base.NativePtr, PropertyName);
 		}
 
-		// Token: 0x0601DD65 RID: 122213
+		// Token: 0x06008432 RID: 33842
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetStringPropertyValue_Internal(IntPtr @this, FName PropertyName, in FString Value);
 
-		// Token: 0x0601DD66 RID: 122214
+		// Token: 0x06008433 RID: 33843
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetIntPropertyValue_Internal(IntPtr @this, FName PropertyName, int Value);
 
-		// Token: 0x0601DD67 RID: 122215
+		// Token: 0x06008434 RID: 33844
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetFloatPropertyValue_Internal(IntPtr @this, FName PropertyName, float Value);
 
-		// Token: 0x0601DD68 RID: 122216
+		// Token: 0x06008435 RID: 33845
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetBoolPropertyValue_Internal(IntPtr @this, FName PropertyName, bool Value);
 
-		// Token: 0x0601DD69 RID: 122217
+		// Token: 0x06008436 RID: 33846
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetStringPropertyValue_Internal(IntPtr @this, FName PropertyName, ref FString OutValue);
 
-		// Token: 0x0601DD6A RID: 122218
+		// Token: 0x06008437 RID: 33847
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetPropertyOffsetFromContainer_Internal(IntPtr @this, FName PropertyName, ref int OutOffset);
 
-		// Token: 0x0601DD6B RID: 122219
+		// Token: 0x06008438 RID: 33848
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetIntPropertyValue_Internal(IntPtr @this, FName PropertyName, ref int OutValue);
 
-		// Token: 0x0601DD6C RID: 122220
+		// Token: 0x06008439 RID: 33849
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetFloatPropertyValue_Internal(IntPtr @this, FName PropertyName, ref float OutValue);
 
-		// Token: 0x0601DD6D RID: 122221
+		// Token: 0x0600843A RID: 33850
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetBoolPropertyValue_Internal(IntPtr @this, FName PropertyName, ref bool OutValue);
 
-		// Token: 0x0601DD6E RID: 122222
+		// Token: 0x0600843B RID: 33851
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __ExecuteSingleDelegateProperty_Internal(IntPtr @this, FName PropertyName);
 
-		// Token: 0x0601DD6F RID: 122223
+		// Token: 0x0600843C RID: 33852
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __CallFunction_Internal(IntPtr @this, FName FunctionName);
 
-		// Token: 0x0601DD70 RID: 122224
+		// Token: 0x0600843D RID: 33853
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __BroadcastMulticastDelegateProperty_Internal(IntPtr @this, FName PropertyName);
 
-		// Token: 0x0601DD71 RID: 122225 RVA: 0x002C245D File Offset: 0x002C065D
+		// Token: 0x0600843E RID: 33854 RVA: 0x000C44F9 File Offset: 0x000C26F9
 		static AKuroDemoInteractiveActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroUtility.KuroDemoInteractiveActor");
 		}
 
-		// Token: 0x0601DD72 RID: 122226 RVA: 0x002C246B File Offset: 0x002C066B
+		// Token: 0x0600843F RID: 33855 RVA: 0x000C4507 File Offset: 0x000C2707
 		protected AKuroDemoInteractiveActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040102AF RID: 66223
+		// Token: 0x040039C5 RID: 14789
 		public new const string __ObjectPath = "/Script/KuroUtility.KuroDemoInteractiveActor";
 
-		// Token: 0x040102B0 RID: 66224
+		// Token: 0x040039C6 RID: 14790
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040102B1 RID: 66225
+		// Token: 0x040039C7 RID: 14791
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

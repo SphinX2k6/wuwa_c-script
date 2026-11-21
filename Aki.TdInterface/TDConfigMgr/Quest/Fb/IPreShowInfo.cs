@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001447 RID: 5191
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200159F RID: 5535
 	public class IPreShowInfo
 	{
-		// Token: 0x0600760E RID: 30222 RVA: 0x0011A0AA File Offset: 0x001182AA
+		// Token: 0x06007CD6 RID: 31958 RVA: 0x00128B7E File Offset: 0x00126D7E
 		public static IPreShowInfo Create(IPreShowInfo? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002753 RID: 10067
-		// (get) Token: 0x0600760F RID: 30223 RVA: 0x0011A0C9 File Offset: 0x001182C9
+		// Token: 0x1700293A RID: 10554
+		// (get) Token: 0x06007CD7 RID: 31959 RVA: 0x00128B9D File Offset: 0x00126D9D
 		public virtual IAccessQuestCondition PreShowCondition
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002754 RID: 10068
-		// (get) Token: 0x06007610 RID: 30224 RVA: 0x0011A0FD File Offset: 0x001182FD
+		// Token: 0x1700293B RID: 10555
+		// (get) Token: 0x06007CD8 RID: 31960 RVA: 0x00128BD1 File Offset: 0x00126DD1
 		public virtual string TidPreShowDesc
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002755 RID: 10069
-		// (get) Token: 0x06007611 RID: 30225 RVA: 0x0011A10A File Offset: 0x0011830A
+		// Token: 0x1700293C RID: 10556
+		// (get) Token: 0x06007CD9 RID: 31961 RVA: 0x00128BDE File Offset: 0x00126DDE
 		[Nullable(2)]
 		public virtual string EdTidPreShowDesc
 		{
@@ -61,14 +59,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004489 RID: 17545
+		// Token: 0x0400481F RID: 18463
 		private IPreShowInfo Instance;
 
-		// Token: 0x0400448A RID: 17546
+		// Token: 0x04004820 RID: 18464
 		[Nullable(2)]
 		private IAccessQuestCondition _PreShowConditionCache;
 
-		// Token: 0x0400448B RID: 17547
+		// Token: 0x04004821 RID: 18465
 		private bool _PreShowConditionInited;
 	}
 }

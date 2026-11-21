@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.RoleUi.RoleDevelop.Data;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D36 RID: 19766
+	// Token: 0x02003CF5 RID: 15605
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,19 +15,19 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 	})]
 	public class RoleDevelopGridItem : LoopScrollMediumItemGrid<RoleDevelopData>
 	{
-		// Token: 0x0603312B RID: 209195 RVA: 0x00BE663F File Offset: 0x00BE483F
+		// Token: 0x06027F26 RID: 163622 RVA: 0x00B2C87A File Offset: 0x00B2AA7A
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, true);
 		}
 
-		// Token: 0x0603312C RID: 209196 RVA: 0x00BE6649 File Offset: 0x00BE4849
+		// Token: 0x06027F27 RID: 163623 RVA: 0x00B2C884 File Offset: 0x00B2AA84
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, true);
 		}
 
-		// Token: 0x0603312D RID: 209197 RVA: 0x00BE6654 File Offset: 0x00BE4854
+		// Token: 0x06027F28 RID: 163624 RVA: 0x00B2C890 File Offset: 0x00B2AA90
 		protected override void OnRefresh(RoleDevelopData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.SetSelected(isSelected, false);
 		}
 
-		// Token: 0x0603312E RID: 209198 RVA: 0x00BE67D3 File Offset: 0x00BE49D3
+		// Token: 0x06027F29 RID: 163625 RVA: 0x00B2CA0F File Offset: 0x00B2AC0F
 		public override object GetKey(RoleDevelopData data, int gridIndex)
 		{
 			return data.GetId();

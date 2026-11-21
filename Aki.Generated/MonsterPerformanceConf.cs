@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E1A RID: 3610
+	// Token: 0x02000EFF RID: 3839
 	public struct MonsterPerformanceConf : IFlatbufferObject
 	{
-		// Token: 0x17001F89 RID: 8073
-		// (get) Token: 0x06009560 RID: 38240 RVA: 0x00288301 File Offset: 0x00286501
+		// Token: 0x17001FEE RID: 8174
+		// (get) Token: 0x06009B80 RID: 39808 RVA: 0x002A608D File Offset: 0x002A428D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009561 RID: 38241 RVA: 0x0028830E File Offset: 0x0028650E
+		// Token: 0x06009B81 RID: 39809 RVA: 0x002A609A File Offset: 0x002A429A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009562 RID: 38242 RVA: 0x00288318 File Offset: 0x00286518
+		// Token: 0x06009B82 RID: 39810 RVA: 0x002A60A4 File Offset: 0x002A42A4
 		public static MonsterPerformanceConf GetRootAsMonsterPerformanceConf(ByteBuffer _bb)
 		{
 			return MonsterPerformanceConf.GetRootAsMonsterPerformanceConf(_bb, default(MonsterPerformanceConf));
 		}
 
-		// Token: 0x06009563 RID: 38243 RVA: 0x00288334 File Offset: 0x00286534
+		// Token: 0x06009B83 RID: 39811 RVA: 0x002A60C0 File Offset: 0x002A42C0
 		public static MonsterPerformanceConf GetRootAsMonsterPerformanceConf(ByteBuffer _bb, MonsterPerformanceConf obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009564 RID: 38244 RVA: 0x00288351 File Offset: 0x00286551
+		// Token: 0x06009B84 RID: 39812 RVA: 0x002A60DD File Offset: 0x002A42DD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009565 RID: 38245 RVA: 0x00288360 File Offset: 0x00286560
+		// Token: 0x06009B85 RID: 39813 RVA: 0x002A60EC File Offset: 0x002A42EC
 		public MonsterPerformanceConf __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001F8A RID: 8074
-		// (get) Token: 0x06009566 RID: 38246 RVA: 0x00288370 File Offset: 0x00286570
+		// Token: 0x17001FEF RID: 8175
+		// (get) Token: 0x06009B86 RID: 39814 RVA: 0x002A60FC File Offset: 0x002A42FC
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001F8B RID: 8075
-		// (get) Token: 0x06009567 RID: 38247 RVA: 0x002883AC File Offset: 0x002865AC
+		// Token: 0x17001FF0 RID: 8176
+		// (get) Token: 0x06009B87 RID: 39815 RVA: 0x002A6138 File Offset: 0x002A4338
 		public int MonsterPerformanceId
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009568 RID: 38248 RVA: 0x002883E8 File Offset: 0x002865E8
+		// Token: 0x06009B88 RID: 39816 RVA: 0x002A6174 File Offset: 0x002A4374
 		public int SkillIds(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001F8C RID: 8076
-		// (get) Token: 0x06009569 RID: 38249 RVA: 0x00288428 File Offset: 0x00286628
+		// Token: 0x17001FF1 RID: 8177
+		// (get) Token: 0x06009B89 RID: 39817 RVA: 0x002A61B4 File Offset: 0x002A43B4
 		public int SkillIdsLength
 		{
 			get
@@ -105,20 +105,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600956A RID: 38250 RVA: 0x00288453 File Offset: 0x00286653
+		// Token: 0x06009B8A RID: 39818 RVA: 0x002A61DF File Offset: 0x002A43DF
 		public Span<int> GetSkillIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600956B RID: 38251 RVA: 0x00288462 File Offset: 0x00286662
+		// Token: 0x06009B8B RID: 39819 RVA: 0x002A61EE File Offset: 0x002A43EE
 		public int[] GetSkillIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17001F8D RID: 8077
-		// (get) Token: 0x0600956C RID: 38252 RVA: 0x0028847C File Offset: 0x0028667C
+		// Token: 0x17001FF2 RID: 8178
+		// (get) Token: 0x06009B8C RID: 39820 RVA: 0x002A6208 File Offset: 0x002A4408
 		public string Tag
 		{
 			get
@@ -132,37 +132,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600956D RID: 38253 RVA: 0x002884B4 File Offset: 0x002866B4
+		// Token: 0x06009B8D RID: 39821 RVA: 0x002A6240 File Offset: 0x002A4440
 		public Span<byte> GetTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600956E RID: 38254 RVA: 0x002884C4 File Offset: 0x002866C4
+		// Token: 0x06009B8E RID: 39822 RVA: 0x002A6250 File Offset: 0x002A4450
 		public byte[] GetTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600956F RID: 38255 RVA: 0x002884DC File Offset: 0x002866DC
+		// Token: 0x06009B8F RID: 39823 RVA: 0x002A6268 File Offset: 0x002A4468
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SkillIdsIter()或GetSkillIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SkillIds()
+		public int[] SkillIds()
 		{
-			MonsterPerformanceConf monsterPerformanceConf = this;
-			return monsterPerformanceConf.GetSkillIdsArray() ?? Array.Empty<int>();
+			return this.GetSkillIdsArray();
 		}
 
-		// Token: 0x06009570 RID: 38256 RVA: 0x00288500 File Offset: 0x00286700
+		// Token: 0x06009B90 RID: 39824 RVA: 0x002A6270 File Offset: 0x002A4470
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SkillIdsIter()
+		public IEnumerable<int> SkillIdsIter()
 		{
 			MonsterPerformanceConf.<SkillIdsIter>d__22 <SkillIdsIter>d__ = new MonsterPerformanceConf.<SkillIdsIter>d__22(-2);
 			<SkillIdsIter>d__.<>3__<>4__this = this;
 			return <SkillIdsIter>d__;
 		}
 
-		// Token: 0x04004EBF RID: 20159
+		// Token: 0x040054A4 RID: 21668
 		private Table __p;
 	}
 }

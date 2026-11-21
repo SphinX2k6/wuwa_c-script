@@ -2,63 +2,63 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200113C RID: 4412
+// Token: 0x020005F0 RID: 1520
 [NullableContext(2)]
 public interface IBabelTowerSettlementViewData
 {
-	// Token: 0x17000A07 RID: 2567
-	// (get) Token: 0x060073E7 RID: 29671
-	// (set) Token: 0x060073E8 RID: 29672
+	// Token: 0x17000A27 RID: 2599
+	// (get) Token: 0x0600477E RID: 18302
+	// (set) Token: 0x0600477F RID: 18303
 	int LevelId { get; set; }
 
-	// Token: 0x17000A08 RID: 2568
-	// (get) Token: 0x060073E9 RID: 29673
-	// (set) Token: 0x060073EA RID: 29674
+	// Token: 0x17000A28 RID: 2600
+	// (get) Token: 0x06004780 RID: 18304
+	// (set) Token: 0x06004781 RID: 18305
 	int StarNum { get; set; }
 
-	// Token: 0x17000A09 RID: 2569
-	// (get) Token: 0x060073EB RID: 29675
-	// (set) Token: 0x060073EC RID: 29676
+	// Token: 0x17000A29 RID: 2601
+	// (get) Token: 0x06004782 RID: 18306
+	// (set) Token: 0x06004783 RID: 18307
 	int PassTime { get; set; }
 
-	// Token: 0x17000A0A RID: 2570
-	// (get) Token: 0x060073ED RID: 29677
-	// (set) Token: 0x060073EE RID: 29678
+	// Token: 0x17000A2A RID: 2602
+	// (get) Token: 0x06004784 RID: 18308
+	// (set) Token: 0x06004785 RID: 18309
 	long PassDate { get; set; }
 
-	// Token: 0x17000A0B RID: 2571
-	// (get) Token: 0x060073EF RID: 29679
-	// (set) Token: 0x060073F0 RID: 29680
+	// Token: 0x17000A2B RID: 2603
+	// (get) Token: 0x06004786 RID: 18310
+	// (set) Token: 0x06004787 RID: 18311
 	[Nullable(1)]
 	List<int> TeamRoleIdList { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17000A0C RID: 2572
-	// (get) Token: 0x060073F1 RID: 29681
-	// (set) Token: 0x060073F2 RID: 29682
+	// Token: 0x17000A2C RID: 2604
+	// (get) Token: 0x06004788 RID: 18312
+	// (set) Token: 0x06004789 RID: 18313
 	List<int> BuffIdList { get; set; }
 
-	// Token: 0x17000A0D RID: 2573
-	// (get) Token: 0x060073F3 RID: 29683
-	// (set) Token: 0x060073F4 RID: 29684
+	// Token: 0x17000A2D RID: 2605
+	// (get) Token: 0x0600478A RID: 18314
+	// (set) Token: 0x0600478B RID: 18315
 	List<int> DeTermIdList { get; set; }
 
-	// Token: 0x17000A0E RID: 2574
-	// (get) Token: 0x060073F5 RID: 29685
-	// (set) Token: 0x060073F6 RID: 29686
+	// Token: 0x17000A2E RID: 2606
+	// (get) Token: 0x0600478C RID: 18316
+	// (set) Token: 0x0600478D RID: 18317
 	int OldLevelRank { get; set; }
 
-	// Token: 0x17000A0F RID: 2575
-	// (get) Token: 0x060073F7 RID: 29687
-	// (set) Token: 0x060073F8 RID: 29688
+	// Token: 0x17000A2F RID: 2607
+	// (get) Token: 0x0600478E RID: 18318
+	// (set) Token: 0x0600478F RID: 18319
 	int NewLevelRank { get; set; }
 
-	// Token: 0x17000A10 RID: 2576
-	// (get) Token: 0x060073F9 RID: 29689
-	// (set) Token: 0x060073FA RID: 29690
+	// Token: 0x17000A30 RID: 2608
+	// (get) Token: 0x06004790 RID: 18320
+	// (set) Token: 0x06004791 RID: 18321
 	int OldTotalRank { get; set; }
 
-	// Token: 0x17000A11 RID: 2577
-	// (get) Token: 0x060073FB RID: 29691
-	// (set) Token: 0x060073FC RID: 29692
+	// Token: 0x17000A31 RID: 2609
+	// (get) Token: 0x06004792 RID: 18322
+	// (set) Token: 0x06004793 RID: 18323
 	int NewTotalRank { get; set; }
 }

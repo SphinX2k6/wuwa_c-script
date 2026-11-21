@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A88 RID: 14984
+	// Token: 0x02003E63 RID: 15971
 	public class IColorT
 	{
-		// Token: 0x1700669F RID: 26271
-		// (get) Token: 0x0601451B RID: 83227 RVA: 0x002F7146 File Offset: 0x002F5346
-		// (set) Token: 0x0601451C RID: 83228 RVA: 0x002F714E File Offset: 0x002F534E
+		// Token: 0x17006BCF RID: 27599
+		// (get) Token: 0x06015837 RID: 88119 RVA: 0x0031A332 File Offset: 0x00318532
+		// (set) Token: 0x06015838 RID: 88120 RVA: 0x0031A33A File Offset: 0x0031853A
 		public float R { get; set; }
 
-		// Token: 0x170066A0 RID: 26272
-		// (get) Token: 0x0601451D RID: 83229 RVA: 0x002F7157 File Offset: 0x002F5357
-		// (set) Token: 0x0601451E RID: 83230 RVA: 0x002F715F File Offset: 0x002F535F
+		// Token: 0x17006BD0 RID: 27600
+		// (get) Token: 0x06015839 RID: 88121 RVA: 0x0031A343 File Offset: 0x00318543
+		// (set) Token: 0x0601583A RID: 88122 RVA: 0x0031A34B File Offset: 0x0031854B
 		public float G { get; set; }
 
-		// Token: 0x170066A1 RID: 26273
-		// (get) Token: 0x0601451F RID: 83231 RVA: 0x002F7168 File Offset: 0x002F5368
-		// (set) Token: 0x06014520 RID: 83232 RVA: 0x002F7170 File Offset: 0x002F5370
+		// Token: 0x17006BD1 RID: 27601
+		// (get) Token: 0x0601583B RID: 88123 RVA: 0x0031A354 File Offset: 0x00318554
+		// (set) Token: 0x0601583C RID: 88124 RVA: 0x0031A35C File Offset: 0x0031855C
 		public float B { get; set; }
 
-		// Token: 0x170066A2 RID: 26274
-		// (get) Token: 0x06014521 RID: 83233 RVA: 0x002F7179 File Offset: 0x002F5379
-		// (set) Token: 0x06014522 RID: 83234 RVA: 0x002F7181 File Offset: 0x002F5381
+		// Token: 0x17006BD2 RID: 27602
+		// (get) Token: 0x0601583D RID: 88125 RVA: 0x0031A365 File Offset: 0x00318565
+		// (set) Token: 0x0601583E RID: 88126 RVA: 0x0031A36D File Offset: 0x0031856D
 		public float A { get; set; }
 
-		// Token: 0x170066A3 RID: 26275
-		// (get) Token: 0x06014523 RID: 83235 RVA: 0x002F718A File Offset: 0x002F538A
-		// (set) Token: 0x06014524 RID: 83236 RVA: 0x002F7192 File Offset: 0x002F5392
+		// Token: 0x17006BD3 RID: 27603
+		// (get) Token: 0x0601583F RID: 88127 RVA: 0x0031A376 File Offset: 0x00318576
+		// (set) Token: 0x06015840 RID: 88128 RVA: 0x0031A37E File Offset: 0x0031857E
 		public byte NullMask { get; set; }
 
-		// Token: 0x06014525 RID: 83237 RVA: 0x002F719B File Offset: 0x002F539B
+		// Token: 0x06015841 RID: 88129 RVA: 0x0031A387 File Offset: 0x00318587
 		public IColorT()
 		{
 			this.R = 0f;

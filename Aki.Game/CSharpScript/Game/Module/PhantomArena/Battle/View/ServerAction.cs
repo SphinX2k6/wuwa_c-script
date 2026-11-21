@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 {
-	// Token: 0x02005249 RID: 21065
+	// Token: 0x02004219 RID: 16921
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ServerAction : IServerAction
 	{
-		// Token: 0x1700825A RID: 33370
-		// (get) Token: 0x06035D26 RID: 220454 RVA: 0x00CBBCAF File Offset: 0x00CB9EAF
-		// (set) Token: 0x06035D27 RID: 220455 RVA: 0x00CBBCB7 File Offset: 0x00CB9EB7
+		// Token: 0x1700561A RID: 22042
+		// (get) Token: 0x0602AC21 RID: 175137 RVA: 0x00C0933F File Offset: 0x00C0753F
+		// (set) Token: 0x0602AC22 RID: 175138 RVA: 0x00C09347 File Offset: 0x00C07547
 		public List<TServerAction> ActionList { get; set; }
 
-		// Token: 0x1700825B RID: 33371
-		// (get) Token: 0x06035D28 RID: 220456 RVA: 0x00CBBCC0 File Offset: 0x00CB9EC0
-		// (set) Token: 0x06035D29 RID: 220457 RVA: 0x00CBBCC8 File Offset: 0x00CB9EC8
+		// Token: 0x1700561B RID: 22043
+		// (get) Token: 0x0602AC23 RID: 175139 RVA: 0x00C09350 File Offset: 0x00C07550
+		// (set) Token: 0x0602AC24 RID: 175140 RVA: 0x00C09358 File Offset: 0x00C07558
 		public EServerActionType Type { get; set; }
 	}
 }

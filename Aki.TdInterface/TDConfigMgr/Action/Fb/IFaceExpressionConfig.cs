@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002978 RID: 10616
+	// Token: 0x02002C5E RID: 11358
 	public class IFaceExpressionConfig
 	{
-		// Token: 0x0600EB3C RID: 60220 RVA: 0x00226B02 File Offset: 0x00224D02
-		[NullableContext(1)]
+		// Token: 0x0600F9B7 RID: 63927 RVA: 0x0024425A File Offset: 0x0024245A
 		public static IFaceExpressionConfig Create(IFaceExpressionConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A0E RID: 18958
-		// (get) Token: 0x0600EB3D RID: 60221 RVA: 0x00226B21 File Offset: 0x00224D21
+		// Token: 0x17004DA9 RID: 19881
+		// (get) Token: 0x0600F9B8 RID: 63928 RVA: 0x00244279 File Offset: 0x00242479
 		public virtual EFaceExpressionConfigType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008190 RID: 33168
+		// Token: 0x04008874 RID: 34932
 		private IFaceExpressionConfig Instance;
 	}
 }

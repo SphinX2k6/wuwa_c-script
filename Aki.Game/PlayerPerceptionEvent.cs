@@ -4,19 +4,19 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Perception;
 using UnrealEngine;
 
-// Token: 0x02003287 RID: 12935
+// Token: 0x020027F8 RID: 10232
 [NullableContext(2)]
 [Nullable(0)]
 public class PlayerPerceptionEvent
 {
-	// Token: 0x0601BFDD RID: 114653 RVA: 0x007C770B File Offset: 0x007C590B
+	// Token: 0x06019BE1 RID: 105441 RVA: 0x007EEA9B File Offset: 0x007ECC9B
 	public bool IsValid()
 	{
 		return this.EventTokenInternal > 0U;
 	}
 
-	// Token: 0x170026A6 RID: 9894
-	// (get) Token: 0x0601BFDE RID: 114654 RVA: 0x007C7716 File Offset: 0x007C5916
+	// Token: 0x1700295B RID: 10587
+	// (get) Token: 0x06019BE2 RID: 105442 RVA: 0x007EEAA6 File Offset: 0x007ECCA6
 	public uint EventToken
 	{
 		get
@@ -25,7 +25,7 @@ public class PlayerPerceptionEvent
 		}
 	}
 
-	// Token: 0x0601BFDF RID: 114655 RVA: 0x007C7720 File Offset: 0x007C5920
+	// Token: 0x06019BE3 RID: 105443 RVA: 0x007EEAB0 File Offset: 0x007ECCB0
 	public void Init(float enterDistance, uint entityToken, Action onEnter = null, Action onLeave = null, Action onDestroy = null, Func<bool> enterCondition = null, float leaveDistance = -1f, Vector locationOffset = null)
 	{
 		if (this.EventTokenInternal != 0U)
@@ -74,7 +74,7 @@ public class PlayerPerceptionEvent
 		}
 	}
 
-	// Token: 0x0601BFE0 RID: 114656 RVA: 0x007C788C File Offset: 0x007C5A8C
+	// Token: 0x06019BE4 RID: 105444 RVA: 0x007EEC1C File Offset: 0x007ECE1C
 	public void Register(uint entityToken)
 	{
 		if (this.EventTokenInternal != 0U)
@@ -108,7 +108,7 @@ public class PlayerPerceptionEvent
 		}
 	}
 
-	// Token: 0x0601BFE1 RID: 114657 RVA: 0x007C7990 File Offset: 0x007C5B90
+	// Token: 0x06019BE5 RID: 105445 RVA: 0x007EED20 File Offset: 0x007ECF20
 	public void Unregister()
 	{
 		if (this.EventTokenInternal == 0U)
@@ -120,7 +120,7 @@ public class PlayerPerceptionEvent
 		this.EventTokenInternal = 0U;
 	}
 
-	// Token: 0x0601BFE2 RID: 114658 RVA: 0x007C79D8 File Offset: 0x007C5BD8
+	// Token: 0x06019BE6 RID: 105446 RVA: 0x007EED68 File Offset: 0x007ECF68
 	public void Clear()
 	{
 		this.OnEnter = null;
@@ -143,7 +143,7 @@ public class PlayerPerceptionEvent
 		this.EventTokenInternal = 0U;
 	}
 
-	// Token: 0x0601BFE3 RID: 114659 RVA: 0x007C7A58 File Offset: 0x007C5C58
+	// Token: 0x06019BE7 RID: 105447 RVA: 0x007EEDE8 File Offset: 0x007ECFE8
 	public void UpdateDistance(float enterDistance, float leaveDistance = -1f)
 	{
 		this.EnterDistance = enterDistance;
@@ -155,7 +155,7 @@ public class PlayerPerceptionEvent
 		UKuroPerceptionInterface.UpdatePerceptionEventDistance(this.EventTokenInternal, enterDistance, leaveDistance);
 	}
 
-	// Token: 0x0601BFE4 RID: 114660 RVA: 0x007C7A7E File Offset: 0x007C5C7E
+	// Token: 0x06019BE8 RID: 105448 RVA: 0x007EEE0E File Offset: 0x007ED00E
 	public void ExecuteOnEnter()
 	{
 		if (this.OnEnter == null)
@@ -165,7 +165,7 @@ public class PlayerPerceptionEvent
 		this.OnEnter();
 	}
 
-	// Token: 0x0601BFE5 RID: 114661 RVA: 0x007C7A94 File Offset: 0x007C5C94
+	// Token: 0x06019BE9 RID: 105449 RVA: 0x007EEE24 File Offset: 0x007ED024
 	public void ExecuteOnLeave()
 	{
 		if (this.OnLeave == null)
@@ -175,13 +175,13 @@ public class PlayerPerceptionEvent
 		this.OnLeave();
 	}
 
-	// Token: 0x0601BFE6 RID: 114662 RVA: 0x007C7AAA File Offset: 0x007C5CAA
+	// Token: 0x06019BEA RID: 105450 RVA: 0x007EEE3A File Offset: 0x007ED03A
 	public bool ExecuteEnterCondition()
 	{
 		return this.EnterCondition == null || this.EnterCondition();
 	}
 
-	// Token: 0x0601BFE7 RID: 114663 RVA: 0x007C7AC1 File Offset: 0x007C5CC1
+	// Token: 0x06019BEB RID: 105451 RVA: 0x007EEE51 File Offset: 0x007ED051
 	public void ExecuteOnDestroy()
 	{
 		this.EventTokenInternal = 0U;
@@ -194,33 +194,33 @@ public class PlayerPerceptionEvent
 		this.OnDestroy = null;
 	}
 
-	// Token: 0x0400DD45 RID: 56645
+	// Token: 0x0400E1EB RID: 57835
 	private Action OnEnter;
 
-	// Token: 0x0400DD46 RID: 56646
+	// Token: 0x0400E1EC RID: 57836
 	private Action OnLeave;
 
-	// Token: 0x0400DD47 RID: 56647
+	// Token: 0x0400E1ED RID: 57837
 	private Action OnDestroy;
 
-	// Token: 0x0400DD48 RID: 56648
+	// Token: 0x0400E1EE RID: 57838
 	private Func<bool> EnterCondition;
 
-	// Token: 0x0400DD49 RID: 56649
+	// Token: 0x0400E1EF RID: 57839
 	public uint EventTokenInternal;
 
-	// Token: 0x0400DD4A RID: 56650
+	// Token: 0x0400E1F0 RID: 57840
 	private float EnterDistance = -1f;
 
-	// Token: 0x0400DD4B RID: 56651
+	// Token: 0x0400E1F1 RID: 57841
 	private float LeaveDistance = -1f;
 
-	// Token: 0x0400DD4C RID: 56652
+	// Token: 0x0400E1F2 RID: 57842
 	private uint EntityToken;
 
-	// Token: 0x0400DD4D RID: 56653
+	// Token: 0x0400E1F3 RID: 57843
 	private Vector LocationOffset;
 
-	// Token: 0x0400DD4E RID: 56654
+	// Token: 0x0400E1F4 RID: 57844
 	private GCHandle EventGCHandle;
 }

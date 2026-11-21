@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001159 RID: 4441
+// Token: 0x0200060D RID: 1549
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -17,27 +17,27 @@ using UnrealEngine;
 })]
 public class MutexGroupItem : GridProxyAbstract<IBabelTowerMutexGroupData>
 {
-	// Token: 0x060074EE RID: 29934 RVA: 0x0018071C File Offset: 0x0017E91C
+	// Token: 0x06004885 RID: 18565 RVA: 0x0018924C File Offset: 0x0018744C
 	[NullableContext(1)]
 	public void SetParentItem(BabelTowerSvBuffItem parent)
 	{
 		this.ParentItem = parent;
 	}
 
-	// Token: 0x060074EF RID: 29935 RVA: 0x00180725 File Offset: 0x0017E925
+	// Token: 0x06004886 RID: 18566 RVA: 0x00189255 File Offset: 0x00187455
 	public bool IsQuickSelectMode()
 	{
 		BabelTowerSvBuffItem parentItem = this.ParentItem;
 		return parentItem != null && parentItem.IsQuickSelectMode();
 	}
 
-	// Token: 0x060074F0 RID: 29936 RVA: 0x00180738 File Offset: 0x0017E938
+	// Token: 0x06004887 RID: 18567 RVA: 0x00189268 File Offset: 0x00187468
 	public bool GetIsNecessary()
 	{
 		return this.IsNecessary;
 	}
 
-	// Token: 0x060074F1 RID: 29937 RVA: 0x00180740 File Offset: 0x0017E940
+	// Token: 0x06004888 RID: 18568 RVA: 0x00189270 File Offset: 0x00187470
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -51,7 +51,7 @@ public class MutexGroupItem : GridProxyAbstract<IBabelTowerMutexGroupData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060074F2 RID: 29938 RVA: 0x001807AC File Offset: 0x0017E9AC
+	// Token: 0x06004889 RID: 18569 RVA: 0x001892DC File Offset: 0x001874DC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MutexGroupItem.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -62,7 +62,7 @@ public class MutexGroupItem : GridProxyAbstract<IBabelTowerMutexGroupData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060074F3 RID: 29939 RVA: 0x001807F0 File Offset: 0x0017E9F0
+	// Token: 0x0600488A RID: 18570 RVA: 0x00189320 File Offset: 0x00187520
 	[NullableContext(1)]
 	public override void Refresh(IBabelTowerMutexGroupData data, bool isSelected, int gridIndex)
 	{
@@ -138,7 +138,7 @@ public class MutexGroupItem : GridProxyAbstract<IBabelTowerMutexGroupData>
 		}, false);
 	}
 
-	// Token: 0x060074F4 RID: 29940 RVA: 0x00180854 File Offset: 0x0017EA54
+	// Token: 0x0600488B RID: 18571 RVA: 0x00189384 File Offset: 0x00187584
 	public void HandleToggle(int deTermId, UUIExtendToggle toggle)
 	{
 		if (this.IsNecessary)
@@ -192,7 +192,7 @@ public class MutexGroupItem : GridProxyAbstract<IBabelTowerMutexGroupData>
 		parentItem.NotifyDeTermToggle(deTermId);
 	}
 
-	// Token: 0x060074F5 RID: 29941 RVA: 0x00180964 File Offset: 0x0017EB64
+	// Token: 0x0600488C RID: 18572 RVA: 0x00189494 File Offset: 0x00187694
 	private void RefreshItemColor()
 	{
 		GenericLayout<SvBuffGridItem, int> buffLayout = this.BuffLayout;
@@ -209,7 +209,7 @@ public class MutexGroupItem : GridProxyAbstract<IBabelTowerMutexGroupData>
 		}
 	}
 
-	// Token: 0x060074F6 RID: 29942 RVA: 0x001809FC File Offset: 0x0017EBFC
+	// Token: 0x0600488D RID: 18573 RVA: 0x0018952C File Offset: 0x0018772C
 	[NullableContext(1)]
 	private SvBuffGridItem CreateBuffItem()
 	{
@@ -219,13 +219,13 @@ public class MutexGroupItem : GridProxyAbstract<IBabelTowerMutexGroupData>
 		return svBuffGridItem;
 	}
 
-	// Token: 0x060074F7 RID: 29943 RVA: 0x00180A1C File Offset: 0x0017EC1C
+	// Token: 0x0600488E RID: 18574 RVA: 0x0018954C File Offset: 0x0018774C
 	private void OnBuffItemClick(int deTermId, UUIExtendToggle toggle)
 	{
 		this.HandleToggle(deTermId, toggle);
 	}
 
-	// Token: 0x060074F8 RID: 29944 RVA: 0x00180A28 File Offset: 0x0017EC28
+	// Token: 0x0600488F RID: 18575 RVA: 0x00189558 File Offset: 0x00187758
 	public SvBuffGridItem GetBuffItemById(int deTermId)
 	{
 		GenericLayout<SvBuffGridItem, int> buffLayout = this.BuffLayout;
@@ -244,10 +244,10 @@ public class MutexGroupItem : GridProxyAbstract<IBabelTowerMutexGroupData>
 		return null;
 	}
 
-	// Token: 0x040035C4 RID: 13764
+	// Token: 0x0400365D RID: 13917
 	public Action<int, UUIExtendToggle> OnBuffClick;
 
-	// Token: 0x040035C5 RID: 13765
+	// Token: 0x0400365E RID: 13918
 	[Nullable(new byte[]
 	{
 		2,
@@ -255,26 +255,26 @@ public class MutexGroupItem : GridProxyAbstract<IBabelTowerMutexGroupData>
 	})]
 	private GenericLayout<SvBuffGridItem, int> BuffLayout;
 
-	// Token: 0x040035C6 RID: 13766
+	// Token: 0x0400365F RID: 13919
 	private bool IsNecessary;
 
-	// Token: 0x040035C7 RID: 13767
+	// Token: 0x04003660 RID: 13920
 	private int CurrentDeTermId;
 
-	// Token: 0x040035C8 RID: 13768
+	// Token: 0x04003661 RID: 13921
 	private bool IsHandlingToggle;
 
-	// Token: 0x040035C9 RID: 13769
+	// Token: 0x04003662 RID: 13922
 	private BabelTowerSvBuffItem ParentItem;
 
-	// Token: 0x0200771A RID: 30490
+	// Token: 0x020068A8 RID: 26792
 	[NullableContext(0)]
 	private class EBuffItemSubComponent
 	{
-		// Token: 0x0402749F RID: 160927
+		// Token: 0x040227DE RID: 141278
 		public const int GridLayout = 0;
 
-		// Token: 0x040274A0 RID: 160928
+		// Token: 0x040227DF RID: 141279
 		public const int ItemGroup = 1;
 	}
 }

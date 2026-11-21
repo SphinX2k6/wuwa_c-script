@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003347 RID: 13127
+// Token: 0x020028B9 RID: 10425
 public class RedDotActivityRegressCultivate : RedDotBase
 {
-	// Token: 0x0601C990 RID: 117136 RVA: 0x0080482B File Offset: 0x00802A2B
+	// Token: 0x0601A688 RID: 108168 RVA: 0x0082ADEF File Offset: 0x00828FEF
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.RecallActivityInfoUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C991 RID: 117137 RVA: 0x00804849 File Offset: 0x00802A49
+	// Token: 0x0601A689 RID: 108169 RVA: 0x0082AE0D File Offset: 0x0082900D
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.RecallActivityInfoUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C992 RID: 117138 RVA: 0x00804867 File Offset: 0x00802A67
+	// Token: 0x0601A68A RID: 108170 RVA: 0x0082AE2B File Offset: 0x0082902B
 	protected override bool OnCheck(int uId = 0)
 	{
 		return ActivityRegressModel.Instance.ActivityData.HasReachableCultivateTask();

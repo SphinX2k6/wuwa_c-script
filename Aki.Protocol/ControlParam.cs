@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020002EF RID: 751
+	// Token: 0x020002F6 RID: 758
 	public sealed class ControlParam : IMessage<ControlParam>, IMessage, IEquatable<ControlParam>, IDeepCloneable<ControlParam>, IBufferMessage
 	{
-		// Token: 0x06004C2F RID: 19503 RVA: 0x000B964D File Offset: 0x000B784D
+		// Token: 0x06004D08 RID: 19720 RVA: 0x000BBA35 File Offset: 0x000B9C35
 		[NullableContext(1)]
 		public static ControlParam Create()
 		{
 			return new ControlParam();
 		}
 
-		// Token: 0x17000D68 RID: 3432
-		// (get) Token: 0x06004C30 RID: 19504 RVA: 0x000B9654 File Offset: 0x000B7854
+		// Token: 0x17000D95 RID: 3477
+		// (get) Token: 0x06004D09 RID: 19721 RVA: 0x000BBA3C File Offset: 0x000B9C3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<ControlParam> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D69 RID: 3433
-		// (get) Token: 0x06004C31 RID: 19505 RVA: 0x000B965B File Offset: 0x000B785B
+		// Token: 0x17000D96 RID: 3478
+		// (get) Token: 0x06004D0A RID: 19722 RVA: 0x000BBA43 File Offset: 0x000B9C43
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D6A RID: 3434
-		// (get) Token: 0x06004C32 RID: 19506 RVA: 0x000B965E File Offset: 0x000B785E
+		// Token: 0x17000D97 RID: 3479
+		// (get) Token: 0x06004D0B RID: 19723 RVA: 0x000BBA46 File Offset: 0x000B9C46
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004C33 RID: 19507 RVA: 0x000B9665 File Offset: 0x000B7865
+		// Token: 0x06004D0C RID: 19724 RVA: 0x000BBA4D File Offset: 0x000B9C4D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ControlParam()
 		{
 		}
 
-		// Token: 0x06004C34 RID: 19508 RVA: 0x000B966D File Offset: 0x000B786D
+		// Token: 0x06004D0D RID: 19725 RVA: 0x000BBA55 File Offset: 0x000B9C55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ControlParam(ControlParam other) : this()
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06004C35 RID: 19509 RVA: 0x000B96AC File Offset: 0x000B78AC
+		// Token: 0x06004D0E RID: 19726 RVA: 0x000BBA94 File Offset: 0x000B9C94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ControlParam Clone()
@@ -81,9 +81,9 @@ namespace Aki.Protocol
 			return new ControlParam(this);
 		}
 
-		// Token: 0x17000D6B RID: 3435
-		// (get) Token: 0x06004C36 RID: 19510 RVA: 0x000B96B4 File Offset: 0x000B78B4
-		// (set) Token: 0x06004C37 RID: 19511 RVA: 0x000B96BC File Offset: 0x000B78BC
+		// Token: 0x17000D98 RID: 3480
+		// (get) Token: 0x06004D0F RID: 19727 RVA: 0x000BBA9C File Offset: 0x000B9C9C
+		// (set) Token: 0x06004D10 RID: 19728 RVA: 0x000BBAA4 File Offset: 0x000B9CA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ControlType ControlType
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D6C RID: 3436
-		// (get) Token: 0x06004C38 RID: 19512 RVA: 0x000B96C5 File Offset: 0x000B78C5
-		// (set) Token: 0x06004C39 RID: 19513 RVA: 0x000B96DD File Offset: 0x000B78DD
+		// Token: 0x17000D99 RID: 3481
+		// (get) Token: 0x06004D11 RID: 19729 RVA: 0x000BBAAD File Offset: 0x000B9CAD
+		// (set) Token: 0x06004D12 RID: 19730 RVA: 0x000BBAC5 File Offset: 0x000B9CC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ControlTemporaryTeleportParam TemporaryTeleportParam
@@ -120,8 +120,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D6D RID: 3437
-		// (get) Token: 0x06004C3A RID: 19514 RVA: 0x000B96F3 File Offset: 0x000B78F3
+		// Token: 0x17000D9A RID: 3482
+		// (get) Token: 0x06004D13 RID: 19731 RVA: 0x000BBADB File Offset: 0x000B9CDB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ControlParam.ParamOneofCase ParamCase
@@ -132,7 +132,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004C3B RID: 19515 RVA: 0x000B96FB File Offset: 0x000B78FB
+		// Token: 0x06004D14 RID: 19732 RVA: 0x000BBAE3 File Offset: 0x000B9CE3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearParam()
@@ -141,7 +141,7 @@ namespace Aki.Protocol
 			this.param_ = null;
 		}
 
-		// Token: 0x06004C3C RID: 19516 RVA: 0x000B970B File Offset: 0x000B790B
+		// Token: 0x06004D15 RID: 19733 RVA: 0x000BBAF3 File Offset: 0x000B9CF3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ControlParam);
 		}
 
-		// Token: 0x06004C3D RID: 19517 RVA: 0x000B971C File Offset: 0x000B791C
+		// Token: 0x06004D16 RID: 19734 RVA: 0x000BBB04 File Offset: 0x000B9D04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ControlParam other)
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ControlType == other.ControlType && object.Equals(this.TemporaryTeleportParam, other.TemporaryTeleportParam) && this.ParamCase == other.ParamCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06004C3E RID: 19518 RVA: 0x000B977C File Offset: 0x000B797C
+		// Token: 0x06004D17 RID: 19735 RVA: 0x000BBB64 File Offset: 0x000B9D64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -179,7 +179,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004C3F RID: 19519 RVA: 0x000B97E1 File Offset: 0x000B79E1
+		// Token: 0x06004D18 RID: 19736 RVA: 0x000BBBC9 File Offset: 0x000B9DC9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -187,7 +187,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06004C40 RID: 19520 RVA: 0x000B97EE File Offset: 0x000B79EE
+		// Token: 0x06004D19 RID: 19737 RVA: 0x000BBBD6 File Offset: 0x000B9DD6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -195,7 +195,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06004C41 RID: 19521 RVA: 0x000B97F8 File Offset: 0x000B79F8
+		// Token: 0x06004D1A RID: 19738 RVA: 0x000BBBE0 File Offset: 0x000B9DE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004C42 RID: 19522 RVA: 0x000B9854 File Offset: 0x000B7A54
+		// Token: 0x06004D1B RID: 19739 RVA: 0x000BBC3C File Offset: 0x000B9E3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -237,7 +237,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004C43 RID: 19523 RVA: 0x000B98AC File Offset: 0x000B7AAC
+		// Token: 0x06004D1C RID: 19740 RVA: 0x000BBC94 File Offset: 0x000B9E94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ControlParam other)
@@ -261,7 +261,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06004C44 RID: 19524 RVA: 0x000B9915 File Offset: 0x000B7B15
+		// Token: 0x06004D1D RID: 19741 RVA: 0x000BBCFD File Offset: 0x000B9EFD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -269,7 +269,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06004C45 RID: 19525 RVA: 0x000B9920 File Offset: 0x000B7B20
+		// Token: 0x06004D1E RID: 19742 RVA: 0x000BBD08 File Offset: 0x000B9F08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -305,33 +305,33 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040030E6 RID: 12518
+		// Token: 0x0400317D RID: 12669
 		private static readonly MessageParser<ControlParam> _parser = new MessageParser<ControlParam>(() => new ControlParam());
 
-		// Token: 0x040030E7 RID: 12519
+		// Token: 0x0400317E RID: 12670
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040030E8 RID: 12520
+		// Token: 0x0400317F RID: 12671
 		public const int ControlTypeFieldNumber = 1;
 
-		// Token: 0x040030E9 RID: 12521
+		// Token: 0x04003180 RID: 12672
 		private ControlType controlType_;
 
-		// Token: 0x040030EA RID: 12522
+		// Token: 0x04003181 RID: 12673
 		public const int TemporaryTeleportParamFieldNumber = 2;
 
-		// Token: 0x040030EB RID: 12523
+		// Token: 0x04003182 RID: 12674
 		private object param_;
 
-		// Token: 0x040030EC RID: 12524
+		// Token: 0x04003183 RID: 12675
 		private ControlParam.ParamOneofCase paramCase_;
 
-		// Token: 0x0200172C RID: 5932
+		// Token: 0x020017AA RID: 6058
 		public enum ParamOneofCase
 		{
-			// Token: 0x0400C590 RID: 50576
+			// Token: 0x0400CAC6 RID: 51910
 			None,
-			// Token: 0x0400C591 RID: 50577
+			// Token: 0x0400CAC7 RID: 51911
 			TemporaryTeleportParam = 2
 		}
 	}

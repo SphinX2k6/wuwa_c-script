@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.MonsterGroup
 {
-	// Token: 0x020053C5 RID: 21445
+	// Token: 0x020043A8 RID: 17320
 	public enum EGroupPatrolState
 	{
-		// Token: 0x0401CEB4 RID: 118452
+		// Token: 0x0401794C RID: 96588
 		None,
-		// Token: 0x0401CEB5 RID: 118453
+		// Token: 0x0401794D RID: 96589
 		Ready,
-		// Token: 0x0401CEB6 RID: 118454
+		// Token: 0x0401794E RID: 96590
 		Patrol,
-		// Token: 0x0401CEB7 RID: 118455
+		// Token: 0x0401794F RID: 96591
 		StopPatrol,
-		// Token: 0x0401CEB8 RID: 118456
+		// Token: 0x04017950 RID: 96592
 		MAX
 	}
 }

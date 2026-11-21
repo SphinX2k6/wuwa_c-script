@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007AF RID: 1967
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000852 RID: 2130
 	public class IUndergroundStateInfo
 	{
-		// Token: 0x06002AA3 RID: 10915 RVA: 0x0006FBAC File Offset: 0x0006DDAC
+		// Token: 0x06002DD3 RID: 11731 RVA: 0x00076F10 File Offset: 0x00075110
 		private IUndergroundStateInfo_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002AA4 RID: 10916 RVA: 0x0006FBE4 File Offset: 0x0006DDE4
+		// Token: 0x06002DD4 RID: 11732 RVA: 0x00076F48 File Offset: 0x00075148
 		public static IUndergroundStateInfo Create([Nullable(2)] IUndergroundStateInfo instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002AA5 RID: 10917 RVA: 0x0006FBF7 File Offset: 0x0006DDF7
+		// Token: 0x06002DD5 RID: 11733 RVA: 0x00076F5B File Offset: 0x0007515B
 		public static IUndergroundStateInfo CreateFromSetValue([Nullable(2)] IUndergroundStateInfo_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002AA6 RID: 10918 RVA: 0x0006FC0A File Offset: 0x0006DE0A
+		// Token: 0x06002DD6 RID: 11734 RVA: 0x00076F6E File Offset: 0x0007516E
 		public IUndergroundStateInfo_SetValue ToSetValue()
 		{
 			return new IUndergroundStateInfo_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B2E RID: 2862
-		// (get) Token: 0x06002AA7 RID: 10919 RVA: 0x0006FC29 File Offset: 0x0006DE29
-		// (set) Token: 0x06002AA8 RID: 10920 RVA: 0x0006FC54 File Offset: 0x0006DE54
+		// Token: 0x17000BF1 RID: 3057
+		// (get) Token: 0x06002DD7 RID: 11735 RVA: 0x00076F8D File Offset: 0x0007518D
+		// (set) Token: 0x06002DD8 RID: 11736 RVA: 0x00076FB8 File Offset: 0x000751B8
 		public virtual int StateId
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B2F RID: 2863
-		// (get) Token: 0x06002AA9 RID: 10921 RVA: 0x0006FC64 File Offset: 0x0006DE64
-		// (set) Token: 0x06002AAA RID: 10922 RVA: 0x0006FCC5 File Offset: 0x0006DEC5
+		// Token: 0x17000BF2 RID: 3058
+		// (get) Token: 0x06002DD9 RID: 11737 RVA: 0x00076FC8 File Offset: 0x000751C8
+		// (set) Token: 0x06002DDA RID: 11738 RVA: 0x00077029 File Offset: 0x00075229
 		public virtual VectorInfo RestartPos
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C6E RID: 7278
+		// Token: 0x04001E7A RID: 7802
 		[Nullable(2)]
 		protected IUndergroundStateInfo FbInstance;
 
-		// Token: 0x04001C6F RID: 7279
+		// Token: 0x04001E7B RID: 7803
 		[Nullable(2)]
 		protected IUndergroundStateInfo_SetValue PocoInterface;
 
-		// Token: 0x04001C70 RID: 7280
+		// Token: 0x04001E7C RID: 7804
 		private VectorInfo _RestartPosCache;
 
-		// Token: 0x04001C71 RID: 7281
+		// Token: 0x04001E7D RID: 7805
 		private bool _RestartPosInited;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E12 RID: 3602
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F0E RID: 3854
 	public class IWuWaGoEndGrid : IWuWaGoEntityBase
 	{
-		// Token: 0x0600517A RID: 20858 RVA: 0x000C8F40 File Offset: 0x000C7140
+		// Token: 0x060056A1 RID: 22177 RVA: 0x000D4808 File Offset: 0x000D2A08
 		public static IWuWaGoEndGrid Create(IWuWaGoEndGrid? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B13 RID: 6931
-		// (get) Token: 0x0600517B RID: 20859 RVA: 0x000C8F5F File Offset: 0x000C715F
+		// Token: 0x17001C80 RID: 7296
+		// (get) Token: 0x060056A2 RID: 22178 RVA: 0x000D4827 File Offset: 0x000D2A27
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B14 RID: 6932
-		// (get) Token: 0x0600517C RID: 20860 RVA: 0x000C8F6C File Offset: 0x000C716C
+		// Token: 0x17001C81 RID: 7297
+		// (get) Token: 0x060056A3 RID: 22179 RVA: 0x000D4834 File Offset: 0x000D2A34
 		public virtual IWuWaGoGridLinkData LinkData
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EED RID: 12013
+		// Token: 0x040031B5 RID: 12725
 		private IWuWaGoEndGrid Instance;
 
-		// Token: 0x04002EEE RID: 12014
+		// Token: 0x040031B6 RID: 12726
 		[Nullable(2)]
 		private IWuWaGoGridLinkData _LinkDataCache;
 
-		// Token: 0x04002EEF RID: 12015
+		// Token: 0x040031B7 RID: 12727
 		private bool _LinkDataInited;
 	}
 }

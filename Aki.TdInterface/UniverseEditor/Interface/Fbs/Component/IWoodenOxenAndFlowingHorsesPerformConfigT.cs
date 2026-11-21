@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B90 RID: 23440
+	// Token: 0x020061A6 RID: 24998
 	public class IWoodenOxenAndFlowingHorsesPerformConfigT
 	{
-		// Token: 0x1700B129 RID: 45353
-		// (get) Token: 0x0602821D RID: 164381 RVA: 0x0058426E File Offset: 0x0058246E
-		// (set) Token: 0x0602821E RID: 164382 RVA: 0x00584276 File Offset: 0x00582476
+		// Token: 0x1700BA71 RID: 47729
+		// (get) Token: 0x0602A7E1 RID: 174049 RVA: 0x005CBCFE File Offset: 0x005C9EFE
+		// (set) Token: 0x0602A7E2 RID: 174050 RVA: 0x005CBD06 File Offset: 0x005C9F06
 		public IVectorInfoT Offset { get; set; }
 
-		// Token: 0x1700B12A RID: 45354
-		// (get) Token: 0x0602821F RID: 164383 RVA: 0x0058427F File Offset: 0x0058247F
-		// (set) Token: 0x06028220 RID: 164384 RVA: 0x00584287 File Offset: 0x00582487
+		// Token: 0x1700BA72 RID: 47730
+		// (get) Token: 0x0602A7E3 RID: 174051 RVA: 0x005CBD0F File Offset: 0x005C9F0F
+		// (set) Token: 0x0602A7E4 RID: 174052 RVA: 0x005CBD17 File Offset: 0x005C9F17
 		public string Montage { get; set; }
 
-		// Token: 0x1700B12B RID: 45355
-		// (get) Token: 0x06028221 RID: 164385 RVA: 0x00584290 File Offset: 0x00582490
-		// (set) Token: 0x06028222 RID: 164386 RVA: 0x00584298 File Offset: 0x00582498
+		// Token: 0x1700BA73 RID: 47731
+		// (get) Token: 0x0602A7E5 RID: 174053 RVA: 0x005CBD20 File Offset: 0x005C9F20
+		// (set) Token: 0x0602A7E6 RID: 174054 RVA: 0x005CBD28 File Offset: 0x005C9F28
 		public IVectorInfoT RelativeRot { get; set; }
 
-		// Token: 0x06028223 RID: 164387 RVA: 0x005842A1 File Offset: 0x005824A1
+		// Token: 0x0602A7E7 RID: 174055 RVA: 0x005CBD31 File Offset: 0x005C9F31
 		public IWoodenOxenAndFlowingHorsesPerformConfigT()
 		{
 			this.Offset = null;

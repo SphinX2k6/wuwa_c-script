@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200576F RID: 22383
+	// Token: 0x02005D76 RID: 23926
 	public enum IPortalMode_Union : byte
 	{
-		// Token: 0x0400EC15 RID: 60437
+		// Token: 0x0400F900 RID: 63744
 		NONE,
-		// Token: 0x0400EC16 RID: 60438
+		// Token: 0x0400F901 RID: 63745
 		IPortalMode,
-		// Token: 0x0400EC17 RID: 60439
+		// Token: 0x0400F902 RID: 63746
 		IStaticPortal,
-		// Token: 0x0400EC18 RID: 60440
+		// Token: 0x0400F903 RID: 63747
 		IDynamicPortal
 	}
 }

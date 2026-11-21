@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009F4 RID: 2548
+	// Token: 0x02000AB9 RID: 2745
 	public static class ERenderSpecifiedRangeTypeExtensions
 	{
-		// Token: 0x0600387B RID: 14459 RVA: 0x00092460 File Offset: 0x00090660
+		// Token: 0x06003C53 RID: 15443 RVA: 0x0009AD20 File Offset: 0x00098F20
 		public static string ToEnumString(this ERenderSpecifiedRangeType value)
 		{
 			string result;
@@ -23,6 +23,9 @@ namespace Aki.TDConfigMgr.Component
 			case ERenderSpecifiedRangeType.QuantumFollowShooter:
 				result = "QuantumFollowShooter";
 				break;
+			case ERenderSpecifiedRangeType.BeforeYourEyesSceneReveal:
+				result = "BeforeYourEyesSceneReveal";
+				break;
 			default:
 				result = value.ToString();
 				break;
@@ -30,7 +33,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600387C RID: 14460 RVA: 0x000924B4 File Offset: 0x000906B4
+		// Token: 0x06003C54 RID: 15444 RVA: 0x0009AD80 File Offset: 0x00098F80
 		public static ERenderSpecifiedRangeType FromString(string name)
 		{
 			ERenderSpecifiedRangeType result;
@@ -41,7 +44,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600387D RID: 14461 RVA: 0x000924E0 File Offset: 0x000906E0
+		// Token: 0x06003C55 RID: 15445 RVA: 0x0009ADAC File Offset: 0x00098FAC
 		public static bool TryFromString(string name, out ERenderSpecifiedRangeType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -64,16 +67,21 @@ namespace Aki.TDConfigMgr.Component
 				value = ERenderSpecifiedRangeType.FogBarrier;
 				return true;
 			}
-			if (!(name == "QuantumFollowShooter"))
+			if (name == "QuantumFollowShooter")
+			{
+				value = ERenderSpecifiedRangeType.QuantumFollowShooter;
+				return true;
+			}
+			if (!(name == "BeforeYourEyesSceneReveal"))
 			{
 				value = ERenderSpecifiedRangeType.FlowerBridge;
 				return false;
 			}
-			value = ERenderSpecifiedRangeType.QuantumFollowShooter;
+			value = ERenderSpecifiedRangeType.BeforeYourEyesSceneReveal;
 			return true;
 		}
 
-		// Token: 0x0600387E RID: 14462 RVA: 0x00092548 File Offset: 0x00090748
+		// Token: 0x06003C56 RID: 15446 RVA: 0x0009AE26 File Offset: 0x00099026
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -81,11 +89,12 @@ namespace Aki.TDConfigMgr.Component
 				"FlowerBridge",
 				"BookPage",
 				"FogBarrier",
-				"QuantumFollowShooter"
+				"QuantumFollowShooter",
+				"BeforeYourEyesSceneReveal"
 			};
 		}
 
-		// Token: 0x0600387F RID: 14463 RVA: 0x00092570 File Offset: 0x00090770
+		// Token: 0x06003C57 RID: 15447 RVA: 0x0009AE56 File Offset: 0x00099056
 		public static ERenderSpecifiedRangeType[] GetValues()
 		{
 			return new ERenderSpecifiedRangeType[]
@@ -93,11 +102,12 @@ namespace Aki.TDConfigMgr.Component
 				ERenderSpecifiedRangeType.FlowerBridge,
 				ERenderSpecifiedRangeType.BookPage,
 				ERenderSpecifiedRangeType.FogBarrier,
-				ERenderSpecifiedRangeType.QuantumFollowShooter
+				ERenderSpecifiedRangeType.QuantumFollowShooter,
+				ERenderSpecifiedRangeType.BeforeYourEyesSceneReveal
 			};
 		}
 
-		// Token: 0x06003880 RID: 14464 RVA: 0x00092583 File Offset: 0x00090783
+		// Token: 0x06003C58 RID: 15448 RVA: 0x0009AE69 File Offset: 0x00099069
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -105,7 +115,8 @@ namespace Aki.TDConfigMgr.Component
 				"FlowerBridge",
 				"BookPage",
 				"FogBarrier",
-				"QuantumFollowShooter"
+				"QuantumFollowShooter",
+				"BeforeYourEyesSceneReveal"
 			};
 		}
 	}

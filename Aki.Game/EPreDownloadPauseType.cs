@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002217 RID: 8727
+// Token: 0x020016FB RID: 5883
 public enum EPreDownloadPauseType
 {
-	// Token: 0x0400817B RID: 33147
+	// Token: 0x040082B9 RID: 33465
 	None,
-	// Token: 0x0400817C RID: 33148
+	// Token: 0x040082BA RID: 33466
 	Player,
-	// Token: 0x0400817D RID: 33149
+	// Token: 0x040082BB RID: 33467
 	Reconnect,
-	// Token: 0x0400817E RID: 33150
+	// Token: 0x040082BC RID: 33468
 	NetSwitch,
-	// Token: 0x0400817F RID: 33151
+	// Token: 0x040082BD RID: 33469
 	NoSpace
 }

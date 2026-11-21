@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.CountDown
 {
-	// Token: 0x02006F19 RID: 28441
+	// Token: 0x0200609A RID: 24730
 	public class LevelGamePlayPrepareCountDownView : UiViewBase
 	{
-		// Token: 0x06045377 RID: 283511 RVA: 0x011202C0 File Offset: 0x0111E4C0
+		// Token: 0x0603B525 RID: 242981 RVA: 0x010CA260 File Offset: 0x010C8460
 		[NullableContext(1)]
 		public LevelGamePlayPrepareCountDownView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06045378 RID: 283512 RVA: 0x011202D0 File Offset: 0x0111E4D0
+		// Token: 0x0603B526 RID: 242982 RVA: 0x010CA270 File Offset: 0x010C8470
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.LevelGamePlay.CountDown
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06045379 RID: 283513 RVA: 0x0112035C File Offset: 0x0111E55C
+		// Token: 0x0603B527 RID: 242983 RVA: 0x010CA2FC File Offset: 0x010C84FC
 		protected override void OnStart()
 		{
 			ILevelGamePlayPrepareCountDownViewParams levelGamePlayPrepareCountDownViewParams = this.OpenParam as ILevelGamePlayPrepareCountDownViewParams;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.LevelGamePlay.CountDown
 			this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 		}
 
-		// Token: 0x0604537A RID: 283514 RVA: 0x011203E0 File Offset: 0x0111E5E0
+		// Token: 0x0603B528 RID: 242984 RVA: 0x010CA380 File Offset: 0x010C8580
 		protected override void OnAfterShow()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.LevelGamePlay.CountDown
 			AudioSystem.Instance.PostEvent("play_ui_fx_com_count_number");
 		}
 
-		// Token: 0x0604537B RID: 283515 RVA: 0x01120420 File Offset: 0x0111E620
+		// Token: 0x0603B529 RID: 242985 RVA: 0x010CA3C0 File Offset: 0x010C85C0
 		[NullableContext(1)]
 		private void OnSequenceClose(string sequenceName)
 		{
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.LevelGamePlay.CountDown
 			}
 		}
 
-		// Token: 0x0604537C RID: 283516 RVA: 0x011204E5 File Offset: 0x0111E6E5
+		// Token: 0x0603B52A RID: 242986 RVA: 0x010CA485 File Offset: 0x010C8685
 		private void SetNumText()
 		{
 			UUIArtText artText = base.GetArtText(0);
@@ -117,23 +117,23 @@ namespace CSharpScript.Game.LevelGamePlay.CountDown
 			artText2.SetText(this.CountDownNum.ToString());
 		}
 
-		// Token: 0x04024151 RID: 147793
+		// Token: 0x0401F406 RID: 128006
 		private int CountDownNum = 3;
 
-		// Token: 0x04024152 RID: 147794
+		// Token: 0x0401F407 RID: 128007
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200CD72 RID: 52594
+		// Token: 0x0200B964 RID: 47460
 		private class EViewComponent
 		{
-			// Token: 0x0403DEA1 RID: 253601
+			// Token: 0x040392D0 RID: 234192
 			public const int NumText = 0;
 
-			// Token: 0x0403DEA2 RID: 253602
+			// Token: 0x040392D1 RID: 234193
 			public const int NumText2 = 1;
 
-			// Token: 0x0403DEA3 RID: 253603
+			// Token: 0x040392D2 RID: 234194
 			public const int CustomText = 2;
 		}
 	}

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A1B RID: 10779
+	// Token: 0x02002D08 RID: 11528
 	public class IStartSlidePerformType
 	{
-		// Token: 0x0600ED9F RID: 60831 RVA: 0x0022A18D File Offset: 0x0022838D
-		[NullableContext(1)]
+		// Token: 0x0600FC36 RID: 64566 RVA: 0x00247B11 File Offset: 0x00245D11
 		public static IStartSlidePerformType Create(IStartSlidePerformType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B2B RID: 19243
-		// (get) Token: 0x0600EDA0 RID: 60832 RVA: 0x0022A1AC File Offset: 0x002283AC
+		// Token: 0x17004ED4 RID: 20180
+		// (get) Token: 0x0600FC37 RID: 64567 RVA: 0x00247B30 File Offset: 0x00245D30
 		public virtual ESlidePerformType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082CB RID: 33483
+		// Token: 0x040089BC RID: 35260
 		private IStartSlidePerformType Instance;
 	}
 }

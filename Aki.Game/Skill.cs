@@ -11,14 +11,14 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x0200314E RID: 12622
+// Token: 0x020026BB RID: 9915
 [NullableContext(1)]
 [Nullable(0)]
 public class Skill
 {
-	// Token: 0x17002598 RID: 9624
-	// (get) Token: 0x0601B28C RID: 111244 RVA: 0x00763689 File Offset: 0x00761889
-	// (set) Token: 0x0601B28D RID: 111245 RVA: 0x00763691 File Offset: 0x00761891
+	// Token: 0x17002789 RID: 10121
+	// (get) Token: 0x06018D91 RID: 101777 RVA: 0x0078B04A File Offset: 0x0078924A
+	// (set) Token: 0x06018D92 RID: 101778 RVA: 0x0078B052 File Offset: 0x00789252
 	public long? CombatMessageId
 	{
 		get
@@ -36,8 +36,8 @@ public class Skill
 		}
 	}
 
-	// Token: 0x17002599 RID: 9625
-	// (get) Token: 0x0601B28E RID: 111246 RVA: 0x007636C4 File Offset: 0x007618C4
+	// Token: 0x1700278A RID: 10122
+	// (get) Token: 0x06018D93 RID: 101779 RVA: 0x0078B085 File Offset: 0x00789285
 	public int SkillId
 	{
 		get
@@ -46,8 +46,8 @@ public class Skill
 		}
 	}
 
-	// Token: 0x1700259A RID: 9626
-	// (get) Token: 0x0601B28F RID: 111247 RVA: 0x007636CC File Offset: 0x007618CC
+	// Token: 0x1700278B RID: 10123
+	// (get) Token: 0x06018D94 RID: 101780 RVA: 0x0078B08D File Offset: 0x0078928D
 	public bool Active
 	{
 		get
@@ -56,8 +56,8 @@ public class Skill
 		}
 	}
 
-	// Token: 0x1700259B RID: 9627
-	// (get) Token: 0x0601B290 RID: 111248 RVA: 0x007636D4 File Offset: 0x007618D4
+	// Token: 0x1700278C RID: 10124
+	// (get) Token: 0x06018D95 RID: 101781 RVA: 0x0078B095 File Offset: 0x00789295
 	public bool IsSimulated
 	{
 		get
@@ -66,8 +66,8 @@ public class Skill
 		}
 	}
 
-	// Token: 0x1700259C RID: 9628
-	// (get) Token: 0x0601B291 RID: 111249 RVA: 0x007636DC File Offset: 0x007618DC
+	// Token: 0x1700278D RID: 10125
+	// (get) Token: 0x06018D96 RID: 101782 RVA: 0x0078B09D File Offset: 0x0078929D
 	[Nullable(2)]
 	public SSkillInfo SkillInfo
 	{
@@ -78,8 +78,8 @@ public class Skill
 		}
 	}
 
-	// Token: 0x1700259D RID: 9629
-	// (get) Token: 0x0601B292 RID: 111250 RVA: 0x007636E4 File Offset: 0x007618E4
+	// Token: 0x1700278E RID: 10126
+	// (get) Token: 0x06018D97 RID: 101783 RVA: 0x0078B0A8 File Offset: 0x007892A8
 	public string SkillName
 	{
 		get
@@ -89,8 +89,8 @@ public class Skill
 		}
 	}
 
-	// Token: 0x1700259E RID: 9630
-	// (get) Token: 0x0601B293 RID: 111251 RVA: 0x0076371A File Offset: 0x0076191A
+	// Token: 0x1700278F RID: 10127
+	// (get) Token: 0x06018D98 RID: 101784 RVA: 0x0078B0DE File Offset: 0x007892DE
 	public IReadOnlyList<int> SkillTagIds
 	{
 		get
@@ -99,8 +99,8 @@ public class Skill
 		}
 	}
 
-	// Token: 0x1700259F RID: 9631
-	// (get) Token: 0x0601B294 RID: 111252 RVA: 0x00763722 File Offset: 0x00761922
+	// Token: 0x17002790 RID: 10128
+	// (get) Token: 0x06018D99 RID: 101785 RVA: 0x0078B0E6 File Offset: 0x007892E6
 	public IReadOnlyList<ESkillGenre> SkillGenres
 	{
 		get
@@ -109,8 +109,8 @@ public class Skill
 		}
 	}
 
-	// Token: 0x170025A0 RID: 9632
-	// (get) Token: 0x0601B295 RID: 111253 RVA: 0x0076372A File Offset: 0x0076192A
+	// Token: 0x17002791 RID: 10129
+	// (get) Token: 0x06018D9A RID: 101786 RVA: 0x0078B0EE File Offset: 0x007892EE
 	[Nullable(2)]
 	public UClass AbilityClass
 	{
@@ -121,9 +121,9 @@ public class Skill
 		}
 	}
 
-	// Token: 0x170025A1 RID: 9633
-	// (get) Token: 0x0601B296 RID: 111254 RVA: 0x00763732 File Offset: 0x00761932
-	// (set) Token: 0x0601B297 RID: 111255 RVA: 0x0076373A File Offset: 0x0076193A
+	// Token: 0x17002792 RID: 10130
+	// (get) Token: 0x06018D9B RID: 101787 RVA: 0x0078B0F6 File Offset: 0x007892F6
+	// (set) Token: 0x06018D9C RID: 101788 RVA: 0x0078B0FE File Offset: 0x007892FE
 	public int InterruptLevel
 	{
 		get
@@ -136,7 +136,7 @@ public class Skill
 		}
 	}
 
-	// Token: 0x0601B298 RID: 111256 RVA: 0x00763743 File Offset: 0x00761943
+	// Token: 0x06018D9D RID: 101789 RVA: 0x0078B107 File Offset: 0x00789307
 	[NullableContext(2)]
 	public UAnimMontage GetMontageByIndex(int index)
 	{
@@ -151,7 +151,7 @@ public class Skill
 		return this.LoadedMontagesInternal[index];
 	}
 
-	// Token: 0x0601B299 RID: 111257 RVA: 0x00763768 File Offset: 0x00761968
+	// Token: 0x06018D9E RID: 101790 RVA: 0x0078B12C File Offset: 0x0078932C
 	public void SetMontageByIndex(int index, UAnimMontage montage)
 	{
 		if (this.LoadedMontagesInternal == null)
@@ -164,7 +164,7 @@ public class Skill
 		}
 	}
 
-	// Token: 0x0601B29A RID: 111258 RVA: 0x007637A1 File Offset: 0x007619A1
+	// Token: 0x06018D9F RID: 101791 RVA: 0x0078B165 File Offset: 0x00789365
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -175,7 +175,7 @@ public class Skill
 		return this.LoadedMontagesInternal;
 	}
 
-	// Token: 0x0601B29B RID: 111259 RVA: 0x007637AC File Offset: 0x007619AC
+	// Token: 0x06018DA0 RID: 101792 RVA: 0x0078B170 File Offset: 0x00789370
 	public int GetPlayingMontageIndex()
 	{
 		BaseSkillComponent skillComp = this.SkillComp;
@@ -203,7 +203,7 @@ public class Skill
 		return this.CurrentMontageIndex;
 	}
 
-	// Token: 0x0601B29C RID: 111260 RVA: 0x0076380C File Offset: 0x00761A0C
+	// Token: 0x06018DA1 RID: 101793 RVA: 0x0078B1D0 File Offset: 0x007893D0
 	public void Initialize(int skillId, SSkillInfo skillInfo, BaseSkillComponent skillComponent)
 	{
 		this.SkillComp = skillComponent;
@@ -241,7 +241,7 @@ public class Skill
 		this.LoadMontage();
 	}
 
-	// Token: 0x0601B29D RID: 111261 RVA: 0x00763954 File Offset: 0x00761B54
+	// Token: 0x06018DA2 RID: 101794 RVA: 0x0078B318 File Offset: 0x00789518
 	public bool Clear()
 	{
 		if (this.Active)
@@ -269,7 +269,7 @@ public class Skill
 		return true;
 	}
 
-	// Token: 0x0601B29E RID: 111262 RVA: 0x00763A00 File Offset: 0x00761C00
+	// Token: 0x06018DA3 RID: 101795 RVA: 0x0078B3C4 File Offset: 0x007895C4
 	private unsafe void LoadAbility()
 	{
 		string text = this.SkillInfo.SkillGA.AssetPathName.ToString();
@@ -333,7 +333,7 @@ public class Skill
 		}
 	}
 
-	// Token: 0x0601B29F RID: 111263 RVA: 0x00763D04 File Offset: 0x00761F04
+	// Token: 0x06018DA4 RID: 101796 RVA: 0x0078B6C8 File Offset: 0x007898C8
 	private void GiveAbility()
 	{
 		if (this.AbilityClassInternal != null)
@@ -343,7 +343,7 @@ public class Skill
 		}
 	}
 
-	// Token: 0x0601B2A0 RID: 111264 RVA: 0x00763D44 File Offset: 0x00761F44
+	// Token: 0x06018DA5 RID: 101797 RVA: 0x0078B708 File Offset: 0x00789908
 	private unsafe void LoadMontage()
 	{
 		if (this.SkillInfo.Animations.Num() > 0)
@@ -455,7 +455,7 @@ public class Skill
 		}
 	}
 
-	// Token: 0x0601B2A1 RID: 111265 RVA: 0x007640B8 File Offset: 0x007622B8
+	// Token: 0x06018DA6 RID: 101798 RVA: 0x0078BA7C File Offset: 0x00789C7C
 	public void AttachEffect(int effect, Skill.ESkillEffectType type, FName boneName, float whenSkillEndEnableTime)
 	{
 		List<Skill.ISkillEffect> list;
@@ -473,7 +473,7 @@ public class Skill
 		list.Add(item);
 	}
 
-	// Token: 0x0601B2A2 RID: 111266 RVA: 0x0076410C File Offset: 0x0076230C
+	// Token: 0x06018DA7 RID: 101799 RVA: 0x0078BAD0 File Offset: 0x00789CD0
 	private void CloseEffect(Skill.ESkillEffectType type, int handleId, float whenSkillEndEnableTime)
 	{
 		if (!EffectSystem.Instance.IsValid(handleId))
@@ -526,7 +526,7 @@ public class Skill
 		}
 	}
 
-	// Token: 0x0601B2A3 RID: 111267 RVA: 0x00764250 File Offset: 0x00762450
+	// Token: 0x06018DA8 RID: 101800 RVA: 0x0078BC14 File Offset: 0x00789E14
 	private void ClearEffects()
 	{
 		if (this.EffectsAttached == null)
@@ -547,7 +547,7 @@ public class Skill
 		this.EffectsAttached.Clear();
 	}
 
-	// Token: 0x0601B2A4 RID: 111268 RVA: 0x007642FC File Offset: 0x007624FC
+	// Token: 0x06018DA9 RID: 101801 RVA: 0x0078BCC0 File Offset: 0x00789EC0
 	public bool BeginSkill()
 	{
 		if (this.Active)
@@ -567,7 +567,7 @@ public class Skill
 		return true;
 	}
 
-	// Token: 0x0601B2A5 RID: 111269 RVA: 0x0076435C File Offset: 0x0076255C
+	// Token: 0x06018DAA RID: 101802 RVA: 0x0078BD20 File Offset: 0x00789F20
 	public void BeginSkillBuffAndTag(int skillLevel)
 	{
 		this.SkillLevel = skillLevel;
@@ -693,7 +693,7 @@ public class Skill
 		}
 	}
 
-	// Token: 0x0601B2A6 RID: 111270 RVA: 0x00764814 File Offset: 0x00762A14
+	// Token: 0x06018DAB RID: 101803 RVA: 0x0078C1D8 File Offset: 0x0078A3D8
 	public bool EndSkill()
 	{
 		if (!this.Active)
@@ -765,7 +765,7 @@ public class Skill
 		return true;
 	}
 
-	// Token: 0x0601B2A7 RID: 111271 RVA: 0x00764AC4 File Offset: 0x00762CC4
+	// Token: 0x06018DAC RID: 101804 RVA: 0x0078C488 File Offset: 0x0078A688
 	public bool SimulatedBeginSkill(long messageId)
 	{
 		if (this.Active)
@@ -780,7 +780,7 @@ public class Skill
 		return true;
 	}
 
-	// Token: 0x0601B2A8 RID: 111272 RVA: 0x00764AFC File Offset: 0x00762CFC
+	// Token: 0x06018DAD RID: 101805 RVA: 0x0078C4C0 File Offset: 0x0078A6C0
 	public void SetTimeDilation(PawnTimeScaleComponent timeScaleComp, float timeDilation)
 	{
 		foreach (List<Skill.ISkillEffect> list in this.EffectsAttached.Values)
@@ -798,7 +798,7 @@ public class Skill
 		}
 	}
 
-	// Token: 0x0601B2A9 RID: 111273 RVA: 0x00764BA8 File Offset: 0x00762DA8
+	// Token: 0x06018DAE RID: 101806 RVA: 0x0078C56C File Offset: 0x0078A76C
 	[NullableContext(2)]
 	public unsafe bool PlayMontage(int index, float rate, [Nullable(1)] string startSection, float startTime, Action<bool> onCompleted = null, Action<bool> onBlendOut = null, long? messageId = null)
 	{
@@ -874,7 +874,7 @@ public class Skill
 		return true;
 	}
 
-	// Token: 0x0601B2AA RID: 111274 RVA: 0x00764E18 File Offset: 0x00763018
+	// Token: 0x06018DAF RID: 101807 RVA: 0x0078C7DC File Offset: 0x0078A9DC
 	private void ClearMontage()
 	{
 		if (this.ActiveMontageTask != null)
@@ -887,7 +887,7 @@ public class Skill
 		this.MontageCallback = null;
 	}
 
-	// Token: 0x0601B2AB RID: 111275 RVA: 0x00764E68 File Offset: 0x00763068
+	// Token: 0x06018DB0 RID: 101808 RVA: 0x0078C82C File Offset: 0x0078AA2C
 	public void RequestStopMontage(bool isInterrupted)
 	{
 		if (this.MontageCallback != null)
@@ -902,7 +902,7 @@ public class Skill
 		}
 	}
 
-	// Token: 0x0601B2AC RID: 111276 RVA: 0x00764E8C File Offset: 0x0076308C
+	// Token: 0x06018DB1 RID: 101809 RVA: 0x0078C850 File Offset: 0x0078AA50
 	public void SetEffectHidden(bool hidden)
 	{
 		foreach (List<Skill.ISkillEffect> list in this.EffectsAttached.Values)
@@ -917,7 +917,7 @@ public class Skill
 		}
 	}
 
-	// Token: 0x0601B2AD RID: 111277 RVA: 0x00764F3C File Offset: 0x0076313C
+	// Token: 0x06018DB2 RID: 101810 RVA: 0x0078C900 File Offset: 0x0078AB00
 	private void StartBurstLockTimer()
 	{
 		this.ClearBurstLockTimer();
@@ -940,7 +940,7 @@ public class Skill
 		timeScaleComp.AddNormalizeTimeScaleLock("Skill.BurstLock", true);
 	}
 
-	// Token: 0x0601B2AE RID: 111278 RVA: 0x00764FCD File Offset: 0x007631CD
+	// Token: 0x06018DB3 RID: 101811 RVA: 0x0078C991 File Offset: 0x0078AB91
 	private void ClearBurstLockTimer()
 	{
 		if (this.BurstLockTimer != null)
@@ -956,7 +956,7 @@ public class Skill
 		timeScaleComp.RemoveNormalizeTimeScaleLock("Skill.BurstLock", false);
 	}
 
-	// Token: 0x0601B2AF RID: 111279 RVA: 0x00765008 File Offset: 0x00763208
+	// Token: 0x06018DB4 RID: 101812 RVA: 0x0078C9CC File Offset: 0x0078ABCC
 	private long? GetGaPassiveSkillMessage()
 	{
 		EntityComponentPb entityComponentPb;
@@ -980,7 +980,7 @@ public class Skill
 		return null;
 	}
 
-	// Token: 0x0601B2B0 RID: 111280 RVA: 0x007650F0 File Offset: 0x007632F0
+	// Token: 0x06018DB5 RID: 101813 RVA: 0x0078CAB4 File Offset: 0x0078ACB4
 	private int GetVisionId()
 	{
 		if (this.VisionTagId != 0)
@@ -1018,96 +1018,96 @@ public class Skill
 		return 0;
 	}
 
-	// Token: 0x0400D345 RID: 54085
+	// Token: 0x0400D7A8 RID: 55208
 	private readonly Stat StatAddSpecTag = Stat.Create("Add Spec Tag", "", "");
 
-	// Token: 0x0400D346 RID: 54086
+	// Token: 0x0400D7A9 RID: 55209
 	private readonly Stat StatAddInSkillTag = Stat.Create("Add InSkill Tag", "", "");
 
-	// Token: 0x0400D347 RID: 54087
+	// Token: 0x0400D7AA RID: 55210
 	private readonly Stat StatAddSpecBuff = Stat.Create("Add Spec Buff", "", "");
 
-	// Token: 0x0400D348 RID: 54088
+	// Token: 0x0400D7AB RID: 55211
 	private readonly Stat StatRemoveSpecBuff = Stat.Create("Remove Spec Buff", "", "");
 
-	// Token: 0x0400D349 RID: 54089
+	// Token: 0x0400D7AC RID: 55212
 	private readonly Stat StatRemoveSpecBuffTag = Stat.Create("Remove Spec Buff&Tag", "", "");
 
-	// Token: 0x0400D34A RID: 54090
+	// Token: 0x0400D7AD RID: 55213
 	private readonly Stat StatRemoveInSkillTag = Stat.Create("Remove InSkill Tag", "", "");
 
-	// Token: 0x0400D34B RID: 54091
+	// Token: 0x0400D7AE RID: 55214
 	private readonly Stat StatAddSpecEndBuff = Stat.Create("Add Spec EndBuff", "", "");
 
-	// Token: 0x0400D34C RID: 54092
+	// Token: 0x0400D7AF RID: 55215
 	private readonly Stat StatRemoveSpecEndBuff = Stat.Create("Remove Spec EndBuff", "", "");
 
-	// Token: 0x0400D34D RID: 54093
+	// Token: 0x0400D7B0 RID: 55216
 	[Nullable(2)]
 	public UGameplayAbility ActiveAbility;
 
-	// Token: 0x0400D34E RID: 54094
+	// Token: 0x0400D7B1 RID: 55217
 	[Nullable(2)]
 	private UAsyncTaskPlayMontageAndWait ActiveMontageTask;
 
-	// Token: 0x0400D34F RID: 54095
+	// Token: 0x0400D7B2 RID: 55218
 	[Nullable(2)]
 	private Action<bool> MontageCallback;
 
-	// Token: 0x0400D350 RID: 54096
+	// Token: 0x0400D7B3 RID: 55219
 	public long? MontageContextId;
 
-	// Token: 0x0400D351 RID: 54097
+	// Token: 0x0400D7B4 RID: 55220
 	public long? PreContextId;
 
-	// Token: 0x0400D352 RID: 54098
+	// Token: 0x0400D7B5 RID: 55221
 	private long? CombatMessageIdInternal;
 
-	// Token: 0x0400D353 RID: 54099
+	// Token: 0x0400D7B6 RID: 55222
 	[Nullable(2)]
 	public ISkillBattleContext BattleContext;
 
-	// Token: 0x0400D354 RID: 54100
+	// Token: 0x0400D7B7 RID: 55223
 	public long? SkillBehaviorAnimNotifyMessageId;
 
-	// Token: 0x0400D355 RID: 54101
+	// Token: 0x0400D7B8 RID: 55224
 	public int FightStateHandle;
 
-	// Token: 0x0400D356 RID: 54102
+	// Token: 0x0400D7B9 RID: 55225
 	private int SkillIdInternal;
 
-	// Token: 0x0400D357 RID: 54103
+	// Token: 0x0400D7BA RID: 55226
 	private bool ActiveInternal;
 
-	// Token: 0x0400D358 RID: 54104
+	// Token: 0x0400D7BB RID: 55227
 	private bool IsSimulatedInternal;
 
-	// Token: 0x0400D359 RID: 54105
+	// Token: 0x0400D7BC RID: 55228
 	[Nullable(2)]
 	private SSkillInfo SkillInfoInternal;
 
-	// Token: 0x0400D35A RID: 54106
+	// Token: 0x0400D7BD RID: 55229
 	[Nullable(2)]
 	public GroupSkillCdInfo GroupSkillCdInfo;
 
-	// Token: 0x0400D35B RID: 54107
+	// Token: 0x0400D7BE RID: 55230
 	private readonly List<int> SkillTagIdsInternal = new List<int>();
 
-	// Token: 0x0400D35C RID: 54108
+	// Token: 0x0400D7BF RID: 55231
 	private readonly List<ESkillGenre> SkillGenresInternal = new List<ESkillGenre>();
 
-	// Token: 0x0400D35D RID: 54109
+	// Token: 0x0400D7C0 RID: 55232
 	private int VisionTagId;
 
-	// Token: 0x0400D35E RID: 54110
+	// Token: 0x0400D7C1 RID: 55233
 	[Nullable(2)]
 	private UClass AbilityClassInternal;
 
-	// Token: 0x0400D35F RID: 54111
+	// Token: 0x0400D7C2 RID: 55234
 	[Nullable(2)]
 	private FGameplayAbilitySpecHandle AbilityHandle;
 
-	// Token: 0x0400D360 RID: 54112
+	// Token: 0x0400D7C3 RID: 55235
 	[Nullable(new byte[]
 	{
 		2,
@@ -1115,133 +1115,133 @@ public class Skill
 	})]
 	private UAnimMontage[] LoadedMontagesInternal;
 
-	// Token: 0x0400D361 RID: 54113
+	// Token: 0x0400D7C4 RID: 55236
 	public const int MONTAGE_INVALID_INDEX = -1;
 
-	// Token: 0x0400D362 RID: 54114
+	// Token: 0x0400D7C5 RID: 55237
 	public const int MONTAGE_DEFAULT_INDEX = 0;
 
-	// Token: 0x0400D363 RID: 54115
+	// Token: 0x0400D7C6 RID: 55238
 	private const float SPECIAL_SKILL_MIN_IMMUNE_FALL_DAMAGE_TIME = 10f;
 
-	// Token: 0x0400D364 RID: 54116
+	// Token: 0x0400D7C7 RID: 55239
 	private const float MONTAGE_BLEND_TIME = 0.2f;
 
-	// Token: 0x0400D365 RID: 54117
+	// Token: 0x0400D7C8 RID: 55240
 	private const string BURST_LOCK_KEY = "Skill.BurstLock";
 
-	// Token: 0x0400D366 RID: 54118
+	// Token: 0x0400D7C9 RID: 55241
 	public int CurrentMontageIndex = -1;
 
-	// Token: 0x0400D367 RID: 54119
+	// Token: 0x0400D7CA RID: 55242
 	public int NeedPlayMontageIndex = -1;
 
-	// Token: 0x0400D368 RID: 54120
+	// Token: 0x0400D7CB RID: 55243
 	private readonly List<int> ActiveBuffHandles = new List<int>();
 
-	// Token: 0x0400D369 RID: 54121
+	// Token: 0x0400D7CC RID: 55244
 	private readonly Dictionary<Skill.ESkillEffectType, List<Skill.ISkillEffect>> EffectsAttached = new Dictionary<Skill.ESkillEffectType, List<Skill.ISkillEffect>>();
 
-	// Token: 0x0400D36A RID: 54122
+	// Token: 0x0400D7CD RID: 55245
 	[Nullable(2)]
 	private TimerHandle BurstLockTimer;
 
-	// Token: 0x0400D36B RID: 54123
+	// Token: 0x0400D7CE RID: 55246
 	private int InterruptLevelInternal;
 
-	// Token: 0x0400D36C RID: 54124
+	// Token: 0x0400D7CF RID: 55247
 	public FVectorDouble? ExtraTargetLocation;
 
-	// Token: 0x0400D36D RID: 54125
+	// Token: 0x0400D7D0 RID: 55248
 	private int SkillLevel;
 
-	// Token: 0x0400D36E RID: 54126
+	// Token: 0x0400D7D1 RID: 55249
 	[Nullable(2)]
 	public EndSkillInfo EndSkillInfo;
 
-	// Token: 0x0400D36F RID: 54127
+	// Token: 0x0400D7D2 RID: 55250
 	[Nullable(2)]
 	private BaseSkillComponent SkillComp;
 
-	// Token: 0x0400D370 RID: 54128
+	// Token: 0x0400D7D3 RID: 55251
 	[Nullable(2)]
 	private CharacterBuffComponent BuffComp;
 
-	// Token: 0x0400D371 RID: 54129
+	// Token: 0x0400D7D4 RID: 55252
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400D372 RID: 54130
+	// Token: 0x0400D7D5 RID: 55253
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D373 RID: 54131
+	// Token: 0x0400D7D6 RID: 55254
 	[Nullable(2)]
 	private CharacterMontageComponent MontageComp;
 
-	// Token: 0x0400D374 RID: 54132
+	// Token: 0x0400D7D7 RID: 55255
 	[Nullable(2)]
 	private PawnTimeScaleComponent TimeScaleComp;
 
-	// Token: 0x0400D375 RID: 54133
+	// Token: 0x0400D7D8 RID: 55256
 	private bool IsInCommonSkillDt;
 
-	// Token: 0x020096B1 RID: 38577
+	// Token: 0x020088D7 RID: 35031
 	[NullableContext(0)]
 	public enum ESkillEffectType
 	{
-		// Token: 0x040304DE RID: 197854
+		// Token: 0x0402BB73 RID: 179059
 		None,
-		// Token: 0x040304DF RID: 197855
+		// Token: 0x0402BB74 RID: 179060
 		UnDetach,
-		// Token: 0x040304E0 RID: 197856
+		// Token: 0x0402BB75 RID: 179061
 		Detach,
-		// Token: 0x040304E1 RID: 197857
+		// Token: 0x0402BB76 RID: 179062
 		DetachEnd,
-		// Token: 0x040304E2 RID: 197858
+		// Token: 0x0402BB77 RID: 179063
 		DetachDestroy,
-		// Token: 0x040304E3 RID: 197859
+		// Token: 0x0402BB78 RID: 179064
 		UnDetachEnd,
-		// Token: 0x040304E4 RID: 197860
+		// Token: 0x0402BB79 RID: 179065
 		UnDetachDestroy
 	}
 
-	// Token: 0x020096B2 RID: 38578
+	// Token: 0x020088D8 RID: 35032
 	private interface ISkillEffect
 	{
-		// Token: 0x1700A12B RID: 41259
-		// (get) Token: 0x0604C38F RID: 312207
-		// (set) Token: 0x0604C390 RID: 312208
+		// Token: 0x170078BA RID: 30906
+		// (get) Token: 0x0604281D RID: 272413
+		// (set) Token: 0x0604281E RID: 272414
 		int EffectHandle { get; set; }
 
-		// Token: 0x1700A12C RID: 41260
-		// (get) Token: 0x0604C391 RID: 312209
-		// (set) Token: 0x0604C392 RID: 312210
+		// Token: 0x170078BB RID: 30907
+		// (get) Token: 0x0604281F RID: 272415
+		// (set) Token: 0x06042820 RID: 272416
 		FName BoneName { get; set; }
 
-		// Token: 0x1700A12D RID: 41261
-		// (get) Token: 0x0604C393 RID: 312211
-		// (set) Token: 0x0604C394 RID: 312212
+		// Token: 0x170078BC RID: 30908
+		// (get) Token: 0x06042821 RID: 272417
+		// (set) Token: 0x06042822 RID: 272418
 		float WhenSkillEndEnableTime { get; set; }
 	}
 
-	// Token: 0x020096B3 RID: 38579
+	// Token: 0x020088D9 RID: 35033
 	[NullableContext(0)]
 	private class SkillEffect : Skill.ISkillEffect
 	{
-		// Token: 0x1700A12E RID: 41262
-		// (get) Token: 0x0604C395 RID: 312213 RVA: 0x014183EF File Offset: 0x014165EF
-		// (set) Token: 0x0604C396 RID: 312214 RVA: 0x014183F7 File Offset: 0x014165F7
+		// Token: 0x170078BD RID: 30909
+		// (get) Token: 0x06042823 RID: 272419 RVA: 0x013C3027 File Offset: 0x013C1227
+		// (set) Token: 0x06042824 RID: 272420 RVA: 0x013C302F File Offset: 0x013C122F
 		public int EffectHandle { get; set; }
 
-		// Token: 0x1700A12F RID: 41263
-		// (get) Token: 0x0604C397 RID: 312215 RVA: 0x01418400 File Offset: 0x01416600
-		// (set) Token: 0x0604C398 RID: 312216 RVA: 0x01418408 File Offset: 0x01416608
+		// Token: 0x170078BE RID: 30910
+		// (get) Token: 0x06042825 RID: 272421 RVA: 0x013C3038 File Offset: 0x013C1238
+		// (set) Token: 0x06042826 RID: 272422 RVA: 0x013C3040 File Offset: 0x013C1240
 		public FName BoneName { get; set; }
 
-		// Token: 0x1700A130 RID: 41264
-		// (get) Token: 0x0604C399 RID: 312217 RVA: 0x01418411 File Offset: 0x01416611
-		// (set) Token: 0x0604C39A RID: 312218 RVA: 0x01418419 File Offset: 0x01416619
+		// Token: 0x170078BF RID: 30911
+		// (get) Token: 0x06042827 RID: 272423 RVA: 0x013C3049 File Offset: 0x013C1249
+		// (set) Token: 0x06042828 RID: 272424 RVA: 0x013C3051 File Offset: 0x013C1251
 		public float WhenSkillEndEnableTime { get; set; }
 	}
 }

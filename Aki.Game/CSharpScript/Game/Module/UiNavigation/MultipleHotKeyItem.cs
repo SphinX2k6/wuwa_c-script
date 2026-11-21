@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049F2 RID: 18930
+	// Token: 0x0200396C RID: 14700
 	public class MultipleHotKeyItem : HotKeyItem
 	{
-		// Token: 0x06031267 RID: 201319 RVA: 0x00B66B24 File Offset: 0x00B64D24
+		// Token: 0x06025D9D RID: 155037 RVA: 0x00AA1AE0 File Offset: 0x00A9FCE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031268 RID: 201320 RVA: 0x00B66B90 File Offset: 0x00B64D90
+		// Token: 0x06025D9E RID: 155038 RVA: 0x00AA1B4C File Offset: 0x00A9FD4C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MultipleHotKeyItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031269 RID: 201321 RVA: 0x00B66BD4 File Offset: 0x00B64DD4
+		// Token: 0x06025D9F RID: 155039 RVA: 0x00AA1B90 File Offset: 0x00A9FD90
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			};
 		}
 
-		// Token: 0x0603126A RID: 201322 RVA: 0x00B66C10 File Offset: 0x00B64E10
+		// Token: 0x06025DA0 RID: 155040 RVA: 0x00AA1BCC File Offset: 0x00A9FDCC
 		protected override void OnClear()
 		{
 			foreach (HotKeyTypeBase hotKeyTypeBase in this.HotKeyTypeList)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0603126B RID: 201323 RVA: 0x00B66C60 File Offset: 0x00B64E60
+		// Token: 0x06025DA1 RID: 155041 RVA: 0x00AA1C1C File Offset: 0x00A9FE1C
 		private UniTask RefreshHotKey()
 		{
 			MultipleHotKeyItem.<RefreshHotKey>d__8 <RefreshHotKey>d__;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return <RefreshHotKey>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603126C RID: 201324 RVA: 0x00B66CA4 File Offset: 0x00B64EA4
+		// Token: 0x06025DA2 RID: 155042 RVA: 0x00AA1C60 File Offset: 0x00A9FE60
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return list;
 		}
 
-		// Token: 0x0401A4E2 RID: 107746
+		// Token: 0x04014D54 RID: 85332
 		[Nullable(new byte[]
 		{
 			2,
@@ -102,10 +102,10 @@ namespace CSharpScript.Game.Module.UiNavigation
 		})]
 		private GenericLayoutNew<UniTask<HotKeyTypeBase>> Layout;
 
-		// Token: 0x0401A4E3 RID: 107747
+		// Token: 0x04014D55 RID: 85333
 		private int HotKeyViewIndex;
 
-		// Token: 0x0401A4E4 RID: 107748
+		// Token: 0x04014D56 RID: 85334
 		[Nullable(new byte[]
 		{
 			1,
@@ -113,13 +113,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 		})]
 		private List<HotKeyTypeBase> HotKeyTypeList = new List<HotKeyTypeBase>();
 
-		// Token: 0x0200ABBD RID: 43965
+		// Token: 0x020095CC RID: 38348
 		private class EKeyCommonCom
 		{
-			// Token: 0x04034342 RID: 213826
+			// Token: 0x0402ECC5 RID: 191685
 			public const int Layout = 0;
 
-			// Token: 0x04034343 RID: 213827
+			// Token: 0x0402ECC6 RID: 191686
 			public const int SingleHotKeyItem = 1;
 		}
 	}

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000973 RID: 2419
+	// Token: 0x02000A26 RID: 2598
 	public class EInteractDefaultIconJsonConverter : JsonConverter<EInteractDefaultIcon>
 	{
-		// Token: 0x06003638 RID: 13880 RVA: 0x0008D778 File Offset: 0x0008B978
+		// Token: 0x060039BF RID: 14783 RVA: 0x000956E4 File Offset: 0x000938E4
 		public override EInteractDefaultIcon Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EInteractDefaultIconExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003639 RID: 13881 RVA: 0x0008D79C File Offset: 0x0008B99C
+		// Token: 0x060039C0 RID: 14784 RVA: 0x00095708 File Offset: 0x00093908
 		public override void Write(Utf8JsonWriter writer, EInteractDefaultIcon value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

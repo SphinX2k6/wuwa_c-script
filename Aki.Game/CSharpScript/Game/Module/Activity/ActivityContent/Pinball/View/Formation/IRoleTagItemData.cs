@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formation
 {
-	// Token: 0x02006365 RID: 25445
+	// Token: 0x020052E3 RID: 21219
 	public interface IRoleTagItemData
 	{
-		// Token: 0x17009336 RID: 37686
-		// (get) Token: 0x06040036 RID: 262198
-		// (set) Token: 0x06040037 RID: 262199
+		// Token: 0x17006698 RID: 26264
+		// (get) Token: 0x06034CF7 RID: 216311
+		// (set) Token: 0x06034CF8 RID: 216312
 		ETagType Type { get; set; }
 
-		// Token: 0x17009337 RID: 37687
-		// (get) Token: 0x06040038 RID: 262200
-		// (set) Token: 0x06040039 RID: 262201
+		// Token: 0x17006699 RID: 26265
+		// (get) Token: 0x06034CF9 RID: 216313
+		// (set) Token: 0x06034CFA RID: 216314
 		int ConfigId { get; set; }
 	}
 }

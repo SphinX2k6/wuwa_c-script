@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200441E RID: 17438
+	// Token: 0x02004886 RID: 18566
 	public enum EDartSkillConditionType : byte
 	{
-		// Token: 0x0400C388 RID: 50056
+		// Token: 0x0400CDB5 RID: 52661
 		RemainScoreGe,
-		// Token: 0x0400C389 RID: 50057
+		// Token: 0x0400CDB6 RID: 52662
 		RemainScoreLe,
-		// Token: 0x0400C38A RID: 50058
+		// Token: 0x0400CDB7 RID: 52663
 		BehindScoreGe,
-		// Token: 0x0400C38B RID: 50059
+		// Token: 0x0400CDB8 RID: 52664
 		BehindScoreLe,
-		// Token: 0x0400C38C RID: 50060
+		// Token: 0x0400CDB9 RID: 52665
 		RemainScoreCanWin,
-		// Token: 0x0400C38D RID: 50061
+		// Token: 0x0400CDBA RID: 52666
 		RoundIndex,
-		// Token: 0x0400C38E RID: 50062
+		// Token: 0x0400CDBB RID: 52667
 		FirstRounds
 	}
 }

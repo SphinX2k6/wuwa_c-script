@@ -10,47 +10,47 @@ namespace Aki.TDConfigMgr.Component
 	[Nullable(0)]
 	public class AiComponent_SetValue
 	{
-		// Token: 0x04000053 RID: 83
+		// Token: 0x04000054 RID: 84
 		public bool? Disabled;
 
-		// Token: 0x04000054 RID: 84
+		// Token: 0x04000055 RID: 85
 		public bool? EdIsLocked;
 
-		// Token: 0x04000055 RID: 85
+		// Token: 0x04000056 RID: 86
 		public int AiId;
 
-		// Token: 0x04000056 RID: 86
+		// Token: 0x04000057 RID: 87
 		public IPatrol Patrol;
 
-		// Token: 0x04000057 RID: 87
+		// Token: 0x04000058 RID: 88
 		public IInitState InitState;
 
-		// Token: 0x04000058 RID: 88
+		// Token: 0x04000059 RID: 89
 		public int? CenterPoint;
 
-		// Token: 0x04000059 RID: 89
+		// Token: 0x0400005A RID: 90
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IBlackBoard> InitBlackBoard;
 
-		// Token: 0x0400005A RID: 90
+		// Token: 0x0400005B RID: 91
 		public string WeaponId;
 
-		// Token: 0x0400005B RID: 91
+		// Token: 0x0400005C RID: 92
 		public int? AiTeamLevelId;
 
-		// Token: 0x0400005C RID: 92
+		// Token: 0x0400005D RID: 93
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IStateRepPerfItem> StateRepPerfList;
 
-		// Token: 0x0400005D RID: 93
+		// Token: 0x0400005E RID: 94
 		public IAiAlertSystemConfig AlertSystemConfig;
 	}
 }

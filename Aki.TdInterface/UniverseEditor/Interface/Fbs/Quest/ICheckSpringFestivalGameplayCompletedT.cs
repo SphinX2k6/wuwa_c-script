@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D65 RID: 15717
+	// Token: 0x0200417C RID: 16764
 	public class ICheckSpringFestivalGameplayCompletedT
 	{
-		// Token: 0x17006BDE RID: 27614
-		// (get) Token: 0x06015BFD RID: 89085 RVA: 0x00323089 File Offset: 0x00321289
-		// (set) Token: 0x06015BFE RID: 89086 RVA: 0x00323091 File Offset: 0x00321291
+		// Token: 0x17007198 RID: 29080
+		// (get) Token: 0x06017135 RID: 94517 RVA: 0x0034A301 File Offset: 0x00348501
+		// (set) Token: 0x06017136 RID: 94518 RVA: 0x0034A309 File Offset: 0x00348509
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x17006BDF RID: 27615
-		// (get) Token: 0x06015BFF RID: 89087 RVA: 0x0032309A File Offset: 0x0032129A
-		// (set) Token: 0x06015C00 RID: 89088 RVA: 0x003230A2 File Offset: 0x003212A2
+		// Token: 0x17007199 RID: 29081
+		// (get) Token: 0x06017137 RID: 94519 RVA: 0x0034A312 File Offset: 0x00348512
+		// (set) Token: 0x06017138 RID: 94520 RVA: 0x0034A31A File Offset: 0x0034851A
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x17006BE0 RID: 27616
-		// (get) Token: 0x06015C01 RID: 89089 RVA: 0x003230AB File Offset: 0x003212AB
-		// (set) Token: 0x06015C02 RID: 89090 RVA: 0x003230B3 File Offset: 0x003212B3
+		// Token: 0x1700719A RID: 29082
+		// (get) Token: 0x06017139 RID: 94521 RVA: 0x0034A323 File Offset: 0x00348523
+		// (set) Token: 0x0601713A RID: 94522 RVA: 0x0034A32B File Offset: 0x0034852B
 		public TCheckSpringFestivalGameplayTypeUnion GameplayType { get; set; }
 
-		// Token: 0x06015C03 RID: 89091 RVA: 0x003230BC File Offset: 0x003212BC
+		// Token: 0x0601713B RID: 94523 RVA: 0x0034A334 File Offset: 0x00348534
 		public ICheckSpringFestivalGameplayCompletedT()
 		{
 			this.Type = EChildQuest.DoInteract;

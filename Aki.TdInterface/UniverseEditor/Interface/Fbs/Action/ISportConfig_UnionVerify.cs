@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071A1 RID: 29089
+	// Token: 0x02007976 RID: 31094
 	public static class ISportConfig_UnionVerify
 	{
-		// Token: 0x0603392D RID: 211245 RVA: 0x006F20AC File Offset: 0x006F02AC
+		// Token: 0x06036C2B RID: 224299 RVA: 0x0075336C File Offset: 0x0075156C
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -23,6 +23,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				break;
 			case 4:
 				result = IPetalGrabConfigVerify.Verify(verifier, tablePos);
+				break;
+			case 5:
+				result = IPetalFlyConfigVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

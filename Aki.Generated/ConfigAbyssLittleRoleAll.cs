@@ -9,13 +9,13 @@ namespace Aki.Config
 	// Token: 0x02000017 RID: 23
 	public class ConfigAbyssLittleRoleAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600008A RID: 138 RVA: 0x0005D074 File Offset: 0x0005B274
+		// Token: 0x0600008A RID: 138 RVA: 0x00060914 File Offset: 0x0005EB14
 		static ConfigAbyssLittleRoleAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAbyssLittleRoleAll.CreateStaticDefaultValue), new Action(ConfigAbyssLittleRoleAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600008B RID: 139 RVA: 0x0005D094 File Offset: 0x0005B294
+		// Token: 0x0600008B RID: 139 RVA: 0x00060934 File Offset: 0x0005EB34
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAbyssLittleRoleAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600008C RID: 140 RVA: 0x0005D113 File Offset: 0x0005B313
+		// Token: 0x0600008C RID: 140 RVA: 0x000609B3 File Offset: 0x0005EBB3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAbyssLittleRoleAll.LogPair = null;
 			ConfigAbyssLittleRoleAll.HandleId = 0;
 		}
 
-		// Token: 0x0600008D RID: 141 RVA: 0x0005D121 File Offset: 0x0005B321
+		// Token: 0x0600008D RID: 141 RVA: 0x000609C1 File Offset: 0x0005EBC1
 		public static void Init()
 		{
 			ConfigAbyssLittleRoleAll.HandleId = ConfigCommon.InitDataStatement(ConfigAbyssLittleRoleAll.HandleId, "db_dangoabysssuit.db", "select BinData from `AbyssLittleRole`");
 		}
 
-		// Token: 0x0600008E RID: 142 RVA: 0x0005D13C File Offset: 0x0005B33C
+		// Token: 0x0600008E RID: 142 RVA: 0x000609DC File Offset: 0x0005EBDC
 		[NullableContext(2)]
 		public static IReadOnlyList<AbyssLittleRole> GetConfigList(bool useCache = true)
 		{

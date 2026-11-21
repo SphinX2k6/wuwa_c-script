@@ -8,30 +8,30 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x0200152F RID: 5423
+// Token: 0x020009E7 RID: 2535
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityTrapDefenseController : ActivityControllerBase
 {
-	// Token: 0x06009AB5 RID: 39605 RVA: 0x00217743 File Offset: 0x00215943
+	// Token: 0x06006E93 RID: 28307 RVA: 0x002214E3 File Offset: 0x0021F6E3
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06009AB6 RID: 39606 RVA: 0x00217746 File Offset: 0x00215946
+	// Token: 0x06006E94 RID: 28308 RVA: 0x002214E6 File Offset: 0x0021F6E6
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 	}
 
-	// Token: 0x06009AB7 RID: 39607 RVA: 0x00217764 File Offset: 0x00215964
+	// Token: 0x06006E95 RID: 28309 RVA: 0x00221504 File Offset: 0x0021F704
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 	}
 
-	// Token: 0x06009AB8 RID: 39608 RVA: 0x00217782 File Offset: 0x00215982
+	// Token: 0x06006E96 RID: 28310 RVA: 0x00221522 File Offset: 0x0021F722
 	private void OnWorldDone()
 	{
 		if (TrapDefenseModel.Instance.NeedOpenActivityMainView)
@@ -40,7 +40,7 @@ public class ActivityTrapDefenseController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009AB9 RID: 39609 RVA: 0x00217798 File Offset: 0x00215998
+	// Token: 0x06006E97 RID: 28311 RVA: 0x00221538 File Offset: 0x0021F738
 	private void AddMainViewSplashTask()
 	{
 		SplashScreenTask splashScreenTask = new SplashScreenTask(ESplashScreenSourceModuleType.None, ESplashScreenType.Other, delegate()
@@ -50,7 +50,7 @@ public class ActivityTrapDefenseController : ActivityControllerBase
 		SplashScreenController.Instance.PushSplashScreenTask(splashScreenTask, false);
 	}
 
-	// Token: 0x06009ABA RID: 39610 RVA: 0x002177D8 File Offset: 0x002159D8
+	// Token: 0x06006E98 RID: 28312 RVA: 0x00221578 File Offset: 0x0021F778
 	[NullableContext(0)]
 	protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 	{
@@ -62,31 +62,31 @@ public class ActivityTrapDefenseController : ActivityControllerBase
 		return <OnOpenSubView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009ABB RID: 39611 RVA: 0x0021781B File Offset: 0x00215A1B
+	// Token: 0x06006E99 RID: 28313 RVA: 0x002215BB File Offset: 0x0021F7BB
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06009ABC RID: 39612 RVA: 0x0021781D File Offset: 0x00215A1D
+	// Token: 0x06006E9A RID: 28314 RVA: 0x002215BD File Offset: 0x0021F7BD
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_TowerDefenseActivityMain";
 	}
 
-	// Token: 0x06009ABD RID: 39613 RVA: 0x00217824 File Offset: 0x00215A24
+	// Token: 0x06006E9B RID: 28315 RVA: 0x002215C4 File Offset: 0x0021F7C4
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewTrapDefense();
 	}
 
-	// Token: 0x06009ABE RID: 39614 RVA: 0x0021782B File Offset: 0x00215A2B
+	// Token: 0x06006E9C RID: 28316 RVA: 0x002215CB File Offset: 0x0021F7CB
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.Data = new ActivityTrapDefenseData();
 		return this.Data;
 	}
 
-	// Token: 0x06009ABF RID: 39615 RVA: 0x00217840 File Offset: 0x00215A40
+	// Token: 0x06006E9D RID: 28317 RVA: 0x002215E0 File Offset: 0x0021F7E0
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.TrapDefenseChallengeUpdateNotify, delegate(IMessage msg, Net.CallbackStatus _)
@@ -161,7 +161,7 @@ public class ActivityTrapDefenseController : ActivityControllerBase
 		});
 	}
 
-	// Token: 0x06009AC0 RID: 39616 RVA: 0x00217998 File Offset: 0x00215B98
+	// Token: 0x06006E9E RID: 28318 RVA: 0x00221738 File Offset: 0x0021F938
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.TrapDefenseChallengeUpdateNotify);
@@ -171,7 +171,7 @@ public class ActivityTrapDefenseController : ActivityControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.TrapDefenseBdUpdateNotify);
 	}
 
-	// Token: 0x06009AC1 RID: 39617 RVA: 0x002179F8 File Offset: 0x00215BF8
+	// Token: 0x06006E9F RID: 28319 RVA: 0x00221798 File Offset: 0x0021F998
 	public void RefreshActivityRedDot()
 	{
 		ActivityTrapDefenseData data = this.Data;
@@ -187,14 +187,14 @@ public class ActivityTrapDefenseController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009AC2 RID: 39618 RVA: 0x00217A5D File Offset: 0x00215C5D
+	// Token: 0x06006EA0 RID: 28320 RVA: 0x002217FD File Offset: 0x0021F9FD
 	public override void OnShowActivityFirstUnlockView(ActivityBaseData data)
 	{
 		UiManager.Instance.OpenView(EUiViewName.TrapDefenseActivityUnlockView, null, null);
 	}
 
-	// Token: 0x17000D4D RID: 3405
-	// (get) Token: 0x06009AC3 RID: 39619 RVA: 0x00217A70 File Offset: 0x00215C70
+	// Token: 0x17000D6E RID: 3438
+	// (get) Token: 0x06006EA1 RID: 28321 RVA: 0x00221810 File Offset: 0x0021FA10
 	public static ActivityTrapDefenseController Instance
 	{
 		get
@@ -203,7 +203,7 @@ public class ActivityTrapDefenseController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009AC4 RID: 39620 RVA: 0x00217A77 File Offset: 0x00215C77
+	// Token: 0x06006EA2 RID: 28322 RVA: 0x00221817 File Offset: 0x0021FA17
 	public static ActivityTrapDefenseController GetOrCreateInstance()
 	{
 		if (ActivityTrapDefenseController._Instance == null)
@@ -213,7 +213,7 @@ public class ActivityTrapDefenseController : ActivityControllerBase
 		return ActivityTrapDefenseController._Instance;
 	}
 
-	// Token: 0x06009AC5 RID: 39621 RVA: 0x00217A8B File Offset: 0x00215C8B
+	// Token: 0x06006EA3 RID: 28323 RVA: 0x0022182B File Offset: 0x0021FA2B
 	public static bool CreateInstance()
 	{
 		if (ActivityTrapDefenseController._Instance != null)
@@ -224,28 +224,28 @@ public class ActivityTrapDefenseController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06009AC6 RID: 39622 RVA: 0x00217AA1 File Offset: 0x00215CA1
+	// Token: 0x06006EA4 RID: 28324 RVA: 0x00221841 File Offset: 0x0021FA41
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06009AC7 RID: 39623 RVA: 0x00217AA3 File Offset: 0x00215CA3
+	// Token: 0x06006EA5 RID: 28325 RVA: 0x00221843 File Offset: 0x0021FA43
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityTrapDefenseController._Instance = null;
 	}
 
-	// Token: 0x06009AC8 RID: 39624 RVA: 0x00217AAB File Offset: 0x00215CAB
+	// Token: 0x06006EA6 RID: 28326 RVA: 0x0022184B File Offset: 0x0021FA4B
 	static ActivityTrapDefenseController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityTrapDefenseController.CreateStaticDefaultValue), new Action(ActivityTrapDefenseController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400440F RID: 17423
+	// Token: 0x040044B5 RID: 17589
 	[Nullable(2)]
 	public ActivityTrapDefenseData Data;
 
-	// Token: 0x04004410 RID: 17424
+	// Token: 0x040044B6 RID: 17590
 	[Nullable(2)]
 	private static ActivityTrapDefenseController _Instance;
 }

@@ -1,17 +1,17 @@
 ﻿using System;
 
-// Token: 0x02000F90 RID: 3984
+// Token: 0x02000445 RID: 1093
 public interface IFurnitureAtmosphereLevelData
 {
-	// Token: 0x170007F8 RID: 2040
-	// (get) Token: 0x0600661D RID: 26141
+	// Token: 0x1700081A RID: 2074
+	// (get) Token: 0x060039B5 RID: 14773
 	int Level { get; }
 
-	// Token: 0x170007F9 RID: 2041
-	// (get) Token: 0x0600661E RID: 26142
+	// Token: 0x1700081B RID: 2075
+	// (get) Token: 0x060039B6 RID: 14774
 	int CurLevelAtmosphere { get; }
 
-	// Token: 0x170007FA RID: 2042
-	// (get) Token: 0x0600661F RID: 26143
+	// Token: 0x1700081C RID: 2076
+	// (get) Token: 0x060039B7 RID: 14775
 	int CurLevelMaxAtmosphere { get; }
 }

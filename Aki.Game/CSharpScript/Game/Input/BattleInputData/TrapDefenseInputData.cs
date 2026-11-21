@@ -6,12 +6,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Input.BattleInputData
 {
-	// Token: 0x02006FE3 RID: 28643
+	// Token: 0x02006164 RID: 24932
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseInputData : BattleInputData
 	{
-		// Token: 0x06045A4C RID: 285260 RVA: 0x0114B6E8 File Offset: 0x011498E8
+		// Token: 0x0603BBFD RID: 244733 RVA: 0x010F54DC File Offset: 0x010F36DC
 		public TrapDefenseInputData()
 		{
 			Dictionary<string, EInputAction> dictionary = new Dictionary<string, EInputAction>();
@@ -45,19 +45,19 @@ namespace CSharpScript.Game.Input.BattleInputData
 			base..ctor(EInputDataType.TrapDefense, EInputBindingType.Original);
 		}
 
-		// Token: 0x06045A4D RID: 285261 RVA: 0x0114B813 File Offset: 0x01149A13
+		// Token: 0x0603BBFE RID: 244734 RVA: 0x010F5607 File Offset: 0x010F3807
 		protected override Dictionary<string, EInputAction> OnGetActionMap()
 		{
 			return this.ActionMap;
 		}
 
-		// Token: 0x06045A4E RID: 285262 RVA: 0x0114B81B File Offset: 0x01149A1B
+		// Token: 0x0603BBFF RID: 244735 RVA: 0x010F560F File Offset: 0x010F380F
 		protected override Dictionary<string, EInputAxis> OnGetAxisMap()
 		{
 			return this.AxisMap;
 		}
 
-		// Token: 0x06045A4F RID: 285263 RVA: 0x0114B824 File Offset: 0x01149A24
+		// Token: 0x0603BC00 RID: 244736 RVA: 0x010F5618 File Offset: 0x010F3818
 		protected override bool OnCheckActionInAllowFightActionNameList(string actionName, InputActionHandle inputActionHandle)
 		{
 			if (this.ActionMap.ContainsKey(actionName))
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Input.BattleInputData
 			return string.IsNullOrEmpty(inputDistributeTag) || !InputDistributeModel.Instance.IsTagMatchInputDistributeTags(inputDistributeTag, this.MatchInputDistributeTag, true) || Array.IndexOf<string>(this.AllowActionNameList, actionName) >= 0;
 		}
 
-		// Token: 0x06045A50 RID: 285264 RVA: 0x0114B878 File Offset: 0x01149A78
+		// Token: 0x0603BC01 RID: 244737 RVA: 0x010F566C File Offset: 0x010F386C
 		protected override bool OnCheckAxisInAllowFightAxisNameList(string axisName, InputAxisHandle inputAxisHandle)
 		{
 			if (this.AxisMap.ContainsKey(axisName))
@@ -79,16 +79,16 @@ namespace CSharpScript.Game.Input.BattleInputData
 			return string.IsNullOrEmpty(inputDistributeTag) || !InputDistributeModel.Instance.IsTagMatchInputDistributeTags(inputDistributeTag, this.MatchInputDistributeTag, true);
 		}
 
-		// Token: 0x04024591 RID: 148881
+		// Token: 0x0401F846 RID: 129094
 		private readonly Dictionary<string, EInputAction> ActionMap;
 
-		// Token: 0x04024592 RID: 148882
+		// Token: 0x0401F847 RID: 129095
 		private readonly Dictionary<string, EInputAxis> AxisMap;
 
-		// Token: 0x04024593 RID: 148883
+		// Token: 0x0401F848 RID: 129096
 		private readonly string[] AllowActionNameList;
 
-		// Token: 0x04024594 RID: 148884
+		// Token: 0x0401F849 RID: 129097
 		private readonly string[] MatchInputDistributeTag;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Aki.TDConfigMgr.Action;
@@ -21,14 +20,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B78 RID: 19320
+	// Token: 0x02003B22 RID: 15138
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	[TickController(0)]
 	public class SlidingBlocksController : ControllerBase
 	{
-		// Token: 0x060320F3 RID: 205043 RVA: 0x00B9F500 File Offset: 0x00B9D700
+		// Token: 0x06026E84 RID: 159364 RVA: 0x00AE36B0 File Offset: 0x00AE18B0
 		public override bool Init()
 		{
 			bool result = base.Init();
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x060320F4 RID: 205044 RVA: 0x00B9F514 File Offset: 0x00B9D714
+		// Token: 0x06026E85 RID: 159365 RVA: 0x00AE36C4 File Offset: 0x00AE18C4
 		public override bool Clear()
 		{
 			this.OnRemoveEvents();
@@ -45,21 +44,21 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return base.Clear();
 		}
 
-		// Token: 0x060320F5 RID: 205045 RVA: 0x00B9F528 File Offset: 0x00B9D728
+		// Token: 0x06026E86 RID: 159366 RVA: 0x00AE36D8 File Offset: 0x00AE18D8
 		protected void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.AvoidBlockRoundInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnAvoidBlockRoundInfoNotify));
 			Net.Instance.Register(ENotifyMessageId.AvoidBlockSettlementNotify, new Action<IMessage, Net.CallbackStatus>(this.OnAvoidBlockSettlementNotify));
 		}
 
-		// Token: 0x060320F6 RID: 205046 RVA: 0x00B9F562 File Offset: 0x00B9D762
+		// Token: 0x06026E87 RID: 159367 RVA: 0x00AE3712 File Offset: 0x00AE1912
 		protected void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.AvoidBlockRoundInfoNotify);
 			Net.Instance.UnRegister(ENotifyMessageId.AvoidBlockSettlementNotify);
 		}
 
-		// Token: 0x060320F7 RID: 205047 RVA: 0x00B9F584 File Offset: 0x00B9D784
+		// Token: 0x06026E88 RID: 159368 RVA: 0x00AE3734 File Offset: 0x00AE1934
 		[NullableContext(2)]
 		private void OnAvoidBlockRoundInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -67,7 +66,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			SlidingBlocksModel.Instance.GameData.SetServerData(serverData);
 		}
 
-		// Token: 0x060320F8 RID: 205048 RVA: 0x00B9F5A8 File Offset: 0x00B9D7A8
+		// Token: 0x06026E89 RID: 159369 RVA: 0x00AE3758 File Offset: 0x00AE1958
 		[NullableContext(2)]
 		private void OnAvoidBlockSettlementNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -76,7 +75,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			SlidingBlocksModel.Instance.SwitchStage(SlidingBlocksDefine.EGameStage.Settlement, true);
 		}
 
-		// Token: 0x060320F9 RID: 205049 RVA: 0x00B9F5D8 File Offset: 0x00B9D7D8
+		// Token: 0x06026E8A RID: 159370 RVA: 0x00AE3788 File Offset: 0x00AE1988
 		[NullableContext(2)]
 		private static void RequestToPlayMainLineSequence(Action callback = null)
 		{
@@ -102,7 +101,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}, 0);
 		}
 
-		// Token: 0x060320FA RID: 205050 RVA: 0x00B9F684 File Offset: 0x00B9D884
+		// Token: 0x06026E8B RID: 159371 RVA: 0x00AE3834 File Offset: 0x00AE1A34
 		private void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.SlidingBlockGameStageChanged, new Action(this.OnGameStageChanged));
@@ -110,7 +109,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			EventSystem.Instance.Add<EOperationType, EOperationType>(EEventName.ShowTypeChange, new Action<EOperationType, EOperationType>(this.ShowTypeChange));
 		}
 
-		// Token: 0x060320FB RID: 205051 RVA: 0x00B9F6E8 File Offset: 0x00B9D8E8
+		// Token: 0x06026E8C RID: 159372 RVA: 0x00AE3898 File Offset: 0x00AE1A98
 		private void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.SlidingBlockGameStageChanged, new Action(this.OnGameStageChanged));
@@ -118,7 +117,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			EventSystem.Instance.Remove<EOperationType, EOperationType>(EEventName.ShowTypeChange, new Action<EOperationType, EOperationType>(this.ShowTypeChange));
 		}
 
-		// Token: 0x060320FC RID: 205052 RVA: 0x00B9F74C File Offset: 0x00B9D94C
+		// Token: 0x06026E8D RID: 159373 RVA: 0x00AE38FC File Offset: 0x00AE1AFC
 		private void OnGameStageChanged()
 		{
 			SlidingBlocksModel instance = SlidingBlocksModel.Instance;
@@ -185,7 +184,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x060320FD RID: 205053 RVA: 0x00B9F8F0 File Offset: 0x00B9DAF0
+		// Token: 0x06026E8E RID: 159374 RVA: 0x00AE3AA0 File Offset: 0x00AE1CA0
 		private UniTask SettlementImp(SlidingBlocksGameData gameData)
 		{
 			SlidingBlocksController.<SettlementImp>d__17 <SettlementImp>d__;
@@ -197,7 +196,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <SettlementImp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320FE RID: 205054 RVA: 0x00B9F93C File Offset: 0x00B9DB3C
+		// Token: 0x06026E8F RID: 159375 RVA: 0x00AE3AEC File Offset: 0x00AE1CEC
 		private static void DestroyAllTetromino(SlidingBlocksGameData gameData)
 		{
 			foreach (Tetromino tetromino in gameData.AllTetrominoList)
@@ -207,7 +206,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			gameData.AllTetrominoList.Clear();
 		}
 
-		// Token: 0x060320FF RID: 205055 RVA: 0x00B9F998 File Offset: 0x00B9DB98
+		// Token: 0x06026E90 RID: 159376 RVA: 0x00AE3B48 File Offset: 0x00AE1D48
 		[NullableContext(0)]
 		private UniTask<bool> GameplaySettlementImp([Nullable(1)] SlidingBlocksGameData gameData)
 		{
@@ -220,7 +219,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <GameplaySettlementImp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032100 RID: 205056 RVA: 0x00B9F9E4 File Offset: 0x00B9DBE4
+		// Token: 0x06026E91 RID: 159377 RVA: 0x00AE3B94 File Offset: 0x00AE1D94
 		private void OnSettlementPromptView(EUiViewName viewName, UiViewBase view)
 		{
 			if (viewName != this.GenericPromptViewName)
@@ -235,13 +234,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			waitGenericPromptViewNameOpenPromise.SetResult();
 		}
 
-		// Token: 0x06032101 RID: 205057 RVA: 0x00B9FA26 File Offset: 0x00B9DC26
+		// Token: 0x06026E92 RID: 159378 RVA: 0x00AE3BD6 File Offset: 0x00AE1DD6
 		private void OnSqueezePlayer()
 		{
 			this.SendGameEnd(SlidingBlocksDefine.EGameEndReason.SqueezePlayer);
 		}
 
-		// Token: 0x06032102 RID: 205058 RVA: 0x00B9FA30 File Offset: 0x00B9DC30
+		// Token: 0x06026E93 RID: 159379 RVA: 0x00AE3BE0 File Offset: 0x00AE1DE0
 		private void ShowTypeChange(EOperationType last, EOperationType now)
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.TetrisGameView))
@@ -253,7 +252,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x06032103 RID: 205059 RVA: 0x00B9FA78 File Offset: 0x00B9DC78
+		// Token: 0x06026E94 RID: 159380 RVA: 0x00AE3C28 File Offset: 0x00AE1E28
 		[return: Nullable(0)]
 		public UniTask<bool> StartGame(IFinishTetris config, GeneralLogicTreeContext context)
 		{
@@ -267,7 +266,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <StartGame>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032104 RID: 205060 RVA: 0x00B9FACC File Offset: 0x00B9DCCC
+		// Token: 0x06026E95 RID: 159381 RVA: 0x00AE3C7C File Offset: 0x00AE1E7C
 		public void SendGameEnd(SlidingBlocksDefine.EGameEndReason reason)
 		{
 			SlidingBlocksModel instance = SlidingBlocksModel.Instance;
@@ -341,7 +340,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}, 0);
 		}
 
-		// Token: 0x06032105 RID: 205061 RVA: 0x00B9FC6C File Offset: 0x00B9DE6C
+		// Token: 0x06026E96 RID: 159382 RVA: 0x00AE3E1C File Offset: 0x00AE201C
 		public void OnGameEnd(bool bSuccess)
 		{
 			SlidingBlocksModel instance = SlidingBlocksModel.Instance;
@@ -352,13 +351,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x06032106 RID: 205062 RVA: 0x00B9FC9B File Offset: 0x00B9DE9B
+		// Token: 0x06026E97 RID: 159383 RVA: 0x00AE3E4B File Offset: 0x00AE204B
 		public void DestroyGameplay()
 		{
 			SlidingBlocksModel.Instance.SwitchStage(SlidingBlocksDefine.EGameStage.GameEnd, true);
 		}
 
-		// Token: 0x06032107 RID: 205063 RVA: 0x00B9FCAC File Offset: 0x00B9DEAC
+		// Token: 0x06026E98 RID: 159384 RVA: 0x00AE3E5C File Offset: 0x00AE205C
 		public bool SpawnTetrominoOnMainLineMode(TetrisThrowBlock config)
 		{
 			SlidingBlocksModel instance = SlidingBlocksModel.Instance;
@@ -376,7 +375,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return this.SpawnTetrominoOnMainLineModeImp(config, gameData);
 		}
 
-		// Token: 0x06032108 RID: 205064 RVA: 0x00B9FD24 File Offset: 0x00B9DF24
+		// Token: 0x06026E99 RID: 159385 RVA: 0x00AE3ED4 File Offset: 0x00AE20D4
 		private bool SpawnTetrominoOnMainLineModeImp(TetrisThrowBlock config, SlidingBlocksGameData gameData)
 		{
 			int num = gameData.AvailableTetrominoConfigs.FindIndex((ITetrominoConfig value) => value.ShapeName == config.ShapeName);
@@ -404,7 +403,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return true;
 		}
 
-		// Token: 0x06032109 RID: 205065 RVA: 0x00B9FE74 File Offset: 0x00B9E074
+		// Token: 0x06026E9A RID: 159386 RVA: 0x00AE4024 File Offset: 0x00AE2224
 		public void MainLineModeTriggerDelayFall(TetrisTriggerDelayFall config)
 		{
 			SlidingBlocksModel instance = SlidingBlocksModel.Instance;
@@ -419,15 +418,16 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 				global::Log.Instance.Error(ELogModule.SlidingBlocks, ELogAuthor.YSQ, "MainLineModeTriggerDelayFall:玩法不是主线模式", default(ReadOnlySpan<ValueTuple<string, object>>));
 				return;
 			}
-			foreach (Tetromino tetromino2 in from tetromino in gameData.AllTetrominoList
-			where tetromino.GetState() == ETetrominoState.WaitFallingEvent
-			select tetromino)
+			foreach (Tetromino tetromino in gameData.AllTetrominoList)
 			{
-				tetromino2.SetState(ETetrominoState.InitFallData);
+				if (tetromino.GetState() == ETetrominoState.WaitFallingEvent)
+				{
+					tetromino.SetState(ETetrominoState.InitFallData);
+				}
 			}
 		}
 
-		// Token: 0x0603210A RID: 205066 RVA: 0x00B9FF44 File Offset: 0x00B9E144
+		// Token: 0x06026E9B RID: 159387 RVA: 0x00AE40E4 File Offset: 0x00AE22E4
 		public bool MainLineModeGameComplete(TetrisGameComplete config)
 		{
 			SlidingBlocksModel instance = SlidingBlocksModel.Instance;
@@ -447,7 +447,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return true;
 		}
 
-		// Token: 0x0603210B RID: 205067 RVA: 0x00B9FFC8 File Offset: 0x00B9E1C8
+		// Token: 0x06026E9C RID: 159388 RVA: 0x00AE4168 File Offset: 0x00AE2368
 		[NullableContext(2)]
 		private static global::Transform InitOriginTransform(int originPosEntityId)
 		{
@@ -481,7 +481,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return transform;
 		}
 
-		// Token: 0x0603210C RID: 205068 RVA: 0x00BA018C File Offset: 0x00B9E38C
+		// Token: 0x06026E9D RID: 159389 RVA: 0x00AE432C File Offset: 0x00AE252C
 		[NullableContext(0)]
 		private static UniTask<bool> CreatePresetMinos()
 		{
@@ -492,7 +492,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <CreatePresetMinos>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603210D RID: 205069 RVA: 0x00BA01C8 File Offset: 0x00B9E3C8
+		// Token: 0x06026E9E RID: 159390 RVA: 0x00AE4368 File Offset: 0x00AE2568
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -507,7 +507,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <LoadBoxMesh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603210E RID: 205070 RVA: 0x00BA0204 File Offset: 0x00B9E404
+		// Token: 0x06026E9F RID: 159391 RVA: 0x00AE43A4 File Offset: 0x00AE25A4
 		private static void AddPresetMinoData(string styleName, double x, double y)
 		{
 			if (!SlidingBlocksModel.Instance.AddMino(styleName, x, y, SlidingBlocksDefine.EAddMinoReason.CreatePresetMino))
@@ -528,7 +528,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x0603210F RID: 205071 RVA: 0x00BA0290 File Offset: 0x00B9E490
+		// Token: 0x06026EA0 RID: 159392 RVA: 0x00AE4430 File Offset: 0x00AE2630
 		private static UniTask PreloadCubeMaterials()
 		{
 			SlidingBlocksController.<PreloadCubeMaterials>d__35 <PreloadCubeMaterials>d__;
@@ -538,7 +538,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <PreloadCubeMaterials>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032110 RID: 205072 RVA: 0x00BA02CC File Offset: 0x00B9E4CC
+		// Token: 0x06026EA1 RID: 159393 RVA: 0x00AE446C File Offset: 0x00AE266C
 		private static UniTask PreloadLineClearEffect(SlidingBlocksGameData gameData)
 		{
 			SlidingBlocksController.<PreloadLineClearEffect>d__36 <PreloadLineClearEffect>d__;
@@ -549,7 +549,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <PreloadLineClearEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032111 RID: 205073 RVA: 0x00BA0310 File Offset: 0x00B9E510
+		// Token: 0x06026EA2 RID: 159394 RVA: 0x00AE44B0 File Offset: 0x00AE26B0
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -566,7 +566,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <PreloadCubeDestroyEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032112 RID: 205074 RVA: 0x00BA0354 File Offset: 0x00B9E554
+		// Token: 0x06026EA3 RID: 159395 RVA: 0x00AE44F4 File Offset: 0x00AE26F4
 		private static UniTask PlayCharacterOutlineEffect(SlidingBlocksGameData gameData)
 		{
 			SlidingBlocksController.<PlayCharacterOutlineEffect>d__38 <PlayCharacterOutlineEffect>d__;
@@ -577,7 +577,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <PlayCharacterOutlineEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032113 RID: 205075 RVA: 0x00BA0398 File Offset: 0x00B9E598
+		// Token: 0x06026EA4 RID: 159396 RVA: 0x00AE4538 File Offset: 0x00AE2738
 		public static UniTask PlayAreaLoopEffect(SlidingBlocksGameData gameData)
 		{
 			SlidingBlocksController.<PlayAreaLoopEffect>d__39 <PlayAreaLoopEffect>d__;
@@ -588,7 +588,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <PlayAreaLoopEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032114 RID: 205076 RVA: 0x00BA03DC File Offset: 0x00B9E5DC
+		// Token: 0x06026EA5 RID: 159397 RVA: 0x00AE457C File Offset: 0x00AE277C
 		private UniTask PlayCountDown()
 		{
 			SlidingBlocksController.<PlayCountDown>d__40 <PlayCountDown>d__;
@@ -599,7 +599,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <PlayCountDown>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032115 RID: 205077 RVA: 0x00BA041F File Offset: 0x00B9E61F
+		// Token: 0x06026EA6 RID: 159398 RVA: 0x00AE45BF File Offset: 0x00AE27BF
 		private void OnCountDownViewClose(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.LevelGamePlayPrepareCountDown)
@@ -614,7 +614,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			waitCountDownViewNameViewClosePromise.SetResult();
 		}
 
-		// Token: 0x06032116 RID: 205078 RVA: 0x00BA0440 File Offset: 0x00B9E640
+		// Token: 0x06026EA7 RID: 159399 RVA: 0x00AE45E0 File Offset: 0x00AE27E0
 		[NullableContext(0)]
 		private UniTask<bool> PlaySequenceOnMainLineMode([Nullable(1)] SlidingBlocksGameData gameData)
 		{
@@ -627,7 +627,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <PlaySequenceOnMainLineMode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032117 RID: 205079 RVA: 0x00BA048B File Offset: 0x00B9E68B
+		// Token: 0x06026EA8 RID: 159400 RVA: 0x00AE462B File Offset: 0x00AE282B
 		private void OnAddEntity(EAddEntityType addType, EntityHandle handle, AActor actor)
 		{
 			if (SlidingBlocksModel.Instance.GameData.SequenceEntityPbDataId != handle.PbDataId)
@@ -642,7 +642,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			waitMainLineSequenceEntityInitPromise.SetResult();
 		}
 
-		// Token: 0x06032118 RID: 205080 RVA: 0x00BA04B8 File Offset: 0x00B9E6B8
+		// Token: 0x06026EA9 RID: 159401 RVA: 0x00AE4658 File Offset: 0x00AE2858
 		protected override void OnTick(float delta)
 		{
 			SlidingBlocksModel instance = SlidingBlocksModel.Instance;
@@ -665,7 +665,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			SlidingBlocksController.UpdateTetrominos(delta2, gameData);
 		}
 
-		// Token: 0x06032119 RID: 205081 RVA: 0x00BA0530 File Offset: 0x00B9E730
+		// Token: 0x06026EAA RID: 159402 RVA: 0x00AE46D0 File Offset: 0x00AE28D0
 		private static void DrawDebug(SlidingBlocksGameData gameData)
 		{
 			if (!SlidingBlocksModel.Instance.EnableDebug || !SlidingBlocksModel.Instance.IsInGame)
@@ -724,7 +724,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x0603211A RID: 205082 RVA: 0x00BA0820 File Offset: 0x00B9EA20
+		// Token: 0x06026EAB RID: 159403 RVA: 0x00AE49C0 File Offset: 0x00AE2BC0
 		private void UpdateGameLifeCycle(float delta, SlidingBlocksGameData gameData)
 		{
 			switch (gameData.PlayMode)
@@ -761,7 +761,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x0603211B RID: 205083 RVA: 0x00BA08D4 File Offset: 0x00B9EAD4
+		// Token: 0x06026EAC RID: 159404 RVA: 0x00AE4A74 File Offset: 0x00AE2C74
 		private static bool CheckMainLineModeSequenceStop(int pbDataId)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(pbDataId);
@@ -774,7 +774,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return !(!sceneItemReferenceComponent) && !sceneItemReferenceComponent.IsPlaying();
 		}
 
-		// Token: 0x0603211C RID: 205084 RVA: 0x00BA0934 File Offset: 0x00B9EB34
+		// Token: 0x06026EAD RID: 159405 RVA: 0x00AE4AD4 File Offset: 0x00AE2CD4
 		private static void UpdateEndlessSpeedLevel(float delta, SlidingBlocksGameData gameData)
 		{
 			gameData.SpeedUpTime += (double)delta * TimeUtil.Instance.Millisecond;
@@ -788,7 +788,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x0603211D RID: 205085 RVA: 0x00BA09B0 File Offset: 0x00B9EBB0
+		// Token: 0x06026EAE RID: 159406 RVA: 0x00AE4B50 File Offset: 0x00AE2D50
 		private static void UpdateTetrominoPrepareTime(SlidingBlocksGameData gameData)
 		{
 			float initPrepareTime = gameData.InitPrepareTime;
@@ -796,7 +796,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			gameData.PrepareTime = Math.Max(SlidingBlocksGlobal.Setting.MinCubeControlTime, initPrepareTime - (float)(gameData.SpeedLevel - 1) * singleControlTimeReduce);
 		}
 
-		// Token: 0x0603211E RID: 205086 RVA: 0x00BA09F4 File Offset: 0x00B9EBF4
+		// Token: 0x06026EAF RID: 159407 RVA: 0x00AE4B94 File Offset: 0x00AE2D94
 		private void UpdatePlayerCoord(SlidingBlocksGameData gameData)
 		{
 			if (gameData.OriginTransform == null)
@@ -838,18 +838,19 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x0603211F RID: 205087 RVA: 0x00BA0AF0 File Offset: 0x00B9ECF0
+		// Token: 0x06026EB0 RID: 159408 RVA: 0x00AE4C90 File Offset: 0x00AE2E90
 		private static void UpdateTetrominos(float delta, SlidingBlocksGameData gameData)
 		{
-			foreach (Tetromino tetromino2 in from tetromino in gameData.AllTetrominoList
-			where tetromino.GetState() != ETetrominoState.Lock
-			select tetromino)
+			foreach (Tetromino tetromino in gameData.AllTetrominoList)
 			{
-				tetromino2.OnTick(delta, gameData);
+				if (tetromino.GetState() != ETetrominoState.Lock)
+				{
+					tetromino.OnTick(delta, gameData);
+				}
 			}
 		}
 
-		// Token: 0x06032120 RID: 205088 RVA: 0x00BA0B60 File Offset: 0x00B9ED60
+		// Token: 0x06026EB1 RID: 159409 RVA: 0x00AE4CF0 File Offset: 0x00AE2EF0
 		private static void UpdateMinos(float delta, SlidingBlocksGameData gameData)
 		{
 			Mino[] array = gameData.TickMinos.ToArray();
@@ -859,7 +860,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x06032121 RID: 205089 RVA: 0x00BA0B90 File Offset: 0x00B9ED90
+		// Token: 0x06026EB2 RID: 159410 RVA: 0x00AE4D20 File Offset: 0x00AE2F20
 		private static void UpdateMinoTriggerTopEffect(SlidingBlocksGameData gameData)
 		{
 			if (gameData.PlayMode == ETetrisPlayMode.MainLine)
@@ -898,7 +899,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			gameData.AreaLoop2EffectHandle = instance.SpawnEffect(world, ftransformDouble, path, "SlidingBlocksController.UpdateMinoTriggerTopEffect", null, global::EEffectType.Scene, null, null, null, false, false);
 		}
 
-		// Token: 0x06032122 RID: 205090 RVA: 0x00BA0CD8 File Offset: 0x00B9EED8
+		// Token: 0x06026EB3 RID: 159411 RVA: 0x00AE4E68 File Offset: 0x00AE3068
 		private UniTask CheckLineClear(SlidingBlocksGameData gameData)
 		{
 			SlidingBlocksController.<CheckLineClear>d__54 <CheckLineClear>d__;
@@ -910,7 +911,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <CheckLineClear>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032123 RID: 205091 RVA: 0x00BA0D24 File Offset: 0x00B9EF24
+		// Token: 0x06026EB4 RID: 159412 RVA: 0x00AE4EB4 File Offset: 0x00AE30B4
 		private UniTask TryExecuteLineClear(SlidingBlocksGameData gameData)
 		{
 			SlidingBlocksController.<TryExecuteLineClear>d__55 <TryExecuteLineClear>d__;
@@ -922,7 +923,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <TryExecuteLineClear>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032124 RID: 205092 RVA: 0x00BA0D70 File Offset: 0x00B9EF70
+		// Token: 0x06026EB5 RID: 159413 RVA: 0x00AE4F00 File Offset: 0x00AE3100
 		private static void ClearWaitRemoveTetrominoList(SlidingBlocksGameData gameData)
 		{
 			if (gameData.WaitRemoveTetrominoList.Count == 0)
@@ -940,7 +941,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			gameData.WaitRemoveTetrominoList.Clear();
 		}
 
-		// Token: 0x06032125 RID: 205093 RVA: 0x00BA0DF4 File Offset: 0x00B9EFF4
+		// Token: 0x06026EB6 RID: 159414 RVA: 0x00AE4F84 File Offset: 0x00AE3184
 		private static UniTask TryFallAfterLineClear(SlidingBlocksGameData gameData, List<double> clearLineIndexArr)
 		{
 			SlidingBlocksController.<TryFallAfterLineClear>d__57 <TryFallAfterLineClear>d__;
@@ -952,7 +953,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <TryFallAfterLineClear>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032126 RID: 205094 RVA: 0x00BA0E40 File Offset: 0x00B9F040
+		// Token: 0x06026EB7 RID: 159415 RVA: 0x00AE4FD0 File Offset: 0x00AE31D0
 		private static void UpdateTetrominoSpawn(float delta, SlidingBlocksGameData gameData)
 		{
 			ETetrisPlayMode playMode = gameData.PlayMode;
@@ -963,7 +964,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			SlidingBlocksController.NormalModeSpawnTetromino(delta, gameData);
 		}
 
-		// Token: 0x06032127 RID: 205095 RVA: 0x00BA0E64 File Offset: 0x00B9F064
+		// Token: 0x06026EB8 RID: 159416 RVA: 0x00AE4FF4 File Offset: 0x00AE31F4
 		private static void NormalModeSpawnTetromino(float delta, SlidingBlocksGameData gameData)
 		{
 			if (gameData.CurTetromino != null)
@@ -989,7 +990,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			SlidingBlocksController.IncreaseSpawnTetrominoListIndex(gameData);
 		}
 
-		// Token: 0x06032128 RID: 205096 RVA: 0x00BA0F3A File Offset: 0x00B9F13A
+		// Token: 0x06026EB9 RID: 159417 RVA: 0x00AE50CA File Offset: 0x00AE32CA
 		private static void IncreaseSpawnTetrominoListIndex(SlidingBlocksGameData gameData)
 		{
 			if (gameData.CurSpawnTetrominoList == null)
@@ -1004,7 +1005,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x06032129 RID: 205097 RVA: 0x00BA0F74 File Offset: 0x00B9F174
+		// Token: 0x06026EBA RID: 159418 RVA: 0x00AE5104 File Offset: 0x00AE3304
 		private static List<ITetrominoConfig> TryGetOrSpawnTetrominoList(SlidingBlocksGameData gameData)
 		{
 			if (gameData.CurSpawnTetrominoList != null)
@@ -1016,7 +1017,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return gameData.CurSpawnTetrominoList;
 		}
 
-		// Token: 0x0603212A RID: 205098 RVA: 0x00BA0FA4 File Offset: 0x00B9F1A4
+		// Token: 0x06026EBB RID: 159419 RVA: 0x00AE5134 File Offset: 0x00AE3334
 		private static List<ITetrominoConfig> SpawnRandomTetrominoList(List<ITetrominoConfig> tetrominoConfigs)
 		{
 			List<ITetrominoConfig> list = new List<ITetrominoConfig>(tetrominoConfigs);
@@ -1036,7 +1037,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return list;
 		}
 
-		// Token: 0x0603212B RID: 205099 RVA: 0x00BA1010 File Offset: 0x00B9F210
+		// Token: 0x06026EBC RID: 159420 RVA: 0x00AE51A0 File Offset: 0x00AE33A0
 		private static UniTask PlayDeadEffect(SlidingBlocksGameData gameData)
 		{
 			SlidingBlocksController.<PlayDeadEffect>d__63 <PlayDeadEffect>d__;
@@ -1047,7 +1048,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <PlayDeadEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603212C RID: 205100 RVA: 0x00BA1054 File Offset: 0x00B9F254
+		// Token: 0x06026EBD RID: 159421 RVA: 0x00AE51E4 File Offset: 0x00AE33E4
 		private UniTask PlayDeadMaterialControllerEffect(SlidingBlocksGameData gameData)
 		{
 			SlidingBlocksController.<PlayDeadMaterialControllerEffect>d__64 <PlayDeadMaterialControllerEffect>d__;
@@ -1059,7 +1060,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <PlayDeadMaterialControllerEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603212D RID: 205101 RVA: 0x00BA109F File Offset: 0x00B9F29F
+		// Token: 0x06026EBE RID: 159422 RVA: 0x00AE522F File Offset: 0x00AE342F
 		private void OnRemoveMaterialController(int id)
 		{
 			if (SlidingBlocksModel.Instance.GameData.CharacterOutlineEffectHandle != id)
@@ -1074,7 +1075,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			waitMaterialControllerPromise.SetResult();
 		}
 
-		// Token: 0x0603212E RID: 205102 RVA: 0x00BA10C4 File Offset: 0x00B9F2C4
+		// Token: 0x06026EBF RID: 159423 RVA: 0x00AE5254 File Offset: 0x00AE3454
 		private static void GameplayTriggerLogReport(int treeConfigId)
 		{
 			TetrisGameTriggerLogEvent logData = new TetrisGameTriggerLogEvent
@@ -1084,7 +1085,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			LogReportController.Instance.LogReport(logData);
 		}
 
-		// Token: 0x0603212F RID: 205103 RVA: 0x00BA10EC File Offset: 0x00B9F2EC
+		// Token: 0x06026EC0 RID: 159424 RVA: 0x00AE527C File Offset: 0x00AE347C
 		public static void GameplayFinishLogReport(SlidingBlocksGameData gameData)
 		{
 			if (gameData.PlayMode == ETetrisPlayMode.MainLine)
@@ -1116,7 +1117,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			LogReportController.Instance.LogReport(tetrisGameFinishLogEvent);
 		}
 
-		// Token: 0x06032130 RID: 205104 RVA: 0x00BA118B File Offset: 0x00B9F38B
+		// Token: 0x06026EC1 RID: 159425 RVA: 0x00AE531B File Offset: 0x00AE351B
 		[NullableContext(2)]
 		public static int OpenAudio(string @event)
 		{
@@ -1127,8 +1128,8 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return AudioSystem.Instance.PostEvent(@event);
 		}
 
-		// Token: 0x17007C31 RID: 31793
-		// (get) Token: 0x06032131 RID: 205105 RVA: 0x00BA119D File Offset: 0x00B9F39D
+		// Token: 0x17004FDB RID: 20443
+		// (get) Token: 0x06026EC2 RID: 159426 RVA: 0x00AE532D File Offset: 0x00AE352D
 		public static SlidingBlocksController Instance
 		{
 			get
@@ -1137,7 +1138,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x06032132 RID: 205106 RVA: 0x00BA11A4 File Offset: 0x00B9F3A4
+		// Token: 0x06026EC3 RID: 159427 RVA: 0x00AE5334 File Offset: 0x00AE3534
 		public static SlidingBlocksController GetOrCreateInstance()
 		{
 			if (SlidingBlocksController._Instance == null)
@@ -1147,7 +1148,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return SlidingBlocksController._Instance;
 		}
 
-		// Token: 0x06032133 RID: 205107 RVA: 0x00BA11B8 File Offset: 0x00B9F3B8
+		// Token: 0x06026EC4 RID: 159428 RVA: 0x00AE5348 File Offset: 0x00AE3548
 		public static bool CreateInstance()
 		{
 			if (SlidingBlocksController._Instance != null)
@@ -1158,57 +1159,57 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return true;
 		}
 
-		// Token: 0x06032134 RID: 205108 RVA: 0x00BA11CE File Offset: 0x00B9F3CE
+		// Token: 0x06026EC5 RID: 159429 RVA: 0x00AE535E File Offset: 0x00AE355E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06032135 RID: 205109 RVA: 0x00BA11D0 File Offset: 0x00B9F3D0
+		// Token: 0x06026EC6 RID: 159430 RVA: 0x00AE5360 File Offset: 0x00AE3560
 		public static void ResetStaticDefaultValue()
 		{
 			SlidingBlocksController._Instance = null;
 		}
 
-		// Token: 0x06032136 RID: 205110 RVA: 0x00BA11D8 File Offset: 0x00B9F3D8
+		// Token: 0x06026EC7 RID: 159431 RVA: 0x00AE5368 File Offset: 0x00AE3568
 		static SlidingBlocksController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SlidingBlocksController.CreateStaticDefaultValue), new Action(SlidingBlocksController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AACE RID: 109262
+		// Token: 0x04015422 RID: 87074
 		private readonly global::Vector PlayerLocalLocation = global::Vector.Create();
 
-		// Token: 0x0401AACF RID: 109263
+		// Token: 0x04015423 RID: 87075
 		[Nullable(2)]
 		private CustomPromise WaitMainLineSequenceEntityInitPromise;
 
-		// Token: 0x0401AAD0 RID: 109264
+		// Token: 0x04015424 RID: 87076
 		private readonly List<double> CacheClearLineIndexArr = new List<double>();
 
-		// Token: 0x0401AAD1 RID: 109265
+		// Token: 0x04015425 RID: 87077
 		[Nullable(2)]
 		private CustomPromise WaitMaterialControllerPromise;
 
-		// Token: 0x0401AAD2 RID: 109266
+		// Token: 0x04015426 RID: 87078
 		private EUiViewName? GenericPromptViewName;
 
-		// Token: 0x0401AAD3 RID: 109267
+		// Token: 0x04015427 RID: 87079
 		[Nullable(2)]
 		private CustomPromise WaitGenericPromptViewNameOpenPromise;
 
-		// Token: 0x0401AAD4 RID: 109268
+		// Token: 0x04015428 RID: 87080
 		[Nullable(2)]
 		private CustomPromise WaitCountDownViewNameViewClosePromise;
 
-		// Token: 0x0401AAD5 RID: 109269
+		// Token: 0x04015429 RID: 87081
 		[Nullable(2)]
 		private static SlidingBlocksController _Instance;
 
-		// Token: 0x0200AD53 RID: 44371
+		// Token: 0x02009774 RID: 38772
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04034A68 RID: 215656
+			// Token: 0x0402F414 RID: 193556
 			[Nullable(new byte[]
 			{
 				0,

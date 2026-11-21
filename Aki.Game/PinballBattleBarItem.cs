@@ -8,18 +8,18 @@ using CSharpScript.Game.KuroSimpleCombat.PB;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CE5 RID: 7397
+// Token: 0x020011A7 RID: 4519
 [NullableContext(2)]
 [Nullable(0)]
 public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 {
-	// Token: 0x0600E013 RID: 57363 RVA: 0x00347D9C File Offset: 0x00345F9C
+	// Token: 0x0600B430 RID: 46128 RVA: 0x003537C4 File Offset: 0x003519C4
 	static PinballBattleBarItem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PinballBattleBarItem.CreateStaticDefaultValue), new Action(PinballBattleBarItem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600E014 RID: 57364 RVA: 0x00347DBB File Offset: 0x00345FBB
+	// Token: 0x0600B431 RID: 46129 RVA: 0x003537E3 File Offset: 0x003519E3
 	public static void CreateStaticDefaultValue()
 	{
 		PinballBattleBarItem.CurBarChargeType = EKSC_AttrType.SpecialEnergy3;
@@ -33,7 +33,7 @@ public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0600E015 RID: 57365 RVA: 0x00347DE1 File Offset: 0x00345FE1
+	// Token: 0x0600B432 RID: 46130 RVA: 0x00353809 File Offset: 0x00351A09
 	public static void ResetStaticDefaultValue()
 	{
 		PinballBattleBarItem.CurBarChargeType = EKSC_AttrType.EAttributeType_None;
@@ -41,7 +41,7 @@ public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 		PinballBattleBarItem.LevelCompList = null;
 	}
 
-	// Token: 0x0600E016 RID: 57366 RVA: 0x00347DF8 File Offset: 0x00345FF8
+	// Token: 0x0600B433 RID: 46131 RVA: 0x00353820 File Offset: 0x00351A20
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -59,21 +59,21 @@ public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E017 RID: 57367 RVA: 0x00347EA3 File Offset: 0x003460A3
+	// Token: 0x0600B434 RID: 46132 RVA: 0x003538CB File Offset: 0x00351ACB
 	protected override void OnStart()
 	{
 		this.TryBindTeamEntity();
 		EventSystem.Instance.Add<int>(EEventName.OnPinballEntityCreated, new Action<int>(this.OnEntityCreated));
 	}
 
-	// Token: 0x0600E018 RID: 57368 RVA: 0x00347EC7 File Offset: 0x003460C7
+	// Token: 0x0600B435 RID: 46133 RVA: 0x003538EF File Offset: 0x00351AEF
 	protected override void OnBeforeDestroy()
 	{
 		this.UnBindAttrDelegate();
 		EventSystem.Instance.Remove(EEventName.OnPinballEntityCreated, new Action<int>(this.OnEntityCreated));
 	}
 
-	// Token: 0x0600E019 RID: 57369 RVA: 0x00347EEB File Offset: 0x003460EB
+	// Token: 0x0600B436 RID: 46134 RVA: 0x00353913 File Offset: 0x00351B13
 	private void OnEntityCreated(int entityId)
 	{
 		if (entityId == 10001)
@@ -82,7 +82,7 @@ public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E01A RID: 57370 RVA: 0x00347EFC File Offset: 0x003460FC
+	// Token: 0x0600B437 RID: 46135 RVA: 0x00353924 File Offset: 0x00351B24
 	private void TryBindTeamEntity()
 	{
 		AKSC_Shape2D_Entity_TeamPlayer kscTeamPlayer = (KuroSimpleCombatController.Instance.CurSubController as PinballBattleSubController).KscTeamPlayer;
@@ -119,7 +119,7 @@ public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E01B RID: 57371 RVA: 0x00347FA8 File Offset: 0x003461A8
+	// Token: 0x0600B438 RID: 46136 RVA: 0x003539D0 File Offset: 0x00351BD0
 	[NullableContext(1)]
 	public void Init(AKSC_Entity kscEntity, List<float> barLevelChargeRequestList)
 	{
@@ -143,7 +143,7 @@ public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 		this.BindAttrDelegate(uksc_AttrSet);
 	}
 
-	// Token: 0x0600E01C RID: 57372 RVA: 0x00348068 File Offset: 0x00346268
+	// Token: 0x0600B439 RID: 46137 RVA: 0x00353A90 File Offset: 0x00351C90
 	[NullableContext(1)]
 	public void BindAttrDelegate(UKSC_AttrSet attrSet)
 	{
@@ -155,7 +155,7 @@ public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 		this.OwnerAttrSet = attrSet;
 	}
 
-	// Token: 0x0600E01D RID: 57373 RVA: 0x003480D4 File Offset: 0x003462D4
+	// Token: 0x0600B43A RID: 46138 RVA: 0x00353AFC File Offset: 0x00351CFC
 	public void UnBindAttrDelegate()
 	{
 		if (this.OwnerAttrSet != null)
@@ -176,19 +176,19 @@ public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E01E RID: 57374 RVA: 0x0034815C File Offset: 0x0034635C
+	// Token: 0x0600B43B RID: 46139 RVA: 0x00353B84 File Offset: 0x00351D84
 	private void OnBarChargeChange(EKSC_AttrType attrType, int value)
 	{
 		this.UpdateBarChargeDisplay();
 	}
 
-	// Token: 0x0600E01F RID: 57375 RVA: 0x00348164 File Offset: 0x00346364
+	// Token: 0x0600B43C RID: 46140 RVA: 0x00353B8C File Offset: 0x00351D8C
 	private void OnBarMaxChargeChange(EKSC_AttrType attrType, int value)
 	{
 		this.UpdateBarChargeDisplay();
 	}
 
-	// Token: 0x0600E020 RID: 57376 RVA: 0x0034816C File Offset: 0x0034636C
+	// Token: 0x0600B43D RID: 46141 RVA: 0x00353B94 File Offset: 0x00351D94
 	private void UpdateBarChargeDisplay()
 	{
 		if (this.OwnerAttrSet == null)
@@ -203,7 +203,7 @@ public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 		this.SetProgress(curLevel, percent);
 	}
 
-	// Token: 0x0600E021 RID: 57377 RVA: 0x003481C3 File Offset: 0x003463C3
+	// Token: 0x0600B43E RID: 46142 RVA: 0x00353BEB File Offset: 0x00351DEB
 	private void SetProgress(int curLevel, float percent)
 	{
 		if (this.CurLevel != -1 && this.CurLevel != curLevel)
@@ -218,7 +218,7 @@ public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E022 RID: 57378 RVA: 0x00348203 File Offset: 0x00346403
+	// Token: 0x0600B43F RID: 46143 RVA: 0x00353C2B File Offset: 0x00351E2B
 	private void ClearPreviousProgress()
 	{
 		this.SetLevelFillAmount(this.CurLevel, 0f);
@@ -228,7 +228,7 @@ public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E023 RID: 57379 RVA: 0x00348237 File Offset: 0x00346437
+	// Token: 0x0600B440 RID: 46144 RVA: 0x00353C5F File Offset: 0x00351E5F
 	private void SetLevelFillAmount(int level, float amount)
 	{
 		if (level < 0 || level >= PinballBattleBarItem.LevelCompList.Length)
@@ -243,13 +243,13 @@ public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 		texture.SetFillAmount(amount);
 	}
 
-	// Token: 0x0600E024 RID: 57380 RVA: 0x00348260 File Offset: 0x00346460
+	// Token: 0x0600B441 RID: 46145 RVA: 0x00353C88 File Offset: 0x00351E88
 	private int GetMaxBarLevel()
 	{
 		return this.BarLevelChargeRequestList.Count;
 	}
 
-	// Token: 0x0600E025 RID: 57381 RVA: 0x00348270 File Offset: 0x00346470
+	// Token: 0x0600B442 RID: 46146 RVA: 0x00353C98 File Offset: 0x00351E98
 	public void GetBarLevelAndPercent(float newValue, out int curLevel, out float percentToNextLevel)
 	{
 		curLevel = 0;
@@ -273,28 +273,28 @@ public class PinballBattleBarItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x04006732 RID: 26418
+	// Token: 0x04006811 RID: 26641
 	private static EKSC_AttrType CurBarChargeType;
 
-	// Token: 0x04006733 RID: 26419
+	// Token: 0x04006812 RID: 26642
 	private static EKSC_AttrType MaxBarChargeType;
 
-	// Token: 0x04006734 RID: 26420
+	// Token: 0x04006813 RID: 26643
 	private static int[] LevelCompList;
 
-	// Token: 0x04006735 RID: 26421
+	// Token: 0x04006814 RID: 26644
 	private int CurLevel = -1;
 
-	// Token: 0x04006736 RID: 26422
+	// Token: 0x04006815 RID: 26645
 	private UKSC_AttrSet OwnerAttrSet;
 
-	// Token: 0x04006737 RID: 26423
+	// Token: 0x04006816 RID: 26646
 	[Nullable(1)]
 	private readonly List<float> BarLevelChargeRequestList = new List<float>();
 
-	// Token: 0x04006738 RID: 26424
+	// Token: 0x04006817 RID: 26647
 	private FOnKSCAttrChange DelegateAttrChange;
 
-	// Token: 0x04006739 RID: 26425
+	// Token: 0x04006818 RID: 26648
 	private FOnKSCAttrChange DelegateMaxAttrChange;
 }

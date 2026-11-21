@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005259 RID: 21081
+	// Token: 0x020057C1 RID: 22465
 	public class IFireBoxFishEffectT
 	{
-		// Token: 0x17009A69 RID: 39529
-		// (get) Token: 0x060224B1 RID: 140465 RVA: 0x004C148B File Offset: 0x004BF68B
-		// (set) Token: 0x060224B2 RID: 140466 RVA: 0x004C1493 File Offset: 0x004BF693
+		// Token: 0x1700A265 RID: 41573
+		// (get) Token: 0x06024447 RID: 148551 RVA: 0x004FBF4F File Offset: 0x004FA14F
+		// (set) Token: 0x06024448 RID: 148552 RVA: 0x004FBF57 File Offset: 0x004FA157
 		public EGraph3dEffectType Type { get; set; }
 
-		// Token: 0x17009A6A RID: 39530
-		// (get) Token: 0x060224B3 RID: 140467 RVA: 0x004C149C File Offset: 0x004BF69C
-		// (set) Token: 0x060224B4 RID: 140468 RVA: 0x004C14A4 File Offset: 0x004BF6A4
+		// Token: 0x1700A266 RID: 41574
+		// (get) Token: 0x06024449 RID: 148553 RVA: 0x004FBF60 File Offset: 0x004FA160
+		// (set) Token: 0x0602444A RID: 148554 RVA: 0x004FBF68 File Offset: 0x004FA168
 		public string Effect { get; set; }
 
-		// Token: 0x060224B5 RID: 140469 RVA: 0x004C14AD File Offset: 0x004BF6AD
+		// Token: 0x0602444B RID: 148555 RVA: 0x004FBF71 File Offset: 0x004FA171
 		public IFireBoxFishEffectT()
 		{
 			this.Type = EGraph3dEffectType.FireBoxFish;

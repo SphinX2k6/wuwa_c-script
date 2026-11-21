@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001542 RID: 5442
+	// Token: 0x020015B8 RID: 5560
 	public enum MowTowerRewardStatus
 	{
-		// Token: 0x0400A559 RID: 42329
+		// Token: 0x0400A9B7 RID: 43447
 		[OriginalName("CanNoReward")]
 		CanNoReward,
-		// Token: 0x0400A55A RID: 42330
+		// Token: 0x0400A9B8 RID: 43448
 		[OriginalName("CanReward")]
 		CanReward,
-		// Token: 0x0400A55B RID: 42331
+		// Token: 0x0400A9B9 RID: 43449
 		[OriginalName("Rewarded")]
 		Rewarded
 	}

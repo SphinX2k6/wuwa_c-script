@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067E4 RID: 26596
+	// Token: 0x02005734 RID: 22324
 	public class DangoBrawlBackpackShopRateView : UiViewBase
 	{
-		// Token: 0x060423C1 RID: 271297 RVA: 0x01012340 File Offset: 0x01010540
+		// Token: 0x06036F17 RID: 225047 RVA: 0x00F537D8 File Offset: 0x00F519D8
 		[NullableContext(1)]
 		public unsafe DangoBrawlBackpackShopRateView(UiViewInfo viewInfo)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base..ctor(viewInfo);
 		}
 
-		// Token: 0x060423C2 RID: 271298 RVA: 0x010123E8 File Offset: 0x010105E8
+		// Token: 0x06036F18 RID: 225048 RVA: 0x00F53880 File Offset: 0x00F51A80
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060423C3 RID: 271299 RVA: 0x0101253C File Offset: 0x0101073C
+		// Token: 0x06036F19 RID: 225049 RVA: 0x00F539D4 File Offset: 0x00F51BD4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlBackpackShopRateView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060423C4 RID: 271300 RVA: 0x0101257F File Offset: 0x0101077F
+		// Token: 0x06036F1A RID: 225050 RVA: 0x00F53A17 File Offset: 0x00F51C17
 		protected override void OnBeforeShow()
 		{
 			IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			childPopView.SetTitleByTextIdAndArg("DangoBrawlBattleUIText_037", Array.Empty<object>());
 		}
 
-		// Token: 0x060423C5 RID: 271301 RVA: 0x0101259C File Offset: 0x0101079C
+		// Token: 0x06036F1B RID: 225051 RVA: 0x00F53A34 File Offset: 0x00F51C34
 		private UniTask CreateRateItems()
 		{
 			DangoBrawlBackpackShopRateView.<CreateRateItems>d__9 <CreateRateItems>d__;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <CreateRateItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060423C6 RID: 271302 RVA: 0x010125E0 File Offset: 0x010107E0
+		// Token: 0x06036F1C RID: 225052 RVA: 0x00F53A78 File Offset: 0x00F51C78
 		private void RefreshView()
 		{
 			DangoBrawlRound? roundConfigById = DangoBrawlConfig.Instance.GetRoundConfigById(this.Round);
@@ -126,54 +126,54 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(8), "DangoBrawlBattleUIText_043", Array.Empty<object>());
 		}
 
-		// Token: 0x0402290A RID: 141578
+		// Token: 0x0401D167 RID: 119143
 		[Nullable(1)]
 		private List<DangoBrawlBackpackShopRateItem> RateItemList = new List<DangoBrawlBackpackShopRateItem>();
 
-		// Token: 0x0402290B RID: 141579
+		// Token: 0x0401D168 RID: 119144
 		[Nullable(1)]
 		private List<string> RateTitleList;
 
-		// Token: 0x0402290C RID: 141580
+		// Token: 0x0401D169 RID: 119145
 		private int Round;
 
-		// Token: 0x0200C8FB RID: 51451
+		// Token: 0x0200B2CB RID: 45771
 		private enum EShopRateType
 		{
-			// Token: 0x0403CACA RID: 248522
+			// Token: 0x040373BF RID: 226239
 			White,
-			// Token: 0x0403CACB RID: 248523
+			// Token: 0x040373C0 RID: 226240
 			Green,
-			// Token: 0x0403CACC RID: 248524
+			// Token: 0x040373C1 RID: 226241
 			Blue,
-			// Token: 0x0403CACD RID: 248525
+			// Token: 0x040373C2 RID: 226242
 			Purple,
-			// Token: 0x0403CACE RID: 248526
+			// Token: 0x040373C3 RID: 226243
 			Gold,
-			// Token: 0x0403CACF RID: 248527
+			// Token: 0x040373C4 RID: 226244
 			ShopRate
 		}
 
-		// Token: 0x0200C8FC RID: 51452
+		// Token: 0x0200B2CC RID: 45772
 		private enum EComponents
 		{
-			// Token: 0x0403CAD1 RID: 248529
+			// Token: 0x040373C6 RID: 226246
 			PnlRateItemWhite,
-			// Token: 0x0403CAD2 RID: 248530
+			// Token: 0x040373C7 RID: 226247
 			PnlRateItemGreen,
-			// Token: 0x0403CAD3 RID: 248531
+			// Token: 0x040373C8 RID: 226248
 			PnlRateItemBlue,
-			// Token: 0x0403CAD4 RID: 248532
+			// Token: 0x040373C9 RID: 226249
 			PnlRateItemPurple,
-			// Token: 0x0403CAD5 RID: 248533
+			// Token: 0x040373CA RID: 226250
 			PnlRateItemGold,
-			// Token: 0x0403CAD6 RID: 248534
+			// Token: 0x040373CB RID: 226251
 			PnlRateItemDiscountRate,
-			// Token: 0x0403CAD7 RID: 248535
+			// Token: 0x040373CC RID: 226252
 			TxtRuleTitle,
-			// Token: 0x0403CAD8 RID: 248536
+			// Token: 0x040373CD RID: 226253
 			TxtRuleDesc,
-			// Token: 0x0403CAD9 RID: 248537
+			// Token: 0x040373CE RID: 226254
 			TxtDiscountRateTitle
 		}
 	}

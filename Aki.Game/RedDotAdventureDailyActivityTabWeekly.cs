@@ -1,16 +1,16 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003356 RID: 13142
+// Token: 0x020028C8 RID: 10440
 public class RedDotAdventureDailyActivityTabWeekly : RedDotBase
 {
-	// Token: 0x0601C9D0 RID: 117200 RVA: 0x00804F66 File Offset: 0x00803166
+	// Token: 0x0601A6C8 RID: 108232 RVA: 0x0082B52A File Offset: 0x0082972A
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.AdventureDailyActivityTab);
 	}
 
-	// Token: 0x0601C9D1 RID: 117201 RVA: 0x00804F70 File Offset: 0x00803170
+	// Token: 0x0601A6C9 RID: 108233 RVA: 0x0082B534 File Offset: 0x00829734
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.WeeklyChallengeRefresh, new Action(base.EventCheck));
@@ -20,7 +20,7 @@ public class RedDotAdventureDailyActivityTabWeekly : RedDotBase
 		EventSystem.Instance.Add(EEventName.OnServerStorageInfoInited, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C9D2 RID: 117202 RVA: 0x0080500C File Offset: 0x0080320C
+	// Token: 0x0601A6CA RID: 108234 RVA: 0x0082B5D0 File Offset: 0x008297D0
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.WeeklyChallengeRefresh, new Action(base.EventCheck));
@@ -30,7 +30,7 @@ public class RedDotAdventureDailyActivityTabWeekly : RedDotBase
 		EventSystem.Instance.Remove(EEventName.OnServerStorageInfoInited, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C9D3 RID: 117203 RVA: 0x008050A8 File Offset: 0x008032A8
+	// Token: 0x0601A6CB RID: 108235 RVA: 0x0082B66C File Offset: 0x0082986C
 	protected override bool OnCheck(int uId = 0)
 	{
 		if (!FunctionModel.Instance.IsOpen(EFunctionType.AdventureGuide) || !FunctionModel.Instance.IsOpen(EFunctionType.WeeklyChallenge) || WeeklyChallengeModel.Instance.WeeklyConfigId == 0)

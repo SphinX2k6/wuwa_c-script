@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200193E RID: 6462
+	// Token: 0x02000420 RID: 1056
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FSpecificTagActorHitSignature : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06017F48 RID: 98120 RVA: 0x00231C97 File Offset: 0x0022FE97
+		// Token: 0x060065FC RID: 26108 RVA: 0x00092427 File Offset: 0x00090627
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSpecificTagActorHitSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x06017F49 RID: 98121 RVA: 0x00231CA3 File Offset: 0x0022FEA3
+		// Token: 0x060065FD RID: 26109 RVA: 0x00092433 File Offset: 0x00090633
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSpecificTagActorHitSignature._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FSpecificTagActorHitSignature._FunctionPtr;
 		}
 
-		// Token: 0x06017F4A RID: 98122 RVA: 0x00231CC6 File Offset: 0x0022FEC6
+		// Token: 0x060065FE RID: 26110 RVA: 0x00092456 File Offset: 0x00090656
 		public FSpecificTagActorHitSignature()
 		{
 		}
 
-		// Token: 0x06017F4B RID: 98123 RVA: 0x00231CCE File Offset: 0x0022FECE
+		// Token: 0x060065FF RID: 26111 RVA: 0x0009245E File Offset: 0x0009065E
 		[NullableContext(2)]
 		public FSpecificTagActorHitSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017F4C RID: 98124 RVA: 0x00231CD8 File Offset: 0x0022FED8
+		// Token: 0x06006600 RID: 26112 RVA: 0x00092468 File Offset: 0x00090668
 		public FSpecificTagActorHitSignature(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017F4D RID: 98125 RVA: 0x00231CE3 File Offset: 0x0022FEE3
+		// Token: 0x06006601 RID: 26113 RVA: 0x00092473 File Offset: 0x00090673
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<AActor, AActor, FVector, FHitResult, FGameplayTagContainer, FGameplayTagContainer>) ?? ((Action<AActor, AActor, FVector, FHitResult, FGameplayTagContainer, FGameplayTagContainer>)Delegate.CreateDelegate(typeof(Action<AActor, AActor, FVector, FHitResult, FGameplayTagContainer, FGameplayTagContainer>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017F4E RID: 98126 RVA: 0x00231D15 File Offset: 0x0022FF15
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06006602 RID: 26114 RVA: 0x000924A5 File Offset: 0x000906A5
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -74,8 +73,7 @@ namespace UnrealEngine
 			base.Add(Callback, FSpecificTagActorHitSignature.RegisterId);
 		}
 
-		// Token: 0x06017F4F RID: 98127 RVA: 0x00231D4F File Offset: 0x0022FF4F
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06006603 RID: 26115 RVA: 0x000924DF File Offset: 0x000906DF
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -89,10 +87,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06017F50 RID: 98128 RVA: 0x00231D58 File Offset: 0x0022FF58
+		// Token: 0x06006604 RID: 26116 RVA: 0x000924E8 File Offset: 0x000906E8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(AActor SelfActor, AActor OtherActor, FVector NormalImpulse, in FHitResult HitResult, in FGameplayTagContainer GameplayTags, in FGameplayTagContainer RestrictGameplayTags)
 		{
 			FSpecificTagActorHitSignature.__FSpecificTagActorHitSignature_DelegateParams* ptr = stackalloc FSpecificTagActorHitSignature.__FSpecificTagActorHitSignature_DelegateParams[(UIntPtr)255] + 15L / (long)sizeof(FSpecificTagActorHitSignature.__FSpecificTagActorHitSignature_DelegateParams) & -16L;
@@ -116,10 +113,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FSpecificTagActorHitSignature._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06017F51 RID: 98129 RVA: 0x00231E48 File Offset: 0x00230048
+		// Token: 0x06006605 RID: 26117 RVA: 0x000925D8 File Offset: 0x000907D8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<AActor, AActor, FVector, FHitResult, FGameplayTagContainer, FGameplayTagContainer> action = target as Action<AActor, AActor, FVector, FHitResult, FGameplayTagContainer, FGameplayTagContainer>;
@@ -135,51 +131,51 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, ((FSpecificTagActorHitSignature.__FSpecificTagActorHitSignature_DelegateParams*)__Parameters)->NormalImpulse, arg, arg2, arg3);
 		}
 
-		// Token: 0x0400CF63 RID: 53091
+		// Token: 0x04002AE4 RID: 10980
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CF64 RID: 53092
+		// Token: 0x04002AE5 RID: 10981
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.SpecificTagActorHitSignature__DelegateSignature";
 
-		// Token: 0x0400CF65 RID: 53093
+		// Token: 0x04002AE6 RID: 10982
 		private static int RegisterId;
 
-		// Token: 0x02003005 RID: 12293
+		// Token: 0x02000B19 RID: 2841
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 240)]
-		protected ref struct __FSpecificTagActorHitSignature_DelegateParams
+		private ref struct __FSpecificTagActorHitSignature_DelegateParams
 		{
-			// Token: 0x04016C1D RID: 93213
+			// Token: 0x04005BC6 RID: 23494
 			[FieldOffset(0)]
 			public IntPtr SelfActor;
 
-			// Token: 0x04016C1E RID: 93214
+			// Token: 0x04005BC7 RID: 23495
 			[FieldOffset(8)]
 			public IntPtr OtherActor;
 
-			// Token: 0x04016C1F RID: 93215
+			// Token: 0x04005BC8 RID: 23496
 			[FieldOffset(16)]
 			public FVector NormalImpulse;
 
-			// Token: 0x04016C20 RID: 93216
+			// Token: 0x04005BC9 RID: 23497
 			[FieldOffset(28)]
 			public byte HitResult;
 
-			// Token: 0x04016C21 RID: 93217
+			// Token: 0x04005BCA RID: 23498
 			[FieldOffset(176)]
 			public byte GameplayTags;
 
-			// Token: 0x04016C22 RID: 93218
+			// Token: 0x04005BCB RID: 23499
 			[FieldOffset(208)]
 			public byte RestrictGameplayTags;
 		}
 
-		// Token: 0x02003006 RID: 12294
+		// Token: 0x02000B1A RID: 2842
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016C23 RID: 93219
+			// Token: 0x04005BCC RID: 23500
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

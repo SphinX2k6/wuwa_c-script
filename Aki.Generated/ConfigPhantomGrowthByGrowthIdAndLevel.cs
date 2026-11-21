@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200069A RID: 1690
+	// Token: 0x020006B2 RID: 1714
 	public class ConfigPhantomGrowthByGrowthIdAndLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060027AC RID: 10156 RVA: 0x00139F60 File Offset: 0x00138160
+		// Token: 0x0600283C RID: 10300 RVA: 0x001409DC File Offset: 0x0013EBDC
 		static ConfigPhantomGrowthByGrowthIdAndLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomGrowthByGrowthIdAndLevel.CreateStaticDefaultValue), new Action(ConfigPhantomGrowthByGrowthIdAndLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060027AD RID: 10157 RVA: 0x00139F80 File Offset: 0x00138180
+		// Token: 0x0600283D RID: 10301 RVA: 0x001409FC File Offset: 0x0013EBFC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomGrowthByGrowthIdAndLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060027AE RID: 10158 RVA: 0x00139FFF File Offset: 0x001381FF
+		// Token: 0x0600283E RID: 10302 RVA: 0x00140A7B File Offset: 0x0013EC7B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomGrowthByGrowthIdAndLevel.LogPair = null;
 			ConfigPhantomGrowthByGrowthIdAndLevel.HandleId = 0;
 		}
 
-		// Token: 0x060027AF RID: 10159 RVA: 0x0013A00D File Offset: 0x0013820D
+		// Token: 0x0600283F RID: 10303 RVA: 0x00140A89 File Offset: 0x0013EC89
 		public static void Init()
 		{
 			ConfigPhantomGrowthByGrowthIdAndLevel.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomGrowthByGrowthIdAndLevel.HandleId, "db_phantom.db", "select BinData from `PhantomGrowth` where GrowthId=? AND Level=?");
 		}
 
-		// Token: 0x060027B0 RID: 10160 RVA: 0x0013A028 File Offset: 0x00138228
+		// Token: 0x06002840 RID: 10304 RVA: 0x00140AA4 File Offset: 0x0013ECA4
 		public static PhantomGrowth? GetConfig(int p0GrowthId, int p1Level, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomGrowthByGrowthIdAndLevel.HandleId, ConfigPhantomGrowthByGrowthIdAndLevel.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new PhantomGrowth?(rootAsPhantomGrowth);
 		}
 
-		// Token: 0x04002E1C RID: 11804
+		// Token: 0x04002EC4 RID: 11972
 		private const string DB = "db_phantom.db";
 
-		// Token: 0x04002E1D RID: 11805
+		// Token: 0x04002EC5 RID: 11973
 		private const string FILE = "h.幻象.xlsx";
 
-		// Token: 0x04002E1E RID: 11806
+		// Token: 0x04002EC6 RID: 11974
 		private const string TABLE = "PhantomGrowth";
 
-		// Token: 0x04002E1F RID: 11807
+		// Token: 0x04002EC7 RID: 11975
 		private const string COMMAND = "select BinData from `PhantomGrowth` where GrowthId=? AND Level=?";
 
-		// Token: 0x04002E20 RID: 11808
+		// Token: 0x04002EC8 RID: 11976
 		private const string KEY_PREFIX = "PhantomGrowthByGrowthIdAndLevel";
 
-		// Token: 0x04002E21 RID: 11809
+		// Token: 0x04002EC9 RID: 11977
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002E22 RID: 11810
+		// Token: 0x04002ECA RID: 11978
 		private static int HandleId;
 	}
 }

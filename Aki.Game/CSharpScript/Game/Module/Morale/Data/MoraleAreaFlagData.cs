@@ -7,13 +7,13 @@ using CSharpScript.Game.Module.WorldMap.SubViews.CommonGamePlay;
 
 namespace CSharpScript.Game.Module.Morale.Data
 {
-	// Token: 0x020053C0 RID: 21440
+	// Token: 0x020043A3 RID: 17315
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleAreaFlagData
 	{
-		// Token: 0x170083B5 RID: 33717
-		// (get) Token: 0x06036C74 RID: 224372 RVA: 0x00CF6FC9 File Offset: 0x00CF51C9
+		// Token: 0x17005781 RID: 22401
+		// (get) Token: 0x0602BBBA RID: 179130 RVA: 0x00C46071 File Offset: 0x00C44271
 		public bool IsGetBox
 		{
 			get
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Morale.Data
 			}
 		}
 
-		// Token: 0x06036C75 RID: 224373 RVA: 0x00CF6FE7 File Offset: 0x00CF51E7
+		// Token: 0x0602BBBB RID: 179131 RVA: 0x00C4608F File Offset: 0x00C4428F
 		public static MoraleAreaFlagData Create(FlagArea config)
 		{
 			MoraleAreaFlagData moraleAreaFlagData = new MoraleAreaFlagData(config);
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Morale.Data
 			return moraleAreaFlagData;
 		}
 
-		// Token: 0x06036C76 RID: 224374 RVA: 0x00CF6FF8 File Offset: 0x00CF51F8
+		// Token: 0x0602BBBC RID: 179132 RVA: 0x00C460A0 File Offset: 0x00C442A0
 		private MoraleAreaFlagData(FlagArea config)
 		{
 			this.Id = config.Id;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.Morale.Data
 			this.BoxTotalCount = config.TreasureBoxEntitysLength;
 		}
 
-		// Token: 0x06036C77 RID: 224375 RVA: 0x00CF7076 File Offset: 0x00CF5276
+		// Token: 0x0602BBBD RID: 179133 RVA: 0x00C4611E File Offset: 0x00C4431E
 		private void Init()
 		{
 			this.InitPlotData();
 		}
 
-		// Token: 0x06036C78 RID: 224376 RVA: 0x00CF7080 File Offset: 0x00CF5280
+		// Token: 0x0602BBBE RID: 179134 RVA: 0x00C46128 File Offset: 0x00C44328
 		private void InitPlotData()
 		{
 			if (this.TypeConfig == null || this.TypeConfig.Value.ShowUiMap == 0)
@@ -72,43 +72,43 @@ namespace CSharpScript.Game.Module.Morale.Data
 			}
 		}
 
-		// Token: 0x06036C79 RID: 224377 RVA: 0x00CF7113 File Offset: 0x00CF5313
+		// Token: 0x0602BBBF RID: 179135 RVA: 0x00C461BB File Offset: 0x00C443BB
 		public void SetActiveState(bool isActive)
 		{
 			this.IsActive = isActive;
 		}
 
-		// Token: 0x06036C7A RID: 224378 RVA: 0x00CF711C File Offset: 0x00CF531C
+		// Token: 0x0602BBC0 RID: 179136 RVA: 0x00C461C4 File Offset: 0x00C443C4
 		public void SetBoxReceivedCount(int count)
 		{
 			this.BoxReceivedCount = count;
 		}
 
-		// Token: 0x06036C7B RID: 224379 RVA: 0x00CF7125 File Offset: 0x00CF5325
+		// Token: 0x0602BBC1 RID: 179137 RVA: 0x00C461CD File Offset: 0x00C443CD
 		public bool HasBoxCanGet()
 		{
 			return this.HasBox && this.IsActive && !this.IsGetBox && this.BoxTotalCount > 0;
 		}
 
-		// Token: 0x06036C7C RID: 224380 RVA: 0x00CF714E File Offset: 0x00CF534E
+		// Token: 0x0602BBC2 RID: 179138 RVA: 0x00C461F6 File Offset: 0x00C443F6
 		public void SetSelectState(bool isSelect)
 		{
 			this.IsSelect = isSelect;
 		}
 
-		// Token: 0x06036C7D RID: 224381 RVA: 0x00CF7158 File Offset: 0x00CF5358
+		// Token: 0x0602BBC3 RID: 179139 RVA: 0x00C46200 File Offset: 0x00C44400
 		public bool IsFlagType(EMoraleFlagType flagType)
 		{
 			return this.TypeConfig != null && this.TypeConfig.Value.TypeId == (int)flagType;
 		}
 
-		// Token: 0x06036C7E RID: 224382 RVA: 0x00CF718A File Offset: 0x00CF538A
+		// Token: 0x0602BBC4 RID: 179140 RVA: 0x00C46232 File Offset: 0x00C44432
 		public bool IsHighDifficultyChallenge()
 		{
 			return this.IsFlagType(EMoraleFlagType.HighDifficulty);
 		}
 
-		// Token: 0x06036C7F RID: 224383 RVA: 0x00CF7194 File Offset: 0x00CF5394
+		// Token: 0x0602BBC5 RID: 179141 RVA: 0x00C4623C File Offset: 0x00C4443C
 		public IMapMoraleLvItemData GetMapMoraleLvItemData()
 		{
 			int maxMonsterLv = this.Config.MaxMonsterLv;
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Morale.Data
 			};
 		}
 
-		// Token: 0x06036C80 RID: 224384 RVA: 0x00CF7230 File Offset: 0x00CF5430
+		// Token: 0x0602BBC6 RID: 179142 RVA: 0x00C462D8 File Offset: 0x00C444D8
 		public bool IsLowMoraleLv()
 		{
 			if (MoraleModel.Instance.IsRichTargetMoraleLv(this.Config.MaxMonsterLv))
@@ -150,46 +150,46 @@ namespace CSharpScript.Game.Module.Morale.Data
 			return MoraleModel.Instance.GetSumMoraleLv() < moraleMaxLevel;
 		}
 
-		// Token: 0x06036C81 RID: 224385 RVA: 0x00CF726E File Offset: 0x00CF546E
+		// Token: 0x0602BBC7 RID: 179143 RVA: 0x00C46316 File Offset: 0x00C44516
 		public void SetNewUnlockState(bool isNewUnlock)
 		{
 			this.IsNewUnlock = isNewUnlock;
 		}
 
-		// Token: 0x0401CE8B RID: 118411
+		// Token: 0x04017923 RID: 96547
 		public int Id;
 
-		// Token: 0x0401CE8C RID: 118412
+		// Token: 0x04017924 RID: 96548
 		public int AreaId;
 
-		// Token: 0x0401CE8D RID: 118413
+		// Token: 0x04017925 RID: 96549
 		public List<MoraleAreaPlotData> AreaPlotDataList = new List<MoraleAreaPlotData>();
 
-		// Token: 0x0401CE8E RID: 118414
+		// Token: 0x04017926 RID: 96550
 		public Dictionary<int, MoraleAreaPlotData> AreaPlotDataMap = new Dictionary<int, MoraleAreaPlotData>();
 
-		// Token: 0x0401CE8F RID: 118415
+		// Token: 0x04017927 RID: 96551
 		public bool IsActive;
 
-		// Token: 0x0401CE90 RID: 118416
+		// Token: 0x04017928 RID: 96552
 		public bool HasBox;
 
-		// Token: 0x0401CE91 RID: 118417
+		// Token: 0x04017929 RID: 96553
 		public int BoxReceivedCount;
 
-		// Token: 0x0401CE92 RID: 118418
+		// Token: 0x0401792A RID: 96554
 		public int BoxTotalCount;
 
-		// Token: 0x0401CE93 RID: 118419
+		// Token: 0x0401792B RID: 96555
 		public FlagArea Config;
 
-		// Token: 0x0401CE94 RID: 118420
+		// Token: 0x0401792C RID: 96556
 		public MoraleFlagType? TypeConfig;
 
-		// Token: 0x0401CE95 RID: 118421
+		// Token: 0x0401792D RID: 96557
 		public bool IsSelect;
 
-		// Token: 0x0401CE96 RID: 118422
+		// Token: 0x0401792E RID: 96558
 		public bool IsNewUnlock;
 	}
 }

@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CFC RID: 3324
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DF4 RID: 3572
 	public class IPortalRenderConfig
 	{
-		// Token: 0x06004BE3 RID: 19427 RVA: 0x000BD4DA File Offset: 0x000BB6DA
+		// Token: 0x060050F1 RID: 20721 RVA: 0x000C8A0A File Offset: 0x000C6C0A
 		public static IPortalRenderConfig Create(IPortalRenderConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017A8 RID: 6056
-		// (get) Token: 0x06004BE4 RID: 19428 RVA: 0x000BD4F9 File Offset: 0x000BB6F9
+		// Token: 0x17001904 RID: 6404
+		// (get) Token: 0x060050F2 RID: 20722 RVA: 0x000C8A29 File Offset: 0x000C6C29
 		public virtual IViewDistanceMode ViewDistance
 		{
 			get
@@ -40,19 +38,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017A9 RID: 6057
-		// (get) Token: 0x06004BE5 RID: 19429 RVA: 0x000BD528 File Offset: 0x000BB728
+		// Token: 0x17001905 RID: 6405
+		// (get) Token: 0x060050F3 RID: 20723 RVA: 0x000C8A58 File Offset: 0x000C6C58
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IActorRef> ForceRenderActors
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -75,19 +73,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017AA RID: 6058
-		// (get) Token: 0x06004BE6 RID: 19430 RVA: 0x000BD5A4 File Offset: 0x000BB7A4
+		// Token: 0x17001906 RID: 6406
+		// (get) Token: 0x060050F4 RID: 20724 RVA: 0x000C8AD4 File Offset: 0x000C6CD4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IRenderFlag> SetRenderFlags
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -110,35 +108,35 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B5F RID: 11103
+		// Token: 0x04002E19 RID: 11801
 		private IPortalRenderConfig Instance;
 
-		// Token: 0x04002B60 RID: 11104
+		// Token: 0x04002E1A RID: 11802
 		private IViewDistanceMode _ViewDistanceCache;
 
-		// Token: 0x04002B61 RID: 11105
+		// Token: 0x04002E1B RID: 11803
 		private bool _ViewDistanceInited;
 
-		// Token: 0x04002B62 RID: 11106
+		// Token: 0x04002E1C RID: 11804
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IActorRef> _ForceRenderActorsCache;
 
-		// Token: 0x04002B63 RID: 11107
+		// Token: 0x04002E1D RID: 11805
 		private bool _ForceRenderActorsInited;
 
-		// Token: 0x04002B64 RID: 11108
+		// Token: 0x04002E1E RID: 11806
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IRenderFlag> _SetRenderFlagsCache;
 
-		// Token: 0x04002B65 RID: 11109
+		// Token: 0x04002E1F RID: 11807
 		private bool _SetRenderFlagsInited;
 	}
 }

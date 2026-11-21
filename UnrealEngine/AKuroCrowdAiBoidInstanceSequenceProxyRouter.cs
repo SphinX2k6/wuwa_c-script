@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020017EE RID: 6126
+	// Token: 0x0200035B RID: 859
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroCrowdAi.KuroCrowdAiBoidInstanceSequenceProxyRouter")]
 	[UnrealStructLayout(1288, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1288)]
 	public class AKuroCrowdAiBoidInstanceSequenceProxyRouter : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06016A32 RID: 92722 RVA: 0x0021058C File Offset: 0x0020E78C
+		// Token: 0x060057DA RID: 22490 RVA: 0x0007B98C File Offset: 0x00079B8C
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKuroCrowdAiBoidInstanceSequenceProxyRouter._ClassPtr;
 		}
 
-		// Token: 0x06016A33 RID: 92723 RVA: 0x00210598 File Offset: 0x0020E798
+		// Token: 0x060057DB RID: 22491 RVA: 0x0007B998 File Offset: 0x00079B98
 		public AKuroCrowdAiBoidInstanceSequenceProxyRouter() : this(BuiltinUtils.AllocNativeUObject(AKuroCrowdAiBoidInstanceSequenceProxyRouter.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06016A34 RID: 92724 RVA: 0x002105C0 File Offset: 0x0020E7C0
+		// Token: 0x060057DC RID: 22492 RVA: 0x0007B9C0 File Offset: 0x00079BC0
 		public AKuroCrowdAiBoidInstanceSequenceProxyRouter(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKuroCrowdAiBoidInstanceSequenceProxyRouter.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005B89 RID: 23433
-		// (get) Token: 0x06016A35 RID: 92725 RVA: 0x002105F4 File Offset: 0x0020E7F4
-		// (set) Token: 0x06016A36 RID: 92726 RVA: 0x0021062D File Offset: 0x0020E82D
+		// Token: 0x17001161 RID: 4449
+		// (get) Token: 0x060057DD RID: 22493 RVA: 0x0007B9F4 File Offset: 0x00079BF4
+		// (set) Token: 0x060057DE RID: 22494 RVA: 0x0007BA2D File Offset: 0x00079C2D
 		public TMap<AKuroCrowdAiBoidInstanceSequenceProxy, int> ProxyActorToBoidId
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B8A RID: 23434
-		// (get) Token: 0x06016A37 RID: 92727 RVA: 0x0021063C File Offset: 0x0020E83C
-		// (set) Token: 0x06016A38 RID: 92728 RVA: 0x00210675 File Offset: 0x0020E875
+		// Token: 0x17001162 RID: 4450
+		// (get) Token: 0x060057DF RID: 22495 RVA: 0x0007BA3C File Offset: 0x00079C3C
+		// (set) Token: 0x060057E0 RID: 22496 RVA: 0x0007BA75 File Offset: 0x00079C75
 		public TMap<int, AKuroCrowdAiBoidInstanceSequenceProxy> BoidIdToProxyActor
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B8B RID: 23435
-		// (get) Token: 0x06016A39 RID: 92729 RVA: 0x00210683 File Offset: 0x0020E883
-		// (set) Token: 0x06016A3A RID: 92730 RVA: 0x00210697 File Offset: 0x0020E897
+		// Token: 0x17001163 RID: 4451
+		// (get) Token: 0x060057E1 RID: 22497 RVA: 0x0007BA83 File Offset: 0x00079C83
+		// (set) Token: 0x060057E2 RID: 22498 RVA: 0x0007BA97 File Offset: 0x00079C97
 		[Nullable(2)]
 		public unsafe UKuroCrowdAiSubsystem CrowdAiSubsystem
 		{
@@ -89,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B8C RID: 23436
-		// (get) Token: 0x06016A3B RID: 92731 RVA: 0x002106AC File Offset: 0x0020E8AC
-		// (set) Token: 0x06016A3C RID: 92732 RVA: 0x002106E5 File Offset: 0x0020E8E5
+		// Token: 0x17001164 RID: 4452
+		// (get) Token: 0x060057E3 RID: 22499 RVA: 0x0007BAAC File Offset: 0x00079CAC
+		// (set) Token: 0x060057E4 RID: 22500 RVA: 0x0007BAE5 File Offset: 0x00079CE5
 		public TSet<AKuroCrowdAiBoidInstanceSequenceProxy> ProxyActorsBusyRouting
 		{
 			get
@@ -110,94 +110,94 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06016A3D RID: 92733 RVA: 0x002106F3 File Offset: 0x0020E8F3
+		// Token: 0x060057E5 RID: 22501 RVA: 0x0007BAF3 File Offset: 0x00079CF3
 		[NullableContext(2)]
 		public bool RemoveRouteByProxyActor(AKuroCrowdAiBoidInstanceSequenceProxy ProxyActor)
 		{
 			return AKuroCrowdAiBoidInstanceSequenceProxyRouter.__RemoveRouteByProxyActor_Internal(base.NativePtr, (ProxyActor != null) ? ProxyActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06016A3E RID: 92734 RVA: 0x00210710 File Offset: 0x0020E910
+		// Token: 0x060057E6 RID: 22502 RVA: 0x0007BB10 File Offset: 0x00079D10
 		public bool RemoveRouteByBoidId(int BoidId)
 		{
 			return AKuroCrowdAiBoidInstanceSequenceProxyRouter.__RemoveRouteByBoidId_Internal(base.NativePtr, BoidId);
 		}
 
-		// Token: 0x06016A3F RID: 92735 RVA: 0x0021071E File Offset: 0x0020E91E
+		// Token: 0x060057E7 RID: 22503 RVA: 0x0007BB1E File Offset: 0x00079D1E
 		[NullableContext(2)]
 		public int GetRouteTarget(AKuroCrowdAiBoidInstanceSequenceProxy ProxyActor)
 		{
 			return AKuroCrowdAiBoidInstanceSequenceProxyRouter.__GetRouteTarget_Internal(base.NativePtr, (ProxyActor != null) ? ProxyActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06016A40 RID: 92736 RVA: 0x0021073B File Offset: 0x0020E93B
+		// Token: 0x060057E8 RID: 22504 RVA: 0x0007BB3B File Offset: 0x00079D3B
 		[NullableContext(2)]
 		public AKuroCrowdAiBoidInstanceSequenceProxy GetRouteSource(int BoidId)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AKuroCrowdAiBoidInstanceSequenceProxy>(AKuroCrowdAiBoidInstanceSequenceProxyRouter.__GetRouteSource_Internal(base.NativePtr, BoidId));
 		}
 
-		// Token: 0x06016A41 RID: 92737 RVA: 0x0021074E File Offset: 0x0020E94E
+		// Token: 0x060057E9 RID: 22505 RVA: 0x0007BB4E File Offset: 0x00079D4E
 		public void ClearRoute()
 		{
 			AKuroCrowdAiBoidInstanceSequenceProxyRouter.__ClearRoute_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06016A42 RID: 92738 RVA: 0x0021075B File Offset: 0x0020E95B
+		// Token: 0x060057EA RID: 22506 RVA: 0x0007BB5B File Offset: 0x00079D5B
 		[NullableContext(2)]
 		public bool AddRoute(AKuroCrowdAiBoidInstanceSequenceProxy ProxyActor, int InstanceId)
 		{
 			return AKuroCrowdAiBoidInstanceSequenceProxyRouter.__AddRoute_Internal(base.NativePtr, (ProxyActor != null) ? ProxyActor.NativePtr : IntPtr.Zero, InstanceId);
 		}
 
-		// Token: 0x06016A43 RID: 92739
+		// Token: 0x060057EB RID: 22507
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __RemoveRouteByProxyActor_Internal(IntPtr @this, IntPtr ProxyActor);
 
-		// Token: 0x06016A44 RID: 92740
+		// Token: 0x060057EC RID: 22508
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __RemoveRouteByBoidId_Internal(IntPtr @this, int BoidId);
 
-		// Token: 0x06016A45 RID: 92741
+		// Token: 0x060057ED RID: 22509
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetRouteTarget_Internal(IntPtr @this, IntPtr ProxyActor);
 
-		// Token: 0x06016A46 RID: 92742
+		// Token: 0x060057EE RID: 22510
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetRouteSource_Internal(IntPtr @this, int BoidId);
 
-		// Token: 0x06016A47 RID: 92743
+		// Token: 0x060057EF RID: 22511
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearRoute_Internal(IntPtr @this);
 
-		// Token: 0x06016A48 RID: 92744
+		// Token: 0x060057F0 RID: 22512
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __AddRoute_Internal(IntPtr @this, IntPtr ProxyActor, int InstanceId);
 
-		// Token: 0x06016A49 RID: 92745 RVA: 0x00210779 File Offset: 0x0020E979
+		// Token: 0x060057F1 RID: 22513 RVA: 0x0007BB79 File Offset: 0x00079D79
 		static AKuroCrowdAiBoidInstanceSequenceProxyRouter()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroCrowdAi.KuroCrowdAiBoidInstanceSequenceProxyRouter");
 		}
 
-		// Token: 0x06016A4A RID: 92746 RVA: 0x00210787 File Offset: 0x0020E987
+		// Token: 0x060057F2 RID: 22514 RVA: 0x0007BB87 File Offset: 0x00079D87
 		protected AKuroCrowdAiBoidInstanceSequenceProxyRouter(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C4AC RID: 50348
+		// Token: 0x04002439 RID: 9273
 		public new const string __ObjectPath = "/Script/KuroCrowdAi.KuroCrowdAiBoidInstanceSequenceProxyRouter";
 
-		// Token: 0x0400C4AD RID: 50349
+		// Token: 0x0400243A RID: 9274
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C4AE RID: 50350
+		// Token: 0x0400243B RID: 9275
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C4AF RID: 50351
+		// Token: 0x0400243C RID: 9276
 		internal static int __PropertyOffset_ProxyActorToBoidId;
 
-		// Token: 0x0400C4B0 RID: 50352
+		// Token: 0x0400243D RID: 9277
 		[Nullable(new byte[]
 		{
 			2,
@@ -205,10 +205,10 @@ namespace UnrealEngine
 		})]
 		private TMap<AKuroCrowdAiBoidInstanceSequenceProxy, int> _ProxyActorToBoidId;
 
-		// Token: 0x0400C4B1 RID: 50353
+		// Token: 0x0400243E RID: 9278
 		internal static int __PropertyOffset_BoidIdToProxyActor;
 
-		// Token: 0x0400C4B2 RID: 50354
+		// Token: 0x0400243F RID: 9279
 		[Nullable(new byte[]
 		{
 			2,
@@ -216,13 +216,13 @@ namespace UnrealEngine
 		})]
 		private TMap<int, AKuroCrowdAiBoidInstanceSequenceProxy> _BoidIdToProxyActor;
 
-		// Token: 0x0400C4B3 RID: 50355
+		// Token: 0x04002440 RID: 9280
 		internal static int __PropertyOffset_CrowdAiSubsystem;
 
-		// Token: 0x0400C4B4 RID: 50356
+		// Token: 0x04002441 RID: 9281
 		internal static int __PropertyOffset_ProxyActorsBusyRouting;
 
-		// Token: 0x0400C4B5 RID: 50357
+		// Token: 0x04002442 RID: 9282
 		[Nullable(new byte[]
 		{
 			2,

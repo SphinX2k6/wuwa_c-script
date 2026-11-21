@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200177A RID: 6010
+	// Token: 0x020018FB RID: 6395
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IActorInitialState
 	{
-		// Token: 0x06007F39 RID: 32569 RVA: 0x001303B8 File Offset: 0x0012E5B8
-		[NullableContext(1)]
+		// Token: 0x06008629 RID: 34345 RVA: 0x0013F618 File Offset: 0x0013D818
+		[NullableContext(0)]
 		private IActorInitialState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007F3A RID: 32570 RVA: 0x001303F0 File Offset: 0x0012E5F0
-		[NullableContext(1)]
+		// Token: 0x0600862A RID: 34346 RVA: 0x0013F650 File Offset: 0x0013D850
+		[NullableContext(0)]
 		public static IActorInitialState Create([Nullable(2)] IActorInitialState instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F3B RID: 32571 RVA: 0x00130403 File Offset: 0x0012E603
-		[NullableContext(1)]
+		// Token: 0x0600862B RID: 34347 RVA: 0x0013F663 File Offset: 0x0013D863
+		[NullableContext(0)]
 		public static IActorInitialState CreateFromSetValue([Nullable(2)] IActorInitialState_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F3C RID: 32572 RVA: 0x00130416 File Offset: 0x0012E616
-		[NullableContext(1)]
+		// Token: 0x0600862C RID: 34348 RVA: 0x0013F676 File Offset: 0x0013D876
+		[NullableContext(0)]
 		public IActorInitialState_SetValue ToSetValue()
 		{
 			return new IActorInitialState_SetValue
@@ -66,9 +66,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029BA RID: 10682
-		// (get) Token: 0x06007F3D RID: 32573 RVA: 0x00130450 File Offset: 0x0012E650
-		// (set) Token: 0x06007F3E RID: 32574 RVA: 0x001304B1 File Offset: 0x0012E6B1
+		// Token: 0x17002BA8 RID: 11176
+		// (get) Token: 0x0600862D RID: 34349 RVA: 0x0013F6B0 File Offset: 0x0013D8B0
+		// (set) Token: 0x0600862E RID: 34350 RVA: 0x0013F711 File Offset: 0x0013D911
 		public virtual IActorInitialMontage InitialMontage
 		{
 			get
@@ -96,9 +96,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029BB RID: 10683
-		// (get) Token: 0x06007F3F RID: 32575 RVA: 0x001304C6 File Offset: 0x0012E6C6
-		// (set) Token: 0x06007F40 RID: 32576 RVA: 0x001304ED File Offset: 0x0012E6ED
+		// Token: 0x17002BA9 RID: 11177
+		// (get) Token: 0x0600862F RID: 34351 RVA: 0x0013F726 File Offset: 0x0013D926
+		// (set) Token: 0x06008630 RID: 34352 RVA: 0x0013F74D File Offset: 0x0013D94D
 		public virtual IActorLookAtData InitialLookAt
 		{
 			get
@@ -120,9 +120,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029BC RID: 10684
-		// (get) Token: 0x06007F41 RID: 32577 RVA: 0x001304FC File Offset: 0x0012E6FC
-		// (set) Token: 0x06007F42 RID: 32578 RVA: 0x0013055D File Offset: 0x0012E75D
+		// Token: 0x17002BAA RID: 11178
+		// (get) Token: 0x06008631 RID: 34353 RVA: 0x0013F75C File Offset: 0x0013D95C
+		// (set) Token: 0x06008632 RID: 34354 RVA: 0x0013F7BD File Offset: 0x0013D9BD
 		public virtual IActorInitialEffect InitialEffects
 		{
 			get
@@ -150,9 +150,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029BD RID: 10685
-		// (get) Token: 0x06007F43 RID: 32579 RVA: 0x00130574 File Offset: 0x0012E774
-		// (set) Token: 0x06007F44 RID: 32580 RVA: 0x001305AE File Offset: 0x0012E7AE
+		// Token: 0x17002BAB RID: 11179
+		// (get) Token: 0x06008633 RID: 34355 RVA: 0x0013F7D4 File Offset: 0x0013D9D4
+		// (set) Token: 0x06008634 RID: 34356 RVA: 0x0013F80E File Offset: 0x0013DA0E
 		public virtual int? InitialFaceExpressionId
 		{
 			get
@@ -174,24 +174,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040050E7 RID: 20711
+		// Token: 0x0400551D RID: 21789
 		protected IActorInitialState FbInstance;
 
-		// Token: 0x040050E8 RID: 20712
+		// Token: 0x0400551E RID: 21790
 		protected IActorInitialState_SetValue PocoInterface;
 
-		// Token: 0x040050E9 RID: 20713
-		[Nullable(1)]
+		// Token: 0x0400551F RID: 21791
+		[Nullable(0)]
 		private IActorInitialMontage _InitialMontageCache;
 
-		// Token: 0x040050EA RID: 20714
+		// Token: 0x04005520 RID: 21792
 		private bool _InitialMontageInited;
 
-		// Token: 0x040050EB RID: 20715
-		[Nullable(1)]
+		// Token: 0x04005521 RID: 21793
+		[Nullable(0)]
 		private IActorInitialEffect _InitialEffectsCache;
 
-		// Token: 0x040050EC RID: 20716
+		// Token: 0x04005522 RID: 21794
 		private bool _InitialEffectsInited;
 	}
 }

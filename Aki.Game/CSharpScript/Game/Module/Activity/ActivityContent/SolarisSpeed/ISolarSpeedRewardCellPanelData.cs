@@ -3,53 +3,53 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060B6 RID: 24758
+	// Token: 0x02005034 RID: 20532
 	[NullableContext(1)]
 	public interface ISolarSpeedRewardCellPanelData
 	{
-		// Token: 0x170090D1 RID: 37073
-		// (get) Token: 0x0603E983 RID: 256387
-		// (set) Token: 0x0603E984 RID: 256388
+		// Token: 0x17006433 RID: 25651
+		// (get) Token: 0x06033647 RID: 210503
+		// (set) Token: 0x06033648 RID: 210504
 		int RewardId { get; set; }
 
-		// Token: 0x170090D2 RID: 37074
-		// (get) Token: 0x0603E985 RID: 256389
-		// (set) Token: 0x0603E986 RID: 256390
+		// Token: 0x17006434 RID: 25652
+		// (get) Token: 0x06033649 RID: 210505
+		// (set) Token: 0x0603364A RID: 210506
 		string TitleTextId { get; set; }
 
-		// Token: 0x170090D3 RID: 37075
-		// (get) Token: 0x0603E987 RID: 256391
-		// (set) Token: 0x0603E988 RID: 256392
+		// Token: 0x17006435 RID: 25653
+		// (get) Token: 0x0603364B RID: 210507
+		// (set) Token: 0x0603364C RID: 210508
 		string ProgressTextId { get; set; }
 
-		// Token: 0x170090D4 RID: 37076
-		// (get) Token: 0x0603E989 RID: 256393
-		// (set) Token: 0x0603E98A RID: 256394
+		// Token: 0x17006436 RID: 25654
+		// (get) Token: 0x0603364D RID: 210509
+		// (set) Token: 0x0603364E RID: 210510
 		string[] ProgressTextArgs { get; set; }
 
-		// Token: 0x170090D5 RID: 37077
-		// (get) Token: 0x0603E98B RID: 256395
-		// (set) Token: 0x0603E98C RID: 256396
+		// Token: 0x17006437 RID: 25655
+		// (get) Token: 0x0603364F RID: 210511
+		// (set) Token: 0x06033650 RID: 210512
 		TItem[] ItemsData { get; set; }
 
-		// Token: 0x170090D6 RID: 37078
-		// (get) Token: 0x0603E98D RID: 256397
-		// (set) Token: 0x0603E98E RID: 256398
+		// Token: 0x17006438 RID: 25656
+		// (get) Token: 0x06033651 RID: 210513
+		// (set) Token: 0x06033652 RID: 210514
 		string ButtonTextId { get; set; }
 
-		// Token: 0x170090D7 RID: 37079
-		// (get) Token: 0x0603E98F RID: 256399
-		// (set) Token: 0x0603E990 RID: 256400
+		// Token: 0x17006439 RID: 25657
+		// (get) Token: 0x06033653 RID: 210515
+		// (set) Token: 0x06033654 RID: 210516
 		bool ButtonActive { get; set; }
 
-		// Token: 0x170090D8 RID: 37080
-		// (get) Token: 0x0603E991 RID: 256401
-		// (set) Token: 0x0603E992 RID: 256402
+		// Token: 0x1700643A RID: 25658
+		// (get) Token: 0x06033655 RID: 210517
+		// (set) Token: 0x06033656 RID: 210518
 		bool RightActive { get; set; }
 
-		// Token: 0x170090D9 RID: 37081
-		// (get) Token: 0x0603E993 RID: 256403
-		// (set) Token: 0x0603E994 RID: 256404
+		// Token: 0x1700643B RID: 25659
+		// (get) Token: 0x06033657 RID: 210519
+		// (set) Token: 0x06033658 RID: 210520
 		bool DoneSpriteActive { get; set; }
 	}
 }

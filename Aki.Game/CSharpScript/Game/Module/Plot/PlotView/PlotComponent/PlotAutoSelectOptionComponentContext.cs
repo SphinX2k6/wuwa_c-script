@@ -5,49 +5,49 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x02005079 RID: 20601
+	// Token: 0x02004049 RID: 16457
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotAutoSelectOptionComponentContext : IPlotAutoSelectOptionComponentContext
 	{
-		// Token: 0x17008054 RID: 32852
-		// (get) Token: 0x06034C78 RID: 216184 RVA: 0x00C7CB6F File Offset: 0x00C7AD6F
-		// (set) Token: 0x06034C79 RID: 216185 RVA: 0x00C7CB77 File Offset: 0x00C7AD77
+		// Token: 0x17005414 RID: 21524
+		// (get) Token: 0x06029B6D RID: 170861 RVA: 0x00BC9F47 File Offset: 0x00BC8147
+		// (set) Token: 0x06029B6E RID: 170862 RVA: 0x00BC9F4F File Offset: 0x00BC814F
 		public UUISliderComponent OptionLimitBar { get; set; }
 
-		// Token: 0x17008055 RID: 32853
-		// (get) Token: 0x06034C7A RID: 216186 RVA: 0x00C7CB80 File Offset: 0x00C7AD80
-		// (set) Token: 0x06034C7B RID: 216187 RVA: 0x00C7CB88 File Offset: 0x00C7AD88
+		// Token: 0x17005415 RID: 21525
+		// (get) Token: 0x06029B6F RID: 170863 RVA: 0x00BC9F58 File Offset: 0x00BC8158
+		// (set) Token: 0x06029B70 RID: 170864 RVA: 0x00BC9F60 File Offset: 0x00BC8160
 		public UUISliderComponent AutoSelectTimeBar { get; set; }
 
-		// Token: 0x17008056 RID: 32854
-		// (get) Token: 0x06034C7C RID: 216188 RVA: 0x00C7CB91 File Offset: 0x00C7AD91
-		// (set) Token: 0x06034C7D RID: 216189 RVA: 0x00C7CB99 File Offset: 0x00C7AD99
+		// Token: 0x17005416 RID: 21526
+		// (get) Token: 0x06029B71 RID: 170865 RVA: 0x00BC9F69 File Offset: 0x00BC8169
+		// (set) Token: 0x06029B72 RID: 170866 RVA: 0x00BC9F71 File Offset: 0x00BC8171
 		public UUIItem ImportantList { get; set; }
 
-		// Token: 0x17008057 RID: 32855
-		// (get) Token: 0x06034C7E RID: 216190 RVA: 0x00C7CBA2 File Offset: 0x00C7ADA2
-		// (set) Token: 0x06034C7F RID: 216191 RVA: 0x00C7CBAA File Offset: 0x00C7ADAA
+		// Token: 0x17005417 RID: 21527
+		// (get) Token: 0x06029B73 RID: 170867 RVA: 0x00BC9F7A File Offset: 0x00BC817A
+		// (set) Token: 0x06029B74 RID: 170868 RVA: 0x00BC9F82 File Offset: 0x00BC8182
 		public UUITexture ImportantOptionTipsIcon { get; set; }
 
-		// Token: 0x17008058 RID: 32856
-		// (get) Token: 0x06034C80 RID: 216192 RVA: 0x00C7CBB3 File Offset: 0x00C7ADB3
-		// (set) Token: 0x06034C81 RID: 216193 RVA: 0x00C7CBBB File Offset: 0x00C7ADBB
+		// Token: 0x17005418 RID: 21528
+		// (get) Token: 0x06029B75 RID: 170869 RVA: 0x00BC9F8B File Offset: 0x00BC818B
+		// (set) Token: 0x06029B76 RID: 170870 RVA: 0x00BC9F93 File Offset: 0x00BC8193
 		public UUIText ImportantOptionTipsText { get; set; }
 
-		// Token: 0x17008059 RID: 32857
-		// (get) Token: 0x06034C82 RID: 216194 RVA: 0x00C7CBC4 File Offset: 0x00C7ADC4
-		// (set) Token: 0x06034C83 RID: 216195 RVA: 0x00C7CBCC File Offset: 0x00C7ADCC
+		// Token: 0x17005419 RID: 21529
+		// (get) Token: 0x06029B77 RID: 170871 RVA: 0x00BC9F9C File Offset: 0x00BC819C
+		// (set) Token: 0x06029B78 RID: 170872 RVA: 0x00BC9FA4 File Offset: 0x00BC81A4
 		public Func<ITalkItem> GetCurrentContentDelegate { get; set; }
 
-		// Token: 0x1700805A RID: 32858
-		// (get) Token: 0x06034C84 RID: 216196 RVA: 0x00C7CBD5 File Offset: 0x00C7ADD5
-		// (set) Token: 0x06034C85 RID: 216197 RVA: 0x00C7CBDD File Offset: 0x00C7ADDD
+		// Token: 0x1700541A RID: 21530
+		// (get) Token: 0x06029B79 RID: 170873 RVA: 0x00BC9FAD File Offset: 0x00BC81AD
+		// (set) Token: 0x06029B7A RID: 170874 RVA: 0x00BC9FB5 File Offset: 0x00BC81B5
 		public Func<PlotOptionItem> GetSelectedOptionDelegate { get; set; }
 
-		// Token: 0x1700805B RID: 32859
-		// (get) Token: 0x06034C86 RID: 216198 RVA: 0x00C7CBE6 File Offset: 0x00C7ADE6
-		// (set) Token: 0x06034C87 RID: 216199 RVA: 0x00C7CBEE File Offset: 0x00C7ADEE
+		// Token: 0x1700541B RID: 21531
+		// (get) Token: 0x06029B7B RID: 170875 RVA: 0x00BC9FBE File Offset: 0x00BC81BE
+		// (set) Token: 0x06029B7C RID: 170876 RVA: 0x00BC9FC6 File Offset: 0x00BC81C6
 		[Nullable(new byte[]
 		{
 			2,
@@ -66,24 +66,24 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			1
 		})] set; }
 
-		// Token: 0x1700805C RID: 32860
-		// (get) Token: 0x06034C88 RID: 216200 RVA: 0x00C7CBF7 File Offset: 0x00C7ADF7
-		// (set) Token: 0x06034C89 RID: 216201 RVA: 0x00C7CBFF File Offset: 0x00C7ADFF
+		// Token: 0x1700541C RID: 21532
+		// (get) Token: 0x06029B7D RID: 170877 RVA: 0x00BC9FCF File Offset: 0x00BC81CF
+		// (set) Token: 0x06029B7E RID: 170878 RVA: 0x00BC9FD7 File Offset: 0x00BC81D7
 		public Func<float> GetAudioRemainingTimeDelegate { get; set; }
 
-		// Token: 0x1700805D RID: 32861
-		// (get) Token: 0x06034C8A RID: 216202 RVA: 0x00C7CC08 File Offset: 0x00C7AE08
-		// (set) Token: 0x06034C8B RID: 216203 RVA: 0x00C7CC10 File Offset: 0x00C7AE10
+		// Token: 0x1700541D RID: 21533
+		// (get) Token: 0x06029B7F RID: 170879 RVA: 0x00BC9FE0 File Offset: 0x00BC81E0
+		// (set) Token: 0x06029B80 RID: 170880 RVA: 0x00BC9FE8 File Offset: 0x00BC81E8
 		public Func<float> GetAutoSelectExtraWaitTimeDelegate { get; set; }
 
-		// Token: 0x1700805E RID: 32862
-		// (get) Token: 0x06034C8C RID: 216204 RVA: 0x00C7CC19 File Offset: 0x00C7AE19
-		// (set) Token: 0x06034C8D RID: 216205 RVA: 0x00C7CC21 File Offset: 0x00C7AE21
+		// Token: 0x1700541E RID: 21534
+		// (get) Token: 0x06029B81 RID: 170881 RVA: 0x00BC9FF1 File Offset: 0x00BC81F1
+		// (set) Token: 0x06029B82 RID: 170882 RVA: 0x00BC9FF9 File Offset: 0x00BC81F9
 		public Action<int> SelectOptionByIndexDelegate { get; set; }
 
-		// Token: 0x1700805F RID: 32863
-		// (get) Token: 0x06034C8E RID: 216206 RVA: 0x00C7CC2A File Offset: 0x00C7AE2A
-		// (set) Token: 0x06034C8F RID: 216207 RVA: 0x00C7CC32 File Offset: 0x00C7AE32
+		// Token: 0x1700541F RID: 21535
+		// (get) Token: 0x06029B83 RID: 170883 RVA: 0x00BCA002 File Offset: 0x00BC8202
+		// (set) Token: 0x06029B84 RID: 170884 RVA: 0x00BCA00A File Offset: 0x00BC820A
 		[Nullable(new byte[]
 		{
 			2,
@@ -102,9 +102,9 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			1
 		})] set; }
 
-		// Token: 0x17008060 RID: 32864
-		// (get) Token: 0x06034C90 RID: 216208 RVA: 0x00C7CC3B File Offset: 0x00C7AE3B
-		// (set) Token: 0x06034C91 RID: 216209 RVA: 0x00C7CC43 File Offset: 0x00C7AE43
+		// Token: 0x17005420 RID: 21536
+		// (get) Token: 0x06029B85 RID: 170885 RVA: 0x00BCA013 File Offset: 0x00BC8213
+		// (set) Token: 0x06029B86 RID: 170886 RVA: 0x00BCA01B File Offset: 0x00BC821B
 		public Action RefreshAutoPlayButtonDelegate { get; set; }
 	}
 }

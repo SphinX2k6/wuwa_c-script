@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000412 RID: 1042
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200046B RID: 1131
 	public class IHitBulletTypeCrystalAttack : IHitBulletType
 	{
-		// Token: 0x06001505 RID: 5381 RVA: 0x00042608 File Offset: 0x00040808
+		// Token: 0x0600169F RID: 5791 RVA: 0x00046350 File Offset: 0x00044550
 		private IHitBulletTypeCrystalAttack_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001506 RID: 5382 RVA: 0x00042640 File Offset: 0x00040840
+		// Token: 0x060016A0 RID: 5792 RVA: 0x00046388 File Offset: 0x00044588
 		public static IHitBulletTypeCrystalAttack Create([Nullable(2)] IHitBulletTypeCrystalAttack instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001507 RID: 5383 RVA: 0x00042653 File Offset: 0x00040853
+		// Token: 0x060016A1 RID: 5793 RVA: 0x0004639B File Offset: 0x0004459B
 		public static IHitBulletTypeCrystalAttack CreateFromSetValue([Nullable(2)] IHitBulletTypeCrystalAttack_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001508 RID: 5384 RVA: 0x00042666 File Offset: 0x00040866
+		// Token: 0x060016A2 RID: 5794 RVA: 0x000463AE File Offset: 0x000445AE
 		public new IHitBulletTypeCrystalAttack_SetValue ToSetValue()
 		{
 			return new IHitBulletTypeCrystalAttack_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005C5 RID: 1477
-		// (get) Token: 0x06001509 RID: 5385 RVA: 0x00042685 File Offset: 0x00040885
-		// (set) Token: 0x0600150A RID: 5386 RVA: 0x000426B0 File Offset: 0x000408B0
+		// Token: 0x1700062C RID: 1580
+		// (get) Token: 0x060016A3 RID: 5795 RVA: 0x000463CD File Offset: 0x000445CD
+		// (set) Token: 0x060016A4 RID: 5796 RVA: 0x000463F8 File Offset: 0x000445F8
 		public override EHitBulletType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005C6 RID: 1478
-		// (get) Token: 0x0600150B RID: 5387 RVA: 0x000426C0 File Offset: 0x000408C0
-		// (set) Token: 0x0600150C RID: 5388 RVA: 0x00042721 File Offset: 0x00040921
+		// Token: 0x1700062D RID: 1581
+		// (get) Token: 0x060016A5 RID: 5797 RVA: 0x00046408 File Offset: 0x00044608
+		// (set) Token: 0x060016A6 RID: 5798 RVA: 0x00046469 File Offset: 0x00044669
 		public virtual VectorInfo TrackOffset
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400105C RID: 4188
+		// Token: 0x0400117E RID: 4478
 		[Nullable(2)]
 		protected new IHitBulletTypeCrystalAttack FbInstance;
 
-		// Token: 0x0400105D RID: 4189
+		// Token: 0x0400117F RID: 4479
 		[Nullable(2)]
 		protected new IHitBulletTypeCrystalAttack_SetValue PocoInterface;
 
-		// Token: 0x0400105E RID: 4190
+		// Token: 0x04001180 RID: 4480
 		private VectorInfo _TrackOffsetCache;
 
-		// Token: 0x0400105F RID: 4191
+		// Token: 0x04001181 RID: 4481
 		private bool _TrackOffsetInited;
 	}
 }

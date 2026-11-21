@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02007001 RID: 28673
+	// Token: 0x02006182 RID: 24962
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputCombinationAxisKey
 	{
-		// Token: 0x06045C66 RID: 285798 RVA: 0x0115A290 File Offset: 0x01158490
+		// Token: 0x0603BE1C RID: 245276 RVA: 0x01104662 File Offset: 0x01102862
 		public static InputCombinationAxisKey New(string axisName, string mainKeyName, string secondaryKeyName, float scale)
 		{
 			return new InputCombinationAxisKey
@@ -21,46 +21,63 @@ namespace CSharpScript.Game.InputSetting
 			};
 		}
 
-		// Token: 0x06045C67 RID: 285799 RVA: 0x0115A2B3 File Offset: 0x011584B3
+		// Token: 0x0603BE1D RID: 245277 RVA: 0x01104685 File Offset: 0x01102885
 		[NullableContext(2)]
 		public InputKey GetMainKey()
 		{
 			return InputSettings.Instance.GetKey(this.MainKeyName);
 		}
 
-		// Token: 0x06045C68 RID: 285800 RVA: 0x0115A2C5 File Offset: 0x011584C5
+		// Token: 0x0603BE1E RID: 245278 RVA: 0x01104697 File Offset: 0x01102897
 		[NullableContext(2)]
 		public InputKey GetSecondaryKey()
 		{
 			return InputSettings.Instance.GetKey(this.SecondaryKeyName);
 		}
 
-		// Token: 0x06045C69 RID: 285801 RVA: 0x0115A2D8 File Offset: 0x011584D8
+		// Token: 0x0603BE1F RID: 245279 RVA: 0x011046AC File Offset: 0x011028AC
 		public FInputActionKeyMapping MainKeyToUeInputActionKeyMapping()
 		{
 			FName value = FNameUtil.GetDynamicFName(this.AxisName).Value;
-			FKey key = new FKey(FNameUtil.GetDynamicFName(this.MainKeyName).Value);
-			return new FInputActionKeyMapping(value, false, false, false, false, key);
+			FName value2 = FNameUtil.GetDynamicFName(this.MainKeyName).Value;
+			FKey key = new FKey
+			{
+				KeyName = value2
+			};
+			return new FInputActionKeyMapping
+			{
+				ActionName = value,
+				Key = key
+			};
 		}
 
-		// Token: 0x06045C6A RID: 285802 RVA: 0x0115A31C File Offset: 0x0115851C
+		// Token: 0x0603BE20 RID: 245280 RVA: 0x01104704 File Offset: 0x01102904
 		public FInputAxisKeyMapping SecondaryKeyToUeInputActionKeyMapping()
 		{
 			FName value = FNameUtil.GetDynamicFName(this.AxisName).Value;
-			FKey key = new FKey(FNameUtil.GetDynamicFName(this.SecondaryKeyName).Value);
-			return new FInputAxisKeyMapping(value, this.Scale, key);
+			FName value2 = FNameUtil.GetDynamicFName(this.SecondaryKeyName).Value;
+			FKey key = new FKey
+			{
+				KeyName = value2
+			};
+			return new FInputAxisKeyMapping
+			{
+				AxisName = value,
+				Scale = this.Scale,
+				Key = key
+			};
 		}
 
-		// Token: 0x040247E4 RID: 149476
+		// Token: 0x0401FA9A RID: 129690
 		public string AxisName = "";
 
-		// Token: 0x040247E5 RID: 149477
+		// Token: 0x0401FA9B RID: 129691
 		public string MainKeyName = "";
 
-		// Token: 0x040247E6 RID: 149478
+		// Token: 0x0401FA9C RID: 129692
 		public string SecondaryKeyName = "";
 
-		// Token: 0x040247E7 RID: 149479
+		// Token: 0x0401FA9D RID: 129693
 		public float Scale;
 	}
 }

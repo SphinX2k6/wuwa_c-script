@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200660A RID: 26122
+	// Token: 0x02005588 RID: 21896
 	public class FishingDockQuestItem : UiPanelBase
 	{
-		// Token: 0x0604176D RID: 268141 RVA: 0x00FDA520 File Offset: 0x00FD8720
+		// Token: 0x06036432 RID: 222258 RVA: 0x00F215A0 File Offset: 0x00F1F7A0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -40,19 +40,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604176E RID: 268142 RVA: 0x00FDA629 File Offset: 0x00FD8829
+		// Token: 0x06036433 RID: 222259 RVA: 0x00F216A9 File Offset: 0x00F1F8A9
 		protected override void OnStart()
 		{
 			this.QuestTargetItemLayout = new GenericLayout<FishingDockQuestChildItem, IFishingDockQuestChildItemData>(base.GetVerticalLayout(2), new Func<FishingDockQuestChildItem>(this.InitItem), null, false, true);
 		}
 
-		// Token: 0x0604176F RID: 268143 RVA: 0x00FDA64C File Offset: 0x00FD884C
+		// Token: 0x06036434 RID: 222260 RVA: 0x00F216CC File Offset: 0x00F1F8CC
 		protected override void OnBeforeShow()
 		{
 			this.RefreshItem();
 		}
 
-		// Token: 0x06041770 RID: 268144 RVA: 0x00FDA654 File Offset: 0x00FD8854
+		// Token: 0x06036435 RID: 222261 RVA: 0x00F216D4 File Offset: 0x00F1F8D4
 		public void RefreshItem()
 		{
 			bool uiactive = false;
@@ -125,20 +125,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			questTargetItemLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06041771 RID: 268145 RVA: 0x00FDA900 File Offset: 0x00FD8B00
+		// Token: 0x06036436 RID: 222262 RVA: 0x00F21980 File Offset: 0x00F1FB80
 		private void OnClickQuestBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.FishingQuestView, null, null);
 		}
 
-		// Token: 0x06041772 RID: 268146 RVA: 0x00FDA913 File Offset: 0x00FD8B13
+		// Token: 0x06036437 RID: 222263 RVA: 0x00F21993 File Offset: 0x00F1FB93
 		[NullableContext(1)]
 		private FishingDockQuestChildItem InitItem()
 		{
 			return new FishingDockQuestChildItem();
 		}
 
-		// Token: 0x0402212F RID: 139567
+		// Token: 0x0401CA60 RID: 117344
 		[Nullable(new byte[]
 		{
 			2,
@@ -147,22 +147,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		private GenericLayout<FishingDockQuestChildItem, IFishingDockQuestChildItemData> QuestTargetItemLayout;
 
-		// Token: 0x0200C815 RID: 51221
+		// Token: 0x0200B1F8 RID: 45560
 		private class EComponentDefine
 		{
-			// Token: 0x0403C6C0 RID: 247488
+			// Token: 0x04037008 RID: 225288
 			public const int TitleText = 0;
 
-			// Token: 0x0403C6C1 RID: 247489
+			// Token: 0x04037009 RID: 225289
 			public const int QuestBtn = 1;
 
-			// Token: 0x0403C6C2 RID: 247490
+			// Token: 0x0403700A RID: 225290
 			public const int QuestLayout = 2;
 
-			// Token: 0x0403C6C3 RID: 247491
+			// Token: 0x0403700B RID: 225291
 			public const int QuestItem = 3;
 
-			// Token: 0x0403C6C4 RID: 247492
+			// Token: 0x0403700C RID: 225292
 			public const int RedDotItem = 4;
 		}
 	}

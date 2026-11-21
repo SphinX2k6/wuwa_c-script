@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053A1 RID: 21409
+	// Token: 0x02004384 RID: 17284
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleAreaProgressTips : UiTickViewBase
 	{
-		// Token: 0x06036B2B RID: 224043 RVA: 0x00CF20EE File Offset: 0x00CF02EE
+		// Token: 0x0602BA71 RID: 178801 RVA: 0x00C41196 File Offset: 0x00C3F396
 		public MoraleAreaProgressTips(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036B2C RID: 224044 RVA: 0x00CF20F8 File Offset: 0x00CF02F8
+		// Token: 0x0602BA72 RID: 178802 RVA: 0x00C411A0 File Offset: 0x00C3F3A0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,12 +35,12 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036B2D RID: 224045 RVA: 0x00CF21C0 File Offset: 0x00CF03C0
+		// Token: 0x0602BA73 RID: 178803 RVA: 0x00C41268 File Offset: 0x00C3F468
 		private void InitDataParam()
 		{
 		}
 
-		// Token: 0x06036B2E RID: 224046 RVA: 0x00CF21C4 File Offset: 0x00CF03C4
+		// Token: 0x0602BA74 RID: 178804 RVA: 0x00C4126C File Offset: 0x00C3F46C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleAreaProgressTips.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -51,19 +51,19 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036B2F RID: 224047 RVA: 0x00CF2207 File Offset: 0x00CF0407
+		// Token: 0x0602BA75 RID: 178805 RVA: 0x00C412AF File Offset: 0x00C3F4AF
 		protected override void OnStart()
 		{
 			this.UpdateData();
 		}
 
-		// Token: 0x06036B30 RID: 224048 RVA: 0x00CF220F File Offset: 0x00CF040F
+		// Token: 0x0602BA76 RID: 178806 RVA: 0x00C412B7 File Offset: 0x00C3F4B7
 		protected override void OnAfterShow()
 		{
 			this.PlayAllProgress().Forget();
 		}
 
-		// Token: 0x06036B31 RID: 224049 RVA: 0x00CF221C File Offset: 0x00CF041C
+		// Token: 0x0602BA77 RID: 178807 RVA: 0x00C412C4 File Offset: 0x00C3F4C4
 		protected override void OnBeforeDestroy()
 		{
 			this.IsPlayingGridProgress = false;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Morale
 			gridProgressPromise.SetResult();
 		}
 
-		// Token: 0x06036B32 RID: 224050 RVA: 0x00CF2250 File Offset: 0x00CF0450
+		// Token: 0x0602BA78 RID: 178808 RVA: 0x00C412F8 File Offset: 0x00C3F4F8
 		public void UpdateData()
 		{
 			this.UpdateProgressDesc();
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UpdateGridProgress(0f);
 		}
 
-		// Token: 0x06036B33 RID: 224051 RVA: 0x00CF22C4 File Offset: 0x00CF04C4
+		// Token: 0x0602BA79 RID: 178809 RVA: 0x00C4136C File Offset: 0x00C3F56C
 		public void UpdateProgressText(float score)
 		{
 			UUIText text = base.GetText(6);
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Morale
 			text.SetText(newText, true);
 		}
 
-		// Token: 0x06036B34 RID: 224052 RVA: 0x00CF231C File Offset: 0x00CF051C
+		// Token: 0x0602BA7A RID: 178810 RVA: 0x00C413C4 File Offset: 0x00C3F5C4
 		public float GetTotalValue()
 		{
 			MoraleAreaProgressTips.Params @params = this.OpenParam as MoraleAreaProgressTips.Params;
@@ -133,27 +133,27 @@ namespace CSharpScript.Game.Module.Morale
 			return (float)readOnlyList3[readOnlyList3.Count - 1].TargetScore;
 		}
 
-		// Token: 0x06036B35 RID: 224053 RVA: 0x00CF236E File Offset: 0x00CF056E
+		// Token: 0x0602BA7B RID: 178811 RVA: 0x00C41416 File Offset: 0x00C3F616
 		public float GetStartValue()
 		{
 			MoraleAreaProgressTips.Params @params = this.OpenParam as MoraleAreaProgressTips.Params;
 			return (float)((@params != null) ? @params.StartNum : 0);
 		}
 
-		// Token: 0x06036B36 RID: 224054 RVA: 0x00CF2388 File Offset: 0x00CF0588
+		// Token: 0x0602BA7C RID: 178812 RVA: 0x00C41430 File Offset: 0x00C3F630
 		public float GetAddValue()
 		{
 			MoraleAreaProgressTips.Params @params = this.OpenParam as MoraleAreaProgressTips.Params;
 			return (float)((@params != null) ? @params.AddNum : 0);
 		}
 
-		// Token: 0x06036B37 RID: 224055 RVA: 0x00CF23A2 File Offset: 0x00CF05A2
+		// Token: 0x0602BA7D RID: 178813 RVA: 0x00C4144A File Offset: 0x00C3F64A
 		public float GetTargetValue()
 		{
 			return this.GetStartValue() + this.GetAddValue();
 		}
 
-		// Token: 0x06036B38 RID: 224056 RVA: 0x00CF23B4 File Offset: 0x00CF05B4
+		// Token: 0x0602BA7E RID: 178814 RVA: 0x00C4145C File Offset: 0x00C3F65C
 		public void UpdateProgressDesc()
 		{
 			float addValue = this.GetAddValue();
@@ -163,19 +163,19 @@ namespace CSharpScript.Game.Module.Morale
 			LguiUtil.Instance.SetLocalTextNew(text, textStringId, new <>z__ReadOnlySingleElementList<object>(addValue));
 		}
 
-		// Token: 0x06036B39 RID: 224057 RVA: 0x00CF2408 File Offset: 0x00CF0608
+		// Token: 0x0602BA7F RID: 178815 RVA: 0x00C414B0 File Offset: 0x00C3F6B0
 		private MoraleAreaProgressItem CreatePercentItem()
 		{
 			return new MoraleAreaProgressItem();
 		}
 
-		// Token: 0x06036B3A RID: 224058 RVA: 0x00CF240F File Offset: 0x00CF060F
+		// Token: 0x0602BA80 RID: 178816 RVA: 0x00C414B7 File Offset: 0x00C3F6B7
 		private MoraleAreaProgressPointItem CreatePercentPointItem()
 		{
 			return new MoraleAreaProgressPointItem();
 		}
 
-		// Token: 0x06036B3B RID: 224059 RVA: 0x00CF2418 File Offset: 0x00CF0618
+		// Token: 0x0602BA81 RID: 178817 RVA: 0x00C414C0 File Offset: 0x00C3F6C0
 		public void UpdateNewProgress(float percent)
 		{
 			float num = Math.Max(0f, Math.Min(percent, 1f));
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036B3C RID: 224060 RVA: 0x00CF2490 File Offset: 0x00CF0690
+		// Token: 0x0602BA82 RID: 178818 RVA: 0x00C41538 File Offset: 0x00C3F738
 		public void UpdateGridProgress(float percent)
 		{
 			float num = Math.Max(0f, Math.Min(percent, 1f));
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UpdateProgressText(num2);
 		}
 
-		// Token: 0x06036B3D RID: 224061 RVA: 0x00CF2544 File Offset: 0x00CF0744
+		// Token: 0x0602BA83 RID: 178819 RVA: 0x00C415EC File Offset: 0x00C3F7EC
 		public UniTask InitCurve()
 		{
 			MoraleAreaProgressTips.<InitCurve>d__32 <InitCurve>d__;
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <InitCurve>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036B3E RID: 224062 RVA: 0x00CF2588 File Offset: 0x00CF0788
+		// Token: 0x0602BA84 RID: 178820 RVA: 0x00C41630 File Offset: 0x00C3F830
 		public float GetCurveTime(UCurveFloat curve)
 		{
 			int num = curve.FloatCurve.Keys.Num();
@@ -246,13 +246,13 @@ namespace CSharpScript.Game.Module.Morale
 			return curve.FloatCurve.Keys.Get(num - 1).Time * 1000f;
 		}
 
-		// Token: 0x06036B3F RID: 224063 RVA: 0x00CF25CE File Offset: 0x00CF07CE
+		// Token: 0x0602BA85 RID: 178821 RVA: 0x00C41676 File Offset: 0x00C3F876
 		public float GetCurveValue(UCurveFloat curve, float time)
 		{
 			return curve.GetFloatValue(time / 1000f);
 		}
 
-		// Token: 0x06036B40 RID: 224064 RVA: 0x00CF25E0 File Offset: 0x00CF07E0
+		// Token: 0x0602BA86 RID: 178822 RVA: 0x00C41688 File Offset: 0x00C3F888
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <LoadCurveFloat>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036B41 RID: 224065 RVA: 0x00CF2624 File Offset: 0x00CF0824
+		// Token: 0x0602BA87 RID: 178823 RVA: 0x00C416CC File Offset: 0x00C3F8CC
 		public UniTask PlayNewProgress()
 		{
 			MoraleAreaProgressTips.<PlayNewProgress>d__36 <PlayNewProgress>d__;
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <PlayNewProgress>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036B42 RID: 224066 RVA: 0x00CF2668 File Offset: 0x00CF0868
+		// Token: 0x0602BA88 RID: 178824 RVA: 0x00C41710 File Offset: 0x00C3F910
 		public UniTask PlayGridProgress()
 		{
 			MoraleAreaProgressTips.<PlayGridProgress>d__37 <PlayGridProgress>d__;
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <PlayGridProgress>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036B43 RID: 224067 RVA: 0x00CF26AC File Offset: 0x00CF08AC
+		// Token: 0x0602BA89 RID: 178825 RVA: 0x00C41754 File Offset: 0x00C3F954
 		public UniTask PlayAllProgress()
 		{
 			MoraleAreaProgressTips.<PlayAllProgress>d__38 <PlayAllProgress>d__;
@@ -301,14 +301,14 @@ namespace CSharpScript.Game.Module.Morale
 			return <PlayAllProgress>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036B44 RID: 224068 RVA: 0x00CF26EF File Offset: 0x00CF08EF
+		// Token: 0x0602BA8A RID: 178826 RVA: 0x00C41797 File Offset: 0x00C3F997
 		protected override void OnTick(float delta)
 		{
 			this.TickNewProgress(delta);
 			this.TickGridProgress(delta);
 		}
 
-		// Token: 0x06036B45 RID: 224069 RVA: 0x00CF2700 File Offset: 0x00CF0900
+		// Token: 0x0602BA8B RID: 178827 RVA: 0x00C417A8 File Offset: 0x00C3F9A8
 		public void TickNewProgress(float delta)
 		{
 			if (!this.IsPlayingNewProgress)
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UpdateNewProgress(curveValue);
 		}
 
-		// Token: 0x06036B46 RID: 224070 RVA: 0x00CF2770 File Offset: 0x00CF0970
+		// Token: 0x0602BA8C RID: 178828 RVA: 0x00C41818 File Offset: 0x00C3FA18
 		public void TickGridProgress(float delta)
 		{
 			if (!this.IsPlayingGridProgress)
@@ -354,12 +354,12 @@ namespace CSharpScript.Game.Module.Morale
 			this.UpdateGridProgress(curveValue);
 		}
 
-		// Token: 0x06036B47 RID: 224071 RVA: 0x00CF27DD File Offset: 0x00CF09DD
+		// Token: 0x0602BA8D RID: 178829 RVA: 0x00C41885 File Offset: 0x00C3FA85
 		public void LogInfo()
 		{
 		}
 
-		// Token: 0x0401CE37 RID: 118327
+		// Token: 0x040178CF RID: 96463
 		[Nullable(new byte[]
 		{
 			2,
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.Module.Morale
 		})]
 		public GenericLayout<MoraleAreaProgressItem, MoraleAreaProgressData> PercentLayout;
 
-		// Token: 0x0401CE38 RID: 118328
+		// Token: 0x040178D0 RID: 96464
 		[Nullable(new byte[]
 		{
 			2,
@@ -377,84 +377,84 @@ namespace CSharpScript.Game.Module.Morale
 		})]
 		public GenericLayout<MoraleAreaProgressPointItem, MoraleAreaProgressData> PointLayout;
 
-		// Token: 0x0401CE39 RID: 118329
+		// Token: 0x040178D1 RID: 96465
 		public UCurveFloat NewProgressCurve;
 
-		// Token: 0x0401CE3A RID: 118330
+		// Token: 0x040178D2 RID: 96466
 		public UCurveFloat GridProgressCurve;
 
-		// Token: 0x0401CE3B RID: 118331
+		// Token: 0x040178D3 RID: 96467
 		[Nullable(2)]
 		public CustomPromise NewProgressPromise;
 
-		// Token: 0x0401CE3C RID: 118332
+		// Token: 0x040178D4 RID: 96468
 		[Nullable(2)]
 		public CustomPromise GridProgressPromise;
 
-		// Token: 0x0401CE3D RID: 118333
+		// Token: 0x040178D5 RID: 96469
 		public bool IsPlayingNewProgress;
 
-		// Token: 0x0401CE3E RID: 118334
+		// Token: 0x040178D6 RID: 96470
 		public bool IsPlayingGridProgress;
 
-		// Token: 0x0401CE3F RID: 118335
+		// Token: 0x040178D7 RID: 96471
 		public float NewProgressTime;
 
-		// Token: 0x0401CE40 RID: 118336
+		// Token: 0x040178D8 RID: 96472
 		public float GridProgressTime;
 
-		// Token: 0x0401CE41 RID: 118337
+		// Token: 0x040178D9 RID: 96473
 		public float DeltaNewProgressTime;
 
-		// Token: 0x0401CE42 RID: 118338
+		// Token: 0x040178DA RID: 96474
 		public float DeltaGridProgressTime;
 
-		// Token: 0x0200B61B RID: 46619
+		// Token: 0x0200A053 RID: 41043
 		[Nullable(0)]
 		public class Params
 		{
-			// Token: 0x04037297 RID: 225943
+			// Token: 0x04031CEC RID: 204012
 			public int StartNum;
 
-			// Token: 0x04037298 RID: 225944
+			// Token: 0x04031CED RID: 204013
 			public int AddNum;
 
-			// Token: 0x04037299 RID: 225945
+			// Token: 0x04031CEE RID: 204014
 			public string SourceDescKey;
 
-			// Token: 0x0403729A RID: 225946
+			// Token: 0x04031CEF RID: 204015
 			public List<MoraleAreaProgressData> InfoList;
 
-			// Token: 0x0403729B RID: 225947
+			// Token: 0x04031CF0 RID: 204016
 			public bool IsMultipleView;
 		}
 
-		// Token: 0x0200B61C RID: 46620
+		// Token: 0x0200A054 RID: 41044
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x0403729C RID: 225948
+			// Token: 0x04031CF1 RID: 204017
 			public const int LayoutProgress = 0;
 
-			// Token: 0x0403729D RID: 225949
+			// Token: 0x04031CF2 RID: 204018
 			public const int ItemProgressTemplate = 1;
 
-			// Token: 0x0403729E RID: 225950
+			// Token: 0x04031CF3 RID: 204019
 			public const int ItemNewProgressRoot = 2;
 
-			// Token: 0x0403729F RID: 225951
+			// Token: 0x04031CF4 RID: 204020
 			public const int SliderNewProgress = 3;
 
-			// Token: 0x040372A0 RID: 225952
+			// Token: 0x04031CF5 RID: 204021
 			public const int LayoutProgressPoint = 4;
 
-			// Token: 0x040372A1 RID: 225953
+			// Token: 0x04031CF6 RID: 204022
 			public const int ItemProgressPointTemplate = 5;
 
-			// Token: 0x040372A2 RID: 225954
+			// Token: 0x04031CF7 RID: 204023
 			public const int TxtProgressValue = 6;
 
-			// Token: 0x040372A3 RID: 225955
+			// Token: 0x04031CF8 RID: 204024
 			public const int TxtSourceDesc = 7;
 		}
 	}

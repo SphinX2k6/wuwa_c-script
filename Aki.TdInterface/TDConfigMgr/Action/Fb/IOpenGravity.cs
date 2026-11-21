@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029B0 RID: 10672
+	// Token: 0x02002C9D RID: 11421
 	public class IOpenGravity : ISetTeleControlConfig
 	{
-		// Token: 0x0600EC18 RID: 60440 RVA: 0x00227EA8 File Offset: 0x002260A8
-		[NullableContext(1)]
+		// Token: 0x0600FAAF RID: 64175 RVA: 0x0024582D File Offset: 0x00243A2D
 		public static IOpenGravity Create(IOpenGravity? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A7A RID: 19066
-		// (get) Token: 0x0600EC19 RID: 60441 RVA: 0x00227EC7 File Offset: 0x002260C7
+		// Token: 0x17004E23 RID: 20003
+		// (get) Token: 0x0600FAB0 RID: 64176 RVA: 0x0024584C File Offset: 0x00243A4C
 		public override ESetTeleControlType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A7B RID: 19067
-		// (get) Token: 0x0600EC1A RID: 60442 RVA: 0x00227ED4 File Offset: 0x002260D4
+		// Token: 0x17004E24 RID: 20004
+		// (get) Token: 0x0600FAB1 RID: 64177 RVA: 0x00245859 File Offset: 0x00243A59
 		public override int EntityId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A7C RID: 19068
-		// (get) Token: 0x0600EC1B RID: 60443 RVA: 0x00227EE4 File Offset: 0x002260E4
+		// Token: 0x17004E25 RID: 20005
+		// (get) Token: 0x0600FAB2 RID: 64178 RVA: 0x00245868 File Offset: 0x00243A68
 		public virtual int? PositionEntityId
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008202 RID: 33282
+		// Token: 0x040088F3 RID: 35059
 		private IOpenGravity Instance;
 	}
 }

@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D27 RID: 23847
+	// Token: 0x02004D09 RID: 19721
 	public class FormationLevelUpItem : UiPanelBase
 	{
-		// Token: 0x0603C786 RID: 247686 RVA: 0x00E8147E File Offset: 0x00E7F67E
+		// Token: 0x060316DF RID: 202463 RVA: 0x00DD1C1E File Offset: 0x00DCFE1E
 		[NullableContext(1)]
 		public FormationLevelUpItem(UUIItem rootUiItem)
 		{
 			base.CreateThenShowByResourceIdAsync("UiItem_FormationLevelUpItem", rootUiItem, false).Forget();
 		}
 
-		// Token: 0x0603C787 RID: 247687 RVA: 0x00E81498 File Offset: 0x00E7F698
+		// Token: 0x060316E0 RID: 202464 RVA: 0x00DD1C38 File Offset: 0x00DCFE38
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C788 RID: 247688 RVA: 0x00E814E0 File Offset: 0x00E7F6E0
+		// Token: 0x060316E1 RID: 202465 RVA: 0x00DD1C80 File Offset: 0x00DCFE80
 		protected override void OnStart()
 		{
 			if (this.LevelHandle != null)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LevelHandle = null;
 		}
 
-		// Token: 0x0603C789 RID: 247689 RVA: 0x00E81504 File Offset: 0x00E7F704
+		// Token: 0x060316E2 RID: 202466 RVA: 0x00DD1CA4 File Offset: 0x00DCFEA4
 		[NullableContext(1)]
 		public void SetLevelText(string level)
 		{
@@ -52,14 +52,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetText(0).SetText(level, true);
 		}
 
-		// Token: 0x0401F823 RID: 129059
+		// Token: 0x0401A2DC RID: 107228
 		[Nullable(2)]
 		public string LevelHandle;
 
-		// Token: 0x0200BFB2 RID: 49074
+		// Token: 0x0200A9B8 RID: 43448
 		private enum EFormationLevelUpItem
 		{
-			// Token: 0x04039D58 RID: 236888
+			// Token: 0x0403471A RID: 214810
 			LevelText
 		}
 	}

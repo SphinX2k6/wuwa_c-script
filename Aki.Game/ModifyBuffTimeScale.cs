@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F51 RID: 12113
+// Token: 0x020024A4 RID: 9380
 [NullableContext(1)]
 [Nullable(0)]
 public class ModifyBuffTimeScale : BuffEffect
 {
-	// Token: 0x06019C79 RID: 105593 RVA: 0x006B8CEF File Offset: 0x006B6EEF
+	// Token: 0x06017584 RID: 95620 RVA: 0x006DF00B File Offset: 0x006DD20B
 	public ModifyBuffTimeScale(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C7A RID: 105594 RVA: 0x006B8D14 File Offset: 0x006B6F14
+	// Token: 0x06017585 RID: 95621 RVA: 0x006DF030 File Offset: 0x006DD230
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -37,7 +37,7 @@ public class ModifyBuffTimeScale : BuffEffect
 		this.TimeScale = (float)int.Parse(extraEffectParameters_[2]) * 0.0001f;
 	}
 
-	// Token: 0x06019C7B RID: 105595 RVA: 0x006B8DB8 File Offset: 0x006B6FB8
+	// Token: 0x06017586 RID: 95622 RVA: 0x006DF0D4 File Offset: 0x006DD2D4
 	public override void OnCreated()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
@@ -65,7 +65,7 @@ public class ModifyBuffTimeScale : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C7C RID: 105596 RVA: 0x006B8E88 File Offset: 0x006B7088
+	// Token: 0x06017587 RID: 95623 RVA: 0x006DF1A4 File Offset: 0x006DD3A4
 	private void OnBuffAdd(long buffId, int handle)
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
@@ -77,7 +77,7 @@ public class ModifyBuffTimeScale : BuffEffect
 		activeBuff.SetBuffTimeScale(this.ActiveHandleId, this.TimeScale);
 	}
 
-	// Token: 0x06019C7D RID: 105597 RVA: 0x006B8EB4 File Offset: 0x006B70B4
+	// Token: 0x06017588 RID: 95624 RVA: 0x006DF1D0 File Offset: 0x006DD3D0
 	public override void OnRemoved(bool bPremature)
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
@@ -102,28 +102,28 @@ public class ModifyBuffTimeScale : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C7E RID: 105598 RVA: 0x006B8F78 File Offset: 0x006B7178
+	// Token: 0x06017589 RID: 95625 RVA: 0x006DF294 File Offset: 0x006DD494
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C7F RID: 105599 RVA: 0x006B8F7B File Offset: 0x006B717B
+	// Token: 0x0601758A RID: 95626 RVA: 0x006DF297 File Offset: 0x006DD497
 	public override string GetDebugEffectString()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C259 RID: 49753
+	// Token: 0x0400C5FB RID: 50683
 	private bool ChangePreBuff;
 
-	// Token: 0x0400C25A RID: 49754
+	// Token: 0x0400C5FC RID: 50684
 	private bool ChangeBuffIfInDuration;
 
-	// Token: 0x0400C25B RID: 49755
+	// Token: 0x0400C5FD RID: 50685
 	private long[] BuffIds = Array.Empty<long>();
 
-	// Token: 0x0400C25C RID: 49756
+	// Token: 0x0400C5FE RID: 50686
 	private float TimeScale = 1f;
 }

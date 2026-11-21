@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 {
-	// Token: 0x02004822 RID: 18466
+	// Token: 0x02003753 RID: 14163
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapFishingCageTipListItem : WorldMapSecondaryTipListItem
 	{
-		// Token: 0x0603057A RID: 198010 RVA: 0x00B38AAC File Offset: 0x00B36CAC
+		// Token: 0x06024D4A RID: 150858 RVA: 0x00A68B78 File Offset: 0x00A66D78
 		public override void Refresh(IWorldMapSecondaryTipItemParam data, bool isSelected, int gridIndex)
 		{
 			IWorldMapFishingCageSecondaryTipItemParam worldMapFishingCageSecondaryTipItemParam = (IWorldMapFishingCageSecondaryTipItemParam)data;
@@ -26,13 +26,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			}
 		}
 
-		// Token: 0x0603057B RID: 198011 RVA: 0x00B38AE0 File Offset: 0x00B36CE0
+		// Token: 0x06024D4B RID: 150859 RVA: 0x00A68BAC File Offset: 0x00A66DAC
 		protected override void OnBeforeHide()
 		{
 			this.StopTimer();
 		}
 
-		// Token: 0x0603057C RID: 198012 RVA: 0x00B38AE8 File Offset: 0x00B36CE8
+		// Token: 0x06024D4C RID: 150860 RVA: 0x00A68BB4 File Offset: 0x00A66DB4
 		private void RefreshToNextHarvestTimeLayout(IWorldMapFishingCageSecondaryTipItemParam data)
 		{
 			int relativeId = data.RelativeId;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			this.StartNewTimer(data);
 		}
 
-		// Token: 0x0603057D RID: 198013 RVA: 0x00B38B50 File Offset: 0x00B36D50
+		// Token: 0x06024D4D RID: 150861 RVA: 0x00A68C1C File Offset: 0x00A66E1C
 		private void RefreshToCapacityLayout(IWorldMapFishingCageSecondaryTipItemParam data)
 		{
 			int relativeId = data.RelativeId;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			descTxt.SetText(multiText2, true);
 		}
 
-		// Token: 0x0603057E RID: 198014 RVA: 0x00B38BE0 File Offset: 0x00B36DE0
+		// Token: 0x06024D4E RID: 150862 RVA: 0x00A68CAC File Offset: 0x00A66EAC
 		private void StartNewTimer(IWorldMapFishingCageSecondaryTipItemParam data)
 		{
 			this.StopTimer();
@@ -82,13 +82,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			}, (float)inverseMillisecond, 1f, null, null, true);
 		}
 
-		// Token: 0x0603057F RID: 198015 RVA: 0x00B38C38 File Offset: 0x00B36E38
+		// Token: 0x06024D4F RID: 150863 RVA: 0x00A68D04 File Offset: 0x00A66F04
 		private void OnTimerTick(IWorldMapFishingCageSecondaryTipItemParam data)
 		{
 			this.UpdateNextHarvestTime(data);
 		}
 
-		// Token: 0x06030580 RID: 198016 RVA: 0x00B38C44 File Offset: 0x00B36E44
+		// Token: 0x06024D50 RID: 150864 RVA: 0x00A68D10 File Offset: 0x00A66F10
 		private void UpdateNextHarvestTime(IWorldMapFishingCageSecondaryTipItemParam data)
 		{
 			int relativeId = data.RelativeId;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			descTxt.SetText(newText, true);
 		}
 
-		// Token: 0x06030581 RID: 198017 RVA: 0x00B38CE4 File Offset: 0x00B36EE4
+		// Token: 0x06024D51 RID: 150865 RVA: 0x00A68DB0 File Offset: 0x00A66FB0
 		private void StopTimer()
 		{
 			if (this.TimerHandle != null && TimerSystem.RealTimeInstance.Has(this.TimerHandle))
@@ -119,11 +119,11 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			}
 		}
 
-		// Token: 0x0401A018 RID: 106520
+		// Token: 0x040146CC RID: 83660
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0401A019 RID: 106521
+		// Token: 0x040146CD RID: 83661
 		private long EndTime;
 	}
 }

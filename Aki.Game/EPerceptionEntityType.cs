@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200351C RID: 13596
+// Token: 0x02002A91 RID: 10897
 public enum EPerceptionEntityType
 {
-	// Token: 0x0400E9F9 RID: 59897
+	// Token: 0x0400EEB4 RID: 61108
 	Unknown,
-	// Token: 0x0400E9FA RID: 59898
+	// Token: 0x0400EEB5 RID: 61109
 	SceneItem,
-	// Token: 0x0400E9FB RID: 59899
+	// Token: 0x0400EEB6 RID: 61110
 	Character,
-	// Token: 0x0400E9FC RID: 59900
+	// Token: 0x0400EEB7 RID: 61111
 	Player = 4
 }

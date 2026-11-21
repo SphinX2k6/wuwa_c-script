@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F7E RID: 8062
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021B9 RID: 8633
 	public class ITalkOptionQteSucceed : ITalkOptionParamType
 	{
-		// Token: 0x0600B15A RID: 45402 RVA: 0x0019DEA4 File Offset: 0x0019C0A4
+		// Token: 0x0600BC34 RID: 48180 RVA: 0x001B3DF8 File Offset: 0x001B1FF8
 		private ITalkOptionQteSucceed_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B15B RID: 45403 RVA: 0x0019DEDC File Offset: 0x0019C0DC
+		// Token: 0x0600BC35 RID: 48181 RVA: 0x001B3E30 File Offset: 0x001B2030
 		public static ITalkOptionQteSucceed Create([Nullable(2)] ITalkOptionQteSucceed instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B15C RID: 45404 RVA: 0x0019DEEF File Offset: 0x0019C0EF
+		// Token: 0x0600BC36 RID: 48182 RVA: 0x001B3E43 File Offset: 0x001B2043
 		public static ITalkOptionQteSucceed CreateFromSetValue([Nullable(2)] ITalkOptionQteSucceed_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B15D RID: 45405 RVA: 0x0019DF02 File Offset: 0x0019C102
+		// Token: 0x0600BC37 RID: 48183 RVA: 0x001B3E56 File Offset: 0x001B2056
 		public new ITalkOptionQteSucceed_SetValue ToSetValue()
 		{
 			return new ITalkOptionQteSucceed_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036C8 RID: 14024
-		// (get) Token: 0x0600B15E RID: 45406 RVA: 0x0019DF15 File Offset: 0x0019C115
-		// (set) Token: 0x0600B15F RID: 45407 RVA: 0x0019DF40 File Offset: 0x0019C140
+		// Token: 0x17003994 RID: 14740
+		// (get) Token: 0x0600BC38 RID: 48184 RVA: 0x001B3E69 File Offset: 0x001B2069
+		// (set) Token: 0x0600BC39 RID: 48185 RVA: 0x001B3E94 File Offset: 0x001B2094
 		public override ETalkOptionParamType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B43 RID: 27459
+		// Token: 0x0400712B RID: 28971
 		[Nullable(2)]
 		protected new ITalkOptionQteSucceed FbInstance;
 
-		// Token: 0x04006B44 RID: 27460
+		// Token: 0x0400712C RID: 28972
 		[Nullable(2)]
 		protected new ITalkOptionQteSucceed_SetValue PocoInterface;
 	}

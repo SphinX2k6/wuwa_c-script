@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A06 RID: 27142
+	// Token: 0x020070B6 RID: 28854
 	public class ILiftMoveTypeCustomSpeedT
 	{
-		// Token: 0x1700C961 RID: 51553
-		// (get) Token: 0x0602F7EF RID: 194543 RVA: 0x00677C89 File Offset: 0x00675E89
-		// (set) Token: 0x0602F7F0 RID: 194544 RVA: 0x00677C91 File Offset: 0x00675E91
+		// Token: 0x1700D361 RID: 54113
+		// (get) Token: 0x060321AF RID: 205231 RVA: 0x006C7FE1 File Offset: 0x006C61E1
+		// (set) Token: 0x060321B0 RID: 205232 RVA: 0x006C7FE9 File Offset: 0x006C61E9
 		public ELiftMoveType Type { get; set; }
 
-		// Token: 0x1700C962 RID: 51554
-		// (get) Token: 0x0602F7F1 RID: 194545 RVA: 0x00677C9A File Offset: 0x00675E9A
-		// (set) Token: 0x0602F7F2 RID: 194546 RVA: 0x00677CA2 File Offset: 0x00675EA2
+		// Token: 0x1700D362 RID: 54114
+		// (get) Token: 0x060321B1 RID: 205233 RVA: 0x006C7FF2 File Offset: 0x006C61F2
+		// (set) Token: 0x060321B2 RID: 205234 RVA: 0x006C7FFA File Offset: 0x006C61FA
 		public float TotalTime { get; set; }
 
-		// Token: 0x1700C963 RID: 51555
-		// (get) Token: 0x0602F7F3 RID: 194547 RVA: 0x00677CAB File Offset: 0x00675EAB
-		// (set) Token: 0x0602F7F4 RID: 194548 RVA: 0x00677CB3 File Offset: 0x00675EB3
+		// Token: 0x1700D363 RID: 54115
+		// (get) Token: 0x060321B3 RID: 205235 RVA: 0x006C8003 File Offset: 0x006C6203
+		// (set) Token: 0x060321B4 RID: 205236 RVA: 0x006C800B File Offset: 0x006C620B
 		public string TimePathCurve { get; set; }
 
-		// Token: 0x0602F7F5 RID: 194549 RVA: 0x00677CBC File Offset: 0x00675EBC
+		// Token: 0x060321B5 RID: 205237 RVA: 0x006C8014 File Offset: 0x006C6214
 		public ILiftMoveTypeCustomSpeedT()
 		{
 			this.Type = ELiftMoveType.Default;

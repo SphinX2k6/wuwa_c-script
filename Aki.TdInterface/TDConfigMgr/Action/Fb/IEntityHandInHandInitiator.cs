@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A58 RID: 10840
+	// Token: 0x02002D45 RID: 11589
 	public class IEntityHandInHandInitiator : IHandInHandInitiatorType
 	{
-		// Token: 0x0600EE7A RID: 61050 RVA: 0x0022B606 File Offset: 0x00229806
-		[NullableContext(1)]
+		// Token: 0x0600FD12 RID: 64786 RVA: 0x00248FBA File Offset: 0x002471BA
 		public static IEntityHandInHandInitiator Create(IEntityHandInHandInitiator? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B8C RID: 19340
-		// (get) Token: 0x0600EE7B RID: 61051 RVA: 0x0022B625 File Offset: 0x00229825
+		// Token: 0x17004F36 RID: 20278
+		// (get) Token: 0x0600FD13 RID: 64787 RVA: 0x00248FD9 File Offset: 0x002471D9
 		public override EHandInHandInitiatorType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B8D RID: 19341
-		// (get) Token: 0x0600EE7C RID: 61052 RVA: 0x0022B632 File Offset: 0x00229832
+		// Token: 0x17004F37 RID: 20279
+		// (get) Token: 0x0600FD14 RID: 64788 RVA: 0x00248FE6 File Offset: 0x002471E6
 		public virtual int EntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008334 RID: 33588
+		// Token: 0x04008A27 RID: 35367
 		private IEntityHandInHandInitiator Instance;
 	}
 }

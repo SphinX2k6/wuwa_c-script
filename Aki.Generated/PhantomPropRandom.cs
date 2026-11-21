@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011D6 RID: 4566
+	// Token: 0x0200130D RID: 4877
 	public struct PhantomPropRandom : IFlatbufferObject
 	{
-		// Token: 0x17003F0B RID: 16139
-		// (get) Token: 0x0600EAEE RID: 60142 RVA: 0x00349015 File Offset: 0x00347215
+		// Token: 0x17004273 RID: 17011
+		// (get) Token: 0x0600F867 RID: 63591 RVA: 0x00373D05 File Offset: 0x00371F05
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EAEF RID: 60143 RVA: 0x00349022 File Offset: 0x00347222
+		// Token: 0x0600F868 RID: 63592 RVA: 0x00373D12 File Offset: 0x00371F12
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EAF0 RID: 60144 RVA: 0x0034902C File Offset: 0x0034722C
+		// Token: 0x0600F869 RID: 63593 RVA: 0x00373D1C File Offset: 0x00371F1C
 		public static PhantomPropRandom GetRootAsPhantomPropRandom(ByteBuffer _bb)
 		{
 			return PhantomPropRandom.GetRootAsPhantomPropRandom(_bb, default(PhantomPropRandom));
 		}
 
-		// Token: 0x0600EAF1 RID: 60145 RVA: 0x00349048 File Offset: 0x00347248
+		// Token: 0x0600F86A RID: 63594 RVA: 0x00373D38 File Offset: 0x00371F38
 		public static PhantomPropRandom GetRootAsPhantomPropRandom(ByteBuffer _bb, PhantomPropRandom obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EAF2 RID: 60146 RVA: 0x00349065 File Offset: 0x00347265
+		// Token: 0x0600F86B RID: 63595 RVA: 0x00373D55 File Offset: 0x00371F55
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EAF3 RID: 60147 RVA: 0x00349074 File Offset: 0x00347274
+		// Token: 0x0600F86C RID: 63596 RVA: 0x00373D64 File Offset: 0x00371F64
 		public PhantomPropRandom __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003F0C RID: 16140
-		// (get) Token: 0x0600EAF4 RID: 60148 RVA: 0x00349084 File Offset: 0x00347284
+		// Token: 0x17004274 RID: 17012
+		// (get) Token: 0x0600F86D RID: 63597 RVA: 0x00373D74 File Offset: 0x00371F74
 		public int RandGroupId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003F0D RID: 16141
-		// (get) Token: 0x0600EAF5 RID: 60149 RVA: 0x003490C0 File Offset: 0x003472C0
+		// Token: 0x17004275 RID: 17013
+		// (get) Token: 0x0600F86E RID: 63598 RVA: 0x00373DB0 File Offset: 0x00371FB0
 		public int RandNum
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005344 RID: 21316
+		// Token: 0x04005988 RID: 22920
 		private Table __p;
 	}
 }

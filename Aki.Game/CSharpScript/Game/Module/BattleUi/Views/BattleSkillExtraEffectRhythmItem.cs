@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CE5 RID: 23781
+	// Token: 0x02004CC7 RID: 19655
 	public class BattleSkillExtraEffectRhythmItem : BattleSkillExtraEffectItem
 	{
-		// Token: 0x0603C2D3 RID: 246483 RVA: 0x00E67C1C File Offset: 0x00E65E1C
+		// Token: 0x06031229 RID: 201257 RVA: 0x00DB81D0 File Offset: 0x00DB63D0
 		[NullableContext(1)]
 		public override void Init(UUIItem rootUiItem)
 		{
 			base.CreateByResourceIdAsync("UiItem_FightBtnRhythm", rootUiItem, false).Forget();
 		}
 
-		// Token: 0x0603C2D4 RID: 246484 RVA: 0x00E67C30 File Offset: 0x00E65E30
+		// Token: 0x0603122A RID: 201258 RVA: 0x00DB81E4 File Offset: 0x00DB63E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C2D5 RID: 246485 RVA: 0x00E67C78 File Offset: 0x00E65E78
+		// Token: 0x0603122B RID: 201259 RVA: 0x00DB822C File Offset: 0x00DB642C
 		protected override void OnStart()
 		{
 			this.EffectItem = new BattleUiNiagaraItem(base.GetUiNiagara(0));
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnStart();
 		}
 
-		// Token: 0x0603C2D6 RID: 246486 RVA: 0x00E67CC7 File Offset: 0x00E65EC7
+		// Token: 0x0603122C RID: 201260 RVA: 0x00DB827B File Offset: 0x00DB647B
 		protected override void OnRefresh()
 		{
 			BattleUiNiagaraItem effectItem = this.EffectItem;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			effectItem.Play();
 		}
 
-		// Token: 0x0603C2D7 RID: 246487 RVA: 0x00E67CD9 File Offset: 0x00E65ED9
+		// Token: 0x0603122D RID: 201261 RVA: 0x00DB828D File Offset: 0x00DB648D
 		public override void Stop()
 		{
 			BattleUiNiagaraItem effectItem = this.EffectItem;
@@ -62,14 +62,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			effectItem.Stop();
 		}
 
-		// Token: 0x0401F5EB RID: 128491
+		// Token: 0x0401A0A4 RID: 106660
 		[Nullable(2)]
 		private BattleUiNiagaraItem EffectItem;
 
-		// Token: 0x0200BF40 RID: 48960
+		// Token: 0x0200A946 RID: 43334
 		private enum EChildType
 		{
-			// Token: 0x04039AFA RID: 236282
+			// Token: 0x040344BC RID: 214204
 			Effect
 		}
 	}

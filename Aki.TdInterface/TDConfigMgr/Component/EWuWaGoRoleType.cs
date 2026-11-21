@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000166 RID: 358
+	// Token: 0x0200017B RID: 379
 	[EnumExtensions]
 	public enum EWuWaGoRoleType
 	{
-		// Token: 0x040006CD RID: 1741
+		// Token: 0x0400071A RID: 1818
 		AircraftSoldiers,
-		// Token: 0x040006CE RID: 1742
+		// Token: 0x0400071B RID: 1819
 		HeatFusionEnemy,
-		// Token: 0x040006CF RID: 1743
+		// Token: 0x0400071C RID: 1820
 		DiffractionEnemy
 	}
 }

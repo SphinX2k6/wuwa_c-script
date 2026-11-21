@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 {
-	// Token: 0x0200476A RID: 18282
+	// Token: 0x02004BD2 RID: 19410
 	public class IPerformanceModeSetting_UnionUnion
 	{
-		// Token: 0x17008321 RID: 33569
-		// (get) Token: 0x0601C249 RID: 115273 RVA: 0x003FC969 File Offset: 0x003FAB69
-		// (set) Token: 0x0601C24A RID: 115274 RVA: 0x003FC971 File Offset: 0x003FAB71
+		// Token: 0x17008962 RID: 35170
+		// (get) Token: 0x0601DA1E RID: 121374 RVA: 0x00428C05 File Offset: 0x00426E05
+		// (set) Token: 0x0601DA1F RID: 121375 RVA: 0x00428C0D File Offset: 0x00426E0D
 		public IPerformanceModeSetting_Union Type { get; set; }
 
-		// Token: 0x17008322 RID: 33570
-		// (get) Token: 0x0601C24B RID: 115275 RVA: 0x003FC97A File Offset: 0x003FAB7A
-		// (set) Token: 0x0601C24C RID: 115276 RVA: 0x003FC982 File Offset: 0x003FAB82
+		// Token: 0x17008963 RID: 35171
+		// (get) Token: 0x0601DA20 RID: 121376 RVA: 0x00428C16 File Offset: 0x00426E16
+		// (set) Token: 0x0601DA21 RID: 121377 RVA: 0x00428C1E File Offset: 0x00426E1E
 		public object Value { get; set; }
 
-		// Token: 0x0601C24D RID: 115277 RVA: 0x003FC98B File Offset: 0x003FAB8B
+		// Token: 0x0601DA22 RID: 121378 RVA: 0x00428C27 File Offset: 0x00426E27
 		public IPerformanceModeSetting_UnionUnion()
 		{
 			this.Type = IPerformanceModeSetting_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601C24E RID: 115278 RVA: 0x003FC9A1 File Offset: 0x003FABA1
+		// Token: 0x0601DA23 RID: 121379 RVA: 0x00428C3D File Offset: 0x00426E3D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601C24F RID: 115279 RVA: 0x003FC9B3 File Offset: 0x003FABB3
+		// Token: 0x0601DA24 RID: 121380 RVA: 0x00428C4F File Offset: 0x00426E4F
 		public IPerformanceModeSettingT AsIPerformanceModeSetting()
 		{
 			return this.As<IPerformanceModeSettingT>();
 		}
 
-		// Token: 0x0601C250 RID: 115280 RVA: 0x003FC9BB File Offset: 0x003FABBB
+		// Token: 0x0601DA25 RID: 121381 RVA: 0x00428C57 File Offset: 0x00426E57
 		public static IPerformanceModeSetting_UnionUnion FromIPerformanceModeSetting(IPerformanceModeSettingT _iperformancemodesetting)
 		{
 			return new IPerformanceModeSetting_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 			};
 		}
 
-		// Token: 0x0601C251 RID: 115281 RVA: 0x003FC9D0 File Offset: 0x003FABD0
+		// Token: 0x0601DA26 RID: 121382 RVA: 0x00428C6C File Offset: 0x00426E6C
 		public IHighPerformanceModeT AsIHighPerformanceMode()
 		{
 			return this.As<IHighPerformanceModeT>();
 		}
 
-		// Token: 0x0601C252 RID: 115282 RVA: 0x003FC9D8 File Offset: 0x003FABD8
+		// Token: 0x0601DA27 RID: 121383 RVA: 0x00428C74 File Offset: 0x00426E74
 		public static IPerformanceModeSetting_UnionUnion FromIHighPerformanceMode(IHighPerformanceModeT _ihighperformancemode)
 		{
 			return new IPerformanceModeSetting_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 			};
 		}
 
-		// Token: 0x0601C253 RID: 115283 RVA: 0x003FC9F0 File Offset: 0x003FABF0
+		// Token: 0x0601DA28 RID: 121384 RVA: 0x00428C8C File Offset: 0x00426E8C
 		public static int Pack(FlatBufferBuilder builder, IPerformanceModeSetting_UnionUnion _o)
 		{
 			IPerformanceModeSetting_Union type = _o.Type;

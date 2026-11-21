@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B69 RID: 11113
+// Token: 0x020020E5 RID: 8421
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsRogueViewBase : UiPanelBase
 {
-	// Token: 0x0601706A RID: 94314 RVA: 0x005D88D0 File Offset: 0x005D6AD0
+	// Token: 0x06014A9B RID: 84635 RVA: 0x00605438 File Offset: 0x00603638
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class SurvivorsRogueViewBase : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601706B RID: 94315 RVA: 0x005D8990 File Offset: 0x005D6B90
+	// Token: 0x06014A9C RID: 84636 RVA: 0x006054F8 File Offset: 0x006036F8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRogueViewBase.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -40,19 +40,19 @@ public class SurvivorsRogueViewBase : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601706C RID: 94316 RVA: 0x005D89D3 File Offset: 0x005D6BD3
+	// Token: 0x06014A9D RID: 84637 RVA: 0x0060553B File Offset: 0x0060373B
 	private void OnBtnHelp()
 	{
 		SurvivorsRogueController.Instance.OpenRogueHelp();
 	}
 
-	// Token: 0x0601706D RID: 94317 RVA: 0x005D89DF File Offset: 0x005D6BDF
+	// Token: 0x06014A9E RID: 84638 RVA: 0x00605547 File Offset: 0x00603747
 	private void OnBackBtnClick()
 	{
 		SurvivorsRogueController.Instance.OpenLeaveInstanceView();
 	}
 
-	// Token: 0x0601706E RID: 94318 RVA: 0x005D89EC File Offset: 0x005D6BEC
+	// Token: 0x06014A9F RID: 84639 RVA: 0x00605554 File Offset: 0x00603754
 	[NullableContext(1)]
 	public void SetMainTitle(string txtId, params string[] args)
 	{
@@ -64,7 +64,7 @@ public class SurvivorsRogueViewBase : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), txtId, array);
 	}
 
-	// Token: 0x0601706F RID: 94319 RVA: 0x005D8A29 File Offset: 0x005D6C29
+	// Token: 0x06014AA0 RID: 84640 RVA: 0x00605591 File Offset: 0x00603791
 	public void SetMainTitleVisible(bool bVisible)
 	{
 		UUIItem item = base.GetItem(3);
@@ -75,15 +75,15 @@ public class SurvivorsRogueViewBase : UiPanelBase
 		item.SetUIActive(bVisible);
 	}
 
-	// Token: 0x0400AC27 RID: 44071
+	// Token: 0x0400B02D RID: 45101
 	public PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400AC28 RID: 44072
+	// Token: 0x0400B02E RID: 45102
 	private SurvivorsRogueResidentWaveTipsPanel WaveTips;
 
-	// Token: 0x0400AC29 RID: 44073
+	// Token: 0x0400B02F RID: 45103
 	public SurvivorsRogueRoleStatePanel RoleStatePanel;
 
-	// Token: 0x0400AC2A RID: 44074
+	// Token: 0x0400B030 RID: 45104
 	private SurvivorsRogueCurrencyItem CurrencyItem;
 }

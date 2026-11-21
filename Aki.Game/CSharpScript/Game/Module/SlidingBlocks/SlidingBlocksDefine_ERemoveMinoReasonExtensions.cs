@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B8A RID: 19338
+	// Token: 0x02003B34 RID: 15156
 	public static class SlidingBlocksDefine_ERemoveMinoReasonExtensions
 	{
-		// Token: 0x060321EF RID: 205295 RVA: 0x00BA4518 File Offset: 0x00BA2718
+		// Token: 0x06026F7F RID: 159615 RVA: 0x00AE8664 File Offset: 0x00AE6864
 		public static string ToEnumString(this SlidingBlocksDefine.ERemoveMinoReason value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x060321F0 RID: 205296 RVA: 0x00BA4550 File Offset: 0x00BA2750
+		// Token: 0x06026F80 RID: 159616 RVA: 0x00AE869C File Offset: 0x00AE689C
 		public static SlidingBlocksDefine.ERemoveMinoReason FromString(string name)
 		{
 			SlidingBlocksDefine.ERemoveMinoReason result;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x060321F1 RID: 205297 RVA: 0x00BA4579 File Offset: 0x00BA2779
+		// Token: 0x06026F81 RID: 159617 RVA: 0x00AE86C5 File Offset: 0x00AE68C5
 		public static bool TryFromString(string name, out SlidingBlocksDefine.ERemoveMinoReason value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return true;
 		}
 
-		// Token: 0x060321F2 RID: 205298 RVA: 0x00BA45B2 File Offset: 0x00BA27B2
+		// Token: 0x06026F82 RID: 159618 RVA: 0x00AE86FE File Offset: 0x00AE68FE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			};
 		}
 
-		// Token: 0x060321F3 RID: 205299 RVA: 0x00BA45CA File Offset: 0x00BA27CA
+		// Token: 0x06026F83 RID: 159619 RVA: 0x00AE8716 File Offset: 0x00AE6916
 		public static SlidingBlocksDefine.ERemoveMinoReason[] GetValues()
 		{
 			return new SlidingBlocksDefine.ERemoveMinoReason[]
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			};
 		}
 
-		// Token: 0x060321F4 RID: 205300 RVA: 0x00BA45D6 File Offset: 0x00BA27D6
+		// Token: 0x06026F84 RID: 159620 RVA: 0x00AE8722 File Offset: 0x00AE6922
 		public static string[] GetNames()
 		{
 			return new string[]

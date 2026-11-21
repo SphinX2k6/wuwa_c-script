@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D14 RID: 15636
+	// Token: 0x0200412B RID: 16683
 	public class IAssignLoadingBackgroundT
 	{
-		// Token: 0x17006B45 RID: 27461
-		// (get) Token: 0x06015935 RID: 88373 RVA: 0x0031DB6F File Offset: 0x0031BD6F
-		// (set) Token: 0x06015936 RID: 88374 RVA: 0x0031DB77 File Offset: 0x0031BD77
+		// Token: 0x170070FF RID: 28927
+		// (get) Token: 0x06016E6D RID: 93805 RVA: 0x00344DE7 File Offset: 0x00342FE7
+		// (set) Token: 0x06016E6E RID: 93806 RVA: 0x00344DEF File Offset: 0x00342FEF
 		public EOperation Type { get; set; }
 
-		// Token: 0x17006B46 RID: 27462
-		// (get) Token: 0x06015937 RID: 88375 RVA: 0x0031DB80 File Offset: 0x0031BD80
-		// (set) Token: 0x06015938 RID: 88376 RVA: 0x0031DB88 File Offset: 0x0031BD88
+		// Token: 0x17007100 RID: 28928
+		// (get) Token: 0x06016E6F RID: 93807 RVA: 0x00344DF8 File Offset: 0x00342FF8
+		// (set) Token: 0x06016E70 RID: 93808 RVA: 0x00344E00 File Offset: 0x00343000
 		public string ImagePath { get; set; }
 
-		// Token: 0x06015939 RID: 88377 RVA: 0x0031DB91 File Offset: 0x0031BD91
+		// Token: 0x06016E71 RID: 93809 RVA: 0x00344E09 File Offset: 0x00343009
 		public IAssignLoadingBackgroundT()
 		{
 			this.Type = EOperation.DisableHLOD;

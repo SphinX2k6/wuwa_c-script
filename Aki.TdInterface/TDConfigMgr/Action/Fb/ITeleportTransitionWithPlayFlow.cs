@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002698 RID: 9880
+	// Token: 0x0200295B RID: 10587
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITeleportTransitionWithPlayFlow : ITeleportTransitionType
 	{
-		// Token: 0x0600DD28 RID: 56616 RVA: 0x0020DD75 File Offset: 0x0020BF75
-		[NullableContext(1)]
+		// Token: 0x0600EAFF RID: 60159 RVA: 0x0022A515 File Offset: 0x00228715
+		[NullableContext(0)]
 		public static ITeleportTransitionWithPlayFlow Create(ITeleportTransitionWithPlayFlow? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041BA RID: 16826
-		// (get) Token: 0x0600DD29 RID: 56617 RVA: 0x0020DD94 File Offset: 0x0020BF94
+		// Token: 0x170044F7 RID: 17655
+		// (get) Token: 0x0600EB00 RID: 60160 RVA: 0x0022A534 File Offset: 0x00228734
 		public override ETeleportTransitionType Type
 		{
 			get
@@ -33,12 +33,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041BB RID: 16827
-		// (get) Token: 0x0600DD2A RID: 56618 RVA: 0x0020DDA1 File Offset: 0x0020BFA1
-		[Nullable(1)]
+		// Token: 0x170044F8 RID: 17656
+		// (get) Token: 0x0600EB01 RID: 60161 RVA: 0x0022A541 File Offset: 0x00228741
+		[Nullable(0)]
 		public virtual PlayFlow Flow
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._FlowInited)
@@ -51,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041BC RID: 16828
-		// (get) Token: 0x0600DD2B RID: 56619 RVA: 0x0020DDD5 File Offset: 0x0020BFD5
+		// Token: 0x170044F9 RID: 17657
+		// (get) Token: 0x0600EB02 RID: 60162 RVA: 0x0022A575 File Offset: 0x00228775
 		public virtual IFadeBackgroundFadeInEffect FadeInEffect
 		{
 			get
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041BD RID: 16829
-		// (get) Token: 0x0600DD2C RID: 56620 RVA: 0x0020DE09 File Offset: 0x0020C009
+		// Token: 0x170044FA RID: 17658
+		// (get) Token: 0x0600EB03 RID: 60163 RVA: 0x0022A5A9 File Offset: 0x002287A9
 		public virtual IFadeBackgroundFadeOutEffect FadeOutEffect
 		{
 			get
@@ -83,25 +83,25 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AD4 RID: 31444
+		// Token: 0x04008171 RID: 33137
 		private ITeleportTransitionWithPlayFlow Instance;
 
-		// Token: 0x04007AD5 RID: 31445
+		// Token: 0x04008172 RID: 33138
 		private PlayFlow _FlowCache;
 
-		// Token: 0x04007AD6 RID: 31446
+		// Token: 0x04008173 RID: 33139
 		private bool _FlowInited;
 
-		// Token: 0x04007AD7 RID: 31447
+		// Token: 0x04008174 RID: 33140
 		private IFadeBackgroundFadeInEffect _FadeInEffectCache;
 
-		// Token: 0x04007AD8 RID: 31448
+		// Token: 0x04008175 RID: 33141
 		private bool _FadeInEffectInited;
 
-		// Token: 0x04007AD9 RID: 31449
+		// Token: 0x04008176 RID: 33142
 		private IFadeBackgroundFadeOutEffect _FadeOutEffectCache;
 
-		// Token: 0x04007ADA RID: 31450
+		// Token: 0x04008177 RID: 33143
 		private bool _FadeOutEffectInited;
 	}
 }

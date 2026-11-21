@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Utils.Command
 {
-	// Token: 0x0200456A RID: 17770
+	// Token: 0x02003492 RID: 13458
 	public enum ECommandName
 	{
-		// Token: 0x04018831 RID: 100401
+		// Token: 0x04012E6B RID: 77419
 		AddFollower,
-		// Token: 0x04018832 RID: 100402
+		// Token: 0x04012E6C RID: 77420
 		RemoveFollower,
-		// Token: 0x04018833 RID: 100403
+		// Token: 0x04012E6D RID: 77421
 		FlushFollower
 	}
 }

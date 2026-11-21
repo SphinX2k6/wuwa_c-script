@@ -2,36 +2,36 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CAB RID: 23723
+	// Token: 0x020062DC RID: 25308
 	public enum TSplineOption : byte
 	{
-		// Token: 0x0400F54E RID: 62798
+		// Token: 0x04010295 RID: 66197
 		NONE,
-		// Token: 0x0400F54F RID: 62799
+		// Token: 0x04010296 RID: 66198
 		IAirPassageSpline,
-		// Token: 0x0400F550 RID: 62800
+		// Token: 0x04010297 RID: 66199
 		IButterflySpline,
-		// Token: 0x0400F551 RID: 62801
+		// Token: 0x04010298 RID: 66200
 		ICommonSpline,
-		// Token: 0x0400F552 RID: 62802
+		// Token: 0x04010299 RID: 66201
 		IContinuesVariableSpeedMovementSpline,
-		// Token: 0x0400F553 RID: 62803
+		// Token: 0x0401029A RID: 66202
 		IEffectSpline,
-		// Token: 0x0400F554 RID: 62804
+		// Token: 0x0401029B RID: 66203
 		ILevelAISpline,
-		// Token: 0x0400F555 RID: 62805
+		// Token: 0x0401029C RID: 66204
 		IMotorSlideSpline,
-		// Token: 0x0400F556 RID: 62806
+		// Token: 0x0401029D RID: 66205
 		IParkourSpline,
-		// Token: 0x0400F557 RID: 62807
+		// Token: 0x0401029E RID: 66206
 		IPatrolSpline,
-		// Token: 0x0400F558 RID: 62808
+		// Token: 0x0401029F RID: 66207
 		IRangeSpline,
-		// Token: 0x0400F559 RID: 62809
+		// Token: 0x040102A0 RID: 66208
 		ISwordRiderRailSpline,
-		// Token: 0x0400F55A RID: 62810
+		// Token: 0x040102A1 RID: 66209
 		ITimePatrolSpline,
-		// Token: 0x0400F55B RID: 62811
+		// Token: 0x040102A2 RID: 66210
 		IWaySpline
 	}
 }

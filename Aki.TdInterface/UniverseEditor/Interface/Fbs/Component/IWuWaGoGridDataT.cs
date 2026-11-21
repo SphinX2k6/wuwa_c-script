@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BAE RID: 23470
+	// Token: 0x020061C4 RID: 25028
 	public class IWuWaGoGridDataT
 	{
-		// Token: 0x1700B159 RID: 45401
-		// (get) Token: 0x0602831D RID: 164637 RVA: 0x00586132 File Offset: 0x00584332
-		// (set) Token: 0x0602831E RID: 164638 RVA: 0x0058613A File Offset: 0x0058433A
+		// Token: 0x1700BAA1 RID: 47777
+		// (get) Token: 0x0602A8E1 RID: 174305 RVA: 0x005CDBC2 File Offset: 0x005CBDC2
+		// (set) Token: 0x0602A8E2 RID: 174306 RVA: 0x005CDBCA File Offset: 0x005CBDCA
 		public EGridShape GridShape { get; set; }
 
-		// Token: 0x1700B15A RID: 45402
-		// (get) Token: 0x0602831F RID: 164639 RVA: 0x00586143 File Offset: 0x00584343
-		// (set) Token: 0x06028320 RID: 164640 RVA: 0x0058614B File Offset: 0x0058434B
+		// Token: 0x1700BAA2 RID: 47778
+		// (get) Token: 0x0602A8E3 RID: 174307 RVA: 0x005CDBD3 File Offset: 0x005CBDD3
+		// (set) Token: 0x0602A8E4 RID: 174308 RVA: 0x005CDBDB File Offset: 0x005CBDDB
 		public IVectorInfoT Position { get; set; }
 
-		// Token: 0x1700B15B RID: 45403
-		// (get) Token: 0x06028321 RID: 164641 RVA: 0x00586154 File Offset: 0x00584354
-		// (set) Token: 0x06028322 RID: 164642 RVA: 0x0058615C File Offset: 0x0058435C
+		// Token: 0x1700BAA3 RID: 47779
+		// (get) Token: 0x0602A8E5 RID: 174309 RVA: 0x005CDBE4 File Offset: 0x005CBDE4
+		// (set) Token: 0x0602A8E6 RID: 174310 RVA: 0x005CDBEC File Offset: 0x005CBDEC
 		public IVectorInfoT Rotation { get; set; }
 
-		// Token: 0x1700B15C RID: 45404
-		// (get) Token: 0x06028323 RID: 164643 RVA: 0x00586165 File Offset: 0x00584365
-		// (set) Token: 0x06028324 RID: 164644 RVA: 0x0058616D File Offset: 0x0058436D
+		// Token: 0x1700BAA4 RID: 47780
+		// (get) Token: 0x0602A8E7 RID: 174311 RVA: 0x005CDBF5 File Offset: 0x005CBDF5
+		// (set) Token: 0x0602A8E8 RID: 174312 RVA: 0x005CDBFD File Offset: 0x005CBDFD
 		public IWuWaGoGridLinkDataT GridLinkData { get; set; }
 
-		// Token: 0x1700B15D RID: 45405
-		// (get) Token: 0x06028325 RID: 164645 RVA: 0x00586176 File Offset: 0x00584376
-		// (set) Token: 0x06028326 RID: 164646 RVA: 0x0058617E File Offset: 0x0058437E
+		// Token: 0x1700BAA5 RID: 47781
+		// (get) Token: 0x0602A8E9 RID: 174313 RVA: 0x005CDC06 File Offset: 0x005CBE06
+		// (set) Token: 0x0602A8EA RID: 174314 RVA: 0x005CDC0E File Offset: 0x005CBE0E
 		public IVectorInfoT AttachedGridCenter { get; set; }
 
-		// Token: 0x06028327 RID: 164647 RVA: 0x00586187 File Offset: 0x00584387
+		// Token: 0x0602A8EB RID: 174315 RVA: 0x005CDC17 File Offset: 0x005CBE17
 		public IWuWaGoGridDataT()
 		{
 			this.GridShape = EGridShape.Vertical;

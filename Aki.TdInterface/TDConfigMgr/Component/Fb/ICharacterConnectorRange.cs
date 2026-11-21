@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D2A RID: 3370
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000E24 RID: 3620
 	public class ICharacterConnectorRange : ICharacterConnectorLogicType
 	{
-		// Token: 0x06004CE3 RID: 19683 RVA: 0x000BF4EE File Offset: 0x000BD6EE
-		[NullableContext(1)]
+		// Token: 0x060051FF RID: 20991 RVA: 0x000CAC32 File Offset: 0x000C8E32
 		public static ICharacterConnectorRange Create(ICharacterConnectorRange? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700184C RID: 6220
-		// (get) Token: 0x06004CE4 RID: 19684 RVA: 0x000BF50D File Offset: 0x000BD70D
+		// Token: 0x170019B2 RID: 6578
+		// (get) Token: 0x06005200 RID: 20992 RVA: 0x000CAC51 File Offset: 0x000C8E51
 		public override ECharacterConnectorLogicType Type
 		{
 			get
@@ -34,12 +31,10 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700184D RID: 6221
-		// (get) Token: 0x06004CE5 RID: 19685 RVA: 0x000BF51A File Offset: 0x000BD71A
-		[Nullable(1)]
+		// Token: 0x170019B3 RID: 6579
+		// (get) Token: 0x06005201 RID: 20993 RVA: 0x000CAC5E File Offset: 0x000C8E5E
 		public override IConnectorEffectConfig EffectConfig
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._EffectConfigInited)
@@ -52,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700184E RID: 6222
-		// (get) Token: 0x06004CE6 RID: 19686 RVA: 0x000BF54E File Offset: 0x000BD74E
+		// Token: 0x170019B4 RID: 6580
+		// (get) Token: 0x06005202 RID: 20994 RVA: 0x000CAC92 File Offset: 0x000C8E92
 		public virtual int EnterRange
 		{
 			get
@@ -62,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700184F RID: 6223
-		// (get) Token: 0x06004CE7 RID: 19687 RVA: 0x000BF55B File Offset: 0x000BD75B
+		// Token: 0x170019B5 RID: 6581
+		// (get) Token: 0x06005203 RID: 20995 RVA: 0x000CAC9F File Offset: 0x000C8E9F
 		public virtual int LeaveRange
 		{
 			get
@@ -72,10 +67,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001850 RID: 6224
-		// (get) Token: 0x06004CE8 RID: 19688 RVA: 0x000BF568 File Offset: 0x000BD768
+		// Token: 0x170019B6 RID: 6582
+		// (get) Token: 0x06005204 RID: 20996 RVA: 0x000CACAC File Offset: 0x000C8EAC
+		[Nullable(2)]
 		public virtual List<int> TagConditions
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._TagConditionsInited)
@@ -97,19 +94,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001851 RID: 6225
-		// (get) Token: 0x06004CE9 RID: 19689 RVA: 0x000BF5E0 File Offset: 0x000BD7E0
+		// Token: 0x170019B7 RID: 6583
+		// (get) Token: 0x06005205 RID: 20997 RVA: 0x000CAD24 File Offset: 0x000C8F24
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IDynamicEntityMatch> MatchConditions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -132,19 +129,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001852 RID: 6226
-		// (get) Token: 0x06004CEA RID: 19690 RVA: 0x000BF65C File Offset: 0x000BD85C
+		// Token: 0x170019B8 RID: 6584
+		// (get) Token: 0x06005206 RID: 20998 RVA: 0x000CADA0 File Offset: 0x000C8FA0
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IDynamicEntityMatch> KeepConditions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -167,41 +164,43 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C01 RID: 11265
+		// Token: 0x04002EC1 RID: 11969
 		private ICharacterConnectorRange Instance;
 
-		// Token: 0x04002C02 RID: 11266
+		// Token: 0x04002EC2 RID: 11970
+		[Nullable(2)]
 		private IConnectorEffectConfig _EffectConfigCache;
 
-		// Token: 0x04002C03 RID: 11267
+		// Token: 0x04002EC3 RID: 11971
 		private bool _EffectConfigInited;
 
-		// Token: 0x04002C04 RID: 11268
+		// Token: 0x04002EC4 RID: 11972
+		[Nullable(2)]
 		private List<int> _TagConditionsCache;
 
-		// Token: 0x04002C05 RID: 11269
+		// Token: 0x04002EC5 RID: 11973
 		private bool _TagConditionsInited;
 
-		// Token: 0x04002C06 RID: 11270
+		// Token: 0x04002EC6 RID: 11974
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IDynamicEntityMatch> _MatchConditionsCache;
 
-		// Token: 0x04002C07 RID: 11271
+		// Token: 0x04002EC7 RID: 11975
 		private bool _MatchConditionsInited;
 
-		// Token: 0x04002C08 RID: 11272
+		// Token: 0x04002EC8 RID: 11976
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IDynamicEntityMatch> _KeepConditionsCache;
 
-		// Token: 0x04002C09 RID: 11273
+		// Token: 0x04002EC9 RID: 11977
 		private bool _KeepConditionsInited;
 	}
 }

@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E27 RID: 7719
+// Token: 0x020012E9 RID: 4841
 [NullableContext(1)]
 [Nullable(0)]
 public class HandBookQuestView : UiViewBase
 {
-	// Token: 0x0600EA97 RID: 60055 RVA: 0x00379035 File Offset: 0x00377235
+	// Token: 0x0600BEB6 RID: 48822 RVA: 0x00384CC1 File Offset: 0x00382EC1
 	public HandBookQuestView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600EA98 RID: 60056 RVA: 0x0037904C File Offset: 0x0037724C
+	// Token: 0x0600BEB7 RID: 48823 RVA: 0x00384CD8 File Offset: 0x00382ED8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class HandBookQuestView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600EA99 RID: 60057 RVA: 0x003790D4 File Offset: 0x003772D4
+	// Token: 0x0600BEB8 RID: 48824 RVA: 0x00384D60 File Offset: 0x00382F60
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HandBookQuestView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class HandBookQuestView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EA9A RID: 60058 RVA: 0x00379117 File Offset: 0x00377317
+	// Token: 0x0600BEB9 RID: 48825 RVA: 0x00384DA3 File Offset: 0x00382FA3
 	protected override void OnStart()
 	{
 		TabComponentWithCaptionItem<CommonTabItem> tabComponent = this.TabComponent;
@@ -57,20 +57,20 @@ public class HandBookQuestView : UiViewBase
 		this.AddEvent();
 	}
 
-	// Token: 0x0600EA9B RID: 60059 RVA: 0x00379137 File Offset: 0x00377337
+	// Token: 0x0600BEBA RID: 48826 RVA: 0x00384DC3 File Offset: 0x00382FC3
 	private void OnHandBookDataUpdate(EHandBookTabType eHandBookTabType, int i)
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x0600EA9C RID: 60060 RVA: 0x0037913F File Offset: 0x0037733F
+	// Token: 0x0600BEBB RID: 48827 RVA: 0x00384DCB File Offset: 0x00382FCB
 	protected void Refresh()
 	{
 		this.RefreshLoopScrollView();
 		this.RefreshCollectText();
 	}
 
-	// Token: 0x0600EA9D RID: 60061 RVA: 0x00379150 File Offset: 0x00377350
+	// Token: 0x0600BEBC RID: 48828 RVA: 0x00384DDC File Offset: 0x00382FDC
 	protected void AddEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnHandBookDataInit, new Action(this.Refresh));
@@ -79,7 +79,7 @@ public class HandBookQuestView : UiViewBase
 		EventSystem.Instance.Add(EEventName.OnPhotoSelect, new Action<int>(this.OnPhotoSelect));
 	}
 
-	// Token: 0x0600EA9E RID: 60062 RVA: 0x003791D0 File Offset: 0x003773D0
+	// Token: 0x0600BEBD RID: 48829 RVA: 0x00384E5C File Offset: 0x0038305C
 	protected void RemoveEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnHandBookDataInit, new Action(this.Refresh));
@@ -88,7 +88,7 @@ public class HandBookQuestView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnPhotoSelect, new Action<int>(this.OnPhotoSelect));
 	}
 
-	// Token: 0x0600EA9F RID: 60063 RVA: 0x00379250 File Offset: 0x00377450
+	// Token: 0x0600BEBE RID: 48830 RVA: 0x00384EDC File Offset: 0x003830DC
 	protected override void OnBeforeShow()
 	{
 		bool flag = true;
@@ -111,7 +111,7 @@ public class HandBookQuestView : UiViewBase
 		this.TabComponent.SelectToggleByIndex(this.CurSelectTabIndex, false);
 	}
 
-	// Token: 0x0600EAA0 RID: 60064 RVA: 0x00379318 File Offset: 0x00377518
+	// Token: 0x0600BEBF RID: 48831 RVA: 0x00384FA4 File Offset: 0x003831A4
 	protected UniTask InitCommonTabTitle()
 	{
 		HandBookQuestView.<InitCommonTabTitle>d__19 <InitCommonTabTitle>d__;
@@ -122,13 +122,13 @@ public class HandBookQuestView : UiViewBase
 		return <InitCommonTabTitle>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EAA1 RID: 60065 RVA: 0x0037935B File Offset: 0x0037755B
+	// Token: 0x0600BEC0 RID: 48832 RVA: 0x00384FE7 File Offset: 0x003831E7
 	private CommonTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new CommonTabItem();
 	}
 
-	// Token: 0x0600EAA2 RID: 60066 RVA: 0x00379364 File Offset: 0x00377564
+	// Token: 0x0600BEC1 RID: 48833 RVA: 0x00384FF0 File Offset: 0x003831F0
 	private void ToggleCallBack(int index)
 	{
 		this.LastClickTime = new double?(Time.Instance.Now);
@@ -137,7 +137,7 @@ public class HandBookQuestView : UiViewBase
 		(base.GetScrollViewWithScrollbar(1).GetContent().GetComponentByClass(UUIInturnAnimController.StaticClass()) as UUIInturnAnimController).Play("", -1, false);
 	}
 
-	// Token: 0x0600EAA3 RID: 60067 RVA: 0x003793C0 File Offset: 0x003775C0
+	// Token: 0x0600BEC2 RID: 48834 RVA: 0x0038504C File Offset: 0x0038324C
 	[NullableContext(2)]
 	private CommonTabData GetCommonData(int index)
 	{
@@ -145,7 +145,7 @@ public class HandBookQuestView : UiViewBase
 		return new CommonTabData(handBookQuestTab.Icon, new CommonTabTitleData(handBookQuestTab.Name, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x0600EAA4 RID: 60068 RVA: 0x003793F8 File Offset: 0x003775F8
+	// Token: 0x0600BEC3 RID: 48835 RVA: 0x00385084 File Offset: 0x00383284
 	protected bool CanToggleChange()
 	{
 		if (Info.Instance.IsInGamepad())
@@ -165,7 +165,7 @@ public class HandBookQuestView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x0600EAA5 RID: 60069 RVA: 0x003794AC File Offset: 0x003776AC
+	// Token: 0x0600BEC4 RID: 48836 RVA: 0x00385138 File Offset: 0x00383338
 	protected void RefreshLoopScrollView()
 	{
 		if (this.TypeList == null)
@@ -232,7 +232,7 @@ public class HandBookQuestView : UiViewBase
 		item3.SetUIActive(true);
 	}
 
-	// Token: 0x0600EAA6 RID: 60070 RVA: 0x0037966C File Offset: 0x0037786C
+	// Token: 0x0600BEC5 RID: 48837 RVA: 0x003852F8 File Offset: 0x003834F8
 	private HandBookQuestItem InitHandBookQuestItem()
 	{
 		HandBookQuestItem handBookQuestItem = new HandBookQuestItem();
@@ -240,19 +240,19 @@ public class HandBookQuestView : UiViewBase
 		return handBookQuestItem;
 	}
 
-	// Token: 0x0600EAA7 RID: 60071 RVA: 0x0037968C File Offset: 0x0037788C
+	// Token: 0x0600BEC6 RID: 48838 RVA: 0x00385318 File Offset: 0x00383518
 	private int SortIndex(PlotType a, PlotType b)
 	{
 		return a.Id - b.Id;
 	}
 
-	// Token: 0x0600EAA8 RID: 60072 RVA: 0x0037969D File Offset: 0x0037789D
+	// Token: 0x0600BEC7 RID: 48839 RVA: 0x00385329 File Offset: 0x00383529
 	private void OnClickCloseButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600EAA9 RID: 60073 RVA: 0x003796A8 File Offset: 0x003778A8
+	// Token: 0x0600BEC8 RID: 48840 RVA: 0x00385334 File Offset: 0x00383534
 	protected void RefreshCollectText()
 	{
 		int[] collectProgress = HandBookController.Instance.GetCollectProgress(EHandBookTabType.Quest);
@@ -263,7 +263,7 @@ public class HandBookQuestView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0600EAAA RID: 60074 RVA: 0x003796F8 File Offset: 0x003778F8
+	// Token: 0x0600BEC9 RID: 48841 RVA: 0x00385384 File Offset: 0x00383584
 	protected void OnHandBookRead(EHandBookTabType type, int id)
 	{
 		if (type != (EHandBookTabType)this.TabDataList[this.CurSelectTabIndex].Type)
@@ -288,7 +288,7 @@ public class HandBookQuestView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EAAB RID: 60075 RVA: 0x00379790 File Offset: 0x00377990
+	// Token: 0x0600BECA RID: 48842 RVA: 0x0038541C File Offset: 0x0038361C
 	protected void OnPhotoSelect(int configId)
 	{
 		foreach (HandBookQuestItem handBookQuestItem in this.HandBookItemList)
@@ -300,7 +300,7 @@ public class HandBookQuestView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EAAC RID: 60076 RVA: 0x00379824 File Offset: 0x00377A24
+	// Token: 0x0600BECB RID: 48843 RVA: 0x003854B0 File Offset: 0x003836B0
 	protected override void OnBeforeDestroy()
 	{
 		this.RoleRootUiCameraHandleData = null;
@@ -310,17 +310,17 @@ public class HandBookQuestView : UiViewBase
 		this.RemoveEvent();
 	}
 
-	// Token: 0x0600EAAD RID: 60077 RVA: 0x0037984C File Offset: 0x00377A4C
+	// Token: 0x0600BECC RID: 48844 RVA: 0x003854D8 File Offset: 0x003836D8
 	private void InitTabData()
 	{
 		this.TabDataList = HandBookConfig.Instance.GetQuestTabList();
 	}
 
-	// Token: 0x04006CEE RID: 27886
+	// Token: 0x04006DCF RID: 28111
 	[Nullable(2)]
 	protected UiCameraHandleData RoleRootUiCameraHandleData;
 
-	// Token: 0x04006CEF RID: 27887
+	// Token: 0x04006DD0 RID: 28112
 	[Nullable(new byte[]
 	{
 		2,
@@ -328,14 +328,14 @@ public class HandBookQuestView : UiViewBase
 	})]
 	protected GenericScrollViewNew<HandBookQuestItem, PlotType> GenericScroll;
 
-	// Token: 0x04006CF0 RID: 27888
+	// Token: 0x04006DD1 RID: 28113
 	[Nullable(2)]
 	private IReadOnlyList<PlotType> TypeList;
 
-	// Token: 0x04006CF1 RID: 27889
+	// Token: 0x04006DD2 RID: 28114
 	private List<HandBookQuestItem> HandBookItemList = new List<HandBookQuestItem>();
 
-	// Token: 0x04006CF2 RID: 27890
+	// Token: 0x04006DD3 RID: 28115
 	[Nullable(new byte[]
 	{
 		2,
@@ -343,36 +343,36 @@ public class HandBookQuestView : UiViewBase
 	})]
 	private TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-	// Token: 0x04006CF3 RID: 27891
+	// Token: 0x04006DD4 RID: 28116
 	private int CurSelectTabIndex;
 
-	// Token: 0x04006CF4 RID: 27892
+	// Token: 0x04006DD5 RID: 28117
 	[Nullable(2)]
 	private IReadOnlyList<HandBookQuestTab> TabDataList;
 
-	// Token: 0x04006CF5 RID: 27893
+	// Token: 0x04006DD6 RID: 28118
 	private double? LastClickTime;
 
-	// Token: 0x04006CF6 RID: 27894
+	// Token: 0x04006DD7 RID: 28119
 	private int? Interval;
 
-	// Token: 0x020083D7 RID: 33751
+	// Token: 0x0200755C RID: 30044
 	[NullableContext(0)]
 	private class EHandBookQuestViewDefine
 	{
-		// Token: 0x0402AEBC RID: 175804
+		// Token: 0x040261DF RID: 156127
 		public const int TitleItem = 0;
 
-		// Token: 0x0402AEBD RID: 175805
+		// Token: 0x040261E0 RID: 156128
 		public const int ScrollView = 1;
 
-		// Token: 0x0402AEBE RID: 175806
+		// Token: 0x040261E1 RID: 156129
 		public const int CollectCountText = 2;
 
-		// Token: 0x0402AEBF RID: 175807
+		// Token: 0x040261E2 RID: 156130
 		public const int ScrollViewItem = 3;
 
-		// Token: 0x0402AEC0 RID: 175808
+		// Token: 0x040261E3 RID: 156131
 		public const int EmptyItem = 4;
 	}
 }

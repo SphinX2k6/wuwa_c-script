@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018AE RID: 6318
+	// Token: 0x020003D0 RID: 976
 	public sealed class FEffectSpecRegisterBodyEffect : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601761D RID: 95773 RVA: 0x00222CF8 File Offset: 0x00220EF8
+		// Token: 0x060060B0 RID: 24752 RVA: 0x00089ED8 File Offset: 0x000880D8
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FEffectSpecRegisterBodyEffect.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601761E RID: 95774 RVA: 0x00222D04 File Offset: 0x00220F04
+		// Token: 0x060060B1 RID: 24753 RVA: 0x00089EE4 File Offset: 0x000880E4
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FEffectSpecRegisterBodyEffect._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FEffectSpecRegisterBodyEffect._FunctionPtr;
 		}
 
-		// Token: 0x0601761F RID: 95775 RVA: 0x00222D27 File Offset: 0x00220F27
+		// Token: 0x060060B2 RID: 24754 RVA: 0x00089F07 File Offset: 0x00088107
 		public FEffectSpecRegisterBodyEffect()
 		{
 		}
 
-		// Token: 0x06017620 RID: 95776 RVA: 0x00222D2F File Offset: 0x00220F2F
+		// Token: 0x060060B3 RID: 24755 RVA: 0x00089F0F File Offset: 0x0008810F
 		[NullableContext(2)]
 		public FEffectSpecRegisterBodyEffect(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017621 RID: 95777 RVA: 0x00222D39 File Offset: 0x00220F39
+		// Token: 0x060060B4 RID: 24756 RVA: 0x00089F19 File Offset: 0x00088119
 		public FEffectSpecRegisterBodyEffect(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017622 RID: 95778 RVA: 0x00222D44 File Offset: 0x00220F44
+		// Token: 0x060060B5 RID: 24757 RVA: 0x00089F24 File Offset: 0x00088124
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int, AActor, USkeletalMeshComponent, UObject, UEffectModelBase>) ?? ((Action<int, AActor, USkeletalMeshComponent, UObject, UEffectModelBase>)Delegate.CreateDelegate(typeof(Action<int, AActor, USkeletalMeshComponent, UObject, UEffectModelBase>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017623 RID: 95779 RVA: 0x00222D76 File Offset: 0x00220F76
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060060B6 RID: 24758 RVA: 0x00089F56 File Offset: 0x00088156
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -71,10 +70,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FEffectSpecRegisterBodyEffect.RegisterId);
 		}
 
-		// Token: 0x06017624 RID: 95780 RVA: 0x00222DB0 File Offset: 0x00220FB0
+		// Token: 0x060060B7 RID: 24759 RVA: 0x00089F90 File Offset: 0x00088190
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int EffectId, AActor EffectActor, USkeletalMeshComponent ContextMeshComponent, UObject ContextSourceObject, UEffectModelBase EffectModel)
 		{
 			FEffectSpecRegisterBodyEffect.__FEffectSpecRegisterBodyEffect_DelegateParams* ptr = stackalloc FEffectSpecRegisterBodyEffect.__FEffectSpecRegisterBodyEffect_DelegateParams[(UIntPtr)55] + 15L / (long)sizeof(FEffectSpecRegisterBodyEffect.__FEffectSpecRegisterBodyEffect_DelegateParams) & -16L;
@@ -87,10 +85,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06017625 RID: 95781 RVA: 0x00222E4C File Offset: 0x0022104C
+		// Token: 0x060060B8 RID: 24760 RVA: 0x0008A02C File Offset: 0x0008822C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, AActor, USkeletalMeshComponent, UObject, UEffectModelBase> action = target as Action<int, AActor, USkeletalMeshComponent, UObject, UEffectModelBase>;
@@ -105,47 +102,47 @@ namespace UnrealEngine
 			action(((FEffectSpecRegisterBodyEffect.__FEffectSpecRegisterBodyEffect_DelegateParams*)__Parameters)->EffectId, orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, orCreateUObjectByNativePointer3, orCreateUObjectByNativePointer4);
 		}
 
-		// Token: 0x0400CB70 RID: 52080
+		// Token: 0x0400292F RID: 10543
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CB71 RID: 52081
+		// Token: 0x04002930 RID: 10544
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.EffectSpecRegisterBodyEffect__DelegateSignature";
 
-		// Token: 0x0400CB72 RID: 52082
+		// Token: 0x04002931 RID: 10545
 		private static int RegisterId;
 
-		// Token: 0x02002FA3 RID: 12195
+		// Token: 0x02000AC6 RID: 2758
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
-		protected ref struct __FEffectSpecRegisterBodyEffect_DelegateParams
+		private ref struct __FEffectSpecRegisterBodyEffect_DelegateParams
 		{
-			// Token: 0x04016B7B RID: 93051
+			// Token: 0x04005B38 RID: 23352
 			[FieldOffset(0)]
 			public int EffectId;
 
-			// Token: 0x04016B7C RID: 93052
+			// Token: 0x04005B39 RID: 23353
 			[FieldOffset(8)]
 			public IntPtr EffectActor;
 
-			// Token: 0x04016B7D RID: 93053
+			// Token: 0x04005B3A RID: 23354
 			[FieldOffset(16)]
 			public IntPtr ContextMeshComponent;
 
-			// Token: 0x04016B7E RID: 93054
+			// Token: 0x04005B3B RID: 23355
 			[FieldOffset(24)]
 			public IntPtr ContextSourceObject;
 
-			// Token: 0x04016B7F RID: 93055
+			// Token: 0x04005B3C RID: 23356
 			[FieldOffset(32)]
 			public IntPtr EffectModel;
 		}
 
-		// Token: 0x02002FA4 RID: 12196
+		// Token: 0x02000AC7 RID: 2759
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B80 RID: 93056
+			// Token: 0x04005B3D RID: 23357
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

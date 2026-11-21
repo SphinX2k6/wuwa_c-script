@@ -1,15 +1,15 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02002D9D RID: 11677
+// Token: 0x020022F7 RID: 8951
 public class BulletActionUpdateLiveTime : BulletActionBase
 {
-	// Token: 0x06018860 RID: 100448 RVA: 0x00643B36 File Offset: 0x00641D36
+	// Token: 0x06016105 RID: 90373 RVA: 0x00669972 File Offset: 0x00667B72
 	public BulletActionUpdateLiveTime(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x06018861 RID: 100449 RVA: 0x00643B3F File Offset: 0x00641D3F
+	// Token: 0x06016106 RID: 90374 RVA: 0x0066997B File Offset: 0x00667B7B
 	protected override void OnExecute()
 	{
 		this.BulletInfo.LiveTime = 0f;
@@ -17,7 +17,7 @@ public class BulletActionUpdateLiveTime : BulletActionBase
 		this.BulletInfo.CreateFrame = 0;
 	}
 
-	// Token: 0x06018862 RID: 100450 RVA: 0x00643B70 File Offset: 0x00641D70
+	// Token: 0x06016107 RID: 90375 RVA: 0x006699AC File Offset: 0x00667BAC
 	public override void AfterTick(float delta)
 	{
 		if (this.BulletInfo.CreateFrame == 0)
@@ -70,7 +70,7 @@ public class BulletActionUpdateLiveTime : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018863 RID: 100451 RVA: 0x00643CB8 File Offset: 0x00641EB8
+	// Token: 0x06016108 RID: 90376 RVA: 0x00669AF4 File Offset: 0x00667CF4
 	private void DestroyBullet()
 	{
 		BulletController.Instance.DestroyBullet(this.BulletInfo.BulletEntityId, false, EBulletDestroyReason.Normal, false);

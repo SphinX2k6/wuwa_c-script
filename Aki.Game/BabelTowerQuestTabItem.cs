@@ -6,10 +6,10 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200117C RID: 4476
+// Token: 0x02000630 RID: 1584
 public class BabelTowerQuestTabItem : GridProxyAbstract<int>
 {
-	// Token: 0x06007652 RID: 30290 RVA: 0x00189394 File Offset: 0x00187594
+	// Token: 0x060049E9 RID: 18921 RVA: 0x00191F44 File Offset: 0x00190144
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -32,19 +32,19 @@ public class BabelTowerQuestTabItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007653 RID: 30291 RVA: 0x0018945B File Offset: 0x0018765B
+	// Token: 0x060049EA RID: 18922 RVA: 0x0019200B File Offset: 0x0019020B
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Add(EEventName.BabelTowerRefreshQuestState, new Action(this.BabelTowerRefreshQuestState));
 	}
 
-	// Token: 0x06007654 RID: 30292 RVA: 0x00189479 File Offset: 0x00187679
+	// Token: 0x060049EB RID: 18923 RVA: 0x00192029 File Offset: 0x00190229
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.BabelTowerRefreshQuestState, new Action(this.BabelTowerRefreshQuestState));
 	}
 
-	// Token: 0x06007655 RID: 30293 RVA: 0x00189498 File Offset: 0x00187698
+	// Token: 0x060049EC RID: 18924 RVA: 0x00192048 File Offset: 0x00190248
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.TabIndex = data;
@@ -54,7 +54,7 @@ public class BabelTowerQuestTabItem : GridProxyAbstract<int>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "BabelTowerTaskType_" + num.ToString(), Array.Empty<object>());
 	}
 
-	// Token: 0x06007656 RID: 30294 RVA: 0x001894FA File Offset: 0x001876FA
+	// Token: 0x060049ED RID: 18925 RVA: 0x001920AA File Offset: 0x001902AA
 	private void OnClickToggle(EToggleState state)
 	{
 		Action<UUIExtendToggle, int> onClickToggleCallBack = this.OnClickToggleCallBack;
@@ -65,7 +65,7 @@ public class BabelTowerQuestTabItem : GridProxyAbstract<int>
 		onClickToggleCallBack(base.GetExtendToggle(0), this.TabIndex);
 	}
 
-	// Token: 0x06007657 RID: 30295 RVA: 0x00189519 File Offset: 0x00187719
+	// Token: 0x060049EE RID: 18926 RVA: 0x001920C9 File Offset: 0x001902C9
 	public void SelectToggle()
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
@@ -77,17 +77,17 @@ public class BabelTowerQuestTabItem : GridProxyAbstract<int>
 		onClickToggleCallBack(base.GetExtendToggle(0), this.TabIndex);
 	}
 
-	// Token: 0x06007658 RID: 30296 RVA: 0x0018954C File Offset: 0x0018774C
+	// Token: 0x060049EF RID: 18927 RVA: 0x001920FC File Offset: 0x001902FC
 	private void BabelTowerRefreshQuestState()
 	{
 		BabelTowerData babelTowerData = BabelTowerController.Instance.GetBabelTowerData();
 		base.GetItem(2).SetUIActive(babelTowerData.GetQuestTabRedDot(this.TabIndex));
 	}
 
-	// Token: 0x0400363F RID: 13887
+	// Token: 0x040036D8 RID: 14040
 	private int TabIndex;
 
-	// Token: 0x04003640 RID: 13888
+	// Token: 0x040036D9 RID: 14041
 	[Nullable(new byte[]
 	{
 		2,
@@ -95,16 +95,16 @@ public class BabelTowerQuestTabItem : GridProxyAbstract<int>
 	})]
 	public Action<UUIExtendToggle, int> OnClickToggleCallBack;
 
-	// Token: 0x0200774F RID: 30543
+	// Token: 0x020068DC RID: 26844
 	private class EComponentDefine
 	{
-		// Token: 0x040275C2 RID: 161218
+		// Token: 0x040228FB RID: 141563
 		public const int Toggle = 0;
 
-		// Token: 0x040275C3 RID: 161219
+		// Token: 0x040228FC RID: 141564
 		public const int TitleText = 1;
 
-		// Token: 0x040275C4 RID: 161220
+		// Token: 0x040228FD RID: 141565
 		public const int RedDotItem = 2;
 	}
 }

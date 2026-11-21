@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AF8 RID: 2808
+	// Token: 0x02000BD2 RID: 3026
 	public struct AiWanderRadiusConfig : IFlatbufferObject
 	{
-		// Token: 0x170002C8 RID: 712
-		// (get) Token: 0x0600476A RID: 18282 RVA: 0x001D50E4 File Offset: 0x001D32E4
+		// Token: 0x170002DF RID: 735
+		// (get) Token: 0x06004CB1 RID: 19633 RVA: 0x001F4A28 File Offset: 0x001F2C28
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600476B RID: 18283 RVA: 0x001D50F1 File Offset: 0x001D32F1
+		// Token: 0x06004CB2 RID: 19634 RVA: 0x001F4A35 File Offset: 0x001F2C35
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600476C RID: 18284 RVA: 0x001D50F8 File Offset: 0x001D32F8
+		// Token: 0x06004CB3 RID: 19635 RVA: 0x001F4A3C File Offset: 0x001F2C3C
 		public static AiWanderRadiusConfig GetRootAsAiWanderRadiusConfig(ByteBuffer _bb)
 		{
 			return AiWanderRadiusConfig.GetRootAsAiWanderRadiusConfig(_bb, default(AiWanderRadiusConfig));
 		}
 
-		// Token: 0x0600476D RID: 18285 RVA: 0x001D5114 File Offset: 0x001D3314
+		// Token: 0x06004CB4 RID: 19636 RVA: 0x001F4A58 File Offset: 0x001F2C58
 		public static AiWanderRadiusConfig GetRootAsAiWanderRadiusConfig(ByteBuffer _bb, AiWanderRadiusConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600476E RID: 18286 RVA: 0x001D5131 File Offset: 0x001D3331
+		// Token: 0x06004CB5 RID: 19637 RVA: 0x001F4A75 File Offset: 0x001F2C75
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600476F RID: 18287 RVA: 0x001D5140 File Offset: 0x001D3340
+		// Token: 0x06004CB6 RID: 19638 RVA: 0x001F4A84 File Offset: 0x001F2C84
 		public AiWanderRadiusConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170002C9 RID: 713
-		// (get) Token: 0x06004770 RID: 18288 RVA: 0x001D5150 File Offset: 0x001D3350
+		// Token: 0x170002E0 RID: 736
+		// (get) Token: 0x06004CB7 RID: 19639 RVA: 0x001F4A94 File Offset: 0x001F2C94
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170002CA RID: 714
-		// (get) Token: 0x06004771 RID: 18289 RVA: 0x001D518C File Offset: 0x001D338C
+		// Token: 0x170002E1 RID: 737
+		// (get) Token: 0x06004CB8 RID: 19640 RVA: 0x001F4AD0 File Offset: 0x001F2CD0
 		public float RandomRadius
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170002CB RID: 715
-		// (get) Token: 0x06004772 RID: 18290 RVA: 0x001D51CC File Offset: 0x001D33CC
+		// Token: 0x170002E2 RID: 738
+		// (get) Token: 0x06004CB9 RID: 19641 RVA: 0x001F4B10 File Offset: 0x001F2D10
 		public float MinWanderDistance
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004AD9 RID: 19161
+		// Token: 0x040050B3 RID: 20659
 		private Table __p;
 	}
 }

@@ -3,15 +3,15 @@ using CSharpScript.Game.NewWorld.Character.Common.Component;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x02007080 RID: 28800
+	// Token: 0x02006201 RID: 25089
 	public class PassThroughPortalParam
 	{
-		// Token: 0x06046222 RID: 287266 RVA: 0x01182A40 File Offset: 0x01180C40
+		// Token: 0x0603C432 RID: 246834 RVA: 0x0112C1A1 File Offset: 0x0112A3A1
 		public PassThroughPortalParam()
 		{
 		}
 
-		// Token: 0x06046223 RID: 287267 RVA: 0x01182A48 File Offset: 0x01180C48
+		// Token: 0x0603C433 RID: 246835 RVA: 0x0112C1A9 File Offset: 0x0112A3A9
 		public PassThroughPortalParam(CharacterManipulateComponent.EPassThroughPortalType type, long portalPairId, float distance)
 		{
 			this.Type = type;
@@ -19,13 +19,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.Distance = distance;
 		}
 
-		// Token: 0x04024BD4 RID: 150484
+		// Token: 0x0401FE8F RID: 130703
 		public CharacterManipulateComponent.EPassThroughPortalType Type;
 
-		// Token: 0x04024BD5 RID: 150485
+		// Token: 0x0401FE90 RID: 130704
 		public long PortalPairId;
 
-		// Token: 0x04024BD6 RID: 150486
+		// Token: 0x0401FE91 RID: 130705
 		public float Distance;
 	}
 }

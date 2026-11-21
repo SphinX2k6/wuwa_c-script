@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020009D7 RID: 2519
+	// Token: 0x020009C6 RID: 2502
 	[NetMessage(EMessageId.MiniWriteLetterLoginNotify)]
 	public sealed class MiniWriteLetterLoginNotify : IMessage<MiniWriteLetterLoginNotify>, IMessage, IEquatable<MiniWriteLetterLoginNotify>, IDeepCloneable<MiniWriteLetterLoginNotify>, IBufferMessage
 	{
-		// Token: 0x0600DCE0 RID: 56544 RVA: 0x00206BE0 File Offset: 0x00204DE0
+		// Token: 0x0600DBC6 RID: 56262 RVA: 0x002049F4 File Offset: 0x00202BF4
 		[NullableContext(1)]
 		public static MiniWriteLetterLoginNotify Create()
 		{
 			return new MiniWriteLetterLoginNotify();
 		}
 
-		// Token: 0x17002CC7 RID: 11463
-		// (get) Token: 0x0600DCE1 RID: 56545 RVA: 0x00206BE7 File Offset: 0x00204DE7
+		// Token: 0x17002C89 RID: 11401
+		// (get) Token: 0x0600DBC7 RID: 56263 RVA: 0x002049FB File Offset: 0x00202BFB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CC8 RID: 11464
-		// (get) Token: 0x0600DCE2 RID: 56546 RVA: 0x00206BEA File Offset: 0x00204DEA
+		// Token: 0x17002C8A RID: 11402
+		// (get) Token: 0x0600DBC8 RID: 56264 RVA: 0x002049FE File Offset: 0x00202BFE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DCE3 RID: 56547 RVA: 0x00206BF1 File Offset: 0x00204DF1
+		// Token: 0x0600DBC9 RID: 56265 RVA: 0x00204A05 File Offset: 0x00202C05
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MiniWriteLetterLoginNotify()
 		{
 		}
 
-		// Token: 0x0600DCE4 RID: 56548 RVA: 0x00206C04 File Offset: 0x00204E04
+		// Token: 0x0600DBCA RID: 56266 RVA: 0x00204A18 File Offset: 0x00202C18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MiniWriteLetterLoginNotify(MiniWriteLetterLoginNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600DCE5 RID: 56549 RVA: 0x00206C2E File Offset: 0x00204E2E
+		// Token: 0x0600DBCB RID: 56267 RVA: 0x00204A42 File Offset: 0x00202C42
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MiniWriteLetterLoginNotify Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new MiniWriteLetterLoginNotify(this);
 		}
 
-		// Token: 0x17002CC9 RID: 11465
-		// (get) Token: 0x0600DCE6 RID: 56550 RVA: 0x00206C36 File Offset: 0x00204E36
+		// Token: 0x17002C8B RID: 11403
+		// (get) Token: 0x0600DBCC RID: 56268 RVA: 0x00204A4A File Offset: 0x00202C4A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<MiniLetterContentPb> LetterContent
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DCE7 RID: 56551 RVA: 0x00206C3E File Offset: 0x00204E3E
+		// Token: 0x0600DBCD RID: 56269 RVA: 0x00204A52 File Offset: 0x00202C52
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MiniWriteLetterLoginNotify);
 		}
 
-		// Token: 0x0600DCE8 RID: 56552 RVA: 0x00206C4C File Offset: 0x00204E4C
+		// Token: 0x0600DBCE RID: 56270 RVA: 0x00204A60 File Offset: 0x00202C60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MiniWriteLetterLoginNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.letterContent_.Equals(other.letterContent_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600DCE9 RID: 56553 RVA: 0x00206C80 File Offset: 0x00204E80
+		// Token: 0x0600DBCF RID: 56271 RVA: 0x00204A94 File Offset: 0x00202C94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DCEA RID: 56554 RVA: 0x00206CB4 File Offset: 0x00204EB4
+		// Token: 0x0600DBD0 RID: 56272 RVA: 0x00204AC8 File Offset: 0x00202CC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600DCEB RID: 56555 RVA: 0x00206CC1 File Offset: 0x00204EC1
+		// Token: 0x0600DBD1 RID: 56273 RVA: 0x00204AD5 File Offset: 0x00202CD5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600DCEC RID: 56556 RVA: 0x00206CCA File Offset: 0x00204ECA
+		// Token: 0x0600DBD2 RID: 56274 RVA: 0x00204ADE File Offset: 0x00202CDE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DCED RID: 56557 RVA: 0x00206CF4 File Offset: 0x00204EF4
+		// Token: 0x0600DBD3 RID: 56275 RVA: 0x00204B08 File Offset: 0x00202D08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DCEE RID: 56558 RVA: 0x00206D2D File Offset: 0x00204F2D
+		// Token: 0x0600DBD4 RID: 56276 RVA: 0x00204B41 File Offset: 0x00202D41
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MiniWriteLetterLoginNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600DCEF RID: 56559 RVA: 0x00206D5B File Offset: 0x00204F5B
+		// Token: 0x0600DBD5 RID: 56277 RVA: 0x00204B6F File Offset: 0x00202D6F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600DCF0 RID: 56560 RVA: 0x00206D64 File Offset: 0x00204F64
+		// Token: 0x0600DBD6 RID: 56278 RVA: 0x00204B78 File Offset: 0x00202D78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 50U)
+				if (num != 90U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005B71 RID: 23409
+		// Token: 0x04005B7A RID: 23418
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005B72 RID: 23410
-		public const int LetterContentFieldNumber = 6;
+		// Token: 0x04005B7B RID: 23419
+		public const int LetterContentFieldNumber = 11;
 
-		// Token: 0x04005B73 RID: 23411
-		private static readonly FieldCodec<MiniLetterContentPb> _repeated_letterContent_codec = FieldCodec.ForMessage<MiniLetterContentPb>(50U, MiniLetterContentPb.Parser);
+		// Token: 0x04005B7C RID: 23420
+		private static readonly FieldCodec<MiniLetterContentPb> _repeated_letterContent_codec = FieldCodec.ForMessage<MiniLetterContentPb>(90U, MiniLetterContentPb.Parser);
 
-		// Token: 0x04005B74 RID: 23412
+		// Token: 0x04005B7D RID: 23421
 		private readonly RepeatedField<MiniLetterContentPb> letterContent_ = new RepeatedField<MiniLetterContentPb>();
 	}
 }

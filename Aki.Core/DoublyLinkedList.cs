@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public class DoublyLinkedList<[Nullable(2)] T>
 {
-	// Token: 0x06000208 RID: 520 RVA: 0x0000C4CC File Offset: 0x0000A6CC
+	// Token: 0x06000209 RID: 521 RVA: 0x0000C1B0 File Offset: 0x0000A3B0
 	public static DoublyLinkedList<T> From(T[] array)
 	{
 		int num = array.Length;
@@ -40,8 +40,8 @@ public class DoublyLinkedList<[Nullable(2)] T>
 		return doublyLinkedList;
 	}
 
-	// Token: 0x17000046 RID: 70
-	// (get) Token: 0x06000209 RID: 521 RVA: 0x0000C598 File Offset: 0x0000A798
+	// Token: 0x17000045 RID: 69
+	// (get) Token: 0x0600020A RID: 522 RVA: 0x0000C27C File Offset: 0x0000A47C
 	public int CountWithHead
 	{
 		get
@@ -50,7 +50,7 @@ public class DoublyLinkedList<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x0600020A RID: 522 RVA: 0x0000C5A4 File Offset: 0x0000A7A4
+	// Token: 0x0600020B RID: 523 RVA: 0x0000C288 File Offset: 0x0000A488
 	[NullableContext(2)]
 	public DoublyLinkedList(T element = default(T))
 	{
@@ -61,7 +61,7 @@ public class DoublyLinkedList<[Nullable(2)] T>
 		this.Length = 1;
 	}
 
-	// Token: 0x0600020B RID: 523 RVA: 0x0000C5F8 File Offset: 0x0000A7F8
+	// Token: 0x0600020C RID: 524 RVA: 0x0000C2DC File Offset: 0x0000A4DC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -87,7 +87,7 @@ public class DoublyLinkedList<[Nullable(2)] T>
 		return doublyLinkedNode;
 	}
 
-	// Token: 0x0600020C RID: 524 RVA: 0x0000C640 File Offset: 0x0000A840
+	// Token: 0x0600020D RID: 525 RVA: 0x0000C324 File Offset: 0x0000A524
 	public DoublyLinkedNode<T> Insert(T newElement, DoublyLinkedNode<T> node)
 	{
 		DoublyLinkedNode<T> doublyLinkedNode = new DoublyLinkedNode<T>(newElement);
@@ -111,7 +111,7 @@ public class DoublyLinkedList<[Nullable(2)] T>
 		return doublyLinkedNode;
 	}
 
-	// Token: 0x0600020D RID: 525 RVA: 0x0000C6BC File Offset: 0x0000A8BC
+	// Token: 0x0600020E RID: 526 RVA: 0x0000C3A0 File Offset: 0x0000A5A0
 	public void Remove(DoublyLinkedNode<T> node)
 	{
 		DoublyLinkedNode<T> doublyLinkedNode = this.Find((DoublyLinkedNode<T> n) => n == node);
@@ -138,7 +138,7 @@ public class DoublyLinkedList<[Nullable(2)] T>
 		this.Length--;
 	}
 
-	// Token: 0x0600020E RID: 526 RVA: 0x0000C760 File Offset: 0x0000A960
+	// Token: 0x0600020F RID: 527 RVA: 0x0000C444 File Offset: 0x0000A644
 	public void RemoveThis(DoublyLinkedNode<T> node)
 	{
 		if (this.Head == node)
@@ -160,7 +160,7 @@ public class DoublyLinkedList<[Nullable(2)] T>
 		this.Length--;
 	}
 
-	// Token: 0x0600020F RID: 527 RVA: 0x0000C7CC File Offset: 0x0000A9CC
+	// Token: 0x06000210 RID: 528 RVA: 0x0000C4B0 File Offset: 0x0000A6B0
 	public DoublyLinkedNode<T> AddTail(T newElement)
 	{
 		DoublyLinkedNode<T> doublyLinkedNode = new DoublyLinkedNode<T>(newElement);
@@ -182,7 +182,7 @@ public class DoublyLinkedList<[Nullable(2)] T>
 		return doublyLinkedNode;
 	}
 
-	// Token: 0x06000210 RID: 528 RVA: 0x0000C838 File Offset: 0x0000AA38
+	// Token: 0x06000211 RID: 529 RVA: 0x0000C51C File Offset: 0x0000A71C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -193,7 +193,7 @@ public class DoublyLinkedList<[Nullable(2)] T>
 		return this.Head;
 	}
 
-	// Token: 0x06000211 RID: 529 RVA: 0x0000C840 File Offset: 0x0000AA40
+	// Token: 0x06000212 RID: 530 RVA: 0x0000C524 File Offset: 0x0000A724
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -204,7 +204,7 @@ public class DoublyLinkedList<[Nullable(2)] T>
 		return this.Tail;
 	}
 
-	// Token: 0x06000212 RID: 530 RVA: 0x0000C848 File Offset: 0x0000AA48
+	// Token: 0x06000213 RID: 531 RVA: 0x0000C52C File Offset: 0x0000A72C
 	public void RemoveAllNodeWithoutHead()
 	{
 		if (this.Head != null)
@@ -216,7 +216,7 @@ public class DoublyLinkedList<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x040001B9 RID: 441
+	// Token: 0x040001BB RID: 443
 	[Nullable(new byte[]
 	{
 		2,
@@ -224,7 +224,7 @@ public class DoublyLinkedList<[Nullable(2)] T>
 	})]
 	private DoublyLinkedNode<T> Head;
 
-	// Token: 0x040001BA RID: 442
+	// Token: 0x040001BC RID: 444
 	[Nullable(new byte[]
 	{
 		2,
@@ -232,6 +232,6 @@ public class DoublyLinkedList<[Nullable(2)] T>
 	})]
 	private DoublyLinkedNode<T> Tail;
 
-	// Token: 0x040001BB RID: 443
+	// Token: 0x040001BD RID: 445
 	private int Length;
 }

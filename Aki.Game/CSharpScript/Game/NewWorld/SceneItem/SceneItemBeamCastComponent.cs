@@ -20,12 +20,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200716D RID: 29037
+	// Token: 0x02006221 RID: 25121
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemBeamCastComponent : EntityComponent
 	{
-		// Token: 0x06046E11 RID: 290321 RVA: 0x011E10A4 File Offset: 0x011DF2A4
+		// Token: 0x0603C667 RID: 247399 RVA: 0x0113C9A0 File Offset: 0x0113ABA0
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E12 RID: 290322 RVA: 0x011E117C File Offset: 0x011DF37C
+		// Token: 0x0603C668 RID: 247400 RVA: 0x0113CA78 File Offset: 0x0113AC78
 		private void InitDataInternal()
 		{
 			if (this.Config == null)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TraceHandleMap = new Dictionary<int, ValueTuple<int, TraceHandle>>();
 		}
 
-		// Token: 0x06046E13 RID: 290323 RVA: 0x011E1358 File Offset: 0x011DF558
+		// Token: 0x0603C669 RID: 247401 RVA: 0x0113CC54 File Offset: 0x0113AE54
 		protected unsafe override bool OnStart()
 		{
 			this.RangeComp = base.Entity.GetComponent<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>();
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E14 RID: 290324 RVA: 0x011E15A8 File Offset: 0x011DF7A8
+		// Token: 0x0603C66A RID: 247402 RVA: 0x0113CEA4 File Offset: 0x0113B0A4
 		protected override void OnActivate()
 		{
 			this.DisableTraceTick("[BeamCastComp] 初始停止Tick");
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.OnSceneInteractionLoadCompleted();
 		}
 
-		// Token: 0x06046E15 RID: 290325 RVA: 0x011E1620 File Offset: 0x011DF820
+		// Token: 0x0603C66B RID: 247403 RVA: 0x0113CF1C File Offset: 0x0113B11C
 		protected override bool OnEnd()
 		{
 			this.DisableManualTickLater();
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E16 RID: 290326 RVA: 0x011E19D8 File Offset: 0x011DFBD8
+		// Token: 0x0603C66C RID: 247404 RVA: 0x0113D2D4 File Offset: 0x0113B4D4
 		protected override void OnTick(float delta)
 		{
 			if (!this.CheckCanCast() || this.InRangeActors.Count < 0)
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TraceAndUpdate(false);
 		}
 
-		// Token: 0x06046E17 RID: 290327 RVA: 0x011E1A4C File Offset: 0x011DFC4C
+		// Token: 0x0603C66D RID: 247405 RVA: 0x0113D348 File Offset: 0x0113B548
 		protected override void OnChangeTimeDilation(float timeDilation)
 		{
 			PawnTimeScaleComponent component = base.Entity.GetComponent<PawnTimeScaleComponent>();
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E18 RID: 290328 RVA: 0x011E1BA8 File Offset: 0x011DFDA8
+		// Token: 0x0603C66E RID: 247406 RVA: 0x0113D4A4 File Offset: 0x0113B6A4
 		private void OnSceneInteractionLoadCompleted()
 		{
 			this.IsReady = true;
@@ -387,19 +387,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E19 RID: 290329 RVA: 0x011E1D72 File Offset: 0x011DFF72
+		// Token: 0x0603C66F RID: 247407 RVA: 0x0113D66E File Offset: 0x0113B86E
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			this.OnSceneItemStateChange();
 		}
 
-		// Token: 0x06046E1A RID: 290330 RVA: 0x011E1D7A File Offset: 0x011DFF7A
+		// Token: 0x0603C670 RID: 247408 RVA: 0x0113D676 File Offset: 0x0113B876
 		private void OnSceneItemStateChange()
 		{
 			this.UpdateCastingAndTracingState();
 		}
 
-		// Token: 0x06046E1B RID: 290331 RVA: 0x011E1D84 File Offset: 0x011DFF84
+		// Token: 0x0603C671 RID: 247409 RVA: 0x0113D680 File Offset: 0x0113B880
 		[NullableContext(1)]
 		private void OnActorOverlapCallback(bool isEnter, AActor actor)
 		{
@@ -431,7 +431,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E1C RID: 290332 RVA: 0x011E1E04 File Offset: 0x011E0004
+		// Token: 0x0603C672 RID: 247410 RVA: 0x0113D700 File Offset: 0x0113B900
 		private void UpdateCastingAndTracingState()
 		{
 			if (!this.CheckCanCast())
@@ -462,20 +462,20 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.EnableTraceTick();
 		}
 
-		// Token: 0x06046E1D RID: 290333 RVA: 0x011E1E9C File Offset: 0x011E009C
+		// Token: 0x0603C673 RID: 247411 RVA: 0x0113D798 File Offset: 0x0113B998
 		private bool CheckCanCast()
 		{
 			BeamCastComponent config = this.Config;
 			return (((config != null) ? config.Reflection : null) == null || (this.BeamReceiveComponent != null && this.BeamReceiveComponent.CanReceiveBeam())) && this.IsReady && this.TagComp.HasTag(this.ActiveStateId);
 		}
 
-		// Token: 0x06046E1E RID: 290334 RVA: 0x011E1EEF File Offset: 0x011E00EF
+		// Token: 0x0603C674 RID: 247412 RVA: 0x0113D7EB File Offset: 0x0113B9EB
 		private bool IsTraceTickEnabled()
 		{
 			return this.TraceTickDisableHandle == null;
 		}
 
-		// Token: 0x06046E1F RID: 290335 RVA: 0x011E1EFF File Offset: 0x011E00FF
+		// Token: 0x0603C675 RID: 247413 RVA: 0x0113D7FB File Offset: 0x0113B9FB
 		private void EnableTraceTick()
 		{
 			if (!this.IsTraceTickEnabled())
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E20 RID: 290336 RVA: 0x011E1F27 File Offset: 0x011E0127
+		// Token: 0x0603C676 RID: 247414 RVA: 0x0113D823 File Offset: 0x0113BA23
 		[NullableContext(1)]
 		private void DisableTraceTick(string reason)
 		{
@@ -495,7 +495,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E21 RID: 290337 RVA: 0x011E1F44 File Offset: 0x011E0144
+		// Token: 0x0603C677 RID: 247415 RVA: 0x0113D840 File Offset: 0x0113BA40
 		private void EnableManualTickLater()
 		{
 			if (this.ManualTickHandle != null && TimerSystem.GameplayTimeInstance.Has(this.ManualTickHandle))
@@ -514,7 +514,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 100f, null, null, true, 1f);
 		}
 
-		// Token: 0x06046E22 RID: 290338 RVA: 0x011E1FAC File Offset: 0x011E01AC
+		// Token: 0x0603C678 RID: 247416 RVA: 0x0113D8A8 File Offset: 0x0113BAA8
 		private void DisableManualTickLater()
 		{
 			if (this.ManualTickHandle == null || !TimerSystem.GameplayTimeInstance.Has(this.ManualTickHandle))
@@ -526,7 +526,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ManualTickHandle = null;
 		}
 
-		// Token: 0x06046E23 RID: 290339 RVA: 0x011E1FE8 File Offset: 0x011E01E8
+		// Token: 0x0603C679 RID: 247417 RVA: 0x0113D8E4 File Offset: 0x0113BAE4
 		[NullableContext(1)]
 		private void InitTraceElement(global::Vector traceStartRel, global::Vector traceEndRel)
 		{
@@ -564,7 +564,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			TraceElementCommon.Instance.SetEndLocation(this.TraceElement, commonTempVector2);
 		}
 
-		// Token: 0x06046E24 RID: 290340 RVA: 0x011E21A4 File Offset: 0x011E03A4
+		// Token: 0x0603C67A RID: 247418 RVA: 0x0113DAA0 File Offset: 0x0113BCA0
 		private void TraceAndUpdate(bool useAsync)
 		{
 			if (this.CurTraceIndex >= this.BeamCastInfoArray.Count)
@@ -596,7 +596,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TraceElement.ClearCacheData(false);
 		}
 
-		// Token: 0x06046E25 RID: 290341 RVA: 0x011E22C8 File Offset: 0x011E04C8
+		// Token: 0x0603C67B RID: 247419 RVA: 0x0113DBC4 File Offset: 0x0113BDC4
 		private void CastToTarget(UTraceSphereElement traceElement, int beamIndex, float? beamLen = null, bool? needNotUpdateEffect = null)
 		{
 			if (beamIndex >= this.BeamCastInfoArray.Count)
@@ -663,7 +663,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.UpdateCastingEntity(beamIndex);
 		}
 
-		// Token: 0x06046E26 RID: 290342 RVA: 0x011E24E8 File Offset: 0x011E06E8
+		// Token: 0x0603C67C RID: 247420 RVA: 0x0113DDE4 File Offset: 0x0113BFE4
 		private void UpdateOverlapRange(int beamIndex)
 		{
 			if (this.RangeComp != null)
@@ -727,10 +727,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 							}
 							beamCastInfo.ReflectShapeCenter.DeepCopy(centerOfPoints);
 							beamCastInfo.ReflectShapeHeight = num;
-							global::Vector actorScaleProxy = this.ActorComp.ActorScaleProxy;
-							cylinderTriggerShape.Center.X = new float?((float)centerOfPoints.X * (float)actorScaleProxy.X);
-							cylinderTriggerShape.Center.Y = new float?((float)centerOfPoints.Y * (float)actorScaleProxy.Y);
-							cylinderTriggerShape.Center.Z = new float?((float)centerOfPoints.Z * (float)actorScaleProxy.Z);
+							cylinderTriggerShape.Center.X = new float?((float)centerOfPoints.X);
+							cylinderTriggerShape.Center.Y = new float?((float)centerOfPoints.Y);
+							cylinderTriggerShape.Center.Z = new float?((float)centerOfPoints.Z);
 							cylinderTriggerShape.Height = (int)num;
 							this.RangeComp.UpdateCylinderShape(cylinderTriggerShape, beamCastInfo.ReflectRangeRotation);
 							return;
@@ -750,7 +749,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E27 RID: 290343 RVA: 0x011E2890 File Offset: 0x011E0A90
+		// Token: 0x0603C67D RID: 247421 RVA: 0x0113E164 File Offset: 0x0113C364
 		private void StopBeam()
 		{
 			BeamCastComponent config = this.Config;
@@ -775,7 +774,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E28 RID: 290344 RVA: 0x011E2A08 File Offset: 0x011E0C08
+		// Token: 0x0603C67E RID: 247422 RVA: 0x0113E2DC File Offset: 0x0113C4DC
 		private void DetachSplineActor()
 		{
 			foreach (SceneItemBeamCastComponent.BeamCastInfo beamCastInfo in this.BeamCastInfoArray)
@@ -789,7 +788,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E29 RID: 290345 RVA: 0x011E2A90 File Offset: 0x011E0C90
+		// Token: 0x0603C67F RID: 247423 RVA: 0x0113E364 File Offset: 0x0113C564
 		private void PlayStartEffect(int beamIndex)
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -810,8 +809,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				FVectorDouble fvectorDouble2 = actorTransform.TransformPosition(fvectorDouble);
 				fvectorDouble = beamCastInfo.TraceEndRel.ToUeVector(false);
 				FVectorDouble fvectorDouble3 = actorTransform.TransformPosition(fvectorDouble);
-				global::Vector inB = global::Vector.Create(fvectorDouble3 - fvectorDouble2);
-				double angleByVectorDot = MathUtils.Instance.GetAngleByVectorDot(global::Vector.LeftVectorProxy, inB);
+				global::Vector v = global::Vector.Create(fvectorDouble3 - fvectorDouble2);
+				double angleByVectorDot = MathUtils.Instance.GetAngleByVectorDot(global::Vector.LeftVectorProxy, v);
 				global::Rotator rotator = new global::Rotator(0f, (float)angleByVectorDot, 0f);
 				FRotator frotator = rotator.ToUeRotator();
 				FVector scale3D = actorTransform.GetScale3D();
@@ -845,7 +844,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E2A RID: 290346 RVA: 0x011E2C88 File Offset: 0x011E0E88
+		// Token: 0x0603C680 RID: 247424 RVA: 0x0113E568 File Offset: 0x0113C768
 		private void PlayHitEffect(int beamIndex)
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -899,7 +898,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E2B RID: 290347 RVA: 0x011E2E50 File Offset: 0x011E1050
+		// Token: 0x0603C681 RID: 247425 RVA: 0x0113E730 File Offset: 0x0113C930
 		private void StopHitEffect(int index)
 		{
 			int? hitEffectHandle;
@@ -925,7 +924,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E2C RID: 290348 RVA: 0x011E2F78 File Offset: 0x011E1178
+		// Token: 0x0603C682 RID: 247426 RVA: 0x0113E858 File Offset: 0x0113CA58
 		private void UpdateBeamEffect(int index)
 		{
 			SceneItemBeamCastComponent.BeamCastInfo beamCastInfo = this.BeamCastInfoArray[index];
@@ -1000,7 +999,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E2D RID: 290349 RVA: 0x011E3264 File Offset: 0x011E1464
+		// Token: 0x0603C683 RID: 247427 RVA: 0x0113EB44 File Offset: 0x0113CD44
 		private void UpdateHitEffect(int index)
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -1048,7 +1047,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E2E RID: 290350 RVA: 0x011E33B4 File Offset: 0x011E15B4
+		// Token: 0x0603C684 RID: 247428 RVA: 0x0113EC94 File Offset: 0x0113CE94
 		private void UpdateCastingEntity(int beamIndex)
 		{
 			SceneItemBeamCastComponent.BeamCastInfo beamCastInfo = this.BeamCastInfoArray[beamIndex];
@@ -1093,7 +1092,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E2F RID: 290351 RVA: 0x011E34F4 File Offset: 0x011E16F4
+		// Token: 0x0603C685 RID: 247429 RVA: 0x0113EDD4 File Offset: 0x0113CFD4
 		private EntityHandle ExtractEntity(AActor actor)
 		{
 			if (actor == null || !actor.IsValid())
@@ -1107,7 +1106,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return CreatureModel.Instance.GetEntityByChildActor(actor);
 		}
 
-		// Token: 0x06046E30 RID: 290352 RVA: 0x011E3548 File Offset: 0x011E1748
+		// Token: 0x0603C686 RID: 247430 RVA: 0x0113EE28 File Offset: 0x0113D028
 		public void ToggleDebugMode(bool enable)
 		{
 			if (this.TraceElement == null)
@@ -1123,7 +1122,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TraceElement.SetDrawDebugTrace(enable ? EDrawDebugTrace.ForDuration : EDrawDebugTrace.None);
 		}
 
-		// Token: 0x06046E31 RID: 290353 RVA: 0x011E35B0 File Offset: 0x011E17B0
+		// Token: 0x0603C687 RID: 247431 RVA: 0x0113EE90 File Offset: 0x0113D090
 		private void CastBeam()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -1153,7 +1152,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E32 RID: 290354 RVA: 0x011E3640 File Offset: 0x011E1840
+		// Token: 0x0603C688 RID: 247432 RVA: 0x0113EF20 File Offset: 0x0113D120
 		private void CastBeamInternal()
 		{
 			AActor aactor = ActorSystem.Instance.Get(BP_BasePathLine_C.StaticClass(), this.ActorComp.Owner.D_GetTransform(), null, true);
@@ -1191,7 +1190,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E33 RID: 290355 RVA: 0x011E3774 File Offset: 0x011E1974
+		// Token: 0x0603C689 RID: 247433 RVA: 0x0113F054 File Offset: 0x0113D254
 		[NullableContext(1)]
 		private void CastBeamFailed(string failReason)
 		{
@@ -1209,7 +1208,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E34 RID: 290356 RVA: 0x011E37E8 File Offset: 0x011E19E8
+		// Token: 0x0603C68A RID: 247434 RVA: 0x0113F0C8 File Offset: 0x0113D2C8
 		private void MultiTraceAndUpdate()
 		{
 			if (!this.NeedUpdateBeamTrace || this.CurSpawnIndex < this.BeamCount || !this.CheckCanCast())
@@ -1233,7 +1232,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 20f, this.BeamCount, 1f, null, null, true);
 		}
 
-		// Token: 0x06046E35 RID: 290357 RVA: 0x011E387C File Offset: 0x011E1A7C
+		// Token: 0x0603C68B RID: 247435 RVA: 0x0113F15C File Offset: 0x0113D35C
 		private void TraceHitResultHandle(bool isHit, UTraceBaseElement element, double frame, double index)
 		{
 			Dictionary<int, ValueTuple<int, TraceHandle>> traceHandleMap = this.TraceHandleMap;
@@ -1247,7 +1246,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TraceHandleMap.Remove((int)index);
 		}
 
-		// Token: 0x06046E36 RID: 290358 RVA: 0x011E38F0 File Offset: 0x011E1AF0
+		// Token: 0x0603C68C RID: 247436 RVA: 0x0113F1D0 File Offset: 0x0113D3D0
 		[NullableContext(1)]
 		private unsafe void TriggerActionOnCharacterEnter(EntityHandle enterEntity)
 		{
@@ -1285,7 +1284,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E37 RID: 290359 RVA: 0x011E39A0 File Offset: 0x011E1BA0
+		// Token: 0x0603C68D RID: 247437 RVA: 0x0113F280 File Offset: 0x0113D480
 		private void StartOverlap()
 		{
 			if (!EventSystem.Instance.HasWithTarget<bool, AActor>(base.Entity, EEventName.OnActorInOutRangeLocal, new Action<bool, AActor>(this.OnActorOverlapCallback)))
@@ -1298,7 +1297,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E38 RID: 290360 RVA: 0x011E3A14 File Offset: 0x011E1C14
+		// Token: 0x0603C68E RID: 247438 RVA: 0x0113F2F4 File Offset: 0x0113D4F4
 		private void StopOverlap()
 		{
 			if (this.InRangeActors != null)
@@ -1311,7 +1310,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E39 RID: 290361 RVA: 0x011E3A7C File Offset: 0x011E1C7C
+		// Token: 0x0603C68F RID: 247439 RVA: 0x0113F35C File Offset: 0x0113D55C
 		public global::Vector GetBeamCastWorldDir(int beamIndex)
 		{
 			if (this.BeamCastInfoArray.Count <= beamIndex)
@@ -1325,7 +1324,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return vector;
 		}
 
-		// Token: 0x06046E3A RID: 290362 RVA: 0x011E3AE8 File Offset: 0x011E1CE8
+		// Token: 0x0603C690 RID: 247440 RVA: 0x0113F3C8 File Offset: 0x0113D5C8
 		public global::Vector GetBeamCastEndPoint(int beamIndex)
 		{
 			if (this.BeamCastInfoArray.Count <= beamIndex)
@@ -1337,7 +1336,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return vector;
 		}
 
-		// Token: 0x06046E3B RID: 290363 RVA: 0x011E3B49 File Offset: 0x011E1D49
+		// Token: 0x0603C691 RID: 247441 RVA: 0x0113F429 File Offset: 0x0113D629
 		public AActor GetBeamCastingActor(int beamIndex)
 		{
 			if (this.BeamCastInfoArray.Count <= beamIndex)
@@ -1347,7 +1346,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.BeamCastInfoArray[beamIndex].CastingActor;
 		}
 
-		// Token: 0x06046E3C RID: 290364 RVA: 0x011E3B6C File Offset: 0x011E1D6C
+		// Token: 0x0603C692 RID: 247442 RVA: 0x0113F44C File Offset: 0x0113D64C
 		private void OnBeamReflectStart()
 		{
 			if (this.BeamReceiveComponent != null)
@@ -1366,7 +1365,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E3D RID: 290365 RVA: 0x011E3BBC File Offset: 0x011E1DBC
+		// Token: 0x0603C693 RID: 247443 RVA: 0x0113F49C File Offset: 0x0113D69C
 		private void UpdateReflectEndPoint()
 		{
 			global::Vector beamReceiveDirection = this.BeamReceiveComponent.GetBeamReceiveDirection();
@@ -1424,7 +1423,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			beamCastInfo.ReflectRangeScaleSize = (float)commonTempVector5.Size();
 		}
 
-		// Token: 0x06046E3E RID: 290366 RVA: 0x011E3E2D File Offset: 0x011E202D
+		// Token: 0x0603C694 RID: 247444 RVA: 0x0113F70D File Offset: 0x0113D90D
 		private void OnBeamReflectStop()
 		{
 			this.StopOverlap();
@@ -1435,7 +1434,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.InitDataInternal();
 		}
 
-		// Token: 0x06046E3F RID: 290367 RVA: 0x011E3E5C File Offset: 0x011E205C
+		// Token: 0x0603C695 RID: 247445 RVA: 0x0113F73C File Offset: 0x0113D93C
 		private void CalculateNormalVector()
 		{
 			if (this.SceneInteractionActor == null)
@@ -1456,7 +1455,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			commonTempQuat.GetForwardVector(this.NormalVector);
 		}
 
-		// Token: 0x06046E40 RID: 290368 RVA: 0x011E3F04 File Offset: 0x011E2104
+		// Token: 0x0603C696 RID: 247446 RVA: 0x0113F7E4 File Offset: 0x0113D9E4
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -1465,287 +1464,253 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemBeamCastComponent sceneItemBeamCastComponent = (SceneItemBeamCastComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemBeamCastComponent.Config == null)
 			{
-				if (sceneItemBeamCastComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BeamCastComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (sceneItemBeamCastComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("RangeComp"))
-			{
-				if (sceneItemBeamCastComponent.RangeComp == null)
-				{
-					this.RangeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>(this.RangeComp), "RangeComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("StateComp"))
-			{
-				if (sceneItemBeamCastComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (sceneItemBeamCastComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemBeamCastComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TraceTickDisableHandle"))
-			{
-				this.TraceTickDisableHandle = sceneItemBeamCastComponent.TraceTickDisableHandle;
-			}
-			if (base.CanResetComponentProperty("ActiveStateId"))
-			{
-				this.ActiveStateId = sceneItemBeamCastComponent.ActiveStateId;
-			}
-			if (base.CanResetComponentProperty("InRangeActors"))
-			{
-				if (sceneItemBeamCastComponent.InRangeActors == null)
-				{
-					this.InRangeActors = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.InRangeActors), "InRangeActors"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TraceElement"))
-			{
-				if (sceneItemBeamCastComponent.TraceElement == null)
-				{
-					this.TraceElement = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.TraceElement), "TraceElement"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TraceMaxLen"))
-			{
-				this.TraceMaxLen = sceneItemBeamCastComponent.TraceMaxLen;
-			}
-			if (base.CanResetComponentProperty("BeamSplinePoints"))
-			{
-				if (sceneItemBeamCastComponent.BeamSplinePoints == null)
-				{
-					this.BeamSplinePoints = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FVectorDouble>(this.BeamSplinePoints), "BeamSplinePoints"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsReady"))
-			{
-				this.IsReady = sceneItemBeamCastComponent.IsReady;
-			}
-			if (base.CanResetComponentProperty("ManualTickHandle"))
-			{
-				if (sceneItemBeamCastComponent.ManualTickHandle == null)
-				{
-					this.ManualTickHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.ManualTickHandle), "ManualTickHandle"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CustomTimeDilation"))
-			{
-				this.CustomTimeDilation = sceneItemBeamCastComponent.CustomTimeDilation;
-			}
-			if (base.CanResetComponentProperty("BeamCount"))
-			{
-				this.BeamCount = sceneItemBeamCastComponent.BeamCount;
-			}
-			if (base.CanResetComponentProperty("PerBeamOffset"))
-			{
-				this.PerBeamOffset = sceneItemBeamCastComponent.PerBeamOffset;
-			}
-			if (base.CanResetComponentProperty("BeamCastInfoArray"))
-			{
-				if (sceneItemBeamCastComponent.BeamCastInfoArray == null)
-				{
-					this.BeamCastInfoArray = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<SceneItemBeamCastComponent.BeamCastInfo>>(this.BeamCastInfoArray), "BeamCastInfoArray"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CurSpawnIndex"))
-			{
-				this.CurSpawnIndex = sceneItemBeamCastComponent.CurSpawnIndex;
-			}
-			if (base.CanResetComponentProperty("SpawnBeamTimerHandle"))
-			{
-				if (sceneItemBeamCastComponent.SpawnBeamTimerHandle == null)
-				{
-					this.SpawnBeamTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.SpawnBeamTimerHandle), "SpawnBeamTimerHandle"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MultiTraceTimerHandle"))
-			{
-				if (sceneItemBeamCastComponent.MultiTraceTimerHandle == null)
-				{
-					this.MultiTraceTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.MultiTraceTimerHandle), "MultiTraceTimerHandle"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CurTraceIndex"))
-			{
-				this.CurTraceIndex = sceneItemBeamCastComponent.CurTraceIndex;
-			}
-			if (base.CanResetComponentProperty("NeedUpdateBeamTrace"))
-			{
-				this.NeedUpdateBeamTrace = sceneItemBeamCastComponent.NeedUpdateBeamTrace;
-			}
-			if (base.CanResetComponentProperty("TraceDelegate"))
-			{
-				if (sceneItemBeamCastComponent.TraceDelegate == null)
-				{
-					this.TraceDelegate = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FAsyncTraceDelegate>(this.TraceDelegate), "TraceDelegate"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TraceHandleMap"))
-			{
-				if (sceneItemBeamCastComponent.TraceHandleMap == null)
-				{
-					this.TraceHandleMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, ValueTuple<int, TraceHandle>>>(this.TraceHandleMap), "TraceHandleMap"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SceneInteractionActor"))
-			{
-				if (sceneItemBeamCastComponent.SceneInteractionActor == null)
-				{
-					this.SceneInteractionActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneInteractionActor>(this.SceneInteractionActor), "SceneInteractionActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("BeamReceiveComponent"))
-			{
-				if (sceneItemBeamCastComponent.BeamReceiveComponent == null)
-				{
-					this.BeamReceiveComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemBeamReceiveComponent>(this.BeamReceiveComponent), "BeamReceiveComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("NormalRotatorConfig") && sceneItemBeamCastComponent.NormalRotatorConfig != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.NormalRotatorConfig), "NormalRotatorConfig"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("NormalVector") && sceneItemBeamCastComponent.NormalVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.NormalVector), "NormalVector"))
+			if (sceneItemBeamCastComponent.CreatureDataComp == null)
+			{
+				this.CreatureDataComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("RotationCache") && sceneItemBeamCastComponent.RotationCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.RotationCache), "RotationCache"))
+			if (sceneItemBeamCastComponent.RangeComp == null)
+			{
+				this.RangeComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComp), "RangeComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ReciprocalScaleCache") && sceneItemBeamCastComponent.ReciprocalScaleCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.ReciprocalScaleCache), "ReciprocalScaleCache"))
+			if (sceneItemBeamCastComponent.StateComp == null)
+			{
+				this.StateComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("UpdateReflectFrame"))
+			if (sceneItemBeamCastComponent.TagComp == null)
 			{
-				this.UpdateReflectFrame = sceneItemBeamCastComponent.UpdateReflectFrame;
+				this.TagComp = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+			{
+				return false;
+			}
+			if (sceneItemBeamCastComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
+			{
+				return false;
+			}
+			this.TraceTickDisableHandle = sceneItemBeamCastComponent.TraceTickDisableHandle;
+			this.ActiveStateId = sceneItemBeamCastComponent.ActiveStateId;
+			if (sceneItemBeamCastComponent.InRangeActors == null)
+			{
+				this.InRangeActors = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.InRangeActors), "InRangeActors"))
+			{
+				return false;
+			}
+			if (sceneItemBeamCastComponent.TraceElement == null)
+			{
+				this.TraceElement = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceElement), "TraceElement"))
+			{
+				return false;
+			}
+			this.TraceMaxLen = sceneItemBeamCastComponent.TraceMaxLen;
+			if (sceneItemBeamCastComponent.BeamSplinePoints == null)
+			{
+				this.BeamSplinePoints = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FVectorDouble>(this.BeamSplinePoints), "BeamSplinePoints"))
+			{
+				return false;
+			}
+			this.IsReady = sceneItemBeamCastComponent.IsReady;
+			if (sceneItemBeamCastComponent.ManualTickHandle == null)
+			{
+				this.ManualTickHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ManualTickHandle), "ManualTickHandle"))
+			{
+				return false;
+			}
+			this.CustomTimeDilation = sceneItemBeamCastComponent.CustomTimeDilation;
+			this.BeamCount = sceneItemBeamCastComponent.BeamCount;
+			this.PerBeamOffset = sceneItemBeamCastComponent.PerBeamOffset;
+			if (sceneItemBeamCastComponent.BeamCastInfoArray == null)
+			{
+				this.BeamCastInfoArray = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BeamCastInfoArray), "BeamCastInfoArray"))
+			{
+				return false;
+			}
+			this.CurSpawnIndex = sceneItemBeamCastComponent.CurSpawnIndex;
+			if (sceneItemBeamCastComponent.SpawnBeamTimerHandle == null)
+			{
+				this.SpawnBeamTimerHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SpawnBeamTimerHandle), "SpawnBeamTimerHandle"))
+			{
+				return false;
+			}
+			if (sceneItemBeamCastComponent.MultiTraceTimerHandle == null)
+			{
+				this.MultiTraceTimerHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MultiTraceTimerHandle), "MultiTraceTimerHandle"))
+			{
+				return false;
+			}
+			this.CurTraceIndex = sceneItemBeamCastComponent.CurTraceIndex;
+			this.NeedUpdateBeamTrace = sceneItemBeamCastComponent.NeedUpdateBeamTrace;
+			if (sceneItemBeamCastComponent.TraceDelegate == null)
+			{
+				this.TraceDelegate = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceDelegate), "TraceDelegate"))
+			{
+				return false;
+			}
+			if (sceneItemBeamCastComponent.TraceHandleMap == null)
+			{
+				this.TraceHandleMap = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceHandleMap), "TraceHandleMap"))
+			{
+				return false;
+			}
+			if (sceneItemBeamCastComponent.SceneInteractionActor == null)
+			{
+				this.SceneInteractionActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SceneInteractionActor), "SceneInteractionActor"))
+			{
+				return false;
+			}
+			if (sceneItemBeamCastComponent.BeamReceiveComponent == null)
+			{
+				this.BeamReceiveComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BeamReceiveComponent), "BeamReceiveComponent"))
+			{
+				return false;
+			}
+			if (sceneItemBeamCastComponent.NormalRotatorConfig != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.NormalRotatorConfig), "NormalRotatorConfig"))
+			{
+				return false;
+			}
+			if (sceneItemBeamCastComponent.NormalVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.NormalVector), "NormalVector"))
+			{
+				return false;
+			}
+			if (sceneItemBeamCastComponent.RotationCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.RotationCache), "RotationCache"))
+			{
+				return false;
+			}
+			if (sceneItemBeamCastComponent.ReciprocalScaleCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReciprocalScaleCache), "ReciprocalScaleCache"))
+			{
+				return false;
+			}
+			this.UpdateReflectFrame = sceneItemBeamCastComponent.UpdateReflectFrame;
 			return true;
 		}
 
-		// Token: 0x0402534E RID: 152398
+		// Token: 0x17007215 RID: 29205
+		// (get) Token: 0x0603C697 RID: 247447 RVA: 0x0113FBEB File Offset: 0x0113DDEB
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007216 RID: 29206
+		// (get) Token: 0x0603C698 RID: 247448 RVA: 0x0113FBEE File Offset: 0x0113DDEE
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007217 RID: 29207
+		// (get) Token: 0x0603C699 RID: 247449 RVA: 0x0113FBF1 File Offset: 0x0113DDF1
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007218 RID: 29208
+		// (get) Token: 0x0603C69A RID: 247450 RVA: 0x0113FBF4 File Offset: 0x0113DDF4
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007219 RID: 29209
+		// (get) Token: 0x0603C69B RID: 247451 RVA: 0x0113FBF7 File Offset: 0x0113DDF7
+		public override bool NeedChangeTimeDilationInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FFB5 RID: 130997
 		private const int MANUAL_DELAY_UPDATE_MS = 100;
 
-		// Token: 0x0402534F RID: 152399
+		// Token: 0x0401FFB6 RID: 130998
 		private const int BEAM_WALL_OVERLAP_RANGE_OFFSET = 20;
 
-		// Token: 0x04025350 RID: 152400
+		// Token: 0x0401FFB7 RID: 130999
 		private BeamCastComponent Config;
 
-		// Token: 0x04025351 RID: 152401
+		// Token: 0x0401FFB8 RID: 131000
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04025352 RID: 152402
+		// Token: 0x0401FFB9 RID: 131001
 		private CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent RangeComp;
 
-		// Token: 0x04025353 RID: 152403
+		// Token: 0x0401FFBA RID: 131002
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x04025354 RID: 152404
+		// Token: 0x0401FFBB RID: 131003
 		private LevelTagComponent TagComp;
 
-		// Token: 0x04025355 RID: 152405
+		// Token: 0x0401FFBC RID: 131004
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025356 RID: 152406
+		// Token: 0x0401FFBD RID: 131005
 		private int? TraceTickDisableHandle;
 
-		// Token: 0x04025357 RID: 152407
+		// Token: 0x0401FFBE RID: 131006
 		private int ActiveStateId;
 
-		// Token: 0x04025358 RID: 152408
+		// Token: 0x0401FFBF RID: 131007
 		[Nullable(new byte[]
 		{
 			2,
@@ -1753,53 +1718,53 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private HashSet<AActor> InRangeActors;
 
-		// Token: 0x04025359 RID: 152409
+		// Token: 0x0401FFC0 RID: 131008
 		private UTraceSphereElement TraceElement;
 
-		// Token: 0x0402535A RID: 152410
+		// Token: 0x0401FFC1 RID: 131009
 		private float TraceMaxLen;
 
-		// Token: 0x0402535B RID: 152411
+		// Token: 0x0401FFC2 RID: 131010
 		private TArray<FVectorDouble> BeamSplinePoints;
 
-		// Token: 0x0402535C RID: 152412
+		// Token: 0x0401FFC3 RID: 131011
 		private bool IsReady;
 
-		// Token: 0x0402535D RID: 152413
+		// Token: 0x0401FFC4 RID: 131012
 		private TimerHandle ManualTickHandle;
 
-		// Token: 0x0402535E RID: 152414
+		// Token: 0x0401FFC5 RID: 131013
 		private float CustomTimeDilation = 1f;
 
-		// Token: 0x0402535F RID: 152415
+		// Token: 0x0401FFC6 RID: 131014
 		private int BeamCount;
 
-		// Token: 0x04025360 RID: 152416
+		// Token: 0x0401FFC7 RID: 131015
 		private float PerBeamOffset;
 
-		// Token: 0x04025361 RID: 152417
+		// Token: 0x0401FFC8 RID: 131016
 		[Nullable(1)]
 		private List<SceneItemBeamCastComponent.BeamCastInfo> BeamCastInfoArray = new List<SceneItemBeamCastComponent.BeamCastInfo>();
 
-		// Token: 0x04025362 RID: 152418
+		// Token: 0x0401FFC9 RID: 131017
 		private int CurSpawnIndex;
 
-		// Token: 0x04025363 RID: 152419
+		// Token: 0x0401FFCA RID: 131018
 		private TimerHandle SpawnBeamTimerHandle;
 
-		// Token: 0x04025364 RID: 152420
+		// Token: 0x0401FFCB RID: 131019
 		private TimerHandle MultiTraceTimerHandle;
 
-		// Token: 0x04025365 RID: 152421
+		// Token: 0x0401FFCC RID: 131020
 		private int CurTraceIndex;
 
-		// Token: 0x04025366 RID: 152422
+		// Token: 0x0401FFCD RID: 131021
 		private bool NeedUpdateBeamTrace;
 
-		// Token: 0x04025367 RID: 152423
+		// Token: 0x0401FFCE RID: 131022
 		private FAsyncTraceDelegate TraceDelegate;
 
-		// Token: 0x04025368 RID: 152424
+		// Token: 0x0401FFCF RID: 131023
 		[Nullable(new byte[]
 		{
 			2,
@@ -1808,37 +1773,37 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Dictionary<int, ValueTuple<int, TraceHandle>> TraceHandleMap;
 
-		// Token: 0x04025369 RID: 152425
+		// Token: 0x0401FFD0 RID: 131024
 		public SceneInteractionActor SceneInteractionActor;
 
-		// Token: 0x0402536A RID: 152426
+		// Token: 0x0401FFD1 RID: 131025
 		private SceneItemBeamReceiveComponent BeamReceiveComponent;
 
-		// Token: 0x0402536B RID: 152427
+		// Token: 0x0401FFD2 RID: 131026
 		[Nullable(1)]
 		private readonly global::Rotator NormalRotatorConfig = global::Rotator.Create();
 
-		// Token: 0x0402536C RID: 152428
+		// Token: 0x0401FFD3 RID: 131027
 		[Nullable(1)]
 		private readonly global::Vector NormalVector = global::Vector.Create(1.0, 0.0, 0.0);
 
-		// Token: 0x0402536D RID: 152429
+		// Token: 0x0401FFD4 RID: 131028
 		[Nullable(1)]
 		private readonly global::Rotator RotationCache = global::Rotator.Create();
 
-		// Token: 0x0402536E RID: 152430
+		// Token: 0x0401FFD5 RID: 131029
 		[Nullable(1)]
 		private readonly global::Vector ReciprocalScaleCache = global::Vector.Create();
 
-		// Token: 0x0402536F RID: 152431
+		// Token: 0x0401FFD6 RID: 131030
 		private int UpdateReflectFrame;
 
-		// Token: 0x0200CEA8 RID: 52904
+		// Token: 0x0200BA3E RID: 47678
 		[NullableContext(1)]
 		[Nullable(0)]
 		private class BeamCastInfo
 		{
-			// Token: 0x06051F10 RID: 335632 RVA: 0x01644338 File Offset: 0x01642538
+			// Token: 0x060486BA RID: 296634 RVA: 0x01616460 File Offset: 0x01614660
 			public BeamCastInfo(global::Vector beamStartRel, global::Vector beamEndRel, global::Vector traceStartRel, global::Vector traceEndRel, float offset)
 			{
 				this.BeamStartPosRel = global::Vector.Create(beamStartRel);
@@ -1853,83 +1818,83 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				this.TraceEndRel.Y = (double)offset;
 			}
 
-			// Token: 0x0403E2FB RID: 254715
+			// Token: 0x04039621 RID: 235041
 			public global::Vector BeamStartPosRel = global::Vector.Create();
 
-			// Token: 0x0403E2FC RID: 254716
+			// Token: 0x04039622 RID: 235042
 			public global::Vector BeamEndPosRel = global::Vector.Create();
 
-			// Token: 0x0403E2FD RID: 254717
+			// Token: 0x04039623 RID: 235043
 			public global::Vector BeamSpinePointStartPosRel = global::Vector.Create();
 
-			// Token: 0x0403E2FE RID: 254718
+			// Token: 0x04039624 RID: 235044
 			public global::Vector BeamSpinePointEndPosRel = global::Vector.Create();
 
-			// Token: 0x0403E2FF RID: 254719
+			// Token: 0x04039625 RID: 235045
 			public global::Vector TraceStartRel = global::Vector.Create();
 
-			// Token: 0x0403E300 RID: 254720
+			// Token: 0x04039626 RID: 235046
 			public global::Vector TraceEndRel = global::Vector.Create();
 
-			// Token: 0x0403E301 RID: 254721
+			// Token: 0x04039627 RID: 235047
 			[Nullable(2)]
 			public AActor BeamSplineActor;
 
-			// Token: 0x0403E302 RID: 254722
+			// Token: 0x04039628 RID: 235048
 			[Nullable(2)]
 			public USplineComponent BeamSplineComp;
 
-			// Token: 0x0403E303 RID: 254723
+			// Token: 0x04039629 RID: 235049
 			public int? BeamEffectHandle;
 
-			// Token: 0x0403E304 RID: 254724
+			// Token: 0x0403962A RID: 235050
 			public int? HitEffectHandle;
 
-			// Token: 0x0403E305 RID: 254725
+			// Token: 0x0403962B RID: 235051
 			public global::Vector HitEffectActorLocation = global::Vector.Create();
 
-			// Token: 0x0403E306 RID: 254726
+			// Token: 0x0403962C RID: 235052
 			public int? StartEffectHandle;
 
-			// Token: 0x0403E307 RID: 254727
+			// Token: 0x0403962D RID: 235053
 			[Nullable(2)]
 			public EntityHandle CastingEntity;
 
-			// Token: 0x0403E308 RID: 254728
+			// Token: 0x0403962E RID: 235054
 			[Nullable(2)]
 			public AActor CastingActor;
 
-			// Token: 0x0403E309 RID: 254729
+			// Token: 0x0403962F RID: 235055
 			public bool CastingActorIsChange;
 
-			// Token: 0x0403E30A RID: 254730
+			// Token: 0x04039630 RID: 235056
 			public float BeamLen;
 
-			// Token: 0x0403E30B RID: 254731
+			// Token: 0x04039631 RID: 235057
 			public global::Vector ShapeCenter = global::Vector.Create();
 
-			// Token: 0x0403E30C RID: 254732
+			// Token: 0x04039632 RID: 235058
 			public float ShapeHeight;
 
-			// Token: 0x0403E30D RID: 254733
+			// Token: 0x04039633 RID: 235059
 			public global::Vector ReflectDirection = global::Vector.Create();
 
-			// Token: 0x0403E30E RID: 254734
+			// Token: 0x04039634 RID: 235060
 			public global::Vector OriginReflectDirection = global::Vector.Create();
 
-			// Token: 0x0403E30F RID: 254735
+			// Token: 0x04039635 RID: 235061
 			public global::Vector BeamReceiveEndPoint = global::Vector.Create();
 
-			// Token: 0x0403E310 RID: 254736
+			// Token: 0x04039636 RID: 235062
 			public global::Rotator ReflectRangeRotation = global::Rotator.Create();
 
-			// Token: 0x0403E311 RID: 254737
+			// Token: 0x04039637 RID: 235063
 			public float ReflectRangeScaleSize;
 
-			// Token: 0x0403E312 RID: 254738
+			// Token: 0x04039638 RID: 235064
 			public global::Vector ReflectShapeCenter = global::Vector.Create();
 
-			// Token: 0x0403E313 RID: 254739
+			// Token: 0x04039639 RID: 235065
 			public float ReflectShapeHeight;
 		}
 	}

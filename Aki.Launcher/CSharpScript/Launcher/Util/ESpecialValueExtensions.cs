@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x0200007A RID: 122
+	// Token: 0x0200007D RID: 125
 	public static class ESpecialValueExtensions
 	{
-		// Token: 0x0600033B RID: 827 RVA: 0x0001154C File Offset: 0x0000F74C
+		// Token: 0x0600034B RID: 843 RVA: 0x000123D0 File Offset: 0x000105D0
 		public static string ToEnumString(this ESpecialValue value)
 		{
 			string result;
@@ -39,7 +39,7 @@ namespace CSharpScript.Launcher.Util
 			return result;
 		}
 
-		// Token: 0x0600033C RID: 828 RVA: 0x000115C4 File Offset: 0x0000F7C4
+		// Token: 0x0600034C RID: 844 RVA: 0x00012448 File Offset: 0x00010648
 		public static ESpecialValue FromString(string name)
 		{
 			ESpecialValue result;
@@ -50,7 +50,7 @@ namespace CSharpScript.Launcher.Util
 			return result;
 		}
 
-		// Token: 0x0600033D RID: 829 RVA: 0x000115F0 File Offset: 0x0000F7F0
+		// Token: 0x0600034D RID: 845 RVA: 0x00012474 File Offset: 0x00010674
 		public static bool TryFromString(string name, out ESpecialValue value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -136,7 +136,7 @@ namespace CSharpScript.Launcher.Util
 			return false;
 		}
 
-		// Token: 0x0600033E RID: 830 RVA: 0x000116FA File Offset: 0x0000F8FA
+		// Token: 0x0600034E RID: 846 RVA: 0x0001257E File Offset: 0x0001077E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -151,7 +151,7 @@ namespace CSharpScript.Launcher.Util
 			};
 		}
 
-		// Token: 0x0600033F RID: 831 RVA: 0x0001173A File Offset: 0x0000F93A
+		// Token: 0x0600034F RID: 847 RVA: 0x000125BE File Offset: 0x000107BE
 		public static ESpecialValue[] GetValues()
 		{
 			return new ESpecialValue[]
@@ -166,7 +166,7 @@ namespace CSharpScript.Launcher.Util
 			};
 		}
 
-		// Token: 0x06000340 RID: 832 RVA: 0x0001174D File Offset: 0x0000F94D
+		// Token: 0x06000350 RID: 848 RVA: 0x000125D1 File Offset: 0x000107D1
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -5,7 +5,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002740 RID: 10048
+	// Token: 0x020007F4 RID: 2036
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -13,15 +13,15 @@ namespace UnrealEngine
 	[UnrealStructLayout(96, 16, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 96)]
 	public class FSharpherealTestStruct_FixedArray : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060253A6 RID: 152486 RVA: 0x00373298 File Offset: 0x00371498
+		// Token: 0x0600AE89 RID: 44681 RVA: 0x00102F6D File Offset: 0x0010116D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSharpherealTestStruct_FixedArray._ScriptStructPtr != 0) ? FSharpherealTestStruct_FixedArray._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/SharpherealTest.SharpherealTestStruct_FixedArray", ref FSharpherealTestStruct_FixedArray._ScriptStructPtr);
 		}
 
-		// Token: 0x17008FBC RID: 36796
-		// (get) Token: 0x060253A7 RID: 152487 RVA: 0x003732BC File Offset: 0x003714BC
-		// (set) Token: 0x060253A8 RID: 152488 RVA: 0x003732D0 File Offset: 0x003714D0
+		// Token: 0x170020A4 RID: 8356
+		// (get) Token: 0x0600AE8A RID: 44682 RVA: 0x00102F91 File Offset: 0x00101191
+		// (set) Token: 0x0600AE8B RID: 44683 RVA: 0x00102FA5 File Offset: 0x001011A5
 		public unsafe FVector V
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FBD RID: 36797
-		// (get) Token: 0x060253A9 RID: 152489 RVA: 0x003732E8 File Offset: 0x003714E8
-		// (set) Token: 0x060253AA RID: 152490 RVA: 0x0037332C File Offset: 0x0037152C
+		// Token: 0x170020A5 RID: 8357
+		// (get) Token: 0x0600AE8C RID: 44684 RVA: 0x00102FBC File Offset: 0x001011BC
+		// (set) Token: 0x0600AE8D RID: 44685 RVA: 0x00103000 File Offset: 0x00101200
 		public TFixedArray<FQuat> Q
 		{
 			get
@@ -55,9 +55,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FBE RID: 36798
-		// (get) Token: 0x060253AB RID: 152491 RVA: 0x0037333A File Offset: 0x0037153A
-		// (set) Token: 0x060253AC RID: 152492 RVA: 0x0037334E File Offset: 0x0037154E
+		// Token: 0x170020A6 RID: 8358
+		// (get) Token: 0x0600AE8E RID: 44686 RVA: 0x0010300E File Offset: 0x0010120E
+		// (set) Token: 0x0600AE8F RID: 44687 RVA: 0x00103022 File Offset: 0x00101222
 		public unsafe string S
 		{
 			get
@@ -70,9 +70,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FBF RID: 36799
-		// (get) Token: 0x060253AD RID: 152493 RVA: 0x00373364 File Offset: 0x00371564
-		// (set) Token: 0x060253AE RID: 152494 RVA: 0x003733A8 File Offset: 0x003715A8
+		// Token: 0x170020A7 RID: 8359
+		// (get) Token: 0x0600AE90 RID: 44688 RVA: 0x00103038 File Offset: 0x00101238
+		// (set) Token: 0x0600AE91 RID: 44689 RVA: 0x0010307C File Offset: 0x0010127C
 		public TFixedArray<UObject> O
 		{
 			get
@@ -91,72 +91,63 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060253AF RID: 152495 RVA: 0x003733B6 File Offset: 0x003715B6
+		// Token: 0x0600AE92 RID: 44690 RVA: 0x0010308A File Offset: 0x0010128A
 		public FSharpherealTestStruct_FixedArray()
 		{
 		}
 
-		// Token: 0x060253B0 RID: 152496 RVA: 0x003733BE File Offset: 0x003715BE
-		public FSharpherealTestStruct_FixedArray(FVector V, TFixedArray<FQuat> Q, string S, TFixedArray<UObject> O)
-		{
-			this.V = V;
-			this.Q = Q;
-			this.S = S;
-			this.O = O;
-		}
-
-		// Token: 0x060253B1 RID: 152497 RVA: 0x003733E3 File Offset: 0x003715E3
+		// Token: 0x0600AE93 RID: 44691 RVA: 0x00103092 File Offset: 0x00101292
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSharpherealTestStruct_FixedArray.StaticStruct();
 		}
 
-		// Token: 0x060253B2 RID: 152498 RVA: 0x003733EF File Offset: 0x003715EF
+		// Token: 0x0600AE94 RID: 44692 RVA: 0x0010309E File Offset: 0x0010129E
 		[NullableContext(2)]
 		public FSharpherealTestStruct_FixedArray(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060253B3 RID: 152499 RVA: 0x003733F9 File Offset: 0x003715F9
+		// Token: 0x0600AE95 RID: 44693 RVA: 0x001030A8 File Offset: 0x001012A8
 		public FSharpherealTestStruct_FixedArray(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060253B4 RID: 152500 RVA: 0x00373404 File Offset: 0x00371604
+		// Token: 0x0600AE96 RID: 44694 RVA: 0x001030B3 File Offset: 0x001012B3
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSharpherealTestStruct_FixedArray(Pointer, false, true);
 		}
 
-		// Token: 0x060253B5 RID: 152501 RVA: 0x0037340E File Offset: 0x0037160E
+		// Token: 0x0600AE97 RID: 44695 RVA: 0x001030BD File Offset: 0x001012BD
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSharpherealTestStruct_FixedArray(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401413F RID: 82239
+		// Token: 0x04004B9E RID: 19358
 		public const string __ObjectPath = "/Script/SharpherealTest.SharpherealTestStruct_FixedArray";
 
-		// Token: 0x04014140 RID: 82240
+		// Token: 0x04004B9F RID: 19359
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014141 RID: 82241
+		// Token: 0x04004BA0 RID: 19360
 		internal static int __PropertyOffset_V;
 
-		// Token: 0x04014142 RID: 82242
+		// Token: 0x04004BA1 RID: 19361
 		internal static int __PropertyOffset_Q;
 
-		// Token: 0x04014143 RID: 82243
+		// Token: 0x04004BA2 RID: 19362
 		[Nullable(2)]
 		private TFixedArray<FQuat> _Q;
 
-		// Token: 0x04014144 RID: 82244
+		// Token: 0x04004BA3 RID: 19363
 		internal static int __PropertyOffset_S;
 
-		// Token: 0x04014145 RID: 82245
+		// Token: 0x04004BA4 RID: 19364
 		internal static int __PropertyOffset_O;
 
-		// Token: 0x04014146 RID: 82246
+		// Token: 0x04004BA5 RID: 19365
 		[Nullable(new byte[]
 		{
 			2,

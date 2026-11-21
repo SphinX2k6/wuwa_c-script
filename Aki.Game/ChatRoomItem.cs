@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020017AA RID: 6058
+// Token: 0x02000C63 RID: 3171
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class ChatRoomItem : GridProxyAbstract<ChatRoom>
 {
-	// Token: 0x0600B0C3 RID: 45251 RVA: 0x0028018C File Offset: 0x0027E38C
+	// Token: 0x060084AB RID: 33963 RVA: 0x0028A724 File Offset: 0x00288924
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -51,14 +51,14 @@ public class ChatRoomItem : GridProxyAbstract<ChatRoom>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B0C4 RID: 45252 RVA: 0x0028033C File Offset: 0x0027E53C
+	// Token: 0x060084AC RID: 33964 RVA: 0x0028A8D4 File Offset: 0x00288AD4
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(4);
 		this.PlayerHeadItem = new PlayerHeadItem(item.GetOwner());
 	}
 
-	// Token: 0x0600B0C5 RID: 45253 RVA: 0x00280362 File Offset: 0x0027E562
+	// Token: 0x060084AD RID: 33965 RVA: 0x0028A8FA File Offset: 0x00288AFA
 	protected override void OnBeforeDestroy()
 	{
 		this.FriendData = null;
@@ -66,12 +66,12 @@ public class ChatRoomItem : GridProxyAbstract<ChatRoom>
 		this.OwnerId = 0;
 	}
 
-	// Token: 0x0600B0C6 RID: 45254 RVA: 0x0028037E File Offset: 0x0027E57E
+	// Token: 0x060084AE RID: 33966 RVA: 0x0028A916 File Offset: 0x00288B16
 	public override void Clear()
 	{
 	}
 
-	// Token: 0x0600B0C7 RID: 45255 RVA: 0x00280380 File Offset: 0x0027E580
+	// Token: 0x060084AF RID: 33967 RVA: 0x0028A918 File Offset: 0x00288B18
 	private void OnClickFriendExtendsToggle(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -86,7 +86,7 @@ public class ChatRoomItem : GridProxyAbstract<ChatRoom>
 		onClickedCallback(this.ChatRoomType.Value, this.OwnerId);
 	}
 
-	// Token: 0x0600B0C8 RID: 45256 RVA: 0x002803A8 File Offset: 0x0027E5A8
+	// Token: 0x060084B0 RID: 33968 RVA: 0x0028A940 File Offset: 0x00288B40
 	[NullableContext(1)]
 	public override void Refresh(ChatRoom chatRoom, bool isSelected, int gridIndex)
 	{
@@ -137,7 +137,7 @@ public class ChatRoomItem : GridProxyAbstract<ChatRoom>
 		this.SetToggleState(EToggleState.ETT_UnChecked);
 	}
 
-	// Token: 0x0600B0C9 RID: 45257 RVA: 0x002804E0 File Offset: 0x0027E6E0
+	// Token: 0x060084B1 RID: 33969 RVA: 0x0028AA78 File Offset: 0x00288C78
 	private void RefreshThirdPartyItem()
 	{
 		if (KuroSdkController.Instance.NeedShowThirdPartyId())
@@ -170,7 +170,7 @@ public class ChatRoomItem : GridProxyAbstract<ChatRoom>
 		texture2.SetUIActive(false);
 	}
 
-	// Token: 0x0600B0CA RID: 45258 RVA: 0x0028056C File Offset: 0x0027E76C
+	// Token: 0x060084B2 RID: 33970 RVA: 0x0028AB04 File Offset: 0x00288D04
 	private void RefreshPcItem()
 	{
 		if (this.ChatRoomType == null || this.ChatRoomType.GetValueOrDefault() != EChatRoomType.Private)
@@ -216,7 +216,7 @@ public class ChatRoomItem : GridProxyAbstract<ChatRoom>
 		}
 	}
 
-	// Token: 0x0600B0CB RID: 45259 RVA: 0x00280604 File Offset: 0x0027E804
+	// Token: 0x060084B3 RID: 33971 RVA: 0x0028AB9C File Offset: 0x00288D9C
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(EToggleState.ETT_Checked);
@@ -228,13 +228,13 @@ public class ChatRoomItem : GridProxyAbstract<ChatRoom>
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0600B0CC RID: 45260 RVA: 0x0028061F File Offset: 0x0027E81F
+	// Token: 0x060084B4 RID: 33972 RVA: 0x0028ABB7 File Offset: 0x00288DB7
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(EToggleState.ETT_UnChecked);
 	}
 
-	// Token: 0x0600B0CD RID: 45261 RVA: 0x00280628 File Offset: 0x0027E828
+	// Token: 0x060084B5 RID: 33973 RVA: 0x0028ABC0 File Offset: 0x00288DC0
 	public void RefreshIsOnline(PrivateChatRoom privateChatRoom)
 	{
 		UUIItem item = base.GetItem(6);
@@ -245,7 +245,7 @@ public class ChatRoomItem : GridProxyAbstract<ChatRoom>
 		this.PlayerHeadItem.SetIsGray(!flag);
 	}
 
-	// Token: 0x0600B0CE RID: 45262 RVA: 0x00280678 File Offset: 0x0027E878
+	// Token: 0x060084B6 RID: 33974 RVA: 0x0028AC10 File Offset: 0x00288E10
 	public void RefreshPlayerTexture()
 	{
 		UUISprite sprite = base.GetSprite(5);
@@ -282,7 +282,7 @@ public class ChatRoomItem : GridProxyAbstract<ChatRoom>
 		this.PlayerHeadItem.RefreshByPlayerId(num.Value, true);
 	}
 
-	// Token: 0x0600B0CF RID: 45263 RVA: 0x0028076C File Offset: 0x0027E96C
+	// Token: 0x060084B7 RID: 33975 RVA: 0x0028AD04 File Offset: 0x00288F04
 	private void RefreshPlayerName()
 	{
 		UUIText text = base.GetText(1);
@@ -306,7 +306,7 @@ public class ChatRoomItem : GridProxyAbstract<ChatRoom>
 		text.SetText(friendRemark, true);
 	}
 
-	// Token: 0x0600B0D0 RID: 45264 RVA: 0x002807FC File Offset: 0x0027E9FC
+	// Token: 0x060084B8 RID: 33976 RVA: 0x0028AD94 File Offset: 0x00288F94
 	public void RefreshMuteItem()
 	{
 		UUIItem item = base.GetItem(3);
@@ -319,14 +319,14 @@ public class ChatRoomItem : GridProxyAbstract<ChatRoom>
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600B0D1 RID: 45265 RVA: 0x0028083E File Offset: 0x0027EA3E
+	// Token: 0x060084B9 RID: 33977 RVA: 0x0028ADD6 File Offset: 0x00288FD6
 	[NullableContext(1)]
 	public void BindOnClicked(Action<EChatRoomType, int> onClicked)
 	{
 		this.OnClickedCallback = onClicked;
 	}
 
-	// Token: 0x0600B0D2 RID: 45266 RVA: 0x00280848 File Offset: 0x0027EA48
+	// Token: 0x060084BA RID: 33978 RVA: 0x0028ADE0 File Offset: 0x00288FE0
 	public void SetToggleState(EToggleState state)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -341,53 +341,53 @@ public class ChatRoomItem : GridProxyAbstract<ChatRoom>
 		extendToggle.SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x04005033 RID: 20531
+	// Token: 0x040050DD RID: 20701
 	private EChatRoomType? ChatRoomType;
 
-	// Token: 0x04005034 RID: 20532
+	// Token: 0x040050DE RID: 20702
 	private int OwnerId;
 
-	// Token: 0x04005035 RID: 20533
+	// Token: 0x040050DF RID: 20703
 	private FriendData FriendData;
 
-	// Token: 0x04005036 RID: 20534
+	// Token: 0x040050E0 RID: 20704
 	private PlayerHeadItem PlayerHeadItem;
 
-	// Token: 0x04005037 RID: 20535
+	// Token: 0x040050E1 RID: 20705
 	private Action<EChatRoomType, int> OnClickedCallback;
 
-	// Token: 0x02007DC2 RID: 32194
+	// Token: 0x02006F48 RID: 28488
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x040292BD RID: 168637
+		// Token: 0x040245E8 RID: 148968
 		public const int FriendExtendsToggle = 0;
 
-		// Token: 0x040292BE RID: 168638
+		// Token: 0x040245E9 RID: 148969
 		public const int FriendNameText = 1;
 
-		// Token: 0x040292BF RID: 168639
+		// Token: 0x040245EA RID: 148970
 		public const int RedDotItem = 2;
 
-		// Token: 0x040292C0 RID: 168640
+		// Token: 0x040245EB RID: 148971
 		public const int ShieldItem = 3;
 
-		// Token: 0x040292C1 RID: 168641
+		// Token: 0x040245EC RID: 148972
 		public const int PlayerHeadItem = 4;
 
-		// Token: 0x040292C2 RID: 168642
+		// Token: 0x040245ED RID: 148973
 		public const int TeamHeadSprite = 5;
 
-		// Token: 0x040292C3 RID: 168643
+		// Token: 0x040245EE RID: 148974
 		public const int OfflineState = 6;
 
-		// Token: 0x040292C4 RID: 168644
+		// Token: 0x040245EF RID: 148975
 		public const int OnlineState = 7;
 
-		// Token: 0x040292C5 RID: 168645
+		// Token: 0x040245F0 RID: 148976
 		public const int ThirdPartyTexture = 8;
 
-		// Token: 0x040292C6 RID: 168646
+		// Token: 0x040245F1 RID: 148977
 		public const int PcItem = 9;
 	}
 }

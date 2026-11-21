@@ -1,45 +1,45 @@
 ﻿using System;
 
-// Token: 0x02001426 RID: 5158
+// Token: 0x020008DA RID: 2266
 public class PinballItemDataWeapon : IPinballItemDataWeapon
 {
-	// Token: 0x17000C9B RID: 3227
-	// (get) Token: 0x0600917F RID: 37247 RVA: 0x001F2EA1 File Offset: 0x001F10A1
-	// (set) Token: 0x06009180 RID: 37248 RVA: 0x001F2EA9 File Offset: 0x001F10A9
+	// Token: 0x17000CBB RID: 3259
+	// (get) Token: 0x06006514 RID: 25876 RVA: 0x001FB9DD File Offset: 0x001F9BDD
+	// (set) Token: 0x06006515 RID: 25877 RVA: 0x001FB9E5 File Offset: 0x001F9BE5
 	public EPinballItemType Type { get; set; }
 
-	// Token: 0x17000C9C RID: 3228
-	// (get) Token: 0x06009181 RID: 37249 RVA: 0x001F2EB2 File Offset: 0x001F10B2
-	// (set) Token: 0x06009182 RID: 37250 RVA: 0x001F2EBA File Offset: 0x001F10BA
+	// Token: 0x17000CBC RID: 3260
+	// (get) Token: 0x06006516 RID: 25878 RVA: 0x001FB9EE File Offset: 0x001F9BEE
+	// (set) Token: 0x06006517 RID: 25879 RVA: 0x001FB9F6 File Offset: 0x001F9BF6
 	public int Id { get; set; }
 
-	// Token: 0x17000C9D RID: 3229
-	// (get) Token: 0x06009183 RID: 37251 RVA: 0x001F2EC3 File Offset: 0x001F10C3
-	// (set) Token: 0x06009184 RID: 37252 RVA: 0x001F2ECB File Offset: 0x001F10CB
+	// Token: 0x17000CBD RID: 3261
+	// (get) Token: 0x06006518 RID: 25880 RVA: 0x001FB9FF File Offset: 0x001F9BFF
+	// (set) Token: 0x06006519 RID: 25881 RVA: 0x001FBA07 File Offset: 0x001F9C07
 	public int IncId { get; set; }
 
-	// Token: 0x17000C9E RID: 3230
-	// (get) Token: 0x06009185 RID: 37253 RVA: 0x001F2ED4 File Offset: 0x001F10D4
-	// (set) Token: 0x06009186 RID: 37254 RVA: 0x001F2EDC File Offset: 0x001F10DC
+	// Token: 0x17000CBE RID: 3262
+	// (get) Token: 0x0600651A RID: 25882 RVA: 0x001FBA10 File Offset: 0x001F9C10
+	// (set) Token: 0x0600651B RID: 25883 RVA: 0x001FBA18 File Offset: 0x001F9C18
 	public bool? IsUnavailable { get; set; }
 
-	// Token: 0x17000C9F RID: 3231
-	// (get) Token: 0x06009187 RID: 37255 RVA: 0x001F2EE5 File Offset: 0x001F10E5
-	// (set) Token: 0x06009188 RID: 37256 RVA: 0x001F2EED File Offset: 0x001F10ED
+	// Token: 0x17000CBF RID: 3263
+	// (get) Token: 0x0600651C RID: 25884 RVA: 0x001FBA21 File Offset: 0x001F9C21
+	// (set) Token: 0x0600651D RID: 25885 RVA: 0x001FBA29 File Offset: 0x001F9C29
 	public int? RoleId { get; set; }
 
-	// Token: 0x17000CA0 RID: 3232
-	// (get) Token: 0x06009189 RID: 37257 RVA: 0x001F2EF6 File Offset: 0x001F10F6
-	// (set) Token: 0x0600918A RID: 37258 RVA: 0x001F2EFE File Offset: 0x001F10FE
+	// Token: 0x17000CC0 RID: 3264
+	// (get) Token: 0x0600651E RID: 25886 RVA: 0x001FBA32 File Offset: 0x001F9C32
+	// (set) Token: 0x0600651F RID: 25887 RVA: 0x001FBA3A File Offset: 0x001F9C3A
 	public bool? IsLocked { get; set; }
 
-	// Token: 0x17000CA1 RID: 3233
-	// (get) Token: 0x0600918B RID: 37259 RVA: 0x001F2F07 File Offset: 0x001F1107
-	// (set) Token: 0x0600918C RID: 37260 RVA: 0x001F2F0F File Offset: 0x001F110F
+	// Token: 0x17000CC1 RID: 3265
+	// (get) Token: 0x06006520 RID: 25888 RVA: 0x001FBA43 File Offset: 0x001F9C43
+	// (set) Token: 0x06006521 RID: 25889 RVA: 0x001FBA4B File Offset: 0x001F9C4B
 	public bool? NeedReduceBtn { get; set; }
 
-	// Token: 0x17000CA2 RID: 3234
-	// (get) Token: 0x0600918D RID: 37261 RVA: 0x001F2F18 File Offset: 0x001F1118
-	// (set) Token: 0x0600918E RID: 37262 RVA: 0x001F2F20 File Offset: 0x001F1120
+	// Token: 0x17000CC2 RID: 3266
+	// (get) Token: 0x06006522 RID: 25890 RVA: 0x001FBA54 File Offset: 0x001F9C54
+	// (set) Token: 0x06006523 RID: 25891 RVA: 0x001FBA5C File Offset: 0x001F9C5C
 	public bool? IsRecommendedWeapon { get; set; }
 }

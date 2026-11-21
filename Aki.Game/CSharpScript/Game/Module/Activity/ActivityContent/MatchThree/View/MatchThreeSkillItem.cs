@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 {
-	// Token: 0x020064A8 RID: 25768
+	// Token: 0x02005426 RID: 21542
 	public class MatchThreeSkillItem : GridProxyAbstract<MatchThreeSkill>
 	{
-		// Token: 0x06040B43 RID: 265027 RVA: 0x00FAA63C File Offset: 0x00FA883C
+		// Token: 0x06035807 RID: 219143 RVA: 0x00EF1684 File Offset: 0x00EEF884
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040B44 RID: 265028 RVA: 0x00FAA6E8 File Offset: 0x00FA88E8
+		// Token: 0x06035808 RID: 219144 RVA: 0x00EF1730 File Offset: 0x00EEF930
 		public override void Refresh(MatchThreeSkill data, bool isSelected, int gridIndex)
 		{
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(0), data.Name, Array.Empty<object>());
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.RefreshEnergy(data);
 		}
 
-		// Token: 0x06040B45 RID: 265029 RVA: 0x00FAA740 File Offset: 0x00FA8940
+		// Token: 0x06035809 RID: 219145 RVA: 0x00EF1788 File Offset: 0x00EEF988
 		private void RefreshEnergy(MatchThreeSkill data)
 		{
 			UUIText text = base.GetText(3);
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			LguiUtil.Instance.TrySetLocalTextNew(text, "MatchThreeRoleRecharge", new <>z__ReadOnlySingleElementList<object>(data.Energy));
 		}
 
-		// Token: 0x06040B46 RID: 265030 RVA: 0x00FAA77C File Offset: 0x00FA897C
+		// Token: 0x0603580A RID: 219146 RVA: 0x00EF17C4 File Offset: 0x00EEF9C4
 		private void RefreshIcon(MatchThreeSkill data)
 		{
 			UUISprite sprite = base.GetSprite(2);

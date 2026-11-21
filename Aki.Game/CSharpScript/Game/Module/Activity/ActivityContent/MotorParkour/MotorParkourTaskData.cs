@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Reward;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063E9 RID: 25577
+	// Token: 0x02005367 RID: 21351
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorParkourTaskData
 	{
-		// Token: 0x0604055F RID: 263519 RVA: 0x00F8FB54 File Offset: 0x00F8DD54
+		// Token: 0x06035220 RID: 217632 RVA: 0x00ED6AEC File Offset: 0x00ED4CEC
 		public MotorParkourTaskData(int id)
 		{
 			MotorParkourReward? motorParkourTaskById = MotorParkourConfig.Instance.GetMotorParkourTaskById(id);
@@ -28,8 +28,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.RewardList = CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemList(this.Config.DropId).ToArray();
 		}
 
-		// Token: 0x17009427 RID: 37927
-		// (get) Token: 0x06040560 RID: 263520 RVA: 0x00F8FBEB File Offset: 0x00F8DDEB
+		// Token: 0x17006789 RID: 26505
+		// (get) Token: 0x06035221 RID: 217633 RVA: 0x00ED6B83 File Offset: 0x00ED4D83
 		public bool IsRunning
 		{
 			get
@@ -38,8 +38,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x17009428 RID: 37928
-		// (get) Token: 0x06040561 RID: 263521 RVA: 0x00F8FBF6 File Offset: 0x00F8DDF6
+		// Token: 0x1700678A RID: 26506
+		// (get) Token: 0x06035222 RID: 217634 RVA: 0x00ED6B8E File Offset: 0x00ED4D8E
 		public bool IsFinished
 		{
 			get
@@ -48,8 +48,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x17009429 RID: 37929
-		// (get) Token: 0x06040562 RID: 263522 RVA: 0x00F8FC01 File Offset: 0x00F8DE01
+		// Token: 0x1700678B RID: 26507
+		// (get) Token: 0x06035223 RID: 217635 RVA: 0x00ED6B99 File Offset: 0x00ED4D99
 		public bool IsReceived
 		{
 			get
@@ -58,9 +58,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x1700942A RID: 37930
-		// (get) Token: 0x06040563 RID: 263523 RVA: 0x00F8FC0C File Offset: 0x00F8DE0C
-		// (set) Token: 0x06040564 RID: 263524 RVA: 0x00F8FC14 File Offset: 0x00F8DE14
+		// Token: 0x1700678C RID: 26508
+		// (get) Token: 0x06035224 RID: 217636 RVA: 0x00ED6BA4 File Offset: 0x00ED4DA4
+		// (set) Token: 0x06035225 RID: 217637 RVA: 0x00ED6BAC File Offset: 0x00ED4DAC
 		public int LevelId
 		{
 			get
@@ -73,8 +73,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x1700942B RID: 37931
-		// (get) Token: 0x06040565 RID: 263525 RVA: 0x00F8FC1D File Offset: 0x00F8DE1D
+		// Token: 0x1700678D RID: 26509
+		// (get) Token: 0x06035226 RID: 217638 RVA: 0x00ED6BB5 File Offset: 0x00ED4DB5
 		public int RecordId
 		{
 			get
@@ -83,8 +83,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x1700942C RID: 37932
-		// (get) Token: 0x06040566 RID: 263526 RVA: 0x00F8FC2A File Offset: 0x00F8DE2A
+		// Token: 0x1700678E RID: 26510
+		// (get) Token: 0x06035227 RID: 217639 RVA: 0x00ED6BC2 File Offset: 0x00ED4DC2
 		public string Desc
 		{
 			get
@@ -93,16 +93,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x04021776 RID: 137078
+		// Token: 0x0401C0A5 RID: 114853
 		private MotorParkourReward Config;
 
-		// Token: 0x04021777 RID: 137079
+		// Token: 0x0401C0A6 RID: 114854
 		public TItem[] RewardList = Array.Empty<TItem>();
 
-		// Token: 0x04021778 RID: 137080
+		// Token: 0x0401C0A7 RID: 114855
 		private int LevelInternal;
 
-		// Token: 0x04021779 RID: 137081
+		// Token: 0x0401C0A8 RID: 114856
 		public EActivityTaskState Status = EActivityTaskState.Active;
 	}
 }

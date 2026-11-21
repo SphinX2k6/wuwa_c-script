@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040C2 RID: 16578
+	// Token: 0x02004503 RID: 17667
 	public class IRoleTowerChallengeTitleKillProgressT
 	{
-		// Token: 0x170074F9 RID: 29945
-		// (get) Token: 0x0601827C RID: 98940 RVA: 0x0037B2D2 File Offset: 0x003794D2
-		// (set) Token: 0x0601827D RID: 98941 RVA: 0x0037B2DA File Offset: 0x003794DA
+		// Token: 0x17007AFF RID: 31487
+		// (get) Token: 0x0601991D RID: 104733 RVA: 0x003A5222 File Offset: 0x003A3422
+		// (set) Token: 0x0601991E RID: 104734 RVA: 0x003A522A File Offset: 0x003A342A
 		public ERoleTowerChallengeTitleType Type { get; set; }
 
-		// Token: 0x0601827E RID: 98942 RVA: 0x0037B2E3 File Offset: 0x003794E3
+		// Token: 0x0601991F RID: 104735 RVA: 0x003A5233 File Offset: 0x003A3433
 		public IRoleTowerChallengeTitleKillProgressT()
 		{
 			this.Type = ERoleTowerChallengeTitleType.KillProgress;

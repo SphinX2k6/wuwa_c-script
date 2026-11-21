@@ -2,76 +2,82 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074A2 RID: 29858
+	// Token: 0x02007C98 RID: 31896
 	public enum IUiGame_Union : byte
 	{
-		// Token: 0x04012340 RID: 74560
+		// Token: 0x0401336B RID: 78699
 		NONE,
-		// Token: 0x04012341 RID: 74561
+		// Token: 0x0401336C RID: 78700
 		IUiGame,
-		// Token: 0x04012342 RID: 74562
+		// Token: 0x0401336D RID: 78701
 		IReigns,
-		// Token: 0x04012343 RID: 74563
+		// Token: 0x0401336E RID: 78702
 		IFindSunSpirit,
-		// Token: 0x04012344 RID: 74564
+		// Token: 0x0401336F RID: 78703
 		IDollGrab,
-		// Token: 0x04012345 RID: 74565
+		// Token: 0x04013370 RID: 78704
 		IDollGrabShowcase,
-		// Token: 0x04012346 RID: 74566
+		// Token: 0x04013371 RID: 78705
 		IDaemonHack,
-		// Token: 0x04012347 RID: 74567
+		// Token: 0x04013372 RID: 78706
 		IProjectionMachine,
-		// Token: 0x04012348 RID: 74568
+		// Token: 0x04013373 RID: 78707
 		IItemInspection,
-		// Token: 0x04012349 RID: 74569
+		// Token: 0x04013374 RID: 78708
 		ICipherGameplay,
-		// Token: 0x0401234A RID: 74570
+		// Token: 0x04013375 RID: 78709
 		ISignalBreakGameplay,
-		// Token: 0x0401234B RID: 74571
+		// Token: 0x04013376 RID: 78710
 		ISundialPuzzleGameplay,
-		// Token: 0x0401234C RID: 74572
+		// Token: 0x04013377 RID: 78711
 		ISignalDevice,
-		// Token: 0x0401234D RID: 74573
+		// Token: 0x04013378 RID: 78712
 		ISignalDevice2,
-		// Token: 0x0401234E RID: 74574
+		// Token: 0x04013379 RID: 78713
 		IMorseCode,
-		// Token: 0x0401234F RID: 74575
+		// Token: 0x0401337A RID: 78714
 		IRenjuChess,
-		// Token: 0x04012350 RID: 74576
+		// Token: 0x0401337B RID: 78715
 		IProjectorPuzzle,
-		// Token: 0x04012351 RID: 74577
+		// Token: 0x0401337C RID: 78716
 		ILifePoint,
-		// Token: 0x04012352 RID: 74578
+		// Token: 0x0401337D RID: 78717
 		IBrokenRock,
-		// Token: 0x04012353 RID: 74579
+		// Token: 0x0401337E RID: 78718
 		IFlowerSeaEscape,
-		// Token: 0x04012354 RID: 74580
+		// Token: 0x0401337F RID: 78719
 		IRideFlyingCar,
-		// Token: 0x04012355 RID: 74581
+		// Token: 0x04013380 RID: 78720
+		IFrequencyPaint,
+		// Token: 0x04013381 RID: 78721
+		IFrequencyDetect,
+		// Token: 0x04013382 RID: 78722
+		ITurntableConnectorUiGameplay,
+		// Token: 0x04013383 RID: 78723
 		IFishingRoulette,
-		// Token: 0x04012356 RID: 74582
+		// Token: 0x04013384 RID: 78724
 		IDaolingAuthentication,
-		// Token: 0x04012357 RID: 74583
+		// Token: 0x04013385 RID: 78725
 		IDragActor,
-		// Token: 0x04012358 RID: 74584
+		// Token: 0x04013386 RID: 78726
 		IWuWaGoGame,
-		// Token: 0x04012359 RID: 74585
+		// Token: 0x04013387 RID: 78727
 		IWriteLetter,
-		// Token: 0x0401235A RID: 74586
+		// Token: 0x04013388 RID: 78728
 		IQteHourglass,
-		// Token: 0x0401235B RID: 74587
+		// Token: 0x04013389 RID: 78729
 		IInstrumentQteGameplay,
-		// Token: 0x0401235C RID: 74588
+		// Token: 0x0401338A RID: 78730
 		IPlayPianoGameplay,
-		// Token: 0x0401235D RID: 74589
+		// Token: 0x0401338B RID: 78731
 		IDartGameplay,
-		// Token: 0x0401235E RID: 74590
+		// Token: 0x0401338C RID: 78732
 		ISceneInspection,
-		// Token: 0x0401235F RID: 74591
+		// Token: 0x0401338D RID: 78733
 		ITuningStand,
-		// Token: 0x04012360 RID: 74592
+		// Token: 0x0401338E RID: 78734
 		ITraceTracing,
-		// Token: 0x04012361 RID: 74593
+		// Token: 0x0401338F RID: 78735
 		ISheriffReasoning
 	}
 }

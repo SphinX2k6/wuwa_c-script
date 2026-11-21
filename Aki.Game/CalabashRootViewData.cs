@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001723 RID: 5923
+// Token: 0x02000BDB RID: 3035
 [NullableContext(1)]
 [Nullable(0)]
 public class CalabashRootViewData : ICalabashRootViewData
 {
-	// Token: 0x17000E12 RID: 3602
-	// (get) Token: 0x0600AB29 RID: 43817 RVA: 0x00267BDE File Offset: 0x00265DDE
-	// (set) Token: 0x0600AB2A RID: 43818 RVA: 0x00267BE6 File Offset: 0x00265DE6
+	// Token: 0x17000E33 RID: 3635
+	// (get) Token: 0x06007F0B RID: 32523 RVA: 0x00271FB6 File Offset: 0x002701B6
+	// (set) Token: 0x06007F0C RID: 32524 RVA: 0x00271FBE File Offset: 0x002701BE
 	public EUiTabViewName TabViewName { get; set; }
 
-	// Token: 0x17000E13 RID: 3603
-	// (get) Token: 0x0600AB2B RID: 43819 RVA: 0x00267BEF File Offset: 0x00265DEF
-	// (set) Token: 0x0600AB2C RID: 43820 RVA: 0x00267BF7 File Offset: 0x00265DF7
+	// Token: 0x17000E34 RID: 3636
+	// (get) Token: 0x06007F0D RID: 32525 RVA: 0x00271FC7 File Offset: 0x002701C7
+	// (set) Token: 0x06007F0E RID: 32526 RVA: 0x00271FCF File Offset: 0x002701CF
 	public object Param { get; set; }
 }

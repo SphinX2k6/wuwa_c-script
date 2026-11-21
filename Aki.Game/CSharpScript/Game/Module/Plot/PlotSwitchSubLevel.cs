@@ -4,10 +4,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02005004 RID: 20484
+	// Token: 0x02003FCE RID: 16334
 	public class PlotSwitchSubLevel
 	{
-		// Token: 0x06034684 RID: 214660 RVA: 0x00C52D8C File Offset: 0x00C50F8C
+		// Token: 0x06029511 RID: 169233 RVA: 0x00B9CB14 File Offset: 0x00B9AD14
 		public UniTask CheckSwitchSubLevelPromise()
 		{
 			PlotSwitchSubLevel.<CheckSwitchSubLevelPromise>d__0 <CheckSwitchSubLevelPromise>d__;

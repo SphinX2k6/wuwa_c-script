@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001BF7 RID: 7159
+// Token: 0x020010B6 RID: 4278
 [NullableContext(1)]
 [Nullable(0)]
 public class FormationModel : ModelBase
 {
-	// Token: 0x0600D54C RID: 54604 RVA: 0x00312080 File Offset: 0x00310280
+	// Token: 0x0600A95F RID: 43359 RVA: 0x0031D334 File Offset: 0x0031B534
 	public void UpdatePlayerFormations(IList<PlayerFightFormations> playerFormations)
 	{
 		this.FormationDataMap.Clear();
@@ -60,12 +59,14 @@ public class FormationModel : ModelBase
 				Aki.Protocol.FormationRoleInfo item2 = valueTuple.Item1;
 				int item3 = valueTuple.Item2;
 				bool item4 = valueTuple.Item3;
+				int[] array = new int[item2.DressList.Count];
+				item2.DressList.CopyTo(array, 0);
 				formationData.AddRoleData(item2.RoleId, item2.RoleSkinId, item2.Level, item3, item4, item2.SkillBranchId, new FormationRoleEquip
 				{
 					WeaponId = item2.WeaponId,
 					WeaponBreachLevel = item2.WeaponBreachLevel,
 					WeaponSkinId = item2.WeaponSkinId,
-					DressList = item2.DressList.ToArray<int>()
+					DressList = array
 				});
 			}
 			if (key == num)
@@ -75,7 +76,7 @@ public class FormationModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D54D RID: 54605 RVA: 0x0031238C File Offset: 0x0031058C
+	// Token: 0x0600A960 RID: 43360 RVA: 0x0031D658 File Offset: 0x0031B858
 	public void ApplyCurrentFormationData(int formationId)
 	{
 		FormationData currentFormationDataInternal;
@@ -92,7 +93,7 @@ public class FormationModel : ModelBase
 		this.CurrentFormationDataInternal = currentFormationDataInternal;
 	}
 
-	// Token: 0x0600D54E RID: 54606 RVA: 0x003123E0 File Offset: 0x003105E0
+	// Token: 0x0600A961 RID: 43361 RVA: 0x0031D6AC File Offset: 0x0031B8AC
 	public unsafe void ReorderFormation(int formationId, int targetId)
 	{
 		int maxFormationId = FormationConfig.Instance.GetMaxFormationId();
@@ -148,7 +149,7 @@ public class FormationModel : ModelBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0600D54F RID: 54607 RVA: 0x00312550 File Offset: 0x00310750
+	// Token: 0x0600A962 RID: 43362 RVA: 0x0031D81C File Offset: 0x0031BA1C
 	public void ChangeEditedMainRole()
 	{
 		RoleModel instance = RoleModel.Instance;
@@ -173,7 +174,7 @@ public class FormationModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D550 RID: 54608 RVA: 0x00312630 File Offset: 0x00310830
+	// Token: 0x0600A963 RID: 43363 RVA: 0x0031D8FC File Offset: 0x0031BAFC
 	[NullableContext(2)]
 	public FormationData GetFormationData(int formationId)
 	{
@@ -185,7 +186,7 @@ public class FormationModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600D551 RID: 54609 RVA: 0x00312650 File Offset: 0x00310850
+	// Token: 0x0600A964 RID: 43364 RVA: 0x0031D91C File Offset: 0x0031BB1C
 	public void SetFormationName(int formationId, string name)
 	{
 		FormationData formationData;
@@ -197,8 +198,8 @@ public class FormationModel : ModelBase
 		formationData.Name = name;
 	}
 
-	// Token: 0x17001198 RID: 4504
-	// (get) Token: 0x0600D552 RID: 54610 RVA: 0x00312688 File Offset: 0x00310888
+	// Token: 0x170011BD RID: 4541
+	// (get) Token: 0x0600A965 RID: 43365 RVA: 0x0031D954 File Offset: 0x0031BB54
 	[Nullable(2)]
 	public FormationData CurrentFormationData
 	{
@@ -209,8 +210,8 @@ public class FormationModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001199 RID: 4505
-	// (get) Token: 0x0600D553 RID: 54611 RVA: 0x00312690 File Offset: 0x00310890
+	// Token: 0x170011BE RID: 4542
+	// (get) Token: 0x0600A966 RID: 43366 RVA: 0x0031D95C File Offset: 0x0031BB5C
 	public int? CurrentFormationId
 	{
 		get
@@ -224,14 +225,14 @@ public class FormationModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D554 RID: 54612 RVA: 0x003126BB File Offset: 0x003108BB
+	// Token: 0x0600A967 RID: 43367 RVA: 0x0031D987 File Offset: 0x0031BB87
 	public bool IsRoleInCurrentFormation(int roleId)
 	{
 		FormationData currentFormationDataInternal = this.CurrentFormationDataInternal;
 		return currentFormationDataInternal != null && currentFormationDataInternal.RoleIdList.Contains(roleId);
 	}
 
-	// Token: 0x0600D555 RID: 54613 RVA: 0x003126D4 File Offset: 0x003108D4
+	// Token: 0x0600A968 RID: 43368 RVA: 0x0031D9A0 File Offset: 0x0031BBA0
 	public int GetCurrentFormationSkillBranchId(int position)
 	{
 		FormationData currentFormationDataInternal = this.CurrentFormationDataInternal;
@@ -249,7 +250,7 @@ public class FormationModel : ModelBase
 		return num2.GetValueOrDefault();
 	}
 
-	// Token: 0x0600D556 RID: 54614 RVA: 0x00312720 File Offset: 0x00310920
+	// Token: 0x0600A969 RID: 43369 RVA: 0x0031D9EC File Offset: 0x0031BBEC
 	public void InitEditingFormationMap()
 	{
 		this.EditingFormationMap.Clear();
@@ -258,12 +259,15 @@ public class FormationModel : ModelBase
 			int formationId = formationData.FormationId;
 			foreach (FormationRoleData formationRoleData in formationData.GetRoleDataMap().Values)
 			{
+				formationRoleData.PlayerName = null;
+				formationRoleData.ThirdPartyOnlineId = null;
+				formationRoleData.OnlineIndex = null;
 				this.SetEditingRoleId(formationId, formationRoleData.Position, formationRoleData.ConfigId, true);
 			}
 		}
 	}
 
-	// Token: 0x0600D557 RID: 54615 RVA: 0x003127D8 File Offset: 0x003109D8
+	// Token: 0x0600A96A RID: 43370 RVA: 0x0031DABC File Offset: 0x0031BCBC
 	public bool SetEditingRoleId(int editFormationId, int editPosition, int roleId = 0, bool fillEmpty = true)
 	{
 		if (editPosition > 3 || editPosition <= 0)
@@ -312,7 +316,7 @@ public class FormationModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600D558 RID: 54616 RVA: 0x00312944 File Offset: 0x00310B44
+	// Token: 0x0600A96B RID: 43371 RVA: 0x0031DC28 File Offset: 0x0031BE28
 	public int GetEditingRoleId(int editFormationId, int position)
 	{
 		List<EditingRoleData_Tmp> list;
@@ -330,7 +334,7 @@ public class FormationModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x0600D559 RID: 54617 RVA: 0x003129B4 File Offset: 0x00310BB4
+	// Token: 0x0600A96C RID: 43372 RVA: 0x0031DC98 File Offset: 0x0031BE98
 	public int GetEditingRolePosition(int editFormationId, int roleConfigId)
 	{
 		List<EditingRoleData_Tmp> list;
@@ -348,7 +352,7 @@ public class FormationModel : ModelBase
 		return -1;
 	}
 
-	// Token: 0x0600D55A RID: 54618 RVA: 0x00312A24 File Offset: 0x00310C24
+	// Token: 0x0600A96D RID: 43373 RVA: 0x0031DD08 File Offset: 0x0031BF08
 	public int[] GetEditingRoleIdList(int editFormationId)
 	{
 		List<EditingRoleData_Tmp> list;
@@ -367,13 +371,13 @@ public class FormationModel : ModelBase
 		return list2.ToArray();
 	}
 
-	// Token: 0x0600D55B RID: 54619 RVA: 0x00312AA4 File Offset: 0x00310CA4
+	// Token: 0x0600A96E RID: 43374 RVA: 0x0031DD88 File Offset: 0x0031BF88
 	public HashSet<int> GetEditingRoleIdSet(int editFormationId)
 	{
 		return new HashSet<int>(this.GetEditingRoleIdList(editFormationId));
 	}
 
-	// Token: 0x0600D55C RID: 54620 RVA: 0x00312AB4 File Offset: 0x00310CB4
+	// Token: 0x0600A96F RID: 43375 RVA: 0x0031DD98 File Offset: 0x0031BF98
 	public Dictionary<int, int[]> GetAllEditingFormation()
 	{
 		Dictionary<int, int[]> dictionary = new Dictionary<int, int[]>();
@@ -392,20 +396,18 @@ public class FormationModel : ModelBase
 		return dictionary;
 	}
 
-	// Token: 0x0600D55D RID: 54621 RVA: 0x00312B78 File Offset: 0x00310D78
+	// Token: 0x0600A970 RID: 43376 RVA: 0x0031DE5C File Offset: 0x0031C05C
 	public Dictionary<int, int[]> CreateEditingFormationSnapshot()
 	{
-		Dictionary<int, int[]> dictionary = new Dictionary<int, int[]>();
+		Dictionary<int, int[]> dictionary = new Dictionary<int, int[]>(this.EditingFormationMap.Count);
 		foreach (KeyValuePair<int, List<EditingRoleData_Tmp>> keyValuePair in this.EditingFormationMap)
 		{
-			dictionary[keyValuePair.Key] = (from roleData in keyValuePair.Value
-			orderby roleData.Position
-			select roleData.RoleId).ToArray<int>();
+			dictionary[keyValuePair.Key] = NoLinq.SelectToArray<EditingRoleData_Tmp, int>(keyValuePair.Value, (EditingRoleData_Tmp role) => role.RoleId);
 		}
 		return dictionary;
 	}
 
-	// Token: 0x0600D55E RID: 54622 RVA: 0x00312C2C File Offset: 0x00310E2C
+	// Token: 0x0600A971 RID: 43377 RVA: 0x0031DEF4 File Offset: 0x0031C0F4
 	public void RestoreEditingFormationSnapshot(Dictionary<int, int[]> snapshot)
 	{
 		this.EditingFormationMap.Clear();
@@ -423,7 +425,7 @@ public class FormationModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D55F RID: 54623 RVA: 0x00312CD4 File Offset: 0x00310ED4
+	// Token: 0x0600A972 RID: 43378 RVA: 0x0031DF9C File Offset: 0x0031C19C
 	public void SetViewSwitchCache(int editFormationId, int goBattleFormationId)
 	{
 		this.ViewSwitchCache = new FormationViewSwitchCache
@@ -435,7 +437,7 @@ public class FormationModel : ModelBase
 		};
 	}
 
-	// Token: 0x0600D560 RID: 54624 RVA: 0x00312D19 File Offset: 0x00310F19
+	// Token: 0x0600A973 RID: 43379 RVA: 0x0031DFE1 File Offset: 0x0031C1E1
 	[NullableContext(2)]
 	public FormationViewSwitchCache TakeViewSwitchCache()
 	{
@@ -444,31 +446,31 @@ public class FormationModel : ModelBase
 		return viewSwitchCache;
 	}
 
-	// Token: 0x0600D561 RID: 54625 RVA: 0x00312D28 File Offset: 0x00310F28
+	// Token: 0x0600A974 RID: 43380 RVA: 0x0031DFF0 File Offset: 0x0031C1F0
 	public void ClearViewSwitchCache()
 	{
 		this.ViewSwitchCache = null;
 	}
 
-	// Token: 0x0600D562 RID: 54626 RVA: 0x00312D31 File Offset: 0x00310F31
+	// Token: 0x0600A975 RID: 43381 RVA: 0x0031DFF9 File Offset: 0x0031C1F9
 	public bool IsViewSwitching()
 	{
 		return this.IsViewSwitchingInternal;
 	}
 
-	// Token: 0x0600D563 RID: 54627 RVA: 0x00312D39 File Offset: 0x00310F39
+	// Token: 0x0600A976 RID: 43382 RVA: 0x0031E001 File Offset: 0x0031C201
 	public void SetViewSwitching(bool isSwitching)
 	{
 		this.IsViewSwitchingInternal = isSwitching;
 	}
 
-	// Token: 0x0600D564 RID: 54628 RVA: 0x00312D42 File Offset: 0x00310F42
+	// Token: 0x0600A977 RID: 43383 RVA: 0x0031E00A File Offset: 0x0031C20A
 	public bool IsInEditingFormation(int editFormationId, int configId)
 	{
 		return this.GetEditingRolePosition(editFormationId, configId) > 0;
 	}
 
-	// Token: 0x0600D565 RID: 54629 RVA: 0x00312D50 File Offset: 0x00310F50
+	// Token: 0x0600A978 RID: 43384 RVA: 0x0031E018 File Offset: 0x0031C218
 	public bool IsRoleDead(int roleConfigId)
 	{
 		SceneTeamItem teamItem = SceneTeamModel.Instance.GetTeamItem((long)roleConfigId, new GetTeamItemOptions
@@ -494,7 +496,7 @@ public class FormationModel : ModelBase
 		return roleDataById == null || roleDataById.GetAttributeData().GetAttrValueById(3) <= 0;
 	}
 
-	// Token: 0x0600D566 RID: 54630 RVA: 0x00312DC8 File Offset: 0x00310FC8
+	// Token: 0x0600A979 RID: 43385 RVA: 0x0031E090 File Offset: 0x0031C290
 	public bool IsMyPosition(int position)
 	{
 		if (!GameModeModel.Instance.IsMulti)
@@ -513,7 +515,7 @@ public class FormationModel : ModelBase
 		return id.GetValueOrDefault() == playerId & id != null;
 	}
 
-	// Token: 0x0600D567 RID: 54631 RVA: 0x00312E34 File Offset: 0x00311034
+	// Token: 0x0600A97A RID: 43386 RVA: 0x0031E0FC File Offset: 0x0031C2FC
 	public float GetFormationAverageLevel()
 	{
 		float num = 0f;
@@ -535,7 +537,7 @@ public class FormationModel : ModelBase
 		return num / (float)num2;
 	}
 
-	// Token: 0x0600D568 RID: 54632 RVA: 0x00312EC0 File Offset: 0x003110C0
+	// Token: 0x0600A97B RID: 43387 RVA: 0x0031E188 File Offset: 0x0031C388
 	public int[] GetFormationAllSpecialTrialRole()
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -549,10 +551,12 @@ public class FormationModel : ModelBase
 				}
 			}
 		}
-		return hashSet.ToArray<int>();
+		int[] array = new int[hashSet.Count];
+		hashSet.CopyTo(array);
+		return array;
 	}
 
-	// Token: 0x0600D569 RID: 54633 RVA: 0x00312F68 File Offset: 0x00311168
+	// Token: 0x0600A97C RID: 43388 RVA: 0x0031E240 File Offset: 0x0031C440
 	public bool IsFormationHasSpecialTrialRole()
 	{
 		foreach (FormationData formationData in this.FormationDataMap.Values)
@@ -571,14 +575,14 @@ public class FormationModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600D56A RID: 54634 RVA: 0x00313000 File Offset: 0x00311200
+	// Token: 0x0600A97D RID: 43389 RVA: 0x0031E2D8 File Offset: 0x0031C4D8
 	public bool IsEditingFormationHasSpecialTrialRole()
 	{
-		using (Dictionary<int, int[]>.ValueCollection.Enumerator enumerator = this.GetAllEditingFormation().Values.GetEnumerator())
+		foreach (int[] array in this.GetAllEditingFormation().Values)
 		{
-			while (enumerator.MoveNext())
+			for (int i = 0; i < array.Length; i++)
 			{
-				if (enumerator.Current.Any((int id) => RoleUtils.IsSpecialTrialRole(id)))
+				if (RoleUtils.IsSpecialTrialRole(array[i]))
 				{
 					return true;
 				}
@@ -587,19 +591,30 @@ public class FormationModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600D56B RID: 54635 RVA: 0x00313080 File Offset: 0x00311280
+	// Token: 0x0600A97E RID: 43390 RVA: 0x0031E348 File Offset: 0x0031C548
 	public bool IsCurrentFormationHasSpecialTrialRole()
 	{
 		FormationData currentFormationDataInternal = this.CurrentFormationDataInternal;
-		if (currentFormationDataInternal == null)
+		List<int> list = (currentFormationDataInternal != null) ? currentFormationDataInternal.RoleIdList : null;
+		if (list == null)
 		{
 			return false;
 		}
-		return currentFormationDataInternal.RoleIdList.Any((int id) => RoleUtils.IsSpecialTrialRole(id));
+		using (List<int>.Enumerator enumerator = list.GetEnumerator())
+		{
+			while (enumerator.MoveNext())
+			{
+				if (RoleUtils.IsSpecialTrialRole(enumerator.Current))
+				{
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
-	// Token: 0x1700119A RID: 4506
-	// (get) Token: 0x0600D56C RID: 54636 RVA: 0x003130B7 File Offset: 0x003112B7
+	// Token: 0x170011BF RID: 4543
+	// (get) Token: 0x0600A97F RID: 43391 RVA: 0x0031E3B4 File Offset: 0x0031C5B4
 	public static FormationModel Instance
 	{
 		get
@@ -608,7 +623,7 @@ public class FormationModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D56D RID: 54637 RVA: 0x003130BE File Offset: 0x003112BE
+	// Token: 0x0600A980 RID: 43392 RVA: 0x0031E3BB File Offset: 0x0031C5BB
 	public static FormationModel GetOrCreateInstance()
 	{
 		if (FormationModel._Instance == null)
@@ -618,7 +633,7 @@ public class FormationModel : ModelBase
 		return FormationModel._Instance;
 	}
 
-	// Token: 0x0600D56E RID: 54638 RVA: 0x003130D2 File Offset: 0x003112D2
+	// Token: 0x0600A981 RID: 43393 RVA: 0x0031E3CF File Offset: 0x0031C5CF
 	public static bool CreateInstance()
 	{
 		if (FormationModel._Instance != null)
@@ -629,44 +644,44 @@ public class FormationModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600D56F RID: 54639 RVA: 0x003130E8 File Offset: 0x003112E8
+	// Token: 0x0600A982 RID: 43394 RVA: 0x0031E3E5 File Offset: 0x0031C5E5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600D570 RID: 54640 RVA: 0x003130EA File Offset: 0x003112EA
+	// Token: 0x0600A983 RID: 43395 RVA: 0x0031E3E7 File Offset: 0x0031C5E7
 	public static void ResetStaticDefaultValue()
 	{
 		FormationModel._Instance = null;
 	}
 
-	// Token: 0x0600D571 RID: 54641 RVA: 0x003130F2 File Offset: 0x003112F2
+	// Token: 0x0600A984 RID: 43396 RVA: 0x0031E3EF File Offset: 0x0031C5EF
 	static FormationModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FormationModel.CreateStaticDefaultValue), new Action(FormationModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040061B8 RID: 25016
+	// Token: 0x0400628A RID: 25226
 	private const int HEALTH_ATTR_ID = 3;
 
-	// Token: 0x040061B9 RID: 25017
+	// Token: 0x0400628B RID: 25227
 	private readonly Dictionary<int, FormationData> FormationDataMap = new Dictionary<int, FormationData>();
 
-	// Token: 0x040061BA RID: 25018
+	// Token: 0x0400628C RID: 25228
 	[Nullable(2)]
 	private FormationData CurrentFormationDataInternal;
 
-	// Token: 0x040061BB RID: 25019
+	// Token: 0x0400628D RID: 25229
 	private readonly Dictionary<int, List<EditingRoleData_Tmp>> EditingFormationMap = new Dictionary<int, List<EditingRoleData_Tmp>>();
 
-	// Token: 0x040061BC RID: 25020
+	// Token: 0x0400628E RID: 25230
 	[Nullable(2)]
 	private FormationViewSwitchCache ViewSwitchCache;
 
-	// Token: 0x040061BD RID: 25021
+	// Token: 0x0400628F RID: 25231
 	private bool IsViewSwitchingInternal;
 
-	// Token: 0x040061BE RID: 25022
+	// Token: 0x04006290 RID: 25232
 	[Nullable(2)]
 	private static FormationModel _Instance;
 }

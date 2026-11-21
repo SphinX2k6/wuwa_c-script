@@ -1,56 +1,56 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000DFD RID: 3581
+// Token: 0x020002B0 RID: 688
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleInfoSdk
 {
-	// Token: 0x04002759 RID: 10073
+	// Token: 0x040027EA RID: 10218
 	public string RoleId = "";
 
-	// Token: 0x0400275A RID: 10074
+	// Token: 0x040027EB RID: 10219
 	public string RoleName = "";
 
-	// Token: 0x0400275B RID: 10075
+	// Token: 0x040027EC RID: 10220
 	public string ServerId = "";
 
-	// Token: 0x0400275C RID: 10076
+	// Token: 0x040027ED RID: 10221
 	public string ServerName = "";
 
-	// Token: 0x0400275D RID: 10077
+	// Token: 0x040027EE RID: 10222
 	public string RoleLevel = "";
 
-	// Token: 0x0400275E RID: 10078
+	// Token: 0x040027EF RID: 10223
 	public string VipLevel = "";
 
-	// Token: 0x0400275F RID: 10079
+	// Token: 0x040027F0 RID: 10224
 	public string PartyName = "";
 
-	// Token: 0x04002760 RID: 10080
+	// Token: 0x040027F1 RID: 10225
 	public object RoleCreateTime = "";
 
-	// Token: 0x04002761 RID: 10081
+	// Token: 0x040027F2 RID: 10226
 	public string BalanceLevelOne = "";
 
-	// Token: 0x04002762 RID: 10082
+	// Token: 0x040027F3 RID: 10227
 	public string BalanceLevelTwo = "";
 
-	// Token: 0x04002763 RID: 10083
+	// Token: 0x040027F4 RID: 10228
 	public string SumPay = "";
 
-	// Token: 0x04002764 RID: 10084
+	// Token: 0x040027F5 RID: 10229
 	public string gameName = "";
 
-	// Token: 0x04002765 RID: 10085
+	// Token: 0x040027F6 RID: 10230
 	public string gameVersion = "";
 
-	// Token: 0x04002766 RID: 10086
+	// Token: 0x040027F7 RID: 10231
 	public string RoleAvatar = "";
 
-	// Token: 0x04002767 RID: 10087
+	// Token: 0x040027F8 RID: 10232
 	public string ChannelUserId = "";
 
-	// Token: 0x04002768 RID: 10088
+	// Token: 0x040027F9 RID: 10233
 	public string GameUserId = "";
 }

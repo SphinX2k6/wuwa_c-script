@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003349 RID: 13129
+// Token: 0x020028BB RID: 10427
 public class RedDotActivityRegressDoubleDrop : RedDotBase
 {
-	// Token: 0x0601C998 RID: 117144 RVA: 0x008048DB File Offset: 0x00802ADB
+	// Token: 0x0601A690 RID: 108176 RVA: 0x0082AE9F File Offset: 0x0082909F
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.RecallActivityInfoUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C999 RID: 117145 RVA: 0x008048F9 File Offset: 0x00802AF9
+	// Token: 0x0601A691 RID: 108177 RVA: 0x0082AEBD File Offset: 0x008290BD
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.RecallActivityInfoUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C99A RID: 117146 RVA: 0x00804917 File Offset: 0x00802B17
+	// Token: 0x0601A692 RID: 108178 RVA: 0x0082AEDB File Offset: 0x008290DB
 	protected override bool OnCheck(int uId = 0)
 	{
 		return ActivityRegressModel.Instance.ActivityData.CheckDoubleDropRedDot();

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012EE RID: 4846
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001434 RID: 5172
 	public class IFlipperSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x06006E9F RID: 28319 RVA: 0x0010B3C8 File Offset: 0x001095C8
+		// Token: 0x0600751F RID: 29983 RVA: 0x001196C8 File Offset: 0x001178C8
 		public static IFlipperSystemConfig Create(IFlipperSystemConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002296 RID: 8854
-		// (get) Token: 0x06006EA0 RID: 28320 RVA: 0x0010B3E7 File Offset: 0x001095E7
+		// Token: 0x17002459 RID: 9305
+		// (get) Token: 0x06007520 RID: 29984 RVA: 0x001196E7 File Offset: 0x001178E7
 		public override EEnableSystemType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002297 RID: 8855
-		// (get) Token: 0x06006EA1 RID: 28321 RVA: 0x0010B3F4 File Offset: 0x001095F4
+		// Token: 0x1700245A RID: 9306
+		// (get) Token: 0x06007521 RID: 29985 RVA: 0x001196F4 File Offset: 0x001178F4
 		public virtual List<IFlipperSystemVar> Vars
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F66 RID: 16230
+		// Token: 0x040042D4 RID: 17108
 		private IFlipperSystemConfig Instance;
 
-		// Token: 0x04003F67 RID: 16231
+		// Token: 0x040042D5 RID: 17109
 		private List<IFlipperSystemVar> _VarsCache;
 
-		// Token: 0x04003F68 RID: 16232
+		// Token: 0x040042D6 RID: 17110
 		private bool _VarsInited;
 	}
 }

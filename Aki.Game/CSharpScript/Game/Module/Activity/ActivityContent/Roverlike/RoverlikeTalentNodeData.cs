@@ -5,19 +5,19 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060E2 RID: 24802
+	// Token: 0x02005060 RID: 20576
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeTalentNodeData
 	{
-		// Token: 0x0603EB38 RID: 256824 RVA: 0x00F2507D File Offset: 0x00F2327D
+		// Token: 0x060337FA RID: 210938 RVA: 0x00E6BED5 File Offset: 0x00E6A0D5
 		public RoverlikeTalentNodeData(List<RoverRogueTalentTree> levelConfigs)
 		{
 			this.LevelConfigsInternal = levelConfigs;
 		}
 
-		// Token: 0x1700912E RID: 37166
-		// (get) Token: 0x0603EB39 RID: 256825 RVA: 0x00F2509E File Offset: 0x00F2329E
+		// Token: 0x17006490 RID: 25744
+		// (get) Token: 0x060337FB RID: 210939 RVA: 0x00E6BEF6 File Offset: 0x00E6A0F6
 		public IReadOnlyList<RoverRogueTalentTree> LevelConfigs
 		{
 			get
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x1700912F RID: 37167
-		// (get) Token: 0x0603EB3A RID: 256826 RVA: 0x00F250A6 File Offset: 0x00F232A6
+		// Token: 0x17006491 RID: 25745
+		// (get) Token: 0x060337FC RID: 210940 RVA: 0x00E6BEFE File Offset: 0x00E6A0FE
 		public RoverRogueTalentTree HeadConfig
 		{
 			get
@@ -36,8 +36,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009130 RID: 37168
-		// (get) Token: 0x0603EB3B RID: 256827 RVA: 0x00F250B4 File Offset: 0x00F232B4
+		// Token: 0x17006492 RID: 25746
+		// (get) Token: 0x060337FD RID: 210941 RVA: 0x00E6BF0C File Offset: 0x00E6A10C
 		public int MaxLevel
 		{
 			get
@@ -46,9 +46,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009131 RID: 37169
-		// (get) Token: 0x0603EB3C RID: 256828 RVA: 0x00F250C1 File Offset: 0x00F232C1
-		// (set) Token: 0x0603EB3D RID: 256829 RVA: 0x00F250C9 File Offset: 0x00F232C9
+		// Token: 0x17006493 RID: 25747
+		// (get) Token: 0x060337FE RID: 210942 RVA: 0x00E6BF19 File Offset: 0x00E6A119
+		// (set) Token: 0x060337FF RID: 210943 RVA: 0x00E6BF21 File Offset: 0x00E6A121
 		public int CurLevel
 		{
 			get
@@ -71,8 +71,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009132 RID: 37170
-		// (get) Token: 0x0603EB3E RID: 256830 RVA: 0x00F250F4 File Offset: 0x00F232F4
+		// Token: 0x17006494 RID: 25748
+		// (get) Token: 0x06033800 RID: 210944 RVA: 0x00E6BF4C File Offset: 0x00E6A14C
 		public bool IsUnLock
 		{
 			get
@@ -81,9 +81,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009133 RID: 37171
-		// (get) Token: 0x0603EB3F RID: 256831 RVA: 0x00F250FC File Offset: 0x00F232FC
-		// (set) Token: 0x0603EB40 RID: 256832 RVA: 0x00F25104 File Offset: 0x00F23304
+		// Token: 0x17006495 RID: 25749
+		// (get) Token: 0x06033801 RID: 210945 RVA: 0x00E6BF54 File Offset: 0x00E6A154
+		// (set) Token: 0x06033802 RID: 210946 RVA: 0x00E6BF5C File Offset: 0x00E6A15C
 		public bool IsServerUnlocked
 		{
 			get
@@ -96,9 +96,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009134 RID: 37172
-		// (get) Token: 0x0603EB41 RID: 256833 RVA: 0x00F2510D File Offset: 0x00F2330D
-		// (set) Token: 0x0603EB42 RID: 256834 RVA: 0x00F25115 File Offset: 0x00F23315
+		// Token: 0x17006496 RID: 25750
+		// (get) Token: 0x06033803 RID: 210947 RVA: 0x00E6BF65 File Offset: 0x00E6A165
+		// (set) Token: 0x06033804 RID: 210948 RVA: 0x00E6BF6D File Offset: 0x00E6A16D
 		public int ActiveLevel
 		{
 			get
@@ -111,8 +111,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009135 RID: 37173
-		// (get) Token: 0x0603EB43 RID: 256835 RVA: 0x00F25124 File Offset: 0x00F23324
+		// Token: 0x17006497 RID: 25751
+		// (get) Token: 0x06033805 RID: 210949 RVA: 0x00E6BF7C File Offset: 0x00E6A17C
 		public int Row
 		{
 			get
@@ -121,8 +121,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009136 RID: 37174
-		// (get) Token: 0x0603EB44 RID: 256836 RVA: 0x00F25140 File Offset: 0x00F23340
+		// Token: 0x17006498 RID: 25752
+		// (get) Token: 0x06033806 RID: 210950 RVA: 0x00E6BF98 File Offset: 0x00E6A198
 		public int Index
 		{
 			get
@@ -131,8 +131,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009137 RID: 37175
-		// (get) Token: 0x0603EB45 RID: 256837 RVA: 0x00F2515D File Offset: 0x00F2335D
+		// Token: 0x17006499 RID: 25753
+		// (get) Token: 0x06033807 RID: 210951 RVA: 0x00E6BFB5 File Offset: 0x00E6A1B5
 		public ERoverlikeTalentNodeState State
 		{
 			get
@@ -149,8 +149,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009138 RID: 37176
-		// (get) Token: 0x0603EB46 RID: 256838 RVA: 0x00F25174 File Offset: 0x00F23374
+		// Token: 0x1700649A RID: 25754
+		// (get) Token: 0x06033808 RID: 210952 RVA: 0x00E6BFCC File Offset: 0x00E6A1CC
 		public bool IsMaxLevel
 		{
 			get
@@ -159,9 +159,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009139 RID: 37177
-		// (get) Token: 0x0603EB47 RID: 256839 RVA: 0x00F25187 File Offset: 0x00F23387
-		// (set) Token: 0x0603EB48 RID: 256840 RVA: 0x00F2518F File Offset: 0x00F2338F
+		// Token: 0x1700649B RID: 25755
+		// (get) Token: 0x06033809 RID: 210953 RVA: 0x00E6BFDF File Offset: 0x00E6A1DF
+		// (set) Token: 0x0603380A RID: 210954 RVA: 0x00E6BFE7 File Offset: 0x00E6A1E7
 		public bool IsFinishPreCondition
 		{
 			get
@@ -174,8 +174,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x1700913A RID: 37178
-		// (get) Token: 0x0603EB49 RID: 256841 RVA: 0x00F25198 File Offset: 0x00F23398
+		// Token: 0x1700649C RID: 25756
+		// (get) Token: 0x0603380B RID: 210955 RVA: 0x00E6BFF0 File Offset: 0x00E6A1F0
 		public RoverRogueTalentTree? CurrentLevelConfig
 		{
 			get
@@ -193,8 +193,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x1700913B RID: 37179
-		// (get) Token: 0x0603EB4A RID: 256842 RVA: 0x00F251F0 File Offset: 0x00F233F0
+		// Token: 0x1700649D RID: 25757
+		// (get) Token: 0x0603380C RID: 210956 RVA: 0x00E6C048 File Offset: 0x00E6A248
 		public RoverRogueTalentTree? NextLevelConfig
 		{
 			get
@@ -207,8 +207,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x1700913C RID: 37180
-		// (get) Token: 0x0603EB4B RID: 256843 RVA: 0x00F25228 File Offset: 0x00F23428
+		// Token: 0x1700649E RID: 25758
+		// (get) Token: 0x0603380D RID: 210957 RVA: 0x00E6C080 File Offset: 0x00E6A280
 		public int NextLevelCost
 		{
 			get
@@ -222,8 +222,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x1700913D RID: 37181
-		// (get) Token: 0x0603EB4C RID: 256844 RVA: 0x00F25258 File Offset: 0x00F23458
+		// Token: 0x1700649F RID: 25759
+		// (get) Token: 0x0603380E RID: 210958 RVA: 0x00E6C0B0 File Offset: 0x00E6A2B0
 		public int NextLevelId
 		{
 			get
@@ -237,8 +237,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x1700913E RID: 37182
-		// (get) Token: 0x0603EB4D RID: 256845 RVA: 0x00F25288 File Offset: 0x00F23488
+		// Token: 0x170064A0 RID: 25760
+		// (get) Token: 0x0603380F RID: 210959 RVA: 0x00E6C0E0 File Offset: 0x00E6A2E0
 		public string CurrentDescTextId
 		{
 			get
@@ -247,8 +247,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x1700913F RID: 37183
-		// (get) Token: 0x0603EB4E RID: 256846 RVA: 0x00F252BC File Offset: 0x00F234BC
+		// Token: 0x170064A1 RID: 25761
+		// (get) Token: 0x06033810 RID: 210960 RVA: 0x00E6C114 File Offset: 0x00E6A314
 		public List<string> CurrentDescParams
 		{
 			get
@@ -257,8 +257,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009140 RID: 37184
-		// (get) Token: 0x0603EB4F RID: 256847 RVA: 0x00F252F0 File Offset: 0x00F234F0
+		// Token: 0x170064A2 RID: 25762
+		// (get) Token: 0x06033811 RID: 210961 RVA: 0x00E6C148 File Offset: 0x00E6A348
 		public string NextLevelDescTextId
 		{
 			get
@@ -268,8 +268,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009141 RID: 37185
-		// (get) Token: 0x0603EB50 RID: 256848 RVA: 0x00F25328 File Offset: 0x00F23528
+		// Token: 0x170064A3 RID: 25763
+		// (get) Token: 0x06033812 RID: 210962 RVA: 0x00E6C180 File Offset: 0x00E6A380
 		public List<string> NextLevelDescParams
 		{
 			get
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EB51 RID: 256849 RVA: 0x00F25358 File Offset: 0x00F23558
+		// Token: 0x06033813 RID: 210963 RVA: 0x00E6C1B0 File Offset: 0x00E6A3B0
 		private static List<string> GetConfigParams(RoverRogueTalentTree config)
 		{
 			List<string> list = new List<string>();
@@ -294,22 +294,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list;
 		}
 
-		// Token: 0x04020C73 RID: 134259
+		// Token: 0x0401B5A0 RID: 112032
 		private readonly List<RoverRogueTalentTree> LevelConfigsInternal = new List<RoverRogueTalentTree>();
 
-		// Token: 0x04020C74 RID: 134260
+		// Token: 0x0401B5A1 RID: 112033
 		private bool IsFinishPreConditionInternal = true;
 
-		// Token: 0x04020C75 RID: 134261
+		// Token: 0x0401B5A2 RID: 112034
 		private int CurLevelInternal;
 
-		// Token: 0x04020C76 RID: 134262
+		// Token: 0x0401B5A3 RID: 112035
 		private bool IsServerUnlockedInternal;
 
-		// Token: 0x04020C77 RID: 134263
+		// Token: 0x0401B5A4 RID: 112036
 		private int ActiveLevelInternal;
 
-		// Token: 0x04020C78 RID: 134264
+		// Token: 0x0401B5A5 RID: 112037
 		[Nullable(2)]
 		public Action<bool, bool> SetNodeToggleState;
 	}

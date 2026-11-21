@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 {
-	// Token: 0x02006DC2 RID: 28098
+	// Token: 0x02005F41 RID: 24385
 	public class LevelAiTaskSetItemCollision : LevelAiTask
 	{
-		// Token: 0x060448C9 RID: 280777 RVA: 0x010E7BDA File Offset: 0x010E5DDA
+		// Token: 0x0603AA2D RID: 240173 RVA: 0x01091E1A File Offset: 0x0109001A
 		protected override ELevelAiNodeResult ExecuteTask()
 		{
 			if (this.IsIgnore)
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			return ELevelAiNodeResult.Succeeded;
 		}
 
-		// Token: 0x060448CA RID: 280778 RVA: 0x010E7BF4 File Offset: 0x010E5DF4
+		// Token: 0x0603AA2E RID: 240174 RVA: 0x01091E34 File Offset: 0x01090034
 		[NullableContext(1)]
 		private void IgnoreActorsCollision(SceneItemActorComponent actorComp, bool bCollision)
 		{
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			}
 		}
 
-		// Token: 0x060448CB RID: 280779 RVA: 0x010E7CE8 File Offset: 0x010E5EE8
+		// Token: 0x0603AA2F RID: 240175 RVA: 0x01091F28 File Offset: 0x01090128
 		private void ResetCollision()
 		{
 			SceneItemActorComponent component = this.ItemEntity.Entity.GetComponent<SceneItemActorComponent>();
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			component2.Actor.CapsuleComponent.SetCollisionResponseToChannel(ECollisionChannel.ECC_Pawn, ECollisionResponse.ECR_Block);
 		}
 
-		// Token: 0x060448CC RID: 280780 RVA: 0x010E7D34 File Offset: 0x010E5F34
+		// Token: 0x0603AA30 RID: 240176 RVA: 0x01091F74 File Offset: 0x01090174
 		private void IgnoreCollision()
 		{
 			SceneItemActorComponent component = this.ItemEntity.Entity.GetComponent<SceneItemActorComponent>();
@@ -91,11 +91,11 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			base.CreatureDataComponent.Entity.GetComponent<BaseCharacterComponent>().Actor.CapsuleComponent.SetCollisionResponseToChannel(ECollisionChannel.ECC_Pawn, ECollisionResponse.ECR_Ignore);
 		}
 
-		// Token: 0x04023A5E RID: 146014
+		// Token: 0x0401ED00 RID: 126208
 		[Nullable(2)]
 		public EntityHandle ItemEntity;
 
-		// Token: 0x04023A5F RID: 146015
+		// Token: 0x0401ED01 RID: 126209
 		public bool IsIgnore;
 	}
 }

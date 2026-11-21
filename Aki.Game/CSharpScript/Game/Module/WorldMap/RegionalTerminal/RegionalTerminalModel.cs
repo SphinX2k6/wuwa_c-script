@@ -10,14 +10,14 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 {
-	// Token: 0x02004854 RID: 18516
+	// Token: 0x02003785 RID: 14213
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RegionalTerminalModel : ModelBase
 	{
-		// Token: 0x17007911 RID: 30993
-		// (get) Token: 0x06030729 RID: 198441 RVA: 0x00B3F6A5 File Offset: 0x00B3D8A5
-		// (set) Token: 0x0603072A RID: 198442 RVA: 0x00B3F6AD File Offset: 0x00B3D8AD
+		// Token: 0x17004BCE RID: 19406
+		// (get) Token: 0x06024EF8 RID: 151288 RVA: 0x00A6F8E9 File Offset: 0x00A6DAE9
+		// (set) Token: 0x06024EF9 RID: 151289 RVA: 0x00A6F8F1 File Offset: 0x00A6DAF1
 		public int CurrentAreaMapGroupId
 		{
 			get
@@ -35,8 +35,8 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			}
 		}
 
-		// Token: 0x17007912 RID: 30994
-		// (get) Token: 0x0603072B RID: 198443 RVA: 0x00B3F6CF File Offset: 0x00B3D8CF
+		// Token: 0x17004BCF RID: 19407
+		// (get) Token: 0x06024EFA RID: 151290 RVA: 0x00A6F913 File Offset: 0x00A6DB13
 		public int CurrentUnlockAreaMapGroupId
 		{
 			get
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			}
 		}
 
-		// Token: 0x0603072C RID: 198444 RVA: 0x00B3F6EC File Offset: 0x00B3D8EC
+		// Token: 0x06024EFB RID: 151291 RVA: 0x00A6F930 File Offset: 0x00A6DB30
 		protected override bool OnInit()
 		{
 			foreach (AreaTerminal config in RegionalTerminalConfig.Instance.GetAllAreaTerminal())
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			return true;
 		}
 
-		// Token: 0x0603072D RID: 198445 RVA: 0x00B3F7C0 File Offset: 0x00B3D9C0
+		// Token: 0x06024EFC RID: 151292 RVA: 0x00A6FA04 File Offset: 0x00A6DC04
 		protected override bool OnClear()
 		{
 			this.GroupDataMap.Clear();
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			return true;
 		}
 
-		// Token: 0x0603072E RID: 198446 RVA: 0x00B3F7EC File Offset: 0x00B3D9EC
+		// Token: 0x06024EFD RID: 151293 RVA: 0x00A6FA30 File Offset: 0x00A6DC30
 		private RegionalTerminalGameplayData CreateGameplayData(AreaTerminal config)
 		{
 			RegionalTerminalGameplayData regionalTerminalGameplayData = this.Type2GameplayDataCtor[(ETerminalGameplayType)config.GamePlayType]();
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			return regionalTerminalGameplayData;
 		}
 
-		// Token: 0x0603072F RID: 198447 RVA: 0x00B3F8A8 File Offset: 0x00B3DAA8
+		// Token: 0x06024EFE RID: 151294 RVA: 0x00A6FAEC File Offset: 0x00A6DCEC
 		public List<RegionalTerminalGameplayData> GetGameplayDataList(bool withPinGameplay = true)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			return list;
 		}
 
-		// Token: 0x06030730 RID: 198448 RVA: 0x00B3F9D0 File Offset: 0x00B3DBD0
+		// Token: 0x06024EFF RID: 151295 RVA: 0x00A6FC14 File Offset: 0x00A6DE14
 		public int SortGameplayData(RegionalTerminalGameplayData a, RegionalTerminalGameplayData b)
 		{
 			bool flag = this.IsGameplayPin(a.Id);
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			}
 		}
 
-		// Token: 0x06030731 RID: 198449 RVA: 0x00B3FA54 File Offset: 0x00B3DC54
+		// Token: 0x06024F00 RID: 151296 RVA: 0x00A6FC98 File Offset: 0x00A6DE98
 		public unsafe int? GetAreaMapGroupIdByInstanceId(int instanceId)
 		{
 			if (!this.InstanceId2AreaMapGroupIdInit)
@@ -188,13 +188,13 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			return this.InstanceId2AreaMapGroupId.GetValueOrNull(instanceId);
 		}
 
-		// Token: 0x06030732 RID: 198450 RVA: 0x00B3FAF4 File Offset: 0x00B3DCF4
+		// Token: 0x06024F01 RID: 151297 RVA: 0x00A6FD38 File Offset: 0x00A6DF38
 		public void SetUnlockAreaMapGroupId(int areaMapGroupId)
 		{
 			this.UnlockAreaMapGroupId.Add(areaMapGroupId);
 		}
 
-		// Token: 0x06030733 RID: 198451 RVA: 0x00B3FB04 File Offset: 0x00B3DD04
+		// Token: 0x06024F02 RID: 151298 RVA: 0x00A6FD48 File Offset: 0x00A6DF48
 		public void InitGameplayPin(RepeatedField<int> gameplayIdList)
 		{
 			this.PinnedGameplayIds = new List<int>(gameplayIdList);
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06030734 RID: 198452 RVA: 0x00B3FB44 File Offset: 0x00B3DD44
+		// Token: 0x06024F03 RID: 151299 RVA: 0x00A6FD88 File Offset: 0x00A6DF88
 		public void UpdateGameplayPin(int gameplayId, bool isPin)
 		{
 			int num = this.PinnedGameplayIds.IndexOf(gameplayId);
@@ -224,19 +224,19 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			EventSystem.Instance.Emit<int, bool>(EEventName.RegionalTerminalGameplayPinUpdate, gameplayId, isPin);
 		}
 
-		// Token: 0x06030735 RID: 198453 RVA: 0x00B3FB95 File Offset: 0x00B3DD95
+		// Token: 0x06024F04 RID: 151300 RVA: 0x00A6FDD9 File Offset: 0x00A6DFD9
 		public bool IsGameplayPin(int gameplayId)
 		{
 			return this.PinnedGameplayIds.Contains(gameplayId);
 		}
 
-		// Token: 0x06030736 RID: 198454 RVA: 0x00B3FBA3 File Offset: 0x00B3DDA3
+		// Token: 0x06024F05 RID: 151301 RVA: 0x00A6FDE7 File Offset: 0x00A6DFE7
 		public List<int> GetPinnedGameplayIds()
 		{
 			return new List<int>(this.PinnedGameplayIds);
 		}
 
-		// Token: 0x06030737 RID: 198455 RVA: 0x00B3FBB0 File Offset: 0x00B3DDB0
+		// Token: 0x06024F06 RID: 151302 RVA: 0x00A6FDF4 File Offset: 0x00A6DFF4
 		public void StartPinCdTimer()
 		{
 			this.ClearPinCdTimer();
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			}, 1000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06030738 RID: 198456 RVA: 0x00B3FBE1 File Offset: 0x00B3DDE1
+		// Token: 0x06024F07 RID: 151303 RVA: 0x00A6FE25 File Offset: 0x00A6E025
 		public void ClearPinCdTimer()
 		{
 			if (this.PinCdTimerHandle != null && TimerSystem.GameplayTimeInstance.Has(this.PinCdTimerHandle))
@@ -256,8 +256,8 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			this.PinCdTimerHandle = null;
 		}
 
-		// Token: 0x17007913 RID: 30995
-		// (get) Token: 0x06030739 RID: 198457 RVA: 0x00B3FC15 File Offset: 0x00B3DE15
+		// Token: 0x17004BD0 RID: 19408
+		// (get) Token: 0x06024F08 RID: 151304 RVA: 0x00A6FE59 File Offset: 0x00A6E059
 		public bool IsInPinCd
 		{
 			get
@@ -266,9 +266,9 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			}
 		}
 
-		// Token: 0x17007914 RID: 30996
-		// (get) Token: 0x0603073A RID: 198458 RVA: 0x00B3FC20 File Offset: 0x00B3DE20
-		// (set) Token: 0x0603073B RID: 198459 RVA: 0x00B3FC2D File Offset: 0x00B3DE2D
+		// Token: 0x17004BD1 RID: 19409
+		// (get) Token: 0x06024F09 RID: 151305 RVA: 0x00A6FE64 File Offset: 0x00A6E064
+		// (set) Token: 0x06024F0A RID: 151306 RVA: 0x00A6FE71 File Offset: 0x00A6E071
 		public bool BarFoldState
 		{
 			get
@@ -281,21 +281,21 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			}
 		}
 
-		// Token: 0x0603073C RID: 198460 RVA: 0x00B3FC3B File Offset: 0x00B3DE3B
+		// Token: 0x06024F0B RID: 151307 RVA: 0x00A6FE7F File Offset: 0x00A6E07F
 		public void UpdateFuncIdConditionFinishedState(int funcId, RepeatedField<int> conditionIdList)
 		{
 			this.FunctionConditionFinishedStateMap[funcId] = new List<int>(conditionIdList);
 		}
 
-		// Token: 0x0603073D RID: 198461 RVA: 0x00B3FC4F File Offset: 0x00B3DE4F
+		// Token: 0x06024F0C RID: 151308 RVA: 0x00A6FE93 File Offset: 0x00A6E093
 		public bool GetFuncIdConditionFinishedState(int funcId, int conditionId)
 		{
 			List<int> valueOrDefault = this.FunctionConditionFinishedStateMap.GetValueOrDefault(funcId);
 			return valueOrDefault != null && valueOrDefault.Contains(conditionId);
 		}
 
-		// Token: 0x17007915 RID: 30997
-		// (get) Token: 0x0603073E RID: 198462 RVA: 0x00B3FC69 File Offset: 0x00B3DE69
+		// Token: 0x17004BD2 RID: 19410
+		// (get) Token: 0x06024F0D RID: 151309 RVA: 0x00A6FEAD File Offset: 0x00A6E0AD
 		public static RegionalTerminalModel Instance
 		{
 			get
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			}
 		}
 
-		// Token: 0x0603073F RID: 198463 RVA: 0x00B3FC70 File Offset: 0x00B3DE70
+		// Token: 0x06024F0E RID: 151310 RVA: 0x00A6FEB4 File Offset: 0x00A6E0B4
 		public static RegionalTerminalModel GetOrCreateInstance()
 		{
 			if (RegionalTerminalModel._Instance == null)
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			return RegionalTerminalModel._Instance;
 		}
 
-		// Token: 0x06030740 RID: 198464 RVA: 0x00B3FC84 File Offset: 0x00B3DE84
+		// Token: 0x06024F0F RID: 151311 RVA: 0x00A6FEC8 File Offset: 0x00A6E0C8
 		public static bool CreateInstance()
 		{
 			if (RegionalTerminalModel._Instance != null)
@@ -325,24 +325,24 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			return true;
 		}
 
-		// Token: 0x06030741 RID: 198465 RVA: 0x00B3FC9A File Offset: 0x00B3DE9A
+		// Token: 0x06024F10 RID: 151312 RVA: 0x00A6FEDE File Offset: 0x00A6E0DE
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06030742 RID: 198466 RVA: 0x00B3FC9C File Offset: 0x00B3DE9C
+		// Token: 0x06024F11 RID: 151313 RVA: 0x00A6FEE0 File Offset: 0x00A6E0E0
 		public static void ResetStaticDefaultValue()
 		{
 			RegionalTerminalModel._Instance = null;
 		}
 
-		// Token: 0x06030743 RID: 198467 RVA: 0x00B3FCA4 File Offset: 0x00B3DEA4
+		// Token: 0x06024F12 RID: 151314 RVA: 0x00A6FEE8 File Offset: 0x00A6E0E8
 		static RegionalTerminalModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RegionalTerminalModel.CreateStaticDefaultValue), new Action(RegionalTerminalModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06030744 RID: 198468 RVA: 0x00B3FCC4 File Offset: 0x00B3DEC4
+		// Token: 0x06024F13 RID: 151315 RVA: 0x00A6FF08 File Offset: 0x00A6E108
 		public RegionalTerminalModel()
 		{
 			Dictionary<ETerminalGameplayType, Func<RegionalTerminalGameplayData>> dictionary = new Dictionary<ETerminalGameplayType, Func<RegionalTerminalGameplayData>>();
@@ -354,41 +354,41 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			base..ctor();
 		}
 
-		// Token: 0x0401A082 RID: 106626
+		// Token: 0x04014736 RID: 83766
 		public Dictionary<int, RegionalTerminalGroupData> GroupDataMap = new Dictionary<int, RegionalTerminalGroupData>();
 
-		// Token: 0x0401A083 RID: 106627
+		// Token: 0x04014737 RID: 83767
 		public Dictionary<int, RegionalTerminalGameplayData> GameplayDataMap = new Dictionary<int, RegionalTerminalGameplayData>();
 
-		// Token: 0x0401A084 RID: 106628
+		// Token: 0x04014738 RID: 83768
 		private readonly Dictionary<int, List<int>> AreaMapGroupId2GameplayIdList = new Dictionary<int, List<int>>();
 
-		// Token: 0x0401A085 RID: 106629
+		// Token: 0x04014739 RID: 83769
 		private int CurrentAreaMapGroupIdInternal;
 
-		// Token: 0x0401A086 RID: 106630
+		// Token: 0x0401473A RID: 83770
 		private readonly Dictionary<int, int> InstanceId2AreaMapGroupId = new Dictionary<int, int>();
 
-		// Token: 0x0401A087 RID: 106631
+		// Token: 0x0401473B RID: 83771
 		private bool InstanceId2AreaMapGroupIdInit;
 
-		// Token: 0x0401A088 RID: 106632
+		// Token: 0x0401473C RID: 83772
 		private readonly HashSet<int> UnlockAreaMapGroupId = new HashSet<int>();
 
-		// Token: 0x0401A089 RID: 106633
+		// Token: 0x0401473D RID: 83773
 		private readonly Dictionary<ETerminalGameplayType, Func<RegionalTerminalGameplayData>> Type2GameplayDataCtor;
 
-		// Token: 0x0401A08A RID: 106634
+		// Token: 0x0401473E RID: 83774
 		private List<int> PinnedGameplayIds;
 
-		// Token: 0x0401A08B RID: 106635
+		// Token: 0x0401473F RID: 83775
 		private readonly Dictionary<int, List<int>> FunctionConditionFinishedStateMap;
 
-		// Token: 0x0401A08C RID: 106636
+		// Token: 0x04014740 RID: 83776
 		[Nullable(2)]
 		private TimerHandle PinCdTimerHandle;
 
-		// Token: 0x0401A08D RID: 106637
+		// Token: 0x04014741 RID: 83777
 		[Nullable(2)]
 		private static RegionalTerminalModel _Instance;
 	}

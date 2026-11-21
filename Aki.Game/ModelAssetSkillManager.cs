@@ -5,24 +5,24 @@ using Aki.Config;
 using CSharpScript.Core.Extension;
 using UnrealEngine;
 
-// Token: 0x02003316 RID: 13078
+// Token: 0x02002888 RID: 10376
 [NullableContext(1)]
 [Nullable(0)]
 public class ModelAssetSkillManager : IStaticVariableResetter
 {
-	// Token: 0x0601C7D6 RID: 116694 RVA: 0x007FE181 File Offset: 0x007FC381
+	// Token: 0x0601A4CF RID: 107727 RVA: 0x008246ED File Offset: 0x008228ED
 	static ModelAssetSkillManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ModelAssetSkillManager.CreateStaticDefaultValue), new Action(ModelAssetSkillManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601C7D7 RID: 116695 RVA: 0x007FE1A0 File Offset: 0x007FC3A0
+	// Token: 0x0601A4D0 RID: 107728 RVA: 0x0082470C File Offset: 0x0082290C
 	public ModelAssetSkillManager(ModelAssetElement modelAssetElement)
 	{
 		this.ModelAssetElement = modelAssetElement;
 	}
 
-	// Token: 0x0601C7D8 RID: 116696 RVA: 0x007FE1BC File Offset: 0x007FC3BC
+	// Token: 0x0601A4D1 RID: 107729 RVA: 0x00824728 File Offset: 0x00822928
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -65,8 +65,8 @@ public class ModelAssetSkillManager : IStaticVariableResetter
 		return this.SkillPreloadMap.GetValueOrNull(skillId);
 	}
 
-	// Token: 0x1700277D RID: 10109
-	// (get) Token: 0x0601C7D9 RID: 116697 RVA: 0x007FE2FC File Offset: 0x007FC4FC
+	// Token: 0x17002B1A RID: 11034
+	// (get) Token: 0x0601A4D2 RID: 107730 RVA: 0x00824868 File Offset: 0x00822A68
 	private static Stat AddSkillStat1
 	{
 		get
@@ -75,7 +75,7 @@ public class ModelAssetSkillManager : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601C7DA RID: 116698 RVA: 0x007FE304 File Offset: 0x007FC504
+	// Token: 0x0601A4D3 RID: 107731 RVA: 0x00824870 File Offset: 0x00822A70
 	[NullableContext(2)]
 	public bool AddSkill(int skillId, AssetElement assetElement)
 	{
@@ -106,7 +106,7 @@ public class ModelAssetSkillManager : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601C7DB RID: 116699 RVA: 0x007FE3AB File Offset: 0x007FC5AB
+	// Token: 0x0601A4D4 RID: 107732 RVA: 0x00824917 File Offset: 0x00822B17
 	public void Clear()
 	{
 		Dictionary<int, OneOf<PreloadSkillSaveData, EntitySkillPreload>> skillPreloadMap = this.SkillPreloadMap;
@@ -123,22 +123,22 @@ public class ModelAssetSkillManager : IStaticVariableResetter
 		holdAssetObject.Clear();
 	}
 
-	// Token: 0x0601C7DC RID: 116700 RVA: 0x007FE3D9 File Offset: 0x007FC5D9
+	// Token: 0x0601A4D5 RID: 107733 RVA: 0x00824945 File Offset: 0x00822B45
 	public static void CreateStaticDefaultValue()
 	{
 		ModelAssetSkillManager._addSkillStat1 = Stat.Create("Preload.AddSkill.NewObject", "", "");
 	}
 
-	// Token: 0x0601C7DD RID: 116701 RVA: 0x007FE3F4 File Offset: 0x007FC5F4
+	// Token: 0x0601A4D6 RID: 107734 RVA: 0x00824960 File Offset: 0x00822B60
 	public static void ResetStaticDefaultValue()
 	{
 		ModelAssetSkillManager._addSkillStat1 = null;
 	}
 
-	// Token: 0x0400E251 RID: 57937
+	// Token: 0x0400E702 RID: 59138
 	public readonly ModelAssetElement ModelAssetElement;
 
-	// Token: 0x0400E252 RID: 57938
+	// Token: 0x0400E703 RID: 59139
 	[Nullable(new byte[]
 	{
 		2,
@@ -147,14 +147,14 @@ public class ModelAssetSkillManager : IStaticVariableResetter
 	})]
 	private Dictionary<int, OneOf<PreloadSkillSaveData, EntitySkillPreload>> SkillPreloadMap;
 
-	// Token: 0x0400E253 RID: 57939
+	// Token: 0x0400E704 RID: 59140
 	public Dictionary<int, AssetElement> SkillAssetMap = new Dictionary<int, AssetElement>();
 
-	// Token: 0x0400E254 RID: 57940
+	// Token: 0x0400E705 RID: 59141
 	[Nullable(2)]
 	private UHoldPreloadObject HoldAssetObject;
 
-	// Token: 0x0400E255 RID: 57941
+	// Token: 0x0400E706 RID: 59142
 	[Nullable(2)]
 	private static Stat _addSkillStat1;
 }

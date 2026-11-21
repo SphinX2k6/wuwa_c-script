@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027C1 RID: 10177
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A94 RID: 10900
 	public class IReduceTime : IChangeTimerType
 	{
-		// Token: 0x0600E25D RID: 57949 RVA: 0x00216F39 File Offset: 0x00215139
+		// Token: 0x0600F07F RID: 61567 RVA: 0x00233D0D File Offset: 0x00231F0D
 		public static IReduceTime Create(IReduceTime? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700449D RID: 17565
-		// (get) Token: 0x0600E25E RID: 57950 RVA: 0x00216F58 File Offset: 0x00215158
+		// Token: 0x17004805 RID: 18437
+		// (get) Token: 0x0600F080 RID: 61568 RVA: 0x00233D2C File Offset: 0x00231F2C
 		public override EChangeTimerType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700449E RID: 17566
-		// (get) Token: 0x0600E25F RID: 57951 RVA: 0x00216F68 File Offset: 0x00215168
+		// Token: 0x17004806 RID: 18438
+		// (get) Token: 0x0600F081 RID: 61569 RVA: 0x00233D3C File Offset: 0x00231F3C
 		public virtual int? Time
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700449F RID: 17567
-		// (get) Token: 0x0600E260 RID: 57952 RVA: 0x00216F9E File Offset: 0x0021519E
+		// Token: 0x17004807 RID: 18439
+		// (get) Token: 0x0600F082 RID: 61570 RVA: 0x00233D72 File Offset: 0x00231F72
 		public virtual VarRef VarForTime
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044A0 RID: 17568
-		// (get) Token: 0x0600E261 RID: 57953 RVA: 0x00216FCD File Offset: 0x002151CD
+		// Token: 0x17004808 RID: 18440
+		// (get) Token: 0x0600F083 RID: 61571 RVA: 0x00233DA1 File Offset: 0x00231FA1
 		[Nullable(2)]
 		public virtual IChangeTimerUiConfig UiConfig
 		{
@@ -81,20 +79,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D87 RID: 32135
+		// Token: 0x0400843E RID: 33854
 		private IReduceTime Instance;
 
-		// Token: 0x04007D88 RID: 32136
+		// Token: 0x0400843F RID: 33855
 		private VarRef _VarForTimeCache;
 
-		// Token: 0x04007D89 RID: 32137
+		// Token: 0x04008440 RID: 33856
 		private bool _VarForTimeInited;
 
-		// Token: 0x04007D8A RID: 32138
+		// Token: 0x04008441 RID: 33857
 		[Nullable(2)]
 		private IChangeTimerUiConfig _UiConfigCache;
 
-		// Token: 0x04007D8B RID: 32139
+		// Token: 0x04008442 RID: 33858
 		private bool _UiConfigInited;
 	}
 }

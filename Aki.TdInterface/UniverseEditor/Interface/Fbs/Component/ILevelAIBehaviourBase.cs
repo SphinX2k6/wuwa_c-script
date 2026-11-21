@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054BE RID: 21694
+	// Token: 0x02005A44 RID: 23108
 	public struct ILevelAIBehaviourBase : IFlatbufferObject
 	{
-		// Token: 0x17009FDE RID: 40926
-		// (get) Token: 0x06023BF8 RID: 146424 RVA: 0x004F1611 File Offset: 0x004EF811
+		// Token: 0x1700A818 RID: 43032
+		// (get) Token: 0x06025CB0 RID: 154800 RVA: 0x0052E685 File Offset: 0x0052C885
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023BF9 RID: 146425 RVA: 0x004F161E File Offset: 0x004EF81E
+		// Token: 0x06025CB1 RID: 154801 RVA: 0x0052E692 File Offset: 0x0052C892
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023BFA RID: 146426 RVA: 0x004F1628 File Offset: 0x004EF828
+		// Token: 0x06025CB2 RID: 154802 RVA: 0x0052E69C File Offset: 0x0052C89C
 		public static ILevelAIBehaviourBase GetRootAsILevelAIBehaviourBase(ByteBuffer _bb)
 		{
 			return ILevelAIBehaviourBase.GetRootAsILevelAIBehaviourBase(_bb, default(ILevelAIBehaviourBase));
 		}
 
-		// Token: 0x06023BFB RID: 146427 RVA: 0x004F1644 File Offset: 0x004EF844
+		// Token: 0x06025CB3 RID: 154803 RVA: 0x0052E6B8 File Offset: 0x0052C8B8
 		public static ILevelAIBehaviourBase GetRootAsILevelAIBehaviourBase(ByteBuffer _bb, ILevelAIBehaviourBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023BFC RID: 146428 RVA: 0x004F1661 File Offset: 0x004EF861
+		// Token: 0x06025CB4 RID: 154804 RVA: 0x0052E6D5 File Offset: 0x0052C8D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023BFD RID: 146429 RVA: 0x004F1670 File Offset: 0x004EF870
+		// Token: 0x06025CB5 RID: 154805 RVA: 0x0052E6E4 File Offset: 0x0052C8E4
 		public ILevelAIBehaviourBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009FDF RID: 40927
-		// (get) Token: 0x06023BFE RID: 146430 RVA: 0x004F1680 File Offset: 0x004EF880
+		// Token: 0x1700A819 RID: 43033
+		// (get) Token: 0x06025CB6 RID: 154806 RVA: 0x0052E6F4 File Offset: 0x0052C8F4
 		public ELevelAIBehaviourType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023BFF RID: 146431 RVA: 0x004F16BC File Offset: 0x004EF8BC
+		// Token: 0x06025CB7 RID: 154807 RVA: 0x0052E730 File Offset: 0x0052C930
 		public static Offset<ILevelAIBehaviourBase> CreateILevelAIBehaviourBase(FlatBufferBuilder builder, ELevelAIBehaviourType Type = ELevelAIBehaviourType.Spline)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelAIBehaviourBase.EndILevelAIBehaviourBase(builder);
 		}
 
-		// Token: 0x06023C00 RID: 146432 RVA: 0x004F16D2 File Offset: 0x004EF8D2
+		// Token: 0x06025CB8 RID: 154808 RVA: 0x0052E746 File Offset: 0x0052C946
 		public static void StartILevelAIBehaviourBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06023C01 RID: 146433 RVA: 0x004F16DB File Offset: 0x004EF8DB
+		// Token: 0x06025CB9 RID: 154809 RVA: 0x0052E74F File Offset: 0x0052C94F
 		public static void AddType(FlatBufferBuilder builder, ELevelAIBehaviourType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06023C02 RID: 146434 RVA: 0x004F16E6 File Offset: 0x004EF8E6
+		// Token: 0x06025CBA RID: 154810 RVA: 0x0052E75A File Offset: 0x0052C95A
 		public static Offset<ILevelAIBehaviourBase> EndILevelAIBehaviourBase(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelAIBehaviourBase>(builder.EndTable());
 		}
 
-		// Token: 0x06023C03 RID: 146435 RVA: 0x004F16F4 File Offset: 0x004EF8F4
+		// Token: 0x06025CBB RID: 154811 RVA: 0x0052E768 File Offset: 0x0052C968
 		public ILevelAIBehaviourBaseT UnPack()
 		{
 			ILevelAIBehaviourBaseT levelAIBehaviourBaseT = new ILevelAIBehaviourBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return levelAIBehaviourBaseT;
 		}
 
-		// Token: 0x06023C04 RID: 146436 RVA: 0x004F170F File Offset: 0x004EF90F
+		// Token: 0x06025CBC RID: 154812 RVA: 0x0052E783 File Offset: 0x0052C983
 		public void UnPackTo(ILevelAIBehaviourBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06023C05 RID: 146437 RVA: 0x004F1720 File Offset: 0x004EF920
+		// Token: 0x06025CBD RID: 154813 RVA: 0x0052E794 File Offset: 0x0052C994
 		public static Offset<ILevelAIBehaviourBase> Pack(FlatBufferBuilder builder, ILevelAIBehaviourBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelAIBehaviourBase.CreateILevelAIBehaviourBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400E775 RID: 59253
+		// Token: 0x0400F3A6 RID: 62374
 		private Table __p;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B4C RID: 27468
+	// Token: 0x02005CC4 RID: 23748
 	internal static class LevelEventPlayDynamicSettlementConstants
 	{
-		// Token: 0x04023921 RID: 145697
+		// Token: 0x0401EBC3 RID: 125891
 		public const int SCREEN_EFFECT_CUE_ID = 10010092;
 	}
 }

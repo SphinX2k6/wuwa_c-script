@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002019 RID: 8217
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002262 RID: 8802
 	public class IUniformMotion : ISceneItemMoveMotionType
 	{
-		// Token: 0x0600B4AE RID: 46254 RVA: 0x001A40B4 File Offset: 0x001A22B4
+		// Token: 0x0600BFD4 RID: 49108 RVA: 0x001BA820 File Offset: 0x001B8A20
 		private IUniformMotion_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B4AF RID: 46255 RVA: 0x001A40EC File Offset: 0x001A22EC
+		// Token: 0x0600BFD5 RID: 49109 RVA: 0x001BA858 File Offset: 0x001B8A58
 		public static IUniformMotion Create([Nullable(2)] IUniformMotion instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B4B0 RID: 46256 RVA: 0x001A40FF File Offset: 0x001A22FF
+		// Token: 0x0600BFD6 RID: 49110 RVA: 0x001BA86B File Offset: 0x001B8A6B
 		public static IUniformMotion CreateFromSetValue([Nullable(2)] IUniformMotion_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B4B1 RID: 46257 RVA: 0x001A4112 File Offset: 0x001A2312
+		// Token: 0x0600BFD7 RID: 49111 RVA: 0x001BA87E File Offset: 0x001B8A7E
 		public new IUniformMotion_SetValue ToSetValue()
 		{
 			return new IUniformMotion_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700378A RID: 14218
-		// (get) Token: 0x0600B4B2 RID: 46258 RVA: 0x001A4131 File Offset: 0x001A2331
-		// (set) Token: 0x0600B4B3 RID: 46259 RVA: 0x001A415C File Offset: 0x001A235C
+		// Token: 0x17003A67 RID: 14951
+		// (get) Token: 0x0600BFD8 RID: 49112 RVA: 0x001BA89D File Offset: 0x001B8A9D
+		// (set) Token: 0x0600BFD9 RID: 49113 RVA: 0x001BA8C8 File Offset: 0x001B8AC8
 		public override EMoveMotion Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700378B RID: 14219
-		// (get) Token: 0x0600B4B4 RID: 46260 RVA: 0x001A416A File Offset: 0x001A236A
-		// (set) Token: 0x0600B4B5 RID: 46261 RVA: 0x001A4199 File Offset: 0x001A2399
+		// Token: 0x17003A68 RID: 14952
+		// (get) Token: 0x0600BFDA RID: 49114 RVA: 0x001BA8D6 File Offset: 0x001B8AD6
+		// (set) Token: 0x0600BFDB RID: 49115 RVA: 0x001BA905 File Offset: 0x001B8B05
 		public virtual float Time
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006CDB RID: 27867
+		// Token: 0x040072E4 RID: 29412
 		[Nullable(2)]
 		protected new IUniformMotion FbInstance;
 
-		// Token: 0x04006CDC RID: 27868
+		// Token: 0x040072E5 RID: 29413
 		[Nullable(2)]
 		protected new IUniformMotion_SetValue PocoInterface;
 	}

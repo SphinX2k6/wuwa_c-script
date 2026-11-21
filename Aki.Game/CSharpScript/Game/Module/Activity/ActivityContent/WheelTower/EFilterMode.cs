@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F1F RID: 24351
+	// Token: 0x02004F06 RID: 20230
 	public enum EFilterMode
 	{
-		// Token: 0x04020502 RID: 132354
+		// Token: 0x0401AFD4 RID: 110548
 		All,
-		// Token: 0x04020503 RID: 132355
+		// Token: 0x0401AFD5 RID: 110549
 		Normal,
-		// Token: 0x04020504 RID: 132356
+		// Token: 0x0401AFD6 RID: 110550
 		Endless
 	}
 }

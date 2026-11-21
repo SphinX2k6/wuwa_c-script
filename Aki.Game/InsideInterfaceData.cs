@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02001FF8 RID: 8184
+// Token: 0x020014CB RID: 5323
 [NullableContext(1)]
 [Nullable(0)]
 public class InsideInterfaceData
 {
-	// Token: 0x06010085 RID: 65669 RVA: 0x003E8D35 File Offset: 0x003E6F35
+	// Token: 0x0600D4ED RID: 54509 RVA: 0x003F532D File Offset: 0x003F352D
 	public void Clear()
 	{
 		this.CurIndex = 0;
 		this.InterfaceDataUnitArray = new List<InterfaceDataUnit>();
 	}
 
-	// Token: 0x06010086 RID: 65670 RVA: 0x003E8D49 File Offset: 0x003E6F49
+	// Token: 0x0600D4EE RID: 54510 RVA: 0x003F5341 File Offset: 0x003F3541
 	public bool IsEmpty()
 	{
 		return this.CurUnit == null || this.CurUnit.WaitList.Count <= 0;
 	}
 
-	// Token: 0x06010087 RID: 65671 RVA: 0x003E8D6C File Offset: 0x003E6F6C
+	// Token: 0x0600D4EF RID: 54511 RVA: 0x003F5364 File Offset: 0x003F3564
 	[NullableContext(2)]
 	public ItemRewardInfo ShiftFirstData()
 	{
@@ -39,7 +39,7 @@ public class InsideInterfaceData
 		return null;
 	}
 
-	// Token: 0x06010088 RID: 65672 RVA: 0x003E8DBC File Offset: 0x003E6FBC
+	// Token: 0x0600D4F0 RID: 54512 RVA: 0x003F53B4 File Offset: 0x003F35B4
 	public int GetMaxCount()
 	{
 		if (this.CurUnit == null)
@@ -50,7 +50,7 @@ public class InsideInterfaceData
 		return this.CurUnit.GetMaxCount();
 	}
 
-	// Token: 0x06010089 RID: 65673 RVA: 0x003E8DFC File Offset: 0x003E6FFC
+	// Token: 0x0600D4F1 RID: 54513 RVA: 0x003F53F4 File Offset: 0x003F35F4
 	public int GetAddItemTime()
 	{
 		if (this.CurUnit == null)
@@ -61,20 +61,20 @@ public class InsideInterfaceData
 		return this.CurUnit.GetAddItemTime();
 	}
 
-	// Token: 0x0601008A RID: 65674 RVA: 0x003E8E39 File Offset: 0x003E7039
+	// Token: 0x0600D4F2 RID: 54514 RVA: 0x003F5431 File Offset: 0x003F3631
 	public void PostBattleViewOpen()
 	{
 		this.UpdateIndex();
 		this.UpdateAllUnitMode();
 	}
 
-	// Token: 0x0601008B RID: 65675 RVA: 0x003E8E47 File Offset: 0x003E7047
+	// Token: 0x0600D4F3 RID: 54515 RVA: 0x003F543F File Offset: 0x003F363F
 	private void UpdateIndex()
 	{
 		this.CurIndex++;
 	}
 
-	// Token: 0x0601008C RID: 65676 RVA: 0x003E8E58 File Offset: 0x003E7058
+	// Token: 0x0600D4F4 RID: 54516 RVA: 0x003F5450 File Offset: 0x003F3650
 	private void UpdateAllUnitMode()
 	{
 		foreach (InterfaceDataUnit interfaceDataUnit in this.InterfaceDataUnitArray)
@@ -83,7 +83,7 @@ public class InsideInterfaceData
 		}
 	}
 
-	// Token: 0x0601008D RID: 65677 RVA: 0x003E8EAC File Offset: 0x003E70AC
+	// Token: 0x0600D4F5 RID: 54517 RVA: 0x003F54A4 File Offset: 0x003F36A4
 	public void ShiftFirstUnit()
 	{
 		if (this.CurUnit == null)
@@ -103,7 +103,7 @@ public class InsideInterfaceData
 		this.UpdateCurUnit();
 	}
 
-	// Token: 0x0601008E RID: 65678 RVA: 0x003E8F34 File Offset: 0x003E7134
+	// Token: 0x0600D4F6 RID: 54518 RVA: 0x003F552C File Offset: 0x003F372C
 	public void InsertItemRewardInfo(AddCountItemInfo[] addCountItemInfo)
 	{
 		InterfaceDataUnit interfaceDataUnit = this.FindOrAddUnit();
@@ -122,7 +122,7 @@ public class InsideInterfaceData
 		this.UpdateCurUnit();
 	}
 
-	// Token: 0x0601008F RID: 65679 RVA: 0x003E8FC7 File Offset: 0x003E71C7
+	// Token: 0x0600D4F7 RID: 54519 RVA: 0x003F55BF File Offset: 0x003F37BF
 	private void UpdateCurUnit()
 	{
 		if (this.CurUnit == null && this.InterfaceDataUnitArray.Count > 0)
@@ -131,7 +131,7 @@ public class InsideInterfaceData
 		}
 	}
 
-	// Token: 0x06010090 RID: 65680 RVA: 0x003E8FF4 File Offset: 0x003E71F4
+	// Token: 0x0600D4F8 RID: 54520 RVA: 0x003F55EC File Offset: 0x003F37EC
 	private InterfaceDataUnit FindOrAddUnit()
 	{
 		foreach (InterfaceDataUnit interfaceDataUnit in this.InterfaceDataUnitArray)
@@ -146,13 +146,13 @@ public class InsideInterfaceData
 		return interfaceDataUnit2;
 	}
 
-	// Token: 0x040076AF RID: 30383
+	// Token: 0x04007798 RID: 30616
 	private int CurIndex;
 
-	// Token: 0x040076B0 RID: 30384
+	// Token: 0x04007799 RID: 30617
 	[Nullable(2)]
 	private InterfaceDataUnit CurUnit;
 
-	// Token: 0x040076B1 RID: 30385
+	// Token: 0x0400779A RID: 30618
 	private List<InterfaceDataUnit> InterfaceDataUnitArray = new List<InterfaceDataUnit>();
 }

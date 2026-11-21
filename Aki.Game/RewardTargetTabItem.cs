@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001363 RID: 4963
+// Token: 0x02000817 RID: 2071
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class RewardTargetTabItem : GridProxyAbstract<RewardTabData>
 {
-	// Token: 0x06008A4B RID: 35403 RVA: 0x001D8C78 File Offset: 0x001D6E78
+	// Token: 0x06005DE6 RID: 24038 RVA: 0x001E1AD4 File Offset: 0x001DFCD4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,20 +28,20 @@ public class RewardTargetTabItem : GridProxyAbstract<RewardTabData>
 		};
 	}
 
-	// Token: 0x06008A4C RID: 35404 RVA: 0x001D8CF8 File Offset: 0x001D6EF8
+	// Token: 0x06005DE7 RID: 24039 RVA: 0x001E1B54 File Offset: 0x001DFD54
 	public void SetToggleState(bool bSelect, bool bFire)
 	{
 		EToggleState state = bSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(1).SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x06008A4D RID: 35405 RVA: 0x001D8D1E File Offset: 0x001D6F1E
+	// Token: 0x06005DE8 RID: 24040 RVA: 0x001E1B7A File Offset: 0x001DFD7A
 	private void SetRedDotVisible(bool bVisible)
 	{
 		base.GetItem(2).SetUIActive(bVisible);
 	}
 
-	// Token: 0x06008A4E RID: 35406 RVA: 0x001D8D2D File Offset: 0x001D6F2D
+	// Token: 0x06005DE9 RID: 24041 RVA: 0x001E1B89 File Offset: 0x001DFD89
 	public override void Refresh(RewardTabData data, bool isSelected, int gridIndex)
 	{
 		this.TabData = data;
@@ -53,14 +53,14 @@ public class RewardTargetTabItem : GridProxyAbstract<RewardTabData>
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06008A4F RID: 35407 RVA: 0x001D8D64 File Offset: 0x001D6F64
+	// Token: 0x06005DEA RID: 24042 RVA: 0x001E1BC0 File Offset: 0x001DFDC0
 	public void RefreshRedDot()
 	{
 		bool redDotVisible = this.TabData != null && this.TabData.RefreshRedDot != null && this.TabData.RefreshRedDot(this.TabIndex + 1);
 		this.SetRedDotVisible(redDotVisible);
 	}
 
-	// Token: 0x06008A50 RID: 35408 RVA: 0x001D8DA9 File Offset: 0x001D6FA9
+	// Token: 0x06005DEB RID: 24043 RVA: 0x001E1C05 File Offset: 0x001DFE05
 	private void OnTabToggle(EToggleState state)
 	{
 		if (this.TabData != null && this.TabData.ClickedCallback != null)
@@ -69,23 +69,23 @@ public class RewardTargetTabItem : GridProxyAbstract<RewardTabData>
 		}
 	}
 
-	// Token: 0x04003DA3 RID: 15779
+	// Token: 0x04003E3B RID: 15931
 	private RewardTabData TabData;
 
-	// Token: 0x04003DA4 RID: 15780
+	// Token: 0x04003E3C RID: 15932
 	private int TabIndex = -1;
 
-	// Token: 0x020079CA RID: 31178
+	// Token: 0x02006B54 RID: 27476
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x04028176 RID: 164214
+		// Token: 0x040234A3 RID: 144547
 		public const int Name = 0;
 
-		// Token: 0x04028177 RID: 164215
+		// Token: 0x040234A4 RID: 144548
 		public const int Toggle = 1;
 
-		// Token: 0x04028178 RID: 164216
+		// Token: 0x040234A5 RID: 144549
 		public const int RedDot = 2;
 	}
 }

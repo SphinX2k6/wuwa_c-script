@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F81 RID: 3969
+	// Token: 0x02001068 RID: 4200
 	public struct QuickHackDevice : IFlatbufferObject
 	{
-		// Token: 0x17002C54 RID: 11348
-		// (get) Token: 0x0600B758 RID: 46936 RVA: 0x002D37A1 File Offset: 0x002D19A1
+		// Token: 0x17002CCC RID: 11468
+		// (get) Token: 0x0600BD95 RID: 48533 RVA: 0x002F0205 File Offset: 0x002EE405
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B759 RID: 46937 RVA: 0x002D37AE File Offset: 0x002D19AE
+		// Token: 0x0600BD96 RID: 48534 RVA: 0x002F0212 File Offset: 0x002EE412
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B75A RID: 46938 RVA: 0x002D37B8 File Offset: 0x002D19B8
+		// Token: 0x0600BD97 RID: 48535 RVA: 0x002F021C File Offset: 0x002EE41C
 		public static QuickHackDevice GetRootAsQuickHackDevice(ByteBuffer _bb)
 		{
 			return QuickHackDevice.GetRootAsQuickHackDevice(_bb, default(QuickHackDevice));
 		}
 
-		// Token: 0x0600B75B RID: 46939 RVA: 0x002D37D4 File Offset: 0x002D19D4
+		// Token: 0x0600BD98 RID: 48536 RVA: 0x002F0238 File Offset: 0x002EE438
 		public static QuickHackDevice GetRootAsQuickHackDevice(ByteBuffer _bb, QuickHackDevice obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B75C RID: 46940 RVA: 0x002D37F1 File Offset: 0x002D19F1
+		// Token: 0x0600BD99 RID: 48537 RVA: 0x002F0255 File Offset: 0x002EE455
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B75D RID: 46941 RVA: 0x002D3800 File Offset: 0x002D1A00
+		// Token: 0x0600BD9A RID: 48538 RVA: 0x002F0264 File Offset: 0x002EE464
 		public QuickHackDevice __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002C55 RID: 11349
-		// (get) Token: 0x0600B75E RID: 46942 RVA: 0x002D3810 File Offset: 0x002D1A10
+		// Token: 0x17002CCD RID: 11469
+		// (get) Token: 0x0600BD9B RID: 48539 RVA: 0x002F0274 File Offset: 0x002EE474
 		public int Id
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B75F RID: 46943 RVA: 0x002D384C File Offset: 0x002D1A4C
+		// Token: 0x0600BD9C RID: 48540 RVA: 0x002F02B0 File Offset: 0x002EE4B0
 		public int SkillIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002C56 RID: 11350
-		// (get) Token: 0x0600B760 RID: 46944 RVA: 0x002D388C File Offset: 0x002D1A8C
+		// Token: 0x17002CCE RID: 11470
+		// (get) Token: 0x0600BD9D RID: 48541 RVA: 0x002F02F0 File Offset: 0x002EE4F0
 		public int SkillIdsLength
 		{
 			get
@@ -91,20 +91,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B761 RID: 46945 RVA: 0x002D38B7 File Offset: 0x002D1AB7
+		// Token: 0x0600BD9E RID: 48542 RVA: 0x002F031B File Offset: 0x002EE51B
 		public Span<int> GetSkillIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600B762 RID: 46946 RVA: 0x002D38C6 File Offset: 0x002D1AC6
+		// Token: 0x0600BD9F RID: 48543 RVA: 0x002F032A File Offset: 0x002EE52A
 		public int[] GetSkillIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002C57 RID: 11351
-		// (get) Token: 0x0600B763 RID: 46947 RVA: 0x002D38E0 File Offset: 0x002D1AE0
+		// Token: 0x17002CCF RID: 11471
+		// (get) Token: 0x0600BDA0 RID: 48544 RVA: 0x002F0344 File Offset: 0x002EE544
 		public bool RefreshSkillListByTarget
 		{
 			get
@@ -114,8 +114,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C58 RID: 11352
-		// (get) Token: 0x0600B764 RID: 46948 RVA: 0x002D3920 File Offset: 0x002D1B20
+		// Token: 0x17002CD0 RID: 11472
+		// (get) Token: 0x0600BDA1 RID: 48545 RVA: 0x002F0384 File Offset: 0x002EE584
 		public int TargetSelectType
 		{
 			get
@@ -129,8 +129,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C59 RID: 11353
-		// (get) Token: 0x0600B765 RID: 46949 RVA: 0x002D3960 File Offset: 0x002D1B60
+		// Token: 0x17002CD1 RID: 11473
+		// (get) Token: 0x0600BDA2 RID: 48546 RVA: 0x002F03C4 File Offset: 0x002EE5C4
 		public int TargetSelectMaxDistance
 		{
 			get
@@ -144,8 +144,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C5A RID: 11354
-		// (get) Token: 0x0600B766 RID: 46950 RVA: 0x002D39A4 File Offset: 0x002D1BA4
+		// Token: 0x17002CD2 RID: 11474
+		// (get) Token: 0x0600BDA3 RID: 48547 RVA: 0x002F0408 File Offset: 0x002EE608
 		public int TargetScreenRadius
 		{
 			get
@@ -159,15 +159,15 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B767 RID: 46951 RVA: 0x002D39E4 File Offset: 0x002D1BE4
+		// Token: 0x0600BDA4 RID: 48548 RVA: 0x002F0448 File Offset: 0x002EE648
 		public long OnScreenTargetGameplayCueIds(int j)
 		{
 			int num = this.__p.__offset(16);
 			return (long)((num != 0) ? this.__p.bb.GetDouble(this.__p.__vector(num) + j * 8) : 0.0);
 		}
 
-		// Token: 0x17002C5B RID: 11355
-		// (get) Token: 0x0600B768 RID: 46952 RVA: 0x002D3A30 File Offset: 0x002D1C30
+		// Token: 0x17002CD3 RID: 11475
+		// (get) Token: 0x0600BDA5 RID: 48549 RVA: 0x002F0494 File Offset: 0x002EE694
 		public int OnScreenTargetGameplayCueIdsLength
 		{
 			get
@@ -181,27 +181,27 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B769 RID: 46953 RVA: 0x002D3A5C File Offset: 0x002D1C5C
+		// Token: 0x0600BDA6 RID: 48550 RVA: 0x002F04C0 File Offset: 0x002EE6C0
 		public Span<long> GetOnScreenTargetGameplayCueIdsBytes()
 		{
 			return MemoryMarshal.Cast<double, long>(this.__p.__vector_as_span<double>(16, 8));
 		}
 
-		// Token: 0x0600B76A RID: 46954 RVA: 0x002D3A71 File Offset: 0x002D1C71
+		// Token: 0x0600BDA7 RID: 48551 RVA: 0x002F04D5 File Offset: 0x002EE6D5
 		public long[] GetOnScreenTargetGameplayCueIdsArray()
 		{
 			return Array.ConvertAll<double, long>(this.__p.__vector_as_array<double>(16) ?? Array.Empty<double>(), (double x) => (long)x);
 		}
 
-		// Token: 0x0600B76B RID: 46955 RVA: 0x002D3AB0 File Offset: 0x002D1CB0
+		// Token: 0x0600BDA8 RID: 48552 RVA: 0x002F0514 File Offset: 0x002EE714
 		public long TargetGameplayCueIds(int j)
 		{
 			int num = this.__p.__offset(18);
 			return (long)((num != 0) ? this.__p.bb.GetDouble(this.__p.__vector(num) + j * 8) : 0.0);
 		}
 
-		// Token: 0x17002C5C RID: 11356
-		// (get) Token: 0x0600B76C RID: 46956 RVA: 0x002D3AFC File Offset: 0x002D1CFC
+		// Token: 0x17002CD4 RID: 11476
+		// (get) Token: 0x0600BDA9 RID: 48553 RVA: 0x002F0560 File Offset: 0x002EE760
 		public int TargetGameplayCueIdsLength
 		{
 			get
@@ -215,20 +215,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B76D RID: 46957 RVA: 0x002D3B28 File Offset: 0x002D1D28
+		// Token: 0x0600BDAA RID: 48554 RVA: 0x002F058C File Offset: 0x002EE78C
 		public Span<long> GetTargetGameplayCueIdsBytes()
 		{
 			return MemoryMarshal.Cast<double, long>(this.__p.__vector_as_span<double>(18, 8));
 		}
 
-		// Token: 0x0600B76E RID: 46958 RVA: 0x002D3B3D File Offset: 0x002D1D3D
+		// Token: 0x0600BDAB RID: 48555 RVA: 0x002F05A1 File Offset: 0x002EE7A1
 		public long[] GetTargetGameplayCueIdsArray()
 		{
 			return Array.ConvertAll<double, long>(this.__p.__vector_as_array<double>(18) ?? Array.Empty<double>(), (double x) => (long)x);
 		}
 
-		// Token: 0x17002C5D RID: 11357
-		// (get) Token: 0x0600B76F RID: 46959 RVA: 0x002D3B7C File Offset: 0x002D1D7C
+		// Token: 0x17002CD5 RID: 11477
+		// (get) Token: 0x0600BDAC RID: 48556 RVA: 0x002F05E0 File Offset: 0x002EE7E0
 		public string OnScreenTargetTag
 		{
 			get
@@ -242,20 +242,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B770 RID: 46960 RVA: 0x002D3BB4 File Offset: 0x002D1DB4
+		// Token: 0x0600BDAD RID: 48557 RVA: 0x002F0618 File Offset: 0x002EE818
 		public Span<byte> GetOnScreenTargetTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(20, 1);
 		}
 
-		// Token: 0x0600B771 RID: 46961 RVA: 0x002D3BC4 File Offset: 0x002D1DC4
+		// Token: 0x0600BDAE RID: 48558 RVA: 0x002F0628 File Offset: 0x002EE828
 		public byte[] GetOnScreenTargetTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(20) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002C5E RID: 11358
-		// (get) Token: 0x0600B772 RID: 46962 RVA: 0x002D3BDC File Offset: 0x002D1DDC
+		// Token: 0x17002CD6 RID: 11478
+		// (get) Token: 0x0600BDAF RID: 48559 RVA: 0x002F0640 File Offset: 0x002EE840
 		public string SelectTargetTag
 		{
 			get
@@ -269,20 +269,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B773 RID: 46963 RVA: 0x002D3C14 File Offset: 0x002D1E14
+		// Token: 0x0600BDB0 RID: 48560 RVA: 0x002F0678 File Offset: 0x002EE878
 		public Span<byte> GetSelectTargetTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x0600B774 RID: 46964 RVA: 0x002D3C24 File Offset: 0x002D1E24
+		// Token: 0x0600BDB1 RID: 48561 RVA: 0x002F0688 File Offset: 0x002EE888
 		public byte[] GetSelectTargetTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(22) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002C5F RID: 11359
-		// (get) Token: 0x0600B775 RID: 46965 RVA: 0x002D3C3C File Offset: 0x002D1E3C
+		// Token: 0x17002CD7 RID: 11479
+		// (get) Token: 0x0600BDB2 RID: 48562 RVA: 0x002F06A0 File Offset: 0x002EE8A0
 		public int RamResourceType
 		{
 			get
@@ -296,8 +296,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C60 RID: 11360
-		// (get) Token: 0x0600B776 RID: 46966 RVA: 0x002D3C7C File Offset: 0x002D1E7C
+		// Token: 0x17002CD8 RID: 11480
+		// (get) Token: 0x0600BDB3 RID: 48563 RVA: 0x002F06E0 File Offset: 0x002EE8E0
 		public int RamResourceParam
 		{
 			get
@@ -311,8 +311,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C61 RID: 11361
-		// (get) Token: 0x0600B777 RID: 46967 RVA: 0x002D3CBC File Offset: 0x002D1EBC
+		// Token: 0x17002CD9 RID: 11481
+		// (get) Token: 0x0600BDB4 RID: 48564 RVA: 0x002F0720 File Offset: 0x002EE920
 		public int TimeScaleMode
 		{
 			get
@@ -326,8 +326,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C62 RID: 11362
-		// (get) Token: 0x0600B778 RID: 46968 RVA: 0x002D3CFC File Offset: 0x002D1EFC
+		// Token: 0x17002CDA RID: 11482
+		// (get) Token: 0x0600BDB5 RID: 48565 RVA: 0x002F0760 File Offset: 0x002EE960
 		public int TimeScaleDuration
 		{
 			get
@@ -341,8 +341,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C63 RID: 11363
-		// (get) Token: 0x0600B779 RID: 46969 RVA: 0x002D3D3C File Offset: 0x002D1F3C
+		// Token: 0x17002CDB RID: 11483
+		// (get) Token: 0x0600BDB6 RID: 48566 RVA: 0x002F07A0 File Offset: 0x002EE9A0
 		public float TimeDilation
 		{
 			get
@@ -356,8 +356,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C64 RID: 11364
-		// (get) Token: 0x0600B77A RID: 46970 RVA: 0x002D3D80 File Offset: 0x002D1F80
+		// Token: 0x17002CDC RID: 11484
+		// (get) Token: 0x0600BDB7 RID: 48567 RVA: 0x002F07E4 File Offset: 0x002EE9E4
 		public bool FirstPersonCamera
 		{
 			get
@@ -367,8 +367,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C65 RID: 11365
-		// (get) Token: 0x0600B77B RID: 46971 RVA: 0x002D3DC0 File Offset: 0x002D1FC0
+		// Token: 0x17002CDD RID: 11485
+		// (get) Token: 0x0600BDB8 RID: 48568 RVA: 0x002F0824 File Offset: 0x002EEA24
 		public int DurationLimit
 		{
 			get
@@ -382,8 +382,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C66 RID: 11366
-		// (get) Token: 0x0600B77C RID: 46972 RVA: 0x002D3E00 File Offset: 0x002D2000
+		// Token: 0x17002CDE RID: 11486
+		// (get) Token: 0x0600BDB9 RID: 48569 RVA: 0x002F0864 File Offset: 0x002EEA64
 		public int UiType
 		{
 			get
@@ -397,8 +397,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C67 RID: 11367
-		// (get) Token: 0x0600B77D RID: 46973 RVA: 0x002D3E40 File Offset: 0x002D2040
+		// Token: 0x17002CDF RID: 11487
+		// (get) Token: 0x0600BDBA RID: 48570 RVA: 0x002F08A4 File Offset: 0x002EEAA4
 		public int SkillEffectiveTargetSize
 		{
 			get
@@ -412,8 +412,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C68 RID: 11368
-		// (get) Token: 0x0600B77E RID: 46974 RVA: 0x002D3E80 File Offset: 0x002D2080
+		// Token: 0x17002CE0 RID: 11488
+		// (get) Token: 0x0600BDBB RID: 48571 RVA: 0x002F08E4 File Offset: 0x002EEAE4
 		public bool UseTargetHighlightCondition
 		{
 			get
@@ -423,8 +423,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C69 RID: 11369
-		// (get) Token: 0x0600B77F RID: 46975 RVA: 0x002D3EC0 File Offset: 0x002D20C0
+		// Token: 0x17002CE1 RID: 11489
+		// (get) Token: 0x0600BDBC RID: 48572 RVA: 0x002F0924 File Offset: 0x002EEB24
 		public bool OpenMonsterHackMark
 		{
 			get
@@ -434,61 +434,55 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B780 RID: 46976 RVA: 0x002D3F00 File Offset: 0x002D2100
+		// Token: 0x0600BDBD RID: 48573 RVA: 0x002F0964 File Offset: 0x002EEB64
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用OnScreenTargetGameplayCueIdsIter()或GetOnScreenTargetGameplayCueIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly long[] OnScreenTargetGameplayCueIds()
+		public long[] OnScreenTargetGameplayCueIds()
 		{
-			QuickHackDevice quickHackDevice = this;
-			return quickHackDevice.GetOnScreenTargetGameplayCueIdsArray() ?? Array.Empty<long>();
+			return this.GetOnScreenTargetGameplayCueIdsArray();
 		}
 
-		// Token: 0x0600B781 RID: 46977 RVA: 0x002D3F24 File Offset: 0x002D2124
+		// Token: 0x0600BDBE RID: 48574 RVA: 0x002F096C File Offset: 0x002EEB6C
 		[NullableContext(1)]
-		public readonly IEnumerable<long> OnScreenTargetGameplayCueIdsIter()
+		public IEnumerable<long> OnScreenTargetGameplayCueIdsIter()
 		{
 			QuickHackDevice.<OnScreenTargetGameplayCueIdsIter>d__64 <OnScreenTargetGameplayCueIdsIter>d__ = new QuickHackDevice.<OnScreenTargetGameplayCueIdsIter>d__64(-2);
 			<OnScreenTargetGameplayCueIdsIter>d__.<>3__<>4__this = this;
 			return <OnScreenTargetGameplayCueIdsIter>d__;
 		}
 
-		// Token: 0x0600B782 RID: 46978 RVA: 0x002D3F3C File Offset: 0x002D213C
+		// Token: 0x0600BDBF RID: 48575 RVA: 0x002F0981 File Offset: 0x002EEB81
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SkillIdsIter()或GetSkillIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SkillIds()
+		public int[] SkillIds()
 		{
-			QuickHackDevice quickHackDevice = this;
-			return quickHackDevice.GetSkillIdsArray() ?? Array.Empty<int>();
+			return this.GetSkillIdsArray();
 		}
 
-		// Token: 0x0600B783 RID: 46979 RVA: 0x002D3F60 File Offset: 0x002D2160
+		// Token: 0x0600BDC0 RID: 48576 RVA: 0x002F0989 File Offset: 0x002EEB89
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SkillIdsIter()
+		public IEnumerable<int> SkillIdsIter()
 		{
 			QuickHackDevice.<SkillIdsIter>d__66 <SkillIdsIter>d__ = new QuickHackDevice.<SkillIdsIter>d__66(-2);
 			<SkillIdsIter>d__.<>3__<>4__this = this;
 			return <SkillIdsIter>d__;
 		}
 
-		// Token: 0x0600B784 RID: 46980 RVA: 0x002D3F78 File Offset: 0x002D2178
+		// Token: 0x0600BDC1 RID: 48577 RVA: 0x002F099E File Offset: 0x002EEB9E
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用TargetGameplayCueIdsIter()或GetTargetGameplayCueIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly long[] TargetGameplayCueIds()
+		public long[] TargetGameplayCueIds()
 		{
-			QuickHackDevice quickHackDevice = this;
-			return quickHackDevice.GetTargetGameplayCueIdsArray() ?? Array.Empty<long>();
+			return this.GetTargetGameplayCueIdsArray();
 		}
 
-		// Token: 0x0600B785 RID: 46981 RVA: 0x002D3F9C File Offset: 0x002D219C
+		// Token: 0x0600BDC2 RID: 48578 RVA: 0x002F09A6 File Offset: 0x002EEBA6
 		[NullableContext(1)]
-		public readonly IEnumerable<long> TargetGameplayCueIdsIter()
+		public IEnumerable<long> TargetGameplayCueIdsIter()
 		{
 			QuickHackDevice.<TargetGameplayCueIdsIter>d__68 <TargetGameplayCueIdsIter>d__ = new QuickHackDevice.<TargetGameplayCueIdsIter>d__68(-2);
 			<TargetGameplayCueIdsIter>d__.<>3__<>4__this = this;
 			return <TargetGameplayCueIdsIter>d__;
 		}
 
-		// Token: 0x0400504F RID: 20559
+		// Token: 0x04005636 RID: 22070
 		private Table __p;
 	}
 }

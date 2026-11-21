@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200131D RID: 4893
+// Token: 0x020007D1 RID: 2001
 [NullableContext(1)]
 [Nullable(0)]
 public class DelegationData
 {
-	// Token: 0x060087C7 RID: 34759 RVA: 0x001CF9BF File Offset: 0x001CDBBF
+	// Token: 0x06005B62 RID: 23394 RVA: 0x001D882B File Offset: 0x001D6A2B
 	public DelegationData(int id, int bestEvaluateLevel, bool isVisible)
 	{
 		this.Id = id;
@@ -16,7 +16,7 @@ public class DelegationData
 		this.IsVisible = isVisible;
 	}
 
-	// Token: 0x060087C8 RID: 34760 RVA: 0x001CF9DC File Offset: 0x001CDBDC
+	// Token: 0x06005B63 RID: 23395 RVA: 0x001D8848 File Offset: 0x001D6A48
 	public List<IItemData> GetConsumeList()
 	{
 		List<IItemData> list = new List<IItemData>();
@@ -31,7 +31,7 @@ public class DelegationData
 		return list;
 	}
 
-	// Token: 0x060087C9 RID: 34761 RVA: 0x001CFA60 File Offset: 0x001CDC60
+	// Token: 0x06005B64 RID: 23396 RVA: 0x001D88CC File Offset: 0x001D6ACC
 	public List<int> GetRecommendList()
 	{
 		List<int> list = new List<int>();
@@ -42,19 +42,19 @@ public class DelegationData
 		return list;
 	}
 
-	// Token: 0x060087CA RID: 34762 RVA: 0x001CFACC File Offset: 0x001CDCCC
+	// Token: 0x06005B65 RID: 23397 RVA: 0x001D8938 File Offset: 0x001D6B38
 	public string GetLockText()
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(LevelGeneralCommons.GetConditionGroupHintText(BusinessConfig.Instance.GetDelegationConfig(this.Id).UnlockCondition), null);
 	}
 
-	// Token: 0x060087CB RID: 34763 RVA: 0x001CFAFC File Offset: 0x001CDCFC
+	// Token: 0x06005B66 RID: 23398 RVA: 0x001D8968 File Offset: 0x001D6B68
 	public bool HasBestEvaluate()
 	{
 		return this.BestEvaluateLevelInternal > 0;
 	}
 
-	// Token: 0x060087CC RID: 34764 RVA: 0x001CFB07 File Offset: 0x001CDD07
+	// Token: 0x06005B67 RID: 23399 RVA: 0x001D8973 File Offset: 0x001D6B73
 	public void SetBestEvaluateLevel(int value)
 	{
 		if (this.BestEvaluateLevelInternal > value)
@@ -64,8 +64,8 @@ public class DelegationData
 		this.BestEvaluateLevelInternal = value;
 	}
 
-	// Token: 0x17000B8F RID: 2959
-	// (get) Token: 0x060087CD RID: 34765 RVA: 0x001CFB1A File Offset: 0x001CDD1A
+	// Token: 0x17000BAF RID: 2991
+	// (get) Token: 0x06005B68 RID: 23400 RVA: 0x001D8986 File Offset: 0x001D6B86
 	public int BestEvaluateLevel
 	{
 		get
@@ -74,7 +74,7 @@ public class DelegationData
 		}
 	}
 
-	// Token: 0x060087CE RID: 34766 RVA: 0x001CFB24 File Offset: 0x001CDD24
+	// Token: 0x06005B69 RID: 23401 RVA: 0x001D8990 File Offset: 0x001D6B90
 	public int GetNotEnoughConsumeItemId()
 	{
 		foreach (IItemData itemData in this.GetConsumeList())
@@ -87,12 +87,12 @@ public class DelegationData
 		return -1;
 	}
 
-	// Token: 0x04003C8B RID: 15499
+	// Token: 0x04003D23 RID: 15651
 	public readonly int Id;
 
-	// Token: 0x04003C8C RID: 15500
+	// Token: 0x04003D24 RID: 15652
 	private int BestEvaluateLevelInternal;
 
-	// Token: 0x04003C8D RID: 15501
+	// Token: 0x04003D25 RID: 15653
 	public readonly bool IsVisible;
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F8D RID: 20365
+	// Token: 0x02003F56 RID: 16214
 	public class EQuickHackSkillConditionJsonConverter : JsonConverter<EQuickHackSkillCondition>
 	{
-		// Token: 0x06034264 RID: 213604 RVA: 0x00C3D394 File Offset: 0x00C3B594
+		// Token: 0x060290D2 RID: 168146 RVA: 0x00B86B40 File Offset: 0x00B84D40
 		public override EQuickHackSkillCondition Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return EQuickHackSkillConditionExtensions.FromString(@string);
 		}
 
-		// Token: 0x06034265 RID: 213605 RVA: 0x00C3D3B8 File Offset: 0x00C3B5B8
+		// Token: 0x060290D3 RID: 168147 RVA: 0x00B86B64 File Offset: 0x00B84D64
 		public override void Write(Utf8JsonWriter writer, EQuickHackSkillCondition value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

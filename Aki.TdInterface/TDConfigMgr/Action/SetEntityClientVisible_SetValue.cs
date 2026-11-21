@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021AE RID: 8622
+	// Token: 0x02002419 RID: 9241
 	public class SetEntityClientVisible_SetValue
 	{
-		// Token: 0x040070F5 RID: 28917
-		[Nullable(1)]
+		// Token: 0x0400773D RID: 30525
 		public List<int> EntityIds;
 
-		// Token: 0x040070F6 RID: 28918
+		// Token: 0x0400773E RID: 30526
 		public bool Visible;
 	}
 }

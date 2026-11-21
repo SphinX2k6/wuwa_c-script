@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001FD6 RID: 8150
+// Token: 0x020014A9 RID: 5289
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class SelectItem : GridProxyAbstract<InventoryDefine.ISelectItemData>
 {
-	// Token: 0x0600FF68 RID: 65384 RVA: 0x003E3224 File Offset: 0x003E1424
+	// Token: 0x0600D3D0 RID: 54224 RVA: 0x003EF828 File Offset: 0x003EDA28
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -35,19 +35,19 @@ public class SelectItem : GridProxyAbstract<InventoryDefine.ISelectItemData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600FF69 RID: 65385 RVA: 0x003E32F0 File Offset: 0x003E14F0
+	// Token: 0x0600D3D1 RID: 54225 RVA: 0x003EF8F4 File Offset: 0x003EDAF4
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).OnStateChange.Add(new Action<EToggleState>(this.OnClickedItem));
 	}
 
-	// Token: 0x0600FF6A RID: 65386 RVA: 0x003E330F File Offset: 0x003E150F
+	// Token: 0x0600D3D2 RID: 54226 RVA: 0x003EF913 File Offset: 0x003EDB13
 	protected override void OnDestroy()
 	{
 		base.GetExtendToggle(0).OnStateChange.Clear();
 	}
 
-	// Token: 0x0600FF6B RID: 65387 RVA: 0x003E3322 File Offset: 0x003E1522
+	// Token: 0x0600D3D3 RID: 54227 RVA: 0x003EF926 File Offset: 0x003EDB26
 	[NullableContext(1)]
 	public override void Refresh(InventoryDefine.ISelectItemData data, bool isSelected, int gridIndex)
 	{
@@ -57,14 +57,14 @@ public class SelectItem : GridProxyAbstract<InventoryDefine.ISelectItemData>
 		this.RefreshToggleState();
 	}
 
-	// Token: 0x0600FF6C RID: 65388 RVA: 0x003E3340 File Offset: 0x003E1540
+	// Token: 0x0600D3D4 RID: 54228 RVA: 0x003EF944 File Offset: 0x003EDB44
 	private void RefreshName()
 	{
 		string name = this.Data.Name;
 		base.GetText(4).SetText(name, true);
 	}
 
-	// Token: 0x0600FF6D RID: 65389 RVA: 0x003E3368 File Offset: 0x003E1568
+	// Token: 0x0600D3D5 RID: 54229 RVA: 0x003EF96C File Offset: 0x003EDB6C
 	private void RefreshIcon()
 	{
 		string iconPath = this.Data.IconPath;
@@ -97,7 +97,7 @@ public class SelectItem : GridProxyAbstract<InventoryDefine.ISelectItemData>
 		uuiitem2.SetChangeColor(needChangeColor2, fcolor);
 	}
 
-	// Token: 0x0600FF6E RID: 65390 RVA: 0x003E3440 File Offset: 0x003E1640
+	// Token: 0x0600D3D6 RID: 54230 RVA: 0x003EFA44 File Offset: 0x003EDC44
 	public void RefreshToggleState()
 	{
 		if (this.CallbackGetState == null)
@@ -108,14 +108,14 @@ public class SelectItem : GridProxyAbstract<InventoryDefine.ISelectItemData>
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0600FF6F RID: 65391 RVA: 0x003E3484 File Offset: 0x003E1684
+	// Token: 0x0600D3D7 RID: 54231 RVA: 0x003EFA88 File Offset: 0x003EDC88
 	[NullableContext(1)]
 	public override object GetKey(InventoryDefine.ISelectItemData data, int displayIndex)
 	{
 		return this.Data.Value;
 	}
 
-	// Token: 0x0600FF70 RID: 65392 RVA: 0x003E3496 File Offset: 0x003E1696
+	// Token: 0x0600D3D8 RID: 54232 RVA: 0x003EFA9A File Offset: 0x003EDC9A
 	private void OnClickedItem(EToggleState state)
 	{
 		Action<EToggleState, int> callbackClickItem = this.CallbackClickItem;
@@ -126,28 +126,28 @@ public class SelectItem : GridProxyAbstract<InventoryDefine.ISelectItemData>
 		callbackClickItem(state, this.Data.Value);
 	}
 
-	// Token: 0x04007635 RID: 30261
+	// Token: 0x0400771E RID: 30494
 	private InventoryDefine.ISelectItemData Data;
 
-	// Token: 0x04007636 RID: 30262
+	// Token: 0x0400771F RID: 30495
 	public Action<EToggleState, int> CallbackClickItem;
 
-	// Token: 0x04007637 RID: 30263
+	// Token: 0x04007720 RID: 30496
 	public Func<int, bool> CallbackGetState;
 
-	// Token: 0x020085ED RID: 34285
+	// Token: 0x02007774 RID: 30580
 	[NullableContext(0)]
 	private enum EItemComponent
 	{
-		// Token: 0x0402B975 RID: 178549
+		// Token: 0x04026C84 RID: 158852
 		Toggle,
-		// Token: 0x0402B976 RID: 178550
+		// Token: 0x04026C85 RID: 158853
 		IconRoot,
-		// Token: 0x0402B977 RID: 178551
+		// Token: 0x04026C86 RID: 158854
 		Icon,
-		// Token: 0x0402B978 RID: 178552
+		// Token: 0x04026C87 RID: 158855
 		Sprite,
-		// Token: 0x0402B979 RID: 178553
+		// Token: 0x04026C88 RID: 158856
 		Content
 	}
 }

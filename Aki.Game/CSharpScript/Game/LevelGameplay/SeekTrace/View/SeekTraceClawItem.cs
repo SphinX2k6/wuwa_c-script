@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 {
-	// Token: 0x02006A61 RID: 27233
+	// Token: 0x02005BBE RID: 23486
 	public class SeekTraceClawItem : UiPanelBase
 	{
-		// Token: 0x06043B47 RID: 277319 RVA: 0x01091ED4 File Offset: 0x010900D4
+		// Token: 0x06039B95 RID: 236437 RVA: 0x01036708 File Offset: 0x01034908
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06043B48 RID: 277320 RVA: 0x01091F80 File Offset: 0x01090180
+		// Token: 0x06039B96 RID: 236438 RVA: 0x010367B4 File Offset: 0x010349B4
 		protected override void OnBeforeShow()
 		{
 			string resourceId = "TraceClawType3Icon";
@@ -51,16 +51,16 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			base.SetTextureByPath(UiResourceConfig.Instance.GetResourcePath(resourceId2), base.GetTexture(3), null, null);
 		}
 
-		// Token: 0x0200CB7F RID: 52095
+		// Token: 0x0200B75E RID: 46942
 		public enum EComponentType
 		{
-			// Token: 0x0403D6F5 RID: 251637
+			// Token: 0x04038AD7 RID: 232151
 			Line1Texture,
-			// Token: 0x0403D6F6 RID: 251638
+			// Token: 0x04038AD8 RID: 232152
 			Line2Texture,
-			// Token: 0x0403D6F7 RID: 251639
+			// Token: 0x04038AD9 RID: 232153
 			IconTexture,
-			// Token: 0x0403D6F8 RID: 251640
+			// Token: 0x04038ADA RID: 232154
 			BackgroundTexture
 		}
 	}

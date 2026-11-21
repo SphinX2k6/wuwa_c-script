@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000209 RID: 521
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000232 RID: 562
 	public class IBulletHitConfig
 	{
-		// Token: 0x060008A2 RID: 2210 RVA: 0x000272A4 File Offset: 0x000254A4
+		// Token: 0x06000922 RID: 2338 RVA: 0x00028BF8 File Offset: 0x00026DF8
 		private IBulletHitConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060008A3 RID: 2211 RVA: 0x000272DC File Offset: 0x000254DC
+		// Token: 0x06000923 RID: 2339 RVA: 0x00028C30 File Offset: 0x00026E30
 		public static IBulletHitConfig Create([Nullable(2)] IBulletHitConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060008A4 RID: 2212 RVA: 0x000272EF File Offset: 0x000254EF
+		// Token: 0x06000924 RID: 2340 RVA: 0x00028C43 File Offset: 0x00026E43
 		public static IBulletHitConfig CreateFromSetValue([Nullable(2)] IBulletHitConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060008A5 RID: 2213 RVA: 0x00027302 File Offset: 0x00025502
+		// Token: 0x06000925 RID: 2341 RVA: 0x00028C56 File Offset: 0x00026E56
 		public IBulletHitConfig_SetValue ToSetValue()
 		{
 			return new IBulletHitConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170002A1 RID: 673
-		// (get) Token: 0x060008A6 RID: 2214 RVA: 0x0002732D File Offset: 0x0002552D
-		// (set) Token: 0x060008A7 RID: 2215 RVA: 0x00027354 File Offset: 0x00025554
+		// Token: 0x170002C3 RID: 707
+		// (get) Token: 0x06000926 RID: 2342 RVA: 0x00028C81 File Offset: 0x00026E81
+		// (set) Token: 0x06000927 RID: 2343 RVA: 0x00028CA8 File Offset: 0x00026EA8
 		public virtual IHitBulletType HitBullet
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002A2 RID: 674
-		// (get) Token: 0x060008A8 RID: 2216 RVA: 0x00027364 File Offset: 0x00025564
-		// (set) Token: 0x060008A9 RID: 2217 RVA: 0x000273C5 File Offset: 0x000255C5
+		// Token: 0x170002C4 RID: 708
+		// (get) Token: 0x06000928 RID: 2344 RVA: 0x00028CB8 File Offset: 0x00026EB8
+		// (set) Token: 0x06000929 RID: 2345 RVA: 0x00028D19 File Offset: 0x00026F19
 		[Nullable(2)]
 		public virtual IHitTimeScaleRatio AttackerHitTimeScaleRatio
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002A3 RID: 675
-		// (get) Token: 0x060008AA RID: 2218 RVA: 0x000273DC File Offset: 0x000255DC
-		// (set) Token: 0x060008AB RID: 2219 RVA: 0x0002743D File Offset: 0x0002563D
+		// Token: 0x170002C5 RID: 709
+		// (get) Token: 0x0600092A RID: 2346 RVA: 0x00028D30 File Offset: 0x00026F30
+		// (set) Token: 0x0600092B RID: 2347 RVA: 0x00028D91 File Offset: 0x00026F91
 		[Nullable(2)]
 		public virtual IHitTimeScaleRatio VictimHitTimeScaleRatio
 		{
@@ -151,24 +149,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400093B RID: 2363
+		// Token: 0x040009CC RID: 2508
 		[Nullable(2)]
 		protected IBulletHitConfig FbInstance;
 
-		// Token: 0x0400093C RID: 2364
+		// Token: 0x040009CD RID: 2509
 		[Nullable(2)]
 		protected IBulletHitConfig_SetValue PocoInterface;
 
-		// Token: 0x0400093D RID: 2365
+		// Token: 0x040009CE RID: 2510
 		private IHitTimeScaleRatio _AttackerHitTimeScaleRatioCache;
 
-		// Token: 0x0400093E RID: 2366
+		// Token: 0x040009CF RID: 2511
 		private bool _AttackerHitTimeScaleRatioInited;
 
-		// Token: 0x0400093F RID: 2367
+		// Token: 0x040009D0 RID: 2512
 		private IHitTimeScaleRatio _VictimHitTimeScaleRatioCache;
 
-		// Token: 0x04000940 RID: 2368
+		// Token: 0x040009D1 RID: 2513
 		private bool _VictimHitTimeScaleRatioInited;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020018C8 RID: 6344
+// Token: 0x02000D81 RID: 3457
 public class ItemInteractionPanelItemData
 {
-	// Token: 0x0600BA13 RID: 47635 RVA: 0x002A23A8 File Offset: 0x002A05A8
+	// Token: 0x06008DFC RID: 36348 RVA: 0x002ACB00 File Offset: 0x002AAD00
 	[NullableContext(1)]
 	public ItemInteractionPanelItemData(IItemInteractionPanelItemInfo itemInfo, int quality)
 	{
@@ -19,51 +19,51 @@ public class ItemInteractionPanelItemData
 		this.ItemCount = InventoryModel.Instance.GetItemCountByConfigId(this.ItemConfigId, 0);
 	}
 
-	// Token: 0x0600BA14 RID: 47636 RVA: 0x002A240E File Offset: 0x002A060E
+	// Token: 0x06008DFD RID: 36349 RVA: 0x002ACB66 File Offset: 0x002AAD66
 	public void SetCurrentCount(int count)
 	{
 		this.CurrentCount = count;
 	}
 
-	// Token: 0x0600BA15 RID: 47637 RVA: 0x002A2417 File Offset: 0x002A0617
+	// Token: 0x06008DFE RID: 36350 RVA: 0x002ACB6F File Offset: 0x002AAD6F
 	public int GetCurrentCount()
 	{
 		return this.CurrentCount;
 	}
 
-	// Token: 0x0600BA16 RID: 47638 RVA: 0x002A241F File Offset: 0x002A061F
+	// Token: 0x06008DFF RID: 36351 RVA: 0x002ACB77 File Offset: 0x002AAD77
 	public int GetItemCount()
 	{
 		return this.ItemCount;
 	}
 
-	// Token: 0x0600BA17 RID: 47639 RVA: 0x002A2427 File Offset: 0x002A0627
+	// Token: 0x06008E00 RID: 36352 RVA: 0x002ACB7F File Offset: 0x002AAD7F
 	public bool IsEnable()
 	{
 		return this.ItemCount >= this.NeedCount;
 	}
 
-	// Token: 0x0600BA18 RID: 47640 RVA: 0x002A243A File Offset: 0x002A063A
+	// Token: 0x06008E01 RID: 36353 RVA: 0x002ACB92 File Offset: 0x002AAD92
 	public int GetQualityId()
 	{
 		return this.QualityId;
 	}
 
-	// Token: 0x04005448 RID: 21576
+	// Token: 0x040054F3 RID: 21747
 	public readonly int ItemConfigId;
 
-	// Token: 0x04005449 RID: 21577
+	// Token: 0x040054F4 RID: 21748
 	private int CurrentCount;
 
-	// Token: 0x0400544A RID: 21578
+	// Token: 0x040054F5 RID: 21749
 	private readonly int ItemCount;
 
-	// Token: 0x0400544B RID: 21579
+	// Token: 0x040054F6 RID: 21750
 	private readonly int QualityId;
 
-	// Token: 0x0400544C RID: 21580
+	// Token: 0x040054F7 RID: 21751
 	public int NeedCount;
 
-	// Token: 0x0400544D RID: 21581
+	// Token: 0x040054F8 RID: 21752
 	public bool IsSelected;
 }

@@ -12,110 +12,63 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Teleport
 {
-	// Token: 0x02004B6A RID: 19306
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02003B14 RID: 15124
 	public class TeleportCore : TeleportContextHolder
 	{
-		// Token: 0x06031FBF RID: 204735 RVA: 0x00B9A24A File Offset: 0x00B9844A
+		// Token: 0x06026D59 RID: 159065 RVA: 0x00ADE6D2 File Offset: 0x00ADC8D2
 		[NullableContext(1)]
 		public TeleportCore(TeleportContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06031FC0 RID: 204736 RVA: 0x00B9A254 File Offset: 0x00B98454
-		[NullableContext(0)]
+		// Token: 0x06026D5A RID: 159066 RVA: 0x00ADE6DC File Offset: 0x00ADC8DC
 		public UniTask<bool> TeleportPlayerNoLoading(bool isInVehicle)
 		{
-			TeleportCore.<TeleportPlayerNoLoading>d__4 <TeleportPlayerNoLoading>d__;
+			TeleportCore.<TeleportPlayerNoLoading>d__2 <TeleportPlayerNoLoading>d__;
 			<TeleportPlayerNoLoading>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<TeleportPlayerNoLoading>d__.<>4__this = this;
 			<TeleportPlayerNoLoading>d__.isInVehicle = isInVehicle;
 			<TeleportPlayerNoLoading>d__.<>1__state = -1;
-			<TeleportPlayerNoLoading>d__.<>t__builder.Start<TeleportCore.<TeleportPlayerNoLoading>d__4>(ref <TeleportPlayerNoLoading>d__);
+			<TeleportPlayerNoLoading>d__.<>t__builder.Start<TeleportCore.<TeleportPlayerNoLoading>d__2>(ref <TeleportPlayerNoLoading>d__);
 			return <TeleportPlayerNoLoading>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FC1 RID: 204737 RVA: 0x00B9A2A0 File Offset: 0x00B984A0
-		[NullableContext(0)]
+		// Token: 0x06026D5B RID: 159067 RVA: 0x00ADE728 File Offset: 0x00ADC928
 		public UniTask<bool> TeleportPlayerWithLoading(bool isInVehicle)
 		{
-			TeleportCore.<TeleportPlayerWithLoading>d__5 <TeleportPlayerWithLoading>d__;
+			TeleportCore.<TeleportPlayerWithLoading>d__3 <TeleportPlayerWithLoading>d__;
 			<TeleportPlayerWithLoading>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<TeleportPlayerWithLoading>d__.<>4__this = this;
 			<TeleportPlayerWithLoading>d__.isInVehicle = isInVehicle;
 			<TeleportPlayerWithLoading>d__.<>1__state = -1;
-			<TeleportPlayerWithLoading>d__.<>t__builder.Start<TeleportCore.<TeleportPlayerWithLoading>d__5>(ref <TeleportPlayerWithLoading>d__);
+			<TeleportPlayerWithLoading>d__.<>t__builder.Start<TeleportCore.<TeleportPlayerWithLoading>d__3>(ref <TeleportPlayerWithLoading>d__);
 			return <TeleportPlayerWithLoading>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FC2 RID: 204738 RVA: 0x00B9A2EC File Offset: 0x00B984EC
-		[NullableContext(0)]
+		// Token: 0x06026D5C RID: 159068 RVA: 0x00ADE774 File Offset: 0x00ADC974
 		public UniTask<bool> TeleportElevatorAndPlayerSeparately()
 		{
-			TeleportCore.<TeleportElevatorAndPlayerSeparately>d__6 <TeleportElevatorAndPlayerSeparately>d__;
+			TeleportCore.<TeleportElevatorAndPlayerSeparately>d__4 <TeleportElevatorAndPlayerSeparately>d__;
 			<TeleportElevatorAndPlayerSeparately>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<TeleportElevatorAndPlayerSeparately>d__.<>4__this = this;
 			<TeleportElevatorAndPlayerSeparately>d__.<>1__state = -1;
-			<TeleportElevatorAndPlayerSeparately>d__.<>t__builder.Start<TeleportCore.<TeleportElevatorAndPlayerSeparately>d__6>(ref <TeleportElevatorAndPlayerSeparately>d__);
+			<TeleportElevatorAndPlayerSeparately>d__.<>t__builder.Start<TeleportCore.<TeleportElevatorAndPlayerSeparately>d__4>(ref <TeleportElevatorAndPlayerSeparately>d__);
 			return <TeleportElevatorAndPlayerSeparately>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FC3 RID: 204739 RVA: 0x00B9A32F File Offset: 0x00B9852F
-		[NullableContext(1)]
-		private void OnChangeRole(EntityHandle newHandle, [Nullable(2)] EntityHandle oldHandle)
-		{
-			this.OnChangeRole();
-		}
-
-		// Token: 0x06031FC4 RID: 204740 RVA: 0x00B9A337 File Offset: 0x00B98537
-		private void OnChangeRole()
-		{
-			this.HandleCharacterTeleportLock(true);
-		}
-
-		// Token: 0x06031FC5 RID: 204741 RVA: 0x00B9A340 File Offset: 0x00B98540
-		[NullableContext(0)]
+		// Token: 0x06026D5D RID: 159069 RVA: 0x00ADE7B8 File Offset: 0x00ADC9B8
 		public UniTask<bool> FakeTeleportPlayerWithLoading()
 		{
-			TeleportCore.<FakeTeleportPlayerWithLoading>d__9 <FakeTeleportPlayerWithLoading>d__;
+			TeleportCore.<FakeTeleportPlayerWithLoading>d__5 <FakeTeleportPlayerWithLoading>d__;
 			<FakeTeleportPlayerWithLoading>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<FakeTeleportPlayerWithLoading>d__.<>4__this = this;
 			<FakeTeleportPlayerWithLoading>d__.<>1__state = -1;
-			<FakeTeleportPlayerWithLoading>d__.<>t__builder.Start<TeleportCore.<FakeTeleportPlayerWithLoading>d__9>(ref <FakeTeleportPlayerWithLoading>d__);
+			<FakeTeleportPlayerWithLoading>d__.<>t__builder.Start<TeleportCore.<FakeTeleportPlayerWithLoading>d__5>(ref <FakeTeleportPlayerWithLoading>d__);
 			return <FakeTeleportPlayerWithLoading>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FC6 RID: 204742 RVA: 0x00B9A384 File Offset: 0x00B98584
-		private void SetMotionBlurEnabled(bool enable)
-		{
-			if (enable)
-			{
-				Log instance = Log.Instance;
-				ELogModule module = ELogModule.Teleport;
-				ELogAuthor author = ELogAuthor.CK;
-				string message = "传送: 开启运动模糊";
-				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("MotionBlurValue", this.MotionBlurCache);
-				instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-				UObject world = GlobalData.World;
-				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(20, 1);
-				defaultInterpolatedStringHandler.AppendLiteral("r.MotionBlur.Amount ");
-				defaultInterpolatedStringHandler.AppendFormatted<float>(this.MotionBlurCache);
-				UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
-				return;
-			}
-			this.MotionBlurCache = UKismetSystemLibrary.GetConsoleVariableFloatValue("r.MotionBlur.Amount");
-			Log instance2 = Log.Instance;
-			ELogModule module2 = ELogModule.Teleport;
-			ELogAuthor author2 = ELogAuthor.CK;
-			string message2 = "传送: 关闭运动模糊";
-			ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("MotionBlurValue", this.MotionBlurCache);
-			instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.InvalidSeveralFrameOcculusion 30", null);
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.MotionBlur.Amount 0", null);
-		}
-
-		// Token: 0x06031FC7 RID: 204743 RVA: 0x00B9A464 File Offset: 0x00B98664
+		// Token: 0x06026D5E RID: 159070 RVA: 0x00ADE7FC File Offset: 0x00ADC9FC
+		[NullableContext(2)]
 		private void RecordStartAndTargetTransformData(bool isInVehicle, BaseActorComponent actorComp)
 		{
 			TeleportModel instance = TeleportModel.Instance;
@@ -172,25 +125,26 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FC8 RID: 204744 RVA: 0x00B9A690 File Offset: 0x00B98890
+		// Token: 0x06026D5F RID: 159071 RVA: 0x00ADEA28 File Offset: 0x00ADCC28
 		private UniTask HandleStreamingLogic(bool shouldCollectGarbage)
 		{
-			TeleportCore.<HandleStreamingLogic>d__12 <HandleStreamingLogic>d__;
+			TeleportCore.<HandleStreamingLogic>d__7 <HandleStreamingLogic>d__;
 			<HandleStreamingLogic>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<HandleStreamingLogic>d__.<>4__this = this;
 			<HandleStreamingLogic>d__.shouldCollectGarbage = shouldCollectGarbage;
 			<HandleStreamingLogic>d__.<>1__state = -1;
-			<HandleStreamingLogic>d__.<>t__builder.Start<TeleportCore.<HandleStreamingLogic>d__12>(ref <HandleStreamingLogic>d__);
+			<HandleStreamingLogic>d__.<>t__builder.Start<TeleportCore.<HandleStreamingLogic>d__7>(ref <HandleStreamingLogic>d__);
 			return <HandleStreamingLogic>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FC9 RID: 204745 RVA: 0x00B9A6DC File Offset: 0x00B988DC
+		// Token: 0x06026D60 RID: 159072 RVA: 0x00ADEA74 File Offset: 0x00ADCC74
+		[NullableContext(2)]
 		private void EmitTeleportStartEvent(Entity entity)
 		{
 			Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 发送传送开始事件 开始执行 EmitTeleportStartEvent", default(ReadOnlySpan<ValueTuple<string, object>>));
 			try
 			{
-				TeleportCore.<EmitTeleportStartEvent>g__EmitTeleportStartEventWithoutLog|13_0(entity);
+				TeleportCore.<EmitTeleportStartEvent>g__EmitTeleportStartEventWithoutLog|8_0(entity);
 				Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 发送传送开始事件 执行完成 EmitTeleportStartEvent", default(ReadOnlySpan<ValueTuple<string, object>>));
 			}
 			catch (Exception ex)
@@ -205,13 +159,14 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FCA RID: 204746 RVA: 0x00B9A774 File Offset: 0x00B98974
+		// Token: 0x06026D61 RID: 159073 RVA: 0x00ADEB0C File Offset: 0x00ADCD0C
+		[NullableContext(2)]
 		private void EmitTeleportOpenLoadingEndEvent(Entity entity)
 		{
 			Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 发送Loading打开完成事件 开始执行 EmitTeleportOpenLoadingEndEvent", default(ReadOnlySpan<ValueTuple<string, object>>));
 			try
 			{
-				TeleportCore.<EmitTeleportOpenLoadingEndEvent>g__EmitTeleportOpenLoadingEndEventWithoutLog|14_0(entity);
+				TeleportCore.<EmitTeleportOpenLoadingEndEvent>g__EmitTeleportOpenLoadingEndEventWithoutLog|9_0(entity);
 				Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 发送Loading打开完成事件 执行完成 EmitTeleportOpenLoadingEndEvent", default(ReadOnlySpan<ValueTuple<string, object>>));
 			}
 			catch (Exception ex)
@@ -226,13 +181,13 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FCB RID: 204747 RVA: 0x00B9A80C File Offset: 0x00B98A0C
+		// Token: 0x06026D62 RID: 159074 RVA: 0x00ADEBA4 File Offset: 0x00ADCDA4
 		private void EmitFixBornLocationEvent()
 		{
 			Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 发送修正出生位置事件 开始执行 EmitFixBornLocationEvent", default(ReadOnlySpan<ValueTuple<string, object>>));
 			try
 			{
-				TeleportCore.<EmitFixBornLocationEvent>g__EmitFixBornLocationEventWithoutLog|15_0();
+				TeleportCore.<EmitFixBornLocationEvent>g__EmitFixBornLocationEventWithoutLog|10_0();
 				Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 发送修正出生位置事件 执行完成 EmitFixBornLocationEvent", default(ReadOnlySpan<ValueTuple<string, object>>));
 			}
 			catch (Exception ex)
@@ -247,13 +202,13 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FCC RID: 204748 RVA: 0x00B9A8A0 File Offset: 0x00B98AA0
+		// Token: 0x06026D63 RID: 159075 RVA: 0x00ADEC38 File Offset: 0x00ADCE38
 		private void EmitTeleportCompleteEvent()
 		{
 			Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 发送传送完成事件 开始执行 EmitTeleportCompleteEvent", default(ReadOnlySpan<ValueTuple<string, object>>));
 			try
 			{
-				this.<EmitTeleportCompleteEvent>g__EmitTeleportCompleteEventWithoutLog|16_0();
+				this.<EmitTeleportCompleteEvent>g__EmitTeleportCompleteEventWithoutLog|11_0();
 				Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 发送传送完成事件 执行完成 EmitTeleportCompleteEvent", default(ReadOnlySpan<ValueTuple<string, object>>));
 			}
 			catch (Exception ex)
@@ -268,13 +223,14 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FCD RID: 204749 RVA: 0x00B9A938 File Offset: 0x00B98B38
+		// Token: 0x06026D64 RID: 159076 RVA: 0x00ADECD0 File Offset: 0x00ADCED0
+		[NullableContext(2)]
 		private void EmitTeleportChangeLocationEvent(Entity entity)
 		{
 			Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 发送传送位置变更事件 开始执行 EmitTeleportChangeLocationEvent", default(ReadOnlySpan<ValueTuple<string, object>>));
 			try
 			{
-				TeleportCore.<EmitTeleportChangeLocationEvent>g__EmitTeleportChangeLocationEventWithoutLog|17_0(entity);
+				TeleportCore.<EmitTeleportChangeLocationEvent>g__EmitTeleportChangeLocationEventWithoutLog|12_0(entity);
 				Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 发送传送位置变更事件 执行完成 EmitTeleportChangeLocationEvent", default(ReadOnlySpan<ValueTuple<string, object>>));
 			}
 			catch (Exception ex)
@@ -289,7 +245,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FCE RID: 204750 RVA: 0x00B9A9D0 File Offset: 0x00B98BD0
+		// Token: 0x06026D65 RID: 159077 RVA: 0x00ADED68 File Offset: 0x00ADCF68
 		private unsafe void HandleCharacterInput()
 		{
 			TeleportModel instance = TeleportModel.Instance;
@@ -311,7 +267,7 @@ namespace CSharpScript.Game.Module.Teleport
 			instance2.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06031FCF RID: 204751 RVA: 0x00B9AA90 File Offset: 0x00B98C90
+		// Token: 0x06026D66 RID: 159078 RVA: 0x00ADEE28 File Offset: 0x00ADD028
 		private unsafe void HandleCharacterTransform()
 		{
 			TeleportModel instance = TeleportModel.Instance;
@@ -413,7 +369,7 @@ namespace CSharpScript.Game.Module.Teleport
 			RoleTriggerController.Instance.UpdateTransform("");
 		}
 
-		// Token: 0x06031FD0 RID: 204752 RVA: 0x00B9AE00 File Offset: 0x00B99000
+		// Token: 0x06026D67 RID: 159079 RVA: 0x00ADF198 File Offset: 0x00ADD398
 		private unsafe void HandleVehicleTransform()
 		{
 			TeleportModel instance = TeleportModel.Instance;
@@ -494,7 +450,8 @@ namespace CSharpScript.Game.Module.Teleport
 			RoleTriggerController.Instance.UpdateTransform("");
 		}
 
-		// Token: 0x06031FD1 RID: 204753 RVA: 0x00B9B06C File Offset: 0x00B9926C
+		// Token: 0x06026D68 RID: 159080 RVA: 0x00ADF404 File Offset: 0x00ADD604
+		[NullableContext(2)]
 		private Entity GetDriveVehicleEntityByPlayer()
 		{
 			TeleportContext teleportContext = TeleportModel.Instance.TeleportContext;
@@ -529,7 +486,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return entity3;
 		}
 
-		// Token: 0x06031FD2 RID: 204754 RVA: 0x00B9B0E8 File Offset: 0x00B992E8
+		// Token: 0x06026D69 RID: 159081 RVA: 0x00ADF480 File Offset: 0x00ADD680
 		private unsafe void HandleCameraTransform()
 		{
 			TeleportModel instance = TeleportModel.Instance;
@@ -573,68 +530,36 @@ namespace CSharpScript.Game.Module.Teleport
 			CameraController.Instance.MainModel.FightCamera.LogicComponent.ResetFightCameraLogic(teleportContext.NeedRestoreCamera.GetValueOrDefault(), false);
 		}
 
-		// Token: 0x06031FD3 RID: 204755 RVA: 0x00B9B3E8 File Offset: 0x00B995E8
+		// Token: 0x06026D6A RID: 159082 RVA: 0x00ADF780 File Offset: 0x00ADD980
 		private void HandleVehicleCameraTransform()
 		{
 			CameraController.Instance.MainModel.FightCamera.LogicComponent.SetRotation(TeleportModel.Instance.TargetRotation.ToUeRotator());
 			CameraController.Instance.MainModel.FightCamera.LogicComponent.ResetFightCameraLogic(this.TeleportContext.NeedRestoreCamera.GetValueOrDefault(), false);
 		}
 
-		// Token: 0x06031FD4 RID: 204756 RVA: 0x00B9B44C File Offset: 0x00B9964C
-		private void HandleCharacterTeleportLock(bool freezeMove)
-		{
-			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
-			EntityHandle frozenEntityHandle = this.FrozenEntityHandle;
-			if (frozenEntityHandle != null && frozenEntityHandle.Valid)
-			{
-				int id = this.FrozenEntityHandle.Id;
-				int? num = (getCurrentEntity != null) ? new int?(getCurrentEntity.Id) : null;
-				if (!(id == num.GetValueOrDefault() & num != null))
-				{
-					WorldEntity entity = this.FrozenEntityHandle.Entity;
-					UeMovementTickManageComponent ueMovementTickManageComponent = (entity != null) ? entity.GetComponent<UeMovementTickManageComponent>() : null;
-					if (ueMovementTickManageComponent != null)
-					{
-						ueMovementTickManageComponent.TeleportLock = false;
-					}
-				}
-			}
-			this.FrozenEntityHandle = null;
-			if (getCurrentEntity != null && getCurrentEntity.Valid)
-			{
-				WorldEntity entity2 = getCurrentEntity.Entity;
-				UeMovementTickManageComponent ueMovementTickManageComponent2 = (entity2 != null) ? entity2.GetComponent<UeMovementTickManageComponent>() : null;
-				if (ueMovementTickManageComponent2 != null)
-				{
-					ueMovementTickManageComponent2.TeleportLock = freezeMove;
-				}
-				this.FrozenEntityHandle = (freezeMove ? getCurrentEntity : null);
-			}
-		}
-
-		// Token: 0x06031FD5 RID: 204757 RVA: 0x00B9B514 File Offset: 0x00B99714
+		// Token: 0x06026D6B RID: 159083 RVA: 0x00ADF7E4 File Offset: 0x00ADD9E4
 		private UniTask CheckLiveLocationStreamingCompleted()
 		{
-			TeleportCore.<CheckLiveLocationStreamingCompleted>d__25 <CheckLiveLocationStreamingCompleted>d__;
+			TeleportCore.<CheckLiveLocationStreamingCompleted>d__19 <CheckLiveLocationStreamingCompleted>d__;
 			<CheckLiveLocationStreamingCompleted>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<CheckLiveLocationStreamingCompleted>d__.<>4__this = this;
 			<CheckLiveLocationStreamingCompleted>d__.<>1__state = -1;
-			<CheckLiveLocationStreamingCompleted>d__.<>t__builder.Start<TeleportCore.<CheckLiveLocationStreamingCompleted>d__25>(ref <CheckLiveLocationStreamingCompleted>d__);
+			<CheckLiveLocationStreamingCompleted>d__.<>t__builder.Start<TeleportCore.<CheckLiveLocationStreamingCompleted>d__19>(ref <CheckLiveLocationStreamingCompleted>d__);
 			return <CheckLiveLocationStreamingCompleted>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FD6 RID: 204758 RVA: 0x00B9B558 File Offset: 0x00B99758
+		// Token: 0x06026D6C RID: 159084 RVA: 0x00ADF828 File Offset: 0x00ADDA28
 		private UniTask WaitServerResponse()
 		{
-			TeleportCore.<WaitServerResponse>d__26 <WaitServerResponse>d__;
+			TeleportCore.<WaitServerResponse>d__20 <WaitServerResponse>d__;
 			<WaitServerResponse>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<WaitServerResponse>d__.<>4__this = this;
 			<WaitServerResponse>d__.<>1__state = -1;
-			<WaitServerResponse>d__.<>t__builder.Start<TeleportCore.<WaitServerResponse>d__26>(ref <WaitServerResponse>d__);
+			<WaitServerResponse>d__.<>t__builder.Start<TeleportCore.<WaitServerResponse>d__20>(ref <WaitServerResponse>d__);
 			return <WaitServerResponse>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FD7 RID: 204759 RVA: 0x00B9B59B File Offset: 0x00B9979B
+		// Token: 0x06026D6D RID: 159085 RVA: 0x00ADF86B File Offset: 0x00ADDA6B
 		private void CreateEntityFromPending()
 		{
 			GameModeModel.Instance.LoadingPhase = ELoadingPhase.CreateEntityStart;
@@ -642,66 +567,66 @@ namespace CSharpScript.Game.Module.Teleport
 			GameModeModel.Instance.LoadingPhase = ELoadingPhase.CreateEntityEnd;
 		}
 
-		// Token: 0x06031FD8 RID: 204760 RVA: 0x00B9B5C0 File Offset: 0x00B997C0
+		// Token: 0x06026D6E RID: 159086 RVA: 0x00ADF890 File Offset: 0x00ADDA90
 		private UniTask PreAwakeEntitiesFromPending()
 		{
-			TeleportCore.<PreAwakeEntitiesFromPending>d__28 <PreAwakeEntitiesFromPending>d__;
+			TeleportCore.<PreAwakeEntitiesFromPending>d__22 <PreAwakeEntitiesFromPending>d__;
 			<PreAwakeEntitiesFromPending>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<PreAwakeEntitiesFromPending>d__.<>1__state = -1;
-			<PreAwakeEntitiesFromPending>d__.<>t__builder.Start<TeleportCore.<PreAwakeEntitiesFromPending>d__28>(ref <PreAwakeEntitiesFromPending>d__);
+			<PreAwakeEntitiesFromPending>d__.<>t__builder.Start<TeleportCore.<PreAwakeEntitiesFromPending>d__22>(ref <PreAwakeEntitiesFromPending>d__);
 			return <PreAwakeEntitiesFromPending>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FD9 RID: 204761 RVA: 0x00B9B5FC File Offset: 0x00B997FC
+		// Token: 0x06026D6F RID: 159087 RVA: 0x00ADF8CC File Offset: 0x00ADDACC
 		private UniTask WaitRenderAssetsStreamingCompleted()
 		{
-			TeleportCore.<WaitRenderAssetsStreamingCompleted>d__29 <WaitRenderAssetsStreamingCompleted>d__;
+			TeleportCore.<WaitRenderAssetsStreamingCompleted>d__23 <WaitRenderAssetsStreamingCompleted>d__;
 			<WaitRenderAssetsStreamingCompleted>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<WaitRenderAssetsStreamingCompleted>d__.<>4__this = this;
 			<WaitRenderAssetsStreamingCompleted>d__.<>1__state = -1;
-			<WaitRenderAssetsStreamingCompleted>d__.<>t__builder.Start<TeleportCore.<WaitRenderAssetsStreamingCompleted>d__29>(ref <WaitRenderAssetsStreamingCompleted>d__);
+			<WaitRenderAssetsStreamingCompleted>d__.<>t__builder.Start<TeleportCore.<WaitRenderAssetsStreamingCompleted>d__23>(ref <WaitRenderAssetsStreamingCompleted>d__);
 			return <WaitRenderAssetsStreamingCompleted>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FDA RID: 204762 RVA: 0x00B9B640 File Offset: 0x00B99840
+		// Token: 0x06026D70 RID: 159088 RVA: 0x00ADF910 File Offset: 0x00ADDB10
 		private UniTask WaitTeamLoaded()
 		{
-			TeleportCore.<WaitTeamLoaded>d__30 <WaitTeamLoaded>d__;
+			TeleportCore.<WaitTeamLoaded>d__24 <WaitTeamLoaded>d__;
 			<WaitTeamLoaded>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<WaitTeamLoaded>d__.<>1__state = -1;
-			<WaitTeamLoaded>d__.<>t__builder.Start<TeleportCore.<WaitTeamLoaded>d__30>(ref <WaitTeamLoaded>d__);
+			<WaitTeamLoaded>d__.<>t__builder.Start<TeleportCore.<WaitTeamLoaded>d__24>(ref <WaitTeamLoaded>d__);
 			return <WaitTeamLoaded>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FDB RID: 204763 RVA: 0x00B9B67C File Offset: 0x00B9987C
+		// Token: 0x06026D71 RID: 159089 RVA: 0x00ADF94C File Offset: 0x00ADDB4C
 		private UniTask HandleTakeVehicleDuringTeleport()
 		{
-			TeleportCore.<HandleTakeVehicleDuringTeleport>d__31 <HandleTakeVehicleDuringTeleport>d__;
+			TeleportCore.<HandleTakeVehicleDuringTeleport>d__25 <HandleTakeVehicleDuringTeleport>d__;
 			<HandleTakeVehicleDuringTeleport>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<HandleTakeVehicleDuringTeleport>d__.<>4__this = this;
 			<HandleTakeVehicleDuringTeleport>d__.<>1__state = -1;
-			<HandleTakeVehicleDuringTeleport>d__.<>t__builder.Start<TeleportCore.<HandleTakeVehicleDuringTeleport>d__31>(ref <HandleTakeVehicleDuringTeleport>d__);
+			<HandleTakeVehicleDuringTeleport>d__.<>t__builder.Start<TeleportCore.<HandleTakeVehicleDuringTeleport>d__25>(ref <HandleTakeVehicleDuringTeleport>d__);
 			return <HandleTakeVehicleDuringTeleport>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FDC RID: 204764 RVA: 0x00B9B6C0 File Offset: 0x00B998C0
+		// Token: 0x06026D72 RID: 159090 RVA: 0x00ADF990 File Offset: 0x00ADDB90
 		private UniTask WaitRollbackCompleted()
 		{
-			TeleportCore.<WaitRollbackCompleted>d__32 <WaitRollbackCompleted>d__;
+			TeleportCore.<WaitRollbackCompleted>d__26 <WaitRollbackCompleted>d__;
 			<WaitRollbackCompleted>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<WaitRollbackCompleted>d__.<>4__this = this;
 			<WaitRollbackCompleted>d__.<>1__state = -1;
-			<WaitRollbackCompleted>d__.<>t__builder.Start<TeleportCore.<WaitRollbackCompleted>d__32>(ref <WaitRollbackCompleted>d__);
+			<WaitRollbackCompleted>d__.<>t__builder.Start<TeleportCore.<WaitRollbackCompleted>d__26>(ref <WaitRollbackCompleted>d__);
 			return <WaitRollbackCompleted>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FDD RID: 204765 RVA: 0x00B9B704 File Offset: 0x00B99904
+		// Token: 0x06026D73 RID: 159091 RVA: 0x00ADF9D4 File Offset: 0x00ADDBD4
 		private void HandleTimeDilationBeforeTeleport()
 		{
 			Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 传送前解除时停 开始执行 HandleTimeDilationBeforeTeleport", default(ReadOnlySpan<ValueTuple<string, object>>));
 			try
 			{
-				TeleportCore.<HandleTimeDilationBeforeTeleport>g__HandleTimeDilationBeforeTeleportWithoutLog|33_0();
+				TeleportCore.<HandleTimeDilationBeforeTeleport>g__HandleTimeDilationBeforeTeleportWithoutLog|27_0();
 				Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 传送前解除时停 执行完成 HandleTimeDilationBeforeTeleport", default(ReadOnlySpan<ValueTuple<string, object>>));
 			}
 			catch (Exception ex)
@@ -716,13 +641,13 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FDE RID: 204766 RVA: 0x00B9B798 File Offset: 0x00B99998
+		// Token: 0x06026D74 RID: 159092 RVA: 0x00ADFA68 File Offset: 0x00ADDC68
 		private void HandleTimeDilationAfterTeleport()
 		{
 			Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 传送后恢复时停 开始执行 HandleTimeDilationAfterTeleport", default(ReadOnlySpan<ValueTuple<string, object>>));
 			try
 			{
-				TeleportCore.<HandleTimeDilationAfterTeleport>g__HandleTimeDilationAfterTeleportWithoutLog|34_0();
+				TeleportCore.<HandleTimeDilationAfterTeleport>g__HandleTimeDilationAfterTeleportWithoutLog|28_0();
 				Log.Instance.Info(ELogModule.Teleport, ELogAuthor.CK, "传送: 传送后恢复时停 执行完成 HandleTimeDilationAfterTeleport", default(ReadOnlySpan<ValueTuple<string, object>>));
 			}
 			catch (Exception ex)
@@ -737,7 +662,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FDF RID: 204767 RVA: 0x00B9B82C File Offset: 0x00B99A2C
+		// Token: 0x06026D75 RID: 159093 RVA: 0x00ADFAFC File Offset: 0x00ADDCFC
 		private void HandleTeleportStartProcess(bool renderAssetDone)
 		{
 			GameModeModel.Instance.SetBornInfo(this.TeleportContext.TargetPosition, this.TeleportContext.TargetRotation);
@@ -756,7 +681,7 @@ namespace CSharpScript.Game.Module.Teleport
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06031FE0 RID: 204768 RVA: 0x00B9B8F0 File Offset: 0x00B99AF0
+		// Token: 0x06026D76 RID: 159094 RVA: 0x00ADFBC0 File Offset: 0x00ADDDC0
 		private void HandleTeleportEndProcess()
 		{
 			RoleAudioController.Instance.SetUpdateAudioDynamicTrace(true);
@@ -772,22 +697,22 @@ namespace CSharpScript.Game.Module.Teleport
 			EventSystem.Instance.Emit(EEventName.RestartHangingPreloadTask);
 		}
 
-		// Token: 0x06031FE1 RID: 204769 RVA: 0x00B9B974 File Offset: 0x00B99B74
-		[NullableContext(0)]
+		// Token: 0x06026D77 RID: 159095 RVA: 0x00ADFC44 File Offset: 0x00ADDE44
 		[CompilerGenerated]
-		private UniTask<bool> <FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|9_0()
+		private UniTask<bool> <FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|5_0()
 		{
-			TeleportCore.<<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|9_0>d <<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|9_0>d;
-			<<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|9_0>d.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
-			<<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|9_0>d.<>4__this = this;
-			<<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|9_0>d.<>1__state = -1;
-			<<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|9_0>d.<>t__builder.Start<TeleportCore.<<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|9_0>d>(ref <<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|9_0>d);
-			return <<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|9_0>d.<>t__builder.Task;
+			TeleportCore.<<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|5_0>d <<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|5_0>d;
+			<<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|5_0>d.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
+			<<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|5_0>d.<>4__this = this;
+			<<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|5_0>d.<>1__state = -1;
+			<<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|5_0>d.<>t__builder.Start<TeleportCore.<<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|5_0>d>(ref <<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|5_0>d);
+			return <<FakeTeleportPlayerWithLoading>g__FakeTeleportPlayerWithLoadingWithoutLog|5_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FE2 RID: 204770 RVA: 0x00B9B9B7 File Offset: 0x00B99BB7
+		// Token: 0x06026D78 RID: 159096 RVA: 0x00ADFC87 File Offset: 0x00ADDE87
+		[NullableContext(2)]
 		[CompilerGenerated]
-		internal static void <EmitTeleportStartEvent>g__EmitTeleportStartEventWithoutLog|13_0(Entity entity)
+		internal static void <EmitTeleportStartEvent>g__EmitTeleportStartEventWithoutLog|8_0(Entity entity)
 		{
 			EventSystem.Instance.Emit<bool>(EEventName.TeleportStart, true);
 			if (entity != null)
@@ -796,9 +721,10 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FE3 RID: 204771 RVA: 0x00B9B9DF File Offset: 0x00B99BDF
+		// Token: 0x06026D79 RID: 159097 RVA: 0x00ADFCAF File Offset: 0x00ADDEAF
+		[NullableContext(2)]
 		[CompilerGenerated]
-		internal static void <EmitTeleportOpenLoadingEndEvent>g__EmitTeleportOpenLoadingEndEventWithoutLog|14_0(Entity entity)
+		internal static void <EmitTeleportOpenLoadingEndEvent>g__EmitTeleportOpenLoadingEndEventWithoutLog|9_0(Entity entity)
 		{
 			EventSystem.Instance.Emit(EEventName.TeleportOpenLoadingEnd);
 			if (entity != null)
@@ -807,23 +733,24 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FE4 RID: 204772 RVA: 0x00B9BA05 File Offset: 0x00B99C05
+		// Token: 0x06026D7A RID: 159098 RVA: 0x00ADFCD5 File Offset: 0x00ADDED5
 		[CompilerGenerated]
-		internal static void <EmitFixBornLocationEvent>g__EmitFixBornLocationEventWithoutLog|15_0()
+		internal static void <EmitFixBornLocationEvent>g__EmitFixBornLocationEventWithoutLog|10_0()
 		{
 			EventSystem.Instance.Emit(EEventName.FixBornLocation);
 		}
 
-		// Token: 0x06031FE5 RID: 204773 RVA: 0x00B9BA17 File Offset: 0x00B99C17
+		// Token: 0x06026D7B RID: 159099 RVA: 0x00ADFCE7 File Offset: 0x00ADDEE7
 		[CompilerGenerated]
-		private void <EmitTeleportCompleteEvent>g__EmitTeleportCompleteEventWithoutLog|16_0()
+		private void <EmitTeleportCompleteEvent>g__EmitTeleportCompleteEventWithoutLog|11_0()
 		{
 			EventSystem.Instance.Emit<TeleportContext>(EEventName.TeleportComplete, this.TeleportContext);
 		}
 
-		// Token: 0x06031FE6 RID: 204774 RVA: 0x00B9BA2F File Offset: 0x00B99C2F
+		// Token: 0x06026D7C RID: 159100 RVA: 0x00ADFCFF File Offset: 0x00ADDEFF
+		[NullableContext(2)]
 		[CompilerGenerated]
-		internal static void <EmitTeleportChangeLocationEvent>g__EmitTeleportChangeLocationEventWithoutLog|17_0(Entity entity)
+		internal static void <EmitTeleportChangeLocationEvent>g__EmitTeleportChangeLocationEventWithoutLog|12_0(Entity entity)
 		{
 			if (entity != null)
 			{
@@ -831,111 +758,105 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FE7 RID: 204775 RVA: 0x00B9BA48 File Offset: 0x00B99C48
+		// Token: 0x06026D7D RID: 159101 RVA: 0x00ADFD18 File Offset: 0x00ADDF18
 		[CompilerGenerated]
-		private UniTask <CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|25_0()
+		private UniTask <CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|19_0()
 		{
-			TeleportCore.<<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|25_0>d <<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|25_0>d;
-			<<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|25_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
-			<<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|25_0>d.<>4__this = this;
-			<<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|25_0>d.<>1__state = -1;
-			<<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|25_0>d.<>t__builder.Start<TeleportCore.<<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|25_0>d>(ref <<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|25_0>d);
-			return <<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|25_0>d.<>t__builder.Task;
+			TeleportCore.<<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|19_0>d <<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|19_0>d;
+			<<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|19_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+			<<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|19_0>d.<>4__this = this;
+			<<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|19_0>d.<>1__state = -1;
+			<<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|19_0>d.<>t__builder.Start<TeleportCore.<<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|19_0>d>(ref <<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|19_0>d);
+			return <<CheckLiveLocationStreamingCompleted>g__CheckLiveLocationStreamingCompletedWithoutLog|19_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FE8 RID: 204776 RVA: 0x00B9BA8C File Offset: 0x00B99C8C
+		// Token: 0x06026D7E RID: 159102 RVA: 0x00ADFD5C File Offset: 0x00ADDF5C
 		[CompilerGenerated]
-		private UniTask <WaitServerResponse>g__WaitServerResponseWithoutLog|26_0()
+		private UniTask <WaitServerResponse>g__WaitServerResponseWithoutLog|20_0()
 		{
-			TeleportCore.<<WaitServerResponse>g__WaitServerResponseWithoutLog|26_0>d <<WaitServerResponse>g__WaitServerResponseWithoutLog|26_0>d;
-			<<WaitServerResponse>g__WaitServerResponseWithoutLog|26_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
-			<<WaitServerResponse>g__WaitServerResponseWithoutLog|26_0>d.<>4__this = this;
-			<<WaitServerResponse>g__WaitServerResponseWithoutLog|26_0>d.<>1__state = -1;
-			<<WaitServerResponse>g__WaitServerResponseWithoutLog|26_0>d.<>t__builder.Start<TeleportCore.<<WaitServerResponse>g__WaitServerResponseWithoutLog|26_0>d>(ref <<WaitServerResponse>g__WaitServerResponseWithoutLog|26_0>d);
-			return <<WaitServerResponse>g__WaitServerResponseWithoutLog|26_0>d.<>t__builder.Task;
+			TeleportCore.<<WaitServerResponse>g__WaitServerResponseWithoutLog|20_0>d <<WaitServerResponse>g__WaitServerResponseWithoutLog|20_0>d;
+			<<WaitServerResponse>g__WaitServerResponseWithoutLog|20_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+			<<WaitServerResponse>g__WaitServerResponseWithoutLog|20_0>d.<>4__this = this;
+			<<WaitServerResponse>g__WaitServerResponseWithoutLog|20_0>d.<>1__state = -1;
+			<<WaitServerResponse>g__WaitServerResponseWithoutLog|20_0>d.<>t__builder.Start<TeleportCore.<<WaitServerResponse>g__WaitServerResponseWithoutLog|20_0>d>(ref <<WaitServerResponse>g__WaitServerResponseWithoutLog|20_0>d);
+			return <<WaitServerResponse>g__WaitServerResponseWithoutLog|20_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FEA RID: 204778 RVA: 0x00B9BAE4 File Offset: 0x00B99CE4
+		// Token: 0x06026D80 RID: 159104 RVA: 0x00ADFDB4 File Offset: 0x00ADDFB4
 		[CompilerGenerated]
-		internal static UniTask <PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|28_0()
+		internal static UniTask <PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|22_0()
 		{
-			TeleportCore.<<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|28_0>d <<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|28_0>d;
-			<<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|28_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
-			<<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|28_0>d.<>1__state = -1;
-			<<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|28_0>d.<>t__builder.Start<TeleportCore.<<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|28_0>d>(ref <<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|28_0>d);
-			return <<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|28_0>d.<>t__builder.Task;
+			TeleportCore.<<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|22_0>d <<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|22_0>d;
+			<<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|22_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+			<<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|22_0>d.<>1__state = -1;
+			<<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|22_0>d.<>t__builder.Start<TeleportCore.<<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|22_0>d>(ref <<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|22_0>d);
+			return <<PreAwakeEntitiesFromPending>g__PreAwakeEntitiesFromPendingWithoutLog|22_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FEB RID: 204779 RVA: 0x00B9BB20 File Offset: 0x00B99D20
+		// Token: 0x06026D81 RID: 159105 RVA: 0x00ADFDF0 File Offset: 0x00ADDFF0
 		[CompilerGenerated]
-		private UniTask <WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|29_0()
+		private UniTask <WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|23_0()
 		{
-			TeleportCore.<<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|29_0>d <<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|29_0>d;
-			<<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|29_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
-			<<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|29_0>d.<>4__this = this;
-			<<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|29_0>d.<>1__state = -1;
-			<<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|29_0>d.<>t__builder.Start<TeleportCore.<<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|29_0>d>(ref <<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|29_0>d);
-			return <<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|29_0>d.<>t__builder.Task;
+			TeleportCore.<<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|23_0>d <<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|23_0>d;
+			<<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|23_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+			<<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|23_0>d.<>4__this = this;
+			<<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|23_0>d.<>1__state = -1;
+			<<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|23_0>d.<>t__builder.Start<TeleportCore.<<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|23_0>d>(ref <<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|23_0>d);
+			return <<WaitRenderAssetsStreamingCompleted>g__WaitRenderAssetsStreamingCompletedWithoutLog|23_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FEC RID: 204780 RVA: 0x00B9BB64 File Offset: 0x00B99D64
+		// Token: 0x06026D82 RID: 159106 RVA: 0x00ADFE34 File Offset: 0x00ADE034
 		[CompilerGenerated]
-		internal static UniTask <WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|30_0()
+		internal static UniTask <WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|24_0()
 		{
-			TeleportCore.<<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|30_0>d <<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|30_0>d;
-			<<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|30_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
-			<<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|30_0>d.<>1__state = -1;
-			<<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|30_0>d.<>t__builder.Start<TeleportCore.<<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|30_0>d>(ref <<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|30_0>d);
-			return <<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|30_0>d.<>t__builder.Task;
+			TeleportCore.<<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|24_0>d <<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|24_0>d;
+			<<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|24_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+			<<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|24_0>d.<>1__state = -1;
+			<<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|24_0>d.<>t__builder.Start<TeleportCore.<<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|24_0>d>(ref <<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|24_0>d);
+			return <<WaitTeamLoaded>g__WaitTeamLoadedWithoutLog|24_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FED RID: 204781 RVA: 0x00B9BBA0 File Offset: 0x00B99DA0
+		// Token: 0x06026D83 RID: 159107 RVA: 0x00ADFE70 File Offset: 0x00ADE070
 		[CompilerGenerated]
-		private UniTask <HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|31_0()
+		private UniTask <HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|25_0()
 		{
-			TeleportCore.<<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|31_0>d <<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|31_0>d;
-			<<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|31_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
-			<<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|31_0>d.<>4__this = this;
-			<<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|31_0>d.<>1__state = -1;
-			<<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|31_0>d.<>t__builder.Start<TeleportCore.<<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|31_0>d>(ref <<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|31_0>d);
-			return <<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|31_0>d.<>t__builder.Task;
+			TeleportCore.<<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|25_0>d <<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|25_0>d;
+			<<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|25_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+			<<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|25_0>d.<>4__this = this;
+			<<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|25_0>d.<>1__state = -1;
+			<<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|25_0>d.<>t__builder.Start<TeleportCore.<<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|25_0>d>(ref <<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|25_0>d);
+			return <<HandleTakeVehicleDuringTeleport>g__HandleTakeVehicleDuringTeleportWithoutLog|25_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FEE RID: 204782 RVA: 0x00B9BBE4 File Offset: 0x00B99DE4
+		// Token: 0x06026D84 RID: 159108 RVA: 0x00ADFEB4 File Offset: 0x00ADE0B4
 		[CompilerGenerated]
-		private UniTask <WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|32_0()
+		private UniTask <WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|26_0()
 		{
-			TeleportCore.<<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|32_0>d <<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|32_0>d;
-			<<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|32_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
-			<<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|32_0>d.<>4__this = this;
-			<<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|32_0>d.<>1__state = -1;
-			<<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|32_0>d.<>t__builder.Start<TeleportCore.<<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|32_0>d>(ref <<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|32_0>d);
-			return <<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|32_0>d.<>t__builder.Task;
+			TeleportCore.<<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|26_0>d <<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|26_0>d;
+			<<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|26_0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+			<<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|26_0>d.<>4__this = this;
+			<<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|26_0>d.<>1__state = -1;
+			<<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|26_0>d.<>t__builder.Start<TeleportCore.<<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|26_0>d>(ref <<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|26_0>d);
+			return <<WaitRollbackCompleted>g__WaitRollbackCompletedWithoutLog|26_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FF0 RID: 204784 RVA: 0x00B9BC3F File Offset: 0x00B99E3F
+		// Token: 0x06026D86 RID: 159110 RVA: 0x00ADFF0F File Offset: 0x00ADE10F
 		[CompilerGenerated]
-		internal static void <HandleTimeDilationBeforeTeleport>g__HandleTimeDilationBeforeTeleportWithoutLog|33_0()
+		internal static void <HandleTimeDilationBeforeTeleport>g__HandleTimeDilationBeforeTeleportWithoutLog|27_0()
 		{
 			GameModeController.Instance.ForceDisableGamePaused(true);
 		}
 
-		// Token: 0x06031FF1 RID: 204785 RVA: 0x00B9BC4C File Offset: 0x00B99E4C
+		// Token: 0x06026D87 RID: 159111 RVA: 0x00ADFF1C File Offset: 0x00ADE11C
 		[CompilerGenerated]
-		internal static void <HandleTimeDilationAfterTeleport>g__HandleTimeDilationAfterTeleportWithoutLog|34_0()
+		internal static void <HandleTimeDilationAfterTeleport>g__HandleTimeDilationAfterTeleportWithoutLog|28_0()
 		{
 			GameModeController.Instance.ForceDisableGamePaused(false);
 			CommonQteController.Instance.RecoverTimeDilationAfterTeleport();
 			QtaController.Instance.RecoverTimeDilationAfterTeleport();
 		}
 
-		// Token: 0x0401AA4B RID: 109131
+		// Token: 0x040153A3 RID: 86947
 		private const int DELAYCLOSETIME = 1500;
-
-		// Token: 0x0401AA4C RID: 109132
-		private float MotionBlurCache;
-
-		// Token: 0x0401AA4D RID: 109133
-		private EntityHandle FrozenEntityHandle;
 	}
 }

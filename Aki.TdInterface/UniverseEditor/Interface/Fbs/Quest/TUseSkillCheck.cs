@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200432F RID: 17199
+	// Token: 0x02004791 RID: 18321
 	public enum TUseSkillCheck : byte
 	{
-		// Token: 0x0400C0F8 RID: 49400
+		// Token: 0x0400CB16 RID: 51990
 		NONE,
-		// Token: 0x0400C0F9 RID: 49401
+		// Token: 0x0400CB17 RID: 51991
 		IUseSkillCheckByFollowShooterSkillId,
-		// Token: 0x0400C0FA RID: 49402
+		// Token: 0x0400CB18 RID: 51992
 		IUseSkillCheckBySkillGenre,
-		// Token: 0x0400C0FB RID: 49403
+		// Token: 0x0400CB19 RID: 51993
 		IUseSkillCheckBySkillId,
-		// Token: 0x0400C0FC RID: 49404
+		// Token: 0x0400CB1A RID: 51994
 		IUseSkillCheckByVisionShowId,
-		// Token: 0x0400C0FD RID: 49405
+		// Token: 0x0400CB1B RID: 51995
 		IUseSkillCheckByVisionSummonId
 	}
 }

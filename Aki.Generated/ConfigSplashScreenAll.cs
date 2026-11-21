@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000970 RID: 2416
+	// Token: 0x02000A45 RID: 2629
 	public class ConfigSplashScreenAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060038B4 RID: 14516 RVA: 0x0019A344 File Offset: 0x00198544
+		// Token: 0x06003DB2 RID: 15794 RVA: 0x001B96D8 File Offset: 0x001B78D8
 		static ConfigSplashScreenAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSplashScreenAll.CreateStaticDefaultValue), new Action(ConfigSplashScreenAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060038B5 RID: 14517 RVA: 0x0019A364 File Offset: 0x00198564
+		// Token: 0x06003DB3 RID: 15795 RVA: 0x001B96F8 File Offset: 0x001B78F8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSplashScreenAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060038B6 RID: 14518 RVA: 0x0019A3E3 File Offset: 0x001985E3
+		// Token: 0x06003DB4 RID: 15796 RVA: 0x001B9777 File Offset: 0x001B7977
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSplashScreenAll.LogPair = null;
 			ConfigSplashScreenAll.HandleId = 0;
 		}
 
-		// Token: 0x060038B7 RID: 14519 RVA: 0x0019A3F1 File Offset: 0x001985F1
+		// Token: 0x06003DB5 RID: 15797 RVA: 0x001B9785 File Offset: 0x001B7985
 		public static void Init()
 		{
 			ConfigSplashScreenAll.HandleId = ConfigCommon.InitDataStatement(ConfigSplashScreenAll.HandleId, "db_splashscreen.db", "select BinData from `SplashScreen`");
 		}
 
-		// Token: 0x060038B8 RID: 14520 RVA: 0x0019A40C File Offset: 0x0019860C
+		// Token: 0x06003DB6 RID: 15798 RVA: 0x001B97A0 File Offset: 0x001B79A0
 		[NullableContext(2)]
 		public static IReadOnlyList<SplashScreen> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040041F6 RID: 16886
+		// Token: 0x040047C9 RID: 18377
 		private const string DB = "db_splashscreen.db";
 
-		// Token: 0x040041F7 RID: 16887
+		// Token: 0x040047CA RID: 18378
 		private const string FILE = "k.开屏动画.xlsx";
 
-		// Token: 0x040041F8 RID: 16888
+		// Token: 0x040047CB RID: 18379
 		private const string TABLE = "SplashScreen";
 
-		// Token: 0x040041F9 RID: 16889
+		// Token: 0x040047CC RID: 18380
 		private const string COMMAND = "select BinData from `SplashScreen`";
 
-		// Token: 0x040041FA RID: 16890
+		// Token: 0x040047CD RID: 18381
 		private const string KEY_PREFIX = "SplashScreenAll";
 
-		// Token: 0x040041FB RID: 16891
+		// Token: 0x040047CE RID: 18382
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040041FC RID: 16892
+		// Token: 0x040047CF RID: 18383
 		private static int HandleId;
 	}
 }

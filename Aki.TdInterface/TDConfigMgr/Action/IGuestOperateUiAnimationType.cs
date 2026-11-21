@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AE5 RID: 6885
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C8C RID: 7308
 	public class IGuestOperateUiAnimationType
 	{
-		// Token: 0x0600938A RID: 37770 RVA: 0x00156524 File Offset: 0x00154724
+		// Token: 0x06009B48 RID: 39752 RVA: 0x00166D44 File Offset: 0x00164F44
 		private IGuestOperateUiAnimationType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600938B RID: 37771 RVA: 0x0015655C File Offset: 0x0015475C
+		// Token: 0x06009B49 RID: 39753 RVA: 0x00166D7C File Offset: 0x00164F7C
 		public static IGuestOperateUiAnimationType Create([Nullable(2)] IGuestOperateUiAnimationType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600938C RID: 37772 RVA: 0x0015656F File Offset: 0x0015476F
+		// Token: 0x06009B4A RID: 39754 RVA: 0x00166D8F File Offset: 0x00164F8F
 		public static IGuestOperateUiAnimationType CreateFromSetValue([Nullable(2)] IGuestOperateUiAnimationType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600938D RID: 37773 RVA: 0x00156582 File Offset: 0x00154782
+		// Token: 0x06009B4B RID: 39755 RVA: 0x00166DA2 File Offset: 0x00164FA2
 		public IGuestOperateUiAnimationType_SetValue ToSetValue()
 		{
 			return new IGuestOperateUiAnimationType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EC3 RID: 11971
-		// (get) Token: 0x0600938E RID: 37774 RVA: 0x00156595 File Offset: 0x00154795
-		// (set) Token: 0x0600938F RID: 37775 RVA: 0x001565C0 File Offset: 0x001547C0
+		// Token: 0x170030DF RID: 12511
+		// (get) Token: 0x06009B4C RID: 39756 RVA: 0x00166DB5 File Offset: 0x00164FB5
+		// (set) Token: 0x06009B4D RID: 39757 RVA: 0x00166DE0 File Offset: 0x00164FE0
 		public virtual EGuestOperateUiAnimation Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AA6 RID: 23206
+		// Token: 0x04005F30 RID: 24368
 		[Nullable(2)]
 		protected IGuestOperateUiAnimationType FbInstance;
 
-		// Token: 0x04005AA7 RID: 23207
+		// Token: 0x04005F31 RID: 24369
 		[Nullable(2)]
 		protected IGuestOperateUiAnimationType_SetValue PocoInterface;
 	}

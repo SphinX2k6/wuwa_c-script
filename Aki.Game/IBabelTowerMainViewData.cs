@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001141 RID: 4417
+// Token: 0x020005F5 RID: 1525
 public interface IBabelTowerMainViewData
 {
-	// Token: 0x17000A21 RID: 2593
-	// (get) Token: 0x0600741E RID: 29726
-	// (set) Token: 0x0600741F RID: 29727
+	// Token: 0x17000A41 RID: 2625
+	// (get) Token: 0x060047B5 RID: 18357
+	// (set) Token: 0x060047B6 RID: 18358
 	bool IfLeaveInstanceDungeonWhenClose { get; set; }
 }

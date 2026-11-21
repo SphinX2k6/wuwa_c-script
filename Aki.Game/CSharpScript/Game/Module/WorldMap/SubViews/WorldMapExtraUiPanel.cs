@@ -9,98 +9,98 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews
 {
-	// Token: 0x020047C4 RID: 18372
+	// Token: 0x020036F5 RID: 14069
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapExtraUiPanel : UiPanelBase
 	{
-		// Token: 0x060301F9 RID: 197113 RVA: 0x00B278DC File Offset: 0x00B25ADC
+		// Token: 0x060249C9 RID: 149961 RVA: 0x00A576E8 File Offset: 0x00A558E8
 		public WorldMapExtraUiPanel(EWorldMapExtraUiPanelName panelName, WorldMapExtraUiPanelComponent extraUiPanelComponent)
 		{
 			this.PanelName = panelName;
 			this.ExtraUiPanelComponent = extraUiPanelComponent;
 		}
 
-		// Token: 0x060301FA RID: 197114 RVA: 0x00B2790B File Offset: 0x00B25B0B
+		// Token: 0x060249CA RID: 149962 RVA: 0x00A57717 File Offset: 0x00A55917
 		[NullableContext(2)]
 		public virtual UUISliderComponent GetScaleSlider()
 		{
 			return null;
 		}
 
-		// Token: 0x060301FB RID: 197115 RVA: 0x00B2790E File Offset: 0x00B25B0E
+		// Token: 0x060249CB RID: 149963 RVA: 0x00A5771A File Offset: 0x00A5591A
 		[NullableContext(2)]
 		public virtual void OnHandleShowParam(object param = null)
 		{
 		}
 
-		// Token: 0x060301FC RID: 197116 RVA: 0x00B27910 File Offset: 0x00B25B10
+		// Token: 0x060249CC RID: 149964 RVA: 0x00A5771C File Offset: 0x00A5591C
 		public virtual bool OnClickEmpty(Vector2D clickedPosition)
 		{
 			return false;
 		}
 
-		// Token: 0x060301FD RID: 197117 RVA: 0x00B27913 File Offset: 0x00B25B13
+		// Token: 0x060249CD RID: 149965 RVA: 0x00A5771F File Offset: 0x00A5591F
 		public virtual ClickMarkItemRet OnClickMarkItem(MarkItem clickedItem)
 		{
 			return this.ClickMarkItemRetData;
 		}
 
-		// Token: 0x060301FE RID: 197118 RVA: 0x00B2791B File Offset: 0x00B25B1B
+		// Token: 0x060249CE RID: 149966 RVA: 0x00A57727 File Offset: 0x00A55927
 		public virtual bool OnClickMarks(List<MarkItem> clickedItems, Vector2D clickedPosition)
 		{
 			return false;
 		}
 
-		// Token: 0x060301FF RID: 197119 RVA: 0x00B27920 File Offset: 0x00B25B20
+		// Token: 0x060249CF RID: 149967 RVA: 0x00A5772C File Offset: 0x00A5592C
 		public virtual int? GetCustomClickRange()
 		{
 			return null;
 		}
 
-		// Token: 0x06030200 RID: 197120 RVA: 0x00B27936 File Offset: 0x00B25B36
+		// Token: 0x060249D0 RID: 149968 RVA: 0x00A57742 File Offset: 0x00A55942
 		public virtual bool GetIsEnableMapScale()
 		{
 			return true;
 		}
 
-		// Token: 0x06030201 RID: 197121 RVA: 0x00B27939 File Offset: 0x00B25B39
+		// Token: 0x060249D1 RID: 149969 RVA: 0x00A57745 File Offset: 0x00A55945
 		public virtual bool GetIsEnableMapCursorButton()
 		{
 			return true;
 		}
 
-		// Token: 0x06030202 RID: 197122 RVA: 0x00B2793C File Offset: 0x00B25B3C
+		// Token: 0x060249D2 RID: 149970 RVA: 0x00A57748 File Offset: 0x00A55948
 		public virtual bool OnPointerDrag(Vector2D delta)
 		{
 			return false;
 		}
 
-		// Token: 0x06030203 RID: 197123 RVA: 0x00B2793F File Offset: 0x00B25B3F
+		// Token: 0x060249D3 RID: 149971 RVA: 0x00A5774B File Offset: 0x00A5594B
 		protected void CloseMe()
 		{
 			this.ExtraUiPanelComponent.CloseUi(this);
 		}
 
-		// Token: 0x06030204 RID: 197124 RVA: 0x00B2794D File Offset: 0x00B25B4D
+		// Token: 0x060249D4 RID: 149972 RVA: 0x00A57759 File Offset: 0x00A55959
 		public virtual float GetDefaultMapScale()
 		{
 			return 0f;
 		}
 
-		// Token: 0x06030205 RID: 197125 RVA: 0x00B27954 File Offset: 0x00B25B54
+		// Token: 0x060249D5 RID: 149973 RVA: 0x00A57760 File Offset: 0x00A55960
 		public virtual float GetMaxMapScale()
 		{
 			return 0f;
 		}
 
-		// Token: 0x06030206 RID: 197126 RVA: 0x00B2795B File Offset: 0x00B25B5B
+		// Token: 0x060249D6 RID: 149974 RVA: 0x00A57767 File Offset: 0x00A55967
 		public virtual float GetMinMapScale()
 		{
 			return 0f;
 		}
 
-		// Token: 0x06030207 RID: 197127 RVA: 0x00B27962 File Offset: 0x00B25B62
+		// Token: 0x060249D7 RID: 149975 RVA: 0x00A5776E File Offset: 0x00A5596E
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -111,57 +111,57 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			return null;
 		}
 
-		// Token: 0x06030208 RID: 197128 RVA: 0x00B27965 File Offset: 0x00B25B65
+		// Token: 0x060249D8 RID: 149976 RVA: 0x00A57771 File Offset: 0x00A55971
 		public virtual bool GetIsShowPlayerMark()
 		{
 			return false;
 		}
 
-		// Token: 0x06030209 RID: 197129 RVA: 0x00B27968 File Offset: 0x00B25B68
+		// Token: 0x060249D9 RID: 149977 RVA: 0x00A57774 File Offset: 0x00A55974
 		public virtual EMarkType[] GetExtraMarkTypes()
 		{
 			return Array.Empty<EMarkType>();
 		}
 
-		// Token: 0x0603020A RID: 197130 RVA: 0x00B2796F File Offset: 0x00B25B6F
+		// Token: 0x060249DA RID: 149978 RVA: 0x00A5777B File Offset: 0x00A5597B
 		[NullableContext(2)]
 		public virtual int[] GetExtraMarkIds()
 		{
 			return null;
 		}
 
-		// Token: 0x0603020B RID: 197131 RVA: 0x00B27972 File Offset: 0x00B25B72
+		// Token: 0x060249DB RID: 149979 RVA: 0x00A5777E File Offset: 0x00A5597E
 		[NullableContext(2)]
 		public virtual int[] GetUnlockFogs()
 		{
 			return null;
 		}
 
-		// Token: 0x0603020C RID: 197132 RVA: 0x00B27975 File Offset: 0x00B25B75
+		// Token: 0x060249DC RID: 149980 RVA: 0x00A57781 File Offset: 0x00A55981
 		public virtual bool GetIsShowAreaMarkProgress()
 		{
 			return false;
 		}
 
-		// Token: 0x0603020D RID: 197133 RVA: 0x00B27978 File Offset: 0x00B25B78
+		// Token: 0x060249DD RID: 149981 RVA: 0x00A57784 File Offset: 0x00A55984
 		public virtual bool GetIsCanAutoPilotTrack()
 		{
 			return false;
 		}
 
-		// Token: 0x0603020E RID: 197134 RVA: 0x00B2797B File Offset: 0x00B25B7B
+		// Token: 0x060249DE RID: 149982 RVA: 0x00A57787 File Offset: 0x00A55987
 		public virtual bool GetIsMapRangeVisible()
 		{
 			return false;
 		}
 
-		// Token: 0x0603020F RID: 197135 RVA: 0x00B2797E File Offset: 0x00B25B7E
+		// Token: 0x060249DF RID: 149983 RVA: 0x00A5778A File Offset: 0x00A5598A
 		public virtual bool GetIsMultiMapVisible()
 		{
 			return false;
 		}
 
-		// Token: 0x06030210 RID: 197136 RVA: 0x00B27984 File Offset: 0x00B25B84
+		// Token: 0x060249E0 RID: 149984 RVA: 0x00A57790 File Offset: 0x00A55990
 		[return: TupleElementNames(new string[]
 		{
 			"ResourceId",
@@ -178,27 +178,27 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			return null;
 		}
 
-		// Token: 0x06030211 RID: 197137 RVA: 0x00B2799A File Offset: 0x00B25B9A
+		// Token: 0x060249E1 RID: 149985 RVA: 0x00A577A6 File Offset: 0x00A559A6
 		[NullableContext(2)]
 		public virtual string GetBackgroundMusicAudioEvent()
 		{
 			return null;
 		}
 
-		// Token: 0x06030212 RID: 197138 RVA: 0x00B2799D File Offset: 0x00B25B9D
+		// Token: 0x060249E2 RID: 149986 RVA: 0x00A577A9 File Offset: 0x00A559A9
 		[NullableContext(2)]
 		public virtual void SetOpenParam(object openParam)
 		{
 			this.OpenParam = openParam;
 		}
 
-		// Token: 0x04019EDA RID: 106202
+		// Token: 0x0401458B RID: 83339
 		public readonly EWorldMapExtraUiPanelName PanelName;
 
-		// Token: 0x04019EDB RID: 106203
+		// Token: 0x0401458C RID: 83340
 		public readonly WorldMapExtraUiPanelComponent ExtraUiPanelComponent;
 
-		// Token: 0x04019EDC RID: 106204
+		// Token: 0x0401458D RID: 83341
 		protected readonly ClickMarkItemRet ClickMarkItemRetData = new ClickMarkItemRet
 		{
 			IsExtraUiLogic = false,

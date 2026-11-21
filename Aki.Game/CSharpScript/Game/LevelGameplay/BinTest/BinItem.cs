@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.BinTest
 {
-	// Token: 0x02006F3E RID: 28478
+	// Token: 0x020060BF RID: 24767
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BinItem
 	{
-		// Token: 0x0604549D RID: 283805 RVA: 0x011253C4 File Offset: 0x011235C4
+		// Token: 0x0603B64B RID: 243275 RVA: 0x010CF370 File Offset: 0x010CD570
 		public void Init(string path)
 		{
 			ResourceSystem.Instance.LoadAsync<UClass>(path, delegate([Nullable(2)] UClass result, string _)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.BinTest
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x0604549E RID: 283806 RVA: 0x0112540C File Offset: 0x0112360C
+		// Token: 0x0603B64C RID: 243276 RVA: 0x010CF3B8 File Offset: 0x010CD5B8
 		[NullableContext(2)]
 		private bool InitSplineAsset(UClass splineClass)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.LevelGamePlay.BinTest
 			return false;
 		}
 
-		// Token: 0x0604549F RID: 283807 RVA: 0x011254C0 File Offset: 0x011236C0
+		// Token: 0x0603B64D RID: 243277 RVA: 0x010CF46C File Offset: 0x010CD66C
 		private void TrapBound(int index, int count, double vertexX0, double vertexX1, BinSet binSet)
 		{
 			double num = vertexX0;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.LevelGamePlay.BinTest
 			binSet.Bins[index].EdgeSet[count].MaxX = num2;
 		}
 
-		// Token: 0x060454A0 RID: 283808 RVA: 0x01125568 File Offset: 0x01123768
+		// Token: 0x0603B64E RID: 243278 RVA: 0x010CF514 File Offset: 0x010CD714
 		public bool BinTest(IVector2D inputP)
 		{
 			Vector2D vector2D = new Vector2D(inputP.X, inputP.Y);
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.LevelGamePlay.BinTest
 			return flag;
 		}
 
-		// Token: 0x060454A1 RID: 283809 RVA: 0x011257A8 File Offset: 0x011239A8
+		// Token: 0x0603B64F RID: 243279 RVA: 0x010CF754 File Offset: 0x010CD954
 		private void BinSetup(List<Vector2D> polygon, int binNum, BinSet binSet)
 		{
 			int[] array = new int[binNum];
@@ -298,22 +298,22 @@ namespace CSharpScript.Game.LevelGamePlay.BinTest
 			}
 		}
 
-		// Token: 0x04024220 RID: 148000
+		// Token: 0x0401F4D5 RID: 128213
 		private const int TEST_AREA_COUNT = 30;
 
-		// Token: 0x04024221 RID: 148001
+		// Token: 0x0401F4D6 RID: 128214
 		public int MapId = -1;
 
-		// Token: 0x04024222 RID: 148002
+		// Token: 0x0401F4D7 RID: 128215
 		public int DungeonId = -1;
 
-		// Token: 0x04024223 RID: 148003
+		// Token: 0x0401F4D8 RID: 128216
 		public BinSet BinSet = new BinSet();
 
-		// Token: 0x04024224 RID: 148004
+		// Token: 0x0401F4D9 RID: 128217
 		public List<Vector2D> TestPoints = new List<Vector2D>();
 
-		// Token: 0x04024225 RID: 148005
+		// Token: 0x0401F4DA RID: 128218
 		[Nullable(2)]
 		public Action InitCallback;
 	}

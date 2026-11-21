@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006195 RID: 24981
+	// Token: 0x02006800 RID: 26624
 	public class IAppointedVehicleT
 	{
-		// Token: 0x1700BA38 RID: 47672
-		// (get) Token: 0x0602B074 RID: 176244 RVA: 0x005EF5CC File Offset: 0x005ED7CC
-		// (set) Token: 0x0602B075 RID: 176245 RVA: 0x005EF5D4 File Offset: 0x005ED7D4
+		// Token: 0x1700C3B6 RID: 50102
+		// (get) Token: 0x0602D7A5 RID: 186277 RVA: 0x00639E40 File Offset: 0x00638040
+		// (set) Token: 0x0602D7A6 RID: 186278 RVA: 0x00639E48 File Offset: 0x00638048
 		public ETargetVehicle Type { get; set; }
 
-		// Token: 0x1700BA39 RID: 47673
-		// (get) Token: 0x0602B076 RID: 176246 RVA: 0x005EF5DD File Offset: 0x005ED7DD
-		// (set) Token: 0x0602B077 RID: 176247 RVA: 0x005EF5E5 File Offset: 0x005ED7E5
+		// Token: 0x1700C3B7 RID: 50103
+		// (get) Token: 0x0602D7A7 RID: 186279 RVA: 0x00639E51 File Offset: 0x00638051
+		// (set) Token: 0x0602D7A8 RID: 186280 RVA: 0x00639E59 File Offset: 0x00638059
 		public int VehicleId { get; set; }
 
-		// Token: 0x0602B078 RID: 176248 RVA: 0x005EF5EE File Offset: 0x005ED7EE
+		// Token: 0x0602D7A9 RID: 186281 RVA: 0x00639E62 File Offset: 0x00638062
 		public IAppointedVehicleT()
 		{
 			this.Type = ETargetVehicle.Current;

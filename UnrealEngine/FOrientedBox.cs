@@ -7,7 +7,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000035 RID: 53
+	// Token: 0x0200001A RID: 26
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(60, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 60)]
@@ -15,13 +15,13 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 60)]
 	public struct FOrientedBox : IEquatable<FOrientedBox>, IEqualityOperators<FOrientedBox, FOrientedBox, bool>, IUnrealScriptStruct
 	{
-		// Token: 0x06000317 RID: 791 RVA: 0x00009774 File Offset: 0x00007974
+		// Token: 0x0600029C RID: 668 RVA: 0x00005FE0 File Offset: 0x000041E0
 		public FOrientedBox()
 		{
 			this = FOrientedBox.UnitBox;
 		}
 
-		// Token: 0x06000318 RID: 792 RVA: 0x00009784 File Offset: 0x00007984
+		// Token: 0x0600029D RID: 669 RVA: 0x00005FF0 File Offset: 0x000041F0
 		[NullableContext(1)]
 		public override readonly string ToString()
 		{
@@ -44,19 +44,19 @@ namespace UnrealEngine
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06000319 RID: 793 RVA: 0x00009860 File Offset: 0x00007A60
+		// Token: 0x0600029E RID: 670 RVA: 0x000060CC File Offset: 0x000042CC
 		public static bool operator ==(FOrientedBox left, FOrientedBox right)
 		{
 			return left.Center == right.Center && left.AxisX == right.AxisX && left.AxisY == right.AxisY && left.AxisZ == right.AxisZ && left.ExtentX == right.ExtentX && left.ExtentY == right.ExtentY && left.ExtentZ == right.ExtentZ;
 		}
 
-		// Token: 0x0600031A RID: 794 RVA: 0x000098E5 File Offset: 0x00007AE5
+		// Token: 0x0600029F RID: 671 RVA: 0x00006151 File Offset: 0x00004351
 		public static bool operator !=(FOrientedBox left, FOrientedBox right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x0600031B RID: 795 RVA: 0x000098F4 File Offset: 0x00007AF4
+		// Token: 0x060002A0 RID: 672 RVA: 0x00006160 File Offset: 0x00004360
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -68,35 +68,35 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x0600031C RID: 796 RVA: 0x0000991E File Offset: 0x00007B1E
+		// Token: 0x060002A1 RID: 673 RVA: 0x0000618A File Offset: 0x0000438A
 		public readonly bool Equals(FOrientedBox other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x0600031D RID: 797 RVA: 0x0000992C File Offset: 0x00007B2C
+		// Token: 0x060002A2 RID: 674 RVA: 0x00006198 File Offset: 0x00004398
 		public override readonly int GetHashCode()
 		{
 			return HashCode.Combine<FVector, FVector, FVector, FVector, float, float, float>(this.Center, this.AxisX, this.AxisY, this.AxisZ, this.ExtentX, this.ExtentY, this.ExtentZ);
 		}
 
-		// Token: 0x0600031E RID: 798
+		// Token: 0x060002A3 RID: 675
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_ContainsNaN(in FOrientedBox a);
 
-		// Token: 0x0600031F RID: 799
+		// Token: 0x060002A4 RID: 676
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern void Internal_CalcVertices_float(in FOrientedBox a, float* outVerts);
 
-		// Token: 0x06000320 RID: 800
+		// Token: 0x060002A5 RID: 677
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern bool Internal_CalcVertices(in FOrientedBox a, FVector* outVertices);
 
-		// Token: 0x06000321 RID: 801
+		// Token: 0x060002A6 RID: 678
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FFloatInterval Internal_Project(in FOrientedBox a, in FVector axis);
 
-		// Token: 0x06000322 RID: 802 RVA: 0x00009960 File Offset: 0x00007B60
+		// Token: 0x060002A7 RID: 679 RVA: 0x000061CC File Offset: 0x000043CC
 		public unsafe readonly bool ContainsNaN()
 		{
 			fixed (FOrientedBox* ptr = &this)
@@ -105,7 +105,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000323 RID: 803 RVA: 0x00009978 File Offset: 0x00007B78
+		// Token: 0x060002A8 RID: 680 RVA: 0x000061E4 File Offset: 0x000043E4
 		public unsafe readonly void CalcVertices(Span<float> verts)
 		{
 			if (verts.Length < 24)
@@ -122,7 +122,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000324 RID: 804 RVA: 0x000099BC File Offset: 0x00007BBC
+		// Token: 0x060002A9 RID: 681 RVA: 0x00006228 File Offset: 0x00004428
 		public unsafe readonly void CalcVertices(Span<FVector> verts)
 		{
 			if (verts.Length < 8)
@@ -139,7 +139,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000325 RID: 805 RVA: 0x00009A00 File Offset: 0x00007C00
+		// Token: 0x060002AA RID: 682 RVA: 0x0000626C File Offset: 0x0000446C
 		public unsafe readonly FFloatInterval Project(in FVector axis)
 		{
 			fixed (FOrientedBox* ptr = &this)
@@ -151,13 +151,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000326 RID: 806 RVA: 0x00009A1C File Offset: 0x00007C1C
+		// Token: 0x060002AB RID: 683 RVA: 0x00006288 File Offset: 0x00004488
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FOrientedBox._ScriptStructPtr != 0) ? FOrientedBox._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.OrientedBox", ref FOrientedBox._ScriptStructPtr);
 		}
 
-		// Token: 0x040000CE RID: 206
+		// Token: 0x04000087 RID: 135
 		public static readonly FOrientedBox UnitBox = new FOrientedBox
 		{
 			Center = FVector.ZeroVector,
@@ -169,38 +169,38 @@ namespace UnrealEngine
 			ExtentZ = 1f
 		};
 
-		// Token: 0x040000CF RID: 207
+		// Token: 0x04000088 RID: 136
 		[FieldOffset(0)]
 		public FVector Center;
 
-		// Token: 0x040000D0 RID: 208
+		// Token: 0x04000089 RID: 137
 		[FieldOffset(12)]
 		public FVector AxisX;
 
-		// Token: 0x040000D1 RID: 209
+		// Token: 0x0400008A RID: 138
 		[FieldOffset(24)]
 		public FVector AxisY;
 
-		// Token: 0x040000D2 RID: 210
+		// Token: 0x0400008B RID: 139
 		[FieldOffset(36)]
 		public FVector AxisZ;
 
-		// Token: 0x040000D3 RID: 211
+		// Token: 0x0400008C RID: 140
 		[FieldOffset(48)]
 		public float ExtentX;
 
-		// Token: 0x040000D4 RID: 212
+		// Token: 0x0400008D RID: 141
 		[FieldOffset(52)]
 		public float ExtentY;
 
-		// Token: 0x040000D5 RID: 213
+		// Token: 0x0400008E RID: 142
 		[FieldOffset(56)]
 		public float ExtentZ;
 
-		// Token: 0x040000D6 RID: 214
+		// Token: 0x0400008F RID: 143
 		public const string __ObjectPath = "/Script/CoreUObject.OrientedBox";
 
-		// Token: 0x040000D7 RID: 215
+		// Token: 0x04000090 RID: 144
 		private static IntPtr _ScriptStructPtr;
 	}
 }

@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072AA RID: 29354
+	// Token: 0x02006429 RID: 25641
 	public class OcclusionDitherData
 	{
-		// Token: 0x04025F5A RID: 155482
+		// Token: 0x0402122D RID: 135725
 		public float CurrentValue;
 
-		// Token: 0x04025F5B RID: 155483
+		// Token: 0x0402122E RID: 135726
 		public float TargetCameraDitherValue;
 
-		// Token: 0x04025F5C RID: 155484
+		// Token: 0x0402122F RID: 135727
 		public float TargetOcclusionDitherValue;
 
-		// Token: 0x04025F5D RID: 155485
+		// Token: 0x04021230 RID: 135728
 		public float InterpSpeed;
 	}
 }

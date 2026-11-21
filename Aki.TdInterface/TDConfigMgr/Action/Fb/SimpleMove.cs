@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025FD RID: 9725
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028BD RID: 10429
 	public class SimpleMove : ActionParams
 	{
-		// Token: 0x0600DA79 RID: 55929 RVA: 0x00208E5E File Offset: 0x0020705E
+		// Token: 0x0600E846 RID: 59462 RVA: 0x002255B2 File Offset: 0x002237B2
 		public static SimpleMove Create(ISimpleMove? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004041 RID: 16449
-		// (get) Token: 0x0600DA7A RID: 55930 RVA: 0x00208E7D File Offset: 0x0020707D
+		// Token: 0x1700437A RID: 17274
+		// (get) Token: 0x0600E847 RID: 59463 RVA: 0x002255D1 File Offset: 0x002237D1
 		public virtual int Who
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004042 RID: 16450
-		// (get) Token: 0x0600DA7B RID: 55931 RVA: 0x00208E8A File Offset: 0x0020708A
+		// Token: 0x1700437B RID: 17275
+		// (get) Token: 0x0600E848 RID: 59464 RVA: 0x002255DE File Offset: 0x002237DE
 		public virtual float UseTime
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004043 RID: 16451
-		// (get) Token: 0x0600DA7C RID: 55932 RVA: 0x00208E97 File Offset: 0x00207097
+		// Token: 0x1700437C RID: 17276
+		// (get) Token: 0x0600E849 RID: 59465 RVA: 0x002255EB File Offset: 0x002237EB
 		public virtual VectorInfo Pos
 		{
 			get
@@ -59,14 +57,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007953 RID: 31059
+		// Token: 0x04007FED RID: 32749
 		private ISimpleMove Instance;
 
-		// Token: 0x04007954 RID: 31060
+		// Token: 0x04007FEE RID: 32750
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x04007955 RID: 31061
+		// Token: 0x04007FEF RID: 32751
 		private bool _PosInited;
 	}
 }

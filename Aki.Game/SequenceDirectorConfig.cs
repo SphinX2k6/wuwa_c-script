@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction;
 using UnrealEngine;
 
-// Token: 0x0200348E RID: 13454
+// Token: 0x02002A02 RID: 10754
 [NullableContext(1)]
 [Nullable(0)]
 public class SequenceDirectorConfig
 {
-	// Token: 0x0601D33E RID: 119614 RVA: 0x00821A94 File Offset: 0x0081FC94
+	// Token: 0x0601B044 RID: 110660 RVA: 0x00848D30 File Offset: 0x00846F30
 	public SequenceDirectorConfig(SSceneInteractionSequence ueConfig, bool isLoopOverride = false, float playRateOverride = 0f, bool reverseOverride = false)
 	{
 		this.UeConfig = ueConfig;
@@ -17,8 +17,8 @@ public class SequenceDirectorConfig
 		this.ReverseOverride = ((!reverseOverride) ? ueConfig.Reverse : reverseOverride);
 	}
 
-	// Token: 0x17002876 RID: 10358
-	// (get) Token: 0x0601D33F RID: 119615 RVA: 0x00821AEB File Offset: 0x0081FCEB
+	// Token: 0x17002C13 RID: 11283
+	// (get) Token: 0x0601B045 RID: 110661 RVA: 0x00848D87 File Offset: 0x00846F87
 	public bool IsLoop
 	{
 		get
@@ -27,8 +27,8 @@ public class SequenceDirectorConfig
 		}
 	}
 
-	// Token: 0x17002877 RID: 10359
-	// (get) Token: 0x0601D340 RID: 119616 RVA: 0x00821AF3 File Offset: 0x0081FCF3
+	// Token: 0x17002C14 RID: 11284
+	// (get) Token: 0x0601B046 RID: 110662 RVA: 0x00848D8F File Offset: 0x00846F8F
 	public float PlayRate
 	{
 		get
@@ -37,8 +37,8 @@ public class SequenceDirectorConfig
 		}
 	}
 
-	// Token: 0x17002878 RID: 10360
-	// (get) Token: 0x0601D341 RID: 119617 RVA: 0x00821AFB File Offset: 0x0081FCFB
+	// Token: 0x17002C15 RID: 11285
+	// (get) Token: 0x0601B047 RID: 110663 RVA: 0x00848D97 File Offset: 0x00846F97
 	public bool Reverse
 	{
 		get
@@ -47,8 +47,8 @@ public class SequenceDirectorConfig
 		}
 	}
 
-	// Token: 0x17002879 RID: 10361
-	// (get) Token: 0x0601D342 RID: 119618 RVA: 0x00821B03 File Offset: 0x0081FD03
+	// Token: 0x17002C16 RID: 11286
+	// (get) Token: 0x0601B048 RID: 110664 RVA: 0x00848D9F File Offset: 0x00846F9F
 	[Nullable(2)]
 	public ULevelSequence Sequence
 	{
@@ -59,15 +59,15 @@ public class SequenceDirectorConfig
 		}
 	}
 
-	// Token: 0x0400E64E RID: 58958
+	// Token: 0x0400EB04 RID: 60164
 	public SSceneInteractionSequence UeConfig;
 
-	// Token: 0x0400E64F RID: 58959
+	// Token: 0x0400EB05 RID: 60165
 	public bool IsLoopOverride;
 
-	// Token: 0x0400E650 RID: 58960
+	// Token: 0x0400EB06 RID: 60166
 	public float PlayRateOverride;
 
-	// Token: 0x0400E651 RID: 58961
+	// Token: 0x0400EB07 RID: 60167
 	public bool ReverseOverride;
 }

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002100 RID: 8448
+	// Token: 0x02002361 RID: 9057
 	public class PerformSunSpiritGearRoundTrip_SetValue
 	{
-		// Token: 0x04006F4A RID: 28490
+		// Token: 0x0400757E RID: 30078
 		public ESunSpiritGearRoundTripType PerformType;
 
-		// Token: 0x04006F4B RID: 28491
+		// Token: 0x0400757F RID: 30079
 		public int SunSpiritGearId;
 	}
 }

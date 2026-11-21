@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040B0 RID: 16560
+	// Token: 0x020044F1 RID: 17649
 	public class IRogueAbilitySelectT
 	{
-		// Token: 0x170074E1 RID: 29921
-		// (get) Token: 0x060181F7 RID: 98807 RVA: 0x0037A462 File Offset: 0x00378662
-		// (set) Token: 0x060181F8 RID: 98808 RVA: 0x0037A46A File Offset: 0x0037866A
+		// Token: 0x17007AE7 RID: 31463
+		// (get) Token: 0x06019898 RID: 104600 RVA: 0x003A43B2 File Offset: 0x003A25B2
+		// (set) Token: 0x06019899 RID: 104601 RVA: 0x003A43BA File Offset: 0x003A25BA
 		public EShowUiType Type { get; set; }
 
-		// Token: 0x170074E2 RID: 29922
-		// (get) Token: 0x060181F9 RID: 98809 RVA: 0x0037A473 File Offset: 0x00378673
-		// (set) Token: 0x060181FA RID: 98810 RVA: 0x0037A47B File Offset: 0x0037867B
+		// Token: 0x17007AE8 RID: 31464
+		// (get) Token: 0x0601989A RID: 104602 RVA: 0x003A43C3 File Offset: 0x003A25C3
+		// (set) Token: 0x0601989B RID: 104603 RVA: 0x003A43CB File Offset: 0x003A25CB
 		public ERogueAbilityType AbilityType { get; set; }
 
-		// Token: 0x170074E3 RID: 29923
-		// (get) Token: 0x060181FB RID: 98811 RVA: 0x0037A484 File Offset: 0x00378684
-		// (set) Token: 0x060181FC RID: 98812 RVA: 0x0037A48C File Offset: 0x0037868C
+		// Token: 0x17007AE9 RID: 31465
+		// (get) Token: 0x0601989C RID: 104604 RVA: 0x003A43D4 File Offset: 0x003A25D4
+		// (set) Token: 0x0601989D RID: 104605 RVA: 0x003A43DC File Offset: 0x003A25DC
 		public int BindId { get; set; }
 
-		// Token: 0x060181FD RID: 98813 RVA: 0x0037A495 File Offset: 0x00378695
+		// Token: 0x0601989E RID: 104606 RVA: 0x003A43E5 File Offset: 0x003A25E5
 		public IRogueAbilitySelectT()
 		{
 			this.Type = EShowUiType.All;

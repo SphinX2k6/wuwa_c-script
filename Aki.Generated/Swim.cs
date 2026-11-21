@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200110F RID: 4367
+	// Token: 0x02001245 RID: 4677
 	public struct Swim : IFlatbufferObject
 	{
-		// Token: 0x1700397F RID: 14719
-		// (get) Token: 0x0600DC68 RID: 56424 RVA: 0x00328730 File Offset: 0x00326930
+		// Token: 0x17003CD5 RID: 15573
+		// (get) Token: 0x0600E9B3 RID: 59827 RVA: 0x003538C0 File Offset: 0x00351AC0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DC69 RID: 56425 RVA: 0x0032873D File Offset: 0x0032693D
+		// Token: 0x0600E9B4 RID: 59828 RVA: 0x003538CD File Offset: 0x00351ACD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DC6A RID: 56426 RVA: 0x00328744 File Offset: 0x00326944
+		// Token: 0x0600E9B5 RID: 59829 RVA: 0x003538D4 File Offset: 0x00351AD4
 		public static Swim GetRootAsSwim(ByteBuffer _bb)
 		{
 			return Swim.GetRootAsSwim(_bb, default(Swim));
 		}
 
-		// Token: 0x0600DC6B RID: 56427 RVA: 0x00328760 File Offset: 0x00326960
+		// Token: 0x0600E9B6 RID: 59830 RVA: 0x003538F0 File Offset: 0x00351AF0
 		public static Swim GetRootAsSwim(ByteBuffer _bb, Swim obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DC6C RID: 56428 RVA: 0x0032877D File Offset: 0x0032697D
+		// Token: 0x0600E9B7 RID: 59831 RVA: 0x0035390D File Offset: 0x00351B0D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DC6D RID: 56429 RVA: 0x0032878C File Offset: 0x0032698C
+		// Token: 0x0600E9B8 RID: 59832 RVA: 0x0035391C File Offset: 0x00351B1C
 		public Swim __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003980 RID: 14720
-		// (get) Token: 0x0600DC6E RID: 56430 RVA: 0x0032879C File Offset: 0x0032699C
+		// Token: 0x17003CD6 RID: 15574
+		// (get) Token: 0x0600E9B9 RID: 59833 RVA: 0x0035392C File Offset: 0x00351B2C
 		public string Id
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DC6F RID: 56431 RVA: 0x003287D3 File Offset: 0x003269D3
+		// Token: 0x0600E9BA RID: 59834 RVA: 0x00353963 File Offset: 0x00351B63
 		public Span<byte> GetIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0600DC70 RID: 56432 RVA: 0x003287E2 File Offset: 0x003269E2
+		// Token: 0x0600E9BB RID: 59835 RVA: 0x00353972 File Offset: 0x00351B72
 		public byte[] GetIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003981 RID: 14721
-		// (get) Token: 0x0600DC71 RID: 56433 RVA: 0x003287FC File Offset: 0x003269FC
+		// Token: 0x17003CD7 RID: 15575
+		// (get) Token: 0x0600E9BC RID: 59836 RVA: 0x0035398C File Offset: 0x00351B8C
 		public float SprintZOffsetRate
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003982 RID: 14722
-		// (get) Token: 0x0600DC72 RID: 56434 RVA: 0x0032883C File Offset: 0x00326A3C
+		// Token: 0x17003CD8 RID: 15576
+		// (get) Token: 0x0600E9BD RID: 59837 RVA: 0x003539CC File Offset: 0x00351BCC
 		public float SprintZOffsetSpeed
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0400524C RID: 21068
+		// Token: 0x0400588F RID: 22671
 		private Table __p;
 	}
 }

@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x02000058 RID: 88
+// Token: 0x0200005A RID: 90
 public class ProxyLruConstants : IStaticVariableResetter
 {
-	// Token: 0x06000280 RID: 640 RVA: 0x0000DEDF File Offset: 0x0000C0DF
+	// Token: 0x060002BB RID: 699 RVA: 0x0000ECC7 File Offset: 0x0000CEC7
 	static ProxyLruConstants()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ProxyLruConstants.CreateStaticDefaultValue), new Action(ProxyLruConstants.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06000281 RID: 641 RVA: 0x0000DEFE File Offset: 0x0000C0FE
+	// Token: 0x060002BC RID: 700 RVA: 0x0000ECE6 File Offset: 0x0000CEE6
 	public static void CreateStaticDefaultValue()
 	{
 		ProxyLruConstants.ProxyLruEnable = true;
 	}
 
-	// Token: 0x06000282 RID: 642 RVA: 0x0000DF06 File Offset: 0x0000C106
+	// Token: 0x060002BD RID: 701 RVA: 0x0000ECEE File Offset: 0x0000CEEE
 	public static void ResetStaticDefaultValue()
 	{
 		ProxyLruConstants.ProxyLruEnable = true;
 	}
 
-	// Token: 0x040001E3 RID: 483
+	// Token: 0x040001F9 RID: 505
 	public static bool ProxyLruEnable;
 }

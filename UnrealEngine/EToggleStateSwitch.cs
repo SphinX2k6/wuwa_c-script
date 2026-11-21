@@ -4,24 +4,24 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FFC RID: 8188
+	// Token: 0x02000656 RID: 1622
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.EToggleStateSwitch")]
 	public enum EToggleStateSwitch : byte
 	{
-		// Token: 0x04010C3B RID: 68667
+		// Token: 0x04003E01 RID: 15873
 		None,
-		// Token: 0x04010C3C RID: 68668
+		// Token: 0x04003E02 RID: 15874
 		CheckedToUnChecked,
-		// Token: 0x04010C3D RID: 68669
+		// Token: 0x04003E03 RID: 15875
 		UnCheckedToChecked,
-		// Token: 0x04010C3E RID: 68670
+		// Token: 0x04003E04 RID: 15876
 		AnyToUnDetermined,
-		// Token: 0x04010C3F RID: 68671
+		// Token: 0x04003E05 RID: 15877
 		UnDeterminedToChecked,
-		// Token: 0x04010C40 RID: 68672
+		// Token: 0x04003E06 RID: 15878
 		UnDeterminedToUnChecked,
-		// Token: 0x04010C41 RID: 68673
+		// Token: 0x04003E07 RID: 15879
 		EToggleStateSwitch_MAX
 	}
 }

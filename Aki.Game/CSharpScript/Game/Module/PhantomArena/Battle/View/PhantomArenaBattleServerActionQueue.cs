@@ -10,18 +10,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 {
-	// Token: 0x0200524C RID: 21068
+	// Token: 0x0200421C RID: 16924
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleServerActionQueue
 	{
-		// Token: 0x06035D32 RID: 220466 RVA: 0x00CBBD14 File Offset: 0x00CB9F14
+		// Token: 0x0602AC2D RID: 175149 RVA: 0x00C093A4 File Offset: 0x00C075A4
 		public PhantomArenaBattleServerActionQueue(PhantomArenaBattleProxy proxy)
 		{
 			this.Proxy = proxy;
 		}
 
-		// Token: 0x06035D33 RID: 220467 RVA: 0x00CBBD30 File Offset: 0x00CB9F30
+		// Token: 0x0602AC2E RID: 175150 RVA: 0x00C093C0 File Offset: 0x00C075C0
 		public void PushFourTaskAction(PhantomBattleHandCardInfo data)
 		{
 			PhantomArenaBattleServerActionQueue.<>c__DisplayClass6_0 CS$<>8__locals1 = new PhantomArenaBattleServerActionQueue.<>c__DisplayClass6_0();
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.AddActionQueue(serverAction);
 		}
 
-		// Token: 0x06035D34 RID: 220468 RVA: 0x00CBBDA4 File Offset: 0x00CB9FA4
+		// Token: 0x0602AC2F RID: 175151 RVA: 0x00C09434 File Offset: 0x00C07634
 		public void PushChooseCardAction(PhantomBattleCardSelectEffectCtx data)
 		{
 			PhantomArenaBattleServerActionQueue.<>c__DisplayClass7_0 CS$<>8__locals1 = new PhantomArenaBattleServerActionQueue.<>c__DisplayClass7_0();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.AddActionQueue(serverAction);
 		}
 
-		// Token: 0x06035D35 RID: 220469 RVA: 0x00CBBE18 File Offset: 0x00CBA018
+		// Token: 0x0602AC30 RID: 175152 RVA: 0x00C094A8 File Offset: 0x00C076A8
 		public void PushDiscardCardAction(PhantomBattleDiscardCardNotify data)
 		{
 			PhantomArenaBattleServerActionQueue.<>c__DisplayClass8_0 CS$<>8__locals1 = new PhantomArenaBattleServerActionQueue.<>c__DisplayClass8_0();
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.AddActionQueue(serverAction);
 		}
 
-		// Token: 0x06035D36 RID: 220470 RVA: 0x00CBBE8C File Offset: 0x00CBA08C
+		// Token: 0x0602AC31 RID: 175153 RVA: 0x00C0951C File Offset: 0x00C0771C
 		public void PushReserveCardAction(PhantomBattleSelectReserveCardNotify data)
 		{
 			PhantomArenaBattleServerActionQueue.<>c__DisplayClass9_0 CS$<>8__locals1 = new PhantomArenaBattleServerActionQueue.<>c__DisplayClass9_0();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.AddActionQueue(serverAction);
 		}
 
-		// Token: 0x06035D37 RID: 220471 RVA: 0x00CBBF00 File Offset: 0x00CBA100
+		// Token: 0x0602AC32 RID: 175154 RVA: 0x00C09590 File Offset: 0x00C07790
 		public void PushBattleCallCardAction(PhantomBattleCallCardNotify data)
 		{
 			PhantomArenaBattleServerActionQueue.<>c__DisplayClass10_0 CS$<>8__locals1 = new PhantomArenaBattleServerActionQueue.<>c__DisplayClass10_0();
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.AddActionQueue(serverAction);
 		}
 
-		// Token: 0x06035D38 RID: 220472 RVA: 0x00CBBF74 File Offset: 0x00CBA174
+		// Token: 0x0602AC33 RID: 175155 RVA: 0x00C09604 File Offset: 0x00C07804
 		public void PushBattleCallCardShowAction(PhantomBattleSelectedCardFromType type, List<PhantomBattleFighterInfo> resultList)
 		{
 			PhantomArenaBattleServerActionQueue.<>c__DisplayClass11_0 CS$<>8__locals1 = new PhantomArenaBattleServerActionQueue.<>c__DisplayClass11_0();
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.AddActionQueue(serverAction);
 		}
 
-		// Token: 0x06035D39 RID: 220473 RVA: 0x00CBC05C File Offset: 0x00CBA25C
+		// Token: 0x0602AC34 RID: 175156 RVA: 0x00C096EC File Offset: 0x00C078EC
 		public void PushReconstructCardAction(PhantomBattleReconstructCardNotify data)
 		{
 			PhantomArenaBattleServerActionQueue.<>c__DisplayClass12_0 CS$<>8__locals1 = new PhantomArenaBattleServerActionQueue.<>c__DisplayClass12_0();
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.AddActionQueue(serverAction);
 		}
 
-		// Token: 0x06035D3A RID: 220474 RVA: 0x00CBC0D0 File Offset: 0x00CBA2D0
+		// Token: 0x0602AC35 RID: 175157 RVA: 0x00C09760 File Offset: 0x00C07960
 		public void PushTriggerPassiveSkillInteractAction(PhantomBattleSelectTargetEffectNotify data)
 		{
 			PhantomArenaBattleServerActionQueue.<>c__DisplayClass13_0 CS$<>8__locals1 = new PhantomArenaBattleServerActionQueue.<>c__DisplayClass13_0();
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.AddActionQueue(serverAction);
 		}
 
-		// Token: 0x06035D3B RID: 220475 RVA: 0x00CBC144 File Offset: 0x00CBA344
+		// Token: 0x0602AC36 RID: 175158 RVA: 0x00C097D4 File Offset: 0x00C079D4
 		public void PushSkillEffectAction()
 		{
 			global::Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "服务器推送技能效果行为,推送到行为队列中", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.AddActionQueue(serverAction);
 		}
 
-		// Token: 0x06035D3C RID: 220476 RVA: 0x00CBC1A4 File Offset: 0x00CBA3A4
+		// Token: 0x0602AC37 RID: 175159 RVA: 0x00C09834 File Offset: 0x00C07A34
 		public void PushFieldSkillEffectAction()
 		{
 			global::Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "推送领域技能效果行为,推送到行为队列中", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.AddActionQueue(serverAction);
 		}
 
-		// Token: 0x06035D3D RID: 220477 RVA: 0x00CBC204 File Offset: 0x00CBA404
+		// Token: 0x0602AC38 RID: 175160 RVA: 0x00C09894 File Offset: 0x00C07A94
 		public void PushCardDurableEmptyAction(PhantomBattleCardDurableEmptyNotify data)
 		{
 			PhantomArenaBattleServerActionQueue.<>c__DisplayClass16_0 CS$<>8__locals1 = new PhantomArenaBattleServerActionQueue.<>c__DisplayClass16_0();
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.AddActionQueue(serverAction);
 		}
 
-		// Token: 0x06035D3E RID: 220478 RVA: 0x00CBC298 File Offset: 0x00CBA498
+		// Token: 0x0602AC39 RID: 175161 RVA: 0x00C09928 File Offset: 0x00C07B28
 		public void PushCountSkillEffectAction(int cardId, int curEffectCount)
 		{
 			PhantomArenaBattleServerActionQueue.<>c__DisplayClass17_0 CS$<>8__locals1 = new PhantomArenaBattleServerActionQueue.<>c__DisplayClass17_0();
@@ -389,7 +389,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.AddActionQueue(serverAction3);
 		}
 
-		// Token: 0x06035D3F RID: 220479 RVA: 0x00CBC438 File Offset: 0x00CBA638
+		// Token: 0x0602AC3A RID: 175162 RVA: 0x00C09AC8 File Offset: 0x00C07CC8
 		public void PushBattleResultAction(PhantomBattleBoardSettleNotify data)
 		{
 			global::Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "服务器推送战斗结果行为,推送到行为队列中", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -411,14 +411,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.AddActionQueue(serverAction);
 		}
 
-		// Token: 0x06035D40 RID: 220480 RVA: 0x00CBC4A4 File Offset: 0x00CBA6A4
+		// Token: 0x0602AC3B RID: 175163 RVA: 0x00C09B34 File Offset: 0x00C07D34
 		public void PauseAction()
 		{
 			global::Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "执行服务器行为暂停", default(ReadOnlySpan<ValueTuple<string, object>>));
 			this.IsInPause = true;
 		}
 
-		// Token: 0x06035D41 RID: 220481 RVA: 0x00CBC4D8 File Offset: 0x00CBA6D8
+		// Token: 0x0602AC3C RID: 175164 RVA: 0x00C09B68 File Offset: 0x00C07D68
 		public UniTask ResumeAction()
 		{
 			PhantomArenaBattleServerActionQueue.<ResumeAction>d__20 <ResumeAction>d__;
@@ -429,13 +429,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <ResumeAction>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D42 RID: 220482 RVA: 0x00CBC51B File Offset: 0x00CBA71B
+		// Token: 0x0602AC3D RID: 175165 RVA: 0x00C09BAB File Offset: 0x00C07DAB
 		public bool InAction()
 		{
 			return this.IsInAction;
 		}
 
-		// Token: 0x06035D43 RID: 220483 RVA: 0x00CBC524 File Offset: 0x00CBA724
+		// Token: 0x0602AC3E RID: 175166 RVA: 0x00C09BB4 File Offset: 0x00C07DB4
 		public UniTask WaitHandleFinish()
 		{
 			PhantomArenaBattleServerActionQueue.<WaitHandleFinish>d__22 <WaitHandleFinish>d__;
@@ -446,7 +446,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <WaitHandleFinish>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D44 RID: 220484 RVA: 0x00CBC568 File Offset: 0x00CBA768
+		// Token: 0x0602AC3F RID: 175167 RVA: 0x00C09BF8 File Offset: 0x00C07DF8
 		protected UniTask HandleAction()
 		{
 			PhantomArenaBattleServerActionQueue.<HandleAction>d__23 <HandleAction>d__;
@@ -457,7 +457,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <HandleAction>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035D45 RID: 220485 RVA: 0x00CBC5AB File Offset: 0x00CBA7AB
+		// Token: 0x0602AC40 RID: 175168 RVA: 0x00C09C3B File Offset: 0x00C07E3B
 		protected void AddActionQueue(IServerAction serverAction)
 		{
 			if (this.HandleActionPromise == null)
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.HandleAction().Forget();
 		}
 
-		// Token: 0x06035D46 RID: 220486 RVA: 0x00CBC5D8 File Offset: 0x00CBA7D8
+		// Token: 0x0602AC41 RID: 175169 RVA: 0x00C09C68 File Offset: 0x00C07E68
 		protected void TryFinishGuide(int cardId, int? skillId = null)
 		{
 			PhantomArenaGuideCardSkillData phantomArenaGuideCardSkillData = new PhantomArenaGuideCardSkillData
@@ -485,20 +485,20 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			});
 		}
 
-		// Token: 0x0401C897 RID: 116887
+		// Token: 0x040172CC RID: 94924
 		protected Queue<IServerAction> ActionQueue = new Queue<IServerAction>(4);
 
-		// Token: 0x0401C898 RID: 116888
+		// Token: 0x040172CD RID: 94925
 		protected bool IsInAction;
 
-		// Token: 0x0401C899 RID: 116889
+		// Token: 0x040172CE RID: 94926
 		protected bool IsInPause;
 
-		// Token: 0x0401C89A RID: 116890
+		// Token: 0x040172CF RID: 94927
 		[Nullable(2)]
 		protected CustomPromise HandleActionPromise;
 
-		// Token: 0x0401C89B RID: 116891
+		// Token: 0x040172D0 RID: 94928
 		protected PhantomArenaBattleProxy Proxy;
 	}
 }

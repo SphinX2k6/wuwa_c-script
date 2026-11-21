@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056A2 RID: 22178
+	// Token: 0x02005C46 RID: 23622
 	public class IOnMoveWithSplineEndAttachTimingT
 	{
-		// Token: 0x1700A4EF RID: 42223
-		// (get) Token: 0x06025040 RID: 151616 RVA: 0x0051C96C File Offset: 0x0051AB6C
-		// (set) Token: 0x06025041 RID: 151617 RVA: 0x0051C974 File Offset: 0x0051AB74
+		// Token: 0x1700AD83 RID: 44419
+		// (get) Token: 0x06027295 RID: 160405 RVA: 0x0055D8B4 File Offset: 0x0055BAB4
+		// (set) Token: 0x06027296 RID: 160406 RVA: 0x0055D8BC File Offset: 0x0055BABC
 		public EAttachTimingType Type { get; set; }
 
-		// Token: 0x1700A4F0 RID: 42224
-		// (get) Token: 0x06025042 RID: 151618 RVA: 0x0051C97D File Offset: 0x0051AB7D
-		// (set) Token: 0x06025043 RID: 151619 RVA: 0x0051C985 File Offset: 0x0051AB85
+		// Token: 0x1700AD84 RID: 44420
+		// (get) Token: 0x06027297 RID: 160407 RVA: 0x0055D8C5 File Offset: 0x0055BAC5
+		// (set) Token: 0x06027298 RID: 160408 RVA: 0x0055D8CD File Offset: 0x0055BACD
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x06025044 RID: 151620 RVA: 0x0051C98E File Offset: 0x0051AB8E
+		// Token: 0x06027299 RID: 160409 RVA: 0x0055D8D6 File Offset: 0x0055BAD6
 		public IOnMoveWithSplineEndAttachTimingT()
 		{
 			this.Type = EAttachTimingType.Default;

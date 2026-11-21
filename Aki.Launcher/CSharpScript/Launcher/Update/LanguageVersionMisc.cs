@@ -8,48 +8,48 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Update
 {
-	// Token: 0x02000089 RID: 137
+	// Token: 0x0200008C RID: 140
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LanguageVersionMisc : AppVersionMisc
 	{
-		// Token: 0x060004EF RID: 1263 RVA: 0x0002F013 File Offset: 0x0002D213
+		// Token: 0x06000506 RID: 1286 RVA: 0x0003057B File Offset: 0x0002E77B
 		public LanguageVersionMisc(string languageCode)
 		{
 			this.LanguageCode = languageCode;
 		}
 
-		// Token: 0x060004F0 RID: 1264 RVA: 0x0002F02D File Offset: 0x0002D22D
+		// Token: 0x06000507 RID: 1287 RVA: 0x00030595 File Offset: 0x0002E795
 		protected override string GetUpdateVersionKey()
 		{
 			return "LanguageVersion_" + this.LanguageCode;
 		}
 
-		// Token: 0x060004F1 RID: 1265 RVA: 0x0002F03F File Offset: 0x0002D23F
+		// Token: 0x06000508 RID: 1288 RVA: 0x000305A7 File Offset: 0x0002E7A7
 		protected override string GetSaveUpdateVersionKey()
 		{
 			return "SavedLanguageVersion_" + this.LanguageCode;
 		}
 
-		// Token: 0x060004F2 RID: 1266 RVA: 0x0002F051 File Offset: 0x0002D251
+		// Token: 0x06000509 RID: 1289 RVA: 0x000305B9 File Offset: 0x0002E7B9
 		protected override string GetIndexFilePrefix()
 		{
 			return "PatchList_" + this.LanguageCode + "_";
 		}
 
-		// Token: 0x060004F3 RID: 1267 RVA: 0x0002F068 File Offset: 0x0002D268
+		// Token: 0x0600050A RID: 1290 RVA: 0x000305D0 File Offset: 0x0002E7D0
 		protected override string GetMountFileName()
 		{
 			return "Resource_" + this.LanguageCode + "_Mount.txt";
 		}
 
-		// Token: 0x060004F4 RID: 1268 RVA: 0x0002F07F File Offset: 0x0002D27F
+		// Token: 0x0600050B RID: 1291 RVA: 0x000305E7 File Offset: 0x0002E7E7
 		public override string GetResType()
 		{
 			return EResType.Resource.ToEnumString() + "_" + this.LanguageCode;
 		}
 
-		// Token: 0x060004F5 RID: 1269 RVA: 0x0002F098 File Offset: 0x0002D298
+		// Token: 0x0600050C RID: 1292 RVA: 0x00030600 File Offset: 0x0002E800
 		protected override string GetRemoteVersion()
 		{
 			if (!this.IsSetLangVersion)
@@ -76,7 +76,7 @@ namespace CSharpScript.Launcher.Update
 			return langVersion.Version;
 		}
 
-		// Token: 0x060004F6 RID: 1270 RVA: 0x0002F144 File Offset: 0x0002D344
+		// Token: 0x0600050D RID: 1293 RVA: 0x000306AC File Offset: 0x0002E8AC
 		protected override Dictionary<string, string> GetRemoteSha1Map()
 		{
 			if (!this.IsSetLangVersion)
@@ -103,20 +103,20 @@ namespace CSharpScript.Launcher.Update
 			return langVersion.IndexSha1;
 		}
 
-		// Token: 0x060004F7 RID: 1271 RVA: 0x0002F1F0 File Offset: 0x0002D3F0
+		// Token: 0x0600050E RID: 1294 RVA: 0x00030758 File Offset: 0x0002E958
 		public override void ClearAllPatchVersion(UObject worldContext)
 		{
 			base.ClearAllPatchVersion(worldContext);
 			LauncherStorageLib.Instance.DeleteDeviceSavedString(this.GetUseLanguageSaveKey());
 		}
 
-		// Token: 0x060004F8 RID: 1272 RVA: 0x0002F20A File Offset: 0x0002D40A
+		// Token: 0x0600050F RID: 1295 RVA: 0x00030772 File Offset: 0x0002E972
 		public bool HasMountFile()
 		{
 			return UBlueprintPathsLibrary.FileExists(base.GetMountFilePath());
 		}
 
-		// Token: 0x060004F9 RID: 1273 RVA: 0x0002F218 File Offset: 0x0002D418
+		// Token: 0x06000510 RID: 1296 RVA: 0x00030780 File Offset: 0x0002E980
 		[NullableContext(0)]
 		public ValueTuple<long, long> CalculateLocalSize()
 		{
@@ -181,7 +181,7 @@ namespace CSharpScript.Launcher.Update
 			return new ValueTuple<long, long>(num, num2);
 		}
 
-		// Token: 0x060004FA RID: 1274 RVA: 0x0002F408 File Offset: 0x0002D608
+		// Token: 0x06000511 RID: 1297 RVA: 0x00030970 File Offset: 0x0002EB70
 		public bool NeedUpdate()
 		{
 			if (Platform.Instance.IsCloudGame())
@@ -196,39 +196,39 @@ namespace CSharpScript.Launcher.Update
 			return (text != null && text.Length > 0) || (base.HasNewResourceVersionBaseOnPackage() && !base.IsFirstUpdateResources());
 		}
 
-		// Token: 0x060004FB RID: 1275 RVA: 0x0002F481 File Offset: 0x0002D681
+		// Token: 0x06000512 RID: 1298 RVA: 0x000309E9 File Offset: 0x0002EBE9
 		public override bool NeedCheckAppRestart()
 		{
 			return false;
 		}
 
-		// Token: 0x060004FC RID: 1276 RVA: 0x0002F484 File Offset: 0x0002D684
+		// Token: 0x06000513 RID: 1299 RVA: 0x000309EC File Offset: 0x0002EBEC
 		public void DeleteSavedVersion(UObject worldContext)
 		{
 			LauncherStorageLib.Instance.SetDeviceSavedString(this.GetSaveUpdateVersionKey(), this.PackageVersion);
 			LauncherStorageLib.Instance.DeleteDeviceSavedString(this.GetUseLanguageSaveKey());
 		}
 
-		// Token: 0x060004FD RID: 1277 RVA: 0x0002F4AE File Offset: 0x0002D6AE
+		// Token: 0x06000514 RID: 1300 RVA: 0x00030A16 File Offset: 0x0002EC16
 		private string GetUseLanguageSaveKey()
 		{
 			return "UseLanguage_" + this.LanguageCode;
 		}
 
-		// Token: 0x060004FE RID: 1278 RVA: 0x0002F4C0 File Offset: 0x0002D6C0
+		// Token: 0x06000515 RID: 1301 RVA: 0x00030A28 File Offset: 0x0002EC28
 		public void SetUseLanguagePackage()
 		{
 			LauncherStorageLib.Instance.SetDeviceSavedString(this.GetUseLanguageSaveKey(), "1");
 		}
 
-		// Token: 0x040002DE RID: 734
+		// Token: 0x0400030C RID: 780
 		public string LanguageCode = "";
 
-		// Token: 0x040002DF RID: 735
+		// Token: 0x0400030D RID: 781
 		[Nullable(2)]
 		private VersionItem LangVersion;
 
-		// Token: 0x040002E0 RID: 736
+		// Token: 0x0400030E RID: 782
 		private bool IsSetLangVersion;
 	}
 }

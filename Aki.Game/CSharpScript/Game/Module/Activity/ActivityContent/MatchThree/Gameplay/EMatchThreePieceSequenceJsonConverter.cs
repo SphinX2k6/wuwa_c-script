@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064CC RID: 25804
+	// Token: 0x0200544A RID: 21578
 	public class EMatchThreePieceSequenceJsonConverter : JsonConverter<EMatchThreePieceSequence>
 	{
-		// Token: 0x06040C2B RID: 265259 RVA: 0x00FAE0D0 File Offset: 0x00FAC2D0
+		// Token: 0x060358EF RID: 219375 RVA: 0x00EF5118 File Offset: 0x00EF3318
 		public override EMatchThreePieceSequence Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return EMatchThreePieceSequenceExtensions.FromString(@string);
 		}
 
-		// Token: 0x06040C2C RID: 265260 RVA: 0x00FAE0F4 File Offset: 0x00FAC2F4
+		// Token: 0x060358F0 RID: 219376 RVA: 0x00EF513C File Offset: 0x00EF333C
 		public override void Write(Utf8JsonWriter writer, EMatchThreePieceSequence value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

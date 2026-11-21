@@ -5,16 +5,16 @@ using Aki.Common.Proxy;
 
 namespace Aki.Config
 {
-	// Token: 0x02000623 RID: 1571
+	// Token: 0x0200063B RID: 1595
 	public class ConfigOccupationConfigLang : IQueryLocalText, IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060024E2 RID: 9442 RVA: 0x0012A341 File Offset: 0x00128541
+		// Token: 0x06002572 RID: 9586 RVA: 0x00130DBD File Offset: 0x0012EFBD
 		static ConfigOccupationConfigLang()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigOccupationConfigLang.CreateStaticDefaultValue), new Action(ConfigOccupationConfigLang.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060024E3 RID: 9443 RVA: 0x0012A360 File Offset: 0x00128560
+		// Token: 0x06002573 RID: 9587 RVA: 0x00130DDC File Offset: 0x0012EFDC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigOccupationConfigLang.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,7 +27,7 @@ namespace Aki.Config
 			ConfigOccupationConfigLang.LangCache = new Dictionary<int, Dictionary<string, string>>();
 		}
 
-		// Token: 0x060024E4 RID: 9444 RVA: 0x0012A3D3 File Offset: 0x001285D3
+		// Token: 0x06002574 RID: 9588 RVA: 0x00130E4F File Offset: 0x0012F04F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigOccupationConfigLang.LogPair = null;
@@ -35,13 +35,13 @@ namespace Aki.Config
 			ConfigOccupationConfigLang.HandleId = 0;
 		}
 
-		// Token: 0x060024E5 RID: 9445 RVA: 0x0012A3E7 File Offset: 0x001285E7
+		// Token: 0x06002575 RID: 9589 RVA: 0x00130E63 File Offset: 0x0012F063
 		public static void Init()
 		{
 			ConfigOccupationConfigLang.HandleId = ConfigCommon.GetLangStatementId("OccupationConfig", "lang_occupation.db", "select content from `OccupationConfig` where id = ?", "");
 		}
 
-		// Token: 0x060024E6 RID: 9446 RVA: 0x0012A408 File Offset: 0x00128608
+		// Token: 0x06002576 RID: 9590 RVA: 0x00130E84 File Offset: 0x0012F084
 		[NullableContext(2)]
 		public static string GetLocalText(int id, string culture = null)
 		{
@@ -107,19 +107,19 @@ namespace Aki.Config
 			return text;
 		}
 
-		// Token: 0x04002ADB RID: 10971
+		// Token: 0x04002B83 RID: 11139
 		private const string TEXT_NOT_FOUND = "text not found";
 
-		// Token: 0x04002ADC RID: 10972
+		// Token: 0x04002B84 RID: 11140
 		private const string DB = "lang_occupation.db";
 
-		// Token: 0x04002ADD RID: 10973
+		// Token: 0x04002B85 RID: 11141
 		private const string TABLE = "OccupationConfig";
 
-		// Token: 0x04002ADE RID: 10974
+		// Token: 0x04002B86 RID: 11142
 		private const string COMMAND = "select content from `OccupationConfig` where id = ?";
 
-		// Token: 0x04002ADF RID: 10975
+		// Token: 0x04002B87 RID: 11143
 		[Nullable(new byte[]
 		{
 			2,
@@ -129,7 +129,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002AE0 RID: 10976
+		// Token: 0x04002B88 RID: 11144
 		[Nullable(new byte[]
 		{
 			2,
@@ -139,7 +139,7 @@ namespace Aki.Config
 		})]
 		private static Dictionary<int, Dictionary<string, string>> LangCache;
 
-		// Token: 0x04002AE1 RID: 10977
+		// Token: 0x04002B89 RID: 11145
 		private static int HandleId;
 	}
 }

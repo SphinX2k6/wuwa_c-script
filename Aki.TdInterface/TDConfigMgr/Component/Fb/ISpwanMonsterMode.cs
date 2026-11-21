@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B81 RID: 2945
+	// Token: 0x02000C4F RID: 3151
 	public class ISpwanMonsterMode
 	{
-		// Token: 0x060043C9 RID: 17353 RVA: 0x000AC904 File Offset: 0x000AAB04
-		[NullableContext(1)]
+		// Token: 0x06004822 RID: 18466 RVA: 0x000B69C8 File Offset: 0x000B4BC8
 		public static ISpwanMonsterMode Create(ISpwanMonsterMode? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001284 RID: 4740
-		// (get) Token: 0x060043CA RID: 17354 RVA: 0x000AC923 File Offset: 0x000AAB23
+		// Token: 0x1700137F RID: 4991
+		// (get) Token: 0x06004823 RID: 18467 RVA: 0x000B69E7 File Offset: 0x000B4BE7
 		public virtual ESpawnMonsterConstraint Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400263A RID: 9786
+		// Token: 0x04002882 RID: 10370
 		private ISpwanMonsterMode Instance;
 	}
 }

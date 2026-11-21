@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200024B RID: 587
+	// Token: 0x0200025F RID: 607
 	public class ConfigEdgeRunnerLordGymById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000DC6 RID: 3526 RVA: 0x000A760F File Offset: 0x000A580F
+		// Token: 0x06000E3E RID: 3646 RVA: 0x000AD8D3 File Offset: 0x000ABAD3
 		static ConfigEdgeRunnerLordGymById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEdgeRunnerLordGymById.CreateStaticDefaultValue), new Action(ConfigEdgeRunnerLordGymById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000DC7 RID: 3527 RVA: 0x000A7630 File Offset: 0x000A5830
+		// Token: 0x06000E3F RID: 3647 RVA: 0x000AD8F4 File Offset: 0x000ABAF4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEdgeRunnerLordGymById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000DC8 RID: 3528 RVA: 0x000A76AF File Offset: 0x000A58AF
+		// Token: 0x06000E40 RID: 3648 RVA: 0x000AD973 File Offset: 0x000ABB73
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEdgeRunnerLordGymById.LogPair = null;
 			ConfigEdgeRunnerLordGymById.HandleId = 0;
 		}
 
-		// Token: 0x06000DC9 RID: 3529 RVA: 0x000A76BD File Offset: 0x000A58BD
+		// Token: 0x06000E41 RID: 3649 RVA: 0x000AD981 File Offset: 0x000ABB81
 		public static void Init()
 		{
 			ConfigEdgeRunnerLordGymById.HandleId = ConfigCommon.InitDataStatement(ConfigEdgeRunnerLordGymById.HandleId, "db_edgerunner.db", "select BinData from `EdgeRunnerLordGym` where Id=?");
 		}
 
-		// Token: 0x06000DCA RID: 3530 RVA: 0x000A76D8 File Offset: 0x000A58D8
+		// Token: 0x06000E42 RID: 3650 RVA: 0x000AD99C File Offset: 0x000ABB9C
 		public static EdgeRunnerLordGym? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEdgeRunnerLordGymById.HandleId, ConfigEdgeRunnerLordGymById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new EdgeRunnerLordGym?(rootAsEdgeRunnerLordGym);
 		}
 
-		// Token: 0x04000FF1 RID: 4081
+		// Token: 0x0400107D RID: 4221
 		private const string DB = "db_edgerunner.db";
 
-		// Token: 0x04000FF2 RID: 4082
+		// Token: 0x0400107E RID: 4222
 		private const string FILE = "b.边缘行者联动.xlsx";
 
-		// Token: 0x04000FF3 RID: 4083
+		// Token: 0x0400107F RID: 4223
 		private const string TABLE = "EdgeRunnerLordGym";
 
-		// Token: 0x04000FF4 RID: 4084
+		// Token: 0x04001080 RID: 4224
 		private const string COMMAND = "select BinData from `EdgeRunnerLordGym` where Id=?";
 
-		// Token: 0x04000FF5 RID: 4085
+		// Token: 0x04001081 RID: 4225
 		private const string KEY_PREFIX = "EdgeRunnerLordGymById";
 
-		// Token: 0x04000FF6 RID: 4086
+		// Token: 0x04001082 RID: 4226
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000FF7 RID: 4087
+		// Token: 0x04001083 RID: 4227
 		private static int HandleId;
 	}
 }

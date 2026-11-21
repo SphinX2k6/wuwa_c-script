@@ -6,61 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200117B RID: 4475
+	// Token: 0x02000289 RID: 649
 	[UnrealObjectPath("/Script/Engine.SplineMeshComponent")]
 	[UnrealStructLayout(2176, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2176)]
-	public class USplineMeshComponent : UStaticMeshComponent, IUnrealUObject, IUnrealObject, IInterface_CollisionDataProvider, IUnrealNativeInterface, IUnrealInterface
+	public class USplineMeshComponent : UStaticMeshComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060106C6 RID: 67270 RVA: 0x0018219F File Offset: 0x0018039F
+		// Token: 0x06004717 RID: 18199 RVA: 0x00063BD1 File Offset: 0x00061DD1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return USplineMeshComponent._ClassPtr;
 		}
 
-		// Token: 0x060106C7 RID: 67271 RVA: 0x001821AB File Offset: 0x001803AB
-		int IInterface_CollisionDataProvider.InterfaceOffset()
-		{
-			return USplineMeshComponent.__InterfaceOffset_IInterface_CollisionDataProvider;
-		}
-
-		// Token: 0x060106C8 RID: 67272 RVA: 0x001821B4 File Offset: 0x001803B4
+		// Token: 0x06004718 RID: 18200 RVA: 0x00063BE0 File Offset: 0x00061DE0
 		public USplineMeshComponent() : this(BuiltinUtils.AllocNativeUObject(USplineMeshComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060106C9 RID: 67273 RVA: 0x001821DC File Offset: 0x001803DC
+		// Token: 0x06004719 RID: 18201 RVA: 0x00063C08 File Offset: 0x00061E08
 		[NullableContext(1)]
 		public USplineMeshComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(USplineMeshComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700400E RID: 16398
-		// (get) Token: 0x060106CA RID: 67274 RVA: 0x00182210 File Offset: 0x00180410
-		// (set) Token: 0x060106CB RID: 67275 RVA: 0x00182249 File Offset: 0x00180449
-		[Nullable(1)]
-		public FSplineMeshParams SplineParams
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FSplineMeshParams result;
-				if ((result = this._SplineParams) == null)
-				{
-					result = (this._SplineParams = new FSplineMeshParams(base.NativePtr + (IntPtr)USplineMeshComponent.__PropertyOffset_SplineParams, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSplineMeshParams.StaticStruct(), base.NativePtr + (IntPtr)USplineMeshComponent.__PropertyOffset_SplineParams, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x1700400F RID: 16399
-		// (get) Token: 0x060106CC RID: 67276 RVA: 0x0018226A File Offset: 0x0018046A
-		// (set) Token: 0x060106CD RID: 67277 RVA: 0x0018227E File Offset: 0x0018047E
+		// Token: 0x17000D19 RID: 3353
+		// (get) Token: 0x0600471A RID: 18202 RVA: 0x00063C3B File Offset: 0x00061E3B
+		// (set) Token: 0x0600471B RID: 18203 RVA: 0x00063C4F File Offset: 0x00061E4F
 		public unsafe FVector SplineUpDir
 		{
 			get
@@ -73,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004010 RID: 16400
-		// (get) Token: 0x060106CE RID: 67278 RVA: 0x00182293 File Offset: 0x00180493
-		// (set) Token: 0x060106CF RID: 67279 RVA: 0x001822A3 File Offset: 0x001804A3
+		// Token: 0x17000D1A RID: 3354
+		// (get) Token: 0x0600471C RID: 18204 RVA: 0x00063C64 File Offset: 0x00061E64
+		// (set) Token: 0x0600471D RID: 18205 RVA: 0x00063C74 File Offset: 0x00061E74
 		public unsafe float SplineBoundaryMin
 		{
 			get
@@ -88,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004011 RID: 16401
-		// (get) Token: 0x060106D0 RID: 67280 RVA: 0x001822B4 File Offset: 0x001804B4
-		// (set) Token: 0x060106D1 RID: 67281 RVA: 0x001822C8 File Offset: 0x001804C8
+		// Token: 0x17000D1B RID: 3355
+		// (get) Token: 0x0600471E RID: 18206 RVA: 0x00063C85 File Offset: 0x00061E85
+		// (set) Token: 0x0600471F RID: 18207 RVA: 0x00063C99 File Offset: 0x00061E99
 		public unsafe FGuid CachedMeshBodySetupGuid
 		{
 			get
@@ -103,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004012 RID: 16402
-		// (get) Token: 0x060106D2 RID: 67282 RVA: 0x001822DD File Offset: 0x001804DD
-		// (set) Token: 0x060106D3 RID: 67283 RVA: 0x001822F1 File Offset: 0x001804F1
+		// Token: 0x17000D1C RID: 3356
+		// (get) Token: 0x06004720 RID: 18208 RVA: 0x00063CAE File Offset: 0x00061EAE
+		// (set) Token: 0x06004721 RID: 18209 RVA: 0x00063CC2 File Offset: 0x00061EC2
 		[Nullable(2)]
 		public unsafe UBodySetup BodySetup
 		{
@@ -121,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004013 RID: 16403
-		// (get) Token: 0x060106D4 RID: 67284 RVA: 0x00182306 File Offset: 0x00180506
-		// (set) Token: 0x060106D5 RID: 67285 RVA: 0x00182316 File Offset: 0x00180516
+		// Token: 0x17000D1D RID: 3357
+		// (get) Token: 0x06004722 RID: 18210 RVA: 0x00063CD7 File Offset: 0x00061ED7
+		// (set) Token: 0x06004723 RID: 18211 RVA: 0x00063CE7 File Offset: 0x00061EE7
 		public unsafe float SplineBoundaryMax
 		{
 			get
@@ -136,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004014 RID: 16404
-		// (get) Token: 0x060106D6 RID: 67286 RVA: 0x00182327 File Offset: 0x00180527
-		// (set) Token: 0x060106D7 RID: 67287 RVA: 0x00182340 File Offset: 0x00180540
+		// Token: 0x17000D1E RID: 3358
+		// (get) Token: 0x06004724 RID: 18212 RVA: 0x00063CF8 File Offset: 0x00061EF8
+		// (set) Token: 0x06004725 RID: 18213 RVA: 0x00063D11 File Offset: 0x00061F11
 		public unsafe bool bAllowSplineEditingPerInstance
 		{
 			get
@@ -151,9 +121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004015 RID: 16405
-		// (get) Token: 0x060106D8 RID: 67288 RVA: 0x00182370 File Offset: 0x00180570
-		// (set) Token: 0x060106D9 RID: 67289 RVA: 0x00182389 File Offset: 0x00180589
+		// Token: 0x17000D1F RID: 3359
+		// (get) Token: 0x06004726 RID: 18214 RVA: 0x00063D41 File Offset: 0x00061F41
+		// (set) Token: 0x06004727 RID: 18215 RVA: 0x00063D5A File Offset: 0x00061F5A
 		public unsafe bool bSmoothInterpRollScale
 		{
 			get
@@ -166,9 +136,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004016 RID: 16406
-		// (get) Token: 0x060106DA RID: 67290 RVA: 0x001823B9 File Offset: 0x001805B9
-		// (set) Token: 0x060106DB RID: 67291 RVA: 0x001823D2 File Offset: 0x001805D2
+		// Token: 0x17000D20 RID: 3360
+		// (get) Token: 0x06004728 RID: 18216 RVA: 0x00063D8A File Offset: 0x00061F8A
+		// (set) Token: 0x06004729 RID: 18217 RVA: 0x00063DA3 File Offset: 0x00061FA3
 		public unsafe bool bMeshDirty
 		{
 			get
@@ -181,9 +151,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004017 RID: 16407
-		// (get) Token: 0x060106DC RID: 67292 RVA: 0x00182402 File Offset: 0x00180602
-		// (set) Token: 0x060106DD RID: 67293 RVA: 0x00182416 File Offset: 0x00180616
+		// Token: 0x17000D21 RID: 3361
+		// (get) Token: 0x0600472A RID: 18218 RVA: 0x00063DD3 File Offset: 0x00061FD3
+		// (set) Token: 0x0600472B RID: 18219 RVA: 0x00063DE7 File Offset: 0x00061FE7
 		public unsafe TEnumAsByte<ESplineMeshAxis> ForwardAxis
 		{
 			get
@@ -196,9 +166,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004018 RID: 16408
-		// (get) Token: 0x060106DE RID: 67294 RVA: 0x0018242B File Offset: 0x0018062B
-		// (set) Token: 0x060106DF RID: 67295 RVA: 0x0018243B File Offset: 0x0018063B
+		// Token: 0x17000D22 RID: 3362
+		// (get) Token: 0x0600472C RID: 18220 RVA: 0x00063DFC File Offset: 0x00061FFC
+		// (set) Token: 0x0600472D RID: 18221 RVA: 0x00063E0C File Offset: 0x0006200C
 		public unsafe float VirtualTextureMainPassMaxDrawDistance
 		{
 			get
@@ -211,19 +181,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060106E0 RID: 67296 RVA: 0x0018244C File Offset: 0x0018064C
+		// Token: 0x0600472E RID: 18222 RVA: 0x00063E1D File Offset: 0x0006201D
 		public void UpdateMesh()
 		{
 			USplineMeshComponent.__UpdateMesh_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106E1 RID: 67297 RVA: 0x00182459 File Offset: 0x00180659
+		// Token: 0x0600472F RID: 18223 RVA: 0x00063E2A File Offset: 0x0006202A
 		public void SetStartTangent(FVector StartTangent, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetStartTangent_Internal(base.NativePtr, StartTangent, bUpdateMesh);
 		}
 
-		// Token: 0x060106E2 RID: 67298 RVA: 0x00182468 File Offset: 0x00180668
+		// Token: 0x06004730 RID: 18224 RVA: 0x00063E3C File Offset: 0x0006203C
 		public void SetStartScale(FVector2D? StartScale = null, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetStartScale_Internal(base.NativePtr, StartScale ?? new FVector2D
@@ -233,49 +203,49 @@ namespace UnrealEngine
 			}, bUpdateMesh);
 		}
 
-		// Token: 0x060106E3 RID: 67299 RVA: 0x001824B5 File Offset: 0x001806B5
+		// Token: 0x06004731 RID: 18225 RVA: 0x00063E89 File Offset: 0x00062089
 		public void SetStartRoll(float StartRoll, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetStartRoll_Internal(base.NativePtr, StartRoll, bUpdateMesh);
 		}
 
-		// Token: 0x060106E4 RID: 67300 RVA: 0x001824C4 File Offset: 0x001806C4
+		// Token: 0x06004732 RID: 18226 RVA: 0x00063E98 File Offset: 0x00062098
 		public void SetStartPosition(FVector StartPos, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetStartPosition_Internal(base.NativePtr, StartPos, bUpdateMesh);
 		}
 
-		// Token: 0x060106E5 RID: 67301 RVA: 0x001824D3 File Offset: 0x001806D3
+		// Token: 0x06004733 RID: 18227 RVA: 0x00063EA7 File Offset: 0x000620A7
 		public void SetStartOffset(FVector2D StartOffset, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetStartOffset_Internal(base.NativePtr, StartOffset, bUpdateMesh);
 		}
 
-		// Token: 0x060106E6 RID: 67302 RVA: 0x001824E2 File Offset: 0x001806E2
+		// Token: 0x06004734 RID: 18228 RVA: 0x00063EB6 File Offset: 0x000620B6
 		public void SetStartAndEnd(FVector StartPos, FVector StartTangent, FVector EndPos, FVector EndTangent, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetStartAndEnd_Internal(base.NativePtr, StartPos, StartTangent, EndPos, EndTangent, bUpdateMesh);
 		}
 
-		// Token: 0x060106E7 RID: 67303 RVA: 0x001824F6 File Offset: 0x001806F6
+		// Token: 0x06004735 RID: 18229 RVA: 0x00063ECA File Offset: 0x000620CA
 		public void SetSplineUpDir(in FVector InSplineUpDir, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetSplineUpDir_Internal(base.NativePtr, InSplineUpDir, bUpdateMesh);
 		}
 
-		// Token: 0x060106E8 RID: 67304 RVA: 0x00182505 File Offset: 0x00180705
+		// Token: 0x06004736 RID: 18230 RVA: 0x00063ED9 File Offset: 0x000620D9
 		public void SetForwardAxis(ESplineMeshAxis InForwardAxis, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetForwardAxis_Internal(base.NativePtr, InForwardAxis, bUpdateMesh);
 		}
 
-		// Token: 0x060106E9 RID: 67305 RVA: 0x00182519 File Offset: 0x00180719
+		// Token: 0x06004737 RID: 18231 RVA: 0x00063EED File Offset: 0x000620ED
 		public void SetEndTangent(FVector EndTangent, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetEndTangent_Internal(base.NativePtr, EndTangent, bUpdateMesh);
 		}
 
-		// Token: 0x060106EA RID: 67306 RVA: 0x00182528 File Offset: 0x00180728
+		// Token: 0x06004738 RID: 18232 RVA: 0x00063EFC File Offset: 0x000620FC
 		public void SetEndScale(FVector2D? EndScale = null, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetEndScale_Internal(base.NativePtr, EndScale ?? new FVector2D
@@ -285,308 +255,298 @@ namespace UnrealEngine
 			}, bUpdateMesh);
 		}
 
-		// Token: 0x060106EB RID: 67307 RVA: 0x00182575 File Offset: 0x00180775
+		// Token: 0x06004739 RID: 18233 RVA: 0x00063F49 File Offset: 0x00062149
 		public void SetEndRoll(float EndRoll, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetEndRoll_Internal(base.NativePtr, EndRoll, bUpdateMesh);
 		}
 
-		// Token: 0x060106EC RID: 67308 RVA: 0x00182584 File Offset: 0x00180784
+		// Token: 0x0600473A RID: 18234 RVA: 0x00063F58 File Offset: 0x00062158
 		public void SetEndPosition(FVector EndPos, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetEndPosition_Internal(base.NativePtr, EndPos, bUpdateMesh);
 		}
 
-		// Token: 0x060106ED RID: 67309 RVA: 0x00182593 File Offset: 0x00180793
+		// Token: 0x0600473B RID: 18235 RVA: 0x00063F67 File Offset: 0x00062167
 		public void SetEndOffset(FVector2D EndOffset, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetEndOffset_Internal(base.NativePtr, EndOffset, bUpdateMesh);
 		}
 
-		// Token: 0x060106EE RID: 67310 RVA: 0x001825A2 File Offset: 0x001807A2
+		// Token: 0x0600473C RID: 18236 RVA: 0x00063F76 File Offset: 0x00062176
 		public void SetBoundaryMin(float InBoundaryMin, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetBoundaryMin_Internal(base.NativePtr, InBoundaryMin, bUpdateMesh);
 		}
 
-		// Token: 0x060106EF RID: 67311 RVA: 0x001825B1 File Offset: 0x001807B1
+		// Token: 0x0600473D RID: 18237 RVA: 0x00063F85 File Offset: 0x00062185
 		public void SetBoundaryMax(float InBoundaryMax, bool bUpdateMesh = true)
 		{
 			USplineMeshComponent.__SetBoundaryMax_Internal(base.NativePtr, InBoundaryMax, bUpdateMesh);
 		}
 
-		// Token: 0x060106F0 RID: 67312 RVA: 0x001825C0 File Offset: 0x001807C0
+		// Token: 0x0600473E RID: 18238 RVA: 0x00063F94 File Offset: 0x00062194
 		public FVector GetStartTangent()
 		{
 			return USplineMeshComponent.__GetStartTangent_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106F1 RID: 67313 RVA: 0x001825CD File Offset: 0x001807CD
+		// Token: 0x0600473F RID: 18239 RVA: 0x00063FA1 File Offset: 0x000621A1
 		public FVector2D GetStartScale()
 		{
 			return USplineMeshComponent.__GetStartScale_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106F2 RID: 67314 RVA: 0x001825DA File Offset: 0x001807DA
+		// Token: 0x06004740 RID: 18240 RVA: 0x00063FAE File Offset: 0x000621AE
 		public float GetStartRoll()
 		{
 			return USplineMeshComponent.__GetStartRoll_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106F3 RID: 67315 RVA: 0x001825E7 File Offset: 0x001807E7
+		// Token: 0x06004741 RID: 18241 RVA: 0x00063FBB File Offset: 0x000621BB
 		public FVector GetStartPosition()
 		{
 			return USplineMeshComponent.__GetStartPosition_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106F4 RID: 67316 RVA: 0x001825F4 File Offset: 0x001807F4
+		// Token: 0x06004742 RID: 18242 RVA: 0x00063FC8 File Offset: 0x000621C8
 		public FVector2D GetStartOffset()
 		{
 			return USplineMeshComponent.__GetStartOffset_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106F5 RID: 67317 RVA: 0x00182601 File Offset: 0x00180801
+		// Token: 0x06004743 RID: 18243 RVA: 0x00063FD5 File Offset: 0x000621D5
 		public FVector GetSplineUpDir()
 		{
 			return USplineMeshComponent.__GetSplineUpDir_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106F6 RID: 67318 RVA: 0x0018260E File Offset: 0x0018080E
+		// Token: 0x06004744 RID: 18244 RVA: 0x00063FE2 File Offset: 0x000621E2
 		public TEnumAsByte<ESplineMeshAxis> GetForwardAxis()
 		{
 			return USplineMeshComponent.__GetForwardAxis_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106F7 RID: 67319 RVA: 0x0018261B File Offset: 0x0018081B
+		// Token: 0x06004745 RID: 18245 RVA: 0x00063FEF File Offset: 0x000621EF
 		public FVector GetEndTangent()
 		{
 			return USplineMeshComponent.__GetEndTangent_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106F8 RID: 67320 RVA: 0x00182628 File Offset: 0x00180828
+		// Token: 0x06004746 RID: 18246 RVA: 0x00063FFC File Offset: 0x000621FC
 		public FVector2D GetEndScale()
 		{
 			return USplineMeshComponent.__GetEndScale_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106F9 RID: 67321 RVA: 0x00182635 File Offset: 0x00180835
+		// Token: 0x06004747 RID: 18247 RVA: 0x00064009 File Offset: 0x00062209
 		public float GetEndRoll()
 		{
 			return USplineMeshComponent.__GetEndRoll_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106FA RID: 67322 RVA: 0x00182642 File Offset: 0x00180842
+		// Token: 0x06004748 RID: 18248 RVA: 0x00064016 File Offset: 0x00062216
 		public FVector GetEndPosition()
 		{
 			return USplineMeshComponent.__GetEndPosition_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106FB RID: 67323 RVA: 0x0018264F File Offset: 0x0018084F
+		// Token: 0x06004749 RID: 18249 RVA: 0x00064023 File Offset: 0x00062223
 		public FVector2D GetEndOffset()
 		{
 			return USplineMeshComponent.__GetEndOffset_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106FC RID: 67324 RVA: 0x0018265C File Offset: 0x0018085C
+		// Token: 0x0600474A RID: 18250 RVA: 0x00064030 File Offset: 0x00062230
 		public float GetBoundaryMin()
 		{
 			return USplineMeshComponent.__GetBoundaryMin_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106FD RID: 67325 RVA: 0x00182669 File Offset: 0x00180869
+		// Token: 0x0600474B RID: 18251 RVA: 0x0006403D File Offset: 0x0006223D
 		public float GetBoundaryMax()
 		{
 			return USplineMeshComponent.__GetBoundaryMax_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060106FE RID: 67326
+		// Token: 0x0600474C RID: 18252
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateMesh_Internal(IntPtr @this);
 
-		// Token: 0x060106FF RID: 67327
+		// Token: 0x0600474D RID: 18253
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetStartTangent_Internal(IntPtr @this, FVector StartTangent, bool bUpdateMesh);
 
-		// Token: 0x06010700 RID: 67328
+		// Token: 0x0600474E RID: 18254
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetStartScale_Internal(IntPtr @this, FVector2D StartScale, bool bUpdateMesh);
 
-		// Token: 0x06010701 RID: 67329
+		// Token: 0x0600474F RID: 18255
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetStartRoll_Internal(IntPtr @this, float StartRoll, bool bUpdateMesh);
 
-		// Token: 0x06010702 RID: 67330
+		// Token: 0x06004750 RID: 18256
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetStartPosition_Internal(IntPtr @this, FVector StartPos, bool bUpdateMesh);
 
-		// Token: 0x06010703 RID: 67331
+		// Token: 0x06004751 RID: 18257
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetStartOffset_Internal(IntPtr @this, FVector2D StartOffset, bool bUpdateMesh);
 
-		// Token: 0x06010704 RID: 67332
+		// Token: 0x06004752 RID: 18258
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetStartAndEnd_Internal(IntPtr @this, FVector StartPos, FVector StartTangent, FVector EndPos, FVector EndTangent, bool bUpdateMesh);
 
-		// Token: 0x06010705 RID: 67333
+		// Token: 0x06004753 RID: 18259
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSplineUpDir_Internal(IntPtr @this, in FVector InSplineUpDir, bool bUpdateMesh);
 
-		// Token: 0x06010706 RID: 67334
+		// Token: 0x06004754 RID: 18260
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetForwardAxis_Internal(IntPtr @this, TEnumAsByte<ESplineMeshAxis> InForwardAxis, bool bUpdateMesh);
 
-		// Token: 0x06010707 RID: 67335
+		// Token: 0x06004755 RID: 18261
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEndTangent_Internal(IntPtr @this, FVector EndTangent, bool bUpdateMesh);
 
-		// Token: 0x06010708 RID: 67336
+		// Token: 0x06004756 RID: 18262
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEndScale_Internal(IntPtr @this, FVector2D EndScale, bool bUpdateMesh);
 
-		// Token: 0x06010709 RID: 67337
+		// Token: 0x06004757 RID: 18263
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEndRoll_Internal(IntPtr @this, float EndRoll, bool bUpdateMesh);
 
-		// Token: 0x0601070A RID: 67338
+		// Token: 0x06004758 RID: 18264
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEndPosition_Internal(IntPtr @this, FVector EndPos, bool bUpdateMesh);
 
-		// Token: 0x0601070B RID: 67339
+		// Token: 0x06004759 RID: 18265
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEndOffset_Internal(IntPtr @this, FVector2D EndOffset, bool bUpdateMesh);
 
-		// Token: 0x0601070C RID: 67340
+		// Token: 0x0600475A RID: 18266
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBoundaryMin_Internal(IntPtr @this, float InBoundaryMin, bool bUpdateMesh);
 
-		// Token: 0x0601070D RID: 67341
+		// Token: 0x0600475B RID: 18267
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBoundaryMax_Internal(IntPtr @this, float InBoundaryMax, bool bUpdateMesh);
 
-		// Token: 0x0601070E RID: 67342
+		// Token: 0x0600475C RID: 18268
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetStartTangent_Internal(IntPtr @this);
 
-		// Token: 0x0601070F RID: 67343
+		// Token: 0x0600475D RID: 18269
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D __GetStartScale_Internal(IntPtr @this);
 
-		// Token: 0x06010710 RID: 67344
+		// Token: 0x0600475E RID: 18270
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetStartRoll_Internal(IntPtr @this);
 
-		// Token: 0x06010711 RID: 67345
+		// Token: 0x0600475F RID: 18271
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetStartPosition_Internal(IntPtr @this);
 
-		// Token: 0x06010712 RID: 67346
+		// Token: 0x06004760 RID: 18272
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D __GetStartOffset_Internal(IntPtr @this);
 
-		// Token: 0x06010713 RID: 67347
+		// Token: 0x06004761 RID: 18273
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetSplineUpDir_Internal(IntPtr @this);
 
-		// Token: 0x06010714 RID: 67348
+		// Token: 0x06004762 RID: 18274
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern TEnumAsByte<ESplineMeshAxis> __GetForwardAxis_Internal(IntPtr @this);
 
-		// Token: 0x06010715 RID: 67349
+		// Token: 0x06004763 RID: 18275
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetEndTangent_Internal(IntPtr @this);
 
-		// Token: 0x06010716 RID: 67350
+		// Token: 0x06004764 RID: 18276
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D __GetEndScale_Internal(IntPtr @this);
 
-		// Token: 0x06010717 RID: 67351
+		// Token: 0x06004765 RID: 18277
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetEndRoll_Internal(IntPtr @this);
 
-		// Token: 0x06010718 RID: 67352
+		// Token: 0x06004766 RID: 18278
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetEndPosition_Internal(IntPtr @this);
 
-		// Token: 0x06010719 RID: 67353
+		// Token: 0x06004767 RID: 18279
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D __GetEndOffset_Internal(IntPtr @this);
 
-		// Token: 0x0601071A RID: 67354
+		// Token: 0x06004768 RID: 18280
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetBoundaryMin_Internal(IntPtr @this);
 
-		// Token: 0x0601071B RID: 67355
+		// Token: 0x06004769 RID: 18281
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetBoundaryMax_Internal(IntPtr @this);
 
-		// Token: 0x0601071C RID: 67356 RVA: 0x00182676 File Offset: 0x00180876
+		// Token: 0x0600476A RID: 18282 RVA: 0x0006404A File Offset: 0x0006224A
 		static USplineMeshComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.SplineMeshComponent");
 		}
 
-		// Token: 0x0601071D RID: 67357 RVA: 0x00182684 File Offset: 0x00180884
+		// Token: 0x0600476B RID: 18283 RVA: 0x00064058 File Offset: 0x00062258
 		protected USplineMeshComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04008CAE RID: 36014
-		internal static int __InterfaceOffset_IInterface_CollisionDataProvider;
-
-		// Token: 0x04008CAF RID: 36015
+		// Token: 0x04001B66 RID: 7014
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.SplineMeshComponent";
 
-		// Token: 0x04008CB0 RID: 36016
+		// Token: 0x04001B67 RID: 7015
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04008CB1 RID: 36017
+		// Token: 0x04001B68 RID: 7016
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04008CB2 RID: 36018
-		internal static int __PropertyOffset_SplineParams;
-
-		// Token: 0x04008CB3 RID: 36019
-		[Nullable(2)]
-		private FSplineMeshParams _SplineParams;
-
-		// Token: 0x04008CB4 RID: 36020
+		// Token: 0x04001B69 RID: 7017
 		internal static int __PropertyOffset_SplineUpDir;
 
-		// Token: 0x04008CB5 RID: 36021
+		// Token: 0x04001B6A RID: 7018
 		internal static int __PropertyOffset_SplineBoundaryMin;
 
-		// Token: 0x04008CB6 RID: 36022
+		// Token: 0x04001B6B RID: 7019
 		internal static int __PropertyOffset_CachedMeshBodySetupGuid;
 
-		// Token: 0x04008CB7 RID: 36023
+		// Token: 0x04001B6C RID: 7020
 		internal static int __PropertyOffset_BodySetup;
 
-		// Token: 0x04008CB8 RID: 36024
+		// Token: 0x04001B6D RID: 7021
 		internal static int __PropertyOffset_SplineBoundaryMax;
 
-		// Token: 0x04008CB9 RID: 36025
+		// Token: 0x04001B6E RID: 7022
 		internal static int __PropertyOffset_bAllowSplineEditingPerInstance;
 
-		// Token: 0x04008CBA RID: 36026
+		// Token: 0x04001B6F RID: 7023
 		internal static byte __PropertyMask_bAllowSplineEditingPerInstance;
 
-		// Token: 0x04008CBB RID: 36027
+		// Token: 0x04001B70 RID: 7024
 		internal static int __PropertyOffset_bSmoothInterpRollScale;
 
-		// Token: 0x04008CBC RID: 36028
+		// Token: 0x04001B71 RID: 7025
 		internal static byte __PropertyMask_bSmoothInterpRollScale;
 
-		// Token: 0x04008CBD RID: 36029
+		// Token: 0x04001B72 RID: 7026
 		internal static int __PropertyOffset_bMeshDirty;
 
-		// Token: 0x04008CBE RID: 36030
+		// Token: 0x04001B73 RID: 7027
 		internal static byte __PropertyMask_bMeshDirty;
 
-		// Token: 0x04008CBF RID: 36031
+		// Token: 0x04001B74 RID: 7028
 		internal static int __PropertyOffset_ForwardAxis;
 
-		// Token: 0x04008CC0 RID: 36032
+		// Token: 0x04001B75 RID: 7029
 		internal static int __PropertyOffset_VirtualTextureMainPassMaxDrawDistance;
 	}
 }

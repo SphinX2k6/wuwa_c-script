@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x020051A6 RID: 20902
+	// Token: 0x02004176 RID: 16758
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 	})]
 	public class DeckBuilderSortFilterItem : GridProxyAbstract<IDeckBuilderSortFilterItemData>
 	{
-		// Token: 0x0603579F RID: 219039 RVA: 0x00CA8AEC File Offset: 0x00CA6CEC
+		// Token: 0x0602A69A RID: 173722 RVA: 0x00BF6124 File Offset: 0x00BF4324
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x060357A0 RID: 219040 RVA: 0x00CA8B53 File Offset: 0x00CA6D53
+		// Token: 0x0602A69B RID: 173723 RVA: 0x00BF618B File Offset: 0x00BF438B
 		private void ToggleEvent(EToggleState toggleState)
 		{
 			if (base.GetExtendToggle(1).GetToggleState() == EToggleState.ETT_Checked)
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x060357A1 RID: 219041 RVA: 0x00CA8B7A File Offset: 0x00CA6D7A
+		// Token: 0x0602A69C RID: 173724 RVA: 0x00BF61B2 File Offset: 0x00BF43B2
 		[NullableContext(1)]
 		public override void Refresh(IDeckBuilderSortFilterItemData data, bool isSelected, int gridIndex)
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.OnDeselected(false);
 		}
 
-		// Token: 0x060357A2 RID: 219042 RVA: 0x00CA8BB1 File Offset: 0x00CA6DB1
+		// Token: 0x0602A69D RID: 173725 RVA: 0x00BF61E9 File Offset: 0x00BF43E9
 		public override void OnSelected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			extendToggle.SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x060357A3 RID: 219043 RVA: 0x00CA8BC9 File Offset: 0x00CA6DC9
+		// Token: 0x0602A69E RID: 173726 RVA: 0x00BF6201 File Offset: 0x00BF4401
 		public override void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -79,20 +79,20 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x0401C677 RID: 116343
+		// Token: 0x040170AC RID: 94380
 		protected IDeckBuilderSortFilterItemData Data;
 
-		// Token: 0x0401C678 RID: 116344
+		// Token: 0x040170AD RID: 94381
 		public Action<int> OnToggleSelect;
 
-		// Token: 0x0200B315 RID: 45845
+		// Token: 0x02009D4D RID: 40269
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x0403646B RID: 222315
+			// Token: 0x04030EBE RID: 200382
 			public const int Name = 0;
 
-			// Token: 0x0403646C RID: 222316
+			// Token: 0x04030EBF RID: 200383
 			public const int Toggle = 1;
 		}
 	}

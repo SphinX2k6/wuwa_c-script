@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020028BC RID: 10428
+// Token: 0x02001E37 RID: 7735
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleSkillMergeView : UiViewBase
 {
-	// Token: 0x0601580A RID: 88074 RVA: 0x0056C597 File Offset: 0x0056A797
+	// Token: 0x0601320A RID: 78346 RVA: 0x005973DF File Offset: 0x005955DF
 	public RoleSkillMergeView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601580B RID: 88075 RVA: 0x0056C5C0 File Offset: 0x0056A7C0
+	// Token: 0x0601320B RID: 78347 RVA: 0x00597408 File Offset: 0x00595608
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class RoleSkillMergeView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601580C RID: 88076 RVA: 0x0056C61C File Offset: 0x0056A81C
+	// Token: 0x0601320C RID: 78348 RVA: 0x00597464 File Offset: 0x00595664
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<RoleSkillTreeSkillItemBase>(EEventName.OnSkillTreeNodeToggleClick, new Action<RoleSkillTreeSkillItemBase>(this.OnNodeToggleClick));
@@ -44,7 +44,7 @@ public class RoleSkillMergeView : UiViewBase
 		EventSystem.Instance.Add<bool>(EEventName.OnSkillShowTagToggleChanged, new Action<bool>(this.OnSkillShowTagToggleChanged));
 	}
 
-	// Token: 0x0601580D RID: 88077 RVA: 0x0056C70C File Offset: 0x0056A90C
+	// Token: 0x0601320D RID: 78349 RVA: 0x00597554 File Offset: 0x00595754
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<RoleSkillTreeSkillItemBase>(EEventName.OnSkillTreeNodeToggleClick, new Action<RoleSkillTreeSkillItemBase>(this.OnNodeToggleClick));
@@ -57,7 +57,7 @@ public class RoleSkillMergeView : UiViewBase
 		EventSystem.Instance.Remove<bool>(EEventName.OnSkillShowTagToggleChanged, new Action<bool>(this.OnSkillShowTagToggleChanged));
 	}
 
-	// Token: 0x0601580E RID: 88078 RVA: 0x0056C7FC File Offset: 0x0056A9FC
+	// Token: 0x0601320E RID: 78350 RVA: 0x00597644 File Offset: 0x00595844
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleSkillMergeView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ public class RoleSkillMergeView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601580F RID: 88079 RVA: 0x0056C840 File Offset: 0x0056AA40
+	// Token: 0x0601320F RID: 78351 RVA: 0x00597688 File Offset: 0x00595888
 	protected override void OnBeforeShow()
 	{
 		this.Refresh();
@@ -90,7 +90,7 @@ public class RoleSkillMergeView : UiViewBase
 		roleSkillTreeInfoItem.PlayItemSequence("Start");
 	}
 
-	// Token: 0x06015810 RID: 88080 RVA: 0x0056C89C File Offset: 0x0056AA9C
+	// Token: 0x06013210 RID: 78352 RVA: 0x005976E4 File Offset: 0x005958E4
 	private UniTask InitializeItems()
 	{
 		RoleSkillMergeView.<InitializeItems>d__12 <InitializeItems>d__;
@@ -101,7 +101,7 @@ public class RoleSkillMergeView : UiViewBase
 		return <InitializeItems>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015811 RID: 88081 RVA: 0x0056C8E0 File Offset: 0x0056AAE0
+	// Token: 0x06013211 RID: 78353 RVA: 0x00597728 File Offset: 0x00595928
 	protected override UniTask OnPlayingStartSequenceAsync()
 	{
 		RoleSkillMergeView.<OnPlayingStartSequenceAsync>d__13 <OnPlayingStartSequenceAsync>d__;
@@ -112,7 +112,7 @@ public class RoleSkillMergeView : UiViewBase
 		return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015812 RID: 88082 RVA: 0x0056C924 File Offset: 0x0056AB24
+	// Token: 0x06013212 RID: 78354 RVA: 0x0059776C File Offset: 0x0059596C
 	protected override UniTask OnPlayingCloseSequenceAsync()
 	{
 		RoleSkillMergeView.<OnPlayingCloseSequenceAsync>d__14 <OnPlayingCloseSequenceAsync>d__;
@@ -123,13 +123,13 @@ public class RoleSkillMergeView : UiViewBase
 		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015813 RID: 88083 RVA: 0x0056C967 File Offset: 0x0056AB67
+	// Token: 0x06013213 RID: 78355 RVA: 0x005977AF File Offset: 0x005959AF
 	private void OnBackButtonClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06015814 RID: 88084 RVA: 0x0056C970 File Offset: 0x0056AB70
+	// Token: 0x06013214 RID: 78356 RVA: 0x005977B8 File Offset: 0x005959B8
 	private void Init()
 	{
 		IRoleDevSkillMergeViewParams roleDevSkillMergeViewParams = this.OpenParam as IRoleDevSkillMergeViewParams;
@@ -138,7 +138,7 @@ public class RoleSkillMergeView : UiViewBase
 		this.WaitToSelectNodeIndex = roleDevSkillMergeViewParams.SkillNodeIndex;
 	}
 
-	// Token: 0x06015815 RID: 88085 RVA: 0x0056C9B8 File Offset: 0x0056ABB8
+	// Token: 0x06013215 RID: 78357 RVA: 0x00597800 File Offset: 0x00595A00
 	private void SelectNodeByNodeIndex(int nodeIndex)
 	{
 		RoleSkillTreeSkillItemBase skillItemByIndex = this.RoleSkillTreeItem.GetSkillItemByIndex(nodeIndex);
@@ -150,7 +150,7 @@ public class RoleSkillMergeView : UiViewBase
 		this.UpdateSkillTreeInfo();
 	}
 
-	// Token: 0x06015816 RID: 88086 RVA: 0x0056C9E9 File Offset: 0x0056ABE9
+	// Token: 0x06013216 RID: 78358 RVA: 0x00597831 File Offset: 0x00595A31
 	private void Refresh()
 	{
 		RoleSkillTreeItem roleSkillTreeItem = this.RoleSkillTreeItem;
@@ -166,7 +166,7 @@ public class RoleSkillMergeView : UiViewBase
 		this.UpdateSkillTreeInfo();
 	}
 
-	// Token: 0x06015817 RID: 88087 RVA: 0x0056CA1F File Offset: 0x0056AC1F
+	// Token: 0x06013217 RID: 78359 RVA: 0x00597867 File Offset: 0x00595A67
 	private void OnNodeToggleClick(RoleSkillTreeSkillItemBase skillItem)
 	{
 		RoleSkillTreeItem roleSkillTreeItem = this.RoleSkillTreeItem;
@@ -177,7 +177,7 @@ public class RoleSkillMergeView : UiViewBase
 		this.UpdateSkillTreeInfo();
 	}
 
-	// Token: 0x06015818 RID: 88088 RVA: 0x0056CA3C File Offset: 0x0056AC3C
+	// Token: 0x06013218 RID: 78360 RVA: 0x00597884 File Offset: 0x00595A84
 	private void UpdateSkillTreeInfo()
 	{
 		RoleSkillTreeItem roleSkillTreeItem = this.RoleSkillTreeItem;
@@ -198,7 +198,7 @@ public class RoleSkillMergeView : UiViewBase
 		RoleController.Instance.SendRoleSkillViewRequest(roleId, skillId, new Action(this.UpdateTreeInfoItem));
 	}
 
-	// Token: 0x06015819 RID: 88089 RVA: 0x0056CAB8 File Offset: 0x0056ACB8
+	// Token: 0x06013219 RID: 78361 RVA: 0x00597900 File Offset: 0x00595B00
 	private void UpdateTreeInfoItem()
 	{
 		RoleSkillTreeItem roleSkillTreeItem = this.RoleSkillTreeItem;
@@ -213,7 +213,7 @@ public class RoleSkillMergeView : UiViewBase
 		this.RoleSkillTreeInfoItem.ShowLeftPanelByTabType(this.RoleSkillTreeInfoItem.GetCurSkillTabShowType());
 	}
 
-	// Token: 0x0601581A RID: 88090 RVA: 0x0056CB16 File Offset: 0x0056AD16
+	// Token: 0x0601321A RID: 78362 RVA: 0x0059795E File Offset: 0x00595B5E
 	private void OnSkillNodeLevelUp(int nodeId)
 	{
 		RoleSkillTreeItem roleSkillTreeItem = this.RoleSkillTreeItem;
@@ -224,7 +224,7 @@ public class RoleSkillMergeView : UiViewBase
 		this.UpdateSkillTreeInfo();
 	}
 
-	// Token: 0x0601581B RID: 88091 RVA: 0x0056CB30 File Offset: 0x0056AD30
+	// Token: 0x0601321B RID: 78363 RVA: 0x00597978 File Offset: 0x00595B78
 	private void OnAddCommonItemList(IReadOnlyList<IProto_NormalItem> _)
 	{
 		RoleSkillTreeItem roleSkillTreeItem = this.RoleSkillTreeItem;
@@ -235,7 +235,7 @@ public class RoleSkillMergeView : UiViewBase
 		roleSkillTreeItem.OnAddCommonItemList();
 	}
 
-	// Token: 0x0601581C RID: 88092 RVA: 0x0056CB42 File Offset: 0x0056AD42
+	// Token: 0x0601321C RID: 78364 RVA: 0x0059798A File Offset: 0x00595B8A
 	private void OnCommonItemCountAnyChange(int i, int i1)
 	{
 		RoleSkillTreeInfoItem roleSkillTreeInfoItem = this.RoleSkillTreeInfoItem;
@@ -246,7 +246,7 @@ public class RoleSkillMergeView : UiViewBase
 		roleSkillTreeInfoItem.OnCommonItemCountAnyChange();
 	}
 
-	// Token: 0x0601581D RID: 88093 RVA: 0x0056CB54 File Offset: 0x0056AD54
+	// Token: 0x0601321D RID: 78365 RVA: 0x0059799C File Offset: 0x00595B9C
 	private void OnRoleSkillBranchChanged(int i)
 	{
 		RoleSkillTreeItem roleSkillTreeItem = this.RoleSkillTreeItem;
@@ -257,7 +257,7 @@ public class RoleSkillMergeView : UiViewBase
 		this.UpdateSkillTreeInfo();
 	}
 
-	// Token: 0x0601581E RID: 88094 RVA: 0x0056CB6D File Offset: 0x0056AD6D
+	// Token: 0x0601321E RID: 78366 RVA: 0x005979B5 File Offset: 0x00595BB5
 	private void OnRoleSkillInputPanelVisible(bool visible)
 	{
 		RoleSkillTreeItem roleSkillTreeItem = this.RoleSkillTreeItem;
@@ -268,7 +268,7 @@ public class RoleSkillMergeView : UiViewBase
 		roleSkillTreeItem.SetSkillBranchVisible(ESkillBranchInvisibleReason.SkillInputPanel, !visible);
 	}
 
-	// Token: 0x0601581F RID: 88095 RVA: 0x0056CB84 File Offset: 0x0056AD84
+	// Token: 0x0601321F RID: 78367 RVA: 0x005979CC File Offset: 0x00595BCC
 	private void OnSkillShowTagToggleChanged(bool isVisible)
 	{
 		RoleSkillTreeItem roleSkillTreeItem = this.RoleSkillTreeItem;
@@ -279,32 +279,32 @@ public class RoleSkillMergeView : UiViewBase
 		roleSkillTreeItem.RefreshAllShowTags();
 	}
 
-	// Token: 0x0400A044 RID: 41028
+	// Token: 0x0400A42D RID: 42029
 	[Nullable(2)]
 	private RoleSkillTreeItem RoleSkillTreeItem;
 
-	// Token: 0x0400A045 RID: 41029
+	// Token: 0x0400A42E RID: 42030
 	[Nullable(2)]
 	private RoleSkillTreeInfoItem RoleSkillTreeInfoItem;
 
-	// Token: 0x0400A046 RID: 41030
+	// Token: 0x0400A42F RID: 42031
 	private readonly RoleSkillTreeItemData RoleSkillTreeItemData = new RoleSkillTreeItemData();
 
-	// Token: 0x0400A047 RID: 41031
+	// Token: 0x0400A430 RID: 42032
 	private readonly IRoleSkillTreeInfoItemData RoleSkillTreeInfoItemData = new RoleSkillTreeInfoItemData();
 
-	// Token: 0x0400A048 RID: 41032
+	// Token: 0x0400A431 RID: 42033
 	private int WaitToSelectNodeIndex = -1;
 
-	// Token: 0x02008EBF RID: 36543
+	// Token: 0x02008106 RID: 33030
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E49E RID: 189598
+		// Token: 0x04029B9B RID: 170907
 		RoleSkillTreeItem,
-		// Token: 0x0402E49F RID: 189599
+		// Token: 0x04029B9C RID: 170908
 		RoleSkillTreeInfoItem,
-		// Token: 0x0402E4A0 RID: 189600
+		// Token: 0x04029B9D RID: 170909
 		CaptionItem
 	}
 }

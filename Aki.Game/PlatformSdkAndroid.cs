@@ -10,12 +10,12 @@ using CSharpScript.Launcher.BaseConfig;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x02000E49 RID: 3657
+// Token: 0x020002FE RID: 766
 [NullableContext(1)]
 [Nullable(0)]
 public class PlatformSdkAndroid : PlatformSdkBase
 {
-	// Token: 0x060057FA RID: 22522 RVA: 0x000FDC5C File Offset: 0x000FBE5C
+	// Token: 0x06002B8A RID: 11146 RVA: 0x0010554C File Offset: 0x0010374C
 	protected override void BindSpecialEvent()
 	{
 		UKuroSDKManager.Get().AnnounceRedPointDelegate.Clear();
@@ -24,7 +24,7 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		UKuroSDKManager.Get().CustomerServiceResultDelegate.Add(new Action<string>(this.CustomerServiceResultCallBack));
 	}
 
-	// Token: 0x060057FB RID: 22523 RVA: 0x000FDCBD File Offset: 0x000FBEBD
+	// Token: 0x06002B8B RID: 11147 RVA: 0x001055AD File Offset: 0x001037AD
 	protected override void OnInit()
 	{
 		UKuroSDKManager.GetBasicInfo().bIsValid = false;
@@ -38,7 +38,7 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		}, 10000f, null, null, true, 1f);
 	}
 
-	// Token: 0x060057FC RID: 22524 RVA: 0x000FDCF0 File Offset: 0x000FBEF0
+	// Token: 0x06002B8C RID: 11148 RVA: 0x001055E0 File Offset: 0x001037E0
 	public void AnnounceRedPointCallBack(string result)
 	{
 		AndroidSdkRePointSt androidSdkRePointSt = Json.Parse<AndroidSdkRePointSt>(result, null);
@@ -46,7 +46,7 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		EventSystem.Instance.Emit(EEventName.SdkPostWebViewRedPointRefresh);
 	}
 
-	// Token: 0x060057FD RID: 22525 RVA: 0x000FDD28 File Offset: 0x000FBF28
+	// Token: 0x06002B8D RID: 11149 RVA: 0x00105618 File Offset: 0x00103818
 	public void CustomerServiceResultCallBack(string result)
 	{
 		string[] array = result.Split(',', StringSplitOptions.None);
@@ -57,7 +57,7 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		EventSystem.Instance.Emit(EEventName.SdkCustomerRedPointRefresh);
 	}
 
-	// Token: 0x060057FE RID: 22526 RVA: 0x000FDD6C File Offset: 0x000FBF6C
+	// Token: 0x06002B8E RID: 11150 RVA: 0x0010565C File Offset: 0x0010385C
 	public override void SdkOpenUrlWnd(string title, string url, bool isLandscape, bool transparent, bool webAccelerated = true)
 	{
 		if (this.LastOpenTime != 0.0 && Time.Instance.Now - this.LastOpenTime <= 5000.0)
@@ -83,7 +83,7 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		UKuroSDKManager.OpenWebView(title, url, isLandscape, transparent, webAccelerated, "Default", data);
 	}
 
-	// Token: 0x060057FF RID: 22527 RVA: 0x000FDE38 File Offset: 0x000FC038
+	// Token: 0x06002B8F RID: 11151 RVA: 0x00105728 File Offset: 0x00103928
 	public override void OpenFeedback()
 	{
 		IFeedBackData feedBackUrl = BaseConfigController.Instance.GetFeedBackUrl();
@@ -100,7 +100,7 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		this.OpenWebView(feedBackUrl.title, feedBackOpenUrl, true, false, true, "Default");
 	}
 
-	// Token: 0x06005800 RID: 22528 RVA: 0x000FDE84 File Offset: 0x000FC084
+	// Token: 0x06002B90 RID: 11152 RVA: 0x00105774 File Offset: 0x00103974
 	public override void OpenWebView(string title, string url, bool isLandscape, bool transparent, bool webAccelerated, string identifier)
 	{
 		if (this.LastOpenTime != 0.0 && Time.Instance.Now - this.LastOpenTime <= 5000.0)
@@ -126,7 +126,7 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		UKuroSDKManager.OpenWebView(title, url, isLandscape, transparent, webAccelerated, identifier, data);
 	}
 
-	// Token: 0x06005801 RID: 22529 RVA: 0x000FDF4C File Offset: 0x000FC14C
+	// Token: 0x06002B91 RID: 11153 RVA: 0x0010583C File Offset: 0x00103A3C
 	private string GetSdkParamData(string needParam)
 	{
 		if (this.SdkParamCacheMap.Count == 0)
@@ -150,55 +150,55 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		return "";
 	}
 
-	// Token: 0x06005802 RID: 22530 RVA: 0x000FDFD2 File Offset: 0x000FC1D2
+	// Token: 0x06002B92 RID: 11154 RVA: 0x001058C2 File Offset: 0x00103AC2
 	public override string GetChannelId()
 	{
 		return this.GetSdkParamData("channelId");
 	}
 
-	// Token: 0x06005803 RID: 22531 RVA: 0x000FDFDF File Offset: 0x000FC1DF
+	// Token: 0x06002B93 RID: 11155 RVA: 0x001058CF File Offset: 0x00103ACF
 	public override string GetGameId()
 	{
 		return this.GetSdkParamData("gameId");
 	}
 
-	// Token: 0x06005804 RID: 22532 RVA: 0x000FDFEC File Offset: 0x000FC1EC
+	// Token: 0x06002B94 RID: 11156 RVA: 0x001058DC File Offset: 0x00103ADC
 	public override string GetChannelName()
 	{
 		return this.GetSdkParamData("channelName");
 	}
 
-	// Token: 0x06005805 RID: 22533 RVA: 0x000FDFF9 File Offset: 0x000FC1F9
+	// Token: 0x06002B95 RID: 11157 RVA: 0x001058E9 File Offset: 0x00103AE9
 	public override string GetDid()
 	{
 		return this.GetSdkParamData("did");
 	}
 
-	// Token: 0x06005806 RID: 22534 RVA: 0x000FE006 File Offset: 0x000FC206
+	// Token: 0x06002B96 RID: 11158 RVA: 0x001058F6 File Offset: 0x00103AF6
 	public override string GetAppChannelId()
 	{
 		return this.GetSdkParamData("appChannelId");
 	}
 
-	// Token: 0x06005807 RID: 22535 RVA: 0x000FE013 File Offset: 0x000FC213
+	// Token: 0x06002B97 RID: 11159 RVA: 0x00105903 File Offset: 0x00103B03
 	public override string GetOaid()
 	{
 		return this.GetSdkParamData("oaid");
 	}
 
-	// Token: 0x06005808 RID: 22536 RVA: 0x000FE020 File Offset: 0x000FC220
+	// Token: 0x06002B98 RID: 11160 RVA: 0x00105910 File Offset: 0x00103B10
 	public override string GetJyDid()
 	{
 		return this.GetSdkParamData("jyDid");
 	}
 
-	// Token: 0x06005809 RID: 22537 RVA: 0x000FE02D File Offset: 0x000FC22D
+	// Token: 0x06002B99 RID: 11161 RVA: 0x0010591D File Offset: 0x00103B1D
 	public override string GetAccessToken()
 	{
 		return this.GetSdkParamData("accessToken");
 	}
 
-	// Token: 0x0600580A RID: 22538 RVA: 0x000FE03C File Offset: 0x000FC23C
+	// Token: 0x06002B9A RID: 11162 RVA: 0x0010592C File Offset: 0x00103B2C
 	public override void SetFont()
 	{
 		SetFontParamAndroid setFontParamAndroid = new SetFontParamAndroid();
@@ -215,7 +215,7 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		UKuroSDKManager.SetFont(text);
 	}
 
-	// Token: 0x0600580B RID: 22539 RVA: 0x000FE0A4 File Offset: 0x000FC2A4
+	// Token: 0x06002B9B RID: 11163 RVA: 0x00105994 File Offset: 0x00103B94
 	public override void OpenCustomerService(EKuroSdkOpenCustomerServerType fromType)
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -230,7 +230,7 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		UKuroSDKManager.OpenCustomerService(JsonSerializer.Serialize<OpenCustomerServiceParamAndroid>(openCustomerServiceParamAndroid, KuroSdkJsonOptions.Unescaped));
 	}
 
-	// Token: 0x0600580C RID: 22540 RVA: 0x000FE12C File Offset: 0x000FC32C
+	// Token: 0x06002B9C RID: 11164 RVA: 0x00105A1C File Offset: 0x00103C1C
 	public override void SdkPay(ISDKPayment paymentInfo)
 	{
 		if (KuroSdkController.Instance.CanUseSdk())
@@ -242,7 +242,7 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x0600580D RID: 22541 RVA: 0x000FE160 File Offset: 0x000FC360
+	// Token: 0x06002B9D RID: 11165 RVA: 0x00105A50 File Offset: 0x00103C50
 	public override void SdkCreateRole()
 	{
 		Log.Instance.Info(ELogModule.KuroSdk, ELogAuthor.YZY, "上报创建新角色", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -254,7 +254,7 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x0600580E RID: 22542 RVA: 0x000FE1A8 File Offset: 0x000FC3A8
+	// Token: 0x06002B9E RID: 11166 RVA: 0x00105A98 File Offset: 0x00103C98
 	public string GetCreateRoleInfo()
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -280,7 +280,7 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		return JsonSerializer.Serialize<RoleInfoSdk>(roleInfoSdk, KuroSdkJsonOptions.Unescaped) ?? "";
 	}
 
-	// Token: 0x0600580F RID: 22543 RVA: 0x000FE30C File Offset: 0x000FC50C
+	// Token: 0x06002B9F RID: 11167 RVA: 0x00105BFC File Offset: 0x00103DFC
 	private AndroidSdkPayRole GetSdkPayRoleInfo()
 	{
 		FunctionModel instance = FunctionModel.Instance;
@@ -299,7 +299,7 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		return androidSdkPayRole;
 	}
 
-	// Token: 0x06005810 RID: 22544 RVA: 0x000FE3E8 File Offset: 0x000FC5E8
+	// Token: 0x06002BA0 RID: 11168 RVA: 0x00105CD8 File Offset: 0x00103ED8
 	private string GetPaymentInfo(ISDKPayment payment, AndroidSdkPayRole roleInfo)
 	{
 		PayInfoAndroid payInfoAndroid = new PayInfoAndroid();
@@ -333,21 +333,21 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		return text3 ?? "";
 	}
 
-	// Token: 0x06005811 RID: 22545 RVA: 0x000FE51C File Offset: 0x000FC71C
+	// Token: 0x06002BA1 RID: 11169 RVA: 0x00105E0C File Offset: 0x0010400C
 	public override void Share(ShareData shareData, string imagePath)
 	{
-		string sKuroSDKEventParameter = Json.Stringify<ShareData>(shareData, null);
+		string sKuroSDKEventParameter = Json.Stringify(shareData, null);
 		UKuroSDKStaticLibrary.Share(imagePath, sKuroSDKEventParameter);
 	}
 
-	// Token: 0x06005812 RID: 22546 RVA: 0x000FE538 File Offset: 0x000FC738
+	// Token: 0x06002BA2 RID: 11170 RVA: 0x00105E28 File Offset: 0x00104028
 	public override void ShareTexture(ShareData shareData, string texturePath)
 	{
-		string sKuroSDKEventParameter = Json.Stringify<ShareData>(shareData, null);
+		string sKuroSDKEventParameter = Json.Stringify(shareData, null);
 		UKuroSDKStaticLibrary.Share(texturePath, sKuroSDKEventParameter);
 	}
 
-	// Token: 0x06005813 RID: 22547 RVA: 0x000FE554 File Offset: 0x000FC754
+	// Token: 0x06002BA3 RID: 11171 RVA: 0x00105E44 File Offset: 0x00104044
 	protected override void OnShareResult(int code, string platform, string msg)
 	{
 		if (code == 0)
@@ -358,12 +358,12 @@ public class PlatformSdkAndroid : PlatformSdkBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnShareResult, false);
 	}
 
-	// Token: 0x04002881 RID: 10369
+	// Token: 0x0400291A RID: 10522
 	private const int WEBVIEWCD = 5000;
 
-	// Token: 0x04002882 RID: 10370
+	// Token: 0x0400291B RID: 10523
 	private const int GETINFODELAY = 10000;
 
-	// Token: 0x04002883 RID: 10371
+	// Token: 0x0400291C RID: 10524
 	private readonly Dictionary<string, string> SdkParamCacheMap = new Dictionary<string, string>();
 }

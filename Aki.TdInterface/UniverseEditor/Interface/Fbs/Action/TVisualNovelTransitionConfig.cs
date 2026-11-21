@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007816 RID: 30742
+	// Token: 0x0200805A RID: 32858
 	public enum TVisualNovelTransitionConfig : byte
 	{
-		// Token: 0x04012ABA RID: 76474
+		// Token: 0x04013B90 RID: 80784
 		NONE,
-		// Token: 0x04012ABB RID: 76475
+		// Token: 0x04013B91 RID: 80785
 		IVisualNovelTransitionLocation,
-		// Token: 0x04012ABC RID: 76476
+		// Token: 0x04013B92 RID: 80786
 		IVisualNovelTransitionTime
 	}
 }

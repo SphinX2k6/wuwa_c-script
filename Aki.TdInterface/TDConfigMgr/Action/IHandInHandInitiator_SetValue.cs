@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AE8 RID: 6888
+	// Token: 0x02001C95 RID: 7317
 	public class IHandInHandInitiator_SetValue
 	{
-		// Token: 0x04005AAB RID: 23211
-		[Nullable(1)]
+		// Token: 0x04005F40 RID: 24384
 		public IHandInHandInitiatorType Initiator;
 
-		// Token: 0x04005AAC RID: 23212
+		// Token: 0x04005F41 RID: 24385
 		public EHandType HandType;
 	}
 }

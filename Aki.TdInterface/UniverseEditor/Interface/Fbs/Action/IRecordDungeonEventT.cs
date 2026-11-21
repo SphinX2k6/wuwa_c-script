@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E11 RID: 28177
+	// Token: 0x0200758C RID: 30092
 	public class IRecordDungeonEventT
 	{
-		// Token: 0x1700D209 RID: 53769
-		// (get) Token: 0x06031C94 RID: 203924 RVA: 0x006BD9B1 File Offset: 0x006BBBB1
-		// (set) Token: 0x06031C95 RID: 203925 RVA: 0x006BD9B9 File Offset: 0x006BBBB9
+		// Token: 0x1700DD51 RID: 56657
+		// (get) Token: 0x06034C90 RID: 216208 RVA: 0x00719099 File Offset: 0x00717299
+		// (set) Token: 0x06034C91 RID: 216209 RVA: 0x007190A1 File Offset: 0x007172A1
 		public IRecordTimeStampTypeT EventConfig { get; set; }
 
-		// Token: 0x06031C96 RID: 203926 RVA: 0x006BD9C2 File Offset: 0x006BBBC2
+		// Token: 0x06034C92 RID: 216210 RVA: 0x007190AA File Offset: 0x007172AA
 		public IRecordDungeonEventT()
 		{
 			this.EventConfig = null;

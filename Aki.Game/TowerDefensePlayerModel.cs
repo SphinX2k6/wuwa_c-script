@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.KuroSimpleCombat;
 using UnrealEngine;
 
-// Token: 0x02000ED4 RID: 3796
+// Token: 0x02000389 RID: 905
 [NullableContext(2)]
 [Nullable(0)]
 public class TowerDefensePlayerModel
 {
-	// Token: 0x1700073F RID: 1855
-	// (get) Token: 0x06005EAB RID: 24235 RVA: 0x00119A0C File Offset: 0x00117C0C
+	// Token: 0x17000763 RID: 1891
+	// (get) Token: 0x06003242 RID: 12866 RVA: 0x001216EC File Offset: 0x0011F8EC
 	public AKSC_Entity_AssistMachine PossessedFollowerKscEntity
 	{
 		get
@@ -43,8 +43,8 @@ public class TowerDefensePlayerModel
 		}
 	}
 
-	// Token: 0x17000740 RID: 1856
-	// (get) Token: 0x06005EAC RID: 24236 RVA: 0x00119AB0 File Offset: 0x00117CB0
+	// Token: 0x17000764 RID: 1892
+	// (get) Token: 0x06003243 RID: 12867 RVA: 0x00121790 File Offset: 0x0011F990
 	public Entity PossessedFollowerEntity
 	{
 		get
@@ -76,8 +76,8 @@ public class TowerDefensePlayerModel
 		}
 	}
 
-	// Token: 0x17000741 RID: 1857
-	// (get) Token: 0x06005EAD RID: 24237 RVA: 0x00119B70 File Offset: 0x00117D70
+	// Token: 0x17000765 RID: 1893
+	// (get) Token: 0x06003244 RID: 12868 RVA: 0x00121850 File Offset: 0x0011FA50
 	public bool PossessedFollowerEnabled
 	{
 		get
@@ -87,8 +87,8 @@ public class TowerDefensePlayerModel
 		}
 	}
 
-	// Token: 0x17000742 RID: 1858
-	// (get) Token: 0x06005EAE RID: 24238 RVA: 0x00119B93 File Offset: 0x00117D93
+	// Token: 0x17000766 RID: 1894
+	// (get) Token: 0x06003245 RID: 12869 RVA: 0x00121873 File Offset: 0x0011FA73
 	public AActor PossessedFollowerActor
 	{
 		get
@@ -103,7 +103,7 @@ public class TowerDefensePlayerModel
 		}
 	}
 
-	// Token: 0x06005EAF RID: 24239 RVA: 0x00119BB4 File Offset: 0x00117DB4
+	// Token: 0x06003246 RID: 12870 RVA: 0x00121894 File Offset: 0x0011FA94
 	public bool OnStop()
 	{
 		this.PendingRoleHandle = null;
@@ -132,34 +132,34 @@ public class TowerDefensePlayerModel
 		return true;
 	}
 
-	// Token: 0x04002AE9 RID: 10985
+	// Token: 0x04002B84 RID: 11140
 	public static readonly int PlayerEntityKey = 1001;
 
-	// Token: 0x04002AEA RID: 10986
+	// Token: 0x04002B85 RID: 11141
 	public static readonly int FollowerEntityKey = 1002;
 
-	// Token: 0x04002AEB RID: 10987
+	// Token: 0x04002B86 RID: 11142
 	public bool TowerDefenseWorldDone;
 
-	// Token: 0x04002AEC RID: 10988
+	// Token: 0x04002B87 RID: 11143
 	public bool HasInitKSCEntity;
 
-	// Token: 0x04002AED RID: 10989
+	// Token: 0x04002B88 RID: 11144
 	public EntityHandle PendingRoleHandle;
 
-	// Token: 0x04002AEE RID: 10990
+	// Token: 0x04002B89 RID: 11145
 	public KscEntityHandle PossessedPlayerHandle;
 
-	// Token: 0x04002AEF RID: 10991
+	// Token: 0x04002B8A RID: 11146
 	public long? PendingFollowerCreatureId;
 
-	// Token: 0x04002AF0 RID: 10992
+	// Token: 0x04002B8B RID: 11147
 	public int[] PendingFollowers;
 
-	// Token: 0x04002AF1 RID: 10993
+	// Token: 0x04002B8C RID: 11148
 	public KscEntityHandle PossessedFollowerHandle;
 
-	// Token: 0x04002AF2 RID: 10994
+	// Token: 0x04002B8D RID: 11149
 	[Nullable(new byte[]
 	{
 		2,
@@ -167,13 +167,13 @@ public class TowerDefensePlayerModel
 	})]
 	public Dictionary<int, TowerDefenseFollowerProxy> PossessedFollowerProxies;
 
-	// Token: 0x04002AF3 RID: 10995
+	// Token: 0x04002B8E RID: 11150
 	public int? CurrentFollowerProxyId;
 
-	// Token: 0x04002AF4 RID: 10996
+	// Token: 0x04002B8F RID: 11151
 	public bool CurrentFollowerEnable;
 
-	// Token: 0x04002AF5 RID: 10997
+	// Token: 0x04002B90 RID: 11152
 	[Nullable(new byte[]
 	{
 		2,
@@ -181,7 +181,7 @@ public class TowerDefensePlayerModel
 	})]
 	public Dictionary<int, TDPlayerDefine.ISkill> AllSkillId2SkillData;
 
-	// Token: 0x04002AF6 RID: 10998
+	// Token: 0x04002B91 RID: 11153
 	[Nullable(new byte[]
 	{
 		2,
@@ -190,7 +190,7 @@ public class TowerDefensePlayerModel
 	})]
 	public Dictionary<EKSC_OperateType, List<TDPlayerDefine.ISkill>> BindFollowerSkills;
 
-	// Token: 0x04002AF7 RID: 10999
+	// Token: 0x04002B92 RID: 11154
 	[Nullable(new byte[]
 	{
 		2,
@@ -198,33 +198,33 @@ public class TowerDefensePlayerModel
 	})]
 	public Dictionary<int, TDPlayerDefine.ISkill> SkillId2SkillData;
 
-	// Token: 0x04002AF8 RID: 11000
+	// Token: 0x04002B93 RID: 11155
 	public TDPlayerDefine.ISkill ChargeSkill;
 
-	// Token: 0x04002AF9 RID: 11001
+	// Token: 0x04002B94 RID: 11156
 	public bool LastSkillChargeFull;
 
-	// Token: 0x04002AFA RID: 11002
+	// Token: 0x04002B95 RID: 11157
 	public int ChargeCueHandle;
 
-	// Token: 0x04002AFB RID: 11003
+	// Token: 0x04002B96 RID: 11158
 	public List<int> FollowCueHandle;
 
-	// Token: 0x04002AFC RID: 11004
+	// Token: 0x04002B97 RID: 11159
 	public List<int> FollowerCdCueHandle;
 
-	// Token: 0x04002AFD RID: 11005
+	// Token: 0x04002B98 RID: 11160
 	public TDPlayerDefine.EFollowerState FollowerState;
 
-	// Token: 0x04002AFE RID: 11006
+	// Token: 0x04002B99 RID: 11161
 	public string PsFeedbackId;
 
-	// Token: 0x04002AFF RID: 11007
+	// Token: 0x04002B9A RID: 11162
 	public bool IsInAutoCast;
 
-	// Token: 0x04002B00 RID: 11008
+	// Token: 0x04002B9B RID: 11163
 	public bool IsInCharge;
 
-	// Token: 0x04002B01 RID: 11009
+	// Token: 0x04002B9C RID: 11164
 	public bool IsInFollowerInit;
 }

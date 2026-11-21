@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 {
-	// Token: 0x0200634E RID: 25422
+	// Token: 0x020052CC RID: 21196
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballItemTipsComponentContentComponent : UiPanelBase
 	{
-		// Token: 0x0603FF8C RID: 262028 RVA: 0x00F7A108 File Offset: 0x00F78308
+		// Token: 0x06034C4D RID: 216141 RVA: 0x00EC1068 File Offset: 0x00EBF268
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FF8D RID: 262029 RVA: 0x00F7A237 File Offset: 0x00F78437
+		// Token: 0x06034C4E RID: 216142 RVA: 0x00EC1197 File Offset: 0x00EBF397
 		protected override void OnStart()
 		{
 			base.GetTexture(1).SetUIActive(false);
 			this.SubComponent = new TipsMaterialComponent(base.GetItem(4));
 		}
 
-		// Token: 0x0603FF8E RID: 262030 RVA: 0x00F7A258 File Offset: 0x00F78458
+		// Token: 0x06034C4F RID: 216143 RVA: 0x00EC11B8 File Offset: 0x00EBF3B8
 		public void Refresh(ItemTipsData data)
 		{
 			this.RefreshBase(data);
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.SetActive(true);
 		}
 
-		// Token: 0x0603FF8F RID: 262031 RVA: 0x00F7A279 File Offset: 0x00F78479
+		// Token: 0x06034C50 RID: 216144 RVA: 0x00EC11D9 File Offset: 0x00EBF3D9
 		private void RefreshBase(ItemTipsData data)
 		{
 			this.RefreshBaseName(data);
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.SetDebugText(data.ConfigId);
 		}
 
-		// Token: 0x0603FF90 RID: 262032 RVA: 0x00F7A29C File Offset: 0x00F7849C
+		// Token: 0x06034C51 RID: 216145 RVA: 0x00EC11FC File Offset: 0x00EBF3FC
 		private void RefreshBaseName(ItemTipsData data)
 		{
 			UUIText text = base.GetText(0);
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			LguiUtil.Instance.SetLocalTextNew(text, data.Title, Array.Empty<object>());
 		}
 
-		// Token: 0x0603FF91 RID: 262033 RVA: 0x00F7A30C File Offset: 0x00F7850C
+		// Token: 0x06034C52 RID: 216146 RVA: 0x00EC126C File Offset: 0x00EBF46C
 		private void RefreshBaseQuality(ItemTipsData data)
 		{
 			UUIItem item = base.GetItem(7);
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			item.SetUIActive(true);
 		}
 
-		// Token: 0x0603FF92 RID: 262034 RVA: 0x00F7A368 File Offset: 0x00F78568
+		// Token: 0x06034C53 RID: 216147 RVA: 0x00EC12C8 File Offset: 0x00EBF4C8
 		private void RefreshBaseIcon(ItemTipsData data)
 		{
 			base.GetTexture(2).SetUIActive(false);
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			base.SetItemIcon(texture, data.ConfigId, null, null);
 		}
 
-		// Token: 0x0603FF93 RID: 262035 RVA: 0x00F7A3D8 File Offset: 0x00F785D8
+		// Token: 0x06034C54 RID: 216148 RVA: 0x00EC1338 File Offset: 0x00EBF538
 		private void SetDebugText(int debugId)
 		{
 			UUIText text = base.GetText(5);
@@ -124,29 +124,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			text.SetUIActive(true);
 		}
 
-		// Token: 0x040215B2 RID: 136626
+		// Token: 0x0401BEE1 RID: 114401
 		[Nullable(2)]
 		public TipsMaterialComponent SubComponent;
 
-		// Token: 0x0200C56A RID: 50538
+		// Token: 0x0200AF51 RID: 44881
 		[NullableContext(0)]
 		private enum EItemTipsComponentContent
 		{
-			// Token: 0x0403B955 RID: 244053
+			// Token: 0x040362B7 RID: 221879
 			Title,
-			// Token: 0x0403B956 RID: 244054
+			// Token: 0x040362B8 RID: 221880
 			TexQuality,
-			// Token: 0x0403B957 RID: 244055
+			// Token: 0x040362B9 RID: 221881
 			TexItemIcon256,
-			// Token: 0x0403B958 RID: 244056
+			// Token: 0x040362BA RID: 221882
 			NiagaraQuality,
-			// Token: 0x0403B959 RID: 244057
+			// Token: 0x040362BB RID: 221883
 			PanelContent,
-			// Token: 0x0403B95A RID: 244058
+			// Token: 0x040362BC RID: 221884
 			TxtDebug,
-			// Token: 0x0403B95B RID: 244059
+			// Token: 0x040362BD RID: 221885
 			TextureItemIcon732,
-			// Token: 0x0403B95C RID: 244060
+			// Token: 0x040362BE RID: 221886
 			QualityItem
 		}
 	}

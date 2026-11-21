@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x02005186 RID: 20870
+	// Token: 0x02004156 RID: 16726
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DeckBuilderCardDeleteView : UiViewBase
 	{
-		// Token: 0x06035613 RID: 218643 RVA: 0x00CA4E4F File Offset: 0x00CA304F
+		// Token: 0x0602A50E RID: 173326 RVA: 0x00BF2407 File Offset: 0x00BF0607
 		public DeckBuilderCardDeleteView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06035614 RID: 218644 RVA: 0x00CA4E70 File Offset: 0x00CA3070
+		// Token: 0x0602A50F RID: 173327 RVA: 0x00BF2428 File Offset: 0x00BF0628
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x06035615 RID: 218645 RVA: 0x00CA4F4C File Offset: 0x00CA314C
+		// Token: 0x0602A510 RID: 173328 RVA: 0x00BF2504 File Offset: 0x00BF0704
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DeckBuilderCardDeleteView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035616 RID: 218646 RVA: 0x00CA4F8F File Offset: 0x00CA318F
+		// Token: 0x0602A511 RID: 173329 RVA: 0x00BF2547 File Offset: 0x00BF0747
 		private void OnCancelButtonClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06035617 RID: 218647 RVA: 0x00CA4F98 File Offset: 0x00CA3198
+		// Token: 0x0602A512 RID: 173330 RVA: 0x00BF2550 File Offset: 0x00BF0750
 		private void OnConfirmButtonClick()
 		{
 			if (this.SelectedElementSet.Count == 0)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.Data.DeleteFunc(this.SelectedElementSet);
 		}
 
-		// Token: 0x06035618 RID: 218648 RVA: 0x00CA4FE4 File Offset: 0x00CA31E4
+		// Token: 0x0602A513 RID: 173331 RVA: 0x00BF259C File Offset: 0x00BF079C
 		private void OnPhysicalToggleClick(EToggleState toggleState)
 		{
 			if (base.GetExtendToggle(2).GetToggleState() == EToggleState.ETT_Checked)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.SelectedElementSet.Remove(ECardElement.Physical);
 		}
 
-		// Token: 0x06035619 RID: 218649 RVA: 0x00CA5010 File Offset: 0x00CA3210
+		// Token: 0x0602A514 RID: 173332 RVA: 0x00BF25C8 File Offset: 0x00BF07C8
 		private DeckBuilderCardDeleteFilterItem CreateFilterItem()
 		{
 			return new DeckBuilderCardDeleteFilterItem
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x0603561A RID: 218650 RVA: 0x00CA502C File Offset: 0x00CA322C
+		// Token: 0x0602A515 RID: 173333 RVA: 0x00BF25E4 File Offset: 0x00BF07E4
 		private void OnItemToggleStateChange(int gridIndex, EToggleState state)
 		{
 			IDeckBuilderCardDeleteFilterItemData deckBuilderCardDeleteFilterItemData = this.FilterDataList[gridIndex];
@@ -99,17 +99,17 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.SelectedElementSet.Remove(deckBuilderCardDeleteFilterItemData.Element);
 		}
 
-		// Token: 0x0401C5E9 RID: 116201
+		// Token: 0x0401701E RID: 94238
 		private readonly HashSet<ECardElement> SelectedElementSet = new HashSet<ECardElement>();
 
-		// Token: 0x0401C5EA RID: 116202
+		// Token: 0x0401701F RID: 94239
 		[Nullable(2)]
 		private IDeckBuilderCardDeleteViewData Data;
 
-		// Token: 0x0401C5EB RID: 116203
+		// Token: 0x04017020 RID: 94240
 		private readonly List<IDeckBuilderCardDeleteFilterItemData> FilterDataList = new List<IDeckBuilderCardDeleteFilterItemData>();
 
-		// Token: 0x0401C5EC RID: 116204
+		// Token: 0x04017021 RID: 94241
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,23 +118,23 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 		})]
 		private GenericLayout<DeckBuilderCardDeleteFilterItem, IDeckBuilderCardDeleteFilterItemData> FilterLayout;
 
-		// Token: 0x0200B2F8 RID: 45816
+		// Token: 0x02009D31 RID: 40241
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x040363D9 RID: 222169
+			// Token: 0x04030E2E RID: 200238
 			public const int CancelButton = 0;
 
-			// Token: 0x040363DA RID: 222170
+			// Token: 0x04030E2F RID: 200239
 			public const int ConfirmButton = 1;
 
-			// Token: 0x040363DB RID: 222171
+			// Token: 0x04030E30 RID: 200240
 			public const int PhysicalToggle = 2;
 
-			// Token: 0x040363DC RID: 222172
+			// Token: 0x04030E31 RID: 200241
 			public const int FilterLayout = 3;
 
-			// Token: 0x040363DD RID: 222173
+			// Token: 0x04030E32 RID: 200242
 			public const int FilterItem = 4;
 		}
 	}

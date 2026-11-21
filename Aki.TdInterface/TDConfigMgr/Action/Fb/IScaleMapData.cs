@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028FA RID: 10490
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BD3 RID: 11219
 	public class IScaleMapData
 	{
-		// Token: 0x0600E8F7 RID: 59639 RVA: 0x00222C35 File Offset: 0x00220E35
+		// Token: 0x0600F73B RID: 63291 RVA: 0x0023FE21 File Offset: 0x0023E021
 		public static IScaleMapData Create(IScaleMapData? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048C5 RID: 18629
-		// (get) Token: 0x0600E8F8 RID: 59640 RVA: 0x00222C54 File Offset: 0x00220E54
+		// Token: 0x17004C43 RID: 19523
+		// (get) Token: 0x0600F73C RID: 63292 RVA: 0x0023FE40 File Offset: 0x0023E040
 		public virtual string Key
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048C6 RID: 18630
-		// (get) Token: 0x0600E8F9 RID: 59641 RVA: 0x00222C61 File Offset: 0x00220E61
+		// Token: 0x17004C44 RID: 19524
+		// (get) Token: 0x0600F73D RID: 63293 RVA: 0x0023FE4D File Offset: 0x0023E04D
 		public virtual float Scale
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400809C RID: 32924
+		// Token: 0x04008761 RID: 34657
 		private IScaleMapData Instance;
 	}
 }

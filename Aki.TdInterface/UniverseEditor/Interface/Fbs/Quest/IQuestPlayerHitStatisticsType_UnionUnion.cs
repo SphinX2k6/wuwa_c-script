@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004008 RID: 16392
+	// Token: 0x02004449 RID: 17481
 	public class IQuestPlayerHitStatisticsType_UnionUnion
 	{
-		// Token: 0x1700732F RID: 29487
-		// (get) Token: 0x06017A74 RID: 96884 RVA: 0x003697E1 File Offset: 0x003679E1
-		// (set) Token: 0x06017A75 RID: 96885 RVA: 0x003697E9 File Offset: 0x003679E9
+		// Token: 0x17007931 RID: 31025
+		// (get) Token: 0x0601910D RID: 102669 RVA: 0x003935D5 File Offset: 0x003917D5
+		// (set) Token: 0x0601910E RID: 102670 RVA: 0x003935DD File Offset: 0x003917DD
 		public IQuestPlayerHitStatisticsType_Union Type { get; set; }
 
-		// Token: 0x17007330 RID: 29488
-		// (get) Token: 0x06017A76 RID: 96886 RVA: 0x003697F2 File Offset: 0x003679F2
-		// (set) Token: 0x06017A77 RID: 96887 RVA: 0x003697FA File Offset: 0x003679FA
+		// Token: 0x17007932 RID: 31026
+		// (get) Token: 0x0601910F RID: 102671 RVA: 0x003935E6 File Offset: 0x003917E6
+		// (set) Token: 0x06019110 RID: 102672 RVA: 0x003935EE File Offset: 0x003917EE
 		public object Value { get; set; }
 
-		// Token: 0x06017A78 RID: 96888 RVA: 0x00369803 File Offset: 0x00367A03
+		// Token: 0x06019111 RID: 102673 RVA: 0x003935F7 File Offset: 0x003917F7
 		public IQuestPlayerHitStatisticsType_UnionUnion()
 		{
 			this.Type = IQuestPlayerHitStatisticsType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06017A79 RID: 96889 RVA: 0x00369819 File Offset: 0x00367A19
+		// Token: 0x06019112 RID: 102674 RVA: 0x0039360D File Offset: 0x0039180D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06017A7A RID: 96890 RVA: 0x0036982B File Offset: 0x00367A2B
+		// Token: 0x06019113 RID: 102675 RVA: 0x0039361F File Offset: 0x0039181F
 		public IQuestPlayerHitStatisticsTypeT AsIQuestPlayerHitStatisticsType()
 		{
 			return this.As<IQuestPlayerHitStatisticsTypeT>();
 		}
 
-		// Token: 0x06017A7B RID: 96891 RVA: 0x00369833 File Offset: 0x00367A33
+		// Token: 0x06019114 RID: 102676 RVA: 0x00393627 File Offset: 0x00391827
 		public static IQuestPlayerHitStatisticsType_UnionUnion FromIQuestPlayerHitStatisticsType(IQuestPlayerHitStatisticsTypeT _iquestplayerhitstatisticstype)
 		{
 			return new IQuestPlayerHitStatisticsType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06017A7C RID: 96892 RVA: 0x00369848 File Offset: 0x00367A48
+		// Token: 0x06019115 RID: 102677 RVA: 0x0039363C File Offset: 0x0039183C
 		public IQuestPlayerHitCountT AsIQuestPlayerHitCount()
 		{
 			return this.As<IQuestPlayerHitCountT>();
 		}
 
-		// Token: 0x06017A7D RID: 96893 RVA: 0x00369850 File Offset: 0x00367A50
+		// Token: 0x06019116 RID: 102678 RVA: 0x00393644 File Offset: 0x00391844
 		public static IQuestPlayerHitStatisticsType_UnionUnion FromIQuestPlayerHitCount(IQuestPlayerHitCountT _iquestplayerhitcount)
 		{
 			return new IQuestPlayerHitStatisticsType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06017A7E RID: 96894 RVA: 0x00369865 File Offset: 0x00367A65
+		// Token: 0x06019117 RID: 102679 RVA: 0x00393659 File Offset: 0x00391859
 		public IQuestPlayerBeDamageT AsIQuestPlayerBeDamage()
 		{
 			return this.As<IQuestPlayerBeDamageT>();
 		}
 
-		// Token: 0x06017A7F RID: 96895 RVA: 0x0036986D File Offset: 0x00367A6D
+		// Token: 0x06019118 RID: 102680 RVA: 0x00393661 File Offset: 0x00391861
 		public static IQuestPlayerHitStatisticsType_UnionUnion FromIQuestPlayerBeDamage(IQuestPlayerBeDamageT _iquestplayerbedamage)
 		{
 			return new IQuestPlayerHitStatisticsType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06017A80 RID: 96896 RVA: 0x00369884 File Offset: 0x00367A84
+		// Token: 0x06019119 RID: 102681 RVA: 0x00393678 File Offset: 0x00391878
 		public static int Pack(FlatBufferBuilder builder, IQuestPlayerHitStatisticsType_UnionUnion _o)
 		{
 			switch (_o.Type)

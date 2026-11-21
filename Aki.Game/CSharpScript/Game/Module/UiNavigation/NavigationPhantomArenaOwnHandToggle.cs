@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004924 RID: 18724
+	// Token: 0x0200389B RID: 14491
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationPhantomArenaOwnHandToggle : NavigationButton
 	{
-		// Token: 0x06030EA6 RID: 200358 RVA: 0x00B5B55A File Offset: 0x00B5975A
+		// Token: 0x060259D3 RID: 154067 RVA: 0x00A963CA File Offset: 0x00A945CA
 		public NavigationPhantomArenaOwnHandToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x170079CE RID: 31182
-		// (get) Token: 0x06030EA7 RID: 200359 RVA: 0x00B5B568 File Offset: 0x00B59768
+		// Token: 0x17004D36 RID: 19766
+		// (get) Token: 0x060259D4 RID: 154068 RVA: 0x00A963D8 File Offset: 0x00A945D8
 		protected PhantomArenaBattleProxy Proxy
 		{
 			get
@@ -34,18 +34,18 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030EA8 RID: 200360 RVA: 0x00B5B5AA File Offset: 0x00B597AA
+		// Token: 0x060259D5 RID: 154069 RVA: 0x00A9641A File Offset: 0x00A9461A
 		protected override void OnButtonClick()
 		{
 		}
 
-		// Token: 0x06030EA9 RID: 200361 RVA: 0x00B5B5AC File Offset: 0x00B597AC
+		// Token: 0x060259D6 RID: 154070 RVA: 0x00A9641C File Offset: 0x00A9461C
 		protected override bool OnCheckFindOpposite()
 		{
 			return this.Proxy == null || !this.Proxy.GamepadLogic.IsInCardSelectState;
 		}
 
-		// Token: 0x06030EAA RID: 200362 RVA: 0x00B5B5CD File Offset: 0x00B597CD
+		// Token: 0x060259D7 RID: 154071 RVA: 0x00A9643D File Offset: 0x00A9463D
 		protected override void OnNotifyFocusListener(bool isSameListener)
 		{
 			if (this.Proxy != null && !isSameListener)
@@ -54,13 +54,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030EAB RID: 200363 RVA: 0x00B5B5EA File Offset: 0x00B597EA
+		// Token: 0x060259D8 RID: 154072 RVA: 0x00A9645A File Offset: 0x00A9465A
 		private int GetHandListenerIndex()
 		{
 			return (this.PanelHandle as PhantomArenaBattlePanelHandle).GetNavigationListenerListByType(ENavigationSelectableDefine.PhantomArenaOwnHandToggle, "GroupNor").IndexOf(this.Listener);
 		}
 
-		// Token: 0x06030EAC RID: 200364 RVA: 0x00B5B610 File Offset: 0x00B59810
+		// Token: 0x060259D9 RID: 154073 RVA: 0x00A96480 File Offset: 0x00A94680
 		[NullableContext(0)]
 		public UniTask<bool> TriggerSelectCard()
 		{
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return <TriggerSelectCard>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030EAD RID: 200365 RVA: 0x00B5B654 File Offset: 0x00B59854
+		// Token: 0x060259DA RID: 154074 RVA: 0x00A964C4 File Offset: 0x00A946C4
 		public void SwitchHandCardTips()
 		{
 			if (this.Proxy != null)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0401A3DF RID: 107487
+		// Token: 0x04014C52 RID: 85074
 		protected PhantomArenaBattleProxy ProxyInternal;
 	}
 }

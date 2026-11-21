@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001850 RID: 6224
+	// Token: 0x0200038C RID: 908
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnStopTrackTarget : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06016EE3 RID: 93923 RVA: 0x00217569 File Offset: 0x00215769
+		// Token: 0x06005AF6 RID: 23286 RVA: 0x00080782 File Offset: 0x0007E982
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnStopTrackTarget.StaticFunctionPtr();
 		}
 
-		// Token: 0x06016EE4 RID: 93924 RVA: 0x00217575 File Offset: 0x00215775
+		// Token: 0x06005AF7 RID: 23287 RVA: 0x0008078E File Offset: 0x0007E98E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnStopTrackTarget._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnStopTrackTarget._FunctionPtr;
 		}
 
-		// Token: 0x06016EE5 RID: 93925 RVA: 0x00217598 File Offset: 0x00215798
+		// Token: 0x06005AF8 RID: 23288 RVA: 0x000807B1 File Offset: 0x0007E9B1
 		public FOnStopTrackTarget()
 		{
 		}
 
-		// Token: 0x06016EE6 RID: 93926 RVA: 0x002175A0 File Offset: 0x002157A0
+		// Token: 0x06005AF9 RID: 23289 RVA: 0x000807B9 File Offset: 0x0007E9B9
 		[NullableContext(2)]
 		public FOnStopTrackTarget(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06016EE7 RID: 93927 RVA: 0x002175AA File Offset: 0x002157AA
+		// Token: 0x06005AFA RID: 23290 RVA: 0x000807C3 File Offset: 0x0007E9C3
 		public FOnStopTrackTarget(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06016EE8 RID: 93928 RVA: 0x002175B5 File Offset: 0x002157B5
+		// Token: 0x06005AFB RID: 23291 RVA: 0x000807CE File Offset: 0x0007E9CE
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<FVector>) ?? ((Action<FVector>)Delegate.CreateDelegate(typeof(Action<FVector>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06016EE9 RID: 93929 RVA: 0x002175E7 File Offset: 0x002157E7
+		// Token: 0x06005AFC RID: 23292 RVA: 0x00080800 File Offset: 0x0007EA00
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<FVector> Callback)
 		{
 			if (FOnStopTrackTarget.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FOnStopTrackTarget.RegisterId);
 		}
 
-		// Token: 0x06016EEA RID: 93930 RVA: 0x00217621 File Offset: 0x00215821
+		// Token: 0x06005AFD RID: 23293 RVA: 0x0008083A File Offset: 0x0007EA3A
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<FVector> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06016EEB RID: 93931 RVA: 0x0021762C File Offset: 0x0021582C
+		// Token: 0x06005AFE RID: 23294 RVA: 0x00080844 File Offset: 0x0007EA44
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(FVector CurrentLinearVelocity)
 		{
 			FOnStopTrackTarget.__FOnStopTrackTarget_DelegateParams* ptr = stackalloc FOnStopTrackTarget.__FOnStopTrackTarget_DelegateParams[(UIntPtr)27] + 15L / (long)sizeof(FOnStopTrackTarget.__FOnStopTrackTarget_DelegateParams) & -16L;
@@ -86,10 +83,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x06016EEC RID: 93932 RVA: 0x00217668 File Offset: 0x00215868
+		// Token: 0x06005AFF RID: 23295 RVA: 0x00080880 File Offset: 0x0007EA80
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FVector> action = target as Action<FVector>;
@@ -100,31 +96,31 @@ namespace UnrealEngine
 			action(((FOnStopTrackTarget.__FOnStopTrackTarget_DelegateParams*)__Parameters)->CurrentLinearVelocity);
 		}
 
-		// Token: 0x0400C754 RID: 51028
+		// Token: 0x040025CE RID: 9678
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400C755 RID: 51029
+		// Token: 0x040025CF RID: 9679
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroFauxPhysics.OnStopTrackTarget__DelegateSignature";
 
-		// Token: 0x0400C756 RID: 51030
+		// Token: 0x040025D0 RID: 9680
 		private static int RegisterId;
 
-		// Token: 0x02002F6E RID: 12142
+		// Token: 0x02000A97 RID: 2711
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
-		protected ref struct __FOnStopTrackTarget_DelegateParams
+		private ref struct __FOnStopTrackTarget_DelegateParams
 		{
-			// Token: 0x04016B29 RID: 92969
+			// Token: 0x04005AEB RID: 23275
 			[FieldOffset(0)]
 			public FVector CurrentLinearVelocity;
 		}
 
-		// Token: 0x02002F6F RID: 12143
+		// Token: 0x02000A98 RID: 2712
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B2A RID: 92970
+			// Token: 0x04005AEC RID: 23276
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

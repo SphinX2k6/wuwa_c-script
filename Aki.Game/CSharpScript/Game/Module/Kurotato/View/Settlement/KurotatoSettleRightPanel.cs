@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 {
-	// Token: 0x02005726 RID: 22310
+	// Token: 0x020046FD RID: 18173
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoSettleRightPanel : UiPanelBase
 	{
-		// Token: 0x06038B99 RID: 232345 RVA: 0x00D76195 File Offset: 0x00D74395
+		// Token: 0x0602DAA9 RID: 187049 RVA: 0x00CC4841 File Offset: 0x00CC2A41
 		public EKurotatoSettlePageState GetCurrentPageState()
 		{
 			return this.PageState;
 		}
 
-		// Token: 0x06038B9A RID: 232346 RVA: 0x00D761A0 File Offset: 0x00D743A0
+		// Token: 0x0602DAAA RID: 187050 RVA: 0x00CC484C File Offset: 0x00CC2A4C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 18;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038B9B RID: 232347 RVA: 0x00D76424 File Offset: 0x00D74624
+		// Token: 0x0602DAAB RID: 187051 RVA: 0x00CC4AD0 File Offset: 0x00CC2CD0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoSettleRightPanel.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038B9C RID: 232348 RVA: 0x00D76468 File Offset: 0x00D74668
+		// Token: 0x0602DAAC RID: 187052 RVA: 0x00CC4B14 File Offset: 0x00CC2D14
 		private void SetupOpenParam()
 		{
 			this.PageState = (EKurotatoSettlePageState)this.OpenParam;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			}
 		}
 
-		// Token: 0x06038B9D RID: 232349 RVA: 0x00D764F4 File Offset: 0x00D746F4
+		// Token: 0x0602DAAD RID: 187053 RVA: 0x00CC4BA0 File Offset: 0x00CC2DA0
 		private UniTask CreateCompletionTimeItemAsync()
 		{
 			KurotatoSettleRightPanel.<CreateCompletionTimeItemAsync>d__15 <CreateCompletionTimeItemAsync>d__;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return <CreateCompletionTimeItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038B9E RID: 232350 RVA: 0x00D76538 File Offset: 0x00D74738
+		// Token: 0x0602DAAE RID: 187054 RVA: 0x00CC4BE4 File Offset: 0x00CC2DE4
 		private UniTask CreateTotalKillsItemAsync()
 		{
 			KurotatoSettleRightPanel.<CreateTotalKillsItemAsync>d__16 <CreateTotalKillsItemAsync>d__;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return <CreateTotalKillsItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038B9F RID: 232351 RVA: 0x00D7657C File Offset: 0x00D7477C
+		// Token: 0x0602DAAF RID: 187055 RVA: 0x00CC4C28 File Offset: 0x00CC2E28
 		private UniTask CreateEndlessCompletionTimeItemAsync()
 		{
 			KurotatoSettleRightPanel.<CreateEndlessCompletionTimeItemAsync>d__17 <CreateEndlessCompletionTimeItemAsync>d__;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return <CreateEndlessCompletionTimeItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038BA0 RID: 232352 RVA: 0x00D765C0 File Offset: 0x00D747C0
+		// Token: 0x0602DAB0 RID: 187056 RVA: 0x00CC4C6C File Offset: 0x00CC2E6C
 		private UniTask CreateEndlessTotalKillsItemAsync()
 		{
 			KurotatoSettleRightPanel.<CreateEndlessTotalKillsItemAsync>d__18 <CreateEndlessTotalKillsItemAsync>d__;
@@ -136,14 +136,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return <CreateEndlessTotalKillsItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038BA1 RID: 232353 RVA: 0x00D76603 File Offset: 0x00D74803
+		// Token: 0x0602DAB1 RID: 187057 RVA: 0x00CC4CAF File Offset: 0x00CC2EAF
 		private void CreateItemMultiTemplateScrollView()
 		{
 			this.ItemMultiTemplateScrollView = new MultiTemplateScrollView(base.GetMultiTemplateScrollViewComponent(14));
 			this.RefreshScroll();
 		}
 
-		// Token: 0x06038BA2 RID: 232354 RVA: 0x00D76620 File Offset: 0x00D74820
+		// Token: 0x0602DAB2 RID: 187058 RVA: 0x00CC4CCC File Offset: 0x00CC2ECC
 		private void InitScrollViewData()
 		{
 			this.ScrollDataList.Clear();
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.ScrollDataList.AddRange(this.GetUnlockItemScrollData());
 		}
 
-		// Token: 0x06038BA3 RID: 232355 RVA: 0x00D76698 File Offset: 0x00D74898
+		// Token: 0x0602DAB3 RID: 187059 RVA: 0x00CC4D44 File Offset: 0x00CC2F44
 		private List<IMultiTemplateGridData> GetRoleScrollData()
 		{
 			IKurotatoSettlementData settlementData = KurotatoModel.Instance.GetSettlementData();
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return list;
 		}
 
-		// Token: 0x06038BA4 RID: 232356 RVA: 0x00D767A4 File Offset: 0x00D749A4
+		// Token: 0x0602DAB4 RID: 187060 RVA: 0x00CC4E50 File Offset: 0x00CC3050
 		private void OnClickRoleItem(int roleId, List<int> unlockRoles)
 		{
 			int index = unlockRoles.IndexOf(roleId);
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			UiManager.Instance.OpenView(EUiViewName.KurotatoPopupUnlockRoleView, param, null);
 		}
 
-		// Token: 0x06038BA5 RID: 232357 RVA: 0x00D767E0 File Offset: 0x00D749E0
+		// Token: 0x0602DAB5 RID: 187061 RVA: 0x00CC4E8C File Offset: 0x00CC308C
 		private List<IMultiTemplateGridData> GetUnlockWeaponScrollData()
 		{
 			IKurotatoSettlementData settlementData = KurotatoModel.Instance.GetSettlementData();
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return list;
 		}
 
-		// Token: 0x06038BA6 RID: 232358 RVA: 0x00D7691C File Offset: 0x00D74B1C
+		// Token: 0x0602DAB6 RID: 187062 RVA: 0x00CC4FC8 File Offset: 0x00CC31C8
 		private List<IMultiTemplateGridData> GetUnlockItemScrollData()
 		{
 			IKurotatoSettlementData settlementData = KurotatoModel.Instance.GetSettlementData();
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return list;
 		}
 
-		// Token: 0x06038BA7 RID: 232359 RVA: 0x00D76A80 File Offset: 0x00D74C80
+		// Token: 0x0602DAB7 RID: 187063 RVA: 0x00CC512C File Offset: 0x00CC332C
 		private List<IMultiTemplateGridData> GetCurrentWeaponScrollData()
 		{
 			IKurotatoSettlementData settlementData = KurotatoModel.Instance.GetSettlementData();
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return list;
 		}
 
-		// Token: 0x06038BA8 RID: 232360 RVA: 0x00D76C68 File Offset: 0x00D74E68
+		// Token: 0x0602DAB8 RID: 187064 RVA: 0x00CC5314 File Offset: 0x00CC3514
 		private void OnClickWeaponItem(List<KurotatoCardTip> cardData, int clickIndex)
 		{
 			KurotatoPopupItemDetailOpenParam param = new KurotatoPopupItemDetailOpenParam
@@ -407,7 +407,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			UiManager.Instance.OpenView(EUiViewName.KurotatoPopupWeaponDetailView, param, null);
 		}
 
-		// Token: 0x06038BA9 RID: 232361 RVA: 0x00D76C9C File Offset: 0x00D74E9C
+		// Token: 0x0602DAB9 RID: 187065 RVA: 0x00CC5348 File Offset: 0x00CC3548
 		private List<IMultiTemplateGridData> GetCurrentItemScrollData()
 		{
 			KurotatoConfig kurotatoConfig = KurotatoConfig.Instance;
@@ -486,7 +486,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return list;
 		}
 
-		// Token: 0x06038BAA RID: 232362 RVA: 0x00D76ECC File Offset: 0x00D750CC
+		// Token: 0x0602DABA RID: 187066 RVA: 0x00CC5578 File Offset: 0x00CC3778
 		private void OnClickItemItem(List<KurotatoCardTip> cardData, int clickIndex)
 		{
 			KurotatoPopupItemDetailOpenParam param = new KurotatoPopupItemDetailOpenParam
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			UiManager.Instance.OpenView(EUiViewName.KurotatoPopupWeaponDetailView, param, null);
 		}
 
-		// Token: 0x06038BAB RID: 232363 RVA: 0x00D76EFE File Offset: 0x00D750FE
+		// Token: 0x0602DABB RID: 187067 RVA: 0x00CC55AA File Offset: 0x00CC37AA
 		protected override void OnStart()
 		{
 			if (this.IsEndless)
@@ -508,14 +508,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.RefreshNormalMode();
 		}
 
-		// Token: 0x06038BAC RID: 232364 RVA: 0x00D76F15 File Offset: 0x00D75115
+		// Token: 0x0602DABC RID: 187068 RVA: 0x00CC55C1 File Offset: 0x00CC37C1
 		public void SetPageState(EKurotatoSettlePageState state)
 		{
 			this.PageState = state;
 			this.RefreshScroll();
 		}
 
-		// Token: 0x06038BAD RID: 232365 RVA: 0x00D76F24 File Offset: 0x00D75124
+		// Token: 0x0602DABD RID: 187069 RVA: 0x00CC55D0 File Offset: 0x00CC37D0
 		public void RefreshNormalMode()
 		{
 			this.RefreshModeInfo();
@@ -525,7 +525,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.RefreshScroll();
 		}
 
-		// Token: 0x06038BAE RID: 232366 RVA: 0x00D76F90 File Offset: 0x00D75190
+		// Token: 0x0602DABE RID: 187070 RVA: 0x00CC563C File Offset: 0x00CC383C
 		public void RefreshEndlessMode()
 		{
 			this.RefreshModeInfo();
@@ -545,7 +545,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.RefreshScroll();
 		}
 
-		// Token: 0x06038BAF RID: 232367 RVA: 0x00D770A0 File Offset: 0x00D752A0
+		// Token: 0x0602DABF RID: 187071 RVA: 0x00CC574C File Offset: 0x00CC394C
 		private void RefreshModeInfo()
 		{
 			int curLevelId = KurotatoModel.Instance.GetCurLevelId();
@@ -562,7 +562,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			base.GetItem(10).SetUIActive(this.IsEndless);
 		}
 
-		// Token: 0x06038BB0 RID: 232368 RVA: 0x00D771C8 File Offset: 0x00D753C8
+		// Token: 0x0602DAC0 RID: 187072 RVA: 0x00CC5874 File Offset: 0x00CC3A74
 		private void RefreshScroll()
 		{
 			this.InitScrollViewData();
@@ -571,7 +571,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.ItemMultiTemplateScrollView.RefreshByData(multiTemplateScrollViewRefreshContext);
 		}
 
-		// Token: 0x0401DC3B RID: 121915
+		// Token: 0x040186D1 RID: 100049
 		[StaticVariableRuleIgnore]
 		private static readonly IReadOnlyDictionary<EKurotatoLevelDifficulty, string> DifficultyColorMap = new Dictionary<EKurotatoLevelDifficulty, string>
 		{
@@ -593,90 +593,90 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			}
 		};
 
-		// Token: 0x0401DC3C RID: 121916
+		// Token: 0x040186D2 RID: 100050
 		private bool IsSuccess;
 
-		// Token: 0x0401DC3D RID: 121917
+		// Token: 0x040186D3 RID: 100051
 		private bool IsEndless;
 
-		// Token: 0x0401DC3E RID: 121918
+		// Token: 0x040186D4 RID: 100052
 		private EKurotatoSettlePageState PageState = EKurotatoSettlePageState.Info;
 
-		// Token: 0x0401DC3F RID: 121919
+		// Token: 0x040186D5 RID: 100053
 		private readonly KurotatoSettleTipInfoItem CompletionTimeItem = new KurotatoSettleTipInfoItem();
 
-		// Token: 0x0401DC40 RID: 121920
+		// Token: 0x040186D6 RID: 100054
 		private readonly KurotatoSettleTipInfoItem TotalKillsItem = new KurotatoSettleTipInfoItem();
 
-		// Token: 0x0401DC41 RID: 121921
+		// Token: 0x040186D7 RID: 100055
 		private readonly KurotatoSettleTipInfoItem EndlessCompletionTimeItem = new KurotatoSettleTipInfoItem();
 
-		// Token: 0x0401DC42 RID: 121922
+		// Token: 0x040186D8 RID: 100056
 		private readonly KurotatoSettleTipInfoItem EndlessTotalKillsItem = new KurotatoSettleTipInfoItem();
 
-		// Token: 0x0401DC43 RID: 121923
+		// Token: 0x040186D9 RID: 100057
 		[Nullable(2)]
 		private MultiTemplateScrollView ItemMultiTemplateScrollView;
 
-		// Token: 0x0401DC44 RID: 121924
+		// Token: 0x040186DA RID: 100058
 		private readonly List<IMultiTemplateGridData> ScrollDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x0200B8E5 RID: 47333
+		// Token: 0x0200A306 RID: 41734
 		[NullableContext(0)]
 		private class EComps
 		{
-			// Token: 0x04037EDB RID: 229083
+			// Token: 0x040328EB RID: 207083
 			public const int PanelSuccess = 0;
 
-			// Token: 0x04037EDC RID: 229084
+			// Token: 0x040328EC RID: 207084
 			public const int PanelFailure = 1;
 
-			// Token: 0x04037EDD RID: 229085
+			// Token: 0x040328ED RID: 207085
 			public const int TextureEndless = 2;
 
-			// Token: 0x04037EDE RID: 229086
+			// Token: 0x040328EE RID: 207086
 			public const int TextureScore = 3;
 
-			// Token: 0x04037EDF RID: 229087
+			// Token: 0x040328EF RID: 207087
 			public const int TextureBg = 4;
 
-			// Token: 0x04037EE0 RID: 229088
+			// Token: 0x040328F0 RID: 207088
 			public const int TextMode = 5;
 
-			// Token: 0x04037EE1 RID: 229089
+			// Token: 0x040328F1 RID: 207089
 			public const int PanelNormal = 6;
 
-			// Token: 0x04037EE2 RID: 229090
+			// Token: 0x040328F2 RID: 207090
 			public const int PanelCompletionTime = 7;
 
-			// Token: 0x04037EE3 RID: 229091
+			// Token: 0x040328F3 RID: 207091
 			public const int PanelTotalKills = 8;
 
-			// Token: 0x04037EE4 RID: 229092
+			// Token: 0x040328F4 RID: 207092
 			public const int PanelUnlockInfo = 9;
 
-			// Token: 0x04037EE5 RID: 229093
+			// Token: 0x040328F5 RID: 207093
 			public const int PanelEndless = 10;
 
-			// Token: 0x04037EE6 RID: 229094
+			// Token: 0x040328F6 RID: 207094
 			public const int PanelEndlessCompletionTime = 11;
 
-			// Token: 0x04037EE7 RID: 229095
+			// Token: 0x040328F7 RID: 207095
 			public const int PanelEndlessTotalKills = 12;
 
-			// Token: 0x04037EE8 RID: 229096
+			// Token: 0x040328F8 RID: 207096
 			public const int ArtTextNum = 13;
 
-			// Token: 0x04037EE9 RID: 229097
+			// Token: 0x040328F9 RID: 207097
 			public const int ScrollItem = 14;
 
-			// Token: 0x04037EEA RID: 229098
+			// Token: 0x040328FA RID: 207098
 			public const int PanelTitle = 15;
 
-			// Token: 0x04037EEB RID: 229099
+			// Token: 0x040328FB RID: 207099
 			public const int PanelItem = 16;
 
-			// Token: 0x04037EEC RID: 229100
+			// Token: 0x040328FC RID: 207100
 			public const int PanelRole = 17;
 		}
 	}

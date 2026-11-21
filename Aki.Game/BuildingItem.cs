@@ -7,22 +7,22 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020012ED RID: 4845
+// Token: 0x020007A1 RID: 1953
 [NullableContext(1)]
 [Nullable(0)]
 public class BuildingItem : UiPanelBase
 {
-	// Token: 0x060085DE RID: 34270 RVA: 0x001C84C9 File Offset: 0x001C66C9
+	// Token: 0x06005979 RID: 22905 RVA: 0x001D1335 File Offset: 0x001CF535
 	public BuildingItem(int buildingId)
 	{
 		this.BuildingId = buildingId;
 	}
 
-	// Token: 0x17000B7B RID: 2939
-	// (get) Token: 0x060085DF RID: 34271 RVA: 0x001C84D8 File Offset: 0x001C66D8
+	// Token: 0x17000B9B RID: 2971
+	// (get) Token: 0x0600597A RID: 22906 RVA: 0x001D1344 File Offset: 0x001CF544
 	public int BuildingId { get; }
 
-	// Token: 0x060085E0 RID: 34272 RVA: 0x001C84E0 File Offset: 0x001C66E0
+	// Token: 0x0600597B RID: 22907 RVA: 0x001D134C File Offset: 0x001CF54C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,45 +44,45 @@ public class BuildingItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060085E1 RID: 34273 RVA: 0x001C85F8 File Offset: 0x001C67F8
+	// Token: 0x0600597C RID: 22908 RVA: 0x001D1464 File Offset: 0x001CF664
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
 		this.SequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.HideBuildingTips), false);
 	}
 
-	// Token: 0x060085E2 RID: 34274 RVA: 0x001C8623 File Offset: 0x001C6823
+	// Token: 0x0600597D RID: 22909 RVA: 0x001D148F File Offset: 0x001CF68F
 	protected override void OnBeforeShow()
 	{
 		this.AddEventListener();
 		this.Refresh();
 	}
 
-	// Token: 0x060085E3 RID: 34275 RVA: 0x001C8631 File Offset: 0x001C6831
+	// Token: 0x0600597E RID: 22910 RVA: 0x001D149D File Offset: 0x001CF69D
 	protected override void OnBeforeHide()
 	{
 		this.RemoveEventListener();
 	}
 
-	// Token: 0x060085E4 RID: 34276 RVA: 0x001C8639 File Offset: 0x001C6839
+	// Token: 0x0600597F RID: 22911 RVA: 0x001D14A5 File Offset: 0x001CF6A5
 	protected void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.MoonChasingRefreshBuildingRedDot, new Action(this.RefreshRedDot));
 	}
 
-	// Token: 0x060085E5 RID: 34277 RVA: 0x001C8657 File Offset: 0x001C6857
+	// Token: 0x06005980 RID: 22912 RVA: 0x001D14C3 File Offset: 0x001CF6C3
 	protected void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.MoonChasingRefreshBuildingRedDot, new Action(this.RefreshRedDot));
 	}
 
-	// Token: 0x060085E6 RID: 34278 RVA: 0x001C8675 File Offset: 0x001C6875
+	// Token: 0x06005981 RID: 22913 RVA: 0x001D14E1 File Offset: 0x001CF6E1
 	protected override void OnBeforeDestroy()
 	{
 		this.SequencePlayer.Clear();
 	}
 
-	// Token: 0x060085E7 RID: 34279 RVA: 0x001C8684 File Offset: 0x001C6884
+	// Token: 0x06005982 RID: 22914 RVA: 0x001D14F0 File Offset: 0x001CF6F0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -102,13 +102,13 @@ public class BuildingItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060085E8 RID: 34280 RVA: 0x001C86B1 File Offset: 0x001C68B1
+	// Token: 0x06005983 RID: 22915 RVA: 0x001D151D File Offset: 0x001CF71D
 	private void OpenBuildingTips()
 	{
 		MoonChasingController.Instance.OpenBuildingTipsInfoView(this.BuildingId);
 	}
 
-	// Token: 0x060085E9 RID: 34281 RVA: 0x001C86C4 File Offset: 0x001C68C4
+	// Token: 0x06005984 RID: 22916 RVA: 0x001D1530 File Offset: 0x001CF730
 	private void HideBuildingTips(string sequenceName)
 	{
 		if (sequenceName == "Close")
@@ -120,7 +120,7 @@ public class BuildingItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060085EA RID: 34282 RVA: 0x001C8716 File Offset: 0x001C6916
+	// Token: 0x06005985 RID: 22917 RVA: 0x001D1582 File Offset: 0x001CF782
 	public void SetTipsActive(bool value)
 	{
 		UUIItem item = base.GetItem(7);
@@ -131,7 +131,7 @@ public class BuildingItem : UiPanelBase
 		item.SetUIActive(value);
 	}
 
-	// Token: 0x060085EB RID: 34283 RVA: 0x001C872C File Offset: 0x001C692C
+	// Token: 0x06005986 RID: 22918 RVA: 0x001D1598 File Offset: 0x001CF798
 	public void SetExhibitionMode(bool bHide)
 	{
 		bool isBuild = MoonChasingBuildingModel.Instance.GetBuildingDataById(this.BuildingId).IsBuild;
@@ -140,7 +140,7 @@ public class BuildingItem : UiPanelBase
 		base.GetItem(9).SetUIActive(!bHide);
 	}
 
-	// Token: 0x060085EC RID: 34284 RVA: 0x001C8780 File Offset: 0x001C6980
+	// Token: 0x06005987 RID: 22919 RVA: 0x001D15EC File Offset: 0x001CF7EC
 	public void SetBuildingItemActive(bool value)
 	{
 		bool isBuild = MoonChasingBuildingModel.Instance.GetBuildingDataById(this.BuildingId).IsBuild;
@@ -163,7 +163,7 @@ public class BuildingItem : UiPanelBase
 		this.SetInteractive(value);
 	}
 
-	// Token: 0x060085ED RID: 34285 RVA: 0x001C8845 File Offset: 0x001C6A45
+	// Token: 0x06005988 RID: 22920 RVA: 0x001D16B1 File Offset: 0x001CF8B1
 	public void SetInteractive(bool value)
 	{
 		UUIButtonComponent button = base.GetButton(6);
@@ -174,7 +174,7 @@ public class BuildingItem : UiPanelBase
 		button.SetSelfInteractive(value);
 	}
 
-	// Token: 0x060085EE RID: 34286 RVA: 0x001C885C File Offset: 0x001C6A5C
+	// Token: 0x06005989 RID: 22921 RVA: 0x001D16C8 File Offset: 0x001CF8C8
 	private void SetBuildingTexture()
 	{
 		BuildingData buildingDataById = MoonChasingBuildingModel.Instance.GetBuildingDataById(this.BuildingId);
@@ -191,7 +191,7 @@ public class BuildingItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060085EF RID: 34287 RVA: 0x001C88E4 File Offset: 0x001C6AE4
+	// Token: 0x0600598A RID: 22922 RVA: 0x001D1750 File Offset: 0x001CF950
 	private void SetStateSprite()
 	{
 		BuildingData buildingDataById = MoonChasingBuildingModel.Instance.GetBuildingDataById(this.BuildingId);
@@ -219,7 +219,7 @@ public class BuildingItem : UiPanelBase
 		base.SetSpriteTransitionByPath(resourcePath, uiSpriteTransition, EUISelectableSelectionState.Normal).Forget();
 	}
 
-	// Token: 0x060085F0 RID: 34288 RVA: 0x001C8978 File Offset: 0x001C6B78
+	// Token: 0x0600598B RID: 22923 RVA: 0x001D17E4 File Offset: 0x001CF9E4
 	private void SetTipsSprite()
 	{
 		BuildingData buildingDataById = MoonChasingBuildingModel.Instance.GetBuildingDataById(this.BuildingId);
@@ -250,14 +250,14 @@ public class BuildingItem : UiPanelBase
 		uiSpriteTransition.TransitionInfo.NormalTransition.Color = fcolor.Value;
 	}
 
-	// Token: 0x060085F1 RID: 34289 RVA: 0x001C8A60 File Offset: 0x001C6C60
+	// Token: 0x0600598C RID: 22924 RVA: 0x001D18CC File Offset: 0x001CFACC
 	private void SetLockTipsSprite()
 	{
 		BuildingData buildingDataById = MoonChasingBuildingModel.Instance.GetBuildingDataById(this.BuildingId);
 		base.GetUiSpriteTransition(2).RootUIComp.Get().SetUIActive(!buildingDataById.IsUnlock);
 	}
 
-	// Token: 0x060085F2 RID: 34290 RVA: 0x001C8AA0 File Offset: 0x001C6CA0
+	// Token: 0x0600598D RID: 22925 RVA: 0x001D190C File Offset: 0x001CFB0C
 	private void SetLevelUpItem()
 	{
 		BuildingData buildingDataById = MoonChasingBuildingModel.Instance.GetBuildingDataById(this.BuildingId);
@@ -269,7 +269,7 @@ public class BuildingItem : UiPanelBase
 		item.SetUIActive(buildingDataById.IsAvailableLevelUp);
 	}
 
-	// Token: 0x060085F3 RID: 34291 RVA: 0x001C8AD8 File Offset: 0x001C6CD8
+	// Token: 0x0600598E RID: 22926 RVA: 0x001D1944 File Offset: 0x001CFB44
 	private void SetRedDot()
 	{
 		BuildingData buildingDataById = MoonChasingBuildingModel.Instance.GetBuildingDataById(this.BuildingId);
@@ -282,13 +282,13 @@ public class BuildingItem : UiPanelBase
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x060085F4 RID: 34292 RVA: 0x001C8B14 File Offset: 0x001C6D14
+	// Token: 0x0600598F RID: 22927 RVA: 0x001D1980 File Offset: 0x001CFB80
 	private void RefreshRedDot()
 	{
 		this.SetRedDot();
 	}
 
-	// Token: 0x060085F5 RID: 34293 RVA: 0x001C8B1C File Offset: 0x001C6D1C
+	// Token: 0x06005990 RID: 22928 RVA: 0x001D1988 File Offset: 0x001CFB88
 	private void SetName()
 	{
 		Building buildingById = BuildingConfig.Instance.GetBuildingById(this.BuildingId);
@@ -296,7 +296,7 @@ public class BuildingItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(text, buildingById.Name, Array.Empty<object>());
 	}
 
-	// Token: 0x060085F6 RID: 34294 RVA: 0x001C8B59 File Offset: 0x001C6D59
+	// Token: 0x06005991 RID: 22929 RVA: 0x001D19C5 File Offset: 0x001CFBC5
 	public void Refresh()
 	{
 		this.SetBuildingTexture();
@@ -308,41 +308,41 @@ public class BuildingItem : UiPanelBase
 		this.SetName();
 	}
 
-	// Token: 0x04003C06 RID: 15366
+	// Token: 0x04003C9E RID: 15518
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x0200790D RID: 30989
+	// Token: 0x02006A97 RID: 27287
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04027E10 RID: 163344
+		// Token: 0x0402313D RID: 143677
 		public const int Texture = 0;
 
-		// Token: 0x04027E11 RID: 163345
+		// Token: 0x0402313E RID: 143678
 		public const int TipsSprite = 1;
 
-		// Token: 0x04027E12 RID: 163346
+		// Token: 0x0402313F RID: 143679
 		public const int LockTipsSprite = 2;
 
-		// Token: 0x04027E13 RID: 163347
+		// Token: 0x04023140 RID: 143680
 		public const int StateSprite = 3;
 
-		// Token: 0x04027E14 RID: 163348
+		// Token: 0x04023141 RID: 143681
 		public const int CanLevelUpItem = 4;
 
-		// Token: 0x04027E15 RID: 163349
+		// Token: 0x04023142 RID: 143682
 		public const int RedDotItem = 5;
 
-		// Token: 0x04027E16 RID: 163350
+		// Token: 0x04023143 RID: 143683
 		public const int InteractiveBtn = 6;
 
-		// Token: 0x04027E17 RID: 163351
+		// Token: 0x04023144 RID: 143684
 		public const int TipsItem = 7;
 
-		// Token: 0x04027E18 RID: 163352
+		// Token: 0x04023145 RID: 143685
 		public const int Name = 8;
 
-		// Token: 0x04027E19 RID: 163353
+		// Token: 0x04023146 RID: 143686
 		public const int NameItem = 9;
 	}
 }

@@ -15,14 +15,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AutoPilot
 {
-	// Token: 0x02005E6D RID: 24173
+	// Token: 0x02004E52 RID: 20050
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AutoPilotLine
 	{
-		// Token: 0x17008E7A RID: 36474
-		// (get) Token: 0x0603D77C RID: 251772 RVA: 0x00ED4CAF File Offset: 0x00ED2EAF
-		// (set) Token: 0x0603D77D RID: 251773 RVA: 0x00ED4CB7 File Offset: 0x00ED2EB7
+		// Token: 0x1700624C RID: 25164
+		// (get) Token: 0x0603270C RID: 206604 RVA: 0x00E2621F File Offset: 0x00E2441F
+		// (set) Token: 0x0603270D RID: 206605 RVA: 0x00E26227 File Offset: 0x00E24427
 		[Nullable(new byte[]
 		{
 			0,
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			1
 		})] private set; }
 
-		// Token: 0x0603D77E RID: 251774 RVA: 0x00ED4CC0 File Offset: 0x00ED2EC0
+		// Token: 0x0603270E RID: 206606 RVA: 0x00E26230 File Offset: 0x00E24430
 		public AutoPilotLine([Nullable(new byte[]
 		{
 			0,
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			EventSystem.Instance.Add(EEventName.OnUpdateAutoPilotLine, new Action(this.OnUpdateAutoPilotLine));
 		}
 
-		// Token: 0x0603D77F RID: 251775 RVA: 0x00ED4D84 File Offset: 0x00ED2F84
+		// Token: 0x0603270F RID: 206607 RVA: 0x00E262F4 File Offset: 0x00E244F4
 		private void SetComponentWidthAndHeight()
 		{
 			Vector2D vector2D;
@@ -64,7 +64,8 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 			else
 			{
-				vector2D = this.Map.AsT1.MapTileMgr.TotalTileSize;
+				MapTileMgr mapTileMgr2 = this.Map.AsT1.MapTileMgr;
+				vector2D = ((mapTileMgr2 != null) ? mapTileMgr2.TotalTileSize : null);
 			}
 			Vector2D vector2D2 = vector2D;
 			if (vector2D2 == null)
@@ -93,7 +94,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			rootItem2.SetHeight((float)vector2D2.Y);
 		}
 
-		// Token: 0x0603D780 RID: 251776 RVA: 0x00ED4E24 File Offset: 0x00ED3024
+		// Token: 0x06032710 RID: 206608 RVA: 0x00E2639C File Offset: 0x00E2459C
 		private UniTask InitComponentAsync()
 		{
 			AutoPilotLine.<InitComponentAsync>d__19 <InitComponentAsync>d__;
@@ -104,13 +105,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <InitComponentAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D781 RID: 251777 RVA: 0x00ED4E67 File Offset: 0x00ED3067
+		// Token: 0x06032711 RID: 206609 RVA: 0x00E263DF File Offset: 0x00E245DF
 		public void CheckAutoPilotLineInfo()
 		{
 			this.CheckAutoPilotLineAsync().Forget();
 		}
 
-		// Token: 0x0603D782 RID: 251778 RVA: 0x00ED4E74 File Offset: 0x00ED3074
+		// Token: 0x06032712 RID: 206610 RVA: 0x00E263EC File Offset: 0x00E245EC
 		private UniTask CheckAutoPilotLineAsync()
 		{
 			AutoPilotLine.<CheckAutoPilotLineAsync>d__21 <CheckAutoPilotLineAsync>d__;
@@ -121,7 +122,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <CheckAutoPilotLineAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D783 RID: 251779 RVA: 0x00ED4EB7 File Offset: 0x00ED30B7
+		// Token: 0x06032713 RID: 206611 RVA: 0x00E2642F File Offset: 0x00E2462F
 		public void SetUiActive(bool active)
 		{
 			AutoPilotLineComponent autoPilotLineComponent = this.AutoPilotLineComponent;
@@ -132,7 +133,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			autoPilotLineComponent.SetUiActive(active);
 		}
 
-		// Token: 0x0603D784 RID: 251780 RVA: 0x00ED4ECC File Offset: 0x00ED30CC
+		// Token: 0x06032714 RID: 206612 RVA: 0x00E26444 File Offset: 0x00E24644
 		public void Destroy()
 		{
 			if (this.AutoPilotLineComponent != null)
@@ -144,13 +145,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			EventSystem.Instance.Remove(EEventName.OnUpdateAutoPilotLine, new Action(this.OnUpdateAutoPilotLine));
 		}
 
-		// Token: 0x0603D785 RID: 251781 RVA: 0x00ED4F1C File Offset: 0x00ED311C
+		// Token: 0x06032715 RID: 206613 RVA: 0x00E26494 File Offset: 0x00E24694
 		private void OnUpdateAutoPilotLine()
 		{
 			this.CheckAutoPilotLineInfo();
 		}
 
-		// Token: 0x0603D786 RID: 251782 RVA: 0x00ED4F24 File Offset: 0x00ED3124
+		// Token: 0x06032716 RID: 206614 RVA: 0x00E2649C File Offset: 0x00E2469C
 		public void RefreshFindPathLine()
 		{
 			AutoPilotFindPathResult findPathResult = AutoPilotModel.Instance.GetFindPathResult();
@@ -188,7 +189,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			findPathRoot2.SetUIActive(false);
 		}
 
-		// Token: 0x0603D787 RID: 251783 RVA: 0x00ED4FF4 File Offset: 0x00ED31F4
+		// Token: 0x06032717 RID: 206615 RVA: 0x00E2656C File Offset: 0x00E2476C
 		private void DrawStartPoint(AutoPilotFindPathResult result)
 		{
 			float mapScale = WorldMapModel.Instance.MapScale;
@@ -247,7 +248,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D788 RID: 251784 RVA: 0x00ED5120 File Offset: 0x00ED3320
+		// Token: 0x06032718 RID: 206616 RVA: 0x00E26698 File Offset: 0x00E24898
 		private void DrawEndPoint(AutoPilotFindPathResult result)
 		{
 			float mapScale = WorldMapModel.Instance.MapScale;
@@ -306,7 +307,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D789 RID: 251785 RVA: 0x00ED524C File Offset: 0x00ED344C
+		// Token: 0x06032719 RID: 206617 RVA: 0x00E267C4 File Offset: 0x00E249C4
 		private void DrawPlayerToStartLine(AutoPilotFindPathResult result)
 		{
 			if (!result.GetIsShowPlayerToStartLine())
@@ -385,7 +386,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D78A RID: 251786 RVA: 0x00ED5404 File Offset: 0x00ED3604
+		// Token: 0x0603271A RID: 206618 RVA: 0x00E2697C File Offset: 0x00E24B7C
 		private void DrawEndToTargetLine(AutoPilotFindPathResult result)
 		{
 			if (!result.GetIsShowEndToTargetLine())
@@ -464,7 +465,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D78B RID: 251787 RVA: 0x00ED55BC File Offset: 0x00ED37BC
+		// Token: 0x0603271B RID: 206619 RVA: 0x00E26B34 File Offset: 0x00E24D34
 		private void DrawPlayerToTargetLine(AutoPilotFindPathResult result)
 		{
 			if (!result.GetIsShowPlayerToTargetLine())
@@ -543,7 +544,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D78C RID: 251788 RVA: 0x00ED5774 File Offset: 0x00ED3974
+		// Token: 0x0603271C RID: 206620 RVA: 0x00E26CEC File Offset: 0x00E24EEC
 		private void DrawFindPathHighLightLine(AutoPilotFindPathResult result)
 		{
 			if (!result.GetIsShowHighLightLine())
@@ -587,7 +588,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D78D RID: 251789 RVA: 0x00ED57E4 File Offset: 0x00ED39E4
+		// Token: 0x0603271D RID: 206621 RVA: 0x00E26D5C File Offset: 0x00E24F5C
 		public void SetScale()
 		{
 			bool flag = (this.Map.IsT1 ? this.Map.AsT1.MapType : this.Map.AsT2.MapType) == EMapType.MiniMap;
@@ -607,7 +608,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.Scale3D.Set(num3, num3, num3);
 		}
 
-		// Token: 0x0603D78E RID: 251790 RVA: 0x00ED58B8 File Offset: 0x00ED3AB8
+		// Token: 0x0603271E RID: 206622 RVA: 0x00E26E30 File Offset: 0x00E25030
 		private void RefreshCirclePathHighLightLine()
 		{
 			AutoPilotCirclePathResult circlePathResult = AutoPilotModel.Instance.GetCirclePathResult();
@@ -644,7 +645,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			autoPilotLineComponent3.ResetCircleId();
 		}
 
-		// Token: 0x0603D78F RID: 251791 RVA: 0x00ED5978 File Offset: 0x00ED3B78
+		// Token: 0x0603271F RID: 206623 RVA: 0x00E26EF0 File Offset: 0x00E250F0
 		private void DrawCirclePathHighLightLine(AutoPilotCirclePathResult result)
 		{
 			AutoPilotLineComponent autoPilotLineComponent = this.AutoPilotLineComponent;
@@ -655,7 +656,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			autoPilotLineComponent.LoadCirclePathHighLightLine(result.CircleId).Forget();
 		}
 
-		// Token: 0x0603D790 RID: 251792 RVA: 0x00ED5998 File Offset: 0x00ED3B98
+		// Token: 0x06032720 RID: 206624 RVA: 0x00E26F10 File Offset: 0x00E25110
 		private void DrawPathToCircleHighLightLine(AutoPilotCirclePathResult result)
 		{
 			if (result.GetIsInCircle())
@@ -699,13 +700,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D791 RID: 251793 RVA: 0x00ED5A07 File Offset: 0x00ED3C07
+		// Token: 0x06032721 RID: 206625 RVA: 0x00E26F7F File Offset: 0x00E2517F
 		public void OnMiniMapTick()
 		{
 			this.CheckAutoPilotLineInfo();
 		}
 
-		// Token: 0x0603D792 RID: 251794 RVA: 0x00ED5A10 File Offset: 0x00ED3C10
+		// Token: 0x06032722 RID: 206626 RVA: 0x00E26F88 File Offset: 0x00E25188
 		public void DrawDebugLine(int[] roadWayIds)
 		{
 			AutoPilotLineComponent autoPilotLineComponent = this.AutoPilotLineComponent;
@@ -729,7 +730,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D793 RID: 251795 RVA: 0x00ED5A8C File Offset: 0x00ED3C8C
+		// Token: 0x06032723 RID: 206627 RVA: 0x00E27004 File Offset: 0x00E25204
 		public void DebugDrawCircle(int[] roadWayIds)
 		{
 			List<UKuroRoadway> list = new List<UKuroRoadway>();
@@ -751,7 +752,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			autoPilotLineComponent.CreateDebugRoadLine(tarray).Forget();
 		}
 
-		// Token: 0x0603D794 RID: 251796 RVA: 0x00ED5B08 File Offset: 0x00ED3D08
+		// Token: 0x06032724 RID: 206628 RVA: 0x00E27080 File Offset: 0x00E25280
 		private void RefreshDebugLine()
 		{
 			if ((this.Map.IsT1 ? this.Map.AsT1.MapType : this.Map.AsT2.MapType) != EMapType.WorldMap)
@@ -783,45 +784,45 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0402013A RID: 131386
+		// Token: 0x0401AC01 RID: 109569
 		[Nullable(2)]
 		private AutoPilotLineComponent AutoPilotLineComponent;
 
-		// Token: 0x0402013B RID: 131387
+		// Token: 0x0401AC02 RID: 109570
 		[Nullable(2)]
 		private UniTaskCompletionSource ComponentPromise;
 
-		// Token: 0x0402013C RID: 131388
+		// Token: 0x0401AC03 RID: 109571
 		private readonly Vector2D TmpVector2D = Vector2D.Create();
 
-		// Token: 0x0402013D RID: 131389
+		// Token: 0x0401AC04 RID: 109572
 		private readonly Vector2D StartPoint2D = Vector2D.Create();
 
-		// Token: 0x0402013E RID: 131390
+		// Token: 0x0401AC05 RID: 109573
 		private readonly Vector2D PlayerPoint2D = Vector2D.Create();
 
-		// Token: 0x0402013F RID: 131391
+		// Token: 0x0401AC06 RID: 109574
 		private readonly Vector2D TargetPoint2D = Vector2D.Create();
 
-		// Token: 0x04020140 RID: 131392
+		// Token: 0x0401AC07 RID: 109575
 		private readonly Vector2D EndPoint2D = Vector2D.Create();
 
-		// Token: 0x04020141 RID: 131393
+		// Token: 0x0401AC08 RID: 109576
 		private readonly Rotator PlayerToStartLineRotator = Rotator.Create();
 
-		// Token: 0x04020142 RID: 131394
+		// Token: 0x0401AC09 RID: 109577
 		private readonly Rotator EndToTargetLineRotator = Rotator.Create();
 
-		// Token: 0x04020143 RID: 131395
+		// Token: 0x0401AC0A RID: 109578
 		private readonly Rotator PlayerToTargetLineRotator = Rotator.Create();
 
-		// Token: 0x04020144 RID: 131396
+		// Token: 0x0401AC0B RID: 109579
 		private double ScaleDivideOne = 1.0;
 
-		// Token: 0x04020145 RID: 131397
+		// Token: 0x0401AC0C RID: 109580
 		private readonly global::Vector Scale3D = global::Vector.Create();
 
-		// Token: 0x04020146 RID: 131398
+		// Token: 0x0401AC0D RID: 109581
 		private readonly Stat StatsObject0 = Stat.Create("DrawFindPathHighLightLine", "", "");
 	}
 }

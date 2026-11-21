@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02000E5F RID: 3679
+// Token: 0x02000314 RID: 788
 public class XSXSdkRedPointContentSt
 {
-	// Token: 0x040028DD RID: 10461
+	// Token: 0x04002978 RID: 10616
 	public bool showRed;
 }

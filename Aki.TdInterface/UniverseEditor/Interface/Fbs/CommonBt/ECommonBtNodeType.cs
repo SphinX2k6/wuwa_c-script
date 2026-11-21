@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 {
-	// Token: 0x02005E9B RID: 24219
+	// Token: 0x020064DE RID: 25822
 	public enum ECommonBtNodeType : byte
 	{
-		// Token: 0x0400F8F9 RID: 63737
+		// Token: 0x0401065C RID: 67164
 		Start,
-		// Token: 0x0400F8FA RID: 63738
+		// Token: 0x0401065D RID: 67165
 		Sequence,
-		// Token: 0x0400F8FB RID: 63739
+		// Token: 0x0401065E RID: 67166
 		Selector,
-		// Token: 0x0400F8FC RID: 63740
+		// Token: 0x0401065F RID: 67167
 		Task,
-		// Token: 0x0400F8FD RID: 63741
+		// Token: 0x04010660 RID: 67168
 		Probability
 	}
 }

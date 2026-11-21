@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E2B RID: 3627
+	// Token: 0x02000F27 RID: 3879
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IWaterElementalMatch : IElementalMatchBase
 	{
-		// Token: 0x060051FF RID: 20991 RVA: 0x000CA0A2 File Offset: 0x000C82A2
-		[NullableContext(1)]
+		// Token: 0x06005726 RID: 22310 RVA: 0x000D596A File Offset: 0x000D3B6A
+		[NullableContext(0)]
 		public static IWaterElementalMatch Create(IWaterElementalMatch? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B66 RID: 7014
-		// (get) Token: 0x06005200 RID: 20992 RVA: 0x000CA0C1 File Offset: 0x000C82C1
+		// Token: 0x17001CD3 RID: 7379
+		// (get) Token: 0x06005727 RID: 22311 RVA: 0x000D5989 File Offset: 0x000D3B89
 		public override EElementalType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B67 RID: 7015
-		// (get) Token: 0x06005201 RID: 20993 RVA: 0x000CA0CE File Offset: 0x000C82CE
+		// Token: 0x17001CD4 RID: 7380
+		// (get) Token: 0x06005728 RID: 22312 RVA: 0x000D5996 File Offset: 0x000D3B96
 		public virtual bool CanStagnate
 		{
 			get
@@ -44,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B68 RID: 7016
-		// (get) Token: 0x06005202 RID: 20994 RVA: 0x000CA0DB File Offset: 0x000C82DB
+		// Token: 0x17001CD5 RID: 7381
+		// (get) Token: 0x06005729 RID: 22313 RVA: 0x000D59A3 File Offset: 0x000D3BA3
 		public virtual IWaterStagnationActorConfig StagnationActorConfig
 		{
 			get
@@ -60,8 +60,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B69 RID: 7017
-		// (get) Token: 0x06005203 RID: 20995 RVA: 0x000CA110 File Offset: 0x000C8310
+		// Token: 0x17001CD6 RID: 7382
+		// (get) Token: 0x0600572A RID: 22314 RVA: 0x000D59D8 File Offset: 0x000D3BD8
 		public virtual float? StagnationImmuneDurationAfterHit
 		{
 			get
@@ -74,13 +74,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F3A RID: 12090
+		// Token: 0x04003202 RID: 12802
 		private IWaterElementalMatch Instance;
 
-		// Token: 0x04002F3B RID: 12091
+		// Token: 0x04003203 RID: 12803
 		private IWaterStagnationActorConfig _StagnationActorConfigCache;
 
-		// Token: 0x04002F3C RID: 12092
+		// Token: 0x04003204 RID: 12804
 		private bool _StagnationActorConfigInited;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A8F RID: 6799
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C24 RID: 7204
 	public class IFlowerSeaEscape : IUiGame
 	{
-		// Token: 0x06009198 RID: 37272 RVA: 0x00152C98 File Offset: 0x00150E98
+		// Token: 0x06009902 RID: 39170 RVA: 0x00162BC4 File Offset: 0x00160DC4
 		private IFlowerSeaEscape_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009199 RID: 37273 RVA: 0x00152CD0 File Offset: 0x00150ED0
+		// Token: 0x06009903 RID: 39171 RVA: 0x00162BFC File Offset: 0x00160DFC
 		public static IFlowerSeaEscape Create([Nullable(2)] IFlowerSeaEscape instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600919A RID: 37274 RVA: 0x00152CE3 File Offset: 0x00150EE3
+		// Token: 0x06009904 RID: 39172 RVA: 0x00162C0F File Offset: 0x00160E0F
 		public static IFlowerSeaEscape CreateFromSetValue([Nullable(2)] IFlowerSeaEscape_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600919B RID: 37275 RVA: 0x00152CF8 File Offset: 0x00150EF8
+		// Token: 0x06009905 RID: 39173 RVA: 0x00162C24 File Offset: 0x00160E24
 		public new IFlowerSeaEscape_SetValue ToSetValue()
 		{
 			return new IFlowerSeaEscape_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E4B RID: 11851
-		// (get) Token: 0x0600919C RID: 37276 RVA: 0x00152D52 File Offset: 0x00150F52
-		// (set) Token: 0x0600919D RID: 37277 RVA: 0x00152D7D File Offset: 0x00150F7D
+		// Token: 0x17003058 RID: 12376
+		// (get) Token: 0x06009906 RID: 39174 RVA: 0x00162C7E File Offset: 0x00160E7E
+		// (set) Token: 0x06009907 RID: 39175 RVA: 0x00162CA9 File Offset: 0x00160EA9
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E4C RID: 11852
-		// (get) Token: 0x0600919E RID: 37278 RVA: 0x00152D8B File Offset: 0x00150F8B
-		// (set) Token: 0x0600919F RID: 37279 RVA: 0x00152DB6 File Offset: 0x00150FB6
+		// Token: 0x17003059 RID: 12377
+		// (get) Token: 0x06009908 RID: 39176 RVA: 0x00162CB7 File Offset: 0x00160EB7
+		// (set) Token: 0x06009909 RID: 39177 RVA: 0x00162CE2 File Offset: 0x00160EE2
 		public virtual int EndAreaEntityId
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E4D RID: 11853
-		// (get) Token: 0x060091A0 RID: 37280 RVA: 0x00152DC4 File Offset: 0x00150FC4
-		// (set) Token: 0x060091A1 RID: 37281 RVA: 0x00152DEF File Offset: 0x00150FEF
+		// Token: 0x1700305A RID: 12378
+		// (get) Token: 0x0600990A RID: 39178 RVA: 0x00162CF0 File Offset: 0x00160EF0
+		// (set) Token: 0x0600990B RID: 39179 RVA: 0x00162D1B File Offset: 0x00160F1B
 		public virtual string ConfigDa
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E4E RID: 11854
-		// (get) Token: 0x060091A2 RID: 37282 RVA: 0x00152DFD File Offset: 0x00150FFD
-		// (set) Token: 0x060091A3 RID: 37283 RVA: 0x00152E28 File Offset: 0x00151028
+		// Token: 0x1700305B RID: 12379
+		// (get) Token: 0x0600990C RID: 39180 RVA: 0x00162D29 File Offset: 0x00160F29
+		// (set) Token: 0x0600990D RID: 39181 RVA: 0x00162D54 File Offset: 0x00160F54
 		public virtual string SpreadingState
 		{
 			get
@@ -156,9 +154,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E4F RID: 11855
-		// (get) Token: 0x060091A4 RID: 37284 RVA: 0x00152E36 File Offset: 0x00151036
-		// (set) Token: 0x060091A5 RID: 37285 RVA: 0x00152E61 File Offset: 0x00151061
+		// Token: 0x1700305C RID: 12380
+		// (get) Token: 0x0600990E RID: 39182 RVA: 0x00162D62 File Offset: 0x00160F62
+		// (set) Token: 0x0600990F RID: 39183 RVA: 0x00162D8D File Offset: 0x00160F8D
 		public virtual string PausedState
 		{
 			get
@@ -179,9 +177,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E50 RID: 11856
-		// (get) Token: 0x060091A6 RID: 37286 RVA: 0x00152E6F File Offset: 0x0015106F
-		// (set) Token: 0x060091A7 RID: 37287 RVA: 0x00152E9A File Offset: 0x0015109A
+		// Token: 0x1700305D RID: 12381
+		// (get) Token: 0x06009910 RID: 39184 RVA: 0x00162D9B File Offset: 0x00160F9B
+		// (set) Token: 0x06009911 RID: 39185 RVA: 0x00162DC6 File Offset: 0x00160FC6
 		public virtual string ResetState
 		{
 			get
@@ -202,11 +200,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040059C0 RID: 22976
+		// Token: 0x04005E25 RID: 24101
 		[Nullable(2)]
 		protected new IFlowerSeaEscape FbInstance;
 
-		// Token: 0x040059C1 RID: 22977
+		// Token: 0x04005E26 RID: 24102
 		[Nullable(2)]
 		protected new IFlowerSeaEscape_SetValue PocoInterface;
 	}

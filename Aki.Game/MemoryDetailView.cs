@@ -8,17 +8,17 @@ using CSharpScript.Game.Module.AutoAttach;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C21 RID: 7201
+// Token: 0x020010E0 RID: 4320
 [NullableContext(1)]
 [Nullable(0)]
 public class MemoryDetailView : UiViewBase
 {
-	// Token: 0x0600D845 RID: 55365 RVA: 0x00320BD0 File Offset: 0x0031EDD0
+	// Token: 0x0600AC5B RID: 44123 RVA: 0x0032BFA8 File Offset: 0x0032A1A8
 	public MemoryDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600D846 RID: 55366 RVA: 0x00320BF0 File Offset: 0x0031EDF0
+	// Token: 0x0600AC5C RID: 44124 RVA: 0x0032BFC8 File Offset: 0x0032A1C8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -48,7 +48,7 @@ public class MemoryDetailView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D847 RID: 55367 RVA: 0x00320D64 File Offset: 0x0031EF64
+	// Token: 0x0600AC5D RID: 44125 RVA: 0x0032C13C File Offset: 0x0032A33C
 	private void OnBtnConfirmClick()
 	{
 		if (this.CurrentSelectTopic == null)
@@ -76,21 +76,21 @@ public class MemoryDetailView : UiViewBase
 		}, 600f, null, null, true, 1f);
 	}
 
-	// Token: 0x0600D848 RID: 55368 RVA: 0x00320E1E File Offset: 0x0031F01E
+	// Token: 0x0600AC5E RID: 44126 RVA: 0x0032C1F6 File Offset: 0x0032A3F6
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnFragmentTopicSelect, new Action<int>(this.OnFragmentTopicSelect));
 		EventSystem.Instance.Add(EEventName.OnFragmentTopicClick, new Action<int>(this.OnFragmentTopicClick));
 	}
 
-	// Token: 0x0600D849 RID: 55369 RVA: 0x00320E58 File Offset: 0x0031F058
+	// Token: 0x0600AC5F RID: 44127 RVA: 0x0032C230 File Offset: 0x0032A430
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnFragmentTopicSelect, new Action<int>(this.OnFragmentTopicSelect));
 		EventSystem.Instance.Remove(EEventName.OnFragmentTopicClick, new Action<int>(this.OnFragmentTopicClick));
 	}
 
-	// Token: 0x0600D84A RID: 55370 RVA: 0x00320E94 File Offset: 0x0031F094
+	// Token: 0x0600AC60 RID: 44128 RVA: 0x0032C26C File Offset: 0x0032A46C
 	private void OnFragmentTopicSelect(int data)
 	{
 		bool flag = false;
@@ -117,7 +117,7 @@ public class MemoryDetailView : UiViewBase
 		levelSequencePlayer.PlayLevelSequenceByName("SwitchOut", false, null, false);
 	}
 
-	// Token: 0x0600D84B RID: 55371 RVA: 0x00320F38 File Offset: 0x0031F138
+	// Token: 0x0600AC61 RID: 44129 RVA: 0x0032C310 File Offset: 0x0032A510
 	private void OnFragmentTopicClick(int data)
 	{
 		int showItemIndex = 0;
@@ -138,13 +138,13 @@ public class MemoryDetailView : UiViewBase
 		noCircleAttachView.AttachToIndex(showItemIndex, false);
 	}
 
-	// Token: 0x0600D84C RID: 55372 RVA: 0x00320F96 File Offset: 0x0031F196
+	// Token: 0x0600AC62 RID: 44130 RVA: 0x0032C36E File Offset: 0x0032A56E
 	private void StrengthFunction(int value)
 	{
 		this.OnBtnConfirmClick();
 	}
 
-	// Token: 0x0600D84D RID: 55373 RVA: 0x00320FA0 File Offset: 0x0031F1A0
+	// Token: 0x0600AC63 RID: 44131 RVA: 0x0032C378 File Offset: 0x0032A578
 	protected override void OnStart()
 	{
 		this.ConfirmButtonItem = new ButtonItem(base.GetItem(3));
@@ -166,7 +166,7 @@ public class MemoryDetailView : UiViewBase
 		this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClosePrivate), false);
 	}
 
-	// Token: 0x0600D84E RID: 55374 RVA: 0x003210A0 File Offset: 0x0031F2A0
+	// Token: 0x0600AC64 RID: 44132 RVA: 0x0032C478 File Offset: 0x0032A678
 	private void OnSequenceClosePrivate(string sequenceName)
 	{
 		if (sequenceName == "SwitchOut")
@@ -181,19 +181,19 @@ public class MemoryDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D84F RID: 55375 RVA: 0x003210E0 File Offset: 0x0031F2E0
+	// Token: 0x0600AC65 RID: 44133 RVA: 0x0032C4B8 File Offset: 0x0032A6B8
 	private MemoryDetailAttachItem CreateNoCircleAttachItem(AActor actor, int index, int showNum)
 	{
 		return new MemoryDetailAttachItem(actor);
 	}
 
-	// Token: 0x0600D850 RID: 55376 RVA: 0x003210E8 File Offset: 0x0031F2E8
+	// Token: 0x0600AC66 RID: 44134 RVA: 0x0032C4C0 File Offset: 0x0032A6C0
 	private void OnBtnCloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600D851 RID: 55377 RVA: 0x003210F4 File Offset: 0x0031F2F4
+	// Token: 0x0600AC67 RID: 44135 RVA: 0x0032C4CC File Offset: 0x0032A6CC
 	protected override void OnBeforeShow()
 	{
 		IReadOnlyList<PhotoMemoryTopic> allFragmentTopic = FragmentMemoryModel.Instance.GetAllFragmentTopic();
@@ -233,7 +233,7 @@ public class MemoryDetailView : UiViewBase
 		uiBlurBehaviour.ChangeNeedBlurState(false);
 	}
 
-	// Token: 0x0600D852 RID: 55378 RVA: 0x003211D8 File Offset: 0x0031F3D8
+	// Token: 0x0600AC68 RID: 44136 RVA: 0x0032C5B0 File Offset: 0x0032A7B0
 	private void RefreshAttachScrollView()
 	{
 		this.CurrentDataList = new List<int?>();
@@ -259,7 +259,7 @@ public class MemoryDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D853 RID: 55379 RVA: 0x003212C0 File Offset: 0x0031F4C0
+	// Token: 0x0600AC69 RID: 44137 RVA: 0x0032C698 File Offset: 0x0032A898
 	private void RefreshView()
 	{
 		this.RefreshButton();
@@ -270,7 +270,7 @@ public class MemoryDetailView : UiViewBase
 		this.RefreshMiddleTexture();
 	}
 
-	// Token: 0x0600D854 RID: 55380 RVA: 0x003212E8 File Offset: 0x0031F4E8
+	// Token: 0x0600AC6A RID: 44138 RVA: 0x0032C6C0 File Offset: 0x0032A8C0
 	private void UnBindRedDot()
 	{
 		if (this.CurrentSelectTopic != null)
@@ -284,7 +284,7 @@ public class MemoryDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D855 RID: 55381 RVA: 0x00321328 File Offset: 0x0031F528
+	// Token: 0x0600AC6B RID: 44139 RVA: 0x0032C700 File Offset: 0x0032A900
 	private void RefreshRedDot()
 	{
 		if (this.CurrentSelectTopic != null)
@@ -298,13 +298,13 @@ public class MemoryDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D856 RID: 55382 RVA: 0x0032136C File Offset: 0x0031F56C
+	// Token: 0x0600AC6C RID: 44140 RVA: 0x0032C744 File Offset: 0x0032A944
 	private bool GetUnlockState()
 	{
 		return this.CurrentSelectTopic != null && FragmentMemoryModel.Instance.GetTopicUnlockState(this.CurrentSelectTopic.Value.Id);
 	}
 
-	// Token: 0x0600D857 RID: 55383 RVA: 0x003213A5 File Offset: 0x0031F5A5
+	// Token: 0x0600AC6D RID: 44141 RVA: 0x0032C77D File Offset: 0x0032A97D
 	private void RefreshButton()
 	{
 		if (this.CurrentSelectTopic == null)
@@ -319,7 +319,7 @@ public class MemoryDetailView : UiViewBase
 		confirmButtonItem.SetActive(this.GetUnlockState());
 	}
 
-	// Token: 0x0600D858 RID: 55384 RVA: 0x003213CC File Offset: 0x0031F5CC
+	// Token: 0x0600AC6E RID: 44142 RVA: 0x0032C7A4 File Offset: 0x0032A9A4
 	private void RefreshActiveItem()
 	{
 		PhotoMemoryTopic? currentSelectTopic = this.CurrentSelectTopic;
@@ -335,7 +335,7 @@ public class MemoryDetailView : UiViewBase
 		item.SetUIActive(!this.GetUnlockState());
 	}
 
-	// Token: 0x0600D859 RID: 55385 RVA: 0x00321404 File Offset: 0x0031F604
+	// Token: 0x0600AC6F RID: 44143 RVA: 0x0032C7DC File Offset: 0x0032A9DC
 	private void RefreshActiveText()
 	{
 		if (this.CurrentSelectTopic == null)
@@ -349,7 +349,7 @@ public class MemoryDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D85A RID: 55386 RVA: 0x0032145C File Offset: 0x0031F65C
+	// Token: 0x0600AC70 RID: 44144 RVA: 0x0032C834 File Offset: 0x0032AA34
 	private void RefreshPanel()
 	{
 		bool flag = this.CurrentSelectTopic != null;
@@ -366,7 +366,7 @@ public class MemoryDetailView : UiViewBase
 		item2.SetUIActive(!flag);
 	}
 
-	// Token: 0x0600D85B RID: 55387 RVA: 0x003214A0 File Offset: 0x0031F6A0
+	// Token: 0x0600AC71 RID: 44145 RVA: 0x0032C878 File Offset: 0x0032AA78
 	private void RefreshMiddleTexture()
 	{
 		if (this.CurrentSelectTopic == null)
@@ -377,23 +377,23 @@ public class MemoryDetailView : UiViewBase
 		base.SetTextureByPath(topicTexture, base.GetTexture(9), null, null);
 	}
 
-	// Token: 0x0600D85C RID: 55388 RVA: 0x003214E8 File Offset: 0x0031F6E8
+	// Token: 0x0600AC72 RID: 44146 RVA: 0x0032C8C0 File Offset: 0x0032AAC0
 	protected override void OnBeforeHide()
 	{
 		FragmentMemoryModel.Instance.ActivitySubViewTryPlayAnimation = "ShowView02";
 	}
 
-	// Token: 0x0400629A RID: 25242
+	// Token: 0x0400636C RID: 25452
 	private const string FRAGMENTMEMORYMASK = "FragmentMemoryMask";
 
-	// Token: 0x0400629B RID: 25243
+	// Token: 0x0400636D RID: 25453
 	private const int HIDEVIEWDELAY = 600;
 
-	// Token: 0x0400629C RID: 25244
+	// Token: 0x0400636E RID: 25454
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400629D RID: 25245
+	// Token: 0x0400636F RID: 25455
 	[Nullable(new byte[]
 	{
 		2,
@@ -401,55 +401,55 @@ public class MemoryDetailView : UiViewBase
 	})]
 	private NoCircleAttachView<int?, MemoryDetailAttachItem> NoCircleAttachView;
 
-	// Token: 0x0400629E RID: 25246
+	// Token: 0x04006370 RID: 25456
 	private PhotoMemoryTopic? CurrentSelectTopic;
 
-	// Token: 0x0400629F RID: 25247
+	// Token: 0x04006371 RID: 25457
 	private IReadOnlyList<PhotoMemoryTopic> AllTopicData = new List<PhotoMemoryTopic>();
 
-	// Token: 0x040062A0 RID: 25248
+	// Token: 0x04006372 RID: 25458
 	private List<int?> CurrentDataList = new List<int?>();
 
-	// Token: 0x040062A1 RID: 25249
+	// Token: 0x04006373 RID: 25459
 	[Nullable(2)]
 	private ButtonItem ConfirmButtonItem;
 
-	// Token: 0x040062A2 RID: 25250
+	// Token: 0x04006374 RID: 25460
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x020081DA RID: 33242
+	// Token: 0x02007363 RID: 29539
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A613 RID: 173587
+		// Token: 0x0402593A RID: 153914
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402A614 RID: 173588
+		// Token: 0x0402593B RID: 153915
 		public const int DraggableScrollView = 1;
 
-		// Token: 0x0402A615 RID: 173589
+		// Token: 0x0402593C RID: 153916
 		public const int DraggableItem = 2;
 
-		// Token: 0x0402A616 RID: 173590
+		// Token: 0x0402593D RID: 153917
 		public const int ConfirmBtn = 3;
 
-		// Token: 0x0402A617 RID: 173591
+		// Token: 0x0402593E RID: 153918
 		public const int ActiveItem = 4;
 
-		// Token: 0x0402A618 RID: 173592
+		// Token: 0x0402593F RID: 153919
 		public const int ActiveText = 5;
 
-		// Token: 0x0402A619 RID: 173593
+		// Token: 0x04025940 RID: 153920
 		public const int ContentItem = 6;
 
-		// Token: 0x0402A61A RID: 173594
+		// Token: 0x04025941 RID: 153921
 		public const int PanelRight = 7;
 
-		// Token: 0x0402A61B RID: 173595
+		// Token: 0x04025942 RID: 153922
 		public const int PanelNone = 8;
 
-		// Token: 0x0402A61C RID: 173596
+		// Token: 0x04025943 RID: 153923
 		public const int MiddleTexture = 9;
 	}
 }

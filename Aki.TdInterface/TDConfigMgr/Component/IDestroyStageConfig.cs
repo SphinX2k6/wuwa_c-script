@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002B5 RID: 693
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002FC RID: 764
 	public class IDestroyStageConfig : ILifeStageConfig
 	{
-		// Token: 0x06000CF9 RID: 3321 RVA: 0x000311D8 File Offset: 0x0002F3D8
+		// Token: 0x06000E29 RID: 3625 RVA: 0x0003410C File Offset: 0x0003230C
 		private IDestroyStageConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000CFA RID: 3322 RVA: 0x00031210 File Offset: 0x0002F410
+		// Token: 0x06000E2A RID: 3626 RVA: 0x00034144 File Offset: 0x00032344
 		public static IDestroyStageConfig Create([Nullable(2)] IDestroyStageConfig instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CFB RID: 3323 RVA: 0x00031223 File Offset: 0x0002F423
+		// Token: 0x06000E2B RID: 3627 RVA: 0x00034157 File Offset: 0x00032357
 		public static IDestroyStageConfig CreateFromSetValue([Nullable(2)] IDestroyStageConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CFC RID: 3324 RVA: 0x00031236 File Offset: 0x0002F436
+		// Token: 0x06000E2C RID: 3628 RVA: 0x0003416A File Offset: 0x0003236A
 		public new IDestroyStageConfig_SetValue ToSetValue()
 		{
 			return new IDestroyStageConfig_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003CA RID: 970
-		// (get) Token: 0x06000CFD RID: 3325 RVA: 0x00031264 File Offset: 0x0002F464
-		// (set) Token: 0x06000CFE RID: 3326 RVA: 0x0003129E File Offset: 0x0002F49E
+		// Token: 0x17000417 RID: 1047
+		// (get) Token: 0x06000E2D RID: 3629 RVA: 0x00034198 File Offset: 0x00032398
+		// (set) Token: 0x06000E2E RID: 3630 RVA: 0x000341D2 File Offset: 0x000323D2
 		public override float? PerformDuration
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003CB RID: 971
-		// (get) Token: 0x06000CFF RID: 3327 RVA: 0x000312AC File Offset: 0x0002F4AC
-		// (set) Token: 0x06000D00 RID: 3328 RVA: 0x000312E6 File Offset: 0x0002F4E6
+		// Token: 0x17000418 RID: 1048
+		// (get) Token: 0x06000E2F RID: 3631 RVA: 0x000341E0 File Offset: 0x000323E0
+		// (set) Token: 0x06000E30 RID: 3632 RVA: 0x0003421A File Offset: 0x0003241A
 		public virtual long? BulletId
 		{
 			get
@@ -112,20 +110,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003CC RID: 972
-		// (get) Token: 0x06000D01 RID: 3329 RVA: 0x000312F4 File Offset: 0x0002F4F4
-		// (set) Token: 0x06000D02 RID: 3330 RVA: 0x00031387 File Offset: 0x0002F587
+		// Token: 0x17000419 RID: 1049
+		// (get) Token: 0x06000E31 RID: 3633 RVA: 0x00034228 File Offset: 0x00032428
+		// (set) Token: 0x06000E32 RID: 3634 RVA: 0x000342BB File Offset: 0x000324BB
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -156,7 +154,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -165,23 +163,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BE9 RID: 3049
+		// Token: 0x04000CD3 RID: 3283
 		[Nullable(2)]
 		protected new IDestroyStageConfig FbInstance;
 
-		// Token: 0x04000BEA RID: 3050
+		// Token: 0x04000CD4 RID: 3284
 		[Nullable(2)]
 		protected new IDestroyStageConfig_SetValue PocoInterface;
 
-		// Token: 0x04000BEB RID: 3051
+		// Token: 0x04000CD5 RID: 3285
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x04000BEC RID: 3052
+		// Token: 0x04000CD6 RID: 3286
 		private bool _ActionsInited;
 	}
 }

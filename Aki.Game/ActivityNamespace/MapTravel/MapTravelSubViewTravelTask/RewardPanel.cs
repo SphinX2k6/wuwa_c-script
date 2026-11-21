@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 {
-	// Token: 0x020044D6 RID: 17622
+	// Token: 0x02002F63 RID: 12131
 	internal class RewardPanel : UiPanelBase
 	{
-		// Token: 0x0602D678 RID: 185976 RVA: 0x00A3F1AA File Offset: 0x00A3D3AA
+		// Token: 0x0601CBB6 RID: 117686 RVA: 0x008C4E0A File Offset: 0x008C300A
 		[NullableContext(1)]
 		public RewardPanel(ActivityMapTravelData ActivityBaseData)
 		{
 			this.ActivityBaseData = ActivityBaseData;
 		}
 
-		// Token: 0x0602D679 RID: 185977 RVA: 0x00A3F1BC File Offset: 0x00A3D3BC
+		// Token: 0x0601CBB7 RID: 117687 RVA: 0x008C4E1C File Offset: 0x008C301C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -50,7 +50,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0602D67A RID: 185978 RVA: 0x00A3F2E8 File Offset: 0x00A3D4E8
+		// Token: 0x0601CBB8 RID: 117688 RVA: 0x008C4F48 File Offset: 0x008C3148
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RewardPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -61,13 +61,13 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D67B RID: 185979 RVA: 0x00A3F32B File Offset: 0x00A3D52B
+		// Token: 0x0601CBB9 RID: 117689 RVA: 0x008C4F8B File Offset: 0x008C318B
 		protected override void OnBeforeShow()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0602D67C RID: 185980 RVA: 0x00A3F334 File Offset: 0x00A3D534
+		// Token: 0x0601CBBA RID: 117690 RVA: 0x008C4F94 File Offset: 0x008C3194
 		public void Refresh()
 		{
 			MapTravelConfig activityConfig = this.ActivityBaseData.GetActivityConfig();
@@ -92,39 +92,39 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			this.RewardItemGrid.Refresh(data);
 		}
 
-		// Token: 0x0602D67D RID: 185981 RVA: 0x00A3F446 File Offset: 0x00A3D646
+		// Token: 0x0601CBBB RID: 117691 RVA: 0x008C50A6 File Offset: 0x008C32A6
 		private void OnClickedButton()
 		{
 			ActivityMapTravelController.Instance.RequestTakeTaskFinalReward();
 		}
 
-		// Token: 0x04018488 RID: 99464
+		// Token: 0x0400F230 RID: 62000
 		[Nullable(1)]
 		private ActivityMapTravelData ActivityBaseData;
 
-		// Token: 0x04018489 RID: 99465
+		// Token: 0x0400F231 RID: 62001
 		[Nullable(2)]
 		private ActivitySmallItemGrid RewardItemGrid;
 
-		// Token: 0x0200A722 RID: 42786
+		// Token: 0x02008BF8 RID: 35832
 		private class EPanelReward
 		{
-			// Token: 0x04032797 RID: 206743
+			// Token: 0x0402C565 RID: 181605
 			public const int RewardGrid = 0;
 
-			// Token: 0x04032798 RID: 206744
+			// Token: 0x0402C566 RID: 181606
 			public const int ButtonReward = 1;
 
-			// Token: 0x04032799 RID: 206745
+			// Token: 0x0402C567 RID: 181607
 			public const int ItemDone = 2;
 
-			// Token: 0x0403279A RID: 206746
+			// Token: 0x0402C568 RID: 181608
 			public const int ProgressBar = 3;
 
-			// Token: 0x0403279B RID: 206747
+			// Token: 0x0402C569 RID: 181609
 			public const int ItemGoing = 4;
 
-			// Token: 0x0403279C RID: 206748
+			// Token: 0x0402C56A RID: 181610
 			public const int TxtProgress = 5;
 		}
 	}

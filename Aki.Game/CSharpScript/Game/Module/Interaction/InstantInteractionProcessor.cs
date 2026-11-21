@@ -3,27 +3,27 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005847 RID: 22599
+	// Token: 0x0200481F RID: 18463
 	public class InstantInteractionProcessor : InteractionProcessor
 	{
-		// Token: 0x06039717 RID: 235287 RVA: 0x00DA20FA File Offset: 0x00DA02FA
+		// Token: 0x0602E62E RID: 189998 RVA: 0x00CF0DD2 File Offset: 0x00CEEFD2
 		[NullableContext(2)]
 		public InstantInteractionProcessor(Entity entity, int index) : base(entity, index, EInteractionType.Instant)
 		{
 		}
 
-		// Token: 0x06039718 RID: 235288 RVA: 0x00DA2105 File Offset: 0x00DA0305
+		// Token: 0x0602E62F RID: 189999 RVA: 0x00CF0DDD File Offset: 0x00CEEFDD
 		public override void OnPress()
 		{
 		}
 
-		// Token: 0x06039719 RID: 235289 RVA: 0x00DA2107 File Offset: 0x00DA0307
+		// Token: 0x0602E630 RID: 190000 RVA: 0x00CF0DDF File Offset: 0x00CEEFDF
 		public override void OnRelease()
 		{
 			base.TriggerComplete();
 		}
 
-		// Token: 0x0603971A RID: 235290 RVA: 0x00DA210F File Offset: 0x00DA030F
+		// Token: 0x0602E631 RID: 190001 RVA: 0x00CF0DE7 File Offset: 0x00CEEFE7
 		public override void OnReset()
 		{
 		}

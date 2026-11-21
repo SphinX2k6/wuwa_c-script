@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001003 RID: 4099
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200112F RID: 4399
 	public class ILogicProgramSpecialProcessOperation
 	{
-		// Token: 0x06005B84 RID: 23428 RVA: 0x000DE2AC File Offset: 0x000DC4AC
+		// Token: 0x06006164 RID: 24932 RVA: 0x000EAEEC File Offset: 0x000E90EC
 		private ILogicProgramSpecialProcessOperation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005B85 RID: 23429 RVA: 0x000DE2E4 File Offset: 0x000DC4E4
+		// Token: 0x06006165 RID: 24933 RVA: 0x000EAF24 File Offset: 0x000E9124
 		public static ILogicProgramSpecialProcessOperation Create([Nullable(2)] ILogicProgramSpecialProcessOperation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005B86 RID: 23430 RVA: 0x000DE2F7 File Offset: 0x000DC4F7
+		// Token: 0x06006166 RID: 24934 RVA: 0x000EAF37 File Offset: 0x000E9137
 		public static ILogicProgramSpecialProcessOperation CreateFromSetValue([Nullable(2)] ILogicProgramSpecialProcessOperation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005B87 RID: 23431 RVA: 0x000DE30A File Offset: 0x000DC50A
+		// Token: 0x06006167 RID: 24935 RVA: 0x000EAF4A File Offset: 0x000E914A
 		public ILogicProgramSpecialProcessOperation_SetValue ToSetValue()
 		{
 			return new ILogicProgramSpecialProcessOperation_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E3F RID: 7743
-		// (get) Token: 0x06005B88 RID: 23432 RVA: 0x000DE31D File Offset: 0x000DC51D
-		// (set) Token: 0x06005B89 RID: 23433 RVA: 0x000DE348 File Offset: 0x000DC548
+		// Token: 0x17001FE8 RID: 8168
+		// (get) Token: 0x06006168 RID: 24936 RVA: 0x000EAF5D File Offset: 0x000E915D
+		// (set) Token: 0x06006169 RID: 24937 RVA: 0x000EAF88 File Offset: 0x000E9188
 		public virtual ELogicProgramSpecialProcess Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003726 RID: 14118
+		// Token: 0x04003A5E RID: 14942
 		[Nullable(2)]
 		protected ILogicProgramSpecialProcessOperation FbInstance;
 
-		// Token: 0x04003727 RID: 14119
+		// Token: 0x04003A5F RID: 14943
 		[Nullable(2)]
 		protected ILogicProgramSpecialProcessOperation_SetValue PocoInterface;
 	}

@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000717 RID: 1815
+	// Token: 0x020000FF RID: 255
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/CoreUObject.ELocalizedTextSourceCategory")]
 	public enum ELocalizedTextSourceCategory : byte
 	{
-		// Token: 0x04002DEE RID: 11758
+		// Token: 0x0400045E RID: 1118
 		Game,
-		// Token: 0x04002DEF RID: 11759
+		// Token: 0x0400045F RID: 1119
 		Engine,
-		// Token: 0x04002DF0 RID: 11760
+		// Token: 0x04000460 RID: 1120
 		Editor,
-		// Token: 0x04002DF1 RID: 11761
+		// Token: 0x04000461 RID: 1121
 		ELocalizedTextSourceCategory_MAX
 	}
 }

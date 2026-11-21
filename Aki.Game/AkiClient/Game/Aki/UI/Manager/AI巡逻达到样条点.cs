@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039E3 RID: 14819
+	// Token: 0x0200303A RID: 12346
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class AI巡逻达到样条点 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F04E RID: 127054 RVA: 0x008A7A68 File Offset: 0x008A5C68
+		// Token: 0x0601D4AD RID: 119981 RVA: 0x008F006D File Offset: 0x008EE26D
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return AI巡逻达到样条点.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F04F RID: 127055 RVA: 0x008A7A74 File Offset: 0x008A5C74
+		// Token: 0x0601D4AE RID: 119982 RVA: 0x008F0079 File Offset: 0x008EE279
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__AI巡逻达到样条点__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,31 +28,30 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__AI巡逻达到样条点__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F050 RID: 127056 RVA: 0x008A7A97 File Offset: 0x008A5C97
+		// Token: 0x0601D4AF RID: 119983 RVA: 0x008F009C File Offset: 0x008EE29C
 		public AI巡逻达到样条点()
 		{
 		}
 
-		// Token: 0x0601F051 RID: 127057 RVA: 0x008A7A9F File Offset: 0x008A5C9F
+		// Token: 0x0601D4B0 RID: 119984 RVA: 0x008F00A4 File Offset: 0x008EE2A4
 		[NullableContext(2)]
 		public AI巡逻达到样条点(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F052 RID: 127058 RVA: 0x008A7AA9 File Offset: 0x008A5CA9
+		// Token: 0x0601D4B1 RID: 119985 RVA: 0x008F00AE File Offset: 0x008EE2AE
 		public AI巡逻达到样条点(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F053 RID: 127059 RVA: 0x008A7AB4 File Offset: 0x008A5CB4
+		// Token: 0x0601D4B2 RID: 119986 RVA: 0x008F00B9 File Offset: 0x008EE2B9
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<TsBaseCharacter, int>) ?? ((Action<TsBaseCharacter, int>)Delegate.CreateDelegate(typeof(Action<TsBaseCharacter, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F054 RID: 127060 RVA: 0x008A7AE6 File Offset: 0x008A5CE6
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D4B3 RID: 119987 RVA: 0x008F00EB File Offset: 0x008EE2EB
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, AI巡逻达到样条点.RegisterId);
 		}
 
-		// Token: 0x0601F055 RID: 127061 RVA: 0x008A7B20 File Offset: 0x008A5D20
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D4B4 RID: 119988 RVA: 0x008F0125 File Offset: 0x008EE325
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -82,10 +80,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F056 RID: 127062 RVA: 0x008A7B2C File Offset: 0x008A5D2C
+		// Token: 0x0601D4B5 RID: 119989 RVA: 0x008F0130 File Offset: 0x008EE330
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(TsBaseCharacter 角色, int index)
 		{
 			AI巡逻达到样条点.__AI巡逻达到样条点_DelegateParams* ptr = stackalloc AI巡逻达到样条点.__AI巡逻达到样条点_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(AI巡逻达到样条点.__AI巡逻达到样条点_DelegateParams) & -16L;
@@ -95,10 +92,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F057 RID: 127063 RVA: 0x008A7B80 File Offset: 0x008A5D80
+		// Token: 0x0601D4B6 RID: 119990 RVA: 0x008F0184 File Offset: 0x008EE384
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<TsBaseCharacter, int> action = target as Action<TsBaseCharacter, int>;
@@ -110,32 +106,32 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(orCreateUObjectByNativePointer, ((AI巡逻达到样条点.__AI巡逻达到样条点_DelegateParams*)__Parameters)->index);
 		}
 
-		// Token: 0x0400ED9E RID: 60830
+		// Token: 0x0400F6C3 RID: 63171
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:AI巡逻达到样条点__DelegateSignature";
 
-		// Token: 0x0400ED9F RID: 60831
+		// Token: 0x0400F6C4 RID: 63172
 		private static int RegisterId;
 
-		// Token: 0x020099DA RID: 39386
+		// Token: 0x02008C8E RID: 35982
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __AI巡逻达到样条点_DelegateParams
+		private ref struct __AI巡逻达到样条点_DelegateParams
 		{
-			// Token: 0x04030EA9 RID: 200361
+			// Token: 0x0402C789 RID: 182153
 			[FieldOffset(0)]
 			public IntPtr 角色;
 
-			// Token: 0x04030EAA RID: 200362
+			// Token: 0x0402C78A RID: 182154
 			[FieldOffset(8)]
 			public int index;
 		}
 
-		// Token: 0x020099DB RID: 39387
+		// Token: 0x02008C8F RID: 35983
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EAB RID: 200363
+			// Token: 0x0402C78B RID: 182155
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

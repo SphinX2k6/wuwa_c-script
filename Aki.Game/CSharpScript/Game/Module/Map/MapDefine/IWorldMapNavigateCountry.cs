@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x0200556D RID: 21869
+	// Token: 0x02004540 RID: 17728
 	[NullableContext(1)]
 	public interface IWorldMapNavigateCountry
 	{
-		// Token: 0x17008617 RID: 34327
-		// (get) Token: 0x06037C26 RID: 228390
-		// (set) Token: 0x06037C27 RID: 228391
+		// Token: 0x170059C0 RID: 22976
+		// (get) Token: 0x0602CB00 RID: 183040
+		// (set) Token: 0x0602CB01 RID: 183041
 		[Nullable(new byte[]
 		{
 			2,
@@ -26,9 +26,9 @@ namespace CSharpScript.Game.Module.Map.MapDefine
 			1
 		})] set; }
 
-		// Token: 0x17008618 RID: 34328
-		// (get) Token: 0x06037C28 RID: 228392
-		// (set) Token: 0x06037C29 RID: 228393
+		// Token: 0x170059C1 RID: 22977
+		// (get) Token: 0x0602CB02 RID: 183042
+		// (set) Token: 0x0602CB03 RID: 183043
 		List<IWorldMapNavigate> AreaNavigateList { get; set; }
 	}
 }

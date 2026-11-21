@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200206D RID: 8301
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022B6 RID: 8886
 	public class IVisualNovelDisplayItemClose : IVisualNovelDisplayItemBase
 	{
-		// Token: 0x0600B65A RID: 46682 RVA: 0x001A6D10 File Offset: 0x001A4F10
+		// Token: 0x0600C186 RID: 49542 RVA: 0x001BD568 File Offset: 0x001BB768
 		private IVisualNovelDisplayItemClose_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B65B RID: 46683 RVA: 0x001A6D48 File Offset: 0x001A4F48
+		// Token: 0x0600C187 RID: 49543 RVA: 0x001BD5A0 File Offset: 0x001BB7A0
 		public static IVisualNovelDisplayItemClose Create([Nullable(2)] IVisualNovelDisplayItemClose instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B65C RID: 46684 RVA: 0x001A6D5B File Offset: 0x001A4F5B
+		// Token: 0x0600C188 RID: 49544 RVA: 0x001BD5B3 File Offset: 0x001BB7B3
 		public static IVisualNovelDisplayItemClose CreateFromSetValue([Nullable(2)] IVisualNovelDisplayItemClose_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B65D RID: 46685 RVA: 0x001A6D6E File Offset: 0x001A4F6E
+		// Token: 0x0600C189 RID: 49545 RVA: 0x001BD5C6 File Offset: 0x001BB7C6
 		public new IVisualNovelDisplayItemClose_SetValue ToSetValue()
 		{
 			return new IVisualNovelDisplayItemClose_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037E2 RID: 14306
-		// (get) Token: 0x0600B65E RID: 46686 RVA: 0x001A6D81 File Offset: 0x001A4F81
-		// (set) Token: 0x0600B65F RID: 46687 RVA: 0x001A6DAC File Offset: 0x001A4FAC
+		// Token: 0x17003AC2 RID: 15042
+		// (get) Token: 0x0600C18A RID: 49546 RVA: 0x001BD5D9 File Offset: 0x001BB7D9
+		// (set) Token: 0x0600C18B RID: 49547 RVA: 0x001BD604 File Offset: 0x001BB804
 		public override EVisualNovelDisplayItemType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D8D RID: 28045
+		// Token: 0x04007399 RID: 29593
 		[Nullable(2)]
 		protected new IVisualNovelDisplayItemClose FbInstance;
 
-		// Token: 0x04006D8E RID: 28046
+		// Token: 0x0400739A RID: 29594
 		[Nullable(2)]
 		protected new IVisualNovelDisplayItemClose_SetValue PocoInterface;
 	}

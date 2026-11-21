@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007648 RID: 30280
+	// Token: 0x02007E56 RID: 32342
 	public class TBattleStatePerceptionBehaviorUnion
 	{
-		// Token: 0x1700E5C3 RID: 58819
-		// (get) Token: 0x06037230 RID: 225840 RVA: 0x00779ECE File Offset: 0x007780CE
-		// (set) Token: 0x06037231 RID: 225841 RVA: 0x00779ED6 File Offset: 0x007780D6
+		// Token: 0x1700F201 RID: 61953
+		// (get) Token: 0x0603A6D5 RID: 239317 RVA: 0x007DDFCA File Offset: 0x007DC1CA
+		// (set) Token: 0x0603A6D6 RID: 239318 RVA: 0x007DDFD2 File Offset: 0x007DC1D2
 		public TBattleStatePerceptionBehavior Type { get; set; }
 
-		// Token: 0x1700E5C4 RID: 58820
-		// (get) Token: 0x06037232 RID: 225842 RVA: 0x00779EDF File Offset: 0x007780DF
-		// (set) Token: 0x06037233 RID: 225843 RVA: 0x00779EE7 File Offset: 0x007780E7
+		// Token: 0x1700F202 RID: 61954
+		// (get) Token: 0x0603A6D7 RID: 239319 RVA: 0x007DDFDB File Offset: 0x007DC1DB
+		// (set) Token: 0x0603A6D8 RID: 239320 RVA: 0x007DDFE3 File Offset: 0x007DC1E3
 		public object Value { get; set; }
 
-		// Token: 0x06037234 RID: 225844 RVA: 0x00779EF0 File Offset: 0x007780F0
+		// Token: 0x0603A6D9 RID: 239321 RVA: 0x007DDFEC File Offset: 0x007DC1EC
 		public TBattleStatePerceptionBehaviorUnion()
 		{
 			this.Type = TBattleStatePerceptionBehavior.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037235 RID: 225845 RVA: 0x00779F06 File Offset: 0x00778106
+		// Token: 0x0603A6DA RID: 239322 RVA: 0x007DE002 File Offset: 0x007DC202
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037236 RID: 225846 RVA: 0x00779F18 File Offset: 0x00778118
+		// Token: 0x0603A6DB RID: 239323 RVA: 0x007DE014 File Offset: 0x007DC214
 		public IPerceptionNotifyGatherToEntityT AsIPerceptionNotifyGatherToEntity()
 		{
 			return this.As<IPerceptionNotifyGatherToEntityT>();
 		}
 
-		// Token: 0x06037237 RID: 225847 RVA: 0x00779F20 File Offset: 0x00778120
+		// Token: 0x0603A6DC RID: 239324 RVA: 0x007DE01C File Offset: 0x007DC21C
 		public static TBattleStatePerceptionBehaviorUnion FromIPerceptionNotifyGatherToEntity(IPerceptionNotifyGatherToEntityT _iperceptionnotifygathertoentity)
 		{
 			return new TBattleStatePerceptionBehaviorUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037238 RID: 225848 RVA: 0x00779F35 File Offset: 0x00778135
+		// Token: 0x0603A6DD RID: 239325 RVA: 0x007DE031 File Offset: 0x007DC231
 		public IPerceptionNotifyGatherToPlayerT AsIPerceptionNotifyGatherToPlayer()
 		{
 			return this.As<IPerceptionNotifyGatherToPlayerT>();
 		}
 
-		// Token: 0x06037239 RID: 225849 RVA: 0x00779F3D File Offset: 0x0077813D
+		// Token: 0x0603A6DE RID: 239326 RVA: 0x007DE039 File Offset: 0x007DC239
 		public static TBattleStatePerceptionBehaviorUnion FromIPerceptionNotifyGatherToPlayer(IPerceptionNotifyGatherToPlayerT _iperceptionnotifygathertoplayer)
 		{
 			return new TBattleStatePerceptionBehaviorUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603723A RID: 225850 RVA: 0x00779F54 File Offset: 0x00778154
+		// Token: 0x0603A6DF RID: 239327 RVA: 0x007DE050 File Offset: 0x007DC250
 		public static int Pack(FlatBufferBuilder builder, TBattleStatePerceptionBehaviorUnion _o)
 		{
 			TBattleStatePerceptionBehavior type = _o.Type;

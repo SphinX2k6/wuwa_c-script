@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064B7 RID: 25783
+	// Token: 0x02006B22 RID: 27426
 	public class ICompleteChildQuestT
 	{
-		// Token: 0x1700BFD7 RID: 49111
-		// (get) Token: 0x0602CB4A RID: 183114 RVA: 0x00622B18 File Offset: 0x00620D18
-		// (set) Token: 0x0602CB4B RID: 183115 RVA: 0x00622B20 File Offset: 0x00620D20
+		// Token: 0x1700C964 RID: 51556
+		// (get) Token: 0x0602F2CE RID: 193230 RVA: 0x0066E844 File Offset: 0x0066CA44
+		// (set) Token: 0x0602F2CF RID: 193231 RVA: 0x0066E84C File Offset: 0x0066CA4C
 		public int QuestId { get; set; }
 
-		// Token: 0x1700BFD8 RID: 49112
-		// (get) Token: 0x0602CB4C RID: 183116 RVA: 0x00622B29 File Offset: 0x00620D29
-		// (set) Token: 0x0602CB4D RID: 183117 RVA: 0x00622B31 File Offset: 0x00620D31
+		// Token: 0x1700C965 RID: 51557
+		// (get) Token: 0x0602F2D0 RID: 193232 RVA: 0x0066E855 File Offset: 0x0066CA55
+		// (set) Token: 0x0602F2D1 RID: 193233 RVA: 0x0066E85D File Offset: 0x0066CA5D
 		public int NodeId { get; set; }
 
-		// Token: 0x0602CB4E RID: 183118 RVA: 0x00622B3A File Offset: 0x00620D3A
+		// Token: 0x0602F2D2 RID: 193234 RVA: 0x0066E866 File Offset: 0x0066CA66
 		public ICompleteChildQuestT()
 		{
 			this.QuestId = 0;

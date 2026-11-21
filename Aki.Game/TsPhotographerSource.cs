@@ -6,14 +6,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020025AE RID: 9646
-[NullableContext(1)]
-[Nullable(0)]
+// Token: 0x02001A99 RID: 6809
 [UClass("/Game/Aki/TypeScript/Game/Module/Photograph/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/Photograph/TsPhotographerSource.TsPhotographerSource_C")]
 public class TsPhotographerSource : AActor, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x060138D7 RID: 80087 RVA: 0x004E2DD1 File Offset: 0x004E0FD1
+	// Token: 0x06010DB8 RID: 69048 RVA: 0x004F19E1 File Offset: 0x004EFBE1
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsPhotographerSource._ClassPtr == IntPtr.Zero)
@@ -23,33 +21,24 @@ public class TsPhotographerSource : AActor, IUnrealUObject, IUnrealObject
 		return TsPhotographerSource._ClassPtr;
 	}
 
-	// Token: 0x060138D8 RID: 80088 RVA: 0x004E2DF8 File Offset: 0x004E0FF8
+	// Token: 0x06010DB9 RID: 69049 RVA: 0x004F1A08 File Offset: 0x004EFC08
 	public TsPhotographerSource() : this(BuiltinUtils.AllocNativeUObject(TsPhotographerSource.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060138D9 RID: 80089 RVA: 0x004E2E20 File Offset: 0x004E1020
+	// Token: 0x06010DBA RID: 69050 RVA: 0x004F1A30 File Offset: 0x004EFC30
+	[NullableContext(1)]
 	public TsPhotographerSource(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsPhotographerSource.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060138DA RID: 80090 RVA: 0x004E2E53 File Offset: 0x004E1053
+	// Token: 0x06010DBB RID: 69051 RVA: 0x004F1A63 File Offset: 0x004EFC63
 	protected TsPhotographerSource(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x1700192C RID: 6444
-	// (get) Token: 0x060138DB RID: 80091 RVA: 0x004E2E5C File Offset: 0x004E105C
-	public unsafe FPointerToUberGraphFrame UberGraphFrame
-	{
-		get
-		{
-			return *(base.NativePtr + (IntPtr)TsPhotographerSource.__PropertyOffset_UberGraphFrame);
-		}
-	}
-
-	// Token: 0x1700192D RID: 6445
-	// (get) Token: 0x060138DC RID: 80092 RVA: 0x004E2E6C File Offset: 0x004E106C
+	// Token: 0x17001965 RID: 6501
+	// (get) Token: 0x06010DBC RID: 69052 RVA: 0x004F1A6C File Offset: 0x004EFC6C
 	[Nullable(2)]
 	public unsafe USceneComponent DefaultSceneRoot
 	{
@@ -60,18 +49,16 @@ public class TsPhotographerSource : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x040093AE RID: 37806
+	// Token: 0x04009505 RID: 38149
+	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/Photograph/TsPhotographerSource.TsPhotographerSource_C";
 
-	// Token: 0x040093AF RID: 37807
+	// Token: 0x04009506 RID: 38150
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040093B0 RID: 37808
+	// Token: 0x04009507 RID: 38151
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040093B1 RID: 37809
-	private static int __PropertyOffset_UberGraphFrame;
-
-	// Token: 0x040093B2 RID: 37810
+	// Token: 0x04009508 RID: 38152
 	private static int __PropertyOffset_DefaultSceneRoot;
 }

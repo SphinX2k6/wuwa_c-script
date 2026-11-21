@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200037F RID: 895
+	// Token: 0x020003C8 RID: 968
 	public class IFightMusicsSwitchType_SetValue
 	{
-		// Token: 0x04000E7D RID: 3709
+		// Token: 0x04000F74 RID: 3956
 		public EFightMusicsSwitchType Type;
 	}
 }

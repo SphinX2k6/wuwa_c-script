@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 {
-	// Token: 0x02006A00 RID: 27136
+	// Token: 0x02005B5D RID: 23389
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SunSpiritOccupiedByPlayerState : SunSpiritBaseState
 	{
-		// Token: 0x06043800 RID: 276480 RVA: 0x01081D63 File Offset: 0x0107FF63
+		// Token: 0x0603984C RID: 235596 RVA: 0x01026387 File Offset: 0x01024587
 		public SunSpiritOccupiedByPlayerState(SunSpiritData sunSpiritData) : base(ESunSpiritStateType.OccupiedByPlayer, sunSpiritData)
 		{
 		}
 
-		// Token: 0x06043801 RID: 276481 RVA: 0x01081D70 File Offset: 0x0107FF70
+		// Token: 0x0603984D RID: 235597 RVA: 0x01026394 File Offset: 0x01024594
 		protected override bool OnEnter()
 		{
 			SunSpiritBasePerform sunSpiritPerform = this.SunSpiritData.GetSunSpiritPerform();
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			return true;
 		}
 
-		// Token: 0x06043802 RID: 276482 RVA: 0x01081DE7 File Offset: 0x0107FFE7
+		// Token: 0x0603984E RID: 235598 RVA: 0x0102640B File Offset: 0x0102460B
 		protected override void OnExit()
 		{
 			EventSystem.Instance.Emit(EEventName.OnSunSpiritOccupiedByPlayerChanged);
 		}
 
-		// Token: 0x06043803 RID: 276483 RVA: 0x01081DFC File Offset: 0x0107FFFC
+		// Token: 0x0603984F RID: 235599 RVA: 0x01026420 File Offset: 0x01024620
 		private bool CheckTransformValid(Transform transform)
 		{
 			SunSpiritModel instance = SunSpiritModel.Instance;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			return !ukuroCrowdAiSubsystem.QueryUsablePositionForBoid(fvector, 0f, sunSpiritConfig.AroundPlayerPosQueryBoidRadius, sunSpiritConfig.AroundPlayerPosQueryMaxTryCount).IsZero();
 		}
 
-		// Token: 0x06043804 RID: 276484 RVA: 0x01081E8C File Offset: 0x0108008C
+		// Token: 0x06039850 RID: 235600 RVA: 0x010264B0 File Offset: 0x010246B0
 		private unsafe bool GetInitTransform(Transform outTransform)
 		{
 			SunSpiritModel instance = SunSpiritModel.Instance;

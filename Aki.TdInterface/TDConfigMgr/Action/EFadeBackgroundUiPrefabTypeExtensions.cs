@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002337 RID: 9015
+	// Token: 0x020025A8 RID: 9640
 	public static class EFadeBackgroundUiPrefabTypeExtensions
 	{
-		// Token: 0x0600C4F6 RID: 50422 RVA: 0x001CC118 File Offset: 0x001CA318
+		// Token: 0x0600D0CE RID: 53454 RVA: 0x001E41D0 File Offset: 0x001E23D0
 		public static string ToEnumString(this EFadeBackgroundUiPrefabType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C4F7 RID: 50423 RVA: 0x001CC140 File Offset: 0x001CA340
+		// Token: 0x0600D0CF RID: 53455 RVA: 0x001E41F8 File Offset: 0x001E23F8
 		public static EFadeBackgroundUiPrefabType FromString(string name)
 		{
 			EFadeBackgroundUiPrefabType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C4F8 RID: 50424 RVA: 0x001CC169 File Offset: 0x001CA369
+		// Token: 0x0600D0D0 RID: 53456 RVA: 0x001E4221 File Offset: 0x001E2421
 		public static bool TryFromString(string name, out EFadeBackgroundUiPrefabType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C4F9 RID: 50425 RVA: 0x001CC18E File Offset: 0x001CA38E
+		// Token: 0x0600D0D1 RID: 53457 RVA: 0x001E4246 File Offset: 0x001E2446
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C4FA RID: 50426 RVA: 0x001CC19E File Offset: 0x001CA39E
+		// Token: 0x0600D0D2 RID: 53458 RVA: 0x001E4256 File Offset: 0x001E2456
 		public static EFadeBackgroundUiPrefabType[] GetValues()
 		{
 			return new EFadeBackgroundUiPrefabType[1];
 		}
 
-		// Token: 0x0600C4FB RID: 50427 RVA: 0x001CC1A6 File Offset: 0x001CA3A6
+		// Token: 0x0600D0D3 RID: 53459 RVA: 0x001E425E File Offset: 0x001E245E
 		public static string[] GetNames()
 		{
 			return new string[]

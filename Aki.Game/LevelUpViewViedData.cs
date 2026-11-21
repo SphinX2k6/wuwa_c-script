@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x02002068 RID: 8296
+// Token: 0x0200153B RID: 5435
 public class LevelUpViewViedData : ILevelUpViewViedData
 {
-	// Token: 0x17001423 RID: 5155
-	// (get) Token: 0x06010544 RID: 66884 RVA: 0x003FBFC4 File Offset: 0x003FA1C4
-	// (set) Token: 0x06010545 RID: 66885 RVA: 0x003FBFCC File Offset: 0x003FA1CC
+	// Token: 0x17001450 RID: 5200
+	// (get) Token: 0x0600D9AC RID: 55724 RVA: 0x0040840C File Offset: 0x0040660C
+	// (set) Token: 0x0600D9AD RID: 55725 RVA: 0x00408414 File Offset: 0x00406614
 	public bool AddExp { get; set; }
 
-	// Token: 0x17001424 RID: 5156
-	// (get) Token: 0x06010546 RID: 66886 RVA: 0x003FBFD5 File Offset: 0x003FA1D5
-	// (set) Token: 0x06010547 RID: 66887 RVA: 0x003FBFDD File Offset: 0x003FA1DD
+	// Token: 0x17001451 RID: 5201
+	// (get) Token: 0x0600D9AE RID: 55726 RVA: 0x0040841D File Offset: 0x0040661D
+	// (set) Token: 0x0600D9AF RID: 55727 RVA: 0x00408425 File Offset: 0x00406625
 	public int PreLevel { get; set; }
 
-	// Token: 0x17001425 RID: 5157
-	// (get) Token: 0x06010548 RID: 66888 RVA: 0x003FBFE6 File Offset: 0x003FA1E6
-	// (set) Token: 0x06010549 RID: 66889 RVA: 0x003FBFEE File Offset: 0x003FA1EE
+	// Token: 0x17001452 RID: 5202
+	// (get) Token: 0x0600D9B0 RID: 55728 RVA: 0x0040842E File Offset: 0x0040662E
+	// (set) Token: 0x0600D9B1 RID: 55729 RVA: 0x00408436 File Offset: 0x00406636
 	public int PreExp { get; set; }
 
-	// Token: 0x17001426 RID: 5158
-	// (get) Token: 0x0601054A RID: 66890 RVA: 0x003FBFF7 File Offset: 0x003FA1F7
-	// (set) Token: 0x0601054B RID: 66891 RVA: 0x003FBFFF File Offset: 0x003FA1FF
+	// Token: 0x17001453 RID: 5203
+	// (get) Token: 0x0600D9B2 RID: 55730 RVA: 0x0040843F File Offset: 0x0040663F
+	// (set) Token: 0x0600D9B3 RID: 55731 RVA: 0x00408447 File Offset: 0x00406647
 	public int CurLevel { get; set; }
 
-	// Token: 0x17001427 RID: 5159
-	// (get) Token: 0x0601054C RID: 66892 RVA: 0x003FC008 File Offset: 0x003FA208
-	// (set) Token: 0x0601054D RID: 66893 RVA: 0x003FC010 File Offset: 0x003FA210
+	// Token: 0x17001454 RID: 5204
+	// (get) Token: 0x0600D9B4 RID: 55732 RVA: 0x00408450 File Offset: 0x00406650
+	// (set) Token: 0x0600D9B5 RID: 55733 RVA: 0x00408458 File Offset: 0x00406658
 	public int CurExp { get; set; }
 }

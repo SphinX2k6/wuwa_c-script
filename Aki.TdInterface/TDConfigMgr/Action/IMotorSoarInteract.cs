@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C24 RID: 7204
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E1B RID: 7707
 	public class IMotorSoarInteract : ILeisureInteractType
 	{
-		// Token: 0x06009A91 RID: 39569 RVA: 0x00163718 File Offset: 0x00161918
+		// Token: 0x0600A3E9 RID: 41961 RVA: 0x00176A58 File Offset: 0x00174C58
 		private IMotorSoarInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009A92 RID: 39570 RVA: 0x00163750 File Offset: 0x00161950
+		// Token: 0x0600A3EA RID: 41962 RVA: 0x00176A90 File Offset: 0x00174C90
 		public static IMotorSoarInteract Create([Nullable(2)] IMotorSoarInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A93 RID: 39571 RVA: 0x00163763 File Offset: 0x00161963
+		// Token: 0x0600A3EB RID: 41963 RVA: 0x00176AA3 File Offset: 0x00174CA3
 		public static IMotorSoarInteract CreateFromSetValue([Nullable(2)] IMotorSoarInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A94 RID: 39572 RVA: 0x00163776 File Offset: 0x00161976
+		// Token: 0x0600A3EC RID: 41964 RVA: 0x00176AB6 File Offset: 0x00174CB6
 		public new IMotorSoarInteract_SetValue ToSetValue()
 		{
 			return new IMotorSoarInteract_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003069 RID: 12393
-		// (get) Token: 0x06009A95 RID: 39573 RVA: 0x00163789 File Offset: 0x00161989
-		// (set) Token: 0x06009A96 RID: 39574 RVA: 0x001637B4 File Offset: 0x001619B4
+		// Token: 0x170032DA RID: 13018
+		// (get) Token: 0x0600A3ED RID: 41965 RVA: 0x00176AC9 File Offset: 0x00174CC9
+		// (set) Token: 0x0600A3EE RID: 41966 RVA: 0x00176AF4 File Offset: 0x00174CF4
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005DFE RID: 24062
+		// Token: 0x04006335 RID: 25397
 		[Nullable(2)]
 		protected new IMotorSoarInteract FbInstance;
 
-		// Token: 0x04005DFF RID: 24063
+		// Token: 0x04006336 RID: 25398
 		[Nullable(2)]
 		protected new IMotorSoarInteract_SetValue PocoInterface;
 	}

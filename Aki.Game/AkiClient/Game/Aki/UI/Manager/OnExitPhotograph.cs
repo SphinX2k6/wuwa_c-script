@@ -7,17 +7,17 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039E7 RID: 14823
+	// Token: 0x0200303E RID: 12350
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class OnExitPhotograph : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F0B6 RID: 127158 RVA: 0x008A8B96 File Offset: 0x008A6D96
+		// Token: 0x0601D517 RID: 120087 RVA: 0x008F11F6 File Offset: 0x008EF3F6
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return OnExitPhotograph.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F0B7 RID: 127159 RVA: 0x008A8BA2 File Offset: 0x008A6DA2
+		// Token: 0x0601D518 RID: 120088 RVA: 0x008F1202 File Offset: 0x008EF402
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__OnExitPhotograph__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__OnExitPhotograph__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F0B8 RID: 127160 RVA: 0x008A8BC5 File Offset: 0x008A6DC5
+		// Token: 0x0601D519 RID: 120089 RVA: 0x008F1225 File Offset: 0x008EF425
 		public OnExitPhotograph()
 		{
 		}
 
-		// Token: 0x0601F0B9 RID: 127161 RVA: 0x008A8BCD File Offset: 0x008A6DCD
+		// Token: 0x0601D51A RID: 120090 RVA: 0x008F122D File Offset: 0x008EF42D
 		[NullableContext(2)]
 		public OnExitPhotograph(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F0BA RID: 127162 RVA: 0x008A8BD7 File Offset: 0x008A6DD7
+		// Token: 0x0601D51B RID: 120091 RVA: 0x008F1237 File Offset: 0x008EF437
 		public OnExitPhotograph(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F0BB RID: 127163 RVA: 0x008A8BE2 File Offset: 0x008A6DE2
+		// Token: 0x0601D51C RID: 120092 RVA: 0x008F1242 File Offset: 0x008EF442
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F0BC RID: 127164 RVA: 0x008A8C14 File Offset: 0x008A6E14
+		// Token: 0x0601D51D RID: 120093 RVA: 0x008F1274 File Offset: 0x008EF474
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (OnExitPhotograph.RegisterId == 0)
@@ -67,26 +66,23 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, OnExitPhotograph.RegisterId);
 		}
 
-		// Token: 0x0601F0BD RID: 127165 RVA: 0x008A8C4E File Offset: 0x008A6E4E
+		// Token: 0x0601D51E RID: 120094 RVA: 0x008F12AE File Offset: 0x008EF4AE
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F0BE RID: 127166 RVA: 0x008A8C57 File Offset: 0x008A6E57
+		// Token: 0x0601D51F RID: 120095 RVA: 0x008F12B7 File Offset: 0x008EF4B7
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x0601F0BF RID: 127167 RVA: 0x008A8C64 File Offset: 0x008A6E64
+		// Token: 0x0601D520 RID: 120096 RVA: 0x008F12C4 File Offset: 0x008EF4C4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -97,18 +93,18 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action();
 		}
 
-		// Token: 0x0400EE10 RID: 60944
+		// Token: 0x0400F738 RID: 63288
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:OnExitPhotograph__DelegateSignature";
 
-		// Token: 0x0400EE11 RID: 60945
+		// Token: 0x0400F739 RID: 63289
 		private static int RegisterId;
 
-		// Token: 0x020099DF RID: 39391
+		// Token: 0x02008C93 RID: 35987
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EB2 RID: 200370
+			// Token: 0x0402C792 RID: 182162
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -9,12 +9,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.SceneInteraction
 {
-	// Token: 0x02003C16 RID: 15382
+	// Token: 0x020030DD RID: 12509
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/PCG/SceneInteraction/BP_AnimaInteraction.BP_AnimaInteraction_C")]
 	[UnrealStructLayout(1488, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1485)]
 	public class BP_AnimaInteraction_C : AKuroBPEditorTickActor, IUnrealUObject, IUnrealObject, IBPI_DayNightEvent_C, IUnrealBlueprintInterface, IUnrealInterface
 	{
-		// Token: 0x06023341 RID: 144193 RVA: 0x0091D2F4 File Offset: 0x0091B4F4
+		// Token: 0x0601E35D RID: 123741 RVA: 0x0090DFFF File Offset: 0x0090C1FF
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_AnimaInteraction_C._ClassPtr == IntPtr.Zero)
@@ -24,102 +24,99 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.SceneInteraction
 			return BP_AnimaInteraction_C._ClassPtr;
 		}
 
-		// Token: 0x06023342 RID: 144194 RVA: 0x0091D318 File Offset: 0x0091B518
+		// Token: 0x0601E35E RID: 123742 RVA: 0x0090E024 File Offset: 0x0090C224
 		public BP_AnimaInteraction_C() : this(BuiltinUtils.AllocNativeUObject(BP_AnimaInteraction_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06023343 RID: 144195 RVA: 0x0091D340 File Offset: 0x0091B540
+		// Token: 0x0601E35F RID: 123743 RVA: 0x0090E04C File Offset: 0x0090C24C
 		[NullableContext(1)]
 		public BP_AnimaInteraction_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_AnimaInteraction_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17004011 RID: 16401
-		// (get) Token: 0x06023344 RID: 144196 RVA: 0x0091D373 File Offset: 0x0091B573
-		// (set) Token: 0x06023345 RID: 144197 RVA: 0x0091D387 File Offset: 0x0091B587
+		// Token: 0x1700327F RID: 12927
+		// (get) Token: 0x0601E360 RID: 123744 RVA: 0x0090E07F File Offset: 0x0090C27F
+		// (set) Token: 0x0601E361 RID: 123745 RVA: 0x0090E093 File Offset: 0x0090C293
 		[Nullable(2)]
 		public unsafe USkeletalMeshComponent SK_Col_Bui_42AM
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_AnimaInteraction_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_AnimaInteraction_C.__PropertyOffset_SK_Col_Bui_42AM);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_AnimaInteraction_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_AnimaInteraction_C.__PropertyOffset_SK_Col_Bui_42AM, value);
 			}
 		}
 
-		// Token: 0x17004012 RID: 16402
-		// (get) Token: 0x06023346 RID: 144198 RVA: 0x0091D39C File Offset: 0x0091B59C
-		// (set) Token: 0x06023347 RID: 144199 RVA: 0x0091D3B0 File Offset: 0x0091B5B0
+		// Token: 0x17003280 RID: 12928
+		// (get) Token: 0x0601E362 RID: 123746 RVA: 0x0090E0A8 File Offset: 0x0090C2A8
+		// (set) Token: 0x0601E363 RID: 123747 RVA: 0x0090E0BC File Offset: 0x0090C2BC
 		[Nullable(2)]
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_AnimaInteraction_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_AnimaInteraction_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_AnimaInteraction_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_AnimaInteraction_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17004013 RID: 16403
-		// (get) Token: 0x06023348 RID: 144200 RVA: 0x0091D3C5 File Offset: 0x0091B5C5
-		// (set) Token: 0x06023349 RID: 144201 RVA: 0x0091D3D5 File Offset: 0x0091B5D5
+		// Token: 0x17003281 RID: 12929
+		// (get) Token: 0x0601E364 RID: 123748 RVA: 0x0090E0D1 File Offset: 0x0090C2D1
+		// (set) Token: 0x0601E365 RID: 123749 RVA: 0x0090E0E1 File Offset: 0x0090C2E1
 		public unsafe float Delta_Seconds
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_AnimaInteraction_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_AnimaInteraction_C.__PropertyOffset_Delta_Seconds);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_AnimaInteraction_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_AnimaInteraction_C.__PropertyOffset_Delta_Seconds) = value;
 			}
 		}
 
-		// Token: 0x17004014 RID: 16404
-		// (get) Token: 0x0602334A RID: 144202 RVA: 0x0091D3E6 File Offset: 0x0091B5E6
-		// (set) Token: 0x0602334B RID: 144203 RVA: 0x0091D3F6 File Offset: 0x0091B5F6
+		// Token: 0x17003282 RID: 12930
+		// (get) Token: 0x0601E366 RID: 123750 RVA: 0x0090E0F2 File Offset: 0x0090C2F2
+		// (set) Token: 0x0601E367 RID: 123751 RVA: 0x0090E102 File Offset: 0x0090C302
 		public unsafe bool IsDaytime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_AnimaInteraction_C.__PropertyOffset_4) != 0;
+				return *(base.NativePtr + (IntPtr)BP_AnimaInteraction_C.__PropertyOffset_IsDaytime) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_AnimaInteraction_C.__PropertyOffset_4) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_AnimaInteraction_C.__PropertyOffset_IsDaytime) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602334C RID: 144204 RVA: 0x0091D407 File Offset: 0x0091B607
+		// Token: 0x0601E368 RID: 123752 RVA: 0x0090E113 File Offset: 0x0090C313
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602334D RID: 144205 RVA: 0x0091D41B File Offset: 0x0091B61B
+		// Token: 0x0601E369 RID: 123753 RVA: 0x0090E127 File Offset: 0x0090C327
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_AnimaInteraction_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_AnimaInteraction_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602334E RID: 144206 RVA: 0x0091D430 File Offset: 0x0091B630
+		// Token: 0x0601E36A RID: 123754 RVA: 0x0090E13C File Offset: 0x0090C33C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnNotifyEnd_142B7BB44212D48928074EA2B856E6F8(FName NotifyName)
 		{
 			BP_AnimaInteraction_C.__OnNotifyEnd_142B7BB44212D48928074EA2B856E6F8_FunctionParams* ptr = stackalloc BP_AnimaInteraction_C.__OnNotifyEnd_142B7BB44212D48928074EA2B856E6F8_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_AnimaInteraction_C.__OnNotifyEnd_142B7BB44212D48928074EA2B856E6F8_FunctionParams) & -16L;
@@ -128,9 +125,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.SceneInteraction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__OnNotifyEnd_142B7BB44212D48928074EA2B856E6F8_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602334F RID: 144207 RVA: 0x0091D478 File Offset: 0x0091B678
+		// Token: 0x0601E36B RID: 123755 RVA: 0x0090E184 File Offset: 0x0090C384
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnNotifyBegin_142B7BB44212D48928074EA2B856E6F8(FName NotifyName)
 		{
 			BP_AnimaInteraction_C.__OnNotifyBegin_142B7BB44212D48928074EA2B856E6F8_FunctionParams* ptr = stackalloc BP_AnimaInteraction_C.__OnNotifyBegin_142B7BB44212D48928074EA2B856E6F8_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_AnimaInteraction_C.__OnNotifyBegin_142B7BB44212D48928074EA2B856E6F8_FunctionParams) & -16L;
@@ -139,9 +135,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.SceneInteraction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__OnNotifyBegin_142B7BB44212D48928074EA2B856E6F8_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023350 RID: 144208 RVA: 0x0091D4C0 File Offset: 0x0091B6C0
+		// Token: 0x0601E36C RID: 123756 RVA: 0x0090E1CC File Offset: 0x0090C3CC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnInterrupted_142B7BB44212D48928074EA2B856E6F8(FName NotifyName)
 		{
 			BP_AnimaInteraction_C.__OnInterrupted_142B7BB44212D48928074EA2B856E6F8_FunctionParams* ptr = stackalloc BP_AnimaInteraction_C.__OnInterrupted_142B7BB44212D48928074EA2B856E6F8_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_AnimaInteraction_C.__OnInterrupted_142B7BB44212D48928074EA2B856E6F8_FunctionParams) & -16L;
@@ -150,9 +145,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.SceneInteraction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__OnInterrupted_142B7BB44212D48928074EA2B856E6F8_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023351 RID: 144209 RVA: 0x0091D508 File Offset: 0x0091B708
+		// Token: 0x0601E36D RID: 123757 RVA: 0x0090E214 File Offset: 0x0090C414
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnBlendOut_142B7BB44212D48928074EA2B856E6F8(FName NotifyName)
 		{
 			BP_AnimaInteraction_C.__OnBlendOut_142B7BB44212D48928074EA2B856E6F8_FunctionParams* ptr = stackalloc BP_AnimaInteraction_C.__OnBlendOut_142B7BB44212D48928074EA2B856E6F8_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_AnimaInteraction_C.__OnBlendOut_142B7BB44212D48928074EA2B856E6F8_FunctionParams) & -16L;
@@ -161,9 +155,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.SceneInteraction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__OnBlendOut_142B7BB44212D48928074EA2B856E6F8_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023352 RID: 144210 RVA: 0x0091D550 File Offset: 0x0091B750
+		// Token: 0x0601E36E RID: 123758 RVA: 0x0090E25C File Offset: 0x0090C45C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnCompleted_142B7BB44212D48928074EA2B856E6F8(FName NotifyName)
 		{
 			BP_AnimaInteraction_C.__OnCompleted_142B7BB44212D48928074EA2B856E6F8_FunctionParams* ptr = stackalloc BP_AnimaInteraction_C.__OnCompleted_142B7BB44212D48928074EA2B856E6F8_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_AnimaInteraction_C.__OnCompleted_142B7BB44212D48928074EA2B856E6F8_FunctionParams) & -16L;
@@ -172,9 +165,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.SceneInteraction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__OnCompleted_142B7BB44212D48928074EA2B856E6F8_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023353 RID: 144211 RVA: 0x0091D598 File Offset: 0x0091B798
+		// Token: 0x0601E36F RID: 123759 RVA: 0x0090E2A4 File Offset: 0x0090C4A4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnNotifyEnd_194B232544CEDB40C8F0FA9B8B995E7B(FName NotifyName)
 		{
 			BP_AnimaInteraction_C.__OnNotifyEnd_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams* ptr = stackalloc BP_AnimaInteraction_C.__OnNotifyEnd_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_AnimaInteraction_C.__OnNotifyEnd_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams) & -16L;
@@ -183,9 +175,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.SceneInteraction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__OnNotifyEnd_194B232544CEDB40C8F0FA9B8B995E7B_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023354 RID: 144212 RVA: 0x0091D5E0 File Offset: 0x0091B7E0
+		// Token: 0x0601E370 RID: 123760 RVA: 0x0090E2EC File Offset: 0x0090C4EC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnNotifyBegin_194B232544CEDB40C8F0FA9B8B995E7B(FName NotifyName)
 		{
 			BP_AnimaInteraction_C.__OnNotifyBegin_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams* ptr = stackalloc BP_AnimaInteraction_C.__OnNotifyBegin_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_AnimaInteraction_C.__OnNotifyBegin_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams) & -16L;
@@ -194,9 +185,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.SceneInteraction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__OnNotifyBegin_194B232544CEDB40C8F0FA9B8B995E7B_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023355 RID: 144213 RVA: 0x0091D628 File Offset: 0x0091B828
+		// Token: 0x0601E371 RID: 123761 RVA: 0x0090E334 File Offset: 0x0090C534
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnInterrupted_194B232544CEDB40C8F0FA9B8B995E7B(FName NotifyName)
 		{
 			BP_AnimaInteraction_C.__OnInterrupted_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams* ptr = stackalloc BP_AnimaInteraction_C.__OnInterrupted_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_AnimaInteraction_C.__OnInterrupted_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams) & -16L;
@@ -205,9 +195,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.SceneInteraction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__OnInterrupted_194B232544CEDB40C8F0FA9B8B995E7B_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023356 RID: 144214 RVA: 0x0091D670 File Offset: 0x0091B870
+		// Token: 0x0601E372 RID: 123762 RVA: 0x0090E37C File Offset: 0x0090C57C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnBlendOut_194B232544CEDB40C8F0FA9B8B995E7B(FName NotifyName)
 		{
 			BP_AnimaInteraction_C.__OnBlendOut_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams* ptr = stackalloc BP_AnimaInteraction_C.__OnBlendOut_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_AnimaInteraction_C.__OnBlendOut_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams) & -16L;
@@ -216,9 +205,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.SceneInteraction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__OnBlendOut_194B232544CEDB40C8F0FA9B8B995E7B_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023357 RID: 144215 RVA: 0x0091D6B8 File Offset: 0x0091B8B8
+		// Token: 0x0601E373 RID: 123763 RVA: 0x0090E3C4 File Offset: 0x0090C5C4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnCompleted_194B232544CEDB40C8F0FA9B8B995E7B(FName NotifyName)
 		{
 			BP_AnimaInteraction_C.__OnCompleted_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams* ptr = stackalloc BP_AnimaInteraction_C.__OnCompleted_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_AnimaInteraction_C.__OnCompleted_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams) & -16L;
@@ -227,41 +215,36 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.SceneInteraction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__OnCompleted_194B232544CEDB40C8F0FA9B8B995E7B_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023358 RID: 144216 RVA: 0x0091D6FE File Offset: 0x0091B8FE
+		// Token: 0x0601E374 RID: 123764 RVA: 0x0090E40A File Offset: 0x0090C60A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnEnterNight()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__OnEnterNight_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06023359 RID: 144217 RVA: 0x0091D712 File Offset: 0x0091B912
+		// Token: 0x0601E375 RID: 123765 RVA: 0x0090E41E File Offset: 0x0090C61E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnEnterDay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__OnEnterDay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602335A RID: 144218 RVA: 0x0091D726 File Offset: 0x0091B926
+		// Token: 0x0601E376 RID: 123766 RVA: 0x0090E432 File Offset: 0x0090C632
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602335B RID: 144219 RVA: 0x0091D73A File Offset: 0x0091B93A
+		// Token: 0x0601E377 RID: 123767 RVA: 0x0090E446 File Offset: 0x0090C646
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_AnimaInteraction_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_AnimaInteraction_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602335C RID: 144220 RVA: 0x0091D750 File Offset: 0x0091B950
+		// Token: 0x0601E378 RID: 123768 RVA: 0x0090E45C File Offset: 0x0090C65C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveEndPlay(EEndPlayReason EndPlayReason)
 		{
 			BP_AnimaInteraction_C.__ReceiveEndPlay_FunctionParams* ptr = stackalloc BP_AnimaInteraction_C.__ReceiveEndPlay_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_AnimaInteraction_C.__ReceiveEndPlay_FunctionParams) & -16L;
@@ -270,195 +253,194 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.SceneInteraction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_AnimaInteraction_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602335D RID: 144221 RVA: 0x0091D79C File Offset: 0x0091B99C
+		// Token: 0x0601E379 RID: 123769 RVA: 0x0090E4A8 File Offset: 0x0090C6A8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveEndPlay_Implementation(EEndPlayReason EndPlayReason)
 		{
 			BP_AnimaInteraction_C.__ReceiveEndPlay_FunctionParams* ptr = stackalloc BP_AnimaInteraction_C.__ReceiveEndPlay_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_AnimaInteraction_C.__ReceiveEndPlay_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_AnimaInteraction_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->EndPlayReason = EndPlayReason;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_AnimaInteraction_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_AnimaInteraction_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602335E RID: 144222 RVA: 0x0091D7E8 File Offset: 0x0091B9E8
+		// Token: 0x0601E37A RID: 123770 RVA: 0x0090E4F3 File Offset: 0x0090C6F3
 		protected BP_AnimaInteraction_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040115A6 RID: 71078
+		// Token: 0x0400FFBD RID: 65469
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/PCG/SceneInteraction/BP_AnimaInteraction.BP_AnimaInteraction_C";
 
-		// Token: 0x040115A7 RID: 71079
+		// Token: 0x0400FFBE RID: 65470
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040115A8 RID: 71080
+		// Token: 0x0400FFBF RID: 65471
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040115A9 RID: 71081
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FFC0 RID: 65472
+		internal static int __PropertyOffset_SK_Col_Bui_42AM;
 
-		// Token: 0x040115AA RID: 71082
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400FFC1 RID: 65473
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x040115AB RID: 71083
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400FFC2 RID: 65474
+		internal static int __PropertyOffset_Delta_Seconds;
 
-		// Token: 0x040115AC RID: 71084
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400FFC3 RID: 65475
+		internal static int __PropertyOffset_IsDaytime;
 
-		// Token: 0x040115AD RID: 71085
+		// Token: 0x0400FFC4 RID: 65476
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x040115AE RID: 71086
+		// Token: 0x0400FFC5 RID: 65477
 		private static IntPtr __OnNotifyEnd_142B7BB44212D48928074EA2B856E6F8_NativeFunctionPtr;
 
-		// Token: 0x040115AF RID: 71087
+		// Token: 0x0400FFC6 RID: 65478
 		private static IntPtr __OnNotifyBegin_142B7BB44212D48928074EA2B856E6F8_NativeFunctionPtr;
 
-		// Token: 0x040115B0 RID: 71088
+		// Token: 0x0400FFC7 RID: 65479
 		private static IntPtr __OnInterrupted_142B7BB44212D48928074EA2B856E6F8_NativeFunctionPtr;
 
-		// Token: 0x040115B1 RID: 71089
+		// Token: 0x0400FFC8 RID: 65480
 		private static IntPtr __OnBlendOut_142B7BB44212D48928074EA2B856E6F8_NativeFunctionPtr;
 
-		// Token: 0x040115B2 RID: 71090
+		// Token: 0x0400FFC9 RID: 65481
 		private static IntPtr __OnCompleted_142B7BB44212D48928074EA2B856E6F8_NativeFunctionPtr;
 
-		// Token: 0x040115B3 RID: 71091
+		// Token: 0x0400FFCA RID: 65482
 		private static IntPtr __OnNotifyEnd_194B232544CEDB40C8F0FA9B8B995E7B_NativeFunctionPtr;
 
-		// Token: 0x040115B4 RID: 71092
+		// Token: 0x0400FFCB RID: 65483
 		private static IntPtr __OnNotifyBegin_194B232544CEDB40C8F0FA9B8B995E7B_NativeFunctionPtr;
 
-		// Token: 0x040115B5 RID: 71093
+		// Token: 0x0400FFCC RID: 65484
 		private static IntPtr __OnInterrupted_194B232544CEDB40C8F0FA9B8B995E7B_NativeFunctionPtr;
 
-		// Token: 0x040115B6 RID: 71094
+		// Token: 0x0400FFCD RID: 65485
 		private static IntPtr __OnBlendOut_194B232544CEDB40C8F0FA9B8B995E7B_NativeFunctionPtr;
 
-		// Token: 0x040115B7 RID: 71095
+		// Token: 0x0400FFCE RID: 65486
 		private static IntPtr __OnCompleted_194B232544CEDB40C8F0FA9B8B995E7B_NativeFunctionPtr;
 
-		// Token: 0x040115B8 RID: 71096
+		// Token: 0x0400FFCF RID: 65487
 		private static IntPtr __OnEnterNight_NativeFunctionPtr;
 
-		// Token: 0x040115B9 RID: 71097
+		// Token: 0x0400FFD0 RID: 65488
 		private static IntPtr __OnEnterDay_NativeFunctionPtr;
 
-		// Token: 0x040115BA RID: 71098
+		// Token: 0x0400FFD1 RID: 65489
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x040115BB RID: 71099
+		// Token: 0x0400FFD2 RID: 65490
 		private static IntPtr __ReceiveEndPlay_NativeFunctionPtr;
 
-		// Token: 0x02009E28 RID: 40488
+		// Token: 0x02008E40 RID: 36416
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __OnNotifyEnd_142B7BB44212D48928074EA2B856E6F8_FunctionParams
 		{
-			// Token: 0x04031673 RID: 202355
+			// Token: 0x0402CA81 RID: 182913
 			[FieldOffset(0)]
 			public FName NotifyName;
 		}
 
-		// Token: 0x02009E29 RID: 40489
+		// Token: 0x02008E41 RID: 36417
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __OnNotifyBegin_142B7BB44212D48928074EA2B856E6F8_FunctionParams
 		{
-			// Token: 0x04031674 RID: 202356
+			// Token: 0x0402CA82 RID: 182914
 			[FieldOffset(0)]
 			public FName NotifyName;
 		}
 
-		// Token: 0x02009E2A RID: 40490
+		// Token: 0x02008E42 RID: 36418
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __OnInterrupted_142B7BB44212D48928074EA2B856E6F8_FunctionParams
 		{
-			// Token: 0x04031675 RID: 202357
+			// Token: 0x0402CA83 RID: 182915
 			[FieldOffset(0)]
 			public FName NotifyName;
 		}
 
-		// Token: 0x02009E2B RID: 40491
+		// Token: 0x02008E43 RID: 36419
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __OnBlendOut_142B7BB44212D48928074EA2B856E6F8_FunctionParams
 		{
-			// Token: 0x04031676 RID: 202358
+			// Token: 0x0402CA84 RID: 182916
 			[FieldOffset(0)]
 			public FName NotifyName;
 		}
 
-		// Token: 0x02009E2C RID: 40492
+		// Token: 0x02008E44 RID: 36420
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __OnCompleted_142B7BB44212D48928074EA2B856E6F8_FunctionParams
 		{
-			// Token: 0x04031677 RID: 202359
+			// Token: 0x0402CA85 RID: 182917
 			[FieldOffset(0)]
 			public FName NotifyName;
 		}
 
-		// Token: 0x02009E2D RID: 40493
+		// Token: 0x02008E45 RID: 36421
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __OnNotifyEnd_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams
 		{
-			// Token: 0x04031678 RID: 202360
+			// Token: 0x0402CA86 RID: 182918
 			[FieldOffset(0)]
 			public FName NotifyName;
 		}
 
-		// Token: 0x02009E2E RID: 40494
+		// Token: 0x02008E46 RID: 36422
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __OnNotifyBegin_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams
 		{
-			// Token: 0x04031679 RID: 202361
+			// Token: 0x0402CA87 RID: 182919
 			[FieldOffset(0)]
 			public FName NotifyName;
 		}
 
-		// Token: 0x02009E2F RID: 40495
+		// Token: 0x02008E47 RID: 36423
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __OnInterrupted_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams
 		{
-			// Token: 0x0403167A RID: 202362
+			// Token: 0x0402CA88 RID: 182920
 			[FieldOffset(0)]
 			public FName NotifyName;
 		}
 
-		// Token: 0x02009E30 RID: 40496
+		// Token: 0x02008E48 RID: 36424
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __OnBlendOut_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams
 		{
-			// Token: 0x0403167B RID: 202363
+			// Token: 0x0402CA89 RID: 182921
 			[FieldOffset(0)]
 			public FName NotifyName;
 		}
 
-		// Token: 0x02009E31 RID: 40497
+		// Token: 0x02008E49 RID: 36425
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __OnCompleted_194B232544CEDB40C8F0FA9B8B995E7B_FunctionParams
 		{
-			// Token: 0x0403167C RID: 202364
+			// Token: 0x0402CA8A RID: 182922
 			[FieldOffset(0)]
 			public FName NotifyName;
 		}
 
-		// Token: 0x02009E32 RID: 40498
+		// Token: 0x02008E4A RID: 36426
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected new ref struct __ReceiveEndPlay_FunctionParams
 		{
-			// Token: 0x0403167D RID: 202365
+			// Token: 0x0402CA8B RID: 182923
 			[FieldOffset(0)]
 			public TEnumAsByte<EEndPlayReason> EndPlayReason;
 		}

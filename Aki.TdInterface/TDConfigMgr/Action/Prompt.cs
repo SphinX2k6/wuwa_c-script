@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200212B RID: 8491
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200238C RID: 9100
 	public class Prompt : ActionParams
 	{
-		// Token: 0x0600BB0E RID: 47886 RVA: 0x001B02B8 File Offset: 0x001AE4B8
+		// Token: 0x0600C69C RID: 50844 RVA: 0x001C746C File Offset: 0x001C566C
 		private Prompt_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BB0F RID: 47887 RVA: 0x001B02F0 File Offset: 0x001AE4F0
+		// Token: 0x0600C69D RID: 50845 RVA: 0x001C74A4 File Offset: 0x001C56A4
 		public static Prompt Create([Nullable(2)] Prompt instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB10 RID: 47888 RVA: 0x001B0303 File Offset: 0x001AE503
+		// Token: 0x0600C69E RID: 50846 RVA: 0x001C74B7 File Offset: 0x001C56B7
 		public static Prompt CreateFromSetValue([Nullable(2)] Prompt_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB11 RID: 47889 RVA: 0x001B0316 File Offset: 0x001AE516
+		// Token: 0x0600C69F RID: 50847 RVA: 0x001C74CA File Offset: 0x001C56CA
 		public Prompt_SetValue ToSetValue()
 		{
 			return new Prompt_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003920 RID: 14624
-		// (get) Token: 0x0600BB12 RID: 47890 RVA: 0x001B0329 File Offset: 0x001AE529
-		// (set) Token: 0x0600BB13 RID: 47891 RVA: 0x001B0354 File Offset: 0x001AE554
+		// Token: 0x17003C0D RID: 15373
+		// (get) Token: 0x0600C6A0 RID: 50848 RVA: 0x001C74DD File Offset: 0x001C56DD
+		// (set) Token: 0x0600C6A1 RID: 50849 RVA: 0x001C7508 File Offset: 0x001C5708
 		public virtual int GeneralTextId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006FEB RID: 28651
+		// Token: 0x04007620 RID: 30240
 		[Nullable(2)]
 		protected new Prompt FbInstance;
 
-		// Token: 0x04006FEC RID: 28652
+		// Token: 0x04007621 RID: 30241
 		[Nullable(2)]
 		protected Prompt_SetValue PocoInterface;
 	}

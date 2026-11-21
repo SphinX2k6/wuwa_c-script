@@ -3,25 +3,25 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelEntityAbility
 {
-	// Token: 0x02006FB0 RID: 28592
+	// Token: 0x02006131 RID: 24881
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class AbilityRegistration
 	{
-		// Token: 0x17009B6F RID: 39791
-		// (get) Token: 0x060457C8 RID: 284616 RVA: 0x0113CB47 File Offset: 0x0113AD47
-		// (set) Token: 0x060457C9 RID: 284617 RVA: 0x0113CB4F File Offset: 0x0113AD4F
+		// Token: 0x170070AF RID: 28847
+		// (get) Token: 0x0603B978 RID: 244088 RVA: 0x010E6973 File Offset: 0x010E4B73
+		// (set) Token: 0x0603B979 RID: 244089 RVA: 0x010E697B File Offset: 0x010E4B7B
 		[RequiredMember]
 		public Func<ELevelEntityAbilityType, EAbilityTickPhase, int, bool, LevelEntityAbilityBase> Creator { get; set; }
 
-		// Token: 0x17009B70 RID: 39792
-		// (get) Token: 0x060457CA RID: 284618 RVA: 0x0113CB58 File Offset: 0x0113AD58
-		// (set) Token: 0x060457CB RID: 284619 RVA: 0x0113CB60 File Offset: 0x0113AD60
+		// Token: 0x170070B0 RID: 28848
+		// (get) Token: 0x0603B97A RID: 244090 RVA: 0x010E6984 File Offset: 0x010E4B84
+		// (set) Token: 0x0603B97B RID: 244091 RVA: 0x010E698C File Offset: 0x010E4B8C
 		[RequiredMember]
 		public LevelAbilityConfig Config { get; set; }
 
-		// Token: 0x060457CC RID: 284620 RVA: 0x0113CB69 File Offset: 0x0113AD69
+		// Token: 0x0603B97C RID: 244092 RVA: 0x010E6995 File Offset: 0x010E4B95
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public AbilityRegistration()

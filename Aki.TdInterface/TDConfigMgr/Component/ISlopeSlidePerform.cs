@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006DC RID: 1756
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200077D RID: 1917
 	public class ISlopeSlidePerform : ISlidePerformType
 	{
-		// Token: 0x060025D4 RID: 9684 RVA: 0x00065B0C File Offset: 0x00063D0C
+		// Token: 0x060028F4 RID: 10484 RVA: 0x0006CB7C File Offset: 0x0006AD7C
 		private ISlopeSlidePerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060025D5 RID: 9685 RVA: 0x00065B44 File Offset: 0x00063D44
+		// Token: 0x060028F5 RID: 10485 RVA: 0x0006CBB4 File Offset: 0x0006ADB4
 		public static ISlopeSlidePerform Create([Nullable(2)] ISlopeSlidePerform instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025D6 RID: 9686 RVA: 0x00065B57 File Offset: 0x00063D57
+		// Token: 0x060028F6 RID: 10486 RVA: 0x0006CBC7 File Offset: 0x0006ADC7
 		public static ISlopeSlidePerform CreateFromSetValue([Nullable(2)] ISlopeSlidePerform_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025D7 RID: 9687 RVA: 0x00065B6A File Offset: 0x00063D6A
+		// Token: 0x060028F7 RID: 10487 RVA: 0x0006CBDA File Offset: 0x0006ADDA
 		public new ISlopeSlidePerform_SetValue ToSetValue()
 		{
 			return new ISlopeSlidePerform_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009FF RID: 2559
-		// (get) Token: 0x060025D8 RID: 9688 RVA: 0x00065BA1 File Offset: 0x00063DA1
-		// (set) Token: 0x060025D9 RID: 9689 RVA: 0x00065BCC File Offset: 0x00063DCC
+		// Token: 0x17000ABD RID: 2749
+		// (get) Token: 0x060028F8 RID: 10488 RVA: 0x0006CC11 File Offset: 0x0006AE11
+		// (set) Token: 0x060028F9 RID: 10489 RVA: 0x0006CC3C File Offset: 0x0006AE3C
 		public override ESlidePerformType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A00 RID: 2560
-		// (get) Token: 0x060025DA RID: 9690 RVA: 0x00065BDC File Offset: 0x00063DDC
-		// (set) Token: 0x060025DB RID: 9691 RVA: 0x00065C16 File Offset: 0x00063E16
+		// Token: 0x17000ABE RID: 2750
+		// (get) Token: 0x060028FA RID: 10490 RVA: 0x0006CC4C File Offset: 0x0006AE4C
+		// (set) Token: 0x060028FB RID: 10491 RVA: 0x0006CC86 File Offset: 0x0006AE86
 		public virtual int? TriggerLandingDistance
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A01 RID: 2561
-		// (get) Token: 0x060025DC RID: 9692 RVA: 0x00065C24 File Offset: 0x00063E24
-		// (set) Token: 0x060025DD RID: 9693 RVA: 0x00065C5E File Offset: 0x00063E5E
+		// Token: 0x17000ABF RID: 2751
+		// (get) Token: 0x060028FC RID: 10492 RVA: 0x0006CC94 File Offset: 0x0006AE94
+		// (set) Token: 0x060028FD RID: 10493 RVA: 0x0006CCCE File Offset: 0x0006AECE
 		public virtual int? FallbackLandingPointId
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A02 RID: 2562
-		// (get) Token: 0x060025DE RID: 9694 RVA: 0x00065C6C File Offset: 0x00063E6C
-		// (set) Token: 0x060025DF RID: 9695 RVA: 0x00065CA6 File Offset: 0x00063EA6
+		// Token: 0x17000AC0 RID: 2752
+		// (get) Token: 0x060028FE RID: 10494 RVA: 0x0006CCDC File Offset: 0x0006AEDC
+		// (set) Token: 0x060028FF RID: 10495 RVA: 0x0006CD16 File Offset: 0x0006AF16
 		public virtual bool? IsAllowJump
 		{
 			get
@@ -158,11 +156,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019C7 RID: 6599
+		// Token: 0x04001BC6 RID: 7110
 		[Nullable(2)]
 		protected new ISlopeSlidePerform FbInstance;
 
-		// Token: 0x040019C8 RID: 6600
+		// Token: 0x04001BC7 RID: 7111
 		[Nullable(2)]
 		protected new ISlopeSlidePerform_SetValue PocoInterface;
 	}

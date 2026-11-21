@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002F6C RID: 12140
+// Token: 0x020024C0 RID: 9408
 public enum ESnapCalculateType
 {
-	// Token: 0x0400C2C5 RID: 49861
+	// Token: 0x0400C66E RID: 50798
 	Add,
-	// Token: 0x0400C2C6 RID: 49862
+	// Token: 0x0400C66F RID: 50799
 	AddPerTenThousand,
-	// Token: 0x0400C2C7 RID: 49863
+	// Token: 0x0400C670 RID: 50800
 	AddAttributeMultiPerTenThousand
 }

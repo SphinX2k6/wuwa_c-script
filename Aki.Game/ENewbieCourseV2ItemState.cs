@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200139A RID: 5018
+// Token: 0x0200084E RID: 2126
 public enum ENewbieCourseV2ItemState
 {
-	// Token: 0x04003E6D RID: 15981
+	// Token: 0x04003F05 RID: 16133
 	None,
-	// Token: 0x04003E6E RID: 15982
+	// Token: 0x04003F06 RID: 16134
 	Unaccomplished,
-	// Token: 0x04003E6F RID: 15983
+	// Token: 0x04003F07 RID: 16135
 	CanReceive,
-	// Token: 0x04003E70 RID: 15984
+	// Token: 0x04003F08 RID: 16136
 	HasReceived
 }

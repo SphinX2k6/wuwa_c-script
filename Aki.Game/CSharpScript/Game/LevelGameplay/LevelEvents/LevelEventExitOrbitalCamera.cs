@@ -8,15 +8,15 @@ using CSharpScript.Game.Module.Plot;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B29 RID: 27433
+	// Token: 0x02005CA1 RID: 23713
 	public class LevelEventExitOrbitalCamera : LevelEventBase
 	{
-		// Token: 0x06044104 RID: 278788 RVA: 0x010BC30D File Offset: 0x010BA50D
+		// Token: 0x0603A256 RID: 238166 RVA: 0x01065B99 File Offset: 0x01063D99
 		public LevelEventExitOrbitalCamera(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044105 RID: 278789 RVA: 0x010BC318 File Offset: 0x010BA518
+		// Token: 0x0603A257 RID: 238167 RVA: 0x01065BA4 File Offset: 0x01063DA4
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			CameraController.Instance.MainModel.OrbitalCamera.PlayerComponent.StopCameraOrbital();
 		}
 
-		// Token: 0x06044106 RID: 278790 RVA: 0x010BC36C File Offset: 0x010BA56C
+		// Token: 0x0603A258 RID: 238168 RVA: 0x01065BF8 File Offset: 0x01063DF8
 		protected override void OnUpdateGuarantee()
 		{
 			GuaranteeActionInfo p = new GuaranteeActionInfo

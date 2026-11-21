@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D74 RID: 19828
+	// Token: 0x02005273 RID: 21107
 	public enum EBiasDirection : byte
 	{
-		// Token: 0x0400D7FF RID: 55295
+		// Token: 0x0400E339 RID: 58169
 		Inner,
-		// Token: 0x0400D800 RID: 55296
+		// Token: 0x0400E33A RID: 58170
 		Outer,
-		// Token: 0x0400D801 RID: 55297
+		// Token: 0x0400E33B RID: 58171
 		NoBias
 	}
 }

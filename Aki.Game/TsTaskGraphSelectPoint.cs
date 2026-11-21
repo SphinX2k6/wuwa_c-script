@@ -18,8 +18,8 @@ using UnrealEngine.Utils;
 public class TsTaskGraphSelectPoint : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x17000087 RID: 135
-	// (get) Token: 0x0600038D RID: 909 RVA: 0x00010738 File Offset: 0x0000E938
-	// (set) Token: 0x0600038E RID: 910 RVA: 0x0001074C File Offset: 0x0000E94C
+	// (get) Token: 0x0600038D RID: 909 RVA: 0x00010EEC File Offset: 0x0000F0EC
+	// (set) Token: 0x0600038E RID: 910 RVA: 0x00010F00 File Offset: 0x0000F100
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string TargetPointKey
 	{
@@ -34,8 +34,8 @@ public class TsTaskGraphSelectPoint : TsTaskAbortImmediatelyBase, IUnrealUObject
 	}
 
 	// Token: 0x17000088 RID: 136
-	// (get) Token: 0x0600038F RID: 911 RVA: 0x00010761 File Offset: 0x0000E961
-	// (set) Token: 0x06000390 RID: 912 RVA: 0x00010775 File Offset: 0x0000E975
+	// (get) Token: 0x0600038F RID: 911 RVA: 0x00010F15 File Offset: 0x0000F115
+	// (set) Token: 0x06000390 RID: 912 RVA: 0x00010F29 File Offset: 0x0000F129
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string TargetNodeIdKey
 	{
@@ -50,8 +50,8 @@ public class TsTaskGraphSelectPoint : TsTaskAbortImmediatelyBase, IUnrealUObject
 	}
 
 	// Token: 0x17000089 RID: 137
-	// (get) Token: 0x06000391 RID: 913 RVA: 0x0001078A File Offset: 0x0000E98A
-	// (set) Token: 0x06000392 RID: 914 RVA: 0x0001079A File Offset: 0x0000E99A
+	// (get) Token: 0x06000391 RID: 913 RVA: 0x00010F3E File Offset: 0x0000F13E
+	// (set) Token: 0x06000392 RID: 914 RVA: 0x00010F4E File Offset: 0x0000F14E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float OnNodeRadius
 	{
@@ -66,8 +66,8 @@ public class TsTaskGraphSelectPoint : TsTaskAbortImmediatelyBase, IUnrealUObject
 	}
 
 	// Token: 0x1700008A RID: 138
-	// (get) Token: 0x06000393 RID: 915 RVA: 0x000107AB File Offset: 0x0000E9AB
-	// (set) Token: 0x06000394 RID: 916 RVA: 0x000107BB File Offset: 0x0000E9BB
+	// (get) Token: 0x06000393 RID: 915 RVA: 0x00010F5F File Offset: 0x0000F15F
+	// (set) Token: 0x06000394 RID: 916 RVA: 0x00010F6F File Offset: 0x0000F16F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool AwayFromPlayer
 	{
@@ -82,8 +82,8 @@ public class TsTaskGraphSelectPoint : TsTaskAbortImmediatelyBase, IUnrealUObject
 	}
 
 	// Token: 0x1700008B RID: 139
-	// (get) Token: 0x06000395 RID: 917 RVA: 0x000107CC File Offset: 0x0000E9CC
-	// (set) Token: 0x06000396 RID: 918 RVA: 0x000107DC File Offset: 0x0000E9DC
+	// (get) Token: 0x06000395 RID: 917 RVA: 0x00010F80 File Offset: 0x0000F180
+	// (set) Token: 0x06000396 RID: 918 RVA: 0x00010F90 File Offset: 0x0000F190
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float FindGraphRadius
 	{
@@ -97,7 +97,7 @@ public class TsTaskGraphSelectPoint : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06000397 RID: 919 RVA: 0x000107F0 File Offset: 0x0000E9F0
+	// Token: 0x06000397 RID: 919 RVA: 0x00010FA4 File Offset: 0x0000F1A4
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -111,30 +111,27 @@ public class TsTaskGraphSelectPoint : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06000398 RID: 920 RVA: 0x00010864 File Offset: 0x0000EA64
+	// Token: 0x06000398 RID: 920 RVA: 0x00011018 File Offset: 0x0000F218
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskGraphSelectPoint) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskGraphSelectPoint.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000399 RID: 921 RVA: 0x00010900 File Offset: 0x0000EB00
+	// Token: 0x06000399 RID: 921 RVA: 0x000110C8 File Offset: 0x0000F2C8
 	[NullableContext(2)]
 	protected unsafe virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -221,7 +218,7 @@ public class TsTaskGraphSelectPoint : TsTaskAbortImmediatelyBase, IUnrealUObject
 		base.Finish(true);
 	}
 
-	// Token: 0x0600039A RID: 922 RVA: 0x00010C00 File Offset: 0x0000EE00
+	// Token: 0x0600039A RID: 922 RVA: 0x000113C8 File Offset: 0x0000F5C8
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskGraphSelectPoint._ClassPtr == IntPtr.Zero)
@@ -231,22 +228,22 @@ public class TsTaskGraphSelectPoint : TsTaskAbortImmediatelyBase, IUnrealUObject
 		return TsTaskGraphSelectPoint._ClassPtr;
 	}
 
-	// Token: 0x0600039B RID: 923 RVA: 0x00010C24 File Offset: 0x0000EE24
+	// Token: 0x0600039B RID: 923 RVA: 0x000113EC File Offset: 0x0000F5EC
 	public TsTaskGraphSelectPoint() : this(BuiltinUtils.AllocNativeUObject(TsTaskGraphSelectPoint.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600039C RID: 924 RVA: 0x00010C4C File Offset: 0x0000EE4C
+	// Token: 0x0600039C RID: 924 RVA: 0x00011414 File Offset: 0x0000F614
 	public TsTaskGraphSelectPoint(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskGraphSelectPoint.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600039D RID: 925 RVA: 0x00010C7F File Offset: 0x0000EE7F
+	// Token: 0x0600039D RID: 925 RVA: 0x00011447 File Offset: 0x0000F647
 	protected TsTaskGraphSelectPoint(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600039E RID: 926 RVA: 0x00010CA8 File Offset: 0x0000EEA8
+	// Token: 0x0600039E RID: 926 RVA: 0x00011470 File Offset: 0x0000F670
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{

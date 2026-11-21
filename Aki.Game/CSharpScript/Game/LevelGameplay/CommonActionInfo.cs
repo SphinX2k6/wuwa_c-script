@@ -3,7 +3,7 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006958 RID: 26968
+	// Token: 0x02005AB3 RID: 23219
 	public class CommonActionInfo : ActionInfo
 	{
 	}

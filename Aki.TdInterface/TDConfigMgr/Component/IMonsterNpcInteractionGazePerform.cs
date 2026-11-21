@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200050C RID: 1292
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000573 RID: 1395
 	public class IMonsterNpcInteractionGazePerform : IMonsterNpcInteractionConfig
 	{
-		// Token: 0x06001A3A RID: 6714 RVA: 0x0004CAD4 File Offset: 0x0004ACD4
+		// Token: 0x06001C36 RID: 7222 RVA: 0x00051890 File Offset: 0x0004FA90
 		private IMonsterNpcInteractionGazePerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001A3B RID: 6715 RVA: 0x0004CB0C File Offset: 0x0004AD0C
+		// Token: 0x06001C37 RID: 7223 RVA: 0x000518C8 File Offset: 0x0004FAC8
 		public static IMonsterNpcInteractionGazePerform Create([Nullable(2)] IMonsterNpcInteractionGazePerform instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A3C RID: 6716 RVA: 0x0004CB1F File Offset: 0x0004AD1F
+		// Token: 0x06001C38 RID: 7224 RVA: 0x000518DB File Offset: 0x0004FADB
 		public static IMonsterNpcInteractionGazePerform CreateFromSetValue([Nullable(2)] IMonsterNpcInteractionGazePerform_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A3D RID: 6717 RVA: 0x0004CB32 File Offset: 0x0004AD32
+		// Token: 0x06001C39 RID: 7225 RVA: 0x000518EE File Offset: 0x0004FAEE
 		public new IMonsterNpcInteractionGazePerform_SetValue ToSetValue()
 		{
 			return new IMonsterNpcInteractionGazePerform_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006EA RID: 1770
-		// (get) Token: 0x06001A3E RID: 6718 RVA: 0x0004CB45 File Offset: 0x0004AD45
-		// (set) Token: 0x06001A3F RID: 6719 RVA: 0x0004CB70 File Offset: 0x0004AD70
+		// Token: 0x1700076D RID: 1901
+		// (get) Token: 0x06001C3A RID: 7226 RVA: 0x00051901 File Offset: 0x0004FB01
+		// (set) Token: 0x06001C3B RID: 7227 RVA: 0x0005192C File Offset: 0x0004FB2C
 		public override EMonsterNpcInteractionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400130E RID: 4878
+		// Token: 0x04001478 RID: 5240
 		[Nullable(2)]
 		protected new IMonsterNpcInteractionGazePerform FbInstance;
 
-		// Token: 0x0400130F RID: 4879
+		// Token: 0x04001479 RID: 5241
 		[Nullable(2)]
 		protected new IMonsterNpcInteractionGazePerform_SetValue PocoInterface;
 	}

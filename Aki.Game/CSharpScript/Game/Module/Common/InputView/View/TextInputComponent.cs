@@ -10,19 +10,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Common.InputView.View
 {
-	// Token: 0x02005B7D RID: 23421
+	// Token: 0x02004B5D RID: 19293
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TextInputComponent : UiPanelBase
 	{
-		// Token: 0x0603B421 RID: 242721 RVA: 0x00E20208 File Offset: 0x00E1E408
+		// Token: 0x0603036E RID: 197486 RVA: 0x00D7077C File Offset: 0x00D6E97C
 		public TextInputComponent(UUIItem uiItem, ITextInputData inputData)
 		{
 			this.InputData = inputData;
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B422 RID: 242722 RVA: 0x00E20238 File Offset: 0x00E1E438
+		// Token: 0x0603036F RID: 197487 RVA: 0x00D707AC File Offset: 0x00D6E9AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Common.InputView.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B423 RID: 242723 RVA: 0x00E20364 File Offset: 0x00E1E564
+		// Token: 0x06030370 RID: 197488 RVA: 0x00D708D8 File Offset: 0x00D6EAD8
 		private void ActiveInputText(bool active)
 		{
 			if (active && this.TipsType == ETipsType.NoneText)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Common.InputView.View
 			}
 		}
 
-		// Token: 0x0603B424 RID: 242724 RVA: 0x00E2037C File Offset: 0x00E1E57C
+		// Token: 0x06030371 RID: 197489 RVA: 0x00D708F0 File Offset: 0x00D6EAF0
 		private void ConfirmClick()
 		{
 			if (this.IsLockConfirm)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Common.InputView.View
 			}, true);
 		}
 
-		// Token: 0x0603B425 RID: 242725 RVA: 0x00E2043C File Offset: 0x00E1E63C
+		// Token: 0x06030372 RID: 197490 RVA: 0x00D709B0 File Offset: 0x00D6EBB0
 		private void RefreshTips(ETipsType type)
 		{
 			if (type == this.TipsType)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Common.InputView.View
 			action();
 		}
 
-		// Token: 0x0603B426 RID: 242726 RVA: 0x00E20468 File Offset: 0x00E1E668
+		// Token: 0x06030373 RID: 197491 RVA: 0x00D709DC File Offset: 0x00D6EBDC
 		protected override void OnStart()
 		{
 			Dictionary<ETipsType, Action> dictionary = new Dictionary<ETipsType, Action>();
@@ -136,13 +136,13 @@ namespace CSharpScript.Game.Module.Common.InputView.View
 			this.TickId = TickSystem.Instance.Add(new Action<float>(this.Tick), "TextInputComponent", ETickingGroup.TG_PrePhysics, true, 0, true).Id;
 		}
 
-		// Token: 0x0603B427 RID: 242727 RVA: 0x00E205A3 File Offset: 0x00E1E7A3
+		// Token: 0x06030374 RID: 197492 RVA: 0x00D70B17 File Offset: 0x00D6ED17
 		private void UnBindTextChange()
 		{
 			this.InputText.OnTextChange.Unbind();
 		}
 
-		// Token: 0x0603B428 RID: 242728 RVA: 0x00E205B5 File Offset: 0x00E1E7B5
+		// Token: 0x06030375 RID: 197493 RVA: 0x00D70B29 File Offset: 0x00D6ED29
 		private void OnTextChange(string inputText)
 		{
 			if (StringUtils.GetStringRealCount(inputText) <= this.MaxLimit)
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Common.InputView.View
 			this.RefreshTips(ETipsType.MsgTooLong);
 		}
 
-		// Token: 0x0603B429 RID: 242729 RVA: 0x00E205D4 File Offset: 0x00E1E7D4
+		// Token: 0x06030376 RID: 197494 RVA: 0x00D70B48 File Offset: 0x00D6ED48
 		private void NormalHandle()
 		{
 			base.GetItem(0).SetUIActive(false);
@@ -161,39 +161,39 @@ namespace CSharpScript.Game.Module.Common.InputView.View
 			this.Timer = -1f;
 		}
 
-		// Token: 0x0603B42A RID: 242730 RVA: 0x00E205FA File Offset: 0x00E1E7FA
+		// Token: 0x06030377 RID: 197495 RVA: 0x00D70B6E File Offset: 0x00D6ED6E
 		private void NoneTextHandle()
 		{
 			this.SetTipsAndTimer("PrefabTextItem_Entertext_Text", 0);
 		}
 
-		// Token: 0x0603B42B RID: 242731 RVA: 0x00E20608 File Offset: 0x00E1E808
+		// Token: 0x06030378 RID: 197496 RVA: 0x00D70B7C File Offset: 0x00D6ED7C
 		private void MsgTooLongHandle()
 		{
 			this.SetTipsAndTimer("PrefabTextItem_Textoverlength_Text", -1);
 			this.ConfirmButton.SetSelfInteractive(false);
 		}
 
-		// Token: 0x0603B42C RID: 242732 RVA: 0x00E20622 File Offset: 0x00E1E822
+		// Token: 0x06030379 RID: 197497 RVA: 0x00D70B96 File Offset: 0x00D6ED96
 		private void MsgTooShortHandle()
 		{
 			this.SetTipsAndTimer("CDKey_TooShort", 0);
 			this.ConfirmButton.SetSelfInteractive(false);
 		}
 
-		// Token: 0x0603B42D RID: 242733 RVA: 0x00E2063C File Offset: 0x00E1E83C
+		// Token: 0x0603037A RID: 197498 RVA: 0x00D70BB0 File Offset: 0x00D6EDB0
 		private void IllegalCharactersHandle()
 		{
 			this.SetTipsAndTimer("PrefabTextItem_Textillegality_Text", 0);
 		}
 
-		// Token: 0x0603B42E RID: 242734 RVA: 0x00E2064A File Offset: 0x00E1E84A
+		// Token: 0x0603037B RID: 197499 RVA: 0x00D70BBE File Offset: 0x00D6EDBE
 		private void BlankTextHandle()
 		{
 			this.SetTipsAndTimer("PrefabTextItem_TextNull_Text", 0);
 		}
 
-		// Token: 0x0603B42F RID: 242735 RVA: 0x00E20658 File Offset: 0x00E1E858
+		// Token: 0x0603037C RID: 197500 RVA: 0x00D70BCC File Offset: 0x00D6EDCC
 		private void SetTipsAndTimer(string textId, int timer)
 		{
 			base.GetItem(0).SetUIActive(true);
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.Common.InputView.View
 			this.Timer = (float)timer;
 		}
 
-		// Token: 0x0603B430 RID: 242736 RVA: 0x00E20693 File Offset: 0x00E1E893
+		// Token: 0x0603037D RID: 197501 RVA: 0x00D70C07 File Offset: 0x00D6EE07
 		private void Tick(float delta)
 		{
 			if (Math.Abs(this.Timer - -1f) < 0.001f)
@@ -216,20 +216,20 @@ namespace CSharpScript.Game.Module.Common.InputView.View
 			}
 		}
 
-		// Token: 0x0603B431 RID: 242737 RVA: 0x00E206D0 File Offset: 0x00E1E8D0
+		// Token: 0x0603037E RID: 197502 RVA: 0x00D70C44 File Offset: 0x00D6EE44
 		protected override void OnBeforeDestroy()
 		{
 			this.UnBindTextChange();
 			TickSystem.Instance.Remove(this.TickId);
 		}
 
-		// Token: 0x0603B432 RID: 242738 RVA: 0x00E206E9 File Offset: 0x00E1E8E9
+		// Token: 0x0603037F RID: 197503 RVA: 0x00D70C5D File Offset: 0x00D6EE5D
 		public void ClearText()
 		{
 			this.InputText.SetText("", false);
 		}
 
-		// Token: 0x0603B433 RID: 242739 RVA: 0x00E206FC File Offset: 0x00E1E8FC
+		// Token: 0x06030380 RID: 197504 RVA: 0x00D70C70 File Offset: 0x00D6EE70
 		[CompilerGenerated]
 		private UniTask <ConfirmClick>g__Temp|14_0(string argInputText)
 		{
@@ -242,56 +242,56 @@ namespace CSharpScript.Game.Module.Common.InputView.View
 			return <<ConfirmClick>g__Temp|14_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x0401EE4C RID: 126540
+		// Token: 0x040198FD RID: 104701
 		private ETipsType TipsType;
 
-		// Token: 0x0401EE4D RID: 126541
+		// Token: 0x040198FE RID: 104702
 		private float Timer = -1f;
 
-		// Token: 0x0401EE4E RID: 126542
+		// Token: 0x040198FF RID: 104703
 		private int TickId;
 
-		// Token: 0x0401EE4F RID: 126543
+		// Token: 0x04019900 RID: 104704
 		[Nullable(2)]
 		private Dictionary<ETipsType, Action> TipsTypeFunc;
 
-		// Token: 0x0401EE50 RID: 126544
+		// Token: 0x04019901 RID: 104705
 		[Nullable(2)]
 		private UUITextInputComponent InputText;
 
-		// Token: 0x0401EE51 RID: 126545
+		// Token: 0x04019902 RID: 104706
 		[Nullable(2)]
 		private UUIButtonComponent ConfirmButton;
 
-		// Token: 0x0401EE52 RID: 126546
+		// Token: 0x04019903 RID: 104707
 		private readonly int MaxLimit = 12;
 
-		// Token: 0x0401EE53 RID: 126547
+		// Token: 0x04019904 RID: 104708
 		private readonly int MinLimit;
 
-		// Token: 0x0401EE54 RID: 126548
+		// Token: 0x04019905 RID: 104709
 		private bool IsLockConfirm;
 
-		// Token: 0x0401EE55 RID: 126549
+		// Token: 0x04019906 RID: 104710
 		private readonly ITextInputData InputData;
 
-		// Token: 0x0200BD89 RID: 48521
+		// Token: 0x0200A793 RID: 42899
 		[NullableContext(0)]
 		private class ECompDefine
 		{
-			// Token: 0x040392BF RID: 234175
+			// Token: 0x04033C8D RID: 212109
 			public const int TipsRootItem = 0;
 
-			// Token: 0x040392C0 RID: 234176
+			// Token: 0x04033C8E RID: 212110
 			public const int Tips = 1;
 
-			// Token: 0x040392C1 RID: 234177
+			// Token: 0x04033C8F RID: 212111
 			public const int InputText = 2;
 
-			// Token: 0x040392C2 RID: 234178
+			// Token: 0x04033C90 RID: 212112
 			public const int DefaultText = 3;
 
-			// Token: 0x040392C3 RID: 234179
+			// Token: 0x04033C91 RID: 212113
 			public const int ConfirmBtn = 4;
 		}
 	}

@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200676A RID: 26474
+	// Token: 0x02006DEA RID: 28138
 	public static class IFadeBackgroundFadeInEffectTypeBase_UnionVerify
 	{
-		// Token: 0x0602E0E2 RID: 188642 RVA: 0x0064AEA4 File Offset: 0x006490A4
+		// Token: 0x06030928 RID: 198952 RVA: 0x006985E8 File Offset: 0x006967E8
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

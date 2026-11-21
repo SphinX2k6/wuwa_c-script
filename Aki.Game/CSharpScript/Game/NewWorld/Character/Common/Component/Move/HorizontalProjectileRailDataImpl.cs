@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070EF RID: 28911
+	// Token: 0x0200639F RID: 25503
 	public class HorizontalProjectileRailDataImpl : IHorizontalProjectileRailData, IRailParam, IConnectionRailData
 	{
-		// Token: 0x17009CC9 RID: 40137
-		// (get) Token: 0x06046949 RID: 289097 RVA: 0x011C28D1 File Offset: 0x011C0AD1
-		// (set) Token: 0x0604694A RID: 289098 RVA: 0x011C28D9 File Offset: 0x011C0AD9
+		// Token: 0x17007552 RID: 30034
+		// (get) Token: 0x0603DD42 RID: 253250 RVA: 0x011F1A85 File Offset: 0x011EFC85
+		// (set) Token: 0x0603DD43 RID: 253251 RVA: 0x011F1A8D File Offset: 0x011EFC8D
 		public ERailMoveType RailType { get; set; }
 
-		// Token: 0x17009CCA RID: 40138
-		// (get) Token: 0x0604694B RID: 289099 RVA: 0x011C28E2 File Offset: 0x011C0AE2
-		// (set) Token: 0x0604694C RID: 289100 RVA: 0x011C28EA File Offset: 0x011C0AEA
+		// Token: 0x17007553 RID: 30035
+		// (get) Token: 0x0603DD44 RID: 253252 RVA: 0x011F1A96 File Offset: 0x011EFC96
+		// (set) Token: 0x0603DD45 RID: 253253 RVA: 0x011F1A9E File Offset: 0x011EFC9E
 		public ERailJumpType JumpType { get; set; }
 
-		// Token: 0x17009CCB RID: 40139
-		// (get) Token: 0x0604694D RID: 289101 RVA: 0x011C28F3 File Offset: 0x011C0AF3
-		// (set) Token: 0x0604694E RID: 289102 RVA: 0x011C28FB File Offset: 0x011C0AFB
+		// Token: 0x17007554 RID: 30036
+		// (get) Token: 0x0603DD46 RID: 253254 RVA: 0x011F1AA7 File Offset: 0x011EFCA7
+		// (set) Token: 0x0603DD47 RID: 253255 RVA: 0x011F1AAF File Offset: 0x011EFCAF
 		[Nullable(1)]
 		public Vector RotatorFixedDirection { [NullableContext(1)] get; [NullableContext(1)] set; } = Vector.Create();
 
-		// Token: 0x17009CCC RID: 40140
-		// (get) Token: 0x0604694F RID: 289103 RVA: 0x011C2904 File Offset: 0x011C0B04
-		// (set) Token: 0x06046950 RID: 289104 RVA: 0x011C290C File Offset: 0x011C0B0C
+		// Token: 0x17007555 RID: 30037
+		// (get) Token: 0x0603DD48 RID: 253256 RVA: 0x011F1AB8 File Offset: 0x011EFCB8
+		// (set) Token: 0x0603DD49 RID: 253257 RVA: 0x011F1AC0 File Offset: 0x011EFCC0
 		public int ConnectionNextRail { get; set; }
 
-		// Token: 0x17009CCD RID: 40141
-		// (get) Token: 0x06046951 RID: 289105 RVA: 0x011C2915 File Offset: 0x011C0B15
-		// (set) Token: 0x06046952 RID: 289106 RVA: 0x011C291D File Offset: 0x011C0B1D
+		// Token: 0x17007556 RID: 30038
+		// (get) Token: 0x0603DD4A RID: 253258 RVA: 0x011F1AC9 File Offset: 0x011EFCC9
+		// (set) Token: 0x0603DD4B RID: 253259 RVA: 0x011F1AD1 File Offset: 0x011EFCD1
 		public float ConnectionStartDistance { get; set; }
 	}
 }

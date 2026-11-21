@@ -3,19 +3,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015AE RID: 5550
+	// Token: 0x02001620 RID: 5664
 	public enum FavorQuestStatus
 	{
-		// Token: 0x0400BC5C RID: 48220
+		// Token: 0x0400C14F RID: 49487
 		[OriginalName("Locked")]
 		Locked,
-		// Token: 0x0400BC5D RID: 48221
+		// Token: 0x0400C150 RID: 49488
 		[OriginalName("CanAccept")]
 		CanAccept,
-		// Token: 0x0400BC5E RID: 48222
+		// Token: 0x0400C151 RID: 49489
 		[OriginalName("Accepted")]
 		Accepted,
-		// Token: 0x0400BC5F RID: 48223
+		// Token: 0x0400C152 RID: 49490
 		[OriginalName("Completed")]
 		Completed
 	}

@@ -4,29 +4,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053FF RID: 21503
+	// Token: 0x020043E2 RID: 17378
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ChangeKeyMode : IChangeKeyMode
 	{
-		// Token: 0x17008422 RID: 33826
-		// (get) Token: 0x06036F45 RID: 225093 RVA: 0x00D04F21 File Offset: 0x00D03121
-		// (set) Token: 0x06036F46 RID: 225094 RVA: 0x00D04F29 File Offset: 0x00D03129
+		// Token: 0x170057EE RID: 22510
+		// (get) Token: 0x0602BE8D RID: 179853 RVA: 0x00C54365 File Offset: 0x00C52565
+		// (set) Token: 0x0602BE8E RID: 179854 RVA: 0x00C5436D File Offset: 0x00C5256D
 		public string TitleName { get; set; } = "";
 
-		// Token: 0x17008423 RID: 33827
-		// (get) Token: 0x06036F47 RID: 225095 RVA: 0x00D04F32 File Offset: 0x00D03132
-		// (set) Token: 0x06036F48 RID: 225096 RVA: 0x00D04F3A File Offset: 0x00D0313A
+		// Token: 0x170057EF RID: 22511
+		// (get) Token: 0x0602BE8F RID: 179855 RVA: 0x00C54376 File Offset: 0x00C52576
+		// (set) Token: 0x0602BE90 RID: 179856 RVA: 0x00C5437E File Offset: 0x00C5257E
 		public int DefaultGroupIndex { get; set; }
 
-		// Token: 0x17008424 RID: 33828
-		// (get) Token: 0x06036F49 RID: 225097 RVA: 0x00D04F43 File Offset: 0x00D03143
-		// (set) Token: 0x06036F4A RID: 225098 RVA: 0x00D04F4B File Offset: 0x00D0314B
+		// Token: 0x170057F0 RID: 22512
+		// (get) Token: 0x0602BE91 RID: 179857 RVA: 0x00C54387 File Offset: 0x00C52587
+		// (set) Token: 0x0602BE92 RID: 179858 RVA: 0x00C5438F File Offset: 0x00C5258F
 		public IChangeKeyModeGroup[] ChangeKeyModeGroupList { get; set; } = new IChangeKeyModeGroup[0];
 
-		// Token: 0x17008425 RID: 33829
-		// (get) Token: 0x06036F4B RID: 225099 RVA: 0x00D04F54 File Offset: 0x00D03154
-		// (set) Token: 0x06036F4C RID: 225100 RVA: 0x00D04F5C File Offset: 0x00D0315C
+		// Token: 0x170057F1 RID: 22513
+		// (get) Token: 0x0602BE93 RID: 179859 RVA: 0x00C54398 File Offset: 0x00C52598
+		// (set) Token: 0x0602BE94 RID: 179860 RVA: 0x00C543A0 File Offset: 0x00C525A0
 		[Nullable(new byte[]
 		{
 			2,

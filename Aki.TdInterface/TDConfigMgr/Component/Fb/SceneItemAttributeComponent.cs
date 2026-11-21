@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AD5 RID: 2773
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B9F RID: 2975
 	public class SceneItemAttributeComponent : IComponentBase
 	{
-		// Token: 0x06003FE6 RID: 16358 RVA: 0x000A363F File Offset: 0x000A183F
+		// Token: 0x06004410 RID: 17424 RVA: 0x000ACC33 File Offset: 0x000AAE33
 		public static SceneItemAttributeComponent Create(ISceneItemAttributeComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FF9 RID: 4089
-		// (get) Token: 0x06003FE7 RID: 16359 RVA: 0x000A3660 File Offset: 0x000A1860
+		// Token: 0x170010CD RID: 4301
+		// (get) Token: 0x06004411 RID: 17425 RVA: 0x000ACC54 File Offset: 0x000AAE54
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FFA RID: 4090
-		// (get) Token: 0x06003FE8 RID: 16360 RVA: 0x000A3698 File Offset: 0x000A1898
+		// Token: 0x170010CE RID: 4302
+		// (get) Token: 0x06004412 RID: 17426 RVA: 0x000ACC8C File Offset: 0x000AAE8C
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FFB RID: 4091
-		// (get) Token: 0x06003FE9 RID: 16361 RVA: 0x000A36AE File Offset: 0x000A18AE
+		// Token: 0x170010CF RID: 4303
+		// (get) Token: 0x06004413 RID: 17427 RVA: 0x000ACCA2 File Offset: 0x000AAEA2
 		public virtual string AttributeType
 		{
 			get
@@ -57,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FFC RID: 4092
-		// (get) Token: 0x06003FEA RID: 16362 RVA: 0x000A36BC File Offset: 0x000A18BC
+		// Token: 0x170010D0 RID: 4304
+		// (get) Token: 0x06004414 RID: 17428 RVA: 0x000ACCB0 File Offset: 0x000AAEB0
 		[Nullable(2)]
 		public virtual List<int> DefaultTags
 		{
@@ -84,14 +82,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002396 RID: 9110
+		// Token: 0x040025B2 RID: 9650
 		private ISceneItemAttributeComponent Instance;
 
-		// Token: 0x04002397 RID: 9111
+		// Token: 0x040025B3 RID: 9651
 		[Nullable(2)]
 		private List<int> _DefaultTagsCache;
 
-		// Token: 0x04002398 RID: 9112
+		// Token: 0x040025B4 RID: 9652
 		private bool _DefaultTagsInited;
 	}
 }

@@ -7,32 +7,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C52 RID: 7250
+	// Token: 0x02000500 RID: 1280
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroRhythmGame.KuroRhythmGameJudgement")]
 	[UnrealStructLayout(496, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 496)]
 	public class UKuroRhythmGameJudgement : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601C18E RID: 115086 RVA: 0x00295B4A File Offset: 0x00293D4A
+		// Token: 0x060077E7 RID: 30695 RVA: 0x000AF0D1 File Offset: 0x000AD2D1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroRhythmGameJudgement._ClassPtr;
 		}
 
-		// Token: 0x0601C18F RID: 115087 RVA: 0x00295B58 File Offset: 0x00293D58
+		// Token: 0x060077E8 RID: 30696 RVA: 0x000AF0E0 File Offset: 0x000AD2E0
 		public UKuroRhythmGameJudgement() : this(BuiltinUtils.AllocNativeUObject(UKuroRhythmGameJudgement.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601C190 RID: 115088 RVA: 0x00295B80 File Offset: 0x00293D80
+		// Token: 0x060077E9 RID: 30697 RVA: 0x000AF108 File Offset: 0x000AD308
 		public UKuroRhythmGameJudgement(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroRhythmGameJudgement.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170071A1 RID: 29089
-		// (get) Token: 0x0601C191 RID: 115089 RVA: 0x00295BB4 File Offset: 0x00293DB4
-		// (set) Token: 0x0601C192 RID: 115090 RVA: 0x00295BED File Offset: 0x00293DED
+		// Token: 0x17001732 RID: 5938
+		// (get) Token: 0x060077EA RID: 30698 RVA: 0x000AF13C File Offset: 0x000AD33C
+		// (set) Token: 0x060077EB RID: 30699 RVA: 0x000AF175 File Offset: 0x000AD375
 		public FOnTunnelFlickSwitch OnTunnelFlickSwitch
 		{
 			get
@@ -51,9 +51,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071A2 RID: 29090
-		// (get) Token: 0x0601C193 RID: 115091 RVA: 0x00295C10 File Offset: 0x00293E10
-		// (set) Token: 0x0601C194 RID: 115092 RVA: 0x00295C49 File Offset: 0x00293E49
+		// Token: 0x17001733 RID: 5939
+		// (get) Token: 0x060077EC RID: 30700 RVA: 0x000AF198 File Offset: 0x000AD398
+		// (set) Token: 0x060077ED RID: 30701 RVA: 0x000AF1D1 File Offset: 0x000AD3D1
 		public FOnLineHitTrigger OnLineHitTrigger
 		{
 			get
@@ -72,9 +72,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071A3 RID: 29091
-		// (get) Token: 0x0601C195 RID: 115093 RVA: 0x00295C6C File Offset: 0x00293E6C
-		// (set) Token: 0x0601C196 RID: 115094 RVA: 0x00295CA5 File Offset: 0x00293EA5
+		// Token: 0x17001734 RID: 5940
+		// (get) Token: 0x060077EE RID: 30702 RVA: 0x000AF1F4 File Offset: 0x000AD3F4
+		// (set) Token: 0x060077EF RID: 30703 RVA: 0x000AF22D File Offset: 0x000AD42D
 		public FOnHoldScoreUpdate OnHoldScoreUpdate
 		{
 			get
@@ -93,9 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071A4 RID: 29092
-		// (get) Token: 0x0601C197 RID: 115095 RVA: 0x00295CC8 File Offset: 0x00293EC8
-		// (set) Token: 0x0601C198 RID: 115096 RVA: 0x00295D01 File Offset: 0x00293F01
+		// Token: 0x17001735 RID: 5941
+		// (get) Token: 0x060077F0 RID: 30704 RVA: 0x000AF250 File Offset: 0x000AD450
+		// (set) Token: 0x060077F1 RID: 30705 RVA: 0x000AF289 File Offset: 0x000AD489
 		public FOnAutoJudgeCountChange OnAutoJudgeCountChange
 		{
 			get
@@ -114,9 +114,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071A5 RID: 29093
-		// (get) Token: 0x0601C199 RID: 115097 RVA: 0x00295D24 File Offset: 0x00293F24
-		// (set) Token: 0x0601C19A RID: 115098 RVA: 0x00295D5D File Offset: 0x00293F5D
+		// Token: 0x17001736 RID: 5942
+		// (get) Token: 0x060077F2 RID: 30706 RVA: 0x000AF2AC File Offset: 0x000AD4AC
+		// (set) Token: 0x060077F3 RID: 30707 RVA: 0x000AF2E5 File Offset: 0x000AD4E5
 		public FOnHoldNoteTimeout OnHoldNoteTimeout
 		{
 			get
@@ -135,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071A6 RID: 29094
-		// (get) Token: 0x0601C19B RID: 115099 RVA: 0x00295D80 File Offset: 0x00293F80
-		// (set) Token: 0x0601C19C RID: 115100 RVA: 0x00295DB9 File Offset: 0x00293FB9
+		// Token: 0x17001737 RID: 5943
+		// (get) Token: 0x060077F4 RID: 30708 RVA: 0x000AF308 File Offset: 0x000AD508
+		// (set) Token: 0x060077F5 RID: 30709 RVA: 0x000AF341 File Offset: 0x000AD541
 		public FOnHoldNoteInputReleased OnHoldNoteInputReleased
 		{
 			get
@@ -156,33 +156,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601C19D RID: 115101 RVA: 0x00295DDC File Offset: 0x00293FDC
+		// Token: 0x060077F6 RID: 30710 RVA: 0x000AF364 File Offset: 0x000AD564
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe FKuroRhythmGameHitResult JudgeHit(float TimingError)
-		{
-			UKuroRhythmGameJudgement.__JudgeHit_FunctionParams* ptr = stackalloc UKuroRhythmGameJudgement.__JudgeHit_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroRhythmGameJudgement.__JudgeHit_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(UKuroRhythmGameJudgement.__JudgeHit_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->TimingError = TimingError;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__JudgeHit_NativeFunctionPtr, (void*)ptr, 0);
-			return ptr->__Result;
-		}
-
-		// Token: 0x0601C19E RID: 115102 RVA: 0x00295E2C File Offset: 0x0029402C
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool IsDisableRecordUpLoad()
 		{
 			UKuroRhythmGameJudgement.__IsDisableRecordUpLoad_FunctionParams* ptr = stackalloc UKuroRhythmGameJudgement.__IsDisableRecordUpLoad_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroRhythmGameJudgement.__IsDisableRecordUpLoad_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroRhythmGameJudgement.__IsDisableRecordUpLoad_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__IsDisableRecordUpLoad_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__IsDisableRecordUpLoad_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C19F RID: 115103 RVA: 0x00295E74 File Offset: 0x00294074
+		// Token: 0x060077F7 RID: 30711 RVA: 0x000AF3AC File Offset: 0x000AD5AC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Initialize(in FKuroRhythmGameConfig InGameConfig)
 		{
 			UKuroRhythmGameJudgement.__Initialize_FunctionParams* ptr = stackalloc UKuroRhythmGameJudgement.__Initialize_FunctionParams[(UIntPtr)287] + 15L / (long)sizeof(UKuroRhythmGameJudgement.__Initialize_FunctionParams) & -16L;
@@ -191,288 +177,263 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FKuroRhythmGameConfig.StaticStruct(), &ptr->InGameConfig, InGameConfig.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__Initialize_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__Initialize_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601C1A0 RID: 115104 RVA: 0x00295EDC File Offset: 0x002940DC
+		// Token: 0x060077F8 RID: 30712 RVA: 0x000AF414 File Offset: 0x000AD614
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int GetScorePerfect()
 		{
 			UKuroRhythmGameJudgement.__GetScorePerfect_FunctionParams* ptr = stackalloc UKuroRhythmGameJudgement.__GetScorePerfect_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UKuroRhythmGameJudgement.__GetScorePerfect_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroRhythmGameJudgement.__GetScorePerfect_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetScorePerfect_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetScorePerfect_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C1A1 RID: 115105 RVA: 0x00295F24 File Offset: 0x00294124
+		// Token: 0x060077F9 RID: 30713 RVA: 0x000AF45C File Offset: 0x000AD65C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int GetScoreMiss()
 		{
 			UKuroRhythmGameJudgement.__GetScoreMiss_FunctionParams* ptr = stackalloc UKuroRhythmGameJudgement.__GetScoreMiss_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UKuroRhythmGameJudgement.__GetScoreMiss_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroRhythmGameJudgement.__GetScoreMiss_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetScoreMiss_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetScoreMiss_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C1A2 RID: 115106 RVA: 0x00295F6C File Offset: 0x0029416C
+		// Token: 0x060077FA RID: 30714 RVA: 0x000AF4A4 File Offset: 0x000AD6A4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int GetScoreGreat()
 		{
 			UKuroRhythmGameJudgement.__GetScoreGreat_FunctionParams* ptr = stackalloc UKuroRhythmGameJudgement.__GetScoreGreat_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UKuroRhythmGameJudgement.__GetScoreGreat_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroRhythmGameJudgement.__GetScoreGreat_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetScoreGreat_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetScoreGreat_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C1A3 RID: 115107 RVA: 0x00295FB4 File Offset: 0x002941B4
+		// Token: 0x060077FB RID: 30715 RVA: 0x000AF4EC File Offset: 0x000AD6EC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int GetScoreGood()
 		{
 			UKuroRhythmGameJudgement.__GetScoreGood_FunctionParams* ptr = stackalloc UKuroRhythmGameJudgement.__GetScoreGood_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UKuroRhythmGameJudgement.__GetScoreGood_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroRhythmGameJudgement.__GetScoreGood_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetScoreGood_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetScoreGood_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C1A4 RID: 115108 RVA: 0x00295FFC File Offset: 0x002941FC
+		// Token: 0x060077FC RID: 30716 RVA: 0x000AF534 File Offset: 0x000AD734
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int GetScoreBad()
 		{
 			UKuroRhythmGameJudgement.__GetScoreBad_FunctionParams* ptr = stackalloc UKuroRhythmGameJudgement.__GetScoreBad_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UKuroRhythmGameJudgement.__GetScoreBad_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroRhythmGameJudgement.__GetScoreBad_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetScoreBad_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetScoreBad_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C1A5 RID: 115109 RVA: 0x00296044 File Offset: 0x00294244
+		// Token: 0x060077FD RID: 30717 RVA: 0x000AF57C File Offset: 0x000AD77C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int GetRemainUpgradeRatingCount()
 		{
 			UKuroRhythmGameJudgement.__GetRemainUpgradeRatingCount_FunctionParams* ptr = stackalloc UKuroRhythmGameJudgement.__GetRemainUpgradeRatingCount_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UKuroRhythmGameJudgement.__GetRemainUpgradeRatingCount_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroRhythmGameJudgement.__GetRemainUpgradeRatingCount_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetRemainUpgradeRatingCount_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetRemainUpgradeRatingCount_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C1A6 RID: 115110 RVA: 0x0029608C File Offset: 0x0029428C
+		// Token: 0x060077FE RID: 30718 RVA: 0x000AF5C4 File Offset: 0x000AD7C4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int GetHoldingNoteIndex()
 		{
 			UKuroRhythmGameJudgement.__GetHoldingNoteIndex_FunctionParams* ptr = stackalloc UKuroRhythmGameJudgement.__GetHoldingNoteIndex_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UKuroRhythmGameJudgement.__GetHoldingNoteIndex_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroRhythmGameJudgement.__GetHoldingNoteIndex_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetHoldingNoteIndex_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRhythmGameJudgement.__GetHoldingNoteIndex_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601C1A7 RID: 115111 RVA: 0x002960D2 File Offset: 0x002942D2
+		// Token: 0x060077FF RID: 30719 RVA: 0x000AF609 File Offset: 0x000AD809
 		static UKuroRhythmGameJudgement()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRhythmGame.KuroRhythmGameJudgement");
 		}
 
-		// Token: 0x0601C1A8 RID: 115112 RVA: 0x002960E0 File Offset: 0x002942E0
+		// Token: 0x06007800 RID: 30720 RVA: 0x000AF617 File Offset: 0x000AD817
 		protected UKuroRhythmGameJudgement(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400F1BD RID: 61885
+		// Token: 0x040032BF RID: 12991
 		public new const string __ObjectPath = "/Script/KuroRhythmGame.KuroRhythmGameJudgement";
 
-		// Token: 0x0400F1BE RID: 61886
+		// Token: 0x040032C0 RID: 12992
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400F1BF RID: 61887
+		// Token: 0x040032C1 RID: 12993
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400F1C0 RID: 61888
+		// Token: 0x040032C2 RID: 12994
 		internal static int __PropertyOffset_OnTunnelFlickSwitch;
 
-		// Token: 0x0400F1C1 RID: 61889
+		// Token: 0x040032C3 RID: 12995
 		[Nullable(2)]
 		private FOnTunnelFlickSwitch _OnTunnelFlickSwitch;
 
-		// Token: 0x0400F1C2 RID: 61890
+		// Token: 0x040032C4 RID: 12996
 		internal static int __PropertyOffset_OnLineHitTrigger;
 
-		// Token: 0x0400F1C3 RID: 61891
+		// Token: 0x040032C5 RID: 12997
 		[Nullable(2)]
 		private FOnLineHitTrigger _OnLineHitTrigger;
 
-		// Token: 0x0400F1C4 RID: 61892
+		// Token: 0x040032C6 RID: 12998
 		internal static int __PropertyOffset_OnHoldScoreUpdate;
 
-		// Token: 0x0400F1C5 RID: 61893
+		// Token: 0x040032C7 RID: 12999
 		[Nullable(2)]
 		private FOnHoldScoreUpdate _OnHoldScoreUpdate;
 
-		// Token: 0x0400F1C6 RID: 61894
+		// Token: 0x040032C8 RID: 13000
 		internal static int __PropertyOffset_OnAutoJudgeCountChange;
 
-		// Token: 0x0400F1C7 RID: 61895
+		// Token: 0x040032C9 RID: 13001
 		[Nullable(2)]
 		private FOnAutoJudgeCountChange _OnAutoJudgeCountChange;
 
-		// Token: 0x0400F1C8 RID: 61896
+		// Token: 0x040032CA RID: 13002
 		internal static int __PropertyOffset_OnHoldNoteTimeout;
 
-		// Token: 0x0400F1C9 RID: 61897
+		// Token: 0x040032CB RID: 13003
 		[Nullable(2)]
 		private FOnHoldNoteTimeout _OnHoldNoteTimeout;
 
-		// Token: 0x0400F1CA RID: 61898
+		// Token: 0x040032CC RID: 13004
 		internal static int __PropertyOffset_OnHoldNoteInputReleased;
 
-		// Token: 0x0400F1CB RID: 61899
+		// Token: 0x040032CD RID: 13005
 		[Nullable(2)]
 		private FOnHoldNoteInputReleased _OnHoldNoteInputReleased;
 
-		// Token: 0x0400F1CC RID: 61900
-		private static IntPtr __JudgeHit_NativeFunctionPtr;
-
-		// Token: 0x0400F1CD RID: 61901
+		// Token: 0x040032CE RID: 13006
 		private static IntPtr __IsDisableRecordUpLoad_NativeFunctionPtr;
 
-		// Token: 0x0400F1CE RID: 61902
+		// Token: 0x040032CF RID: 13007
 		private static IntPtr __Initialize_NativeFunctionPtr;
 
-		// Token: 0x0400F1CF RID: 61903
+		// Token: 0x040032D0 RID: 13008
 		private static IntPtr __GetScorePerfect_NativeFunctionPtr;
 
-		// Token: 0x0400F1D0 RID: 61904
+		// Token: 0x040032D1 RID: 13009
 		private static IntPtr __GetScoreMiss_NativeFunctionPtr;
 
-		// Token: 0x0400F1D1 RID: 61905
+		// Token: 0x040032D2 RID: 13010
 		private static IntPtr __GetScoreGreat_NativeFunctionPtr;
 
-		// Token: 0x0400F1D2 RID: 61906
+		// Token: 0x040032D3 RID: 13011
 		private static IntPtr __GetScoreGood_NativeFunctionPtr;
 
-		// Token: 0x0400F1D3 RID: 61907
+		// Token: 0x040032D4 RID: 13012
 		private static IntPtr __GetScoreBad_NativeFunctionPtr;
 
-		// Token: 0x0400F1D4 RID: 61908
+		// Token: 0x040032D5 RID: 13013
 		private static IntPtr __GetRemainUpgradeRatingCount_NativeFunctionPtr;
 
-		// Token: 0x0400F1D5 RID: 61909
+		// Token: 0x040032D6 RID: 13014
 		private static IntPtr __GetHoldingNoteIndex_NativeFunctionPtr;
 
-		// Token: 0x020031B9 RID: 12729
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __JudgeHit_FunctionParams
-		{
-			// Token: 0x04017002 RID: 94210
-			[FieldOffset(0)]
-			public float TimingError;
-
-			// Token: 0x04017003 RID: 94211
-			[FieldOffset(4)]
-			public FKuroRhythmGameHitResult __Result;
-		}
-
-		// Token: 0x020031BA RID: 12730
+		// Token: 0x02000C37 RID: 3127
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsDisableRecordUpLoad_FunctionParams
 		{
-			// Token: 0x04017004 RID: 94212
+			// Token: 0x04005E84 RID: 24196
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x020031BB RID: 12731
+		// Token: 0x02000C38 RID: 3128
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 272)]
 		protected ref struct __Initialize_FunctionParams
 		{
-			// Token: 0x04017005 RID: 94213
+			// Token: 0x04005E85 RID: 24197
 			[FieldOffset(0)]
 			public byte InGameConfig;
 		}
 
-		// Token: 0x020031BC RID: 12732
+		// Token: 0x02000C39 RID: 3129
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetScorePerfect_FunctionParams
 		{
-			// Token: 0x04017006 RID: 94214
+			// Token: 0x04005E86 RID: 24198
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x020031BD RID: 12733
+		// Token: 0x02000C3A RID: 3130
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetScoreMiss_FunctionParams
 		{
-			// Token: 0x04017007 RID: 94215
+			// Token: 0x04005E87 RID: 24199
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x020031BE RID: 12734
+		// Token: 0x02000C3B RID: 3131
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetScoreGreat_FunctionParams
 		{
-			// Token: 0x04017008 RID: 94216
+			// Token: 0x04005E88 RID: 24200
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x020031BF RID: 12735
+		// Token: 0x02000C3C RID: 3132
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetScoreGood_FunctionParams
 		{
-			// Token: 0x04017009 RID: 94217
+			// Token: 0x04005E89 RID: 24201
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x020031C0 RID: 12736
+		// Token: 0x02000C3D RID: 3133
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetScoreBad_FunctionParams
 		{
-			// Token: 0x0401700A RID: 94218
+			// Token: 0x04005E8A RID: 24202
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x020031C1 RID: 12737
+		// Token: 0x02000C3E RID: 3134
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetRemainUpgradeRatingCount_FunctionParams
 		{
-			// Token: 0x0401700B RID: 94219
+			// Token: 0x04005E8B RID: 24203
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x020031C2 RID: 12738
+		// Token: 0x02000C3F RID: 3135
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetHoldingNoteIndex_FunctionParams
 		{
-			// Token: 0x0401700C RID: 94220
+			// Token: 0x04005E8C RID: 24204
 			[FieldOffset(0)]
 			public int __Result;
 		}

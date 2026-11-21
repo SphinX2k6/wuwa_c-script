@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x02006924 RID: 26916
+	// Token: 0x02005874 RID: 22644
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 	})]
 	public class AnniversaryActivityEnterItem : GridProxyAbstract<AnniversarySubActivityDataBase>
 	{
-		// Token: 0x060431B1 RID: 274865 RVA: 0x0105AA34 File Offset: 0x01058C34
+		// Token: 0x06037D09 RID: 228617 RVA: 0x00F9C060 File Offset: 0x00F9A260
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,26 +45,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			};
 		}
 
-		// Token: 0x060431B2 RID: 274866 RVA: 0x0105ABBF File Offset: 0x01058DBF
+		// Token: 0x06037D0A RID: 228618 RVA: 0x00F9C1EB File Offset: 0x00F9A3EB
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x060431B3 RID: 274867 RVA: 0x0105ABD2 File Offset: 0x01058DD2
+		// Token: 0x06037D0B RID: 228619 RVA: 0x00F9C1FE File Offset: 0x00F9A3FE
 		[NullableContext(1)]
 		public void SetClickCallback(Action<int> callback)
 		{
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x060431B4 RID: 274868 RVA: 0x0105ABDB File Offset: 0x01058DDB
+		// Token: 0x06037D0C RID: 228620 RVA: 0x00F9C207 File Offset: 0x00F9A407
 		public override void Refresh(AnniversarySubActivityDataBase data, bool isSelected, int gridIndex)
 		{
 			this.Refresh(data);
 		}
 
-		// Token: 0x060431B5 RID: 274869 RVA: 0x0105ABE4 File Offset: 0x01058DE4
+		// Token: 0x06037D0D RID: 228621 RVA: 0x00F9C210 File Offset: 0x00F9A410
 		public void Refresh(AnniversarySubActivityDataBase data)
 		{
 			if (data == null)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			this.OnTipsTimerTick();
 		}
 
-		// Token: 0x060431B6 RID: 274870 RVA: 0x0105ACF8 File Offset: 0x01058EF8
+		// Token: 0x06037D0E RID: 228622 RVA: 0x00F9C324 File Offset: 0x00F9A524
 		public void OnTipsTimerTick()
 		{
 			AnniversarySubActivityDataBase data = this.Data;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			this.ChildUpdateTips();
 		}
 
-		// Token: 0x060431B7 RID: 274871 RVA: 0x0105AD48 File Offset: 0x01058F48
+		// Token: 0x06037D0F RID: 228623 RVA: 0x00F9C374 File Offset: 0x00F9A574
 		public void RefreshTimeText()
 		{
 			if (this.Data == null)
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x060431B8 RID: 274872 RVA: 0x0105ADDF File Offset: 0x01058FDF
+		// Token: 0x06037D10 RID: 228624 RVA: 0x00F9C40B File Offset: 0x00F9A60B
 		private void OnClick()
 		{
 			if (this.Data == null)
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			clickCallback((int)this.Data.GetSubId());
 		}
 
-		// Token: 0x060431B9 RID: 274873 RVA: 0x0105AE08 File Offset: 0x01059008
+		// Token: 0x06037D11 RID: 228625 RVA: 0x00F9C434 File Offset: 0x00F9A634
 		public UniTask PlayUnlockSequence()
 		{
 			AnniversaryActivityEnterItem.<PlayUnlockSequence>d__11 <PlayUnlockSequence>d__;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return <PlayUnlockSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060431BA RID: 274874 RVA: 0x0105AE4C File Offset: 0x0105904C
+		// Token: 0x06037D12 RID: 228626 RVA: 0x00F9C478 File Offset: 0x00F9A678
 		private void SetLockState(bool isLock)
 		{
 			UUIItem item = base.GetItem(2);
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			texture.SetIsGray(isLock);
 		}
 
-		// Token: 0x060431BB RID: 274875 RVA: 0x0105AEAC File Offset: 0x010590AC
+		// Token: 0x06037D13 RID: 228627 RVA: 0x00F9C4D8 File Offset: 0x00F9A6D8
 		public void RefreshRedDotItem()
 		{
 			AnniversarySubActivityDataBase data = this.Data;
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			item.SetUIActive(valueOrDefault);
 		}
 
-		// Token: 0x060431BC RID: 274876 RVA: 0x0105AF08 File Offset: 0x01059108
+		// Token: 0x06037D14 RID: 228628 RVA: 0x00F9C534 File Offset: 0x00F9A734
 		public void RefreshFinished()
 		{
 			AnniversarySubActivityDataBase data = this.Data;
@@ -256,23 +256,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			texture.SetUIActive(valueOrDefault);
 		}
 
-		// Token: 0x060431BD RID: 274877 RVA: 0x0105AF64 File Offset: 0x01059164
+		// Token: 0x06037D15 RID: 228629 RVA: 0x00F9C590 File Offset: 0x00F9A790
 		public virtual void ChildUpdateStateInfo()
 		{
 		}
 
-		// Token: 0x060431BE RID: 274878 RVA: 0x0105AF66 File Offset: 0x01059166
+		// Token: 0x06037D16 RID: 228630 RVA: 0x00F9C592 File Offset: 0x00F9A792
 		public virtual void ChildUpdateTips()
 		{
 		}
 
-		// Token: 0x04022EF4 RID: 143092
+		// Token: 0x0401D750 RID: 120656
 		protected AnniversarySubActivityDataBase Data;
 
-		// Token: 0x04022EF5 RID: 143093
+		// Token: 0x0401D751 RID: 120657
 		private Action<int> ClickCallback;
 
-		// Token: 0x04022EF6 RID: 143094
+		// Token: 0x0401D752 RID: 120658
 		public LevelSequencePlayer SequencePlayer;
 	}
 }

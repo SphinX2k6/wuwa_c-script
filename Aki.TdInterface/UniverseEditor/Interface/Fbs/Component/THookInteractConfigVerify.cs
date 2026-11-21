@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C38 RID: 23608
+	// Token: 0x0200625D RID: 25181
 	public static class THookInteractConfigVerify
 	{
-		// Token: 0x060287C8 RID: 165832 RVA: 0x00591E90 File Offset: 0x00590090
+		// Token: 0x0602ADD6 RID: 175574 RVA: 0x005DA0A8 File Offset: 0x005D82A8
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -19,31 +19,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				result = IChargeSlashHookVerify.Verify(verifier, tablePos);
 				break;
 			case 3:
-				result = IFixedPointHookVerify.Verify(verifier, tablePos);
+				result = IChongLouHookVerify.Verify(verifier, tablePos);
 				break;
 			case 4:
-				result = IFlyingFeatherVerify.Verify(verifier, tablePos);
+				result = IFixedPointHookVerify.Verify(verifier, tablePos);
 				break;
 			case 5:
-				result = IFollowerShootVerify.Verify(verifier, tablePos);
+				result = IFlyingFeatherVerify.Verify(verifier, tablePos);
 				break;
 			case 6:
-				result = IFoxJumpingPointVerify.Verify(verifier, tablePos);
+				result = IFollowerShootVerify.Verify(verifier, tablePos);
 				break;
 			case 7:
-				result = IGravityHookVerify.Verify(verifier, tablePos);
+				result = IFoxJumpingPointVerify.Verify(verifier, tablePos);
 				break;
 			case 8:
-				result = IHookSpaceStationEnergyCoreVerify.Verify(verifier, tablePos);
+				result = IGravityHookVerify.Verify(verifier, tablePos);
 				break;
 			case 9:
-				result = IKiteHookVerify.Verify(verifier, tablePos);
+				result = IHookSpaceStationEnergyCoreVerify.Verify(verifier, tablePos);
 				break;
 			case 10:
-				result = IMechHookVerify.Verify(verifier, tablePos);
+				result = IKiteHookVerify.Verify(verifier, tablePos);
 				break;
 			case 11:
-				result = IMechPullInteractVerify.Verify(verifier, tablePos);
+				result = IMechTransformHookVerify.Verify(verifier, tablePos);
 				break;
 			case 12:
 				result = IMotorEjectHookVerify.Verify(verifier, tablePos);

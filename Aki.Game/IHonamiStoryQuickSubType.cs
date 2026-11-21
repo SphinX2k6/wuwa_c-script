@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001E77 RID: 7799
+// Token: 0x02001339 RID: 4921
 [NullableContext(1)]
 public interface IHonamiStoryQuickSubType
 {
-	// Token: 0x170012C0 RID: 4800
-	// (get) Token: 0x0600EDB9 RID: 60857
-	// (set) Token: 0x0600EDBA RID: 60858
+	// Token: 0x170012EA RID: 4842
+	// (get) Token: 0x0600C1D8 RID: 49624
+	// (set) Token: 0x0600C1D9 RID: 49625
 	int SubType { get; set; }
 
-	// Token: 0x170012C1 RID: 4801
-	// (get) Token: 0x0600EDBB RID: 60859
-	// (set) Token: 0x0600EDBC RID: 60860
+	// Token: 0x170012EB RID: 4843
+	// (get) Token: 0x0600C1DA RID: 49626
+	// (set) Token: 0x0600C1DB RID: 49627
 	List<HonamiStoryEquipItemData> ItemList { get; set; }
 }

@@ -10,17 +10,17 @@ using CSharpScript.Game.Module.Plot;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B1E RID: 27422
+	// Token: 0x02005C96 RID: 23702
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventEnterOrbitalCamera : LevelEventBase
 	{
-		// Token: 0x060440BC RID: 278716 RVA: 0x010BA295 File Offset: 0x010B8495
+		// Token: 0x0603A20E RID: 238094 RVA: 0x01063B21 File Offset: 0x01061D21
 		public LevelEventEnterOrbitalCamera(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060440BD RID: 278717 RVA: 0x010BA2B4 File Offset: 0x010B84B4
+		// Token: 0x0603A20F RID: 238095 RVA: 0x01063B40 File Offset: 0x01061D40
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			if (inParams == null)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			CameraController.Instance.MainModel.OrbitalCamera.PlayerComponent.PlayCameraOrbitalPath(option.LevelSequence, this.BeginPoint, this.EndPoint, option.BlendInTime, option.BlendOutTime);
 		}
 
-		// Token: 0x060440BE RID: 278718 RVA: 0x010BA4F8 File Offset: 0x010B86F8
+		// Token: 0x0603A210 RID: 238096 RVA: 0x01063D84 File Offset: 0x01061F84
 		protected override void OnUpdateGuarantee()
 		{
 			GuaranteeActionInfo p = new GuaranteeActionInfo
@@ -99,10 +99,10 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.Emit<string, GeneralContext, GuaranteeActionInfo, bool?>(EEventName.AddGuaranteeAction, this.Type, this.BaseContext, p, null);
 		}
 
-		// Token: 0x040238EB RID: 145643
+		// Token: 0x0401EB8D RID: 125837
 		private readonly Vector BeginPoint = Vector.Create();
 
-		// Token: 0x040238EC RID: 145644
+		// Token: 0x0401EB8E RID: 125838
 		private readonly Vector EndPoint = Vector.Create();
 	}
 }

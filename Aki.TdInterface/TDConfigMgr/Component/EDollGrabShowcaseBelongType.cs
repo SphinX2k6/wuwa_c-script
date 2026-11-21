@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000093 RID: 147
+	// Token: 0x02000098 RID: 152
 	[EnumExtensions]
 	public enum EDollGrabShowcaseBelongType
 	{
-		// Token: 0x0400039E RID: 926
+		// Token: 0x040003B7 RID: 951
 		LandOfXuanfang
 	}
 }

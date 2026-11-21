@@ -6,7 +6,7 @@ using Google.FlatBuffers;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 {
-	// Token: 0x020000B1 RID: 177
+	// Token: 0x020000B4 RID: 180
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,25 +15,25 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 	})]
 	public class DungeonPackInfoTable : TableReader<DungeonPackInfoRow>
 	{
-		// Token: 0x06000614 RID: 1556 RVA: 0x000368E2 File Offset: 0x00034AE2
+		// Token: 0x0600062F RID: 1583 RVA: 0x000383E1 File Offset: 0x000365E1
 		protected override string GetTableName()
 		{
 			return "DungeonPackInfo";
 		}
 
-		// Token: 0x06000615 RID: 1557 RVA: 0x000368E9 File Offset: 0x00034AE9
+		// Token: 0x06000630 RID: 1584 RVA: 0x000383E8 File Offset: 0x000365E8
 		protected override string GetDbFile()
 		{
 			return "db_dungeonpackinfo.db";
 		}
 
-		// Token: 0x06000616 RID: 1558 RVA: 0x000368F0 File Offset: 0x00034AF0
+		// Token: 0x06000631 RID: 1585 RVA: 0x000383EF File Offset: 0x000365EF
 		protected override string GetIdString()
 		{
 			return "DungeonId";
 		}
 
-		// Token: 0x06000617 RID: 1559 RVA: 0x000368F8 File Offset: 0x00034AF8
+		// Token: 0x06000632 RID: 1586 RVA: 0x000383F8 File Offset: 0x000365F8
 		public override DungeonPackInfoRow Parse(ByteBuffer byteBuffer)
 		{
 			DungeonPackInfoRow dungeonPackInfoRow = new DungeonPackInfoRow();

@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029A0 RID: 10656
+// Token: 0x02001F1B RID: 7963
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerBuffView : UiViewBase
 {
-	// Token: 0x06016170 RID: 90480 RVA: 0x00595CDE File Offset: 0x00593EDE
+	// Token: 0x06013B76 RID: 80758 RVA: 0x005C0C9E File Offset: 0x005BEE9E
 	public ShipTowerBuffView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016171 RID: 90481 RVA: 0x00595CE8 File Offset: 0x00593EE8
+	// Token: 0x06013B77 RID: 80759 RVA: 0x005C0CA8 File Offset: 0x005BEEA8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -36,7 +36,7 @@ public class ShipTowerBuffView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06016172 RID: 90482 RVA: 0x00595D94 File Offset: 0x00593F94
+	// Token: 0x06013B78 RID: 80760 RVA: 0x005C0D54 File Offset: 0x005BEF54
 	private void InitDataParam()
 	{
 		ShipTowerBuffViewParams shipTowerBuffViewParams = this.OpenParam as ShipTowerBuffViewParams;
@@ -57,7 +57,7 @@ public class ShipTowerBuffView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016173 RID: 90483 RVA: 0x00595E13 File Offset: 0x00594013
+	// Token: 0x06013B79 RID: 80761 RVA: 0x005C0DD3 File Offset: 0x005BEFD3
 	private static void InvokeOnUseBuff(object openParam, ShipTowerBuffData buffData, [Nullable(2)] object teamData)
 	{
 		if (openParam == null)
@@ -72,7 +72,7 @@ public class ShipTowerBuffView : UiViewBase
 		onUseBuff(buffData, teamData as ShipTowerTeamData);
 	}
 
-	// Token: 0x06016174 RID: 90484 RVA: 0x00595E38 File Offset: 0x00594038
+	// Token: 0x06013B7A RID: 80762 RVA: 0x005C0DF8 File Offset: 0x005BEFF8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerBuffView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -83,7 +83,7 @@ public class ShipTowerBuffView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016175 RID: 90485 RVA: 0x00595E7B File Offset: 0x0059407B
+	// Token: 0x06013B7B RID: 80763 RVA: 0x005C0E3B File Offset: 0x005BF03B
 	protected override void OnBeforeDestroy()
 	{
 		this.FinishLoadedBuffPromise();
@@ -96,13 +96,13 @@ public class ShipTowerBuffView : UiViewBase
 		this.PopupCaption = null;
 	}
 
-	// Token: 0x06016176 RID: 90486 RVA: 0x00595EA3 File Offset: 0x005940A3
+	// Token: 0x06013B7C RID: 80764 RVA: 0x005C0E63 File Offset: 0x005BF063
 	private void TimerFinishLoadedBuffPromise(float _)
 	{
 		this.FinishLoadedBuffPromise();
 	}
 
-	// Token: 0x06016177 RID: 90487 RVA: 0x00595EAB File Offset: 0x005940AB
+	// Token: 0x06013B7D RID: 80765 RVA: 0x005C0E6B File Offset: 0x005BF06B
 	private void FinishLoadedBuffPromise()
 	{
 		if (this.LoadedBuffPromise != null && !this.LoadedBuffPromise.IsFulfilled)
@@ -111,7 +111,7 @@ public class ShipTowerBuffView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016178 RID: 90488 RVA: 0x00595ED0 File Offset: 0x005940D0
+	// Token: 0x06013B7E RID: 80766 RVA: 0x005C0E90 File Offset: 0x005BF090
 	private void OnClickBtnSelect(int _)
 	{
 		object openParam = this.OpenParam;
@@ -119,7 +119,7 @@ public class ShipTowerBuffView : UiViewBase
 		ShipTowerBuffView.InvokeOnUseBuff(openParam, this.SelectedData, teamData);
 	}
 
-	// Token: 0x06016179 RID: 90489 RVA: 0x00595EFB File Offset: 0x005940FB
+	// Token: 0x06013B7F RID: 80767 RVA: 0x005C0EBB File Offset: 0x005BF0BB
 	private ShipTowerBuffListItem CreateBuffListItem()
 	{
 		return new ShipTowerBuffListItem
@@ -130,7 +130,7 @@ public class ShipTowerBuffView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601617A RID: 90490 RVA: 0x00595F38 File Offset: 0x00594138
+	// Token: 0x06013B80 RID: 80768 RVA: 0x005C0EF8 File Offset: 0x005BF0F8
 	private void BuffComponentLoadedCallback()
 	{
 		this.LoadedBuffNum++;
@@ -141,7 +141,7 @@ public class ShipTowerBuffView : UiViewBase
 		this.FinishLoadedBuffPromise();
 	}
 
-	// Token: 0x0601617B RID: 90491 RVA: 0x00595F60 File Offset: 0x00594160
+	// Token: 0x06013B81 RID: 80769 RVA: 0x005C0F20 File Offset: 0x005BF120
 	private int? GetStageIdCallback()
 	{
 		ShipTowerBuffViewParams shipTowerBuffViewParams = this.OpenParam as ShipTowerBuffViewParams;
@@ -157,7 +157,7 @@ public class ShipTowerBuffView : UiViewBase
 		return new int?(teamData.StageId);
 	}
 
-	// Token: 0x0601617C RID: 90492 RVA: 0x00595FA4 File Offset: 0x005941A4
+	// Token: 0x06013B82 RID: 80770 RVA: 0x005C0F64 File Offset: 0x005BF164
 	private void OnItemClickCallback(ShipTowerBuffData data)
 	{
 		this.SelectedData = data;
@@ -185,7 +185,7 @@ public class ShipTowerBuffView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601617D RID: 90493 RVA: 0x00596090 File Offset: 0x00594290
+	// Token: 0x06013B83 RID: 80771 RVA: 0x005C1050 File Offset: 0x005BF250
 	private void UpdateButton()
 	{
 		this.ItemTipsComponent.ClearButtonList();
@@ -225,7 +225,7 @@ public class ShipTowerBuffView : UiViewBase
 		this.ItemTipsComponent.RefreshButton(list);
 	}
 
-	// Token: 0x0601617E RID: 90494 RVA: 0x00596188 File Offset: 0x00594388
+	// Token: 0x06013B84 RID: 80772 RVA: 0x005C1148 File Offset: 0x005BF348
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -256,11 +256,11 @@ public class ShipTowerBuffView : UiViewBase
 		return shipTowerBuffListItem.GetGuideUiItemAndUiItemForShowEx(configParams);
 	}
 
-	// Token: 0x0400A4AA RID: 42154
+	// Token: 0x0400A894 RID: 43156
 	[Nullable(2)]
 	private PopupCaptionItem PopupCaption;
 
-	// Token: 0x0400A4AB RID: 42155
+	// Token: 0x0400A895 RID: 43157
 	[Nullable(new byte[]
 	{
 		2,
@@ -269,35 +269,35 @@ public class ShipTowerBuffView : UiViewBase
 	})]
 	private GenericScrollViewNew<ShipTowerBuffListItem, ShipTowerBuffQuality> ScrollView;
 
-	// Token: 0x0400A4AC RID: 42156
+	// Token: 0x0400A896 RID: 43158
 	[Nullable(2)]
 	private ItemTipsWithButtonComponent ItemTipsComponent;
 
-	// Token: 0x0400A4AD RID: 42157
+	// Token: 0x0400A897 RID: 43159
 	[Nullable(2)]
 	private ShipTowerBuffData SelectedData;
 
-	// Token: 0x0400A4AE RID: 42158
+	// Token: 0x0400A898 RID: 43160
 	private int LoadedBuffNum;
 
-	// Token: 0x0400A4AF RID: 42159
+	// Token: 0x0400A899 RID: 43161
 	private int LoadedBuffSumNum;
 
-	// Token: 0x0400A4B0 RID: 42160
+	// Token: 0x0400A89A RID: 43162
 	[Nullable(2)]
 	private CustomPromise<bool> LoadedBuffPromise;
 
-	// Token: 0x02008FA7 RID: 36775
+	// Token: 0x020081F0 RID: 33264
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402E876 RID: 190582
+		// Token: 0x04029F75 RID: 171893
 		ScrollViewBuffList,
-		// Token: 0x0402E877 RID: 190583
+		// Token: 0x04029F76 RID: 171894
 		ItemBuffList,
-		// Token: 0x0402E878 RID: 190584
+		// Token: 0x04029F77 RID: 171895
 		ItemCaption,
-		// Token: 0x0402E879 RID: 190585
+		// Token: 0x04029F78 RID: 171896
 		ItemBuffDesc
 	}
 }

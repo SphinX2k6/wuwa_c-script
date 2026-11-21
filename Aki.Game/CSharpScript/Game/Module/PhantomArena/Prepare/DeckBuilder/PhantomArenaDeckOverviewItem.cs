@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x020051A9 RID: 20905
+	// Token: 0x02004179 RID: 16761
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 	})]
 	public class PhantomArenaDeckOverviewItem : GridProxyAbstract<DeckInfo>
 	{
-		// Token: 0x0603582D RID: 219181 RVA: 0x00CABB1C File Offset: 0x00CA9D1C
+		// Token: 0x0602A728 RID: 173864 RVA: 0x00BF916C File Offset: 0x00BF736C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x0603582E RID: 219182 RVA: 0x00CABCA8 File Offset: 0x00CA9EA8
+		// Token: 0x0602A729 RID: 173865 RVA: 0x00BF92F8 File Offset: 0x00BF74F8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaDeckOverviewItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603582F RID: 219183 RVA: 0x00CABCEC File Offset: 0x00CA9EEC
+		// Token: 0x0602A72A RID: 173866 RVA: 0x00BF933C File Offset: 0x00BF753C
 		public override void Refresh(DeckInfo data, bool isSelected, int gridIndex)
 		{
 			this.DeckInfo = data;
@@ -197,19 +197,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x06035830 RID: 219184 RVA: 0x00CAC158 File Offset: 0x00CAA358
+		// Token: 0x0602A72B RID: 173867 RVA: 0x00BF97A8 File Offset: 0x00BF79A8
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x06035831 RID: 219185 RVA: 0x00CAC16B File Offset: 0x00CAA36B
+		// Token: 0x0602A72C RID: 173868 RVA: 0x00BF97BB File Offset: 0x00BF79BB
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x06035832 RID: 219186 RVA: 0x00CAC17E File Offset: 0x00CAA37E
+		// Token: 0x0602A72D RID: 173869 RVA: 0x00BF97CE File Offset: 0x00BF79CE
 		private void OnToggleSelectInternal(EToggleState toggleState)
 		{
 			Action<int> onToggleSelect = this.OnToggleSelect;
@@ -220,67 +220,67 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			onToggleSelect(base.GridIndex);
 		}
 
-		// Token: 0x0401C6AB RID: 116395
+		// Token: 0x040170E0 RID: 94432
 		[Nullable(2)]
 		protected DeckInfo DeckInfo;
 
-		// Token: 0x0401C6AC RID: 116396
+		// Token: 0x040170E1 RID: 94433
 		public int ActivityId;
 
-		// Token: 0x0401C6AD RID: 116397
+		// Token: 0x040170E2 RID: 94434
 		protected List<CardElementItem> ElementList = new List<CardElementItem>();
 
-		// Token: 0x0401C6AE RID: 116398
+		// Token: 0x040170E3 RID: 94435
 		[Nullable(2)]
 		public Action<int> OnToggleSelect;
 
-		// Token: 0x0200B322 RID: 45858
+		// Token: 0x02009D5A RID: 40282
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x040364A3 RID: 222371
+			// Token: 0x04030EF6 RID: 200438
 			public const int ItemToggle = 0;
 
-			// Token: 0x040364A4 RID: 222372
+			// Token: 0x04030EF7 RID: 200439
 			public const int IndexText = 1;
 
-			// Token: 0x040364A5 RID: 222373
+			// Token: 0x04030EF8 RID: 200440
 			public const int DeckFaceTexture = 2;
 
-			// Token: 0x040364A6 RID: 222374
+			// Token: 0x04030EF9 RID: 200441
 			public const int NameText = 3;
 
-			// Token: 0x040364A7 RID: 222375
+			// Token: 0x04030EFA RID: 200442
 			public const int NormalCardCountText = 4;
 
-			// Token: 0x040364A8 RID: 222376
+			// Token: 0x04030EFB RID: 200443
 			public const int UnDoneItem = 5;
 
-			// Token: 0x040364A9 RID: 222377
+			// Token: 0x04030EFC RID: 200444
 			public const int CreateDeckItem = 6;
 
-			// Token: 0x040364AA RID: 222378
+			// Token: 0x04030EFD RID: 200445
 			public const int LastUsedItem = 7;
 
-			// Token: 0x040364AB RID: 222379
+			// Token: 0x04030EFE RID: 200446
 			public const int CoreCardCountText = 8;
 
-			// Token: 0x040364AC RID: 222380
+			// Token: 0x04030EFF RID: 200447
 			public const int CoreCardTagSprite = 9;
 
-			// Token: 0x040364AD RID: 222381
+			// Token: 0x04030F00 RID: 200448
 			public const int FirstElementItem = 10;
 
-			// Token: 0x040364AE RID: 222382
+			// Token: 0x04030F01 RID: 200449
 			public const int SecondElementItem = 11;
 
-			// Token: 0x040364AF RID: 222383
+			// Token: 0x04030F02 RID: 200450
 			public const int ItemFieldPanel = 12;
 
-			// Token: 0x040364B0 RID: 222384
+			// Token: 0x04030F03 RID: 200451
 			public const int TextFieldNum = 13;
 
-			// Token: 0x040364B1 RID: 222385
+			// Token: 0x04030F04 RID: 200452
 			public const int SpriteFieldTagIcon = 14;
 		}
 	}

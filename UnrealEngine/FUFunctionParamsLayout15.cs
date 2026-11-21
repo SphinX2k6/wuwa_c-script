@@ -4,23 +4,23 @@ using System.Runtime.InteropServices;
 
 namespace UnrealEngine
 {
-	// Token: 0x020000B8 RID: 184
+	// Token: 0x0200009D RID: 157
 	public struct FUFunctionParamsLayout15 : IUFunctionParamsLayout
 	{
-		// Token: 0x0400024D RID: 589
+		// Token: 0x04000206 RID: 518
 		public ushort Size;
 
-		// Token: 0x0400024E RID: 590
+		// Token: 0x04000207 RID: 519
 		[FixedBuffer(typeof(ushort), 15)]
 		public FUFunctionParamsLayout15.<Offset>e__FixedBuffer Offset;
 
-		// Token: 0x02002B37 RID: 11063
+		// Token: 0x020008E5 RID: 2277
 		[CompilerGenerated]
 		[UnsafeValueType]
 		[StructLayout(LayoutKind.Sequential, Size = 30)]
 		public struct <Offset>e__FixedBuffer
 		{
-			// Token: 0x0401638F RID: 91023
+			// Token: 0x040057A5 RID: 22437
 			public ushort FixedElementField;
 		}
 	}

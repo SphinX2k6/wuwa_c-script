@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002B0B RID: 11019
+	// Token: 0x02002DFF RID: 11775
 	public class IChangeElementalBoxStateTarget
 	{
-		// Token: 0x0600F145 RID: 61765 RVA: 0x0022FD8E File Offset: 0x0022DF8E
-		[NullableContext(1)]
+		// Token: 0x0600FFFB RID: 65531 RVA: 0x0024DA9A File Offset: 0x0024BC9A
 		public static IChangeElementalBoxStateTarget Create(IChangeElementalBoxStateTarget? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CF1 RID: 19697
-		// (get) Token: 0x0600F146 RID: 61766 RVA: 0x0022FDAD File Offset: 0x0022DFAD
+		// Token: 0x170050AB RID: 20651
+		// (get) Token: 0x0600FFFC RID: 65532 RVA: 0x0024DAB9 File Offset: 0x0024BCB9
 		public virtual EChangeElementalBoxStateTargetType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040084B1 RID: 33969
+		// Token: 0x04008BB5 RID: 35765
 		private IChangeElementalBoxStateTarget Instance;
 	}
 }

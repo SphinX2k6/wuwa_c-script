@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001304 RID: 4868
+// Token: 0x020007B8 RID: 1976
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class CharacterItem : GridProxyAbstract<CharacterData>
 {
-	// Token: 0x060086E6 RID: 34534 RVA: 0x001CCCEF File Offset: 0x001CAEEF
+	// Token: 0x06005A81 RID: 23169 RVA: 0x001D5B5B File Offset: 0x001D3D5B
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class CharacterItem : GridProxyAbstract<CharacterData>
 		};
 	}
 
-	// Token: 0x060086E7 RID: 34535 RVA: 0x001CCD28 File Offset: 0x001CAF28
+	// Token: 0x06005A82 RID: 23170 RVA: 0x001D5B94 File Offset: 0x001D3D94
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CharacterItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -36,7 +36,7 @@ public class CharacterItem : GridProxyAbstract<CharacterData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060086E8 RID: 34536 RVA: 0x001CCD6B File Offset: 0x001CAF6B
+	// Token: 0x06005A83 RID: 23171 RVA: 0x001D5BD7 File Offset: 0x001D3DD7
 	public override void Refresh(CharacterData data, bool isSelected, int gridIndex)
 	{
 		this.Id = data.Id;
@@ -44,37 +44,37 @@ public class CharacterItem : GridProxyAbstract<CharacterData>
 		this.ValueItem.Refresh(data, false, 0);
 	}
 
-	// Token: 0x060086E9 RID: 34537 RVA: 0x001CCD95 File Offset: 0x001CAF95
+	// Token: 0x06005A84 RID: 23172 RVA: 0x001D5C01 File Offset: 0x001D3E01
 	public void RefreshName(CharacterData data)
 	{
 		this.NameItem.Refresh(data, false, 0);
 	}
 
-	// Token: 0x060086EA RID: 34538 RVA: 0x001CCDA5 File Offset: 0x001CAFA5
+	// Token: 0x06005A85 RID: 23173 RVA: 0x001D5C11 File Offset: 0x001D3E11
 	public void RefreshProgress(int value, int maxValue)
 	{
 		this.ValueItem.RefreshProgress(value, maxValue);
 	}
 
-	// Token: 0x060086EB RID: 34539 RVA: 0x001CCDB4 File Offset: 0x001CAFB4
+	// Token: 0x06005A86 RID: 23174 RVA: 0x001D5C20 File Offset: 0x001D3E20
 	public void RefreshCurrentValue(int value)
 	{
 		this.ValueItem.RefreshCurrentValue(value);
 	}
 
-	// Token: 0x060086EC RID: 34540 RVA: 0x001CCDC2 File Offset: 0x001CAFC2
+	// Token: 0x06005A87 RID: 23175 RVA: 0x001D5C2E File Offset: 0x001D3E2E
 	public void RefreshProgressAdd(int value, int maxValue)
 	{
 		this.ValueItem.RefreshProgressAdd(value, maxValue);
 	}
 
-	// Token: 0x060086ED RID: 34541 RVA: 0x001CCDD1 File Offset: 0x001CAFD1
+	// Token: 0x06005A88 RID: 23176 RVA: 0x001D5C3D File Offset: 0x001D3E3D
 	public void SetLightProgressWidth()
 	{
 		this.ValueItem.SetLightProgressWidth();
 	}
 
-	// Token: 0x060086EE RID: 34542 RVA: 0x001CCDDE File Offset: 0x001CAFDE
+	// Token: 0x06005A89 RID: 23177 RVA: 0x001D5C4A File Offset: 0x001D3E4A
 	public void SetGoodItemActive(bool value)
 	{
 		CharacterNameItem nameItem = this.NameItem;
@@ -85,31 +85,31 @@ public class CharacterItem : GridProxyAbstract<CharacterData>
 		nameItem.SetGoodItemActive(value);
 	}
 
-	// Token: 0x060086EF RID: 34543 RVA: 0x001CCDF1 File Offset: 0x001CAFF1
+	// Token: 0x06005A8A RID: 23178 RVA: 0x001D5C5D File Offset: 0x001D3E5D
 	public int GetId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x04003C4C RID: 15436
+	// Token: 0x04003CE4 RID: 15588
 	[Nullable(2)]
 	protected CharacterNameItem NameItem;
 
-	// Token: 0x04003C4D RID: 15437
+	// Token: 0x04003CE5 RID: 15589
 	[Nullable(2)]
 	protected CharacterValueItem ValueItem;
 
-	// Token: 0x04003C4E RID: 15438
+	// Token: 0x04003CE6 RID: 15590
 	protected int Id;
 
-	// Token: 0x0200793E RID: 31038
+	// Token: 0x02006AC8 RID: 27336
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04027F05 RID: 163589
+		// Token: 0x04023232 RID: 143922
 		public const int NameItem = 0;
 
-		// Token: 0x04027F06 RID: 163590
+		// Token: 0x04023233 RID: 143923
 		public const int ValueItem = 1;
 	}
 }

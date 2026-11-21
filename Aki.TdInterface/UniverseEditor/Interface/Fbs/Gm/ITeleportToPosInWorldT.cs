@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046C7 RID: 18119
+	// Token: 0x02004B2F RID: 19247
 	public class ITeleportToPosInWorldT
 	{
-		// Token: 0x170080C0 RID: 32960
-		// (get) Token: 0x0601B8BF RID: 112831 RVA: 0x003E8967 File Offset: 0x003E6B67
-		// (set) Token: 0x0601B8C0 RID: 112832 RVA: 0x003E896F File Offset: 0x003E6B6F
+		// Token: 0x17008701 RID: 34561
+		// (get) Token: 0x0601D094 RID: 118932 RVA: 0x00414C03 File Offset: 0x00412E03
+		// (set) Token: 0x0601D095 RID: 118933 RVA: 0x00414C0B File Offset: 0x00412E0B
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x170080C1 RID: 32961
-		// (get) Token: 0x0601B8C1 RID: 112833 RVA: 0x003E8978 File Offset: 0x003E6B78
-		// (set) Token: 0x0601B8C2 RID: 112834 RVA: 0x003E8980 File Offset: 0x003E6B80
+		// Token: 0x17008702 RID: 34562
+		// (get) Token: 0x0601D096 RID: 118934 RVA: 0x00414C14 File Offset: 0x00412E14
+		// (set) Token: 0x0601D097 RID: 118935 RVA: 0x00414C1C File Offset: 0x00412E1C
 		public IPosAT Pos { get; set; }
 
-		// Token: 0x170080C2 RID: 32962
-		// (get) Token: 0x0601B8C3 RID: 112835 RVA: 0x003E8989 File Offset: 0x003E6B89
-		// (set) Token: 0x0601B8C4 RID: 112836 RVA: 0x003E8991 File Offset: 0x003E6B91
+		// Token: 0x17008703 RID: 34563
+		// (get) Token: 0x0601D098 RID: 118936 RVA: 0x00414C25 File Offset: 0x00412E25
+		// (set) Token: 0x0601D099 RID: 118937 RVA: 0x00414C2D File Offset: 0x00412E2D
 		public int DungeonId { get; set; }
 
-		// Token: 0x170080C3 RID: 32963
-		// (get) Token: 0x0601B8C5 RID: 112837 RVA: 0x003E899A File Offset: 0x003E6B9A
-		// (set) Token: 0x0601B8C6 RID: 112838 RVA: 0x003E89A2 File Offset: 0x003E6BA2
+		// Token: 0x17008704 RID: 34564
+		// (get) Token: 0x0601D09A RID: 118938 RVA: 0x00414C36 File Offset: 0x00412E36
+		// (set) Token: 0x0601D09B RID: 118939 RVA: 0x00414C3E File Offset: 0x00412E3E
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601B8C7 RID: 112839 RVA: 0x003E89AB File Offset: 0x003E6BAB
+		// Token: 0x0601D09C RID: 118940 RVA: 0x00414C47 File Offset: 0x00412E47
 		public ITeleportToPosInWorldT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

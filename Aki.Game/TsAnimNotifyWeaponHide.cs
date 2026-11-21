@@ -6,14 +6,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001E6 RID: 486
+// Token: 0x020001EA RID: 490
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyWeaponHide.TsAnimNotifyWeaponHide_C")]
 public class TsAnimNotifyWeaponHide : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170004E4 RID: 1252
-	// (get) Token: 0x06001E4E RID: 7758 RVA: 0x00097607 File Offset: 0x00095807
-	// (set) Token: 0x06001E4F RID: 7759 RVA: 0x00097617 File Offset: 0x00095817
+	// Token: 0x17000506 RID: 1286
+	// (get) Token: 0x06001EEB RID: 7915 RVA: 0x0009E6D3 File Offset: 0x0009C8D3
+	// (set) Token: 0x06001EEC RID: 7916 RVA: 0x0009E6E3 File Offset: 0x0009C8E3
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool Hide
 	{
@@ -27,9 +27,9 @@ public class TsAnimNotifyWeaponHide : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x170004E5 RID: 1253
-	// (get) Token: 0x06001E50 RID: 7760 RVA: 0x00097628 File Offset: 0x00095828
-	// (set) Token: 0x06001E51 RID: 7761 RVA: 0x00097638 File Offset: 0x00095838
+	// Token: 0x17000507 RID: 1287
+	// (get) Token: 0x06001EED RID: 7917 RVA: 0x0009E6F4 File Offset: 0x0009C8F4
+	// (set) Token: 0x06001EEE RID: 7918 RVA: 0x0009E704 File Offset: 0x0009C904
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int WeaponIndex
 	{
@@ -43,9 +43,9 @@ public class TsAnimNotifyWeaponHide : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x170004E6 RID: 1254
-	// (get) Token: 0x06001E52 RID: 7762 RVA: 0x00097649 File Offset: 0x00095849
-	// (set) Token: 0x06001E53 RID: 7763 RVA: 0x00097659 File Offset: 0x00095859
+	// Token: 0x17000508 RID: 1288
+	// (get) Token: 0x06001EEF RID: 7919 RVA: 0x0009E715 File Offset: 0x0009C915
+	// (set) Token: 0x06001EF0 RID: 7920 RVA: 0x0009E725 File Offset: 0x0009C925
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool HideEffect
 	{
@@ -59,9 +59,9 @@ public class TsAnimNotifyWeaponHide : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x170004E7 RID: 1255
-	// (get) Token: 0x06001E54 RID: 7764 RVA: 0x0009766A File Offset: 0x0009586A
-	// (set) Token: 0x06001E55 RID: 7765 RVA: 0x0009767A File Offset: 0x0009587A
+	// Token: 0x17000509 RID: 1289
+	// (get) Token: 0x06001EF1 RID: 7921 RVA: 0x0009E736 File Offset: 0x0009C936
+	// (set) Token: 0x06001EF2 RID: 7922 RVA: 0x0009E746 File Offset: 0x0009C946
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool UseHighPriority
 	{
@@ -75,9 +75,9 @@ public class TsAnimNotifyWeaponHide : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x170004E8 RID: 1256
-	// (get) Token: 0x06001E56 RID: 7766 RVA: 0x0009768B File Offset: 0x0009588B
-	// (set) Token: 0x06001E57 RID: 7767 RVA: 0x0009769F File Offset: 0x0009589F
+	// Token: 0x1700050A RID: 1290
+	// (get) Token: 0x06001EF3 RID: 7923 RVA: 0x0009E757 File Offset: 0x0009C957
+	// (set) Token: 0x06001EF4 RID: 7924 RVA: 0x0009E76B File Offset: 0x0009C96B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FGameplayTag ActivateTag
 	{
@@ -91,32 +91,28 @@ public class TsAnimNotifyWeaponHide : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06001E58 RID: 7768 RVA: 0x000976B4 File Offset: 0x000958B4
+	// Token: 0x06001EF5 RID: 7925 RVA: 0x0009E780 File Offset: 0x0009C980
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyWeaponHide) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifyWeaponHide.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001E59 RID: 7769 RVA: 0x00097754 File Offset: 0x00095954
+	// Token: 0x06001EF6 RID: 7926 RVA: 0x0009E838 File Offset: 0x0009CA38
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -146,37 +142,33 @@ public class TsAnimNotifyWeaponHide : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		return true;
 	}
 
-	// Token: 0x06001E5A RID: 7770 RVA: 0x00097808 File Offset: 0x00095A08
+	// Token: 0x06001EF7 RID: 7927 RVA: 0x0009E8EC File Offset: 0x0009CAEC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyWeaponHide) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyWeaponHide.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001E5B RID: 7771 RVA: 0x00097883 File Offset: 0x00095A83
+	// Token: 0x06001EF8 RID: 7928 RVA: 0x0009E97C File Offset: 0x0009CB7C
 	[NullableContext(1)]
 	protected override string GetNotifyName_Implementation()
 	{
 		return "武器隐藏";
 	}
 
-	// Token: 0x06001E5C RID: 7772 RVA: 0x0009788A File Offset: 0x00095A8A
+	// Token: 0x06001EF9 RID: 7929 RVA: 0x0009E983 File Offset: 0x0009CB83
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyWeaponHide._ClassPtr == IntPtr.Zero)
@@ -186,23 +178,23 @@ public class TsAnimNotifyWeaponHide : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		return TsAnimNotifyWeaponHide._ClassPtr;
 	}
 
-	// Token: 0x06001E5D RID: 7773 RVA: 0x000978B0 File Offset: 0x00095AB0
+	// Token: 0x06001EFA RID: 7930 RVA: 0x0009E9A8 File Offset: 0x0009CBA8
 	public TsAnimNotifyWeaponHide() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyWeaponHide.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001E5E RID: 7774 RVA: 0x000978D8 File Offset: 0x00095AD8
+	// Token: 0x06001EFB RID: 7931 RVA: 0x0009E9D0 File Offset: 0x0009CBD0
 	[NullableContext(1)]
 	public TsAnimNotifyWeaponHide(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyWeaponHide.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001E5F RID: 7775 RVA: 0x0009790B File Offset: 0x00095B0B
+	// Token: 0x06001EFC RID: 7932 RVA: 0x0009EA03 File Offset: 0x0009CC03
 	protected TsAnimNotifyWeaponHide(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001E60 RID: 7776 RVA: 0x00097914 File Offset: 0x00095B14
+	// Token: 0x06001EFD RID: 7933 RVA: 0x0009EA0C File Offset: 0x0009CC0C
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -210,34 +202,34 @@ public class TsAnimNotifyWeaponHide : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001E61 RID: 7777 RVA: 0x00097947 File Offset: 0x00095B47
+	// Token: 0x06001EFE RID: 7934 RVA: 0x0009EA3F File Offset: 0x0009CC3F
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x040012B2 RID: 4786
+	// Token: 0x040012F5 RID: 4853
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyWeaponHide.TsAnimNotifyWeaponHide_C";
 
-	// Token: 0x040012B3 RID: 4787
+	// Token: 0x040012F6 RID: 4854
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040012B4 RID: 4788
+	// Token: 0x040012F7 RID: 4855
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040012B5 RID: 4789
+	// Token: 0x040012F8 RID: 4856
 	private static int __PropertyOffset_Hide;
 
-	// Token: 0x040012B6 RID: 4790
+	// Token: 0x040012F9 RID: 4857
 	private static int __PropertyOffset_WeaponIndex;
 
-	// Token: 0x040012B7 RID: 4791
+	// Token: 0x040012FA RID: 4858
 	private static int __PropertyOffset_HideEffect;
 
-	// Token: 0x040012B8 RID: 4792
+	// Token: 0x040012FB RID: 4859
 	private static int __PropertyOffset_UseHighPriority;
 
-	// Token: 0x040012B9 RID: 4793
+	// Token: 0x040012FC RID: 4860
 	private static int __PropertyOffset_ActivateTag;
 }

@@ -11,23 +11,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E47 RID: 24135
+	// Token: 0x02004E2C RID: 20012
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrackedMarkForTower : TrackedMark
 	{
-		// Token: 0x0603D5FB RID: 251387 RVA: 0x00ECD423 File Offset: 0x00ECB623
+		// Token: 0x0603258B RID: 206219 RVA: 0x00E1E98F File Offset: 0x00E1CB8F
 		public TrackedMarkForTower(ITrackData trackData) : base(trackData)
 		{
 		}
 
-		// Token: 0x0603D5FC RID: 251388 RVA: 0x00ECD442 File Offset: 0x00ECB642
+		// Token: 0x0603258C RID: 206220 RVA: 0x00E1E9AE File Offset: 0x00E1CBAE
 		public override void Initialize(UUIItem parent)
 		{
 			base.CreateThenShowByResourceIdAsync("UiItem_TowerBar", parent, true).Forget();
 		}
 
-		// Token: 0x0603D5FD RID: 251389 RVA: 0x00ECD458 File Offset: 0x00ECB658
+		// Token: 0x0603258D RID: 206221 RVA: 0x00E1E9C4 File Offset: 0x00E1CBC4
 		public override void OnUiShow()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayTweenAnim(4);
 		}
 
-		// Token: 0x0603D5FE RID: 251390 RVA: 0x00ECD4A5 File Offset: 0x00ECB6A5
+		// Token: 0x0603258E RID: 206222 RVA: 0x00E1EA11 File Offset: 0x00E1CC11
 		public override void OnUiHide()
 		{
 			this.StopTweenAnim(4);
 			this.PlayTweenAnim(6);
 		}
 
-		// Token: 0x0603D5FF RID: 251391 RVA: 0x00ECD4B8 File Offset: 0x00ECB6B8
+		// Token: 0x0603258F RID: 206223 RVA: 0x00E1EA24 File Offset: 0x00E1CC24
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D600 RID: 251392 RVA: 0x00ECD5C6 File Offset: 0x00ECB7C6
+		// Token: 0x06032590 RID: 206224 RVA: 0x00E1EB32 File Offset: 0x00E1CD32
 		protected override void OnStart()
 		{
 			this.DirectionComp = base.GetItem(1);
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitAllTweenAnim();
 		}
 
-		// Token: 0x0603D601 RID: 251393 RVA: 0x00ECD5FA File Offset: 0x00ECB7FA
+		// Token: 0x06032591 RID: 206225 RVA: 0x00E1EB66 File Offset: 0x00E1CD66
 		protected override void OnBeforeDestroy()
 		{
 			base.OnBeforeDestroy();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenAnimMap.Clear();
 		}
 
-		// Token: 0x0603D602 RID: 251394 RVA: 0x00ECD630 File Offset: 0x00ECB830
+		// Token: 0x06032592 RID: 206226 RVA: 0x00E1EB9C File Offset: 0x00E1CD9C
 		public override void Update(float delta)
 		{
 			if (GlobalData.World == null)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateHealth();
 		}
 
-		// Token: 0x0603D603 RID: 251395 RVA: 0x00ECD6C0 File Offset: 0x00ECB8C0
+		// Token: 0x06032593 RID: 206227 RVA: 0x00E1EC2C File Offset: 0x00E1CE2C
 		protected override void UpdatePositionAndRotation(float delta)
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D604 RID: 251396 RVA: 0x00ECD894 File Offset: 0x00ECBA94
+		// Token: 0x06032594 RID: 206228 RVA: 0x00E1EE00 File Offset: 0x00E1D000
 		private void UpdateHealth()
 		{
 			if (this.AttributeComponent == null)
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LastHp = currentValue;
 		}
 
-		// Token: 0x0603D605 RID: 251397 RVA: 0x00ECD95A File Offset: 0x00ECBB5A
+		// Token: 0x06032595 RID: 206229 RVA: 0x00E1EEC6 File Offset: 0x00E1D0C6
 		private void InitAllTweenAnim()
 		{
 			this.InitTweenAnim(4);
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitTweenAnim(6);
 		}
 
-		// Token: 0x0603D606 RID: 251398 RVA: 0x00ECD974 File Offset: 0x00ECBB74
+		// Token: 0x06032596 RID: 206230 RVA: 0x00E1EEE0 File Offset: 0x00E1D0E0
 		private void InitTweenAnim(int componentType)
 		{
 			List<ULGUIPlayTweenComponent> list = new List<ULGUIPlayTweenComponent>();
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenAnimMap[componentType] = list;
 		}
 
-		// Token: 0x0603D607 RID: 251399 RVA: 0x00ECD9F4 File Offset: 0x00ECBBF4
+		// Token: 0x06032597 RID: 206231 RVA: 0x00E1EF64 File Offset: 0x00E1D164
 		private void PlayTweenAnim(int componentType)
 		{
 			List<ULGUIPlayTweenComponent> list;
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D608 RID: 251400 RVA: 0x00ECDA50 File Offset: 0x00ECBC50
+		// Token: 0x06032598 RID: 206232 RVA: 0x00E1EFC0 File Offset: 0x00E1D1C0
 		private void StopTweenAnim(int componentType)
 		{
 			List<ULGUIPlayTweenComponent> list;
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D609 RID: 251401 RVA: 0x00ECDAAC File Offset: 0x00ECBCAC
+		// Token: 0x06032599 RID: 206233 RVA: 0x00E1F01C File Offset: 0x00E1D21C
 		private void DisposeTweener()
 		{
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<float>(this.SetChangeBar));
@@ -255,54 +255,54 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StopTweenAnim(5);
 		}
 
-		// Token: 0x0603D60A RID: 251402 RVA: 0x00ECDAE0 File Offset: 0x00ECBCE0
+		// Token: 0x0603259A RID: 206234 RVA: 0x00E1F050 File Offset: 0x00E1D250
 		private void PlayTweener(float from, float to)
 		{
 			this.Tweener = ULTweenBPLibrary.FloatTo(this.RootActor, DelegateUtils.ToManualReleaseDelegate<FLTweenFloatSetterDynamic>(new Action<float>(this.SetChangeBar)), from, to, 0.5f, 0f, LTweenEase.OutCubic);
 			this.Tweener.OnCompleteCallBack.Bind(new Action(this.DisposeTweener));
 		}
 
-		// Token: 0x0603D60B RID: 251403 RVA: 0x00ECDB38 File Offset: 0x00ECBD38
+		// Token: 0x0603259B RID: 206235 RVA: 0x00E1F0A8 File Offset: 0x00E1D2A8
 		private void SetChangeBar(float value)
 		{
 			base.GetSprite(2).SetFillAmount(value);
 			base.GetSprite(3).SetFillAmount(value);
 		}
 
-		// Token: 0x04020063 RID: 131171
+		// Token: 0x0401AB2A RID: 109354
 		private const float SUB_SCALE = 0.8f;
 
-		// Token: 0x04020064 RID: 131172
+		// Token: 0x0401AB2B RID: 109355
 		[Nullable(2)]
 		private BaseAttributeComponent AttributeComponent;
 
-		// Token: 0x04020065 RID: 131173
+		// Token: 0x0401AB2C RID: 109356
 		[Nullable(2)]
 		private ULTweener Tweener;
 
-		// Token: 0x04020066 RID: 131174
+		// Token: 0x0401AB2D RID: 109357
 		private readonly Dictionary<int, List<ULGUIPlayTweenComponent>> TweenAnimMap = new Dictionary<int, List<ULGUIPlayTweenComponent>>();
 
-		// Token: 0x04020067 RID: 131175
+		// Token: 0x0401AB2E RID: 109358
 		private float LastHp = float.MaxValue;
 
-		// Token: 0x0200C1C8 RID: 49608
+		// Token: 0x0200ABD7 RID: 43991
 		[NullableContext(0)]
 		private enum EUiComponent
 		{
-			// Token: 0x0403A8F9 RID: 239865
+			// Token: 0x040352EB RID: 217835
 			BarBaseSprite,
-			// Token: 0x0403A8FA RID: 239866
+			// Token: 0x040352EC RID: 217836
 			DirectionItem,
-			// Token: 0x0403A8FB RID: 239867
+			// Token: 0x040352ED RID: 217837
 			BarLightSprite,
-			// Token: 0x0403A8FC RID: 239868
+			// Token: 0x040352EE RID: 217838
 			BarYellowSprite,
-			// Token: 0x0403A8FD RID: 239869
+			// Token: 0x040352EF RID: 217839
 			AniStartItem,
-			// Token: 0x0403A8FE RID: 239870
+			// Token: 0x040352F0 RID: 217840
 			AniHitItem,
-			// Token: 0x0403A8FF RID: 239871
+			// Token: 0x040352F1 RID: 217841
 			AniCloseItem
 		}
 	}

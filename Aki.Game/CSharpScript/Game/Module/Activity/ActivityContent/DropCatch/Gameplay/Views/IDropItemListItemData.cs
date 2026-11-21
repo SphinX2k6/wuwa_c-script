@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x02006704 RID: 26372
+	// Token: 0x02005654 RID: 22100
 	public class IDropItemListItemData
 	{
-		// Token: 0x0402251D RID: 140573
+		// Token: 0x0401CD76 RID: 118134
 		public int Id;
 
-		// Token: 0x0402251E RID: 140574
+		// Token: 0x0401CD77 RID: 118135
 		public int Count;
 	}
 }

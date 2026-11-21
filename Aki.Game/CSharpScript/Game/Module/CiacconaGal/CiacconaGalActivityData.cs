@@ -6,19 +6,19 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BCC RID: 23500
+	// Token: 0x02004BAC RID: 19372
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaGalActivityData
 	{
-		// Token: 0x0603B679 RID: 243321 RVA: 0x00E2B128 File Offset: 0x00E29328
+		// Token: 0x060305C5 RID: 198085 RVA: 0x00D7B41C File Offset: 0x00D7961C
 		public CiacconaGalActivityData(CiacconaActivityConfig config)
 		{
 			this.Config = config;
 		}
 
-		// Token: 0x17008D03 RID: 36099
-		// (get) Token: 0x0603B67A RID: 243322 RVA: 0x00E2B137 File Offset: 0x00E29337
+		// Token: 0x170060D5 RID: 24789
+		// (get) Token: 0x060305C6 RID: 198086 RVA: 0x00D7B42B File Offset: 0x00D7962B
 		public int Id
 		{
 			get
@@ -27,8 +27,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D04 RID: 36100
-		// (get) Token: 0x0603B67B RID: 243323 RVA: 0x00E2B144 File Offset: 0x00E29344
+		// Token: 0x170060D6 RID: 24790
+		// (get) Token: 0x060305C7 RID: 198087 RVA: 0x00D7B438 File Offset: 0x00D79638
 		public int[] SlotIds
 		{
 			get
@@ -37,8 +37,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D05 RID: 36101
-		// (get) Token: 0x0603B67C RID: 243324 RVA: 0x00E2B151 File Offset: 0x00E29351
+		// Token: 0x170060D7 RID: 24791
+		// (get) Token: 0x060305C8 RID: 198088 RVA: 0x00D7B445 File Offset: 0x00D79645
 		public int InspirationCount
 		{
 			get
@@ -47,8 +47,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D06 RID: 36102
-		// (get) Token: 0x0603B67D RID: 243325 RVA: 0x00E2B159 File Offset: 0x00E29359
+		// Token: 0x170060D8 RID: 24792
+		// (get) Token: 0x060305C9 RID: 198089 RVA: 0x00D7B44D File Offset: 0x00D7964D
 		public int MaxInspirationCount
 		{
 			get
@@ -57,8 +57,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D07 RID: 36103
-		// (get) Token: 0x0603B67E RID: 243326 RVA: 0x00E2B166 File Offset: 0x00E29366
+		// Token: 0x170060D9 RID: 24793
+		// (get) Token: 0x060305CA RID: 198090 RVA: 0x00D7B45A File Offset: 0x00D7965A
 		public long RefreshTime
 		{
 			get
@@ -67,8 +67,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D08 RID: 36104
-		// (get) Token: 0x0603B67F RID: 243327 RVA: 0x00E2B173 File Offset: 0x00E29373
+		// Token: 0x170060DA RID: 24794
+		// (get) Token: 0x060305CB RID: 198091 RVA: 0x00D7B467 File Offset: 0x00D79667
 		public bool State2Unlock
 		{
 			get
@@ -77,8 +77,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D09 RID: 36105
-		// (get) Token: 0x0603B680 RID: 243328 RVA: 0x00E2B17B File Offset: 0x00E2937B
+		// Token: 0x170060DB RID: 24795
+		// (get) Token: 0x060305CC RID: 198092 RVA: 0x00D7B46F File Offset: 0x00D7966F
 		public bool State3Unlock
 		{
 			get
@@ -87,8 +87,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D0A RID: 36106
-		// (get) Token: 0x0603B681 RID: 243329 RVA: 0x00E2B183 File Offset: 0x00E29383
+		// Token: 0x170060DC RID: 24796
+		// (get) Token: 0x060305CD RID: 198093 RVA: 0x00D7B477 File Offset: 0x00D79677
 		public long EndTime
 		{
 			get
@@ -97,8 +97,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D0B RID: 36107
-		// (get) Token: 0x0603B682 RID: 243330 RVA: 0x00E2B18B File Offset: 0x00E2938B
+		// Token: 0x170060DD RID: 24797
+		// (get) Token: 0x060305CE RID: 198094 RVA: 0x00D7B47F File Offset: 0x00D7967F
 		public int RecommendQuestId
 		{
 			get
@@ -107,8 +107,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D0C RID: 36108
-		// (get) Token: 0x0603B683 RID: 243331 RVA: 0x00E2B198 File Offset: 0x00E29398
+		// Token: 0x170060DE RID: 24798
+		// (get) Token: 0x060305CF RID: 198095 RVA: 0x00D7B48C File Offset: 0x00D7968C
 		public string RecommendQuestTipsTextId
 		{
 			get
@@ -117,8 +117,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D0D RID: 36109
-		// (get) Token: 0x0603B684 RID: 243332 RVA: 0x00E2B1A5 File Offset: 0x00E293A5
+		// Token: 0x170060DF RID: 24799
+		// (get) Token: 0x060305D0 RID: 198096 RVA: 0x00D7B499 File Offset: 0x00D79699
 		public long RewardEndTime
 		{
 			get
@@ -127,8 +127,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D0E RID: 36110
-		// (get) Token: 0x0603B685 RID: 243333 RVA: 0x00E2B1AD File Offset: 0x00E293AD
+		// Token: 0x170060E0 RID: 24800
+		// (get) Token: 0x060305D1 RID: 198097 RVA: 0x00D7B4A1 File Offset: 0x00D796A1
 		public long RewardStartTime
 		{
 			get
@@ -137,8 +137,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D0F RID: 36111
-		// (get) Token: 0x0603B686 RID: 243334 RVA: 0x00E2B1B5 File Offset: 0x00E293B5
+		// Token: 0x170060E1 RID: 24801
+		// (get) Token: 0x060305D2 RID: 198098 RVA: 0x00D7B4A9 File Offset: 0x00D796A9
 		public bool IsInRewardTime
 		{
 			get
@@ -147,8 +147,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D10 RID: 36112
-		// (get) Token: 0x0603B687 RID: 243335 RVA: 0x00E2B1D0 File Offset: 0x00E293D0
+		// Token: 0x170060E2 RID: 24802
+		// (get) Token: 0x060305D3 RID: 198099 RVA: 0x00D7B4C4 File Offset: 0x00D796C4
 		[Nullable(2)]
 		public string RewardRemainTimeStr
 		{
@@ -160,8 +160,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D11 RID: 36113
-		// (get) Token: 0x0603B688 RID: 243336 RVA: 0x00E2B20B File Offset: 0x00E2940B
+		// Token: 0x170060E3 RID: 24803
+		// (get) Token: 0x060305D4 RID: 198100 RVA: 0x00D7B4FF File Offset: 0x00D796FF
 		public ECiacconaGalActivityState State
 		{
 			get
@@ -178,8 +178,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D12 RID: 36114
-		// (get) Token: 0x0603B689 RID: 243337 RVA: 0x00E2B224 File Offset: 0x00E29424
+		// Token: 0x170060E4 RID: 24804
+		// (get) Token: 0x060305D5 RID: 198101 RVA: 0x00D7B518 File Offset: 0x00D79718
 		public int FinishedSubEndingCount
 		{
 			get
@@ -206,8 +206,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D13 RID: 36115
-		// (get) Token: 0x0603B68A RID: 243338 RVA: 0x00E2B2BC File Offset: 0x00E294BC
+		// Token: 0x170060E5 RID: 24805
+		// (get) Token: 0x060305D6 RID: 198102 RVA: 0x00D7B5B0 File Offset: 0x00D797B0
 		public int TotalSubEndingCount
 		{
 			get
@@ -225,8 +225,8 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x17008D14 RID: 36116
-		// (get) Token: 0x0603B68B RID: 243339 RVA: 0x00E2B324 File Offset: 0x00E29524
+		// Token: 0x170060E6 RID: 24806
+		// (get) Token: 0x060305D7 RID: 198103 RVA: 0x00D7B618 File Offset: 0x00D79818
 		[Nullable(2)]
 		public string RemainTimeToNextRefreshStr
 		{
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B68C RID: 243340 RVA: 0x00E2B380 File Offset: 0x00E29580
+		// Token: 0x060305D8 RID: 198104 RVA: 0x00D7B674 File Offset: 0x00D79874
 		public void UpdateByServerData(CiacconaActivityPbData data)
 		{
 			this.ServerData = data;
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.RewardEndTimeInternal = data.LimitedEndTime;
 		}
 
-		// Token: 0x0603B68D RID: 243341 RVA: 0x00E2B3D0 File Offset: 0x00E295D0
+		// Token: 0x060305D9 RID: 198105 RVA: 0x00D7B6C4 File Offset: 0x00D798C4
 		[NullableContext(2)]
 		public void UpdateInspirationData(CiacconaInspirationPbData data)
 		{
@@ -266,45 +266,45 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.RefreshTimestamp = new long?(data.RefreshTime);
 		}
 
-		// Token: 0x0603B68E RID: 243342 RVA: 0x00E2B3F3 File Offset: 0x00E295F3
+		// Token: 0x060305DA RID: 198106 RVA: 0x00D7B6E7 File Offset: 0x00D798E7
 		public void UpdateState(CiacconaActivityStateUnlockUpdateNotify data)
 		{
 			this.State2Unlocked = data.State1Unlock;
 			this.State3Unlocked = data.State2Unlock;
 		}
 
-		// Token: 0x0603B68F RID: 243343 RVA: 0x00E2B40D File Offset: 0x00E2960D
+		// Token: 0x060305DB RID: 198107 RVA: 0x00D7B701 File Offset: 0x00D79901
 		public void UpdateEndTime(long endTime)
 		{
 			this.EndTimeInternal = endTime;
 		}
 
-		// Token: 0x0401EF5F RID: 126815
+		// Token: 0x04019A10 RID: 104976
 		private int Inspiration;
 
-		// Token: 0x0401EF60 RID: 126816
+		// Token: 0x04019A11 RID: 104977
 		private long? RefreshTimestamp;
 
-		// Token: 0x0401EF61 RID: 126817
+		// Token: 0x04019A12 RID: 104978
 		private bool State2Unlocked;
 
-		// Token: 0x0401EF62 RID: 126818
+		// Token: 0x04019A13 RID: 104979
 		private bool State3Unlocked;
 
-		// Token: 0x0401EF63 RID: 126819
+		// Token: 0x04019A14 RID: 104980
 		private long EndTimeInternal;
 
-		// Token: 0x0401EF64 RID: 126820
+		// Token: 0x04019A15 RID: 104981
 		private long RewardEndTimeInternal;
 
-		// Token: 0x0401EF65 RID: 126821
+		// Token: 0x04019A16 RID: 104982
 		private long RewardStartTimeInternal;
 
-		// Token: 0x0401EF66 RID: 126822
+		// Token: 0x04019A17 RID: 104983
 		[Nullable(2)]
 		private CiacconaActivityPbData ServerData;
 
-		// Token: 0x0401EF67 RID: 126823
+		// Token: 0x04019A18 RID: 104984
 		private CiacconaActivityConfig Config;
 	}
 }

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200145D RID: 5213
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015B6 RID: 5558
 	public class IRecallEntityGroup
 	{
-		// Token: 0x06007678 RID: 30328 RVA: 0x0011AEF4 File Offset: 0x001190F4
+		// Token: 0x06007D45 RID: 32069 RVA: 0x00129AD8 File Offset: 0x00127CD8
 		public static IRecallEntityGroup Create(IRecallEntityGroup? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002791 RID: 10129
-		// (get) Token: 0x06007679 RID: 30329 RVA: 0x0011AF13 File Offset: 0x00119113
+		// Token: 0x1700297B RID: 10619
+		// (get) Token: 0x06007D46 RID: 32070 RVA: 0x00129AF7 File Offset: 0x00127CF7
 		public virtual int Index
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002792 RID: 10130
-		// (get) Token: 0x0600767A RID: 30330 RVA: 0x0011AF20 File Offset: 0x00119120
+		// Token: 0x1700297C RID: 10620
+		// (get) Token: 0x06007D47 RID: 32071 RVA: 0x00129B04 File Offset: 0x00127D04
 		public virtual string Source
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002793 RID: 10131
-		// (get) Token: 0x0600767B RID: 30331 RVA: 0x0011AF2D File Offset: 0x0011912D
+		// Token: 0x1700297D RID: 10621
+		// (get) Token: 0x06007D48 RID: 32072 RVA: 0x00129B11 File Offset: 0x00127D11
 		public virtual int LevelId
 		{
 			get
@@ -53,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002794 RID: 10132
-		// (get) Token: 0x0600767C RID: 30332 RVA: 0x0011AF3C File Offset: 0x0011913C
+		// Token: 0x1700297E RID: 10622
+		// (get) Token: 0x06007D49 RID: 32073 RVA: 0x00129B20 File Offset: 0x00127D20
 		public virtual List<int> Entities
 		{
 			get
@@ -74,13 +71,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040044CB RID: 17611
+		// Token: 0x04004864 RID: 18532
 		private IRecallEntityGroup Instance;
 
-		// Token: 0x040044CC RID: 17612
+		// Token: 0x04004865 RID: 18533
 		private List<int> _EntitiesCache;
 
-		// Token: 0x040044CD RID: 17613
+		// Token: 0x04004866 RID: 18534
 		private bool _EntitiesInited;
 	}
 }

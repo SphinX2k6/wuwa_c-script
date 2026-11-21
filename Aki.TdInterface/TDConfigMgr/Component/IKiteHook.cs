@@ -7,13 +7,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004AC RID: 1196
+	// Token: 0x02000505 RID: 1285
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IKiteHook : IHookInteractType
 	{
-		// Token: 0x06001820 RID: 6176 RVA: 0x00048670 File Offset: 0x00046870
-		[NullableContext(1)]
+		// Token: 0x060019BA RID: 6586 RVA: 0x0004C3B8 File Offset: 0x0004A5B8
+		[NullableContext(0)]
 		private IKiteHook_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,8 +28,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001821 RID: 6177 RVA: 0x000486A8 File Offset: 0x000468A8
-		[NullableContext(1)]
+		// Token: 0x060019BB RID: 6587 RVA: 0x0004C3F0 File Offset: 0x0004A5F0
+		[NullableContext(0)]
 		public static IKiteHook Create([Nullable(2)] IKiteHook instance)
 		{
 			if (instance == null)
@@ -42,8 +42,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001822 RID: 6178 RVA: 0x000486BB File Offset: 0x000468BB
-		[NullableContext(1)]
+		// Token: 0x060019BC RID: 6588 RVA: 0x0004C403 File Offset: 0x0004A603
+		[NullableContext(0)]
 		public static IKiteHook CreateFromSetValue([Nullable(2)] IKiteHook_SetValue value)
 		{
 			if (value == null)
@@ -56,8 +56,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001823 RID: 6179 RVA: 0x000486D0 File Offset: 0x000468D0
-		[NullableContext(1)]
+		// Token: 0x060019BD RID: 6589 RVA: 0x0004C418 File Offset: 0x0004A618
+		[NullableContext(0)]
 		public new IKiteHook_SetValue ToSetValue()
 		{
 			return new IKiteHook_SetValue
@@ -72,9 +72,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700066D RID: 1645
-		// (get) Token: 0x06001824 RID: 6180 RVA: 0x00048736 File Offset: 0x00046936
-		// (set) Token: 0x06001825 RID: 6181 RVA: 0x00048761 File Offset: 0x00046961
+		// Token: 0x170006D4 RID: 1748
+		// (get) Token: 0x060019BE RID: 6590 RVA: 0x0004C47E File Offset: 0x0004A67E
+		// (set) Token: 0x060019BF RID: 6591 RVA: 0x0004C4A9 File Offset: 0x0004A6A9
 		public override EHookInteractType Type
 		{
 			get
@@ -95,20 +95,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700066E RID: 1646
-		// (get) Token: 0x06001826 RID: 6182 RVA: 0x00048770 File Offset: 0x00046970
-		// (set) Token: 0x06001827 RID: 6183 RVA: 0x00048803 File Offset: 0x00046A03
+		// Token: 0x170006D5 RID: 1749
+		// (get) Token: 0x060019C0 RID: 6592 RVA: 0x0004C4B8 File Offset: 0x0004A6B8
+		// (set) Token: 0x060019C1 RID: 6593 RVA: 0x0004C54B File Offset: 0x0004A74B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<Aki.TDConfigMgr.Action.ActionInfo> HookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -139,7 +139,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -148,20 +148,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700066F RID: 1647
-		// (get) Token: 0x06001828 RID: 6184 RVA: 0x00048818 File Offset: 0x00046A18
-		// (set) Token: 0x06001829 RID: 6185 RVA: 0x000488AB File Offset: 0x00046AAB
+		// Token: 0x170006D6 RID: 1750
+		// (get) Token: 0x060019C2 RID: 6594 RVA: 0x0004C560 File Offset: 0x0004A760
+		// (set) Token: 0x060019C3 RID: 6595 RVA: 0x0004C5F3 File Offset: 0x0004A7F3
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<Aki.TDConfigMgr.Action.ActionInfo> ExitHookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -192,7 +192,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -201,20 +201,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000670 RID: 1648
-		// (get) Token: 0x0600182A RID: 6186 RVA: 0x000488C0 File Offset: 0x00046AC0
-		// (set) Token: 0x0600182B RID: 6187 RVA: 0x00048953 File Offset: 0x00046B53
+		// Token: 0x170006D7 RID: 1751
+		// (get) Token: 0x060019C4 RID: 6596 RVA: 0x0004C608 File Offset: 0x0004A808
+		// (set) Token: 0x060019C5 RID: 6597 RVA: 0x0004C69B File Offset: 0x0004A89B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<Aki.TDConfigMgr.Action.ActionInfo> FinishActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -245,7 +245,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -254,9 +254,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000671 RID: 1649
-		// (get) Token: 0x0600182C RID: 6188 RVA: 0x00048968 File Offset: 0x00046B68
-		// (set) Token: 0x0600182D RID: 6189 RVA: 0x000489C9 File Offset: 0x00046BC9
+		// Token: 0x170006D8 RID: 1752
+		// (get) Token: 0x060019C6 RID: 6598 RVA: 0x0004C6B0 File Offset: 0x0004A8B0
+		// (set) Token: 0x060019C7 RID: 6599 RVA: 0x0004C711 File Offset: 0x0004A911
 		public override IClientHookActionConfig ClientHookActionConfig
 		{
 			get
@@ -284,9 +284,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000672 RID: 1650
-		// (get) Token: 0x0600182E RID: 6190 RVA: 0x000489DE File Offset: 0x00046BDE
-		// (set) Token: 0x0600182F RID: 6191 RVA: 0x00048A05 File Offset: 0x00046C05
+		// Token: 0x170006D9 RID: 1753
+		// (get) Token: 0x060019C8 RID: 6600 RVA: 0x0004C726 File Offset: 0x0004A926
+		// (set) Token: 0x060019C9 RID: 6601 RVA: 0x0004C74D File Offset: 0x0004A94D
 		public virtual string HookDataAssetOverride
 		{
 			get
@@ -308,9 +308,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000673 RID: 1651
-		// (get) Token: 0x06001830 RID: 6192 RVA: 0x00048A14 File Offset: 0x00046C14
-		// (set) Token: 0x06001831 RID: 6193 RVA: 0x00048A4E File Offset: 0x00046C4E
+		// Token: 0x170006DA RID: 1754
+		// (get) Token: 0x060019CA RID: 6602 RVA: 0x0004C75C File Offset: 0x0004A95C
+		// (set) Token: 0x060019CB RID: 6603 RVA: 0x0004C796 File Offset: 0x0004A996
 		public virtual bool? SupportSwitchHookMidway
 		{
 			get
@@ -332,50 +332,50 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040011EF RID: 4591
+		// Token: 0x04001311 RID: 4881
 		protected new IKiteHook FbInstance;
 
-		// Token: 0x040011F0 RID: 4592
+		// Token: 0x04001312 RID: 4882
 		protected new IKiteHook_SetValue PocoInterface;
 
-		// Token: 0x040011F1 RID: 4593
+		// Token: 0x04001313 RID: 4883
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _HookActionsCache;
 
-		// Token: 0x040011F2 RID: 4594
+		// Token: 0x04001314 RID: 4884
 		private bool _HookActionsInited;
 
-		// Token: 0x040011F3 RID: 4595
+		// Token: 0x04001315 RID: 4885
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ExitHookActionsCache;
 
-		// Token: 0x040011F4 RID: 4596
+		// Token: 0x04001316 RID: 4886
 		private bool _ExitHookActionsInited;
 
-		// Token: 0x040011F5 RID: 4597
+		// Token: 0x04001317 RID: 4887
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _FinishActionsCache;
 
-		// Token: 0x040011F6 RID: 4598
+		// Token: 0x04001318 RID: 4888
 		private bool _FinishActionsInited;
 
-		// Token: 0x040011F7 RID: 4599
-		[Nullable(1)]
+		// Token: 0x04001319 RID: 4889
+		[Nullable(0)]
 		private IClientHookActionConfig _ClientHookActionConfigCache;
 
-		// Token: 0x040011F8 RID: 4600
+		// Token: 0x0400131A RID: 4890
 		private bool _ClientHookActionConfigInited;
 	}
 }

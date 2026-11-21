@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200025A RID: 602
+	// Token: 0x0200026E RID: 622
 	public class ConfigEffectSpecDataById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000E20 RID: 3616 RVA: 0x000A956D File Offset: 0x000A776D
+		// Token: 0x06000E98 RID: 3736 RVA: 0x000AF831 File Offset: 0x000ADA31
 		static ConfigEffectSpecDataById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEffectSpecDataById.CreateStaticDefaultValue), new Action(ConfigEffectSpecDataById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000E21 RID: 3617 RVA: 0x000A958C File Offset: 0x000A778C
+		// Token: 0x06000E99 RID: 3737 RVA: 0x000AF850 File Offset: 0x000ADA50
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEffectSpecDataById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000E22 RID: 3618 RVA: 0x000A960B File Offset: 0x000A780B
+		// Token: 0x06000E9A RID: 3738 RVA: 0x000AF8CF File Offset: 0x000ADACF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEffectSpecDataById.LogPair = null;
 			ConfigEffectSpecDataById.HandleId = 0;
 		}
 
-		// Token: 0x06000E23 RID: 3619 RVA: 0x000A9619 File Offset: 0x000A7819
+		// Token: 0x06000E9B RID: 3739 RVA: 0x000AF8DD File Offset: 0x000ADADD
 		public static void Init()
 		{
 			ConfigEffectSpecDataById.HandleId = ConfigCommon.InitDataStatement(ConfigEffectSpecDataById.HandleId, "db_effectspec.db", "select BinData from `EffectSpecData` where Id=?");
 		}
 
-		// Token: 0x06000E24 RID: 3620 RVA: 0x000A9634 File Offset: 0x000A7834
+		// Token: 0x06000E9C RID: 3740 RVA: 0x000AF8F8 File Offset: 0x000ADAF8
 		public static EffectSpecData? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEffectSpecDataById.HandleId, ConfigEffectSpecDataById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new EffectSpecData?(rootAsEffectSpecData);
 		}
 
-		// Token: 0x0400105A RID: 4186
+		// Token: 0x040010E6 RID: 4326
 		private const string DB = "db_effectspec.db";
 
-		// Token: 0x0400105B RID: 4187
+		// Token: 0x040010E7 RID: 4327
 		private const string FILE = "UniverseEditor/EffectSpec.csv";
 
-		// Token: 0x0400105C RID: 4188
+		// Token: 0x040010E8 RID: 4328
 		private const string TABLE = "EffectSpecData";
 
-		// Token: 0x0400105D RID: 4189
+		// Token: 0x040010E9 RID: 4329
 		private const string COMMAND = "select BinData from `EffectSpecData` where Id=?";
 
-		// Token: 0x0400105E RID: 4190
+		// Token: 0x040010EA RID: 4330
 		private const string KEY_PREFIX = "EffectSpecDataById";
 
-		// Token: 0x0400105F RID: 4191
+		// Token: 0x040010EB RID: 4331
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001060 RID: 4192
+		// Token: 0x040010EC RID: 4332
 		private static int HandleId;
 	}
 }

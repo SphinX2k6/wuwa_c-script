@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.Role.Common.Data.Structure;
 using UnrealEngine;
 
-// Token: 0x0200308A RID: 12426
+// Token: 0x020025E1 RID: 9697
 [NullableContext(2)]
 [Nullable(0)]
 public class SpecialTagConfig
 {
-	// Token: 0x0601A8BD RID: 108733 RVA: 0x0071BE4C File Offset: 0x0071A04C
+	// Token: 0x060182A4 RID: 98980 RVA: 0x00742204 File Offset: 0x00740404
 	public void Init(BaseTagComponent tagComp = null, BP_SpecialTagConfig_C asset = null, Func<double, bool> check = null)
 	{
 		if (asset == null || tagComp == null)
@@ -33,7 +33,7 @@ public class SpecialTagConfig
 		this.TagListenerInfo.InitTagListener(tagComp, tag, list, list2, check);
 	}
 
-	// Token: 0x0601A8BE RID: 108734 RVA: 0x0071BF12 File Offset: 0x0071A112
+	// Token: 0x060182A5 RID: 98981 RVA: 0x007422CA File Offset: 0x007404CA
 	public void Clear()
 	{
 		SpecialTagListener tagListenerInfo = this.TagListenerInfo;
@@ -44,7 +44,7 @@ public class SpecialTagConfig
 		tagListenerInfo.ClearTagListener();
 	}
 
-	// Token: 0x0601A8BF RID: 108735 RVA: 0x0071BF24 File Offset: 0x0071A124
+	// Token: 0x060182A6 RID: 98982 RVA: 0x007422DC File Offset: 0x007404DC
 	public void UpdateCondition(double delta)
 	{
 		SpecialTagListener tagListenerInfo = this.TagListenerInfo;
@@ -55,6 +55,6 @@ public class SpecialTagConfig
 		tagListenerInfo.UpdateCondition(delta);
 	}
 
-	// Token: 0x0400CBFA RID: 52218
+	// Token: 0x0400CFDD RID: 53213
 	private SpecialTagListener TagListenerInfo;
 }

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006FA1 RID: 28577
+	// Token: 0x02006122 RID: 24866
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowSpawnDestructibleActor : LevelFlowActionBase
 	{
-		// Token: 0x0604577D RID: 284541 RVA: 0x0113B22D File Offset: 0x0113942D
+		// Token: 0x0603B92B RID: 244011 RVA: 0x010E5031 File Offset: 0x010E3231
 		public LevelFlowSpawnDestructibleActor Init(List<int> idList, bool isRelease, int entityId)
 		{
 			this.DestructibleIdList = idList;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x0604577E RID: 284542 RVA: 0x0113B248 File Offset: 0x01139448
+		// Token: 0x0603B92C RID: 244012 RVA: 0x010E504C File Offset: 0x010E324C
 		protected override void OnExecute()
 		{
 			if (this.IsRelease)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x0604577F RID: 284543 RVA: 0x0113B598 File Offset: 0x01139798
+		// Token: 0x0603B92D RID: 244013 RVA: 0x010E539C File Offset: 0x010E359C
 		protected unsafe override void LogExecuteInfo()
 		{
 			Log instance = Log.Instance;
@@ -133,13 +133,13 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x040243F5 RID: 148469
+		// Token: 0x0401F6AA RID: 128682
 		private List<int> DestructibleIdList = new List<int>();
 
-		// Token: 0x040243F6 RID: 148470
+		// Token: 0x0401F6AB RID: 128683
 		private bool IsRelease;
 
-		// Token: 0x040243F7 RID: 148471
+		// Token: 0x0401F6AC RID: 128684
 		private int EntityId;
 	}
 }

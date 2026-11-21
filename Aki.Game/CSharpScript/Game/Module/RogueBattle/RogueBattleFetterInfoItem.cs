@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E55 RID: 20053
+	// Token: 0x02003E1E RID: 15902
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleFetterInfoItem : GridProxyAbstract<IRogueBattleRoleBondInfo>
 	{
-		// Token: 0x06033ABC RID: 211644 RVA: 0x00C19198 File Offset: 0x00C17398
+		// Token: 0x06028927 RID: 166183 RVA: 0x00B626C0 File Offset: 0x00B608C0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033ABD RID: 211645 RVA: 0x00C192C8 File Offset: 0x00C174C8
+		// Token: 0x06028928 RID: 166184 RVA: 0x00B627F0 File Offset: 0x00B609F0
 		[NullableContext(1)]
 		public override void Refresh(IRogueBattleRoleBondInfo data, bool isSelected, int gridIndex)
 		{
@@ -96,13 +96,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033ABE RID: 211646 RVA: 0x00C19504 File Offset: 0x00C17704
+		// Token: 0x06028929 RID: 166185 RVA: 0x00B62A2C File Offset: 0x00B60C2C
 		protected override void OnBeforeHide()
 		{
 			this.RemoveAnim();
 		}
 
-		// Token: 0x06033ABF RID: 211647 RVA: 0x00C1950C File Offset: 0x00C1770C
+		// Token: 0x0602892A RID: 166186 RVA: 0x00B62A34 File Offset: 0x00B60C34
 		public void PlayExpChangeAnim()
 		{
 			this.RemoveAnim();
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}, 20f, 1f, null, null, true);
 		}
 
-		// Token: 0x06033AC0 RID: 211648 RVA: 0x00C1957C File Offset: 0x00C1777C
+		// Token: 0x0602892B RID: 166187 RVA: 0x00B62AA4 File Offset: 0x00B60CA4
 		private void RemoveAnim()
 		{
 			if (this.AnimationTimer != null)
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033AC1 RID: 211649 RVA: 0x00C195A0 File Offset: 0x00C177A0
+		// Token: 0x0602892C RID: 166188 RVA: 0x00B62AC8 File Offset: 0x00B60CC8
 		private void OnClicked()
 		{
 			MapRogueController instance = MapRogueController.Instance;
@@ -139,13 +139,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			instance.OpenRogueFetterView((data != null) ? new int?(data.Id) : null);
 		}
 
-		// Token: 0x0401B67E RID: 112254
+		// Token: 0x04016051 RID: 90193
 		private TimerHandle AnimationTimer;
 
-		// Token: 0x0401B67F RID: 112255
+		// Token: 0x04016052 RID: 90194
 		private IRogueBattleRoleBondInfo Data;
 
-		// Token: 0x0401B680 RID: 112256
+		// Token: 0x04016053 RID: 90195
 		private float TargetFillAmount;
 	}
 }

@@ -4,19 +4,19 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001BAA RID: 7082
+// Token: 0x02001069 RID: 4201
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchUiItemBase : UiPanelBase
 {
-	// Token: 0x0600D2F6 RID: 54006 RVA: 0x003084C8 File Offset: 0x003066C8
+	// Token: 0x0600A707 RID: 42759 RVA: 0x003135A8 File Offset: 0x003117A8
 	[NullableContext(2)]
 	public FloroRanchEntityBase GetEntity()
 	{
 		return this.Entity;
 	}
 
-	// Token: 0x0600D2F7 RID: 54007 RVA: 0x003084D0 File Offset: 0x003066D0
+	// Token: 0x0600A708 RID: 42760 RVA: 0x003135B0 File Offset: 0x003117B0
 	public void BindData(FloroRanchEntityBase entity)
 	{
 		if (!this.CanBindEntity)
@@ -39,7 +39,7 @@ public class FloroRanchUiItemBase : UiPanelBase
 		onEntityChangedCallback(entity.GetPoint());
 	}
 
-	// Token: 0x0600D2F8 RID: 54008 RVA: 0x0030854C File Offset: 0x0030674C
+	// Token: 0x0600A709 RID: 42761 RVA: 0x0031362C File Offset: 0x0031182C
 	public void UnbindData()
 	{
 		if (this.Entity != null)
@@ -56,123 +56,123 @@ public class FloroRanchUiItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600D2F9 RID: 54009 RVA: 0x0030858C File Offset: 0x0030678C
+	// Token: 0x0600A70A RID: 42762 RVA: 0x0031366C File Offset: 0x0031186C
 	public virtual UniTask ShowUiItem()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D2FA RID: 54010 RVA: 0x00308593 File Offset: 0x00306793
+	// Token: 0x0600A70B RID: 42763 RVA: 0x00313673 File Offset: 0x00311873
 	public virtual UniTask HideUiItem()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D2FB RID: 54011 RVA: 0x0030859A File Offset: 0x0030679A
+	// Token: 0x0600A70C RID: 42764 RVA: 0x0031367A File Offset: 0x0031187A
 	public virtual UniTask RefreshItem()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D2FC RID: 54012 RVA: 0x003085A1 File Offset: 0x003067A1
+	// Token: 0x0600A70D RID: 42765 RVA: 0x00313681 File Offset: 0x00311881
 	public virtual UniTask PlayShowAnim()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D2FD RID: 54013 RVA: 0x003085A8 File Offset: 0x003067A8
+	// Token: 0x0600A70E RID: 42766 RVA: 0x00313688 File Offset: 0x00311888
 	public virtual UniTask PlayNormalAnim()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D2FE RID: 54014 RVA: 0x003085AF File Offset: 0x003067AF
+	// Token: 0x0600A70F RID: 42767 RVA: 0x0031368F File Offset: 0x0031188F
 	public virtual UniTask PlayHideAnim()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D2FF RID: 54015 RVA: 0x003085B6 File Offset: 0x003067B6
+	// Token: 0x0600A710 RID: 42768 RVA: 0x00313696 File Offset: 0x00311896
 	public virtual void Pause()
 	{
 	}
 
-	// Token: 0x0600D300 RID: 54016 RVA: 0x003085B8 File Offset: 0x003067B8
+	// Token: 0x0600A711 RID: 42769 RVA: 0x00313698 File Offset: 0x00311898
 	public virtual void Resume()
 	{
 	}
 
-	// Token: 0x0600D301 RID: 54017 RVA: 0x003085BA File Offset: 0x003067BA
+	// Token: 0x0600A712 RID: 42770 RVA: 0x0031369A File Offset: 0x0031189A
 	public virtual UniTask MoveToItem(UUIItem targetItem)
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D302 RID: 54018 RVA: 0x003085C1 File Offset: 0x003067C1
+	// Token: 0x0600A713 RID: 42771 RVA: 0x003136A1 File Offset: 0x003118A1
 	public virtual UniTask MoveToOriginalPosition()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D303 RID: 54019 RVA: 0x003085C8 File Offset: 0x003067C8
+	// Token: 0x0600A714 RID: 42772 RVA: 0x003136A8 File Offset: 0x003118A8
 	public virtual void MoveToOriginalPositionImmediate()
 	{
 	}
 
-	// Token: 0x0600D304 RID: 54020 RVA: 0x003085CC File Offset: 0x003067CC
+	// Token: 0x0600A715 RID: 42773 RVA: 0x003136AC File Offset: 0x003118AC
 	public virtual FTransform? GetRewardPopTransform()
 	{
 		return null;
 	}
 
-	// Token: 0x0600D305 RID: 54021 RVA: 0x003085E2 File Offset: 0x003067E2
+	// Token: 0x0600A716 RID: 42774 RVA: 0x003136C2 File Offset: 0x003118C2
 	public virtual UniTask PlayEatAnim()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D306 RID: 54022 RVA: 0x003085E9 File Offset: 0x003067E9
+	// Token: 0x0600A717 RID: 42775 RVA: 0x003136C9 File Offset: 0x003118C9
 	public virtual UniTask PlayBeEatAnim()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D307 RID: 54023 RVA: 0x003085F0 File Offset: 0x003067F0
+	// Token: 0x0600A718 RID: 42776 RVA: 0x003136D0 File Offset: 0x003118D0
 	public virtual UniTask PlaySacrificeAnim()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D308 RID: 54024 RVA: 0x003085F7 File Offset: 0x003067F7
+	// Token: 0x0600A719 RID: 42777 RVA: 0x003136D7 File Offset: 0x003118D7
 	public virtual UniTask PlayFusionHideAnim()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D309 RID: 54025 RVA: 0x003085FE File Offset: 0x003067FE
+	// Token: 0x0600A71A RID: 42778 RVA: 0x003136DE File Offset: 0x003118DE
 	public virtual UniTask PlayFusionShowAnim()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D30A RID: 54026 RVA: 0x00308605 File Offset: 0x00306805
+	// Token: 0x0600A71B RID: 42779 RVA: 0x003136E5 File Offset: 0x003118E5
 	public virtual UniTask PlayEvolveUpAnim()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D30B RID: 54027 RVA: 0x0030860C File Offset: 0x0030680C
+	// Token: 0x0600A71C RID: 42780 RVA: 0x003136EC File Offset: 0x003118EC
 	public virtual UniTask PlaySkillAnim()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600D30C RID: 54028 RVA: 0x00308613 File Offset: 0x00306813
+	// Token: 0x0600A71D RID: 42781 RVA: 0x003136F3 File Offset: 0x003118F3
 	public virtual void ShowCoinNiagara(long count)
 	{
 	}
 
-	// Token: 0x0600D30D RID: 54029 RVA: 0x00308618 File Offset: 0x00306818
+	// Token: 0x0600A71E RID: 42782 RVA: 0x003136F8 File Offset: 0x003118F8
 	public void ResetLayer()
 	{
 		FloroRanchEntityBase entity = this.Entity;
@@ -191,7 +191,7 @@ public class FloroRanchUiItemBase : UiPanelBase
 		this.GetOriginalItem().SetHierarchyIndex(valueOrDefault);
 	}
 
-	// Token: 0x0600D30E RID: 54030 RVA: 0x0030866E File Offset: 0x0030686E
+	// Token: 0x0600A71F RID: 42783 RVA: 0x0031374E File Offset: 0x0031194E
 	public void SetLayerTop()
 	{
 		UUIItem originalItem = this.GetOriginalItem();
@@ -202,20 +202,20 @@ public class FloroRanchUiItemBase : UiPanelBase
 		originalItem.SetHierarchyIndex(99);
 	}
 
-	// Token: 0x0600D30F RID: 54031 RVA: 0x00308682 File Offset: 0x00306882
+	// Token: 0x0600A720 RID: 42784 RVA: 0x00313762 File Offset: 0x00311962
 	public void BindEntityChangedCallback(Action<int> callback)
 	{
 		this.OnEntityChangedCallback = callback;
 	}
 
-	// Token: 0x040060AF RID: 24751
+	// Token: 0x0400617E RID: 24958
 	[Nullable(2)]
 	protected FloroRanchEntityBase Entity;
 
-	// Token: 0x040060B0 RID: 24752
+	// Token: 0x0400617F RID: 24959
 	public bool CanBindEntity = true;
 
-	// Token: 0x040060B1 RID: 24753
+	// Token: 0x04006180 RID: 24960
 	protected Action<int> OnEntityChangedCallback = delegate(int point)
 	{
 	};

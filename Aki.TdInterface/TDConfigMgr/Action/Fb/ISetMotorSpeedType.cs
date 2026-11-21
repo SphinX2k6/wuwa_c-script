@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A9F RID: 10911
+	// Token: 0x02002D93 RID: 11667
 	public class ISetMotorSpeedType
 	{
-		// Token: 0x0600EF9E RID: 61342 RVA: 0x0022D3F1 File Offset: 0x0022B5F1
-		[NullableContext(1)]
+		// Token: 0x0600FE54 RID: 65108 RVA: 0x0024B0FD File Offset: 0x002492FD
 		public static ISetMotorSpeedType Create(ISetMotorSpeedType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C22 RID: 19490
-		// (get) Token: 0x0600EF9F RID: 61343 RVA: 0x0022D410 File Offset: 0x0022B610
+		// Token: 0x17004FDC RID: 20444
+		// (get) Token: 0x0600FE55 RID: 65109 RVA: 0x0024B11C File Offset: 0x0024931C
 		public virtual EMotorSpeedType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083CD RID: 33741
+		// Token: 0x04008AD1 RID: 35537
 		private ISetMotorSpeedType Instance;
 	}
 }

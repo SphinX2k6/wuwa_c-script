@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DF7 RID: 3575
+	// Token: 0x02000EF3 RID: 3827
 	public class IDollGrabInfiniteScoreReward
 	{
-		// Token: 0x060050F8 RID: 20728 RVA: 0x000C7D79 File Offset: 0x000C5F79
-		[NullableContext(1)]
+		// Token: 0x0600561F RID: 22047 RVA: 0x000D3641 File Offset: 0x000D1841
 		public static IDollGrabInfiniteScoreReward Create(IDollGrabInfiniteScoreReward? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AC7 RID: 6855
-		// (get) Token: 0x060050F9 RID: 20729 RVA: 0x000C7D98 File Offset: 0x000C5F98
+		// Token: 0x17001C34 RID: 7220
+		// (get) Token: 0x06005620 RID: 22048 RVA: 0x000D3660 File Offset: 0x000D1860
 		public virtual int TargetScore
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AC8 RID: 6856
-		// (get) Token: 0x060050FA RID: 20730 RVA: 0x000C7DA5 File Offset: 0x000C5FA5
+		// Token: 0x17001C35 RID: 7221
+		// (get) Token: 0x06005621 RID: 22049 RVA: 0x000D366D File Offset: 0x000D186D
 		public virtual int RewardId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E8A RID: 11914
+		// Token: 0x04003152 RID: 12626
 		private IDollGrabInfiniteScoreReward Instance;
 	}
 }

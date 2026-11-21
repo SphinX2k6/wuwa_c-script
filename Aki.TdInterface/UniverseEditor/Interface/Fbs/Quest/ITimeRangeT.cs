@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041D6 RID: 16854
+	// Token: 0x0200462F RID: 17967
 	public class ITimeRangeT
 	{
-		// Token: 0x1700777F RID: 30591
-		// (get) Token: 0x06018D48 RID: 101704 RVA: 0x0039291E File Offset: 0x00390B1E
-		// (set) Token: 0x06018D49 RID: 101705 RVA: 0x00392926 File Offset: 0x00390B26
+		// Token: 0x17007DAB RID: 32171
+		// (get) Token: 0x0601A49E RID: 107678 RVA: 0x003BDD72 File Offset: 0x003BBF72
+		// (set) Token: 0x0601A49F RID: 107679 RVA: 0x003BDD7A File Offset: 0x003BBF7A
 		public IDateTimeT StartTime { get; set; }
 
-		// Token: 0x17007780 RID: 30592
-		// (get) Token: 0x06018D4A RID: 101706 RVA: 0x0039292F File Offset: 0x00390B2F
-		// (set) Token: 0x06018D4B RID: 101707 RVA: 0x00392937 File Offset: 0x00390B37
+		// Token: 0x17007DAC RID: 32172
+		// (get) Token: 0x0601A4A0 RID: 107680 RVA: 0x003BDD83 File Offset: 0x003BBF83
+		// (set) Token: 0x0601A4A1 RID: 107681 RVA: 0x003BDD8B File Offset: 0x003BBF8B
 		public IDateTimeT EndTime { get; set; }
 
-		// Token: 0x06018D4C RID: 101708 RVA: 0x00392940 File Offset: 0x00390B40
+		// Token: 0x0601A4A2 RID: 107682 RVA: 0x003BDD94 File Offset: 0x003BBF94
 		public ITimeRangeT()
 		{
 			this.StartTime = null;

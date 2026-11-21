@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E8F RID: 7823
+// Token: 0x02001351 RID: 4945
 [NullableContext(1)]
 public interface IDiscardPair
 {
-	// Token: 0x170012D6 RID: 4822
-	// (get) Token: 0x0600EF96 RID: 61334
-	// (set) Token: 0x0600EF97 RID: 61335
+	// Token: 0x17001300 RID: 4864
+	// (get) Token: 0x0600C3B5 RID: 50101
+	// (set) Token: 0x0600C3B6 RID: 50102
 	UUIItem NotActive { get; set; }
 
-	// Token: 0x170012D7 RID: 4823
-	// (get) Token: 0x0600EF98 RID: 61336
-	// (set) Token: 0x0600EF99 RID: 61337
+	// Token: 0x17001301 RID: 4865
+	// (get) Token: 0x0600C3B7 RID: 50103
+	// (set) Token: 0x0600C3B8 RID: 50104
 	UUIItem Active { get; set; }
 }

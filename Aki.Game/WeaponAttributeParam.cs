@@ -1,16 +1,16 @@
 ﻿using System;
 using Aki.Config;
 
-// Token: 0x02002D0B RID: 11531
+// Token: 0x02002265 RID: 8805
 public class WeaponAttributeParam : IWeaponAttributeParam
 {
-	// Token: 0x170020AD RID: 8365
-	// (get) Token: 0x060183DA RID: 99290 RVA: 0x0062B72E File Offset: 0x0062992E
-	// (set) Token: 0x060183DB RID: 99291 RVA: 0x0062B736 File Offset: 0x00629936
+	// Token: 0x17002108 RID: 8456
+	// (get) Token: 0x06015C7B RID: 89211 RVA: 0x00651726 File Offset: 0x0064F926
+	// (set) Token: 0x06015C7C RID: 89212 RVA: 0x0065172E File Offset: 0x0064F92E
 	public ConfigPropValue PropId { get; set; }
 
-	// Token: 0x170020AE RID: 8366
-	// (get) Token: 0x060183DC RID: 99292 RVA: 0x0062B73F File Offset: 0x0062993F
-	// (set) Token: 0x060183DD RID: 99293 RVA: 0x0062B747 File Offset: 0x00629947
+	// Token: 0x17002109 RID: 8457
+	// (get) Token: 0x06015C7D RID: 89213 RVA: 0x00651737 File Offset: 0x0064F937
+	// (set) Token: 0x06015C7E RID: 89214 RVA: 0x0065173F File Offset: 0x0064F93F
 	public int CurveId { get; set; }
 }

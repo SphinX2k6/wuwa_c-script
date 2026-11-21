@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001F72 RID: 8050
+// Token: 0x02001434 RID: 5172
 [NullableContext(1)]
 [Nullable(0)]
 internal sealed class AiNoMoveData
 {
-	// Token: 0x0600F9B1 RID: 63921 RVA: 0x003C8448 File Offset: 0x003C6648
+	// Token: 0x0600CDD0 RID: 52688 RVA: 0x003D3F34 File Offset: 0x003D2134
 	public AiNoMoveData(int entityId)
 	{
 		this.EntityId = entityId;
 		this.LastMoveTime = (GameModeModel.Instance.IsMulti ? TimeUtil.Instance.GetServerTimeStamp() : Time.Instance.WorldTime);
 	}
 
-	// Token: 0x0600F9B2 RID: 63922 RVA: 0x003C84A0 File Offset: 0x003C66A0
+	// Token: 0x0600CDD1 RID: 52689 RVA: 0x003D3F8C File Offset: 0x003D218C
 	public bool Tick()
 	{
 		Entity entity = EntitySystem.Instance.Get(this.EntityId);
@@ -31,7 +31,7 @@ internal sealed class AiNoMoveData
 		return true;
 	}
 
-	// Token: 0x0600F9B3 RID: 63923 RVA: 0x003C8544 File Offset: 0x003C6744
+	// Token: 0x0600CDD2 RID: 52690 RVA: 0x003D4030 File Offset: 0x003D2230
 	public void UpdateResetConditionMask(EAiNoMoveResetCondition resetConditionMask)
 	{
 		this.ResetConditionMask = resetConditionMask;
@@ -46,7 +46,7 @@ internal sealed class AiNoMoveData
 		}
 	}
 
-	// Token: 0x0600F9B4 RID: 63924 RVA: 0x003C857F File Offset: 0x003C677F
+	// Token: 0x0600CDD3 RID: 52691 RVA: 0x003D406B File Offset: 0x003D226B
 	private bool ShouldResetNoMoveTime(Entity entity)
 	{
 		if ((this.ResetConditionMask & EAiNoMoveResetCondition.SitOnChairTask) != EAiNoMoveResetCondition.None)
@@ -60,13 +60,13 @@ internal sealed class AiNoMoveData
 		return false;
 	}
 
-	// Token: 0x0600F9B5 RID: 63925 RVA: 0x003C85A2 File Offset: 0x003C67A2
+	// Token: 0x0600CDD4 RID: 52692 RVA: 0x003D408E File Offset: 0x003D228E
 	public void ResetTime()
 	{
 		this.LastMoveTime = this.GetWorldTime();
 	}
 
-	// Token: 0x0600F9B6 RID: 63926 RVA: 0x003C85B0 File Offset: 0x003C67B0
+	// Token: 0x0600CDD5 RID: 52693 RVA: 0x003D409C File Offset: 0x003D229C
 	private double GetWorldTime()
 	{
 		if (!GameModeModel.Instance.IsMulti)
@@ -76,24 +76,24 @@ internal sealed class AiNoMoveData
 		return TimeUtil.Instance.GetServerTimeStamp();
 	}
 
-	// Token: 0x0600F9B7 RID: 63927 RVA: 0x003C85D3 File Offset: 0x003C67D3
+	// Token: 0x0600CDD6 RID: 52694 RVA: 0x003D40BF File Offset: 0x003D22BF
 	public double GetNoMoveTime()
 	{
 		return this.GetWorldTime() - this.LastMoveTime;
 	}
 
-	// Token: 0x0400746C RID: 29804
+	// Token: 0x0400754D RID: 30029
 	public int EntityId;
 
-	// Token: 0x0400746D RID: 29805
+	// Token: 0x0400754E RID: 30030
 	private Vector LastLocation = Vector.Create();
 
-	// Token: 0x0400746E RID: 29806
+	// Token: 0x0400754F RID: 30031
 	private Rotator LastRotation = Rotator.Create();
 
-	// Token: 0x0400746F RID: 29807
+	// Token: 0x04007550 RID: 30032
 	private double LastMoveTime;
 
-	// Token: 0x04007470 RID: 29808
+	// Token: 0x04007551 RID: 30033
 	private EAiNoMoveResetCondition ResetConditionMask;
 }

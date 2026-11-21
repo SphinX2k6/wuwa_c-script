@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Character.Input.Blueprints;
+using AkiClient.Game.Aki.Character.Input.Enum;
 using AkiClient.Game.Aki.Character.Input.Structures;
 using CSharpScript.Game.Input;
 using UnrealEngine;
 
-// Token: 0x020030C1 RID: 12481
+// Token: 0x02002619 RID: 9753
 public class InputLayerQueryHelper : IStaticVariableResetter
 {
-	// Token: 0x0601AB95 RID: 109461 RVA: 0x00733A42 File Offset: 0x00731C42
+	// Token: 0x060185A4 RID: 99748 RVA: 0x007593AE File Offset: 0x007575AE
 	static InputLayerQueryHelper()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InputLayerQueryHelper.CreateStaticDefaultValue), new Action(InputLayerQueryHelper.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601AB96 RID: 109462 RVA: 0x00733A61 File Offset: 0x00731C61
+	// Token: 0x060185A5 RID: 99749 RVA: 0x007593CD File Offset: 0x007575CD
 	public static void CreateStaticDefaultValue()
 	{
 		InputLayerQueryHelper.HoldConfigCache = new ConditionalWeakTable<BP_InputBase_C, InputLayerQueryHelper.ActionConfigCache<SInputHoldConfig>>();
@@ -24,7 +25,7 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 		InputLayerQueryHelper.MoveAxisToButtonConfigCaches = new ConditionalWeakTable<BP_InputBase_C, InputLayerQueryHelper.MoveAxisToButtonConfigCache>();
 	}
 
-	// Token: 0x0601AB97 RID: 109463 RVA: 0x00733A81 File Offset: 0x00731C81
+	// Token: 0x060185A6 RID: 99750 RVA: 0x007593ED File Offset: 0x007575ED
 	public static void ResetStaticDefaultValue()
 	{
 		InputLayerQueryHelper.HoldConfigCache = null;
@@ -32,7 +33,7 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 		InputLayerQueryHelper.MoveAxisToButtonConfigCaches = null;
 	}
 
-	// Token: 0x0601AB98 RID: 109464 RVA: 0x00733A98 File Offset: 0x00731C98
+	// Token: 0x060185A7 RID: 99751 RVA: 0x00759404 File Offset: 0x00757604
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -56,7 +57,7 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0601AB99 RID: 109465 RVA: 0x00733B0C File Offset: 0x00731D0C
+	// Token: 0x060185A8 RID: 99752 RVA: 0x00759478 File Offset: 0x00757678
 	[NullableContext(2)]
 	public static BP_InputBase_C GetFirstBpInputComp(int unitId)
 	{
@@ -73,31 +74,34 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 		return inputLayerQueryResult.Result;
 	}
 
-	// Token: 0x0601AB9A RID: 109466 RVA: 0x00733B7C File Offset: 0x00731D7C
-	public static SInputHoldConfig? GetHoldConfig(int unitId, EInputAction action)
+	// Token: 0x060185A9 RID: 99753 RVA: 0x007594E8 File Offset: 0x007576E8
+	public static SInputHoldConfig? GetHoldConfig(int unitId, CSharpScript.Game.Input.EInputAction action)
 	{
 		List<InputLayer> inputLayers = InputController.Instance.GetInputLayers(unitId);
 		if (inputLayers == null)
 		{
 			return null;
 		}
-		Func<BP_InputBase_C, SInputHoldConfig> <>9__2;
 		InputLayerQueryResult<SInputHoldConfig?> inputLayerQueryResult = InputLayerQueryHelper.FindLayerResult<SInputHoldConfig?>(inputLayers, delegate(InputLayer layer)
 		{
-			BP_InputBase_C bpInputComp = layer.GetBpInputComp();
+			BP_InputBase_C bpInputComp = layer.GetBpInputComp(action, EInputState.Hold);
 			if (bpInputComp == null)
 			{
 				return null;
 			}
-			ConditionalWeakTable<BP_InputBase_C, InputLayerQueryHelper.ActionConfigCache<SInputHoldConfig>> holdConfigCache = InputLayerQueryHelper.GetHoldConfigCache();
-			BP_InputBase_C bpInputComp2 = bpInputComp;
-			EInputAction action2 = action;
-			Func<BP_InputBase_C, SInputHoldConfig> getter;
-			if ((getter = <>9__2) == null)
+			return InputLayerQueryHelper.GetCachedConfig<SInputHoldConfig>(InputLayerQueryHelper.GetHoldConfigCache(), bpInputComp, action, delegate(BP_InputBase_C inputComp)
 			{
-				getter = (<>9__2 = ((BP_InputBase_C inputComp) => inputComp.GetUnrealHoldConfig((int)action)));
-			}
-			return InputLayerQueryHelper.GetCachedConfig<SInputHoldConfig>(holdConfigCache, bpInputComp2, action2, getter);
+				SInputHoldConfig unrealHoldConfig = inputComp.GetUnrealHoldConfig((int)action);
+				if (!layer.IsCheckHoldConfigTime(action))
+				{
+					return new SInputHoldConfig?(unrealHoldConfig);
+				}
+				if (unrealHoldConfig.触发时间 == 0f)
+				{
+					return null;
+				}
+				return new SInputHoldConfig?(unrealHoldConfig);
+			});
 		}, (SInputHoldConfig? config) => config != null);
 		if (inputLayerQueryResult == null)
 		{
@@ -106,15 +110,15 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 		return inputLayerQueryResult.Result;
 	}
 
-	// Token: 0x0601AB9B RID: 109467 RVA: 0x00733BF4 File Offset: 0x00731DF4
-	public static SInputCaches? GetCacheConfig(int unitId, EInputAction action)
+	// Token: 0x060185AA RID: 99754 RVA: 0x00759560 File Offset: 0x00757760
+	public static SInputCaches? GetCacheConfig(int unitId, CSharpScript.Game.Input.EInputAction action)
 	{
 		List<InputLayer> inputLayers = InputController.Instance.GetInputLayers(unitId);
 		if (inputLayers == null)
 		{
 			return null;
 		}
-		Func<BP_InputBase_C, SInputCaches> <>9__2;
+		Func<BP_InputBase_C, SInputCaches?> <>9__2;
 		InputLayerQueryResult<SInputCaches?> inputLayerQueryResult = InputLayerQueryHelper.FindLayerResult<SInputCaches?>(inputLayers, delegate(InputLayer layer)
 		{
 			BP_InputBase_C bpInputComp = layer.GetBpInputComp();
@@ -124,11 +128,19 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 			}
 			ConditionalWeakTable<BP_InputBase_C, InputLayerQueryHelper.ActionConfigCache<SInputCaches>> cacheConfigCache = InputLayerQueryHelper.GetCacheConfigCache();
 			BP_InputBase_C bpInputComp2 = bpInputComp;
-			EInputAction action2 = action;
-			Func<BP_InputBase_C, SInputCaches> getter;
+			CSharpScript.Game.Input.EInputAction action2 = action;
+			Func<BP_InputBase_C, SInputCaches?> getter;
 			if ((getter = <>9__2) == null)
 			{
-				getter = (<>9__2 = ((BP_InputBase_C inputComp) => inputComp.GetUnrealCacheConfig((int)action)));
+				getter = (<>9__2 = delegate(BP_InputBase_C inputComp)
+				{
+					SInputCaches unrealCacheConfig = inputComp.GetUnrealCacheConfig((int)action);
+					if (unrealCacheConfig.按下 == 0f && unrealCacheConfig.抬起 == 0f && unrealCacheConfig.长按 == 0f)
+					{
+						return null;
+					}
+					return new SInputCaches?(unrealCacheConfig);
+				});
 			}
 			return InputLayerQueryHelper.GetCachedConfig<SInputCaches>(cacheConfigCache, bpInputComp2, action2, getter);
 		}, (SInputCaches? config) => config != null);
@@ -139,7 +151,7 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 		return inputLayerQueryResult.Result;
 	}
 
-	// Token: 0x0601AB9C RID: 109468 RVA: 0x00733C6C File Offset: 0x00731E6C
+	// Token: 0x060185AB RID: 99755 RVA: 0x007595D8 File Offset: 0x007577D8
 	[NullableContext(2)]
 	public static SInputActive GetMoveAxisToButtonConfig(int unitId)
 	{
@@ -164,29 +176,29 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 		return inputLayerQueryResult.Result;
 	}
 
-	// Token: 0x0601AB9D RID: 109469 RVA: 0x00733CDC File Offset: 0x00731EDC
+	// Token: 0x060185AC RID: 99756 RVA: 0x00759648 File Offset: 0x00757848
 	private static T? GetCachedConfig<T>([Nullable(new byte[]
 	{
 		1,
 		1,
 		1,
 		0
-	})] ConditionalWeakTable<BP_InputBase_C, InputLayerQueryHelper.ActionConfigCache<T>> cache, [Nullable(1)] BP_InputBase_C bpInputComp, EInputAction action, [Nullable(new byte[]
+	})] ConditionalWeakTable<BP_InputBase_C, InputLayerQueryHelper.ActionConfigCache<T>> cache, [Nullable(1)] BP_InputBase_C bpInputComp, CSharpScript.Game.Input.EInputAction action, [Nullable(new byte[]
 	{
 		1,
 		1,
 		0
-	})] Func<BP_InputBase_C, T> getter) where T : struct
+	})] Func<BP_InputBase_C, T?> getter) where T : struct
 	{
 		InputLayerQueryHelper.ActionConfigCache<T> value = cache.GetValue(bpInputComp, (BP_InputBase_C _) => new InputLayerQueryHelper.ActionConfigCache<T>());
 		if (!value.Configs.ContainsKey(action))
 		{
 			value.Configs[action] = getter(bpInputComp);
 		}
-		return new T?(value.Configs[action]);
+		return value.Configs[action];
 	}
 
-	// Token: 0x0601AB9E RID: 109470 RVA: 0x00733D44 File Offset: 0x00731F44
+	// Token: 0x060185AD RID: 99757 RVA: 0x007596AC File Offset: 0x007578AC
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	private static SInputActive GetMoveAxisToButtonConfigByBp(BP_InputBase_C bpInputComp)
@@ -202,7 +214,7 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 		return value.Config;
 	}
 
-	// Token: 0x0601AB9F RID: 109471 RVA: 0x00733DBB File Offset: 0x00731FBB
+	// Token: 0x060185AE RID: 99758 RVA: 0x00759723 File Offset: 0x00757923
 	[NullableContext(1)]
 	private static ConditionalWeakTable<BP_InputBase_C, InputLayerQueryHelper.ActionConfigCache<SInputHoldConfig>> GetHoldConfigCache()
 	{
@@ -213,7 +225,7 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 		return InputLayerQueryHelper.HoldConfigCache;
 	}
 
-	// Token: 0x0601ABA0 RID: 109472 RVA: 0x00733DD3 File Offset: 0x00731FD3
+	// Token: 0x060185AF RID: 99759 RVA: 0x0075973B File Offset: 0x0075793B
 	[NullableContext(1)]
 	private static ConditionalWeakTable<BP_InputBase_C, InputLayerQueryHelper.ActionConfigCache<SInputCaches>> GetCacheConfigCache()
 	{
@@ -224,7 +236,7 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 		return InputLayerQueryHelper.CacheConfigCache;
 	}
 
-	// Token: 0x0601ABA1 RID: 109473 RVA: 0x00733DEB File Offset: 0x00731FEB
+	// Token: 0x060185B0 RID: 99760 RVA: 0x00759753 File Offset: 0x00757953
 	[NullableContext(1)]
 	private static ConditionalWeakTable<BP_InputBase_C, InputLayerQueryHelper.MoveAxisToButtonConfigCache> GetMoveAxisToButtonConfigCaches()
 	{
@@ -235,7 +247,7 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 		return InputLayerQueryHelper.MoveAxisToButtonConfigCaches;
 	}
 
-	// Token: 0x0400CE61 RID: 52833
+	// Token: 0x0400D24D RID: 53837
 	[Nullable(new byte[]
 	{
 		2,
@@ -244,7 +256,7 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 	})]
 	private static ConditionalWeakTable<BP_InputBase_C, InputLayerQueryHelper.ActionConfigCache<SInputHoldConfig>> HoldConfigCache;
 
-	// Token: 0x0400CE62 RID: 52834
+	// Token: 0x0400D24E RID: 53838
 	[Nullable(new byte[]
 	{
 		2,
@@ -253,7 +265,7 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 	})]
 	private static ConditionalWeakTable<BP_InputBase_C, InputLayerQueryHelper.ActionConfigCache<SInputCaches>> CacheConfigCache;
 
-	// Token: 0x0400CE63 RID: 52835
+	// Token: 0x0400D24F RID: 53839
 	[Nullable(new byte[]
 	{
 		2,
@@ -262,25 +274,25 @@ public class InputLayerQueryHelper : IStaticVariableResetter
 	})]
 	private static ConditionalWeakTable<BP_InputBase_C, InputLayerQueryHelper.MoveAxisToButtonConfigCache> MoveAxisToButtonConfigCaches;
 
-	// Token: 0x02009676 RID: 38518
-	private class ActionConfigCache<[Nullable(2)] T>
+	// Token: 0x02008897 RID: 34967
+	private class ActionConfigCache<T> where T : struct
 	{
-		// Token: 0x040303F7 RID: 197623
+		// Token: 0x0402BA84 RID: 178820
 		[Nullable(new byte[]
 		{
 			1,
-			2
+			0
 		})]
-		public readonly Dictionary<EInputAction, T> Configs = new Dictionary<EInputAction, T>();
+		public readonly Dictionary<CSharpScript.Game.Input.EInputAction, T?> Configs = new Dictionary<CSharpScript.Game.Input.EInputAction, T?>();
 	}
 
-	// Token: 0x02009677 RID: 38519
+	// Token: 0x02008898 RID: 34968
 	private class MoveAxisToButtonConfigCache
 	{
-		// Token: 0x040303F8 RID: 197624
+		// Token: 0x0402BA85 RID: 178821
 		public bool HasValue;
 
-		// Token: 0x040303F9 RID: 197625
+		// Token: 0x0402BA86 RID: 178822
 		[Nullable(2)]
 		public SInputActive Config;
 	}

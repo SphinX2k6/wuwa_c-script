@@ -2,33 +2,33 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200142C RID: 5164
+// Token: 0x020008E0 RID: 2272
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballRoleSelectGridItemData : IPinballRoleSelectGridItemData
 {
-	// Token: 0x17000CB7 RID: 3255
-	// (get) Token: 0x060091BD RID: 37309 RVA: 0x001F30AD File Offset: 0x001F12AD
-	// (set) Token: 0x060091BE RID: 37310 RVA: 0x001F30B5 File Offset: 0x001F12B5
+	// Token: 0x17000CD7 RID: 3287
+	// (get) Token: 0x06006552 RID: 25938 RVA: 0x001FBBE9 File Offset: 0x001F9DE9
+	// (set) Token: 0x06006553 RID: 25939 RVA: 0x001FBBF1 File Offset: 0x001F9DF1
 	public PinballRoleDataBase RoleData { get; set; }
 
-	// Token: 0x17000CB8 RID: 3256
-	// (get) Token: 0x060091BF RID: 37311 RVA: 0x001F30BE File Offset: 0x001F12BE
-	// (set) Token: 0x060091C0 RID: 37312 RVA: 0x001F30C6 File Offset: 0x001F12C6
+	// Token: 0x17000CD8 RID: 3288
+	// (get) Token: 0x06006554 RID: 25940 RVA: 0x001FBBFA File Offset: 0x001F9DFA
+	// (set) Token: 0x06006555 RID: 25941 RVA: 0x001FBC02 File Offset: 0x001F9E02
 	public IPinballItemDataRole ItemData { get; set; }
 
-	// Token: 0x17000CB9 RID: 3257
-	// (get) Token: 0x060091C1 RID: 37313 RVA: 0x001F30CF File Offset: 0x001F12CF
-	// (set) Token: 0x060091C2 RID: 37314 RVA: 0x001F30D7 File Offset: 0x001F12D7
+	// Token: 0x17000CD9 RID: 3289
+	// (get) Token: 0x06006556 RID: 25942 RVA: 0x001FBC0B File Offset: 0x001F9E0B
+	// (set) Token: 0x06006557 RID: 25943 RVA: 0x001FBC13 File Offset: 0x001F9E13
 	public List<int> ClassIdList { get; set; }
 
-	// Token: 0x17000CBA RID: 3258
-	// (get) Token: 0x060091C3 RID: 37315 RVA: 0x001F30E0 File Offset: 0x001F12E0
-	// (set) Token: 0x060091C4 RID: 37316 RVA: 0x001F30E8 File Offset: 0x001F12E8
+	// Token: 0x17000CDA RID: 3290
+	// (get) Token: 0x06006558 RID: 25944 RVA: 0x001FBC1C File Offset: 0x001F9E1C
+	// (set) Token: 0x06006559 RID: 25945 RVA: 0x001FBC24 File Offset: 0x001F9E24
 	public bool IsSelected { get; set; }
 
-	// Token: 0x17000CBB RID: 3259
-	// (get) Token: 0x060091C5 RID: 37317 RVA: 0x001F30F1 File Offset: 0x001F12F1
-	// (set) Token: 0x060091C6 RID: 37318 RVA: 0x001F30F9 File Offset: 0x001F12F9
+	// Token: 0x17000CDB RID: 3291
+	// (get) Token: 0x0600655A RID: 25946 RVA: 0x001FBC2D File Offset: 0x001F9E2D
+	// (set) Token: 0x0600655B RID: 25947 RVA: 0x001FBC35 File Offset: 0x001F9E35
 	public int FormationIndex { get; set; }
 }

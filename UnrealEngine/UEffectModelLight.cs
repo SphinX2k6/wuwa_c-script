@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018A3 RID: 6307
+	// Token: 0x020003C6 RID: 966
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.EffectModelLight")]
 	[UnrealStructLayout(2104, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2104)]
 	public class UEffectModelLight : UEffectModelBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060173A7 RID: 95143 RVA: 0x0021E2CE File Offset: 0x0021C4CE
+		// Token: 0x06005E4C RID: 24140 RVA: 0x000856D2 File Offset: 0x000838D2
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UEffectModelLight._ClassPtr;
 		}
 
-		// Token: 0x060173A8 RID: 95144 RVA: 0x0021E2DC File Offset: 0x0021C4DC
+		// Token: 0x06005E4D RID: 24141 RVA: 0x000856E0 File Offset: 0x000838E0
 		public UEffectModelLight() : this(BuiltinUtils.AllocNativeUObject(UEffectModelLight.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060173A9 RID: 95145 RVA: 0x0021E304 File Offset: 0x0021C504
+		// Token: 0x06005E4E RID: 24142 RVA: 0x00085708 File Offset: 0x00083908
 		public UEffectModelLight(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UEffectModelLight.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005D6C RID: 23916
-		// (get) Token: 0x060173AA RID: 95146 RVA: 0x0021E338 File Offset: 0x0021C538
-		// (set) Token: 0x060173AB RID: 95147 RVA: 0x0021E371 File Offset: 0x0021C571
+		// Token: 0x170012AC RID: 4780
+		// (get) Token: 0x06005E4F RID: 24143 RVA: 0x0008573C File Offset: 0x0008393C
+		// (set) Token: 0x06005E50 RID: 24144 RVA: 0x00085775 File Offset: 0x00083975
 		public FKuroCurveVector Location
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D6D RID: 23917
-		// (get) Token: 0x060173AC RID: 95148 RVA: 0x0021E394 File Offset: 0x0021C594
-		// (set) Token: 0x060173AD RID: 95149 RVA: 0x0021E3CD File Offset: 0x0021C5CD
+		// Token: 0x170012AD RID: 4781
+		// (get) Token: 0x06005E51 RID: 24145 RVA: 0x00085798 File Offset: 0x00083998
+		// (set) Token: 0x06005E52 RID: 24146 RVA: 0x000857D1 File Offset: 0x000839D1
 		public FKuroCurveFloat Intensity
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D6E RID: 23918
-		// (get) Token: 0x060173AE RID: 95150 RVA: 0x0021E3F0 File Offset: 0x0021C5F0
-		// (set) Token: 0x060173AF RID: 95151 RVA: 0x0021E429 File Offset: 0x0021C629
+		// Token: 0x170012AE RID: 4782
+		// (get) Token: 0x06005E53 RID: 24147 RVA: 0x000857F4 File Offset: 0x000839F4
+		// (set) Token: 0x06005E54 RID: 24148 RVA: 0x0008582D File Offset: 0x00083A2D
 		public FKuroCurveLinearColor Color
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D6F RID: 23919
-		// (get) Token: 0x060173B0 RID: 95152 RVA: 0x0021E44C File Offset: 0x0021C64C
-		// (set) Token: 0x060173B1 RID: 95153 RVA: 0x0021E485 File Offset: 0x0021C685
+		// Token: 0x170012AF RID: 4783
+		// (get) Token: 0x06005E55 RID: 24149 RVA: 0x00085850 File Offset: 0x00083A50
+		// (set) Token: 0x06005E56 RID: 24150 RVA: 0x00085889 File Offset: 0x00083A89
 		public FKuroCurveFloat Radius
 		{
 			get
@@ -113,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D70 RID: 23920
-		// (get) Token: 0x060173B2 RID: 95154 RVA: 0x0021E4A8 File Offset: 0x0021C6A8
-		// (set) Token: 0x060173B3 RID: 95155 RVA: 0x0021E4E1 File Offset: 0x0021C6E1
+		// Token: 0x170012B0 RID: 4784
+		// (get) Token: 0x06005E57 RID: 24151 RVA: 0x000858AC File Offset: 0x00083AAC
+		// (set) Token: 0x06005E58 RID: 24152 RVA: 0x000858E5 File Offset: 0x00083AE5
 		public FKuroCurveFloat FalloffExponent
 		{
 			get
@@ -134,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D71 RID: 23921
-		// (get) Token: 0x060173B4 RID: 95156 RVA: 0x0021E502 File Offset: 0x0021C702
-		// (set) Token: 0x060173B5 RID: 95157 RVA: 0x0021E512 File Offset: 0x0021C712
+		// Token: 0x170012B1 RID: 4785
+		// (get) Token: 0x06005E59 RID: 24153 RVA: 0x00085906 File Offset: 0x00083B06
+		// (set) Token: 0x06005E5A RID: 24154 RVA: 0x00085916 File Offset: 0x00083B16
 		public unsafe bool bUseSpotLight
 		{
 			get
@@ -149,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D72 RID: 23922
-		// (get) Token: 0x060173B6 RID: 95158 RVA: 0x0021E524 File Offset: 0x0021C724
-		// (set) Token: 0x060173B7 RID: 95159 RVA: 0x0021E55D File Offset: 0x0021C75D
+		// Token: 0x170012B2 RID: 4786
+		// (get) Token: 0x06005E5B RID: 24155 RVA: 0x00085928 File Offset: 0x00083B28
+		// (set) Token: 0x06005E5C RID: 24156 RVA: 0x00085961 File Offset: 0x00083B61
 		public FKuroCurveFloat InnerConeAngle
 		{
 			get
@@ -170,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D73 RID: 23923
-		// (get) Token: 0x060173B8 RID: 95160 RVA: 0x0021E580 File Offset: 0x0021C780
-		// (set) Token: 0x060173B9 RID: 95161 RVA: 0x0021E5B9 File Offset: 0x0021C7B9
+		// Token: 0x170012B3 RID: 4787
+		// (get) Token: 0x06005E5D RID: 24157 RVA: 0x00085984 File Offset: 0x00083B84
+		// (set) Token: 0x06005E5E RID: 24158 RVA: 0x000859BD File Offset: 0x00083BBD
 		public FKuroCurveFloat OuterConeAngle
 		{
 			get
@@ -191,9 +191,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D74 RID: 23924
-		// (get) Token: 0x060173BA RID: 95162 RVA: 0x0021E5DA File Offset: 0x0021C7DA
-		// (set) Token: 0x060173BB RID: 95163 RVA: 0x0021E5EA File Offset: 0x0021C7EA
+		// Token: 0x170012B4 RID: 4788
+		// (get) Token: 0x06005E5F RID: 24159 RVA: 0x000859DE File Offset: 0x00083BDE
+		// (set) Token: 0x06005E60 RID: 24160 RVA: 0x000859EE File Offset: 0x00083BEE
 		public unsafe bool bUseAsVolumetricLight
 		{
 			get
@@ -206,9 +206,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D75 RID: 23925
-		// (get) Token: 0x060173BC RID: 95164 RVA: 0x0021E5FB File Offset: 0x0021C7FB
-		// (set) Token: 0x060173BD RID: 95165 RVA: 0x0021E60F File Offset: 0x0021C80F
+		// Token: 0x170012B5 RID: 4789
+		// (get) Token: 0x06005E61 RID: 24161 RVA: 0x000859FF File Offset: 0x00083BFF
+		// (set) Token: 0x06005E62 RID: 24162 RVA: 0x00085A13 File Offset: 0x00083C13
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ELightQualityType> LightQualityType
 		{
@@ -224,9 +224,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D76 RID: 23926
-		// (get) Token: 0x060173BE RID: 95166 RVA: 0x0021E624 File Offset: 0x0021C824
-		// (set) Token: 0x060173BF RID: 95167 RVA: 0x0021E634 File Offset: 0x0021C834
+		// Token: 0x170012B6 RID: 4790
+		// (get) Token: 0x06005E63 RID: 24163 RVA: 0x00085A28 File Offset: 0x00083C28
+		// (set) Token: 0x06005E64 RID: 24164 RVA: 0x00085A38 File Offset: 0x00083C38
 		public unsafe float SourceRadius
 		{
 			get
@@ -239,9 +239,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D77 RID: 23927
-		// (get) Token: 0x060173C0 RID: 95168 RVA: 0x0021E645 File Offset: 0x0021C845
-		// (set) Token: 0x060173C1 RID: 95169 RVA: 0x0021E655 File Offset: 0x0021C855
+		// Token: 0x170012B7 RID: 4791
+		// (get) Token: 0x06005E65 RID: 24165 RVA: 0x00085A49 File Offset: 0x00083C49
+		// (set) Token: 0x06005E66 RID: 24166 RVA: 0x00085A59 File Offset: 0x00083C59
 		public unsafe float SoftSourceRadius
 		{
 			get
@@ -254,9 +254,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D78 RID: 23928
-		// (get) Token: 0x060173C2 RID: 95170 RVA: 0x0021E666 File Offset: 0x0021C866
-		// (set) Token: 0x060173C3 RID: 95171 RVA: 0x0021E676 File Offset: 0x0021C876
+		// Token: 0x170012B8 RID: 4792
+		// (get) Token: 0x06005E67 RID: 24167 RVA: 0x00085A6A File Offset: 0x00083C6A
+		// (set) Token: 0x06005E68 RID: 24168 RVA: 0x00085A7A File Offset: 0x00083C7A
 		public unsafe float SourceLength
 		{
 			get
@@ -269,9 +269,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D79 RID: 23929
-		// (get) Token: 0x060173C4 RID: 95172 RVA: 0x0021E687 File Offset: 0x0021C887
-		// (set) Token: 0x060173C5 RID: 95173 RVA: 0x0021E697 File Offset: 0x0021C897
+		// Token: 0x170012B9 RID: 4793
+		// (get) Token: 0x06005E69 RID: 24169 RVA: 0x00085A8B File Offset: 0x00083C8B
+		// (set) Token: 0x06005E6A RID: 24170 RVA: 0x00085A9B File Offset: 0x00083C9B
 		public unsafe bool AllowAnyRadius
 		{
 			get
@@ -284,9 +284,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D7A RID: 23930
-		// (get) Token: 0x060173C6 RID: 95174 RVA: 0x0021E6A8 File Offset: 0x0021C8A8
-		// (set) Token: 0x060173C7 RID: 95175 RVA: 0x0021E6E1 File Offset: 0x0021C8E1
+		// Token: 0x170012BA RID: 4794
+		// (get) Token: 0x06005E6B RID: 24171 RVA: 0x00085AAC File Offset: 0x00083CAC
+		// (set) Token: 0x06005E6C RID: 24172 RVA: 0x00085AE5 File Offset: 0x00083CE5
 		public FKuroCurveFloat CharacterLightAlpha
 		{
 			get
@@ -305,9 +305,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D7B RID: 23931
-		// (get) Token: 0x060173C8 RID: 95176 RVA: 0x0021E702 File Offset: 0x0021C902
-		// (set) Token: 0x060173C9 RID: 95177 RVA: 0x0021E712 File Offset: 0x0021C912
+		// Token: 0x170012BB RID: 4795
+		// (get) Token: 0x06005E6D RID: 24173 RVA: 0x00085B06 File Offset: 0x00083D06
+		// (set) Token: 0x06005E6E RID: 24174 RVA: 0x00085B16 File Offset: 0x00083D16
 		public unsafe float CharacterFalloffExponent
 		{
 			get
@@ -320,9 +320,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D7C RID: 23932
-		// (get) Token: 0x060173CA RID: 95178 RVA: 0x0021E723 File Offset: 0x0021C923
-		// (set) Token: 0x060173CB RID: 95179 RVA: 0x0021E733 File Offset: 0x0021C933
+		// Token: 0x170012BC RID: 4796
+		// (get) Token: 0x06005E6F RID: 24175 RVA: 0x00085B27 File Offset: 0x00083D27
+		// (set) Token: 0x06005E70 RID: 24176 RVA: 0x00085B37 File Offset: 0x00083D37
 		public unsafe float CharacterBlendAtten
 		{
 			get
@@ -335,9 +335,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D7D RID: 23933
-		// (get) Token: 0x060173CC RID: 95180 RVA: 0x0021E744 File Offset: 0x0021C944
-		// (set) Token: 0x060173CD RID: 95181 RVA: 0x0021E754 File Offset: 0x0021C954
+		// Token: 0x170012BD RID: 4797
+		// (get) Token: 0x06005E71 RID: 24177 RVA: 0x00085B48 File Offset: 0x00083D48
+		// (set) Token: 0x06005E72 RID: 24178 RVA: 0x00085B58 File Offset: 0x00083D58
 		public unsafe float CharacterBlendIntensity
 		{
 			get
@@ -350,27 +350,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D7E RID: 23934
-		// (get) Token: 0x060173CE RID: 95182 RVA: 0x0021E765 File Offset: 0x0021C965
-		// (set) Token: 0x060173CF RID: 95183 RVA: 0x0021E779 File Offset: 0x0021C979
-		[Nullable(0)]
-		public unsafe TEnumAsByte<EToonLightType> ToonLightType
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UEffectModelLight.__PropertyOffset_ToonLightType);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)UEffectModelLight.__PropertyOffset_ToonLightType) = value;
-			}
-		}
-
-		// Token: 0x17005D7F RID: 23935
-		// (get) Token: 0x060173D0 RID: 95184 RVA: 0x0021E78E File Offset: 0x0021C98E
-		// (set) Token: 0x060173D1 RID: 95185 RVA: 0x0021E79E File Offset: 0x0021C99E
+		// Token: 0x170012BE RID: 4798
+		// (get) Token: 0x06005E73 RID: 24179 RVA: 0x00085B69 File Offset: 0x00083D69
+		// (set) Token: 0x06005E74 RID: 24180 RVA: 0x00085B79 File Offset: 0x00083D79
 		public unsafe int CharacterPriority
 		{
 			get
@@ -383,9 +365,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D80 RID: 23936
-		// (get) Token: 0x060173D2 RID: 95186 RVA: 0x0021E7AF File Offset: 0x0021C9AF
-		// (set) Token: 0x060173D3 RID: 95187 RVA: 0x0021E7BF File Offset: 0x0021C9BF
+		// Token: 0x170012BF RID: 4799
+		// (get) Token: 0x06005E75 RID: 24181 RVA: 0x00085B8A File Offset: 0x00083D8A
+		// (set) Token: 0x06005E76 RID: 24182 RVA: 0x00085B9A File Offset: 0x00083D9A
 		public unsafe float CharacterIntensity
 		{
 			get
@@ -398,9 +380,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D81 RID: 23937
-		// (get) Token: 0x060173D4 RID: 95188 RVA: 0x0021E7D0 File Offset: 0x0021C9D0
-		// (set) Token: 0x060173D5 RID: 95189 RVA: 0x0021E7E4 File Offset: 0x0021C9E4
+		// Token: 0x170012C0 RID: 4800
+		// (get) Token: 0x06005E77 RID: 24183 RVA: 0x00085BAB File Offset: 0x00083DAB
+		// (set) Token: 0x06005E78 RID: 24184 RVA: 0x00085BBF File Offset: 0x00083DBF
 		public unsafe FLinearColor CharacterColor
 		{
 			get
@@ -413,9 +395,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D82 RID: 23938
-		// (get) Token: 0x060173D6 RID: 95190 RVA: 0x0021E7F9 File Offset: 0x0021C9F9
-		// (set) Token: 0x060173D7 RID: 95191 RVA: 0x0021E809 File Offset: 0x0021CA09
+		// Token: 0x170012C1 RID: 4801
+		// (get) Token: 0x06005E79 RID: 24185 RVA: 0x00085BD4 File Offset: 0x00083DD4
+		// (set) Token: 0x06005E7A RID: 24186 RVA: 0x00085BE4 File Offset: 0x00083DE4
 		public unsafe float CharacterShadowIntensity
 		{
 			get
@@ -428,9 +410,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D83 RID: 23939
-		// (get) Token: 0x060173D8 RID: 95192 RVA: 0x0021E81A File Offset: 0x0021CA1A
-		// (set) Token: 0x060173D9 RID: 95193 RVA: 0x0021E82A File Offset: 0x0021CA2A
+		// Token: 0x170012C2 RID: 4802
+		// (get) Token: 0x06005E7B RID: 24187 RVA: 0x00085BF5 File Offset: 0x00083DF5
+		// (set) Token: 0x06005E7C RID: 24188 RVA: 0x00085C05 File Offset: 0x00083E05
 		public unsafe float CharacterRealTimeShadowIntensity
 		{
 			get
@@ -443,9 +425,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D84 RID: 23940
-		// (get) Token: 0x060173DA RID: 95194 RVA: 0x0021E83B File Offset: 0x0021CA3B
-		// (set) Token: 0x060173DB RID: 95195 RVA: 0x0021E84B File Offset: 0x0021CA4B
+		// Token: 0x170012C3 RID: 4803
+		// (get) Token: 0x06005E7D RID: 24189 RVA: 0x00085C16 File Offset: 0x00083E16
+		// (set) Token: 0x06005E7E RID: 24190 RVA: 0x00085C26 File Offset: 0x00083E26
 		public unsafe float CharacterDesaturationIntensity
 		{
 			get
@@ -458,9 +440,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D85 RID: 23941
-		// (get) Token: 0x060173DC RID: 95196 RVA: 0x0021E85C File Offset: 0x0021CA5C
-		// (set) Token: 0x060173DD RID: 95197 RVA: 0x0021E86C File Offset: 0x0021CA6C
+		// Token: 0x170012C4 RID: 4804
+		// (get) Token: 0x06005E7F RID: 24191 RVA: 0x00085C37 File Offset: 0x00083E37
+		// (set) Token: 0x06005E80 RID: 24192 RVA: 0x00085C47 File Offset: 0x00083E47
 		public unsafe float CharacterHardIntensity
 		{
 			get
@@ -473,9 +455,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D86 RID: 23942
-		// (get) Token: 0x060173DE RID: 95198 RVA: 0x0021E87D File Offset: 0x0021CA7D
-		// (set) Token: 0x060173DF RID: 95199 RVA: 0x0021E891 File Offset: 0x0021CA91
+		// Token: 0x170012C5 RID: 4805
+		// (get) Token: 0x06005E81 RID: 24193 RVA: 0x00085C58 File Offset: 0x00083E58
+		// (set) Token: 0x06005E82 RID: 24194 RVA: 0x00085C6C File Offset: 0x00083E6C
 		public unsafe FLinearColor CharacterHardColor
 		{
 			get
@@ -488,9 +470,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D87 RID: 23943
-		// (get) Token: 0x060173E0 RID: 95200 RVA: 0x0021E8A6 File Offset: 0x0021CAA6
-		// (set) Token: 0x060173E1 RID: 95201 RVA: 0x0021E8BA File Offset: 0x0021CABA
+		// Token: 0x170012C6 RID: 4806
+		// (get) Token: 0x06005E83 RID: 24195 RVA: 0x00085C81 File Offset: 0x00083E81
+		// (set) Token: 0x06005E84 RID: 24196 RVA: 0x00085C95 File Offset: 0x00083E95
 		public unsafe FLinearColor CharacterHardShadowColor
 		{
 			get
@@ -503,9 +485,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D88 RID: 23944
-		// (get) Token: 0x060173E2 RID: 95202 RVA: 0x0021E8CF File Offset: 0x0021CACF
-		// (set) Token: 0x060173E3 RID: 95203 RVA: 0x0021E8DF File Offset: 0x0021CADF
+		// Token: 0x170012C7 RID: 4807
+		// (get) Token: 0x06005E85 RID: 24197 RVA: 0x00085CAA File Offset: 0x00083EAA
+		// (set) Token: 0x06005E86 RID: 24198 RVA: 0x00085CBA File Offset: 0x00083EBA
 		public unsafe float CharacterHardBlend
 		{
 			get
@@ -518,9 +500,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D89 RID: 23945
-		// (get) Token: 0x060173E4 RID: 95204 RVA: 0x0021E8F0 File Offset: 0x0021CAF0
-		// (set) Token: 0x060173E5 RID: 95205 RVA: 0x0021E900 File Offset: 0x0021CB00
+		// Token: 0x170012C8 RID: 4808
+		// (get) Token: 0x06005E87 RID: 24199 RVA: 0x00085CCB File Offset: 0x00083ECB
+		// (set) Token: 0x06005E88 RID: 24200 RVA: 0x00085CDB File Offset: 0x00083EDB
 		public unsafe bool bCastShadowPc
 		{
 			get
@@ -533,9 +515,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D8A RID: 23946
-		// (get) Token: 0x060173E6 RID: 95206 RVA: 0x0021E911 File Offset: 0x0021CB11
-		// (set) Token: 0x060173E7 RID: 95207 RVA: 0x0021E925 File Offset: 0x0021CB25
+		// Token: 0x170012C9 RID: 4809
+		// (get) Token: 0x06005E89 RID: 24201 RVA: 0x00085CEC File Offset: 0x00083EEC
+		// (set) Token: 0x06005E8A RID: 24202 RVA: 0x00085D00 File Offset: 0x00083F00
 		public unsafe FName DriveEffectByWeatherCustomDataName
 		{
 			get
@@ -548,149 +530,146 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060173E8 RID: 95208 RVA: 0x0021E93A File Offset: 0x0021CB3A
+		// Token: 0x06005E8B RID: 24203 RVA: 0x00085D15 File Offset: 0x00083F15
 		static UEffectModelLight()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.EffectModelLight");
 		}
 
-		// Token: 0x060173E9 RID: 95209 RVA: 0x0021E948 File Offset: 0x0021CB48
+		// Token: 0x06005E8C RID: 24204 RVA: 0x00085D23 File Offset: 0x00083F23
 		protected UEffectModelLight(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C9A3 RID: 51619
+		// Token: 0x0400276E RID: 10094
 		public new const string __ObjectPath = "/Script/KuroGameplay.EffectModelLight";
 
-		// Token: 0x0400C9A4 RID: 51620
+		// Token: 0x0400276F RID: 10095
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C9A5 RID: 51621
+		// Token: 0x04002770 RID: 10096
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C9A6 RID: 51622
+		// Token: 0x04002771 RID: 10097
 		internal static int __PropertyOffset_Location;
 
-		// Token: 0x0400C9A7 RID: 51623
+		// Token: 0x04002772 RID: 10098
 		[Nullable(2)]
 		private FKuroCurveVector _Location;
 
-		// Token: 0x0400C9A8 RID: 51624
+		// Token: 0x04002773 RID: 10099
 		internal static int __PropertyOffset_Intensity;
 
-		// Token: 0x0400C9A9 RID: 51625
+		// Token: 0x04002774 RID: 10100
 		[Nullable(2)]
 		private FKuroCurveFloat _Intensity;
 
-		// Token: 0x0400C9AA RID: 51626
+		// Token: 0x04002775 RID: 10101
 		internal static int __PropertyOffset_Color;
 
-		// Token: 0x0400C9AB RID: 51627
+		// Token: 0x04002776 RID: 10102
 		[Nullable(2)]
 		private FKuroCurveLinearColor _Color;
 
-		// Token: 0x0400C9AC RID: 51628
+		// Token: 0x04002777 RID: 10103
 		internal static int __PropertyOffset_Radius;
 
-		// Token: 0x0400C9AD RID: 51629
+		// Token: 0x04002778 RID: 10104
 		[Nullable(2)]
 		private FKuroCurveFloat _Radius;
 
-		// Token: 0x0400C9AE RID: 51630
+		// Token: 0x04002779 RID: 10105
 		internal static int __PropertyOffset_FalloffExponent;
 
-		// Token: 0x0400C9AF RID: 51631
+		// Token: 0x0400277A RID: 10106
 		[Nullable(2)]
 		private FKuroCurveFloat _FalloffExponent;
 
-		// Token: 0x0400C9B0 RID: 51632
+		// Token: 0x0400277B RID: 10107
 		internal static int __PropertyOffset_bUseSpotLight;
 
-		// Token: 0x0400C9B1 RID: 51633
+		// Token: 0x0400277C RID: 10108
 		internal static int __PropertyOffset_InnerConeAngle;
 
-		// Token: 0x0400C9B2 RID: 51634
+		// Token: 0x0400277D RID: 10109
 		[Nullable(2)]
 		private FKuroCurveFloat _InnerConeAngle;
 
-		// Token: 0x0400C9B3 RID: 51635
+		// Token: 0x0400277E RID: 10110
 		internal static int __PropertyOffset_OuterConeAngle;
 
-		// Token: 0x0400C9B4 RID: 51636
+		// Token: 0x0400277F RID: 10111
 		[Nullable(2)]
 		private FKuroCurveFloat _OuterConeAngle;
 
-		// Token: 0x0400C9B5 RID: 51637
+		// Token: 0x04002780 RID: 10112
 		internal static int __PropertyOffset_bUseAsVolumetricLight;
 
-		// Token: 0x0400C9B6 RID: 51638
+		// Token: 0x04002781 RID: 10113
 		internal static int __PropertyOffset_LightQualityType;
 
-		// Token: 0x0400C9B7 RID: 51639
+		// Token: 0x04002782 RID: 10114
 		internal static int __PropertyOffset_SourceRadius;
 
-		// Token: 0x0400C9B8 RID: 51640
+		// Token: 0x04002783 RID: 10115
 		internal static int __PropertyOffset_SoftSourceRadius;
 
-		// Token: 0x0400C9B9 RID: 51641
+		// Token: 0x04002784 RID: 10116
 		internal static int __PropertyOffset_SourceLength;
 
-		// Token: 0x0400C9BA RID: 51642
+		// Token: 0x04002785 RID: 10117
 		internal static int __PropertyOffset_AllowAnyRadius;
 
-		// Token: 0x0400C9BB RID: 51643
+		// Token: 0x04002786 RID: 10118
 		internal static int __PropertyOffset_CharacterLightAlpha;
 
-		// Token: 0x0400C9BC RID: 51644
+		// Token: 0x04002787 RID: 10119
 		[Nullable(2)]
 		private FKuroCurveFloat _CharacterLightAlpha;
 
-		// Token: 0x0400C9BD RID: 51645
+		// Token: 0x04002788 RID: 10120
 		internal static int __PropertyOffset_CharacterFalloffExponent;
 
-		// Token: 0x0400C9BE RID: 51646
+		// Token: 0x04002789 RID: 10121
 		internal static int __PropertyOffset_CharacterBlendAtten;
 
-		// Token: 0x0400C9BF RID: 51647
+		// Token: 0x0400278A RID: 10122
 		internal static int __PropertyOffset_CharacterBlendIntensity;
 
-		// Token: 0x0400C9C0 RID: 51648
-		internal static int __PropertyOffset_ToonLightType;
-
-		// Token: 0x0400C9C1 RID: 51649
+		// Token: 0x0400278B RID: 10123
 		internal static int __PropertyOffset_CharacterPriority;
 
-		// Token: 0x0400C9C2 RID: 51650
+		// Token: 0x0400278C RID: 10124
 		internal static int __PropertyOffset_CharacterIntensity;
 
-		// Token: 0x0400C9C3 RID: 51651
+		// Token: 0x0400278D RID: 10125
 		internal static int __PropertyOffset_CharacterColor;
 
-		// Token: 0x0400C9C4 RID: 51652
+		// Token: 0x0400278E RID: 10126
 		internal static int __PropertyOffset_CharacterShadowIntensity;
 
-		// Token: 0x0400C9C5 RID: 51653
+		// Token: 0x0400278F RID: 10127
 		internal static int __PropertyOffset_CharacterRealTimeShadowIntensity;
 
-		// Token: 0x0400C9C6 RID: 51654
+		// Token: 0x04002790 RID: 10128
 		internal static int __PropertyOffset_CharacterDesaturationIntensity;
 
-		// Token: 0x0400C9C7 RID: 51655
+		// Token: 0x04002791 RID: 10129
 		internal static int __PropertyOffset_CharacterHardIntensity;
 
-		// Token: 0x0400C9C8 RID: 51656
+		// Token: 0x04002792 RID: 10130
 		internal static int __PropertyOffset_CharacterHardColor;
 
-		// Token: 0x0400C9C9 RID: 51657
+		// Token: 0x04002793 RID: 10131
 		internal static int __PropertyOffset_CharacterHardShadowColor;
 
-		// Token: 0x0400C9CA RID: 51658
+		// Token: 0x04002794 RID: 10132
 		internal static int __PropertyOffset_CharacterHardBlend;
 
-		// Token: 0x0400C9CB RID: 51659
+		// Token: 0x04002795 RID: 10133
 		internal static int __PropertyOffset_bCastShadowPc;
 
-		// Token: 0x0400C9CC RID: 51660
+		// Token: 0x04002796 RID: 10134
 		internal static int __PropertyOffset_DriveEffectByWeatherCustomDataName;
 	}
 }

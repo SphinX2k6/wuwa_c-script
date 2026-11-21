@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,13 +11,13 @@ using CSharpScript.Game.ServerStorage.Container;
 using CSharpScript.Game.Ui;
 using Google.Protobuf.Collections;
 
-// Token: 0x02002264 RID: 8804
+// Token: 0x02001748 RID: 5960
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class MotorcycleDevelopModel : ModelBase
 {
-	// Token: 0x0601129E RID: 70302 RVA: 0x0042E45C File Offset: 0x0042C65C
+	// Token: 0x0600E734 RID: 59188 RVA: 0x0043AFFC File Offset: 0x004391FC
 	public void UpdateMotorInfo(MotorPb data)
 	{
 		this.CurLevel = data.MotorLevel;
@@ -36,19 +35,19 @@ public class MotorcycleDevelopModel : ModelBase
 		{
 			this.LastExp = this.CurExp;
 		}
-		this.UpdateTechTree(data.UnlockedTree.ToArray<MotorTechOneTreePb>());
-		this.UpdateAllTreeTask(data.TaskTrees.ToArray<MotorTaskTreePb>());
+		this.UpdateTechTree(data.UnlockedTree);
+		this.UpdateAllTreeTask(data.TaskTrees);
 		this.UpdateMotorLevelEffect();
 	}
 
-	// Token: 0x0601129F RID: 70303 RVA: 0x0042E514 File Offset: 0x0042C714
+	// Token: 0x0600E735 RID: 59189 RVA: 0x0043B0AA File Offset: 0x004392AA
 	protected override bool OnClear()
 	{
 		this.RemoveSwitchTechTreeLockTimer();
 		return true;
 	}
 
-	// Token: 0x060112A0 RID: 70304 RVA: 0x0042E520 File Offset: 0x0042C720
+	// Token: 0x0600E736 RID: 59190 RVA: 0x0043B0B4 File Offset: 0x004392B4
 	public List<UiDynamicTab> GetMotorTabList()
 	{
 		List<UiDynamicTab> viewTabList = DynamicTabConfig.Instance.GetViewTabList(EUiViewName.MotorcycleRootView);
@@ -65,37 +64,37 @@ public class MotorcycleDevelopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060112A1 RID: 70305 RVA: 0x0042E580 File Offset: 0x0042C780
+	// Token: 0x0600E737 RID: 59191 RVA: 0x0043B114 File Offset: 0x00439314
 	public int GetLastLevel()
 	{
 		return this.LastLevel;
 	}
 
-	// Token: 0x060112A2 RID: 70306 RVA: 0x0042E588 File Offset: 0x0042C788
+	// Token: 0x0600E738 RID: 59192 RVA: 0x0043B11C File Offset: 0x0043931C
 	public int GetLastExp()
 	{
 		return this.LastExp;
 	}
 
-	// Token: 0x060112A3 RID: 70307 RVA: 0x0042E590 File Offset: 0x0042C790
+	// Token: 0x0600E739 RID: 59193 RVA: 0x0043B124 File Offset: 0x00439324
 	public int GetCurLevel()
 	{
 		return this.CurLevel;
 	}
 
-	// Token: 0x060112A4 RID: 70308 RVA: 0x0042E598 File Offset: 0x0042C798
+	// Token: 0x0600E73A RID: 59194 RVA: 0x0043B12C File Offset: 0x0043932C
 	public int GetCurExp()
 	{
 		return this.CurExp;
 	}
 
-	// Token: 0x060112A5 RID: 70309 RVA: 0x0042E5A0 File Offset: 0x0042C7A0
+	// Token: 0x0600E73B RID: 59195 RVA: 0x0043B134 File Offset: 0x00439334
 	public int GetCurRewardedMaxLv()
 	{
 		return this.CurRewardedMaxLv;
 	}
 
-	// Token: 0x060112A6 RID: 70310 RVA: 0x0042E5A8 File Offset: 0x0042C7A8
+	// Token: 0x0600E73C RID: 59196 RVA: 0x0043B13C File Offset: 0x0043933C
 	public float GetAttrValueByType(int attrType, int level)
 	{
 		float result = 0f;
@@ -148,7 +147,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060112A7 RID: 70311 RVA: 0x0042E744 File Offset: 0x0042C944
+	// Token: 0x0600E73D RID: 59197 RVA: 0x0043B2D8 File Offset: 0x004394D8
 	public int GetNextLevelExp()
 	{
 		IReadOnlyList<MotorLvl> allMotorLevelList = MotorConfig.Instance.GetAllMotorLevelList();
@@ -162,7 +161,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060112A8 RID: 70312 RVA: 0x0042E79C File Offset: 0x0042C99C
+	// Token: 0x0600E73E RID: 59198 RVA: 0x0043B330 File Offset: 0x00439530
 	public List<TItem> GetPreviewRewardByLevel(int level)
 	{
 		List<TItem> list = new List<TItem>();
@@ -188,7 +187,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060112A9 RID: 70313 RVA: 0x0042E800 File Offset: 0x0042CA00
+	// Token: 0x0600E73F RID: 59199 RVA: 0x0043B394 File Offset: 0x00439594
 	public List<TItem> GetAllPreviewReward()
 	{
 		List<TItem> list = new List<TItem>();
@@ -247,7 +246,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060112AA RID: 70314 RVA: 0x0042E9AC File Offset: 0x0042CBAC
+	// Token: 0x0600E740 RID: 59200 RVA: 0x0043B540 File Offset: 0x00439740
 	public List<TItem> GetPreviewReward(int dropId)
 	{
 		List<TItem> list = new List<TItem>();
@@ -275,13 +274,13 @@ public class MotorcycleDevelopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060112AB RID: 70315 RVA: 0x0042EA6C File Offset: 0x0042CC6C
+	// Token: 0x0600E741 RID: 59201 RVA: 0x0043B600 File Offset: 0x00439800
 	public bool IsDailyExpToLimit()
 	{
 		return this.DailyLimitMaxExp > 0 && this.DailyLimitExp >= this.DailyLimitMaxExp;
 	}
 
-	// Token: 0x060112AC RID: 70316 RVA: 0x0042EA8A File Offset: 0x0042CC8A
+	// Token: 0x0600E742 RID: 59202 RVA: 0x0043B61E File Offset: 0x0043981E
 	public void UpdateMotorExpAndLevel(MotorExpAddNotify data)
 	{
 		this.CurExp = data.CurExp;
@@ -291,13 +290,13 @@ public class MotorcycleDevelopModel : ModelBase
 		this.UpdateMotorLevelEffect();
 	}
 
-	// Token: 0x060112AD RID: 70317 RVA: 0x0042EAC2 File Offset: 0x0042CCC2
+	// Token: 0x0600E743 RID: 59203 RVA: 0x0043B656 File Offset: 0x00439856
 	public void UpdateMotorRewardedMaxLevel(MotorLevelOneKeyRewardResponse data)
 	{
 		this.CurRewardedMaxLv = data.MotorRewardedLvMax;
 	}
 
-	// Token: 0x060112AE RID: 70318 RVA: 0x0042EAD0 File Offset: 0x0042CCD0
+	// Token: 0x0600E744 RID: 59204 RVA: 0x0043B664 File Offset: 0x00439864
 	public void CheckMotorExpChange()
 	{
 		if (this.LastLevel < this.CurLevel)
@@ -319,7 +318,7 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112AF RID: 70319 RVA: 0x0042EB74 File Offset: 0x0042CD74
+	// Token: 0x0600E745 RID: 59205 RVA: 0x0043B708 File Offset: 0x00439908
 	public void SetExpChange(int currentLevel, int currentExp, int lastExp, int maxExp, int differenceExp)
 	{
 		LevelUpViewViedData data = new LevelUpViewViedData
@@ -333,7 +332,7 @@ public class MotorcycleDevelopModel : ModelBase
 		this.TryOpenLevelUpView(data);
 	}
 
-	// Token: 0x060112B0 RID: 70320 RVA: 0x0042EBB4 File Offset: 0x0042CDB4
+	// Token: 0x0600E746 RID: 59206 RVA: 0x0043B748 File Offset: 0x00439948
 	public void SetLevelUp(int lastLevel, int currentLevel, int currentExp, int lastExp)
 	{
 		LevelUpViewViedData data = new LevelUpViewViedData
@@ -347,7 +346,7 @@ public class MotorcycleDevelopModel : ModelBase
 		this.TryOpenLevelUpView(data);
 	}
 
-	// Token: 0x060112B1 RID: 70321 RVA: 0x0042EBF4 File Offset: 0x0042CDF4
+	// Token: 0x0600E747 RID: 59207 RVA: 0x0043B788 File Offset: 0x00439988
 	private void RefreshCacheData(ILevelUpViewViedData data)
 	{
 		if (this.CacheLvUpData == null)
@@ -379,7 +378,7 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112B2 RID: 70322 RVA: 0x0042ED00 File Offset: 0x0042CF00
+	// Token: 0x0600E748 RID: 59208 RVA: 0x0043B894 File Offset: 0x00439A94
 	private void TryOpenLevelUpView(ILevelUpViewViedData data)
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.MotorcycleLevelUpView) && this.CacheLvUpData != null)
@@ -394,19 +393,19 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112B3 RID: 70323 RVA: 0x0042ED5C File Offset: 0x0042CF5C
+	// Token: 0x0600E749 RID: 59209 RVA: 0x0043B8F0 File Offset: 0x00439AF0
 	public ILevelUpViewViedData GetCacheData()
 	{
 		return this.CacheLvUpData;
 	}
 
-	// Token: 0x060112B4 RID: 70324 RVA: 0x0042ED64 File Offset: 0x0042CF64
+	// Token: 0x0600E74A RID: 59210 RVA: 0x0043B8F8 File Offset: 0x00439AF8
 	public void ClearCacheData()
 	{
 		this.CacheLvUpData = null;
 	}
 
-	// Token: 0x060112B5 RID: 70325 RVA: 0x0042ED70 File Offset: 0x0042CF70
+	// Token: 0x0600E74B RID: 59211 RVA: 0x0043B904 File Offset: 0x00439B04
 	public void UpdateMotorLevelEffect()
 	{
 		MotorLvl? motorLevelConfig = MotorConfig.Instance.GetMotorLevelConfig(this.CurLevel);
@@ -423,13 +422,13 @@ public class MotorcycleDevelopModel : ModelBase
 		FormationAttributeController.Instance.AddSpeedModifier(this.ModifierHandle, EFormationAttributeId.MotorcycleStrength, EModifierType.Override, (float)motorLevelConfig.Value.NitrogenRecoverRate, 0);
 	}
 
-	// Token: 0x060112B6 RID: 70326 RVA: 0x0042EDF0 File Offset: 0x0042CFF0
+	// Token: 0x0600E74C RID: 59212 RVA: 0x0043B984 File Offset: 0x00439B84
 	public bool RedDotHasLevelUpReward()
 	{
 		return this.CurRewardedMaxLv < this.CurLevel;
 	}
 
-	// Token: 0x060112B7 RID: 70327 RVA: 0x0042EE00 File Offset: 0x0042D000
+	// Token: 0x0600E74D RID: 59213 RVA: 0x0043B994 File Offset: 0x00439B94
 	private void InitTechNodes()
 	{
 		if (this.TechNodeMap.Count > 0)
@@ -446,19 +445,19 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112B8 RID: 70328 RVA: 0x0042EEA8 File Offset: 0x0042D0A8
+	// Token: 0x0600E74E RID: 59214 RVA: 0x0043BA3C File Offset: 0x00439C3C
 	public void UpdateCurTreeType(int treeType)
 	{
 		this.CurTreeType = treeType;
 	}
 
-	// Token: 0x060112B9 RID: 70329 RVA: 0x0042EEB1 File Offset: 0x0042D0B1
+	// Token: 0x0600E74F RID: 59215 RVA: 0x0043BA45 File Offset: 0x00439C45
 	public void UpdateSelectedTreeType(int treeType)
 	{
 		this.SelectedTreeType = treeType;
 	}
 
-	// Token: 0x060112BA RID: 70330 RVA: 0x0042EEBC File Offset: 0x0042D0BC
+	// Token: 0x0600E750 RID: 59216 RVA: 0x0043BA50 File Offset: 0x00439C50
 	public void UpdateDamgeIdToSkillLevel(int nodeId, int preLevel, int newLevel)
 	{
 		if (preLevel == newLevel)
@@ -501,7 +500,7 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112BB RID: 70331 RVA: 0x0042EFCC File Offset: 0x0042D1CC
+	// Token: 0x0600E751 RID: 59217 RVA: 0x0043BB60 File Offset: 0x00439D60
 	public void UpdateTechNodeList(MotorTechPb[] data)
 	{
 		foreach (MotorTechPb motorTechPb in data)
@@ -521,7 +520,7 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112BC RID: 70332 RVA: 0x0042F05C File Offset: 0x0042D25C
+	// Token: 0x0600E752 RID: 59218 RVA: 0x0043BBF0 File Offset: 0x00439DF0
 	public void UpdateOneTechTree(MotorTechOneTreePb data)
 	{
 		RepeatedField<MotorTechPb> tech = data.Tech;
@@ -543,8 +542,8 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112BD RID: 70333 RVA: 0x0042F114 File Offset: 0x0042D314
-	public void UpdateTechTree(MotorTechOneTreePb[] dataList)
+	// Token: 0x0600E753 RID: 59219 RVA: 0x0043BCA8 File Offset: 0x00439EA8
+	public void UpdateTechTree(IReadOnlyList<MotorTechOneTreePb> dataList)
 	{
 		foreach (MotorTechOneTreePb motorTechOneTreePb in dataList)
 		{
@@ -553,7 +552,7 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112BE RID: 70334 RVA: 0x0042F148 File Offset: 0x0042D348
+	// Token: 0x0600E754 RID: 59220 RVA: 0x0043BCFC File Offset: 0x00439EFC
 	public void UpdateTechTreeNewUnlocked(int treeType, bool isNew)
 	{
 		ServerStorageSet serverStorageSet = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.MotorDevelopNewUnlockTree) as ServerStorageSet;
@@ -565,8 +564,8 @@ public class MotorcycleDevelopModel : ModelBase
 		serverStorageSet.Remove(treeType);
 	}
 
-	// Token: 0x060112BF RID: 70335 RVA: 0x0042F17C File Offset: 0x0042D37C
-	public void UnlockTechNode(int[] nodeIds)
+	// Token: 0x0600E755 RID: 59221 RVA: 0x0043BD30 File Offset: 0x00439F30
+	public void UnlockTechNode(IReadOnlyList<int> nodeIds)
 	{
 		foreach (int nodeId in nodeIds)
 		{
@@ -574,7 +573,7 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112C0 RID: 70336 RVA: 0x0042F1A8 File Offset: 0x0042D3A8
+	// Token: 0x0600E756 RID: 59222 RVA: 0x0043BD7C File Offset: 0x00439F7C
 	public void UnlockTechTree(int treeType)
 	{
 		if (!this.UnlockTreeTypeList.Contains(treeType))
@@ -591,7 +590,7 @@ public class MotorcycleDevelopModel : ModelBase
 		});
 	}
 
-	// Token: 0x060112C1 RID: 70337 RVA: 0x0042F1FC File Offset: 0x0042D3FC
+	// Token: 0x0600E757 RID: 59223 RVA: 0x0043BDD0 File Offset: 0x00439FD0
 	public int[] GetCommonTechNodeIdList(int treeType)
 	{
 		List<MotorTech> list = new List<MotorTech>();
@@ -611,7 +610,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return list2.ToArray();
 	}
 
-	// Token: 0x060112C2 RID: 70338 RVA: 0x0042F2D4 File Offset: 0x0042D4D4
+	// Token: 0x0600E758 RID: 59224 RVA: 0x0043BEA8 File Offset: 0x0043A0A8
 	public int FindTechNodeIdByCoord(int[] coord, int treeType)
 	{
 		int result = -1;
@@ -627,7 +626,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060112C3 RID: 70339 RVA: 0x0042F344 File Offset: 0x0042D544
+	// Token: 0x0600E759 RID: 59225 RVA: 0x0043BF18 File Offset: 0x0043A118
 	public int? GetSkillLevelByDamageId(long damageId)
 	{
 		int value;
@@ -638,25 +637,25 @@ public class MotorcycleDevelopModel : ModelBase
 		return new int?(value);
 	}
 
-	// Token: 0x060112C4 RID: 70340 RVA: 0x0042F371 File Offset: 0x0042D571
+	// Token: 0x0600E75A RID: 59226 RVA: 0x0043BF45 File Offset: 0x0043A145
 	public int GetCurTreeType()
 	{
 		return this.CurTreeType;
 	}
 
-	// Token: 0x060112C5 RID: 70341 RVA: 0x0042F379 File Offset: 0x0042D579
+	// Token: 0x0600E75B RID: 59227 RVA: 0x0043BF4D File Offset: 0x0043A14D
 	public int GetSelectedTreeType()
 	{
 		return this.SelectedTreeType;
 	}
 
-	// Token: 0x060112C6 RID: 70342 RVA: 0x0042F381 File Offset: 0x0042D581
+	// Token: 0x0600E75C RID: 59228 RVA: 0x0043BF55 File Offset: 0x0043A155
 	public List<int> GetActivatedTreeTypeList()
 	{
 		return this.UnlockTreeTypeList;
 	}
 
-	// Token: 0x060112C7 RID: 70343 RVA: 0x0042F38C File Offset: 0x0042D58C
+	// Token: 0x0600E75D RID: 59229 RVA: 0x0043BF60 File Offset: 0x0043A160
 	[NullableContext(2)]
 	public MotorTechTreeNode GetTechNodeById(int nodeId)
 	{
@@ -668,7 +667,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060112C8 RID: 70344 RVA: 0x0042F3AC File Offset: 0x0042D5AC
+	// Token: 0x0600E75E RID: 59230 RVA: 0x0043BF80 File Offset: 0x0043A180
 	public List<IMotorTechNodeListData> GetExclusiveNodeParamList(int treeType)
 	{
 		List<IMotorTechNodeListData> list = new List<IMotorTechNodeListData>();
@@ -741,7 +740,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060112C9 RID: 70345 RVA: 0x0042F5E4 File Offset: 0x0042D7E4
+	// Token: 0x0600E75F RID: 59231 RVA: 0x0043C1B8 File Offset: 0x0043A3B8
 	public void RefreshTechTreeNode(int nodeId, EMotorTechTreeNodeStatus status)
 	{
 		MotorTechTreeNode techNodeById = this.GetTechNodeById(nodeId);
@@ -751,7 +750,7 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112CA RID: 70346 RVA: 0x0042F604 File Offset: 0x0042D804
+	// Token: 0x0600E760 RID: 59232 RVA: 0x0043C1D8 File Offset: 0x0043A3D8
 	public bool IsLinkTimeNodeActivated()
 	{
 		int valueOrDefault = ConfigCommonParamById.GetIntConfig("MotorTechLinkTimeNodeId").GetValueOrDefault();
@@ -759,7 +758,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return techNodeById != null && techNodeById.Status == EMotorTechTreeNodeStatus.Activated;
 	}
 
-	// Token: 0x060112CB RID: 70347 RVA: 0x0042F63C File Offset: 0x0042D83C
+	// Token: 0x0600E761 RID: 59233 RVA: 0x0043C210 File Offset: 0x0043A410
 	public bool IsPreNodeActivated(MotorTechTreeNode node)
 	{
 		bool result = false;
@@ -784,7 +783,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060112CC RID: 70348 RVA: 0x0042F69C File Offset: 0x0042D89C
+	// Token: 0x0600E762 RID: 59234 RVA: 0x0043C270 File Offset: 0x0043A470
 	public bool IsAllNodeMaxLevel(int treeType)
 	{
 		foreach (MotorTechTreeNode motorTechTreeNode in this.TechNodeMap.Values)
@@ -805,7 +804,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060112CD RID: 70349 RVA: 0x0042F738 File Offset: 0x0042D938
+	// Token: 0x0600E763 RID: 59235 RVA: 0x0043C30C File Offset: 0x0043A50C
 	public MotorEffect? GetnodeEffectConfig(int nodeId, int nodeLevel)
 	{
 		MotorTech? motorTechConfig = MotorConfig.Instance.GetMotorTechConfig(nodeId);
@@ -822,7 +821,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return MotorConfig.Instance.GetMotorEffectConfig(motorTechLvConfig.Value.Effect);
 	}
 
-	// Token: 0x060112CE RID: 70350 RVA: 0x0042F7B8 File Offset: 0x0042D9B8
+	// Token: 0x0600E764 RID: 59236 RVA: 0x0043C38C File Offset: 0x0043A58C
 	public bool CanUpgradeNode(MotorTechTreeNode node)
 	{
 		MotorTechTree? motorTechTreeConfig = MotorConfig.Instance.GetMotorTechTreeConfig(node.TreeType);
@@ -846,7 +845,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060112CF RID: 70351 RVA: 0x0042F89C File Offset: 0x0042DA9C
+	// Token: 0x0600E765 RID: 59237 RVA: 0x0043C470 File Offset: 0x0043A670
 	public bool RedDotHasAnyNewTechTree()
 	{
 		foreach (int treeType in this.UnlockTreeTypeList)
@@ -859,13 +858,13 @@ public class MotorcycleDevelopModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060112D0 RID: 70352 RVA: 0x0042F8F8 File Offset: 0x0042DAF8
+	// Token: 0x0600E766 RID: 59238 RVA: 0x0043C4CC File Offset: 0x0043A6CC
 	public bool RedDotHasNewTechTree(int treeType)
 	{
 		return (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.MotorDevelopNewUnlockTree) as ServerStorageSet).Has(treeType);
 	}
 
-	// Token: 0x060112D1 RID: 70353 RVA: 0x0042F914 File Offset: 0x0042DB14
+	// Token: 0x0600E767 RID: 59239 RVA: 0x0043C4E8 File Offset: 0x0043A6E8
 	public bool RedDotHasUpgradableTechNode(int? treeType)
 	{
 		foreach (MotorTechTreeNode motorTechTreeNode in this.TechNodeMap.Values)
@@ -882,7 +881,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060112D2 RID: 70354 RVA: 0x0042F9D8 File Offset: 0x0042DBD8
+	// Token: 0x0600E768 RID: 59240 RVA: 0x0043C5AC File Offset: 0x0043A7AC
 	public void UpdateOneTask(MotorTaskPb data)
 	{
 		MotorTechTaskNode motorTechTaskNode;
@@ -920,8 +919,8 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112D3 RID: 70355 RVA: 0x0042FB24 File Offset: 0x0042DD24
-	public void UpdateOneTreeTask(MotorTaskPb[] taskList)
+	// Token: 0x0600E769 RID: 59241 RVA: 0x0043C6F8 File Offset: 0x0043A8F8
+	public void UpdateOneTreeTask(IReadOnlyList<MotorTaskPb> taskList)
 	{
 		foreach (MotorTaskPb data in taskList)
 		{
@@ -929,17 +928,17 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112D4 RID: 70356 RVA: 0x0042FB4C File Offset: 0x0042DD4C
-	public void UpdateAllTreeTask(MotorTaskTreePb[] dataList)
+	// Token: 0x0600E76A RID: 59242 RVA: 0x0043C740 File Offset: 0x0043A940
+	public void UpdateAllTreeTask(IReadOnlyList<MotorTaskTreePb> dataList)
 	{
 		foreach (MotorTaskTreePb motorTaskTreePb in dataList)
 		{
 			this.TaskRewardMap[motorTaskTreePb.TreeId] = motorTaskTreePb.TpRewarded;
-			this.UpdateOneTreeTask(motorTaskTreePb.Tasks.ToArray<MotorTaskPb>());
+			this.UpdateOneTreeTask(motorTaskTreePb.Tasks);
 		}
 	}
 
-	// Token: 0x060112D5 RID: 70357 RVA: 0x0042FB98 File Offset: 0x0042DD98
+	// Token: 0x0600E76B RID: 59243 RVA: 0x0043C7A4 File Offset: 0x0043A9A4
 	[NullableContext(2)]
 	public MotorTechTaskNode GetTaskNodeInfo(int taskId)
 	{
@@ -951,7 +950,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060112D6 RID: 70358 RVA: 0x0042FBB8 File Offset: 0x0042DDB8
+	// Token: 0x0600E76C RID: 59244 RVA: 0x0043C7C4 File Offset: 0x0043A9C4
 	public List<MotorTechTaskNode> GetTaskListByTree(int treeType)
 	{
 		List<MotorTechTaskNode> list = new List<MotorTechTaskNode>();
@@ -1008,7 +1007,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060112D7 RID: 70359 RVA: 0x0042FCB4 File Offset: 0x0042DEB4
+	// Token: 0x0600E76D RID: 59245 RVA: 0x0043C8C0 File Offset: 0x0043AAC0
 	public int[] GetWaitRewardTaskIds(int treeType)
 	{
 		List<int> list = new List<int>();
@@ -1022,7 +1021,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x060112D8 RID: 70360 RVA: 0x0042FD28 File Offset: 0x0042DF28
+	// Token: 0x0600E76E RID: 59246 RVA: 0x0043C934 File Offset: 0x0043AB34
 	public int GetCostPointByTree(int treeType)
 	{
 		int num = 0;
@@ -1045,7 +1044,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x060112D9 RID: 70361 RVA: 0x0042FDE4 File Offset: 0x0042DFE4
+	// Token: 0x0600E76F RID: 59247 RVA: 0x0043C9F0 File Offset: 0x0043ABF0
 	public int GetFreePointByTree(int treeType)
 	{
 		MotorTechTree? motorTechTreeConfig = MotorConfig.Instance.GetMotorTechTreeConfig(treeType);
@@ -1056,7 +1055,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return InventoryModel.Instance.GetItemCountByConfigId(motorTechTreeConfig.Value.TpItemId, 0);
 	}
 
-	// Token: 0x060112DA RID: 70362 RVA: 0x0042FE24 File Offset: 0x0042E024
+	// Token: 0x0600E770 RID: 59248 RVA: 0x0043CA30 File Offset: 0x0043AC30
 	public int GetTotalPointByTree(int treeType)
 	{
 		int result = 0;
@@ -1068,7 +1067,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060112DB RID: 70363 RVA: 0x0042FE5C File Offset: 0x0042E05C
+	// Token: 0x0600E771 RID: 59249 RVA: 0x0043CA68 File Offset: 0x0043AC68
 	public bool IsOverLimitPointNum(int treeType)
 	{
 		int costPointByTree = this.GetCostPointByTree(treeType);
@@ -1077,7 +1076,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return costPointByTree + freePointByTree >= totalPointByTree;
 	}
 
-	// Token: 0x060112DC RID: 70364 RVA: 0x0042FE88 File Offset: 0x0042E088
+	// Token: 0x0600E772 RID: 59250 RVA: 0x0043CA94 File Offset: 0x0043AC94
 	public bool RedDotCanGetAnyTaskReward()
 	{
 		foreach (int value in this.GetActivatedTreeTypeList())
@@ -1090,7 +1089,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060112DD RID: 70365 RVA: 0x0042FEEC File Offset: 0x0042E0EC
+	// Token: 0x0600E773 RID: 59251 RVA: 0x0043CAF8 File Offset: 0x0043ACF8
 	public bool RedDotCanGetTaskReward(int? treeType)
 	{
 		if (treeType != null && this.IsOverLimitPointNum(treeType.Value))
@@ -1107,7 +1106,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060112DE RID: 70366 RVA: 0x0042FF8C File Offset: 0x0042E18C
+	// Token: 0x0600E774 RID: 59252 RVA: 0x0043CB98 File Offset: 0x0043AD98
 	public void StartSwitchTechTreeLockTimer(int duration)
 	{
 		this.RemoveSwitchTechTreeLockTimer();
@@ -1117,7 +1116,7 @@ public class MotorcycleDevelopModel : ModelBase
 		}, (float)(duration * 1000), null, null, true, 1f);
 	}
 
-	// Token: 0x060112DF RID: 70367 RVA: 0x0042FFC0 File Offset: 0x0042E1C0
+	// Token: 0x0600E775 RID: 59253 RVA: 0x0043CBCC File Offset: 0x0043ADCC
 	public void RemoveSwitchTechTreeLockTimer()
 	{
 		if (this.SwitchTechTreeLockTimerId != null)
@@ -1127,13 +1126,13 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112E0 RID: 70368 RVA: 0x0042FFE2 File Offset: 0x0042E1E2
+	// Token: 0x0600E776 RID: 59254 RVA: 0x0043CBEE File Offset: 0x0043ADEE
 	public bool IsSwitchTechTreeTimeLocked()
 	{
 		return this.SwitchTechTreeLockTimerId != null;
 	}
 
-	// Token: 0x060112E1 RID: 70369 RVA: 0x0042FFF0 File Offset: 0x0042E1F0
+	// Token: 0x0600E777 RID: 59255 RVA: 0x0043CBFC File Offset: 0x0043ADFC
 	public bool IsSwitchTechTreePlayerLocked()
 	{
 		BaseTagComponent component = SceneTeamModel.Instance.GetCurrentEntity.Entity.GetComponent<BaseTagComponent>();
@@ -1150,8 +1149,8 @@ public class MotorcycleDevelopModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x170015EF RID: 5615
-	// (get) Token: 0x060112E2 RID: 70370 RVA: 0x004300B8 File Offset: 0x0042E2B8
+	// Token: 0x17001626 RID: 5670
+	// (get) Token: 0x0600E778 RID: 59256 RVA: 0x0043CCC4 File Offset: 0x0043AEC4
 	public static MotorcycleDevelopModel Instance
 	{
 		get
@@ -1160,7 +1159,7 @@ public class MotorcycleDevelopModel : ModelBase
 		}
 	}
 
-	// Token: 0x060112E3 RID: 70371 RVA: 0x004300BF File Offset: 0x0042E2BF
+	// Token: 0x0600E779 RID: 59257 RVA: 0x0043CCCB File Offset: 0x0043AECB
 	public static MotorcycleDevelopModel GetOrCreateInstance()
 	{
 		if (MotorcycleDevelopModel._Instance == null)
@@ -1170,7 +1169,7 @@ public class MotorcycleDevelopModel : ModelBase
 		return MotorcycleDevelopModel._Instance;
 	}
 
-	// Token: 0x060112E4 RID: 70372 RVA: 0x004300D3 File Offset: 0x0042E2D3
+	// Token: 0x0600E77A RID: 59258 RVA: 0x0043CCDF File Offset: 0x0043AEDF
 	public static bool CreateInstance()
 	{
 		if (MotorcycleDevelopModel._Instance != null)
@@ -1181,80 +1180,80 @@ public class MotorcycleDevelopModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060112E5 RID: 70373 RVA: 0x004300E9 File Offset: 0x0042E2E9
+	// Token: 0x0600E77B RID: 59259 RVA: 0x0043CCF5 File Offset: 0x0043AEF5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060112E6 RID: 70374 RVA: 0x004300EB File Offset: 0x0042E2EB
+	// Token: 0x0600E77C RID: 59260 RVA: 0x0043CCF7 File Offset: 0x0043AEF7
 	public static void ResetStaticDefaultValue()
 	{
 		MotorcycleDevelopModel._Instance = null;
 	}
 
-	// Token: 0x060112E7 RID: 70375 RVA: 0x004300F3 File Offset: 0x0042E2F3
+	// Token: 0x0600E77D RID: 59261 RVA: 0x0043CCFF File Offset: 0x0043AEFF
 	static MotorcycleDevelopModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleDevelopModel.CreateStaticDefaultValue), new Action(MotorcycleDevelopModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040082B6 RID: 33462
+	// Token: 0x040083F4 RID: 33780
 	private int LastLevel = -1;
 
-	// Token: 0x040082B7 RID: 33463
+	// Token: 0x040083F5 RID: 33781
 	private int LastExp = -1;
 
-	// Token: 0x040082B8 RID: 33464
+	// Token: 0x040083F6 RID: 33782
 	private int DailyLimitExp;
 
-	// Token: 0x040082B9 RID: 33465
+	// Token: 0x040083F7 RID: 33783
 	private int DailyLimitMaxExp;
 
-	// Token: 0x040082BA RID: 33466
+	// Token: 0x040083F8 RID: 33784
 	private bool IsFirstDailyExpLimit;
 
-	// Token: 0x040082BB RID: 33467
+	// Token: 0x040083F9 RID: 33785
 	private int CurLevel = 1;
 
-	// Token: 0x040082BC RID: 33468
+	// Token: 0x040083FA RID: 33786
 	private int CurExp;
 
-	// Token: 0x040082BD RID: 33469
+	// Token: 0x040083FB RID: 33787
 	private int CurRewardedMaxLv;
 
-	// Token: 0x040082BE RID: 33470
+	// Token: 0x040083FC RID: 33788
 	[Nullable(2)]
 	private ILevelUpViewViedData CacheLvUpData;
 
-	// Token: 0x040082BF RID: 33471
+	// Token: 0x040083FD RID: 33789
 	private readonly string ModifierHandle = "MotorLevel";
 
-	// Token: 0x040082C0 RID: 33472
+	// Token: 0x040083FE RID: 33790
 	private int CurTreeType;
 
-	// Token: 0x040082C1 RID: 33473
+	// Token: 0x040083FF RID: 33791
 	private int SelectedTreeType;
 
-	// Token: 0x040082C2 RID: 33474
+	// Token: 0x04008400 RID: 33792
 	private readonly List<int> UnlockTreeTypeList = new List<int>();
 
-	// Token: 0x040082C3 RID: 33475
+	// Token: 0x04008401 RID: 33793
 	public Dictionary<int, MotorTechTreeNode> TechNodeMap = new Dictionary<int, MotorTechTreeNode>();
 
-	// Token: 0x040082C4 RID: 33476
+	// Token: 0x04008402 RID: 33794
 	public Dictionary<long, int> DamgeIdToSkillLevel = new Dictionary<long, int>();
 
-	// Token: 0x040082C5 RID: 33477
+	// Token: 0x04008403 RID: 33795
 	private readonly Dictionary<int, int> TaskRewardMap = new Dictionary<int, int>();
 
-	// Token: 0x040082C6 RID: 33478
+	// Token: 0x04008404 RID: 33796
 	private readonly Dictionary<int, MotorTechTaskNode> TaskNodeMap = new Dictionary<int, MotorTechTaskNode>();
 
-	// Token: 0x040082C7 RID: 33479
+	// Token: 0x04008405 RID: 33797
 	[Nullable(2)]
 	private TimerHandle SwitchTechTreeLockTimerId;
 
-	// Token: 0x040082C8 RID: 33480
+	// Token: 0x04008406 RID: 33798
 	[Nullable(2)]
 	private static MotorcycleDevelopModel _Instance;
 }

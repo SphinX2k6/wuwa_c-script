@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 {
-	// Token: 0x02005287 RID: 21127
+	// Token: 0x02004257 RID: 16983
 	public enum EBuffShowType
 	{
-		// Token: 0x0401C9BA RID: 117178
+		// Token: 0x040173EF RID: 95215
 		None,
-		// Token: 0x0401C9BB RID: 117179
+		// Token: 0x040173F0 RID: 95216
 		UpGrade,
-		// Token: 0x0401C9BC RID: 117180
+		// Token: 0x040173F1 RID: 95217
 		DownGrade
 	}
 }

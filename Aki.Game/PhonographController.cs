@@ -10,25 +10,25 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x0200254D RID: 9549
+// Token: 0x02001A38 RID: 6712
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PhonographController : UiControllerBase
 {
-	// Token: 0x060133B3 RID: 78771 RVA: 0x004C85BB File Offset: 0x004C67BB
+	// Token: 0x06010893 RID: 67731 RVA: 0x004D7137 File Offset: 0x004D5337
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.PhantomMusicNotify, new Action<IMessage, Net.CallbackStatus>(this.OnPhantomMusicNotify));
 	}
 
-	// Token: 0x060133B4 RID: 78772 RVA: 0x004C85D9 File Offset: 0x004C67D9
+	// Token: 0x06010894 RID: 67732 RVA: 0x004D7155 File Offset: 0x004D5355
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.PhantomMusicNotify);
 	}
 
-	// Token: 0x060133B5 RID: 78773 RVA: 0x004C85EB File Offset: 0x004C67EB
+	// Token: 0x06010895 RID: 67733 RVA: 0x004D7167 File Offset: 0x004D5367
 	protected override bool OnLeaveLevel()
 	{
 		PhonographModel.Instance.GlobalMusicId = 0;
@@ -36,7 +36,7 @@ public class PhonographController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060133B6 RID: 78774 RVA: 0x004C8600 File Offset: 0x004C6800
+	// Token: 0x06010896 RID: 67734 RVA: 0x004D717C File Offset: 0x004D537C
 	[NullableContext(0)]
 	public UniTask<bool> UnlockMusicRequest([Nullable(1)] List<int> itemList)
 	{
@@ -49,7 +49,7 @@ public class PhonographController : UiControllerBase
 		return <UnlockMusicRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060133B7 RID: 78775 RVA: 0x004C864C File Offset: 0x004C684C
+	// Token: 0x06010897 RID: 67735 RVA: 0x004D71C8 File Offset: 0x004D53C8
 	public void SendMusicSaveRequest(int musicId)
 	{
 		PhantomMusicSaveRequest phantomMusicSaveRequest = PhantomMusicSaveRequest.Create();
@@ -59,12 +59,12 @@ public class PhonographController : UiControllerBase
 			PhantomMusicSaveResponse phantomMusicSaveResponse = (PhantomMusicSaveResponse)msg;
 			if (phantomMusicSaveResponse != null && phantomMusicSaveResponse.ErrCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomMusicSaveResponse.ErrCode, 25322, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomMusicSaveResponse.ErrCode, 17072, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x060133B8 RID: 78776 RVA: 0x004C8698 File Offset: 0x004C6898
+	// Token: 0x06010898 RID: 67736 RVA: 0x004D7214 File Offset: 0x004D5414
 	[NullableContext(2)]
 	private void OnPhantomMusicNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -79,13 +79,13 @@ public class PhonographController : UiControllerBase
 		this.PlayGlobalMusic(phantomMusicNotify.Music, true);
 	}
 
-	// Token: 0x060133B9 RID: 78777 RVA: 0x004C86FB File Offset: 0x004C68FB
+	// Token: 0x06010899 RID: 67737 RVA: 0x004D7277 File Offset: 0x004D5477
 	public void OpenView()
 	{
 		UiManager.Instance.OpenView(EUiViewName.PhonographView, null, null);
 	}
 
-	// Token: 0x060133BA RID: 78778 RVA: 0x004C8710 File Offset: 0x004C6910
+	// Token: 0x0601089A RID: 67738 RVA: 0x004D728C File Offset: 0x004D548C
 	public void SwitchMusicRequest(int musicId, Action callback)
 	{
 		PhantomMusicSwitchRequest phantomMusicSwitchRequest = PhantomMusicSwitchRequest.Create();
@@ -102,7 +102,7 @@ public class PhonographController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060133BB RID: 78779 RVA: 0x004C8760 File Offset: 0x004C6960
+	// Token: 0x0601089B RID: 67739 RVA: 0x004D72DC File Offset: 0x004D54DC
 	public int PlayMusic(int musicId, bool isGlobal = false)
 	{
 		if (musicId != 0 && this.IsMusicAlbumExpired(musicId))
@@ -153,7 +153,7 @@ public class PhonographController : UiControllerBase
 		return handleId;
 	}
 
-	// Token: 0x060133BC RID: 78780 RVA: 0x004C88B8 File Offset: 0x004C6AB8
+	// Token: 0x0601089C RID: 67740 RVA: 0x004D7434 File Offset: 0x004D5634
 	public int PlayGlobalMusic(int musicId, bool isForce = false)
 	{
 		if (musicId == 0)
@@ -195,7 +195,7 @@ public class PhonographController : UiControllerBase
 		return handleId;
 	}
 
-	// Token: 0x060133BD RID: 78781 RVA: 0x004C89E4 File Offset: 0x004C6BE4
+	// Token: 0x0601089D RID: 67741 RVA: 0x004D7560 File Offset: 0x004D5760
 	private void OnMusicEnd()
 	{
 		int currentPlayMusicId = PhonographModel.Instance.CurrentPlayMusicId;
@@ -207,7 +207,7 @@ public class PhonographController : UiControllerBase
 		this.ContinuePlayAfterMusicEnd();
 	}
 
-	// Token: 0x060133BE RID: 78782 RVA: 0x004C8A18 File Offset: 0x004C6C18
+	// Token: 0x0601089E RID: 67742 RVA: 0x004D7594 File Offset: 0x004D5794
 	public bool IsMusicAlbumExpired(int musicId)
 	{
 		PhonographConfig instance = PhonographConfig.Instance;
@@ -227,7 +227,7 @@ public class PhonographController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x060133BF RID: 78783 RVA: 0x004C8A7C File Offset: 0x004C6C7C
+	// Token: 0x0601089F RID: 67743 RVA: 0x004D75F8 File Offset: 0x004D57F8
 	private void ContinuePlayAfterMusicEnd()
 	{
 		if (PhonographModel.Instance.CurrentPlayMusicId == 0)
@@ -243,7 +243,7 @@ public class PhonographController : UiControllerBase
 		this.PlayGlobalMusic(PhonographModel.Instance.GlobalMusicId, true);
 	}
 
-	// Token: 0x060133C0 RID: 78784 RVA: 0x004C8AB8 File Offset: 0x004C6CB8
+	// Token: 0x060108A0 RID: 67744 RVA: 0x004D7634 File Offset: 0x004D5834
 	private void HandleTimeLimitMusicExpired(int expiredMusicId)
 	{
 		this.StopMusic(true);
@@ -263,7 +263,7 @@ public class PhonographController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060133C1 RID: 78785 RVA: 0x004C8B3C File Offset: 0x004C6D3C
+	// Token: 0x060108A1 RID: 67745 RVA: 0x004D76B8 File Offset: 0x004D58B8
 	public void StopMusic(bool isEmit = true)
 	{
 		AudioSystem.Instance.SetRtpcValue("phonograph_switch_to_2d", 0f, null);
@@ -288,7 +288,7 @@ public class PhonographController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060133C2 RID: 78786 RVA: 0x004C8C08 File Offset: 0x004C6E08
+	// Token: 0x060108A2 RID: 67746 RVA: 0x004D7784 File Offset: 0x004D5984
 	public void PlayMusicByEntityId(int entityId)
 	{
 		int playIdRecord = PhonographModel.Instance.GetPlayIdRecord(entityId);
@@ -323,7 +323,7 @@ public class PhonographController : UiControllerBase
 		PhonographModel.Instance.SetPlayIdRecord(entityId, musicId);
 	}
 
-	// Token: 0x060133C3 RID: 78787 RVA: 0x004C8CDC File Offset: 0x004C6EDC
+	// Token: 0x060108A3 RID: 67747 RVA: 0x004D7858 File Offset: 0x004D5A58
 	public void StopMusicByEntityId(int entityId)
 	{
 		int playIdRecord = PhonographModel.Instance.GetPlayIdRecord(entityId);
@@ -334,8 +334,8 @@ public class PhonographController : UiControllerBase
 		}
 	}
 
-	// Token: 0x170018D9 RID: 6361
-	// (get) Token: 0x060133C4 RID: 78788 RVA: 0x004C8D18 File Offset: 0x004C6F18
+	// Token: 0x17001912 RID: 6418
+	// (get) Token: 0x060108A4 RID: 67748 RVA: 0x004D7894 File Offset: 0x004D5A94
 	public static PhonographController Instance
 	{
 		get
@@ -344,7 +344,7 @@ public class PhonographController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060133C5 RID: 78789 RVA: 0x004C8D1F File Offset: 0x004C6F1F
+	// Token: 0x060108A5 RID: 67749 RVA: 0x004D789B File Offset: 0x004D5A9B
 	public static PhonographController GetOrCreateInstance()
 	{
 		if (PhonographController._Instance == null)
@@ -354,7 +354,7 @@ public class PhonographController : UiControllerBase
 		return PhonographController._Instance;
 	}
 
-	// Token: 0x060133C6 RID: 78790 RVA: 0x004C8D33 File Offset: 0x004C6F33
+	// Token: 0x060108A6 RID: 67750 RVA: 0x004D78AF File Offset: 0x004D5AAF
 	public static bool CreateInstance()
 	{
 		if (PhonographController._Instance != null)
@@ -365,24 +365,24 @@ public class PhonographController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060133C7 RID: 78791 RVA: 0x004C8D49 File Offset: 0x004C6F49
+	// Token: 0x060108A7 RID: 67751 RVA: 0x004D78C5 File Offset: 0x004D5AC5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060133C8 RID: 78792 RVA: 0x004C8D4B File Offset: 0x004C6F4B
+	// Token: 0x060108A8 RID: 67752 RVA: 0x004D78C7 File Offset: 0x004D5AC7
 	public static void ResetStaticDefaultValue()
 	{
 		PhonographController._Instance = null;
 	}
 
-	// Token: 0x060133C9 RID: 78793 RVA: 0x004C8D53 File Offset: 0x004C6F53
+	// Token: 0x060108A9 RID: 67753 RVA: 0x004D78CF File Offset: 0x004D5ACF
 	static PhonographController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhonographController.CreateStaticDefaultValue), new Action(PhonographController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009137 RID: 37175
+	// Token: 0x04009290 RID: 37520
 	[Nullable(2)]
 	private static PhonographController _Instance;
 }

@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Data.UiRoleCamera.Struct;
-using CSharpScript.Game.Module.Common.UiCamera;
+using CSharpScript.Game.Module.LinkedItem;
 using CSharpScript.Game.Module.Skin;
+using CSharpScript.Game.Module.UiCamera;
 using UnrealEngine;
 
-// Token: 0x02002A56 RID: 10838
+// Token: 0x02001FD1 RID: 8145
 [NullableContext(1)]
 [Nullable(0)]
 public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 {
-	// Token: 0x06016956 RID: 92502 RVA: 0x005B93F8 File Offset: 0x005B75F8
+	// Token: 0x06014377 RID: 82807 RVA: 0x005E5558 File Offset: 0x005E3758
 	public FlySkinTabViewModel()
 	{
 		List<FlySkinGridData> value = new List<FlySkinGridData>();
@@ -21,8 +22,8 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		this.DataMap.Add(EFlySkinViewData.SelectedGridIndex, -1);
 	}
 
-	// Token: 0x17001DF6 RID: 7670
-	// (get) Token: 0x06016957 RID: 92503 RVA: 0x005B9468 File Offset: 0x005B7668
+	// Token: 0x17001E4E RID: 7758
+	// (get) Token: 0x06014378 RID: 82808 RVA: 0x005E55C8 File Offset: 0x005E37C8
 	public int RoleDataId
 	{
 		get
@@ -31,8 +32,8 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		}
 	}
 
-	// Token: 0x17001DF7 RID: 7671
-	// (get) Token: 0x06016958 RID: 92504 RVA: 0x005B9470 File Offset: 0x005B7670
+	// Token: 0x17001E4F RID: 7759
+	// (get) Token: 0x06014379 RID: 82809 RVA: 0x005E55D0 File Offset: 0x005E37D0
 	public EFlySkinType SelectedFlySkinType
 	{
 		get
@@ -41,8 +42,8 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		}
 	}
 
-	// Token: 0x17001DF8 RID: 7672
-	// (get) Token: 0x06016959 RID: 92505 RVA: 0x005B9478 File Offset: 0x005B7678
+	// Token: 0x17001E50 RID: 7760
+	// (get) Token: 0x0601437A RID: 82810 RVA: 0x005E55D8 File Offset: 0x005E37D8
 	public int SelectedFlySkinId
 	{
 		get
@@ -51,8 +52,8 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		}
 	}
 
-	// Token: 0x17001DF9 RID: 7673
-	// (get) Token: 0x0601695A RID: 92506 RVA: 0x005B9480 File Offset: 0x005B7680
+	// Token: 0x17001E51 RID: 7761
+	// (get) Token: 0x0601437B RID: 82811 RVA: 0x005E55E0 File Offset: 0x005E37E0
 	public FlySkinGridData SelectedGridData
 	{
 		get
@@ -61,8 +62,8 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		}
 	}
 
-	// Token: 0x17001DFA RID: 7674
-	// (get) Token: 0x0601695B RID: 92507 RVA: 0x005B9488 File Offset: 0x005B7688
+	// Token: 0x17001E52 RID: 7762
+	// (get) Token: 0x0601437C RID: 82812 RVA: 0x005E55E8 File Offset: 0x005E37E8
 	public List<IFlySkinGetWayData> GetWayDataList
 	{
 		get
@@ -71,8 +72,8 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		}
 	}
 
-	// Token: 0x17001DFB RID: 7675
-	// (get) Token: 0x0601695C RID: 92508 RVA: 0x005B9490 File Offset: 0x005B7690
+	// Token: 0x17001E53 RID: 7763
+	// (get) Token: 0x0601437D RID: 82813 RVA: 0x005E55F0 File Offset: 0x005E37F0
 	public string ModelCase
 	{
 		get
@@ -81,37 +82,37 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		}
 	}
 
-	// Token: 0x0601695D RID: 92509 RVA: 0x005B9498 File Offset: 0x005B7698
+	// Token: 0x0601437E RID: 82814 RVA: 0x005E55F8 File Offset: 0x005E37F8
 	public List<FlySkinGridData> GetGridDataList()
 	{
 		return base.GetData(EFlySkinViewData.GridDataList) as List<FlySkinGridData>;
 	}
 
-	// Token: 0x0601695E RID: 92510 RVA: 0x005B94A6 File Offset: 0x005B76A6
+	// Token: 0x0601437F RID: 82815 RVA: 0x005E5606 File Offset: 0x005E3806
 	public void SetSelectedTab(EFlySkinTab? selectedTab, bool? notNotify = false)
 	{
 		base.SetData(EFlySkinViewData.SelectedTab, selectedTab, notNotify);
 	}
 
-	// Token: 0x0601695F RID: 92511 RVA: 0x005B94B6 File Offset: 0x005B76B6
+	// Token: 0x06014380 RID: 82816 RVA: 0x005E5616 File Offset: 0x005E3816
 	public EFlySkinTab? GetSelectedTab()
 	{
 		return base.GetData(EFlySkinViewData.SelectedTab) as EFlySkinTab?;
 	}
 
-	// Token: 0x06016960 RID: 92512 RVA: 0x005B94C9 File Offset: 0x005B76C9
+	// Token: 0x06014381 RID: 82817 RVA: 0x005E5629 File Offset: 0x005E3829
 	public void SetSelectedGridIndex(int gridIndex, bool? notNotify = false)
 	{
 		base.SetData(EFlySkinViewData.SelectedGridIndex, gridIndex, notNotify);
 	}
 
-	// Token: 0x06016961 RID: 92513 RVA: 0x005B94D9 File Offset: 0x005B76D9
+	// Token: 0x06014382 RID: 82818 RVA: 0x005E5639 File Offset: 0x005E3839
 	public int GetSelectedGridIndex()
 	{
 		return (int)base.GetData(EFlySkinViewData.SelectedGridIndex);
 	}
 
-	// Token: 0x06016962 RID: 92514 RVA: 0x005B94E8 File Offset: 0x005B76E8
+	// Token: 0x06014383 RID: 82819 RVA: 0x005E5648 File Offset: 0x005E3848
 	public void Init(ISkinViewData viewData)
 	{
 		this.RoleDataIdInternal = viewData.RoleId;
@@ -120,7 +121,7 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		this.SetSelectedTab(new EFlySkinTab?(valueOrDefault), new bool?(false));
 	}
 
-	// Token: 0x06016963 RID: 92515 RVA: 0x005B9538 File Offset: 0x005B7738
+	// Token: 0x06014384 RID: 82820 RVA: 0x005E5698 File Offset: 0x005E3898
 	public void SelectTab(EFlySkinTab tab)
 	{
 		this.SelectedFlySkinTypeInternal = FlySkinDefine.flySkinTabToType[tab];
@@ -130,7 +131,7 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		this.SetSelectedTab(new EFlySkinTab?(tab), new bool?(false));
 	}
 
-	// Token: 0x06016964 RID: 92516 RVA: 0x005B9594 File Offset: 0x005B7794
+	// Token: 0x06014385 RID: 82821 RVA: 0x005E56F4 File Offset: 0x005E38F4
 	public void UpdateGridData()
 	{
 		List<FlySkinGridData> gridDataList = this.GetGridDataList();
@@ -141,7 +142,10 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		foreach (FlySkinConfig value in SkinConfig.Instance.GetFlySkinConfigListByType(selectedFlySkinTypeInternal))
 		{
 			FlySkinGridData item = new FlySkinGridData(value.Id, this.RoleDataIdInternal, selectedFlySkinTypeInternal, new FlySkinConfig?(value));
-			gridDataList.Add(item);
+			if (!LinkedItemConfig.Instance.ShouldHide(value.Id, FlySkinModel.Instance.CheckSkinIsUnlock(value.Id)))
+			{
+				gridDataList.Add(item);
+			}
 		}
 		gridDataList.Sort(delegate(FlySkinGridData a, FlySkinGridData b)
 		{
@@ -177,7 +181,7 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		base.SetData(EFlySkinViewData.GridDataList, gridDataList, new bool?(false));
 	}
 
-	// Token: 0x06016965 RID: 92517 RVA: 0x005B96A4 File Offset: 0x005B78A4
+	// Token: 0x06014386 RID: 82822 RVA: 0x005E5828 File Offset: 0x005E3A28
 	public int? GetGridIndexBySkinId(int skinId)
 	{
 		int value;
@@ -188,7 +192,7 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		return null;
 	}
 
-	// Token: 0x06016966 RID: 92518 RVA: 0x005B96D4 File Offset: 0x005B78D4
+	// Token: 0x06014387 RID: 82823 RVA: 0x005E5858 File Offset: 0x005E3A58
 	public void SelectGridByIndex(int index)
 	{
 		this.SelectedGridDataInternal = this.GetGridDataList()[index];
@@ -198,7 +202,7 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		this.SetSelectedGridIndex(index, new bool?(false));
 	}
 
-	// Token: 0x06016967 RID: 92519 RVA: 0x005B9744 File Offset: 0x005B7944
+	// Token: 0x06014388 RID: 82824 RVA: 0x005E58C8 File Offset: 0x005E3AC8
 	public void UpdateGetWayDataList()
 	{
 		this.GetWayDataListInternal = new List<IFlySkinGetWayData>();
@@ -236,32 +240,32 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		});
 	}
 
-	// Token: 0x06016968 RID: 92520 RVA: 0x005B984E File Offset: 0x005B7A4E
+	// Token: 0x06014389 RID: 82825 RVA: 0x005E59D2 File Offset: 0x005E3BD2
 	public void SetUiShowState(bool state)
 	{
 		this.UiShowState = state;
 	}
 
-	// Token: 0x06016969 RID: 92521 RVA: 0x005B9857 File Offset: 0x005B7A57
+	// Token: 0x0601438A RID: 82826 RVA: 0x005E59DB File Offset: 0x005E3BDB
 	public void SetIsApplyToAll(bool value)
 	{
 		this.IsApplyToAll = value;
 	}
 
-	// Token: 0x0601696A RID: 92522 RVA: 0x005B9860 File Offset: 0x005B7A60
+	// Token: 0x0601438B RID: 82827 RVA: 0x005E59E4 File Offset: 0x005E3BE4
 	public void ResetSelectedTab()
 	{
 		this.SetSelectedTab(null, new bool?(false));
 		this.SetSelectedGridIndex(-1, new bool?(false));
 	}
 
-	// Token: 0x0601696B RID: 92523 RVA: 0x005B9890 File Offset: 0x005B7A90
-	public IUiCameraInputComponentData GetFlySkinTabCameraInputData(UUIDraggableComponent dragItem)
+	// Token: 0x0601438C RID: 82828 RVA: 0x005E5A14 File Offset: 0x005E3C14
+	public UiCameraInputBindingData GetFlySkinTabCameraInputData(UUIDraggableComponent dragItem)
 	{
 		string rowName = "翱翔滑翔皮肤旋转查看";
 		SUiRoleCameraSetting value = UiRoleCameraConfig.Instance.GetRoleCameraConfig(rowName).Value;
 		FVectorDouble fvectorDouble = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName(this.ModelCaseInternal).Value, ECollectActorType.UI).D_K2_GetActorLocation();
-		return new UiCameraInputComponentData
+		return new UiCameraInputBindingData
 		{
 			DragComponent = dragItem,
 			CameraSettingConfig = value,
@@ -269,33 +273,33 @@ public class FlySkinTabViewModel : global::ViewModelBase<EFlySkinViewData>
 		};
 	}
 
-	// Token: 0x0400A797 RID: 42903
+	// Token: 0x0400AB9B RID: 43931
 	private int RoleDataIdInternal;
 
-	// Token: 0x0400A798 RID: 42904
+	// Token: 0x0400AB9C RID: 43932
 	private EFlySkinType SelectedFlySkinTypeInternal = EFlySkinType.Paragliding;
 
-	// Token: 0x0400A799 RID: 42905
+	// Token: 0x0400AB9D RID: 43933
 	private int SelectedFlySkinIdInternal = -1;
 
-	// Token: 0x0400A79A RID: 42906
+	// Token: 0x0400AB9E RID: 43934
 	private FlySkinConfig? SelectedFlySkinConfigInternal;
 
-	// Token: 0x0400A79B RID: 42907
+	// Token: 0x0400AB9F RID: 43935
 	private FlySkinGridData SelectedGridDataInternal;
 
-	// Token: 0x0400A79C RID: 42908
+	// Token: 0x0400ABA0 RID: 43936
 	private readonly Dictionary<int, int> SkinIdToGridIndexMapInternal = new Dictionary<int, int>();
 
-	// Token: 0x0400A79D RID: 42909
+	// Token: 0x0400ABA1 RID: 43937
 	private List<IFlySkinGetWayData> GetWayDataListInternal;
 
-	// Token: 0x0400A79E RID: 42910
+	// Token: 0x0400ABA2 RID: 43938
 	private string ModelCaseInternal = "";
 
-	// Token: 0x0400A79F RID: 42911
+	// Token: 0x0400ABA3 RID: 43939
 	public bool UiShowState = true;
 
-	// Token: 0x0400A7A0 RID: 42912
+	// Token: 0x0400ABA4 RID: 43940
 	public bool IsApplyToAll;
 }

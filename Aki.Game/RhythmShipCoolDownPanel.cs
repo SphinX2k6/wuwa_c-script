@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200108C RID: 4236
+// Token: 0x02000540 RID: 1344
 [NullableContext(2)]
 [Nullable(0)]
 public class RhythmShipCoolDownPanel : UiPanelBase
 {
-	// Token: 0x06006E46 RID: 28230 RVA: 0x00167694 File Offset: 0x00165894
+	// Token: 0x060041DB RID: 16859 RVA: 0x0016FFC8 File Offset: 0x0016E1C8
 	protected override void OnBeforeCreate()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -20,7 +20,7 @@ public class RhythmShipCoolDownPanel : UiPanelBase
 		rootItem.SetUIActive(false);
 	}
 
-	// Token: 0x06006E47 RID: 28231 RVA: 0x001676B8 File Offset: 0x001658B8
+	// Token: 0x060041DC RID: 16860 RVA: 0x0016FFEC File Offset: 0x0016E1EC
 	public void PlayCoolDownSequence(TTimerAction callback)
 	{
 		UUIItem rootItem = this.RootItem;
@@ -40,7 +40,7 @@ public class RhythmShipCoolDownPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006E48 RID: 28232 RVA: 0x00167728 File Offset: 0x00165928
+	// Token: 0x060041DD RID: 16861 RVA: 0x0017005C File Offset: 0x0016E25C
 	public void StopCoolDownSequence()
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -56,12 +56,12 @@ public class RhythmShipCoolDownPanel : UiPanelBase
 		this.Callback = null;
 	}
 
-	// Token: 0x04003306 RID: 13062
+	// Token: 0x0400339F RID: 13215
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04003307 RID: 13063
+	// Token: 0x040033A0 RID: 13216
 	private TTimerAction Callback;
 
-	// Token: 0x04003308 RID: 13064
+	// Token: 0x040033A1 RID: 13217
 	private TimerHandle CallbackHandle;
 }

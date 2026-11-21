@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002D81 RID: 11649
+// Token: 0x020022DB RID: 8923
 [NullableContext(2)]
 [Nullable(0)]
 public class BulletActionBase
 {
-	// Token: 0x060187BC RID: 100284 RVA: 0x0063B2F4 File Offset: 0x006394F4
+	// Token: 0x0601605E RID: 90206 RVA: 0x00661304 File Offset: 0x0065F504
 	public BulletActionBase(EBulletAction type)
 	{
 		this.Type = type;
@@ -17,7 +17,7 @@ public class BulletActionBase
 		}
 	}
 
-	// Token: 0x060187BD RID: 100285 RVA: 0x0063B323 File Offset: 0x00639523
+	// Token: 0x0601605F RID: 90207 RVA: 0x00661333 File Offset: 0x0065F533
 	[NullableContext(1)]
 	public void Execute(BulletInfo bulletInfo, BulletActionInfoBase actionInfo)
 	{
@@ -26,34 +26,34 @@ public class BulletActionBase
 		this.OnExecute();
 	}
 
-	// Token: 0x060187BE RID: 100286 RVA: 0x0063B339 File Offset: 0x00639539
+	// Token: 0x06016060 RID: 90208 RVA: 0x00661349 File Offset: 0x0065F549
 	protected virtual void OnExecute()
 	{
 	}
 
-	// Token: 0x060187BF RID: 100287 RVA: 0x0063B33B File Offset: 0x0063953B
+	// Token: 0x06016061 RID: 90209 RVA: 0x0066134B File Offset: 0x0065F54B
 	public void Tick(float delta)
 	{
 		this.OnTick(delta);
 	}
 
-	// Token: 0x060187C0 RID: 100288 RVA: 0x0063B344 File Offset: 0x00639544
+	// Token: 0x06016062 RID: 90210 RVA: 0x00661354 File Offset: 0x0065F554
 	protected virtual void OnTick(float delta)
 	{
 	}
 
-	// Token: 0x060187C1 RID: 100289 RVA: 0x0063B346 File Offset: 0x00639546
+	// Token: 0x06016063 RID: 90211 RVA: 0x00661356 File Offset: 0x0065F556
 	public virtual void AfterTick(float delta)
 	{
 	}
 
-	// Token: 0x060187C2 RID: 100290 RVA: 0x0063B348 File Offset: 0x00639548
+	// Token: 0x06016064 RID: 90212 RVA: 0x00661358 File Offset: 0x0065F558
 	public BulletActionInfoBase GetActionInfo()
 	{
 		return this.ActionInfo;
 	}
 
-	// Token: 0x060187C3 RID: 100291 RVA: 0x0063B350 File Offset: 0x00639550
+	// Token: 0x06016065 RID: 90213 RVA: 0x00661360 File Offset: 0x0065F560
 	public virtual void Clear()
 	{
 		this.IsFinish = false;
@@ -61,24 +61,24 @@ public class BulletActionBase
 		this.ActionInfo = null;
 	}
 
-	// Token: 0x0400B574 RID: 46452
+	// Token: 0x0400B8E9 RID: 47337
 	public readonly EBulletAction Type;
 
-	// Token: 0x0400B575 RID: 46453
+	// Token: 0x0400B8EA RID: 47338
 	public bool IsInPool;
 
-	// Token: 0x0400B576 RID: 46454
+	// Token: 0x0400B8EB RID: 47339
 	public int Index;
 
-	// Token: 0x0400B577 RID: 46455
+	// Token: 0x0400B8EC RID: 47340
 	public bool IsFinish;
 
-	// Token: 0x0400B578 RID: 46456
+	// Token: 0x0400B8ED RID: 47341
 	public BulletInfo BulletInfo;
 
-	// Token: 0x0400B579 RID: 46457
+	// Token: 0x0400B8EE RID: 47342
 	public BulletActionInfoBase ActionInfo;
 
-	// Token: 0x0400B57A RID: 46458
+	// Token: 0x0400B8EF RID: 47343
 	private readonly Stat TickStat;
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FA3 RID: 4003
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010CD RID: 4301
 	public class IGetSkillQuestCondition : IQuestCondition
 	{
-		// Token: 0x0600592C RID: 22828 RVA: 0x000D95DC File Offset: 0x000D77DC
+		// Token: 0x06005F02 RID: 24322 RVA: 0x000E609C File Offset: 0x000E429C
 		private IGetSkillQuestCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600592D RID: 22829 RVA: 0x000D9614 File Offset: 0x000D7814
+		// Token: 0x06005F03 RID: 24323 RVA: 0x000E60D4 File Offset: 0x000E42D4
 		public static IGetSkillQuestCondition Create([Nullable(2)] IGetSkillQuestCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600592E RID: 22830 RVA: 0x000D9627 File Offset: 0x000D7827
+		// Token: 0x06005F04 RID: 24324 RVA: 0x000E60E7 File Offset: 0x000E42E7
 		public static IGetSkillQuestCondition CreateFromSetValue([Nullable(2)] IGetSkillQuestCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600592F RID: 22831 RVA: 0x000D963A File Offset: 0x000D783A
+		// Token: 0x06005F05 RID: 24325 RVA: 0x000E60FA File Offset: 0x000E42FA
 		public new IGetSkillQuestCondition_SetValue ToSetValue()
 		{
 			return new IGetSkillQuestCondition_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DA3 RID: 7587
-		// (get) Token: 0x06005930 RID: 22832 RVA: 0x000D9671 File Offset: 0x000D7871
-		// (set) Token: 0x06005931 RID: 22833 RVA: 0x000D969C File Offset: 0x000D789C
+		// Token: 0x17001F4A RID: 8010
+		// (get) Token: 0x06005F06 RID: 24326 RVA: 0x000E6131 File Offset: 0x000E4331
+		// (set) Token: 0x06005F07 RID: 24327 RVA: 0x000E615C File Offset: 0x000E435C
 		public override EChildQuest Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DA4 RID: 7588
-		// (get) Token: 0x06005932 RID: 22834 RVA: 0x000D96AC File Offset: 0x000D78AC
-		// (set) Token: 0x06005933 RID: 22835 RVA: 0x000D970D File Offset: 0x000D790D
+		// Token: 0x17001F4B RID: 8011
+		// (get) Token: 0x06005F08 RID: 24328 RVA: 0x000E616C File Offset: 0x000E436C
+		// (set) Token: 0x06005F09 RID: 24329 RVA: 0x000E61CD File Offset: 0x000E43CD
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -119,9 +117,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DA5 RID: 7589
-		// (get) Token: 0x06005934 RID: 22836 RVA: 0x000D9722 File Offset: 0x000D7922
-		// (set) Token: 0x06005935 RID: 22837 RVA: 0x000D974D File Offset: 0x000D794D
+		// Token: 0x17001F4C RID: 8012
+		// (get) Token: 0x06005F0A RID: 24330 RVA: 0x000E61E2 File Offset: 0x000E43E2
+		// (set) Token: 0x06005F0B RID: 24331 RVA: 0x000E620D File Offset: 0x000E440D
 		public virtual ESkillType SkillType
 		{
 			get
@@ -142,9 +140,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DA6 RID: 7590
-		// (get) Token: 0x06005936 RID: 22838 RVA: 0x000D975B File Offset: 0x000D795B
-		// (set) Token: 0x06005937 RID: 22839 RVA: 0x000D9786 File Offset: 0x000D7986
+		// Token: 0x17001F4D RID: 8013
+		// (get) Token: 0x06005F0C RID: 24332 RVA: 0x000E621B File Offset: 0x000E441B
+		// (set) Token: 0x06005F0D RID: 24333 RVA: 0x000E6246 File Offset: 0x000E4446
 		public virtual int SkillId
 		{
 			get
@@ -165,18 +163,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040035D6 RID: 13782
+		// Token: 0x04003908 RID: 14600
 		[Nullable(2)]
 		protected new IGetSkillQuestCondition FbInstance;
 
-		// Token: 0x040035D7 RID: 13783
+		// Token: 0x04003909 RID: 14601
 		[Nullable(2)]
 		protected new IGetSkillQuestCondition_SetValue PocoInterface;
 
-		// Token: 0x040035D8 RID: 13784
+		// Token: 0x0400390A RID: 14602
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040035D9 RID: 13785
+		// Token: 0x0400390B RID: 14603
 		private bool _PreConditionsInited;
 	}
 }

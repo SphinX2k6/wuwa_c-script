@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A22 RID: 10786
+	// Token: 0x02002D0F RID: 11535
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IBvbDeploy : IBvbPlayerOperationType
 	{
-		// Token: 0x0600EDB6 RID: 60854 RVA: 0x0022A37E File Offset: 0x0022857E
-		[NullableContext(1)]
+		// Token: 0x0600FC4E RID: 64590 RVA: 0x00247D31 File Offset: 0x00245F31
+		[NullableContext(0)]
 		public static IBvbDeploy Create(IBvbDeploy? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B34 RID: 19252
-		// (get) Token: 0x0600EDB7 RID: 60855 RVA: 0x0022A39D File Offset: 0x0022859D
+		// Token: 0x17004EDE RID: 20190
+		// (get) Token: 0x0600FC4F RID: 64591 RVA: 0x00247D50 File Offset: 0x00245F50
 		public override EBvbPlayerOperationType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B35 RID: 19253
-		// (get) Token: 0x0600EDB8 RID: 60856 RVA: 0x0022A3AC File Offset: 0x002285AC
+		// Token: 0x17004EDF RID: 20191
+		// (get) Token: 0x0600FC50 RID: 64592 RVA: 0x00247D60 File Offset: 0x00245F60
 		public virtual int? HandCardIndex
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B36 RID: 19254
-		// (get) Token: 0x0600EDB9 RID: 60857 RVA: 0x0022A3E4 File Offset: 0x002285E4
+		// Token: 0x17004EE0 RID: 20192
+		// (get) Token: 0x0600FC51 RID: 64593 RVA: 0x00247D98 File Offset: 0x00245F98
 		public virtual int? BoardPosIndex
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B37 RID: 19255
-		// (get) Token: 0x0600EDBA RID: 60858 RVA: 0x0022A41C File Offset: 0x0022861C
+		// Token: 0x17004EE1 RID: 20193
+		// (get) Token: 0x0600FC52 RID: 64594 RVA: 0x00247DD0 File Offset: 0x00245FD0
 		public virtual List<int> BoardPosIndexList
 		{
 			get
@@ -87,13 +87,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082D8 RID: 33496
+		// Token: 0x040089CB RID: 35275
 		private IBvbDeploy Instance;
 
-		// Token: 0x040082D9 RID: 33497
+		// Token: 0x040089CC RID: 35276
 		private List<int> _BoardPosIndexListCache;
 
-		// Token: 0x040082DA RID: 33498
+		// Token: 0x040089CD RID: 35277
 		private bool _BoardPosIndexListInited;
 	}
 }

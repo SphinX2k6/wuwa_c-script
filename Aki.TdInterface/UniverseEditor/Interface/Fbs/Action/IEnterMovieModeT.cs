@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066B5 RID: 26293
+	// Token: 0x02006D2F RID: 27951
 	public class IEnterMovieModeT
 	{
-		// Token: 0x1700C35C RID: 50012
-		// (get) Token: 0x0602DB4A RID: 187210 RVA: 0x00640F24 File Offset: 0x0063F124
-		// (set) Token: 0x0602DB4B RID: 187211 RVA: 0x00640F2C File Offset: 0x0063F12C
+		// Token: 0x1700CD0D RID: 52493
+		// (get) Token: 0x06030367 RID: 197479 RVA: 0x0068E1D8 File Offset: 0x0068C3D8
+		// (set) Token: 0x06030368 RID: 197480 RVA: 0x0068E1E0 File Offset: 0x0068C3E0
 		public IMovieCameraConfigT MovieCameraConfig { get; set; }
 
-		// Token: 0x1700C35D RID: 50013
-		// (get) Token: 0x0602DB4C RID: 187212 RVA: 0x00640F35 File Offset: 0x0063F135
-		// (set) Token: 0x0602DB4D RID: 187213 RVA: 0x00640F3D File Offset: 0x0063F13D
+		// Token: 0x1700CD0E RID: 52494
+		// (get) Token: 0x06030369 RID: 197481 RVA: 0x0068E1E9 File Offset: 0x0068C3E9
+		// (set) Token: 0x0603036A RID: 197482 RVA: 0x0068E1F1 File Offset: 0x0068C3F1
 		public IEnableFuncConfigT EnableFuncConfig { get; set; }
 
-		// Token: 0x1700C35E RID: 50014
-		// (get) Token: 0x0602DB4E RID: 187214 RVA: 0x00640F46 File Offset: 0x0063F146
-		// (set) Token: 0x0602DB4F RID: 187215 RVA: 0x00640F4E File Offset: 0x0063F14E
+		// Token: 0x1700CD0F RID: 52495
+		// (get) Token: 0x0603036B RID: 197483 RVA: 0x0068E1FA File Offset: 0x0068C3FA
+		// (set) Token: 0x0603036C RID: 197484 RVA: 0x0068E202 File Offset: 0x0068C402
 		public float BorderAnimDuration { get; set; }
 
-		// Token: 0x1700C35F RID: 50015
-		// (get) Token: 0x0602DB50 RID: 187216 RVA: 0x00640F57 File Offset: 0x0063F157
-		// (set) Token: 0x0602DB51 RID: 187217 RVA: 0x00640F5F File Offset: 0x0063F15F
+		// Token: 0x1700CD10 RID: 52496
+		// (get) Token: 0x0603036D RID: 197485 RVA: 0x0068E20B File Offset: 0x0068C40B
+		// (set) Token: 0x0603036E RID: 197486 RVA: 0x0068E213 File Offset: 0x0068C413
 		public TEnterMovieModeDurationTypeUnion DurationType { get; set; }
 
-		// Token: 0x1700C360 RID: 50016
-		// (get) Token: 0x0602DB52 RID: 187218 RVA: 0x00640F68 File Offset: 0x0063F168
-		// (set) Token: 0x0602DB53 RID: 187219 RVA: 0x00640F70 File Offset: 0x0063F170
+		// Token: 0x1700CD11 RID: 52497
+		// (get) Token: 0x0603036F RID: 197487 RVA: 0x0068E21C File Offset: 0x0068C41C
+		// (set) Token: 0x06030370 RID: 197488 RVA: 0x0068E224 File Offset: 0x0068C424
 		public bool AutoExitInFlow { get; set; }
 
-		// Token: 0x1700C361 RID: 50017
-		// (get) Token: 0x0602DB54 RID: 187220 RVA: 0x00640F79 File Offset: 0x0063F179
-		// (set) Token: 0x0602DB55 RID: 187221 RVA: 0x00640F81 File Offset: 0x0063F181
+		// Token: 0x1700CD12 RID: 52498
+		// (get) Token: 0x06030371 RID: 197489 RVA: 0x0068E22D File Offset: 0x0068C42D
+		// (set) Token: 0x06030372 RID: 197490 RVA: 0x0068E235 File Offset: 0x0068C435
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602DB56 RID: 187222 RVA: 0x00640F8A File Offset: 0x0063F18A
+		// Token: 0x06030373 RID: 197491 RVA: 0x0068E23E File Offset: 0x0068C43E
 		public IEnterMovieModeT()
 		{
 			this.MovieCameraConfig = null;

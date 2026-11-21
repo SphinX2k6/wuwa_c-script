@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001313 RID: 4883
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001463 RID: 5219
 	public class IConditionTrackPos
 	{
-		// Token: 0x06007021 RID: 28705 RVA: 0x0010EF3B File Offset: 0x0010D13B
+		// Token: 0x060076C1 RID: 30401 RVA: 0x0011D4A7 File Offset: 0x0011B6A7
 		public static IConditionTrackPos Create(IConditionTrackPos? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023CE RID: 9166
-		// (get) Token: 0x06007022 RID: 28706 RVA: 0x0010EF5A File Offset: 0x0010D15A
+		// Token: 0x1700259D RID: 9629
+		// (get) Token: 0x060076C2 RID: 30402 RVA: 0x0011D4C6 File Offset: 0x0011B6C6
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -40,8 +38,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023CF RID: 9167
-		// (get) Token: 0x06007023 RID: 28707 RVA: 0x0010EF8E File Offset: 0x0010D18E
+		// Token: 0x1700259E RID: 9630
+		// (get) Token: 0x060076C3 RID: 30403 RVA: 0x0011D4FA File Offset: 0x0011B6FA
 		public virtual VectorInfo TrackPos
 		{
 			get
@@ -56,21 +54,21 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040AF RID: 16559
+		// Token: 0x0400442B RID: 17451
 		private IConditionTrackPos Instance;
 
-		// Token: 0x040040B0 RID: 16560
+		// Token: 0x0400442C RID: 17452
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x040040B1 RID: 16561
+		// Token: 0x0400442D RID: 17453
 		private bool _ConditionInited;
 
-		// Token: 0x040040B2 RID: 16562
+		// Token: 0x0400442E RID: 17454
 		[Nullable(2)]
 		private VectorInfo _TrackPosCache;
 
-		// Token: 0x040040B3 RID: 16563
+		// Token: 0x0400442F RID: 17455
 		private bool _TrackPosInited;
 	}
 }

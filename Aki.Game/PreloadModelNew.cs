@@ -5,13 +5,13 @@ using Aki.Config;
 using CSharpScript.Core.Common;
 using UnrealEngine;
 
-// Token: 0x02003528 RID: 13608
+// Token: 0x02002A9D RID: 10909
 [NullableContext(1)]
 [Nullable(0)]
 public class PreloadModelNew : ModelBase
 {
-	// Token: 0x1700295B RID: 10587
-	// (get) Token: 0x0601DE56 RID: 122454 RVA: 0x008616A6 File Offset: 0x0085F8A6
+	// Token: 0x17002CF4 RID: 11508
+	// (get) Token: 0x0601BB7E RID: 113534 RVA: 0x008892DE File Offset: 0x008874DE
 	[Nullable(2)]
 	public UHoldPreloadObject HoldPreloadObject
 	{
@@ -22,7 +22,7 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE57 RID: 122455 RVA: 0x008616B0 File Offset: 0x0085F8B0
+	// Token: 0x0601BB7F RID: 113535 RVA: 0x008892E8 File Offset: 0x008874E8
 	protected override bool OnInit()
 	{
 		this.ProjectPath = UKismetSystemLibrary.ConvertToAbsolutePath(UBlueprintPathsLibrary.ProjectDir());
@@ -54,7 +54,7 @@ public class PreloadModelNew : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DE58 RID: 122456 RVA: 0x008617E4 File Offset: 0x0085F9E4
+	// Token: 0x0601BB80 RID: 113536 RVA: 0x0088941C File Offset: 0x0088761C
 	private void InitPbDataPreload()
 	{
 		IReadOnlyList<PbDataPreload> configList = ConfigPbDataPreloadAll.GetConfigList(true);
@@ -71,7 +71,7 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE59 RID: 122457 RVA: 0x0086187C File Offset: 0x0085FA7C
+	// Token: 0x0601BB81 RID: 113537 RVA: 0x008894B4 File Offset: 0x008876B4
 	private void InitBulletDataPreload()
 	{
 		foreach (BulletPreload src in ConfigBulletPreloadByAll.GetConfigList(true))
@@ -84,7 +84,7 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE5A RID: 122458 RVA: 0x00861914 File Offset: 0x0085FB14
+	// Token: 0x0601BB82 RID: 113538 RVA: 0x0088954C File Offset: 0x0088774C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -113,7 +113,7 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE5B RID: 122459 RVA: 0x00861988 File Offset: 0x0085FB88
+	// Token: 0x0601BB83 RID: 113539 RVA: 0x008895C0 File Offset: 0x008877C0
 	private void InitCommonSkillDataPreload()
 	{
 		IReadOnlyList<CommonSkillPreload> configList = ConfigCommonSkillPreloadAll.GetConfigList(true);
@@ -129,14 +129,14 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE5C RID: 122460 RVA: 0x008619F4 File Offset: 0x0085FBF4
+	// Token: 0x0601BB84 RID: 113540 RVA: 0x0088962C File Offset: 0x0088782C
 	[NullableContext(2)]
 	public CommonSkillPreload[] GetCommonSkillPreloadData()
 	{
 		return this.CommonSkillPreloadDataMap;
 	}
 
-	// Token: 0x0601DE5D RID: 122461 RVA: 0x008619FC File Offset: 0x0085FBFC
+	// Token: 0x0601BB85 RID: 113541 RVA: 0x00889634 File Offset: 0x00887834
 	private void InitModelConfigDataPreload()
 	{
 		foreach (ModelConfigPreload src in ConfigModelConfigPreloadByAll.GetConfigList(true))
@@ -150,7 +150,7 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE5E RID: 122462 RVA: 0x00861A84 File Offset: 0x0085FC84
+	// Token: 0x0601BB86 RID: 113542 RVA: 0x008896BC File Offset: 0x008878BC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -178,7 +178,7 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE5F RID: 122463 RVA: 0x00861AEC File Offset: 0x0085FCEC
+	// Token: 0x0601BB87 RID: 113543 RVA: 0x00889724 File Offset: 0x00887924
 	private void InitStateMachineDataPreload()
 	{
 		foreach (StateMachinePreload src in ConfigStateMachinePreloadByAll.GetConfigList(true))
@@ -190,7 +190,7 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE60 RID: 122464 RVA: 0x00861B60 File Offset: 0x0085FD60
+	// Token: 0x0601BB88 RID: 113544 RVA: 0x00889798 File Offset: 0x00887998
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -218,7 +218,7 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE61 RID: 122465 RVA: 0x00861BC8 File Offset: 0x0085FDC8
+	// Token: 0x0601BB89 RID: 113545 RVA: 0x00889800 File Offset: 0x00887A00
 	private void InitTemplateDataPreload()
 	{
 		foreach (TemplateDataPreload src in ConfigTemplateDataPreloadByAll.GetConfigList(true))
@@ -230,7 +230,7 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE62 RID: 122466 RVA: 0x00861C3C File Offset: 0x0085FE3C
+	// Token: 0x0601BB8A RID: 113546 RVA: 0x00889874 File Offset: 0x00887A74
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -258,7 +258,7 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE63 RID: 122467 RVA: 0x00861CA4 File Offset: 0x0085FEA4
+	// Token: 0x0601BB8B RID: 113547 RVA: 0x008898DC File Offset: 0x00887ADC
 	private void InitSkillDataPreload()
 	{
 		foreach (EntitySkillPreload src in ConfigEntitySkillPreloadByAll.GetConfigList(true))
@@ -283,7 +283,7 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE64 RID: 122468 RVA: 0x00861D80 File Offset: 0x0085FF80
+	// Token: 0x0601BB8C RID: 113548 RVA: 0x008899B8 File Offset: 0x00887BB8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -313,7 +313,7 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE65 RID: 122469 RVA: 0x00861DDC File Offset: 0x0085FFDC
+	// Token: 0x0601BB8D RID: 113549 RVA: 0x00889A14 File Offset: 0x00887C14
 	private PreloadSaveData BuildPreloadSaveData(BulletPreload src)
 	{
 		PreloadSaveData preloadSaveData = new PreloadSaveData();
@@ -381,7 +381,7 @@ public class PreloadModelNew : ModelBase
 		return preloadSaveData;
 	}
 
-	// Token: 0x0601DE66 RID: 122470 RVA: 0x00861FA0 File Offset: 0x008601A0
+	// Token: 0x0601BB8E RID: 113550 RVA: 0x00889BD8 File Offset: 0x00887DD8
 	private PreloadSaveData BuildPreloadSaveData(EntitySkillPreload src)
 	{
 		PreloadSkillSaveData preloadSkillSaveData = new PreloadSkillSaveData();
@@ -449,7 +449,7 @@ public class PreloadModelNew : ModelBase
 		return preloadSkillSaveData;
 	}
 
-	// Token: 0x0601DE67 RID: 122471 RVA: 0x00862164 File Offset: 0x00860364
+	// Token: 0x0601BB8F RID: 113551 RVA: 0x00889D9C File Offset: 0x00887F9C
 	private PreloadSaveData BuildPreloadSaveData(TemplateDataPreload src)
 	{
 		PreloadSaveData preloadSaveData = new PreloadSaveData();
@@ -517,7 +517,7 @@ public class PreloadModelNew : ModelBase
 		return preloadSaveData;
 	}
 
-	// Token: 0x0601DE68 RID: 122472 RVA: 0x00862328 File Offset: 0x00860528
+	// Token: 0x0601BB90 RID: 113552 RVA: 0x00889F60 File Offset: 0x00888160
 	private PreloadSaveData BuildPreloadSaveData(StateMachinePreload src)
 	{
 		PreloadSaveData preloadSaveData = new PreloadSaveData();
@@ -585,7 +585,7 @@ public class PreloadModelNew : ModelBase
 		return preloadSaveData;
 	}
 
-	// Token: 0x0601DE69 RID: 122473 RVA: 0x008624EC File Offset: 0x008606EC
+	// Token: 0x0601BB91 RID: 113553 RVA: 0x0088A124 File Offset: 0x00888324
 	private PreloadSaveData BuildPreloadSaveData(ModelConfigPreload src)
 	{
 		PreloadModelConfigSaveData preloadModelConfigSaveData = new PreloadModelConfigSaveData();
@@ -653,7 +653,7 @@ public class PreloadModelNew : ModelBase
 		return preloadModelConfigSaveData;
 	}
 
-	// Token: 0x0601DE6A RID: 122474 RVA: 0x008626B0 File Offset: 0x008608B0
+	// Token: 0x0601BB92 RID: 113554 RVA: 0x0088A2E8 File Offset: 0x008884E8
 	private PreloadSaveData BuildPreloadSaveData(IDbAssetElement src)
 	{
 		PreloadSaveData preloadSaveData = new PreloadSaveData();
@@ -692,7 +692,7 @@ public class PreloadModelNew : ModelBase
 		return preloadSaveData;
 	}
 
-	// Token: 0x0601DE6B RID: 122475 RVA: 0x008627BC File Offset: 0x008609BC
+	// Token: 0x0601BB93 RID: 113555 RVA: 0x0088A3F4 File Offset: 0x008885F4
 	protected override bool OnClear()
 	{
 		UHoldPreloadObject holdPreloadObjectInternal = this.HoldPreloadObjectInternal;
@@ -714,7 +714,7 @@ public class PreloadModelNew : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DE6C RID: 122476 RVA: 0x00862838 File Offset: 0x00860A38
+	// Token: 0x0601BB94 RID: 113556 RVA: 0x0088A470 File Offset: 0x00888670
 	public void AddPreloadResource(string path)
 	{
 		if (this.PreloadAssetMap.ContainsKey(path))
@@ -726,7 +726,7 @@ public class PreloadModelNew : ModelBase
 		this.PreloadAssetMap[path] = 1;
 	}
 
-	// Token: 0x0601DE6D RID: 122477 RVA: 0x00862880 File Offset: 0x00860A80
+	// Token: 0x0601BB95 RID: 113557 RVA: 0x0088A4B8 File Offset: 0x008886B8
 	public bool RemovePreloadResource(string path)
 	{
 		if (!this.PreloadAssetMap.ContainsKey(path))
@@ -746,7 +746,7 @@ public class PreloadModelNew : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DE6E RID: 122478 RVA: 0x008628D0 File Offset: 0x00860AD0
+	// Token: 0x0601BB96 RID: 113558 RVA: 0x0088A508 File Offset: 0x00888708
 	public void ClearPreloadResource()
 	{
 		this.PreloadAssetMap.Clear();
@@ -754,7 +754,7 @@ public class PreloadModelNew : ModelBase
 		this.LoadingNeedWaitEntitySet.Clear();
 	}
 
-	// Token: 0x0601DE6F RID: 122479 RVA: 0x008628F3 File Offset: 0x00860AF3
+	// Token: 0x0601BB97 RID: 113559 RVA: 0x0088A52B File Offset: 0x0088872B
 	public bool AddEntityAsset(long creatureDataId, EntityAssetElement entityAsset)
 	{
 		if (this.AllEntityAssetMap.ContainsKey(creatureDataId))
@@ -765,32 +765,32 @@ public class PreloadModelNew : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DE70 RID: 122480 RVA: 0x00862913 File Offset: 0x00860B13
+	// Token: 0x0601BB98 RID: 113560 RVA: 0x0088A54B File Offset: 0x0088874B
 	public bool HasEntityAsset(long creatureDataId)
 	{
 		return this.AllEntityAssetMap.ContainsKey(creatureDataId);
 	}
 
-	// Token: 0x0601DE71 RID: 122481 RVA: 0x00862921 File Offset: 0x00860B21
+	// Token: 0x0601BB99 RID: 113561 RVA: 0x0088A559 File Offset: 0x00888759
 	[NullableContext(2)]
 	public EntityAssetElement GetEntityAssetElement(long creatureDataId)
 	{
 		return this.AllEntityAssetMap.GetValueOrDefault(creatureDataId);
 	}
 
-	// Token: 0x0601DE72 RID: 122482 RVA: 0x0086292F File Offset: 0x00860B2F
+	// Token: 0x0601BB9A RID: 113562 RVA: 0x0088A567 File Offset: 0x00888767
 	public bool RemoveEntityAsset(long creatureDataId)
 	{
 		return this.AllEntityAssetMap.Remove(creatureDataId);
 	}
 
-	// Token: 0x0601DE73 RID: 122483 RVA: 0x0086293D File Offset: 0x00860B3D
+	// Token: 0x0601BB9B RID: 113563 RVA: 0x0088A575 File Offset: 0x00888775
 	public void ClearEntityAsset()
 	{
 		this.AllEntityAssetMap.Clear();
 	}
 
-	// Token: 0x0601DE74 RID: 122484 RVA: 0x0086294A File Offset: 0x00860B4A
+	// Token: 0x0601BB9C RID: 113564 RVA: 0x0088A582 File Offset: 0x00888782
 	public bool AddPbEntityAsset(int pbDataId, PbEntityAssetElement entityAsset)
 	{
 		if (this.AllPbEntityAssetMap.ContainsKey(pbDataId))
@@ -801,26 +801,26 @@ public class PreloadModelNew : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DE75 RID: 122485 RVA: 0x0086296A File Offset: 0x00860B6A
+	// Token: 0x0601BB9D RID: 113565 RVA: 0x0088A5A2 File Offset: 0x008887A2
 	public bool HasPbEntityAsset(int pbDataId)
 	{
 		return this.AllPbEntityAssetMap.ContainsKey(pbDataId);
 	}
 
-	// Token: 0x0601DE76 RID: 122486 RVA: 0x00862978 File Offset: 0x00860B78
+	// Token: 0x0601BB9E RID: 113566 RVA: 0x0088A5B0 File Offset: 0x008887B0
 	[NullableContext(2)]
 	public PbEntityAssetElement GetPbEntityAssetElement(int pbDataId)
 	{
 		return this.AllPbEntityAssetMap.GetValueOrDefault(pbDataId);
 	}
 
-	// Token: 0x0601DE77 RID: 122487 RVA: 0x00862986 File Offset: 0x00860B86
+	// Token: 0x0601BB9F RID: 113567 RVA: 0x0088A5BE File Offset: 0x008887BE
 	public bool RemovePbEntityAsset(int pbDataId)
 	{
 		return this.AllPbEntityAssetMap.Remove(pbDataId);
 	}
 
-	// Token: 0x0601DE78 RID: 122488 RVA: 0x00862994 File Offset: 0x00860B94
+	// Token: 0x0601BBA0 RID: 113568 RVA: 0x0088A5CC File Offset: 0x008887CC
 	public void ClearPbEntityAsset()
 	{
 		foreach (KeyValuePair<int, PbEntityAssetElement> keyValuePair in this.AllPbEntityAssetMap)
@@ -830,25 +830,25 @@ public class PreloadModelNew : ModelBase
 		this.AllPbEntityAssetMap.Clear();
 	}
 
-	// Token: 0x0601DE79 RID: 122489 RVA: 0x008629F8 File Offset: 0x00860BF8
+	// Token: 0x0601BBA1 RID: 113569 RVA: 0x0088A630 File Offset: 0x00888830
 	public void CleanPlotAsset()
 	{
 		this.PlotAssetManager.RemoveAllPreload();
 	}
 
-	// Token: 0x0601DE7A RID: 122490 RVA: 0x00862A05 File Offset: 0x00860C05
+	// Token: 0x0601BBA2 RID: 113570 RVA: 0x0088A63D File Offset: 0x0088883D
 	public void AddNeedWaitEntity(int entityId)
 	{
 		this.LoadingNeedWaitEntitySet.Add(entityId);
 	}
 
-	// Token: 0x0601DE7B RID: 122491 RVA: 0x00862A14 File Offset: 0x00860C14
+	// Token: 0x0601BBA3 RID: 113571 RVA: 0x0088A64C File Offset: 0x0088884C
 	public void RemoveNeedWaitEntity(int entityId)
 	{
 		this.LoadingNeedWaitEntitySet.Remove(entityId);
 	}
 
-	// Token: 0x0601DE7C RID: 122492 RVA: 0x00862A24 File Offset: 0x00860C24
+	// Token: 0x0601BBA4 RID: 113572 RVA: 0x0088A65C File Offset: 0x0088885C
 	public bool AddCommonSkill(int skillId, bool hasMontage, AssetElement assetElement)
 	{
 		if (this.CommonSkillMap.ContainsKey((long)skillId))
@@ -865,13 +865,13 @@ public class PreloadModelNew : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DE7D RID: 122493 RVA: 0x00862A82 File Offset: 0x00860C82
+	// Token: 0x0601BBA5 RID: 113573 RVA: 0x0088A6BA File Offset: 0x008888BA
 	public bool IsCommonSkill(int skillId)
 	{
 		return this.CommonSkillMap.ContainsKey((long)skillId);
 	}
 
-	// Token: 0x0601DE7E RID: 122494 RVA: 0x00862A94 File Offset: 0x00860C94
+	// Token: 0x0601BBA6 RID: 113574 RVA: 0x0088A6CC File Offset: 0x008888CC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -887,7 +887,7 @@ public class PreloadModelNew : ModelBase
 		return null;
 	}
 
-	// Token: 0x0601DE7F RID: 122495 RVA: 0x00862AC2 File Offset: 0x00860CC2
+	// Token: 0x0601BBA7 RID: 113575 RVA: 0x0088A6FA File Offset: 0x008888FA
 	public void AddResourcesLoadTime([Nullable(new byte[]
 	{
 		0,
@@ -897,14 +897,14 @@ public class PreloadModelNew : ModelBase
 		this.ResourcesLoadTime.Add(loadTime);
 	}
 
-	// Token: 0x0601DE80 RID: 122496 RVA: 0x00862AD0 File Offset: 0x00860CD0
+	// Token: 0x0601BBA8 RID: 113576 RVA: 0x0088A708 File Offset: 0x00888908
 	public void ClearResourcesLoadTime()
 	{
 		this.ResourcesLoadTime.Clear();
 	}
 
-	// Token: 0x1700295C RID: 10588
-	// (get) Token: 0x0601DE81 RID: 122497 RVA: 0x00862ADD File Offset: 0x00860CDD
+	// Token: 0x17002CF5 RID: 11509
+	// (get) Token: 0x0601BBA9 RID: 113577 RVA: 0x0088A715 File Offset: 0x00888915
 	public static PreloadModelNew Instance
 	{
 		get
@@ -913,7 +913,7 @@ public class PreloadModelNew : ModelBase
 		}
 	}
 
-	// Token: 0x0601DE82 RID: 122498 RVA: 0x00862AE4 File Offset: 0x00860CE4
+	// Token: 0x0601BBAA RID: 113578 RVA: 0x0088A71C File Offset: 0x0088891C
 	public static PreloadModelNew GetOrCreateInstance()
 	{
 		if (PreloadModelNew._Instance == null)
@@ -923,7 +923,7 @@ public class PreloadModelNew : ModelBase
 		return PreloadModelNew._Instance;
 	}
 
-	// Token: 0x0601DE83 RID: 122499 RVA: 0x00862AF8 File Offset: 0x00860CF8
+	// Token: 0x0601BBAB RID: 113579 RVA: 0x0088A730 File Offset: 0x00888930
 	public static bool CreateInstance()
 	{
 		if (PreloadModelNew._Instance != null)
@@ -934,79 +934,79 @@ public class PreloadModelNew : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DE84 RID: 122500 RVA: 0x00862B0E File Offset: 0x00860D0E
+	// Token: 0x0601BBAC RID: 113580 RVA: 0x0088A746 File Offset: 0x00888946
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DE85 RID: 122501 RVA: 0x00862B10 File Offset: 0x00860D10
+	// Token: 0x0601BBAD RID: 113581 RVA: 0x0088A748 File Offset: 0x00888948
 	public static void ResetStaticDefaultValue()
 	{
 		PreloadModelNew._Instance = null;
 	}
 
-	// Token: 0x0601DE86 RID: 122502 RVA: 0x00862B18 File Offset: 0x00860D18
+	// Token: 0x0601BBAE RID: 113582 RVA: 0x0088A750 File Offset: 0x00888950
 	static PreloadModelNew()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PreloadModelNew.CreateStaticDefaultValue), new Action(PreloadModelNew.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400EABE RID: 60094
+	// Token: 0x0400EF7B RID: 61307
 	public bool EnablePreloadLog;
 
-	// Token: 0x0400EABF RID: 60095
+	// Token: 0x0400EF7C RID: 61308
 	[Nullable(2)]
 	public string ProjectPath;
 
-	// Token: 0x0400EAC0 RID: 60096
+	// Token: 0x0400EF7D RID: 61309
 	[Nullable(2)]
 	public string JsonExportRootPath;
 
-	// Token: 0x0400EAC1 RID: 60097
+	// Token: 0x0400EF7E RID: 61310
 	[Nullable(2)]
 	public string ModelConfigJsonExportPath;
 
-	// Token: 0x0400EAC2 RID: 60098
+	// Token: 0x0400EF7F RID: 61311
 	[Nullable(2)]
 	public string SkillJsonExportPath;
 
-	// Token: 0x0400EAC3 RID: 60099
+	// Token: 0x0400EF80 RID: 61312
 	[Nullable(2)]
 	public string CommonSkillJsonExportPath;
 
-	// Token: 0x0400EAC4 RID: 60100
+	// Token: 0x0400EF81 RID: 61313
 	[Nullable(2)]
 	public string BulletJsonExportPath;
 
-	// Token: 0x0400EAC5 RID: 60101
+	// Token: 0x0400EF82 RID: 61314
 	[Nullable(2)]
 	public string StateMachineJsonExportPath;
 
-	// Token: 0x0400EAC6 RID: 60102
+	// Token: 0x0400EF83 RID: 61315
 	public readonly PreCreateEffect PreCreateEffect = new PreCreateEffect();
 
-	// Token: 0x0400EAC7 RID: 60103
+	// Token: 0x0400EF84 RID: 61316
 	public readonly CommonAssetElement CommonAssetElement = new CommonAssetElement(null);
 
-	// Token: 0x0400EAC8 RID: 60104
+	// Token: 0x0400EF85 RID: 61317
 	public readonly Dictionary<string, int> PreloadAssetMap = new Dictionary<string, int>();
 
-	// Token: 0x0400EAC9 RID: 60105
+	// Token: 0x0400EF86 RID: 61318
 	public readonly Dictionary<int, Dictionary<int, PbDataPreload>> PbDataPreloadDataMap = new Dictionary<int, Dictionary<int, PbDataPreload>>();
 
-	// Token: 0x0400EACA RID: 60106
+	// Token: 0x0400EF87 RID: 61319
 	public readonly Dictionary<long, EntityAssetElement> AllEntityAssetMap = new Dictionary<long, EntityAssetElement>();
 
-	// Token: 0x0400EACB RID: 60107
+	// Token: 0x0400EF88 RID: 61320
 	public readonly Dictionary<int, PbEntityAssetElement> AllPbEntityAssetMap = new Dictionary<int, PbEntityAssetElement>();
 
-	// Token: 0x0400EACC RID: 60108
+	// Token: 0x0400EF89 RID: 61321
 	public readonly PlotAssetManager PlotAssetManager = new PlotAssetManager();
 
-	// Token: 0x0400EACD RID: 60109
+	// Token: 0x0400EF8A RID: 61322
 	public readonly PlotUiAssetManager PlotUiAssetManager = new PlotUiAssetManager();
 
-	// Token: 0x0400EACE RID: 60110
+	// Token: 0x0400EF8B RID: 61323
 	[TupleElementNames(new string[]
 	{
 		"hasMontage",
@@ -1020,38 +1020,38 @@ public class PreloadModelNew : ModelBase
 	})]
 	private readonly Dictionary<long, ValueTuple<bool, AssetElement>> CommonSkillMap = new Dictionary<long, ValueTuple<bool, AssetElement>>();
 
-	// Token: 0x0400EACF RID: 60111
+	// Token: 0x0400EF8C RID: 61324
 	[Nullable(2)]
 	private UHoldPreloadObject HoldPreloadObjectInternal;
 
-	// Token: 0x0400EAD0 RID: 60112
+	// Token: 0x0400EF8D RID: 61325
 	public readonly Dictionary<string, Dictionary<long, PreloadSaveData>> BulletPreloadDataMap = new Dictionary<string, Dictionary<long, PreloadSaveData>>();
 
-	// Token: 0x0400EAD1 RID: 60113
+	// Token: 0x0400EF8E RID: 61326
 	public CommonSkillPreload[] CommonSkillPreloadDataMap = Array.Empty<CommonSkillPreload>();
 
-	// Token: 0x0400EAD2 RID: 60114
+	// Token: 0x0400EF8F RID: 61327
 	public readonly Dictionary<int, PreloadModelConfigSaveData> ModelConfigPreloadDataMap = new Dictionary<int, PreloadModelConfigSaveData>();
 
-	// Token: 0x0400EAD3 RID: 60115
+	// Token: 0x0400EF90 RID: 61328
 	public readonly Dictionary<string, PreloadSaveData> StateMachinePreloadDataMap = new Dictionary<string, PreloadSaveData>();
 
-	// Token: 0x0400EAD4 RID: 60116
+	// Token: 0x0400EF91 RID: 61329
 	public readonly Dictionary<int, PreloadSaveData> TemplatePreloadDataMap = new Dictionary<int, PreloadSaveData>();
 
-	// Token: 0x0400EAD5 RID: 60117
+	// Token: 0x0400EF92 RID: 61330
 	public readonly Dictionary<string, List<PreloadSkillSaveData>> SkillPreloadDataMap = new Dictionary<string, List<PreloadSkillSaveData>>();
 
-	// Token: 0x0400EAD6 RID: 60118
+	// Token: 0x0400EF93 RID: 61331
 	public readonly HashSet<int> LoadingNeedWaitEntitySet = new HashSet<int>();
 
-	// Token: 0x0400EAD7 RID: 60119
+	// Token: 0x0400EF94 RID: 61332
 	public bool UseEntityProfilerInternal = true;
 
-	// Token: 0x0400EAD8 RID: 60120
+	// Token: 0x0400EF95 RID: 61333
 	public bool LoadAssetOneByOneState;
 
-	// Token: 0x0400EAD9 RID: 60121
+	// Token: 0x0400EF96 RID: 61334
 	[Nullable(new byte[]
 	{
 		1,
@@ -1060,7 +1060,7 @@ public class PreloadModelNew : ModelBase
 	})]
 	public List<ValueTuple<string, int>> ResourcesLoadTime = new List<ValueTuple<string, int>>();
 
-	// Token: 0x0400EADA RID: 60122
+	// Token: 0x0400EF97 RID: 61335
 	[Nullable(2)]
 	private static PreloadModelNew _Instance;
 }

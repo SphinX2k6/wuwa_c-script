@@ -4,12 +4,12 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066AD RID: 26285
+	// Token: 0x020055FD RID: 22013
 	[JsonConverter(typeof(EDropCatchCommandSourceJsonConverter))]
 	[EnumExtensions]
 	public enum EDropCatchCommandSource
 	{
-		// Token: 0x040223F6 RID: 140278
+		// Token: 0x0401CC4F RID: 117839
 		[EnumStringMember("Skill")]
 		Skill
 	}

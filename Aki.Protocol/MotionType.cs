@@ -3,37 +3,37 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001618 RID: 5656
+	// Token: 0x0200168B RID: 5771
 	public enum MotionType
 	{
-		// Token: 0x0400BFDB RID: 49115
+		// Token: 0x0400C4D5 RID: 50389
 		[OriginalName("Spurt")]
 		Spurt,
-		// Token: 0x0400BFDC RID: 49116
+		// Token: 0x0400C4D6 RID: 50390
 		[OriginalName("Pullback")]
 		Pullback,
-		// Token: 0x0400BFDD RID: 49117
+		// Token: 0x0400C4D7 RID: 50391
 		[OriginalName("BeLand")]
 		BeLand,
-		// Token: 0x0400BFDE RID: 49118
+		// Token: 0x0400C4D8 RID: 50392
 		[OriginalName("MotionJump")]
 		MotionJump,
-		// Token: 0x0400BFDF RID: 49119
+		// Token: 0x0400C4D9 RID: 50393
 		[OriginalName("AirSprint")]
 		AirSprint,
-		// Token: 0x0400BFE0 RID: 49120
+		// Token: 0x0400C4DA RID: 50394
 		[OriginalName("BackFlip")]
 		BackFlip,
-		// Token: 0x0400BFE1 RID: 49121
+		// Token: 0x0400C4DB RID: 50395
 		[OriginalName("StepAcross")]
 		StepAcross,
-		// Token: 0x0400BFE2 RID: 49122
+		// Token: 0x0400C4DC RID: 50396
 		[OriginalName("ClimbTop")]
 		ClimbTop,
-		// Token: 0x0400BFE3 RID: 49123
+		// Token: 0x0400C4DD RID: 50397
 		[OriginalName("LimitDodge")]
 		LimitDodge,
-		// Token: 0x0400BFE4 RID: 49124
+		// Token: 0x0400C4DE RID: 50398
 		[OriginalName("CounterAttack")]
 		CounterAttack
 	}

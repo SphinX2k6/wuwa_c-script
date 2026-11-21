@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200469B RID: 18075
+	// Token: 0x020035CC RID: 13772
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ViewHotKeyHandleFactory
 	{
-		// Token: 0x0602E9D4 RID: 190932 RVA: 0x00ACADDC File Offset: 0x00AC8FDC
+		// Token: 0x06023120 RID: 143648 RVA: 0x009F96B0 File Offset: 0x009F78B0
 		public static ViewHotKeyHandle CreateViewHotKeyHandle(IOpenAndCloseViewHotKey parameters, string handleType)
 		{
 			Type typeFromHandle;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Ui
 			});
 		}
 
-		// Token: 0x0602E9D6 RID: 190934 RVA: 0x00ACAE20 File Offset: 0x00AC9020
+		// Token: 0x06023122 RID: 143650 RVA: 0x009F96F4 File Offset: 0x009F78F4
 		// Note: this type is marked as 'beforefieldinit'.
 		static ViewHotKeyHandleFactory()
 		{
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Ui
 			ViewHotKeyHandleFactory.ViewHotKeyHandleTypeMap = dictionary;
 		}
 
-		// Token: 0x04019658 RID: 104024
+		// Token: 0x04013CFD RID: 81149
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<string, Type> ViewHotKeyHandleTypeMap;
 	}

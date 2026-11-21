@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010C1 RID: 4289
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011EF RID: 4591
 	public class IQuestStatisticsPlayerTriggerMotion : IQuestStatisticsType
 	{
-		// Token: 0x060060CC RID: 24780 RVA: 0x000E9E94 File Offset: 0x000E8094
+		// Token: 0x060066C5 RID: 26309 RVA: 0x000F6FB4 File Offset: 0x000F51B4
 		private IQuestStatisticsPlayerTriggerMotion_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060060CD RID: 24781 RVA: 0x000E9ECC File Offset: 0x000E80CC
+		// Token: 0x060066C6 RID: 26310 RVA: 0x000F6FEC File Offset: 0x000F51EC
 		public static IQuestStatisticsPlayerTriggerMotion Create([Nullable(2)] IQuestStatisticsPlayerTriggerMotion instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060060CE RID: 24782 RVA: 0x000E9EDF File Offset: 0x000E80DF
+		// Token: 0x060066C7 RID: 26311 RVA: 0x000F6FFF File Offset: 0x000F51FF
 		public static IQuestStatisticsPlayerTriggerMotion CreateFromSetValue([Nullable(2)] IQuestStatisticsPlayerTriggerMotion_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060060CF RID: 24783 RVA: 0x000E9EF2 File Offset: 0x000E80F2
+		// Token: 0x060066C8 RID: 26312 RVA: 0x000F7012 File Offset: 0x000F5212
 		public new IQuestStatisticsPlayerTriggerMotion_SetValue ToSetValue()
 		{
 			return new IQuestStatisticsPlayerTriggerMotion_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001FC8 RID: 8136
-		// (get) Token: 0x060060D0 RID: 24784 RVA: 0x000E9F1D File Offset: 0x000E811D
-		// (set) Token: 0x060060D1 RID: 24785 RVA: 0x000E9F48 File Offset: 0x000E8148
+		// Token: 0x1700217A RID: 8570
+		// (get) Token: 0x060066C9 RID: 26313 RVA: 0x000F703D File Offset: 0x000F523D
+		// (set) Token: 0x060066CA RID: 26314 RVA: 0x000F7068 File Offset: 0x000F5268
 		public override EStatisticsEventType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FC9 RID: 8137
-		// (get) Token: 0x060060D2 RID: 24786 RVA: 0x000E9F56 File Offset: 0x000E8156
-		// (set) Token: 0x060060D3 RID: 24787 RVA: 0x000E9F7D File Offset: 0x000E817D
+		// Token: 0x1700217B RID: 8571
+		// (get) Token: 0x060066CB RID: 26315 RVA: 0x000F7076 File Offset: 0x000F5276
+		// (set) Token: 0x060066CC RID: 26316 RVA: 0x000F709D File Offset: 0x000F529D
 		public override VarRef Var
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FCA RID: 8138
-		// (get) Token: 0x060060D4 RID: 24788 RVA: 0x000E9F8B File Offset: 0x000E818B
-		// (set) Token: 0x060060D5 RID: 24789 RVA: 0x000E9FB6 File Offset: 0x000E81B6
+		// Token: 0x1700217C RID: 8572
+		// (get) Token: 0x060066CD RID: 26317 RVA: 0x000F70AB File Offset: 0x000F52AB
+		// (set) Token: 0x060066CE RID: 26318 RVA: 0x000F70D6 File Offset: 0x000F52D6
 		public virtual EPlayerTriggerMotion MotionType
 		{
 			get
@@ -132,11 +130,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003A4F RID: 14927
+		// Token: 0x04003D9C RID: 15772
 		[Nullable(2)]
 		protected new IQuestStatisticsPlayerTriggerMotion FbInstance;
 
-		// Token: 0x04003A50 RID: 14928
+		// Token: 0x04003D9D RID: 15773
 		[Nullable(2)]
 		protected new IQuestStatisticsPlayerTriggerMotion_SetValue PocoInterface;
 	}

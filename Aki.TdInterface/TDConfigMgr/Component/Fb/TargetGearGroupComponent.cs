@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BAA RID: 2986
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C78 RID: 3192
 	public class TargetGearGroupComponent : IComponentBase
 	{
-		// Token: 0x06004484 RID: 17540 RVA: 0x000AE035 File Offset: 0x000AC235
+		// Token: 0x060048DD RID: 18653 RVA: 0x000B80F9 File Offset: 0x000B62F9
 		public static TargetGearGroupComponent Create(ITargetGearGroupComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012ED RID: 4845
-		// (get) Token: 0x06004485 RID: 17541 RVA: 0x000AE054 File Offset: 0x000AC254
+		// Token: 0x170013E8 RID: 5096
+		// (get) Token: 0x060048DE RID: 18654 RVA: 0x000B8118 File Offset: 0x000B6318
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012EE RID: 4846
-		// (get) Token: 0x06004486 RID: 17542 RVA: 0x000AE08C File Offset: 0x000AC28C
+		// Token: 0x170013E9 RID: 5097
+		// (get) Token: 0x060048DF RID: 18655 RVA: 0x000B8150 File Offset: 0x000B6350
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012EF RID: 4847
-		// (get) Token: 0x06004487 RID: 17543 RVA: 0x000AE0A2 File Offset: 0x000AC2A2
+		// Token: 0x170013EA RID: 5098
+		// (get) Token: 0x060048E0 RID: 18656 RVA: 0x000B8166 File Offset: 0x000B6366
 		public virtual string Type
 		{
 			get
@@ -57,8 +54,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012F0 RID: 4848
-		// (get) Token: 0x06004488 RID: 17544 RVA: 0x000AE0B0 File Offset: 0x000AC2B0
+		// Token: 0x170013EB RID: 5099
+		// (get) Token: 0x060048E1 RID: 18657 RVA: 0x000B8174 File Offset: 0x000B6374
 		public virtual List<ITargetGearGroupConfig> GroupConfigs
 		{
 			get
@@ -78,13 +75,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026B7 RID: 9911
+		// Token: 0x040028FF RID: 10495
 		private ITargetGearGroupComponent Instance;
 
-		// Token: 0x040026B8 RID: 9912
+		// Token: 0x04002900 RID: 10496
 		private List<ITargetGearGroupConfig> _GroupConfigsCache;
 
-		// Token: 0x040026B9 RID: 9913
+		// Token: 0x04002901 RID: 10497
 		private bool _GroupConfigsInited;
 	}
 }

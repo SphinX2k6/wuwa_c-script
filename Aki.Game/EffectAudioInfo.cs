@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000265 RID: 613
+// Token: 0x02000269 RID: 617
 [NullableContext(2)]
 [Nullable(0)]
 public class EffectAudioInfo : IEffectAudioInfo
 {
-	// Token: 0x170005BB RID: 1467
-	// (get) Token: 0x06002585 RID: 9605 RVA: 0x000E10F0 File Offset: 0x000DF2F0
-	// (set) Token: 0x06002586 RID: 9606 RVA: 0x000E10F8 File Offset: 0x000DF2F8
+	// Token: 0x170005E2 RID: 1506
+	// (get) Token: 0x0600263C RID: 9788 RVA: 0x000E748C File Offset: 0x000E568C
+	// (set) Token: 0x0600263D RID: 9789 RVA: 0x000E7494 File Offset: 0x000E5694
 	public int ActorUid { get; set; }
 
-	// Token: 0x170005BC RID: 1468
-	// (get) Token: 0x06002587 RID: 9607 RVA: 0x000E1101 File Offset: 0x000DF301
-	// (set) Token: 0x06002588 RID: 9608 RVA: 0x000E1109 File Offset: 0x000DF309
+	// Token: 0x170005E3 RID: 1507
+	// (get) Token: 0x0600263E RID: 9790 RVA: 0x000E749D File Offset: 0x000E569D
+	// (set) Token: 0x0600263F RID: 9791 RVA: 0x000E74A5 File Offset: 0x000E56A5
 	public object EffectActor { get; set; }
 
-	// Token: 0x170005BD RID: 1469
-	// (get) Token: 0x06002589 RID: 9609 RVA: 0x000E1112 File Offset: 0x000DF312
-	// (set) Token: 0x0600258A RID: 9610 RVA: 0x000E111A File Offset: 0x000DF31A
+	// Token: 0x170005E4 RID: 1508
+	// (get) Token: 0x06002640 RID: 9792 RVA: 0x000E74AE File Offset: 0x000E56AE
+	// (set) Token: 0x06002641 RID: 9793 RVA: 0x000E74B6 File Offset: 0x000E56B6
 	public bool? IsTransform { get; set; }
 
-	// Token: 0x170005BE RID: 1470
-	// (get) Token: 0x0600258B RID: 9611 RVA: 0x000E1123 File Offset: 0x000DF323
-	// (set) Token: 0x0600258C RID: 9612 RVA: 0x000E112B File Offset: 0x000DF32B
+	// Token: 0x170005E5 RID: 1509
+	// (get) Token: 0x06002642 RID: 9794 RVA: 0x000E74BF File Offset: 0x000E56BF
+	// (set) Token: 0x06002643 RID: 9795 RVA: 0x000E74C7 File Offset: 0x000E56C7
 	public Action Callback { get; set; }
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005307 RID: 21255
+	// Token: 0x0200588D RID: 22669
 	public class IGraph3dComponentT
 	{
-		// Token: 0x17009C12 RID: 39954
-		// (get) Token: 0x06022B8A RID: 142218 RVA: 0x004CFC39 File Offset: 0x004CDE39
-		// (set) Token: 0x06022B8B RID: 142219 RVA: 0x004CFC41 File Offset: 0x004CDE41
+		// Token: 0x1700A44A RID: 42058
+		// (get) Token: 0x06024C3E RID: 150590 RVA: 0x0050CB0D File Offset: 0x0050AD0D
+		// (set) Token: 0x06024C3F RID: 150591 RVA: 0x0050CB15 File Offset: 0x0050AD15
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009C13 RID: 39955
-		// (get) Token: 0x06022B8C RID: 142220 RVA: 0x004CFC4A File Offset: 0x004CDE4A
-		// (set) Token: 0x06022B8D RID: 142221 RVA: 0x004CFC52 File Offset: 0x004CDE52
+		// Token: 0x1700A44B RID: 42059
+		// (get) Token: 0x06024C40 RID: 150592 RVA: 0x0050CB1E File Offset: 0x0050AD1E
+		// (set) Token: 0x06024C41 RID: 150593 RVA: 0x0050CB26 File Offset: 0x0050AD26
 		public IGraph3dNormalT GraphConfig { get; set; }
 
-		// Token: 0x17009C14 RID: 39956
-		// (get) Token: 0x06022B8E RID: 142222 RVA: 0x004CFC5B File Offset: 0x004CDE5B
-		// (set) Token: 0x06022B8F RID: 142223 RVA: 0x004CFC63 File Offset: 0x004CDE63
+		// Token: 0x1700A44C RID: 42060
+		// (get) Token: 0x06024C42 RID: 150594 RVA: 0x0050CB2F File Offset: 0x0050AD2F
+		// (set) Token: 0x06024C43 RID: 150595 RVA: 0x0050CB37 File Offset: 0x0050AD37
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022B90 RID: 142224 RVA: 0x004CFC6C File Offset: 0x004CDE6C
+		// Token: 0x06024C44 RID: 150596 RVA: 0x0050CB40 File Offset: 0x0050AD40
 		public IGraph3dComponentT()
 		{
 			this.Disabled = false;

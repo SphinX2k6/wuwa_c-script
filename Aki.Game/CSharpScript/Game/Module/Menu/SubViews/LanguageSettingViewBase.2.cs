@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x0200541C RID: 21532
+	// Token: 0x020043FF RID: 17407
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LanguageSettingViewBase<[Nullable(0)] T> : UiViewBase where T : LanguageToggleBase
 	{
-		// Token: 0x06037059 RID: 225369 RVA: 0x00D09B30 File Offset: 0x00D07D30
+		// Token: 0x0602BFA2 RID: 180130 RVA: 0x00C58F50 File Offset: 0x00C57150
 		public LanguageSettingViewBase(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603705A RID: 225370 RVA: 0x00D09B3C File Offset: 0x00D07D3C
+		// Token: 0x0602BFA3 RID: 180131 RVA: 0x00C58F5C File Offset: 0x00C5715C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			};
 		}
 
-		// Token: 0x0603705B RID: 225371 RVA: 0x00D09C04 File Offset: 0x00D07E04
+		// Token: 0x0602BFA4 RID: 180132 RVA: 0x00C59024 File Offset: 0x00C57224
 		protected override void OnStart()
 		{
 			this.CoverRoleLangToggle = base.GetExtendToggle(6);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			});
 		}
 
-		// Token: 0x0603705C RID: 225372 RVA: 0x00D09D7C File Offset: 0x00D07F7C
+		// Token: 0x0602BFA5 RID: 180133 RVA: 0x00C5919C File Offset: 0x00C5739C
 		protected virtual void InitScrollViewData()
 		{
 			List<int> list = new List<int>();
@@ -83,20 +83,20 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.ScrollView.RefreshByData<int>(list, null);
 		}
 
-		// Token: 0x0603705D RID: 225373 RVA: 0x00D09E10 File Offset: 0x00D08010
+		// Token: 0x0602BFA6 RID: 180134 RVA: 0x00C59230 File Offset: 0x00C57430
 		private void DoClose(int _)
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603705E RID: 225374 RVA: 0x00D09E19 File Offset: 0x00D08019
+		// Token: 0x0602BFA7 RID: 180135 RVA: 0x00C59239 File Offset: 0x00C57439
 		private void DoConfirm(int _)
 		{
 			this.IsConfirm = true;
 			this.DoClose(0);
 		}
 
-		// Token: 0x0603705F RID: 225375 RVA: 0x00D09E2C File Offset: 0x00D0802C
+		// Token: 0x0602BFA8 RID: 180136 RVA: 0x00C5924C File Offset: 0x00C5744C
 		protected override void OnAfterHide()
 		{
 			int targetConfig = MenuController.Instance.GetTargetConfig(this.MenuDataIns.FunctionId);
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.IsConfirm = false;
 		}
 
-		// Token: 0x06037060 RID: 225376 RVA: 0x00D09EAE File Offset: 0x00D080AE
+		// Token: 0x0602BFA9 RID: 180137 RVA: 0x00C592CE File Offset: 0x00C574CE
 		protected override void OnBeforeDestroyImplement()
 		{
 			if (this.ScrollView != null)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x06037061 RID: 225377 RVA: 0x00D09ECC File Offset: 0x00D080CC
+		// Token: 0x0602BFAA RID: 180138 RVA: 0x00C592EC File Offset: 0x00C574EC
 		protected void DoSelected(LanguageToggleBase newToggle, EToggleState newToggleState)
 		{
 			if (this.SelectedToggle != newToggle && newToggleState == EToggleState.ETT_Checked)
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.OnSelected(this.SelectedToggle, newToggleState);
 		}
 
-		// Token: 0x06037062 RID: 225378 RVA: 0x00D09F20 File Offset: 0x00D08120
+		// Token: 0x0602BFAB RID: 180139 RVA: 0x00C59340 File Offset: 0x00C57540
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return null;
 		}
 
-		// Token: 0x06037063 RID: 225379 RVA: 0x00D0A0A8 File Offset: 0x00D082A8
+		// Token: 0x0602BFAC RID: 180140 RVA: 0x00C594C8 File Offset: 0x00C576C8
 		[return: Nullable(2)]
 		protected virtual T CreateToggle(UUIItem uiItem, int index, bool isToggled)
 		{
@@ -185,31 +185,31 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return default(T);
 		}
 
-		// Token: 0x06037064 RID: 225380 RVA: 0x00D0A0DC File Offset: 0x00D082DC
+		// Token: 0x0602BFAD RID: 180141 RVA: 0x00C594FC File Offset: 0x00C576FC
 		protected virtual void OnRefreshView(T newToggle)
 		{
 			UUIText text = base.GetText(0);
 			LguiUtil.Instance.SetLocalTextNew(text, this.MenuDataIns.FunctionName ?? "", Array.Empty<object>());
 		}
 
-		// Token: 0x06037065 RID: 225381 RVA: 0x00D0A115 File Offset: 0x00D08315
+		// Token: 0x0602BFAE RID: 180142 RVA: 0x00C59535 File Offset: 0x00C57735
 		protected virtual void OnSelected(T newToggle, EToggleState newToggleState)
 		{
 		}
 
-		// Token: 0x0401D06F RID: 118895
+		// Token: 0x04017B08 RID: 97032
 		[Nullable(2)]
 		protected MenuData MenuDataIns;
 
-		// Token: 0x0401D070 RID: 118896
+		// Token: 0x04017B09 RID: 97033
 		[Nullable(2)]
 		protected ButtonItem CancelButton;
 
-		// Token: 0x0401D071 RID: 118897
+		// Token: 0x04017B0A RID: 97034
 		[Nullable(2)]
 		protected ButtonItem ConfirmButton;
 
-		// Token: 0x0401D072 RID: 118898
+		// Token: 0x04017B0B RID: 97035
 		[Nullable(new byte[]
 		{
 			2,
@@ -217,27 +217,27 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 		})]
 		protected GenericScrollView<UiPanelBase> ScrollView;
 
-		// Token: 0x0401D073 RID: 118899
+		// Token: 0x04017B0C RID: 97036
 		[Nullable(2)]
 		protected T SelectedToggle;
 
-		// Token: 0x0401D074 RID: 118900
+		// Token: 0x04017B0D RID: 97037
 		[Nullable(2)]
 		private IReadOnlyList<object> MenuChangeParam;
 
-		// Token: 0x0401D075 RID: 118901
+		// Token: 0x04017B0E RID: 97038
 		protected bool IsConfirm;
 
-		// Token: 0x0401D076 RID: 118902
+		// Token: 0x04017B0F RID: 97039
 		protected UUIExtendToggle CoverRoleLangToggle;
 
-		// Token: 0x0401D077 RID: 118903
+		// Token: 0x04017B10 RID: 97040
 		protected UUIText CoverRoleTxt;
 
-		// Token: 0x0401D078 RID: 118904
+		// Token: 0x04017B11 RID: 97041
 		protected UUIItem RoleLangDeleteHint;
 
-		// Token: 0x0401D079 RID: 118905
+		// Token: 0x04017B12 RID: 97042
 		protected UUIText RoleLangDeleteHintTxt;
 	}
 }

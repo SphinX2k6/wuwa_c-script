@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007119 RID: 28953
+	// Token: 0x020078E5 RID: 30949
 	public class ISitDownT
 	{
-		// Token: 0x1700D73F RID: 55103
-		// (get) Token: 0x0603355B RID: 210267 RVA: 0x006EB812 File Offset: 0x006E9A12
-		// (set) Token: 0x0603355C RID: 210268 RVA: 0x006EB81A File Offset: 0x006E9A1A
+		// Token: 0x1700E322 RID: 58146
+		// (get) Token: 0x060367FD RID: 223229 RVA: 0x0074BE1E File Offset: 0x0074A01E
+		// (set) Token: 0x060367FE RID: 223230 RVA: 0x0074BE26 File Offset: 0x0074A026
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x1700D740 RID: 55104
-		// (get) Token: 0x0603355D RID: 210269 RVA: 0x006EB823 File Offset: 0x006E9A23
-		// (set) Token: 0x0603355E RID: 210270 RVA: 0x006EB82B File Offset: 0x006E9A2B
+		// Token: 0x1700E323 RID: 58147
+		// (get) Token: 0x060367FF RID: 223231 RVA: 0x0074BE2F File Offset: 0x0074A02F
+		// (set) Token: 0x06036800 RID: 223232 RVA: 0x0074BE37 File Offset: 0x0074A037
 		public bool OnlyAllowForwardStandUp { get; set; }
 
-		// Token: 0x1700D741 RID: 55105
-		// (get) Token: 0x0603355F RID: 210271 RVA: 0x006EB834 File Offset: 0x006E9A34
-		// (set) Token: 0x06033560 RID: 210272 RVA: 0x006EB83C File Offset: 0x006E9A3C
+		// Token: 0x1700E324 RID: 58148
+		// (get) Token: 0x06036801 RID: 223233 RVA: 0x0074BE40 File Offset: 0x0074A040
+		// (set) Token: 0x06036802 RID: 223234 RVA: 0x0074BE48 File Offset: 0x0074A048
 		public byte NullMask { get; set; }
 
-		// Token: 0x06033561 RID: 210273 RVA: 0x006EB845 File Offset: 0x006E9A45
+		// Token: 0x06036803 RID: 223235 RVA: 0x0074BE51 File Offset: 0x0074A051
 		public ISitDownT()
 		{
 			this.Type = ELeisureInteract.CustomSkill;

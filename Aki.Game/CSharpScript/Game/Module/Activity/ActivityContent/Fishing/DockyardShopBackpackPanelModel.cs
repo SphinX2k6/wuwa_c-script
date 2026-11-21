@@ -2,26 +2,26 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065BC RID: 26044
+	// Token: 0x0200553A RID: 21818
 	public class DockyardShopBackpackPanelModel : DockyardBackpackPanelModelBase
 	{
-		// Token: 0x06041546 RID: 267590 RVA: 0x00FD4EBB File Offset: 0x00FD30BB
+		// Token: 0x0603620B RID: 221707 RVA: 0x00F1BEF7 File Offset: 0x00F1A0F7
 		public override bool GetIsTrawlOpen()
 		{
 			return FishingModel.Instance.IsInDock && DockyardModel.Instance.IsTrawlOpen;
 		}
 
-		// Token: 0x1700958E RID: 38286
-		// (get) Token: 0x06041547 RID: 267591 RVA: 0x00FD4ED5 File Offset: 0x00FD30D5
-		// (set) Token: 0x06041548 RID: 267592 RVA: 0x00FD4EDD File Offset: 0x00FD30DD
+		// Token: 0x170068F0 RID: 26864
+		// (get) Token: 0x0603620C RID: 221708 RVA: 0x00F1BF11 File Offset: 0x00F1A111
+		// (set) Token: 0x0603620D RID: 221709 RVA: 0x00F1BF19 File Offset: 0x00F1A119
 		public override bool IsAllSellOpen { get; set; } = true;
 
-		// Token: 0x1700958F RID: 38287
-		// (get) Token: 0x06041549 RID: 267593 RVA: 0x00FD4EE6 File Offset: 0x00FD30E6
-		// (set) Token: 0x0604154A RID: 267594 RVA: 0x00FD4EEE File Offset: 0x00FD30EE
+		// Token: 0x170068F1 RID: 26865
+		// (get) Token: 0x0603620E RID: 221710 RVA: 0x00F1BF22 File Offset: 0x00F1A122
+		// (set) Token: 0x0603620F RID: 221711 RVA: 0x00F1BF2A File Offset: 0x00F1A12A
 		public override bool IsDeleteOpen { get; set; }
 
-		// Token: 0x0604154B RID: 267595 RVA: 0x00FD4EF7 File Offset: 0x00FD30F7
+		// Token: 0x06036210 RID: 221712 RVA: 0x00F1BF33 File Offset: 0x00F1A133
 		public override bool GetIsBackToWareHouseOpen()
 		{
 			return false;

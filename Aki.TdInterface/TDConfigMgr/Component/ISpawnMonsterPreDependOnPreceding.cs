@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006EE RID: 1774
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200078F RID: 1935
 	public class ISpawnMonsterPreDependOnPreceding : ISpawnMonsterPreConditonType
 	{
-		// Token: 0x06002638 RID: 9784 RVA: 0x000666F4 File Offset: 0x000648F4
+		// Token: 0x06002958 RID: 10584 RVA: 0x0006D764 File Offset: 0x0006B964
 		private ISpawnMonsterPreDependOnPreceding_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002639 RID: 9785 RVA: 0x0006672C File Offset: 0x0006492C
+		// Token: 0x06002959 RID: 10585 RVA: 0x0006D79C File Offset: 0x0006B99C
 		public static ISpawnMonsterPreDependOnPreceding Create([Nullable(2)] ISpawnMonsterPreDependOnPreceding instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600263A RID: 9786 RVA: 0x0006673F File Offset: 0x0006493F
+		// Token: 0x0600295A RID: 10586 RVA: 0x0006D7AF File Offset: 0x0006B9AF
 		public static ISpawnMonsterPreDependOnPreceding CreateFromSetValue([Nullable(2)] ISpawnMonsterPreDependOnPreceding_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600263B RID: 9787 RVA: 0x00066752 File Offset: 0x00064952
+		// Token: 0x0600295B RID: 10587 RVA: 0x0006D7C2 File Offset: 0x0006B9C2
 		public new ISpawnMonsterPreDependOnPreceding_SetValue ToSetValue()
 		{
 			return new ISpawnMonsterPreDependOnPreceding_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A16 RID: 2582
-		// (get) Token: 0x0600263C RID: 9788 RVA: 0x00066771 File Offset: 0x00064971
-		// (set) Token: 0x0600263D RID: 9789 RVA: 0x0006679C File Offset: 0x0006499C
+		// Token: 0x17000AD4 RID: 2772
+		// (get) Token: 0x0600295C RID: 10588 RVA: 0x0006D7E1 File Offset: 0x0006B9E1
+		// (set) Token: 0x0600295D RID: 10589 RVA: 0x0006D80C File Offset: 0x0006BA0C
 		public override ESpawnMonsterPreCondition Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A17 RID: 2583
-		// (get) Token: 0x0600263E RID: 9790 RVA: 0x000667AA File Offset: 0x000649AA
-		// (set) Token: 0x0600263F RID: 9791 RVA: 0x000667D1 File Offset: 0x000649D1
+		// Token: 0x17000AD5 RID: 2773
+		// (get) Token: 0x0600295E RID: 10590 RVA: 0x0006D81A File Offset: 0x0006BA1A
+		// (set) Token: 0x0600295F RID: 10591 RVA: 0x0006D841 File Offset: 0x0006BA41
 		public virtual List<int> Ids
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019FA RID: 6650
+		// Token: 0x04001BF9 RID: 7161
 		[Nullable(2)]
 		protected new ISpawnMonsterPreDependOnPreceding FbInstance;
 
-		// Token: 0x040019FB RID: 6651
+		// Token: 0x04001BFA RID: 7162
 		[Nullable(2)]
 		protected new ISpawnMonsterPreDependOnPreceding_SetValue PocoInterface;
 	}

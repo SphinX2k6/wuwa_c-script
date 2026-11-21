@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003074 RID: 12404
+// Token: 0x020025CB RID: 9675
 [NullableContext(1)]
 public interface IRequestPerformParams
 {
-	// Token: 0x1700246A RID: 9322
-	// (get) Token: 0x0601A765 RID: 108389
-	// (set) Token: 0x0601A766 RID: 108390
+	// Token: 0x170025A4 RID: 9636
+	// (get) Token: 0x06018126 RID: 98598
+	// (set) Token: 0x06018127 RID: 98599
 	int Signal { get; set; }
 
-	// Token: 0x1700246B RID: 9323
-	// (get) Token: 0x0601A767 RID: 108391
-	// (set) Token: 0x0601A768 RID: 108392
+	// Token: 0x170025A5 RID: 9637
+	// (get) Token: 0x06018128 RID: 98600
+	// (set) Token: 0x06018129 RID: 98601
 	Entity Source { get; set; }
 }

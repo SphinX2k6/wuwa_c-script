@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000438 RID: 1080
+	// Token: 0x0200044E RID: 1102
 	public class ConfigInfrV2PopupMsgAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600195A RID: 6490 RVA: 0x000E8EB8 File Offset: 0x000E70B8
+		// Token: 0x060019DE RID: 6622 RVA: 0x000EF60C File Offset: 0x000ED80C
 		static ConfigInfrV2PopupMsgAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfrV2PopupMsgAll.CreateStaticDefaultValue), new Action(ConfigInfrV2PopupMsgAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600195B RID: 6491 RVA: 0x000E8ED8 File Offset: 0x000E70D8
+		// Token: 0x060019DF RID: 6623 RVA: 0x000EF62C File Offset: 0x000ED82C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfrV2PopupMsgAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600195C RID: 6492 RVA: 0x000E8F57 File Offset: 0x000E7157
+		// Token: 0x060019E0 RID: 6624 RVA: 0x000EF6AB File Offset: 0x000ED8AB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfrV2PopupMsgAll.LogPair = null;
 			ConfigInfrV2PopupMsgAll.HandleId = 0;
 		}
 
-		// Token: 0x0600195D RID: 6493 RVA: 0x000E8F65 File Offset: 0x000E7165
+		// Token: 0x060019E1 RID: 6625 RVA: 0x000EF6B9 File Offset: 0x000ED8B9
 		public static void Init()
 		{
 			ConfigInfrV2PopupMsgAll.HandleId = ConfigCommon.InitDataStatement(ConfigInfrV2PopupMsgAll.HandleId, "db_villageinfr.db", "select BinData from `InfrV2PopupMsg`");
 		}
 
-		// Token: 0x0600195E RID: 6494 RVA: 0x000E8F80 File Offset: 0x000E7180
+		// Token: 0x060019E2 RID: 6626 RVA: 0x000EF6D4 File Offset: 0x000ED8D4
 		[NullableContext(2)]
 		public static IReadOnlyList<InfrV2PopupMsg> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001D6C RID: 7532
+		// Token: 0x04001E06 RID: 7686
 		private const string DB = "db_villageinfr.db";
 
-		// Token: 0x04001D6D RID: 7533
+		// Token: 0x04001E07 RID: 7687
 		private const string FILE = "j.基建V2.xlsx";
 
-		// Token: 0x04001D6E RID: 7534
+		// Token: 0x04001E08 RID: 7688
 		private const string TABLE = "InfrV2PopupMsg";
 
-		// Token: 0x04001D6F RID: 7535
+		// Token: 0x04001E09 RID: 7689
 		private const string COMMAND = "select BinData from `InfrV2PopupMsg`";
 
-		// Token: 0x04001D70 RID: 7536
+		// Token: 0x04001E0A RID: 7690
 		private const string KEY_PREFIX = "InfrV2PopupMsgAll";
 
-		// Token: 0x04001D71 RID: 7537
+		// Token: 0x04001E0B RID: 7691
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001D72 RID: 7538
+		// Token: 0x04001E0C RID: 7692
 		private static int HandleId;
 	}
 }

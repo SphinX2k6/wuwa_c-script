@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008C2 RID: 2242
+	// Token: 0x020008DE RID: 2270
 	public class ConfigRoleSkillInputById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600349F RID: 13471 RVA: 0x00182B57 File Offset: 0x00180D57
+		// Token: 0x06003547 RID: 13639 RVA: 0x00189E3F File Offset: 0x0018803F
 		static ConfigRoleSkillInputById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleSkillInputById.CreateStaticDefaultValue), new Action(ConfigRoleSkillInputById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060034A0 RID: 13472 RVA: 0x00182B78 File Offset: 0x00180D78
+		// Token: 0x06003548 RID: 13640 RVA: 0x00189E60 File Offset: 0x00188060
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleSkillInputById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060034A1 RID: 13473 RVA: 0x00182BF7 File Offset: 0x00180DF7
+		// Token: 0x06003549 RID: 13641 RVA: 0x00189EDF File Offset: 0x001880DF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleSkillInputById.LogPair = null;
 			ConfigRoleSkillInputById.HandleId = 0;
 		}
 
-		// Token: 0x060034A2 RID: 13474 RVA: 0x00182C05 File Offset: 0x00180E05
+		// Token: 0x0600354A RID: 13642 RVA: 0x00189EED File Offset: 0x001880ED
 		public static void Init()
 		{
 			ConfigRoleSkillInputById.HandleId = ConfigCommon.InitDataStatement(ConfigRoleSkillInputById.HandleId, "db_skilltree.db", "select BinData from `RoleSkillInput` where RoleId = ?");
 		}
 
-		// Token: 0x060034A3 RID: 13475 RVA: 0x00182C20 File Offset: 0x00180E20
+		// Token: 0x0600354B RID: 13643 RVA: 0x00189F08 File Offset: 0x00188108
 		public static RoleSkillInput? GetConfig(int p0RoleId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleSkillInputById.HandleId, ConfigRoleSkillInputById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleSkillInput?(rootAsRoleSkillInput);
 		}
 
-		// Token: 0x04003D34 RID: 15668
+		// Token: 0x04003DF8 RID: 15864
 		private const string DB = "db_skilltree.db";
 
-		// Token: 0x04003D35 RID: 15669
+		// Token: 0x04003DF9 RID: 15865
 		private const string FILE = "j.技能树.xlsx";
 
-		// Token: 0x04003D36 RID: 15670
+		// Token: 0x04003DFA RID: 15866
 		private const string TABLE = "RoleSkillInput";
 
-		// Token: 0x04003D37 RID: 15671
+		// Token: 0x04003DFB RID: 15867
 		private const string COMMAND = "select BinData from `RoleSkillInput` where RoleId = ?";
 
-		// Token: 0x04003D38 RID: 15672
+		// Token: 0x04003DFC RID: 15868
 		private const string KEY_PREFIX = "RoleSkillInputById";
 
-		// Token: 0x04003D39 RID: 15673
+		// Token: 0x04003DFD RID: 15869
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003D3A RID: 15674
+		// Token: 0x04003DFE RID: 15870
 		private static int HandleId;
 	}
 }

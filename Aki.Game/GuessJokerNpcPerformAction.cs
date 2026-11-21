@@ -2,10 +2,10 @@
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001022 RID: 4130
+// Token: 0x020004D6 RID: 1238
 public class GuessJokerNpcPerformAction : GuessJokerActionBase
 {
-	// Token: 0x06006A13 RID: 27155 RVA: 0x00154540 File Offset: 0x00152740
+	// Token: 0x06003DA8 RID: 15784 RVA: 0x0015CE68 File Offset: 0x0015B068
 	public GuessJokerNpcPerformAction(ENpcPokerChangeTimingType changeTiming, int relatedCardId = 0, float duration = 0f)
 	{
 		this.ChangeTiming = changeTiming;
@@ -18,7 +18,7 @@ public class GuessJokerNpcPerformAction : GuessJokerActionBase
 		this.Duration = (float)GuessJokerUtils.GetJokerParamConfig(EGuessJokerParamKey.GuessJokerMaxPerformTime.ToString());
 	}
 
-	// Token: 0x06006A14 RID: 27156 RVA: 0x00154590 File Offset: 0x00152790
+	// Token: 0x06003DA9 RID: 15785 RVA: 0x0015CEB8 File Offset: 0x0015B0B8
 	protected override void OnStart()
 	{
 		if (GuessJokerGamePlayModel.Instance == null)
@@ -32,7 +32,7 @@ public class GuessJokerNpcPerformAction : GuessJokerActionBase
 		GuessJokerGamePlayModel.Instance.SetNpcPokerState(epokerStateType);
 	}
 
-	// Token: 0x06006A15 RID: 27157 RVA: 0x001545D8 File Offset: 0x001527D8
+	// Token: 0x06003DAA RID: 15786 RVA: 0x0015CF00 File Offset: 0x0015B100
 	private void PushRelatedPlotAction()
 	{
 		GuessJokerPlotAction guessJokerPlotAction = null;
@@ -60,7 +60,7 @@ public class GuessJokerNpcPerformAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x06006A16 RID: 27158 RVA: 0x0015466C File Offset: 0x0015286C
+	// Token: 0x06003DAB RID: 15787 RVA: 0x0015CF94 File Offset: 0x0015B194
 	private unsafe void OnGuessJokerFinishPokerPerformAction(EPokerStateType state)
 	{
 		if (state != this.State)
@@ -79,24 +79,24 @@ public class GuessJokerNpcPerformAction : GuessJokerActionBase
 		this.Done = true;
 	}
 
-	// Token: 0x06006A17 RID: 27159 RVA: 0x0015470E File Offset: 0x0015290E
+	// Token: 0x06003DAC RID: 15788 RVA: 0x0015D036 File Offset: 0x0015B236
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.GuessJokerFinishPokerPerformAction, new Action<EPokerStateType>(this.OnGuessJokerFinishPokerPerformAction));
 	}
 
-	// Token: 0x06006A18 RID: 27160 RVA: 0x0015472C File Offset: 0x0015292C
+	// Token: 0x06003DAD RID: 15789 RVA: 0x0015D054 File Offset: 0x0015B254
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.GuessJokerFinishPokerPerformAction, new Action<EPokerStateType>(this.OnGuessJokerFinishPokerPerformAction));
 	}
 
-	// Token: 0x040030E2 RID: 12514
+	// Token: 0x0400317B RID: 12667
 	private readonly ENpcPokerChangeTimingType ChangeTiming;
 
-	// Token: 0x040030E3 RID: 12515
+	// Token: 0x0400317C RID: 12668
 	private readonly int RelatedCardId;
 
-	// Token: 0x040030E4 RID: 12516
+	// Token: 0x0400317D RID: 12669
 	private EPokerStateType State;
 }

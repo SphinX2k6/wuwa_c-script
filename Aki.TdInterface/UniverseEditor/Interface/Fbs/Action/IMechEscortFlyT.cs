@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A80 RID: 27264
+	// Token: 0x020071A2 RID: 29090
 	public class IMechEscortFlyT
 	{
-		// Token: 0x1700CA64 RID: 51812
-		// (get) Token: 0x0602FC5F RID: 195679 RVA: 0x006803C7 File Offset: 0x0067E5C7
-		// (set) Token: 0x0602FC60 RID: 195680 RVA: 0x006803CF File Offset: 0x0067E5CF
+		// Token: 0x1700D50F RID: 54543
+		// (get) Token: 0x06032985 RID: 207237 RVA: 0x006D6487 File Offset: 0x006D4687
+		// (set) Token: 0x06032986 RID: 207238 RVA: 0x006D648F File Offset: 0x006D468F
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x1700CA65 RID: 51813
-		// (get) Token: 0x0602FC61 RID: 195681 RVA: 0x006803D8 File Offset: 0x0067E5D8
-		// (set) Token: 0x0602FC62 RID: 195682 RVA: 0x006803E0 File Offset: 0x0067E5E0
+		// Token: 0x1700D510 RID: 54544
+		// (get) Token: 0x06032987 RID: 207239 RVA: 0x006D6498 File Offset: 0x006D4698
+		// (set) Token: 0x06032988 RID: 207240 RVA: 0x006D64A0 File Offset: 0x006D46A0
 		public int TargetEntity { get; set; }
 
-		// Token: 0x1700CA66 RID: 51814
-		// (get) Token: 0x0602FC63 RID: 195683 RVA: 0x006803E9 File Offset: 0x0067E5E9
-		// (set) Token: 0x0602FC64 RID: 195684 RVA: 0x006803F1 File Offset: 0x0067E5F1
+		// Token: 0x1700D511 RID: 54545
+		// (get) Token: 0x06032989 RID: 207241 RVA: 0x006D64A9 File Offset: 0x006D46A9
+		// (set) Token: 0x0603298A RID: 207242 RVA: 0x006D64B1 File Offset: 0x006D46B1
 		public int TargetSpline { get; set; }
 
-		// Token: 0x1700CA67 RID: 51815
-		// (get) Token: 0x0602FC65 RID: 195685 RVA: 0x006803FA File Offset: 0x0067E5FA
-		// (set) Token: 0x0602FC66 RID: 195686 RVA: 0x00680402 File Offset: 0x0067E602
+		// Token: 0x1700D512 RID: 54546
+		// (get) Token: 0x0603298B RID: 207243 RVA: 0x006D64BA File Offset: 0x006D46BA
+		// (set) Token: 0x0603298C RID: 207244 RVA: 0x006D64C2 File Offset: 0x006D46C2
 		public List<IMechEscortPointT> EscortPoints { get; set; }
 
-		// Token: 0x0602FC67 RID: 195687 RVA: 0x0068040B File Offset: 0x0067E60B
+		// Token: 0x0603298D RID: 207245 RVA: 0x006D64CB File Offset: 0x006D46CB
 		public IMechEscortFlyT()
 		{
 			this.Type = ELeisureInteract.CustomSkill;

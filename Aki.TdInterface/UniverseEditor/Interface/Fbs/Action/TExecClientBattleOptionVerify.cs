@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076C1 RID: 30401
+	// Token: 0x02007ECF RID: 32463
 	public static class TExecClientBattleOptionVerify
 	{
-		// Token: 0x060374C5 RID: 226501 RVA: 0x0077E084 File Offset: 0x0077C284
+		// Token: 0x0603A97A RID: 239994 RVA: 0x007E2388 File Offset: 0x007E0588
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -31,15 +31,18 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				result = IFollowShooterSkillSkillVerify.Verify(verifier, tablePos);
 				break;
 			case 7:
-				result = IMonsterNpcInteractVerify.Verify(verifier, tablePos);
+				result = IMechExecuteVerify.Verify(verifier, tablePos);
 				break;
 			case 8:
-				result = IRoboSoldierSpecialTriggerHookSkillVerify.Verify(verifier, tablePos);
+				result = IMonsterNpcInteractVerify.Verify(verifier, tablePos);
 				break;
 			case 9:
-				result = ITriggerHookPointSkillVerify.Verify(verifier, tablePos);
+				result = IRoboSoldierSpecialTriggerHookSkillVerify.Verify(verifier, tablePos);
 				break;
 			case 10:
+				result = ITriggerHookPointSkillVerify.Verify(verifier, tablePos);
+				break;
+			case 11:
 				result = ITriggerMotorSkillVerify.Verify(verifier, tablePos);
 				break;
 			default:

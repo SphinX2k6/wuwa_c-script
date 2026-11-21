@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x0200026F RID: 623
+	// Token: 0x02000276 RID: 630
 	public enum ERestartType
 	{
-		// Token: 0x04000A0F RID: 2575
+		// Token: 0x04000A5D RID: 2653
 		None,
-		// Token: 0x04000A10 RID: 2576
+		// Token: 0x04000A5E RID: 2654
 		HotFixComplete,
-		// Token: 0x04000A11 RID: 2577
+		// Token: 0x04000A5F RID: 2655
 		RepairComplete
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Audio
 {
-	// Token: 0x02005E90 RID: 24208
+	// Token: 0x02004E75 RID: 20085
 	public enum EEventVolumePriority
 	{
-		// Token: 0x0402023B RID: 131643
+		// Token: 0x0401AD02 RID: 109826
 		Mute,
-		// Token: 0x0402023C RID: 131644
+		// Token: 0x0401AD03 RID: 109827
 		Second,
-		// Token: 0x0402023D RID: 131645
+		// Token: 0x0401AD04 RID: 109828
 		Top
 	}
 }

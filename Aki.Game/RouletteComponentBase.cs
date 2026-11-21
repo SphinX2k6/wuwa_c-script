@@ -5,12 +5,12 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200291D RID: 10525
+// Token: 0x02001E98 RID: 7832
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class RouletteComponentBase : UiPanelBase
 {
-	// Token: 0x06015B59 RID: 88921 RVA: 0x0057A078 File Offset: 0x00578278
+	// Token: 0x0601355D RID: 79197 RVA: 0x005A4FF4 File Offset: 0x005A31F4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public abstract class RouletteComponentBase : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015B5A RID: 88922 RVA: 0x0057A19B File Offset: 0x0057839B
+	// Token: 0x0601355E RID: 79198 RVA: 0x005A5117 File Offset: 0x005A3317
 	protected override void OnStart()
 	{
 		base.GetItem(2).SetUIActive(false);
@@ -38,7 +38,7 @@ public abstract class RouletteComponentBase : UiPanelBase
 		this.SelectRingItem = base.GetItem(2);
 	}
 
-	// Token: 0x06015B5B RID: 88923 RVA: 0x0057A1C4 File Offset: 0x005783C4
+	// Token: 0x0601355F RID: 79199 RVA: 0x005A5140 File Offset: 0x005A3340
 	protected override void OnBeforeDestroy()
 	{
 		this.SelectRingItem = null;
@@ -52,7 +52,7 @@ public abstract class RouletteComponentBase : UiPanelBase
 		this.ToggleEventList = new List<Action<EToggleState>>();
 	}
 
-	// Token: 0x06015B5C RID: 88924 RVA: 0x0057A204 File Offset: 0x00578404
+	// Token: 0x06013560 RID: 79200 RVA: 0x005A5180 File Offset: 0x005A3380
 	public void Reset()
 	{
 		this.AreaIndex = 0;
@@ -60,7 +60,7 @@ public abstract class RouletteComponentBase : UiPanelBase
 		this.RefreshRouletteComponent();
 	}
 
-	// Token: 0x06015B5D RID: 88925 RVA: 0x0057A21C File Offset: 0x0057841C
+	// Token: 0x06013561 RID: 79201 RVA: 0x005A5198 File Offset: 0x005A3398
 	private void RebuildGridList()
 	{
 		this.DestroyGridList();
@@ -124,13 +124,13 @@ public abstract class RouletteComponentBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015B5E RID: 88926 RVA: 0x0057A3D8 File Offset: 0x005785D8
+	// Token: 0x06013562 RID: 79202 RVA: 0x005A5354 File Offset: 0x005A3554
 	protected virtual int GetGridId(int index, ERouletteGridType gridType)
 	{
 		return 0;
 	}
 
-	// Token: 0x06015B5F RID: 88927 RVA: 0x0057A3DB File Offset: 0x005785DB
+	// Token: 0x06013563 RID: 79203 RVA: 0x005A5357 File Offset: 0x005A3557
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -142,7 +142,7 @@ public abstract class RouletteComponentBase : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x06015B60 RID: 88928 RVA: 0x0057A3E0 File Offset: 0x005785E0
+	// Token: 0x06013564 RID: 79204 RVA: 0x005A535C File Offset: 0x005A355C
 	protected virtual void InitGridEvent(RouletteGridBase grid)
 	{
 		foreach (Action<EToggleState> eventHandler in this.ToggleEventList)
@@ -151,14 +151,14 @@ public abstract class RouletteComponentBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015B61 RID: 88929 RVA: 0x0057A434 File Offset: 0x00578634
+	// Token: 0x06013565 RID: 79205 RVA: 0x005A53B0 File Offset: 0x005A35B0
 	protected virtual RouletteData GridDataDecorator(RouletteData data)
 	{
 		data.State = this.JudgeGridStateByData(data.Id, data.GridType);
 		return data;
 	}
 
-	// Token: 0x06015B62 RID: 88930 RVA: 0x0057A450 File Offset: 0x00578650
+	// Token: 0x06013566 RID: 79206 RVA: 0x005A53CC File Offset: 0x005A35CC
 	public void AddAllGridToggleCanExecuteChangeEvent(Func<RouletteData, EToggleState, bool> onItemClicked)
 	{
 		foreach (RouletteGridBase rouletteGridBase in this.RouletteGridList)
@@ -167,19 +167,19 @@ public abstract class RouletteComponentBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015B63 RID: 88931 RVA: 0x0057A4A4 File Offset: 0x005786A4
+	// Token: 0x06013567 RID: 79207 RVA: 0x005A5420 File Offset: 0x005A3620
 	protected virtual bool IsCurrentEquippedId(RouletteData gridData)
 	{
 		return false;
 	}
 
-	// Token: 0x06015B64 RID: 88932 RVA: 0x0057A4A7 File Offset: 0x005786A7
+	// Token: 0x06013568 RID: 79208 RVA: 0x005A5423 File Offset: 0x005A3623
 	protected virtual EGridBehavior JudgeGridStateByData(int id, ERouletteGridType gridType)
 	{
 		return EGridBehavior.Normal;
 	}
 
-	// Token: 0x06015B65 RID: 88933 RVA: 0x0057A4AC File Offset: 0x005786AC
+	// Token: 0x06013569 RID: 79209 RVA: 0x005A5428 File Offset: 0x005A3628
 	private void DestroyGridList()
 	{
 		foreach (RouletteGridBase rouletteGridBase in this.RouletteGridList)
@@ -190,12 +190,12 @@ public abstract class RouletteComponentBase : UiPanelBase
 		this.RouletteGridList = new List<RouletteGridBase>();
 	}
 
-	// Token: 0x06015B66 RID: 88934 RVA: 0x0057A510 File Offset: 0x00578710
+	// Token: 0x0601356A RID: 79210 RVA: 0x005A548C File Offset: 0x005A368C
 	protected virtual void GamepadReturnEmptyGrid()
 	{
 	}
 
-	// Token: 0x06015B67 RID: 88935 RVA: 0x0057A514 File Offset: 0x00578714
+	// Token: 0x0601356B RID: 79211 RVA: 0x005A5490 File Offset: 0x005A3690
 	protected void RefreshCurrentGridIndex(int newAreaIndex)
 	{
 		this.AreaIndex = newAreaIndex;
@@ -219,7 +219,7 @@ public abstract class RouletteComponentBase : UiPanelBase
 		this.IsEmptyChoose = true;
 	}
 
-	// Token: 0x06015B68 RID: 88936 RVA: 0x0057A576 File Offset: 0x00578776
+	// Token: 0x0601356C RID: 79212 RVA: 0x005A54F2 File Offset: 0x005A36F2
 	[NullableContext(2)]
 	public RouletteGridBase GetCurrentGrid()
 	{
@@ -234,7 +234,7 @@ public abstract class RouletteComponentBase : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x06015B69 RID: 88937 RVA: 0x0057A5B4 File Offset: 0x005787B4
+	// Token: 0x0601356D RID: 79213 RVA: 0x005A5530 File Offset: 0x005A3730
 	public void SetAllGridToggleSelfInteractive(bool bActive)
 	{
 		foreach (RouletteGridBase rouletteGridBase in this.RouletteGridList)
@@ -243,21 +243,21 @@ public abstract class RouletteComponentBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015B6A RID: 88938 RVA: 0x0057A608 File Offset: 0x00578808
+	// Token: 0x0601356E RID: 79214 RVA: 0x005A5584 File Offset: 0x005A3784
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetCurrentIndexAndAngle()
 	{
 		return new ValueTuple<int, int>(this.AreaIndex, this.Angle);
 	}
 
-	// Token: 0x06015B6B RID: 88939 RVA: 0x0057A61B File Offset: 0x0057881B
+	// Token: 0x0601356F RID: 79215 RVA: 0x005A5597 File Offset: 0x005A3797
 	protected void RefreshRouletteComponent()
 	{
 		this.RefreshCurrentShowName();
 		this.RefreshTips();
 	}
 
-	// Token: 0x06015B6C RID: 88940 RVA: 0x0057A62C File Offset: 0x0057882C
+	// Token: 0x06013570 RID: 79216 RVA: 0x005A55A8 File Offset: 0x005A37A8
 	public void Refresh(int? newAreaIndex, int? newAngle)
 	{
 		if (newAreaIndex != null && this.AreaIndex != newAreaIndex.Value)
@@ -294,12 +294,12 @@ public abstract class RouletteComponentBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015B6D RID: 88941 RVA: 0x0057A729 File Offset: 0x00578929
+	// Token: 0x06013571 RID: 79217 RVA: 0x005A56A5 File Offset: 0x005A38A5
 	protected virtual void SetCurrentToggleState(bool bSelect)
 	{
 	}
 
-	// Token: 0x06015B6E RID: 88942 RVA: 0x0057A72C File Offset: 0x0057892C
+	// Token: 0x06013572 RID: 79218 RVA: 0x005A56A8 File Offset: 0x005A38A8
 	private void SetRingRotate(int angle)
 	{
 		if (this.TempRotator == null || this.SelectRingItem == null)
@@ -312,7 +312,7 @@ public abstract class RouletteComponentBase : UiPanelBase
 		selectRingItem.SetUIRelativeRotation(value);
 	}
 
-	// Token: 0x06015B6F RID: 88943 RVA: 0x0057A79A File Offset: 0x0057899A
+	// Token: 0x06013573 RID: 79219 RVA: 0x005A5716 File Offset: 0x005A3916
 	public void SetRingVisible(bool bVisible)
 	{
 		UUIItem selectRingItem = this.SelectRingItem;
@@ -323,7 +323,7 @@ public abstract class RouletteComponentBase : UiPanelBase
 		selectRingItem.SetUIActive(bVisible);
 	}
 
-	// Token: 0x06015B70 RID: 88944 RVA: 0x0057A7B0 File Offset: 0x005789B0
+	// Token: 0x06013574 RID: 79220 RVA: 0x005A572C File Offset: 0x005A392C
 	protected virtual void RefreshCurrentShowName()
 	{
 		RouletteGridBase currentGrid = this.GetCurrentGrid();
@@ -342,24 +342,24 @@ public abstract class RouletteComponentBase : UiPanelBase
 		this.RefreshName(text2);
 	}
 
-	// Token: 0x06015B71 RID: 88945 RVA: 0x0057A7EE File Offset: 0x005789EE
+	// Token: 0x06013575 RID: 79221 RVA: 0x005A576A File Offset: 0x005A396A
 	protected void RefreshName(string textId)
 	{
 		base.GetText(0).ShowTextNew(textId);
 	}
 
-	// Token: 0x06015B72 RID: 88946 RVA: 0x0057A7FD File Offset: 0x005789FD
+	// Token: 0x06013576 RID: 79222 RVA: 0x005A5779 File Offset: 0x005A3979
 	public void SetNameVisible(bool bVisible)
 	{
 		base.GetText(0).SetUIActive(bVisible);
 	}
 
-	// Token: 0x06015B73 RID: 88947 RVA: 0x0057A80C File Offset: 0x00578A0C
+	// Token: 0x06013577 RID: 79223 RVA: 0x005A5788 File Offset: 0x005A3988
 	protected virtual void RefreshTips()
 	{
 	}
 
-	// Token: 0x06015B74 RID: 88948 RVA: 0x0057A810 File Offset: 0x00578A10
+	// Token: 0x06013578 RID: 79224 RVA: 0x005A578C File Offset: 0x005A398C
 	[NullableContext(2)]
 	public void RefreshTipsByText(string tipsText, bool needReplace = false)
 	{
@@ -371,13 +371,13 @@ public abstract class RouletteComponentBase : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(text, tipsText, Array.Empty<object>());
 	}
 
-	// Token: 0x06015B75 RID: 88949 RVA: 0x0057A83A File Offset: 0x00578A3A
+	// Token: 0x06013579 RID: 79225 RVA: 0x005A57B6 File Offset: 0x005A39B6
 	public void SetTipsActive(bool bActive)
 	{
 		base.GetText(1).SetUIActive(bActive);
 	}
 
-	// Token: 0x06015B76 RID: 88950 RVA: 0x0057A849 File Offset: 0x00578A49
+	// Token: 0x0601357A RID: 79226 RVA: 0x005A57C5 File Offset: 0x005A39C5
 	public void RefreshRouletteType()
 	{
 		this.RefreshRouletteItem();
@@ -385,52 +385,52 @@ public abstract class RouletteComponentBase : UiPanelBase
 		this.RebuildGridList();
 	}
 
-	// Token: 0x06015B77 RID: 88951 RVA: 0x0057A85D File Offset: 0x00578A5D
+	// Token: 0x0601357B RID: 79227 RVA: 0x005A57D9 File Offset: 0x005A39D9
 	protected virtual void RefreshRouletteItem()
 	{
 	}
 
-	// Token: 0x06015B78 RID: 88952 RVA: 0x0057A85F File Offset: 0x00578A5F
+	// Token: 0x0601357C RID: 79228 RVA: 0x005A57DB File Offset: 0x005A39DB
 	public void RefreshRoulettePlatformType()
 	{
 		this.Reset();
 	}
 
-	// Token: 0x06015B79 RID: 88953 RVA: 0x0057A867 File Offset: 0x00578A67
+	// Token: 0x0601357D RID: 79229 RVA: 0x005A57E3 File Offset: 0x005A39E3
 	public void RefreshRouletteInputType()
 	{
 		this.Reset();
 	}
 
-	// Token: 0x0400A1C7 RID: 41415
+	// Token: 0x0400A5B2 RID: 42418
 	[Nullable(2)]
 	private UUIItem SelectRingItem;
 
-	// Token: 0x0400A1C8 RID: 41416
+	// Token: 0x0400A5B3 RID: 42419
 	protected int Angle = -1;
 
-	// Token: 0x0400A1C9 RID: 41417
+	// Token: 0x0400A5B4 RID: 42420
 	protected int AreaIndex;
 
-	// Token: 0x0400A1CA RID: 41418
+	// Token: 0x0400A5B5 RID: 42421
 	private FRotator? TempRotator = new FRotator?(new FRotator(0f, 0f, 0f));
 
-	// Token: 0x0400A1CB RID: 41419
+	// Token: 0x0400A5B6 RID: 42422
 	protected int CurrentGridIndex = -1;
 
-	// Token: 0x0400A1CC RID: 41420
+	// Token: 0x0400A5B7 RID: 42423
 	protected int CurrentEquipGridIndex = -1;
 
-	// Token: 0x0400A1CD RID: 41421
+	// Token: 0x0400A5B8 RID: 42424
 	protected bool IsEmptyChoose = true;
 
-	// Token: 0x0400A1CE RID: 41422
+	// Token: 0x0400A5B9 RID: 42425
 	protected List<RouletteGridBase> RouletteGridList = new List<RouletteGridBase>();
 
-	// Token: 0x0400A1CF RID: 41423
+	// Token: 0x0400A5BA RID: 42426
 	[Nullable(2)]
 	protected Dictionary<int, int> AreaIndexToGridIndex = new Dictionary<int, int>();
 
-	// Token: 0x0400A1D0 RID: 41424
+	// Token: 0x0400A5BB RID: 42427
 	protected List<Action<EToggleState>> ToggleEventList = new List<Action<EToggleState>>();
 }

@@ -8,12 +8,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200114C RID: 4428
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200127C RID: 4732
 	public class IStuckCheckCondition
 	{
-		// Token: 0x06006490 RID: 25744 RVA: 0x000F1B10 File Offset: 0x000EFD10
+		// Token: 0x06006A97 RID: 27287 RVA: 0x000FEDD4 File Offset: 0x000FCFD4
 		private IStuckCheckCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,7 +26,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006491 RID: 25745 RVA: 0x000F1B48 File Offset: 0x000EFD48
+		// Token: 0x06006A98 RID: 27288 RVA: 0x000FEE0C File Offset: 0x000FD00C
 		public static IStuckCheckCondition Create([Nullable(2)] IStuckCheckCondition instance)
 		{
 			if (instance == null)
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006492 RID: 25746 RVA: 0x000F1B5B File Offset: 0x000EFD5B
+		// Token: 0x06006A99 RID: 27289 RVA: 0x000FEE1F File Offset: 0x000FD01F
 		public static IStuckCheckCondition CreateFromSetValue([Nullable(2)] IStuckCheckCondition_SetValue value)
 		{
 			if (value == null)
@@ -54,7 +52,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006493 RID: 25747 RVA: 0x000F1B70 File Offset: 0x000EFD70
+		// Token: 0x06006A9A RID: 27290 RVA: 0x000FEE34 File Offset: 0x000FD034
 		public IStuckCheckCondition_SetValue ToSetValue()
 		{
 			return new IStuckCheckCondition_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170020DB RID: 8411
-		// (get) Token: 0x06006494 RID: 25748 RVA: 0x000F1BBE File Offset: 0x000EFDBE
-		// (set) Token: 0x06006495 RID: 25749 RVA: 0x000F1BE5 File Offset: 0x000EFDE5
+		// Token: 0x17002291 RID: 8849
+		// (get) Token: 0x06006A9B RID: 27291 RVA: 0x000FEE82 File Offset: 0x000FD082
+		// (set) Token: 0x06006A9C RID: 27292 RVA: 0x000FEEA9 File Offset: 0x000FD0A9
 		public virtual List<int> RangeEntities
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020DC RID: 8412
-		// (get) Token: 0x06006496 RID: 25750 RVA: 0x000F1BF3 File Offset: 0x000EFDF3
-		// (set) Token: 0x06006497 RID: 25751 RVA: 0x000F1C22 File Offset: 0x000EFE22
+		// Token: 0x17002292 RID: 8850
+		// (get) Token: 0x06006A9D RID: 27293 RVA: 0x000FEEB7 File Offset: 0x000FD0B7
+		// (set) Token: 0x06006A9E RID: 27294 RVA: 0x000FEEE6 File Offset: 0x000FD0E6
 		public virtual float TriggerInterval
 		{
 			get
@@ -114,9 +112,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020DD RID: 8413
-		// (get) Token: 0x06006498 RID: 25752 RVA: 0x000F1C30 File Offset: 0x000EFE30
-		// (set) Token: 0x06006499 RID: 25753 RVA: 0x000F1C5B File Offset: 0x000EFE5B
+		// Token: 0x17002293 RID: 8851
+		// (get) Token: 0x06006A9F RID: 27295 RVA: 0x000FEEF4 File Offset: 0x000FD0F4
+		// (set) Token: 0x06006AA0 RID: 27296 RVA: 0x000FEF1F File Offset: 0x000FD11F
 		public virtual int MaxTriggerTimes
 		{
 			get
@@ -137,9 +135,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020DE RID: 8414
-		// (get) Token: 0x0600649A RID: 25754 RVA: 0x000F1C6C File Offset: 0x000EFE6C
-		// (set) Token: 0x0600649B RID: 25755 RVA: 0x000F1CCD File Offset: 0x000EFECD
+		// Token: 0x17002294 RID: 8852
+		// (get) Token: 0x06006AA1 RID: 27297 RVA: 0x000FEF30 File Offset: 0x000FD130
+		// (set) Token: 0x06006AA2 RID: 27298 RVA: 0x000FEF91 File Offset: 0x000FD191
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -167,9 +165,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020DF RID: 8415
-		// (get) Token: 0x0600649C RID: 25756 RVA: 0x000F1CE4 File Offset: 0x000EFEE4
-		// (set) Token: 0x0600649D RID: 25757 RVA: 0x000F1D77 File Offset: 0x000EFF77
+		// Token: 0x17002295 RID: 8853
+		// (get) Token: 0x06006AA3 RID: 27299 RVA: 0x000FEFA8 File Offset: 0x000FD1A8
+		// (set) Token: 0x06006AA4 RID: 27300 RVA: 0x000FF03B File Offset: 0x000FD23B
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			get
@@ -205,24 +203,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003C66 RID: 15462
+		// Token: 0x04003FB9 RID: 16313
 		[Nullable(2)]
 		protected IStuckCheckCondition FbInstance;
 
-		// Token: 0x04003C67 RID: 15463
+		// Token: 0x04003FBA RID: 16314
 		[Nullable(2)]
 		protected IStuckCheckCondition_SetValue PocoInterface;
 
-		// Token: 0x04003C68 RID: 15464
+		// Token: 0x04003FBB RID: 16315
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04003C69 RID: 15465
+		// Token: 0x04003FBC RID: 16316
 		private bool _ConditionInited;
 
-		// Token: 0x04003C6A RID: 15466
+		// Token: 0x04003FBD RID: 16317
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x04003C6B RID: 15467
+		// Token: 0x04003FBE RID: 16318
 		private bool _ActionsInited;
 	}
 }

@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015D2 RID: 5586
+	// Token: 0x02001644 RID: 5700
 	public enum EntityBeamReceiveType
 	{
-		// Token: 0x0400BD7E RID: 48510
+		// Token: 0x0400C272 RID: 49778
 		[OriginalName("BeginAction")]
 		BeginAction,
-		// Token: 0x0400BD7F RID: 48511
+		// Token: 0x0400C273 RID: 49779
 		[OriginalName("CompleteAction")]
 		CompleteAction,
-		// Token: 0x0400BD80 RID: 48512
+		// Token: 0x0400C274 RID: 49780
 		[OriginalName("StopAction")]
 		StopAction
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200112F RID: 4399
+	// Token: 0x0200125D RID: 4701
 	public class ISheriffAnomalyProgressBoardConfig_SetValue
 	{
-		// Token: 0x04003C22 RID: 15394
+		// Token: 0x04003F70 RID: 16240
 		public int AnomalyId;
 	}
 }

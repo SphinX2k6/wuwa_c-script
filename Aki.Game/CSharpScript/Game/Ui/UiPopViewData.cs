@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200466B RID: 18027
+	// Token: 0x0200359C RID: 13724
 	public class UiPopViewData : UiViewData
 	{
-		// Token: 0x040194ED RID: 103661
+		// Token: 0x04013B94 RID: 80788
 		public bool NotAddChildToTopStackView;
 	}
 }

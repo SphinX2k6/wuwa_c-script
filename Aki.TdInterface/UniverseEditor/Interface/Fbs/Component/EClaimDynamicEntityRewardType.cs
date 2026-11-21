@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D7C RID: 19836
+	// Token: 0x0200527D RID: 21117
 	public enum EClaimDynamicEntityRewardType : byte
 	{
-		// Token: 0x0400D82A RID: 55338
+		// Token: 0x0400E36C RID: 58220
 		Hook
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200683B RID: 26683
+	// Token: 0x0200578B RID: 22411
 	public enum EDangoBrawlSuccessSettleBtnMode
 	{
-		// Token: 0x04022B1D RID: 142109
+		// Token: 0x0401D37A RID: 119674
 		Normal,
-		// Token: 0x04022B1E RID: 142110
+		// Token: 0x0401D37B RID: 119675
 		NormalLastLevel,
-		// Token: 0x04022B1F RID: 142111
+		// Token: 0x0401D37C RID: 119676
 		AdventureLastLevel
 	}
 }

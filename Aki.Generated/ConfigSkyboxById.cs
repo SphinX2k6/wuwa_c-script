@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200094F RID: 2383
+	// Token: 0x0200099A RID: 2458
 	public class ConfigSkyboxById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060037ED RID: 14317 RVA: 0x00195B00 File Offset: 0x00193D00
+		// Token: 0x060039AF RID: 14767 RVA: 0x001A2D20 File Offset: 0x001A0F20
 		static ConfigSkyboxById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSkyboxById.CreateStaticDefaultValue), new Action(ConfigSkyboxById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060037EE RID: 14318 RVA: 0x00195B20 File Offset: 0x00193D20
+		// Token: 0x060039B0 RID: 14768 RVA: 0x001A2D40 File Offset: 0x001A0F40
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSkyboxById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060037EF RID: 14319 RVA: 0x00195B9F File Offset: 0x00193D9F
+		// Token: 0x060039B1 RID: 14769 RVA: 0x001A2DBF File Offset: 0x001A0FBF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSkyboxById.LogPair = null;
 			ConfigSkyboxById.HandleId = 0;
 		}
 
-		// Token: 0x060037F0 RID: 14320 RVA: 0x00195BAD File Offset: 0x00193DAD
+		// Token: 0x060039B2 RID: 14770 RVA: 0x001A2DCD File Offset: 0x001A0FCD
 		public static void Init()
 		{
 			ConfigSkyboxById.HandleId = ConfigCommon.InitDataStatement(ConfigSkyboxById.HandleId, "db_skybox.db", "select BinData from `Skybox` where Id=?");
 		}
 
-		// Token: 0x060037F1 RID: 14321 RVA: 0x00195BC8 File Offset: 0x00193DC8
+		// Token: 0x060039B3 RID: 14771 RVA: 0x001A2DE8 File Offset: 0x001A0FE8
 		public static Skybox? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSkyboxById.HandleId, ConfigSkyboxById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Skybox?(rootAsSkybox);
 		}
 
-		// Token: 0x0400410F RID: 16655
+		// Token: 0x0400431C RID: 17180
 		private const string DB = "db_skybox.db";
 
-		// Token: 0x04004110 RID: 16656
+		// Token: 0x0400431D RID: 17181
 		private const string FILE = "k.可视化编辑/c.Csv/t.天空盒配置/*.csv*";
 
-		// Token: 0x04004111 RID: 16657
+		// Token: 0x0400431E RID: 17182
 		private const string TABLE = "Skybox";
 
-		// Token: 0x04004112 RID: 16658
+		// Token: 0x0400431F RID: 17183
 		private const string COMMAND = "select BinData from `Skybox` where Id=?";
 
-		// Token: 0x04004113 RID: 16659
+		// Token: 0x04004320 RID: 17184
 		private const string KEY_PREFIX = "SkyboxById";
 
-		// Token: 0x04004114 RID: 16660
+		// Token: 0x04004321 RID: 17185
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004115 RID: 16661
+		// Token: 0x04004322 RID: 17186
 		private static int HandleId;
 	}
 }

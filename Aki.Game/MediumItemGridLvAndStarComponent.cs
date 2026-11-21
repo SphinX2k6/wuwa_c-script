@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001921 RID: 6433
+// Token: 0x02000DDA RID: 3546
 public class MediumItemGridLvAndStarComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BC6F RID: 48239 RVA: 0x002AA92C File Offset: 0x002A8B2C
+	// Token: 0x06009059 RID: 36953 RVA: 0x002B5088 File Offset: 0x002B3288
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -25,14 +25,14 @@ public class MediumItemGridLvAndStarComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BC70 RID: 48240 RVA: 0x002AA9D7 File Offset: 0x002A8BD7
+	// Token: 0x0600905A RID: 36954 RVA: 0x002B5133 File Offset: 0x002B3333
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemRoleInfo";
 	}
 
-	// Token: 0x0600BC71 RID: 48241 RVA: 0x002AA9E0 File Offset: 0x002A8BE0
+	// Token: 0x0600905B RID: 36955 RVA: 0x002B513C File Offset: 0x002B333C
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -47,7 +47,7 @@ public class MediumItemGridLvAndStarComponent : MediumItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x0600BC72 RID: 48242 RVA: 0x002AAA1E File Offset: 0x002A8C1E
+	// Token: 0x0600905C RID: 36956 RVA: 0x002B517A File Offset: 0x002B337A
 	public void SetLevel(int? level)
 	{
 		base.GetText(0).SetUIActive(level != null);
@@ -57,7 +57,7 @@ public class MediumItemGridLvAndStarComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x0600BC73 RID: 48243 RVA: 0x002AAA5D File Offset: 0x002A8C5D
+	// Token: 0x0600905D RID: 36957 RVA: 0x002B51B9 File Offset: 0x002B33B9
 	public void SetStar(int? star)
 	{
 		base.GetItem(1).SetUIActive(star != null);
@@ -67,19 +67,19 @@ public class MediumItemGridLvAndStarComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x02007E8D RID: 32397
+	// Token: 0x02007014 RID: 28692
 	private class EInfoDefine
 	{
-		// Token: 0x04029660 RID: 169568
+		// Token: 0x0402498C RID: 149900
 		public const int TxtLevel = 0;
 
-		// Token: 0x04029661 RID: 169569
+		// Token: 0x0402498D RID: 149901
 		public const int StarLayout = 1;
 
-		// Token: 0x04029662 RID: 169570
+		// Token: 0x0402498E RID: 149902
 		public const int Star = 2;
 
-		// Token: 0x04029663 RID: 169571
+		// Token: 0x0402498F RID: 149903
 		public const int TxtStar = 3;
 	}
 }

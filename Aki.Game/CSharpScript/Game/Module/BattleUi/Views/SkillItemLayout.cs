@@ -4,14 +4,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CCB RID: 23755
+	// Token: 0x02004CAD RID: 19629
 	public class SkillItemLayout
 	{
-		// Token: 0x0401F549 RID: 128329
+		// Token: 0x0401A002 RID: 106498
 		[Nullable(1)]
 		public UUIItem Item;
 
-		// Token: 0x0401F54A RID: 128330
+		// Token: 0x0401A003 RID: 106499
 		public int Index;
 	}
 }

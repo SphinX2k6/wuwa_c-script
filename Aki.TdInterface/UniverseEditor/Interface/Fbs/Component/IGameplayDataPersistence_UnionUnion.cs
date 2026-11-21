@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052EC RID: 21228
+	// Token: 0x0200586F RID: 22639
 	public class IGameplayDataPersistence_UnionUnion
 	{
-		// Token: 0x17009BCD RID: 39885
-		// (get) Token: 0x06022A7C RID: 141948 RVA: 0x004CDB64 File Offset: 0x004CBD64
-		// (set) Token: 0x06022A7D RID: 141949 RVA: 0x004CDB6C File Offset: 0x004CBD6C
+		// Token: 0x1700A3FE RID: 41982
+		// (get) Token: 0x06024B16 RID: 150294 RVA: 0x0050A690 File Offset: 0x00508890
+		// (set) Token: 0x06024B17 RID: 150295 RVA: 0x0050A698 File Offset: 0x00508898
 		public IGameplayDataPersistence_Union Type { get; set; }
 
-		// Token: 0x17009BCE RID: 39886
-		// (get) Token: 0x06022A7E RID: 141950 RVA: 0x004CDB75 File Offset: 0x004CBD75
-		// (set) Token: 0x06022A7F RID: 141951 RVA: 0x004CDB7D File Offset: 0x004CBD7D
+		// Token: 0x1700A3FF RID: 41983
+		// (get) Token: 0x06024B18 RID: 150296 RVA: 0x0050A6A1 File Offset: 0x005088A1
+		// (set) Token: 0x06024B19 RID: 150297 RVA: 0x0050A6A9 File Offset: 0x005088A9
 		public object Value { get; set; }
 
-		// Token: 0x06022A80 RID: 141952 RVA: 0x004CDB86 File Offset: 0x004CBD86
+		// Token: 0x06024B1A RID: 150298 RVA: 0x0050A6B2 File Offset: 0x005088B2
 		public IGameplayDataPersistence_UnionUnion()
 		{
 			this.Type = IGameplayDataPersistence_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06022A81 RID: 141953 RVA: 0x004CDB9C File Offset: 0x004CBD9C
+		// Token: 0x06024B1B RID: 150299 RVA: 0x0050A6C8 File Offset: 0x005088C8
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06022A82 RID: 141954 RVA: 0x004CDBAE File Offset: 0x004CBDAE
+		// Token: 0x06024B1C RID: 150300 RVA: 0x0050A6DA File Offset: 0x005088DA
 		public IGameplayDataPersistenceT AsIGameplayDataPersistence()
 		{
 			return this.As<IGameplayDataPersistenceT>();
 		}
 
-		// Token: 0x06022A83 RID: 141955 RVA: 0x004CDBB6 File Offset: 0x004CBDB6
+		// Token: 0x06024B1D RID: 150301 RVA: 0x0050A6E2 File Offset: 0x005088E2
 		public static IGameplayDataPersistence_UnionUnion FromIGameplayDataPersistence(IGameplayDataPersistenceT _igameplaydatapersistence)
 		{
 			return new IGameplayDataPersistence_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06022A84 RID: 141956 RVA: 0x004CDBCB File Offset: 0x004CBDCB
+		// Token: 0x06024B1E RID: 150302 RVA: 0x0050A6F7 File Offset: 0x005088F7
 		public IGameplayDataPersistenceTetrisBoardGameT AsIGameplayDataPersistenceTetrisBoardGame()
 		{
 			return this.As<IGameplayDataPersistenceTetrisBoardGameT>();
 		}
 
-		// Token: 0x06022A85 RID: 141957 RVA: 0x004CDBD3 File Offset: 0x004CBDD3
+		// Token: 0x06024B1F RID: 150303 RVA: 0x0050A6FF File Offset: 0x005088FF
 		public static IGameplayDataPersistence_UnionUnion FromIGameplayDataPersistenceTetrisBoardGame(IGameplayDataPersistenceTetrisBoardGameT _igameplaydatapersistencetetrisboardgame)
 		{
 			return new IGameplayDataPersistence_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06022A86 RID: 141958 RVA: 0x004CDBE8 File Offset: 0x004CBDE8
+		// Token: 0x06024B20 RID: 150304 RVA: 0x0050A714 File Offset: 0x00508914
 		public static int Pack(FlatBufferBuilder builder, IGameplayDataPersistence_UnionUnion _o)
 		{
 			IGameplayDataPersistence_Union type = _o.Type;

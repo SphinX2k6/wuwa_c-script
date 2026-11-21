@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000434 RID: 1076
+	// Token: 0x0200044A RID: 1098
 	public class ConfigInfrRoadBuildById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001941 RID: 6465 RVA: 0x000E84E3 File Offset: 0x000E66E3
+		// Token: 0x060019C5 RID: 6597 RVA: 0x000EEC37 File Offset: 0x000ECE37
 		static ConfigInfrRoadBuildById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfrRoadBuildById.CreateStaticDefaultValue), new Action(ConfigInfrRoadBuildById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001942 RID: 6466 RVA: 0x000E8504 File Offset: 0x000E6704
+		// Token: 0x060019C6 RID: 6598 RVA: 0x000EEC58 File Offset: 0x000ECE58
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfrRoadBuildById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001943 RID: 6467 RVA: 0x000E8583 File Offset: 0x000E6783
+		// Token: 0x060019C7 RID: 6599 RVA: 0x000EECD7 File Offset: 0x000ECED7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfrRoadBuildById.LogPair = null;
 			ConfigInfrRoadBuildById.HandleId = 0;
 		}
 
-		// Token: 0x06001944 RID: 6468 RVA: 0x000E8591 File Offset: 0x000E6791
+		// Token: 0x060019C8 RID: 6600 RVA: 0x000EECE5 File Offset: 0x000ECEE5
 		public static void Init()
 		{
 			ConfigInfrRoadBuildById.HandleId = ConfigCommon.InitDataStatement(ConfigInfrRoadBuildById.HandleId, "db_infrastructure.db", "select BinData from `InfrRoadBuild` where Id=?");
 		}
 
-		// Token: 0x06001945 RID: 6469 RVA: 0x000E85AC File Offset: 0x000E67AC
+		// Token: 0x060019C9 RID: 6601 RVA: 0x000EED00 File Offset: 0x000ECF00
 		public static InfrRoadBuild? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInfrRoadBuildById.HandleId, ConfigInfrRoadBuildById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new InfrRoadBuild?(rootAsInfrRoadBuild);
 		}
 
-		// Token: 0x04001D50 RID: 7504
+		// Token: 0x04001DEA RID: 7658
 		private const string DB = "db_infrastructure.db";
 
-		// Token: 0x04001D51 RID: 7505
+		// Token: 0x04001DEB RID: 7659
 		private const string FILE = "j.基建.xlsx";
 
-		// Token: 0x04001D52 RID: 7506
+		// Token: 0x04001DEC RID: 7660
 		private const string TABLE = "InfrRoadBuild";
 
-		// Token: 0x04001D53 RID: 7507
+		// Token: 0x04001DED RID: 7661
 		private const string COMMAND = "select BinData from `InfrRoadBuild` where Id=?";
 
-		// Token: 0x04001D54 RID: 7508
+		// Token: 0x04001DEE RID: 7662
 		private const string KEY_PREFIX = "InfrRoadBuildById";
 
-		// Token: 0x04001D55 RID: 7509
+		// Token: 0x04001DEF RID: 7663
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001D56 RID: 7510
+		// Token: 0x04001DF0 RID: 7664
 		private static int HandleId;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002ABF RID: 10943
+	// Token: 0x02002DB3 RID: 11699
 	public class IRoleSceneVoice : IAudioTypeBase
 	{
-		// Token: 0x0600F027 RID: 61479 RVA: 0x0022E1D0 File Offset: 0x0022C3D0
-		[NullableContext(1)]
+		// Token: 0x0600FEDD RID: 65245 RVA: 0x0024BEDC File Offset: 0x0024A0DC
 		public static IRoleSceneVoice Create(IRoleSceneVoice? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C6B RID: 19563
-		// (get) Token: 0x0600F028 RID: 61480 RVA: 0x0022E1EF File Offset: 0x0022C3EF
+		// Token: 0x17005025 RID: 20517
+		// (get) Token: 0x0600FEDE RID: 65246 RVA: 0x0024BEFB File Offset: 0x0024A0FB
 		public override EAudioType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C6C RID: 19564
-		// (get) Token: 0x0600F029 RID: 61481 RVA: 0x0022E1FC File Offset: 0x0022C3FC
+		// Token: 0x17005026 RID: 20518
+		// (get) Token: 0x0600FEDF RID: 65247 RVA: 0x0024BF08 File Offset: 0x0024A108
 		public virtual int VoiceGroupData
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008419 RID: 33817
+		// Token: 0x04008B1D RID: 35613
 		private IRoleSceneVoice Instance;
 	}
 }

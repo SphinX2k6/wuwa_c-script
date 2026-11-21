@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E2B RID: 24107
+	// Token: 0x02004E10 RID: 19984
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarSlotPlayUse : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D4F9 RID: 251129 RVA: 0x00EC7428 File Offset: 0x00EC5628
+		// Token: 0x06032489 RID: 205961 RVA: 0x00E18994 File Offset: 0x00E16B94
 		protected override UniTask InitSlotItem(UUIItem slotItem)
 		{
 			SpecialEnergyBarSlotPlayUse.<InitSlotItem>d__1 <InitSlotItem>d__;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitSlotItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D4FA RID: 251130 RVA: 0x00EC7474 File Offset: 0x00EC5674
+		// Token: 0x0603248A RID: 205962 RVA: 0x00E189E0 File Offset: 0x00E16BE0
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(keyEnable, isStart);
 		}
 
-		// Token: 0x0401FF9E RID: 130974
+		// Token: 0x0401AA65 RID: 109157
 		private readonly List<float> SlotItemLastPercent = new List<float>();
 	}
 }

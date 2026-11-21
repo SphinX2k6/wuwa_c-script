@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007521 RID: 29985
+	// Token: 0x02007D17 RID: 32023
 	public class IVehicleMoveWithPathLineT
 	{
-		// Token: 0x1700E389 RID: 58249
-		// (get) Token: 0x060368BD RID: 223421 RVA: 0x007692C9 File Offset: 0x007674C9
-		// (set) Token: 0x060368BE RID: 223422 RVA: 0x007692D1 File Offset: 0x007674D1
+		// Token: 0x1700EFB3 RID: 61363
+		// (get) Token: 0x06039CD3 RID: 236755 RVA: 0x007CC571 File Offset: 0x007CA771
+		// (set) Token: 0x06039CD4 RID: 236756 RVA: 0x007CC579 File Offset: 0x007CA779
 		public TTargetVehicleUnion TargetVehicle { get; set; }
 
-		// Token: 0x1700E38A RID: 58250
-		// (get) Token: 0x060368BF RID: 223423 RVA: 0x007692DA File Offset: 0x007674DA
-		// (set) Token: 0x060368C0 RID: 223424 RVA: 0x007692E2 File Offset: 0x007674E2
+		// Token: 0x1700EFB4 RID: 61364
+		// (get) Token: 0x06039CD5 RID: 236757 RVA: 0x007CC582 File Offset: 0x007CA782
+		// (set) Token: 0x06039CD6 RID: 236758 RVA: 0x007CC58A File Offset: 0x007CA78A
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x1700E38B RID: 58251
-		// (get) Token: 0x060368C1 RID: 223425 RVA: 0x007692EB File Offset: 0x007674EB
-		// (set) Token: 0x060368C2 RID: 223426 RVA: 0x007692F3 File Offset: 0x007674F3
+		// Token: 0x1700EFB5 RID: 61365
+		// (get) Token: 0x06039CD7 RID: 236759 RVA: 0x007CC593 File Offset: 0x007CA793
+		// (set) Token: 0x06039CD8 RID: 236760 RVA: 0x007CC59B File Offset: 0x007CA79B
 		public TVehicleControlTypeUnion ControlType { get; set; }
 
-		// Token: 0x060368C3 RID: 223427 RVA: 0x007692FC File Offset: 0x007674FC
+		// Token: 0x06039CD9 RID: 236761 RVA: 0x007CC5A4 File Offset: 0x007CA7A4
 		public IVehicleMoveWithPathLineT()
 		{
 			this.TargetVehicle = null;

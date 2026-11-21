@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000082 RID: 130
+	// Token: 0x02000083 RID: 131
 	public sealed class ActivityComponentPb : IMessage<ActivityComponentPb>, IMessage, IEquatable<ActivityComponentPb>, IDeepCloneable<ActivityComponentPb>, IBufferMessage
 	{
-		// Token: 0x060018E5 RID: 6373 RVA: 0x00040ED7 File Offset: 0x0003F0D7
+		// Token: 0x06001928 RID: 6440 RVA: 0x0004188B File Offset: 0x0003FA8B
 		[NullableContext(1)]
 		public static ActivityComponentPb Create()
 		{
 			return new ActivityComponentPb();
 		}
 
-		// Token: 0x17000220 RID: 544
-		// (get) Token: 0x060018E6 RID: 6374 RVA: 0x00040EDE File Offset: 0x0003F0DE
+		// Token: 0x17000226 RID: 550
+		// (get) Token: 0x06001929 RID: 6441 RVA: 0x00041892 File Offset: 0x0003FA92
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000221 RID: 545
-		// (get) Token: 0x060018E7 RID: 6375 RVA: 0x00040EE1 File Offset: 0x0003F0E1
+		// Token: 0x17000227 RID: 551
+		// (get) Token: 0x0600192A RID: 6442 RVA: 0x00041895 File Offset: 0x0003FA95
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060018E8 RID: 6376 RVA: 0x00040EE8 File Offset: 0x0003F0E8
+		// Token: 0x0600192B RID: 6443 RVA: 0x0004189C File Offset: 0x0003FA9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityComponentPb()
 		{
 		}
 
-		// Token: 0x060018E9 RID: 6377 RVA: 0x00040EF0 File Offset: 0x0003F0F0
+		// Token: 0x0600192C RID: 6444 RVA: 0x000418A4 File Offset: 0x0003FAA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityComponentPb(ActivityComponentPb other) : this()
@@ -90,7 +90,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060018EA RID: 6378 RVA: 0x00041021 File Offset: 0x0003F221
+		// Token: 0x0600192D RID: 6445 RVA: 0x000419D5 File Offset: 0x0003FBD5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityComponentPb Clone()
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			return new ActivityComponentPb(this);
 		}
 
-		// Token: 0x17000222 RID: 546
-		// (get) Token: 0x060018EB RID: 6379 RVA: 0x00041029 File Offset: 0x0003F229
-		// (set) Token: 0x060018EC RID: 6380 RVA: 0x00041031 File Offset: 0x0003F231
+		// Token: 0x17000228 RID: 552
+		// (get) Token: 0x0600192E RID: 6446 RVA: 0x000419DD File Offset: 0x0003FBDD
+		// (set) Token: 0x0600192F RID: 6447 RVA: 0x000419E5 File Offset: 0x0003FBE5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ConfigId
@@ -115,9 +115,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000223 RID: 547
-		// (get) Token: 0x060018ED RID: 6381 RVA: 0x0004103A File Offset: 0x0003F23A
-		// (set) Token: 0x060018EE RID: 6382 RVA: 0x00041052 File Offset: 0x0003F252
+		// Token: 0x17000229 RID: 553
+		// (get) Token: 0x06001930 RID: 6448 RVA: 0x000419EE File Offset: 0x0003FBEE
+		// (set) Token: 0x06001931 RID: 6449 RVA: 0x00041A06 File Offset: 0x0003FC06
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SurvivorsMonsterPbData SurvivorsMonsterPbData
@@ -137,9 +137,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000224 RID: 548
-		// (get) Token: 0x060018EF RID: 6383 RVA: 0x00041068 File Offset: 0x0003F268
-		// (set) Token: 0x060018F0 RID: 6384 RVA: 0x00041080 File Offset: 0x0003F280
+		// Token: 0x1700022A RID: 554
+		// (get) Token: 0x06001932 RID: 6450 RVA: 0x00041A1C File Offset: 0x0003FC1C
+		// (set) Token: 0x06001933 RID: 6451 RVA: 0x00041A34 File Offset: 0x0003FC34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SurvivorsWeaponPbData SurvivorsWeaponPbData
@@ -159,9 +159,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000225 RID: 549
-		// (get) Token: 0x060018F1 RID: 6385 RVA: 0x00041096 File Offset: 0x0003F296
-		// (set) Token: 0x060018F2 RID: 6386 RVA: 0x000410AE File Offset: 0x0003F2AE
+		// Token: 0x1700022B RID: 555
+		// (get) Token: 0x06001934 RID: 6452 RVA: 0x00041A4A File Offset: 0x0003FC4A
+		// (set) Token: 0x06001935 RID: 6453 RVA: 0x00041A62 File Offset: 0x0003FC62
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SurvivorsPlayerCharacterPbData SurvivorsPlayerCharacterPbData
@@ -181,9 +181,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000226 RID: 550
-		// (get) Token: 0x060018F3 RID: 6387 RVA: 0x000410C4 File Offset: 0x0003F2C4
-		// (set) Token: 0x060018F4 RID: 6388 RVA: 0x000410DC File Offset: 0x0003F2DC
+		// Token: 0x1700022C RID: 556
+		// (get) Token: 0x06001936 RID: 6454 RVA: 0x00041A78 File Offset: 0x0003FC78
+		// (set) Token: 0x06001937 RID: 6455 RVA: 0x00041A90 File Offset: 0x0003FC90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SurvivorsGoldenCoinPbData SurvivorsGoldenCoinPbData
@@ -203,9 +203,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000227 RID: 551
-		// (get) Token: 0x060018F5 RID: 6389 RVA: 0x000410F2 File Offset: 0x0003F2F2
-		// (set) Token: 0x060018F6 RID: 6390 RVA: 0x0004110A File Offset: 0x0003F30A
+		// Token: 0x1700022D RID: 557
+		// (get) Token: 0x06001938 RID: 6456 RVA: 0x00041AA6 File Offset: 0x0003FCA6
+		// (set) Token: 0x06001939 RID: 6457 RVA: 0x00041ABE File Offset: 0x0003FCBE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballKSCRolePbData PinballKSCRolePbData
@@ -225,9 +225,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000228 RID: 552
-		// (get) Token: 0x060018F7 RID: 6391 RVA: 0x00041120 File Offset: 0x0003F320
-		// (set) Token: 0x060018F8 RID: 6392 RVA: 0x00041138 File Offset: 0x0003F338
+		// Token: 0x1700022E RID: 558
+		// (get) Token: 0x0600193A RID: 6458 RVA: 0x00041AD4 File Offset: 0x0003FCD4
+		// (set) Token: 0x0600193B RID: 6459 RVA: 0x00041AEC File Offset: 0x0003FCEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoCharacterEntityPbData KurotatoCharacterEntityPbData
@@ -247,9 +247,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000229 RID: 553
-		// (get) Token: 0x060018F9 RID: 6393 RVA: 0x0004114E File Offset: 0x0003F34E
-		// (set) Token: 0x060018FA RID: 6394 RVA: 0x00041166 File Offset: 0x0003F366
+		// Token: 0x1700022F RID: 559
+		// (get) Token: 0x0600193C RID: 6460 RVA: 0x00041B02 File Offset: 0x0003FD02
+		// (set) Token: 0x0600193D RID: 6461 RVA: 0x00041B1A File Offset: 0x0003FD1A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoDropEntityPbData KurotatoDropEntityPbData
@@ -269,9 +269,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700022A RID: 554
-		// (get) Token: 0x060018FB RID: 6395 RVA: 0x0004117C File Offset: 0x0003F37C
-		// (set) Token: 0x060018FC RID: 6396 RVA: 0x00041195 File Offset: 0x0003F395
+		// Token: 0x17000230 RID: 560
+		// (get) Token: 0x0600193E RID: 6462 RVA: 0x00041B30 File Offset: 0x0003FD30
+		// (set) Token: 0x0600193F RID: 6463 RVA: 0x00041B49 File Offset: 0x0003FD49
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoWeaponEntityPbData KurotatoWeaponEntityPbData
@@ -291,9 +291,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700022B RID: 555
-		// (get) Token: 0x060018FD RID: 6397 RVA: 0x000411AC File Offset: 0x0003F3AC
-		// (set) Token: 0x060018FE RID: 6398 RVA: 0x000411C5 File Offset: 0x0003F3C5
+		// Token: 0x17000231 RID: 561
+		// (get) Token: 0x06001940 RID: 6464 RVA: 0x00041B60 File Offset: 0x0003FD60
+		// (set) Token: 0x06001941 RID: 6465 RVA: 0x00041B79 File Offset: 0x0003FD79
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoMonsterEntityPbData KurotatoMonsterEntityPbData
@@ -313,9 +313,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700022C RID: 556
-		// (get) Token: 0x060018FF RID: 6399 RVA: 0x000411DC File Offset: 0x0003F3DC
-		// (set) Token: 0x06001900 RID: 6400 RVA: 0x000411F5 File Offset: 0x0003F3F5
+		// Token: 0x17000232 RID: 562
+		// (get) Token: 0x06001942 RID: 6466 RVA: 0x00041B90 File Offset: 0x0003FD90
+		// (set) Token: 0x06001943 RID: 6467 RVA: 0x00041BA9 File Offset: 0x0003FDA9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoStructureEntityPbData KurotatoStructureEntityPbData
@@ -335,8 +335,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700022D RID: 557
-		// (get) Token: 0x06001901 RID: 6401 RVA: 0x0004120C File Offset: 0x0003F40C
+		// Token: 0x17000233 RID: 563
+		// (get) Token: 0x06001944 RID: 6468 RVA: 0x00041BC0 File Offset: 0x0003FDC0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityComponentPb.DataOneofCase DataCase
@@ -347,7 +347,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001902 RID: 6402 RVA: 0x00041214 File Offset: 0x0003F414
+		// Token: 0x06001945 RID: 6469 RVA: 0x00041BC8 File Offset: 0x0003FDC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearData()
@@ -356,7 +356,7 @@ namespace Aki.Protocol
 			this.data_ = null;
 		}
 
-		// Token: 0x06001903 RID: 6403 RVA: 0x00041224 File Offset: 0x0003F424
+		// Token: 0x06001946 RID: 6470 RVA: 0x00041BD8 File Offset: 0x0003FDD8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -364,7 +364,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ActivityComponentPb);
 		}
 
-		// Token: 0x06001904 RID: 6404 RVA: 0x00041234 File Offset: 0x0003F434
+		// Token: 0x06001947 RID: 6471 RVA: 0x00041BE8 File Offset: 0x0003FDE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ActivityComponentPb other)
@@ -372,7 +372,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ConfigId == other.ConfigId && object.Equals(this.SurvivorsMonsterPbData, other.SurvivorsMonsterPbData) && object.Equals(this.SurvivorsWeaponPbData, other.SurvivorsWeaponPbData) && object.Equals(this.SurvivorsPlayerCharacterPbData, other.SurvivorsPlayerCharacterPbData) && object.Equals(this.SurvivorsGoldenCoinPbData, other.SurvivorsGoldenCoinPbData) && object.Equals(this.PinballKSCRolePbData, other.PinballKSCRolePbData) && object.Equals(this.KurotatoCharacterEntityPbData, other.KurotatoCharacterEntityPbData) && object.Equals(this.KurotatoDropEntityPbData, other.KurotatoDropEntityPbData) && object.Equals(this.KurotatoWeaponEntityPbData, other.KurotatoWeaponEntityPbData) && object.Equals(this.KurotatoMonsterEntityPbData, other.KurotatoMonsterEntityPbData) && object.Equals(this.KurotatoStructureEntityPbData, other.KurotatoStructureEntityPbData) && this.DataCase == other.DataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06001905 RID: 6405 RVA: 0x00041350 File Offset: 0x0003F550
+		// Token: 0x06001948 RID: 6472 RVA: 0x00041D04 File Offset: 0x0003FF04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -430,7 +430,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001906 RID: 6406 RVA: 0x00041481 File Offset: 0x0003F681
+		// Token: 0x06001949 RID: 6473 RVA: 0x00041E35 File Offset: 0x00040035
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -438,7 +438,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06001907 RID: 6407 RVA: 0x0004148E File Offset: 0x0003F68E
+		// Token: 0x0600194A RID: 6474 RVA: 0x00041E42 File Offset: 0x00040042
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -446,7 +446,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06001908 RID: 6408 RVA: 0x00041498 File Offset: 0x0003F698
+		// Token: 0x0600194B RID: 6475 RVA: 0x00041E4C File Offset: 0x0004004C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -512,7 +512,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001909 RID: 6409 RVA: 0x000415FC File Offset: 0x0003F7FC
+		// Token: 0x0600194C RID: 6476 RVA: 0x00041FB0 File Offset: 0x000401B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -569,7 +569,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600190A RID: 6410 RVA: 0x00041738 File Offset: 0x0003F938
+		// Token: 0x0600194D RID: 6477 RVA: 0x000420EC File Offset: 0x000402EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ActivityComponentPb other)
@@ -658,7 +658,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600190B RID: 6411 RVA: 0x0004193C File Offset: 0x0003FB3C
+		// Token: 0x0600194E RID: 6478 RVA: 0x000422F0 File Offset: 0x000404F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -666,7 +666,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600190C RID: 6412 RVA: 0x00041948 File Offset: 0x0003FB48
+		// Token: 0x0600194F RID: 6479 RVA: 0x000422FC File Offset: 0x000404FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -812,75 +812,75 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400219C RID: 8604
+		// Token: 0x040021FB RID: 8699
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400219D RID: 8605
+		// Token: 0x040021FC RID: 8700
 		public const int ConfigIdFieldNumber = 1;
 
-		// Token: 0x0400219E RID: 8606
+		// Token: 0x040021FD RID: 8701
 		private int configId_;
 
-		// Token: 0x0400219F RID: 8607
+		// Token: 0x040021FE RID: 8702
 		public const int SurvivorsMonsterPbDataFieldNumber = 2;
 
-		// Token: 0x040021A0 RID: 8608
+		// Token: 0x040021FF RID: 8703
 		public const int SurvivorsWeaponPbDataFieldNumber = 3;
 
-		// Token: 0x040021A1 RID: 8609
+		// Token: 0x04002200 RID: 8704
 		public const int SurvivorsPlayerCharacterPbDataFieldNumber = 4;
 
-		// Token: 0x040021A2 RID: 8610
+		// Token: 0x04002201 RID: 8705
 		public const int SurvivorsGoldenCoinPbDataFieldNumber = 5;
 
-		// Token: 0x040021A3 RID: 8611
+		// Token: 0x04002202 RID: 8706
 		public const int PinballKSCRolePbDataFieldNumber = 6;
 
-		// Token: 0x040021A4 RID: 8612
+		// Token: 0x04002203 RID: 8707
 		public const int KurotatoCharacterEntityPbDataFieldNumber = 7;
 
-		// Token: 0x040021A5 RID: 8613
+		// Token: 0x04002204 RID: 8708
 		public const int KurotatoDropEntityPbDataFieldNumber = 8;
 
-		// Token: 0x040021A6 RID: 8614
+		// Token: 0x04002205 RID: 8709
 		public const int KurotatoWeaponEntityPbDataFieldNumber = 9;
 
-		// Token: 0x040021A7 RID: 8615
+		// Token: 0x04002206 RID: 8710
 		public const int KurotatoMonsterEntityPbDataFieldNumber = 10;
 
-		// Token: 0x040021A8 RID: 8616
+		// Token: 0x04002207 RID: 8711
 		public const int KurotatoStructureEntityPbDataFieldNumber = 11;
 
-		// Token: 0x040021A9 RID: 8617
+		// Token: 0x04002208 RID: 8712
 		private object data_;
 
-		// Token: 0x040021AA RID: 8618
+		// Token: 0x04002209 RID: 8713
 		private ActivityComponentPb.DataOneofCase dataCase_;
 
-		// Token: 0x020016D4 RID: 5844
+		// Token: 0x02001750 RID: 5968
 		public enum DataOneofCase
 		{
-			// Token: 0x0400C49C RID: 50332
+			// Token: 0x0400C9CB RID: 51659
 			None,
-			// Token: 0x0400C49D RID: 50333
+			// Token: 0x0400C9CC RID: 51660
 			SurvivorsMonsterPbData = 2,
-			// Token: 0x0400C49E RID: 50334
+			// Token: 0x0400C9CD RID: 51661
 			SurvivorsWeaponPbData,
-			// Token: 0x0400C49F RID: 50335
+			// Token: 0x0400C9CE RID: 51662
 			SurvivorsPlayerCharacterPbData,
-			// Token: 0x0400C4A0 RID: 50336
+			// Token: 0x0400C9CF RID: 51663
 			SurvivorsGoldenCoinPbData,
-			// Token: 0x0400C4A1 RID: 50337
+			// Token: 0x0400C9D0 RID: 51664
 			PinballKSCRolePbData,
-			// Token: 0x0400C4A2 RID: 50338
+			// Token: 0x0400C9D1 RID: 51665
 			KurotatoCharacterEntityPbData,
-			// Token: 0x0400C4A3 RID: 50339
+			// Token: 0x0400C9D2 RID: 51666
 			KurotatoDropEntityPbData,
-			// Token: 0x0400C4A4 RID: 50340
+			// Token: 0x0400C9D3 RID: 51667
 			KurotatoWeaponEntityPbData,
-			// Token: 0x0400C4A5 RID: 50341
+			// Token: 0x0400C9D4 RID: 51668
 			KurotatoMonsterEntityPbData,
-			// Token: 0x0400C4A6 RID: 50342
+			// Token: 0x0400C9D5 RID: 51669
 			KurotatoStructureEntityPbData
 		}
 	}

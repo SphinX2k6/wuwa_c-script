@@ -7,27 +7,29 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Map;
 using CSharpScript.Game.Module.Map.MapDefine;
+using CSharpScript.Game.ServerStorage;
+using CSharpScript.Game.ServerStorage.Container;
 
-// Token: 0x02001C1E RID: 7198
+// Token: 0x020010DD RID: 4317
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class FragmentMemoryModel : ModelBase
 {
-	// Token: 0x0600D815 RID: 55317 RVA: 0x0031FE77 File Offset: 0x0031E077
+	// Token: 0x0600AC2A RID: 44074 RVA: 0x0032B20B File Offset: 0x0032940B
 	public void OnPhotoMemoryResponse(PhotoMemoryResponse response)
 	{
 		this.RebuildTopicData(response.Topics);
 	}
 
-	// Token: 0x0600D816 RID: 55318 RVA: 0x0031FE85 File Offset: 0x0031E085
+	// Token: 0x0600AC2B RID: 44075 RVA: 0x0032B219 File Offset: 0x00329419
 	public void OnPhotoMemoryUpdate(PhotoMemoryUpdateNotify notify)
 	{
 		this.UpdateTopicData(notify.Topics);
 		EventSystem.Instance.Emit(EEventName.OnFragmentMemoryDataUpdate);
 	}
 
-	// Token: 0x0600D817 RID: 55319 RVA: 0x0031FEA3 File Offset: 0x0031E0A3
+	// Token: 0x0600AC2C RID: 44076 RVA: 0x0032B237 File Offset: 0x00329437
 	public void TryRemoveCurrentTrackEntity()
 	{
 		if (this.CurrentTrackMapMarkId != 0)
@@ -37,7 +39,22 @@ public class FragmentMemoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D818 RID: 55320 RVA: 0x0031FED0 File Offset: 0x0031E0D0
+	// Token: 0x0600AC2D RID: 44077 RVA: 0x0032B264 File Offset: 0x00329464
+	public void TryRemoveUntrackedCurrentTrackEntity()
+	{
+		if (this.CurrentTrackMapMarkId == 0)
+		{
+			return;
+		}
+		TrackMapMarkParams curTrackMark = MapModel.Instance.GetCurTrackMark();
+		if (curTrackMark != null && curTrackMark.MarkType == EMarkType.Entity && curTrackMark.MarkId == this.CurrentTrackMapMarkId)
+		{
+			return;
+		}
+		this.TryRemoveCurrentTrackEntity();
+	}
+
+	// Token: 0x0600AC2E RID: 44078 RVA: 0x0032B2A8 File Offset: 0x003294A8
 	private void UpdateTopicData(IEnumerable<PhotoMemoryTopicInfo> data)
 	{
 		foreach (PhotoMemoryTopicInfo photoMemoryTopicInfo in data)
@@ -68,7 +85,7 @@ public class FragmentMemoryModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.FragmentRewardEntranceRedDot);
 	}
 
-	// Token: 0x0600D819 RID: 55321 RVA: 0x0031FFE4 File Offset: 0x0031E1E4
+	// Token: 0x0600AC2F RID: 44079 RVA: 0x0032B3BC File Offset: 0x003295BC
 	private void RebuildTopicData(IEnumerable<PhotoMemoryTopicInfo> topicInfo)
 	{
 		this.TopicDataMap.Clear();
@@ -85,7 +102,7 @@ public class FragmentMemoryModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.FragmentRewardEntranceRedDot);
 	}
 
-	// Token: 0x0600D81A RID: 55322 RVA: 0x003200B8 File Offset: 0x0031E2B8
+	// Token: 0x0600AC30 RID: 44080 RVA: 0x0032B490 File Offset: 0x00329690
 	public List<int> GetCollectedIds()
 	{
 		List<int> list = new List<int>();
@@ -102,25 +119,25 @@ public class FragmentMemoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600D81B RID: 55323 RVA: 0x00320160 File Offset: 0x0031E360
+	// Token: 0x0600AC31 RID: 44081 RVA: 0x0032B538 File Offset: 0x00329738
 	public IReadOnlyList<PhotoMemoryTopic> GetAllFragmentTopic()
 	{
 		return FragmentMemoryConfig.Instance.GetAllPhotoMemoryTopic();
 	}
 
-	// Token: 0x0600D81C RID: 55324 RVA: 0x0032016C File Offset: 0x0031E36C
+	// Token: 0x0600AC32 RID: 44082 RVA: 0x0032B544 File Offset: 0x00329744
 	public bool GetTopicUnlockState(int id)
 	{
 		return this.GetTopicDataById(id) != null;
 	}
 
-	// Token: 0x0600D81D RID: 55325 RVA: 0x00320178 File Offset: 0x0031E378
+	// Token: 0x0600AC33 RID: 44083 RVA: 0x0032B550 File Offset: 0x00329750
 	public string GetUnlockConditionText(int id)
 	{
 		return LevelGeneralCommons.GetConditionGroupHintText(FragmentMemoryConfig.Instance.GetPhotoMemoryTopicById(id).Value.ConditionGroupId) ?? "";
 	}
 
-	// Token: 0x0600D81E RID: 55326 RVA: 0x003201B0 File Offset: 0x0031E3B0
+	// Token: 0x0600AC34 RID: 44084 RVA: 0x0032B588 File Offset: 0x00329788
 	public void OnPhotoMemoryCollectUpdate(PhotoMemoryCollectNotify notify)
 	{
 		int id = notify.CollectInfo.Id;
@@ -139,7 +156,7 @@ public class FragmentMemoryModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnFragmentMemoryCollectUpdate);
 	}
 
-	// Token: 0x0600D81F RID: 55327 RVA: 0x0032022A File Offset: 0x0031E42A
+	// Token: 0x0600AC35 RID: 44085 RVA: 0x0032B602 File Offset: 0x00329802
 	private FragmentMemoryTopicData CreateTopicData(PhotoMemoryTopicInfo data)
 	{
 		FragmentMemoryTopicData fragmentMemoryTopicData = new FragmentMemoryTopicData();
@@ -147,7 +164,7 @@ public class FragmentMemoryModel : ModelBase
 		return fragmentMemoryTopicData;
 	}
 
-	// Token: 0x0600D820 RID: 55328 RVA: 0x00320238 File Offset: 0x0031E438
+	// Token: 0x0600AC36 RID: 44086 RVA: 0x0032B610 File Offset: 0x00329810
 	[NullableContext(2)]
 	public FragmentMemoryCollectData GetCollectDataById(int id)
 	{
@@ -159,7 +176,7 @@ public class FragmentMemoryModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600D821 RID: 55329 RVA: 0x00320258 File Offset: 0x0031E458
+	// Token: 0x0600AC37 RID: 44087 RVA: 0x0032B630 File Offset: 0x00329830
 	[NullableContext(2)]
 	public FragmentMemoryTopicData GetTopicDataById(int id)
 	{
@@ -175,7 +192,7 @@ public class FragmentMemoryModel : ModelBase
 		return fragmentMemoryTopicData;
 	}
 
-	// Token: 0x0600D822 RID: 55330 RVA: 0x00320288 File Offset: 0x0031E488
+	// Token: 0x0600AC38 RID: 44088 RVA: 0x0032B660 File Offset: 0x00329860
 	public bool GetRedDotState()
 	{
 		IReadOnlyList<PhotoMemoryTopic> allFragmentTopic = this.GetAllFragmentTopic();
@@ -188,14 +205,14 @@ public class FragmentMemoryModel : ModelBase
 		return this.TopicDataMap.TryGetValue(id, out fragmentMemoryTopicData) && fragmentMemoryTopicData != null && fragmentMemoryTopicData.GetRedDotState();
 	}
 
-	// Token: 0x0600D823 RID: 55331 RVA: 0x003202DC File Offset: 0x0031E4DC
+	// Token: 0x0600AC39 RID: 44089 RVA: 0x0032B6B2 File Offset: 0x003298B2
 	public bool GetTopicFirstOpenRedDotState(int topicId)
 	{
-		List<int> player = LocalStorage.GetPlayer<List<int>>(ELocalStoragePlayerKey.FragmentMemoryOpened, null);
-		return player == null || !player.Contains(topicId);
+		ServerStorageUtil.OverrideLocalListToServerSet(ELocalStoragePlayerKey.FragmentMemoryOpened, EClientStorageSystemIdType.FragmentMemoryOpened, true);
+		return !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.FragmentMemoryOpened) as ServerStorageSet).Has(topicId);
 	}
 
-	// Token: 0x0600D824 RID: 55332 RVA: 0x00320304 File Offset: 0x0031E504
+	// Token: 0x0600AC3A RID: 44090 RVA: 0x0032B6DC File Offset: 0x003298DC
 	public bool GetCurrentActivityFragmentMemoryRedDotState()
 	{
 		List<ActivityBaseData> currentActivitiesByType = ActivityModel.Instance.GetCurrentActivitiesByType(16);
@@ -216,7 +233,7 @@ public class FragmentMemoryModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600D825 RID: 55333 RVA: 0x00320378 File Offset: 0x0031E578
+	// Token: 0x0600AC3B RID: 44091 RVA: 0x0032B750 File Offset: 0x00329950
 	public void SaveTopicOpened(int topicId)
 	{
 		FragmentMemoryTopicData fragmentMemoryTopicData;
@@ -228,23 +245,19 @@ public class FragmentMemoryModel : ModelBase
 		{
 			return;
 		}
-		List<int> list = LocalStorage.GetPlayer<List<int>>(ELocalStoragePlayerKey.FragmentMemoryOpened, null);
-		if (list == null)
-		{
-			list = new List<int>();
-		}
-		if (list.Contains(topicId))
+		ServerStorageUtil.OverrideLocalListToServerSet(ELocalStoragePlayerKey.FragmentMemoryOpened, EClientStorageSystemIdType.FragmentMemoryOpened, true);
+		ServerStorageSet serverStorageSet = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.FragmentMemoryOpened) as ServerStorageSet;
+		if (serverStorageSet.Has(topicId))
 		{
 			return;
 		}
-		list.Add(topicId);
-		LocalStorage.SetPlayer<List<int>>(ELocalStoragePlayerKey.FragmentMemoryOpened, list);
+		serverStorageSet.Add(topicId);
 		EventSystem.Instance.Emit<int>(EEventName.FragmentRewardTopicRedDot, topicId);
 		EventSystem.Instance.Emit(EEventName.FragmentRewardEntranceRedDot);
 	}
 
-	// Token: 0x170011B6 RID: 4534
-	// (get) Token: 0x0600D826 RID: 55334 RVA: 0x003203EC File Offset: 0x0031E5EC
+	// Token: 0x170011DC RID: 4572
+	// (get) Token: 0x0600AC3C RID: 44092 RVA: 0x0032B7C6 File Offset: 0x003299C6
 	public static FragmentMemoryModel Instance
 	{
 		get
@@ -253,7 +266,7 @@ public class FragmentMemoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600D827 RID: 55335 RVA: 0x003203F3 File Offset: 0x0031E5F3
+	// Token: 0x0600AC3D RID: 44093 RVA: 0x0032B7CD File Offset: 0x003299CD
 	public static FragmentMemoryModel GetOrCreateInstance()
 	{
 		if (FragmentMemoryModel._Instance == null)
@@ -263,7 +276,7 @@ public class FragmentMemoryModel : ModelBase
 		return FragmentMemoryModel._Instance;
 	}
 
-	// Token: 0x0600D828 RID: 55336 RVA: 0x00320407 File Offset: 0x0031E607
+	// Token: 0x0600AC3E RID: 44094 RVA: 0x0032B7E1 File Offset: 0x003299E1
 	public static bool CreateInstance()
 	{
 		if (FragmentMemoryModel._Instance != null)
@@ -274,45 +287,45 @@ public class FragmentMemoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600D829 RID: 55337 RVA: 0x0032041D File Offset: 0x0031E61D
+	// Token: 0x0600AC3F RID: 44095 RVA: 0x0032B7F7 File Offset: 0x003299F7
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600D82A RID: 55338 RVA: 0x0032041F File Offset: 0x0031E61F
+	// Token: 0x0600AC40 RID: 44096 RVA: 0x0032B7F9 File Offset: 0x003299F9
 	public static void ResetStaticDefaultValue()
 	{
 		FragmentMemoryModel._Instance = null;
 	}
 
-	// Token: 0x0600D82B RID: 55339 RVA: 0x00320427 File Offset: 0x0031E627
+	// Token: 0x0600AC41 RID: 44097 RVA: 0x0032B801 File Offset: 0x00329A01
 	static FragmentMemoryModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FragmentMemoryModel.CreateStaticDefaultValue), new Action(FragmentMemoryModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400628C RID: 25228
+	// Token: 0x0400635E RID: 25438
 	public string ActivitySubViewTryPlayAnimation = "";
 
-	// Token: 0x0400628D RID: 25229
+	// Token: 0x0400635F RID: 25439
 	public string MemoryFragmentMainViewTryPlayAnimation = "";
 
-	// Token: 0x0400628E RID: 25230
+	// Token: 0x04006360 RID: 25440
 	private readonly Dictionary<int, FragmentMemoryCollectData> MemoryCollectMap = new Dictionary<int, FragmentMemoryCollectData>();
 
-	// Token: 0x0400628F RID: 25231
+	// Token: 0x04006361 RID: 25441
 	public int CurrentTrackMapMarkId;
 
-	// Token: 0x04006290 RID: 25232
+	// Token: 0x04006362 RID: 25442
 	public int CurrentTrackFragmentId;
 
-	// Token: 0x04006291 RID: 25233
+	// Token: 0x04006363 RID: 25443
 	private readonly Dictionary<int, FragmentMemoryTopicData> TopicDataMap = new Dictionary<int, FragmentMemoryTopicData>();
 
-	// Token: 0x04006292 RID: 25234
+	// Token: 0x04006364 RID: 25444
 	public int CurrentUnlockCollectId;
 
-	// Token: 0x04006293 RID: 25235
+	// Token: 0x04006365 RID: 25445
 	[Nullable(2)]
 	private static FragmentMemoryModel _Instance;
 }

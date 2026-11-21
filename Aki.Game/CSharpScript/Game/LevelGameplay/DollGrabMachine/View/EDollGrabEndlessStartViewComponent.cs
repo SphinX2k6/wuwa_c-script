@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EDF RID: 28383
+	// Token: 0x0200605F RID: 24671
 	internal enum EDollGrabEndlessStartViewComponent
 	{
-		// Token: 0x0402402C RID: 147500
+		// Token: 0x0401F2DF RID: 127711
 		BtnMask,
-		// Token: 0x0402402D RID: 147501
+		// Token: 0x0401F2E0 RID: 127712
 		Content,
-		// Token: 0x0402402E RID: 147502
+		// Token: 0x0401F2E1 RID: 127713
 		ItemReward,
-		// Token: 0x0402402F RID: 147503
+		// Token: 0x0401F2E2 RID: 127714
 		TxtDesri,
-		// Token: 0x04024030 RID: 147504
+		// Token: 0x0401F2E3 RID: 127715
 		PnlScroll
 	}
 }

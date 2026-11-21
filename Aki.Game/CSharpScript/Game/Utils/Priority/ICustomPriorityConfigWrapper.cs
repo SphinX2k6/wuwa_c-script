@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Utils.Priority
 {
-	// Token: 0x02004560 RID: 17760
+	// Token: 0x02003488 RID: 13448
 	[NullableContext(1)]
 	internal interface ICustomPriorityConfigWrapper<[Nullable(0)] T> where T : struct, Enum
 	{
-		// Token: 0x1700756D RID: 30061
-		// (get) Token: 0x0602DDF4 RID: 187892
-		// (set) Token: 0x0602DDF5 RID: 187893
+		// Token: 0x17004824 RID: 18468
+		// (get) Token: 0x060224D6 RID: 140502
+		// (set) Token: 0x060224D7 RID: 140503
 		bool Enable { get; set; }
 
-		// Token: 0x1700756E RID: 30062
-		// (get) Token: 0x0602DDF6 RID: 187894
-		// (set) Token: 0x0602DDF7 RID: 187895
+		// Token: 0x17004825 RID: 18469
+		// (get) Token: 0x060224D8 RID: 140504
+		// (set) Token: 0x060224D9 RID: 140505
 		[Nullable(0)]
 		T Enum { [NullableContext(0)] get; [NullableContext(0)] set; }
 
-		// Token: 0x1700756F RID: 30063
-		// (get) Token: 0x0602DDF8 RID: 187896
-		// (set) Token: 0x0602DDF9 RID: 187897
+		// Token: 0x17004826 RID: 18470
+		// (get) Token: 0x060224DA RID: 140506
+		// (set) Token: 0x060224DB RID: 140507
 		int Priority { get; set; }
 
-		// Token: 0x17007570 RID: 30064
-		// (get) Token: 0x0602DDFA RID: 187898
-		// (set) Token: 0x0602DDFB RID: 187899
+		// Token: 0x17004827 RID: 18471
+		// (get) Token: 0x060224DC RID: 140508
+		// (set) Token: 0x060224DD RID: 140509
 		[Nullable(new byte[]
 		{
 			2,
@@ -41,24 +41,24 @@ namespace CSharpScript.Game.Utils.Priority
 			1
 		})] set; }
 
-		// Token: 0x17007571 RID: 30065
-		// (get) Token: 0x0602DDFC RID: 187900
-		// (set) Token: 0x0602DDFD RID: 187901
+		// Token: 0x17004828 RID: 18472
+		// (get) Token: 0x060224DE RID: 140510
+		// (set) Token: 0x060224DF RID: 140511
 		bool? EnterReentrant { get; set; }
 
-		// Token: 0x17007572 RID: 30066
-		// (get) Token: 0x0602DDFE RID: 187902
-		// (set) Token: 0x0602DDFF RID: 187903
+		// Token: 0x17004829 RID: 18473
+		// (get) Token: 0x060224E0 RID: 140512
+		// (set) Token: 0x060224E1 RID: 140513
 		bool? ForceEnterCallback { get; set; }
 
-		// Token: 0x17007573 RID: 30067
-		// (get) Token: 0x0602DE00 RID: 187904
-		// (set) Token: 0x0602DE01 RID: 187905
+		// Token: 0x1700482A RID: 18474
+		// (get) Token: 0x060224E2 RID: 140514
+		// (set) Token: 0x060224E3 RID: 140515
 		bool? CheckEnterValid { get; set; }
 
-		// Token: 0x17007574 RID: 30068
-		// (get) Token: 0x0602DE02 RID: 187906
-		// (set) Token: 0x0602DE03 RID: 187907
+		// Token: 0x1700482B RID: 18475
+		// (get) Token: 0x060224E4 RID: 140516
+		// (set) Token: 0x060224E5 RID: 140517
 		[Nullable(new byte[]
 		{
 			2,
@@ -74,24 +74,24 @@ namespace CSharpScript.Game.Utils.Priority
 			1
 		})] set; }
 
-		// Token: 0x17007575 RID: 30069
-		// (get) Token: 0x0602DE04 RID: 187908
-		// (set) Token: 0x0602DE05 RID: 187909
+		// Token: 0x1700482C RID: 18476
+		// (get) Token: 0x060224E6 RID: 140518
+		// (set) Token: 0x060224E7 RID: 140519
 		bool? ForceExitCallback { get; set; }
 
-		// Token: 0x17007576 RID: 30070
-		// (get) Token: 0x0602DE06 RID: 187910
-		// (set) Token: 0x0602DE07 RID: 187911
+		// Token: 0x1700482D RID: 18477
+		// (get) Token: 0x060224E8 RID: 140520
+		// (set) Token: 0x060224E9 RID: 140521
 		bool? CheckExitValid { get; set; }
 
-		// Token: 0x17007577 RID: 30071
-		// (get) Token: 0x0602DE08 RID: 187912
-		// (set) Token: 0x0602DE09 RID: 187913
+		// Token: 0x1700482E RID: 18478
+		// (get) Token: 0x060224EA RID: 140522
+		// (set) Token: 0x060224EB RID: 140523
 		Func<bool, bool, string, bool> EnterWrapper { get; set; }
 
-		// Token: 0x17007578 RID: 30072
-		// (get) Token: 0x0602DE0A RID: 187914
-		// (set) Token: 0x0602DE0B RID: 187915
+		// Token: 0x1700482F RID: 18479
+		// (get) Token: 0x060224EC RID: 140524
+		// (set) Token: 0x060224ED RID: 140525
 		Func<bool, string, bool> ExitWrapper { get; set; }
 	}
 }

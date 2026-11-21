@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.Physics_Actor
 {
-	// Token: 0x02003C36 RID: 15414
+	// Token: 0x020030DF RID: 12511
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/PCG/Physics_Actor/BP_PhysicsActor.BP_PhysicsActor_C")]
 	[UnrealStructLayout(1464, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1464)]
 	public class BP_PhysicsActor_C : BP_PhysicsActor_Parent_C, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602374F RID: 145231 RVA: 0x0092467B File Offset: 0x0092287B
+		// Token: 0x0601E3D0 RID: 123856 RVA: 0x0090ED13 File Offset: 0x0090CF13
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_PhysicsActor_C._ClassPtr == IntPtr.Zero)
@@ -22,89 +22,85 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.Physics_Actor
 			return BP_PhysicsActor_C._ClassPtr;
 		}
 
-		// Token: 0x06023750 RID: 145232 RVA: 0x009246A0 File Offset: 0x009228A0
+		// Token: 0x0601E3D1 RID: 123857 RVA: 0x0090ED38 File Offset: 0x0090CF38
 		public BP_PhysicsActor_C() : this(BuiltinUtils.AllocNativeUObject(BP_PhysicsActor_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06023751 RID: 145233 RVA: 0x009246C8 File Offset: 0x009228C8
+		// Token: 0x0601E3D2 RID: 123858 RVA: 0x0090ED60 File Offset: 0x0090CF60
 		[NullableContext(1)]
 		public BP_PhysicsActor_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_PhysicsActor_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700416D RID: 16749
-		// (get) Token: 0x06023752 RID: 145234 RVA: 0x009246FB File Offset: 0x009228FB
-		// (set) Token: 0x06023753 RID: 145235 RVA: 0x0092470F File Offset: 0x0092290F
+		// Token: 0x170032A5 RID: 12965
+		// (get) Token: 0x0601E3D3 RID: 123859 RVA: 0x0090ED93 File Offset: 0x0090CF93
+		// (set) Token: 0x0601E3D4 RID: 123860 RVA: 0x0090EDA7 File Offset: 0x0090CFA7
 		[Nullable(2)]
 		public unsafe UStaticMeshComponent StaticMesh
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PhysicsActor_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PhysicsActor_C.__PropertyOffset_StaticMesh);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PhysicsActor_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PhysicsActor_C.__PropertyOffset_StaticMesh, value);
 			}
 		}
 
-		// Token: 0x06023754 RID: 145236 RVA: 0x00924724 File Offset: 0x00922924
+		// Token: 0x0601E3D5 RID: 123861 RVA: 0x0090EDBC File Offset: 0x0090CFBC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void OnLogicEnable()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_PhysicsActor_C.__OnLogicEnable_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06023755 RID: 145237 RVA: 0x00924738 File Offset: 0x00922938
+		// Token: 0x0601E3D6 RID: 123862 RVA: 0x0090EDD0 File Offset: 0x0090CFD0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void OnLogicEnable_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_PhysicsActor_C.__OnLogicEnable_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_PhysicsActor_C.__OnLogicEnable_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06023756 RID: 145238 RVA: 0x0092474D File Offset: 0x0092294D
+		// Token: 0x0601E3D7 RID: 123863 RVA: 0x0090EDE4 File Offset: 0x0090CFE4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void OnLogicDisable()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_PhysicsActor_C.__OnLogicDisable_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06023757 RID: 145239 RVA: 0x00924761 File Offset: 0x00922961
+		// Token: 0x0601E3D8 RID: 123864 RVA: 0x0090EDF8 File Offset: 0x0090CFF8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void OnLogicDisable_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_PhysicsActor_C.__OnLogicDisable_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_PhysicsActor_C.__OnLogicDisable_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06023758 RID: 145240 RVA: 0x00924776 File Offset: 0x00922976
+		// Token: 0x0601E3D9 RID: 123865 RVA: 0x0090EE0C File Offset: 0x0090D00C
 		protected BP_PhysicsActor_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401180B RID: 71691
+		// Token: 0x04010007 RID: 65543
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/PCG/Physics_Actor/BP_PhysicsActor.BP_PhysicsActor_C";
 
-		// Token: 0x0401180C RID: 71692
+		// Token: 0x04010008 RID: 65544
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401180D RID: 71693
+		// Token: 0x04010009 RID: 65545
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401180E RID: 71694
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401000A RID: 65546
+		internal static int __PropertyOffset_StaticMesh;
 
-		// Token: 0x0401180F RID: 71695
+		// Token: 0x0401000B RID: 65547
 		private static IntPtr __OnLogicEnable_NativeFunctionPtr;
 
-		// Token: 0x04011810 RID: 71696
+		// Token: 0x0401000C RID: 65548
 		private static IntPtr __OnLogicDisable_NativeFunctionPtr;
 	}
 }

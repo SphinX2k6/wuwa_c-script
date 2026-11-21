@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001660 RID: 5728
+// Token: 0x02000B18 RID: 2840
 public enum EWuWuTaskState
 {
-	// Token: 0x04004971 RID: 18801
+	// Token: 0x04004A17 RID: 18967
 	Running,
-	// Token: 0x04004972 RID: 18802
+	// Token: 0x04004A18 RID: 18968
 	Finish,
-	// Token: 0x04004973 RID: 18803
+	// Token: 0x04004A19 RID: 18969
 	Taken
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B62 RID: 2914
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C30 RID: 3120
 	public class IAdsorptionMatchingAnimation
 	{
-		// Token: 0x06004318 RID: 17176 RVA: 0x000AB181 File Offset: 0x000A9381
+		// Token: 0x06004771 RID: 18289 RVA: 0x000B5245 File Offset: 0x000B3445
 		public static IAdsorptionMatchingAnimation Create(IAdsorptionMatchingAnimation? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001211 RID: 4625
-		// (get) Token: 0x06004319 RID: 17177 RVA: 0x000AB1A0 File Offset: 0x000A93A0
+		// Token: 0x1700130C RID: 4876
+		// (get) Token: 0x06004772 RID: 18290 RVA: 0x000B5264 File Offset: 0x000B3464
 		public virtual VectorInfo MatchPos
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001212 RID: 4626
-		// (get) Token: 0x0600431A RID: 17178 RVA: 0x000AB1D4 File Offset: 0x000A93D4
+		// Token: 0x1700130D RID: 4877
+		// (get) Token: 0x06004773 RID: 18291 RVA: 0x000B5298 File Offset: 0x000B3498
 		public virtual VectorInfo MatchRot
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001213 RID: 4627
-		// (get) Token: 0x0600431B RID: 17179 RVA: 0x000AB208 File Offset: 0x000A9408
+		// Token: 0x1700130E RID: 4878
+		// (get) Token: 0x06004774 RID: 18292 RVA: 0x000B52CC File Offset: 0x000B34CC
 		[Nullable(2)]
 		public virtual string MatchReferenceKey
 		{
@@ -67,8 +65,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001214 RID: 4628
-		// (get) Token: 0x0600431C RID: 17180 RVA: 0x000AB215 File Offset: 0x000A9415
+		// Token: 0x1700130F RID: 4879
+		// (get) Token: 0x06004775 RID: 18293 RVA: 0x000B52D9 File Offset: 0x000B34D9
 		public virtual string MoveCurve
 		{
 			get
@@ -77,21 +75,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025DD RID: 9693
+		// Token: 0x04002825 RID: 10277
 		private IAdsorptionMatchingAnimation Instance;
 
-		// Token: 0x040025DE RID: 9694
+		// Token: 0x04002826 RID: 10278
 		[Nullable(2)]
 		private VectorInfo _MatchPosCache;
 
-		// Token: 0x040025DF RID: 9695
+		// Token: 0x04002827 RID: 10279
 		private bool _MatchPosInited;
 
-		// Token: 0x040025E0 RID: 9696
+		// Token: 0x04002828 RID: 10280
 		[Nullable(2)]
 		private VectorInfo _MatchRotCache;
 
-		// Token: 0x040025E1 RID: 9697
+		// Token: 0x04002829 RID: 10281
 		private bool _MatchRotInited;
 	}
 }

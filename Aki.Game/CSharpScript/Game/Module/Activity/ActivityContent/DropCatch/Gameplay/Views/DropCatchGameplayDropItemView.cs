@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x020066F6 RID: 26358
+	// Token: 0x02005646 RID: 22086
 	public class DropCatchGameplayDropItemView : UiPanelBase
 	{
-		// Token: 0x06041DBF RID: 269759 RVA: 0x00FF8A7C File Offset: 0x00FF6C7C
+		// Token: 0x0603690B RID: 223499 RVA: 0x00F39E70 File Offset: 0x00F38070
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			};
 		}
 
-		// Token: 0x06041DC0 RID: 269760 RVA: 0x00FF8B04 File Offset: 0x00FF6D04
+		// Token: 0x0603690C RID: 223500 RVA: 0x00F39EF8 File Offset: 0x00F380F8
 		protected override void OnBeforeShow()
 		{
 			int num = (int)this.OpenParam;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.RefreshTail((EDropCatchDropItemNiagaraType)dropCatchDropItemById.Value.NiagaraType);
 		}
 
-		// Token: 0x06041DC1 RID: 269761 RVA: 0x00FF8BB8 File Offset: 0x00FF6DB8
+		// Token: 0x0603690D RID: 223501 RVA: 0x00F39FAC File Offset: 0x00F381AC
 		private void RefreshTail(EDropCatchDropItemNiagaraType type)
 		{
 			base.GetUiNiagara(1).SetUIActive(type == EDropCatchDropItemNiagaraType.Nor);

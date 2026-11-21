@@ -12,26 +12,26 @@ using CSharpScript.Game.Render;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016BD RID: 5821
+// Token: 0x02000B75 RID: 2933
 [NullableContext(2)]
 [Nullable(0)]
 public class AdviceCreateActor
 {
-	// Token: 0x0600A647 RID: 42567 RVA: 0x00253112 File Offset: 0x00251312
+	// Token: 0x06007A27 RID: 31271 RVA: 0x0025D522 File Offset: 0x0025B722
 	public void Init()
 	{
 		this.InitInternalActor();
 		this.LoadDefaultModel();
 	}
 
-	// Token: 0x0600A648 RID: 42568 RVA: 0x00253120 File Offset: 0x00251320
+	// Token: 0x06007A28 RID: 31272 RVA: 0x0025D530 File Offset: 0x0025B730
 	public void PlayAnimation(int motionId)
 	{
 		this.SetInteractionActorActive(false);
 		this.Play(motionId);
 	}
 
-	// Token: 0x0600A649 RID: 42569 RVA: 0x00253130 File Offset: 0x00251330
+	// Token: 0x06007A29 RID: 31273 RVA: 0x0025D540 File Offset: 0x0025B740
 	private void SetInteractionActorActive(bool state)
 	{
 		TArray<AActor> sceneInteractionAllActorsInLevel = SceneInteractionManager.Get().GetSceneInteractionAllActorsInLevel(this.SceneInteractionLevelHandleId);
@@ -50,7 +50,7 @@ public class AdviceCreateActor
 		}
 	}
 
-	// Token: 0x0600A64A RID: 42570 RVA: 0x0025317A File Offset: 0x0025137A
+	// Token: 0x06007A2A RID: 31274 RVA: 0x0025D58A File Offset: 0x0025B78A
 	public void HideAnimation()
 	{
 		this.ClearTimer();
@@ -63,7 +63,7 @@ public class AdviceCreateActor
 		this.SetInteractionActorActive(true);
 	}
 
-	// Token: 0x0600A64B RID: 42571 RVA: 0x002531B0 File Offset: 0x002513B0
+	// Token: 0x06007A2B RID: 31275 RVA: 0x0025D5C0 File Offset: 0x0025B7C0
 	private void LoadDefaultModel()
 	{
 		SModelConfig modelConfig = ModelUtil.GetModelConfig(AdviceConfig.Instance.GetAdviceDefaultModelConfig());
@@ -97,7 +97,7 @@ public class AdviceCreateActor
 		this.SceneInteractionLevelHandleId = SceneInteractionManager.Get().CreateSceneInteractionLevel(场景交互物.AssetPathName.ToString(), new EKuroSceneInteractionState?(EKuroSceneInteractionState.State1), vector.ToUeVector(false), rotator.ToUeRotator(), null, true, false, 0, 0, null);
 	}
 
-	// Token: 0x0600A64C RID: 42572 RVA: 0x002532D4 File Offset: 0x002514D4
+	// Token: 0x06007A2C RID: 31276 RVA: 0x0025D6E4 File Offset: 0x0025B8E4
 	private void InitInternalActor()
 	{
 		if (this.ActorInternal == null)
@@ -130,7 +130,7 @@ public class AdviceCreateActor
 		}
 	}
 
-	// Token: 0x0600A64D RID: 42573 RVA: 0x00253410 File Offset: 0x00251610
+	// Token: 0x06007A2D RID: 31277 RVA: 0x0025D820 File Offset: 0x0025BA20
 	public void RefreshPosition()
 	{
 		global::Vector vector = global::Vector.Create();
@@ -165,7 +165,7 @@ public class AdviceCreateActor
 		actorInternal2.K2_SetActorRotation(rotator.ToUeRotator(), false);
 	}
 
-	// Token: 0x0600A64E RID: 42574 RVA: 0x00253500 File Offset: 0x00251700
+	// Token: 0x06007A2E RID: 31278 RVA: 0x0025D910 File Offset: 0x0025BB10
 	private void Play(int motionId)
 	{
 		this.PlayState = true;
@@ -234,7 +234,7 @@ public class AdviceCreateActor
 		this.RevertTimer = TimerSystem.Instance.Delay(new TTimerAction(this.RevertToNormalModel), 3000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0600A64F RID: 42575 RVA: 0x002536C0 File Offset: 0x002518C0
+	// Token: 0x06007A2F RID: 31279 RVA: 0x0025DAD0 File Offset: 0x0025BCD0
 	private void CheckLoadStateAndShowActor()
 	{
 		if (this.MatLoadState && this.MeshLoadState && this.AnimateAssetState && this.PlayState && this.SkeletalMeshInternal != null)
@@ -248,7 +248,7 @@ public class AdviceCreateActor
 		}
 	}
 
-	// Token: 0x0600A650 RID: 42576 RVA: 0x0025372D File Offset: 0x0025192D
+	// Token: 0x06007A30 RID: 31280 RVA: 0x0025DB3D File Offset: 0x0025BD3D
 	private void RevertToNormalModel(float deltaTime)
 	{
 		this.RemoveMat();
@@ -261,7 +261,7 @@ public class AdviceCreateActor
 		this.SetInteractionActorActive(true);
 	}
 
-	// Token: 0x0600A651 RID: 42577 RVA: 0x00253762 File Offset: 0x00251962
+	// Token: 0x06007A31 RID: 31281 RVA: 0x0025DB72 File Offset: 0x0025BD72
 	private void RemoveMat()
 	{
 		if (this.CharRenderingComponent != null && this.MaterialEffectHandle > 0)
@@ -271,7 +271,7 @@ public class AdviceCreateActor
 		}
 	}
 
-	// Token: 0x0600A652 RID: 42578 RVA: 0x00253790 File Offset: 0x00251990
+	// Token: 0x06007A32 RID: 31282 RVA: 0x0025DBA0 File Offset: 0x0025BDA0
 	public void Destroy()
 	{
 		this.ClearTimer();
@@ -284,7 +284,7 @@ public class AdviceCreateActor
 		AdviceModel.Instance.OnAdviceCreateActorDestroy();
 	}
 
-	// Token: 0x0600A653 RID: 42579 RVA: 0x002537E4 File Offset: 0x002519E4
+	// Token: 0x06007A33 RID: 31283 RVA: 0x0025DBF4 File Offset: 0x0025BDF4
 	private void ClearTimer()
 	{
 		if (this.RevertTimer != null)
@@ -294,7 +294,7 @@ public class AdviceCreateActor
 		}
 	}
 
-	// Token: 0x0600A654 RID: 42580 RVA: 0x00253808 File Offset: 0x00251A08
+	// Token: 0x06007A34 RID: 31284 RVA: 0x0025DC18 File Offset: 0x0025BE18
 	private void OnActorDestroy(AActor actor)
 	{
 		this.ClearTimer();
@@ -307,39 +307,39 @@ public class AdviceCreateActor
 		AdviceModel.Instance.OnAdviceCreateActorDestroy();
 	}
 
-	// Token: 0x04004B03 RID: 19203
+	// Token: 0x04004BAA RID: 19370
 	protected AActor ActorInternal;
 
-	// Token: 0x04004B04 RID: 19204
+	// Token: 0x04004BAB RID: 19371
 	protected USkeletalMeshComponent SkeletalMeshInternal;
 
-	// Token: 0x04004B05 RID: 19205
+	// Token: 0x04004BAC RID: 19372
 	private CharRenderingComponent CharRenderingComponent;
 
-	// Token: 0x04004B06 RID: 19206
+	// Token: 0x04004BAD RID: 19373
 	private int MaterialEffectHandle;
 
-	// Token: 0x04004B07 RID: 19207
+	// Token: 0x04004BAE RID: 19374
 	private bool PlayState;
 
-	// Token: 0x04004B08 RID: 19208
+	// Token: 0x04004BAF RID: 19375
 	private int SceneInteractionLevelHandleId;
 
-	// Token: 0x04004B09 RID: 19209
+	// Token: 0x04004BB0 RID: 19376
 	private TimerHandle RevertTimer;
 
-	// Token: 0x04004B0A RID: 19210
+	// Token: 0x04004BB1 RID: 19377
 	private object CurrentAnimateAsset;
 
-	// Token: 0x04004B0B RID: 19211
+	// Token: 0x04004BB2 RID: 19378
 	private bool AnimateAssetState;
 
-	// Token: 0x04004B0C RID: 19212
+	// Token: 0x04004BB3 RID: 19379
 	private bool MeshLoadState;
 
-	// Token: 0x04004B0D RID: 19213
+	// Token: 0x04004BB4 RID: 19380
 	private bool MatLoadState;
 
-	// Token: 0x04004B0E RID: 19214
+	// Token: 0x04004BB5 RID: 19381
 	private const int REVERTIME = 3000;
 }

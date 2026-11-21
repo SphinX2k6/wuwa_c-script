@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200768C RID: 30348
+	// Token: 0x02007E97 RID: 32407
 	public enum TCommonBtPlaceholderValue : byte
 	{
-		// Token: 0x0401268F RID: 75407
+		// Token: 0x040136D3 RID: 79571
 		NONE,
-		// Token: 0x04012690 RID: 75408
+		// Token: 0x040136D4 RID: 79572
 		ICommonBtOverrideActionInfo,
-		// Token: 0x04012691 RID: 75409
+		// Token: 0x040136D5 RID: 79573
 		ICommonBtOverrideConditionInfo
 	}
 }

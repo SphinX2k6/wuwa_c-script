@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Qte;
 
-// Token: 0x02002604 RID: 9732
+// Token: 0x02001AEF RID: 6895
 [NullableContext(2)]
 [Nullable(0)]
 public class CommonQteContinuousClickContext : CommonQteContextBase
 {
-	// Token: 0x06013D10 RID: 81168 RVA: 0x004F7F92 File Offset: 0x004F6192
+	// Token: 0x060111F2 RID: 70130 RVA: 0x00506D6E File Offset: 0x00504F6E
 	public CommonQteContinuousClickContext()
 	{
 		this.Type = new ECommonQteContextType?(ECommonQteContextType.SingleButtonContinuousClick);
 	}
 
-	// Token: 0x06013D11 RID: 81169 RVA: 0x004F7FB4 File Offset: 0x004F61B4
+	// Token: 0x060111F3 RID: 70131 RVA: 0x00506D90 File Offset: 0x00504F90
 	[NullableContext(1)]
 	protected override void OnSetConfig(SCommonQte config)
 	{
@@ -30,7 +30,7 @@ public class CommonQteContinuousClickContext : CommonQteContextBase
 		this.CurrentComboInterval = 0f;
 	}
 
-	// Token: 0x06013D12 RID: 81170 RVA: 0x004F8084 File Offset: 0x004F6284
+	// Token: 0x060111F4 RID: 70132 RVA: 0x00506E60 File Offset: 0x00505060
 	protected override void OnResponse()
 	{
 		if (this.Config == null)
@@ -58,13 +58,13 @@ public class CommonQteContinuousClickContext : CommonQteContextBase
 		this.CheckQteConditionAndDoSuccess();
 	}
 
-	// Token: 0x06013D13 RID: 81171 RVA: 0x004F814B File Offset: 0x004F634B
+	// Token: 0x060111F5 RID: 70133 RVA: 0x00506F27 File Offset: 0x00505127
 	protected override void OnQtePendingSuccess()
 	{
 		CommonQteController.Instance.WaitQteEnd(this.HandleId);
 	}
 
-	// Token: 0x06013D14 RID: 81172 RVA: 0x004F8160 File Offset: 0x004F6360
+	// Token: 0x060111F6 RID: 70134 RVA: 0x00506F3C File Offset: 0x0050513C
 	public override bool CheckQteConditionMatch()
 	{
 		bool flag = this.DeltaEnergyPercentPerResponse > 0f && this.CurrentEnergyPercent >= this.TargetEnergyPercent;
@@ -72,7 +72,7 @@ public class CommonQteContinuousClickContext : CommonQteContextBase
 		return flag || flag2;
 	}
 
-	// Token: 0x06013D15 RID: 81173 RVA: 0x004F81B4 File Offset: 0x004F63B4
+	// Token: 0x060111F7 RID: 70135 RVA: 0x00506F90 File Offset: 0x00505190
 	protected override void OnUpdateTime(float delta)
 	{
 		if (this.Config == null)
@@ -127,7 +127,7 @@ public class CommonQteContinuousClickContext : CommonQteContextBase
 		}
 	}
 
-	// Token: 0x06013D16 RID: 81174 RVA: 0x004F8340 File Offset: 0x004F6540
+	// Token: 0x060111F8 RID: 70136 RVA: 0x0050711C File Offset: 0x0050531C
 	protected override string OnGetAction(int? index = null)
 	{
 		if (this.Config == null)
@@ -138,7 +138,7 @@ public class CommonQteContinuousClickContext : CommonQteContextBase
 		return CommonQteContextBase.GetQteActionNameByActionId((uiconfig.ActionId > 0) ? uiconfig.ActionId : ((int)uiconfig.Action), new int?(this.QteId));
 	}
 
-	// Token: 0x06013D17 RID: 81175 RVA: 0x004F839F File Offset: 0x004F659F
+	// Token: 0x060111F9 RID: 70137 RVA: 0x0050717B File Offset: 0x0050537B
 	[PreserveBaseOverrides]
 	protected new virtual SCommonQte_ContinuousClick OnGetUiConfig()
 	{
@@ -149,7 +149,7 @@ public class CommonQteContinuousClickContext : CommonQteContextBase
 		return this.Config.BaseConfig.ContinuousClickConfig;
 	}
 
-	// Token: 0x06013D18 RID: 81176 RVA: 0x004F83C1 File Offset: 0x004F65C1
+	// Token: 0x060111FA RID: 70138 RVA: 0x0050719D File Offset: 0x0050539D
 	protected override SCommonQteButton GetUiButtonConfig()
 	{
 		if (this.Config == null)
@@ -159,14 +159,14 @@ public class CommonQteContinuousClickContext : CommonQteContextBase
 		return this.Config.BaseConfig.ContinuousClickConfig.UIConfig;
 	}
 
-	// Token: 0x06013D19 RID: 81177 RVA: 0x004F83E8 File Offset: 0x004F65E8
+	// Token: 0x060111FB RID: 70139 RVA: 0x005071C4 File Offset: 0x005053C4
 	public override bool IsAttachToActor()
 	{
 		SCommonQte config = this.Config;
 		return config != null && config.BaseConfig.ContinuousClickConfig.IsAttachToActor;
 	}
 
-	// Token: 0x06013D1A RID: 81178 RVA: 0x004F8408 File Offset: 0x004F6608
+	// Token: 0x060111FC RID: 70140 RVA: 0x005071E4 File Offset: 0x005053E4
 	public override SCommonQte_Attach? GetAttachConfig()
 	{
 		SCommonQte config = this.Config;
@@ -177,7 +177,7 @@ public class CommonQteContinuousClickContext : CommonQteContextBase
 		return new SCommonQte_Attach?(config.BaseConfig.ContinuousClickConfig.AttachConfig);
 	}
 
-	// Token: 0x06013D1B RID: 81179 RVA: 0x004F843D File Offset: 0x004F663D
+	// Token: 0x060111FD RID: 70141 RVA: 0x00507219 File Offset: 0x00505419
 	public override float GetProgress()
 	{
 		if (this.TargetEnergyPercent > 0f)
@@ -187,40 +187,40 @@ public class CommonQteContinuousClickContext : CommonQteContextBase
 		return 0f;
 	}
 
-	// Token: 0x06013D1C RID: 81180 RVA: 0x004F845F File Offset: 0x004F665F
+	// Token: 0x060111FE RID: 70142 RVA: 0x0050723B File Offset: 0x0050543B
 	public void StartComboTiming()
 	{
 		this.IsComboTiming = true;
 		this.CurrentComboInterval = 0f;
 	}
 
-	// Token: 0x0400954B RID: 38219
+	// Token: 0x040096A2 RID: 38562
 	public float CurrentEnergyPercent;
 
-	// Token: 0x0400954C RID: 38220
+	// Token: 0x040096A3 RID: 38563
 	public float TargetEnergyPercent = -1f;
 
-	// Token: 0x0400954D RID: 38221
+	// Token: 0x040096A4 RID: 38564
 	public float DeltaEnergyPercentPerResponse;
 
-	// Token: 0x0400954E RID: 38222
+	// Token: 0x040096A5 RID: 38565
 	public float DeltaEnergyPercentPerMs;
 
-	// Token: 0x0400954F RID: 38223
+	// Token: 0x040096A6 RID: 38566
 	public float EnergyInterpSpeedPerMs;
 
-	// Token: 0x04009550 RID: 38224
+	// Token: 0x040096A7 RID: 38567
 	private float TargetEnergyPercentCurrent;
 
-	// Token: 0x04009551 RID: 38225
+	// Token: 0x040096A8 RID: 38568
 	public float MaxComboInterval;
 
-	// Token: 0x04009552 RID: 38226
+	// Token: 0x040096A9 RID: 38569
 	public bool ProgressOnBegin;
 
-	// Token: 0x04009553 RID: 38227
+	// Token: 0x040096AA RID: 38570
 	private bool IsComboTiming;
 
-	// Token: 0x04009554 RID: 38228
+	// Token: 0x040096AB RID: 38571
 	private float CurrentComboInterval;
 }

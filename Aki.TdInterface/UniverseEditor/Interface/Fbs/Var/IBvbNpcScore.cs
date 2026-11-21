@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A78 RID: 14968
+	// Token: 0x02003E53 RID: 15955
 	public struct IBvbNpcScore : IFlatbufferObject
 	{
-		// Token: 0x1700668A RID: 26250
-		// (get) Token: 0x060144AB RID: 83115 RVA: 0x002F6701 File Offset: 0x002F4901
+		// Token: 0x17006BBA RID: 27578
+		// (get) Token: 0x060157C7 RID: 88007 RVA: 0x003198ED File Offset: 0x00317AED
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060144AC RID: 83116 RVA: 0x002F670E File Offset: 0x002F490E
+		// Token: 0x060157C8 RID: 88008 RVA: 0x003198FA File Offset: 0x00317AFA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060144AD RID: 83117 RVA: 0x002F6718 File Offset: 0x002F4918
+		// Token: 0x060157C9 RID: 88009 RVA: 0x00319904 File Offset: 0x00317B04
 		public static IBvbNpcScore GetRootAsIBvbNpcScore(ByteBuffer _bb)
 		{
 			return IBvbNpcScore.GetRootAsIBvbNpcScore(_bb, default(IBvbNpcScore));
 		}
 
-		// Token: 0x060144AE RID: 83118 RVA: 0x002F6734 File Offset: 0x002F4934
+		// Token: 0x060157CA RID: 88010 RVA: 0x00319920 File Offset: 0x00317B20
 		public static IBvbNpcScore GetRootAsIBvbNpcScore(ByteBuffer _bb, IBvbNpcScore obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060144AF RID: 83119 RVA: 0x002F6751 File Offset: 0x002F4951
+		// Token: 0x060157CB RID: 88011 RVA: 0x0031993D File Offset: 0x00317B3D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060144B0 RID: 83120 RVA: 0x002F6760 File Offset: 0x002F4960
+		// Token: 0x060157CC RID: 88012 RVA: 0x0031994C File Offset: 0x00317B4C
 		public IBvbNpcScore __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700668B RID: 26251
-		// (get) Token: 0x060144B1 RID: 83121 RVA: 0x002F6770 File Offset: 0x002F4970
+		// Token: 0x17006BBB RID: 27579
+		// (get) Token: 0x060157CD RID: 88013 RVA: 0x0031995C File Offset: 0x00317B5C
 		public ESystemVarName Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060144B2 RID: 83122 RVA: 0x002F67AC File Offset: 0x002F49AC
+		// Token: 0x060157CE RID: 88014 RVA: 0x00319998 File Offset: 0x00317B98
 		public static Offset<IBvbNpcScore> CreateIBvbNpcScore(FlatBufferBuilder builder, ESystemVarName Type = ESystemVarName.CommonHotFixVar)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbNpcScore.EndIBvbNpcScore(builder);
 		}
 
-		// Token: 0x060144B3 RID: 83123 RVA: 0x002F67C2 File Offset: 0x002F49C2
+		// Token: 0x060157CF RID: 88015 RVA: 0x003199AE File Offset: 0x00317BAE
 		public static void StartIBvbNpcScore(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060144B4 RID: 83124 RVA: 0x002F67CB File Offset: 0x002F49CB
+		// Token: 0x060157D0 RID: 88016 RVA: 0x003199B7 File Offset: 0x00317BB7
 		public static void AddType(FlatBufferBuilder builder, ESystemVarName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060144B5 RID: 83125 RVA: 0x002F67D6 File Offset: 0x002F49D6
+		// Token: 0x060157D1 RID: 88017 RVA: 0x003199C2 File Offset: 0x00317BC2
 		public static Offset<IBvbNpcScore> EndIBvbNpcScore(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbNpcScore>(builder.EndTable());
 		}
 
-		// Token: 0x060144B6 RID: 83126 RVA: 0x002F67E4 File Offset: 0x002F49E4
+		// Token: 0x060157D2 RID: 88018 RVA: 0x003199D0 File Offset: 0x00317BD0
 		public IBvbNpcScoreT UnPack()
 		{
 			IBvbNpcScoreT bvbNpcScoreT = new IBvbNpcScoreT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return bvbNpcScoreT;
 		}
 
-		// Token: 0x060144B7 RID: 83127 RVA: 0x002F67FF File Offset: 0x002F49FF
+		// Token: 0x060157D3 RID: 88019 RVA: 0x003199EB File Offset: 0x00317BEB
 		public void UnPackTo(IBvbNpcScoreT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060144B8 RID: 83128 RVA: 0x002F6810 File Offset: 0x002F4A10
+		// Token: 0x060157D4 RID: 88020 RVA: 0x003199FC File Offset: 0x00317BFC
 		public static Offset<IBvbNpcScore> Pack(FlatBufferBuilder builder, IBvbNpcScoreT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbNpcScore.CreateIBvbNpcScore(builder, _o.Type);
 		}
 
-		// Token: 0x0400AEF6 RID: 44790
+		// Token: 0x0400B818 RID: 47128
 		private Table __p;
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000047 RID: 71
+	// Token: 0x0200004F RID: 79
 	public class ConfigActivityQuestConfigAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060001AA RID: 426 RVA: 0x000632B4 File Offset: 0x000614B4
+		// Token: 0x060001DA RID: 474 RVA: 0x00067B68 File Offset: 0x00065D68
 		static ConfigActivityQuestConfigAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigActivityQuestConfigAll.CreateStaticDefaultValue), new Action(ConfigActivityQuestConfigAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060001AB RID: 427 RVA: 0x000632D4 File Offset: 0x000614D4
+		// Token: 0x060001DB RID: 475 RVA: 0x00067B88 File Offset: 0x00065D88
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigActivityQuestConfigAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060001AC RID: 428 RVA: 0x00063353 File Offset: 0x00061553
+		// Token: 0x060001DC RID: 476 RVA: 0x00067C07 File Offset: 0x00065E07
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigActivityQuestConfigAll.LogPair = null;
 			ConfigActivityQuestConfigAll.HandleId = 0;
 		}
 
-		// Token: 0x060001AD RID: 429 RVA: 0x00063361 File Offset: 0x00061561
+		// Token: 0x060001DD RID: 477 RVA: 0x00067C15 File Offset: 0x00065E15
 		public static void Init()
 		{
 			ConfigActivityQuestConfigAll.HandleId = ConfigCommon.InitDataStatement(ConfigActivityQuestConfigAll.HandleId, "db_activityquestconfig.db", "select BinData from `ActivityQuestConfig`");
 		}
 
-		// Token: 0x060001AE RID: 430 RVA: 0x0006337C File Offset: 0x0006157C
+		// Token: 0x060001DE RID: 478 RVA: 0x00067C30 File Offset: 0x00065E30
 		[NullableContext(2)]
 		public static IReadOnlyList<ActivityQuestConfig> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040001D5 RID: 469
+		// Token: 0x0400020D RID: 525
 		private const string DB = "db_activityquestconfig.db";
 
-		// Token: 0x040001D6 RID: 470
+		// Token: 0x0400020E RID: 526
 		private const string FILE = "h.活动任务.xlsx";
 
-		// Token: 0x040001D7 RID: 471
+		// Token: 0x0400020F RID: 527
 		private const string TABLE = "ActivityQuestConfig";
 
-		// Token: 0x040001D8 RID: 472
+		// Token: 0x04000210 RID: 528
 		private const string COMMAND = "select BinData from `ActivityQuestConfig`";
 
-		// Token: 0x040001D9 RID: 473
+		// Token: 0x04000211 RID: 529
 		private const string KEY_PREFIX = "ActivityQuestConfigAll";
 
-		// Token: 0x040001DA RID: 474
+		// Token: 0x04000212 RID: 530
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040001DB RID: 475
+		// Token: 0x04000213 RID: 531
 		private static int HandleId;
 	}
 }

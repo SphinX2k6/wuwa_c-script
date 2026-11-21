@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002B11 RID: 11025
+// Token: 0x0200208D RID: 8333
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class EntryItem : GridProxyAbstract<IEntryItemData>
 {
-	// Token: 0x06016E9D RID: 93853 RVA: 0x005D07A4 File Offset: 0x005CE9A4
+	// Token: 0x060148CE RID: 84174 RVA: 0x005FD324 File Offset: 0x005FB524
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class EntryItem : GridProxyAbstract<IEntryItemData>
 		};
 	}
 
-	// Token: 0x06016E9E RID: 93854 RVA: 0x005D0800 File Offset: 0x005CEA00
+	// Token: 0x060148CF RID: 84175 RVA: 0x005FD380 File Offset: 0x005FB580
 	protected override void OnStart()
 	{
 		TermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -36,14 +36,14 @@ public class EntryItem : GridProxyAbstract<IEntryItemData>
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x06016E9F RID: 93855 RVA: 0x005D083B File Offset: 0x005CEA3B
+	// Token: 0x060148D0 RID: 84176 RVA: 0x005FD3BB File Offset: 0x005FB5BB
 	public override void Refresh(IEntryItemData data, bool isSelected, int gridIndex)
 	{
 		this.SetTextById(data.Text, data.Args);
 		this.SetColorFromHex(data.Color);
 	}
 
-	// Token: 0x06016EA0 RID: 93856 RVA: 0x005D085C File Offset: 0x005CEA5C
+	// Token: 0x060148D1 RID: 84177 RVA: 0x005FD3DC File Offset: 0x005FB5DC
 	public void SetTextById(string text, string[] args)
 	{
 		List<object> list = new List<object>();
@@ -54,7 +54,7 @@ public class EntryItem : GridProxyAbstract<IEntryItemData>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), text, list.ToArray());
 	}
 
-	// Token: 0x06016EA1 RID: 93857 RVA: 0x005D08A4 File Offset: 0x005CEAA4
+	// Token: 0x060148D2 RID: 84178 RVA: 0x005FD424 File Offset: 0x005FB624
 	public void SetColorFromHex(string hex)
 	{
 		FColor color = FColor.FromHex(hex);
@@ -76,17 +76,17 @@ public class EntryItem : GridProxyAbstract<IEntryItemData>
 		text.SetColor(color);
 	}
 
-	// Token: 0x02009116 RID: 37142
+	// Token: 0x02008359 RID: 33625
 	[NullableContext(0)]
 	private static class EEntry
 	{
-		// Token: 0x0402EFDF RID: 192479
+		// Token: 0x0402A6E4 RID: 173796
 		public const int SprBg = 0;
 
-		// Token: 0x0402EFE0 RID: 192480
+		// Token: 0x0402A6E5 RID: 173797
 		public const int SprPoint = 1;
 
-		// Token: 0x0402EFE1 RID: 192481
+		// Token: 0x0402A6E6 RID: 173798
 		public const int TxtContent = 2;
 	}
 }

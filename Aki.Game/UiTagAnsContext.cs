@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002C7E RID: 11390
+// Token: 0x020021D7 RID: 8663
 public class UiTagAnsContext : UiAnsContextBase
 {
-	// Token: 0x17002004 RID: 8196
-	// (get) Token: 0x06017CBB RID: 97467 RVA: 0x0060D65B File Offset: 0x0060B85B
+	// Token: 0x17002055 RID: 8277
+	// (get) Token: 0x0601552E RID: 87342 RVA: 0x0063313F File Offset: 0x0063133F
 	public int TagId { get; }
 
-	// Token: 0x06017CBC RID: 97468 RVA: 0x0060D663 File Offset: 0x0060B863
+	// Token: 0x0601552F RID: 87343 RVA: 0x00633147 File Offset: 0x00631347
 	public UiTagAnsContext(int tagId)
 	{
 		this.TagId = tagId;
 	}
 
-	// Token: 0x06017CBD RID: 97469 RVA: 0x0060D674 File Offset: 0x0060B874
+	// Token: 0x06015530 RID: 87344 RVA: 0x00633158 File Offset: 0x00631358
 	[NullableContext(1)]
 	public override bool IsEqual(UiAnsContextBase inAnsContext)
 	{

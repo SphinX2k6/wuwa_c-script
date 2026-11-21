@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C87 RID: 27783
+	// Token: 0x020073EE RID: 29678
 	public struct IPerformerAiMoveToPlayer : IFlatbufferObject
 	{
-		// Token: 0x1700CEE7 RID: 52967
-		// (get) Token: 0x06030F51 RID: 200529 RVA: 0x006A5AFA File Offset: 0x006A3CFA
+		// Token: 0x1700DA02 RID: 55810
+		// (get) Token: 0x06033EAC RID: 212652 RVA: 0x006FFFFA File Offset: 0x006FE1FA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030F52 RID: 200530 RVA: 0x006A5B07 File Offset: 0x006A3D07
+		// Token: 0x06033EAD RID: 212653 RVA: 0x00700007 File Offset: 0x006FE207
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030F53 RID: 200531 RVA: 0x006A5B10 File Offset: 0x006A3D10
+		// Token: 0x06033EAE RID: 212654 RVA: 0x00700010 File Offset: 0x006FE210
 		public static IPerformerAiMoveToPlayer GetRootAsIPerformerAiMoveToPlayer(ByteBuffer _bb)
 		{
 			return IPerformerAiMoveToPlayer.GetRootAsIPerformerAiMoveToPlayer(_bb, default(IPerformerAiMoveToPlayer));
 		}
 
-		// Token: 0x06030F54 RID: 200532 RVA: 0x006A5B2C File Offset: 0x006A3D2C
+		// Token: 0x06033EAF RID: 212655 RVA: 0x0070002C File Offset: 0x006FE22C
 		public static IPerformerAiMoveToPlayer GetRootAsIPerformerAiMoveToPlayer(ByteBuffer _bb, IPerformerAiMoveToPlayer obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030F55 RID: 200533 RVA: 0x006A5B49 File Offset: 0x006A3D49
+		// Token: 0x06033EB0 RID: 212656 RVA: 0x00700049 File Offset: 0x006FE249
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030F56 RID: 200534 RVA: 0x006A5B58 File Offset: 0x006A3D58
+		// Token: 0x06033EB1 RID: 212657 RVA: 0x00700058 File Offset: 0x006FE258
 		public IPerformerAiMoveToPlayer __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CEE8 RID: 52968
-		// (get) Token: 0x06030F57 RID: 200535 RVA: 0x006A5B68 File Offset: 0x006A3D68
+		// Token: 0x1700DA03 RID: 55811
+		// (get) Token: 0x06033EB2 RID: 212658 RVA: 0x00700068 File Offset: 0x006FE268
 		public EPerformerAiMoveToType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030F58 RID: 200536 RVA: 0x006A5BA4 File Offset: 0x006A3DA4
+		// Token: 0x06033EB3 RID: 212659 RVA: 0x007000A4 File Offset: 0x006FE2A4
 		public static Offset<IPerformerAiMoveToPlayer> CreateIPerformerAiMoveToPlayer(FlatBufferBuilder builder, EPerformerAiMoveToType Type = EPerformerAiMoveToType.Position)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPerformerAiMoveToPlayer.EndIPerformerAiMoveToPlayer(builder);
 		}
 
-		// Token: 0x06030F59 RID: 200537 RVA: 0x006A5BBA File Offset: 0x006A3DBA
+		// Token: 0x06033EB4 RID: 212660 RVA: 0x007000BA File Offset: 0x006FE2BA
 		public static void StartIPerformerAiMoveToPlayer(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06030F5A RID: 200538 RVA: 0x006A5BC3 File Offset: 0x006A3DC3
+		// Token: 0x06033EB5 RID: 212661 RVA: 0x007000C3 File Offset: 0x006FE2C3
 		public static void AddType(FlatBufferBuilder builder, EPerformerAiMoveToType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06030F5B RID: 200539 RVA: 0x006A5BCE File Offset: 0x006A3DCE
+		// Token: 0x06033EB6 RID: 212662 RVA: 0x007000CE File Offset: 0x006FE2CE
 		public static Offset<IPerformerAiMoveToPlayer> EndIPerformerAiMoveToPlayer(FlatBufferBuilder builder)
 		{
 			return new Offset<IPerformerAiMoveToPlayer>(builder.EndTable());
 		}
 
-		// Token: 0x06030F5C RID: 200540 RVA: 0x006A5BDC File Offset: 0x006A3DDC
+		// Token: 0x06033EB7 RID: 212663 RVA: 0x007000DC File Offset: 0x006FE2DC
 		public IPerformerAiMoveToPlayerT UnPack()
 		{
 			IPerformerAiMoveToPlayerT performerAiMoveToPlayerT = new IPerformerAiMoveToPlayerT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return performerAiMoveToPlayerT;
 		}
 
-		// Token: 0x06030F5D RID: 200541 RVA: 0x006A5BF7 File Offset: 0x006A3DF7
+		// Token: 0x06033EB8 RID: 212664 RVA: 0x007000F7 File Offset: 0x006FE2F7
 		public void UnPackTo(IPerformerAiMoveToPlayerT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06030F5E RID: 200542 RVA: 0x006A5C08 File Offset: 0x006A3E08
+		// Token: 0x06033EB9 RID: 212665 RVA: 0x00700108 File Offset: 0x006FE308
 		public static Offset<IPerformerAiMoveToPlayer> Pack(FlatBufferBuilder builder, IPerformerAiMoveToPlayerT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPerformerAiMoveToPlayer.CreateIPerformerAiMoveToPlayer(builder, _o.Type);
 		}
 
-		// Token: 0x040115DC RID: 71132
+		// Token: 0x04012534 RID: 75060
 		private Table __p;
 	}
 }

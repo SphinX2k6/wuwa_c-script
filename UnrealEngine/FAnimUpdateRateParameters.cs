@@ -5,37 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200084B RID: 2123
+	// Token: 0x02000184 RID: 388
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.AnimUpdateRateParameters")]
 	[UnrealStructLayout(168, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 168)]
 	public class FAnimUpdateRateParameters : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06007257 RID: 29271 RVA: 0x000A3A64 File Offset: 0x000A1C64
+		// Token: 0x060018E4 RID: 6372 RVA: 0x00025B5D File Offset: 0x00023D5D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FAnimUpdateRateParameters._ScriptStructPtr != 0) ? FAnimUpdateRateParameters._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.AnimUpdateRateParameters", ref FAnimUpdateRateParameters._ScriptStructPtr);
 		}
 
-		// Token: 0x17001AE5 RID: 6885
-		// (get) Token: 0x06007258 RID: 29272 RVA: 0x000A3A88 File Offset: 0x000A1C88
-		// (set) Token: 0x06007259 RID: 29273 RVA: 0x000A3A98 File Offset: 0x000A1C98
-		public unsafe EUpdateRateShiftBucket ShiftBucket
-		{
-			get
-			{
-				return (EUpdateRateShiftBucket)(*(base.NativePtr + (IntPtr)FAnimUpdateRateParameters.__PropertyOffset_ShiftBucket));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)FAnimUpdateRateParameters.__PropertyOffset_ShiftBucket) = (byte)value;
-			}
-		}
-
-		// Token: 0x17001AE6 RID: 6886
-		// (get) Token: 0x0600725A RID: 29274 RVA: 0x000A3AA9 File Offset: 0x000A1CA9
-		// (set) Token: 0x0600725B RID: 29275 RVA: 0x000A3AC2 File Offset: 0x000A1CC2
+		// Token: 0x170002C3 RID: 707
+		// (get) Token: 0x060018E5 RID: 6373 RVA: 0x00025B81 File Offset: 0x00023D81
+		// (set) Token: 0x060018E6 RID: 6374 RVA: 0x00025B9A File Offset: 0x00023D9A
 		public unsafe bool bInterpolateSkippedFrames
 		{
 			get
@@ -48,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AE7 RID: 6887
-		// (get) Token: 0x0600725C RID: 29276 RVA: 0x000A3AF2 File Offset: 0x000A1CF2
-		// (set) Token: 0x0600725D RID: 29277 RVA: 0x000A3B0B File Offset: 0x000A1D0B
+		// Token: 0x170002C4 RID: 708
+		// (get) Token: 0x060018E7 RID: 6375 RVA: 0x00025BCA File Offset: 0x00023DCA
+		// (set) Token: 0x060018E8 RID: 6376 RVA: 0x00025BE3 File Offset: 0x00023DE3
 		public unsafe bool bShouldUseLodMap
 		{
 			get
@@ -63,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AE8 RID: 6888
-		// (get) Token: 0x0600725E RID: 29278 RVA: 0x000A3B3B File Offset: 0x000A1D3B
-		// (set) Token: 0x0600725F RID: 29279 RVA: 0x000A3B54 File Offset: 0x000A1D54
+		// Token: 0x170002C5 RID: 709
+		// (get) Token: 0x060018E9 RID: 6377 RVA: 0x00025C13 File Offset: 0x00023E13
+		// (set) Token: 0x060018EA RID: 6378 RVA: 0x00025C2C File Offset: 0x00023E2C
 		public unsafe bool bShouldUseDistanceMap
 		{
 			get
@@ -78,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AE9 RID: 6889
-		// (get) Token: 0x06007260 RID: 29280 RVA: 0x000A3B84 File Offset: 0x000A1D84
-		// (set) Token: 0x06007261 RID: 29281 RVA: 0x000A3B9D File Offset: 0x000A1D9D
+		// Token: 0x170002C6 RID: 710
+		// (get) Token: 0x060018EB RID: 6379 RVA: 0x00025C5C File Offset: 0x00023E5C
+		// (set) Token: 0x060018EC RID: 6380 RVA: 0x00025C75 File Offset: 0x00023E75
 		public unsafe bool bShouldUseMinLod
 		{
 			get
@@ -93,9 +78,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AEA RID: 6890
-		// (get) Token: 0x06007262 RID: 29282 RVA: 0x000A3BCD File Offset: 0x000A1DCD
-		// (set) Token: 0x06007263 RID: 29283 RVA: 0x000A3BE6 File Offset: 0x000A1DE6
+		// Token: 0x170002C7 RID: 711
+		// (get) Token: 0x060018ED RID: 6381 RVA: 0x00025CA5 File Offset: 0x00023EA5
+		// (set) Token: 0x060018EE RID: 6382 RVA: 0x00025CBE File Offset: 0x00023EBE
 		public unsafe bool bSkipUpdate
 		{
 			get
@@ -108,9 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AEB RID: 6891
-		// (get) Token: 0x06007264 RID: 29284 RVA: 0x000A3C16 File Offset: 0x000A1E16
-		// (set) Token: 0x06007265 RID: 29285 RVA: 0x000A3C2F File Offset: 0x000A1E2F
+		// Token: 0x170002C8 RID: 712
+		// (get) Token: 0x060018EF RID: 6383 RVA: 0x00025CEE File Offset: 0x00023EEE
+		// (set) Token: 0x060018F0 RID: 6384 RVA: 0x00025D07 File Offset: 0x00023F07
 		public unsafe bool bSkipEvaluation
 		{
 			get
@@ -123,9 +108,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AEC RID: 6892
-		// (get) Token: 0x06007266 RID: 29286 RVA: 0x000A3C5F File Offset: 0x000A1E5F
-		// (set) Token: 0x06007267 RID: 29287 RVA: 0x000A3C6F File Offset: 0x000A1E6F
+		// Token: 0x170002C9 RID: 713
+		// (get) Token: 0x060018F1 RID: 6385 RVA: 0x00025D37 File Offset: 0x00023F37
+		// (set) Token: 0x060018F2 RID: 6386 RVA: 0x00025D47 File Offset: 0x00023F47
 		public unsafe int UpdateRate
 		{
 			get
@@ -138,9 +123,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AED RID: 6893
-		// (get) Token: 0x06007268 RID: 29288 RVA: 0x000A3C80 File Offset: 0x000A1E80
-		// (set) Token: 0x06007269 RID: 29289 RVA: 0x000A3C90 File Offset: 0x000A1E90
+		// Token: 0x170002CA RID: 714
+		// (get) Token: 0x060018F3 RID: 6387 RVA: 0x00025D58 File Offset: 0x00023F58
+		// (set) Token: 0x060018F4 RID: 6388 RVA: 0x00025D68 File Offset: 0x00023F68
 		public unsafe int EvaluationRate
 		{
 			get
@@ -153,9 +138,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AEE RID: 6894
-		// (get) Token: 0x0600726A RID: 29290 RVA: 0x000A3CA1 File Offset: 0x000A1EA1
-		// (set) Token: 0x0600726B RID: 29291 RVA: 0x000A3CB1 File Offset: 0x000A1EB1
+		// Token: 0x170002CB RID: 715
+		// (get) Token: 0x060018F5 RID: 6389 RVA: 0x00025D79 File Offset: 0x00023F79
+		// (set) Token: 0x060018F6 RID: 6390 RVA: 0x00025D89 File Offset: 0x00023F89
 		public unsafe float TickedPoseOffestTime
 		{
 			get
@@ -168,9 +153,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AEF RID: 6895
-		// (get) Token: 0x0600726C RID: 29292 RVA: 0x000A3CC2 File Offset: 0x000A1EC2
-		// (set) Token: 0x0600726D RID: 29293 RVA: 0x000A3CD2 File Offset: 0x000A1ED2
+		// Token: 0x170002CC RID: 716
+		// (get) Token: 0x060018F7 RID: 6391 RVA: 0x00025D9A File Offset: 0x00023F9A
+		// (set) Token: 0x060018F8 RID: 6392 RVA: 0x00025DAA File Offset: 0x00023FAA
 		public unsafe float AdditionalTime
 		{
 			get
@@ -183,9 +168,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AF0 RID: 6896
-		// (get) Token: 0x0600726E RID: 29294 RVA: 0x000A3CE3 File Offset: 0x000A1EE3
-		// (set) Token: 0x0600726F RID: 29295 RVA: 0x000A3CF3 File Offset: 0x000A1EF3
+		// Token: 0x170002CD RID: 717
+		// (get) Token: 0x060018F9 RID: 6393 RVA: 0x00025DBB File Offset: 0x00023FBB
+		// (set) Token: 0x060018FA RID: 6394 RVA: 0x00025DCB File Offset: 0x00023FCB
 		public unsafe int BaseNonRenderedUpdateRate
 		{
 			get
@@ -198,9 +183,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AF1 RID: 6897
-		// (get) Token: 0x06007270 RID: 29296 RVA: 0x000A3D04 File Offset: 0x000A1F04
-		// (set) Token: 0x06007271 RID: 29297 RVA: 0x000A3D14 File Offset: 0x000A1F14
+		// Token: 0x170002CE RID: 718
+		// (get) Token: 0x060018FB RID: 6395 RVA: 0x00025DDC File Offset: 0x00023FDC
+		// (set) Token: 0x060018FC RID: 6396 RVA: 0x00025DEC File Offset: 0x00023FEC
 		public unsafe int MaxEvalRateForInterpolation
 		{
 			get
@@ -213,9 +198,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AF2 RID: 6898
-		// (get) Token: 0x06007272 RID: 29298 RVA: 0x000A3D28 File Offset: 0x000A1F28
-		// (set) Token: 0x06007273 RID: 29299 RVA: 0x000A3D6B File Offset: 0x000A1F6B
+		// Token: 0x170002CF RID: 719
+		// (get) Token: 0x060018FD RID: 6397 RVA: 0x00025E00 File Offset: 0x00024000
+		// (set) Token: 0x060018FE RID: 6398 RVA: 0x00025E43 File Offset: 0x00024043
 		public TArray<float> BaseVisibleDistanceFactorThesholds
 		{
 			get
@@ -234,9 +219,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AF3 RID: 6899
-		// (get) Token: 0x06007274 RID: 29300 RVA: 0x000A3D7C File Offset: 0x000A1F7C
-		// (set) Token: 0x06007275 RID: 29301 RVA: 0x000A3DBF File Offset: 0x000A1FBF
+		// Token: 0x170002D0 RID: 720
+		// (get) Token: 0x060018FF RID: 6399 RVA: 0x00025E54 File Offset: 0x00024054
+		// (set) Token: 0x06001900 RID: 6400 RVA: 0x00025E97 File Offset: 0x00024097
 		public TMap<int, int> LODToFrameSkipMap
 		{
 			get
@@ -255,9 +240,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AF4 RID: 6900
-		// (get) Token: 0x06007276 RID: 29302 RVA: 0x000A3DD0 File Offset: 0x000A1FD0
-		// (set) Token: 0x06007277 RID: 29303 RVA: 0x000A3E13 File Offset: 0x000A2013
+		// Token: 0x170002D1 RID: 721
+		// (get) Token: 0x06001901 RID: 6401 RVA: 0x00025EA8 File Offset: 0x000240A8
+		// (set) Token: 0x06001902 RID: 6402 RVA: 0x00025EEB File Offset: 0x000240EB
 		public TArray<float> BaseVisibleDistanceThresholds
 		{
 			get
@@ -276,9 +261,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AF5 RID: 6901
-		// (get) Token: 0x06007278 RID: 29304 RVA: 0x000A3E24 File Offset: 0x000A2024
-		// (set) Token: 0x06007279 RID: 29305 RVA: 0x000A3E67 File Offset: 0x000A2067
+		// Token: 0x170002D2 RID: 722
+		// (get) Token: 0x06001903 RID: 6403 RVA: 0x00025EFC File Offset: 0x000240FC
+		// (set) Token: 0x06001904 RID: 6404 RVA: 0x00025F3F File Offset: 0x0002413F
 		public TArray<float> BaseVisibleScreenRatioThresholds
 		{
 			get
@@ -297,9 +282,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AF6 RID: 6902
-		// (get) Token: 0x0600727A RID: 29306 RVA: 0x000A3E75 File Offset: 0x000A2075
-		// (set) Token: 0x0600727B RID: 29307 RVA: 0x000A3E85 File Offset: 0x000A2085
+		// Token: 0x170002D3 RID: 723
+		// (get) Token: 0x06001905 RID: 6405 RVA: 0x00025F4D File Offset: 0x0002414D
+		// (set) Token: 0x06001906 RID: 6406 RVA: 0x00025F5D File Offset: 0x0002415D
 		public unsafe int SkippedUpdateFrames
 		{
 			get
@@ -312,9 +297,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001AF7 RID: 6903
-		// (get) Token: 0x0600727C RID: 29308 RVA: 0x000A3E96 File Offset: 0x000A2096
-		// (set) Token: 0x0600727D RID: 29309 RVA: 0x000A3EA6 File Offset: 0x000A20A6
+		// Token: 0x170002D4 RID: 724
+		// (get) Token: 0x06001907 RID: 6407 RVA: 0x00025F6E File Offset: 0x0002416E
+		// (set) Token: 0x06001908 RID: 6408 RVA: 0x00025F7E File Offset: 0x0002417E
 		public unsafe int SkippedEvalFrames
 		{
 			get
@@ -327,159 +312,132 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600727E RID: 29310 RVA: 0x000A3EB7 File Offset: 0x000A20B7
+		// Token: 0x06001909 RID: 6409 RVA: 0x00025F8F File Offset: 0x0002418F
 		public FAnimUpdateRateParameters()
 		{
 		}
 
-		// Token: 0x0600727F RID: 29311 RVA: 0x000A3EC0 File Offset: 0x000A20C0
-		public FAnimUpdateRateParameters(EUpdateRateShiftBucket ShiftBucket, bool bInterpolateSkippedFrames, bool bShouldUseLodMap, bool bShouldUseDistanceMap, bool bShouldUseMinLod, bool bSkipUpdate, bool bSkipEvaluation, int UpdateRate, int EvaluationRate, float TickedPoseOffestTime, float AdditionalTime, int BaseNonRenderedUpdateRate, int MaxEvalRateForInterpolation, TArray<float> BaseVisibleDistanceFactorThesholds, TMap<int, int> LODToFrameSkipMap, TArray<float> BaseVisibleDistanceThresholds, TArray<float> BaseVisibleScreenRatioThresholds, int SkippedUpdateFrames, int SkippedEvalFrames)
-		{
-			this.ShiftBucket = ShiftBucket;
-			this.bInterpolateSkippedFrames = bInterpolateSkippedFrames;
-			this.bShouldUseLodMap = bShouldUseLodMap;
-			this.bShouldUseDistanceMap = bShouldUseDistanceMap;
-			this.bShouldUseMinLod = bShouldUseMinLod;
-			this.bSkipUpdate = bSkipUpdate;
-			this.bSkipEvaluation = bSkipEvaluation;
-			this.UpdateRate = UpdateRate;
-			this.EvaluationRate = EvaluationRate;
-			this.TickedPoseOffestTime = TickedPoseOffestTime;
-			this.AdditionalTime = AdditionalTime;
-			this.BaseNonRenderedUpdateRate = BaseNonRenderedUpdateRate;
-			this.MaxEvalRateForInterpolation = MaxEvalRateForInterpolation;
-			this.BaseVisibleDistanceFactorThesholds = BaseVisibleDistanceFactorThesholds;
-			this.LODToFrameSkipMap = LODToFrameSkipMap;
-			this.BaseVisibleDistanceThresholds = BaseVisibleDistanceThresholds;
-			this.BaseVisibleScreenRatioThresholds = BaseVisibleScreenRatioThresholds;
-			this.SkippedUpdateFrames = SkippedUpdateFrames;
-			this.SkippedEvalFrames = SkippedEvalFrames;
-		}
-
-		// Token: 0x06007280 RID: 29312 RVA: 0x000A3F68 File Offset: 0x000A2168
+		// Token: 0x0600190A RID: 6410 RVA: 0x00025F97 File Offset: 0x00024197
 		protected override IntPtr GetUStructPtr()
 		{
 			return FAnimUpdateRateParameters.StaticStruct();
 		}
 
-		// Token: 0x06007281 RID: 29313 RVA: 0x000A3F74 File Offset: 0x000A2174
+		// Token: 0x0600190B RID: 6411 RVA: 0x00025FA3 File Offset: 0x000241A3
 		[NullableContext(2)]
 		public FAnimUpdateRateParameters(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06007282 RID: 29314 RVA: 0x000A3F7E File Offset: 0x000A217E
+		// Token: 0x0600190C RID: 6412 RVA: 0x00025FAD File Offset: 0x000241AD
 		public FAnimUpdateRateParameters(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06007283 RID: 29315 RVA: 0x000A3F89 File Offset: 0x000A2189
+		// Token: 0x0600190D RID: 6413 RVA: 0x00025FB8 File Offset: 0x000241B8
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FAnimUpdateRateParameters(Pointer, false, true);
 		}
 
-		// Token: 0x06007284 RID: 29316 RVA: 0x000A3F93 File Offset: 0x000A2193
+		// Token: 0x0600190E RID: 6414 RVA: 0x00025FC2 File Offset: 0x000241C2
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FAnimUpdateRateParameters(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040036E2 RID: 14050
+		// Token: 0x040007E9 RID: 2025
 		public const string __ObjectPath = "/Script/Engine.AnimUpdateRateParameters";
 
-		// Token: 0x040036E3 RID: 14051
+		// Token: 0x040007EA RID: 2026
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040036E4 RID: 14052
-		internal static int __PropertyOffset_ShiftBucket;
-
-		// Token: 0x040036E5 RID: 14053
+		// Token: 0x040007EB RID: 2027
 		internal static int __PropertyOffset_bInterpolateSkippedFrames;
 
-		// Token: 0x040036E6 RID: 14054
+		// Token: 0x040007EC RID: 2028
 		internal static byte __PropertyMask_bInterpolateSkippedFrames;
 
-		// Token: 0x040036E7 RID: 14055
+		// Token: 0x040007ED RID: 2029
 		internal static int __PropertyOffset_bShouldUseLodMap;
 
-		// Token: 0x040036E8 RID: 14056
+		// Token: 0x040007EE RID: 2030
 		internal static byte __PropertyMask_bShouldUseLodMap;
 
-		// Token: 0x040036E9 RID: 14057
+		// Token: 0x040007EF RID: 2031
 		internal static int __PropertyOffset_bShouldUseDistanceMap;
 
-		// Token: 0x040036EA RID: 14058
+		// Token: 0x040007F0 RID: 2032
 		internal static byte __PropertyMask_bShouldUseDistanceMap;
 
-		// Token: 0x040036EB RID: 14059
+		// Token: 0x040007F1 RID: 2033
 		internal static int __PropertyOffset_bShouldUseMinLod;
 
-		// Token: 0x040036EC RID: 14060
+		// Token: 0x040007F2 RID: 2034
 		internal static byte __PropertyMask_bShouldUseMinLod;
 
-		// Token: 0x040036ED RID: 14061
+		// Token: 0x040007F3 RID: 2035
 		internal static int __PropertyOffset_bSkipUpdate;
 
-		// Token: 0x040036EE RID: 14062
+		// Token: 0x040007F4 RID: 2036
 		internal static byte __PropertyMask_bSkipUpdate;
 
-		// Token: 0x040036EF RID: 14063
+		// Token: 0x040007F5 RID: 2037
 		internal static int __PropertyOffset_bSkipEvaluation;
 
-		// Token: 0x040036F0 RID: 14064
+		// Token: 0x040007F6 RID: 2038
 		internal static byte __PropertyMask_bSkipEvaluation;
 
-		// Token: 0x040036F1 RID: 14065
+		// Token: 0x040007F7 RID: 2039
 		internal static int __PropertyOffset_UpdateRate;
 
-		// Token: 0x040036F2 RID: 14066
+		// Token: 0x040007F8 RID: 2040
 		internal static int __PropertyOffset_EvaluationRate;
 
-		// Token: 0x040036F3 RID: 14067
+		// Token: 0x040007F9 RID: 2041
 		internal static int __PropertyOffset_TickedPoseOffestTime;
 
-		// Token: 0x040036F4 RID: 14068
+		// Token: 0x040007FA RID: 2042
 		internal static int __PropertyOffset_AdditionalTime;
 
-		// Token: 0x040036F5 RID: 14069
+		// Token: 0x040007FB RID: 2043
 		internal static int __PropertyOffset_BaseNonRenderedUpdateRate;
 
-		// Token: 0x040036F6 RID: 14070
+		// Token: 0x040007FC RID: 2044
 		internal static int __PropertyOffset_MaxEvalRateForInterpolation;
 
-		// Token: 0x040036F7 RID: 14071
+		// Token: 0x040007FD RID: 2045
 		internal static int __PropertyOffset_BaseVisibleDistanceFactorThesholds;
 
-		// Token: 0x040036F8 RID: 14072
+		// Token: 0x040007FE RID: 2046
 		[Nullable(2)]
 		private TArray<float> _BaseVisibleDistanceFactorThesholds;
 
-		// Token: 0x040036F9 RID: 14073
+		// Token: 0x040007FF RID: 2047
 		internal static int __PropertyOffset_LODToFrameSkipMap;
 
-		// Token: 0x040036FA RID: 14074
+		// Token: 0x04000800 RID: 2048
 		[Nullable(2)]
 		private TMap<int, int> _LODToFrameSkipMap;
 
-		// Token: 0x040036FB RID: 14075
+		// Token: 0x04000801 RID: 2049
 		internal static int __PropertyOffset_BaseVisibleDistanceThresholds;
 
-		// Token: 0x040036FC RID: 14076
+		// Token: 0x04000802 RID: 2050
 		[Nullable(2)]
 		private TArray<float> _BaseVisibleDistanceThresholds;
 
-		// Token: 0x040036FD RID: 14077
+		// Token: 0x04000803 RID: 2051
 		internal static int __PropertyOffset_BaseVisibleScreenRatioThresholds;
 
-		// Token: 0x040036FE RID: 14078
+		// Token: 0x04000804 RID: 2052
 		[Nullable(2)]
 		private TArray<float> _BaseVisibleScreenRatioThresholds;
 
-		// Token: 0x040036FF RID: 14079
+		// Token: 0x04000805 RID: 2053
 		internal static int __PropertyOffset_SkippedUpdateFrames;
 
-		// Token: 0x04003700 RID: 14080
+		// Token: 0x04000806 RID: 2054
 		internal static int __PropertyOffset_SkippedEvalFrames;
 	}
 }

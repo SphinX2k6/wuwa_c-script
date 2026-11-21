@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007479 RID: 29817
+	// Token: 0x02007C6C RID: 31852
 	public class ITriggerDialoguesT
 	{
-		// Token: 0x1700E25F RID: 57951
-		// (get) Token: 0x060362FA RID: 221946 RVA: 0x0075E197 File Offset: 0x0075C397
-		// (set) Token: 0x060362FB RID: 221947 RVA: 0x0075E19F File Offset: 0x0075C39F
+		// Token: 0x1700EE7C RID: 61052
+		// (get) Token: 0x060396E3 RID: 235235 RVA: 0x007C0EC3 File Offset: 0x007BF0C3
+		// (set) Token: 0x060396E4 RID: 235236 RVA: 0x007C0ECB File Offset: 0x007BF0CB
 		public EInteractEffectType Type { get; set; }
 
-		// Token: 0x1700E260 RID: 57952
-		// (get) Token: 0x060362FC RID: 221948 RVA: 0x0075E1A8 File Offset: 0x0075C3A8
-		// (set) Token: 0x060362FD RID: 221949 RVA: 0x0075E1B0 File Offset: 0x0075C3B0
+		// Token: 0x1700EE7D RID: 61053
+		// (get) Token: 0x060396E5 RID: 235237 RVA: 0x007C0ED4 File Offset: 0x007BF0D4
+		// (set) Token: 0x060396E6 RID: 235238 RVA: 0x007C0EDC File Offset: 0x007BF0DC
 		public float DelayTime { get; set; }
 
-		// Token: 0x1700E261 RID: 57953
-		// (get) Token: 0x060362FE RID: 221950 RVA: 0x0075E1B9 File Offset: 0x0075C3B9
-		// (set) Token: 0x060362FF RID: 221951 RVA: 0x0075E1C1 File Offset: 0x0075C3C1
+		// Token: 0x1700EE7E RID: 61054
+		// (get) Token: 0x060396E7 RID: 235239 RVA: 0x007C0EE5 File Offset: 0x007BF0E5
+		// (set) Token: 0x060396E8 RID: 235240 RVA: 0x007C0EED File Offset: 0x007BF0ED
 		public List<string> Talks { get; set; }
 
-		// Token: 0x1700E262 RID: 57954
-		// (get) Token: 0x06036300 RID: 221952 RVA: 0x0075E1CA File Offset: 0x0075C3CA
-		// (set) Token: 0x06036301 RID: 221953 RVA: 0x0075E1D2 File Offset: 0x0075C3D2
+		// Token: 0x1700EE7F RID: 61055
+		// (get) Token: 0x060396E9 RID: 235241 RVA: 0x007C0EF6 File Offset: 0x007BF0F6
+		// (set) Token: 0x060396EA RID: 235242 RVA: 0x007C0EFE File Offset: 0x007BF0FE
 		public IFocusObjectT FocusObject { get; set; }
 
-		// Token: 0x1700E263 RID: 57955
-		// (get) Token: 0x06036302 RID: 221954 RVA: 0x0075E1DB File Offset: 0x0075C3DB
-		// (set) Token: 0x06036303 RID: 221955 RVA: 0x0075E1E3 File Offset: 0x0075C3E3
+		// Token: 0x1700EE80 RID: 61056
+		// (get) Token: 0x060396EB RID: 235243 RVA: 0x007C0F07 File Offset: 0x007BF107
+		// (set) Token: 0x060396EC RID: 235244 RVA: 0x007C0F0F File Offset: 0x007BF10F
 		public byte NullMask { get; set; }
 
-		// Token: 0x06036304 RID: 221956 RVA: 0x0075E1EC File Offset: 0x0075C3EC
+		// Token: 0x060396ED RID: 235245 RVA: 0x007C0F18 File Offset: 0x007BF118
 		public ITriggerDialoguesT()
 		{
 			this.Type = EInteractEffectType.ModifyTipText;

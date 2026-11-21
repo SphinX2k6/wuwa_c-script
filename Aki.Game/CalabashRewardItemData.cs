@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02001744 RID: 5956
+// Token: 0x02000BFD RID: 3069
 public class CalabashRewardItemData
 {
-	// Token: 0x04004E32 RID: 20018
+	// Token: 0x04004EDB RID: 20187
 	public ECalabashRewardState ReceiveState;
 
-	// Token: 0x04004E33 RID: 20019
+	// Token: 0x04004EDC RID: 20188
 	public TItem? ItemData;
 }

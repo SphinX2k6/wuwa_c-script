@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 {
-	// Token: 0x0200702E RID: 28718
+	// Token: 0x020061AF RID: 25007
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleWindFieldComponent : EntityComponent
 	{
-		// Token: 0x06045E98 RID: 286360 RVA: 0x0116614C File Offset: 0x0116434C
+		// Token: 0x0603C075 RID: 245877 RVA: 0x0110FFFC File Offset: 0x0110E1FC
 		private void OnSoarTagChanged(int tagId, bool tagExist)
 		{
 			if (tagExist)
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E99 RID: 286361 RVA: 0x011661AC File Offset: 0x011643AC
+		// Token: 0x0603C076 RID: 245878 RVA: 0x0111005C File Offset: 0x0110E25C
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E9A RID: 286362 RVA: 0x01166258 File Offset: 0x01164458
+		// Token: 0x0603C077 RID: 245879 RVA: 0x01110108 File Offset: 0x0110E308
 		protected override bool OnEnd()
 		{
 			BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return true;
 		}
 
-		// Token: 0x06045E9B RID: 286363 RVA: 0x01166298 File Offset: 0x01164498
+		// Token: 0x0603C078 RID: 245880 RVA: 0x01110148 File Offset: 0x0110E348
 		protected override void OnTick(float delta)
 		{
 			this.SumVelocity.Reset();
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045E9C RID: 286364 RVA: 0x01166370 File Offset: 0x01164570
+		// Token: 0x0603C079 RID: 245881 RVA: 0x01110220 File Offset: 0x0110E420
 		public void TestStartWindField()
 		{
 			MotorcycleWindFieldComponent.WindFieldParams windFieldParams = new MotorcycleWindFieldComponent.WindFieldParams();
@@ -94,13 +94,13 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.StartWindFieldInternal(0, windFieldParams);
 		}
 
-		// Token: 0x06045E9D RID: 286365 RVA: 0x011663B0 File Offset: 0x011645B0
+		// Token: 0x0603C07A RID: 245882 RVA: 0x01110260 File Offset: 0x0110E460
 		public void TestEndWindField()
 		{
 			this.EndWindFieldInternal(0);
 		}
 
-		// Token: 0x06045E9E RID: 286366 RVA: 0x011663BC File Offset: 0x011645BC
+		// Token: 0x0603C07B RID: 245883 RVA: 0x0111026C File Offset: 0x0110E46C
 		public unsafe void StartWindField(int id, FTransformDouble baseTrans, IMotorSoarInWindFieldEnterWindField windFieldConfig)
 		{
 			if (this.WindFields.ContainsKey(id))
@@ -123,13 +123,13 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.StartWindFieldInternal(id, windFieldParams);
 		}
 
-		// Token: 0x06045E9F RID: 286367 RVA: 0x0116645E File Offset: 0x0116465E
+		// Token: 0x0603C07C RID: 245884 RVA: 0x0111030E File Offset: 0x0110E50E
 		public void EndWindField(int id)
 		{
 			this.EndWindFieldInternal(id);
 		}
 
-		// Token: 0x06045EA0 RID: 286368 RVA: 0x01166468 File Offset: 0x01164668
+		// Token: 0x0603C07D RID: 245885 RVA: 0x01110318 File Offset: 0x0110E518
 		protected void StartWindFieldInternal(int id, MotorcycleWindFieldComponent.WindFieldParams windFieldParams)
 		{
 			if (this.WindFields.Count == 0 && this.DisableHandle != null)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.WindFields.Add(id, windFieldParams);
 		}
 
-		// Token: 0x06045EA1 RID: 286369 RVA: 0x011664BA File Offset: 0x011646BA
+		// Token: 0x0603C07E RID: 245886 RVA: 0x0111036A File Offset: 0x0110E56A
 		protected void EndWindFieldInternal(int id)
 		{
 			this.WindFields.Remove(id);
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045EA2 RID: 286370 RVA: 0x011664FC File Offset: 0x011646FC
+		// Token: 0x0603C07F RID: 245887 RVA: 0x011103AC File Offset: 0x0110E5AC
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -158,53 +158,74 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				return false;
 			}
 			MotorcycleWindFieldComponent motorcycleWindFieldComponent = (MotorcycleWindFieldComponent)componentTemplate;
-			if (base.CanResetComponentProperty("DisableHandle"))
+			this.DisableHandle = motorcycleWindFieldComponent.DisableHandle;
+			this.DisableHandleSoar = motorcycleWindFieldComponent.DisableHandleSoar;
+			if (motorcycleWindFieldComponent.ActorComp == null)
 			{
-				this.DisableHandle = motorcycleWindFieldComponent.DisableHandle;
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("DisableHandleSoar"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.DisableHandleSoar = motorcycleWindFieldComponent.DisableHandleSoar;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (motorcycleWindFieldComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			return (!base.CanResetComponentProperty("WindFields") || motorcycleWindFieldComponent.WindFields == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, MotorcycleWindFieldComponent.WindFieldParams>>(this.WindFields), "WindFields")) && (!base.CanResetComponentProperty("SumVelocity") || motorcycleWindFieldComponent.SumVelocity == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.SumVelocity), "SumVelocity"));
+			return (motorcycleWindFieldComponent.WindFields == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.WindFields), "WindFields")) && (motorcycleWindFieldComponent.SumVelocity == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.SumVelocity), "SumVelocity"));
 		}
 
-		// Token: 0x040248EC RID: 149740
+		// Token: 0x1700713E RID: 28990
+		// (get) Token: 0x0603C080 RID: 245888 RVA: 0x01110453 File Offset: 0x0110E653
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700713F RID: 28991
+		// (get) Token: 0x0603C081 RID: 245889 RVA: 0x01110456 File Offset: 0x0110E656
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007140 RID: 28992
+		// (get) Token: 0x0603C082 RID: 245890 RVA: 0x01110459 File Offset: 0x0110E659
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FBA2 RID: 129954
 		private int? DisableHandle;
 
-		// Token: 0x040248ED RID: 149741
+		// Token: 0x0401FBA3 RID: 129955
 		private int? DisableHandleSoar;
 
-		// Token: 0x040248EE RID: 149742
+		// Token: 0x0401FBA4 RID: 129956
 		[Nullable(2)]
 		private BaseActorComponent ActorComp;
 
-		// Token: 0x040248EF RID: 149743
+		// Token: 0x0401FBA5 RID: 129957
 		private readonly Dictionary<int, MotorcycleWindFieldComponent.WindFieldParams> WindFields = new Dictionary<int, MotorcycleWindFieldComponent.WindFieldParams>();
 
-		// Token: 0x040248F0 RID: 149744
+		// Token: 0x0401FBA6 RID: 129958
 		private readonly Vector SumVelocity = Vector.Create();
 
-		// Token: 0x040248F1 RID: 149745
+		// Token: 0x0401FBA7 RID: 129959
 		[StaticVariableRuleIgnore]
 		public static readonly Vector TmpVector = Vector.Create();
 
-		// Token: 0x0200CE1F RID: 52767
+		// Token: 0x0200BA10 RID: 47632
 		[Nullable(0)]
 		protected class WindFieldParams
 		{
-			// Token: 0x06051DD5 RID: 335317 RVA: 0x0163EDD4 File Offset: 0x0163CFD4
+			// Token: 0x0604863E RID: 296510 RVA: 0x016140F4 File Offset: 0x016122F4
 			public void Init(Vector inStart, Vector inDirect, float inLength, float inMaxSpeed, float inTolerance)
 			{
 				this.Direct.FromUeVector(inDirect);
@@ -215,7 +236,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				this.LastAddSpeed = 0f;
 			}
 
-			// Token: 0x06051DD6 RID: 335318 RVA: 0x0163EE40 File Offset: 0x0163D040
+			// Token: 0x0604863F RID: 296511 RVA: 0x01614160 File Offset: 0x01612360
 			[NullableContext(0)]
 			public void InitByConfig(OneOf<FTransform, FTransformDouble> baseTrans, [Nullable(1)] IMotorSoarInWindFieldEnterWindField windFieldConfig)
 			{
@@ -259,7 +280,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				}
 			}
 
-			// Token: 0x06051DD7 RID: 335319 RVA: 0x0163F00C File Offset: 0x0163D20C
+			// Token: 0x06048640 RID: 296512 RVA: 0x0161432C File Offset: 0x0161252C
 			public void GetVelocityInWindField(Vector location, Vector outVelocity)
 			{
 				double num = (location.DotProduct(this.Direct) - (double)this.StartPos) / (double)this.Length;
@@ -277,7 +298,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				this.Direct.Multiply((double)this.LastAddSpeed, outVelocity);
 			}
 
-			// Token: 0x06051DD8 RID: 335320 RVA: 0x0163F0BC File Offset: 0x0163D2BC
+			// Token: 0x06048641 RID: 296513 RVA: 0x016143DC File Offset: 0x016125DC
 			public override string ToString()
 			{
 				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(55, 5);
@@ -294,38 +315,38 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 				return defaultInterpolatedStringHandler.ToStringAndClear();
 			}
 
-			// Token: 0x0403E150 RID: 254288
+			// Token: 0x0403957B RID: 234875
 			[StaticVariableRuleIgnore]
 			private static Transform tmpTrans = Transform.Create();
 
-			// Token: 0x0403E151 RID: 254289
+			// Token: 0x0403957C RID: 234876
 			[StaticVariableRuleIgnore]
 			private static Vector tmpVector = Vector.Create();
 
-			// Token: 0x0403E152 RID: 254290
+			// Token: 0x0403957D RID: 234877
 			[StaticVariableRuleIgnore]
 			private static Vector tmpVector2 = Vector.Create();
 
-			// Token: 0x0403E153 RID: 254291
+			// Token: 0x0403957E RID: 234878
 			private readonly Vector Direct = Vector.Create();
 
-			// Token: 0x0403E154 RID: 254292
+			// Token: 0x0403957F RID: 234879
 			private float StartPos;
 
-			// Token: 0x0403E155 RID: 254293
+			// Token: 0x04039580 RID: 234880
 			private float Length = 100f;
 
-			// Token: 0x0403E156 RID: 254294
+			// Token: 0x04039581 RID: 234881
 			private float MaxSpeed = 100f;
 
-			// Token: 0x0403E157 RID: 254295
+			// Token: 0x04039582 RID: 234882
 			private float Tolerance = 10f;
 
-			// Token: 0x0403E158 RID: 254296
+			// Token: 0x04039583 RID: 234883
 			[Nullable(2)]
 			private UCurveFloat SpeedCurve;
 
-			// Token: 0x0403E159 RID: 254297
+			// Token: 0x04039584 RID: 234884
 			private float LastAddSpeed;
 		}
 	}

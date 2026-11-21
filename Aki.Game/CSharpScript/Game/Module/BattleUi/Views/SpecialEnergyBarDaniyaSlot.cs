@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DD3 RID: 24019
+	// Token: 0x02004DB7 RID: 19895
 	public class SpecialEnergyBarDaniyaSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D0AC RID: 250028 RVA: 0x00EAEA66 File Offset: 0x00EACC66
+		// Token: 0x06032023 RID: 204835 RVA: 0x00DFF95A File Offset: 0x00DFDB5A
 		protected override bool GetKeyEnable()
 		{
 			return this.IsKeyEnable;
 		}
 
-		// Token: 0x0603D0AD RID: 250029 RVA: 0x00EAEA6E File Offset: 0x00EACC6E
+		// Token: 0x06032024 RID: 204836 RVA: 0x00DFF962 File Offset: 0x00DFDB62
 		public void RefreshSlotKeyEnable(bool enable, bool bForce = false)
 		{
 			if (enable != this.IsKeyEnable || bForce)
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D0AE RID: 250030 RVA: 0x00EAEA9C File Offset: 0x00EACC9C
+		// Token: 0x06032025 RID: 204837 RVA: 0x00DFF990 File Offset: 0x00DFDB90
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -54,10 +54,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(keyEnable, isStart);
 		}
 
-		// Token: 0x0401FCD7 RID: 130263
+		// Token: 0x0401A794 RID: 108436
 		public bool StateA;
 
-		// Token: 0x0401FCD8 RID: 130264
+		// Token: 0x0401A795 RID: 108437
 		private bool IsKeyEnable;
 	}
 }

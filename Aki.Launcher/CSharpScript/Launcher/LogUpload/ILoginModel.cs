@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.LogUpload
 {
-	// Token: 0x020001C5 RID: 453
+	// Token: 0x020001C9 RID: 457
 	public interface ILoginModel
 	{
-		// Token: 0x1700012E RID: 302
-		// (get) Token: 0x06000C1C RID: 3100
-		// (set) Token: 0x06000C1D RID: 3101
+		// Token: 0x17000134 RID: 308
+		// (get) Token: 0x06000C53 RID: 3155
+		// (set) Token: 0x06000C54 RID: 3156
 		[Nullable(new byte[]
 		{
 			1,

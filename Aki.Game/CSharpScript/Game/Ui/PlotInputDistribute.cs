@@ -3,10 +3,10 @@ using CSharpScript.Game.Module.Plot;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200468B RID: 18059
+	// Token: 0x020035BC RID: 13756
 	public class PlotInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E9A0 RID: 190880 RVA: 0x00ACA5D8 File Offset: 0x00AC87D8
+		// Token: 0x060230EA RID: 143594 RVA: 0x009F830C File Offset: 0x009F650C
 		public override bool OnRefresh()
 		{
 			PlotModel instance = PlotModel.Instance;

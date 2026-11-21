@@ -4,20 +4,20 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.BinTest
 {
-	// Token: 0x02006F40 RID: 28480
+	// Token: 0x020060C1 RID: 24769
 	public class Bin
 	{
-		// Token: 0x0402422A RID: 148010
+		// Token: 0x0401F4DF RID: 128223
 		[Nullable(1)]
 		public List<Edge> EdgeSet = new List<Edge>();
 
-		// Token: 0x0402422B RID: 148011
+		// Token: 0x0401F4E0 RID: 128224
 		public double MinX;
 
-		// Token: 0x0402422C RID: 148012
+		// Token: 0x0401F4E1 RID: 128225
 		public double MaxX;
 
-		// Token: 0x0402422D RID: 148013
+		// Token: 0x0401F4E2 RID: 128226
 		public int Count;
 	}
 }

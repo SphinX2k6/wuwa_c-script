@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006B8 RID: 1720
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000759 RID: 1881
 	public class ISearchlightRotate : IProceduralVisualBase
 	{
-		// Token: 0x060024EE RID: 9454 RVA: 0x00063BC8 File Offset: 0x00061DC8
+		// Token: 0x0600280E RID: 10254 RVA: 0x0006AC38 File Offset: 0x00068E38
 		private ISearchlightRotate_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060024EF RID: 9455 RVA: 0x00063C00 File Offset: 0x00061E00
+		// Token: 0x0600280F RID: 10255 RVA: 0x0006AC70 File Offset: 0x00068E70
 		public static ISearchlightRotate Create([Nullable(2)] ISearchlightRotate instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060024F0 RID: 9456 RVA: 0x00063C13 File Offset: 0x00061E13
+		// Token: 0x06002810 RID: 10256 RVA: 0x0006AC83 File Offset: 0x00068E83
 		public static ISearchlightRotate CreateFromSetValue([Nullable(2)] ISearchlightRotate_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060024F1 RID: 9457 RVA: 0x00063C28 File Offset: 0x00061E28
+		// Token: 0x06002811 RID: 10257 RVA: 0x0006AC98 File Offset: 0x00068E98
 		public new ISearchlightRotate_SetValue ToSetValue()
 		{
 			return new ISearchlightRotate_SetValue
@@ -66,9 +64,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009C2 RID: 2498
-		// (get) Token: 0x060024F2 RID: 9458 RVA: 0x00063C82 File Offset: 0x00061E82
-		// (set) Token: 0x060024F3 RID: 9459 RVA: 0x00063CAD File Offset: 0x00061EAD
+		// Token: 0x17000A80 RID: 2688
+		// (get) Token: 0x06002812 RID: 10258 RVA: 0x0006ACF2 File Offset: 0x00068EF2
+		// (set) Token: 0x06002813 RID: 10259 RVA: 0x0006AD1D File Offset: 0x00068F1D
 		public override EProceduralVisualType Type
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009C3 RID: 2499
-		// (get) Token: 0x060024F4 RID: 9460 RVA: 0x00063CBC File Offset: 0x00061EBC
-		// (set) Token: 0x060024F5 RID: 9461 RVA: 0x00063D1D File Offset: 0x00061F1D
+		// Token: 0x17000A81 RID: 2689
+		// (get) Token: 0x06002814 RID: 10260 RVA: 0x0006AD2C File Offset: 0x00068F2C
+		// (set) Token: 0x06002815 RID: 10261 RVA: 0x0006AD8D File Offset: 0x00068F8D
 		[Nullable(2)]
 		public override IConditionGroup Condition
 		{
@@ -122,9 +120,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009C4 RID: 2500
-		// (get) Token: 0x060024F6 RID: 9462 RVA: 0x00063D32 File Offset: 0x00061F32
-		// (set) Token: 0x060024F7 RID: 9463 RVA: 0x00063D59 File Offset: 0x00061F59
+		// Token: 0x17000A82 RID: 2690
+		// (get) Token: 0x06002816 RID: 10262 RVA: 0x0006ADA2 File Offset: 0x00068FA2
+		// (set) Token: 0x06002817 RID: 10263 RVA: 0x0006ADC9 File Offset: 0x00068FC9
 		[Nullable(2)]
 		public virtual string RotateNode
 		{
@@ -149,9 +147,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009C5 RID: 2501
-		// (get) Token: 0x060024F8 RID: 9464 RVA: 0x00063D68 File Offset: 0x00061F68
-		// (set) Token: 0x060024F9 RID: 9465 RVA: 0x00063DA2 File Offset: 0x00061FA2
+		// Token: 0x17000A83 RID: 2691
+		// (get) Token: 0x06002818 RID: 10264 RVA: 0x0006ADD8 File Offset: 0x00068FD8
+		// (set) Token: 0x06002819 RID: 10265 RVA: 0x0006AE12 File Offset: 0x00069012
 		public virtual float? MaxAngleSpeed
 		{
 			get
@@ -173,9 +171,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009C6 RID: 2502
-		// (get) Token: 0x060024FA RID: 9466 RVA: 0x00063DB0 File Offset: 0x00061FB0
-		// (set) Token: 0x060024FB RID: 9467 RVA: 0x00063DDB File Offset: 0x00061FDB
+		// Token: 0x17000A84 RID: 2692
+		// (get) Token: 0x0600281A RID: 10266 RVA: 0x0006AE20 File Offset: 0x00069020
+		// (set) Token: 0x0600281B RID: 10267 RVA: 0x0006AE4B File Offset: 0x0006904B
 		public virtual ESearchlightRotateAxis Axis
 		{
 			get
@@ -196,9 +194,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009C7 RID: 2503
-		// (get) Token: 0x060024FC RID: 9468 RVA: 0x00063DEC File Offset: 0x00061FEC
-		// (set) Token: 0x060024FD RID: 9469 RVA: 0x00063E7F File Offset: 0x0006207F
+		// Token: 0x17000A85 RID: 2693
+		// (get) Token: 0x0600281C RID: 10268 RVA: 0x0006AE5C File Offset: 0x0006905C
+		// (set) Token: 0x0600281D RID: 10269 RVA: 0x0006AEEF File Offset: 0x000690EF
 		public virtual List<ISnapAngleConfig> SnapConfigs
 		{
 			get
@@ -234,24 +232,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001948 RID: 6472
+		// Token: 0x04001B47 RID: 6983
 		[Nullable(2)]
 		protected new ISearchlightRotate FbInstance;
 
-		// Token: 0x04001949 RID: 6473
+		// Token: 0x04001B48 RID: 6984
 		[Nullable(2)]
 		protected new ISearchlightRotate_SetValue PocoInterface;
 
-		// Token: 0x0400194A RID: 6474
+		// Token: 0x04001B49 RID: 6985
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x0400194B RID: 6475
+		// Token: 0x04001B4A RID: 6986
 		private bool _ConditionInited;
 
-		// Token: 0x0400194C RID: 6476
+		// Token: 0x04001B4B RID: 6987
 		private List<ISnapAngleConfig> _SnapConfigsCache;
 
-		// Token: 0x0400194D RID: 6477
+		// Token: 0x04001B4C RID: 6988
 		private bool _SnapConfigsInited;
 	}
 }

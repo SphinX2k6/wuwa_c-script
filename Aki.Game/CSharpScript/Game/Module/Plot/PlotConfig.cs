@@ -7,12 +7,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FFB RID: 20475
+	// Token: 0x02003FC5 RID: 16325
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotConfig
 	{
-		// Token: 0x060345FE RID: 214526 RVA: 0x00C4EB28 File Offset: 0x00C4CD28
+		// Token: 0x06029489 RID: 169097 RVA: 0x00B98B88 File Offset: 0x00B96D88
 		public void SetMode(SetPlotMode plotMode, bool isInInteraction = false)
 		{
 			this.SkipHiddenBlackScreenAtEnd = plotMode.DisableAutoFadeOut.GetValueOrDefault();
@@ -79,13 +79,14 @@ namespace CSharpScript.Game.Module.Plot
 			}
 			this.OverrideAudioLevel = plotMode.OverrideAudioLevel;
 			this.PlotModeUiStyle = plotMode.UiStyle;
+			this.AudioConfig = plotMode.AudioConfig;
 			if (string.IsNullOrEmpty(plotMode.Mode) && this.PlotLevel.GetValueOrDefault() == EPlotLevel.ControlEntity && plotMode.EntityControlConfig != null)
 			{
 				this.ApplyEntityControlOptions(plotMode);
 			}
 		}
 
-		// Token: 0x060345FF RID: 214527 RVA: 0x00C4ECD4 File Offset: 0x00C4CED4
+		// Token: 0x0602948A RID: 169098 RVA: 0x00B98D40 File Offset: 0x00B96F40
 		public void ResetForPlotLifecycle()
 		{
 			this.DisableInput = false;
@@ -107,9 +108,10 @@ namespace CSharpScript.Game.Module.Plot
 			this.PlayerSkinId = -1;
 			this.OverrideAudioLevel = null;
 			this.PlotModeUiStyle = null;
+			this.AudioConfig = null;
 		}
 
-		// Token: 0x06034600 RID: 214528 RVA: 0x00C4ED84 File Offset: 0x00C4CF84
+		// Token: 0x0602948B RID: 169099 RVA: 0x00B98DF8 File Offset: 0x00B96FF8
 		private void HandleLevelA(SetPlotMode plotMode)
 		{
 			this.CameraMode = new EPlotCameraMode?(EPlotCameraMode.Plot);
@@ -127,7 +129,7 @@ namespace CSharpScript.Game.Module.Plot
 			PlotController.Instance.EnableViewControl(false);
 		}
 
-		// Token: 0x06034601 RID: 214529 RVA: 0x00C4EE20 File Offset: 0x00C4D020
+		// Token: 0x0602948C RID: 169100 RVA: 0x00B98E94 File Offset: 0x00B97094
 		private void HandleLevelB(SetPlotMode plotMode)
 		{
 			this.CameraMode = new EPlotCameraMode?(EPlotCameraMode.Plot);
@@ -145,7 +147,7 @@ namespace CSharpScript.Game.Module.Plot
 			PlotController.Instance.EnableViewControl(false);
 		}
 
-		// Token: 0x06034602 RID: 214530 RVA: 0x00C4EEC0 File Offset: 0x00C4D0C0
+		// Token: 0x0602948D RID: 169101 RVA: 0x00B98F34 File Offset: 0x00B97134
 		private void HandleLevelC(SetPlotMode plotMode, bool isInInteraction = false)
 		{
 			if (plotMode.UseFlowCamera == null)
@@ -171,7 +173,7 @@ namespace CSharpScript.Game.Module.Plot
 			PlotController.Instance.HideSummonedEntity();
 		}
 
-		// Token: 0x06034603 RID: 214531 RVA: 0x00C4EFB4 File Offset: 0x00C4D1B4
+		// Token: 0x0602948E RID: 169102 RVA: 0x00B99028 File Offset: 0x00B97228
 		private void HandleLevelD(SetPlotMode plotMode)
 		{
 			this.CameraMode = new EPlotCameraMode?(EPlotCameraMode.Main);
@@ -188,7 +190,7 @@ namespace CSharpScript.Game.Module.Plot
 			PlotController.Instance.EnableViewControl(false);
 		}
 
-		// Token: 0x06034604 RID: 214532 RVA: 0x00C4F034 File Offset: 0x00C4D234
+		// Token: 0x0602948F RID: 169103 RVA: 0x00B990A8 File Offset: 0x00B972A8
 		private void HandleLevelE(SetPlotMode plotMode)
 		{
 			this.CameraMode = new EPlotCameraMode?(EPlotCameraMode.Main);
@@ -204,7 +206,7 @@ namespace CSharpScript.Game.Module.Plot
 			PlotController.Instance.EnableViewControl(false);
 		}
 
-		// Token: 0x06034605 RID: 214533 RVA: 0x00C4F0B0 File Offset: 0x00C4D2B0
+		// Token: 0x06029490 RID: 169104 RVA: 0x00B99124 File Offset: 0x00B97324
 		private void HandleLevelControlEntity(SetPlotMode plotMode)
 		{
 			this.ApplyEntityControlOptions(plotMode);
@@ -219,7 +221,7 @@ namespace CSharpScript.Game.Module.Plot
 			PlotController.Instance.EnableViewControl(false);
 		}
 
-		// Token: 0x06034606 RID: 214534 RVA: 0x00C4F10C File Offset: 0x00C4D30C
+		// Token: 0x06029491 RID: 169105 RVA: 0x00B99180 File Offset: 0x00B97380
 		private void ApplyEntityControlOptions(SetPlotMode plotMode)
 		{
 			EntityControlRuntimeOptions entityControlRuntimeOptions = new EntityControlRuntimeOptions();
@@ -235,7 +237,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.DisableInput = this.EntityControlOptions.HandlePlayer;
 		}
 
-		// Token: 0x06034607 RID: 214535 RVA: 0x00C4F1C8 File Offset: 0x00C4D3C8
+		// Token: 0x06029492 RID: 169106 RVA: 0x00B9923C File Offset: 0x00B9743C
 		public EUiViewName? GetPlotViewNameByMode(SetPlotMode plotMode)
 		{
 			if (plotMode.Mp4Mode.GetValueOrDefault())
@@ -281,25 +283,25 @@ namespace CSharpScript.Game.Module.Plot
 			return null;
 		}
 
-		// Token: 0x06034608 RID: 214536 RVA: 0x00C4F2E6 File Offset: 0x00C4D4E6
+		// Token: 0x06029493 RID: 169107 RVA: 0x00B9935A File Offset: 0x00B9755A
 		private void SetPlotViewName(SetPlotMode plotMode)
 		{
 			this.PlotViewName = this.GetPlotViewNameByMode(plotMode);
 		}
 
-		// Token: 0x0401BDFB RID: 114171
+		// Token: 0x040167D7 RID: 92119
 		public const string AUDIO_STATE_PLOT_LEVEL_GROUP = "plot_level";
 
-		// Token: 0x0401BDFC RID: 114172
+		// Token: 0x040167D8 RID: 92120
 		public const string AUDIO_STATE_NOT_PLOT = "none";
 
-		// Token: 0x0401BDFD RID: 114173
+		// Token: 0x040167D9 RID: 92121
 		public const string PLOT_END_AUDIO_EVENT = "plot_controller_end_plot";
 
-		// Token: 0x0401BDFE RID: 114174
+		// Token: 0x040167DA RID: 92122
 		private const bool CAN_SKIP = true;
 
-		// Token: 0x0401BDFF RID: 114175
+		// Token: 0x040167DB RID: 92123
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<EPlotLevel, string> AudioStatePlotLevel = new Dictionary<EPlotLevel, string>
 		{
@@ -329,7 +331,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		};
 
-		// Token: 0x0401BE00 RID: 114176
+		// Token: 0x040167DC RID: 92124
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<EOverrideAudioLevel, string> AudioStateOverrideAudioLevel = new Dictionary<EOverrideAudioLevel, string>
 		{
@@ -351,7 +353,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		};
 
-		// Token: 0x0401BE01 RID: 114177
+		// Token: 0x040167DD RID: 92125
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<string, int> SkinMap = new Dictionary<string, int>
 		{
@@ -365,75 +367,79 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		};
 
-		// Token: 0x0401BE02 RID: 114178
+		// Token: 0x040167DE RID: 92126
 		public bool DisableInput;
 
-		// Token: 0x0401BE03 RID: 114179
+		// Token: 0x040167DF RID: 92127
 		public bool CanSkip;
 
-		// Token: 0x0401BE04 RID: 114180
+		// Token: 0x040167E0 RID: 92128
 		public bool CanSkipDebug;
 
-		// Token: 0x0401BE05 RID: 114181
+		// Token: 0x040167E1 RID: 92129
 		public bool CanInteractive;
 
-		// Token: 0x0401BE06 RID: 114182
+		// Token: 0x040167E2 RID: 92130
 		public bool CanPause;
 
-		// Token: 0x0401BE07 RID: 114183
+		// Token: 0x040167E3 RID: 92131
 		public EPlotCameraMode? CameraMode;
 
-		// Token: 0x0401BE08 RID: 114184
+		// Token: 0x040167E4 RID: 92132
 		[Nullable(2)]
 		public EntityControlRuntimeOptions EntityControlOptions;
 
-		// Token: 0x0401BE09 RID: 114185
+		// Token: 0x040167E5 RID: 92133
 		public EAutoPlayState AutoPlayState;
 
-		// Token: 0x0401BE0A RID: 114186
+		// Token: 0x040167E6 RID: 92134
 		public EAutoPlayState AutoPlayStateCache;
 
-		// Token: 0x0401BE0B RID: 114187
+		// Token: 0x040167E7 RID: 92135
 		public EPlotLevel? PlotLevel;
 
-		// Token: 0x0401BE0C RID: 114188
+		// Token: 0x040167E8 RID: 92136
 		public EPlotLevel? SubtitleLevel;
 
-		// Token: 0x0401BE0D RID: 114189
+		// Token: 0x040167E9 RID: 92137
 		public EUiViewName? PlotViewName;
 
-		// Token: 0x0401BE0E RID: 114190
+		// Token: 0x040167EA RID: 92138
 		public bool ShouldSwitchMainRole;
 
-		// Token: 0x0401BE0F RID: 114191
+		// Token: 0x040167EB RID: 92139
 		public bool PauseTime;
 
-		// Token: 0x0401BE10 RID: 114192
+		// Token: 0x040167EC RID: 92140
 		public bool SkipTalkWhenFighting;
 
-		// Token: 0x0401BE11 RID: 114193
+		// Token: 0x040167ED RID: 92141
 		public bool SkipHiddenBlackScreenAtEnd;
 
-		// Token: 0x0401BE12 RID: 114194
+		// Token: 0x040167EE RID: 92142
 		public bool IsGmPlayPlotOnce;
 
-		// Token: 0x0401BE13 RID: 114195
+		// Token: 0x040167EF RID: 92143
 		public bool IsPreStreaming;
 
-		// Token: 0x0401BE14 RID: 114196
+		// Token: 0x040167F0 RID: 92144
 		public bool IsSkipConfirmBoxShow = true;
 
-		// Token: 0x0401BE15 RID: 114197
+		// Token: 0x040167F1 RID: 92145
 		public int? ActivityGamePlayPlotConfig;
 
-		// Token: 0x0401BE16 RID: 114198
+		// Token: 0x040167F2 RID: 92146
 		public int PlayerSkinId = -1;
 
-		// Token: 0x0401BE17 RID: 114199
+		// Token: 0x040167F3 RID: 92147
 		public EOverrideAudioLevel? OverrideAudioLevel;
 
-		// Token: 0x0401BE18 RID: 114200
+		// Token: 0x040167F4 RID: 92148
 		[Nullable(2)]
 		public IPlotModeUiStyleLevelD PlotModeUiStyle;
+
+		// Token: 0x040167F5 RID: 92149
+		[Nullable(2)]
+		public IPlotAudioConfig AudioConfig;
 	}
 }

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200718C RID: 29068
+	// Token: 0x02006240 RID: 25152
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemQuantumDoorComponent : EntityComponent
 	{
-		// Token: 0x06047181 RID: 291201 RVA: 0x0120923C File Offset: 0x0120743C
+		// Token: 0x0603CA39 RID: 248377 RVA: 0x011631E0 File Offset: 0x011613E0
 		protected override bool OnStart()
 		{
 			this.RangeComp = base.Entity.GetComponent<RangeComponent>();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047182 RID: 291202 RVA: 0x012092F8 File Offset: 0x012074F8
+		// Token: 0x0603CA3A RID: 248378 RVA: 0x0116329C File Offset: 0x0116149C
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget<bool, AActor>(base.Entity, EEventName.OnActorInOutRangeLocal, new Action<bool, AActor>(this.OnActorOverlapCallback)))
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047183 RID: 291203 RVA: 0x012093C4 File Offset: 0x012075C4
+		// Token: 0x0603CA3B RID: 248379 RVA: 0x01163368 File Offset: 0x01161568
 		[NullableContext(1)]
 		private void OnActorOverlapCallback(bool isEnter, AActor actor)
 		{
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047184 RID: 291204 RVA: 0x012094D4 File Offset: 0x012076D4
+		// Token: 0x0603CA3C RID: 248380 RVA: 0x01163478 File Offset: 0x01161678
 		private void OnActorHitCallback(AActor selfActor, AActor otherActor, FVector hitPos, [Nullable(1)] FHitResult hitResult)
 		{
 			if (otherActor == Global.BaseCharacter.CharacterActorComponent.Owner)
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047185 RID: 291205 RVA: 0x012095AC File Offset: 0x012077AC
+		// Token: 0x0603CA3D RID: 248381 RVA: 0x01163550 File Offset: 0x01161750
 		private void GetStaticMeshComponent()
 		{
 			if (this.CollisionActor == null || !this.CollisionActor.IsValid())
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			Log.Instance.Error(ELogModule.SceneItem, ELogAuthor.FJH, "[QuantumDoorComp] 静态网格体组件缺失", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06047186 RID: 291206 RVA: 0x01209654 File Offset: 0x01207854
+		// Token: 0x0603CA3E RID: 248382 RVA: 0x011635F8 File Offset: 0x011617F8
 		private void OnPlayerFollowerEnableChange(bool isEnable)
 		{
 			if (this.QuantumDoorStaticMeshComp == null)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.QuantumDoorStaticMeshComp.SetScalarParameterValueOnMaterials(this.PassableParamName ?? FNameUtil.NONE, (float)((flag2 && isEnable) ? 1 : 0));
 		}
 
-		// Token: 0x06047187 RID: 291207 RVA: 0x01209700 File Offset: 0x01207900
+		// Token: 0x0603CA3F RID: 248383 RVA: 0x011636A4 File Offset: 0x011618A4
 		private bool CheckFollowShooterActive()
 		{
 			IPlayerFollowerFollowShooterHandler playerFollowerFollowShooterHandler = FollowUtils.GetPlayerFollowHandler(CreatureModel.Instance.GetPlayerId(), EPlayerFollowerHandlerType.FollowShooter) as IPlayerFollowerFollowShooterHandler;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x06047188 RID: 291208 RVA: 0x01209760 File Offset: 0x01207960
+		// Token: 0x0603CA40 RID: 248384 RVA: 0x01163704 File Offset: 0x01161904
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -209,115 +209,108 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemQuantumDoorComponent sceneItemQuantumDoorComponent = (SceneItemQuantumDoorComponent)componentTemplate;
-			if (base.CanResetComponentProperty("RangeComp"))
+			if (sceneItemQuantumDoorComponent.RangeComp == null)
 			{
-				if (sceneItemQuantumDoorComponent.RangeComp == null)
-				{
-					this.RangeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RangeComponent>(this.RangeComp), "RangeComp"))
-				{
-					return false;
-				}
+				this.RangeComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComp), "RangeComp"))
 			{
-				if (sceneItemQuantumDoorComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CollisionActor"))
+			if (sceneItemQuantumDoorComponent.ActorComp == null)
 			{
-				if (sceneItemQuantumDoorComponent.CollisionActor == null)
-				{
-					this.CollisionActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.CollisionActor), "CollisionActor"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("QuantumDoorStaticMeshComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (sceneItemQuantumDoorComponent.QuantumDoorStaticMeshComp == null)
-				{
-					this.QuantumDoorStaticMeshComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UStaticMeshComponent>(this.QuantumDoorStaticMeshComp), "QuantumDoorStaticMeshComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ProgressTimer"))
+			if (sceneItemQuantumDoorComponent.CollisionActor == null)
 			{
-				if (sceneItemQuantumDoorComponent.ProgressTimer == null)
-				{
-					this.ProgressTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.ProgressTimer), "ProgressTimer"))
-				{
-					return false;
-				}
+				this.CollisionActor = null;
 			}
-			if (base.CanResetComponentProperty("Progress"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CollisionActor), "CollisionActor"))
 			{
-				this.Progress = sceneItemQuantumDoorComponent.Progress;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PassableParamName"))
+			if (sceneItemQuantumDoorComponent.QuantumDoorStaticMeshComp == null)
 			{
-				this.PassableParamName = sceneItemQuantumDoorComponent.PassableParamName;
+				this.QuantumDoorStaticMeshComp = null;
 			}
-			if (base.CanResetComponentProperty("HitPositionParamName"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.QuantumDoorStaticMeshComp), "QuantumDoorStaticMeshComp"))
 			{
-				this.HitPositionParamName = sceneItemQuantumDoorComponent.HitPositionParamName;
+				return false;
 			}
-			if (base.CanResetComponentProperty("DiffusionProgressParamName"))
+			if (sceneItemQuantumDoorComponent.ProgressTimer == null)
 			{
-				this.DiffusionProgressParamName = sceneItemQuantumDoorComponent.DiffusionProgressParamName;
+				this.ProgressTimer = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ProgressTimer), "ProgressTimer"))
+			{
+				return false;
+			}
+			this.Progress = sceneItemQuantumDoorComponent.Progress;
+			this.PassableParamName = sceneItemQuantumDoorComponent.PassableParamName;
+			this.HitPositionParamName = sceneItemQuantumDoorComponent.HitPositionParamName;
+			this.DiffusionProgressParamName = sceneItemQuantumDoorComponent.DiffusionProgressParamName;
 			return true;
 		}
 
-		// Token: 0x040255EC RID: 153068
+		// Token: 0x170072B1 RID: 29361
+		// (get) Token: 0x0603CA41 RID: 248385 RVA: 0x0116382B File Offset: 0x01161A2B
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072B2 RID: 29362
+		// (get) Token: 0x0603CA42 RID: 248386 RVA: 0x0116382E File Offset: 0x01161A2E
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020253 RID: 131667
 		private const float HIT_CD = 1600f;
 
-		// Token: 0x040255ED RID: 153069
+		// Token: 0x04020254 RID: 131668
 		private const int FOLLOW_SHOOTER_ID = 24000039;
 
-		// Token: 0x040255EE RID: 153070
+		// Token: 0x04020255 RID: 131669
 		[Nullable(1)]
 		private const string DOOR_HIT_AK_EVENT_NAME = "play_interact_space_station_role_dead";
 
-		// Token: 0x040255EF RID: 153071
+		// Token: 0x04020256 RID: 131670
 		private RangeComponent RangeComp;
 
-		// Token: 0x040255F0 RID: 153072
+		// Token: 0x04020257 RID: 131671
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x040255F1 RID: 153073
+		// Token: 0x04020258 RID: 131672
 		private AActor CollisionActor;
 
-		// Token: 0x040255F2 RID: 153074
+		// Token: 0x04020259 RID: 131673
 		private UStaticMeshComponent QuantumDoorStaticMeshComp;
 
-		// Token: 0x040255F3 RID: 153075
+		// Token: 0x0402025A RID: 131674
 		private TimerHandle ProgressTimer;
 
-		// Token: 0x040255F4 RID: 153076
+		// Token: 0x0402025B RID: 131675
 		private float Progress;
 
-		// Token: 0x040255F5 RID: 153077
+		// Token: 0x0402025C RID: 131676
 		private FName? PassableParamName;
 
-		// Token: 0x040255F6 RID: 153078
+		// Token: 0x0402025D RID: 131677
 		private FName? HitPositionParamName;
 
-		// Token: 0x040255F7 RID: 153079
+		// Token: 0x0402025E RID: 131678
 		private FName? DiffusionProgressParamName;
 	}
 }

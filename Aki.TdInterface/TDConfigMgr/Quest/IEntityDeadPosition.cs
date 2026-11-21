@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F5B RID: 3931
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001085 RID: 4229
 	public class IEntityDeadPosition
 	{
-		// Token: 0x0600575C RID: 22364 RVA: 0x000D5A98 File Offset: 0x000D3C98
+		// Token: 0x06005D30 RID: 23856 RVA: 0x000E2504 File Offset: 0x000E0704
 		private IEntityDeadPosition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600575D RID: 22365 RVA: 0x000D5AD0 File Offset: 0x000D3CD0
+		// Token: 0x06005D31 RID: 23857 RVA: 0x000E253C File Offset: 0x000E073C
 		public static IEntityDeadPosition Create([Nullable(2)] IEntityDeadPosition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600575E RID: 22366 RVA: 0x000D5AE3 File Offset: 0x000D3CE3
+		// Token: 0x06005D32 RID: 23858 RVA: 0x000E254F File Offset: 0x000E074F
 		public static IEntityDeadPosition CreateFromSetValue([Nullable(2)] IEntityDeadPosition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600575F RID: 22367 RVA: 0x000D5AF6 File Offset: 0x000D3CF6
+		// Token: 0x06005D33 RID: 23859 RVA: 0x000E2562 File Offset: 0x000E0762
 		public IEntityDeadPosition_SetValue ToSetValue()
 		{
 			return new IEntityDeadPosition_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D27 RID: 7463
-		// (get) Token: 0x06005760 RID: 22368 RVA: 0x000D5B21 File Offset: 0x000D3D21
-		// (set) Token: 0x06005761 RID: 22369 RVA: 0x000D5B4C File Offset: 0x000D3D4C
+		// Token: 0x17001ECD RID: 7885
+		// (get) Token: 0x06005D34 RID: 23860 RVA: 0x000E258D File Offset: 0x000E078D
+		// (set) Token: 0x06005D35 RID: 23861 RVA: 0x000E25B8 File Offset: 0x000E07B8
 		public virtual int EntityId
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D28 RID: 7464
-		// (get) Token: 0x06005762 RID: 22370 RVA: 0x000D5B5A File Offset: 0x000D3D5A
-		// (set) Token: 0x06005763 RID: 22371 RVA: 0x000D5B81 File Offset: 0x000D3D81
+		// Token: 0x17001ECE RID: 7886
+		// (get) Token: 0x06005D36 RID: 23862 RVA: 0x000E25C6 File Offset: 0x000E07C6
+		// (set) Token: 0x06005D37 RID: 23863 RVA: 0x000E25ED File Offset: 0x000E07ED
 		public virtual VarRef Var
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D29 RID: 7465
-		// (get) Token: 0x06005764 RID: 22372 RVA: 0x000D5B90 File Offset: 0x000D3D90
-		// (set) Token: 0x06005765 RID: 22373 RVA: 0x000D5BCA File Offset: 0x000D3DCA
+		// Token: 0x17001ECF RID: 7887
+		// (get) Token: 0x06005D38 RID: 23864 RVA: 0x000E25FC File Offset: 0x000E07FC
+		// (set) Token: 0x06005D39 RID: 23865 RVA: 0x000E2636 File Offset: 0x000E0836
 		public virtual bool? IsIgnoreRot
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040034DA RID: 13530
+		// Token: 0x0400380B RID: 14347
 		[Nullable(2)]
 		protected IEntityDeadPosition FbInstance;
 
-		// Token: 0x040034DB RID: 13531
+		// Token: 0x0400380C RID: 14348
 		[Nullable(2)]
 		protected IEntityDeadPosition_SetValue PocoInterface;
 	}

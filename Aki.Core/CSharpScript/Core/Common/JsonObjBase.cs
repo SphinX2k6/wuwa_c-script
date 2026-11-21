@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Core.Common
 {
-	// Token: 0x0200016B RID: 363
+	// Token: 0x02000170 RID: 368
 	public class JsonObjBase
 	{
 	}

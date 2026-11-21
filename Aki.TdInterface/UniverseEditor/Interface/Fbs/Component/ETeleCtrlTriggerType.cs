@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E29 RID: 20009
+	// Token: 0x02005338 RID: 21304
 	public enum ETeleCtrlTriggerType : byte
 	{
-		// Token: 0x0400DB79 RID: 56185
+		// Token: 0x0400E6EB RID: 59115
 		MechascoutJavelin,
-		// Token: 0x0400DB7A RID: 56186
+		// Token: 0x0400E6EC RID: 59116
 		MechascoutExplosiveBarrel
 	}
 }

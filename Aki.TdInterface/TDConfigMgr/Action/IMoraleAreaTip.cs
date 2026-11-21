@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C0C RID: 7180
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DFB RID: 7675
 	public class IMoraleAreaTip : ICommonTipType
 	{
-		// Token: 0x060099E3 RID: 39395 RVA: 0x00162194 File Offset: 0x00160394
+		// Token: 0x0600A313 RID: 41747 RVA: 0x001750E0 File Offset: 0x001732E0
 		private IMoraleAreaTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060099E4 RID: 39396 RVA: 0x001621CC File Offset: 0x001603CC
+		// Token: 0x0600A314 RID: 41748 RVA: 0x00175118 File Offset: 0x00173318
 		public static IMoraleAreaTip Create([Nullable(2)] IMoraleAreaTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060099E5 RID: 39397 RVA: 0x001621DF File Offset: 0x001603DF
+		// Token: 0x0600A315 RID: 41749 RVA: 0x0017512B File Offset: 0x0017332B
 		public static IMoraleAreaTip CreateFromSetValue([Nullable(2)] IMoraleAreaTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060099E6 RID: 39398 RVA: 0x001621F4 File Offset: 0x001603F4
+		// Token: 0x0600A316 RID: 41750 RVA: 0x00175140 File Offset: 0x00173340
 		public new IMoraleAreaTip_SetValue ToSetValue()
 		{
 			return new IMoraleAreaTip_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003036 RID: 12342
-		// (get) Token: 0x060099E7 RID: 39399 RVA: 0x0016225A File Offset: 0x0016045A
-		// (set) Token: 0x060099E8 RID: 39400 RVA: 0x00162285 File Offset: 0x00160485
+		// Token: 0x1700329F RID: 12959
+		// (get) Token: 0x0600A317 RID: 41751 RVA: 0x001751A6 File Offset: 0x001733A6
+		// (set) Token: 0x0600A318 RID: 41752 RVA: 0x001751D1 File Offset: 0x001733D1
 		public override ECommonTipType Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003037 RID: 12343
-		// (get) Token: 0x060099E9 RID: 39401 RVA: 0x00162293 File Offset: 0x00160493
-		// (set) Token: 0x060099EA RID: 39402 RVA: 0x001622BE File Offset: 0x001604BE
+		// Token: 0x170032A0 RID: 12960
+		// (get) Token: 0x0600A319 RID: 41753 RVA: 0x001751DF File Offset: 0x001733DF
+		// (set) Token: 0x0600A31A RID: 41754 RVA: 0x0017520A File Offset: 0x0017340A
 		public virtual string TidAreaNameText
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003038 RID: 12344
-		// (get) Token: 0x060099EB RID: 39403 RVA: 0x001622CC File Offset: 0x001604CC
-		// (set) Token: 0x060099EC RID: 39404 RVA: 0x001622F7 File Offset: 0x001604F7
+		// Token: 0x170032A1 RID: 12961
+		// (get) Token: 0x0600A31B RID: 41755 RVA: 0x00175218 File Offset: 0x00173418
+		// (set) Token: 0x0600A31C RID: 41756 RVA: 0x00175243 File Offset: 0x00173443
 		public virtual string TidRecommendText
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003039 RID: 12345
-		// (get) Token: 0x060099ED RID: 39405 RVA: 0x00162305 File Offset: 0x00160505
-		// (set) Token: 0x060099EE RID: 39406 RVA: 0x00162330 File Offset: 0x00160530
+		// Token: 0x170032A2 RID: 12962
+		// (get) Token: 0x0600A31D RID: 41757 RVA: 0x00175251 File Offset: 0x00173451
+		// (set) Token: 0x0600A31E RID: 41758 RVA: 0x0017527C File Offset: 0x0017347C
 		public virtual EMoraleAreaType AreaType
 		{
 			get
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700303A RID: 12346
-		// (get) Token: 0x060099EF RID: 39407 RVA: 0x00162340 File Offset: 0x00160540
-		// (set) Token: 0x060099F0 RID: 39408 RVA: 0x0016237A File Offset: 0x0016057A
+		// Token: 0x170032A3 RID: 12963
+		// (get) Token: 0x0600A31F RID: 41759 RVA: 0x0017528C File Offset: 0x0017348C
+		// (set) Token: 0x0600A320 RID: 41760 RVA: 0x001752C6 File Offset: 0x001734C6
 		public virtual EMoraleUiType? UiType
 		{
 			get
@@ -181,9 +179,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700303B RID: 12347
-		// (get) Token: 0x060099F1 RID: 39409 RVA: 0x00162388 File Offset: 0x00160588
-		// (set) Token: 0x060099F2 RID: 39410 RVA: 0x0016239F File Offset: 0x0016059F
+		// Token: 0x170032A4 RID: 12964
+		// (get) Token: 0x0600A321 RID: 41761 RVA: 0x001752D4 File Offset: 0x001734D4
+		// (set) Token: 0x0600A322 RID: 41762 RVA: 0x001752EB File Offset: 0x001734EB
 		[Nullable(2)]
 		public virtual string EdTidAreaNameText
 		{
@@ -203,9 +201,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700303C RID: 12348
-		// (get) Token: 0x060099F3 RID: 39411 RVA: 0x001623AD File Offset: 0x001605AD
-		// (set) Token: 0x060099F4 RID: 39412 RVA: 0x001623C4 File Offset: 0x001605C4
+		// Token: 0x170032A5 RID: 12965
+		// (get) Token: 0x0600A323 RID: 41763 RVA: 0x001752F9 File Offset: 0x001734F9
+		// (set) Token: 0x0600A324 RID: 41764 RVA: 0x00175310 File Offset: 0x00173510
 		[Nullable(2)]
 		public virtual string EdTidRecommendText
 		{
@@ -225,11 +223,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005DA9 RID: 23977
+		// Token: 0x040062D0 RID: 25296
 		[Nullable(2)]
 		protected new IMoraleAreaTip FbInstance;
 
-		// Token: 0x04005DAA RID: 23978
+		// Token: 0x040062D1 RID: 25297
 		[Nullable(2)]
 		protected new IMoraleAreaTip_SetValue PocoInterface;
 	}

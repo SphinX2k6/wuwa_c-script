@@ -14,13 +14,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickTimeAction
 {
-	// Token: 0x02004F2D RID: 20269
+	// Token: 0x02003EF6 RID: 16118
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class QtaController : ControllerBase
 	{
-		// Token: 0x06033FEF RID: 212975 RVA: 0x00C30E54 File Offset: 0x00C2F054
+		// Token: 0x06028E5D RID: 167517 RVA: 0x00B7A5F4 File Offset: 0x00B787F4
 		protected override bool OnInit()
 		{
 			EventSystem.Instance.Add<int?>(EEventName.CommonQteStart, new Action<int?>(this.OnCommonQteStart));
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			return true;
 		}
 
-		// Token: 0x06033FF0 RID: 212976 RVA: 0x00C30E8F File Offset: 0x00C2F08F
+		// Token: 0x06028E5E RID: 167518 RVA: 0x00B7A62F File Offset: 0x00B7882F
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.CommonQteStart, new Action<int?>(this.OnCommonQteStart));
@@ -36,21 +36,21 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			return true;
 		}
 
-		// Token: 0x06033FF1 RID: 212977 RVA: 0x00C30ECA File Offset: 0x00C2F0CA
+		// Token: 0x06028E5F RID: 167519 RVA: 0x00B7A66A File Offset: 0x00B7886A
 		protected override bool OnLeaveLevel()
 		{
 			this.ClearAll();
 			return true;
 		}
 
-		// Token: 0x06033FF2 RID: 212978 RVA: 0x00C30ED3 File Offset: 0x00C2F0D3
+		// Token: 0x06028E60 RID: 167520 RVA: 0x00B7A673 File Offset: 0x00B78873
 		protected override bool OnChangeMode()
 		{
 			this.ClearAll();
 			return true;
 		}
 
-		// Token: 0x06033FF3 RID: 212979 RVA: 0x00C30EDC File Offset: 0x00C2F0DC
+		// Token: 0x06028E61 RID: 167521 RVA: 0x00B7A67C File Offset: 0x00B7887C
 		private void OnCommonQteStart(int? handleId)
 		{
 			if (this.IsInQta())
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x06033FF4 RID: 212980 RVA: 0x00C30EEC File Offset: 0x00C2F0EC
+		// Token: 0x06028E62 RID: 167522 RVA: 0x00B7A68C File Offset: 0x00B7888C
 		[NullableContext(2)]
 		private void OnTeleportComplete(TeleportContext _)
 		{
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x06033FF5 RID: 212981 RVA: 0x00C30F44 File Offset: 0x00C2F144
+		// Token: 0x06028E63 RID: 167523 RVA: 0x00B7A6E4 File Offset: 0x00B788E4
 		public void RecoverTimeDilationAfterTeleport()
 		{
 			if (this.IsInQta())
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x06033FF6 RID: 212982 RVA: 0x00C30F9C File Offset: 0x00C2F19C
+		// Token: 0x06028E64 RID: 167524 RVA: 0x00B7A73C File Offset: 0x00B7893C
 		private void ClearAll()
 		{
 			if (this.IsInQta())
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			this.ClearQta();
 		}
 
-		// Token: 0x06033FF7 RID: 212983 RVA: 0x00C30FB4 File Offset: 0x00C2F1B4
+		// Token: 0x06028E65 RID: 167525 RVA: 0x00B7A754 File Offset: 0x00B78954
 		[NullableContext(2)]
 		public QtaContextBase StartQta(int qtaId, TQtaCallback onResult = null, EQtaSource source = EQtaSource.Battle, IQtaExtraParams extraParams = null)
 		{
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			return null;
 		}
 
-		// Token: 0x06033FF8 RID: 212984 RVA: 0x00C31178 File Offset: 0x00C2F378
+		// Token: 0x06028E66 RID: 167526 RVA: 0x00B7A918 File Offset: 0x00B78B18
 		private unsafe bool StartQtaInternal(QtaContextBase context)
 		{
 			QtaLog.Info(context, "Qta开始", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			return true;
 		}
 
-		// Token: 0x06033FF9 RID: 212985 RVA: 0x00C312F0 File Offset: 0x00C2F4F0
+		// Token: 0x06028E67 RID: 167527 RVA: 0x00B7AA90 File Offset: 0x00B78C90
 		public void SetExpiredTimer(QtaContextBase context)
 		{
 			this.RemoveExpiredTimer();
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}, (float)MathUtils.Instance.Clamp(currentValue, 20, 180000), null, null, true, 1f);
 		}
 
-		// Token: 0x06033FFA RID: 212986 RVA: 0x00C3137C File Offset: 0x00C2F57C
+		// Token: 0x06028E68 RID: 167528 RVA: 0x00B7AB1C File Offset: 0x00B78D1C
 		public void EnableExternalConditionMet(int qtaHandle, EQtaExternalReason reason)
 		{
 			QtaContextBase context = this.Context;
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			context2.EnableExternalConditionMet(reason);
 		}
 
-		// Token: 0x06033FFB RID: 212987 RVA: 0x00C313D0 File Offset: 0x00C2F5D0
+		// Token: 0x06028E69 RID: 167529 RVA: 0x00B7AB70 File Offset: 0x00B78D70
 		public void OnExternalConditionMet(int qtaHandle, EQtaExternalReason reason)
 		{
 			QtaContextBase context = this.Context;
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			context2.OnExternalConditionMet(reason);
 		}
 
-		// Token: 0x06033FFC RID: 212988 RVA: 0x00C31423 File Offset: 0x00C2F623
+		// Token: 0x06028E6A RID: 167530 RVA: 0x00B7ABC3 File Offset: 0x00B78DC3
 		public int GetCurrentQtaHandleId()
 		{
 			if (this.Context != null)
@@ -381,7 +381,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			return -1;
 		}
 
-		// Token: 0x06033FFD RID: 212989 RVA: 0x00C3143C File Offset: 0x00C2F63C
+		// Token: 0x06028E6B RID: 167531 RVA: 0x00B7ABDC File Offset: 0x00B78DDC
 		public void ResolveQta(int qtaHandle)
 		{
 			QtaContextBase context = this.Context;
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x06033FFE RID: 212990 RVA: 0x00C314A0 File Offset: 0x00C2F6A0
+		// Token: 0x06028E6C RID: 167532 RVA: 0x00B7AC40 File Offset: 0x00B78E40
 		public void StopQta(int qtaHandle, bool ignoreResultAction = false)
 		{
 			QtaContextBase context = this.Context;
@@ -413,7 +413,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			this.OnQtaEnd(ignoreResultAction);
 		}
 
-		// Token: 0x06033FFF RID: 212991 RVA: 0x00C314E9 File Offset: 0x00C2F6E9
+		// Token: 0x06028E6D RID: 167533 RVA: 0x00B7AC89 File Offset: 0x00B78E89
 		public void StopQtaByResult(EQtaResult result)
 		{
 			if (this.Context == null)
@@ -424,7 +424,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			this.OnQtaEnd(false);
 		}
 
-		// Token: 0x06034000 RID: 212992 RVA: 0x00C31507 File Offset: 0x00C2F707
+		// Token: 0x06028E6E RID: 167534 RVA: 0x00B7ACA7 File Offset: 0x00B78EA7
 		public void StopCurrentQta()
 		{
 			if (this.Context != null)
@@ -433,7 +433,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x06034001 RID: 212993 RVA: 0x00C31518 File Offset: 0x00C2F718
+		// Token: 0x06028E6F RID: 167535 RVA: 0x00B7ACB8 File Offset: 0x00B78EB8
 		private unsafe void OnQtaEnd(bool ignoreResultAction = false)
 		{
 			QtaContextBase context = this.Context;
@@ -558,7 +558,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			EventSystem.Instance.Emit<int?>(EEventName.QtaEnd, (context12 != null) ? new int?(context12.HandleId) : null);
 		}
 
-		// Token: 0x06034002 RID: 212994 RVA: 0x00C3195C File Offset: 0x00C2FB5C
+		// Token: 0x06028E70 RID: 167536 RVA: 0x00B7B0FC File Offset: 0x00B792FC
 		public void PauseQta(int handleId)
 		{
 			if (this.Context == null || handleId != this.Context.HandleId)
@@ -571,7 +571,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x06034003 RID: 212995 RVA: 0x00C31998 File Offset: 0x00C2FB98
+		// Token: 0x06028E71 RID: 167537 RVA: 0x00B7B138 File Offset: 0x00B79338
 		public void ResumeQta(int handleId)
 		{
 			if (this.Context == null || handleId != this.Context.HandleId)
@@ -586,31 +586,31 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			this.ResumeFightInputBlock();
 		}
 
-		// Token: 0x06034004 RID: 212996 RVA: 0x00C319FE File Offset: 0x00C2FBFE
+		// Token: 0x06028E72 RID: 167538 RVA: 0x00B7B19E File Offset: 0x00B7939E
 		public bool IsInQta()
 		{
 			return this.IsInQtaInner;
 		}
 
-		// Token: 0x06034005 RID: 212997 RVA: 0x00C31A06 File Offset: 0x00C2FC06
+		// Token: 0x06028E73 RID: 167539 RVA: 0x00B7B1A6 File Offset: 0x00B793A6
 		public bool IsPreloading()
 		{
 			return this.IsPreloadingQta;
 		}
 
-		// Token: 0x06034006 RID: 212998 RVA: 0x00C31A0E File Offset: 0x00C2FC0E
+		// Token: 0x06028E74 RID: 167540 RVA: 0x00B7B1AE File Offset: 0x00B793AE
 		public void PlayEffect(EQtaPromptType promptType, int qtaHandle)
 		{
 			this.QtaPromptPlayer.PlayEffect(promptType, qtaHandle);
 		}
 
-		// Token: 0x06034007 RID: 212999 RVA: 0x00C31A1D File Offset: 0x00C2FC1D
+		// Token: 0x06028E75 RID: 167541 RVA: 0x00B7B1BD File Offset: 0x00B793BD
 		public void StopEffect(int qtaHandle)
 		{
 			this.QtaPromptPlayer.StopEffect(qtaHandle);
 		}
 
-		// Token: 0x06034008 RID: 213000 RVA: 0x00C31A2C File Offset: 0x00C2FC2C
+		// Token: 0x06028E76 RID: 167542 RVA: 0x00B7B1CC File Offset: 0x00B793CC
 		public void OnQtaMoment(int handleId, EQtaMomentName moment)
 		{
 			if (this.Context == null || handleId != this.Context.HandleId)
@@ -624,7 +624,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x06034009 RID: 213001 RVA: 0x00C31A74 File Offset: 0x00C2FC74
+		// Token: 0x06028E77 RID: 167543 RVA: 0x00B7B214 File Offset: 0x00B79414
 		public void ClearQta()
 		{
 			this.RemoveFightInputBlock();
@@ -642,7 +642,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			this.ClearPreloadQtaRes();
 		}
 
-		// Token: 0x0603400A RID: 213002 RVA: 0x00C31ACB File Offset: 0x00C2FCCB
+		// Token: 0x06028E78 RID: 167544 RVA: 0x00B7B26B File Offset: 0x00B7946B
 		private void RemoveExpiredTimer()
 		{
 			if (this.ExpiredTimer != null)
@@ -652,7 +652,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			this.ExpiredTimer = null;
 		}
 
-		// Token: 0x0603400B RID: 213003 RVA: 0x00C31AF0 File Offset: 0x00C2FCF0
+		// Token: 0x06028E79 RID: 167545 RVA: 0x00B7B290 File Offset: 0x00B79490
 		public void SetQtaTimeDilation(float timeDilation)
 		{
 			if (!this.IsInQta())
@@ -680,7 +680,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x0603400C RID: 213004 RVA: 0x00C31B5B File Offset: 0x00C2FD5B
+		// Token: 0x06028E7A RID: 167546 RVA: 0x00B7B2FB File Offset: 0x00B794FB
 		public void ResetQtaTimeDilation()
 		{
 			if (!this.IsSetQtaTimeDilation)
@@ -691,7 +691,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			GameModeController.Instance.SetTimeDilation(1f, ETimeDilationType.Default);
 		}
 
-		// Token: 0x0603400D RID: 213005 RVA: 0x00C31B80 File Offset: 0x00C2FD80
+		// Token: 0x06028E7B RID: 167547 RVA: 0x00B7B320 File Offset: 0x00B79520
 		[NullableContext(0)]
 		private UniTask<bool> PreloadQtaRes([Nullable(1)] List<int> qtaIdList, int preloadHandle = -1, bool isGroupQta = false)
 		{
@@ -705,7 +705,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			return <PreloadQtaRes>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603400E RID: 213006 RVA: 0x00C31BD4 File Offset: 0x00C2FDD4
+		// Token: 0x06028E7C RID: 167548 RVA: 0x00B7B374 File Offset: 0x00B79574
 		public void ClearPreloadQtaRes()
 		{
 			foreach (QtaItemBase qtaItemBase in this.QtaItemMap.Values)
@@ -719,7 +719,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			QtaModel.Instance.ClearPreloadCache(null);
 		}
 
-		// Token: 0x0603400F RID: 213007 RVA: 0x00C31C54 File Offset: 0x00C2FE54
+		// Token: 0x06028E7D RID: 167549 RVA: 0x00B7B3F4 File Offset: 0x00B795F4
 		private void AddFightInputBlock(EUiViewName viewName)
 		{
 			if (this.FightInputBlockViewName != null)
@@ -740,7 +740,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			EventSystem.Instance.Emit(EEventName.OnAddNotAllowFightInputViewName);
 		}
 
-		// Token: 0x06034010 RID: 213008 RVA: 0x00C31CB4 File Offset: 0x00C2FEB4
+		// Token: 0x06028E7E RID: 167550 RVA: 0x00B7B454 File Offset: 0x00B79654
 		private void RemoveFightInputBlock()
 		{
 			if (this.FightInputBlockViewName == null)
@@ -761,7 +761,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			this.FightInputBlockViewName = null;
 		}
 
-		// Token: 0x06034011 RID: 213009 RVA: 0x00C31D28 File Offset: 0x00C2FF28
+		// Token: 0x06028E7F RID: 167551 RVA: 0x00B7B4C8 File Offset: 0x00B796C8
 		private void ResumeFightInputBlock()
 		{
 			if (this.FightInputBlockViewName == null)
@@ -780,8 +780,8 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x17007F44 RID: 32580
-		// (get) Token: 0x06034012 RID: 213010 RVA: 0x00C31D8F File Offset: 0x00C2FF8F
+		// Token: 0x170052F4 RID: 21236
+		// (get) Token: 0x06028E80 RID: 167552 RVA: 0x00B7B52F File Offset: 0x00B7972F
 		public static QtaController Instance
 		{
 			get
@@ -790,7 +790,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x06034013 RID: 213011 RVA: 0x00C31D96 File Offset: 0x00C2FF96
+		// Token: 0x06028E81 RID: 167553 RVA: 0x00B7B536 File Offset: 0x00B79736
 		public static QtaController GetOrCreateInstance()
 		{
 			if (QtaController._Instance == null)
@@ -800,7 +800,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			return QtaController._Instance;
 		}
 
-		// Token: 0x06034014 RID: 213012 RVA: 0x00C31DAA File Offset: 0x00C2FFAA
+		// Token: 0x06028E82 RID: 167554 RVA: 0x00B7B54A File Offset: 0x00B7974A
 		public static bool CreateInstance()
 		{
 			if (QtaController._Instance != null)
@@ -811,24 +811,24 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			return true;
 		}
 
-		// Token: 0x06034015 RID: 213013 RVA: 0x00C31DC0 File Offset: 0x00C2FFC0
+		// Token: 0x06028E83 RID: 167555 RVA: 0x00B7B560 File Offset: 0x00B79760
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06034016 RID: 213014 RVA: 0x00C31DC2 File Offset: 0x00C2FFC2
+		// Token: 0x06028E84 RID: 167556 RVA: 0x00B7B562 File Offset: 0x00B79762
 		public static void ResetStaticDefaultValue()
 		{
 			QtaController._Instance = null;
 		}
 
-		// Token: 0x06034017 RID: 213015 RVA: 0x00C31DCA File Offset: 0x00C2FFCA
+		// Token: 0x06028E85 RID: 167557 RVA: 0x00B7B56A File Offset: 0x00B7976A
 		static QtaController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(QtaController.CreateStaticDefaultValue), new Action(QtaController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06034018 RID: 213016 RVA: 0x00C31DE9 File Offset: 0x00C2FFE9
+		// Token: 0x06028E86 RID: 167558 RVA: 0x00B7B589 File Offset: 0x00B79789
 		public QtaController()
 		{
 			Dictionary<string, Type> dictionary = new Dictionary<string, Type>();
@@ -839,42 +839,42 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			base..ctor();
 		}
 
-		// Token: 0x0401B9D2 RID: 113106
+		// Token: 0x040163A7 RID: 91047
 		private const int EXTRA_EXPIRED_TIME = 5000;
 
-		// Token: 0x0401B9D3 RID: 113107
+		// Token: 0x040163A8 RID: 91048
 		private const int MAX_EXPIRED_TIME = 60000;
 
-		// Token: 0x0401B9D4 RID: 113108
+		// Token: 0x040163A9 RID: 91049
 		private readonly Dictionary<string, Type> defQtaItemClasses;
 
-		// Token: 0x0401B9D5 RID: 113109
+		// Token: 0x040163AA RID: 91050
 		[Nullable(2)]
 		private QtaContextBase Context;
 
-		// Token: 0x0401B9D6 RID: 113110
+		// Token: 0x040163AB RID: 91051
 		private bool IsInQtaInner;
 
-		// Token: 0x0401B9D7 RID: 113111
+		// Token: 0x040163AC RID: 91052
 		[Nullable(2)]
 		private TimerHandle ExpiredTimer;
 
-		// Token: 0x0401B9D8 RID: 113112
+		// Token: 0x040163AD RID: 91053
 		private bool IsPreloadingQta;
 
-		// Token: 0x0401B9D9 RID: 113113
+		// Token: 0x040163AE RID: 91054
 		private readonly Dictionary<int, QtaItemBase> QtaItemMap;
 
-		// Token: 0x0401B9DA RID: 113114
+		// Token: 0x040163AF RID: 91055
 		private EUiViewName? FightInputBlockViewName;
 
-		// Token: 0x0401B9DB RID: 113115
+		// Token: 0x040163B0 RID: 91056
 		private bool IsSetQtaTimeDilation;
 
-		// Token: 0x0401B9DC RID: 113116
+		// Token: 0x040163B1 RID: 91057
 		private readonly QtaPromptPlayer QtaPromptPlayer;
 
-		// Token: 0x0401B9DD RID: 113117
+		// Token: 0x040163B2 RID: 91058
 		[Nullable(2)]
 		private static QtaController _Instance;
 	}

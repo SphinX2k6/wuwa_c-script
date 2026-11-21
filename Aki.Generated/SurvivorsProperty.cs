@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001101 RID: 4353
+	// Token: 0x02001237 RID: 4663
 	public struct SurvivorsProperty : IFlatbufferObject
 	{
-		// Token: 0x170038EF RID: 14575
-		// (get) Token: 0x0600DAED RID: 56045 RVA: 0x00324E20 File Offset: 0x00323020
+		// Token: 0x17003C45 RID: 15429
+		// (get) Token: 0x0600E838 RID: 59448 RVA: 0x00350158 File Offset: 0x0034E358
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DAEE RID: 56046 RVA: 0x00324E2D File Offset: 0x0032302D
+		// Token: 0x0600E839 RID: 59449 RVA: 0x00350165 File Offset: 0x0034E365
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DAEF RID: 56047 RVA: 0x00324E34 File Offset: 0x00323034
+		// Token: 0x0600E83A RID: 59450 RVA: 0x0035016C File Offset: 0x0034E36C
 		public static SurvivorsProperty GetRootAsSurvivorsProperty(ByteBuffer _bb)
 		{
 			return SurvivorsProperty.GetRootAsSurvivorsProperty(_bb, default(SurvivorsProperty));
 		}
 
-		// Token: 0x0600DAF0 RID: 56048 RVA: 0x00324E50 File Offset: 0x00323050
+		// Token: 0x0600E83B RID: 59451 RVA: 0x00350188 File Offset: 0x0034E388
 		public static SurvivorsProperty GetRootAsSurvivorsProperty(ByteBuffer _bb, SurvivorsProperty obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DAF1 RID: 56049 RVA: 0x00324E6D File Offset: 0x0032306D
+		// Token: 0x0600E83C RID: 59452 RVA: 0x003501A5 File Offset: 0x0034E3A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DAF2 RID: 56050 RVA: 0x00324E7C File Offset: 0x0032307C
+		// Token: 0x0600E83D RID: 59453 RVA: 0x003501B4 File Offset: 0x0034E3B4
 		public SurvivorsProperty __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170038F0 RID: 14576
-		// (get) Token: 0x0600DAF3 RID: 56051 RVA: 0x00324E8C File Offset: 0x0032308C
+		// Token: 0x17003C46 RID: 15430
+		// (get) Token: 0x0600E83E RID: 59454 RVA: 0x003501C4 File Offset: 0x0034E3C4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170038F1 RID: 14577
-		// (get) Token: 0x0600DAF4 RID: 56052 RVA: 0x00324EC8 File Offset: 0x003230C8
+		// Token: 0x17003C47 RID: 15431
+		// (get) Token: 0x0600E83F RID: 59455 RVA: 0x00350200 File Offset: 0x0034E400
 		public string Key
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DAF5 RID: 56053 RVA: 0x00324EFF File Offset: 0x003230FF
+		// Token: 0x0600E840 RID: 59456 RVA: 0x00350237 File Offset: 0x0034E437
 		public Span<byte> GetKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600DAF6 RID: 56054 RVA: 0x00324F0E File Offset: 0x0032310E
+		// Token: 0x0600E841 RID: 59457 RVA: 0x00350246 File Offset: 0x0034E446
 		public byte[] GetKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170038F2 RID: 14578
-		// (get) Token: 0x0600DAF7 RID: 56055 RVA: 0x00324F28 File Offset: 0x00323128
+		// Token: 0x17003C48 RID: 15432
+		// (get) Token: 0x0600E842 RID: 59458 RVA: 0x00350260 File Offset: 0x0034E460
 		public string Name
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DAF8 RID: 56056 RVA: 0x00324F5F File Offset: 0x0032315F
+		// Token: 0x0600E843 RID: 59459 RVA: 0x00350297 File Offset: 0x0034E497
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600DAF9 RID: 56057 RVA: 0x00324F6E File Offset: 0x0032316E
+		// Token: 0x0600E844 RID: 59460 RVA: 0x003502A6 File Offset: 0x0034E4A6
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170038F3 RID: 14579
-		// (get) Token: 0x0600DAFA RID: 56058 RVA: 0x00324F88 File Offset: 0x00323188
+		// Token: 0x17003C49 RID: 15433
+		// (get) Token: 0x0600E845 RID: 59461 RVA: 0x003502C0 File Offset: 0x0034E4C0
 		public bool IsBasePermyriad
 		{
 			get
@@ -127,8 +127,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170038F4 RID: 14580
-		// (get) Token: 0x0600DAFB RID: 56059 RVA: 0x00324FC8 File Offset: 0x003231C8
+		// Token: 0x17003C4A RID: 15434
+		// (get) Token: 0x0600E846 RID: 59462 RVA: 0x00350300 File Offset: 0x0034E500
 		public bool IsPercent
 		{
 			get
@@ -138,8 +138,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170038F5 RID: 14581
-		// (get) Token: 0x0600DAFC RID: 56060 RVA: 0x00325008 File Offset: 0x00323208
+		// Token: 0x17003C4B RID: 15435
+		// (get) Token: 0x0600E847 RID: 59463 RVA: 0x00350340 File Offset: 0x0034E540
 		public bool IsSpecial
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170038F6 RID: 14582
-		// (get) Token: 0x0600DAFD RID: 56061 RVA: 0x00325048 File Offset: 0x00323248
+		// Token: 0x17003C4C RID: 15436
+		// (get) Token: 0x0600E848 RID: 59464 RVA: 0x00350380 File Offset: 0x0034E580
 		public int Priority
 		{
 			get
@@ -164,8 +164,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170038F7 RID: 14583
-		// (get) Token: 0x0600DAFE RID: 56062 RVA: 0x00325088 File Offset: 0x00323288
+		// Token: 0x17003C4D RID: 15437
+		// (get) Token: 0x0600E849 RID: 59465 RVA: 0x003503C0 File Offset: 0x0034E5C0
 		public string Icon
 		{
 			get
@@ -179,19 +179,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DAFF RID: 56063 RVA: 0x003250C0 File Offset: 0x003232C0
+		// Token: 0x0600E84A RID: 59466 RVA: 0x003503F8 File Offset: 0x0034E5F8
 		public Span<byte> GetIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x0600DB00 RID: 56064 RVA: 0x003250D0 File Offset: 0x003232D0
+		// Token: 0x0600E84B RID: 59467 RVA: 0x00350408 File Offset: 0x0034E608
 		public byte[] GetIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04005239 RID: 21049
+		// Token: 0x0400587C RID: 22652
 		private Table __p;
 	}
 }

@@ -5,22 +5,22 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020022B1 RID: 8881
+// Token: 0x02001795 RID: 6037
 [NullableContext(2)]
 [Nullable(0)]
 public class MotorcycleScenePopupItem : GridProxyAbstract<int>
 {
-	// Token: 0x17001625 RID: 5669
-	// (get) Token: 0x06011684 RID: 71300 RVA: 0x0044389B File Offset: 0x00441A9B
-	// (set) Token: 0x06011685 RID: 71301 RVA: 0x004438A3 File Offset: 0x00441AA3
+	// Token: 0x1700165C RID: 5724
+	// (get) Token: 0x0600EB1C RID: 60188 RVA: 0x0045047F File Offset: 0x0044E67F
+	// (set) Token: 0x0600EB1D RID: 60189 RVA: 0x00450487 File Offset: 0x0044E687
 	public Action<int> OnClickToggleBack { get; set; }
 
-	// Token: 0x17001626 RID: 5670
-	// (get) Token: 0x06011686 RID: 71302 RVA: 0x004438AC File Offset: 0x00441AAC
-	// (set) Token: 0x06011687 RID: 71303 RVA: 0x004438B4 File Offset: 0x00441AB4
+	// Token: 0x1700165D RID: 5725
+	// (get) Token: 0x0600EB1E RID: 60190 RVA: 0x00450490 File Offset: 0x0044E690
+	// (set) Token: 0x0600EB1F RID: 60191 RVA: 0x00450498 File Offset: 0x0044E698
 	public Func<int> GetCurrentSceneId { get; set; }
 
-	// Token: 0x06011688 RID: 71304 RVA: 0x004438C0 File Offset: 0x00441AC0
+	// Token: 0x0600EB20 RID: 60192 RVA: 0x004504A4 File Offset: 0x0044E6A4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,13 +38,13 @@ public class MotorcycleScenePopupItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06011689 RID: 71305 RVA: 0x0044397F File Offset: 0x00441B7F
+	// Token: 0x0600EB21 RID: 60193 RVA: 0x00450563 File Offset: 0x0044E763
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 	}
 
-	// Token: 0x0601168A RID: 71306 RVA: 0x004439A0 File Offset: 0x00441BA0
+	// Token: 0x0600EB22 RID: 60194 RVA: 0x00450584 File Offset: 0x0044E784
 	public override void Refresh(int sceneId, bool isSelected, int gridIndex)
 	{
 		this.SceneId = new int?(sceneId);
@@ -65,19 +65,19 @@ public class MotorcycleScenePopupItem : GridProxyAbstract<int>
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0601168B RID: 71307 RVA: 0x00443A6A File Offset: 0x00441C6A
+	// Token: 0x0600EB23 RID: 60195 RVA: 0x0045064E File Offset: 0x0044E84E
 	public override void Clear()
 	{
 		this.SceneId = null;
 	}
 
-	// Token: 0x0601168C RID: 71308 RVA: 0x00443A78 File Offset: 0x00441C78
+	// Token: 0x0600EB24 RID: 60196 RVA: 0x0045065C File Offset: 0x0044E85C
 	public void SetToggleState(bool isSelected, bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x0601168D RID: 71309 RVA: 0x00443A90 File Offset: 0x00441C90
+	// Token: 0x0600EB25 RID: 60197 RVA: 0x00450674 File Offset: 0x0044E874
 	public void RefreshRedDot()
 	{
 		if (this.SceneId == null)
@@ -92,20 +92,20 @@ public class MotorcycleScenePopupItem : GridProxyAbstract<int>
 		item.SetUIActive(MotorcycleDiyModel.Instance.RedDotHasNewScene(this.SceneId.Value));
 	}
 
-	// Token: 0x0601168E RID: 71310 RVA: 0x00443AD2 File Offset: 0x00441CD2
+	// Token: 0x0600EB26 RID: 60198 RVA: 0x004506B6 File Offset: 0x0044E8B6
 	[NullableContext(1)]
 	public override object GetKey(int data, int displayIndex)
 	{
 		return data;
 	}
 
-	// Token: 0x0601168F RID: 71311 RVA: 0x00443ADA File Offset: 0x00441CDA
+	// Token: 0x0600EB27 RID: 60199 RVA: 0x004506BE File Offset: 0x0044E8BE
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06011690 RID: 71312 RVA: 0x00443AEC File Offset: 0x00441CEC
+	// Token: 0x0600EB28 RID: 60200 RVA: 0x004506D0 File Offset: 0x0044E8D0
 	private bool CanExecuteChange()
 	{
 		if (this.SceneId == null)
@@ -117,7 +117,7 @@ public class MotorcycleScenePopupItem : GridProxyAbstract<int>
 		return this.SceneId.Value != num;
 	}
 
-	// Token: 0x06011691 RID: 71313 RVA: 0x00443B2C File Offset: 0x00441D2C
+	// Token: 0x0600EB29 RID: 60201 RVA: 0x00450710 File Offset: 0x0044E910
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		if (this.SceneId == null)
@@ -132,29 +132,29 @@ public class MotorcycleScenePopupItem : GridProxyAbstract<int>
 		onClickToggleBack(this.SceneId.Value);
 	}
 
-	// Token: 0x04008447 RID: 33863
+	// Token: 0x04008585 RID: 34181
 	private int? SceneId;
 
-	// Token: 0x02008820 RID: 34848
+	// Token: 0x020079A4 RID: 31140
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402C3CA RID: 181194
+		// Token: 0x040276CF RID: 161487
 		public const int SceneToggle = 0;
 
-		// Token: 0x0402C3CB RID: 181195
+		// Token: 0x040276D0 RID: 161488
 		public const int SceneTexture = 1;
 
-		// Token: 0x0402C3CC RID: 181196
+		// Token: 0x040276D1 RID: 161489
 		public const int SceneNameText = 2;
 
-		// Token: 0x0402C3CD RID: 181197
+		// Token: 0x040276D2 RID: 161490
 		public const int CurrentMarkItem = 3;
 
-		// Token: 0x0402C3CE RID: 181198
+		// Token: 0x040276D3 RID: 161491
 		public const int LockItem = 4;
 
-		// Token: 0x0402C3CF RID: 181199
+		// Token: 0x040276D4 RID: 161492
 		public const int RedDotItem = 5;
 	}
 }

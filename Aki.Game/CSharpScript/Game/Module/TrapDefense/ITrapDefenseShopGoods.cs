@@ -4,48 +4,48 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A76 RID: 19062
+	// Token: 0x02003A1E RID: 14878
 	[NullableContext(1)]
 	public interface ITrapDefenseShopGoods
 	{
-		// Token: 0x17007AB8 RID: 31416
-		// (get) Token: 0x06031661 RID: 202337
-		// (set) Token: 0x06031662 RID: 202338
+		// Token: 0x17004E65 RID: 20069
+		// (get) Token: 0x060263F1 RID: 156657
+		// (set) Token: 0x060263F2 RID: 156658
 		int Id { get; set; }
 
-		// Token: 0x17007AB9 RID: 31417
-		// (get) Token: 0x06031663 RID: 202339
-		// (set) Token: 0x06031664 RID: 202340
+		// Token: 0x17004E66 RID: 20070
+		// (get) Token: 0x060263F3 RID: 156659
+		// (set) Token: 0x060263F4 RID: 156660
 		int? OriginalPrice { get; set; }
 
-		// Token: 0x17007ABA RID: 31418
-		// (get) Token: 0x06031665 RID: 202341
-		// (set) Token: 0x06031666 RID: 202342
+		// Token: 0x17004E67 RID: 20071
+		// (get) Token: 0x060263F5 RID: 156661
+		// (set) Token: 0x060263F6 RID: 156662
 		int CurrentPrice { get; set; }
 
-		// Token: 0x17007ABB RID: 31419
-		// (get) Token: 0x06031667 RID: 202343
-		// (set) Token: 0x06031668 RID: 202344
+		// Token: 0x17004E68 RID: 20072
+		// (get) Token: 0x060263F7 RID: 156663
+		// (set) Token: 0x060263F8 RID: 156664
 		ETrapDefenseShopGoodsType Type { get; set; }
 
-		// Token: 0x17007ABC RID: 31420
-		// (get) Token: 0x06031669 RID: 202345
-		// (set) Token: 0x0603166A RID: 202346
+		// Token: 0x17004E69 RID: 20073
+		// (get) Token: 0x060263F9 RID: 156665
+		// (set) Token: 0x060263FA RID: 156666
 		int QualityId { get; set; }
 
-		// Token: 0x17007ABD RID: 31421
-		// (get) Token: 0x0603166B RID: 202347
-		// (set) Token: 0x0603166C RID: 202348
+		// Token: 0x17004E6A RID: 20074
+		// (get) Token: 0x060263FB RID: 156667
+		// (set) Token: 0x060263FC RID: 156668
 		string Name { get; set; }
 
-		// Token: 0x17007ABE RID: 31422
-		// (get) Token: 0x0603166D RID: 202349
-		// (set) Token: 0x0603166E RID: 202350
+		// Token: 0x17004E6B RID: 20075
+		// (get) Token: 0x060263FD RID: 156669
+		// (set) Token: 0x060263FE RID: 156670
 		string Desc { get; set; }
 
-		// Token: 0x17007ABF RID: 31423
-		// (get) Token: 0x0603166F RID: 202351
-		// (set) Token: 0x06031670 RID: 202352
+		// Token: 0x17004E6C RID: 20076
+		// (get) Token: 0x060263FF RID: 156671
+		// (set) Token: 0x06026400 RID: 156672
 		[Nullable(new byte[]
 		{
 			2,
@@ -61,26 +61,26 @@ namespace CSharpScript.Game.Module.TrapDefense
 			1
 		})] set; }
 
-		// Token: 0x17007AC0 RID: 31424
-		// (get) Token: 0x06031671 RID: 202353
-		// (set) Token: 0x06031672 RID: 202354
+		// Token: 0x17004E6D RID: 20077
+		// (get) Token: 0x06026401 RID: 156673
+		// (set) Token: 0x06026402 RID: 156674
 		string Icon { get; set; }
 
-		// Token: 0x17007AC1 RID: 31425
-		// (get) Token: 0x06031673 RID: 202355
+		// Token: 0x17004E6E RID: 20078
+		// (get) Token: 0x06026403 RID: 156675
 		bool Disable { get; }
 
-		// Token: 0x17007AC2 RID: 31426
-		// (get) Token: 0x06031674 RID: 202356
+		// Token: 0x17004E6F RID: 20079
+		// (get) Token: 0x06026404 RID: 156676
 		int CanPurchaseNum { get; }
 
-		// Token: 0x17007AC3 RID: 31427
-		// (get) Token: 0x06031675 RID: 202357
+		// Token: 0x17004E70 RID: 20080
+		// (get) Token: 0x06026405 RID: 156677
 		ETrapDefenseShopGoodsUnavailableReason DisableReason { get; }
 
-		// Token: 0x17007AC4 RID: 31428
-		// (get) Token: 0x06031676 RID: 202358
-		// (set) Token: 0x06031677 RID: 202359
+		// Token: 0x17004E71 RID: 20081
+		// (get) Token: 0x06026406 RID: 156678
+		// (set) Token: 0x06026407 RID: 156679
 		Func<PropMediumItemGrid> GetItemGridParam { get; set; }
 	}
 }

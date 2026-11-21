@@ -5,7 +5,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006236 RID: 25142
+	// Token: 0x020051B4 RID: 20916
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 	})]
 	public class RhythmShipQuickSelectLevelGirdItemTitle : SyncGridProxyAbstract<RhythmShipQuickSelectLevelData>
 	{
-		// Token: 0x0603F60B RID: 259595 RVA: 0x00F5261D File Offset: 0x00F5081D
+		// Token: 0x060342CC RID: 213708 RVA: 0x00E99579 File Offset: 0x00E97779
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F60C RID: 259596 RVA: 0x00F52640 File Offset: 0x00F50840
+		// Token: 0x060342CD RID: 213709 RVA: 0x00E9959C File Offset: 0x00E9779C
 		public override void Refresh(RhythmShipQuickSelectLevelData data)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.TitleText, Array.Empty<object>());

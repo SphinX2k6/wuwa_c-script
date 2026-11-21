@@ -5,17 +5,17 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049A5 RID: 18853
+	// Token: 0x0200391F RID: 14623
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PhantomArenaBattleCardCancelComponent : PhantomArenaBattleComponentBase
 	{
-		// Token: 0x06031163 RID: 201059 RVA: 0x00B63E8F File Offset: 0x00B6208F
+		// Token: 0x06025C99 RID: 154777 RVA: 0x00A9EDDF File Offset: 0x00A9CFDF
 		public PhantomArenaBattleCardCancelComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031164 RID: 201060 RVA: 0x00B63E98 File Offset: 0x00B62098
+		// Token: 0x06025C9A RID: 154778 RVA: 0x00A9EDE8 File Offset: 0x00A9CFE8
 		protected override void OnPress(HotKeyMap config)
 		{
 			if (base.Proxy != null)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06031165 RID: 201061 RVA: 0x00B63F22 File Offset: 0x00B62122
+		// Token: 0x06025C9B RID: 154779 RVA: 0x00A9EE72 File Offset: 0x00A9D072
 		protected override void OnRefreshSelfHotKeyStateImplement()
 		{
 			if (base.Proxy == null)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, true, false);
 		}
 
-		// Token: 0x06031166 RID: 201062 RVA: 0x00B63F5C File Offset: 0x00B6215C
+		// Token: 0x06025C9C RID: 154780 RVA: 0x00A9EEAC File Offset: 0x00A9D0AC
 		private TsUiNavigationBehaviorListener GetOwnBattleSlotListenerByIndex(int index)
 		{
 			TsUiNavigationBehaviorListener currentNavigationFocusListener = UiNavigationNewController.Instance.GetCurrentNavigationFocusListener();
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return list[index];
 		}
 
-		// Token: 0x06031167 RID: 201063 RVA: 0x00B63FF4 File Offset: 0x00B621F4
+		// Token: 0x06025C9D RID: 154781 RVA: 0x00A9EF44 File Offset: 0x00A9D144
 		private TsUiNavigationBehaviorListener GetOwnHandCardListenerByIndex(int index)
 		{
 			TsUiNavigationBehaviorListener currentNavigationFocusListener = UiNavigationNewController.Instance.GetCurrentNavigationFocusListener();

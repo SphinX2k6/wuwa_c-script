@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.LevelGamePlay.LevelConditions;
 
-// Token: 0x0200273E RID: 10046
+// Token: 0x02001C29 RID: 7209
 [NullableContext(1)]
 [Nullable(0)]
 public class RandomPlotCondition : IRandomPlotCondition
 {
-	// Token: 0x17001AFB RID: 6907
-	// (get) Token: 0x060149C7 RID: 84423 RVA: 0x005376AA File Offset: 0x005358AA
-	// (set) Token: 0x060149C8 RID: 84424 RVA: 0x005376B2 File Offset: 0x005358B2
+	// Token: 0x17001B33 RID: 6963
+	// (get) Token: 0x06011EA9 RID: 73385 RVA: 0x005463B6 File Offset: 0x005445B6
+	// (set) Token: 0x06011EAA RID: 73386 RVA: 0x005463BE File Offset: 0x005445BE
 	public int ConditionGroupId { get; set; }
 
-	// Token: 0x17001AFC RID: 6908
-	// (get) Token: 0x060149C9 RID: 84425 RVA: 0x005376BB File Offset: 0x005358BB
-	// (set) Token: 0x060149CA RID: 84426 RVA: 0x005376C3 File Offset: 0x005358C3
+	// Token: 0x17001B34 RID: 6964
+	// (get) Token: 0x06011EAB RID: 73387 RVA: 0x005463C7 File Offset: 0x005445C7
+	// (set) Token: 0x06011EAC RID: 73388 RVA: 0x005463CF File Offset: 0x005445CF
 	public ConditionPassCallback Callback { get; set; }
 }

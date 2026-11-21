@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 {
-	// Token: 0x02005442 RID: 21570
+	// Token: 0x02004425 RID: 17445
 	public class FilterSeniorParamSliderItem : GridProxyAbstract<FilterSeniorSetting>
 	{
-		// Token: 0x0603712B RID: 225579 RVA: 0x00D0D41C File Offset: 0x00D0B61C
+		// Token: 0x0602C074 RID: 180340 RVA: 0x00C5C834 File Offset: 0x00C5AA34
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,13 +24,13 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			};
 		}
 
-		// Token: 0x0603712C RID: 225580 RVA: 0x00D0D4B8 File Offset: 0x00D0B6B8
+		// Token: 0x0602C075 RID: 180341 RVA: 0x00C5C8D0 File Offset: 0x00C5AAD0
 		protected override void OnStart()
 		{
 			base.GetSlider(1).OnValueChangeCb.Bind(new Action<float>(this.OnSliderValueChanged));
 		}
 
-		// Token: 0x0603712D RID: 225581 RVA: 0x00D0D4D8 File Offset: 0x00D0B6D8
+		// Token: 0x0602C076 RID: 180342 RVA: 0x00C5C8F0 File Offset: 0x00C5AAF0
 		public override void Refresh(FilterSeniorSetting data, bool isSelected, int gridIndex)
 		{
 			this.FilterSeniorSetting = data;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			slider.SetValue((float)num2, false);
 		}
 
-		// Token: 0x0603712E RID: 225582 RVA: 0x00D0D670 File Offset: 0x00D0B870
+		// Token: 0x0602C077 RID: 180343 RVA: 0x00C5CA88 File Offset: 0x00C5AC88
 		private void OnSliderValueChanged(float value)
 		{
 			FilterSettingViewModel parentViewModel = this.ParentViewModel;
@@ -112,38 +112,38 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0401D0EC RID: 119020
+		// Token: 0x04017B85 RID: 97157
 		[Nullable(2)]
 		public FilterSettingViewModel ParentViewModel;
 
-		// Token: 0x0401D0ED RID: 119021
+		// Token: 0x04017B86 RID: 97158
 		private FilterSeniorSetting FilterSeniorSetting;
 
-		// Token: 0x0200B6BD RID: 46781
+		// Token: 0x0200A0F5 RID: 41205
 		public class EComponent
 		{
-			// Token: 0x040375B5 RID: 226741
+			// Token: 0x0403200A RID: 204810
 			public const int TextValue = 0;
 
-			// Token: 0x040375B6 RID: 226742
+			// Token: 0x0403200B RID: 204811
 			public const int SliderValue = 1;
 
-			// Token: 0x040375B7 RID: 226743
+			// Token: 0x0403200C RID: 204812
 			public const int SpriteHandle = 2;
 
-			// Token: 0x040375B8 RID: 226744
+			// Token: 0x0403200D RID: 204813
 			public const int SpriteNormalBg = 3;
 
-			// Token: 0x040375B9 RID: 226745
+			// Token: 0x0403200E RID: 204814
 			public const int SpriteTempBg = 4;
 
-			// Token: 0x040375BA RID: 226746
+			// Token: 0x0403200F RID: 204815
 			public const int ItemFillArea = 5;
 
-			// Token: 0x040375BB RID: 226747
+			// Token: 0x04032010 RID: 204816
 			public const int ToggleRoot = 6;
 
-			// Token: 0x040375BC RID: 226748
+			// Token: 0x04032011 RID: 204817
 			public const int TextName = 7;
 		}
 	}

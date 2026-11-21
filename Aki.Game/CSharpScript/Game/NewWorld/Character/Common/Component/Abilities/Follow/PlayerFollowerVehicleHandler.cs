@@ -10,12 +10,12 @@ using CSharpScript.Game.Utils.Command;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x02007151 RID: 29009
+	// Token: 0x0200637F RID: 25471
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerFollowerVehicleHandler : PlayerFollowerSwallowHandler, IPlayerFollowerVehicleHandler, IPlayerFollowerHandler
 	{
-		// Token: 0x06046D2C RID: 290092 RVA: 0x011D94AC File Offset: 0x011D76AC
+		// Token: 0x0603DB86 RID: 252806 RVA: 0x011E2660 File Offset: 0x011E0860
 		public long? GetPlayerFollowVehicle(EVehicleType vehicleType)
 		{
 			foreach (long num in this.PlayerVehicleFollower)
@@ -55,13 +55,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return null;
 		}
 
-		// Token: 0x06046D2D RID: 290093 RVA: 0x011D957C File Offset: 0x011D777C
+		// Token: 0x0603DB87 RID: 252807 RVA: 0x011E2730 File Offset: 0x011E0930
 		public override bool HasFollower(long creatureDataId)
 		{
 			return this.PlayerVehicleFollower.Contains(creatureDataId);
 		}
 
-		// Token: 0x06046D2E RID: 290094 RVA: 0x011D958A File Offset: 0x011D778A
+		// Token: 0x0603DB88 RID: 252808 RVA: 0x011E273E File Offset: 0x011E093E
 		public override IReceiver<ICommandTypeAddFollower> AddFollowerReceiver()
 		{
 			return new Receiver<ICommandTypeAddFollower>
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			};
 		}
 
-		// Token: 0x06046D2F RID: 290095 RVA: 0x011D95A3 File Offset: 0x011D77A3
+		// Token: 0x0603DB89 RID: 252809 RVA: 0x011E2757 File Offset: 0x011E0957
 		public override IReceiver<ICommandTypeRemoveFollower> RemoveFollowerReceiver()
 		{
 			return new Receiver<ICommandTypeRemoveFollower>
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			};
 		}
 
-		// Token: 0x06046D30 RID: 290096 RVA: 0x011D95BC File Offset: 0x011D77BC
+		// Token: 0x0603DB8A RID: 252810 RVA: 0x011E2770 File Offset: 0x011E0970
 		public override void OnClear()
 		{
 			this.PlayerVehicleFollower.Clear();
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.WaitEntityTasks.Clear();
 		}
 
-		// Token: 0x06046D31 RID: 290097 RVA: 0x011D9628 File Offset: 0x011D7828
+		// Token: 0x0603DB8B RID: 252811 RVA: 0x011E27DC File Offset: 0x011E09DC
 		[NullableContext(2)]
 		private void OnAddPlayerVehicleFollower(EntityHandle entityHandle)
 		{
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046D32 RID: 290098 RVA: 0x011D96D0 File Offset: 0x011D78D0
+		// Token: 0x0603DB8C RID: 252812 RVA: 0x011E2884 File Offset: 0x011E0A84
 		private void OnRemovePlayerVehicleFollower(long creatureDataId)
 		{
 			EVehicleType evehicleType;
@@ -173,13 +173,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x040252BD RID: 152253
+		// Token: 0x04020BA0 RID: 134048
 		private readonly HashSet<long> PlayerVehicleFollower = new HashSet<long>();
 
-		// Token: 0x040252BE RID: 152254
+		// Token: 0x04020BA1 RID: 134049
 		private readonly Dictionary<long, WaitEntityTask> WaitEntityTasks = new Dictionary<long, WaitEntityTask>();
 
-		// Token: 0x040252BF RID: 152255
+		// Token: 0x04020BA2 RID: 134050
 		private readonly Dictionary<long, EVehicleType> CreatureDataIdToVehicleType = new Dictionary<long, EVehicleType>();
 	}
 }

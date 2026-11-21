@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x02005697 RID: 22167
+	// Token: 0x0200466D RID: 18029
 	public class ManufactureHelpRoleView : UiViewBase
 	{
-		// Token: 0x0603867B RID: 231035 RVA: 0x00D63EDE File Offset: 0x00D620DE
+		// Token: 0x0602D578 RID: 185720 RVA: 0x00CB202E File Offset: 0x00CB022E
 		[NullableContext(1)]
 		public ManufactureHelpRoleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603867C RID: 231036 RVA: 0x00D63EE8 File Offset: 0x00D620E8
+		// Token: 0x0602D579 RID: 185721 RVA: 0x00CB2038 File Offset: 0x00CB0238
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603867D RID: 231037 RVA: 0x00D63FD0 File Offset: 0x00D621D0
+		// Token: 0x0602D57A RID: 185722 RVA: 0x00CB2120 File Offset: 0x00CB0320
 		protected override void OnBeforeDestroy()
 		{
 			if (this.RoleItemScrollView != null)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x0603867E RID: 231038 RVA: 0x00D63FEC File Offset: 0x00D621EC
+		// Token: 0x0602D57B RID: 185723 RVA: 0x00CB213C File Offset: 0x00CB033C
 		protected override void OnStart()
 		{
 			this.RoleItemScrollView = new LoopScrollView<ManufactureHelpRoleView.HelpRoleItem, ICommonRoleItemData>(base.GetLoopScrollViewComponent(0), base.GetItem(1).GetOwner() as AUIBaseActor, new Func<ManufactureHelpRoleView.HelpRoleItem>(this.OnGridProxyCreate), false);
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.RefreshHelpRoleScroll();
 		}
 
-		// Token: 0x0603867F RID: 231039 RVA: 0x00D64084 File Offset: 0x00D62284
+		// Token: 0x0602D57C RID: 185724 RVA: 0x00CB21D4 File Offset: 0x00CB03D4
 		protected override void OnBeforeShow()
 		{
 			IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			popItem.SetTexBgVisible(false);
 		}
 
-		// Token: 0x06038680 RID: 231040 RVA: 0x00D640A1 File Offset: 0x00D622A1
+		// Token: 0x0602D57D RID: 185725 RVA: 0x00CB21F1 File Offset: 0x00CB03F1
 		[NullableContext(1)]
 		private ManufactureHelpRoleView.HelpRoleItem OnGridProxyCreate()
 		{
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return helpRoleItem;
 		}
 
-		// Token: 0x06038681 RID: 231041 RVA: 0x00D640BA File Offset: 0x00D622BA
+		// Token: 0x0602D57E RID: 185726 RVA: 0x00CB220A File Offset: 0x00CB040A
 		private void RefreshHelpRoleScroll()
 		{
 			this.RoleItemDataList = CommonManager.Instance.GetHelpRoleItemDataList(this.ItemId);
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.SetSelectedRoleItem();
 		}
 
-		// Token: 0x06038682 RID: 231042 RVA: 0x00D640EC File Offset: 0x00D622EC
+		// Token: 0x0602D57F RID: 185727 RVA: 0x00CB223C File Offset: 0x00CB043C
 		private void SetSelectedRoleItem()
 		{
 			int num = 0;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.RoleItemScrollView.SelectGridProxy(num, false);
 		}
 
-		// Token: 0x06038683 RID: 231043 RVA: 0x00D64150 File Offset: 0x00D62350
+		// Token: 0x0602D580 RID: 185728 RVA: 0x00CB22A0 File Offset: 0x00CB04A0
 		private void RefreshConfirm(int roleId)
 		{
 			this.CurrentSelectedRoleId = roleId;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.RoleItemScrollView.RefreshGridProxy(num);
 		}
 
-		// Token: 0x06038684 RID: 231044 RVA: 0x00D641C2 File Offset: 0x00D623C2
+		// Token: 0x0602D581 RID: 185729 RVA: 0x00CB2312 File Offset: 0x00CB0512
 		private void OnConfirm()
 		{
 			CommonManager.Instance.SetCurrentRoleId(this.CurrentSelectedRoleId);
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			EventSystem.Instance.Emit(EEventName.CloseHelpRole);
 		}
 
-		// Token: 0x0401DA1A RID: 121370
+		// Token: 0x040184A5 RID: 99493
 		[Nullable(new byte[]
 		{
 			2,
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 		})]
 		private LoopScrollView<ManufactureHelpRoleView.HelpRoleItem, ICommonRoleItemData> RoleItemScrollView;
 
-		// Token: 0x0401DA1B RID: 121371
+		// Token: 0x040184A6 RID: 99494
 		[Nullable(new byte[]
 		{
 			2,
@@ -154,29 +154,29 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 		})]
 		private List<ICommonRoleItemData> RoleItemDataList;
 
-		// Token: 0x0401DA1C RID: 121372
+		// Token: 0x040184A7 RID: 99495
 		private int ItemId;
 
-		// Token: 0x0401DA1D RID: 121373
+		// Token: 0x040184A8 RID: 99496
 		private int CurrentSelectedRoleId;
 
-		// Token: 0x0200B858 RID: 47192
+		// Token: 0x0200A280 RID: 41600
 		private class EHelpRoleDefine
 		{
-			// Token: 0x04037CC3 RID: 228547
+			// Token: 0x040326E0 RID: 206560
 			public const int HelpRoleLoopScroll = 0;
 
-			// Token: 0x04037CC4 RID: 228548
+			// Token: 0x040326E1 RID: 206561
 			public const int HelpRoleItem = 1;
 
-			// Token: 0x04037CC5 RID: 228549
+			// Token: 0x040326E2 RID: 206562
 			public const int ConfirmButton = 2;
 
-			// Token: 0x04037CC6 RID: 228550
+			// Token: 0x040326E3 RID: 206563
 			public const int TxtConfirm = 3;
 		}
 
-		// Token: 0x0200B859 RID: 47193
+		// Token: 0x0200A281 RID: 41601
 		[NullableContext(2)]
 		[Nullable(new byte[]
 		{
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 		})]
 		public class HelpRoleItem : GridProxyAbstract<ICommonRoleItemData>
 		{
-			// Token: 0x0604F3FB RID: 324603 RVA: 0x01531B58 File Offset: 0x0152FD58
+			// Token: 0x060459C8 RID: 285128 RVA: 0x014EB3A4 File Offset: 0x014E95A4
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 4;
@@ -210,14 +210,14 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 				this.BtnBindInfo = list2;
 			}
 
-			// Token: 0x0604F3FC RID: 324604 RVA: 0x01531C40 File Offset: 0x0152FE40
+			// Token: 0x060459C9 RID: 285129 RVA: 0x014EB48C File Offset: 0x014E968C
 			protected override void OnStart()
 			{
 				this.ItemGrid = new SmallItemGrid();
 				this.ItemGrid.Initialize(base.GetItem(3).GetOwner());
 			}
 
-			// Token: 0x0604F3FD RID: 324605 RVA: 0x01531C64 File Offset: 0x0152FE64
+			// Token: 0x060459CA RID: 285130 RVA: 0x014EB4B0 File Offset: 0x014E96B0
 			[NullableContext(1)]
 			public override void Refresh(ICommonRoleItemData data, bool isSelected, int gridIndex)
 			{
@@ -237,25 +237,25 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 				base.GetText(2).OnSelfLanguageChange.Bind(new Action(this.SetInfoText));
 			}
 
-			// Token: 0x0604F3FE RID: 324606 RVA: 0x01531D13 File Offset: 0x0152FF13
+			// Token: 0x060459CB RID: 285131 RVA: 0x014EB55F File Offset: 0x014E975F
 			public override void Clear()
 			{
 				base.GetText(2).OnSelfLanguageChange.Unbind();
 			}
 
-			// Token: 0x0604F3FF RID: 324607 RVA: 0x01531D26 File Offset: 0x0152FF26
+			// Token: 0x060459CC RID: 285132 RVA: 0x014EB572 File Offset: 0x014E9772
 			protected override void OnBeforeDestroy()
 			{
 				this.ItemGrid = null;
 			}
 
-			// Token: 0x0604F400 RID: 324608 RVA: 0x01531D2F File Offset: 0x0152FF2F
+			// Token: 0x060459CD RID: 285133 RVA: 0x014EB57B File Offset: 0x014E977B
 			private void SetName()
 			{
 				base.GetText(1).SetText(this.ItemData.RoleName, true);
 			}
 
-			// Token: 0x0604F401 RID: 324609 RVA: 0x01531D4C File Offset: 0x0152FF4C
+			// Token: 0x060459CE RID: 285134 RVA: 0x014EB598 File Offset: 0x014E9798
 			private void SetInfoText()
 			{
 				if (CommonManager.Instance.CheckIsBuff(this.ItemData.RoleId, this.ItemData.ItemId))
@@ -268,26 +268,26 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 				base.GetText(2).SetText(textById, true);
 			}
 
-			// Token: 0x0604F402 RID: 324610 RVA: 0x01531DC3 File Offset: 0x0152FFC3
+			// Token: 0x060459CF RID: 285135 RVA: 0x014EB60F File Offset: 0x014E980F
 			[NullableContext(1)]
 			public void BindOnClickedCallback(Action<int> onItemButtonClicked)
 			{
 				this.OnClickedCallback = onItemButtonClicked;
 			}
 
-			// Token: 0x0604F403 RID: 324611 RVA: 0x01531DCC File Offset: 0x0152FFCC
+			// Token: 0x060459D0 RID: 285136 RVA: 0x014EB618 File Offset: 0x014E9818
 			public override void OnSelected(bool fireEvent)
 			{
 				this.Selected(true, true);
 			}
 
-			// Token: 0x0604F404 RID: 324612 RVA: 0x01531DD6 File Offset: 0x0152FFD6
+			// Token: 0x060459D1 RID: 285137 RVA: 0x014EB622 File Offset: 0x014E9822
 			public override void OnDeselected(bool fireEvent)
 			{
 				this.Selected(false, true);
 			}
 
-			// Token: 0x0604F405 RID: 324613 RVA: 0x01531DE0 File Offset: 0x0152FFE0
+			// Token: 0x060459D2 RID: 285138 RVA: 0x014EB62C File Offset: 0x014E982C
 			private void Selected(bool bSelected, bool fireEvent = true)
 			{
 				UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 				extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 			}
 
-			// Token: 0x0604F406 RID: 324614 RVA: 0x01531E0F File Offset: 0x0153000F
+			// Token: 0x060459D3 RID: 285139 RVA: 0x014EB65B File Offset: 0x014E985B
 			private void OnClick(EToggleState state)
 			{
 				if (this.OnClickedCallback != null)
@@ -308,29 +308,29 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 				}
 			}
 
-			// Token: 0x04037CC7 RID: 228551
+			// Token: 0x040326E4 RID: 206564
 			private ICommonRoleItemData ItemData;
 
-			// Token: 0x04037CC8 RID: 228552
+			// Token: 0x040326E5 RID: 206565
 			private SmallItemGrid ItemGrid;
 
-			// Token: 0x04037CC9 RID: 228553
+			// Token: 0x040326E6 RID: 206566
 			private Action<int> OnClickedCallback;
 
-			// Token: 0x0200D169 RID: 53609
+			// Token: 0x0200BD47 RID: 48455
 			[NullableContext(0)]
 			private class EHelpRoleItemDefine
 			{
-				// Token: 0x0403ED8E RID: 257422
+				// Token: 0x0403A1D6 RID: 238038
 				public const int HelpRoleExtendToggle = 0;
 
-				// Token: 0x0403ED8F RID: 257423
+				// Token: 0x0403A1D7 RID: 238039
 				public const int RoleNameText = 1;
 
-				// Token: 0x0403ED90 RID: 257424
+				// Token: 0x0403A1D8 RID: 238040
 				public const int CommonInfoText = 2;
 
-				// Token: 0x0403ED91 RID: 257425
+				// Token: 0x0403A1D9 RID: 238041
 				public const int ItemGridItem = 3;
 			}
 		}

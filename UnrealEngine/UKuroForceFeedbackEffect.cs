@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001997 RID: 6551
+	// Token: 0x0200044B RID: 1099
 	[UnrealObjectPath("/Script/KuroInput.KuroForceFeedbackEffect")]
-	[UnrealStructLayout(120, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 120)]
+	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 136)]
 	public class UKuroForceFeedbackEffect : UForceFeedbackEffect, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06018551 RID: 99665 RVA: 0x0023E12F File Offset: 0x0023C32F
+		// Token: 0x06006A05 RID: 27141 RVA: 0x0009AA6D File Offset: 0x00098C6D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroForceFeedbackEffect._ClassPtr;
 		}
 
-		// Token: 0x06018552 RID: 99666 RVA: 0x0023E13C File Offset: 0x0023C33C
+		// Token: 0x06006A06 RID: 27142 RVA: 0x0009AA7C File Offset: 0x00098C7C
 		public UKuroForceFeedbackEffect() : this(BuiltinUtils.AllocNativeUObject(UKuroForceFeedbackEffect.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06018553 RID: 99667 RVA: 0x0023E164 File Offset: 0x0023C364
+		// Token: 0x06006A07 RID: 27143 RVA: 0x0009AAA4 File Offset: 0x00098CA4
 		[NullableContext(1)]
 		public UKuroForceFeedbackEffect(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroForceFeedbackEffect.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700611C RID: 24860
-		// (get) Token: 0x06018554 RID: 99668 RVA: 0x0023E197 File Offset: 0x0023C397
-		// (set) Token: 0x06018555 RID: 99669 RVA: 0x0023E1A7 File Offset: 0x0023C3A7
+		// Token: 0x1700150E RID: 5390
+		// (get) Token: 0x06006A08 RID: 27144 RVA: 0x0009AAD7 File Offset: 0x00098CD7
+		// (set) Token: 0x06006A09 RID: 27145 RVA: 0x0009AAE7 File Offset: 0x00098CE7
 		public unsafe float ColdDowm
 		{
 			get
@@ -43,24 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700611D RID: 24861
-		// (get) Token: 0x06018556 RID: 99670 RVA: 0x0023E1B8 File Offset: 0x0023C3B8
-		// (set) Token: 0x06018557 RID: 99671 RVA: 0x0023E1C8 File Offset: 0x0023C3C8
-		public unsafe EKuroForceFeedbackType Type
-		{
-			get
-			{
-				return (EKuroForceFeedbackType)(*(base.NativePtr + (IntPtr)UKuroForceFeedbackEffect.__PropertyOffset_Type));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UKuroForceFeedbackEffect.__PropertyOffset_Type) = (byte)value;
-			}
-		}
-
-		// Token: 0x1700611E RID: 24862
-		// (get) Token: 0x06018558 RID: 99672 RVA: 0x0023E1D9 File Offset: 0x0023C3D9
-		// (set) Token: 0x06018559 RID: 99673 RVA: 0x0023E1E9 File Offset: 0x0023C3E9
+		// Token: 0x1700150F RID: 5391
+		// (get) Token: 0x06006A0A RID: 27146 RVA: 0x0009AAF8 File Offset: 0x00098CF8
+		// (set) Token: 0x06006A0B RID: 27147 RVA: 0x0009AB08 File Offset: 0x00098D08
 		public unsafe int Priority
 		{
 			get
@@ -73,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700611F RID: 24863
-		// (get) Token: 0x0601855A RID: 99674 RVA: 0x0023E1FA File Offset: 0x0023C3FA
-		// (set) Token: 0x0601855B RID: 99675 RVA: 0x0023E20E File Offset: 0x0023C40E
+		// Token: 0x17001510 RID: 5392
+		// (get) Token: 0x06006A0C RID: 27148 RVA: 0x0009AB19 File Offset: 0x00098D19
+		// (set) Token: 0x06006A0D RID: 27149 RVA: 0x0009AB2D File Offset: 0x00098D2D
 		public unsafe FGuid KuroGuid
 		{
 			get
@@ -88,37 +73,52 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601855C RID: 99676 RVA: 0x0023E223 File Offset: 0x0023C423
+		// Token: 0x17001511 RID: 5393
+		// (get) Token: 0x06006A0E RID: 27150 RVA: 0x0009AB42 File Offset: 0x00098D42
+		// (set) Token: 0x06006A0F RID: 27151 RVA: 0x0009AB52 File Offset: 0x00098D52
+		public unsafe bool bUseCurveSynthHaptic
+		{
+			get
+			{
+				return *(base.NativePtr + (IntPtr)UKuroForceFeedbackEffect.__PropertyOffset_bUseCurveSynthHaptic) != 0;
+			}
+			set
+			{
+				*(base.NativePtr + (IntPtr)UKuroForceFeedbackEffect.__PropertyOffset_bUseCurveSynthHaptic) = (value ? 1 : 0);
+			}
+		}
+
+		// Token: 0x06006A10 RID: 27152 RVA: 0x0009AB63 File Offset: 0x00098D63
 		static UKuroForceFeedbackEffect()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroInput.KuroForceFeedbackEffect");
 		}
 
-		// Token: 0x0601855D RID: 99677 RVA: 0x0023E231 File Offset: 0x0023C431
+		// Token: 0x06006A11 RID: 27153 RVA: 0x0009AB71 File Offset: 0x00098D71
 		protected UKuroForceFeedbackEffect(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D295 RID: 53909
+		// Token: 0x04002D01 RID: 11521
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroInput.KuroForceFeedbackEffect";
 
-		// Token: 0x0400D296 RID: 53910
+		// Token: 0x04002D02 RID: 11522
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D297 RID: 53911
+		// Token: 0x04002D03 RID: 11523
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400D298 RID: 53912
+		// Token: 0x04002D04 RID: 11524
 		internal static int __PropertyOffset_ColdDowm;
 
-		// Token: 0x0400D299 RID: 53913
-		internal static int __PropertyOffset_Type;
-
-		// Token: 0x0400D29A RID: 53914
+		// Token: 0x04002D05 RID: 11525
 		internal static int __PropertyOffset_Priority;
 
-		// Token: 0x0400D29B RID: 53915
+		// Token: 0x04002D06 RID: 11526
 		internal static int __PropertyOffset_KuroGuid;
+
+		// Token: 0x04002D07 RID: 11527
+		internal static int __PropertyOffset_bUseCurveSynthHaptic;
 	}
 }

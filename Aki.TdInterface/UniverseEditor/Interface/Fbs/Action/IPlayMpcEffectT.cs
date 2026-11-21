@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D30 RID: 27952
+	// Token: 0x020074AB RID: 29867
 	public class IPlayMpcEffectT
 	{
-		// Token: 0x1700D043 RID: 53315
-		// (get) Token: 0x0603151F RID: 202015 RVA: 0x006B08F5 File Offset: 0x006AEAF5
-		// (set) Token: 0x06031520 RID: 202016 RVA: 0x006B08FD File Offset: 0x006AEAFD
+		// Token: 0x1700DB8B RID: 56203
+		// (get) Token: 0x0603451B RID: 214299 RVA: 0x0070BFDD File Offset: 0x0070A1DD
+		// (set) Token: 0x0603451C RID: 214300 RVA: 0x0070BFE5 File Offset: 0x0070A1E5
 		public EEffectType Type { get; set; }
 
-		// Token: 0x1700D044 RID: 53316
-		// (get) Token: 0x06031521 RID: 202017 RVA: 0x006B0906 File Offset: 0x006AEB06
-		// (set) Token: 0x06031522 RID: 202018 RVA: 0x006B090E File Offset: 0x006AEB0E
+		// Token: 0x1700DB8C RID: 56204
+		// (get) Token: 0x0603451D RID: 214301 RVA: 0x0070BFEE File Offset: 0x0070A1EE
+		// (set) Token: 0x0603451E RID: 214302 RVA: 0x0070BFF6 File Offset: 0x0070A1F6
 		public string Path { get; set; }
 
-		// Token: 0x1700D045 RID: 53317
-		// (get) Token: 0x06031523 RID: 202019 RVA: 0x006B0917 File Offset: 0x006AEB17
-		// (set) Token: 0x06031524 RID: 202020 RVA: 0x006B091F File Offset: 0x006AEB1F
+		// Token: 0x1700DB8D RID: 56205
+		// (get) Token: 0x0603451F RID: 214303 RVA: 0x0070BFFF File Offset: 0x0070A1FF
+		// (set) Token: 0x06034520 RID: 214304 RVA: 0x0070C007 File Offset: 0x0070A207
 		public TPos2Union Pos2 { get; set; }
 
-		// Token: 0x1700D046 RID: 53318
-		// (get) Token: 0x06031525 RID: 202021 RVA: 0x006B0928 File Offset: 0x006AEB28
-		// (set) Token: 0x06031526 RID: 202022 RVA: 0x006B0930 File Offset: 0x006AEB30
+		// Token: 0x1700DB8E RID: 56206
+		// (get) Token: 0x06034521 RID: 214305 RVA: 0x0070C010 File Offset: 0x0070A210
+		// (set) Token: 0x06034522 RID: 214306 RVA: 0x0070C018 File Offset: 0x0070A218
 		public List<IPostProcessVolumeCenterPositionT> Params { get; set; }
 
-		// Token: 0x06031527 RID: 202023 RVA: 0x006B0939 File Offset: 0x006AEB39
+		// Token: 0x06034523 RID: 214307 RVA: 0x0070C021 File Offset: 0x0070A221
 		public IPlayMpcEffectT()
 		{
 			this.Type = EEffectType.Effect;

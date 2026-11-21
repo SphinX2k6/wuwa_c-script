@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066C6 RID: 26310
+	// Token: 0x02006D40 RID: 27968
 	public struct IEnterOrbitalCameraType : IFlatbufferObject
 	{
-		// Token: 0x1700C380 RID: 50048
-		// (get) Token: 0x0602DBD0 RID: 187344 RVA: 0x00641D0C File Offset: 0x0063FF0C
+		// Token: 0x1700CD31 RID: 52529
+		// (get) Token: 0x060303ED RID: 197613 RVA: 0x0068EFC0 File Offset: 0x0068D1C0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DBD1 RID: 187345 RVA: 0x00641D19 File Offset: 0x0063FF19
+		// Token: 0x060303EE RID: 197614 RVA: 0x0068EFCD File Offset: 0x0068D1CD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DBD2 RID: 187346 RVA: 0x00641D20 File Offset: 0x0063FF20
+		// Token: 0x060303EF RID: 197615 RVA: 0x0068EFD4 File Offset: 0x0068D1D4
 		public static IEnterOrbitalCameraType GetRootAsIEnterOrbitalCameraType(ByteBuffer _bb)
 		{
 			return IEnterOrbitalCameraType.GetRootAsIEnterOrbitalCameraType(_bb, default(IEnterOrbitalCameraType));
 		}
 
-		// Token: 0x0602DBD3 RID: 187347 RVA: 0x00641D3C File Offset: 0x0063FF3C
+		// Token: 0x060303F0 RID: 197616 RVA: 0x0068EFF0 File Offset: 0x0068D1F0
 		public static IEnterOrbitalCameraType GetRootAsIEnterOrbitalCameraType(ByteBuffer _bb, IEnterOrbitalCameraType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DBD4 RID: 187348 RVA: 0x00641D59 File Offset: 0x0063FF59
+		// Token: 0x060303F1 RID: 197617 RVA: 0x0068F00D File Offset: 0x0068D20D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DBD5 RID: 187349 RVA: 0x00641D68 File Offset: 0x0063FF68
+		// Token: 0x060303F2 RID: 197618 RVA: 0x0068F01C File Offset: 0x0068D21C
 		public IEnterOrbitalCameraType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C381 RID: 50049
-		// (get) Token: 0x0602DBD6 RID: 187350 RVA: 0x00641D78 File Offset: 0x0063FF78
+		// Token: 0x1700CD32 RID: 52530
+		// (get) Token: 0x060303F3 RID: 197619 RVA: 0x0068F02C File Offset: 0x0068D22C
 		public EEnterOrbitalCameraType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DBD7 RID: 187351 RVA: 0x00641DB4 File Offset: 0x0063FFB4
+		// Token: 0x060303F4 RID: 197620 RVA: 0x0068F068 File Offset: 0x0068D268
 		public static Offset<IEnterOrbitalCameraType> CreateIEnterOrbitalCameraType(FlatBufferBuilder builder, EEnterOrbitalCameraType Type = EEnterOrbitalCameraType.ControlByMove)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnterOrbitalCameraType.EndIEnterOrbitalCameraType(builder);
 		}
 
-		// Token: 0x0602DBD8 RID: 187352 RVA: 0x00641DCA File Offset: 0x0063FFCA
+		// Token: 0x060303F5 RID: 197621 RVA: 0x0068F07E File Offset: 0x0068D27E
 		public static void StartIEnterOrbitalCameraType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602DBD9 RID: 187353 RVA: 0x00641DD3 File Offset: 0x0063FFD3
+		// Token: 0x060303F6 RID: 197622 RVA: 0x0068F087 File Offset: 0x0068D287
 		public static void AddType(FlatBufferBuilder builder, EEnterOrbitalCameraType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602DBDA RID: 187354 RVA: 0x00641DDE File Offset: 0x0063FFDE
+		// Token: 0x060303F7 RID: 197623 RVA: 0x0068F092 File Offset: 0x0068D292
 		public static Offset<IEnterOrbitalCameraType> EndIEnterOrbitalCameraType(FlatBufferBuilder builder)
 		{
 			return new Offset<IEnterOrbitalCameraType>(builder.EndTable());
 		}
 
-		// Token: 0x0602DBDB RID: 187355 RVA: 0x00641DEC File Offset: 0x0063FFEC
+		// Token: 0x060303F8 RID: 197624 RVA: 0x0068F0A0 File Offset: 0x0068D2A0
 		public IEnterOrbitalCameraTypeT UnPack()
 		{
 			IEnterOrbitalCameraTypeT enterOrbitalCameraTypeT = new IEnterOrbitalCameraTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return enterOrbitalCameraTypeT;
 		}
 
-		// Token: 0x0602DBDC RID: 187356 RVA: 0x00641E07 File Offset: 0x00640007
+		// Token: 0x060303F9 RID: 197625 RVA: 0x0068F0BB File Offset: 0x0068D2BB
 		public void UnPackTo(IEnterOrbitalCameraTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602DBDD RID: 187357 RVA: 0x00641E18 File Offset: 0x00640018
+		// Token: 0x060303FA RID: 197626 RVA: 0x0068F0CC File Offset: 0x0068D2CC
 		public static Offset<IEnterOrbitalCameraType> Pack(FlatBufferBuilder builder, IEnterOrbitalCameraTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnterOrbitalCameraType.CreateIEnterOrbitalCameraType(builder, _o.Type);
 		}
 
-		// Token: 0x04010D8F RID: 69007
+		// Token: 0x04011BB5 RID: 72629
 		private Table __p;
 	}
 }

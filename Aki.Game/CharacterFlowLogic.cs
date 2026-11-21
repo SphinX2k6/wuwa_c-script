@@ -9,14 +9,14 @@ using CSharpScript.Game.Module.Area;
 using CSharpScript.Game.Module.Plot.Flow;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x020030A4 RID: 12452
+// Token: 0x020025FB RID: 9723
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterFlowLogic
 {
-	// Token: 0x170024A7 RID: 9383
-	// (get) Token: 0x0601AAED RID: 109293 RVA: 0x0072FCAD File Offset: 0x0072DEAD
-	// (set) Token: 0x0601AAEE RID: 109294 RVA: 0x0072FCB5 File Offset: 0x0072DEB5
+	// Token: 0x17002629 RID: 9769
+	// (get) Token: 0x060184FA RID: 99578 RVA: 0x0075515F File Offset: 0x0075335F
+	// (set) Token: 0x060184FB RID: 99579 RVA: 0x00755167 File Offset: 0x00753367
 	protected bool IsExecuteFlowEnd
 	{
 		get
@@ -39,14 +39,14 @@ public class CharacterFlowLogic
 		}
 	}
 
-	// Token: 0x0601AAEF RID: 109295 RVA: 0x0072FCDC File Offset: 0x0072DEDC
+	// Token: 0x060184FC RID: 99580 RVA: 0x0075518E File Offset: 0x0075338E
 	public bool IsShowDialogue()
 	{
 		return !this.IsExecuteFlowEnd && this.EnableUpdate && this.WaitSecondsRemain > 0.0 && !this.IsWaitForDialogueUi;
 	}
 
-	// Token: 0x170024A8 RID: 9384
-	// (get) Token: 0x0601AAF0 RID: 109296 RVA: 0x0072FD0A File Offset: 0x0072DF0A
+	// Token: 0x1700262A RID: 9770
+	// (get) Token: 0x060184FD RID: 99581 RVA: 0x007551BC File Offset: 0x007533BC
 	public bool IsPlaying
 	{
 		get
@@ -55,7 +55,7 @@ public class CharacterFlowLogic
 		}
 	}
 
-	// Token: 0x0601AAF1 RID: 109297 RVA: 0x0072FD18 File Offset: 0x0072DF18
+	// Token: 0x060184FE RID: 99582 RVA: 0x007551C8 File Offset: 0x007533C8
 	public CharacterFlowLogic(BaseActorComponent actorComp, BubbleComponent bubbleData)
 	{
 		this.ActorComp = actorComp;
@@ -67,11 +67,12 @@ public class CharacterFlowLogic
 			this.EntityList = bubbleData.NpcIds;
 			this.FlowInfoList = bubbleData.Flows;
 			this.StaticIsAudioOccludedByScene = bubbleData.IsAudioOccludedByScene;
+			this.StaticIsPlayMouthAnim = bubbleData.IsPlayMouthAnim;
 		}
 	}
 
-	// Token: 0x170024A9 RID: 9385
-	// (get) Token: 0x0601AAF2 RID: 109298 RVA: 0x0072FDBC File Offset: 0x0072DFBC
+	// Token: 0x1700262B RID: 9771
+	// (get) Token: 0x060184FF RID: 99583 RVA: 0x00755278 File Offset: 0x00753478
 	protected bool IsAudioOccludedByScene
 	{
 		get
@@ -86,7 +87,23 @@ public class CharacterFlowLogic
 		}
 	}
 
-	// Token: 0x0601AAF3 RID: 109299 RVA: 0x0072FE00 File Offset: 0x0072E000
+	// Token: 0x1700262C RID: 9772
+	// (get) Token: 0x06018500 RID: 99584 RVA: 0x007552BC File Offset: 0x007534BC
+	protected bool IsPlayMouthAnim
+	{
+		get
+		{
+			AddPlayBubble dynamicFlowData = this.DynamicFlowData;
+			bool? flag = (dynamicFlowData != null) ? dynamicFlowData.IsPlayMouthAnim : null;
+			if (flag == null)
+			{
+				return this.StaticIsPlayMouthAnim.GetValueOrDefault();
+			}
+			return flag.GetValueOrDefault();
+		}
+	}
+
+	// Token: 0x06018501 RID: 99585 RVA: 0x00755300 File Offset: 0x00753500
 	public virtual void Tick(float deltaSeconds)
 	{
 		if (!this.EnableUpdate)
@@ -117,14 +134,14 @@ public class CharacterFlowLogic
 		}
 	}
 
-	// Token: 0x0601AAF4 RID: 109300 RVA: 0x0072FE6C File Offset: 0x0072E06C
+	// Token: 0x06018502 RID: 99586 RVA: 0x0075536C File Offset: 0x0075356C
 	public void StartFlow()
 	{
 		this.FindRandomFlow();
 		this.PlayFlow();
 	}
 
-	// Token: 0x0601AAF5 RID: 109301 RVA: 0x0072FE7C File Offset: 0x0072E07C
+	// Token: 0x06018503 RID: 99587 RVA: 0x0075537C File Offset: 0x0075357C
 	public void StopFlow()
 	{
 		this.IsExecuteFlowEnd = true;
@@ -165,7 +182,7 @@ public class CharacterFlowLogic
 		component2.RemoveFlowActions();
 	}
 
-	// Token: 0x0601AAF6 RID: 109302 RVA: 0x0072FF1C File Offset: 0x0072E11C
+	// Token: 0x06018504 RID: 99588 RVA: 0x0075541C File Offset: 0x0075361C
 	protected void PlayFlow()
 	{
 		if (this.CurrentFlowInfo == null && this.DynamicFlowData == null)
@@ -212,7 +229,7 @@ public class CharacterFlowLogic
 		this.HandleFlowEnd();
 	}
 
-	// Token: 0x0601AAF7 RID: 109303 RVA: 0x0073002C File Offset: 0x0072E22C
+	// Token: 0x06018505 RID: 99589 RVA: 0x0075552C File Offset: 0x0075372C
 	protected unsafe virtual void PlayTalk(int id)
 	{
 		this.CurrentTalkId = id;
@@ -305,7 +322,7 @@ public class CharacterFlowLogic
 		this.PlayTalk(id + 1);
 	}
 
-	// Token: 0x0601AAF8 RID: 109304 RVA: 0x00730488 File Offset: 0x0072E688
+	// Token: 0x06018506 RID: 99590 RVA: 0x00755988 File Offset: 0x00753B88
 	protected virtual bool HandleTalkAction(Entity entity, ITalkItem config)
 	{
 		if (entity == null)
@@ -329,7 +346,7 @@ public class CharacterFlowLogic
 		return result;
 	}
 
-	// Token: 0x0601AAF9 RID: 109305 RVA: 0x00730504 File Offset: 0x0072E704
+	// Token: 0x06018507 RID: 99591 RVA: 0x00755A04 File Offset: 0x00753C04
 	protected void HandleFlowEnd()
 	{
 		this.IsExecuteFlowEnd = true;
@@ -360,7 +377,7 @@ public class CharacterFlowLogic
 		this.ResetFlowState();
 	}
 
-	// Token: 0x0601AAFA RID: 109306 RVA: 0x007305DC File Offset: 0x0072E7DC
+	// Token: 0x06018508 RID: 99592 RVA: 0x00755ADC File Offset: 0x00753CDC
 	protected virtual void ResetFlowState()
 	{
 		this.CurrentTalkItems = null;
@@ -369,7 +386,7 @@ public class CharacterFlowLogic
 		this.DynamicFlowData = null;
 	}
 
-	// Token: 0x0601AAFB RID: 109307 RVA: 0x007305FC File Offset: 0x0072E7FC
+	// Token: 0x06018509 RID: 99593 RVA: 0x00755AFC File Offset: 0x00753CFC
 	protected void FindRandomFlow()
 	{
 		if (this.FindDynamicFlow())
@@ -388,19 +405,19 @@ public class CharacterFlowLogic
 		this.CurrentFlowInfo = ObjectUtils.GetRandomArrayItem<IConditionBubbleData>(this.TempFlowInfoList);
 	}
 
-	// Token: 0x0601AAFC RID: 109308 RVA: 0x007306C4 File Offset: 0x0072E8C4
+	// Token: 0x0601850A RID: 99594 RVA: 0x00755BC4 File Offset: 0x00753DC4
 	public void ResetWaitTime()
 	{
 		this.WaitSecondsRemain = 0.0;
 	}
 
-	// Token: 0x0601AAFD RID: 109309 RVA: 0x007306D5 File Offset: 0x0072E8D5
+	// Token: 0x0601850B RID: 99595 RVA: 0x00755BD5 File Offset: 0x00753DD5
 	public bool HasValidFlow()
 	{
 		return this.FlowInfoList.Count > 0;
 	}
 
-	// Token: 0x0601AAFE RID: 109310 RVA: 0x007306E5 File Offset: 0x0072E8E5
+	// Token: 0x0601850C RID: 99596 RVA: 0x00755BE5 File Offset: 0x00753DE5
 	[NullableContext(2)]
 	protected Entity GetEntity(int pbDataId)
 	{
@@ -412,13 +429,13 @@ public class CharacterFlowLogic
 		return entityByPbDataId.Entity;
 	}
 
-	// Token: 0x0601AAFF RID: 109311 RVA: 0x00730700 File Offset: 0x0072E900
+	// Token: 0x0601850D RID: 99597 RVA: 0x00755C00 File Offset: 0x00753E00
 	protected float GetWaitSeconds(ITalkItem config, float offset = 0f)
 	{
 		return config.WaitTime.GetValueOrDefault(3f) + offset;
 	}
 
-	// Token: 0x0601AB00 RID: 109312 RVA: 0x00730722 File Offset: 0x0072E922
+	// Token: 0x0601850E RID: 99598 RVA: 0x00755C22 File Offset: 0x00753E22
 	[NullableContext(2)]
 	protected string GetFlowText(string textId)
 	{
@@ -429,7 +446,7 @@ public class CharacterFlowLogic
 		return null;
 	}
 
-	// Token: 0x0601AB01 RID: 109313 RVA: 0x0073073C File Offset: 0x0072E93C
+	// Token: 0x0601850F RID: 99599 RVA: 0x00755C3C File Offset: 0x00753E3C
 	private void TryToSendLogReport(IBubbleIndex flowIndex)
 	{
 		PlayFlowLogData playFlowLogData = new PlayFlowLogData();
@@ -447,7 +464,7 @@ public class CharacterFlowLogic
 		LogReportController.Instance.LogReport(playFlowLogData);
 	}
 
-	// Token: 0x0601AB02 RID: 109314 RVA: 0x00730816 File Offset: 0x0072EA16
+	// Token: 0x06018510 RID: 99600 RVA: 0x00755D16 File Offset: 0x00753F16
 	public void HideDialogueText()
 	{
 		this.IsWaitForDialogueUi = false;
@@ -459,13 +476,13 @@ public class CharacterFlowLogic
 		headInfoComp.HideDialogueText();
 	}
 
-	// Token: 0x0601AB03 RID: 109315 RVA: 0x0073082F File Offset: 0x0072EA2F
+	// Token: 0x06018511 RID: 99601 RVA: 0x00755D2F File Offset: 0x00753F2F
 	public bool HasDynamicFlow()
 	{
 		return this.DynamicFlowData != null;
 	}
 
-	// Token: 0x0601AB04 RID: 109316 RVA: 0x0073083C File Offset: 0x0072EA3C
+	// Token: 0x06018512 RID: 99602 RVA: 0x00755D3C File Offset: 0x00753F3C
 	protected bool FindDynamicFlow()
 	{
 		DynamicFlowActorInfo dynamicFlowActorInfo = new DynamicFlowActorInfo();
@@ -476,7 +493,7 @@ public class CharacterFlowLogic
 		return dynamicFlowByMasterActorInfo != null;
 	}
 
-	// Token: 0x0601AB05 RID: 109317 RVA: 0x007308A0 File Offset: 0x0072EAA0
+	// Token: 0x06018513 RID: 99603 RVA: 0x00755DA0 File Offset: 0x00753FA0
 	protected bool IsFlowActorsReady()
 	{
 		List<int> list;
@@ -504,40 +521,43 @@ public class CharacterFlowLogic
 		return true;
 	}
 
-	// Token: 0x0400CDD8 RID: 52696
+	// Token: 0x0400D1BB RID: 53691
 	private const float DEFAULT_WAIT_TIME = 3f;
 
-	// Token: 0x0400CDD9 RID: 52697
+	// Token: 0x0400D1BC RID: 53692
 	private const float DEFAULT_LOOP_TIME = 10f;
 
-	// Token: 0x0400CDDA RID: 52698
+	// Token: 0x0400D1BD RID: 53693
 	private readonly int EntityConfigId;
 
-	// Token: 0x0400CDDB RID: 52699
+	// Token: 0x0400D1BE RID: 53694
 	[Nullable(2)]
 	protected readonly BaseActorComponent ActorComp;
 
-	// Token: 0x0400CDDC RID: 52700
+	// Token: 0x0400D1BF RID: 53695
 	[Nullable(2)]
 	protected readonly PawnHeadInfoComponent HeadInfoComp;
 
-	// Token: 0x0400CDDD RID: 52701
+	// Token: 0x0400D1C0 RID: 53696
 	protected readonly List<IConditionBubbleData> FlowInfoList = new List<IConditionBubbleData>();
 
-	// Token: 0x0400CDDE RID: 52702
+	// Token: 0x0400D1C1 RID: 53697
 	protected readonly List<IConditionBubbleData> TempFlowInfoList = new List<IConditionBubbleData>();
 
-	// Token: 0x0400CDDF RID: 52703
+	// Token: 0x0400D1C2 RID: 53698
 	[Nullable(2)]
 	protected IConditionBubbleData CurrentFlowInfo;
 
-	// Token: 0x0400CDE0 RID: 52704
+	// Token: 0x0400D1C3 RID: 53699
 	protected List<int> EntityList = new List<int>();
 
-	// Token: 0x0400CDE1 RID: 52705
+	// Token: 0x0400D1C4 RID: 53700
 	private bool? StaticIsAudioOccludedByScene;
 
-	// Token: 0x0400CDE2 RID: 52706
+	// Token: 0x0400D1C5 RID: 53701
+	private bool? StaticIsPlayMouthAnim;
+
+	// Token: 0x0400D1C6 RID: 53702
 	[Nullable(new byte[]
 	{
 		2,
@@ -545,25 +565,25 @@ public class CharacterFlowLogic
 	})]
 	protected List<ITalkItem> CurrentTalkItems;
 
-	// Token: 0x0400CDE3 RID: 52707
+	// Token: 0x0400D1C7 RID: 53703
 	protected int CurrentTalkId;
 
-	// Token: 0x0400CDE4 RID: 52708
+	// Token: 0x0400D1C8 RID: 53704
 	[Nullable(2)]
 	protected AddPlayBubble DynamicFlowData;
 
-	// Token: 0x0400CDE5 RID: 52709
+	// Token: 0x0400D1C9 RID: 53705
 	public bool IsPause = true;
 
-	// Token: 0x0400CDE6 RID: 52710
+	// Token: 0x0400D1CA RID: 53706
 	public bool EnableUpdate;
 
-	// Token: 0x0400CDE7 RID: 52711
+	// Token: 0x0400D1CB RID: 53707
 	protected bool IsExecuteFlowEndInternal = true;
 
-	// Token: 0x0400CDE8 RID: 52712
+	// Token: 0x0400D1CC RID: 53708
 	protected double WaitSecondsRemain;
 
-	// Token: 0x0400CDE9 RID: 52713
+	// Token: 0x0400D1CD RID: 53709
 	protected bool IsWaitForDialogueUi;
 }

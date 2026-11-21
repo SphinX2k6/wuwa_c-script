@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module
 {
-	// Token: 0x020046F3 RID: 18163
+	// Token: 0x02003623 RID: 13859
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneBattleInteractEffect
 	{
-		// Token: 0x0602F7FE RID: 194558 RVA: 0x00B02A4C File Offset: 0x00B00C4C
+		// Token: 0x06023FC4 RID: 147396 RVA: 0x00A3271C File Offset: 0x00A3091C
 		public void Init(BP_SceneBattleInteract_C dataAsset, float radius = 0f, float halfHeight = 0f)
 		{
 			this.DataAsset = dataAsset;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module
 			this.InitTraceInfo();
 		}
 
-		// Token: 0x0602F7FF RID: 194559 RVA: 0x00B02AED File Offset: 0x00B00CED
+		// Token: 0x06023FC5 RID: 147397 RVA: 0x00A327BD File Offset: 0x00A309BD
 		public void SetDispatchWeaponEventEnable(bool enable)
 		{
 			BP_SceneBattleInteract_C dataAsset = this.DataAsset;
@@ -36,27 +36,27 @@ namespace CSharpScript.Game.Module
 			this.WeaponEventEnable = enable;
 		}
 
-		// Token: 0x0602F800 RID: 194560 RVA: 0x00B02B0B File Offset: 0x00B00D0B
+		// Token: 0x06023FC6 RID: 147398 RVA: 0x00A327DB File Offset: 0x00A309DB
 		public void BindEntityId(int entityId)
 		{
 			this.EntityId = entityId;
 		}
 
-		// Token: 0x0602F801 RID: 194561 RVA: 0x00B02B14 File Offset: 0x00B00D14
+		// Token: 0x06023FC7 RID: 147399 RVA: 0x00A327E4 File Offset: 0x00A309E4
 		public void SetUpdateLocationFunc(Action<Vector, FVectorDouble?> updateLocationFunc)
 		{
 			this.LocationUpdateType = ESceneBattleInteractLocation.Default;
 			this.UpdateLocationFunc = updateLocationFunc;
 		}
 
-		// Token: 0x0602F802 RID: 194562 RVA: 0x00B02B24 File Offset: 0x00B00D24
+		// Token: 0x06023FC8 RID: 147400 RVA: 0x00A327F4 File Offset: 0x00A309F4
 		public void SetUpdateLocationActor(AActor actor)
 		{
 			this.LocationUpdateType = ESceneBattleInteractLocation.Actor;
 			this.Actor = actor;
 		}
 
-		// Token: 0x0602F803 RID: 194563 RVA: 0x00B02B34 File Offset: 0x00B00D34
+		// Token: 0x06023FC9 RID: 147401 RVA: 0x00A32804 File Offset: 0x00A30A04
 		public void SetUpdateLocationSocket(UMeshComponent meshComp, FName socketName)
 		{
 			this.LocationUpdateType = ESceneBattleInteractLocation.Socket;
@@ -64,19 +64,19 @@ namespace CSharpScript.Game.Module
 			this.SocketName = socketName;
 		}
 
-		// Token: 0x0602F804 RID: 194564 RVA: 0x00B02B4B File Offset: 0x00B00D4B
+		// Token: 0x06023FCA RID: 147402 RVA: 0x00A3281B File Offset: 0x00A30A1B
 		public void SetDownVector(Vector downVector)
 		{
 			this.DownVector.FromUeVector(downVector);
 		}
 
-		// Token: 0x0602F805 RID: 194565 RVA: 0x00B02B59 File Offset: 0x00B00D59
+		// Token: 0x06023FCB RID: 147403 RVA: 0x00A32829 File Offset: 0x00A30A29
 		public void SetIsCommonWeapon(bool isCommonWeapon)
 		{
 			this.IsCommonWeapon = isCommonWeapon;
 		}
 
-		// Token: 0x0602F806 RID: 194566 RVA: 0x00B02B64 File Offset: 0x00B00D64
+		// Token: 0x06023FCC RID: 147404 RVA: 0x00A32834 File Offset: 0x00A30A34
 		private void InitTraceInfo()
 		{
 			this.ShapeType = (SceneBattleInteractEffect.EShapeType)this.DataAsset.ShapeType;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module
 			}
 		}
 
-		// Token: 0x0602F807 RID: 194567 RVA: 0x00B02C70 File Offset: 0x00B00E70
+		// Token: 0x06023FCD RID: 147405 RVA: 0x00A32940 File Offset: 0x00A30B40
 		public void OnTick(float delta)
 		{
 			if (this.IsFinish || !this.Enable)
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module
 			}
 		}
 
-		// Token: 0x0602F808 RID: 194568 RVA: 0x00B03004 File Offset: 0x00B01204
+		// Token: 0x06023FCE RID: 147406 RVA: 0x00A32CD4 File Offset: 0x00A30ED4
 		private void TraceHitResultHandle(bool result, UTraceBaseElement element, double frame, double index)
 		{
 			if (this.DataAsset == null)
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module
 			}
 		}
 
-		// Token: 0x0602F809 RID: 194569 RVA: 0x00B0316C File Offset: 0x00B0136C
+		// Token: 0x06023FCF RID: 147407 RVA: 0x00A32E3C File Offset: 0x00A3103C
 		private void GetLocation(Vector @out)
 		{
 			switch (this.LocationUpdateType)
@@ -340,7 +340,7 @@ namespace CSharpScript.Game.Module
 			}
 		}
 
-		// Token: 0x0602F80A RID: 194570 RVA: 0x00B0328A File Offset: 0x00B0148A
+		// Token: 0x06023FD0 RID: 147408 RVA: 0x00A32F5A File Offset: 0x00A3115A
 		public void SetEnable(bool enable, float limitTime = 0f)
 		{
 			this.EnableLimitTime = limitTime;
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.Module
 			this.NextTickTime = -1f;
 		}
 
-		// Token: 0x0602F80B RID: 194571 RVA: 0x00B032AF File Offset: 0x00B014AF
+		// Token: 0x06023FD1 RID: 147409 RVA: 0x00A32F7F File Offset: 0x00A3117F
 		public void SetIgnoreCommonWeapon(bool ignoreCommonWeapon)
 		{
 			if (this.IgnoreCommonWeapon == ignoreCommonWeapon)
@@ -363,13 +363,13 @@ namespace CSharpScript.Game.Module
 			SceneBattleInteractModel.Instance.RefreshIgnoreCommonWeapon(ignoreCommonWeapon);
 		}
 
-		// Token: 0x0602F80C RID: 194572 RVA: 0x00B032CD File Offset: 0x00B014CD
+		// Token: 0x06023FD2 RID: 147410 RVA: 0x00A32F9D File Offset: 0x00A3119D
 		public bool GetIgnoreCommonWeapon()
 		{
 			return this.IgnoreCommonWeapon;
 		}
 
-		// Token: 0x0602F80D RID: 194573 RVA: 0x00B032D8 File Offset: 0x00B014D8
+		// Token: 0x06023FD3 RID: 147411 RVA: 0x00A32FA8 File Offset: 0x00A311A8
 		public void SetDebug(int debugMode)
 		{
 			if (this.TraceElement == null)
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.Module
 			}
 		}
 
-		// Token: 0x0602F80E RID: 194574 RVA: 0x00B03383 File Offset: 0x00B01583
+		// Token: 0x06023FD4 RID: 147412 RVA: 0x00A33053 File Offset: 0x00A31253
 		private void DrawDebugPoint(Vector point, FLinearColor color)
 		{
 			if (SceneBattleInteractModel.Instance.Debug <= 0)
@@ -407,7 +407,7 @@ namespace CSharpScript.Game.Module
 			UKismetSystemLibrary.D_DrawDebugSphere(GlobalData.GameInstance, point.ToUeVector(false), 5f, 12, new FLinearColor?(color), 1f, 0f);
 		}
 
-		// Token: 0x0602F80F RID: 194575 RVA: 0x00B033BC File Offset: 0x00B015BC
+		// Token: 0x06023FD5 RID: 147413 RVA: 0x00A3308C File Offset: 0x00A3128C
 		public void Destroy()
 		{
 			this.SetIgnoreCommonWeapon(false);
@@ -438,77 +438,77 @@ namespace CSharpScript.Game.Module
 			}
 		}
 
-		// Token: 0x04019A84 RID: 105092
+		// Token: 0x04014133 RID: 82227
 		public int Id;
 
-		// Token: 0x04019A85 RID: 105093
+		// Token: 0x04014134 RID: 82228
 		private bool Enable;
 
-		// Token: 0x04019A86 RID: 105094
+		// Token: 0x04014135 RID: 82229
 		private int EntityId;
 
-		// Token: 0x04019A87 RID: 105095
+		// Token: 0x04014136 RID: 82230
 		private float EnableLimitTime;
 
-		// Token: 0x04019A88 RID: 105096
+		// Token: 0x04014137 RID: 82231
 		private float NextTickTime = -1f;
 
-		// Token: 0x04019A89 RID: 105097
+		// Token: 0x04014138 RID: 82232
 		private int TickInterval;
 
-		// Token: 0x04019A8A RID: 105098
+		// Token: 0x04014139 RID: 82233
 		private bool WeaponEventEnable;
 
-		// Token: 0x04019A8B RID: 105099
+		// Token: 0x0401413A RID: 82234
 		[Nullable(2)]
 		private BP_SceneBattleInteract_C DataAsset;
 
-		// Token: 0x04019A8C RID: 105100
+		// Token: 0x0401413B RID: 82235
 		private float Radius;
 
-		// Token: 0x04019A8D RID: 105101
+		// Token: 0x0401413C RID: 82236
 		private float HalfHeight;
 
-		// Token: 0x04019A8E RID: 105102
+		// Token: 0x0401413D RID: 82237
 		private ESceneBattleInteractLocation LocationUpdateType;
 
-		// Token: 0x04019A8F RID: 105103
+		// Token: 0x0401413E RID: 82238
 		[Nullable(2)]
 		private AActor Actor;
 
-		// Token: 0x04019A90 RID: 105104
+		// Token: 0x0401413F RID: 82239
 		[Nullable(2)]
 		private UMeshComponent MeshComp;
 
-		// Token: 0x04019A91 RID: 105105
+		// Token: 0x04014140 RID: 82240
 		private FName SocketName = FNameUtil.EMPTY;
 
-		// Token: 0x04019A92 RID: 105106
+		// Token: 0x04014141 RID: 82241
 		[Nullable(2)]
 		private UTraceBaseElement TraceElement;
 
-		// Token: 0x04019A93 RID: 105107
+		// Token: 0x04014142 RID: 82242
 		private SceneBattleInteractEffect.EShapeType ShapeType;
 
-		// Token: 0x04019A94 RID: 105108
+		// Token: 0x04014143 RID: 82243
 		private bool ZeroOffset = true;
 
-		// Token: 0x04019A95 RID: 105109
+		// Token: 0x04014144 RID: 82244
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x04019A96 RID: 105110
+		// Token: 0x04014145 RID: 82245
 		private readonly Vector DownVector = Vector.Create(0.0, 0.0, -1.0);
 
-		// Token: 0x04019A97 RID: 105111
+		// Token: 0x04014146 RID: 82246
 		private bool IsFinish;
 
-		// Token: 0x04019A98 RID: 105112
+		// Token: 0x04014147 RID: 82247
 		private readonly Vector CurLocation = Vector.Create();
 
-		// Token: 0x04019A99 RID: 105113
+		// Token: 0x04014148 RID: 82248
 		private readonly Vector LastLocation = Vector.Create();
 
-		// Token: 0x04019A9A RID: 105114
+		// Token: 0x04014149 RID: 82249
 		[Nullable(new byte[]
 		{
 			2,
@@ -516,42 +516,42 @@ namespace CSharpScript.Game.Module
 		})]
 		private Action<Vector, FVectorDouble?> UpdateLocationFunc;
 
-		// Token: 0x04019A9B RID: 105115
+		// Token: 0x0401414A RID: 82250
 		private bool NeedTrace;
 
-		// Token: 0x04019A9C RID: 105116
+		// Token: 0x0401414B RID: 82251
 		private bool TraceNeedLastLocation;
 
-		// Token: 0x04019A9D RID: 105117
+		// Token: 0x0401414C RID: 82252
 		private double TraceFrame;
 
-		// Token: 0x04019A9E RID: 105118
+		// Token: 0x0401414D RID: 82253
 		private double TraceIndex;
 
-		// Token: 0x04019A9F RID: 105119
+		// Token: 0x0401414E RID: 82254
 		[Nullable(2)]
 		private FAsyncTraceDelegate TraceDelegate;
 
-		// Token: 0x04019AA0 RID: 105120
+		// Token: 0x0401414F RID: 82255
 		private bool IgnoreCommonWeapon;
 
-		// Token: 0x04019AA1 RID: 105121
+		// Token: 0x04014150 RID: 82256
 		private bool IsCommonWeapon;
 
-		// Token: 0x04019AA2 RID: 105122
+		// Token: 0x04014151 RID: 82257
 		private const string PROFILE_BATLLE_INTERACT_WATER_TRACE = "BattleInteractWaterTrace";
 
-		// Token: 0x0200A94B RID: 43339
+		// Token: 0x02009306 RID: 37638
 		[NullableContext(0)]
 		private enum EShapeType
 		{
-			// Token: 0x04033893 RID: 211091
+			// Token: 0x0402E026 RID: 188454
 			None = -1,
-			// Token: 0x04033894 RID: 211092
+			// Token: 0x0402E027 RID: 188455
 			Sphere,
-			// Token: 0x04033895 RID: 211093
+			// Token: 0x0402E028 RID: 188456
 			Capsule,
-			// Token: 0x04033896 RID: 211094
+			// Token: 0x0402E029 RID: 188457
 			LineDown
 		}
 	}

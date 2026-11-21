@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042C3 RID: 17091
+	// Token: 0x0200471F RID: 18207
 	public enum TCommonEventType : byte
 	{
-		// Token: 0x0400BFC8 RID: 49096
+		// Token: 0x0400C9D5 RID: 51669
 		NONE,
-		// Token: 0x0400BFC9 RID: 49097
+		// Token: 0x0400C9D6 RID: 51670
 		ICommonEventEntityStateChange,
-		// Token: 0x0400BFCA RID: 49098
+		// Token: 0x0400C9D7 RID: 51671
 		ICommonEventVarValueChange
 	}
 }

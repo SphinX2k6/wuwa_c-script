@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C25 RID: 27685
+	// Token: 0x0200738C RID: 29580
 	public class IOpenQuickHackCameraFovConfigT
 	{
-		// Token: 0x1700CDE9 RID: 52713
-		// (get) Token: 0x06030B11 RID: 199441 RVA: 0x0069C23E File Offset: 0x0069A43E
-		// (set) Token: 0x06030B12 RID: 199442 RVA: 0x0069C246 File Offset: 0x0069A446
+		// Token: 0x1700D904 RID: 55556
+		// (get) Token: 0x06033A65 RID: 211557 RVA: 0x006F653A File Offset: 0x006F473A
+		// (set) Token: 0x06033A66 RID: 211558 RVA: 0x006F6542 File Offset: 0x006F4742
 		public int DefaultValue { get; set; }
 
-		// Token: 0x1700CDEA RID: 52714
-		// (get) Token: 0x06030B13 RID: 199443 RVA: 0x0069C24F File Offset: 0x0069A44F
-		// (set) Token: 0x06030B14 RID: 199444 RVA: 0x0069C257 File Offset: 0x0069A457
+		// Token: 0x1700D905 RID: 55557
+		// (get) Token: 0x06033A67 RID: 211559 RVA: 0x006F654B File Offset: 0x006F474B
+		// (set) Token: 0x06033A68 RID: 211560 RVA: 0x006F6553 File Offset: 0x006F4753
 		public int Min { get; set; }
 
-		// Token: 0x1700CDEB RID: 52715
-		// (get) Token: 0x06030B15 RID: 199445 RVA: 0x0069C260 File Offset: 0x0069A460
-		// (set) Token: 0x06030B16 RID: 199446 RVA: 0x0069C268 File Offset: 0x0069A468
+		// Token: 0x1700D906 RID: 55558
+		// (get) Token: 0x06033A69 RID: 211561 RVA: 0x006F655C File Offset: 0x006F475C
+		// (set) Token: 0x06033A6A RID: 211562 RVA: 0x006F6564 File Offset: 0x006F4764
 		public int Max { get; set; }
 
-		// Token: 0x06030B17 RID: 199447 RVA: 0x0069C271 File Offset: 0x0069A471
+		// Token: 0x06033A6B RID: 211563 RVA: 0x006F656D File Offset: 0x006F476D
 		public IOpenQuickHackCameraFovConfigT()
 		{
 			this.DefaultValue = 0;

@@ -5,12 +5,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 {
-	// Token: 0x02005033 RID: 20531
+	// Token: 0x02004000 RID: 16384
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SeqBaseAssistant : ControllerAssistantBase
 	{
-		// Token: 0x060348C6 RID: 215238 RVA: 0x00C65AF7 File Offset: 0x00C63CF7
+		// Token: 0x06029784 RID: 169860 RVA: 0x00BB1E56 File Offset: 0x00BB0056
 		protected void DoCallback(bool result)
 		{
 			if (this.Callback != null)
@@ -21,17 +21,17 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348C7 RID: 215239 RVA: 0x00C65B14 File Offset: 0x00C63D14
+		// Token: 0x06029785 RID: 169861 RVA: 0x00BB1E73 File Offset: 0x00BB0073
 		public virtual void End()
 		{
 		}
 
-		// Token: 0x060348C8 RID: 215240 RVA: 0x00C65B16 File Offset: 0x00C63D16
+		// Token: 0x06029786 RID: 169862 RVA: 0x00BB1E75 File Offset: 0x00BB0075
 		public virtual void Load(Action<bool> callback = null)
 		{
 		}
 
-		// Token: 0x060348C9 RID: 215241 RVA: 0x00C65B18 File Offset: 0x00C63D18
+		// Token: 0x06029787 RID: 169863 RVA: 0x00BB1E78 File Offset: 0x00BB0078
 		[NullableContext(0)]
 		public virtual UniTask<bool> LoadPromise()
 		{
@@ -43,12 +43,12 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return <LoadPromise>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060348CA RID: 215242 RVA: 0x00C65B5B File Offset: 0x00C63D5B
+		// Token: 0x06029788 RID: 169864 RVA: 0x00BB1EBB File Offset: 0x00BB00BB
 		public virtual void PreAllPlay(Action<bool> callback = null)
 		{
 		}
 
-		// Token: 0x060348CB RID: 215243 RVA: 0x00C65B60 File Offset: 0x00C63D60
+		// Token: 0x06029789 RID: 169865 RVA: 0x00BB1EC0 File Offset: 0x00BB00C0
 		[NullableContext(0)]
 		public virtual UniTask<bool> PreAllPlayPromise()
 		{
@@ -60,27 +60,27 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return <PreAllPlayPromise>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060348CC RID: 215244 RVA: 0x00C65BA3 File Offset: 0x00C63DA3
+		// Token: 0x0602978A RID: 169866 RVA: 0x00BB1F03 File Offset: 0x00BB0103
 		public virtual void PreEachPlay()
 		{
 		}
 
-		// Token: 0x060348CD RID: 215245 RVA: 0x00C65BA5 File Offset: 0x00C63DA5
+		// Token: 0x0602978B RID: 169867 RVA: 0x00BB1F05 File Offset: 0x00BB0105
 		public virtual void EachStop()
 		{
 		}
 
-		// Token: 0x060348CE RID: 215246 RVA: 0x00C65BA7 File Offset: 0x00C63DA7
+		// Token: 0x0602978C RID: 169868 RVA: 0x00BB1F07 File Offset: 0x00BB0107
 		public virtual void CmdShadowUpdate()
 		{
 		}
 
-		// Token: 0x060348CF RID: 215247 RVA: 0x00C65BA9 File Offset: 0x00C63DA9
+		// Token: 0x0602978D RID: 169869 RVA: 0x00BB1F09 File Offset: 0x00BB0109
 		public virtual void AllStop(Action<bool> callback = null)
 		{
 		}
 
-		// Token: 0x060348D0 RID: 215248 RVA: 0x00C65BAC File Offset: 0x00C63DAC
+		// Token: 0x0602978E RID: 169870 RVA: 0x00BB1F0C File Offset: 0x00BB010C
 		[NullableContext(0)]
 		public virtual UniTask<bool> AllStopPromise()
 		{
@@ -92,27 +92,27 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return <AllStopPromise>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060348D1 RID: 215249 RVA: 0x00C65BEF File Offset: 0x00C63DEF
+		// Token: 0x0602978F RID: 169871 RVA: 0x00BB1F4F File Offset: 0x00BB014F
 		public virtual void LoadNecessaryData(Action callback = null)
 		{
 		}
 
-		// Token: 0x060348D2 RID: 215250 RVA: 0x00C65BF1 File Offset: 0x00C63DF1
+		// Token: 0x06029790 RID: 169872 RVA: 0x00BB1F51 File Offset: 0x00BB0151
 		protected override void OnDestroy()
 		{
 		}
 
-		// Token: 0x0401C004 RID: 114692
+		// Token: 0x04016A0F RID: 92687
 		[Nullable(1)]
 		protected SequenceModel Model = SequenceModel.Instance;
 
-		// Token: 0x0401C005 RID: 114693
+		// Token: 0x04016A10 RID: 92688
 		protected bool IsRunning;
 
-		// Token: 0x0401C006 RID: 114694
+		// Token: 0x04016A11 RID: 92689
 		protected Action<bool> Callback;
 
-		// Token: 0x0401C007 RID: 114695
+		// Token: 0x04016A12 RID: 92690
 		protected CustomPromise<bool> Promise;
 	}
 }

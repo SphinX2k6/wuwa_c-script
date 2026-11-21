@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B26 RID: 2854
+	// Token: 0x02000C06 RID: 3078
 	public struct BanInfo : IFlatbufferObject
 	{
-		// Token: 0x17000447 RID: 1095
-		// (get) Token: 0x06004BAD RID: 19373 RVA: 0x001DEE79 File Offset: 0x001DD079
+		// Token: 0x17000487 RID: 1159
+		// (get) Token: 0x0600516F RID: 20847 RVA: 0x001FF291 File Offset: 0x001FD491
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004BAE RID: 19374 RVA: 0x001DEE86 File Offset: 0x001DD086
+		// Token: 0x06005170 RID: 20848 RVA: 0x001FF29E File Offset: 0x001FD49E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004BAF RID: 19375 RVA: 0x001DEE90 File Offset: 0x001DD090
+		// Token: 0x06005171 RID: 20849 RVA: 0x001FF2A8 File Offset: 0x001FD4A8
 		public static BanInfo GetRootAsBanInfo(ByteBuffer _bb)
 		{
 			return BanInfo.GetRootAsBanInfo(_bb, default(BanInfo));
 		}
 
-		// Token: 0x06004BB0 RID: 19376 RVA: 0x001DEEAC File Offset: 0x001DD0AC
+		// Token: 0x06005172 RID: 20850 RVA: 0x001FF2C4 File Offset: 0x001FD4C4
 		public static BanInfo GetRootAsBanInfo(ByteBuffer _bb, BanInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004BB1 RID: 19377 RVA: 0x001DEEC9 File Offset: 0x001DD0C9
+		// Token: 0x06005173 RID: 20851 RVA: 0x001FF2E1 File Offset: 0x001FD4E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004BB2 RID: 19378 RVA: 0x001DEED8 File Offset: 0x001DD0D8
+		// Token: 0x06005174 RID: 20852 RVA: 0x001FF2F0 File Offset: 0x001FD4F0
 		public BanInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000448 RID: 1096
-		// (get) Token: 0x06004BB3 RID: 19379 RVA: 0x001DEEE8 File Offset: 0x001DD0E8
+		// Token: 0x17000488 RID: 1160
+		// (get) Token: 0x06005175 RID: 20853 RVA: 0x001FF300 File Offset: 0x001FD500
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000449 RID: 1097
-		// (get) Token: 0x06004BB4 RID: 19380 RVA: 0x001DEF24 File Offset: 0x001DD124
+		// Token: 0x17000489 RID: 1161
+		// (get) Token: 0x06005176 RID: 20854 RVA: 0x001FF33C File Offset: 0x001FD53C
 		public int BanType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700044A RID: 1098
-		// (get) Token: 0x06004BB5 RID: 19381 RVA: 0x001DEF60 File Offset: 0x001DD160
+		// Token: 0x1700048A RID: 1162
+		// (get) Token: 0x06005177 RID: 20855 RVA: 0x001FF378 File Offset: 0x001FD578
 		public int BanReason
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700044B RID: 1099
-		// (get) Token: 0x06004BB6 RID: 19382 RVA: 0x001DEF9C File Offset: 0x001DD19C
+		// Token: 0x1700048B RID: 1163
+		// (get) Token: 0x06005178 RID: 20856 RVA: 0x001FF3B4 File Offset: 0x001FD5B4
 		public string BanDescribe
 		{
 			get
@@ -107,19 +107,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004BB7 RID: 19383 RVA: 0x001DEFD4 File Offset: 0x001DD1D4
+		// Token: 0x06005179 RID: 20857 RVA: 0x001FF3EC File Offset: 0x001FD5EC
 		public Span<byte> GetBanDescribeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06004BB8 RID: 19384 RVA: 0x001DEFE4 File Offset: 0x001DD1E4
+		// Token: 0x0600517A RID: 20858 RVA: 0x001FF3FC File Offset: 0x001FD5FC
 		public byte[] GetBanDescribeArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004B18 RID: 19224
+		// Token: 0x040050F8 RID: 20728
 		private Table __p;
 	}
 }

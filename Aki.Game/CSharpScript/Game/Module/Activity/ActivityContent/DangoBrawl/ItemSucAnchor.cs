@@ -4,13 +4,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200679B RID: 26523
+	// Token: 0x020056EB RID: 22251
 	public class ItemSucAnchor
 	{
-		// Token: 0x04022826 RID: 141350
+		// Token: 0x0401D083 RID: 118915
 		public EDragSourceKind SourceKind;
 
-		// Token: 0x04022827 RID: 141351
+		// Token: 0x0401D084 RID: 118916
 		[TupleElementNames(new string[]
 		{
 			"LeftTopPos",
@@ -18,10 +18,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		public ValueTuple<PanelPos, EDangoBrawlRotate>? BagPos;
 
-		// Token: 0x04022828 RID: 141352
+		// Token: 0x0401D085 RID: 118917
 		public FVector2D? BenchPos;
 
-		// Token: 0x04022829 RID: 141353
+		// Token: 0x0401D086 RID: 118918
 		public int? ShopSlotUid;
 	}
 }

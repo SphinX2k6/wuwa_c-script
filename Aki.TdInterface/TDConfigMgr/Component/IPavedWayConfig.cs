@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005EE RID: 1518
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200068B RID: 1675
 	public class IPavedWayConfig
 	{
-		// Token: 0x06002044 RID: 8260 RVA: 0x00059FF0 File Offset: 0x000581F0
+		// Token: 0x06002346 RID: 9030 RVA: 0x00060C6C File Offset: 0x0005EE6C
 		private IPavedWayConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002045 RID: 8261 RVA: 0x0005A028 File Offset: 0x00058228
+		// Token: 0x06002347 RID: 9031 RVA: 0x00060CA4 File Offset: 0x0005EEA4
 		public static IPavedWayConfig Create([Nullable(2)] IPavedWayConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002046 RID: 8262 RVA: 0x0005A03B File Offset: 0x0005823B
+		// Token: 0x06002348 RID: 9032 RVA: 0x00060CB7 File Offset: 0x0005EEB7
 		public static IPavedWayConfig CreateFromSetValue([Nullable(2)] IPavedWayConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002047 RID: 8263 RVA: 0x0005A04E File Offset: 0x0005824E
+		// Token: 0x06002349 RID: 9033 RVA: 0x00060CCA File Offset: 0x0005EECA
 		public IPavedWayConfig_SetValue ToSetValue()
 		{
 			return new IPavedWayConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700089C RID: 2204
-		// (get) Token: 0x06002048 RID: 8264 RVA: 0x0005A061 File Offset: 0x00058261
-		// (set) Token: 0x06002049 RID: 8265 RVA: 0x0005A08C File Offset: 0x0005828C
+		// Token: 0x17000951 RID: 2385
+		// (get) Token: 0x0600234A RID: 9034 RVA: 0x00060CDD File Offset: 0x0005EEDD
+		// (set) Token: 0x0600234B RID: 9035 RVA: 0x00060D08 File Offset: 0x0005EF08
 		public virtual bool AutoSprint
 		{
 			get
@@ -78,11 +76,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040016AC RID: 5804
+		// Token: 0x0400189C RID: 6300
 		[Nullable(2)]
 		protected IPavedWayConfig FbInstance;
 
-		// Token: 0x040016AD RID: 5805
+		// Token: 0x0400189D RID: 6301
 		[Nullable(2)]
 		protected IPavedWayConfig_SetValue PocoInterface;
 	}

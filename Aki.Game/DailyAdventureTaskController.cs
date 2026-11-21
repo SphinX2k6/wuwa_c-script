@@ -7,13 +7,13 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.WorldMap;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001215 RID: 4629
+// Token: 0x020006C9 RID: 1737
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class DailyAdventureTaskController : UiControllerBase
 {
-	// Token: 0x06007BF8 RID: 31736 RVA: 0x001A2C98 File Offset: 0x001A0E98
+	// Token: 0x06004F8E RID: 20366 RVA: 0x001AB910 File Offset: 0x001A9B10
 	public void TrackTaskByType(EDailyAdventureTaskJumpType type, string[] paramsList)
 	{
 		switch (type)
@@ -51,7 +51,7 @@ public class DailyAdventureTaskController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06007BF9 RID: 31737 RVA: 0x001A2D2C File Offset: 0x001A0F2C
+	// Token: 0x06004F8F RID: 20367 RVA: 0x001AB9A4 File Offset: 0x001A9BA4
 	private void OpenAndTrackMap(int[] markIdList)
 	{
 		int value = 0;
@@ -68,20 +68,20 @@ public class DailyAdventureTaskController : UiControllerBase
 		WorldMapController.Instance.OpenView(EOpenMapType.Other, false, data, null);
 	}
 
-	// Token: 0x06007BFA RID: 31738 RVA: 0x001A2D8C File Offset: 0x001A0F8C
+	// Token: 0x06004F90 RID: 20368 RVA: 0x001ABA04 File Offset: 0x001A9C04
 	private void JumpRoleRootView(EUiTabViewName? tabViewName = null)
 	{
 		RoleController.Instance.OpenRoleMainView(ERoleAgentType.Normal, 0, new List<int>(), tabViewName, null);
 	}
 
-	// Token: 0x06007BFB RID: 31739 RVA: 0x001A2DA1 File Offset: 0x001A0FA1
+	// Token: 0x06004F91 RID: 20369 RVA: 0x001ABA19 File Offset: 0x001A9C19
 	private void RunSkipTask(int skipTaskId)
 	{
 		SkipTaskManager.RunByConfigId(skipTaskId, null);
 	}
 
-	// Token: 0x17000A90 RID: 2704
-	// (get) Token: 0x06007BFC RID: 31740 RVA: 0x001A2DAA File Offset: 0x001A0FAA
+	// Token: 0x17000AB0 RID: 2736
+	// (get) Token: 0x06004F92 RID: 20370 RVA: 0x001ABA22 File Offset: 0x001A9C22
 	public static DailyAdventureTaskController Instance
 	{
 		get
@@ -90,7 +90,7 @@ public class DailyAdventureTaskController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06007BFD RID: 31741 RVA: 0x001A2DB1 File Offset: 0x001A0FB1
+	// Token: 0x06004F93 RID: 20371 RVA: 0x001ABA29 File Offset: 0x001A9C29
 	public static DailyAdventureTaskController GetOrCreateInstance()
 	{
 		if (DailyAdventureTaskController._Instance == null)
@@ -100,7 +100,7 @@ public class DailyAdventureTaskController : UiControllerBase
 		return DailyAdventureTaskController._Instance;
 	}
 
-	// Token: 0x06007BFE RID: 31742 RVA: 0x001A2DC5 File Offset: 0x001A0FC5
+	// Token: 0x06004F94 RID: 20372 RVA: 0x001ABA3D File Offset: 0x001A9C3D
 	public static bool CreateInstance()
 	{
 		if (DailyAdventureTaskController._Instance != null)
@@ -111,24 +111,24 @@ public class DailyAdventureTaskController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06007BFF RID: 31743 RVA: 0x001A2DDB File Offset: 0x001A0FDB
+	// Token: 0x06004F95 RID: 20373 RVA: 0x001ABA53 File Offset: 0x001A9C53
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06007C00 RID: 31744 RVA: 0x001A2DDD File Offset: 0x001A0FDD
+	// Token: 0x06004F96 RID: 20374 RVA: 0x001ABA55 File Offset: 0x001A9C55
 	public static void ResetStaticDefaultValue()
 	{
 		DailyAdventureTaskController._Instance = null;
 	}
 
-	// Token: 0x06007C01 RID: 31745 RVA: 0x001A2DE5 File Offset: 0x001A0FE5
+	// Token: 0x06004F97 RID: 20375 RVA: 0x001ABA5D File Offset: 0x001A9C5D
 	static DailyAdventureTaskController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DailyAdventureTaskController.CreateStaticDefaultValue), new Action(DailyAdventureTaskController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040038C8 RID: 14536
+	// Token: 0x04003961 RID: 14689
 	[Nullable(2)]
 	private static DailyAdventureTaskController _Instance;
 }

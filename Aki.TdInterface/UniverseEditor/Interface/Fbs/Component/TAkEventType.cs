@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BE5 RID: 23525
+	// Token: 0x020061FE RID: 25086
 	public enum TAkEventType : byte
 	{
-		// Token: 0x0400F370 RID: 62320
+		// Token: 0x0401007C RID: 65660
 		NONE,
-		// Token: 0x0400F371 RID: 62321
+		// Token: 0x0401007D RID: 65661
 		IBoxAkEvent,
-		// Token: 0x0400F372 RID: 62322
+		// Token: 0x0401007E RID: 65662
 		IDefaultAkEvent,
-		// Token: 0x0400F373 RID: 62323
+		// Token: 0x0401007F RID: 65663
 		IPointAkEvent
 	}
 }

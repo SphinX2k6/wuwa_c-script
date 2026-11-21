@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200181C RID: 6172
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019A7 RID: 6567
 	public class IBubbleData : ActionParams
 	{
-		// Token: 0x06008475 RID: 33909 RVA: 0x0013B874 File Offset: 0x00139A74
+		// Token: 0x06008B9B RID: 35739 RVA: 0x0014B068 File Offset: 0x00149268
 		private IBubbleData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008476 RID: 33910 RVA: 0x0013B8AC File Offset: 0x00139AAC
+		// Token: 0x06008B9C RID: 35740 RVA: 0x0014B0A0 File Offset: 0x001492A0
 		public static IBubbleData Create([Nullable(2)] IBubbleData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008477 RID: 33911 RVA: 0x0013B8BF File Offset: 0x00139ABF
+		// Token: 0x06008B9D RID: 35741 RVA: 0x0014B0B3 File Offset: 0x001492B3
 		public static IBubbleData CreateFromSetValue([Nullable(2)] IBubbleData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008478 RID: 33912 RVA: 0x0013B8D2 File Offset: 0x00139AD2
+		// Token: 0x06008B9E RID: 35742 RVA: 0x0014B0C6 File Offset: 0x001492C6
 		public IBubbleData_SetValue ToSetValue()
 		{
 			return new IBubbleData_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B65 RID: 11109
-		// (get) Token: 0x06008479 RID: 33913 RVA: 0x0013B8F4 File Offset: 0x00139AF4
-		// (set) Token: 0x0600847A RID: 33914 RVA: 0x0013B955 File Offset: 0x00139B55
+		// Token: 0x17002D5F RID: 11615
+		// (get) Token: 0x06008B9F RID: 35743 RVA: 0x0014B0E8 File Offset: 0x001492E8
+		// (set) Token: 0x06008BA0 RID: 35744 RVA: 0x0014B149 File Offset: 0x00149349
 		public virtual IBubbleIndex FlowIndex
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B66 RID: 11110
-		// (get) Token: 0x0600847B RID: 33915 RVA: 0x0013B96A File Offset: 0x00139B6A
-		// (set) Token: 0x0600847C RID: 33916 RVA: 0x0013B995 File Offset: 0x00139B95
+		// Token: 0x17002D60 RID: 11616
+		// (get) Token: 0x06008BA1 RID: 35745 RVA: 0x0014B15E File Offset: 0x0014935E
+		// (set) Token: 0x06008BA2 RID: 35746 RVA: 0x0014B189 File Offset: 0x00149389
 		public virtual int WaitTime
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040053D2 RID: 21458
+		// Token: 0x0400581E RID: 22558
 		[Nullable(2)]
 		protected new IBubbleData FbInstance;
 
-		// Token: 0x040053D3 RID: 21459
+		// Token: 0x0400581F RID: 22559
 		[Nullable(2)]
 		protected IBubbleData_SetValue PocoInterface;
 
-		// Token: 0x040053D4 RID: 21460
+		// Token: 0x04005820 RID: 22560
 		private IBubbleIndex _FlowIndexCache;
 
-		// Token: 0x040053D5 RID: 21461
+		// Token: 0x04005821 RID: 22561
 		private bool _FlowIndexInited;
 	}
 }

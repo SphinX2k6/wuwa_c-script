@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BB3 RID: 19379
+	// Token: 0x02003B5D RID: 15197
 	public class SkipTaskQuest : SkipTask
 	{
-		// Token: 0x060322F4 RID: 205556 RVA: 0x00BA939C File Offset: 0x00BA759C
+		// Token: 0x06027085 RID: 159877 RVA: 0x00AED648 File Offset: 0x00AEB848
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			base.Finish();
 		}
 
-		// Token: 0x0401AB8C RID: 109452
+		// Token: 0x040154E1 RID: 87265
 		[Nullable(1)]
 		private const string DEFAULT_PARAM = "0";
 	}

@@ -7,7 +7,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000028 RID: 40
+	// Token: 0x0200000D RID: 13
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(16, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 16)]
@@ -15,15 +15,15 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 16)]
 	public struct FGuid : IEquatable<FGuid>, IEqualityOperators<FGuid, FGuid, bool>, IUnrealScriptStruct
 	{
-		// Token: 0x06000180 RID: 384
+		// Token: 0x06000105 RID: 261
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FGuid NewGuid();
 
-		// Token: 0x06000181 RID: 385
+		// Token: 0x06000106 RID: 262
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FGuid Internal_NewGuidFromName(in FCSharpStringView name);
 
-		// Token: 0x06000182 RID: 386 RVA: 0x0000729C File Offset: 0x0000549C
+		// Token: 0x06000107 RID: 263 RVA: 0x00003B08 File Offset: 0x00001D08
 		[NullableContext(2)]
 		public unsafe static FGuid NewGuidFromName(string name)
 		{
@@ -49,13 +49,13 @@ namespace UnrealEngine
 			return FGuid.Internal_NewGuidFromName(fcsharpStringView);
 		}
 
-		// Token: 0x06000183 RID: 387 RVA: 0x000072E8 File Offset: 0x000054E8
+		// Token: 0x06000108 RID: 264 RVA: 0x00003B54 File Offset: 0x00001D54
 		public FGuid()
 		{
 			this.A = (this.B = (this.C = (this.D = 0U)));
 		}
 
-		// Token: 0x06000184 RID: 388 RVA: 0x00007317 File Offset: 0x00005517
+		// Token: 0x06000109 RID: 265 RVA: 0x00003B83 File Offset: 0x00001D83
 		public FGuid(uint a, uint b, uint c, uint d)
 		{
 			this.A = a;
@@ -64,7 +64,7 @@ namespace UnrealEngine
 			this.D = d;
 		}
 
-		// Token: 0x17000003 RID: 3
+		// Token: 0x17000002 RID: 2
 		public uint this[int index]
 		{
 			readonly get
@@ -111,20 +111,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000187 RID: 391 RVA: 0x000073C7 File Offset: 0x000055C7
+		// Token: 0x0600010C RID: 268 RVA: 0x00003C33 File Offset: 0x00001E33
 		[NullableContext(1)]
 		public override readonly string ToString()
 		{
 			return this.ToString(EGuidFormats.Digits);
 		}
 
-		// Token: 0x06000188 RID: 392 RVA: 0x000073D0 File Offset: 0x000055D0
+		// Token: 0x0600010D RID: 269 RVA: 0x00003C3C File Offset: 0x00001E3C
 		public readonly bool Equals(FGuid other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06000189 RID: 393 RVA: 0x000073E0 File Offset: 0x000055E0
+		// Token: 0x0600010E RID: 270 RVA: 0x00003C4C File Offset: 0x00001E4C
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -136,49 +136,49 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x0600018A RID: 394
+		// Token: 0x0600010F RID: 271
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_Eq(in FGuid a, in FGuid b);
 
-		// Token: 0x0600018B RID: 395
+		// Token: 0x06000110 RID: 272
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_NotEq(in FGuid a, in FGuid b);
 
-		// Token: 0x0600018C RID: 396
+		// Token: 0x06000111 RID: 273
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FGuid Internal_Ctor_string(in FCSharpStringView str);
 
-		// Token: 0x0600018D RID: 397
+		// Token: 0x06000112 RID: 274
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_LessThan(in FGuid a, in FGuid b);
 
-		// Token: 0x0600018E RID: 398
+		// Token: 0x06000113 RID: 275
 		[NullableContext(1)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern string Internal_LexToString(in FGuid a);
 
-		// Token: 0x0600018F RID: 399
+		// Token: 0x06000114 RID: 276
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_LexFromString(out FGuid outGuid, in FCSharpStringView str);
 
-		// Token: 0x06000190 RID: 400
+		// Token: 0x06000115 RID: 277
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_Invalidate(ref FGuid a);
 
-		// Token: 0x06000191 RID: 401
+		// Token: 0x06000116 RID: 278
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_IsValid(in FGuid a);
 
-		// Token: 0x06000192 RID: 402
+		// Token: 0x06000117 RID: 279
 		[NullableContext(1)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern string Internal_ToString(in FGuid a, EGuidFormats format);
 
-		// Token: 0x06000193 RID: 403
+		// Token: 0x06000118 RID: 280
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern uint Internal_GetHashCode(in FGuid a);
 
-		// Token: 0x06000194 RID: 404 RVA: 0x0000740C File Offset: 0x0000560C
+		// Token: 0x06000119 RID: 281 RVA: 0x00003C78 File Offset: 0x00001E78
 		[NullableContext(2)]
 		public unsafe FGuid(string str)
 		{
@@ -210,19 +210,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000195 RID: 405 RVA: 0x00007476 File Offset: 0x00005676
+		// Token: 0x0600011A RID: 282 RVA: 0x00003CE2 File Offset: 0x00001EE2
 		public static bool operator ==(FGuid a, FGuid b)
 		{
 			return FGuid.Internal_Eq(a, b);
 		}
 
-		// Token: 0x06000196 RID: 406 RVA: 0x00007481 File Offset: 0x00005681
+		// Token: 0x0600011B RID: 283 RVA: 0x00003CED File Offset: 0x00001EED
 		public static bool operator !=(FGuid a, FGuid b)
 		{
 			return FGuid.Internal_NotEq(a, b);
 		}
 
-		// Token: 0x06000197 RID: 407 RVA: 0x0000748C File Offset: 0x0000568C
+		// Token: 0x0600011C RID: 284 RVA: 0x00003CF8 File Offset: 0x00001EF8
 		public unsafe static bool operator <(in FGuid a, in FGuid b)
 		{
 			fixed (FGuid* ptr = &a)
@@ -234,13 +234,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000198 RID: 408 RVA: 0x000074A8 File Offset: 0x000056A8
+		// Token: 0x0600011D RID: 285 RVA: 0x00003D14 File Offset: 0x00001F14
 		public static bool operator >(in FGuid a, in FGuid b)
 		{
 			return b < a;
 		}
 
-		// Token: 0x06000199 RID: 409 RVA: 0x000074B4 File Offset: 0x000056B4
+		// Token: 0x0600011E RID: 286 RVA: 0x00003D20 File Offset: 0x00001F20
 		[NullableContext(1)]
 		public unsafe static string LexToString(in FGuid guid)
 		{
@@ -250,7 +250,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600019A RID: 410 RVA: 0x000074CC File Offset: 0x000056CC
+		// Token: 0x0600011F RID: 287 RVA: 0x00003D38 File Offset: 0x00001F38
 		[NullableContext(2)]
 		public unsafe static void LexFromString(out FGuid guid, string str)
 		{
@@ -280,7 +280,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600019B RID: 411 RVA: 0x0000751C File Offset: 0x0000571C
+		// Token: 0x06000120 RID: 288 RVA: 0x00003D88 File Offset: 0x00001F88
 		public unsafe void Invalidate()
 		{
 			fixed (FGuid* ptr = &this)
@@ -289,7 +289,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600019C RID: 412 RVA: 0x00007538 File Offset: 0x00005738
+		// Token: 0x06000121 RID: 289 RVA: 0x00003DA4 File Offset: 0x00001FA4
 		public unsafe readonly bool IsValid()
 		{
 			fixed (FGuid* ptr = &this)
@@ -298,7 +298,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600019D RID: 413 RVA: 0x00007550 File Offset: 0x00005750
+		// Token: 0x06000122 RID: 290 RVA: 0x00003DBC File Offset: 0x00001FBC
 		[NullableContext(1)]
 		public unsafe readonly string ToString(EGuidFormats format)
 		{
@@ -308,7 +308,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600019E RID: 414 RVA: 0x00007568 File Offset: 0x00005768
+		// Token: 0x06000123 RID: 291 RVA: 0x00003DD4 File Offset: 0x00001FD4
 		public unsafe override readonly int GetHashCode()
 		{
 			fixed (FGuid* ptr = &this)
@@ -317,32 +317,32 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600019F RID: 415 RVA: 0x0000757F File Offset: 0x0000577F
+		// Token: 0x06000124 RID: 292 RVA: 0x00003DEB File Offset: 0x00001FEB
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FGuid._ScriptStructPtr != 0) ? FGuid._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.Guid", ref FGuid._ScriptStructPtr);
 		}
 
-		// Token: 0x04000091 RID: 145
+		// Token: 0x0400004A RID: 74
 		[FieldOffset(0)]
 		public uint A;
 
-		// Token: 0x04000092 RID: 146
+		// Token: 0x0400004B RID: 75
 		[FieldOffset(4)]
 		public uint B;
 
-		// Token: 0x04000093 RID: 147
+		// Token: 0x0400004C RID: 76
 		[FieldOffset(8)]
 		public uint C;
 
-		// Token: 0x04000094 RID: 148
+		// Token: 0x0400004D RID: 77
 		[FieldOffset(12)]
 		public uint D;
 
-		// Token: 0x04000095 RID: 149
+		// Token: 0x0400004E RID: 78
 		public const string __ObjectPath = "/Script/CoreUObject.Guid";
 
-		// Token: 0x04000096 RID: 150
+		// Token: 0x0400004F RID: 79
 		private static IntPtr _ScriptStructPtr;
 	}
 }

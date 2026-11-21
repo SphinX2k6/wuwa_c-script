@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001B6C RID: 7020
+// Token: 0x0200102B RID: 4139
 public class FloroRanchPauseView : UiViewBase
 {
-	// Token: 0x0600D0CB RID: 53451 RVA: 0x002FB385 File Offset: 0x002F9585
+	// Token: 0x0600A4DC RID: 42204 RVA: 0x0030645D File Offset: 0x0030465D
 	[NullableContext(1)]
 	public FloroRanchPauseView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D0CC RID: 53452 RVA: 0x002FB390 File Offset: 0x002F9590
+	// Token: 0x0600A4DD RID: 42205 RVA: 0x00306468 File Offset: 0x00304668
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -45,7 +45,7 @@ public class FloroRanchPauseView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D0CD RID: 53453 RVA: 0x002FB4E4 File Offset: 0x002F96E4
+	// Token: 0x0600A4DE RID: 42206 RVA: 0x003065BC File Offset: 0x003047BC
 	private void OnClickExitButton()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.FloroRanchExitConfirm);
@@ -61,13 +61,13 @@ public class FloroRanchPauseView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600D0CE RID: 53454 RVA: 0x002FB533 File Offset: 0x002F9733
+	// Token: 0x0600A4DF RID: 42207 RVA: 0x0030660B File Offset: 0x0030480B
 	private void OnClickReStartButton()
 	{
 		FloroRanchGamePlayModel.Instance.ReStartGame();
 	}
 
-	// Token: 0x0600D0CF RID: 53455 RVA: 0x002FB53F File Offset: 0x002F973F
+	// Token: 0x0600A4E0 RID: 42208 RVA: 0x00306617 File Offset: 0x00304817
 	private void OnClickContinueButton()
 	{
 		base.CloseMe(delegate(bool _)
@@ -76,26 +76,26 @@ public class FloroRanchPauseView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600D0D0 RID: 53456 RVA: 0x002FB566 File Offset: 0x002F9766
+	// Token: 0x0600A4E1 RID: 42209 RVA: 0x0030663E File Offset: 0x0030483E
 	private void OnClickSaveAndExitButton()
 	{
 		FloroRanchController.Instance.SendFloroRanchOutRequest(FloroRanchGamePlayModel.Instance.ActivityId, FloroRanchGamePlayModel.Instance.SubInstanceId);
 		FloroRanchGamePlayModel.Instance.ExitGame(false);
 	}
 
-	// Token: 0x020080DC RID: 32988
+	// Token: 0x0200726A RID: 29290
 	private class EComponent
 	{
-		// Token: 0x0402A0B3 RID: 172211
+		// Token: 0x040253E7 RID: 152551
 		public const int ExitButton = 0;
 
-		// Token: 0x0402A0B4 RID: 172212
+		// Token: 0x040253E8 RID: 152552
 		public const int ReStartButton = 1;
 
-		// Token: 0x0402A0B5 RID: 172213
+		// Token: 0x040253E9 RID: 152553
 		public const int ContinueButton = 2;
 
-		// Token: 0x0402A0B6 RID: 172214
+		// Token: 0x040253EA RID: 152554
 		public const int SaveAndExitButton = 3;
 	}
 }

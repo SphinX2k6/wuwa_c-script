@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000803 RID: 2051
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008A6 RID: 2214
 	public class IWuWaGoHintStepInteract : IWuWaGoHintStepBase
 	{
-		// Token: 0x06002C87 RID: 11399 RVA: 0x0007391C File Offset: 0x00071B1C
+		// Token: 0x06002FB7 RID: 12215 RVA: 0x0007AC80 File Offset: 0x00078E80
 		private IWuWaGoHintStepInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002C88 RID: 11400 RVA: 0x00073954 File Offset: 0x00071B54
+		// Token: 0x06002FB8 RID: 12216 RVA: 0x0007ACB8 File Offset: 0x00078EB8
 		public static IWuWaGoHintStepInteract Create([Nullable(2)] IWuWaGoHintStepInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C89 RID: 11401 RVA: 0x00073967 File Offset: 0x00071B67
+		// Token: 0x06002FB9 RID: 12217 RVA: 0x0007ACCB File Offset: 0x00078ECB
 		public static IWuWaGoHintStepInteract CreateFromSetValue([Nullable(2)] IWuWaGoHintStepInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C8A RID: 11402 RVA: 0x0007397A File Offset: 0x00071B7A
+		// Token: 0x06002FBA RID: 12218 RVA: 0x0007ACDE File Offset: 0x00078EDE
 		public new IWuWaGoHintStepInteract_SetValue ToSetValue()
 		{
 			return new IWuWaGoHintStepInteract_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BA2 RID: 2978
-		// (get) Token: 0x06002C8B RID: 11403 RVA: 0x0007398D File Offset: 0x00071B8D
-		// (set) Token: 0x06002C8C RID: 11404 RVA: 0x000739B8 File Offset: 0x00071BB8
+		// Token: 0x17000C65 RID: 3173
+		// (get) Token: 0x06002FBB RID: 12219 RVA: 0x0007ACF1 File Offset: 0x00078EF1
+		// (set) Token: 0x06002FBC RID: 12220 RVA: 0x0007AD1C File Offset: 0x00078F1C
 		public override EWuWaGoHintStepType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D7A RID: 7546
+		// Token: 0x04001F86 RID: 8070
 		[Nullable(2)]
 		protected new IWuWaGoHintStepInteract FbInstance;
 
-		// Token: 0x04001D7B RID: 7547
+		// Token: 0x04001F87 RID: 8071
 		[Nullable(2)]
 		protected new IWuWaGoHintStepInteract_SetValue PocoInterface;
 	}

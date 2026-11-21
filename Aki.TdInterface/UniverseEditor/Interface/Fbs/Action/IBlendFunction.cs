@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006212 RID: 25106
+	// Token: 0x02006883 RID: 26755
 	public struct IBlendFunction : IFlatbufferObject
 	{
-		// Token: 0x1700BB1A RID: 47898
-		// (get) Token: 0x0602B463 RID: 177251 RVA: 0x005F5F68 File Offset: 0x005F4168
+		// Token: 0x1700C4A0 RID: 50336
+		// (get) Token: 0x0602DBBC RID: 187324 RVA: 0x00640B54 File Offset: 0x0063ED54
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B464 RID: 177252 RVA: 0x005F5F75 File Offset: 0x005F4175
+		// Token: 0x0602DBBD RID: 187325 RVA: 0x00640B61 File Offset: 0x0063ED61
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B465 RID: 177253 RVA: 0x005F5F7C File Offset: 0x005F417C
+		// Token: 0x0602DBBE RID: 187326 RVA: 0x00640B68 File Offset: 0x0063ED68
 		public static IBlendFunction GetRootAsIBlendFunction(ByteBuffer _bb)
 		{
 			return IBlendFunction.GetRootAsIBlendFunction(_bb, default(IBlendFunction));
 		}
 
-		// Token: 0x0602B466 RID: 177254 RVA: 0x005F5F98 File Offset: 0x005F4198
+		// Token: 0x0602DBBF RID: 187327 RVA: 0x00640B84 File Offset: 0x0063ED84
 		public static IBlendFunction GetRootAsIBlendFunction(ByteBuffer _bb, IBlendFunction obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B467 RID: 177255 RVA: 0x005F5FB5 File Offset: 0x005F41B5
+		// Token: 0x0602DBC0 RID: 187328 RVA: 0x00640BA1 File Offset: 0x0063EDA1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B468 RID: 177256 RVA: 0x005F5FC4 File Offset: 0x005F41C4
+		// Token: 0x0602DBC1 RID: 187329 RVA: 0x00640BB0 File Offset: 0x0063EDB0
 		public IBlendFunction __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BB1B RID: 47899
-		// (get) Token: 0x0602B469 RID: 177257 RVA: 0x005F5FD4 File Offset: 0x005F41D4
+		// Token: 0x1700C4A1 RID: 50337
+		// (get) Token: 0x0602DBC2 RID: 187330 RVA: 0x00640BC0 File Offset: 0x0063EDC0
 		public EViewTargetBlendFunction Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BB1C RID: 47900
-		// (get) Token: 0x0602B46A RID: 177258 RVA: 0x005F6010 File Offset: 0x005F4210
+		// Token: 0x1700C4A2 RID: 50338
+		// (get) Token: 0x0602DBC3 RID: 187331 RVA: 0x00640BFC File Offset: 0x0063EDFC
 		public float BlendExp
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BB1D RID: 47901
-		// (get) Token: 0x0602B46B RID: 177259 RVA: 0x005F6050 File Offset: 0x005F4250
+		// Token: 0x1700C4A3 RID: 50339
+		// (get) Token: 0x0602DBC4 RID: 187332 RVA: 0x00640C3C File Offset: 0x0063EE3C
 		public string CurveAsset
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B46C RID: 177260 RVA: 0x005F6087 File Offset: 0x005F4287
+		// Token: 0x0602DBC5 RID: 187333 RVA: 0x00640C73 File Offset: 0x0063EE73
 		public Span<byte> GetCurveAssetBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0602B46D RID: 177261 RVA: 0x005F6096 File Offset: 0x005F4296
+		// Token: 0x0602DBC6 RID: 187334 RVA: 0x00640C82 File Offset: 0x0063EE82
 		public byte[] GetCurveAssetArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x0602B46E RID: 177262 RVA: 0x005F60A4 File Offset: 0x005F42A4
+		// Token: 0x0602DBC7 RID: 187335 RVA: 0x00640C90 File Offset: 0x0063EE90
 		public static Offset<IBlendFunction> CreateIBlendFunction(FlatBufferBuilder builder, EViewTargetBlendFunction Type = EViewTargetBlendFunction.Linear, float BlendExp = 0f, StringOffset CurveAssetOffset = default(StringOffset))
 		{
 			builder.StartTable(3);
@@ -114,37 +114,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBlendFunction.EndIBlendFunction(builder);
 		}
 
-		// Token: 0x0602B46F RID: 177263 RVA: 0x005F60C8 File Offset: 0x005F42C8
+		// Token: 0x0602DBC8 RID: 187336 RVA: 0x00640CB4 File Offset: 0x0063EEB4
 		public static void StartIBlendFunction(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602B470 RID: 177264 RVA: 0x005F60D1 File Offset: 0x005F42D1
+		// Token: 0x0602DBC9 RID: 187337 RVA: 0x00640CBD File Offset: 0x0063EEBD
 		public static void AddType(FlatBufferBuilder builder, EViewTargetBlendFunction type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602B471 RID: 177265 RVA: 0x005F60DC File Offset: 0x005F42DC
+		// Token: 0x0602DBCA RID: 187338 RVA: 0x00640CC8 File Offset: 0x0063EEC8
 		public static void AddBlendExp(FlatBufferBuilder builder, float blendExp)
 		{
 			builder.AddFloat(1, blendExp, 0.0);
 		}
 
-		// Token: 0x0602B472 RID: 177266 RVA: 0x005F60EF File Offset: 0x005F42EF
+		// Token: 0x0602DBCB RID: 187339 RVA: 0x00640CDB File Offset: 0x0063EEDB
 		public static void AddCurveAsset(FlatBufferBuilder builder, StringOffset curveAssetOffset)
 		{
 			builder.AddOffset(2, curveAssetOffset.Value, 0);
 		}
 
-		// Token: 0x0602B473 RID: 177267 RVA: 0x005F60FF File Offset: 0x005F42FF
+		// Token: 0x0602DBCC RID: 187340 RVA: 0x00640CEB File Offset: 0x0063EEEB
 		public static Offset<IBlendFunction> EndIBlendFunction(FlatBufferBuilder builder)
 		{
 			return new Offset<IBlendFunction>(builder.EndTable());
 		}
 
-		// Token: 0x0602B474 RID: 177268 RVA: 0x005F610C File Offset: 0x005F430C
+		// Token: 0x0602DBCD RID: 187341 RVA: 0x00640CF8 File Offset: 0x0063EEF8
 		public IBlendFunctionT UnPack()
 		{
 			IBlendFunctionT blendFunctionT = new IBlendFunctionT();
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return blendFunctionT;
 		}
 
-		// Token: 0x0602B475 RID: 177269 RVA: 0x005F6127 File Offset: 0x005F4327
+		// Token: 0x0602DBCE RID: 187342 RVA: 0x00640D13 File Offset: 0x0063EF13
 		public void UnPackTo(IBlendFunctionT _o)
 		{
 			_o.Type = this.Type;
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.CurveAsset = this.CurveAsset;
 		}
 
-		// Token: 0x0602B476 RID: 177270 RVA: 0x005F6150 File Offset: 0x005F4350
+		// Token: 0x0602DBCF RID: 187343 RVA: 0x00640D3C File Offset: 0x0063EF3C
 		public static Offset<IBlendFunction> Pack(FlatBufferBuilder builder, IBlendFunctionT _o)
 		{
 			if (_o == null)
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBlendFunction.CreateIBlendFunction(builder, _o.Type, _o.BlendExp, curveAssetOffset);
 		}
 
-		// Token: 0x04010751 RID: 67409
+		// Token: 0x04011565 RID: 71013
 		private Table __p;
 	}
 }

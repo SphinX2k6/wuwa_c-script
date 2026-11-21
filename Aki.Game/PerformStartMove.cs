@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200311D RID: 12573
+// Token: 0x02002678 RID: 9848
 [NullableContext(2)]
 [Nullable(0)]
 public class PerformStartMove : PerformActionBase
 {
-	// Token: 0x0601B050 RID: 110672 RVA: 0x007552F3 File Offset: 0x007534F3
+	// Token: 0x06018AAB RID: 101035 RVA: 0x0077B35F File Offset: 0x0077955F
 	public PerformStartMove() : base(EPerformAction.StartMove)
 	{
 	}
 
-	// Token: 0x0601B051 RID: 110673 RVA: 0x00755308 File Offset: 0x00753508
+	// Token: 0x06018AAC RID: 101036 RVA: 0x0077B374 File Offset: 0x00779574
 	protected override void OnExecute()
 	{
 		if (this.PerformComp.Entity.GetComponent<BaseCharacterComponent>() == null)
@@ -28,7 +28,7 @@ public class PerformStartMove : PerformActionBase
 		this.ExecuteMoveTask();
 	}
 
-	// Token: 0x0601B052 RID: 110674 RVA: 0x007553A4 File Offset: 0x007535A4
+	// Token: 0x06018AAD RID: 101037 RVA: 0x0077B410 File Offset: 0x00779610
 	private void ExecuteMoveTask()
 	{
 		CommonNpcPerformComponent component = this.PerformComp.Entity.GetComponent<CommonNpcPerformComponent>();
@@ -58,19 +58,19 @@ public class PerformStartMove : PerformActionBase
 		this.HandleMoveTo();
 	}
 
-	// Token: 0x0601B053 RID: 110675 RVA: 0x00755517 File Offset: 0x00753717
+	// Token: 0x06018AAE RID: 101038 RVA: 0x0077B583 File Offset: 0x00779783
 	private void GuaranteeMoveTo(float delta)
 	{
 		this.HandleMoveTo();
 	}
 
-	// Token: 0x0601B054 RID: 110676 RVA: 0x0075551F File Offset: 0x0075371F
+	// Token: 0x06018AAF RID: 101039 RVA: 0x0077B58B File Offset: 0x0077978B
 	private void OnMontageEnded(int handleId)
 	{
 		this.HandleMoveTo();
 	}
 
-	// Token: 0x0601B055 RID: 110677 RVA: 0x00755528 File Offset: 0x00753728
+	// Token: 0x06018AB0 RID: 101040 RVA: 0x0077B594 File Offset: 0x00779794
 	private void HandleMoveTo()
 	{
 		this.RemovePreExecuteEvents();
@@ -103,19 +103,19 @@ public class PerformStartMove : PerformActionBase
 		EventSystem.Instance.AddWithTarget(this.EntityHandle, EEventName.OnNpcBeenImpactedEnd, new Action(this.OnMoveResume));
 	}
 
-	// Token: 0x0601B056 RID: 110678 RVA: 0x0075567D File Offset: 0x0075387D
+	// Token: 0x06018AB1 RID: 101041 RVA: 0x0077B6E9 File Offset: 0x007798E9
 	private void OnMovePause()
 	{
 		this.PerformComp.Entity.GetComponent<CharacterPatrolComponent>().PausePatrol(this.SplineId, "PerformStartMove");
 	}
 
-	// Token: 0x0601B057 RID: 110679 RVA: 0x0075569F File Offset: 0x0075389F
+	// Token: 0x06018AB2 RID: 101042 RVA: 0x0077B70B File Offset: 0x0077990B
 	private void OnMoveResume()
 	{
 		this.PerformComp.Entity.GetComponent<CharacterPatrolComponent>().ResumePatrol(this.SplineId, "PerformStartMove");
 	}
 
-	// Token: 0x0601B058 RID: 110680 RVA: 0x007556C1 File Offset: 0x007538C1
+	// Token: 0x06018AB3 RID: 101043 RVA: 0x0077B72D File Offset: 0x0077992D
 	private void OnMoveStop(int splineId)
 	{
 		if (splineId != this.SplineId)
@@ -126,7 +126,7 @@ public class PerformStartMove : PerformActionBase
 		base.FinishExecute();
 	}
 
-	// Token: 0x0601B059 RID: 110681 RVA: 0x007556DC File Offset: 0x007538DC
+	// Token: 0x06018AB4 RID: 101044 RVA: 0x0077B748 File Offset: 0x00779948
 	private void RemoveEvents()
 	{
 		if (this.EntityHandle == null)
@@ -156,7 +156,7 @@ public class PerformStartMove : PerformActionBase
 		this.RemovePreExecuteEvents();
 	}
 
-	// Token: 0x0601B05A RID: 110682 RVA: 0x0075585C File Offset: 0x00753A5C
+	// Token: 0x06018AB5 RID: 101045 RVA: 0x0077B8C8 File Offset: 0x00779AC8
 	private void RemovePreExecuteEvents()
 	{
 		if (this.EntityHandle == null)
@@ -177,7 +177,7 @@ public class PerformStartMove : PerformActionBase
 		}
 	}
 
-	// Token: 0x0601B05B RID: 110683 RVA: 0x00755944 File Offset: 0x00753B44
+	// Token: 0x06018AB6 RID: 101046 RVA: 0x0077B9B0 File Offset: 0x00779BB0
 	protected void ClearState()
 	{
 		this.RemoveEvents();
@@ -193,7 +193,7 @@ public class PerformStartMove : PerformActionBase
 		this.DelayTimer = null;
 	}
 
-	// Token: 0x0601B05C RID: 110684 RVA: 0x00755990 File Offset: 0x00753B90
+	// Token: 0x06018AB7 RID: 101047 RVA: 0x0077B9FC File Offset: 0x00779BFC
 	protected override void OnInterrupt()
 	{
 		int splineId = this.SplineId;
@@ -222,13 +222,13 @@ public class PerformStartMove : PerformActionBase
 		this.DelayTimer = null;
 	}
 
-	// Token: 0x0601B05D RID: 110685 RVA: 0x007559F2 File Offset: 0x00753BF2
+	// Token: 0x06018AB8 RID: 101048 RVA: 0x0077BA5E File Offset: 0x00779C5E
 	protected override void OnRestore()
 	{
 		this.ExecuteMoveTask();
 	}
 
-	// Token: 0x0601B05E RID: 110686 RVA: 0x007559FC File Offset: 0x00753BFC
+	// Token: 0x06018AB9 RID: 101049 RVA: 0x0077BA68 File Offset: 0x00779C68
 	protected override void OnReset()
 	{
 		int splineId = this.SplineId;
@@ -252,25 +252,25 @@ public class PerformStartMove : PerformActionBase
 		obj2.PausePatrol(splineId, "PerformStartMove:OnReset");
 	}
 
-	// Token: 0x0400D21B RID: 53787
+	// Token: 0x0400D63D RID: 54845
 	private const int MONTAGE_MAX_STOP_TIME = 10000;
 
-	// Token: 0x0400D21C RID: 53788
+	// Token: 0x0400D63E RID: 54846
 	private const int IMPACTED_MAX_STOP_TIME = 20000;
 
-	// Token: 0x0400D21D RID: 53789
+	// Token: 0x0400D63F RID: 54847
 	private int SplineId;
 
-	// Token: 0x0400D21E RID: 53790
+	// Token: 0x0400D640 RID: 54848
 	[Nullable(1)]
 	private string Context = "";
 
-	// Token: 0x0400D21F RID: 53791
+	// Token: 0x0400D641 RID: 54849
 	private EntityHandle EntityHandle;
 
-	// Token: 0x0400D220 RID: 53792
+	// Token: 0x0400D642 RID: 54850
 	private WorldEntity CachedEntity;
 
-	// Token: 0x0400D221 RID: 53793
+	// Token: 0x0400D643 RID: 54851
 	private TimerHandle DelayTimer;
 }

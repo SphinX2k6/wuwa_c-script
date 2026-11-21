@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 {
-	// Token: 0x02003D22 RID: 15650
+	// Token: 0x020030F5 RID: 12533
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class RequestEntityPlant : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06025977 RID: 153975 RVA: 0x0095DF85 File Offset: 0x0095C185
+		// Token: 0x0601E722 RID: 124706 RVA: 0x00914318 File Offset: 0x00912518
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return RequestEntityPlant.StaticFunctionPtr();
 		}
 
-		// Token: 0x06025978 RID: 153976 RVA: 0x0095DF91 File Offset: 0x0095C191
+		// Token: 0x0601E723 RID: 124707 RVA: 0x00914324 File Offset: 0x00912524
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_PlantLauncher_C.__RequestEntityPlant__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,32 +28,31 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			return BP_PlantLauncher_C.__RequestEntityPlant__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x06025979 RID: 153977 RVA: 0x0095DFB4 File Offset: 0x0095C1B4
+		// Token: 0x0601E724 RID: 124708 RVA: 0x00914347 File Offset: 0x00912547
 		public RequestEntityPlant()
 		{
 		}
 
-		// Token: 0x0602597A RID: 153978 RVA: 0x0095DFBC File Offset: 0x0095C1BC
+		// Token: 0x0601E725 RID: 124709 RVA: 0x0091434F File Offset: 0x0091254F
 		[NullableContext(2)]
 		public RequestEntityPlant(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602597B RID: 153979 RVA: 0x0095DFC6 File Offset: 0x0095C1C6
+		// Token: 0x0601E726 RID: 124710 RVA: 0x00914359 File Offset: 0x00912559
 		public RequestEntityPlant(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602597C RID: 153980 RVA: 0x0095DFD1 File Offset: 0x0095C1D1
+		// Token: 0x0601E727 RID: 124711 RVA: 0x00914364 File Offset: 0x00912564
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as RequestEntityPlant.RequestEntityPlant_ScriptDelegate) ?? ((RequestEntityPlant.RequestEntityPlant_ScriptDelegate)Delegate.CreateDelegate(typeof(RequestEntityPlant.RequestEntityPlant_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0602597D RID: 153981 RVA: 0x0095E003 File Offset: 0x0095C203
+		// Token: 0x0601E728 RID: 124712 RVA: 0x00914396 File Offset: 0x00912596
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(RequestEntityPlant.RequestEntityPlant_ScriptDelegate Callback)
 		{
 			if (RequestEntityPlant.RegisterId == 0)
@@ -68,18 +67,16 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			base.Add(Callback, RequestEntityPlant.RegisterId);
 		}
 
-		// Token: 0x0602597E RID: 153982 RVA: 0x0095E03D File Offset: 0x0095C23D
+		// Token: 0x0601E729 RID: 124713 RVA: 0x009143D0 File Offset: 0x009125D0
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(RequestEntityPlant.RequestEntityPlant_ScriptDelegate Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0602597F RID: 153983 RVA: 0x0095E048 File Offset: 0x0095C248
+		// Token: 0x0601E72A RID: 124714 RVA: 0x009143DC File Offset: 0x009125DC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(EPlantType LauncherType, ref TArray<FVector> FinalTargetPosition)
 		{
 			RequestEntityPlant.__RequestEntityPlant_DelegateParams* ptr = stackalloc RequestEntityPlant.__RequestEntityPlant_DelegateParams[(UIntPtr)39] + 15L / (long)sizeof(RequestEntityPlant.__RequestEntityPlant_DelegateParams) & -16L;
@@ -99,10 +96,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			UnrealReflectionUtils.DestroyStruct(BP_PlantLauncher_C.__RequestEntityPlant__DelegateSignature_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025980 RID: 153984 RVA: 0x0095E0C4 File Offset: 0x0095C2C4
+		// Token: 0x0601E72B RID: 124715 RVA: 0x00914458 File Offset: 0x00912658
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			RequestEntityPlant.RequestEntityPlant_ScriptDelegate requestEntityPlant_ScriptDelegate = target as RequestEntityPlant.RequestEntityPlant_ScriptDelegate;
@@ -118,36 +114,36 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			}
 		}
 
-		// Token: 0x04012C57 RID: 76887
+		// Token: 0x0401020C RID: 66060
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Interaction/BP_PlantLauncher.BP_PlantLauncher_C:RequestEntityPlant__DelegateSignature";
 
-		// Token: 0x04012C58 RID: 76888
+		// Token: 0x0401020D RID: 66061
 		private static int RegisterId;
 
-		// Token: 0x0200A015 RID: 40981
-		// (Invoke) Token: 0x0604C79A RID: 313242
+		// Token: 0x02008E7F RID: 36479
+		// (Invoke) Token: 0x06042D60 RID: 273760
 		public delegate void RequestEntityPlant_ScriptDelegate(EPlantType LauncherType, ref TArray<FVector> FinalTargetPosition);
 
-		// Token: 0x0200A016 RID: 40982
+		// Token: 0x02008E80 RID: 36480
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __RequestEntityPlant_DelegateParams
+		private ref struct __RequestEntityPlant_DelegateParams
 		{
-			// Token: 0x04031ABC RID: 203452
+			// Token: 0x0402CAD7 RID: 182999
 			[FieldOffset(0)]
 			public TEnumAsByte<EPlantType> LauncherType;
 
-			// Token: 0x04031ABD RID: 203453
+			// Token: 0x0402CAD8 RID: 183000
 			[FieldOffset(8)]
 			public byte FinalTargetPosition;
 		}
 
-		// Token: 0x0200A017 RID: 40983
+		// Token: 0x02008E81 RID: 36481
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04031ABE RID: 203454
+			// Token: 0x0402CAD9 RID: 183001
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

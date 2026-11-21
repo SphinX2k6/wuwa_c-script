@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A3B RID: 6715
+// Token: 0x02000EFA RID: 3834
 [NullableContext(1)]
 [Nullable(0)]
 internal class RewardInfoItem : UiPanelBase
 {
-	// Token: 0x0600C575 RID: 50549 RVA: 0x002CCC28 File Offset: 0x002CAE28
+	// Token: 0x06009985 RID: 39301 RVA: 0x002D7D4C File Offset: 0x002D5F4C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ internal class RewardInfoItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600C576 RID: 50550 RVA: 0x002CCCB0 File Offset: 0x002CAEB0
+	// Token: 0x06009986 RID: 39302 RVA: 0x002D7DD4 File Offset: 0x002D5FD4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RewardInfoItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -35,7 +35,7 @@ internal class RewardInfoItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C577 RID: 50551 RVA: 0x002CCCF3 File Offset: 0x002CAEF3
+	// Token: 0x06009987 RID: 39303 RVA: 0x002D7E17 File Offset: 0x002D6017
 	public void SetTitle(string title)
 	{
 		UUIText text = base.GetText(1);
@@ -46,7 +46,7 @@ internal class RewardInfoItem : UiPanelBase
 		text.SetText(title, true);
 	}
 
-	// Token: 0x0600C578 RID: 50552 RVA: 0x002CCD08 File Offset: 0x002CAF08
+	// Token: 0x06009988 RID: 39304 RVA: 0x002D7E2C File Offset: 0x002D602C
 	public void SetProgress(float progress)
 	{
 		UUISliderComponent slider = base.GetSlider(2);
@@ -57,14 +57,14 @@ internal class RewardInfoItem : UiPanelBase
 		slider.SetValue(progress, true);
 	}
 
-	// Token: 0x0600C579 RID: 50553 RVA: 0x002CCD1D File Offset: 0x002CAF1D
+	// Token: 0x06009989 RID: 39305 RVA: 0x002D7E41 File Offset: 0x002D6041
 	public void RefreshByProgress(float progress)
 	{
 		this.SetProgress(progress);
 		this.RefreshRewardItem(progress);
 	}
 
-	// Token: 0x0600C57A RID: 50554 RVA: 0x002CCD2D File Offset: 0x002CAF2D
+	// Token: 0x0600998A RID: 39306 RVA: 0x002D7E51 File Offset: 0x002D6051
 	private void RefreshRewardItem(float progress)
 	{
 		DangoAbyssBattleTreasureRoot dangoAbyssBattleTreasureRoot = this.DangoAbyssBattleTreasureRoot;
@@ -75,13 +75,13 @@ internal class RewardInfoItem : UiPanelBase
 		dangoAbyssBattleTreasureRoot.RefreshRewardItem(progress * 100f);
 	}
 
-	// Token: 0x04005B0B RID: 23307
+	// Token: 0x04005BDA RID: 23514
 	public Dictionary<int, int> RewardTimeMap = new Dictionary<int, int>();
 
-	// Token: 0x04005B0C RID: 23308
+	// Token: 0x04005BDB RID: 23515
 	public float FullTime;
 
-	// Token: 0x04005B0D RID: 23309
+	// Token: 0x04005BDC RID: 23516
 	[Nullable(2)]
 	private DangoAbyssBattleTreasureRoot DangoAbyssBattleTreasureRoot;
 }

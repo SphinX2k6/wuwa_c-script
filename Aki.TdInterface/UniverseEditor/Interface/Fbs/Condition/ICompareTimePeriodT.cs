@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BC9 RID: 19401
+	// Token: 0x020050B6 RID: 20662
 	public class ICompareTimePeriodT
 	{
-		// Token: 0x17008CE9 RID: 36073
-		// (get) Token: 0x0601E9E9 RID: 125417 RVA: 0x004482CA File Offset: 0x004464CA
-		// (set) Token: 0x0601E9EA RID: 125418 RVA: 0x004482D2 File Offset: 0x004464D2
+		// Token: 0x1700940D RID: 37901
+		// (get) Token: 0x060205B7 RID: 132535 RVA: 0x0047B1D6 File Offset: 0x004793D6
+		// (set) Token: 0x060205B8 RID: 132536 RVA: 0x0047B1DE File Offset: 0x004793DE
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008CEA RID: 36074
-		// (get) Token: 0x0601E9EB RID: 125419 RVA: 0x004482DB File Offset: 0x004464DB
-		// (set) Token: 0x0601E9EC RID: 125420 RVA: 0x004482E3 File Offset: 0x004464E3
+		// Token: 0x1700940E RID: 37902
+		// (get) Token: 0x060205B9 RID: 132537 RVA: 0x0047B1E7 File Offset: 0x004793E7
+		// (set) Token: 0x060205BA RID: 132538 RVA: 0x0047B1EF File Offset: 0x004793EF
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008CEB RID: 36075
-		// (get) Token: 0x0601E9ED RID: 125421 RVA: 0x004482EC File Offset: 0x004464EC
-		// (set) Token: 0x0601E9EE RID: 125422 RVA: 0x004482F4 File Offset: 0x004464F4
+		// Token: 0x1700940F RID: 37903
+		// (get) Token: 0x060205BB RID: 132539 RVA: 0x0047B1F8 File Offset: 0x004793F8
+		// (set) Token: 0x060205BC RID: 132540 RVA: 0x0047B200 File Offset: 0x00479400
 		public ETimePeriod TimePeriod { get; set; }
 
-		// Token: 0x0601E9EF RID: 125423 RVA: 0x004482FD File Offset: 0x004464FD
+		// Token: 0x060205BD RID: 132541 RVA: 0x0047B209 File Offset: 0x00479409
 		public ICompareTimePeriodT()
 		{
 			this.Type = ECondition.CompareVar;

@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002475 RID: 9333
+// Token: 0x0200195A RID: 6490
 public interface ICostToggleInfo
 {
-	// Token: 0x1700188B RID: 6283
-	// (get) Token: 0x06012BB3 RID: 76723
-	// (set) Token: 0x06012BB4 RID: 76724
+	// Token: 0x170018C5 RID: 6341
+	// (get) Token: 0x0601006B RID: 65643
+	// (set) Token: 0x0601006C RID: 65644
 	int Component { get; set; }
 
-	// Token: 0x1700188C RID: 6284
-	// (get) Token: 0x06012BB5 RID: 76725
-	// (set) Token: 0x06012BB6 RID: 76726
+	// Token: 0x170018C6 RID: 6342
+	// (get) Token: 0x0601006D RID: 65645
+	// (set) Token: 0x0601006E RID: 65646
 	int CostValue { get; set; }
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020C7 RID: 8391
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200231C RID: 8988
 	public class JumpTalk : ActionParams
 	{
-		// Token: 0x0600B870 RID: 47216 RVA: 0x001AAC7C File Offset: 0x001A8E7C
+		// Token: 0x0600C3C8 RID: 50120 RVA: 0x001C18C4 File Offset: 0x001BFAC4
 		private JumpTalk_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B871 RID: 47217 RVA: 0x001AACB4 File Offset: 0x001A8EB4
+		// Token: 0x0600C3C9 RID: 50121 RVA: 0x001C18FC File Offset: 0x001BFAFC
 		public static JumpTalk Create([Nullable(2)] JumpTalk instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B872 RID: 47218 RVA: 0x001AACC7 File Offset: 0x001A8EC7
+		// Token: 0x0600C3CA RID: 50122 RVA: 0x001C190F File Offset: 0x001BFB0F
 		public static JumpTalk CreateFromSetValue([Nullable(2)] JumpTalk_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B873 RID: 47219 RVA: 0x001AACDA File Offset: 0x001A8EDA
+		// Token: 0x0600C3CB RID: 50123 RVA: 0x001C1922 File Offset: 0x001BFB22
 		public JumpTalk_SetValue ToSetValue()
 		{
 			return new JumpTalk_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003866 RID: 14438
-		// (get) Token: 0x0600B874 RID: 47220 RVA: 0x001AACED File Offset: 0x001A8EED
-		// (set) Token: 0x0600B875 RID: 47221 RVA: 0x001AAD18 File Offset: 0x001A8F18
+		// Token: 0x17003B4A RID: 15178
+		// (get) Token: 0x0600C3CC RID: 50124 RVA: 0x001C1935 File Offset: 0x001BFB35
+		// (set) Token: 0x0600C3CD RID: 50125 RVA: 0x001C1960 File Offset: 0x001BFB60
 		public virtual int TalkId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E8B RID: 28299
+		// Token: 0x040074A9 RID: 29865
 		[Nullable(2)]
 		protected new JumpTalk FbInstance;
 
-		// Token: 0x04006E8C RID: 28300
+		// Token: 0x040074AA RID: 29866
 		[Nullable(2)]
 		protected JumpTalk_SetValue PocoInterface;
 	}

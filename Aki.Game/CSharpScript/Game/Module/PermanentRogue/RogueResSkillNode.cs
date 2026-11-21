@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -10,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005330 RID: 21296
+	// Token: 0x02004300 RID: 17152
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueResSkillNode : UiPanelBase
 	{
-		// Token: 0x06036714 RID: 222996 RVA: 0x00CE36D8 File Offset: 0x00CE18D8
+		// Token: 0x0602B610 RID: 177680 RVA: 0x00C310A8 File Offset: 0x00C2F2A8
 		public RogueResSkillNode(UUIItem parent, RogueResTalentTree data, UUIItem gridPanelItem)
 		{
 			this.Data = new RogueResTalentTree?(data);
@@ -23,7 +22,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.GridPanelItem = gridPanelItem;
 		}
 
-		// Token: 0x06036715 RID: 222997 RVA: 0x00CE3708 File Offset: 0x00CE1908
+		// Token: 0x0602B611 RID: 177681 RVA: 0x00C310D8 File Offset: 0x00C2F2D8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,7 +43,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036716 RID: 222998 RVA: 0x00CE3842 File Offset: 0x00CE1A42
+		// Token: 0x0602B612 RID: 177682 RVA: 0x00C31212 File Offset: 0x00C2F412
 		protected void OnToggleStateChange(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -53,14 +52,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x06036717 RID: 222999 RVA: 0x00CE3859 File Offset: 0x00CE1A59
+		// Token: 0x0602B613 RID: 177683 RVA: 0x00C31229 File Offset: 0x00C2F429
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(11).OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChange));
 			base.GetExtendToggle(11).bLockStateOnSelect = true;
 		}
 
-		// Token: 0x06036718 RID: 223000 RVA: 0x00CE3888 File Offset: 0x00CE1A88
+		// Token: 0x0602B614 RID: 177684 RVA: 0x00C31258 File Offset: 0x00C2F458
 		public void Refresh(RogueResTalentTree? data = null)
 		{
 			RogueResTalentTree? rogueResTalentTree = data;
@@ -73,7 +72,8 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			int skillLevelById = ActivityPermanentRogueModel.Instance.GetSkillLevelById(this.Data.Value.Id);
 			bool flag = skillLevelById == this.Data.Value.ConsuleLength;
 			RogueResSort? config = ConfigRogueResSortById.GetConfig(this.Data.Value.Id, true);
-			for (int i = 0; i < config.Value.PostIdIter().Count<int>(); i++)
+			int postIdLength = config.Value.PostIdLength;
+			for (int i = 0; i < postIdLength; i++)
 			{
 				RogueResSort? config2 = ConfigRogueResSortById.GetConfig(config.Value.PostId(i), true);
 				int skillLevelById2 = ActivityPermanentRogueModel.Instance.GetSkillLevelById(config2.Value.Id);
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			base.GetSprite(9).SetColor(FColor.FromHex("FFFFFF"));
 		}
 
-		// Token: 0x06036719 RID: 223001 RVA: 0x00CE3CF7 File Offset: 0x00CE1EF7
+		// Token: 0x0602B615 RID: 177685 RVA: 0x00C316C6 File Offset: 0x00C2F8C6
 		public UUIItem GetOutPosItem(int offset)
 		{
 			if (offset > 0)
@@ -172,23 +172,23 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return base.GetItem(4);
 		}
 
-		// Token: 0x0603671A RID: 223002 RVA: 0x00CE3D18 File Offset: 0x00CE1F18
+		// Token: 0x0602B616 RID: 177686 RVA: 0x00C316E7 File Offset: 0x00C2F8E7
 		public void SetToggleState(EToggleState state)
 		{
 			base.GetExtendToggle(11).SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x0401CCA0 RID: 117920
+		// Token: 0x040176D6 RID: 95958
 		public RogueResTalentTree? Data;
 
-		// Token: 0x0401CCA1 RID: 117921
+		// Token: 0x040176D7 RID: 95959
 		[Nullable(2)]
 		public UUIItem PreItem;
 
-		// Token: 0x0401CCA2 RID: 117922
+		// Token: 0x040176D8 RID: 95960
 		public List<RogueResSkillLine> LineComponentList = new List<RogueResSkillLine>();
 
-		// Token: 0x0401CCA3 RID: 117923
+		// Token: 0x040176D9 RID: 95961
 		[Nullable(2)]
 		public UUIItem GridPanelItem;
 	}

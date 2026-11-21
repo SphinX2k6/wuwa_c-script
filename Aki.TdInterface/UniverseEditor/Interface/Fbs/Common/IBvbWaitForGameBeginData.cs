@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D6D RID: 23917
+	// Token: 0x020063A4 RID: 25508
 	public struct IBvbWaitForGameBeginData : IFlatbufferObject
 	{
-		// Token: 0x1700B322 RID: 45858
-		// (get) Token: 0x06028E9A RID: 167578 RVA: 0x0059EBED File Offset: 0x0059CDED
+		// Token: 0x1700BC83 RID: 48259
+		// (get) Token: 0x0602B504 RID: 177412 RVA: 0x005E765D File Offset: 0x005E585D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028E9B RID: 167579 RVA: 0x0059EBFA File Offset: 0x0059CDFA
+		// Token: 0x0602B505 RID: 177413 RVA: 0x005E766A File Offset: 0x005E586A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028E9C RID: 167580 RVA: 0x0059EC04 File Offset: 0x0059CE04
+		// Token: 0x0602B506 RID: 177414 RVA: 0x005E7674 File Offset: 0x005E5874
 		public static IBvbWaitForGameBeginData GetRootAsIBvbWaitForGameBeginData(ByteBuffer _bb)
 		{
 			return IBvbWaitForGameBeginData.GetRootAsIBvbWaitForGameBeginData(_bb, default(IBvbWaitForGameBeginData));
 		}
 
-		// Token: 0x06028E9D RID: 167581 RVA: 0x0059EC20 File Offset: 0x0059CE20
+		// Token: 0x0602B507 RID: 177415 RVA: 0x005E7690 File Offset: 0x005E5890
 		public static IBvbWaitForGameBeginData GetRootAsIBvbWaitForGameBeginData(ByteBuffer _bb, IBvbWaitForGameBeginData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028E9E RID: 167582 RVA: 0x0059EC3D File Offset: 0x0059CE3D
+		// Token: 0x0602B508 RID: 177416 RVA: 0x005E76AD File Offset: 0x005E58AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028E9F RID: 167583 RVA: 0x0059EC4C File Offset: 0x0059CE4C
+		// Token: 0x0602B509 RID: 177417 RVA: 0x005E76BC File Offset: 0x005E58BC
 		public IBvbWaitForGameBeginData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B323 RID: 45859
-		// (get) Token: 0x06028EA0 RID: 167584 RVA: 0x0059EC5C File Offset: 0x0059CE5C
+		// Token: 0x1700BC84 RID: 48260
+		// (get) Token: 0x0602B50A RID: 177418 RVA: 0x005E76CC File Offset: 0x005E58CC
 		public EBvbEventName Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028EA1 RID: 167585 RVA: 0x0059EC98 File Offset: 0x0059CE98
+		// Token: 0x0602B50B RID: 177419 RVA: 0x005E7708 File Offset: 0x005E5908
 		public static Offset<IBvbWaitForGameBeginData> CreateIBvbWaitForGameBeginData(FlatBufferBuilder builder, EBvbEventName Type = EBvbEventName.AIEvolution)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IBvbWaitForGameBeginData.EndIBvbWaitForGameBeginData(builder);
 		}
 
-		// Token: 0x06028EA2 RID: 167586 RVA: 0x0059ECAE File Offset: 0x0059CEAE
+		// Token: 0x0602B50C RID: 177420 RVA: 0x005E771E File Offset: 0x005E591E
 		public static void StartIBvbWaitForGameBeginData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06028EA3 RID: 167587 RVA: 0x0059ECB7 File Offset: 0x0059CEB7
+		// Token: 0x0602B50D RID: 177421 RVA: 0x005E7727 File Offset: 0x005E5927
 		public static void AddType(FlatBufferBuilder builder, EBvbEventName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06028EA4 RID: 167588 RVA: 0x0059ECC2 File Offset: 0x0059CEC2
+		// Token: 0x0602B50E RID: 177422 RVA: 0x005E7732 File Offset: 0x005E5932
 		public static Offset<IBvbWaitForGameBeginData> EndIBvbWaitForGameBeginData(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbWaitForGameBeginData>(builder.EndTable());
 		}
 
-		// Token: 0x06028EA5 RID: 167589 RVA: 0x0059ECD0 File Offset: 0x0059CED0
+		// Token: 0x0602B50F RID: 177423 RVA: 0x005E7740 File Offset: 0x005E5940
 		public IBvbWaitForGameBeginDataT UnPack()
 		{
 			IBvbWaitForGameBeginDataT bvbWaitForGameBeginDataT = new IBvbWaitForGameBeginDataT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return bvbWaitForGameBeginDataT;
 		}
 
-		// Token: 0x06028EA6 RID: 167590 RVA: 0x0059ECEB File Offset: 0x0059CEEB
+		// Token: 0x0602B510 RID: 177424 RVA: 0x005E775B File Offset: 0x005E595B
 		public void UnPackTo(IBvbWaitForGameBeginDataT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06028EA7 RID: 167591 RVA: 0x0059ECFC File Offset: 0x0059CEFC
+		// Token: 0x0602B511 RID: 177425 RVA: 0x005E776C File Offset: 0x005E596C
 		public static Offset<IBvbWaitForGameBeginData> Pack(FlatBufferBuilder builder, IBvbWaitForGameBeginDataT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IBvbWaitForGameBeginData.CreateIBvbWaitForGameBeginData(builder, _o.Type);
 		}
 
-		// Token: 0x0400F736 RID: 63286
+		// Token: 0x04010488 RID: 66696
 		private Table __p;
 	}
 }

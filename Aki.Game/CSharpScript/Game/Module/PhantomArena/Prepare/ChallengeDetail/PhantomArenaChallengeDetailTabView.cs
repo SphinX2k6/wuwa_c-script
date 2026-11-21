@@ -14,14 +14,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 {
-	// Token: 0x020051BB RID: 20923
+	// Token: 0x0200418B RID: 16779
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaChallengeDetailTabView : PhantomArenaChildViewBase
 	{
-		// Token: 0x170081AE RID: 33198
-		// (get) Token: 0x06035935 RID: 219445 RVA: 0x00CB1406 File Offset: 0x00CAF606
-		// (set) Token: 0x06035936 RID: 219446 RVA: 0x00CB1413 File Offset: 0x00CAF613
+		// Token: 0x1700556E RID: 21870
+		// (get) Token: 0x0602A830 RID: 174128 RVA: 0x00BFEA42 File Offset: 0x00BFCC42
+		// (set) Token: 0x0602A831 RID: 174129 RVA: 0x00BFEA4F File Offset: 0x00BFCC4F
 		public new IPhantomArenaChallengeDetailTabViewModel ViewModel
 		{
 			get
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			}
 		}
 
-		// Token: 0x06035937 RID: 219447 RVA: 0x00CB141C File Offset: 0x00CAF61C
+		// Token: 0x0602A832 RID: 174130 RVA: 0x00BFEA58 File Offset: 0x00BFCC58
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			};
 		}
 
-		// Token: 0x06035938 RID: 219448 RVA: 0x00CB1594 File Offset: 0x00CAF794
+		// Token: 0x0602A833 RID: 174131 RVA: 0x00BFEBD0 File Offset: 0x00BFCDD0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaChallengeDetailTabView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -71,14 +71,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035939 RID: 219449 RVA: 0x00CB15D7 File Offset: 0x00CAF7D7
+		// Token: 0x0602A834 RID: 174132 RVA: 0x00BFEC13 File Offset: 0x00BFCE13
 		protected override void OnStart()
 		{
 			base.OnStart();
 			this.RewardLayout = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(8), new Func<CommonItemSmallItemGrid>(this.CreateRewardItem), base.GetItem(9).GetOwner() as AUIBaseActor, false, null);
 		}
 
-		// Token: 0x0603593A RID: 219450 RVA: 0x00CB1614 File Offset: 0x00CAF814
+		// Token: 0x0602A835 RID: 174133 RVA: 0x00BFEC50 File Offset: 0x00BFCE50
 		protected override void OnBeforeShow()
 		{
 			this.ViewModel.SetViewTitle("PhantomArenaEntranceLevelTabView_Name");
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			this.RefreshView();
 		}
 
-		// Token: 0x0603593B RID: 219451 RVA: 0x00CB1708 File Offset: 0x00CAF908
+		// Token: 0x0602A836 RID: 174134 RVA: 0x00BFED44 File Offset: 0x00BFCF44
 		public void RefreshView()
 		{
 			int challengeId = this.ViewModel.GetChallengeId();
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			this.RewardLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603593C RID: 219452 RVA: 0x00CB1984 File Offset: 0x00CAFB84
+		// Token: 0x0602A837 RID: 174135 RVA: 0x00BFEFC0 File Offset: 0x00BFD1C0
 		private void CheckAndPlayRoleSelectAnim()
 		{
 			if (this.ViewModel.RoleSelectedConfirmFlag)
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			}
 		}
 
-		// Token: 0x0603593D RID: 219453 RVA: 0x00CB19B0 File Offset: 0x00CAFBB0
+		// Token: 0x0602A838 RID: 174136 RVA: 0x00BFEFEC File Offset: 0x00BFD1EC
 		private void CheckAndPlayDeckSelectAnim()
 		{
 			if (this.ViewModel.DeckSelectedConfirmFlag)
@@ -195,13 +195,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			}
 		}
 
-		// Token: 0x0603593E RID: 219454 RVA: 0x00CB19DC File Offset: 0x00CAFBDC
+		// Token: 0x0602A839 RID: 174137 RVA: 0x00BFF018 File Offset: 0x00BFD218
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0603593F RID: 219455 RVA: 0x00CB19E4 File Offset: 0x00CAFBE4
+		// Token: 0x0602A83A RID: 174138 RVA: 0x00BFF020 File Offset: 0x00BFD220
 		private void OnConfirmBtnClick()
 		{
 			if (this.IsRequesting)
@@ -224,20 +224,20 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			}).Forget();
 		}
 
-		// Token: 0x06035940 RID: 219456 RVA: 0x00CB1A6C File Offset: 0x00CAFC6C
+		// Token: 0x0602A83B RID: 174139 RVA: 0x00BFF0A8 File Offset: 0x00BFD2A8
 		private void OnRoleItemClick()
 		{
 			base.OpenChildView(EPhantomArenaChildViewName.PhantomArenaRoleSelectTabView);
 		}
 
-		// Token: 0x06035941 RID: 219457 RVA: 0x00CB1A75 File Offset: 0x00CAFC75
+		// Token: 0x0602A83C RID: 174140 RVA: 0x00BFF0B1 File Offset: 0x00BFD2B1
 		private void OnMyDeckItemClick()
 		{
 			this.ViewModel.SelectedDeckIndex = ((this.ViewModel.UsedDeckIndex >= 0) ? this.ViewModel.UsedDeckIndex : 0);
 			base.OpenChildView(EPhantomArenaChildViewName.PhantomArenaDeckOverviewTabView);
 		}
 
-		// Token: 0x06035942 RID: 219458 RVA: 0x00CB1AA8 File Offset: 0x00CAFCA8
+		// Token: 0x0602A83D RID: 174141 RVA: 0x00BFF0E4 File Offset: 0x00BFD2E4
 		private void OnNpcDeckItemClick()
 		{
 			DeckInfo npcDeckItemData = this.NpcDeckItemData;
@@ -255,74 +255,74 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			UiManager.Instance.OpenView(name, param, null);
 		}
 
-		// Token: 0x0401C704 RID: 116484
+		// Token: 0x04017139 RID: 94521
 		private IPhantomArenaRoleOverviewItemData RoleItemData;
 
-		// Token: 0x0401C705 RID: 116485
+		// Token: 0x0401713A RID: 94522
 		private PhantomArenaRoleOverviewItem RoleItem;
 
-		// Token: 0x0401C706 RID: 116486
+		// Token: 0x0401713B RID: 94523
 		private DeckInfo MyDeckItemData;
 
-		// Token: 0x0401C707 RID: 116487
+		// Token: 0x0401713C RID: 94524
 		private PhantomArenaChallengeDetailDeckItem MyDeckItem;
 
-		// Token: 0x0401C708 RID: 116488
+		// Token: 0x0401713D RID: 94525
 		private DeckInfo NpcDeckItemData;
 
-		// Token: 0x0401C709 RID: 116489
+		// Token: 0x0401713E RID: 94526
 		private PhantomArenaChallengeDetailDeckItem NpcDeckItem;
 
-		// Token: 0x0401C70A RID: 116490
+		// Token: 0x0401713F RID: 94527
 		protected GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-		// Token: 0x0401C70B RID: 116491
+		// Token: 0x04017140 RID: 94528
 		private bool IsRequesting;
 
-		// Token: 0x0200B349 RID: 45897
+		// Token: 0x02009D81 RID: 40321
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x0403656E RID: 222574
+			// Token: 0x04030FC1 RID: 200641
 			public const int RoleItem = 0;
 
-			// Token: 0x0403656F RID: 222575
+			// Token: 0x04030FC2 RID: 200642
 			public const int MyDeckItem = 1;
 
-			// Token: 0x04036570 RID: 222576
+			// Token: 0x04030FC3 RID: 200643
 			public const int GymTitleText = 2;
 
-			// Token: 0x04036571 RID: 222577
+			// Token: 0x04030FC4 RID: 200644
 			public const int NpcTexture = 3;
 
-			// Token: 0x04036572 RID: 222578
+			// Token: 0x04030FC5 RID: 200645
 			public const int NpcNameText = 4;
 
-			// Token: 0x04036573 RID: 222579
+			// Token: 0x04030FC6 RID: 200646
 			public const int NpcLevelText = 5;
 
-			// Token: 0x04036574 RID: 222580
+			// Token: 0x04030FC7 RID: 200647
 			public const int NpcDeckItem = 6;
 
-			// Token: 0x04036575 RID: 222581
+			// Token: 0x04030FC8 RID: 200648
 			public const int ConditionText = 7;
 
-			// Token: 0x04036576 RID: 222582
+			// Token: 0x04030FC9 RID: 200649
 			public const int RewardScrollView = 8;
 
-			// Token: 0x04036577 RID: 222583
+			// Token: 0x04030FCA RID: 200650
 			public const int RewardItem = 9;
 
-			// Token: 0x04036578 RID: 222584
+			// Token: 0x04030FCB RID: 200651
 			public const int ConfirmBtn = 10;
 
-			// Token: 0x04036579 RID: 222585
+			// Token: 0x04030FCC RID: 200652
 			public const int RewardTitleText = 11;
 
-			// Token: 0x0403657A RID: 222586
+			// Token: 0x04030FCD RID: 200653
 			public const int NpcLevelBgSprite = 12;
 
-			// Token: 0x0403657B RID: 222587
+			// Token: 0x04030FCE RID: 200654
 			public const int NpcLevelSprite = 13;
 		}
 	}

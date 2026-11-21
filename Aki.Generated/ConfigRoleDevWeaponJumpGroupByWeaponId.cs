@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008A5 RID: 2213
+	// Token: 0x020008C1 RID: 2241
 	public class ConfigRoleDevWeaponJumpGroupByWeaponId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060033F0 RID: 13296 RVA: 0x0017EC9B File Offset: 0x0017CE9B
+		// Token: 0x06003498 RID: 13464 RVA: 0x00185F83 File Offset: 0x00184183
 		static ConfigRoleDevWeaponJumpGroupByWeaponId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleDevWeaponJumpGroupByWeaponId.CreateStaticDefaultValue), new Action(ConfigRoleDevWeaponJumpGroupByWeaponId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060033F1 RID: 13297 RVA: 0x0017ECBC File Offset: 0x0017CEBC
+		// Token: 0x06003499 RID: 13465 RVA: 0x00185FA4 File Offset: 0x001841A4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleDevWeaponJumpGroupByWeaponId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060033F2 RID: 13298 RVA: 0x0017ED3B File Offset: 0x0017CF3B
+		// Token: 0x0600349A RID: 13466 RVA: 0x00186023 File Offset: 0x00184223
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleDevWeaponJumpGroupByWeaponId.LogPair = null;
 			ConfigRoleDevWeaponJumpGroupByWeaponId.HandleId = 0;
 		}
 
-		// Token: 0x060033F3 RID: 13299 RVA: 0x0017ED49 File Offset: 0x0017CF49
+		// Token: 0x0600349B RID: 13467 RVA: 0x00186031 File Offset: 0x00184231
 		public static void Init()
 		{
 			ConfigRoleDevWeaponJumpGroupByWeaponId.HandleId = ConfigCommon.InitDataStatement(ConfigRoleDevWeaponJumpGroupByWeaponId.HandleId, "db_roledev.db", "select BinData from `RoleDevWeaponJumpGroup` where WeaponId=?");
 		}
 
-		// Token: 0x060033F4 RID: 13300 RVA: 0x0017ED64 File Offset: 0x0017CF64
+		// Token: 0x0600349C RID: 13468 RVA: 0x0018604C File Offset: 0x0018424C
 		public static RoleDevWeaponJumpGroup? GetConfig(int p0WeaponId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleDevWeaponJumpGroupByWeaponId.HandleId, ConfigRoleDevWeaponJumpGroupByWeaponId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleDevWeaponJumpGroup?(rootAsRoleDevWeaponJumpGroup);
 		}
 
-		// Token: 0x04003C69 RID: 15465
+		// Token: 0x04003D2D RID: 15661
 		private const string DB = "db_roledev.db";
 
-		// Token: 0x04003C6A RID: 15466
+		// Token: 0x04003D2E RID: 15662
 		private const string FILE = "g.共鸣者培养计划.xlsx";
 
-		// Token: 0x04003C6B RID: 15467
+		// Token: 0x04003D2F RID: 15663
 		private const string TABLE = "RoleDevWeaponJumpGroup";
 
-		// Token: 0x04003C6C RID: 15468
+		// Token: 0x04003D30 RID: 15664
 		private const string COMMAND = "select BinData from `RoleDevWeaponJumpGroup` where WeaponId=?";
 
-		// Token: 0x04003C6D RID: 15469
+		// Token: 0x04003D31 RID: 15665
 		private const string KEY_PREFIX = "RoleDevWeaponJumpGroupByWeaponId";
 
-		// Token: 0x04003C6E RID: 15470
+		// Token: 0x04003D32 RID: 15666
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003C6F RID: 15471
+		// Token: 0x04003D33 RID: 15667
 		private static int HandleId;
 	}
 }

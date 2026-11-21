@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x0200591E RID: 22814
+	// Token: 0x020048F7 RID: 18679
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrRoadNetworkInfoView : UiViewBase
 	{
-		// Token: 0x06039EFA RID: 237306 RVA: 0x00DC4B2B File Offset: 0x00DC2D2B
+		// Token: 0x0602EE1D RID: 192029 RVA: 0x00D13E1F File Offset: 0x00D1201F
 		public InfrRoadNetworkInfoView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06039EFB RID: 237307 RVA: 0x00DC4B40 File Offset: 0x00DC2D40
+		// Token: 0x0602EE1E RID: 192030 RVA: 0x00D13E34 File Offset: 0x00D12034
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039EFC RID: 237308 RVA: 0x00DC4B88 File Offset: 0x00DC2D88
+		// Token: 0x0602EE1F RID: 192031 RVA: 0x00D13E7C File Offset: 0x00D1207C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InfrRoadNetworkInfoView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -43,19 +43,19 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039EFD RID: 237309 RVA: 0x00DC4BCB File Offset: 0x00DC2DCB
+		// Token: 0x0602EE20 RID: 192032 RVA: 0x00D13EBF File Offset: 0x00D120BF
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<InfrastructureDefine.IInfrRoadNetworkInfoOpenParam>(EEventName.InfrastructureSelectRoadNetworkMark, new Action<InfrastructureDefine.IInfrRoadNetworkInfoOpenParam>(this.OnSelectMark));
 		}
 
-		// Token: 0x06039EFE RID: 237310 RVA: 0x00DC4BE9 File Offset: 0x00DC2DE9
+		// Token: 0x0602EE21 RID: 192033 RVA: 0x00D13EDD File Offset: 0x00D120DD
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<InfrastructureDefine.IInfrRoadNetworkInfoOpenParam>(EEventName.InfrastructureSelectRoadNetworkMark, new Action<InfrastructureDefine.IInfrRoadNetworkInfoOpenParam>(this.OnSelectMark));
 		}
 
-		// Token: 0x06039EFF RID: 237311 RVA: 0x00DC4C08 File Offset: 0x00DC2E08
+		// Token: 0x0602EE22 RID: 192034 RVA: 0x00D13EFC File Offset: 0x00D120FC
 		private UniTask CreateInfoPanel()
 		{
 			InfrRoadNetworkInfoView.<CreateInfoPanel>d__8 <CreateInfoPanel>d__;
@@ -66,13 +66,13 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateInfoPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039F00 RID: 237312 RVA: 0x00DC4C4B File Offset: 0x00DC2E4B
+		// Token: 0x0602EE23 RID: 192035 RVA: 0x00D13F3F File Offset: 0x00D1213F
 		protected override void OnStart()
 		{
 			this.SetOpenParam(this.OpenParam as InfrastructureDefine.IInfrRoadNetworkInfoOpenParam);
 		}
 
-		// Token: 0x06039F01 RID: 237313 RVA: 0x00DC4C60 File Offset: 0x00DC2E60
+		// Token: 0x0602EE24 RID: 192036 RVA: 0x00D13F54 File Offset: 0x00D12154
 		private void SetOpenParam(InfrastructureDefine.IInfrRoadNetworkInfoOpenParam openParam)
 		{
 			this.CloseCb = openParam.CloseCb;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.InfoPanel.Refresh(openParam.InfoParam);
 		}
 
-		// Token: 0x06039F02 RID: 237314 RVA: 0x00DC4CB4 File Offset: 0x00DC2EB4
+		// Token: 0x0602EE25 RID: 192037 RVA: 0x00D13FA8 File Offset: 0x00D121A8
 		private UniTask CloseSelfAsync()
 		{
 			InfrRoadNetworkInfoView.<CloseSelfAsync>d__11 <CloseSelfAsync>d__;
@@ -95,23 +95,23 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CloseSelfAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039F03 RID: 237315 RVA: 0x00DC4CF7 File Offset: 0x00DC2EF7
+		// Token: 0x0602EE26 RID: 192038 RVA: 0x00D13FEB File Offset: 0x00D121EB
 		private void OnSelectMark(InfrastructureDefine.IInfrRoadNetworkInfoOpenParam param)
 		{
 			this.SetOpenParam(param);
 		}
 
-		// Token: 0x0401E350 RID: 123728
+		// Token: 0x04018DED RID: 101869
 		private readonly InfrMaterialsDeliveryInfoPanel InfoPanel = new InfrMaterialsDeliveryInfoPanel();
 
-		// Token: 0x0401E351 RID: 123729
+		// Token: 0x04018DEE RID: 101870
 		private Action CloseCb;
 
-		// Token: 0x0200BBAB RID: 48043
+		// Token: 0x0200A5BB RID: 42427
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038A80 RID: 232064
+			// Token: 0x04033466 RID: 210022
 			public const int MarkInfoPanel = 0;
 		}
 	}

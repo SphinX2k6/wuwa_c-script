@@ -11,10 +11,10 @@ using CSharpScript.Game.Module.WorldMap;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BC7 RID: 19399
+	// Token: 0x02003B71 RID: 15217
 	public class SkipToDyMarkEntity : SkipTask
 	{
-		// Token: 0x0603231D RID: 205597 RVA: 0x00BAA074 File Offset: 0x00BA8274
+		// Token: 0x060270AE RID: 159918 RVA: 0x00AEE32C File Offset: 0x00AEC52C
 		protected unsafe override void OnRun([Nullable(new byte[]
 		{
 			1,

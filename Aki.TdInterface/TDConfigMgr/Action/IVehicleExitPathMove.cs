@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200203F RID: 8255
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02002288 RID: 8840
 	public class IVehicleExitPathMove : IVehicleControlType
 	{
-		// Token: 0x0600B56C RID: 46444 RVA: 0x001A5490 File Offset: 0x001A3690
-		[NullableContext(1)]
+		// Token: 0x0600C092 RID: 49298 RVA: 0x001BBBFC File Offset: 0x001B9DFC
 		private IVehicleExitPathMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B56D RID: 46445 RVA: 0x001A54C8 File Offset: 0x001A36C8
-		[NullableContext(1)]
+		// Token: 0x0600C093 RID: 49299 RVA: 0x001BBC34 File Offset: 0x001B9E34
 		public static IVehicleExitPathMove Create([Nullable(2)] IVehicleExitPathMove instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B56E RID: 46446 RVA: 0x001A54DB File Offset: 0x001A36DB
-		[NullableContext(1)]
+		// Token: 0x0600C094 RID: 49300 RVA: 0x001BBC47 File Offset: 0x001B9E47
 		public static IVehicleExitPathMove CreateFromSetValue([Nullable(2)] IVehicleExitPathMove_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B56F RID: 46447 RVA: 0x001A54EE File Offset: 0x001A36EE
-		[NullableContext(1)]
+		// Token: 0x0600C095 RID: 49301 RVA: 0x001BBC5A File Offset: 0x001B9E5A
 		public new IVehicleExitPathMove_SetValue ToSetValue()
 		{
 			return new IVehicleExitPathMove_SetValue
@@ -64,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037B0 RID: 14256
-		// (get) Token: 0x0600B570 RID: 46448 RVA: 0x001A550D File Offset: 0x001A370D
-		// (set) Token: 0x0600B571 RID: 46449 RVA: 0x001A5538 File Offset: 0x001A3738
+		// Token: 0x17003A8D RID: 14989
+		// (get) Token: 0x0600C096 RID: 49302 RVA: 0x001BBC79 File Offset: 0x001B9E79
+		// (set) Token: 0x0600C097 RID: 49303 RVA: 0x001BBCA4 File Offset: 0x001B9EA4
 		public override EVehicleControlType Type
 		{
 			get
@@ -87,11 +81,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037B1 RID: 14257
-		// (get) Token: 0x0600B572 RID: 46450 RVA: 0x001A5546 File Offset: 0x001A3746
-		// (set) Token: 0x0600B573 RID: 46451 RVA: 0x001A556D File Offset: 0x001A376D
+		// Token: 0x17003A8E RID: 14990
+		// (get) Token: 0x0600C098 RID: 49304 RVA: 0x001BBCB2 File Offset: 0x001B9EB2
+		// (set) Token: 0x0600C099 RID: 49305 RVA: 0x001BBCD9 File Offset: 0x001B9ED9
+		[Nullable(2)]
 		public virtual ICloseSplineMovePattern Pattern
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -105,16 +101,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.Pattern;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().Pattern = value;
 			}
 		}
 
-		// Token: 0x04006D2B RID: 27947
+		// Token: 0x04007334 RID: 29492
+		[Nullable(2)]
 		protected new IVehicleExitPathMove FbInstance;
 
-		// Token: 0x04006D2C RID: 27948
+		// Token: 0x04007335 RID: 29493
+		[Nullable(2)]
 		protected new IVehicleExitPathMove_SetValue PocoInterface;
 	}
 }

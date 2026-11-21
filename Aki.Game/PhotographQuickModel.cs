@@ -3,20 +3,20 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Camera;
 using UnrealEngine;
 
-// Token: 0x02002555 RID: 9557
+// Token: 0x02001A40 RID: 6720
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class PhotographQuickModel : ModelBase
 {
-	// Token: 0x06013425 RID: 78885 RVA: 0x004CA2C8 File Offset: 0x004C84C8
+	// Token: 0x06010905 RID: 67845 RVA: 0x004D8E48 File Offset: 0x004D7048
 	[NullableContext(2)]
 	public PhotoCameraHandler GetHandler()
 	{
 		return this.CaptureHandler;
 	}
 
-	// Token: 0x06013426 RID: 78886 RVA: 0x004CA2D0 File Offset: 0x004C84D0
+	// Token: 0x06010906 RID: 67846 RVA: 0x004D8E50 File Offset: 0x004D7050
 	public void ClearHandler()
 	{
 		PhotoCameraHandler captureHandler = this.CaptureHandler;
@@ -27,7 +27,7 @@ public class PhotographQuickModel : ModelBase
 		this.CaptureHandler = null;
 	}
 
-	// Token: 0x06013427 RID: 78887 RVA: 0x004CA2EC File Offset: 0x004C84EC
+	// Token: 0x06010907 RID: 67847 RVA: 0x004D8E6C File Offset: 0x004D706C
 	public void InitHandlerForCaptureCollect()
 	{
 		ACameraActor acameraActor = CameraController.Instance.GetMainPlayerCameraManager().ViewTarget.Target as ACameraActor;
@@ -41,8 +41,8 @@ public class PhotographQuickModel : ModelBase
 		this.CaptureHandler = fightCameraHandler;
 	}
 
-	// Token: 0x170018E0 RID: 6368
-	// (get) Token: 0x06013428 RID: 78888 RVA: 0x004CA347 File Offset: 0x004C8547
+	// Token: 0x17001919 RID: 6425
+	// (get) Token: 0x06010908 RID: 67848 RVA: 0x004D8EC7 File Offset: 0x004D70C7
 	public static PhotographQuickModel Instance
 	{
 		get
@@ -51,7 +51,7 @@ public class PhotographQuickModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013429 RID: 78889 RVA: 0x004CA34E File Offset: 0x004C854E
+	// Token: 0x06010909 RID: 67849 RVA: 0x004D8ECE File Offset: 0x004D70CE
 	public static PhotographQuickModel GetOrCreateInstance()
 	{
 		if (PhotographQuickModel._Instance == null)
@@ -61,7 +61,7 @@ public class PhotographQuickModel : ModelBase
 		return PhotographQuickModel._Instance;
 	}
 
-	// Token: 0x0601342A RID: 78890 RVA: 0x004CA362 File Offset: 0x004C8562
+	// Token: 0x0601090A RID: 67850 RVA: 0x004D8EE2 File Offset: 0x004D70E2
 	public static bool CreateInstance()
 	{
 		if (PhotographQuickModel._Instance != null)
@@ -72,28 +72,28 @@ public class PhotographQuickModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601342B RID: 78891 RVA: 0x004CA378 File Offset: 0x004C8578
+	// Token: 0x0601090B RID: 67851 RVA: 0x004D8EF8 File Offset: 0x004D70F8
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601342C RID: 78892 RVA: 0x004CA37A File Offset: 0x004C857A
+	// Token: 0x0601090C RID: 67852 RVA: 0x004D8EFA File Offset: 0x004D70FA
 	public static void ResetStaticDefaultValue()
 	{
 		PhotographQuickModel._Instance = null;
 	}
 
-	// Token: 0x0601342D RID: 78893 RVA: 0x004CA382 File Offset: 0x004C8582
+	// Token: 0x0601090D RID: 67853 RVA: 0x004D8F02 File Offset: 0x004D7102
 	static PhotographQuickModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhotographQuickModel.CreateStaticDefaultValue), new Action(PhotographQuickModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400915A RID: 37210
+	// Token: 0x040092B3 RID: 37555
 	[Nullable(2)]
 	private PhotoCameraHandler CaptureHandler;
 
-	// Token: 0x0400915B RID: 37211
+	// Token: 0x040092B4 RID: 37556
 	[Nullable(2)]
 	private static PhotographQuickModel _Instance;
 }

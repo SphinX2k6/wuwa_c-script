@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027C6 RID: 10182
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A99 RID: 10905
 	public class RotatorEntity : ActionParams
 	{
-		// Token: 0x0600E273 RID: 57971 RVA: 0x0021717D File Offset: 0x0021537D
+		// Token: 0x0600F095 RID: 61589 RVA: 0x00233F51 File Offset: 0x00232151
 		public static RotatorEntity Create(IRotatorEntity? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044A9 RID: 17577
-		// (get) Token: 0x0600E274 RID: 57972 RVA: 0x0021719C File Offset: 0x0021539C
+		// Token: 0x17004811 RID: 18449
+		// (get) Token: 0x0600F096 RID: 61590 RVA: 0x00233F70 File Offset: 0x00232170
 		public virtual ITargetEntityType Entity
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D94 RID: 32148
+		// Token: 0x0400844B RID: 33867
 		private IRotatorEntity Instance;
 
-		// Token: 0x04007D95 RID: 32149
+		// Token: 0x0400844C RID: 33868
 		private ITargetEntityType _EntityCache;
 
-		// Token: 0x04007D96 RID: 32150
+		// Token: 0x0400844D RID: 33869
 		private bool _EntityInited;
 	}
 }

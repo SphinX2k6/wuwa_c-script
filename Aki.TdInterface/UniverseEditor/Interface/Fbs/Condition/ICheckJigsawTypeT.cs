@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AB8 RID: 19128
+	// Token: 0x02004F87 RID: 20359
 	public class ICheckJigsawTypeT
 	{
-		// Token: 0x17008AAB RID: 35499
-		// (get) Token: 0x0601E078 RID: 123000 RVA: 0x00436EEE File Offset: 0x004350EE
-		// (set) Token: 0x0601E079 RID: 123001 RVA: 0x00436EF6 File Offset: 0x004350F6
+		// Token: 0x17009198 RID: 37272
+		// (get) Token: 0x0601FB61 RID: 129889 RVA: 0x0046870E File Offset: 0x0046690E
+		// (set) Token: 0x0601FB62 RID: 129890 RVA: 0x00468716 File Offset: 0x00466916
 		public ECheckJigsawInfoType Type { get; set; }
 
-		// Token: 0x0601E07A RID: 123002 RVA: 0x00436EFF File Offset: 0x004350FF
+		// Token: 0x0601FB63 RID: 129891 RVA: 0x0046871F File Offset: 0x0046691F
 		public ICheckJigsawTypeT()
 		{
 			this.Type = ECheckJigsawInfoType.CheckJigsawItemPlaceIndex;

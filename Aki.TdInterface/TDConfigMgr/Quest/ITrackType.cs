@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011CC RID: 4556
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001308 RID: 4872
 	public class ITrackType
 	{
-		// Token: 0x06006794 RID: 26516 RVA: 0x000F7F20 File Offset: 0x000F6120
-		[NullableContext(1)]
+		// Token: 0x06006DD5 RID: 28117 RVA: 0x0010582C File Offset: 0x00103A2C
 		private ITrackType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006795 RID: 26517 RVA: 0x000F7F58 File Offset: 0x000F6158
-		[NullableContext(1)]
+		// Token: 0x06006DD6 RID: 28118 RVA: 0x00105864 File Offset: 0x00103A64
 		public static ITrackType Create([Nullable(2)] ITrackType instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006796 RID: 26518 RVA: 0x000F7F6B File Offset: 0x000F616B
-		[NullableContext(1)]
+		// Token: 0x06006DD7 RID: 28119 RVA: 0x00105877 File Offset: 0x00103A77
 		public static ITrackType CreateFromSetValue([Nullable(2)] ITrackType_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006797 RID: 26519 RVA: 0x000F7F7E File Offset: 0x000F617E
-		[NullableContext(1)]
+		// Token: 0x06006DD8 RID: 28120 RVA: 0x0010588A File Offset: 0x00103A8A
 		public ITrackType_SetValue ToSetValue()
 		{
 			return new ITrackType_SetValue
@@ -65,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700219D RID: 8605
-		// (get) Token: 0x06006798 RID: 26520 RVA: 0x000F7F9D File Offset: 0x000F619D
-		// (set) Token: 0x06006799 RID: 26521 RVA: 0x000F7FC8 File Offset: 0x000F61C8
+		// Token: 0x1700235E RID: 9054
+		// (get) Token: 0x06006DD9 RID: 28121 RVA: 0x001058A9 File Offset: 0x00103AA9
+		// (set) Token: 0x06006DDA RID: 28122 RVA: 0x001058D4 File Offset: 0x00103AD4
 		public virtual ETrackType Type
 		{
 			get
@@ -88,11 +82,13 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700219E RID: 8606
-		// (get) Token: 0x0600679A RID: 26522 RVA: 0x000F7FD6 File Offset: 0x000F61D6
-		// (set) Token: 0x0600679B RID: 26523 RVA: 0x000F7FFD File Offset: 0x000F61FD
+		// Token: 0x1700235F RID: 9055
+		// (get) Token: 0x06006DDB RID: 28123 RVA: 0x001058E2 File Offset: 0x00103AE2
+		// (set) Token: 0x06006DDC RID: 28124 RVA: 0x00105909 File Offset: 0x00103B09
+		[Nullable(2)]
 		public virtual IGravityDirectionType GravityDirection
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -106,16 +102,19 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return pocoInterface.GravityDirection;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().GravityDirection = value;
 			}
 		}
 
-		// Token: 0x04003E2A RID: 15914
+		// Token: 0x04004198 RID: 16792
+		[Nullable(2)]
 		protected ITrackType FbInstance;
 
-		// Token: 0x04003E2B RID: 15915
+		// Token: 0x04004199 RID: 16793
+		[Nullable(2)]
 		protected ITrackType_SetValue PocoInterface;
 	}
 }

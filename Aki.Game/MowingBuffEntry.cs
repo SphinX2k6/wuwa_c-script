@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001385 RID: 4997
+// Token: 0x02000839 RID: 2105
 internal class MowingBuffEntry : UiPanelBase
 {
-	// Token: 0x06008C06 RID: 35846 RVA: 0x001DFE10 File Offset: 0x001DE010
+	// Token: 0x06005FA1 RID: 24481 RVA: 0x001E8C64 File Offset: 0x001E6E64
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,13 +30,13 @@ internal class MowingBuffEntry : UiPanelBase
 		};
 	}
 
-	// Token: 0x06008C07 RID: 35847 RVA: 0x001DFF11 File Offset: 0x001DE111
+	// Token: 0x06005FA2 RID: 24482 RVA: 0x001E8D65 File Offset: 0x001E6F65
 	private void OnClickEntryButton()
 	{
 		UiManager.Instance.OpenView(EUiViewName.MowingTowerBuffView, null, null);
 	}
 
-	// Token: 0x06008C08 RID: 35848 RVA: 0x001DFF24 File Offset: 0x001DE124
+	// Token: 0x06005FA3 RID: 24483 RVA: 0x001E8D78 File Offset: 0x001E6F78
 	[NullableContext(1)]
 	public void Refresh(MowingTowerBuffInfo buff)
 	{
@@ -58,33 +58,33 @@ internal class MowingBuffEntry : UiPanelBase
 		this.RefreshBuffTips();
 	}
 
-	// Token: 0x06008C09 RID: 35849 RVA: 0x001DFF7C File Offset: 0x001DE17C
+	// Token: 0x06005FA4 RID: 24484 RVA: 0x001E8DD0 File Offset: 0x001E6FD0
 	private void RefreshBuffTips()
 	{
 		string textStringId = "BossRushBuffSelectTips";
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x06008C0A RID: 35850 RVA: 0x001DFFA6 File Offset: 0x001DE1A6
+	// Token: 0x06005FA5 RID: 24485 RVA: 0x001E8DFA File Offset: 0x001E6FFA
 	private void RefreshLockItemState()
 	{
 		base.GetItem(8).SetUIActive(false);
 	}
 
-	// Token: 0x06008C0B RID: 35851 RVA: 0x001DFFB5 File Offset: 0x001DE1B5
+	// Token: 0x06005FA6 RID: 24486 RVA: 0x001E8E09 File Offset: 0x001E7009
 	private void RefreshSwitchButton()
 	{
 		base.GetItem(7).SetUIActive(this.CurrentSelectBuff.BuffId != 0);
 	}
 
-	// Token: 0x06008C0C RID: 35852 RVA: 0x001DFFD1 File Offset: 0x001DE1D1
+	// Token: 0x06005FA7 RID: 24487 RVA: 0x001E8E25 File Offset: 0x001E7025
 	private void RefreshNoneShow()
 	{
 		base.GetItem(1).SetUIActive(this.CurrentSelectBuff.BuffId == 0);
 		base.GetItem(2).SetUIActive(this.CurrentSelectBuff.BuffId != 0);
 	}
 
-	// Token: 0x06008C0D RID: 35853 RVA: 0x001E0007 File Offset: 0x001DE207
+	// Token: 0x06005FA8 RID: 24488 RVA: 0x001E8E5B File Offset: 0x001E705B
 	private void RefreshBuffInfo()
 	{
 		if (this.CurrentSelectBuff.BuffId == 0)
@@ -96,14 +96,14 @@ internal class MowingBuffEntry : UiPanelBase
 		this.RefreshBuffTexture();
 	}
 
-	// Token: 0x06008C0E RID: 35854 RVA: 0x001E002C File Offset: 0x001DE22C
+	// Token: 0x06005FA9 RID: 24489 RVA: 0x001E8E80 File Offset: 0x001E7080
 	private void RefreshBuffTexture()
 	{
 		string texture = MowingTowerConfig.Instance.GetMowingTowerBuffById(this.CurrentSelectBuff.BuffId).Value.Texture;
 		base.SetTextureByPath(texture, base.GetTexture(4), null, null);
 	}
 
-	// Token: 0x06008C0F RID: 35855 RVA: 0x001E0078 File Offset: 0x001DE278
+	// Token: 0x06005FAA RID: 24490 RVA: 0x001E8ECC File Offset: 0x001E70CC
 	private void RefreshBuffDesc()
 	{
 		MowTowerBuffRe? mowingTowerBuffById = MowingTowerConfig.Instance.GetMowingTowerBuffById(this.CurrentSelectBuff.BuffId);
@@ -130,48 +130,48 @@ internal class MowingBuffEntry : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(6), mowingTowerBuffById.Value.Description, array2);
 	}
 
-	// Token: 0x06008C10 RID: 35856 RVA: 0x001E019C File Offset: 0x001DE39C
+	// Token: 0x06005FAB RID: 24491 RVA: 0x001E8FF0 File Offset: 0x001E71F0
 	private void RefreshBuffName()
 	{
 		MowTowerBuffRe? mowingTowerBuffById = MowingTowerConfig.Instance.GetMowingTowerBuffById(this.CurrentSelectBuff.BuffId);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), mowingTowerBuffById.Value.Name, Array.Empty<object>());
 	}
 
-	// Token: 0x04003E16 RID: 15894
+	// Token: 0x04003EAE RID: 16046
 	public int SlotIndex;
 
-	// Token: 0x04003E17 RID: 15895
+	// Token: 0x04003EAF RID: 16047
 	[Nullable(2)]
 	private MowingTowerBuffInfo CurrentSelectBuff;
 
-	// Token: 0x020079F9 RID: 31225
+	// Token: 0x02006B83 RID: 27523
 	private class EBuffEntryComponent
 	{
-		// Token: 0x0402825A RID: 164442
+		// Token: 0x04023587 RID: 144775
 		public const int EntryButton = 0;
 
-		// Token: 0x0402825B RID: 164443
+		// Token: 0x04023588 RID: 144776
 		public const int NoneItem = 1;
 
-		// Token: 0x0402825C RID: 164444
+		// Token: 0x04023589 RID: 144777
 		public const int NotNoneItem = 2;
 
-		// Token: 0x0402825D RID: 164445
+		// Token: 0x0402358A RID: 144778
 		public const int SelectBuffTipsText = 3;
 
-		// Token: 0x0402825E RID: 164446
+		// Token: 0x0402358B RID: 144779
 		public const int BuffTexture = 4;
 
-		// Token: 0x0402825F RID: 164447
+		// Token: 0x0402358C RID: 144780
 		public const int BuffName = 5;
 
-		// Token: 0x04028260 RID: 164448
+		// Token: 0x0402358D RID: 144781
 		public const int BuffDesc = 6;
 
-		// Token: 0x04028261 RID: 164449
+		// Token: 0x0402358E RID: 144782
 		public const int SwitchButton = 7;
 
-		// Token: 0x04028262 RID: 164450
+		// Token: 0x0402358F RID: 144783
 		public const int LockItem = 8;
 	}
 }

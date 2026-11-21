@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E99 RID: 7833
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020CE RID: 8398
 	public class ISpawn
 	{
-		// Token: 0x0600A794 RID: 42900 RVA: 0x0017AAD8 File Offset: 0x00178CD8
+		// Token: 0x0600B24C RID: 45644 RVA: 0x001907D8 File Offset: 0x0018E9D8
 		private ISpawn_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A795 RID: 42901 RVA: 0x0017AB10 File Offset: 0x00178D10
+		// Token: 0x0600B24D RID: 45645 RVA: 0x00190810 File Offset: 0x0018EA10
 		public static ISpawn Create([Nullable(2)] ISpawn instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A796 RID: 42902 RVA: 0x0017AB23 File Offset: 0x00178D23
+		// Token: 0x0600B24E RID: 45646 RVA: 0x00190823 File Offset: 0x0018EA23
 		public static ISpawn CreateFromSetValue([Nullable(2)] ISpawn_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A797 RID: 42903 RVA: 0x0017AB36 File Offset: 0x00178D36
+		// Token: 0x0600B24F RID: 45647 RVA: 0x00190836 File Offset: 0x0018EA36
 		public ISpawn_SetValue ToSetValue()
 		{
 			return new ISpawn_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700333C RID: 13116
-		// (get) Token: 0x0600A798 RID: 42904 RVA: 0x0017AB55 File Offset: 0x00178D55
-		// (set) Token: 0x0600A799 RID: 42905 RVA: 0x0017AB80 File Offset: 0x00178D80
+		// Token: 0x17003600 RID: 13824
+		// (get) Token: 0x0600B250 RID: 45648 RVA: 0x00190855 File Offset: 0x0018EA55
+		// (set) Token: 0x0600B251 RID: 45649 RVA: 0x00190880 File Offset: 0x0018EA80
 		public virtual int TemplateGuid
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700333D RID: 13117
-		// (get) Token: 0x0600A79A RID: 42906 RVA: 0x0017AB90 File Offset: 0x00178D90
-		// (set) Token: 0x0600A79B RID: 42907 RVA: 0x0017ABF1 File Offset: 0x00178DF1
+		// Token: 0x17003601 RID: 13825
+		// (get) Token: 0x0600B252 RID: 45650 RVA: 0x00190890 File Offset: 0x0018EA90
+		// (set) Token: 0x0600B253 RID: 45651 RVA: 0x001908F1 File Offset: 0x0018EAF1
 		public virtual ITransform Transform
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063EF RID: 25583
+		// Token: 0x040069D3 RID: 27091
 		[Nullable(2)]
 		protected ISpawn FbInstance;
 
-		// Token: 0x040063F0 RID: 25584
+		// Token: 0x040069D4 RID: 27092
 		[Nullable(2)]
 		protected ISpawn_SetValue PocoInterface;
 
-		// Token: 0x040063F1 RID: 25585
+		// Token: 0x040069D5 RID: 27093
 		private ITransform _TransformCache;
 
-		// Token: 0x040063F2 RID: 25586
+		// Token: 0x040069D6 RID: 27094
 		private bool _TransformInited;
 	}
 }

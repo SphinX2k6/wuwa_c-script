@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006170 RID: 24944
+	// Token: 0x020050EE RID: 20718
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoverlikeRoleUnlockView : UiViewBase
 	{
-		// Token: 0x170091BC RID: 37308
-		// (get) Token: 0x0603F0E7 RID: 258279 RVA: 0x00F3CC9F File Offset: 0x00F3AE9F
+		// Token: 0x1700651E RID: 25886
+		// (get) Token: 0x06033DA7 RID: 212391 RVA: 0x00E83B73 File Offset: 0x00E81D73
 		private RoverlikeRoleUnlockViewParam Param
 		{
 			get
@@ -23,13 +23,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F0E8 RID: 258280 RVA: 0x00F3CCAC File Offset: 0x00F3AEAC
+		// Token: 0x06033DA8 RID: 212392 RVA: 0x00E83B80 File Offset: 0x00E81D80
 		[NullableContext(1)]
 		public RoverlikeRoleUnlockView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603F0E9 RID: 258281 RVA: 0x00F3CCB8 File Offset: 0x00F3AEB8
+		// Token: 0x06033DA9 RID: 212393 RVA: 0x00E83B8C File Offset: 0x00E81D8C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F0EA RID: 258282 RVA: 0x00F3CDC1 File Offset: 0x00F3AFC1
+		// Token: 0x06033DAA RID: 212394 RVA: 0x00E83C95 File Offset: 0x00E81E95
 		protected override void OnStart()
 		{
 			RoverlikeRoleUnlockViewParam param = this.Param;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshByBlessRole((param2 != null) ? param2.BlessRoleId : 0);
 		}
 
-		// Token: 0x0603F0EB RID: 258283 RVA: 0x00F3CDF3 File Offset: 0x00F3AFF3
+		// Token: 0x06033DAB RID: 212395 RVA: 0x00E83CC7 File Offset: 0x00E81EC7
 		protected override void OnBeforeDestroy()
 		{
 			Action onClosed = this.OnClosed;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			onClosed();
 		}
 
-		// Token: 0x0603F0EC RID: 258284 RVA: 0x00F3CE0C File Offset: 0x00F3B00C
+		// Token: 0x06033DAC RID: 212396 RVA: 0x00E83CE0 File Offset: 0x00E81EE0
 		private void RefreshByBlessRole(int blessRoleId)
 		{
 			RoverRogueBlessRole? blessRoleConfig = RoverlikeConfig.Instance.GetBlessRoleConfig(blessRoleId);
@@ -90,32 +90,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), blessRoleConfig.Value.SkillDesc, Array.Empty<object>());
 		}
 
-		// Token: 0x0603F0ED RID: 258285 RVA: 0x00F3CE96 File Offset: 0x00F3B096
+		// Token: 0x06033DAD RID: 212397 RVA: 0x00E83D6A File Offset: 0x00E81F6A
 		private void OnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04020E30 RID: 134704
+		// Token: 0x0401B75D RID: 112477
 		private Action OnClosed;
 
-		// Token: 0x0200C3DA RID: 50138
+		// Token: 0x0200ADC1 RID: 44481
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B194 RID: 242068
+			// Token: 0x04035AF5 RID: 219893
 			public const int SprClose = 0;
 
-			// Token: 0x0403B195 RID: 242069
+			// Token: 0x04035AF6 RID: 219894
 			public const int PnlRole = 1;
 
-			// Token: 0x0403B196 RID: 242070
+			// Token: 0x04035AF7 RID: 219895
 			public const int TexRole = 2;
 
-			// Token: 0x0403B197 RID: 242071
+			// Token: 0x04035AF8 RID: 219896
 			public const int TxtName1 = 3;
 
-			// Token: 0x0403B198 RID: 242072
+			// Token: 0x04035AF9 RID: 219897
 			public const int TxtName2 = 4;
 		}
 	}

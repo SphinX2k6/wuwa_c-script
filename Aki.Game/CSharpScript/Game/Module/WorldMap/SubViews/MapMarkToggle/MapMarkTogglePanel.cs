@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,18 +13,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 {
-	// Token: 0x02004806 RID: 18438
+	// Token: 0x02003737 RID: 14135
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapMarkTogglePanel : WorldMapSecondaryUi
 	{
-		// Token: 0x06030472 RID: 197746 RVA: 0x00B32B25 File Offset: 0x00B30D25
+		// Token: 0x06024C42 RID: 150594 RVA: 0x00A62A8D File Offset: 0x00A60C8D
 		public override string GetResourceId()
 		{
 			return "UiView_MapPopupAssistant";
 		}
 
-		// Token: 0x06030473 RID: 197747 RVA: 0x00B32B2C File Offset: 0x00B30D2C
+		// Token: 0x06024C43 RID: 150595 RVA: 0x00A62A94 File Offset: 0x00A60C94
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -45,7 +44,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06030474 RID: 197748 RVA: 0x00B32BF8 File Offset: 0x00B30DF8
+		// Token: 0x06024C44 RID: 150596 RVA: 0x00A62B60 File Offset: 0x00A60D60
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MapMarkTogglePanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -56,7 +55,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030475 RID: 197749 RVA: 0x00B32C3C File Offset: 0x00B30E3C
+		// Token: 0x06024C45 RID: 150597 RVA: 0x00A62BA4 File Offset: 0x00A60DA4
 		protected override UniTask OnBeforeShowWorldMapSecondaryUiAsync(params object[] param)
 		{
 			MapMarkTogglePanel.<OnBeforeShowWorldMapSecondaryUiAsync>d__7 <OnBeforeShowWorldMapSecondaryUiAsync>d__;
@@ -68,30 +67,30 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 			return <OnBeforeShowWorldMapSecondaryUiAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030476 RID: 197750 RVA: 0x00B32C87 File Offset: 0x00B30E87
+		// Token: 0x06024C46 RID: 150598 RVA: 0x00A62BEF File Offset: 0x00A60DEF
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 		}
 
-		// Token: 0x06030477 RID: 197751 RVA: 0x00B32C89 File Offset: 0x00B30E89
+		// Token: 0x06024C47 RID: 150599 RVA: 0x00A62BF1 File Offset: 0x00A60DF1
 		protected override void OnCloseWorldMapSecondaryUi()
 		{
 		}
 
-		// Token: 0x06030478 RID: 197752 RVA: 0x00B32C8B File Offset: 0x00B30E8B
+		// Token: 0x06024C48 RID: 150600 RVA: 0x00A62BF3 File Offset: 0x00A60DF3
 		protected override void OnBeforeDestroy()
 		{
 			this.PopupCaption = null;
 			this.MarkToggleLayout = null;
 		}
 
-		// Token: 0x06030479 RID: 197753 RVA: 0x00B32C9B File Offset: 0x00B30E9B
+		// Token: 0x06024C49 RID: 150601 RVA: 0x00A62C03 File Offset: 0x00A60E03
 		protected override bool GetNeedBgItem()
 		{
 			return true;
 		}
 
-		// Token: 0x0603047A RID: 197754 RVA: 0x00B32CA0 File Offset: 0x00B30EA0
+		// Token: 0x06024C4A RID: 150602 RVA: 0x00A62C08 File Offset: 0x00A60E08
 		private IMapMarkToggleItemData[] GetMarkToggleDataList()
 		{
 			List<IMapMarkToggleItemData> list = new List<IMapMarkToggleItemData>();
@@ -109,14 +108,12 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 			});
 			if (RecallQuestModel.Instance.IsInRecallInstance())
 			{
-				return (from data in list
-				where data.ShowInRecallInstance.GetValueOrDefault()
-				select data).ToArray<IMapMarkToggleItemData>();
+				return NoLinq.WhereToArray<IMapMarkToggleItemData>(list, (IMapMarkToggleItemData data) => data.ShowInRecallInstance.GetValueOrDefault());
 			}
 			return list.ToArray();
 		}
 
-		// Token: 0x0603047B RID: 197755 RVA: 0x00B32D64 File Offset: 0x00B30F64
+		// Token: 0x06024C4B RID: 150603 RVA: 0x00A62CC7 File Offset: 0x00A60EC7
 		private EToggleState GetCustomMarkToggleState()
 		{
 			if (!WorldMapModel.Instance.CustomMarksIsShow)
@@ -126,13 +123,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 			return EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x0603047C RID: 197756 RVA: 0x00B32D75 File Offset: 0x00B30F75
+		// Token: 0x06024C4C RID: 150604 RVA: 0x00A62CD8 File Offset: 0x00A60ED8
 		private bool SetCustomMarkToggleState(EToggleState state)
 		{
 			return WorldMapModel.Instance.SetCustomMarksShow(state == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x0603047D RID: 197757 RVA: 0x00B32D85 File Offset: 0x00B30F85
+		// Token: 0x06024C4D RID: 150605 RVA: 0x00A62CE8 File Offset: 0x00A60EE8
 		private EToggleState GetFinishedPlayPointToggleState()
 		{
 			if (!WorldMapModel.Instance.CompletedPlayPointMarkIsShow)
@@ -142,13 +139,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 			return EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x0603047E RID: 197758 RVA: 0x00B32D96 File Offset: 0x00B30F96
+		// Token: 0x06024C4E RID: 150606 RVA: 0x00A62CF9 File Offset: 0x00A60EF9
 		private bool SetFinishedPlayPointToggleState(EToggleState state)
 		{
 			return WorldMapModel.Instance.SetCompletedPlayPointMarkShow(state == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x0603047F RID: 197759 RVA: 0x00B32DA8 File Offset: 0x00B30FA8
+		// Token: 0x06024C4F RID: 150607 RVA: 0x00A62D0C File Offset: 0x00A60F0C
 		private IMapMarkProgressItemData[] GetMarkProgressDataList()
 		{
 			return new IMapMarkProgressItemData[]
@@ -164,17 +161,17 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 			};
 		}
 
-		// Token: 0x06030480 RID: 197760 RVA: 0x00B32E13 File Offset: 0x00B31013
+		// Token: 0x06024C50 RID: 150608 RVA: 0x00A62D77 File Offset: 0x00A60F77
 		private void SetJoystickClickMultiplier(float progress)
 		{
 			WorldMapModel.Instance.SetJoystickClickMultiplier(progress);
 		}
 
-		// Token: 0x04019FB3 RID: 106419
+		// Token: 0x04014667 RID: 83559
 		[Nullable(2)]
 		private PopupCaptionItem PopupCaption;
 
-		// Token: 0x04019FB4 RID: 106420
+		// Token: 0x04014668 RID: 83560
 		[Nullable(new byte[]
 		{
 			2,
@@ -183,7 +180,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 		})]
 		private GenericLayout<MapMarkToggleItem, IMapMarkToggleItemData> MarkToggleLayout;
 
-		// Token: 0x04019FB5 RID: 106421
+		// Token: 0x04014669 RID: 83561
 		[Nullable(new byte[]
 		{
 			2,
@@ -192,23 +189,23 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 		})]
 		private GenericLayout<MapMarkProgressItem, IMapMarkProgressItemData> MarkProgressLayout;
 
-		// Token: 0x0200AAD5 RID: 43733
+		// Token: 0x02009486 RID: 38022
 		[NullableContext(0)]
 		public static class EChildType
 		{
-			// Token: 0x04033F3F RID: 212799
+			// Token: 0x0402E6C2 RID: 190146
 			public const int ItemCaption = 0;
 
-			// Token: 0x04033F40 RID: 212800
+			// Token: 0x0402E6C3 RID: 190147
 			public const int VerticalLayoutNote = 1;
 
-			// Token: 0x04033F41 RID: 212801
+			// Token: 0x0402E6C4 RID: 190148
 			public const int ItemMarkToggle = 2;
 
-			// Token: 0x04033F42 RID: 212802
+			// Token: 0x0402E6C5 RID: 190149
 			public const int VerticalLayoutProgress = 3;
 
-			// Token: 0x04033F43 RID: 212803
+			// Token: 0x0402E6C6 RID: 190150
 			public const int PanelProgress = 4;
 		}
 	}

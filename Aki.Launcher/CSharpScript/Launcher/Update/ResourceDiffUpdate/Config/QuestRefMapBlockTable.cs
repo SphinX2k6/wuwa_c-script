@@ -6,7 +6,7 @@ using Google.FlatBuffers;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 {
-	// Token: 0x020000B6 RID: 182
+	// Token: 0x020000B9 RID: 185
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,25 +15,25 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 	})]
 	public class QuestRefMapBlockTable : TableReader<QuestRefMapBlockRow>
 	{
-		// Token: 0x06000626 RID: 1574 RVA: 0x00036CAE File Offset: 0x00034EAE
+		// Token: 0x06000641 RID: 1601 RVA: 0x000387AE File Offset: 0x000369AE
 		protected override string GetTableName()
 		{
 			return "QuestRefMapBlockConfig";
 		}
 
-		// Token: 0x06000627 RID: 1575 RVA: 0x00036CB5 File Offset: 0x00034EB5
+		// Token: 0x06000642 RID: 1602 RVA: 0x000387B5 File Offset: 0x000369B5
 		protected override string GetDbFile()
 		{
 			return "db_questrefmapblock.db";
 		}
 
-		// Token: 0x06000628 RID: 1576 RVA: 0x00036CBC File Offset: 0x00034EBC
+		// Token: 0x06000643 RID: 1603 RVA: 0x000387BC File Offset: 0x000369BC
 		protected override string GetIdString()
 		{
 			return "QuestId";
 		}
 
-		// Token: 0x06000629 RID: 1577 RVA: 0x00036CC4 File Offset: 0x00034EC4
+		// Token: 0x06000644 RID: 1604 RVA: 0x000387C4 File Offset: 0x000369C4
 		public override QuestRefMapBlockRow Parse(ByteBuffer byteBuffer)
 		{
 			QuestRefMapBlockRow questRefMapBlockRow = new QuestRefMapBlockRow();

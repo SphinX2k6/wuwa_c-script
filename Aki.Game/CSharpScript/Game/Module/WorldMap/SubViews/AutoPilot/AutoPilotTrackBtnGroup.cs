@@ -7,22 +7,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.AutoPilot
 {
-	// Token: 0x02004844 RID: 18500
+	// Token: 0x02003775 RID: 14197
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AutoPilotTrackBtnGroup : UiPanelBase
 	{
-		// Token: 0x17007907 RID: 30983
-		// (get) Token: 0x0603068A RID: 198282 RVA: 0x00B3CA39 File Offset: 0x00B3AC39
-		// (set) Token: 0x0603068B RID: 198283 RVA: 0x00B3CA41 File Offset: 0x00B3AC41
+		// Token: 0x17004BC4 RID: 19396
+		// (get) Token: 0x06024E5A RID: 151130 RVA: 0x00A6CC21 File Offset: 0x00A6AE21
+		// (set) Token: 0x06024E5B RID: 151131 RVA: 0x00A6CC29 File Offset: 0x00A6AE29
 		public Action BtnGoQuickCallback { get; set; }
 
-		// Token: 0x17007908 RID: 30984
-		// (get) Token: 0x0603068C RID: 198284 RVA: 0x00B3CA4A File Offset: 0x00B3AC4A
-		// (set) Token: 0x0603068D RID: 198285 RVA: 0x00B3CA52 File Offset: 0x00B3AC52
+		// Token: 0x17004BC5 RID: 19397
+		// (get) Token: 0x06024E5C RID: 151132 RVA: 0x00A6CC32 File Offset: 0x00A6AE32
+		// (set) Token: 0x06024E5D RID: 151133 RVA: 0x00A6CC3A File Offset: 0x00A6AE3A
 		public Action BtnCancelCallback { get; set; }
 
-		// Token: 0x0603068E RID: 198286 RVA: 0x00B3CA5C File Offset: 0x00B3AC5C
+		// Token: 0x06024E5E RID: 151134 RVA: 0x00A6CC44 File Offset: 0x00A6AE44
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.AutoPilot
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603068F RID: 198287 RVA: 0x00B3CB25 File Offset: 0x00B3AD25
+		// Token: 0x06024E5F RID: 151135 RVA: 0x00A6CD0D File Offset: 0x00A6AF0D
 		private void OnBtnCancel()
 		{
 			Action btnCancelCallback = this.BtnCancelCallback;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.AutoPilot
 			btnCancelCallback();
 		}
 
-		// Token: 0x06030690 RID: 198288 RVA: 0x00B3CB37 File Offset: 0x00B3AD37
+		// Token: 0x06024E60 RID: 151136 RVA: 0x00A6CD1F File Offset: 0x00A6AF1F
 		private void OnBtnGoQuick()
 		{
 			Action btnGoQuickCallback = this.BtnGoQuickCallback;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.AutoPilot
 			btnGoQuickCallback();
 		}
 
-		// Token: 0x06030691 RID: 198289 RVA: 0x00B3CB49 File Offset: 0x00B3AD49
+		// Token: 0x06024E61 RID: 151137 RVA: 0x00A6CD31 File Offset: 0x00A6AF31
 		public void SetBtnGoQuickEnable(bool isEnable)
 		{
 			UUIButtonComponent button = base.GetButton(1);
@@ -78,14 +78,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.AutoPilot
 			button.SetSelfInteractive(isEnable);
 		}
 
-		// Token: 0x0200AB23 RID: 43811
+		// Token: 0x020094D1 RID: 38097
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x0403401F RID: 213023
+			// Token: 0x0402E79A RID: 190362
 			public const int BtnCancel = 0;
 
-			// Token: 0x04034020 RID: 213024
+			// Token: 0x0402E79B RID: 190363
 			public const int BtnGoQuick = 1;
 		}
 	}

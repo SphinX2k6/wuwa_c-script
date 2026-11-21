@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 {
-	// Token: 0x02007108 RID: 28936
+	// Token: 0x020063B8 RID: 25528
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AttachMoveUtils : Singleton
 	{
-		// Token: 0x06046A47 RID: 289351 RVA: 0x011C7A42 File Offset: 0x011C5C42
+		// Token: 0x0603DE46 RID: 253510 RVA: 0x011F6A62 File Offset: 0x011F4C62
 		public AttachMoveUtils()
 		{
 			this.Relations = new Dictionary<string, AttachMoveRelation>();
 		}
 
-		// Token: 0x06046A48 RID: 289352 RVA: 0x011C7A58 File Offset: 0x011C5C58
+		// Token: 0x0603DE47 RID: 253511 RVA: 0x011F6A78 File Offset: 0x011F4C78
 		[return: Nullable(2)]
 		public AttachMoveRelation GetRelation(string key)
 		{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			return result;
 		}
 
-		// Token: 0x06046A49 RID: 289353 RVA: 0x011C7A78 File Offset: 0x011C5C78
+		// Token: 0x0603DE48 RID: 253512 RVA: 0x011F6A98 File Offset: 0x011F4C98
 		[NullableContext(2)]
 		public AttachMoveRelation GetRelationByEntityId(int entityId)
 		{
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			return null;
 		}
 
-		// Token: 0x06046A4A RID: 289354 RVA: 0x011C7AE8 File Offset: 0x011C5CE8
+		// Token: 0x0603DE49 RID: 253513 RVA: 0x011F6B08 File Offset: 0x011F4D08
 		public unsafe AttachMoveRelation AddRelation(string key, CharacterActorComponent leader, BaseActorComponent followerActor, BaseMoveComponent followerMoveComp, [Nullable(2)] Action stopFn = null)
 		{
 			AttachMoveRelation attachMoveRelation = new AttachMoveRelation();
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			return attachMoveRelation;
 		}
 
-		// Token: 0x06046A4B RID: 289355 RVA: 0x011C7BE0 File Offset: 0x011C5DE0
+		// Token: 0x0603DE4A RID: 253514 RVA: 0x011F6C00 File Offset: 0x011F4E00
 		public unsafe void DeleteRelation(string key, string reason)
 		{
 			AttachMoveRelation attachMoveRelation;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06046A4C RID: 289356 RVA: 0x011C7C60 File Offset: 0x011C5E60
+		// Token: 0x0603DE4B RID: 253515 RVA: 0x011F6C80 File Offset: 0x011F4E80
 		public void DeduplicateRelations(string key, int leaderId, int followerId, string reason)
 		{
 			if (this.Relations.ContainsKey(key))
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			}
 		}
 
-		// Token: 0x06046A4D RID: 289357 RVA: 0x011C7CF0 File Offset: 0x011C5EF0
+		// Token: 0x0603DE4C RID: 253516 RVA: 0x011F6D10 File Offset: 0x011F4F10
 		public unsafe void RequestStartAttachMove(string key, CharacterActorComponent leader, BaseActorComponent followerActor, BaseMoveComponent followerMoveComp, string daPath, string reason = "")
 		{
 			Log instance = Log.Instance;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			});
 		}
 
-		// Token: 0x06046A4E RID: 289358 RVA: 0x011C7E7C File Offset: 0x011C607C
+		// Token: 0x0603DE4D RID: 253517 RVA: 0x011F6E9C File Offset: 0x011F509C
 		public unsafe void RequestStop(string key, string reason = "")
 		{
 			AttachMoveRelation attachMoveRelation;
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			this.DeleteRelation(key, reason);
 		}
 
-		// Token: 0x06046A4F RID: 289359 RVA: 0x011C7F5C File Offset: 0x011C615C
+		// Token: 0x0603DE4E RID: 253518 RVA: 0x011F6F7C File Offset: 0x011F517C
 		[NullableContext(2)]
 		public unsafe BP_AttachMoveConfig_C LoadConfigDataAsset(Entity entity, [Nullable(1)] string daPath)
 		{
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			return bp_AttachMoveConfig_C;
 		}
 
-		// Token: 0x06046A50 RID: 289360 RVA: 0x011C8014 File Offset: 0x011C6214
+		// Token: 0x0603DE4F RID: 253519 RVA: 0x011F7034 File Offset: 0x011F5234
 		[return: TupleElementNames(new string[]
 		{
 			"Transform",
@@ -265,8 +265,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			return new ValueTuple<Transform, float>?(new ValueTuple<Transform, float>(item, item2));
 		}
 
-		// Token: 0x17009D0A RID: 40202
-		// (get) Token: 0x06046A51 RID: 289361 RVA: 0x011C8183 File Offset: 0x011C6383
+		// Token: 0x17007599 RID: 30105
+		// (get) Token: 0x0603DE50 RID: 253520 RVA: 0x011F71A3 File Offset: 0x011F53A3
 		public static AttachMoveUtils Instance
 		{
 			get
@@ -280,12 +280,12 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			}
 		}
 
-		// Token: 0x06046A52 RID: 289362 RVA: 0x011C81A6 File Offset: 0x011C63A6
+		// Token: 0x0603DE51 RID: 253521 RVA: 0x011F71C6 File Offset: 0x011F53C6
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06046A53 RID: 289363 RVA: 0x011C81A8 File Offset: 0x011C63A8
+		// Token: 0x0603DE52 RID: 253522 RVA: 0x011F71C8 File Offset: 0x011F53C8
 		public static void ResetStaticDefaultValue()
 		{
 			AttachMoveUtils instance = AttachMoveUtils._instance;
@@ -296,16 +296,16 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			AttachMoveUtils._instance = null;
 		}
 
-		// Token: 0x06046A54 RID: 289364 RVA: 0x011C81C1 File Offset: 0x011C63C1
+		// Token: 0x0603DE53 RID: 253523 RVA: 0x011F71E1 File Offset: 0x011F53E1
 		static AttachMoveUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AttachMoveUtils.CreateStaticDefaultValue), new Action(AttachMoveUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025150 RID: 151888
+		// Token: 0x04020DE5 RID: 134629
 		private readonly Dictionary<string, AttachMoveRelation> Relations;
 
-		// Token: 0x04025151 RID: 151889
+		// Token: 0x04020DE6 RID: 134630
 		[Nullable(2)]
 		private static AttachMoveUtils _instance;
 	}

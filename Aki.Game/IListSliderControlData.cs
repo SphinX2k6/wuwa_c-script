@@ -2,58 +2,58 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200200D RID: 8205
+// Token: 0x020014E0 RID: 5344
 [NullableContext(1)]
 public interface IListSliderControlData<[Nullable(0)] T> where T : SliderItem
 {
-	// Token: 0x1700138C RID: 5004
-	// (get) Token: 0x0601015D RID: 65885
+	// Token: 0x170013B9 RID: 5049
+	// (get) Token: 0x0600D5C5 RID: 54725
 	UUIItem ParentUi { get; }
 
-	// Token: 0x1700138D RID: 5005
-	// (get) Token: 0x0601015E RID: 65886
+	// Token: 0x170013BA RID: 5050
+	// (get) Token: 0x0600D5C6 RID: 54726
 	Func<T> CreateProxyFunction { get; }
 
-	// Token: 0x1700138E RID: 5006
-	// (get) Token: 0x0601015F RID: 65887
+	// Token: 0x170013BB RID: 5051
+	// (get) Token: 0x0600D5C7 RID: 54727
 	Func<bool> CheckNext { get; }
 
-	// Token: 0x1700138F RID: 5007
-	// (get) Token: 0x06010160 RID: 65888
+	// Token: 0x170013BC RID: 5052
+	// (get) Token: 0x0600D5C8 RID: 54728
 	[Nullable(2)]
 	UUIItem ChildTemplate { [NullableContext(2)] get; }
 
-	// Token: 0x17001390 RID: 5008
-	// (get) Token: 0x06010161 RID: 65889
+	// Token: 0x170013BD RID: 5053
+	// (get) Token: 0x0600D5C9 RID: 54729
 	[Nullable(2)]
 	string ChildResourceId { [NullableContext(2)] get; }
 
-	// Token: 0x17001391 RID: 5009
-	// (get) Token: 0x06010162 RID: 65890
+	// Token: 0x170013BE RID: 5054
+	// (get) Token: 0x0600D5CA RID: 54730
 	int? MaxShowCount { get; }
 
-	// Token: 0x17001392 RID: 5010
-	// (get) Token: 0x06010163 RID: 65891
+	// Token: 0x170013BF RID: 5055
+	// (get) Token: 0x0600D5CB RID: 54731
 	float? AddItemTime { get; }
 
-	// Token: 0x17001393 RID: 5011
-	// (get) Token: 0x06010164 RID: 65892
+	// Token: 0x170013C0 RID: 5056
+	// (get) Token: 0x0600D5CC RID: 54732
 	float? ItemSliderTime { get; }
 
-	// Token: 0x17001394 RID: 5012
-	// (get) Token: 0x06010165 RID: 65893
+	// Token: 0x170013C1 RID: 5057
+	// (get) Token: 0x0600D5CD RID: 54733
 	float? ItemShowTime { get; }
 
-	// Token: 0x17001395 RID: 5013
-	// (get) Token: 0x06010166 RID: 65894
+	// Token: 0x170013C2 RID: 5058
+	// (get) Token: 0x0600D5CE RID: 54734
 	ESliderMode? SliderMode { get; }
 
-	// Token: 0x17001396 RID: 5014
-	// (get) Token: 0x06010167 RID: 65895
+	// Token: 0x170013C3 RID: 5059
+	// (get) Token: 0x0600D5CF RID: 54735
 	ETickItemMode? TickMode { get; }
 
-	// Token: 0x17001397 RID: 5015
-	// (get) Token: 0x06010168 RID: 65896
+	// Token: 0x170013C4 RID: 5060
+	// (get) Token: 0x0600D5D0 RID: 54736
 	[Nullable(2)]
 	Action FinishCallback { [NullableContext(2)] get; }
 }

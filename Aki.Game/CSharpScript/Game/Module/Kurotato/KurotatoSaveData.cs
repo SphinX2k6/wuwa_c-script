@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x02005713 RID: 22291
+	// Token: 0x020046EA RID: 18154
 	public class KurotatoSaveData : IKurotatoSaveData
 	{
-		// Token: 0x17008853 RID: 34899
-		// (get) Token: 0x06038A95 RID: 232085 RVA: 0x00D70975 File Offset: 0x00D6EB75
-		// (set) Token: 0x06038A96 RID: 232086 RVA: 0x00D7097D File Offset: 0x00D6EB7D
+		// Token: 0x17005C1B RID: 23579
+		// (get) Token: 0x0602D9A5 RID: 186789 RVA: 0x00CBEF5D File Offset: 0x00CBD15D
+		// (set) Token: 0x0602D9A6 RID: 186790 RVA: 0x00CBEF65 File Offset: 0x00CBD165
 		public long SaveTimestamp { get; set; }
 
-		// Token: 0x17008854 RID: 34900
-		// (get) Token: 0x06038A97 RID: 232087 RVA: 0x00D70986 File Offset: 0x00D6EB86
-		// (set) Token: 0x06038A98 RID: 232088 RVA: 0x00D7098E File Offset: 0x00D6EB8E
+		// Token: 0x17005C1C RID: 23580
+		// (get) Token: 0x0602D9A7 RID: 186791 RVA: 0x00CBEF6E File Offset: 0x00CBD16E
+		// (set) Token: 0x0602D9A8 RID: 186792 RVA: 0x00CBEF76 File Offset: 0x00CBD176
 		public int RoleLevel { get; set; }
 
-		// Token: 0x17008855 RID: 34901
-		// (get) Token: 0x06038A99 RID: 232089 RVA: 0x00D70997 File Offset: 0x00D6EB97
-		// (set) Token: 0x06038A9A RID: 232090 RVA: 0x00D7099F File Offset: 0x00D6EB9F
+		// Token: 0x17005C1D RID: 23581
+		// (get) Token: 0x0602D9A9 RID: 186793 RVA: 0x00CBEF7F File Offset: 0x00CBD17F
+		// (set) Token: 0x0602D9AA RID: 186794 RVA: 0x00CBEF87 File Offset: 0x00CBD187
 		public int WaveNum { get; set; }
 	}
 }

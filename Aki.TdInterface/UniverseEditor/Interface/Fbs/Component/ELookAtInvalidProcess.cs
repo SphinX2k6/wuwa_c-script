@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DCA RID: 19914
+	// Token: 0x020052CE RID: 21198
 	public enum ELookAtInvalidProcess : byte
 	{
-		// Token: 0x0400DA2D RID: 55853
+		// Token: 0x0400E57C RID: 58748
 		Reset,
-		// Token: 0x0400DA2E RID: 55854
+		// Token: 0x0400E57D RID: 58749
 		DoNothing
 	}
 }

@@ -4,12 +4,12 @@ using Aki.Config;
 using Aki.Protocol;
 using UnrealEngine;
 
-// Token: 0x02001BD5 RID: 7125
+// Token: 0x02001094 RID: 4244
 [NullableContext(1)]
 [Nullable(0)]
 public class ChatNoticeComponent
 {
-	// Token: 0x0600D46D RID: 54381 RVA: 0x0030E12A File Offset: 0x0030C32A
+	// Token: 0x0600A87F RID: 43135 RVA: 0x0031929E File Offset: 0x0031749E
 	public ChatNoticeComponent(UUIItem rootItem, UUIItem infoItem, UUIText infoText)
 	{
 		this.InfoItem = infoItem;
@@ -17,7 +17,7 @@ public class ChatNoticeComponent
 		this.SequencePlayer = new LevelSequencePlayer(rootItem);
 	}
 
-	// Token: 0x0600D46E RID: 54382 RVA: 0x0030E14C File Offset: 0x0030C34C
+	// Token: 0x0600A880 RID: 43136 RVA: 0x003192C0 File Offset: 0x003174C0
 	public void HandlePushChatRowData(ChatRowData chatRowData)
 	{
 		int value = chatRowData.TargetPlayerId.Value;
@@ -95,22 +95,22 @@ public class ChatNoticeComponent
 		}));
 	}
 
-	// Token: 0x0600D46F RID: 54383 RVA: 0x0030E32A File Offset: 0x0030C52A
+	// Token: 0x0600A881 RID: 43137 RVA: 0x0031949E File Offset: 0x0031769E
 	public void Destroy()
 	{
 		this.SequencePlayer.Clear();
 	}
 
-	// Token: 0x0400610F RID: 24847
+	// Token: 0x040061DE RID: 25054
 	private bool IsShown;
 
-	// Token: 0x04006110 RID: 24848
+	// Token: 0x040061DF RID: 25055
 	[Nullable(2)]
 	private readonly LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04006111 RID: 24849
+	// Token: 0x040061E0 RID: 25056
 	private readonly UUIItem InfoItem;
 
-	// Token: 0x04006112 RID: 24850
+	// Token: 0x040061E1 RID: 25057
 	private readonly UUIText InfoText;
 }

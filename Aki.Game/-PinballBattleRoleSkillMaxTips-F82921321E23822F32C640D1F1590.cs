@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001D01 RID: 7425
+// Token: 0x020011C3 RID: 4547
 internal enum <PinballBattleRoleSkillMaxTips>F82921321E23822F32C640D1F1590C98E31E3A7EE50234E086111E5B5BAA31AF3__EComp
 {
-	// Token: 0x040067B7 RID: 26551
+	// Token: 0x04006896 RID: 26774
 	Tips,
-	// Token: 0x040067B8 RID: 26552
+	// Token: 0x04006897 RID: 26775
 	RoleHeadLayout,
-	// Token: 0x040067B9 RID: 26553
+	// Token: 0x04006898 RID: 26776
 	RoleHead
 }

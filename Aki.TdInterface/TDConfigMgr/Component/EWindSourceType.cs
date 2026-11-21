@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000160 RID: 352
+	// Token: 0x02000175 RID: 373
 	public enum EWindSourceType
 	{
-		// Token: 0x040006AE RID: 1710
+		// Token: 0x040006FB RID: 1787
 		Directional
 	}
 }

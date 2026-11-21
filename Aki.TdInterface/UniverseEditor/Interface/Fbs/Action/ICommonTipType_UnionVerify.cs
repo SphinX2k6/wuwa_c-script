@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064B5 RID: 25781
+	// Token: 0x02006B20 RID: 27424
 	public static class ICommonTipType_UnionVerify
 	{
-		// Token: 0x0602CB39 RID: 183097 RVA: 0x00622758 File Offset: 0x00620958
+		// Token: 0x0602F2BD RID: 193213 RVA: 0x0066E430 File Offset: 0x0066C630
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -110,6 +110,21 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				break;
 			case 33:
 				result = ISwordIntentTipVerify.Verify(verifier, tablePos);
+				break;
+			case 34:
+				result = IRedNameMonsterTipVerify.Verify(verifier, tablePos);
+				break;
+			case 35:
+				result = IRoleTowerStrongEnemyWarningVerify.Verify(verifier, tablePos);
+				break;
+			case 36:
+				result = ITeachAutoShowStartVerify.Verify(verifier, tablePos);
+				break;
+			case 37:
+				result = ITeachAutoShowEndVerify.Verify(verifier, tablePos);
+				break;
+			case 38:
+				result = IFrequencyDetectionTipVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

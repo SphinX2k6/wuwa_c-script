@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005491 RID: 21649
+	// Token: 0x02005A17 RID: 23063
 	public struct IItemFoundation : IFlatbufferObject
 	{
-		// Token: 0x17009F61 RID: 40801
-		// (get) Token: 0x060239F8 RID: 145912 RVA: 0x004ECDAA File Offset: 0x004EAFAA
+		// Token: 0x1700A79B RID: 42907
+		// (get) Token: 0x06025AB0 RID: 154288 RVA: 0x00529E1E File Offset: 0x0052801E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060239F9 RID: 145913 RVA: 0x004ECDB7 File Offset: 0x004EAFB7
+		// Token: 0x06025AB1 RID: 154289 RVA: 0x00529E2B File Offset: 0x0052802B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060239FA RID: 145914 RVA: 0x004ECDC0 File Offset: 0x004EAFC0
+		// Token: 0x06025AB2 RID: 154290 RVA: 0x00529E34 File Offset: 0x00528034
 		public static IItemFoundation GetRootAsIItemFoundation(ByteBuffer _bb)
 		{
 			return IItemFoundation.GetRootAsIItemFoundation(_bb, default(IItemFoundation));
 		}
 
-		// Token: 0x060239FB RID: 145915 RVA: 0x004ECDDC File Offset: 0x004EAFDC
+		// Token: 0x06025AB3 RID: 154291 RVA: 0x00529E50 File Offset: 0x00528050
 		public static IItemFoundation GetRootAsIItemFoundation(ByteBuffer _bb, IItemFoundation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060239FC RID: 145916 RVA: 0x004ECDF9 File Offset: 0x004EAFF9
+		// Token: 0x06025AB4 RID: 154292 RVA: 0x00529E6D File Offset: 0x0052806D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060239FD RID: 145917 RVA: 0x004ECE08 File Offset: 0x004EB008
+		// Token: 0x06025AB5 RID: 154293 RVA: 0x00529E7C File Offset: 0x0052807C
 		public IItemFoundation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009F62 RID: 40802
-		// (get) Token: 0x060239FE RID: 145918 RVA: 0x004ECE18 File Offset: 0x004EB018
+		// Token: 0x1700A79C RID: 42908
+		// (get) Token: 0x06025AB6 RID: 154294 RVA: 0x00529E8C File Offset: 0x0052808C
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F63 RID: 40803
-		// (get) Token: 0x060239FF RID: 145919 RVA: 0x004ECE58 File Offset: 0x004EB058
+		// Token: 0x1700A79D RID: 42909
+		// (get) Token: 0x06025AB7 RID: 154295 RVA: 0x00529ECC File Offset: 0x005280CC
 		public IAdsortTransform? AdsorptionPoint
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F64 RID: 40804
-		// (get) Token: 0x06023A00 RID: 145920 RVA: 0x004ECEB8 File Offset: 0x004EB0B8
+		// Token: 0x1700A79E RID: 42910
+		// (get) Token: 0x06025AB8 RID: 154296 RVA: 0x00529F2C File Offset: 0x0052812C
 		public IEntityMatch? AdsorptionMatch
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F65 RID: 40805
-		// (get) Token: 0x06023A01 RID: 145921 RVA: 0x004ECF18 File Offset: 0x004EB118
+		// Token: 0x1700A79F RID: 42911
+		// (get) Token: 0x06025AB9 RID: 154297 RVA: 0x00529F8C File Offset: 0x0052818C
 		public IEntityMatch? ActiveMatch
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F66 RID: 40806
-		// (get) Token: 0x06023A02 RID: 145922 RVA: 0x004ECF78 File Offset: 0x004EB178
+		// Token: 0x1700A7A0 RID: 42912
+		// (get) Token: 0x06025ABA RID: 154298 RVA: 0x00529FEC File Offset: 0x005281EC
 		public bool IsSilent
 		{
 			get
@@ -114,8 +114,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F67 RID: 40807
-		// (get) Token: 0x06023A03 RID: 145923 RVA: 0x004ECFB8 File Offset: 0x004EB1B8
+		// Token: 0x1700A7A1 RID: 42913
+		// (get) Token: 0x06025ABB RID: 154299 RVA: 0x0052A02C File Offset: 0x0052822C
 		public bool IsDestroy
 		{
 			get
@@ -125,8 +125,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F68 RID: 40808
-		// (get) Token: 0x06023A04 RID: 145924 RVA: 0x004ECFF8 File Offset: 0x004EB1F8
+		// Token: 0x1700A7A2 RID: 42914
+		// (get) Token: 0x06025ABC RID: 154300 RVA: 0x0052A06C File Offset: 0x0052826C
 		public IItemChangeAdsorbateState? ChangeAdsorbateState
 		{
 			get
@@ -140,8 +140,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F69 RID: 40809
-		// (get) Token: 0x06023A05 RID: 145925 RVA: 0x004ED058 File Offset: 0x004EB258
+		// Token: 0x1700A7A3 RID: 42915
+		// (get) Token: 0x06025ABD RID: 154301 RVA: 0x0052A0CC File Offset: 0x005282CC
 		public byte NullMask
 		{
 			get
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023A06 RID: 145926 RVA: 0x004ED098 File Offset: 0x004EB298
+		// Token: 0x06025ABE RID: 154302 RVA: 0x0052A10C File Offset: 0x0052830C
 		public static Offset<IItemFoundation> CreateIItemFoundation(FlatBufferBuilder builder, bool Disabled = false, Offset<IAdsortTransform> AdsorptionPointOffset = default(Offset<IAdsortTransform>), Offset<IEntityMatch> AdsorptionMatchOffset = default(Offset<IEntityMatch>), Offset<IEntityMatch> ActiveMatchOffset = default(Offset<IEntityMatch>), bool IsSilent = false, bool IsDestroy = false, Offset<IItemChangeAdsorbateState> ChangeAdsorbateStateOffset = default(Offset<IItemChangeAdsorbateState>), byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -170,67 +170,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IItemFoundation.EndIItemFoundation(builder);
 		}
 
-		// Token: 0x06023A07 RID: 145927 RVA: 0x004ED0EF File Offset: 0x004EB2EF
+		// Token: 0x06025ABF RID: 154303 RVA: 0x0052A163 File Offset: 0x00528363
 		public static void StartIItemFoundation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06023A08 RID: 145928 RVA: 0x004ED0F8 File Offset: 0x004EB2F8
+		// Token: 0x06025AC0 RID: 154304 RVA: 0x0052A16C File Offset: 0x0052836C
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06023A09 RID: 145929 RVA: 0x004ED103 File Offset: 0x004EB303
+		// Token: 0x06025AC1 RID: 154305 RVA: 0x0052A177 File Offset: 0x00528377
 		public static void AddAdsorptionPoint(FlatBufferBuilder builder, Offset<IAdsortTransform> adsorptionPointOffset)
 		{
 			builder.AddOffset(1, adsorptionPointOffset.Value, 0);
 		}
 
-		// Token: 0x06023A0A RID: 145930 RVA: 0x004ED113 File Offset: 0x004EB313
+		// Token: 0x06025AC2 RID: 154306 RVA: 0x0052A187 File Offset: 0x00528387
 		public static void AddAdsorptionMatch(FlatBufferBuilder builder, Offset<IEntityMatch> adsorptionMatchOffset)
 		{
 			builder.AddOffset(2, adsorptionMatchOffset.Value, 0);
 		}
 
-		// Token: 0x06023A0B RID: 145931 RVA: 0x004ED123 File Offset: 0x004EB323
+		// Token: 0x06025AC3 RID: 154307 RVA: 0x0052A197 File Offset: 0x00528397
 		public static void AddActiveMatch(FlatBufferBuilder builder, Offset<IEntityMatch> activeMatchOffset)
 		{
 			builder.AddOffset(3, activeMatchOffset.Value, 0);
 		}
 
-		// Token: 0x06023A0C RID: 145932 RVA: 0x004ED133 File Offset: 0x004EB333
+		// Token: 0x06025AC4 RID: 154308 RVA: 0x0052A1A7 File Offset: 0x005283A7
 		public static void AddIsSilent(FlatBufferBuilder builder, bool isSilent)
 		{
 			builder.AddBool(4, isSilent, false);
 		}
 
-		// Token: 0x06023A0D RID: 145933 RVA: 0x004ED13E File Offset: 0x004EB33E
+		// Token: 0x06025AC5 RID: 154309 RVA: 0x0052A1B2 File Offset: 0x005283B2
 		public static void AddIsDestroy(FlatBufferBuilder builder, bool isDestroy)
 		{
 			builder.AddBool(5, isDestroy, false);
 		}
 
-		// Token: 0x06023A0E RID: 145934 RVA: 0x004ED149 File Offset: 0x004EB349
+		// Token: 0x06025AC6 RID: 154310 RVA: 0x0052A1BD File Offset: 0x005283BD
 		public static void AddChangeAdsorbateState(FlatBufferBuilder builder, Offset<IItemChangeAdsorbateState> changeAdsorbateStateOffset)
 		{
 			builder.AddOffset(6, changeAdsorbateStateOffset.Value, 0);
 		}
 
-		// Token: 0x06023A0F RID: 145935 RVA: 0x004ED159 File Offset: 0x004EB359
+		// Token: 0x06025AC7 RID: 154311 RVA: 0x0052A1CD File Offset: 0x005283CD
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x06023A10 RID: 145936 RVA: 0x004ED164 File Offset: 0x004EB364
+		// Token: 0x06025AC8 RID: 154312 RVA: 0x0052A1D8 File Offset: 0x005283D8
 		public static Offset<IItemFoundation> EndIItemFoundation(FlatBufferBuilder builder)
 		{
 			return new Offset<IItemFoundation>(builder.EndTable());
 		}
 
-		// Token: 0x06023A11 RID: 145937 RVA: 0x004ED174 File Offset: 0x004EB374
+		// Token: 0x06025AC9 RID: 154313 RVA: 0x0052A1E8 File Offset: 0x005283E8
 		public IItemFoundationT UnPack()
 		{
 			IItemFoundationT itemFoundationT = new IItemFoundationT();
@@ -238,7 +238,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return itemFoundationT;
 		}
 
-		// Token: 0x06023A12 RID: 145938 RVA: 0x004ED190 File Offset: 0x004EB390
+		// Token: 0x06025ACA RID: 154314 RVA: 0x0052A204 File Offset: 0x00528404
 		public void UnPackTo(IItemFoundationT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -251,7 +251,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06023A13 RID: 145939 RVA: 0x004ED28C File Offset: 0x004EB48C
+		// Token: 0x06025ACB RID: 154315 RVA: 0x0052A300 File Offset: 0x00528500
 		public static Offset<IItemFoundation> Pack(FlatBufferBuilder builder, IItemFoundationT _o)
 		{
 			if (_o == null)
@@ -265,7 +265,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IItemFoundation.CreateIItemFoundation(builder, _o.Disabled, adsorptionPointOffset, adsorptionMatchOffset, activeMatchOffset, _o.IsSilent, _o.IsDestroy, changeAdsorbateStateOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E720 RID: 59168
+		// Token: 0x0400F351 RID: 62289
 		private Table __p;
 	}
 }

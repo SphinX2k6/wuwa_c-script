@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EA5 RID: 3749
+	// Token: 0x02000F8A RID: 3978
 	public struct OpenAndCloseViewHotKey : IFlatbufferObject
 	{
-		// Token: 0x1700242F RID: 9263
-		// (get) Token: 0x0600A19F RID: 41375 RVA: 0x002A3420 File Offset: 0x002A1620
+		// Token: 0x17002494 RID: 9364
+		// (get) Token: 0x0600A7BF RID: 42943 RVA: 0x002C08A8 File Offset: 0x002BEAA8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A1A0 RID: 41376 RVA: 0x002A342D File Offset: 0x002A162D
+		// Token: 0x0600A7C0 RID: 42944 RVA: 0x002C08B5 File Offset: 0x002BEAB5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A1A1 RID: 41377 RVA: 0x002A3434 File Offset: 0x002A1634
+		// Token: 0x0600A7C1 RID: 42945 RVA: 0x002C08BC File Offset: 0x002BEABC
 		public static OpenAndCloseViewHotKey GetRootAsOpenAndCloseViewHotKey(ByteBuffer _bb)
 		{
 			return OpenAndCloseViewHotKey.GetRootAsOpenAndCloseViewHotKey(_bb, default(OpenAndCloseViewHotKey));
 		}
 
-		// Token: 0x0600A1A2 RID: 41378 RVA: 0x002A3450 File Offset: 0x002A1650
+		// Token: 0x0600A7C2 RID: 42946 RVA: 0x002C08D8 File Offset: 0x002BEAD8
 		public static OpenAndCloseViewHotKey GetRootAsOpenAndCloseViewHotKey(ByteBuffer _bb, OpenAndCloseViewHotKey obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A1A3 RID: 41379 RVA: 0x002A346D File Offset: 0x002A166D
+		// Token: 0x0600A7C3 RID: 42947 RVA: 0x002C08F5 File Offset: 0x002BEAF5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A1A4 RID: 41380 RVA: 0x002A347C File Offset: 0x002A167C
+		// Token: 0x0600A7C4 RID: 42948 RVA: 0x002C0904 File Offset: 0x002BEB04
 		public OpenAndCloseViewHotKey __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002430 RID: 9264
-		// (get) Token: 0x0600A1A5 RID: 41381 RVA: 0x002A348C File Offset: 0x002A168C
+		// Token: 0x17002495 RID: 9365
+		// (get) Token: 0x0600A7C5 RID: 42949 RVA: 0x002C0914 File Offset: 0x002BEB14
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002431 RID: 9265
-		// (get) Token: 0x0600A1A6 RID: 41382 RVA: 0x002A34C8 File Offset: 0x002A16C8
+		// Token: 0x17002496 RID: 9366
+		// (get) Token: 0x0600A7C6 RID: 42950 RVA: 0x002C0950 File Offset: 0x002BEB50
 		public string ActionName
 		{
 			get
@@ -80,20 +80,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A1A7 RID: 41383 RVA: 0x002A34FF File Offset: 0x002A16FF
+		// Token: 0x0600A7C7 RID: 42951 RVA: 0x002C0987 File Offset: 0x002BEB87
 		public Span<byte> GetActionNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600A1A8 RID: 41384 RVA: 0x002A350E File Offset: 0x002A170E
+		// Token: 0x0600A7C8 RID: 42952 RVA: 0x002C0996 File Offset: 0x002BEB96
 		public byte[] GetActionNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002432 RID: 9266
-		// (get) Token: 0x0600A1A9 RID: 41385 RVA: 0x002A3528 File Offset: 0x002A1728
+		// Token: 0x17002497 RID: 9367
+		// (get) Token: 0x0600A7C9 RID: 42953 RVA: 0x002C09B0 File Offset: 0x002BEBB0
 		public int InputControllerType
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002433 RID: 9267
-		// (get) Token: 0x0600A1AA RID: 41386 RVA: 0x002A3564 File Offset: 0x002A1764
+		// Token: 0x17002498 RID: 9368
+		// (get) Token: 0x0600A7CA RID: 42954 RVA: 0x002C09EC File Offset: 0x002BEBEC
 		public string ViewName
 		{
 			get
@@ -122,19 +122,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A1AB RID: 41387 RVA: 0x002A359C File Offset: 0x002A179C
+		// Token: 0x0600A7CB RID: 42955 RVA: 0x002C0A24 File Offset: 0x002BEC24
 		public Span<byte> GetViewNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600A1AC RID: 41388 RVA: 0x002A35AC File Offset: 0x002A17AC
+		// Token: 0x0600A7CC RID: 42956 RVA: 0x002C0A34 File Offset: 0x002BEC34
 		public byte[] GetViewNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600A1AD RID: 41389 RVA: 0x002A35C4 File Offset: 0x002A17C4
+		// Token: 0x0600A7CD RID: 42957 RVA: 0x002C0A4C File Offset: 0x002BEC4C
 		public int EffectiveTypeList(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -145,8 +145,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002434 RID: 9268
-		// (get) Token: 0x0600A1AE RID: 41390 RVA: 0x002A3604 File Offset: 0x002A1804
+		// Token: 0x17002499 RID: 9369
+		// (get) Token: 0x0600A7CE RID: 42958 RVA: 0x002C0A8C File Offset: 0x002BEC8C
 		public int EffectiveTypeListLength
 		{
 			get
@@ -160,20 +160,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A1AF RID: 41391 RVA: 0x002A3630 File Offset: 0x002A1830
+		// Token: 0x0600A7CF RID: 42959 RVA: 0x002C0AB8 File Offset: 0x002BECB8
 		public Span<int> GetEffectiveTypeListBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x0600A1B0 RID: 41392 RVA: 0x002A3640 File Offset: 0x002A1840
+		// Token: 0x0600A7D0 RID: 42960 RVA: 0x002C0AC8 File Offset: 0x002BECC8
 		public int[] GetEffectiveTypeListArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002435 RID: 9269
-		// (get) Token: 0x0600A1B1 RID: 41393 RVA: 0x002A3658 File Offset: 0x002A1858
+		// Token: 0x1700249A RID: 9370
+		// (get) Token: 0x0600A7D1 RID: 42961 RVA: 0x002C0AE0 File Offset: 0x002BECE0
 		public string HandleType
 		{
 			get
@@ -187,20 +187,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A1B2 RID: 41394 RVA: 0x002A3690 File Offset: 0x002A1890
+		// Token: 0x0600A7D2 RID: 42962 RVA: 0x002C0B18 File Offset: 0x002BED18
 		public Span<byte> GetHandleTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600A1B3 RID: 41395 RVA: 0x002A36A0 File Offset: 0x002A18A0
+		// Token: 0x0600A7D3 RID: 42963 RVA: 0x002C0B28 File Offset: 0x002BED28
 		public byte[] GetHandleTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002436 RID: 9270
-		// (get) Token: 0x0600A1B4 RID: 41396 RVA: 0x002A36B8 File Offset: 0x002A18B8
+		// Token: 0x1700249B RID: 9371
+		// (get) Token: 0x0600A7D4 RID: 42964 RVA: 0x002C0B40 File Offset: 0x002BED40
 		public bool IsPressTrigger
 		{
 			get
@@ -210,8 +210,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002437 RID: 9271
-		// (get) Token: 0x0600A1B5 RID: 41397 RVA: 0x002A36F8 File Offset: 0x002A18F8
+		// Token: 0x1700249C RID: 9372
+		// (get) Token: 0x0600A7D5 RID: 42965 RVA: 0x002C0B80 File Offset: 0x002BED80
 		public int PressStartTime
 		{
 			get
@@ -225,8 +225,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002438 RID: 9272
-		// (get) Token: 0x0600A1B6 RID: 41398 RVA: 0x002A3738 File Offset: 0x002A1938
+		// Token: 0x1700249D RID: 9373
+		// (get) Token: 0x0600A7D6 RID: 42966 RVA: 0x002C0BC0 File Offset: 0x002BEDC0
 		public int PressTriggerTime
 		{
 			get
@@ -240,8 +240,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002439 RID: 9273
-		// (get) Token: 0x0600A1B7 RID: 41399 RVA: 0x002A3778 File Offset: 0x002A1978
+		// Token: 0x1700249E RID: 9374
+		// (get) Token: 0x0600A7D7 RID: 42967 RVA: 0x002C0C00 File Offset: 0x002BEE00
 		public bool IsReleaseTrigger
 		{
 			get
@@ -251,8 +251,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700243A RID: 9274
-		// (get) Token: 0x0600A1B8 RID: 41400 RVA: 0x002A37B8 File Offset: 0x002A19B8
+		// Token: 0x1700249F RID: 9375
+		// (get) Token: 0x0600A7D8 RID: 42968 RVA: 0x002C0C40 File Offset: 0x002BEE40
 		public int ReleaseInvalidTime
 		{
 			get
@@ -266,8 +266,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700243B RID: 9275
-		// (get) Token: 0x0600A1B9 RID: 41401 RVA: 0x002A37F8 File Offset: 0x002A19F8
+		// Token: 0x170024A0 RID: 9376
+		// (get) Token: 0x0600A7D9 RID: 42969 RVA: 0x002C0C80 File Offset: 0x002BEE80
 		public bool IsPressClose
 		{
 			get
@@ -277,8 +277,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700243C RID: 9276
-		// (get) Token: 0x0600A1BA RID: 41402 RVA: 0x002A3838 File Offset: 0x002A1A38
+		// Token: 0x170024A1 RID: 9377
+		// (get) Token: 0x0600A7DA RID: 42970 RVA: 0x002C0CC0 File Offset: 0x002BEEC0
 		public bool IsReleaseClose
 		{
 			get
@@ -288,7 +288,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A1BB RID: 41403 RVA: 0x002A3878 File Offset: 0x002A1A78
+		// Token: 0x0600A7DB RID: 42971 RVA: 0x002C0D00 File Offset: 0x002BEF00
 		public string ViewParam(int j)
 		{
 			int num = this.__p.__offset(30);
@@ -299,8 +299,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700243D RID: 9277
-		// (get) Token: 0x0600A1BC RID: 41404 RVA: 0x002A38B4 File Offset: 0x002A1AB4
+		// Token: 0x170024A2 RID: 9378
+		// (get) Token: 0x0600A7DC RID: 42972 RVA: 0x002C0D3C File Offset: 0x002BEF3C
 		public int ViewParamLength
 		{
 			get
@@ -314,42 +314,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A1BD RID: 41405 RVA: 0x002A38E0 File Offset: 0x002A1AE0
+		// Token: 0x0600A7DD RID: 42973 RVA: 0x002C0D68 File Offset: 0x002BEF68
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用EffectiveTypeListIter()或GetEffectiveTypeListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] EffectiveTypeList()
+		public int[] EffectiveTypeList()
 		{
-			OpenAndCloseViewHotKey openAndCloseViewHotKey = this;
-			return openAndCloseViewHotKey.GetEffectiveTypeListArray() ?? Array.Empty<int>();
+			return this.GetEffectiveTypeListArray();
 		}
 
-		// Token: 0x0600A1BE RID: 41406 RVA: 0x002A3904 File Offset: 0x002A1B04
+		// Token: 0x0600A7DE RID: 42974 RVA: 0x002C0D70 File Offset: 0x002BEF70
 		[NullableContext(1)]
-		public readonly IEnumerable<int> EffectiveTypeListIter()
+		public IEnumerable<int> EffectiveTypeListIter()
 		{
 			OpenAndCloseViewHotKey.<EffectiveTypeListIter>d__47 <EffectiveTypeListIter>d__ = new OpenAndCloseViewHotKey.<EffectiveTypeListIter>d__47(-2);
 			<EffectiveTypeListIter>d__.<>3__<>4__this = this;
 			return <EffectiveTypeListIter>d__;
 		}
 
-		// Token: 0x0600A1BF RID: 41407 RVA: 0x002A3919 File Offset: 0x002A1B19
+		// Token: 0x0600A7DF RID: 42975 RVA: 0x002C0D85 File Offset: 0x002BEF85
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ViewParamIter()或GetViewParamBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] ViewParam()
+		public string[] ViewParam()
 		{
 			return this.ViewParamIter().ToArray<string>();
 		}
 
-		// Token: 0x0600A1C0 RID: 41408 RVA: 0x002A3926 File Offset: 0x002A1B26
+		// Token: 0x0600A7E0 RID: 42976 RVA: 0x002C0D92 File Offset: 0x002BEF92
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ViewParamIter()
+		public IEnumerable<string> ViewParamIter()
 		{
 			OpenAndCloseViewHotKey.<ViewParamIter>d__49 <ViewParamIter>d__ = new OpenAndCloseViewHotKey.<ViewParamIter>d__49(-2);
 			<ViewParamIter>d__.<>3__<>4__this = this;
 			return <ViewParamIter>d__;
 		}
 
-		// Token: 0x04004F59 RID: 20313
+		// Token: 0x0400553E RID: 21822
 		private Table __p;
 	}
 }

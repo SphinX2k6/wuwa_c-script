@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E01 RID: 3585
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EFD RID: 3837
 	public class IWuWaGoGridData
 	{
-		// Token: 0x0600512F RID: 20783 RVA: 0x000C85E5 File Offset: 0x000C67E5
+		// Token: 0x06005656 RID: 22102 RVA: 0x000D3EAD File Offset: 0x000D20AD
 		public static IWuWaGoGridData Create(IWuWaGoGridData? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AEA RID: 6890
-		// (get) Token: 0x06005130 RID: 20784 RVA: 0x000C8604 File Offset: 0x000C6804
+		// Token: 0x17001C57 RID: 7255
+		// (get) Token: 0x06005657 RID: 22103 RVA: 0x000D3ECC File Offset: 0x000D20CC
 		public virtual EGridShape GridShape
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AEB RID: 6891
-		// (get) Token: 0x06005131 RID: 20785 RVA: 0x000C8611 File Offset: 0x000C6811
+		// Token: 0x17001C58 RID: 7256
+		// (get) Token: 0x06005658 RID: 22104 RVA: 0x000D3ED9 File Offset: 0x000D20D9
 		public virtual VectorInfo Position
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AEC RID: 6892
-		// (get) Token: 0x06005132 RID: 20786 RVA: 0x000C8645 File Offset: 0x000C6845
+		// Token: 0x17001C59 RID: 7257
+		// (get) Token: 0x06005659 RID: 22105 RVA: 0x000D3F0D File Offset: 0x000D210D
 		public virtual VectorInfo Rotation
 		{
 			get
@@ -65,8 +63,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AED RID: 6893
-		// (get) Token: 0x06005133 RID: 20787 RVA: 0x000C8679 File Offset: 0x000C6879
+		// Token: 0x17001C5A RID: 7258
+		// (get) Token: 0x0600565A RID: 22106 RVA: 0x000D3F41 File Offset: 0x000D2141
 		public virtual IWuWaGoGridLinkData GridLinkData
 		{
 			get
@@ -81,8 +79,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AEE RID: 6894
-		// (get) Token: 0x06005134 RID: 20788 RVA: 0x000C86AD File Offset: 0x000C68AD
+		// Token: 0x17001C5B RID: 7259
+		// (get) Token: 0x0600565B RID: 22107 RVA: 0x000D3F75 File Offset: 0x000D2175
 		[Nullable(2)]
 		public virtual VectorInfo AttachedGridCenter
 		{
@@ -99,35 +97,35 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EB2 RID: 11954
+		// Token: 0x0400317A RID: 12666
 		private IWuWaGoGridData Instance;
 
-		// Token: 0x04002EB3 RID: 11955
+		// Token: 0x0400317B RID: 12667
 		[Nullable(2)]
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04002EB4 RID: 11956
+		// Token: 0x0400317C RID: 12668
 		private bool _PositionInited;
 
-		// Token: 0x04002EB5 RID: 11957
+		// Token: 0x0400317D RID: 12669
 		[Nullable(2)]
 		private VectorInfo _RotationCache;
 
-		// Token: 0x04002EB6 RID: 11958
+		// Token: 0x0400317E RID: 12670
 		private bool _RotationInited;
 
-		// Token: 0x04002EB7 RID: 11959
+		// Token: 0x0400317F RID: 12671
 		[Nullable(2)]
 		private IWuWaGoGridLinkData _GridLinkDataCache;
 
-		// Token: 0x04002EB8 RID: 11960
+		// Token: 0x04003180 RID: 12672
 		private bool _GridLinkDataInited;
 
-		// Token: 0x04002EB9 RID: 11961
+		// Token: 0x04003181 RID: 12673
 		[Nullable(2)]
 		private VectorInfo _AttachedGridCenterCache;
 
-		// Token: 0x04002EBA RID: 11962
+		// Token: 0x04003182 RID: 12674
 		private bool _AttachedGridCenterInited;
 	}
 }

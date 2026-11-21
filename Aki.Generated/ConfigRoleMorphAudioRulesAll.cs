@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008B7 RID: 2231
+	// Token: 0x020008D3 RID: 2259
 	public class ConfigRoleMorphAudioRulesAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600345D RID: 13405 RVA: 0x001812CF File Offset: 0x0017F4CF
+		// Token: 0x06003505 RID: 13573 RVA: 0x001885B7 File Offset: 0x001867B7
 		static ConfigRoleMorphAudioRulesAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleMorphAudioRulesAll.CreateStaticDefaultValue), new Action(ConfigRoleMorphAudioRulesAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600345E RID: 13406 RVA: 0x001812F0 File Offset: 0x0017F4F0
+		// Token: 0x06003506 RID: 13574 RVA: 0x001885D8 File Offset: 0x001867D8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleMorphAudioRulesAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600345F RID: 13407 RVA: 0x0018136F File Offset: 0x0017F56F
+		// Token: 0x06003507 RID: 13575 RVA: 0x00188657 File Offset: 0x00186857
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleMorphAudioRulesAll.LogPair = null;
 			ConfigRoleMorphAudioRulesAll.HandleId = 0;
 		}
 
-		// Token: 0x06003460 RID: 13408 RVA: 0x0018137D File Offset: 0x0017F57D
+		// Token: 0x06003508 RID: 13576 RVA: 0x00188665 File Offset: 0x00186865
 		public static void Init()
 		{
 			ConfigRoleMorphAudioRulesAll.HandleId = ConfigCommon.InitDataStatement(ConfigRoleMorphAudioRulesAll.HandleId, "db_audio.db", "select BinData from `RoleMorphAudioRules`");
 		}
 
-		// Token: 0x06003461 RID: 13409 RVA: 0x00181398 File Offset: 0x0017F598
+		// Token: 0x06003509 RID: 13577 RVA: 0x00188680 File Offset: 0x00186880
 		[NullableContext(2)]
 		public static IReadOnlyList<RoleMorphAudioRules> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003CE7 RID: 15591
+		// Token: 0x04003DAB RID: 15787
 		private const string DB = "db_audio.db";
 
-		// Token: 0x04003CE8 RID: 15592
+		// Token: 0x04003DAC RID: 15788
 		private const string FILE = "y.音频_角色音频.xlsx";
 
-		// Token: 0x04003CE9 RID: 15593
+		// Token: 0x04003DAD RID: 15789
 		private const string TABLE = "RoleMorphAudioRules";
 
-		// Token: 0x04003CEA RID: 15594
+		// Token: 0x04003DAE RID: 15790
 		private const string COMMAND = "select BinData from `RoleMorphAudioRules`";
 
-		// Token: 0x04003CEB RID: 15595
+		// Token: 0x04003DAF RID: 15791
 		private const string KEY_PREFIX = "RoleMorphAudioRulesAll";
 
-		// Token: 0x04003CEC RID: 15596
+		// Token: 0x04003DB0 RID: 15792
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003CED RID: 15597
+		// Token: 0x04003DB1 RID: 15793
 		private static int HandleId;
 	}
 }

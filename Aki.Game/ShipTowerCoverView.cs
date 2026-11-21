@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029A7 RID: 10663
+// Token: 0x02001F22 RID: 7970
 public class ShipTowerCoverView : UiViewBase
 {
-	// Token: 0x060161AA RID: 90538 RVA: 0x00596C38 File Offset: 0x00594E38
+	// Token: 0x06013BB0 RID: 80816 RVA: 0x005C1BF8 File Offset: 0x005BFDF8
 	[NullableContext(1)]
 	public ShipTowerCoverView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060161AB RID: 90539 RVA: 0x00596C44 File Offset: 0x00594E44
+	// Token: 0x06013BB1 RID: 80817 RVA: 0x005C1C04 File Offset: 0x005BFE04
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -33,7 +33,7 @@ public class ShipTowerCoverView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060161AC RID: 90540 RVA: 0x00596CD0 File Offset: 0x00594ED0
+	// Token: 0x06013BB2 RID: 80818 RVA: 0x005C1C90 File Offset: 0x005BFE90
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerCoverView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ public class ShipTowerCoverView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060161AD RID: 90541 RVA: 0x00596D14 File Offset: 0x00594F14
+	// Token: 0x06013BB3 RID: 80819 RVA: 0x005C1CD4 File Offset: 0x005BFED4
 	protected override void OnBeforeShow()
 	{
 		ShipTowerStageData stageData = (this.OpenParam as ShipTowerCoverViewParams).StageData;
@@ -52,7 +52,7 @@ public class ShipTowerCoverView : UiViewBase
 		this.RightItem.UpdateData(stageData, true);
 	}
 
-	// Token: 0x060161AE RID: 90542 RVA: 0x00596D4C File Offset: 0x00594F4C
+	// Token: 0x06013BB4 RID: 80820 RVA: 0x005C1D0C File Offset: 0x005BFF0C
 	[NullableContext(1)]
 	private void OnConfirmCallback(ShipTowerStageData data, bool isCover)
 	{
@@ -64,7 +64,7 @@ public class ShipTowerCoverView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060161AF RID: 90543 RVA: 0x00596D6C File Offset: 0x00594F6C
+	// Token: 0x06013BB5 RID: 80821 RVA: 0x005C1D2C File Offset: 0x005BFF2C
 	protected override void OnBeforeDestroy()
 	{
 		if (!this.SureCover)
@@ -76,25 +76,25 @@ public class ShipTowerCoverView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400A4C1 RID: 42177
+	// Token: 0x0400A8AB RID: 43179
 	[Nullable(2)]
 	private ShipTowerCoverItem LeftItem;
 
-	// Token: 0x0400A4C2 RID: 42178
+	// Token: 0x0400A8AC RID: 43180
 	[Nullable(2)]
 	private ShipTowerCoverItem RightItem;
 
-	// Token: 0x0400A4C3 RID: 42179
+	// Token: 0x0400A8AD RID: 43181
 	private bool SureCover;
 
-	// Token: 0x02008FB4 RID: 36788
+	// Token: 0x020081FD RID: 33277
 	private enum EChildType
 	{
-		// Token: 0x0402E8A7 RID: 190631
+		// Token: 0x04029FA6 RID: 171942
 		ItemLeft,
-		// Token: 0x0402E8A8 RID: 190632
+		// Token: 0x04029FA7 RID: 171943
 		ItemRight,
-		// Token: 0x0402E8A9 RID: 190633
+		// Token: 0x04029FA8 RID: 171944
 		TxtTitle
 	}
 }

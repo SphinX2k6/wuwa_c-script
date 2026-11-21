@@ -2,44 +2,48 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C7C RID: 15484
+	// Token: 0x0200408E RID: 16526
 	public enum TTipsActorParam : byte
 	{
-		// Token: 0x0400B2C3 RID: 45763
+		// Token: 0x0400BC58 RID: 48216
 		NONE,
-		// Token: 0x0400B2C4 RID: 45764
+		// Token: 0x0400BC59 RID: 48217
 		IBottomAlignSemiBoxTipsActor,
-		// Token: 0x0400B2C5 RID: 45765
+		// Token: 0x0400BC5A RID: 48218
 		IBoxTipsActor,
-		// Token: 0x0400B2C6 RID: 45766
+		// Token: 0x0400BC5B RID: 48219
 		IConeTipsActor,
-		// Token: 0x0400B2C7 RID: 45767
+		// Token: 0x0400BC5C RID: 48220
 		ICylinderSectorTipsActor,
-		// Token: 0x0400B2C8 RID: 45768
+		// Token: 0x0400BC5D RID: 48221
 		ICylinderTipsActor,
-		// Token: 0x0400B2C9 RID: 45769
+		// Token: 0x0400BC5E RID: 48222
 		IGraphLineTipsActor,
-		// Token: 0x0400B2CA RID: 45770
+		// Token: 0x0400BC5F RID: 48223
 		IGraphPointTipsActor,
-		// Token: 0x0400B2CB RID: 45771
+		// Token: 0x0400BC60 RID: 48224
 		IHollowCylinderTipsActor,
-		// Token: 0x0400B2CC RID: 45772
+		// Token: 0x0400BC61 RID: 48225
 		IHollowSphereTipsActor,
-		// Token: 0x0400B2CD RID: 45773
+		// Token: 0x0400BC62 RID: 48226
 		ILaserTipsActor,
-		// Token: 0x0400B2CE RID: 45774
+		// Token: 0x0400BC63 RID: 48227
+		INoiseBubbleTipsActor,
+		// Token: 0x0400BC64 RID: 48228
 		ISectorTipsActor,
-		// Token: 0x0400B2CF RID: 45775
+		// Token: 0x0400BC65 RID: 48229
 		ISphereTipsActor,
-		// Token: 0x0400B2D0 RID: 45776
+		// Token: 0x0400BC66 RID: 48230
 		ISplineEffectTipsActor,
-		// Token: 0x0400B2D1 RID: 45777
+		// Token: 0x0400BC67 RID: 48231
 		ISplineTipsActor,
-		// Token: 0x0400B2D2 RID: 45778
+		// Token: 0x0400BC68 RID: 48232
 		ISpotlightTipsActor,
-		// Token: 0x0400B2D3 RID: 45779
+		// Token: 0x0400BC69 RID: 48233
 		ITargetPointTipsActor,
-		// Token: 0x0400B2D4 RID: 45780
-		ITrackTipsActor
+		// Token: 0x0400BC6A RID: 48234
+		ITrackTipsActor,
+		// Token: 0x0400BC6B RID: 48235
+		ITurntableConnectorTipsActor
 	}
 }

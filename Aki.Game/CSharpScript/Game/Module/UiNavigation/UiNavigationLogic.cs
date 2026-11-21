@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
@@ -9,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004945 RID: 18757
+	// Token: 0x020038BC RID: 14524
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiNavigationLogic : IStaticVariableResetter
 	{
-		// Token: 0x06030F11 RID: 200465 RVA: 0x00B5C70A File Offset: 0x00B5A90A
+		// Token: 0x06025A3E RID: 154174 RVA: 0x00A9757A File Offset: 0x00A9577A
 		static UiNavigationLogic()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiNavigationLogic.CreateStaticDefaultValue), new Action(UiNavigationLogic.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06030F12 RID: 200466 RVA: 0x00B5C729 File Offset: 0x00B5A929
+		// Token: 0x06025A3F RID: 154175 RVA: 0x00A97599 File Offset: 0x00A95799
 		public static void InitNavigationDelegate(ULGUIEventSystem eventSystem)
 		{
 			FLGUITryFindNavigationDelegate tryFindNavigationDelegate = eventSystem.TryFindNavigationDelegate;
@@ -32,13 +31,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			tryFindNavigationDelegate.Bind(callback);
 		}
 
-		// Token: 0x06030F13 RID: 200467 RVA: 0x00B5C751 File Offset: 0x00B5A951
+		// Token: 0x06025A40 RID: 154176 RVA: 0x00A975C1 File Offset: 0x00A957C1
 		public static void ClearNavigationDelegate(ULGUIEventSystem eventSystem)
 		{
 			eventSystem.TryFindNavigationDelegate.Unbind();
 		}
 
-		// Token: 0x06030F14 RID: 200468 RVA: 0x00B5C760 File Offset: 0x00B5A960
+		// Token: 0x06025A41 RID: 154177 RVA: 0x00A975D0 File Offset: 0x00A957D0
 		[NullableContext(2)]
 		public static USceneComponent TryFindNavigationDelegate(ELGUINavigationDirection direction, UUISelectableComponent selectable)
 		{
@@ -97,7 +96,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F15 RID: 200469 RVA: 0x00B5C817 File Offset: 0x00B5AA17
+		// Token: 0x06025A42 RID: 154178 RVA: 0x00A97687 File Offset: 0x00A95887
 		private static bool CheckIsUsefulDirection(UUIScrollViewWithScrollbarComponent scrollView, ELGUINavigationDirection direction)
 		{
 			if (scrollView.Horizontal)
@@ -107,14 +106,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return direction == ELGUINavigationDirection.Down || direction == ELGUINavigationDirection.Up;
 		}
 
-		// Token: 0x06030F16 RID: 200470 RVA: 0x00B5C836 File Offset: 0x00B5AA36
+		// Token: 0x06025A43 RID: 154179 RVA: 0x00A976A6 File Offset: 0x00A958A6
 		[NullableContext(2)]
 		private static bool CheckNavigationConfig(bool isMoveRightOrDown, NavigationGroup group)
 		{
 			return group != null && ((group.SlideToRightOrDown && isMoveRightOrDown) || (group.SlideToLeftOrTop && !isMoveRightOrDown));
 		}
 
-		// Token: 0x06030F17 RID: 200471 RVA: 0x00B5C858 File Offset: 0x00B5AA58
+		// Token: 0x06025A44 RID: 154180 RVA: 0x00A976C8 File Offset: 0x00A958C8
 		private static void HandleNormalScrollViewLogic(TsUiNavigationBehaviorListener originalListener, [Nullable(2)] TsUiNavigationBehaviorListener targetListener, ELGUINavigationDirection direction)
 		{
 			UiNavigationScrollProxy scrollProxy = originalListener.ScrollProxy;
@@ -154,7 +153,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F18 RID: 200472 RVA: 0x00B5C904 File Offset: 0x00B5AB04
+		// Token: 0x06025A45 RID: 154181 RVA: 0x00A97774 File Offset: 0x00A95974
 		private static void HandleDynamicScrollViewLogic([Nullable(2)] TsUiNavigationBehaviorListener originalListener, TsUiNavigationBehaviorListener targetListener, ELGUINavigationDirection direction)
 		{
 			NavigationGroup navigationGroup = targetListener.GetNavigationGroup();
@@ -176,7 +175,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			uuidynScrollViewComponent.NavigateScrollToUIItem((targetListener != null) ? targetListener.GetRootComponent() : null, bReversed, mode);
 		}
 
-		// Token: 0x06030F19 RID: 200473 RVA: 0x00B5C9A1 File Offset: 0x00B5ABA1
+		// Token: 0x06025A46 RID: 154182 RVA: 0x00A97811 File Offset: 0x00A95A11
 		[NullableContext(2)]
 		private static void HandleScrollViewLogic(TsUiNavigationBehaviorListener originalListener, TsUiNavigationBehaviorListener targetListener, ELGUINavigationDirection direction)
 		{
@@ -190,7 +189,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F1A RID: 200474 RVA: 0x00B5C9C9 File Offset: 0x00B5ABC9
+		// Token: 0x06025A47 RID: 154183 RVA: 0x00A97839 File Offset: 0x00A95A39
 		[NullableContext(2)]
 		private static void HandleNavigateAudio(TsUiNavigationBehaviorListener listener)
 		{
@@ -200,7 +199,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F1B RID: 200475 RVA: 0x00B5C9E0 File Offset: 0x00B5ABE0
+		// Token: 0x06025A48 RID: 154184 RVA: 0x00A97850 File Offset: 0x00A95A50
 		[return: Nullable(2)]
 		private static TsUiNavigationBehaviorListener FindNavigation(TsUiNavigationBehaviorListener listener, ELGUINavigationDirection direction)
 		{
@@ -231,7 +230,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return tsUiNavigationBehaviorListener;
 		}
 
-		// Token: 0x06030F1C RID: 200476 RVA: 0x00B5CA5C File Offset: 0x00B5AC5C
+		// Token: 0x06025A49 RID: 154185 RVA: 0x00A978CC File Offset: 0x00A95ACC
 		[return: Nullable(2)]
 		private static USceneComponent FindNormalNavigation(TsUiNavigationBehaviorListener listener, ELGUINavigationDirection direction, bool isAllowNavigationInSelfDynamic)
 		{
@@ -260,7 +259,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return usceneComponent;
 		}
 
-		// Token: 0x06030F1D RID: 200477 RVA: 0x00B5CAD4 File Offset: 0x00B5ACD4
+		// Token: 0x06025A4A RID: 154186 RVA: 0x00A97944 File Offset: 0x00A95B44
 		[NullableContext(2)]
 		private static TsUiNavigationBehaviorListener FindListener(USceneComponent sceneComponent)
 		{
@@ -277,7 +276,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return obj as TsUiNavigationBehaviorListener;
 		}
 
-		// Token: 0x06030F1E RID: 200478 RVA: 0x00B5CB00 File Offset: 0x00B5AD00
+		// Token: 0x06025A4B RID: 154187 RVA: 0x00A97970 File Offset: 0x00A95B70
+		[return: Nullable(2)]
 		public static TsUiNavigationPanelConfig FindUiNavigationPanelConfig(AActor actor)
 		{
 			AActor attachParentActor = actor.GetAttachParentActor();
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return tsUiNavigationPanelConfig;
 		}
 
-		// Token: 0x06030F1F RID: 200479 RVA: 0x00B5CB3C File Offset: 0x00B5AD3C
+		// Token: 0x06025A4C RID: 154188 RVA: 0x00A979AC File Offset: 0x00A95BAC
 		public static TsUiNavigationBehaviorListener FindUpNavigationListener(AActor actor)
 		{
 			AActor attachParentActor = actor.GetAttachParentActor();
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return tsUiNavigationBehaviorListener;
 		}
 
-		// Token: 0x06030F20 RID: 200480 RVA: 0x00B5CB90 File Offset: 0x00B5AD90
+		// Token: 0x06025A4D RID: 154189 RVA: 0x00A97A00 File Offset: 0x00A95C00
 		public static void BindHotKeyComponentAction(HotKeyComponent hotKeyComponent, bool bAdd)
 		{
 			UiNavigationModel instance = UiNavigationModel.Instance;
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F21 RID: 200481 RVA: 0x00B5CC18 File Offset: 0x00B5AE18
+		// Token: 0x06025A4E RID: 154190 RVA: 0x00A97A88 File Offset: 0x00A95C88
 		public static void BindHotKeyComponentAxis(HotKeyComponent hotKeyComponent, bool bAdd)
 		{
 			UiNavigationModel instance = UiNavigationModel.Instance;
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F22 RID: 200482 RVA: 0x00B5CC9C File Offset: 0x00B5AE9C
+		// Token: 0x06025A4F RID: 154191 RVA: 0x00A97B0C File Offset: 0x00A95D0C
 		[NullableContext(2)]
 		public static bool HasActiveListenerInGroup(NavigationGroup groupConfig)
 		{
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return false;
 		}
 
-		// Token: 0x06030F23 RID: 200483 RVA: 0x00B5CCDC File Offset: 0x00B5AEDC
+		// Token: 0x06025A50 RID: 154192 RVA: 0x00A97B4C File Offset: 0x00A95D4C
 		[NullableContext(2)]
 		public static void UpdateNavigationListener(TsUiNavigationBehaviorListener listener)
 		{
@@ -425,7 +425,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			EventSystem.Instance.Emit(EEventName.UpdateNavigationListener);
 		}
 
-		// Token: 0x06030F24 RID: 200484 RVA: 0x00B5CD54 File Offset: 0x00B5AF54
+		// Token: 0x06025A51 RID: 154193 RVA: 0x00A97BC4 File Offset: 0x00A95DC4
 		public static void UpdateSameNavigationListener(TsUiNavigationBehaviorListener listener)
 		{
 			if (LguiEventSystemManager.Instance.LguiEventSystem.navigationComponent != listener.RootUIComp.Get())
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			EventSystem.Instance.Emit(EEventName.UpdateNavigationListener);
 		}
 
-		// Token: 0x06030F25 RID: 200485 RVA: 0x00B5CDA8 File Offset: 0x00B5AFA8
+		// Token: 0x06025A52 RID: 154194 RVA: 0x00A97C18 File Offset: 0x00A95E18
 		[NullableContext(2)]
 		public static void MemoryGroupConfigLastSelect(TsUiNavigationBehaviorListener listener)
 		{
@@ -462,7 +462,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F26 RID: 200486 RVA: 0x00B5CDF4 File Offset: 0x00B5AFF4
+		// Token: 0x06025A53 RID: 154195 RVA: 0x00A97C64 File Offset: 0x00A95E64
 		public static void HandleInputControllerTypeChange()
 		{
 			bool flag = Info.Instance.IsInGamepad();
@@ -500,7 +500,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationModel.Instance.SetIsUseMouse(!flag);
 		}
 
-		// Token: 0x06030F27 RID: 200487 RVA: 0x00B5CEC8 File Offset: 0x00B5B0C8
+		// Token: 0x06025A54 RID: 154196 RVA: 0x00A97D38 File Offset: 0x00A95F38
 		public static void ForceChangeInputType()
 		{
 			if (!Info.Instance.IsInKeyBoard())
@@ -527,7 +527,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F28 RID: 200488 RVA: 0x00B5CF2C File Offset: 0x00B5B12C
+		// Token: 0x06025A55 RID: 154197 RVA: 0x00A97D9C File Offset: 0x00A95F9C
 		public static void ExecuteInputNavigation(string actionName, InputDistributeDefine.EActionType actionType)
 		{
 			if (actionType == InputDistributeDefine.EActionType.Release)
@@ -555,17 +555,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F29 RID: 200489 RVA: 0x00B5CF84 File Offset: 0x00B5B184
-		public static void ExecuteInterfaceMethod<[Nullable(2)] T>(object obj, string methodName, params object[] args)
-		{
-			MethodInfo method = obj.GetType().GetMethod(methodName);
-			if (method != null)
-			{
-				method.Invoke(obj, args);
-			}
-		}
-
-		// Token: 0x06030F2A RID: 200490 RVA: 0x00B5CFB0 File Offset: 0x00B5B1B0
+		// Token: 0x06025A56 RID: 154198 RVA: 0x00A97DF4 File Offset: 0x00A95FF4
 		public static void CreateStaticDefaultValue()
 		{
 			UiNavigationLogic.OnInputAction = delegate(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification _)
@@ -608,7 +598,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationLogic.IsPress = false;
 		}
 
-		// Token: 0x06030F2B RID: 200491 RVA: 0x00B5D00B File Offset: 0x00B5B20B
+		// Token: 0x06025A57 RID: 154199 RVA: 0x00A97E4F File Offset: 0x00A9604F
 		public static void ResetStaticDefaultValue()
 		{
 			UiNavigationLogic.OnInputAction = null;
@@ -616,20 +606,20 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationLogic.IsPress = false;
 		}
 
-		// Token: 0x0401A453 RID: 107603
+		// Token: 0x04014CC6 RID: 85190
 		private static TInputHandle<InputDistributeDefine.EActionType> OnInputAction;
 
-		// Token: 0x0401A454 RID: 107604
+		// Token: 0x04014CC7 RID: 85191
 		private static TInputHandle<float> OnInputAxis;
 
-		// Token: 0x0401A455 RID: 107605
+		// Token: 0x04014CC8 RID: 85192
 		private static bool IsPress;
 
-		// Token: 0x0200ABAB RID: 43947
+		// Token: 0x020095BA RID: 38330
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040342FB RID: 213755
+			// Token: 0x0402EC7E RID: 191614
 			[Nullable(new byte[]
 			{
 				0,

@@ -7,7 +7,7 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 {
-	// Token: 0x02003E1F RID: 15903
+	// Token: 0x02003136 RID: 12598
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -15,30 +15,30 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 	[UnrealStructLayout(40, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 40)]
 	public class SMaterialControllerTextureParameter : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06027DD7 RID: 163287 RVA: 0x0099D4A4 File Offset: 0x0099B6A4
+		// Token: 0x0601EFDA RID: 126938 RVA: 0x00922F55 File Offset: 0x00921155
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SMaterialControllerTextureParameter._ScriptStructPtr != 0) ? SMaterialControllerTextureParameter._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Render/RuntimeBP/Character/MaterialController/SMaterialControllerTextureParameter.SMaterialControllerTextureParameter", ref SMaterialControllerTextureParameter._ScriptStructPtr);
 		}
 
-		// Token: 0x17005A80 RID: 23168
-		// (get) Token: 0x06027DD8 RID: 163288 RVA: 0x0099D4C8 File Offset: 0x0099B6C8
-		// (set) Token: 0x06027DD9 RID: 163289 RVA: 0x0099D4DC File Offset: 0x0099B6DC
+		// Token: 0x170036CC RID: 14028
+		// (get) Token: 0x0601EFDB RID: 126939 RVA: 0x00922F79 File Offset: 0x00921179
+		// (set) Token: 0x0601EFDC RID: 126940 RVA: 0x00922F8D File Offset: 0x0092118D
 		public unsafe FName ParameterName
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMaterialControllerTextureParameter.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SMaterialControllerTextureParameter.__PropertyOffset_ParameterName);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMaterialControllerTextureParameter.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SMaterialControllerTextureParameter.__PropertyOffset_ParameterName) = value;
 			}
 		}
 
-		// Token: 0x17005A81 RID: 23169
-		// (get) Token: 0x06027DDA RID: 163290 RVA: 0x0099D4F4 File Offset: 0x0099B6F4
-		// (set) Token: 0x06027DDB RID: 163291 RVA: 0x0099D537 File Offset: 0x0099B737
+		// Token: 0x170036CD RID: 14029
+		// (get) Token: 0x0601EFDD RID: 126941 RVA: 0x00922FA4 File Offset: 0x009211A4
+		// (set) Token: 0x0601EFDE RID: 126942 RVA: 0x00922FE7 File Offset: 0x009211E7
 		public SMaterialControllerTextureGroup ParameterValue
 		{
 			get
@@ -47,70 +47,63 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerTextureGroup result;
 				if ((result = this._ParameterValue) == null)
 				{
-					result = (this._ParameterValue = new SMaterialControllerTextureGroup(base.NativePtr + (IntPtr)SMaterialControllerTextureParameter.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._ParameterValue = new SMaterialControllerTextureGroup(base.NativePtr + (IntPtr)SMaterialControllerTextureParameter.__PropertyOffset_ParameterValue, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerTextureGroup.StaticStruct(), base.NativePtr + (IntPtr)SMaterialControllerTextureParameter.__PropertyOffset_1, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerTextureGroup.StaticStruct(), base.NativePtr + (IntPtr)SMaterialControllerTextureParameter.__PropertyOffset_ParameterValue, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x06027DDC RID: 163292 RVA: 0x0099D558 File Offset: 0x0099B758
+		// Token: 0x0601EFDF RID: 126943 RVA: 0x00923008 File Offset: 0x00921208
 		public SMaterialControllerTextureParameter()
 		{
 		}
 
-		// Token: 0x06027DDD RID: 163293 RVA: 0x0099D560 File Offset: 0x0099B760
-		public SMaterialControllerTextureParameter(FName ParameterName, SMaterialControllerTextureGroup ParameterValue)
-		{
-			this.ParameterName = ParameterName;
-			this.ParameterValue = ParameterValue;
-		}
-
-		// Token: 0x06027DDE RID: 163294 RVA: 0x0099D576 File Offset: 0x0099B776
+		// Token: 0x0601EFE0 RID: 126944 RVA: 0x00923010 File Offset: 0x00921210
 		protected override IntPtr GetUStructPtr()
 		{
 			return SMaterialControllerTextureParameter.StaticStruct();
 		}
 
-		// Token: 0x06027DDF RID: 163295 RVA: 0x0099D582 File Offset: 0x0099B782
+		// Token: 0x0601EFE1 RID: 126945 RVA: 0x0092301C File Offset: 0x0092121C
 		[NullableContext(2)]
 		public SMaterialControllerTextureParameter(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06027DE0 RID: 163296 RVA: 0x0099D58C File Offset: 0x0099B78C
+		// Token: 0x0601EFE2 RID: 126946 RVA: 0x00923026 File Offset: 0x00921226
 		public SMaterialControllerTextureParameter(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06027DE1 RID: 163297 RVA: 0x0099D597 File Offset: 0x0099B797
+		// Token: 0x0601EFE3 RID: 126947 RVA: 0x00923031 File Offset: 0x00921231
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SMaterialControllerTextureParameter(Pointer, false, true);
 		}
 
-		// Token: 0x06027DE2 RID: 163298 RVA: 0x0099D5A1 File Offset: 0x0099B7A1
+		// Token: 0x0601EFE4 RID: 126948 RVA: 0x0092303B File Offset: 0x0092123B
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SMaterialControllerTextureParameter(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401435C RID: 82780
+		// Token: 0x04010801 RID: 67585
 		public const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Character/MaterialController/SMaterialControllerTextureParameter.SMaterialControllerTextureParameter";
 
-		// Token: 0x0401435D RID: 82781
+		// Token: 0x04010802 RID: 67586
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401435E RID: 82782
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010803 RID: 67587
+		internal static int __PropertyOffset_ParameterName;
 
-		// Token: 0x0401435F RID: 82783
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010804 RID: 67588
+		internal static int __PropertyOffset_ParameterValue;
 
-		// Token: 0x04014360 RID: 82784
+		// Token: 0x04010805 RID: 67589
 		[Nullable(2)]
 		private SMaterialControllerTextureGroup _ParameterValue;
 	}

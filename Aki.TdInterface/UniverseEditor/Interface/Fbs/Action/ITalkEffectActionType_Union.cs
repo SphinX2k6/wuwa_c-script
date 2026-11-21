@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020072AD RID: 29357
+	// Token: 0x02007A82 RID: 31362
 	public enum ITalkEffectActionType_Union : byte
 	{
-		// Token: 0x04011DC4 RID: 73156
+		// Token: 0x04012DC7 RID: 77255
 		NONE,
-		// Token: 0x04011DC5 RID: 73157
+		// Token: 0x04012DC8 RID: 77256
 		ITalkEffectActionType,
-		// Token: 0x04011DC6 RID: 73158
+		// Token: 0x04012DC9 RID: 77257
 		ITalkEffectPlay,
-		// Token: 0x04011DC7 RID: 73159
+		// Token: 0x04012DCA RID: 77258
 		ITalkEffectStop
 	}
 }

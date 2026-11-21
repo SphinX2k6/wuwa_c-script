@@ -6,13 +6,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000833 RID: 2099
+	// Token: 0x020008D6 RID: 2262
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ModelComponent : IComponentBase
 	{
-		// Token: 0x06002DCD RID: 11725 RVA: 0x00076900 File Offset: 0x00074B00
-		[NullableContext(1)]
+		// Token: 0x060030FD RID: 12541 RVA: 0x0007DC64 File Offset: 0x0007BE64
+		[NullableContext(0)]
 		private ModelComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002DCE RID: 11726 RVA: 0x00076938 File Offset: 0x00074B38
-		[NullableContext(1)]
+		// Token: 0x060030FE RID: 12542 RVA: 0x0007DC9C File Offset: 0x0007BE9C
+		[NullableContext(0)]
 		public static ModelComponent Create([Nullable(2)] ModelComponent instance)
 		{
 			if (instance == null)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002DCF RID: 11727 RVA: 0x0007694B File Offset: 0x00074B4B
-		[NullableContext(1)]
+		// Token: 0x060030FF RID: 12543 RVA: 0x0007DCAF File Offset: 0x0007BEAF
+		[NullableContext(0)]
 		public static ModelComponent CreateFromSetValue([Nullable(2)] ModelComponent_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002DD0 RID: 11728 RVA: 0x00076960 File Offset: 0x00074B60
-		[NullableContext(1)]
+		// Token: 0x06003100 RID: 12544 RVA: 0x0007DCC4 File Offset: 0x0007BEC4
+		[NullableContext(0)]
 		public new ModelComponent_SetValue ToSetValue()
 		{
 			return new ModelComponent_SetValue
@@ -71,13 +71,14 @@ namespace Aki.TDConfigMgr.Component
 				PerformanceFaceSkeletalMeshPath = this.PerformanceFaceSkeletalMeshPath,
 				IsUseSeqFace = this.IsUseSeqFace,
 				AbpAnimScheme = this.AbpAnimScheme,
-				CollisionChannelConfig = this.CollisionChannelConfig
+				CollisionChannelConfig = this.CollisionChannelConfig,
+				DefaultDecorationIds = this.DefaultDecorationIds
 			};
 		}
 
-		// Token: 0x17000BFD RID: 3069
-		// (get) Token: 0x06002DD1 RID: 11729 RVA: 0x000769F8 File Offset: 0x00074BF8
-		// (set) Token: 0x06002DD2 RID: 11730 RVA: 0x00076A32 File Offset: 0x00074C32
+		// Token: 0x17000CC0 RID: 3264
+		// (get) Token: 0x06003101 RID: 12545 RVA: 0x0007DD68 File Offset: 0x0007BF68
+		// (set) Token: 0x06003102 RID: 12546 RVA: 0x0007DDA2 File Offset: 0x0007BFA2
 		public override bool? Disabled
 		{
 			get
@@ -99,9 +100,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BFE RID: 3070
-		// (get) Token: 0x06002DD3 RID: 11731 RVA: 0x00076A40 File Offset: 0x00074C40
-		// (set) Token: 0x06002DD4 RID: 11732 RVA: 0x00076A6A File Offset: 0x00074C6A
+		// Token: 0x17000CC1 RID: 3265
+		// (get) Token: 0x06003103 RID: 12547 RVA: 0x0007DDB0 File Offset: 0x0007BFB0
+		// (set) Token: 0x06003104 RID: 12548 RVA: 0x0007DDDA File Offset: 0x0007BFDA
 		public override bool? EdIsLocked
 		{
 			get
@@ -118,13 +119,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BFF RID: 3071
-		// (get) Token: 0x06002DD5 RID: 11733 RVA: 0x00076A78 File Offset: 0x00074C78
-		// (set) Token: 0x06002DD6 RID: 11734 RVA: 0x00076A9F File Offset: 0x00074C9F
-		[Nullable(1)]
+		// Token: 0x17000CC2 RID: 3266
+		// (get) Token: 0x06003105 RID: 12549 RVA: 0x0007DDE8 File Offset: 0x0007BFE8
+		// (set) Token: 0x06003106 RID: 12550 RVA: 0x0007DE0F File Offset: 0x0007C00F
+		[Nullable(0)]
 		public virtual IModelConfig ModelType
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -138,16 +139,16 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.ModelType;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().ModelType = value;
 			}
 		}
 
-		// Token: 0x17000C00 RID: 3072
-		// (get) Token: 0x06002DD7 RID: 11735 RVA: 0x00076AB0 File Offset: 0x00074CB0
-		// (set) Token: 0x06002DD8 RID: 11736 RVA: 0x00076AEA File Offset: 0x00074CEA
+		// Token: 0x17000CC3 RID: 3267
+		// (get) Token: 0x06003107 RID: 12551 RVA: 0x0007DE20 File Offset: 0x0007C020
+		// (set) Token: 0x06003108 RID: 12552 RVA: 0x0007DE5A File Offset: 0x0007C05A
 		public virtual int? HalfHeight
 		{
 			get
@@ -169,9 +170,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C01 RID: 3073
-		// (get) Token: 0x06002DD9 RID: 11737 RVA: 0x00076AF8 File Offset: 0x00074CF8
-		// (set) Token: 0x06002DDA RID: 11738 RVA: 0x00076B32 File Offset: 0x00074D32
+		// Token: 0x17000CC4 RID: 3268
+		// (get) Token: 0x06003109 RID: 12553 RVA: 0x0007DE68 File Offset: 0x0007C068
+		// (set) Token: 0x0600310A RID: 12554 RVA: 0x0007DEA2 File Offset: 0x0007C0A2
 		public virtual int? TrackHeight
 		{
 			get
@@ -193,9 +194,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C02 RID: 3074
-		// (get) Token: 0x06002DDB RID: 11739 RVA: 0x00076B40 File Offset: 0x00074D40
-		// (set) Token: 0x06002DDC RID: 11740 RVA: 0x00076B67 File Offset: 0x00074D67
+		// Token: 0x17000CC5 RID: 3269
+		// (get) Token: 0x0600310B RID: 12555 RVA: 0x0007DEB0 File Offset: 0x0007C0B0
+		// (set) Token: 0x0600310C RID: 12556 RVA: 0x0007DED7 File Offset: 0x0007C0D7
 		public virtual List<int> PerformanceTags
 		{
 			get
@@ -217,9 +218,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C03 RID: 3075
-		// (get) Token: 0x06002DDD RID: 11741 RVA: 0x00076B78 File Offset: 0x00074D78
-		// (set) Token: 0x06002DDE RID: 11742 RVA: 0x00076BB2 File Offset: 0x00074DB2
+		// Token: 0x17000CC6 RID: 3270
+		// (get) Token: 0x0600310D RID: 12557 RVA: 0x0007DEE8 File Offset: 0x0007C0E8
+		// (set) Token: 0x0600310E RID: 12558 RVA: 0x0007DF22 File Offset: 0x0007C122
 		public virtual bool? AoiFadeOut
 		{
 			get
@@ -241,9 +242,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C04 RID: 3076
-		// (get) Token: 0x06002DDF RID: 11743 RVA: 0x00076BC0 File Offset: 0x00074DC0
-		// (set) Token: 0x06002DE0 RID: 11744 RVA: 0x00076BE7 File Offset: 0x00074DE7
+		// Token: 0x17000CC7 RID: 3271
+		// (get) Token: 0x0600310F RID: 12559 RVA: 0x0007DF30 File Offset: 0x0007C130
+		// (set) Token: 0x06003110 RID: 12560 RVA: 0x0007DF57 File Offset: 0x0007C157
 		public virtual string PerformanceFaceSkeletalMeshPath
 		{
 			get
@@ -265,9 +266,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C05 RID: 3077
-		// (get) Token: 0x06002DE1 RID: 11745 RVA: 0x00076BF8 File Offset: 0x00074DF8
-		// (set) Token: 0x06002DE2 RID: 11746 RVA: 0x00076C32 File Offset: 0x00074E32
+		// Token: 0x17000CC8 RID: 3272
+		// (get) Token: 0x06003111 RID: 12561 RVA: 0x0007DF68 File Offset: 0x0007C168
+		// (set) Token: 0x06003112 RID: 12562 RVA: 0x0007DFA2 File Offset: 0x0007C1A2
 		public virtual bool? IsUseSeqFace
 		{
 			get
@@ -289,9 +290,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C06 RID: 3078
-		// (get) Token: 0x06002DE3 RID: 11747 RVA: 0x00076C40 File Offset: 0x00074E40
-		// (set) Token: 0x06002DE4 RID: 11748 RVA: 0x00076C7A File Offset: 0x00074E7A
+		// Token: 0x17000CC9 RID: 3273
+		// (get) Token: 0x06003113 RID: 12563 RVA: 0x0007DFB0 File Offset: 0x0007C1B0
+		// (set) Token: 0x06003114 RID: 12564 RVA: 0x0007DFEA File Offset: 0x0007C1EA
 		public virtual EAbpAnimScheme? AbpAnimScheme
 		{
 			get
@@ -313,9 +314,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C07 RID: 3079
-		// (get) Token: 0x06002DE5 RID: 11749 RVA: 0x00076C88 File Offset: 0x00074E88
-		// (set) Token: 0x06002DE6 RID: 11750 RVA: 0x00076CE9 File Offset: 0x00074EE9
+		// Token: 0x17000CCA RID: 3274
+		// (get) Token: 0x06003115 RID: 12565 RVA: 0x0007DFF8 File Offset: 0x0007C1F8
+		// (set) Token: 0x06003116 RID: 12566 RVA: 0x0007E059 File Offset: 0x0007C259
 		public virtual ICollisionChannelConfig CollisionChannelConfig
 		{
 			get
@@ -343,17 +344,56 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001E49 RID: 7753
+		// Token: 0x17000CCB RID: 3275
+		// (get) Token: 0x06003117 RID: 12567 RVA: 0x0007E06E File Offset: 0x0007C26E
+		// (set) Token: 0x06003118 RID: 12568 RVA: 0x0007E095 File Offset: 0x0007C295
+		[Nullable(new byte[]
+		{
+			2,
+			0
+		})]
+		public virtual List<string> DefaultDecorationIds
+		{
+			[return: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.DefaultDecorationIds;
+				}
+				ModelComponent_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.DefaultDecorationIds;
+			}
+			[param: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
+			set
+			{
+				this.GetOrCreatePoco().DefaultDecorationIds = value;
+			}
+		}
+
+		// Token: 0x04002055 RID: 8277
 		protected new ModelComponent FbInstance;
 
-		// Token: 0x04001E4A RID: 7754
+		// Token: 0x04002056 RID: 8278
 		protected new ModelComponent_SetValue PocoInterface;
 
-		// Token: 0x04001E4B RID: 7755
-		[Nullable(1)]
+		// Token: 0x04002057 RID: 8279
+		[Nullable(0)]
 		private ICollisionChannelConfig _CollisionChannelConfigCache;
 
-		// Token: 0x04001E4C RID: 7756
+		// Token: 0x04002058 RID: 8280
 		private bool _CollisionChannelConfigInited;
 	}
 }

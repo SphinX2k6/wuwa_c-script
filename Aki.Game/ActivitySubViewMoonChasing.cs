@@ -10,13 +10,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012EA RID: 4842
+// Token: 0x0200079E RID: 1950
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewMoonChasing : ActivitySubViewBase
 {
-	// Token: 0x17000B79 RID: 2937
-	// (get) Token: 0x060085B7 RID: 34231 RVA: 0x001C7C5A File Offset: 0x001C5E5A
+	// Token: 0x17000B99 RID: 2969
+	// (get) Token: 0x06005952 RID: 22866 RVA: 0x001D0AC6 File Offset: 0x001CECC6
 	protected new ActivityMoonChasingData ActivityBaseData
 	{
 		get
@@ -25,7 +25,7 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060085B8 RID: 34232 RVA: 0x001C7C68 File Offset: 0x001C5E68
+	// Token: 0x06005953 RID: 22867 RVA: 0x001D0AD4 File Offset: 0x001CECD4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,12 +43,12 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x060085B9 RID: 34233 RVA: 0x001C7D5D File Offset: 0x001C5F5D
+	// Token: 0x06005954 RID: 22868 RVA: 0x001D0BC9 File Offset: 0x001CEDC9
 	protected override void OnSetData()
 	{
 	}
 
-	// Token: 0x060085BA RID: 34234 RVA: 0x001C7D60 File Offset: 0x001C5F60
+	// Token: 0x06005955 RID: 22869 RVA: 0x001D0BCC File Offset: 0x001CEDCC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewMoonChasing.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060085BB RID: 34235 RVA: 0x001C7DA4 File Offset: 0x001C5FA4
+	// Token: 0x06005956 RID: 22870 RVA: 0x001D0C10 File Offset: 0x001CEE10
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -89,7 +89,7 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		this.QuestPanelTips.SetRewardButtonFunction(new Action(this.PreStageQuestJump));
 	}
 
-	// Token: 0x060085BC RID: 34236 RVA: 0x001C7EFD File Offset: 0x001C60FD
+	// Token: 0x06005957 RID: 22871 RVA: 0x001D0D69 File Offset: 0x001CEF69
 	protected override void OnRefreshView()
 	{
 		this.RefreshFunctionalComponent();
@@ -98,25 +98,25 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x060085BD RID: 34237 RVA: 0x001C7F17 File Offset: 0x001C6117
+	// Token: 0x06005958 RID: 22872 RVA: 0x001D0D83 File Offset: 0x001CEF83
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x060085BE RID: 34238 RVA: 0x001C7F1F File Offset: 0x001C611F
+	// Token: 0x06005959 RID: 22873 RVA: 0x001D0D8B File Offset: 0x001CEF8B
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x060085BF RID: 34239 RVA: 0x001C7F3D File Offset: 0x001C613D
+	// Token: 0x0600595A RID: 22874 RVA: 0x001D0DA9 File Offset: 0x001CEFA9
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x060085C0 RID: 34240 RVA: 0x001C7F5C File Offset: 0x001C615C
+	// Token: 0x0600595B RID: 22875 RVA: 0x001D0DC8 File Offset: 0x001CEFC8
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -137,7 +137,7 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x060085C1 RID: 34241 RVA: 0x001C7F88 File Offset: 0x001C6188
+	// Token: 0x0600595C RID: 22876 RVA: 0x001D0DF4 File Offset: 0x001CEFF4
 	private void OnRefreshCommonActivityRedDot(int id)
 	{
 		if (id == this.ActivityBaseData.Id)
@@ -146,7 +146,7 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060085C2 RID: 34242 RVA: 0x001C7FA0 File Offset: 0x001C61A0
+	// Token: 0x0600595D RID: 22877 RVA: 0x001D0E0C File Offset: 0x001CF00C
 	private void RefreshTimerText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -159,7 +159,7 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060085C3 RID: 34243 RVA: 0x001C7FDC File Offset: 0x001C61DC
+	// Token: 0x0600595E RID: 22878 RVA: 0x001D0E48 File Offset: 0x001CF048
 	private void RefreshQuestTips()
 	{
 		bool flag = this.ActivityBaseData.IsPreStageQuestFinished();
@@ -173,7 +173,7 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		this.QuestPanelTips.SetContentByTextId(activityMoonChasingConfig.Value.StageQuestTips, Array.Empty<string>());
 	}
 
-	// Token: 0x060085C4 RID: 34244 RVA: 0x001C8050 File Offset: 0x001C6250
+	// Token: 0x0600595F RID: 22879 RVA: 0x001D0EBC File Offset: 0x001CF0BC
 	private void RefreshButton()
 	{
 		int handbookUnlockCount = MoonChasingModel.Instance.GetHandbookUnlockCount();
@@ -184,13 +184,13 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		this.RewardBtn.SetText(num.ToString() + "/" + targetTotalCount.ToString());
 	}
 
-	// Token: 0x060085C5 RID: 34245 RVA: 0x001C80DA File Offset: 0x001C62DA
+	// Token: 0x06005960 RID: 22880 RVA: 0x001D0F46 File Offset: 0x001CF146
 	private void PreStageQuestJump()
 	{
 		UiManager.Instance.OpenView(EUiViewName.QuestView, this.ActivityBaseData.GetPreStageQuestId(), null);
 	}
 
-	// Token: 0x060085C6 RID: 34246 RVA: 0x001C80FC File Offset: 0x001C62FC
+	// Token: 0x06005961 RID: 22881 RVA: 0x001D0F68 File Offset: 0x001CF168
 	private void RefreshFunctionalComponent()
 	{
 		bool flag = this.ActivityBaseData.IsUnLock();
@@ -218,7 +218,7 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		this.FunctionalComponent.FunctionButton.SetShowText(showText);
 	}
 
-	// Token: 0x060085C7 RID: 34247 RVA: 0x001C81E7 File Offset: 0x001C63E7
+	// Token: 0x06005962 RID: 22882 RVA: 0x001D1053 File Offset: 0x001CF253
 	private void RefreshRedDot()
 	{
 		this.FunctionalComponent.FunctionButton.SetRedDotVisible(this.ActivityBaseData.IsHasMoonChasingRedDot());
@@ -226,7 +226,7 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		this.RewardBtn.BindRedDot(ERedDotName.MoonChasingRewardAndShop, 0);
 	}
 
-	// Token: 0x060085C8 RID: 34248 RVA: 0x001C8228 File Offset: 0x001C6428
+	// Token: 0x06005963 RID: 22883 RVA: 0x001D1094 File Offset: 0x001CF294
 	private void SkipToReward()
 	{
 		if (this.ActivityBaseData.PermanentTargetOn)
@@ -236,13 +236,13 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060085C9 RID: 34249 RVA: 0x001C825C File Offset: 0x001C645C
+	// Token: 0x06005964 RID: 22884 RVA: 0x001D10C8 File Offset: 0x001CF2C8
 	private void SkipToHandbook()
 	{
 		MoonChasingController.Instance.OpenHandbookView();
 	}
 
-	// Token: 0x060085CA RID: 34250 RVA: 0x001C8268 File Offset: 0x001C6468
+	// Token: 0x06005965 RID: 22885 RVA: 0x001D10D4 File Offset: 0x001CF2D4
 	protected void OpenRewardPopUp()
 	{
 		if (!this.ActivityBaseData.LimitTimeRewardOn)
@@ -257,7 +257,7 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		UiManager.Instance.OpenView(EUiViewName.ActivityRewardPopUpView, allRewardData, null);
 	}
 
-	// Token: 0x060085CB RID: 34251 RVA: 0x001C82A4 File Offset: 0x001C64A4
+	// Token: 0x06005966 RID: 22886 RVA: 0x001D1110 File Offset: 0x001CF310
 	private void JumpFunction()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -292,13 +292,13 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x04003BFE RID: 15358
+	// Token: 0x04003C96 RID: 15510
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x04003BFF RID: 15359
+	// Token: 0x04003C97 RID: 15511
 	private ActivityDescriptionTypeA DescriptionComponent;
 
-	// Token: 0x04003C00 RID: 15360
+	// Token: 0x04003C98 RID: 15512
 	[Nullable(new byte[]
 	{
 		2,
@@ -306,50 +306,50 @@ public class ActivitySubViewMoonChasing : ActivitySubViewBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-	// Token: 0x04003C01 RID: 15361
+	// Token: 0x04003C99 RID: 15513
 	private ActivityFunctionalArea FunctionalComponent;
 
-	// Token: 0x04003C02 RID: 15362
+	// Token: 0x04003C9A RID: 15514
 	private ActivityQuestTipsItem QuestPanelTips;
 
-	// Token: 0x04003C03 RID: 15363
+	// Token: 0x04003C9B RID: 15515
 	private ButtonItem HandbookBtn;
 
-	// Token: 0x04003C04 RID: 15364
+	// Token: 0x04003C9C RID: 15516
 	private ButtonItem RewardBtn;
 
-	// Token: 0x0200790B RID: 30987
+	// Token: 0x02006A95 RID: 27285
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027E02 RID: 163330
+		// Token: 0x0402312F RID: 143663
 		public const int TitleItem = 0;
 
-		// Token: 0x04027E03 RID: 163331
+		// Token: 0x04023130 RID: 143664
 		public const int DescriptionItem = 1;
 
-		// Token: 0x04027E04 RID: 163332
+		// Token: 0x04023131 RID: 143665
 		public const int RewardListItem = 2;
 
-		// Token: 0x04027E05 RID: 163333
+		// Token: 0x04023132 RID: 143666
 		public const int FunctionArea = 3;
 
-		// Token: 0x04027E06 RID: 163334
+		// Token: 0x04023133 RID: 143667
 		public const int PermanentTargetItem = 4;
 
-		// Token: 0x04027E07 RID: 163335
+		// Token: 0x04023134 RID: 143668
 		public const int PermanentButton = 5;
 
-		// Token: 0x04027E08 RID: 163336
+		// Token: 0x04023135 RID: 143669
 		public const int PermanentButtonRedDot = 6;
 
-		// Token: 0x04027E09 RID: 163337
+		// Token: 0x04023136 RID: 143670
 		public const int QuestPanelTips = 7;
 
-		// Token: 0x04027E0A RID: 163338
+		// Token: 0x04023137 RID: 143671
 		public const int ButtonReward = 8;
 
-		// Token: 0x04027E0B RID: 163339
+		// Token: 0x04023138 RID: 143672
 		public const int ButtonHandbook = 9;
 	}
 }

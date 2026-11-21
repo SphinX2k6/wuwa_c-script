@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200071D RID: 1821
+	// Token: 0x02000104 RID: 260
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/CoreUObject.EPropertyAccessChangeNotifyMode")]
 	public enum EPropertyAccessChangeNotifyMode : byte
 	{
-		// Token: 0x04002E5D RID: 11869
+		// Token: 0x040004C7 RID: 1223
 		Default,
-		// Token: 0x04002E5E RID: 11870
+		// Token: 0x040004C8 RID: 1224
 		Never,
-		// Token: 0x04002E5F RID: 11871
+		// Token: 0x040004C9 RID: 1225
 		Always,
-		// Token: 0x04002E60 RID: 11872
+		// Token: 0x040004CA RID: 1226
 		EPropertyAccessChangeNotifyMode_MAX
 	}
 }

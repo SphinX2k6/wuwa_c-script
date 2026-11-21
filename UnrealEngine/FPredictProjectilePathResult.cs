@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001031 RID: 4145
+	// Token: 0x0200026D RID: 621
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.PredictProjectilePathResult")]
 	[UnrealStructLayout(192, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 192)]
 	public class FPredictProjectilePathResult : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600E93D RID: 59709 RVA: 0x0015A7C0 File Offset: 0x001589C0
+		// Token: 0x06003DAA RID: 15786 RVA: 0x00058E37 File Offset: 0x00057037
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FPredictProjectilePathResult._ScriptStructPtr != 0) ? FPredictProjectilePathResult._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.PredictProjectilePathResult", ref FPredictProjectilePathResult._ScriptStructPtr);
 		}
 
-		// Token: 0x1700387D RID: 14461
-		// (get) Token: 0x0600E93E RID: 59710 RVA: 0x0015A7E4 File Offset: 0x001589E4
-		// (set) Token: 0x0600E93F RID: 59711 RVA: 0x0015A827 File Offset: 0x00158A27
+		// Token: 0x17000B34 RID: 2868
+		// (get) Token: 0x06003DAB RID: 15787 RVA: 0x00058E5C File Offset: 0x0005705C
+		// (set) Token: 0x06003DAC RID: 15788 RVA: 0x00058E9F File Offset: 0x0005709F
 		public TArray<FPredictProjectilePathPointData> PathData
 		{
 			get
@@ -40,9 +40,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700387E RID: 14462
-		// (get) Token: 0x0600E940 RID: 59712 RVA: 0x0015A838 File Offset: 0x00158A38
-		// (set) Token: 0x0600E941 RID: 59713 RVA: 0x0015A87B File Offset: 0x00158A7B
+		// Token: 0x17000B35 RID: 2869
+		// (get) Token: 0x06003DAD RID: 15789 RVA: 0x00058EB0 File Offset: 0x000570B0
+		// (set) Token: 0x06003DAE RID: 15790 RVA: 0x00058EF3 File Offset: 0x000570F3
 		public FPredictProjectilePathPointData LastTraceDestination
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700387F RID: 14463
-		// (get) Token: 0x0600E942 RID: 59714 RVA: 0x0015A89C File Offset: 0x00158A9C
-		// (set) Token: 0x0600E943 RID: 59715 RVA: 0x0015A8DF File Offset: 0x00158ADF
+		// Token: 0x17000B36 RID: 2870
+		// (get) Token: 0x06003DAF RID: 15791 RVA: 0x00058F14 File Offset: 0x00057114
+		// (set) Token: 0x06003DB0 RID: 15792 RVA: 0x00058F57 File Offset: 0x00057157
 		public FHitResult HitResult
 		{
 			get
@@ -82,58 +82,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600E944 RID: 59716 RVA: 0x0015A900 File Offset: 0x00158B00
+		// Token: 0x06003DB1 RID: 15793 RVA: 0x00058F78 File Offset: 0x00057178
 		public FPredictProjectilePathResult()
 		{
 		}
 
-		// Token: 0x0600E945 RID: 59717 RVA: 0x0015A908 File Offset: 0x00158B08
-		public FPredictProjectilePathResult(TArray<FPredictProjectilePathPointData> PathData, FPredictProjectilePathPointData LastTraceDestination, FHitResult HitResult)
-		{
-			this.PathData = PathData;
-			this.LastTraceDestination = LastTraceDestination;
-			this.HitResult = HitResult;
-		}
-
-		// Token: 0x0600E946 RID: 59718 RVA: 0x0015A925 File Offset: 0x00158B25
+		// Token: 0x06003DB2 RID: 15794 RVA: 0x00058F80 File Offset: 0x00057180
 		protected override IntPtr GetUStructPtr()
 		{
 			return FPredictProjectilePathResult.StaticStruct();
 		}
 
-		// Token: 0x0600E947 RID: 59719 RVA: 0x0015A931 File Offset: 0x00158B31
+		// Token: 0x06003DB3 RID: 15795 RVA: 0x00058F8C File Offset: 0x0005718C
 		[NullableContext(2)]
 		public FPredictProjectilePathResult(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600E948 RID: 59720 RVA: 0x0015A93B File Offset: 0x00158B3B
+		// Token: 0x06003DB4 RID: 15796 RVA: 0x00058F96 File Offset: 0x00057196
 		public FPredictProjectilePathResult(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600E949 RID: 59721 RVA: 0x0015A946 File Offset: 0x00158B46
+		// Token: 0x06003DB5 RID: 15797 RVA: 0x00058FA1 File Offset: 0x000571A1
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FPredictProjectilePathResult(Pointer, false, true);
 		}
 
-		// Token: 0x0600E94A RID: 59722 RVA: 0x0015A950 File Offset: 0x00158B50
+		// Token: 0x06003DB6 RID: 15798 RVA: 0x00058FAB File Offset: 0x000571AB
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FPredictProjectilePathResult(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04007E9E RID: 32414
+		// Token: 0x04001813 RID: 6163
 		public const string __ObjectPath = "/Script/Engine.PredictProjectilePathResult";
 
-		// Token: 0x04007E9F RID: 32415
+		// Token: 0x04001814 RID: 6164
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04007EA0 RID: 32416
+		// Token: 0x04001815 RID: 6165
 		internal static int __PropertyOffset_PathData;
 
-		// Token: 0x04007EA1 RID: 32417
+		// Token: 0x04001816 RID: 6166
 		[Nullable(new byte[]
 		{
 			2,
@@ -141,17 +133,17 @@ namespace UnrealEngine
 		})]
 		private TArray<FPredictProjectilePathPointData> _PathData;
 
-		// Token: 0x04007EA2 RID: 32418
+		// Token: 0x04001817 RID: 6167
 		internal static int __PropertyOffset_LastTraceDestination;
 
-		// Token: 0x04007EA3 RID: 32419
+		// Token: 0x04001818 RID: 6168
 		[Nullable(2)]
 		private FPredictProjectilePathPointData _LastTraceDestination;
 
-		// Token: 0x04007EA4 RID: 32420
+		// Token: 0x04001819 RID: 6169
 		internal static int __PropertyOffset_HitResult;
 
-		// Token: 0x04007EA5 RID: 32421
+		// Token: 0x0400181A RID: 6170
 		[Nullable(2)]
 		private FHitResult _HitResult;
 	}

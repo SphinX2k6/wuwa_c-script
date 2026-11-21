@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B0C RID: 15116
+	// Token: 0x02003F0E RID: 16142
 	public class IVarIntValidateConfigT
 	{
-		// Token: 0x170067B8 RID: 26552
-		// (get) Token: 0x06014A1B RID: 84507 RVA: 0x00300FFD File Offset: 0x002FF1FD
-		// (set) Token: 0x06014A1C RID: 84508 RVA: 0x00301005 File Offset: 0x002FF205
+		// Token: 0x17006D53 RID: 27987
+		// (get) Token: 0x06015EC5 RID: 89797 RVA: 0x0032728D File Offset: 0x0032548D
+		// (set) Token: 0x06015EC6 RID: 89798 RVA: 0x00327295 File Offset: 0x00325495
 		public EVar Type { get; set; }
 
-		// Token: 0x170067B9 RID: 26553
-		// (get) Token: 0x06014A1D RID: 84509 RVA: 0x0030100E File Offset: 0x002FF20E
-		// (set) Token: 0x06014A1E RID: 84510 RVA: 0x00301016 File Offset: 0x002FF216
+		// Token: 0x17006D54 RID: 27988
+		// (get) Token: 0x06015EC7 RID: 89799 RVA: 0x0032729E File Offset: 0x0032549E
+		// (set) Token: 0x06015EC8 RID: 89800 RVA: 0x003272A6 File Offset: 0x003254A6
 		public List<int> ValidList { get; set; }
 
-		// Token: 0x170067BA RID: 26554
-		// (get) Token: 0x06014A1F RID: 84511 RVA: 0x0030101F File Offset: 0x002FF21F
-		// (set) Token: 0x06014A20 RID: 84512 RVA: 0x00301027 File Offset: 0x002FF227
+		// Token: 0x17006D55 RID: 27989
+		// (get) Token: 0x06015EC9 RID: 89801 RVA: 0x003272AF File Offset: 0x003254AF
+		// (set) Token: 0x06015ECA RID: 89802 RVA: 0x003272B7 File Offset: 0x003254B7
 		public int MinValue { get; set; }
 
-		// Token: 0x170067BB RID: 26555
-		// (get) Token: 0x06014A21 RID: 84513 RVA: 0x00301030 File Offset: 0x002FF230
-		// (set) Token: 0x06014A22 RID: 84514 RVA: 0x00301038 File Offset: 0x002FF238
+		// Token: 0x17006D56 RID: 27990
+		// (get) Token: 0x06015ECB RID: 89803 RVA: 0x003272C0 File Offset: 0x003254C0
+		// (set) Token: 0x06015ECC RID: 89804 RVA: 0x003272C8 File Offset: 0x003254C8
 		public int MaxValue { get; set; }
 
-		// Token: 0x170067BC RID: 26556
-		// (get) Token: 0x06014A23 RID: 84515 RVA: 0x00301041 File Offset: 0x002FF241
-		// (set) Token: 0x06014A24 RID: 84516 RVA: 0x00301049 File Offset: 0x002FF249
+		// Token: 0x17006D57 RID: 27991
+		// (get) Token: 0x06015ECD RID: 89805 RVA: 0x003272D1 File Offset: 0x003254D1
+		// (set) Token: 0x06015ECE RID: 89806 RVA: 0x003272D9 File Offset: 0x003254D9
 		public byte NullMask { get; set; }
 
-		// Token: 0x06014A25 RID: 84517 RVA: 0x00301052 File Offset: 0x002FF252
+		// Token: 0x06015ECF RID: 89807 RVA: 0x003272E2 File Offset: 0x003254E2
 		public IVarIntValidateConfigT()
 		{
 			this.Type = EVar.Boolean;

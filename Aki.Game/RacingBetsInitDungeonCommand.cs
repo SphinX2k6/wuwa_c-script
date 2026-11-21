@@ -11,13 +11,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020026D6 RID: 9942
+// Token: 0x02001BC1 RID: 7105
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsInitDungeonCommand : RacingBetsCommandBase
 {
-	// Token: 0x17001A6F RID: 6767
-	// (get) Token: 0x06014632 RID: 83506 RVA: 0x00527D8E File Offset: 0x00525F8E
+	// Token: 0x17001AA7 RID: 6823
+	// (get) Token: 0x06011B14 RID: 72468 RVA: 0x00536AC6 File Offset: 0x00534CC6
 	public override ERacingBetsCommandType CommandType
 	{
 		get
@@ -26,7 +26,7 @@ public class RacingBetsInitDungeonCommand : RacingBetsCommandBase
 		}
 	}
 
-	// Token: 0x06014633 RID: 83507 RVA: 0x00527D94 File Offset: 0x00525F94
+	// Token: 0x06011B15 RID: 72469 RVA: 0x00536ACC File Offset: 0x00534CCC
 	public void Init(List<RacingBetsDungeonDangoInfo> dangoInfoList, IReadOnlyList<RacingBetMapPoint> mapPointList, int seasonId)
 	{
 		this.SeasonId = seasonId;
@@ -169,7 +169,7 @@ public class RacingBetsInitDungeonCommand : RacingBetsCommandBase
 		}
 	}
 
-	// Token: 0x06014634 RID: 83508 RVA: 0x00528120 File Offset: 0x00526320
+	// Token: 0x06011B16 RID: 72470 RVA: 0x00536E58 File Offset: 0x00535058
 	public override UniTask OnExecute()
 	{
 		RacingBetsInitDungeonCommand.<OnExecute>d__6 <OnExecute>d__;
@@ -180,7 +180,7 @@ public class RacingBetsInitDungeonCommand : RacingBetsCommandBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014635 RID: 83509 RVA: 0x00528164 File Offset: 0x00526364
+	// Token: 0x06011B17 RID: 72471 RVA: 0x00536E9C File Offset: 0x0053509C
 	private void ShowDangoActor(List<IChessItemParams> chessItemDataList)
 	{
 		foreach (IChessItemParams chessItemParams in chessItemDataList)
@@ -193,7 +193,7 @@ public class RacingBetsInitDungeonCommand : RacingBetsCommandBase
 		}
 	}
 
-	// Token: 0x06014636 RID: 83510 RVA: 0x005281D8 File Offset: 0x005263D8
+	// Token: 0x06011B18 RID: 72472 RVA: 0x00536F10 File Offset: 0x00535110
 	private void CreateOrganSceneEffect()
 	{
 		Dictionary<int, int> legMatchOrganMap = RacingBetsConfig.Instance.GetLegMatchOrganMap(this.SeasonId, RacingBetsModel.Instance.DungeonMatchId);
@@ -233,7 +233,7 @@ public class RacingBetsInitDungeonCommand : RacingBetsCommandBase
 		RacingBetsModel.Instance.RefreshPointsDynamicEffects(pointIds);
 	}
 
-	// Token: 0x06014637 RID: 83511 RVA: 0x00528334 File Offset: 0x00526534
+	// Token: 0x06011B19 RID: 72473 RVA: 0x0053706C File Offset: 0x0053526C
 	private void SpawnAndRegisterPointEffect(FTransformDouble transform, int pointId, string path, ERacingBetsEffectType type, global::EEffectType effectType = global::EEffectType.Scene)
 	{
 		EffectSystem instance = EffectSystem.Instance;
@@ -252,7 +252,7 @@ public class RacingBetsInitDungeonCommand : RacingBetsCommandBase
 		});
 	}
 
-	// Token: 0x06014638 RID: 83512 RVA: 0x00528398 File Offset: 0x00526598
+	// Token: 0x06011B1A RID: 72474 RVA: 0x005370D0 File Offset: 0x005352D0
 	private void CreateDestinationLoopEffect()
 	{
 		string stringConfig = ConfigCommonParamById.GetStringConfig("RacingBetsFinalLoopEffect");
@@ -272,25 +272,25 @@ public class RacingBetsInitDungeonCommand : RacingBetsCommandBase
 		this.SpawnAndRegisterPointEffect(transform, chessboardPointParams.Id, stringConfig, ERacingBetsEffectType.DestinationLoop, global::EEffectType.Scene);
 	}
 
-	// Token: 0x06014639 RID: 83513 RVA: 0x00528418 File Offset: 0x00526618
+	// Token: 0x06011B1B RID: 72475 RVA: 0x00537150 File Offset: 0x00535350
 	[NullableContext(2)]
 	private IChessboardPointParams GetChessBoardPointParamsById(int pointId)
 	{
 		return this.ChessBoardPointParams.Find((IChessboardPointParams point) => point.Id == pointId);
 	}
 
-	// Token: 0x0601463A RID: 83514 RVA: 0x00528449 File Offset: 0x00526649
+	// Token: 0x06011B1C RID: 72476 RVA: 0x00537181 File Offset: 0x00535381
 	public override string LogInfo()
 	{
 		return "RacingBetsInitDungeonCommand";
 	}
 
-	// Token: 0x04009929 RID: 39209
+	// Token: 0x04009A81 RID: 39553
 	private readonly List<IChessItemParams> ChessItemDataList = new List<IChessItemParams>();
 
-	// Token: 0x0400992A RID: 39210
+	// Token: 0x04009A82 RID: 39554
 	private readonly List<IChessboardPointParams> ChessBoardPointParams = new List<IChessboardPointParams>();
 
-	// Token: 0x0400992B RID: 39211
+	// Token: 0x04009A83 RID: 39555
 	private int SeasonId;
 }

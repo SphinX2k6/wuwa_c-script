@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -13,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Shop
 {
-	// Token: 0x02004C61 RID: 19553
+	// Token: 0x02003C12 RID: 15378
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffShopView : UiViewBase
 	{
-		// Token: 0x060328B4 RID: 207028 RVA: 0x00BC68D8 File Offset: 0x00BC4AD8
+		// Token: 0x06027667 RID: 161383 RVA: 0x00B0B524 File Offset: 0x00B09724
 		public SheriffShopView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060328B5 RID: 207029 RVA: 0x00BC68F8 File Offset: 0x00BC4AF8
+		// Token: 0x06027668 RID: 161384 RVA: 0x00B0B544 File Offset: 0x00B09744
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -45,19 +44,19 @@ namespace CSharpScript.Game.Module.Sheriff.View.Shop
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060328B6 RID: 207030 RVA: 0x00BC69E5 File Offset: 0x00BC4BE5
+		// Token: 0x06027669 RID: 161385 RVA: 0x00B0B631 File Offset: 0x00B09831
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoodsList));
 		}
 
-		// Token: 0x060328B7 RID: 207031 RVA: 0x00BC6A03 File Offset: 0x00BC4C03
+		// Token: 0x0602766A RID: 161386 RVA: 0x00B0B64F File Offset: 0x00B0984F
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoodsList));
 		}
 
-		// Token: 0x060328B8 RID: 207032 RVA: 0x00BC6A24 File Offset: 0x00BC4C24
+		// Token: 0x0602766B RID: 161387 RVA: 0x00B0B670 File Offset: 0x00B09870
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SheriffShopView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -68,13 +67,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Shop
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060328B9 RID: 207033 RVA: 0x00BC6A67 File Offset: 0x00BC4C67
+		// Token: 0x0602766C RID: 161388 RVA: 0x00B0B6B3 File Offset: 0x00B098B3
 		private SheriffShopItem InitItem()
 		{
 			return new SheriffShopItem();
 		}
 
-		// Token: 0x060328BA RID: 207034 RVA: 0x00BC6A70 File Offset: 0x00BC4C70
+		// Token: 0x0602766D RID: 161389 RVA: 0x00B0B6BC File Offset: 0x00B098BC
 		protected override void OnStart()
 		{
 			this.RefreshShop();
@@ -88,7 +87,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Shop
 			}
 		}
 
-		// Token: 0x060328BB RID: 207035 RVA: 0x00BC6AE4 File Offset: 0x00BC4CE4
+		// Token: 0x0602766E RID: 161390 RVA: 0x00B0B730 File Offset: 0x00B09930
 		private UniTask RefreshCaption()
 		{
 			SheriffShopView.<RefreshCaption>d__13 <RefreshCaption>d__;
@@ -99,7 +98,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Shop
 			return <RefreshCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060328BC RID: 207036 RVA: 0x00BC6B28 File Offset: 0x00BC4D28
+		// Token: 0x0602766F RID: 161391 RVA: 0x00B0B774 File Offset: 0x00B09974
 		private UniTask CreateScrollShopMenuAsync()
 		{
 			SheriffShopView.<CreateScrollShopMenuAsync>d__14 <CreateScrollShopMenuAsync>d__;
@@ -110,14 +109,19 @@ namespace CSharpScript.Game.Module.Sheriff.View.Shop
 			return <CreateScrollShopMenuAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060328BD RID: 207037 RVA: 0x00BC6B6C File Offset: 0x00BC4D6C
+		// Token: 0x06027670 RID: 161392 RVA: 0x00B0B7B8 File Offset: 0x00B099B8
 		private void RefreshShop()
 		{
 			List<PayShopGoods> shopDataList = SheriffModel.Instance.GetShopDataList(this.SelectedLevel);
-			this.ScrollShop.RefreshByData(shopDataList.Cast<IPayShopUnionData>().ToList<IPayShopUnionData>(), false, null, false);
+			List<IPayShopUnionData> list = new List<IPayShopUnionData>(shopDataList.Count);
+			for (int i = 0; i < shopDataList.Count; i++)
+			{
+				list.Add(shopDataList[i]);
+			}
+			this.ScrollShop.RefreshByData(list, false, null, false);
 		}
 
-		// Token: 0x060328BE RID: 207038 RVA: 0x00BC6BA4 File Offset: 0x00BC4DA4
+		// Token: 0x06027671 RID: 161393 RVA: 0x00B0B810 File Offset: 0x00B09A10
 		private void OnClickTopShopMenuItem(int id)
 		{
 			foreach (SheriffShopMenuItem sheriffShopMenuItem in this.TopShopMenu.GetLayoutItemList())
@@ -131,7 +135,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Shop
 			this.RefreshShop();
 		}
 
-		// Token: 0x060328BF RID: 207039 RVA: 0x00BC6C18 File Offset: 0x00BC4E18
+		// Token: 0x06027672 RID: 161394 RVA: 0x00B0B884 File Offset: 0x00B09A84
 		private void RefreshCurrencyTxt()
 		{
 			UUIText text = base.GetText(1);
@@ -144,23 +148,23 @@ namespace CSharpScript.Game.Module.Sheriff.View.Shop
 			}
 		}
 
-		// Token: 0x060328C0 RID: 207040 RVA: 0x00BC6C58 File Offset: 0x00BC4E58
+		// Token: 0x06027673 RID: 161395 RVA: 0x00B0B8C4 File Offset: 0x00B09AC4
 		private void OnRefreshGoodsList(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 		{
 			this.RefreshShop();
 			this.RefreshCurrencyTxt();
 		}
 
-		// Token: 0x0401AE6D RID: 110189
+		// Token: 0x040157CA RID: 88010
 		private List<int> ShopTabList = new List<int>();
 
-		// Token: 0x0401AE6E RID: 110190
+		// Token: 0x040157CB RID: 88011
 		private int SelectedLevel;
 
-		// Token: 0x0401AE6F RID: 110191
+		// Token: 0x040157CC RID: 88012
 		private readonly PopupCaptionItem ItemCaption = new PopupCaptionItem(null);
 
-		// Token: 0x0401AE70 RID: 110192
+		// Token: 0x040157CD RID: 88013
 		[Nullable(new byte[]
 		{
 			2,
@@ -168,7 +172,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Shop
 		})]
 		private GenericLayout<SheriffShopMenuItem, int> TopShopMenu;
 
-		// Token: 0x0401AE71 RID: 110193
+		// Token: 0x040157CE RID: 88014
 		[Nullable(new byte[]
 		{
 			2,
@@ -177,26 +181,26 @@ namespace CSharpScript.Game.Module.Sheriff.View.Shop
 		})]
 		private LoopScrollView<SheriffShopItem, IPayShopUnionData> ScrollShop;
 
-		// Token: 0x0200AE06 RID: 44550
+		// Token: 0x02009824 RID: 38948
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x04034DB1 RID: 216497
+			// Token: 0x0402F756 RID: 194390
 			public const int ItemCaption = 0;
 
-			// Token: 0x04034DB2 RID: 216498
+			// Token: 0x0402F757 RID: 194391
 			public const int TxtNum = 1;
 
-			// Token: 0x04034DB3 RID: 216499
+			// Token: 0x0402F758 RID: 194392
 			public const int ScrollShop = 2;
 
-			// Token: 0x04034DB4 RID: 216500
+			// Token: 0x0402F759 RID: 194393
 			public const int ShopItem = 3;
 
-			// Token: 0x04034DB5 RID: 216501
+			// Token: 0x0402F75A RID: 194394
 			public const int TopMenu = 4;
 
-			// Token: 0x04034DB6 RID: 216502
+			// Token: 0x0402F75B RID: 194395
 			public const int TabItem = 5;
 		}
 	}

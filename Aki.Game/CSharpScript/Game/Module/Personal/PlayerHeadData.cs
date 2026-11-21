@@ -4,12 +4,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Personal
 {
-	// Token: 0x020052E9 RID: 21225
+	// Token: 0x020042B9 RID: 17081
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerHeadData
 	{
-		// Token: 0x060364A6 RID: 222374 RVA: 0x00CD7960 File Offset: 0x00CD5B60
+		// Token: 0x0602B3A1 RID: 177057 RVA: 0x00C25084 File Offset: 0x00C23284
 		public PlayerHeadData(PlayerHeadRe config)
 		{
 			this.Id = config.Id;
@@ -20,9 +20,9 @@ namespace CSharpScript.Game.Module.Personal
 			}
 		}
 
-		// Token: 0x1700830B RID: 33547
-		// (get) Token: 0x060364A7 RID: 222375 RVA: 0x00CD79AF File Offset: 0x00CD5BAF
-		// (set) Token: 0x060364A8 RID: 222376 RVA: 0x00CD79B7 File Offset: 0x00CD5BB7
+		// Token: 0x170056CB RID: 22219
+		// (get) Token: 0x0602B3A2 RID: 177058 RVA: 0x00C250D3 File Offset: 0x00C232D3
+		// (set) Token: 0x0602B3A3 RID: 177059 RVA: 0x00C250DB File Offset: 0x00C232DB
 		public bool Lock
 		{
 			get
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Personal
 			}
 		}
 
-		// Token: 0x060364A9 RID: 222377 RVA: 0x00CD79C0 File Offset: 0x00CD5BC0
+		// Token: 0x0602B3A4 RID: 177060 RVA: 0x00C250E4 File Offset: 0x00C232E4
 		public string GetName()
 		{
 			if (this.RoleSkinData != null)
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Personal
 			return this.Config.Name;
 		}
 
-		// Token: 0x060364AA RID: 222378 RVA: 0x00CD79F8 File Offset: 0x00CD5BF8
+		// Token: 0x0602B3A5 RID: 177061 RVA: 0x00C2511C File Offset: 0x00C2331C
 		public string GetRoleHeadIconLarge()
 		{
 			if (this.RoleSkinData != null)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Personal
 			return this.Config.RoleHeadIconLarge;
 		}
 
-		// Token: 0x060364AB RID: 222379 RVA: 0x00CD7A30 File Offset: 0x00CD5C30
+		// Token: 0x0602B3A6 RID: 177062 RVA: 0x00C25154 File Offset: 0x00C23354
 		public string GetRoleHeadIcon()
 		{
 			if (this.RoleSkinData != null)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Personal
 			return this.Config.RoleHeadIcon;
 		}
 
-		// Token: 0x060364AC RID: 222380 RVA: 0x00CD7A68 File Offset: 0x00CD5C68
+		// Token: 0x0602B3A7 RID: 177063 RVA: 0x00C2518C File Offset: 0x00C2338C
 		public string GetRoleCardHeadIcon()
 		{
 			if (this.RoleSkinData != null)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Personal
 			return this.Config.Card;
 		}
 
-		// Token: 0x060364AD RID: 222381 RVA: 0x00CD7AA0 File Offset: 0x00CD5CA0
+		// Token: 0x0602B3A8 RID: 177064 RVA: 0x00C251C4 File Offset: 0x00C233C4
 		public string GetRoleHeadIconCircle()
 		{
 			if (this.RoleSkinData != null)
@@ -85,16 +85,16 @@ namespace CSharpScript.Game.Module.Personal
 			return this.Config.RoleHeadIconCircle;
 		}
 
-		// Token: 0x0401CB15 RID: 117525
+		// Token: 0x0401754A RID: 95562
 		public readonly int Id;
 
-		// Token: 0x0401CB16 RID: 117526
+		// Token: 0x0401754B RID: 95563
 		public readonly PlayerHeadRe Config;
 
-		// Token: 0x0401CB17 RID: 117527
+		// Token: 0x0401754C RID: 95564
 		private bool LockInternal = true;
 
-		// Token: 0x0401CB18 RID: 117528
+		// Token: 0x0401754D RID: 95565
 		[Nullable(2)]
 		private readonly RoleSkinData RoleSkinData;
 	}

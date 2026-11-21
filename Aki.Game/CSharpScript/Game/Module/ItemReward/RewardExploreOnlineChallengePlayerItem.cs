@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x02005802 RID: 22530
+	// Token: 0x020047D9 RID: 18393
 	public class RewardExploreOnlineChallengePlayerItem : UiPanelBase
 	{
-		// Token: 0x06039473 RID: 234611 RVA: 0x00D956A4 File Offset: 0x00D938A4
+		// Token: 0x0602E387 RID: 189319 RVA: 0x00CE450C File Offset: 0x00CE270C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039474 RID: 234612 RVA: 0x00D9570D File Offset: 0x00D9390D
+		// Token: 0x0602E388 RID: 189320 RVA: 0x00CE4575 File Offset: 0x00CE2775
 		protected override void OnStart()
 		{
 			UUITexture texture = base.GetTexture(0);
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			texture.SetUIActive(false);
 		}
 
-		// Token: 0x06039475 RID: 234613 RVA: 0x00D95724 File Offset: 0x00D93924
+		// Token: 0x0602E389 RID: 189321 RVA: 0x00CE458C File Offset: 0x00CE278C
 		public void Refresh(int data)
 		{
 			RewardExploreOnlineChallengePlayerItem.<>c__DisplayClass3_0 CS$<>8__locals1 = new RewardExploreOnlineChallengePlayerItem.<>c__DisplayClass3_0();
@@ -94,13 +94,13 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.SetSpriteByPath(resourcePath, sprite, false, null, null);
 		}
 
-		// Token: 0x0200B9FC RID: 47612
+		// Token: 0x0200A412 RID: 42002
 		private class EChildType
 		{
-			// Token: 0x04038396 RID: 230294
+			// Token: 0x04032D83 RID: 208259
 			public const int HeadTexture = 0;
 
-			// Token: 0x04038397 RID: 230295
+			// Token: 0x04032D84 RID: 208260
 			public const int PlayerNumberSprite = 1;
 		}
 	}

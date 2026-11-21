@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002700 RID: 9984
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029C6 RID: 10694
 	public class IAssistCharacterNavigationMove : IAssistCharacterMoveType
 	{
-		// Token: 0x0600DEDC RID: 57052 RVA: 0x00210C11 File Offset: 0x0020EE11
+		// Token: 0x0600ECC4 RID: 60612 RVA: 0x0022D579 File Offset: 0x0022B779
 		public static IAssistCharacterNavigationMove Create(IAssistCharacterNavigationMove? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700429E RID: 17054
-		// (get) Token: 0x0600DEDD RID: 57053 RVA: 0x00210C30 File Offset: 0x0020EE30
+		// Token: 0x170045E6 RID: 17894
+		// (get) Token: 0x0600ECC5 RID: 60613 RVA: 0x0022D598 File Offset: 0x0022B798
 		public override EAssistCharacterMoveType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700429F RID: 17055
-		// (get) Token: 0x0600DEDE RID: 57054 RVA: 0x00210C3D File Offset: 0x0020EE3D
+		// Token: 0x170045E7 RID: 17895
+		// (get) Token: 0x0600ECC6 RID: 60614 RVA: 0x0022D5A5 File Offset: 0x0022B7A5
 		public virtual PosA Destination
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042A0 RID: 17056
-		// (get) Token: 0x0600DEDF RID: 57055 RVA: 0x00210C71 File Offset: 0x0020EE71
+		// Token: 0x170045E8 RID: 17896
+		// (get) Token: 0x0600ECC7 RID: 60615 RVA: 0x0022D5D9 File Offset: 0x0022B7D9
 		public virtual EMoveState MoveState
 		{
 			get
@@ -59,14 +57,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BB0 RID: 31664
+		// Token: 0x04008254 RID: 33364
 		private IAssistCharacterNavigationMove Instance;
 
-		// Token: 0x04007BB1 RID: 31665
+		// Token: 0x04008255 RID: 33365
 		[Nullable(2)]
 		private PosA _DestinationCache;
 
-		// Token: 0x04007BB2 RID: 31666
+		// Token: 0x04008256 RID: 33366
 		private bool _DestinationInited;
 	}
 }

@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002391 RID: 9105
+// Token: 0x02001876 RID: 6262
 public class PayShopTagItem : UiPanelBase
 {
-	// Token: 0x0601234C RID: 74572 RVA: 0x0047B7B8 File Offset: 0x004799B8
+	// Token: 0x0600F7FE RID: 63486 RVA: 0x00488B08 File Offset: 0x00486D08
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,7 +22,7 @@ public class PayShopTagItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601234D RID: 74573 RVA: 0x0047B821 File Offset: 0x00479A21
+	// Token: 0x0600F7FF RID: 63487 RVA: 0x00488B71 File Offset: 0x00486D71
 	[NullableContext(1)]
 	public void SetText(string text)
 	{
@@ -34,7 +34,7 @@ public class PayShopTagItem : UiPanelBase
 		text2.SetText(text, true);
 	}
 
-	// Token: 0x0601234E RID: 74574 RVA: 0x0047B836 File Offset: 0x00479A36
+	// Token: 0x0600F800 RID: 63488 RVA: 0x00488B86 File Offset: 0x00486D86
 	[NullableContext(1)]
 	public void SetTextByTextId(string textId, int param = 0)
 	{
@@ -42,7 +42,7 @@ public class PayShopTagItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, new <>z__ReadOnlySingleElementList<object>(param));
 	}
 
-	// Token: 0x0601234F RID: 74575 RVA: 0x0047B85C File Offset: 0x00479A5C
+	// Token: 0x0600F801 RID: 63489 RVA: 0x00488BAC File Offset: 0x00486DAC
 	public void SetMaskVisible(bool isVisible)
 	{
 		UUITexture texture = base.GetTexture(1);
@@ -53,16 +53,16 @@ public class PayShopTagItem : UiPanelBase
 		texture.SetUIActive(isVisible);
 	}
 
-	// Token: 0x04008996 RID: 35222
+	// Token: 0x04008ADD RID: 35549
 	public int TextParam;
 
-	// Token: 0x02008933 RID: 35123
+	// Token: 0x02007ABE RID: 31422
 	private class EComponents
 	{
-		// Token: 0x0402C99A RID: 182682
+		// Token: 0x04027CB8 RID: 163000
 		public const int Text = 0;
 
-		// Token: 0x0402C99B RID: 182683
+		// Token: 0x04027CB9 RID: 163001
 		public const int TextureMask = 1;
 	}
 }

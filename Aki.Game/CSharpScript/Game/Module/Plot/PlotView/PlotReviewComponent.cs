@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005059 RID: 20569
+	// Token: 0x02004029 RID: 16425
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotReviewComponent
 	{
-		// Token: 0x06034A36 RID: 215606 RVA: 0x00C70510 File Offset: 0x00C6E710
+		// Token: 0x06029929 RID: 170281 RVA: 0x00BBD7B0 File Offset: 0x00BBB9B0
 		[NullableContext(1)]
 		public PlotReviewComponent(UUIButtonComponent reviewButton, Action clickCallback)
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.IsActive = false;
 		}
 
-		// Token: 0x06034A37 RID: 215607 RVA: 0x00C7056C File Offset: 0x00C6E76C
+		// Token: 0x0602992A RID: 170282 RVA: 0x00BBD80C File Offset: 0x00BBBA0C
 		public void OnClear()
 		{
 			this.IsActive = false;
@@ -34,13 +34,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			plotReviewButton.OnClickCallBack.Unbind();
 		}
 
-		// Token: 0x06034A38 RID: 215608 RVA: 0x00C70591 File Offset: 0x00C6E791
+		// Token: 0x0602992B RID: 170283 RVA: 0x00BBD831 File Offset: 0x00BBBA31
 		public bool IsReviewButtonEnabled()
 		{
 			return this.IsActive;
 		}
 
-		// Token: 0x06034A39 RID: 215609 RVA: 0x00C7059C File Offset: 0x00C6E79C
+		// Token: 0x0602992C RID: 170284 RVA: 0x00BBD83C File Offset: 0x00BBBA3C
 		public void EnableReviewButton(bool enable)
 		{
 			if (this.IsActive == enable)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			plotReviewItem.SetUIActive(flag);
 		}
 
-		// Token: 0x06034A3A RID: 215610 RVA: 0x00C705E8 File Offset: 0x00C6E7E8
+		// Token: 0x0602992D RID: 170285 RVA: 0x00BBD888 File Offset: 0x00BBBA88
 		private void OnReviewButtonClick()
 		{
 			if (!this.IsActive)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			clickCallback();
 		}
 
-		// Token: 0x06034A3B RID: 215611 RVA: 0x00C70603 File Offset: 0x00C6E803
+		// Token: 0x0602992E RID: 170286 RVA: 0x00BBD8A3 File Offset: 0x00BBBAA3
 		public void UpdateImmersiveInputWakeState(bool isWake)
 		{
 			if (isWake && !this.ImmersiveInputWakeState && this.IsActive)
@@ -86,19 +86,19 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ImmersiveInputWakeState = isWake;
 		}
 
-		// Token: 0x0401C0DD RID: 114909
+		// Token: 0x04016B08 RID: 92936
 		private bool IsActive;
 
-		// Token: 0x0401C0DE RID: 114910
+		// Token: 0x04016B09 RID: 92937
 		private readonly UUIItem PlotReviewItem;
 
-		// Token: 0x0401C0DF RID: 114911
+		// Token: 0x04016B0A RID: 92938
 		private readonly UUIButtonComponent PlotReviewButton;
 
-		// Token: 0x0401C0E0 RID: 114912
+		// Token: 0x04016B0B RID: 92939
 		private Action ClickCallback;
 
-		// Token: 0x0401C0E1 RID: 114913
+		// Token: 0x04016B0C RID: 92940
 		private bool ImmersiveInputWakeState = true;
 	}
 }

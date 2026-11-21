@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200593F RID: 22847
+	// Token: 0x02005F4C RID: 24396
 	public class ISnapAngleConfigT
 	{
-		// Token: 0x1700AB81 RID: 43905
-		// (get) Token: 0x06026A9E RID: 158366 RVA: 0x005532E4 File Offset: 0x005514E4
-		// (set) Token: 0x06026A9F RID: 158367 RVA: 0x005532EC File Offset: 0x005514EC
+		// Token: 0x1700B4B5 RID: 46261
+		// (get) Token: 0x06029008 RID: 167944 RVA: 0x00599F50 File Offset: 0x00598150
+		// (set) Token: 0x06029009 RID: 167945 RVA: 0x00599F58 File Offset: 0x00598158
 		public float Angle { get; set; }
 
-		// Token: 0x1700AB82 RID: 43906
-		// (get) Token: 0x06026AA0 RID: 158368 RVA: 0x005532F5 File Offset: 0x005514F5
-		// (set) Token: 0x06026AA1 RID: 158369 RVA: 0x005532FD File Offset: 0x005514FD
+		// Token: 0x1700B4B6 RID: 46262
+		// (get) Token: 0x0602900A RID: 167946 RVA: 0x00599F61 File Offset: 0x00598161
+		// (set) Token: 0x0602900B RID: 167947 RVA: 0x00599F69 File Offset: 0x00598169
 		public float Range { get; set; }
 
-		// Token: 0x06026AA2 RID: 158370 RVA: 0x00553306 File Offset: 0x00551506
+		// Token: 0x0602900C RID: 167948 RVA: 0x00599F72 File Offset: 0x00598172
 		public ISnapAngleConfigT()
 		{
 			this.Angle = 0f;

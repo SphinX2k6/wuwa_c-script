@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.NewWorld.Character.Monster.Controller
 {
-	// Token: 0x0200709D RID: 28829
+	// Token: 0x02006302 RID: 25346
 	internal static class MonsterGroupEcologyControllerConstants
 	{
-		// Token: 0x04024CFD RID: 150781
+		// Token: 0x0402084F RID: 133199
 		public const float INTERVAL_TIME = 1000f;
 	}
 }

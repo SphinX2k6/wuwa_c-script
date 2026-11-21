@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.BattleUi;
 using UnrealEngine;
 
-// Token: 0x02001F4A RID: 8010
+// Token: 0x0200140C RID: 5132
 public class LockCursorUnit : HudUnitBase
 {
-	// Token: 0x0600F7A2 RID: 63394 RVA: 0x003BE614 File Offset: 0x003BC814
+	// Token: 0x0600CBC1 RID: 52161 RVA: 0x003CA100 File Offset: 0x003C8300
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -30,7 +30,7 @@ public class LockCursorUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F7A3 RID: 63395 RVA: 0x003BE704 File Offset: 0x003BC904
+	// Token: 0x0600CBC2 RID: 52162 RVA: 0x003CA1F0 File Offset: 0x003C83F0
 	protected override void OnStart()
 	{
 		this.RootItem.SetAnchorAlign(UIAnchorHorizontalAlign.Center, UIAnchorVerticalAlign.Middle);
@@ -41,7 +41,7 @@ public class LockCursorUnit : HudUnitBase
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600F7A4 RID: 63396 RVA: 0x003BE764 File Offset: 0x003BC964
+	// Token: 0x0600CBC3 RID: 52163 RVA: 0x003CA250 File Offset: 0x003C8450
 	public override void Tick(float delta)
 	{
 		if (this.UnlockTimeDown < 0f)
@@ -58,27 +58,27 @@ public class LockCursorUnit : HudUnitBase
 		this.CurrentTime += delta;
 	}
 
-	// Token: 0x0600F7A5 RID: 63397 RVA: 0x003BE7BC File Offset: 0x003BC9BC
+	// Token: 0x0600CBC4 RID: 52164 RVA: 0x003CA2A8 File Offset: 0x003C84A8
 	protected override void OnBeforeDestroy()
 	{
 		this.LevelSequencePlayer.Clear();
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x0600F7A6 RID: 63398 RVA: 0x003BE7D0 File Offset: 0x003BC9D0
+	// Token: 0x0600CBC5 RID: 52165 RVA: 0x003CA2BC File Offset: 0x003C84BC
 	public void Activate()
 	{
 		base.SetVisible(true, 0);
 	}
 
-	// Token: 0x0600F7A7 RID: 63399 RVA: 0x003BE7DA File Offset: 0x003BC9DA
+	// Token: 0x0600CBC6 RID: 52166 RVA: 0x003CA2C6 File Offset: 0x003C84C6
 	public void Deactivate()
 	{
 		this.SetLockState(LockCursorUnit.ELockState.None);
 		base.SetVisible(false, 0);
 	}
 
-	// Token: 0x0600F7A8 RID: 63400 RVA: 0x003BE7EC File Offset: 0x003BC9EC
+	// Token: 0x0600CBC7 RID: 52167 RVA: 0x003CA2D8 File Offset: 0x003C84D8
 	public override void SetActive(bool visibility)
 	{
 		if (!visibility)
@@ -91,20 +91,20 @@ public class LockCursorUnit : HudUnitBase
 		base.SetActive(visibility);
 	}
 
-	// Token: 0x0600F7A9 RID: 63401 RVA: 0x003BE842 File Offset: 0x003BCA42
+	// Token: 0x0600CBC8 RID: 52168 RVA: 0x003CA32E File Offset: 0x003C852E
 	public bool IsForceLockState()
 	{
 		return this.LockState == LockCursorUnit.ELockState.ForceLock;
 	}
 
-	// Token: 0x0600F7AA RID: 63402 RVA: 0x003BE84D File Offset: 0x003BCA4D
+	// Token: 0x0600CBC9 RID: 52169 RVA: 0x003CA339 File Offset: 0x003C8539
 	public void ActivateUnlockTimeDown(float time)
 	{
 		this.UnlockTimeDown = time;
 		this.CurrentTime = 0f;
 	}
 
-	// Token: 0x0600F7AB RID: 63403 RVA: 0x003BE861 File Offset: 0x003BCA61
+	// Token: 0x0600CBCA RID: 52170 RVA: 0x003CA34D File Offset: 0x003C854D
 	public void DeactivateUnlockTimeDown()
 	{
 		this.UnlockTimeDown = -1f;
@@ -112,7 +112,7 @@ public class LockCursorUnit : HudUnitBase
 		this.SetBarPercent(1f);
 	}
 
-	// Token: 0x0600F7AC RID: 63404 RVA: 0x003BE884 File Offset: 0x003BCA84
+	// Token: 0x0600CBCB RID: 52171 RVA: 0x003CA370 File Offset: 0x003C8570
 	[NullableContext(2)]
 	public void Refresh(EntityHandle lockTarget, EntityHandle selfEntity, bool isPlayerLock)
 	{
@@ -147,7 +147,7 @@ public class LockCursorUnit : HudUnitBase
 		this.SetLockState(lockState);
 	}
 
-	// Token: 0x0600F7AD RID: 63405 RVA: 0x003BE94C File Offset: 0x003BCB4C
+	// Token: 0x0600CBCC RID: 52172 RVA: 0x003CA438 File Offset: 0x003C8638
 	[NullableContext(2)]
 	private LockCursorUnit.ELockState RefreshLockState(EntityHandle selfEntity, bool isPlayerLock)
 	{
@@ -175,7 +175,7 @@ public class LockCursorUnit : HudUnitBase
 		return LockCursorUnit.ELockState.NormalLock;
 	}
 
-	// Token: 0x0600F7AE RID: 63406 RVA: 0x003BE9BC File Offset: 0x003BCBBC
+	// Token: 0x0600CBCD RID: 52173 RVA: 0x003CA4A8 File Offset: 0x003C86A8
 	private void RefreshLockAudio(LockCursorUnit.ELockState lockState)
 	{
 		if (lockState != LockCursorUnit.ELockState.ForceLock)
@@ -195,7 +195,7 @@ public class LockCursorUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F7AF RID: 63407 RVA: 0x003BEA0C File Offset: 0x003BCC0C
+	// Token: 0x0600CBCE RID: 52174 RVA: 0x003CA4F8 File Offset: 0x003C86F8
 	private void SetLockState(LockCursorUnit.ELockState lockState)
 	{
 		if (lockState != this.LockState)
@@ -232,7 +232,7 @@ public class LockCursorUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F7B0 RID: 63408 RVA: 0x003BEA98 File Offset: 0x003BCC98
+	// Token: 0x0600CBCF RID: 52175 RVA: 0x003CA584 File Offset: 0x003C8784
 	private void SetBarSpriteVisible(bool bVisible)
 	{
 		UUISprite sprite = base.GetSprite(3);
@@ -243,31 +243,31 @@ public class LockCursorUnit : HudUnitBase
 		sprite.SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600F7B1 RID: 63409 RVA: 0x003BEABE File Offset: 0x003BCCBE
+	// Token: 0x0600CBD0 RID: 52176 RVA: 0x003CA5AA File Offset: 0x003C87AA
 	public void SetBarPercent(float percent)
 	{
 		base.GetSprite(3).SetFillAmount(percent);
 	}
 
-	// Token: 0x0600F7B2 RID: 63410 RVA: 0x003BEAD0 File Offset: 0x003BCCD0
+	// Token: 0x0600CBD1 RID: 52177 RVA: 0x003CA5BC File Offset: 0x003C87BC
 	private void PlayStartSequence()
 	{
 		this.LevelSequencePlayer.PlaySequencePurely("Start", false, false, null, null, false);
 	}
 
-	// Token: 0x0600F7B3 RID: 63411 RVA: 0x003BEAFC File Offset: 0x003BCCFC
+	// Token: 0x0600CBD2 RID: 52178 RVA: 0x003CA5E8 File Offset: 0x003C87E8
 	private void PlayLookAtLockSequence()
 	{
 		this.LevelSequencePlayer.PlaySequencePurely("Lock", false, false, null, null, false);
 	}
 
-	// Token: 0x0600F7B4 RID: 63412 RVA: 0x003BEB28 File Offset: 0x003BCD28
+	// Token: 0x0600CBD3 RID: 52179 RVA: 0x003CA614 File Offset: 0x003C8814
 	private void PlayLookAtUnlockSequence()
 	{
 		this.LevelSequencePlayer.PlaySequencePurely("Unlock", false, false, null, null, false);
 	}
 
-	// Token: 0x0600F7B5 RID: 63413 RVA: 0x003BEB52 File Offset: 0x003BCD52
+	// Token: 0x0600CBD4 RID: 52180 RVA: 0x003CA63E File Offset: 0x003C883E
 	private void PlayForceLockAudio()
 	{
 		BattleUiAudioData audioData = BattleUiModel.Instance.AudioData;
@@ -278,7 +278,7 @@ public class LockCursorUnit : HudUnitBase
 		audioData.PlayAudio(EBattleUiAudioType.ForceLock, EBattleUiChild.BattleHud);
 	}
 
-	// Token: 0x0600F7B6 RID: 63414 RVA: 0x003BEB6B File Offset: 0x003BCD6B
+	// Token: 0x0600CBD5 RID: 52181 RVA: 0x003CA657 File Offset: 0x003C8857
 	private void PlaySwitchForceLockAudio()
 	{
 		BattleUiAudioData audioData = BattleUiModel.Instance.AudioData;
@@ -289,64 +289,64 @@ public class LockCursorUnit : HudUnitBase
 		audioData.PlayAudio(EBattleUiAudioType.SwitchForceLock, EBattleUiChild.BattleHud);
 	}
 
-	// Token: 0x040072D7 RID: 29399
+	// Token: 0x040073B8 RID: 29624
 	private float UnlockTimeDown = -1f;
 
-	// Token: 0x040072D8 RID: 29400
+	// Token: 0x040073B9 RID: 29625
 	private float CurrentTime;
 
-	// Token: 0x040072D9 RID: 29401
+	// Token: 0x040073BA RID: 29626
 	private LockCursorUnit.ELockState LockState;
 
-	// Token: 0x040072DA RID: 29402
+	// Token: 0x040073BB RID: 29627
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040072DB RID: 29403
+	// Token: 0x040073BC RID: 29628
 	private bool HasHiddenTag;
 
-	// Token: 0x040072DC RID: 29404
+	// Token: 0x040073BD RID: 29629
 	private int LockEntityId;
 
-	// Token: 0x040072DD RID: 29405
+	// Token: 0x040073BE RID: 29630
 	private int LockAudioEntityId;
 
-	// Token: 0x0200853D RID: 34109
+	// Token: 0x020076C2 RID: 30402
 	private enum EChildType
 	{
-		// Token: 0x0402B60B RID: 177675
+		// Token: 0x0402692F RID: 157999
 		Item1,
-		// Token: 0x0402B60C RID: 177676
+		// Token: 0x04026930 RID: 158000
 		Item2,
-		// Token: 0x0402B60D RID: 177677
+		// Token: 0x04026931 RID: 158001
 		Item3,
-		// Token: 0x0402B60E RID: 177678
+		// Token: 0x04026932 RID: 158002
 		BarSprite,
-		// Token: 0x0402B60F RID: 177679
+		// Token: 0x04026933 RID: 158003
 		AnimSprite,
-		// Token: 0x0402B610 RID: 177680
+		// Token: 0x04026934 RID: 158004
 		Item4
 	}
 
-	// Token: 0x0200853E RID: 34110
+	// Token: 0x020076C3 RID: 30403
 	private enum ELockState
 	{
-		// Token: 0x0402B612 RID: 177682
+		// Token: 0x04026936 RID: 158006
 		None,
-		// Token: 0x0402B613 RID: 177683
+		// Token: 0x04026937 RID: 158007
 		ForceLock,
-		// Token: 0x0402B614 RID: 177684
+		// Token: 0x04026938 RID: 158008
 		LookAt,
-		// Token: 0x0402B615 RID: 177685
+		// Token: 0x04026939 RID: 158009
 		NormalLock
 	}
 
-	// Token: 0x0200853F RID: 34111
+	// Token: 0x020076C4 RID: 30404
 	private enum EVisibleReason
 	{
-		// Token: 0x0402B617 RID: 177687
+		// Token: 0x0402693B RID: 158011
 		Default,
-		// Token: 0x0402B618 RID: 177688
+		// Token: 0x0402693C RID: 158012
 		Tag = 2
 	}
 }

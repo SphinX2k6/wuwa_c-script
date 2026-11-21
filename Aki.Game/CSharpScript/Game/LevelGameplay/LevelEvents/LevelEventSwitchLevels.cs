@@ -7,17 +7,17 @@ using CSharpScript.Game.World.Controller;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006BA0 RID: 27552
+	// Token: 0x02005D18 RID: 23832
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventSwitchLevels : LevelEventBase
 	{
-		// Token: 0x060442EB RID: 279275 RVA: 0x010CDD24 File Offset: 0x010CBF24
+		// Token: 0x0603A43F RID: 238655 RVA: 0x01077B5C File Offset: 0x01075D5C
 		public LevelEventSwitchLevels(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060442EC RID: 279276 RVA: 0x010CDD30 File Offset: 0x010CBF30
+		// Token: 0x0603A440 RID: 238656 RVA: 0x01077B68 File Offset: 0x01075D68
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			if (inParams == null)
@@ -41,20 +41,20 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060442ED RID: 279277 RVA: 0x010CDD85 File Offset: 0x010CBF85
+		// Token: 0x0603A441 RID: 238657 RVA: 0x01077BBD File Offset: 0x01075DBD
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060442EE RID: 279278 RVA: 0x010CDD90 File Offset: 0x010CBF90
+		// Token: 0x0603A442 RID: 238658 RVA: 0x01077BC8 File Offset: 0x01075DC8
 		private void PreloadSubLevel(IPreloadSubLevels @params)
 		{
 			SubLevelController.Instance.PreloadSubLevel(@params.PreloadLevels);
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060442EF RID: 279279 RVA: 0x010CDDAC File Offset: 0x010CBFAC
+		// Token: 0x0603A443 RID: 238659 RVA: 0x01077BE4 File Offset: 0x01075DE4
 		private void ChangeSubLevel(ISwitchSubLevelsDirectly @params)
 		{
 			Vector location = null;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			SubLevelController.Instance.ChangeSubLevel(@params.UnloadLevels, @params.LoadLevels, EScreenEffectType.ScreenEffectNone, location, rotator, new Action<bool>(this.OnSwitchComplete), null, null);
 		}
 
-		// Token: 0x060442F0 RID: 279280 RVA: 0x010CDEE7 File Offset: 0x010CC0E7
+		// Token: 0x0603A444 RID: 238660 RVA: 0x01077D1F File Offset: 0x01075F1F
 		private void OnSwitchComplete(bool result)
 		{
 			if (!result)

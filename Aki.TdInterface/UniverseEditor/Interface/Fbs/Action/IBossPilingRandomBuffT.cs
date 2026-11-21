@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006219 RID: 25113
+	// Token: 0x0200688A RID: 26762
 	public class IBossPilingRandomBuffT
 	{
-		// Token: 0x1700BB24 RID: 47908
-		// (get) Token: 0x0602B49A RID: 177306 RVA: 0x005F644A File Offset: 0x005F464A
-		// (set) Token: 0x0602B49B RID: 177307 RVA: 0x005F6452 File Offset: 0x005F4652
+		// Token: 0x1700C4AA RID: 50346
+		// (get) Token: 0x0602DBF3 RID: 187379 RVA: 0x00641036 File Offset: 0x0063F236
+		// (set) Token: 0x0602DBF4 RID: 187380 RVA: 0x0064103E File Offset: 0x0063F23E
 		public int BuffPoolId { get; set; }
 
-		// Token: 0x0602B49C RID: 177308 RVA: 0x005F645B File Offset: 0x005F465B
+		// Token: 0x0602DBF5 RID: 187381 RVA: 0x00641047 File Offset: 0x0063F247
 		public IBossPilingRandomBuffT()
 		{
 			this.BuffPoolId = 0;

@@ -4,60 +4,60 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F44 RID: 24388
+	// Token: 0x02004F2B RID: 20267
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WheelTowerResultViewData : IWheelTowerResultViewData
 	{
-		// Token: 0x17008F92 RID: 36754
-		// (get) Token: 0x0603DF4F RID: 253775 RVA: 0x00EF5AAF File Offset: 0x00EF3CAF
-		// (set) Token: 0x0603DF50 RID: 253776 RVA: 0x00EF5AB7 File Offset: 0x00EF3CB7
+		// Token: 0x17006364 RID: 25444
+		// (get) Token: 0x06032EEA RID: 208618 RVA: 0x00E477DB File Offset: 0x00E459DB
+		// (set) Token: 0x06032EEB RID: 208619 RVA: 0x00E477E3 File Offset: 0x00E459E3
 		public bool EndlessMode { get; set; }
 
-		// Token: 0x17008F93 RID: 36755
-		// (get) Token: 0x0603DF51 RID: 253777 RVA: 0x00EF5AC0 File Offset: 0x00EF3CC0
-		// (set) Token: 0x0603DF52 RID: 253778 RVA: 0x00EF5AC8 File Offset: 0x00EF3CC8
+		// Token: 0x17006365 RID: 25445
+		// (get) Token: 0x06032EEC RID: 208620 RVA: 0x00E477EC File Offset: 0x00E459EC
+		// (set) Token: 0x06032EED RID: 208621 RVA: 0x00E477F4 File Offset: 0x00E459F4
 		public int TotalRound { get; set; }
 
-		// Token: 0x17008F94 RID: 36756
-		// (get) Token: 0x0603DF53 RID: 253779 RVA: 0x00EF5AD1 File Offset: 0x00EF3CD1
-		// (set) Token: 0x0603DF54 RID: 253780 RVA: 0x00EF5AD9 File Offset: 0x00EF3CD9
+		// Token: 0x17006366 RID: 25446
+		// (get) Token: 0x06032EEE RID: 208622 RVA: 0x00E477FD File Offset: 0x00E459FD
+		// (set) Token: 0x06032EEF RID: 208623 RVA: 0x00E47805 File Offset: 0x00E45A05
 		public int CurrentRound { get; set; }
 
-		// Token: 0x17008F95 RID: 36757
-		// (get) Token: 0x0603DF55 RID: 253781 RVA: 0x00EF5AE2 File Offset: 0x00EF3CE2
-		// (set) Token: 0x0603DF56 RID: 253782 RVA: 0x00EF5AEA File Offset: 0x00EF3CEA
+		// Token: 0x17006367 RID: 25447
+		// (get) Token: 0x06032EF0 RID: 208624 RVA: 0x00E4780E File Offset: 0x00E45A0E
+		// (set) Token: 0x06032EF1 RID: 208625 RVA: 0x00E47816 File Offset: 0x00E45A16
 		public int TotalScore { get; set; }
 
-		// Token: 0x17008F96 RID: 36758
-		// (get) Token: 0x0603DF57 RID: 253783 RVA: 0x00EF5AF3 File Offset: 0x00EF3CF3
-		// (set) Token: 0x0603DF58 RID: 253784 RVA: 0x00EF5AFB File Offset: 0x00EF3CFB
+		// Token: 0x17006368 RID: 25448
+		// (get) Token: 0x06032EF2 RID: 208626 RVA: 0x00E4781F File Offset: 0x00E45A1F
+		// (set) Token: 0x06032EF3 RID: 208627 RVA: 0x00E47827 File Offset: 0x00E45A27
 		public int CurrentScore { get; set; }
 
-		// Token: 0x17008F97 RID: 36759
-		// (get) Token: 0x0603DF59 RID: 253785 RVA: 0x00EF5B04 File Offset: 0x00EF3D04
-		// (set) Token: 0x0603DF5A RID: 253786 RVA: 0x00EF5B0C File Offset: 0x00EF3D0C
+		// Token: 0x17006369 RID: 25449
+		// (get) Token: 0x06032EF4 RID: 208628 RVA: 0x00E47830 File Offset: 0x00E45A30
+		// (set) Token: 0x06032EF5 RID: 208629 RVA: 0x00E47838 File Offset: 0x00E45A38
 		[Nullable(1)]
 		public List<IBossItemData> BossInfoList { [NullableContext(1)] get; [NullableContext(1)] set; } = new List<IBossItemData>();
 
-		// Token: 0x17008F98 RID: 36760
-		// (get) Token: 0x0603DF5B RID: 253787 RVA: 0x00EF5B15 File Offset: 0x00EF3D15
-		// (set) Token: 0x0603DF5C RID: 253788 RVA: 0x00EF5B1D File Offset: 0x00EF3D1D
+		// Token: 0x1700636A RID: 25450
+		// (get) Token: 0x06032EF6 RID: 208630 RVA: 0x00E47841 File Offset: 0x00E45A41
+		// (set) Token: 0x06032EF7 RID: 208631 RVA: 0x00E47849 File Offset: 0x00E45A49
 		public IWheelTowerResultViewButtonData LeftButtonData { get; set; }
 
-		// Token: 0x17008F99 RID: 36761
-		// (get) Token: 0x0603DF5D RID: 253789 RVA: 0x00EF5B26 File Offset: 0x00EF3D26
-		// (set) Token: 0x0603DF5E RID: 253790 RVA: 0x00EF5B2E File Offset: 0x00EF3D2E
+		// Token: 0x1700636B RID: 25451
+		// (get) Token: 0x06032EF8 RID: 208632 RVA: 0x00E47852 File Offset: 0x00E45A52
+		// (set) Token: 0x06032EF9 RID: 208633 RVA: 0x00E4785A File Offset: 0x00E45A5A
 		public IWheelTowerResultViewButtonData CenterButtonData { get; set; }
 
-		// Token: 0x17008F9A RID: 36762
-		// (get) Token: 0x0603DF5F RID: 253791 RVA: 0x00EF5B37 File Offset: 0x00EF3D37
-		// (set) Token: 0x0603DF60 RID: 253792 RVA: 0x00EF5B3F File Offset: 0x00EF3D3F
+		// Token: 0x1700636C RID: 25452
+		// (get) Token: 0x06032EFA RID: 208634 RVA: 0x00E47863 File Offset: 0x00E45A63
+		// (set) Token: 0x06032EFB RID: 208635 RVA: 0x00E4786B File Offset: 0x00E45A6B
 		public IWheelTowerResultViewButtonData RightButtonData { get; set; }
 
-		// Token: 0x17008F9B RID: 36763
-		// (get) Token: 0x0603DF61 RID: 253793 RVA: 0x00EF5B48 File Offset: 0x00EF3D48
-		// (set) Token: 0x0603DF62 RID: 253794 RVA: 0x00EF5B50 File Offset: 0x00EF3D50
+		// Token: 0x1700636D RID: 25453
+		// (get) Token: 0x06032EFC RID: 208636 RVA: 0x00E47874 File Offset: 0x00E45A74
+		// (set) Token: 0x06032EFD RID: 208637 RVA: 0x00E4787C File Offset: 0x00E45A7C
 		public bool? ShowEndlessUnlockTips { get; set; }
 	}
 }

@@ -11,7 +11,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020027F7 RID: 10231
+// Token: 0x02001D72 RID: 7538
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -20,7 +20,7 @@ using UnrealEngine;
 })]
 public class RoleDevDetailItem : GridProxyAbstract<global::IRoleDevDetailItemData>
 {
-	// Token: 0x06014FFE RID: 86014 RVA: 0x00551434 File Offset: 0x0054F634
+	// Token: 0x060129FE RID: 76286 RVA: 0x0057C1A4 File Offset: 0x0057A3A4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -46,7 +46,7 @@ public class RoleDevDetailItem : GridProxyAbstract<global::IRoleDevDetailItemDat
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014FFF RID: 86015 RVA: 0x00551564 File Offset: 0x0054F764
+	// Token: 0x060129FF RID: 76287 RVA: 0x0057C2D4 File Offset: 0x0057A4D4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleDevDetailItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -57,13 +57,13 @@ public class RoleDevDetailItem : GridProxyAbstract<global::IRoleDevDetailItemDat
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015000 RID: 86016 RVA: 0x005515A7 File Offset: 0x0054F7A7
+	// Token: 0x06012A00 RID: 76288 RVA: 0x0057C317 File Offset: 0x0057A517
 	protected override void OnStart()
 	{
 		this.ItemGroupHorizontalLayout = new GenericLayout<RoleDevDetailSubItemList, global::IMaterialItemData>(base.GetHorizontalLayout(2), new Func<RoleDevDetailSubItemList>(this.InitItemGroupItem), null, false, true);
 	}
 
-	// Token: 0x06015001 RID: 86017 RVA: 0x005515CC File Offset: 0x0054F7CC
+	// Token: 0x06012A01 RID: 76289 RVA: 0x0057C33C File Offset: 0x0057A53C
 	public override void Refresh(global::IRoleDevDetailItemData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -126,7 +126,7 @@ public class RoleDevDetailItem : GridProxyAbstract<global::IRoleDevDetailItemDat
 		this.RefreshTextMatLimit(data);
 	}
 
-	// Token: 0x06015002 RID: 86018 RVA: 0x00551830 File Offset: 0x0054FA30
+	// Token: 0x06012A02 RID: 76290 RVA: 0x0057C5A0 File Offset: 0x0057A7A0
 	private void RefreshTextMatLimit(global::IRoleDevDetailItemData data)
 	{
 		RoleDevConfig instance = RoleDevConfig.Instance;
@@ -179,7 +179,7 @@ public class RoleDevDetailItem : GridProxyAbstract<global::IRoleDevDetailItemDat
 		}
 	}
 
-	// Token: 0x06015003 RID: 86019 RVA: 0x005519B8 File Offset: 0x0054FBB8
+	// Token: 0x06012A03 RID: 76291 RVA: 0x0057C728 File Offset: 0x0057A928
 	private bool OnCanExecuteBtnTrack()
 	{
 		global::IRoleDevDetailItemData data = this.Data;
@@ -201,13 +201,13 @@ public class RoleDevDetailItem : GridProxyAbstract<global::IRoleDevDetailItemDat
 		return true;
 	}
 
-	// Token: 0x06015004 RID: 86020 RVA: 0x00551A78 File Offset: 0x0054FC78
+	// Token: 0x06012A04 RID: 76292 RVA: 0x0057C7E8 File Offset: 0x0057A9E8
 	private RoleDevDetailSubItemList InitItemGroupItem()
 	{
 		return new RoleDevDetailSubItemList();
 	}
 
-	// Token: 0x06015005 RID: 86021 RVA: 0x00551A80 File Offset: 0x0054FC80
+	// Token: 0x06012A05 RID: 76293 RVA: 0x0057C7F0 File Offset: 0x0057A9F0
 	public void OnBtnTrack(int _)
 	{
 		global::IRoleDevDetailItemData data = this.Data;
@@ -238,7 +238,7 @@ public class RoleDevDetailItem : GridProxyAbstract<global::IRoleDevDetailItemDat
 		}
 	}
 
-	// Token: 0x06015006 RID: 86022 RVA: 0x00551B88 File Offset: 0x0054FD88
+	// Token: 0x06012A06 RID: 76294 RVA: 0x0057C8F8 File Offset: 0x0057AAF8
 	private bool TryWeaponSkillTrack(int jumpGroupId)
 	{
 		RoleDevConfig instance = RoleDevConfig.Instance;
@@ -275,14 +275,14 @@ public class RoleDevDetailItem : GridProxyAbstract<global::IRoleDevDetailItemDat
 		return false;
 	}
 
-	// Token: 0x06015007 RID: 86023 RVA: 0x00551CB5 File Offset: 0x0054FEB5
+	// Token: 0x06012A07 RID: 76295 RVA: 0x0057CA25 File Offset: 0x0057AC25
 	private void HandleSkipTaskJump(int skipTaskId)
 	{
 		global::IRoleDevDetailItemData data = this.Data;
 		SkipTaskManager.RunByConfigId(skipTaskId, (data != null) ? data.ItemGroup[0].ItemId : 0);
 	}
 
-	// Token: 0x06015008 RID: 86024 RVA: 0x00551CE0 File Offset: 0x0054FEE0
+	// Token: 0x06012A08 RID: 76296 RVA: 0x0057CA50 File Offset: 0x0057AC50
 	private void HandlePreOpenDetection(int specialJumpId)
 	{
 		if (OnlineModel.Instance.GetIsTeamModel())
@@ -309,7 +309,7 @@ public class RoleDevDetailItem : GridProxyAbstract<global::IRoleDevDetailItemDat
 		AdventureGuideController.Instance.HandlePreOpenDetectionByPreOpenId(specialJumpId);
 	}
 
-	// Token: 0x04009DF3 RID: 40435
+	// Token: 0x0400A1DC RID: 41436
 	[Nullable(new byte[]
 	{
 		2,
@@ -318,36 +318,36 @@ public class RoleDevDetailItem : GridProxyAbstract<global::IRoleDevDetailItemDat
 	})]
 	private GenericLayout<RoleDevDetailSubItemList, global::IMaterialItemData> ItemGroupHorizontalLayout;
 
-	// Token: 0x04009DF4 RID: 40436
+	// Token: 0x0400A1DD RID: 41437
 	[Nullable(2)]
 	private global::IRoleDevDetailItemData Data;
 
-	// Token: 0x04009DF5 RID: 40437
+	// Token: 0x0400A1DE RID: 41438
 	[Nullable(2)]
 	private ButtonItem ButtonConfirm;
 
-	// Token: 0x04009DF6 RID: 40438
+	// Token: 0x0400A1DF RID: 41439
 	private bool IsMaterialProspective;
 
-	// Token: 0x02008E44 RID: 36420
+	// Token: 0x0200808D RID: 32909
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E268 RID: 189032
+		// Token: 0x04029965 RID: 170341
 		TxtTitle,
-		// Token: 0x0402E269 RID: 189033
+		// Token: 0x04029966 RID: 170342
 		TxtMatLimit,
-		// Token: 0x0402E26A RID: 189034
+		// Token: 0x04029967 RID: 170343
 		HorizontalLayoutContent,
-		// Token: 0x0402E26B RID: 189035
+		// Token: 0x04029968 RID: 170344
 		ItemBaseB,
-		// Token: 0x0402E26C RID: 189036
+		// Token: 0x04029969 RID: 170345
 		ItemBtnConfirm,
-		// Token: 0x0402E26D RID: 189037
+		// Token: 0x0402996A RID: 170346
 		ItemPanelNotObtained,
-		// Token: 0x0402E26E RID: 189038
+		// Token: 0x0402996B RID: 170347
 		ItemFinishTag,
-		// Token: 0x0402E26F RID: 189039
+		// Token: 0x0402996C RID: 170348
 		TextNoMaterial
 	}
 }

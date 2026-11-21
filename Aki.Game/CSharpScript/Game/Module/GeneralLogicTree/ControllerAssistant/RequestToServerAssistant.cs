@@ -15,31 +15,31 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 {
-	// Token: 0x020059C3 RID: 22979
+	// Token: 0x0200499C RID: 18844
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RequestToServerAssistant : ControllerAssistantBase
 	{
-		// Token: 0x0603A3F1 RID: 238577 RVA: 0x00DD8210 File Offset: 0x00DD6410
+		// Token: 0x0602F318 RID: 193304 RVA: 0x00D276E8 File Offset: 0x00D258E8
 		public override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<ERemoveEntityType, EntityHandle>(EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
 		}
 
-		// Token: 0x0603A3F2 RID: 238578 RVA: 0x00DD822E File Offset: 0x00DD642E
+		// Token: 0x0602F319 RID: 193305 RVA: 0x00D27706 File Offset: 0x00D25906
 		public override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove<ERemoveEntityType, EntityHandle>(EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
 		}
 
-		// Token: 0x0603A3F3 RID: 238579 RVA: 0x00DD824C File Offset: 0x00DD644C
+		// Token: 0x0602F31A RID: 193306 RVA: 0x00D27724 File Offset: 0x00D25924
 		protected override void OnDestroy()
 		{
 			this.CacheEntityPosMap.Clear();
 			this.EntityRemovePosMap.Clear();
 		}
 
-		// Token: 0x0603A3F4 RID: 238580 RVA: 0x00DD8264 File Offset: 0x00DD6464
+		// Token: 0x0602F31B RID: 193307 RVA: 0x00D2773C File Offset: 0x00D2593C
 		public unsafe void RequestSubmitNode(GeneralLogicTreeContext context, Action<bool> callback, [Nullable(2)] GeneralLogicTreeNodeExtraInfo extraInfo = null)
 		{
 			IBtNode nodeConfig = GeneralLogicTreeUtil.Instance.GetNodeConfig(context.BtType, context.TreeConfigId, context.NodeId);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}, 0);
 		}
 
-		// Token: 0x0603A3F5 RID: 238581 RVA: 0x00DD8414 File Offset: 0x00DD6614
+		// Token: 0x0602F31C RID: 193308 RVA: 0x00D278EC File Offset: 0x00D25AEC
 		public void RequestSubmitAwakeAndLoadEntityNode(GeneralLogicTreeContext context, Action<bool> callback)
 		{
 			int valueOrDefault = GeneralLogicTreeModel.Instance.GetBehaviorTreeOwnerId(new long?(context.TreeIncId)).GetValueOrDefault();
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}, 0);
 		}
 
-		// Token: 0x0603A3F6 RID: 238582 RVA: 0x00DD8490 File Offset: 0x00DD6690
+		// Token: 0x0602F31D RID: 193309 RVA: 0x00D27968 File Offset: 0x00D25B68
 		public void RequestSetTimerInfo(long treeIncId, int nodeId, ETimerType timerType, TimerSetType setType, int seconds)
 		{
 			int? behaviorTreeOwnerId = GeneralLogicTreeModel.Instance.GetBehaviorTreeOwnerId(new long?(treeIncId));
@@ -124,13 +124,13 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 				ErrorCode errorId = ((BtSetTimerInfoResponse)msg).ErrorId;
 				if (errorId != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(errorId, 26365, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(errorId, 20250, null, true, true);
 				}
 				EventSystem.Instance.Emit<long, ETimerType, TimerSetType, int>(EEventName.GeneralLogicTreeTimerInfoChanged, treeIncId, timerType, setType, seconds);
 			}, 0);
 		}
 
-		// Token: 0x0603A3F7 RID: 238583 RVA: 0x00DD8544 File Offset: 0x00DD6744
+		// Token: 0x0602F31E RID: 193310 RVA: 0x00D27A1C File Offset: 0x00D25C1C
 		public unsafe void RequestQuestFastReturnPos(long treeIncId, int nodeId, Action<bool> callback)
 		{
 			int? behaviorTreeOwnerId = GeneralLogicTreeModel.Instance.GetBehaviorTreeOwnerId(new long?(treeIncId));
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 				QuestFastReturnPosResponse questFastReturnPosResponse = (QuestFastReturnPosResponse)msg;
 				if (questFastReturnPosResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(questFastReturnPosResponse.ErrorCode, 19847, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(questFastReturnPosResponse.ErrorCode, 28798, null, true, true);
 					callback(false);
 					return;
 				}
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}, 0);
 		}
 
-		// Token: 0x0603A3F8 RID: 238584 RVA: 0x00DD8610 File Offset: 0x00DD6810
+		// Token: 0x0602F31F RID: 193311 RVA: 0x00D27AE8 File Offset: 0x00D25CE8
 		public unsafe void RequestLevelPlayFastReturnPos(int levelPlayId, long treeIncId, int nodeId, Action<bool> callback)
 		{
 			int? behaviorTreeOwnerId = GeneralLogicTreeModel.Instance.GetBehaviorTreeOwnerId(new long?(treeIncId));
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 				LevelPlayFastReturnPosResponse levelPlayFastReturnPosResponse = (LevelPlayFastReturnPosResponse)msg;
 				if (levelPlayFastReturnPosResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(levelPlayFastReturnPosResponse.ErrorCode, 18541, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(levelPlayFastReturnPosResponse.ErrorCode, 17289, null, true, true);
 					callback(false);
 					return;
 				}
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}, 0);
 		}
 
-		// Token: 0x0603A3F9 RID: 238585 RVA: 0x00DD8700 File Offset: 0x00DD6900
+		// Token: 0x0602F320 RID: 193312 RVA: 0x00D27BD8 File Offset: 0x00D25DD8
 		public unsafe void RequestFastReturnDungeon(long treeIncId, int nodeId, bool isContinue, List<int> roleIds, Action<bool> callback)
 		{
 			int? behaviorTreeOwnerId = GeneralLogicTreeModel.Instance.GetBehaviorTreeOwnerId(new long?(treeIncId));
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 				FastReturnDungeonResponse fastReturnDungeonResponse = (FastReturnDungeonResponse)msg;
 				if (fastReturnDungeonResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fastReturnDungeonResponse.ErrorCode, 22693, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fastReturnDungeonResponse.ErrorCode, 24553, null, true, true);
 					callback(false);
 					return;
 				}
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}, 0);
 		}
 
-		// Token: 0x0603A3FA RID: 238586 RVA: 0x00DD87E0 File Offset: 0x00DD69E0
+		// Token: 0x0602F321 RID: 193313 RVA: 0x00D27CB8 File Offset: 0x00D25EB8
 		public void RequestGiveUp(long treeIncId, Action<bool> callback)
 		{
 			GeneralLogicTreeModel instance = GeneralLogicTreeModel.Instance;
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 					}
 					else
 					{
-						ErrorCodeController.Instance.OpenErrorCodeTipView(errorId, 23416, null, true, true);
+						ErrorCodeController.Instance.OpenErrorCodeTipView(errorId, 22791, null, true, true);
 					}
 					callback(false);
 					return;
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}, 0);
 		}
 
-		// Token: 0x0603A3FB RID: 238587 RVA: 0x00DD88AC File Offset: 0x00DD6AAC
+		// Token: 0x0602F322 RID: 193314 RVA: 0x00D27D84 File Offset: 0x00D25F84
 		public UniTask RequestRollback(long treeIncId, FailReason? reason)
 		{
 			RequestToServerAssistant.<RequestRollback>d__13 <RequestRollback>d__;
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return <RequestRollback>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A3FC RID: 238588 RVA: 0x00DD8900 File Offset: 0x00DD6B00
+		// Token: 0x0602F323 RID: 193315 RVA: 0x00D27DD8 File Offset: 0x00D25FD8
 		private void RequestRollbackImp(long treeIncId, bool bRollbackLocation)
 		{
 			BaseBehaviorTree behaviorTree = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeIncId), false);
@@ -311,12 +311,12 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 					{
 						return;
 					}
-					ErrorCodeController.Instance.OpenErrorCodeTipView(errorId, 25479, null, false, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(errorId, 22916, null, false, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x0603A3FD RID: 238589 RVA: 0x00DD89E0 File Offset: 0x00DD6BE0
+		// Token: 0x0602F324 RID: 193316 RVA: 0x00D27EB8 File Offset: 0x00D260B8
 		public void RequestTimerEnd(long treeId, string timerType)
 		{
 			int valueOrDefault = GeneralLogicTreeModel.Instance.GetBehaviorTreeOwnerId(new long?(treeId)).GetValueOrDefault();
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}, 0);
 		}
 
-		// Token: 0x0603A3FE RID: 238590 RVA: 0x00DD8A54 File Offset: 0x00DD6C54
+		// Token: 0x0602F325 RID: 193317 RVA: 0x00D27F2C File Offset: 0x00D2612C
 		public void RequestFinishUiGameplay(UiGamePlayType type, string gameplayId)
 		{
 			UiGamePlayRequest uiGamePlayRequest = UiGamePlayRequest.Create();
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}, 0);
 		}
 
-		// Token: 0x0603A3FF RID: 238591 RVA: 0x00DD8AA8 File Offset: 0x00DD6CA8
+		// Token: 0x0602F326 RID: 193318 RVA: 0x00D27F80 File Offset: 0x00D26180
 		public void RequestForcedOccupation(long treeId, Action callback)
 		{
 			BtForcedOccupationRequest btForcedOccupationRequest = BtForcedOccupationRequest.Create();
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}, 0);
 		}
 
-		// Token: 0x0603A400 RID: 238592 RVA: 0x00DD8AEC File Offset: 0x00DD6CEC
+		// Token: 0x0602F327 RID: 193319 RVA: 0x00D27FC4 File Offset: 0x00D261C4
 		[NullableContext(2)]
 		public global::Vector RequestEntityPosition(int dungeonId, int pbDataId, global::Vector receiveVector = null)
 		{
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return vector;
 		}
 
-		// Token: 0x0603A401 RID: 238593 RVA: 0x00DD8BD0 File Offset: 0x00DD6DD0
+		// Token: 0x0602F328 RID: 193320 RVA: 0x00D280A8 File Offset: 0x00D262A8
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (handle.ConfigType != EntityConfigType.Level)
@@ -407,7 +407,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			this.SetEntityRemovePos(instanceId, handle.PbDataId, entityPos);
 		}
 
-		// Token: 0x0603A402 RID: 238594 RVA: 0x00DD8C18 File Offset: 0x00DD6E18
+		// Token: 0x0602F329 RID: 193321 RVA: 0x00D280F0 File Offset: 0x00D262F0
 		public global::Vector GetEntityPos(EntityHandle handle, bool addHalfCapsule, [Nullable(2)] global::Vector receiveVector = null)
 		{
 			global::Vector vector = receiveVector ?? global::Vector.Create();
@@ -472,7 +472,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return vector;
 		}
 
-		// Token: 0x0603A403 RID: 238595 RVA: 0x00DD8DC4 File Offset: 0x00DD6FC4
+		// Token: 0x0602F32A RID: 193322 RVA: 0x00D2829C File Offset: 0x00D2649C
 		[NullableContext(2)]
 		private global::Vector GetCacheEntityPos(int dungeonId, int pbDataId)
 		{
@@ -484,7 +484,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return dictionary.GetValueOrDefault((long)pbDataId);
 		}
 
-		// Token: 0x0603A404 RID: 238596 RVA: 0x00DD8DEC File Offset: 0x00DD6FEC
+		// Token: 0x0602F32B RID: 193323 RVA: 0x00D282C4 File Offset: 0x00D264C4
 		private void RemoveEntityPos(int dungeonId, int pbDataId)
 		{
 			Dictionary<long, global::Vector> dictionary;
@@ -495,7 +495,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			dictionary.Remove((long)pbDataId);
 		}
 
-		// Token: 0x0603A405 RID: 238597 RVA: 0x00DD8E14 File Offset: 0x00DD7014
+		// Token: 0x0602F32C RID: 193324 RVA: 0x00D282EC File Offset: 0x00D264EC
 		private void SetEntityPos(int dungeonId, int pbDataId, global::Vector pos)
 		{
 			Dictionary<long, global::Vector> dictionary;
@@ -506,7 +506,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			dictionary[(long)pbDataId] = pos;
 		}
 
-		// Token: 0x0603A406 RID: 238598 RVA: 0x00DD8E50 File Offset: 0x00DD7050
+		// Token: 0x0602F32D RID: 193325 RVA: 0x00D28328 File Offset: 0x00D26528
 		[NullableContext(2)]
 		private global::Vector GetEntityRemovePos(int dungeonId, int pbDataId)
 		{
@@ -518,7 +518,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return null;
 		}
 
-		// Token: 0x0603A407 RID: 238599 RVA: 0x00DD8E78 File Offset: 0x00DD7078
+		// Token: 0x0602F32E RID: 193326 RVA: 0x00D28350 File Offset: 0x00D26550
 		private void SetEntityRemovePos(int dungeonId, int pbDataId, global::Vector pos)
 		{
 			Dictionary<long, global::Vector> dictionary;
@@ -529,13 +529,13 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			dictionary[(long)pbDataId] = pos;
 		}
 
-		// Token: 0x0401E60B RID: 124427
+		// Token: 0x040190AA RID: 102570
 		private readonly Dictionary<long, Dictionary<long, global::Vector>> CacheEntityPosMap = new Dictionary<long, Dictionary<long, global::Vector>>();
 
-		// Token: 0x0401E60C RID: 124428
+		// Token: 0x040190AB RID: 102571
 		private readonly Dictionary<long, Dictionary<long, global::Vector>> EntityRemovePosMap = new Dictionary<long, Dictionary<long, global::Vector>>();
 
-		// Token: 0x0401E60D RID: 124429
+		// Token: 0x040190AC RID: 102572
 		private bool IsRequesting;
 	}
 }

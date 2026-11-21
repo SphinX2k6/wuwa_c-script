@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000E89 RID: 3721
+	// Token: 0x0200023A RID: 570
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.MaterialInstance")]
-	[UnrealStructLayout(1864, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1864)]
+	[UnrealStructLayout(1888, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1888)]
 	public abstract class UMaterialInstance : UMaterialInterface, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600C690 RID: 50832 RVA: 0x0011FB2F File Offset: 0x0011DD2F
+		// Token: 0x060030EF RID: 12527 RVA: 0x00045AB4 File Offset: 0x00043CB4
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMaterialInstance._ClassPtr;
 		}
 
-		// Token: 0x17002E13 RID: 11795
-		// (get) Token: 0x0600C691 RID: 50833 RVA: 0x0011FB3B File Offset: 0x0011DD3B
-		// (set) Token: 0x0600C692 RID: 50834 RVA: 0x0011FB4F File Offset: 0x0011DD4F
+		// Token: 0x170006AA RID: 1706
+		// (get) Token: 0x060030F0 RID: 12528 RVA: 0x00045AC0 File Offset: 0x00043CC0
+		// (set) Token: 0x060030F1 RID: 12529 RVA: 0x00045AD4 File Offset: 0x00043CD4
 		[Nullable(2)]
 		public unsafe UPhysicalMaterial PhysMaterial
 		{
@@ -37,9 +37,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002E14 RID: 11796
-		// (get) Token: 0x0600C693 RID: 50835 RVA: 0x0011FB64 File Offset: 0x0011DD64
-		// (set) Token: 0x0600C694 RID: 50836 RVA: 0x0011FB9E File Offset: 0x0011DD9E
+		// Token: 0x170006AB RID: 1707
+		// (get) Token: 0x060030F2 RID: 12530 RVA: 0x00045AEC File Offset: 0x00043CEC
+		// (set) Token: 0x060030F3 RID: 12531 RVA: 0x00045B26 File Offset: 0x00043D26
 		public TFixedArray<UPhysicalMaterial> PhysicalMaterialMap
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002E15 RID: 11797
-		// (get) Token: 0x0600C695 RID: 50837 RVA: 0x0011FBAC File Offset: 0x0011DDAC
-		// (set) Token: 0x0600C696 RID: 50838 RVA: 0x0011FBC0 File Offset: 0x0011DDC0
+		// Token: 0x170006AC RID: 1708
+		// (get) Token: 0x060030F4 RID: 12532 RVA: 0x00045B34 File Offset: 0x00043D34
+		// (set) Token: 0x060030F5 RID: 12533 RVA: 0x00045B48 File Offset: 0x00043D48
 		[Nullable(2)]
 		public unsafe UMaterialInterface Parent
 		{
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002E16 RID: 11798
-		// (get) Token: 0x0600C697 RID: 50839 RVA: 0x0011FBD5 File Offset: 0x0011DDD5
-		// (set) Token: 0x0600C698 RID: 50840 RVA: 0x0011FBEE File Offset: 0x0011DDEE
+		// Token: 0x170006AD RID: 1709
+		// (get) Token: 0x060030F6 RID: 12534 RVA: 0x00045B5D File Offset: 0x00043D5D
+		// (set) Token: 0x060030F7 RID: 12535 RVA: 0x00045B76 File Offset: 0x00043D76
 		public unsafe bool bHasStaticPermutationResource
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002E17 RID: 11799
-		// (get) Token: 0x0600C699 RID: 50841 RVA: 0x0011FC1E File Offset: 0x0011DE1E
-		// (set) Token: 0x0600C69A RID: 50842 RVA: 0x0011FC37 File Offset: 0x0011DE37
+		// Token: 0x170006AE RID: 1710
+		// (get) Token: 0x060030F8 RID: 12536 RVA: 0x00045BA6 File Offset: 0x00043DA6
+		// (set) Token: 0x060030F9 RID: 12537 RVA: 0x00045BBF File Offset: 0x00043DBF
 		public unsafe bool bOverrideSubsurfaceProfile
 		{
 			get
@@ -106,51 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002E18 RID: 11800
-		// (get) Token: 0x0600C69B RID: 50843 RVA: 0x0011FC68 File Offset: 0x0011DE68
-		// (set) Token: 0x0600C69C RID: 50844 RVA: 0x0011FCA1 File Offset: 0x0011DEA1
-		public TArray<FScalarParameterValue> ScalarParameterValues
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FScalarParameterValue> result;
-				if ((result = this._ScalarParameterValues) == null)
-				{
-					result = (this._ScalarParameterValues = new TArray<FScalarParameterValue>(base.NativePtr + (IntPtr)UMaterialInstance.__PropertyOffset_ScalarParameterValues, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ScalarParameterValues.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17002E19 RID: 11801
-		// (get) Token: 0x0600C69D RID: 50845 RVA: 0x0011FCB0 File Offset: 0x0011DEB0
-		// (set) Token: 0x0600C69E RID: 50846 RVA: 0x0011FCE9 File Offset: 0x0011DEE9
-		public TArray<FVectorParameterValue> VectorParameterValues
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FVectorParameterValue> result;
-				if ((result = this._VectorParameterValues) == null)
-				{
-					result = (this._VectorParameterValues = new TArray<FVectorParameterValue>(base.NativePtr + (IntPtr)UMaterialInstance.__PropertyOffset_VectorParameterValues, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.VectorParameterValues.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17002E1A RID: 11802
-		// (get) Token: 0x0600C69F RID: 50847 RVA: 0x0011FCF8 File Offset: 0x0011DEF8
-		// (set) Token: 0x0600C6A0 RID: 50848 RVA: 0x0011FD31 File Offset: 0x0011DF31
+		// Token: 0x170006AF RID: 1711
+		// (get) Token: 0x060030FA RID: 12538 RVA: 0x00045BF0 File Offset: 0x00043DF0
+		// (set) Token: 0x060030FB RID: 12539 RVA: 0x00045C29 File Offset: 0x00043E29
 		public TArray<FTextureParameterValue> TextureParameterValues
 		{
 			get
@@ -169,135 +127,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002E1B RID: 11803
-		// (get) Token: 0x0600C6A1 RID: 50849 RVA: 0x0011FD40 File Offset: 0x0011DF40
-		// (set) Token: 0x0600C6A2 RID: 50850 RVA: 0x0011FD79 File Offset: 0x0011DF79
-		public TArray<FRuntimeVirtualTextureParameterValue> RuntimeVirtualTextureParameterValues
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FRuntimeVirtualTextureParameterValue> result;
-				if ((result = this._RuntimeVirtualTextureParameterValues) == null)
-				{
-					result = (this._RuntimeVirtualTextureParameterValues = new TArray<FRuntimeVirtualTextureParameterValue>(base.NativePtr + (IntPtr)UMaterialInstance.__PropertyOffset_RuntimeVirtualTextureParameterValues, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.RuntimeVirtualTextureParameterValues.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17002E1C RID: 11804
-		// (get) Token: 0x0600C6A3 RID: 50851 RVA: 0x0011FD88 File Offset: 0x0011DF88
-		// (set) Token: 0x0600C6A4 RID: 50852 RVA: 0x0011FDC1 File Offset: 0x0011DFC1
-		public TArray<FSparseVolumeTextureParameterValue> SparseVolumeTextureParameterValues
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FSparseVolumeTextureParameterValue> result;
-				if ((result = this._SparseVolumeTextureParameterValues) == null)
-				{
-					result = (this._SparseVolumeTextureParameterValues = new TArray<FSparseVolumeTextureParameterValue>(base.NativePtr + (IntPtr)UMaterialInstance.__PropertyOffset_SparseVolumeTextureParameterValues, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.SparseVolumeTextureParameterValues.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17002E1D RID: 11805
-		// (get) Token: 0x0600C6A5 RID: 50853 RVA: 0x0011FDD0 File Offset: 0x0011DFD0
-		// (set) Token: 0x0600C6A6 RID: 50854 RVA: 0x0011FE09 File Offset: 0x0011E009
-		public TArray<FFontParameterValue> FontParameterValues
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FFontParameterValue> result;
-				if ((result = this._FontParameterValues) == null)
-				{
-					result = (this._FontParameterValues = new TArray<FFontParameterValue>(base.NativePtr + (IntPtr)UMaterialInstance.__PropertyOffset_FontParameterValues, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.FontParameterValues.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17002E1E RID: 11806
-		// (get) Token: 0x0600C6A7 RID: 50855 RVA: 0x0011FE18 File Offset: 0x0011E018
-		// (set) Token: 0x0600C6A8 RID: 50856 RVA: 0x0011FE51 File Offset: 0x0011E051
-		public FMaterialInstanceBasePropertyOverrides BasePropertyOverrides
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMaterialInstanceBasePropertyOverrides result;
-				if ((result = this._BasePropertyOverrides) == null)
-				{
-					result = (this._BasePropertyOverrides = new FMaterialInstanceBasePropertyOverrides(base.NativePtr + (IntPtr)UMaterialInstance.__PropertyOffset_BasePropertyOverrides, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMaterialInstanceBasePropertyOverrides.StaticStruct(), base.NativePtr + (IntPtr)UMaterialInstance.__PropertyOffset_BasePropertyOverrides, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17002E1F RID: 11807
-		// (get) Token: 0x0600C6A9 RID: 50857 RVA: 0x0011FE74 File Offset: 0x0011E074
-		// (set) Token: 0x0600C6AA RID: 50858 RVA: 0x0011FEAD File Offset: 0x0011E0AD
-		public FStaticParameterSet StaticParameters
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FStaticParameterSet result;
-				if ((result = this._StaticParameters) == null)
-				{
-					result = (this._StaticParameters = new FStaticParameterSet(base.NativePtr + (IntPtr)UMaterialInstance.__PropertyOffset_StaticParameters, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FStaticParameterSet.StaticStruct(), base.NativePtr + (IntPtr)UMaterialInstance.__PropertyOffset_StaticParameters, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17002E20 RID: 11808
-		// (get) Token: 0x0600C6AB RID: 50859 RVA: 0x0011FED0 File Offset: 0x0011E0D0
-		// (set) Token: 0x0600C6AC RID: 50860 RVA: 0x0011FF09 File Offset: 0x0011E109
-		public FMaterialCachedParameters CachedLayerParameters
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMaterialCachedParameters result;
-				if ((result = this._CachedLayerParameters) == null)
-				{
-					result = (this._CachedLayerParameters = new FMaterialCachedParameters(base.NativePtr + (IntPtr)UMaterialInstance.__PropertyOffset_CachedLayerParameters, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMaterialCachedParameters.StaticStruct(), base.NativePtr + (IntPtr)UMaterialInstance.__PropertyOffset_CachedLayerParameters, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17002E21 RID: 11809
-		// (get) Token: 0x0600C6AD RID: 50861 RVA: 0x0011FF2A File Offset: 0x0011E12A
-		// (set) Token: 0x0600C6AE RID: 50862 RVA: 0x0011FF3A File Offset: 0x0011E13A
+		// Token: 0x170006B0 RID: 1712
+		// (get) Token: 0x060030FC RID: 12540 RVA: 0x00045C37 File Offset: 0x00043E37
+		// (set) Token: 0x060030FD RID: 12541 RVA: 0x00045C47 File Offset: 0x00043E47
 		public unsafe int SubMaterialCount
 		{
 			get
@@ -310,9 +142,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002E22 RID: 11810
-		// (get) Token: 0x0600C6AF RID: 50863 RVA: 0x0011FF4B File Offset: 0x0011E14B
-		// (set) Token: 0x0600C6B0 RID: 50864 RVA: 0x0011FF5F File Offset: 0x0011E15F
+		// Token: 0x170006B1 RID: 1713
+		// (get) Token: 0x060030FE RID: 12542 RVA: 0x00045C58 File Offset: 0x00043E58
+		// (set) Token: 0x060030FF RID: 12543 RVA: 0x00045C6C File Offset: 0x00043E6C
 		public unsafe FIntPoint CombineAtlasSize
 		{
 			get
@@ -325,9 +157,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002E23 RID: 11811
-		// (get) Token: 0x0600C6B1 RID: 50865 RVA: 0x0011FF74 File Offset: 0x0011E174
-		// (set) Token: 0x0600C6B2 RID: 50866 RVA: 0x0011FFAD File Offset: 0x0011E1AD
+		// Token: 0x170006B2 RID: 1714
+		// (get) Token: 0x06003100 RID: 12544 RVA: 0x00045C84 File Offset: 0x00043E84
+		// (set) Token: 0x06003101 RID: 12545 RVA: 0x00045CBD File Offset: 0x00043EBD
 		public TArray<int> ScalarParameterOffsets
 		{
 			get
@@ -346,9 +178,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002E24 RID: 11812
-		// (get) Token: 0x0600C6B3 RID: 50867 RVA: 0x0011FFBC File Offset: 0x0011E1BC
-		// (set) Token: 0x0600C6B4 RID: 50868 RVA: 0x0011FFF5 File Offset: 0x0011E1F5
+		// Token: 0x170006B3 RID: 1715
+		// (get) Token: 0x06003102 RID: 12546 RVA: 0x00045CCC File Offset: 0x00043ECC
+		// (set) Token: 0x06003103 RID: 12547 RVA: 0x00045D05 File Offset: 0x00043F05
 		public TArray<int> VectorParameterOffsets
 		{
 			get
@@ -367,9 +199,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002E25 RID: 11813
-		// (get) Token: 0x0600C6B5 RID: 50869 RVA: 0x00120004 File Offset: 0x0011E204
-		// (set) Token: 0x0600C6B6 RID: 50870 RVA: 0x0012003D File Offset: 0x0011E23D
+		// Token: 0x170006B4 RID: 1716
+		// (get) Token: 0x06003104 RID: 12548 RVA: 0x00045D14 File Offset: 0x00043F14
+		// (set) Token: 0x06003105 RID: 12549 RVA: 0x00045D4D File Offset: 0x00043F4D
 		public TArray<FVector4> UVScaleOffsetInfos
 		{
 			get
@@ -388,9 +220,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002E26 RID: 11814
-		// (get) Token: 0x0600C6B7 RID: 50871 RVA: 0x0012004B File Offset: 0x0011E24B
-		// (set) Token: 0x0600C6B8 RID: 50872 RVA: 0x0012005B File Offset: 0x0011E25B
+		// Token: 0x170006B5 RID: 1717
+		// (get) Token: 0x06003106 RID: 12550 RVA: 0x00045D5B File Offset: 0x00043F5B
+		// (set) Token: 0x06003107 RID: 12551 RVA: 0x00045D6B File Offset: 0x00043F6B
 		public unsafe uint UsageFlagWarnings
 		{
 			get
@@ -403,9 +235,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002E27 RID: 11815
-		// (get) Token: 0x0600C6B9 RID: 50873 RVA: 0x0012006C File Offset: 0x0011E26C
-		// (set) Token: 0x0600C6BA RID: 50874 RVA: 0x001200A5 File Offset: 0x0011E2A5
+		// Token: 0x170006B6 RID: 1718
+		// (get) Token: 0x06003108 RID: 12552 RVA: 0x00045D7C File Offset: 0x00043F7C
+		// (set) Token: 0x06003109 RID: 12553 RVA: 0x00045DB5 File Offset: 0x00043FB5
 		public TArray<UObject> CachedReferencedTextures
 		{
 			get
@@ -424,38 +256,38 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600C6BB RID: 50875 RVA: 0x001200B3 File Offset: 0x0011E2B3
+		// Token: 0x0600310A RID: 12554 RVA: 0x00045DC3 File Offset: 0x00043FC3
 		static UMaterialInstance()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.MaterialInstance");
 		}
 
-		// Token: 0x0600C6BC RID: 50876 RVA: 0x001200C4 File Offset: 0x0011E2C4
+		// Token: 0x0600310B RID: 12555 RVA: 0x00045DD4 File Offset: 0x00043FD4
 		protected UMaterialInstance() : this(BuiltinUtils.AllocNativeUObject(UMaterialInstance.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600C6BD RID: 50877 RVA: 0x001200EC File Offset: 0x0011E2EC
+		// Token: 0x0600310C RID: 12556 RVA: 0x00045DFC File Offset: 0x00043FFC
 		protected UMaterialInstance(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04006A4F RID: 27215
+		// Token: 0x040010B5 RID: 4277
 		public new const string __ObjectPath = "/Script/Engine.MaterialInstance";
 
-		// Token: 0x04006A50 RID: 27216
+		// Token: 0x040010B6 RID: 4278
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04006A51 RID: 27217
+		// Token: 0x040010B7 RID: 4279
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04006A52 RID: 27218
+		// Token: 0x040010B8 RID: 4280
 		internal static int __PropertyOffset_PhysMaterial;
 
-		// Token: 0x04006A53 RID: 27219
+		// Token: 0x040010B9 RID: 4281
 		internal static int __PropertyOffset_PhysicalMaterialMap;
 
-		// Token: 0x04006A54 RID: 27220
+		// Token: 0x040010BA RID: 4282
 		[Nullable(new byte[]
 		{
 			2,
@@ -463,47 +295,25 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<UPhysicalMaterial> _PhysicalMaterialMap;
 
-		// Token: 0x04006A55 RID: 27221
+		// Token: 0x040010BB RID: 4283
 		internal static int __PropertyOffset_Parent;
 
-		// Token: 0x04006A56 RID: 27222
+		// Token: 0x040010BC RID: 4284
 		internal static int __PropertyOffset_bHasStaticPermutationResource;
 
-		// Token: 0x04006A57 RID: 27223
+		// Token: 0x040010BD RID: 4285
 		internal static byte __PropertyMask_bHasStaticPermutationResource;
 
-		// Token: 0x04006A58 RID: 27224
+		// Token: 0x040010BE RID: 4286
 		internal static int __PropertyOffset_bOverrideSubsurfaceProfile;
 
-		// Token: 0x04006A59 RID: 27225
+		// Token: 0x040010BF RID: 4287
 		internal static byte __PropertyMask_bOverrideSubsurfaceProfile;
 
-		// Token: 0x04006A5A RID: 27226
-		internal static int __PropertyOffset_ScalarParameterValues;
-
-		// Token: 0x04006A5B RID: 27227
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FScalarParameterValue> _ScalarParameterValues;
-
-		// Token: 0x04006A5C RID: 27228
-		internal static int __PropertyOffset_VectorParameterValues;
-
-		// Token: 0x04006A5D RID: 27229
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FVectorParameterValue> _VectorParameterValues;
-
-		// Token: 0x04006A5E RID: 27230
+		// Token: 0x040010C0 RID: 4288
 		internal static int __PropertyOffset_TextureParameterValues;
 
-		// Token: 0x04006A5F RID: 27231
+		// Token: 0x040010C1 RID: 4289
 		[Nullable(new byte[]
 		{
 			2,
@@ -511,94 +321,40 @@ namespace UnrealEngine
 		})]
 		private TArray<FTextureParameterValue> _TextureParameterValues;
 
-		// Token: 0x04006A60 RID: 27232
-		internal static int __PropertyOffset_RuntimeVirtualTextureParameterValues;
-
-		// Token: 0x04006A61 RID: 27233
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FRuntimeVirtualTextureParameterValue> _RuntimeVirtualTextureParameterValues;
-
-		// Token: 0x04006A62 RID: 27234
-		internal static int __PropertyOffset_SparseVolumeTextureParameterValues;
-
-		// Token: 0x04006A63 RID: 27235
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FSparseVolumeTextureParameterValue> _SparseVolumeTextureParameterValues;
-
-		// Token: 0x04006A64 RID: 27236
-		internal static int __PropertyOffset_FontParameterValues;
-
-		// Token: 0x04006A65 RID: 27237
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FFontParameterValue> _FontParameterValues;
-
-		// Token: 0x04006A66 RID: 27238
-		internal static int __PropertyOffset_BasePropertyOverrides;
-
-		// Token: 0x04006A67 RID: 27239
-		[Nullable(2)]
-		private FMaterialInstanceBasePropertyOverrides _BasePropertyOverrides;
-
-		// Token: 0x04006A68 RID: 27240
-		internal static int __PropertyOffset_StaticParameters;
-
-		// Token: 0x04006A69 RID: 27241
-		[Nullable(2)]
-		private FStaticParameterSet _StaticParameters;
-
-		// Token: 0x04006A6A RID: 27242
-		internal static int __PropertyOffset_CachedLayerParameters;
-
-		// Token: 0x04006A6B RID: 27243
-		[Nullable(2)]
-		private FMaterialCachedParameters _CachedLayerParameters;
-
-		// Token: 0x04006A6C RID: 27244
+		// Token: 0x040010C2 RID: 4290
 		internal static int __PropertyOffset_SubMaterialCount;
 
-		// Token: 0x04006A6D RID: 27245
+		// Token: 0x040010C3 RID: 4291
 		internal static int __PropertyOffset_CombineAtlasSize;
 
-		// Token: 0x04006A6E RID: 27246
+		// Token: 0x040010C4 RID: 4292
 		internal static int __PropertyOffset_ScalarParameterOffsets;
 
-		// Token: 0x04006A6F RID: 27247
+		// Token: 0x040010C5 RID: 4293
 		[Nullable(2)]
 		private TArray<int> _ScalarParameterOffsets;
 
-		// Token: 0x04006A70 RID: 27248
+		// Token: 0x040010C6 RID: 4294
 		internal static int __PropertyOffset_VectorParameterOffsets;
 
-		// Token: 0x04006A71 RID: 27249
+		// Token: 0x040010C7 RID: 4295
 		[Nullable(2)]
 		private TArray<int> _VectorParameterOffsets;
 
-		// Token: 0x04006A72 RID: 27250
+		// Token: 0x040010C8 RID: 4296
 		internal static int __PropertyOffset_UVScaleOffsetInfos;
 
-		// Token: 0x04006A73 RID: 27251
+		// Token: 0x040010C9 RID: 4297
 		[Nullable(2)]
 		private TArray<FVector4> _UVScaleOffsetInfos;
 
-		// Token: 0x04006A74 RID: 27252
+		// Token: 0x040010CA RID: 4298
 		internal static int __PropertyOffset_UsageFlagWarnings;
 
-		// Token: 0x04006A75 RID: 27253
+		// Token: 0x040010CB RID: 4299
 		internal static int __PropertyOffset_CachedReferencedTextures;
 
-		// Token: 0x04006A76 RID: 27254
+		// Token: 0x040010CC RID: 4300
 		[Nullable(new byte[]
 		{
 			2,

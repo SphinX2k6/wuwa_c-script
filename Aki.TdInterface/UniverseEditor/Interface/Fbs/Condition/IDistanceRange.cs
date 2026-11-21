@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BF8 RID: 19448
+	// Token: 0x020050E5 RID: 20709
 	public struct IDistanceRange : IFlatbufferObject
 	{
-		// Token: 0x17008D44 RID: 36164
-		// (get) Token: 0x0601ECAB RID: 126123 RVA: 0x00450309 File Offset: 0x0044E509
+		// Token: 0x17009468 RID: 37992
+		// (get) Token: 0x06020891 RID: 133265 RVA: 0x00483971 File Offset: 0x00481B71
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601ECAC RID: 126124 RVA: 0x00450316 File Offset: 0x0044E516
+		// Token: 0x06020892 RID: 133266 RVA: 0x0048397E File Offset: 0x00481B7E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601ECAD RID: 126125 RVA: 0x00450320 File Offset: 0x0044E520
+		// Token: 0x06020893 RID: 133267 RVA: 0x00483988 File Offset: 0x00481B88
 		public static IDistanceRange GetRootAsIDistanceRange(ByteBuffer _bb)
 		{
 			return IDistanceRange.GetRootAsIDistanceRange(_bb, default(IDistanceRange));
 		}
 
-		// Token: 0x0601ECAE RID: 126126 RVA: 0x0045033C File Offset: 0x0044E53C
+		// Token: 0x06020894 RID: 133268 RVA: 0x004839A4 File Offset: 0x00481BA4
 		public static IDistanceRange GetRootAsIDistanceRange(ByteBuffer _bb, IDistanceRange obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601ECAF RID: 126127 RVA: 0x00450359 File Offset: 0x0044E559
+		// Token: 0x06020895 RID: 133269 RVA: 0x004839C1 File Offset: 0x00481BC1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601ECB0 RID: 126128 RVA: 0x00450368 File Offset: 0x0044E568
+		// Token: 0x06020896 RID: 133270 RVA: 0x004839D0 File Offset: 0x00481BD0
 		public IDistanceRange __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008D45 RID: 36165
-		// (get) Token: 0x0601ECB1 RID: 126129 RVA: 0x00450378 File Offset: 0x0044E578
+		// Token: 0x17009469 RID: 37993
+		// (get) Token: 0x06020897 RID: 133271 RVA: 0x004839E0 File Offset: 0x00481BE0
 		public float Min
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008D46 RID: 36166
-		// (get) Token: 0x0601ECB2 RID: 126130 RVA: 0x004503B8 File Offset: 0x0044E5B8
+		// Token: 0x1700946A RID: 37994
+		// (get) Token: 0x06020898 RID: 133272 RVA: 0x00483A20 File Offset: 0x00481C20
 		public float Max
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008D47 RID: 36167
-		// (get) Token: 0x0601ECB3 RID: 126131 RVA: 0x004503F8 File Offset: 0x0044E5F8
+		// Token: 0x1700946B RID: 37995
+		// (get) Token: 0x06020899 RID: 133273 RVA: 0x00483A60 File Offset: 0x00481C60
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601ECB4 RID: 126132 RVA: 0x00450434 File Offset: 0x0044E634
+		// Token: 0x0602089A RID: 133274 RVA: 0x00483A9C File Offset: 0x00481C9C
 		public static Offset<IDistanceRange> CreateIDistanceRange(FlatBufferBuilder builder, float Min = 0f, float Max = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IDistanceRange.EndIDistanceRange(builder);
 		}
 
-		// Token: 0x0601ECB5 RID: 126133 RVA: 0x00450458 File Offset: 0x0044E658
+		// Token: 0x0602089B RID: 133275 RVA: 0x00483AC0 File Offset: 0x00481CC0
 		public static void StartIDistanceRange(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601ECB6 RID: 126134 RVA: 0x00450461 File Offset: 0x0044E661
+		// Token: 0x0602089C RID: 133276 RVA: 0x00483AC9 File Offset: 0x00481CC9
 		public static void AddMin(FlatBufferBuilder builder, float min)
 		{
 			builder.AddFloat(0, min, 0.0);
 		}
 
-		// Token: 0x0601ECB7 RID: 126135 RVA: 0x00450474 File Offset: 0x0044E674
+		// Token: 0x0602089D RID: 133277 RVA: 0x00483ADC File Offset: 0x00481CDC
 		public static void AddMax(FlatBufferBuilder builder, float max)
 		{
 			builder.AddFloat(1, max, 0.0);
 		}
 
-		// Token: 0x0601ECB8 RID: 126136 RVA: 0x00450487 File Offset: 0x0044E687
+		// Token: 0x0602089E RID: 133278 RVA: 0x00483AEF File Offset: 0x00481CEF
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0601ECB9 RID: 126137 RVA: 0x00450492 File Offset: 0x0044E692
+		// Token: 0x0602089F RID: 133279 RVA: 0x00483AFA File Offset: 0x00481CFA
 		public static Offset<IDistanceRange> EndIDistanceRange(FlatBufferBuilder builder)
 		{
 			return new Offset<IDistanceRange>(builder.EndTable());
 		}
 
-		// Token: 0x0601ECBA RID: 126138 RVA: 0x004504A0 File Offset: 0x0044E6A0
+		// Token: 0x060208A0 RID: 133280 RVA: 0x00483B08 File Offset: 0x00481D08
 		public IDistanceRangeT UnPack()
 		{
 			IDistanceRangeT distanceRangeT = new IDistanceRangeT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return distanceRangeT;
 		}
 
-		// Token: 0x0601ECBB RID: 126139 RVA: 0x004504BB File Offset: 0x0044E6BB
+		// Token: 0x060208A1 RID: 133281 RVA: 0x00483B23 File Offset: 0x00481D23
 		public void UnPackTo(IDistanceRangeT _o)
 		{
 			_o.Min = this.Min;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601ECBC RID: 126140 RVA: 0x004504E4 File Offset: 0x0044E6E4
+		// Token: 0x060208A2 RID: 133282 RVA: 0x00483B4C File Offset: 0x00481D4C
 		public static Offset<IDistanceRange> Pack(FlatBufferBuilder builder, IDistanceRangeT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IDistanceRange.CreateIDistanceRange(builder, _o.Min, _o.Max, _o.NullMask);
 		}
 
-		// Token: 0x0400D584 RID: 54660
+		// Token: 0x0400E09B RID: 57499
 		private Table __p;
 	}
 }

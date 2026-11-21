@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006845 RID: 26693
+	// Token: 0x02006ECB RID: 28363
 	public static class IFocusOnMapMarkVerify
 	{
-		// Token: 0x0602E8AC RID: 190636 RVA: 0x00659A0A File Offset: 0x00657C0A
+		// Token: 0x06031134 RID: 201012 RVA: 0x006A794A File Offset: 0x006A5B4A
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			return verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyTableEnd(tablePos);

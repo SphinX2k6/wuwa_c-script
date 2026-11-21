@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002416 RID: 9238
+	// Token: 0x020026B5 RID: 9909
 	public class EShowTalkCameraMotionTypeJsonConverter : JsonConverter<EShowTalkCameraMotionType>
 	{
-		// Token: 0x0600C8E3 RID: 51427 RVA: 0x001D639C File Offset: 0x001D459C
+		// Token: 0x0600D58A RID: 54666 RVA: 0x001EFF98 File Offset: 0x001EE198
 		public override EShowTalkCameraMotionType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EShowTalkCameraMotionTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C8E4 RID: 51428 RVA: 0x001D63C0 File Offset: 0x001D45C0
+		// Token: 0x0600D58B RID: 54667 RVA: 0x001EFFBC File Offset: 0x001EE1BC
 		public override void Write(Utf8JsonWriter writer, EShowTalkCameraMotionType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

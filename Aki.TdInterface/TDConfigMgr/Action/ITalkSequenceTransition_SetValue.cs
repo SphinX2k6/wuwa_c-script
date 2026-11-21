@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F89 RID: 8073
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021C6 RID: 8646
 	public class ITalkSequenceTransition_SetValue
 	{
-		// Token: 0x04006B5D RID: 27485
+		// Token: 0x0400714B RID: 29003
 		public string OptionText;
 
-		// Token: 0x04006B5E RID: 27486
+		// Token: 0x0400714C RID: 29004
 		public string OptionTextKey;
 
-		// Token: 0x04006B5F RID: 27487
+		// Token: 0x0400714D RID: 29005
 		public int NextSequenceIndex;
 	}
 }

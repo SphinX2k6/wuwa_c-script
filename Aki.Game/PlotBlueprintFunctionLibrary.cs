@@ -6,6 +6,7 @@ using AkiClient.Game.Aki.Data.Sequence.Struct;
 using AkiClient.Game.Aki.Sequence.Manager;
 using CSharpScript.Game.LevelGamePlay.GravityFlip;
 using CSharpScript.Game.LevelGamePlay.ItemInspect;
+using CSharpScript.Game.LevelGamePlay.PianoGameplay;
 using CSharpScript.Game.Module.Plot;
 using CSharpScript.Game.Module.Plot.Flow;
 using CSharpScript.Game.Module.Plot.PlotView;
@@ -19,12 +20,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002973 RID: 10611
+// Token: 0x02001EEE RID: 7918
 [UClass("/Game/Aki/TypeScript/Game/Module/Sequence/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/Sequence/PlotBlueprintFunctionLibrary.PlotBlueprintFunctionLibrary_C")]
 public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06015EDC RID: 89820 RVA: 0x005880B0 File Offset: 0x005862B0
+	// Token: 0x060138E0 RID: 80096 RVA: 0x005B30B4 File Offset: 0x005B12B4
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsInSequence()
 	{
@@ -37,32 +38,32 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return false;
 	}
 
-	// Token: 0x06015EDD RID: 89821 RVA: 0x0058810A File Offset: 0x0058630A
+	// Token: 0x060138E1 RID: 80097 RVA: 0x005B310E File Offset: 0x005B130E
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SkipCurrentSequence()
 	{
 	}
 
-	// Token: 0x06015EDE RID: 89822 RVA: 0x0058810C File Offset: 0x0058630C
+	// Token: 0x060138E2 RID: 80098 RVA: 0x005B3110 File Offset: 0x005B1310
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void PauseSequence()
 	{
 	}
 
-	// Token: 0x06015EDF RID: 89823 RVA: 0x0058810E File Offset: 0x0058630E
+	// Token: 0x060138E3 RID: 80099 RVA: 0x005B3112 File Offset: 0x005B1312
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ResumeSequence()
 	{
 	}
 
-	// Token: 0x06015EE0 RID: 89824 RVA: 0x00588110 File Offset: 0x00586310
+	// Token: 0x060138E4 RID: 80100 RVA: 0x005B3114 File Offset: 0x005B1314
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void UseEnterMoveMode(AActor inCharacter)
 	{
 	}
 
-	// Token: 0x06015EE1 RID: 89825 RVA: 0x00588114 File Offset: 0x00586314
+	// Token: 0x060138E5 RID: 80101 RVA: 0x005B3118 File Offset: 0x005B1318
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void StartPlotTs(string inRes)
@@ -75,35 +76,35 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		FlowController.Instance.StartFlowByRes(inRes);
 	}
 
-	// Token: 0x06015EE2 RID: 89826 RVA: 0x0058816C File Offset: 0x0058636C
+	// Token: 0x060138E6 RID: 80102 RVA: 0x005B3170 File Offset: 0x005B1370
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsInPerformingPlot()
 	{
 		return PlotModel.Instance != null && (PlotModel.Instance.IsInInteraction || (PlotModel.Instance.IsInPlot && PlotModel.Instance.PlotConfig.PlotLevel.GetValueOrDefault() != EPlotLevel.LevelD));
 	}
 
-	// Token: 0x06015EE3 RID: 89827 RVA: 0x005881B8 File Offset: 0x005863B8
+	// Token: 0x060138E7 RID: 80103 RVA: 0x005B31BC File Offset: 0x005B13BC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void TriggerBlackSequence()
 	{
 		PlotController.Instance.TriggerBlackSequence();
 	}
 
-	// Token: 0x06015EE4 RID: 89828 RVA: 0x005881C4 File Offset: 0x005863C4
+	// Token: 0x060138E8 RID: 80104 RVA: 0x005B31C8 File Offset: 0x005B13C8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ChangePlotWeather(int weatherId, bool isInherit, float tweenTime)
 	{
 		PlotController.Instance.ChangeWeather(weatherId, isInherit, tweenTime);
 	}
 
-	// Token: 0x06015EE5 RID: 89829 RVA: 0x005881D3 File Offset: 0x005863D3
+	// Token: 0x060138E9 RID: 80105 RVA: 0x005B31D7 File Offset: 0x005B13D7
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ChangePlotTimeOfDay(bool isInherit, int startSecond, int endSecond, int tweenFrame)
 	{
 		PlotController.Instance.ChangePlotTimeOfDay(isInherit, startSecond, endSecond, tweenFrame / 30);
 	}
 
-	// Token: 0x06015EE6 RID: 89830 RVA: 0x005881E6 File Offset: 0x005863E6
+	// Token: 0x060138EA RID: 80106 RVA: 0x005B31EA File Offset: 0x005B13EA
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ExecuteSequenceEvents(string key)
@@ -111,7 +112,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		SequenceController.Instance.RunSequenceFrameEvents(key);
 	}
 
-	// Token: 0x06015EE7 RID: 89831 RVA: 0x005881F4 File Offset: 0x005863F4
+	// Token: 0x060138EB RID: 80107 RVA: 0x005B31F8 File Offset: 0x005B13F8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static void ExecuteEntitySequenceEvents(string key, int entityId)
@@ -142,28 +143,28 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		component.ExecuteEvent(key);
 	}
 
-	// Token: 0x06015EE8 RID: 89832 RVA: 0x00588292 File Offset: 0x00586492
+	// Token: 0x060138EC RID: 80108 RVA: 0x005B3296 File Offset: 0x005B1496
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void TriggerCutChange()
 	{
 		SequenceController.Instance.TriggerCutChange();
 	}
 
-	// Token: 0x06015EE9 RID: 89833 RVA: 0x0058829E File Offset: 0x0058649E
+	// Token: 0x060138ED RID: 80109 RVA: 0x005B32A2 File Offset: 0x005B14A2
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void OpenChapterUi(int chapterState, int chapterId)
 	{
 		GeneralLogicTreeUtil.Instance.OpenChapterViewV2(chapterState, chapterId, true, null);
 	}
 
-	// Token: 0x06015EEA RID: 89834 RVA: 0x005882AE File Offset: 0x005864AE
+	// Token: 0x060138EE RID: 80110 RVA: 0x005B32B2 File Offset: 0x005B14B2
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ShowLogo(float time)
 	{
 		SequenceController.Instance.ShowLogo(time);
 	}
 
-	// Token: 0x06015EEB RID: 89835 RVA: 0x005882BC File Offset: 0x005864BC
+	// Token: 0x060138EF RID: 80111 RVA: 0x005B32C0 File Offset: 0x005B14C0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void OpenUiView(string maleAssetName, string femaleAssetName, string maleSpineName, string femaleSpineName, bool needLoop = true, bool useFullscreenAdaptAnchor = false)
@@ -181,7 +182,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		SequenceController.Instance.OpenUiView(maleAssetName, maleSpineName, needLoop, useFullscreenAdaptAnchor);
 	}
 
-	// Token: 0x06015EEC RID: 89836 RVA: 0x00588300 File Offset: 0x00586500
+	// Token: 0x060138F0 RID: 80112 RVA: 0x005B3304 File Offset: 0x005B1504
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void OpenUiViewInArray(string maleAssetName, string femaleAssetName, ref TArray<SpineThingsInfo> maleSpineArray, ref TArray<SpineThingsInfo> femaleSpineArray, bool useFullscreenAdaptAnchor = false)
@@ -201,7 +202,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		SequenceController.Instance.OpenUiViewForArray(maleAssetName, spineArray2, useFullscreenAdaptAnchor);
 	}
 
-	// Token: 0x06015EED RID: 89837 RVA: 0x00588343 File Offset: 0x00586543
+	// Token: 0x060138F1 RID: 80113 RVA: 0x005B3347 File Offset: 0x005B1547
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void PlayUiLevelSequence(string seqName)
@@ -209,14 +210,14 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		SequenceController.Instance.PlayUiLevelSequence(seqName);
 	}
 
-	// Token: 0x06015EEE RID: 89838 RVA: 0x00588350 File Offset: 0x00586550
+	// Token: 0x060138F2 RID: 80114 RVA: 0x005B3354 File Offset: 0x005B1554
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void CloseUiView()
 	{
 		SequenceController.Instance.CloseUiView();
 	}
 
-	// Token: 0x06015EEF RID: 89839 RVA: 0x0058835C File Offset: 0x0058655C
+	// Token: 0x060138F3 RID: 80115 RVA: 0x005B3360 File Offset: 0x005B1560
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void PlaySpineAnim(string spineName, bool needLoop = true)
@@ -224,7 +225,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		SequenceController.Instance.PlaySpineAnim(spineName, needLoop);
 	}
 
-	// Token: 0x06015EF0 RID: 89840 RVA: 0x0058836C File Offset: 0x0058656C
+	// Token: 0x060138F4 RID: 80116 RVA: 0x005B3370 File Offset: 0x005B1570
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void PlaySpineAnimForGender(string maleSpineName, string femaleSpineName, bool needLoop = true)
@@ -242,7 +243,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		SequenceController.Instance.PlaySpineAnim(maleSpineName, needLoop);
 	}
 
-	// Token: 0x06015EF1 RID: 89841 RVA: 0x005883A8 File Offset: 0x005865A8
+	// Token: 0x060138F5 RID: 80117 RVA: 0x005B33AC File Offset: 0x005B15AC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void PlaySpineAnimForGenderInArray(ref TArray<SpineThingsInfo> maleSpineArray, ref TArray<SpineThingsInfo> femaleSpineArray)
@@ -262,7 +263,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		SequenceController.Instance.PlaySpineAnimInArray(spineArray2);
 	}
 
-	// Token: 0x06015EF2 RID: 89842 RVA: 0x005883E5 File Offset: 0x005865E5
+	// Token: 0x060138F6 RID: 80118 RVA: 0x005B33E9 File Offset: 0x005B15E9
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void CloseSpineAnim(string spineName)
@@ -270,7 +271,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		SequenceController.Instance.CloseSpineAnim(spineName);
 	}
 
-	// Token: 0x06015EF3 RID: 89843 RVA: 0x005883F4 File Offset: 0x005865F4
+	// Token: 0x060138F7 RID: 80119 RVA: 0x005B33F8 File Offset: 0x005B15F8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void CloseSpineAnimInArray(ref TArray<string> spineArray)
@@ -279,7 +280,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		SequenceController.Instance.CloseSpineAnimInArray(spineArray2);
 	}
 
-	// Token: 0x06015EF4 RID: 89844 RVA: 0x00588410 File Offset: 0x00586610
+	// Token: 0x060138F8 RID: 80120 RVA: 0x005B3414 File Offset: 0x005B1614
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void AdditionSeqPlay(ULevelSequence levelSequence, FName componentName, FName boneName, float frame)
@@ -292,14 +293,14 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		SequenceController.Instance.AdditionSeqPlay(levelSequence, componentName, boneName, (int)frame);
 	}
 
-	// Token: 0x06015EF5 RID: 89845 RVA: 0x0058844C File Offset: 0x0058664C
+	// Token: 0x060138F9 RID: 80121 RVA: 0x005B3450 File Offset: 0x005B1650
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void AdditionSeqEnd()
 	{
 		SequenceController.Instance.AdditionSeqEnd();
 	}
 
-	// Token: 0x06015EF6 RID: 89846 RVA: 0x00588458 File Offset: 0x00586658
+	// Token: 0x060138FA RID: 80122 RVA: 0x005B345C File Offset: 0x005B165C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void OpenMultiTextCaption(string textId, float duration)
@@ -336,7 +337,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		});
 	}
 
-	// Token: 0x06015EF7 RID: 89847 RVA: 0x00588500 File Offset: 0x00586700
+	// Token: 0x060138FB RID: 80123 RVA: 0x005B3504 File Offset: 0x005B1704
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void OpenArtWord2dView(string sequenceName)
@@ -353,7 +354,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		UiManager.Instance.OpenViewByPlot(EUiViewName.PlotArtWord2dView, param, null);
 	}
 
-	// Token: 0x06015EF8 RID: 89848 RVA: 0x00588550 File Offset: 0x00586750
+	// Token: 0x060138FC RID: 80124 RVA: 0x005B3554 File Offset: 0x005B1754
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SwitchArtWord2dMark()
 	{
@@ -366,35 +367,35 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		plotArtWord2dView.SwitchToNextMark();
 	}
 
-	// Token: 0x06015EF9 RID: 89849 RVA: 0x00588598 File Offset: 0x00586798
+	// Token: 0x060138FD RID: 80125 RVA: 0x005B359C File Offset: 0x005B179C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void CloseArtWord2dView()
 	{
 		UiManager.Instance.CloseView(EUiViewName.PlotArtWord2dView, null);
 	}
 
-	// Token: 0x06015EFA RID: 89850 RVA: 0x005885AA File Offset: 0x005867AA
+	// Token: 0x060138FE RID: 80126 RVA: 0x005B35AE File Offset: 0x005B17AE
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ShowNameInput()
 	{
 		CreateCharacterController.TriggerInputName();
 	}
 
-	// Token: 0x06015EFB RID: 89851 RVA: 0x005885B1 File Offset: 0x005867B1
+	// Token: 0x060138FF RID: 80127 RVA: 0x005B35B5 File Offset: 0x005B17B5
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void AddBurstEyeRenderingMaterial(bool isBoy)
 	{
 		CreateCharacterController.AddBurstEyeRenderingMaterial(isBoy);
 	}
 
-	// Token: 0x06015EFC RID: 89852 RVA: 0x005885B9 File Offset: 0x005867B9
+	// Token: 0x06013900 RID: 80128 RVA: 0x005B35BD File Offset: 0x005B17BD
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void RemoveBurstEyeRenderingMaterial(bool isBoy)
 	{
 		CreateCharacterController.RemoveBurstEyeRenderingMaterial(isBoy);
 	}
 
-	// Token: 0x06015EFD RID: 89853 RVA: 0x005885C1 File Offset: 0x005867C1
+	// Token: 0x06013901 RID: 80129 RVA: 0x005B35C5 File Offset: 0x005B17C5
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void AddInteractTagToInteractingGravityMachine()
 	{
@@ -406,7 +407,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		gravityFlipComp.AddInteractTag();
 	}
 
-	// Token: 0x06015EFE RID: 89854 RVA: 0x005885D7 File Offset: 0x005867D7
+	// Token: 0x06013902 RID: 80130 RVA: 0x005B35DB File Offset: 0x005B17DB
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void RemoveInteractTagFromInteractingGravityMachine()
 	{
@@ -418,7 +419,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		gravityFlipComp.RemoveInteractTag();
 	}
 
-	// Token: 0x06015EFF RID: 89855 RVA: 0x005885F0 File Offset: 0x005867F0
+	// Token: 0x06013903 RID: 80131 RVA: 0x005B35F4 File Offset: 0x005B17F4
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void TriggerTagToInteractingGravityMachine(FGameplayTag tag)
 	{
@@ -435,7 +436,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}
 	}
 
-	// Token: 0x06015F00 RID: 89856 RVA: 0x00588658 File Offset: 0x00586858
+	// Token: 0x06013904 RID: 80132 RVA: 0x005B365C File Offset: 0x005B185C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ShowBgIcon(bool bShow, UTexture2D texture, BP_KuroMasterSeqEvent_C obj)
@@ -447,7 +448,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}, null);
 	}
 
-	// Token: 0x06015F01 RID: 89857 RVA: 0x005886A4 File Offset: 0x005868A4
+	// Token: 0x06013905 RID: 80133 RVA: 0x005B36A8 File Offset: 0x005B18A8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void BindItemInspectActor(FMovieSceneObjectBindingID binding)
@@ -464,14 +465,14 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}
 	}
 
-	// Token: 0x06015F02 RID: 89858 RVA: 0x005886F7 File Offset: 0x005868F7
+	// Token: 0x06013906 RID: 80134 RVA: 0x005B36FB File Offset: 0x005B18FB
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void EnablePlotInteract(bool bEnable)
 	{
 		PlotController.Instance.PlotViewManager.EnableInteractPlot(bEnable, new bool?(false), "Blueprint");
 	}
 
-	// Token: 0x06015F03 RID: 89859 RVA: 0x00588714 File Offset: 0x00586914
+	// Token: 0x06013907 RID: 80135 RVA: 0x005B3718 File Offset: 0x005B1918
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void EnableCameraShake(bool bEnable, TSoftClassPtr<UMatineeCameraShake> cameraShakePtr)
@@ -479,14 +480,14 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		SequenceController.Instance.EnableCameraShake(bEnable, cameraShakePtr);
 	}
 
-	// Token: 0x06015F04 RID: 89860 RVA: 0x00588724 File Offset: 0x00586924
+	// Token: 0x06013908 RID: 80136 RVA: 0x005B3728 File Offset: 0x005B1928
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool NeedFlowAdaption()
 	{
 		return GameSettingsManager.Instance.GetCurrentValue(EFunction.FlowAdaptation, true, true) != null;
 	}
 
-	// Token: 0x06015F05 RID: 89861 RVA: 0x0058874A File Offset: 0x0058694A
+	// Token: 0x06013909 RID: 80137 RVA: 0x005B374E File Offset: 0x005B194E
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void OpenCaptionImage(string uiPrefabId, float duration, string uiStartAnimName, string uiEndAnimName)
@@ -498,7 +499,15 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}).Forget();
 	}
 
-	// Token: 0x06015F06 RID: 89862 RVA: 0x00588770 File Offset: 0x00586970
+	// Token: 0x0601390A RID: 80138 RVA: 0x005B3774 File Offset: 0x005B1974
+	[NullableContext(1)]
+	[UFunction(EFunctionFlags.FUNC_None)]
+	public static void ExecutePianoSequenceEvent(string key)
+	{
+		PianoGameplayController.Instance.ExecutePianoSequenceEvent(key);
+	}
+
+	// Token: 0x0601390B RID: 80139 RVA: 0x005B3781 File Offset: 0x005B1981
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (PlotBlueprintFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -508,113 +517,113 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return PlotBlueprintFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x06015F07 RID: 89863 RVA: 0x00588794 File Offset: 0x00586994
+	// Token: 0x0601390C RID: 80140 RVA: 0x005B37A8 File Offset: 0x005B19A8
 	public PlotBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(PlotBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06015F08 RID: 89864 RVA: 0x005887BC File Offset: 0x005869BC
+	// Token: 0x0601390D RID: 80141 RVA: 0x005B37D0 File Offset: 0x005B19D0
 	[NullableContext(1)]
 	public PlotBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(PlotBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06015F09 RID: 89865 RVA: 0x005887EF File Offset: 0x005869EF
+	// Token: 0x0601390E RID: 80142 RVA: 0x005B3803 File Offset: 0x005B1A03
 	protected PlotBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06015F0A RID: 89866 RVA: 0x005887F8 File Offset: 0x005869F8
+	// Token: 0x0601390F RID: 80143 RVA: 0x005B380C File Offset: 0x005B1A0C
 	protected unsafe static void __CPPCALL_IsInSequence_Implementation(PlotBlueprintFunctionLibrary.__IsInSequence_FunctionParams* __Params)
 	{
 		__Params->__Result = PlotBlueprintFunctionLibrary.IsInSequence();
 	}
 
-	// Token: 0x06015F0B RID: 89867 RVA: 0x00588805 File Offset: 0x00586A05
+	// Token: 0x06013910 RID: 80144 RVA: 0x005B3819 File Offset: 0x005B1A19
 	protected unsafe static void __CPPCALL_SkipCurrentSequence_Implementation(PlotBlueprintFunctionLibrary.__SkipCurrentSequence_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.SkipCurrentSequence();
 	}
 
-	// Token: 0x06015F0C RID: 89868 RVA: 0x0058880C File Offset: 0x00586A0C
+	// Token: 0x06013911 RID: 80145 RVA: 0x005B3820 File Offset: 0x005B1A20
 	protected unsafe static void __CPPCALL_PauseSequence_Implementation(PlotBlueprintFunctionLibrary.__PauseSequence_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.PauseSequence();
 	}
 
-	// Token: 0x06015F0D RID: 89869 RVA: 0x00588813 File Offset: 0x00586A13
+	// Token: 0x06013912 RID: 80146 RVA: 0x005B3827 File Offset: 0x005B1A27
 	protected unsafe static void __CPPCALL_ResumeSequence_Implementation(PlotBlueprintFunctionLibrary.__ResumeSequence_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.ResumeSequence();
 	}
 
-	// Token: 0x06015F0E RID: 89870 RVA: 0x0058881A File Offset: 0x00586A1A
+	// Token: 0x06013913 RID: 80147 RVA: 0x005B382E File Offset: 0x005B1A2E
 	protected unsafe static void __CPPCALL_UseEnterMoveMode_Implementation(PlotBlueprintFunctionLibrary.__UseEnterMoveMode_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.UseEnterMoveMode(BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->inCharacter));
 	}
 
-	// Token: 0x06015F0F RID: 89871 RVA: 0x0058882C File Offset: 0x00586A2C
+	// Token: 0x06013914 RID: 80148 RVA: 0x005B3840 File Offset: 0x005B1A40
 	protected unsafe static void __CPPCALL_StartPlotTs_Implementation(PlotBlueprintFunctionLibrary.__StartPlotTs_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.StartPlotTs(FString.ToString((void*)(&__Params->inRes)));
 	}
 
-	// Token: 0x06015F10 RID: 89872 RVA: 0x0058883F File Offset: 0x00586A3F
+	// Token: 0x06013915 RID: 80149 RVA: 0x005B3853 File Offset: 0x005B1A53
 	protected unsafe static void __CPPCALL_IsInPerformingPlot_Implementation(PlotBlueprintFunctionLibrary.__IsInPerformingPlot_FunctionParams* __Params)
 	{
 		__Params->__Result = PlotBlueprintFunctionLibrary.IsInPerformingPlot();
 	}
 
-	// Token: 0x06015F11 RID: 89873 RVA: 0x0058884C File Offset: 0x00586A4C
+	// Token: 0x06013916 RID: 80150 RVA: 0x005B3860 File Offset: 0x005B1A60
 	protected unsafe static void __CPPCALL_TriggerBlackSequence_Implementation(PlotBlueprintFunctionLibrary.__TriggerBlackSequence_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.TriggerBlackSequence();
 	}
 
-	// Token: 0x06015F12 RID: 89874 RVA: 0x00588853 File Offset: 0x00586A53
+	// Token: 0x06013917 RID: 80151 RVA: 0x005B3867 File Offset: 0x005B1A67
 	protected unsafe static void __CPPCALL_ChangePlotWeather_Implementation(PlotBlueprintFunctionLibrary.__ChangePlotWeather_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.ChangePlotWeather(__Params->weatherId, __Params->isInherit, __Params->tweenTime);
 	}
 
-	// Token: 0x06015F13 RID: 89875 RVA: 0x0058886C File Offset: 0x00586A6C
+	// Token: 0x06013918 RID: 80152 RVA: 0x005B3880 File Offset: 0x005B1A80
 	protected unsafe static void __CPPCALL_ChangePlotTimeOfDay_Implementation(PlotBlueprintFunctionLibrary.__ChangePlotTimeOfDay_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.ChangePlotTimeOfDay(__Params->isInherit, __Params->startSecond, __Params->endSecond, __Params->tweenFrame);
 	}
 
-	// Token: 0x06015F14 RID: 89876 RVA: 0x0058888B File Offset: 0x00586A8B
+	// Token: 0x06013919 RID: 80153 RVA: 0x005B389F File Offset: 0x005B1A9F
 	protected unsafe static void __CPPCALL_ExecuteSequenceEvents_Implementation(PlotBlueprintFunctionLibrary.__ExecuteSequenceEvents_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.ExecuteSequenceEvents(FString.ToString((void*)(&__Params->key)));
 	}
 
-	// Token: 0x06015F15 RID: 89877 RVA: 0x0058889E File Offset: 0x00586A9E
+	// Token: 0x0601391A RID: 80154 RVA: 0x005B38B2 File Offset: 0x005B1AB2
 	protected unsafe static void __CPPCALL_ExecuteEntitySequenceEvents_Implementation(PlotBlueprintFunctionLibrary.__ExecuteEntitySequenceEvents_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.ExecuteEntitySequenceEvents(FString.ToString((void*)(&__Params->key)), __Params->entityId);
 	}
 
-	// Token: 0x06015F16 RID: 89878 RVA: 0x005888B7 File Offset: 0x00586AB7
+	// Token: 0x0601391B RID: 80155 RVA: 0x005B38CB File Offset: 0x005B1ACB
 	protected unsafe static void __CPPCALL_TriggerCutChange_Implementation(PlotBlueprintFunctionLibrary.__TriggerCutChange_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.TriggerCutChange();
 	}
 
-	// Token: 0x06015F17 RID: 89879 RVA: 0x005888BE File Offset: 0x00586ABE
+	// Token: 0x0601391C RID: 80156 RVA: 0x005B38D2 File Offset: 0x005B1AD2
 	protected unsafe static void __CPPCALL_OpenChapterUi_Implementation(PlotBlueprintFunctionLibrary.__OpenChapterUi_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.OpenChapterUi(__Params->chapterState, __Params->chapterId);
 	}
 
-	// Token: 0x06015F18 RID: 89880 RVA: 0x005888D1 File Offset: 0x00586AD1
+	// Token: 0x0601391D RID: 80157 RVA: 0x005B38E5 File Offset: 0x005B1AE5
 	protected unsafe static void __CPPCALL_ShowLogo_Implementation(PlotBlueprintFunctionLibrary.__ShowLogo_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.ShowLogo(__Params->time);
 	}
 
-	// Token: 0x06015F19 RID: 89881 RVA: 0x005888E0 File Offset: 0x00586AE0
+	// Token: 0x0601391E RID: 80158 RVA: 0x005B38F4 File Offset: 0x005B1AF4
 	protected unsafe static void __CPPCALL_OpenUiView_Implementation(PlotBlueprintFunctionLibrary.__OpenUiView_FunctionParams* __Params)
 	{
 		string maleAssetName = FString.ToString((void*)(&__Params->maleAssetName));
@@ -624,7 +633,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		PlotBlueprintFunctionLibrary.OpenUiView(maleAssetName, femaleAssetName, maleSpineName, femaleSpineName, __Params->needLoop, __Params->useFullscreenAdaptAnchor);
 	}
 
-	// Token: 0x06015F1A RID: 89882 RVA: 0x00588934 File Offset: 0x00586B34
+	// Token: 0x0601391F RID: 80159 RVA: 0x005B3948 File Offset: 0x005B1B48
 	protected unsafe static void __CPPCALL_OpenUiViewInArray_Implementation(PlotBlueprintFunctionLibrary.__OpenUiViewInArray_FunctionParams* __Params)
 	{
 		string maleAssetName = FString.ToString((void*)(&__Params->maleAssetName));
@@ -642,25 +651,25 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}
 	}
 
-	// Token: 0x06015F1B RID: 89883 RVA: 0x005889BA File Offset: 0x00586BBA
+	// Token: 0x06013920 RID: 80160 RVA: 0x005B39CE File Offset: 0x005B1BCE
 	protected unsafe static void __CPPCALL_PlayUiLevelSequence_Implementation(PlotBlueprintFunctionLibrary.__PlayUiLevelSequence_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.PlayUiLevelSequence(FString.ToString((void*)(&__Params->seqName)));
 	}
 
-	// Token: 0x06015F1C RID: 89884 RVA: 0x005889CD File Offset: 0x00586BCD
+	// Token: 0x06013921 RID: 80161 RVA: 0x005B39E1 File Offset: 0x005B1BE1
 	protected unsafe static void __CPPCALL_CloseUiView_Implementation(PlotBlueprintFunctionLibrary.__CloseUiView_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.CloseUiView();
 	}
 
-	// Token: 0x06015F1D RID: 89885 RVA: 0x005889D4 File Offset: 0x00586BD4
+	// Token: 0x06013922 RID: 80162 RVA: 0x005B39E8 File Offset: 0x005B1BE8
 	protected unsafe static void __CPPCALL_PlaySpineAnim_Implementation(PlotBlueprintFunctionLibrary.__PlaySpineAnim_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.PlaySpineAnim(FString.ToString((void*)(&__Params->spineName)), __Params->needLoop);
 	}
 
-	// Token: 0x06015F1E RID: 89886 RVA: 0x005889F0 File Offset: 0x00586BF0
+	// Token: 0x06013923 RID: 80163 RVA: 0x005B3A04 File Offset: 0x005B1C04
 	protected unsafe static void __CPPCALL_PlaySpineAnimForGender_Implementation(PlotBlueprintFunctionLibrary.__PlaySpineAnimForGender_FunctionParams* __Params)
 	{
 		string maleSpineName = FString.ToString((void*)(&__Params->maleSpineName));
@@ -668,7 +677,7 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		PlotBlueprintFunctionLibrary.PlaySpineAnimForGender(maleSpineName, femaleSpineName, __Params->needLoop);
 	}
 
-	// Token: 0x06015F1F RID: 89887 RVA: 0x00588A24 File Offset: 0x00586C24
+	// Token: 0x06013924 RID: 80164 RVA: 0x005B3A38 File Offset: 0x005B1C38
 	protected unsafe static void __CPPCALL_PlaySpineAnimForGenderInArray_Implementation(PlotBlueprintFunctionLibrary.__PlaySpineAnimForGenderInArray_FunctionParams* __Params)
 	{
 		TArray<SpineThingsInfo> tarray = new TArray<SpineThingsInfo>(&__Params->maleSpineArray, true, true);
@@ -684,13 +693,13 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}
 	}
 
-	// Token: 0x06015F20 RID: 89888 RVA: 0x00588A8A File Offset: 0x00586C8A
+	// Token: 0x06013925 RID: 80165 RVA: 0x005B3A9E File Offset: 0x005B1C9E
 	protected unsafe static void __CPPCALL_CloseSpineAnim_Implementation(PlotBlueprintFunctionLibrary.__CloseSpineAnim_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.CloseSpineAnim(FString.ToString((void*)(&__Params->spineName)));
 	}
 
-	// Token: 0x06015F21 RID: 89889 RVA: 0x00588AA0 File Offset: 0x00586CA0
+	// Token: 0x06013926 RID: 80166 RVA: 0x005B3AB4 File Offset: 0x005B1CB4
 	protected unsafe static void __CPPCALL_CloseSpineAnimInArray_Implementation(PlotBlueprintFunctionLibrary.__CloseSpineAnimInArray_FunctionParams* __Params)
 	{
 		TArray<string> tarray = new TArray<string>(&__Params->spineArray, true, true);
@@ -701,79 +710,79 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}
 	}
 
-	// Token: 0x06015F22 RID: 89890 RVA: 0x00588ADC File Offset: 0x00586CDC
+	// Token: 0x06013927 RID: 80167 RVA: 0x005B3AF0 File Offset: 0x005B1CF0
 	protected unsafe static void __CPPCALL_AdditionSeqPlay_Implementation(PlotBlueprintFunctionLibrary.__AdditionSeqPlay_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.AdditionSeqPlay(BuiltinUtils.GetOrCreateUObjectByNativePointer<ULevelSequence>(__Params->levelSequence), __Params->componentName, __Params->boneName, __Params->frame);
 	}
 
-	// Token: 0x06015F23 RID: 89891 RVA: 0x00588B00 File Offset: 0x00586D00
+	// Token: 0x06013928 RID: 80168 RVA: 0x005B3B14 File Offset: 0x005B1D14
 	protected unsafe static void __CPPCALL_AdditionSeqEnd_Implementation(PlotBlueprintFunctionLibrary.__AdditionSeqEnd_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.AdditionSeqEnd();
 	}
 
-	// Token: 0x06015F24 RID: 89892 RVA: 0x00588B07 File Offset: 0x00586D07
+	// Token: 0x06013929 RID: 80169 RVA: 0x005B3B1B File Offset: 0x005B1D1B
 	protected unsafe static void __CPPCALL_OpenMultiTextCaption_Implementation(PlotBlueprintFunctionLibrary.__OpenMultiTextCaption_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.OpenMultiTextCaption(FString.ToString((void*)(&__Params->textId)), __Params->duration);
 	}
 
-	// Token: 0x06015F25 RID: 89893 RVA: 0x00588B20 File Offset: 0x00586D20
+	// Token: 0x0601392A RID: 80170 RVA: 0x005B3B34 File Offset: 0x005B1D34
 	protected unsafe static void __CPPCALL_OpenArtWord2dView_Implementation(PlotBlueprintFunctionLibrary.__OpenArtWord2dView_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.OpenArtWord2dView(FString.ToString((void*)(&__Params->sequenceName)));
 	}
 
-	// Token: 0x06015F26 RID: 89894 RVA: 0x00588B33 File Offset: 0x00586D33
+	// Token: 0x0601392B RID: 80171 RVA: 0x005B3B47 File Offset: 0x005B1D47
 	protected unsafe static void __CPPCALL_SwitchArtWord2dMark_Implementation(PlotBlueprintFunctionLibrary.__SwitchArtWord2dMark_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.SwitchArtWord2dMark();
 	}
 
-	// Token: 0x06015F27 RID: 89895 RVA: 0x00588B3A File Offset: 0x00586D3A
+	// Token: 0x0601392C RID: 80172 RVA: 0x005B3B4E File Offset: 0x005B1D4E
 	protected unsafe static void __CPPCALL_CloseArtWord2dView_Implementation(PlotBlueprintFunctionLibrary.__CloseArtWord2dView_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.CloseArtWord2dView();
 	}
 
-	// Token: 0x06015F28 RID: 89896 RVA: 0x00588B41 File Offset: 0x00586D41
+	// Token: 0x0601392D RID: 80173 RVA: 0x005B3B55 File Offset: 0x005B1D55
 	protected unsafe static void __CPPCALL_ShowNameInput_Implementation(PlotBlueprintFunctionLibrary.__ShowNameInput_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.ShowNameInput();
 	}
 
-	// Token: 0x06015F29 RID: 89897 RVA: 0x00588B48 File Offset: 0x00586D48
+	// Token: 0x0601392E RID: 80174 RVA: 0x005B3B5C File Offset: 0x005B1D5C
 	protected unsafe static void __CPPCALL_AddBurstEyeRenderingMaterial_Implementation(PlotBlueprintFunctionLibrary.__AddBurstEyeRenderingMaterial_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.AddBurstEyeRenderingMaterial(__Params->isBoy);
 	}
 
-	// Token: 0x06015F2A RID: 89898 RVA: 0x00588B55 File Offset: 0x00586D55
+	// Token: 0x0601392F RID: 80175 RVA: 0x005B3B69 File Offset: 0x005B1D69
 	protected unsafe static void __CPPCALL_RemoveBurstEyeRenderingMaterial_Implementation(PlotBlueprintFunctionLibrary.__RemoveBurstEyeRenderingMaterial_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.RemoveBurstEyeRenderingMaterial(__Params->isBoy);
 	}
 
-	// Token: 0x06015F2B RID: 89899 RVA: 0x00588B62 File Offset: 0x00586D62
+	// Token: 0x06013930 RID: 80176 RVA: 0x005B3B76 File Offset: 0x005B1D76
 	protected unsafe static void __CPPCALL_AddInteractTagToInteractingGravityMachine_Implementation(PlotBlueprintFunctionLibrary.__AddInteractTagToInteractingGravityMachine_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.AddInteractTagToInteractingGravityMachine();
 	}
 
-	// Token: 0x06015F2C RID: 89900 RVA: 0x00588B69 File Offset: 0x00586D69
+	// Token: 0x06013931 RID: 80177 RVA: 0x005B3B7D File Offset: 0x005B1D7D
 	protected unsafe static void __CPPCALL_RemoveInteractTagFromInteractingGravityMachine_Implementation(PlotBlueprintFunctionLibrary.__RemoveInteractTagFromInteractingGravityMachine_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.RemoveInteractTagFromInteractingGravityMachine();
 	}
 
-	// Token: 0x06015F2D RID: 89901 RVA: 0x00588B70 File Offset: 0x00586D70
+	// Token: 0x06013932 RID: 80178 RVA: 0x005B3B84 File Offset: 0x005B1D84
 	protected unsafe static void __CPPCALL_TriggerTagToInteractingGravityMachine_Implementation(PlotBlueprintFunctionLibrary.__TriggerTagToInteractingGravityMachine_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.TriggerTagToInteractingGravityMachine(__Params->tag);
 	}
 
-	// Token: 0x06015F2E RID: 89902 RVA: 0x00588B80 File Offset: 0x00586D80
+	// Token: 0x06013933 RID: 80179 RVA: 0x005B3B94 File Offset: 0x005B1D94
 	protected unsafe static void __CPPCALL_ShowBgIcon_Implementation(PlotBlueprintFunctionLibrary.__ShowBgIcon_FunctionParams* __Params)
 	{
 		UTexture2D orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UTexture2D>(__Params->texture);
@@ -781,32 +790,32 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		PlotBlueprintFunctionLibrary.ShowBgIcon(__Params->bShow, orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06015F2F RID: 89903 RVA: 0x00588BB2 File Offset: 0x00586DB2
+	// Token: 0x06013934 RID: 80180 RVA: 0x005B3BC6 File Offset: 0x005B1DC6
 	protected unsafe static void __CPPCALL_BindItemInspectActor_Implementation(PlotBlueprintFunctionLibrary.__BindItemInspectActor_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.BindItemInspectActor(new FMovieSceneObjectBindingID(&__Params->binding, true, true));
 	}
 
-	// Token: 0x06015F30 RID: 89904 RVA: 0x00588BC7 File Offset: 0x00586DC7
+	// Token: 0x06013935 RID: 80181 RVA: 0x005B3BDB File Offset: 0x005B1DDB
 	protected unsafe static void __CPPCALL_EnablePlotInteract_Implementation(PlotBlueprintFunctionLibrary.__EnablePlotInteract_FunctionParams* __Params)
 	{
 		PlotBlueprintFunctionLibrary.EnablePlotInteract(__Params->bEnable);
 	}
 
-	// Token: 0x06015F31 RID: 89905 RVA: 0x00588BD4 File Offset: 0x00586DD4
+	// Token: 0x06013936 RID: 80182 RVA: 0x005B3BE8 File Offset: 0x005B1DE8
 	protected unsafe static void __CPPCALL_EnableCameraShake_Implementation(PlotBlueprintFunctionLibrary.__EnableCameraShake_FunctionParams* __Params)
 	{
 		TSoftClassPtr<UMatineeCameraShake> cameraShakePtr = new TSoftClassPtr<UMatineeCameraShake>(&__Params->cameraShakePtr, true, true);
 		PlotBlueprintFunctionLibrary.EnableCameraShake(__Params->bEnable, cameraShakePtr);
 	}
 
-	// Token: 0x06015F32 RID: 89906 RVA: 0x00588BFC File Offset: 0x00586DFC
+	// Token: 0x06013937 RID: 80183 RVA: 0x005B3C10 File Offset: 0x005B1E10
 	protected unsafe static void __CPPCALL_NeedFlowAdaption_Implementation(PlotBlueprintFunctionLibrary.__NeedFlowAdaption_FunctionParams* __Params)
 	{
 		__Params->__Result = PlotBlueprintFunctionLibrary.NeedFlowAdaption();
 	}
 
-	// Token: 0x06015F33 RID: 89907 RVA: 0x00588C0C File Offset: 0x00586E0C
+	// Token: 0x06013938 RID: 80184 RVA: 0x005B3C20 File Offset: 0x005B1E20
 	protected unsafe static void __CPPCALL_OpenCaptionImage_Implementation(PlotBlueprintFunctionLibrary.__OpenCaptionImage_FunctionParams* __Params)
 	{
 		string uiPrefabId = FString.ToString((void*)(&__Params->uiPrefabId));
@@ -815,676 +824,696 @@ public class PlotBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		PlotBlueprintFunctionLibrary.OpenCaptionImage(uiPrefabId, __Params->duration, uiStartAnimName, uiEndAnimName);
 	}
 
-	// Token: 0x0400A32B RID: 41771
+	// Token: 0x06013939 RID: 80185 RVA: 0x005B3C60 File Offset: 0x005B1E60
+	protected unsafe static void __CPPCALL_ExecutePianoSequenceEvent_Implementation(PlotBlueprintFunctionLibrary.__ExecutePianoSequenceEvent_FunctionParams* __Params)
+	{
+		PlotBlueprintFunctionLibrary.ExecutePianoSequenceEvent(FString.ToString((void*)(&__Params->key)));
+	}
+
+	// Token: 0x0400A715 RID: 42773
 	private const int FRAME_PER_SECOND = 30;
 
-	// Token: 0x0400A32C RID: 41772
+	// Token: 0x0400A716 RID: 42774
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/Sequence/PlotBlueprintFunctionLibrary.PlotBlueprintFunctionLibrary_C";
 
-	// Token: 0x0400A32D RID: 41773
+	// Token: 0x0400A717 RID: 42775
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400A32E RID: 41774
+	// Token: 0x0400A718 RID: 42776
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x02008F43 RID: 36675
+	// Token: 0x0200818B RID: 33163
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsInSequence_FunctionParams
 	{
-		// Token: 0x0402E6E1 RID: 190177
+		// Token: 0x04029DDE RID: 171486
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402E6E2 RID: 190178
+		// Token: 0x04029DDF RID: 171487
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02008F44 RID: 36676
+	// Token: 0x0200818C RID: 33164
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SkipCurrentSequence_FunctionParams
 	{
-		// Token: 0x0402E6E3 RID: 190179
+		// Token: 0x04029DE0 RID: 171488
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F45 RID: 36677
+	// Token: 0x0200818D RID: 33165
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __PauseSequence_FunctionParams
 	{
-		// Token: 0x0402E6E4 RID: 190180
+		// Token: 0x04029DE1 RID: 171489
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F46 RID: 36678
+	// Token: 0x0200818E RID: 33166
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __ResumeSequence_FunctionParams
 	{
-		// Token: 0x0402E6E5 RID: 190181
+		// Token: 0x04029DE2 RID: 171490
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F47 RID: 36679
+	// Token: 0x0200818F RID: 33167
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __UseEnterMoveMode_FunctionParams
 	{
-		// Token: 0x0402E6E6 RID: 190182
+		// Token: 0x04029DE3 RID: 171491
 		[FieldOffset(0)]
 		public IntPtr inCharacter;
 
-		// Token: 0x0402E6E7 RID: 190183
+		// Token: 0x04029DE4 RID: 171492
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F48 RID: 36680
+	// Token: 0x02008190 RID: 33168
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __StartPlotTs_FunctionParams
 	{
-		// Token: 0x0402E6E8 RID: 190184
+		// Token: 0x04029DE5 RID: 171493
 		[FieldOffset(0)]
 		public FString inRes;
 
-		// Token: 0x0402E6E9 RID: 190185
+		// Token: 0x04029DE6 RID: 171494
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F49 RID: 36681
+	// Token: 0x02008191 RID: 33169
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsInPerformingPlot_FunctionParams
 	{
-		// Token: 0x0402E6EA RID: 190186
+		// Token: 0x04029DE7 RID: 171495
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402E6EB RID: 190187
+		// Token: 0x04029DE8 RID: 171496
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02008F4A RID: 36682
+	// Token: 0x02008192 RID: 33170
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __TriggerBlackSequence_FunctionParams
 	{
-		// Token: 0x0402E6EC RID: 190188
+		// Token: 0x04029DE9 RID: 171497
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F4B RID: 36683
+	// Token: 0x02008193 RID: 33171
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ChangePlotWeather_FunctionParams
 	{
-		// Token: 0x0402E6ED RID: 190189
+		// Token: 0x04029DEA RID: 171498
 		[FieldOffset(0)]
 		public int weatherId;
 
-		// Token: 0x0402E6EE RID: 190190
+		// Token: 0x04029DEB RID: 171499
 		[FieldOffset(4)]
 		public bool isInherit;
 
-		// Token: 0x0402E6EF RID: 190191
+		// Token: 0x04029DEC RID: 171500
 		[FieldOffset(8)]
 		public float tweenTime;
 
-		// Token: 0x0402E6F0 RID: 190192
+		// Token: 0x04029DED RID: 171501
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F4C RID: 36684
+	// Token: 0x02008194 RID: 33172
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ChangePlotTimeOfDay_FunctionParams
 	{
-		// Token: 0x0402E6F1 RID: 190193
+		// Token: 0x04029DEE RID: 171502
 		[FieldOffset(0)]
 		public bool isInherit;
 
-		// Token: 0x0402E6F2 RID: 190194
+		// Token: 0x04029DEF RID: 171503
 		[FieldOffset(4)]
 		public int startSecond;
 
-		// Token: 0x0402E6F3 RID: 190195
+		// Token: 0x04029DF0 RID: 171504
 		[FieldOffset(8)]
 		public int endSecond;
 
-		// Token: 0x0402E6F4 RID: 190196
+		// Token: 0x04029DF1 RID: 171505
 		[FieldOffset(12)]
 		public int tweenFrame;
 
-		// Token: 0x0402E6F5 RID: 190197
+		// Token: 0x04029DF2 RID: 171506
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F4D RID: 36685
+	// Token: 0x02008195 RID: 33173
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ExecuteSequenceEvents_FunctionParams
 	{
-		// Token: 0x0402E6F6 RID: 190198
+		// Token: 0x04029DF3 RID: 171507
 		[FieldOffset(0)]
 		public FString key;
 
-		// Token: 0x0402E6F7 RID: 190199
+		// Token: 0x04029DF4 RID: 171508
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F4E RID: 36686
+	// Token: 0x02008196 RID: 33174
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __ExecuteEntitySequenceEvents_FunctionParams
 	{
-		// Token: 0x0402E6F8 RID: 190200
+		// Token: 0x04029DF5 RID: 171509
 		[FieldOffset(0)]
 		public FString key;
 
-		// Token: 0x0402E6F9 RID: 190201
+		// Token: 0x04029DF6 RID: 171510
 		[FieldOffset(16)]
 		public int entityId;
 
-		// Token: 0x0402E6FA RID: 190202
+		// Token: 0x04029DF7 RID: 171511
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F4F RID: 36687
+	// Token: 0x02008197 RID: 33175
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __TriggerCutChange_FunctionParams
 	{
-		// Token: 0x0402E6FB RID: 190203
+		// Token: 0x04029DF8 RID: 171512
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F50 RID: 36688
+	// Token: 0x02008198 RID: 33176
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __OpenChapterUi_FunctionParams
 	{
-		// Token: 0x0402E6FC RID: 190204
+		// Token: 0x04029DF9 RID: 171513
 		[FieldOffset(0)]
 		public int chapterState;
 
-		// Token: 0x0402E6FD RID: 190205
+		// Token: 0x04029DFA RID: 171514
 		[FieldOffset(4)]
 		public int chapterId;
 
-		// Token: 0x0402E6FE RID: 190206
+		// Token: 0x04029DFB RID: 171515
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F51 RID: 36689
+	// Token: 0x02008199 RID: 33177
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __ShowLogo_FunctionParams
 	{
-		// Token: 0x0402E6FF RID: 190207
+		// Token: 0x04029DFC RID: 171516
 		[FieldOffset(0)]
 		public float time;
 
-		// Token: 0x0402E700 RID: 190208
+		// Token: 0x04029DFD RID: 171517
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F52 RID: 36690
+	// Token: 0x0200819A RID: 33178
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 80)]
 	protected ref struct __OpenUiView_FunctionParams
 	{
-		// Token: 0x0402E701 RID: 190209
+		// Token: 0x04029DFE RID: 171518
 		[FieldOffset(0)]
 		public FString maleAssetName;
 
-		// Token: 0x0402E702 RID: 190210
+		// Token: 0x04029DFF RID: 171519
 		[FieldOffset(16)]
 		public FString femaleAssetName;
 
-		// Token: 0x0402E703 RID: 190211
+		// Token: 0x04029E00 RID: 171520
 		[FieldOffset(32)]
 		public FString maleSpineName;
 
-		// Token: 0x0402E704 RID: 190212
+		// Token: 0x04029E01 RID: 171521
 		[FieldOffset(48)]
 		public FString femaleSpineName;
 
-		// Token: 0x0402E705 RID: 190213
+		// Token: 0x04029E02 RID: 171522
 		[FieldOffset(64)]
 		public bool needLoop;
 
-		// Token: 0x0402E706 RID: 190214
+		// Token: 0x04029E03 RID: 171523
 		[FieldOffset(65)]
 		public bool useFullscreenAdaptAnchor;
 
-		// Token: 0x0402E707 RID: 190215
+		// Token: 0x04029E04 RID: 171524
 		[FieldOffset(72)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F53 RID: 36691
+	// Token: 0x0200819B RID: 33179
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 80)]
 	protected ref struct __OpenUiViewInArray_FunctionParams
 	{
-		// Token: 0x0402E708 RID: 190216
+		// Token: 0x04029E05 RID: 171525
 		[FieldOffset(0)]
 		public FString maleAssetName;
 
-		// Token: 0x0402E709 RID: 190217
+		// Token: 0x04029E06 RID: 171526
 		[FieldOffset(16)]
 		public FString femaleAssetName;
 
-		// Token: 0x0402E70A RID: 190218
+		// Token: 0x04029E07 RID: 171527
 		[FieldOffset(32)]
 		public byte maleSpineArray;
 
-		// Token: 0x0402E70B RID: 190219
+		// Token: 0x04029E08 RID: 171528
 		[FieldOffset(48)]
 		public byte femaleSpineArray;
 
-		// Token: 0x0402E70C RID: 190220
+		// Token: 0x04029E09 RID: 171529
 		[FieldOffset(64)]
 		public bool useFullscreenAdaptAnchor;
 
-		// Token: 0x0402E70D RID: 190221
+		// Token: 0x04029E0A RID: 171530
 		[FieldOffset(72)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F54 RID: 36692
+	// Token: 0x0200819C RID: 33180
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __PlayUiLevelSequence_FunctionParams
 	{
-		// Token: 0x0402E70E RID: 190222
+		// Token: 0x04029E0B RID: 171531
 		[FieldOffset(0)]
 		public FString seqName;
 
-		// Token: 0x0402E70F RID: 190223
+		// Token: 0x04029E0C RID: 171532
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F55 RID: 36693
+	// Token: 0x0200819D RID: 33181
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __CloseUiView_FunctionParams
 	{
-		// Token: 0x0402E710 RID: 190224
+		// Token: 0x04029E0D RID: 171533
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F56 RID: 36694
+	// Token: 0x0200819E RID: 33182
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __PlaySpineAnim_FunctionParams
 	{
-		// Token: 0x0402E711 RID: 190225
+		// Token: 0x04029E0E RID: 171534
 		[FieldOffset(0)]
 		public FString spineName;
 
-		// Token: 0x0402E712 RID: 190226
+		// Token: 0x04029E0F RID: 171535
 		[FieldOffset(16)]
 		public bool needLoop;
 
-		// Token: 0x0402E713 RID: 190227
+		// Token: 0x04029E10 RID: 171536
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F57 RID: 36695
+	// Token: 0x0200819F RID: 33183
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __PlaySpineAnimForGender_FunctionParams
 	{
-		// Token: 0x0402E714 RID: 190228
+		// Token: 0x04029E11 RID: 171537
 		[FieldOffset(0)]
 		public FString maleSpineName;
 
-		// Token: 0x0402E715 RID: 190229
+		// Token: 0x04029E12 RID: 171538
 		[FieldOffset(16)]
 		public FString femaleSpineName;
 
-		// Token: 0x0402E716 RID: 190230
+		// Token: 0x04029E13 RID: 171539
 		[FieldOffset(32)]
 		public bool needLoop;
 
-		// Token: 0x0402E717 RID: 190231
+		// Token: 0x04029E14 RID: 171540
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F58 RID: 36696
+	// Token: 0x020081A0 RID: 33184
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __PlaySpineAnimForGenderInArray_FunctionParams
 	{
-		// Token: 0x0402E718 RID: 190232
+		// Token: 0x04029E15 RID: 171541
 		[FieldOffset(0)]
 		public byte maleSpineArray;
 
-		// Token: 0x0402E719 RID: 190233
+		// Token: 0x04029E16 RID: 171542
 		[FieldOffset(16)]
 		public byte femaleSpineArray;
 
-		// Token: 0x0402E71A RID: 190234
+		// Token: 0x04029E17 RID: 171543
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F59 RID: 36697
+	// Token: 0x020081A1 RID: 33185
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __CloseSpineAnim_FunctionParams
 	{
-		// Token: 0x0402E71B RID: 190235
+		// Token: 0x04029E18 RID: 171544
 		[FieldOffset(0)]
 		public FString spineName;
 
-		// Token: 0x0402E71C RID: 190236
+		// Token: 0x04029E19 RID: 171545
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F5A RID: 36698
+	// Token: 0x020081A2 RID: 33186
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __CloseSpineAnimInArray_FunctionParams
 	{
-		// Token: 0x0402E71D RID: 190237
+		// Token: 0x04029E1A RID: 171546
 		[FieldOffset(0)]
 		public byte spineArray;
 
-		// Token: 0x0402E71E RID: 190238
+		// Token: 0x04029E1B RID: 171547
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F5B RID: 36699
+	// Token: 0x020081A3 RID: 33187
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __AdditionSeqPlay_FunctionParams
 	{
-		// Token: 0x0402E71F RID: 190239
+		// Token: 0x04029E1C RID: 171548
 		[FieldOffset(0)]
 		public IntPtr levelSequence;
 
-		// Token: 0x0402E720 RID: 190240
+		// Token: 0x04029E1D RID: 171549
 		[FieldOffset(8)]
 		public FName componentName;
 
-		// Token: 0x0402E721 RID: 190241
+		// Token: 0x04029E1E RID: 171550
 		[FieldOffset(20)]
 		public FName boneName;
 
-		// Token: 0x0402E722 RID: 190242
+		// Token: 0x04029E1F RID: 171551
 		[FieldOffset(32)]
 		public float frame;
 
-		// Token: 0x0402E723 RID: 190243
+		// Token: 0x04029E20 RID: 171552
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F5C RID: 36700
+	// Token: 0x020081A4 RID: 33188
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __AdditionSeqEnd_FunctionParams
 	{
-		// Token: 0x0402E724 RID: 190244
+		// Token: 0x04029E21 RID: 171553
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F5D RID: 36701
+	// Token: 0x020081A5 RID: 33189
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __OpenMultiTextCaption_FunctionParams
 	{
-		// Token: 0x0402E725 RID: 190245
+		// Token: 0x04029E22 RID: 171554
 		[FieldOffset(0)]
 		public FString textId;
 
-		// Token: 0x0402E726 RID: 190246
+		// Token: 0x04029E23 RID: 171555
 		[FieldOffset(16)]
 		public float duration;
 
-		// Token: 0x0402E727 RID: 190247
+		// Token: 0x04029E24 RID: 171556
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F5E RID: 36702
+	// Token: 0x020081A6 RID: 33190
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __OpenArtWord2dView_FunctionParams
 	{
-		// Token: 0x0402E728 RID: 190248
+		// Token: 0x04029E25 RID: 171557
 		[FieldOffset(0)]
 		public FString sequenceName;
 
-		// Token: 0x0402E729 RID: 190249
+		// Token: 0x04029E26 RID: 171558
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F5F RID: 36703
+	// Token: 0x020081A7 RID: 33191
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SwitchArtWord2dMark_FunctionParams
 	{
-		// Token: 0x0402E72A RID: 190250
+		// Token: 0x04029E27 RID: 171559
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F60 RID: 36704
+	// Token: 0x020081A8 RID: 33192
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __CloseArtWord2dView_FunctionParams
 	{
-		// Token: 0x0402E72B RID: 190251
+		// Token: 0x04029E28 RID: 171560
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F61 RID: 36705
+	// Token: 0x020081A9 RID: 33193
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __ShowNameInput_FunctionParams
 	{
-		// Token: 0x0402E72C RID: 190252
+		// Token: 0x04029E29 RID: 171561
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F62 RID: 36706
+	// Token: 0x020081AA RID: 33194
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __AddBurstEyeRenderingMaterial_FunctionParams
 	{
-		// Token: 0x0402E72D RID: 190253
+		// Token: 0x04029E2A RID: 171562
 		[FieldOffset(0)]
 		public bool isBoy;
 
-		// Token: 0x0402E72E RID: 190254
+		// Token: 0x04029E2B RID: 171563
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F63 RID: 36707
+	// Token: 0x020081AB RID: 33195
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __RemoveBurstEyeRenderingMaterial_FunctionParams
 	{
-		// Token: 0x0402E72F RID: 190255
+		// Token: 0x04029E2C RID: 171564
 		[FieldOffset(0)]
 		public bool isBoy;
 
-		// Token: 0x0402E730 RID: 190256
+		// Token: 0x04029E2D RID: 171565
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F64 RID: 36708
+	// Token: 0x020081AC RID: 33196
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __AddInteractTagToInteractingGravityMachine_FunctionParams
 	{
-		// Token: 0x0402E731 RID: 190257
+		// Token: 0x04029E2E RID: 171566
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F65 RID: 36709
+	// Token: 0x020081AD RID: 33197
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __RemoveInteractTagFromInteractingGravityMachine_FunctionParams
 	{
-		// Token: 0x0402E732 RID: 190258
+		// Token: 0x04029E2F RID: 171567
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F66 RID: 36710
+	// Token: 0x020081AE RID: 33198
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __TriggerTagToInteractingGravityMachine_FunctionParams
 	{
-		// Token: 0x0402E733 RID: 190259
+		// Token: 0x04029E30 RID: 171568
 		[FieldOffset(0)]
 		public FGameplayTag tag;
 
-		// Token: 0x0402E734 RID: 190260
+		// Token: 0x04029E31 RID: 171569
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F67 RID: 36711
+	// Token: 0x020081AF RID: 33199
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __ShowBgIcon_FunctionParams
 	{
-		// Token: 0x0402E735 RID: 190261
+		// Token: 0x04029E32 RID: 171570
 		[FieldOffset(0)]
 		public bool bShow;
 
-		// Token: 0x0402E736 RID: 190262
+		// Token: 0x04029E33 RID: 171571
 		[FieldOffset(8)]
 		public IntPtr texture;
 
-		// Token: 0x0402E737 RID: 190263
+		// Token: 0x04029E34 RID: 171572
 		[FieldOffset(16)]
 		public IntPtr obj;
 
-		// Token: 0x0402E738 RID: 190264
+		// Token: 0x04029E35 RID: 171573
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F68 RID: 36712
+	// Token: 0x020081B0 RID: 33200
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __BindItemInspectActor_FunctionParams
 	{
-		// Token: 0x0402E739 RID: 190265
+		// Token: 0x04029E36 RID: 171574
 		[FieldOffset(0)]
 		public byte binding;
 
-		// Token: 0x0402E73A RID: 190266
+		// Token: 0x04029E37 RID: 171575
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F69 RID: 36713
+	// Token: 0x020081B1 RID: 33201
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __EnablePlotInteract_FunctionParams
 	{
-		// Token: 0x0402E73B RID: 190267
+		// Token: 0x04029E38 RID: 171576
 		[FieldOffset(0)]
 		public bool bEnable;
 
-		// Token: 0x0402E73C RID: 190268
+		// Token: 0x04029E39 RID: 171577
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F6A RID: 36714
+	// Token: 0x020081B2 RID: 33202
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 64)]
 	protected ref struct __EnableCameraShake_FunctionParams
 	{
-		// Token: 0x0402E73D RID: 190269
+		// Token: 0x04029E3A RID: 171578
 		[FieldOffset(0)]
 		public bool bEnable;
 
-		// Token: 0x0402E73E RID: 190270
+		// Token: 0x04029E3B RID: 171579
 		[FieldOffset(8)]
 		public byte cameraShakePtr;
 
-		// Token: 0x0402E73F RID: 190271
+		// Token: 0x04029E3C RID: 171580
 		[FieldOffset(56)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02008F6B RID: 36715
+	// Token: 0x020081B3 RID: 33203
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __NeedFlowAdaption_FunctionParams
 	{
-		// Token: 0x0402E740 RID: 190272
+		// Token: 0x04029E3D RID: 171581
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402E741 RID: 190273
+		// Token: 0x04029E3E RID: 171582
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02008F6C RID: 36716
+	// Token: 0x020081B4 RID: 33204
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 64)]
 	protected ref struct __OpenCaptionImage_FunctionParams
 	{
-		// Token: 0x0402E742 RID: 190274
+		// Token: 0x04029E3F RID: 171583
 		[FieldOffset(0)]
 		public FString uiPrefabId;
 
-		// Token: 0x0402E743 RID: 190275
+		// Token: 0x04029E40 RID: 171584
 		[FieldOffset(16)]
 		public float duration;
 
-		// Token: 0x0402E744 RID: 190276
+		// Token: 0x04029E41 RID: 171585
 		[FieldOffset(24)]
 		public FString uiStartAnimName;
 
-		// Token: 0x0402E745 RID: 190277
+		// Token: 0x04029E42 RID: 171586
 		[FieldOffset(40)]
 		public FString uiEndAnimName;
 
-		// Token: 0x0402E746 RID: 190278
+		// Token: 0x04029E43 RID: 171587
 		[FieldOffset(56)]
+		public IntPtr __WorldContext;
+	}
+
+	// Token: 0x020081B5 RID: 33205
+	[CompilerFeatureRequired("RefStructs")]
+	[StructLayout(LayoutKind.Explicit, Size = 24)]
+	protected ref struct __ExecutePianoSequenceEvent_FunctionParams
+	{
+		// Token: 0x04029E44 RID: 171588
+		[FieldOffset(0)]
+		public FString key;
+
+		// Token: 0x04029E45 RID: 171589
+		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 }

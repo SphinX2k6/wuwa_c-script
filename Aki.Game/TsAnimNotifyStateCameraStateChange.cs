@@ -13,9 +13,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateCameraStateChange.TsAnimNotifyStateCameraStateChange_C")]
 public class TsAnimNotifyStateCameraStateChange : TsAnimNotifyStateBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170002B5 RID: 693
-	// (get) Token: 0x060010D5 RID: 4309 RVA: 0x0005F9A3 File Offset: 0x0005DBA3
-	// (set) Token: 0x060010D6 RID: 4310 RVA: 0x0005F9B3 File Offset: 0x0005DBB3
+	// Token: 0x170002B8 RID: 696
+	// (get) Token: 0x060010DB RID: 4315 RVA: 0x00060DC3 File Offset: 0x0005EFC3
+	// (set) Token: 0x060010DC RID: 4316 RVA: 0x00060DD3 File Offset: 0x0005EFD3
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 是否为单客户端
 	{
@@ -29,9 +29,9 @@ public class TsAnimNotifyStateCameraStateChange : TsAnimNotifyStateBase, IUnreal
 		}
 	}
 
-	// Token: 0x170002B6 RID: 694
-	// (get) Token: 0x060010D7 RID: 4311 RVA: 0x0005F9C4 File Offset: 0x0005DBC4
-	// (set) Token: 0x060010D8 RID: 4312 RVA: 0x0005F9D4 File Offset: 0x0005DBD4
+	// Token: 0x170002B9 RID: 697
+	// (get) Token: 0x060010DD RID: 4317 RVA: 0x00060DE4 File Offset: 0x0005EFE4
+	// (set) Token: 0x060010DE RID: 4318 RVA: 0x00060DF4 File Offset: 0x0005EFF4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 是否跟随
 	{
@@ -45,9 +45,9 @@ public class TsAnimNotifyStateCameraStateChange : TsAnimNotifyStateBase, IUnreal
 		}
 	}
 
-	// Token: 0x170002B7 RID: 695
-	// (get) Token: 0x060010D9 RID: 4313 RVA: 0x0005F9E5 File Offset: 0x0005DBE5
-	// (set) Token: 0x060010DA RID: 4314 RVA: 0x0005F9F5 File Offset: 0x0005DBF5
+	// Token: 0x170002BA RID: 698
+	// (get) Token: 0x060010DF RID: 4319 RVA: 0x00060E05 File Offset: 0x0005F005
+	// (set) Token: 0x060010E0 RID: 4320 RVA: 0x00060E15 File Offset: 0x0005F015
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 切人时恢复跟随
 	{
@@ -61,33 +61,29 @@ public class TsAnimNotifyStateCameraStateChange : TsAnimNotifyStateBase, IUnreal
 		}
 	}
 
-	// Token: 0x060010DB RID: 4315 RVA: 0x0005FA08 File Offset: 0x0005DC08
+	// Token: 0x060010E1 RID: 4321 RVA: 0x00060E28 File Offset: 0x0005F028
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyBegin(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyBegin"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateCameraStateChange) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyBegin"), TsAnimNotifyStateCameraStateChange.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
-			ptr2->TotalDuration = totalDuration;
+			return this.K2_NotifyBegin_Implementation(meshComp, animation, totalDuration);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		ptr->TotalDuration = totalDuration;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060010DC RID: 4316 RVA: 0x0005FAB0 File Offset: 0x0005DCB0
+	// Token: 0x060010E2 RID: 4322 RVA: 0x00060EE8 File Offset: 0x0005F0E8
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyBegin_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
@@ -101,32 +97,28 @@ public class TsAnimNotifyStateCameraStateChange : TsAnimNotifyStateBase, IUnreal
 		return false;
 	}
 
-	// Token: 0x060010DD RID: 4317 RVA: 0x0005FB20 File Offset: 0x0005DD20
+	// Token: 0x060010E3 RID: 4323 RVA: 0x00060F58 File Offset: 0x0005F158
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyEnd(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyEnd"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateCameraStateChange) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyEnd"), TsAnimNotifyStateCameraStateChange.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_NotifyEnd_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060010DE RID: 4318 RVA: 0x0005FBC0 File Offset: 0x0005DDC0
+	// Token: 0x060010E4 RID: 4324 RVA: 0x00061010 File Offset: 0x0005F210
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyEnd_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -139,37 +131,33 @@ public class TsAnimNotifyStateCameraStateChange : TsAnimNotifyStateBase, IUnreal
 		return false;
 	}
 
-	// Token: 0x060010DF RID: 4319 RVA: 0x0005FC0C File Offset: 0x0005DE0C
+	// Token: 0x060010E5 RID: 4325 RVA: 0x0006105C File Offset: 0x0005F25C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateCameraStateChange) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyStateCameraStateChange.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotifyState.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotifyState.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x060010E0 RID: 4320 RVA: 0x0005FC87 File Offset: 0x0005DE87
+	// Token: 0x060010E6 RID: 4326 RVA: 0x000610EC File Offset: 0x0005F2EC
 	[NullableContext(1)]
 	protected override string GetNotifyName_Implementation()
 	{
 		return "相机是否跟随角色移动";
 	}
 
-	// Token: 0x060010E1 RID: 4321 RVA: 0x0005FC8E File Offset: 0x0005DE8E
+	// Token: 0x060010E7 RID: 4327 RVA: 0x000610F3 File Offset: 0x0005F2F3
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyStateCameraStateChange._ClassPtr == IntPtr.Zero)
@@ -179,23 +167,23 @@ public class TsAnimNotifyStateCameraStateChange : TsAnimNotifyStateBase, IUnreal
 		return TsAnimNotifyStateCameraStateChange._ClassPtr;
 	}
 
-	// Token: 0x060010E2 RID: 4322 RVA: 0x0005FCB4 File Offset: 0x0005DEB4
+	// Token: 0x060010E8 RID: 4328 RVA: 0x00061118 File Offset: 0x0005F318
 	public TsAnimNotifyStateCameraStateChange() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateCameraStateChange.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060010E3 RID: 4323 RVA: 0x0005FCDC File Offset: 0x0005DEDC
+	// Token: 0x060010E9 RID: 4329 RVA: 0x00061140 File Offset: 0x0005F340
 	[NullableContext(1)]
 	public TsAnimNotifyStateCameraStateChange(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateCameraStateChange.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060010E4 RID: 4324 RVA: 0x0005FD0F File Offset: 0x0005DF0F
+	// Token: 0x060010EA RID: 4330 RVA: 0x00061173 File Offset: 0x0005F373
 	protected TsAnimNotifyStateCameraStateChange(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060010E5 RID: 4325 RVA: 0x0005FD18 File Offset: 0x0005DF18
+	// Token: 0x060010EB RID: 4331 RVA: 0x0006117C File Offset: 0x0005F37C
 	protected unsafe virtual void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -203,7 +191,7 @@ public class TsAnimNotifyStateCameraStateChange : TsAnimNotifyStateBase, IUnreal
 		__Params->__Result = this.K2_NotifyBegin_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x060010E6 RID: 4326 RVA: 0x0005FD54 File Offset: 0x0005DF54
+	// Token: 0x060010EC RID: 4332 RVA: 0x000611B8 File Offset: 0x0005F3B8
 	protected unsafe virtual void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -211,28 +199,28 @@ public class TsAnimNotifyStateCameraStateChange : TsAnimNotifyStateBase, IUnreal
 		__Params->__Result = this.K2_NotifyEnd_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x060010E7 RID: 4327 RVA: 0x0005FD87 File Offset: 0x0005DF87
+	// Token: 0x060010ED RID: 4333 RVA: 0x000611EB File Offset: 0x0005F3EB
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotifyState.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x04000CCE RID: 3278
+	// Token: 0x04000CD6 RID: 3286
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateCameraStateChange.TsAnimNotifyStateCameraStateChange_C";
 
-	// Token: 0x04000CCF RID: 3279
+	// Token: 0x04000CD7 RID: 3287
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000CD0 RID: 3280
+	// Token: 0x04000CD8 RID: 3288
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000CD1 RID: 3281
+	// Token: 0x04000CD9 RID: 3289
 	private static int __PropertyOffset_是否为单客户端;
 
-	// Token: 0x04000CD2 RID: 3282
+	// Token: 0x04000CDA RID: 3290
 	private static int __PropertyOffset_是否跟随;
 
-	// Token: 0x04000CD3 RID: 3283
+	// Token: 0x04000CDB RID: 3291
 	private static int __PropertyOffset_切人时恢复跟随;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200103D RID: 4157
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200116B RID: 4459
 	public class IPhoneMessageProgressTypeBase
 	{
-		// Token: 0x06005D24 RID: 23844 RVA: 0x000E1B08 File Offset: 0x000DFD08
+		// Token: 0x06006316 RID: 25366 RVA: 0x000EEADC File Offset: 0x000ECCDC
 		private IPhoneMessageProgressTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005D25 RID: 23845 RVA: 0x000E1B40 File Offset: 0x000DFD40
+		// Token: 0x06006317 RID: 25367 RVA: 0x000EEB14 File Offset: 0x000ECD14
 		public static IPhoneMessageProgressTypeBase Create([Nullable(2)] IPhoneMessageProgressTypeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D26 RID: 23846 RVA: 0x000E1B53 File Offset: 0x000DFD53
+		// Token: 0x06006318 RID: 25368 RVA: 0x000EEB27 File Offset: 0x000ECD27
 		public static IPhoneMessageProgressTypeBase CreateFromSetValue([Nullable(2)] IPhoneMessageProgressTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D27 RID: 23847 RVA: 0x000E1B66 File Offset: 0x000DFD66
+		// Token: 0x06006319 RID: 25369 RVA: 0x000EEB3A File Offset: 0x000ECD3A
 		public IPhoneMessageProgressTypeBase_SetValue ToSetValue()
 		{
 			return new IPhoneMessageProgressTypeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001EB8 RID: 7864
-		// (get) Token: 0x06005D28 RID: 23848 RVA: 0x000E1B79 File Offset: 0x000DFD79
-		// (set) Token: 0x06005D29 RID: 23849 RVA: 0x000E1BA4 File Offset: 0x000DFDA4
+		// Token: 0x17002067 RID: 8295
+		// (get) Token: 0x0600631A RID: 25370 RVA: 0x000EEB4D File Offset: 0x000ECD4D
+		// (set) Token: 0x0600631B RID: 25371 RVA: 0x000EEB78 File Offset: 0x000ECD78
 		public virtual EPhoneMessageProgressType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400381F RID: 14367
+		// Token: 0x04003B67 RID: 15207
 		[Nullable(2)]
 		protected IPhoneMessageProgressTypeBase FbInstance;
 
-		// Token: 0x04003820 RID: 14368
+		// Token: 0x04003B68 RID: 15208
 		[Nullable(2)]
 		protected IPhoneMessageProgressTypeBase_SetValue PocoInterface;
 	}

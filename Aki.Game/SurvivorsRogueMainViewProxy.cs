@@ -13,13 +13,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D27 RID: 7463
+// Token: 0x020011E9 RID: 4585
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 {
-	// Token: 0x1700121C RID: 4636
-	// (get) Token: 0x0600E1F4 RID: 57844 RVA: 0x00350F15 File Offset: 0x0034F115
+	// Token: 0x17001246 RID: 4678
+	// (get) Token: 0x0600B611 RID: 46609 RVA: 0x0035C945 File Offset: 0x0035AB45
 	protected override EBattleUiCommonChildVisibleReason? BattleUiCommonChildVisibleReason
 	{
 		get
@@ -28,7 +28,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E1F5 RID: 57845 RVA: 0x00350F20 File Offset: 0x0034F120
+	// Token: 0x0600B612 RID: 46610 RVA: 0x0035C950 File Offset: 0x0035AB50
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRogueMainViewProxy.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -39,14 +39,14 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E1F6 RID: 57846 RVA: 0x00350F63 File Offset: 0x0034F163
+	// Token: 0x0600B613 RID: 46611 RVA: 0x0035C993 File Offset: 0x0035AB93
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveScreenEffectFightRoot();
 		this.CleanAllBossTrackedMarker();
 	}
 
-	// Token: 0x0600E1F7 RID: 57847 RVA: 0x00350F74 File Offset: 0x0034F174
+	// Token: 0x0600B614 RID: 46612 RVA: 0x0035C9A4 File Offset: 0x0035ABA4
 	protected override void OnAfterShow()
 	{
 		foreach (UiPanelBase uiPanelBase in this.SurvivorsRogueChildPanelMap.Values)
@@ -63,7 +63,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E1F8 RID: 57848 RVA: 0x00351034 File Offset: 0x0034F234
+	// Token: 0x0600B615 RID: 46613 RVA: 0x0035CA64 File Offset: 0x0035AC64
 	protected override void OnAfterHide()
 	{
 		foreach (UiPanelBase uiPanelBase in this.SurvivorsRogueChildPanelMap.Values)
@@ -76,7 +76,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E1F9 RID: 57849 RVA: 0x003510D0 File Offset: 0x0034F2D0
+	// Token: 0x0600B616 RID: 46614 RVA: 0x0035CB00 File Offset: 0x0035AD00
 	protected override void OnTick(float delta)
 	{
 		float num = delta * Time.Instance.TimeDilation;
@@ -98,7 +98,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E1FA RID: 57850 RVA: 0x00351190 File Offset: 0x0034F390
+	// Token: 0x0600B617 RID: 46615 RVA: 0x0035CBC0 File Offset: 0x0035ADC0
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.SurvivorsRogueSwitchWaveTipsState, new Action<int>(this.SwitchWaveTipsState));
@@ -113,7 +113,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		behaviorDelegate.AddTreeVarUpdateDelegate(ESurvivorsRougeSystemVarType.GoldGainEfficiency.ToEnumString(), new TTreeVarUpdateDelegate(this.OnSurvivorsPositiveUpdate));
 	}
 
-	// Token: 0x0600E1FB RID: 57851 RVA: 0x00351298 File Offset: 0x0034F498
+	// Token: 0x0600B618 RID: 46616 RVA: 0x0035CCC8 File Offset: 0x0035AEC8
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.SurvivorsRogueSwitchWaveTipsState, new Action<int>(this.SwitchWaveTipsState));
@@ -128,7 +128,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		behaviorDelegate.RemoveTreeVarUpdateDelegate(ESurvivorsRougeSystemVarType.GoldGainEfficiency.ToEnumString(), new TTreeVarUpdateDelegate(this.OnSurvivorsPositiveUpdate));
 	}
 
-	// Token: 0x0600E1FC RID: 57852 RVA: 0x003513A0 File Offset: 0x0034F5A0
+	// Token: 0x0600B619 RID: 46617 RVA: 0x0035CDD0 File Offset: 0x0035AFD0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -147,35 +147,35 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreateSurvivorsRogueChildPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E1FD RID: 57853 RVA: 0x003513FC File Offset: 0x0034F5FC
+	// Token: 0x0600B61A RID: 46618 RVA: 0x0035CE2C File Offset: 0x0035B02C
 	private void OnSurvivorsCurrencyUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		int currencyNum = (int)MathUtils.Instance.LongToNumber(newVarDefine.Int);
 		this.FightInfoPanel.RefreshCurrencyNum(currencyNum, true);
 	}
 
-	// Token: 0x0600E1FE RID: 57854 RVA: 0x00351428 File Offset: 0x0034F628
+	// Token: 0x0600B61B RID: 46619 RVA: 0x0035CE58 File Offset: 0x0035B058
 	private void OnSurvivorsComboUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		int comboNum = (int)MathUtils.Instance.LongToNumber(newVarDefine.Int);
 		this.FightInfoPanel.RefreshComboNum(comboNum);
 	}
 
-	// Token: 0x0600E1FF RID: 57855 RVA: 0x00351454 File Offset: 0x0034F654
+	// Token: 0x0600B61C RID: 46620 RVA: 0x0035CE84 File Offset: 0x0035B084
 	private void OnSurvivorsChestUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		int chestNum = (int)MathUtils.Instance.LongToNumber(newVarDefine.Int);
 		this.FightInfoPanel.RefreshChestNum(chestNum, true);
 	}
 
-	// Token: 0x0600E200 RID: 57856 RVA: 0x00351480 File Offset: 0x0034F680
+	// Token: 0x0600B61D RID: 46621 RVA: 0x0035CEB0 File Offset: 0x0035B0B0
 	private void OnSurvivorsPositiveUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		int value = (int)MathUtils.Instance.LongToNumber(newVarDefine.Int);
 		this.FightInfoPanel.RefreshPositiveArea(value);
 	}
 
-	// Token: 0x0600E201 RID: 57857 RVA: 0x003514AC File Offset: 0x0034F6AC
+	// Token: 0x0600B61E RID: 46622 RVA: 0x0035CEDC File Offset: 0x0035B0DC
 	private void AddScreenEffectFightRoot()
 	{
 		BP_ScreenEffectSystem_C instance = ScreenEffectSystem.GetInstance();
@@ -194,7 +194,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		ScreenEffectModel.Instance.SetFightRootInited(true);
 	}
 
-	// Token: 0x0600E202 RID: 57858 RVA: 0x00351514 File Offset: 0x0034F714
+	// Token: 0x0600B61F RID: 46623 RVA: 0x0035CF44 File Offset: 0x0035B144
 	private void RemoveScreenEffectFightRoot()
 	{
 		AUIContainerActor screenEffectFightRoot = this.ScreenEffectFightRoot;
@@ -211,7 +211,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		instance.SetFightRootInited(false);
 	}
 
-	// Token: 0x0600E203 RID: 57859 RVA: 0x00351550 File Offset: 0x0034F750
+	// Token: 0x0600B620 RID: 46624 RVA: 0x0035CF80 File Offset: 0x0035B180
 	private UniTask CreateResidentWaveTipsPanel()
 	{
 		SurvivorsRogueMainViewProxy.<CreateResidentWaveTipsPanel>d__31 <CreateResidentWaveTipsPanel>d__;
@@ -222,7 +222,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreateResidentWaveTipsPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E204 RID: 57860 RVA: 0x00351594 File Offset: 0x0034F794
+	// Token: 0x0600B621 RID: 46625 RVA: 0x0035CFC4 File Offset: 0x0035B1C4
 	private UniTask CreateCountDownTipsPanel()
 	{
 		SurvivorsRogueMainViewProxy.<CreateCountDownTipsPanel>d__32 <CreateCountDownTipsPanel>d__;
@@ -233,7 +233,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreateCountDownTipsPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E205 RID: 57861 RVA: 0x003515D8 File Offset: 0x0034F7D8
+	// Token: 0x0600B622 RID: 46626 RVA: 0x0035D008 File Offset: 0x0035B208
 	private UniTask CreateBonusWaveTipsPanel()
 	{
 		SurvivorsRogueMainViewProxy.<CreateBonusWaveTipsPanel>d__33 <CreateBonusWaveTipsPanel>d__;
@@ -244,7 +244,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreateBonusWaveTipsPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E206 RID: 57862 RVA: 0x0035161C File Offset: 0x0034F81C
+	// Token: 0x0600B623 RID: 46627 RVA: 0x0035D04C File Offset: 0x0035B24C
 	private UniTask CreateEndlessWaveTipsPanel()
 	{
 		SurvivorsRogueMainViewProxy.<CreateEndlessWaveTipsPanel>d__34 <CreateEndlessWaveTipsPanel>d__;
@@ -255,7 +255,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreateEndlessWaveTipsPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E207 RID: 57863 RVA: 0x00351660 File Offset: 0x0034F860
+	// Token: 0x0600B624 RID: 46628 RVA: 0x0035D090 File Offset: 0x0035B290
 	private UniTask CreatePopUpWaveTipsPanel()
 	{
 		SurvivorsRogueMainViewProxy.<CreatePopUpWaveTipsPanel>d__35 <CreatePopUpWaveTipsPanel>d__;
@@ -266,7 +266,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreatePopUpWaveTipsPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E208 RID: 57864 RVA: 0x003516A4 File Offset: 0x0034F8A4
+	// Token: 0x0600B625 RID: 46629 RVA: 0x0035D0D4 File Offset: 0x0035B2D4
 	private UniTask CreateWaveCompleteTipsPanel()
 	{
 		SurvivorsRogueMainViewProxy.<CreateWaveCompleteTipsPanel>d__36 <CreateWaveCompleteTipsPanel>d__;
@@ -277,7 +277,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreateWaveCompleteTipsPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E209 RID: 57865 RVA: 0x003516E8 File Offset: 0x0034F8E8
+	// Token: 0x0600B626 RID: 46630 RVA: 0x0035D118 File Offset: 0x0035B318
 	private UniTask CreatePlayerTrackedMarkerPanel()
 	{
 		SurvivorsRogueMainViewProxy.<CreatePlayerTrackedMarkerPanel>d__37 <CreatePlayerTrackedMarkerPanel>d__;
@@ -288,7 +288,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreatePlayerTrackedMarkerPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E20A RID: 57866 RVA: 0x0035172C File Offset: 0x0034F92C
+	// Token: 0x0600B627 RID: 46631 RVA: 0x0035D15C File Offset: 0x0035B35C
 	private UniTask CreateRoleStatePanel()
 	{
 		SurvivorsRogueMainViewProxy.<CreateRoleStatePanel>d__38 <CreateRoleStatePanel>d__;
@@ -299,7 +299,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreateRoleStatePanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E20B RID: 57867 RVA: 0x00351770 File Offset: 0x0034F970
+	// Token: 0x0600B628 RID: 46632 RVA: 0x0035D1A0 File Offset: 0x0035B3A0
 	private UniTask CreateFightInfoPanel()
 	{
 		SurvivorsRogueMainViewProxy.<CreateFightInfoPanel>d__39 <CreateFightInfoPanel>d__;
@@ -310,7 +310,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreateFightInfoPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E20C RID: 57868 RVA: 0x003517B4 File Offset: 0x0034F9B4
+	// Token: 0x0600B629 RID: 46633 RVA: 0x0035D1E4 File Offset: 0x0035B3E4
 	private UniTask CreateMobileSkillPanel()
 	{
 		SurvivorsRogueMainViewProxy.<CreateMobileSkillPanel>d__40 <CreateMobileSkillPanel>d__;
@@ -321,7 +321,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreateMobileSkillPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E20D RID: 57869 RVA: 0x003517F8 File Offset: 0x0034F9F8
+	// Token: 0x0600B62A RID: 46634 RVA: 0x0035D228 File Offset: 0x0035B428
 	private UniTask CreateDesktopSkillPanel()
 	{
 		SurvivorsRogueMainViewProxy.<CreateDesktopSkillPanel>d__41 <CreateDesktopSkillPanel>d__;
@@ -332,7 +332,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreateDesktopSkillPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E20E RID: 57870 RVA: 0x0035183C File Offset: 0x0034FA3C
+	// Token: 0x0600B62B RID: 46635 RVA: 0x0035D26C File Offset: 0x0035B46C
 	private UniTask CreateMobileSkillPanelInner()
 	{
 		SurvivorsRogueMainViewProxy.<CreateMobileSkillPanelInner>d__42 <CreateMobileSkillPanelInner>d__;
@@ -343,7 +343,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreateMobileSkillPanelInner>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E20F RID: 57871 RVA: 0x00351880 File Offset: 0x0034FA80
+	// Token: 0x0600B62C RID: 46636 RVA: 0x0035D2B0 File Offset: 0x0035B4B0
 	private UniTask CreateDesktopSkillPanelInner()
 	{
 		SurvivorsRogueMainViewProxy.<CreateDesktopSkillPanelInner>d__43 <CreateDesktopSkillPanelInner>d__;
@@ -354,7 +354,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreateDesktopSkillPanelInner>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E210 RID: 57872 RVA: 0x003518C4 File Offset: 0x0034FAC4
+	// Token: 0x0600B62D RID: 46637 RVA: 0x0035D2F4 File Offset: 0x0035B4F4
 	private UniTask CreateBossTrackedMarkerPanel(int entityId)
 	{
 		SurvivorsRogueMainViewProxy.<CreateBossTrackedMarkerPanel>d__44 <CreateBossTrackedMarkerPanel>d__;
@@ -366,25 +366,25 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		return <CreateBossTrackedMarkerPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E211 RID: 57873 RVA: 0x0035190F File Offset: 0x0034FB0F
+	// Token: 0x0600B62E RID: 46638 RVA: 0x0035D33F File Offset: 0x0035B53F
 	private void SwitchWaveTipsState(int state)
 	{
 		this.UpdateWaveTipsByState(state);
 	}
 
-	// Token: 0x0600E212 RID: 57874 RVA: 0x00351918 File Offset: 0x0034FB18
+	// Token: 0x0600B62F RID: 46639 RVA: 0x0035D348 File Offset: 0x0035B548
 	private void ShowBonusWaveTips()
 	{
 		this.BonusWaveTips.ShowTips();
 	}
 
-	// Token: 0x0600E213 RID: 57875 RVA: 0x00351925 File Offset: 0x0034FB25
+	// Token: 0x0600B630 RID: 46640 RVA: 0x0035D355 File Offset: 0x0035B555
 	private void ShowEndlessWaveTips()
 	{
 		this.EndlessWaveTips.ShowTips();
 	}
 
-	// Token: 0x0600E214 RID: 57876 RVA: 0x00351934 File Offset: 0x0034FB34
+	// Token: 0x0600B631 RID: 46641 RVA: 0x0035D364 File Offset: 0x0035B564
 	private void OnBossTrackedMarkerUpdate(int entityId, bool isAdd)
 	{
 		if (isAdd)
@@ -400,13 +400,13 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E215 RID: 57877 RVA: 0x00351974 File Offset: 0x0034FB74
+	// Token: 0x0600B632 RID: 46642 RVA: 0x0035D3A4 File Offset: 0x0035B5A4
 	private void OnPlayerEntityCreated()
 	{
 		this.PlayerTrackedMarker.ShowTips();
 	}
 
-	// Token: 0x0600E216 RID: 57878 RVA: 0x00351984 File Offset: 0x0034FB84
+	// Token: 0x0600B633 RID: 46643 RVA: 0x0035D3B4 File Offset: 0x0035B5B4
 	public void UpdateWaveTipsByState(int state)
 	{
 		this.CurTipsState = state;
@@ -457,7 +457,7 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E217 RID: 57879 RVA: 0x00351B2C File Offset: 0x0034FD2C
+	// Token: 0x0600B634 RID: 46644 RVA: 0x0035D55C File Offset: 0x0035B75C
 	private void CleanAllBossTrackedMarker()
 	{
 		if (this.BossTrackedMarkerMap.Count == 0)
@@ -472,51 +472,51 @@ public class SurvivorsRogueMainViewProxy : GameMainViewProxy
 		this.BossTrackedMarkerMap.Clear();
 	}
 
-	// Token: 0x04006884 RID: 26756
+	// Token: 0x04006963 RID: 26979
 	protected Dictionary<Type, UiPanelBase> SurvivorsRogueChildPanelMap = new Dictionary<Type, UiPanelBase>();
 
-	// Token: 0x04006885 RID: 26757
+	// Token: 0x04006964 RID: 26980
 	public SurvivorsRogueRoleStatePanel RoleStatePanel;
 
-	// Token: 0x04006886 RID: 26758
+	// Token: 0x04006965 RID: 26981
 	public SurvivorsRogueFightInfoPanel FightInfoPanel;
 
-	// Token: 0x04006887 RID: 26759
+	// Token: 0x04006966 RID: 26982
 	public SurvivorsRogueTipsPanelBase BonusWaveTips;
 
-	// Token: 0x04006888 RID: 26760
+	// Token: 0x04006967 RID: 26983
 	public SurvivorsRoguePopUpWaveTipsPanel PopUpWaveTips;
 
-	// Token: 0x04006889 RID: 26761
+	// Token: 0x04006968 RID: 26984
 	[Nullable(2)]
 	public SurvivorsRogueSkillPanel MobileSkillPanel;
 
-	// Token: 0x0400688A RID: 26762
+	// Token: 0x04006969 RID: 26985
 	[Nullable(2)]
 	public SurvivorsRogueSkillPanel DesktopSkillPanel;
 
-	// Token: 0x0400688B RID: 26763
+	// Token: 0x0400696A RID: 26986
 	public SurvivorsRogueResidentWaveTipsPanel ResidentWaveTips;
 
-	// Token: 0x0400688C RID: 26764
+	// Token: 0x0400696B RID: 26987
 	public SurvivorsRogueTipsPanelBase EndlessWaveTips;
 
-	// Token: 0x0400688D RID: 26765
+	// Token: 0x0400696C RID: 26988
 	public SurvivorsRogueCountDownTipsPanel CountDownTips;
 
-	// Token: 0x0400688E RID: 26766
+	// Token: 0x0400696D RID: 26989
 	public SurvivorsRogueTipsPanelBase WaveCompleteTips;
 
-	// Token: 0x0400688F RID: 26767
+	// Token: 0x0400696E RID: 26990
 	private readonly Dictionary<int, SurvivorsRogueBossTrackedMarker> BossTrackedMarkerMap = new Dictionary<int, SurvivorsRogueBossTrackedMarker>();
 
-	// Token: 0x04006890 RID: 26768
+	// Token: 0x0400696F RID: 26991
 	private SurvivorsRoguePlayerTrackerMarker PlayerTrackedMarker;
 
-	// Token: 0x04006891 RID: 26769
+	// Token: 0x04006970 RID: 26992
 	[Nullable(2)]
 	private AUIContainerActor ScreenEffectFightRoot;
 
-	// Token: 0x04006892 RID: 26770
+	// Token: 0x04006971 RID: 26993
 	private int CurTipsState;
 }

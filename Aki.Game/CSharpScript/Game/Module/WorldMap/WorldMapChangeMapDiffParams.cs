@@ -3,13 +3,13 @@ using CSharpScript.Game.Module.Map.MapDefine;
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x02004799 RID: 18329
+	// Token: 0x020036CA RID: 14026
 	public class WorldMapChangeMapDiffParams
 	{
-		// Token: 0x04019DF0 RID: 105968
+		// Token: 0x040144A0 RID: 83104
 		public int? MapId;
 
-		// Token: 0x04019DF1 RID: 105969
+		// Token: 0x040144A1 RID: 83105
 		public EMapGravityDirection? Gravity;
 	}
 }

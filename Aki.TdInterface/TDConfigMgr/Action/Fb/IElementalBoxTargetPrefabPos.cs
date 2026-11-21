@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002B08 RID: 11016
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DFC RID: 11772
 	public class IElementalBoxTargetPrefabPos : IElementalBoxTargetPosTypeBase
 	{
-		// Token: 0x0600F138 RID: 61752 RVA: 0x0022FC53 File Offset: 0x0022DE53
+		// Token: 0x0600FFEE RID: 65518 RVA: 0x0024D95F File Offset: 0x0024BB5F
 		public static IElementalBoxTargetPrefabPos Create(IElementalBoxTargetPrefabPos? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CEA RID: 19690
-		// (get) Token: 0x0600F139 RID: 61753 RVA: 0x0022FC72 File Offset: 0x0022DE72
+		// Token: 0x170050A4 RID: 20644
+		// (get) Token: 0x0600FFEF RID: 65519 RVA: 0x0024D97E File Offset: 0x0024BB7E
 		public override EElementalBoxTargetPosType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CEB RID: 19691
-		// (get) Token: 0x0600F13A RID: 61754 RVA: 0x0022FC7F File Offset: 0x0022DE7F
+		// Token: 0x170050A5 RID: 20645
+		// (get) Token: 0x0600FFF0 RID: 65520 RVA: 0x0024D98B File Offset: 0x0024BB8B
 		public virtual string TargetKey
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040084A8 RID: 33960
+		// Token: 0x04008BAC RID: 35756
 		private IElementalBoxTargetPrefabPos Instance;
 	}
 }

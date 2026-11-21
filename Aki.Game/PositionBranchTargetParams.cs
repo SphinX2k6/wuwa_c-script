@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 
-// Token: 0x0200014E RID: 334
+// Token: 0x02000152 RID: 338
 [NullableContext(2)]
 [Nullable(0)]
 internal class PositionBranchTargetParams
 {
-	// Token: 0x0600149B RID: 5275 RVA: 0x0007256C File Offset: 0x0007076C
+	// Token: 0x06001538 RID: 5432 RVA: 0x000779A4 File Offset: 0x00075BA4
 	[NullableContext(1)]
 	public bool RefreshTarget(string blackboardKey, EAnsBranchTargetBlackboardType blackBoardType, string blackBoardSocket)
 	{
@@ -107,7 +107,7 @@ internal class PositionBranchTargetParams
 		return true;
 	}
 
-	// Token: 0x0600149C RID: 5276 RVA: 0x000727C6 File Offset: 0x000709C6
+	// Token: 0x06001539 RID: 5433 RVA: 0x00077BFE File Offset: 0x00075DFE
 	public void Clear()
 	{
 		this.BaseActorComp = null;
@@ -119,35 +119,35 @@ internal class PositionBranchTargetParams
 		this.SocketName = "";
 	}
 
-	// Token: 0x04000EA5 RID: 3749
+	// Token: 0x04000EE8 RID: 3816
 	public BaseActorComponent BaseActorComp;
 
-	// Token: 0x04000EA6 RID: 3750
+	// Token: 0x04000EE9 RID: 3817
 	public BaseUnifiedStateComponent BaseUnifiedComp;
 
-	// Token: 0x04000EA7 RID: 3751
+	// Token: 0x04000EEA RID: 3818
 	public BaseSkillComponent BaseSkillComp;
 
-	// Token: 0x04000EA8 RID: 3752
+	// Token: 0x04000EEB RID: 3819
 	public BaseActorComponent TargetBaseActorComp;
 
-	// Token: 0x04000EA9 RID: 3753
+	// Token: 0x04000EEC RID: 3820
 	public CharacterActorComponent TargetCharActorComp;
 
-	// Token: 0x04000EAA RID: 3754
+	// Token: 0x04000EED RID: 3821
 	public global::Vector TargetPos;
 
-	// Token: 0x04000EAB RID: 3755
+	// Token: 0x04000EEE RID: 3822
 	public float NowTime;
 
-	// Token: 0x04000EAC RID: 3756
+	// Token: 0x04000EEF RID: 3823
 	public float TotalTime;
 
-	// Token: 0x04000EAD RID: 3757
+	// Token: 0x04000EF0 RID: 3824
 	[Nullable(1)]
 	public string SocketName = "";
 
-	// Token: 0x04000EAE RID: 3758
+	// Token: 0x04000EF1 RID: 3825
 	[Nullable(1)]
 	public readonly global::Vector LastLocation = global::Vector.Create();
 }

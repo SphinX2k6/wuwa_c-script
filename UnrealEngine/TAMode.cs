@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020028FB RID: 10491
+	// Token: 0x0200084E RID: 2126
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/TASdkPlugin.TAMode")]
 	public enum TAMode : byte
 	{
-		// Token: 0x040155CB RID: 87499
+		// Token: 0x0400542C RID: 21548
 		NORMAL,
-		// Token: 0x040155CC RID: 87500
+		// Token: 0x0400542D RID: 21549
 		DEBUG,
-		// Token: 0x040155CD RID: 87501
+		// Token: 0x0400542E RID: 21550
 		DEBUG_ONLY,
-		// Token: 0x040155CE RID: 87502
+		// Token: 0x0400542F RID: 21551
 		TAMode_MAX
 	}
 }

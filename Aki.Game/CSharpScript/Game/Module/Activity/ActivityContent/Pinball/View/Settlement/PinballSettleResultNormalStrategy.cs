@@ -7,30 +7,30 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlement
 {
-	// Token: 0x020062F4 RID: 25332
+	// Token: 0x02005272 RID: 21106
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballSettleResultNormalStrategy : PinballSettleResultStrategyBase
 	{
-		// Token: 0x0603FBDB RID: 261083 RVA: 0x00F6C355 File Offset: 0x00F6A555
+		// Token: 0x0603489C RID: 215196 RVA: 0x00EB32B1 File Offset: 0x00EB14B1
 		public override bool GetIsNeedRewardView()
 		{
 			return base.Context.GetOpenParam().IsWin;
 		}
 
-		// Token: 0x0603FBDC RID: 261084 RVA: 0x00F6C367 File Offset: 0x00F6A567
+		// Token: 0x0603489D RID: 215197 RVA: 0x00EB32C3 File Offset: 0x00EB14C3
 		public override bool GetIsNeedDialogView()
 		{
 			return !base.Context.GetOpenParam().IsWin;
 		}
 
-		// Token: 0x0603FBDD RID: 261085 RVA: 0x00F6C37C File Offset: 0x00F6A57C
+		// Token: 0x0603489E RID: 215198 RVA: 0x00EB32D8 File Offset: 0x00EB14D8
 		public override bool GetIsNeedFailTipsView()
 		{
 			return !base.Context.GetOpenParam().IsWin;
 		}
 
-		// Token: 0x0603FBDE RID: 261086 RVA: 0x00F6C391 File Offset: 0x00F6A591
+		// Token: 0x0603489F RID: 215199 RVA: 0x00EB32ED File Offset: 0x00EB14ED
 		public override void RefreshStarLayout()
 		{
 			if (!base.Context.GetOpenParam().IsWin)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			base.Context.ShowStarLayout(base.Context.GetOpenParam().StarInfo);
 		}
 
-		// Token: 0x0603FBDF RID: 261087 RVA: 0x00F6C3C4 File Offset: 0x00F6A5C4
+		// Token: 0x060348A0 RID: 215200 RVA: 0x00EB3320 File Offset: 0x00EB1520
 		public override void RefreshRewards()
 		{
 			if (!base.Context.GetOpenParam().IsWin)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			base.Context.ShowRewards(dropPackagePreviewItemList);
 		}
 
-		// Token: 0x0603FBE0 RID: 261088 RVA: 0x00F6C490 File Offset: 0x00F6A690
+		// Token: 0x060348A1 RID: 215201 RVA: 0x00EB33EC File Offset: 0x00EB15EC
 		public override void RefreshButtons()
 		{
 			base.Context.BindRestartButton();
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			base.Context.BindBackButton();
 		}
 
-		// Token: 0x0603FBE1 RID: 261089 RVA: 0x00F6C507 File Offset: 0x00F6A707
+		// Token: 0x060348A2 RID: 215202 RVA: 0x00EB3463 File Offset: 0x00EB1663
 		public override void OnClickBtnRestart(Action callback)
 		{
 			if (base.Context.GetNeedAdjustFormation())
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			callback();
 		}
 
-		// Token: 0x0603FBE2 RID: 261090 RVA: 0x00F6C52C File Offset: 0x00F6A72C
+		// Token: 0x060348A3 RID: 215203 RVA: 0x00EB3488 File Offset: 0x00EB1688
 		public override void OnClickBtnNext(Action callback)
 		{
 			int levelId = base.Context.GetOpenParam().LevelId;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			callback();
 		}
 
-		// Token: 0x0603FBE3 RID: 261091 RVA: 0x00F6C5F7 File Offset: 0x00F6A7F7
+		// Token: 0x060348A4 RID: 215204 RVA: 0x00EB3553 File Offset: 0x00EB1753
 		public override void OnClickBtnBack(Action callback)
 		{
 			PinballController.Instance.OpenLevelView(base.Context.GetOpenParam().LevelId, true).Forget<bool>();

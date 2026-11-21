@@ -11,18 +11,18 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FF5 RID: 20469
+	// Token: 0x02003FBF RID: 16319
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotFormationMemory : IStaticVariableResetter
 	{
-		// Token: 0x060345CF RID: 214479 RVA: 0x00C4D9FF File Offset: 0x00C4BBFF
+		// Token: 0x0602945A RID: 169050 RVA: 0x00B97A5F File Offset: 0x00B95C5F
 		static PlotFormationMemory()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlotFormationMemory.CreateStaticDefaultValue), new Action(PlotFormationMemory.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060345D0 RID: 214480 RVA: 0x00C4DA20 File Offset: 0x00C4BC20
+		// Token: 0x0602945B RID: 169051 RVA: 0x00B97A80 File Offset: 0x00B95C80
 		public unsafe void Enter(PlotInfo plotInfo)
 		{
 			if (!PlotFormationMemory.ForceEnableForGm)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Plot
 			}, 15000, true, false);
 		}
 
-		// Token: 0x060345D1 RID: 214481 RVA: 0x00C4DBEC File Offset: 0x00C4BDEC
+		// Token: 0x0602945C RID: 169052 RVA: 0x00B97C4C File Offset: 0x00B95E4C
 		private unsafe void ExecuteShrink(SceneTeamItem keepItem)
 		{
 			long creatureDataId = keepItem.GetCreatureDataId();
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Plot
 			instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x060345D2 RID: 214482 RVA: 0x00C4DE1C File Offset: 0x00C4C01C
+		// Token: 0x0602945D RID: 169053 RVA: 0x00B97E7C File Offset: 0x00B9607C
 		public void EnsureMaskBeforePlotEnd()
 		{
 			if (!PlotModel.Instance.IsFormationMemoryOptimized || !PlotModel.Instance.FormationMemoryNeedMask)
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.TryOpenMask(true, "PlotFormationMemory.BeforePlotEnd");
 		}
 
-		// Token: 0x060345D3 RID: 214483 RVA: 0x00C4DE44 File Offset: 0x00C4C044
+		// Token: 0x0602945E RID: 169054 RVA: 0x00B97EA4 File Offset: 0x00B960A4
 		public void Restore()
 		{
 			if (this.EnterWaitTask != null)
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Plot
 			}, 0);
 		}
 
-		// Token: 0x060345D4 RID: 214484 RVA: 0x00C4DF08 File Offset: 0x00C4C108
+		// Token: 0x0602945F RID: 169055 RVA: 0x00B97F68 File Offset: 0x00B96168
 		[NullableContext(2)]
 		private unsafe void OnRestoreResponse(SceneGroupDataAndCurFormationEntityResponse response)
 		{
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.Plot
 			global::Log.Instance.Info(ELogModule.Plot, ELogAuthor.YZH, "[编队内存优化] 还原编队完成", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060345D5 RID: 214485 RVA: 0x00C4E150 File Offset: 0x00C4C350
+		// Token: 0x06029460 RID: 169056 RVA: 0x00B981B0 File Offset: 0x00B963B0
 		private void FinishRestore(string reason)
 		{
 			if (this.RestoreFinished)
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.Module.Plot
 			PlotModel.Instance.FormationMemoryNeedMask = false;
 		}
 
-		// Token: 0x060345D6 RID: 214486 RVA: 0x00C4E190 File Offset: 0x00C4C390
+		// Token: 0x06029461 RID: 169057 RVA: 0x00B981F0 File Offset: 0x00B963F0
 		[NullableContext(0)]
 		private UniTask WaitTeamLoadedThenCloseMask(UniTask<bool> loadPromise)
 		{
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.Module.Plot
 			return <WaitTeamLoadedThenCloseMask>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060345D7 RID: 214487 RVA: 0x00C4E1DC File Offset: 0x00C4C3DC
+		// Token: 0x06029462 RID: 169058 RVA: 0x00B9823C File Offset: 0x00B9643C
 		private List<IUpdatePlayerParams> ConvertToUpdatePlayerParams(IList<PlayerSceneGroupDataList> dataList)
 		{
 			List<IUpdatePlayerParams> list = new List<IUpdatePlayerParams>();
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Module.Plot
 			return list;
 		}
 
-		// Token: 0x060345D8 RID: 214488 RVA: 0x00C4E388 File Offset: 0x00C4C588
+		// Token: 0x06029463 RID: 169059 RVA: 0x00B983E8 File Offset: 0x00B965E8
 		private bool NeedBlackScreen(PlotInfo plotInfo)
 		{
 			if (PlotFormationMemory.ForceEnableForGm)
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.Module.Plot
 			return programSpecialProcess != null && programSpecialProcess.IsOpenBlackScreen.GetValueOrDefault();
 		}
 
-		// Token: 0x060345D9 RID: 214489 RVA: 0x00C4E3B8 File Offset: 0x00C4C5B8
+		// Token: 0x06029464 RID: 169060 RVA: 0x00B98418 File Offset: 0x00B96618
 		private void TryOpenMask(bool needMask, string context)
 		{
 			if (!needMask || this.MaskOpened)
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.Module.Plot
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x060345DA RID: 214490 RVA: 0x00C4E41C File Offset: 0x00C4C61C
+		// Token: 0x06029465 RID: 169061 RVA: 0x00B9847C File Offset: 0x00B9667C
 		private void TryCloseMask(string context)
 		{
 			if (!this.MaskOpened)
@@ -405,44 +405,44 @@ namespace CSharpScript.Game.Module.Plot
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x060345DB RID: 214491 RVA: 0x00C4E476 File Offset: 0x00C4C676
+		// Token: 0x06029466 RID: 169062 RVA: 0x00B984D6 File Offset: 0x00B966D6
 		public static void CreateStaticDefaultValue()
 		{
 			PlotFormationMemory.ForceEnableForGm = false;
 			PlotFormationMemory.IgnoreLowMemoryForGm = false;
 		}
 
-		// Token: 0x060345DC RID: 214492 RVA: 0x00C4E484 File Offset: 0x00C4C684
+		// Token: 0x06029467 RID: 169063 RVA: 0x00B984E4 File Offset: 0x00B966E4
 		public static void ResetStaticDefaultValue()
 		{
 			PlotFormationMemory.ForceEnableForGm = false;
 			PlotFormationMemory.IgnoreLowMemoryForGm = false;
 		}
 
-		// Token: 0x0401BDBD RID: 114109
+		// Token: 0x04016799 RID: 92057
 		public static bool ForceEnableForGm;
 
-		// Token: 0x0401BDBE RID: 114110
+		// Token: 0x0401679A RID: 92058
 		public static bool IgnoreLowMemoryForGm;
 
-		// Token: 0x0401BDBF RID: 114111
+		// Token: 0x0401679B RID: 92059
 		private const float RESTORE_MASK_TIMEOUT_MS = 15000f;
 
-		// Token: 0x0401BDC0 RID: 114112
+		// Token: 0x0401679C RID: 92060
 		private const int ENTER_WAIT_ENTITY_TIMEOUT_MS = 15000;
 
-		// Token: 0x0401BDC1 RID: 114113
+		// Token: 0x0401679D RID: 92061
 		private bool MaskOpened;
 
-		// Token: 0x0401BDC2 RID: 114114
+		// Token: 0x0401679E RID: 92062
 		[Nullable(2)]
 		private TimerHandle RestoreTimeoutHandle;
 
-		// Token: 0x0401BDC3 RID: 114115
+		// Token: 0x0401679F RID: 92063
 		[Nullable(2)]
 		private WaitEntityTask EnterWaitTask;
 
-		// Token: 0x0401BDC4 RID: 114116
+		// Token: 0x040167A0 RID: 92064
 		private bool RestoreFinished;
 	}
 }

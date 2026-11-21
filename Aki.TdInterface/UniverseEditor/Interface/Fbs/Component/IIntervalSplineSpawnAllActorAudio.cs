@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005485 RID: 21637
+	// Token: 0x02005A0B RID: 23051
 	public struct IIntervalSplineSpawnAllActorAudio : IFlatbufferObject
 	{
-		// Token: 0x17009F54 RID: 40788
-		// (get) Token: 0x060239B1 RID: 145841 RVA: 0x004EC704 File Offset: 0x004EA904
+		// Token: 0x1700A78E RID: 42894
+		// (get) Token: 0x06025A69 RID: 154217 RVA: 0x00529778 File Offset: 0x00527978
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060239B2 RID: 145842 RVA: 0x004EC711 File Offset: 0x004EA911
+		// Token: 0x06025A6A RID: 154218 RVA: 0x00529785 File Offset: 0x00527985
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060239B3 RID: 145843 RVA: 0x004EC718 File Offset: 0x004EA918
+		// Token: 0x06025A6B RID: 154219 RVA: 0x0052978C File Offset: 0x0052798C
 		public static IIntervalSplineSpawnAllActorAudio GetRootAsIIntervalSplineSpawnAllActorAudio(ByteBuffer _bb)
 		{
 			return IIntervalSplineSpawnAllActorAudio.GetRootAsIIntervalSplineSpawnAllActorAudio(_bb, default(IIntervalSplineSpawnAllActorAudio));
 		}
 
-		// Token: 0x060239B4 RID: 145844 RVA: 0x004EC734 File Offset: 0x004EA934
+		// Token: 0x06025A6C RID: 154220 RVA: 0x005297A8 File Offset: 0x005279A8
 		public static IIntervalSplineSpawnAllActorAudio GetRootAsIIntervalSplineSpawnAllActorAudio(ByteBuffer _bb, IIntervalSplineSpawnAllActorAudio obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060239B5 RID: 145845 RVA: 0x004EC751 File Offset: 0x004EA951
+		// Token: 0x06025A6D RID: 154221 RVA: 0x005297C5 File Offset: 0x005279C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060239B6 RID: 145846 RVA: 0x004EC760 File Offset: 0x004EA960
+		// Token: 0x06025A6E RID: 154222 RVA: 0x005297D4 File Offset: 0x005279D4
 		public IIntervalSplineSpawnAllActorAudio __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009F55 RID: 40789
-		// (get) Token: 0x060239B7 RID: 145847 RVA: 0x004EC770 File Offset: 0x004EA970
+		// Token: 0x1700A78F RID: 42895
+		// (get) Token: 0x06025A6F RID: 154223 RVA: 0x005297E4 File Offset: 0x005279E4
 		public EIntervalSplineSpawnAudioConfigType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F56 RID: 40790
-		// (get) Token: 0x060239B8 RID: 145848 RVA: 0x004EC7AC File Offset: 0x004EA9AC
+		// Token: 0x1700A790 RID: 42896
+		// (get) Token: 0x06025A70 RID: 154224 RVA: 0x00529820 File Offset: 0x00527A20
 		public string AkEvent
 		{
 			get
@@ -78,20 +78,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060239B9 RID: 145849 RVA: 0x004EC7E3 File Offset: 0x004EA9E3
+		// Token: 0x06025A71 RID: 154225 RVA: 0x00529857 File Offset: 0x00527A57
 		public Span<byte> GetAkEventBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060239BA RID: 145850 RVA: 0x004EC7F2 File Offset: 0x004EA9F2
+		// Token: 0x06025A72 RID: 154226 RVA: 0x00529866 File Offset: 0x00527A66
 		public byte[] GetAkEventArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x17009F57 RID: 40791
-		// (get) Token: 0x060239BB RID: 145851 RVA: 0x004EC800 File Offset: 0x004EAA00
+		// Token: 0x1700A791 RID: 42897
+		// (get) Token: 0x06025A73 RID: 154227 RVA: 0x00529874 File Offset: 0x00527A74
 		public IVectorInfo? Offset
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060239BC RID: 145852 RVA: 0x004EC85D File Offset: 0x004EAA5D
+		// Token: 0x06025A74 RID: 154228 RVA: 0x005298D1 File Offset: 0x00527AD1
 		public static Offset<IIntervalSplineSpawnAllActorAudio> CreateIIntervalSplineSpawnAllActorAudio(FlatBufferBuilder builder, EIntervalSplineSpawnAudioConfigType Type = EIntervalSplineSpawnAudioConfigType.AllActorAddAudio, StringOffset AkEventOffset = default(StringOffset), Offset<IVectorInfo> OffsetOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(3);
@@ -115,37 +115,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IIntervalSplineSpawnAllActorAudio.EndIIntervalSplineSpawnAllActorAudio(builder);
 		}
 
-		// Token: 0x060239BD RID: 145853 RVA: 0x004EC881 File Offset: 0x004EAA81
+		// Token: 0x06025A75 RID: 154229 RVA: 0x005298F5 File Offset: 0x00527AF5
 		public static void StartIIntervalSplineSpawnAllActorAudio(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060239BE RID: 145854 RVA: 0x004EC88A File Offset: 0x004EAA8A
+		// Token: 0x06025A76 RID: 154230 RVA: 0x005298FE File Offset: 0x00527AFE
 		public static void AddType(FlatBufferBuilder builder, EIntervalSplineSpawnAudioConfigType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060239BF RID: 145855 RVA: 0x004EC895 File Offset: 0x004EAA95
+		// Token: 0x06025A77 RID: 154231 RVA: 0x00529909 File Offset: 0x00527B09
 		public static void AddAkEvent(FlatBufferBuilder builder, StringOffset akEventOffset)
 		{
 			builder.AddOffset(1, akEventOffset.Value, 0);
 		}
 
-		// Token: 0x060239C0 RID: 145856 RVA: 0x004EC8A5 File Offset: 0x004EAAA5
+		// Token: 0x06025A78 RID: 154232 RVA: 0x00529919 File Offset: 0x00527B19
 		public static void AddOffset(FlatBufferBuilder builder, Offset<IVectorInfo> offsetOffset)
 		{
 			builder.AddOffset(2, offsetOffset.Value, 0);
 		}
 
-		// Token: 0x060239C1 RID: 145857 RVA: 0x004EC8B5 File Offset: 0x004EAAB5
+		// Token: 0x06025A79 RID: 154233 RVA: 0x00529929 File Offset: 0x00527B29
 		public static Offset<IIntervalSplineSpawnAllActorAudio> EndIIntervalSplineSpawnAllActorAudio(FlatBufferBuilder builder)
 		{
 			return new Offset<IIntervalSplineSpawnAllActorAudio>(builder.EndTable());
 		}
 
-		// Token: 0x060239C2 RID: 145858 RVA: 0x004EC8C4 File Offset: 0x004EAAC4
+		// Token: 0x06025A7A RID: 154234 RVA: 0x00529938 File Offset: 0x00527B38
 		public IIntervalSplineSpawnAllActorAudioT UnPack()
 		{
 			IIntervalSplineSpawnAllActorAudioT intervalSplineSpawnAllActorAudioT = new IIntervalSplineSpawnAllActorAudioT();
@@ -153,7 +153,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return intervalSplineSpawnAllActorAudioT;
 		}
 
-		// Token: 0x060239C3 RID: 145859 RVA: 0x004EC8E0 File Offset: 0x004EAAE0
+		// Token: 0x06025A7B RID: 154235 RVA: 0x00529954 File Offset: 0x00527B54
 		public void UnPackTo(IIntervalSplineSpawnAllActorAudioT _o)
 		{
 			_o.Type = this.Type;
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.Offset = ((this.Offset != null) ? this.Offset.Value.UnPack() : null);
 		}
 
-		// Token: 0x060239C4 RID: 145860 RVA: 0x004EC934 File Offset: 0x004EAB34
+		// Token: 0x06025A7C RID: 154236 RVA: 0x005299A8 File Offset: 0x00527BA8
 		public static Offset<IIntervalSplineSpawnAllActorAudio> Pack(FlatBufferBuilder builder, IIntervalSplineSpawnAllActorAudioT _o)
 		{
 			if (_o == null)
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IIntervalSplineSpawnAllActorAudio.CreateIIntervalSplineSpawnAllActorAudio(builder, _o.Type, akEventOffset, offsetOffset);
 		}
 
-		// Token: 0x0400E713 RID: 59155
+		// Token: 0x0400F344 RID: 62276
 		private Table __p;
 	}
 }

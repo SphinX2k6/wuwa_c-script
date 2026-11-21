@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02003134 RID: 12596
+// Token: 0x02002690 RID: 9872
 public class AnimNotifyStateSkillRotateStyle
 {
-	// Token: 0x0601B11B RID: 110875 RVA: 0x0075ADB9 File Offset: 0x00758FB9
+	// Token: 0x06018B87 RID: 101255 RVA: 0x0078111F File Offset: 0x0077F31F
 	public void Reset()
 	{
 		this.IsUseAnsRotateOffset = false;
@@ -13,18 +13,18 @@ public class AnimNotifyStateSkillRotateStyle
 		this.IsPaused = false;
 	}
 
-	// Token: 0x0400D292 RID: 53906
+	// Token: 0x0400D6BC RID: 54972
 	public bool IsUseAnsRotateOffset;
 
-	// Token: 0x0400D293 RID: 53907
+	// Token: 0x0400D6BD RID: 54973
 	public float AnsRotateOffset;
 
-	// Token: 0x0400D294 RID: 53908
+	// Token: 0x0400D6BE RID: 54974
 	public float PauseRotateThreshold;
 
-	// Token: 0x0400D295 RID: 53909
+	// Token: 0x0400D6BF RID: 54975
 	public float ResumeRotateThreshold;
 
-	// Token: 0x0400D296 RID: 53910
+	// Token: 0x0400D6C0 RID: 54976
 	public bool IsPaused;
 }

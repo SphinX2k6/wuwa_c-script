@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.DecalShadow
 {
-	// Token: 0x02003DE6 RID: 15846
+	// Token: 0x02003117 RID: 12567
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/DecalShadow/PDA_DecalShadowConfig.PDA_DecalShadowConfig_C")]
 	[UnrealStructLayout(104, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 104)]
 	public class PDA_DecalShadowConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602786C RID: 161900 RVA: 0x00993D9C File Offset: 0x00991F9C
+		// Token: 0x0601EC90 RID: 126096 RVA: 0x0091D3E9 File Offset: 0x0091B5E9
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (PDA_DecalShadowConfig_C._ClassPtr == IntPtr.Zero)
@@ -22,123 +22,123 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.DecalShadow
 			return PDA_DecalShadowConfig_C._ClassPtr;
 		}
 
-		// Token: 0x0602786D RID: 161901 RVA: 0x00993DC0 File Offset: 0x00991FC0
+		// Token: 0x0601EC91 RID: 126097 RVA: 0x0091D410 File Offset: 0x0091B610
 		public PDA_DecalShadowConfig_C() : this(BuiltinUtils.AllocNativeUObject(PDA_DecalShadowConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602786E RID: 161902 RVA: 0x00993DE8 File Offset: 0x00991FE8
+		// Token: 0x0601EC92 RID: 126098 RVA: 0x0091D438 File Offset: 0x0091B638
 		[NullableContext(1)]
 		public PDA_DecalShadowConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(PDA_DecalShadowConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005898 RID: 22680
-		// (get) Token: 0x0602786F RID: 161903 RVA: 0x00993E1B File Offset: 0x0099201B
-		// (set) Token: 0x06027870 RID: 161904 RVA: 0x00993E2F File Offset: 0x0099202F
+		// Token: 0x17003589 RID: 13705
+		// (get) Token: 0x0601EC93 RID: 126099 RVA: 0x0091D46B File Offset: 0x0091B66B
+		// (set) Token: 0x0601EC94 RID: 126100 RVA: 0x0091D47F File Offset: 0x0091B67F
 		[Nullable(2)]
 		public unsafe UMaterialInterface DecalShadowMaterial
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UMaterialInterface>(base.NativePtr / (IntPtr)sizeof(void*) + PDA_DecalShadowConfig_C.__PropertyOffset_0);
+				return BuiltinUtils.ObjectPropertyGetter<UMaterialInterface>(base.NativePtr / (IntPtr)sizeof(void*) + PDA_DecalShadowConfig_C.__PropertyOffset_DecalShadowMaterial);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PDA_DecalShadowConfig_C.__PropertyOffset_0, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PDA_DecalShadowConfig_C.__PropertyOffset_DecalShadowMaterial, value);
 			}
 		}
 
-		// Token: 0x17005899 RID: 22681
-		// (get) Token: 0x06027871 RID: 161905 RVA: 0x00993E44 File Offset: 0x00992044
-		// (set) Token: 0x06027872 RID: 161906 RVA: 0x00993E54 File Offset: 0x00992054
+		// Token: 0x1700358A RID: 13706
+		// (get) Token: 0x0601EC95 RID: 126101 RVA: 0x0091D494 File Offset: 0x0091B694
+		// (set) Token: 0x0601EC96 RID: 126102 RVA: 0x0091D4A4 File Offset: 0x0091B6A4
 		public unsafe float DecalBoxScaleHori
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_DecalBoxScaleHori);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_DecalBoxScaleHori) = value;
 			}
 		}
 
-		// Token: 0x1700589A RID: 22682
-		// (get) Token: 0x06027873 RID: 161907 RVA: 0x00993E65 File Offset: 0x00992065
-		// (set) Token: 0x06027874 RID: 161908 RVA: 0x00993E75 File Offset: 0x00992075
+		// Token: 0x1700358B RID: 13707
+		// (get) Token: 0x0601EC97 RID: 126103 RVA: 0x0091D4B5 File Offset: 0x0091B6B5
+		// (set) Token: 0x0601EC98 RID: 126104 RVA: 0x0091D4C5 File Offset: 0x0091B6C5
 		public unsafe float DecalBoxScaleVerti
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_DecalBoxScaleVerti);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_DecalBoxScaleVerti) = value;
 			}
 		}
 
-		// Token: 0x1700589B RID: 22683
-		// (get) Token: 0x06027875 RID: 161909 RVA: 0x00993E86 File Offset: 0x00992086
-		// (set) Token: 0x06027876 RID: 161910 RVA: 0x00993E96 File Offset: 0x00992096
+		// Token: 0x1700358C RID: 13708
+		// (get) Token: 0x0601EC99 RID: 126105 RVA: 0x0091D4D6 File Offset: 0x0091B6D6
+		// (set) Token: 0x0601EC9A RID: 126106 RVA: 0x0091D4E6 File Offset: 0x0091B6E6
 		public unsafe float ZDistanceFadeFactor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_ZDistanceFadeFactor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_ZDistanceFadeFactor) = value;
 			}
 		}
 
-		// Token: 0x1700589C RID: 22684
-		// (get) Token: 0x06027877 RID: 161911 RVA: 0x00993EA7 File Offset: 0x009920A7
-		// (set) Token: 0x06027878 RID: 161912 RVA: 0x00993EB7 File Offset: 0x009920B7
+		// Token: 0x1700358D RID: 13709
+		// (get) Token: 0x0601EC9B RID: 126107 RVA: 0x0091D4F7 File Offset: 0x0091B6F7
+		// (set) Token: 0x0601EC9C RID: 126108 RVA: 0x0091D507 File Offset: 0x0091B707
 		public unsafe float ZDistanceFadePower
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_ZDistanceFadePower);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)PDA_DecalShadowConfig_C.__PropertyOffset_ZDistanceFadePower) = value;
 			}
 		}
 
-		// Token: 0x06027879 RID: 161913 RVA: 0x00993EC8 File Offset: 0x009920C8
+		// Token: 0x0601EC9D RID: 126109 RVA: 0x0091D518 File Offset: 0x0091B718
 		protected PDA_DecalShadowConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04013FBD RID: 81853
+		// Token: 0x040105B0 RID: 66992
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/DecalShadow/PDA_DecalShadowConfig.PDA_DecalShadowConfig_C";
 
-		// Token: 0x04013FBE RID: 81854
+		// Token: 0x040105B1 RID: 66993
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04013FBF RID: 81855
+		// Token: 0x040105B2 RID: 66994
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04013FC0 RID: 81856
-		internal static int __PropertyOffset_0;
+		// Token: 0x040105B3 RID: 66995
+		internal static int __PropertyOffset_DecalShadowMaterial;
 
-		// Token: 0x04013FC1 RID: 81857
-		internal static int __PropertyOffset_1;
+		// Token: 0x040105B4 RID: 66996
+		internal static int __PropertyOffset_DecalBoxScaleHori;
 
-		// Token: 0x04013FC2 RID: 81858
-		internal static int __PropertyOffset_2;
+		// Token: 0x040105B5 RID: 66997
+		internal static int __PropertyOffset_DecalBoxScaleVerti;
 
-		// Token: 0x04013FC3 RID: 81859
-		internal static int __PropertyOffset_3;
+		// Token: 0x040105B6 RID: 66998
+		internal static int __PropertyOffset_ZDistanceFadeFactor;
 
-		// Token: 0x04013FC4 RID: 81860
-		internal static int __PropertyOffset_4;
+		// Token: 0x040105B7 RID: 66999
+		internal static int __PropertyOffset_ZDistanceFadePower;
 	}
 }

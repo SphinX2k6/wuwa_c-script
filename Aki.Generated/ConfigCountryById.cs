@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001AD RID: 429
+	// Token: 0x020001BF RID: 447
 	public class ConfigCountryById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000A11 RID: 2577 RVA: 0x00092723 File Offset: 0x00090923
+		// Token: 0x06000A7D RID: 2685 RVA: 0x0009865B File Offset: 0x0009685B
 		static ConfigCountryById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCountryById.CreateStaticDefaultValue), new Action(ConfigCountryById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A12 RID: 2578 RVA: 0x00092744 File Offset: 0x00090944
+		// Token: 0x06000A7E RID: 2686 RVA: 0x0009867C File Offset: 0x0009687C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCountryById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000A13 RID: 2579 RVA: 0x000927C3 File Offset: 0x000909C3
+		// Token: 0x06000A7F RID: 2687 RVA: 0x000986FB File Offset: 0x000968FB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCountryById.LogPair = null;
 			ConfigCountryById.HandleId = 0;
 		}
 
-		// Token: 0x06000A14 RID: 2580 RVA: 0x000927D1 File Offset: 0x000909D1
+		// Token: 0x06000A80 RID: 2688 RVA: 0x00098709 File Offset: 0x00096909
 		public static void Init()
 		{
 			ConfigCountryById.HandleId = ConfigCommon.InitDataStatement(ConfigCountryById.HandleId, "db_influence.db", "select BinData from `Country` where Id=?");
 		}
 
-		// Token: 0x06000A15 RID: 2581 RVA: 0x000927EC File Offset: 0x000909EC
+		// Token: 0x06000A81 RID: 2689 RVA: 0x00098724 File Offset: 0x00096924
 		public static Country? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCountryById.HandleId, ConfigCountryById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Country?(rootAsCountry);
 		}
 
-		// Token: 0x04000B9F RID: 2975
+		// Token: 0x04000C1D RID: 3101
 		private const string DB = "db_influence.db";
 
-		// Token: 0x04000BA0 RID: 2976
+		// Token: 0x04000C1E RID: 3102
 		private const string FILE = "s.势力.xlsx";
 
-		// Token: 0x04000BA1 RID: 2977
+		// Token: 0x04000C1F RID: 3103
 		private const string TABLE = "Country";
 
-		// Token: 0x04000BA2 RID: 2978
+		// Token: 0x04000C20 RID: 3104
 		private const string COMMAND = "select BinData from `Country` where Id=?";
 
-		// Token: 0x04000BA3 RID: 2979
+		// Token: 0x04000C21 RID: 3105
 		private const string KEY_PREFIX = "CountryById";
 
-		// Token: 0x04000BA4 RID: 2980
+		// Token: 0x04000C22 RID: 3106
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000BA5 RID: 2981
+		// Token: 0x04000C23 RID: 3107
 		private static int HandleId;
 	}
 }

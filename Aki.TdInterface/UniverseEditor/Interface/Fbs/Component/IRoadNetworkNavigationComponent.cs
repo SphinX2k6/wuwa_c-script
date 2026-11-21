@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200586D RID: 22637
+	// Token: 0x02005E7A RID: 24186
 	public struct IRoadNetworkNavigationComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A953 RID: 43347
-		// (get) Token: 0x06026246 RID: 156230 RVA: 0x005426FE File Offset: 0x005408FE
+		// Token: 0x1700B283 RID: 45699
+		// (get) Token: 0x060287A8 RID: 165800 RVA: 0x0058924A File Offset: 0x0058744A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026247 RID: 156231 RVA: 0x0054270B File Offset: 0x0054090B
+		// Token: 0x060287A9 RID: 165801 RVA: 0x00589257 File Offset: 0x00587457
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026248 RID: 156232 RVA: 0x00542714 File Offset: 0x00540914
+		// Token: 0x060287AA RID: 165802 RVA: 0x00589260 File Offset: 0x00587460
 		public static IRoadNetworkNavigationComponent GetRootAsIRoadNetworkNavigationComponent(ByteBuffer _bb)
 		{
 			return IRoadNetworkNavigationComponent.GetRootAsIRoadNetworkNavigationComponent(_bb, default(IRoadNetworkNavigationComponent));
 		}
 
-		// Token: 0x06026249 RID: 156233 RVA: 0x00542730 File Offset: 0x00540930
+		// Token: 0x060287AB RID: 165803 RVA: 0x0058927C File Offset: 0x0058747C
 		public static IRoadNetworkNavigationComponent GetRootAsIRoadNetworkNavigationComponent(ByteBuffer _bb, IRoadNetworkNavigationComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602624A RID: 156234 RVA: 0x0054274D File Offset: 0x0054094D
+		// Token: 0x060287AC RID: 165804 RVA: 0x00589299 File Offset: 0x00587499
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602624B RID: 156235 RVA: 0x0054275C File Offset: 0x0054095C
+		// Token: 0x060287AD RID: 165805 RVA: 0x005892A8 File Offset: 0x005874A8
 		public IRoadNetworkNavigationComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A954 RID: 43348
-		// (get) Token: 0x0602624C RID: 156236 RVA: 0x0054276C File Offset: 0x0054096C
+		// Token: 0x1700B284 RID: 45700
+		// (get) Token: 0x060287AE RID: 165806 RVA: 0x005892B8 File Offset: 0x005874B8
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A955 RID: 43349
-		// (get) Token: 0x0602624D RID: 156237 RVA: 0x005427AC File Offset: 0x005409AC
+		// Token: 0x1700B285 RID: 45701
+		// (get) Token: 0x060287AF RID: 165807 RVA: 0x005892F8 File Offset: 0x005874F8
 		public bool KeepSelf
 		{
 			get
@@ -69,8 +69,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A956 RID: 43350
-		// (get) Token: 0x0602624E RID: 156238 RVA: 0x005427EC File Offset: 0x005409EC
+		// Token: 0x1700B286 RID: 45702
+		// (get) Token: 0x060287B0 RID: 165808 RVA: 0x00589338 File Offset: 0x00587538
 		public ITrafficNavigationConfig? BasicConfig
 		{
 			get
@@ -84,8 +84,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A957 RID: 43351
-		// (get) Token: 0x0602624F RID: 156239 RVA: 0x0054284C File Offset: 0x00540A4C
+		// Token: 0x1700B287 RID: 45703
+		// (get) Token: 0x060287B1 RID: 165809 RVA: 0x00589398 File Offset: 0x00587598
 		public IObstacleDetectionConfig? ObstacleConfig
 		{
 			get
@@ -99,8 +99,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A958 RID: 43352
-		// (get) Token: 0x06026250 RID: 156240 RVA: 0x005428AC File Offset: 0x00540AAC
+		// Token: 0x1700B288 RID: 45704
+		// (get) Token: 0x060287B2 RID: 165810 RVA: 0x005893F8 File Offset: 0x005875F8
 		public byte NullMask
 		{
 			get
@@ -114,7 +114,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026251 RID: 156241 RVA: 0x005428E9 File Offset: 0x00540AE9
+		// Token: 0x060287B3 RID: 165811 RVA: 0x00589435 File Offset: 0x00587635
 		public static Offset<IRoadNetworkNavigationComponent> CreateIRoadNetworkNavigationComponent(FlatBufferBuilder builder, bool Disabled = false, bool KeepSelf = false, Offset<ITrafficNavigationConfig> BasicConfigOffset = default(Offset<ITrafficNavigationConfig>), Offset<IObstacleDetectionConfig> ObstacleConfigOffset = default(Offset<IObstacleDetectionConfig>), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -126,49 +126,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRoadNetworkNavigationComponent.EndIRoadNetworkNavigationComponent(builder);
 		}
 
-		// Token: 0x06026252 RID: 156242 RVA: 0x0054291D File Offset: 0x00540B1D
+		// Token: 0x060287B4 RID: 165812 RVA: 0x00589469 File Offset: 0x00587669
 		public static void StartIRoadNetworkNavigationComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06026253 RID: 156243 RVA: 0x00542926 File Offset: 0x00540B26
+		// Token: 0x060287B5 RID: 165813 RVA: 0x00589472 File Offset: 0x00587672
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06026254 RID: 156244 RVA: 0x00542931 File Offset: 0x00540B31
+		// Token: 0x060287B6 RID: 165814 RVA: 0x0058947D File Offset: 0x0058767D
 		public static void AddKeepSelf(FlatBufferBuilder builder, bool keepSelf)
 		{
 			builder.AddBool(1, keepSelf, false);
 		}
 
-		// Token: 0x06026255 RID: 156245 RVA: 0x0054293C File Offset: 0x00540B3C
+		// Token: 0x060287B7 RID: 165815 RVA: 0x00589488 File Offset: 0x00587688
 		public static void AddBasicConfig(FlatBufferBuilder builder, Offset<ITrafficNavigationConfig> basicConfigOffset)
 		{
 			builder.AddOffset(2, basicConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06026256 RID: 156246 RVA: 0x0054294C File Offset: 0x00540B4C
+		// Token: 0x060287B8 RID: 165816 RVA: 0x00589498 File Offset: 0x00587698
 		public static void AddObstacleConfig(FlatBufferBuilder builder, Offset<IObstacleDetectionConfig> obstacleConfigOffset)
 		{
 			builder.AddOffset(3, obstacleConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06026257 RID: 156247 RVA: 0x0054295C File Offset: 0x00540B5C
+		// Token: 0x060287B9 RID: 165817 RVA: 0x005894A8 File Offset: 0x005876A8
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06026258 RID: 156248 RVA: 0x00542967 File Offset: 0x00540B67
+		// Token: 0x060287BA RID: 165818 RVA: 0x005894B3 File Offset: 0x005876B3
 		public static Offset<IRoadNetworkNavigationComponent> EndIRoadNetworkNavigationComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IRoadNetworkNavigationComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06026259 RID: 156249 RVA: 0x00542974 File Offset: 0x00540B74
+		// Token: 0x060287BB RID: 165819 RVA: 0x005894C0 File Offset: 0x005876C0
 		public IRoadNetworkNavigationComponentT UnPack()
 		{
 			IRoadNetworkNavigationComponentT roadNetworkNavigationComponentT = new IRoadNetworkNavigationComponentT();
@@ -176,7 +176,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return roadNetworkNavigationComponentT;
 		}
 
-		// Token: 0x0602625A RID: 156250 RVA: 0x00542990 File Offset: 0x00540B90
+		// Token: 0x060287BC RID: 165820 RVA: 0x005894DC File Offset: 0x005876DC
 		public void UnPackTo(IRoadNetworkNavigationComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -186,7 +186,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602625B RID: 156251 RVA: 0x00542A20 File Offset: 0x00540C20
+		// Token: 0x060287BD RID: 165821 RVA: 0x0058956C File Offset: 0x0058776C
 		public static Offset<IRoadNetworkNavigationComponent> Pack(FlatBufferBuilder builder, IRoadNetworkNavigationComponentT _o)
 		{
 			if (_o == null)
@@ -198,7 +198,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRoadNetworkNavigationComponent.CreateIRoadNetworkNavigationComponent(builder, _o.Disabled, _o.KeepSelf, basicConfigOffset, obstacleConfigOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400EDB1 RID: 60849
+		// Token: 0x0400FAA4 RID: 64164
 		private Table __p;
 	}
 }

@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063E8 RID: 25576
+	// Token: 0x02006A68 RID: 27240
 	public enum IClientSetPlayerOperationRestriction_Union : byte
 	{
-		// Token: 0x040109CA RID: 68042
+		// Token: 0x040117F0 RID: 71664
 		NONE,
-		// Token: 0x040109CB RID: 68043
+		// Token: 0x040117F1 RID: 71665
 		IClientSetPlayerOperationRestriction,
-		// Token: 0x040109CC RID: 68044
+		// Token: 0x040117F2 RID: 71666
 		IClientEnableAllPlayerOperation,
-		// Token: 0x040109CD RID: 68045
+		// Token: 0x040117F3 RID: 71667
 		IClientDisableAllPlayerOperation,
-		// Token: 0x040109CE RID: 68046
+		// Token: 0x040117F4 RID: 71668
 		IClientDisableModulePlayerOperation
 	}
 }

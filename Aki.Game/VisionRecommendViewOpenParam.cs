@@ -1,33 +1,33 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020024ED RID: 9453
+// Token: 0x020019D4 RID: 6612
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionRecommendViewOpenParam : IVisionRecommendViewOpenParam
 {
-	// Token: 0x170018BD RID: 6333
-	// (get) Token: 0x0601302F RID: 77871 RVA: 0x004B5351 File Offset: 0x004B3551
-	// (set) Token: 0x06013030 RID: 77872 RVA: 0x004B5359 File Offset: 0x004B3559
+	// Token: 0x170018F7 RID: 6391
+	// (get) Token: 0x060104EE RID: 66798 RVA: 0x004C2FFD File Offset: 0x004C11FD
+	// (set) Token: 0x060104EF RID: 66799 RVA: 0x004C3005 File Offset: 0x004C1205
 	public int RoleId { get; set; }
 
-	// Token: 0x170018BE RID: 6334
-	// (get) Token: 0x06013031 RID: 77873 RVA: 0x004B5362 File Offset: 0x004B3562
-	// (set) Token: 0x06013032 RID: 77874 RVA: 0x004B536A File Offset: 0x004B356A
+	// Token: 0x170018F8 RID: 6392
+	// (get) Token: 0x060104F0 RID: 66800 RVA: 0x004C300E File Offset: 0x004C120E
+	// (set) Token: 0x060104F1 RID: 66801 RVA: 0x004C3016 File Offset: 0x004C1216
 	public bool IsFromRoleDev { get; set; }
 
-	// Token: 0x170018BF RID: 6335
-	// (get) Token: 0x06013033 RID: 77875 RVA: 0x004B5373 File Offset: 0x004B3573
-	// (set) Token: 0x06013034 RID: 77876 RVA: 0x004B537B File Offset: 0x004B357B
+	// Token: 0x170018F9 RID: 6393
+	// (get) Token: 0x060104F2 RID: 66802 RVA: 0x004C301F File Offset: 0x004C121F
+	// (set) Token: 0x060104F3 RID: 66803 RVA: 0x004C3027 File Offset: 0x004C1227
 	public Action<int, int, int?> SuccessCallBack { get; set; }
 
-	// Token: 0x170018C0 RID: 6336
-	// (get) Token: 0x06013035 RID: 77877 RVA: 0x004B5384 File Offset: 0x004B3584
-	// (set) Token: 0x06013036 RID: 77878 RVA: 0x004B538C File Offset: 0x004B358C
+	// Token: 0x170018FA RID: 6394
+	// (get) Token: 0x060104F4 RID: 66804 RVA: 0x004C3030 File Offset: 0x004C1230
+	// (set) Token: 0x060104F5 RID: 66805 RVA: 0x004C3038 File Offset: 0x004C1238
 	public Func<int, int> GetSelectedPlanIdCallBack { get; set; }
 
-	// Token: 0x170018C1 RID: 6337
-	// (get) Token: 0x06013037 RID: 77879 RVA: 0x004B5395 File Offset: 0x004B3595
-	// (set) Token: 0x06013038 RID: 77880 RVA: 0x004B539D File Offset: 0x004B359D
+	// Token: 0x170018FB RID: 6395
+	// (get) Token: 0x060104F6 RID: 66806 RVA: 0x004C3041 File Offset: 0x004C1241
+	// (set) Token: 0x060104F7 RID: 66807 RVA: 0x004C3049 File Offset: 0x004C1249
 	public Func<int, int> GetSelectedFirstVisionMonsterIdCallBack { get; set; }
 }

@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067D0 RID: 26576
+	// Token: 0x02005720 RID: 22304
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlOutBackpackItemData : DangoBrawlItemBase
 	{
-		// Token: 0x060422FF RID: 271103 RVA: 0x0100CE71 File Offset: 0x0100B071
+		// Token: 0x06036E55 RID: 224853 RVA: 0x00F4E23D File Offset: 0x00F4C43D
 		public DangoBrawlOutBackpackItemData(int configId) : this(0, configId, EDangoBrawlRotate.Direction0)
 		{
 		}
 
-		// Token: 0x06042300 RID: 271104 RVA: 0x0100CE7C File Offset: 0x0100B07C
+		// Token: 0x06036E56 RID: 224854 RVA: 0x00F4E248 File Offset: 0x00F4C448
 		public DangoBrawlOutBackpackItemData(int uid, int configId, EDangoBrawlRotate rotate = EDangoBrawlRotate.Direction0) : base(uid, configId)
 		{
 			this.RotateInternal = rotate;
@@ -21,9 +21,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.StarPanelPosListInternal = DangoBrawlUtil.RotateStarPanelPosList(configId, rotate);
 		}
 
-		// Token: 0x170096EE RID: 38638
-		// (get) Token: 0x06042301 RID: 271105 RVA: 0x0100CEB4 File Offset: 0x0100B0B4
-		// (set) Token: 0x06042302 RID: 271106 RVA: 0x0100CEBC File Offset: 0x0100B0BC
+		// Token: 0x17006A2F RID: 27183
+		// (get) Token: 0x06036E57 RID: 224855 RVA: 0x00F4E280 File Offset: 0x00F4C480
+		// (set) Token: 0x06036E58 RID: 224856 RVA: 0x00F4E288 File Offset: 0x00F4C488
 		public PanelPos LeftTopPos
 		{
 			get
@@ -36,8 +36,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096EF RID: 38639
-		// (get) Token: 0x06042303 RID: 271107 RVA: 0x0100CEC5 File Offset: 0x0100B0C5
+		// Token: 0x17006A30 RID: 27184
+		// (get) Token: 0x06036E59 RID: 224857 RVA: 0x00F4E291 File Offset: 0x00F4C491
 		public PanelPos[] PanelPosList
 		{
 			get
@@ -46,8 +46,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096F0 RID: 38640
-		// (get) Token: 0x06042304 RID: 271108 RVA: 0x0100CECD File Offset: 0x0100B0CD
+		// Token: 0x17006A31 RID: 27185
+		// (get) Token: 0x06036E5A RID: 224858 RVA: 0x00F4E299 File Offset: 0x00F4C499
 		public PanelPos[] StarPanelPosList
 		{
 			get
@@ -56,9 +56,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096F1 RID: 38641
-		// (get) Token: 0x06042305 RID: 271109 RVA: 0x0100CED5 File Offset: 0x0100B0D5
-		// (set) Token: 0x06042306 RID: 271110 RVA: 0x0100CEDD File Offset: 0x0100B0DD
+		// Token: 0x17006A32 RID: 27186
+		// (get) Token: 0x06036E5B RID: 224859 RVA: 0x00F4E2A1 File Offset: 0x00F4C4A1
+		// (set) Token: 0x06036E5C RID: 224860 RVA: 0x00F4E2A9 File Offset: 0x00F4C4A9
 		public EDangoBrawlRotate Rotate
 		{
 			get
@@ -73,16 +73,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x040228CE RID: 141518
+		// Token: 0x0401D12B RID: 119083
 		private PanelPos LeftTopPosInternal = new PanelPos(0, 0);
 
-		// Token: 0x040228CF RID: 141519
+		// Token: 0x0401D12C RID: 119084
 		private PanelPos[] PanelPosListInternal;
 
-		// Token: 0x040228D0 RID: 141520
+		// Token: 0x0401D12D RID: 119085
 		private PanelPos[] StarPanelPosListInternal;
 
-		// Token: 0x040228D1 RID: 141521
+		// Token: 0x0401D12E RID: 119086
 		private EDangoBrawlRotate RotateInternal;
 	}
 }

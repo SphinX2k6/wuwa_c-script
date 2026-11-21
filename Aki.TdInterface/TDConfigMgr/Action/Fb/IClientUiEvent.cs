@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A48 RID: 10824
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D35 RID: 11573
 	public class IClientUiEvent : IClientEventTarget
 	{
-		// Token: 0x0600EE44 RID: 60996 RVA: 0x0022B20D File Offset: 0x0022940D
+		// Token: 0x0600FCDC RID: 64732 RVA: 0x00248BC1 File Offset: 0x00246DC1
 		public static IClientUiEvent Create(IClientUiEvent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B76 RID: 19318
-		// (get) Token: 0x0600EE45 RID: 60997 RVA: 0x0022B22C File Offset: 0x0022942C
+		// Token: 0x17004F20 RID: 20256
+		// (get) Token: 0x0600FCDD RID: 64733 RVA: 0x00248BE0 File Offset: 0x00246DE0
 		public override EClientEventTarget Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B77 RID: 19319
-		// (get) Token: 0x0600EE46 RID: 60998 RVA: 0x0022B239 File Offset: 0x00229439
+		// Token: 0x17004F21 RID: 20257
+		// (get) Token: 0x0600FCDE RID: 64734 RVA: 0x00248BED File Offset: 0x00246DED
 		public virtual IClientEventUi Ui
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400831E RID: 33566
+		// Token: 0x04008A11 RID: 35345
 		private IClientUiEvent Instance;
 
-		// Token: 0x0400831F RID: 33567
+		// Token: 0x04008A12 RID: 35346
 		private IClientEventUi _UiCache;
 
-		// Token: 0x04008320 RID: 33568
+		// Token: 0x04008A13 RID: 35347
 		private bool _UiInited;
 	}
 }

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006727 RID: 26407
+	// Token: 0x02006DA7 RID: 28071
 	public class IExitMovieModeT
 	{
-		// Token: 0x1700C424 RID: 50212
-		// (get) Token: 0x0602DF04 RID: 188164 RVA: 0x00647C6F File Offset: 0x00645E6F
-		// (set) Token: 0x0602DF05 RID: 188165 RVA: 0x00647C77 File Offset: 0x00645E77
+		// Token: 0x1700CDDA RID: 52698
+		// (get) Token: 0x0603074A RID: 198474 RVA: 0x006953B3 File Offset: 0x006935B3
+		// (set) Token: 0x0603074B RID: 198475 RVA: 0x006953BB File Offset: 0x006935BB
 		public float BorderAnimDuration { get; set; }
 
-		// Token: 0x1700C425 RID: 50213
-		// (get) Token: 0x0602DF06 RID: 188166 RVA: 0x00647C80 File Offset: 0x00645E80
-		// (set) Token: 0x0602DF07 RID: 188167 RVA: 0x00647C88 File Offset: 0x00645E88
+		// Token: 0x1700CDDB RID: 52699
+		// (get) Token: 0x0603074C RID: 198476 RVA: 0x006953C4 File Offset: 0x006935C4
+		// (set) Token: 0x0603074D RID: 198477 RVA: 0x006953CC File Offset: 0x006935CC
 		public TEnterMovieModeDurationTypeUnion DurationType { get; set; }
 
-		// Token: 0x1700C426 RID: 50214
-		// (get) Token: 0x0602DF08 RID: 188168 RVA: 0x00647C91 File Offset: 0x00645E91
-		// (set) Token: 0x0602DF09 RID: 188169 RVA: 0x00647C99 File Offset: 0x00645E99
+		// Token: 0x1700CDDC RID: 52700
+		// (get) Token: 0x0603074E RID: 198478 RVA: 0x006953D5 File Offset: 0x006935D5
+		// (set) Token: 0x0603074F RID: 198479 RVA: 0x006953DD File Offset: 0x006935DD
 		public IMovieModeFadeOutMaskConfigT FadeOutMaskConfig { get; set; }
 
-		// Token: 0x1700C427 RID: 50215
-		// (get) Token: 0x0602DF0A RID: 188170 RVA: 0x00647CA2 File Offset: 0x00645EA2
-		// (set) Token: 0x0602DF0B RID: 188171 RVA: 0x00647CAA File Offset: 0x00645EAA
+		// Token: 0x1700CDDD RID: 52701
+		// (get) Token: 0x06030750 RID: 198480 RVA: 0x006953E6 File Offset: 0x006935E6
+		// (set) Token: 0x06030751 RID: 198481 RVA: 0x006953EE File Offset: 0x006935EE
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602DF0C RID: 188172 RVA: 0x00647CB3 File Offset: 0x00645EB3
+		// Token: 0x06030752 RID: 198482 RVA: 0x006953F7 File Offset: 0x006935F7
 		public IExitMovieModeT()
 		{
 			this.BorderAnimDuration = 0f;

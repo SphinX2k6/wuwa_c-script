@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002BF3 RID: 11251
+// Token: 0x0200216E RID: 8558
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerFormationPresetsTeamItem : UiPanelBase
 {
-	// Token: 0x060175E5 RID: 95717 RVA: 0x005F1F64 File Offset: 0x005F0164
+	// Token: 0x06015016 RID: 86038 RVA: 0x0061EAA0 File Offset: 0x0061CCA0
 	public UniTask Init(UUIItem item)
 	{
 		TowerFormationPresetsTeamItem.<Init>d__4 <Init>d__;
@@ -25,7 +25,7 @@ public class TowerFormationPresetsTeamItem : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060175E6 RID: 95718 RVA: 0x005F1FB0 File Offset: 0x005F01B0
+	// Token: 0x06015017 RID: 86039 RVA: 0x0061EAEC File Offset: 0x0061CCEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -48,13 +48,13 @@ public class TowerFormationPresetsTeamItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060175E7 RID: 95719 RVA: 0x005F2077 File Offset: 0x005F0277
+	// Token: 0x06015018 RID: 86040 RVA: 0x0061EBB3 File Offset: 0x0061CDB3
 	protected override void OnStart()
 	{
 		this.TeamScrollView = new GenericScrollViewNew<TowerFormationRoleTeamItem, FormationData>(base.GetScrollViewWithScrollbar(0), new Func<TowerFormationRoleTeamItem>(this.OnTeamGridProxyCreate), base.GetItem(1).GetOwner() as AUIBaseActor, false, null);
 	}
 
-	// Token: 0x060175E8 RID: 95720 RVA: 0x005F20AA File Offset: 0x005F02AA
+	// Token: 0x06015019 RID: 86041 RVA: 0x0061EBE6 File Offset: 0x0061CDE6
 	public void Refresh()
 	{
 		this.TeamList = this.GetPlayerTeamList();
@@ -71,7 +71,7 @@ public class TowerFormationPresetsTeamItem : UiPanelBase
 		teamScrollView2.RefreshByData(this.TeamList, null, false);
 	}
 
-	// Token: 0x060175E9 RID: 95721 RVA: 0x005F20E4 File Offset: 0x005F02E4
+	// Token: 0x0601501A RID: 86042 RVA: 0x0061EC20 File Offset: 0x0061CE20
 	public void RefreshRoleSelectState()
 	{
 		GenericScrollViewNew<TowerFormationRoleTeamItem, FormationData> teamScrollView = this.TeamScrollView;
@@ -86,7 +86,7 @@ public class TowerFormationPresetsTeamItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060175EA RID: 95722 RVA: 0x005F2148 File Offset: 0x005F0348
+	// Token: 0x0601501B RID: 86043 RVA: 0x0061EC84 File Offset: 0x0061CE84
 	private List<FormationData> GetPlayerTeamList()
 	{
 		List<FormationData> list = new List<FormationData>();
@@ -99,7 +99,7 @@ public class TowerFormationPresetsTeamItem : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x060175EB RID: 95723 RVA: 0x005F2190 File Offset: 0x005F0390
+	// Token: 0x0601501C RID: 86044 RVA: 0x0061ECCC File Offset: 0x0061CECC
 	private TowerFormationRoleTeamItem OnTeamGridProxyCreate()
 	{
 		return new TowerFormationRoleTeamItem
@@ -108,19 +108,19 @@ public class TowerFormationPresetsTeamItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060175EC RID: 95724 RVA: 0x005F21A3 File Offset: 0x005F03A3
+	// Token: 0x0601501D RID: 86045 RVA: 0x0061ECDF File Offset: 0x0061CEDF
 	private void OnTeamEditClick()
 	{
 		FormationController.Instance.OpenFormationView(false, null);
 	}
 
-	// Token: 0x060175ED RID: 95725 RVA: 0x005F21B6 File Offset: 0x005F03B6
+	// Token: 0x0601501E RID: 86046 RVA: 0x0061ECF2 File Offset: 0x0061CEF2
 	protected override void OnBeforeDestroy()
 	{
 		this.TeamScrollView = null;
 	}
 
-	// Token: 0x0400AEE1 RID: 44769
+	// Token: 0x0400B2E6 RID: 45798
 	[Nullable(new byte[]
 	{
 		2,
@@ -129,7 +129,7 @@ public class TowerFormationPresetsTeamItem : UiPanelBase
 	})]
 	private GenericScrollViewNew<TowerFormationRoleTeamItem, FormationData> TeamScrollView;
 
-	// Token: 0x0400AEE2 RID: 44770
+	// Token: 0x0400B2E7 RID: 45799
 	[Nullable(new byte[]
 	{
 		2,
@@ -137,7 +137,7 @@ public class TowerFormationPresetsTeamItem : UiPanelBase
 	})]
 	private List<FormationData> TeamList;
 
-	// Token: 0x0400AEE3 RID: 44771
+	// Token: 0x0400B2E8 RID: 45800
 	[Nullable(new byte[]
 	{
 		2,
@@ -145,15 +145,15 @@ public class TowerFormationPresetsTeamItem : UiPanelBase
 	})]
 	public Action<FormationData> TeamSelectCallBack;
 
-	// Token: 0x020091B2 RID: 37298
+	// Token: 0x020083F5 RID: 33781
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402F240 RID: 193088
+		// Token: 0x0402A941 RID: 174401
 		RoleScroll,
-		// Token: 0x0402F241 RID: 193089
+		// Token: 0x0402A942 RID: 174402
 		RoleItem,
-		// Token: 0x0402F242 RID: 193090
+		// Token: 0x0402A943 RID: 174403
 		Button
 	}
 }

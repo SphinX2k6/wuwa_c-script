@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000460 RID: 1120
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004B9 RID: 1209
 	public class IInhaledPerformance
 	{
-		// Token: 0x0600169F RID: 5791 RVA: 0x0004591C File Offset: 0x00043B1C
+		// Token: 0x06001839 RID: 6201 RVA: 0x00049664 File Offset: 0x00047864
 		private IInhaledPerformance_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060016A0 RID: 5792 RVA: 0x00045954 File Offset: 0x00043B54
+		// Token: 0x0600183A RID: 6202 RVA: 0x0004969C File Offset: 0x0004789C
 		public static IInhaledPerformance Create([Nullable(2)] IInhaledPerformance instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016A1 RID: 5793 RVA: 0x00045967 File Offset: 0x00043B67
+		// Token: 0x0600183B RID: 6203 RVA: 0x000496AF File Offset: 0x000478AF
 		public static IInhaledPerformance CreateFromSetValue([Nullable(2)] IInhaledPerformance_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016A2 RID: 5794 RVA: 0x0004597A File Offset: 0x00043B7A
+		// Token: 0x0600183C RID: 6204 RVA: 0x000496C2 File Offset: 0x000478C2
 		public IInhaledPerformance_SetValue ToSetValue()
 		{
 			return new IInhaledPerformance_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700061D RID: 1565
-		// (get) Token: 0x060016A3 RID: 5795 RVA: 0x0004598D File Offset: 0x00043B8D
-		// (set) Token: 0x060016A4 RID: 5796 RVA: 0x000459BC File Offset: 0x00043BBC
+		// Token: 0x17000684 RID: 1668
+		// (get) Token: 0x0600183D RID: 6205 RVA: 0x000496D5 File Offset: 0x000478D5
+		// (set) Token: 0x0600183E RID: 6206 RVA: 0x00049704 File Offset: 0x00047904
 		public virtual float InhaledTime
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001134 RID: 4404
+		// Token: 0x04001256 RID: 4694
 		[Nullable(2)]
 		protected IInhaledPerformance FbInstance;
 
-		// Token: 0x04001135 RID: 4405
+		// Token: 0x04001257 RID: 4695
 		[Nullable(2)]
 		protected IInhaledPerformance_SetValue PocoInterface;
 	}

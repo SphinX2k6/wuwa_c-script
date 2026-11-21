@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073FD RID: 29693
+	// Token: 0x02007BE7 RID: 31719
 	public struct IToggleDragActorPlayEnable : IFlatbufferObject
 	{
-		// Token: 0x1700E182 RID: 57730
-		// (get) Token: 0x06035F07 RID: 220935 RVA: 0x007570D1 File Offset: 0x007552D1
+		// Token: 0x1700ED97 RID: 60823
+		// (get) Token: 0x060392BA RID: 234170 RVA: 0x007B9845 File Offset: 0x007B7A45
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035F08 RID: 220936 RVA: 0x007570DE File Offset: 0x007552DE
+		// Token: 0x060392BB RID: 234171 RVA: 0x007B9852 File Offset: 0x007B7A52
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035F09 RID: 220937 RVA: 0x007570E8 File Offset: 0x007552E8
+		// Token: 0x060392BC RID: 234172 RVA: 0x007B985C File Offset: 0x007B7A5C
 		public static IToggleDragActorPlayEnable GetRootAsIToggleDragActorPlayEnable(ByteBuffer _bb)
 		{
 			return IToggleDragActorPlayEnable.GetRootAsIToggleDragActorPlayEnable(_bb, default(IToggleDragActorPlayEnable));
 		}
 
-		// Token: 0x06035F0A RID: 220938 RVA: 0x00757104 File Offset: 0x00755304
+		// Token: 0x060392BD RID: 234173 RVA: 0x007B9878 File Offset: 0x007B7A78
 		public static IToggleDragActorPlayEnable GetRootAsIToggleDragActorPlayEnable(ByteBuffer _bb, IToggleDragActorPlayEnable obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035F0B RID: 220939 RVA: 0x00757121 File Offset: 0x00755321
+		// Token: 0x060392BE RID: 234174 RVA: 0x007B9895 File Offset: 0x007B7A95
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035F0C RID: 220940 RVA: 0x00757130 File Offset: 0x00755330
+		// Token: 0x060392BF RID: 234175 RVA: 0x007B98A4 File Offset: 0x007B7AA4
 		public IToggleDragActorPlayEnable __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E183 RID: 57731
-		// (get) Token: 0x06035F0D RID: 220941 RVA: 0x00757140 File Offset: 0x00755340
+		// Token: 0x1700ED98 RID: 60824
+		// (get) Token: 0x060392C0 RID: 234176 RVA: 0x007B98B4 File Offset: 0x007B7AB4
 		public EToggleDragActorPlayType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E184 RID: 57732
-		// (get) Token: 0x06035F0E RID: 220942 RVA: 0x0075717C File Offset: 0x0075537C
+		// Token: 0x1700ED99 RID: 60825
+		// (get) Token: 0x060392C1 RID: 234177 RVA: 0x007B98F0 File Offset: 0x007B7AF0
 		public IFixedCameraConfig? CameraConfig
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E185 RID: 57733
-		// (get) Token: 0x06035F0F RID: 220943 RVA: 0x007571DC File Offset: 0x007553DC
+		// Token: 0x1700ED9A RID: 60826
+		// (get) Token: 0x060392C2 RID: 234178 RVA: 0x007B9950 File Offset: 0x007B7B50
 		public string TidMainText
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035F10 RID: 220944 RVA: 0x00757213 File Offset: 0x00755413
+		// Token: 0x060392C3 RID: 234179 RVA: 0x007B9987 File Offset: 0x007B7B87
 		public Span<byte> GetTidMainTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06035F11 RID: 220945 RVA: 0x00757222 File Offset: 0x00755422
+		// Token: 0x060392C4 RID: 234180 RVA: 0x007B9996 File Offset: 0x007B7B96
 		public byte[] GetTidMainTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700E186 RID: 57734
-		// (get) Token: 0x06035F12 RID: 220946 RVA: 0x00757230 File Offset: 0x00755430
+		// Token: 0x1700ED9B RID: 60827
+		// (get) Token: 0x060392C5 RID: 234181 RVA: 0x007B99A4 File Offset: 0x007B7BA4
 		public string TidSubText
 		{
 			get
@@ -119,20 +119,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035F13 RID: 220947 RVA: 0x00757268 File Offset: 0x00755468
+		// Token: 0x060392C6 RID: 234182 RVA: 0x007B99DC File Offset: 0x007B7BDC
 		public Span<byte> GetTidSubTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06035F14 RID: 220948 RVA: 0x00757278 File Offset: 0x00755478
+		// Token: 0x060392C7 RID: 234183 RVA: 0x007B99EC File Offset: 0x007B7BEC
 		public byte[] GetTidSubTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700E187 RID: 57735
-		// (get) Token: 0x06035F15 RID: 220949 RVA: 0x00757288 File Offset: 0x00755488
+		// Token: 0x1700ED9C RID: 60828
+		// (get) Token: 0x060392C8 RID: 234184 RVA: 0x007B99FC File Offset: 0x007B7BFC
 		public string TidHintText
 		{
 			get
@@ -146,20 +146,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035F16 RID: 220950 RVA: 0x007572C0 File Offset: 0x007554C0
+		// Token: 0x060392C9 RID: 234185 RVA: 0x007B9A34 File Offset: 0x007B7C34
 		public Span<byte> GetTidHintTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06035F17 RID: 220951 RVA: 0x007572D0 File Offset: 0x007554D0
+		// Token: 0x060392CA RID: 234186 RVA: 0x007B9A44 File Offset: 0x007B7C44
 		public byte[] GetTidHintTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x1700E188 RID: 57736
-		// (get) Token: 0x06035F18 RID: 220952 RVA: 0x007572E0 File Offset: 0x007554E0
+		// Token: 0x1700ED9D RID: 60829
+		// (get) Token: 0x060392CB RID: 234187 RVA: 0x007B9A54 File Offset: 0x007B7C54
 		public bool KeepDialog
 		{
 			get
@@ -169,8 +169,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E189 RID: 57737
-		// (get) Token: 0x06035F19 RID: 220953 RVA: 0x00757320 File Offset: 0x00755520
+		// Token: 0x1700ED9E RID: 60830
+		// (get) Token: 0x060392CC RID: 234188 RVA: 0x007B9A94 File Offset: 0x007B7C94
 		public bool DisableExit
 		{
 			get
@@ -180,8 +180,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E18A RID: 57738
-		// (get) Token: 0x06035F1A RID: 220954 RVA: 0x00757360 File Offset: 0x00755560
+		// Token: 0x1700ED9F RID: 60831
+		// (get) Token: 0x060392CD RID: 234189 RVA: 0x007B9AD4 File Offset: 0x007B7CD4
 		public byte NullMask
 		{
 			get
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035F1B RID: 220955 RVA: 0x007573A0 File Offset: 0x007555A0
+		// Token: 0x060392CE RID: 234190 RVA: 0x007B9B14 File Offset: 0x007B7D14
 		public static Offset<IToggleDragActorPlayEnable> CreateIToggleDragActorPlayEnable(FlatBufferBuilder builder, EToggleDragActorPlayType Type = EToggleDragActorPlayType.Enable, Offset<IFixedCameraConfig> CameraConfigOffset = default(Offset<IFixedCameraConfig>), StringOffset TidMainTextOffset = default(StringOffset), StringOffset TidSubTextOffset = default(StringOffset), StringOffset TidHintTextOffset = default(StringOffset), bool KeepDialog = false, bool DisableExit = false, byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -210,67 +210,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IToggleDragActorPlayEnable.EndIToggleDragActorPlayEnable(builder);
 		}
 
-		// Token: 0x06035F1C RID: 220956 RVA: 0x007573F7 File Offset: 0x007555F7
+		// Token: 0x060392CF RID: 234191 RVA: 0x007B9B6B File Offset: 0x007B7D6B
 		public static void StartIToggleDragActorPlayEnable(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06035F1D RID: 220957 RVA: 0x00757400 File Offset: 0x00755600
+		// Token: 0x060392D0 RID: 234192 RVA: 0x007B9B74 File Offset: 0x007B7D74
 		public static void AddType(FlatBufferBuilder builder, EToggleDragActorPlayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035F1E RID: 220958 RVA: 0x0075740B File Offset: 0x0075560B
+		// Token: 0x060392D1 RID: 234193 RVA: 0x007B9B7F File Offset: 0x007B7D7F
 		public static void AddCameraConfig(FlatBufferBuilder builder, Offset<IFixedCameraConfig> cameraConfigOffset)
 		{
 			builder.AddOffset(1, cameraConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06035F1F RID: 220959 RVA: 0x0075741B File Offset: 0x0075561B
+		// Token: 0x060392D2 RID: 234194 RVA: 0x007B9B8F File Offset: 0x007B7D8F
 		public static void AddTidMainText(FlatBufferBuilder builder, StringOffset tidMainTextOffset)
 		{
 			builder.AddOffset(2, tidMainTextOffset.Value, 0);
 		}
 
-		// Token: 0x06035F20 RID: 220960 RVA: 0x0075742B File Offset: 0x0075562B
+		// Token: 0x060392D3 RID: 234195 RVA: 0x007B9B9F File Offset: 0x007B7D9F
 		public static void AddTidSubText(FlatBufferBuilder builder, StringOffset tidSubTextOffset)
 		{
 			builder.AddOffset(3, tidSubTextOffset.Value, 0);
 		}
 
-		// Token: 0x06035F21 RID: 220961 RVA: 0x0075743B File Offset: 0x0075563B
+		// Token: 0x060392D4 RID: 234196 RVA: 0x007B9BAF File Offset: 0x007B7DAF
 		public static void AddTidHintText(FlatBufferBuilder builder, StringOffset tidHintTextOffset)
 		{
 			builder.AddOffset(4, tidHintTextOffset.Value, 0);
 		}
 
-		// Token: 0x06035F22 RID: 220962 RVA: 0x0075744B File Offset: 0x0075564B
+		// Token: 0x060392D5 RID: 234197 RVA: 0x007B9BBF File Offset: 0x007B7DBF
 		public static void AddKeepDialog(FlatBufferBuilder builder, bool keepDialog)
 		{
 			builder.AddBool(5, keepDialog, false);
 		}
 
-		// Token: 0x06035F23 RID: 220963 RVA: 0x00757456 File Offset: 0x00755656
+		// Token: 0x060392D6 RID: 234198 RVA: 0x007B9BCA File Offset: 0x007B7DCA
 		public static void AddDisableExit(FlatBufferBuilder builder, bool disableExit)
 		{
 			builder.AddBool(6, disableExit, false);
 		}
 
-		// Token: 0x06035F24 RID: 220964 RVA: 0x00757461 File Offset: 0x00755661
+		// Token: 0x060392D7 RID: 234199 RVA: 0x007B9BD5 File Offset: 0x007B7DD5
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x06035F25 RID: 220965 RVA: 0x0075746C File Offset: 0x0075566C
+		// Token: 0x060392D8 RID: 234200 RVA: 0x007B9BE0 File Offset: 0x007B7DE0
 		public static Offset<IToggleDragActorPlayEnable> EndIToggleDragActorPlayEnable(FlatBufferBuilder builder)
 		{
 			return new Offset<IToggleDragActorPlayEnable>(builder.EndTable());
 		}
 
-		// Token: 0x06035F26 RID: 220966 RVA: 0x0075747C File Offset: 0x0075567C
+		// Token: 0x060392D9 RID: 234201 RVA: 0x007B9BF0 File Offset: 0x007B7DF0
 		public IToggleDragActorPlayEnableT UnPack()
 		{
 			IToggleDragActorPlayEnableT toggleDragActorPlayEnableT = new IToggleDragActorPlayEnableT();
@@ -278,7 +278,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return toggleDragActorPlayEnableT;
 		}
 
-		// Token: 0x06035F27 RID: 220967 RVA: 0x00757498 File Offset: 0x00755698
+		// Token: 0x060392DA RID: 234202 RVA: 0x007B9C0C File Offset: 0x007B7E0C
 		public void UnPackTo(IToggleDragActorPlayEnableT _o)
 		{
 			_o.Type = this.Type;
@@ -291,7 +291,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06035F28 RID: 220968 RVA: 0x00757528 File Offset: 0x00755728
+		// Token: 0x060392DB RID: 234203 RVA: 0x007B9C9C File Offset: 0x007B7E9C
 		public static Offset<IToggleDragActorPlayEnable> Pack(FlatBufferBuilder builder, IToggleDragActorPlayEnableT _o)
 		{
 			if (_o == null)
@@ -305,7 +305,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IToggleDragActorPlayEnable.CreateIToggleDragActorPlayEnable(builder, _o.Type, cameraConfigOffset, tidMainTextOffset, tidSubTextOffset, tidHintTextOffset, _o.KeepDialog, _o.DisableExit, _o.NullMask);
 		}
 
-		// Token: 0x0401225D RID: 74333
+		// Token: 0x04013279 RID: 78457
 		private Table __p;
 	}
 }

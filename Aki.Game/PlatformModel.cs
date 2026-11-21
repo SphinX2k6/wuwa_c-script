@@ -6,17 +6,18 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.InputSetting;
+using CSharpScript.Game.Module.Gamepad;
 using CSharpScript.Game.Ui;
 using CSharpScript.Launcher.Platform;
 using UnrealEngine;
 
-// Token: 0x020025E8 RID: 9704
+// Token: 0x02001AD3 RID: 6867
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class PlatformModel : ModelBase
 {
-	// Token: 0x06013BB3 RID: 80819 RVA: 0x004F2B94 File Offset: 0x004F0D94
+	// Token: 0x06011095 RID: 69781 RVA: 0x005018E0 File Offset: 0x004FFAE0
 	protected override bool OnInit()
 	{
 		Info.Instance.SetInputTypeChangeFunc(new TInputTypeChange(this.InputTypeChangeFunc));
@@ -28,7 +29,7 @@ public class PlatformModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013BB4 RID: 80820 RVA: 0x004F2C0C File Offset: 0x004F0E0C
+	// Token: 0x06011096 RID: 69782 RVA: 0x00501958 File Offset: 0x004FFB58
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove(EEventName.InitializeLguiEventSystemActor, new Action(this.OnNotifyCppInputControllerChange));
@@ -38,42 +39,49 @@ public class PlatformModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013BB5 RID: 80821 RVA: 0x004F2C4C File Offset: 0x004F0E4C
+	// Token: 0x06011097 RID: 69783 RVA: 0x00501998 File Offset: 0x004FFB98
 	private void InputTypeChangeFunc(EInputControllerType last, EInputControllerType now)
 	{
 		this.NotifyAudioStateChange();
 		this.NotifyCppInputControllerChange();
 		TsCharacterController characterController = Global.CharacterController;
-		if (characterController != null && (now == EInputControllerType.PS4 || now == EInputControllerType.PS5))
+		if (Info.Instance.CheckIsPsGamepad(now))
 		{
-			UTriggerEffectBPLibrary.SetPadColor(characterController, FColor.FromHex("#0000FF"));
+			if (characterController != null)
+			{
+				UTriggerEffectBPLibrary.SetPadColor(characterController, FColor.FromHex("#0000FF"));
+			}
+			GamepadController.Instance.SetLightBar("Normal");
+			UKuroAudioStatics.SetDualSenseSpeakerRouteEnabled(true);
 		}
 		else
 		{
+			GamepadController.Instance.ClearLightBar();
 			UTriggerEffectBPLibrary.ResetPadColor(Global.CharacterController);
+			UKuroAudioStatics.SetDualSenseSpeakerRouteEnabled(false);
 		}
 		EventSystem.Instance.Emit<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, last, now);
 	}
 
-	// Token: 0x06013BB6 RID: 80822 RVA: 0x004F2CA4 File Offset: 0x004F0EA4
+	// Token: 0x06011098 RID: 69784 RVA: 0x00501A1B File Offset: 0x004FFC1B
 	private void ShowTypeChangeFunc(EOperationType last, EOperationType now)
 	{
 		EventSystem.Instance.Emit<EOperationType, EOperationType>(EEventName.ShowTypeChange, last, now);
 	}
 
-	// Token: 0x06013BB7 RID: 80823 RVA: 0x004F2CB8 File Offset: 0x004F0EB8
+	// Token: 0x06011099 RID: 69785 RVA: 0x00501A2F File Offset: 0x004FFC2F
 	private void InputMainTypeChangeFunc(EInputControllerMainType last, EInputControllerMainType now)
 	{
 		EventSystem.Instance.Emit<EInputControllerMainType, EInputControllerMainType>(EEventName.InputControllerMainTypeChange, last, now);
 	}
 
-	// Token: 0x06013BB8 RID: 80824 RVA: 0x004F2CCC File Offset: 0x004F0ECC
+	// Token: 0x0601109A RID: 69786 RVA: 0x00501A43 File Offset: 0x004FFC43
 	private void OnNotifyCppInputControllerChange()
 	{
 		this.NotifyCppInputControllerChange();
 	}
 
-	// Token: 0x06013BB9 RID: 80825 RVA: 0x004F2CD4 File Offset: 0x004F0ED4
+	// Token: 0x0601109B RID: 69787 RVA: 0x00501A4C File Offset: 0x004FFC4C
 	private void NotifyAudioStateChange()
 	{
 		if (Info.Instance.IsInGamepad())
@@ -89,7 +97,7 @@ public class PlatformModel : ModelBase
 		AudioSystem.Instance.SetState("input_controller_type", "touch", true);
 	}
 
-	// Token: 0x06013BBA RID: 80826 RVA: 0x004F2D3C File Offset: 0x004F0F3C
+	// Token: 0x0601109C RID: 69788 RVA: 0x00501AB4 File Offset: 0x004FFCB4
 	private void NotifyCppInputControllerChange()
 	{
 		EInputKeyType currentInputKeyType = EInputKeyType.None;
@@ -114,7 +122,7 @@ public class PlatformModel : ModelBase
 		ABasePlayerController.SetUseGamepadState(Info.Instance.IsInGamepad());
 	}
 
-	// Token: 0x06013BBB RID: 80827 RVA: 0x004F2DB4 File Offset: 0x004F0FB4
+	// Token: 0x0601109D RID: 69789 RVA: 0x00501B2C File Offset: 0x004FFD2C
 	private EInputControllerType GetCurrentPcDeviceInputController()
 	{
 		TArray<FRegisteredDeviceInfo> registeredDevices = URawInputFunctionLibrary.GetRegisteredDevices();
@@ -142,7 +150,7 @@ public class PlatformModel : ModelBase
 		return EInputControllerType.XboxOne;
 	}
 
-	// Token: 0x06013BBC RID: 80828 RVA: 0x004F2E5C File Offset: 0x004F105C
+	// Token: 0x0601109E RID: 69790 RVA: 0x00501BD4 File Offset: 0x004FFDD4
 	private EInputControllerType GetCurrentMacDeviceInputController()
 	{
 		string currentActiveGamepadName = UKismetSystemLibrary.GetCurrentActiveGamepadName();
@@ -165,7 +173,7 @@ public class PlatformModel : ModelBase
 		return EInputControllerType.XboxOne;
 	}
 
-	// Token: 0x06013BBD RID: 80829 RVA: 0x004F2EAC File Offset: 0x004F10AC
+	// Token: 0x0601109F RID: 69791 RVA: 0x00501C24 File Offset: 0x004FFE24
 	private EInputControllerType GetCurrentCloudGamePadInputType()
 	{
 		ICloudGamePadInfo cloudGamePadInfo = CloudGameManager.Instance.CloudGamePadInfo;
@@ -188,7 +196,7 @@ public class PlatformModel : ModelBase
 		return EInputControllerType.XboxOne;
 	}
 
-	// Token: 0x06013BBE RID: 80830 RVA: 0x004F2F18 File Offset: 0x004F1118
+	// Token: 0x060110A0 RID: 69792 RVA: 0x00501C90 File Offset: 0x004FFE90
 	private void HandlePressAnyKeyInMobile(FKey key)
 	{
 		if (this.IsKeyFromGamepadKey(key.KeyName.ToString()))
@@ -203,7 +211,7 @@ public class PlatformModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013BBF RID: 80831 RVA: 0x004F2F80 File Offset: 0x004F1180
+	// Token: 0x060110A1 RID: 69793 RVA: 0x00501CF8 File Offset: 0x004FFEF8
 	private void HandlePressAnyKeyInNotMobile(FKey key)
 	{
 		if (UKismetInputLibrary.Key_IsGamepadKey(key))
@@ -231,7 +239,7 @@ public class PlatformModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013BC0 RID: 80832 RVA: 0x004F3027 File Offset: 0x004F1227
+	// Token: 0x060110A2 RID: 69794 RVA: 0x00501D9F File Offset: 0x004FFF9F
 	public void OnPressAnyKey(FKey key)
 	{
 		if (Info.Instance.IsMobileInputModel())
@@ -242,7 +250,7 @@ public class PlatformModel : ModelBase
 		this.HandlePressAnyKeyInNotMobile(key);
 	}
 
-	// Token: 0x06013BC1 RID: 80833 RVA: 0x004F3044 File Offset: 0x004F1244
+	// Token: 0x060110A3 RID: 69795 RVA: 0x00501DBC File Offset: 0x004FFFBC
 	public bool RefreshPlatformByDevice(string reason)
 	{
 		if (Info.Instance.IsPs5Platform())
@@ -281,7 +289,7 @@ public class PlatformModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06013BC2 RID: 80834 RVA: 0x004F30DA File Offset: 0x004F12DA
+	// Token: 0x060110A4 RID: 69796 RVA: 0x00501E52 File Offset: 0x00500052
 	public NetStatusType GetNetStatus()
 	{
 		if (Info.Instance.IsMobilePlatform())
@@ -306,13 +314,13 @@ public class PlatformModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013BC3 RID: 80835 RVA: 0x004F310C File Offset: 0x004F130C
+	// Token: 0x060110A5 RID: 69797 RVA: 0x00501E84 File Offset: 0x00500084
 	public bool IsKeyFromGamepadKey(string keyName)
 	{
 		return !keyName.Contains("Android") && !keyName.Contains("OpenHarmony") && InputSettings.Instance.IsGamepadKey(keyName);
 	}
 
-	// Token: 0x06013BC4 RID: 80836 RVA: 0x004F3138 File Offset: 0x004F1338
+	// Token: 0x060110A6 RID: 69798 RVA: 0x00501EB0 File Offset: 0x005000B0
 	public EInputControllerType GetCurrentDeviceInputController()
 	{
 		if (Platform.Instance.IsPcPlatform())
@@ -396,7 +404,7 @@ public class PlatformModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013BC5 RID: 80837 RVA: 0x004F32C4 File Offset: 0x004F14C4
+	// Token: 0x060110A7 RID: 69799 RVA: 0x0050203C File Offset: 0x0050023C
 	private EInputControllerType GetOpenHarmonyDeviceInputController(string deviceName)
 	{
 		if (deviceName == "None" || deviceName == "")
@@ -422,7 +430,7 @@ public class PlatformModel : ModelBase
 		return EInputControllerType.XboxOne;
 	}
 
-	// Token: 0x06013BC6 RID: 80838 RVA: 0x004F3337 File Offset: 0x004F1537
+	// Token: 0x060110A8 RID: 69800 RVA: 0x005020AF File Offset: 0x005002AF
 	public bool IsGamepadAttached()
 	{
 		if (!Platform.Instance.IsPcPlatform())
@@ -436,7 +444,7 @@ public class PlatformModel : ModelBase
 		return this.GetCurrentPcDeviceInputController() > EInputControllerType.None;
 	}
 
-	// Token: 0x06013BC7 RID: 80839 RVA: 0x004F3370 File Offset: 0x004F1570
+	// Token: 0x060110A9 RID: 69801 RVA: 0x005020E8 File Offset: 0x005002E8
 	public EInputControllerType GetCloudGameInputController()
 	{
 		EInputControllerType currentCloudGamePadInputType = this.GetCurrentCloudGamePadInputType();
@@ -451,8 +459,8 @@ public class PlatformModel : ModelBase
 		return EInputControllerType.Touch;
 	}
 
-	// Token: 0x1700194D RID: 6477
-	// (get) Token: 0x06013BC8 RID: 80840 RVA: 0x004F33BA File Offset: 0x004F15BA
+	// Token: 0x17001985 RID: 6533
+	// (get) Token: 0x060110AA RID: 69802 RVA: 0x00502132 File Offset: 0x00500332
 	public static PlatformModel Instance
 	{
 		get
@@ -461,7 +469,7 @@ public class PlatformModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013BC9 RID: 80841 RVA: 0x004F33C1 File Offset: 0x004F15C1
+	// Token: 0x060110AB RID: 69803 RVA: 0x00502139 File Offset: 0x00500339
 	public static PlatformModel GetOrCreateInstance()
 	{
 		if (PlatformModel._Instance == null)
@@ -471,7 +479,7 @@ public class PlatformModel : ModelBase
 		return PlatformModel._Instance;
 	}
 
-	// Token: 0x06013BCA RID: 80842 RVA: 0x004F33D5 File Offset: 0x004F15D5
+	// Token: 0x060110AC RID: 69804 RVA: 0x0050214D File Offset: 0x0050034D
 	public static bool CreateInstance()
 	{
 		if (PlatformModel._Instance != null)
@@ -482,27 +490,27 @@ public class PlatformModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013BCB RID: 80843 RVA: 0x004F33EB File Offset: 0x004F15EB
+	// Token: 0x060110AD RID: 69805 RVA: 0x00502163 File Offset: 0x00500363
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013BCC RID: 80844 RVA: 0x004F33ED File Offset: 0x004F15ED
+	// Token: 0x060110AE RID: 69806 RVA: 0x00502165 File Offset: 0x00500365
 	public static void ResetStaticDefaultValue()
 	{
 		PlatformModel._Instance = null;
 	}
 
-	// Token: 0x06013BCD RID: 80845 RVA: 0x004F33F5 File Offset: 0x004F15F5
+	// Token: 0x060110AF RID: 69807 RVA: 0x0050216D File Offset: 0x0050036D
 	static PlatformModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PlatformModel.CreateStaticDefaultValue), new Action(PlatformModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040094B3 RID: 38067
+	// Token: 0x0400960A RID: 38410
 	public bool LastGamepadAttachedState;
 
-	// Token: 0x040094B4 RID: 38068
+	// Token: 0x0400960B RID: 38411
 	[Nullable(2)]
 	private static PlatformModel _Instance;
 }

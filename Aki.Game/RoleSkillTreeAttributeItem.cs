@@ -6,17 +6,17 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028C0 RID: 10432
+// Token: 0x02001E3B RID: 7739
 public class RoleSkillTreeAttributeItem : UiPanelBase
 {
-	// Token: 0x06015837 RID: 88119 RVA: 0x0056CE0E File Offset: 0x0056B00E
+	// Token: 0x06013237 RID: 78391 RVA: 0x00597C56 File Offset: 0x00595E56
 	[NullableContext(1)]
 	public RoleSkillTreeAttributeItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x06015838 RID: 88120 RVA: 0x0056CE24 File Offset: 0x0056B024
+	// Token: 0x06013238 RID: 78392 RVA: 0x00597C6C File Offset: 0x00595E6C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -38,14 +38,14 @@ public class RoleSkillTreeAttributeItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06015839 RID: 88121 RVA: 0x0056CF11 File Offset: 0x0056B111
+	// Token: 0x06013239 RID: 78393 RVA: 0x00597D59 File Offset: 0x00595F59
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(5);
 		this.TemplateContainerWidth = ((item != null) ? item.GetWidth() : 0f);
 	}
 
-	// Token: 0x0601583A RID: 88122 RVA: 0x0056CF30 File Offset: 0x0056B130
+	// Token: 0x0601323A RID: 78394 RVA: 0x00597D78 File Offset: 0x00595F78
 	[NullableContext(1)]
 	public void Refresh(CommonAttributeData curData, [Nullable(2)] CommonAttributeData nextData)
 	{
@@ -99,29 +99,29 @@ public class RoleSkillTreeAttributeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601583B RID: 88123 RVA: 0x0056D099 File Offset: 0x0056B299
+	// Token: 0x0601323B RID: 78395 RVA: 0x00597EE1 File Offset: 0x005960E1
 	public void SetNextLevelItem(bool bActive)
 	{
 		base.GetItem(2).SetUIActive(bActive);
 	}
 
-	// Token: 0x0400A04C RID: 41036
+	// Token: 0x0400A435 RID: 42037
 	private float TemplateContainerWidth;
 
-	// Token: 0x02008EC6 RID: 36550
+	// Token: 0x0200810D RID: 33037
 	private enum EComponent
 	{
-		// Token: 0x0402E4BF RID: 189631
+		// Token: 0x04029BBC RID: 170940
 		NameText,
-		// Token: 0x0402E4C0 RID: 189632
+		// Token: 0x04029BBD RID: 170941
 		CurValueText,
-		// Token: 0x0402E4C1 RID: 189633
+		// Token: 0x04029BBE RID: 170942
 		NextLevelItem,
-		// Token: 0x0402E4C2 RID: 189634
+		// Token: 0x04029BBF RID: 170943
 		NextValueText,
-		// Token: 0x0402E4C3 RID: 189635
+		// Token: 0x04029BC0 RID: 170944
 		UpArrowItem,
-		// Token: 0x0402E4C4 RID: 189636
+		// Token: 0x04029BC1 RID: 170945
 		LeftContainerItem
 	}
 }

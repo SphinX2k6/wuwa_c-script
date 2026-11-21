@@ -7,17 +7,17 @@ using CSharpScript.Game.Module.Advice;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016C8 RID: 5832
+// Token: 0x02000B80 RID: 2944
 internal class AdviceSelectBtnContentItem : UiPanelBase
 {
-	// Token: 0x0600A6B6 RID: 42678 RVA: 0x00255653 File Offset: 0x00253853
+	// Token: 0x06007A96 RID: 31382 RVA: 0x0025FA63 File Offset: 0x0025DC63
 	[NullableContext(1)]
 	public AdviceSelectBtnContentItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600A6B7 RID: 42679 RVA: 0x00255668 File Offset: 0x00253868
+	// Token: 0x06007A97 RID: 31383 RVA: 0x0025FA78 File Offset: 0x0025DC78
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ internal class AdviceSelectBtnContentItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A6B8 RID: 42680 RVA: 0x00255714 File Offset: 0x00253914
+	// Token: 0x06007A98 RID: 31384 RVA: 0x0025FB24 File Offset: 0x0025DD24
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Add(EEventName.OnSelectAdviceExpression, new Action(this.OnSelectExpression));
@@ -42,7 +42,7 @@ internal class AdviceSelectBtnContentItem : UiPanelBase
 		EventSystem.Instance.Add(EEventName.OnChangeAdviceWord, new Action(this.RefreshWordConjunctionText));
 	}
 
-	// Token: 0x0600A6B9 RID: 42681 RVA: 0x00255778 File Offset: 0x00253978
+	// Token: 0x06007A99 RID: 31385 RVA: 0x0025FB88 File Offset: 0x0025DD88
 	private void RefreshWordText()
 	{
 		if (this.Data == null)
@@ -81,7 +81,7 @@ internal class AdviceSelectBtnContentItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A6BA RID: 42682 RVA: 0x00255840 File Offset: 0x00253A40
+	// Token: 0x06007A9A RID: 31386 RVA: 0x0025FC50 File Offset: 0x0025DE50
 	private void RefreshWordConjunctionText()
 	{
 		if (this.Data == null || this.Data.GetIndex() != EAdviceSelectItemEnum.Conjunction)
@@ -115,14 +115,14 @@ internal class AdviceSelectBtnContentItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A6BB RID: 42683 RVA: 0x002558DC File Offset: 0x00253ADC
+	// Token: 0x06007A9B RID: 31387 RVA: 0x0025FCEC File Offset: 0x0025DEEC
 	private void OnSelectExpression()
 	{
 		this.RefreshExpressionSelectState();
 		this.RefreshDeleteButton();
 	}
 
-	// Token: 0x0600A6BC RID: 42684 RVA: 0x002558EC File Offset: 0x00253AEC
+	// Token: 0x06007A9C RID: 31388 RVA: 0x0025FCFC File Offset: 0x0025DEFC
 	private void RefreshExpressionSelectState()
 	{
 		int currentExpressionId = AdviceModel.Instance.CurrentExpressionId;
@@ -160,7 +160,7 @@ internal class AdviceSelectBtnContentItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A6BD RID: 42685 RVA: 0x0025599B File Offset: 0x00253B9B
+	// Token: 0x06007A9D RID: 31389 RVA: 0x0025FDAB File Offset: 0x0025DFAB
 	private void OnClickDeleteButton()
 	{
 		AdviceModel.Instance.CurrentExpressionId = 0;
@@ -168,7 +168,7 @@ internal class AdviceSelectBtnContentItem : UiPanelBase
 		EventSystem.Instance.Emit(EEventName.OnSelectAdviceExpression);
 	}
 
-	// Token: 0x0600A6BE RID: 42686 RVA: 0x002559BE File Offset: 0x00253BBE
+	// Token: 0x06007A9E RID: 31390 RVA: 0x0025FDCE File Offset: 0x0025DFCE
 	private void OnChangeBtn()
 	{
 		if (this.Data != null)
@@ -178,7 +178,7 @@ internal class AdviceSelectBtnContentItem : UiPanelBase
 		EventSystem.Instance.Emit(EEventName.OnClickAdviceSelectItem);
 	}
 
-	// Token: 0x0600A6BF RID: 42687 RVA: 0x002559ED File Offset: 0x00253BED
+	// Token: 0x06007A9F RID: 31391 RVA: 0x0025FDFD File Offset: 0x0025DFFD
 	[NullableContext(1)]
 	public void RefreshView(AdviceSelectItemData data)
 	{
@@ -191,7 +191,7 @@ internal class AdviceSelectBtnContentItem : UiPanelBase
 		this.RefreshDeleteButton();
 	}
 
-	// Token: 0x0600A6C0 RID: 42688 RVA: 0x00255A1C File Offset: 0x00253C1C
+	// Token: 0x06007AA0 RID: 31392 RVA: 0x0025FE2C File Offset: 0x0025E02C
 	private void RefreshDeleteButton()
 	{
 		if (this.Data == null)
@@ -207,7 +207,7 @@ internal class AdviceSelectBtnContentItem : UiPanelBase
 		base.GetButton(3).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x0600A6C1 RID: 42689 RVA: 0x00255A83 File Offset: 0x00253C83
+	// Token: 0x06007AA1 RID: 31393 RVA: 0x0025FE93 File Offset: 0x0025E093
 	private void RefreshViewByType()
 	{
 		AdviceSelectItemData data = this.Data;
@@ -217,7 +217,7 @@ internal class AdviceSelectBtnContentItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A6C2 RID: 42690 RVA: 0x00255AA4 File Offset: 0x00253CA4
+	// Token: 0x06007AA2 RID: 31394 RVA: 0x0025FEB4 File Offset: 0x0025E0B4
 	private void RefreshShowText()
 	{
 		if (this.Data == null)
@@ -253,7 +253,7 @@ internal class AdviceSelectBtnContentItem : UiPanelBase
 		LguiUtil.Instance.SetLocalText(base.GetText(1), textTableId, Array.Empty<object>());
 	}
 
-	// Token: 0x0600A6C3 RID: 42691 RVA: 0x00255B3C File Offset: 0x00253D3C
+	// Token: 0x06007AA3 RID: 31395 RVA: 0x0025FF4C File Offset: 0x0025E14C
 	private void RefreshSprite()
 	{
 		if (this.Data == null)
@@ -289,7 +289,7 @@ internal class AdviceSelectBtnContentItem : UiPanelBase
 		this.SetSpriteByPath(path, base.GetSprite(2), false, null, null);
 	}
 
-	// Token: 0x0600A6C4 RID: 42692 RVA: 0x00255BD8 File Offset: 0x00253DD8
+	// Token: 0x06007AA4 RID: 31396 RVA: 0x0025FFE8 File Offset: 0x0025E1E8
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnSelectAdviceExpression, new Action(this.OnSelectExpression));
@@ -297,23 +297,23 @@ internal class AdviceSelectBtnContentItem : UiPanelBase
 		EventSystem.Instance.Remove(EEventName.OnChangeAdviceWord, new Action(this.RefreshWordConjunctionText));
 	}
 
-	// Token: 0x04004B5E RID: 19294
+	// Token: 0x04004C05 RID: 19461
 	[Nullable(2)]
 	private AdviceSelectItemData Data;
 
-	// Token: 0x02007C9D RID: 31901
+	// Token: 0x02006E22 RID: 28194
 	private static class EAdviceSelectBtnContentItemEnum
 	{
-		// Token: 0x04028DFF RID: 167423
+		// Token: 0x04024128 RID: 147752
 		public const int Button = 0;
 
-		// Token: 0x04028E00 RID: 167424
+		// Token: 0x04024129 RID: 147753
 		public const int Text = 1;
 
-		// Token: 0x04028E01 RID: 167425
+		// Token: 0x0402412A RID: 147754
 		public const int Icon = 2;
 
-		// Token: 0x04028E02 RID: 167426
+		// Token: 0x0402412B RID: 147755
 		public const int DeleteButton = 3;
 	}
 }

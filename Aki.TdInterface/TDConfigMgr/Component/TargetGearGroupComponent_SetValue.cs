@@ -1,24 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008B8 RID: 2232
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200095B RID: 2395
 	public class TargetGearGroupComponent_SetValue
 	{
-		// Token: 0x040020E1 RID: 8417
+		// Token: 0x040022F3 RID: 8947
 		public bool? Disabled;
 
-		// Token: 0x040020E2 RID: 8418
+		// Token: 0x040022F4 RID: 8948
 		public bool? EdIsLocked;
 
-		// Token: 0x040020E3 RID: 8419
+		// Token: 0x040022F5 RID: 8949
 		public string Type;
 
-		// Token: 0x040020E4 RID: 8420
+		// Token: 0x040022F6 RID: 8950
 		public List<ITargetGearGroupConfig> GroupConfigs;
 	}
 }

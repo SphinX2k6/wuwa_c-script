@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200065F RID: 1631
+	// Token: 0x020006FC RID: 1788
 	public class IRangeConstraint_SetValue
 	{
-		// Token: 0x0400183A RID: 6202
+		// Token: 0x04001A2C RID: 6700
 		public ERangeConstraint Type;
 	}
 }

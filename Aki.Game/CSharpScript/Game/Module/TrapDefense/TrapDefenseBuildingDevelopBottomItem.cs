@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A93 RID: 19091
+	// Token: 0x02003A3B RID: 14907
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBuildingDevelopBottomItem : UiPanelBase
 	{
-		// Token: 0x060317C4 RID: 202692 RVA: 0x00B78366 File Offset: 0x00B76566
+		// Token: 0x06026554 RID: 157012 RVA: 0x00ABC31A File Offset: 0x00ABA51A
 		public TrapDefenseBuildingDevelopBottomItem(bool isInDungeon)
 		{
 			this.IsInDungeon = isInDungeon;
 		}
 
-		// Token: 0x060317C5 RID: 202693 RVA: 0x00B78380 File Offset: 0x00B76580
+		// Token: 0x06026555 RID: 157013 RVA: 0x00ABC334 File Offset: 0x00ABA534
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060317C6 RID: 202694 RVA: 0x00B784D0 File Offset: 0x00B766D0
+		// Token: 0x06026556 RID: 157014 RVA: 0x00ABC484 File Offset: 0x00ABA684
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseBuildingDevelopBottomItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -64,19 +64,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060317C7 RID: 202695 RVA: 0x00B78513 File Offset: 0x00B76713
+		// Token: 0x06026557 RID: 157015 RVA: 0x00ABC4C7 File Offset: 0x00ABA6C7
 		private void OnClickedUnload()
 		{
 			TrapDefenseModel.Instance.ViewModelBuildingDevelop.EquipOrgan(this.CurSelectedIndex, this.MenuData);
 		}
 
-		// Token: 0x060317C8 RID: 202696 RVA: 0x00B78531 File Offset: 0x00B76731
+		// Token: 0x06026558 RID: 157016 RVA: 0x00ABC4E5 File Offset: 0x00ABA6E5
 		private void OnClickedQuickEquip()
 		{
 			TrapDefenseModel.Instance.ViewModelBuildingDevelop.QuickEquipOrgan();
 		}
 
-		// Token: 0x060317C9 RID: 202697 RVA: 0x00B78544 File Offset: 0x00B76744
+		// Token: 0x06026559 RID: 157017 RVA: 0x00ABC4F8 File Offset: 0x00ABA6F8
 		private void OnClickedItem(TrapDefenseBuildingSlotData slot)
 		{
 			TrapDefenseBuildingDevelopItemData slotData = slot.GetSlotData();
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			layout.SelectGridProxy(this.CurSelectedIndex, false);
 		}
 
-		// Token: 0x060317CA RID: 202698 RVA: 0x00B785DD File Offset: 0x00B767DD
+		// Token: 0x0602655A RID: 157018 RVA: 0x00ABC591 File Offset: 0x00ABA791
 		private bool CanExecuteChange(TrapDefenseBuildingSlotData slot)
 		{
 			if (!this.HasInit)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.CurSelectedIndex != slot.GetIndex();
 		}
 
-		// Token: 0x060317CB RID: 202699 RVA: 0x00B78601 File Offset: 0x00B76801
+		// Token: 0x0602655B RID: 157019 RVA: 0x00ABC5B5 File Offset: 0x00ABA7B5
 		private TrapDefenseBuildingDevelopBottomGrid CreateItem()
 		{
 			return new TrapDefenseBuildingDevelopBottomGrid
@@ -123,13 +123,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x060317CC RID: 202700 RVA: 0x00B7862C File Offset: 0x00B7682C
+		// Token: 0x0602655C RID: 157020 RVA: 0x00ABC5E0 File Offset: 0x00ABA7E0
 		public TrapDefenseBuildingDevelopItemData CheckCurSlotEmpty()
 		{
 			return this.DataList[this.CurSelectedIndex].GetSlotData();
 		}
 
-		// Token: 0x060317CD RID: 202701 RVA: 0x00B78644 File Offset: 0x00B76844
+		// Token: 0x0602655D RID: 157021 RVA: 0x00ABC5F8 File Offset: 0x00ABA7F8
 		public void SetMenuSelectedData(TrapDefenseBuildingDevelopItemData data)
 		{
 			this.MenuData = data;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), this.GetEquipTxt(data), Array.Empty<object>());
 		}
 
-		// Token: 0x060317CE RID: 202702 RVA: 0x00B786AC File Offset: 0x00B768AC
+		// Token: 0x0602655E RID: 157022 RVA: 0x00ABC660 File Offset: 0x00ABA860
 		public void UpdateSlot()
 		{
 			foreach (TrapDefenseBuildingDevelopBottomGrid trapDefenseBuildingDevelopBottomGrid in this.Layout.GetLayoutItemList())
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060317CF RID: 202703 RVA: 0x00B78704 File Offset: 0x00B76904
+		// Token: 0x0602655F RID: 157023 RVA: 0x00ABC6B8 File Offset: 0x00ABA8B8
 		public void UpdateEquipTxt()
 		{
 			if (this.DataList[this.CurSelectedIndex].GetSlotData() == this.MenuData)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), this.GetEquipTxt(this.MenuData), Array.Empty<object>());
 		}
 
-		// Token: 0x060317D0 RID: 202704 RVA: 0x00B7876D File Offset: 0x00B7696D
+		// Token: 0x06026560 RID: 157024 RVA: 0x00ABC721 File Offset: 0x00ABA921
 		private string GetEquipTxt(TrapDefenseBuildingDevelopItemData data)
 		{
 			if (data == null)
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return "TowerDefense_Battle_Equip";
 		}
 
-		// Token: 0x060317D1 RID: 202705 RVA: 0x00B7878C File Offset: 0x00B7698C
+		// Token: 0x06026561 RID: 157025 RVA: 0x00ABC740 File Offset: 0x00ABA940
 		public List<CommonDragItemLogic<TrapDefenseBuildingDevelopDragDataItem, TrapDefenseBuildingDevelopItemData>> InitBottomDragLogic()
 		{
 			List<CommonDragItemLogic<TrapDefenseBuildingDevelopDragDataItem, TrapDefenseBuildingDevelopItemData>> list = new List<CommonDragItemLogic<TrapDefenseBuildingDevelopDragDataItem, TrapDefenseBuildingDevelopItemData>>();
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x060317D2 RID: 202706 RVA: 0x00B78820 File Offset: 0x00B76A20
+		// Token: 0x06026562 RID: 157026 RVA: 0x00ABC7D4 File Offset: 0x00ABA9D4
 		public List<TrapDefenseBuildingDevelopBottomInfoItem> InitBottomDragItem()
 		{
 			List<TrapDefenseBuildingDevelopBottomInfoItem> list = new List<TrapDefenseBuildingDevelopBottomInfoItem>();
@@ -201,50 +201,50 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x060317D3 RID: 202707 RVA: 0x00B78884 File Offset: 0x00B76A84
+		// Token: 0x06026563 RID: 157027 RVA: 0x00ABC838 File Offset: 0x00ABAA38
 		private TrapDefenseBuildingDevelopDragDataItem CreateDragDataItem()
 		{
 			return new TrapDefenseBuildingDevelopDragDataItem();
 		}
 
-		// Token: 0x0401A74C RID: 108364
+		// Token: 0x0401509E RID: 86174
 		protected GenericLayout<TrapDefenseBuildingDevelopBottomGrid, TrapDefenseBuildingSlotData> Layout;
 
-		// Token: 0x0401A74D RID: 108365
+		// Token: 0x0401509F RID: 86175
 		protected List<TrapDefenseBuildingSlotData> DataList = new List<TrapDefenseBuildingSlotData>();
 
-		// Token: 0x0401A74E RID: 108366
+		// Token: 0x040150A0 RID: 86176
 		protected TrapDefenseBuildingDevelopItemData MenuData;
 
-		// Token: 0x0401A74F RID: 108367
+		// Token: 0x040150A1 RID: 86177
 		protected int CurSelectedIndex;
 
-		// Token: 0x0401A750 RID: 108368
+		// Token: 0x040150A2 RID: 86178
 		protected bool HasInit;
 
-		// Token: 0x0401A751 RID: 108369
+		// Token: 0x040150A3 RID: 86179
 		protected bool IsInDungeon;
 
-		// Token: 0x0200ABE6 RID: 44006
+		// Token: 0x02009606 RID: 38406
 		[NullableContext(0)]
 		private class EDefine
 		{
-			// Token: 0x040343CD RID: 213965
+			// Token: 0x0402ED7E RID: 191870
 			public const int ContentLayout = 0;
 
-			// Token: 0x040343CE RID: 213966
+			// Token: 0x0402ED7F RID: 191871
 			public const int PanelItemLayout = 1;
 
-			// Token: 0x040343CF RID: 213967
+			// Token: 0x0402ED80 RID: 191872
 			public const int Item = 2;
 
-			// Token: 0x040343D0 RID: 213968
+			// Token: 0x0402ED81 RID: 191873
 			public const int BtnQuickEquipped = 3;
 
-			// Token: 0x040343D1 RID: 213969
+			// Token: 0x0402ED82 RID: 191874
 			public const int TxtBtn = 4;
 
-			// Token: 0x040343D2 RID: 213970
+			// Token: 0x0402ED83 RID: 191875
 			public const int BtnConfirm = 5;
 		}
 	}

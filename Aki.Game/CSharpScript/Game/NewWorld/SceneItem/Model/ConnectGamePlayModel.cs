@@ -5,13 +5,13 @@ using CSharpScript.Game.NewWorld.Common.Component;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Model
 {
-	// Token: 0x020071D4 RID: 29140
+	// Token: 0x02006289 RID: 25225
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class ConnectGamePlayModel : ModelBase
 	{
-		// Token: 0x0604750E RID: 292110 RVA: 0x01222F28 File Offset: 0x01221128
+		// Token: 0x0603CE10 RID: 249360 RVA: 0x0117CD5C File Offset: 0x0117AF5C
 		public void AddConnectedRelation(int scrId, List<int> targetId)
 		{
 			HashSet<int> hashSet;
@@ -26,13 +26,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			}
 		}
 
-		// Token: 0x0604750F RID: 292111 RVA: 0x01222F9C File Offset: 0x0122119C
+		// Token: 0x0603CE11 RID: 249361 RVA: 0x0117CDD0 File Offset: 0x0117AFD0
 		public void SetRelationPortalParam(int scrId, PassThroughPortalParam portalParam)
 		{
 			this.ConnectedRelationPortalParam[scrId] = portalParam;
 		}
 
-		// Token: 0x06047510 RID: 292112 RVA: 0x01222FAC File Offset: 0x012211AC
+		// Token: 0x0603CE12 RID: 249362 RVA: 0x0117CDE0 File Offset: 0x0117AFE0
 		public void RemoveConnectRelation(int scrId, int targetId)
 		{
 			HashSet<int> hashSet;
@@ -42,28 +42,28 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			}
 		}
 
-		// Token: 0x06047511 RID: 292113 RVA: 0x01222FD1 File Offset: 0x012211D1
+		// Token: 0x0603CE13 RID: 249363 RVA: 0x0117CE05 File Offset: 0x0117B005
 		public void RemoveRelationPortalType(int scrId)
 		{
 			this.ConnectedRelationPortalParam.Remove(scrId);
 		}
 
-		// Token: 0x06047512 RID: 292114 RVA: 0x01222FE0 File Offset: 0x012211E0
+		// Token: 0x0603CE14 RID: 249364 RVA: 0x0117CE14 File Offset: 0x0117B014
 		[NullableContext(2)]
 		public HashSet<int> GetRelationByEntityId(int scrId)
 		{
 			return this.ConnectedRelationCache.GetValueOrDefault(scrId);
 		}
 
-		// Token: 0x06047513 RID: 292115 RVA: 0x01222FEE File Offset: 0x012211EE
+		// Token: 0x0603CE15 RID: 249365 RVA: 0x0117CE22 File Offset: 0x0117B022
 		[NullableContext(2)]
 		public PassThroughPortalParam GetRelationPassThroughParam(int scrId)
 		{
 			return this.ConnectedRelationPortalParam.GetValueOrDefault(scrId);
 		}
 
-		// Token: 0x17009DEE RID: 40430
-		// (get) Token: 0x06047514 RID: 292116 RVA: 0x01222FFC File Offset: 0x012211FC
+		// Token: 0x17007345 RID: 29509
+		// (get) Token: 0x0603CE16 RID: 249366 RVA: 0x0117CE30 File Offset: 0x0117B030
 		public static ConnectGamePlayModel Instance
 		{
 			get
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			}
 		}
 
-		// Token: 0x06047515 RID: 292117 RVA: 0x01223003 File Offset: 0x01221203
+		// Token: 0x0603CE17 RID: 249367 RVA: 0x0117CE37 File Offset: 0x0117B037
 		public static ConnectGamePlayModel GetOrCreateInstance()
 		{
 			if (ConnectGamePlayModel._Instance == null)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return ConnectGamePlayModel._Instance;
 		}
 
-		// Token: 0x06047516 RID: 292118 RVA: 0x01223017 File Offset: 0x01221217
+		// Token: 0x0603CE18 RID: 249368 RVA: 0x0117CE4B File Offset: 0x0117B04B
 		public static bool CreateInstance()
 		{
 			if (ConnectGamePlayModel._Instance != null)
@@ -93,33 +93,33 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return true;
 		}
 
-		// Token: 0x06047517 RID: 292119 RVA: 0x0122302D File Offset: 0x0122122D
+		// Token: 0x0603CE19 RID: 249369 RVA: 0x0117CE61 File Offset: 0x0117B061
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047518 RID: 292120 RVA: 0x0122302F File Offset: 0x0122122F
+		// Token: 0x0603CE1A RID: 249370 RVA: 0x0117CE63 File Offset: 0x0117B063
 		public static void ResetStaticDefaultValue()
 		{
 			ConnectGamePlayModel._Instance = null;
 		}
 
-		// Token: 0x06047519 RID: 292121 RVA: 0x01223037 File Offset: 0x01221237
+		// Token: 0x0603CE1B RID: 249371 RVA: 0x0117CE6B File Offset: 0x0117B06B
 		static ConnectGamePlayModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ConnectGamePlayModel.CreateStaticDefaultValue), new Action(ConnectGamePlayModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025804 RID: 153604
+		// Token: 0x04020473 RID: 132211
 		public readonly int TryConnectInterval = 500;
 
-		// Token: 0x04025805 RID: 153605
+		// Token: 0x04020474 RID: 132212
 		private readonly Dictionary<int, HashSet<int>> ConnectedRelationCache = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x04025806 RID: 153606
+		// Token: 0x04020475 RID: 132213
 		private readonly Dictionary<int, PassThroughPortalParam> ConnectedRelationPortalParam = new Dictionary<int, PassThroughPortalParam>();
 
-		// Token: 0x04025807 RID: 153607
+		// Token: 0x04020476 RID: 132214
 		[Nullable(2)]
 		private static ConnectGamePlayModel _Instance;
 	}

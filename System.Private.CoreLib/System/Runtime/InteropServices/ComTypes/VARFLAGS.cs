@@ -1,0 +1,38 @@
+﻿using System;
+using System.ComponentModel;
+
+namespace System.Runtime.InteropServices.ComTypes
+{
+	// Token: 0x02000654 RID: 1620
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	[Flags]
+	public enum VARFLAGS : short
+	{
+		// Token: 0x04001454 RID: 5204
+		VARFLAG_FREADONLY = 1,
+		// Token: 0x04001455 RID: 5205
+		VARFLAG_FSOURCE = 2,
+		// Token: 0x04001456 RID: 5206
+		VARFLAG_FBINDABLE = 4,
+		// Token: 0x04001457 RID: 5207
+		VARFLAG_FREQUESTEDIT = 8,
+		// Token: 0x04001458 RID: 5208
+		VARFLAG_FDISPLAYBIND = 16,
+		// Token: 0x04001459 RID: 5209
+		VARFLAG_FDEFAULTBIND = 32,
+		// Token: 0x0400145A RID: 5210
+		VARFLAG_FHIDDEN = 64,
+		// Token: 0x0400145B RID: 5211
+		VARFLAG_FRESTRICTED = 128,
+		// Token: 0x0400145C RID: 5212
+		VARFLAG_FDEFAULTCOLLELEM = 256,
+		// Token: 0x0400145D RID: 5213
+		VARFLAG_FUIDEFAULT = 512,
+		// Token: 0x0400145E RID: 5214
+		VARFLAG_FNONBROWSABLE = 1024,
+		// Token: 0x0400145F RID: 5215
+		VARFLAG_FREPLACEABLE = 2048,
+		// Token: 0x04001460 RID: 5216
+		VARFLAG_FIMMEDIATEBIND = 4096
+	}
+}

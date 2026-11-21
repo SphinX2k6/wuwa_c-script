@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002193 RID: 8595
+// Token: 0x02001677 RID: 5751
 [NullableContext(1)]
 public interface IButtonPreset
 {
-	// Token: 0x1700152C RID: 5420
-	// (get) Token: 0x06010B5C RID: 68444
+	// Token: 0x17001563 RID: 5475
+	// (get) Token: 0x0600DFED RID: 57325
 	string Title { get; }
 
-	// Token: 0x1700152D RID: 5421
-	// (get) Token: 0x06010B5D RID: 68445
+	// Token: 0x17001564 RID: 5476
+	// (get) Token: 0x0600DFEE RID: 57326
 	Action ClickFunc { get; }
 }

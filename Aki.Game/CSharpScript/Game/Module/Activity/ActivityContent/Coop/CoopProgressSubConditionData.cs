@@ -9,10 +9,10 @@ using CSharpScript.Game.Module.WorldMap;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068EF RID: 26863
+	// Token: 0x0200583F RID: 22591
 	public class CoopProgressSubConditionData : CoopSubConditionDataBase
 	{
-		// Token: 0x0604300A RID: 274442 RVA: 0x01052248 File Offset: 0x01050448
+		// Token: 0x06037B62 RID: 228194 RVA: 0x00F93870 File Offset: 0x00F91A70
 		public CoopProgressSubConditionData(int id, ECoopSubConditionType taskType) : base(id, taskType)
 		{
 			CoopTaskConfig? coopTaskConfigById = CoopConfig.Instance.GetCoopTaskConfigById(id);
@@ -23,14 +23,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.Title = (coopTaskConfigById.Value.TaskTitle2 ?? "");
 		}
 
-		// Token: 0x0604300B RID: 274443 RVA: 0x01052294 File Offset: 0x01050494
+		// Token: 0x06037B63 RID: 228195 RVA: 0x00F938BC File Offset: 0x00F91ABC
 		public override bool IsShowJumpBtn()
 		{
 			CoopTaskConfig? coopTaskConfigById = CoopConfig.Instance.GetCoopTaskConfigById(this.Id);
 			return coopTaskConfigById != null && (coopTaskConfigById.Value.ItemId != 0 || coopTaskConfigById.Value.Condition2MapId != 0);
 		}
 
-		// Token: 0x0604300C RID: 274444 RVA: 0x010522E2 File Offset: 0x010504E2
+		// Token: 0x06037B64 RID: 228196 RVA: 0x00F9390A File Offset: 0x00F91B0A
 		public override bool IsTaskDone()
 		{
 			if (this.Target == 0)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return this.Current >= this.Target;
 		}
 
-		// Token: 0x0604300D RID: 274445 RVA: 0x01052304 File Offset: 0x01050504
+		// Token: 0x06037B65 RID: 228197 RVA: 0x00F9392C File Offset: 0x00F91B2C
 		[NullableContext(1)]
 		public override void RefreshData(CoopTaskCompleteInfo data)
 		{
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.IsDone = (task3 != null && task3.Status == ConditionTaskState.ConditionTaskFinish);
 		}
 
-		// Token: 0x0604300E RID: 274446 RVA: 0x0105235C File Offset: 0x0105055C
+		// Token: 0x06037B66 RID: 228198 RVA: 0x00F93984 File Offset: 0x00F91B84
 		public override void OnJumpClick()
 		{
 			CoopTaskConfig? coopTaskConfigById = CoopConfig.Instance.GetCoopTaskConfigById(this.Id);
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x04022E23 RID: 142883
+		// Token: 0x0401D67F RID: 120447
 		private bool IsDone;
 	}
 }

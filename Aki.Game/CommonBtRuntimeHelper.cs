@@ -11,12 +11,12 @@ using CSharpScript.Game.NewWorld.Character.Npc.Component;
 using CSharpScript.Game.NewWorld.Character.Npc.Controller;
 using UnrealEngine;
 
-// Token: 0x02000EDE RID: 3806
+// Token: 0x02000393 RID: 915
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonBtRuntimeHelper : Singleton
 {
-	// Token: 0x06005EFC RID: 24316 RVA: 0x0011B6FC File Offset: 0x001198FC
+	// Token: 0x06003292 RID: 12946 RVA: 0x0012344C File Offset: 0x0012164C
 	public int? GetCommonActionNodeId(EAction type, bool isTask = true)
 	{
 		int num;
@@ -27,7 +27,7 @@ public class CommonBtRuntimeHelper : Singleton
 		return new int?(isTask ? num : (-num));
 	}
 
-	// Token: 0x06005EFD RID: 24317 RVA: 0x0011B730 File Offset: 0x00119930
+	// Token: 0x06003293 RID: 12947 RVA: 0x00123480 File Offset: 0x00121680
 	public void TryInitCommonBehaviorTree(Entity entity, ICommonBtOverride overrides)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -87,7 +87,7 @@ public class CommonBtRuntimeHelper : Singleton
 		}
 	}
 
-	// Token: 0x06005EFE RID: 24318 RVA: 0x0011BA14 File Offset: 0x00119C14
+	// Token: 0x06003294 RID: 12948 RVA: 0x00123764 File Offset: 0x00121964
 	private void InitDefaultSplineNodes(Entity entity, int commonBtId, ICommonBtNodeBase node, IReadOnlySet<int> overriddenActionTaskIds)
 	{
 		if (node.Type == ECommonBtNodeType.Task)
@@ -135,7 +135,7 @@ public class CommonBtRuntimeHelper : Singleton
 		}
 	}
 
-	// Token: 0x06005EFF RID: 24319 RVA: 0x0011BB64 File Offset: 0x00119D64
+	// Token: 0x06003295 RID: 12949 RVA: 0x001238B4 File Offset: 0x00121AB4
 	private void LogSplineAssignment(Entity entity, int commonBtId, int taskId, int splineId, string source)
 	{
 		CharacterActorComponent component = entity.GetComponent<CharacterActorComponent>();
@@ -149,7 +149,7 @@ public class CommonBtRuntimeHelper : Singleton
 		}
 	}
 
-	// Token: 0x06005F00 RID: 24320 RVA: 0x0011BB88 File Offset: 0x00119D88
+	// Token: 0x06003296 RID: 12950 RVA: 0x001238D8 File Offset: 0x00121AD8
 	private unsafe bool InitCommonActionNode(Entity entity, int nodeId, ActionInfo action)
 	{
 		CharacterAiComponent component = entity.GetComponent<CharacterAiComponent>();
@@ -202,7 +202,7 @@ public class CommonBtRuntimeHelper : Singleton
 		return true;
 	}
 
-	// Token: 0x06005F01 RID: 24321 RVA: 0x0011BD84 File Offset: 0x00119F84
+	// Token: 0x06003297 RID: 12951 RVA: 0x00123AD4 File Offset: 0x00121CD4
 	private unsafe bool InitCommonConditionNode(Entity entity, int nodeId, ICondition2 condition)
 	{
 		CharacterAiComponent component = entity.GetComponent<CharacterAiComponent>();
@@ -255,7 +255,7 @@ public class CommonBtRuntimeHelper : Singleton
 		return true;
 	}
 
-	// Token: 0x06005F02 RID: 24322 RVA: 0x0011BF80 File Offset: 0x0011A180
+	// Token: 0x06003298 RID: 12952 RVA: 0x00123CD0 File Offset: 0x00121ED0
 	private bool SetUePropertyFromParsed(UBTNode node, [Nullable(new byte[]
 	{
 		2,
@@ -281,7 +281,7 @@ public class CommonBtRuntimeHelper : Singleton
 		return true;
 	}
 
-	// Token: 0x06005F03 RID: 24323 RVA: 0x0011C018 File Offset: 0x0011A218
+	// Token: 0x06003299 RID: 12953 RVA: 0x00123D68 File Offset: 0x00121F68
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -296,7 +296,7 @@ public class CommonBtRuntimeHelper : Singleton
 		return instance.ParseAction(action.Name, action.Params, context, montageProvider);
 	}
 
-	// Token: 0x06005F04 RID: 24324 RVA: 0x0011C050 File Offset: 0x0011A250
+	// Token: 0x0600329A RID: 12954 RVA: 0x00123DA0 File Offset: 0x00121FA0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -309,7 +309,7 @@ public class CommonBtRuntimeHelper : Singleton
 		return BehaviorTreeParseRegistry.Instance.ParseCondition(condition.Type, condition, context);
 	}
 
-	// Token: 0x06005F05 RID: 24325 RVA: 0x0011C07C File Offset: 0x0011A27C
+	// Token: 0x0600329B RID: 12955 RVA: 0x00123DCC File Offset: 0x00121FCC
 	public bool InitSplineCommonTree(Entity entity, int subtreeNodeId, int splineId)
 	{
 		CharacterAiComponent component = entity.GetComponent<CharacterAiComponent>();
@@ -335,7 +335,7 @@ public class CommonBtRuntimeHelper : Singleton
 		return true;
 	}
 
-	// Token: 0x06005F06 RID: 24326 RVA: 0x0011C10C File Offset: 0x0011A30C
+	// Token: 0x0600329C RID: 12956 RVA: 0x00123E5C File Offset: 0x0012205C
 	private void InitSplineCommonTreeParams(Entity entity, [Nullable(2)] UBehaviorTreeComponent btComp, int nodeId, int splineId)
 	{
 		UBTNode nodeFromSubtree = UKuroAILibrary.GetNodeFromSubtree(btComp2, nodeId2, this.ResetStateTaskNodeId);
@@ -386,7 +386,7 @@ public class CommonBtRuntimeHelper : Singleton
 		});
 	}
 
-	// Token: 0x06005F07 RID: 24327 RVA: 0x0011C268 File Offset: 0x0011A468
+	// Token: 0x0600329D RID: 12957 RVA: 0x00123FB8 File Offset: 0x001221B8
 	protected unsafe void InitSplineActionCommonTreeParams(Entity entity, [Nullable(2)] UBehaviorTreeComponent btComp, int nodeId, int splineId)
 	{
 		int? intValueByEntity = BlackboardController.Instance.GetIntValueByEntity(entity.Id, "PATROL_POINT_INDEX");
@@ -478,7 +478,7 @@ public class CommonBtRuntimeHelper : Singleton
 		}
 	}
 
-	// Token: 0x06005F08 RID: 24328 RVA: 0x0011C5AC File Offset: 0x0011A7AC
+	// Token: 0x0600329E RID: 12958 RVA: 0x001242FC File Offset: 0x001224FC
 	private IParserContext BuildRuntimeParserContext(Entity entity, int splineId, int pointIndex)
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -493,13 +493,13 @@ public class CommonBtRuntimeHelper : Singleton
 		};
 	}
 
-	// Token: 0x06005F09 RID: 24329 RVA: 0x0011C5F8 File Offset: 0x0011A7F8
+	// Token: 0x0600329F RID: 12959 RVA: 0x00124348 File Offset: 0x00122548
 	private IMontageConfigProvider CreateMontageProvider()
 	{
 		return new MontageConfigProviderImpl();
 	}
 
-	// Token: 0x06005F0A RID: 24330 RVA: 0x0011C600 File Offset: 0x0011A800
+	// Token: 0x060032A0 RID: 12960 RVA: 0x00124350 File Offset: 0x00122550
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -534,7 +534,7 @@ public class CommonBtRuntimeHelper : Singleton
 		return gameSplineComponent.PathPoint[pointIndex].Actions;
 	}
 
-	// Token: 0x06005F0B RID: 24331 RVA: 0x0011C6F8 File Offset: 0x0011A8F8
+	// Token: 0x060032A1 RID: 12961 RVA: 0x00124448 File Offset: 0x00122648
 	protected void TryLoadSubtreeSaveLoadRecord(Entity entity, [Nullable(2)] UBehaviorTreeComponent btComp, int nodeId)
 	{
 		NpcTimetableComponent component = entity.GetComponent<NpcTimetableComponent>();
@@ -557,7 +557,7 @@ public class CommonBtRuntimeHelper : Singleton
 		}
 	}
 
-	// Token: 0x06005F0C RID: 24332 RVA: 0x0011C784 File Offset: 0x0011A984
+	// Token: 0x060032A2 RID: 12962 RVA: 0x001244D4 File Offset: 0x001226D4
 	protected void TryClearSaveLoadRecord(Entity entity, [Nullable(2)] UBehaviorTreeComponent btComp, int nodeId)
 	{
 		NpcTimetableComponent component = entity.GetComponent<NpcTimetableComponent>();
@@ -569,8 +569,8 @@ public class CommonBtRuntimeHelper : Singleton
 		NpcTimetableController.Instance.ClearTimetableSavedData(creatureDataId, "AnySubtreeDeactivate");
 	}
 
-	// Token: 0x1700074F RID: 1871
-	// (get) Token: 0x06005F0D RID: 24333 RVA: 0x0011C7C5 File Offset: 0x0011A9C5
+	// Token: 0x17000772 RID: 1906
+	// (get) Token: 0x060032A3 RID: 12963 RVA: 0x00124515 File Offset: 0x00122715
 	public static CommonBtRuntimeHelper Instance
 	{
 		get
@@ -584,12 +584,12 @@ public class CommonBtRuntimeHelper : Singleton
 		}
 	}
 
-	// Token: 0x06005F0E RID: 24334 RVA: 0x0011C7E8 File Offset: 0x0011A9E8
+	// Token: 0x060032A4 RID: 12964 RVA: 0x00124538 File Offset: 0x00122738
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06005F0F RID: 24335 RVA: 0x0011C7EA File Offset: 0x0011A9EA
+	// Token: 0x060032A5 RID: 12965 RVA: 0x0012453A File Offset: 0x0012273A
 	public static void ResetStaticDefaultValue()
 	{
 		CommonBtRuntimeHelper instance = CommonBtRuntimeHelper._instance;
@@ -600,31 +600,31 @@ public class CommonBtRuntimeHelper : Singleton
 		CommonBtRuntimeHelper._instance = null;
 	}
 
-	// Token: 0x06005F10 RID: 24336 RVA: 0x0011C803 File Offset: 0x0011AA03
+	// Token: 0x060032A6 RID: 12966 RVA: 0x00124553 File Offset: 0x00122753
 	static CommonBtRuntimeHelper()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CommonBtRuntimeHelper.CreateStaticDefaultValue), new Action(CommonBtRuntimeHelper.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002B2A RID: 11050
+	// Token: 0x04002BC4 RID: 11204
 	private readonly int ResetStateTaskNodeId = 1;
 
-	// Token: 0x04002B2B RID: 11051
+	// Token: 0x04002BC5 RID: 11205
 	private readonly int ActionSubtreeDecoratorNodeId = 6;
 
-	// Token: 0x04002B2C RID: 11052
+	// Token: 0x04002BC6 RID: 11206
 	private readonly int ActionSubtreeNodeId = 8;
 
-	// Token: 0x04002B2D RID: 11053
+	// Token: 0x04002BC7 RID: 11207
 	private readonly int ActionPostTaskNodeId = 9;
 
-	// Token: 0x04002B2E RID: 11054
+	// Token: 0x04002BC8 RID: 11208
 	private readonly int PatrolDecoratorNodeId = 10;
 
-	// Token: 0x04002B2F RID: 11055
+	// Token: 0x04002BC9 RID: 11209
 	private readonly int PatrolTaskNodeId = 11;
 
-	// Token: 0x04002B30 RID: 11056
+	// Token: 0x04002BCA RID: 11210
 	private readonly Dictionary<EAction, int> SplineActionTypeMap = new Dictionary<EAction, int>
 	{
 		{
@@ -693,7 +693,7 @@ public class CommonBtRuntimeHelper : Singleton
 		}
 	};
 
-	// Token: 0x04002B31 RID: 11057
+	// Token: 0x04002BCB RID: 11211
 	[Nullable(2)]
 	private static CommonBtRuntimeHelper _instance;
 }

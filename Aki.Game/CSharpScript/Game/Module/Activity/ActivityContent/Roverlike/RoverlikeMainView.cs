@@ -11,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200616E RID: 24942
+	// Token: 0x020050EC RID: 20716
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoverlikeMainView : UiViewBase
 	{
-		// Token: 0x170091BB RID: 37307
-		// (get) Token: 0x0603F0C3 RID: 258243 RVA: 0x00F3C34F File Offset: 0x00F3A54F
+		// Token: 0x1700651D RID: 25885
+		// (get) Token: 0x06033D83 RID: 212355 RVA: 0x00E83223 File Offset: 0x00E81423
 		private RoverlikeActivityData ActivityData
 		{
 			get
@@ -26,13 +26,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F0C4 RID: 258244 RVA: 0x00F3C35B File Offset: 0x00F3A55B
+		// Token: 0x06033D84 RID: 212356 RVA: 0x00E8322F File Offset: 0x00E8142F
 		[NullableContext(1)]
 		public RoverlikeMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603F0C5 RID: 258245 RVA: 0x00F3C364 File Offset: 0x00F3A564
+		// Token: 0x06033D85 RID: 212357 RVA: 0x00E83238 File Offset: 0x00E81438
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F0C6 RID: 258246 RVA: 0x00F3C560 File Offset: 0x00F3A760
+		// Token: 0x06033D86 RID: 212358 RVA: 0x00E83434 File Offset: 0x00E81634
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RoverlikeEquippedLootChange, new Action<int>(this.OnEquippedLootChange));
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x0603F0C7 RID: 258247 RVA: 0x00F3C5C4 File Offset: 0x00F3A7C4
+		// Token: 0x06033D87 RID: 212359 RVA: 0x00E83498 File Offset: 0x00E81698
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeMainView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F0C8 RID: 258248 RVA: 0x00F3C608 File Offset: 0x00F3A808
+		// Token: 0x06033D88 RID: 212360 RVA: 0x00E834DC File Offset: 0x00E816DC
 		protected override void OnStart()
 		{
 			this.Caption.SetCloseCallBack(new Action(this.OnClickClose));
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x0603F0C9 RID: 258249 RVA: 0x00F3C688 File Offset: 0x00F3A888
+		// Token: 0x06033D89 RID: 212361 RVA: 0x00E8355C File Offset: 0x00E8175C
 		protected override void OnBeforeShow()
 		{
 			this.RefreshRemainTime();
@@ -137,13 +137,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			equipmentPanel.Refresh();
 		}
 
-		// Token: 0x0603F0CA RID: 258250 RVA: 0x00F3C6FC File Offset: 0x00F3A8FC
+		// Token: 0x06033D8A RID: 212362 RVA: 0x00E835D0 File Offset: 0x00E817D0
 		protected override void OnAfterShow()
 		{
 			RoverlikeController.Instance.PlayMainViewUnlockFlow();
 		}
 
-		// Token: 0x0603F0CB RID: 258251 RVA: 0x00F3C708 File Offset: 0x00F3A908
+		// Token: 0x06033D8B RID: 212363 RVA: 0x00E835DC File Offset: 0x00E817DC
 		protected override void OnBeforeHide()
 		{
 			RoverlikeQuestRewardButton questRewardBtn = this.QuestRewardBtn;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			shopRewardBtn.UnBindRedDot();
 		}
 
-		// Token: 0x0603F0CC RID: 258252 RVA: 0x00F3C72C File Offset: 0x00F3A92C
+		// Token: 0x06033D8C RID: 212364 RVA: 0x00E83600 File Offset: 0x00E81800
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RoverlikeEquippedLootChange, new Action<int>(this.OnEquippedLootChange));
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x0603F0CD RID: 258253 RVA: 0x00F3C78D File Offset: 0x00F3A98D
+		// Token: 0x06033D8D RID: 212365 RVA: 0x00E83661 File Offset: 0x00E81861
 		private void OnEquippedLootChange(int lootId)
 		{
 			RoverlikeEquipmentPanel equipmentPanel = this.EquipmentPanel;
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			equipmentPanel.Refresh();
 		}
 
-		// Token: 0x0603F0CE RID: 258254 RVA: 0x00F3C79F File Offset: 0x00F3A99F
+		// Token: 0x06033D8E RID: 212366 RVA: 0x00E83673 File Offset: 0x00E81873
 		private void OnLootInfoUpdate()
 		{
 			RoverlikeEquipmentPanel equipmentPanel = this.EquipmentPanel;
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			equipmentPanel.Refresh();
 		}
 
-		// Token: 0x0603F0CF RID: 258255 RVA: 0x00F3C7B4 File Offset: 0x00F3A9B4
+		// Token: 0x06033D8F RID: 212367 RVA: 0x00E83688 File Offset: 0x00E81888
 		private void OnRefreshCommonActivityRedDot(int activityId)
 		{
 			RoverlikeActivityData activityData = this.ActivityData;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			equipmentPanel.Refresh();
 		}
 
-		// Token: 0x0603F0D0 RID: 258256 RVA: 0x00F3C818 File Offset: 0x00F3AA18
+		// Token: 0x06033D90 RID: 212368 RVA: 0x00E836EC File Offset: 0x00E818EC
 		private void RefreshTalentTreeRedDot()
 		{
 			RoverlikeActivityData activityData = this.ActivityData;
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			btnSkillTree.SetRedDotVisible(redDotVisible);
 		}
 
-		// Token: 0x0603F0D1 RID: 258257 RVA: 0x00F3C850 File Offset: 0x00F3AA50
+		// Token: 0x06033D91 RID: 212369 RVA: 0x00E83724 File Offset: 0x00E81924
 		private void RefreshHandBookRedDot()
 		{
 			RoverlikeActivityData activityData = this.ActivityData;
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			btnAchieve.SetRedDotVisible(redDotVisible);
 		}
 
-		// Token: 0x0603F0D2 RID: 258258 RVA: 0x00F3C881 File Offset: 0x00F3AA81
+		// Token: 0x06033D92 RID: 212370 RVA: 0x00E83755 File Offset: 0x00E81955
 		private void RefreshEntranceRedDot()
 		{
 			RoverlikeEntranceButton btnEntrance = this.BtnEntrance;
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			btnEntrance.RefreshNewLevelUnlockRedDot(this.ActivityData);
 		}
 
-		// Token: 0x0603F0D3 RID: 258259 RVA: 0x00F3C89C File Offset: 0x00F3AA9C
+		// Token: 0x06033D93 RID: 212371 RVA: 0x00E83770 File Offset: 0x00E81970
 		private void RefreshRemainTime()
 		{
 			UUIText text = base.GetText(9);
@@ -264,20 +264,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			text.SetText(item, true);
 		}
 
-		// Token: 0x0603F0D4 RID: 258260 RVA: 0x00F3C8E7 File Offset: 0x00F3AAE7
+		// Token: 0x06033D94 RID: 212372 RVA: 0x00E837BB File Offset: 0x00E819BB
 		private void RefreshEntranceButton()
 		{
 			this.BtnEntrance.RefreshSaveInfo(this.ActivityData);
 		}
 
-		// Token: 0x0603F0D5 RID: 258261 RVA: 0x00F3C8FA File Offset: 0x00F3AAFA
+		// Token: 0x06033D95 RID: 212373 RVA: 0x00E837CE File Offset: 0x00E819CE
 		private bool HasSaveProgress()
 		{
 			RoverlikeActivityData activityData = this.ActivityData;
 			return activityData != null && activityData.HasSaveProgress();
 		}
 
-		// Token: 0x0603F0D6 RID: 258262 RVA: 0x00F3C910 File Offset: 0x00F3AB10
+		// Token: 0x06033D96 RID: 212374 RVA: 0x00E837E4 File Offset: 0x00E819E4
 		private void RefreshRoleStand()
 		{
 			bool flag = RoverlikeModel.Instance.GetLastPassRoleTypeId() == 2;
@@ -315,14 +315,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			item6.SetUIActive(flag && !flag2);
 		}
 
-		// Token: 0x0603F0D7 RID: 258263 RVA: 0x00F3C9CA File Offset: 0x00F3ABCA
+		// Token: 0x06033D97 RID: 212375 RVA: 0x00E8389E File Offset: 0x00E81A9E
 		private void RefreshRewardProgress()
 		{
 			this.RefreshQuestProgress();
 			this.RefreshShopProgress();
 		}
 
-		// Token: 0x0603F0D8 RID: 258264 RVA: 0x00F3C9D8 File Offset: 0x00F3ABD8
+		// Token: 0x06033D98 RID: 212376 RVA: 0x00E838AC File Offset: 0x00E81AAC
 		private void RefreshQuestProgress()
 		{
 			RoverlikeActivityData activityData = this.ActivityData;
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			questRewardBtn.SetProgressNumText(item, item2);
 		}
 
-		// Token: 0x0603F0D9 RID: 258265 RVA: 0x00F3CA18 File Offset: 0x00F3AC18
+		// Token: 0x06033D99 RID: 212377 RVA: 0x00E838EC File Offset: 0x00E81AEC
 		private void RefreshShopProgress()
 		{
 			RoverlikeActivityData activityData = this.ActivityData;
@@ -360,31 +360,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			shopRewardBtn.SetProgressNumText(item, item2);
 		}
 
-		// Token: 0x0603F0DA RID: 258266 RVA: 0x00F3CA55 File Offset: 0x00F3AC55
+		// Token: 0x06033D9A RID: 212378 RVA: 0x00E83929 File Offset: 0x00E81B29
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603F0DB RID: 258267 RVA: 0x00F3CA5E File Offset: 0x00F3AC5E
+		// Token: 0x06033D9B RID: 212379 RVA: 0x00E83932 File Offset: 0x00E81B32
 		private void OnClickHelp()
 		{
 			HelpController.Instance.OpenHelpById(642);
 		}
 
-		// Token: 0x0603F0DC RID: 258268 RVA: 0x00F3CA6F File Offset: 0x00F3AC6F
+		// Token: 0x06033D9C RID: 212380 RVA: 0x00E83943 File Offset: 0x00E81B43
 		private void OnClickTalentTree()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RoverlikeTalentTreeView, null, null);
 		}
 
-		// Token: 0x0603F0DD RID: 258269 RVA: 0x00F3CA82 File Offset: 0x00F3AC82
+		// Token: 0x06033D9D RID: 212381 RVA: 0x00E83956 File Offset: 0x00E81B56
 		private void OnClickHandBook()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RoverlikeHandBookView, EUiTabViewName.RoverlikeOutsideBlessTabView, null);
 		}
 
-		// Token: 0x0603F0DE RID: 258270 RVA: 0x00F3CAA0 File Offset: 0x00F3ACA0
+		// Token: 0x06033D9E RID: 212382 RVA: 0x00E83974 File Offset: 0x00E81B74
 		private void OnClickEntrance()
 		{
 			RoverlikeMainView.<>c__DisplayClass36_0 CS$<>8__locals1 = new RoverlikeMainView.<>c__DisplayClass36_0();
@@ -421,7 +421,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.EnterNewGame();
 		}
 
-		// Token: 0x0603F0DF RID: 258271 RVA: 0x00F3CB64 File Offset: 0x00F3AD64
+		// Token: 0x06033D9F RID: 212383 RVA: 0x00E83A38 File Offset: 0x00E81C38
 		private void ContinueWithSave(int saveInsId)
 		{
 			RoverlikeController.Instance.RoverRogueReChallengeRequest(saveInsId, delegate(bool success)
@@ -438,7 +438,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x0603F0E0 RID: 258272 RVA: 0x00F3CB9C File Offset: 0x00F3AD9C
+		// Token: 0x06033DA0 RID: 212384 RVA: 0x00E83A70 File Offset: 0x00E81C70
 		private void SettleSave(int saveInsId)
 		{
 			int? currentActivityId = RoverlikeActivityController.Instance.GetCurrentActivityId();
@@ -467,7 +467,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0603F0E1 RID: 258273 RVA: 0x00F3CC24 File Offset: 0x00F3AE24
+		// Token: 0x06033DA1 RID: 212385 RVA: 0x00E83AF8 File Offset: 0x00E81CF8
 		private void EnterNewGame()
 		{
 			if (RoverlikeActivityController.Instance == null)
@@ -481,71 +481,71 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x04020E27 RID: 134695
+		// Token: 0x0401B754 RID: 112468
 		private PopupCaptionItem Caption;
 
-		// Token: 0x04020E28 RID: 134696
+		// Token: 0x0401B755 RID: 112469
 		private RoverlikeShopRewardButton ShopRewardBtn;
 
-		// Token: 0x04020E29 RID: 134697
+		// Token: 0x0401B756 RID: 112470
 		private RoverlikeQuestRewardButton QuestRewardBtn;
 
-		// Token: 0x04020E2A RID: 134698
+		// Token: 0x0401B757 RID: 112471
 		private ButtonItem BtnSkillTree;
 
-		// Token: 0x04020E2B RID: 134699
+		// Token: 0x0401B758 RID: 112472
 		private ButtonItem BtnAchieve;
 
-		// Token: 0x04020E2C RID: 134700
+		// Token: 0x0401B759 RID: 112473
 		private RoverlikeEntranceButton BtnEntrance;
 
-		// Token: 0x04020E2D RID: 134701
+		// Token: 0x0401B75A RID: 112474
 		private RoverlikeEquipmentPanel EquipmentPanel;
 
-		// Token: 0x0200C3D5 RID: 50133
+		// Token: 0x0200ADBC RID: 44476
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B17D RID: 242045
+			// Token: 0x04035ADE RID: 219870
 			public const int UiItemCaption = 0;
 
-			// Token: 0x0403B17E RID: 242046
+			// Token: 0x04035ADF RID: 219871
 			public const int UiItemBtnReward = 1;
 
-			// Token: 0x0403B17F RID: 242047
+			// Token: 0x04035AE0 RID: 219872
 			public const int UiItemBtnShop = 2;
 
-			// Token: 0x0403B180 RID: 242048
+			// Token: 0x04035AE1 RID: 219873
 			public const int BtnSkillTree = 3;
 
-			// Token: 0x0403B181 RID: 242049
+			// Token: 0x04035AE2 RID: 219874
 			public const int BtnAchieve = 4;
 
-			// Token: 0x0403B182 RID: 242050
+			// Token: 0x04035AE3 RID: 219875
 			public const int PnlEquippment = 5;
 
-			// Token: 0x0403B183 RID: 242051
+			// Token: 0x04035AE4 RID: 219876
 			public const int BtnEntrance = 6;
 
-			// Token: 0x0403B184 RID: 242052
+			// Token: 0x04035AE5 RID: 219877
 			public const int PnlLight = 7;
 
-			// Token: 0x0403B185 RID: 242053
+			// Token: 0x04035AE6 RID: 219878
 			public const int PnlDark = 8;
 
-			// Token: 0x0403B186 RID: 242054
+			// Token: 0x04035AE7 RID: 219879
 			public const int TxtTime = 9;
 
-			// Token: 0x0403B187 RID: 242055
+			// Token: 0x04035AE8 RID: 219880
 			public const int PnlLightMale = 10;
 
-			// Token: 0x0403B188 RID: 242056
+			// Token: 0x04035AE9 RID: 219881
 			public const int PnlLightFemale = 11;
 
-			// Token: 0x0403B189 RID: 242057
+			// Token: 0x04035AEA RID: 219882
 			public const int PnlDarkMale = 12;
 
-			// Token: 0x0403B18A RID: 242058
+			// Token: 0x04035AEB RID: 219883
 			public const int PnlDarkFemale = 13;
 		}
 	}

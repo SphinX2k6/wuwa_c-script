@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E30 RID: 24112
+	// Token: 0x0200646D RID: 25709
 	public enum IPhotoTargetCaptureUiBase_Union : byte
 	{
-		// Token: 0x0400F82E RID: 63534
+		// Token: 0x04010589 RID: 66953
 		NONE,
-		// Token: 0x0400F82F RID: 63535
+		// Token: 0x0401058A RID: 66954
 		IPhotoTargetCaptureUiBase,
-		// Token: 0x0400F830 RID: 63536
+		// Token: 0x0401058B RID: 66955
 		IPhotoTargetCaptureUiRequiredPointsCenter,
-		// Token: 0x0400F831 RID: 63537
+		// Token: 0x0401058C RID: 66956
 		IPhotoTargetCaptureUiEntityZero,
-		// Token: 0x0400F832 RID: 63538
+		// Token: 0x0401058D RID: 66957
 		IPhotoTargetCaptureUiEachRequiredPoints,
-		// Token: 0x0400F833 RID: 63539
+		// Token: 0x0401058E RID: 66958
 		IPhotoTargetCaptureUiCustomPoints
 	}
 }

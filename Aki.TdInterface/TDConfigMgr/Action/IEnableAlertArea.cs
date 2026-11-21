@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019DA RID: 6618
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001B67 RID: 7015
 	public class IEnableAlertArea : IAlertSystemOption
 	{
-		// Token: 0x06008DBB RID: 36283 RVA: 0x0014BE60 File Offset: 0x0014A060
-		[NullableContext(1)]
+		// Token: 0x060094FD RID: 38141 RVA: 0x0015B96C File Offset: 0x00159B6C
 		private IEnableAlertArea_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008DBC RID: 36284 RVA: 0x0014BE98 File Offset: 0x0014A098
-		[NullableContext(1)]
+		// Token: 0x060094FE RID: 38142 RVA: 0x0015B9A4 File Offset: 0x00159BA4
 		public static IEnableAlertArea Create([Nullable(2)] IEnableAlertArea instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008DBD RID: 36285 RVA: 0x0014BEAB File Offset: 0x0014A0AB
-		[NullableContext(1)]
+		// Token: 0x060094FF RID: 38143 RVA: 0x0015B9B7 File Offset: 0x00159BB7
 		public static IEnableAlertArea CreateFromSetValue([Nullable(2)] IEnableAlertArea_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008DBE RID: 36286 RVA: 0x0014BEBE File Offset: 0x0014A0BE
-		[NullableContext(1)]
+		// Token: 0x06009500 RID: 38144 RVA: 0x0015B9CA File Offset: 0x00159BCA
 		public new IEnableAlertArea_SetValue ToSetValue()
 		{
 			return new IEnableAlertArea_SetValue
@@ -66,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D6B RID: 11627
-		// (get) Token: 0x06008DBF RID: 36287 RVA: 0x0014BEF5 File Offset: 0x0014A0F5
-		// (set) Token: 0x06008DC0 RID: 36288 RVA: 0x0014BF20 File Offset: 0x0014A120
+		// Token: 0x17002F70 RID: 12144
+		// (get) Token: 0x06009501 RID: 38145 RVA: 0x0015BA01 File Offset: 0x00159C01
+		// (set) Token: 0x06009502 RID: 38146 RVA: 0x0015BA2C File Offset: 0x00159C2C
 		public override EAlertSystemOption Type
 		{
 			get
@@ -89,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D6C RID: 11628
-		// (get) Token: 0x06008DC1 RID: 36289 RVA: 0x0014BF2E File Offset: 0x0014A12E
-		// (set) Token: 0x06008DC2 RID: 36290 RVA: 0x0014BF59 File Offset: 0x0014A159
+		// Token: 0x17002F71 RID: 12145
+		// (get) Token: 0x06009503 RID: 38147 RVA: 0x0015BA3A File Offset: 0x00159C3A
+		// (set) Token: 0x06009504 RID: 38148 RVA: 0x0015BA65 File Offset: 0x00159C65
 		public override int AreaId
 		{
 			get
@@ -112,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D6D RID: 11629
-		// (get) Token: 0x06008DC3 RID: 36291 RVA: 0x0014BF67 File Offset: 0x0014A167
-		// (set) Token: 0x06008DC4 RID: 36292 RVA: 0x0014BF92 File Offset: 0x0014A192
+		// Token: 0x17002F72 RID: 12146
+		// (get) Token: 0x06009505 RID: 38149 RVA: 0x0015BA73 File Offset: 0x00159C73
+		// (set) Token: 0x06009506 RID: 38150 RVA: 0x0015BA9E File Offset: 0x00159C9E
 		public virtual bool IsEnable
 		{
 			get
@@ -131,11 +125,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D6E RID: 11630
-		// (get) Token: 0x06008DC5 RID: 36293 RVA: 0x0014BFA0 File Offset: 0x0014A1A0
-		// (set) Token: 0x06008DC6 RID: 36294 RVA: 0x0014BFC7 File Offset: 0x0014A1C7
+		// Token: 0x17002F73 RID: 12147
+		// (get) Token: 0x06009507 RID: 38151 RVA: 0x0015BAAC File Offset: 0x00159CAC
+		// (set) Token: 0x06009508 RID: 38152 RVA: 0x0015BAD3 File Offset: 0x00159CD3
+		[Nullable(2)]
 		public virtual IDisableAlertAreaCondition AutoDisableCondition
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -149,16 +145,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.AutoDisableCondition;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().AutoDisableCondition = value;
 			}
 		}
 
-		// Token: 0x04005800 RID: 22528
+		// Token: 0x04005C55 RID: 23637
+		[Nullable(2)]
 		protected new IEnableAlertArea FbInstance;
 
-		// Token: 0x04005801 RID: 22529
+		// Token: 0x04005C56 RID: 23638
+		[Nullable(2)]
 		protected new IEnableAlertArea_SetValue PocoInterface;
 	}
 }

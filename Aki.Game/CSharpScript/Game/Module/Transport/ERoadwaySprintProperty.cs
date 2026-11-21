@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Transport
 {
-	// Token: 0x02004AF4 RID: 19188
+	// Token: 0x02003A9C RID: 15004
 	public enum ERoadwaySprintProperty
 	{
-		// Token: 0x0401A89C RID: 108700
+		// Token: 0x040151EE RID: 86510
 		None,
-		// Token: 0x0401A89D RID: 108701
+		// Token: 0x040151EF RID: 86511
 		UnlimitedNitro,
-		// Token: 0x0401A89E RID: 108702
+		// Token: 0x040151F0 RID: 86512
 		AutoSprint
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200200B RID: 8203
+	// Token: 0x02002252 RID: 8786
 	public class ITuningStandGridBoard_SetValue
 	{
-		// Token: 0x04006CBE RID: 27838
-		[Nullable(1)]
+		// Token: 0x040072C1 RID: 29377
 		public List<ETuningStandGridType> Grids;
 	}
 }

@@ -6,240 +6,226 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Qte
 {
-	// Token: 0x02003ED5 RID: 16085
+	// Token: 0x0200319A RID: 12698
 	[UnrealObjectPath("/Game/Aki/Data/Qte/SCommonQteButton.SCommonQteButton")]
 	[UnrealStructLayout(104, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 104)]
 	public class SCommonQteButton : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06028AAA RID: 166570 RVA: 0x009B1BE9 File Offset: 0x009AFDE9
+		// Token: 0x0601F4DC RID: 128220 RVA: 0x0092AD54 File Offset: 0x00928F54
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SCommonQteButton._ScriptStructPtr != 0) ? SCommonQteButton._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Qte/SCommonQteButton.SCommonQteButton", ref SCommonQteButton._ScriptStructPtr);
 		}
 
-		// Token: 0x17005EFE RID: 24318
-		// (get) Token: 0x06028AAB RID: 166571 RVA: 0x009B1C0D File Offset: 0x009AFE0D
-		// (set) Token: 0x06028AAC RID: 166572 RVA: 0x009B1C21 File Offset: 0x009AFE21
+		// Token: 0x1700388A RID: 14474
+		// (get) Token: 0x0601F4DD RID: 128221 RVA: 0x0092AD78 File Offset: 0x00928F78
+		// (set) Token: 0x0601F4DE RID: 128222 RVA: 0x0092AD8C File Offset: 0x00928F8C
 		public unsafe TEnumAsByte<ECommonQteActionType> ActionType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_ActionType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_ActionType) = value;
 			}
 		}
 
-		// Token: 0x17005EFF RID: 24319
-		// (get) Token: 0x06028AAD RID: 166573 RVA: 0x009B1C36 File Offset: 0x009AFE36
-		// (set) Token: 0x06028AAE RID: 166574 RVA: 0x009B1C46 File Offset: 0x009AFE46
+		// Token: 0x1700388B RID: 14475
+		// (get) Token: 0x0601F4DF RID: 128223 RVA: 0x0092ADA1 File Offset: 0x00928FA1
+		// (set) Token: 0x0601F4E0 RID: 128224 RVA: 0x0092ADB1 File Offset: 0x00928FB1
 		public unsafe int ActionId
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_ActionId);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_ActionId) = value;
 			}
 		}
 
-		// Token: 0x17005F00 RID: 24320
-		// (get) Token: 0x06028AAF RID: 166575 RVA: 0x009B1C57 File Offset: 0x009AFE57
-		// (set) Token: 0x06028AB0 RID: 166576 RVA: 0x009B1C6B File Offset: 0x009AFE6B
+		// Token: 0x1700388C RID: 14476
+		// (get) Token: 0x0601F4E1 RID: 128225 RVA: 0x0092ADC2 File Offset: 0x00928FC2
+		// (set) Token: 0x0601F4E2 RID: 128226 RVA: 0x0092ADD6 File Offset: 0x00928FD6
 		public unsafe TEnumAsByte<ECommonQteInputAction> Action
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_Action);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_Action) = value;
 			}
 		}
 
-		// Token: 0x17005F01 RID: 24321
-		// (get) Token: 0x06028AB1 RID: 166577 RVA: 0x009B1C80 File Offset: 0x009AFE80
-		// (set) Token: 0x06028AB2 RID: 166578 RVA: 0x009B1C9F File Offset: 0x009AFE9F
+		// Token: 0x1700388D RID: 14477
+		// (get) Token: 0x0601F4E3 RID: 128227 RVA: 0x0092ADEB File Offset: 0x00928FEB
+		// (set) Token: 0x0601F4E4 RID: 128228 RVA: 0x0092AE0A File Offset: 0x0092900A
 		[Nullable(1)]
 		public TSoftObjectPtr<ULGUITexturePackerSpriteData> Icon
 		{
 			[NullableContext(1)]
 			get
 			{
-				return new TSoftObjectPtr<ULGUITexturePackerSpriteData>(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_3, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<ULGUITexturePackerSpriteData>(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_Icon, base.MemoryOwner ?? this);
 			}
 			[NullableContext(1)]
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_3, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_Icon, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005F02 RID: 24322
-		// (get) Token: 0x06028AB3 RID: 166579 RVA: 0x009B1CC4 File Offset: 0x009AFEC4
-		// (set) Token: 0x06028AB4 RID: 166580 RVA: 0x009B1CD4 File Offset: 0x009AFED4
+		// Token: 0x1700388E RID: 14478
+		// (get) Token: 0x0601F4E5 RID: 128229 RVA: 0x0092AE2F File Offset: 0x0092902F
+		// (set) Token: 0x0601F4E6 RID: 128230 RVA: 0x0092AE3F File Offset: 0x0092903F
 		public unsafe UIAnchorHorizontalAlign AnchorHAlign
 		{
 			get
 			{
-				return (UIAnchorHorizontalAlign)(*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_4));
+				return (UIAnchorHorizontalAlign)(*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_AnchorHAlign));
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_4) = (byte)value;
+				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_AnchorHAlign) = (byte)value;
 			}
 		}
 
-		// Token: 0x17005F03 RID: 24323
-		// (get) Token: 0x06028AB5 RID: 166581 RVA: 0x009B1CE5 File Offset: 0x009AFEE5
-		// (set) Token: 0x06028AB6 RID: 166582 RVA: 0x009B1CF5 File Offset: 0x009AFEF5
+		// Token: 0x1700388F RID: 14479
+		// (get) Token: 0x0601F4E7 RID: 128231 RVA: 0x0092AE50 File Offset: 0x00929050
+		// (set) Token: 0x0601F4E8 RID: 128232 RVA: 0x0092AE60 File Offset: 0x00929060
 		public unsafe UIAnchorVerticalAlign AnchorVAlign
 		{
 			get
 			{
-				return (UIAnchorVerticalAlign)(*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_5));
+				return (UIAnchorVerticalAlign)(*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_AnchorVAlign));
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_5) = (byte)value;
+				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_AnchorVAlign) = (byte)value;
 			}
 		}
 
-		// Token: 0x17005F04 RID: 24324
-		// (get) Token: 0x06028AB7 RID: 166583 RVA: 0x009B1D06 File Offset: 0x009AFF06
-		// (set) Token: 0x06028AB8 RID: 166584 RVA: 0x009B1D1A File Offset: 0x009AFF1A
+		// Token: 0x17003890 RID: 14480
+		// (get) Token: 0x0601F4E9 RID: 128233 RVA: 0x0092AE71 File Offset: 0x00929071
+		// (set) Token: 0x0601F4EA RID: 128234 RVA: 0x0092AE85 File Offset: 0x00929085
 		public unsafe FVector2D AnchorOffset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_AnchorOffset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_AnchorOffset) = value;
 			}
 		}
 
-		// Token: 0x17005F05 RID: 24325
-		// (get) Token: 0x06028AB9 RID: 166585 RVA: 0x009B1D2F File Offset: 0x009AFF2F
-		// (set) Token: 0x06028ABA RID: 166586 RVA: 0x009B1D43 File Offset: 0x009AFF43
+		// Token: 0x17003891 RID: 14481
+		// (get) Token: 0x0601F4EB RID: 128235 RVA: 0x0092AE9A File Offset: 0x0092909A
+		// (set) Token: 0x0601F4EC RID: 128236 RVA: 0x0092AEAE File Offset: 0x009290AE
 		public unsafe FRotator AnchorRotation
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_AnchorRotation);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)SCommonQteButton.__PropertyOffset_AnchorRotation) = value;
 			}
 		}
 
-		// Token: 0x17005F06 RID: 24326
-		// (get) Token: 0x06028ABB RID: 166587 RVA: 0x009B1D58 File Offset: 0x009AFF58
-		// (set) Token: 0x06028ABC RID: 166588 RVA: 0x009B1D6C File Offset: 0x009AFF6C
+		// Token: 0x17003892 RID: 14482
+		// (get) Token: 0x0601F4ED RID: 128237 RVA: 0x0092AEC3 File Offset: 0x009290C3
+		// (set) Token: 0x0601F4EE RID: 128238 RVA: 0x0092AED7 File Offset: 0x009290D7
 		[Nullable(1)]
 		public unsafe string TextId
 		{
 			[NullableContext(1)]
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SCommonQteButton.__PropertyOffset_8)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SCommonQteButton.__PropertyOffset_TextId)));
 			}
 			[NullableContext(1)]
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SCommonQteButton.__PropertyOffset_8)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SCommonQteButton.__PropertyOffset_TextId)), value);
 			}
 		}
 
-		// Token: 0x06028ABD RID: 166589 RVA: 0x009B1D81 File Offset: 0x009AFF81
+		// Token: 0x0601F4EF RID: 128239 RVA: 0x0092AEEC File Offset: 0x009290EC
 		public SCommonQteButton()
 		{
 		}
 
-		// Token: 0x06028ABE RID: 166590 RVA: 0x009B1D8C File Offset: 0x009AFF8C
-		public SCommonQteButton(TEnumAsByte<ECommonQteActionType> ActionType, int ActionId, TEnumAsByte<ECommonQteInputAction> Action, [Nullable(1)] TSoftObjectPtr<ULGUITexturePackerSpriteData> Icon, UIAnchorHorizontalAlign AnchorHAlign, UIAnchorVerticalAlign AnchorVAlign, FVector2D AnchorOffset, FRotator AnchorRotation, [Nullable(1)] string TextId)
-		{
-			this.ActionType = ActionType;
-			this.ActionId = ActionId;
-			this.Action = Action;
-			this.Icon = Icon;
-			this.AnchorHAlign = AnchorHAlign;
-			this.AnchorVAlign = AnchorVAlign;
-			this.AnchorOffset = AnchorOffset;
-			this.AnchorRotation = AnchorRotation;
-			this.TextId = TextId;
-		}
-
-		// Token: 0x06028ABF RID: 166591 RVA: 0x009B1DE4 File Offset: 0x009AFFE4
+		// Token: 0x0601F4F0 RID: 128240 RVA: 0x0092AEF4 File Offset: 0x009290F4
 		protected override IntPtr GetUStructPtr()
 		{
 			return SCommonQteButton.StaticStruct();
 		}
 
-		// Token: 0x06028AC0 RID: 166592 RVA: 0x009B1DF0 File Offset: 0x009AFFF0
+		// Token: 0x0601F4F1 RID: 128241 RVA: 0x0092AF00 File Offset: 0x00929100
 		[NullableContext(2)]
 		public SCommonQteButton(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06028AC1 RID: 166593 RVA: 0x009B1DFA File Offset: 0x009AFFFA
+		// Token: 0x0601F4F2 RID: 128242 RVA: 0x0092AF0A File Offset: 0x0092910A
 		public SCommonQteButton(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06028AC2 RID: 166594 RVA: 0x009B1E05 File Offset: 0x009B0005
+		// Token: 0x0601F4F3 RID: 128243 RVA: 0x0092AF15 File Offset: 0x00929115
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SCommonQteButton(Pointer, false, true);
 		}
 
-		// Token: 0x06028AC3 RID: 166595 RVA: 0x009B1E0F File Offset: 0x009B000F
+		// Token: 0x0601F4F4 RID: 128244 RVA: 0x0092AF1F File Offset: 0x0092911F
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SCommonQteButton(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014C98 RID: 85144
+		// Token: 0x04010C7F RID: 68735
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Data/Qte/SCommonQteButton.SCommonQteButton";
 
-		// Token: 0x04014C99 RID: 85145
+		// Token: 0x04010C80 RID: 68736
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014C9A RID: 85146
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010C81 RID: 68737
+		internal static int __PropertyOffset_ActionType;
 
-		// Token: 0x04014C9B RID: 85147
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010C82 RID: 68738
+		internal static int __PropertyOffset_ActionId;
 
-		// Token: 0x04014C9C RID: 85148
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010C83 RID: 68739
+		internal static int __PropertyOffset_Action;
 
-		// Token: 0x04014C9D RID: 85149
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010C84 RID: 68740
+		internal static int __PropertyOffset_Icon;
 
-		// Token: 0x04014C9E RID: 85150
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010C85 RID: 68741
+		internal static int __PropertyOffset_AnchorHAlign;
 
-		// Token: 0x04014C9F RID: 85151
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010C86 RID: 68742
+		internal static int __PropertyOffset_AnchorVAlign;
 
-		// Token: 0x04014CA0 RID: 85152
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010C87 RID: 68743
+		internal static int __PropertyOffset_AnchorOffset;
 
-		// Token: 0x04014CA1 RID: 85153
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010C88 RID: 68744
+		internal static int __PropertyOffset_AnchorRotation;
 
-		// Token: 0x04014CA2 RID: 85154
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010C89 RID: 68745
+		internal static int __PropertyOffset_TextId;
 	}
 }

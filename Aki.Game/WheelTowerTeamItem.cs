@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015CD RID: 5581
+// Token: 0x02000A85 RID: 2693
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerTeamItem : UiPanelBase
 {
-	// Token: 0x17000D80 RID: 3456
-	// (get) Token: 0x06009E12 RID: 40466 RVA: 0x00226667 File Offset: 0x00224867
-	// (set) Token: 0x06009E13 RID: 40467 RVA: 0x0022666F File Offset: 0x0022486F
+	// Token: 0x17000DA1 RID: 3489
+	// (get) Token: 0x060071F0 RID: 29168 RVA: 0x00230417 File Offset: 0x0022E617
+	// (set) Token: 0x060071F1 RID: 29169 RVA: 0x0023041F File Offset: 0x0022E61F
 	public Action ClickCallback { get; set; }
 
-	// Token: 0x06009E14 RID: 40468 RVA: 0x00226678 File Offset: 0x00224878
+	// Token: 0x060071F2 RID: 29170 RVA: 0x00230428 File Offset: 0x0022E628
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -43,13 +43,13 @@ public class WheelTowerTeamItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009E15 RID: 40469 RVA: 0x00226781 File Offset: 0x00224981
+	// Token: 0x060071F3 RID: 29171 RVA: 0x00230531 File Offset: 0x0022E731
 	protected override void OnStart()
 	{
 		this.RoleIconLayout = new GenericLayout<WheelTowerRoleItem, RoleDataWithBranch>(base.GetHorizontalLayout(1), () => new WheelTowerRoleItem(), null, false, true);
 	}
 
-	// Token: 0x06009E16 RID: 40470 RVA: 0x002267B8 File Offset: 0x002249B8
+	// Token: 0x060071F4 RID: 29172 RVA: 0x00230568 File Offset: 0x0022E768
 	[NullableContext(1)]
 	public void Refresh(List<RoleDataWithBranch> roleDataList)
 	{
@@ -76,7 +76,7 @@ public class WheelTowerTeamItem : UiPanelBase
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x06009E17 RID: 40471 RVA: 0x0022684C File Offset: 0x00224A4C
+	// Token: 0x060071F5 RID: 29173 RVA: 0x002305FC File Offset: 0x0022E7FC
 	private void OnClick()
 	{
 		Action clickCallback = this.ClickCallback;
@@ -87,7 +87,7 @@ public class WheelTowerTeamItem : UiPanelBase
 		clickCallback();
 	}
 
-	// Token: 0x0400463C RID: 17980
+	// Token: 0x040046E2 RID: 18146
 	[Nullable(new byte[]
 	{
 		2,

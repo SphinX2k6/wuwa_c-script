@@ -6,47 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200216A RID: 8554
+	// Token: 0x02000702 RID: 1794
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UIExtendToggleSpriteTransition")]
 	[UnrealStructLayout(936, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 936)]
 	public class UUIExtendToggleSpriteTransition : UUIExtendToggleTransitionBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060204AC RID: 132268 RVA: 0x002FF4E7 File Offset: 0x002FD6E7
+		// Token: 0x060098E0 RID: 39136 RVA: 0x000E6433 File Offset: 0x000E4633
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIExtendToggleSpriteTransition._ClassPtr;
 		}
 
-		// Token: 0x060204AD RID: 132269 RVA: 0x002FF4F4 File Offset: 0x002FD6F4
+		// Token: 0x060098E1 RID: 39137 RVA: 0x000E6440 File Offset: 0x000E4640
 		public UUIExtendToggleSpriteTransition() : this(BuiltinUtils.AllocNativeUObject(UUIExtendToggleSpriteTransition.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060204AE RID: 132270 RVA: 0x002FF51C File Offset: 0x002FD71C
+		// Token: 0x060098E2 RID: 39138 RVA: 0x000E6468 File Offset: 0x000E4668
 		public UUIExtendToggleSpriteTransition(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIExtendToggleSpriteTransition.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007E93 RID: 32403
-		// (get) Token: 0x060204AF RID: 132271 RVA: 0x002FF54F File Offset: 0x002FD74F
-		// (set) Token: 0x060204B0 RID: 132272 RVA: 0x002FF55F File Offset: 0x002FD75F
-		public unsafe ESpriteTransitionType TransitionType
-		{
-			get
-			{
-				return (ESpriteTransitionType)(*(base.NativePtr + (IntPtr)UUIExtendToggleSpriteTransition.__PropertyOffset_TransitionType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUIExtendToggleSpriteTransition.__PropertyOffset_TransitionType) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007E94 RID: 32404
-		// (get) Token: 0x060204B1 RID: 132273 RVA: 0x002FF570 File Offset: 0x002FD770
-		// (set) Token: 0x060204B2 RID: 132274 RVA: 0x002FF5A9 File Offset: 0x002FD7A9
+		// Token: 0x17001C6B RID: 7275
+		// (get) Token: 0x060098E3 RID: 39139 RVA: 0x000E649C File Offset: 0x000E469C
+		// (set) Token: 0x060098E4 RID: 39140 RVA: 0x000E64D5 File Offset: 0x000E46D5
 		public FExtendToggleColorTransition TransitionColors
 		{
 			get
@@ -65,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E95 RID: 32405
-		// (get) Token: 0x060204B3 RID: 132275 RVA: 0x002FF5CC File Offset: 0x002FD7CC
-		// (set) Token: 0x060204B4 RID: 132276 RVA: 0x002FF605 File Offset: 0x002FD805
+		// Token: 0x17001C6C RID: 7276
+		// (get) Token: 0x060098E5 RID: 39141 RVA: 0x000E64F8 File Offset: 0x000E46F8
+		// (set) Token: 0x060098E6 RID: 39142 RVA: 0x000E6531 File Offset: 0x000E4731
 		public FExtendToggleSpriteTransitionState TransitionState
 		{
 			get
@@ -86,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E96 RID: 32406
-		// (get) Token: 0x060204B5 RID: 132277 RVA: 0x002FF626 File Offset: 0x002FD826
-		// (set) Token: 0x060204B6 RID: 132278 RVA: 0x002FF63A File Offset: 0x002FD83A
+		// Token: 0x17001C6D RID: 7277
+		// (get) Token: 0x060098E7 RID: 39143 RVA: 0x000E6552 File Offset: 0x000E4752
+		// (set) Token: 0x060098E8 RID: 39144 RVA: 0x000E6566 File Offset: 0x000E4766
 		[Nullable(2)]
 		public unsafe ULTweener ColorTweener
 		{
@@ -104,66 +89,63 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060204B7 RID: 132279 RVA: 0x002FF64F File Offset: 0x002FD84F
+		// Token: 0x060098E9 RID: 39145 RVA: 0x000E657B File Offset: 0x000E477B
 		[NullableContext(2)]
 		public void SetStateSprite(EToggleTransitionState State, ULGUISpriteData_BaseObject NewSprite, bool ForceNoTriggerOnChange = false)
 		{
 			UUIExtendToggleSpriteTransition.__SetStateSprite_Internal(base.NativePtr, State, (NewSprite != null) ? NewSprite.NativePtr : IntPtr.Zero, ForceNoTriggerOnChange);
 		}
 
-		// Token: 0x060204B8 RID: 132280 RVA: 0x002FF66E File Offset: 0x002FD86E
+		// Token: 0x060098EA RID: 39146 RVA: 0x000E659A File Offset: 0x000E479A
 		[NullableContext(2)]
 		public void SetAllStateSprite(ULGUISpriteData_BaseObject NewSprite)
 		{
 			UUIExtendToggleSpriteTransition.__SetAllStateSprite_Internal(base.NativePtr, (NewSprite != null) ? NewSprite.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060204B9 RID: 132281
+		// Token: 0x060098EB RID: 39147
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetStateSprite_Internal(IntPtr @this, EToggleTransitionState State, IntPtr NewSprite, bool ForceNoTriggerOnChange);
 
-		// Token: 0x060204BA RID: 132282
+		// Token: 0x060098EC RID: 39148
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAllStateSprite_Internal(IntPtr @this, IntPtr NewSprite);
 
-		// Token: 0x060204BB RID: 132283 RVA: 0x002FF68B File Offset: 0x002FD88B
+		// Token: 0x060098ED RID: 39149 RVA: 0x000E65B7 File Offset: 0x000E47B7
 		static UUIExtendToggleSpriteTransition()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIExtendToggleSpriteTransition");
 		}
 
-		// Token: 0x060204BC RID: 132284 RVA: 0x002FF699 File Offset: 0x002FD899
+		// Token: 0x060098EE RID: 39150 RVA: 0x000E65C5 File Offset: 0x000E47C5
 		protected UUIExtendToggleSpriteTransition(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011597 RID: 71063
+		// Token: 0x04004274 RID: 17012
 		public new const string __ObjectPath = "/Script/LGUI.UIExtendToggleSpriteTransition";
 
-		// Token: 0x04011598 RID: 71064
+		// Token: 0x04004275 RID: 17013
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011599 RID: 71065
+		// Token: 0x04004276 RID: 17014
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401159A RID: 71066
-		internal static int __PropertyOffset_TransitionType;
-
-		// Token: 0x0401159B RID: 71067
+		// Token: 0x04004277 RID: 17015
 		internal static int __PropertyOffset_TransitionColors;
 
-		// Token: 0x0401159C RID: 71068
+		// Token: 0x04004278 RID: 17016
 		[Nullable(2)]
 		private FExtendToggleColorTransition _TransitionColors;
 
-		// Token: 0x0401159D RID: 71069
+		// Token: 0x04004279 RID: 17017
 		internal static int __PropertyOffset_TransitionState;
 
-		// Token: 0x0401159E RID: 71070
+		// Token: 0x0400427A RID: 17018
 		[Nullable(2)]
 		private FExtendToggleSpriteTransitionState _TransitionState;
 
-		// Token: 0x0401159F RID: 71071
+		// Token: 0x0400427B RID: 17019
 		internal static int __PropertyOffset_ColorTweener;
 	}
 }

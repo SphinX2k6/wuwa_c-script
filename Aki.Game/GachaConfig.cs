@@ -5,73 +5,73 @@ using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001C75 RID: 7285
+// Token: 0x02001134 RID: 4404
 [NullableContext(2)]
 [Nullable(0)]
 [Config(0)]
 public class GachaConfig : ConfigBase
 {
-	// Token: 0x0600DB9C RID: 56220 RVA: 0x00331BC3 File Offset: 0x0032FDC3
+	// Token: 0x0600AFB2 RID: 44978 RVA: 0x0033D00F File Offset: 0x0033B20F
 	public int? PrimaryCurrency()
 	{
 		return ConfigCommonParamById.GetIntConfig("PrimaryCurrency");
 	}
 
-	// Token: 0x0600DB9D RID: 56221 RVA: 0x00331BCF File Offset: 0x0032FDCF
+	// Token: 0x0600AFB3 RID: 44979 RVA: 0x0033D01B File Offset: 0x0033B21B
 	public int? SecondCurrency()
 	{
 		return ConfigCommonParamById.GetIntConfig("SecondCurrency");
 	}
 
-	// Token: 0x0600DB9E RID: 56222 RVA: 0x00331BDB File Offset: 0x0032FDDB
+	// Token: 0x0600AFB4 RID: 44980 RVA: 0x0033D027 File Offset: 0x0033B227
 	public float? GachaRecordActiveAlpha()
 	{
 		return ConfigCommonParamById.GetFloatConfig("GachaRecordActiveAlpha");
 	}
 
-	// Token: 0x0600DB9F RID: 56223 RVA: 0x00331BE7 File Offset: 0x0032FDE7
+	// Token: 0x0600AFB5 RID: 44981 RVA: 0x0033D033 File Offset: 0x0033B233
 	public float? GachaRecordNoActiveAlpha()
 	{
 		return ConfigCommonParamById.GetFloatConfig("GachaRecordNoActiveAlpha");
 	}
 
-	// Token: 0x0600DBA0 RID: 56224 RVA: 0x00331BF3 File Offset: 0x0032FDF3
+	// Token: 0x0600AFB6 RID: 44982 RVA: 0x0033D03F File Offset: 0x0033B23F
 	public int? GetGachaResultDelay()
 	{
 		return ConfigCommonParamById.GetIntConfig("GachaResultDelay");
 	}
 
-	// Token: 0x0600DBA1 RID: 56225 RVA: 0x00331BFF File Offset: 0x0032FDFF
+	// Token: 0x0600AFB7 RID: 44983 RVA: 0x0033D04B File Offset: 0x0033B24B
 	public Gacha? GetGachaConfig(int gachaId)
 	{
 		return ConfigGachaById.GetConfig(gachaId, true);
 	}
 
-	// Token: 0x0600DBA2 RID: 56226 RVA: 0x00331C08 File Offset: 0x0032FE08
+	// Token: 0x0600AFB8 RID: 44984 RVA: 0x0033D054 File Offset: 0x0033B254
 	public IReadOnlyList<Gacha> GetGachaList()
 	{
 		return ConfigGachaAll.GetConfigList(true);
 	}
 
-	// Token: 0x0600DBA3 RID: 56227 RVA: 0x00331C10 File Offset: 0x0032FE10
+	// Token: 0x0600AFB9 RID: 44985 RVA: 0x0033D05C File Offset: 0x0033B25C
 	public GachaPool? GetGachaPoolConfig(int gachaPoolId)
 	{
 		return ConfigGachaPoolById.GetConfig(gachaPoolId, true);
 	}
 
-	// Token: 0x0600DBA4 RID: 56228 RVA: 0x00331C19 File Offset: 0x0032FE19
+	// Token: 0x0600AFBA RID: 44986 RVA: 0x0033D065 File Offset: 0x0033B265
 	public InventoryDefine.EItemDataType GetItemIdType(int itemId)
 	{
 		return InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(itemId));
 	}
 
-	// Token: 0x0600DBA5 RID: 56229 RVA: 0x00331C2B File Offset: 0x0032FE2B
+	// Token: 0x0600AFBB RID: 44987 RVA: 0x0033D077 File Offset: 0x0033B277
 	public GachaEffectConfig? GetGachaEffectConfigByTimesAndQuality(int times, int quality)
 	{
 		return ConfigGachaEffectConfigByTimesAndQuality.GetConfig(times, quality, true);
 	}
 
-	// Token: 0x0600DBA6 RID: 56230 RVA: 0x00331C38 File Offset: 0x0032FE38
+	// Token: 0x0600AFBC RID: 44988 RVA: 0x0033D084 File Offset: 0x0033B284
 	public string GetTextIdByType(GachaDefine.EAwardType awardType)
 	{
 		string p0Id;
@@ -93,13 +93,13 @@ public class GachaConfig : ConfigBase
 		return text.GetValueOrDefault().TextContent;
 	}
 
-	// Token: 0x0600DBA7 RID: 56231 RVA: 0x00331CA6 File Offset: 0x0032FEA6
+	// Token: 0x0600AFBD RID: 44989 RVA: 0x0033D0F2 File Offset: 0x0033B2F2
 	public RoleQualityInfo? GetRoleQualityConfig(int qualityId)
 	{
 		return ConfigRoleQualityInfoById.GetConfig(qualityId, true);
 	}
 
-	// Token: 0x0600DBA8 RID: 56232 RVA: 0x00331CB0 File Offset: 0x0032FEB0
+	// Token: 0x0600AFBE RID: 44990 RVA: 0x0033D0FC File Offset: 0x0033B2FC
 	public RoleInfo? GetRoleInfoById(int itemId)
 	{
 		InventoryConfig instance = InventoryConfig.Instance;
@@ -120,7 +120,7 @@ public class GachaConfig : ConfigBase
 		return RoleConfig.Instance.GetRoleConfig(id);
 	}
 
-	// Token: 0x0600DBA9 RID: 56233 RVA: 0x00331D18 File Offset: 0x0032FF18
+	// Token: 0x0600AFBF RID: 44991 RVA: 0x0033D164 File Offset: 0x0033B364
 	public string GetGachaPoolNameId(int gachaPoolId)
 	{
 		GachaViewInfo? gachaViewInfo = this.GetGachaViewInfo(gachaPoolId);
@@ -131,7 +131,7 @@ public class GachaConfig : ConfigBase
 		return gachaViewInfo.GetValueOrDefault().SummaryTitle;
 	}
 
-	// Token: 0x0600DBAA RID: 56234 RVA: 0x00331D48 File Offset: 0x0032FF48
+	// Token: 0x0600AFC0 RID: 44992 RVA: 0x0033D194 File Offset: 0x0033B394
 	public GachaDefine.EGachaViewType? GetGachaViewType(int gachaPoolId)
 	{
 		GachaViewInfo? gachaViewInfo = this.GetGachaViewInfo(gachaPoolId);
@@ -148,7 +148,7 @@ public class GachaConfig : ConfigBase
 		return new GachaDefine.EGachaViewType?((GachaDefine.EGachaViewType)gachaViewInfo.Value.Type);
 	}
 
-	// Token: 0x0600DBAB RID: 56235 RVA: 0x00331DB4 File Offset: 0x0032FFB4
+	// Token: 0x0600AFC1 RID: 44993 RVA: 0x0033D200 File Offset: 0x0033B400
 	public GachaViewInfo? GetGachaViewInfo(int gachaPoolId)
 	{
 		GachaViewInfo? config = ConfigGachaViewInfoById.GetConfig(gachaPoolId, true);
@@ -164,7 +164,7 @@ public class GachaConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600DBAC RID: 56236 RVA: 0x00331E04 File Offset: 0x00330004
+	// Token: 0x0600AFC2 RID: 44994 RVA: 0x0033D250 File Offset: 0x0033B450
 	public GachaTextureInfo? GetGachaTextureInfo(int itemId)
 	{
 		GachaTextureInfo? config = ConfigGachaTextureInfoById.GetConfig(itemId, true);
@@ -180,7 +180,7 @@ public class GachaConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600DBAD RID: 56237 RVA: 0x00331E54 File Offset: 0x00330054
+	// Token: 0x0600AFC3 RID: 44995 RVA: 0x0033D2A0 File Offset: 0x0033B4A0
 	public string GetGachaElementTexturePath(int elementId)
 	{
 		ElementInfo? config = ConfigElementInfoById.GetConfig(elementId, true);
@@ -191,7 +191,7 @@ public class GachaConfig : ConfigBase
 		return config.GetValueOrDefault().Icon2;
 	}
 
-	// Token: 0x0600DBAE RID: 56238 RVA: 0x00331E84 File Offset: 0x00330084
+	// Token: 0x0600AFC4 RID: 44996 RVA: 0x0033D2D0 File Offset: 0x0033B4D0
 	public string GetGachaElementSpritePath(int elementId)
 	{
 		ElementInfo? config = ConfigElementInfoById.GetConfig(elementId, true);
@@ -202,31 +202,31 @@ public class GachaConfig : ConfigBase
 		return config.GetValueOrDefault().GachaSpritePath;
 	}
 
-	// Token: 0x0600DBAF RID: 56239 RVA: 0x00331EB3 File Offset: 0x003300B3
+	// Token: 0x0600AFC5 RID: 44997 RVA: 0x0033D2FF File Offset: 0x0033B4FF
 	public GachaSequenceConfig? GetGachaSequenceConfigById(int id)
 	{
 		return ConfigGachaSequenceConfigById.GetConfig(id, true);
 	}
 
-	// Token: 0x0600DBB0 RID: 56240 RVA: 0x00331EBC File Offset: 0x003300BC
+	// Token: 0x0600AFC6 RID: 44998 RVA: 0x0033D308 File Offset: 0x0033B508
 	public GachaWeaponSeqConfig? GetGachaWeaponSeqConfigById(int id)
 	{
 		return ConfigGachaWeaponSeqConfigById.GetConfig(id, true);
 	}
 
-	// Token: 0x0600DBB1 RID: 56241 RVA: 0x00331EC5 File Offset: 0x003300C5
+	// Token: 0x0600AFC7 RID: 44999 RVA: 0x0033D311 File Offset: 0x0033B511
 	public GachaWeaponTransform? GetGachaWeaponTransformConfig(int id)
 	{
 		return ConfigGachaWeaponTransformById.GetConfig(id, true);
 	}
 
-	// Token: 0x0600DBB2 RID: 56242 RVA: 0x00331ECE File Offset: 0x003300CE
+	// Token: 0x0600AFC8 RID: 45000 RVA: 0x0033D31A File Offset: 0x0033B51A
 	public GachaViewTypeInfo? GetGachaViewTypeConfig(int type)
 	{
 		return ConfigGachaViewTypeInfoByType.GetConfig(type, true);
 	}
 
-	// Token: 0x0600DBB3 RID: 56243 RVA: 0x00331ED8 File Offset: 0x003300D8
+	// Token: 0x0600AFC9 RID: 45001 RVA: 0x0033D324 File Offset: 0x0033B524
 	public int GetShopIdByGachaItemId(int gachaItemId)
 	{
 		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("GachaItemIdToShopId");
@@ -245,7 +245,7 @@ public class GachaConfig : ConfigBase
 		return 0;
 	}
 
-	// Token: 0x0600DBB4 RID: 56244 RVA: 0x00331F44 File Offset: 0x00330144
+	// Token: 0x0600AFCA RID: 45002 RVA: 0x0033D390 File Offset: 0x0033B590
 	[NullableContext(1)]
 	public IReadOnlyList<int> GetGachaRolePreviewTypeList()
 	{
@@ -253,7 +253,7 @@ public class GachaConfig : ConfigBase
 		return intArrayConfig ?? new List<int>();
 	}
 
-	// Token: 0x0600DBB5 RID: 56245 RVA: 0x00331F68 File Offset: 0x00330168
+	// Token: 0x0600AFCB RID: 45003 RVA: 0x0033D3B4 File Offset: 0x0033B5B4
 	[NullableContext(1)]
 	public IReadOnlyList<int> GetGachaWeaponPreviewTypeList()
 	{
@@ -261,8 +261,8 @@ public class GachaConfig : ConfigBase
 		return intArrayConfig ?? new List<int>();
 	}
 
-	// Token: 0x170011E0 RID: 4576
-	// (get) Token: 0x0600DBB6 RID: 56246 RVA: 0x00331F8A File Offset: 0x0033018A
+	// Token: 0x17001206 RID: 4614
+	// (get) Token: 0x0600AFCC RID: 45004 RVA: 0x0033D3D6 File Offset: 0x0033B5D6
 	[Nullable(1)]
 	public static GachaConfig Instance
 	{
@@ -273,7 +273,7 @@ public class GachaConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600DBB7 RID: 56247 RVA: 0x00331F91 File Offset: 0x00330191
+	// Token: 0x0600AFCD RID: 45005 RVA: 0x0033D3DD File Offset: 0x0033B5DD
 	[NullableContext(1)]
 	public static GachaConfig GetOrCreateInstance()
 	{
@@ -284,7 +284,7 @@ public class GachaConfig : ConfigBase
 		return GachaConfig._Instance;
 	}
 
-	// Token: 0x0600DBB8 RID: 56248 RVA: 0x00331FA5 File Offset: 0x003301A5
+	// Token: 0x0600AFCE RID: 45006 RVA: 0x0033D3F1 File Offset: 0x0033B5F1
 	public static bool CreateInstance()
 	{
 		if (GachaConfig._Instance != null)
@@ -295,23 +295,23 @@ public class GachaConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600DBB9 RID: 56249 RVA: 0x00331FBB File Offset: 0x003301BB
+	// Token: 0x0600AFCF RID: 45007 RVA: 0x0033D407 File Offset: 0x0033B607
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600DBBA RID: 56250 RVA: 0x00331FBD File Offset: 0x003301BD
+	// Token: 0x0600AFD0 RID: 45008 RVA: 0x0033D409 File Offset: 0x0033B609
 	public static void ResetStaticDefaultValue()
 	{
 		GachaConfig._Instance = null;
 	}
 
-	// Token: 0x0600DBBB RID: 56251 RVA: 0x00331FC5 File Offset: 0x003301C5
+	// Token: 0x0600AFD1 RID: 45009 RVA: 0x0033D411 File Offset: 0x0033B611
 	static GachaConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GachaConfig.CreateStaticDefaultValue), new Action(GachaConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040064C5 RID: 25797
+	// Token: 0x04006597 RID: 26007
 	private static GachaConfig _Instance;
 }

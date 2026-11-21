@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007029 RID: 28713
+	// Token: 0x020077F2 RID: 30706
 	public class ISetMotorSpeedType_UnionUnion
 	{
-		// Token: 0x1700D53A RID: 54586
-		// (get) Token: 0x06032CAB RID: 208043 RVA: 0x006DA1AD File Offset: 0x006D83AD
-		// (set) Token: 0x06032CAC RID: 208044 RVA: 0x006DA1B5 File Offset: 0x006D83B5
+		// Token: 0x1700E10E RID: 57614
+		// (get) Token: 0x06035F11 RID: 220945 RVA: 0x00739DF1 File Offset: 0x00737FF1
+		// (set) Token: 0x06035F12 RID: 220946 RVA: 0x00739DF9 File Offset: 0x00737FF9
 		public ISetMotorSpeedType_Union Type { get; set; }
 
-		// Token: 0x1700D53B RID: 54587
-		// (get) Token: 0x06032CAD RID: 208045 RVA: 0x006DA1BE File Offset: 0x006D83BE
-		// (set) Token: 0x06032CAE RID: 208046 RVA: 0x006DA1C6 File Offset: 0x006D83C6
+		// Token: 0x1700E10F RID: 57615
+		// (get) Token: 0x06035F13 RID: 220947 RVA: 0x00739E02 File Offset: 0x00738002
+		// (set) Token: 0x06035F14 RID: 220948 RVA: 0x00739E0A File Offset: 0x0073800A
 		public object Value { get; set; }
 
-		// Token: 0x06032CAF RID: 208047 RVA: 0x006DA1CF File Offset: 0x006D83CF
+		// Token: 0x06035F15 RID: 220949 RVA: 0x00739E13 File Offset: 0x00738013
 		public ISetMotorSpeedType_UnionUnion()
 		{
 			this.Type = ISetMotorSpeedType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06032CB0 RID: 208048 RVA: 0x006DA1E5 File Offset: 0x006D83E5
+		// Token: 0x06035F16 RID: 220950 RVA: 0x00739E29 File Offset: 0x00738029
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06032CB1 RID: 208049 RVA: 0x006DA1F7 File Offset: 0x006D83F7
+		// Token: 0x06035F17 RID: 220951 RVA: 0x00739E3B File Offset: 0x0073803B
 		public ISetMotorSpeedTypeT AsISetMotorSpeedType()
 		{
 			return this.As<ISetMotorSpeedTypeT>();
 		}
 
-		// Token: 0x06032CB2 RID: 208050 RVA: 0x006DA1FF File Offset: 0x006D83FF
+		// Token: 0x06035F18 RID: 220952 RVA: 0x00739E43 File Offset: 0x00738043
 		public static ISetMotorSpeedType_UnionUnion FromISetMotorSpeedType(ISetMotorSpeedTypeT _isetmotorspeedtype)
 		{
 			return new ISetMotorSpeedType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032CB3 RID: 208051 RVA: 0x006DA214 File Offset: 0x006D8414
+		// Token: 0x06035F19 RID: 220953 RVA: 0x00739E58 File Offset: 0x00738058
 		public ISetMotorSpeedTargetSpeedT AsISetMotorSpeedTargetSpeed()
 		{
 			return this.As<ISetMotorSpeedTargetSpeedT>();
 		}
 
-		// Token: 0x06032CB4 RID: 208052 RVA: 0x006DA21C File Offset: 0x006D841C
+		// Token: 0x06035F1A RID: 220954 RVA: 0x00739E60 File Offset: 0x00738060
 		public static ISetMotorSpeedType_UnionUnion FromISetMotorSpeedTargetSpeed(ISetMotorSpeedTargetSpeedT _isetmotorspeedtargetspeed)
 		{
 			return new ISetMotorSpeedType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032CB5 RID: 208053 RVA: 0x006DA234 File Offset: 0x006D8434
+		// Token: 0x06035F1B RID: 220955 RVA: 0x00739E78 File Offset: 0x00738078
 		public static int Pack(FlatBufferBuilder builder, ISetMotorSpeedType_UnionUnion _o)
 		{
 			ISetMotorSpeedType_Union type = _o.Type;

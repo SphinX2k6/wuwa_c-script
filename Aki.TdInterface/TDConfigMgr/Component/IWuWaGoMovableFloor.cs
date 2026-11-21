@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200080D RID: 2061
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008B0 RID: 2224
 	public class IWuWaGoMovableFloor : IWuWaGoEntityBase
 	{
-		// Token: 0x06002CBD RID: 11453 RVA: 0x00074020 File Offset: 0x00072220
+		// Token: 0x06002FED RID: 12269 RVA: 0x0007B384 File Offset: 0x00079584
 		private IWuWaGoMovableFloor_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002CBE RID: 11454 RVA: 0x00074058 File Offset: 0x00072258
+		// Token: 0x06002FEE RID: 12270 RVA: 0x0007B3BC File Offset: 0x000795BC
 		public static IWuWaGoMovableFloor Create([Nullable(2)] IWuWaGoMovableFloor instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002CBF RID: 11455 RVA: 0x0007406B File Offset: 0x0007226B
+		// Token: 0x06002FEF RID: 12271 RVA: 0x0007B3CF File Offset: 0x000795CF
 		public static IWuWaGoMovableFloor CreateFromSetValue([Nullable(2)] IWuWaGoMovableFloor_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002CC0 RID: 11456 RVA: 0x0007407E File Offset: 0x0007227E
+		// Token: 0x06002FF0 RID: 12272 RVA: 0x0007B3E2 File Offset: 0x000795E2
 		public new IWuWaGoMovableFloor_SetValue ToSetValue()
 		{
 			return new IWuWaGoMovableFloor_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BAE RID: 2990
-		// (get) Token: 0x06002CC1 RID: 11457 RVA: 0x000740B5 File Offset: 0x000722B5
-		// (set) Token: 0x06002CC2 RID: 11458 RVA: 0x000740E0 File Offset: 0x000722E0
+		// Token: 0x17000C71 RID: 3185
+		// (get) Token: 0x06002FF1 RID: 12273 RVA: 0x0007B419 File Offset: 0x00079619
+		// (set) Token: 0x06002FF2 RID: 12274 RVA: 0x0007B444 File Offset: 0x00079644
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BAF RID: 2991
-		// (get) Token: 0x06002CC3 RID: 11459 RVA: 0x000740F0 File Offset: 0x000722F0
-		// (set) Token: 0x06002CC4 RID: 11460 RVA: 0x00074151 File Offset: 0x00072351
+		// Token: 0x17000C72 RID: 3186
+		// (get) Token: 0x06002FF3 RID: 12275 RVA: 0x0007B454 File Offset: 0x00079654
+		// (set) Token: 0x06002FF4 RID: 12276 RVA: 0x0007B4B5 File Offset: 0x000796B5
 		public virtual IWuWaGoGridLinkData LinkData
 		{
 			get
@@ -116,9 +114,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BB0 RID: 2992
-		// (get) Token: 0x06002CC5 RID: 11461 RVA: 0x00074168 File Offset: 0x00072368
-		// (set) Token: 0x06002CC6 RID: 11462 RVA: 0x000741C9 File Offset: 0x000723C9
+		// Token: 0x17000C73 RID: 3187
+		// (get) Token: 0x06002FF5 RID: 12277 RVA: 0x0007B4CC File Offset: 0x000796CC
+		// (set) Token: 0x06002FF6 RID: 12278 RVA: 0x0007B52D File Offset: 0x0007972D
 		[Nullable(2)]
 		public virtual IWuWaGoGridLinkData GearLinkData
 		{
@@ -149,9 +147,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BB1 RID: 2993
-		// (get) Token: 0x06002CC7 RID: 11463 RVA: 0x000741E0 File Offset: 0x000723E0
-		// (set) Token: 0x06002CC8 RID: 11464 RVA: 0x00074273 File Offset: 0x00072473
+		// Token: 0x17000C74 RID: 3188
+		// (get) Token: 0x06002FF7 RID: 12279 RVA: 0x0007B544 File Offset: 0x00079744
+		// (set) Token: 0x06002FF8 RID: 12280 RVA: 0x0007B5D7 File Offset: 0x000797D7
 		public virtual List<IWuWaGoMovableGridStatePos> MoveData
 		{
 			get
@@ -187,30 +185,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D98 RID: 7576
+		// Token: 0x04001FA4 RID: 8100
 		[Nullable(2)]
 		protected new IWuWaGoMovableFloor FbInstance;
 
-		// Token: 0x04001D99 RID: 7577
+		// Token: 0x04001FA5 RID: 8101
 		[Nullable(2)]
 		protected new IWuWaGoMovableFloor_SetValue PocoInterface;
 
-		// Token: 0x04001D9A RID: 7578
+		// Token: 0x04001FA6 RID: 8102
 		private IWuWaGoGridLinkData _LinkDataCache;
 
-		// Token: 0x04001D9B RID: 7579
+		// Token: 0x04001FA7 RID: 8103
 		private bool _LinkDataInited;
 
-		// Token: 0x04001D9C RID: 7580
+		// Token: 0x04001FA8 RID: 8104
 		private IWuWaGoGridLinkData _GearLinkDataCache;
 
-		// Token: 0x04001D9D RID: 7581
+		// Token: 0x04001FA9 RID: 8105
 		private bool _GearLinkDataInited;
 
-		// Token: 0x04001D9E RID: 7582
+		// Token: 0x04001FAA RID: 8106
 		private List<IWuWaGoMovableGridStatePos> _MoveDataCache;
 
-		// Token: 0x04001D9F RID: 7583
+		// Token: 0x04001FAB RID: 8107
 		private bool _MoveDataInited;
 	}
 }

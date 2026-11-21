@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004E2 RID: 1250
+	// Token: 0x020004F8 RID: 1272
 	public class ConfigLivenessById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001D57 RID: 7511 RVA: 0x000FF10B File Offset: 0x000FD30B
+		// Token: 0x06001DDB RID: 7643 RVA: 0x0010585F File Offset: 0x00103A5F
 		static ConfigLivenessById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLivenessById.CreateStaticDefaultValue), new Action(ConfigLivenessById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001D58 RID: 7512 RVA: 0x000FF12C File Offset: 0x000FD32C
+		// Token: 0x06001DDC RID: 7644 RVA: 0x00105880 File Offset: 0x00103A80
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLivenessById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001D59 RID: 7513 RVA: 0x000FF1AB File Offset: 0x000FD3AB
+		// Token: 0x06001DDD RID: 7645 RVA: 0x001058FF File Offset: 0x00103AFF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLivenessById.LogPair = null;
 			ConfigLivenessById.HandleId = 0;
 		}
 
-		// Token: 0x06001D5A RID: 7514 RVA: 0x000FF1B9 File Offset: 0x000FD3B9
+		// Token: 0x06001DDE RID: 7646 RVA: 0x0010590D File Offset: 0x00103B0D
 		public static void Init()
 		{
 			ConfigLivenessById.HandleId = ConfigCommon.InitDataStatement(ConfigLivenessById.HandleId, "db_daily_activity.db", "select BinData from `Liveness` where Id=?");
 		}
 
-		// Token: 0x06001D5B RID: 7515 RVA: 0x000FF1D4 File Offset: 0x000FD3D4
+		// Token: 0x06001DDF RID: 7647 RVA: 0x00105928 File Offset: 0x00103B28
 		public static Liveness? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLivenessById.HandleId, ConfigLivenessById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Liveness?(rootAsLiveness);
 		}
 
-		// Token: 0x04002212 RID: 8722
+		// Token: 0x040022AC RID: 8876
 		private const string DB = "db_daily_activity.db";
 
-		// Token: 0x04002213 RID: 8723
+		// Token: 0x040022AD RID: 8877
 		private const string FILE = "h.活跃度.xlsx";
 
-		// Token: 0x04002214 RID: 8724
+		// Token: 0x040022AE RID: 8878
 		private const string TABLE = "Liveness";
 
-		// Token: 0x04002215 RID: 8725
+		// Token: 0x040022AF RID: 8879
 		private const string COMMAND = "select BinData from `Liveness` where Id=?";
 
-		// Token: 0x04002216 RID: 8726
+		// Token: 0x040022B0 RID: 8880
 		private const string KEY_PREFIX = "LivenessById";
 
-		// Token: 0x04002217 RID: 8727
+		// Token: 0x040022B1 RID: 8881
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002218 RID: 8728
+		// Token: 0x040022B2 RID: 8882
 		private static int HandleId;
 	}
 }

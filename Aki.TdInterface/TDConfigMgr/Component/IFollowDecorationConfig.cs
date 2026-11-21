@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003A6 RID: 934
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003EF RID: 1007
 	public class IFollowDecorationConfig
 	{
-		// Token: 0x060012A1 RID: 4769 RVA: 0x0003D51C File Offset: 0x0003B71C
+		// Token: 0x060013E7 RID: 5095 RVA: 0x00040854 File Offset: 0x0003EA54
 		private IFollowDecorationConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060012A2 RID: 4770 RVA: 0x0003D554 File Offset: 0x0003B754
+		// Token: 0x060013E8 RID: 5096 RVA: 0x0004088C File Offset: 0x0003EA8C
 		public static IFollowDecorationConfig Create([Nullable(2)] IFollowDecorationConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012A3 RID: 4771 RVA: 0x0003D567 File Offset: 0x0003B767
+		// Token: 0x060013E9 RID: 5097 RVA: 0x0004089F File Offset: 0x0003EA9F
 		public static IFollowDecorationConfig CreateFromSetValue([Nullable(2)] IFollowDecorationConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012A4 RID: 4772 RVA: 0x0003D57A File Offset: 0x0003B77A
+		// Token: 0x060013EA RID: 5098 RVA: 0x000408B2 File Offset: 0x0003EAB2
 		public IFollowDecorationConfig_SetValue ToSetValue()
 		{
 			return new IFollowDecorationConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000535 RID: 1333
-		// (get) Token: 0x060012A5 RID: 4773 RVA: 0x0003D58D File Offset: 0x0003B78D
-		// (set) Token: 0x060012A6 RID: 4774 RVA: 0x0003D5B8 File Offset: 0x0003B7B8
+		// Token: 0x1700058A RID: 1418
+		// (get) Token: 0x060013EB RID: 5099 RVA: 0x000408C5 File Offset: 0x0003EAC5
+		// (set) Token: 0x060013EC RID: 5100 RVA: 0x000408F0 File Offset: 0x0003EAF0
 		public virtual EFollowDecorationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000EF8 RID: 3832
+		// Token: 0x04000FF0 RID: 4080
 		[Nullable(2)]
 		protected IFollowDecorationConfig FbInstance;
 
-		// Token: 0x04000EF9 RID: 3833
+		// Token: 0x04000FF1 RID: 4081
 		[Nullable(2)]
 		protected IFollowDecorationConfig_SetValue PocoInterface;
 	}

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DE8 RID: 19944
+	// Token: 0x02003DB1 RID: 15793
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class PhantomAttrItem : GridProxyAbstract<IPhantomAttrItemData>
 	{
-		// Token: 0x06033780 RID: 210816 RVA: 0x00C065C9 File Offset: 0x00C047C9
+		// Token: 0x060285EB RID: 165355 RVA: 0x00B4FAD9 File Offset: 0x00B4DCD9
 		public void Update(IPhantomAttrItemData data)
 		{
 			this.AffixEntry = data.AffixEntry;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshPanel();
 		}
 
-		// Token: 0x06033781 RID: 210817 RVA: 0x00C065EC File Offset: 0x00C047EC
+		// Token: 0x060285EC RID: 165356 RVA: 0x00B4FAFC File Offset: 0x00B4DCFC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -53,25 +53,25 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033782 RID: 210818 RVA: 0x00C0673D File Offset: 0x00C0493D
+		// Token: 0x060285ED RID: 165357 RVA: 0x00B4FC4D File Offset: 0x00B4DE4D
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x06033783 RID: 210819 RVA: 0x00C06750 File Offset: 0x00C04950
+		// Token: 0x060285EE RID: 165358 RVA: 0x00B4FC60 File Offset: 0x00B4DE60
 		private ElementItem CreateElementItem()
 		{
 			return new ElementItem();
 		}
 
-		// Token: 0x06033784 RID: 210820 RVA: 0x00C06757 File Offset: 0x00C04957
+		// Token: 0x060285EF RID: 165359 RVA: 0x00B4FC67 File Offset: 0x00B4DE67
 		public override void Refresh(IPhantomAttrItemData data, bool isSelected, int gridIndex)
 		{
 			this.Update(data);
 		}
 
-		// Token: 0x06033785 RID: 210821 RVA: 0x00C06760 File Offset: 0x00C04960
+		// Token: 0x060285F0 RID: 165360 RVA: 0x00B4FC70 File Offset: 0x00B4DE70
 		private void RefreshPanel()
 		{
 			this.RefreshUnlock();
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshElement();
 		}
 
-		// Token: 0x06033786 RID: 210822 RVA: 0x00C0677C File Offset: 0x00C0497C
+		// Token: 0x060285F1 RID: 165361 RVA: 0x00B4FC8C File Offset: 0x00B4DE8C
 		private void RefreshUnlock()
 		{
 			bool isUnlock = this.RoguelikeInfo.GetIsUnlock(this.AffixEntry);
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetSprite(4).SetUIActive(!isUnlock);
 		}
 
-		// Token: 0x06033787 RID: 210823 RVA: 0x00C067B8 File Offset: 0x00C049B8
+		// Token: 0x060285F2 RID: 165362 RVA: 0x00B4FCC8 File Offset: 0x00B4DEC8
 		private void RefreshAttrText()
 		{
 			RogueAffix? rogueAffixConfig = RoguelikeConfig.Instance.GetRogueAffixConfig(this.AffixEntry.Id.Value);
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			LguiUtil.Instance.SetLocalTextNew(text2, rogueAffixConfig.Value.AffixDesc, rogueAffixConfig.Value.AffixDescParam());
 		}
 
-		// Token: 0x06033788 RID: 210824 RVA: 0x00C068F0 File Offset: 0x00C04AF0
+		// Token: 0x060285F3 RID: 165363 RVA: 0x00B4FE00 File Offset: 0x00B4E000
 		private void RefreshLayout()
 		{
 			UUIText text = base.GetText(0);
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033789 RID: 210825 RVA: 0x00C069E8 File Offset: 0x00C04BE8
+		// Token: 0x060285F4 RID: 165364 RVA: 0x00B4FEF8 File Offset: 0x00B4E0F8
 		private void RefreshElement()
 		{
 			List<ElementInfo> sortElementInfoArrayByCount = this.AffixEntry.GetSortElementInfoArrayByCount(false);
@@ -154,56 +154,56 @@ namespace CSharpScript.Game.Module.Roguelike
 			adaptationElementLayout.RefreshByData(sortElementInfoArrayByCount, null, false);
 		}
 
-		// Token: 0x0603378A RID: 210826 RVA: 0x00C06A2C File Offset: 0x00C04C2C
+		// Token: 0x060285F5 RID: 165365 RVA: 0x00B4FF3C File Offset: 0x00B4E13C
 		public void PlayComplete()
 		{
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Complete", false, null, false);
 		}
 
-		// Token: 0x0401B51C RID: 111900
+		// Token: 0x04015EEF RID: 89839
 		public AffixEntry AffixEntry;
 
-		// Token: 0x0401B51D RID: 111901
+		// Token: 0x04015EF0 RID: 89840
 		private RoguelikeInfo RoguelikeInfo;
 
-		// Token: 0x0401B51E RID: 111902
+		// Token: 0x04015EF1 RID: 89841
 		private GenericLayout<ElementItem, ElementInfo> ElementLayout;
 
-		// Token: 0x0401B51F RID: 111903
+		// Token: 0x04015EF2 RID: 89842
 		private GenericLayout<ElementItem, ElementInfo> AdaptationElementLayout;
 
-		// Token: 0x0401B520 RID: 111904
+		// Token: 0x04015EF3 RID: 89843
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200AF6D RID: 44909
+		// Token: 0x020099A2 RID: 39330
 		[NullableContext(0)]
 		private class EPhantomAttrItemCom
 		{
-			// Token: 0x04035441 RID: 218177
+			// Token: 0x0402FE74 RID: 196212
 			public const int AttrText = 0;
 
-			// Token: 0x04035442 RID: 218178
+			// Token: 0x0402FE75 RID: 196213
 			public const int ElementsLayout = 1;
 
-			// Token: 0x04035443 RID: 218179
+			// Token: 0x0402FE76 RID: 196214
 			public const int ElementItem = 2;
 
-			// Token: 0x04035444 RID: 218180
+			// Token: 0x0402FE77 RID: 196215
 			public const int FinishSprite = 3;
 
-			// Token: 0x04035445 RID: 218181
+			// Token: 0x0402FE78 RID: 196216
 			public const int NoSprite = 4;
 
-			// Token: 0x04035446 RID: 218182
+			// Token: 0x0402FE79 RID: 196217
 			public const int BlackGroundItem = 5;
 
-			// Token: 0x04035447 RID: 218183
+			// Token: 0x0402FE7A RID: 196218
 			public const int AdaptationParentItem = 6;
 
-			// Token: 0x04035448 RID: 218184
+			// Token: 0x0402FE7B RID: 196219
 			public const int AdaptationAttrText = 7;
 
-			// Token: 0x04035449 RID: 218185
+			// Token: 0x0402FE7C RID: 196220
 			public const int AdaptationElementsLayout = 8;
 		}
 	}

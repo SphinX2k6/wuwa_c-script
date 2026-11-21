@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Physics
 {
-	// Token: 0x0200434D RID: 17229
+	// Token: 0x020047AF RID: 18351
 	public static class IPhysicsAngularLimitVerify
 	{
-		// Token: 0x060198CF RID: 104655 RVA: 0x003A8844 File Offset: 0x003A6A44
+		// Token: 0x0601B05D RID: 110685 RVA: 0x003D426C File Offset: 0x003D246C
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false))
@@ -57,14 +57,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			return false;
 		}
 
-		// Token: 0x02007985 RID: 31109
+		// Token: 0x020081CE RID: 33230
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013302 RID: 78594
+			// Token: 0x04014369 RID: 82793
 			public static VerifyUnionAction <0>__Verify;
 
-			// Token: 0x04013303 RID: 78595
+			// Token: 0x0401436A RID: 82794
 			public static VerifyTableAction <1>__Verify;
 		}
 	}

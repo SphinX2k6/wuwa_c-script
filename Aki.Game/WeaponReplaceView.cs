@@ -14,17 +14,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D01 RID: 11521
+// Token: 0x0200225B RID: 8795
 [NullableContext(1)]
 [Nullable(0)]
 public class WeaponReplaceView : UiViewBase
 {
-	// Token: 0x06018369 RID: 99177 RVA: 0x006299DC File Offset: 0x00627BDC
+	// Token: 0x06015C0A RID: 89098 RVA: 0x0064F9B0 File Offset: 0x0064DBB0
 	public WeaponReplaceView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601836A RID: 99178 RVA: 0x006299E8 File Offset: 0x00627BE8
+	// Token: 0x06015C0B RID: 89099 RVA: 0x0064F9BC File Offset: 0x0064DBBC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -57,7 +57,7 @@ public class WeaponReplaceView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601836B RID: 99179 RVA: 0x00629B58 File Offset: 0x00627D58
+	// Token: 0x06015C0C RID: 89100 RVA: 0x0064FB2C File Offset: 0x0064DD2C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeaponReplaceView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ public class WeaponReplaceView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601836C RID: 99180 RVA: 0x00629B9C File Offset: 0x00627D9C
+	// Token: 0x06015C0D RID: 89101 RVA: 0x0064FB70 File Offset: 0x0064DD70
 	protected override void OnStart()
 	{
 		AUIBaseActor gridActor = base.GetItem(6).GetOwner() as AUIBaseActor;
@@ -81,13 +81,13 @@ public class WeaponReplaceView : UiViewBase
 		this.SortComponent = new SortEntrance<WeaponItemData>(base.GetItem(5), new TUpdateDataListFunction<WeaponItemData>(this.UpdateList));
 	}
 
-	// Token: 0x0601836D RID: 99181 RVA: 0x00629C4B File Offset: 0x00627E4B
+	// Token: 0x06015C0E RID: 89102 RVA: 0x0064FC1F File Offset: 0x0064DE1F
 	private SelectablePropData UpdateSelectableItemData(int gridIndex)
 	{
 		return SelectablePropDataUtil.GetSelectablePropData(this.ItemDataList[gridIndex]);
 	}
 
-	// Token: 0x0601836E RID: 99182 RVA: 0x00629C60 File Offset: 0x00627E60
+	// Token: 0x06015C0F RID: 89103 RVA: 0x0064FC34 File Offset: 0x0064DE34
 	private WeaponReplaceMediumItemGrid InitSelectableItem()
 	{
 		WeaponReplaceMediumItemGrid weaponReplaceMediumItemGrid = new WeaponReplaceMediumItemGrid();
@@ -98,21 +98,21 @@ public class WeaponReplaceView : UiViewBase
 		return weaponReplaceMediumItemGrid;
 	}
 
-	// Token: 0x0601836F RID: 99183 RVA: 0x00629CB0 File Offset: 0x00627EB0
+	// Token: 0x06015C10 RID: 89104 RVA: 0x0064FC84 File Offset: 0x0064DE84
 	private void ToggleFunction(MediumItemGridExtendCallback parameters)
 	{
 		int incId = (parameters.Data as SelectablePropData).IncId;
 		this.SelectedWeaponHandle(incId, false);
 	}
 
-	// Token: 0x06018370 RID: 99184 RVA: 0x00629CD8 File Offset: 0x00627ED8
+	// Token: 0x06015C11 RID: 89105 RVA: 0x0064FCAC File Offset: 0x0064DEAC
 	private bool CanExecuteChange(object data, bool isForceSelected, EToggleState _)
 	{
 		SelectablePropData selectablePropData = data as SelectablePropData;
 		return this.SelectedIncId != selectablePropData.IncId;
 	}
 
-	// Token: 0x06018371 RID: 99185 RVA: 0x00629D00 File Offset: 0x00627F00
+	// Token: 0x06015C12 RID: 89106 RVA: 0x0064FCD4 File Offset: 0x0064DED4
 	protected void UpdateList(List<WeaponItemData> list, bool _1, EFilterSortType _2)
 	{
 		this.LoopScrollView.DeselectCurrentGridProxy(true);
@@ -131,7 +131,7 @@ public class WeaponReplaceView : UiViewBase
 		this.SelectedWeaponHandle(weaponItemData.GetUniqueId(), false);
 	}
 
-	// Token: 0x06018372 RID: 99186 RVA: 0x00629D7C File Offset: 0x00627F7C
+	// Token: 0x06015C13 RID: 89107 RVA: 0x0064FD50 File Offset: 0x0064DF50
 	private void OpenWeaponRootView(int incId)
 	{
 		WeaponInstance weaponDataByIncId = WeaponModel.Instance.GetWeaponDataByIncId(incId);
@@ -146,7 +146,7 @@ public class WeaponReplaceView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.WeaponRootView, param, null);
 	}
 
-	// Token: 0x06018373 RID: 99187 RVA: 0x00629DEC File Offset: 0x00627FEC
+	// Token: 0x06015C14 RID: 89108 RVA: 0x0064FDC0 File Offset: 0x0064DFC0
 	private void ReplaceWeapon(int incId)
 	{
 		WeaponDataBase weaponDataByRoleDataId = WeaponModel.Instance.GetWeaponDataByRoleDataId(this.RoleDataId, true);
@@ -193,7 +193,7 @@ public class WeaponReplaceView : UiViewBase
 		WeaponController.Instance.SendPbEquipTakeOnRequest(roleId, EquipPos.Weapon, incId);
 	}
 
-	// Token: 0x06018374 RID: 99188 RVA: 0x00629F88 File Offset: 0x00628188
+	// Token: 0x06015C15 RID: 89109 RVA: 0x0064FF5C File Offset: 0x0064E15C
 	protected void SetContrast()
 	{
 		this.InContrast = !this.InContrast;
@@ -208,7 +208,7 @@ public class WeaponReplaceView : UiViewBase
 		}
 	}
 
-	// Token: 0x06018375 RID: 99189 RVA: 0x00629FC4 File Offset: 0x006281C4
+	// Token: 0x06015C16 RID: 89110 RVA: 0x0064FF98 File Offset: 0x0064E198
 	protected override void OnBeforeShow()
 	{
 		WeaponModel.Instance.SetCurSelectViewName(EWeaponViewName.WeaponReplaceView);
@@ -224,7 +224,7 @@ public class WeaponReplaceView : UiViewBase
 		this.SelectedWeaponHandle(weaponDataByIncId.GetIncId().Value, true);
 	}
 
-	// Token: 0x06018376 RID: 99190 RVA: 0x0062A04C File Offset: 0x0062824C
+	// Token: 0x06015C17 RID: 89111 RVA: 0x00650020 File Offset: 0x0064E220
 	protected override UniTask OnPlayingStartSequenceAsync()
 	{
 		WeaponReplaceView.<OnPlayingStartSequenceAsync>d__24 <OnPlayingStartSequenceAsync>d__;
@@ -235,7 +235,7 @@ public class WeaponReplaceView : UiViewBase
 		return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018377 RID: 99191 RVA: 0x0062A090 File Offset: 0x00628290
+	// Token: 0x06015C18 RID: 89112 RVA: 0x00650064 File Offset: 0x0064E264
 	protected override UniTask OnPlayingCloseSequenceAsync()
 	{
 		WeaponReplaceView.<OnPlayingCloseSequenceAsync>d__25 <OnPlayingCloseSequenceAsync>d__;
@@ -246,7 +246,7 @@ public class WeaponReplaceView : UiViewBase
 		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018378 RID: 99192 RVA: 0x0062A0D3 File Offset: 0x006282D3
+	// Token: 0x06015C19 RID: 89113 RVA: 0x006500A7 File Offset: 0x0064E2A7
 	protected override void OnBeforeDestroy()
 	{
 		this.RestoreOriginalWeapon();
@@ -255,7 +255,7 @@ public class WeaponReplaceView : UiViewBase
 		this.SortComponent.Destroy(null);
 	}
 
-	// Token: 0x06018379 RID: 99193 RVA: 0x0062A0FF File Offset: 0x006282FF
+	// Token: 0x06015C1A RID: 89114 RVA: 0x006500D3 File Offset: 0x0064E2D3
 	protected override void OnHandleLoadScene()
 	{
 		this.ViewModel.HandleLoadScene(delegate
@@ -264,13 +264,13 @@ public class WeaponReplaceView : UiViewBase
 		});
 	}
 
-	// Token: 0x0601837A RID: 99194 RVA: 0x0062A12B File Offset: 0x0062832B
+	// Token: 0x06015C1B RID: 89115 RVA: 0x006500FF File Offset: 0x0064E2FF
 	protected override void OnHandleReleaseScene()
 	{
 		this.ViewModel.HandleReleaseScene();
 	}
 
-	// Token: 0x0601837B RID: 99195 RVA: 0x0062A138 File Offset: 0x00628338
+	// Token: 0x06015C1C RID: 89116 RVA: 0x0065010C File Offset: 0x0064E30C
 	private void RestoreOriginalWeapon()
 	{
 		try
@@ -311,7 +311,7 @@ public class WeaponReplaceView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601837C RID: 99196 RVA: 0x0062A1F8 File Offset: 0x006283F8
+	// Token: 0x06015C1D RID: 89117 RVA: 0x006501CC File Offset: 0x0064E3CC
 	protected override void OnAfterHide()
 	{
 		if (this.InContrast)
@@ -320,21 +320,21 @@ public class WeaponReplaceView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601837D RID: 99197 RVA: 0x0062A208 File Offset: 0x00628408
+	// Token: 0x06015C1E RID: 89118 RVA: 0x006501DC File Offset: 0x0064E3DC
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.EquipWeapon, new Action(this.EquipWeaponEvent));
 		EventSystem.Instance.Add(EEventName.OnItemLock, new Action<int, bool>(this.WeaponTipsLockEvent));
 	}
 
-	// Token: 0x0601837E RID: 99198 RVA: 0x0062A242 File Offset: 0x00628442
+	// Token: 0x06015C1F RID: 89119 RVA: 0x00650216 File Offset: 0x0064E416
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.EquipWeapon, new Action(this.EquipWeaponEvent));
 		EventSystem.Instance.Remove(EEventName.OnItemLock, new Action<int, bool>(this.WeaponTipsLockEvent));
 	}
 
-	// Token: 0x0601837F RID: 99199 RVA: 0x0062A27C File Offset: 0x0062847C
+	// Token: 0x06015C20 RID: 89120 RVA: 0x00650250 File Offset: 0x0064E450
 	private void EquipWeaponEvent()
 	{
 		this.UpdateCurrentTips();
@@ -342,7 +342,7 @@ public class WeaponReplaceView : UiViewBase
 		this.RefreshPropItem();
 	}
 
-	// Token: 0x06018380 RID: 99200 RVA: 0x0062A296 File Offset: 0x00628496
+	// Token: 0x06015C21 RID: 89121 RVA: 0x0065026A File Offset: 0x0064E46A
 	private void WeaponTipsLockEvent(int incId, bool isLock)
 	{
 		if (this.CurrentWeaponTipsView.GetWeaponIncId() == incId)
@@ -356,13 +356,13 @@ public class WeaponReplaceView : UiViewBase
 		this.RefreshPropItem();
 	}
 
-	// Token: 0x06018381 RID: 99201 RVA: 0x0062A2D2 File Offset: 0x006284D2
+	// Token: 0x06015C22 RID: 89122 RVA: 0x006502A6 File Offset: 0x0064E4A6
 	protected void RefreshPropItem()
 	{
 		this.LoopScrollView.RefreshAllGridProxies();
 	}
 
-	// Token: 0x06018382 RID: 99202 RVA: 0x0062A2E0 File Offset: 0x006284E0
+	// Token: 0x06015C23 RID: 89123 RVA: 0x006502B4 File Offset: 0x0064E4B4
 	protected void SetWeaponTipsRootItemState(bool state)
 	{
 		this.UiViewSequence.StopSequenceByKey("TipStart", false, false);
@@ -371,7 +371,7 @@ public class WeaponReplaceView : UiViewBase
 		this.UiViewSequence.PlaySequence(sequenceName, false, null);
 	}
 
-	// Token: 0x06018383 RID: 99203 RVA: 0x0062A338 File Offset: 0x00628538
+	// Token: 0x06015C24 RID: 89124 RVA: 0x0065030C File Offset: 0x0064E50C
 	protected void SelectedWeaponHandle(int incId, bool bFireEvent = false)
 	{
 		if (this.SelectedIncId == incId)
@@ -415,7 +415,7 @@ public class WeaponReplaceView : UiViewBase
 		uiRoleWeaponComponent.SetWeaponByWeaponData(weaponDataByIncId, weaponSkinId);
 	}
 
-	// Token: 0x06018384 RID: 99204 RVA: 0x0062A404 File Offset: 0x00628604
+	// Token: 0x06015C25 RID: 89125 RVA: 0x006503D8 File Offset: 0x0064E5D8
 	protected void UpdateSelectedTips(int incId)
 	{
 		WeaponInstance weaponDataByIncId = WeaponModel.Instance.GetWeaponDataByIncId(incId);
@@ -424,7 +424,7 @@ public class WeaponReplaceView : UiViewBase
 		this.SelectWeaponTipsView.UpdateEquip(roleDataById.GetRoleId());
 	}
 
-	// Token: 0x06018385 RID: 99205 RVA: 0x0062A44C File Offset: 0x0062864C
+	// Token: 0x06015C26 RID: 89126 RVA: 0x00650420 File Offset: 0x0064E620
 	protected void UpdateCurrentTips()
 	{
 		WeaponInstance weaponData = WeaponModel.Instance.GetWeaponDataByRoleDataId(this.RoleDataId, true) as WeaponInstance;
@@ -433,7 +433,7 @@ public class WeaponReplaceView : UiViewBase
 		this.CurrentWeaponTipsView.UpdateEquip(roleDataById.GetRoleId());
 	}
 
-	// Token: 0x06018386 RID: 99206 RVA: 0x0062A4A0 File Offset: 0x006286A0
+	// Token: 0x06015C27 RID: 89127 RVA: 0x00650474 File Offset: 0x0064E674
 	protected int GetWeaponItemIndex(int incId)
 	{
 		for (int i = 0; i < this.ItemDataList.Count; i++)
@@ -446,7 +446,7 @@ public class WeaponReplaceView : UiViewBase
 		return -1;
 	}
 
-	// Token: 0x06018387 RID: 99207 RVA: 0x0062A4DC File Offset: 0x006286DC
+	// Token: 0x06015C28 RID: 89128 RVA: 0x006504B0 File Offset: 0x0064E6B0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -500,39 +500,39 @@ public class WeaponReplaceView : UiViewBase
 		};
 	}
 
-	// Token: 0x06018388 RID: 99208 RVA: 0x0062A5F8 File Offset: 0x006287F8
+	// Token: 0x06015C29 RID: 89129 RVA: 0x006505CC File Offset: 0x0064E7CC
 	private void BackClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06018389 RID: 99209 RVA: 0x0062A601 File Offset: 0x00628801
+	// Token: 0x06015C2A RID: 89130 RVA: 0x006505D5 File Offset: 0x0064E7D5
 	private void ContrastClick()
 	{
 		this.SetContrast();
 	}
 
-	// Token: 0x0400B3FF RID: 46079
+	// Token: 0x0400B774 RID: 46964
 	protected int SelectedIncId;
 
-	// Token: 0x0400B400 RID: 46080
+	// Token: 0x0400B775 RID: 46965
 	protected int RoleDataId;
 
-	// Token: 0x0400B401 RID: 46081
+	// Token: 0x0400B776 RID: 46966
 	protected ERoleViewSource Source;
 
-	// Token: 0x0400B402 RID: 46082
+	// Token: 0x0400B777 RID: 46967
 	[Nullable(2)]
 	private WeaponDetailTipsComponent SelectWeaponTipsView;
 
-	// Token: 0x0400B403 RID: 46083
+	// Token: 0x0400B778 RID: 46968
 	[Nullable(2)]
 	private WeaponDetailTipsComponent CurrentWeaponTipsView;
 
-	// Token: 0x0400B404 RID: 46084
+	// Token: 0x0400B779 RID: 46969
 	private bool InContrast;
 
-	// Token: 0x0400B405 RID: 46085
+	// Token: 0x0400B77A RID: 46970
 	[Nullable(new byte[]
 	{
 		2,
@@ -540,7 +540,7 @@ public class WeaponReplaceView : UiViewBase
 	})]
 	protected SortEntrance<WeaponItemData> SortComponent;
 
-	// Token: 0x0400B406 RID: 46086
+	// Token: 0x0400B77B RID: 46971
 	[Nullable(new byte[]
 	{
 		2,
@@ -549,7 +549,7 @@ public class WeaponReplaceView : UiViewBase
 	})]
 	protected LoopScrollView<WeaponReplaceMediumItemGrid, SelectablePropData> LoopScrollView;
 
-	// Token: 0x0400B407 RID: 46087
+	// Token: 0x0400B77C RID: 46972
 	[Nullable(new byte[]
 	{
 		2,
@@ -557,27 +557,27 @@ public class WeaponReplaceView : UiViewBase
 	})]
 	protected List<WeaponItemData> ItemDataList;
 
-	// Token: 0x0400B408 RID: 46088
+	// Token: 0x0400B77D RID: 46973
 	[Nullable(2)]
 	private RoleViewViewModel ViewModel;
 
-	// Token: 0x0200929A RID: 37530
+	// Token: 0x020084C2 RID: 33986
 	[NullableContext(0)]
 	private enum EWeaponReplaceViewDefine
 	{
-		// Token: 0x0402F65F RID: 194143
+		// Token: 0x0402ACE9 RID: 175337
 		Scrollbar,
-		// Token: 0x0402F660 RID: 194144
+		// Token: 0x0402ACEA RID: 175338
 		BackButton,
-		// Token: 0x0402F661 RID: 194145
+		// Token: 0x0402ACEB RID: 175339
 		WeaponTipsItem,
-		// Token: 0x0402F662 RID: 194146
+		// Token: 0x0402ACEC RID: 175340
 		CurrentTipsItem,
-		// Token: 0x0402F663 RID: 194147
+		// Token: 0x0402ACED RID: 175341
 		ContrastButton,
-		// Token: 0x0402F664 RID: 194148
+		// Token: 0x0402ACEE RID: 175342
 		SortItem,
-		// Token: 0x0402F665 RID: 194149
+		// Token: 0x0402ACEF RID: 175343
 		SelectableItem
 	}
 }

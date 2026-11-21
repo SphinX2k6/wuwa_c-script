@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x02006399 RID: 25497
+	// Token: 0x02005317 RID: 21271
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MultiMotorParkourMapItem : UiPanelBase
 	{
-		// Token: 0x0604020D RID: 262669 RVA: 0x00F8631D File Offset: 0x00F8451D
+		// Token: 0x06034ECE RID: 216782 RVA: 0x00ECD291 File Offset: 0x00ECB491
 		public MultiMotorParkourMapItem(MultiMotorLevelData levelData)
 		{
 			this.LevelData = levelData;
 		}
 
-		// Token: 0x0604020E RID: 262670 RVA: 0x00F86350 File Offset: 0x00F84550
+		// Token: 0x06034ECF RID: 216783 RVA: 0x00ECD2C4 File Offset: 0x00ECB4C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604020F RID: 262671 RVA: 0x00F86480 File Offset: 0x00F84680
+		// Token: 0x06034ED0 RID: 216784 RVA: 0x00ECD3F4 File Offset: 0x00ECB5F4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MultiMotorParkourMapItem.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -59,13 +59,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040210 RID: 262672 RVA: 0x00F864C3 File Offset: 0x00F846C3
+		// Token: 0x06034ED1 RID: 216785 RVA: 0x00ECD437 File Offset: 0x00ECB637
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRefreshOnlineTeamList, new Action(this.OnRefreshOnlineTeamList));
 		}
 
-		// Token: 0x06040211 RID: 262673 RVA: 0x00F864E4 File Offset: 0x00F846E4
+		// Token: 0x06034ED2 RID: 216786 RVA: 0x00ECD458 File Offset: 0x00ECB658
 		private void OnRefreshOnlineTeamList()
 		{
 			List<OnlineTeamData> teamList = OnlineModel.Instance.GetTeamList();
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x06040212 RID: 262674 RVA: 0x00F8659C File Offset: 0x00F8479C
+		// Token: 0x06034ED3 RID: 216787 RVA: 0x00ECD510 File Offset: 0x00ECB710
 		public void DrawMapPathLine()
 		{
 			MotorParkourMapModel.Instance.InitSplinePoints(this.LevelData.Config.Value.SplineId, (float)((int)this.LevelData.Config.Value.MapScale), this.CenterOffset, this.LevelData.Config.Value.SplineStartIndex, this.LevelData.Config.Value.SplineEndIndex);
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.MaxPointsCount = splinePoints.Num();
 		}
 
-		// Token: 0x06040213 RID: 262675 RVA: 0x00F86654 File Offset: 0x00F84854
+		// Token: 0x06034ED4 RID: 216788 RVA: 0x00ECD5C8 File Offset: 0x00ECB7C8
 		public void UpdatePlayerPosition()
 		{
 			MotorParkourPlayerMarkItem playerMarkItem = this.PlayerMarkItem;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x0402169A RID: 136858
+		// Token: 0x0401BFC9 RID: 114633
 		private static readonly int[] NumberToComponent = new int[]
 		{
 			7,
@@ -139,57 +139,57 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			6
 		};
 
-		// Token: 0x0402169B RID: 136859
+		// Token: 0x0401BFCA RID: 114634
 		[Nullable(2)]
 		private MotorParkourPlayerMarkItem PlayerMarkItem;
 
-		// Token: 0x0402169C RID: 136860
+		// Token: 0x0401BFCB RID: 114635
 		private readonly List<MotorParkourPlayerMarkItem> PlayerMarkItemOthers = new List<MotorParkourPlayerMarkItem>();
 
-		// Token: 0x0402169D RID: 136861
+		// Token: 0x0401BFCC RID: 114636
 		private readonly Vector2D UiOffset = Vector2D.Create();
 
-		// Token: 0x0402169E RID: 136862
+		// Token: 0x0401BFCD RID: 114637
 		private readonly Vector2D CenterOffset = Vector2D.Create();
 
-		// Token: 0x0402169F RID: 136863
+		// Token: 0x0401BFCE RID: 114638
 		private int MaxPointsCount;
 
-		// Token: 0x040216A0 RID: 136864
+		// Token: 0x0401BFCF RID: 114639
 		private int CurrentPointsCount;
 
-		// Token: 0x040216A1 RID: 136865
+		// Token: 0x0401BFD0 RID: 114640
 		private int SelfPlayerNumber;
 
-		// Token: 0x040216A2 RID: 136866
+		// Token: 0x0401BFD1 RID: 114641
 		public MultiMotorLevelData LevelData;
 
-		// Token: 0x0200C5B0 RID: 50608
+		// Token: 0x0200AF97 RID: 44951
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BAF6 RID: 244470
+			// Token: 0x04036457 RID: 222295
 			public const int ItemMarkPanel = 0;
 
-			// Token: 0x0403BAF7 RID: 244471
+			// Token: 0x04036458 RID: 222296
 			public const int LineRawMapPath = 1;
 
-			// Token: 0x0403BAF8 RID: 244472
+			// Token: 0x04036459 RID: 222297
 			public const int LineRawPathTaken = 2;
 
-			// Token: 0x0403BAF9 RID: 244473
+			// Token: 0x0403645A RID: 222298
 			public const int ItemEndPoint = 3;
 
-			// Token: 0x0403BAFA RID: 244474
+			// Token: 0x0403645B RID: 222299
 			public const int ItemPlayer = 4;
 
-			// Token: 0x0403BAFB RID: 244475
+			// Token: 0x0403645C RID: 222300
 			public const int ItemPlayer2P = 5;
 
-			// Token: 0x0403BAFC RID: 244476
+			// Token: 0x0403645D RID: 222301
 			public const int ItemPlayer3P = 6;
 
-			// Token: 0x0403BAFD RID: 244477
+			// Token: 0x0403645E RID: 222302
 			public const int ItemPlayer1P = 7;
 		}
 	}

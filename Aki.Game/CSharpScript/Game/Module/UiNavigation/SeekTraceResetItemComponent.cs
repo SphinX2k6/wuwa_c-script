@@ -6,22 +6,22 @@ using CSharpScript.Game.LevelGamePlay.SeekTrace;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049CE RID: 18894
+	// Token: 0x02003948 RID: 14664
 	public class SeekTraceResetItemComponent : HotKeyComponent
 	{
-		// Token: 0x060311F1 RID: 201201 RVA: 0x00B65133 File Offset: 0x00B63333
+		// Token: 0x06025D27 RID: 154919 RVA: 0x00AA0083 File Offset: 0x00A9E283
 		public SeekTraceResetItemComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060311F2 RID: 201202 RVA: 0x00B6513C File Offset: 0x00B6333C
+		// Token: 0x06025D28 RID: 154920 RVA: 0x00AA008C File Offset: 0x00A9E28C
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, SeekTraceModel.Instance.SelectedItem != null, false);
 		}
 
-		// Token: 0x060311F3 RID: 201203 RVA: 0x00B65153 File Offset: 0x00B63353
+		// Token: 0x06025D29 RID: 154921 RVA: 0x00AA00A3 File Offset: 0x00A9E2A3
 		protected override void OnPress(HotKeyMap config)
 		{
 			EventSystem.Instance.Emit(EEventName.SeekTraceResetItemInput);

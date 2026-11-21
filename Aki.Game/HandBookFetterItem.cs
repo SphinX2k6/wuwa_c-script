@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Module.Util.Layout;
 using UnrealEngine;
 
-// Token: 0x02001E07 RID: 7687
+// Token: 0x020012C9 RID: 4809
 [NullableContext(1)]
 [Nullable(0)]
 public class HandBookFetterItem : GridProxyAbstract<PhantomFetter>
 {
-	// Token: 0x0600E9B9 RID: 59833 RVA: 0x00374AC8 File Offset: 0x00372CC8
+	// Token: 0x0600BDD8 RID: 48600 RVA: 0x003807D0 File Offset: 0x0037E9D0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class HandBookFetterItem : GridProxyAbstract<PhantomFetter>
 		};
 	}
 
-	// Token: 0x0600E9BA RID: 59834 RVA: 0x00374BA0 File Offset: 0x00372DA0
+	// Token: 0x0600BDD9 RID: 48601 RVA: 0x003808A8 File Offset: 0x0037EAA8
 	public override void Refresh(PhantomFetter phantomFetter, bool isSelected, int gridIndex)
 	{
 		this.PhantomFetter = new PhantomFetter?(phantomFetter);
@@ -50,19 +50,19 @@ public class HandBookFetterItem : GridProxyAbstract<PhantomFetter>
 		this.SetSelected(isSelected);
 	}
 
-	// Token: 0x0600E9BB RID: 59835 RVA: 0x00374C71 File Offset: 0x00372E71
+	// Token: 0x0600BDDA RID: 48602 RVA: 0x00380979 File Offset: 0x0037EB79
 	public int GetGirdIndex()
 	{
 		return this.GirdIndex;
 	}
 
-	// Token: 0x0600E9BC RID: 59836 RVA: 0x00374C79 File Offset: 0x00372E79
+	// Token: 0x0600BDDB RID: 48603 RVA: 0x00380981 File Offset: 0x0037EB81
 	public void BindFetterToggleCallback(TFetterToggleFunction fetterToggleFunction)
 	{
 		this.FetterToggleFunction = fetterToggleFunction;
 	}
 
-	// Token: 0x0600E9BD RID: 59837 RVA: 0x00374C82 File Offset: 0x00372E82
+	// Token: 0x0600BDDC RID: 48604 RVA: 0x0038098A File Offset: 0x0037EB8A
 	private void OnFetterToggleClicked(EToggleState state)
 	{
 		if (this.FetterToggleFunction != null && state == EToggleState.ETT_Checked)
@@ -71,13 +71,13 @@ public class HandBookFetterItem : GridProxyAbstract<PhantomFetter>
 		}
 	}
 
-	// Token: 0x0600E9BE RID: 59838 RVA: 0x00374C9C File Offset: 0x00372E9C
+	// Token: 0x0600BDDD RID: 48605 RVA: 0x003809A4 File Offset: 0x0037EBA4
 	public PhantomFetter? GetPhantomFetter()
 	{
 		return this.PhantomFetter;
 	}
 
-	// Token: 0x0600E9BF RID: 59839 RVA: 0x00374CA4 File Offset: 0x00372EA4
+	// Token: 0x0600BDDE RID: 48606 RVA: 0x003809AC File Offset: 0x0037EBAC
 	private ILayoutItem<HandBookCommonItem> InitContentItem(object data, UUIItem uiItem, int index)
 	{
 		HandBookCommonItem handBookCommonItem = new HandBookCommonItem();
@@ -91,7 +91,7 @@ public class HandBookFetterItem : GridProxyAbstract<PhantomFetter>
 		};
 	}
 
-	// Token: 0x0600E9C0 RID: 59840 RVA: 0x00374CF0 File Offset: 0x00372EF0
+	// Token: 0x0600BDDF RID: 48607 RVA: 0x003809F8 File Offset: 0x0037EBF8
 	private void SetSelected(bool bSelected)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -103,19 +103,19 @@ public class HandBookFetterItem : GridProxyAbstract<PhantomFetter>
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600E9C1 RID: 59841 RVA: 0x00374D1F File Offset: 0x00372F1F
+	// Token: 0x0600BDE0 RID: 48608 RVA: 0x00380A27 File Offset: 0x0037EC27
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false);
 	}
 
-	// Token: 0x0600E9C2 RID: 59842 RVA: 0x00374D28 File Offset: 0x00372F28
+	// Token: 0x0600BDE1 RID: 48609 RVA: 0x00380A30 File Offset: 0x0037EC30
 	public void SetToggleStateForce(EToggleState state, bool bFire = false)
 	{
 		base.GetExtendToggle(0).SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x0600E9C3 RID: 59843 RVA: 0x00374D3B File Offset: 0x00372F3B
+	// Token: 0x0600BDE2 RID: 48610 RVA: 0x00380A43 File Offset: 0x0037EC43
 	public override void OnSelected(bool fireEvent)
 	{
 		if (fireEvent)
@@ -125,7 +125,7 @@ public class HandBookFetterItem : GridProxyAbstract<PhantomFetter>
 		}
 	}
 
-	// Token: 0x0600E9C4 RID: 59844 RVA: 0x00374D4F File Offset: 0x00372F4F
+	// Token: 0x0600BDE3 RID: 48611 RVA: 0x00380A57 File Offset: 0x0037EC57
 	protected override void OnBeforeDestroy()
 	{
 		this.PhantomFetter = null;
@@ -138,13 +138,13 @@ public class HandBookFetterItem : GridProxyAbstract<PhantomFetter>
 		this.FetterToggleFunction = null;
 	}
 
-	// Token: 0x04006C78 RID: 27768
+	// Token: 0x04006D59 RID: 27993
 	protected PhantomFetter? PhantomFetter;
 
-	// Token: 0x04006C79 RID: 27769
+	// Token: 0x04006D5A RID: 27994
 	protected List<HandBookCommonItemData> HandBookCommonItemDataList;
 
-	// Token: 0x04006C7A RID: 27770
+	// Token: 0x04006D5B RID: 27995
 	[Nullable(new byte[]
 	{
 		2,
@@ -152,10 +152,10 @@ public class HandBookFetterItem : GridProxyAbstract<PhantomFetter>
 	})]
 	public GenericLayoutNew<HandBookCommonItem> ContentGenericLayout;
 
-	// Token: 0x04006C7B RID: 27771
+	// Token: 0x04006D5C RID: 27996
 	private int GirdIndex;
 
-	// Token: 0x04006C7C RID: 27772
+	// Token: 0x04006D5D RID: 27997
 	[Nullable(2)]
 	protected TFetterToggleFunction FetterToggleFunction;
 }

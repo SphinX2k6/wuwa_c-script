@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002E4C RID: 11852
+// Token: 0x020023A8 RID: 9128
 [NullableContext(1)]
 [Nullable(0)]
 public class TargetEmitter
 {
-	// Token: 0x06019495 RID: 103573 RVA: 0x0068209F File Offset: 0x0068029F
+	// Token: 0x06016D73 RID: 93555 RVA: 0x006A842B File Offset: 0x006A662B
 	public TargetEmitter(string name)
 	{
 		this.Name = name;
 	}
 
-	// Token: 0x06019496 RID: 103574 RVA: 0x006820C4 File Offset: 0x006802C4
+	// Token: 0x06016D74 RID: 93556 RVA: 0x006A8450 File Offset: 0x006A6650
 	private void MarkEnum(long key)
 	{
 		if (!this.EnumMapping.ContainsKey(key))
@@ -27,7 +27,7 @@ public class TargetEmitter
 		}
 	}
 
-	// Token: 0x06019497 RID: 103575 RVA: 0x0068211C File Offset: 0x0068031C
+	// Token: 0x06016D75 RID: 93557 RVA: 0x006A84A8 File Offset: 0x006A66A8
 	public void Add(object target, long key, Delegate callback)
 	{
 		this.MarkEnum(key);
@@ -40,7 +40,7 @@ public class TargetEmitter
 		numberEvent.Add(key, callback);
 	}
 
-	// Token: 0x06019498 RID: 103576 RVA: 0x0068215C File Offset: 0x0068035C
+	// Token: 0x06016D76 RID: 93558 RVA: 0x006A84E8 File Offset: 0x006A66E8
 	public void Emit(object target, long key)
 	{
 		this.MarkEnum(key);
@@ -61,7 +61,7 @@ public class TargetEmitter
 		}
 	}
 
-	// Token: 0x06019499 RID: 103577 RVA: 0x006821C4 File Offset: 0x006803C4
+	// Token: 0x06016D77 RID: 93559 RVA: 0x006A8550 File Offset: 0x006A6750
 	public void Emit<[Nullable(2)] T1>(object target, long key, T1 p1)
 	{
 		this.MarkEnum(key);
@@ -82,7 +82,7 @@ public class TargetEmitter
 		}
 	}
 
-	// Token: 0x0601949A RID: 103578 RVA: 0x00682230 File Offset: 0x00680430
+	// Token: 0x06016D78 RID: 93560 RVA: 0x006A85BC File Offset: 0x006A67BC
 	public void Emit<[Nullable(2)] T1, [Nullable(2)] T2>(object target, long key, T1 p1, T2 p2)
 	{
 		this.MarkEnum(key);
@@ -103,7 +103,7 @@ public class TargetEmitter
 		}
 	}
 
-	// Token: 0x0601949B RID: 103579 RVA: 0x0068229C File Offset: 0x0068049C
+	// Token: 0x06016D79 RID: 93561 RVA: 0x006A8628 File Offset: 0x006A6828
 	public void Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3>(object target, long key, T1 p1, T2 p2, T3 p3)
 	{
 		this.MarkEnum(key);
@@ -124,7 +124,7 @@ public class TargetEmitter
 		}
 	}
 
-	// Token: 0x0601949C RID: 103580 RVA: 0x0068230C File Offset: 0x0068050C
+	// Token: 0x06016D7A RID: 93562 RVA: 0x006A8698 File Offset: 0x006A6898
 	public void Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4>(object target, long key, T1 p1, T2 p2, T3 p3, T4 p4)
 	{
 		this.MarkEnum(key);
@@ -145,7 +145,7 @@ public class TargetEmitter
 		}
 	}
 
-	// Token: 0x0601949D RID: 103581 RVA: 0x0068237C File Offset: 0x0068057C
+	// Token: 0x06016D7B RID: 93563 RVA: 0x006A8708 File Offset: 0x006A6908
 	public void Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5>(object target, long key, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5)
 	{
 		this.MarkEnum(key);
@@ -166,7 +166,7 @@ public class TargetEmitter
 		}
 	}
 
-	// Token: 0x0601949E RID: 103582 RVA: 0x006823F0 File Offset: 0x006805F0
+	// Token: 0x06016D7C RID: 93564 RVA: 0x006A877C File Offset: 0x006A697C
 	public void Remove(object target, long key, Delegate callback)
 	{
 		this.MarkEnum(key);
@@ -177,12 +177,12 @@ public class TargetEmitter
 		}
 	}
 
-	// Token: 0x0400BC19 RID: 48153
+	// Token: 0x0400BFAD RID: 49069
 	protected readonly WeakMap<object, NumberEvent> Emitters = new WeakMap<object, NumberEvent>();
 
-	// Token: 0x0400BC1A RID: 48154
+	// Token: 0x0400BFAE RID: 49070
 	private readonly Dictionary<long, string> EnumMapping = new Dictionary<long, string>();
 
-	// Token: 0x0400BC1B RID: 48155
+	// Token: 0x0400BFAF RID: 49071
 	private readonly string Name;
 }

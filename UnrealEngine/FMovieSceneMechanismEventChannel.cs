@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200238C RID: 9100
+	// Token: 0x0200076F RID: 1903
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieSceneTracks.MovieSceneMechanismEventChannel")]
 	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 136)]
 	public class FMovieSceneMechanismEventChannel : FMovieSceneChannel, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060224C2 RID: 140482 RVA: 0x0032B84B File Offset: 0x00329A4B
+		// Token: 0x0600A4E1 RID: 42209 RVA: 0x000F38C6 File Offset: 0x000F1AC6
 		public new static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMovieSceneMechanismEventChannel._ScriptStructPtr != 0) ? FMovieSceneMechanismEventChannel._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/MovieSceneTracks.MovieSceneMechanismEventChannel", ref FMovieSceneMechanismEventChannel._ScriptStructPtr);
 		}
 
-		// Token: 0x1700843F RID: 33855
-		// (get) Token: 0x060224C3 RID: 140483 RVA: 0x0032B870 File Offset: 0x00329A70
-		// (set) Token: 0x060224C4 RID: 140484 RVA: 0x0032B8B3 File Offset: 0x00329AB3
+		// Token: 0x17001E79 RID: 7801
+		// (get) Token: 0x0600A4E2 RID: 42210 RVA: 0x000F38EC File Offset: 0x000F1AEC
+		// (set) Token: 0x0600A4E3 RID: 42211 RVA: 0x000F392F File Offset: 0x000F1B2F
 		public TArray<FFrameNumber> KeyTimes
 		{
 			get
@@ -39,9 +39,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008440 RID: 33856
-		// (get) Token: 0x060224C5 RID: 140485 RVA: 0x0032B8C4 File Offset: 0x00329AC4
-		// (set) Token: 0x060224C6 RID: 140486 RVA: 0x0032B907 File Offset: 0x00329B07
+		// Token: 0x17001E7A RID: 7802
+		// (get) Token: 0x0600A4E4 RID: 42212 RVA: 0x000F3940 File Offset: 0x000F1B40
+		// (set) Token: 0x0600A4E5 RID: 42213 RVA: 0x000F3983 File Offset: 0x000F1B83
 		public TArray<FMovieSceneMechanismEvent> KeyValues
 		{
 			get
@@ -60,57 +60,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060224C7 RID: 140487 RVA: 0x0032B915 File Offset: 0x00329B15
+		// Token: 0x0600A4E6 RID: 42214 RVA: 0x000F3991 File Offset: 0x000F1B91
 		public FMovieSceneMechanismEventChannel()
 		{
 		}
 
-		// Token: 0x060224C8 RID: 140488 RVA: 0x0032B91D File Offset: 0x00329B1D
-		public FMovieSceneMechanismEventChannel(TArray<FFrameNumber> KeyTimes, TArray<FMovieSceneMechanismEvent> KeyValues)
-		{
-			this.KeyTimes = KeyTimes;
-			this.KeyValues = KeyValues;
-		}
-
-		// Token: 0x060224C9 RID: 140489 RVA: 0x0032B933 File Offset: 0x00329B33
+		// Token: 0x0600A4E7 RID: 42215 RVA: 0x000F3999 File Offset: 0x000F1B99
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMovieSceneMechanismEventChannel.StaticStruct();
 		}
 
-		// Token: 0x060224CA RID: 140490 RVA: 0x0032B93F File Offset: 0x00329B3F
+		// Token: 0x0600A4E8 RID: 42216 RVA: 0x000F39A5 File Offset: 0x000F1BA5
 		[NullableContext(2)]
 		public FMovieSceneMechanismEventChannel(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060224CB RID: 140491 RVA: 0x0032B949 File Offset: 0x00329B49
+		// Token: 0x0600A4E9 RID: 42217 RVA: 0x000F39AF File Offset: 0x000F1BAF
 		public FMovieSceneMechanismEventChannel(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060224CC RID: 140492 RVA: 0x0032B954 File Offset: 0x00329B54
+		// Token: 0x0600A4EA RID: 42218 RVA: 0x000F39BA File Offset: 0x000F1BBA
 		public new static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMovieSceneMechanismEventChannel(Pointer, false, true);
 		}
 
-		// Token: 0x060224CD RID: 140493 RVA: 0x0032B95E File Offset: 0x00329B5E
+		// Token: 0x0600A4EB RID: 42219 RVA: 0x000F39C4 File Offset: 0x000F1BC4
 		public new static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMovieSceneMechanismEventChannel(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040124F2 RID: 74994
+		// Token: 0x04004660 RID: 18016
 		public new const string __ObjectPath = "/Script/MovieSceneTracks.MovieSceneMechanismEventChannel";
 
-		// Token: 0x040124F3 RID: 74995
+		// Token: 0x04004661 RID: 18017
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040124F4 RID: 74996
+		// Token: 0x04004662 RID: 18018
 		internal static int __PropertyOffset_KeyTimes;
 
-		// Token: 0x040124F5 RID: 74997
+		// Token: 0x04004663 RID: 18019
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,10 +111,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FFrameNumber> _KeyTimes;
 
-		// Token: 0x040124F6 RID: 74998
+		// Token: 0x04004664 RID: 18020
 		internal static int __PropertyOffset_KeyValues;
 
-		// Token: 0x040124F7 RID: 74999
+		// Token: 0x04004665 RID: 18021
 		[Nullable(new byte[]
 		{
 			2,

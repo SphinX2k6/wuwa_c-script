@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029E3 RID: 10723
+	// Token: 0x02002CD0 RID: 11472
 	public class IPreloadLinkResource : IPreloadCharacterType
 	{
-		// Token: 0x0600ECDA RID: 60634 RVA: 0x00229214 File Offset: 0x00227414
-		[NullableContext(1)]
+		// Token: 0x0600FB71 RID: 64369 RVA: 0x00246B98 File Offset: 0x00244D98
 		public static IPreloadLinkResource Create(IPreloadLinkResource? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AD6 RID: 19158
-		// (get) Token: 0x0600ECDB RID: 60635 RVA: 0x00229233 File Offset: 0x00227433
+		// Token: 0x17004E7F RID: 20095
+		// (get) Token: 0x0600FB72 RID: 64370 RVA: 0x00246BB7 File Offset: 0x00244DB7
 		public override EPreloadObjectType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AD7 RID: 19159
-		// (get) Token: 0x0600ECDC RID: 60636 RVA: 0x00229240 File Offset: 0x00227440
+		// Token: 0x17004E80 RID: 20096
+		// (get) Token: 0x0600FB73 RID: 64371 RVA: 0x00246BC4 File Offset: 0x00244DC4
 		public virtual int LinkResourceId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008271 RID: 33393
+		// Token: 0x04008962 RID: 35170
 		private IPreloadLinkResource Instance;
 	}
 }

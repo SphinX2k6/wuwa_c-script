@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070DC RID: 28892
+	// Token: 0x0200638C RID: 25484
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MovementStateConfig
 	{
-		// Token: 0x0604682B RID: 288811 RVA: 0x011B85FC File Offset: 0x011B67FC
+		// Token: 0x0603DC18 RID: 252952 RVA: 0x011E7CD0 File Offset: 0x011E5ED0
 		public void SetConfig(SFloatingMovementState movementStateConfig)
 		{
 			this.Mode = movementStateConfig.Mode;
@@ -41,19 +41,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x04024FA0 RID: 151456
+		// Token: 0x04020C35 RID: 134197
 		public EFloatingMovementType Mode;
 
-		// Token: 0x04024FA1 RID: 151457
+		// Token: 0x04020C36 RID: 134198
 		public List<int> MovementTagList = new List<int>();
 
-		// Token: 0x04024FA2 RID: 151458
+		// Token: 0x04020C37 RID: 134199
 		public List<int> BannedMovementTagList = new List<int>();
 
-		// Token: 0x04024FA3 RID: 151459
+		// Token: 0x04020C38 RID: 134200
 		public List<int> MoveTagList = new List<int>();
 
-		// Token: 0x04024FA4 RID: 151460
+		// Token: 0x04020C39 RID: 134201
 		public List<int> StandTagList = new List<int>();
 	}
 }

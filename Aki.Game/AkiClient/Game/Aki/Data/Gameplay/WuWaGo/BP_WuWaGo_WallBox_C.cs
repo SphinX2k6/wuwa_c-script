@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 {
-	// Token: 0x02003F2B RID: 16171
+	// Token: 0x020031D7 RID: 12759
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Gameplay/WuWaGo/BP_WuWaGo_WallBox.BP_WuWaGo_WallBox_C")]
 	[UnrealStructLayout(1096, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1096)]
 	public class BP_WuWaGo_WallBox_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06029192 RID: 168338 RVA: 0x009BBC44 File Offset: 0x009B9E44
+		// Token: 0x0601FAA5 RID: 129701 RVA: 0x00932DC7 File Offset: 0x00930FC7
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_WuWaGo_WallBox_C._ClassPtr == IntPtr.Zero)
@@ -24,158 +24,154 @@ namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 			return BP_WuWaGo_WallBox_C._ClassPtr;
 		}
 
-		// Token: 0x06029193 RID: 168339 RVA: 0x009BBC68 File Offset: 0x009B9E68
+		// Token: 0x0601FAA6 RID: 129702 RVA: 0x00932DEC File Offset: 0x00930FEC
 		public BP_WuWaGo_WallBox_C() : this(BuiltinUtils.AllocNativeUObject(BP_WuWaGo_WallBox_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06029194 RID: 168340 RVA: 0x009BBC90 File Offset: 0x009B9E90
+		// Token: 0x0601FAA7 RID: 129703 RVA: 0x00932E14 File Offset: 0x00931014
 		[NullableContext(1)]
 		public BP_WuWaGo_WallBox_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_WuWaGo_WallBox_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006173 RID: 24947
-		// (get) Token: 0x06029195 RID: 168341 RVA: 0x009BBCC3 File Offset: 0x009B9EC3
-		// (set) Token: 0x06029196 RID: 168342 RVA: 0x009BBCD7 File Offset: 0x009B9ED7
+		// Token: 0x17003ABF RID: 15039
+		// (get) Token: 0x0601FAA8 RID: 129704 RVA: 0x00932E47 File Offset: 0x00931047
+		// (set) Token: 0x0601FAA9 RID: 129705 RVA: 0x00932E5B File Offset: 0x0093105B
 		public unsafe UStaticMeshComponent 模型
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_模型);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_模型, value);
 			}
 		}
 
-		// Token: 0x17006174 RID: 24948
-		// (get) Token: 0x06029197 RID: 168343 RVA: 0x009BBCEC File Offset: 0x009B9EEC
-		// (set) Token: 0x06029198 RID: 168344 RVA: 0x009BBD00 File Offset: 0x009B9F00
+		// Token: 0x17003AC0 RID: 15040
+		// (get) Token: 0x0601FAAA RID: 129706 RVA: 0x00932E70 File Offset: 0x00931070
+		// (set) Token: 0x0601FAAB RID: 129707 RVA: 0x00932E84 File Offset: 0x00931084
 		public unsafe UStaticMeshComponent Plane
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_Plane);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_Plane, value);
 			}
 		}
 
-		// Token: 0x17006175 RID: 24949
-		// (get) Token: 0x06029199 RID: 168345 RVA: 0x009BBD15 File Offset: 0x009B9F15
-		// (set) Token: 0x0602919A RID: 168346 RVA: 0x009BBD29 File Offset: 0x009B9F29
+		// Token: 0x17003AC1 RID: 15041
+		// (get) Token: 0x0601FAAC RID: 129708 RVA: 0x00932E99 File Offset: 0x00931099
+		// (set) Token: 0x0601FAAD RID: 129709 RVA: 0x00932EAD File Offset: 0x009310AD
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17006176 RID: 24950
-		// (get) Token: 0x0602919B RID: 168347 RVA: 0x009BBD3E File Offset: 0x009B9F3E
-		// (set) Token: 0x0602919C RID: 168348 RVA: 0x009BBD52 File Offset: 0x009B9F52
+		// Token: 0x17003AC2 RID: 15042
+		// (get) Token: 0x0601FAAE RID: 129710 RVA: 0x00932EC2 File Offset: 0x009310C2
+		// (set) Token: 0x0601FAAF RID: 129711 RVA: 0x00932ED6 File Offset: 0x009310D6
 		public unsafe UMaterialInstance W_默认贴花
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UMaterialInstance>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_4);
+				return BuiltinUtils.ObjectPropertyGetter<UMaterialInstance>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_W_默认贴花);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_4, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_W_默认贴花, value);
 			}
 		}
 
-		// Token: 0x17006177 RID: 24951
-		// (get) Token: 0x0602919D RID: 168349 RVA: 0x009BBD67 File Offset: 0x009B9F67
-		// (set) Token: 0x0602919E RID: 168350 RVA: 0x009BBD7B File Offset: 0x009B9F7B
+		// Token: 0x17003AC3 RID: 15043
+		// (get) Token: 0x0601FAB0 RID: 129712 RVA: 0x00932EEB File Offset: 0x009310EB
+		// (set) Token: 0x0601FAB1 RID: 129713 RVA: 0x00932EFF File Offset: 0x009310FF
 		public unsafe UStaticMesh W_默认模型
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMesh>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMesh>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_W_默认模型);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_WallBox_C.__PropertyOffset_W_默认模型, value);
 			}
 		}
 
-		// Token: 0x0602919F RID: 168351 RVA: 0x009BBD90 File Offset: 0x009B9F90
+		// Token: 0x0601FAB2 RID: 129714 RVA: 0x00932F14 File Offset: 0x00931114
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_WuWaGo_WallBox_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060291A0 RID: 168352 RVA: 0x009BBDA4 File Offset: 0x009B9FA4
+		// Token: 0x0601FAB3 RID: 129715 RVA: 0x00932F28 File Offset: 0x00931128
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_WuWaGo_WallBox_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_WuWaGo_WallBox_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060291A1 RID: 168353 RVA: 0x009BBDB9 File Offset: 0x009B9FB9
+		// Token: 0x0601FAB4 RID: 129716 RVA: 0x00932F3C File Offset: 0x0093113C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_WuWaGo_WallBox_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060291A2 RID: 168354 RVA: 0x009BBDCD File Offset: 0x009B9FCD
+		// Token: 0x0601FAB5 RID: 129717 RVA: 0x00932F50 File Offset: 0x00931150
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_WuWaGo_WallBox_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_WuWaGo_WallBox_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060291A3 RID: 168355 RVA: 0x009BBDE2 File Offset: 0x009B9FE2
+		// Token: 0x0601FAB6 RID: 129718 RVA: 0x00932F64 File Offset: 0x00931164
 		protected BP_WuWaGo_WallBox_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04015094 RID: 86164
+		// Token: 0x04010FC4 RID: 69572
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Data/Gameplay/WuWaGo/BP_WuWaGo_WallBox.BP_WuWaGo_WallBox_C";
 
-		// Token: 0x04015095 RID: 86165
+		// Token: 0x04010FC5 RID: 69573
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04015096 RID: 86166
+		// Token: 0x04010FC6 RID: 69574
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04015097 RID: 86167
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010FC7 RID: 69575
+		internal static int __PropertyOffset_模型;
 
-		// Token: 0x04015098 RID: 86168
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010FC8 RID: 69576
+		internal static int __PropertyOffset_Plane;
 
-		// Token: 0x04015099 RID: 86169
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010FC9 RID: 69577
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x0401509A RID: 86170
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010FCA RID: 69578
+		internal static int __PropertyOffset_W_默认贴花;
 
-		// Token: 0x0401509B RID: 86171
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010FCB RID: 69579
+		internal static int __PropertyOffset_W_默认模型;
 
-		// Token: 0x0401509C RID: 86172
+		// Token: 0x04010FCC RID: 69580
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x0401509D RID: 86173
+		// Token: 0x04010FCD RID: 69581
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 	}
 }

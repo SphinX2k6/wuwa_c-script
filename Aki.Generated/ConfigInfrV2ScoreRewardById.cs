@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200043D RID: 1085
+	// Token: 0x02000453 RID: 1107
 	public class ConfigInfrV2ScoreRewardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001978 RID: 6520 RVA: 0x000E9803 File Offset: 0x000E7A03
+		// Token: 0x060019FC RID: 6652 RVA: 0x000EFF57 File Offset: 0x000EE157
 		static ConfigInfrV2ScoreRewardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfrV2ScoreRewardById.CreateStaticDefaultValue), new Action(ConfigInfrV2ScoreRewardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001979 RID: 6521 RVA: 0x000E9824 File Offset: 0x000E7A24
+		// Token: 0x060019FD RID: 6653 RVA: 0x000EFF78 File Offset: 0x000EE178
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfrV2ScoreRewardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600197A RID: 6522 RVA: 0x000E98A3 File Offset: 0x000E7AA3
+		// Token: 0x060019FE RID: 6654 RVA: 0x000EFFF7 File Offset: 0x000EE1F7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfrV2ScoreRewardById.LogPair = null;
 			ConfigInfrV2ScoreRewardById.HandleId = 0;
 		}
 
-		// Token: 0x0600197B RID: 6523 RVA: 0x000E98B1 File Offset: 0x000E7AB1
+		// Token: 0x060019FF RID: 6655 RVA: 0x000F0005 File Offset: 0x000EE205
 		public static void Init()
 		{
 			ConfigInfrV2ScoreRewardById.HandleId = ConfigCommon.InitDataStatement(ConfigInfrV2ScoreRewardById.HandleId, "db_villageinfr.db", "select BinData from `InfrV2ScoreReward` where Id=?");
 		}
 
-		// Token: 0x0600197C RID: 6524 RVA: 0x000E98CC File Offset: 0x000E7ACC
+		// Token: 0x06001A00 RID: 6656 RVA: 0x000F0020 File Offset: 0x000EE220
 		public static InfrV2ScoreReward? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInfrV2ScoreRewardById.HandleId, ConfigInfrV2ScoreRewardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new InfrV2ScoreReward?(rootAsInfrV2ScoreReward);
 		}
 
-		// Token: 0x04001D8F RID: 7567
+		// Token: 0x04001E29 RID: 7721
 		private const string DB = "db_villageinfr.db";
 
-		// Token: 0x04001D90 RID: 7568
+		// Token: 0x04001E2A RID: 7722
 		private const string FILE = "j.基建V2.xlsx";
 
-		// Token: 0x04001D91 RID: 7569
+		// Token: 0x04001E2B RID: 7723
 		private const string TABLE = "InfrV2ScoreReward";
 
-		// Token: 0x04001D92 RID: 7570
+		// Token: 0x04001E2C RID: 7724
 		private const string COMMAND = "select BinData from `InfrV2ScoreReward` where Id=?";
 
-		// Token: 0x04001D93 RID: 7571
+		// Token: 0x04001E2D RID: 7725
 		private const string KEY_PREFIX = "InfrV2ScoreRewardById";
 
-		// Token: 0x04001D94 RID: 7572
+		// Token: 0x04001E2E RID: 7726
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001D95 RID: 7573
+		// Token: 0x04001E2F RID: 7727
 		private static int HandleId;
 	}
 }

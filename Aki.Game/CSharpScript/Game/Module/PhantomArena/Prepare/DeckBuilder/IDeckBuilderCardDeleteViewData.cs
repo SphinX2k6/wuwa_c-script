@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x02005184 RID: 20868
+	// Token: 0x02004154 RID: 16724
 	[NullableContext(1)]
 	public interface IDeckBuilderCardDeleteViewData
 	{
-		// Token: 0x1700813C RID: 33084
-		// (get) Token: 0x0603560A RID: 218634
-		// (set) Token: 0x0603560B RID: 218635
+		// Token: 0x170054FC RID: 21756
+		// (get) Token: 0x0602A505 RID: 173317
+		// (set) Token: 0x0602A506 RID: 173318
 		HashSet<ECardElement> EnabledElementSet { get; set; }
 
-		// Token: 0x1700813D RID: 33085
-		// (get) Token: 0x0603560C RID: 218636
-		// (set) Token: 0x0603560D RID: 218637
+		// Token: 0x170054FD RID: 21757
+		// (get) Token: 0x0602A507 RID: 173319
+		// (set) Token: 0x0602A508 RID: 173320
 		Action<HashSet<ECardElement>> DeleteFunc { get; set; }
 	}
 }

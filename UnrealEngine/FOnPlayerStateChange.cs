@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E6A RID: 7786
+	// Token: 0x0200059D RID: 1437
 	public sealed class FOnPlayerStateChange : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601DAA1 RID: 121505 RVA: 0x002BCFE7 File Offset: 0x002BB1E7
+		// Token: 0x0600820B RID: 33291 RVA: 0x000C02C3 File Offset: 0x000BE4C3
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnPlayerStateChange.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601DAA2 RID: 121506 RVA: 0x002BCFF3 File Offset: 0x002BB1F3
+		// Token: 0x0600820C RID: 33292 RVA: 0x000C02CF File Offset: 0x000BE4CF
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnPlayerStateChange._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnPlayerStateChange._FunctionPtr;
 		}
 
-		// Token: 0x0601DAA3 RID: 121507 RVA: 0x002BD016 File Offset: 0x002BB216
+		// Token: 0x0600820D RID: 33293 RVA: 0x000C02F2 File Offset: 0x000BE4F2
 		public FOnPlayerStateChange()
 		{
 		}
 
-		// Token: 0x0601DAA4 RID: 121508 RVA: 0x002BD01E File Offset: 0x002BB21E
+		// Token: 0x0600820E RID: 33294 RVA: 0x000C02FA File Offset: 0x000BE4FA
 		[NullableContext(2)]
 		public FOnPlayerStateChange(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DAA5 RID: 121509 RVA: 0x002BD028 File Offset: 0x002BB228
+		// Token: 0x0600820F RID: 33295 RVA: 0x000C0304 File Offset: 0x000BE504
 		public FOnPlayerStateChange(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DAA6 RID: 121510 RVA: 0x002BD033 File Offset: 0x002BB233
+		// Token: 0x06008210 RID: 33296 RVA: 0x000C030F File Offset: 0x000BE50F
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<bool>) ?? ((Action<bool>)Delegate.CreateDelegate(typeof(Action<bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601DAA7 RID: 121511 RVA: 0x002BD065 File Offset: 0x002BB265
+		// Token: 0x06008211 RID: 33297 RVA: 0x000C0341 File Offset: 0x000BE541
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<bool> Callback)
 		{
 			if (FOnPlayerStateChange.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnPlayerStateChange.RegisterId);
 		}
 
-		// Token: 0x0601DAA8 RID: 121512 RVA: 0x002BD0A0 File Offset: 0x002BB2A0
+		// Token: 0x06008212 RID: 33298 RVA: 0x000C037C File Offset: 0x000BE57C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(bool IsAlive)
 		{
 			FOnPlayerStateChange.__FOnPlayerStateChange_DelegateParams* ptr = stackalloc FOnPlayerStateChange.__FOnPlayerStateChange_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(FOnPlayerStateChange.__FOnPlayerStateChange_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601DAA9 RID: 121513 RVA: 0x002BD0E0 File Offset: 0x002BB2E0
+		// Token: 0x06008213 RID: 33299 RVA: 0x000C03BC File Offset: 0x000BE5BC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool> action = target as Action<bool>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FOnPlayerStateChange.__FOnPlayerStateChange_DelegateParams*)__Parameters)->IsAlive);
 		}
 
-		// Token: 0x04010121 RID: 65825
+		// Token: 0x040038B6 RID: 14518
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010122 RID: 65826
+		// Token: 0x040038B7 RID: 14519
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSimpleCombat.OnPlayerStateChange__DelegateSignature";
 
-		// Token: 0x04010123 RID: 65827
+		// Token: 0x040038B8 RID: 14520
 		private static int RegisterId;
 
-		// Token: 0x020032BE RID: 12990
+		// Token: 0x02000D1D RID: 3357
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __FOnPlayerStateChange_DelegateParams
+		private ref struct __FOnPlayerStateChange_DelegateParams
 		{
-			// Token: 0x04017162 RID: 94562
+			// Token: 0x04005FAE RID: 24494
 			[FieldOffset(0)]
 			public bool IsAlive;
 		}
 
-		// Token: 0x020032BF RID: 12991
+		// Token: 0x02000D1E RID: 3358
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017163 RID: 94563
+			// Token: 0x04005FAF RID: 24495
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

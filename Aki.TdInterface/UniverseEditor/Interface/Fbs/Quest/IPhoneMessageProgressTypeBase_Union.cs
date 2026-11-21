@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F7D RID: 16253
+	// Token: 0x020043BE RID: 17342
 	public enum IPhoneMessageProgressTypeBase_Union : byte
 	{
-		// Token: 0x0400B9D0 RID: 47568
+		// Token: 0x0400C3B5 RID: 50101
 		NONE,
-		// Token: 0x0400B9D1 RID: 47569
+		// Token: 0x0400C3B6 RID: 50102
 		IPhoneMessageProgressTypeBase,
-		// Token: 0x0400B9D2 RID: 47570
+		// Token: 0x0400C3B7 RID: 50103
 		ICompleteMessageQuestCondition
 	}
 }

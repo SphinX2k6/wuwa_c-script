@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 {
-	// Token: 0x020062EB RID: 25323
+	// Token: 0x02005269 RID: 21097
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballShopItem : UiPanelBase
 	{
-		// Token: 0x0603FB86 RID: 260998 RVA: 0x00F6AB18 File Offset: 0x00F68D18
+		// Token: 0x06034847 RID: 215111 RVA: 0x00EB1A74 File Offset: 0x00EAFC74
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FB87 RID: 260999 RVA: 0x00F6AD50 File Offset: 0x00F68F50
+		// Token: 0x06034848 RID: 215112 RVA: 0x00EB1CAC File Offset: 0x00EAFEAC
 		protected override void OnStart()
 		{
 			this.ItemBase = new PinballItemView();
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB88 RID: 261000 RVA: 0x00F6ADC8 File Offset: 0x00F68FC8
+		// Token: 0x06034849 RID: 215113 RVA: 0x00EB1D24 File Offset: 0x00EAFF24
 		private UniTask InitItemBaseAsync(AActor owner)
 		{
 			PinballShopItem.<InitItemBaseAsync>d__8 <InitItemBaseAsync>d__;
@@ -94,14 +94,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			return <InitItemBaseAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FB89 RID: 261001 RVA: 0x00F6AE13 File Offset: 0x00F69013
+		// Token: 0x0603484A RID: 215114 RVA: 0x00EB1D6F File Offset: 0x00EAFF6F
 		protected override void OnBeforeDestroy()
 		{
 			this.PendingBaseProxy = null;
 			this.IsItemBaseReady = false;
 		}
 
-		// Token: 0x0603FB8A RID: 261002 RVA: 0x00F6AE24 File Offset: 0x00F69024
+		// Token: 0x0603484B RID: 215115 RVA: 0x00EB1D80 File Offset: 0x00EAFF80
 		private void OnPointerEnterItem(EToggleState state)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB8B RID: 261003 RVA: 0x00F6AE48 File Offset: 0x00F69048
+		// Token: 0x0603484C RID: 215116 RVA: 0x00EB1DA4 File Offset: 0x00EAFFA4
 		private void OnPointerExitItem(EToggleState state)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB8C RID: 261004 RVA: 0x00F6AE6C File Offset: 0x00F6906C
+		// Token: 0x0603484D RID: 215117 RVA: 0x00EB1DC8 File Offset: 0x00EAFFC8
 		private void OnClickItemBase(EToggleState state)
 		{
 			CommonGameplayShopItemProxy itemProxy = this.ItemProxy;
@@ -149,19 +149,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			this.ItemProxy.OnBuyButtonClick();
 		}
 
-		// Token: 0x0603FB8D RID: 261005 RVA: 0x00F6AF12 File Offset: 0x00F69112
+		// Token: 0x0603484E RID: 215118 RVA: 0x00EB1E6E File Offset: 0x00EB006E
 		public void RefreshByData(PinballExchangeShopItemProxy data)
 		{
 			this.RefreshByDataInternal(data);
 		}
 
-		// Token: 0x0603FB8E RID: 261006 RVA: 0x00F6AF1B File Offset: 0x00F6911B
+		// Token: 0x0603484F RID: 215119 RVA: 0x00EB1E77 File Offset: 0x00EB0077
 		public void RefreshByData(PinballShopItemProxy data)
 		{
 			this.RefreshByDataInternal(data);
 		}
 
-		// Token: 0x0603FB8F RID: 261007 RVA: 0x00F6AF24 File Offset: 0x00F69124
+		// Token: 0x06034850 RID: 215120 RVA: 0x00EB1E80 File Offset: 0x00EB0080
 		private void RefreshByDataInternal(CommonGameplayShopItemProxy data)
 		{
 			this.ItemProxy = data;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB90 RID: 261008 RVA: 0x00F6AF84 File Offset: 0x00F69184
+		// Token: 0x06034851 RID: 215121 RVA: 0x00EB1EE0 File Offset: 0x00EB00E0
 		private void TryRefreshItemBase()
 		{
 			if (!this.IsItemBaseReady || this.ItemBase == null || this.PendingBaseProxy == null)
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			this.ItemBase.RefreshByShopData(this.PendingBaseProxy);
 		}
 
-		// Token: 0x0603FB91 RID: 261009 RVA: 0x00F6AFB0 File Offset: 0x00F691B0
+		// Token: 0x06034852 RID: 215122 RVA: 0x00EB1F0C File Offset: 0x00EB010C
 		public void RefreshQualitySprite()
 		{
 			if (this.ItemProxy == null)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB92 RID: 261010 RVA: 0x00F6B04C File Offset: 0x00F6924C
+		// Token: 0x06034853 RID: 215123 RVA: 0x00EB1FA8 File Offset: 0x00EB01A8
 		public void RefreshUtilityColor()
 		{
 			if (this.ItemProxy == null)
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB93 RID: 261011 RVA: 0x00F6B0ED File Offset: 0x00F692ED
+		// Token: 0x06034854 RID: 215124 RVA: 0x00EB2049 File Offset: 0x00EB0249
 		public void RefreshItemCost()
 		{
 			if (this.ItemProxy == null)
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			base.GetItem(2).SetUIActive(true);
 		}
 
-		// Token: 0x0603FB94 RID: 261012 RVA: 0x00F6B108 File Offset: 0x00F69308
+		// Token: 0x06034855 RID: 215125 RVA: 0x00EB2064 File Offset: 0x00EB0264
 		public void HideItemCost()
 		{
 			UUIItem item = base.GetItem(2);
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB95 RID: 261013 RVA: 0x00F6B128 File Offset: 0x00F69328
+		// Token: 0x06034856 RID: 215126 RVA: 0x00EB2084 File Offset: 0x00EB0284
 		public void SetItemFrameVisible(bool visible)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB96 RID: 261014 RVA: 0x00F6B15C File Offset: 0x00F6935C
+		// Token: 0x06034857 RID: 215127 RVA: 0x00EB20B8 File Offset: 0x00EB02B8
 		public void RefreshItemIcon()
 		{
 			if (this.ItemProxy == null)
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB97 RID: 261015 RVA: 0x00F6B1A4 File Offset: 0x00F693A4
+		// Token: 0x06034858 RID: 215128 RVA: 0x00EB2100 File Offset: 0x00EB0300
 		public void RefreshPriceInfo()
 		{
 			if (this.ItemProxy == null)
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB98 RID: 261016 RVA: 0x00F6B244 File Offset: 0x00F69444
+		// Token: 0x06034859 RID: 215129 RVA: 0x00EB21A0 File Offset: 0x00EB03A0
 		public void RefreshSoldOutState()
 		{
 			if (this.ItemProxy == null)
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB99 RID: 261017 RVA: 0x00F6B29C File Offset: 0x00F6949C
+		// Token: 0x0603485A RID: 215130 RVA: 0x00EB21F8 File Offset: 0x00EB03F8
 		[return: Nullable(2)]
 		private UUIText GetSoldOutLabelText(UUIItem soldOutPanel)
 		{
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			return this.FindTextInChildren(soldOutPanel);
 		}
 
-		// Token: 0x0603FB9A RID: 261018 RVA: 0x00F6B2D8 File Offset: 0x00F694D8
+		// Token: 0x0603485B RID: 215131 RVA: 0x00EB2234 File Offset: 0x00EB0434
 		[return: Nullable(2)]
 		private UUIText FindTextInChildren(UUIItem ui)
 		{
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			return null;
 		}
 
-		// Token: 0x0603FB9B RID: 261019 RVA: 0x00F6B340 File Offset: 0x00F69540
+		// Token: 0x0603485C RID: 215132 RVA: 0x00EB229C File Offset: 0x00EB049C
 		public void RefreshLockState()
 		{
 			if (this.ItemProxy == null)
@@ -421,7 +421,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB9C RID: 261020 RVA: 0x00F6B394 File Offset: 0x00F69594
+		// Token: 0x0603485D RID: 215133 RVA: 0x00EB22F0 File Offset: 0x00EB04F0
 		public void RefreshTips()
 		{
 			if (this.ItemProxy == null)
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB9D RID: 261021 RVA: 0x00F6B3EC File Offset: 0x00F695EC
+		// Token: 0x0603485E RID: 215134 RVA: 0x00EB2348 File Offset: 0x00EB0548
 		public void RefreshPurchaseLimit()
 		{
 			if (this.ItemProxy == null)
@@ -459,7 +459,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0603FB9E RID: 261022 RVA: 0x00F6B450 File Offset: 0x00F69650
+		// Token: 0x0603485F RID: 215135 RVA: 0x00EB23AC File Offset: 0x00EB05AC
 		public void RefreshDiscount()
 		{
 			if (this.ItemProxy == null)
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		}
 
-		// Token: 0x0402147A RID: 136314
+		// Token: 0x0401BDA9 RID: 114089
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, string> QualityUtilityColorMap = new Dictionary<int, string>
 		{
@@ -503,65 +503,65 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Shop
 			}
 		};
 
-		// Token: 0x0402147B RID: 136315
+		// Token: 0x0401BDAA RID: 114090
 		[Nullable(2)]
 		protected CommonGameplayShopItemProxy ItemProxy;
 
-		// Token: 0x0402147C RID: 136316
+		// Token: 0x0401BDAB RID: 114091
 		[Nullable(2)]
 		protected PinballItemView ItemBase;
 
-		// Token: 0x0402147D RID: 136317
+		// Token: 0x0401BDAC RID: 114092
 		[Nullable(2)]
 		private CommonGameplayShopItemProxy PendingBaseProxy;
 
-		// Token: 0x0402147E RID: 136318
+		// Token: 0x0401BDAD RID: 114093
 		private bool IsItemBaseReady;
 
-		// Token: 0x0200C4DC RID: 50396
+		// Token: 0x0200AEC3 RID: 44739
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403B682 RID: 243330
+			// Token: 0x04035FE4 RID: 221156
 			public const int QualitySprite = 0;
 
-			// Token: 0x0403B683 RID: 243331
+			// Token: 0x04035FE5 RID: 221157
 			public const int ItemBase = 1;
 
-			// Token: 0x0403B684 RID: 243332
+			// Token: 0x04035FE6 RID: 221158
 			public const int ItemCost = 2;
 
-			// Token: 0x0403B685 RID: 243333
+			// Token: 0x04035FE7 RID: 221159
 			public const int TexIcon = 3;
 
-			// Token: 0x0403B686 RID: 243334
+			// Token: 0x04035FE8 RID: 221160
 			public const int TxtPrice = 4;
 
-			// Token: 0x0403B687 RID: 243335
+			// Token: 0x04035FE9 RID: 221161
 			public const int TxtOriginalPrice = 5;
 
-			// Token: 0x0403B688 RID: 243336
+			// Token: 0x04035FEA RID: 221162
 			public const int ItemSoldOut = 6;
 
-			// Token: 0x0403B689 RID: 243337
+			// Token: 0x04035FEB RID: 221163
 			public const int ItemSoldLock = 7;
 
-			// Token: 0x0403B68A RID: 243338
+			// Token: 0x04035FEC RID: 221164
 			public const int TxtTips = 8;
 
-			// Token: 0x0403B68B RID: 243339
+			// Token: 0x04035FED RID: 221165
 			public const int ItemPurchaseLimit = 9;
 
-			// Token: 0x0403B68C RID: 243340
+			// Token: 0x04035FEE RID: 221166
 			public const int TextNum = 10;
 
-			// Token: 0x0403B68D RID: 243341
+			// Token: 0x04035FEF RID: 221167
 			public const int Discount = 11;
 
-			// Token: 0x0403B68E RID: 243342
+			// Token: 0x04035FF0 RID: 221168
 			public const int TextDiscount = 12;
 
-			// Token: 0x0403B68F RID: 243343
+			// Token: 0x04035FF1 RID: 221169
 			public const int SpriteUtility = 13;
 		}
 	}

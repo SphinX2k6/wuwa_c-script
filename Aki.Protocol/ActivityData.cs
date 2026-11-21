@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000083 RID: 131
+	// Token: 0x02000084 RID: 132
 	public sealed class ActivityData : IMessage<ActivityData>, IMessage, IEquatable<ActivityData>, IDeepCloneable<ActivityData>, IBufferMessage
 	{
-		// Token: 0x0600190D RID: 6413 RVA: 0x00041BDC File Offset: 0x0003FDDC
+		// Token: 0x06001950 RID: 6480 RVA: 0x00042590 File Offset: 0x00040790
 		[NullableContext(1)]
 		public static ActivityData Create()
 		{
 			return new ActivityData();
 		}
 
-		// Token: 0x1700022E RID: 558
-		// (get) Token: 0x0600190E RID: 6414 RVA: 0x00041BE3 File Offset: 0x0003FDE3
+		// Token: 0x17000234 RID: 564
+		// (get) Token: 0x06001951 RID: 6481 RVA: 0x00042597 File Offset: 0x00040797
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<ActivityData> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700022F RID: 559
-		// (get) Token: 0x0600190F RID: 6415 RVA: 0x00041BEA File Offset: 0x0003FDEA
+		// Token: 0x17000235 RID: 565
+		// (get) Token: 0x06001952 RID: 6482 RVA: 0x0004259E File Offset: 0x0004079E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000230 RID: 560
-		// (get) Token: 0x06001910 RID: 6416 RVA: 0x00041BED File Offset: 0x0003FDED
+		// Token: 0x17000236 RID: 566
+		// (get) Token: 0x06001953 RID: 6483 RVA: 0x000425A1 File Offset: 0x000407A1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001911 RID: 6417 RVA: 0x00041BF4 File Offset: 0x0003FDF4
+		// Token: 0x06001954 RID: 6484 RVA: 0x000425A8 File Offset: 0x000407A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityData()
 		{
 		}
 
-		// Token: 0x06001912 RID: 6418 RVA: 0x00041C14 File Offset: 0x0003FE14
+		// Token: 0x06001955 RID: 6485 RVA: 0x000425C8 File Offset: 0x000407C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityData(ActivityData other) : this()
@@ -396,11 +396,17 @@ namespace Aki.Protocol
 			case ActivityData.DataOneofCase.GiantActivityInfo:
 				this.GiantActivityInfo = other.GiantActivityInfo.Clone();
 				break;
+			case ActivityData.DataOneofCase.SolarSchoolActivityPb:
+				this.SolarSchoolActivityPb = other.SolarSchoolActivityPb.Clone();
+				break;
+			case ActivityData.DataOneofCase.RoleTowerActivityData:
+				this.RoleTowerActivityData = other.RoleTowerActivityData.Clone();
+				break;
 			}
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06001913 RID: 6419 RVA: 0x000427B0 File Offset: 0x000409B0
+		// Token: 0x06001956 RID: 6486 RVA: 0x00043198 File Offset: 0x00041398
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityData Clone()
@@ -408,9 +414,9 @@ namespace Aki.Protocol
 			return new ActivityData(this);
 		}
 
-		// Token: 0x17000231 RID: 561
-		// (get) Token: 0x06001914 RID: 6420 RVA: 0x000427B8 File Offset: 0x000409B8
-		// (set) Token: 0x06001915 RID: 6421 RVA: 0x000427C0 File Offset: 0x000409C0
+		// Token: 0x17000237 RID: 567
+		// (get) Token: 0x06001957 RID: 6487 RVA: 0x000431A0 File Offset: 0x000413A0
+		// (set) Token: 0x06001958 RID: 6488 RVA: 0x000431A8 File Offset: 0x000413A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Id
@@ -425,9 +431,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000232 RID: 562
-		// (get) Token: 0x06001916 RID: 6422 RVA: 0x000427C9 File Offset: 0x000409C9
-		// (set) Token: 0x06001917 RID: 6423 RVA: 0x000427D1 File Offset: 0x000409D1
+		// Token: 0x17000238 RID: 568
+		// (get) Token: 0x06001959 RID: 6489 RVA: 0x000431B1 File Offset: 0x000413B1
+		// (set) Token: 0x0600195A RID: 6490 RVA: 0x000431B9 File Offset: 0x000413B9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityType Type
@@ -442,9 +448,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000233 RID: 563
-		// (get) Token: 0x06001918 RID: 6424 RVA: 0x000427DA File Offset: 0x000409DA
-		// (set) Token: 0x06001919 RID: 6425 RVA: 0x000427E2 File Offset: 0x000409E2
+		// Token: 0x17000239 RID: 569
+		// (get) Token: 0x0600195B RID: 6491 RVA: 0x000431C2 File Offset: 0x000413C2
+		// (set) Token: 0x0600195C RID: 6492 RVA: 0x000431CA File Offset: 0x000413CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long BeginShowTime
@@ -459,9 +465,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000234 RID: 564
-		// (get) Token: 0x0600191A RID: 6426 RVA: 0x000427EB File Offset: 0x000409EB
-		// (set) Token: 0x0600191B RID: 6427 RVA: 0x000427F3 File Offset: 0x000409F3
+		// Token: 0x1700023A RID: 570
+		// (get) Token: 0x0600195D RID: 6493 RVA: 0x000431D3 File Offset: 0x000413D3
+		// (set) Token: 0x0600195E RID: 6494 RVA: 0x000431DB File Offset: 0x000413DB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long EndShowTime
@@ -476,9 +482,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000235 RID: 565
-		// (get) Token: 0x0600191C RID: 6428 RVA: 0x000427FC File Offset: 0x000409FC
-		// (set) Token: 0x0600191D RID: 6429 RVA: 0x00042804 File Offset: 0x00040A04
+		// Token: 0x1700023B RID: 571
+		// (get) Token: 0x0600195F RID: 6495 RVA: 0x000431E4 File Offset: 0x000413E4
+		// (set) Token: 0x06001960 RID: 6496 RVA: 0x000431EC File Offset: 0x000413EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long BeginOpenTime
@@ -493,9 +499,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000236 RID: 566
-		// (get) Token: 0x0600191E RID: 6430 RVA: 0x0004280D File Offset: 0x00040A0D
-		// (set) Token: 0x0600191F RID: 6431 RVA: 0x00042815 File Offset: 0x00040A15
+		// Token: 0x1700023C RID: 572
+		// (get) Token: 0x06001961 RID: 6497 RVA: 0x000431F5 File Offset: 0x000413F5
+		// (set) Token: 0x06001962 RID: 6498 RVA: 0x000431FD File Offset: 0x000413FD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long EndOpenTime
@@ -510,9 +516,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000237 RID: 567
-		// (get) Token: 0x06001920 RID: 6432 RVA: 0x0004281E File Offset: 0x00040A1E
-		// (set) Token: 0x06001921 RID: 6433 RVA: 0x00042826 File Offset: 0x00040A26
+		// Token: 0x1700023D RID: 573
+		// (get) Token: 0x06001963 RID: 6499 RVA: 0x00043206 File Offset: 0x00041406
+		// (set) Token: 0x06001964 RID: 6500 RVA: 0x0004320E File Offset: 0x0004140E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsUnlock
@@ -527,8 +533,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000238 RID: 568
-		// (get) Token: 0x06001922 RID: 6434 RVA: 0x0004282F File Offset: 0x00040A2F
+		// Token: 0x1700023E RID: 574
+		// (get) Token: 0x06001965 RID: 6501 RVA: 0x00043217 File Offset: 0x00041417
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> CompletePreQuests
@@ -539,9 +545,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000239 RID: 569
-		// (get) Token: 0x06001923 RID: 6435 RVA: 0x00042837 File Offset: 0x00040A37
-		// (set) Token: 0x06001924 RID: 6436 RVA: 0x0004283F File Offset: 0x00040A3F
+		// Token: 0x1700023F RID: 575
+		// (get) Token: 0x06001966 RID: 6502 RVA: 0x0004321F File Offset: 0x0004141F
+		// (set) Token: 0x06001967 RID: 6503 RVA: 0x00043227 File Offset: 0x00041427
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsFirstOpen
@@ -556,8 +562,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700023A RID: 570
-		// (get) Token: 0x06001925 RID: 6437 RVA: 0x00042848 File Offset: 0x00040A48
+		// Token: 0x17000240 RID: 576
+		// (get) Token: 0x06001968 RID: 6504 RVA: 0x00043230 File Offset: 0x00041430
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> FinishConditions
@@ -568,9 +574,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700023B RID: 571
-		// (get) Token: 0x06001926 RID: 6438 RVA: 0x00042850 File Offset: 0x00040A50
-		// (set) Token: 0x06001927 RID: 6439 RVA: 0x00042858 File Offset: 0x00040A58
+		// Token: 0x17000241 RID: 577
+		// (get) Token: 0x06001969 RID: 6505 RVA: 0x00043238 File Offset: 0x00041438
+		// (set) Token: 0x0600196A RID: 6506 RVA: 0x00043240 File Offset: 0x00041440
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityOpenType ActivityOpenType
@@ -585,9 +591,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700023C RID: 572
-		// (get) Token: 0x06001928 RID: 6440 RVA: 0x00042861 File Offset: 0x00040A61
-		// (set) Token: 0x06001929 RID: 6441 RVA: 0x00042869 File Offset: 0x00040A69
+		// Token: 0x17000242 RID: 578
+		// (get) Token: 0x0600196B RID: 6507 RVA: 0x00043249 File Offset: 0x00041449
+		// (set) Token: 0x0600196C RID: 6508 RVA: 0x00043251 File Offset: 0x00041451
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool CanPreOpen
@@ -602,9 +608,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700023D RID: 573
-		// (get) Token: 0x0600192A RID: 6442 RVA: 0x00042872 File Offset: 0x00040A72
-		// (set) Token: 0x0600192B RID: 6443 RVA: 0x0004287A File Offset: 0x00040A7A
+		// Token: 0x17000243 RID: 579
+		// (get) Token: 0x0600196D RID: 6509 RVA: 0x0004325A File Offset: 0x0004145A
+		// (set) Token: 0x0600196E RID: 6510 RVA: 0x00043262 File Offset: 0x00041462
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long LimitBeginTime
@@ -619,9 +625,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700023E RID: 574
-		// (get) Token: 0x0600192C RID: 6444 RVA: 0x00042883 File Offset: 0x00040A83
-		// (set) Token: 0x0600192D RID: 6445 RVA: 0x0004288B File Offset: 0x00040A8B
+		// Token: 0x17000244 RID: 580
+		// (get) Token: 0x0600196F RID: 6511 RVA: 0x0004326B File Offset: 0x0004146B
+		// (set) Token: 0x06001970 RID: 6512 RVA: 0x00043273 File Offset: 0x00041473
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long LimitEndTime
@@ -636,9 +642,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700023F RID: 575
-		// (get) Token: 0x0600192E RID: 6446 RVA: 0x00042894 File Offset: 0x00040A94
-		// (set) Token: 0x0600192F RID: 6447 RVA: 0x0004289C File Offset: 0x00040A9C
+		// Token: 0x17000245 RID: 581
+		// (get) Token: 0x06001971 RID: 6513 RVA: 0x0004327C File Offset: 0x0004147C
+		// (set) Token: 0x06001972 RID: 6514 RVA: 0x00043284 File Offset: 0x00041484
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long LimitRewardBeginTime
@@ -653,9 +659,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000240 RID: 576
-		// (get) Token: 0x06001930 RID: 6448 RVA: 0x000428A5 File Offset: 0x00040AA5
-		// (set) Token: 0x06001931 RID: 6449 RVA: 0x000428AD File Offset: 0x00040AAD
+		// Token: 0x17000246 RID: 582
+		// (get) Token: 0x06001973 RID: 6515 RVA: 0x0004328D File Offset: 0x0004148D
+		// (set) Token: 0x06001974 RID: 6516 RVA: 0x00043295 File Offset: 0x00041495
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long LimitRewardEndTime
@@ -670,9 +676,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000241 RID: 577
-		// (get) Token: 0x06001932 RID: 6450 RVA: 0x000428B6 File Offset: 0x00040AB6
-		// (set) Token: 0x06001933 RID: 6451 RVA: 0x000428CF File Offset: 0x00040ACF
+		// Token: 0x17000247 RID: 583
+		// (get) Token: 0x06001975 RID: 6517 RVA: 0x0004329E File Offset: 0x0004149E
+		// (set) Token: 0x06001976 RID: 6518 RVA: 0x000432B7 File Offset: 0x000414B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ParkourActivity ParkourActivity
@@ -692,9 +698,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000242 RID: 578
-		// (get) Token: 0x06001934 RID: 6452 RVA: 0x000428E6 File Offset: 0x00040AE6
-		// (set) Token: 0x06001935 RID: 6453 RVA: 0x000428FF File Offset: 0x00040AFF
+		// Token: 0x17000248 RID: 584
+		// (get) Token: 0x06001977 RID: 6519 RVA: 0x000432CE File Offset: 0x000414CE
+		// (set) Token: 0x06001978 RID: 6520 RVA: 0x000432E7 File Offset: 0x000414E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SignActivity SignActivity
@@ -714,9 +720,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000243 RID: 579
-		// (get) Token: 0x06001936 RID: 6454 RVA: 0x00042916 File Offset: 0x00040B16
-		// (set) Token: 0x06001937 RID: 6455 RVA: 0x0004292F File Offset: 0x00040B2F
+		// Token: 0x17000249 RID: 585
+		// (get) Token: 0x06001979 RID: 6521 RVA: 0x000432FE File Offset: 0x000414FE
+		// (set) Token: 0x0600197A RID: 6522 RVA: 0x00043317 File Offset: 0x00041517
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewBieCourseActivity NewBieCourseActivity
@@ -736,9 +742,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000244 RID: 580
-		// (get) Token: 0x06001938 RID: 6456 RVA: 0x00042946 File Offset: 0x00040B46
-		// (set) Token: 0x06001939 RID: 6457 RVA: 0x0004295F File Offset: 0x00040B5F
+		// Token: 0x1700024A RID: 586
+		// (get) Token: 0x0600197B RID: 6523 RVA: 0x0004332E File Offset: 0x0004152E
+		// (set) Token: 0x0600197C RID: 6524 RVA: 0x00043347 File Offset: 0x00041547
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DoubleInstActivityReward DoubleInstActivityReward
@@ -758,9 +764,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000245 RID: 581
-		// (get) Token: 0x0600193A RID: 6458 RVA: 0x00042976 File Offset: 0x00040B76
-		// (set) Token: 0x0600193B RID: 6459 RVA: 0x0004298F File Offset: 0x00040B8F
+		// Token: 0x1700024B RID: 587
+		// (get) Token: 0x0600197D RID: 6525 RVA: 0x0004335E File Offset: 0x0004155E
+		// (set) Token: 0x0600197E RID: 6526 RVA: 0x00043377 File Offset: 0x00041577
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HarvestActivity HarvestActivity
@@ -780,9 +786,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000246 RID: 582
-		// (get) Token: 0x0600193C RID: 6460 RVA: 0x000429A6 File Offset: 0x00040BA6
-		// (set) Token: 0x0600193D RID: 6461 RVA: 0x000429BF File Offset: 0x00040BBF
+		// Token: 0x1700024C RID: 588
+		// (get) Token: 0x0600197F RID: 6527 RVA: 0x0004338E File Offset: 0x0004158E
+		// (set) Token: 0x06001980 RID: 6528 RVA: 0x000433A7 File Offset: 0x000415A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleTrialInfoActivity RoleTrialInfoActivity
@@ -802,9 +808,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000247 RID: 583
-		// (get) Token: 0x0600193E RID: 6462 RVA: 0x000429D6 File Offset: 0x00040BD6
-		// (set) Token: 0x0600193F RID: 6463 RVA: 0x000429EF File Offset: 0x00040BEF
+		// Token: 0x1700024D RID: 589
+		// (get) Token: 0x06001981 RID: 6529 RVA: 0x000433BE File Offset: 0x000415BE
+		// (set) Token: 0x06001982 RID: 6530 RVA: 0x000433D7 File Offset: 0x000415D7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomCollectActivity PhantomCollectActivity
@@ -824,9 +830,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000248 RID: 584
-		// (get) Token: 0x06001940 RID: 6464 RVA: 0x00042A06 File Offset: 0x00040C06
-		// (set) Token: 0x06001941 RID: 6465 RVA: 0x00042A1F File Offset: 0x00040C1F
+		// Token: 0x1700024E RID: 590
+		// (get) Token: 0x06001983 RID: 6531 RVA: 0x000433EE File Offset: 0x000415EE
+		// (set) Token: 0x06001984 RID: 6532 RVA: 0x00043407 File Offset: 0x00041607
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GatherActivityInfo GatherActivityInfo
@@ -846,9 +852,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000249 RID: 585
-		// (get) Token: 0x06001942 RID: 6466 RVA: 0x00042A36 File Offset: 0x00040C36
-		// (set) Token: 0x06001943 RID: 6467 RVA: 0x00042A4F File Offset: 0x00040C4F
+		// Token: 0x1700024F RID: 591
+		// (get) Token: 0x06001985 RID: 6533 RVA: 0x0004341E File Offset: 0x0004161E
+		// (set) Token: 0x06001986 RID: 6534 RVA: 0x00043437 File Offset: 0x00041637
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DailyAdventureActivityData DailyAdventureActivityData
@@ -868,9 +874,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700024A RID: 586
-		// (get) Token: 0x06001944 RID: 6468 RVA: 0x00042A66 File Offset: 0x00040C66
-		// (set) Token: 0x06001945 RID: 6469 RVA: 0x00042A7F File Offset: 0x00040C7F
+		// Token: 0x17000250 RID: 592
+		// (get) Token: 0x06001987 RID: 6535 RVA: 0x0004344E File Offset: 0x0004164E
+		// (set) Token: 0x06001988 RID: 6536 RVA: 0x00043467 File Offset: 0x00041667
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoguelikeActivityData RoguelikeActivityData
@@ -890,9 +896,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700024B RID: 587
-		// (get) Token: 0x06001946 RID: 6470 RVA: 0x00042A96 File Offset: 0x00040C96
-		// (set) Token: 0x06001947 RID: 6471 RVA: 0x00042AAF File Offset: 0x00040CAF
+		// Token: 0x17000251 RID: 593
+		// (get) Token: 0x06001989 RID: 6537 RVA: 0x0004347E File Offset: 0x0004167E
+		// (set) Token: 0x0600198A RID: 6538 RVA: 0x00043497 File Offset: 0x00041697
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LongShanActivity LongShanActivityData
@@ -912,9 +918,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700024C RID: 588
-		// (get) Token: 0x06001948 RID: 6472 RVA: 0x00042AC6 File Offset: 0x00040CC6
-		// (set) Token: 0x06001949 RID: 6473 RVA: 0x00042ADF File Offset: 0x00040CDF
+		// Token: 0x17000252 RID: 594
+		// (get) Token: 0x0600198B RID: 6539 RVA: 0x000434AE File Offset: 0x000416AE
+		// (set) Token: 0x0600198C RID: 6540 RVA: 0x000434C7 File Offset: 0x000416C7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TurntableActivityData TurntableActivityData
@@ -934,9 +940,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700024D RID: 589
-		// (get) Token: 0x0600194A RID: 6474 RVA: 0x00042AF6 File Offset: 0x00040CF6
-		// (set) Token: 0x0600194B RID: 6475 RVA: 0x00042B0F File Offset: 0x00040D0F
+		// Token: 0x17000253 RID: 595
+		// (get) Token: 0x0600198D RID: 6541 RVA: 0x000434DE File Offset: 0x000416DE
+		// (set) Token: 0x0600198E RID: 6542 RVA: 0x000434F7 File Offset: 0x000416F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BossRushActivityData BossRushActivityData
@@ -956,9 +962,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700024E RID: 590
-		// (get) Token: 0x0600194C RID: 6476 RVA: 0x00042B26 File Offset: 0x00040D26
-		// (set) Token: 0x0600194D RID: 6477 RVA: 0x00042B3F File Offset: 0x00040D3F
+		// Token: 0x17000254 RID: 596
+		// (get) Token: 0x0600198F RID: 6543 RVA: 0x0004350E File Offset: 0x0004170E
+		// (set) Token: 0x06001990 RID: 6544 RVA: 0x00043527 File Offset: 0x00041727
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityTaskData TrackMoonActivityTaskData
@@ -978,9 +984,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700024F RID: 591
-		// (get) Token: 0x0600194E RID: 6478 RVA: 0x00042B56 File Offset: 0x00040D56
-		// (set) Token: 0x0600194F RID: 6479 RVA: 0x00042B6F File Offset: 0x00040D6F
+		// Token: 0x17000255 RID: 597
+		// (get) Token: 0x06001991 RID: 6545 RVA: 0x0004353E File Offset: 0x0004173E
+		// (set) Token: 0x06001992 RID: 6546 RVA: 0x00043557 File Offset: 0x00041757
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TimePointRewardActivityData TimePointRewardActivityData
@@ -1000,9 +1006,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000250 RID: 592
-		// (get) Token: 0x06001950 RID: 6480 RVA: 0x00042B86 File Offset: 0x00040D86
-		// (set) Token: 0x06001951 RID: 6481 RVA: 0x00042B9F File Offset: 0x00040D9F
+		// Token: 0x17000256 RID: 598
+		// (get) Token: 0x06001993 RID: 6547 RVA: 0x0004356E File Offset: 0x0004176E
+		// (set) Token: 0x06001994 RID: 6548 RVA: 0x00043587 File Offset: 0x00041787
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TowerDefenceActivityInfo TowerDefenceActivityData
@@ -1022,9 +1028,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000251 RID: 593
-		// (get) Token: 0x06001952 RID: 6482 RVA: 0x00042BB6 File Offset: 0x00040DB6
-		// (set) Token: 0x06001953 RID: 6483 RVA: 0x00042BCF File Offset: 0x00040DCF
+		// Token: 0x17000257 RID: 599
+		// (get) Token: 0x06001995 RID: 6549 RVA: 0x0004359E File Offset: 0x0004179E
+		// (set) Token: 0x06001996 RID: 6550 RVA: 0x000435B7 File Offset: 0x000417B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CircumFluenceData CircumFluenceTaskData
@@ -1044,9 +1050,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000252 RID: 594
-		// (get) Token: 0x06001954 RID: 6484 RVA: 0x00042BE6 File Offset: 0x00040DE6
-		// (set) Token: 0x06001955 RID: 6485 RVA: 0x00042BFF File Offset: 0x00040DFF
+		// Token: 0x17000258 RID: 600
+		// (get) Token: 0x06001997 RID: 6551 RVA: 0x000435CE File Offset: 0x000417CE
+		// (set) Token: 0x06001998 RID: 6552 RVA: 0x000435E7 File Offset: 0x000417E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TraceMoonPhaseData TraceMoonPhaseData
@@ -1066,9 +1072,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000253 RID: 595
-		// (get) Token: 0x06001956 RID: 6486 RVA: 0x00042C16 File Offset: 0x00040E16
-		// (set) Token: 0x06001957 RID: 6487 RVA: 0x00042C2F File Offset: 0x00040E2F
+		// Token: 0x17000259 RID: 601
+		// (get) Token: 0x06001999 RID: 6553 RVA: 0x000435FE File Offset: 0x000417FE
+		// (set) Token: 0x0600199A RID: 6554 RVA: 0x00043617 File Offset: 0x00041817
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CorniceMeetingData CorniceMeetingData
@@ -1088,9 +1094,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000254 RID: 596
-		// (get) Token: 0x06001958 RID: 6488 RVA: 0x00042C46 File Offset: 0x00040E46
-		// (set) Token: 0x06001959 RID: 6489 RVA: 0x00042C5F File Offset: 0x00040E5F
+		// Token: 0x1700025A RID: 602
+		// (get) Token: 0x0600199B RID: 6555 RVA: 0x0004362E File Offset: 0x0004182E
+		// (set) Token: 0x0600199C RID: 6556 RVA: 0x00043647 File Offset: 0x00041847
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RiskHarvestActivityInfo RiskHarvestActivityInfo
@@ -1110,9 +1116,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000255 RID: 597
-		// (get) Token: 0x0600195A RID: 6490 RVA: 0x00042C76 File Offset: 0x00040E76
-		// (set) Token: 0x0600195B RID: 6491 RVA: 0x00042C8F File Offset: 0x00040E8F
+		// Token: 0x1700025B RID: 603
+		// (get) Token: 0x0600199D RID: 6557 RVA: 0x0004365E File Offset: 0x0004185E
+		// (set) Token: 0x0600199E RID: 6558 RVA: 0x00043677 File Offset: 0x00041877
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BlackCoastThemeActivity BlackCoastThemeActivityData
@@ -1132,9 +1138,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000256 RID: 598
-		// (get) Token: 0x0600195C RID: 6492 RVA: 0x00042CA6 File Offset: 0x00040EA6
-		// (set) Token: 0x0600195D RID: 6493 RVA: 0x00042CBF File Offset: 0x00040EBF
+		// Token: 0x1700025C RID: 604
+		// (get) Token: 0x0600199F RID: 6559 RVA: 0x0004368E File Offset: 0x0004188E
+		// (set) Token: 0x060019A0 RID: 6560 RVA: 0x000436A7 File Offset: 0x000418A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWhiteCatData RogueWhiteCatData
@@ -1154,9 +1160,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000257 RID: 599
-		// (get) Token: 0x0600195E RID: 6494 RVA: 0x00042CD6 File Offset: 0x00040ED6
-		// (set) Token: 0x0600195F RID: 6495 RVA: 0x00042CEF File Offset: 0x00040EEF
+		// Token: 0x1700025D RID: 605
+		// (get) Token: 0x060019A1 RID: 6561 RVA: 0x000436BE File Offset: 0x000418BE
+		// (set) Token: 0x060019A2 RID: 6562 RVA: 0x000436D7 File Offset: 0x000418D7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ScratchCardActivityInfo ScratchCardActivityInfo
@@ -1176,9 +1182,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000258 RID: 600
-		// (get) Token: 0x06001960 RID: 6496 RVA: 0x00042D06 File Offset: 0x00040F06
-		// (set) Token: 0x06001961 RID: 6497 RVA: 0x00042D1F File Offset: 0x00040F1F
+		// Token: 0x1700025E RID: 606
+		// (get) Token: 0x060019A3 RID: 6563 RVA: 0x000436EE File Offset: 0x000418EE
+		// (set) Token: 0x060019A4 RID: 6564 RVA: 0x00043707 File Offset: 0x00041907
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PreheatSignActivityInfo PreheatSignActivityInfo
@@ -1198,9 +1204,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000259 RID: 601
-		// (get) Token: 0x06001962 RID: 6498 RVA: 0x00042D36 File Offset: 0x00040F36
-		// (set) Token: 0x06001963 RID: 6499 RVA: 0x00042D4F File Offset: 0x00040F4F
+		// Token: 0x1700025F RID: 607
+		// (get) Token: 0x060019A5 RID: 6565 RVA: 0x0004371E File Offset: 0x0004191E
+		// (set) Token: 0x060019A6 RID: 6566 RVA: 0x00043737 File Offset: 0x00041937
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MowTowerActivityInfo MowTowerActivityInfo
@@ -1220,9 +1226,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700025A RID: 602
-		// (get) Token: 0x06001964 RID: 6500 RVA: 0x00042D66 File Offset: 0x00040F66
-		// (set) Token: 0x06001965 RID: 6501 RVA: 0x00042D7F File Offset: 0x00040F7F
+		// Token: 0x17000260 RID: 608
+		// (get) Token: 0x060019A7 RID: 6567 RVA: 0x0004374E File Offset: 0x0004194E
+		// (set) Token: 0x060019A8 RID: 6568 RVA: 0x00043767 File Offset: 0x00041967
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FarmGoldInfo FarmGoldInfo
@@ -1242,9 +1248,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700025B RID: 603
-		// (get) Token: 0x06001966 RID: 6502 RVA: 0x00042D96 File Offset: 0x00040F96
-		// (set) Token: 0x06001967 RID: 6503 RVA: 0x00042DAF File Offset: 0x00040FAF
+		// Token: 0x17000261 RID: 609
+		// (get) Token: 0x060019A9 RID: 6569 RVA: 0x0004377E File Offset: 0x0004197E
+		// (set) Token: 0x060019AA RID: 6570 RVA: 0x00043797 File Offset: 0x00041997
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringSignInfo SpringSignInfo
@@ -1264,9 +1270,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700025C RID: 604
-		// (get) Token: 0x06001968 RID: 6504 RVA: 0x00042DC6 File Offset: 0x00040FC6
-		// (set) Token: 0x06001969 RID: 6505 RVA: 0x00042DDF File Offset: 0x00040FDF
+		// Token: 0x17000262 RID: 610
+		// (get) Token: 0x060019AB RID: 6571 RVA: 0x000437AE File Offset: 0x000419AE
+		// (set) Token: 0x060019AC RID: 6572 RVA: 0x000437C7 File Offset: 0x000419C7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapTravelActivityInfo MapTravelActivityInfo
@@ -1286,9 +1292,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700025D RID: 605
-		// (get) Token: 0x0600196A RID: 6506 RVA: 0x00042DF6 File Offset: 0x00040FF6
-		// (set) Token: 0x0600196B RID: 6507 RVA: 0x00042E0F File Offset: 0x0004100F
+		// Token: 0x17000263 RID: 611
+		// (get) Token: 0x060019AD RID: 6573 RVA: 0x000437DE File Offset: 0x000419DE
+		// (set) Token: 0x060019AE RID: 6574 RVA: 0x000437F7 File Offset: 0x000419F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleSkinTrialInfoActivity RoleSkinTrialInfoActivity
@@ -1308,9 +1314,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700025E RID: 606
-		// (get) Token: 0x0600196C RID: 6508 RVA: 0x00042E26 File Offset: 0x00041026
-		// (set) Token: 0x0600196D RID: 6509 RVA: 0x00042E3F File Offset: 0x0004103F
+		// Token: 0x17000264 RID: 612
+		// (get) Token: 0x060019AF RID: 6575 RVA: 0x0004380E File Offset: 0x00041A0E
+		// (set) Token: 0x060019B0 RID: 6576 RVA: 0x00043827 File Offset: 0x00041A27
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FishingActivityInfo FishingActivityInfo
@@ -1330,9 +1336,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700025F RID: 607
-		// (get) Token: 0x0600196E RID: 6510 RVA: 0x00042E56 File Offset: 0x00041056
-		// (set) Token: 0x0600196F RID: 6511 RVA: 0x00042E6F File Offset: 0x0004106F
+		// Token: 0x17000265 RID: 613
+		// (get) Token: 0x060019B1 RID: 6577 RVA: 0x0004383E File Offset: 0x00041A3E
+		// (set) Token: 0x060019B2 RID: 6578 RVA: 0x00043857 File Offset: 0x00041A57
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyData RogueWeeklyData
@@ -1352,9 +1358,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000260 RID: 608
-		// (get) Token: 0x06001970 RID: 6512 RVA: 0x00042E86 File Offset: 0x00041086
-		// (set) Token: 0x06001971 RID: 6513 RVA: 0x00042E9F File Offset: 0x0004109F
+		// Token: 0x17000266 RID: 614
+		// (get) Token: 0x060019B3 RID: 6579 RVA: 0x0004386E File Offset: 0x00041A6E
+		// (set) Token: 0x060019B4 RID: 6580 RVA: 0x00043887 File Offset: 0x00041A87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TeamParkourLevelActivityInfo TeamParkourLevelActivityInfo
@@ -1374,9 +1380,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000261 RID: 609
-		// (get) Token: 0x06001972 RID: 6514 RVA: 0x00042EB6 File Offset: 0x000410B6
-		// (set) Token: 0x06001973 RID: 6515 RVA: 0x00042ECF File Offset: 0x000410CF
+		// Token: 0x17000267 RID: 615
+		// (get) Token: 0x060019B5 RID: 6581 RVA: 0x0004389E File Offset: 0x00041A9E
+		// (set) Token: 0x060019B6 RID: 6582 RVA: 0x000438B7 File Offset: 0x00041AB7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelActivityInfo BabelActivityInfo
@@ -1396,9 +1402,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000262 RID: 610
-		// (get) Token: 0x06001974 RID: 6516 RVA: 0x00042EE6 File Offset: 0x000410E6
-		// (set) Token: 0x06001975 RID: 6517 RVA: 0x00042EFF File Offset: 0x000410FF
+		// Token: 0x17000268 RID: 616
+		// (get) Token: 0x060019B7 RID: 6583 RVA: 0x000438CE File Offset: 0x00041ACE
+		// (set) Token: 0x060019B8 RID: 6584 RVA: 0x000438E7 File Offset: 0x00041AE7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RacingBetsActivityData RacingBetsData
@@ -1418,9 +1424,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000263 RID: 611
-		// (get) Token: 0x06001976 RID: 6518 RVA: 0x00042F16 File Offset: 0x00041116
-		// (set) Token: 0x06001977 RID: 6519 RVA: 0x00042F2F File Offset: 0x0004112F
+		// Token: 0x17000269 RID: 617
+		// (get) Token: 0x060019B9 RID: 6585 RVA: 0x000438FE File Offset: 0x00041AFE
+		// (set) Token: 0x060019BA RID: 6586 RVA: 0x00043917 File Offset: 0x00041B17
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ExploreActivityInfo ExploreActivityInfo
@@ -1440,9 +1446,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000264 RID: 612
-		// (get) Token: 0x06001978 RID: 6520 RVA: 0x00042F46 File Offset: 0x00041146
-		// (set) Token: 0x06001979 RID: 6521 RVA: 0x00042F5F File Offset: 0x0004115F
+		// Token: 0x1700026A RID: 618
+		// (get) Token: 0x060019BB RID: 6587 RVA: 0x0004392E File Offset: 0x00041B2E
+		// (set) Token: 0x060019BC RID: 6588 RVA: 0x00043947 File Offset: 0x00041B47
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResActivityData RogueResActivityData
@@ -1462,9 +1468,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000265 RID: 613
-		// (get) Token: 0x0600197A RID: 6522 RVA: 0x00042F76 File Offset: 0x00041176
-		// (set) Token: 0x0600197B RID: 6523 RVA: 0x00042F8F File Offset: 0x0004118F
+		// Token: 0x1700026B RID: 619
+		// (get) Token: 0x060019BD RID: 6589 RVA: 0x0004395E File Offset: 0x00041B5E
+		// (set) Token: 0x060019BE RID: 6590 RVA: 0x00043977 File Offset: 0x00041B77
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AvignonActivityInfo AvignonActivityInfo
@@ -1484,9 +1490,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000266 RID: 614
-		// (get) Token: 0x0600197C RID: 6524 RVA: 0x00042FA6 File Offset: 0x000411A6
-		// (set) Token: 0x0600197D RID: 6525 RVA: 0x00042FBF File Offset: 0x000411BF
+		// Token: 0x1700026C RID: 620
+		// (get) Token: 0x060019BF RID: 6591 RVA: 0x0004398E File Offset: 0x00041B8E
+		// (set) Token: 0x060019C0 RID: 6592 RVA: 0x000439A7 File Offset: 0x00041BA7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssInfo AbyssInfo
@@ -1506,9 +1512,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000267 RID: 615
-		// (get) Token: 0x0600197E RID: 6526 RVA: 0x00042FD6 File Offset: 0x000411D6
-		// (set) Token: 0x0600197F RID: 6527 RVA: 0x00042FEF File Offset: 0x000411EF
+		// Token: 0x1700026D RID: 621
+		// (get) Token: 0x060019C1 RID: 6593 RVA: 0x000439BE File Offset: 0x00041BBE
+		// (set) Token: 0x060019C2 RID: 6594 RVA: 0x000439D7 File Offset: 0x00041BD7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public H5CircumFluenceActivityData H5CircumFluenceData
@@ -1528,9 +1534,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000268 RID: 616
-		// (get) Token: 0x06001980 RID: 6528 RVA: 0x00043006 File Offset: 0x00041206
-		// (set) Token: 0x06001981 RID: 6529 RVA: 0x0004301F File Offset: 0x0004121F
+		// Token: 0x1700026E RID: 622
+		// (get) Token: 0x060019C3 RID: 6595 RVA: 0x000439EE File Offset: 0x00041BEE
+		// (set) Token: 0x060019C4 RID: 6596 RVA: 0x00043A07 File Offset: 0x00041C07
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyActivityPbData DangoMonopolyActivityData
@@ -1550,9 +1556,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000269 RID: 617
-		// (get) Token: 0x06001982 RID: 6530 RVA: 0x00043036 File Offset: 0x00041236
-		// (set) Token: 0x06001983 RID: 6531 RVA: 0x0004304F File Offset: 0x0004124F
+		// Token: 0x1700026F RID: 623
+		// (get) Token: 0x060019C5 RID: 6597 RVA: 0x00043A1E File Offset: 0x00041C1E
+		// (set) Token: 0x060019C6 RID: 6598 RVA: 0x00043A37 File Offset: 0x00041C37
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CiacconaActivityPbData CiacconaActivityPbData
@@ -1572,9 +1578,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700026A RID: 618
-		// (get) Token: 0x06001984 RID: 6532 RVA: 0x00043066 File Offset: 0x00041266
-		// (set) Token: 0x06001985 RID: 6533 RVA: 0x0004307F File Offset: 0x0004127F
+		// Token: 0x17000270 RID: 624
+		// (get) Token: 0x060019C7 RID: 6599 RVA: 0x00043A4E File Offset: 0x00041C4E
+		// (set) Token: 0x060019C8 RID: 6600 RVA: 0x00043A67 File Offset: 0x00041C67
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityLinkageData ActivityLinkageData
@@ -1594,9 +1600,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700026B RID: 619
-		// (get) Token: 0x06001986 RID: 6534 RVA: 0x00043096 File Offset: 0x00041296
-		// (set) Token: 0x06001987 RID: 6535 RVA: 0x000430AF File Offset: 0x000412AF
+		// Token: 0x17000271 RID: 625
+		// (get) Token: 0x060019C9 RID: 6601 RVA: 0x00043A7E File Offset: 0x00041C7E
+		// (set) Token: 0x060019CA RID: 6602 RVA: 0x00043A97 File Offset: 0x00041C97
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RegressData RegressData
@@ -1616,9 +1622,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700026C RID: 620
-		// (get) Token: 0x06001988 RID: 6536 RVA: 0x000430C6 File Offset: 0x000412C6
-		// (set) Token: 0x06001989 RID: 6537 RVA: 0x000430DF File Offset: 0x000412DF
+		// Token: 0x17000272 RID: 626
+		// (get) Token: 0x060019CB RID: 6603 RVA: 0x00043AAE File Offset: 0x00041CAE
+		// (set) Token: 0x060019CC RID: 6604 RVA: 0x00043AC7 File Offset: 0x00041CC7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ConsumptiveActivityInfo ConsumptiveActivityInfo
@@ -1638,9 +1644,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700026D RID: 621
-		// (get) Token: 0x0600198A RID: 6538 RVA: 0x000430F6 File Offset: 0x000412F6
-		// (set) Token: 0x0600198B RID: 6539 RVA: 0x0004310F File Offset: 0x0004130F
+		// Token: 0x17000273 RID: 627
+		// (get) Token: 0x060019CD RID: 6605 RVA: 0x00043ADE File Offset: 0x00041CDE
+		// (set) Token: 0x060019CE RID: 6606 RVA: 0x00043AF7 File Offset: 0x00041CF7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleActivityInfo PhantomBattleActivityInfo
@@ -1660,9 +1666,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700026E RID: 622
-		// (get) Token: 0x0600198C RID: 6540 RVA: 0x00043126 File Offset: 0x00041326
-		// (set) Token: 0x0600198D RID: 6541 RVA: 0x0004313F File Offset: 0x0004133F
+		// Token: 0x17000274 RID: 628
+		// (get) Token: 0x060019CF RID: 6607 RVA: 0x00043B0E File Offset: 0x00041D0E
+		// (set) Token: 0x060019D0 RID: 6608 RVA: 0x00043B27 File Offset: 0x00041D27
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewbieCarnivalData NewbieCarnivalData
@@ -1682,9 +1688,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700026F RID: 623
-		// (get) Token: 0x0600198E RID: 6542 RVA: 0x00043156 File Offset: 0x00041356
-		// (set) Token: 0x0600198F RID: 6543 RVA: 0x0004316F File Offset: 0x0004136F
+		// Token: 0x17000275 RID: 629
+		// (get) Token: 0x060019D1 RID: 6609 RVA: 0x00043B3E File Offset: 0x00041D3E
+		// (set) Token: 0x060019D2 RID: 6610 RVA: 0x00043B57 File Offset: 0x00041D57
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MoraleActivityData MoraleActivityData
@@ -1704,9 +1710,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000270 RID: 624
-		// (get) Token: 0x06001990 RID: 6544 RVA: 0x00043186 File Offset: 0x00041386
-		// (set) Token: 0x06001991 RID: 6545 RVA: 0x0004319F File Offset: 0x0004139F
+		// Token: 0x17000276 RID: 630
+		// (get) Token: 0x060019D3 RID: 6611 RVA: 0x00043B6E File Offset: 0x00041D6E
+		// (set) Token: 0x060019D4 RID: 6612 RVA: 0x00043B87 File Offset: 0x00041D87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchActivityData FloroRanchActivityData
@@ -1726,9 +1732,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000271 RID: 625
-		// (get) Token: 0x06001992 RID: 6546 RVA: 0x000431B6 File Offset: 0x000413B6
-		// (set) Token: 0x06001993 RID: 6547 RVA: 0x000431CF File Offset: 0x000413CF
+		// Token: 0x17000277 RID: 631
+		// (get) Token: 0x060019D5 RID: 6613 RVA: 0x00043B9E File Offset: 0x00041D9E
+		// (set) Token: 0x060019D6 RID: 6614 RVA: 0x00043BB7 File Offset: 0x00041DB7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LifePointChallengeActivityData LifePointChallenge
@@ -1748,9 +1754,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000272 RID: 626
-		// (get) Token: 0x06001994 RID: 6548 RVA: 0x000431E6 File Offset: 0x000413E6
-		// (set) Token: 0x06001995 RID: 6549 RVA: 0x000431FF File Offset: 0x000413FF
+		// Token: 0x17000278 RID: 632
+		// (get) Token: 0x060019D7 RID: 6615 RVA: 0x00043BCE File Offset: 0x00041DCE
+		// (set) Token: 0x060019D8 RID: 6616 RVA: 0x00043BE7 File Offset: 0x00041DE7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseActivityInfo TrapDefenseActivityInfo
@@ -1770,9 +1776,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000273 RID: 627
-		// (get) Token: 0x06001996 RID: 6550 RVA: 0x00043216 File Offset: 0x00041416
-		// (set) Token: 0x06001997 RID: 6551 RVA: 0x0004322F File Offset: 0x0004142F
+		// Token: 0x17000279 RID: 633
+		// (get) Token: 0x060019D9 RID: 6617 RVA: 0x00043BFE File Offset: 0x00041DFE
+		// (set) Token: 0x060019DA RID: 6618 RVA: 0x00043C17 File Offset: 0x00041E17
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FunPlayActivityInfo FunPlayActivityInfo
@@ -1792,9 +1798,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000274 RID: 628
-		// (get) Token: 0x06001998 RID: 6552 RVA: 0x00043246 File Offset: 0x00041446
-		// (set) Token: 0x06001999 RID: 6553 RVA: 0x0004325F File Offset: 0x0004145F
+		// Token: 0x1700027A RID: 634
+		// (get) Token: 0x060019DB RID: 6619 RVA: 0x00043C2E File Offset: 0x00041E2E
+		// (set) Token: 0x060019DC RID: 6620 RVA: 0x00043C47 File Offset: 0x00041E47
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public JinzhouFlyData JinzhouFlyData
@@ -1814,9 +1820,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000275 RID: 629
-		// (get) Token: 0x0600199A RID: 6554 RVA: 0x00043276 File Offset: 0x00041476
-		// (set) Token: 0x0600199B RID: 6555 RVA: 0x0004328F File Offset: 0x0004148F
+		// Token: 0x1700027B RID: 635
+		// (get) Token: 0x060019DD RID: 6621 RVA: 0x00043C5E File Offset: 0x00041E5E
+		// (set) Token: 0x060019DE RID: 6622 RVA: 0x00043C77 File Offset: 0x00041E77
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LineCrossActivityData LineCrossActivityData
@@ -1836,9 +1842,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000276 RID: 630
-		// (get) Token: 0x0600199C RID: 6556 RVA: 0x000432A6 File Offset: 0x000414A6
-		// (set) Token: 0x0600199D RID: 6557 RVA: 0x000432BF File Offset: 0x000414BF
+		// Token: 0x1700027C RID: 636
+		// (get) Token: 0x060019DF RID: 6623 RVA: 0x00043C8E File Offset: 0x00041E8E
+		// (set) Token: 0x060019E0 RID: 6624 RVA: 0x00043CA7 File Offset: 0x00041EA7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MoonPhaseActivityData MoonPhaseActivityData
@@ -1858,9 +1864,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000277 RID: 631
-		// (get) Token: 0x0600199E RID: 6558 RVA: 0x000432D6 File Offset: 0x000414D6
-		// (set) Token: 0x0600199F RID: 6559 RVA: 0x000432EF File Offset: 0x000414EF
+		// Token: 0x1700027D RID: 637
+		// (get) Token: 0x060019E1 RID: 6625 RVA: 0x00043CBE File Offset: 0x00041EBE
+		// (set) Token: 0x060019E2 RID: 6626 RVA: 0x00043CD7 File Offset: 0x00041ED7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HonamiStoryActivityInfo HonamiStoryActivityInfo
@@ -1880,9 +1886,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000278 RID: 632
-		// (get) Token: 0x060019A0 RID: 6560 RVA: 0x00043306 File Offset: 0x00041506
-		// (set) Token: 0x060019A1 RID: 6561 RVA: 0x0004331F File Offset: 0x0004151F
+		// Token: 0x1700027E RID: 638
+		// (get) Token: 0x060019E3 RID: 6627 RVA: 0x00043CEE File Offset: 0x00041EEE
+		// (set) Token: 0x060019E4 RID: 6628 RVA: 0x00043D07 File Offset: 0x00041F07
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhotoFightActivityPb PhotoFightActivityData
@@ -1902,9 +1908,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000279 RID: 633
-		// (get) Token: 0x060019A2 RID: 6562 RVA: 0x00043336 File Offset: 0x00041536
-		// (set) Token: 0x060019A3 RID: 6563 RVA: 0x0004334F File Offset: 0x0004154F
+		// Token: 0x1700027F RID: 639
+		// (get) Token: 0x060019E5 RID: 6629 RVA: 0x00043D1E File Offset: 0x00041F1E
+		// (set) Token: 0x060019E6 RID: 6630 RVA: 0x00043D37 File Offset: 0x00041F37
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SurvivorsActivityData SurvivorsActivityData
@@ -1924,9 +1930,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700027A RID: 634
-		// (get) Token: 0x060019A4 RID: 6564 RVA: 0x00043366 File Offset: 0x00041566
-		// (set) Token: 0x060019A5 RID: 6565 RVA: 0x0004337F File Offset: 0x0004157F
+		// Token: 0x17000280 RID: 640
+		// (get) Token: 0x060019E7 RID: 6631 RVA: 0x00043D4E File Offset: 0x00041F4E
+		// (set) Token: 0x060019E8 RID: 6632 RVA: 0x00043D67 File Offset: 0x00041F67
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WuWuKujiActivityPb WuWuKujiActivityInfo
@@ -1946,9 +1952,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700027B RID: 635
-		// (get) Token: 0x060019A6 RID: 6566 RVA: 0x00043396 File Offset: 0x00041596
-		// (set) Token: 0x060019A7 RID: 6567 RVA: 0x000433AF File Offset: 0x000415AF
+		// Token: 0x17000281 RID: 641
+		// (get) Token: 0x060019E9 RID: 6633 RVA: 0x00043D7E File Offset: 0x00041F7E
+		// (set) Token: 0x060019EA RID: 6634 RVA: 0x00043D97 File Offset: 0x00041F97
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AdvertisingPageData AdvertisingPageInfo
@@ -1968,9 +1974,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700027C RID: 636
-		// (get) Token: 0x060019A8 RID: 6568 RVA: 0x000433C6 File Offset: 0x000415C6
-		// (set) Token: 0x060019A9 RID: 6569 RVA: 0x000433DF File Offset: 0x000415DF
+		// Token: 0x17000282 RID: 642
+		// (get) Token: 0x060019EB RID: 6635 RVA: 0x00043DAE File Offset: 0x00041FAE
+		// (set) Token: 0x060019EC RID: 6636 RVA: 0x00043DC7 File Offset: 0x00041FC7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ArtemisActivityInfo ArtemisActivityInfo
@@ -1990,9 +1996,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700027D RID: 637
-		// (get) Token: 0x060019AA RID: 6570 RVA: 0x000433F6 File Offset: 0x000415F6
-		// (set) Token: 0x060019AB RID: 6571 RVA: 0x0004340F File Offset: 0x0004160F
+		// Token: 0x17000283 RID: 643
+		// (get) Token: 0x060019ED RID: 6637 RVA: 0x00043DDE File Offset: 0x00041FDE
+		// (set) Token: 0x060019EE RID: 6638 RVA: 0x00043DF7 File Offset: 0x00041FF7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleCoopActivityData RoleCoopActivityData
@@ -2012,9 +2018,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700027E RID: 638
-		// (get) Token: 0x060019AC RID: 6572 RVA: 0x00043426 File Offset: 0x00041626
-		// (set) Token: 0x060019AD RID: 6573 RVA: 0x0004343F File Offset: 0x0004163F
+		// Token: 0x17000284 RID: 644
+		// (get) Token: 0x060019EF RID: 6639 RVA: 0x00043E0E File Offset: 0x0004200E
+		// (set) Token: 0x060019F0 RID: 6640 RVA: 0x00043E27 File Offset: 0x00042027
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorCycleIpActivityData MotorCycleIpActivityData
@@ -2034,9 +2040,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700027F RID: 639
-		// (get) Token: 0x060019AE RID: 6574 RVA: 0x00043456 File Offset: 0x00041656
-		// (set) Token: 0x060019AF RID: 6575 RVA: 0x0004346F File Offset: 0x0004166F
+		// Token: 0x17000285 RID: 645
+		// (get) Token: 0x060019F1 RID: 6641 RVA: 0x00043E3E File Offset: 0x0004203E
+		// (set) Token: 0x060019F2 RID: 6642 RVA: 0x00043E57 File Offset: 0x00042057
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleActivityInfo PhantomBattleRecordActivityInfo
@@ -2056,9 +2062,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000280 RID: 640
-		// (get) Token: 0x060019B0 RID: 6576 RVA: 0x00043486 File Offset: 0x00041686
-		// (set) Token: 0x060019B1 RID: 6577 RVA: 0x0004349F File Offset: 0x0004169F
+		// Token: 0x17000286 RID: 646
+		// (get) Token: 0x060019F3 RID: 6643 RVA: 0x00043E6E File Offset: 0x0004206E
+		// (set) Token: 0x060019F4 RID: 6644 RVA: 0x00043E87 File Offset: 0x00042087
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public InfrThemeActivityPb InfrThemeActivityPb
@@ -2078,9 +2084,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000281 RID: 641
-		// (get) Token: 0x060019B2 RID: 6578 RVA: 0x000434B6 File Offset: 0x000416B6
-		// (set) Token: 0x060019B3 RID: 6579 RVA: 0x000434CF File Offset: 0x000416CF
+		// Token: 0x17000287 RID: 647
+		// (get) Token: 0x060019F5 RID: 6645 RVA: 0x00043E9E File Offset: 0x0004209E
+		// (set) Token: 0x060019F6 RID: 6646 RVA: 0x00043EB7 File Offset: 0x000420B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoadBookActivityInfo RoadBookActivityInfo
@@ -2100,9 +2106,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000282 RID: 642
-		// (get) Token: 0x060019B4 RID: 6580 RVA: 0x000434E6 File Offset: 0x000416E6
-		// (set) Token: 0x060019B5 RID: 6581 RVA: 0x000434FF File Offset: 0x000416FF
+		// Token: 0x17000288 RID: 648
+		// (get) Token: 0x060019F7 RID: 6647 RVA: 0x00043ECE File Offset: 0x000420CE
+		// (set) Token: 0x060019F8 RID: 6648 RVA: 0x00043EE7 File Offset: 0x000420E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleGuideActivity PhantomBattleGuideActivity
@@ -2122,9 +2128,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000283 RID: 643
-		// (get) Token: 0x060019B6 RID: 6582 RVA: 0x00043516 File Offset: 0x00041716
-		// (set) Token: 0x060019B7 RID: 6583 RVA: 0x0004352F File Offset: 0x0004172F
+		// Token: 0x17000289 RID: 649
+		// (get) Token: 0x060019F9 RID: 6649 RVA: 0x00043EFE File Offset: 0x000420FE
+		// (set) Token: 0x060019FA RID: 6650 RVA: 0x00043F17 File Offset: 0x00042117
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewTowerClimbingActivityData NewTowerClimbingActivityData
@@ -2144,9 +2150,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000284 RID: 644
-		// (get) Token: 0x060019B8 RID: 6584 RVA: 0x00043546 File Offset: 0x00041746
-		// (set) Token: 0x060019B9 RID: 6585 RVA: 0x0004355F File Offset: 0x0004175F
+		// Token: 0x1700028A RID: 650
+		// (get) Token: 0x060019FB RID: 6651 RVA: 0x00043F2E File Offset: 0x0004212E
+		// (set) Token: 0x060019FC RID: 6652 RVA: 0x00043F47 File Offset: 0x00042147
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewPlayerSupportActivityData NewPlayerSupportActivityData
@@ -2166,9 +2172,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000285 RID: 645
-		// (get) Token: 0x060019BA RID: 6586 RVA: 0x00043576 File Offset: 0x00041776
-		// (set) Token: 0x060019BB RID: 6587 RVA: 0x0004358F File Offset: 0x0004178F
+		// Token: 0x1700028B RID: 651
+		// (get) Token: 0x060019FD RID: 6653 RVA: 0x00043F5E File Offset: 0x0004215E
+		// (set) Token: 0x060019FE RID: 6654 RVA: 0x00043F77 File Offset: 0x00042177
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorParkourActivityInfo MotorParkourActivityInfo
@@ -2188,9 +2194,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000286 RID: 646
-		// (get) Token: 0x060019BC RID: 6588 RVA: 0x000435A6 File Offset: 0x000417A6
-		// (set) Token: 0x060019BD RID: 6589 RVA: 0x000435BF File Offset: 0x000417BF
+		// Token: 0x1700028C RID: 652
+		// (get) Token: 0x060019FF RID: 6655 RVA: 0x00043F8E File Offset: 0x0004218E
+		// (set) Token: 0x06001A00 RID: 6656 RVA: 0x00043FA7 File Offset: 0x000421A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringFestivalActivityInfo SpringFestivalActivityInfo
@@ -2210,9 +2216,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000287 RID: 647
-		// (get) Token: 0x060019BE RID: 6590 RVA: 0x000435D6 File Offset: 0x000417D6
-		// (set) Token: 0x060019BF RID: 6591 RVA: 0x000435EF File Offset: 0x000417EF
+		// Token: 0x1700028D RID: 653
+		// (get) Token: 0x06001A01 RID: 6657 RVA: 0x00043FBE File Offset: 0x000421BE
+		// (set) Token: 0x06001A02 RID: 6658 RVA: 0x00043FD7 File Offset: 0x000421D7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TotalTopUpActivityInfo TotalTopUpActivityInfo
@@ -2232,9 +2238,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000288 RID: 648
-		// (get) Token: 0x060019C0 RID: 6592 RVA: 0x00043606 File Offset: 0x00041806
-		// (set) Token: 0x060019C1 RID: 6593 RVA: 0x0004361F File Offset: 0x0004181F
+		// Token: 0x1700028E RID: 654
+		// (get) Token: 0x06001A03 RID: 6659 RVA: 0x00043FEE File Offset: 0x000421EE
+		// (set) Token: 0x06001A04 RID: 6660 RVA: 0x00044007 File Offset: 0x00042207
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorFightActivityPb MotorFightActivityPb
@@ -2254,9 +2260,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000289 RID: 649
-		// (get) Token: 0x060019C2 RID: 6594 RVA: 0x00043636 File Offset: 0x00041836
-		// (set) Token: 0x060019C3 RID: 6595 RVA: 0x0004364F File Offset: 0x0004184F
+		// Token: 0x1700028F RID: 655
+		// (get) Token: 0x06001A05 RID: 6661 RVA: 0x0004401E File Offset: 0x0004221E
+		// (set) Token: 0x06001A06 RID: 6662 RVA: 0x00044037 File Offset: 0x00042237
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public H5ViewActivityData H5ViewActivityData
@@ -2276,9 +2282,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700028A RID: 650
-		// (get) Token: 0x060019C4 RID: 6596 RVA: 0x00043666 File Offset: 0x00041866
-		// (set) Token: 0x060019C5 RID: 6597 RVA: 0x0004367F File Offset: 0x0004187F
+		// Token: 0x17000290 RID: 656
+		// (get) Token: 0x06001A07 RID: 6663 RVA: 0x0004404E File Offset: 0x0004224E
+		// (set) Token: 0x06001A08 RID: 6664 RVA: 0x00044067 File Offset: 0x00042267
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SkinRewardActivityData SkinRewardActivityData
@@ -2298,9 +2304,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700028B RID: 651
-		// (get) Token: 0x060019C6 RID: 6598 RVA: 0x00043696 File Offset: 0x00041896
-		// (set) Token: 0x060019C7 RID: 6599 RVA: 0x000436AF File Offset: 0x000418AF
+		// Token: 0x17000291 RID: 657
+		// (get) Token: 0x06001A09 RID: 6665 RVA: 0x0004407E File Offset: 0x0004227E
+		// (set) Token: 0x06001A0A RID: 6666 RVA: 0x00044097 File Offset: 0x00042297
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EncircleActivityPb EncircleActivityPb
@@ -2320,9 +2326,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700028C RID: 652
-		// (get) Token: 0x060019C8 RID: 6600 RVA: 0x000436C6 File Offset: 0x000418C6
-		// (set) Token: 0x060019C9 RID: 6601 RVA: 0x000436DF File Offset: 0x000418DF
+		// Token: 0x17000292 RID: 658
+		// (get) Token: 0x06001A0B RID: 6667 RVA: 0x000440AE File Offset: 0x000422AE
+		// (set) Token: 0x06001A0C RID: 6668 RVA: 0x000440C7 File Offset: 0x000422C7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorDevelopActivityData MotorDevelopActivityData
@@ -2342,9 +2348,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700028D RID: 653
-		// (get) Token: 0x060019CA RID: 6602 RVA: 0x000436F6 File Offset: 0x000418F6
-		// (set) Token: 0x060019CB RID: 6603 RVA: 0x0004370F File Offset: 0x0004190F
+		// Token: 0x17000293 RID: 659
+		// (get) Token: 0x06001A0D RID: 6669 RVA: 0x000440DE File Offset: 0x000422DE
+		// (set) Token: 0x06001A0E RID: 6670 RVA: 0x000440F7 File Offset: 0x000422F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlagChallengeActivityInfo FlagChallengeActivityInfo
@@ -2364,9 +2370,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700028E RID: 654
-		// (get) Token: 0x060019CC RID: 6604 RVA: 0x00043726 File Offset: 0x00041926
-		// (set) Token: 0x060019CD RID: 6605 RVA: 0x0004373F File Offset: 0x0004193F
+		// Token: 0x17000294 RID: 660
+		// (get) Token: 0x06001A0F RID: 6671 RVA: 0x0004410E File Offset: 0x0004230E
+		// (set) Token: 0x06001A10 RID: 6672 RVA: 0x00044127 File Offset: 0x00042327
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FeiXuePreheatActivityInfo FeiXuePreheatActivityInfo
@@ -2386,9 +2392,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700028F RID: 655
-		// (get) Token: 0x060019CE RID: 6606 RVA: 0x00043756 File Offset: 0x00041956
-		// (set) Token: 0x060019CF RID: 6607 RVA: 0x0004376F File Offset: 0x0004196F
+		// Token: 0x17000295 RID: 661
+		// (get) Token: 0x06001A11 RID: 6673 RVA: 0x0004413E File Offset: 0x0004233E
+		// (set) Token: 0x06001A12 RID: 6674 RVA: 0x00044157 File Offset: 0x00042357
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmActivityPb RhythmActivityPb
@@ -2408,9 +2414,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000290 RID: 656
-		// (get) Token: 0x060019D0 RID: 6608 RVA: 0x00043786 File Offset: 0x00041986
-		// (set) Token: 0x060019D1 RID: 6609 RVA: 0x0004379F File Offset: 0x0004199F
+		// Token: 0x17000296 RID: 662
+		// (get) Token: 0x06001A13 RID: 6675 RVA: 0x0004416E File Offset: 0x0004236E
+		// (set) Token: 0x06001A14 RID: 6676 RVA: 0x00044187 File Offset: 0x00042387
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DropCatchActivityInfo DropCatchActivityInfo
@@ -2430,9 +2436,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000291 RID: 657
-		// (get) Token: 0x060019D2 RID: 6610 RVA: 0x000437B6 File Offset: 0x000419B6
-		// (set) Token: 0x060019D3 RID: 6611 RVA: 0x000437CF File Offset: 0x000419CF
+		// Token: 0x17000297 RID: 663
+		// (get) Token: 0x06001A15 RID: 6677 RVA: 0x0004419E File Offset: 0x0004239E
+		// (set) Token: 0x06001A16 RID: 6678 RVA: 0x000441B7 File Offset: 0x000423B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TetrisActivityInfo TetrisActivityInfo
@@ -2452,9 +2458,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000292 RID: 658
-		// (get) Token: 0x060019D4 RID: 6612 RVA: 0x000437E6 File Offset: 0x000419E6
-		// (set) Token: 0x060019D5 RID: 6613 RVA: 0x000437FF File Offset: 0x000419FF
+		// Token: 0x17000298 RID: 664
+		// (get) Token: 0x06001A17 RID: 6679 RVA: 0x000441CE File Offset: 0x000423CE
+		// (set) Token: 0x06001A18 RID: 6680 RVA: 0x000441E7 File Offset: 0x000423E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballActivityData PinballActivityData
@@ -2474,9 +2480,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000293 RID: 659
-		// (get) Token: 0x060019D6 RID: 6614 RVA: 0x00043816 File Offset: 0x00041A16
-		// (set) Token: 0x060019D7 RID: 6615 RVA: 0x0004382F File Offset: 0x00041A2F
+		// Token: 0x17000299 RID: 665
+		// (get) Token: 0x06001A19 RID: 6681 RVA: 0x000441FE File Offset: 0x000423FE
+		// (set) Token: 0x06001A1A RID: 6682 RVA: 0x00044217 File Offset: 0x00042417
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BossPilingActivityInfo BossPilingActivityInfo
@@ -2496,9 +2502,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000294 RID: 660
-		// (get) Token: 0x060019D8 RID: 6616 RVA: 0x00043846 File Offset: 0x00041A46
-		// (set) Token: 0x060019D9 RID: 6617 RVA: 0x0004385F File Offset: 0x00041A5F
+		// Token: 0x1700029A RID: 666
+		// (get) Token: 0x06001A1B RID: 6683 RVA: 0x0004422E File Offset: 0x0004242E
+		// (set) Token: 0x06001A1C RID: 6684 RVA: 0x00044247 File Offset: 0x00042447
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ThemeCelebration ThemeCelebration
@@ -2518,9 +2524,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000295 RID: 661
-		// (get) Token: 0x060019DA RID: 6618 RVA: 0x00043876 File Offset: 0x00041A76
-		// (set) Token: 0x060019DB RID: 6619 RVA: 0x0004388F File Offset: 0x00041A8F
+		// Token: 0x1700029B RID: 667
+		// (get) Token: 0x06001A1D RID: 6685 RVA: 0x0004425E File Offset: 0x0004245E
+		// (set) Token: 0x06001A1E RID: 6686 RVA: 0x00044277 File Offset: 0x00042477
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WuWuWeekActivity WuWuWeekActivity
@@ -2540,9 +2546,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000296 RID: 662
-		// (get) Token: 0x060019DC RID: 6620 RVA: 0x000438A6 File Offset: 0x00041AA6
-		// (set) Token: 0x060019DD RID: 6621 RVA: 0x000438BF File Offset: 0x00041ABF
+		// Token: 0x1700029C RID: 668
+		// (get) Token: 0x06001A1F RID: 6687 RVA: 0x0004428E File Offset: 0x0004248E
+		// (set) Token: 0x06001A20 RID: 6688 RVA: 0x000442A7 File Offset: 0x000424A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorDecalActivityData MotorDecalActivityData
@@ -2562,9 +2568,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000297 RID: 663
-		// (get) Token: 0x060019DE RID: 6622 RVA: 0x000438D6 File Offset: 0x00041AD6
-		// (set) Token: 0x060019DF RID: 6623 RVA: 0x000438EF File Offset: 0x00041AEF
+		// Token: 0x1700029D RID: 669
+		// (get) Token: 0x06001A21 RID: 6689 RVA: 0x000442BE File Offset: 0x000424BE
+		// (set) Token: 0x06001A22 RID: 6690 RVA: 0x000442D7 File Offset: 0x000424D7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LinkageCheckInActivityData LinkageCheckInActivityData
@@ -2584,9 +2590,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000298 RID: 664
-		// (get) Token: 0x060019E0 RID: 6624 RVA: 0x00043906 File Offset: 0x00041B06
-		// (set) Token: 0x060019E1 RID: 6625 RVA: 0x0004391F File Offset: 0x00041B1F
+		// Token: 0x1700029E RID: 670
+		// (get) Token: 0x06001A23 RID: 6691 RVA: 0x000442EE File Offset: 0x000424EE
+		// (set) Token: 0x06001A24 RID: 6692 RVA: 0x00044307 File Offset: 0x00042507
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleGiftActivityData RoleGiftActivityData
@@ -2606,9 +2612,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000299 RID: 665
-		// (get) Token: 0x060019E2 RID: 6626 RVA: 0x00043936 File Offset: 0x00041B36
-		// (set) Token: 0x060019E3 RID: 6627 RVA: 0x0004394F File Offset: 0x00041B4F
+		// Token: 0x1700029F RID: 671
+		// (get) Token: 0x06001A25 RID: 6693 RVA: 0x0004431E File Offset: 0x0004251E
+		// (set) Token: 0x06001A26 RID: 6694 RVA: 0x00044337 File Offset: 0x00042537
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoActivityData KurotatoActivityData
@@ -2628,9 +2634,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700029A RID: 666
-		// (get) Token: 0x060019E4 RID: 6628 RVA: 0x00043966 File Offset: 0x00041B66
-		// (set) Token: 0x060019E5 RID: 6629 RVA: 0x0004397F File Offset: 0x00041B7F
+		// Token: 0x170002A0 RID: 672
+		// (get) Token: 0x06001A27 RID: 6695 RVA: 0x0004434E File Offset: 0x0004254E
+		// (set) Token: 0x06001A28 RID: 6696 RVA: 0x00044367 File Offset: 0x00042567
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GolemCrackActivityInfo GolemCrackActivityInfo
@@ -2650,9 +2656,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700029B RID: 667
-		// (get) Token: 0x060019E6 RID: 6630 RVA: 0x00043996 File Offset: 0x00041B96
-		// (set) Token: 0x060019E7 RID: 6631 RVA: 0x000439AF File Offset: 0x00041BAF
+		// Token: 0x170002A1 RID: 673
+		// (get) Token: 0x06001A29 RID: 6697 RVA: 0x0004437E File Offset: 0x0004257E
+		// (set) Token: 0x06001A2A RID: 6698 RVA: 0x00044397 File Offset: 0x00042597
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EdgeRunnerActivityInfo EdgeRunnerActivityInfo
@@ -2672,9 +2678,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700029C RID: 668
-		// (get) Token: 0x060019E8 RID: 6632 RVA: 0x000439C6 File Offset: 0x00041BC6
-		// (set) Token: 0x060019E9 RID: 6633 RVA: 0x000439DF File Offset: 0x00041BDF
+		// Token: 0x170002A2 RID: 674
+		// (get) Token: 0x06001A2B RID: 6699 RVA: 0x000443AE File Offset: 0x000425AE
+		// (set) Token: 0x06001A2C RID: 6700 RVA: 0x000443C7 File Offset: 0x000425C7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OnlineMotorActivityData OnlineMotorActivityData
@@ -2694,9 +2700,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700029D RID: 669
-		// (get) Token: 0x060019EA RID: 6634 RVA: 0x000439F6 File Offset: 0x00041BF6
-		// (set) Token: 0x060019EB RID: 6635 RVA: 0x00043A0F File Offset: 0x00041C0F
+		// Token: 0x170002A3 RID: 675
+		// (get) Token: 0x06001A2D RID: 6701 RVA: 0x000443DE File Offset: 0x000425DE
+		// (set) Token: 0x06001A2E RID: 6702 RVA: 0x000443F7 File Offset: 0x000425F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RealmBetweenActivityInfo RealmBetweenActivityInfo
@@ -2716,9 +2722,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700029E RID: 670
-		// (get) Token: 0x060019EC RID: 6636 RVA: 0x00043A26 File Offset: 0x00041C26
-		// (set) Token: 0x060019ED RID: 6637 RVA: 0x00043A3F File Offset: 0x00041C3F
+		// Token: 0x170002A4 RID: 676
+		// (get) Token: 0x06001A2F RID: 6703 RVA: 0x0004440E File Offset: 0x0004260E
+		// (set) Token: 0x06001A30 RID: 6704 RVA: 0x00044427 File Offset: 0x00042627
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ThroughTrainSummaryActivityData ThroughTrainSummaryActivityData
@@ -2738,9 +2744,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700029F RID: 671
-		// (get) Token: 0x060019EE RID: 6638 RVA: 0x00043A56 File Offset: 0x00041C56
-		// (set) Token: 0x060019EF RID: 6639 RVA: 0x00043A6F File Offset: 0x00041C6F
+		// Token: 0x170002A5 RID: 677
+		// (get) Token: 0x06001A31 RID: 6705 RVA: 0x0004443E File Offset: 0x0004263E
+		// (set) Token: 0x06001A32 RID: 6706 RVA: 0x00044457 File Offset: 0x00042657
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewbieMainActivityPb NewbieMainActivityPb
@@ -2760,9 +2766,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170002A0 RID: 672
-		// (get) Token: 0x060019F0 RID: 6640 RVA: 0x00043A86 File Offset: 0x00041C86
-		// (set) Token: 0x060019F1 RID: 6641 RVA: 0x00043A9F File Offset: 0x00041C9F
+		// Token: 0x170002A6 RID: 678
+		// (get) Token: 0x06001A33 RID: 6707 RVA: 0x0004446E File Offset: 0x0004266E
+		// (set) Token: 0x06001A34 RID: 6708 RVA: 0x00044487 File Offset: 0x00042687
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewbieCourseV2ActivityPb NewbieCourseV2ActivityPb
@@ -2782,9 +2788,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170002A1 RID: 673
-		// (get) Token: 0x060019F2 RID: 6642 RVA: 0x00043AB6 File Offset: 0x00041CB6
-		// (set) Token: 0x060019F3 RID: 6643 RVA: 0x00043ACF File Offset: 0x00041CCF
+		// Token: 0x170002A7 RID: 679
+		// (get) Token: 0x06001A35 RID: 6709 RVA: 0x0004449E File Offset: 0x0004269E
+		// (set) Token: 0x06001A36 RID: 6710 RVA: 0x000444B7 File Offset: 0x000426B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewbieAdventureV2Pb NewbieAdventureV2Pb
@@ -2804,9 +2810,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170002A2 RID: 674
-		// (get) Token: 0x060019F4 RID: 6644 RVA: 0x00043AE6 File Offset: 0x00041CE6
-		// (set) Token: 0x060019F5 RID: 6645 RVA: 0x00043AFF File Offset: 0x00041CFF
+		// Token: 0x170002A8 RID: 680
+		// (get) Token: 0x06001A37 RID: 6711 RVA: 0x000444CE File Offset: 0x000426CE
+		// (set) Token: 0x06001A38 RID: 6712 RVA: 0x000444E7 File Offset: 0x000426E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewPlayerSupportActivityV2Pb NewPlayerSupportActivityV2Pb
@@ -2826,9 +2832,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170002A3 RID: 675
-		// (get) Token: 0x060019F6 RID: 6646 RVA: 0x00043B16 File Offset: 0x00041D16
-		// (set) Token: 0x060019F7 RID: 6647 RVA: 0x00043B2F File Offset: 0x00041D2F
+		// Token: 0x170002A9 RID: 681
+		// (get) Token: 0x06001A39 RID: 6713 RVA: 0x000444FE File Offset: 0x000426FE
+		// (set) Token: 0x06001A3A RID: 6714 RVA: 0x00044517 File Offset: 0x00042717
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ThroughTrainActivityData ThroughTrainActivityData
@@ -2848,9 +2854,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170002A4 RID: 676
-		// (get) Token: 0x060019F8 RID: 6648 RVA: 0x00043B46 File Offset: 0x00041D46
-		// (set) Token: 0x060019F9 RID: 6649 RVA: 0x00043B5F File Offset: 0x00041D5F
+		// Token: 0x170002AA RID: 682
+		// (get) Token: 0x06001A3B RID: 6715 RVA: 0x0004452E File Offset: 0x0004272E
+		// (set) Token: 0x06001A3C RID: 6716 RVA: 0x00044547 File Offset: 0x00042747
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoverRogueActivityData RoverRogueActivityData
@@ -2870,9 +2876,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170002A5 RID: 677
-		// (get) Token: 0x060019FA RID: 6650 RVA: 0x00043B76 File Offset: 0x00041D76
-		// (set) Token: 0x060019FB RID: 6651 RVA: 0x00043B8F File Offset: 0x00041D8F
+		// Token: 0x170002AB RID: 683
+		// (get) Token: 0x06001A3D RID: 6717 RVA: 0x0004455E File Offset: 0x0004275E
+		// (set) Token: 0x06001A3E RID: 6718 RVA: 0x00044577 File Offset: 0x00042777
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlActivityInfo DangoBrawlActivityInfo
@@ -2892,9 +2898,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170002A6 RID: 678
-		// (get) Token: 0x060019FC RID: 6652 RVA: 0x00043BA6 File Offset: 0x00041DA6
-		// (set) Token: 0x060019FD RID: 6653 RVA: 0x00043BBF File Offset: 0x00041DBF
+		// Token: 0x170002AC RID: 684
+		// (get) Token: 0x06001A3F RID: 6719 RVA: 0x0004458E File Offset: 0x0004278E
+		// (set) Token: 0x06001A40 RID: 6720 RVA: 0x000445A7 File Offset: 0x000427A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QingXiaoActivityInfo QingXiaoActivityInfo
@@ -2914,9 +2920,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170002A7 RID: 679
-		// (get) Token: 0x060019FE RID: 6654 RVA: 0x00043BD6 File Offset: 0x00041DD6
-		// (set) Token: 0x060019FF RID: 6655 RVA: 0x00043BEF File Offset: 0x00041DEF
+		// Token: 0x170002AD RID: 685
+		// (get) Token: 0x06001A41 RID: 6721 RVA: 0x000445BE File Offset: 0x000427BE
+		// (set) Token: 0x06001A42 RID: 6722 RVA: 0x000445D7 File Offset: 0x000427D7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MatchThreeActivityInfo MatchThreeActivityInfo
@@ -2936,9 +2942,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170002A8 RID: 680
-		// (get) Token: 0x06001A00 RID: 6656 RVA: 0x00043C06 File Offset: 0x00041E06
-		// (set) Token: 0x06001A01 RID: 6657 RVA: 0x00043C1F File Offset: 0x00041E1F
+		// Token: 0x170002AE RID: 686
+		// (get) Token: 0x06001A43 RID: 6723 RVA: 0x000445EE File Offset: 0x000427EE
+		// (set) Token: 0x06001A44 RID: 6724 RVA: 0x00044607 File Offset: 0x00042807
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GiantActivityInfo GiantActivityInfo
@@ -2958,8 +2964,52 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170002A9 RID: 681
-		// (get) Token: 0x06001A02 RID: 6658 RVA: 0x00043C36 File Offset: 0x00041E36
+		// Token: 0x170002AF RID: 687
+		// (get) Token: 0x06001A45 RID: 6725 RVA: 0x0004461E File Offset: 0x0004281E
+		// (set) Token: 0x06001A46 RID: 6726 RVA: 0x00044637 File Offset: 0x00042837
+		[DebuggerNonUserCode]
+		[GeneratedCode("protoc", null)]
+		public SolarSchoolActivityPb SolarSchoolActivityPb
+		{
+			get
+			{
+				if (this.dataCase_ != ActivityData.DataOneofCase.SolarSchoolActivityPb)
+				{
+					return null;
+				}
+				return (SolarSchoolActivityPb)this.data_;
+			}
+			set
+			{
+				this.data_ = value;
+				this.dataCase_ = ((value == null) ? ActivityData.DataOneofCase.None : ActivityData.DataOneofCase.SolarSchoolActivityPb);
+			}
+		}
+
+		// Token: 0x170002B0 RID: 688
+		// (get) Token: 0x06001A47 RID: 6727 RVA: 0x0004464E File Offset: 0x0004284E
+		// (set) Token: 0x06001A48 RID: 6728 RVA: 0x00044667 File Offset: 0x00042867
+		[DebuggerNonUserCode]
+		[GeneratedCode("protoc", null)]
+		public RoleTowerActivityData RoleTowerActivityData
+		{
+			get
+			{
+				if (this.dataCase_ != ActivityData.DataOneofCase.RoleTowerActivityData)
+				{
+					return null;
+				}
+				return (RoleTowerActivityData)this.data_;
+			}
+			set
+			{
+				this.data_ = value;
+				this.dataCase_ = ((value == null) ? ActivityData.DataOneofCase.None : ActivityData.DataOneofCase.RoleTowerActivityData);
+			}
+		}
+
+		// Token: 0x170002B1 RID: 689
+		// (get) Token: 0x06001A49 RID: 6729 RVA: 0x0004467E File Offset: 0x0004287E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityData.DataOneofCase DataCase
@@ -2970,7 +3020,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001A03 RID: 6659 RVA: 0x00043C3E File Offset: 0x00041E3E
+		// Token: 0x06001A4A RID: 6730 RVA: 0x00044686 File Offset: 0x00042886
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearData()
@@ -2979,7 +3029,7 @@ namespace Aki.Protocol
 			this.data_ = null;
 		}
 
-		// Token: 0x06001A04 RID: 6660 RVA: 0x00043C4E File Offset: 0x00041E4E
+		// Token: 0x06001A4B RID: 6731 RVA: 0x00044696 File Offset: 0x00042896
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -2987,15 +3037,15 @@ namespace Aki.Protocol
 			return this.Equals(other as ActivityData);
 		}
 
-		// Token: 0x06001A05 RID: 6661 RVA: 0x00043C5C File Offset: 0x00041E5C
+		// Token: 0x06001A4C RID: 6732 RVA: 0x000446A4 File Offset: 0x000428A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ActivityData other)
 		{
-			return other != null && (other == this || (this.Id == other.Id && this.Type == other.Type && this.BeginShowTime == other.BeginShowTime && this.EndShowTime == other.EndShowTime && this.BeginOpenTime == other.BeginOpenTime && this.EndOpenTime == other.EndOpenTime && this.IsUnlock == other.IsUnlock && this.completePreQuests_.Equals(other.completePreQuests_) && this.IsFirstOpen == other.IsFirstOpen && this.finishConditions_.Equals(other.finishConditions_) && this.ActivityOpenType == other.ActivityOpenType && this.CanPreOpen == other.CanPreOpen && this.LimitBeginTime == other.LimitBeginTime && this.LimitEndTime == other.LimitEndTime && this.LimitRewardBeginTime == other.LimitRewardBeginTime && this.LimitRewardEndTime == other.LimitRewardEndTime && object.Equals(this.ParkourActivity, other.ParkourActivity) && object.Equals(this.SignActivity, other.SignActivity) && object.Equals(this.NewBieCourseActivity, other.NewBieCourseActivity) && object.Equals(this.DoubleInstActivityReward, other.DoubleInstActivityReward) && object.Equals(this.HarvestActivity, other.HarvestActivity) && object.Equals(this.RoleTrialInfoActivity, other.RoleTrialInfoActivity) && object.Equals(this.PhantomCollectActivity, other.PhantomCollectActivity) && object.Equals(this.GatherActivityInfo, other.GatherActivityInfo) && object.Equals(this.DailyAdventureActivityData, other.DailyAdventureActivityData) && object.Equals(this.RoguelikeActivityData, other.RoguelikeActivityData) && object.Equals(this.LongShanActivityData, other.LongShanActivityData) && object.Equals(this.TurntableActivityData, other.TurntableActivityData) && object.Equals(this.BossRushActivityData, other.BossRushActivityData) && object.Equals(this.TrackMoonActivityTaskData, other.TrackMoonActivityTaskData) && object.Equals(this.TimePointRewardActivityData, other.TimePointRewardActivityData) && object.Equals(this.TowerDefenceActivityData, other.TowerDefenceActivityData) && object.Equals(this.CircumFluenceTaskData, other.CircumFluenceTaskData) && object.Equals(this.TraceMoonPhaseData, other.TraceMoonPhaseData) && object.Equals(this.CorniceMeetingData, other.CorniceMeetingData) && object.Equals(this.RiskHarvestActivityInfo, other.RiskHarvestActivityInfo) && object.Equals(this.BlackCoastThemeActivityData, other.BlackCoastThemeActivityData) && object.Equals(this.RogueWhiteCatData, other.RogueWhiteCatData) && object.Equals(this.ScratchCardActivityInfo, other.ScratchCardActivityInfo) && object.Equals(this.PreheatSignActivityInfo, other.PreheatSignActivityInfo) && object.Equals(this.MowTowerActivityInfo, other.MowTowerActivityInfo) && object.Equals(this.FarmGoldInfo, other.FarmGoldInfo) && object.Equals(this.SpringSignInfo, other.SpringSignInfo) && object.Equals(this.MapTravelActivityInfo, other.MapTravelActivityInfo) && object.Equals(this.RoleSkinTrialInfoActivity, other.RoleSkinTrialInfoActivity) && object.Equals(this.FishingActivityInfo, other.FishingActivityInfo) && object.Equals(this.RogueWeeklyData, other.RogueWeeklyData) && object.Equals(this.TeamParkourLevelActivityInfo, other.TeamParkourLevelActivityInfo) && object.Equals(this.BabelActivityInfo, other.BabelActivityInfo) && object.Equals(this.RacingBetsData, other.RacingBetsData) && object.Equals(this.ExploreActivityInfo, other.ExploreActivityInfo) && object.Equals(this.RogueResActivityData, other.RogueResActivityData) && object.Equals(this.AvignonActivityInfo, other.AvignonActivityInfo) && object.Equals(this.AbyssInfo, other.AbyssInfo) && object.Equals(this.H5CircumFluenceData, other.H5CircumFluenceData) && object.Equals(this.DangoMonopolyActivityData, other.DangoMonopolyActivityData) && object.Equals(this.CiacconaActivityPbData, other.CiacconaActivityPbData) && object.Equals(this.ActivityLinkageData, other.ActivityLinkageData) && object.Equals(this.RegressData, other.RegressData) && object.Equals(this.ConsumptiveActivityInfo, other.ConsumptiveActivityInfo) && object.Equals(this.PhantomBattleActivityInfo, other.PhantomBattleActivityInfo) && object.Equals(this.NewbieCarnivalData, other.NewbieCarnivalData) && object.Equals(this.MoraleActivityData, other.MoraleActivityData) && object.Equals(this.FloroRanchActivityData, other.FloroRanchActivityData) && object.Equals(this.LifePointChallenge, other.LifePointChallenge) && object.Equals(this.TrapDefenseActivityInfo, other.TrapDefenseActivityInfo) && object.Equals(this.FunPlayActivityInfo, other.FunPlayActivityInfo) && object.Equals(this.JinzhouFlyData, other.JinzhouFlyData) && object.Equals(this.LineCrossActivityData, other.LineCrossActivityData) && object.Equals(this.MoonPhaseActivityData, other.MoonPhaseActivityData) && object.Equals(this.HonamiStoryActivityInfo, other.HonamiStoryActivityInfo) && object.Equals(this.PhotoFightActivityData, other.PhotoFightActivityData) && object.Equals(this.SurvivorsActivityData, other.SurvivorsActivityData) && object.Equals(this.WuWuKujiActivityInfo, other.WuWuKujiActivityInfo) && object.Equals(this.AdvertisingPageInfo, other.AdvertisingPageInfo) && object.Equals(this.ArtemisActivityInfo, other.ArtemisActivityInfo) && object.Equals(this.RoleCoopActivityData, other.RoleCoopActivityData) && object.Equals(this.MotorCycleIpActivityData, other.MotorCycleIpActivityData) && object.Equals(this.PhantomBattleRecordActivityInfo, other.PhantomBattleRecordActivityInfo) && object.Equals(this.InfrThemeActivityPb, other.InfrThemeActivityPb) && object.Equals(this.RoadBookActivityInfo, other.RoadBookActivityInfo) && object.Equals(this.PhantomBattleGuideActivity, other.PhantomBattleGuideActivity) && object.Equals(this.NewTowerClimbingActivityData, other.NewTowerClimbingActivityData) && object.Equals(this.NewPlayerSupportActivityData, other.NewPlayerSupportActivityData) && object.Equals(this.MotorParkourActivityInfo, other.MotorParkourActivityInfo) && object.Equals(this.SpringFestivalActivityInfo, other.SpringFestivalActivityInfo) && object.Equals(this.TotalTopUpActivityInfo, other.TotalTopUpActivityInfo) && object.Equals(this.MotorFightActivityPb, other.MotorFightActivityPb) && object.Equals(this.H5ViewActivityData, other.H5ViewActivityData) && object.Equals(this.SkinRewardActivityData, other.SkinRewardActivityData) && object.Equals(this.EncircleActivityPb, other.EncircleActivityPb) && object.Equals(this.MotorDevelopActivityData, other.MotorDevelopActivityData) && object.Equals(this.FlagChallengeActivityInfo, other.FlagChallengeActivityInfo) && object.Equals(this.FeiXuePreheatActivityInfo, other.FeiXuePreheatActivityInfo) && object.Equals(this.RhythmActivityPb, other.RhythmActivityPb) && object.Equals(this.DropCatchActivityInfo, other.DropCatchActivityInfo) && object.Equals(this.TetrisActivityInfo, other.TetrisActivityInfo) && object.Equals(this.PinballActivityData, other.PinballActivityData) && object.Equals(this.BossPilingActivityInfo, other.BossPilingActivityInfo) && object.Equals(this.ThemeCelebration, other.ThemeCelebration) && object.Equals(this.WuWuWeekActivity, other.WuWuWeekActivity) && object.Equals(this.MotorDecalActivityData, other.MotorDecalActivityData) && object.Equals(this.LinkageCheckInActivityData, other.LinkageCheckInActivityData) && object.Equals(this.RoleGiftActivityData, other.RoleGiftActivityData) && object.Equals(this.KurotatoActivityData, other.KurotatoActivityData) && object.Equals(this.GolemCrackActivityInfo, other.GolemCrackActivityInfo) && object.Equals(this.EdgeRunnerActivityInfo, other.EdgeRunnerActivityInfo) && object.Equals(this.OnlineMotorActivityData, other.OnlineMotorActivityData) && object.Equals(this.RealmBetweenActivityInfo, other.RealmBetweenActivityInfo) && object.Equals(this.ThroughTrainSummaryActivityData, other.ThroughTrainSummaryActivityData) && object.Equals(this.NewbieMainActivityPb, other.NewbieMainActivityPb) && object.Equals(this.NewbieCourseV2ActivityPb, other.NewbieCourseV2ActivityPb) && object.Equals(this.NewbieAdventureV2Pb, other.NewbieAdventureV2Pb) && object.Equals(this.NewPlayerSupportActivityV2Pb, other.NewPlayerSupportActivityV2Pb) && object.Equals(this.ThroughTrainActivityData, other.ThroughTrainActivityData) && object.Equals(this.RoverRogueActivityData, other.RoverRogueActivityData) && object.Equals(this.DangoBrawlActivityInfo, other.DangoBrawlActivityInfo) && object.Equals(this.QingXiaoActivityInfo, other.QingXiaoActivityInfo) && object.Equals(this.MatchThreeActivityInfo, other.MatchThreeActivityInfo) && object.Equals(this.GiantActivityInfo, other.GiantActivityInfo) && this.DataCase == other.DataCase && object.Equals(this._unknownFields, other._unknownFields)));
+			return other != null && (other == this || (this.Id == other.Id && this.Type == other.Type && this.BeginShowTime == other.BeginShowTime && this.EndShowTime == other.EndShowTime && this.BeginOpenTime == other.BeginOpenTime && this.EndOpenTime == other.EndOpenTime && this.IsUnlock == other.IsUnlock && this.completePreQuests_.Equals(other.completePreQuests_) && this.IsFirstOpen == other.IsFirstOpen && this.finishConditions_.Equals(other.finishConditions_) && this.ActivityOpenType == other.ActivityOpenType && this.CanPreOpen == other.CanPreOpen && this.LimitBeginTime == other.LimitBeginTime && this.LimitEndTime == other.LimitEndTime && this.LimitRewardBeginTime == other.LimitRewardBeginTime && this.LimitRewardEndTime == other.LimitRewardEndTime && object.Equals(this.ParkourActivity, other.ParkourActivity) && object.Equals(this.SignActivity, other.SignActivity) && object.Equals(this.NewBieCourseActivity, other.NewBieCourseActivity) && object.Equals(this.DoubleInstActivityReward, other.DoubleInstActivityReward) && object.Equals(this.HarvestActivity, other.HarvestActivity) && object.Equals(this.RoleTrialInfoActivity, other.RoleTrialInfoActivity) && object.Equals(this.PhantomCollectActivity, other.PhantomCollectActivity) && object.Equals(this.GatherActivityInfo, other.GatherActivityInfo) && object.Equals(this.DailyAdventureActivityData, other.DailyAdventureActivityData) && object.Equals(this.RoguelikeActivityData, other.RoguelikeActivityData) && object.Equals(this.LongShanActivityData, other.LongShanActivityData) && object.Equals(this.TurntableActivityData, other.TurntableActivityData) && object.Equals(this.BossRushActivityData, other.BossRushActivityData) && object.Equals(this.TrackMoonActivityTaskData, other.TrackMoonActivityTaskData) && object.Equals(this.TimePointRewardActivityData, other.TimePointRewardActivityData) && object.Equals(this.TowerDefenceActivityData, other.TowerDefenceActivityData) && object.Equals(this.CircumFluenceTaskData, other.CircumFluenceTaskData) && object.Equals(this.TraceMoonPhaseData, other.TraceMoonPhaseData) && object.Equals(this.CorniceMeetingData, other.CorniceMeetingData) && object.Equals(this.RiskHarvestActivityInfo, other.RiskHarvestActivityInfo) && object.Equals(this.BlackCoastThemeActivityData, other.BlackCoastThemeActivityData) && object.Equals(this.RogueWhiteCatData, other.RogueWhiteCatData) && object.Equals(this.ScratchCardActivityInfo, other.ScratchCardActivityInfo) && object.Equals(this.PreheatSignActivityInfo, other.PreheatSignActivityInfo) && object.Equals(this.MowTowerActivityInfo, other.MowTowerActivityInfo) && object.Equals(this.FarmGoldInfo, other.FarmGoldInfo) && object.Equals(this.SpringSignInfo, other.SpringSignInfo) && object.Equals(this.MapTravelActivityInfo, other.MapTravelActivityInfo) && object.Equals(this.RoleSkinTrialInfoActivity, other.RoleSkinTrialInfoActivity) && object.Equals(this.FishingActivityInfo, other.FishingActivityInfo) && object.Equals(this.RogueWeeklyData, other.RogueWeeklyData) && object.Equals(this.TeamParkourLevelActivityInfo, other.TeamParkourLevelActivityInfo) && object.Equals(this.BabelActivityInfo, other.BabelActivityInfo) && object.Equals(this.RacingBetsData, other.RacingBetsData) && object.Equals(this.ExploreActivityInfo, other.ExploreActivityInfo) && object.Equals(this.RogueResActivityData, other.RogueResActivityData) && object.Equals(this.AvignonActivityInfo, other.AvignonActivityInfo) && object.Equals(this.AbyssInfo, other.AbyssInfo) && object.Equals(this.H5CircumFluenceData, other.H5CircumFluenceData) && object.Equals(this.DangoMonopolyActivityData, other.DangoMonopolyActivityData) && object.Equals(this.CiacconaActivityPbData, other.CiacconaActivityPbData) && object.Equals(this.ActivityLinkageData, other.ActivityLinkageData) && object.Equals(this.RegressData, other.RegressData) && object.Equals(this.ConsumptiveActivityInfo, other.ConsumptiveActivityInfo) && object.Equals(this.PhantomBattleActivityInfo, other.PhantomBattleActivityInfo) && object.Equals(this.NewbieCarnivalData, other.NewbieCarnivalData) && object.Equals(this.MoraleActivityData, other.MoraleActivityData) && object.Equals(this.FloroRanchActivityData, other.FloroRanchActivityData) && object.Equals(this.LifePointChallenge, other.LifePointChallenge) && object.Equals(this.TrapDefenseActivityInfo, other.TrapDefenseActivityInfo) && object.Equals(this.FunPlayActivityInfo, other.FunPlayActivityInfo) && object.Equals(this.JinzhouFlyData, other.JinzhouFlyData) && object.Equals(this.LineCrossActivityData, other.LineCrossActivityData) && object.Equals(this.MoonPhaseActivityData, other.MoonPhaseActivityData) && object.Equals(this.HonamiStoryActivityInfo, other.HonamiStoryActivityInfo) && object.Equals(this.PhotoFightActivityData, other.PhotoFightActivityData) && object.Equals(this.SurvivorsActivityData, other.SurvivorsActivityData) && object.Equals(this.WuWuKujiActivityInfo, other.WuWuKujiActivityInfo) && object.Equals(this.AdvertisingPageInfo, other.AdvertisingPageInfo) && object.Equals(this.ArtemisActivityInfo, other.ArtemisActivityInfo) && object.Equals(this.RoleCoopActivityData, other.RoleCoopActivityData) && object.Equals(this.MotorCycleIpActivityData, other.MotorCycleIpActivityData) && object.Equals(this.PhantomBattleRecordActivityInfo, other.PhantomBattleRecordActivityInfo) && object.Equals(this.InfrThemeActivityPb, other.InfrThemeActivityPb) && object.Equals(this.RoadBookActivityInfo, other.RoadBookActivityInfo) && object.Equals(this.PhantomBattleGuideActivity, other.PhantomBattleGuideActivity) && object.Equals(this.NewTowerClimbingActivityData, other.NewTowerClimbingActivityData) && object.Equals(this.NewPlayerSupportActivityData, other.NewPlayerSupportActivityData) && object.Equals(this.MotorParkourActivityInfo, other.MotorParkourActivityInfo) && object.Equals(this.SpringFestivalActivityInfo, other.SpringFestivalActivityInfo) && object.Equals(this.TotalTopUpActivityInfo, other.TotalTopUpActivityInfo) && object.Equals(this.MotorFightActivityPb, other.MotorFightActivityPb) && object.Equals(this.H5ViewActivityData, other.H5ViewActivityData) && object.Equals(this.SkinRewardActivityData, other.SkinRewardActivityData) && object.Equals(this.EncircleActivityPb, other.EncircleActivityPb) && object.Equals(this.MotorDevelopActivityData, other.MotorDevelopActivityData) && object.Equals(this.FlagChallengeActivityInfo, other.FlagChallengeActivityInfo) && object.Equals(this.FeiXuePreheatActivityInfo, other.FeiXuePreheatActivityInfo) && object.Equals(this.RhythmActivityPb, other.RhythmActivityPb) && object.Equals(this.DropCatchActivityInfo, other.DropCatchActivityInfo) && object.Equals(this.TetrisActivityInfo, other.TetrisActivityInfo) && object.Equals(this.PinballActivityData, other.PinballActivityData) && object.Equals(this.BossPilingActivityInfo, other.BossPilingActivityInfo) && object.Equals(this.ThemeCelebration, other.ThemeCelebration) && object.Equals(this.WuWuWeekActivity, other.WuWuWeekActivity) && object.Equals(this.MotorDecalActivityData, other.MotorDecalActivityData) && object.Equals(this.LinkageCheckInActivityData, other.LinkageCheckInActivityData) && object.Equals(this.RoleGiftActivityData, other.RoleGiftActivityData) && object.Equals(this.KurotatoActivityData, other.KurotatoActivityData) && object.Equals(this.GolemCrackActivityInfo, other.GolemCrackActivityInfo) && object.Equals(this.EdgeRunnerActivityInfo, other.EdgeRunnerActivityInfo) && object.Equals(this.OnlineMotorActivityData, other.OnlineMotorActivityData) && object.Equals(this.RealmBetweenActivityInfo, other.RealmBetweenActivityInfo) && object.Equals(this.ThroughTrainSummaryActivityData, other.ThroughTrainSummaryActivityData) && object.Equals(this.NewbieMainActivityPb, other.NewbieMainActivityPb) && object.Equals(this.NewbieCourseV2ActivityPb, other.NewbieCourseV2ActivityPb) && object.Equals(this.NewbieAdventureV2Pb, other.NewbieAdventureV2Pb) && object.Equals(this.NewPlayerSupportActivityV2Pb, other.NewPlayerSupportActivityV2Pb) && object.Equals(this.ThroughTrainActivityData, other.ThroughTrainActivityData) && object.Equals(this.RoverRogueActivityData, other.RoverRogueActivityData) && object.Equals(this.DangoBrawlActivityInfo, other.DangoBrawlActivityInfo) && object.Equals(this.QingXiaoActivityInfo, other.QingXiaoActivityInfo) && object.Equals(this.MatchThreeActivityInfo, other.MatchThreeActivityInfo) && object.Equals(this.GiantActivityInfo, other.GiantActivityInfo) && object.Equals(this.SolarSchoolActivityPb, other.SolarSchoolActivityPb) && object.Equals(this.RoleTowerActivityData, other.RoleTowerActivityData) && this.DataCase == other.DataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06001A06 RID: 6662 RVA: 0x00044628 File Offset: 0x00042828
+		// Token: 0x06001A4D RID: 6733 RVA: 0x0004509C File Offset: 0x0004329C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -3475,6 +3525,14 @@ namespace Aki.Protocol
 			{
 				num ^= this.GiantActivityInfo.GetHashCode();
 			}
+			if (this.dataCase_ == ActivityData.DataOneofCase.SolarSchoolActivityPb)
+			{
+				num ^= this.SolarSchoolActivityPb.GetHashCode();
+			}
+			if (this.dataCase_ == ActivityData.DataOneofCase.RoleTowerActivityData)
+			{
+				num ^= this.RoleTowerActivityData.GetHashCode();
+			}
 			num ^= (int)this.dataCase_;
 			if (this._unknownFields != null)
 			{
@@ -3483,7 +3541,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001A07 RID: 6663 RVA: 0x000451A1 File Offset: 0x000433A1
+		// Token: 0x06001A4E RID: 6734 RVA: 0x00045C45 File Offset: 0x00043E45
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -3491,7 +3549,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06001A08 RID: 6664 RVA: 0x000451AE File Offset: 0x000433AE
+		// Token: 0x06001A4F RID: 6735 RVA: 0x00045C52 File Offset: 0x00043E52
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -3499,7 +3557,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06001A09 RID: 6665 RVA: 0x000451B8 File Offset: 0x000433B8
+		// Token: 0x06001A50 RID: 6736 RVA: 0x00045C5C File Offset: 0x00043E5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -4096,13 +4154,23 @@ namespace Aki.Protocol
 				output.WriteRawTag(202, 7);
 				output.WriteMessage(this.GiantActivityInfo);
 			}
+			if (this.dataCase_ == ActivityData.DataOneofCase.SolarSchoolActivityPb)
+			{
+				output.WriteRawTag(210, 7);
+				output.WriteMessage(this.SolarSchoolActivityPb);
+			}
+			if (this.dataCase_ == ActivityData.DataOneofCase.RoleTowerActivityData)
+			{
+				output.WriteRawTag(218, 7);
+				output.WriteMessage(this.RoleTowerActivityData);
+			}
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06001A0A RID: 6666 RVA: 0x00046154 File Offset: 0x00044354
+		// Token: 0x06001A51 RID: 6737 RVA: 0x00046C3C File Offset: 0x00044E3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -4582,6 +4650,14 @@ namespace Aki.Protocol
 			{
 				num += 2 + CodedOutputStream.ComputeMessageSize(this.GiantActivityInfo);
 			}
+			if (this.dataCase_ == ActivityData.DataOneofCase.SolarSchoolActivityPb)
+			{
+				num += 2 + CodedOutputStream.ComputeMessageSize(this.SolarSchoolActivityPb);
+			}
+			if (this.dataCase_ == ActivityData.DataOneofCase.RoleTowerActivityData)
+			{
+				num += 2 + CodedOutputStream.ComputeMessageSize(this.RoleTowerActivityData);
+			}
 			if (this._unknownFields != null)
 			{
 				num += this._unknownFields.CalculateSize();
@@ -4589,7 +4665,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001A0B RID: 6667 RVA: 0x00046D5C File Offset: 0x00044F5C
+		// Token: 0x06001A52 RID: 6738 RVA: 0x00047878 File Offset: 0x00045A78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ActivityData other)
@@ -5386,11 +5462,25 @@ namespace Aki.Protocol
 				}
 				this.GiantActivityInfo.MergeFrom(other.GiantActivityInfo);
 				break;
+			case ActivityData.DataOneofCase.SolarSchoolActivityPb:
+				if (this.SolarSchoolActivityPb == null)
+				{
+					this.SolarSchoolActivityPb = new SolarSchoolActivityPb();
+				}
+				this.SolarSchoolActivityPb.MergeFrom(other.SolarSchoolActivityPb);
+				break;
+			case ActivityData.DataOneofCase.RoleTowerActivityData:
+				if (this.RoleTowerActivityData == null)
+				{
+					this.RoleTowerActivityData = new RoleTowerActivityData();
+				}
+				this.RoleTowerActivityData.MergeFrom(other.RoleTowerActivityData);
+				break;
 			}
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06001A0C RID: 6668 RVA: 0x0004812D File Offset: 0x0004632D
+		// Token: 0x06001A53 RID: 6739 RVA: 0x00048CA3 File Offset: 0x00046EA3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -5398,7 +5488,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06001A0D RID: 6669 RVA: 0x00048138 File Offset: 0x00046338
+		// Token: 0x06001A54 RID: 6740 RVA: 0x00048CAC File Offset: 0x00046EAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -5410,9 +5500,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 474U)
+				if (num <= 482U)
 				{
-					if (num <= 234U)
+					if (num <= 240U)
 					{
 						if (num <= 114U)
 						{
@@ -5430,11 +5520,12 @@ namespace Aki.Protocol
 										this.Type = (ActivityType)input.ReadEnum();
 										continue;
 									}
-									if (num == 24U)
+									if (num != 24U)
 									{
-										this.BeginShowTime = input.ReadInt64();
-										continue;
+										goto IL_82E;
 									}
+									this.BeginShowTime = input.ReadInt64();
+									continue;
 								}
 								else if (num <= 40U)
 								{
@@ -5443,11 +5534,12 @@ namespace Aki.Protocol
 										this.EndShowTime = input.ReadInt64();
 										continue;
 									}
-									if (num == 40U)
+									if (num != 40U)
 									{
-										this.BeginOpenTime = input.ReadInt64();
-										continue;
+										goto IL_82E;
 									}
+									this.BeginOpenTime = input.ReadInt64();
+									continue;
 								}
 								else
 								{
@@ -5456,22 +5548,24 @@ namespace Aki.Protocol
 										this.EndOpenTime = input.ReadInt64();
 										continue;
 									}
-									if (num == 56U)
+									if (num != 56U)
 									{
-										this.IsUnlock = input.ReadBool();
-										continue;
+										goto IL_82E;
 									}
+									this.IsUnlock = input.ReadBool();
+									continue;
 								}
 							}
 							else if (num <= 82U)
 							{
 								if (num <= 66U)
 								{
-									if (num == 64U || num == 66U)
+									if (num != 64U && num != 66U)
 									{
-										this.completePreQuests_.AddEntriesFrom(ref input, ActivityData._repeated_completePreQuests_codec);
-										continue;
+										goto IL_82E;
 									}
+									this.completePreQuests_.AddEntriesFrom(ref input, ActivityData._repeated_completePreQuests_codec);
+									continue;
 								}
 								else
 								{
@@ -5480,17 +5574,18 @@ namespace Aki.Protocol
 										this.IsFirstOpen = input.ReadBool();
 										continue;
 									}
-									if (num == 82U)
+									if (num != 82U)
 									{
-										ParkourActivity parkourActivity = new ParkourActivity();
-										if (this.dataCase_ == ActivityData.DataOneofCase.ParkourActivity)
-										{
-											parkourActivity.MergeFrom(this.ParkourActivity);
-										}
-										input.ReadMessage(parkourActivity);
-										this.ParkourActivity = parkourActivity;
-										continue;
+										goto IL_82E;
 									}
+									ParkourActivity parkourActivity = new ParkourActivity();
+									if (this.dataCase_ == ActivityData.DataOneofCase.ParkourActivity)
+									{
+										parkourActivity.MergeFrom(this.ParkourActivity);
+									}
+									input.ReadMessage(parkourActivity);
+									this.ParkourActivity = parkourActivity;
+									continue;
 								}
 							}
 							else if (num <= 98U)
@@ -5506,17 +5601,18 @@ namespace Aki.Protocol
 									this.SignActivity = signActivity;
 									continue;
 								}
-								if (num == 98U)
+								if (num != 98U)
 								{
-									NewBieCourseActivity newBieCourseActivity = new NewBieCourseActivity();
-									if (this.dataCase_ == ActivityData.DataOneofCase.NewBieCourseActivity)
-									{
-										newBieCourseActivity.MergeFrom(this.NewBieCourseActivity);
-									}
-									input.ReadMessage(newBieCourseActivity);
-									this.NewBieCourseActivity = newBieCourseActivity;
-									continue;
+									goto IL_82E;
 								}
+								NewBieCourseActivity newBieCourseActivity = new NewBieCourseActivity();
+								if (this.dataCase_ == ActivityData.DataOneofCase.NewBieCourseActivity)
+								{
+									newBieCourseActivity.MergeFrom(this.NewBieCourseActivity);
+								}
+								input.ReadMessage(newBieCourseActivity);
+								this.NewBieCourseActivity = newBieCourseActivity;
+								continue;
 							}
 							else
 							{
@@ -5531,36 +5627,41 @@ namespace Aki.Protocol
 									this.DoubleInstActivityReward = doubleInstActivityReward;
 									continue;
 								}
-								if (num == 114U)
+								if (num != 114U)
 								{
-									HarvestActivity harvestActivity = new HarvestActivity();
-									if (this.dataCase_ == ActivityData.DataOneofCase.HarvestActivity)
-									{
-										harvestActivity.MergeFrom(this.HarvestActivity);
-									}
-									input.ReadMessage(harvestActivity);
-									this.HarvestActivity = harvestActivity;
-									continue;
+									goto IL_82E;
 								}
+								HarvestActivity harvestActivity = new HarvestActivity();
+								if (this.dataCase_ == ActivityData.DataOneofCase.HarvestActivity)
+								{
+									harvestActivity.MergeFrom(this.HarvestActivity);
+								}
+								input.ReadMessage(harvestActivity);
+								this.HarvestActivity = harvestActivity;
+								continue;
 							}
 						}
-						else if (num <= 170U)
+						else if (num <= 178U)
 						{
-							if (num <= 138U)
+							if (num <= 146U)
 							{
-								if (num == 122U)
+								if (num <= 130U)
 								{
-									RoleTrialInfoActivity roleTrialInfoActivity = new RoleTrialInfoActivity();
-									if (this.dataCase_ == ActivityData.DataOneofCase.RoleTrialInfoActivity)
+									if (num == 122U)
 									{
-										roleTrialInfoActivity.MergeFrom(this.RoleTrialInfoActivity);
+										RoleTrialInfoActivity roleTrialInfoActivity = new RoleTrialInfoActivity();
+										if (this.dataCase_ == ActivityData.DataOneofCase.RoleTrialInfoActivity)
+										{
+											roleTrialInfoActivity.MergeFrom(this.RoleTrialInfoActivity);
+										}
+										input.ReadMessage(roleTrialInfoActivity);
+										this.RoleTrialInfoActivity = roleTrialInfoActivity;
+										continue;
 									}
-									input.ReadMessage(roleTrialInfoActivity);
-									this.RoleTrialInfoActivity = roleTrialInfoActivity;
-									continue;
-								}
-								if (num == 130U)
-								{
+									if (num != 130U)
+									{
+										goto IL_82E;
+									}
 									PhantomCollectActivity phantomCollectActivity = new PhantomCollectActivity();
 									if (this.dataCase_ == ActivityData.DataOneofCase.PhantomCollectActivity)
 									{
@@ -5570,22 +5671,23 @@ namespace Aki.Protocol
 									this.PhantomCollectActivity = phantomCollectActivity;
 									continue;
 								}
-								if (num == 138U)
+								else
 								{
-									GatherActivityInfo gatherActivityInfo = new GatherActivityInfo();
-									if (this.dataCase_ == ActivityData.DataOneofCase.GatherActivityInfo)
+									if (num == 138U)
 									{
-										gatherActivityInfo.MergeFrom(this.GatherActivityInfo);
+										GatherActivityInfo gatherActivityInfo = new GatherActivityInfo();
+										if (this.dataCase_ == ActivityData.DataOneofCase.GatherActivityInfo)
+										{
+											gatherActivityInfo.MergeFrom(this.GatherActivityInfo);
+										}
+										input.ReadMessage(gatherActivityInfo);
+										this.GatherActivityInfo = gatherActivityInfo;
+										continue;
 									}
-									input.ReadMessage(gatherActivityInfo);
-									this.GatherActivityInfo = gatherActivityInfo;
-									continue;
-								}
-							}
-							else if (num <= 154U)
-							{
-								if (num == 146U)
-								{
+									if (num != 146U)
+									{
+										goto IL_82E;
+									}
 									DailyAdventureActivityData dailyAdventureActivityData = new DailyAdventureActivityData();
 									if (this.dataCase_ == ActivityData.DataOneofCase.DailyAdventureActivityData)
 									{
@@ -5595,6 +5697,9 @@ namespace Aki.Protocol
 									this.DailyAdventureActivityData = dailyAdventureActivityData;
 									continue;
 								}
+							}
+							else if (num <= 162U)
+							{
 								if (num == 154U)
 								{
 									RoguelikeActivityData roguelikeActivityData = new RoguelikeActivityData();
@@ -5606,20 +5711,21 @@ namespace Aki.Protocol
 									this.RoguelikeActivityData = roguelikeActivityData;
 									continue;
 								}
+								if (num != 162U)
+								{
+									goto IL_82E;
+								}
+								LongShanActivity longShanActivity = new LongShanActivity();
+								if (this.dataCase_ == ActivityData.DataOneofCase.LongShanActivityData)
+								{
+									longShanActivity.MergeFrom(this.LongShanActivityData);
+								}
+								input.ReadMessage(longShanActivity);
+								this.LongShanActivityData = longShanActivity;
+								continue;
 							}
 							else
 							{
-								if (num == 162U)
-								{
-									LongShanActivity longShanActivity = new LongShanActivity();
-									if (this.dataCase_ == ActivityData.DataOneofCase.LongShanActivityData)
-									{
-										longShanActivity.MergeFrom(this.LongShanActivityData);
-									}
-									input.ReadMessage(longShanActivity);
-									this.LongShanActivityData = longShanActivity;
-									continue;
-								}
 								if (num == 170U)
 								{
 									TurntableActivityData turntableActivityData = new TurntableActivityData();
@@ -5631,23 +5737,24 @@ namespace Aki.Protocol
 									this.TurntableActivityData = turntableActivityData;
 									continue;
 								}
+								if (num != 178U)
+								{
+									goto IL_82E;
+								}
+								BossRushActivityData bossRushActivityData = new BossRushActivityData();
+								if (this.dataCase_ == ActivityData.DataOneofCase.BossRushActivityData)
+								{
+									bossRushActivityData.MergeFrom(this.BossRushActivityData);
+								}
+								input.ReadMessage(bossRushActivityData);
+								this.BossRushActivityData = bossRushActivityData;
+								continue;
 							}
 						}
-						else if (num <= 202U)
+						else if (num <= 210U)
 						{
-							if (num <= 186U)
+							if (num <= 194U)
 							{
-								if (num == 178U)
-								{
-									BossRushActivityData bossRushActivityData = new BossRushActivityData();
-									if (this.dataCase_ == ActivityData.DataOneofCase.BossRushActivityData)
-									{
-										bossRushActivityData.MergeFrom(this.BossRushActivityData);
-									}
-									input.ReadMessage(bossRushActivityData);
-									this.BossRushActivityData = bossRushActivityData;
-									continue;
-								}
 								if (num == 186U)
 								{
 									ActivityTaskData activityTaskData = new ActivityTaskData();
@@ -5659,20 +5766,21 @@ namespace Aki.Protocol
 									this.TrackMoonActivityTaskData = activityTaskData;
 									continue;
 								}
+								if (num != 194U)
+								{
+									goto IL_82E;
+								}
+								TimePointRewardActivityData timePointRewardActivityData = new TimePointRewardActivityData();
+								if (this.dataCase_ == ActivityData.DataOneofCase.TimePointRewardActivityData)
+								{
+									timePointRewardActivityData.MergeFrom(this.TimePointRewardActivityData);
+								}
+								input.ReadMessage(timePointRewardActivityData);
+								this.TimePointRewardActivityData = timePointRewardActivityData;
+								continue;
 							}
 							else
 							{
-								if (num == 194U)
-								{
-									TimePointRewardActivityData timePointRewardActivityData = new TimePointRewardActivityData();
-									if (this.dataCase_ == ActivityData.DataOneofCase.TimePointRewardActivityData)
-									{
-										timePointRewardActivityData.MergeFrom(this.TimePointRewardActivityData);
-									}
-									input.ReadMessage(timePointRewardActivityData);
-									this.TimePointRewardActivityData = timePointRewardActivityData;
-									continue;
-								}
 								if (num == 202U)
 								{
 									TowerDefenceActivityInfo towerDefenceActivityInfo = new TowerDefenceActivityInfo();
@@ -5684,12 +5792,10 @@ namespace Aki.Protocol
 									this.TowerDefenceActivityData = towerDefenceActivityInfo;
 									continue;
 								}
-							}
-						}
-						else if (num <= 218U)
-						{
-							if (num == 210U)
-							{
+								if (num != 210U)
+								{
+									goto IL_82E;
+								}
 								CircumFluenceData circumFluenceData = new CircumFluenceData();
 								if (this.dataCase_ == ActivityData.DataOneofCase.CircumFluenceTaskData)
 								{
@@ -5699,6 +5805,9 @@ namespace Aki.Protocol
 								this.CircumFluenceTaskData = circumFluenceData;
 								continue;
 							}
+						}
+						else if (num <= 226U)
+						{
 							if (num == 218U)
 							{
 								TraceMoonPhaseData traceMoonPhaseData = new TraceMoonPhaseData();
@@ -5710,20 +5819,21 @@ namespace Aki.Protocol
 								this.TraceMoonPhaseData = traceMoonPhaseData;
 								continue;
 							}
+							if (num != 226U)
+							{
+								goto IL_82E;
+							}
+							CorniceMeetingData corniceMeetingData = new CorniceMeetingData();
+							if (this.dataCase_ == ActivityData.DataOneofCase.CorniceMeetingData)
+							{
+								corniceMeetingData.MergeFrom(this.CorniceMeetingData);
+							}
+							input.ReadMessage(corniceMeetingData);
+							this.CorniceMeetingData = corniceMeetingData;
+							continue;
 						}
 						else
 						{
-							if (num == 226U)
-							{
-								CorniceMeetingData corniceMeetingData = new CorniceMeetingData();
-								if (this.dataCase_ == ActivityData.DataOneofCase.CorniceMeetingData)
-								{
-									corniceMeetingData.MergeFrom(this.CorniceMeetingData);
-								}
-								input.ReadMessage(corniceMeetingData);
-								this.CorniceMeetingData = corniceMeetingData;
-								continue;
-							}
 							if (num == 234U)
 							{
 								RiskHarvestActivityInfo riskHarvestActivityInfo = new RiskHarvestActivityInfo();
@@ -5735,35 +5845,35 @@ namespace Aki.Protocol
 								this.RiskHarvestActivityInfo = riskHarvestActivityInfo;
 								continue;
 							}
+							if (num != 240U)
+							{
+								goto IL_82E;
+							}
 						}
 					}
-					else if (num <= 346U)
+					else if (num <= 354U)
 					{
-						if (num <= 282U)
+						if (num <= 290U)
 						{
-							if (num <= 250U)
+							if (num <= 258U)
 							{
-								if (num == 240U || num == 242U)
+								if (num != 242U)
 								{
-									this.finishConditions_.AddEntriesFrom(ref input, ActivityData._repeated_finishConditions_codec);
-									continue;
-								}
-								if (num == 250U)
-								{
-									BlackCoastThemeActivity blackCoastThemeActivity = new BlackCoastThemeActivity();
-									if (this.dataCase_ == ActivityData.DataOneofCase.BlackCoastThemeActivityData)
+									if (num == 250U)
 									{
-										blackCoastThemeActivity.MergeFrom(this.BlackCoastThemeActivityData);
+										BlackCoastThemeActivity blackCoastThemeActivity = new BlackCoastThemeActivity();
+										if (this.dataCase_ == ActivityData.DataOneofCase.BlackCoastThemeActivityData)
+										{
+											blackCoastThemeActivity.MergeFrom(this.BlackCoastThemeActivityData);
+										}
+										input.ReadMessage(blackCoastThemeActivity);
+										this.BlackCoastThemeActivityData = blackCoastThemeActivity;
+										continue;
 									}
-									input.ReadMessage(blackCoastThemeActivity);
-									this.BlackCoastThemeActivityData = blackCoastThemeActivity;
-									continue;
-								}
-							}
-							else if (num <= 264U)
-							{
-								if (num == 258U)
-								{
+									if (num != 258U)
+									{
+										goto IL_82E;
+									}
 									RogueWhiteCatData rogueWhiteCatData = new RogueWhiteCatData();
 									if (this.dataCase_ == ActivityData.DataOneofCase.RogueWhiteCatData)
 									{
@@ -5773,25 +5883,29 @@ namespace Aki.Protocol
 									this.RogueWhiteCatData = rogueWhiteCatData;
 									continue;
 								}
+							}
+							else if (num <= 274U)
+							{
 								if (num == 264U)
 								{
 									this.ActivityOpenType = (ActivityOpenType)input.ReadEnum();
 									continue;
 								}
+								if (num != 274U)
+								{
+									goto IL_82E;
+								}
+								ScratchCardActivityInfo scratchCardActivityInfo = new ScratchCardActivityInfo();
+								if (this.dataCase_ == ActivityData.DataOneofCase.ScratchCardActivityInfo)
+								{
+									scratchCardActivityInfo.MergeFrom(this.ScratchCardActivityInfo);
+								}
+								input.ReadMessage(scratchCardActivityInfo);
+								this.ScratchCardActivityInfo = scratchCardActivityInfo;
+								continue;
 							}
 							else
 							{
-								if (num == 274U)
-								{
-									ScratchCardActivityInfo scratchCardActivityInfo = new ScratchCardActivityInfo();
-									if (this.dataCase_ == ActivityData.DataOneofCase.ScratchCardActivityInfo)
-									{
-										scratchCardActivityInfo.MergeFrom(this.ScratchCardActivityInfo);
-									}
-									input.ReadMessage(scratchCardActivityInfo);
-									this.ScratchCardActivityInfo = scratchCardActivityInfo;
-									continue;
-								}
 								if (num == 282U)
 								{
 									PreheatSignActivityInfo preheatSignActivityInfo = new PreheatSignActivityInfo();
@@ -5803,23 +5917,24 @@ namespace Aki.Protocol
 									this.PreheatSignActivityInfo = preheatSignActivityInfo;
 									continue;
 								}
+								if (num != 290U)
+								{
+									goto IL_82E;
+								}
+								MowTowerActivityInfo mowTowerActivityInfo = new MowTowerActivityInfo();
+								if (this.dataCase_ == ActivityData.DataOneofCase.MowTowerActivityInfo)
+								{
+									mowTowerActivityInfo.MergeFrom(this.MowTowerActivityInfo);
+								}
+								input.ReadMessage(mowTowerActivityInfo);
+								this.MowTowerActivityInfo = mowTowerActivityInfo;
+								continue;
 							}
 						}
-						else if (num <= 314U)
+						else if (num <= 322U)
 						{
-							if (num <= 298U)
+							if (num <= 306U)
 							{
-								if (num == 290U)
-								{
-									MowTowerActivityInfo mowTowerActivityInfo = new MowTowerActivityInfo();
-									if (this.dataCase_ == ActivityData.DataOneofCase.MowTowerActivityInfo)
-									{
-										mowTowerActivityInfo.MergeFrom(this.MowTowerActivityInfo);
-									}
-									input.ReadMessage(mowTowerActivityInfo);
-									this.MowTowerActivityInfo = mowTowerActivityInfo;
-									continue;
-								}
 								if (num == 298U)
 								{
 									FarmGoldInfo farmGoldInfo = new FarmGoldInfo();
@@ -5831,20 +5946,21 @@ namespace Aki.Protocol
 									this.FarmGoldInfo = farmGoldInfo;
 									continue;
 								}
+								if (num != 306U)
+								{
+									goto IL_82E;
+								}
+								SpringSignInfo springSignInfo = new SpringSignInfo();
+								if (this.dataCase_ == ActivityData.DataOneofCase.SpringSignInfo)
+								{
+									springSignInfo.MergeFrom(this.SpringSignInfo);
+								}
+								input.ReadMessage(springSignInfo);
+								this.SpringSignInfo = springSignInfo;
+								continue;
 							}
 							else
 							{
-								if (num == 306U)
-								{
-									SpringSignInfo springSignInfo = new SpringSignInfo();
-									if (this.dataCase_ == ActivityData.DataOneofCase.SpringSignInfo)
-									{
-										springSignInfo.MergeFrom(this.SpringSignInfo);
-									}
-									input.ReadMessage(springSignInfo);
-									this.SpringSignInfo = springSignInfo;
-									continue;
-								}
 								if (num == 314U)
 								{
 									MapTravelActivityInfo mapTravelActivityInfo = new MapTravelActivityInfo();
@@ -5856,12 +5972,10 @@ namespace Aki.Protocol
 									this.MapTravelActivityInfo = mapTravelActivityInfo;
 									continue;
 								}
-							}
-						}
-						else if (num <= 330U)
-						{
-							if (num == 322U)
-							{
+								if (num != 322U)
+								{
+									goto IL_82E;
+								}
 								RoleSkinTrialInfoActivity roleSkinTrialInfoActivity = new RoleSkinTrialInfoActivity();
 								if (this.dataCase_ == ActivityData.DataOneofCase.RoleSkinTrialInfoActivity)
 								{
@@ -5871,6 +5985,9 @@ namespace Aki.Protocol
 								this.RoleSkinTrialInfoActivity = roleSkinTrialInfoActivity;
 								continue;
 							}
+						}
+						else if (num <= 336U)
+						{
 							if (num == 330U)
 							{
 								FishingActivityInfo fishingActivityInfo = new FishingActivityInfo();
@@ -5882,14 +5999,15 @@ namespace Aki.Protocol
 								this.FishingActivityInfo = fishingActivityInfo;
 								continue;
 							}
+							if (num != 336U)
+							{
+								goto IL_82E;
+							}
+							this.CanPreOpen = input.ReadBool();
+							continue;
 						}
 						else
 						{
-							if (num == 336U)
-							{
-								this.CanPreOpen = input.ReadBool();
-								continue;
-							}
 							if (num == 346U)
 							{
 								RogueWeeklyData rogueWeeklyData = new RogueWeeklyData();
@@ -5901,25 +6019,26 @@ namespace Aki.Protocol
 								this.RogueWeeklyData = rogueWeeklyData;
 								continue;
 							}
+							if (num != 354U)
+							{
+								goto IL_82E;
+							}
+							TeamParkourLevelActivityInfo teamParkourLevelActivityInfo = new TeamParkourLevelActivityInfo();
+							if (this.dataCase_ == ActivityData.DataOneofCase.TeamParkourLevelActivityInfo)
+							{
+								teamParkourLevelActivityInfo.MergeFrom(this.TeamParkourLevelActivityInfo);
+							}
+							input.ReadMessage(teamParkourLevelActivityInfo);
+							this.TeamParkourLevelActivityInfo = teamParkourLevelActivityInfo;
+							continue;
 						}
 					}
-					else if (num <= 410U)
+					else if (num <= 418U)
 					{
-						if (num <= 378U)
+						if (num <= 386U)
 						{
-							if (num <= 362U)
+							if (num <= 370U)
 							{
-								if (num == 354U)
-								{
-									TeamParkourLevelActivityInfo teamParkourLevelActivityInfo = new TeamParkourLevelActivityInfo();
-									if (this.dataCase_ == ActivityData.DataOneofCase.TeamParkourLevelActivityInfo)
-									{
-										teamParkourLevelActivityInfo.MergeFrom(this.TeamParkourLevelActivityInfo);
-									}
-									input.ReadMessage(teamParkourLevelActivityInfo);
-									this.TeamParkourLevelActivityInfo = teamParkourLevelActivityInfo;
-									continue;
-								}
 								if (num == 362U)
 								{
 									BabelActivityInfo babelActivityInfo = new BabelActivityInfo();
@@ -5931,20 +6050,21 @@ namespace Aki.Protocol
 									this.BabelActivityInfo = babelActivityInfo;
 									continue;
 								}
+								if (num != 370U)
+								{
+									goto IL_82E;
+								}
+								RacingBetsActivityData racingBetsActivityData = new RacingBetsActivityData();
+								if (this.dataCase_ == ActivityData.DataOneofCase.RacingBetsData)
+								{
+									racingBetsActivityData.MergeFrom(this.RacingBetsData);
+								}
+								input.ReadMessage(racingBetsActivityData);
+								this.RacingBetsData = racingBetsActivityData;
+								continue;
 							}
 							else
 							{
-								if (num == 370U)
-								{
-									RacingBetsActivityData racingBetsActivityData = new RacingBetsActivityData();
-									if (this.dataCase_ == ActivityData.DataOneofCase.RacingBetsData)
-									{
-										racingBetsActivityData.MergeFrom(this.RacingBetsData);
-									}
-									input.ReadMessage(racingBetsActivityData);
-									this.RacingBetsData = racingBetsActivityData;
-									continue;
-								}
 								if (num == 378U)
 								{
 									ExploreActivityInfo exploreActivityInfo = new ExploreActivityInfo();
@@ -5956,12 +6076,10 @@ namespace Aki.Protocol
 									this.ExploreActivityInfo = exploreActivityInfo;
 									continue;
 								}
-							}
-						}
-						else if (num <= 394U)
-						{
-							if (num == 386U)
-							{
+								if (num != 386U)
+								{
+									goto IL_82E;
+								}
 								RogueResActivityData rogueResActivityData = new RogueResActivityData();
 								if (this.dataCase_ == ActivityData.DataOneofCase.RogueResActivityData)
 								{
@@ -5971,6 +6089,9 @@ namespace Aki.Protocol
 								this.RogueResActivityData = rogueResActivityData;
 								continue;
 							}
+						}
+						else if (num <= 402U)
+						{
 							if (num == 394U)
 							{
 								AvignonActivityInfo avignonActivityInfo = new AvignonActivityInfo();
@@ -5982,20 +6103,21 @@ namespace Aki.Protocol
 								this.AvignonActivityInfo = avignonActivityInfo;
 								continue;
 							}
+							if (num != 402U)
+							{
+								goto IL_82E;
+							}
+							AbyssInfo abyssInfo = new AbyssInfo();
+							if (this.dataCase_ == ActivityData.DataOneofCase.AbyssInfo)
+							{
+								abyssInfo.MergeFrom(this.AbyssInfo);
+							}
+							input.ReadMessage(abyssInfo);
+							this.AbyssInfo = abyssInfo;
+							continue;
 						}
 						else
 						{
-							if (num == 402U)
-							{
-								AbyssInfo abyssInfo = new AbyssInfo();
-								if (this.dataCase_ == ActivityData.DataOneofCase.AbyssInfo)
-								{
-									abyssInfo.MergeFrom(this.AbyssInfo);
-								}
-								input.ReadMessage(abyssInfo);
-								this.AbyssInfo = abyssInfo;
-								continue;
-							}
 							if (num == 410U)
 							{
 								H5CircumFluenceActivityData h5CircumFluenceActivityData = new H5CircumFluenceActivityData();
@@ -6007,23 +6129,24 @@ namespace Aki.Protocol
 								this.H5CircumFluenceData = h5CircumFluenceActivityData;
 								continue;
 							}
+							if (num != 418U)
+							{
+								goto IL_82E;
+							}
+							DangoMonopolyActivityPbData dangoMonopolyActivityPbData = new DangoMonopolyActivityPbData();
+							if (this.dataCase_ == ActivityData.DataOneofCase.DangoMonopolyActivityData)
+							{
+								dangoMonopolyActivityPbData.MergeFrom(this.DangoMonopolyActivityData);
+							}
+							input.ReadMessage(dangoMonopolyActivityPbData);
+							this.DangoMonopolyActivityData = dangoMonopolyActivityPbData;
+							continue;
 						}
 					}
-					else if (num <= 442U)
+					else if (num <= 450U)
 					{
-						if (num <= 426U)
+						if (num <= 434U)
 						{
-							if (num == 418U)
-							{
-								DangoMonopolyActivityPbData dangoMonopolyActivityPbData = new DangoMonopolyActivityPbData();
-								if (this.dataCase_ == ActivityData.DataOneofCase.DangoMonopolyActivityData)
-								{
-									dangoMonopolyActivityPbData.MergeFrom(this.DangoMonopolyActivityData);
-								}
-								input.ReadMessage(dangoMonopolyActivityPbData);
-								this.DangoMonopolyActivityData = dangoMonopolyActivityPbData;
-								continue;
-							}
 							if (num == 426U)
 							{
 								CiacconaActivityPbData ciacconaActivityPbData = new CiacconaActivityPbData();
@@ -6035,20 +6158,21 @@ namespace Aki.Protocol
 								this.CiacconaActivityPbData = ciacconaActivityPbData;
 								continue;
 							}
+							if (num != 434U)
+							{
+								goto IL_82E;
+							}
+							ActivityLinkageData activityLinkageData = new ActivityLinkageData();
+							if (this.dataCase_ == ActivityData.DataOneofCase.ActivityLinkageData)
+							{
+								activityLinkageData.MergeFrom(this.ActivityLinkageData);
+							}
+							input.ReadMessage(activityLinkageData);
+							this.ActivityLinkageData = activityLinkageData;
+							continue;
 						}
 						else
 						{
-							if (num == 434U)
-							{
-								ActivityLinkageData activityLinkageData = new ActivityLinkageData();
-								if (this.dataCase_ == ActivityData.DataOneofCase.ActivityLinkageData)
-								{
-									activityLinkageData.MergeFrom(this.ActivityLinkageData);
-								}
-								input.ReadMessage(activityLinkageData);
-								this.ActivityLinkageData = activityLinkageData;
-								continue;
-							}
 							if (num == 442U)
 							{
 								RegressData regressData = new RegressData();
@@ -6060,12 +6184,10 @@ namespace Aki.Protocol
 								this.RegressData = regressData;
 								continue;
 							}
-						}
-					}
-					else if (num <= 458U)
-					{
-						if (num == 450U)
-						{
+							if (num != 450U)
+							{
+								goto IL_82E;
+							}
 							ConsumptiveActivityInfo consumptiveActivityInfo = new ConsumptiveActivityInfo();
 							if (this.dataCase_ == ActivityData.DataOneofCase.ConsumptiveActivityInfo)
 							{
@@ -6075,6 +6197,9 @@ namespace Aki.Protocol
 							this.ConsumptiveActivityInfo = consumptiveActivityInfo;
 							continue;
 						}
+					}
+					else if (num <= 466U)
+					{
 						if (num == 458U)
 						{
 							PhantomBattleActivityInfo phantomBattleActivityInfo = new PhantomBattleActivityInfo();
@@ -6086,20 +6211,21 @@ namespace Aki.Protocol
 							this.PhantomBattleActivityInfo = phantomBattleActivityInfo;
 							continue;
 						}
+						if (num != 466U)
+						{
+							goto IL_82E;
+						}
+						NewbieCarnivalData newbieCarnivalData = new NewbieCarnivalData();
+						if (this.dataCase_ == ActivityData.DataOneofCase.NewbieCarnivalData)
+						{
+							newbieCarnivalData.MergeFrom(this.NewbieCarnivalData);
+						}
+						input.ReadMessage(newbieCarnivalData);
+						this.NewbieCarnivalData = newbieCarnivalData;
+						continue;
 					}
 					else
 					{
-						if (num == 466U)
-						{
-							NewbieCarnivalData newbieCarnivalData = new NewbieCarnivalData();
-							if (this.dataCase_ == ActivityData.DataOneofCase.NewbieCarnivalData)
-							{
-								newbieCarnivalData.MergeFrom(this.NewbieCarnivalData);
-							}
-							input.ReadMessage(newbieCarnivalData);
-							this.NewbieCarnivalData = newbieCarnivalData;
-							continue;
-						}
 						if (num == 474U)
 						{
 							MoraleActivityData moraleActivityData = new MoraleActivityData();
@@ -6111,27 +6237,30 @@ namespace Aki.Protocol
 							this.MoraleActivityData = moraleActivityData;
 							continue;
 						}
-					}
-				}
-				else if (num <= 714U)
-				{
-					if (num <= 594U)
-					{
-						if (num <= 530U)
+						if (num != 482U)
 						{
-							if (num <= 498U)
+							goto IL_82E;
+						}
+						FloroRanchActivityData floroRanchActivityData = new FloroRanchActivityData();
+						if (this.dataCase_ == ActivityData.DataOneofCase.FloroRanchActivityData)
+						{
+							floroRanchActivityData.MergeFrom(this.FloroRanchActivityData);
+						}
+						input.ReadMessage(floroRanchActivityData);
+						this.FloroRanchActivityData = floroRanchActivityData;
+						continue;
+					}
+					this.finishConditions_.AddEntriesFrom(ref input, ActivityData._repeated_finishConditions_codec);
+					continue;
+				}
+				if (num <= 730U)
+				{
+					if (num <= 602U)
+					{
+						if (num <= 536U)
+						{
+							if (num <= 506U)
 							{
-								if (num == 482U)
-								{
-									FloroRanchActivityData floroRanchActivityData = new FloroRanchActivityData();
-									if (this.dataCase_ == ActivityData.DataOneofCase.FloroRanchActivityData)
-									{
-										floroRanchActivityData.MergeFrom(this.FloroRanchActivityData);
-									}
-									input.ReadMessage(floroRanchActivityData);
-									this.FloroRanchActivityData = floroRanchActivityData;
-									continue;
-								}
 								if (num == 490U)
 								{
 									LifePointChallengeActivityData lifePointChallengeActivityData = new LifePointChallengeActivityData();
@@ -6154,9 +6283,6 @@ namespace Aki.Protocol
 									this.TrapDefenseActivityInfo = trapDefenseActivityInfo;
 									continue;
 								}
-							}
-							else if (num <= 514U)
-							{
 								if (num == 506U)
 								{
 									FunPlayActivityInfo funPlayActivityInfo = new FunPlayActivityInfo();
@@ -6168,6 +6294,9 @@ namespace Aki.Protocol
 									this.FunPlayActivityInfo = funPlayActivityInfo;
 									continue;
 								}
+							}
+							else if (num <= 522U)
+							{
 								if (num == 514U)
 								{
 									JinzhouFlyData jinzhouFlyData = new JinzhouFlyData();
@@ -6179,9 +6308,6 @@ namespace Aki.Protocol
 									this.JinzhouFlyData = jinzhouFlyData;
 									continue;
 								}
-							}
-							else
-							{
 								if (num == 522U)
 								{
 									LineCrossActivityData lineCrossActivityData = new LineCrossActivityData();
@@ -6193,6 +6319,9 @@ namespace Aki.Protocol
 									this.LineCrossActivityData = lineCrossActivityData;
 									continue;
 								}
+							}
+							else
+							{
 								if (num == 530U)
 								{
 									MoonPhaseActivityData moonPhaseActivityData = new MoonPhaseActivityData();
@@ -6204,50 +6333,50 @@ namespace Aki.Protocol
 									this.MoonPhaseActivityData = moonPhaseActivityData;
 									continue;
 								}
-							}
-						}
-						else if (num <= 560U)
-						{
-							if (num <= 544U)
-							{
 								if (num == 536U)
 								{
 									this.LimitBeginTime = input.ReadInt64();
 									continue;
 								}
+							}
+						}
+						else if (num <= 570U)
+						{
+							if (num <= 552U)
+							{
 								if (num == 544U)
 								{
 									this.LimitEndTime = input.ReadInt64();
 									continue;
 								}
-							}
-							else
-							{
 								if (num == 552U)
 								{
 									this.LimitRewardBeginTime = input.ReadInt64();
 									continue;
 								}
+							}
+							else
+							{
 								if (num == 560U)
 								{
 									this.LimitRewardEndTime = input.ReadInt64();
 									continue;
 								}
+								if (num == 570U)
+								{
+									HonamiStoryActivityInfo honamiStoryActivityInfo = new HonamiStoryActivityInfo();
+									if (this.dataCase_ == ActivityData.DataOneofCase.HonamiStoryActivityInfo)
+									{
+										honamiStoryActivityInfo.MergeFrom(this.HonamiStoryActivityInfo);
+									}
+									input.ReadMessage(honamiStoryActivityInfo);
+									this.HonamiStoryActivityInfo = honamiStoryActivityInfo;
+									continue;
+								}
 							}
 						}
-						else if (num <= 578U)
+						else if (num <= 586U)
 						{
-							if (num == 570U)
-							{
-								HonamiStoryActivityInfo honamiStoryActivityInfo = new HonamiStoryActivityInfo();
-								if (this.dataCase_ == ActivityData.DataOneofCase.HonamiStoryActivityInfo)
-								{
-									honamiStoryActivityInfo.MergeFrom(this.HonamiStoryActivityInfo);
-								}
-								input.ReadMessage(honamiStoryActivityInfo);
-								this.HonamiStoryActivityInfo = honamiStoryActivityInfo;
-								continue;
-							}
 							if (num == 578U)
 							{
 								PhotoFightActivityPb photoFightActivityPb = new PhotoFightActivityPb();
@@ -6259,9 +6388,6 @@ namespace Aki.Protocol
 								this.PhotoFightActivityData = photoFightActivityPb;
 								continue;
 							}
-						}
-						else
-						{
 							if (num == 586U)
 							{
 								SurvivorsActivityData survivorsActivityData = new SurvivorsActivityData();
@@ -6273,6 +6399,9 @@ namespace Aki.Protocol
 								this.SurvivorsActivityData = survivorsActivityData;
 								continue;
 							}
+						}
+						else
+						{
 							if (num == 594U)
 							{
 								WuWuKujiActivityPb wuWuKujiActivityPb = new WuWuKujiActivityPb();
@@ -6284,12 +6413,6 @@ namespace Aki.Protocol
 								this.WuWuKujiActivityInfo = wuWuKujiActivityPb;
 								continue;
 							}
-						}
-					}
-					else if (num <= 650U)
-					{
-						if (num <= 618U)
-						{
 							if (num == 602U)
 							{
 								AdvertisingPageData advertisingPageData = new AdvertisingPageData();
@@ -6301,55 +6424,64 @@ namespace Aki.Protocol
 								this.AdvertisingPageInfo = advertisingPageData;
 								continue;
 							}
-							if (num == 610U)
-							{
-								ArtemisActivityInfo artemisActivityInfo = new ArtemisActivityInfo();
-								if (this.dataCase_ == ActivityData.DataOneofCase.ArtemisActivityInfo)
-								{
-									artemisActivityInfo.MergeFrom(this.ArtemisActivityInfo);
-								}
-								input.ReadMessage(artemisActivityInfo);
-								this.ArtemisActivityInfo = artemisActivityInfo;
-								continue;
-							}
-							if (num == 618U)
-							{
-								RoleCoopActivityData roleCoopActivityData = new RoleCoopActivityData();
-								if (this.dataCase_ == ActivityData.DataOneofCase.RoleCoopActivityData)
-								{
-									roleCoopActivityData.MergeFrom(this.RoleCoopActivityData);
-								}
-								input.ReadMessage(roleCoopActivityData);
-								this.RoleCoopActivityData = roleCoopActivityData;
-								continue;
-							}
 						}
-						else if (num <= 634U)
+					}
+					else if (num <= 666U)
+					{
+						if (num <= 634U)
 						{
-							if (num == 626U)
+							if (num <= 618U)
 							{
-								MotorCycleIpActivityData motorCycleIpActivityData = new MotorCycleIpActivityData();
-								if (this.dataCase_ == ActivityData.DataOneofCase.MotorCycleIpActivityData)
+								if (num == 610U)
 								{
-									motorCycleIpActivityData.MergeFrom(this.MotorCycleIpActivityData);
+									ArtemisActivityInfo artemisActivityInfo = new ArtemisActivityInfo();
+									if (this.dataCase_ == ActivityData.DataOneofCase.ArtemisActivityInfo)
+									{
+										artemisActivityInfo.MergeFrom(this.ArtemisActivityInfo);
+									}
+									input.ReadMessage(artemisActivityInfo);
+									this.ArtemisActivityInfo = artemisActivityInfo;
+									continue;
 								}
-								input.ReadMessage(motorCycleIpActivityData);
-								this.MotorCycleIpActivityData = motorCycleIpActivityData;
-								continue;
+								if (num == 618U)
+								{
+									RoleCoopActivityData roleCoopActivityData = new RoleCoopActivityData();
+									if (this.dataCase_ == ActivityData.DataOneofCase.RoleCoopActivityData)
+									{
+										roleCoopActivityData.MergeFrom(this.RoleCoopActivityData);
+									}
+									input.ReadMessage(roleCoopActivityData);
+									this.RoleCoopActivityData = roleCoopActivityData;
+									continue;
+								}
 							}
-							if (num == 634U)
+							else
 							{
-								PhantomBattleActivityInfo phantomBattleActivityInfo2 = new PhantomBattleActivityInfo();
-								if (this.dataCase_ == ActivityData.DataOneofCase.PhantomBattleRecordActivityInfo)
+								if (num == 626U)
 								{
-									phantomBattleActivityInfo2.MergeFrom(this.PhantomBattleRecordActivityInfo);
+									MotorCycleIpActivityData motorCycleIpActivityData = new MotorCycleIpActivityData();
+									if (this.dataCase_ == ActivityData.DataOneofCase.MotorCycleIpActivityData)
+									{
+										motorCycleIpActivityData.MergeFrom(this.MotorCycleIpActivityData);
+									}
+									input.ReadMessage(motorCycleIpActivityData);
+									this.MotorCycleIpActivityData = motorCycleIpActivityData;
+									continue;
 								}
-								input.ReadMessage(phantomBattleActivityInfo2);
-								this.PhantomBattleRecordActivityInfo = phantomBattleActivityInfo2;
-								continue;
+								if (num == 634U)
+								{
+									PhantomBattleActivityInfo phantomBattleActivityInfo2 = new PhantomBattleActivityInfo();
+									if (this.dataCase_ == ActivityData.DataOneofCase.PhantomBattleRecordActivityInfo)
+									{
+										phantomBattleActivityInfo2.MergeFrom(this.PhantomBattleRecordActivityInfo);
+									}
+									input.ReadMessage(phantomBattleActivityInfo2);
+									this.PhantomBattleRecordActivityInfo = phantomBattleActivityInfo2;
+									continue;
+								}
 							}
 						}
-						else
+						else if (num <= 650U)
 						{
 							if (num == 642U)
 							{
@@ -6374,10 +6506,7 @@ namespace Aki.Protocol
 								continue;
 							}
 						}
-					}
-					else if (num <= 682U)
-					{
-						if (num <= 666U)
+						else
 						{
 							if (num == 658U)
 							{
@@ -6402,7 +6531,10 @@ namespace Aki.Protocol
 								continue;
 							}
 						}
-						else
+					}
+					else if (num <= 698U)
+					{
+						if (num <= 682U)
 						{
 							if (num == 674U)
 							{
@@ -6427,33 +6559,33 @@ namespace Aki.Protocol
 								continue;
 							}
 						}
-					}
-					else if (num <= 698U)
-					{
-						if (num == 690U)
+						else
 						{
-							SpringFestivalActivityInfo springFestivalActivityInfo = new SpringFestivalActivityInfo();
-							if (this.dataCase_ == ActivityData.DataOneofCase.SpringFestivalActivityInfo)
+							if (num == 690U)
 							{
-								springFestivalActivityInfo.MergeFrom(this.SpringFestivalActivityInfo);
+								SpringFestivalActivityInfo springFestivalActivityInfo = new SpringFestivalActivityInfo();
+								if (this.dataCase_ == ActivityData.DataOneofCase.SpringFestivalActivityInfo)
+								{
+									springFestivalActivityInfo.MergeFrom(this.SpringFestivalActivityInfo);
+								}
+								input.ReadMessage(springFestivalActivityInfo);
+								this.SpringFestivalActivityInfo = springFestivalActivityInfo;
+								continue;
 							}
-							input.ReadMessage(springFestivalActivityInfo);
-							this.SpringFestivalActivityInfo = springFestivalActivityInfo;
-							continue;
-						}
-						if (num == 698U)
-						{
-							TotalTopUpActivityInfo totalTopUpActivityInfo = new TotalTopUpActivityInfo();
-							if (this.dataCase_ == ActivityData.DataOneofCase.TotalTopUpActivityInfo)
+							if (num == 698U)
 							{
-								totalTopUpActivityInfo.MergeFrom(this.TotalTopUpActivityInfo);
+								TotalTopUpActivityInfo totalTopUpActivityInfo = new TotalTopUpActivityInfo();
+								if (this.dataCase_ == ActivityData.DataOneofCase.TotalTopUpActivityInfo)
+								{
+									totalTopUpActivityInfo.MergeFrom(this.TotalTopUpActivityInfo);
+								}
+								input.ReadMessage(totalTopUpActivityInfo);
+								this.TotalTopUpActivityInfo = totalTopUpActivityInfo;
+								continue;
 							}
-							input.ReadMessage(totalTopUpActivityInfo);
-							this.TotalTopUpActivityInfo = totalTopUpActivityInfo;
-							continue;
 						}
 					}
-					else
+					else if (num <= 714U)
 					{
 						if (num == 706U)
 						{
@@ -6478,35 +6610,38 @@ namespace Aki.Protocol
 							continue;
 						}
 					}
-				}
-				else if (num <= 834U)
-				{
-					if (num <= 770U)
+					else
 					{
-						if (num <= 738U)
+						if (num == 722U)
 						{
-							if (num == 722U)
+							SkinRewardActivityData skinRewardActivityData = new SkinRewardActivityData();
+							if (this.dataCase_ == ActivityData.DataOneofCase.SkinRewardActivityData)
 							{
-								SkinRewardActivityData skinRewardActivityData = new SkinRewardActivityData();
-								if (this.dataCase_ == ActivityData.DataOneofCase.SkinRewardActivityData)
-								{
-									skinRewardActivityData.MergeFrom(this.SkinRewardActivityData);
-								}
-								input.ReadMessage(skinRewardActivityData);
-								this.SkinRewardActivityData = skinRewardActivityData;
-								continue;
+								skinRewardActivityData.MergeFrom(this.SkinRewardActivityData);
 							}
-							if (num == 730U)
+							input.ReadMessage(skinRewardActivityData);
+							this.SkinRewardActivityData = skinRewardActivityData;
+							continue;
+						}
+						if (num == 730U)
+						{
+							EncircleActivityPb encircleActivityPb = new EncircleActivityPb();
+							if (this.dataCase_ == ActivityData.DataOneofCase.EncircleActivityPb)
 							{
-								EncircleActivityPb encircleActivityPb = new EncircleActivityPb();
-								if (this.dataCase_ == ActivityData.DataOneofCase.EncircleActivityPb)
-								{
-									encircleActivityPb.MergeFrom(this.EncircleActivityPb);
-								}
-								input.ReadMessage(encircleActivityPb);
-								this.EncircleActivityPb = encircleActivityPb;
-								continue;
+								encircleActivityPb.MergeFrom(this.EncircleActivityPb);
 							}
+							input.ReadMessage(encircleActivityPb);
+							this.EncircleActivityPb = encircleActivityPb;
+							continue;
+						}
+					}
+				}
+				else if (num <= 850U)
+				{
+					if (num <= 786U)
+					{
+						if (num <= 754U)
+						{
 							if (num == 738U)
 							{
 								MotorDevelopActivityData motorDevelopActivityData = new MotorDevelopActivityData();
@@ -6518,9 +6653,6 @@ namespace Aki.Protocol
 								this.MotorDevelopActivityData = motorDevelopActivityData;
 								continue;
 							}
-						}
-						else if (num <= 754U)
-						{
 							if (num == 746U)
 							{
 								FlagChallengeActivityInfo flagChallengeActivityInfo = new FlagChallengeActivityInfo();
@@ -6544,7 +6676,7 @@ namespace Aki.Protocol
 								continue;
 							}
 						}
-						else
+						else if (num <= 770U)
 						{
 							if (num == 762U)
 							{
@@ -6569,10 +6701,7 @@ namespace Aki.Protocol
 								continue;
 							}
 						}
-					}
-					else if (num <= 802U)
-					{
-						if (num <= 786U)
+						else
 						{
 							if (num == 778U)
 							{
@@ -6597,7 +6726,10 @@ namespace Aki.Protocol
 								continue;
 							}
 						}
-						else
+					}
+					else if (num <= 818U)
+					{
+						if (num <= 802U)
 						{
 							if (num == 794U)
 							{
@@ -6622,33 +6754,33 @@ namespace Aki.Protocol
 								continue;
 							}
 						}
-					}
-					else if (num <= 818U)
-					{
-						if (num == 810U)
+						else
 						{
-							WuWuWeekActivity wuWuWeekActivity = new WuWuWeekActivity();
-							if (this.dataCase_ == ActivityData.DataOneofCase.WuWuWeekActivity)
+							if (num == 810U)
 							{
-								wuWuWeekActivity.MergeFrom(this.WuWuWeekActivity);
+								WuWuWeekActivity wuWuWeekActivity = new WuWuWeekActivity();
+								if (this.dataCase_ == ActivityData.DataOneofCase.WuWuWeekActivity)
+								{
+									wuWuWeekActivity.MergeFrom(this.WuWuWeekActivity);
+								}
+								input.ReadMessage(wuWuWeekActivity);
+								this.WuWuWeekActivity = wuWuWeekActivity;
+								continue;
 							}
-							input.ReadMessage(wuWuWeekActivity);
-							this.WuWuWeekActivity = wuWuWeekActivity;
-							continue;
-						}
-						if (num == 818U)
-						{
-							MotorDecalActivityData motorDecalActivityData = new MotorDecalActivityData();
-							if (this.dataCase_ == ActivityData.DataOneofCase.MotorDecalActivityData)
+							if (num == 818U)
 							{
-								motorDecalActivityData.MergeFrom(this.MotorDecalActivityData);
+								MotorDecalActivityData motorDecalActivityData = new MotorDecalActivityData();
+								if (this.dataCase_ == ActivityData.DataOneofCase.MotorDecalActivityData)
+								{
+									motorDecalActivityData.MergeFrom(this.MotorDecalActivityData);
+								}
+								input.ReadMessage(motorDecalActivityData);
+								this.MotorDecalActivityData = motorDecalActivityData;
+								continue;
 							}
-							input.ReadMessage(motorDecalActivityData);
-							this.MotorDecalActivityData = motorDecalActivityData;
-							continue;
 						}
 					}
-					else
+					else if (num <= 834U)
 					{
 						if (num == 826U)
 						{
@@ -6673,37 +6805,37 @@ namespace Aki.Protocol
 							continue;
 						}
 					}
-				}
-				else if (num <= 898U)
-				{
-					if (num <= 866U)
+					else
 					{
-						if (num <= 850U)
+						if (num == 842U)
 						{
-							if (num == 842U)
+							KurotatoActivityData kurotatoActivityData = new KurotatoActivityData();
+							if (this.dataCase_ == ActivityData.DataOneofCase.KurotatoActivityData)
 							{
-								KurotatoActivityData kurotatoActivityData = new KurotatoActivityData();
-								if (this.dataCase_ == ActivityData.DataOneofCase.KurotatoActivityData)
-								{
-									kurotatoActivityData.MergeFrom(this.KurotatoActivityData);
-								}
-								input.ReadMessage(kurotatoActivityData);
-								this.KurotatoActivityData = kurotatoActivityData;
-								continue;
+								kurotatoActivityData.MergeFrom(this.KurotatoActivityData);
 							}
-							if (num == 850U)
-							{
-								GolemCrackActivityInfo golemCrackActivityInfo = new GolemCrackActivityInfo();
-								if (this.dataCase_ == ActivityData.DataOneofCase.GolemCrackActivityInfo)
-								{
-									golemCrackActivityInfo.MergeFrom(this.GolemCrackActivityInfo);
-								}
-								input.ReadMessage(golemCrackActivityInfo);
-								this.GolemCrackActivityInfo = golemCrackActivityInfo;
-								continue;
-							}
+							input.ReadMessage(kurotatoActivityData);
+							this.KurotatoActivityData = kurotatoActivityData;
+							continue;
 						}
-						else
+						if (num == 850U)
+						{
+							GolemCrackActivityInfo golemCrackActivityInfo = new GolemCrackActivityInfo();
+							if (this.dataCase_ == ActivityData.DataOneofCase.GolemCrackActivityInfo)
+							{
+								golemCrackActivityInfo.MergeFrom(this.GolemCrackActivityInfo);
+							}
+							input.ReadMessage(golemCrackActivityInfo);
+							this.GolemCrackActivityInfo = golemCrackActivityInfo;
+							continue;
+						}
+					}
+				}
+				else if (num <= 914U)
+				{
+					if (num <= 882U)
+					{
+						if (num <= 866U)
 						{
 							if (num == 858U)
 							{
@@ -6728,33 +6860,33 @@ namespace Aki.Protocol
 								continue;
 							}
 						}
-					}
-					else if (num <= 882U)
-					{
-						if (num == 874U)
+						else
 						{
-							RealmBetweenActivityInfo realmBetweenActivityInfo = new RealmBetweenActivityInfo();
-							if (this.dataCase_ == ActivityData.DataOneofCase.RealmBetweenActivityInfo)
+							if (num == 874U)
 							{
-								realmBetweenActivityInfo.MergeFrom(this.RealmBetweenActivityInfo);
+								RealmBetweenActivityInfo realmBetweenActivityInfo = new RealmBetweenActivityInfo();
+								if (this.dataCase_ == ActivityData.DataOneofCase.RealmBetweenActivityInfo)
+								{
+									realmBetweenActivityInfo.MergeFrom(this.RealmBetweenActivityInfo);
+								}
+								input.ReadMessage(realmBetweenActivityInfo);
+								this.RealmBetweenActivityInfo = realmBetweenActivityInfo;
+								continue;
 							}
-							input.ReadMessage(realmBetweenActivityInfo);
-							this.RealmBetweenActivityInfo = realmBetweenActivityInfo;
-							continue;
-						}
-						if (num == 882U)
-						{
-							ThroughTrainSummaryActivityData throughTrainSummaryActivityData = new ThroughTrainSummaryActivityData();
-							if (this.dataCase_ == ActivityData.DataOneofCase.ThroughTrainSummaryActivityData)
+							if (num == 882U)
 							{
-								throughTrainSummaryActivityData.MergeFrom(this.ThroughTrainSummaryActivityData);
+								ThroughTrainSummaryActivityData throughTrainSummaryActivityData = new ThroughTrainSummaryActivityData();
+								if (this.dataCase_ == ActivityData.DataOneofCase.ThroughTrainSummaryActivityData)
+								{
+									throughTrainSummaryActivityData.MergeFrom(this.ThroughTrainSummaryActivityData);
+								}
+								input.ReadMessage(throughTrainSummaryActivityData);
+								this.ThroughTrainSummaryActivityData = throughTrainSummaryActivityData;
+								continue;
 							}
-							input.ReadMessage(throughTrainSummaryActivityData);
-							this.ThroughTrainSummaryActivityData = throughTrainSummaryActivityData;
-							continue;
 						}
 					}
-					else
+					else if (num <= 898U)
 					{
 						if (num == 890U)
 						{
@@ -6779,10 +6911,7 @@ namespace Aki.Protocol
 							continue;
 						}
 					}
-				}
-				else if (num <= 930U)
-				{
-					if (num <= 914U)
+					else
 					{
 						if (num == 906U)
 						{
@@ -6807,7 +6936,10 @@ namespace Aki.Protocol
 							continue;
 						}
 					}
-					else
+				}
+				else if (num <= 946U)
+				{
+					if (num <= 930U)
 					{
 						if (num == 922U)
 						{
@@ -6832,33 +6964,33 @@ namespace Aki.Protocol
 							continue;
 						}
 					}
-				}
-				else if (num <= 946U)
-				{
-					if (num == 938U)
+					else
 					{
-						DangoBrawlActivityInfo dangoBrawlActivityInfo = new DangoBrawlActivityInfo();
-						if (this.dataCase_ == ActivityData.DataOneofCase.DangoBrawlActivityInfo)
+						if (num == 938U)
 						{
-							dangoBrawlActivityInfo.MergeFrom(this.DangoBrawlActivityInfo);
+							DangoBrawlActivityInfo dangoBrawlActivityInfo = new DangoBrawlActivityInfo();
+							if (this.dataCase_ == ActivityData.DataOneofCase.DangoBrawlActivityInfo)
+							{
+								dangoBrawlActivityInfo.MergeFrom(this.DangoBrawlActivityInfo);
+							}
+							input.ReadMessage(dangoBrawlActivityInfo);
+							this.DangoBrawlActivityInfo = dangoBrawlActivityInfo;
+							continue;
 						}
-						input.ReadMessage(dangoBrawlActivityInfo);
-						this.DangoBrawlActivityInfo = dangoBrawlActivityInfo;
-						continue;
-					}
-					if (num == 946U)
-					{
-						QingXiaoActivityInfo qingXiaoActivityInfo = new QingXiaoActivityInfo();
-						if (this.dataCase_ == ActivityData.DataOneofCase.QingXiaoActivityInfo)
+						if (num == 946U)
 						{
-							qingXiaoActivityInfo.MergeFrom(this.QingXiaoActivityInfo);
+							QingXiaoActivityInfo qingXiaoActivityInfo = new QingXiaoActivityInfo();
+							if (this.dataCase_ == ActivityData.DataOneofCase.QingXiaoActivityInfo)
+							{
+								qingXiaoActivityInfo.MergeFrom(this.QingXiaoActivityInfo);
+							}
+							input.ReadMessage(qingXiaoActivityInfo);
+							this.QingXiaoActivityInfo = qingXiaoActivityInfo;
+							continue;
 						}
-						input.ReadMessage(qingXiaoActivityInfo);
-						this.QingXiaoActivityInfo = qingXiaoActivityInfo;
-						continue;
 					}
 				}
-				else
+				else if (num <= 970U)
 				{
 					if (num == 962U)
 					{
@@ -6883,649 +7015,685 @@ namespace Aki.Protocol
 						continue;
 					}
 				}
+				else
+				{
+					if (num == 978U)
+					{
+						SolarSchoolActivityPb solarSchoolActivityPb = new SolarSchoolActivityPb();
+						if (this.dataCase_ == ActivityData.DataOneofCase.SolarSchoolActivityPb)
+						{
+							solarSchoolActivityPb.MergeFrom(this.SolarSchoolActivityPb);
+						}
+						input.ReadMessage(solarSchoolActivityPb);
+						this.SolarSchoolActivityPb = solarSchoolActivityPb;
+						continue;
+					}
+					if (num == 986U)
+					{
+						RoleTowerActivityData roleTowerActivityData = new RoleTowerActivityData();
+						if (this.dataCase_ == ActivityData.DataOneofCase.RoleTowerActivityData)
+						{
+							roleTowerActivityData.MergeFrom(this.RoleTowerActivityData);
+						}
+						input.ReadMessage(roleTowerActivityData);
+						this.RoleTowerActivityData = roleTowerActivityData;
+						continue;
+					}
+				}
+				IL_82E:
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x040021AB RID: 8619
+		// Token: 0x0400220A RID: 8714
 		private static readonly MessageParser<ActivityData> _parser = new MessageParser<ActivityData>(() => new ActivityData());
 
-		// Token: 0x040021AC RID: 8620
+		// Token: 0x0400220B RID: 8715
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040021AD RID: 8621
+		// Token: 0x0400220C RID: 8716
 		public const int IdFieldNumber = 1;
 
-		// Token: 0x040021AE RID: 8622
+		// Token: 0x0400220D RID: 8717
 		private int id_;
 
-		// Token: 0x040021AF RID: 8623
+		// Token: 0x0400220E RID: 8718
 		public const int TypeFieldNumber = 2;
 
-		// Token: 0x040021B0 RID: 8624
+		// Token: 0x0400220F RID: 8719
 		private ActivityType type_;
 
-		// Token: 0x040021B1 RID: 8625
+		// Token: 0x04002210 RID: 8720
 		public const int BeginShowTimeFieldNumber = 3;
 
-		// Token: 0x040021B2 RID: 8626
+		// Token: 0x04002211 RID: 8721
 		private long beginShowTime_;
 
-		// Token: 0x040021B3 RID: 8627
+		// Token: 0x04002212 RID: 8722
 		public const int EndShowTimeFieldNumber = 4;
 
-		// Token: 0x040021B4 RID: 8628
+		// Token: 0x04002213 RID: 8723
 		private long endShowTime_;
 
-		// Token: 0x040021B5 RID: 8629
+		// Token: 0x04002214 RID: 8724
 		public const int BeginOpenTimeFieldNumber = 5;
 
-		// Token: 0x040021B6 RID: 8630
+		// Token: 0x04002215 RID: 8725
 		private long beginOpenTime_;
 
-		// Token: 0x040021B7 RID: 8631
+		// Token: 0x04002216 RID: 8726
 		public const int EndOpenTimeFieldNumber = 6;
 
-		// Token: 0x040021B8 RID: 8632
+		// Token: 0x04002217 RID: 8727
 		private long endOpenTime_;
 
-		// Token: 0x040021B9 RID: 8633
+		// Token: 0x04002218 RID: 8728
 		public const int IsUnlockFieldNumber = 7;
 
-		// Token: 0x040021BA RID: 8634
+		// Token: 0x04002219 RID: 8729
 		private bool isUnlock_;
 
-		// Token: 0x040021BB RID: 8635
+		// Token: 0x0400221A RID: 8730
 		public const int CompletePreQuestsFieldNumber = 8;
 
-		// Token: 0x040021BC RID: 8636
+		// Token: 0x0400221B RID: 8731
 		private static readonly FieldCodec<int> _repeated_completePreQuests_codec = FieldCodec.ForInt32(66U);
 
-		// Token: 0x040021BD RID: 8637
+		// Token: 0x0400221C RID: 8732
 		private readonly RepeatedField<int> completePreQuests_ = new RepeatedField<int>();
 
-		// Token: 0x040021BE RID: 8638
+		// Token: 0x0400221D RID: 8733
 		public const int IsFirstOpenFieldNumber = 9;
 
-		// Token: 0x040021BF RID: 8639
+		// Token: 0x0400221E RID: 8734
 		private bool isFirstOpen_;
 
-		// Token: 0x040021C0 RID: 8640
+		// Token: 0x0400221F RID: 8735
 		public const int FinishConditionsFieldNumber = 30;
 
-		// Token: 0x040021C1 RID: 8641
+		// Token: 0x04002220 RID: 8736
 		private static readonly FieldCodec<int> _repeated_finishConditions_codec = FieldCodec.ForInt32(242U);
 
-		// Token: 0x040021C2 RID: 8642
+		// Token: 0x04002221 RID: 8737
 		private readonly RepeatedField<int> finishConditions_ = new RepeatedField<int>();
 
-		// Token: 0x040021C3 RID: 8643
+		// Token: 0x04002222 RID: 8738
 		public const int ActivityOpenTypeFieldNumber = 33;
 
-		// Token: 0x040021C4 RID: 8644
+		// Token: 0x04002223 RID: 8739
 		private ActivityOpenType activityOpenType_;
 
-		// Token: 0x040021C5 RID: 8645
+		// Token: 0x04002224 RID: 8740
 		public const int CanPreOpenFieldNumber = 42;
 
-		// Token: 0x040021C6 RID: 8646
+		// Token: 0x04002225 RID: 8741
 		private bool canPreOpen_;
 
-		// Token: 0x040021C7 RID: 8647
+		// Token: 0x04002226 RID: 8742
 		public const int LimitBeginTimeFieldNumber = 67;
 
-		// Token: 0x040021C8 RID: 8648
+		// Token: 0x04002227 RID: 8743
 		private long limitBeginTime_;
 
-		// Token: 0x040021C9 RID: 8649
+		// Token: 0x04002228 RID: 8744
 		public const int LimitEndTimeFieldNumber = 68;
 
-		// Token: 0x040021CA RID: 8650
+		// Token: 0x04002229 RID: 8745
 		private long limitEndTime_;
 
-		// Token: 0x040021CB RID: 8651
+		// Token: 0x0400222A RID: 8746
 		public const int LimitRewardBeginTimeFieldNumber = 69;
 
-		// Token: 0x040021CC RID: 8652
+		// Token: 0x0400222B RID: 8747
 		private long limitRewardBeginTime_;
 
-		// Token: 0x040021CD RID: 8653
+		// Token: 0x0400222C RID: 8748
 		public const int LimitRewardEndTimeFieldNumber = 70;
 
-		// Token: 0x040021CE RID: 8654
+		// Token: 0x0400222D RID: 8749
 		private long limitRewardEndTime_;
 
-		// Token: 0x040021CF RID: 8655
+		// Token: 0x0400222E RID: 8750
 		public const int ParkourActivityFieldNumber = 10;
 
-		// Token: 0x040021D0 RID: 8656
+		// Token: 0x0400222F RID: 8751
 		public const int SignActivityFieldNumber = 11;
 
-		// Token: 0x040021D1 RID: 8657
+		// Token: 0x04002230 RID: 8752
 		public const int NewBieCourseActivityFieldNumber = 12;
 
-		// Token: 0x040021D2 RID: 8658
+		// Token: 0x04002231 RID: 8753
 		public const int DoubleInstActivityRewardFieldNumber = 13;
 
-		// Token: 0x040021D3 RID: 8659
+		// Token: 0x04002232 RID: 8754
 		public const int HarvestActivityFieldNumber = 14;
 
-		// Token: 0x040021D4 RID: 8660
+		// Token: 0x04002233 RID: 8755
 		public const int RoleTrialInfoActivityFieldNumber = 15;
 
-		// Token: 0x040021D5 RID: 8661
+		// Token: 0x04002234 RID: 8756
 		public const int PhantomCollectActivityFieldNumber = 16;
 
-		// Token: 0x040021D6 RID: 8662
+		// Token: 0x04002235 RID: 8757
 		public const int GatherActivityInfoFieldNumber = 17;
 
-		// Token: 0x040021D7 RID: 8663
+		// Token: 0x04002236 RID: 8758
 		public const int DailyAdventureActivityDataFieldNumber = 18;
 
-		// Token: 0x040021D8 RID: 8664
+		// Token: 0x04002237 RID: 8759
 		public const int RoguelikeActivityDataFieldNumber = 19;
 
-		// Token: 0x040021D9 RID: 8665
+		// Token: 0x04002238 RID: 8760
 		public const int LongShanActivityDataFieldNumber = 20;
 
-		// Token: 0x040021DA RID: 8666
+		// Token: 0x04002239 RID: 8761
 		public const int TurntableActivityDataFieldNumber = 21;
 
-		// Token: 0x040021DB RID: 8667
+		// Token: 0x0400223A RID: 8762
 		public const int BossRushActivityDataFieldNumber = 22;
 
-		// Token: 0x040021DC RID: 8668
+		// Token: 0x0400223B RID: 8763
 		public const int TrackMoonActivityTaskDataFieldNumber = 23;
 
-		// Token: 0x040021DD RID: 8669
+		// Token: 0x0400223C RID: 8764
 		public const int TimePointRewardActivityDataFieldNumber = 24;
 
-		// Token: 0x040021DE RID: 8670
+		// Token: 0x0400223D RID: 8765
 		public const int TowerDefenceActivityDataFieldNumber = 25;
 
-		// Token: 0x040021DF RID: 8671
+		// Token: 0x0400223E RID: 8766
 		public const int CircumFluenceTaskDataFieldNumber = 26;
 
-		// Token: 0x040021E0 RID: 8672
+		// Token: 0x0400223F RID: 8767
 		public const int TraceMoonPhaseDataFieldNumber = 27;
 
-		// Token: 0x040021E1 RID: 8673
+		// Token: 0x04002240 RID: 8768
 		public const int CorniceMeetingDataFieldNumber = 28;
 
-		// Token: 0x040021E2 RID: 8674
+		// Token: 0x04002241 RID: 8769
 		public const int RiskHarvestActivityInfoFieldNumber = 29;
 
-		// Token: 0x040021E3 RID: 8675
+		// Token: 0x04002242 RID: 8770
 		public const int BlackCoastThemeActivityDataFieldNumber = 31;
 
-		// Token: 0x040021E4 RID: 8676
+		// Token: 0x04002243 RID: 8771
 		public const int RogueWhiteCatDataFieldNumber = 32;
 
-		// Token: 0x040021E5 RID: 8677
+		// Token: 0x04002244 RID: 8772
 		public const int ScratchCardActivityInfoFieldNumber = 34;
 
-		// Token: 0x040021E6 RID: 8678
+		// Token: 0x04002245 RID: 8773
 		public const int PreheatSignActivityInfoFieldNumber = 35;
 
-		// Token: 0x040021E7 RID: 8679
+		// Token: 0x04002246 RID: 8774
 		public const int MowTowerActivityInfoFieldNumber = 36;
 
-		// Token: 0x040021E8 RID: 8680
+		// Token: 0x04002247 RID: 8775
 		public const int FarmGoldInfoFieldNumber = 37;
 
-		// Token: 0x040021E9 RID: 8681
+		// Token: 0x04002248 RID: 8776
 		public const int SpringSignInfoFieldNumber = 38;
 
-		// Token: 0x040021EA RID: 8682
+		// Token: 0x04002249 RID: 8777
 		public const int MapTravelActivityInfoFieldNumber = 39;
 
-		// Token: 0x040021EB RID: 8683
+		// Token: 0x0400224A RID: 8778
 		public const int RoleSkinTrialInfoActivityFieldNumber = 40;
 
-		// Token: 0x040021EC RID: 8684
+		// Token: 0x0400224B RID: 8779
 		public const int FishingActivityInfoFieldNumber = 41;
 
-		// Token: 0x040021ED RID: 8685
+		// Token: 0x0400224C RID: 8780
 		public const int RogueWeeklyDataFieldNumber = 43;
 
-		// Token: 0x040021EE RID: 8686
+		// Token: 0x0400224D RID: 8781
 		public const int TeamParkourLevelActivityInfoFieldNumber = 44;
 
-		// Token: 0x040021EF RID: 8687
+		// Token: 0x0400224E RID: 8782
 		public const int BabelActivityInfoFieldNumber = 45;
 
-		// Token: 0x040021F0 RID: 8688
+		// Token: 0x0400224F RID: 8783
 		public const int RacingBetsDataFieldNumber = 46;
 
-		// Token: 0x040021F1 RID: 8689
+		// Token: 0x04002250 RID: 8784
 		public const int ExploreActivityInfoFieldNumber = 47;
 
-		// Token: 0x040021F2 RID: 8690
+		// Token: 0x04002251 RID: 8785
 		public const int RogueResActivityDataFieldNumber = 48;
 
-		// Token: 0x040021F3 RID: 8691
+		// Token: 0x04002252 RID: 8786
 		public const int AvignonActivityInfoFieldNumber = 49;
 
-		// Token: 0x040021F4 RID: 8692
+		// Token: 0x04002253 RID: 8787
 		public const int AbyssInfoFieldNumber = 50;
 
-		// Token: 0x040021F5 RID: 8693
+		// Token: 0x04002254 RID: 8788
 		public const int H5CircumFluenceDataFieldNumber = 51;
 
-		// Token: 0x040021F6 RID: 8694
+		// Token: 0x04002255 RID: 8789
 		public const int DangoMonopolyActivityDataFieldNumber = 52;
 
-		// Token: 0x040021F7 RID: 8695
+		// Token: 0x04002256 RID: 8790
 		public const int CiacconaActivityPbDataFieldNumber = 53;
 
-		// Token: 0x040021F8 RID: 8696
+		// Token: 0x04002257 RID: 8791
 		public const int ActivityLinkageDataFieldNumber = 54;
 
-		// Token: 0x040021F9 RID: 8697
+		// Token: 0x04002258 RID: 8792
 		public const int RegressDataFieldNumber = 55;
 
-		// Token: 0x040021FA RID: 8698
+		// Token: 0x04002259 RID: 8793
 		public const int ConsumptiveActivityInfoFieldNumber = 56;
 
-		// Token: 0x040021FB RID: 8699
+		// Token: 0x0400225A RID: 8794
 		public const int PhantomBattleActivityInfoFieldNumber = 57;
 
-		// Token: 0x040021FC RID: 8700
+		// Token: 0x0400225B RID: 8795
 		public const int NewbieCarnivalDataFieldNumber = 58;
 
-		// Token: 0x040021FD RID: 8701
+		// Token: 0x0400225C RID: 8796
 		public const int MoraleActivityDataFieldNumber = 59;
 
-		// Token: 0x040021FE RID: 8702
+		// Token: 0x0400225D RID: 8797
 		public const int FloroRanchActivityDataFieldNumber = 60;
 
-		// Token: 0x040021FF RID: 8703
+		// Token: 0x0400225E RID: 8798
 		public const int LifePointChallengeFieldNumber = 61;
 
-		// Token: 0x04002200 RID: 8704
+		// Token: 0x0400225F RID: 8799
 		public const int TrapDefenseActivityInfoFieldNumber = 62;
 
-		// Token: 0x04002201 RID: 8705
+		// Token: 0x04002260 RID: 8800
 		public const int FunPlayActivityInfoFieldNumber = 63;
 
-		// Token: 0x04002202 RID: 8706
+		// Token: 0x04002261 RID: 8801
 		public const int JinzhouFlyDataFieldNumber = 64;
 
-		// Token: 0x04002203 RID: 8707
+		// Token: 0x04002262 RID: 8802
 		public const int LineCrossActivityDataFieldNumber = 65;
 
-		// Token: 0x04002204 RID: 8708
+		// Token: 0x04002263 RID: 8803
 		public const int MoonPhaseActivityDataFieldNumber = 66;
 
-		// Token: 0x04002205 RID: 8709
+		// Token: 0x04002264 RID: 8804
 		public const int HonamiStoryActivityInfoFieldNumber = 71;
 
-		// Token: 0x04002206 RID: 8710
+		// Token: 0x04002265 RID: 8805
 		public const int PhotoFightActivityDataFieldNumber = 72;
 
-		// Token: 0x04002207 RID: 8711
+		// Token: 0x04002266 RID: 8806
 		public const int SurvivorsActivityDataFieldNumber = 73;
 
-		// Token: 0x04002208 RID: 8712
+		// Token: 0x04002267 RID: 8807
 		public const int WuWuKujiActivityInfoFieldNumber = 74;
 
-		// Token: 0x04002209 RID: 8713
+		// Token: 0x04002268 RID: 8808
 		public const int AdvertisingPageInfoFieldNumber = 75;
 
-		// Token: 0x0400220A RID: 8714
+		// Token: 0x04002269 RID: 8809
 		public const int ArtemisActivityInfoFieldNumber = 76;
 
-		// Token: 0x0400220B RID: 8715
+		// Token: 0x0400226A RID: 8810
 		public const int RoleCoopActivityDataFieldNumber = 77;
 
-		// Token: 0x0400220C RID: 8716
+		// Token: 0x0400226B RID: 8811
 		public const int MotorCycleIpActivityDataFieldNumber = 78;
 
-		// Token: 0x0400220D RID: 8717
+		// Token: 0x0400226C RID: 8812
 		public const int PhantomBattleRecordActivityInfoFieldNumber = 79;
 
-		// Token: 0x0400220E RID: 8718
+		// Token: 0x0400226D RID: 8813
 		public const int InfrThemeActivityPbFieldNumber = 80;
 
-		// Token: 0x0400220F RID: 8719
+		// Token: 0x0400226E RID: 8814
 		public const int RoadBookActivityInfoFieldNumber = 81;
 
-		// Token: 0x04002210 RID: 8720
+		// Token: 0x0400226F RID: 8815
 		public const int PhantomBattleGuideActivityFieldNumber = 82;
 
-		// Token: 0x04002211 RID: 8721
+		// Token: 0x04002270 RID: 8816
 		public const int NewTowerClimbingActivityDataFieldNumber = 83;
 
-		// Token: 0x04002212 RID: 8722
+		// Token: 0x04002271 RID: 8817
 		public const int NewPlayerSupportActivityDataFieldNumber = 84;
 
-		// Token: 0x04002213 RID: 8723
+		// Token: 0x04002272 RID: 8818
 		public const int MotorParkourActivityInfoFieldNumber = 85;
 
-		// Token: 0x04002214 RID: 8724
+		// Token: 0x04002273 RID: 8819
 		public const int SpringFestivalActivityInfoFieldNumber = 86;
 
-		// Token: 0x04002215 RID: 8725
+		// Token: 0x04002274 RID: 8820
 		public const int TotalTopUpActivityInfoFieldNumber = 87;
 
-		// Token: 0x04002216 RID: 8726
+		// Token: 0x04002275 RID: 8821
 		public const int MotorFightActivityPbFieldNumber = 88;
 
-		// Token: 0x04002217 RID: 8727
+		// Token: 0x04002276 RID: 8822
 		public const int H5ViewActivityDataFieldNumber = 89;
 
-		// Token: 0x04002218 RID: 8728
+		// Token: 0x04002277 RID: 8823
 		public const int SkinRewardActivityDataFieldNumber = 90;
 
-		// Token: 0x04002219 RID: 8729
+		// Token: 0x04002278 RID: 8824
 		public const int EncircleActivityPbFieldNumber = 91;
 
-		// Token: 0x0400221A RID: 8730
+		// Token: 0x04002279 RID: 8825
 		public const int MotorDevelopActivityDataFieldNumber = 92;
 
-		// Token: 0x0400221B RID: 8731
+		// Token: 0x0400227A RID: 8826
 		public const int FlagChallengeActivityInfoFieldNumber = 93;
 
-		// Token: 0x0400221C RID: 8732
+		// Token: 0x0400227B RID: 8827
 		public const int FeiXuePreheatActivityInfoFieldNumber = 94;
 
-		// Token: 0x0400221D RID: 8733
+		// Token: 0x0400227C RID: 8828
 		public const int RhythmActivityPbFieldNumber = 95;
 
-		// Token: 0x0400221E RID: 8734
+		// Token: 0x0400227D RID: 8829
 		public const int DropCatchActivityInfoFieldNumber = 96;
 
-		// Token: 0x0400221F RID: 8735
+		// Token: 0x0400227E RID: 8830
 		public const int TetrisActivityInfoFieldNumber = 97;
 
-		// Token: 0x04002220 RID: 8736
+		// Token: 0x0400227F RID: 8831
 		public const int PinballActivityDataFieldNumber = 98;
 
-		// Token: 0x04002221 RID: 8737
+		// Token: 0x04002280 RID: 8832
 		public const int BossPilingActivityInfoFieldNumber = 99;
 
-		// Token: 0x04002222 RID: 8738
+		// Token: 0x04002281 RID: 8833
 		public const int ThemeCelebrationFieldNumber = 100;
 
-		// Token: 0x04002223 RID: 8739
+		// Token: 0x04002282 RID: 8834
 		public const int WuWuWeekActivityFieldNumber = 101;
 
-		// Token: 0x04002224 RID: 8740
+		// Token: 0x04002283 RID: 8835
 		public const int MotorDecalActivityDataFieldNumber = 102;
 
-		// Token: 0x04002225 RID: 8741
+		// Token: 0x04002284 RID: 8836
 		public const int LinkageCheckInActivityDataFieldNumber = 103;
 
-		// Token: 0x04002226 RID: 8742
+		// Token: 0x04002285 RID: 8837
 		public const int RoleGiftActivityDataFieldNumber = 104;
 
-		// Token: 0x04002227 RID: 8743
+		// Token: 0x04002286 RID: 8838
 		public const int KurotatoActivityDataFieldNumber = 105;
 
-		// Token: 0x04002228 RID: 8744
+		// Token: 0x04002287 RID: 8839
 		public const int GolemCrackActivityInfoFieldNumber = 106;
 
-		// Token: 0x04002229 RID: 8745
+		// Token: 0x04002288 RID: 8840
 		public const int EdgeRunnerActivityInfoFieldNumber = 107;
 
-		// Token: 0x0400222A RID: 8746
+		// Token: 0x04002289 RID: 8841
 		public const int OnlineMotorActivityDataFieldNumber = 108;
 
-		// Token: 0x0400222B RID: 8747
+		// Token: 0x0400228A RID: 8842
 		public const int RealmBetweenActivityInfoFieldNumber = 109;
 
-		// Token: 0x0400222C RID: 8748
+		// Token: 0x0400228B RID: 8843
 		public const int ThroughTrainSummaryActivityDataFieldNumber = 110;
 
-		// Token: 0x0400222D RID: 8749
+		// Token: 0x0400228C RID: 8844
 		public const int NewbieMainActivityPbFieldNumber = 111;
 
-		// Token: 0x0400222E RID: 8750
+		// Token: 0x0400228D RID: 8845
 		public const int NewbieCourseV2ActivityPbFieldNumber = 112;
 
-		// Token: 0x0400222F RID: 8751
+		// Token: 0x0400228E RID: 8846
 		public const int NewbieAdventureV2PbFieldNumber = 113;
 
-		// Token: 0x04002230 RID: 8752
+		// Token: 0x0400228F RID: 8847
 		public const int NewPlayerSupportActivityV2PbFieldNumber = 114;
 
-		// Token: 0x04002231 RID: 8753
+		// Token: 0x04002290 RID: 8848
 		public const int ThroughTrainActivityDataFieldNumber = 115;
 
-		// Token: 0x04002232 RID: 8754
+		// Token: 0x04002291 RID: 8849
 		public const int RoverRogueActivityDataFieldNumber = 116;
 
-		// Token: 0x04002233 RID: 8755
+		// Token: 0x04002292 RID: 8850
 		public const int DangoBrawlActivityInfoFieldNumber = 117;
 
-		// Token: 0x04002234 RID: 8756
+		// Token: 0x04002293 RID: 8851
 		public const int QingXiaoActivityInfoFieldNumber = 118;
 
-		// Token: 0x04002235 RID: 8757
+		// Token: 0x04002294 RID: 8852
 		public const int MatchThreeActivityInfoFieldNumber = 120;
 
-		// Token: 0x04002236 RID: 8758
+		// Token: 0x04002295 RID: 8853
 		public const int GiantActivityInfoFieldNumber = 121;
 
-		// Token: 0x04002237 RID: 8759
+		// Token: 0x04002296 RID: 8854
+		public const int SolarSchoolActivityPbFieldNumber = 122;
+
+		// Token: 0x04002297 RID: 8855
+		public const int RoleTowerActivityDataFieldNumber = 123;
+
+		// Token: 0x04002298 RID: 8856
 		private object data_;
 
-		// Token: 0x04002238 RID: 8760
+		// Token: 0x04002299 RID: 8857
 		private ActivityData.DataOneofCase dataCase_;
 
-		// Token: 0x020016D5 RID: 5845
+		// Token: 0x02001751 RID: 5969
 		public enum DataOneofCase
 		{
-			// Token: 0x0400C4A8 RID: 50344
+			// Token: 0x0400C9D7 RID: 51671
 			None,
-			// Token: 0x0400C4A9 RID: 50345
+			// Token: 0x0400C9D8 RID: 51672
 			ParkourActivity = 10,
-			// Token: 0x0400C4AA RID: 50346
+			// Token: 0x0400C9D9 RID: 51673
 			SignActivity,
-			// Token: 0x0400C4AB RID: 50347
+			// Token: 0x0400C9DA RID: 51674
 			NewBieCourseActivity,
-			// Token: 0x0400C4AC RID: 50348
+			// Token: 0x0400C9DB RID: 51675
 			DoubleInstActivityReward,
-			// Token: 0x0400C4AD RID: 50349
+			// Token: 0x0400C9DC RID: 51676
 			HarvestActivity,
-			// Token: 0x0400C4AE RID: 50350
+			// Token: 0x0400C9DD RID: 51677
 			RoleTrialInfoActivity,
-			// Token: 0x0400C4AF RID: 50351
+			// Token: 0x0400C9DE RID: 51678
 			PhantomCollectActivity,
-			// Token: 0x0400C4B0 RID: 50352
+			// Token: 0x0400C9DF RID: 51679
 			GatherActivityInfo,
-			// Token: 0x0400C4B1 RID: 50353
+			// Token: 0x0400C9E0 RID: 51680
 			DailyAdventureActivityData,
-			// Token: 0x0400C4B2 RID: 50354
+			// Token: 0x0400C9E1 RID: 51681
 			RoguelikeActivityData,
-			// Token: 0x0400C4B3 RID: 50355
+			// Token: 0x0400C9E2 RID: 51682
 			LongShanActivityData,
-			// Token: 0x0400C4B4 RID: 50356
+			// Token: 0x0400C9E3 RID: 51683
 			TurntableActivityData,
-			// Token: 0x0400C4B5 RID: 50357
+			// Token: 0x0400C9E4 RID: 51684
 			BossRushActivityData,
-			// Token: 0x0400C4B6 RID: 50358
+			// Token: 0x0400C9E5 RID: 51685
 			TrackMoonActivityTaskData,
-			// Token: 0x0400C4B7 RID: 50359
+			// Token: 0x0400C9E6 RID: 51686
 			TimePointRewardActivityData,
-			// Token: 0x0400C4B8 RID: 50360
+			// Token: 0x0400C9E7 RID: 51687
 			TowerDefenceActivityData,
-			// Token: 0x0400C4B9 RID: 50361
+			// Token: 0x0400C9E8 RID: 51688
 			CircumFluenceTaskData,
-			// Token: 0x0400C4BA RID: 50362
+			// Token: 0x0400C9E9 RID: 51689
 			TraceMoonPhaseData,
-			// Token: 0x0400C4BB RID: 50363
+			// Token: 0x0400C9EA RID: 51690
 			CorniceMeetingData,
-			// Token: 0x0400C4BC RID: 50364
+			// Token: 0x0400C9EB RID: 51691
 			RiskHarvestActivityInfo,
-			// Token: 0x0400C4BD RID: 50365
+			// Token: 0x0400C9EC RID: 51692
 			BlackCoastThemeActivityData = 31,
-			// Token: 0x0400C4BE RID: 50366
+			// Token: 0x0400C9ED RID: 51693
 			RogueWhiteCatData,
-			// Token: 0x0400C4BF RID: 50367
+			// Token: 0x0400C9EE RID: 51694
 			ScratchCardActivityInfo = 34,
-			// Token: 0x0400C4C0 RID: 50368
+			// Token: 0x0400C9EF RID: 51695
 			PreheatSignActivityInfo,
-			// Token: 0x0400C4C1 RID: 50369
+			// Token: 0x0400C9F0 RID: 51696
 			MowTowerActivityInfo,
-			// Token: 0x0400C4C2 RID: 50370
+			// Token: 0x0400C9F1 RID: 51697
 			FarmGoldInfo,
-			// Token: 0x0400C4C3 RID: 50371
+			// Token: 0x0400C9F2 RID: 51698
 			SpringSignInfo,
-			// Token: 0x0400C4C4 RID: 50372
+			// Token: 0x0400C9F3 RID: 51699
 			MapTravelActivityInfo,
-			// Token: 0x0400C4C5 RID: 50373
+			// Token: 0x0400C9F4 RID: 51700
 			RoleSkinTrialInfoActivity,
-			// Token: 0x0400C4C6 RID: 50374
+			// Token: 0x0400C9F5 RID: 51701
 			FishingActivityInfo,
-			// Token: 0x0400C4C7 RID: 50375
+			// Token: 0x0400C9F6 RID: 51702
 			RogueWeeklyData = 43,
-			// Token: 0x0400C4C8 RID: 50376
+			// Token: 0x0400C9F7 RID: 51703
 			TeamParkourLevelActivityInfo,
-			// Token: 0x0400C4C9 RID: 50377
+			// Token: 0x0400C9F8 RID: 51704
 			BabelActivityInfo,
-			// Token: 0x0400C4CA RID: 50378
+			// Token: 0x0400C9F9 RID: 51705
 			RacingBetsData,
-			// Token: 0x0400C4CB RID: 50379
+			// Token: 0x0400C9FA RID: 51706
 			ExploreActivityInfo,
-			// Token: 0x0400C4CC RID: 50380
+			// Token: 0x0400C9FB RID: 51707
 			RogueResActivityData,
-			// Token: 0x0400C4CD RID: 50381
+			// Token: 0x0400C9FC RID: 51708
 			AvignonActivityInfo,
-			// Token: 0x0400C4CE RID: 50382
+			// Token: 0x0400C9FD RID: 51709
 			AbyssInfo,
-			// Token: 0x0400C4CF RID: 50383
+			// Token: 0x0400C9FE RID: 51710
 			H5CircumFluenceData,
-			// Token: 0x0400C4D0 RID: 50384
+			// Token: 0x0400C9FF RID: 51711
 			DangoMonopolyActivityData,
-			// Token: 0x0400C4D1 RID: 50385
+			// Token: 0x0400CA00 RID: 51712
 			CiacconaActivityPbData,
-			// Token: 0x0400C4D2 RID: 50386
+			// Token: 0x0400CA01 RID: 51713
 			ActivityLinkageData,
-			// Token: 0x0400C4D3 RID: 50387
+			// Token: 0x0400CA02 RID: 51714
 			RegressData,
-			// Token: 0x0400C4D4 RID: 50388
+			// Token: 0x0400CA03 RID: 51715
 			ConsumptiveActivityInfo,
-			// Token: 0x0400C4D5 RID: 50389
+			// Token: 0x0400CA04 RID: 51716
 			PhantomBattleActivityInfo,
-			// Token: 0x0400C4D6 RID: 50390
+			// Token: 0x0400CA05 RID: 51717
 			NewbieCarnivalData,
-			// Token: 0x0400C4D7 RID: 50391
+			// Token: 0x0400CA06 RID: 51718
 			MoraleActivityData,
-			// Token: 0x0400C4D8 RID: 50392
+			// Token: 0x0400CA07 RID: 51719
 			FloroRanchActivityData,
-			// Token: 0x0400C4D9 RID: 50393
+			// Token: 0x0400CA08 RID: 51720
 			LifePointChallenge,
-			// Token: 0x0400C4DA RID: 50394
+			// Token: 0x0400CA09 RID: 51721
 			TrapDefenseActivityInfo,
-			// Token: 0x0400C4DB RID: 50395
+			// Token: 0x0400CA0A RID: 51722
 			FunPlayActivityInfo,
-			// Token: 0x0400C4DC RID: 50396
+			// Token: 0x0400CA0B RID: 51723
 			JinzhouFlyData,
-			// Token: 0x0400C4DD RID: 50397
+			// Token: 0x0400CA0C RID: 51724
 			LineCrossActivityData,
-			// Token: 0x0400C4DE RID: 50398
+			// Token: 0x0400CA0D RID: 51725
 			MoonPhaseActivityData,
-			// Token: 0x0400C4DF RID: 50399
+			// Token: 0x0400CA0E RID: 51726
 			HonamiStoryActivityInfo = 71,
-			// Token: 0x0400C4E0 RID: 50400
+			// Token: 0x0400CA0F RID: 51727
 			PhotoFightActivityData,
-			// Token: 0x0400C4E1 RID: 50401
+			// Token: 0x0400CA10 RID: 51728
 			SurvivorsActivityData,
-			// Token: 0x0400C4E2 RID: 50402
+			// Token: 0x0400CA11 RID: 51729
 			WuWuKujiActivityInfo,
-			// Token: 0x0400C4E3 RID: 50403
+			// Token: 0x0400CA12 RID: 51730
 			AdvertisingPageInfo,
-			// Token: 0x0400C4E4 RID: 50404
+			// Token: 0x0400CA13 RID: 51731
 			ArtemisActivityInfo,
-			// Token: 0x0400C4E5 RID: 50405
+			// Token: 0x0400CA14 RID: 51732
 			RoleCoopActivityData,
-			// Token: 0x0400C4E6 RID: 50406
+			// Token: 0x0400CA15 RID: 51733
 			MotorCycleIpActivityData,
-			// Token: 0x0400C4E7 RID: 50407
+			// Token: 0x0400CA16 RID: 51734
 			PhantomBattleRecordActivityInfo,
-			// Token: 0x0400C4E8 RID: 50408
+			// Token: 0x0400CA17 RID: 51735
 			InfrThemeActivityPb,
-			// Token: 0x0400C4E9 RID: 50409
+			// Token: 0x0400CA18 RID: 51736
 			RoadBookActivityInfo,
-			// Token: 0x0400C4EA RID: 50410
+			// Token: 0x0400CA19 RID: 51737
 			PhantomBattleGuideActivity,
-			// Token: 0x0400C4EB RID: 50411
+			// Token: 0x0400CA1A RID: 51738
 			NewTowerClimbingActivityData,
-			// Token: 0x0400C4EC RID: 50412
+			// Token: 0x0400CA1B RID: 51739
 			NewPlayerSupportActivityData,
-			// Token: 0x0400C4ED RID: 50413
+			// Token: 0x0400CA1C RID: 51740
 			MotorParkourActivityInfo,
-			// Token: 0x0400C4EE RID: 50414
+			// Token: 0x0400CA1D RID: 51741
 			SpringFestivalActivityInfo,
-			// Token: 0x0400C4EF RID: 50415
+			// Token: 0x0400CA1E RID: 51742
 			TotalTopUpActivityInfo,
-			// Token: 0x0400C4F0 RID: 50416
+			// Token: 0x0400CA1F RID: 51743
 			MotorFightActivityPb,
-			// Token: 0x0400C4F1 RID: 50417
+			// Token: 0x0400CA20 RID: 51744
 			H5ViewActivityData,
-			// Token: 0x0400C4F2 RID: 50418
+			// Token: 0x0400CA21 RID: 51745
 			SkinRewardActivityData,
-			// Token: 0x0400C4F3 RID: 50419
+			// Token: 0x0400CA22 RID: 51746
 			EncircleActivityPb,
-			// Token: 0x0400C4F4 RID: 50420
+			// Token: 0x0400CA23 RID: 51747
 			MotorDevelopActivityData,
-			// Token: 0x0400C4F5 RID: 50421
+			// Token: 0x0400CA24 RID: 51748
 			FlagChallengeActivityInfo,
-			// Token: 0x0400C4F6 RID: 50422
+			// Token: 0x0400CA25 RID: 51749
 			FeiXuePreheatActivityInfo,
-			// Token: 0x0400C4F7 RID: 50423
+			// Token: 0x0400CA26 RID: 51750
 			RhythmActivityPb,
-			// Token: 0x0400C4F8 RID: 50424
+			// Token: 0x0400CA27 RID: 51751
 			DropCatchActivityInfo,
-			// Token: 0x0400C4F9 RID: 50425
+			// Token: 0x0400CA28 RID: 51752
 			TetrisActivityInfo,
-			// Token: 0x0400C4FA RID: 50426
+			// Token: 0x0400CA29 RID: 51753
 			PinballActivityData,
-			// Token: 0x0400C4FB RID: 50427
+			// Token: 0x0400CA2A RID: 51754
 			BossPilingActivityInfo,
-			// Token: 0x0400C4FC RID: 50428
+			// Token: 0x0400CA2B RID: 51755
 			ThemeCelebration,
-			// Token: 0x0400C4FD RID: 50429
+			// Token: 0x0400CA2C RID: 51756
 			WuWuWeekActivity,
-			// Token: 0x0400C4FE RID: 50430
+			// Token: 0x0400CA2D RID: 51757
 			MotorDecalActivityData,
-			// Token: 0x0400C4FF RID: 50431
+			// Token: 0x0400CA2E RID: 51758
 			LinkageCheckInActivityData,
-			// Token: 0x0400C500 RID: 50432
+			// Token: 0x0400CA2F RID: 51759
 			RoleGiftActivityData,
-			// Token: 0x0400C501 RID: 50433
+			// Token: 0x0400CA30 RID: 51760
 			KurotatoActivityData,
-			// Token: 0x0400C502 RID: 50434
+			// Token: 0x0400CA31 RID: 51761
 			GolemCrackActivityInfo,
-			// Token: 0x0400C503 RID: 50435
+			// Token: 0x0400CA32 RID: 51762
 			EdgeRunnerActivityInfo,
-			// Token: 0x0400C504 RID: 50436
+			// Token: 0x0400CA33 RID: 51763
 			OnlineMotorActivityData,
-			// Token: 0x0400C505 RID: 50437
+			// Token: 0x0400CA34 RID: 51764
 			RealmBetweenActivityInfo,
-			// Token: 0x0400C506 RID: 50438
+			// Token: 0x0400CA35 RID: 51765
 			ThroughTrainSummaryActivityData,
-			// Token: 0x0400C507 RID: 50439
+			// Token: 0x0400CA36 RID: 51766
 			NewbieMainActivityPb,
-			// Token: 0x0400C508 RID: 50440
+			// Token: 0x0400CA37 RID: 51767
 			NewbieCourseV2ActivityPb,
-			// Token: 0x0400C509 RID: 50441
+			// Token: 0x0400CA38 RID: 51768
 			NewbieAdventureV2Pb,
-			// Token: 0x0400C50A RID: 50442
+			// Token: 0x0400CA39 RID: 51769
 			NewPlayerSupportActivityV2Pb,
-			// Token: 0x0400C50B RID: 50443
+			// Token: 0x0400CA3A RID: 51770
 			ThroughTrainActivityData,
-			// Token: 0x0400C50C RID: 50444
+			// Token: 0x0400CA3B RID: 51771
 			RoverRogueActivityData,
-			// Token: 0x0400C50D RID: 50445
+			// Token: 0x0400CA3C RID: 51772
 			DangoBrawlActivityInfo,
-			// Token: 0x0400C50E RID: 50446
+			// Token: 0x0400CA3D RID: 51773
 			QingXiaoActivityInfo,
-			// Token: 0x0400C50F RID: 50447
+			// Token: 0x0400CA3E RID: 51774
 			MatchThreeActivityInfo = 120,
-			// Token: 0x0400C510 RID: 50448
-			GiantActivityInfo
+			// Token: 0x0400CA3F RID: 51775
+			GiantActivityInfo,
+			// Token: 0x0400CA40 RID: 51776
+			SolarSchoolActivityPb,
+			// Token: 0x0400CA41 RID: 51777
+			RoleTowerActivityData
 		}
 	}
 }

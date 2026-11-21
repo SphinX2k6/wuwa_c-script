@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001419 RID: 5145
+	// Token: 0x02001570 RID: 5488
 	public class ISheriffReasoningBoardConfig
 	{
-		// Token: 0x060074EB RID: 29931 RVA: 0x001176C2 File Offset: 0x001158C2
-		[NullableContext(1)]
+		// Token: 0x06007BAC RID: 31660 RVA: 0x001260A6 File Offset: 0x001242A6
 		public static ISheriffReasoningBoardConfig Create(ISheriffReasoningBoardConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700268C RID: 9868
-		// (get) Token: 0x060074EC RID: 29932 RVA: 0x001176E1 File Offset: 0x001158E1
+		// Token: 0x1700286E RID: 10350
+		// (get) Token: 0x06007BAD RID: 31661 RVA: 0x001260C5 File Offset: 0x001242C5
 		public virtual int Id
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040043B1 RID: 17329
+		// Token: 0x04004742 RID: 18242
 		private ISheriffReasoningBoardConfig Instance;
 	}
 }

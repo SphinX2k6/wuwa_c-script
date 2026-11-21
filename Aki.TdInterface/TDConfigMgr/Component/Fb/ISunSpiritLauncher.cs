@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B05 RID: 2821
+	// Token: 0x02000BD0 RID: 3024
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ISunSpiritLauncher : IHookInteractType
 	{
-		// Token: 0x0600411A RID: 16666 RVA: 0x000A6EA7 File Offset: 0x000A50A7
-		[NullableContext(1)]
+		// Token: 0x06004555 RID: 17749 RVA: 0x000B09DB File Offset: 0x000AEBDB
+		[NullableContext(0)]
 		public static ISunSpiritLauncher Create(ISunSpiritLauncher? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170010CD RID: 4301
-		// (get) Token: 0x0600411B RID: 16667 RVA: 0x000A6EC6 File Offset: 0x000A50C6
+		// Token: 0x170011B0 RID: 4528
+		// (get) Token: 0x06004556 RID: 17750 RVA: 0x000B09FA File Offset: 0x000AEBFA
 		public override EHookInteractType Type
 		{
 			get
@@ -35,19 +35,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010CE RID: 4302
-		// (get) Token: 0x0600411C RID: 16668 RVA: 0x000A6ED4 File Offset: 0x000A50D4
+		// Token: 0x170011B1 RID: 4529
+		// (get) Token: 0x06004557 RID: 17751 RVA: 0x000B0A08 File Offset: 0x000AEC08
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> HookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -70,19 +70,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010CF RID: 4303
-		// (get) Token: 0x0600411D RID: 16669 RVA: 0x000A6F50 File Offset: 0x000A5150
+		// Token: 0x170011B2 RID: 4530
+		// (get) Token: 0x06004558 RID: 17752 RVA: 0x000B0A84 File Offset: 0x000AEC84
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> ExitHookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -105,19 +105,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010D0 RID: 4304
-		// (get) Token: 0x0600411E RID: 16670 RVA: 0x000A6FCC File Offset: 0x000A51CC
+		// Token: 0x170011B3 RID: 4531
+		// (get) Token: 0x06004559 RID: 17753 RVA: 0x000B0B00 File Offset: 0x000AED00
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> FinishActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -140,8 +140,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010D1 RID: 4305
-		// (get) Token: 0x0600411F RID: 16671 RVA: 0x000A7046 File Offset: 0x000A5246
+		// Token: 0x170011B4 RID: 4532
+		// (get) Token: 0x0600455A RID: 17754 RVA: 0x000B0B7A File Offset: 0x000AED7A
 		public override IClientHookActionConfig ClientHookActionConfig
 		{
 			get
@@ -156,46 +156,46 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002496 RID: 9366
+		// Token: 0x040026C9 RID: 9929
 		private ISunSpiritLauncher Instance;
 
-		// Token: 0x04002497 RID: 9367
+		// Token: 0x040026CA RID: 9930
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _HookActionsCache;
 
-		// Token: 0x04002498 RID: 9368
+		// Token: 0x040026CB RID: 9931
 		private bool _HookActionsInited;
 
-		// Token: 0x04002499 RID: 9369
+		// Token: 0x040026CC RID: 9932
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ExitHookActionsCache;
 
-		// Token: 0x0400249A RID: 9370
+		// Token: 0x040026CD RID: 9933
 		private bool _ExitHookActionsInited;
 
-		// Token: 0x0400249B RID: 9371
+		// Token: 0x040026CE RID: 9934
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _FinishActionsCache;
 
-		// Token: 0x0400249C RID: 9372
+		// Token: 0x040026CF RID: 9935
 		private bool _FinishActionsInited;
 
-		// Token: 0x0400249D RID: 9373
+		// Token: 0x040026D0 RID: 9936
 		private IClientHookActionConfig _ClientHookActionConfigCache;
 
-		// Token: 0x0400249E RID: 9374
+		// Token: 0x040026D1 RID: 9937
 		private bool _ClientHookActionConfigInited;
 	}
 }

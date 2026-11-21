@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ADB RID: 6875
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C82 RID: 7298
 	public class IGravityFlipFixedPos : ITeleportConfig
 	{
-		// Token: 0x06009358 RID: 37720 RVA: 0x0015602C File Offset: 0x0015422C
+		// Token: 0x06009B16 RID: 39702 RVA: 0x0016684C File Offset: 0x00164A4C
 		private IGravityFlipFixedPos_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009359 RID: 37721 RVA: 0x00156064 File Offset: 0x00154264
+		// Token: 0x06009B17 RID: 39703 RVA: 0x00166884 File Offset: 0x00164A84
 		public static IGravityFlipFixedPos Create([Nullable(2)] IGravityFlipFixedPos instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600935A RID: 37722 RVA: 0x00156077 File Offset: 0x00154277
+		// Token: 0x06009B18 RID: 39704 RVA: 0x00166897 File Offset: 0x00164A97
 		public static IGravityFlipFixedPos CreateFromSetValue([Nullable(2)] IGravityFlipFixedPos_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600935B RID: 37723 RVA: 0x0015608A File Offset: 0x0015428A
+		// Token: 0x06009B19 RID: 39705 RVA: 0x001668AA File Offset: 0x00164AAA
 		public new IGravityFlipFixedPos_SetValue ToSetValue()
 		{
 			return new IGravityFlipFixedPos_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EB9 RID: 11961
-		// (get) Token: 0x0600935C RID: 37724 RVA: 0x001560A9 File Offset: 0x001542A9
-		// (set) Token: 0x0600935D RID: 37725 RVA: 0x001560D4 File Offset: 0x001542D4
+		// Token: 0x170030D5 RID: 12501
+		// (get) Token: 0x06009B1A RID: 39706 RVA: 0x001668C9 File Offset: 0x00164AC9
+		// (set) Token: 0x06009B1B RID: 39707 RVA: 0x001668F4 File Offset: 0x00164AF4
 		public override ETeleportType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EBA RID: 11962
-		// (get) Token: 0x0600935E RID: 37726 RVA: 0x001560E2 File Offset: 0x001542E2
-		// (set) Token: 0x0600935F RID: 37727 RVA: 0x0015610D File Offset: 0x0015430D
+		// Token: 0x170030D6 RID: 12502
+		// (get) Token: 0x06009B1C RID: 39708 RVA: 0x00166902 File Offset: 0x00164B02
+		// (set) Token: 0x06009B1D RID: 39709 RVA: 0x0016692D File Offset: 0x00164B2D
 		public virtual int GravityAndPosEntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A92 RID: 23186
+		// Token: 0x04005F1C RID: 24348
 		[Nullable(2)]
 		protected new IGravityFlipFixedPos FbInstance;
 
-		// Token: 0x04005A93 RID: 23187
+		// Token: 0x04005F1D RID: 24349
 		[Nullable(2)]
 		protected new IGravityFlipFixedPos_SetValue PocoInterface;
 	}

@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055C3 RID: 21955
+	// Token: 0x02004599 RID: 17817
 	public interface IPathNode
 	{
-		// Token: 0x170086DB RID: 34523
-		// (get) Token: 0x06037F6F RID: 229231
+		// Token: 0x17005AA2 RID: 23202
+		// (get) Token: 0x0602CE6D RID: 183917
 		int GridIndex { get; }
 
-		// Token: 0x170086DC RID: 34524
-		// (get) Token: 0x06037F70 RID: 229232
+		// Token: 0x17005AA3 RID: 23203
+		// (get) Token: 0x0602CE6E RID: 183918
 		int Cost { get; }
 
-		// Token: 0x170086DD RID: 34525
-		// (get) Token: 0x06037F71 RID: 229233
+		// Token: 0x17005AA4 RID: 23204
+		// (get) Token: 0x0602CE6F RID: 183919
 		bool Walkable { get; }
 	}
 }

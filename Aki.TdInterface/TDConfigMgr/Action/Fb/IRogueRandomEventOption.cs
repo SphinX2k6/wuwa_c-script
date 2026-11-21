@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200254C RID: 9548
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027F4 RID: 10228
 	public class IRogueRandomEventOption : ISystemOptionType
 	{
-		// Token: 0x0600D51D RID: 54557 RVA: 0x001F9762 File Offset: 0x001F7962
+		// Token: 0x0600E281 RID: 57985 RVA: 0x00215222 File Offset: 0x00213422
 		public static IRogueRandomEventOption Create(IRogueRandomEventOption? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003C47 RID: 15431
-		// (get) Token: 0x0600D51E RID: 54558 RVA: 0x001F9781 File Offset: 0x001F7981
+		// Token: 0x17003F47 RID: 16199
+		// (get) Token: 0x0600E282 RID: 57986 RVA: 0x00215241 File Offset: 0x00213441
 		public override ESystemOptionType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003C48 RID: 15432
-		// (get) Token: 0x0600D51F RID: 54559 RVA: 0x001F9790 File Offset: 0x001F7990
+		// Token: 0x17003F48 RID: 16200
+		// (get) Token: 0x0600E283 RID: 57987 RVA: 0x00215250 File Offset: 0x00213450
 		public override List<ISystemOption> SystemOptions
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003C49 RID: 15433
-		// (get) Token: 0x0600D520 RID: 54560 RVA: 0x001F97FC File Offset: 0x001F79FC
+		// Token: 0x17003F49 RID: 16201
+		// (get) Token: 0x0600E284 RID: 57988 RVA: 0x002152BC File Offset: 0x002134BC
 		public override bool? KeepPreTalkItem
 		{
 			get
@@ -68,8 +65,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003C4A RID: 15434
-		// (get) Token: 0x0600D521 RID: 54561 RVA: 0x001F9832 File Offset: 0x001F7A32
+		// Token: 0x17003F4A RID: 16202
+		// (get) Token: 0x0600E285 RID: 57989 RVA: 0x002152F2 File Offset: 0x002134F2
 		public virtual int EventId
 		{
 			get
@@ -78,13 +75,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007506 RID: 29958
+		// Token: 0x04007B5E RID: 31582
 		private IRogueRandomEventOption Instance;
 
-		// Token: 0x04007507 RID: 29959
+		// Token: 0x04007B5F RID: 31583
 		private List<ISystemOption> _SystemOptionsCache;
 
-		// Token: 0x04007508 RID: 29960
+		// Token: 0x04007B60 RID: 31584
 		private bool _SystemOptionsInited;
 	}
 }

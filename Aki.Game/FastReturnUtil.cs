@@ -14,12 +14,12 @@ using CSharpScript.Module.InstanceDungeon;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x0200263B RID: 9787
+// Token: 0x02001B26 RID: 6950
 [NullableContext(1)]
 [Nullable(0)]
 public static class FastReturnUtil
 {
-	// Token: 0x06014080 RID: 82048 RVA: 0x0050BA44 File Offset: 0x00509C44
+	// Token: 0x06011562 RID: 71010 RVA: 0x0051A964 File Offset: 0x00518B64
 	[NullableContext(2)]
 	public static FastReturnResolved Resolve(BaseBehaviorTree tree)
 	{
@@ -82,7 +82,7 @@ public static class FastReturnUtil
 		}
 	}
 
-	// Token: 0x06014081 RID: 82049 RVA: 0x0050BB4C File Offset: 0x00509D4C
+	// Token: 0x06011563 RID: 71011 RVA: 0x0051AA6C File Offset: 0x00518C6C
 	[NullableContext(2)]
 	private static FastReturnResolved ResolveFromSingleTree(BaseBehaviorTree tree, EFastReturnSource source)
 	{
@@ -127,7 +127,7 @@ public static class FastReturnUtil
 		};
 	}
 
-	// Token: 0x06014082 RID: 82050 RVA: 0x0050BC90 File Offset: 0x00509E90
+	// Token: 0x06011564 RID: 71012 RVA: 0x0051ABB0 File Offset: 0x00518DB0
 	[NullableContext(2)]
 	private static BehaviorNodeBase GetActiveChildQuestTrackCustomBoard([Nullable(1)] BaseBehaviorTree tree, out ITrackCustomBoard board)
 	{
@@ -151,7 +151,7 @@ public static class FastReturnUtil
 		return null;
 	}
 
-	// Token: 0x06014083 RID: 82051 RVA: 0x0050BD14 File Offset: 0x00509F14
+	// Token: 0x06011565 RID: 71013 RVA: 0x0051AC34 File Offset: 0x00518E34
 	[NullableContext(2)]
 	private static BehaviorNodeBase GetActiveLogicNodeTrackCustomBoard([Nullable(1)] BaseBehaviorTree tree, out ITrackCustomBoardOnBtLogicNode board)
 	{
@@ -172,7 +172,7 @@ public static class FastReturnUtil
 		return null;
 	}
 
-	// Token: 0x06014084 RID: 82052 RVA: 0x0050BD90 File Offset: 0x00509F90
+	// Token: 0x06011566 RID: 71014 RVA: 0x0051ACB0 File Offset: 0x00518EB0
 	private static bool CheckShowConditions(IFastReturnMapPos cfg, [Nullable(2)] GeneralContext context = null)
 	{
 		if (cfg.ShowButtonConditionGroup == null || cfg.ShowButtonConditionGroup.Count == 0)
@@ -189,7 +189,7 @@ public static class FastReturnUtil
 		return false;
 	}
 
-	// Token: 0x06014085 RID: 82053 RVA: 0x0050BE10 File Offset: 0x0050A010
+	// Token: 0x06011567 RID: 71015 RVA: 0x0051AD30 File Offset: 0x00518F30
 	[NullableContext(2)]
 	public static void Trigger(BaseBehaviorTree tree, [Nullable(1)] FastReturnResolved resolved, bool isFromWorldMap = false, Action onConfirm = null)
 	{
@@ -212,7 +212,7 @@ public static class FastReturnUtil
 		}
 	}
 
-	// Token: 0x06014086 RID: 82054 RVA: 0x0050BE48 File Offset: 0x0050A048
+	// Token: 0x06011568 RID: 71016 RVA: 0x0051AD68 File Offset: 0x00518F68
 	private unsafe static void TriggerReturnPos(BaseBehaviorTree tree, FastReturnResolved resolved, bool isFromWorldMap = false, [Nullable(2)] Action onConfirm = null)
 	{
 		if (FunctionModel.Instance.IsLockByBehaviorTree(10015))
@@ -299,7 +299,7 @@ public static class FastReturnUtil
 		}
 	}
 
-	// Token: 0x06014087 RID: 82055 RVA: 0x0050C09C File Offset: 0x0050A29C
+	// Token: 0x06011569 RID: 71017 RVA: 0x0051AFBC File Offset: 0x005191BC
 	private static UniTask TriggerReturnDungeon(BaseBehaviorTree tree, FastReturnResolved resolved, [Nullable(2)] Action onConfirm = null)
 	{
 		FastReturnUtil.<TriggerReturnDungeon>d__7 <TriggerReturnDungeon>d__;
@@ -312,7 +312,7 @@ public static class FastReturnUtil
 		return <TriggerReturnDungeon>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014088 RID: 82056 RVA: 0x0050C0F0 File Offset: 0x0050A2F0
+	// Token: 0x0601156A RID: 71018 RVA: 0x0051B010 File Offset: 0x00519210
 	private unsafe static void EnterDungeon(int dungeonId, int entranceId, FastReturnResolved resolved, bool shouldRegroup, bool shouldContinue)
 	{
 		InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(dungeonId);
@@ -351,7 +351,7 @@ public static class FastReturnUtil
 		});
 	}
 
-	// Token: 0x06014089 RID: 82057 RVA: 0x0050C278 File Offset: 0x0050A478
+	// Token: 0x0601156B RID: 71019 RVA: 0x0051B198 File Offset: 0x00519398
 	[NullableContext(2)]
 	private static List<int> GetAutoRoleIds(int dungeonId)
 	{
@@ -411,7 +411,7 @@ public static class FastReturnUtil
 		return list;
 	}
 
-	// Token: 0x0601408A RID: 82058 RVA: 0x0050C418 File Offset: 0x0050A618
+	// Token: 0x0601156C RID: 71020 RVA: 0x0051B338 File Offset: 0x00519538
 	private unsafe static void SendRequest(FastReturnResolved resolved)
 	{
 		long treeIncId = resolved.TreeIncId;
@@ -437,13 +437,13 @@ public static class FastReturnUtil
 		});
 	}
 
-	// Token: 0x0601408B RID: 82059 RVA: 0x0050C54B File Offset: 0x0050A74B
+	// Token: 0x0601156D RID: 71021 RVA: 0x0051B46B File Offset: 0x0051966B
 	public static bool IsTreeInTrackRange(BaseBehaviorTree tree)
 	{
 		return tree.GetBlackBoard().ContainTag(EBehaviorTreeTag.InTrackRange);
 	}
 
-	// Token: 0x0601408C RID: 82060 RVA: 0x0050C55C File Offset: 0x0050A75C
+	// Token: 0x0601156E RID: 71022 RVA: 0x0051B47C File Offset: 0x0051967C
 	[return: Nullable(2)]
 	private static ActiveTrackLevelPlay GetCurActiveTrackLevelPlay(BaseBehaviorTree tree)
 	{

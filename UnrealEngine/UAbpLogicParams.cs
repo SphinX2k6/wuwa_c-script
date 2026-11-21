@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001601 RID: 5633
+	// Token: 0x020002DF RID: 735
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroAnim.AbpLogicParams")]
 	[UnrealStructLayout(560, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 560)]
 	public class UAbpLogicParams : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601443B RID: 83003 RVA: 0x001DC6EF File Offset: 0x001DA8EF
+		// Token: 0x06004EFC RID: 20220 RVA: 0x0006EB67 File Offset: 0x0006CD67
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UAbpLogicParams._ClassPtr;
 		}
 
-		// Token: 0x0601443C RID: 83004 RVA: 0x001DC6FC File Offset: 0x001DA8FC
+		// Token: 0x06004EFD RID: 20221 RVA: 0x0006EB74 File Offset: 0x0006CD74
 		public UAbpLogicParams() : this(BuiltinUtils.AllocNativeUObject(UAbpLogicParams.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601443D RID: 83005 RVA: 0x001DC724 File Offset: 0x001DA924
+		// Token: 0x06004EFE RID: 20222 RVA: 0x0006EB9C File Offset: 0x0006CD9C
 		public UAbpLogicParams(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UAbpLogicParams.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17004F5A RID: 20314
-		// (get) Token: 0x0601443E RID: 83006 RVA: 0x001DC757 File Offset: 0x001DA957
-		// (set) Token: 0x0601443F RID: 83007 RVA: 0x001DC767 File Offset: 0x001DA967
+		// Token: 0x17000F16 RID: 3862
+		// (get) Token: 0x06004EFF RID: 20223 RVA: 0x0006EBCF File Offset: 0x0006CDCF
+		// (set) Token: 0x06004F00 RID: 20224 RVA: 0x0006EBDF File Offset: 0x0006CDDF
 		public unsafe bool AcceptedNewBeHitRef
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F5B RID: 20315
-		// (get) Token: 0x06014440 RID: 83008 RVA: 0x001DC778 File Offset: 0x001DA978
-		// (set) Token: 0x06014441 RID: 83009 RVA: 0x001DC788 File Offset: 0x001DA988
+		// Token: 0x17000F17 RID: 3863
+		// (get) Token: 0x06004F01 RID: 20225 RVA: 0x0006EBF0 File Offset: 0x0006CDF0
+		// (set) Token: 0x06004F02 RID: 20226 RVA: 0x0006EC00 File Offset: 0x0006CE00
 		public unsafe int BeHitAnimRef
 		{
 			get
@@ -59,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F5C RID: 20316
-		// (get) Token: 0x06014442 RID: 83010 RVA: 0x001DC799 File Offset: 0x001DA999
-		// (set) Token: 0x06014443 RID: 83011 RVA: 0x001DC7A9 File Offset: 0x001DA9A9
+		// Token: 0x17000F18 RID: 3864
+		// (get) Token: 0x06004F03 RID: 20227 RVA: 0x0006EC11 File Offset: 0x0006CE11
+		// (set) Token: 0x06004F04 RID: 20228 RVA: 0x0006EC21 File Offset: 0x0006CE21
 		public unsafe bool EnterFkRef
 		{
 			get
@@ -74,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F5D RID: 20317
-		// (get) Token: 0x06014444 RID: 83012 RVA: 0x001DC7BA File Offset: 0x001DA9BA
-		// (set) Token: 0x06014445 RID: 83013 RVA: 0x001DC7CA File Offset: 0x001DA9CA
+		// Token: 0x17000F19 RID: 3865
+		// (get) Token: 0x06004F05 RID: 20229 RVA: 0x0006EC32 File Offset: 0x0006CE32
+		// (set) Token: 0x06004F06 RID: 20230 RVA: 0x0006EC42 File Offset: 0x0006CE42
 		public unsafe bool DoubleHitInAirRef
 		{
 			get
@@ -89,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F5E RID: 20318
-		// (get) Token: 0x06014446 RID: 83014 RVA: 0x001DC7DB File Offset: 0x001DA9DB
-		// (set) Token: 0x06014447 RID: 83015 RVA: 0x001DC7EF File Offset: 0x001DA9EF
+		// Token: 0x17000F1A RID: 3866
+		// (get) Token: 0x06004F07 RID: 20231 RVA: 0x0006EC53 File Offset: 0x0006CE53
+		// (set) Token: 0x06004F08 RID: 20232 RVA: 0x0006EC67 File Offset: 0x0006CE67
 		public unsafe FVector BeHitDirectRef
 		{
 			get
@@ -104,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F5F RID: 20319
-		// (get) Token: 0x06014448 RID: 83016 RVA: 0x001DC804 File Offset: 0x001DAA04
-		// (set) Token: 0x06014449 RID: 83017 RVA: 0x001DC818 File Offset: 0x001DAA18
+		// Token: 0x17000F1B RID: 3867
+		// (get) Token: 0x06004F09 RID: 20233 RVA: 0x0006EC7C File Offset: 0x0006CE7C
+		// (set) Token: 0x06004F0A RID: 20234 RVA: 0x0006EC90 File Offset: 0x0006CE90
 		public unsafe FVector BeHitLocationRef
 		{
 			get
@@ -119,9 +119,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F60 RID: 20320
-		// (get) Token: 0x0601444A RID: 83018 RVA: 0x001DC82D File Offset: 0x001DAA2D
-		// (set) Token: 0x0601444B RID: 83019 RVA: 0x001DC841 File Offset: 0x001DAA41
+		// Token: 0x17000F1C RID: 3868
+		// (get) Token: 0x06004F0B RID: 20235 RVA: 0x0006ECA5 File Offset: 0x0006CEA5
+		// (set) Token: 0x06004F0C RID: 20236 RVA: 0x0006ECB9 File Offset: 0x0006CEB9
 		public unsafe FName BeHitSocketNameRef
 		{
 			get
@@ -134,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F61 RID: 20321
-		// (get) Token: 0x0601444C RID: 83020 RVA: 0x001DC856 File Offset: 0x001DAA56
-		// (set) Token: 0x0601444D RID: 83021 RVA: 0x001DC86A File Offset: 0x001DAA6A
+		// Token: 0x17000F1D RID: 3869
+		// (get) Token: 0x06004F0D RID: 20237 RVA: 0x0006ECCE File Offset: 0x0006CECE
+		// (set) Token: 0x06004F0E RID: 20238 RVA: 0x0006ECE2 File Offset: 0x0006CEE2
 		public unsafe FName BeHitBoneRef
 		{
 			get
@@ -149,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F62 RID: 20322
-		// (get) Token: 0x0601444E RID: 83022 RVA: 0x001DC880 File Offset: 0x001DAA80
-		// (set) Token: 0x0601444F RID: 83023 RVA: 0x001DC8B9 File Offset: 0x001DAAB9
+		// Token: 0x17000F1E RID: 3870
+		// (get) Token: 0x06004F0F RID: 20239 RVA: 0x0006ECF8 File Offset: 0x0006CEF8
+		// (set) Token: 0x06004F10 RID: 20240 RVA: 0x0006ED31 File Offset: 0x0006CF31
 		public FBoneFeedbackAnimHitInfo HitInfo
 		{
 			get
@@ -170,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F63 RID: 20323
-		// (get) Token: 0x06014450 RID: 83024 RVA: 0x001DC8DA File Offset: 0x001DAADA
-		// (set) Token: 0x06014451 RID: 83025 RVA: 0x001DC8EA File Offset: 0x001DAAEA
+		// Token: 0x17000F1F RID: 3871
+		// (get) Token: 0x06004F11 RID: 20241 RVA: 0x0006ED52 File Offset: 0x0006CF52
+		// (set) Token: 0x06004F12 RID: 20242 RVA: 0x0006ED62 File Offset: 0x0006CF62
 		public unsafe ECharMoveStateType CharMoveStateRef
 		{
 			get
@@ -185,9 +185,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F64 RID: 20324
-		// (get) Token: 0x06014452 RID: 83026 RVA: 0x001DC8FB File Offset: 0x001DAAFB
-		// (set) Token: 0x06014453 RID: 83027 RVA: 0x001DC90B File Offset: 0x001DAB0B
+		// Token: 0x17000F20 RID: 3872
+		// (get) Token: 0x06004F13 RID: 20243 RVA: 0x0006ED73 File Offset: 0x0006CF73
+		// (set) Token: 0x06004F14 RID: 20244 RVA: 0x0006ED83 File Offset: 0x0006CF83
 		public unsafe ECharPositionStateType CharPositionStateRef
 		{
 			get
@@ -200,9 +200,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F65 RID: 20325
-		// (get) Token: 0x06014454 RID: 83028 RVA: 0x001DC91C File Offset: 0x001DAB1C
-		// (set) Token: 0x06014455 RID: 83029 RVA: 0x001DC92C File Offset: 0x001DAB2C
+		// Token: 0x17000F21 RID: 3873
+		// (get) Token: 0x06004F15 RID: 20245 RVA: 0x0006ED94 File Offset: 0x0006CF94
+		// (set) Token: 0x06004F16 RID: 20246 RVA: 0x0006EDA4 File Offset: 0x0006CFA4
 		public unsafe ECharViewDirectionStateType CharCameraStateRef
 		{
 			get
@@ -215,9 +215,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F66 RID: 20326
-		// (get) Token: 0x06014456 RID: 83030 RVA: 0x001DC93D File Offset: 0x001DAB3D
-		// (set) Token: 0x06014457 RID: 83031 RVA: 0x001DC94D File Offset: 0x001DAB4D
+		// Token: 0x17000F22 RID: 3874
+		// (get) Token: 0x06004F17 RID: 20247 RVA: 0x0006EDB5 File Offset: 0x0006CFB5
+		// (set) Token: 0x06004F18 RID: 20248 RVA: 0x0006EDC5 File Offset: 0x0006CFC5
 		public unsafe float BattleIdleTimeRef
 		{
 			get
@@ -230,9 +230,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F67 RID: 20327
-		// (get) Token: 0x06014458 RID: 83032 RVA: 0x001DC95E File Offset: 0x001DAB5E
-		// (set) Token: 0x06014459 RID: 83033 RVA: 0x001DC96E File Offset: 0x001DAB6E
+		// Token: 0x17000F23 RID: 3875
+		// (get) Token: 0x06004F19 RID: 20249 RVA: 0x0006EDD6 File Offset: 0x0006CFD6
+		// (set) Token: 0x06004F1A RID: 20250 RVA: 0x0006EDE6 File Offset: 0x0006CFE6
 		public unsafe float DegMovementSlopeRef
 		{
 			get
@@ -245,9 +245,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F68 RID: 20328
-		// (get) Token: 0x0601445A RID: 83034 RVA: 0x001DC97F File Offset: 0x001DAB7F
-		// (set) Token: 0x0601445B RID: 83035 RVA: 0x001DC993 File Offset: 0x001DAB93
+		// Token: 0x17000F24 RID: 3876
+		// (get) Token: 0x06004F1B RID: 20251 RVA: 0x0006EDF7 File Offset: 0x0006CFF7
+		// (set) Token: 0x06004F1C RID: 20252 RVA: 0x0006EE0B File Offset: 0x0006D00B
 		public unsafe FVector SightDirectRef
 		{
 			get
@@ -260,9 +260,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F69 RID: 20329
-		// (get) Token: 0x0601445C RID: 83036 RVA: 0x001DC9A8 File Offset: 0x001DABA8
-		// (set) Token: 0x0601445D RID: 83037 RVA: 0x001DC9B8 File Offset: 0x001DABB8
+		// Token: 0x17000F25 RID: 3877
+		// (get) Token: 0x06004F1D RID: 20253 RVA: 0x0006EE20 File Offset: 0x0006D020
+		// (set) Token: 0x06004F1E RID: 20254 RVA: 0x0006EE30 File Offset: 0x0006D030
 		public unsafe bool RagQuitStateRef
 		{
 			get
@@ -275,9 +275,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F6A RID: 20330
-		// (get) Token: 0x0601445E RID: 83038 RVA: 0x001DC9C9 File Offset: 0x001DABC9
-		// (set) Token: 0x0601445F RID: 83039 RVA: 0x001DC9D9 File Offset: 0x001DABD9
+		// Token: 0x17000F26 RID: 3878
+		// (get) Token: 0x06004F1F RID: 20255 RVA: 0x0006EE41 File Offset: 0x0006D041
+		// (set) Token: 0x06004F20 RID: 20256 RVA: 0x0006EE51 File Offset: 0x0006D051
 		public unsafe bool IsJumpRef
 		{
 			get
@@ -290,9 +290,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F6B RID: 20331
-		// (get) Token: 0x06014460 RID: 83040 RVA: 0x001DC9EA File Offset: 0x001DABEA
-		// (set) Token: 0x06014461 RID: 83041 RVA: 0x001DC9FE File Offset: 0x001DABFE
+		// Token: 0x17000F27 RID: 3879
+		// (get) Token: 0x06004F21 RID: 20257 RVA: 0x0006EE62 File Offset: 0x0006D062
+		// (set) Token: 0x06004F22 RID: 20258 RVA: 0x0006EE76 File Offset: 0x0006D076
 		public unsafe FVector AccelerationRef
 		{
 			get
@@ -305,9 +305,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F6C RID: 20332
-		// (get) Token: 0x06014462 RID: 83042 RVA: 0x001DCA13 File Offset: 0x001DAC13
-		// (set) Token: 0x06014463 RID: 83043 RVA: 0x001DCA23 File Offset: 0x001DAC23
+		// Token: 0x17000F28 RID: 3880
+		// (get) Token: 0x06004F23 RID: 20259 RVA: 0x0006EE8B File Offset: 0x0006D08B
+		// (set) Token: 0x06004F24 RID: 20260 RVA: 0x0006EE9B File Offset: 0x0006D09B
 		public unsafe bool IsMovingRef
 		{
 			get
@@ -320,9 +320,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F6D RID: 20333
-		// (get) Token: 0x06014464 RID: 83044 RVA: 0x001DCA34 File Offset: 0x001DAC34
-		// (set) Token: 0x06014465 RID: 83045 RVA: 0x001DCA44 File Offset: 0x001DAC44
+		// Token: 0x17000F29 RID: 3881
+		// (get) Token: 0x06004F25 RID: 20261 RVA: 0x0006EEAC File Offset: 0x0006D0AC
+		// (set) Token: 0x06004F26 RID: 20262 RVA: 0x0006EEBC File Offset: 0x0006D0BC
 		public unsafe float SpeedRef
 		{
 			get
@@ -335,9 +335,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F6E RID: 20334
-		// (get) Token: 0x06014466 RID: 83046 RVA: 0x001DCA55 File Offset: 0x001DAC55
-		// (set) Token: 0x06014467 RID: 83047 RVA: 0x001DCA69 File Offset: 0x001DAC69
+		// Token: 0x17000F2A RID: 3882
+		// (get) Token: 0x06004F27 RID: 20263 RVA: 0x0006EECD File Offset: 0x0006D0CD
+		// (set) Token: 0x06004F28 RID: 20264 RVA: 0x0006EEE1 File Offset: 0x0006D0E1
 		public unsafe FVector InputDirectRef
 		{
 			get
@@ -350,9 +350,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F6F RID: 20335
-		// (get) Token: 0x06014468 RID: 83048 RVA: 0x001DCA7E File Offset: 0x001DAC7E
-		// (set) Token: 0x06014469 RID: 83049 RVA: 0x001DCA92 File Offset: 0x001DAC92
+		// Token: 0x17000F2B RID: 3883
+		// (get) Token: 0x06004F29 RID: 20265 RVA: 0x0006EEF6 File Offset: 0x0006D0F6
+		// (set) Token: 0x06004F2A RID: 20266 RVA: 0x0006EF0A File Offset: 0x0006D10A
 		public unsafe FRotator InputRotatorRef
 		{
 			get
@@ -365,9 +365,24 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F70 RID: 20336
-		// (get) Token: 0x0601446A RID: 83050 RVA: 0x001DCAA7 File Offset: 0x001DACA7
-		// (set) Token: 0x0601446B RID: 83051 RVA: 0x001DCAB7 File Offset: 0x001DACB7
+		// Token: 0x17000F2C RID: 3884
+		// (get) Token: 0x06004F2B RID: 20267 RVA: 0x0006EF1F File Offset: 0x0006D11F
+		// (set) Token: 0x06004F2C RID: 20268 RVA: 0x0006EF2F File Offset: 0x0006D12F
+		public unsafe bool bUpdateInputRotatorRef
+		{
+			get
+			{
+				return *(base.NativePtr + (IntPtr)UAbpLogicParams.__PropertyOffset_bUpdateInputRotatorRef) != 0;
+			}
+			set
+			{
+				*(base.NativePtr + (IntPtr)UAbpLogicParams.__PropertyOffset_bUpdateInputRotatorRef) = (value ? 1 : 0);
+			}
+		}
+
+		// Token: 0x17000F2D RID: 3885
+		// (get) Token: 0x06004F2D RID: 20269 RVA: 0x0006EF40 File Offset: 0x0006D140
+		// (set) Token: 0x06004F2E RID: 20270 RVA: 0x0006EF50 File Offset: 0x0006D150
 		public unsafe bool IsFallingIntoWaterRef
 		{
 			get
@@ -380,9 +395,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F71 RID: 20337
-		// (get) Token: 0x0601446C RID: 83052 RVA: 0x001DCAC8 File Offset: 0x001DACC8
-		// (set) Token: 0x0601446D RID: 83053 RVA: 0x001DCAD8 File Offset: 0x001DACD8
+		// Token: 0x17000F2E RID: 3886
+		// (get) Token: 0x06004F2F RID: 20271 RVA: 0x0006EF61 File Offset: 0x0006D161
+		// (set) Token: 0x06004F30 RID: 20272 RVA: 0x0006EF71 File Offset: 0x0006D171
 		public unsafe float GroundedTimeRef
 		{
 			get
@@ -395,9 +410,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F72 RID: 20338
-		// (get) Token: 0x0601446E RID: 83054 RVA: 0x001DCAE9 File Offset: 0x001DACE9
-		// (set) Token: 0x0601446F RID: 83055 RVA: 0x001DCAF9 File Offset: 0x001DACF9
+		// Token: 0x17000F2F RID: 3887
+		// (get) Token: 0x06004F31 RID: 20273 RVA: 0x0006EF82 File Offset: 0x0006D182
+		// (set) Token: 0x06004F32 RID: 20274 RVA: 0x0006EF92 File Offset: 0x0006D192
 		public unsafe bool HasMoveInputRef
 		{
 			get
@@ -410,9 +425,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F73 RID: 20339
-		// (get) Token: 0x06014470 RID: 83056 RVA: 0x001DCB0C File Offset: 0x001DAD0C
-		// (set) Token: 0x06014471 RID: 83057 RVA: 0x001DCB45 File Offset: 0x001DAD45
+		// Token: 0x17000F30 RID: 3888
+		// (get) Token: 0x06004F33 RID: 20275 RVA: 0x0006EFA4 File Offset: 0x0006D1A4
+		// (set) Token: 0x06004F34 RID: 20276 RVA: 0x0006EFDD File Offset: 0x0006D1DD
 		public FClimbInfoStruct ClimbInfoRef
 		{
 			get
@@ -431,9 +446,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F74 RID: 20340
-		// (get) Token: 0x06014472 RID: 83058 RVA: 0x001DCB68 File Offset: 0x001DAD68
-		// (set) Token: 0x06014473 RID: 83059 RVA: 0x001DCBA1 File Offset: 0x001DADA1
+		// Token: 0x17000F31 RID: 3889
+		// (get) Token: 0x06004F35 RID: 20277 RVA: 0x0006F000 File Offset: 0x0006D200
+		// (set) Token: 0x06004F36 RID: 20278 RVA: 0x0006F039 File Offset: 0x0006D239
 		public FClimbStateStruct ClimbStateRef
 		{
 			get
@@ -452,9 +467,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F75 RID: 20341
-		// (get) Token: 0x06014474 RID: 83060 RVA: 0x001DCBC2 File Offset: 0x001DADC2
-		// (set) Token: 0x06014475 RID: 83061 RVA: 0x001DCBD2 File Offset: 0x001DADD2
+		// Token: 0x17000F32 RID: 3890
+		// (get) Token: 0x06004F37 RID: 20279 RVA: 0x0006F05A File Offset: 0x0006D25A
+		// (set) Token: 0x06004F38 RID: 20280 RVA: 0x0006F06A File Offset: 0x0006D26A
 		public unsafe float ClimbOnWallAngleRef
 		{
 			get
@@ -467,9 +482,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F76 RID: 20342
-		// (get) Token: 0x06014476 RID: 83062 RVA: 0x001DCBE3 File Offset: 0x001DADE3
-		// (set) Token: 0x06014477 RID: 83063 RVA: 0x001DCBF3 File Offset: 0x001DADF3
+		// Token: 0x17000F33 RID: 3891
+		// (get) Token: 0x06004F39 RID: 20281 RVA: 0x0006F07B File Offset: 0x0006D27B
+		// (set) Token: 0x06004F3A RID: 20282 RVA: 0x0006F08B File Offset: 0x0006D28B
 		public unsafe float SprintSwimOffsetRef
 		{
 			get
@@ -482,9 +497,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F77 RID: 20343
-		// (get) Token: 0x06014478 RID: 83064 RVA: 0x001DCC04 File Offset: 0x001DAE04
-		// (set) Token: 0x06014479 RID: 83065 RVA: 0x001DCC14 File Offset: 0x001DAE14
+		// Token: 0x17000F34 RID: 3892
+		// (get) Token: 0x06004F3B RID: 20283 RVA: 0x0006F09C File Offset: 0x0006D29C
+		// (set) Token: 0x06004F3C RID: 20284 RVA: 0x0006F0AC File Offset: 0x0006D2AC
 		public unsafe float SprintSwimOffsetLerpSpeedRef
 		{
 			get
@@ -497,9 +512,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F78 RID: 20344
-		// (get) Token: 0x0601447A RID: 83066 RVA: 0x001DCC25 File Offset: 0x001DAE25
-		// (set) Token: 0x0601447B RID: 83067 RVA: 0x001DCC39 File Offset: 0x001DAE39
+		// Token: 0x17000F35 RID: 3893
+		// (get) Token: 0x06004F3D RID: 20285 RVA: 0x0006F0BD File Offset: 0x0006D2BD
+		// (set) Token: 0x06004F3E RID: 20286 RVA: 0x0006F0D1 File Offset: 0x0006D2D1
 		public unsafe FVector SlideForwardRef
 		{
 			get
@@ -512,9 +527,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F79 RID: 20345
-		// (get) Token: 0x0601447C RID: 83068 RVA: 0x001DCC4E File Offset: 0x001DAE4E
-		// (set) Token: 0x0601447D RID: 83069 RVA: 0x001DCC5E File Offset: 0x001DAE5E
+		// Token: 0x17000F36 RID: 3894
+		// (get) Token: 0x06004F3F RID: 20287 RVA: 0x0006F0E6 File Offset: 0x0006D2E6
+		// (set) Token: 0x06004F40 RID: 20288 RVA: 0x0006F0F6 File Offset: 0x0006D2F6
 		public unsafe bool SlideSwitchThisFrameRef
 		{
 			get
@@ -527,9 +542,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F7A RID: 20346
-		// (get) Token: 0x0601447E RID: 83070 RVA: 0x001DCC6F File Offset: 0x001DAE6F
-		// (set) Token: 0x0601447F RID: 83071 RVA: 0x001DCC7F File Offset: 0x001DAE7F
+		// Token: 0x17000F37 RID: 3895
+		// (get) Token: 0x06004F41 RID: 20289 RVA: 0x0006F107 File Offset: 0x0006D307
+		// (set) Token: 0x06004F42 RID: 20290 RVA: 0x0006F117 File Offset: 0x0006D317
 		public unsafe bool SlideStandModeRef
 		{
 			get
@@ -542,9 +557,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F7B RID: 20347
-		// (get) Token: 0x06014480 RID: 83072 RVA: 0x001DCC90 File Offset: 0x001DAE90
-		// (set) Token: 0x06014481 RID: 83073 RVA: 0x001DCCA0 File Offset: 0x001DAEA0
+		// Token: 0x17000F38 RID: 3896
+		// (get) Token: 0x06004F43 RID: 20291 RVA: 0x0006F128 File Offset: 0x0006D328
+		// (set) Token: 0x06004F44 RID: 20292 RVA: 0x0006F138 File Offset: 0x0006D338
 		public unsafe float JumpUpRateRef
 		{
 			get
@@ -557,9 +572,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F7C RID: 20348
-		// (get) Token: 0x06014482 RID: 83074 RVA: 0x001DCCB1 File Offset: 0x001DAEB1
-		// (set) Token: 0x06014483 RID: 83075 RVA: 0x001DCCC1 File Offset: 0x001DAEC1
+		// Token: 0x17000F39 RID: 3897
+		// (get) Token: 0x06004F45 RID: 20293 RVA: 0x0006F149 File Offset: 0x0006D349
+		// (set) Token: 0x06004F46 RID: 20294 RVA: 0x0006F159 File Offset: 0x0006D359
 		public unsafe bool ForceExitStateStopRef
 		{
 			get
@@ -572,9 +587,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F7D RID: 20349
-		// (get) Token: 0x06014484 RID: 83076 RVA: 0x001DCCD2 File Offset: 0x001DAED2
-		// (set) Token: 0x06014485 RID: 83077 RVA: 0x001DCCE6 File Offset: 0x001DAEE6
+		// Token: 0x17000F3A RID: 3898
+		// (get) Token: 0x06004F47 RID: 20295 RVA: 0x0006F16A File Offset: 0x0006D36A
+		// (set) Token: 0x06004F48 RID: 20296 RVA: 0x0006F17E File Offset: 0x0006D37E
 		[Nullable(2)]
 		public unsafe AActor SkillTarget
 		{
@@ -590,9 +605,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F7E RID: 20350
-		// (get) Token: 0x06014486 RID: 83078 RVA: 0x001DCCFB File Offset: 0x001DAEFB
-		// (set) Token: 0x06014487 RID: 83079 RVA: 0x001DCD0F File Offset: 0x001DAF0F
+		// Token: 0x17000F3B RID: 3899
+		// (get) Token: 0x06004F49 RID: 20297 RVA: 0x0006F193 File Offset: 0x0006D393
+		// (set) Token: 0x06004F4A RID: 20298 RVA: 0x0006F1A7 File Offset: 0x0006D3A7
 		[Nullable(2)]
 		public unsafe AActor HateTarget
 		{
@@ -608,9 +623,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F7F RID: 20351
-		// (get) Token: 0x06014488 RID: 83080 RVA: 0x001DCD24 File Offset: 0x001DAF24
-		// (set) Token: 0x06014489 RID: 83081 RVA: 0x001DCD34 File Offset: 0x001DAF34
+		// Token: 0x17000F3C RID: 3900
+		// (get) Token: 0x06004F4B RID: 20299 RVA: 0x0006F1BC File Offset: 0x0006D3BC
+		// (set) Token: 0x06004F4C RID: 20300 RVA: 0x0006F1CC File Offset: 0x0006D3CC
 		public unsafe float LastActiveSkillTime
 		{
 			get
@@ -623,9 +638,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F80 RID: 20352
-		// (get) Token: 0x0601448A RID: 83082 RVA: 0x001DCD45 File Offset: 0x001DAF45
-		// (set) Token: 0x0601448B RID: 83083 RVA: 0x001DCD55 File Offset: 0x001DAF55
+		// Token: 0x17000F3D RID: 3901
+		// (get) Token: 0x06004F4D RID: 20301 RVA: 0x0006F1DD File Offset: 0x0006D3DD
+		// (set) Token: 0x06004F4E RID: 20302 RVA: 0x0006F1ED File Offset: 0x0006D3ED
 		public unsafe int SitDownDirect
 		{
 			get
@@ -638,9 +653,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F81 RID: 20353
-		// (get) Token: 0x0601448C RID: 83084 RVA: 0x001DCD66 File Offset: 0x001DAF66
-		// (set) Token: 0x0601448D RID: 83085 RVA: 0x001DCD76 File Offset: 0x001DAF76
+		// Token: 0x17000F3E RID: 3902
+		// (get) Token: 0x06004F4F RID: 20303 RVA: 0x0006F1FE File Offset: 0x0006D3FE
+		// (set) Token: 0x06004F50 RID: 20304 RVA: 0x0006F20E File Offset: 0x0006D40E
 		public unsafe int StandUpDirect
 		{
 			get
@@ -653,9 +668,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F82 RID: 20354
-		// (get) Token: 0x0601448E RID: 83086 RVA: 0x001DCD87 File Offset: 0x001DAF87
-		// (set) Token: 0x0601448F RID: 83087 RVA: 0x001DCD97 File Offset: 0x001DAF97
+		// Token: 0x17000F3F RID: 3903
+		// (get) Token: 0x06004F51 RID: 20305 RVA: 0x0006F21F File Offset: 0x0006D41F
+		// (set) Token: 0x06004F52 RID: 20306 RVA: 0x0006F22F File Offset: 0x0006D42F
 		public unsafe bool bSitDown
 		{
 			get
@@ -668,9 +683,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F83 RID: 20355
-		// (get) Token: 0x06014490 RID: 83088 RVA: 0x001DCDA8 File Offset: 0x001DAFA8
-		// (set) Token: 0x06014491 RID: 83089 RVA: 0x001DCDB8 File Offset: 0x001DAFB8
+		// Token: 0x17000F40 RID: 3904
+		// (get) Token: 0x06004F53 RID: 20307 RVA: 0x0006F240 File Offset: 0x0006D440
+		// (set) Token: 0x06004F54 RID: 20308 RVA: 0x0006F250 File Offset: 0x0006D450
 		public unsafe int SitDownType
 		{
 			get
@@ -683,9 +698,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F84 RID: 20356
-		// (get) Token: 0x06014492 RID: 83090 RVA: 0x001DCDC9 File Offset: 0x001DAFC9
-		// (set) Token: 0x06014493 RID: 83091 RVA: 0x001DCDD9 File Offset: 0x001DAFD9
+		// Token: 0x17000F41 RID: 3905
+		// (get) Token: 0x06004F55 RID: 20309 RVA: 0x0006F261 File Offset: 0x0006D461
+		// (set) Token: 0x06004F56 RID: 20310 RVA: 0x0006F271 File Offset: 0x0006D471
 		public unsafe bool IsDriver
 		{
 			get
@@ -698,9 +713,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F85 RID: 20357
-		// (get) Token: 0x06014494 RID: 83092 RVA: 0x001DCDEA File Offset: 0x001DAFEA
-		// (set) Token: 0x06014495 RID: 83093 RVA: 0x001DCDFA File Offset: 0x001DAFFA
+		// Token: 0x17000F42 RID: 3906
+		// (get) Token: 0x06004F57 RID: 20311 RVA: 0x0006F282 File Offset: 0x0006D482
+		// (set) Token: 0x06004F58 RID: 20312 RVA: 0x0006F292 File Offset: 0x0006D492
 		public unsafe bool IsOnVehicle
 		{
 			get
@@ -713,9 +728,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F86 RID: 20358
-		// (get) Token: 0x06014496 RID: 83094 RVA: 0x001DCE0B File Offset: 0x001DB00B
-		// (set) Token: 0x06014497 RID: 83095 RVA: 0x001DCE1B File Offset: 0x001DB01B
+		// Token: 0x17000F43 RID: 3907
+		// (get) Token: 0x06004F59 RID: 20313 RVA: 0x0006F2A3 File Offset: 0x0006D4A3
+		// (set) Token: 0x06004F5A RID: 20314 RVA: 0x0006F2B3 File Offset: 0x0006D4B3
 		public unsafe bool IsOnVehicleWithOther
 		{
 			get
@@ -728,9 +743,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F87 RID: 20359
-		// (get) Token: 0x06014498 RID: 83096 RVA: 0x001DCE2C File Offset: 0x001DB02C
-		// (set) Token: 0x06014499 RID: 83097 RVA: 0x001DCE3C File Offset: 0x001DB03C
+		// Token: 0x17000F44 RID: 3908
+		// (get) Token: 0x06004F5B RID: 20315 RVA: 0x0006F2C4 File Offset: 0x0006D4C4
+		// (set) Token: 0x06004F5C RID: 20316 RVA: 0x0006F2D4 File Offset: 0x0006D4D4
 		public unsafe bool IsLeavingVehicle
 		{
 			get
@@ -743,9 +758,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F88 RID: 20360
-		// (get) Token: 0x0601449A RID: 83098 RVA: 0x001DCE4D File Offset: 0x001DB04D
-		// (set) Token: 0x0601449B RID: 83099 RVA: 0x001DCE5D File Offset: 0x001DB05D
+		// Token: 0x17000F45 RID: 3909
+		// (get) Token: 0x06004F5D RID: 20317 RVA: 0x0006F2E5 File Offset: 0x0006D4E5
+		// (set) Token: 0x06004F5E RID: 20318 RVA: 0x0006F2F5 File Offset: 0x0006D4F5
 		public unsafe int VehicleType
 		{
 			get
@@ -758,9 +773,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F89 RID: 20361
-		// (get) Token: 0x0601449C RID: 83100 RVA: 0x001DCE6E File Offset: 0x001DB06E
-		// (set) Token: 0x0601449D RID: 83101 RVA: 0x001DCE7E File Offset: 0x001DB07E
+		// Token: 0x17000F46 RID: 3910
+		// (get) Token: 0x06004F5F RID: 20319 RVA: 0x0006F306 File Offset: 0x0006D506
+		// (set) Token: 0x06004F60 RID: 20320 RVA: 0x0006F316 File Offset: 0x0006D516
 		public unsafe bool IsVehicleImpact
 		{
 			get
@@ -773,9 +788,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F8A RID: 20362
-		// (get) Token: 0x0601449E RID: 83102 RVA: 0x001DCE8F File Offset: 0x001DB08F
-		// (set) Token: 0x0601449F RID: 83103 RVA: 0x001DCE9F File Offset: 0x001DB09F
+		// Token: 0x17000F47 RID: 3911
+		// (get) Token: 0x06004F61 RID: 20321 RVA: 0x0006F327 File Offset: 0x0006D527
+		// (set) Token: 0x06004F62 RID: 20322 RVA: 0x0006F337 File Offset: 0x0006D537
 		public unsafe float VehicleCollisionAngle
 		{
 			get
@@ -788,9 +803,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F8B RID: 20363
-		// (get) Token: 0x060144A0 RID: 83104 RVA: 0x001DCEB0 File Offset: 0x001DB0B0
-		// (set) Token: 0x060144A1 RID: 83105 RVA: 0x001DCEC0 File Offset: 0x001DB0C0
+		// Token: 0x17000F48 RID: 3912
+		// (get) Token: 0x06004F63 RID: 20323 RVA: 0x0006F348 File Offset: 0x0006D548
+		// (set) Token: 0x06004F64 RID: 20324 RVA: 0x0006F358 File Offset: 0x0006D558
 		public unsafe float VehicleCollisionStrength
 		{
 			get
@@ -803,9 +818,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F8C RID: 20364
-		// (get) Token: 0x060144A2 RID: 83106 RVA: 0x001DCED1 File Offset: 0x001DB0D1
-		// (set) Token: 0x060144A3 RID: 83107 RVA: 0x001DCEE1 File Offset: 0x001DB0E1
+		// Token: 0x17000F49 RID: 3913
+		// (get) Token: 0x06004F65 RID: 20325 RVA: 0x0006F369 File Offset: 0x0006D569
+		// (set) Token: 0x06004F66 RID: 20326 RVA: 0x0006F379 File Offset: 0x0006D579
 		public unsafe float YawInPassengerCoordinate
 		{
 			get
@@ -818,9 +833,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F8D RID: 20365
-		// (get) Token: 0x060144A4 RID: 83108 RVA: 0x001DCEF2 File Offset: 0x001DB0F2
-		// (set) Token: 0x060144A5 RID: 83109 RVA: 0x001DCF06 File Offset: 0x001DB106
+		// Token: 0x17000F4A RID: 3914
+		// (get) Token: 0x06004F67 RID: 20327 RVA: 0x0006F38A File Offset: 0x0006D58A
+		// (set) Token: 0x06004F68 RID: 20328 RVA: 0x0006F39E File Offset: 0x0006D59E
 		public unsafe FVector VehicleVelocity
 		{
 			get
@@ -833,9 +848,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F8E RID: 20366
-		// (get) Token: 0x060144A6 RID: 83110 RVA: 0x001DCF1B File Offset: 0x001DB11B
-		// (set) Token: 0x060144A7 RID: 83111 RVA: 0x001DCF2B File Offset: 0x001DB12B
+		// Token: 0x17000F4B RID: 3915
+		// (get) Token: 0x06004F69 RID: 20329 RVA: 0x0006F3B3 File Offset: 0x0006D5B3
+		// (set) Token: 0x06004F6A RID: 20330 RVA: 0x0006F3C3 File Offset: 0x0006D5C3
 		public unsafe bool bIsInPerformingPlot
 		{
 			get
@@ -848,9 +863,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F8F RID: 20367
-		// (get) Token: 0x060144A8 RID: 83112 RVA: 0x001DCF3C File Offset: 0x001DB13C
-		// (set) Token: 0x060144A9 RID: 83113 RVA: 0x001DCF4C File Offset: 0x001DB14C
+		// Token: 0x17000F4C RID: 3916
+		// (get) Token: 0x06004F6B RID: 20331 RVA: 0x0006F3D4 File Offset: 0x0006D5D4
+		// (set) Token: 0x06004F6C RID: 20332 RVA: 0x0006F3E4 File Offset: 0x0006D5E4
 		public unsafe bool bIsInSequence
 		{
 			get
@@ -863,9 +878,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F90 RID: 20368
-		// (get) Token: 0x060144AA RID: 83114 RVA: 0x001DCF5D File Offset: 0x001DB15D
-		// (set) Token: 0x060144AB RID: 83115 RVA: 0x001DCF6D File Offset: 0x001DB16D
+		// Token: 0x17000F4D RID: 3917
+		// (get) Token: 0x06004F6D RID: 20333 RVA: 0x0006F3F5 File Offset: 0x0006D5F5
+		// (set) Token: 0x06004F6E RID: 20334 RVA: 0x0006F405 File Offset: 0x0006D605
 		public unsafe bool bIsInSplineMove
 		{
 			get
@@ -878,9 +893,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F91 RID: 20369
-		// (get) Token: 0x060144AC RID: 83116 RVA: 0x001DCF7E File Offset: 0x001DB17E
-		// (set) Token: 0x060144AD RID: 83117 RVA: 0x001DCF8E File Offset: 0x001DB18E
+		// Token: 0x17000F4E RID: 3918
+		// (get) Token: 0x06004F6F RID: 20335 RVA: 0x0006F416 File Offset: 0x0006D616
+		// (set) Token: 0x06004F70 RID: 20336 RVA: 0x0006F426 File Offset: 0x0006D626
 		public unsafe bool bIsInUiCamera
 		{
 			get
@@ -893,9 +908,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F92 RID: 20370
-		// (get) Token: 0x060144AE RID: 83118 RVA: 0x001DCFA0 File Offset: 0x001DB1A0
-		// (set) Token: 0x060144AF RID: 83119 RVA: 0x001DCFD9 File Offset: 0x001DB1D9
+		// Token: 0x17000F4F RID: 3919
+		// (get) Token: 0x06004F71 RID: 20337 RVA: 0x0006F438 File Offset: 0x0006D638
+		// (set) Token: 0x06004F72 RID: 20338 RVA: 0x0006F471 File Offset: 0x0006D671
 		public FIKTarget LeftHandIKTargetCS
 		{
 			get
@@ -914,9 +929,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F93 RID: 20371
-		// (get) Token: 0x060144B0 RID: 83120 RVA: 0x001DCFFC File Offset: 0x001DB1FC
-		// (set) Token: 0x060144B1 RID: 83121 RVA: 0x001DD035 File Offset: 0x001DB235
+		// Token: 0x17000F50 RID: 3920
+		// (get) Token: 0x06004F73 RID: 20339 RVA: 0x0006F494 File Offset: 0x0006D694
+		// (set) Token: 0x06004F74 RID: 20340 RVA: 0x0006F4CD File Offset: 0x0006D6CD
 		public FIKTarget RightHandIKTargetCS
 		{
 			get
@@ -935,9 +950,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F94 RID: 20372
-		// (get) Token: 0x060144B2 RID: 83122 RVA: 0x001DD056 File Offset: 0x001DB256
-		// (set) Token: 0x060144B3 RID: 83123 RVA: 0x001DD066 File Offset: 0x001DB266
+		// Token: 0x17000F51 RID: 3921
+		// (get) Token: 0x06004F75 RID: 20341 RVA: 0x0006F4EE File Offset: 0x0006D6EE
+		// (set) Token: 0x06004F76 RID: 20342 RVA: 0x0006F4FE File Offset: 0x0006D6FE
 		public unsafe bool bDisableBlink
 		{
 			get
@@ -950,9 +965,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F95 RID: 20373
-		// (get) Token: 0x060144B4 RID: 83124 RVA: 0x001DD077 File Offset: 0x001DB277
-		// (set) Token: 0x060144B5 RID: 83125 RVA: 0x001DD087 File Offset: 0x001DB287
+		// Token: 0x17000F52 RID: 3922
+		// (get) Token: 0x06004F77 RID: 20343 RVA: 0x0006F50F File Offset: 0x0006D70F
+		// (set) Token: 0x06004F78 RID: 20344 RVA: 0x0006F51F File Offset: 0x0006D71F
 		public unsafe bool bIgnoreMontageBlinkCurve
 		{
 			get
@@ -965,9 +980,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F96 RID: 20374
-		// (get) Token: 0x060144B6 RID: 83126 RVA: 0x001DD098 File Offset: 0x001DB298
-		// (set) Token: 0x060144B7 RID: 83127 RVA: 0x001DD0A8 File Offset: 0x001DB2A8
+		// Token: 0x17000F53 RID: 3923
+		// (get) Token: 0x06004F79 RID: 20345 RVA: 0x0006F530 File Offset: 0x0006D730
+		// (set) Token: 0x06004F7A RID: 20346 RVA: 0x0006F540 File Offset: 0x0006D740
 		public unsafe bool bSwingState
 		{
 			get
@@ -980,9 +995,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F97 RID: 20375
-		// (get) Token: 0x060144B8 RID: 83128 RVA: 0x001DD0B9 File Offset: 0x001DB2B9
-		// (set) Token: 0x060144B9 RID: 83129 RVA: 0x001DD0C9 File Offset: 0x001DB2C9
+		// Token: 0x17000F54 RID: 3924
+		// (get) Token: 0x06004F7B RID: 20347 RVA: 0x0006F551 File Offset: 0x0006D751
+		// (set) Token: 0x06004F7C RID: 20348 RVA: 0x0006F561 File Offset: 0x0006D761
 		public unsafe ESwingStateType SwingStateType
 		{
 			get
@@ -995,9 +1010,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F98 RID: 20376
-		// (get) Token: 0x060144BA RID: 83130 RVA: 0x001DD0DA File Offset: 0x001DB2DA
-		// (set) Token: 0x060144BB RID: 83131 RVA: 0x001DD0EE File Offset: 0x001DB2EE
+		// Token: 0x17000F55 RID: 3925
+		// (get) Token: 0x06004F7D RID: 20349 RVA: 0x0006F572 File Offset: 0x0006D772
+		// (set) Token: 0x06004F7E RID: 20350 RVA: 0x0006F586 File Offset: 0x0006D786
 		public unsafe FVector FloatingLocalDirectionRef
 		{
 			get
@@ -1010,9 +1025,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F99 RID: 20377
-		// (get) Token: 0x060144BC RID: 83132 RVA: 0x001DD103 File Offset: 0x001DB303
-		// (set) Token: 0x060144BD RID: 83133 RVA: 0x001DD113 File Offset: 0x001DB313
+		// Token: 0x17000F56 RID: 3926
+		// (get) Token: 0x06004F7F RID: 20351 RVA: 0x0006F59B File Offset: 0x0006D79B
+		// (set) Token: 0x06004F80 RID: 20352 RVA: 0x0006F5AB File Offset: 0x0006D7AB
 		public unsafe float FloatingMoveMixRef
 		{
 			get
@@ -1025,9 +1040,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F9A RID: 20378
-		// (get) Token: 0x060144BE RID: 83134 RVA: 0x001DD124 File Offset: 0x001DB324
-		// (set) Token: 0x060144BF RID: 83135 RVA: 0x001DD138 File Offset: 0x001DB338
+		// Token: 0x17000F57 RID: 3927
+		// (get) Token: 0x06004F81 RID: 20353 RVA: 0x0006F5BC File Offset: 0x0006D7BC
+		// (set) Token: 0x06004F82 RID: 20354 RVA: 0x0006F5D0 File Offset: 0x0006D7D0
 		public unsafe FVector HookTargetLocation
 		{
 			get
@@ -1040,9 +1055,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F9B RID: 20379
-		// (get) Token: 0x060144C0 RID: 83136 RVA: 0x001DD14D File Offset: 0x001DB34D
-		// (set) Token: 0x060144C1 RID: 83137 RVA: 0x001DD15D File Offset: 0x001DB35D
+		// Token: 0x17000F58 RID: 3928
+		// (get) Token: 0x06004F83 RID: 20355 RVA: 0x0006F5E5 File Offset: 0x0006D7E5
+		// (set) Token: 0x06004F84 RID: 20356 RVA: 0x0006F5F5 File Offset: 0x0006D7F5
 		public unsafe bool bIsRailSlideMove
 		{
 			get
@@ -1055,9 +1070,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F9C RID: 20380
-		// (get) Token: 0x060144C2 RID: 83138 RVA: 0x001DD16E File Offset: 0x001DB36E
-		// (set) Token: 0x060144C3 RID: 83139 RVA: 0x001DD17E File Offset: 0x001DB37E
+		// Token: 0x17000F59 RID: 3929
+		// (get) Token: 0x06004F85 RID: 20357 RVA: 0x0006F606 File Offset: 0x0006D806
+		// (set) Token: 0x06004F86 RID: 20358 RVA: 0x0006F616 File Offset: 0x0006D816
 		public unsafe ERailSlideAnimType RailSlideAnimType
 		{
 			get
@@ -1070,9 +1085,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F9D RID: 20381
-		// (get) Token: 0x060144C4 RID: 83140 RVA: 0x001DD18F File Offset: 0x001DB38F
-		// (set) Token: 0x060144C5 RID: 83141 RVA: 0x001DD19F File Offset: 0x001DB39F
+		// Token: 0x17000F5A RID: 3930
+		// (get) Token: 0x06004F87 RID: 20359 RVA: 0x0006F627 File Offset: 0x0006D827
+		// (set) Token: 0x06004F88 RID: 20360 RVA: 0x0006F637 File Offset: 0x0006D837
 		public unsafe bool bIsAirRailSlideMove
 		{
 			get
@@ -1085,9 +1100,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F9E RID: 20382
-		// (get) Token: 0x060144C6 RID: 83142 RVA: 0x001DD1B0 File Offset: 0x001DB3B0
-		// (set) Token: 0x060144C7 RID: 83143 RVA: 0x001DD1C0 File Offset: 0x001DB3C0
+		// Token: 0x17000F5B RID: 3931
+		// (get) Token: 0x06004F89 RID: 20361 RVA: 0x0006F648 File Offset: 0x0006D848
+		// (set) Token: 0x06004F8A RID: 20362 RVA: 0x0006F658 File Offset: 0x0006D858
 		public unsafe ERailSlideJumpType RailSlideJumpType
 		{
 			get
@@ -1100,9 +1115,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F9F RID: 20383
-		// (get) Token: 0x060144C8 RID: 83144 RVA: 0x001DD1D1 File Offset: 0x001DB3D1
-		// (set) Token: 0x060144C9 RID: 83145 RVA: 0x001DD1E1 File Offset: 0x001DB3E1
+		// Token: 0x17000F5C RID: 3932
+		// (get) Token: 0x06004F8B RID: 20363 RVA: 0x0006F669 File Offset: 0x0006D869
+		// (set) Token: 0x06004F8C RID: 20364 RVA: 0x0006F679 File Offset: 0x0006D879
 		public unsafe bool bUseLandAnimation
 		{
 			get
@@ -1115,9 +1130,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004FA0 RID: 20384
-		// (get) Token: 0x060144CA RID: 83146 RVA: 0x001DD1F2 File Offset: 0x001DB3F2
-		// (set) Token: 0x060144CB RID: 83147 RVA: 0x001DD202 File Offset: 0x001DB402
+		// Token: 0x17000F5D RID: 3933
+		// (get) Token: 0x06004F8D RID: 20365 RVA: 0x0006F68A File Offset: 0x0006D88A
+		// (set) Token: 0x06004F8E RID: 20366 RVA: 0x0006F69A File Offset: 0x0006D89A
 		public unsafe bool bInAssistedWalking
 		{
 			get
@@ -1130,9 +1145,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004FA1 RID: 20385
-		// (get) Token: 0x060144CC RID: 83148 RVA: 0x001DD213 File Offset: 0x001DB413
-		// (set) Token: 0x060144CD RID: 83149 RVA: 0x001DD223 File Offset: 0x001DB423
+		// Token: 0x17000F5E RID: 3934
+		// (get) Token: 0x06004F8F RID: 20367 RVA: 0x0006F6AB File Offset: 0x0006D8AB
+		// (set) Token: 0x06004F90 RID: 20368 RVA: 0x0006F6BB File Offset: 0x0006D8BB
 		public unsafe bool bHelpedAssistedWalk
 		{
 			get
@@ -1145,9 +1160,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004FA2 RID: 20386
-		// (get) Token: 0x060144CE RID: 83150 RVA: 0x001DD234 File Offset: 0x001DB434
-		// (set) Token: 0x060144CF RID: 83151 RVA: 0x001DD244 File Offset: 0x001DB444
+		// Token: 0x17000F5F RID: 3935
+		// (get) Token: 0x06004F91 RID: 20369 RVA: 0x0006F6CC File Offset: 0x0006D8CC
+		// (set) Token: 0x06004F92 RID: 20370 RVA: 0x0006F6DC File Offset: 0x0006D8DC
 		public unsafe bool bSkipEnterAssistedWalkAnim
 		{
 			get
@@ -1160,9 +1175,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004FA3 RID: 20387
-		// (get) Token: 0x060144D0 RID: 83152 RVA: 0x001DD255 File Offset: 0x001DB455
-		// (set) Token: 0x060144D1 RID: 83153 RVA: 0x001DD265 File Offset: 0x001DB465
+		// Token: 0x17000F60 RID: 3936
+		// (get) Token: 0x06004F93 RID: 20371 RVA: 0x0006F6ED File Offset: 0x0006D8ED
+		// (set) Token: 0x06004F94 RID: 20372 RVA: 0x0006F6FD File Offset: 0x0006D8FD
 		public unsafe float AssistedWalkAnimRate
 		{
 			get
@@ -1175,9 +1190,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004FA4 RID: 20388
-		// (get) Token: 0x060144D2 RID: 83154 RVA: 0x001DD276 File Offset: 0x001DB476
-		// (set) Token: 0x060144D3 RID: 83155 RVA: 0x001DD286 File Offset: 0x001DB486
+		// Token: 0x17000F61 RID: 3937
+		// (get) Token: 0x06004F95 RID: 20373 RVA: 0x0006F70E File Offset: 0x0006D90E
+		// (set) Token: 0x06004F96 RID: 20374 RVA: 0x0006F71E File Offset: 0x0006D91E
 		public unsafe float SelfiePhotoArmAngle
 		{
 			get
@@ -1190,269 +1205,272 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060144D4 RID: 83156 RVA: 0x001DD297 File Offset: 0x001DB497
+		// Token: 0x06004F97 RID: 20375 RVA: 0x0006F72F File Offset: 0x0006D92F
 		static UAbpLogicParams()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroAnim.AbpLogicParams");
 		}
 
-		// Token: 0x060144D5 RID: 83157 RVA: 0x001DD2A5 File Offset: 0x001DB4A5
+		// Token: 0x06004F98 RID: 20376 RVA: 0x0006F73D File Offset: 0x0006D93D
 		protected UAbpLogicParams(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400B074 RID: 45172
+		// Token: 0x04001FA1 RID: 8097
 		public new const string __ObjectPath = "/Script/KuroAnim.AbpLogicParams";
 
-		// Token: 0x0400B075 RID: 45173
+		// Token: 0x04001FA2 RID: 8098
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400B076 RID: 45174
+		// Token: 0x04001FA3 RID: 8099
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400B077 RID: 45175
+		// Token: 0x04001FA4 RID: 8100
 		internal static int __PropertyOffset_AcceptedNewBeHitRef;
 
-		// Token: 0x0400B078 RID: 45176
+		// Token: 0x04001FA5 RID: 8101
 		internal static int __PropertyOffset_BeHitAnimRef;
 
-		// Token: 0x0400B079 RID: 45177
+		// Token: 0x04001FA6 RID: 8102
 		internal static int __PropertyOffset_EnterFkRef;
 
-		// Token: 0x0400B07A RID: 45178
+		// Token: 0x04001FA7 RID: 8103
 		internal static int __PropertyOffset_DoubleHitInAirRef;
 
-		// Token: 0x0400B07B RID: 45179
+		// Token: 0x04001FA8 RID: 8104
 		internal static int __PropertyOffset_BeHitDirectRef;
 
-		// Token: 0x0400B07C RID: 45180
+		// Token: 0x04001FA9 RID: 8105
 		internal static int __PropertyOffset_BeHitLocationRef;
 
-		// Token: 0x0400B07D RID: 45181
+		// Token: 0x04001FAA RID: 8106
 		internal static int __PropertyOffset_BeHitSocketNameRef;
 
-		// Token: 0x0400B07E RID: 45182
+		// Token: 0x04001FAB RID: 8107
 		internal static int __PropertyOffset_BeHitBoneRef;
 
-		// Token: 0x0400B07F RID: 45183
+		// Token: 0x04001FAC RID: 8108
 		internal static int __PropertyOffset_HitInfo;
 
-		// Token: 0x0400B080 RID: 45184
+		// Token: 0x04001FAD RID: 8109
 		[Nullable(2)]
 		private FBoneFeedbackAnimHitInfo _HitInfo;
 
-		// Token: 0x0400B081 RID: 45185
+		// Token: 0x04001FAE RID: 8110
 		internal static int __PropertyOffset_CharMoveStateRef;
 
-		// Token: 0x0400B082 RID: 45186
+		// Token: 0x04001FAF RID: 8111
 		internal static int __PropertyOffset_CharPositionStateRef;
 
-		// Token: 0x0400B083 RID: 45187
+		// Token: 0x04001FB0 RID: 8112
 		internal static int __PropertyOffset_CharCameraStateRef;
 
-		// Token: 0x0400B084 RID: 45188
+		// Token: 0x04001FB1 RID: 8113
 		internal static int __PropertyOffset_BattleIdleTimeRef;
 
-		// Token: 0x0400B085 RID: 45189
+		// Token: 0x04001FB2 RID: 8114
 		internal static int __PropertyOffset_DegMovementSlopeRef;
 
-		// Token: 0x0400B086 RID: 45190
+		// Token: 0x04001FB3 RID: 8115
 		internal static int __PropertyOffset_SightDirectRef;
 
-		// Token: 0x0400B087 RID: 45191
+		// Token: 0x04001FB4 RID: 8116
 		internal static int __PropertyOffset_RagQuitStateRef;
 
-		// Token: 0x0400B088 RID: 45192
+		// Token: 0x04001FB5 RID: 8117
 		internal static int __PropertyOffset_IsJumpRef;
 
-		// Token: 0x0400B089 RID: 45193
+		// Token: 0x04001FB6 RID: 8118
 		internal static int __PropertyOffset_AccelerationRef;
 
-		// Token: 0x0400B08A RID: 45194
+		// Token: 0x04001FB7 RID: 8119
 		internal static int __PropertyOffset_IsMovingRef;
 
-		// Token: 0x0400B08B RID: 45195
+		// Token: 0x04001FB8 RID: 8120
 		internal static int __PropertyOffset_SpeedRef;
 
-		// Token: 0x0400B08C RID: 45196
+		// Token: 0x04001FB9 RID: 8121
 		internal static int __PropertyOffset_InputDirectRef;
 
-		// Token: 0x0400B08D RID: 45197
+		// Token: 0x04001FBA RID: 8122
 		internal static int __PropertyOffset_InputRotatorRef;
 
-		// Token: 0x0400B08E RID: 45198
+		// Token: 0x04001FBB RID: 8123
+		internal static int __PropertyOffset_bUpdateInputRotatorRef;
+
+		// Token: 0x04001FBC RID: 8124
 		internal static int __PropertyOffset_IsFallingIntoWaterRef;
 
-		// Token: 0x0400B08F RID: 45199
+		// Token: 0x04001FBD RID: 8125
 		internal static int __PropertyOffset_GroundedTimeRef;
 
-		// Token: 0x0400B090 RID: 45200
+		// Token: 0x04001FBE RID: 8126
 		internal static int __PropertyOffset_HasMoveInputRef;
 
-		// Token: 0x0400B091 RID: 45201
+		// Token: 0x04001FBF RID: 8127
 		internal static int __PropertyOffset_ClimbInfoRef;
 
-		// Token: 0x0400B092 RID: 45202
+		// Token: 0x04001FC0 RID: 8128
 		[Nullable(2)]
 		private FClimbInfoStruct _ClimbInfoRef;
 
-		// Token: 0x0400B093 RID: 45203
+		// Token: 0x04001FC1 RID: 8129
 		internal static int __PropertyOffset_ClimbStateRef;
 
-		// Token: 0x0400B094 RID: 45204
+		// Token: 0x04001FC2 RID: 8130
 		[Nullable(2)]
 		private FClimbStateStruct _ClimbStateRef;
 
-		// Token: 0x0400B095 RID: 45205
+		// Token: 0x04001FC3 RID: 8131
 		internal static int __PropertyOffset_ClimbOnWallAngleRef;
 
-		// Token: 0x0400B096 RID: 45206
+		// Token: 0x04001FC4 RID: 8132
 		internal static int __PropertyOffset_SprintSwimOffsetRef;
 
-		// Token: 0x0400B097 RID: 45207
+		// Token: 0x04001FC5 RID: 8133
 		internal static int __PropertyOffset_SprintSwimOffsetLerpSpeedRef;
 
-		// Token: 0x0400B098 RID: 45208
+		// Token: 0x04001FC6 RID: 8134
 		internal static int __PropertyOffset_SlideForwardRef;
 
-		// Token: 0x0400B099 RID: 45209
+		// Token: 0x04001FC7 RID: 8135
 		internal static int __PropertyOffset_SlideSwitchThisFrameRef;
 
-		// Token: 0x0400B09A RID: 45210
+		// Token: 0x04001FC8 RID: 8136
 		internal static int __PropertyOffset_SlideStandModeRef;
 
-		// Token: 0x0400B09B RID: 45211
+		// Token: 0x04001FC9 RID: 8137
 		internal static int __PropertyOffset_JumpUpRateRef;
 
-		// Token: 0x0400B09C RID: 45212
+		// Token: 0x04001FCA RID: 8138
 		internal static int __PropertyOffset_ForceExitStateStopRef;
 
-		// Token: 0x0400B09D RID: 45213
+		// Token: 0x04001FCB RID: 8139
 		internal static int __PropertyOffset_SkillTarget;
 
-		// Token: 0x0400B09E RID: 45214
+		// Token: 0x04001FCC RID: 8140
 		internal static int __PropertyOffset_HateTarget;
 
-		// Token: 0x0400B09F RID: 45215
+		// Token: 0x04001FCD RID: 8141
 		internal static int __PropertyOffset_LastActiveSkillTime;
 
-		// Token: 0x0400B0A0 RID: 45216
+		// Token: 0x04001FCE RID: 8142
 		internal static int __PropertyOffset_SitDownDirect;
 
-		// Token: 0x0400B0A1 RID: 45217
+		// Token: 0x04001FCF RID: 8143
 		internal static int __PropertyOffset_StandUpDirect;
 
-		// Token: 0x0400B0A2 RID: 45218
+		// Token: 0x04001FD0 RID: 8144
 		internal static int __PropertyOffset_bSitDown;
 
-		// Token: 0x0400B0A3 RID: 45219
+		// Token: 0x04001FD1 RID: 8145
 		internal static int __PropertyOffset_SitDownType;
 
-		// Token: 0x0400B0A4 RID: 45220
+		// Token: 0x04001FD2 RID: 8146
 		internal static int __PropertyOffset_IsDriver;
 
-		// Token: 0x0400B0A5 RID: 45221
+		// Token: 0x04001FD3 RID: 8147
 		internal static int __PropertyOffset_IsOnVehicle;
 
-		// Token: 0x0400B0A6 RID: 45222
+		// Token: 0x04001FD4 RID: 8148
 		internal static int __PropertyOffset_IsOnVehicleWithOther;
 
-		// Token: 0x0400B0A7 RID: 45223
+		// Token: 0x04001FD5 RID: 8149
 		internal static int __PropertyOffset_IsLeavingVehicle;
 
-		// Token: 0x0400B0A8 RID: 45224
+		// Token: 0x04001FD6 RID: 8150
 		internal static int __PropertyOffset_VehicleType;
 
-		// Token: 0x0400B0A9 RID: 45225
+		// Token: 0x04001FD7 RID: 8151
 		internal static int __PropertyOffset_IsVehicleImpact;
 
-		// Token: 0x0400B0AA RID: 45226
+		// Token: 0x04001FD8 RID: 8152
 		internal static int __PropertyOffset_VehicleCollisionAngle;
 
-		// Token: 0x0400B0AB RID: 45227
+		// Token: 0x04001FD9 RID: 8153
 		internal static int __PropertyOffset_VehicleCollisionStrength;
 
-		// Token: 0x0400B0AC RID: 45228
+		// Token: 0x04001FDA RID: 8154
 		internal static int __PropertyOffset_YawInPassengerCoordinate;
 
-		// Token: 0x0400B0AD RID: 45229
+		// Token: 0x04001FDB RID: 8155
 		internal static int __PropertyOffset_VehicleVelocity;
 
-		// Token: 0x0400B0AE RID: 45230
+		// Token: 0x04001FDC RID: 8156
 		internal static int __PropertyOffset_bIsInPerformingPlot;
 
-		// Token: 0x0400B0AF RID: 45231
+		// Token: 0x04001FDD RID: 8157
 		internal static int __PropertyOffset_bIsInSequence;
 
-		// Token: 0x0400B0B0 RID: 45232
+		// Token: 0x04001FDE RID: 8158
 		internal static int __PropertyOffset_bIsInSplineMove;
 
-		// Token: 0x0400B0B1 RID: 45233
+		// Token: 0x04001FDF RID: 8159
 		internal static int __PropertyOffset_bIsInUiCamera;
 
-		// Token: 0x0400B0B2 RID: 45234
+		// Token: 0x04001FE0 RID: 8160
 		internal static int __PropertyOffset_LeftHandIKTargetCS;
 
-		// Token: 0x0400B0B3 RID: 45235
+		// Token: 0x04001FE1 RID: 8161
 		[Nullable(2)]
 		private FIKTarget _LeftHandIKTargetCS;
 
-		// Token: 0x0400B0B4 RID: 45236
+		// Token: 0x04001FE2 RID: 8162
 		internal static int __PropertyOffset_RightHandIKTargetCS;
 
-		// Token: 0x0400B0B5 RID: 45237
+		// Token: 0x04001FE3 RID: 8163
 		[Nullable(2)]
 		private FIKTarget _RightHandIKTargetCS;
 
-		// Token: 0x0400B0B6 RID: 45238
+		// Token: 0x04001FE4 RID: 8164
 		internal static int __PropertyOffset_bDisableBlink;
 
-		// Token: 0x0400B0B7 RID: 45239
+		// Token: 0x04001FE5 RID: 8165
 		internal static int __PropertyOffset_bIgnoreMontageBlinkCurve;
 
-		// Token: 0x0400B0B8 RID: 45240
+		// Token: 0x04001FE6 RID: 8166
 		internal static int __PropertyOffset_bSwingState;
 
-		// Token: 0x0400B0B9 RID: 45241
+		// Token: 0x04001FE7 RID: 8167
 		internal static int __PropertyOffset_SwingStateType;
 
-		// Token: 0x0400B0BA RID: 45242
+		// Token: 0x04001FE8 RID: 8168
 		internal static int __PropertyOffset_FloatingLocalDirectionRef;
 
-		// Token: 0x0400B0BB RID: 45243
+		// Token: 0x04001FE9 RID: 8169
 		internal static int __PropertyOffset_FloatingMoveMixRef;
 
-		// Token: 0x0400B0BC RID: 45244
+		// Token: 0x04001FEA RID: 8170
 		internal static int __PropertyOffset_HookTargetLocation;
 
-		// Token: 0x0400B0BD RID: 45245
+		// Token: 0x04001FEB RID: 8171
 		internal static int __PropertyOffset_bIsRailSlideMove;
 
-		// Token: 0x0400B0BE RID: 45246
+		// Token: 0x04001FEC RID: 8172
 		internal static int __PropertyOffset_RailSlideAnimType;
 
-		// Token: 0x0400B0BF RID: 45247
+		// Token: 0x04001FED RID: 8173
 		internal static int __PropertyOffset_bIsAirRailSlideMove;
 
-		// Token: 0x0400B0C0 RID: 45248
+		// Token: 0x04001FEE RID: 8174
 		internal static int __PropertyOffset_RailSlideJumpType;
 
-		// Token: 0x0400B0C1 RID: 45249
+		// Token: 0x04001FEF RID: 8175
 		internal static int __PropertyOffset_bUseLandAnimation;
 
-		// Token: 0x0400B0C2 RID: 45250
+		// Token: 0x04001FF0 RID: 8176
 		internal static int __PropertyOffset_bInAssistedWalking;
 
-		// Token: 0x0400B0C3 RID: 45251
+		// Token: 0x04001FF1 RID: 8177
 		internal static int __PropertyOffset_bHelpedAssistedWalk;
 
-		// Token: 0x0400B0C4 RID: 45252
+		// Token: 0x04001FF2 RID: 8178
 		internal static int __PropertyOffset_bSkipEnterAssistedWalkAnim;
 
-		// Token: 0x0400B0C5 RID: 45253
+		// Token: 0x04001FF3 RID: 8179
 		internal static int __PropertyOffset_AssistedWalkAnimRate;
 
-		// Token: 0x0400B0C6 RID: 45254
+		// Token: 0x04001FF4 RID: 8180
 		internal static int __PropertyOffset_SelfiePhotoArmAngle;
 	}
 }

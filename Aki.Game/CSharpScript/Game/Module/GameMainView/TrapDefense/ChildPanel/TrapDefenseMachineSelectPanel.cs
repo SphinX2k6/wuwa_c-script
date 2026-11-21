@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 {
-	// Token: 0x02005A03 RID: 23043
+	// Token: 0x020049DF RID: 18911
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseMachineSelectPanel : BattleChildViewPanel
 	{
-		// Token: 0x0603A61A RID: 239130 RVA: 0x00DE3F2C File Offset: 0x00DE212C
+		// Token: 0x0602F563 RID: 193891 RVA: 0x00D3447C File Offset: 0x00D3267C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			};
 		}
 
-		// Token: 0x0603A61B RID: 239131 RVA: 0x00DE3FB4 File Offset: 0x00DE21B4
+		// Token: 0x0602F564 RID: 193892 RVA: 0x00D34504 File Offset: 0x00D32704
 		private UniTask CreateMachineItem(UUIItem uiItem)
 		{
 			TrapDefenseMachineSelectPanel.<CreateMachineItem>d__16 <CreateMachineItem>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			return <CreateMachineItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A61C RID: 239132 RVA: 0x00DE4000 File Offset: 0x00DE2200
+		// Token: 0x0602F565 RID: 193893 RVA: 0x00D34550 File Offset: 0x00D32750
 		private UniTask InitMachineItemList()
 		{
 			TrapDefenseMachineSelectPanel.<InitMachineItemList>d__17 <InitMachineItemList>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			return <InitMachineItemList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A61D RID: 239133 RVA: 0x00DE4044 File Offset: 0x00DE2244
+		// Token: 0x0602F566 RID: 193894 RVA: 0x00D34594 File Offset: 0x00D32794
 		private UniTask InitMoneyIcon()
 		{
 			TrapDefenseMachineSelectPanel.<InitMoneyIcon>d__18 <InitMoneyIcon>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			return <InitMoneyIcon>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A61E RID: 239134 RVA: 0x00DE4088 File Offset: 0x00DE2288
+		// Token: 0x0602F567 RID: 193895 RVA: 0x00D345D8 File Offset: 0x00D327D8
 		private UniTask InitTouchSlider()
 		{
 			TrapDefenseMachineSelectPanel.<InitTouchSlider>d__19 <InitTouchSlider>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			return <InitTouchSlider>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A61F RID: 239135 RVA: 0x00DE40CC File Offset: 0x00DE22CC
+		// Token: 0x0602F568 RID: 193896 RVA: 0x00D3461C File Offset: 0x00D3281C
 		public override void InitializeTemp()
 		{
 			this.Sequence = new UiSequencePlayer(this.RootItem);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			this.MoneyTween.BindUpdateTween(new Action<int>(this.OnMoneyTweenUpdate));
 		}
 
-		// Token: 0x0603A620 RID: 239136 RVA: 0x00DE4130 File Offset: 0x00DE2330
+		// Token: 0x0602F569 RID: 193897 RVA: 0x00D34680 File Offset: 0x00D32880
 		public override UniTask InitializeAsync()
 		{
 			TrapDefenseMachineSelectPanel.<InitializeAsync>d__21 <InitializeAsync>d__;
@@ -98,19 +98,19 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A621 RID: 239137 RVA: 0x00DE4173 File Offset: 0x00DE2373
+		// Token: 0x0602F56A RID: 193898 RVA: 0x00D346C3 File Offset: 0x00D328C3
 		protected override void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.TrapDefenseOnSystemInfoNotify, new Action(this.OnTrapDefenseSystemInfoNotify));
 		}
 
-		// Token: 0x0603A622 RID: 239138 RVA: 0x00DE4191 File Offset: 0x00DE2391
+		// Token: 0x0602F56B RID: 193899 RVA: 0x00D346E1 File Offset: 0x00D328E1
 		protected override void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.TrapDefenseOnSystemInfoNotify, new Action(this.OnTrapDefenseSystemInfoNotify));
 		}
 
-		// Token: 0x0603A623 RID: 239139 RVA: 0x00DE41AF File Offset: 0x00DE23AF
+		// Token: 0x0602F56C RID: 193900 RVA: 0x00D346FF File Offset: 0x00D328FF
 		protected override void OnShowBattleChildViewPanel(bool isFirst)
 		{
 			this.RefreshMachineState();
@@ -118,13 +118,13 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			this.RefreshMachineSelectCollapse();
 		}
 
-		// Token: 0x0603A624 RID: 239140 RVA: 0x00DE41C3 File Offset: 0x00DE23C3
+		// Token: 0x0602F56D RID: 193901 RVA: 0x00D34713 File Offset: 0x00D32913
 		protected override void OnHideBattleChildViewPanel()
 		{
 			this.UnregisterBehaviorTreeVar();
 		}
 
-		// Token: 0x0603A625 RID: 239141 RVA: 0x00DE41CC File Offset: 0x00DE23CC
+		// Token: 0x0602F56E RID: 193902 RVA: 0x00D3471C File Offset: 0x00D3291C
 		public override void OnTickBattleChildViewPanel(float delta)
 		{
 			foreach (TrapDefenseMachineSelectItem trapDefenseMachineSelectItem in this.ItemList)
@@ -133,20 +133,20 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			}
 		}
 
-		// Token: 0x0603A626 RID: 239142 RVA: 0x00DE4220 File Offset: 0x00DE2420
+		// Token: 0x0602F56F RID: 193903 RVA: 0x00D34770 File Offset: 0x00D32970
 		protected override void OnBeforeDestroy()
 		{
 			this.MoneyTween.Destroy();
 			this.Sequence.Clear();
 		}
 
-		// Token: 0x0603A627 RID: 239143 RVA: 0x00DE4238 File Offset: 0x00DE2438
+		// Token: 0x0602F570 RID: 193904 RVA: 0x00D34788 File Offset: 0x00D32988
 		private void OnTrapDefenseSystemInfoNotify()
 		{
 			this.RefreshTouchSlider();
 		}
 
-		// Token: 0x0603A628 RID: 239144 RVA: 0x00DE4240 File Offset: 0x00DE2440
+		// Token: 0x0602F571 RID: 193905 RVA: 0x00D34790 File Offset: 0x00D32990
 		private void RegisterBehaviorTreeVar()
 		{
 			TrapDefenseModel.Instance.BattleData.AddTreeVarUpdateDelegate(ETrapDefenseSystemVarType.Gold, new TTreeVarUpdateDelegate(this.EventRefreshMoneyText));
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			TrapDefenseModel.Instance.BattleData.AddTreeVarUpdateDelegate(ETrapDefenseSystemVarType.MaxTrapCount, new TTreeVarUpdateDelegate(this.EventRefreshBuildText));
 		}
 
-		// Token: 0x0603A629 RID: 239145 RVA: 0x00DE42A4 File Offset: 0x00DE24A4
+		// Token: 0x0602F572 RID: 193906 RVA: 0x00D347F4 File Offset: 0x00D329F4
 		private void UnregisterBehaviorTreeVar()
 		{
 			TrapDefenseModel.Instance.BattleData.RemoveTreeVarUpdateDelegate(ETrapDefenseSystemVarType.Gold, new TTreeVarUpdateDelegate(this.EventRefreshMoneyText));
@@ -162,14 +162,14 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			TrapDefenseModel.Instance.BattleData.RemoveTreeVarUpdateDelegate(ETrapDefenseSystemVarType.MaxTrapCount, new TTreeVarUpdateDelegate(this.EventRefreshBuildText));
 		}
 
-		// Token: 0x0603A62A RID: 239146 RVA: 0x00DE4305 File Offset: 0x00DE2505
+		// Token: 0x0602F573 RID: 193907 RVA: 0x00D34855 File Offset: 0x00D32A55
 		private void HandleMachineSelect(TrapDefenseMachineSelectItem selectItem)
 		{
 			this.SetCurrentSelectItem(selectItem);
 			this.HandleCurrentSelectItem();
 		}
 
-		// Token: 0x0603A62B RID: 239147 RVA: 0x00DE4314 File Offset: 0x00DE2514
+		// Token: 0x0602F574 RID: 193908 RVA: 0x00D34864 File Offset: 0x00D32A64
 		private void SetCurrentSelectItem(TrapDefenseMachineSelectItem selectItem)
 		{
 			if (selectItem.Data == null)
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			this.CurrentSelectItem = selectItem;
 		}
 
-		// Token: 0x0603A62C RID: 239148 RVA: 0x00DE4348 File Offset: 0x00DE2548
+		// Token: 0x0602F575 RID: 193909 RVA: 0x00D34898 File Offset: 0x00D32A98
 		private void HandleCurrentSelectItem()
 		{
 			if (this.CurrentSelectItem == null || this.CurrentSelectItem.Data == null)
@@ -212,20 +212,20 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			machineSelectInterface.SelectMachine(this.CurrentSelectItem.Data);
 		}
 
-		// Token: 0x0603A62D RID: 239149 RVA: 0x00DE43E6 File Offset: 0x00DE25E6
+		// Token: 0x0602F576 RID: 193910 RVA: 0x00D34936 File Offset: 0x00D32B36
 		private void OpenOrganDevelop(TrapDefenseMachineSelectItem selectItem)
 		{
 			TrapDefenseController.Instance.OpenOrganDevelop(true, null, selectItem.Index, null);
 		}
 
-		// Token: 0x0603A62E RID: 239150 RVA: 0x00DE43FC File Offset: 0x00DE25FC
+		// Token: 0x0602F577 RID: 193911 RVA: 0x00D3494C File Offset: 0x00D32B4C
 		private void RefreshMachineSelectCollapse()
 		{
 			bool machineSelectCollapse = UiManager.Instance.IsViewShow(EUiViewName.PlotViewHUD);
 			this.SetMachineSelectCollapse(machineSelectCollapse);
 		}
 
-		// Token: 0x0603A62F RID: 239151 RVA: 0x00DE4420 File Offset: 0x00DE2620
+		// Token: 0x0602F578 RID: 193912 RVA: 0x00D34970 File Offset: 0x00D32B70
 		private void RefreshTouchSlider()
 		{
 			if (this.TouchSlider != null)
@@ -238,13 +238,13 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			}
 		}
 
-		// Token: 0x0603A630 RID: 239152 RVA: 0x00DE4462 File Offset: 0x00DE2662
+		// Token: 0x0602F579 RID: 193913 RVA: 0x00D349B2 File Offset: 0x00D32BB2
 		protected void EventRefreshMoneyText([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 		{
 			this.RefreshMoneyText();
 		}
 
-		// Token: 0x0603A631 RID: 239153 RVA: 0x00DE446C File Offset: 0x00DE266C
+		// Token: 0x0602F57A RID: 193914 RVA: 0x00D349BC File Offset: 0x00D32BBC
 		protected void RefreshMoneyText()
 		{
 			long goldNum = TrapDefenseModel.Instance.BattleData.GetGoldNum();
@@ -265,13 +265,13 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			}
 		}
 
-		// Token: 0x0603A632 RID: 239154 RVA: 0x00DE4528 File Offset: 0x00DE2728
+		// Token: 0x0602F57B RID: 193915 RVA: 0x00D34A78 File Offset: 0x00D32C78
 		protected void EventRefreshBuildText([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 		{
 			this.RefreshBuildText();
 		}
 
-		// Token: 0x0603A633 RID: 239155 RVA: 0x00DE4530 File Offset: 0x00DE2730
+		// Token: 0x0602F57C RID: 193916 RVA: 0x00D34A80 File Offset: 0x00D32C80
 		protected void RefreshBuildText()
 		{
 			long trapCount = TrapDefenseModel.Instance.BattleData.GetTrapCount();
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			text.SetText(trapCount.ToString() + "/" + maxTrapCount.ToString(), true);
 		}
 
-		// Token: 0x0603A634 RID: 239156 RVA: 0x00DE4588 File Offset: 0x00DE2788
+		// Token: 0x0602F57D RID: 193917 RVA: 0x00D34AD8 File Offset: 0x00D32CD8
 		private void OnToggleClick(TrapDefenseMachineSelectItem selectItem)
 		{
 			if (selectItem.Data == null && TrapDefenseModel.Instance.BattleData.IsCanBuildMachine)
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			touchSlider.SetSliderValue((float)num, false);
 		}
 
-		// Token: 0x0603A635 RID: 239157 RVA: 0x00DE45E5 File Offset: 0x00DE27E5
+		// Token: 0x0602F57E RID: 193918 RVA: 0x00D34B35 File Offset: 0x00D32D35
 		private void OnSliderPointerDown()
 		{
 			this.SliderRecordLastSelectItem = this.CurrentSelectItem;
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			machineSelectInterface.SliderPointerDown();
 		}
 
-		// Token: 0x0603A636 RID: 239158 RVA: 0x00DE4610 File Offset: 0x00DE2810
+		// Token: 0x0602F57F RID: 193919 RVA: 0x00D34B60 File Offset: 0x00D32D60
 		private void OnSliderValueChange(float value)
 		{
 			TrapDefenseMachineSelectItem trapDefenseMachineSelectItem = this.ItemList[(int)value];
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			machineSelectInterface.SliderValueChange(trapDefenseMachineSelectItem.Data);
 		}
 
-		// Token: 0x0603A637 RID: 239159 RVA: 0x00DE4664 File Offset: 0x00DE2864
+		// Token: 0x0602F580 RID: 193920 RVA: 0x00D34BB4 File Offset: 0x00D32DB4
 		private void OnSliderEndDrag()
 		{
 			if (this.SliderRecordDragSelectItem != null)
@@ -380,20 +380,20 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			machineSelectInterface.SliderDragEnd();
 		}
 
-		// Token: 0x0603A638 RID: 239160 RVA: 0x00DE4733 File Offset: 0x00DE2933
+		// Token: 0x0602F581 RID: 193921 RVA: 0x00D34C83 File Offset: 0x00D32E83
 		private void OnMoneyTweenUpdate(int value)
 		{
 			this.MoneyText.SetText(value.ToString(), true);
 			this.LastMoneyNum = (long)value;
 		}
 
-		// Token: 0x0603A639 RID: 239161 RVA: 0x00DE4750 File Offset: 0x00DE2950
+		// Token: 0x0602F582 RID: 193922 RVA: 0x00D34CA0 File Offset: 0x00D32EA0
 		public void SetInterface(ITrapDefenseMachineSelectInterface machineSelectInterface)
 		{
 			this.MachineSelectInterface = machineSelectInterface;
 		}
 
-		// Token: 0x0603A63A RID: 239162 RVA: 0x00DE4759 File Offset: 0x00DE2959
+		// Token: 0x0602F583 RID: 193923 RVA: 0x00D34CA9 File Offset: 0x00D32EA9
 		public void OnTowerDefenseStepUpdate(ETowerDefenseEventProcessStatus status)
 		{
 			if (status == ETowerDefenseEventProcessStatus.Fighting)
@@ -415,7 +415,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			this.RefreshSlotState();
 		}
 
-		// Token: 0x0603A63B RID: 239163 RVA: 0x00DE4798 File Offset: 0x00DE2998
+		// Token: 0x0602F584 RID: 193924 RVA: 0x00D34CE8 File Offset: 0x00D32EE8
 		public void RefreshMachineState()
 		{
 			this.RefreshSlotState();
@@ -466,7 +466,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			this.RefreshBuildText();
 		}
 
-		// Token: 0x0603A63C RID: 239164 RVA: 0x00DE48BC File Offset: 0x00DE2ABC
+		// Token: 0x0602F585 RID: 193925 RVA: 0x00D34E0C File Offset: 0x00D3300C
 		private void TryResetToFirstAuxiliary()
 		{
 			this.RefreshSlotState();
@@ -516,7 +516,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			}
 		}
 
-		// Token: 0x0603A63D RID: 239165 RVA: 0x00DE49DC File Offset: 0x00DE2BDC
+		// Token: 0x0602F586 RID: 193926 RVA: 0x00D34F2C File Offset: 0x00D3312C
 		public void RefreshMachineCdState(int proxyId)
 		{
 			foreach (TrapDefenseMachineSelectItem trapDefenseMachineSelectItem in this.ItemList)
@@ -529,7 +529,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			}
 		}
 
-		// Token: 0x0603A63E RID: 239166 RVA: 0x00DE4A48 File Offset: 0x00DE2C48
+		// Token: 0x0602F587 RID: 193927 RVA: 0x00D34F98 File Offset: 0x00D33198
 		public void RefreshSlotState()
 		{
 			List<TrapDefenseBuildingSlotData> slotData = TrapDefenseModel.Instance.ViewModelBuildingDevelop.GetSlotData();
@@ -553,7 +553,7 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			}
 		}
 
-		// Token: 0x0603A63F RID: 239167 RVA: 0x00DE4AC0 File Offset: 0x00DE2CC0
+		// Token: 0x0602F588 RID: 193928 RVA: 0x00D35010 File Offset: 0x00D33210
 		public void SetMachineSelectCollapse(bool isInPlotHud)
 		{
 			if (this.IsInPlotHud == isInPlotHud)
@@ -571,70 +571,70 @@ namespace CSharpScript.Game.Module.GameMainView.TrapDefense.ChildPanel
 			this.Sequence.PlaySequence("Normal", false, null);
 		}
 
-		// Token: 0x0401E6F1 RID: 124657
+		// Token: 0x04019198 RID: 102808
 		private const float TWEEN_NUM_INTERVAL = 0.01f;
 
-		// Token: 0x0401E6F2 RID: 124658
+		// Token: 0x04019199 RID: 102809
 		private const float TWEEN_MAX_TIME = 0.5f;
 
-		// Token: 0x0401E6F3 RID: 124659
+		// Token: 0x0401919A RID: 102810
 		protected List<TrapDefenseMachineSelectItem> ItemList = new List<TrapDefenseMachineSelectItem>();
 
-		// Token: 0x0401E6F4 RID: 124660
+		// Token: 0x0401919B RID: 102811
 		[Nullable(2)]
 		protected TrapDefenseMachineSelectItem CurrentSelectItem;
 
-		// Token: 0x0401E6F5 RID: 124661
+		// Token: 0x0401919C RID: 102812
 		[Nullable(2)]
 		protected ITrapDefenseMachineSelectInterface MachineSelectInterface;
 
-		// Token: 0x0401E6F6 RID: 124662
+		// Token: 0x0401919D RID: 102813
 		[Nullable(2)]
 		protected TrapDefenseMachineSelectSlider TouchSlider;
 
-		// Token: 0x0401E6F7 RID: 124663
+		// Token: 0x0401919E RID: 102814
 		protected LguiIntTween MoneyTween;
 
-		// Token: 0x0401E6F8 RID: 124664
+		// Token: 0x0401919F RID: 102815
 		protected UUIText MoneyText;
 
-		// Token: 0x0401E6F9 RID: 124665
+		// Token: 0x040191A0 RID: 102816
 		protected long LastMoneyNum;
 
-		// Token: 0x0401E6FA RID: 124666
+		// Token: 0x040191A1 RID: 102817
 		[Nullable(2)]
 		protected TrapDefenseMachineSelectItem SliderRecordLastSelectItem;
 
-		// Token: 0x0401E6FB RID: 124667
+		// Token: 0x040191A2 RID: 102818
 		[Nullable(2)]
 		protected TrapDefenseMachineSelectItem SliderRecordDragSelectItem;
 
-		// Token: 0x0401E6FC RID: 124668
+		// Token: 0x040191A3 RID: 102819
 		protected UiSequencePlayer Sequence;
 
-		// Token: 0x0401E6FD RID: 124669
+		// Token: 0x040191A4 RID: 102820
 		protected bool IsInPlotHud;
 
-		// Token: 0x0401E6FE RID: 124670
+		// Token: 0x040191A5 RID: 102821
 		protected bool IsInitialized;
 
-		// Token: 0x0200BC4E RID: 48206
+		// Token: 0x0200A658 RID: 42584
 		[NullableContext(0)]
 		private static class EComponentDefine
 		{
-			// Token: 0x04038CF9 RID: 232697
+			// Token: 0x040336C6 RID: 210630
 			public const int LayoutRootItem = 0;
 
-			// Token: 0x04038CFA RID: 232698
+			// Token: 0x040336C7 RID: 210631
 			public const int MoneyText = 1;
 
-			// Token: 0x04038CFB RID: 232699
+			// Token: 0x040336C8 RID: 210632
 			public const int BuildText = 2;
 
-			// Token: 0x04038CFC RID: 232700
+			// Token: 0x040336C9 RID: 210633
 			public const int MoneyIcon = 3;
 
-			// Token: 0x04038CFD RID: 232701
+			// Token: 0x040336CA RID: 210634
 			public const int TouchSliderItem = 4;
 		}
 	}

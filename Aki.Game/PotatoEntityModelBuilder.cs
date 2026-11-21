@@ -1,50 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02000EB6 RID: 3766
-[NullableContext(1)]
-[Nullable(0)]
+// Token: 0x0200036B RID: 875
 public class PotatoEntityModelBuilder
 {
-	// Token: 0x06005D42 RID: 23874 RVA: 0x00111CBC File Offset: 0x0010FEBC
+	// Token: 0x060030D9 RID: 12505 RVA: 0x00119958 File Offset: 0x00117B58
+	[NullableContext(1)]
 	[return: Nullable(2)]
 	public static IPotatoCombatInfo Get(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 	{
-		Type[] modelTypes = PotatoEntityModelBuilder.ModelTypes;
+		Func<EntityPb, Dictionary<string, EntityComponentPb>, IPotatoCombatInfo>[] modelTypes = PotatoEntityModelBuilder.ModelTypes;
 		for (int i = 0; i < modelTypes.Length; i++)
 		{
-			MethodInfo method = modelTypes[i].GetMethod("BuildModel", BindingFlags.Static | BindingFlags.Public);
-			if (method != null)
+			IPotatoCombatInfo potatoCombatInfo = modelTypes[i](entityData, componentDataMap);
+			if (potatoCombatInfo != null)
 			{
-				object obj = method.Invoke(null, new object[]
-				{
-					entityData,
-					componentDataMap
-				});
-				if (obj != null)
-				{
-					return (IPotatoCombatInfo)obj;
-				}
+				return potatoCombatInfo;
 			}
 		}
 		return null;
 	}
 
-	// Token: 0x06005D43 RID: 23875 RVA: 0x00111D17 File Offset: 0x0010FF17
+	// Token: 0x060030DA RID: 12506 RVA: 0x0011998A File Offset: 0x00117B8A
 	public static void Clear()
 	{
 		PotatoActivityEntityModel.Clear();
 		PotatoEntityModel.Clear();
 	}
 
-	// Token: 0x04002A77 RID: 10871
-	[StaticVariableRuleIgnore]
-	private static readonly Type[] ModelTypes = new Type[]
+	// Token: 0x04002B12 RID: 11026
+	[Nullable(new byte[]
 	{
-		typeof(PotatoActivityEntityModel),
-		typeof(PotatoEntityModel)
+		1,
+		1,
+		1,
+		1,
+		1,
+		1,
+		2
+	})]
+	[StaticVariableRuleIgnore]
+	private static readonly Func<EntityPb, Dictionary<string, EntityComponentPb>, IPotatoCombatInfo>[] ModelTypes = new Func<EntityPb, Dictionary<string, EntityComponentPb>, IPotatoCombatInfo>[]
+	{
+		new Func<EntityPb, Dictionary<string, EntityComponentPb>, IPotatoCombatInfo>(PotatoActivityEntityModel.BuildModel),
+		new Func<EntityPb, Dictionary<string, EntityComponentPb>, IPotatoCombatInfo>(PotatoEntityModel.BuildModel)
 	};
 }

@@ -4,19 +4,19 @@ using CSharpScript.Game.Module.TowerDefence;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058A6 RID: 22694
+	// Token: 0x0200487E RID: 18558
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class InstanceDungeonRecommendLevelItemData
 	{
-		// Token: 0x17008A99 RID: 35481
-		// (get) Token: 0x06039BB5 RID: 236469 RVA: 0x00DB8633 File Offset: 0x00DB6833
-		// (set) Token: 0x06039BB6 RID: 236470 RVA: 0x00DB863B File Offset: 0x00DB683B
+		// Token: 0x17005E65 RID: 24165
+		// (get) Token: 0x0602EAD8 RID: 191192 RVA: 0x00D0754B File Offset: 0x00D0574B
+		// (set) Token: 0x0602EAD9 RID: 191193 RVA: 0x00D07553 File Offset: 0x00D05753
 		[RequiredMember]
 		public TowerDefenseRecommendLevel Level { get; set; }
 
-		// Token: 0x06039BB7 RID: 236471 RVA: 0x00DB8644 File Offset: 0x00DB6844
+		// Token: 0x0602EADA RID: 191194 RVA: 0x00D0755C File Offset: 0x00D0575C
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public InstanceDungeonRecommendLevelItemData()

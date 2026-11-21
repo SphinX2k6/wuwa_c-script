@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002BF5 RID: 11253
+// Token: 0x02002170 RID: 8560
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerFormationRoleScrollItem : UiPanelBase
 {
-	// Token: 0x060175F5 RID: 95733 RVA: 0x005F2520 File Offset: 0x005F0720
+	// Token: 0x06015026 RID: 86054 RVA: 0x0061F05C File Offset: 0x0061D25C
 	public UniTask Init(UUIItem item)
 	{
 		TowerFormationRoleScrollItem.<Init>d__5 <Init>d__;
@@ -26,7 +26,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060175F6 RID: 95734 RVA: 0x005F256B File Offset: 0x005F076B
+	// Token: 0x06015027 RID: 86055 RVA: 0x0061F0A7 File Offset: 0x0061D2A7
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060175F7 RID: 95735 RVA: 0x005F25A4 File Offset: 0x005F07A4
+	// Token: 0x06015028 RID: 86056 RVA: 0x0061F0E0 File Offset: 0x0061D2E0
 	protected override void OnStart()
 	{
 		this.RoleList = new List<RoleDataBase>(RoleModel.Instance.GetRoleList());
@@ -50,7 +50,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		filterComponent.UpdateData(EFilterSortGroupId.TowerFormation, this.RoleList, Array.Empty<object>());
 	}
 
-	// Token: 0x060175F8 RID: 95736 RVA: 0x005F2622 File Offset: 0x005F0822
+	// Token: 0x06015029 RID: 86057 RVA: 0x0061F15E File Offset: 0x0061D35E
 	public void RebuildRoleList()
 	{
 		this.RoleList = new List<RoleDataBase>(RoleModel.Instance.GetRoleList());
@@ -62,7 +62,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		filterComponent.UpdateData(EFilterSortGroupId.TowerFormation, this.RoleList, Array.Empty<object>());
 	}
 
-	// Token: 0x060175F9 RID: 95737 RVA: 0x005F2658 File Offset: 0x005F0858
+	// Token: 0x0601502A RID: 86058 RVA: 0x0061F194 File Offset: 0x0061D394
 	public bool IsRoleListStale()
 	{
 		RoleInstance[] roleList = RoleModel.Instance.GetRoleList();
@@ -85,7 +85,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x060175FA RID: 95738 RVA: 0x005F2704 File Offset: 0x005F0904
+	// Token: 0x0601502B RID: 86059 RVA: 0x0061F240 File Offset: 0x0061D440
 	public void UpdateRoleListFilter()
 	{
 		int filterId = FilterConfig.Instance.GetFilterId(EFilterSortGroupId.TowerFormation);
@@ -103,7 +103,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		roleScrollView.RefreshByData(this.RoleList, null, false);
 	}
 
-	// Token: 0x060175FB RID: 95739 RVA: 0x005F275E File Offset: 0x005F095E
+	// Token: 0x0601502C RID: 86060 RVA: 0x0061F29A File Offset: 0x0061D49A
 	private void OnFilterSort(List<RoleDataBase> dataList, bool isOutSideChange, EFilterSortType operationType)
 	{
 		this.RoleList = this.SortSelectedFirst(dataList);
@@ -115,7 +115,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		roleScrollView.RefreshByData(this.RoleList, null, false);
 	}
 
-	// Token: 0x060175FC RID: 95740 RVA: 0x005F2788 File Offset: 0x005F0988
+	// Token: 0x0601502D RID: 86061 RVA: 0x0061F2C4 File Offset: 0x0061D4C4
 	private List<RoleDataBase> SortSelectedFirst(List<RoleDataBase> list)
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -149,7 +149,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		return list2;
 	}
 
-	// Token: 0x060175FD RID: 95741 RVA: 0x005F28BC File Offset: 0x005F0ABC
+	// Token: 0x0601502E RID: 86062 RVA: 0x0061F3F8 File Offset: 0x0061D5F8
 	private TowerFormationRoleGrid OnGridProxyCreate()
 	{
 		TowerFormationRoleGrid towerFormationRoleGrid = new TowerFormationRoleGrid();
@@ -158,7 +158,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		return towerFormationRoleGrid;
 	}
 
-	// Token: 0x060175FE RID: 95742 RVA: 0x005F28E8 File Offset: 0x005F0AE8
+	// Token: 0x0601502F RID: 86063 RVA: 0x0061F424 File Offset: 0x0061D624
 	protected void ToggleFunction(MediumItemGridExtendCallback params_)
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -203,7 +203,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		scrollItemByIndex.Refresh(roleDataBase, flag, num);
 	}
 
-	// Token: 0x060175FF RID: 95743 RVA: 0x005F29F8 File Offset: 0x005F0BF8
+	// Token: 0x06015030 RID: 86064 RVA: 0x0061F534 File Offset: 0x0061D734
 	protected bool CanExecuteChangeFunction(object data, bool isForceSelected, EToggleState state)
 	{
 		if (state != EToggleState.ETT_UnChecked)
@@ -218,7 +218,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x06017600 RID: 95744 RVA: 0x005F2A20 File Offset: 0x005F0C20
+	// Token: 0x06015031 RID: 86065 RVA: 0x0061F55C File Offset: 0x0061D75C
 	private bool RoleIsFull()
 	{
 		for (int i = 1; i <= 3; i++)
@@ -231,7 +231,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x06017601 RID: 95745 RVA: 0x005F2A50 File Offset: 0x005F0C50
+	// Token: 0x06015032 RID: 86066 RVA: 0x0061F58C File Offset: 0x0061D78C
 	public void RefreshRole(int roleId)
 	{
 		int num = this.RoleList.FindIndex((RoleDataBase roleData) => roleData.GetDataId() == roleId);
@@ -247,7 +247,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		scrollItemByIndex.Refresh(this.RoleList[num], false, num);
 	}
 
-	// Token: 0x06017602 RID: 95746 RVA: 0x005F2AAC File Offset: 0x005F0CAC
+	// Token: 0x06015033 RID: 86067 RVA: 0x0061F5E8 File Offset: 0x0061D7E8
 	public List<int> GetRoleIdList()
 	{
 		List<int> list = new List<int>();
@@ -258,14 +258,14 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x06017603 RID: 95747 RVA: 0x005F2AED File Offset: 0x005F0CED
+	// Token: 0x06015034 RID: 86068 RVA: 0x0061F629 File Offset: 0x0061D829
 	protected override void OnBeforeDestroy()
 	{
 		this.FilterComponent = null;
 		this.RoleScrollView = null;
 	}
 
-	// Token: 0x0400AEE4 RID: 44772
+	// Token: 0x0400B2E9 RID: 45801
 	[Nullable(new byte[]
 	{
 		2,
@@ -273,7 +273,7 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 	})]
 	private FilterSortEntrance<RoleDataBase> FilterComponent;
 
-	// Token: 0x0400AEE5 RID: 44773
+	// Token: 0x0400B2EA RID: 45802
 	[Nullable(new byte[]
 	{
 		2,
@@ -282,10 +282,10 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 	})]
 	private GenericScrollViewNew<TowerFormationRoleGrid, RoleDataBase> RoleScrollView;
 
-	// Token: 0x0400AEE6 RID: 44774
+	// Token: 0x0400B2EB RID: 45803
 	private List<RoleDataBase> RoleList = new List<RoleDataBase>();
 
-	// Token: 0x0400AEE7 RID: 44775
+	// Token: 0x0400B2EC RID: 45804
 	[Nullable(new byte[]
 	{
 		2,
@@ -293,13 +293,13 @@ public class TowerFormationRoleScrollItem : UiPanelBase
 	})]
 	public Action<RoleDataBase> RoleSelectCallBack;
 
-	// Token: 0x020091B4 RID: 37300
+	// Token: 0x020083F7 RID: 33783
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402F249 RID: 193097
+		// Token: 0x0402A94A RID: 174410
 		RoleScroll,
-		// Token: 0x0402F24A RID: 193098
+		// Token: 0x0402A94B RID: 174411
 		FilterItem
 	}
 }

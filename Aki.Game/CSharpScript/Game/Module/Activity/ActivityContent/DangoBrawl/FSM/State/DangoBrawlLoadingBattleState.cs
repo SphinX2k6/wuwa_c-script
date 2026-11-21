@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 {
-	// Token: 0x0200688E RID: 26766
+	// Token: 0x020057DE RID: 22494
 	public class DangoBrawlLoadingBattleState : ActivityGameplayTurnStateBase<EDangoBrawlFsmState>
 	{
-		// Token: 0x06042CFE RID: 273662 RVA: 0x0104367C File Offset: 0x0104187C
+		// Token: 0x06037856 RID: 227414 RVA: 0x00F84BFC File Offset: 0x00F82DFC
 		public override UniTask EnterAsync(EDangoBrawlFsmState? prev)
 		{
 			DangoBrawlLoadingBattleState.<EnterAsync>d__0 <EnterAsync>d__;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 			return <EnterAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042CFF RID: 273663 RVA: 0x010436C0 File Offset: 0x010418C0
+		// Token: 0x06037857 RID: 227415 RVA: 0x00F84C40 File Offset: 0x00F82E40
 		private void OnWorldDone()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 			this.LoadEntityAndEnterFight(battleManager).Forget();
 		}
 
-		// Token: 0x06042D00 RID: 273664 RVA: 0x0104372C File Offset: 0x0104192C
+		// Token: 0x06037858 RID: 227416 RVA: 0x00F84CAC File Offset: 0x00F82EAC
 		[NullableContext(1)]
 		private UniTask LoadEntityAndEnterFight(DangoBrawlBattleManager manager)
 		{
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 			return <LoadEntityAndEnterFight>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042D01 RID: 273665 RVA: 0x0104376F File Offset: 0x0104196F
+		// Token: 0x06037859 RID: 227417 RVA: 0x00F84CEF File Offset: 0x00F82EEF
 		public override void Exit(EDangoBrawlFsmState? next)
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));

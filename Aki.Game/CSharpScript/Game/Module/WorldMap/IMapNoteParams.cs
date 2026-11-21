@@ -4,33 +4,33 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x0200478E RID: 18318
+	// Token: 0x020036BF RID: 14015
 	[NullableContext(1)]
 	public interface IMapNoteParams
 	{
-		// Token: 0x170077D6 RID: 30678
-		// (get) Token: 0x0602FEC7 RID: 196295
-		// (set) Token: 0x0602FEC8 RID: 196296
+		// Token: 0x17004A92 RID: 19090
+		// (get) Token: 0x06024692 RID: 149138
+		// (set) Token: 0x06024693 RID: 149139
 		EMapNoteId MapNoteId { get; set; }
 
-		// Token: 0x170077D7 RID: 30679
-		// (get) Token: 0x0602FEC9 RID: 196297
-		// (set) Token: 0x0602FECA RID: 196298
+		// Token: 0x17004A93 RID: 19091
+		// (get) Token: 0x06024694 RID: 149140
+		// (set) Token: 0x06024695 RID: 149141
 		Action<int> ClickCallBack { get; set; }
 
-		// Token: 0x170077D8 RID: 30680
-		// (get) Token: 0x0602FECB RID: 196299
-		// (set) Token: 0x0602FECC RID: 196300
+		// Token: 0x17004A94 RID: 19092
+		// (get) Token: 0x06024696 RID: 149142
+		// (set) Token: 0x06024697 RID: 149143
 		MapNote MapNoteConfig { get; set; }
 
-		// Token: 0x170077D9 RID: 30681
-		// (get) Token: 0x0602FECD RID: 196301
-		// (set) Token: 0x0602FECE RID: 196302
+		// Token: 0x17004A95 RID: 19093
+		// (get) Token: 0x06024698 RID: 149144
+		// (set) Token: 0x06024699 RID: 149145
 		int? MapMarkId { get; set; }
 
-		// Token: 0x170077DA RID: 30682
-		// (get) Token: 0x0602FECF RID: 196303
-		// (set) Token: 0x0602FED0 RID: 196304
+		// Token: 0x17004A96 RID: 19094
+		// (get) Token: 0x0602469A RID: 149146
+		// (set) Token: 0x0602469B RID: 149147
 		[Nullable(2)]
 		string CustomDesc { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

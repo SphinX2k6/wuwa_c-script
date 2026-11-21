@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x0200363E RID: 13886
+// Token: 0x02002BB3 RID: 11187
 public class __TsTaskAbortImmediatelyBase_InheritProxy : TsTaskAbortImmediatelyBase
 {
-	// Token: 0x0601E21A RID: 123418 RVA: 0x00881DF4 File Offset: 0x0087FFF4
+	// Token: 0x0601BF42 RID: 114498 RVA: 0x008A9E88 File Offset: 0x008A8088
 	[NullableContext(1)]
 	public __TsTaskAbortImmediatelyBase_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskAbortImmediatelyBase.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E21B RID: 123419 RVA: 0x00881E27 File Offset: 0x00880027
+	// Token: 0x0601BF43 RID: 114499 RVA: 0x008A9EBB File Offset: 0x008A80BB
 	protected __TsTaskAbortImmediatelyBase_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E21C RID: 123420 RVA: 0x00881E30 File Offset: 0x00880030
+	// Token: 0x0601BF44 RID: 114500 RVA: 0x008A9EC4 File Offset: 0x008A80C4
 	protected unsafe override void __CPPCALL_ReceiveAbortAI_Implementation(UBTTask_BlueprintBase.__ReceiveAbortAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

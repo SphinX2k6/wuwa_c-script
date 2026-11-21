@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016D7 RID: 5847
+	// Token: 0x02001852 RID: 6226
 	public enum ETextUiType
 	{
-		// Token: 0x04004F12 RID: 20242
+		// Token: 0x0400533C RID: 21308
 		Astrology
 	}
 }

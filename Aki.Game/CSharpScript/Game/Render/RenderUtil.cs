@@ -8,30 +8,30 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045ED RID: 17901
+	// Token: 0x02003516 RID: 13590
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RenderUtil : IStaticVariableResetter
 	{
-		// Token: 0x0602E2AB RID: 189099 RVA: 0x00AABF52 File Offset: 0x00AAA152
+		// Token: 0x060229A0 RID: 141728 RVA: 0x009D86EE File Offset: 0x009D68EE
 		static RenderUtil()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RenderUtil.CreateStaticDefaultValue), new Action(RenderUtil.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602E2AC RID: 189100 RVA: 0x00AABF71 File Offset: 0x00AAA171
+		// Token: 0x060229A1 RID: 141729 RVA: 0x009D870D File Offset: 0x009D690D
 		public static void CreateStaticDefaultValue()
 		{
 			RenderUtil.PsoSyncModeDepth = 0;
 		}
 
-		// Token: 0x0602E2AD RID: 189101 RVA: 0x00AABF79 File Offset: 0x00AAA179
+		// Token: 0x060229A2 RID: 141730 RVA: 0x009D8715 File Offset: 0x009D6915
 		public static void ResetStaticDefaultValue()
 		{
 			RenderUtil.PsoSyncModeDepth = 0;
 		}
 
-		// Token: 0x0602E2AE RID: 189102 RVA: 0x00AABF84 File Offset: 0x00AAA184
+		// Token: 0x060229A3 RID: 141731 RVA: 0x009D8720 File Offset: 0x009D6920
 		public static CharRenderBase[] GetRenderComps(ECharacterRenderingType renderType, bool useMaterialContainerV2, bool monsterUseBodyEffect)
 		{
 			List<CharRenderBase> list = new List<CharRenderBase>();
@@ -99,19 +99,19 @@ namespace CSharpScript.Game.Render
 			return list.ToArray();
 		}
 
-		// Token: 0x0602E2AF RID: 189103 RVA: 0x00AAC156 File Offset: 0x00AAA356
+		// Token: 0x060229A4 RID: 141732 RVA: 0x009D88F2 File Offset: 0x009D6AF2
 		public static float GetFloat(FKuroCurveFloat curveFloat, float factor)
 		{
 			return UKuroCurveLibrary.GetValue_Float(curveFloat, factor);
 		}
 
-		// Token: 0x0602E2B0 RID: 189104 RVA: 0x00AAC160 File Offset: 0x00AAA360
+		// Token: 0x060229A5 RID: 141733 RVA: 0x009D88FC File Offset: 0x009D6AFC
 		public static FLinearColor GetColor(FKuroCurveLinearColor curveColor, float factor)
 		{
 			return UKuroCurveLibrary.GetValue_LinearColor(curveColor, factor);
 		}
 
-		// Token: 0x0602E2B1 RID: 189105 RVA: 0x00AAC16C File Offset: 0x00AAA36C
+		// Token: 0x060229A6 RID: 141734 RVA: 0x009D8908 File Offset: 0x009D6B08
 		public static float GetFloatFromGroup(CharMaterialControlFloatGroup floatInfo, InterpolateFactor factor)
 		{
 			switch (factor.Type)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E2B2 RID: 189106 RVA: 0x00AAC224 File Offset: 0x00AAA424
+		// Token: 0x060229A7 RID: 141735 RVA: 0x009D89C0 File Offset: 0x009D6BC0
 		public static FLinearColor GetColorFromGroup(CharMaterialControlColorGroup colorInfo, InterpolateFactor factor)
 		{
 			switch (factor.Type)
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E2B3 RID: 189107 RVA: 0x00AAC2DC File Offset: 0x00AAA4DC
+		// Token: 0x060229A8 RID: 141736 RVA: 0x009D8A78 File Offset: 0x009D6C78
 		[return: Nullable(2)]
 		public static UTexture2D GetTextureFromGroup(CharMaterialControlTextureGroup textureInfo, InterpolateFactor factor)
 		{
@@ -184,13 +184,13 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E2B4 RID: 189108 RVA: 0x00AAC31A File Offset: 0x00AAA51A
+		// Token: 0x060229A9 RID: 141737 RVA: 0x009D8AB6 File Offset: 0x009D6CB6
 		public static double Lerp(double a, double b, double alpha)
 		{
 			return a + alpha * (b - a);
 		}
 
-		// Token: 0x0602E2B5 RID: 189109 RVA: 0x00AAC323 File Offset: 0x00AAA523
+		// Token: 0x060229AA RID: 141738 RVA: 0x009D8ABF File Offset: 0x009D6CBF
 		public static double Max(double a, double b)
 		{
 			if (a <= b)
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Render
 			return a;
 		}
 
-		// Token: 0x0602E2B6 RID: 189110 RVA: 0x00AAC32C File Offset: 0x00AAA52C
+		// Token: 0x060229AB RID: 141739 RVA: 0x009D8AC8 File Offset: 0x009D6CC8
 		public static double Min(double a, double b)
 		{
 			if (a >= b)
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Render
 			return a;
 		}
 
-		// Token: 0x0602E2B7 RID: 189111 RVA: 0x00AAC338 File Offset: 0x00AAA538
+		// Token: 0x060229AC RID: 141740 RVA: 0x009D8AD4 File Offset: 0x009D6CD4
 		public static double Clamp(double value, double min, double max)
 		{
 			double num = value;
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Render
 			return num;
 		}
 
-		// Token: 0x0602E2B8 RID: 189112 RVA: 0x00AAC354 File Offset: 0x00AAA554
+		// Token: 0x060229AD RID: 141741 RVA: 0x009D8AF0 File Offset: 0x009D6CF0
 		public static void LerpVector(FVectorDouble from, FVectorDouble to, double alpha, double[] ret)
 		{
 			double alpha2 = RenderUtil.Clamp(alpha, 0.0, 1.0);
@@ -234,13 +234,13 @@ namespace CSharpScript.Game.Render
 			ret[2] = RenderUtil.Lerp(from.Z, to.Z, alpha2);
 		}
 
-		// Token: 0x0602E2B9 RID: 189113 RVA: 0x00AAC3B9 File Offset: 0x00AAA5B9
+		// Token: 0x060229AE RID: 141742 RVA: 0x009D8B55 File Offset: 0x009D6D55
 		public static bool StringIsNullOrEmpty(string value)
 		{
 			return string.IsNullOrEmpty(value);
 		}
 
-		// Token: 0x0602E2BA RID: 189114 RVA: 0x00AAC3C4 File Offset: 0x00AAA5C4
+		// Token: 0x060229AF RID: 141743 RVA: 0x009D8B60 File Offset: 0x009D6D60
 		public static FLinearColor GetSelectedChannel(ECharacterControllerChannelSwitch channel)
 		{
 			switch (channel)
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E2BB RID: 189115 RVA: 0x00AAC48B File Offset: 0x00AAA68B
+		// Token: 0x060229B0 RID: 141744 RVA: 0x009D8C27 File Offset: 0x009D6E27
 		public static void OpenToonSceneShadow()
 		{
 			if (GlobalData.World == null)
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Render
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Shadow.ToonSceneShadowIntensity 1", null);
 		}
 
-		// Token: 0x0602E2BC RID: 189116 RVA: 0x00AAC4A5 File Offset: 0x00AAA6A5
+		// Token: 0x060229B1 RID: 141745 RVA: 0x009D8C41 File Offset: 0x009D6E41
 		public static void CloseToonSceneShadow()
 		{
 			if (GlobalData.World == null)
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Render
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Shadow.ToonSceneShadowIntensity 0", null);
 		}
 
-		// Token: 0x0602E2BD RID: 189117 RVA: 0x00AAC4BF File Offset: 0x00AAA6BF
+		// Token: 0x060229B2 RID: 141746 RVA: 0x009D8C5B File Offset: 0x009D6E5B
 		public static void OpenMobileSpotLightShadow()
 		{
 			if (GlobalData.World == null)
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.Render
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Mobile.EnableKuroSpotlightsShadow 1", null);
 		}
 
-		// Token: 0x0602E2BE RID: 189118 RVA: 0x00AAC4D9 File Offset: 0x00AAA6D9
+		// Token: 0x060229B3 RID: 141747 RVA: 0x009D8C75 File Offset: 0x009D6E75
 		public static void CloseMobileSpotLightShadow()
 		{
 			if (GlobalData.World == null)
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Render
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Mobile.EnableKuroSpotlightsShadow 0", null);
 		}
 
-		// Token: 0x0602E2BF RID: 189119 RVA: 0x00AAC4F3 File Offset: 0x00AAA6F3
+		// Token: 0x060229B4 RID: 141748 RVA: 0x009D8C8F File Offset: 0x009D6E8F
 		public static void CloseVelocityScreenSizeCull()
 		{
 			if (GlobalData.World == null)
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Render
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.VelocityScreenSizeCull 0", null);
 		}
 
-		// Token: 0x0602E2C0 RID: 189120 RVA: 0x00AAC50D File Offset: 0x00AAA70D
+		// Token: 0x060229B5 RID: 141749 RVA: 0x009D8CA9 File Offset: 0x009D6EA9
 		public static void EnableVelocityScreenSizeCull()
 		{
 			if (GlobalData.World == null)
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.Render
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.VelocityScreenSizeCull 0.01", null);
 		}
 
-		// Token: 0x0602E2C1 RID: 189121 RVA: 0x00AAC528 File Offset: 0x00AAA728
+		// Token: 0x060229B6 RID: 141750 RVA: 0x009D8CC4 File Offset: 0x009D6EC4
 		public static void BeginPSOSyncMode()
 		{
 			if (GlobalData.World == null)
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E2C2 RID: 189122 RVA: 0x00AAC5CC File Offset: 0x00AAA7CC
+		// Token: 0x060229B7 RID: 141751 RVA: 0x009D8D68 File Offset: 0x009D6F68
 		public static void EndPSOSyncMode()
 		{
 			if (RenderUtil.PsoSyncModeDepth <= 0)
@@ -372,19 +372,19 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E2C3 RID: 189123 RVA: 0x00AAC675 File Offset: 0x00AAA875
+		// Token: 0x060229B8 RID: 141752 RVA: 0x009D8E11 File Offset: 0x009D7011
 		public static void SetNeedRenderKuroToonDepth()
 		{
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.kuro.NeedRenderKuroToonDepth 1", null);
 		}
 
-		// Token: 0x0602E2C4 RID: 189124 RVA: 0x00AAC687 File Offset: 0x00AAA887
+		// Token: 0x060229B9 RID: 141753 RVA: 0x009D8E23 File Offset: 0x009D7023
 		public static void UnsetNeedRenderKuroToonDepth()
 		{
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.kuro.NeedRenderKuroToonDepth 0", null);
 		}
 
-		// Token: 0x04018C64 RID: 101476
+		// Token: 0x040132A3 RID: 78499
 		private static int PsoSyncModeDepth;
 	}
 }

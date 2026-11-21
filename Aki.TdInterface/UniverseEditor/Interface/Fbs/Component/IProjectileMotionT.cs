@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057A6 RID: 22438
+	// Token: 0x02005DAD RID: 23981
 	public class IProjectileMotionT
 	{
-		// Token: 0x1700A772 RID: 42866
-		// (get) Token: 0x06025A58 RID: 154200 RVA: 0x0053177D File Offset: 0x0052F97D
-		// (set) Token: 0x06025A59 RID: 154201 RVA: 0x00531785 File Offset: 0x0052F985
+		// Token: 0x1700B096 RID: 45206
+		// (get) Token: 0x06027F78 RID: 163704 RVA: 0x00577909 File Offset: 0x00575B09
+		// (set) Token: 0x06027F79 RID: 163705 RVA: 0x00577911 File Offset: 0x00575B11
 		public EThrowMotion Type { get; set; }
 
-		// Token: 0x1700A773 RID: 42867
-		// (get) Token: 0x06025A5A RID: 154202 RVA: 0x0053178E File Offset: 0x0052F98E
-		// (set) Token: 0x06025A5B RID: 154203 RVA: 0x00531796 File Offset: 0x0052F996
+		// Token: 0x1700B097 RID: 45207
+		// (get) Token: 0x06027F7A RID: 163706 RVA: 0x0057791A File Offset: 0x00575B1A
+		// (set) Token: 0x06027F7B RID: 163707 RVA: 0x00577922 File Offset: 0x00575B22
 		public float Velocity { get; set; }
 
-		// Token: 0x1700A774 RID: 42868
-		// (get) Token: 0x06025A5C RID: 154204 RVA: 0x0053179F File Offset: 0x0052F99F
-		// (set) Token: 0x06025A5D RID: 154205 RVA: 0x005317A7 File Offset: 0x0052F9A7
+		// Token: 0x1700B098 RID: 45208
+		// (get) Token: 0x06027F7C RID: 163708 RVA: 0x0057792B File Offset: 0x00575B2B
+		// (set) Token: 0x06027F7D RID: 163709 RVA: 0x00577933 File Offset: 0x00575B33
 		public float AngularVelocity { get; set; }
 
-		// Token: 0x1700A775 RID: 42869
-		// (get) Token: 0x06025A5E RID: 154206 RVA: 0x005317B0 File Offset: 0x0052F9B0
-		// (set) Token: 0x06025A5F RID: 154207 RVA: 0x005317B8 File Offset: 0x0052F9B8
+		// Token: 0x1700B099 RID: 45209
+		// (get) Token: 0x06027F7E RID: 163710 RVA: 0x0057793C File Offset: 0x00575B3C
+		// (set) Token: 0x06027F7F RID: 163711 RVA: 0x00577944 File Offset: 0x00575B44
 		public string CameraShake { get; set; }
 
-		// Token: 0x1700A776 RID: 42870
-		// (get) Token: 0x06025A60 RID: 154208 RVA: 0x005317C1 File Offset: 0x0052F9C1
-		// (set) Token: 0x06025A61 RID: 154209 RVA: 0x005317C9 File Offset: 0x0052F9C9
+		// Token: 0x1700B09A RID: 45210
+		// (get) Token: 0x06027F80 RID: 163712 RVA: 0x0057794D File Offset: 0x00575B4D
+		// (set) Token: 0x06027F81 RID: 163713 RVA: 0x00577955 File Offset: 0x00575B55
 		public ISpeedCurveMotionT MatchSpeedCurve { get; set; }
 
-		// Token: 0x06025A62 RID: 154210 RVA: 0x005317D2 File Offset: 0x0052F9D2
+		// Token: 0x06027F82 RID: 163714 RVA: 0x0057795E File Offset: 0x00575B5E
 		public IProjectileMotionT()
 		{
 			this.Type = EThrowMotion.Projectile;

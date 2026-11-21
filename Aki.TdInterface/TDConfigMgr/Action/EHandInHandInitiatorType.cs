@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015F3 RID: 5619
+	// Token: 0x02001755 RID: 5973
 	public enum EHandInHandInitiatorType
 	{
-		// Token: 0x04004B01 RID: 19201
+		// Token: 0x04004EC7 RID: 20167
 		Player,
-		// Token: 0x04004B02 RID: 19202
+		// Token: 0x04004EC8 RID: 20168
 		Entity
 	}
 }

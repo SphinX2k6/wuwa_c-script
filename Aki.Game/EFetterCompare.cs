@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002497 RID: 9367
+// Token: 0x0200197E RID: 6526
 public enum EFetterCompare
 {
-	// Token: 0x04008DA1 RID: 36257
+	// Token: 0x04008EEA RID: 36586
 	Normal,
-	// Token: 0x04008DA2 RID: 36258
+	// Token: 0x04008EEB RID: 36587
 	Decrease,
-	// Token: 0x04008DA3 RID: 36259
+	// Token: 0x04008EEC RID: 36588
 	Add
 }

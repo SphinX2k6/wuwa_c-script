@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067B1 RID: 26545
+	// Token: 0x02006E31 RID: 28209
 	public class IFireBulletT
 	{
-		// Token: 0x1700C500 RID: 50432
-		// (get) Token: 0x0602E315 RID: 189205 RVA: 0x0064EEF9 File Offset: 0x0064D0F9
-		// (set) Token: 0x0602E316 RID: 189206 RVA: 0x0064EF01 File Offset: 0x0064D101
+		// Token: 0x1700CEB6 RID: 52918
+		// (get) Token: 0x06030B5B RID: 199515 RVA: 0x0069C63D File Offset: 0x0069A83D
+		// (set) Token: 0x06030B5C RID: 199516 RVA: 0x0069C645 File Offset: 0x0069A845
 		public TFireBulletUnion Type { get; set; }
 
-		// Token: 0x1700C501 RID: 50433
-		// (get) Token: 0x0602E317 RID: 189207 RVA: 0x0064EF0A File Offset: 0x0064D10A
-		// (set) Token: 0x0602E318 RID: 189208 RVA: 0x0064EF12 File Offset: 0x0064D112
+		// Token: 0x1700CEB7 RID: 52919
+		// (get) Token: 0x06030B5D RID: 199517 RVA: 0x0069C64E File Offset: 0x0069A84E
+		// (set) Token: 0x06030B5E RID: 199518 RVA: 0x0069C656 File Offset: 0x0069A856
 		public EBulletLauncher Launcher { get; set; }
 
-		// Token: 0x1700C502 RID: 50434
-		// (get) Token: 0x0602E319 RID: 189209 RVA: 0x0064EF1B File Offset: 0x0064D11B
-		// (set) Token: 0x0602E31A RID: 189210 RVA: 0x0064EF23 File Offset: 0x0064D123
+		// Token: 0x1700CEB8 RID: 52920
+		// (get) Token: 0x06030B5F RID: 199519 RVA: 0x0069C65F File Offset: 0x0069A85F
+		// (set) Token: 0x06030B60 RID: 199520 RVA: 0x0069C667 File Offset: 0x0069A867
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602E31B RID: 189211 RVA: 0x0064EF2C File Offset: 0x0064D12C
+		// Token: 0x06030B61 RID: 199521 RVA: 0x0069C670 File Offset: 0x0069A870
 		public IFireBulletT()
 		{
 			this.Type = null;

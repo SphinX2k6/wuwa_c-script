@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068DE RID: 26846
+	// Token: 0x0200582E RID: 22574
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CoopLevelToggleItem : UiPanelBase
 	{
-		// Token: 0x06042FB6 RID: 274358 RVA: 0x01050AF4 File Offset: 0x0104ECF4
+		// Token: 0x06037B0E RID: 228110 RVA: 0x00F9211C File Offset: 0x00F9031C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,32 +39,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042FB7 RID: 274359 RVA: 0x01050C23 File Offset: 0x0104EE23
+		// Token: 0x06037B0F RID: 228111 RVA: 0x00F9224B File Offset: 0x00F9044B
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 			EventSystem.Instance.Add<int>(EEventName.OnCoopLevelToggleClick, new Action<int>(this.HandleSelected));
 		}
 
-		// Token: 0x06042FB8 RID: 274360 RVA: 0x01050C5E File Offset: 0x0104EE5E
+		// Token: 0x06037B10 RID: 228112 RVA: 0x00F92286 File Offset: 0x00F90486
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCoopLevelToggleClick, new Action<int>(this.HandleSelected));
 		}
 
-		// Token: 0x06042FB9 RID: 274361 RVA: 0x01050C7C File Offset: 0x0104EE7C
+		// Token: 0x06037B11 RID: 228113 RVA: 0x00F922A4 File Offset: 0x00F904A4
 		public void SetClickCallBack(Action<CoopLevelData> func)
 		{
 			this.OnClickTogCallBack = func;
 		}
 
-		// Token: 0x06042FBA RID: 274362 RVA: 0x01050C85 File Offset: 0x0104EE85
+		// Token: 0x06037B12 RID: 228114 RVA: 0x00F922AD File Offset: 0x00F904AD
 		public void SetCanExecuteChangeFunc(Func<int, bool> func)
 		{
 			this.CanExecuteChangeFuncField = func;
 		}
 
-		// Token: 0x06042FBB RID: 274363 RVA: 0x01050C8E File Offset: 0x0104EE8E
+		// Token: 0x06037B13 RID: 228115 RVA: 0x00F922B6 File Offset: 0x00F904B6
 		private void OnClickTogSelf(EToggleState _)
 		{
 			if (this.OnClickTogCallBack != null)
@@ -73,13 +73,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042FBC RID: 274364 RVA: 0x01050CA9 File Offset: 0x0104EEA9
+		// Token: 0x06037B14 RID: 228116 RVA: 0x00F922D1 File Offset: 0x00F904D1
 		private bool CanExecuteChange()
 		{
 			return this.CanExecuteChangeFuncField != null && this.CanExecuteChangeFuncField(this.Data.Level);
 		}
 
-		// Token: 0x06042FBD RID: 274365 RVA: 0x01050CCC File Offset: 0x0104EECC
+		// Token: 0x06037B15 RID: 228117 RVA: 0x00F922F4 File Offset: 0x00F904F4
 		public void Refresh(CoopLevelData data)
 		{
 			this.Data = data;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(5), (coopConfigById != null) ? coopConfigById.GetValueOrDefault().EventTitle : null, Array.Empty<object>());
 		}
 
-		// Token: 0x06042FBE RID: 274366 RVA: 0x01050D44 File Offset: 0x0104EF44
+		// Token: 0x06037B16 RID: 228118 RVA: 0x00F9236C File Offset: 0x00F9056C
 		public void UpdateStatus(ECoopLevelStatus state)
 		{
 			base.GetItem(10).SetUIActive(false);
@@ -133,13 +133,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042FBF RID: 274367 RVA: 0x01050EF1 File Offset: 0x0104F0F1
+		// Token: 0x06037B17 RID: 228119 RVA: 0x00F92519 File Offset: 0x00F90719
 		public void UnSelected()
 		{
 			this.SetToggleState(false);
 		}
 
-		// Token: 0x06042FC0 RID: 274368 RVA: 0x01050EFA File Offset: 0x0104F0FA
+		// Token: 0x06037B18 RID: 228120 RVA: 0x00F92522 File Offset: 0x00F90722
 		private void HandleSelected(int id)
 		{
 			CoopLevelData data = this.Data;
@@ -157,14 +157,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			instance.SetNavigationFocusForView(this.RootItem, true, true, false);
 		}
 
-		// Token: 0x06042FC1 RID: 274369 RVA: 0x01050F39 File Offset: 0x0104F139
+		// Token: 0x06037B19 RID: 228121 RVA: 0x00F92561 File Offset: 0x00F90761
 		public void SetRightPanelShow(bool isShow)
 		{
 			base.GetItem(1).SetUIActive(isShow);
 			base.GetItem(2).SetUIActive(isShow);
 		}
 
-		// Token: 0x06042FC2 RID: 274370 RVA: 0x01050F58 File Offset: 0x0104F158
+		// Token: 0x06037B1A RID: 228122 RVA: 0x00F92580 File Offset: 0x00F90780
 		private void OnSelected()
 		{
 			if (this.Data.IsShowDoingNew)
@@ -181,24 +181,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.SetToggleState(true);
 		}
 
-		// Token: 0x06042FC3 RID: 274371 RVA: 0x01050FE6 File Offset: 0x0104F1E6
+		// Token: 0x06037B1B RID: 228123 RVA: 0x00F9260E File Offset: 0x00F9080E
 		private void OnDeselected()
 		{
 			this.SetToggleState(false);
 		}
 
-		// Token: 0x06042FC4 RID: 274372 RVA: 0x01050FF0 File Offset: 0x0104F1F0
+		// Token: 0x06037B1C RID: 228124 RVA: 0x00F92618 File Offset: 0x00F90818
 		private void SetToggleState(bool state)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
 		}
 
-		// Token: 0x04022DDB RID: 142811
+		// Token: 0x0401D637 RID: 120375
 		[Nullable(2)]
 		public CoopLevelData Data;
 
-		// Token: 0x04022DDC RID: 142812
+		// Token: 0x0401D638 RID: 120376
 		[Nullable(new byte[]
 		{
 			2,
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 		})]
 		private Action<CoopLevelData> OnClickTogCallBack;
 
-		// Token: 0x04022DDD RID: 142813
+		// Token: 0x0401D639 RID: 120377
 		[Nullable(2)]
 		private Func<int, bool> CanExecuteChangeFuncField;
 	}

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020023F9 RID: 9209
+// Token: 0x020018DE RID: 6366
 public enum EPhantomManagerEditCloseState
 {
-	// Token: 0x04008B48 RID: 35656
+	// Token: 0x04008C8F RID: 35983
 	Default,
-	// Token: 0x04008B49 RID: 35657
+	// Token: 0x04008C90 RID: 35984
 	Left,
-	// Token: 0x04008B4A RID: 35658
+	// Token: 0x04008C91 RID: 35985
 	Right
 }

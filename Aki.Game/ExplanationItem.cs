@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002BA9 RID: 11177
+// Token: 0x02002125 RID: 8485
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class ExplanationItem : GridProxyAbstract<string>
 {
-	// Token: 0x06017277 RID: 94839 RVA: 0x005DE7B8 File Offset: 0x005DC9B8
+	// Token: 0x06014CA8 RID: 85160 RVA: 0x0060B38C File Offset: 0x0060958C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -28,19 +28,19 @@ public class ExplanationItem : GridProxyAbstract<string>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06017278 RID: 94840 RVA: 0x005DE821 File Offset: 0x005DCA21
+	// Token: 0x06014CA9 RID: 85161 RVA: 0x0060B3F5 File Offset: 0x006095F5
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x06017279 RID: 94841 RVA: 0x005DE834 File Offset: 0x005DCA34
+	// Token: 0x06014CAA RID: 85162 RVA: 0x0060B408 File Offset: 0x00609608
 	public override void OnSelected(bool fireEvent)
 	{
 		this.LevelSequencePlayer.PlayLevelSequenceByName("SelectIn", false, null, false);
 	}
 
-	// Token: 0x0601727A RID: 94842 RVA: 0x005DE85C File Offset: 0x005DCA5C
+	// Token: 0x06014CAB RID: 85163 RVA: 0x0060B430 File Offset: 0x00609630
 	[NullableContext(1)]
 	public override void Refresh(string data, bool isSelected, int gridIndex)
 	{
@@ -88,24 +88,24 @@ public class ExplanationItem : GridProxyAbstract<string>
 		this.LevelSequencePlayer.PlayLevelSequenceByName("SelectOut", false, null, false);
 	}
 
-	// Token: 0x0601727B RID: 94843 RVA: 0x005DE98C File Offset: 0x005DCB8C
+	// Token: 0x06014CAC RID: 85164 RVA: 0x0060B560 File Offset: 0x00609760
 	public override void Clear()
 	{
 		this.LevelSequencePlayer.StopCurrentSequence(false, false);
 		this.LevelSequencePlayer.PlayLevelSequenceByName("SelectOut", false, null, false);
 	}
 
-	// Token: 0x0400AD4A RID: 44362
+	// Token: 0x0400B151 RID: 45393
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02009167 RID: 37223
+	// Token: 0x020083AA RID: 33706
 	private class EExplanationComponentDefine
 	{
-		// Token: 0x0402F106 RID: 192774
+		// Token: 0x0402A80B RID: 174091
 		public const int TextTitle = 0;
 
-		// Token: 0x0402F107 RID: 192775
+		// Token: 0x0402A80C RID: 174092
 		public const int TextContent = 1;
 	}
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020031BD RID: 12733
+// Token: 0x0200272C RID: 10028
 internal enum EDetectCapsuleResult
 {
-	// Token: 0x0400D741 RID: 55105
+	// Token: 0x0400DBC8 RID: 56264
 	None,
-	// Token: 0x0400D742 RID: 55106
+	// Token: 0x0400DBC9 RID: 56265
 	StartPenetrate,
-	// Token: 0x0400D743 RID: 55107
+	// Token: 0x0400DBCA RID: 56266
 	NormalHit
 }

@@ -4,36 +4,36 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FE9 RID: 8169
+	// Token: 0x0200064F RID: 1615
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.EMouseButtonType")]
 	public enum EMouseButtonType : byte
 	{
-		// Token: 0x04010BA7 RID: 68519
+		// Token: 0x04003DC5 RID: 15813
 		Left,
-		// Token: 0x04010BA8 RID: 68520
+		// Token: 0x04003DC6 RID: 15814
 		Middle,
-		// Token: 0x04010BA9 RID: 68521
+		// Token: 0x04003DC7 RID: 15815
 		Right,
-		// Token: 0x04010BAA RID: 68522
+		// Token: 0x04003DC8 RID: 15816
 		UserDefined1,
-		// Token: 0x04010BAB RID: 68523
+		// Token: 0x04003DC9 RID: 15817
 		UserDefined2,
-		// Token: 0x04010BAC RID: 68524
+		// Token: 0x04003DCA RID: 15818
 		UserDefined3,
-		// Token: 0x04010BAD RID: 68525
+		// Token: 0x04003DCB RID: 15819
 		UserDefined4,
-		// Token: 0x04010BAE RID: 68526
+		// Token: 0x04003DCC RID: 15820
 		UserDefined5,
-		// Token: 0x04010BAF RID: 68527
+		// Token: 0x04003DCD RID: 15821
 		UserDefined6,
-		// Token: 0x04010BB0 RID: 68528
+		// Token: 0x04003DCE RID: 15822
 		UserDefined7,
-		// Token: 0x04010BB1 RID: 68529
+		// Token: 0x04003DCF RID: 15823
 		UserDefined8,
-		// Token: 0x04010BB2 RID: 68530
+		// Token: 0x04003DD0 RID: 15824
 		NavigationChange,
-		// Token: 0x04010BB3 RID: 68531
+		// Token: 0x04003DD1 RID: 15825
 		EMouseButtonType_MAX
 	}
 }

@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042A5 RID: 17061
+	// Token: 0x02003300 RID: 13056
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/ECommonAxis.ECommonAxis")]
 	public enum ECommonAxis : byte
 	{
-		// Token: 0x0401733A RID: 95034
+		// Token: 0x04012038 RID: 73784
 		X,
-		// Token: 0x0401733B RID: 95035
+		// Token: 0x04012039 RID: 73785
 		Y,
-		// Token: 0x0401733C RID: 95036
+		// Token: 0x0401203A RID: 73786
 		Z,
-		// Token: 0x0401733D RID: 95037
+		// Token: 0x0401203B RID: 73787
 		ECommonAxis_MAX
 	}
 }

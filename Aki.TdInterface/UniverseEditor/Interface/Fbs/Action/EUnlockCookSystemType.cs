@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200604C RID: 24652
+	// Token: 0x020066AD RID: 26285
 	public enum EUnlockCookSystemType : byte
 	{
-		// Token: 0x040101BB RID: 65979
+		// Token: 0x04010FAE RID: 69550
 		UnlockCookBook
 	}
 }

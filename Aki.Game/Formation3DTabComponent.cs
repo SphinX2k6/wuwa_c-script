@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BFF RID: 7167
+// Token: 0x020010BE RID: 4286
 [NullableContext(1)]
 [Nullable(0)]
 public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 {
-	// Token: 0x0600D5F3 RID: 54771 RVA: 0x00316D3B File Offset: 0x00314F3B
+	// Token: 0x0600AA06 RID: 43526 RVA: 0x00322013 File Offset: 0x00320213
 	public Formation3DTabComponent(UUIItem uiItem, CommonTabComponentData<EditFormationTabItem> data, Func<int, bool> isCurrentTab)
 	{
 		this.TabComponentData = data;
@@ -22,13 +22,13 @@ public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600D5F4 RID: 54772 RVA: 0x00316D5E File Offset: 0x00314F5E
+	// Token: 0x0600AA07 RID: 43527 RVA: 0x00322036 File Offset: 0x00320236
 	void IFormationTabComponent.Destroy()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x0600D5F5 RID: 54773 RVA: 0x00316D68 File Offset: 0x00314F68
+	// Token: 0x0600AA08 RID: 43528 RVA: 0x00322040 File Offset: 0x00320240
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -42,7 +42,7 @@ public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D5F6 RID: 54774 RVA: 0x00316DD4 File Offset: 0x00314FD4
+	// Token: 0x0600AA09 RID: 43529 RVA: 0x003220AC File Offset: 0x003202AC
 	protected override void OnStart()
 	{
 		UUILoopScrollViewComponent loopScrollViewComponent = base.GetLoopScrollViewComponent(1);
@@ -50,7 +50,7 @@ public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 		this.TabTitle = new CommonTabTitle(base.GetItem(0));
 	}
 
-	// Token: 0x0600D5F7 RID: 54775 RVA: 0x00316E1F File Offset: 0x0031501F
+	// Token: 0x0600AA0A RID: 43530 RVA: 0x003220F7 File Offset: 0x003202F7
 	protected override void OnBeforeDestroy()
 	{
 		CommonTabTitle tabTitle = this.TabTitle;
@@ -62,7 +62,7 @@ public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 		this.TabLoopScrollView = null;
 	}
 
-	// Token: 0x0600D5F8 RID: 54776 RVA: 0x00316E41 File Offset: 0x00315041
+	// Token: 0x0600AA0B RID: 43531 RVA: 0x00322119 File Offset: 0x00320319
 	private Formation3DTabItem ProxyCreate()
 	{
 		Formation3DTabItem formation3DTabItem = new Formation3DTabItem(this.IsCurrentTab);
@@ -72,7 +72,7 @@ public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 		return formation3DTabItem;
 	}
 
-	// Token: 0x0600D5F9 RID: 54777 RVA: 0x00316E78 File Offset: 0x00315078
+	// Token: 0x0600AA0C RID: 43532 RVA: 0x00322150 File Offset: 0x00320350
 	private bool CanExecuteChange(int index, bool forceSwitch)
 	{
 		if (this.TabLoopScrollView.GetSelectedGridIndex() == index && !forceSwitch)
@@ -83,7 +83,7 @@ public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 		return canExecuteChangeInternal == null || canExecuteChangeInternal(index);
 	}
 
-	// Token: 0x0600D5FA RID: 54778 RVA: 0x00316EA0 File Offset: 0x003150A0
+	// Token: 0x0600AA0D RID: 43533 RVA: 0x00322178 File Offset: 0x00320378
 	private void ToggleCallBack(int index)
 	{
 		this.TabLoopScrollView.SelectGridProxy(index, false);
@@ -96,7 +96,7 @@ public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 		this.TabComponentData.ToggleCallBack(index);
 	}
 
-	// Token: 0x0600D5FB RID: 54779 RVA: 0x00316F04 File Offset: 0x00315104
+	// Token: 0x0600AA0E RID: 43534 RVA: 0x003221DC File Offset: 0x003203DC
 	public UniTask RefreshTabItemAsync(int length)
 	{
 		Formation3DTabComponent.<RefreshTabItemAsync>d__14 <RefreshTabItemAsync>d__;
@@ -108,7 +108,7 @@ public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 		return <RefreshTabItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D5FC RID: 54780 RVA: 0x00316F4F File Offset: 0x0031514F
+	// Token: 0x0600AA0F RID: 43535 RVA: 0x00322227 File Offset: 0x00320427
 	public void SelectToggleByIndex(int index, bool bIgnored = false)
 	{
 		if (bIgnored)
@@ -123,19 +123,19 @@ public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 		this.ToggleCallBack(index);
 	}
 
-	// Token: 0x0600D5FD RID: 54781 RVA: 0x00316F8D File Offset: 0x0031518D
+	// Token: 0x0600AA10 RID: 43536 RVA: 0x00322265 File Offset: 0x00320465
 	public int GetSelectedIndex()
 	{
 		return this.TabLoopScrollView.GetSelectedGridIndex();
 	}
 
-	// Token: 0x0600D5FE RID: 54782 RVA: 0x00316F9A File Offset: 0x0031519A
+	// Token: 0x0600AA11 RID: 43537 RVA: 0x00322272 File Offset: 0x00320472
 	public void ScrollToToggleByIndex(int index)
 	{
 		this.TabLoopScrollView.ScrollToGridIndexLate(index, false);
 	}
 
-	// Token: 0x0600D5FF RID: 54783 RVA: 0x00316FAC File Offset: 0x003151AC
+	// Token: 0x0600AA12 RID: 43538 RVA: 0x00322284 File Offset: 0x00320484
 	public void SetInitialNavigationFocus()
 	{
 		if (!Info.Instance.IsInGamepad())
@@ -156,7 +156,7 @@ public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 		UiNavigationNewController.Instance.SetNavigationFocusForView(tabItemByIndex.GetRootItem(), true, true, true);
 	}
 
-	// Token: 0x0600D600 RID: 54784 RVA: 0x00317008 File Offset: 0x00315208
+	// Token: 0x0600AA13 RID: 43539 RVA: 0x003222E0 File Offset: 0x003204E0
 	[NullableContext(2)]
 	public EditFormationTabItem GetTabItemByIndex(int index)
 	{
@@ -167,7 +167,7 @@ public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 		return this.TabLoopScrollView.UnsafeGetGridProxy(index, false);
 	}
 
-	// Token: 0x0600D601 RID: 54785 RVA: 0x00317028 File Offset: 0x00315228
+	// Token: 0x0600AA14 RID: 43540 RVA: 0x00322300 File Offset: 0x00320500
 	public void RefreshTitleByIndex(int index)
 	{
 		CommonTabData commonTabData = this.TabComponentData.GetCommonData(index);
@@ -177,23 +177,23 @@ public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 		}
 	}
 
-	// Token: 0x0600D602 RID: 54786 RVA: 0x0031705B File Offset: 0x0031525B
+	// Token: 0x0600AA15 RID: 43541 RVA: 0x00322333 File Offset: 0x00320533
 	public void SetCanChange(Func<int, bool> callback)
 	{
 		this.CanExecuteChangeInternal = callback;
 	}
 
-	// Token: 0x040061DB RID: 25051
+	// Token: 0x040062AD RID: 25261
 	private readonly CommonTabComponentData<EditFormationTabItem> TabComponentData;
 
-	// Token: 0x040061DC RID: 25052
+	// Token: 0x040062AE RID: 25262
 	private readonly Func<int, bool> IsCurrentTab;
 
-	// Token: 0x040061DD RID: 25053
+	// Token: 0x040062AF RID: 25263
 	[Nullable(2)]
 	private CommonTabTitle TabTitle;
 
-	// Token: 0x040061DE RID: 25054
+	// Token: 0x040062B0 RID: 25264
 	[Nullable(new byte[]
 	{
 		2,
@@ -202,17 +202,17 @@ public class Formation3DTabComponent : UiPanelBase, IFormationTabComponent
 	})]
 	private LoopScrollView<Formation3DTabItem, CommonTabItemData> TabLoopScrollView;
 
-	// Token: 0x040061DF RID: 25055
+	// Token: 0x040062B1 RID: 25265
 	[Nullable(2)]
 	private Func<int, bool> CanExecuteChangeInternal;
 
-	// Token: 0x020081A4 RID: 33188
+	// Token: 0x0200732F RID: 29487
 	[NullableContext(0)]
 	private enum EFormation3DTabComponent
 	{
-		// Token: 0x0402A4E1 RID: 173281
+		// Token: 0x0402580C RID: 153612
 		Title,
-		// Token: 0x0402A4E2 RID: 173282
+		// Token: 0x0402580D RID: 153613
 		LoopScrollView
 	}
 }

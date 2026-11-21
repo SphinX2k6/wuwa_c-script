@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Forging.View
 {
-	// Token: 0x0200564F RID: 22095
+	// Token: 0x02004625 RID: 17957
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SvInfo : UiPanelBase
 	{
-		// Token: 0x060382BF RID: 230079 RVA: 0x00D4E5EC File Offset: 0x00D4C7EC
+		// Token: 0x0602D1BD RID: 184765 RVA: 0x00C9C33C File Offset: 0x00C9A53C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x060382C0 RID: 230080 RVA: 0x00D4E6E4 File Offset: 0x00D4C8E4
+		// Token: 0x0602D1BE RID: 184766 RVA: 0x00C9C434 File Offset: 0x00C9A634
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SvInfo.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -48,13 +48,13 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060382C1 RID: 230081 RVA: 0x00D4E727 File Offset: 0x00D4C927
+		// Token: 0x0602D1BF RID: 184767 RVA: 0x00C9C477 File Offset: 0x00C9A677
 		protected override void OnStart()
 		{
 			this.WeaponAttributeComponent.SetActive(true);
 		}
 
-		// Token: 0x060382C2 RID: 230082 RVA: 0x00D4E738 File Offset: 0x00D4C938
+		// Token: 0x0602D1C0 RID: 184768 RVA: 0x00C9C488 File Offset: 0x00C9A688
 		public void SetTypeName(string tag = null)
 		{
 			UUIText text = base.GetText(0);
@@ -67,70 +67,70 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			text.SetUIActive(false);
 		}
 
-		// Token: 0x060382C3 RID: 230083 RVA: 0x00D4E76C File Offset: 0x00D4C96C
+		// Token: 0x0602D1C1 RID: 184769 RVA: 0x00C9C4BC File Offset: 0x00C9A6BC
 		public void SetTypeNameVisible(bool visible)
 		{
 			base.GetText(0).SetUIActive(visible);
 		}
 
-		// Token: 0x060382C4 RID: 230084 RVA: 0x00D4E77B File Offset: 0x00D4C97B
+		// Token: 0x0602D1C2 RID: 184770 RVA: 0x00C9C4CB File Offset: 0x00C9A6CB
 		public void SetDescVisible(bool visible)
 		{
 			base.GetText(3).SetUIActive(visible);
 		}
 
-		// Token: 0x060382C5 RID: 230085 RVA: 0x00D4E78A File Offset: 0x00D4C98A
+		// Token: 0x0602D1C3 RID: 184771 RVA: 0x00C9C4DA File Offset: 0x00C9A6DA
 		public void SetDescBgVisible(bool visible)
 		{
 			base.GetText(5).SetUIActive(visible);
 		}
 
-		// Token: 0x060382C6 RID: 230086 RVA: 0x00D4E799 File Offset: 0x00D4C999
+		// Token: 0x0602D1C4 RID: 184772 RVA: 0x00C9C4E9 File Offset: 0x00C9A6E9
 		public void SetDesc(string text)
 		{
 			base.GetText(3).SetText(text, true);
 		}
 
-		// Token: 0x060382C7 RID: 230087 RVA: 0x00D4E7A9 File Offset: 0x00D4C9A9
+		// Token: 0x0602D1C5 RID: 184773 RVA: 0x00C9C4F9 File Offset: 0x00C9A6F9
 		public void SetDescBg(string text)
 		{
 			base.GetText(5).SetText(text, true);
 		}
 
-		// Token: 0x060382C8 RID: 230088 RVA: 0x00D4E7B9 File Offset: 0x00D4C9B9
+		// Token: 0x0602D1C6 RID: 184774 RVA: 0x00C9C509 File Offset: 0x00C9A709
 		public void SetWeaponAttribute(IWeaponForgingData data)
 		{
 			this.WeaponAttributeComponent.RefreshTips(data);
 		}
 
-		// Token: 0x0401D8CA RID: 121034
+		// Token: 0x04018355 RID: 99157
 		[Nullable(2)]
 		private WeaponAttributeView WeaponAttributeComponent;
 
-		// Token: 0x0401D8CB RID: 121035
+		// Token: 0x04018356 RID: 99158
 		[Nullable(2)]
 		public Action ChangeRoleClickDelegate;
 
-		// Token: 0x0200B803 RID: 47107
+		// Token: 0x0200A22E RID: 41518
 		[NullableContext(0)]
 		private class ESvInfoComponents
 		{
-			// Token: 0x04037AB0 RID: 228016
+			// Token: 0x040324DA RID: 206042
 			public const int TxtType = 0;
 
-			// Token: 0x04037AB1 RID: 228017
+			// Token: 0x040324DB RID: 206043
 			public const int WeaponView = 1;
 
-			// Token: 0x04037AB2 RID: 228018
+			// Token: 0x040324DC RID: 206044
 			public const int Desc = 3;
 
-			// Token: 0x04037AB3 RID: 228019
+			// Token: 0x040324DD RID: 206045
 			public const int Line = 4;
 
-			// Token: 0x04037AB4 RID: 228020
+			// Token: 0x040324DE RID: 206046
 			public const int DescBg = 5;
 
-			// Token: 0x04037AB5 RID: 228021
+			// Token: 0x040324DF RID: 206047
 			public const int InventoryView = 6;
 		}
 	}

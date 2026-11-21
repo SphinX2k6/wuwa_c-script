@@ -6,25 +6,25 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 internal class AddMoveParams
 {
-	// Token: 0x04000C13 RID: 3091
+	// Token: 0x04000C1B RID: 3099
 	public float NowTime;
 
-	// Token: 0x04000C14 RID: 3092
+	// Token: 0x04000C1C RID: 3100
 	public float CurrentSpeed;
 
-	// Token: 0x04000C15 RID: 3093
+	// Token: 0x04000C1D RID: 3101
 	[Nullable(1)]
 	public readonly Vector InputDirectCache = Vector.Create();
 
-	// Token: 0x04000C16 RID: 3094
+	// Token: 0x04000C1E RID: 3102
 	public float AccumulativeSpeedUpTime;
 
-	// Token: 0x04000C17 RID: 3095
+	// Token: 0x04000C1F RID: 3103
 	public CharacterSkillComponent CharSkillComp;
 
-	// Token: 0x04000C18 RID: 3096
+	// Token: 0x04000C20 RID: 3104
 	public BaseMoveComponent MoveComp;
 
-	// Token: 0x04000C19 RID: 3097
+	// Token: 0x04000C21 RID: 3105
 	public CharacterActorComponent CharActorComp;
 }

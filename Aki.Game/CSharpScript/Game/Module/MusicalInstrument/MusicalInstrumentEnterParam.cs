@@ -3,17 +3,17 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.MusicalInstrument
 {
-	// Token: 0x02005372 RID: 21362
+	// Token: 0x02004355 RID: 17237
 	public class MusicalInstrumentEnterParam
 	{
-		// Token: 0x17008352 RID: 33618
-		// (get) Token: 0x06036944 RID: 223556 RVA: 0x00CECAD5 File Offset: 0x00CEACD5
-		// (set) Token: 0x06036945 RID: 223557 RVA: 0x00CECADD File Offset: 0x00CEACDD
+		// Token: 0x1700571E RID: 22302
+		// (get) Token: 0x0602B88B RID: 178315 RVA: 0x00C3BAA5 File Offset: 0x00C39CA5
+		// (set) Token: 0x0602B88C RID: 178316 RVA: 0x00C3BAAD File Offset: 0x00C39CAD
 		public EInstrumentType Type { get; set; }
 
-		// Token: 0x17008353 RID: 33619
-		// (get) Token: 0x06036946 RID: 223558 RVA: 0x00CECAE6 File Offset: 0x00CEACE6
-		// (set) Token: 0x06036947 RID: 223559 RVA: 0x00CECAEE File Offset: 0x00CEACEE
+		// Token: 0x1700571F RID: 22303
+		// (get) Token: 0x0602B88D RID: 178317 RVA: 0x00C3BAB6 File Offset: 0x00C39CB6
+		// (set) Token: 0x0602B88E RID: 178318 RVA: 0x00C3BABE File Offset: 0x00C39CBE
 		public int? QteId { get; set; }
 	}
 }

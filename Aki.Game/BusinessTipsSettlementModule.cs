@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200132F RID: 4911
+// Token: 0x020007E3 RID: 2019
 [NullableContext(2)]
 [Nullable(0)]
 public class BusinessTipsSettlementModule : UiPanelBase
 {
-	// Token: 0x0600887E RID: 34942 RVA: 0x001D24FC File Offset: 0x001D06FC
+	// Token: 0x06005C19 RID: 23577 RVA: 0x001DB368 File Offset: 0x001D9568
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class BusinessTipsSettlementModule : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600887F RID: 34943 RVA: 0x001D2590 File Offset: 0x001D0790
+	// Token: 0x06005C1A RID: 23578 RVA: 0x001DB3FC File Offset: 0x001D95FC
 	private UniTask InitCharacterListModule()
 	{
 		BusinessTipsSettlementModule.<InitCharacterListModule>d__8 <InitCharacterListModule>d__;
@@ -38,7 +38,7 @@ public class BusinessTipsSettlementModule : UiPanelBase
 		return <InitCharacterListModule>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008880 RID: 34944 RVA: 0x001D25D4 File Offset: 0x001D07D4
+	// Token: 0x06005C1B RID: 23579 RVA: 0x001DB440 File Offset: 0x001D9640
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BusinessTipsSettlementModule.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ public class BusinessTipsSettlementModule : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008881 RID: 34945 RVA: 0x001D2618 File Offset: 0x001D0818
+	// Token: 0x06005C1C RID: 23580 RVA: 0x001DB484 File Offset: 0x001D9684
 	protected override void OnBeforeShow()
 	{
 		DelegationResultData resultData = MoonChasingBusinessModel.Instance.GetResultData();
@@ -71,7 +71,7 @@ public class BusinessTipsSettlementModule : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "Moonfiesta_EventFail", Array.Empty<object>());
 	}
 
-	// Token: 0x06008882 RID: 34946 RVA: 0x001D26B0 File Offset: 0x001D08B0
+	// Token: 0x06005C1D RID: 23581 RVA: 0x001DB51C File Offset: 0x001D971C
 	protected override void OnBeforeDestroy()
 	{
 		if (this.Delegate != null)
@@ -87,7 +87,7 @@ public class BusinessTipsSettlementModule : UiPanelBase
 		this.StopTween();
 	}
 
-	// Token: 0x06008883 RID: 34947 RVA: 0x001D2703 File Offset: 0x001D0903
+	// Token: 0x06005C1E RID: 23582 RVA: 0x001DB56F File Offset: 0x001D976F
 	private void StopTween()
 	{
 		if (this.ExpTweener != null)
@@ -97,7 +97,7 @@ public class BusinessTipsSettlementModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008884 RID: 34948 RVA: 0x001D2720 File Offset: 0x001D0920
+	// Token: 0x06005C1F RID: 23583 RVA: 0x001DB58C File Offset: 0x001D978C
 	private void PlayCharacterRunFinishAction()
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -115,7 +115,7 @@ public class BusinessTipsSettlementModule : UiPanelBase
 		AudioSystem.Instance.PostEvent("play_ui_figure_up_1s");
 	}
 
-	// Token: 0x06008885 RID: 34949 RVA: 0x001D27E0 File Offset: 0x001D09E0
+	// Token: 0x06005C20 RID: 23584 RVA: 0x001DB64C File Offset: 0x001D984C
 	private void PlayCharacterEndAction()
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -124,26 +124,26 @@ public class BusinessTipsSettlementModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008886 RID: 34950 RVA: 0x001D2838 File Offset: 0x001D0A38
+	// Token: 0x06005C21 RID: 23585 RVA: 0x001DB6A4 File Offset: 0x001D98A4
 	private void PlayCurrentValueTween()
 	{
 		this.ExpTweener = ULTweenBPLibrary.FloatTo(GlobalData.World, this.ValueDelegate, 0f, 1f, 0.5f, 0f, LTweenEase.OutCubic);
 	}
 
-	// Token: 0x06008887 RID: 34951 RVA: 0x001D2865 File Offset: 0x001D0A65
+	// Token: 0x06005C22 RID: 23586 RVA: 0x001DB6D1 File Offset: 0x001D98D1
 	private void OnConfirm()
 	{
 		MoonChasingController.Instance.OpenTipsFinishView();
 	}
 
-	// Token: 0x06008888 RID: 34952 RVA: 0x001D2871 File Offset: 0x001D0A71
+	// Token: 0x06005C23 RID: 23587 RVA: 0x001DB6DD File Offset: 0x001D98DD
 	[NullableContext(1)]
 	private CharacterItemWithAdd InitCharacterItemWithAdd()
 	{
 		return new CharacterItemWithAdd();
 	}
 
-	// Token: 0x06008889 RID: 34953 RVA: 0x001D2878 File Offset: 0x001D0A78
+	// Token: 0x06005C24 RID: 23588 RVA: 0x001DB6E4 File Offset: 0x001D98E4
 	private void PlayFillAmount(float value)
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -157,7 +157,7 @@ public class BusinessTipsSettlementModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600888A RID: 34954 RVA: 0x001D28E8 File Offset: 0x001D0AE8
+	// Token: 0x06005C25 RID: 23589 RVA: 0x001DB754 File Offset: 0x001D9954
 	private void PlayCurrentValue(float value)
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -166,21 +166,21 @@ public class BusinessTipsSettlementModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600888B RID: 34955 RVA: 0x001D2940 File Offset: 0x001D0B40
+	// Token: 0x06005C26 RID: 23590 RVA: 0x001DB7AC File Offset: 0x001D99AC
 	private void OnComplete()
 	{
 		this.PlayCharacterEndAction();
 		this.PlayCurrentValueTween();
 	}
 
-	// Token: 0x0600888C RID: 34956 RVA: 0x001D294E File Offset: 0x001D0B4E
+	// Token: 0x06005C27 RID: 23591 RVA: 0x001DB7BA File Offset: 0x001D99BA
 	public void StartCharacterAnim()
 	{
 		MoonChasingBusinessModel.Instance.GetResultData().UseInvestProperData();
 		this.PlayCharacterRunFinishAction();
 	}
 
-	// Token: 0x04003CD7 RID: 15575
+	// Token: 0x04003D6F RID: 15727
 	[Nullable(new byte[]
 	{
 		2,
@@ -188,35 +188,35 @@ public class BusinessTipsSettlementModule : UiPanelBase
 	})]
 	protected CharacterListModule<CharacterItemWithAdd> CharacterListModule;
 
-	// Token: 0x04003CD8 RID: 15576
+	// Token: 0x04003D70 RID: 15728
 	protected ULTweener ExpTweener;
 
-	// Token: 0x04003CD9 RID: 15577
+	// Token: 0x04003D71 RID: 15729
 	protected FLTweenFloatSetterDynamic Delegate;
 
-	// Token: 0x04003CDA RID: 15578
+	// Token: 0x04003D72 RID: 15730
 	protected FLTweenFloatSetterDynamic ValueDelegate;
 
-	// Token: 0x04003CDB RID: 15579
+	// Token: 0x04003D73 RID: 15731
 	private const float TWEEN_TIME = 1f;
 
-	// Token: 0x04003CDC RID: 15580
+	// Token: 0x04003D74 RID: 15732
 	private const float VALUE_TIME = 0.5f;
 
-	// Token: 0x0200798F RID: 31119
+	// Token: 0x02006B19 RID: 27417
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04028071 RID: 163953
+		// Token: 0x0402339E RID: 144286
 		public const int Title = 0;
 
-		// Token: 0x04028072 RID: 163954
+		// Token: 0x0402339F RID: 144287
 		public const int ReturnRatio = 1;
 
-		// Token: 0x04028073 RID: 163955
+		// Token: 0x040233A0 RID: 144288
 		public const int ConfirmBtn = 2;
 
-		// Token: 0x04028074 RID: 163956
+		// Token: 0x040233A1 RID: 144289
 		public const int CharacterListItem = 3;
 	}
 }

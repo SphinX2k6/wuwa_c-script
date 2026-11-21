@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007343 RID: 29507
+	// Token: 0x02007B1B RID: 31515
 	public struct ITalkOptionQteFailed : IFlatbufferObject
 	{
-		// Token: 0x1700E014 RID: 57364
-		// (get) Token: 0x060358C4 RID: 219332 RVA: 0x0074B2B3 File Offset: 0x007494B3
+		// Token: 0x1700EC10 RID: 60432
+		// (get) Token: 0x06038BF7 RID: 232439 RVA: 0x007ACE3B File Offset: 0x007AB03B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060358C5 RID: 219333 RVA: 0x0074B2C0 File Offset: 0x007494C0
+		// Token: 0x06038BF8 RID: 232440 RVA: 0x007ACE48 File Offset: 0x007AB048
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060358C6 RID: 219334 RVA: 0x0074B2C8 File Offset: 0x007494C8
+		// Token: 0x06038BF9 RID: 232441 RVA: 0x007ACE50 File Offset: 0x007AB050
 		public static ITalkOptionQteFailed GetRootAsITalkOptionQteFailed(ByteBuffer _bb)
 		{
 			return ITalkOptionQteFailed.GetRootAsITalkOptionQteFailed(_bb, default(ITalkOptionQteFailed));
 		}
 
-		// Token: 0x060358C7 RID: 219335 RVA: 0x0074B2E4 File Offset: 0x007494E4
+		// Token: 0x06038BFA RID: 232442 RVA: 0x007ACE6C File Offset: 0x007AB06C
 		public static ITalkOptionQteFailed GetRootAsITalkOptionQteFailed(ByteBuffer _bb, ITalkOptionQteFailed obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060358C8 RID: 219336 RVA: 0x0074B301 File Offset: 0x00749501
+		// Token: 0x06038BFB RID: 232443 RVA: 0x007ACE89 File Offset: 0x007AB089
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060358C9 RID: 219337 RVA: 0x0074B310 File Offset: 0x00749510
+		// Token: 0x06038BFC RID: 232444 RVA: 0x007ACE98 File Offset: 0x007AB098
 		public ITalkOptionQteFailed __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E015 RID: 57365
-		// (get) Token: 0x060358CA RID: 219338 RVA: 0x0074B320 File Offset: 0x00749520
+		// Token: 0x1700EC11 RID: 60433
+		// (get) Token: 0x06038BFD RID: 232445 RVA: 0x007ACEA8 File Offset: 0x007AB0A8
 		public ETalkOptionParamType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060358CB RID: 219339 RVA: 0x0074B35C File Offset: 0x0074955C
+		// Token: 0x06038BFE RID: 232446 RVA: 0x007ACEE4 File Offset: 0x007AB0E4
 		public static Offset<ITalkOptionQteFailed> CreateITalkOptionQteFailed(FlatBufferBuilder builder, ETalkOptionParamType Type = ETalkOptionParamType.QteSucceed)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkOptionQteFailed.EndITalkOptionQteFailed(builder);
 		}
 
-		// Token: 0x060358CC RID: 219340 RVA: 0x0074B372 File Offset: 0x00749572
+		// Token: 0x06038BFF RID: 232447 RVA: 0x007ACEFA File Offset: 0x007AB0FA
 		public static void StartITalkOptionQteFailed(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060358CD RID: 219341 RVA: 0x0074B37B File Offset: 0x0074957B
+		// Token: 0x06038C00 RID: 232448 RVA: 0x007ACF03 File Offset: 0x007AB103
 		public static void AddType(FlatBufferBuilder builder, ETalkOptionParamType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060358CE RID: 219342 RVA: 0x0074B386 File Offset: 0x00749586
+		// Token: 0x06038C01 RID: 232449 RVA: 0x007ACF0E File Offset: 0x007AB10E
 		public static Offset<ITalkOptionQteFailed> EndITalkOptionQteFailed(FlatBufferBuilder builder)
 		{
 			return new Offset<ITalkOptionQteFailed>(builder.EndTable());
 		}
 
-		// Token: 0x060358CF RID: 219343 RVA: 0x0074B394 File Offset: 0x00749594
+		// Token: 0x06038C02 RID: 232450 RVA: 0x007ACF1C File Offset: 0x007AB11C
 		public ITalkOptionQteFailedT UnPack()
 		{
 			ITalkOptionQteFailedT talkOptionQteFailedT = new ITalkOptionQteFailedT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return talkOptionQteFailedT;
 		}
 
-		// Token: 0x060358D0 RID: 219344 RVA: 0x0074B3AF File Offset: 0x007495AF
+		// Token: 0x06038C03 RID: 232451 RVA: 0x007ACF37 File Offset: 0x007AB137
 		public void UnPackTo(ITalkOptionQteFailedT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060358D1 RID: 219345 RVA: 0x0074B3C0 File Offset: 0x007495C0
+		// Token: 0x06038C04 RID: 232452 RVA: 0x007ACF48 File Offset: 0x007AB148
 		public static Offset<ITalkOptionQteFailed> Pack(FlatBufferBuilder builder, ITalkOptionQteFailedT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkOptionQteFailed.CreateITalkOptionQteFailed(builder, _o.Type);
 		}
 
-		// Token: 0x0401213E RID: 74046
+		// Token: 0x04013144 RID: 78148
 		private Table __p;
 	}
 }

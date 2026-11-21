@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 {
-	// Token: 0x02004772 RID: 18290
+	// Token: 0x020036A3 RID: 13987
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class GearTrapTurnRotateDriver
 	{
-		// Token: 0x0602FD17 RID: 195863 RVA: 0x00B1486C File Offset: 0x00B12A6C
+		// Token: 0x060244E1 RID: 148705 RVA: 0x00A448E0 File Offset: 0x00A42AE0
 		public GearTrapTurnRotateDriver(WuWaGoGameplayEntityBase entity, Rotator startRotator, Rotator targetRotator, int durationMs, int tickIntervalMs)
 		{
 			this.Entity = entity;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			this.TargetRotator.DeepCopy(targetRotator);
 		}
 
-		// Token: 0x0602FD18 RID: 195864 RVA: 0x00B148DC File Offset: 0x00B12ADC
+		// Token: 0x060244E2 RID: 148706 RVA: 0x00A44950 File Offset: 0x00A42B50
 		public UniTask Run()
 		{
 			GearTrapTurnRotateDriver.<Run>d__12 <Run>d__;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <Run>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FD19 RID: 195865 RVA: 0x00B14920 File Offset: 0x00B12B20
+		// Token: 0x060244E3 RID: 148707 RVA: 0x00A44994 File Offset: 0x00A42B94
 		private void OnTick()
 		{
 			if (!this.Entity.IsActorValid())
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			}
 		}
 
-		// Token: 0x0602FD1A RID: 195866 RVA: 0x00B149A0 File Offset: 0x00B12BA0
+		// Token: 0x060244E4 RID: 148708 RVA: 0x00A44A14 File Offset: 0x00A42C14
 		private void OnTimeout()
 		{
 			this.Finish();
 		}
 
-		// Token: 0x0602FD1B RID: 195867 RVA: 0x00B149A8 File Offset: 0x00B12BA8
+		// Token: 0x060244E5 RID: 148709 RVA: 0x00A44A1C File Offset: 0x00A42C1C
 		private void ApplyRotator(Rotator rotator)
 		{
 			if (!this.Entity.IsActorValid())
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			this.Entity.SetActorWorldRotation(rotator);
 		}
 
-		// Token: 0x0602FD1C RID: 195868 RVA: 0x00B149C4 File Offset: 0x00B12BC4
+		// Token: 0x060244E6 RID: 148710 RVA: 0x00A44A38 File Offset: 0x00A42C38
 		private void Finish()
 		{
 			if (this.Resolved)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			this.Cancel();
 		}
 
-		// Token: 0x0602FD1D RID: 195869 RVA: 0x00B149F0 File Offset: 0x00B12BF0
+		// Token: 0x060244E7 RID: 148711 RVA: 0x00A44A64 File Offset: 0x00A42C64
 		public void Cancel()
 		{
 			if (this.Resolved)
@@ -101,39 +101,39 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			this.Done.SetResult(default(UniTaskVoid));
 		}
 
-		// Token: 0x04019CBA RID: 105658
+		// Token: 0x0401436A RID: 82794
 		private readonly CustomPromise<UniTaskVoid> Done = new CustomPromise<UniTaskVoid>();
 
-		// Token: 0x04019CBB RID: 105659
+		// Token: 0x0401436B RID: 82795
 		private readonly Rotator StartRotator = Rotator.Create();
 
-		// Token: 0x04019CBC RID: 105660
+		// Token: 0x0401436C RID: 82796
 		private readonly Rotator TargetRotator = Rotator.Create();
 
-		// Token: 0x04019CBD RID: 105661
+		// Token: 0x0401436D RID: 82797
 		private readonly Rotator CurrentRotator = Rotator.Create();
 
-		// Token: 0x04019CBE RID: 105662
+		// Token: 0x0401436E RID: 82798
 		[Nullable(2)]
 		private TimerHandle TickHandle;
 
-		// Token: 0x04019CBF RID: 105663
+		// Token: 0x0401436F RID: 82799
 		[Nullable(2)]
 		private TimerHandle TimeoutHandle;
 
-		// Token: 0x04019CC0 RID: 105664
+		// Token: 0x04014370 RID: 82800
 		private int ElapsedMs;
 
-		// Token: 0x04019CC1 RID: 105665
+		// Token: 0x04014371 RID: 82801
 		private bool Resolved;
 
-		// Token: 0x04019CC2 RID: 105666
+		// Token: 0x04014372 RID: 82802
 		private readonly WuWaGoGameplayEntityBase Entity;
 
-		// Token: 0x04019CC3 RID: 105667
+		// Token: 0x04014373 RID: 82803
 		private readonly int DurationMs;
 
-		// Token: 0x04019CC4 RID: 105668
+		// Token: 0x04014374 RID: 82804
 		private readonly int TickIntervalMs;
 	}
 }

@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x02002418 RID: 9240
+// Token: 0x020018FD RID: 6397
 public class PhantomManagerConfigNewSettingDetailInfo : IPhantomManagerConfigNewSettingDetailInfo
 {
-	// Token: 0x170017F2 RID: 6130
-	// (get) Token: 0x060127F8 RID: 75768 RVA: 0x0048F46E File Offset: 0x0048D66E
-	// (set) Token: 0x060127F9 RID: 75769 RVA: 0x0048F476 File Offset: 0x0048D676
+	// Token: 0x1700182C RID: 6188
+	// (get) Token: 0x0600FCAE RID: 64686 RVA: 0x0049CA8A File Offset: 0x0049AC8A
+	// (set) Token: 0x0600FCAF RID: 64687 RVA: 0x0049CA92 File Offset: 0x0049AC92
 	public int FetterId { get; set; }
 
-	// Token: 0x170017F3 RID: 6131
-	// (get) Token: 0x060127FA RID: 75770 RVA: 0x0048F47F File Offset: 0x0048D67F
-	// (set) Token: 0x060127FB RID: 75771 RVA: 0x0048F487 File Offset: 0x0048D687
+	// Token: 0x1700182D RID: 6189
+	// (get) Token: 0x0600FCB0 RID: 64688 RVA: 0x0049CA9B File Offset: 0x0049AC9B
+	// (set) Token: 0x0600FCB1 RID: 64689 RVA: 0x0049CAA3 File Offset: 0x0049ACA3
 	public int Cost { get; set; }
 
-	// Token: 0x170017F4 RID: 6132
-	// (get) Token: 0x060127FC RID: 75772 RVA: 0x0048F490 File Offset: 0x0048D690
-	// (set) Token: 0x060127FD RID: 75773 RVA: 0x0048F498 File Offset: 0x0048D698
+	// Token: 0x1700182E RID: 6190
+	// (get) Token: 0x0600FCB2 RID: 64690 RVA: 0x0049CAAC File Offset: 0x0049ACAC
+	// (set) Token: 0x0600FCB3 RID: 64691 RVA: 0x0049CAB4 File Offset: 0x0049ACB4
 	public int MainPropId { get; set; }
 
-	// Token: 0x170017F5 RID: 6133
-	// (get) Token: 0x060127FE RID: 75774 RVA: 0x0048F4A1 File Offset: 0x0048D6A1
-	// (set) Token: 0x060127FF RID: 75775 RVA: 0x0048F4A9 File Offset: 0x0048D6A9
+	// Token: 0x1700182F RID: 6191
+	// (get) Token: 0x0600FCB4 RID: 64692 RVA: 0x0049CABD File Offset: 0x0049ACBD
+	// (set) Token: 0x0600FCB5 RID: 64693 RVA: 0x0049CAC5 File Offset: 0x0049ACC5
 	public bool IsEdit { get; set; }
 }

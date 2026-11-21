@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 {
-	// Token: 0x020047E8 RID: 18408
+	// Token: 0x02003719 RID: 14105
 	public class TrackMenuItem : UiPanelBase
 	{
-		// Token: 0x06030372 RID: 197490 RVA: 0x00B2CAE0 File Offset: 0x00B2ACE0
+		// Token: 0x06024B42 RID: 150338 RVA: 0x00A5CA24 File Offset: 0x00A5AC24
 		[NullableContext(1)]
 		public UniTask Init(UUIItem uiItem, ITrackMenuItemData trackData)
 		{
@@ -27,20 +27,20 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030373 RID: 197491 RVA: 0x00B2CB34 File Offset: 0x00B2AD34
+		// Token: 0x06024B43 RID: 150339 RVA: 0x00A5CA78 File Offset: 0x00A5AC78
 		protected override void OnStart()
 		{
 			UUIItem uiitem = (base.GetExtendToggle(0).GetOwner() as AUIBaseActor).GetUIItem();
 			this.LevelSequencePlayer = new LevelSequencePlayer(uiitem);
 		}
 
-		// Token: 0x06030374 RID: 197492 RVA: 0x00B2CB64 File Offset: 0x00B2AD64
+		// Token: 0x06024B44 RID: 150340 RVA: 0x00A5CAA8 File Offset: 0x00A5ACA8
 		protected override void OnBeforeShow()
 		{
 			this.PlayAppearSequence();
 		}
 
-		// Token: 0x06030375 RID: 197493 RVA: 0x00B2CB6C File Offset: 0x00B2AD6C
+		// Token: 0x06024B45 RID: 150341 RVA: 0x00A5CAB0 File Offset: 0x00A5ACB0
 		protected override void OnAfterShow()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			onStateChange.Add(new Action<EToggleState>(this.OnClick));
 		}
 
-		// Token: 0x06030376 RID: 197494 RVA: 0x00B2CB98 File Offset: 0x00B2AD98
+		// Token: 0x06024B46 RID: 150342 RVA: 0x00A5CADC File Offset: 0x00A5ACDC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06030377 RID: 197495 RVA: 0x00B2CC22 File Offset: 0x00B2AE22
+		// Token: 0x06024B47 RID: 150343 RVA: 0x00A5CB66 File Offset: 0x00A5AD66
 		public void OnClick(EToggleState state)
 		{
 			if (EToggleState.ETT_Checked == state)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			}
 		}
 
-		// Token: 0x06030378 RID: 197496 RVA: 0x00B2CC40 File Offset: 0x00B2AE40
+		// Token: 0x06024B48 RID: 150344 RVA: 0x00A5CB84 File Offset: 0x00A5AD84
 		private void SetUp()
 		{
 			this.SetSpriteByPath(this.TrackData.Icon, base.GetSprite(1), false, null, null);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			}
 		}
 
-		// Token: 0x06030379 RID: 197497 RVA: 0x00B2CCC0 File Offset: 0x00B2AEC0
+		// Token: 0x06024B49 RID: 150345 RVA: 0x00A5CC04 File Offset: 0x00A5AE04
 		protected override UniTask OnBeforeHideAsync()
 		{
 			TrackMenuItem.<OnBeforeHideAsync>d__10 <OnBeforeHideAsync>d__;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603037A RID: 197498 RVA: 0x00B2CD03 File Offset: 0x00B2AF03
+		// Token: 0x06024B4A RID: 150346 RVA: 0x00A5CC47 File Offset: 0x00A5AE47
 		protected override void OnBeforeDestroy()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x0603037B RID: 197499 RVA: 0x00B2CD3C File Offset: 0x00B2AF3C
+		// Token: 0x06024B4B RID: 150347 RVA: 0x00A5CC80 File Offset: 0x00A5AE80
 		public UniTask PlayReleaseSequence()
 		{
 			TrackMenuItem.<PlayReleaseSequence>d__12 <PlayReleaseSequence>d__;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			return <PlayReleaseSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603037C RID: 197500 RVA: 0x00B2CD80 File Offset: 0x00B2AF80
+		// Token: 0x06024B4C RID: 150348 RVA: 0x00A5CCC4 File Offset: 0x00A5AEC4
 		public void PlayAppearSequence()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x0603037D RID: 197501 RVA: 0x00B2CDB0 File Offset: 0x00B2AFB0
+		// Token: 0x06024B4D RID: 150349 RVA: 0x00A5CCF4 File Offset: 0x00A5AEF4
 		public UniTask PlayDisappearSequence()
 		{
 			TrackMenuItem.<PlayDisappearSequence>d__14 <PlayDisappearSequence>d__;
@@ -173,24 +173,24 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			return <PlayDisappearSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04019F64 RID: 106340
+		// Token: 0x04014618 RID: 83480
 		[Nullable(2)]
 		private ITrackMenuItemData TrackData;
 
-		// Token: 0x04019F65 RID: 106341
+		// Token: 0x04014619 RID: 83481
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200AAA7 RID: 43687
+		// Token: 0x02009459 RID: 37977
 		public static class EComponents
 		{
-			// Token: 0x04033EA8 RID: 212648
+			// Token: 0x0402E62E RID: 189998
 			public const int Toggle = 0;
 
-			// Token: 0x04033EA9 RID: 212649
+			// Token: 0x0402E62F RID: 189999
 			public const int Icon = 1;
 
-			// Token: 0x04033EAA RID: 212650
+			// Token: 0x0402E630 RID: 190000
 			public const int Info = 2;
 		}
 	}

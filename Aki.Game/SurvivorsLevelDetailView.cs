@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -11,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B3F RID: 11071
+// Token: 0x020020BB RID: 8379
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsLevelDetailView : UiViewBase
 {
-	// Token: 0x06016F6D RID: 94061 RVA: 0x005D3FEB File Offset: 0x005D21EB
+	// Token: 0x0601499E RID: 84382 RVA: 0x00600B5B File Offset: 0x005FED5B
 	public SurvivorsLevelDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016F6E RID: 94062 RVA: 0x005D4020 File Offset: 0x005D2220
+	// Token: 0x0601499F RID: 84383 RVA: 0x00600B90 File Offset: 0x005FED90
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -66,7 +65,7 @@ public class SurvivorsLevelDetailView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016F6F RID: 94063 RVA: 0x005D434C File Offset: 0x005D254C
+	// Token: 0x060149A0 RID: 84384 RVA: 0x00600EBC File Offset: 0x005FF0BC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsLevelDetailView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -77,7 +76,7 @@ public class SurvivorsLevelDetailView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016F70 RID: 94064 RVA: 0x005D4390 File Offset: 0x005D2590
+	// Token: 0x060149A1 RID: 84385 RVA: 0x00600F00 File Offset: 0x005FF100
 	protected override void OnStart()
 	{
 		SurvivorsActivityDefine.SurvivorsLevelInfo selectLevelInfo = SurvivorsRogueModel.Instance.SelectLevelInfo;
@@ -97,7 +96,7 @@ public class SurvivorsLevelDetailView : UiViewBase
 		this.RefreshEndlessToggle();
 	}
 
-	// Token: 0x06016F71 RID: 94065 RVA: 0x005D4478 File Offset: 0x005D2678
+	// Token: 0x060149A2 RID: 84386 RVA: 0x00600FE8 File Offset: 0x005FF1E8
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -108,7 +107,7 @@ public class SurvivorsLevelDetailView : UiViewBase
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x06016F72 RID: 94066 RVA: 0x005D4494 File Offset: 0x005D2694
+	// Token: 0x060149A3 RID: 84387 RVA: 0x00601004 File Offset: 0x005FF204
 	private void InitializeNormalBgAndTag(int diff)
 	{
 		int[][] array = new int[][]
@@ -152,25 +151,25 @@ public class SurvivorsLevelDetailView : UiViewBase
 		base.SetTextureShowUntilLoaded(resourcePath, base.GetTexture(28), null);
 	}
 
-	// Token: 0x06016F73 RID: 94067 RVA: 0x005D4555 File Offset: 0x005D2755
+	// Token: 0x060149A4 RID: 84388 RVA: 0x006010C5 File Offset: 0x005FF2C5
 	private CommonItemSmallItemGrid CreateRewardGrid()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06016F74 RID: 94068 RVA: 0x005D455C File Offset: 0x005D275C
+	// Token: 0x060149A5 RID: 84389 RVA: 0x006010CC File Offset: 0x005FF2CC
 	private WeaponItemComponent CreateWeaponGrid()
 	{
 		return new WeaponItemComponent();
 	}
 
-	// Token: 0x06016F75 RID: 94069 RVA: 0x005D4563 File Offset: 0x005D2763
+	// Token: 0x060149A6 RID: 84390 RVA: 0x006010D3 File Offset: 0x005FF2D3
 	private void OnClickFunctionButton()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsTeamEditView, null, null);
 	}
 
-	// Token: 0x06016F76 RID: 94070 RVA: 0x005D4578 File Offset: 0x005D2778
+	// Token: 0x060149A7 RID: 84391 RVA: 0x006010E8 File Offset: 0x005FF2E8
 	private void OnClickTogEndless(EToggleState state)
 	{
 		if (!this.CachedEndlessEnable)
@@ -212,13 +211,13 @@ public class SurvivorsLevelDetailView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06016F77 RID: 94071 RVA: 0x005D4634 File Offset: 0x005D2834
+	// Token: 0x060149A8 RID: 84392 RVA: 0x006011A4 File Offset: 0x005FF3A4
 	private void OnClickClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06016F78 RID: 94072 RVA: 0x005D4640 File Offset: 0x005D2840
+	// Token: 0x060149A9 RID: 84393 RVA: 0x006011B0 File Offset: 0x005FF3B0
 	private void InitializeCaption()
 	{
 		PopupCaptionItem captionComp = this.CaptionComp;
@@ -247,7 +246,7 @@ public class SurvivorsLevelDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016F79 RID: 94073 RVA: 0x005D46E4 File Offset: 0x005D28E4
+	// Token: 0x060149AA RID: 84394 RVA: 0x00601254 File Offset: 0x005FF454
 	private void SetEndlessMode(bool isEndless)
 	{
 		SurvivorsLevel? survivorsLevel = SurvivorsRogueConfig.Instance.GetSurvivorsLevel(this.CachedLevelId);
@@ -271,7 +270,7 @@ public class SurvivorsLevelDetailView : UiViewBase
 		this.RefreshRewardByDropPackage(survivorsLevel.Value.RewardId(j), SurvivorsRogueModel.Instance.ActivityData.GetCurrentLevelInfoByLevelId(selectLevelInfo.LevelId).Info.IsFinish);
 	}
 
-	// Token: 0x06016F7A RID: 94074 RVA: 0x005D47E8 File Offset: 0x005D29E8
+	// Token: 0x060149AB RID: 84395 RVA: 0x00601358 File Offset: 0x005FF558
 	private void PlayEndlessSwitchAnimation(bool isEndless)
 	{
 		if (isEndless)
@@ -303,7 +302,7 @@ public class SurvivorsLevelDetailView : UiViewBase
 		levelSequencePlayer2.PlayLevelSequenceByName(isEndless ? "Switch1" : "Switch2", false, null, false);
 	}
 
-	// Token: 0x06016F7B RID: 94075 RVA: 0x005D485C File Offset: 0x005D2A5C
+	// Token: 0x060149AC RID: 84396 RVA: 0x006013CC File Offset: 0x005FF5CC
 	private void SequenceFinish(string name)
 	{
 		if (!(name == "Switch1"))
@@ -327,13 +326,13 @@ public class SurvivorsLevelDetailView : UiViewBase
 		cachedNormalBackground.SetUIActive(false);
 	}
 
-	// Token: 0x06016F7C RID: 94076 RVA: 0x005D489C File Offset: 0x005D2A9C
+	// Token: 0x060149AD RID: 84397 RVA: 0x0060140C File Offset: 0x005FF60C
 	private void UpdateLevelName(string titleId)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), titleId, Array.Empty<object>());
 	}
 
-	// Token: 0x06016F7D RID: 94077 RVA: 0x005D48B5 File Offset: 0x005D2AB5
+	// Token: 0x060149AE RID: 84398 RVA: 0x00601425 File Offset: 0x005FF625
 	private void UpdateEndlessToggleEnable(bool isEnable)
 	{
 		this.CachedEndlessEnable = isEnable;
@@ -350,14 +349,14 @@ public class SurvivorsLevelDetailView : UiViewBase
 		item.SetUIActive(isEnable);
 	}
 
-	// Token: 0x06016F7E RID: 94078 RVA: 0x005D48E8 File Offset: 0x005D2AE8
+	// Token: 0x060149AF RID: 84399 RVA: 0x00601458 File Offset: 0x005FF658
 	private void RefreshLeftBottomArea(IReadOnlyList<int> survivorsRoleIdList, IReadOnlyList<int> survivorsWeaponIdList)
 	{
 		bool flag = this.RefreshRoleHead(survivorsRoleIdList);
 		GenericScrollViewNew<WeaponItemComponent, int> weaponItemScroll = this.WeaponItemScroll;
 		if (weaponItemScroll != null)
 		{
-			weaponItemScroll.RefreshByData(survivorsWeaponIdList.ToList<int>(), null, false);
+			weaponItemScroll.RefreshByData(survivorsWeaponIdList, null, false);
 		}
 		bool uiactive = flag || survivorsWeaponIdList.Count > 0;
 		UUIItem item = base.GetItem(31);
@@ -368,7 +367,7 @@ public class SurvivorsLevelDetailView : UiViewBase
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x06016F7F RID: 94079 RVA: 0x005D4938 File Offset: 0x005D2B38
+	// Token: 0x060149B0 RID: 84400 RVA: 0x006014A4 File Offset: 0x005FF6A4
 	private bool RefreshRoleHead(IReadOnlyList<int> survivorsRoleIdList)
 	{
 		for (int i = 0; i < survivorsRoleIdList.Count; i++)
@@ -398,7 +397,7 @@ public class SurvivorsLevelDetailView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x06016F80 RID: 94080 RVA: 0x005D49B0 File Offset: 0x005D2BB0
+	// Token: 0x060149B1 RID: 84401 RVA: 0x0060151C File Offset: 0x005FF71C
 	public void RefreshRewardByDropPackage(int dropPackageId, bool isCleared)
 	{
 		List<TItem> dropPackagePreviewItemList = CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemList(dropPackageId);
@@ -412,7 +411,7 @@ public class SurvivorsLevelDetailView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x06016F81 RID: 94081 RVA: 0x005D49F8 File Offset: 0x005D2BF8
+	// Token: 0x060149B2 RID: 84402 RVA: 0x00601564 File Offset: 0x005FF764
 	private void RefreshEndlessToggle()
 	{
 		SurvivorsActivityDefine.SurvivorsLevelInfo selectLevelInfo = SurvivorsRogueModel.Instance.SelectLevelInfo;
@@ -447,13 +446,13 @@ public class SurvivorsLevelDetailView : UiViewBase
 		AudioSystem.Instance.PostEvent("play_ui_xingcunzhe_leveldetail_open_normal");
 	}
 
-	// Token: 0x06016F82 RID: 94082 RVA: 0x005D4B0D File Offset: 0x005D2D0D
+	// Token: 0x060149B3 RID: 84403 RVA: 0x00601679 File Offset: 0x005FF879
 	private void UpdateLevelDesc(string descId)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(14), descId, Array.Empty<object>());
 	}
 
-	// Token: 0x06016F83 RID: 94083 RVA: 0x005D4B28 File Offset: 0x005D2D28
+	// Token: 0x060149B4 RID: 84404 RVA: 0x00601694 File Offset: 0x005FF894
 	private void UpdateLevelTarget(string targetDescId, int levelId, bool isEndless)
 	{
 		List<string> list = new List<string>();
@@ -471,7 +470,7 @@ public class SurvivorsLevelDetailView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(13), targetDescId, list.ToArray());
 	}
 
-	// Token: 0x06016F84 RID: 94084 RVA: 0x005D4BB8 File Offset: 0x005D2DB8
+	// Token: 0x060149B5 RID: 84405 RVA: 0x00601724 File Offset: 0x005FF924
 	private void UpdateToggleTextColor(bool bUseChangeColor)
 	{
 		UUIText text = base.GetText(16);
@@ -483,7 +482,7 @@ public class SurvivorsLevelDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016F85 RID: 94085 RVA: 0x005D4BE6 File Offset: 0x005D2DE6
+	// Token: 0x060149B6 RID: 84406 RVA: 0x00601752 File Offset: 0x005FF952
 	private void UpdateLevelTag(bool isEndless)
 	{
 		UUIItem cachedNormalTag = this.CachedNormalTag;
@@ -499,13 +498,13 @@ public class SurvivorsLevelDetailView : UiViewBase
 		item.SetUIActive(isEndless);
 	}
 
-	// Token: 0x06016F86 RID: 94086 RVA: 0x005D4C10 File Offset: 0x005D2E10
+	// Token: 0x060149B7 RID: 84407 RVA: 0x0060177C File Offset: 0x005FF97C
 	private bool CheckIsRecordedSwitchOn()
 	{
 		return SurvivorsRogueModel.Instance.ActivityData.SaveCacheState(ESurvivorsActivitySaveFlags.EndlessFirstCheck, 0, 0, 1);
 	}
 
-	// Token: 0x0400AB36 RID: 43830
+	// Token: 0x0400AF3C RID: 44860
 	private readonly string[] bgTexturePath = new string[]
 	{
 		"UiTexture_SurvivorsLevelDetailBg1",
@@ -513,37 +512,37 @@ public class SurvivorsLevelDetailView : UiViewBase
 		"UiTexture_SurvivorsLevelDetailBg3"
 	};
 
-	// Token: 0x0400AB37 RID: 43831
+	// Token: 0x0400AF3D RID: 44861
 	private int CachedLevelId = -1;
 
-	// Token: 0x0400AB38 RID: 43832
+	// Token: 0x0400AF3E RID: 44862
 	private bool CachedEndlessEnable;
 
-	// Token: 0x0400AB39 RID: 43833
+	// Token: 0x0400AF3F RID: 44863
 	[Nullable(2)]
 	private UUIItem CachedNormalBackground;
 
-	// Token: 0x0400AB3A RID: 43834
+	// Token: 0x0400AF40 RID: 44864
 	[Nullable(2)]
 	private UUIItem CachedNormalTag;
 
-	// Token: 0x0400AB3B RID: 43835
+	// Token: 0x0400AF41 RID: 44865
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400AB3C RID: 43836
+	// Token: 0x0400AF42 RID: 44866
 	[Nullable(2)]
 	private ActivityFunctionalTypeA FunctionArea;
 
-	// Token: 0x0400AB3D RID: 43837
+	// Token: 0x0400AF43 RID: 44867
 	[Nullable(2)]
 	private PopupCaptionItem CaptionComp;
 
-	// Token: 0x0400AB3E RID: 43838
+	// Token: 0x0400AF44 RID: 44868
 	[Nullable(2)]
 	private RoleItemComponent RoleHeadComp;
 
-	// Token: 0x0400AB3F RID: 43839
+	// Token: 0x0400AF45 RID: 44869
 	[Nullable(new byte[]
 	{
 		2,
@@ -551,7 +550,7 @@ public class SurvivorsLevelDetailView : UiViewBase
 	})]
 	private GenericScrollViewNew<WeaponItemComponent, int> WeaponItemScroll;
 
-	// Token: 0x0400AB40 RID: 43840
+	// Token: 0x0400AF46 RID: 44870
 	[Nullable(new byte[]
 	{
 		2,

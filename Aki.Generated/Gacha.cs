@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CDC RID: 3292
+	// Token: 0x02000DC0 RID: 3520
 	public struct Gacha : IFlatbufferObject
 	{
-		// Token: 0x17001490 RID: 5264
-		// (get) Token: 0x060077E9 RID: 30697 RVA: 0x002456A4 File Offset: 0x002438A4
+		// Token: 0x170014ED RID: 5357
+		// (get) Token: 0x06007DF4 RID: 32244 RVA: 0x00264220 File Offset: 0x00262420
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060077EA RID: 30698 RVA: 0x002456B1 File Offset: 0x002438B1
+		// Token: 0x06007DF5 RID: 32245 RVA: 0x0026422D File Offset: 0x0026242D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060077EB RID: 30699 RVA: 0x002456B8 File Offset: 0x002438B8
+		// Token: 0x06007DF6 RID: 32246 RVA: 0x00264234 File Offset: 0x00262434
 		public static Gacha GetRootAsGacha(ByteBuffer _bb)
 		{
 			return Gacha.GetRootAsGacha(_bb, default(Gacha));
 		}
 
-		// Token: 0x060077EC RID: 30700 RVA: 0x002456D4 File Offset: 0x002438D4
+		// Token: 0x06007DF7 RID: 32247 RVA: 0x00264250 File Offset: 0x00262450
 		public static Gacha GetRootAsGacha(ByteBuffer _bb, Gacha obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060077ED RID: 30701 RVA: 0x002456F1 File Offset: 0x002438F1
+		// Token: 0x06007DF8 RID: 32248 RVA: 0x0026426D File Offset: 0x0026246D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060077EE RID: 30702 RVA: 0x00245700 File Offset: 0x00243900
+		// Token: 0x06007DF9 RID: 32249 RVA: 0x0026427C File Offset: 0x0026247C
 		public Gacha __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001491 RID: 5265
-		// (get) Token: 0x060077EF RID: 30703 RVA: 0x00245710 File Offset: 0x00243910
+		// Token: 0x170014EE RID: 5358
+		// (get) Token: 0x06007DFA RID: 32250 RVA: 0x0026428C File Offset: 0x0026248C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001492 RID: 5266
-		// (get) Token: 0x060077F0 RID: 30704 RVA: 0x0024574C File Offset: 0x0024394C
+		// Token: 0x170014EF RID: 5359
+		// (get) Token: 0x06007DFB RID: 32251 RVA: 0x002642C8 File Offset: 0x002624C8
 		public int RuleGroupId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001493 RID: 5267
-		// (get) Token: 0x060077F1 RID: 30705 RVA: 0x00245788 File Offset: 0x00243988
+		// Token: 0x170014F0 RID: 5360
+		// (get) Token: 0x06007DFC RID: 32252 RVA: 0x00264304 File Offset: 0x00262504
 		public int Sort
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004D4D RID: 19789
+		// Token: 0x04005331 RID: 21297
 		private Table __p;
 	}
 }

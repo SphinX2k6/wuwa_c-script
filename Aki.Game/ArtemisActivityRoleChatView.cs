@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020010EB RID: 4331
+// Token: 0x0200059F RID: 1439
 [NullableContext(1)]
 [Nullable(0)]
 public class ArtemisActivityRoleChatView : UiViewBase
 {
-	// Token: 0x060070CB RID: 28875 RVA: 0x0017002E File Offset: 0x0016E22E
+	// Token: 0x06004461 RID: 17505 RVA: 0x001789EA File Offset: 0x00176BEA
 	public ArtemisActivityRoleChatView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060070CC RID: 28876 RVA: 0x00170038 File Offset: 0x0016E238
+	// Token: 0x06004462 RID: 17506 RVA: 0x001789F4 File Offset: 0x00176BF4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,28 +37,28 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		};
 	}
 
-	// Token: 0x060070CD RID: 28877 RVA: 0x00170100 File Offset: 0x0016E300
+	// Token: 0x06004463 RID: 17507 RVA: 0x00178ABC File Offset: 0x00176CBC
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnArtemisStateRefresh, new Action(this.OnStateRefresh));
 		EventSystem.Instance.Add(EEventName.OnCloseRewardView, new Action(this.OnCloseRewardView));
 	}
 
-	// Token: 0x060070CE RID: 28878 RVA: 0x0017013A File Offset: 0x0016E33A
+	// Token: 0x06004464 RID: 17508 RVA: 0x00178AF6 File Offset: 0x00176CF6
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnArtemisStateRefresh, new Action(this.OnStateRefresh));
 		EventSystem.Instance.Remove(EEventName.OnCloseRewardView, new Action(this.OnCloseRewardView));
 	}
 
-	// Token: 0x060070CF RID: 28879 RVA: 0x00170174 File Offset: 0x0016E374
+	// Token: 0x06004465 RID: 17509 RVA: 0x00178B30 File Offset: 0x00176D30
 	private void OnStateRefresh()
 	{
 		this.UpdateShowDayContent(ArtemisActivityController.Instance.CurrentDayIndex);
 		this.RefreshDayTabsState();
 	}
 
-	// Token: 0x060070D0 RID: 28880 RVA: 0x0017018C File Offset: 0x0016E38C
+	// Token: 0x06004466 RID: 17510 RVA: 0x00178B48 File Offset: 0x00176D48
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ArtemisActivityRoleChatView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -69,7 +69,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060070D1 RID: 28881 RVA: 0x001701CF File Offset: 0x0016E3CF
+	// Token: 0x06004467 RID: 17511 RVA: 0x00178B8B File Offset: 0x00176D8B
 	protected override void OnBeforeShow()
 	{
 		this.RefreshDays();
@@ -77,7 +77,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		this.SetCurrentContentBg(ArtemisActivityController.Instance.CurrentDayIndex + 1);
 	}
 
-	// Token: 0x060070D2 RID: 28882 RVA: 0x001701F9 File Offset: 0x0016E3F9
+	// Token: 0x06004468 RID: 17512 RVA: 0x00178BB5 File Offset: 0x00176DB5
 	protected override void OnBeforeDestroy()
 	{
 		AUIBaseActor rootActor = this.RootActor;
@@ -88,7 +88,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		rootActor.OnSequencePlayEvent.Unbind();
 	}
 
-	// Token: 0x060070D3 RID: 28883 RVA: 0x00170210 File Offset: 0x0016E410
+	// Token: 0x06004469 RID: 17513 RVA: 0x00178BCC File Offset: 0x00176DCC
 	private void OnPlaySequenceEvent(string sequenceName, string eventName)
 	{
 		if (eventName == "Dele_M")
@@ -97,7 +97,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		}
 	}
 
-	// Token: 0x060070D4 RID: 28884 RVA: 0x00170234 File Offset: 0x0016E434
+	// Token: 0x0600446A RID: 17514 RVA: 0x00178BF0 File Offset: 0x00176DF0
 	private void InitCaption()
 	{
 		UUIItem item = base.GetItem(0);
@@ -112,7 +112,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		}
 	}
 
-	// Token: 0x060070D5 RID: 28885 RVA: 0x00170288 File Offset: 0x0016E488
+	// Token: 0x0600446B RID: 17515 RVA: 0x00178C44 File Offset: 0x00176E44
 	private void InitDaysScrollView()
 	{
 		if (this.DaysScroll != null)
@@ -126,7 +126,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		}
 	}
 
-	// Token: 0x060070D6 RID: 28886 RVA: 0x001702C4 File Offset: 0x0016E4C4
+	// Token: 0x0600446C RID: 17516 RVA: 0x00178C80 File Offset: 0x00176E80
 	private ArtemisDaysItem CreateDaysItem()
 	{
 		ArtemisDaysItem artemisDaysItem = new ArtemisDaysItem();
@@ -134,13 +134,13 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		return artemisDaysItem;
 	}
 
-	// Token: 0x060070D7 RID: 28887 RVA: 0x001702DD File Offset: 0x0016E4DD
+	// Token: 0x0600446D RID: 17517 RVA: 0x00178C99 File Offset: 0x00176E99
 	private void RefreshDays()
 	{
 		this.RefreshDayTabsState();
 	}
 
-	// Token: 0x060070D8 RID: 28888 RVA: 0x001702E8 File Offset: 0x0016E4E8
+	// Token: 0x0600446E RID: 17518 RVA: 0x00178CA4 File Offset: 0x00176EA4
 	private void RefreshDayTabsState()
 	{
 		ArtemisActivityConfig instance = ArtemisActivityConfig.Instance;
@@ -180,7 +180,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x060070D9 RID: 28889 RVA: 0x001703C4 File Offset: 0x0016E5C4
+	// Token: 0x0600446F RID: 17519 RVA: 0x00178D80 File Offset: 0x00176F80
 	private void OnDayItemClick(int index)
 	{
 		if (!this.CheckUnlockDayItem(index))
@@ -196,7 +196,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		this.RefreshDayTabsState();
 	}
 
-	// Token: 0x060070DA RID: 28890 RVA: 0x00170400 File Offset: 0x0016E600
+	// Token: 0x06004470 RID: 17520 RVA: 0x00178DBC File Offset: 0x00176FBC
 	private void SetCurrentContentBg(int index)
 	{
 		UiResourceConfig instance = UiResourceConfig.Instance;
@@ -216,7 +216,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		base.TrySetTextureByPath(path, base.GetTexture(6), null, null);
 	}
 
-	// Token: 0x060070DB RID: 28891 RVA: 0x0017045C File Offset: 0x0016E65C
+	// Token: 0x06004471 RID: 17521 RVA: 0x00178E18 File Offset: 0x00177018
 	private bool CheckUnlockDayItem(int index)
 	{
 		ArtemisActivityData artemisData = this.ArtemisData;
@@ -241,7 +241,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x060070DC RID: 28892 RVA: 0x00170500 File Offset: 0x0016E700
+	// Token: 0x06004472 RID: 17522 RVA: 0x00178EBC File Offset: 0x001770BC
 	private void UpdateShowDayContent(int index)
 	{
 		GenericScrollViewNew<ArtemisDaysItem, IArtemisDayItemData> daysScroll = this.DaysScroll;
@@ -253,7 +253,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		this.SetUnlockDayLogEvent();
 	}
 
-	// Token: 0x060070DD RID: 28893 RVA: 0x00170524 File Offset: 0x0016E724
+	// Token: 0x06004473 RID: 17523 RVA: 0x00178EE0 File Offset: 0x001770E0
 	private void SwitchChatContent(int index)
 	{
 		if (index < 0)
@@ -336,7 +336,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		}
 	}
 
-	// Token: 0x060070DE RID: 28894 RVA: 0x001706D4 File Offset: 0x0016E8D4
+	// Token: 0x06004474 RID: 17524 RVA: 0x00179090 File Offset: 0x00177290
 	private void FinishCertificationView()
 	{
 		int currentDayIndex = ArtemisActivityController.Instance.CurrentDayIndex;
@@ -358,7 +358,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		});
 	}
 
-	// Token: 0x060070DF RID: 28895 RVA: 0x00170780 File Offset: 0x0016E980
+	// Token: 0x06004475 RID: 17525 RVA: 0x0017913C File Offset: 0x0017733C
 	private void FinishFixed()
 	{
 		ArtemisActivityCertificationViewParams param = new ArtemisActivityCertificationViewParams
@@ -369,7 +369,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.ArtemisActivityCertificationView, param, null);
 	}
 
-	// Token: 0x060070E0 RID: 28896 RVA: 0x001707C0 File Offset: 0x0016E9C0
+	// Token: 0x06004476 RID: 17526 RVA: 0x0017917C File Offset: 0x0017737C
 	private void FinishFixedSuccess()
 	{
 		int currentDayIndex = ArtemisActivityController.Instance.CurrentDayIndex;
@@ -389,7 +389,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		});
 	}
 
-	// Token: 0x060070E1 RID: 28897 RVA: 0x00170818 File Offset: 0x0016EA18
+	// Token: 0x06004477 RID: 17527 RVA: 0x001791D4 File Offset: 0x001773D4
 	private void OnCloseRewardView()
 	{
 		base.PlaySequence("Fix_Done", null, false);
@@ -401,7 +401,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		UiLayer.Instance.SetShowMaskLayer(EUiViewName.ArtemisActivityRoleChatView, true);
 	}
 
-	// Token: 0x060070E2 RID: 28898 RVA: 0x00170850 File Offset: 0x0016EA50
+	// Token: 0x06004478 RID: 17528 RVA: 0x0017920C File Offset: 0x0017740C
 	private void SetTitleCurrentDayIndex()
 	{
 		UUIArtText artText = base.GetArtText(1);
@@ -426,7 +426,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		artText2.SetText(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x060070E3 RID: 28899 RVA: 0x001708FC File Offset: 0x0016EAFC
+	// Token: 0x06004479 RID: 17529 RVA: 0x001792B8 File Offset: 0x001774B8
 	[NullableContext(2)]
 	public List<TItem> GetRewardItem(int dropId)
 	{
@@ -443,7 +443,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x060070E4 RID: 28900 RVA: 0x00170937 File Offset: 0x0016EB37
+	// Token: 0x0600447A RID: 17530 RVA: 0x001792F3 File Offset: 0x001774F3
 	private void SetDialogueUiActive(bool isShow)
 	{
 		UUIItem item = base.GetItem(5);
@@ -454,7 +454,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		item.SetUIActive(isShow);
 	}
 
-	// Token: 0x060070E5 RID: 28901 RVA: 0x0017094C File Offset: 0x0016EB4C
+	// Token: 0x0600447B RID: 17531 RVA: 0x00179308 File Offset: 0x00177508
 	private void ShowDialogue(bool isLockStatus, bool isShowEffect, int activityId, int index)
 	{
 		this.SetDialogueUiActive(true);
@@ -469,7 +469,7 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		dialoguePanel.ShowDialogue(ids, isLockStatus, isShowEffect);
 	}
 
-	// Token: 0x060070E6 RID: 28902 RVA: 0x001709BC File Offset: 0x0016EBBC
+	// Token: 0x0600447C RID: 17532 RVA: 0x00179378 File Offset: 0x00177578
 	private void SetUnlockDayLogEvent()
 	{
 		ArtemisActivityConfig instance = ArtemisActivityConfig.Instance;
@@ -492,14 +492,14 @@ public class ArtemisActivityRoleChatView : UiViewBase
 		LogReportController.Instance.LogReport(artemisLevelUnlockLogEvent);
 	}
 
-	// Token: 0x0400344D RID: 13389
+	// Token: 0x040034E6 RID: 13542
 	protected ArtemisActivityData ArtemisData;
 
-	// Token: 0x0400344E RID: 13390
+	// Token: 0x040034E7 RID: 13543
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400344F RID: 13391
+	// Token: 0x040034E8 RID: 13544
 	[Nullable(new byte[]
 	{
 		2,
@@ -508,39 +508,39 @@ public class ArtemisActivityRoleChatView : UiViewBase
 	})]
 	private GenericScrollViewNew<ArtemisDaysItem, IArtemisDayItemData> DaysScroll;
 
-	// Token: 0x04003450 RID: 13392
+	// Token: 0x040034E9 RID: 13545
 	[Nullable(2)]
 	private ArtemisDialogueBoxPanel DialoguePanel;
 
-	// Token: 0x04003451 RID: 13393
+	// Token: 0x040034EA RID: 13546
 	private bool WaitFixedFinish;
 
-	// Token: 0x020076AC RID: 30380
+	// Token: 0x02006840 RID: 26688
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040272A4 RID: 160420
+		// Token: 0x040225ED RID: 140781
 		public const int CaptionItem = 0;
 
-		// Token: 0x040272A5 RID: 160421
+		// Token: 0x040225EE RID: 140782
 		public const int ArtisticText1 = 1;
 
-		// Token: 0x040272A6 RID: 160422
+		// Token: 0x040225EF RID: 140783
 		public const int ArtisticText2 = 2;
 
-		// Token: 0x040272A7 RID: 160423
+		// Token: 0x040225F0 RID: 140784
 		public const int DaysScroll = 3;
 
-		// Token: 0x040272A8 RID: 160424
+		// Token: 0x040225F1 RID: 140785
 		public const int DaysItem = 4;
 
-		// Token: 0x040272A9 RID: 160425
+		// Token: 0x040225F2 RID: 140786
 		public const int DialogBoxParent = 5;
 
-		// Token: 0x040272AA RID: 160426
+		// Token: 0x040225F3 RID: 140787
 		public const int PlaneTexture = 6;
 
-		// Token: 0x040272AB RID: 160427
+		// Token: 0x040225F4 RID: 140788
 		public const int TitleText = 7;
 	}
 }

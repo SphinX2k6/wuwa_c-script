@@ -2,104 +2,104 @@
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C68 RID: 23656
+	// Token: 0x02004C48 RID: 19528
 	public enum EBattleUiChild
 	{
-		// Token: 0x0401F233 RID: 127539
+		// Token: 0x04019CE4 RID: 105700
 		Common,
-		// Token: 0x0401F234 RID: 127540
+		// Token: 0x04019CE5 RID: 105701
 		ExitButton,
-		// Token: 0x0401F235 RID: 127541
+		// Token: 0x04019CE6 RID: 105702
 		HomeButton,
-		// Token: 0x0401F236 RID: 127542
+		// Token: 0x04019CE7 RID: 105703
 		TopButton,
-		// Token: 0x0401F237 RID: 127543
+		// Token: 0x04019CE8 RID: 105704
 		MiniMap,
-		// Token: 0x0401F238 RID: 127544
+		// Token: 0x04019CE9 RID: 105705
 		Mission,
-		// Token: 0x0401F239 RID: 127545
+		// Token: 0x04019CEA RID: 105706
 		Chat,
-		// Token: 0x0401F23A RID: 127546
+		// Token: 0x04019CEB RID: 105707
 		Formation,
-		// Token: 0x0401F23B RID: 127547
+		// Token: 0x04019CEC RID: 105708
 		GamepadFormation,
-		// Token: 0x0401F23C RID: 127548
+		// Token: 0x04019CED RID: 105709
 		SkillButton,
-		// Token: 0x0401F23D RID: 127549
+		// Token: 0x04019CEE RID: 105710
 		GamepadSkillButton,
-		// Token: 0x0401F23E RID: 127550
+		// Token: 0x04019CEF RID: 105711
 		RoleState,
-		// Token: 0x0401F23F RID: 127551
+		// Token: 0x04019CF0 RID: 105712
 		Joystick,
-		// Token: 0x0401F240 RID: 127552
+		// Token: 0x04019CF1 RID: 105713
 		BossState,
-		// Token: 0x0401F241 RID: 127553
+		// Token: 0x04019CF2 RID: 105714
 		HeadState,
-		// Token: 0x0401F242 RID: 127554
+		// Token: 0x04019CF3 RID: 105715
 		PartState,
-		// Token: 0x0401F243 RID: 127555
+		// Token: 0x04019CF4 RID: 105716
 		DamageView,
-		// Token: 0x0401F244 RID: 127556
+		// Token: 0x04019CF5 RID: 105717
 		BattleHud,
-		// Token: 0x0401F245 RID: 127557
+		// Token: 0x04019CF6 RID: 105718
 		BattleFloat,
-		// Token: 0x0401F246 RID: 127558
+		// Token: 0x04019CF7 RID: 105719
 		InteractionHint,
-		// Token: 0x0401F247 RID: 127559
+		// Token: 0x04019CF8 RID: 105720
 		PanelQTE,
-		// Token: 0x0401F248 RID: 127560
+		// Token: 0x04019CF9 RID: 105721
 		PanelQta,
-		// Token: 0x0401F249 RID: 127561
+		// Token: 0x04019CFA RID: 105722
 		SilentAreaView,
-		// Token: 0x0401F24A RID: 127562
+		// Token: 0x04019CFB RID: 105723
 		SilentAreaInfoPanel,
-		// Token: 0x0401F24B RID: 127563
+		// Token: 0x04019CFC RID: 105724
 		ScreenEffect,
-		// Token: 0x0401F24C RID: 127564
+		// Token: 0x04019CFD RID: 105725
 		Score,
-		// Token: 0x0401F24D RID: 127565
+		// Token: 0x04019CFE RID: 105726
 		PositionOfficial,
-		// Token: 0x0401F24E RID: 127566
+		// Token: 0x04019CFF RID: 105727
 		GuideTipsView,
-		// Token: 0x0401F24F RID: 127567
+		// Token: 0x04019D00 RID: 105728
 		JoystickPanel,
-		// Token: 0x0401F250 RID: 127568
+		// Token: 0x04019D01 RID: 105729
 		TrapDefenseMachineSelectPanel,
-		// Token: 0x0401F251 RID: 127569
+		// Token: 0x04019D02 RID: 105730
 		TrapDefensePreparationPanel,
-		// Token: 0x0401F252 RID: 127570
+		// Token: 0x04019D03 RID: 105731
 		TrapDefenseFunctionalPanel,
-		// Token: 0x0401F253 RID: 127571
+		// Token: 0x04019D04 RID: 105732
 		TrapDefenseCampsiteHpPanel,
-		// Token: 0x0401F254 RID: 127572
+		// Token: 0x04019D05 RID: 105733
 		TrapDefenseBuildTipsPanel,
-		// Token: 0x0401F255 RID: 127573
+		// Token: 0x04019D06 RID: 105734
 		TrapDefenseComboPanel,
-		// Token: 0x0401F256 RID: 127574
+		// Token: 0x04019D07 RID: 105735
 		TrapDefenseMachineTipsPanel,
-		// Token: 0x0401F257 RID: 127575
+		// Token: 0x04019D08 RID: 105736
 		DesktopSkillButton,
-		// Token: 0x0401F258 RID: 127576
+		// Token: 0x04019D09 RID: 105737
 		MobileSkillButton,
-		// Token: 0x0401F259 RID: 127577
+		// Token: 0x04019D0A RID: 105738
 		MotorcycleControlTop,
-		// Token: 0x0401F25A RID: 127578
+		// Token: 0x04019D0B RID: 105739
 		MotorcycleMobileSkillButton,
-		// Token: 0x0401F25B RID: 127579
+		// Token: 0x04019D0C RID: 105740
 		MotorcycleMobileJoystick,
-		// Token: 0x0401F25C RID: 127580
+		// Token: 0x04019D0D RID: 105741
 		MotorcycleControlHud,
-		// Token: 0x0401F25D RID: 127581
+		// Token: 0x04019D0E RID: 105742
 		MotorcycleArrowBattle,
-		// Token: 0x0401F25E RID: 127582
+		// Token: 0x04019D0F RID: 105743
 		SpringManorHud,
-		// Token: 0x0401F25F RID: 127583
+		// Token: 0x04019D10 RID: 105744
 		BossPiling,
-		// Token: 0x0401F260 RID: 127584
+		// Token: 0x04019D11 RID: 105745
 		SceneItemDurabilityState,
-		// Token: 0x0401F261 RID: 127585
+		// Token: 0x04019D12 RID: 105746
 		Ignore,
-		// Token: 0x0401F262 RID: 127586
+		// Token: 0x04019D13 RID: 105747
 		MaxCount
 	}
 }

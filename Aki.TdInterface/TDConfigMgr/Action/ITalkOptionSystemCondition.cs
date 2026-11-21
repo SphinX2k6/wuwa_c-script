@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F84 RID: 8068
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021BF RID: 8639
 	public class ITalkOptionSystemCondition : ITalkOptionPreConditionBase
 	{
-		// Token: 0x0600B174 RID: 45428 RVA: 0x0019E12C File Offset: 0x0019C32C
+		// Token: 0x0600BC4E RID: 48206 RVA: 0x001B4080 File Offset: 0x001B2280
 		private ITalkOptionSystemCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B175 RID: 45429 RVA: 0x0019E164 File Offset: 0x0019C364
+		// Token: 0x0600BC4F RID: 48207 RVA: 0x001B40B8 File Offset: 0x001B22B8
 		public static ITalkOptionSystemCondition Create([Nullable(2)] ITalkOptionSystemCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B176 RID: 45430 RVA: 0x0019E177 File Offset: 0x0019C377
+		// Token: 0x0600BC50 RID: 48208 RVA: 0x001B40CB File Offset: 0x001B22CB
 		public static ITalkOptionSystemCondition CreateFromSetValue([Nullable(2)] ITalkOptionSystemCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B177 RID: 45431 RVA: 0x0019E18C File Offset: 0x0019C38C
+		// Token: 0x0600BC51 RID: 48209 RVA: 0x001B40E0 File Offset: 0x001B22E0
 		public new ITalkOptionSystemCondition_SetValue ToSetValue()
 		{
 			return new ITalkOptionSystemCondition_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036CC RID: 14028
-		// (get) Token: 0x0600B178 RID: 45432 RVA: 0x0019E1DA File Offset: 0x0019C3DA
-		// (set) Token: 0x0600B179 RID: 45433 RVA: 0x0019E205 File Offset: 0x0019C405
+		// Token: 0x17003998 RID: 14744
+		// (get) Token: 0x0600BC52 RID: 48210 RVA: 0x001B412E File Offset: 0x001B232E
+		// (set) Token: 0x0600BC53 RID: 48211 RVA: 0x001B4159 File Offset: 0x001B2359
 		public override ETalkOptionPreConditionType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036CD RID: 14029
-		// (get) Token: 0x0600B17A RID: 45434 RVA: 0x0019E214 File Offset: 0x0019C414
-		// (set) Token: 0x0600B17B RID: 45435 RVA: 0x0019E275 File Offset: 0x0019C475
+		// Token: 0x17003999 RID: 14745
+		// (get) Token: 0x0600BC54 RID: 48212 RVA: 0x001B4168 File Offset: 0x001B2368
+		// (set) Token: 0x0600BC55 RID: 48213 RVA: 0x001B41C9 File Offset: 0x001B23C9
 		public virtual ITalkOptionConditionSolarSchool System
 		{
 			get
@@ -116,9 +114,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036CE RID: 14030
-		// (get) Token: 0x0600B17C RID: 45436 RVA: 0x0019E28C File Offset: 0x0019C48C
-		// (set) Token: 0x0600B17D RID: 45437 RVA: 0x0019E2C6 File Offset: 0x0019C4C6
+		// Token: 0x1700399A RID: 14746
+		// (get) Token: 0x0600BC56 RID: 48214 RVA: 0x001B41E0 File Offset: 0x001B23E0
+		// (set) Token: 0x0600BC57 RID: 48215 RVA: 0x001B421A File Offset: 0x001B241A
 		public virtual bool? HideWhenUnmet
 		{
 			get
@@ -140,9 +138,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036CF RID: 14031
-		// (get) Token: 0x0600B17E RID: 45438 RVA: 0x0019E2D4 File Offset: 0x0019C4D4
-		// (set) Token: 0x0600B17F RID: 45439 RVA: 0x0019E30E File Offset: 0x0019C50E
+		// Token: 0x1700399B RID: 14747
+		// (get) Token: 0x0600BC58 RID: 48216 RVA: 0x001B4228 File Offset: 0x001B2428
+		// (set) Token: 0x0600BC59 RID: 48217 RVA: 0x001B4262 File Offset: 0x001B2462
 		public virtual bool? HideConditionTextWhenUnmet
 		{
 			get
@@ -164,9 +162,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036D0 RID: 14032
-		// (get) Token: 0x0600B180 RID: 45440 RVA: 0x0019E31C File Offset: 0x0019C51C
-		// (set) Token: 0x0600B181 RID: 45441 RVA: 0x0019E343 File Offset: 0x0019C543
+		// Token: 0x1700399C RID: 14748
+		// (get) Token: 0x0600BC5A RID: 48218 RVA: 0x001B4270 File Offset: 0x001B2470
+		// (set) Token: 0x0600BC5B RID: 48219 RVA: 0x001B4297 File Offset: 0x001B2497
 		[Nullable(2)]
 		public virtual string TidReplaceTextWhenUnmet
 		{
@@ -191,18 +189,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B4D RID: 27469
+		// Token: 0x04007135 RID: 28981
 		[Nullable(2)]
 		protected new ITalkOptionSystemCondition FbInstance;
 
-		// Token: 0x04006B4E RID: 27470
+		// Token: 0x04007136 RID: 28982
 		[Nullable(2)]
 		protected new ITalkOptionSystemCondition_SetValue PocoInterface;
 
-		// Token: 0x04006B4F RID: 27471
+		// Token: 0x04007137 RID: 28983
 		private ITalkOptionConditionSolarSchool _SystemCache;
 
-		// Token: 0x04006B50 RID: 27472
+		// Token: 0x04007138 RID: 28984
 		private bool _SystemInited;
 	}
 }

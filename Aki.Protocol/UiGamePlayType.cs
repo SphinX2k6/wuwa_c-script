@@ -3,43 +3,43 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001567 RID: 5479
+	// Token: 0x020015DD RID: 5597
 	public enum UiGamePlayType
 	{
-		// Token: 0x0400A646 RID: 42566
+		// Token: 0x0400AAD3 RID: 43731
 		[OriginalName("Cipher")]
 		Cipher,
-		// Token: 0x0400A647 RID: 42567
+		// Token: 0x0400AAD4 RID: 43732
 		[OriginalName("SignalBreak")]
 		SignalBreak,
-		// Token: 0x0400A648 RID: 42568
+		// Token: 0x0400AAD5 RID: 43733
 		[OriginalName("SundialPuzzle")]
 		SundialPuzzle,
-		// Token: 0x0400A649 RID: 42569
+		// Token: 0x0400AAD6 RID: 43734
 		[OriginalName("MorseCode")]
 		MorseCode,
-		// Token: 0x0400A64A RID: 42570
+		// Token: 0x0400AAD7 RID: 43735
 		[OriginalName("SignalDevice")]
 		SignalDevice,
-		// Token: 0x0400A64B RID: 42571
+		// Token: 0x0400AAD8 RID: 43736
 		[OriginalName("LifePoint")]
 		LifePoint,
-		// Token: 0x0400A64C RID: 42572
+		// Token: 0x0400AAD9 RID: 43737
 		[OriginalName("Reigns")]
 		Reigns,
-		// Token: 0x0400A64D RID: 42573
+		// Token: 0x0400AADA RID: 43738
 		[OriginalName("TraceTracing")]
 		TraceTracing,
-		// Token: 0x0400A64E RID: 42574
+		// Token: 0x0400AADB RID: 43739
 		[OriginalName("GolemCrack")]
 		GolemCrack,
-		// Token: 0x0400A64F RID: 42575
+		// Token: 0x0400AADC RID: 43740
 		[OriginalName("SheriffInference")]
 		SheriffInference,
-		// Token: 0x0400A650 RID: 42576
+		// Token: 0x0400AADD RID: 43741
 		[OriginalName("WriteLetter")]
 		WriteLetter,
-		// Token: 0x0400A651 RID: 42577
+		// Token: 0x0400AADE RID: 43742
 		[OriginalName("InstrumentQte")]
 		InstrumentQte
 	}

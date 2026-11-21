@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AEF RID: 27375
+	// Token: 0x02007226 RID: 29222
 	public class IMontageAssetT
 	{
-		// Token: 0x1700CB17 RID: 51991
-		// (get) Token: 0x0602FFCA RID: 196554 RVA: 0x006863FB File Offset: 0x006845FB
-		// (set) Token: 0x0602FFCB RID: 196555 RVA: 0x00686403 File Offset: 0x00684603
+		// Token: 0x1700D5E6 RID: 54758
+		// (get) Token: 0x06032D9E RID: 208286 RVA: 0x006DDAB3 File Offset: 0x006DBCB3
+		// (set) Token: 0x06032D9F RID: 208287 RVA: 0x006DDABB File Offset: 0x006DBCBB
 		public EMontageConfigType Type { get; set; }
 
-		// Token: 0x1700CB18 RID: 51992
-		// (get) Token: 0x0602FFCC RID: 196556 RVA: 0x0068640C File Offset: 0x0068460C
-		// (set) Token: 0x0602FFCD RID: 196557 RVA: 0x00686414 File Offset: 0x00684614
+		// Token: 0x1700D5E7 RID: 54759
+		// (get) Token: 0x06032DA0 RID: 208288 RVA: 0x006DDAC4 File Offset: 0x006DBCC4
+		// (set) Token: 0x06032DA1 RID: 208289 RVA: 0x006DDACC File Offset: 0x006DBCCC
 		public string Asset { get; set; }
 
-		// Token: 0x0602FFCE RID: 196558 RVA: 0x0068641D File Offset: 0x0068461D
+		// Token: 0x06032DA2 RID: 208290 RVA: 0x006DDAD5 File Offset: 0x006DBCD5
 		public IMontageAssetT()
 		{
 			this.Type = EMontageConfigType.Asset;

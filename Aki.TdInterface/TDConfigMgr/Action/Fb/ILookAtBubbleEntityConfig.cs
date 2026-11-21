@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A68 RID: 10856
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D5C RID: 11612
 	public class ILookAtBubbleEntityConfig
 	{
-		// Token: 0x0600EEC4 RID: 61124 RVA: 0x0022BD42 File Offset: 0x00229F42
+		// Token: 0x0600FD7A RID: 64890 RVA: 0x00249A4E File Offset: 0x00247C4E
 		public static ILookAtBubbleEntityConfig Create(ILookAtBubbleEntityConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BB6 RID: 19382
-		// (get) Token: 0x0600EEC5 RID: 61125 RVA: 0x0022BD61 File Offset: 0x00229F61
+		// Token: 0x17004F70 RID: 20336
+		// (get) Token: 0x0600FD7B RID: 64891 RVA: 0x00249A6D File Offset: 0x00247C6D
 		public virtual int BubbleEntity
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BB7 RID: 19383
-		// (get) Token: 0x0600EEC6 RID: 61126 RVA: 0x0022BD70 File Offset: 0x00229F70
+		// Token: 0x17004F71 RID: 20337
+		// (get) Token: 0x0600FD7C RID: 64892 RVA: 0x00249A7C File Offset: 0x00247C7C
 		public virtual List<int> RangeEntities
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BB8 RID: 19384
-		// (get) Token: 0x0600EEC7 RID: 61127 RVA: 0x0022BDD4 File Offset: 0x00229FD4
+		// Token: 0x17004F72 RID: 20338
+		// (get) Token: 0x0600FD7D RID: 64893 RVA: 0x00249AE0 File Offset: 0x00247CE0
 		[Nullable(2)]
 		public virtual IEntityLookAtPerform EntityLookAtPerform
 		{
@@ -72,20 +70,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008358 RID: 33624
+		// Token: 0x04008A5C RID: 35420
 		private ILookAtBubbleEntityConfig Instance;
 
-		// Token: 0x04008359 RID: 33625
+		// Token: 0x04008A5D RID: 35421
 		private List<int> _RangeEntitiesCache;
 
-		// Token: 0x0400835A RID: 33626
+		// Token: 0x04008A5E RID: 35422
 		private bool _RangeEntitiesInited;
 
-		// Token: 0x0400835B RID: 33627
+		// Token: 0x04008A5F RID: 35423
 		[Nullable(2)]
 		private IEntityLookAtPerform _EntityLookAtPerformCache;
 
-		// Token: 0x0400835C RID: 33628
+		// Token: 0x04008A60 RID: 35424
 		private bool _EntityLookAtPerformInited;
 	}
 }

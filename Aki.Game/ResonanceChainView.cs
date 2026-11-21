@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200289A RID: 10394
+// Token: 0x02001E15 RID: 7701
 [NullableContext(2)]
 [Nullable(0)]
 public class ResonanceChainView : UiTabViewBase
 {
-	// Token: 0x06015724 RID: 87844 RVA: 0x0056908C File Offset: 0x0056728C
+	// Token: 0x06013124 RID: 78116 RVA: 0x00593ED4 File Offset: 0x005920D4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class ResonanceChainView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x06015725 RID: 87845 RVA: 0x00569128 File Offset: 0x00567328
+	// Token: 0x06013125 RID: 78117 RVA: 0x00593F70 File Offset: 0x00592170
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ResonanceChainView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ public class ResonanceChainView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015726 RID: 87846 RVA: 0x0056916C File Offset: 0x0056736C
+	// Token: 0x06013126 RID: 78118 RVA: 0x00593FB4 File Offset: 0x005921B4
 	private void InitData()
 	{
 		this.ItemParentList = new UUIItem[6];
@@ -56,7 +56,7 @@ public class ResonanceChainView : UiTabViewBase
 		this.SequencePlayer.BindSequenceStartEvent(new TSequenceStartEvent(this.OnSequenceStart));
 	}
 
-	// Token: 0x06015727 RID: 87847 RVA: 0x005691D8 File Offset: 0x005673D8
+	// Token: 0x06013127 RID: 78119 RVA: 0x00594020 File Offset: 0x00592220
 	private void CreateSceneEffect()
 	{
 		FTransformDouble? kuroCurrentUiSceneTransform = RenderModuleController.Instance.GetKuroCurrentUiSceneTransform();
@@ -64,7 +64,7 @@ public class ResonanceChainView : UiTabViewBase
 		this.SceneEffectHandle = new int?(EffectSystem.Instance.SpawnEffect(GlobalData.World, kuroCurrentUiSceneTransform, effectPath, "[ResonanceChainView.CreateSceneEffect]", null, EEffectType.UiScene3D, null, null, null, false, false));
 	}
 
-	// Token: 0x06015728 RID: 87848 RVA: 0x00569224 File Offset: 0x00567424
+	// Token: 0x06013128 RID: 78120 RVA: 0x0059406C File Offset: 0x0059226C
 	private void SetEffectHidden(bool bHidden)
 	{
 		if (this.SceneEffectHandle == null)
@@ -74,7 +74,7 @@ public class ResonanceChainView : UiTabViewBase
 		EffectSystem.Instance.SetEffectHidden(this.SceneEffectHandle.Value, bHidden, "[ResonanceChainView.SetEffectHidden]", false);
 	}
 
-	// Token: 0x06015729 RID: 87849 RVA: 0x00569250 File Offset: 0x00567450
+	// Token: 0x06013129 RID: 78121 RVA: 0x00594098 File Offset: 0x00592298
 	private void DestroySceneEffect()
 	{
 		if (this.SceneEffectHandle == null)
@@ -85,13 +85,13 @@ public class ResonanceChainView : UiTabViewBase
 		this.SceneEffectHandle = null;
 	}
 
-	// Token: 0x0601572A RID: 87850 RVA: 0x0056929C File Offset: 0x0056749C
+	// Token: 0x0601312A RID: 78122 RVA: 0x005940E4 File Offset: 0x005922E4
 	private void ResetStates()
 	{
 		this.CurSelectId = -1;
 	}
 
-	// Token: 0x0601572B RID: 87851 RVA: 0x005692A8 File Offset: 0x005674A8
+	// Token: 0x0601312B RID: 78123 RVA: 0x005940F0 File Offset: 0x005922F0
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.UpdateRoleResonanceDetailView, new Action(this.OnResonanceUnlockSuccess));
@@ -99,7 +99,7 @@ public class ResonanceChainView : UiTabViewBase
 		EventSystem.Instance.Add(EEventName.OnRoleInternalViewQuit, new Action(this.OnRoleInternalViewQuit));
 	}
 
-	// Token: 0x0601572C RID: 87852 RVA: 0x0056930C File Offset: 0x0056750C
+	// Token: 0x0601312C RID: 78124 RVA: 0x00594154 File Offset: 0x00592354
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.UpdateRoleResonanceDetailView, new Action(this.OnResonanceUnlockSuccess));
@@ -107,7 +107,7 @@ public class ResonanceChainView : UiTabViewBase
 		EventSystem.Instance.Remove(EEventName.OnRoleInternalViewQuit, new Action(this.OnRoleInternalViewQuit));
 	}
 
-	// Token: 0x0601572D RID: 87853 RVA: 0x00569370 File Offset: 0x00567570
+	// Token: 0x0601312D RID: 78125 RVA: 0x005941B8 File Offset: 0x005923B8
 	[NullableContext(1)]
 	private void OnSequenceStart(string sequenceName)
 	{
@@ -119,7 +119,7 @@ public class ResonanceChainView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601572E RID: 87854 RVA: 0x005693D4 File Offset: 0x005675D4
+	// Token: 0x0601312E RID: 78126 RVA: 0x0059421C File Offset: 0x0059241C
 	private void OnResonanceUnlockSuccess()
 	{
 		this.RefreshInfoItem();
@@ -147,7 +147,7 @@ public class ResonanceChainView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601572F RID: 87855 RVA: 0x00569478 File Offset: 0x00567678
+	// Token: 0x0601312F RID: 78127 RVA: 0x005942C0 File Offset: 0x005924C0
 	private void OnRoleChange(int roleId)
 	{
 		this.PlayMontageStart();
@@ -156,7 +156,7 @@ public class ResonanceChainView : UiTabViewBase
 		this.ShowItems();
 	}
 
-	// Token: 0x06015730 RID: 87856 RVA: 0x005694B4 File Offset: 0x005676B4
+	// Token: 0x06013130 RID: 78128 RVA: 0x005942FC File Offset: 0x005924FC
 	private void OnRoleInternalViewQuit()
 	{
 		this.HideInfoItem();
@@ -164,7 +164,7 @@ public class ResonanceChainView : UiTabViewBase
 		this.CancelToggleSelect();
 	}
 
-	// Token: 0x06015731 RID: 87857 RVA: 0x005694E7 File Offset: 0x005676E7
+	// Token: 0x06013131 RID: 78129 RVA: 0x0059432F File Offset: 0x0059252F
 	protected override void OnBeforeShow()
 	{
 		this.PlayMontageStart();
@@ -174,13 +174,13 @@ public class ResonanceChainView : UiTabViewBase
 		EventSystem.Instance.Emit<string>(EEventName.FinishGuideStepByEvent, "ResonanceChainGuide");
 	}
 
-	// Token: 0x06015732 RID: 87858 RVA: 0x00569517 File Offset: 0x00567717
+	// Token: 0x06013132 RID: 78130 RVA: 0x0059435F File Offset: 0x0059255F
 	protected override void OnBeforeHide()
 	{
 		this.SetEffectHidden(true);
 	}
 
-	// Token: 0x06015733 RID: 87859 RVA: 0x00569520 File Offset: 0x00567720
+	// Token: 0x06013133 RID: 78131 RVA: 0x00594368 File Offset: 0x00592568
 	public void ShowItems()
 	{
 		ResonanceChainBaseItem[] showingItemList = this.ShowingItemList;
@@ -190,7 +190,7 @@ public class ResonanceChainView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06015734 RID: 87860 RVA: 0x0056954C File Offset: 0x0056774C
+	// Token: 0x06013134 RID: 78132 RVA: 0x00594394 File Offset: 0x00592594
 	private void EnterRoleInternalView()
 	{
 		this.ShowInfoItem();
@@ -199,13 +199,13 @@ public class ResonanceChainView : UiTabViewBase
 		EventSystem.Instance.Emit(EEventName.OnRoleInternalViewEnter);
 	}
 
-	// Token: 0x06015735 RID: 87861 RVA: 0x0056959C File Offset: 0x0056779C
+	// Token: 0x06013135 RID: 78133 RVA: 0x005943E4 File Offset: 0x005925E4
 	protected void PlayMontageStart()
 	{
 		RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Resonance, false, false, false);
 	}
 
-	// Token: 0x06015736 RID: 87862 RVA: 0x005695AC File Offset: 0x005677AC
+	// Token: 0x06013136 RID: 78134 RVA: 0x005943F4 File Offset: 0x005925F4
 	private void ShowInfoItem()
 	{
 		ResonanceChainInfoItem infoItem = this.InfoItem;
@@ -216,7 +216,7 @@ public class ResonanceChainView : UiTabViewBase
 		this.InfoItem.ShowItem();
 	}
 
-	// Token: 0x06015737 RID: 87863 RVA: 0x005695CB File Offset: 0x005677CB
+	// Token: 0x06013137 RID: 78135 RVA: 0x00594413 File Offset: 0x00592613
 	private void HideInfoItem()
 	{
 		ResonanceChainInfoItem infoItem = this.InfoItem;
@@ -227,7 +227,7 @@ public class ResonanceChainView : UiTabViewBase
 		this.InfoItem.HideItem();
 	}
 
-	// Token: 0x06015738 RID: 87864 RVA: 0x005695EC File Offset: 0x005677EC
+	// Token: 0x06013138 RID: 78136 RVA: 0x00594434 File Offset: 0x00592634
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -244,7 +244,7 @@ public class ResonanceChainView : UiTabViewBase
 		return <InitChainItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015739 RID: 87865 RVA: 0x00569638 File Offset: 0x00567838
+	// Token: 0x06013139 RID: 78137 RVA: 0x00594480 File Offset: 0x00592680
 	private ResonanceChainBaseItem GetItemByResonanceId(int resonanceId)
 	{
 		ResonantChain? roleResonanceById = RoleResonanceConfig.Instance.GetRoleResonanceById(resonanceId);
@@ -259,7 +259,7 @@ public class ResonanceChainView : UiTabViewBase
 		return null;
 	}
 
-	// Token: 0x0601573A RID: 87866 RVA: 0x00569680 File Offset: 0x00567880
+	// Token: 0x0601313A RID: 78138 RVA: 0x005944C8 File Offset: 0x005926C8
 	private void Refresh()
 	{
 		int curRoleResonanceGroupIndex = this.RoleViewAgent.GetCurRoleResonanceGroupIndex();
@@ -290,7 +290,7 @@ public class ResonanceChainView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601573B RID: 87867 RVA: 0x00569784 File Offset: 0x00567984
+	// Token: 0x0601313B RID: 78139 RVA: 0x005945CC File Offset: 0x005927CC
 	private void OnToggleCallBack(int resonanceId)
 	{
 		int curSelectId = this.CurSelectId;
@@ -328,7 +328,7 @@ public class ResonanceChainView : UiTabViewBase
 		this.RefreshInfoItem();
 	}
 
-	// Token: 0x0601573C RID: 87868 RVA: 0x00569800 File Offset: 0x00567A00
+	// Token: 0x0601313C RID: 78140 RVA: 0x00594648 File Offset: 0x00592848
 	private void CancelToggleSelect()
 	{
 		int curSelectId = this.CurSelectId;
@@ -348,14 +348,14 @@ public class ResonanceChainView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601573D RID: 87869 RVA: 0x00569840 File Offset: 0x00567A40
+	// Token: 0x0601313D RID: 78141 RVA: 0x00594688 File Offset: 0x00592888
 	private void RefreshInfoItem()
 	{
 		RoleDataBase curSelectRoleData = this.RoleViewAgent.GetCurSelectRoleData();
 		this.InfoItem.Update(curSelectRoleData.GetDataId(), this.CurSelectId, curSelectRoleData.IsTrialRole());
 	}
 
-	// Token: 0x0601573E RID: 87870 RVA: 0x00569876 File Offset: 0x00567A76
+	// Token: 0x0601313E RID: 78142 RVA: 0x005946BE File Offset: 0x005928BE
 	protected override void OnBeforeDestroy()
 	{
 		this.DestroySceneEffect();
@@ -365,7 +365,7 @@ public class ResonanceChainView : UiTabViewBase
 		this.ResetStates();
 	}
 
-	// Token: 0x0601573F RID: 87871 RVA: 0x0056989C File Offset: 0x00567A9C
+	// Token: 0x0601313F RID: 78143 RVA: 0x005946E4 File Offset: 0x005928E4
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -402,7 +402,7 @@ public class ResonanceChainView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x06015740 RID: 87872 RVA: 0x0056991C File Offset: 0x00567B1C
+	// Token: 0x06013140 RID: 78144 RVA: 0x00594764 File Offset: 0x00592964
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	private UUIItem FindGuideUiItem(string param)
@@ -422,13 +422,13 @@ public class ResonanceChainView : UiTabViewBase
 		return result;
 	}
 
-	// Token: 0x04009FED RID: 40941
+	// Token: 0x0400A3D6 RID: 41942
 	private const int RESONANCE_ITEM_COUNT = 6;
 
-	// Token: 0x04009FEE RID: 40942
+	// Token: 0x0400A3D7 RID: 41943
 	private RoleViewAgent RoleViewAgent;
 
-	// Token: 0x04009FEF RID: 40943
+	// Token: 0x0400A3D8 RID: 41944
 	[Nullable(new byte[]
 	{
 		2,
@@ -436,7 +436,7 @@ public class ResonanceChainView : UiTabViewBase
 	})]
 	private ResonanceChainBaseItem[] ShowingItemList;
 
-	// Token: 0x04009FF0 RID: 40944
+	// Token: 0x0400A3D9 RID: 41945
 	[Nullable(new byte[]
 	{
 		2,
@@ -444,33 +444,33 @@ public class ResonanceChainView : UiTabViewBase
 	})]
 	private UUIItem[] ItemParentList;
 
-	// Token: 0x04009FF1 RID: 40945
+	// Token: 0x0400A3DA RID: 41946
 	private ResonanceChainInfoItem InfoItem;
 
-	// Token: 0x04009FF2 RID: 40946
+	// Token: 0x0400A3DB RID: 41947
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04009FF3 RID: 40947
+	// Token: 0x0400A3DC RID: 41948
 	private int CurSelectId = -1;
 
-	// Token: 0x04009FF4 RID: 40948
+	// Token: 0x0400A3DD RID: 41949
 	private int? SceneEffectHandle;
 
-	// Token: 0x02008EA3 RID: 36515
+	// Token: 0x020080EA RID: 33002
 	[NullableContext(0)]
 	private enum EResonanceChainViewCom
 	{
-		// Token: 0x0402E40A RID: 189450
+		// Token: 0x04029B07 RID: 170759
 		ResonanceItem1,
-		// Token: 0x0402E40B RID: 189451
+		// Token: 0x04029B08 RID: 170760
 		ResonanceItem2,
-		// Token: 0x0402E40C RID: 189452
+		// Token: 0x04029B09 RID: 170761
 		ResonanceItem3,
-		// Token: 0x0402E40D RID: 189453
+		// Token: 0x04029B0A RID: 170762
 		ResonanceItem4,
-		// Token: 0x0402E40E RID: 189454
+		// Token: 0x04029B0B RID: 170763
 		ResonanceItem5,
-		// Token: 0x0402E40F RID: 189455
+		// Token: 0x04029B0C RID: 170764
 		ResonanceItem6
 	}
 }

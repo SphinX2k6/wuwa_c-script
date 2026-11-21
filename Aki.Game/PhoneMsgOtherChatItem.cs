@@ -11,7 +11,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200253E RID: 9534
+// Token: 0x02001A27 RID: 6695
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -20,7 +20,7 @@ using UnrealEngine;
 })]
 public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IPhoneMsgChatItem
 {
-	// Token: 0x0601327D RID: 78461 RVA: 0x004C13D0 File Offset: 0x004BF5D0
+	// Token: 0x06010750 RID: 67408 RVA: 0x004CF994 File Offset: 0x004CDB94
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -52,7 +52,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		};
 	}
 
-	// Token: 0x0601327E RID: 78462 RVA: 0x004C15D0 File Offset: 0x004BF7D0
+	// Token: 0x06010751 RID: 67409 RVA: 0x004CFB94 File Offset: 0x004CDD94
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -70,13 +70,13 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		this.LinkButton.CreateByActor(base.GetItem(18).GetOwner(), null);
 	}
 
-	// Token: 0x0601327F RID: 78463 RVA: 0x004C166F File Offset: 0x004BF86F
+	// Token: 0x06010752 RID: 67410 RVA: 0x004CFC33 File Offset: 0x004CDE33
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPhoneMsgChatShowChange, new Action(this.RefreshSpeakerNameTextColor));
 	}
 
-	// Token: 0x06013280 RID: 78464 RVA: 0x004C168D File Offset: 0x004BF88D
+	// Token: 0x06010753 RID: 67411 RVA: 0x004CFC51 File Offset: 0x004CDE51
 	[NullableContext(1)]
 	public override void Refresh(PhoneMsgChatData data)
 	{
@@ -87,13 +87,13 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		this.RefreshChatContent();
 	}
 
-	// Token: 0x06013281 RID: 78465 RVA: 0x004C16AE File Offset: 0x004BF8AE
+	// Token: 0x06010754 RID: 67412 RVA: 0x004CFC72 File Offset: 0x004CDE72
 	public void RefreshVoiceStatus()
 	{
 		this.RefreshVoiceDisplayItem();
 	}
 
-	// Token: 0x06013282 RID: 78466 RVA: 0x004C16B8 File Offset: 0x004BF8B8
+	// Token: 0x06010755 RID: 67413 RVA: 0x004CFC7C File Offset: 0x004CDE7C
 	private void RefreshVoiceDisplayItem()
 	{
 		if (this.PhoneMsgChatData == null)
@@ -133,44 +133,44 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		}
 	}
 
-	// Token: 0x06013283 RID: 78467 RVA: 0x004C1765 File Offset: 0x004BF965
+	// Token: 0x06010756 RID: 67414 RVA: 0x004CFD29 File Offset: 0x004CDF29
 	[NullableContext(1)]
 	public string GetChatContent()
 	{
 		return this.PhoneMsgChatData.ContentStr;
 	}
 
-	// Token: 0x06013284 RID: 78468 RVA: 0x004C1772 File Offset: 0x004BF972
+	// Token: 0x06010757 RID: 67415 RVA: 0x004CFD36 File Offset: 0x004CDF36
 	public int GetChatContentNum()
 	{
 		return this.PhoneMsgChatData.ContentStr.Length;
 	}
 
-	// Token: 0x06013285 RID: 78469 RVA: 0x004C1784 File Offset: 0x004BF984
+	// Token: 0x06010758 RID: 67416 RVA: 0x004CFD48 File Offset: 0x004CDF48
 	public EPhoneMsgScrollWaitTimeType GetScrollWaitTimeType()
 	{
 		return this.PhoneMsgChatData.ScrollWaitTimeType;
 	}
 
-	// Token: 0x06013286 RID: 78470 RVA: 0x004C1791 File Offset: 0x004BF991
+	// Token: 0x06010759 RID: 67417 RVA: 0x004CFD55 File Offset: 0x004CDF55
 	public float GetScrollWaitTime()
 	{
 		return (float)this.PhoneMsgChatData.ScrollWaitTime;
 	}
 
-	// Token: 0x06013287 RID: 78471 RVA: 0x004C179F File Offset: 0x004BF99F
+	// Token: 0x0601075A RID: 67418 RVA: 0x004CFD63 File Offset: 0x004CDF63
 	public bool IsVoiceAndAutoPlay()
 	{
 		return this.PhoneMsgChatData.ContentType == EChatMsgType.Voice && !this.PhoneMsgChatData.IsVoicePlayed;
 	}
 
-	// Token: 0x06013288 RID: 78472 RVA: 0x004C17C0 File Offset: 0x004BF9C0
+	// Token: 0x0601075B RID: 67419 RVA: 0x004CFD84 File Offset: 0x004CDF84
 	public EPhoneMessageVoicePushCondition? GetPushCondition()
 	{
 		return this.PhoneMsgChatData.PushCondition;
 	}
 
-	// Token: 0x06013289 RID: 78473 RVA: 0x004C17D0 File Offset: 0x004BF9D0
+	// Token: 0x0601075C RID: 67420 RVA: 0x004CFD94 File Offset: 0x004CDF94
 	public void RefreshDisplayItem()
 	{
 		EChatMsgType contentType = this.PhoneMsgChatData.ContentType;
@@ -182,7 +182,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 			PhoneMessageAttachment? config = ConfigPhoneMessageAttachmentById.GetConfig(this.PhoneMsgChatData.ContentNum, true);
 			string a = (config != null) ? config.GetValueOrDefault().Type : null;
 			base.GetButton(8).RootUIComp.Get().SetUIActive(a == "Image" || a == "Spine");
-			base.GetItem(18).SetUIActive(a == "InformationView");
+			base.GetItem(18).SetUIActive(a == "InformationView" || a == "CoordinateTeleport");
 		}
 		else
 		{
@@ -200,13 +200,13 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		base.GetButton(17).SetSelfInteractive(contentType != EChatMsgType.Text);
 	}
 
-	// Token: 0x0601328A RID: 78474 RVA: 0x004C195A File Offset: 0x004BFB5A
+	// Token: 0x0601075D RID: 67421 RVA: 0x004CFF2F File Offset: 0x004CE12F
 	private void RefreshTimeText()
 	{
 		base.GetText(0).SetUIActive(false);
 	}
 
-	// Token: 0x0601328B RID: 78475 RVA: 0x004C196C File Offset: 0x004BFB6C
+	// Token: 0x0601075E RID: 67422 RVA: 0x004CFF40 File Offset: 0x004CE140
 	private void RefreshSpeakerInfo()
 	{
 		base.GetText(2).SetText(this.PhoneMsgChatData.SpeakerName, true);
@@ -235,7 +235,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		}
 	}
 
-	// Token: 0x0601328C RID: 78476 RVA: 0x004C1A0C File Offset: 0x004BFC0C
+	// Token: 0x0601075F RID: 67423 RVA: 0x004CFFE0 File Offset: 0x004CE1E0
 	private void RefreshChatContent()
 	{
 		EChatMsgType contentType = this.PhoneMsgChatData.ContentType;
@@ -316,6 +316,12 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 					this.LinkButton.RefreshContent(textKey, infoId, this.PhoneMsgChatData);
 					return;
 				}
+				if (type == "CoordinateTeleport")
+				{
+					base.GetItem(18).SetUIActive(true);
+					this.LinkButton.RefreshCoordinateContent(this.PhoneMsgChatData);
+					return;
+				}
 			}
 			break;
 		}
@@ -354,7 +360,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		}
 	}
 
-	// Token: 0x0601328D RID: 78477 RVA: 0x004C1D68 File Offset: 0x004BFF68
+	// Token: 0x06010760 RID: 67424 RVA: 0x004D036C File Offset: 0x004CE56C
 	private void HideAllItemsExceptInputtingItem()
 	{
 		base.GetTexture(6).SetUIActive(false);
@@ -364,7 +370,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		base.GetItem(5).SetUIActive(false);
 	}
 
-	// Token: 0x0601328E RID: 78478 RVA: 0x004C1DC4 File Offset: 0x004BFFC4
+	// Token: 0x06010761 RID: 67425 RVA: 0x004D03C8 File Offset: 0x004CE5C8
 	public UniTask PlayInputtingAnimationAsync(float delayTime)
 	{
 		PhoneMsgOtherChatItem.<PlayInputtingAnimationAsync>d__26 <PlayInputtingAnimationAsync>d__;
@@ -376,7 +382,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		return <PlayInputtingAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601328F RID: 78479 RVA: 0x004C1E10 File Offset: 0x004C0010
+	// Token: 0x06010762 RID: 67426 RVA: 0x004D0414 File Offset: 0x004CE614
 	public void SkipInputtingAnimationTask()
 	{
 		if (this.InputPromise != null)
@@ -392,13 +398,13 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		}
 	}
 
-	// Token: 0x06013290 RID: 78480 RVA: 0x004C1E5E File Offset: 0x004C005E
+	// Token: 0x06010763 RID: 67427 RVA: 0x004D0462 File Offset: 0x004CE662
 	public void StopInputtingAnimation()
 	{
 		this.LevelSequencePlayer.StopSequenceByKey("Send_Text_1", false, true);
 	}
 
-	// Token: 0x06013291 RID: 78481 RVA: 0x004C1E74 File Offset: 0x004C0074
+	// Token: 0x06010764 RID: 67428 RVA: 0x004D0478 File Offset: 0x004CE678
 	[NullableContext(1)]
 	private string GetChatContentSequenceName()
 	{
@@ -427,7 +433,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		}
 	}
 
-	// Token: 0x06013292 RID: 78482 RVA: 0x004C1F04 File Offset: 0x004C0104
+	// Token: 0x06010765 RID: 67429 RVA: 0x004D0508 File Offset: 0x004CE708
 	public UniTask PlayChatContentAnimationAsync()
 	{
 		PhoneMsgOtherChatItem.<PlayChatContentAnimationAsync>d__30 <PlayChatContentAnimationAsync>d__;
@@ -438,7 +444,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		return <PlayChatContentAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013293 RID: 78483 RVA: 0x004C1F48 File Offset: 0x004C0148
+	// Token: 0x06010766 RID: 67430 RVA: 0x004D054C File Offset: 0x004CE74C
 	public void StopChatContentAnimation()
 	{
 		string chatContentSequenceName = this.GetChatContentSequenceName();
@@ -450,7 +456,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		this.StopRedDotAnimation();
 	}
 
-	// Token: 0x06013294 RID: 78484 RVA: 0x004C1F7C File Offset: 0x004C017C
+	// Token: 0x06010767 RID: 67431 RVA: 0x004D0580 File Offset: 0x004CE780
 	public UniTask PlayRedDotAnimationAsync()
 	{
 		PhoneMsgOtherChatItem.<PlayRedDotAnimationAsync>d__32 <PlayRedDotAnimationAsync>d__;
@@ -461,7 +467,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		return <PlayRedDotAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013295 RID: 78485 RVA: 0x004C1FBF File Offset: 0x004C01BF
+	// Token: 0x06010768 RID: 67432 RVA: 0x004D05C3 File Offset: 0x004CE7C3
 	public void StopRedDotAnimation()
 	{
 		PhoneMsgChatData phoneMsgChatData = this.PhoneMsgChatData;
@@ -472,7 +478,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		this.LevelSequencePlayer.StopSequenceByKey("Red_Tips", false, true);
 	}
 
-	// Token: 0x06013296 RID: 78486 RVA: 0x004C1FEC File Offset: 0x004C01EC
+	// Token: 0x06010769 RID: 67433 RVA: 0x004D05F0 File Offset: 0x004CE7F0
 	public UniTask PlayVoicePlayingAnimationAsync()
 	{
 		PhoneMsgOtherChatItem.<PlayVoicePlayingAnimationAsync>d__34 <PlayVoicePlayingAnimationAsync>d__;
@@ -483,7 +489,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		return <PlayVoicePlayingAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013297 RID: 78487 RVA: 0x004C202F File Offset: 0x004C022F
+	// Token: 0x0601076A RID: 67434 RVA: 0x004D0633 File Offset: 0x004CE833
 	public void TryPlayVoiceTxtInAnimation()
 	{
 		base.GetSprite(12).SetUIActive(false);
@@ -492,7 +498,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		this.LevelSequencePlayer.StopSequenceByKey("Voice_LoadText", false, true);
 	}
 
-	// Token: 0x06013298 RID: 78488 RVA: 0x004C2070 File Offset: 0x004C0270
+	// Token: 0x0601076B RID: 67435 RVA: 0x004D0674 File Offset: 0x004CE874
 	public void SkipVoicePlayingAnimation()
 	{
 		if (this.VoicePlayPromise != null)
@@ -508,13 +514,13 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		}
 	}
 
-	// Token: 0x06013299 RID: 78489 RVA: 0x004C20BE File Offset: 0x004C02BE
+	// Token: 0x0601076C RID: 67436 RVA: 0x004D06C2 File Offset: 0x004CE8C2
 	public void StopVoicePlayingAnimation()
 	{
 		this.LevelSequencePlayer.StopSequenceByKey("Voice_Play_Loop", false, true);
 	}
 
-	// Token: 0x0601329A RID: 78490 RVA: 0x004C20D4 File Offset: 0x004C02D4
+	// Token: 0x0601076D RID: 67437 RVA: 0x004D06D8 File Offset: 0x004CE8D8
 	private void OnBtnPicClick()
 	{
 		if (this.PhoneMsgChatData == null)
@@ -529,7 +535,7 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		PhoneMsgController.Instance.OpenAttachmentImgView(contentNum);
 	}
 
-	// Token: 0x0601329B RID: 78491 RVA: 0x004C2106 File Offset: 0x004C0306
+	// Token: 0x0601076E RID: 67438 RVA: 0x004D070A File Offset: 0x004CE90A
 	private void OnBtnSelfClick()
 	{
 		Action<int> onItemClickDelegate = this.OnItemClickDelegate;
@@ -540,14 +546,14 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		this.RefreshVoiceDisplayItem();
 	}
 
-	// Token: 0x0601329C RID: 78492 RVA: 0x004C2125 File Offset: 0x004C0325
+	// Token: 0x0601076F RID: 67439 RVA: 0x004D0729 File Offset: 0x004CE929
 	private void RefreshSpeakerNameTextColor()
 	{
 		base.GetText(2).SetUIActive(PhoneMsgModel.Instance.IsUsingDefaultChatBg);
 		base.GetText(11).SetUIActive(!PhoneMsgModel.Instance.IsUsingDefaultChatBg);
 	}
 
-	// Token: 0x0601329D RID: 78493 RVA: 0x004C2158 File Offset: 0x004C0358
+	// Token: 0x06010770 RID: 67440 RVA: 0x004D075C File Offset: 0x004CE95C
 	public UniTask ShowVoiceTextPanel(Action afterShow = null)
 	{
 		PhoneMsgOtherChatItem.<ShowVoiceTextPanel>d__41 <ShowVoiceTextPanel>d__;
@@ -559,30 +565,30 @@ public class PhoneMsgOtherChatItem : SyncGridProxyAbstract<PhoneMsgChatData>, IP
 		return <ShowVoiceTextPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x040090B2 RID: 37042
+	// Token: 0x0400920C RID: 37388
 	protected PhoneMsgChatData PhoneMsgChatData;
 
-	// Token: 0x040090B3 RID: 37043
+	// Token: 0x0400920D RID: 37389
 	protected LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040090B4 RID: 37044
+	// Token: 0x0400920E RID: 37390
 	private TimerHandle InputHandle;
 
-	// Token: 0x040090B5 RID: 37045
+	// Token: 0x0400920F RID: 37391
 	private TimerHandle VoiceHandle;
 
-	// Token: 0x040090B6 RID: 37046
+	// Token: 0x04009210 RID: 37392
 	private CustomPromise<bool> InputPromise;
 
-	// Token: 0x040090B7 RID: 37047
+	// Token: 0x04009211 RID: 37393
 	private CustomPromise<bool> VoicePlayPromise;
 
-	// Token: 0x040090B8 RID: 37048
+	// Token: 0x04009212 RID: 37394
 	protected PhoneMsgLinkButton LinkButton;
 
-	// Token: 0x040090B9 RID: 37049
+	// Token: 0x04009213 RID: 37395
 	public int ItemIndex = -1;
 
-	// Token: 0x040090BA RID: 37050
+	// Token: 0x04009214 RID: 37396
 	public Action<int> OnItemClickDelegate;
 }

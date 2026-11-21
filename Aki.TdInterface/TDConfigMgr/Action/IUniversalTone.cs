@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200201B RID: 8219
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002264 RID: 8804
 	public class IUniversalTone
 	{
-		// Token: 0x0600B4B8 RID: 46264 RVA: 0x001A41B8 File Offset: 0x001A23B8
+		// Token: 0x0600BFDE RID: 49118 RVA: 0x001BA924 File Offset: 0x001B8B24
 		private IUniversalTone_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B4B9 RID: 46265 RVA: 0x001A41F0 File Offset: 0x001A23F0
+		// Token: 0x0600BFDF RID: 49119 RVA: 0x001BA95C File Offset: 0x001B8B5C
 		public static IUniversalTone Create([Nullable(2)] IUniversalTone instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B4BA RID: 46266 RVA: 0x001A4203 File Offset: 0x001A2403
+		// Token: 0x0600BFE0 RID: 49120 RVA: 0x001BA96F File Offset: 0x001B8B6F
 		public static IUniversalTone CreateFromSetValue([Nullable(2)] IUniversalTone_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B4BB RID: 46267 RVA: 0x001A4216 File Offset: 0x001A2416
+		// Token: 0x0600BFE1 RID: 49121 RVA: 0x001BA982 File Offset: 0x001B8B82
 		public IUniversalTone_SetValue ToSetValue()
 		{
 			return new IUniversalTone_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700378C RID: 14220
-		// (get) Token: 0x0600B4BC RID: 46268 RVA: 0x001A4235 File Offset: 0x001A2435
-		// (set) Token: 0x0600B4BD RID: 46269 RVA: 0x001A4260 File Offset: 0x001A2460
+		// Token: 0x17003A69 RID: 14953
+		// (get) Token: 0x0600BFE2 RID: 49122 RVA: 0x001BA9A1 File Offset: 0x001B8BA1
+		// (set) Token: 0x0600BFE3 RID: 49123 RVA: 0x001BA9CC File Offset: 0x001B8BCC
 		public virtual int UniversalToneId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700378D RID: 14221
-		// (get) Token: 0x0600B4BE RID: 46270 RVA: 0x001A4270 File Offset: 0x001A2470
-		// (set) Token: 0x0600B4BF RID: 46271 RVA: 0x001A42AA File Offset: 0x001A24AA
+		// Token: 0x17003A6A RID: 14954
+		// (get) Token: 0x0600BFE4 RID: 49124 RVA: 0x001BA9DC File Offset: 0x001B8BDC
+		// (set) Token: 0x0600BFE5 RID: 49125 RVA: 0x001BAA16 File Offset: 0x001B8C16
 		public virtual int? TimberId
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006CDF RID: 27871
+		// Token: 0x040072E8 RID: 29416
 		[Nullable(2)]
 		protected IUniversalTone FbInstance;
 
-		// Token: 0x04006CE0 RID: 27872
+		// Token: 0x040072E9 RID: 29417
 		[Nullable(2)]
 		protected IUniversalTone_SetValue PocoInterface;
 	}

@@ -6,17 +6,17 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059D3 RID: 22995
+	// Token: 0x020049AC RID: 18860
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GetItemBehaviorNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A4A7 RID: 238759 RVA: 0x00DDC9C8 File Offset: 0x00DDABC8
+		// Token: 0x0602F3CE RID: 193486 RVA: 0x00D2C1A8 File Offset: 0x00D2A3A8
 		public GetItemBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A4A8 RID: 238760 RVA: 0x00DDC9D4 File Offset: 0x00DDABD4
+		// Token: 0x0602F3CF RID: 193487 RVA: 0x00D2C1B4 File Offset: 0x00D2A3B4
 		protected bool OnCreate(IChildQuestBtNode config)
 		{
 			if (!base.OnCreate(config))
@@ -33,20 +33,20 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A4A9 RID: 238761 RVA: 0x00DDCA16 File Offset: 0x00DDAC16
+		// Token: 0x0602F3D0 RID: 193488 RVA: 0x00D2C1F6 File Offset: 0x00D2A3F6
 		protected override bool OnUpdateProgress(ChildQuestNodeProgress progress)
 		{
 			this.Progress = progress.GetItem;
 			return true;
 		}
 
-		// Token: 0x0603A4AA RID: 238762 RVA: 0x00DDCA25 File Offset: 0x00DDAC25
+		// Token: 0x0602F3D1 RID: 193489 RVA: 0x00D2C205 File Offset: 0x00D2A405
 		public override string GetProgress()
 		{
 			return this.ItemMaxCount.ToString();
 		}
 
-		// Token: 0x0603A4AB RID: 238763 RVA: 0x00DDCA34 File Offset: 0x00DDAC34
+		// Token: 0x0602F3D2 RID: 193490 RVA: 0x00D2C214 File Offset: 0x00D2A414
 		public override string GetProgressMax()
 		{
 			GetItemProgress progress = this.Progress;
@@ -63,11 +63,11 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return text ?? "0";
 		}
 
-		// Token: 0x0401E63B RID: 124475
+		// Token: 0x040190DA RID: 102618
 		[Nullable(2)]
 		private GetItemProgress Progress;
 
-		// Token: 0x0401E63C RID: 124476
+		// Token: 0x040190DB RID: 102619
 		private int ItemMaxCount;
 	}
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028BF RID: 10431
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B94 RID: 11156
 	public class AdjustPlayerCamera : ActionParams
 	{
-		// Token: 0x0600E7CA RID: 59338 RVA: 0x002208DB File Offset: 0x0021EADB
+		// Token: 0x0600F5F9 RID: 62969 RVA: 0x0023D85B File Offset: 0x0023BA5B
 		public static AdjustPlayerCamera Create(IAdjustPlayerCamera? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700480E RID: 18446
-		// (get) Token: 0x0600E7CB RID: 59339 RVA: 0x002208FA File Offset: 0x0021EAFA
+		// Token: 0x17004B7F RID: 19327
+		// (get) Token: 0x0600F5FA RID: 62970 RVA: 0x0023D87A File Offset: 0x0023BA7A
 		public virtual IAdjustPlayerCameraType Option
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008021 RID: 32801
+		// Token: 0x040086E0 RID: 34528
 		private IAdjustPlayerCamera Instance;
 
-		// Token: 0x04008022 RID: 32802
+		// Token: 0x040086E1 RID: 34529
 		private IAdjustPlayerCameraType _OptionCache;
 
-		// Token: 0x04008023 RID: 32803
+		// Token: 0x040086E2 RID: 34530
 		private bool _OptionInited;
 	}
 }

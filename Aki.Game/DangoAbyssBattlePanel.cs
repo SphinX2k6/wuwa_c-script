@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A2C RID: 6700
+// Token: 0x02000EEB RID: 3819
 public class DangoAbyssBattlePanel : BattleVisibleChildView
 {
-	// Token: 0x0600C50F RID: 50447 RVA: 0x002CB328 File Offset: 0x002C9528
+	// Token: 0x0600991F RID: 39199 RVA: 0x002D6448 File Offset: 0x002D4648
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,13 +32,13 @@ public class DangoAbyssBattlePanel : BattleVisibleChildView
 		};
 	}
 
-	// Token: 0x0600C510 RID: 50448 RVA: 0x002CB429 File Offset: 0x002C9629
+	// Token: 0x06009920 RID: 39200 RVA: 0x002D6549 File Offset: 0x002D4749
 	private void OnClickBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.DangoAbyssInfoView, null, null);
 	}
 
-	// Token: 0x0600C511 RID: 50449 RVA: 0x002CB43C File Offset: 0x002C963C
+	// Token: 0x06009921 RID: 39201 RVA: 0x002D655C File Offset: 0x002D475C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoAbyssBattlePanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ public class DangoAbyssBattlePanel : BattleVisibleChildView
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C512 RID: 50450 RVA: 0x002CB47F File Offset: 0x002C967F
+	// Token: 0x06009922 RID: 39202 RVA: 0x002D659F File Offset: 0x002D479F
 	private void OnRoomInfoUpdate()
 	{
 		this.RefreshProgressText();
@@ -57,7 +57,7 @@ public class DangoAbyssBattlePanel : BattleVisibleChildView
 		this.RefreshBarText();
 	}
 
-	// Token: 0x0600C513 RID: 50451 RVA: 0x002CB494 File Offset: 0x002C9694
+	// Token: 0x06009923 RID: 39203 RVA: 0x002D65B4 File Offset: 0x002D47B4
 	private void RefreshBarText()
 	{
 		float instanceProgress = DangoAbyssModel.Instance.GetInstanceProgress();
@@ -72,20 +72,20 @@ public class DangoAbyssBattlePanel : BattleVisibleChildView
 		}), true);
 	}
 
-	// Token: 0x0600C514 RID: 50452 RVA: 0x002CB4E5 File Offset: 0x002C96E5
+	// Token: 0x06009924 RID: 39204 RVA: 0x002D6605 File Offset: 0x002D4805
 	private void OnShareReviveTimesChange()
 	{
 		this.RefreshDeadText();
 	}
 
-	// Token: 0x0600C515 RID: 50453 RVA: 0x002CB4ED File Offset: 0x002C96ED
+	// Token: 0x06009925 RID: 39205 RVA: 0x002D660D File Offset: 0x002D480D
 	private void OnRefreshTime(float _)
 	{
 		this.RefreshTimeText();
 		this.RefreshProgressElements();
 	}
 
-	// Token: 0x0600C516 RID: 50454 RVA: 0x002CB4FC File Offset: 0x002C96FC
+	// Token: 0x06009926 RID: 39206 RVA: 0x002D661C File Offset: 0x002D481C
 	private void RefreshProgressElements()
 	{
 		float instanceProgress = DangoAbyssModel.Instance.GetInstanceProgress();
@@ -93,7 +93,7 @@ public class DangoAbyssBattlePanel : BattleVisibleChildView
 		this.RefreshTreasureItem(instanceProgress);
 	}
 
-	// Token: 0x0600C517 RID: 50455 RVA: 0x002CB524 File Offset: 0x002C9724
+	// Token: 0x06009927 RID: 39207 RVA: 0x002D6644 File Offset: 0x002D4844
 	private void RefreshTreasureItem(float progress)
 	{
 		DangoAbyssBattlePanel.<>c__DisplayClass13_0 CS$<>8__locals1 = new DangoAbyssBattlePanel.<>c__DisplayClass13_0();
@@ -111,7 +111,7 @@ public class DangoAbyssBattlePanel : BattleVisibleChildView
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x0600C518 RID: 50456 RVA: 0x002CB565 File Offset: 0x002C9765
+	// Token: 0x06009928 RID: 39208 RVA: 0x002D6685 File Offset: 0x002D4885
 	protected override void OnBeforeShow()
 	{
 		this.RefreshProgressElements();
@@ -120,7 +120,7 @@ public class DangoAbyssBattlePanel : BattleVisibleChildView
 		this.RefreshBarText();
 	}
 
-	// Token: 0x0600C519 RID: 50457 RVA: 0x002CB580 File Offset: 0x002C9780
+	// Token: 0x06009929 RID: 39209 RVA: 0x002D66A0 File Offset: 0x002D48A0
 	private void RefreshDeadText()
 	{
 		string instanceReviveTipTips = DangoAbyssModel.Instance.GetInstanceReviveTipTips();
@@ -132,7 +132,7 @@ public class DangoAbyssBattlePanel : BattleVisibleChildView
 		text.SetText(instanceReviveTipTips, true);
 	}
 
-	// Token: 0x0600C51A RID: 50458 RVA: 0x002CB5AC File Offset: 0x002C97AC
+	// Token: 0x0600992A RID: 39210 RVA: 0x002D66CC File Offset: 0x002D48CC
 	private void RefreshProgressText()
 	{
 		string instanceFloorText = DangoAbyssModel.Instance.GetInstanceFloorText();
@@ -144,7 +144,7 @@ public class DangoAbyssBattlePanel : BattleVisibleChildView
 		text.SetText(instanceFloorText ?? "", true);
 	}
 
-	// Token: 0x0600C51B RID: 50459 RVA: 0x002CB5E0 File Offset: 0x002C97E0
+	// Token: 0x0600992B RID: 39211 RVA: 0x002D6700 File Offset: 0x002D4900
 	private void RefreshProgressSlider(float progress)
 	{
 		UUISliderComponent slider = base.GetSlider(2);
@@ -155,7 +155,7 @@ public class DangoAbyssBattlePanel : BattleVisibleChildView
 		slider.SetValue(progress, true);
 	}
 
-	// Token: 0x0600C51C RID: 50460 RVA: 0x002CB5F8 File Offset: 0x002C97F8
+	// Token: 0x0600992C RID: 39212 RVA: 0x002D6718 File Offset: 0x002D4918
 	private void RefreshTimeText()
 	{
 		string instanceRemainTimeText = DangoAbyssModel.Instance.GetInstanceRemainTimeText();
@@ -167,7 +167,7 @@ public class DangoAbyssBattlePanel : BattleVisibleChildView
 		text.SetText(instanceRemainTimeText, true);
 	}
 
-	// Token: 0x0600C51D RID: 50461 RVA: 0x002CB624 File Offset: 0x002C9824
+	// Token: 0x0600992D RID: 39213 RVA: 0x002D6744 File Offset: 0x002D4944
 	protected override void OnBeforeDestroy()
 	{
 		if (this.RefreshTimer != null)
@@ -179,7 +179,7 @@ public class DangoAbyssBattlePanel : BattleVisibleChildView
 		EventSystem.Instance.Remove(EEventName.OnAbyssRoomInfoUpdate, new Action(this.OnRoomInfoUpdate));
 	}
 
-	// Token: 0x0600C51E RID: 50462 RVA: 0x002CB68C File Offset: 0x002C988C
+	// Token: 0x0600992E RID: 39214 RVA: 0x002D67AC File Offset: 0x002D49AC
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -209,41 +209,41 @@ public class DangoAbyssBattlePanel : BattleVisibleChildView
 		};
 	}
 
-	// Token: 0x04005AD6 RID: 23254
+	// Token: 0x04005BA5 RID: 23461
 	[Nullable(1)]
 	public Dictionary<int, int> RewardTimeMap = new Dictionary<int, int>();
 
-	// Token: 0x04005AD7 RID: 23255
+	// Token: 0x04005BA6 RID: 23462
 	public float FullTime;
 
-	// Token: 0x04005AD8 RID: 23256
+	// Token: 0x04005BA7 RID: 23463
 	[Nullable(2)]
 	private DangoAbyssBattleTreasureRoot DangoAbyssBattleTreasureRoot;
 
-	// Token: 0x04005AD9 RID: 23257
+	// Token: 0x04005BA8 RID: 23464
 	[Nullable(2)]
 	private TimerHandle RefreshTimer;
 
-	// Token: 0x02007F72 RID: 32626
+	// Token: 0x02007101 RID: 28929
 	private enum EComponent
 	{
-		// Token: 0x040299AE RID: 170414
+		// Token: 0x04024CEB RID: 150763
 		Button,
-		// Token: 0x040299AF RID: 170415
+		// Token: 0x04024CEC RID: 150764
 		TimeText,
-		// Token: 0x040299B0 RID: 170416
+		// Token: 0x04024CED RID: 150765
 		ProgressSlider,
-		// Token: 0x040299B1 RID: 170417
+		// Token: 0x04024CEE RID: 150766
 		RewardItemRoot,
-		// Token: 0x040299B2 RID: 170418
+		// Token: 0x04024CEF RID: 150767
 		RewardItem,
-		// Token: 0x040299B3 RID: 170419
+		// Token: 0x04024CF0 RID: 150768
 		DeadText,
-		// Token: 0x040299B4 RID: 170420
+		// Token: 0x04024CF1 RID: 150769
 		ProgressText,
-		// Token: 0x040299B5 RID: 170421
+		// Token: 0x04024CF2 RID: 150770
 		TitleText,
-		// Token: 0x040299B6 RID: 170422
+		// Token: 0x04024CF3 RID: 150771
 		BarText
 	}
 }

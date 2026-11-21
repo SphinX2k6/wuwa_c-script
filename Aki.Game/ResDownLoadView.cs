@@ -12,17 +12,17 @@ using CSharpScript.Launcher.Update;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002761 RID: 10081
+// Token: 0x02001C4C RID: 7244
 [NullableContext(1)]
 [Nullable(0)]
 public class ResDownLoadView : UiViewBase
 {
-	// Token: 0x06014ADA RID: 84698 RVA: 0x0053B0C9 File Offset: 0x005392C9
+	// Token: 0x06011FBD RID: 73661 RVA: 0x00549ED9 File Offset: 0x005480D9
 	public ResDownLoadView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014ADB RID: 84699 RVA: 0x0053B0DC File Offset: 0x005392DC
+	// Token: 0x06011FBE RID: 73662 RVA: 0x00549EEC File Offset: 0x005480EC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -69,19 +69,19 @@ public class ResDownLoadView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014ADC RID: 84700 RVA: 0x0053B338 File Offset: 0x00539538
+	// Token: 0x06011FBF RID: 73663 RVA: 0x0054A148 File Offset: 0x00548348
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<EVideoDownloadStatus>(EEventName.ResDownLoadStateRefresh, new Action<EVideoDownloadStatus>(this.ResDownLoadStateRefresh));
 	}
 
-	// Token: 0x06014ADD RID: 84701 RVA: 0x0053B356 File Offset: 0x00539556
+	// Token: 0x06011FC0 RID: 73664 RVA: 0x0054A166 File Offset: 0x00548366
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ResDownLoadStateRefresh, new Action<EVideoDownloadStatus>(this.ResDownLoadStateRefresh));
 	}
 
-	// Token: 0x06014ADE RID: 84702 RVA: 0x0053B374 File Offset: 0x00539574
+	// Token: 0x06011FC1 RID: 73665 RVA: 0x0054A184 File Offset: 0x00548384
 	protected override void OnStart()
 	{
 		IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -109,7 +109,7 @@ public class ResDownLoadView : UiViewBase
 		base.GetButton(8).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x06014ADF RID: 84703 RVA: 0x0053B436 File Offset: 0x00539636
+	// Token: 0x06011FC2 RID: 73666 RVA: 0x0054A246 File Offset: 0x00548446
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TimerHandle != null)
@@ -123,7 +123,7 @@ public class ResDownLoadView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014AE0 RID: 84704 RVA: 0x0053B468 File Offset: 0x00539668
+	// Token: 0x06011FC3 RID: 73667 RVA: 0x0054A278 File Offset: 0x00548478
 	protected override void OnBeforeShow()
 	{
 		QuestResourceModel instance = QuestResourceModel.Instance;
@@ -152,14 +152,14 @@ public class ResDownLoadView : UiViewBase
 		this.RefreshDownLoadState();
 	}
 
-	// Token: 0x06014AE1 RID: 84705 RVA: 0x0053B4B8 File Offset: 0x005396B8
+	// Token: 0x06011FC4 RID: 73668 RVA: 0x0054A2C8 File Offset: 0x005484C8
 	private void ResDownLoadStateRefresh(EVideoDownloadStatus state)
 	{
 		this.DownloadState = VideoUpdateManager.Instance.GetVideoUpdater((EVideoResSizeType)this.SelectResType).GetDownLoadState();
 		this.RefreshDownLoadState();
 	}
 
-	// Token: 0x06014AE2 RID: 84706 RVA: 0x0053B4DB File Offset: 0x005396DB
+	// Token: 0x06011FC5 RID: 73669 RVA: 0x0054A2EB File Offset: 0x005484EB
 	private void OnClickLeftBtn()
 	{
 		if (this.DownloadState != EVideoDownloadStatus.Pause)
@@ -170,7 +170,7 @@ public class ResDownLoadView : UiViewBase
 		VideoUpdateManager.Instance.GetVideoUpdater((EVideoResSizeType)this.SelectResType).CancelDownload();
 	}
 
-	// Token: 0x06014AE3 RID: 84707 RVA: 0x0053B508 File Offset: 0x00539708
+	// Token: 0x06011FC6 RID: 73670 RVA: 0x0054A318 File Offset: 0x00548518
 	private void OnClickRightBtn()
 	{
 		if (ResDownLoadModel.Instance.CurrentDownLoadVideo > 0 && this.SelectResType != ResDownLoadModel.Instance.CurrentDownLoadVideo)
@@ -215,7 +215,7 @@ public class ResDownLoadView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014AE4 RID: 84708 RVA: 0x0053B670 File Offset: 0x00539870
+	// Token: 0x06011FC7 RID: 73671 RVA: 0x0054A480 File Offset: 0x00548680
 	private void RefreshDownLoadState()
 	{
 		switch (this.DownloadState)
@@ -294,7 +294,7 @@ public class ResDownLoadView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014AE5 RID: 84709 RVA: 0x0053B9DC File Offset: 0x00539BDC
+	// Token: 0x06011FC8 RID: 73672 RVA: 0x0054A7EC File Offset: 0x005489EC
 	private void ShowNoneState()
 	{
 		long freeSpace = VideoResUpdate.Instance.GetFreeSpace();
@@ -313,7 +313,7 @@ public class ResDownLoadView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(11), "DownLoadButton_Down", Array.Empty<object>());
 	}
 
-	// Token: 0x06014AE6 RID: 84710 RVA: 0x0053BAC8 File Offset: 0x00539CC8
+	// Token: 0x06011FC9 RID: 73673 RVA: 0x0054A8D8 File Offset: 0x00548AD8
 	private void OnClickToggle(int tabIndex, int resType, UUIExtendToggle toggle)
 	{
 		UUIExtendToggle currentSelectToggle = this.CurrentSelectToggle;
@@ -326,7 +326,7 @@ public class ResDownLoadView : UiViewBase
 		this.RefreshTabContent(tabIndex);
 	}
 
-	// Token: 0x06014AE7 RID: 84711 RVA: 0x0053BAF8 File Offset: 0x00539CF8
+	// Token: 0x06011FCA RID: 73674 RVA: 0x0054A908 File Offset: 0x00548B08
 	private void RefreshTabContent(int tabIndex)
 	{
 		DownLoadTab? config = ConfigDownLoadTabById.GetConfig(tabIndex, true);
@@ -347,7 +347,7 @@ public class ResDownLoadView : UiViewBase
 		this.RefreshDownLoadState();
 	}
 
-	// Token: 0x06014AE8 RID: 84712 RVA: 0x0053BBC4 File Offset: 0x00539DC4
+	// Token: 0x06011FCB RID: 73675 RVA: 0x0054A9D4 File Offset: 0x00548BD4
 	protected override void OnBeforeHide()
 	{
 		if (this.DownloadState == EVideoDownloadStatus.Downloading)
@@ -356,67 +356,67 @@ public class ResDownLoadView : UiViewBase
 		}
 	}
 
-	// Token: 0x04009B5E RID: 39774
+	// Token: 0x04009CB6 RID: 40118
 	private int SelectResType = -1;
 
-	// Token: 0x04009B5F RID: 39775
+	// Token: 0x04009CB7 RID: 40119
 	private EVideoDownloadStatus DownloadState;
 
-	// Token: 0x04009B60 RID: 39776
+	// Token: 0x04009CB8 RID: 40120
 	private GenericLayout<ResDownLoadViewTabItem, int> DownLoadTabLayout;
 
-	// Token: 0x04009B61 RID: 39777
+	// Token: 0x04009CB9 RID: 40121
 	private UUIExtendToggle CurrentSelectToggle;
 
-	// Token: 0x04009B62 RID: 39778
+	// Token: 0x04009CBA RID: 40122
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04009B63 RID: 39779
+	// Token: 0x04009CBB RID: 40123
 	[Nullable(2)]
 	private VideoResourceUpdateProxy UpdateProxy;
 
-	// Token: 0x02008DC9 RID: 36297
+	// Token: 0x02007F51 RID: 32593
 	[NullableContext(0)]
 	private enum EComponentDefine
 	{
-		// Token: 0x0402E035 RID: 188469
+		// Token: 0x0402934A RID: 168778
 		LayoutItem,
-		// Token: 0x0402E036 RID: 188470
+		// Token: 0x0402934B RID: 168779
 		TabLayout,
-		// Token: 0x0402E037 RID: 188471
+		// Token: 0x0402934C RID: 168780
 		TitleText,
-		// Token: 0x0402E038 RID: 188472
+		// Token: 0x0402934D RID: 168781
 		DesText,
-		// Token: 0x0402E039 RID: 188473
+		// Token: 0x0402934E RID: 168782
 		MemoryText,
-		// Token: 0x0402E03A RID: 188474
+		// Token: 0x0402934F RID: 168783
 		DownLoadBarItem,
-		// Token: 0x0402E03B RID: 188475
+		// Token: 0x04029350 RID: 168784
 		DownLoadBarTexture,
-		// Token: 0x0402E03C RID: 188476
+		// Token: 0x04029351 RID: 168785
 		SpeedText,
-		// Token: 0x0402E03D RID: 188477
+		// Token: 0x04029352 RID: 168786
 		LeftBtn,
-		// Token: 0x0402E03E RID: 188478
+		// Token: 0x04029353 RID: 168787
 		LeftBtnText,
-		// Token: 0x0402E03F RID: 188479
+		// Token: 0x04029354 RID: 168788
 		RightBtn,
-		// Token: 0x0402E040 RID: 188480
+		// Token: 0x04029355 RID: 168789
 		RightBtnText,
-		// Token: 0x0402E041 RID: 188481
+		// Token: 0x04029356 RID: 168790
 		DownLoadStateText,
-		// Token: 0x0402E042 RID: 188482
+		// Token: 0x04029357 RID: 168791
 		DoneItem
 	}
 
-	// Token: 0x02008DCA RID: 36298
+	// Token: 0x02007F52 RID: 32594
 	[NullableContext(0)]
 	private enum EDownLoadTab
 	{
-		// Token: 0x0402E044 RID: 188484
+		// Token: 0x04029359 RID: 168793
 		Same = 3,
-		// Token: 0x0402E045 RID: 188485
+		// Token: 0x0402935A RID: 168794
 		Change
 	}
 }

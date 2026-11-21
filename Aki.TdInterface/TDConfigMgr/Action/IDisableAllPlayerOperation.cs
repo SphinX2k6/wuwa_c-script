@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019A4 RID: 6564
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B2B RID: 6955
 	[JsonConverter(typeof(IDisableAllPlayerOperationConverter))]
 	public class IDisableAllPlayerOperation : SetPlayerOperationRestriction
 	{
-		// Token: 0x06008C73 RID: 35955 RVA: 0x00149818 File Offset: 0x00147A18
+		// Token: 0x06009397 RID: 37783 RVA: 0x00159028 File Offset: 0x00157228
 		private IDisableAllPlayerOperation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008C74 RID: 35956 RVA: 0x00149850 File Offset: 0x00147A50
+		// Token: 0x06009398 RID: 37784 RVA: 0x00159060 File Offset: 0x00157260
 		public static IDisableAllPlayerOperation Create([Nullable(2)] IDisableAllPlayerOperation instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C75 RID: 35957 RVA: 0x00149863 File Offset: 0x00147A63
+		// Token: 0x06009399 RID: 37785 RVA: 0x00159073 File Offset: 0x00157273
 		public static IDisableAllPlayerOperation CreateFromSetValue([Nullable(2)] IDisableAllPlayerOperation_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C76 RID: 35958 RVA: 0x00149876 File Offset: 0x00147A76
+		// Token: 0x0600939A RID: 37786 RVA: 0x00159086 File Offset: 0x00157286
 		public new IDisableAllPlayerOperation_SetValue ToSetValue()
 		{
 			return new IDisableAllPlayerOperation_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D18 RID: 11544
-		// (get) Token: 0x06008C77 RID: 35959 RVA: 0x001498A1 File Offset: 0x00147AA1
-		// (set) Token: 0x06008C78 RID: 35960 RVA: 0x001498CC File Offset: 0x00147ACC
+		// Token: 0x17002F17 RID: 12055
+		// (get) Token: 0x0600939B RID: 37787 RVA: 0x001590B1 File Offset: 0x001572B1
+		// (set) Token: 0x0600939C RID: 37788 RVA: 0x001590DC File Offset: 0x001572DC
 		public override EPlayerOperationType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D19 RID: 11545
-		// (get) Token: 0x06008C79 RID: 35961 RVA: 0x001498DC File Offset: 0x00147ADC
-		// (set) Token: 0x06008C7A RID: 35962 RVA: 0x00149916 File Offset: 0x00147B16
+		// Token: 0x17002F18 RID: 12056
+		// (get) Token: 0x0600939D RID: 37789 RVA: 0x001590EC File Offset: 0x001572EC
+		// (set) Token: 0x0600939E RID: 37790 RVA: 0x00159126 File Offset: 0x00157326
 		public virtual EDisplayModeInPlayerOp? DisplayMode
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D1A RID: 11546
-		// (get) Token: 0x06008C7B RID: 35963 RVA: 0x00149924 File Offset: 0x00147B24
-		// (set) Token: 0x06008C7C RID: 35964 RVA: 0x0014995E File Offset: 0x00147B5E
+		// Token: 0x17002F19 RID: 12057
+		// (get) Token: 0x0600939F RID: 37791 RVA: 0x00159134 File Offset: 0x00157334
+		// (set) Token: 0x060093A0 RID: 37792 RVA: 0x0015916E File Offset: 0x0015736E
 		public virtual bool? IsUiFadeEffect
 		{
 			get
@@ -134,11 +132,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400576B RID: 22379
+		// Token: 0x04005BB4 RID: 23476
 		[Nullable(2)]
 		protected new IDisableAllPlayerOperation FbInstance;
 
-		// Token: 0x0400576C RID: 22380
+		// Token: 0x04005BB5 RID: 23477
 		[Nullable(2)]
 		protected new IDisableAllPlayerOperation_SetValue PocoInterface;
 	}

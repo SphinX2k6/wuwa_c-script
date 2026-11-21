@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200270C RID: 9996
+// Token: 0x02001BF7 RID: 7159
 public class RacingBetsChampionRewardItem : UiPanelBase
 {
-	// Token: 0x060147DE RID: 83934 RVA: 0x0052CD28 File Offset: 0x0052AF28
+	// Token: 0x06011CC0 RID: 72896 RVA: 0x0053BA44 File Offset: 0x00539C44
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class RacingBetsChampionRewardItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060147DF RID: 83935 RVA: 0x0052CDA8 File Offset: 0x0052AFA8
+	// Token: 0x06011CC1 RID: 72897 RVA: 0x0053BAC4 File Offset: 0x00539CC4
 	public void Refresh(int itemId)
 	{
 		this.ItemId = itemId;
@@ -39,28 +39,28 @@ public class RacingBetsChampionRewardItem : UiPanelBase
 		text.SetText("x1", true);
 	}
 
-	// Token: 0x060147E0 RID: 83936 RVA: 0x0052CDF5 File Offset: 0x0052AFF5
+	// Token: 0x06011CC2 RID: 72898 RVA: 0x0053BB11 File Offset: 0x00539D11
 	private void OnClickTipButton()
 	{
 		if (this.ItemId > 0)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null, false);
 		}
 	}
 
-	// Token: 0x04009A2C RID: 39468
+	// Token: 0x04009B84 RID: 39812
 	private int ItemId;
 
-	// Token: 0x02008D5A RID: 36186
+	// Token: 0x02007EE3 RID: 32483
 	private class EComponent
 	{
-		// Token: 0x0402DDE8 RID: 187880
+		// Token: 0x040290FF RID: 168191
 		public const int TipButton = 0;
 
-		// Token: 0x0402DDE9 RID: 187881
+		// Token: 0x04029100 RID: 168192
 		public const int ItemIcon = 1;
 
-		// Token: 0x0402DDEA RID: 187882
+		// Token: 0x04029101 RID: 168193
 		public const int ItemCount = 2;
 	}
 }

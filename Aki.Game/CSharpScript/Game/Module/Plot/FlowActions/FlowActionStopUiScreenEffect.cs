@@ -4,10 +4,10 @@ using CSharpScript.Game.Render.Effect.ScreenEffectSystem;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050DA RID: 20698
+	// Token: 0x020040AA RID: 16554
 	public class FlowActionStopUiScreenEffect : FlowActionBase
 	{
-		// Token: 0x06034F61 RID: 216929 RVA: 0x00C8BB8C File Offset: 0x00C89D8C
+		// Token: 0x06029E5A RID: 171610 RVA: 0x00BD8E74 File Offset: 0x00BD7074
 		protected override void OnExecute()
 		{
 			StopUiScreenEffect stopUiScreenEffect = this.ActionInfo.Params as StopUiScreenEffect;

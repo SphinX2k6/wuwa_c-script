@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065C0 RID: 26048
+	// Token: 0x0200553E RID: 21822
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardShopPlotPanel : UiPanelBase
 	{
-		// Token: 0x06041570 RID: 267632 RVA: 0x00FD5694 File Offset: 0x00FD3894
+		// Token: 0x06036235 RID: 221749 RVA: 0x00F1C6D0 File Offset: 0x00F1A8D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06041571 RID: 267633 RVA: 0x00FD5700 File Offset: 0x00FD3900
+		// Token: 0x06036236 RID: 221750 RVA: 0x00F1C73C File Offset: 0x00F1A93C
 		private void PlayPlot()
 		{
 			FishingNpcPerform fishingNpcPerform = FishingConfig.Instance.GetFishingNpcPerform(this.PerformId);
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), fishingNpcPerform.Content, Array.Empty<object>());
 		}
 
-		// Token: 0x06041572 RID: 267634 RVA: 0x00FD5758 File Offset: 0x00FD3958
+		// Token: 0x06036237 RID: 221751 RVA: 0x00F1C794 File Offset: 0x00F1A994
 		private void PlayNpcMontage(string montageName)
 		{
 			int entityIdByPbDataId = CreatureModel.Instance.GetEntityIdByPbDataId(this.EntityId);
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041573 RID: 267635 RVA: 0x00FD57DD File Offset: 0x00FD39DD
+		// Token: 0x06036238 RID: 221752 RVA: 0x00F1C819 File Offset: 0x00F1AA19
 		private void PlayAudio(string audioEvent)
 		{
 			AudioSystem.Instance.PostEvent(audioEvent);
 		}
 
-		// Token: 0x06041574 RID: 267636 RVA: 0x00FD57EC File Offset: 0x00FD39EC
+		// Token: 0x06036239 RID: 221753 RVA: 0x00F1C828 File Offset: 0x00F1AA28
 		private void PlayOther()
 		{
 			double serverTimeStamp = Time.Instance.ServerTimeStamp;
@@ -95,14 +95,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.PlayAudio(fishingNpcPerform.AudioEvent);
 		}
 
-		// Token: 0x06041575 RID: 267637 RVA: 0x00FD584A File Offset: 0x00FD3A4A
+		// Token: 0x0603623A RID: 221754 RVA: 0x00F1C886 File Offset: 0x00F1AA86
 		private void Refresh()
 		{
 			this.PlayPlot();
 			this.PlayOther();
 		}
 
-		// Token: 0x06041576 RID: 267638 RVA: 0x00FD5858 File Offset: 0x00FD3A58
+		// Token: 0x0603623B RID: 221755 RVA: 0x00F1C894 File Offset: 0x00F1AA94
 		public void ShowPanel(string performId)
 		{
 			this.PerformId = performId;
@@ -110,32 +110,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.SetActive(true);
 		}
 
-		// Token: 0x06041577 RID: 267639 RVA: 0x00FD586E File Offset: 0x00FD3A6E
+		// Token: 0x0603623C RID: 221756 RVA: 0x00F1C8AA File Offset: 0x00F1AAAA
 		public void HidePanel()
 		{
 			this.SetActive(false);
 		}
 
-		// Token: 0x04022008 RID: 139272
+		// Token: 0x0401C939 RID: 117049
 		private string PerformId = string.Empty;
 
-		// Token: 0x04022009 RID: 139273
+		// Token: 0x0401C93A RID: 117050
 		public int EntityId;
 
-		// Token: 0x0402200A RID: 139274
+		// Token: 0x0401C93B RID: 117051
 		private double LastTimeStamp;
 
-		// Token: 0x0402200B RID: 139275
+		// Token: 0x0401C93C RID: 117052
 		private const int COOLDOWN_TIME = 5000;
 
-		// Token: 0x0200C7E3 RID: 51171
+		// Token: 0x0200B1C6 RID: 45510
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C5F6 RID: 247286
+			// Token: 0x04036F44 RID: 225092
 			public const int Name = 0;
 
-			// Token: 0x0403C5F7 RID: 247287
+			// Token: 0x04036F45 RID: 225093
 			public const int Content = 1;
 		}
 	}

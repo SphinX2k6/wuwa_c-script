@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E7B RID: 3707
+	// Token: 0x02000F8E RID: 3982
 	[EnumExtensions]
 	public enum EPlayerHitStatisticsType
 	{
-		// Token: 0x040030E0 RID: 12512
+		// Token: 0x040033E2 RID: 13282
 		HitCount,
-		// Token: 0x040030E1 RID: 12513
+		// Token: 0x040033E3 RID: 13283
 		BeDamage
 	}
 }

@@ -6,7 +6,7 @@ namespace CSharpScript.Core.Net
 	// Token: 0x0200003E RID: 62
 	public class GatewayLatencyConfigVo
 	{
-		// Token: 0x06000241 RID: 577 RVA: 0x0000B48C File Offset: 0x0000968C
+		// Token: 0x06000241 RID: 577 RVA: 0x0000B4C4 File Offset: 0x000096C4
 		[NullableContext(1)]
 		public override string ToString()
 		{
@@ -21,13 +21,13 @@ namespace CSharpScript.Core.Net
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x040000ED RID: 237
+		// Token: 0x040000EE RID: 238
 		public bool enabled = true;
 
-		// Token: 0x040000EE RID: 238
+		// Token: 0x040000EF RID: 239
 		public int count;
 
-		// Token: 0x040000EF RID: 239
+		// Token: 0x040000F0 RID: 240
 		public int timeoutMs;
 	}
 }

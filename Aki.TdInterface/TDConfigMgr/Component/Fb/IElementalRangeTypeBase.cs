@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E21 RID: 3617
+	// Token: 0x02000F1D RID: 3869
 	public class IElementalRangeTypeBase
 	{
-		// Token: 0x060051D8 RID: 20952 RVA: 0x000C9C25 File Offset: 0x000C7E25
-		[NullableContext(1)]
+		// Token: 0x060056FF RID: 22271 RVA: 0x000D54ED File Offset: 0x000D36ED
 		public static IElementalRangeTypeBase Create(IElementalRangeTypeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B53 RID: 6995
-		// (get) Token: 0x060051D9 RID: 20953 RVA: 0x000C9C44 File Offset: 0x000C7E44
+		// Token: 0x17001CC0 RID: 7360
+		// (get) Token: 0x06005700 RID: 22272 RVA: 0x000D550C File Offset: 0x000D370C
 		public virtual EElementalRangeType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F24 RID: 12068
+		// Token: 0x040031EC RID: 12780
 		private IElementalRangeTypeBase Instance;
 	}
 }

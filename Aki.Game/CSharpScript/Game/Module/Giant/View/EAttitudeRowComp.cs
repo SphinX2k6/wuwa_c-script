@@ -2,30 +2,30 @@
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x02005976 RID: 22902
+	// Token: 0x0200494F RID: 18767
 	internal enum EAttitudeRowComp
 	{
-		// Token: 0x0401E53F RID: 124223
+		// Token: 0x04018FDD RID: 102365
 		Root,
-		// Token: 0x0401E540 RID: 124224
+		// Token: 0x04018FDE RID: 102366
 		PnlNmlBg,
-		// Token: 0x0401E541 RID: 124225
+		// Token: 0x04018FDF RID: 102367
 		PnlActiveBg,
-		// Token: 0x0401E542 RID: 124226
+		// Token: 0x04018FE0 RID: 102368
 		PnlIcon01,
-		// Token: 0x0401E543 RID: 124227
+		// Token: 0x04018FE1 RID: 102369
 		SprIcon01,
-		// Token: 0x0401E544 RID: 124228
+		// Token: 0x04018FE2 RID: 102370
 		PnlLock01,
-		// Token: 0x0401E545 RID: 124229
+		// Token: 0x04018FE3 RID: 102371
 		TxtContent01,
-		// Token: 0x0401E546 RID: 124230
+		// Token: 0x04018FE4 RID: 102372
 		PnlIcon02,
-		// Token: 0x0401E547 RID: 124231
+		// Token: 0x04018FE5 RID: 102373
 		SprIcon02,
-		// Token: 0x0401E548 RID: 124232
+		// Token: 0x04018FE6 RID: 102374
 		PnlLock02,
-		// Token: 0x0401E549 RID: 124233
+		// Token: 0x04018FE7 RID: 102375
 		TxtContent02
 	}
 }

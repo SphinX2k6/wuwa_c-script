@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004332 RID: 17202
+	// Token: 0x02004794 RID: 18324
 	public enum TUseWeatherSwitchCondition : byte
 	{
-		// Token: 0x0400C101 RID: 49409
+		// Token: 0x0400CB1F RID: 51999
 		NONE,
-		// Token: 0x0400C102 RID: 49410
+		// Token: 0x0400CB20 RID: 52000
 		IUseWeatherSwitchConditionAnyWeather,
-		// Token: 0x0400C103 RID: 49411
+		// Token: 0x0400CB21 RID: 52001
 		IUseWeatherSwitchConditionSpecifiedWeather
 	}
 }

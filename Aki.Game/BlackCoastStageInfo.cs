@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -9,13 +8,13 @@ using CSharpScript.Game.Module.Map.MapDefine;
 using CSharpScript.Game.Module.Reward;
 using CSharpScript.Game.Module.SkipInterface;
 
-// Token: 0x020011AC RID: 4524
+// Token: 0x02000660 RID: 1632
 [NullableContext(1)]
 [Nullable(0)]
 public class BlackCoastStageInfo
 {
-	// Token: 0x17000A44 RID: 2628
-	// (get) Token: 0x060077E7 RID: 30695 RVA: 0x00191418 File Offset: 0x0018F618
+	// Token: 0x17000A64 RID: 2660
+	// (get) Token: 0x06004B7E RID: 19326 RVA: 0x0019A004 File Offset: 0x00198204
 	public EStageState StageState
 	{
 		get
@@ -38,8 +37,8 @@ public class BlackCoastStageInfo
 		}
 	}
 
-	// Token: 0x17000A45 RID: 2629
-	// (get) Token: 0x060077E8 RID: 30696 RVA: 0x00191480 File Offset: 0x0018F680
+	// Token: 0x17000A65 RID: 2661
+	// (get) Token: 0x06004B7F RID: 19327 RVA: 0x0019A06C File Offset: 0x0019826C
 	public bool IsUnlock
 	{
 		get
@@ -48,17 +47,17 @@ public class BlackCoastStageInfo
 		}
 	}
 
-	// Token: 0x17000A46 RID: 2630
-	// (get) Token: 0x060077E9 RID: 30697 RVA: 0x0019148B File Offset: 0x0018F68B
-	// (set) Token: 0x060077EA RID: 30698 RVA: 0x00191493 File Offset: 0x0018F693
+	// Token: 0x17000A66 RID: 2662
+	// (get) Token: 0x06004B80 RID: 19328 RVA: 0x0019A077 File Offset: 0x00198277
+	// (set) Token: 0x06004B81 RID: 19329 RVA: 0x0019A07F File Offset: 0x0019827F
 	public int StageId { get; private set; }
 
-	// Token: 0x17000A47 RID: 2631
-	// (get) Token: 0x060077EB RID: 30699 RVA: 0x0019149C File Offset: 0x0018F69C
-	// (set) Token: 0x060077EC RID: 30700 RVA: 0x001914A4 File Offset: 0x0018F6A4
+	// Token: 0x17000A67 RID: 2663
+	// (get) Token: 0x06004B82 RID: 19330 RVA: 0x0019A088 File Offset: 0x00198288
+	// (set) Token: 0x06004B83 RID: 19331 RVA: 0x0019A090 File Offset: 0x00198290
 	public int Index { get; private set; }
 
-	// Token: 0x060077ED RID: 30701 RVA: 0x001914B0 File Offset: 0x0018F6B0
+	// Token: 0x06004B84 RID: 19332 RVA: 0x0019A09C File Offset: 0x0019829C
 	public BlackCoastStageInfo(int stageId, int index)
 	{
 		this.StageId = stageId;
@@ -75,13 +74,13 @@ public class BlackCoastStageInfo
 		}
 	}
 
-	// Token: 0x060077EE RID: 30702 RVA: 0x00191590 File Offset: 0x0018F790
+	// Token: 0x06004B85 RID: 19333 RVA: 0x0019A17C File Offset: 0x0019837C
 	public string GetVideoSource()
 	{
 		return ActivityBlackCoastConfig.Instance.GetStageConfig(this.StageId).Value.VideoSource;
 	}
 
-	// Token: 0x060077EF RID: 30703 RVA: 0x001915C0 File Offset: 0x0018F7C0
+	// Token: 0x06004B86 RID: 19334 RVA: 0x0019A1AC File Offset: 0x001983AC
 	public bool GetRewardState()
 	{
 		using (Dictionary<int, BlackCoastTaskData>.ValueCollection.Enumerator enumerator = this.TaskMap.Values.GetEnumerator())
@@ -97,7 +96,7 @@ public class BlackCoastStageInfo
 		return false;
 	}
 
-	// Token: 0x060077F0 RID: 30704 RVA: 0x00191620 File Offset: 0x0018F820
+	// Token: 0x06004B87 RID: 19335 RVA: 0x0019A20C File Offset: 0x0019840C
 	public int GetTaskProgress()
 	{
 		int count = this.TaskMap.Count;
@@ -115,19 +114,21 @@ public class BlackCoastStageInfo
 		return (int)Math.Ceiling((double)((float)num * 1f / (float)count * 100f));
 	}
 
-	// Token: 0x060077F1 RID: 30705 RVA: 0x001916A4 File Offset: 0x0018F8A4
+	// Token: 0x06004B88 RID: 19336 RVA: 0x0019A290 File Offset: 0x00198490
 	public List<BlackCoastTaskData> GetTaskList()
 	{
-		return this.TaskMap.Values.OrderBy((BlackCoastTaskData task) => task, new BlackCoastStageInfo.TaskComparer()).ToList<BlackCoastTaskData>();
+		List<BlackCoastTaskData> list = new List<BlackCoastTaskData>(this.TaskMap.Values);
+		NoLinq.SortStable<BlackCoastTaskData>(list, new Comparison<BlackCoastTaskData>(new BlackCoastStageInfo.TaskComparer().Compare));
+		return list;
 	}
 
-	// Token: 0x060077F2 RID: 30706 RVA: 0x001916E0 File Offset: 0x0018F8E0
+	// Token: 0x06004B89 RID: 19337 RVA: 0x0019A2BC File Offset: 0x001984BC
 	public string GetLockConditionText()
 	{
 		return LevelGeneralCommons.GetConditionGroupHintText(ActivityBlackCoastConfig.Instance.GetStageConfig(this.StageId).Value.OpenConditionId) ?? "";
 	}
 
-	// Token: 0x060077F3 RID: 30707 RVA: 0x0019171C File Offset: 0x0018F91C
+	// Token: 0x06004B8A RID: 19338 RVA: 0x0019A2F8 File Offset: 0x001984F8
 	public unsafe void StageUpdate(BlackCoastThemeStageInfo stageInfo)
 	{
 		foreach (ActivityTask activityTask in stageInfo.Tasks)
@@ -160,7 +161,7 @@ public class BlackCoastStageInfo
 		this.IsUnlockInternal = true;
 	}
 
-	// Token: 0x060077F4 RID: 30708 RVA: 0x00191840 File Offset: 0x0018FA40
+	// Token: 0x06004B8B RID: 19339 RVA: 0x0019A41C File Offset: 0x0019861C
 	public void SetTaskRewardGot(int taskId)
 	{
 		BlackCoastTaskData blackCoastTaskData;
@@ -170,7 +171,7 @@ public class BlackCoastStageInfo
 		}
 	}
 
-	// Token: 0x060077F5 RID: 30709 RVA: 0x00191864 File Offset: 0x0018FA64
+	// Token: 0x06004B8C RID: 19340 RVA: 0x0019A440 File Offset: 0x00198640
 	private void OnStageTaskInfoChange(int taskId)
 	{
 		BlackCoastTaskData blackCoastTaskData;
@@ -185,7 +186,7 @@ public class BlackCoastStageInfo
 		}
 	}
 
-	// Token: 0x060077F6 RID: 30710 RVA: 0x001918D0 File Offset: 0x0018FAD0
+	// Token: 0x06004B8D RID: 19341 RVA: 0x0019A4AC File Offset: 0x001986AC
 	private void RequestTaskReward(int taskId)
 	{
 		if (taskId == 0)
@@ -195,17 +196,17 @@ public class BlackCoastStageInfo
 		ActivityBlackCoastController.Instance.RequestTaskReward(this.StageId, taskId);
 	}
 
-	// Token: 0x0400372F RID: 14127
+	// Token: 0x040037C8 RID: 14280
 	public readonly Dictionary<int, BlackCoastTaskData> TaskMap = new Dictionary<int, BlackCoastTaskData>();
 
-	// Token: 0x04003730 RID: 14128
+	// Token: 0x040037C9 RID: 14281
 	private bool IsUnlockInternal;
 
-	// Token: 0x0200778A RID: 30602
+	// Token: 0x02006917 RID: 26903
 	[NullableContext(0)]
 	private class TaskComparer : IComparer<BlackCoastTaskData>
 	{
-		// Token: 0x06048FE9 RID: 298985 RVA: 0x012CFF28 File Offset: 0x012CE128
+		// Token: 0x0603F42B RID: 259115 RVA: 0x012731A0 File Offset: 0x012713A0
 		[NullableContext(1)]
 		public int Compare(BlackCoastTaskData a, BlackCoastTaskData b)
 		{

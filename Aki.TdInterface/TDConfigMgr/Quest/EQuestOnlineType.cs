@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E81 RID: 3713
+	// Token: 0x02000F94 RID: 3988
 	[EnumExtensions]
 	public enum EQuestOnlineType
 	{
-		// Token: 0x04003106 RID: 12550
+		// Token: 0x04003408 RID: 13320
 		SingleHangUpOnline,
-		// Token: 0x04003107 RID: 12551
+		// Token: 0x04003409 RID: 13321
 		SingleNotHangUpOnline
 	}
 }

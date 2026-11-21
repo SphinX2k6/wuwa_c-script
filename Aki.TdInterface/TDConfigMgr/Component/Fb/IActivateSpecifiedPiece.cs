@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C93 RID: 3219
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D75 RID: 3445
 	public class IActivateSpecifiedPiece : IJigsawCompleteCondition
 	{
-		// Token: 0x0600499C RID: 18844 RVA: 0x000B86EE File Offset: 0x000B68EE
+		// Token: 0x06004E4A RID: 20042 RVA: 0x000C30FE File Offset: 0x000C12FE
 		public static IActivateSpecifiedPiece Create(IActivateSpecifiedPiece? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001633 RID: 5683
-		// (get) Token: 0x0600499D RID: 18845 RVA: 0x000B870D File Offset: 0x000B690D
+		// Token: 0x1700175B RID: 5979
+		// (get) Token: 0x06004E4B RID: 20043 RVA: 0x000C311D File Offset: 0x000C131D
 		public override EJigsawCompleteCondition Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001634 RID: 5684
-		// (get) Token: 0x0600499E RID: 18846 RVA: 0x000B871C File Offset: 0x000B691C
+		// Token: 0x1700175C RID: 5980
+		// (get) Token: 0x06004E4C RID: 20044 RVA: 0x000C312C File Offset: 0x000C132C
 		public virtual List<IActivateSpecifiedPieceConfig> Config
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029FE RID: 10750
+		// Token: 0x04002C78 RID: 11384
 		private IActivateSpecifiedPiece Instance;
 
-		// Token: 0x040029FF RID: 10751
+		// Token: 0x04002C79 RID: 11385
 		private List<IActivateSpecifiedPieceConfig> _ConfigCache;
 
-		// Token: 0x04002A00 RID: 10752
+		// Token: 0x04002C7A RID: 11386
 		private bool _ConfigInited;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
@@ -12,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 {
-	// Token: 0x02004849 RID: 18505
+	// Token: 0x0200377A RID: 14202
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityListPanel : WorldMapSecondaryUi
 	{
-		// Token: 0x060306AC RID: 198316 RVA: 0x00B3D229 File Offset: 0x00B3B429
+		// Token: 0x06024E7C RID: 151164 RVA: 0x00A6D411 File Offset: 0x00A6B611
 		public override string GetResourceId()
 		{
 			return "UiView_CyclesActivitiesAssistant";
 		}
 
-		// Token: 0x060306AD RID: 198317 RVA: 0x00B3D230 File Offset: 0x00B3B430
+		// Token: 0x06024E7D RID: 151165 RVA: 0x00A6D418 File Offset: 0x00A6B618
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -39,7 +38,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060306AE RID: 198318 RVA: 0x00B3D2BC File Offset: 0x00B3B4BC
+		// Token: 0x06024E7E RID: 151166 RVA: 0x00A6D4A4 File Offset: 0x00A6B6A4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivityListPanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -50,14 +49,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060306AF RID: 198319 RVA: 0x00B3D2FF File Offset: 0x00B3B4FF
+		// Token: 0x06024E7F RID: 151167 RVA: 0x00A6D4E7 File Offset: 0x00A6B6E7
 		protected override void OnStart()
 		{
 			this.PopupCaption.SetCloseCallBack(new Action(base.Close));
 			this.PopupCaption.SetHelpBtnActive(false);
 		}
 
-		// Token: 0x060306B0 RID: 198320 RVA: 0x00B3D324 File Offset: 0x00B3B524
+		// Token: 0x06024E80 RID: 151168 RVA: 0x00A6D50C File Offset: 0x00A6B70C
 		protected override void OnShowWorldMapSecondaryUi(params object[] parameters)
 		{
 			if (this.TimerId == null)
@@ -67,7 +66,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 			this.RefreshActivityList();
 		}
 
-		// Token: 0x060306B1 RID: 198321 RVA: 0x00B3D35D File Offset: 0x00B3B55D
+		// Token: 0x06024E81 RID: 151169 RVA: 0x00A6D545 File Offset: 0x00A6B745
 		protected override void OnBeforeHide()
 		{
 			if (this.TimerId != null)
@@ -77,18 +76,22 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 			}
 		}
 
-		// Token: 0x060306B2 RID: 198322 RVA: 0x00B3D37F File Offset: 0x00B3B57F
+		// Token: 0x06024E82 RID: 151170 RVA: 0x00A6D568 File Offset: 0x00A6B768
 		private List<ActivityListPanelItemData> GetActivityDataList()
 		{
-			return (from data in WorldMapModel.Instance.ActivityListData
-			select new ActivityListPanelItemData
+			List<ActivityListPanelItemData> list = new List<ActivityListPanelItemData>();
+			foreach (IActivityListItemData data in WorldMapModel.Instance.ActivityListData)
 			{
-				Data = data,
-				OnClickCb = new Action(this.RefreshActivityList)
-			}).ToList<ActivityListPanelItemData>();
+				list.Add(new ActivityListPanelItemData
+				{
+					Data = data,
+					OnClickCb = new Action(this.RefreshActivityList)
+				});
+			}
+			return list;
 		}
 
-		// Token: 0x060306B3 RID: 198323 RVA: 0x00B3D3A1 File Offset: 0x00B3B5A1
+		// Token: 0x06024E83 RID: 151171 RVA: 0x00A6D5E4 File Offset: 0x00A6B7E4
 		private void RefreshActivityList()
 		{
 			WorldMapModel.Instance.UpdateActivityListItemData(false);
@@ -98,7 +101,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 			}
 		}
 
-		// Token: 0x060306B4 RID: 198324 RVA: 0x00B3D3D0 File Offset: 0x00B3B5D0
+		// Token: 0x06024E84 RID: 151172 RVA: 0x00A6D610 File Offset: 0x00A6B810
 		private void UpdateTimeInterval(float delta)
 		{
 			foreach (IActivityListItemData activityListItemData in WorldMapModel.Instance.ActivityListData)
@@ -109,7 +112,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 					onLeftTimeRefreshCb(activityListItemData);
 				}
 			}
-			if (WorldMapModel.Instance.ActivityListData.Any((IActivityListItemData data) => data.LeftTime <= 0.0))
+			bool flag = false;
+			using (List<IActivityListItemData>.Enumerator enumerator = WorldMapModel.Instance.ActivityListData.GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current.LeftTime <= 0.0)
+					{
+						flag = true;
+						break;
+					}
+				}
+			}
+			if (flag)
 			{
 				WorldMapModel.Instance.UpdateActivityListItemData(true);
 				if (this.ScrollView != null)
@@ -132,10 +147,10 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 			}
 		}
 
-		// Token: 0x0401A061 RID: 106593
+		// Token: 0x04014715 RID: 83733
 		private readonly PopupCaptionItem PopupCaption = new PopupCaptionItem(null);
 
-		// Token: 0x0401A062 RID: 106594
+		// Token: 0x04014716 RID: 83734
 		[Nullable(new byte[]
 		{
 			2,
@@ -144,21 +159,21 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.ActivityListPanel
 		})]
 		private GenericScrollViewNew<ActivityListItem, ActivityListPanelItemData> ScrollView;
 
-		// Token: 0x0401A063 RID: 106595
+		// Token: 0x04014717 RID: 83735
 		[Nullable(2)]
 		private TimerHandle TimerId;
 
-		// Token: 0x0200AB26 RID: 43814
+		// Token: 0x020094D4 RID: 38100
 		[NullableContext(0)]
 		public static class EChildType
 		{
-			// Token: 0x0403402E RID: 213038
+			// Token: 0x0402E7A9 RID: 190377
 			public const int Caption = 0;
 
-			// Token: 0x0403402F RID: 213039
+			// Token: 0x0402E7AA RID: 190378
 			public const int ActivityScroller = 1;
 
-			// Token: 0x04034030 RID: 213040
+			// Token: 0x0402E7AB RID: 190379
 			public const int ActivityItem = 2;
 		}
 	}

@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001741 RID: 5953
+// Token: 0x02000BFA RID: 3066
 [Nullable(new byte[]
 {
 	0,
@@ -12,7 +12,7 @@ using UnrealEngine;
 })]
 public class CalabashCollectStageItem : GridProxyAbstract<ICalabashDevelopRewardInfoData>
 {
-	// Token: 0x0600AC3F RID: 44095 RVA: 0x00269C1C File Offset: 0x00267E1C
+	// Token: 0x06008026 RID: 32806 RVA: 0x00274058 File Offset: 0x00272258
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class CalabashCollectStageItem : GridProxyAbstract<ICalabashDevelopReward
 		};
 	}
 
-	// Token: 0x0600AC40 RID: 44096 RVA: 0x00269C8C File Offset: 0x00267E8C
+	// Token: 0x06008027 RID: 32807 RVA: 0x002740C8 File Offset: 0x002722C8
 	[NullableContext(1)]
 	public override void Refresh(ICalabashDevelopRewardInfoData data, bool isSelected, int gridIndex)
 	{
@@ -44,16 +44,16 @@ public class CalabashCollectStageItem : GridProxyAbstract<ICalabashDevelopReward
 		base.GetItem(3).SetUIActive(!data.IsUnlock);
 	}
 
-	// Token: 0x02007D2A RID: 32042
+	// Token: 0x02006EB0 RID: 28336
 	private enum EComponent
 	{
-		// Token: 0x04028FDA RID: 167898
+		// Token: 0x04024304 RID: 148228
 		StageText,
-		// Token: 0x04028FDB RID: 167899
+		// Token: 0x04024305 RID: 148229
 		ExpText,
-		// Token: 0x04028FDC RID: 167900
+		// Token: 0x04024306 RID: 148230
 		UnlockItem,
-		// Token: 0x04028FDD RID: 167901
+		// Token: 0x04024307 RID: 148231
 		LockItem
 	}
 }

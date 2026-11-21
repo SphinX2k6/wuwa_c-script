@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D8A RID: 28042
+	// Token: 0x02007505 RID: 29957
 	public class IPreloadActionT
 	{
-		// Token: 0x1700D136 RID: 53558
-		// (get) Token: 0x0603189B RID: 202907 RVA: 0x006B7001 File Offset: 0x006B5201
-		// (set) Token: 0x0603189C RID: 202908 RVA: 0x006B7009 File Offset: 0x006B5209
+		// Token: 0x1700DC7E RID: 56446
+		// (get) Token: 0x06034897 RID: 215191 RVA: 0x007126E9 File Offset: 0x007108E9
+		// (set) Token: 0x06034898 RID: 215192 RVA: 0x007126F1 File Offset: 0x007108F1
 		public TPreloadObjectTypeConfigUnion PreloadObjectType { get; set; }
 
-		// Token: 0x0603189D RID: 202909 RVA: 0x006B7012 File Offset: 0x006B5212
+		// Token: 0x06034899 RID: 215193 RVA: 0x007126FA File Offset: 0x007108FA
 		public IPreloadActionT()
 		{
 			this.PreloadObjectType = null;

@@ -2,26 +2,26 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042DB RID: 17115
+	// Token: 0x0200473A RID: 18234
 	public enum TKurotatoConditionStep : byte
 	{
-		// Token: 0x0400C002 RID: 49154
+		// Token: 0x0400CA1A RID: 51738
 		NONE,
-		// Token: 0x0400C003 RID: 49155
+		// Token: 0x0400CA1B RID: 51739
 		IKurotatoConditionStepBattle,
-		// Token: 0x0400C004 RID: 49156
+		// Token: 0x0400CA1C RID: 51740
 		IKurotatoConditionStepChestReward,
-		// Token: 0x0400C005 RID: 49157
+		// Token: 0x0400CA1D RID: 51741
 		IKurotatoConditionStepEnd,
-		// Token: 0x0400C006 RID: 49158
+		// Token: 0x0400CA1E RID: 51742
 		IKurotatoConditionStepPrepare,
-		// Token: 0x0400C007 RID: 49159
+		// Token: 0x0400CA1F RID: 51743
 		IKurotatoConditionStepSaveRole,
-		// Token: 0x0400C008 RID: 49160
+		// Token: 0x0400CA20 RID: 51744
 		IKurotatoConditionStepShopping,
-		// Token: 0x0400C009 RID: 49161
+		// Token: 0x0400CA21 RID: 51745
 		IKurotatoConditionStepUpdateBatch,
-		// Token: 0x0400C00A RID: 49162
+		// Token: 0x0400CA22 RID: 51746
 		IKurotatoConditionStepUpgradeReward
 	}
 }

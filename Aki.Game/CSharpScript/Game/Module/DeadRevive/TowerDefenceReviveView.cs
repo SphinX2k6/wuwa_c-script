@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DeadRevive
 {
-	// Token: 0x02005ACE RID: 23246
+	// Token: 0x02004AAF RID: 19119
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenceReviveView : UiTickViewBase
 	{
-		// Token: 0x0603ADF5 RID: 241141 RVA: 0x00E093E4 File Offset: 0x00E075E4
+		// Token: 0x0602FD67 RID: 195943 RVA: 0x00D5A0C4 File Offset: 0x00D582C4
 		public TowerDefenceReviveView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603ADF6 RID: 241142 RVA: 0x00E093F0 File Offset: 0x00E075F0
+		// Token: 0x0602FD68 RID: 195944 RVA: 0x00D5A0D0 File Offset: 0x00D582D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603ADF7 RID: 241143 RVA: 0x00E0953C File Offset: 0x00E0773C
+		// Token: 0x0602FD69 RID: 195945 RVA: 0x00D5A21C File Offset: 0x00D5841C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TowerDefenceReviveView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603ADF8 RID: 241144 RVA: 0x00E09580 File Offset: 0x00E07780
+		// Token: 0x0602FD6A RID: 195946 RVA: 0x00D5A260 File Offset: 0x00D58460
 		protected override void OnBeforeShow()
 		{
 			base.GetButton(1).RootUIComp.Get().SetUIActive(false);
@@ -73,14 +73,14 @@ namespace CSharpScript.Game.Module.DeadRevive
 			base.GetItem(3).SetUIActive(false);
 		}
 
-		// Token: 0x0603ADF9 RID: 241145 RVA: 0x00E09603 File Offset: 0x00E07803
+		// Token: 0x0602FD6B RID: 195947 RVA: 0x00D5A2E3 File Offset: 0x00D584E3
 		protected override void OnStart()
 		{
 			this.RefreshCountDown();
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(8), "TowerDefence_dead2", Array.Empty<object>());
 		}
 
-		// Token: 0x0603ADFA RID: 241146 RVA: 0x00E09628 File Offset: 0x00E07828
+		// Token: 0x0602FD6C RID: 195948 RVA: 0x00D5A308 File Offset: 0x00D58508
 		protected override void OnBeforeDestroy()
 		{
 			TowerDefenseModel.Instance.SelfReviveTargetTimestampForUi = null;
@@ -91,25 +91,25 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.ConfirmBoxViewIdCache = null;
 		}
 
-		// Token: 0x0603ADFB RID: 241147 RVA: 0x00E09674 File Offset: 0x00E07874
+		// Token: 0x0602FD6D RID: 195949 RVA: 0x00D5A354 File Offset: 0x00D58554
 		protected override void OnTick(float delta)
 		{
 			this.RefreshCountDown();
 		}
 
-		// Token: 0x0603ADFC RID: 241148 RVA: 0x00E0967C File Offset: 0x00E0787C
+		// Token: 0x0602FD6E RID: 195950 RVA: 0x00D5A35C File Offset: 0x00D5855C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.TowerDefenseOnTowerDefenseBattleEndNotify, new Action(this.HandleOnTowerDefenceBattleEndNotify));
 		}
 
-		// Token: 0x0603ADFD RID: 241149 RVA: 0x00E0969A File Offset: 0x00E0789A
+		// Token: 0x0602FD6F RID: 195951 RVA: 0x00D5A37A File Offset: 0x00D5857A
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.TowerDefenseOnTowerDefenseBattleEndNotify, new Action(this.HandleOnTowerDefenceBattleEndNotify));
 		}
 
-		// Token: 0x0603ADFE RID: 241150 RVA: 0x00E096B8 File Offset: 0x00E078B8
+		// Token: 0x0602FD70 RID: 195952 RVA: 0x00D5A398 File Offset: 0x00D58598
 		private void RefreshCountDown()
 		{
 			long? selfReviveTargetTimestampForUi = TowerDefenseModel.Instance.SelfReviveTargetTimestampForUi;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			text2.SetUIActive(false);
 		}
 
-		// Token: 0x0603ADFF RID: 241151 RVA: 0x00E0977C File Offset: 0x00E0797C
+		// Token: 0x0602FD71 RID: 195953 RVA: 0x00D5A45C File Offset: 0x00D5865C
 		private void OnClickQuitBtn()
 		{
 			if (SceneTeamModel.Instance.IsAllDid())
@@ -154,18 +154,18 @@ namespace CSharpScript.Game.Module.DeadRevive
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603AE00 RID: 241152 RVA: 0x00E0980D File Offset: 0x00E07A0D
+		// Token: 0x0602FD72 RID: 195954 RVA: 0x00D5A4ED File Offset: 0x00D586ED
 		private void CancelCallback()
 		{
 		}
 
-		// Token: 0x0603AE01 RID: 241153 RVA: 0x00E0980F File Offset: 0x00E07A0F
+		// Token: 0x0602FD73 RID: 195955 RVA: 0x00D5A4EF File Offset: 0x00D586EF
 		private void ConfirmCallback()
 		{
 			InstanceDungeonEntranceController.Instance.LeaveInstanceDungeon().Forget<bool>();
 		}
 
-		// Token: 0x0603AE02 RID: 241154 RVA: 0x00E09820 File Offset: 0x00E07A20
+		// Token: 0x0602FD74 RID: 195956 RVA: 0x00D5A500 File Offset: 0x00D58700
 		private void FinishOpenCallback(bool success, int viewId)
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.TowerDefenceReviveView) && success)
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			ConfirmBoxController.Instance.CloseNetWorkConfirmBoxView(viewId, null);
 		}
 
-		// Token: 0x0603AE03 RID: 241155 RVA: 0x00E0984E File Offset: 0x00E07A4E
+		// Token: 0x0602FD75 RID: 195957 RVA: 0x00D5A52E File Offset: 0x00D5872E
 		private void CloseCallback()
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.TowerDefenceReviveView))
@@ -185,47 +185,47 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603AE04 RID: 241156 RVA: 0x00E0986D File Offset: 0x00E07A6D
+		// Token: 0x0602FD76 RID: 195958 RVA: 0x00D5A54D File Offset: 0x00D5874D
 		private void HandleOnTowerDefenceBattleEndNotify()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401EB97 RID: 125847
+		// Token: 0x04019653 RID: 104019
 		private const string TIPS_TEXT_ID = "TowerDefence_dead1";
 
-		// Token: 0x0401EB98 RID: 125848
+		// Token: 0x04019654 RID: 104020
 		private const string TIPS_TEXT_ID_NEW = "ReviveCountdownTime";
 
-		// Token: 0x0401EB99 RID: 125849
+		// Token: 0x04019655 RID: 104021
 		private const string TIPS_UNDER_BUTTON_TEXT_ID = "TowerDefence_dead2";
 
-		// Token: 0x0401EB9A RID: 125850
+		// Token: 0x04019656 RID: 104022
 		private int? ConfirmBoxViewIdCache;
 
-		// Token: 0x0200BD20 RID: 48416
+		// Token: 0x0200A728 RID: 42792
 		[NullableContext(0)]
 		private class ETowerDefenceReviveViewComponent
 		{
-			// Token: 0x040390AB RID: 233643
+			// Token: 0x04033A75 RID: 211573
 			public const int TextTips = 0;
 
-			// Token: 0x040390AC RID: 233644
+			// Token: 0x04033A76 RID: 211574
 			public const int QuitButton = 1;
 
-			// Token: 0x040390AD RID: 233645
+			// Token: 0x04033A77 RID: 211575
 			public const int AgainButton = 2;
 
-			// Token: 0x040390AE RID: 233646
+			// Token: 0x04033A78 RID: 211576
 			public const int TeamPlayerStateItem = 3;
 
-			// Token: 0x040390AF RID: 233647
+			// Token: 0x04033A79 RID: 211577
 			public const int RealQuitBtn = 7;
 
-			// Token: 0x040390B0 RID: 233648
+			// Token: 0x04033A7A RID: 211578
 			public const int RealQuitText = 8;
 
-			// Token: 0x040390B1 RID: 233649
+			// Token: 0x04033A7B RID: 211579
 			public const int ReviveAtLocationBtn = 9;
 		}
 	}

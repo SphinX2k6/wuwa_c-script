@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001693 RID: 5779
+	// Token: 0x0200180C RID: 6156
 	public enum ESeason
 	{
-		// Token: 0x04004D70 RID: 19824
+		// Token: 0x04005187 RID: 20871
 		Spring,
-		// Token: 0x04004D71 RID: 19825
+		// Token: 0x04005188 RID: 20872
 		Summer,
-		// Token: 0x04004D72 RID: 19826
+		// Token: 0x04005189 RID: 20873
 		Autumn,
-		// Token: 0x04004D73 RID: 19827
+		// Token: 0x0400518A RID: 20874
 		Winter
 	}
 }

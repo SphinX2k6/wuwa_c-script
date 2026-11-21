@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A37 RID: 6711
+// Token: 0x02000EF6 RID: 3830
 [NullableContext(2)]
 [Nullable(0)]
 public class DangoAbyssInfoView : UiViewBase
 {
-	// Token: 0x0600C560 RID: 50528 RVA: 0x002CC8E2 File Offset: 0x002CAAE2
+	// Token: 0x06009970 RID: 39280 RVA: 0x002D7A06 File Offset: 0x002D5C06
 	[NullableContext(1)]
 	public DangoAbyssInfoView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C561 RID: 50529 RVA: 0x002CC8EC File Offset: 0x002CAAEC
+	// Token: 0x06009971 RID: 39281 RVA: 0x002D7A10 File Offset: 0x002D5C10
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,19 +33,19 @@ public class DangoAbyssInfoView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600C562 RID: 50530 RVA: 0x002CC99E File Offset: 0x002CAB9E
+	// Token: 0x06009972 RID: 39282 RVA: 0x002D7AC2 File Offset: 0x002D5CC2
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnAbyssRoomInfoUpdate, new Action(this.OnAbyssRoomInfoUpdate));
 	}
 
-	// Token: 0x0600C563 RID: 50531 RVA: 0x002CC9BC File Offset: 0x002CABBC
+	// Token: 0x06009973 RID: 39283 RVA: 0x002D7AE0 File Offset: 0x002D5CE0
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAbyssRoomInfoUpdate, new Action(this.OnAbyssRoomInfoUpdate));
 	}
 
-	// Token: 0x0600C564 RID: 50532 RVA: 0x002CC9DC File Offset: 0x002CABDC
+	// Token: 0x06009974 RID: 39284 RVA: 0x002D7B00 File Offset: 0x002D5D00
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoAbyssInfoView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -56,32 +56,32 @@ public class DangoAbyssInfoView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C565 RID: 50533 RVA: 0x002CCA1F File Offset: 0x002CAC1F
+	// Token: 0x06009975 RID: 39285 RVA: 0x002D7B43 File Offset: 0x002D5D43
 	private void OnAbyssRoomInfoUpdate()
 	{
 		this.RefreshProgressElements();
 	}
 
-	// Token: 0x0600C566 RID: 50534 RVA: 0x002CCA27 File Offset: 0x002CAC27
+	// Token: 0x06009976 RID: 39286 RVA: 0x002D7B4B File Offset: 0x002D5D4B
 	private void OnRefreshTime(float _)
 	{
 		this.RefreshTimeText();
 	}
 
-	// Token: 0x0600C567 RID: 50535 RVA: 0x002CCA30 File Offset: 0x002CAC30
+	// Token: 0x06009977 RID: 39287 RVA: 0x002D7B54 File Offset: 0x002D5D54
 	private void RefreshProgressElements()
 	{
 		float instanceProgress = DangoAbyssModel.Instance.GetInstanceProgress();
 		this.RefreshRewardItem(instanceProgress);
 	}
 
-	// Token: 0x0600C568 RID: 50536 RVA: 0x002CCA4F File Offset: 0x002CAC4F
+	// Token: 0x06009978 RID: 39288 RVA: 0x002D7B73 File Offset: 0x002D5D73
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600C569 RID: 50537 RVA: 0x002CCA58 File Offset: 0x002CAC58
+	// Token: 0x06009979 RID: 39289 RVA: 0x002D7B7C File Offset: 0x002D5D7C
 	protected override void OnBeforeShow()
 	{
 		this.RefreshDeadText();
@@ -92,7 +92,7 @@ public class DangoAbyssInfoView : UiViewBase
 		this.RefreshDescText();
 	}
 
-	// Token: 0x0600C56A RID: 50538 RVA: 0x002CCA80 File Offset: 0x002CAC80
+	// Token: 0x0600997A RID: 39290 RVA: 0x002D7BA4 File Offset: 0x002D5DA4
 	private void RefreshDeadText()
 	{
 		string instanceReviveTipTips = DangoAbyssModel.Instance.GetInstanceReviveTipTips();
@@ -104,7 +104,7 @@ public class DangoAbyssInfoView : UiViewBase
 		deadInfoItem.SetDesc(instanceReviveTipTips);
 	}
 
-	// Token: 0x0600C56B RID: 50539 RVA: 0x002CCAAC File Offset: 0x002CACAC
+	// Token: 0x0600997B RID: 39291 RVA: 0x002D7BD0 File Offset: 0x002D5DD0
 	private void RefreshFloorText()
 	{
 		string instanceFloorDetailProgressText = DangoAbyssModel.Instance.GetInstanceFloorDetailProgressText();
@@ -116,7 +116,7 @@ public class DangoAbyssInfoView : UiViewBase
 		roomInfoItem.SetDesc(instanceFloorDetailProgressText);
 	}
 
-	// Token: 0x0600C56C RID: 50540 RVA: 0x002CCAD8 File Offset: 0x002CACD8
+	// Token: 0x0600997C RID: 39292 RVA: 0x002D7BFC File Offset: 0x002D5DFC
 	private void RefreshTimeText()
 	{
 		string instanceRemainTimeText = DangoAbyssModel.Instance.GetInstanceRemainTimeText();
@@ -128,7 +128,7 @@ public class DangoAbyssInfoView : UiViewBase
 		timeItem.SetDesc(instanceRemainTimeText);
 	}
 
-	// Token: 0x0600C56D RID: 50541 RVA: 0x002CCB04 File Offset: 0x002CAD04
+	// Token: 0x0600997D RID: 39293 RVA: 0x002D7C28 File Offset: 0x002D5E28
 	private void RefreshTitleText()
 	{
 		string currentAbyssName = DangoAbyssModel.Instance.GetCurrentAbyssName();
@@ -143,7 +143,7 @@ public class DangoAbyssInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C56E RID: 50542 RVA: 0x002CCB3C File Offset: 0x002CAD3C
+	// Token: 0x0600997E RID: 39294 RVA: 0x002D7C60 File Offset: 0x002D5E60
 	private void RefreshDescText()
 	{
 		string currentRouteDesc = DangoAbyssModel.Instance.GetCurrentRouteDesc();
@@ -155,7 +155,7 @@ public class DangoAbyssInfoView : UiViewBase
 		descItem.SetDesc(currentRouteDesc);
 	}
 
-	// Token: 0x0600C56F RID: 50543 RVA: 0x002CCB65 File Offset: 0x002CAD65
+	// Token: 0x0600997F RID: 39295 RVA: 0x002D7C89 File Offset: 0x002D5E89
 	private void RefreshRewardItem(float progress)
 	{
 		RewardInfoItem rewardItem = this.RewardItem;
@@ -166,7 +166,7 @@ public class DangoAbyssInfoView : UiViewBase
 		rewardItem.RefreshByProgress(progress);
 	}
 
-	// Token: 0x0600C570 RID: 50544 RVA: 0x002CCB78 File Offset: 0x002CAD78
+	// Token: 0x06009980 RID: 39296 RVA: 0x002D7C9C File Offset: 0x002D5E9C
 	protected override void OnBeforeDestroy()
 	{
 		if (this.RefreshTimer != null)
@@ -176,47 +176,47 @@ public class DangoAbyssInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x04005AF9 RID: 23289
+	// Token: 0x04005BC8 RID: 23496
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04005AFA RID: 23290
+	// Token: 0x04005BC9 RID: 23497
 	private SpriteTextItem CurrentLevelTitleItem;
 
-	// Token: 0x04005AFB RID: 23291
+	// Token: 0x04005BCA RID: 23498
 	private SpriteTextItem DeadInfoItem;
 
-	// Token: 0x04005AFC RID: 23292
+	// Token: 0x04005BCB RID: 23499
 	private SpriteTextItem TimeItem;
 
-	// Token: 0x04005AFD RID: 23293
+	// Token: 0x04005BCC RID: 23500
 	private SpriteTextItem RoomInfoItem;
 
-	// Token: 0x04005AFE RID: 23294
+	// Token: 0x04005BCD RID: 23501
 	private RewardInfoItem RewardItem;
 
-	// Token: 0x04005AFF RID: 23295
+	// Token: 0x04005BCE RID: 23502
 	private DescItem DescItem;
 
-	// Token: 0x04005B00 RID: 23296
+	// Token: 0x04005BCF RID: 23503
 	private TimerHandle RefreshTimer;
 
-	// Token: 0x02007F80 RID: 32640
+	// Token: 0x0200710F RID: 28943
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x040299F0 RID: 170480
+		// Token: 0x04024D2D RID: 150829
 		CaptionItem,
-		// Token: 0x040299F1 RID: 170481
+		// Token: 0x04024D2E RID: 150830
 		CurrentLevelTitleItem,
-		// Token: 0x040299F2 RID: 170482
+		// Token: 0x04024D2F RID: 150831
 		DeadInfoItem,
-		// Token: 0x040299F3 RID: 170483
+		// Token: 0x04024D30 RID: 150832
 		RewardItem,
-		// Token: 0x040299F4 RID: 170484
+		// Token: 0x04024D31 RID: 150833
 		TimeItem,
-		// Token: 0x040299F5 RID: 170485
+		// Token: 0x04024D32 RID: 150834
 		RoomInfoItem,
-		// Token: 0x040299F6 RID: 170486
+		// Token: 0x04024D33 RID: 150835
 		DescItem
 	}
 }

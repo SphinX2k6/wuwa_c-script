@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 {
-	// Token: 0x02003C27 RID: 15399
+	// Token: 0x020030DE RID: 12510
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/PCG/RoadSpline/BP_SplineScatter.BP_SplineScatter_C")]
 	[UnrealStructLayout(1944, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1941)]
 	public class BP_SplineScatter_C : AKuroEditorTickActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06023520 RID: 144672 RVA: 0x00920FA9 File Offset: 0x0091F1A9
+		// Token: 0x0601E37B RID: 123771 RVA: 0x0090E4FC File Offset: 0x0090C6FC
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SplineScatter_C._ClassPtr == IntPtr.Zero)
@@ -25,253 +25,232 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 			return BP_SplineScatter_C._ClassPtr;
 		}
 
-		// Token: 0x06023521 RID: 144673 RVA: 0x00920FD0 File Offset: 0x0091F1D0
+		// Token: 0x0601E37C RID: 123772 RVA: 0x0090E520 File Offset: 0x0090C720
 		public BP_SplineScatter_C() : this(BuiltinUtils.AllocNativeUObject(BP_SplineScatter_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06023522 RID: 144674 RVA: 0x00920FF8 File Offset: 0x0091F1F8
+		// Token: 0x0601E37D RID: 123773 RVA: 0x0090E548 File Offset: 0x0090C748
 		public BP_SplineScatter_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SplineScatter_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170040A7 RID: 16551
-		// (get) Token: 0x06023523 RID: 144675 RVA: 0x0092102B File Offset: 0x0091F22B
-		// (set) Token: 0x06023524 RID: 144676 RVA: 0x0092103F File Offset: 0x0091F23F
+		// Token: 0x17003283 RID: 12931
+		// (get) Token: 0x0601E37E RID: 123774 RVA: 0x0090E57B File Offset: 0x0090C77B
+		// (set) Token: 0x0601E37F RID: 123775 RVA: 0x0090E58F File Offset: 0x0090C78F
 		[Nullable(2)]
 		public unsafe USplineComponent Spline
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USplineComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplineScatter_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USplineComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplineScatter_C.__PropertyOffset_Spline);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplineScatter_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplineScatter_C.__PropertyOffset_Spline, value);
 			}
 		}
 
-		// Token: 0x170040A8 RID: 16552
-		// (get) Token: 0x06023525 RID: 144677 RVA: 0x00921054 File Offset: 0x0091F254
-		// (set) Token: 0x06023526 RID: 144678 RVA: 0x00921064 File Offset: 0x0091F264
+		// Token: 0x17003284 RID: 12932
+		// (get) Token: 0x0601E380 RID: 123776 RVA: 0x0090E5A4 File Offset: 0x0090C7A4
+		// (set) Token: 0x0601E381 RID: 123777 RVA: 0x0090E5B4 File Offset: 0x0090C7B4
 		public unsafe bool 自动生成
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_自动生成) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_自动生成) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170040A9 RID: 16553
-		// (get) Token: 0x06023527 RID: 144679 RVA: 0x00921075 File Offset: 0x0091F275
-		// (set) Token: 0x06023528 RID: 144680 RVA: 0x00921085 File Offset: 0x0091F285
+		// Token: 0x17003285 RID: 12933
+		// (get) Token: 0x0601E382 RID: 123778 RVA: 0x0090E5C5 File Offset: 0x0090C7C5
+		// (set) Token: 0x0601E383 RID: 123779 RVA: 0x0090E5D5 File Offset: 0x0090C7D5
 		public unsafe bool 向下吸附表面
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_向下吸附表面) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_向下吸附表面) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170040AA RID: 16554
-		// (get) Token: 0x06023529 RID: 144681 RVA: 0x00921096 File Offset: 0x0091F296
-		// (set) Token: 0x0602352A RID: 144682 RVA: 0x009210A6 File Offset: 0x0091F2A6
+		// Token: 0x17003286 RID: 12934
+		// (get) Token: 0x0601E384 RID: 123780 RVA: 0x0090E5E6 File Offset: 0x0090C7E6
+		// (set) Token: 0x0601E385 RID: 123781 RVA: 0x0090E5F6 File Offset: 0x0090C7F6
 		public unsafe float 生成宽度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_生成宽度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_生成宽度) = value;
 			}
 		}
 
-		// Token: 0x170040AB RID: 16555
-		// (get) Token: 0x0602352B RID: 144683 RVA: 0x009210B7 File Offset: 0x0091F2B7
-		// (set) Token: 0x0602352C RID: 144684 RVA: 0x009210C7 File Offset: 0x0091F2C7
+		// Token: 0x17003287 RID: 12935
+		// (get) Token: 0x0601E386 RID: 123782 RVA: 0x0090E607 File Offset: 0x0090C807
+		// (set) Token: 0x0601E387 RID: 123783 RVA: 0x0090E617 File Offset: 0x0090C817
 		public unsafe float 生成密度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_生成密度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_生成密度) = value;
 			}
 		}
 
-		// Token: 0x170040AC RID: 16556
-		// (get) Token: 0x0602352D RID: 144685 RVA: 0x009210D8 File Offset: 0x0091F2D8
-		// (set) Token: 0x0602352E RID: 144686 RVA: 0x009210E8 File Offset: 0x0091F2E8
+		// Token: 0x17003288 RID: 12936
+		// (get) Token: 0x0601E388 RID: 123784 RVA: 0x0090E628 File Offset: 0x0090C828
+		// (set) Token: 0x0601E389 RID: 123785 RVA: 0x0090E638 File Offset: 0x0090C838
 		public unsafe float 缩放
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_缩放);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_缩放) = value;
 			}
 		}
 
-		// Token: 0x170040AD RID: 16557
-		// (get) Token: 0x0602352F RID: 144687 RVA: 0x009210F9 File Offset: 0x0091F2F9
-		// (set) Token: 0x06023530 RID: 144688 RVA: 0x00921109 File Offset: 0x0091F309
+		// Token: 0x17003289 RID: 12937
+		// (get) Token: 0x0601E38A RID: 123786 RVA: 0x0090E649 File Offset: 0x0090C849
+		// (set) Token: 0x0601E38B RID: 123787 RVA: 0x0090E659 File Offset: 0x0090C859
 		public unsafe float CustomTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_CustomTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_CustomTime) = value;
 			}
 		}
 
-		// Token: 0x170040AE RID: 16558
-		// (get) Token: 0x06023531 RID: 144689 RVA: 0x0092111A File Offset: 0x0091F31A
-		// (set) Token: 0x06023532 RID: 144690 RVA: 0x0092112A File Offset: 0x0091F32A
+		// Token: 0x1700328A RID: 12938
+		// (get) Token: 0x0601E38C RID: 123788 RVA: 0x0090E66A File Offset: 0x0090C86A
+		// (set) Token: 0x0601E38D RID: 123789 RVA: 0x0090E67A File Offset: 0x0090C87A
 		public unsafe int ScatterCount
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_ScatterCount);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_ScatterCount) = value;
 			}
 		}
 
-		// Token: 0x170040AF RID: 16559
-		// (get) Token: 0x06023533 RID: 144691 RVA: 0x0092113C File Offset: 0x0091F33C
-		// (set) Token: 0x06023534 RID: 144692 RVA: 0x00921175 File Offset: 0x0091F375
-		public TMap<UStaticMesh, UInstancedStaticMeshComponent> ScatterAssetsComponent
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<UStaticMesh, UInstancedStaticMeshComponent> result;
-				if ((result = this._ScatterAssetsComponent) == null)
-				{
-					result = (this._ScatterAssetsComponent = new TMap<UStaticMesh, UInstancedStaticMeshComponent>(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_9, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ScatterAssetsComponent.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170040B0 RID: 16560
-		// (get) Token: 0x06023535 RID: 144693 RVA: 0x00921183 File Offset: 0x0091F383
-		// (set) Token: 0x06023536 RID: 144694 RVA: 0x00921193 File Offset: 0x0091F393
+		// Token: 0x1700328B RID: 12939
+		// (get) Token: 0x0601E38E RID: 123790 RVA: 0x0090E68B File Offset: 0x0090C88B
+		// (set) Token: 0x0601E38F RID: 123791 RVA: 0x0090E69B File Offset: 0x0090C89B
 		public unsafe bool Tick
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_10) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_Tick) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_10) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_Tick) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170040B1 RID: 16561
-		// (get) Token: 0x06023537 RID: 144695 RVA: 0x009211A4 File Offset: 0x0091F3A4
-		// (set) Token: 0x06023538 RID: 144696 RVA: 0x009211B4 File Offset: 0x0091F3B4
+		// Token: 0x1700328C RID: 12940
+		// (get) Token: 0x0601E390 RID: 123792 RVA: 0x0090E6AC File Offset: 0x0090C8AC
+		// (set) Token: 0x0601E391 RID: 123793 RVA: 0x0090E6BC File Offset: 0x0090C8BC
 		public unsafe int ScatterPerTick
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_ScatterPerTick);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_ScatterPerTick) = value;
 			}
 		}
 
-		// Token: 0x170040B2 RID: 16562
-		// (get) Token: 0x06023539 RID: 144697 RVA: 0x009211C5 File Offset: 0x0091F3C5
-		// (set) Token: 0x0602353A RID: 144698 RVA: 0x009211D5 File Offset: 0x0091F3D5
+		// Token: 0x1700328D RID: 12941
+		// (get) Token: 0x0601E392 RID: 123794 RVA: 0x0090E6CD File Offset: 0x0090C8CD
+		// (set) Token: 0x0601E393 RID: 123795 RVA: 0x0090E6DD File Offset: 0x0090C8DD
 		public unsafe float SplineLength
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_SplineLength);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_SplineLength) = value;
 			}
 		}
 
-		// Token: 0x170040B3 RID: 16563
-		// (get) Token: 0x0602353B RID: 144699 RVA: 0x009211E6 File Offset: 0x0091F3E6
-		// (set) Token: 0x0602353C RID: 144700 RVA: 0x009211FA File Offset: 0x0091F3FA
+		// Token: 0x1700328E RID: 12942
+		// (get) Token: 0x0601E394 RID: 123796 RVA: 0x0090E6EE File Offset: 0x0090C8EE
+		// (set) Token: 0x0601E395 RID: 123797 RVA: 0x0090E702 File Offset: 0x0090C902
 		public unsafe FVectorDouble ScatterLocation
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_ScatterLocation);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_ScatterLocation) = value;
 			}
 		}
 
-		// Token: 0x170040B4 RID: 16564
-		// (get) Token: 0x0602353D RID: 144701 RVA: 0x0092120F File Offset: 0x0091F40F
-		// (set) Token: 0x0602353E RID: 144702 RVA: 0x0092121F File Offset: 0x0091F41F
+		// Token: 0x1700328F RID: 12943
+		// (get) Token: 0x0601E396 RID: 123798 RVA: 0x0090E717 File Offset: 0x0090C917
+		// (set) Token: 0x0601E397 RID: 123799 RVA: 0x0090E727 File Offset: 0x0090C927
 		public unsafe float RandomTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_RandomTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_RandomTime) = value;
 			}
 		}
 
-		// Token: 0x170040B5 RID: 16565
-		// (get) Token: 0x0602353F RID: 144703 RVA: 0x00921230 File Offset: 0x0091F430
-		// (set) Token: 0x06023540 RID: 144704 RVA: 0x00921240 File Offset: 0x0091F440
+		// Token: 0x17003290 RID: 12944
+		// (get) Token: 0x0601E398 RID: 123800 RVA: 0x0090E738 File Offset: 0x0090C938
+		// (set) Token: 0x0601E399 RID: 123801 RVA: 0x0090E748 File Offset: 0x0090C948
 		public unsafe int TickStart
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_TickStart);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_TickStart) = value;
 			}
 		}
 
-		// Token: 0x170040B6 RID: 16566
-		// (get) Token: 0x06023541 RID: 144705 RVA: 0x00921254 File Offset: 0x0091F454
-		// (set) Token: 0x06023542 RID: 144706 RVA: 0x0092128D File Offset: 0x0091F48D
+		// Token: 0x17003291 RID: 12945
+		// (get) Token: 0x0601E39A RID: 123802 RVA: 0x0090E75C File Offset: 0x0090C95C
+		// (set) Token: 0x0601E39B RID: 123803 RVA: 0x0090E795 File Offset: 0x0090C995
 		public TMap<int, int> InstanceCount
 		{
 			get
@@ -280,7 +259,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 				TMap<int, int> result;
 				if ((result = this._InstanceCount) == null)
 				{
-					result = (this._InstanceCount = new TMap<int, int>(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_16, this));
+					result = (this._InstanceCount = new TMap<int, int>(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_InstanceCount, this));
 				}
 				return result;
 			}
@@ -290,9 +269,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 			}
 		}
 
-		// Token: 0x170040B7 RID: 16567
-		// (get) Token: 0x06023543 RID: 144707 RVA: 0x0092129C File Offset: 0x0091F49C
-		// (set) Token: 0x06023544 RID: 144708 RVA: 0x009212D5 File Offset: 0x0091F4D5
+		// Token: 0x17003292 RID: 12946
+		// (get) Token: 0x0601E39C RID: 123804 RVA: 0x0090E7A4 File Offset: 0x0090C9A4
+		// (set) Token: 0x0601E39D RID: 123805 RVA: 0x0090E7DD File Offset: 0x0090C9DD
 		public TMap<string, FVector> CustomDataInfo
 		{
 			get
@@ -301,7 +280,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 				TMap<string, FVector> result;
 				if ((result = this._CustomDataInfo) == null)
 				{
-					result = (this._CustomDataInfo = new TMap<string, FVector>(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_17, this));
+					result = (this._CustomDataInfo = new TMap<string, FVector>(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_CustomDataInfo, this));
 				}
 				return result;
 			}
@@ -311,39 +290,39 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 			}
 		}
 
-		// Token: 0x170040B8 RID: 16568
-		// (get) Token: 0x06023545 RID: 144709 RVA: 0x009212E3 File Offset: 0x0091F4E3
-		// (set) Token: 0x06023546 RID: 144710 RVA: 0x009212F3 File Offset: 0x0091F4F3
+		// Token: 0x17003293 RID: 12947
+		// (get) Token: 0x0601E39E RID: 123806 RVA: 0x0090E7EB File Offset: 0x0090C9EB
+		// (set) Token: 0x0601E39F RID: 123807 RVA: 0x0090E7FB File Offset: 0x0090C9FB
 		public unsafe int AssetCount
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_AssetCount);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_AssetCount) = value;
 			}
 		}
 
-		// Token: 0x170040B9 RID: 16569
-		// (get) Token: 0x06023547 RID: 144711 RVA: 0x00921304 File Offset: 0x0091F504
-		// (set) Token: 0x06023548 RID: 144712 RVA: 0x00921314 File Offset: 0x0091F514
+		// Token: 0x17003294 RID: 12948
+		// (get) Token: 0x0601E3A0 RID: 123808 RVA: 0x0090E80C File Offset: 0x0090CA0C
+		// (set) Token: 0x0601E3A1 RID: 123809 RVA: 0x0090E81C File Offset: 0x0090CA1C
 		public unsafe int RandomID
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_19);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_RandomID);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_19) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_RandomID) = value;
 			}
 		}
 
-		// Token: 0x170040BA RID: 16570
-		// (get) Token: 0x06023549 RID: 144713 RVA: 0x00921328 File Offset: 0x0091F528
-		// (set) Token: 0x0602354A RID: 144714 RVA: 0x00921361 File Offset: 0x0091F561
+		// Token: 0x17003295 RID: 12949
+		// (get) Token: 0x0601E3A2 RID: 123810 RVA: 0x0090E830 File Offset: 0x0090CA30
+		// (set) Token: 0x0601E3A3 RID: 123811 RVA: 0x0090E869 File Offset: 0x0090CA69
 		public TArray<string> CustomDataID
 		{
 			get
@@ -352,7 +331,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 				TArray<string> result;
 				if ((result = this._CustomDataID) == null)
 				{
-					result = (this._CustomDataID = new TArray<string>(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_20, this));
+					result = (this._CustomDataID = new TArray<string>(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_CustomDataID, this));
 				}
 				return result;
 			}
@@ -362,135 +341,135 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 			}
 		}
 
-		// Token: 0x170040BB RID: 16571
-		// (get) Token: 0x0602354B RID: 144715 RVA: 0x0092136F File Offset: 0x0091F56F
-		// (set) Token: 0x0602354C RID: 144716 RVA: 0x0092137F File Offset: 0x0091F57F
+		// Token: 0x17003296 RID: 12950
+		// (get) Token: 0x0601E3A4 RID: 123812 RVA: 0x0090E877 File Offset: 0x0090CA77
+		// (set) Token: 0x0601E3A5 RID: 123813 RVA: 0x0090E887 File Offset: 0x0090CA87
 		public unsafe float LastGrowthTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_21);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_LastGrowthTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_21) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_LastGrowthTime) = value;
 			}
 		}
 
-		// Token: 0x170040BC RID: 16572
-		// (get) Token: 0x0602354D RID: 144717 RVA: 0x00921390 File Offset: 0x0091F590
-		// (set) Token: 0x0602354E RID: 144718 RVA: 0x009213A0 File Offset: 0x0091F5A0
+		// Token: 0x17003297 RID: 12951
+		// (get) Token: 0x0601E3A6 RID: 123814 RVA: 0x0090E898 File Offset: 0x0090CA98
+		// (set) Token: 0x0601E3A7 RID: 123815 RVA: 0x0090E8A8 File Offset: 0x0090CAA8
 		public unsafe float RandomAngle
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_22);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_RandomAngle);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_22) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_RandomAngle) = value;
 			}
 		}
 
-		// Token: 0x170040BD RID: 16573
-		// (get) Token: 0x0602354F RID: 144719 RVA: 0x009213B1 File Offset: 0x0091F5B1
-		// (set) Token: 0x06023550 RID: 144720 RVA: 0x009213C1 File Offset: 0x0091F5C1
+		// Token: 0x17003298 RID: 12952
+		// (get) Token: 0x0601E3A8 RID: 123816 RVA: 0x0090E8B9 File Offset: 0x0090CAB9
+		// (set) Token: 0x0601E3A9 RID: 123817 RVA: 0x0090E8C9 File Offset: 0x0090CAC9
 		public unsafe float RandomWidth
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_23);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_RandomWidth);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_23) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_RandomWidth) = value;
 			}
 		}
 
-		// Token: 0x170040BE RID: 16574
-		// (get) Token: 0x06023551 RID: 144721 RVA: 0x009213D2 File Offset: 0x0091F5D2
-		// (set) Token: 0x06023552 RID: 144722 RVA: 0x009213E2 File Offset: 0x0091F5E2
+		// Token: 0x17003299 RID: 12953
+		// (get) Token: 0x0601E3AA RID: 123818 RVA: 0x0090E8DA File Offset: 0x0090CADA
+		// (set) Token: 0x0601E3AB RID: 123819 RVA: 0x0090E8EA File Offset: 0x0090CAEA
 		public unsafe bool 启用流淌
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_24) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_启用流淌) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_24) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_启用流淌) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170040BF RID: 16575
-		// (get) Token: 0x06023553 RID: 144723 RVA: 0x009213F3 File Offset: 0x0091F5F3
-		// (set) Token: 0x06023554 RID: 144724 RVA: 0x00921407 File Offset: 0x0091F607
+		// Token: 0x1700329A RID: 12954
+		// (get) Token: 0x0601E3AC RID: 123820 RVA: 0x0090E8FB File Offset: 0x0090CAFB
+		// (set) Token: 0x0601E3AD RID: 123821 RVA: 0x0090E90F File Offset: 0x0090CB0F
 		[Nullable(2)]
 		public unsafe UTexture2D 路径Texture
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UTexture2D>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplineScatter_C.__PropertyOffset_25);
+				return BuiltinUtils.ObjectPropertyGetter<UTexture2D>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplineScatter_C.__PropertyOffset_路径Texture);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplineScatter_C.__PropertyOffset_25, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplineScatter_C.__PropertyOffset_路径Texture, value);
 			}
 		}
 
-		// Token: 0x170040C0 RID: 16576
-		// (get) Token: 0x06023555 RID: 144725 RVA: 0x0092141C File Offset: 0x0091F61C
-		// (set) Token: 0x06023556 RID: 144726 RVA: 0x00921430 File Offset: 0x0091F630
+		// Token: 0x1700329B RID: 12955
+		// (get) Token: 0x0601E3AE RID: 123822 RVA: 0x0090E924 File Offset: 0x0090CB24
+		// (set) Token: 0x0601E3AF RID: 123823 RVA: 0x0090E938 File Offset: 0x0090CB38
 		[Nullable(2)]
 		public unsafe UTextureRenderTarget2D 路径RT
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UTextureRenderTarget2D>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplineScatter_C.__PropertyOffset_26);
+				return BuiltinUtils.ObjectPropertyGetter<UTextureRenderTarget2D>(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplineScatter_C.__PropertyOffset_路径RT);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplineScatter_C.__PropertyOffset_26, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_SplineScatter_C.__PropertyOffset_路径RT, value);
 			}
 		}
 
-		// Token: 0x170040C1 RID: 16577
-		// (get) Token: 0x06023557 RID: 144727 RVA: 0x00921445 File Offset: 0x0091F645
-		// (set) Token: 0x06023558 RID: 144728 RVA: 0x00921455 File Offset: 0x0091F655
+		// Token: 0x1700329C RID: 12956
+		// (get) Token: 0x0601E3B0 RID: 123824 RVA: 0x0090E94D File Offset: 0x0090CB4D
+		// (set) Token: 0x0601E3B1 RID: 123825 RVA: 0x0090E95D File Offset: 0x0090CB5D
 		public unsafe bool 基于RT撒点
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_27) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_基于RT撒点) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_27) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_基于RT撒点) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170040C2 RID: 16578
-		// (get) Token: 0x06023559 RID: 144729 RVA: 0x00921466 File Offset: 0x0091F666
-		// (set) Token: 0x0602355A RID: 144730 RVA: 0x00921476 File Offset: 0x0091F676
+		// Token: 0x1700329D RID: 12957
+		// (get) Token: 0x0601E3B2 RID: 123826 RVA: 0x0090E96E File Offset: 0x0090CB6E
+		// (set) Token: 0x0601E3B3 RID: 123827 RVA: 0x0090E97E File Offset: 0x0090CB7E
 		public unsafe bool 运行时生成
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_28) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_运行时生成) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_28) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_运行时生成) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170040C3 RID: 16579
-		// (get) Token: 0x0602355B RID: 144731 RVA: 0x00921488 File Offset: 0x0091F688
-		// (set) Token: 0x0602355C RID: 144732 RVA: 0x009214C1 File Offset: 0x0091F6C1
+		// Token: 0x1700329E RID: 12958
+		// (get) Token: 0x0601E3B4 RID: 123828 RVA: 0x0090E990 File Offset: 0x0090CB90
+		// (set) Token: 0x0601E3B5 RID: 123829 RVA: 0x0090E9C9 File Offset: 0x0090CBC9
 		public TArray<UStaticMesh> ScatterAssets
 		{
 			get
@@ -499,7 +478,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 				TArray<UStaticMesh> result;
 				if ((result = this._ScatterAssets) == null)
 				{
-					result = (this._ScatterAssets = new TArray<UStaticMesh>(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_29, this));
+					result = (this._ScatterAssets = new TArray<UStaticMesh>(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_ScatterAssets, this));
 				}
 				return result;
 			}
@@ -509,9 +488,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 			}
 		}
 
-		// Token: 0x170040C4 RID: 16580
-		// (get) Token: 0x0602355D RID: 144733 RVA: 0x009214D0 File Offset: 0x0091F6D0
-		// (set) Token: 0x0602355E RID: 144734 RVA: 0x00921509 File Offset: 0x0091F709
+		// Token: 0x1700329F RID: 12959
+		// (get) Token: 0x0601E3B6 RID: 123830 RVA: 0x0090E9D8 File Offset: 0x0090CBD8
+		// (set) Token: 0x0601E3B7 RID: 123831 RVA: 0x0090EA11 File Offset: 0x0090CC11
 		public TArray<UMaterialInstanceDynamic> MIDAssets
 		{
 			get
@@ -520,7 +499,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 				TArray<UMaterialInstanceDynamic> result;
 				if ((result = this._MIDAssets) == null)
 				{
-					result = (this._MIDAssets = new TArray<UMaterialInstanceDynamic>(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_30, this));
+					result = (this._MIDAssets = new TArray<UMaterialInstanceDynamic>(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_MIDAssets, this));
 				}
 				return result;
 			}
@@ -530,9 +509,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 			}
 		}
 
-		// Token: 0x170040C5 RID: 16581
-		// (get) Token: 0x0602355F RID: 144735 RVA: 0x00921518 File Offset: 0x0091F718
-		// (set) Token: 0x06023560 RID: 144736 RVA: 0x00921551 File Offset: 0x0091F751
+		// Token: 0x170032A0 RID: 12960
+		// (get) Token: 0x0601E3B8 RID: 123832 RVA: 0x0090EA20 File Offset: 0x0090CC20
+		// (set) Token: 0x0601E3B9 RID: 123833 RVA: 0x0090EA59 File Offset: 0x0090CC59
 		public TArray<FLinearColor> RTData
 		{
 			get
@@ -541,7 +520,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 				TArray<FLinearColor> result;
 				if ((result = this._RTData) == null)
 				{
-					result = (this._RTData = new TArray<FLinearColor>(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_31, this));
+					result = (this._RTData = new TArray<FLinearColor>(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_RTData, this));
 				}
 				return result;
 			}
@@ -551,101 +530,96 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 			}
 		}
 
-		// Token: 0x170040C6 RID: 16582
-		// (get) Token: 0x06023561 RID: 144737 RVA: 0x0092155F File Offset: 0x0091F75F
-		// (set) Token: 0x06023562 RID: 144738 RVA: 0x00921573 File Offset: 0x0091F773
+		// Token: 0x170032A1 RID: 12961
+		// (get) Token: 0x0601E3BA RID: 123834 RVA: 0x0090EA67 File Offset: 0x0090CC67
+		// (set) Token: 0x0601E3BB RID: 123835 RVA: 0x0090EA7B File Offset: 0x0090CC7B
 		public unsafe FVectorDouble FirstLocation
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_32);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_FirstLocation);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_32) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_FirstLocation) = value;
 			}
 		}
 
-		// Token: 0x170040C7 RID: 16583
-		// (get) Token: 0x06023563 RID: 144739 RVA: 0x00921588 File Offset: 0x0091F788
-		// (set) Token: 0x06023564 RID: 144740 RVA: 0x0092159C File Offset: 0x0091F79C
+		// Token: 0x170032A2 RID: 12962
+		// (get) Token: 0x0601E3BC RID: 123836 RVA: 0x0090EA90 File Offset: 0x0090CC90
+		// (set) Token: 0x0601E3BD RID: 123837 RVA: 0x0090EAA4 File Offset: 0x0090CCA4
 		public unsafe FVectorDouble FirstRight
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_33);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_FirstRight);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_33) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_FirstRight) = value;
 			}
 		}
 
-		// Token: 0x170040C8 RID: 16584
-		// (get) Token: 0x06023565 RID: 144741 RVA: 0x009215B1 File Offset: 0x0091F7B1
-		// (set) Token: 0x06023566 RID: 144742 RVA: 0x009215C1 File Offset: 0x0091F7C1
+		// Token: 0x170032A3 RID: 12963
+		// (get) Token: 0x0601E3BE RID: 123838 RVA: 0x0090EAB9 File Offset: 0x0090CCB9
+		// (set) Token: 0x0601E3BF RID: 123839 RVA: 0x0090EAC9 File Offset: 0x0090CCC9
 		public unsafe int Size
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_34);
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_Size);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_34) = value;
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_Size) = value;
 			}
 		}
 
-		// Token: 0x170040C9 RID: 16585
-		// (get) Token: 0x06023567 RID: 144743 RVA: 0x009215D2 File Offset: 0x0091F7D2
-		// (set) Token: 0x06023568 RID: 144744 RVA: 0x009215E2 File Offset: 0x0091F7E2
+		// Token: 0x170032A4 RID: 12964
+		// (get) Token: 0x0601E3C0 RID: 123840 RVA: 0x0090EADA File Offset: 0x0090CCDA
+		// (set) Token: 0x0601E3C1 RID: 123841 RVA: 0x0090EAEA File Offset: 0x0090CCEA
 		public unsafe bool Preview
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_35) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_Preview) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_35) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SplineScatter_C.__PropertyOffset_Preview) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x06023569 RID: 144745 RVA: 0x009215F3 File Offset: 0x0091F7F3
+		// Token: 0x0601E3C2 RID: 123842 RVA: 0x0090EAFB File Offset: 0x0090CCFB
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 花路预览()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_SplineScatter_C.__花路预览_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602356A RID: 144746 RVA: 0x00921607 File Offset: 0x0091F807
+		// Token: 0x0601E3C3 RID: 123843 RVA: 0x0090EB0F File Offset: 0x0090CD0F
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 生成动态材质()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_SplineScatter_C.__生成动态材质_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602356B RID: 144747 RVA: 0x0092161B File Offset: 0x0091F81B
+		// Token: 0x0601E3C4 RID: 123844 RVA: 0x0090EB23 File Offset: 0x0090CD23
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 生成路径RT()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_SplineScatter_C.__生成路径RT_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602356C RID: 144748 RVA: 0x0092162F File Offset: 0x0091F82F
+		// Token: 0x0601E3C5 RID: 123845 RVA: 0x0090EB37 File Offset: 0x0090CD37
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 生成撒点()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_SplineScatter_C.__生成撒点_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602356D RID: 144749 RVA: 0x00921644 File Offset: 0x0091F844
+		// Token: 0x0601E3C6 RID: 123846 RVA: 0x0090EB4C File Offset: 0x0090CD4C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void IsEditor(ref bool IsEditor)
 		{
 			BP_SplineScatter_C.__IsEditor_FunctionParams* ptr = stackalloc BP_SplineScatter_C.__IsEditor_FunctionParams[(UIntPtr)17] + 15L / (long)sizeof(BP_SplineScatter_C.__IsEditor_FunctionParams) & -16L;
@@ -655,41 +629,36 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 			IsEditor = ptr->IsEditor;
 		}
 
-		// Token: 0x0602356E RID: 144750 RVA: 0x00921693 File Offset: 0x0091F893
+		// Token: 0x0601E3C7 RID: 123847 RVA: 0x0090EB9B File Offset: 0x0090CD9B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_SplineScatter_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602356F RID: 144751 RVA: 0x009216A7 File Offset: 0x0091F8A7
+		// Token: 0x0601E3C8 RID: 123848 RVA: 0x0090EBAF File Offset: 0x0090CDAF
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_SplineScatter_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_SplineScatter_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06023570 RID: 144752 RVA: 0x009216BC File Offset: 0x0091F8BC
+		// Token: 0x0601E3C9 RID: 123849 RVA: 0x0090EBC3 File Offset: 0x0090CDC3
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_SplineScatter_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06023571 RID: 144753 RVA: 0x009216D0 File Offset: 0x0091F8D0
+		// Token: 0x0601E3CA RID: 123850 RVA: 0x0090EBD7 File Offset: 0x0090CDD7
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_SplineScatter_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_SplineScatter_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06023572 RID: 144754 RVA: 0x009216E8 File Offset: 0x0091F8E8
+		// Token: 0x0601E3CB RID: 123851 RVA: 0x0090EBEC File Offset: 0x0090CDEC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void EditorTick(float DeltaSeconds)
 		{
 			BP_SplineScatter_C.__EditorTick_FunctionParams* ptr = stackalloc BP_SplineScatter_C.__EditorTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_SplineScatter_C.__EditorTick_FunctionParams) & -16L;
@@ -698,20 +667,18 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_SplineScatter_C.__EditorTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023573 RID: 144755 RVA: 0x00921730 File Offset: 0x0091F930
+		// Token: 0x0601E3CC RID: 123852 RVA: 0x0090EC34 File Offset: 0x0090CE34
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void EditorTick_Implementation(float DeltaSeconds)
 		{
 			BP_SplineScatter_C.__EditorTick_FunctionParams* ptr = stackalloc BP_SplineScatter_C.__EditorTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_SplineScatter_C.__EditorTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_SplineScatter_C.__EditorTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_SplineScatter_C.__EditorTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_SplineScatter_C.__EditorTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023574 RID: 144756 RVA: 0x00921778 File Offset: 0x0091F978
+		// Token: 0x0601E3CD RID: 123853 RVA: 0x0090EC7C File Offset: 0x0090CE7C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_SplineScatter_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_SplineScatter_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_SplineScatter_C.__ReceiveTick_FunctionParams) & -16L;
@@ -720,96 +687,83 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_SplineScatter_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023575 RID: 144757 RVA: 0x009217C0 File Offset: 0x0091F9C0
+		// Token: 0x0601E3CE RID: 123854 RVA: 0x0090ECC4 File Offset: 0x0090CEC4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_SplineScatter_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_SplineScatter_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_SplineScatter_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_SplineScatter_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_SplineScatter_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_SplineScatter_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06023576 RID: 144758 RVA: 0x00921807 File Offset: 0x0091FA07
+		// Token: 0x0601E3CF RID: 123855 RVA: 0x0090ED0A File Offset: 0x0090CF0A
 		protected BP_SplineScatter_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040116C7 RID: 71367
+		// Token: 0x0400FFD3 RID: 65491
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/PCG/RoadSpline/BP_SplineScatter.BP_SplineScatter_C";
 
-		// Token: 0x040116C8 RID: 71368
+		// Token: 0x0400FFD4 RID: 65492
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040116C9 RID: 71369
+		// Token: 0x0400FFD5 RID: 65493
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040116CA RID: 71370
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FFD6 RID: 65494
+		internal static int __PropertyOffset_Spline;
 
-		// Token: 0x040116CB RID: 71371
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400FFD7 RID: 65495
+		internal static int __PropertyOffset_自动生成;
 
-		// Token: 0x040116CC RID: 71372
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400FFD8 RID: 65496
+		internal static int __PropertyOffset_向下吸附表面;
 
-		// Token: 0x040116CD RID: 71373
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400FFD9 RID: 65497
+		internal static int __PropertyOffset_生成宽度;
 
-		// Token: 0x040116CE RID: 71374
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400FFDA RID: 65498
+		internal static int __PropertyOffset_生成密度;
 
-		// Token: 0x040116CF RID: 71375
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400FFDB RID: 65499
+		internal static int __PropertyOffset_缩放;
 
-		// Token: 0x040116D0 RID: 71376
-		internal static int __PropertyOffset_7;
+		// Token: 0x0400FFDC RID: 65500
+		internal static int __PropertyOffset_CustomTime;
 
-		// Token: 0x040116D1 RID: 71377
-		internal static int __PropertyOffset_8;
+		// Token: 0x0400FFDD RID: 65501
+		internal static int __PropertyOffset_ScatterCount;
 
-		// Token: 0x040116D2 RID: 71378
-		internal static int __PropertyOffset_9;
+		// Token: 0x0400FFDE RID: 65502
+		internal static int __PropertyOffset_Tick;
 
-		// Token: 0x040116D3 RID: 71379
-		[Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		private TMap<UStaticMesh, UInstancedStaticMeshComponent> _ScatterAssetsComponent;
+		// Token: 0x0400FFDF RID: 65503
+		internal static int __PropertyOffset_ScatterPerTick;
 
-		// Token: 0x040116D4 RID: 71380
-		internal static int __PropertyOffset_10;
+		// Token: 0x0400FFE0 RID: 65504
+		internal static int __PropertyOffset_SplineLength;
 
-		// Token: 0x040116D5 RID: 71381
-		internal static int __PropertyOffset_11;
+		// Token: 0x0400FFE1 RID: 65505
+		internal static int __PropertyOffset_ScatterLocation;
 
-		// Token: 0x040116D6 RID: 71382
-		internal static int __PropertyOffset_12;
+		// Token: 0x0400FFE2 RID: 65506
+		internal static int __PropertyOffset_RandomTime;
 
-		// Token: 0x040116D7 RID: 71383
-		internal static int __PropertyOffset_13;
+		// Token: 0x0400FFE3 RID: 65507
+		internal static int __PropertyOffset_TickStart;
 
-		// Token: 0x040116D8 RID: 71384
-		internal static int __PropertyOffset_14;
+		// Token: 0x0400FFE4 RID: 65508
+		internal static int __PropertyOffset_InstanceCount;
 
-		// Token: 0x040116D9 RID: 71385
-		internal static int __PropertyOffset_15;
-
-		// Token: 0x040116DA RID: 71386
-		internal static int __PropertyOffset_16;
-
-		// Token: 0x040116DB RID: 71387
+		// Token: 0x0400FFE5 RID: 65509
 		[Nullable(2)]
 		private TMap<int, int> _InstanceCount;
 
-		// Token: 0x040116DC RID: 71388
-		internal static int __PropertyOffset_17;
+		// Token: 0x0400FFE6 RID: 65510
+		internal static int __PropertyOffset_CustomDataInfo;
 
-		// Token: 0x040116DD RID: 71389
+		// Token: 0x0400FFE7 RID: 65511
 		[Nullable(new byte[]
 		{
 			2,
@@ -817,16 +771,16 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 		})]
 		private TMap<string, FVector> _CustomDataInfo;
 
-		// Token: 0x040116DE RID: 71390
-		internal static int __PropertyOffset_18;
+		// Token: 0x0400FFE8 RID: 65512
+		internal static int __PropertyOffset_AssetCount;
 
-		// Token: 0x040116DF RID: 71391
-		internal static int __PropertyOffset_19;
+		// Token: 0x0400FFE9 RID: 65513
+		internal static int __PropertyOffset_RandomID;
 
-		// Token: 0x040116E0 RID: 71392
-		internal static int __PropertyOffset_20;
+		// Token: 0x0400FFEA RID: 65514
+		internal static int __PropertyOffset_CustomDataID;
 
-		// Token: 0x040116E1 RID: 71393
+		// Token: 0x0400FFEB RID: 65515
 		[Nullable(new byte[]
 		{
 			2,
@@ -834,34 +788,34 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 		})]
 		private TArray<string> _CustomDataID;
 
-		// Token: 0x040116E2 RID: 71394
-		internal static int __PropertyOffset_21;
+		// Token: 0x0400FFEC RID: 65516
+		internal static int __PropertyOffset_LastGrowthTime;
 
-		// Token: 0x040116E3 RID: 71395
-		internal static int __PropertyOffset_22;
+		// Token: 0x0400FFED RID: 65517
+		internal static int __PropertyOffset_RandomAngle;
 
-		// Token: 0x040116E4 RID: 71396
-		internal static int __PropertyOffset_23;
+		// Token: 0x0400FFEE RID: 65518
+		internal static int __PropertyOffset_RandomWidth;
 
-		// Token: 0x040116E5 RID: 71397
-		internal static int __PropertyOffset_24;
+		// Token: 0x0400FFEF RID: 65519
+		internal static int __PropertyOffset_启用流淌;
 
-		// Token: 0x040116E6 RID: 71398
-		internal static int __PropertyOffset_25;
+		// Token: 0x0400FFF0 RID: 65520
+		internal static int __PropertyOffset_路径Texture;
 
-		// Token: 0x040116E7 RID: 71399
-		internal static int __PropertyOffset_26;
+		// Token: 0x0400FFF1 RID: 65521
+		internal static int __PropertyOffset_路径RT;
 
-		// Token: 0x040116E8 RID: 71400
-		internal static int __PropertyOffset_27;
+		// Token: 0x0400FFF2 RID: 65522
+		internal static int __PropertyOffset_基于RT撒点;
 
-		// Token: 0x040116E9 RID: 71401
-		internal static int __PropertyOffset_28;
+		// Token: 0x0400FFF3 RID: 65523
+		internal static int __PropertyOffset_运行时生成;
 
-		// Token: 0x040116EA RID: 71402
-		internal static int __PropertyOffset_29;
+		// Token: 0x0400FFF4 RID: 65524
+		internal static int __PropertyOffset_ScatterAssets;
 
-		// Token: 0x040116EB RID: 71403
+		// Token: 0x0400FFF5 RID: 65525
 		[Nullable(new byte[]
 		{
 			2,
@@ -869,10 +823,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 		})]
 		private TArray<UStaticMesh> _ScatterAssets;
 
-		// Token: 0x040116EC RID: 71404
-		internal static int __PropertyOffset_30;
+		// Token: 0x0400FFF6 RID: 65526
+		internal static int __PropertyOffset_MIDAssets;
 
-		// Token: 0x040116ED RID: 71405
+		// Token: 0x0400FFF7 RID: 65527
 		[Nullable(new byte[]
 		{
 			2,
@@ -880,81 +834,81 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.RoadSpline
 		})]
 		private TArray<UMaterialInstanceDynamic> _MIDAssets;
 
-		// Token: 0x040116EE RID: 71406
-		internal static int __PropertyOffset_31;
+		// Token: 0x0400FFF8 RID: 65528
+		internal static int __PropertyOffset_RTData;
 
-		// Token: 0x040116EF RID: 71407
+		// Token: 0x0400FFF9 RID: 65529
 		[Nullable(2)]
 		private TArray<FLinearColor> _RTData;
 
-		// Token: 0x040116F0 RID: 71408
-		internal static int __PropertyOffset_32;
+		// Token: 0x0400FFFA RID: 65530
+		internal static int __PropertyOffset_FirstLocation;
 
-		// Token: 0x040116F1 RID: 71409
-		internal static int __PropertyOffset_33;
+		// Token: 0x0400FFFB RID: 65531
+		internal static int __PropertyOffset_FirstRight;
 
-		// Token: 0x040116F2 RID: 71410
-		internal static int __PropertyOffset_34;
+		// Token: 0x0400FFFC RID: 65532
+		internal static int __PropertyOffset_Size;
 
-		// Token: 0x040116F3 RID: 71411
-		internal static int __PropertyOffset_35;
+		// Token: 0x0400FFFD RID: 65533
+		internal static int __PropertyOffset_Preview;
 
-		// Token: 0x040116F4 RID: 71412
+		// Token: 0x0400FFFE RID: 65534
 		private static IntPtr __花路预览_NativeFunctionPtr;
 
-		// Token: 0x040116F5 RID: 71413
+		// Token: 0x0400FFFF RID: 65535
 		private static IntPtr __生成动态材质_NativeFunctionPtr;
 
-		// Token: 0x040116F6 RID: 71414
+		// Token: 0x04010000 RID: 65536
 		private static IntPtr __生成路径RT_NativeFunctionPtr;
 
-		// Token: 0x040116F7 RID: 71415
+		// Token: 0x04010001 RID: 65537
 		private static IntPtr __生成撒点_NativeFunctionPtr;
 
-		// Token: 0x040116F8 RID: 71416
+		// Token: 0x04010002 RID: 65538
 		private static IntPtr __IsEditor_NativeFunctionPtr;
 
-		// Token: 0x040116F9 RID: 71417
+		// Token: 0x04010003 RID: 65539
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x040116FA RID: 71418
+		// Token: 0x04010004 RID: 65540
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x040116FB RID: 71419
+		// Token: 0x04010005 RID: 65541
 		private static IntPtr __EditorTick_NativeFunctionPtr;
 
-		// Token: 0x040116FC RID: 71420
+		// Token: 0x04010006 RID: 65542
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x02009E5A RID: 40538
+		// Token: 0x02008E4B RID: 36427
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 2)]
 		protected ref struct __IsEditor_FunctionParams
 		{
-			// Token: 0x040316DC RID: 202460
+			// Token: 0x0402CA8C RID: 182924
 			[FieldOffset(0)]
 			public bool IsEditor;
 		}
 
-		// Token: 0x02009E5B RID: 40539
+		// Token: 0x02008E4C RID: 36428
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __EditorTick_FunctionParams
 		{
-			// Token: 0x040316DD RID: 202461
+			// Token: 0x0402CA8D RID: 182925
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x02009E5C RID: 40540
+		// Token: 0x02008E4D RID: 36429
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x040316DE RID: 202462
+			// Token: 0x0402CA8E RID: 182926
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

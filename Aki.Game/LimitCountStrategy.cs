@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001BB7 RID: 7095
+// Token: 0x02001076 RID: 4214
 public class LimitCountStrategy : ILimitStrategy
 {
-	// Token: 0x0600D398 RID: 54168 RVA: 0x0030A730 File Offset: 0x00308930
+	// Token: 0x0600A7AA RID: 42922 RVA: 0x00315824 File Offset: 0x00313A24
 	[NullableContext(1)]
 	public unsafe IValidationResult<ELimitReason> CheckLimit(ILimitContext ctx)
 	{

@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000E7A RID: 3706
+// Token: 0x0200032F RID: 815
 public enum EKscInitState
 {
-	// Token: 0x04002949 RID: 10569
+	// Token: 0x040029E4 RID: 10724
 	None,
-	// Token: 0x0400294A RID: 10570
+	// Token: 0x040029E5 RID: 10725
 	InitMap,
-	// Token: 0x0400294B RID: 10571
+	// Token: 0x040029E6 RID: 10726
 	MapLoad,
-	// Token: 0x0400294C RID: 10572
+	// Token: 0x040029E7 RID: 10727
 	WorldDone
 }

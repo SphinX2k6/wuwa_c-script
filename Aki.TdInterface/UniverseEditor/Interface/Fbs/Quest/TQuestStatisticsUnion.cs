@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004300 RID: 17152
+	// Token: 0x0200475F RID: 18271
 	public class TQuestStatisticsUnion
 	{
-		// Token: 0x17007962 RID: 31074
-		// (get) Token: 0x060196FF RID: 104191 RVA: 0x003A586F File Offset: 0x003A3A6F
-		// (set) Token: 0x06019700 RID: 104192 RVA: 0x003A5877 File Offset: 0x003A3A77
+		// Token: 0x17007F95 RID: 32661
+		// (get) Token: 0x0601AE81 RID: 110209 RVA: 0x003D119F File Offset: 0x003CF39F
+		// (set) Token: 0x0601AE82 RID: 110210 RVA: 0x003D11A7 File Offset: 0x003CF3A7
 		public TQuestStatistics Type { get; set; }
 
-		// Token: 0x17007963 RID: 31075
-		// (get) Token: 0x06019701 RID: 104193 RVA: 0x003A5880 File Offset: 0x003A3A80
-		// (set) Token: 0x06019702 RID: 104194 RVA: 0x003A5888 File Offset: 0x003A3A88
+		// Token: 0x17007F96 RID: 32662
+		// (get) Token: 0x0601AE83 RID: 110211 RVA: 0x003D11B0 File Offset: 0x003CF3B0
+		// (set) Token: 0x0601AE84 RID: 110212 RVA: 0x003D11B8 File Offset: 0x003CF3B8
 		public object Value { get; set; }
 
-		// Token: 0x06019703 RID: 104195 RVA: 0x003A5891 File Offset: 0x003A3A91
+		// Token: 0x0601AE85 RID: 110213 RVA: 0x003D11C1 File Offset: 0x003CF3C1
 		public TQuestStatisticsUnion()
 		{
 			this.Type = TQuestStatistics.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06019704 RID: 104196 RVA: 0x003A58A7 File Offset: 0x003A3AA7
+		// Token: 0x0601AE86 RID: 110214 RVA: 0x003D11D7 File Offset: 0x003CF3D7
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06019705 RID: 104197 RVA: 0x003A58B9 File Offset: 0x003A3AB9
+		// Token: 0x0601AE87 RID: 110215 RVA: 0x003D11E9 File Offset: 0x003CF3E9
 		public IQuestMechaTrackScoreT AsIQuestMechaTrackScore()
 		{
 			return this.As<IQuestMechaTrackScoreT>();
 		}
 
-		// Token: 0x06019706 RID: 104198 RVA: 0x003A58C1 File Offset: 0x003A3AC1
+		// Token: 0x0601AE88 RID: 110216 RVA: 0x003D11F1 File Offset: 0x003CF3F1
 		public static TQuestStatisticsUnion FromIQuestMechaTrackScore(IQuestMechaTrackScoreT _iquestmechatrackscore)
 		{
 			return new TQuestStatisticsUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019707 RID: 104199 RVA: 0x003A58D6 File Offset: 0x003A3AD6
+		// Token: 0x0601AE89 RID: 110217 RVA: 0x003D1206 File Offset: 0x003CF406
 		public IQuestMonsterHealthScoreT AsIQuestMonsterHealthScore()
 		{
 			return this.As<IQuestMonsterHealthScoreT>();
 		}
 
-		// Token: 0x06019708 RID: 104200 RVA: 0x003A58DE File Offset: 0x003A3ADE
+		// Token: 0x0601AE8A RID: 110218 RVA: 0x003D120E File Offset: 0x003CF40E
 		public static TQuestStatisticsUnion FromIQuestMonsterHealthScore(IQuestMonsterHealthScoreT _iquestmonsterhealthscore)
 		{
 			return new TQuestStatisticsUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019709 RID: 104201 RVA: 0x003A58F3 File Offset: 0x003A3AF3
+		// Token: 0x0601AE8B RID: 110219 RVA: 0x003D1223 File Offset: 0x003CF423
 		public IQuestMonsterPointT AsIQuestMonsterPoint()
 		{
 			return this.As<IQuestMonsterPointT>();
 		}
 
-		// Token: 0x0601970A RID: 104202 RVA: 0x003A58FB File Offset: 0x003A3AFB
+		// Token: 0x0601AE8C RID: 110220 RVA: 0x003D122B File Offset: 0x003CF42B
 		public static TQuestStatisticsUnion FromIQuestMonsterPoint(IQuestMonsterPointT _iquestmonsterpoint)
 		{
 			return new TQuestStatisticsUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601970B RID: 104203 RVA: 0x003A5910 File Offset: 0x003A3B10
+		// Token: 0x0601AE8D RID: 110221 RVA: 0x003D1240 File Offset: 0x003CF440
 		public IQuestMonsterRemainingHealthT AsIQuestMonsterRemainingHealth()
 		{
 			return this.As<IQuestMonsterRemainingHealthT>();
 		}
 
-		// Token: 0x0601970C RID: 104204 RVA: 0x003A5918 File Offset: 0x003A3B18
+		// Token: 0x0601AE8E RID: 110222 RVA: 0x003D1248 File Offset: 0x003CF448
 		public static TQuestStatisticsUnion FromIQuestMonsterRemainingHealth(IQuestMonsterRemainingHealthT _iquestmonsterremaininghealth)
 		{
 			return new TQuestStatisticsUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601970D RID: 104205 RVA: 0x003A592D File Offset: 0x003A3B2D
+		// Token: 0x0601AE8F RID: 110223 RVA: 0x003D125D File Offset: 0x003CF45D
 		public IQuestPlayerHitStatisticsT AsIQuestPlayerHitStatistics()
 		{
 			return this.As<IQuestPlayerHitStatisticsT>();
 		}
 
-		// Token: 0x0601970E RID: 104206 RVA: 0x003A5935 File Offset: 0x003A3B35
+		// Token: 0x0601AE90 RID: 110224 RVA: 0x003D1265 File Offset: 0x003CF465
 		public static TQuestStatisticsUnion FromIQuestPlayerHitStatistics(IQuestPlayerHitStatisticsT _iquestplayerhitstatistics)
 		{
 			return new TQuestStatisticsUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601970F RID: 104207 RVA: 0x003A594A File Offset: 0x003A3B4A
+		// Token: 0x0601AE91 RID: 110225 RVA: 0x003D127A File Offset: 0x003CF47A
 		public IQuestStaticTimerT AsIQuestStaticTimer()
 		{
 			return this.As<IQuestStaticTimerT>();
 		}
 
-		// Token: 0x06019710 RID: 104208 RVA: 0x003A5952 File Offset: 0x003A3B52
+		// Token: 0x0601AE92 RID: 110226 RVA: 0x003D1282 File Offset: 0x003CF482
 		public static TQuestStatisticsUnion FromIQuestStaticTimer(IQuestStaticTimerT _iqueststatictimer)
 		{
 			return new TQuestStatisticsUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019711 RID: 104209 RVA: 0x003A5967 File Offset: 0x003A3B67
+		// Token: 0x0601AE93 RID: 110227 RVA: 0x003D1297 File Offset: 0x003CF497
 		public IQuestStatisticsCollectT AsIQuestStatisticsCollect()
 		{
 			return this.As<IQuestStatisticsCollectT>();
 		}
 
-		// Token: 0x06019712 RID: 104210 RVA: 0x003A596F File Offset: 0x003A3B6F
+		// Token: 0x0601AE94 RID: 110228 RVA: 0x003D129F File Offset: 0x003CF49F
 		public static TQuestStatisticsUnion FromIQuestStatisticsCollect(IQuestStatisticsCollectT _iqueststatisticscollect)
 		{
 			return new TQuestStatisticsUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019713 RID: 104211 RVA: 0x003A5984 File Offset: 0x003A3B84
+		// Token: 0x0601AE95 RID: 110229 RVA: 0x003D12B4 File Offset: 0x003CF4B4
 		public IQuestStatisticsPlayerTriggerMotionT AsIQuestStatisticsPlayerTriggerMotion()
 		{
 			return this.As<IQuestStatisticsPlayerTriggerMotionT>();
 		}
 
-		// Token: 0x06019714 RID: 104212 RVA: 0x003A598C File Offset: 0x003A3B8C
+		// Token: 0x0601AE96 RID: 110230 RVA: 0x003D12BC File Offset: 0x003CF4BC
 		public static TQuestStatisticsUnion FromIQuestStatisticsPlayerTriggerMotion(IQuestStatisticsPlayerTriggerMotionT _iqueststatisticsplayertriggermotion)
 		{
 			return new TQuestStatisticsUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019715 RID: 104213 RVA: 0x003A59A1 File Offset: 0x003A3BA1
+		// Token: 0x0601AE97 RID: 110231 RVA: 0x003D12D1 File Offset: 0x003CF4D1
 		public IQuestStatisticsUseSkillT AsIQuestStatisticsUseSkill()
 		{
 			return this.As<IQuestStatisticsUseSkillT>();
 		}
 
-		// Token: 0x06019716 RID: 104214 RVA: 0x003A59A9 File Offset: 0x003A3BA9
+		// Token: 0x0601AE98 RID: 110232 RVA: 0x003D12D9 File Offset: 0x003CF4D9
 		public static TQuestStatisticsUnion FromIQuestStatisticsUseSkill(IQuestStatisticsUseSkillT _iqueststatisticsuseskill)
 		{
 			return new TQuestStatisticsUnion
@@ -173,13 +173,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019717 RID: 104215 RVA: 0x003A59BF File Offset: 0x003A3BBF
+		// Token: 0x0601AE99 RID: 110233 RVA: 0x003D12EF File Offset: 0x003CF4EF
 		public IQuestStatisticsUseSkillNewT AsIQuestStatisticsUseSkillNew()
 		{
 			return this.As<IQuestStatisticsUseSkillNewT>();
 		}
 
-		// Token: 0x06019718 RID: 104216 RVA: 0x003A59C7 File Offset: 0x003A3BC7
+		// Token: 0x0601AE9A RID: 110234 RVA: 0x003D12F7 File Offset: 0x003CF4F7
 		public static TQuestStatisticsUnion FromIQuestStatisticsUseSkillNew(IQuestStatisticsUseSkillNewT _iqueststatisticsuseskillnew)
 		{
 			return new TQuestStatisticsUnion
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019719 RID: 104217 RVA: 0x003A59E0 File Offset: 0x003A3BE0
+		// Token: 0x0601AE9B RID: 110235 RVA: 0x003D1310 File Offset: 0x003CF510
 		public static int Pack(FlatBufferBuilder builder, TQuestStatisticsUnion _o)
 		{
 			switch (_o.Type)

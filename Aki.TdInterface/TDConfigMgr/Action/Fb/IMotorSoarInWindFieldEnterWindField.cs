@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AAE RID: 10926
+	// Token: 0x02002DA2 RID: 11682
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMotorSoarInWindFieldEnterWindField : IMotorSoarInWindFieldControlType
 	{
-		// Token: 0x0600EFDC RID: 61404 RVA: 0x0022DAEE File Offset: 0x0022BCEE
-		[NullableContext(1)]
+		// Token: 0x0600FE92 RID: 65170 RVA: 0x0024B7FA File Offset: 0x002499FA
+		[NullableContext(0)]
 		public static IMotorSoarInWindFieldEnterWindField Create(IMotorSoarInWindFieldEnterWindField? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C42 RID: 19522
-		// (get) Token: 0x0600EFDD RID: 61405 RVA: 0x0022DB0D File Offset: 0x0022BD0D
+		// Token: 0x17004FFC RID: 20476
+		// (get) Token: 0x0600FE93 RID: 65171 RVA: 0x0024B819 File Offset: 0x00249A19
 		public override EMotorSoarInWindFieldControlType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C43 RID: 19523
-		// (get) Token: 0x0600EFDE RID: 61406 RVA: 0x0022DB1A File Offset: 0x0022BD1A
+		// Token: 0x17004FFD RID: 20477
+		// (get) Token: 0x0600FE94 RID: 65172 RVA: 0x0024B826 File Offset: 0x00249A26
 		public virtual VectorInfo Direction
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C44 RID: 19524
-		// (get) Token: 0x0600EFDF RID: 61407 RVA: 0x0022DB4E File Offset: 0x0022BD4E
+		// Token: 0x17004FFE RID: 20478
+		// (get) Token: 0x0600FE95 RID: 65173 RVA: 0x0024B85A File Offset: 0x00249A5A
 		public virtual VectorInfo Offset
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C45 RID: 19525
-		// (get) Token: 0x0600EFE0 RID: 61408 RVA: 0x0022DB82 File Offset: 0x0022BD82
+		// Token: 0x17004FFF RID: 20479
+		// (get) Token: 0x0600FE96 RID: 65174 RVA: 0x0024B88E File Offset: 0x00249A8E
 		public virtual float WindFieldDepth
 		{
 			get
@@ -76,8 +76,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C46 RID: 19526
-		// (get) Token: 0x0600EFE1 RID: 61409 RVA: 0x0022DB8F File Offset: 0x0022BD8F
+		// Token: 0x17005000 RID: 20480
+		// (get) Token: 0x0600FE97 RID: 65175 RVA: 0x0024B89B File Offset: 0x00249A9B
 		public virtual float MaxAdditionalSpeed
 		{
 			get
@@ -86,20 +86,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C47 RID: 19527
-		// (get) Token: 0x0600EFE2 RID: 61410 RVA: 0x0022DB9C File Offset: 0x0022BD9C
-		[Nullable(1)]
+		// Token: 0x17005001 RID: 20481
+		// (get) Token: 0x0600FE98 RID: 65176 RVA: 0x0024B8A8 File Offset: 0x00249AA8
+		[Nullable(0)]
 		public virtual string SpeedCurve
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.SpeedCurve;
 			}
 		}
 
-		// Token: 0x17004C48 RID: 19528
-		// (get) Token: 0x0600EFE3 RID: 61411 RVA: 0x0022DBA9 File Offset: 0x0022BDA9
+		// Token: 0x17005002 RID: 20482
+		// (get) Token: 0x0600FE99 RID: 65177 RVA: 0x0024B8B5 File Offset: 0x00249AB5
 		public virtual float SpeedTolerance
 		{
 			get
@@ -108,19 +108,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083F4 RID: 33780
+		// Token: 0x04008AF8 RID: 35576
 		private IMotorSoarInWindFieldEnterWindField Instance;
 
-		// Token: 0x040083F5 RID: 33781
+		// Token: 0x04008AF9 RID: 35577
 		private VectorInfo _DirectionCache;
 
-		// Token: 0x040083F6 RID: 33782
+		// Token: 0x04008AFA RID: 35578
 		private bool _DirectionInited;
 
-		// Token: 0x040083F7 RID: 33783
+		// Token: 0x04008AFB RID: 35579
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x040083F8 RID: 33784
+		// Token: 0x04008AFC RID: 35580
 		private bool _OffsetInited;
 	}
 }

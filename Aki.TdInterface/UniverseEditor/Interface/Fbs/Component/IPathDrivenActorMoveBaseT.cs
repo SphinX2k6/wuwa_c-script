@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056F0 RID: 22256
+	// Token: 0x02005CDF RID: 23775
 	public class IPathDrivenActorMoveBaseT
 	{
-		// Token: 0x1700A5AF RID: 42415
-		// (get) Token: 0x06025326 RID: 152358 RVA: 0x00522346 File Offset: 0x00520546
-		// (set) Token: 0x06025327 RID: 152359 RVA: 0x0052234E File Offset: 0x0052054E
+		// Token: 0x1700AEB2 RID: 44722
+		// (get) Token: 0x0602778D RID: 161677 RVA: 0x00566D92 File Offset: 0x00564F92
+		// (set) Token: 0x0602778E RID: 161678 RVA: 0x00566D9A File Offset: 0x00564F9A
 		public EPathDrivenActorMoveType Type { get; set; }
 
-		// Token: 0x06025328 RID: 152360 RVA: 0x00522357 File Offset: 0x00520557
+		// Token: 0x0602778F RID: 161679 RVA: 0x00566DA3 File Offset: 0x00564FA3
 		public IPathDrivenActorMoveBaseT()
 		{
 			this.Type = EPathDrivenActorMoveType.Spline;

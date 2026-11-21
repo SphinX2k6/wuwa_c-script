@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine.Extension
 {
-	// Token: 0x02002AE7 RID: 10983
+	// Token: 0x02000896 RID: 2198
 	public static class VectorExtension
 	{
-		// Token: 0x06028414 RID: 164884 RVA: 0x003D3B49 File Offset: 0x003D1D49
+		// Token: 0x0600BDC9 RID: 48585 RVA: 0x0012EE59 File Offset: 0x0012D059
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void Set(this FVector vector, float x, float y, float z)
 		{
@@ -15,7 +15,7 @@ namespace UnrealEngine.Extension
 			vector.Z = z;
 		}
 
-		// Token: 0x06028415 RID: 164885 RVA: 0x003D3B60 File Offset: 0x003D1D60
+		// Token: 0x0600BDCA RID: 48586 RVA: 0x0012EE70 File Offset: 0x0012D070
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void Set(this FVector vector, double x, double y, double z)
 		{
@@ -24,7 +24,7 @@ namespace UnrealEngine.Extension
 			vector.Z = (float)z;
 		}
 
-		// Token: 0x06028416 RID: 164886 RVA: 0x003D3B7A File Offset: 0x003D1D7A
+		// Token: 0x0600BDCB RID: 48587 RVA: 0x0012EE8A File Offset: 0x0012D08A
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void Set(this FVectorDouble vector, double x, double y, double z)
 		{
@@ -33,7 +33,7 @@ namespace UnrealEngine.Extension
 			vector.Z = z;
 		}
 
-		// Token: 0x06028417 RID: 164887 RVA: 0x003D3B91 File Offset: 0x003D1D91
+		// Token: 0x0600BDCC RID: 48588 RVA: 0x0012EEA1 File Offset: 0x0012D0A1
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void Set(this FVectorDouble vector, float x, float y, float z)
 		{

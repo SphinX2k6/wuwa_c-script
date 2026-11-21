@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Overview
 {
-	// Token: 0x0200574A RID: 22346
+	// Token: 0x02004721 RID: 18209
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 	})]
 	public class KurotatoRoleSkillInfoItem : GridProxyAbstract<IKurotatoRoleSkillInfo>
 	{
-		// Token: 0x06038CDA RID: 232666 RVA: 0x00D7D774 File Offset: 0x00D7B974
+		// Token: 0x0602DBEA RID: 187370 RVA: 0x00CCC030 File Offset: 0x00CCA230
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038CDB RID: 232667 RVA: 0x00D7D7BC File Offset: 0x00D7B9BC
+		// Token: 0x0602DBEB RID: 187371 RVA: 0x00CCC078 File Offset: 0x00CCA278
 		[NullableContext(1)]
 		public override void Refresh(IKurotatoRoleSkillInfo data, bool isSelected, int gridIndex)
 		{
@@ -36,10 +36,10 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			base.GetText(0).SetText(value.Desc, true);
 		}
 
-		// Token: 0x0200B93D RID: 47421
+		// Token: 0x0200A35C RID: 41820
 		private enum EChildComp
 		{
-			// Token: 0x04038071 RID: 229489
+			// Token: 0x04032A7B RID: 207483
 			TextSkillDesc
 		}
 	}

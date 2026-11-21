@@ -4,31 +4,31 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using Aki.Config;
 
-// Token: 0x020018A7 RID: 6311
+// Token: 0x02000D60 RID: 3424
 [NullableContext(1)]
 [Nullable(0)]
 public class SortResultData : IStaticVariableResetter
 {
-	// Token: 0x0600B8AD RID: 47277 RVA: 0x0029E935 File Offset: 0x0029CB35
+	// Token: 0x06008C96 RID: 35990 RVA: 0x002A9055 File Offset: 0x002A7255
 	static SortResultData()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SortResultData.CreateStaticDefaultValue), new Action(SortResultData.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600B8AE RID: 47278 RVA: 0x0029E954 File Offset: 0x0029CB54
+	// Token: 0x06008C97 RID: 35991 RVA: 0x002A9074 File Offset: 0x002A7274
 	public static void CreateStaticDefaultValue()
 	{
 		SortResultData.IncrementId = 0;
 	}
 
-	// Token: 0x0600B8AF RID: 47279 RVA: 0x0029E95C File Offset: 0x0029CB5C
+	// Token: 0x06008C98 RID: 35992 RVA: 0x002A907C File Offset: 0x002A727C
 	public static void ResetStaticDefaultValue()
 	{
 		SortResultData.IncrementId = 0;
 	}
 
-	// Token: 0x17000F4F RID: 3919
-	// (get) Token: 0x0600B8B0 RID: 47280 RVA: 0x0029E964 File Offset: 0x0029CB64
+	// Token: 0x17000F72 RID: 3954
+	// (get) Token: 0x06008C99 RID: 35993 RVA: 0x002A9084 File Offset: 0x002A7284
 	public int ConfigId
 	{
 		get
@@ -37,38 +37,38 @@ public class SortResultData : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600B8B1 RID: 47281 RVA: 0x0029E96C File Offset: 0x0029CB6C
+	// Token: 0x06008C9A RID: 35994 RVA: 0x002A908C File Offset: 0x002A728C
 	public SortResultData()
 	{
 		this.UniqueId = ++SortResultData.IncrementId;
 	}
 
-	// Token: 0x0600B8B2 RID: 47282 RVA: 0x0029E987 File Offset: 0x0029CB87
+	// Token: 0x06008C9B RID: 35995 RVA: 0x002A90A7 File Offset: 0x002A72A7
 	public void SetConfigId(int configId)
 	{
 		this.ConfigIdInternal = configId;
 	}
 
-	// Token: 0x0600B8B3 RID: 47283 RVA: 0x0029E990 File Offset: 0x0029CB90
+	// Token: 0x06008C9C RID: 35996 RVA: 0x002A90B0 File Offset: 0x002A72B0
 	public void SetSelectBaseSort(SortViewBaseSort baseSort)
 	{
 		this.SelectBaseSort = baseSort;
 	}
 
-	// Token: 0x0600B8B4 RID: 47284 RVA: 0x0029E999 File Offset: 0x0029CB99
+	// Token: 0x06008C9D RID: 35997 RVA: 0x002A90B9 File Offset: 0x002A72B9
 	public void SetSelectAttributeSort(Dictionary<int, string> attributeSort)
 	{
 		this.SelectAttributeSort = attributeSort;
 	}
 
-	// Token: 0x0600B8B5 RID: 47285 RVA: 0x0029E9A2 File Offset: 0x0029CBA2
+	// Token: 0x06008C9E RID: 35998 RVA: 0x002A90C2 File Offset: 0x002A72C2
 	[NullableContext(2)]
 	public SortViewBaseSort GetSelectBaseSort()
 	{
 		return this.SelectBaseSort;
 	}
 
-	// Token: 0x0600B8B6 RID: 47286 RVA: 0x0029E9AA File Offset: 0x0029CBAA
+	// Token: 0x06008C9F RID: 35999 RVA: 0x002A90CA File Offset: 0x002A72CA
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -79,19 +79,19 @@ public class SortResultData : IStaticVariableResetter
 		return this.SelectAttributeSort;
 	}
 
-	// Token: 0x0600B8B7 RID: 47287 RVA: 0x0029E9B2 File Offset: 0x0029CBB2
+	// Token: 0x06008CA0 RID: 36000 RVA: 0x002A90D2 File Offset: 0x002A72D2
 	public void SetIsAscending(bool value)
 	{
 		this.IsAscending = value;
 	}
 
-	// Token: 0x0600B8B8 RID: 47288 RVA: 0x0029E9BB File Offset: 0x0029CBBB
+	// Token: 0x06008CA1 RID: 36001 RVA: 0x002A90DB File Offset: 0x002A72DB
 	public bool GetIsAscending()
 	{
 		return this.IsAscending;
 	}
 
-	// Token: 0x0600B8B9 RID: 47289 RVA: 0x0029E9C4 File Offset: 0x0029CBC4
+	// Token: 0x06008CA2 RID: 36002 RVA: 0x002A90E4 File Offset: 0x002A72E4
 	public HashSet<int> GetAllSelectRuleSet()
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -115,7 +115,7 @@ public class SortResultData : IStaticVariableResetter
 		return hashSet;
 	}
 
-	// Token: 0x0600B8BA RID: 47290 RVA: 0x0029EAAC File Offset: 0x0029CCAC
+	// Token: 0x06008CA3 RID: 36003 RVA: 0x002A91CC File Offset: 0x002A73CC
 	public string ShowAllSortContent()
 	{
 		StringBuilder stringBuilder = new StringBuilder();
@@ -133,7 +133,7 @@ public class SortResultData : IStaticVariableResetter
 		return stringBuilder.ToString();
 	}
 
-	// Token: 0x0600B8BB RID: 47291 RVA: 0x0029EB58 File Offset: 0x0029CD58
+	// Token: 0x06008CA4 RID: 36004 RVA: 0x002A9278 File Offset: 0x002A7478
 	public SortStorageData ConvertToStorageData()
 	{
 		SortStorageData sortStorageData = new SortStorageData
@@ -155,14 +155,14 @@ public class SortResultData : IStaticVariableResetter
 		return sortStorageData;
 	}
 
-	// Token: 0x040053B1 RID: 21425
+	// Token: 0x0400545C RID: 21596
 	private int ConfigIdInternal;
 
-	// Token: 0x040053B2 RID: 21426
+	// Token: 0x0400545D RID: 21597
 	[Nullable(2)]
 	private SortViewBaseSort SelectBaseSort;
 
-	// Token: 0x040053B3 RID: 21427
+	// Token: 0x0400545E RID: 21598
 	[Nullable(new byte[]
 	{
 		2,
@@ -170,12 +170,12 @@ public class SortResultData : IStaticVariableResetter
 	})]
 	private Dictionary<int, string> SelectAttributeSort;
 
-	// Token: 0x040053B4 RID: 21428
+	// Token: 0x0400545F RID: 21599
 	private bool IsAscending;
 
-	// Token: 0x040053B5 RID: 21429
+	// Token: 0x04005460 RID: 21600
 	private static int IncrementId;
 
-	// Token: 0x040053B6 RID: 21430
+	// Token: 0x04005461 RID: 21601
 	public readonly int UniqueId;
 }

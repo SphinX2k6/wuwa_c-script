@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -9,28 +8,28 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.PayShop;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001198 RID: 4504
+// Token: 0x0200064C RID: 1612
 [NullableContext(1)]
 [Nullable(0)]
 public class BeginnerCarnivalData : ActivityBaseData
 {
-	// Token: 0x17000A3D RID: 2621
-	// (get) Token: 0x06007744 RID: 30532 RVA: 0x0018DF05 File Offset: 0x0018C105
+	// Token: 0x17000A5D RID: 2653
+	// (get) Token: 0x06004ADB RID: 19163 RVA: 0x00196AED File Offset: 0x00194CED
 	public Dictionary<int, List<ActivityTask>> TaskDataMap { get; } = new Dictionary<int, List<ActivityTask>>();
 
-	// Token: 0x17000A3E RID: 2622
-	// (get) Token: 0x06007745 RID: 30533 RVA: 0x0018DF0D File Offset: 0x0018C10D
+	// Token: 0x17000A5E RID: 2654
+	// (get) Token: 0x06004ADC RID: 19164 RVA: 0x00196AF5 File Offset: 0x00194CF5
 	public Dictionary<int, List<int>> JumpTaskMap { get; } = new Dictionary<int, List<int>>();
 
-	// Token: 0x17000A3F RID: 2623
-	// (get) Token: 0x06007746 RID: 30534 RVA: 0x0018DF15 File Offset: 0x0018C115
+	// Token: 0x17000A5F RID: 2655
+	// (get) Token: 0x06004ADD RID: 19165 RVA: 0x00196AFD File Offset: 0x00194CFD
 	public List<int> GachaId { get; } = new List<int>();
 
-	// Token: 0x17000A40 RID: 2624
-	// (get) Token: 0x06007747 RID: 30535 RVA: 0x0018DF1D File Offset: 0x0018C11D
+	// Token: 0x17000A60 RID: 2656
+	// (get) Token: 0x06004ADE RID: 19166 RVA: 0x00196B05 File Offset: 0x00194D05
 	public List<int> GiftId { get; } = new List<int>();
 
-	// Token: 0x06007748 RID: 30536 RVA: 0x0018DF28 File Offset: 0x0018C128
+	// Token: 0x06004ADF RID: 19167 RVA: 0x00196B10 File Offset: 0x00194D10
 	protected override void PhraseEx(ActivityData data)
 	{
 		this.TaskDataMap.Clear();
@@ -77,13 +76,13 @@ public class BeginnerCarnivalData : ActivityBaseData
 		NewbieCarnivalParam value = BeginnerCarnivalConfig.Instance.GetNewbieCarnivalParam(data.Id).Value;
 		this.ItemId = value.ItemId;
 		this.GachaId.Clear();
-		this.GachaId.AddRange(value.GetGachaIdsArray().ToArray<int>());
+		this.GachaId.AddRange(value.GetGachaIdsArray());
 		this.GiftId.Clear();
 		this.GiftId.AddRange(value.GetPayGiftsArray());
 		this.GetRoleTaskId = BeginnerCarnivalConfig.Instance.GetNewbieCarnivalTaskByTaskType(0).Value.TaskId;
 	}
 
-	// Token: 0x06007749 RID: 30537 RVA: 0x0018E120 File Offset: 0x0018C320
+	// Token: 0x06004AE0 RID: 19168 RVA: 0x00196D04 File Offset: 0x00194F04
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetProgress(int typeId)
 	{
@@ -107,7 +106,7 @@ public class BeginnerCarnivalData : ActivityBaseData
 		return new ValueTuple<int, int>(num, count);
 	}
 
-	// Token: 0x0600774A RID: 30538 RVA: 0x0018E1A0 File Offset: 0x0018C3A0
+	// Token: 0x06004AE1 RID: 19169 RVA: 0x00196D84 File Offset: 0x00194F84
 	[NullableContext(2)]
 	public ActivityTask GetTaskDataById(int taskId)
 	{
@@ -124,7 +123,7 @@ public class BeginnerCarnivalData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600774B RID: 30539 RVA: 0x0018E23C File Offset: 0x0018C43C
+	// Token: 0x06004AE2 RID: 19170 RVA: 0x00196E20 File Offset: 0x00195020
 	public List<int> GetTaskIdListByTypeId(int typeId)
 	{
 		List<int> list = new List<int>();
@@ -139,7 +138,7 @@ public class BeginnerCarnivalData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x0600774C RID: 30540 RVA: 0x0018E2AC File Offset: 0x0018C4AC
+	// Token: 0x06004AE3 RID: 19171 RVA: 0x00196E90 File Offset: 0x00195090
 	public bool GetAnyRedDotShow()
 	{
 		foreach (KeyValuePair<int, List<ActivityTask>> keyValuePair in this.TaskDataMap)
@@ -184,7 +183,7 @@ public class BeginnerCarnivalData : ActivityBaseData
 		return this.ChoseRoleId == 0;
 	}
 
-	// Token: 0x0600774D RID: 30541 RVA: 0x0018E428 File Offset: 0x0018C628
+	// Token: 0x06004AE4 RID: 19172 RVA: 0x0019700C File Offset: 0x0019520C
 	public bool GetAnyTaskRedDotShow()
 	{
 		foreach (KeyValuePair<int, List<ActivityTask>> keyValuePair in this.TaskDataMap)
@@ -203,7 +202,7 @@ public class BeginnerCarnivalData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600774E RID: 30542 RVA: 0x0018E4C0 File Offset: 0x0018C6C0
+	// Token: 0x06004AE5 RID: 19173 RVA: 0x001970A4 File Offset: 0x001952A4
 	public bool GetTabRedDotShow(int tabIndex)
 	{
 		List<ActivityTask> list;
@@ -224,7 +223,7 @@ public class BeginnerCarnivalData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600774F RID: 30543 RVA: 0x0018E52C File Offset: 0x0018C72C
+	// Token: 0x06004AE6 RID: 19174 RVA: 0x00197110 File Offset: 0x00195310
 	public bool GetRoleGetTaskTabRedDotShow(int tabIndex)
 	{
 		List<ActivityTask> list;
@@ -256,13 +255,13 @@ public class BeginnerCarnivalData : ActivityBaseData
 		return this.ChoseRoleId == 0;
 	}
 
-	// Token: 0x06007750 RID: 30544 RVA: 0x0018E5FC File Offset: 0x0018C7FC
+	// Token: 0x06004AE7 RID: 19175 RVA: 0x001971E0 File Offset: 0x001953E0
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.GetAnyRedDotShow();
 	}
 
-	// Token: 0x06007751 RID: 30545 RVA: 0x0018E604 File Offset: 0x0018C804
+	// Token: 0x06004AE8 RID: 19176 RVA: 0x001971E8 File Offset: 0x001953E8
 	public int GetCurrentItemCount()
 	{
 		if (this.ItemId == 0)
@@ -272,54 +271,54 @@ public class BeginnerCarnivalData : ActivityBaseData
 		return InventoryModel.Instance.GetItemCountByConfigId(this.ItemId, 0);
 	}
 
-	// Token: 0x06007752 RID: 30546 RVA: 0x0018E624 File Offset: 0x0018C824
+	// Token: 0x06004AE9 RID: 19177 RVA: 0x00197208 File Offset: 0x00195408
 	public bool GetHaveShopEnter()
 	{
 		bool player = LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.BeginnerCarnivalShop, false);
 		return player && player;
 	}
 
-	// Token: 0x06007753 RID: 30547 RVA: 0x0018E643 File Offset: 0x0018C843
+	// Token: 0x06004AEA RID: 19178 RVA: 0x00197227 File Offset: 0x00195427
 	public void SetShopEnter()
 	{
 		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.BeginnerCarnivalShop, true);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06007754 RID: 30548 RVA: 0x0018E668 File Offset: 0x0018C868
+	// Token: 0x06004AEB RID: 19179 RVA: 0x0019724C File Offset: 0x0019544C
 	public bool GetHaveGachaEnter()
 	{
 		bool player = LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.BeginnerCarnivalGacha, false);
 		return player && player;
 	}
 
-	// Token: 0x06007755 RID: 30549 RVA: 0x0018E687 File Offset: 0x0018C887
+	// Token: 0x06004AEC RID: 19180 RVA: 0x0019726B File Offset: 0x0019546B
 	public void SetGachaEnter()
 	{
 		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.BeginnerCarnivalGacha, true);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06007756 RID: 30550 RVA: 0x0018E6AC File Offset: 0x0018C8AC
+	// Token: 0x06004AED RID: 19181 RVA: 0x00197290 File Offset: 0x00195490
 	public bool GetHaveChoseRoleViewEnter()
 	{
 		bool player = LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.BeginnerCarnivalChoseRoleView, false);
 		return player && player;
 	}
 
-	// Token: 0x06007757 RID: 30551 RVA: 0x0018E6CB File Offset: 0x0018C8CB
+	// Token: 0x06004AEE RID: 19182 RVA: 0x001972AF File Offset: 0x001954AF
 	public void SetChoseRoleViewEnter()
 	{
 		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.BeginnerCarnivalChoseRoleView, true);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x040036B5 RID: 14005
+	// Token: 0x0400374E RID: 14158
 	public int ChoseRoleId;
 
-	// Token: 0x040036B6 RID: 14006
+	// Token: 0x0400374F RID: 14159
 	public int GetRoleTaskId;
 
-	// Token: 0x040036B7 RID: 14007
+	// Token: 0x04003750 RID: 14160
 	public int ItemId;
 }

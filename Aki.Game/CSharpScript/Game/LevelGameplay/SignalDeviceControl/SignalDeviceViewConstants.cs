@@ -2,11 +2,11 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 {
-	// Token: 0x02006A4F RID: 27215
+	// Token: 0x02005BAC RID: 23468
 	public class SignalDeviceViewConstants
 	{
-		// Token: 0x17009919 RID: 39193
-		// (get) Token: 0x06043AEE RID: 277230 RVA: 0x0108EE41 File Offset: 0x0108D041
+		// Token: 0x17006DFE RID: 28158
+		// (get) Token: 0x06039B3C RID: 236348 RVA: 0x01033665 File Offset: 0x01031865
 		public static int GRIDNUM
 		{
 			get

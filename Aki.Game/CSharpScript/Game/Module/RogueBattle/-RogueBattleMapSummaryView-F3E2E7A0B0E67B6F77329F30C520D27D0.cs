@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EF1 RID: 20209
+	// Token: 0x02003EBA RID: 16058
 	internal enum <RogueBattleMapSummaryView>F3E2E7A0B0E67B6F77329F30C520D27D085281CDCE75596C5D2BC094079558474__EChildComponentType
 	{
-		// Token: 0x0401B8BE RID: 112830
+		// Token: 0x04016291 RID: 90769
 		CaptionItem,
-		// Token: 0x0401B8BF RID: 112831
+		// Token: 0x04016292 RID: 90770
 		InfoContent,
-		// Token: 0x0401B8C0 RID: 112832
+		// Token: 0x04016293 RID: 90771
 		EmptyItem,
-		// Token: 0x0401B8C1 RID: 112833
+		// Token: 0x04016294 RID: 90772
 		TogTab,
-		// Token: 0x0401B8C2 RID: 112834
+		// Token: 0x04016295 RID: 90773
 		Background,
-		// Token: 0x0401B8C3 RID: 112835
+		// Token: 0x04016296 RID: 90774
 		TabPanel
 	}
 }

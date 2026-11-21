@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000793 RID: 1939
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000834 RID: 2100
 	public class ITimeStopTarget
 	{
-		// Token: 0x06002A04 RID: 10756 RVA: 0x0006E83C File Offset: 0x0006CA3C
+		// Token: 0x06002D2C RID: 11564 RVA: 0x00075AE4 File Offset: 0x00073CE4
 		private ITimeStopTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002A05 RID: 10757 RVA: 0x0006E874 File Offset: 0x0006CA74
+		// Token: 0x06002D2D RID: 11565 RVA: 0x00075B1C File Offset: 0x00073D1C
 		public static ITimeStopTarget Create([Nullable(2)] ITimeStopTarget instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A06 RID: 10758 RVA: 0x0006E887 File Offset: 0x0006CA87
+		// Token: 0x06002D2E RID: 11566 RVA: 0x00075B2F File Offset: 0x00073D2F
 		public static ITimeStopTarget CreateFromSetValue([Nullable(2)] ITimeStopTarget_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A07 RID: 10759 RVA: 0x0006E89A File Offset: 0x0006CA9A
+		// Token: 0x06002D2F RID: 11567 RVA: 0x00075B42 File Offset: 0x00073D42
 		public ITimeStopTarget_SetValue ToSetValue()
 		{
 			return new ITimeStopTarget_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B07 RID: 2823
-		// (get) Token: 0x06002A08 RID: 10760 RVA: 0x0006E8B9 File Offset: 0x0006CAB9
-		// (set) Token: 0x06002A09 RID: 10761 RVA: 0x0006E8E0 File Offset: 0x0006CAE0
+		// Token: 0x17000BC9 RID: 3017
+		// (get) Token: 0x06002D30 RID: 11568 RVA: 0x00075B61 File Offset: 0x00073D61
+		// (set) Token: 0x06002D31 RID: 11569 RVA: 0x00075B88 File Offset: 0x00073D88
 		public virtual List<int> EntityIds
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B08 RID: 2824
-		// (get) Token: 0x06002A0A RID: 10762 RVA: 0x0006E8F0 File Offset: 0x0006CAF0
-		// (set) Token: 0x06002A0B RID: 10763 RVA: 0x0006E951 File Offset: 0x0006CB51
+		// Token: 0x17000BCA RID: 3018
+		// (get) Token: 0x06002D32 RID: 11570 RVA: 0x00075B98 File Offset: 0x00073D98
+		// (set) Token: 0x06002D33 RID: 11571 RVA: 0x00075BF9 File Offset: 0x00073DF9
 		[Nullable(2)]
 		public virtual IDynamicEntityMatch EntityMatch
 		{
@@ -118,18 +116,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C20 RID: 7200
+		// Token: 0x04001E29 RID: 7721
 		[Nullable(2)]
 		protected ITimeStopTarget FbInstance;
 
-		// Token: 0x04001C21 RID: 7201
+		// Token: 0x04001E2A RID: 7722
 		[Nullable(2)]
 		protected ITimeStopTarget_SetValue PocoInterface;
 
-		// Token: 0x04001C22 RID: 7202
+		// Token: 0x04001E2B RID: 7723
 		private IDynamicEntityMatch _EntityMatchCache;
 
-		// Token: 0x04001C23 RID: 7203
+		// Token: 0x04001E2C RID: 7724
 		private bool _EntityMatchInited;
 	}
 }

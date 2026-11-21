@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A21 RID: 6689
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BB6 RID: 7094
 	public class IExecuteTag : IInteractEffect
 	{
-		// Token: 0x06008F46 RID: 36678 RVA: 0x0014EAE0 File Offset: 0x0014CCE0
+		// Token: 0x060096B0 RID: 38576 RVA: 0x0015EA0C File Offset: 0x0015CC0C
 		private IExecuteTag_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008F47 RID: 36679 RVA: 0x0014EB18 File Offset: 0x0014CD18
+		// Token: 0x060096B1 RID: 38577 RVA: 0x0015EA44 File Offset: 0x0015CC44
 		public static IExecuteTag Create([Nullable(2)] IExecuteTag instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008F48 RID: 36680 RVA: 0x0014EB2B File Offset: 0x0014CD2B
+		// Token: 0x060096B2 RID: 38578 RVA: 0x0015EA57 File Offset: 0x0015CC57
 		public static IExecuteTag CreateFromSetValue([Nullable(2)] IExecuteTag_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008F49 RID: 36681 RVA: 0x0014EB3E File Offset: 0x0014CD3E
+		// Token: 0x060096B3 RID: 38579 RVA: 0x0015EA6A File Offset: 0x0015CC6A
 		public new IExecuteTag_SetValue ToSetValue()
 		{
 			return new IExecuteTag_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DC7 RID: 11719
-		// (get) Token: 0x06008F4A RID: 36682 RVA: 0x0014EB69 File Offset: 0x0014CD69
-		// (set) Token: 0x06008F4B RID: 36683 RVA: 0x0014EB94 File Offset: 0x0014CD94
+		// Token: 0x17002FD4 RID: 12244
+		// (get) Token: 0x060096B4 RID: 38580 RVA: 0x0015EA95 File Offset: 0x0015CC95
+		// (set) Token: 0x060096B5 RID: 38581 RVA: 0x0015EAC0 File Offset: 0x0015CCC0
 		public override EInteractEffectType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DC8 RID: 11720
-		// (get) Token: 0x06008F4C RID: 36684 RVA: 0x0014EBA4 File Offset: 0x0014CDA4
-		// (set) Token: 0x06008F4D RID: 36685 RVA: 0x0014EBDE File Offset: 0x0014CDDE
+		// Token: 0x17002FD5 RID: 12245
+		// (get) Token: 0x060096B6 RID: 38582 RVA: 0x0015EAD0 File Offset: 0x0015CCD0
+		// (set) Token: 0x060096B7 RID: 38583 RVA: 0x0015EB0A File Offset: 0x0015CD0A
 		public override float? DelayTime
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DC9 RID: 11721
-		// (get) Token: 0x06008F4E RID: 36686 RVA: 0x0014EBEC File Offset: 0x0014CDEC
-		// (set) Token: 0x06008F4F RID: 36687 RVA: 0x0014EC13 File Offset: 0x0014CE13
+		// Token: 0x17002FD6 RID: 12246
+		// (get) Token: 0x060096B8 RID: 38584 RVA: 0x0015EB18 File Offset: 0x0015CD18
+		// (set) Token: 0x060096B9 RID: 38585 RVA: 0x0015EB3F File Offset: 0x0015CD3F
 		public virtual List<int> Tags
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040058AC RID: 22700
+		// Token: 0x04005D11 RID: 23825
 		[Nullable(2)]
 		protected new IExecuteTag FbInstance;
 
-		// Token: 0x040058AD RID: 22701
+		// Token: 0x04005D12 RID: 23826
 		[Nullable(2)]
 		protected new IExecuteTag_SetValue PocoInterface;
 	}

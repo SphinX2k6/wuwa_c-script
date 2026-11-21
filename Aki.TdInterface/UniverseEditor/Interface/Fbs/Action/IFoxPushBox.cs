@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200685E RID: 26718
+	// Token: 0x02006EF3 RID: 28403
 	public struct IFoxPushBox : IFlatbufferObject
 	{
-		// Token: 0x1700C672 RID: 50802
-		// (get) Token: 0x0602E963 RID: 190819 RVA: 0x0065AD5C File Offset: 0x00658F5C
+		// Token: 0x1700D046 RID: 53318
+		// (get) Token: 0x06031249 RID: 201289 RVA: 0x006A95C8 File Offset: 0x006A77C8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E964 RID: 190820 RVA: 0x0065AD69 File Offset: 0x00658F69
+		// Token: 0x0603124A RID: 201290 RVA: 0x006A95D5 File Offset: 0x006A77D5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E965 RID: 190821 RVA: 0x0065AD70 File Offset: 0x00658F70
+		// Token: 0x0603124B RID: 201291 RVA: 0x006A95DC File Offset: 0x006A77DC
 		public static IFoxPushBox GetRootAsIFoxPushBox(ByteBuffer _bb)
 		{
 			return IFoxPushBox.GetRootAsIFoxPushBox(_bb, default(IFoxPushBox));
 		}
 
-		// Token: 0x0602E966 RID: 190822 RVA: 0x0065AD8C File Offset: 0x00658F8C
+		// Token: 0x0603124C RID: 201292 RVA: 0x006A95F8 File Offset: 0x006A77F8
 		public static IFoxPushBox GetRootAsIFoxPushBox(ByteBuffer _bb, IFoxPushBox obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E967 RID: 190823 RVA: 0x0065ADA9 File Offset: 0x00658FA9
+		// Token: 0x0603124D RID: 201293 RVA: 0x006A9615 File Offset: 0x006A7815
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E968 RID: 190824 RVA: 0x0065ADB8 File Offset: 0x00658FB8
+		// Token: 0x0603124E RID: 201294 RVA: 0x006A9624 File Offset: 0x006A7824
 		public IFoxPushBox __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C673 RID: 50803
-		// (get) Token: 0x0602E969 RID: 190825 RVA: 0x0065ADC8 File Offset: 0x00658FC8
+		// Token: 0x1700D047 RID: 53319
+		// (get) Token: 0x0603124F RID: 201295 RVA: 0x006A9634 File Offset: 0x006A7834
 		public ELeisureInteract Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C674 RID: 50804
-		// (get) Token: 0x0602E96A RID: 190826 RVA: 0x0065AE04 File Offset: 0x00659004
+		// Token: 0x1700D048 RID: 53320
+		// (get) Token: 0x06031250 RID: 201296 RVA: 0x006A9670 File Offset: 0x006A7870
 		public int EntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C675 RID: 50805
-		// (get) Token: 0x0602E96B RID: 190827 RVA: 0x0065AE40 File Offset: 0x00659040
+		// Token: 0x1700D049 RID: 53321
+		// (get) Token: 0x06031251 RID: 201297 RVA: 0x006A96AC File Offset: 0x006A78AC
 		public int CollisionRadius
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C676 RID: 50806
-		// (get) Token: 0x0602E96C RID: 190828 RVA: 0x0065AE7C File Offset: 0x0065907C
+		// Token: 0x1700D04A RID: 53322
+		// (get) Token: 0x06031252 RID: 201298 RVA: 0x006A96E8 File Offset: 0x006A78E8
 		public int SplineEntityId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C677 RID: 50807
-		// (get) Token: 0x0602E96D RID: 190829 RVA: 0x0065AEBC File Offset: 0x006590BC
+		// Token: 0x1700D04B RID: 53323
+		// (get) Token: 0x06031253 RID: 201299 RVA: 0x006A9728 File Offset: 0x006A7928
 		public string SendEntityEventOnSplineFinish
 		{
 			get
@@ -122,19 +122,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E96E RID: 190830 RVA: 0x0065AEF4 File Offset: 0x006590F4
+		// Token: 0x06031254 RID: 201300 RVA: 0x006A9760 File Offset: 0x006A7960
 		public Span<byte> GetSendEntityEventOnSplineFinishBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0602E96F RID: 190831 RVA: 0x0065AF04 File Offset: 0x00659104
+		// Token: 0x06031255 RID: 201301 RVA: 0x006A9770 File Offset: 0x006A7970
 		public byte[] GetSendEntityEventOnSplineFinishArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x0602E970 RID: 190832 RVA: 0x0065AF13 File Offset: 0x00659113
+		// Token: 0x06031256 RID: 201302 RVA: 0x006A977F File Offset: 0x006A797F
 		public static Offset<IFoxPushBox> CreateIFoxPushBox(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill, int EntityId = 0, int CollisionRadius = 0, int SplineEntityId = 0, StringOffset SendEntityEventOnSplineFinishOffset = default(StringOffset))
 		{
 			builder.StartTable(5);
@@ -146,49 +146,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFoxPushBox.EndIFoxPushBox(builder);
 		}
 
-		// Token: 0x0602E971 RID: 190833 RVA: 0x0065AF47 File Offset: 0x00659147
+		// Token: 0x06031257 RID: 201303 RVA: 0x006A97B3 File Offset: 0x006A79B3
 		public static void StartIFoxPushBox(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602E972 RID: 190834 RVA: 0x0065AF50 File Offset: 0x00659150
+		// Token: 0x06031258 RID: 201304 RVA: 0x006A97BC File Offset: 0x006A79BC
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E973 RID: 190835 RVA: 0x0065AF5B File Offset: 0x0065915B
+		// Token: 0x06031259 RID: 201305 RVA: 0x006A97C7 File Offset: 0x006A79C7
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x0602E974 RID: 190836 RVA: 0x0065AF66 File Offset: 0x00659166
+		// Token: 0x0603125A RID: 201306 RVA: 0x006A97D2 File Offset: 0x006A79D2
 		public static void AddCollisionRadius(FlatBufferBuilder builder, int collisionRadius)
 		{
 			builder.AddInt(2, collisionRadius, 0);
 		}
 
-		// Token: 0x0602E975 RID: 190837 RVA: 0x0065AF71 File Offset: 0x00659171
+		// Token: 0x0603125B RID: 201307 RVA: 0x006A97DD File Offset: 0x006A79DD
 		public static void AddSplineEntityId(FlatBufferBuilder builder, int splineEntityId)
 		{
 			builder.AddInt(3, splineEntityId, 0);
 		}
 
-		// Token: 0x0602E976 RID: 190838 RVA: 0x0065AF7C File Offset: 0x0065917C
+		// Token: 0x0603125C RID: 201308 RVA: 0x006A97E8 File Offset: 0x006A79E8
 		public static void AddSendEntityEventOnSplineFinish(FlatBufferBuilder builder, StringOffset sendEntityEventOnSplineFinishOffset)
 		{
 			builder.AddOffset(4, sendEntityEventOnSplineFinishOffset.Value, 0);
 		}
 
-		// Token: 0x0602E977 RID: 190839 RVA: 0x0065AF8C File Offset: 0x0065918C
+		// Token: 0x0603125D RID: 201309 RVA: 0x006A97F8 File Offset: 0x006A79F8
 		public static Offset<IFoxPushBox> EndIFoxPushBox(FlatBufferBuilder builder)
 		{
 			return new Offset<IFoxPushBox>(builder.EndTable());
 		}
 
-		// Token: 0x0602E978 RID: 190840 RVA: 0x0065AF9C File Offset: 0x0065919C
+		// Token: 0x0603125E RID: 201310 RVA: 0x006A9808 File Offset: 0x006A7A08
 		public IFoxPushBoxT UnPack()
 		{
 			IFoxPushBoxT foxPushBoxT = new IFoxPushBoxT();
@@ -196,7 +196,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return foxPushBoxT;
 		}
 
-		// Token: 0x0602E979 RID: 190841 RVA: 0x0065AFB7 File Offset: 0x006591B7
+		// Token: 0x0603125F RID: 201311 RVA: 0x006A9823 File Offset: 0x006A7A23
 		public void UnPackTo(IFoxPushBoxT _o)
 		{
 			_o.Type = this.Type;
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.SendEntityEventOnSplineFinish = this.SendEntityEventOnSplineFinish;
 		}
 
-		// Token: 0x0602E97A RID: 190842 RVA: 0x0065AFF8 File Offset: 0x006591F8
+		// Token: 0x06031260 RID: 201312 RVA: 0x006A9864 File Offset: 0x006A7A64
 		public static Offset<IFoxPushBox> Pack(FlatBufferBuilder builder, IFoxPushBoxT _o)
 		{
 			if (_o == null)
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFoxPushBox.CreateIFoxPushBox(builder, _o.Type, _o.EntityId, _o.CollisionRadius, _o.SplineEntityId, sendEntityEventOnSplineFinishOffset);
 		}
 
-		// Token: 0x04010FAB RID: 69547
+		// Token: 0x04011DF5 RID: 73205
 		private Table __p;
 	}
 }

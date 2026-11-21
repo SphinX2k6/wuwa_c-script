@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -17,13 +16,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x020022DC RID: 8924
+// Token: 0x020017C0 RID: 6080
 [NullableContext(2)]
 [Nullable(0)]
 [TickController(0)]
 public class OnlineController : UiControllerBase
 {
-	// Token: 0x060118AC RID: 71852 RVA: 0x0044C754 File Offset: 0x0044A954
+	// Token: 0x0600ED43 RID: 60739 RVA: 0x0045945C File Offset: 0x0045765C
 	protected override bool OnInit()
 	{
 		int? intConfig = ConfigCommonParamById.GetIntConfig("netstate_push_interval");
@@ -40,7 +39,7 @@ public class OnlineController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060118AD RID: 71853 RVA: 0x0044C859 File Offset: 0x0044AA59
+	// Token: 0x0600ED44 RID: 60740 RVA: 0x00459561 File Offset: 0x00457761
 	protected override bool OnClear()
 	{
 		if (this.JoinSessionDelegate != null)
@@ -52,7 +51,7 @@ public class OnlineController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060118AE RID: 71854 RVA: 0x0044C884 File Offset: 0x0044AA84
+	// Token: 0x0600ED45 RID: 60741 RVA: 0x0045958C File Offset: 0x0045778C
 	[NullableContext(1)]
 	private unsafe void AddJoinSessionDelegate(string userId, string playerSession)
 	{
@@ -81,7 +80,7 @@ public class OnlineController : UiControllerBase
 		this.TryApplyJoinWorldRequest(playerSession).Forget();
 	}
 
-	// Token: 0x060118AF RID: 71855 RVA: 0x0044C998 File Offset: 0x0044AB98
+	// Token: 0x0600ED46 RID: 60742 RVA: 0x004596A0 File Offset: 0x004578A0
 	[NullableContext(1)]
 	public unsafe static void OnThirdPartyJoinSessionEvent(string userId, string playerSession)
 	{
@@ -93,12 +92,6 @@ public class OnlineController : UiControllerBase
 		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("userId:", userId);
 		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("playerSession", playerSession);
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-		if (!KuroSdkController.Instance.CheckPrivilege(ESdkPrivilege.UserGeneratedContent))
-		{
-			Log.Instance.Info(ELogModule.Chat, ELogAuthor.LJQ, "OnThirdPartyJoinSessionEvent 玩家没有UGC权限", default(ReadOnlySpan<ValueTuple<string, object>>));
-			OnlineController.Instance.OpenThirdPartyMessageBox(ESdkPrivilege.UserGeneratedContent).Forget();
-			return;
-		}
 		if (UiManager.Instance.IsViewShow(EUiViewName.LoginView) || LoadingModel.Instance.IsLoadingView || LoginModel.Instance.IsLoginStatus(LoginDefine.ELoginStatus.Init))
 		{
 			LoginModel.Instance.ThirdGameAutoLoginId = playerSession;
@@ -115,7 +108,7 @@ public class OnlineController : UiControllerBase
 		OnlineController.Instance.TryApplyJoinWorldRequest(playerSession).Forget();
 	}
 
-	// Token: 0x060118B0 RID: 71856 RVA: 0x0044CAE4 File Offset: 0x0044ACE4
+	// Token: 0x0600ED47 RID: 60743 RVA: 0x004597B0 File Offset: 0x004579B0
 	[NullableContext(1)]
 	private UniTask TryApplyJoinWorldRequest(string playerSession)
 	{
@@ -128,7 +121,7 @@ public class OnlineController : UiControllerBase
 		return <TryApplyJoinWorldRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060118B1 RID: 71857 RVA: 0x0044CB30 File Offset: 0x0044AD30
+	// Token: 0x0600ED48 RID: 60744 RVA: 0x004597FC File Offset: 0x004579FC
 	private UniTask OpenThirdPartyMessageBox(ESdkPrivilege privilege)
 	{
 		OnlineController.<OpenThirdPartyMessageBox>d__20 <OpenThirdPartyMessageBox>d__;
@@ -139,7 +132,7 @@ public class OnlineController : UiControllerBase
 		return <OpenThirdPartyMessageBox>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060118B2 RID: 71858 RVA: 0x0044CB74 File Offset: 0x0044AD74
+	// Token: 0x0600ED49 RID: 60745 RVA: 0x00459840 File Offset: 0x00457A40
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int>(EEventName.ScenePlayerLeaveScene, new Action<int>(this.ScenePlayerLeaveScene));
@@ -152,7 +145,7 @@ public class OnlineController : UiControllerBase
 		EventSystem.Instance.Add(EEventName.CsRequestJoinWorld, new Action<int, int>(this.CsRequestJoinWorld));
 	}
 
-	// Token: 0x060118B3 RID: 71859 RVA: 0x0044CC64 File Offset: 0x0044AE64
+	// Token: 0x0600ED4A RID: 60746 RVA: 0x00459930 File Offset: 0x00457B30
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.ScenePlayerLeaveScene, new Action<int>(this.ScenePlayerLeaveScene));
@@ -164,7 +157,7 @@ public class OnlineController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.CsRequestJoinWorld, new Action<int, int>(this.CsRequestJoinWorld));
 	}
 
-	// Token: 0x060118B4 RID: 71860 RVA: 0x0044CD38 File Offset: 0x0044AF38
+	// Token: 0x0600ED4B RID: 60747 RVA: 0x00459A04 File Offset: 0x00457C04
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.ApplyJoinWorldNotify, new Action<IMessage, Net.CallbackStatus>(this.ApplyJoinWorldNotify));
@@ -186,9 +179,10 @@ public class OnlineController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.ClientVersionNoMatchNotify, new Action<IMessage, Net.CallbackStatus>(this.ClientVersionNoMatchNotify));
 		Net.Instance.Register(ENotifyMessageId.PlayerGravityUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.PlayerGravityUpdateNotify));
 		Net.Instance.Register(ENotifyMessageId.TeamTeleportStartNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTeamTeleportStartNotify));
+		Net.Instance.Register(ENotifyMessageId.PlayerNetStateS2cNotify, new Action<IMessage, Net.CallbackStatus>(this.PlayerNetStateS2cNotify));
 	}
 
-	// Token: 0x060118B5 RID: 71861 RVA: 0x0044CF5C File Offset: 0x0044B15C
+	// Token: 0x0600ED4C RID: 60748 RVA: 0x00459C44 File Offset: 0x00457E44
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.ApplyJoinWorldNotify);
@@ -211,7 +205,7 @@ public class OnlineController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.TeamTeleportStartNotify);
 	}
 
-	// Token: 0x060118B6 RID: 71862 RVA: 0x0044D08C File Offset: 0x0044B28C
+	// Token: 0x0600ED4D RID: 60749 RVA: 0x00459D74 File Offset: 0x00457F74
 	private void WorldDone()
 	{
 		OnlineModel.Instance.SetPermissionsSetting((WorldEnterPermission)FunctionModel.Instance.GetWorldPermission().GetValueOrDefault());
@@ -219,19 +213,13 @@ public class OnlineController : UiControllerBase
 		OnlineModel.Instance.ClearOtherScenePlayerDataList();
 	}
 
-	// Token: 0x060118B7 RID: 71863 RVA: 0x0044D0C8 File Offset: 0x0044B2C8
+	// Token: 0x0600ED4E RID: 60750 RVA: 0x00459DB0 File Offset: 0x00457FB0
 	private void RefreshWorldPermissionSetting()
 	{
 		if (!KuroSdkController.Instance.CheckPrivilege(ESdkPrivilege.Multiplayer))
 		{
 			OnlineController.Instance.WorldEnterPermissionsRequest(WorldEnterPermission.ForbidJoin);
 			Log.Instance.Info(ELogModule.InstanceDungeon, ELogAuthor.YZY, "通信受限，禁止加入联机", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return;
-		}
-		if (!KuroSdkController.Instance.CheckPrivilege(ESdkPrivilege.UserGeneratedContent))
-		{
-			OnlineController.Instance.WorldEnterPermissionsRequest(WorldEnterPermission.ForbidJoin);
-			Log.Instance.Info(ELogModule.InstanceDungeon, ELogAuthor.YZY, "ugcPrivilege受限，禁止加入联机", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return;
 		}
 		KuroSdkController.Instance.GetCommunicationRestricted(PlayerInfoModel.Instance.GetThirdPartyAccountId(), delegate(ESdkCommunicationRestricted state)
@@ -244,7 +232,7 @@ public class OnlineController : UiControllerBase
 		});
 	}
 
-	// Token: 0x060118B8 RID: 71864 RVA: 0x0044D174 File Offset: 0x0044B374
+	// Token: 0x0600ED4F RID: 60751 RVA: 0x00459E28 File Offset: 0x00458028
 	private void WorldDoneAndCloseLoading()
 	{
 		string thirdGameAutoLoginId = LoginModel.Instance.ThirdGameAutoLoginId;
@@ -269,7 +257,7 @@ public class OnlineController : UiControllerBase
 		this.RefreshSingleConfirm();
 	}
 
-	// Token: 0x060118B9 RID: 71865 RVA: 0x0044D215 File Offset: 0x0044B415
+	// Token: 0x0600ED50 RID: 60752 RVA: 0x00459EC9 File Offset: 0x004580C9
 	private EConfirmBoxConfigId GetConfirmBoxIdByNoMatchType()
 	{
 		if (this.NoMatchType.GetValueOrDefault() == TeamType.MatchTeam)
@@ -279,7 +267,7 @@ public class OnlineController : UiControllerBase
 		return EConfirmBoxConfigId.ClientVersionNoMatchOnline;
 	}
 
-	// Token: 0x060118BA RID: 71866 RVA: 0x0044D230 File Offset: 0x0044B430
+	// Token: 0x0600ED51 RID: 60753 RVA: 0x00459EE4 File Offset: 0x004580E4
 	private void OnCloseLoadingView()
 	{
 		if (PlatformSdkManagerNew.Instance.IsSdkOn && GameModeModel.Instance.IsMulti)
@@ -296,7 +284,7 @@ public class OnlineController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060118BB RID: 71867 RVA: 0x0044D29C File Offset: 0x0044B49C
+	// Token: 0x0600ED52 RID: 60754 RVA: 0x00459F50 File Offset: 0x00458150
 	private void ScenePlayerLeaveScene(int playerId)
 	{
 		if (!GameModeController.Instance.IsInInstance())
@@ -315,7 +303,7 @@ public class OnlineController : UiControllerBase
 		ScrollingTipsController.Instance.ShowTipsByTextId("OnlineSomeOneLeaveInstance", Array.Empty<object>());
 	}
 
-	// Token: 0x060118BC RID: 71868 RVA: 0x0044D31C File Offset: 0x0044B51C
+	// Token: 0x0600ED53 RID: 60755 RVA: 0x00459FD0 File Offset: 0x004581D0
 	private void OnCloseLoading()
 	{
 		if (this.TipsCache == null)
@@ -326,7 +314,7 @@ public class OnlineController : UiControllerBase
 		this.TipsCache = null;
 	}
 
-	// Token: 0x060118BD RID: 71869 RVA: 0x0044D36F File Offset: 0x0044B56F
+	// Token: 0x0600ED54 RID: 60756 RVA: 0x0045A023 File Offset: 0x00458223
 	private void OnSetGameModeDataDone()
 	{
 		if (this.IsFirstSetMode)
@@ -339,7 +327,7 @@ public class OnlineController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060118BE RID: 71870 RVA: 0x0044D397 File Offset: 0x0044B597
+	// Token: 0x0600ED55 RID: 60757 RVA: 0x0045A04B File Offset: 0x0045824B
 	[NullableContext(1)]
 	private void OnInputAnyKey(bool bPress, FKey key)
 	{
@@ -347,7 +335,7 @@ public class OnlineController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.OnInputAnyKey, new Action<bool, FKey>(this.OnInputAnyKey));
 	}
 
-	// Token: 0x060118BF RID: 71871 RVA: 0x0044D3C4 File Offset: 0x0044B5C4
+	// Token: 0x0600ED56 RID: 60758 RVA: 0x0045A078 File Offset: 0x00458278
 	[NullableContext(0)]
 	public UniTask<bool> RefreshWorldList()
 	{
@@ -359,7 +347,7 @@ public class OnlineController : UiControllerBase
 		return <RefreshWorldList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060118C0 RID: 71872 RVA: 0x0044D408 File Offset: 0x0044B608
+	// Token: 0x0600ED57 RID: 60759 RVA: 0x0045A0BC File Offset: 0x004582BC
 	protected override void OnTick(float delta)
 	{
 		if (!GameModeModel.Instance.WorldDone || !GameModeModel.Instance.IsMulti)
@@ -371,12 +359,12 @@ public class OnlineController : UiControllerBase
 		if (lastPingPush.GetValueOrDefault() > pingPushInterval.GetValueOrDefault() & (lastPingPush != null & pingPushInterval != null))
 		{
 			this.LastPingPush -= this.PingPushInterval.Value;
-			this.PlayerNetStatePush();
+			this.PlayerNetStateCheck();
 		}
 		this.LastPingPush += delta;
 	}
 
-	// Token: 0x060118C1 RID: 71873 RVA: 0x0044D4D0 File Offset: 0x0044B6D0
+	// Token: 0x0600ED58 RID: 60760 RVA: 0x0045A184 File Offset: 0x00458384
 	[NullableContext(0)]
 	public UniTask<bool> LobbyListRequest(bool isFriend)
 	{
@@ -389,7 +377,7 @@ public class OnlineController : UiControllerBase
 		return <LobbyListRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060118C2 RID: 71874 RVA: 0x0044D51C File Offset: 0x0044B71C
+	// Token: 0x0600ED59 RID: 60761 RVA: 0x0045A1D0 File Offset: 0x004583D0
 	[NullableContext(1)]
 	private UniTask OnLobbyListRequest(LobbyListResponse response, bool isFriend)
 	{
@@ -402,7 +390,7 @@ public class OnlineController : UiControllerBase
 		return <OnLobbyListRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060118C3 RID: 71875 RVA: 0x0044D568 File Offset: 0x0044B768
+	// Token: 0x0600ED5A RID: 60762 RVA: 0x0045A21C File Offset: 0x0045841C
 	public void WorldEnterPermissionsRequest(WorldEnterPermission type)
 	{
 		WorldEnterPermissionsRequest worldEnterPermissionsRequest = Aki.Protocol.WorldEnterPermissionsRequest.Create();
@@ -412,7 +400,7 @@ public class OnlineController : UiControllerBase
 			WorldEnterPermissionsResponse worldEnterPermissionsResponse = (WorldEnterPermissionsResponse)msg;
 			if (worldEnterPermissionsResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(worldEnterPermissionsResponse.ErrorCode, 26732, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(worldEnterPermissionsResponse.ErrorCode, 24472, null, true, true);
 				return;
 			}
 			OnlineModel.Instance.SetPermissionsSetting(worldEnterPermissionsResponse.Type);
@@ -420,7 +408,7 @@ public class OnlineController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060118C4 RID: 71876 RVA: 0x0044D5B4 File Offset: 0x0044B7B4
+	// Token: 0x0600ED5B RID: 60763 RVA: 0x0045A268 File Offset: 0x00458468
 	public void ApplyJoinWorldRequest(int worldId, WorldEnterWay entryWay)
 	{
 		if (!GameModeModel.Instance.IsMulti && !OnlineController.Instance.CheckPlatformCanopen())
@@ -439,25 +427,25 @@ public class OnlineController : UiControllerBase
 			ApplyJoinWorldResponse applyJoinWorldResponse = (ApplyJoinWorldResponse)msg;
 			if (applyJoinWorldResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(applyJoinWorldResponse.ErrorCode, 24536, applyJoinWorldResponse.ErrorParams.ToArray<string>(), true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(applyJoinWorldResponse.ErrorCode, 15396, applyJoinWorldResponse.ErrorParams, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x060118C5 RID: 71877 RVA: 0x0044D62C File Offset: 0x0044B82C
+	// Token: 0x0600ED5C RID: 60764 RVA: 0x0045A2E0 File Offset: 0x004584E0
 	private bool CheckTowerViewIfOpen()
 	{
 		return UiManager.Instance.IsViewOpen(EUiViewName.CycleTowerView) || UiManager.Instance.IsViewOpen(EUiViewName.CycleTowerChallengeView) || UiManager.Instance.IsViewOpen(EUiViewName.CycleTowerTeamView) || (UiManager.Instance.IsViewOpen(EUiViewName.SingleTimeTowerView) || UiManager.Instance.IsViewOpen(EUiViewName.SingleTimeTowerChallengeView) || UiManager.Instance.IsViewOpen(EUiViewName.SingleTimeTowerTeamView));
 	}
 
-	// Token: 0x060118C6 RID: 71878 RVA: 0x0044D6A4 File Offset: 0x0044B8A4
+	// Token: 0x0600ED5D RID: 60765 RVA: 0x0045A358 File Offset: 0x00458558
 	public void ApplyJoinWorldNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ApplyJoinWorldNotify message = (ApplyJoinWorldNotify)msg;
 		this.OnApplyJoinNotify(message).Forget();
 	}
 
-	// Token: 0x060118C7 RID: 71879 RVA: 0x0044D6C4 File Offset: 0x0044B8C4
+	// Token: 0x0600ED5E RID: 60766 RVA: 0x0045A378 File Offset: 0x00458578
 	[NullableContext(1)]
 	private UniTask OnApplyJoinNotify(ApplyJoinWorldNotify message)
 	{
@@ -470,7 +458,7 @@ public class OnlineController : UiControllerBase
 		return <OnApplyJoinNotify>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060118C8 RID: 71880 RVA: 0x0044D710 File Offset: 0x0044B910
+	// Token: 0x0600ED5F RID: 60767 RVA: 0x0045A3C4 File Offset: 0x004585C4
 	public void AgreeJoinResultNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		AgreeJoinResultNotify agreeJoinResultNotify = (AgreeJoinResultNotify)msg;
@@ -489,14 +477,14 @@ public class OnlineController : UiControllerBase
 		}));
 	}
 
-	// Token: 0x060118C9 RID: 71881 RVA: 0x0044D784 File Offset: 0x0044B984
+	// Token: 0x0600ED60 RID: 60768 RVA: 0x0045A438 File Offset: 0x00458638
 	public void AllApplyJoinNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		AllApplyJoinNotify message = (AllApplyJoinNotify)msg;
 		this.OnAllApplyJoinNotify(message).Forget();
 	}
 
-	// Token: 0x060118CA RID: 71882 RVA: 0x0044D7A4 File Offset: 0x0044B9A4
+	// Token: 0x0600ED61 RID: 60769 RVA: 0x0045A458 File Offset: 0x00458658
 	[NullableContext(1)]
 	public UniTask OnAllApplyJoinNotify(AllApplyJoinNotify message)
 	{
@@ -508,7 +496,7 @@ public class OnlineController : UiControllerBase
 		return <OnAllApplyJoinNotify>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060118CB RID: 71883 RVA: 0x0044D7E8 File Offset: 0x0044B9E8
+	// Token: 0x0600ED62 RID: 60770 RVA: 0x0045A49C File Offset: 0x0045869C
 	public void LobbyQueryPlayersRequest(int playerId)
 	{
 		LobbyQueryPlayersRequest lobbyQueryPlayersRequest = Aki.Protocol.LobbyQueryPlayersRequest.Create();
@@ -520,7 +508,7 @@ public class OnlineController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060118CC RID: 71884 RVA: 0x0044D838 File Offset: 0x0044BA38
+	// Token: 0x0600ED63 RID: 60771 RVA: 0x0045A4EC File Offset: 0x004586EC
 	[NullableContext(1)]
 	private UniTask OnQueryPlayersResponse(LobbyQueryPlayersResponse response, int playerId)
 	{
@@ -533,7 +521,7 @@ public class OnlineController : UiControllerBase
 		return <OnQueryPlayersResponse>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060118CD RID: 71885 RVA: 0x0044D884 File Offset: 0x0044BA84
+	// Token: 0x0600ED64 RID: 60772 RVA: 0x0045A538 File Offset: 0x00458738
 	public void AgreeJoinResultRequest(int applyPlayerId, bool result)
 	{
 		if (result && !GameModeModel.Instance.IsMulti && !OnlineController.Instance.CheckPlatformCanopen())
@@ -552,7 +540,7 @@ public class OnlineController : UiControllerBase
 			AgreeJoinResultResponse agreeJoinResultResponse = (AgreeJoinResultResponse)msg;
 			if (agreeJoinResultResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(agreeJoinResultResponse.ErrorCode, 19703, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(agreeJoinResultResponse.ErrorCode, 24721, null, true, true);
 				return;
 			}
 			OnlineModel.Instance.DeleteCurrentApplyListById(applyPlayerId);
@@ -560,7 +548,7 @@ public class OnlineController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060118CE RID: 71886 RVA: 0x0044D900 File Offset: 0x0044BB00
+	// Token: 0x0600ED65 RID: 60773 RVA: 0x0045A5B4 File Offset: 0x004587B4
 	public void MatchChangePlayerUiStateRequest(EMatchPlayerUiState matchUiState)
 	{
 		MatchChangePlayerUiStateRequest matchChangePlayerUiStateRequest = Aki.Protocol.MatchChangePlayerUiStateRequest.Create();
@@ -570,7 +558,7 @@ public class OnlineController : UiControllerBase
 			MatchChangePlayerUiStateResponse matchChangePlayerUiStateResponse = (MatchChangePlayerUiStateResponse)msg;
 			if (matchChangePlayerUiStateResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(matchChangePlayerUiStateResponse.ErrorCode, 19703, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(matchChangePlayerUiStateResponse.ErrorCode, 24721, null, true, true);
 				return;
 			}
 			int value = PlayerInfoModel.Instance.GetId().Value;
@@ -578,14 +566,14 @@ public class OnlineController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060118CF RID: 71887 RVA: 0x0044D94C File Offset: 0x0044BB4C
+	// Token: 0x0600ED66 RID: 60774 RVA: 0x0045A600 File Offset: 0x00458800
 	public void JoinWorldTeamNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		JoinWorldTeamNotify message = (JoinWorldTeamNotify)msg;
 		this.OnJoinWorldTeamNotify(message).Forget();
 	}
 
-	// Token: 0x060118D0 RID: 71888 RVA: 0x0044D96C File Offset: 0x0044BB6C
+	// Token: 0x0600ED67 RID: 60775 RVA: 0x0045A620 File Offset: 0x00458820
 	[NullableContext(1)]
 	private UniTask OnJoinWorldTeamNotify(JoinWorldTeamNotify message)
 	{
@@ -598,7 +586,7 @@ public class OnlineController : UiControllerBase
 		return <OnJoinWorldTeamNotify>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060118D1 RID: 71889 RVA: 0x0044D9B8 File Offset: 0x0044BBB8
+	// Token: 0x0600ED68 RID: 60776 RVA: 0x0045A66C File Offset: 0x0045886C
 	public void PlayerLeaveWorldTeamNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		PlayerLeaveWorldTeamNotify playerLeaveWorldTeamNotify = (PlayerLeaveWorldTeamNotify)msg;
@@ -659,14 +647,14 @@ public class OnlineController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnRefreshOnlineTeamList);
 	}
 
-	// Token: 0x060118D2 RID: 71890 RVA: 0x0044DB84 File Offset: 0x0044BD84
+	// Token: 0x0600ED69 RID: 60777 RVA: 0x0045A838 File Offset: 0x00458A38
 	public void PlayerEnterWorldTeamNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		PlayerEnterWorldTeamNotify message = (PlayerEnterWorldTeamNotify)msg;
 		this.OnPlayerEnterWorldTeamNotify(message).Forget();
 	}
 
-	// Token: 0x060118D3 RID: 71891 RVA: 0x0044DBA4 File Offset: 0x0044BDA4
+	// Token: 0x0600ED6A RID: 60778 RVA: 0x0045A858 File Offset: 0x00458A58
 	[NullableContext(1)]
 	private UniTask OnPlayerEnterWorldTeamNotify(PlayerEnterWorldTeamNotify message)
 	{
@@ -678,7 +666,7 @@ public class OnlineController : UiControllerBase
 		return <OnPlayerEnterWorldTeamNotify>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060118D4 RID: 71892 RVA: 0x0044DBE8 File Offset: 0x0044BDE8
+	// Token: 0x0600ED6B RID: 60779 RVA: 0x0045A89C File Offset: 0x00458A9C
 	public void WorldTeamPlayerInfoChangeNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		WorldTeamPlayerInfoChangeNotify worldTeamPlayerInfoChangeNotify = (WorldTeamPlayerInfoChangeNotify)msg;
@@ -712,7 +700,7 @@ public class OnlineController : UiControllerBase
 		EventSystem.Instance.Emit<WorldTeamPlayerInfoChangeNotify>(EEventName.OnWorldTeamPlayerInfoChanged, worldTeamPlayerInfoChangeNotify);
 	}
 
-	// Token: 0x060118D5 RID: 71893 RVA: 0x0044DCAC File Offset: 0x0044BEAC
+	// Token: 0x0600ED6C RID: 60780 RVA: 0x0045A960 File Offset: 0x00458B60
 	public void ReceiveRechallengeNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ReceiveRechallengeNotify receiveRechallengeNotify = (ReceiveRechallengeNotify)msg;
@@ -751,7 +739,7 @@ public class OnlineController : UiControllerBase
 		EventSystem.Instance.Emit<int, EContinuingChallenge>(EEventName.PlayerChallengeStateChange, playerId, EContinuingChallenge.Accept);
 	}
 
-	// Token: 0x060118D6 RID: 71894 RVA: 0x0044DDCC File Offset: 0x0044BFCC
+	// Token: 0x0600ED6D RID: 60781 RVA: 0x0045AA80 File Offset: 0x00458C80
 	public void InviteRechallengeNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		InviteRechallengeNotify inviteRechallengeNotify = (InviteRechallengeNotify)msg;
@@ -775,7 +763,7 @@ public class OnlineController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060118D7 RID: 71895 RVA: 0x0044DE84 File Offset: 0x0044C084
+	// Token: 0x0600ED6E RID: 60782 RVA: 0x0045AB38 File Offset: 0x00458D38
 	public void ReceiveRechallengePlayerIdsNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ReceiveRechallengePlayerIdsNotify receiveRechallengePlayerIdsNotify = (ReceiveRechallengePlayerIdsNotify)msg;
@@ -787,7 +775,7 @@ public class OnlineController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060118D8 RID: 71896 RVA: 0x0044DEF8 File Offset: 0x0044C0F8
+	// Token: 0x0600ED6F RID: 60783 RVA: 0x0045ABAC File Offset: 0x00458DAC
 	public void PlayerNetStateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		PlayerNetStateNotify playerNetStateNotify = (PlayerNetStateNotify)msg;
@@ -800,7 +788,7 @@ public class OnlineController : UiControllerBase
 		EventSystem.Instance.Emit<int, ENetPingState>(EEventName.OnRefreshPlayerPing, playerNetStateNotify.PlayerId, currentTeamListById.PingState);
 	}
 
-	// Token: 0x060118D9 RID: 71897 RVA: 0x0044DF4C File Offset: 0x0044C14C
+	// Token: 0x0600ED70 RID: 60784 RVA: 0x0045AC00 File Offset: 0x00458E00
 	public bool CheckPlayerNetHealthy(int playerId)
 	{
 		int? id = PlayerInfoModel.Instance.GetId();
@@ -813,20 +801,20 @@ public class OnlineController : UiControllerBase
 		return currentTeamListById != null && this.IsNetStateGood(currentTeamListById.PingState);
 	}
 
-	// Token: 0x060118DA RID: 71898 RVA: 0x0044DFB0 File Offset: 0x0044C1B0
+	// Token: 0x0600ED71 RID: 60785 RVA: 0x0045AC64 File Offset: 0x00458E64
 	public bool IsNetStateGood(ENetPingState pingState)
 	{
 		return pingState == ENetPingState.Great || pingState == ENetPingState.Good;
 	}
 
-	// Token: 0x060118DB RID: 71899 RVA: 0x0044DFBC File Offset: 0x0044C1BC
+	// Token: 0x0600ED72 RID: 60786 RVA: 0x0045AC70 File Offset: 0x00458E70
 	public void MatchChangePlayerUiStateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		MatchChangePlayerUiStateNotify matchChangePlayerUiStateNotify = (MatchChangePlayerUiStateNotify)msg;
 		InstanceDungeonModel.Instance.SetPlayerUiState(matchChangePlayerUiStateNotify.PlayerId, matchChangePlayerUiStateNotify.MatchUiState);
 	}
 
-	// Token: 0x060118DC RID: 71900 RVA: 0x0044DFE8 File Offset: 0x0044C1E8
+	// Token: 0x0600ED73 RID: 60787 RVA: 0x0045AC9C File Offset: 0x00458E9C
 	public void PlayerTeleportStateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		PlayerTeleportStateNotify playerTeleportStateNotify = (PlayerTeleportStateNotify)msg;
@@ -875,7 +863,7 @@ public class OnlineController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060118DD RID: 71901 RVA: 0x0044E168 File Offset: 0x0044C368
+	// Token: 0x0600ED74 RID: 60788 RVA: 0x0045AE1C File Offset: 0x0045901C
 	public void ApplyerEnterSceneNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ApplyerEnterSceneNotify applyerEnterSceneNotify = (ApplyerEnterSceneNotify)msg;
@@ -886,7 +874,7 @@ public class OnlineController : UiControllerBase
 		}, null, null, null, null, null, false, null);
 	}
 
-	// Token: 0x060118DE RID: 71902 RVA: 0x0044E1BC File Offset: 0x0044C3BC
+	// Token: 0x0600ED75 RID: 60789 RVA: 0x0045AE70 File Offset: 0x00459070
 	public void PlayerPsnSessionNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		PlayerPsnSessionNotify playerPsnSessionNotify = (PlayerPsnSessionNotify)msg;
@@ -896,7 +884,7 @@ public class OnlineController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060118DF RID: 71903 RVA: 0x0044E1F4 File Offset: 0x0044C3F4
+	// Token: 0x0600ED76 RID: 60790 RVA: 0x0045AEA8 File Offset: 0x004590A8
 	public void SyncPlayerLocationNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		foreach (PlayerLocation playerLocation in ((SyncPlayerLocationNotify)msg).LocationList)
@@ -915,7 +903,7 @@ public class OnlineController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060118E0 RID: 71904 RVA: 0x0044E2C4 File Offset: 0x0044C4C4
+	// Token: 0x0600ED77 RID: 60791 RVA: 0x0045AF78 File Offset: 0x00459178
 	public void ClientVersionNoMatchNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ClientVersionNoMatchNotify clientVersionNoMatchNotify = (ClientVersionNoMatchNotify)msg;
@@ -933,7 +921,7 @@ public class OnlineController : UiControllerBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060118E1 RID: 71905 RVA: 0x0044E330 File Offset: 0x0044C530
+	// Token: 0x0600ED78 RID: 60792 RVA: 0x0045AFE4 File Offset: 0x004591E4
 	public void PlayerGravityUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		PlayerGravityUpdateNotify playerGravityUpdateNotify = (PlayerGravityUpdateNotify)msg;
@@ -946,7 +934,7 @@ public class OnlineController : UiControllerBase
 		OnlineModel.Instance.SetPlayerGravityIsNormal(playerGravityUpdateNotify.CurGravityDirection);
 	}
 
-	// Token: 0x060118E2 RID: 71906 RVA: 0x0044E380 File Offset: 0x0044C580
+	// Token: 0x0600ED79 RID: 60793 RVA: 0x0045B034 File Offset: 0x00459234
 	private void OnTeamTeleportStartNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		TeamTeleportStartNotify teamTeleportStartNotify = (TeamTeleportStartNotify)msg;
@@ -959,7 +947,17 @@ public class OnlineController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060118E3 RID: 71907 RVA: 0x0044E3F4 File Offset: 0x0044C5F4
+	// Token: 0x0600ED7A RID: 60794 RVA: 0x0045B0A8 File Offset: 0x004592A8
+	[NullableContext(1)]
+	private void PlayerNetStateS2cNotify([Nullable(2)] IMessage msg, Net.CallbackStatus status)
+	{
+		PlayerNetStateS2cNotify playerNetStateS2cNotify = (PlayerNetStateS2cNotify)msg;
+		PlayerNetStateBackServerPush playerNetStateBackServerPush = PlayerNetStateBackServerPush.Create();
+		playerNetStateBackServerPush.Uid = playerNetStateS2cNotify.Uid;
+		Net.Instance.Send(EPushMessageId.PlayerNetStateBackServerPush, playerNetStateBackServerPush);
+	}
+
+	// Token: 0x0600ED7B RID: 60795 RVA: 0x0045B0E0 File Offset: 0x004592E0
 	public void ApplyRechallengeRequest(ApplyRechallengeReason reson)
 	{
 		OnlineModel.Instance.RefreshInitiateTime();
@@ -971,7 +969,7 @@ public class OnlineController : UiControllerBase
 			ApplyRechallengeResponse applyRechallengeResponse = (ApplyRechallengeResponse)msg;
 			if (applyRechallengeResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(applyRechallengeResponse.ErrorCode, 22112, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(applyRechallengeResponse.ErrorCode, 29801, null, true, true);
 			}
 			if (!OnlineModel.Instance.GetIsMyTeam())
 			{
@@ -982,7 +980,7 @@ public class OnlineController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060118E4 RID: 71908 RVA: 0x0044E458 File Offset: 0x0044C658
+	// Token: 0x0600ED7C RID: 60796 RVA: 0x0045B144 File Offset: 0x00459344
 	public void ReceiveRechallengeRequest(bool isAccept, bool isClickCancel)
 	{
 		ReceiveRechallengeRequest receiveRechallengeRequest = Aki.Protocol.ReceiveRechallengeRequest.Create();
@@ -1003,12 +1001,12 @@ public class OnlineController : UiControllerBase
 			ReceiveRechallengeResponse receiveRechallengeResponse = (ReceiveRechallengeResponse)msg;
 			if (receiveRechallengeResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(receiveRechallengeResponse.ErrorCode, 26240, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(receiveRechallengeResponse.ErrorCode, 21241, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x060118E5 RID: 71909 RVA: 0x0044E4BC File Offset: 0x0044C6BC
+	// Token: 0x0600ED7D RID: 60797 RVA: 0x0045B1A8 File Offset: 0x004593A8
 	public void InviteRechallengeRequest()
 	{
 		OnlineModel.Instance.RefreshInitiateTime();
@@ -1018,7 +1016,7 @@ public class OnlineController : UiControllerBase
 			InviteRechallengeResponse inviteRechallengeResponse = (InviteRechallengeResponse)msg;
 			if (inviteRechallengeResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(inviteRechallengeResponse.ErrorCode, 16100, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(inviteRechallengeResponse.ErrorCode, 15563, null, true, true);
 				return;
 			}
 			UiManager.Instance.OpenView(EUiViewName.OnlineChallengeStateView, null, null);
@@ -1029,7 +1027,7 @@ public class OnlineController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060118E6 RID: 71910 RVA: 0x0044E50C File Offset: 0x0044C70C
+	// Token: 0x0600ED7E RID: 60798 RVA: 0x0045B1F8 File Offset: 0x004593F8
 	public void LeaveWorldTeamRequest(int playerId, WorldTeamLeaveReason? reason = null)
 	{
 		LeaveWorldTeamRequest leaveWorldTeamRequest = Aki.Protocol.LeaveWorldTeamRequest.Create();
@@ -1040,14 +1038,14 @@ public class OnlineController : UiControllerBase
 			LeaveWorldTeamResponse leaveWorldTeamResponse = (LeaveWorldTeamResponse)msg;
 			if (leaveWorldTeamResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(leaveWorldTeamResponse.ErrorCode, 16965, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(leaveWorldTeamResponse.ErrorCode, 16579, null, true, true);
 				return;
 			}
 			OnlineModel.Instance.ClearOnlineTeamMap();
 		}, 0);
 	}
 
-	// Token: 0x060118E7 RID: 71911 RVA: 0x0044E564 File Offset: 0x0044C764
+	// Token: 0x0600ED7F RID: 60799 RVA: 0x0045B250 File Offset: 0x00459450
 	public void KickWorldTeamRequest(int playerId)
 	{
 		KickWorldTeamRequest kickWorldTeamRequest = Aki.Protocol.KickWorldTeamRequest.Create();
@@ -1057,12 +1055,12 @@ public class OnlineController : UiControllerBase
 			KickWorldTeamResponse kickWorldTeamResponse = (KickWorldTeamResponse)msg;
 			if (kickWorldTeamResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(kickWorldTeamResponse.ErrorCode, 19020, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(kickWorldTeamResponse.ErrorCode, 26682, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x060118E8 RID: 71912 RVA: 0x0044E5B0 File Offset: 0x0044C7B0
+	// Token: 0x0600ED80 RID: 60800 RVA: 0x0045B29C File Offset: 0x0045949C
 	[NullableContext(1)]
 	public void PlayerCreatePsnSessionRequest(string playerSessionId)
 	{
@@ -1073,13 +1071,10 @@ public class OnlineController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060118E9 RID: 71913 RVA: 0x0044E5FC File Offset: 0x0044C7FC
-	public void PlayerNetStatePush()
+	// Token: 0x0600ED81 RID: 60801 RVA: 0x0045B2E8 File Offset: 0x004594E8
+	public void PlayerNetStateCheck()
 	{
-		PlayerNetStatePush playerNetStatePush = Aki.Protocol.PlayerNetStatePush.Create();
 		float rttMs = Net.Instance.RttMs;
-		playerNetStatePush.RttMs = (int)rttMs;
-		Net.Instance.Send(EPushMessageId.PlayerNetStatePush, playerNetStatePush);
 		int value = PlayerInfoModel.Instance.GetId().Value;
 		ENetPingState netPingState = this.GetNetPingState(rttMs);
 		OnlineTeamData currentTeamListById = OnlineModel.Instance.GetCurrentTeamListById(value);
@@ -1090,7 +1085,7 @@ public class OnlineController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060118EA RID: 71914 RVA: 0x0044E684 File Offset: 0x0044C884
+	// Token: 0x0600ED82 RID: 60802 RVA: 0x0045B350 File Offset: 0x00459550
 	public ENetPingState GetNetPingState(float rttMs)
 	{
 		if (rttMs < 0f)
@@ -1115,19 +1110,19 @@ public class OnlineController : UiControllerBase
 		return ENetPingState.Unknown;
 	}
 
-	// Token: 0x060118EB RID: 71915 RVA: 0x0044E6FC File Offset: 0x0044C8FC
+	// Token: 0x0600ED83 RID: 60803 RVA: 0x0045B3C8 File Offset: 0x004595C8
 	protected override void OnAddOpenViewCheckFunction()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.OnlineWorldHallView, new Func<EUiViewName, object, bool>(this.CanOpenView), "OnlineController.CanOpenView");
 	}
 
-	// Token: 0x060118EC RID: 71916 RVA: 0x0044E71E File Offset: 0x0044C91E
+	// Token: 0x0600ED84 RID: 60804 RVA: 0x0045B3EA File Offset: 0x004595EA
 	protected override void OnRemoveOpenViewCheckFunction()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.OnlineWorldHallView, new Func<EUiViewName, object, bool>(this.CanOpenView));
 	}
 
-	// Token: 0x060118ED RID: 71917 RVA: 0x0044E73C File Offset: 0x0044C93C
+	// Token: 0x0600ED85 RID: 60805 RVA: 0x0045B408 File Offset: 0x00459608
 	[NullableContext(1)]
 	private bool CanOpenView(EUiViewName viewName, object param)
 	{
@@ -1160,7 +1155,7 @@ public class OnlineController : UiControllerBase
 		return this.ShowTipsWhenOnlineDisabled(null);
 	}
 
-	// Token: 0x060118EE RID: 71918 RVA: 0x0044E840 File Offset: 0x0044CA40
+	// Token: 0x0600ED86 RID: 60806 RVA: 0x0045B50C File Offset: 0x0045970C
 	public bool CheckPlatformCanopen()
 	{
 		if (!KuroSdkController.Instance.CheckPrivilege(ESdkPrivilege.Multiplayer))
@@ -1180,7 +1175,7 @@ public class OnlineController : UiControllerBase
 		return num2.GetValueOrDefault() >= num3 & num2 != null;
 	}
 
-	// Token: 0x060118EF RID: 71919 RVA: 0x0044E8D4 File Offset: 0x0044CAD4
+	// Token: 0x0600ED87 RID: 60807 RVA: 0x0045B5A0 File Offset: 0x004597A0
 	[NullableContext(1)]
 	public bool ShowTipsWhenOnlineDisabled(EDisableOnlineType[] ignoreCheckList = null)
 	{
@@ -1253,14 +1248,14 @@ public class OnlineController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x060118F0 RID: 71920 RVA: 0x0044EAD8 File Offset: 0x0044CCD8
+	// Token: 0x0600ED88 RID: 60808 RVA: 0x0045B7A4 File Offset: 0x004599A4
 	[NullableContext(1)]
 	private static bool CheckStringEmptyOrDnt(string stringContent)
 	{
 		return StringUtils.IsEmpty(stringContent) || stringContent.StartsWith("dnt/");
 	}
 
-	// Token: 0x060118F1 RID: 71921 RVA: 0x0044EAF4 File Offset: 0x0044CCF4
+	// Token: 0x0600ED89 RID: 60809 RVA: 0x0045B7C0 File Offset: 0x004599C0
 	private void ShowBackLoginConfirmBox()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew;
@@ -1279,7 +1274,7 @@ public class OnlineController : UiControllerBase
 		ConfirmBoxController.Instance.ShowNetWorkConfirmBoxView(confirmBoxDataNew, null);
 	}
 
-	// Token: 0x060118F2 RID: 71922 RVA: 0x0044EB60 File Offset: 0x0044CD60
+	// Token: 0x0600ED8A RID: 60810 RVA: 0x0045B82C File Offset: 0x00459A2C
 	[NullableContext(1)]
 	public string CreatePlayerSession()
 	{
@@ -1287,7 +1282,7 @@ public class OnlineController : UiControllerBase
 		return KuroSdkController.Instance.CreatePlayerSession(id);
 	}
 
-	// Token: 0x060118F3 RID: 71923 RVA: 0x0044EB83 File Offset: 0x0044CD83
+	// Token: 0x0600ED8B RID: 60811 RVA: 0x0045B84F File Offset: 0x00459A4F
 	public void LeavePlayerSession()
 	{
 		KuroSdkController.Instance.LeavePlayerSession();
@@ -1298,14 +1293,14 @@ public class OnlineController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060118F4 RID: 71924 RVA: 0x0044EBAA File Offset: 0x0044CDAA
+	// Token: 0x0600ED8C RID: 60812 RVA: 0x0045B876 File Offset: 0x00459A76
 	[NullableContext(1)]
 	public void JoinPlayerSession(string playerSession)
 	{
 		KuroSdkController.Instance.JoinPlayerSession(playerSession);
 	}
 
-	// Token: 0x060118F5 RID: 71925 RVA: 0x0044EBB8 File Offset: 0x0044CDB8
+	// Token: 0x0600ED8D RID: 60813 RVA: 0x0045B884 File Offset: 0x00459A84
 	public void CheckJoinSession()
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -1313,7 +1308,7 @@ public class OnlineController : UiControllerBase
 		LoginModel.Instance.ThirdGameAutoLoginId = thirdGameAutoLoginId;
 	}
 
-	// Token: 0x060118F6 RID: 71926 RVA: 0x0044EBE7 File Offset: 0x0044CDE7
+	// Token: 0x0600ED8E RID: 60814 RVA: 0x0045B8B3 File Offset: 0x00459AB3
 	public void NotifyPlayStationPremium()
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -1324,14 +1319,14 @@ public class OnlineController : UiControllerBase
 		platformSdk.NotifyPlayStationPremium(KuroSdkModel.Instance.PlayStationPlayOnlyState);
 	}
 
-	// Token: 0x060118F7 RID: 71927 RVA: 0x0044EC07 File Offset: 0x0044CE07
+	// Token: 0x0600ED8F RID: 60815 RVA: 0x0045B8D3 File Offset: 0x00459AD3
 	[NullableContext(1)]
 	public string GetPlayerIdByPlayerSessionId(string playerSessionId)
 	{
 		return KuroSdkController.Instance.GetPlayerIdByPlayerSessionId(playerSessionId);
 	}
 
-	// Token: 0x060118F8 RID: 71928 RVA: 0x0044EC14 File Offset: 0x0044CE14
+	// Token: 0x0600ED90 RID: 60816 RVA: 0x0045B8E0 File Offset: 0x00459AE0
 	public void CheckoutCommerceDialogPremiumMode()
 	{
 		this.CheckoutDialogTimerHandle = TimerSystem.GameplayTimeInstance.Forever(delegate(float _)
@@ -1351,7 +1346,7 @@ public class OnlineController : UiControllerBase
 		}, 500f, 1f, null, null, true);
 	}
 
-	// Token: 0x060118F9 RID: 71929 RVA: 0x0044EC40 File Offset: 0x0044CE40
+	// Token: 0x0600ED91 RID: 60817 RVA: 0x0045B90C File Offset: 0x00459B0C
 	private void RefreshSingleConfirm()
 	{
 		if (this.HaveSingleConfirm)
@@ -1380,13 +1375,13 @@ public class OnlineController : UiControllerBase
 				return;
 			}
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.OnlineSingleConfirm);
-			confirmBoxDataNew.FunctionMap.Add(0, new Action(this.<RefreshSingleConfirm>g__stayWorldCallBack|99_1));
+			confirmBoxDataNew.FunctionMap.Add(0, new Action(this.<RefreshSingleConfirm>g__stayWorldCallBack|100_1));
 			confirmBoxDataNew.FunctionMap.Add(1, delegate
 			{
 				int valueOrDefault = PlayerInfoModel.Instance.GetId().GetValueOrDefault();
 				this.LeaveWorldTeamRequest(valueOrDefault, null);
 			});
-			confirmBoxDataNew.FunctionMap.Add(2, new Action(this.<RefreshSingleConfirm>g__stayWorldCallBack|99_1));
+			confirmBoxDataNew.FunctionMap.Add(2, new Action(this.<RefreshSingleConfirm>g__stayWorldCallBack|100_1));
 			confirmBoxDataNew.IsEscViewTriggerCallBack = false;
 			if (UiManager.Instance.IsViewShow(EUiViewName.BattleView))
 			{
@@ -1401,7 +1396,7 @@ public class OnlineController : UiControllerBase
 		}, this.ONLINE_SING_LONG_TIME, null, "OnlineSingleConfirm", true, 1f);
 	}
 
-	// Token: 0x060118FA RID: 71930 RVA: 0x0044ECA1 File Offset: 0x0044CEA1
+	// Token: 0x0600ED92 RID: 60818 RVA: 0x0045B96D File Offset: 0x00459B6D
 	private void StartShowOnlineModeTips()
 	{
 		this.ClearOnlineTipsTimer();
@@ -1411,7 +1406,7 @@ public class OnlineController : UiControllerBase
 		}, this.ONLINE_SING_TIPS_TIMER_INTERVAL, 1f, null, null, true);
 	}
 
-	// Token: 0x060118FB RID: 71931 RVA: 0x0044ECD4 File Offset: 0x0044CED4
+	// Token: 0x0600ED93 RID: 60819 RVA: 0x0045B9A0 File Offset: 0x00459BA0
 	private void ShowOnlineModeTips()
 	{
 		if (!GameModeModel.Instance.IsMulti)
@@ -1438,7 +1433,7 @@ public class OnlineController : UiControllerBase
 		this.ShowTipsInterval = 0.0;
 	}
 
-	// Token: 0x060118FC RID: 71932 RVA: 0x0044ED6C File Offset: 0x0044CF6C
+	// Token: 0x0600ED94 RID: 60820 RVA: 0x0045BA38 File Offset: 0x00459C38
 	private void ClearOnlineTipsTimer()
 	{
 		if (this.SingleOnlineTipsTimer != null)
@@ -1448,7 +1443,7 @@ public class OnlineController : UiControllerBase
 		this.SingleOnlineTipsTimer = null;
 	}
 
-	// Token: 0x060118FD RID: 71933 RVA: 0x0044ED8E File Offset: 0x0044CF8E
+	// Token: 0x0600ED95 RID: 60821 RVA: 0x0045BA5A File Offset: 0x00459C5A
 	private void ClearOnlineConfirmTimer()
 	{
 		if (this.SingleConfirmTimer != null)
@@ -1458,14 +1453,14 @@ public class OnlineController : UiControllerBase
 		this.SingleConfirmTimer = null;
 	}
 
-	// Token: 0x060118FE RID: 71934 RVA: 0x0044EDB0 File Offset: 0x0044CFB0
+	// Token: 0x0600ED96 RID: 60822 RVA: 0x0045BA7C File Offset: 0x00459C7C
 	private void CsRequestJoinWorld(int worldId, int worldEnterWay)
 	{
 		this.ApplyJoinWorldRequest(worldId, (WorldEnterWay)worldEnterWay);
 	}
 
-	// Token: 0x1700165F RID: 5727
-	// (get) Token: 0x060118FF RID: 71935 RVA: 0x0044EDBA File Offset: 0x0044CFBA
+	// Token: 0x17001696 RID: 5782
+	// (get) Token: 0x0600ED97 RID: 60823 RVA: 0x0045BA86 File Offset: 0x00459C86
 	[Nullable(1)]
 	public static OnlineController Instance
 	{
@@ -1476,7 +1471,7 @@ public class OnlineController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011900 RID: 71936 RVA: 0x0044EDC1 File Offset: 0x0044CFC1
+	// Token: 0x0600ED98 RID: 60824 RVA: 0x0045BA8D File Offset: 0x00459C8D
 	[NullableContext(1)]
 	public static OnlineController GetOrCreateInstance()
 	{
@@ -1487,7 +1482,7 @@ public class OnlineController : UiControllerBase
 		return OnlineController._Instance;
 	}
 
-	// Token: 0x06011901 RID: 71937 RVA: 0x0044EDD5 File Offset: 0x0044CFD5
+	// Token: 0x0600ED99 RID: 60825 RVA: 0x0045BAA1 File Offset: 0x00459CA1
 	public static bool CreateInstance()
 	{
 		if (OnlineController._Instance != null)
@@ -1498,49 +1493,49 @@ public class OnlineController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06011902 RID: 71938 RVA: 0x0044EDEB File Offset: 0x0044CFEB
+	// Token: 0x0600ED9A RID: 60826 RVA: 0x0045BAB7 File Offset: 0x00459CB7
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011903 RID: 71939 RVA: 0x0044EDED File Offset: 0x0044CFED
+	// Token: 0x0600ED9B RID: 60827 RVA: 0x0045BAB9 File Offset: 0x00459CB9
 	public static void ResetStaticDefaultValue()
 	{
 		OnlineController._Instance = null;
 	}
 
-	// Token: 0x06011904 RID: 71940 RVA: 0x0044EDF5 File Offset: 0x0044CFF5
+	// Token: 0x0600ED9C RID: 60828 RVA: 0x0045BAC1 File Offset: 0x00459CC1
 	static OnlineController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(OnlineController.CreateStaticDefaultValue), new Action(OnlineController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06011909 RID: 71945 RVA: 0x0044EFA4 File Offset: 0x0044D1A4
+	// Token: 0x0600EDA1 RID: 60833 RVA: 0x0045BC70 File Offset: 0x00459E70
 	[CompilerGenerated]
-	private void <RefreshSingleConfirm>g__stayWorldCallBack|99_1()
+	private void <RefreshSingleConfirm>g__stayWorldCallBack|100_1()
 	{
 		this.StartShowOnlineModeTips();
 	}
 
-	// Token: 0x0400853E RID: 34110
+	// Token: 0x0400867C RID: 34428
 	private int LIST_REQUEST_CD = 5;
 
-	// Token: 0x0400853F RID: 34111
+	// Token: 0x0400867D RID: 34429
 	private float NOTIFY_PLAYSTATION_CD = (float)TimeUtil.Instance.InverseMillisecond;
 
-	// Token: 0x04008540 RID: 34112
+	// Token: 0x0400867E RID: 34430
 	private float ONLINE_SING_LONG_TIME = (float)(300 * TimeUtil.Instance.InverseMillisecond);
 
-	// Token: 0x04008541 RID: 34113
+	// Token: 0x0400867F RID: 34431
 	private float ONLINE_SING_TIPS_TIME = (float)(1200 * TimeUtil.Instance.InverseMillisecond);
 
-	// Token: 0x04008542 RID: 34114
+	// Token: 0x04008680 RID: 34432
 	public float ONLINE_SING_TIPS_TIMER_INTERVAL = (float)(60 * TimeUtil.Instance.InverseMillisecond);
 
-	// Token: 0x04008543 RID: 34115
+	// Token: 0x04008681 RID: 34433
 	private double TargetRequestTimeStamp;
 
-	// Token: 0x04008544 RID: 34116
+	// Token: 0x04008682 RID: 34434
 	[Nullable(new byte[]
 	{
 		1,
@@ -1551,54 +1546,54 @@ public class OnlineController : UiControllerBase
 	})]
 	private ValueTuple<string, object[]>?[] TipsCache;
 
-	// Token: 0x04008545 RID: 34117
+	// Token: 0x04008683 RID: 34435
 	private float? PingPushInterval;
 
-	// Token: 0x04008546 RID: 34118
+	// Token: 0x04008684 RID: 34436
 	private float? LastPingPush;
 
-	// Token: 0x04008547 RID: 34119
+	// Token: 0x04008685 RID: 34437
 	private float? NetGreatDefine;
 
-	// Token: 0x04008548 RID: 34120
+	// Token: 0x04008686 RID: 34438
 	private float? NetGoodDefine;
 
-	// Token: 0x04008549 RID: 34121
+	// Token: 0x04008687 RID: 34439
 	private float? NetWeaktDefine;
 
-	// Token: 0x0400854A RID: 34122
+	// Token: 0x04008688 RID: 34440
 	private TimerHandle NotifyPlayStationPremiumTimer;
 
-	// Token: 0x0400854B RID: 34123
+	// Token: 0x04008689 RID: 34441
 	private TeamType? NoMatchType;
 
-	// Token: 0x0400854C RID: 34124
+	// Token: 0x0400868A RID: 34442
 	private FJoinSessionCallBack JoinSessionDelegate;
 
-	// Token: 0x0400854D RID: 34125
+	// Token: 0x0400868B RID: 34443
 	public string HandleTips;
 
-	// Token: 0x0400854E RID: 34126
+	// Token: 0x0400868C RID: 34444
 	public bool IsFirstSetMode;
 
-	// Token: 0x0400854F RID: 34127
+	// Token: 0x0400868D RID: 34445
 	private TimerHandle CheckoutDialogTimerHandle;
 
-	// Token: 0x04008550 RID: 34128
+	// Token: 0x0400868E RID: 34446
 	private TimerHandle SingleConfirmTimer;
 
-	// Token: 0x04008551 RID: 34129
+	// Token: 0x0400868F RID: 34447
 	private TimerHandle SingleOnlineTipsTimer;
 
-	// Token: 0x04008552 RID: 34130
+	// Token: 0x04008690 RID: 34448
 	private bool SingleOnlineTipsHandle;
 
-	// Token: 0x04008553 RID: 34131
+	// Token: 0x04008691 RID: 34449
 	private bool HaveSingleConfirm;
 
-	// Token: 0x04008554 RID: 34132
+	// Token: 0x04008692 RID: 34450
 	private double ShowTipsInterval;
 
-	// Token: 0x04008555 RID: 34133
+	// Token: 0x04008693 RID: 34451
 	private static OnlineController _Instance;
 }

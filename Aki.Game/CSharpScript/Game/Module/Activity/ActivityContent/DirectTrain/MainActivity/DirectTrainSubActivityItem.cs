@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActivity
 {
-	// Token: 0x02006751 RID: 26449
+	// Token: 0x020056A1 RID: 22177
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 	})]
 	public class DirectTrainSubActivityItem : GridProxyAbstract<DirectTrainSubActivityViewModel>
 	{
-		// Token: 0x0604202E RID: 270382 RVA: 0x01003354 File Offset: 0x01001554
+		// Token: 0x06036B80 RID: 224128 RVA: 0x00F44790 File Offset: 0x00F42990
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -51,38 +51,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604202F RID: 270383 RVA: 0x010034C0 File Offset: 0x010016C0
+		// Token: 0x06036B81 RID: 224129 RVA: 0x00F448FC File Offset: 0x00F42AFC
 		public override void Refresh(DirectTrainSubActivityViewModel data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
 			this.RefreshState();
 		}
 
-		// Token: 0x06042030 RID: 270384 RVA: 0x010034CF File Offset: 0x010016CF
+		// Token: 0x06036B82 RID: 224130 RVA: 0x00F4490B File Offset: 0x00F42B0B
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add<int>(EEventName.ActivityDirectTrainRedDotUpdate, new Action<int>(this.OnRedDotUpdate));
 		}
 
-		// Token: 0x06042031 RID: 270385 RVA: 0x010034ED File Offset: 0x010016ED
+		// Token: 0x06036B83 RID: 224131 RVA: 0x00F44929 File Offset: 0x00F42B29
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.ActivityDirectTrainRedDotUpdate, new Action<int>(this.OnRedDotUpdate));
 		}
 
-		// Token: 0x06042032 RID: 270386 RVA: 0x0100350B File Offset: 0x0100170B
+		// Token: 0x06036B84 RID: 224132 RVA: 0x00F44947 File Offset: 0x00F42B47
 		private void OnRedDotUpdate(int _)
 		{
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x06042033 RID: 270387 RVA: 0x01003513 File Offset: 0x01001713
+		// Token: 0x06036B85 RID: 224133 RVA: 0x00F4494F File Offset: 0x00F42B4F
 		public override object GetKey(DirectTrainSubActivityViewModel data, int displayIndex)
 		{
 			return data.SubActivityId;
 		}
 
-		// Token: 0x06042034 RID: 270388 RVA: 0x01003520 File Offset: 0x01001720
+		// Token: 0x06036B86 RID: 224134 RVA: 0x00F4495C File Offset: 0x00F42B5C
 		private void RefreshState()
 		{
 			if (this.Data == null)
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			}
 		}
 
-		// Token: 0x06042035 RID: 270389 RVA: 0x01003634 File Offset: 0x01001834
+		// Token: 0x06036B87 RID: 224135 RVA: 0x00F44A70 File Offset: 0x00F42C70
 		private void RefreshRedDot()
 		{
 			if (this.Data == null)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x06042036 RID: 270390 RVA: 0x0100367C File Offset: 0x0100187C
+		// Token: 0x06036B88 RID: 224136 RVA: 0x00F44AB8 File Offset: 0x00F42CB8
 		private void OnItemClick()
 		{
 			if (this.Data == null)
@@ -157,29 +157,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			UiManager.Instance.OpenView(EUiViewName.DirectTrainDetailView, this.Data, null);
 		}
 
-		// Token: 0x0402261D RID: 140829
+		// Token: 0x0401CE76 RID: 118390
 		[Nullable(2)]
 		private DirectTrainSubActivityViewModel Data;
 
-		// Token: 0x0200C8CB RID: 51403
+		// Token: 0x0200B29A RID: 45722
 		[NullableContext(0)]
 		private enum EPlotArriveItemComponents
 		{
-			// Token: 0x0403C9F0 RID: 248304
+			// Token: 0x040372EA RID: 226026
 			ItemSelf,
-			// Token: 0x0403C9F1 RID: 248305
+			// Token: 0x040372EB RID: 226027
 			TexPic,
-			// Token: 0x0403C9F2 RID: 248306
+			// Token: 0x040372EC RID: 226028
 			ItemRecommend,
-			// Token: 0x0403C9F3 RID: 248307
+			// Token: 0x040372ED RID: 226029
 			TxtTitle,
-			// Token: 0x0403C9F4 RID: 248308
+			// Token: 0x040372EE RID: 226030
 			TxtName,
-			// Token: 0x0403C9F5 RID: 248309
+			// Token: 0x040372EF RID: 226031
 			ItemNotFinish,
-			// Token: 0x0403C9F6 RID: 248310
+			// Token: 0x040372F0 RID: 226032
 			ItemFinished,
-			// Token: 0x0403C9F7 RID: 248311
+			// Token: 0x040372F1 RID: 226033
 			RedDotItem
 		}
 	}

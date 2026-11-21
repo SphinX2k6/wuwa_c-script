@@ -2,34 +2,34 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Jobs
 {
-	// Token: 0x0200651C RID: 25884
+	// Token: 0x0200549A RID: 21658
 	public static class EExecutionOrder
 	{
-		// Token: 0x04021DD1 RID: 138705
+		// Token: 0x0401C702 RID: 116482
 		public const int SWAP = 0;
 
-		// Token: 0x04021DD2 RID: 138706
+		// Token: 0x0401C703 RID: 116483
 		public const int TIP = 4;
 
-		// Token: 0x04021DD3 RID: 138707
+		// Token: 0x0401C704 RID: 116484
 		public const int SKILL_TRAIL = 5;
 
-		// Token: 0x04021DD4 RID: 138708
+		// Token: 0x0401C705 RID: 116485
 		public const int MECHANIC_TRAIL = 5;
 
-		// Token: 0x04021DD5 RID: 138709
+		// Token: 0x0401C706 RID: 116486
 		public const int PIECE_RECOLOR = 5;
 
-		// Token: 0x04021DD6 RID: 138710
+		// Token: 0x0401C707 RID: 116487
 		public const int PIECE_TRANSFORM = 6;
 
-		// Token: 0x04021DD7 RID: 138711
+		// Token: 0x0401C708 RID: 116488
 		public const int BOARD = 10;
 
-		// Token: 0x04021DD8 RID: 138712
+		// Token: 0x0401C709 RID: 116489
 		public const int SCORE_POP = 10;
 
-		// Token: 0x04021DD9 RID: 138713
+		// Token: 0x0401C70A RID: 116490
 		public const int RECYCLE_TRAIL_SETTLE = 11;
 	}
 }

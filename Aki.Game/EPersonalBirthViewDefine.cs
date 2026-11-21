@@ -1,36 +1,36 @@
 ﻿using System;
 
-// Token: 0x020023C6 RID: 9158
+// Token: 0x020018AB RID: 6315
 public enum EPersonalBirthViewDefine
 {
-	// Token: 0x04008A52 RID: 35410
+	// Token: 0x04008B99 RID: 35737
 	LeftDragView,
-	// Token: 0x04008A53 RID: 35411
+	// Token: 0x04008B9A RID: 35738
 	LeftDragViewItem,
-	// Token: 0x04008A54 RID: 35412
+	// Token: 0x04008B9B RID: 35739
 	RightDragView,
-	// Token: 0x04008A55 RID: 35413
+	// Token: 0x04008B9C RID: 35740
 	RightDragViewItem,
-	// Token: 0x04008A56 RID: 35414
+	// Token: 0x04008B9D RID: 35741
 	LeftButton,
-	// Token: 0x04008A57 RID: 35415
+	// Token: 0x04008B9E RID: 35742
 	RightButton,
-	// Token: 0x04008A58 RID: 35416
+	// Token: 0x04008B9F RID: 35743
 	MonthText,
-	// Token: 0x04008A59 RID: 35417
+	// Token: 0x04008BA0 RID: 35744
 	DayText,
-	// Token: 0x04008A5A RID: 35418
+	// Token: 0x04008BA1 RID: 35745
 	LeftButtonText,
-	// Token: 0x04008A5B RID: 35419
+	// Token: 0x04008BA2 RID: 35746
 	RightButtonText,
-	// Token: 0x04008A5C RID: 35420
+	// Token: 0x04008BA3 RID: 35747
 	MonthSourceButton,
-	// Token: 0x04008A5D RID: 35421
+	// Token: 0x04008BA4 RID: 35748
 	DaySourceButton,
-	// Token: 0x04008A5E RID: 35422
+	// Token: 0x04008BA5 RID: 35749
 	TipsText,
-	// Token: 0x04008A5F RID: 35423
+	// Token: 0x04008BA6 RID: 35750
 	DisplayToggle,
-	// Token: 0x04008A60 RID: 35424
+	// Token: 0x04008BA7 RID: 35751
 	RightButtonInteraction
 }

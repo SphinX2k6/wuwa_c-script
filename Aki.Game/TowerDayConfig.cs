@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002BD5 RID: 11221
+// Token: 0x02002150 RID: 8528
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class TowerDayConfig : ConfigBase
 {
-	// Token: 0x17001F66 RID: 8038
-	// (get) Token: 0x060174D9 RID: 95449 RVA: 0x005ECA45 File Offset: 0x005EAC45
+	// Token: 0x17001FBE RID: 8126
+	// (get) Token: 0x06014F0A RID: 85770 RVA: 0x00619581 File Offset: 0x00617781
 	public static TowerDayConfig Instance
 	{
 		get
@@ -17,7 +17,7 @@ public class TowerDayConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060174DA RID: 95450 RVA: 0x005ECA4C File Offset: 0x005EAC4C
+	// Token: 0x06014F0B RID: 85771 RVA: 0x00619588 File Offset: 0x00617788
 	public static TowerDayConfig GetOrCreateInstance()
 	{
 		if (TowerDayConfig._Instance == null)
@@ -27,7 +27,7 @@ public class TowerDayConfig : ConfigBase
 		return TowerDayConfig._Instance;
 	}
 
-	// Token: 0x060174DB RID: 95451 RVA: 0x005ECA60 File Offset: 0x005EAC60
+	// Token: 0x06014F0C RID: 85772 RVA: 0x0061959C File Offset: 0x0061779C
 	public static bool CreateInstance()
 	{
 		if (TowerDayConfig._Instance != null)
@@ -38,24 +38,24 @@ public class TowerDayConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060174DC RID: 95452 RVA: 0x005ECA76 File Offset: 0x005EAC76
+	// Token: 0x06014F0D RID: 85773 RVA: 0x006195B2 File Offset: 0x006177B2
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060174DD RID: 95453 RVA: 0x005ECA78 File Offset: 0x005EAC78
+	// Token: 0x06014F0E RID: 85774 RVA: 0x006195B4 File Offset: 0x006177B4
 	public static void ResetStaticDefaultValue()
 	{
 		TowerDayConfig._Instance = null;
 	}
 
-	// Token: 0x060174DE RID: 95454 RVA: 0x005ECA80 File Offset: 0x005EAC80
+	// Token: 0x06014F0F RID: 85775 RVA: 0x006195BC File Offset: 0x006177BC
 	static TowerDayConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TowerDayConfig.CreateStaticDefaultValue), new Action(TowerDayConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400AE6E RID: 44654
+	// Token: 0x0400B273 RID: 45683
 	[Nullable(2)]
 	private static TowerDayConfig _Instance;
 }

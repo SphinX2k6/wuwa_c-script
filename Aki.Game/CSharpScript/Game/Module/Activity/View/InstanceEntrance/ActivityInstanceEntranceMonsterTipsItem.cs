@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F15 RID: 24341
+	// Token: 0x02004EFC RID: 20220
 	public class ActivityInstanceEntranceMonsterTipsItem : UiPanelBase
 	{
-		// Token: 0x0603DD79 RID: 253305 RVA: 0x00EF2514 File Offset: 0x00EF0714
+		// Token: 0x06032D14 RID: 208148 RVA: 0x00E4421C File Offset: 0x00E4241C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DD7A RID: 253306 RVA: 0x00EF25BC File Offset: 0x00EF07BC
+		// Token: 0x06032D15 RID: 208149 RVA: 0x00E442C4 File Offset: 0x00E424C4
 		[NullableContext(1)]
 		public void RefreshView(ActivityInstanceEntranceData data)
 		{
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			button.RootUIComp.Get().SetUIActive(monsterPreviewState);
 		}
 
-		// Token: 0x0603DD7B RID: 253307 RVA: 0x00EF2634 File Offset: 0x00EF0834
+		// Token: 0x06032D16 RID: 208150 RVA: 0x00E4433C File Offset: 0x00E4253C
 		private void OnClickBtnMonster()
 		{
 			int selectDataIndex = this.CurrentData.GetActivityEntranceSelectItemData().GetCurrentSelectData().GetSelectDataIndex();
@@ -64,16 +64,16 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			}
 		}
 
-		// Token: 0x040204D1 RID: 132305
+		// Token: 0x0401AFA3 RID: 110499
 		[Nullable(2)]
 		private ActivityInstanceEntranceData CurrentData;
 
-		// Token: 0x0200C24A RID: 49738
+		// Token: 0x0200AC57 RID: 44119
 		private enum EComponent
 		{
-			// Token: 0x0403AB1E RID: 240414
+			// Token: 0x04035510 RID: 218384
 			BuffText,
-			// Token: 0x0403AB1F RID: 240415
+			// Token: 0x04035511 RID: 218385
 			BtnMonsterPreView
 		}
 	}

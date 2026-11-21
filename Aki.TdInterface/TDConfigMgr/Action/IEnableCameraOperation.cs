@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019E2 RID: 6626
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B6F RID: 7023
 	[JsonConverter(typeof(IEnableCameraOperationConverter))]
 	public class IEnableCameraOperation : ICameraOperationType
 	{
-		// Token: 0x06008DE7 RID: 36327 RVA: 0x0014C2F8 File Offset: 0x0014A4F8
+		// Token: 0x06009529 RID: 38185 RVA: 0x0015BE04 File Offset: 0x0015A004
 		private IEnableCameraOperation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008DE8 RID: 36328 RVA: 0x0014C330 File Offset: 0x0014A530
+		// Token: 0x0600952A RID: 38186 RVA: 0x0015BE3C File Offset: 0x0015A03C
 		public static IEnableCameraOperation Create([Nullable(2)] IEnableCameraOperation instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008DE9 RID: 36329 RVA: 0x0014C343 File Offset: 0x0014A543
+		// Token: 0x0600952B RID: 38187 RVA: 0x0015BE4F File Offset: 0x0015A04F
 		public static IEnableCameraOperation CreateFromSetValue([Nullable(2)] IEnableCameraOperation_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008DEA RID: 36330 RVA: 0x0014C356 File Offset: 0x0014A556
+		// Token: 0x0600952C RID: 38188 RVA: 0x0015BE62 File Offset: 0x0015A062
 		public new IEnableCameraOperation_SetValue ToSetValue()
 		{
 			return new IEnableCameraOperation_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D75 RID: 11637
-		// (get) Token: 0x06008DEB RID: 36331 RVA: 0x0014C369 File Offset: 0x0014A569
-		// (set) Token: 0x06008DEC RID: 36332 RVA: 0x0014C394 File Offset: 0x0014A594
+		// Token: 0x17002F7A RID: 12154
+		// (get) Token: 0x0600952D RID: 38189 RVA: 0x0015BE75 File Offset: 0x0015A075
+		// (set) Token: 0x0600952E RID: 38190 RVA: 0x0015BEA0 File Offset: 0x0015A0A0
 		public override ECameraOperationType Type
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005812 RID: 22546
+		// Token: 0x04005C67 RID: 23655
 		[Nullable(2)]
 		protected new IEnableCameraOperation FbInstance;
 
-		// Token: 0x04005813 RID: 22547
+		// Token: 0x04005C68 RID: 23656
 		[Nullable(2)]
 		protected new IEnableCameraOperation_SetValue PocoInterface;
 	}

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200206A RID: 8298
+	// Token: 0x020022B3 RID: 8883
 	public class IVisualNovelDate_SetValue
 	{
-		// Token: 0x04006D88 RID: 28040
+		// Token: 0x04007394 RID: 29588
 		public int Month;
 
-		// Token: 0x04006D89 RID: 28041
+		// Token: 0x04007395 RID: 29589
 		public int Day;
 	}
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200201A RID: 8218
+// Token: 0x020014ED RID: 5357
 public class CostData : ICostData
 {
-	// Token: 0x170013AC RID: 5036
-	// (get) Token: 0x060101B9 RID: 65977 RVA: 0x003EBF6A File Offset: 0x003EA16A
-	// (set) Token: 0x060101BA RID: 65978 RVA: 0x003EBF72 File Offset: 0x003EA172
+	// Token: 0x170013D9 RID: 5081
+	// (get) Token: 0x0600D621 RID: 54817 RVA: 0x003F8562 File Offset: 0x003F6762
+	// (set) Token: 0x0600D622 RID: 54818 RVA: 0x003F856A File Offset: 0x003F676A
 	public int ItemId { get; set; }
 
-	// Token: 0x170013AD RID: 5037
-	// (get) Token: 0x060101BB RID: 65979 RVA: 0x003EBF7B File Offset: 0x003EA17B
-	// (set) Token: 0x060101BC RID: 65980 RVA: 0x003EBF83 File Offset: 0x003EA183
+	// Token: 0x170013DA RID: 5082
+	// (get) Token: 0x0600D623 RID: 54819 RVA: 0x003F8573 File Offset: 0x003F6773
+	// (set) Token: 0x0600D624 RID: 54820 RVA: 0x003F857B File Offset: 0x003F677B
 	public int Count { get; set; }
 
-	// Token: 0x170013AE RID: 5038
-	// (get) Token: 0x060101BD RID: 65981 RVA: 0x003EBF8C File Offset: 0x003EA18C
-	// (set) Token: 0x060101BE RID: 65982 RVA: 0x003EBF94 File Offset: 0x003EA194
+	// Token: 0x170013DB RID: 5083
+	// (get) Token: 0x0600D625 RID: 54821 RVA: 0x003F8584 File Offset: 0x003F6784
+	// (set) Token: 0x0600D626 RID: 54822 RVA: 0x003F858C File Offset: 0x003F678C
 	public int Cost { get; set; }
 }

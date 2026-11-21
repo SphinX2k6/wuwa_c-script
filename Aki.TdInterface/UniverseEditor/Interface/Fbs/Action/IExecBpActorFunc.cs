@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006702 RID: 26370
+	// Token: 0x02006D82 RID: 28034
 	public struct IExecBpActorFunc : IFlatbufferObject
 	{
-		// Token: 0x1700C3F0 RID: 50160
-		// (get) Token: 0x0602DDC9 RID: 187849 RVA: 0x006457B6 File Offset: 0x006439B6
+		// Token: 0x1700CDA6 RID: 52646
+		// (get) Token: 0x0603060C RID: 198156 RVA: 0x00692E5E File Offset: 0x0069105E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DDCA RID: 187850 RVA: 0x006457C3 File Offset: 0x006439C3
+		// Token: 0x0603060D RID: 198157 RVA: 0x00692E6B File Offset: 0x0069106B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DDCB RID: 187851 RVA: 0x006457CC File Offset: 0x006439CC
+		// Token: 0x0603060E RID: 198158 RVA: 0x00692E74 File Offset: 0x00691074
 		public static IExecBpActorFunc GetRootAsIExecBpActorFunc(ByteBuffer _bb)
 		{
 			return IExecBpActorFunc.GetRootAsIExecBpActorFunc(_bb, default(IExecBpActorFunc));
 		}
 
-		// Token: 0x0602DDCC RID: 187852 RVA: 0x006457E8 File Offset: 0x006439E8
+		// Token: 0x0603060F RID: 198159 RVA: 0x00692E90 File Offset: 0x00691090
 		public static IExecBpActorFunc GetRootAsIExecBpActorFunc(ByteBuffer _bb, IExecBpActorFunc obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DDCD RID: 187853 RVA: 0x00645805 File Offset: 0x00643A05
+		// Token: 0x06030610 RID: 198160 RVA: 0x00692EAD File Offset: 0x006910AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DDCE RID: 187854 RVA: 0x00645814 File Offset: 0x00643A14
+		// Token: 0x06030611 RID: 198161 RVA: 0x00692EBC File Offset: 0x006910BC
 		public IExecBpActorFunc __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C3F1 RID: 50161
-		// (get) Token: 0x0602DDCF RID: 187855 RVA: 0x00645824 File Offset: 0x00643A24
+		// Token: 0x1700CDA7 RID: 52647
+		// (get) Token: 0x06030612 RID: 198162 RVA: 0x00692ECC File Offset: 0x006910CC
 		public TBpActorFuncType ExecFuncTypeType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DDD0 RID: 187856 RVA: 0x00645860 File Offset: 0x00643A60
+		// Token: 0x06030613 RID: 198163 RVA: 0x00692F08 File Offset: 0x00691108
 		public TTable? ExecFuncType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,19 +73,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602DDD1 RID: 187857 RVA: 0x006458A4 File Offset: 0x00643AA4
+		// Token: 0x06030614 RID: 198164 RVA: 0x00692F4C File Offset: 0x0069114C
 		public IBrokenBridgeEffectInMobileBpActorFunc ExecFuncTypeAsIBrokenBridgeEffectInMobileBpActorFunc()
 		{
 			return this.ExecFuncType<IBrokenBridgeEffectInMobileBpActorFunc>().Value;
 		}
 
-		// Token: 0x0602DDD2 RID: 187858 RVA: 0x006458C0 File Offset: 0x00643AC0
+		// Token: 0x06030615 RID: 198165 RVA: 0x00692F68 File Offset: 0x00691168
 		public ICarPaintChangeBpActorFunc ExecFuncTypeAsICarPaintChangeBpActorFunc()
 		{
 			return this.ExecFuncType<ICarPaintChangeBpActorFunc>().Value;
 		}
 
-		// Token: 0x0602DDD3 RID: 187859 RVA: 0x006458DB File Offset: 0x00643ADB
+		// Token: 0x06030616 RID: 198166 RVA: 0x00692F83 File Offset: 0x00691183
 		public static Offset<IExecBpActorFunc> CreateIExecBpActorFunc(FlatBufferBuilder builder, TBpActorFuncType ExecFuncType_type = TBpActorFuncType.NONE, int ExecFuncTypeOffset = 0)
 		{
 			builder.StartTable(2);
@@ -94,31 +94,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IExecBpActorFunc.EndIExecBpActorFunc(builder);
 		}
 
-		// Token: 0x0602DDD4 RID: 187860 RVA: 0x006458F8 File Offset: 0x00643AF8
+		// Token: 0x06030617 RID: 198167 RVA: 0x00692FA0 File Offset: 0x006911A0
 		public static void StartIExecBpActorFunc(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602DDD5 RID: 187861 RVA: 0x00645901 File Offset: 0x00643B01
+		// Token: 0x06030618 RID: 198168 RVA: 0x00692FA9 File Offset: 0x006911A9
 		public static void AddExecFuncTypeType(FlatBufferBuilder builder, TBpActorFuncType execFuncTypeType)
 		{
 			builder.AddByte(0, (byte)execFuncTypeType, 0);
 		}
 
-		// Token: 0x0602DDD6 RID: 187862 RVA: 0x0064590C File Offset: 0x00643B0C
+		// Token: 0x06030619 RID: 198169 RVA: 0x00692FB4 File Offset: 0x006911B4
 		public static void AddExecFuncType(FlatBufferBuilder builder, int execFuncTypeOffset)
 		{
 			builder.AddOffset(1, execFuncTypeOffset, 0);
 		}
 
-		// Token: 0x0602DDD7 RID: 187863 RVA: 0x00645917 File Offset: 0x00643B17
+		// Token: 0x0603061A RID: 198170 RVA: 0x00692FBF File Offset: 0x006911BF
 		public static Offset<IExecBpActorFunc> EndIExecBpActorFunc(FlatBufferBuilder builder)
 		{
 			return new Offset<IExecBpActorFunc>(builder.EndTable());
 		}
 
-		// Token: 0x0602DDD8 RID: 187864 RVA: 0x00645924 File Offset: 0x00643B24
+		// Token: 0x0603061B RID: 198171 RVA: 0x00692FCC File Offset: 0x006911CC
 		public IExecBpActorFuncT UnPack()
 		{
 			IExecBpActorFuncT execBpActorFuncT = new IExecBpActorFuncT();
@@ -126,7 +126,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return execBpActorFuncT;
 		}
 
-		// Token: 0x0602DDD9 RID: 187865 RVA: 0x00645940 File Offset: 0x00643B40
+		// Token: 0x0603061C RID: 198172 RVA: 0x00692FE8 File Offset: 0x006911E8
 		public void UnPackTo(IExecBpActorFuncT _o)
 		{
 			_o.ExecFuncType = new TBpActorFuncTypeUnion();
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.ExecFuncType.Value = ((this.ExecFuncType<ICarPaintChangeBpActorFunc>() != null) ? this.ExecFuncType<ICarPaintChangeBpActorFunc>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0602DDDA RID: 187866 RVA: 0x006459E4 File Offset: 0x00643BE4
+		// Token: 0x0603061D RID: 198173 RVA: 0x0069308C File Offset: 0x0069128C
 		public static Offset<IExecBpActorFunc> Pack(FlatBufferBuilder builder, IExecBpActorFuncT _o)
 		{
 			if (_o == null)
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IExecBpActorFunc.CreateIExecBpActorFunc(builder, execFuncType_type, execFuncTypeOffset);
 		}
 
-		// Token: 0x04010DE0 RID: 69088
+		// Token: 0x04011C11 RID: 72721
 		private Table __p;
 	}
 }

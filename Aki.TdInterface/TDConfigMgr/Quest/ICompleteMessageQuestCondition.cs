@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F22 RID: 3874
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001038 RID: 4152
 	public class ICompleteMessageQuestCondition : IPhoneMessageProgressTypeBase
 	{
-		// Token: 0x060055AE RID: 21934 RVA: 0x000D1EA4 File Offset: 0x000D00A4
+		// Token: 0x06005B2A RID: 23338 RVA: 0x000DE04C File Offset: 0x000DC24C
 		private ICompleteMessageQuestCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060055AF RID: 21935 RVA: 0x000D1EDC File Offset: 0x000D00DC
+		// Token: 0x06005B2B RID: 23339 RVA: 0x000DE084 File Offset: 0x000DC284
 		public static ICompleteMessageQuestCondition Create([Nullable(2)] ICompleteMessageQuestCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060055B0 RID: 21936 RVA: 0x000D1EEF File Offset: 0x000D00EF
+		// Token: 0x06005B2C RID: 23340 RVA: 0x000DE097 File Offset: 0x000DC297
 		public static ICompleteMessageQuestCondition CreateFromSetValue([Nullable(2)] ICompleteMessageQuestCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060055B1 RID: 21937 RVA: 0x000D1F02 File Offset: 0x000D0102
+		// Token: 0x06005B2D RID: 23341 RVA: 0x000DE0AA File Offset: 0x000DC2AA
 		public new ICompleteMessageQuestCondition_SetValue ToSetValue()
 		{
 			return new ICompleteMessageQuestCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001CA5 RID: 7333
-		// (get) Token: 0x060055B2 RID: 21938 RVA: 0x000D1F15 File Offset: 0x000D0115
-		// (set) Token: 0x060055B3 RID: 21939 RVA: 0x000D1F40 File Offset: 0x000D0140
+		// Token: 0x17001E3D RID: 7741
+		// (get) Token: 0x06005B2E RID: 23342 RVA: 0x000DE0BD File Offset: 0x000DC2BD
+		// (set) Token: 0x06005B2F RID: 23343 RVA: 0x000DE0E8 File Offset: 0x000DC2E8
 		public override EPhoneMessageProgressType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040033D6 RID: 13270
+		// Token: 0x040036E3 RID: 14051
 		[Nullable(2)]
 		protected new ICompleteMessageQuestCondition FbInstance;
 
-		// Token: 0x040033D7 RID: 13271
+		// Token: 0x040036E4 RID: 14052
 		[Nullable(2)]
 		protected new ICompleteMessageQuestCondition_SetValue PocoInterface;
 	}

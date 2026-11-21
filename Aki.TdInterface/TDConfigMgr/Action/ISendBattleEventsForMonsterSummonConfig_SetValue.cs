@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DFB RID: 7675
+	// Token: 0x0200202E RID: 8238
 	public class ISendBattleEventsForMonsterSummonConfig_SetValue
 	{
-		// Token: 0x0400625A RID: 25178
+		// Token: 0x04006831 RID: 26673
 		public int TagConfigId;
 
-		// Token: 0x0400625B RID: 25179
+		// Token: 0x04006832 RID: 26674
 		public int? DelayTime;
 	}
 }

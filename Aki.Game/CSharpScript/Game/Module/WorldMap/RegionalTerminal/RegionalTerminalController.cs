@@ -6,38 +6,38 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 {
-	// Token: 0x02004853 RID: 18515
+	// Token: 0x02003784 RID: 14212
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RegionalTerminalController : ControllerBase
 	{
-		// Token: 0x0603071B RID: 198427 RVA: 0x00B3F47D File Offset: 0x00B3D67D
+		// Token: 0x06024EEA RID: 151274 RVA: 0x00A6F6C1 File Offset: 0x00A6D8C1
 		protected override bool OnInit()
 		{
 			this.OnRegisterNetEvent();
 			return true;
 		}
 
-		// Token: 0x0603071C RID: 198428 RVA: 0x00B3F486 File Offset: 0x00B3D686
+		// Token: 0x06024EEB RID: 151275 RVA: 0x00A6F6CA File Offset: 0x00A6D8CA
 		protected override bool OnClear()
 		{
 			this.OnUnRegisterNetEvent();
 			return true;
 		}
 
-		// Token: 0x0603071D RID: 198429 RVA: 0x00B3F48F File Offset: 0x00B3D68F
+		// Token: 0x06024EEC RID: 151276 RVA: 0x00A6F6D3 File Offset: 0x00A6D8D3
 		protected void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.AreaTerminalInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnAreaTerminalInfoNotify));
 		}
 
-		// Token: 0x0603071E RID: 198430 RVA: 0x00B3F4AD File Offset: 0x00B3D6AD
+		// Token: 0x06024EED RID: 151277 RVA: 0x00A6F6F1 File Offset: 0x00A6D8F1
 		protected void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.AreaTerminalInfoNotify);
 		}
 
-		// Token: 0x0603071F RID: 198431 RVA: 0x00B3F4C0 File Offset: 0x00B3D6C0
+		// Token: 0x06024EEE RID: 151278 RVA: 0x00A6F704 File Offset: 0x00A6D904
 		[NullableContext(2)]
 		private void OnAreaTerminalInfoNotify(IMessage msg, Net.CallbackStatus callbackStatus)
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			}
 		}
 
-		// Token: 0x06030720 RID: 198432 RVA: 0x00B3F5B4 File Offset: 0x00B3D7B4
+		// Token: 0x06024EEF RID: 151279 RVA: 0x00A6F7F8 File Offset: 0x00A6D9F8
 		[NullableContext(2)]
 		public void RequestTerminalPinOperation(int gameplayId, bool isPin, Action<bool> callback = null)
 		{
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			}, 0);
 		}
 
-		// Token: 0x06030721 RID: 198433 RVA: 0x00B3F618 File Offset: 0x00B3D818
+		// Token: 0x06024EF0 RID: 151280 RVA: 0x00A6F85C File Offset: 0x00A6DA5C
 		public void OpenTerminalOverviewView(int id = 0)
 		{
 			RegionalTerminalViewParams regionalTerminalViewParams = new RegionalTerminalViewParams();
@@ -115,8 +115,8 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			UiManager.Instance.OpenView(EUiViewName.RegionalTerminalOverviewView, regionalTerminalViewParams, null);
 		}
 
-		// Token: 0x17007910 RID: 30992
-		// (get) Token: 0x06030722 RID: 198434 RVA: 0x00B3F643 File Offset: 0x00B3D843
+		// Token: 0x17004BCD RID: 19405
+		// (get) Token: 0x06024EF1 RID: 151281 RVA: 0x00A6F887 File Offset: 0x00A6DA87
 		public static RegionalTerminalController Instance
 		{
 			get
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			}
 		}
 
-		// Token: 0x06030723 RID: 198435 RVA: 0x00B3F64A File Offset: 0x00B3D84A
+		// Token: 0x06024EF2 RID: 151282 RVA: 0x00A6F88E File Offset: 0x00A6DA8E
 		public static RegionalTerminalController GetOrCreateInstance()
 		{
 			if (RegionalTerminalController._Instance == null)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			return RegionalTerminalController._Instance;
 		}
 
-		// Token: 0x06030724 RID: 198436 RVA: 0x00B3F65E File Offset: 0x00B3D85E
+		// Token: 0x06024EF3 RID: 151283 RVA: 0x00A6F8A2 File Offset: 0x00A6DAA2
 		public static bool CreateInstance()
 		{
 			if (RegionalTerminalController._Instance != null)
@@ -146,24 +146,24 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal
 			return true;
 		}
 
-		// Token: 0x06030725 RID: 198437 RVA: 0x00B3F674 File Offset: 0x00B3D874
+		// Token: 0x06024EF4 RID: 151284 RVA: 0x00A6F8B8 File Offset: 0x00A6DAB8
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06030726 RID: 198438 RVA: 0x00B3F676 File Offset: 0x00B3D876
+		// Token: 0x06024EF5 RID: 151285 RVA: 0x00A6F8BA File Offset: 0x00A6DABA
 		public static void ResetStaticDefaultValue()
 		{
 			RegionalTerminalController._Instance = null;
 		}
 
-		// Token: 0x06030727 RID: 198439 RVA: 0x00B3F67E File Offset: 0x00B3D87E
+		// Token: 0x06024EF6 RID: 151286 RVA: 0x00A6F8C2 File Offset: 0x00A6DAC2
 		static RegionalTerminalController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RegionalTerminalController.CreateStaticDefaultValue), new Action(RegionalTerminalController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A081 RID: 106625
+		// Token: 0x04014735 RID: 83765
 		[Nullable(2)]
 		private static RegionalTerminalController _Instance;
 	}

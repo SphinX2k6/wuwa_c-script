@@ -3,48 +3,48 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057D4 RID: 22484
+	// Token: 0x020047AB RID: 18347
 	[NullableContext(1)]
 	public interface IRewardExploreFriendData
 	{
-		// Token: 0x170089CC RID: 35276
-		// (get) Token: 0x060392A6 RID: 234150
-		// (set) Token: 0x060392A7 RID: 234151
+		// Token: 0x17005D96 RID: 23958
+		// (get) Token: 0x0602E1BA RID: 188858
+		// (set) Token: 0x0602E1BB RID: 188859
 		string PlayerDesc { get; set; }
 
-		// Token: 0x170089CD RID: 35277
-		// (get) Token: 0x060392A8 RID: 234152
-		// (set) Token: 0x060392A9 RID: 234153
+		// Token: 0x17005D97 RID: 23959
+		// (get) Token: 0x0602E1BC RID: 188860
+		// (set) Token: 0x0602E1BD RID: 188861
 		string PlayerName { get; set; }
 
-		// Token: 0x170089CE RID: 35278
-		// (get) Token: 0x060392AA RID: 234154
-		// (set) Token: 0x060392AB RID: 234155
+		// Token: 0x17005D98 RID: 23960
+		// (get) Token: 0x0602E1BE RID: 188862
+		// (set) Token: 0x0602E1BF RID: 188863
 		string PlayerIndexPath { get; set; }
 
-		// Token: 0x170089CF RID: 35279
-		// (get) Token: 0x060392AC RID: 234156
-		// (set) Token: 0x060392AD RID: 234157
+		// Token: 0x17005D99 RID: 23961
+		// (get) Token: 0x0602E1C0 RID: 188864
+		// (set) Token: 0x0602E1C1 RID: 188865
 		string PlayerIconPath { get; set; }
 
-		// Token: 0x170089D0 RID: 35280
-		// (get) Token: 0x060392AE RID: 234158
-		// (set) Token: 0x060392AF RID: 234159
+		// Token: 0x17005D9A RID: 23962
+		// (get) Token: 0x0602E1C2 RID: 188866
+		// (set) Token: 0x0602E1C3 RID: 188867
 		int PlayerId { get; set; }
 
-		// Token: 0x170089D1 RID: 35281
-		// (get) Token: 0x060392B0 RID: 234160
-		// (set) Token: 0x060392B1 RID: 234161
+		// Token: 0x17005D9B RID: 23963
+		// (get) Token: 0x0602E1C4 RID: 188868
+		// (set) Token: 0x0602E1C5 RID: 188869
 		int PlayerLevel { get; set; }
 
-		// Token: 0x170089D2 RID: 35282
-		// (get) Token: 0x060392B2 RID: 234162
-		// (set) Token: 0x060392B3 RID: 234163
+		// Token: 0x17005D9C RID: 23964
+		// (get) Token: 0x0602E1C6 RID: 188870
+		// (set) Token: 0x0602E1C7 RID: 188871
 		bool IsMyFriend { get; set; }
 
-		// Token: 0x170089D3 RID: 35283
-		// (get) Token: 0x060392B4 RID: 234164
-		// (set) Token: 0x060392B5 RID: 234165
+		// Token: 0x17005D9D RID: 23965
+		// (get) Token: 0x0602E1C8 RID: 188872
+		// (set) Token: 0x0602E1C9 RID: 188873
 		Action<int> OnClickCallback { get; set; }
 	}
 }

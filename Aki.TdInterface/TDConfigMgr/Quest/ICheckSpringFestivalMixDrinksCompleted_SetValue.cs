@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EFF RID: 3839
+	// Token: 0x02001015 RID: 4117
 	public class ICheckSpringFestivalMixDrinksCompleted_SetValue
 	{
-		// Token: 0x04003345 RID: 13125
+		// Token: 0x04003652 RID: 13906
 		public ESpringFestivalGameplayType Type;
 
-		// Token: 0x04003346 RID: 13126
+		// Token: 0x04003653 RID: 13907
 		public int? Id;
 	}
 }

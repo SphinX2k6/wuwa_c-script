@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x0200591D RID: 22813
+	// Token: 0x020048F6 RID: 18678
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrMaterialsDeliveryView : UiViewBase
 	{
-		// Token: 0x06039EED RID: 237293 RVA: 0x00DC480D File Offset: 0x00DC2A0D
+		// Token: 0x0602EE10 RID: 192016 RVA: 0x00D13B01 File Offset: 0x00D11D01
 		public InfrMaterialsDeliveryView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06039EEE RID: 237294 RVA: 0x00DC4834 File Offset: 0x00DC2A34
+		// Token: 0x0602EE11 RID: 192017 RVA: 0x00D13B28 File Offset: 0x00D11D28
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039EEF RID: 237295 RVA: 0x00DC48FC File Offset: 0x00DC2AFC
+		// Token: 0x0602EE12 RID: 192018 RVA: 0x00D13BF0 File Offset: 0x00D11DF0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InfrMaterialsDeliveryView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039EF0 RID: 237296 RVA: 0x00DC4940 File Offset: 0x00DC2B40
+		// Token: 0x0602EE13 RID: 192019 RVA: 0x00D13C34 File Offset: 0x00D11E34
 		private UniTask CreateCaption()
 		{
 			InfrMaterialsDeliveryView.<CreateCaption>d__10 <CreateCaption>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039EF1 RID: 237297 RVA: 0x00DC4984 File Offset: 0x00DC2B84
+		// Token: 0x0602EE14 RID: 192020 RVA: 0x00D13C78 File Offset: 0x00D11E78
 		private UniTask CreateInfoPanel()
 		{
 			InfrMaterialsDeliveryView.<CreateInfoPanel>d__11 <CreateInfoPanel>d__;
@@ -78,14 +78,14 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateInfoPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039EF2 RID: 237298 RVA: 0x00DC49C7 File Offset: 0x00DC2BC7
+		// Token: 0x0602EE15 RID: 192021 RVA: 0x00D13CBB File Offset: 0x00D11EBB
 		protected override void OnStart()
 		{
 			this.RefreshInfoPanel();
 			this.RefreshCaption();
 		}
 
-		// Token: 0x06039EF3 RID: 237299 RVA: 0x00DC49D8 File Offset: 0x00DC2BD8
+		// Token: 0x0602EE16 RID: 192022 RVA: 0x00D13CCC File Offset: 0x00D11ECC
 		private void RefreshCaption()
 		{
 			this.Caption.SetCloseCallBack(delegate
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			button.RootUIComp.Get().SetUIActive(flag);
 		}
 
-		// Token: 0x06039EF4 RID: 237300 RVA: 0x00DC4A73 File Offset: 0x00DC2C73
+		// Token: 0x0602EE17 RID: 192023 RVA: 0x00D13D67 File Offset: 0x00D11F67
 		private void RefreshInfoPanel()
 		{
 			this.InfoPanel.SetClickBtnBuildCb(delegate
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			});
 		}
 
-		// Token: 0x06039EF5 RID: 237301 RVA: 0x00DC4A8C File Offset: 0x00DC2C8C
+		// Token: 0x0602EE18 RID: 192024 RVA: 0x00D13D80 File Offset: 0x00D11F80
 		private UniTask OnClickBtnBuild()
 		{
 			InfrMaterialsDeliveryView.<OnClickBtnBuild>d__15 <OnClickBtnBuild>d__;
@@ -128,13 +128,13 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <OnClickBtnBuild>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039EF6 RID: 237302 RVA: 0x00DC4ACF File Offset: 0x00DC2CCF
+		// Token: 0x0602EE19 RID: 192025 RVA: 0x00D13DC3 File Offset: 0x00D11FC3
 		protected override void OnBeforeDestroy()
 		{
 			GeneralLogicTreeController.Instance.OpenSystemBoardResultRequest((this.HasBuild > false) ? 1 : 0, this.ActionIncId);
 		}
 
-		// Token: 0x06039EF7 RID: 237303 RVA: 0x00DC4AEA File Offset: 0x00DC2CEA
+		// Token: 0x0602EE1A RID: 192026 RVA: 0x00D13DDE File Offset: 0x00D11FDE
 		private void OnClickBtnTerminal()
 		{
 			UiManager.Instance.OpenView(EUiViewName.InfrRoadNetworkMainView, new InfrastructureDefine.InfrRoadNetworkOpenParam
@@ -144,35 +144,35 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}, null);
 		}
 
-		// Token: 0x0401E34A RID: 123722
+		// Token: 0x04018DE7 RID: 101863
 		private int RoadId;
 
-		// Token: 0x0401E34B RID: 123723
+		// Token: 0x04018DE8 RID: 101864
 		private ActionInfrastructureItemDeliveryType DeliveryType = ActionInfrastructureItemDeliveryType.Road;
 
-		// Token: 0x0401E34C RID: 123724
+		// Token: 0x04018DE9 RID: 101865
 		private int ActionIncId;
 
-		// Token: 0x0401E34D RID: 123725
+		// Token: 0x04018DEA RID: 101866
 		private bool HasBuild;
 
-		// Token: 0x0401E34E RID: 123726
+		// Token: 0x04018DEB RID: 101867
 		private readonly PopupCaptionItem Caption = new PopupCaptionItem(null);
 
-		// Token: 0x0401E34F RID: 123727
+		// Token: 0x04018DEC RID: 101868
 		private readonly InfrMaterialsDeliveryInfoPanel InfoPanel = new InfrMaterialsDeliveryInfoPanel();
 
-		// Token: 0x0200BBA5 RID: 48037
+		// Token: 0x0200A5B5 RID: 42421
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038A6A RID: 232042
+			// Token: 0x04033450 RID: 210000
 			public const int Caption = 0;
 
-			// Token: 0x04038A6B RID: 232043
+			// Token: 0x04033451 RID: 210001
 			public const int InfoPanel = 1;
 
-			// Token: 0x04038A6C RID: 232044
+			// Token: 0x04033452 RID: 210002
 			public const int BtnTerminal = 2;
 		}
 	}

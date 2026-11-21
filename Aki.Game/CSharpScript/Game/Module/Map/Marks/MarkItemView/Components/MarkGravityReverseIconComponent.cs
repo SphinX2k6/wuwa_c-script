@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 {
-	// Token: 0x02005545 RID: 21829
+	// Token: 0x02004517 RID: 17687
 	public class MarkGravityReverseIconComponent : MarkPanelBase
 	{
-		// Token: 0x06037B4E RID: 228174 RVA: 0x00D381CC File Offset: 0x00D363CC
+		// Token: 0x0602CA1D RID: 182813 RVA: 0x00C85CA0 File Offset: 0x00C83EA0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -21,14 +21,14 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06037B4F RID: 228175 RVA: 0x00D38214 File Offset: 0x00D36414
+		// Token: 0x0602CA1E RID: 182814 RVA: 0x00C85CE8 File Offset: 0x00C83EE8
 		protected override void OnStart()
 		{
 			base.GetSprite(0).SetUIActive(false);
 			this.UpdateIcon();
 		}
 
-		// Token: 0x06037B50 RID: 228176 RVA: 0x00D3822C File Offset: 0x00D3642C
+		// Token: 0x0602CA1F RID: 182815 RVA: 0x00C85D00 File Offset: 0x00C83F00
 		private void UpdateIcon()
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath((this.Gravity == EMapGravityDirection.Down) ? "SP_OverviewDown" : "SP_OverviewUp");
@@ -38,9 +38,9 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			});
 		}
 
-		// Token: 0x170085BC RID: 34236
-		// (get) Token: 0x06037B51 RID: 228177 RVA: 0x00D3827D File Offset: 0x00D3647D
-		// (set) Token: 0x06037B52 RID: 228178 RVA: 0x00D38285 File Offset: 0x00D36485
+		// Token: 0x1700595C RID: 22876
+		// (get) Token: 0x0602CA20 RID: 182816 RVA: 0x00C85D51 File Offset: 0x00C83F51
+		// (set) Token: 0x0602CA21 RID: 182817 RVA: 0x00C85D59 File Offset: 0x00C83F59
 		public EMapGravityDirection Gravity
 		{
 			get
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			}
 		}
 
-		// Token: 0x0401D442 RID: 119874
+		// Token: 0x04017EC8 RID: 97992
 		private EMapGravityDirection GravityDirection = EMapGravityDirection.Down;
 
-		// Token: 0x0200B772 RID: 46962
+		// Token: 0x0200A19D RID: 41373
 		public static class EComponents
 		{
-			// Token: 0x040378A3 RID: 227491
+			// Token: 0x040322CE RID: 205518
 			public const int Icon = 0;
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FF7 RID: 4087
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001123 RID: 4387
 	public class ILevelPlayTrackRadius
 	{
-		// Token: 0x06005AEE RID: 23278 RVA: 0x000DCA50 File Offset: 0x000DAC50
+		// Token: 0x060060CE RID: 24782 RVA: 0x000E9690 File Offset: 0x000E7890
 		private ILevelPlayTrackRadius_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005AEF RID: 23279 RVA: 0x000DCA88 File Offset: 0x000DAC88
+		// Token: 0x060060CF RID: 24783 RVA: 0x000E96C8 File Offset: 0x000E78C8
 		public static ILevelPlayTrackRadius Create([Nullable(2)] ILevelPlayTrackRadius instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005AF0 RID: 23280 RVA: 0x000DCA9B File Offset: 0x000DAC9B
+		// Token: 0x060060D0 RID: 24784 RVA: 0x000E96DB File Offset: 0x000E78DB
 		public static ILevelPlayTrackRadius CreateFromSetValue([Nullable(2)] ILevelPlayTrackRadius_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005AF1 RID: 23281 RVA: 0x000DCAAE File Offset: 0x000DACAE
+		// Token: 0x060060D1 RID: 24785 RVA: 0x000E96EE File Offset: 0x000E78EE
 		public ILevelPlayTrackRadius_SetValue ToSetValue()
 		{
 			return new ILevelPlayTrackRadius_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E06 RID: 7686
-		// (get) Token: 0x06005AF2 RID: 23282 RVA: 0x000DCAC1 File Offset: 0x000DACC1
-		// (set) Token: 0x06005AF3 RID: 23283 RVA: 0x000DCAEC File Offset: 0x000DACEC
+		// Token: 0x17001FAF RID: 8111
+		// (get) Token: 0x060060D2 RID: 24786 RVA: 0x000E9701 File Offset: 0x000E7901
+		// (set) Token: 0x060060D3 RID: 24787 RVA: 0x000E972C File Offset: 0x000E792C
 		public virtual int TrackRadius
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040036B7 RID: 14007
+		// Token: 0x040039EF RID: 14831
 		[Nullable(2)]
 		protected ILevelPlayTrackRadius FbInstance;
 
-		// Token: 0x040036B8 RID: 14008
+		// Token: 0x040039F0 RID: 14832
 		[Nullable(2)]
 		protected ILevelPlayTrackRadius_SetValue PocoInterface;
 	}

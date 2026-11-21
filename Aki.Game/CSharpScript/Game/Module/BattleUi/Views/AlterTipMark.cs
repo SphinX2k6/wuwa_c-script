@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CB1 RID: 23729
+	// Token: 0x02004C93 RID: 19603
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AlterTipMark : UiPanelBase
 	{
-		// Token: 0x0603BF36 RID: 245558 RVA: 0x00E5419C File Offset: 0x00E5239C
+		// Token: 0x06030E89 RID: 200329 RVA: 0x00DA4844 File Offset: 0x00DA2A44
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BF37 RID: 245559 RVA: 0x00E54205 File Offset: 0x00E52405
+		// Token: 0x06030E8A RID: 200330 RVA: 0x00DA48AD File Offset: 0x00DA2AAD
 		protected override void OnStart()
 		{
 			this.WarningItem = base.GetItem(0);
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(1).SetUIActive(false);
 		}
 
-		// Token: 0x0603BF38 RID: 245560 RVA: 0x00E5423C File Offset: 0x00E5243C
+		// Token: 0x06030E8B RID: 200331 RVA: 0x00DA48E4 File Offset: 0x00DA2AE4
 		public AlterTipMark(UUIItem parent, AActor trackActor, bool isBattle)
 		{
 			if (GlobalData.World == null)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsBattle = isBattle;
 		}
 
-		// Token: 0x0603BF39 RID: 245561 RVA: 0x00E542D6 File Offset: 0x00E524D6
+		// Token: 0x06030E8C RID: 200332 RVA: 0x00DA497E File Offset: 0x00DA2B7E
 		public void Update()
 		{
 			if (GlobalData.World == null)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF3A RID: 245562 RVA: 0x00E54300 File Offset: 0x00E52500
+		// Token: 0x06030E8D RID: 200333 RVA: 0x00DA49A8 File Offset: 0x00DA2BA8
 		private void PositionUpdate()
 		{
 			if (this.TrackingActor == null)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RootItem.SetAnchorOffset(vector2D.ToUeVector2D(false));
 		}
 
-		// Token: 0x0603BF3B RID: 245563 RVA: 0x00E54504 File Offset: 0x00E52704
+		// Token: 0x06030E8E RID: 200334 RVA: 0x00DA4BAC File Offset: 0x00DA2DAC
 		private void AlertValueUpdate()
 		{
 			float alertValue = ActorUtils.GetEntityByActor(this.TrackingActor, true).Entity.GetComponent<CharacterAiComponent>().AiController.AiAlert.AlertValue;
@@ -125,13 +125,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AlterLevel = (double)alertValue;
 		}
 
-		// Token: 0x0603BF3C RID: 245564 RVA: 0x00E5458B File Offset: 0x00E5278B
+		// Token: 0x06030E8F RID: 200335 RVA: 0x00DA4C33 File Offset: 0x00DA2E33
 		private float GetOffsetY(float x)
 		{
 			return 6E-05f * x * x - 0.2f * x + 275f;
 		}
 
-		// Token: 0x0603BF3D RID: 245565 RVA: 0x00E545A4 File Offset: 0x00E527A4
+		// Token: 0x06030E90 RID: 200336 RVA: 0x00DA4C4C File Offset: 0x00DA2E4C
 		public void ChangeToError()
 		{
 			UUIItem warningItem = this.WarningItem;
@@ -147,52 +147,52 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			errorItem.SetUIActive(true);
 		}
 
-		// Token: 0x0401F493 RID: 128147
+		// Token: 0x04019F4C RID: 106316
 		[Nullable(2)]
 		private readonly AActor TrackingActor;
 
-		// Token: 0x0401F494 RID: 128148
+		// Token: 0x04019F4D RID: 106317
 		private readonly Vector TempTrackPosition = Vector.Create();
 
-		// Token: 0x0401F495 RID: 128149
+		// Token: 0x04019F4E RID: 106318
 		private readonly Vector Offset = Vector.Create();
 
-		// Token: 0x0401F496 RID: 128150
+		// Token: 0x04019F4F RID: 106319
 		private readonly Vector CameraForward = Vector.Create();
 
-		// Token: 0x0401F497 RID: 128151
+		// Token: 0x04019F50 RID: 106320
 		private readonly Vector ProjectResult = Vector.Create();
 
-		// Token: 0x0401F498 RID: 128152
+		// Token: 0x04019F51 RID: 106321
 		private readonly Vector2D ScreenPosition = Vector2D.Create();
 
-		// Token: 0x0401F499 RID: 128153
+		// Token: 0x04019F52 RID: 106322
 		private readonly Vector2D ViewportSize = Vector2D.Create();
 
-		// Token: 0x0401F49A RID: 128154
+		// Token: 0x04019F53 RID: 106323
 		private readonly Vector2D PointTransport = Vector2D.Create(1.0, -1.0);
 
-		// Token: 0x0401F49B RID: 128155
+		// Token: 0x04019F54 RID: 106324
 		private double AlterLevel;
 
-		// Token: 0x0401F49C RID: 128156
+		// Token: 0x04019F55 RID: 106325
 		[Nullable(2)]
 		private UUIItem ErrorItem;
 
-		// Token: 0x0401F49D RID: 128157
+		// Token: 0x04019F56 RID: 106326
 		[Nullable(2)]
 		private UUIItem WarningItem;
 
-		// Token: 0x0401F49E RID: 128158
+		// Token: 0x04019F57 RID: 106327
 		private readonly bool IsBattle;
 
-		// Token: 0x0200BE8B RID: 48779
+		// Token: 0x0200A891 RID: 43153
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04039761 RID: 235361
+			// Token: 0x04034122 RID: 213282
 			UITipsWarning,
-			// Token: 0x04039762 RID: 235362
+			// Token: 0x04034123 RID: 213283
 			UITipError
 		}
 	}

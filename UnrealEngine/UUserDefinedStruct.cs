@@ -6,46 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200121A RID: 4634
+	// Token: 0x020002AB RID: 683
 	[UnrealObjectPath("/Script/Engine.UserDefinedStruct")]
 	[UnrealStructLayout(312, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 312)]
 	public class UUserDefinedStruct : UScriptStruct, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060110E5 RID: 69861 RVA: 0x001906C6 File Offset: 0x0018E8C6
+		// Token: 0x06004A20 RID: 18976 RVA: 0x00067D4A File Offset: 0x00065F4A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUserDefinedStruct._ClassPtr;
 		}
 
-		// Token: 0x060110E6 RID: 69862 RVA: 0x001906D4 File Offset: 0x0018E8D4
+		// Token: 0x06004A21 RID: 18977 RVA: 0x00067D58 File Offset: 0x00065F58
 		public UUserDefinedStruct() : this(BuiltinUtils.AllocNativeUObject(UUserDefinedStruct.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060110E7 RID: 69863 RVA: 0x001906FC File Offset: 0x0018E8FC
+		// Token: 0x06004A22 RID: 18978 RVA: 0x00067D80 File Offset: 0x00065F80
 		[NullableContext(1)]
 		public UUserDefinedStruct(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUserDefinedStruct.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17004293 RID: 17043
-		// (get) Token: 0x060110E8 RID: 69864 RVA: 0x0019072F File Offset: 0x0018E92F
-		// (set) Token: 0x060110E9 RID: 69865 RVA: 0x00190743 File Offset: 0x0018E943
-		public unsafe TEnumAsByte<EUserDefinedStructureStatus> Status
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UUserDefinedStruct.__PropertyOffset_Status);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUserDefinedStruct.__PropertyOffset_Status) = value;
-			}
-		}
-
-		// Token: 0x17004294 RID: 17044
-		// (get) Token: 0x060110EA RID: 69866 RVA: 0x00190758 File Offset: 0x0018E958
-		// (set) Token: 0x060110EB RID: 69867 RVA: 0x0019076C File Offset: 0x0018E96C
+		// Token: 0x17000DE1 RID: 3553
+		// (get) Token: 0x06004A23 RID: 18979 RVA: 0x00067DB3 File Offset: 0x00065FB3
+		// (set) Token: 0x06004A24 RID: 18980 RVA: 0x00067DC7 File Offset: 0x00065FC7
 		public unsafe FGuid Guid
 		{
 			get
@@ -58,31 +43,28 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060110EC RID: 69868 RVA: 0x00190781 File Offset: 0x0018E981
+		// Token: 0x06004A25 RID: 18981 RVA: 0x00067DDC File Offset: 0x00065FDC
 		static UUserDefinedStruct()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.UserDefinedStruct");
 		}
 
-		// Token: 0x060110ED RID: 69869 RVA: 0x0019078F File Offset: 0x0018E98F
+		// Token: 0x06004A26 RID: 18982 RVA: 0x00067DEA File Offset: 0x00065FEA
 		protected UUserDefinedStruct(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04009213 RID: 37395
+		// Token: 0x04001D35 RID: 7477
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.UserDefinedStruct";
 
-		// Token: 0x04009214 RID: 37396
+		// Token: 0x04001D36 RID: 7478
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04009215 RID: 37397
+		// Token: 0x04001D37 RID: 7479
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04009216 RID: 37398
-		internal static int __PropertyOffset_Status;
-
-		// Token: 0x04009217 RID: 37399
+		// Token: 0x04001D38 RID: 7480
 		internal static int __PropertyOffset_Guid;
 	}
 }

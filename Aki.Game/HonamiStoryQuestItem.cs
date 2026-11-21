@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EFC RID: 7932
+// Token: 0x020013BE RID: 5054
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryQuestItem : UiPanelBase, IGridProxy<EHonamiStoryQuestType>
 {
-	// Token: 0x0600F42B RID: 62507 RVA: 0x003AE7D8 File Offset: 0x003AC9D8
+	// Token: 0x0600C84A RID: 51274 RVA: 0x003BA2CC File Offset: 0x003B84CC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -38,13 +38,13 @@ public class HonamiStoryQuestItem : UiPanelBase, IGridProxy<EHonamiStoryQuestTyp
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F42C RID: 62508 RVA: 0x003AE8E6 File Offset: 0x003ACAE6
+	// Token: 0x0600C84B RID: 51275 RVA: 0x003BA3DA File Offset: 0x003B85DA
 	protected override void OnStart()
 	{
 		this.TaskLayout = new GenericLayout<HonamiStoryQuestItemChildItem, HonamiStoryQuestDataBase>(base.GetVerticalLayout(1), new Func<HonamiStoryQuestItemChildItem>(this.InitQuestChildItem), null, false, true);
 	}
 
-	// Token: 0x0600F42D RID: 62509 RVA: 0x003AE90C File Offset: 0x003ACB0C
+	// Token: 0x0600C84C RID: 51276 RVA: 0x003BA400 File Offset: 0x003B8600
 	private HonamiStoryQuestItemChildItem InitQuestChildItem()
 	{
 		HonamiStoryQuestItemChildItem honamiStoryQuestItemChildItem = new HonamiStoryQuestItemChildItem();
@@ -60,9 +60,9 @@ public class HonamiStoryQuestItem : UiPanelBase, IGridProxy<EHonamiStoryQuestTyp
 		return honamiStoryQuestItemChildItem;
 	}
 
-	// Token: 0x1700130D RID: 4877
-	// (get) Token: 0x0600F42E RID: 62510 RVA: 0x003AE961 File Offset: 0x003ACB61
-	// (set) Token: 0x0600F42F RID: 62511 RVA: 0x003AE969 File Offset: 0x003ACB69
+	// Token: 0x17001337 RID: 4919
+	// (get) Token: 0x0600C84D RID: 51277 RVA: 0x003BA455 File Offset: 0x003B8655
+	// (set) Token: 0x0600C84E RID: 51278 RVA: 0x003BA45D File Offset: 0x003B865D
 	[Nullable(new byte[]
 	{
 		2,
@@ -78,17 +78,17 @@ public class HonamiStoryQuestItem : UiPanelBase, IGridProxy<EHonamiStoryQuestTyp
 		1
 	})] set; }
 
-	// Token: 0x1700130E RID: 4878
-	// (get) Token: 0x0600F430 RID: 62512 RVA: 0x003AE972 File Offset: 0x003ACB72
-	// (set) Token: 0x0600F431 RID: 62513 RVA: 0x003AE97A File Offset: 0x003ACB7A
+	// Token: 0x17001338 RID: 4920
+	// (get) Token: 0x0600C84F RID: 51279 RVA: 0x003BA466 File Offset: 0x003B8666
+	// (set) Token: 0x0600C850 RID: 51280 RVA: 0x003BA46E File Offset: 0x003B866E
 	public int GridIndex { get; set; }
 
-	// Token: 0x1700130F RID: 4879
-	// (get) Token: 0x0600F432 RID: 62514 RVA: 0x003AE983 File Offset: 0x003ACB83
-	// (set) Token: 0x0600F433 RID: 62515 RVA: 0x003AE98B File Offset: 0x003ACB8B
+	// Token: 0x17001339 RID: 4921
+	// (get) Token: 0x0600C851 RID: 51281 RVA: 0x003BA477 File Offset: 0x003B8677
+	// (set) Token: 0x0600C852 RID: 51282 RVA: 0x003BA47F File Offset: 0x003B867F
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x0600F434 RID: 62516 RVA: 0x003AE994 File Offset: 0x003ACB94
+	// Token: 0x0600C853 RID: 51283 RVA: 0x003BA488 File Offset: 0x003B8688
 	public UniTask RefreshAsync(EHonamiStoryQuestType data, bool isSelected, int gridIndex)
 	{
 		HonamiStoryQuestItem.<RefreshAsync>d__21 <RefreshAsync>d__;
@@ -100,13 +100,13 @@ public class HonamiStoryQuestItem : UiPanelBase, IGridProxy<EHonamiStoryQuestTyp
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F435 RID: 62517 RVA: 0x003AE9DF File Offset: 0x003ACBDF
+	// Token: 0x0600C854 RID: 51284 RVA: 0x003BA4D3 File Offset: 0x003B86D3
 	public void BindOnClickTask(Action<HonamiStoryQuestItemChildItem> callback)
 	{
 		this.OnClickTask = callback;
 	}
 
-	// Token: 0x0600F436 RID: 62518 RVA: 0x003AE9E8 File Offset: 0x003ACBE8
+	// Token: 0x0600C855 RID: 51285 RVA: 0x003BA4DC File Offset: 0x003B86DC
 	private void RefreshItem()
 	{
 		if (this.TaskType == EHonamiStoryQuestType.Main)
@@ -117,37 +117,37 @@ public class HonamiStoryQuestItem : UiPanelBase, IGridProxy<EHonamiStoryQuestTyp
 		base.GetText(2).ShowTextNew("HonamiStory_SideMission");
 	}
 
-	// Token: 0x0600F437 RID: 62519 RVA: 0x003AEA16 File Offset: 0x003ACC16
+	// Token: 0x0600C856 RID: 51286 RVA: 0x003BA50A File Offset: 0x003B870A
 	public IReadOnlyList<HonamiStoryQuestItemChildItem> GetTaskChildItemList()
 	{
 		return this.TaskChildItemList;
 	}
 
-	// Token: 0x0600F438 RID: 62520 RVA: 0x003AEA1E File Offset: 0x003ACC1E
+	// Token: 0x0600C857 RID: 51287 RVA: 0x003BA512 File Offset: 0x003B8712
 	public void Clear()
 	{
 	}
 
-	// Token: 0x0600F439 RID: 62521 RVA: 0x003AEA20 File Offset: 0x003ACC20
+	// Token: 0x0600C858 RID: 51288 RVA: 0x003BA514 File Offset: 0x003B8714
 	public void OnSelected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600F43A RID: 62522 RVA: 0x003AEA22 File Offset: 0x003ACC22
+	// Token: 0x0600C859 RID: 51289 RVA: 0x003BA516 File Offset: 0x003B8716
 	public void OnDeselected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600F43B RID: 62523 RVA: 0x003AEA24 File Offset: 0x003ACC24
+	// Token: 0x0600C85A RID: 51290 RVA: 0x003BA518 File Offset: 0x003B8718
 	public object GetKey(EHonamiStoryQuestType data, int gridIndex)
 	{
 		return this.GridIndex;
 	}
 
-	// Token: 0x04007105 RID: 28933
+	// Token: 0x040071E6 RID: 29158
 	private EHonamiStoryQuestType TaskType = EHonamiStoryQuestType.Main;
 
-	// Token: 0x04007106 RID: 28934
+	// Token: 0x040071E7 RID: 29159
 	[Nullable(new byte[]
 	{
 		2,
@@ -156,13 +156,13 @@ public class HonamiStoryQuestItem : UiPanelBase, IGridProxy<EHonamiStoryQuestTyp
 	})]
 	private GenericLayout<HonamiStoryQuestItemChildItem, HonamiStoryQuestDataBase> TaskLayout;
 
-	// Token: 0x04007107 RID: 28935
+	// Token: 0x040071E8 RID: 29160
 	private readonly List<HonamiStoryQuestItemChildItem> TaskChildItemList = new List<HonamiStoryQuestItemChildItem>();
 
-	// Token: 0x04007108 RID: 28936
+	// Token: 0x040071E9 RID: 29161
 	private int ScrollToHandle = -1;
 
-	// Token: 0x04007109 RID: 28937
+	// Token: 0x040071EA RID: 29162
 	[Nullable(new byte[]
 	{
 		2,
@@ -170,23 +170,23 @@ public class HonamiStoryQuestItem : UiPanelBase, IGridProxy<EHonamiStoryQuestTyp
 	})]
 	private Action<HonamiStoryQuestItemChildItem> OnClickTask;
 
-	// Token: 0x020084FB RID: 34043
+	// Token: 0x02007680 RID: 30336
 	[NullableContext(0)]
 	private enum EHonamiStoryQuestItemComponent
 	{
-		// Token: 0x0402B464 RID: 177252
+		// Token: 0x04026788 RID: 157576
 		RootItem,
-		// Token: 0x0402B465 RID: 177253
+		// Token: 0x04026789 RID: 157577
 		TaskLayout,
-		// Token: 0x0402B466 RID: 177254
+		// Token: 0x0402678A RID: 157578
 		TitleText,
-		// Token: 0x0402B467 RID: 177255
+		// Token: 0x0402678B RID: 157579
 		TitleSprite,
-		// Token: 0x0402B468 RID: 177256
+		// Token: 0x0402678C RID: 157580
 		TitleItem,
-		// Token: 0x0402B469 RID: 177257
+		// Token: 0x0402678D RID: 157581
 		TaskItem,
-		// Token: 0x0402B46A RID: 177258
+		// Token: 0x0402678E RID: 157582
 		TitleBgItem
 	}
 }

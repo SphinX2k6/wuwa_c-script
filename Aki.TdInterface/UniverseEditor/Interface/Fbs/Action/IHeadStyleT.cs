@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068CB RID: 26827
+	// Token: 0x02006F7B RID: 28539
 	public class IHeadStyleT
 	{
-		// Token: 0x1700C711 RID: 50961
-		// (get) Token: 0x0602ECAC RID: 191660 RVA: 0x00662BE6 File Offset: 0x00660DE6
-		// (set) Token: 0x0602ECAD RID: 191661 RVA: 0x00662BEE File Offset: 0x00660DEE
+		// Token: 0x1700D10B RID: 53515
+		// (get) Token: 0x0603165E RID: 202334 RVA: 0x006B2D2E File Offset: 0x006B0F2E
+		// (set) Token: 0x0603165F RID: 202335 RVA: 0x006B2D36 File Offset: 0x006B0F36
 		public EHeadStyle Type { get; set; }
 
-		// Token: 0x0602ECAE RID: 191662 RVA: 0x00662BF7 File Offset: 0x00660DF7
+		// Token: 0x06031660 RID: 202336 RVA: 0x006B2D3F File Offset: 0x006B0F3F
 		public IHeadStyleT()
 		{
 			this.Type = EHeadStyle.Normal;

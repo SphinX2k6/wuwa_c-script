@@ -5,25 +5,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.SceneCameraRotator
 {
-	// Token: 0x020072E6 RID: 29414
+	// Token: 0x02006469 RID: 25705
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneCameraBlendToTargetRotator : SceneCameraRotatorBase
 	{
-		// Token: 0x06048317 RID: 295703 RVA: 0x0128A058 File Offset: 0x01288258
+		// Token: 0x0603E763 RID: 255843 RVA: 0x0122CA02 File Offset: 0x0122AC02
 		public override bool IsValid()
 		{
 			return !this.Finished;
 		}
 
-		// Token: 0x06048318 RID: 295704 RVA: 0x0128A063 File Offset: 0x01288263
+		// Token: 0x0603E764 RID: 255844 RVA: 0x0122CA0D File Offset: 0x0122AC0D
 		public override void OnActivate()
 		{
 			this.BlendElapsed = 0f;
 			this.Finished = false;
 		}
 
-		// Token: 0x06048319 RID: 295705 RVA: 0x0128A078 File Offset: 0x01288278
+		// Token: 0x0603E765 RID: 255845 RVA: 0x0122CA24 File Offset: 0x0122AC24
 		public override void ComputeExpectRotation()
 		{
 			SceneSubCamera subCamera = this.SubCamera;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			}
 		}
 
-		// Token: 0x0604831A RID: 295706 RVA: 0x0128A130 File Offset: 0x01288330
+		// Token: 0x0603E766 RID: 255846 RVA: 0x0122CADC File Offset: 0x0122ACDC
 		public override void ApplyRotationLimit()
 		{
 			if (!this.IsNormalGravity || this.CapturedFixInputData == null)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			this.WorkingRotator.Quaternion(this.WorkingQuat);
 		}
 
-		// Token: 0x0604831B RID: 295707 RVA: 0x0128A184 File Offset: 0x01288384
+		// Token: 0x0603E767 RID: 255847 RVA: 0x0122CB30 File Offset: 0x0122AD30
 		public override void ApplyRotationToCameraActor()
 		{
 			SceneSubCamera subCamera = this.SubCamera;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			base.WriteCameraRotation();
 		}
 
-		// Token: 0x0604831C RID: 295708 RVA: 0x0128A1E0 File Offset: 0x012883E0
+		// Token: 0x0603E768 RID: 255848 RVA: 0x0122CB8C File Offset: 0x0122AD8C
 		public unsafe bool InitFromLookAtTarget(SceneSubCamera subCamera, FightCameraLogicComponent fightCameraLogicComp, Vector targetPosition, float blendDurationMs)
 		{
 			BP_CineCamera_C camera = subCamera.Camera;
@@ -146,23 +146,23 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			return true;
 		}
 
-		// Token: 0x040261F9 RID: 156153
+		// Token: 0x040214E4 RID: 136420
 		[Nullable(2)]
 		private SceneFixInputData CapturedFixInputData;
 
-		// Token: 0x040261FA RID: 156154
+		// Token: 0x040214E5 RID: 136421
 		private readonly Quat BlendStartQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040261FB RID: 156155
+		// Token: 0x040214E6 RID: 136422
 		private readonly Quat BlendTargetQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040261FC RID: 156156
+		// Token: 0x040214E7 RID: 136423
 		private float BlendDuration;
 
-		// Token: 0x040261FD RID: 156157
+		// Token: 0x040214E8 RID: 136424
 		private float BlendElapsed;
 
-		// Token: 0x040261FE RID: 156158
+		// Token: 0x040214E9 RID: 136425
 		private bool Finished;
 	}
 }

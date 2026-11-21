@@ -1,94 +1,94 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002055 RID: 8277
+// Token: 0x02001528 RID: 5416
 public class LevelPlayReportDefine
 {
-	// Token: 0x0200864B RID: 34379
+	// Token: 0x020077D2 RID: 30674
 	public enum ELevelPlayReportState
 	{
-		// Token: 0x0402BB4F RID: 179023
+		// Token: 0x04026E5E RID: 159326
 		Close,
-		// Token: 0x0402BB50 RID: 179024
+		// Token: 0x04026E5F RID: 159327
 		Wait,
-		// Token: 0x0402BB51 RID: 179025
+		// Token: 0x04026E60 RID: 159328
 		Open,
-		// Token: 0x0402BB52 RID: 179026
+		// Token: 0x04026E61 RID: 159329
 		Finish,
-		// Token: 0x0402BB53 RID: 179027
+		// Token: 0x04026E62 RID: 159330
 		AllPlayerGetReward,
-		// Token: 0x0402BB54 RID: 179028
+		// Token: 0x04026E63 RID: 159331
 		Hide
 	}
 
-	// Token: 0x0200864C RID: 34380
+	// Token: 0x020077D3 RID: 30675
 	[NullableContext(1)]
 	public interface ILevelPlayReportConfigData
 	{
-		// Token: 0x1700A077 RID: 41079
-		// (get) Token: 0x0604A8E5 RID: 305381
-		// (set) Token: 0x0604A8E6 RID: 305382
+		// Token: 0x17007815 RID: 30741
+		// (get) Token: 0x06040CDF RID: 265439
+		// (set) Token: 0x06040CE0 RID: 265440
 		int LevelPlayId { get; set; }
 
-		// Token: 0x1700A078 RID: 41080
-		// (get) Token: 0x0604A8E7 RID: 305383
-		// (set) Token: 0x0604A8E8 RID: 305384
+		// Token: 0x17007816 RID: 30742
+		// (get) Token: 0x06040CE1 RID: 265441
+		// (set) Token: 0x06040CE2 RID: 265442
 		string[] Vars { get; set; }
 
-		// Token: 0x1700A079 RID: 41081
-		// (get) Token: 0x0604A8E9 RID: 305385
-		// (set) Token: 0x0604A8EA RID: 305386
+		// Token: 0x17007817 RID: 30743
+		// (get) Token: 0x06040CE3 RID: 265443
+		// (set) Token: 0x06040CE4 RID: 265444
 		int[] Chests { get; set; }
 
-		// Token: 0x1700A07A RID: 41082
-		// (get) Token: 0x0604A8EB RID: 305387
-		// (set) Token: 0x0604A8EC RID: 305388
+		// Token: 0x17007818 RID: 30744
+		// (get) Token: 0x06040CE5 RID: 265445
+		// (set) Token: 0x06040CE6 RID: 265446
 		int Type { get; set; }
 
-		// Token: 0x1700A07B RID: 41083
-		// (get) Token: 0x0604A8ED RID: 305389
-		// (set) Token: 0x0604A8EE RID: 305390
+		// Token: 0x17007819 RID: 30745
+		// (get) Token: 0x06040CE7 RID: 265447
+		// (set) Token: 0x06040CE8 RID: 265448
 		string[] Descs { get; set; }
 
-		// Token: 0x1700A07C RID: 41084
-		// (get) Token: 0x0604A8EF RID: 305391
-		// (set) Token: 0x0604A8F0 RID: 305392
+		// Token: 0x1700781A RID: 30746
+		// (get) Token: 0x06040CE9 RID: 265449
+		// (set) Token: 0x06040CEA RID: 265450
 		string GetBoxNumKey { get; set; }
 	}
 
-	// Token: 0x0200864D RID: 34381
+	// Token: 0x020077D4 RID: 30676
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelPlayReportConfigData : LevelPlayReportDefine.ILevelPlayReportConfigData
 	{
-		// Token: 0x1700A07D RID: 41085
-		// (get) Token: 0x0604A8F1 RID: 305393 RVA: 0x01375BB6 File Offset: 0x01373DB6
-		// (set) Token: 0x0604A8F2 RID: 305394 RVA: 0x01375BBE File Offset: 0x01373DBE
+		// Token: 0x1700781B RID: 30747
+		// (get) Token: 0x06040CEB RID: 265451 RVA: 0x01319016 File Offset: 0x01317216
+		// (set) Token: 0x06040CEC RID: 265452 RVA: 0x0131901E File Offset: 0x0131721E
 		public int LevelPlayId { get; set; }
 
-		// Token: 0x1700A07E RID: 41086
-		// (get) Token: 0x0604A8F3 RID: 305395 RVA: 0x01375BC7 File Offset: 0x01373DC7
-		// (set) Token: 0x0604A8F4 RID: 305396 RVA: 0x01375BCF File Offset: 0x01373DCF
+		// Token: 0x1700781C RID: 30748
+		// (get) Token: 0x06040CED RID: 265453 RVA: 0x01319027 File Offset: 0x01317227
+		// (set) Token: 0x06040CEE RID: 265454 RVA: 0x0131902F File Offset: 0x0131722F
 		public string[] Vars { get; set; }
 
-		// Token: 0x1700A07F RID: 41087
-		// (get) Token: 0x0604A8F5 RID: 305397 RVA: 0x01375BD8 File Offset: 0x01373DD8
-		// (set) Token: 0x0604A8F6 RID: 305398 RVA: 0x01375BE0 File Offset: 0x01373DE0
+		// Token: 0x1700781D RID: 30749
+		// (get) Token: 0x06040CEF RID: 265455 RVA: 0x01319038 File Offset: 0x01317238
+		// (set) Token: 0x06040CF0 RID: 265456 RVA: 0x01319040 File Offset: 0x01317240
 		public int[] Chests { get; set; }
 
-		// Token: 0x1700A080 RID: 41088
-		// (get) Token: 0x0604A8F7 RID: 305399 RVA: 0x01375BE9 File Offset: 0x01373DE9
-		// (set) Token: 0x0604A8F8 RID: 305400 RVA: 0x01375BF1 File Offset: 0x01373DF1
+		// Token: 0x1700781E RID: 30750
+		// (get) Token: 0x06040CF1 RID: 265457 RVA: 0x01319049 File Offset: 0x01317249
+		// (set) Token: 0x06040CF2 RID: 265458 RVA: 0x01319051 File Offset: 0x01317251
 		public int Type { get; set; }
 
-		// Token: 0x1700A081 RID: 41089
-		// (get) Token: 0x0604A8F9 RID: 305401 RVA: 0x01375BFA File Offset: 0x01373DFA
-		// (set) Token: 0x0604A8FA RID: 305402 RVA: 0x01375C02 File Offset: 0x01373E02
+		// Token: 0x1700781F RID: 30751
+		// (get) Token: 0x06040CF3 RID: 265459 RVA: 0x0131905A File Offset: 0x0131725A
+		// (set) Token: 0x06040CF4 RID: 265460 RVA: 0x01319062 File Offset: 0x01317262
 		public string[] Descs { get; set; }
 
-		// Token: 0x1700A082 RID: 41090
-		// (get) Token: 0x0604A8FB RID: 305403 RVA: 0x01375C0B File Offset: 0x01373E0B
-		// (set) Token: 0x0604A8FC RID: 305404 RVA: 0x01375C13 File Offset: 0x01373E13
+		// Token: 0x17007820 RID: 30752
+		// (get) Token: 0x06040CF5 RID: 265461 RVA: 0x0131906B File Offset: 0x0131726B
+		// (set) Token: 0x06040CF6 RID: 265462 RVA: 0x01319073 File Offset: 0x01317273
 		public string GetBoxNumKey { get; set; }
 	}
 }

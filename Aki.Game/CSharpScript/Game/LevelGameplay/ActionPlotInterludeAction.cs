@@ -5,16 +5,16 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006969 RID: 26985
+	// Token: 0x02005AC5 RID: 23237
 	public class ActionPlotInterludeAction : ActionParams
 	{
-		// Token: 0x04022FFA RID: 143354
+		// Token: 0x0401E1E4 RID: 123364
 		public float FadeInTime;
 
-		// Token: 0x04022FFB RID: 143355
+		// Token: 0x0401E1E5 RID: 123365
 		public float FadeOutTime;
 
-		// Token: 0x04022FFC RID: 143356
+		// Token: 0x0401E1E6 RID: 123366
 		[Nullable(new byte[]
 		{
 			2,

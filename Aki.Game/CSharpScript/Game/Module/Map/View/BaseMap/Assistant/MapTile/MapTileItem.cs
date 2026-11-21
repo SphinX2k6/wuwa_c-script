@@ -8,22 +8,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapTile
 {
-	// Token: 0x0200549F RID: 21663
+	// Token: 0x02004482 RID: 17538
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapTileItem : IWorldMapStreamingObject
 	{
-		// Token: 0x170084AA RID: 33962
-		// (get) Token: 0x060375C0 RID: 226752 RVA: 0x00D26C8B File Offset: 0x00D24E8B
-		// (set) Token: 0x060375C1 RID: 226753 RVA: 0x00D26C93 File Offset: 0x00D24E93
+		// Token: 0x17005876 RID: 22646
+		// (get) Token: 0x0602C514 RID: 181524 RVA: 0x00C768E2 File Offset: 0x00C74AE2
+		// (set) Token: 0x0602C515 RID: 181525 RVA: 0x00C768EA File Offset: 0x00C74AEA
 		public bool IsStreaming { get; set; } = true;
 
-		// Token: 0x170084AB RID: 33963
-		// (get) Token: 0x060375C2 RID: 226754 RVA: 0x00D26C9C File Offset: 0x00D24E9C
-		// (set) Token: 0x060375C3 RID: 226755 RVA: 0x00D26CA4 File Offset: 0x00D24EA4
+		// Token: 0x17005877 RID: 22647
+		// (get) Token: 0x0602C516 RID: 181526 RVA: 0x00C768F3 File Offset: 0x00C74AF3
+		// (set) Token: 0x0602C517 RID: 181527 RVA: 0x00C768FB File Offset: 0x00C74AFB
 		public bool IsVisible { get; set; }
 
-		// Token: 0x060375C4 RID: 226756 RVA: 0x00D26CB0 File Offset: 0x00D24EB0
+		// Token: 0x0602C518 RID: 181528 RVA: 0x00C76904 File Offset: 0x00C74B04
 		public MapTileItem(IMapTileCreateParam param)
 		{
 			this.MapTileCreateParam = param;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapTile
 			this.PreloadThreshold = Vector2D.Create((double)(mapTile.GetWidth() * 2f), (double)(mapTile.GetHeight() * 2f));
 		}
 
-		// Token: 0x060375C5 RID: 226757 RVA: 0x00D26D30 File Offset: 0x00D24F30
+		// Token: 0x0602C519 RID: 181529 RVA: 0x00C76984 File Offset: 0x00C74B84
 		public unsafe void OnLoad()
 		{
 			Dictionary<string, string> assetData = this.MapTileCreateParam.AssetData;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapTile
 			}
 		}
 
-		// Token: 0x060375C6 RID: 226758 RVA: 0x00D26F08 File Offset: 0x00D25108
+		// Token: 0x0602C51A RID: 181530 RVA: 0x00C76B5C File Offset: 0x00C74D5C
 		public void OnUnload()
 		{
 			UUITextureBase mapTile = this.MapTileCreateParam.MapTile;
@@ -94,19 +94,19 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapTile
 			mapTile.SetColor(fogDefaultColor);
 		}
 
-		// Token: 0x060375C7 RID: 226759 RVA: 0x00D26F39 File Offset: 0x00D25139
+		// Token: 0x0602C51B RID: 181531 RVA: 0x00C76B8D File Offset: 0x00C74D8D
 		public Vector2D GetPreloadThreshold()
 		{
 			return this.PreloadThreshold;
 		}
 
-		// Token: 0x060375C8 RID: 226760 RVA: 0x00D26F41 File Offset: 0x00D25141
+		// Token: 0x0602C51C RID: 181532 RVA: 0x00C76B95 File Offset: 0x00C74D95
 		public Vector GetUiPosition()
 		{
 			return this.UiPosition;
 		}
 
-		// Token: 0x060375C9 RID: 226761 RVA: 0x00D26F49 File Offset: 0x00D25149
+		// Token: 0x0602C51D RID: 181533 RVA: 0x00C76B9D File Offset: 0x00C74D9D
 		public void ReleaseLoadHandle()
 		{
 			if (this.LoadHandle != -1)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapTile
 			}
 		}
 
-		// Token: 0x060375CA RID: 226762 RVA: 0x00D26F6B File Offset: 0x00D2516B
+		// Token: 0x0602C51E RID: 181534 RVA: 0x00C76BBF File Offset: 0x00C74DBF
 		private void OnLoadEnd(UTexture textureObject, string assetPath)
 		{
 			this.LoadHandle = -1;
@@ -128,22 +128,22 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapTile
 			loadMapTileCallBack(textureObject);
 		}
 
-		// Token: 0x0401D2A7 RID: 119463
+		// Token: 0x04017D43 RID: 97603
 		private readonly IMapTileCreateParam MapTileCreateParam;
 
-		// Token: 0x0401D2A8 RID: 119464
+		// Token: 0x04017D44 RID: 97604
 		private readonly Vector UiPosition;
 
-		// Token: 0x0401D2A9 RID: 119465
+		// Token: 0x04017D45 RID: 97605
 		private readonly Vector2D PreloadThreshold;
 
-		// Token: 0x0401D2AA RID: 119466
+		// Token: 0x04017D46 RID: 97606
 		private int LoadHandle = -1;
 
-		// Token: 0x0401D2AB RID: 119467
+		// Token: 0x04017D47 RID: 97607
 		public static readonly FName HD_TEXTURE_NAME = new FName("HDTexture");
 
-		// Token: 0x0401D2AC RID: 119468
+		// Token: 0x04017D48 RID: 97608
 		public static readonly FName HD_SCALAR_NAME = new FName("UseHDPicture");
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027BB RID: 10171
+	// Token: 0x02002A8E RID: 10894
 	public class ISelfEntity : ITargetEntityType
 	{
-		// Token: 0x0600E246 RID: 57926 RVA: 0x00216CFF File Offset: 0x00214EFF
-		[NullableContext(1)]
+		// Token: 0x0600F068 RID: 61544 RVA: 0x00233AD3 File Offset: 0x00231CD3
 		public static ISelfEntity Create(ISelfEntity? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004492 RID: 17554
-		// (get) Token: 0x0600E247 RID: 57927 RVA: 0x00216D1E File Offset: 0x00214F1E
+		// Token: 0x170047FA RID: 18426
+		// (get) Token: 0x0600F069 RID: 61545 RVA: 0x00233AF2 File Offset: 0x00231CF2
 		public override ETargetEntityType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D7B RID: 32123
+		// Token: 0x04008432 RID: 33842
 		private ISelfEntity Instance;
 	}
 }

@@ -7,19 +7,19 @@ using CSharpScript.Game.Module.BattleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020019E2 RID: 6626
+// Token: 0x02000EA1 RID: 3745
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ControlScreenController : UiControllerBase
 {
-	// Token: 0x0600C1A7 RID: 49575 RVA: 0x002BB990 File Offset: 0x002B9B90
+	// Token: 0x060095B4 RID: 38324 RVA: 0x002C6968 File Offset: 0x002C4B68
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0600C1A8 RID: 49576 RVA: 0x002BB994 File Offset: 0x002B9B94
+	// Token: 0x060095B5 RID: 38325 RVA: 0x002C696C File Offset: 0x002C4B6C
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnUpdateSceneTeam, new Action(this.OnFormationLoadCompleted));
@@ -40,7 +40,7 @@ public class ControlScreenController : UiControllerBase
 		}, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 	}
 
-	// Token: 0x0600C1A9 RID: 49577 RVA: 0x002BBA20 File Offset: 0x002B9C20
+	// Token: 0x060095B6 RID: 38326 RVA: 0x002C69F8 File Offset: 0x002C4BF8
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnUpdateSceneTeam, new Action(this.OnFormationLoadCompleted));
@@ -62,7 +62,7 @@ public class ControlScreenController : UiControllerBase
 		}, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 	}
 
-	// Token: 0x0600C1AA RID: 49578 RVA: 0x002BBAB8 File Offset: 0x002B9CB8
+	// Token: 0x060095B7 RID: 38327 RVA: 0x002C6A90 File Offset: 0x002C4C90
 	private void TouchTrigger(bool bTouchPress, int touchId)
 	{
 		TouchFingerData touchFingerData = TouchFingerManager.Instance.GetTouchFingerData((EFingerIndex)touchId);
@@ -113,7 +113,7 @@ public class ControlScreenController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C1AB RID: 49579 RVA: 0x002BBB9C File Offset: 0x002B9D9C
+	// Token: 0x060095B8 RID: 38328 RVA: 0x002C6B74 File Offset: 0x002C4D74
 	private void TouchMoved(int touchId)
 	{
 		ControlScreenModel instance = ControlScreenModel.Instance;
@@ -135,7 +135,7 @@ public class ControlScreenController : UiControllerBase
 		this.RefreshCameraSpringLength(fingerIndex, fingerIndex2);
 	}
 
-	// Token: 0x0600C1AC RID: 49580 RVA: 0x002BBBF0 File Offset: 0x002B9DF0
+	// Token: 0x060095B9 RID: 38329 RVA: 0x002C6BC8 File Offset: 0x002C4DC8
 	private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification _)
 	{
 		InputDistributeDefine.ETouchType touchType = touchData.TouchType;
@@ -156,7 +156,7 @@ public class ControlScreenController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C1AD RID: 49581 RVA: 0x002BBC38 File Offset: 0x002B9E38
+	// Token: 0x060095BA RID: 38330 RVA: 0x002C6C10 File Offset: 0x002C4E10
 	public bool RefreshCameraRotation(EFingerIndex fingerIndex)
 	{
 		if (!this.CanCameraRotationInput())
@@ -181,7 +181,7 @@ public class ControlScreenController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C1AE RID: 49582 RVA: 0x002BBC8C File Offset: 0x002B9E8C
+	// Token: 0x060095BB RID: 38331 RVA: 0x002C6C64 File Offset: 0x002C4E64
 	public bool RefreshCameraSpringLength(EFingerIndex aFingerIndex, EFingerIndex bFingerIndex)
 	{
 		if (!this.CanCameraZoomInput())
@@ -192,7 +192,7 @@ public class ControlScreenController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C1AF RID: 49583 RVA: 0x002BBCA4 File Offset: 0x002B9EA4
+	// Token: 0x060095BC RID: 38332 RVA: 0x002C6C7C File Offset: 0x002C4E7C
 	public void ExecuteCameraRotation(EFingerIndex fingerIndex)
 	{
 		ValueTuple<float, float>? fingerDirection = TouchFingerManager.Instance.GetFingerDirection(fingerIndex);
@@ -207,7 +207,7 @@ public class ControlScreenController : UiControllerBase
 		InputController.Instance.InputAxis(EInputAxis.LookUp, value2, true);
 	}
 
-	// Token: 0x0600C1B0 RID: 49584 RVA: 0x002BBD14 File Offset: 0x002B9F14
+	// Token: 0x060095BD RID: 38333 RVA: 0x002C6CEC File Offset: 0x002C4EEC
 	public void ExecuteCameraZoom(EFingerIndex aFingerIndex, EFingerIndex bFingerIndex)
 	{
 		ControlScreenModel instance = ControlScreenModel.Instance;
@@ -216,7 +216,7 @@ public class ControlScreenController : UiControllerBase
 		InputController.Instance.InputAxis(EInputAxis.Zoom, value, true);
 	}
 
-	// Token: 0x0600C1B1 RID: 49585 RVA: 0x002BBD6C File Offset: 0x002B9F6C
+	// Token: 0x060095BE RID: 38334 RVA: 0x002C6D44 File Offset: 0x002C4F44
 	public void OnFormationLoadCompleted()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -228,7 +228,7 @@ public class ControlScreenController : UiControllerBase
 		this.AddRoleEvents(getCurrentEntity.Entity);
 	}
 
-	// Token: 0x0600C1B2 RID: 49586 RVA: 0x002BBDA0 File Offset: 0x002B9FA0
+	// Token: 0x060095BF RID: 38335 RVA: 0x002C6D78 File Offset: 0x002C4F78
 	public void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -240,7 +240,7 @@ public class ControlScreenController : UiControllerBase
 		this.AddRoleEvents(getCurrentEntity.Entity);
 	}
 
-	// Token: 0x0600C1B3 RID: 49587 RVA: 0x002BBDD4 File Offset: 0x002B9FD4
+	// Token: 0x060095C0 RID: 38336 RVA: 0x002C6DAC File Offset: 0x002C4FAC
 	public void OnRoleGoDown(int creatureDataId)
 	{
 		EntityHandle entity = CreatureModel.Instance.GetEntity((long)creatureDataId);
@@ -251,7 +251,7 @@ public class ControlScreenController : UiControllerBase
 		this.RemoveRoleEvents(entity);
 	}
 
-	// Token: 0x0600C1B4 RID: 49588 RVA: 0x002BBDFC File Offset: 0x002B9FFC
+	// Token: 0x060095C1 RID: 38337 RVA: 0x002C6DD4 File Offset: 0x002C4FD4
 	public void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		CreatureDataComponent component = handle.Entity.GetComponent<CreatureDataComponent>();
@@ -272,7 +272,7 @@ public class ControlScreenController : UiControllerBase
 		this.RemoveRoleEvents(handle);
 	}
 
-	// Token: 0x0600C1B5 RID: 49589 RVA: 0x002BBE58 File Offset: 0x002BA058
+	// Token: 0x060095C2 RID: 38338 RVA: 0x002C6E30 File Offset: 0x002C5030
 	private void AddRoleEvents(Entity entity)
 	{
 		int id = entity.Id;
@@ -296,7 +296,7 @@ public class ControlScreenController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C1B6 RID: 49590 RVA: 0x002BBF08 File Offset: 0x002BA108
+	// Token: 0x060095C3 RID: 38339 RVA: 0x002C6EE0 File Offset: 0x002C50E0
 	private void RemoveRoleEvents(EntityHandle handle)
 	{
 		if (EventSystem.Instance.HasWithTarget(handle.Entity, EEventName.CharOnDirectionStateChanged, new Action<ECharDirectionState, ECharDirectionState>(this.OnCharCameraStateChanged)))
@@ -309,7 +309,7 @@ public class ControlScreenController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C1B7 RID: 49591 RVA: 0x002BBF96 File Offset: 0x002BA196
+	// Token: 0x060095C4 RID: 38340 RVA: 0x002C6F6E File Offset: 0x002C516E
 	public void OnCharCameraStateChanged(ECharDirectionState oldMoveState, ECharDirectionState newMoveState)
 	{
 		if (newMoveState == oldMoveState)
@@ -319,20 +319,20 @@ public class ControlScreenController : UiControllerBase
 		ControlScreenModel.Instance.RefreshRotationScreenRate();
 	}
 
-	// Token: 0x0600C1B8 RID: 49592 RVA: 0x002BBFA7 File Offset: 0x002BA1A7
+	// Token: 0x060095C5 RID: 38341 RVA: 0x002C6F7F File Offset: 0x002C517F
 	private bool CanCameraRotationInput()
 	{
 		return InputDistributeController.Instance.IsAllowFightCameraRotationInput();
 	}
 
-	// Token: 0x0600C1B9 RID: 49593 RVA: 0x002BBFB3 File Offset: 0x002BA1B3
+	// Token: 0x060095C6 RID: 38342 RVA: 0x002C6F8B File Offset: 0x002C518B
 	private bool CanCameraZoomInput()
 	{
 		return InputDistributeController.Instance.IsAllowFightCameraZoomInput();
 	}
 
-	// Token: 0x1700102F RID: 4143
-	// (get) Token: 0x0600C1BA RID: 49594 RVA: 0x002BBFBF File Offset: 0x002BA1BF
+	// Token: 0x17001054 RID: 4180
+	// (get) Token: 0x060095C7 RID: 38343 RVA: 0x002C6F97 File Offset: 0x002C5197
 	public static ControlScreenController Instance
 	{
 		get
@@ -341,7 +341,7 @@ public class ControlScreenController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C1BB RID: 49595 RVA: 0x002BBFC6 File Offset: 0x002BA1C6
+	// Token: 0x060095C8 RID: 38344 RVA: 0x002C6F9E File Offset: 0x002C519E
 	public static ControlScreenController GetOrCreateInstance()
 	{
 		if (ControlScreenController._Instance == null)
@@ -351,7 +351,7 @@ public class ControlScreenController : UiControllerBase
 		return ControlScreenController._Instance;
 	}
 
-	// Token: 0x0600C1BC RID: 49596 RVA: 0x002BBFDA File Offset: 0x002BA1DA
+	// Token: 0x060095C9 RID: 38345 RVA: 0x002C6FB2 File Offset: 0x002C51B2
 	public static bool CreateInstance()
 	{
 		if (ControlScreenController._Instance != null)
@@ -362,27 +362,27 @@ public class ControlScreenController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C1BD RID: 49597 RVA: 0x002BBFF0 File Offset: 0x002BA1F0
+	// Token: 0x060095CA RID: 38346 RVA: 0x002C6FC8 File Offset: 0x002C51C8
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C1BE RID: 49598 RVA: 0x002BBFF2 File Offset: 0x002BA1F2
+	// Token: 0x060095CB RID: 38347 RVA: 0x002C6FCA File Offset: 0x002C51CA
 	public static void ResetStaticDefaultValue()
 	{
 		ControlScreenController._Instance = null;
 	}
 
-	// Token: 0x0600C1BF RID: 49599 RVA: 0x002BBFFA File Offset: 0x002BA1FA
+	// Token: 0x060095CC RID: 38348 RVA: 0x002C6FD2 File Offset: 0x002C51D2
 	static ControlScreenController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ControlScreenController.CreateStaticDefaultValue), new Action(ControlScreenController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400593C RID: 22844
+	// Token: 0x04005A0B RID: 23051
 	private int CurrentAddEventEntityId;
 
-	// Token: 0x0400593D RID: 22845
+	// Token: 0x04005A0C RID: 23052
 	[Nullable(2)]
 	private static ControlScreenController _Instance;
 }

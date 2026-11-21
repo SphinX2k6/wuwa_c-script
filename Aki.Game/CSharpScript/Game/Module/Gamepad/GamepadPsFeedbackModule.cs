@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Gamepad
 {
-	// Token: 0x020059F4 RID: 23028
+	// Token: 0x020049D0 RID: 18896
 	public class GamepadPsFeedbackModule
 	{
-		// Token: 0x0603A5F3 RID: 239091 RVA: 0x00DE3DDD File Offset: 0x00DE1FDD
+		// Token: 0x0602F53C RID: 193852 RVA: 0x00D3432D File Offset: 0x00D3252D
 		private void CancelAsyncLoad()
 		{
 			if (this.CurrentResourceId != -1)
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			}
 		}
 
-		// Token: 0x0603A5F4 RID: 239092 RVA: 0x00DE3DF8 File Offset: 0x00DE1FF8
+		// Token: 0x0602F53D RID: 193853 RVA: 0x00D34348 File Offset: 0x00D32548
 		[NullableContext(1)]
 		public UniTask PlayFeedback(ETriggerEffectSide mode, string path)
 		{
@@ -32,21 +32,21 @@ namespace CSharpScript.Game.Module.Gamepad
 			return <PlayFeedback>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A5F5 RID: 239093 RVA: 0x00DE3E4B File Offset: 0x00DE204B
+		// Token: 0x0602F53E RID: 193854 RVA: 0x00D3439B File Offset: 0x00D3259B
 		public void StopFeedback()
 		{
 			this.CancelAsyncLoad();
 			UTriggerEffectBPLibrary.TriggerEffectSetOffMode(Global.PlayerController, ETriggerEffectSide.Both, ETriggerEffectControllerType.DualSense);
 		}
 
-		// Token: 0x0603A5F6 RID: 239094 RVA: 0x00DE3E5F File Offset: 0x00DE205F
+		// Token: 0x0602F53F RID: 193855 RVA: 0x00D343AF File Offset: 0x00D325AF
 		public void Clear()
 		{
 			this.CancelAsyncLoad();
 			UTriggerEffectBPLibrary.TriggerEffectSetOffMode(Global.PlayerController, ETriggerEffectSide.Both, ETriggerEffectControllerType.DualSense);
 		}
 
-		// Token: 0x0401E6D8 RID: 124632
+		// Token: 0x0401917F RID: 102783
 		private int CurrentResourceId = -1;
 	}
 }

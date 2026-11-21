@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020028C9 RID: 10441
+// Token: 0x02001E44 RID: 7748
 public class RoleSkillTrickDescItem : UiPanelBase
 {
-	// Token: 0x060158FF RID: 88319 RVA: 0x00571FE4 File Offset: 0x005701E4
+	// Token: 0x060132FF RID: 78591 RVA: 0x0059CE9C File Offset: 0x0059B09C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -25,20 +25,20 @@ public class RoleSkillTrickDescItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06015900 RID: 88320 RVA: 0x0057204D File Offset: 0x0057024D
+	// Token: 0x06013300 RID: 78592 RVA: 0x0059CF05 File Offset: 0x0059B105
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<RoleSkillInputDescItem, string>(base.GetVerticalLayout(0), new Func<RoleSkillInputDescItem>(this.InitRoleSkillInputDescItem), null, false, true);
 	}
 
-	// Token: 0x06015901 RID: 88321 RVA: 0x00572070 File Offset: 0x00570270
+	// Token: 0x06013301 RID: 78593 RVA: 0x0059CF28 File Offset: 0x0059B128
 	[NullableContext(1)]
 	private RoleSkillInputDescItem InitRoleSkillInputDescItem()
 	{
 		return new RoleSkillInputDescItem();
 	}
 
-	// Token: 0x06015902 RID: 88322 RVA: 0x00572078 File Offset: 0x00570278
+	// Token: 0x06013302 RID: 78594 RVA: 0x0059CF30 File Offset: 0x0059B130
 	[NullableContext(1)]
 	public UniTask RefreshAsync(List<string> descArray)
 	{
@@ -51,7 +51,7 @@ public class RoleSkillTrickDescItem : UiPanelBase
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400A08B RID: 41099
+	// Token: 0x0400A474 RID: 42100
 	[Nullable(new byte[]
 	{
 		2,
@@ -60,12 +60,12 @@ public class RoleSkillTrickDescItem : UiPanelBase
 	})]
 	private GenericLayout<RoleSkillInputDescItem, string> Layout;
 
-	// Token: 0x02008EDC RID: 36572
+	// Token: 0x02008124 RID: 33060
 	private enum EComponent
 	{
-		// Token: 0x0402E546 RID: 189766
+		// Token: 0x04029C41 RID: 171073
 		Layout,
-		// Token: 0x0402E547 RID: 189767
+		// Token: 0x04029C42 RID: 171074
 		DescText
 	}
 }

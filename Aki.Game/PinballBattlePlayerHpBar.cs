@@ -10,13 +10,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D0E RID: 7438
+// Token: 0x020011D0 RID: 4560
 [NullableContext(2)]
 [Nullable(0)]
 public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 {
-	// Token: 0x17001214 RID: 4628
-	// (get) Token: 0x0600E0DA RID: 57562 RVA: 0x0034B95E File Offset: 0x00349B5E
+	// Token: 0x1700123E RID: 4670
+	// (get) Token: 0x0600B4F7 RID: 46327 RVA: 0x0035738E File Offset: 0x0035558E
 	private PinballBattleSubController SubController
 	{
 		get
@@ -25,7 +25,7 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		}
 	}
 
-	// Token: 0x0600E0DB RID: 57563 RVA: 0x0034B970 File Offset: 0x00349B70
+	// Token: 0x0600B4F8 RID: 46328 RVA: 0x003573A0 File Offset: 0x003555A0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -51,7 +51,7 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E0DC RID: 57564 RVA: 0x0034BAA0 File Offset: 0x00349CA0
+	// Token: 0x0600B4F9 RID: 46329 RVA: 0x003574D0 File Offset: 0x003556D0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PinballBattlePlayerHpBar.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -62,7 +62,7 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E0DD RID: 57565 RVA: 0x0034BAE4 File Offset: 0x00349CE4
+	// Token: 0x0600B4FA RID: 46330 RVA: 0x00357514 File Offset: 0x00355714
 	protected override void OnStart()
 	{
 		this.HpBar = base.GetSprite(4);
@@ -81,7 +81,7 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		base.OnStart();
 	}
 
-	// Token: 0x0600E0DE RID: 57566 RVA: 0x0034BBAC File Offset: 0x00349DAC
+	// Token: 0x0600B4FB RID: 46331 RVA: 0x003575DC File Offset: 0x003557DC
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -101,7 +101,7 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		this.UnBindShieldDelegate();
 	}
 
-	// Token: 0x0600E0DF RID: 57567 RVA: 0x0034BC3C File Offset: 0x00349E3C
+	// Token: 0x0600B4FC RID: 46332 RVA: 0x0035766C File Offset: 0x0035586C
 	[NullableContext(1)]
 	protected override void OnUpdateByHeadInfo(FKSC_HeadHpContext headInfo)
 	{
@@ -142,13 +142,13 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		this.PlayHpBarTween(targetAnchorOffsetX, 0.3f);
 	}
 
-	// Token: 0x0600E0E0 RID: 57568 RVA: 0x0034BCF6 File Offset: 0x00349EF6
+	// Token: 0x0600B4FD RID: 46333 RVA: 0x00357726 File Offset: 0x00355926
 	private float CalculateHpBarAnchorOffsetX(float hpPercent)
 	{
 		return MathUtils.Instance.Lerp(-this.HpBarMaxAnchorOffsetX, -2f, hpPercent);
 	}
 
-	// Token: 0x0600E0E1 RID: 57569 RVA: 0x0034BD10 File Offset: 0x00349F10
+	// Token: 0x0600B4FE RID: 46334 RVA: 0x00357740 File Offset: 0x00355940
 	private void PlayHpBarTween(float targetAnchorOffsetX, float duration = 0.3f)
 	{
 		if (this.HpBar == null)
@@ -176,7 +176,7 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		this.HpBarTween.PlayTween(anchorOffsetX, targetAnchorOffsetX, duration, null);
 	}
 
-	// Token: 0x0600E0E2 RID: 57570 RVA: 0x0034BD7C File Offset: 0x00349F7C
+	// Token: 0x0600B4FF RID: 46335 RVA: 0x003577AC File Offset: 0x003559AC
 	[NullableContext(1)]
 	public void BindShieldDelegate(UKSC_AttrSet attrSet)
 	{
@@ -187,7 +187,7 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		this.UpdateShieldBar(true);
 	}
 
-	// Token: 0x0600E0E3 RID: 57571 RVA: 0x0034BDC8 File Offset: 0x00349FC8
+	// Token: 0x0600B500 RID: 46336 RVA: 0x003577F8 File Offset: 0x003559F8
 	public void UnBindShieldDelegate()
 	{
 		if (this.OwnerAttrSet != null)
@@ -199,13 +199,13 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		}
 	}
 
-	// Token: 0x0600E0E4 RID: 57572 RVA: 0x0034BE1A File Offset: 0x0034A01A
+	// Token: 0x0600B501 RID: 46337 RVA: 0x0035784A File Offset: 0x00355A4A
 	private void OnShieldChange(EKSC_AttrType attrType, int value)
 	{
 		this.UpdateShieldBar(false);
 	}
 
-	// Token: 0x0600E0E5 RID: 57573 RVA: 0x0034BE24 File Offset: 0x0034A024
+	// Token: 0x0600B502 RID: 46338 RVA: 0x00357854 File Offset: 0x00355A54
 	private void PlayShieldBarTween(float targetFillAmount, float duration = 0.3f)
 	{
 		if (this.ShieldBar == null)
@@ -233,7 +233,7 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		this.ShieldBarTween.PlayTween(fillAmount, targetFillAmount, duration, null);
 	}
 
-	// Token: 0x0600E0E6 RID: 57574 RVA: 0x0034BE90 File Offset: 0x0034A090
+	// Token: 0x0600B503 RID: 46339 RVA: 0x003578C0 File Offset: 0x00355AC0
 	private void UpdateShieldBar(bool disableTween = false)
 	{
 		if (this.OwnerAttrSet == null || this.ShieldBar == null)
@@ -253,7 +253,7 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		this.PlayShieldBarTween(num, 0.3f);
 	}
 
-	// Token: 0x0600E0E7 RID: 57575 RVA: 0x0034BF24 File Offset: 0x0034A124
+	// Token: 0x0600B504 RID: 46340 RVA: 0x00357954 File Offset: 0x00355B54
 	private void OnRoleStateChange(int roleId, bool isAlive)
 	{
 		int? roleId2 = this.RoleId;
@@ -263,7 +263,7 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		}
 	}
 
-	// Token: 0x0600E0E8 RID: 57576 RVA: 0x0034BF58 File Offset: 0x0034A158
+	// Token: 0x0600B505 RID: 46341 RVA: 0x00357988 File Offset: 0x00355B88
 	private void OnRoleChargeMax(int roleId)
 	{
 		int? roleId2 = this.RoleId;
@@ -278,7 +278,7 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		}
 	}
 
-	// Token: 0x0600E0E9 RID: 57577 RVA: 0x0034BF94 File Offset: 0x0034A194
+	// Token: 0x0600B506 RID: 46342 RVA: 0x003579C4 File Offset: 0x00355BC4
 	private void OnRoleUseSkill(int roleId)
 	{
 		int? roleId2 = this.RoleId;
@@ -293,36 +293,36 @@ public class PinballBattlePlayerHpBar : PinballBattleHeadStateUiBase
 		}
 	}
 
-	// Token: 0x040067D7 RID: 26583
+	// Token: 0x040068B6 RID: 26806
 	private const int HP_BAR_DEFAULT_OFFSET_X = -2;
 
-	// Token: 0x040067D8 RID: 26584
+	// Token: 0x040068B7 RID: 26807
 	private const EKSC_AttrType CurShieldType = EKSC_AttrType.Shield;
 
-	// Token: 0x040067D9 RID: 26585
+	// Token: 0x040068B8 RID: 26808
 	private const EKSC_AttrType MaxShieldType = EKSC_AttrType.ShieldMax;
 
-	// Token: 0x040067DA RID: 26586
+	// Token: 0x040068B9 RID: 26809
 	private int? RoleId;
 
-	// Token: 0x040067DB RID: 26587
+	// Token: 0x040068BA RID: 26810
 	private UUISprite HpBar;
 
-	// Token: 0x040067DC RID: 26588
+	// Token: 0x040068BB RID: 26811
 	private UUISprite ShieldBar;
 
-	// Token: 0x040067DD RID: 26589
+	// Token: 0x040068BC RID: 26812
 	private float HpBarMaxAnchorOffsetX;
 
-	// Token: 0x040067DE RID: 26590
+	// Token: 0x040068BD RID: 26813
 	private LguiFloatTween HpBarTween;
 
-	// Token: 0x040067DF RID: 26591
+	// Token: 0x040068BE RID: 26814
 	private LguiFloatTween ShieldBarTween;
 
-	// Token: 0x040067E0 RID: 26592
+	// Token: 0x040068BF RID: 26815
 	private UKSC_AttrSet OwnerAttrSet;
 
-	// Token: 0x040067E1 RID: 26593
+	// Token: 0x040068C0 RID: 26816
 	private FOnKSCAttrChange DelegateShieldChange;
 }

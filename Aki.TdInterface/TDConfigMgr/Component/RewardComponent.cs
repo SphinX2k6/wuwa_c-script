@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000877 RID: 2167
+	// Token: 0x0200091A RID: 2330
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RewardComponent : IComponentBase
 	{
-		// Token: 0x0600301D RID: 12317 RVA: 0x0007BE64 File Offset: 0x0007A064
-		[NullableContext(1)]
+		// Token: 0x06003359 RID: 13145 RVA: 0x0008334C File Offset: 0x0008154C
+		[NullableContext(0)]
 		private RewardComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600301E RID: 12318 RVA: 0x0007BE9C File Offset: 0x0007A09C
-		[NullableContext(1)]
+		// Token: 0x0600335A RID: 13146 RVA: 0x00083384 File Offset: 0x00081584
+		[NullableContext(0)]
 		public static RewardComponent Create([Nullable(2)] RewardComponent instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600301F RID: 12319 RVA: 0x0007BEAF File Offset: 0x0007A0AF
-		[NullableContext(1)]
+		// Token: 0x0600335B RID: 13147 RVA: 0x00083397 File Offset: 0x00081597
+		[NullableContext(0)]
 		public static RewardComponent CreateFromSetValue([Nullable(2)] RewardComponent_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003020 RID: 12320 RVA: 0x0007BEC4 File Offset: 0x0007A0C4
-		[NullableContext(1)]
+		// Token: 0x0600335C RID: 13148 RVA: 0x000833AC File Offset: 0x000815AC
+		[NullableContext(0)]
 		public new RewardComponent_SetValue ToSetValue()
 		{
 			return new RewardComponent_SetValue
@@ -70,9 +70,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000CBF RID: 3263
-		// (get) Token: 0x06003021 RID: 12321 RVA: 0x0007BF2C File Offset: 0x0007A12C
-		// (set) Token: 0x06003022 RID: 12322 RVA: 0x0007BF66 File Offset: 0x0007A166
+		// Token: 0x17000D88 RID: 3464
+		// (get) Token: 0x0600335D RID: 13149 RVA: 0x00083414 File Offset: 0x00081614
+		// (set) Token: 0x0600335E RID: 13150 RVA: 0x0008344E File Offset: 0x0008164E
 		public override bool? Disabled
 		{
 			get
@@ -94,9 +94,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CC0 RID: 3264
-		// (get) Token: 0x06003023 RID: 12323 RVA: 0x0007BF74 File Offset: 0x0007A174
-		// (set) Token: 0x06003024 RID: 12324 RVA: 0x0007BF9E File Offset: 0x0007A19E
+		// Token: 0x17000D89 RID: 3465
+		// (get) Token: 0x0600335F RID: 13151 RVA: 0x0008345C File Offset: 0x0008165C
+		// (set) Token: 0x06003360 RID: 13152 RVA: 0x00083486 File Offset: 0x00081686
 		public override bool? EdIsLocked
 		{
 			get
@@ -113,9 +113,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CC1 RID: 3265
-		// (get) Token: 0x06003025 RID: 12325 RVA: 0x0007BFAC File Offset: 0x0007A1AC
-		// (set) Token: 0x06003026 RID: 12326 RVA: 0x0007BFD7 File Offset: 0x0007A1D7
+		// Token: 0x17000D8A RID: 3466
+		// (get) Token: 0x06003361 RID: 13153 RVA: 0x00083494 File Offset: 0x00081694
+		// (set) Token: 0x06003362 RID: 13154 RVA: 0x000834BF File Offset: 0x000816BF
 		public virtual int RewardId
 		{
 			get
@@ -136,9 +136,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CC2 RID: 3266
-		// (get) Token: 0x06003027 RID: 12327 RVA: 0x0007BFE5 File Offset: 0x0007A1E5
-		// (set) Token: 0x06003028 RID: 12328 RVA: 0x0007C010 File Offset: 0x0007A210
+		// Token: 0x17000D8B RID: 3467
+		// (get) Token: 0x06003363 RID: 13155 RVA: 0x000834CD File Offset: 0x000816CD
+		// (set) Token: 0x06003364 RID: 13156 RVA: 0x000834F8 File Offset: 0x000816F8
 		public virtual ERewardType RewardType
 		{
 			get
@@ -159,9 +159,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CC3 RID: 3267
-		// (get) Token: 0x06003029 RID: 12329 RVA: 0x0007C020 File Offset: 0x0007A220
-		// (set) Token: 0x0600302A RID: 12330 RVA: 0x0007C05A File Offset: 0x0007A25A
+		// Token: 0x17000D8C RID: 3468
+		// (get) Token: 0x06003365 RID: 13157 RVA: 0x00083508 File Offset: 0x00081708
+		// (set) Token: 0x06003366 RID: 13158 RVA: 0x00083542 File Offset: 0x00081742
 		public virtual EDropEvent? DropOnEvent
 		{
 			get
@@ -183,9 +183,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CC4 RID: 3268
-		// (get) Token: 0x0600302B RID: 12331 RVA: 0x0007C068 File Offset: 0x0007A268
-		// (set) Token: 0x0600302C RID: 12332 RVA: 0x0007C0C9 File Offset: 0x0007A2C9
+		// Token: 0x17000D8D RID: 3469
+		// (get) Token: 0x06003367 RID: 13159 RVA: 0x00083550 File Offset: 0x00081750
+		// (set) Token: 0x06003368 RID: 13160 RVA: 0x000835B1 File Offset: 0x000817B1
 		public virtual IRewardRefreshConfig RefreshConfig
 		{
 			get
@@ -213,9 +213,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CC5 RID: 3269
-		// (get) Token: 0x0600302D RID: 12333 RVA: 0x0007C0DE File Offset: 0x0007A2DE
-		// (set) Token: 0x0600302E RID: 12334 RVA: 0x0007C105 File Offset: 0x0007A305
+		// Token: 0x17000D8E RID: 3470
+		// (get) Token: 0x06003369 RID: 13161 RVA: 0x000835C6 File Offset: 0x000817C6
+		// (set) Token: 0x0600336A RID: 13162 RVA: 0x000835ED File Offset: 0x000817ED
 		public virtual List<int> RewardIdList
 		{
 			get
@@ -237,17 +237,17 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001FAB RID: 8107
+		// Token: 0x040021BD RID: 8637
 		protected new RewardComponent FbInstance;
 
-		// Token: 0x04001FAC RID: 8108
+		// Token: 0x040021BE RID: 8638
 		protected new RewardComponent_SetValue PocoInterface;
 
-		// Token: 0x04001FAD RID: 8109
-		[Nullable(1)]
+		// Token: 0x040021BF RID: 8639
+		[Nullable(0)]
 		private IRewardRefreshConfig _RefreshConfigCache;
 
-		// Token: 0x04001FAE RID: 8110
+		// Token: 0x040021C0 RID: 8640
 		private bool _RefreshConfigInited;
 	}
 }

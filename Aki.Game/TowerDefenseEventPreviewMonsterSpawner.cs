@@ -8,12 +8,12 @@ using CSharpScript.Game.LevelGamePlay.Common;
 using CSharpScript.Game.Module.TowerDefenseEvent.Model;
 using UnrealEngine;
 
-// Token: 0x02002BCB RID: 11211
+// Token: 0x02002146 RID: 8518
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerDefenseEventPreviewMonsterSpawner
 {
-	// Token: 0x0601747F RID: 95359 RVA: 0x005EA9A1 File Offset: 0x005E8BA1
+	// Token: 0x06014EB0 RID: 85680 RVA: 0x00617539 File Offset: 0x00615739
 	public void Init(Dictionary<int, TrapDefenseMonsterPbGroup> data)
 	{
 		this.Reset();
@@ -21,7 +21,7 @@ public class TowerDefenseEventPreviewMonsterSpawner
 		this.PreviewSplines();
 	}
 
-	// Token: 0x06017480 RID: 95360 RVA: 0x005EA9B8 File Offset: 0x005E8BB8
+	// Token: 0x06014EB1 RID: 85681 RVA: 0x00617550 File Offset: 0x00615750
 	private unsafe void PreviewSplines()
 	{
 		TowerDefenseEventModel.Instance.GetWaveSplineIds(this.PreviewSplineIds);
@@ -77,7 +77,7 @@ public class TowerDefenseEventPreviewMonsterSpawner
 		}
 	}
 
-	// Token: 0x06017481 RID: 95361 RVA: 0x005EABD4 File Offset: 0x005E8DD4
+	// Token: 0x06014EB2 RID: 85682 RVA: 0x0061776C File Offset: 0x0061596C
 	private void ReleaseSplines()
 	{
 		foreach (KeyValuePair<int, int> keyValuePair in this.SpawnedSplines)
@@ -94,7 +94,7 @@ public class TowerDefenseEventPreviewMonsterSpawner
 		this.PreviewSplineIds.Clear();
 	}
 
-	// Token: 0x06017482 RID: 95362 RVA: 0x005EAC80 File Offset: 0x005E8E80
+	// Token: 0x06014EB3 RID: 85683 RVA: 0x00617818 File Offset: 0x00615A18
 	private void InitPreviewMonsters(Dictionary<int, TrapDefenseMonsterPbGroup> data)
 	{
 		foreach (int num in data.Keys)
@@ -114,14 +114,14 @@ public class TowerDefenseEventPreviewMonsterSpawner
 		}
 	}
 
-	// Token: 0x06017483 RID: 95363 RVA: 0x005EAD28 File Offset: 0x005E8F28
+	// Token: 0x06014EB4 RID: 85684 RVA: 0x006178C0 File Offset: 0x00615AC0
 	public int GetSpawnUid()
 	{
 		this.SpawnedUid += 2;
 		return this.SpawnedUid;
 	}
 
-	// Token: 0x06017484 RID: 95364 RVA: 0x005EAD40 File Offset: 0x005E8F40
+	// Token: 0x06014EB5 RID: 85685 RVA: 0x006178D8 File Offset: 0x00615AD8
 	public void OnTick(float delta)
 	{
 		if (this.SplineMonsterSpawners.Count == 0)
@@ -134,7 +134,7 @@ public class TowerDefenseEventPreviewMonsterSpawner
 		}
 	}
 
-	// Token: 0x06017485 RID: 95365 RVA: 0x005EADA4 File Offset: 0x005E8FA4
+	// Token: 0x06014EB6 RID: 85686 RVA: 0x0061793C File Offset: 0x00615B3C
 	private void ReleaseSplineSpawners()
 	{
 		foreach (TowerDefenseEventSplineMonsterSpawner towerDefenseEventSplineMonsterSpawner in this.SplineMonsterSpawners.Values)
@@ -145,7 +145,7 @@ public class TowerDefenseEventPreviewMonsterSpawner
 		this.SplineMonsterSpawners.Clear();
 	}
 
-	// Token: 0x06017486 RID: 95366 RVA: 0x005EAE14 File Offset: 0x005E9014
+	// Token: 0x06014EB7 RID: 85687 RVA: 0x006179AC File Offset: 0x00615BAC
 	public void RemovePreviewMonster(long uid)
 	{
 		foreach (TowerDefenseEventSplineMonsterSpawner towerDefenseEventSplineMonsterSpawner in this.SplineMonsterSpawners.Values)
@@ -154,7 +154,7 @@ public class TowerDefenseEventPreviewMonsterSpawner
 		}
 	}
 
-	// Token: 0x06017487 RID: 95367 RVA: 0x005EAE6C File Offset: 0x005E906C
+	// Token: 0x06014EB8 RID: 85688 RVA: 0x00617A04 File Offset: 0x00615C04
 	public void Reset()
 	{
 		this.SpawnedUid = 1;
@@ -162,25 +162,25 @@ public class TowerDefenseEventPreviewMonsterSpawner
 		this.ReleaseSplineSpawners();
 	}
 
-	// Token: 0x06017488 RID: 95368 RVA: 0x005EAE81 File Offset: 0x005E9081
+	// Token: 0x06014EB9 RID: 85689 RVA: 0x00617A19 File Offset: 0x00615C19
 	public void Clear()
 	{
 		this.Reset();
 		TowerDefenseEventPreviewMonsterSpawner.SplineSpawnerPool.Clear();
 	}
 
-	// Token: 0x0400AE30 RID: 44592
+	// Token: 0x0400B235 RID: 45621
 	private static readonly Pool<TowerDefenseEventSplineMonsterSpawner> SplineSpawnerPool = new Pool<TowerDefenseEventSplineMonsterSpawner>(10, () => new TowerDefenseEventSplineMonsterSpawner(), null);
 
-	// Token: 0x0400AE31 RID: 44593
+	// Token: 0x0400B236 RID: 45622
 	private int SpawnedUid = 1;
 
-	// Token: 0x0400AE32 RID: 44594
+	// Token: 0x0400B237 RID: 45623
 	private readonly Dictionary<int, TowerDefenseEventSplineMonsterSpawner> SplineMonsterSpawners = new Dictionary<int, TowerDefenseEventSplineMonsterSpawner>();
 
-	// Token: 0x0400AE33 RID: 44595
+	// Token: 0x0400B238 RID: 45624
 	private readonly List<int> PreviewSplineIds = new List<int>();
 
-	// Token: 0x0400AE34 RID: 44596
+	// Token: 0x0400B239 RID: 45625
 	private readonly Dictionary<int, int> SpawnedSplines = new Dictionary<int, int>();
 }

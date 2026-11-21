@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200637A RID: 25466
+	// Token: 0x020069EB RID: 27115
 	public class IClaimDynamicEntityRewardType_UnionUnion
 	{
-		// Token: 0x1700BDEA RID: 48618
-		// (get) Token: 0x0602C0C8 RID: 180424 RVA: 0x0060D2AD File Offset: 0x0060B4AD
-		// (set) Token: 0x0602C0C9 RID: 180425 RVA: 0x0060D2B5 File Offset: 0x0060B4B5
+		// Token: 0x1700C772 RID: 51058
+		// (get) Token: 0x0602E832 RID: 190514 RVA: 0x00658401 File Offset: 0x00656601
+		// (set) Token: 0x0602E833 RID: 190515 RVA: 0x00658409 File Offset: 0x00656609
 		public IClaimDynamicEntityRewardType_Union Type { get; set; }
 
-		// Token: 0x1700BDEB RID: 48619
-		// (get) Token: 0x0602C0CA RID: 180426 RVA: 0x0060D2BE File Offset: 0x0060B4BE
-		// (set) Token: 0x0602C0CB RID: 180427 RVA: 0x0060D2C6 File Offset: 0x0060B4C6
+		// Token: 0x1700C773 RID: 51059
+		// (get) Token: 0x0602E834 RID: 190516 RVA: 0x00658412 File Offset: 0x00656612
+		// (set) Token: 0x0602E835 RID: 190517 RVA: 0x0065841A File Offset: 0x0065661A
 		public object Value { get; set; }
 
-		// Token: 0x0602C0CC RID: 180428 RVA: 0x0060D2CF File Offset: 0x0060B4CF
+		// Token: 0x0602E836 RID: 190518 RVA: 0x00658423 File Offset: 0x00656623
 		public IClaimDynamicEntityRewardType_UnionUnion()
 		{
 			this.Type = IClaimDynamicEntityRewardType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602C0CD RID: 180429 RVA: 0x0060D2E5 File Offset: 0x0060B4E5
+		// Token: 0x0602E837 RID: 190519 RVA: 0x00658439 File Offset: 0x00656639
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602C0CE RID: 180430 RVA: 0x0060D2F7 File Offset: 0x0060B4F7
+		// Token: 0x0602E838 RID: 190520 RVA: 0x0065844B File Offset: 0x0065664B
 		public IClaimDynamicEntityRewardTypeT AsIClaimDynamicEntityRewardType()
 		{
 			return this.As<IClaimDynamicEntityRewardTypeT>();
 		}
 
-		// Token: 0x0602C0CF RID: 180431 RVA: 0x0060D2FF File Offset: 0x0060B4FF
+		// Token: 0x0602E839 RID: 190521 RVA: 0x00658453 File Offset: 0x00656653
 		public static IClaimDynamicEntityRewardType_UnionUnion FromIClaimDynamicEntityRewardType(IClaimDynamicEntityRewardTypeT _iclaimdynamicentityrewardtype)
 		{
 			return new IClaimDynamicEntityRewardType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C0D0 RID: 180432 RVA: 0x0060D314 File Offset: 0x0060B514
+		// Token: 0x0602E83A RID: 190522 RVA: 0x00658468 File Offset: 0x00656668
 		public IClaimDynamicTrafficRewardT AsIClaimDynamicTrafficReward()
 		{
 			return this.As<IClaimDynamicTrafficRewardT>();
 		}
 
-		// Token: 0x0602C0D1 RID: 180433 RVA: 0x0060D31C File Offset: 0x0060B51C
+		// Token: 0x0602E83B RID: 190523 RVA: 0x00658470 File Offset: 0x00656670
 		public static IClaimDynamicEntityRewardType_UnionUnion FromIClaimDynamicTrafficReward(IClaimDynamicTrafficRewardT _iclaimdynamictrafficreward)
 		{
 			return new IClaimDynamicEntityRewardType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C0D2 RID: 180434 RVA: 0x0060D334 File Offset: 0x0060B534
+		// Token: 0x0602E83C RID: 190524 RVA: 0x00658488 File Offset: 0x00656688
 		public static int Pack(FlatBufferBuilder builder, IClaimDynamicEntityRewardType_UnionUnion _o)
 		{
 			IClaimDynamicEntityRewardType_Union type = _o.Type;

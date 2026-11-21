@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024E4 RID: 9444
+	// Token: 0x02002789 RID: 10121
 	public class IStateProgramSpecialProcessBase
 	{
-		// Token: 0x0600D2C7 RID: 53959 RVA: 0x001F43A5 File Offset: 0x001F25A5
-		[NullableContext(1)]
+		// Token: 0x0600E01C RID: 57372 RVA: 0x0020FC01 File Offset: 0x0020DE01
 		public static IStateProgramSpecialProcessBase Create(IStateProgramSpecialProcessBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003AC1 RID: 15041
-		// (get) Token: 0x0600D2C8 RID: 53960 RVA: 0x001F43C4 File Offset: 0x001F25C4
+		// Token: 0x17003DB8 RID: 15800
+		// (get) Token: 0x0600E01D RID: 57373 RVA: 0x0020FC20 File Offset: 0x0020DE20
 		public virtual ELogicProgramSpecialProcess Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073A0 RID: 29600
+		// Token: 0x040079ED RID: 31213
 		private IStateProgramSpecialProcessBase Instance;
 	}
 }

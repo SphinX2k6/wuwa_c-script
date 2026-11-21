@@ -3,37 +3,37 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E6D RID: 3693
+	// Token: 0x02000F80 RID: 3968
 	[EnumExtensions]
 	public enum EKurotatoSystemVarType
 	{
-		// Token: 0x040030A9 RID: 12457
+		// Token: 0x040033AB RID: 13227
 		Gold,
-		// Token: 0x040030AA RID: 12458
+		// Token: 0x040033AC RID: 13228
 		SpareGold,
-		// Token: 0x040030AB RID: 12459
+		// Token: 0x040033AD RID: 13229
 		RoleLevel,
-		// Token: 0x040030AC RID: 12460
+		// Token: 0x040033AE RID: 13230
 		TotalRoleExp,
-		// Token: 0x040030AD RID: 12461
+		// Token: 0x040033AF RID: 13231
 		Batch,
-		// Token: 0x040030AE RID: 12462
+		// Token: 0x040033B0 RID: 13232
 		RealBatch,
-		// Token: 0x040030AF RID: 12463
+		// Token: 0x040033B1 RID: 13233
 		BatchType,
-		// Token: 0x040030B0 RID: 12464
+		// Token: 0x040033B2 RID: 13234
 		BatchConfigId,
-		// Token: 0x040030B1 RID: 12465
+		// Token: 0x040033B3 RID: 13235
 		MaxBatch,
-		// Token: 0x040030B2 RID: 12466
+		// Token: 0x040033B4 RID: 13236
 		TreasureBoxCount,
-		// Token: 0x040030B3 RID: 12467
+		// Token: 0x040033B5 RID: 13237
 		UpgradeCount,
-		// Token: 0x040030B4 RID: 12468
+		// Token: 0x040033B6 RID: 13238
 		ConsecutiveKillCount,
-		// Token: 0x040030B5 RID: 12469
+		// Token: 0x040033B7 RID: 13239
 		GoldGainEfficiency,
-		// Token: 0x040030B6 RID: 12470
+		// Token: 0x040033B8 RID: 13240
 		NeedRollback
 	}
 }

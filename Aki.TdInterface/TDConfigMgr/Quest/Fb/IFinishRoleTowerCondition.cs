@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013F7 RID: 5111
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200154E RID: 5454
 	public class IFinishRoleTowerCondition : IQuestCondition
 	{
-		// Token: 0x06007450 RID: 29776 RVA: 0x00116566 File Offset: 0x00114766
+		// Token: 0x06007B11 RID: 31505 RVA: 0x00124F4A File Offset: 0x0012314A
 		public static IFinishRoleTowerCondition Create(IFinishRoleTowerCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002635 RID: 9781
-		// (get) Token: 0x06007451 RID: 29777 RVA: 0x00116585 File Offset: 0x00114785
+		// Token: 0x17002817 RID: 10263
+		// (get) Token: 0x06007B12 RID: 31506 RVA: 0x00124F69 File Offset: 0x00123169
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002636 RID: 9782
-		// (get) Token: 0x06007452 RID: 29778 RVA: 0x00116592 File Offset: 0x00114792
+		// Token: 0x17002818 RID: 10264
+		// (get) Token: 0x06007B13 RID: 31507 RVA: 0x00124F76 File Offset: 0x00123176
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002637 RID: 9783
-		// (get) Token: 0x06007453 RID: 29779 RVA: 0x001165C6 File Offset: 0x001147C6
+		// Token: 0x17002819 RID: 10265
+		// (get) Token: 0x06007B14 RID: 31508 RVA: 0x00124FAA File Offset: 0x001231AA
 		public virtual IRoleTowerConditionStepBase Step
 		{
 			get
@@ -68,8 +66,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002638 RID: 9784
-		// (get) Token: 0x06007454 RID: 29780 RVA: 0x001165F5 File Offset: 0x001147F5
+		// Token: 0x1700281A RID: 10266
+		// (get) Token: 0x06007B15 RID: 31509 RVA: 0x00124FD9 File Offset: 0x001231D9
 		public virtual VarRef Batch
 		{
 			get
@@ -84,26 +82,26 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400434B RID: 17227
+		// Token: 0x040046DC RID: 18140
 		private IFinishRoleTowerCondition Instance;
 
-		// Token: 0x0400434C RID: 17228
+		// Token: 0x040046DD RID: 18141
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400434D RID: 17229
+		// Token: 0x040046DE RID: 18142
 		private bool _PreConditionsInited;
 
-		// Token: 0x0400434E RID: 17230
+		// Token: 0x040046DF RID: 18143
 		private IRoleTowerConditionStepBase _StepCache;
 
-		// Token: 0x0400434F RID: 17231
+		// Token: 0x040046E0 RID: 18144
 		private bool _StepInited;
 
-		// Token: 0x04004350 RID: 17232
+		// Token: 0x040046E1 RID: 18145
 		private VarRef _BatchCache;
 
-		// Token: 0x04004351 RID: 17233
+		// Token: 0x040046E2 RID: 18146
 		private bool _BatchInited;
 	}
 }

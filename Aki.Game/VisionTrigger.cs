@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Utils;
 
-// Token: 0x02002FF4 RID: 12276
+// Token: 0x02002549 RID: 9545
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionTrigger : Trigger
 {
-	// Token: 0x0601A037 RID: 106551 RVA: 0x006CFB4A File Offset: 0x006CDD4A
+	// Token: 0x0601796B RID: 96619 RVA: 0x006F79E6 File Offset: 0x006F5BE6
 	[NullableContext(2)]
 	public VisionTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A038 RID: 106552 RVA: 0x006CFB78 File Offset: 0x006CDD78
+	// Token: 0x0601796C RID: 96620 RVA: 0x006F7A14 File Offset: 0x006F5C14
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TargetType = (ETriggerTargetType)Convert.ToInt32((triggerParams.Length != 0) ? triggerParams[0] : "0");
@@ -39,7 +39,7 @@ public class VisionTrigger : Trigger
 		this.EachVisionMaxTriggerCount = Convert.ToInt32((triggerParams.Length > 2) ? triggerParams[2] : "-1");
 	}
 
-	// Token: 0x0601A039 RID: 106553 RVA: 0x006CFC28 File Offset: 0x006CDE28
+	// Token: 0x0601796D RID: 96621 RVA: 0x006F7AC4 File Offset: 0x006F5CC4
 	protected override void OnActive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -50,7 +50,7 @@ public class VisionTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A03A RID: 106554 RVA: 0x006CFC94 File Offset: 0x006CDE94
+	// Token: 0x0601796E RID: 96622 RVA: 0x006F7B30 File Offset: 0x006F5D30
 	protected override void OnInactive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -61,7 +61,7 @@ public class VisionTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A03B RID: 106555 RVA: 0x006CFD00 File Offset: 0x006CDF00
+	// Token: 0x0601796F RID: 96623 RVA: 0x006F7B9C File Offset: 0x006F5D9C
 	private void OnEvent(int visionId)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -96,27 +96,27 @@ public class VisionTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A03C RID: 106556 RVA: 0x006CFDBF File Offset: 0x006CDFBF
+	// Token: 0x06017970 RID: 96624 RVA: 0x006F7C5B File Offset: 0x006F5E5B
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4DB RID: 50395
+	// Token: 0x0400C8A3 RID: 51363
 	protected ETriggerTargetType TargetType;
 
-	// Token: 0x0400C4DC RID: 50396
+	// Token: 0x0400C8A4 RID: 51364
 	protected readonly List<int> VisionIds = new List<int>();
 
-	// Token: 0x0400C4DD RID: 50397
+	// Token: 0x0400C8A5 RID: 51365
 	protected bool AllVision;
 
-	// Token: 0x0400C4DE RID: 50398
+	// Token: 0x0400C8A6 RID: 51366
 	protected int TriggerCount;
 
-	// Token: 0x0400C4DF RID: 50399
+	// Token: 0x0400C8A7 RID: 51367
 	protected int EachVisionMaxTriggerCount = -1;
 
-	// Token: 0x0400C4E0 RID: 50400
+	// Token: 0x0400C8A8 RID: 51368
 	protected readonly Dictionary<int, int> TriggerCountMap = new Dictionary<int, int>();
 }

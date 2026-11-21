@@ -8,13 +8,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C5C RID: 23644
+	// Token: 0x02004C3C RID: 19516
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class SkillCdController : ControllerBase
 	{
-		// Token: 0x0603BC43 RID: 244803 RVA: 0x00E4639C File Offset: 0x00E4459C
+		// Token: 0x06030B8E RID: 199566 RVA: 0x00D9677C File Offset: 0x00D9497C
 		protected override bool OnInit()
 		{
 			Net instance = Net.Instance;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BC44 RID: 244804 RVA: 0x00E46400 File Offset: 0x00E44600
+		// Token: 0x06030B8F RID: 199567 RVA: 0x00D967E0 File Offset: 0x00D949E0
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.PlayerSkillInfoPbNotify);
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BC45 RID: 244805 RVA: 0x00E46424 File Offset: 0x00E44624
+		// Token: 0x06030B90 RID: 199568 RVA: 0x00D96804 File Offset: 0x00D94A04
 		[NullableContext(2)]
 		private static void HandlePlayerSkillInfoPbNotify(IMessage msg, Net.CallbackStatus callbackStatus)
 		{
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Battle
 			SkillCdModel.Instance.HandlePlayerSkillInfoPbNotify(notify);
 		}
 
-		// Token: 0x0603BC46 RID: 244806 RVA: 0x00E46444 File Offset: 0x00E44644
+		// Token: 0x06030B91 RID: 199569 RVA: 0x00D96824 File Offset: 0x00D94A24
 		[NullableContext(2)]
 		private static void HandlePassiveSkillNotify(IMessage msg, Net.CallbackStatus callbackStatus)
 		{
@@ -60,12 +60,12 @@ namespace CSharpScript.Game.Module.Battle
 			SkillCdModel.Instance.HandlePassiveSkillNotify(notify);
 		}
 
-		// Token: 0x0603BC47 RID: 244807 RVA: 0x00E46463 File Offset: 0x00E44663
+		// Token: 0x06030B92 RID: 199570 RVA: 0x00D96843 File Offset: 0x00D94A43
 		protected override void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x0603BC48 RID: 244808 RVA: 0x00E46468 File Offset: 0x00E44668
+		// Token: 0x06030B93 RID: 199571 RVA: 0x00D96848 File Offset: 0x00D94A48
 		public void Pause(ESkillCdPauseReason reason, bool isPause)
 		{
 			bool flag = this.IsPause();
@@ -77,14 +77,14 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC49 RID: 244809 RVA: 0x00E464A9 File Offset: 0x00E446A9
+		// Token: 0x06030B94 RID: 199572 RVA: 0x00D96889 File Offset: 0x00D94A89
 		public bool IsPause()
 		{
 			return this._pauseState != 0;
 		}
 
-		// Token: 0x17008DBF RID: 36287
-		// (get) Token: 0x0603BC4A RID: 244810 RVA: 0x00E464B4 File Offset: 0x00E446B4
+		// Token: 0x17006191 RID: 24977
+		// (get) Token: 0x06030B95 RID: 199573 RVA: 0x00D96894 File Offset: 0x00D94A94
 		public static SkillCdController Instance
 		{
 			get
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC4B RID: 244811 RVA: 0x00E464BB File Offset: 0x00E446BB
+		// Token: 0x06030B96 RID: 199574 RVA: 0x00D9689B File Offset: 0x00D94A9B
 		public static SkillCdController GetOrCreateInstance()
 		{
 			if (SkillCdController._Instance == null)
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Battle
 			return SkillCdController._Instance;
 		}
 
-		// Token: 0x0603BC4C RID: 244812 RVA: 0x00E464CF File Offset: 0x00E446CF
+		// Token: 0x06030B97 RID: 199575 RVA: 0x00D968AF File Offset: 0x00D94AAF
 		public static bool CreateInstance()
 		{
 			if (SkillCdController._Instance != null)
@@ -114,35 +114,35 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BC4D RID: 244813 RVA: 0x00E464E5 File Offset: 0x00E446E5
+		// Token: 0x06030B98 RID: 199576 RVA: 0x00D968C5 File Offset: 0x00D94AC5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603BC4E RID: 244814 RVA: 0x00E464E7 File Offset: 0x00E446E7
+		// Token: 0x06030B99 RID: 199577 RVA: 0x00D968C7 File Offset: 0x00D94AC7
 		public static void ResetStaticDefaultValue()
 		{
 			SkillCdController._Instance = null;
 		}
 
-		// Token: 0x0603BC4F RID: 244815 RVA: 0x00E464EF File Offset: 0x00E446EF
+		// Token: 0x06030B9A RID: 199578 RVA: 0x00D968CF File Offset: 0x00D94ACF
 		static SkillCdController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SkillCdController.CreateStaticDefaultValue), new Action(SkillCdController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401F1EE RID: 127470
+		// Token: 0x04019C9F RID: 105631
 		private int _pauseState;
 
-		// Token: 0x0401F1EF RID: 127471
+		// Token: 0x04019CA0 RID: 105632
 		[Nullable(2)]
 		private static SkillCdController _Instance;
 
-		// Token: 0x0200BE6F RID: 48751
+		// Token: 0x0200A875 RID: 43125
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040396D8 RID: 235224
+			// Token: 0x04034099 RID: 213145
 			[Nullable(new byte[]
 			{
 				0,
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Battle
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <0>__HandlePlayerSkillInfoPbNotify;
 
-			// Token: 0x040396D9 RID: 235225
+			// Token: 0x0403409A RID: 213146
 			[Nullable(new byte[]
 			{
 				0,

@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B9D RID: 11165
+// Token: 0x02002119 RID: 8473
 [NullableContext(2)]
 [Nullable(0)]
 public class TermTextRegistryHandle
 {
-	// Token: 0x17001F2B RID: 7979
-	// (get) Token: 0x06017230 RID: 94768 RVA: 0x005DE1CE File Offset: 0x005DC3CE
+	// Token: 0x17001F83 RID: 8067
+	// (get) Token: 0x06014C61 RID: 85089 RVA: 0x0060ADA2 File Offset: 0x00608FA2
 	public UUIText UiText
 	{
 		get
@@ -17,8 +17,8 @@ public class TermTextRegistryHandle
 		}
 	}
 
-	// Token: 0x17001F2C RID: 7980
-	// (get) Token: 0x06017231 RID: 94769 RVA: 0x005DE1D6 File Offset: 0x005DC3D6
+	// Token: 0x17001F84 RID: 8068
+	// (get) Token: 0x06014C62 RID: 85090 RVA: 0x0060ADAA File Offset: 0x00608FAA
 	public bool Enable
 	{
 		get
@@ -27,8 +27,8 @@ public class TermTextRegistryHandle
 		}
 	}
 
-	// Token: 0x17001F2D RID: 7981
-	// (get) Token: 0x06017232 RID: 94770 RVA: 0x005DE1DE File Offset: 0x005DC3DE
+	// Token: 0x17001F85 RID: 8069
+	// (get) Token: 0x06014C63 RID: 85091 RVA: 0x0060ADB2 File Offset: 0x00608FB2
 	public ETermExplanationViewType Type
 	{
 		get
@@ -37,26 +37,26 @@ public class TermTextRegistryHandle
 		}
 	}
 
-	// Token: 0x06017233 RID: 94771 RVA: 0x005DE1E6 File Offset: 0x005DC3E6
+	// Token: 0x06014C64 RID: 85092 RVA: 0x0060ADBA File Offset: 0x00608FBA
 	public void SetEnable(bool enable)
 	{
 		this.EnableInternal = enable;
 		this.IsEnableStateDirty = true;
 	}
 
-	// Token: 0x06017234 RID: 94772 RVA: 0x005DE1F6 File Offset: 0x005DC3F6
+	// Token: 0x06014C65 RID: 85093 RVA: 0x0060ADCA File Offset: 0x00608FCA
 	public void SetUiText(UUIText uiText)
 	{
 		this.UiTextInternal = uiText;
 	}
 
-	// Token: 0x06017235 RID: 94773 RVA: 0x005DE1FF File Offset: 0x005DC3FF
+	// Token: 0x06014C66 RID: 85094 RVA: 0x0060ADD3 File Offset: 0x00608FD3
 	public void SetType(ETermExplanationViewType type)
 	{
 		this.TypeInternal = type;
 	}
 
-	// Token: 0x06017236 RID: 94774 RVA: 0x005DE208 File Offset: 0x005DC408
+	// Token: 0x06014C67 RID: 85095 RVA: 0x0060ADDC File Offset: 0x00608FDC
 	public void Clear()
 	{
 		UUIText uiText = this.UiText;
@@ -91,56 +91,56 @@ public class TermTextRegistryHandle
 		this.Id = 0;
 	}
 
-	// Token: 0x0400AD08 RID: 44296
+	// Token: 0x0400B10F RID: 45327
 	public int Id;
 
-	// Token: 0x0400AD09 RID: 44297
+	// Token: 0x0400B110 RID: 45328
 	private UUIText UiTextInternal;
 
-	// Token: 0x0400AD0A RID: 44298
+	// Token: 0x0400B111 RID: 45329
 	private bool EnableInternal = true;
 
-	// Token: 0x0400AD0B RID: 44299
+	// Token: 0x0400B112 RID: 45330
 	private ETermExplanationViewType TypeInternal;
 
-	// Token: 0x0400AD0C RID: 44300
+	// Token: 0x0400B113 RID: 45331
 	public int ViewId;
 
-	// Token: 0x0400AD0D RID: 44301
+	// Token: 0x0400B114 RID: 45332
 	public ETermExplanationViewAttachDirection AttachDir;
 
-	// Token: 0x0400AD0E RID: 44302
+	// Token: 0x0400B115 RID: 45333
 	public UUIItem AttachItem;
 
-	// Token: 0x0400AD0F RID: 44303
+	// Token: 0x0400B116 RID: 45334
 	public Action OnDisableClick;
 
-	// Token: 0x0400AD10 RID: 44304
+	// Token: 0x0400B117 RID: 45335
 	[Nullable(0)]
 	public ValueTuple<float, float> Offset = new ValueTuple<float, float>(0f, 0f);
 
-	// Token: 0x0400AD11 RID: 44305
+	// Token: 0x0400B118 RID: 45336
 	public bool NeedHighlight = true;
 
-	// Token: 0x0400AD12 RID: 44306
+	// Token: 0x0400B119 RID: 45337
 	[Nullable(1)]
 	public string LastText = "";
 
-	// Token: 0x0400AD13 RID: 44307
+	// Token: 0x0400B11A RID: 45338
 	public bool LastHierarchyActive;
 
-	// Token: 0x0400AD14 RID: 44308
+	// Token: 0x0400B11B RID: 45339
 	public ETermExplanationGroup Group;
 
-	// Token: 0x0400AD15 RID: 44309
+	// Token: 0x0400B11C RID: 45340
 	public int Priority;
 
-	// Token: 0x0400AD16 RID: 44310
+	// Token: 0x0400B11D RID: 45341
 	public bool IsEnableStateDirty;
 
-	// Token: 0x0400AD17 RID: 44311
+	// Token: 0x0400B11E RID: 45342
 	public ETermExplanationViewStyle Style = ETermExplanationViewStyle.Default;
 
-	// Token: 0x0400AD18 RID: 44312
+	// Token: 0x0400B11F RID: 45343
 	public ETermExplanationReportType? ReportType;
 }

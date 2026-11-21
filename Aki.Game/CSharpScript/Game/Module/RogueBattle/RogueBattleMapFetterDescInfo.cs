@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004ED5 RID: 20181
+	// Token: 0x02003E9E RID: 16030
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleMapFetterDescInfo : IRogueBattleMapFetterDescInfo
 	{
-		// Token: 0x17007F1B RID: 32539
-		// (get) Token: 0x06033CCD RID: 212173 RVA: 0x00C21061 File Offset: 0x00C1F261
-		// (set) Token: 0x06033CCE RID: 212174 RVA: 0x00C21069 File Offset: 0x00C1F269
+		// Token: 0x170052CB RID: 21195
+		// (get) Token: 0x06028B38 RID: 166712 RVA: 0x00B6A579 File Offset: 0x00B68779
+		// (set) Token: 0x06028B39 RID: 166713 RVA: 0x00B6A581 File Offset: 0x00B68781
 		public string TextId { get; set; } = string.Empty;
 
-		// Token: 0x17007F1C RID: 32540
-		// (get) Token: 0x06033CCF RID: 212175 RVA: 0x00C21072 File Offset: 0x00C1F272
-		// (set) Token: 0x06033CD0 RID: 212176 RVA: 0x00C2107A File Offset: 0x00C1F27A
+		// Token: 0x170052CC RID: 21196
+		// (get) Token: 0x06028B3A RID: 166714 RVA: 0x00B6A58A File Offset: 0x00B6878A
+		// (set) Token: 0x06028B3B RID: 166715 RVA: 0x00B6A592 File Offset: 0x00B68792
 		[Nullable(2)]
 		public string Param { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17007F1D RID: 32541
-		// (get) Token: 0x06033CD1 RID: 212177 RVA: 0x00C21083 File Offset: 0x00C1F283
-		// (set) Token: 0x06033CD2 RID: 212178 RVA: 0x00C2108B File Offset: 0x00C1F28B
+		// Token: 0x170052CD RID: 21197
+		// (get) Token: 0x06028B3C RID: 166716 RVA: 0x00B6A59B File Offset: 0x00B6879B
+		// (set) Token: 0x06028B3D RID: 166717 RVA: 0x00B6A5A3 File Offset: 0x00B687A3
 		public bool IsReached { get; set; }
 
-		// Token: 0x17007F1E RID: 32542
-		// (get) Token: 0x06033CD3 RID: 212179 RVA: 0x00C21094 File Offset: 0x00C1F294
-		// (set) Token: 0x06033CD4 RID: 212180 RVA: 0x00C2109C File Offset: 0x00C1F29C
+		// Token: 0x170052CE RID: 21198
+		// (get) Token: 0x06028B3E RID: 166718 RVA: 0x00B6A5AC File Offset: 0x00B687AC
+		// (set) Token: 0x06028B3F RID: 166719 RVA: 0x00B6A5B4 File Offset: 0x00B687B4
 		public ERogueResBondEffectType EffectType { get; set; }
 	}
 }

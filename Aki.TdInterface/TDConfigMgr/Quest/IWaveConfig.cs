@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001210 RID: 4624
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200134C RID: 4940
 	public class IWaveConfig
 	{
-		// Token: 0x060068EA RID: 26858 RVA: 0x000FA390 File Offset: 0x000F8590
+		// Token: 0x06006F2B RID: 28459 RVA: 0x00107C9C File Offset: 0x00105E9C
 		private IWaveConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060068EB RID: 26859 RVA: 0x000FA3C8 File Offset: 0x000F85C8
+		// Token: 0x06006F2C RID: 28460 RVA: 0x00107CD4 File Offset: 0x00105ED4
 		public static IWaveConfig Create([Nullable(2)] IWaveConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068EC RID: 26860 RVA: 0x000FA3DB File Offset: 0x000F85DB
+		// Token: 0x06006F2D RID: 28461 RVA: 0x00107CE7 File Offset: 0x00105EE7
 		public static IWaveConfig CreateFromSetValue([Nullable(2)] IWaveConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068ED RID: 26861 RVA: 0x000FA3EE File Offset: 0x000F85EE
+		// Token: 0x06006F2E RID: 28462 RVA: 0x00107CFA File Offset: 0x00105EFA
 		public IWaveConfig_SetValue ToSetValue()
 		{
 			return new IWaveConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021E2 RID: 8674
-		// (get) Token: 0x060068EE RID: 26862 RVA: 0x000FA401 File Offset: 0x000F8601
-		// (set) Token: 0x060068EF RID: 26863 RVA: 0x000FA42C File Offset: 0x000F862C
+		// Token: 0x170023A3 RID: 9123
+		// (get) Token: 0x06006F2F RID: 28463 RVA: 0x00107D0D File Offset: 0x00105F0D
+		// (set) Token: 0x06006F30 RID: 28464 RVA: 0x00107D38 File Offset: 0x00105F38
 		public virtual int Id
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003EC1 RID: 16065
+		// Token: 0x0400422F RID: 16943
 		[Nullable(2)]
 		protected IWaveConfig FbInstance;
 
-		// Token: 0x04003EC2 RID: 16066
+		// Token: 0x04004230 RID: 16944
 		[Nullable(2)]
 		protected IWaveConfig_SetValue PocoInterface;
 	}

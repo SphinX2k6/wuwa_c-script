@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012DE RID: 4830
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001424 RID: 5156
 	public class ITrapDefenseSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x06006E5E RID: 28254 RVA: 0x0010ABF9 File Offset: 0x00108DF9
+		// Token: 0x060074DE RID: 29918 RVA: 0x00118EF9 File Offset: 0x001170F9
 		public static ITrapDefenseSystemConfig Create(ITrapDefenseSystemConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002275 RID: 8821
-		// (get) Token: 0x06006E5F RID: 28255 RVA: 0x0010AC18 File Offset: 0x00108E18
+		// Token: 0x17002438 RID: 9272
+		// (get) Token: 0x060074DF RID: 29919 RVA: 0x00118F18 File Offset: 0x00117118
 		public override EEnableSystemType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002276 RID: 8822
-		// (get) Token: 0x06006E60 RID: 28256 RVA: 0x0010AC25 File Offset: 0x00108E25
+		// Token: 0x17002439 RID: 9273
+		// (get) Token: 0x060074E0 RID: 29920 RVA: 0x00118F25 File Offset: 0x00117125
 		public virtual int TrapDefenseId
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002277 RID: 8823
-		// (get) Token: 0x06006E61 RID: 28257 RVA: 0x0010AC34 File Offset: 0x00108E34
+		// Token: 0x1700243A RID: 9274
+		// (get) Token: 0x060074E1 RID: 29921 RVA: 0x00118F34 File Offset: 0x00117134
 		public virtual List<ITrapDefenseSystemVar> Vars
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F3A RID: 16186
+		// Token: 0x040042A8 RID: 17064
 		private ITrapDefenseSystemConfig Instance;
 
-		// Token: 0x04003F3B RID: 16187
+		// Token: 0x040042A9 RID: 17065
 		private List<ITrapDefenseSystemVar> _VarsCache;
 
-		// Token: 0x04003F3C RID: 16188
+		// Token: 0x040042AA RID: 17066
 		private bool _VarsInited;
 	}
 }

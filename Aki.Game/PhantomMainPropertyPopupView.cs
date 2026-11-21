@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using FilterDefine;
 using UnrealEngine;
 
-// Token: 0x0200186B RID: 6251
+// Token: 0x02000D24 RID: 3364
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomMainPropertyPopupView : UiViewBase
 {
-	// Token: 0x0600B762 RID: 46946 RVA: 0x00297540 File Offset: 0x00295740
+	// Token: 0x06008B4B RID: 35659 RVA: 0x002A1C64 File Offset: 0x0029FE64
 	public PhantomMainPropertyPopupView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600B763 RID: 46947 RVA: 0x00297594 File Offset: 0x00295794
+	// Token: 0x06008B4C RID: 35660 RVA: 0x002A1CB8 File Offset: 0x0029FEB8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -61,7 +61,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B764 RID: 46948 RVA: 0x0029778C File Offset: 0x0029598C
+	// Token: 0x06008B4D RID: 35661 RVA: 0x002A1EB0 File Offset: 0x002A00B0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomMainPropertyPopupView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -72,7 +72,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B765 RID: 46949 RVA: 0x002977D0 File Offset: 0x002959D0
+	// Token: 0x06008B4E RID: 35662 RVA: 0x002A1EF4 File Offset: 0x002A00F4
 	protected override void OnStart()
 	{
 		this.LoadAllCostPropertiesData();
@@ -82,7 +82,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		this.SwitchToCost(cost);
 	}
 
-	// Token: 0x0600B766 RID: 46950 RVA: 0x00297804 File Offset: 0x00295A04
+	// Token: 0x06008B4F RID: 35663 RVA: 0x002A1F28 File Offset: 0x002A0128
 	private void InitFetterConfigShow()
 	{
 		IMainPropertyFilterViewData viewData = this.ViewData;
@@ -106,7 +106,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(9), "PhantomFilterSonataTips_2", Array.Empty<object>());
 	}
 
-	// Token: 0x0600B767 RID: 46951 RVA: 0x002978B0 File Offset: 0x00295AB0
+	// Token: 0x06008B50 RID: 35664 RVA: 0x002A1FD4 File Offset: 0x002A01D4
 	private UniTask InitCostTabLayoutAsync()
 	{
 		PhantomMainPropertyPopupView.<InitCostTabLayoutAsync>d__14 <InitCostTabLayoutAsync>d__;
@@ -117,7 +117,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		return <InitCostTabLayoutAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B768 RID: 46952 RVA: 0x002978F4 File Offset: 0x00295AF4
+	// Token: 0x06008B51 RID: 35665 RVA: 0x002A2018 File Offset: 0x002A0218
 	private void InitPropertyLayout()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(4);
@@ -128,7 +128,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		this.PropertyLayout = new GenericScrollViewNew<PropertyToggleGridProxy, FilterItemData>(scrollViewWithScrollbar, new Func<PropertyToggleGridProxy>(this.CreatePropertyToggle), null, false, null);
 	}
 
-	// Token: 0x0600B769 RID: 46953 RVA: 0x00297928 File Offset: 0x00295B28
+	// Token: 0x06008B52 RID: 35666 RVA: 0x002A204C File Offset: 0x002A024C
 	private CostTabToggleGridProxy CreateCostTabToggle()
 	{
 		CostTabToggleGridProxy costTabToggleGridProxy = new CostTabToggleGridProxy();
@@ -136,7 +136,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		return costTabToggleGridProxy;
 	}
 
-	// Token: 0x0600B76A RID: 46954 RVA: 0x00297941 File Offset: 0x00295B41
+	// Token: 0x06008B53 RID: 35667 RVA: 0x002A2065 File Offset: 0x002A0265
 	private PropertyToggleGridProxy CreatePropertyToggle()
 	{
 		PropertyToggleGridProxy propertyToggleGridProxy = new PropertyToggleGridProxy();
@@ -144,13 +144,13 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		return propertyToggleGridProxy;
 	}
 
-	// Token: 0x0600B76B RID: 46955 RVA: 0x0029795A File Offset: 0x00295B5A
+	// Token: 0x06008B54 RID: 35668 RVA: 0x002A207E File Offset: 0x002A027E
 	private void OnCostTabChanged(int cost)
 	{
 		this.SwitchToCost(cost);
 	}
 
-	// Token: 0x0600B76C RID: 46956 RVA: 0x00297963 File Offset: 0x00295B63
+	// Token: 0x06008B55 RID: 35669 RVA: 0x002A2087 File Offset: 0x002A0287
 	private void SwitchToCost(int cost)
 	{
 		this.CurrentCost = cost;
@@ -160,7 +160,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		this.UpdateTabMarks();
 	}
 
-	// Token: 0x0600B76D RID: 46957 RVA: 0x00297984 File Offset: 0x00295B84
+	// Token: 0x06008B56 RID: 35670 RVA: 0x002A20A8 File Offset: 0x002A02A8
 	private void UpdateTabHighlight()
 	{
 		GenericLayout<CostTabToggleGridProxy, int> costTabLayout = this.CostTabLayout;
@@ -174,7 +174,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B76E RID: 46958 RVA: 0x002979F4 File Offset: 0x00295BF4
+	// Token: 0x06008B57 RID: 35671 RVA: 0x002A2118 File Offset: 0x002A0318
 	private void LoadSavedSelections()
 	{
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(this.ViewData.UniqueId);
@@ -204,7 +204,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		this.UpdateTabMarks();
 	}
 
-	// Token: 0x0600B76F RID: 46959 RVA: 0x00297B04 File Offset: 0x00295D04
+	// Token: 0x06008B58 RID: 35672 RVA: 0x002A2228 File Offset: 0x002A0428
 	private void UpdateTabMarks()
 	{
 		GenericLayout<CostTabToggleGridProxy, int> costTabLayout = this.CostTabLayout;
@@ -219,7 +219,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B770 RID: 46960 RVA: 0x00297B98 File Offset: 0x00295D98
+	// Token: 0x06008B59 RID: 35673 RVA: 0x002A22BC File Offset: 0x002A04BC
 	private void LoadAllCostPropertiesData()
 	{
 		foreach (int num in this.CostList)
@@ -240,7 +240,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B771 RID: 46961 RVA: 0x00297C84 File Offset: 0x00295E84
+	// Token: 0x06008B5A RID: 35674 RVA: 0x002A23A8 File Offset: 0x002A05A8
 	private void LoadPropertiesForCurrentCost()
 	{
 		List<FilterItemData> data;
@@ -256,7 +256,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		propertyLayout.RefreshByData(data, new Action(this.RestoreCurrentCostSelection), false);
 	}
 
-	// Token: 0x0600B772 RID: 46962 RVA: 0x00297CC8 File Offset: 0x00295EC8
+	// Token: 0x06008B5B RID: 35675 RVA: 0x002A23EC File Offset: 0x002A05EC
 	private void RestoreCurrentCostSelection()
 	{
 		Dictionary<int, string> dictionary;
@@ -284,7 +284,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B773 RID: 46963 RVA: 0x00297D64 File Offset: 0x00295F64
+	// Token: 0x06008B5C RID: 35676 RVA: 0x002A2488 File Offset: 0x002A0688
 	private void OnPropertyToggleChanged(bool isChecked, int filterId, string content)
 	{
 		this.SetCostSelection(filterId, isChecked, content);
@@ -292,7 +292,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		this.UpdateTabMarks();
 	}
 
-	// Token: 0x0600B774 RID: 46964 RVA: 0x00297D7C File Offset: 0x00295F7C
+	// Token: 0x06008B5D RID: 35677 RVA: 0x002A24A0 File Offset: 0x002A06A0
 	private void OnToggleSelectAll(EToggleState state)
 	{
 		bool flag = state == EToggleState.ETT_Checked;
@@ -310,7 +310,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		this.UpdateTabMarks();
 	}
 
-	// Token: 0x0600B775 RID: 46965 RVA: 0x00297E14 File Offset: 0x00296014
+	// Token: 0x06008B5E RID: 35678 RVA: 0x002A2538 File Offset: 0x002A0738
 	private void UpdateSelectAllToggle()
 	{
 		Dictionary<int, string> dictionary;
@@ -335,7 +335,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B776 RID: 46966 RVA: 0x00297EBC File Offset: 0x002960BC
+	// Token: 0x06008B5F RID: 35679 RVA: 0x002A25E0 File Offset: 0x002A07E0
 	private void OnClickReset()
 	{
 		this.CostSelectionMap.Clear();
@@ -352,7 +352,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		this.UpdateTabMarks();
 	}
 
-	// Token: 0x0600B777 RID: 46967 RVA: 0x00297F38 File Offset: 0x00296138
+	// Token: 0x06008B60 RID: 35680 RVA: 0x002A265C File Offset: 0x002A085C
 	private void OnClickConfirm()
 	{
 		Dictionary<int, string> dictionary = new Dictionary<int, string>();
@@ -380,7 +380,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		UiManager.Instance.CloseView(this.ViewInfo.Name, null);
 	}
 
-	// Token: 0x0600B778 RID: 46968 RVA: 0x0029802C File Offset: 0x0029622C
+	// Token: 0x06008B61 RID: 35681 RVA: 0x002A2750 File Offset: 0x002A0950
 	private void SetCostSelection(int filterId, bool isSelected, string content)
 	{
 		foreach (int key in FilterConfig.Instance.GetCostByMainMainProp(filterId))
@@ -402,15 +402,15 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x040052BE RID: 21182
+	// Token: 0x04005369 RID: 21353
 	[Nullable(2)]
 	private PhantomManagerConfigNewElementItem ElementItem;
 
-	// Token: 0x040052BF RID: 21183
+	// Token: 0x0400536A RID: 21354
 	[Nullable(2)]
 	private IMainPropertyFilterViewData ViewData;
 
-	// Token: 0x040052C0 RID: 21184
+	// Token: 0x0400536B RID: 21355
 	[Nullable(new byte[]
 	{
 		2,
@@ -418,7 +418,7 @@ public class PhantomMainPropertyPopupView : UiViewBase
 	})]
 	private GenericLayout<CostTabToggleGridProxy, int> CostTabLayout;
 
-	// Token: 0x040052C1 RID: 21185
+	// Token: 0x0400536C RID: 21356
 	[Nullable(new byte[]
 	{
 		2,
@@ -427,13 +427,13 @@ public class PhantomMainPropertyPopupView : UiViewBase
 	})]
 	private GenericScrollViewNew<PropertyToggleGridProxy, FilterItemData> PropertyLayout;
 
-	// Token: 0x040052C2 RID: 21186
+	// Token: 0x0400536D RID: 21357
 	private int CurrentCost = 4;
 
-	// Token: 0x040052C3 RID: 21187
+	// Token: 0x0400536E RID: 21358
 	private readonly Dictionary<int, Dictionary<int, string>> CostSelectionMap = new Dictionary<int, Dictionary<int, string>>();
 
-	// Token: 0x040052C4 RID: 21188
+	// Token: 0x0400536F RID: 21359
 	private readonly List<int> CostList = new List<int>
 	{
 		4,
@@ -441,41 +441,41 @@ public class PhantomMainPropertyPopupView : UiViewBase
 		1
 	};
 
-	// Token: 0x040052C5 RID: 21189
+	// Token: 0x04005370 RID: 21360
 	private readonly Dictionary<int, List<FilterItemData>> CostPropertyDataMap = new Dictionary<int, List<FilterItemData>>();
 
-	// Token: 0x02007E2E RID: 32302
+	// Token: 0x02006FB5 RID: 28597
 	[NullableContext(0)]
 	private class EFilterPropertyPopupComponents
 	{
-		// Token: 0x040294BB RID: 169147
+		// Token: 0x040247E8 RID: 149480
 		public const int PanelTabTogLayout = 0;
 
-		// Token: 0x040294BC RID: 169148
+		// Token: 0x040247E9 RID: 149481
 		public const int TogTopTabItemFilter = 1;
 
-		// Token: 0x040294BD RID: 169149
+		// Token: 0x040247EA RID: 149482
 		public const int UiItemFilterGridS2 = 2;
 
-		// Token: 0x040294BE RID: 169150
+		// Token: 0x040247EB RID: 149483
 		public const int TogSelectAll = 3;
 
-		// Token: 0x040294BF RID: 169151
+		// Token: 0x040247EC RID: 149484
 		public const int PropertyLayout = 4;
 
-		// Token: 0x040294C0 RID: 169152
+		// Token: 0x040247ED RID: 149485
 		public const int TogItemProperty = 5;
 
-		// Token: 0x040294C1 RID: 169153
+		// Token: 0x040247EE RID: 149486
 		public const int BtnReset = 6;
 
-		// Token: 0x040294C2 RID: 169154
+		// Token: 0x040247EF RID: 149487
 		public const int BtnConfirm = 7;
 
-		// Token: 0x040294C3 RID: 169155
+		// Token: 0x040247F0 RID: 149488
 		public const int PanelElementIcon = 8;
 
-		// Token: 0x040294C4 RID: 169156
+		// Token: 0x040247F1 RID: 149489
 		public const int TxtAll = 9;
 	}
 }

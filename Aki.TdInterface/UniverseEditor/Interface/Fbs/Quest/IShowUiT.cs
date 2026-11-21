@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200411C RID: 16668
+	// Token: 0x0200455D RID: 17757
 	public class IShowUiT
 	{
-		// Token: 0x17007609 RID: 30217
-		// (get) Token: 0x06018687 RID: 99975 RVA: 0x0038534E File Offset: 0x0038354E
-		// (set) Token: 0x06018688 RID: 99976 RVA: 0x00385356 File Offset: 0x00383556
+		// Token: 0x17007C0F RID: 31759
+		// (get) Token: 0x06019D2A RID: 105770 RVA: 0x003AF356 File Offset: 0x003AD556
+		// (set) Token: 0x06019D2B RID: 105771 RVA: 0x003AF35E File Offset: 0x003AD55E
 		public EShowUiType Type { get; set; }
 
-		// Token: 0x06018689 RID: 99977 RVA: 0x0038535F File Offset: 0x0038355F
+		// Token: 0x06019D2C RID: 105772 RVA: 0x003AF367 File Offset: 0x003AD567
 		public IShowUiT()
 		{
 			this.Type = EShowUiType.All;

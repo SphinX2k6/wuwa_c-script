@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D16 RID: 7446
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F27 RID: 7975
 	public class IPlayMapMusic : IAkEventMapType
 	{
-		// Token: 0x06009FBB RID: 40891 RVA: 0x0016CB3C File Offset: 0x0016AD3C
+		// Token: 0x0600A9A7 RID: 43431 RVA: 0x00180F60 File Offset: 0x0017F160
 		private IPlayMapMusic_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009FBC RID: 40892 RVA: 0x0016CB74 File Offset: 0x0016AD74
+		// Token: 0x0600A9A8 RID: 43432 RVA: 0x00180F98 File Offset: 0x0017F198
 		public static IPlayMapMusic Create([Nullable(2)] IPlayMapMusic instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009FBD RID: 40893 RVA: 0x0016CB87 File Offset: 0x0016AD87
+		// Token: 0x0600A9A9 RID: 43433 RVA: 0x00180FAB File Offset: 0x0017F1AB
 		public static IPlayMapMusic CreateFromSetValue([Nullable(2)] IPlayMapMusic_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009FBE RID: 40894 RVA: 0x0016CB9A File Offset: 0x0016AD9A
+		// Token: 0x0600A9AA RID: 43434 RVA: 0x00180FBE File Offset: 0x0017F1BE
 		public new IPlayMapMusic_SetValue ToSetValue()
 		{
 			return new IPlayMapMusic_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003193 RID: 12691
-		// (get) Token: 0x06009FBF RID: 40895 RVA: 0x0016CBAD File Offset: 0x0016ADAD
-		// (set) Token: 0x06009FC0 RID: 40896 RVA: 0x0016CBD8 File Offset: 0x0016ADD8
+		// Token: 0x17003427 RID: 13351
+		// (get) Token: 0x0600A9AB RID: 43435 RVA: 0x00180FD1 File Offset: 0x0017F1D1
+		// (set) Token: 0x0600A9AC RID: 43436 RVA: 0x00180FFC File Offset: 0x0017F1FC
 		public override EAkEventMap Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400605C RID: 24668
+		// Token: 0x040065D8 RID: 26072
 		[Nullable(2)]
 		protected new IPlayMapMusic FbInstance;
 
-		// Token: 0x0400605D RID: 24669
+		// Token: 0x040065D9 RID: 26073
 		[Nullable(2)]
 		protected new IPlayMapMusic_SetValue PocoInterface;
 	}

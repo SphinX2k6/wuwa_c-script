@@ -8,13 +8,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006D8 RID: 1752
+	// Token: 0x02000779 RID: 1913
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ISlashHook : IHookInteractType
 	{
-		// Token: 0x060025AE RID: 9646 RVA: 0x00065478 File Offset: 0x00063678
-		[NullableContext(1)]
+		// Token: 0x060028CE RID: 10446 RVA: 0x0006C4E8 File Offset: 0x0006A6E8
+		[NullableContext(0)]
 		private ISlashHook_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -29,8 +29,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060025AF RID: 9647 RVA: 0x000654B0 File Offset: 0x000636B0
-		[NullableContext(1)]
+		// Token: 0x060028CF RID: 10447 RVA: 0x0006C520 File Offset: 0x0006A720
+		[NullableContext(0)]
 		public static ISlashHook Create([Nullable(2)] ISlashHook instance)
 		{
 			if (instance == null)
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025B0 RID: 9648 RVA: 0x000654C3 File Offset: 0x000636C3
-		[NullableContext(1)]
+		// Token: 0x060028D0 RID: 10448 RVA: 0x0006C533 File Offset: 0x0006A733
+		[NullableContext(0)]
 		public static ISlashHook CreateFromSetValue([Nullable(2)] ISlashHook_SetValue value)
 		{
 			if (value == null)
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025B1 RID: 9649 RVA: 0x000654D8 File Offset: 0x000636D8
-		[NullableContext(1)]
+		// Token: 0x060028D1 RID: 10449 RVA: 0x0006C548 File Offset: 0x0006A748
+		[NullableContext(0)]
 		public new ISlashHook_SetValue ToSetValue()
 		{
 			return new ISlashHook_SetValue
@@ -78,9 +78,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009F2 RID: 2546
-		// (get) Token: 0x060025B2 RID: 9650 RVA: 0x0006557A File Offset: 0x0006377A
-		// (set) Token: 0x060025B3 RID: 9651 RVA: 0x000655A5 File Offset: 0x000637A5
+		// Token: 0x17000AB0 RID: 2736
+		// (get) Token: 0x060028D2 RID: 10450 RVA: 0x0006C5EA File Offset: 0x0006A7EA
+		// (set) Token: 0x060028D3 RID: 10451 RVA: 0x0006C615 File Offset: 0x0006A815
 		public override EHookInteractType Type
 		{
 			get
@@ -101,20 +101,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009F3 RID: 2547
-		// (get) Token: 0x060025B4 RID: 9652 RVA: 0x000655B4 File Offset: 0x000637B4
-		// (set) Token: 0x060025B5 RID: 9653 RVA: 0x00065647 File Offset: 0x00063847
+		// Token: 0x17000AB1 RID: 2737
+		// (get) Token: 0x060028D4 RID: 10452 RVA: 0x0006C624 File Offset: 0x0006A824
+		// (set) Token: 0x060028D5 RID: 10453 RVA: 0x0006C6B7 File Offset: 0x0006A8B7
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<Aki.TDConfigMgr.Action.ActionInfo> HookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -145,7 +145,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -154,20 +154,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009F4 RID: 2548
-		// (get) Token: 0x060025B6 RID: 9654 RVA: 0x0006565C File Offset: 0x0006385C
-		// (set) Token: 0x060025B7 RID: 9655 RVA: 0x000656EF File Offset: 0x000638EF
+		// Token: 0x17000AB2 RID: 2738
+		// (get) Token: 0x060028D6 RID: 10454 RVA: 0x0006C6CC File Offset: 0x0006A8CC
+		// (set) Token: 0x060028D7 RID: 10455 RVA: 0x0006C75F File Offset: 0x0006A95F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<Aki.TDConfigMgr.Action.ActionInfo> ExitHookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -198,7 +198,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -207,20 +207,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009F5 RID: 2549
-		// (get) Token: 0x060025B8 RID: 9656 RVA: 0x00065704 File Offset: 0x00063904
-		// (set) Token: 0x060025B9 RID: 9657 RVA: 0x00065797 File Offset: 0x00063997
+		// Token: 0x17000AB3 RID: 2739
+		// (get) Token: 0x060028D8 RID: 10456 RVA: 0x0006C774 File Offset: 0x0006A974
+		// (set) Token: 0x060028D9 RID: 10457 RVA: 0x0006C807 File Offset: 0x0006AA07
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<Aki.TDConfigMgr.Action.ActionInfo> FinishActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -251,7 +251,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -260,9 +260,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009F6 RID: 2550
-		// (get) Token: 0x060025BA RID: 9658 RVA: 0x000657AC File Offset: 0x000639AC
-		// (set) Token: 0x060025BB RID: 9659 RVA: 0x0006580D File Offset: 0x00063A0D
+		// Token: 0x17000AB4 RID: 2740
+		// (get) Token: 0x060028DA RID: 10458 RVA: 0x0006C81C File Offset: 0x0006AA1C
+		// (set) Token: 0x060028DB RID: 10459 RVA: 0x0006C87D File Offset: 0x0006AA7D
 		public override IClientHookActionConfig ClientHookActionConfig
 		{
 			get
@@ -290,9 +290,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009F7 RID: 2551
-		// (get) Token: 0x060025BC RID: 9660 RVA: 0x00065824 File Offset: 0x00063A24
-		// (set) Token: 0x060025BD RID: 9661 RVA: 0x0006585E File Offset: 0x00063A5E
+		// Token: 0x17000AB5 RID: 2741
+		// (get) Token: 0x060028DC RID: 10460 RVA: 0x0006C894 File Offset: 0x0006AA94
+		// (set) Token: 0x060028DD RID: 10461 RVA: 0x0006C8CE File Offset: 0x0006AACE
 		public virtual ESlashHitType? SlashHitType
 		{
 			get
@@ -314,9 +314,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009F8 RID: 2552
-		// (get) Token: 0x060025BE RID: 9662 RVA: 0x0006586C File Offset: 0x00063A6C
-		// (set) Token: 0x060025BF RID: 9663 RVA: 0x00065897 File Offset: 0x00063A97
+		// Token: 0x17000AB6 RID: 2742
+		// (get) Token: 0x060028DE RID: 10462 RVA: 0x0006C8DC File Offset: 0x0006AADC
+		// (set) Token: 0x060028DF RID: 10463 RVA: 0x0006C907 File Offset: 0x0006AB07
 		public virtual ESlashAngleType SlashAngleType
 		{
 			get
@@ -337,9 +337,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009F9 RID: 2553
-		// (get) Token: 0x060025C0 RID: 9664 RVA: 0x000658A8 File Offset: 0x00063AA8
-		// (set) Token: 0x060025C1 RID: 9665 RVA: 0x000658E2 File Offset: 0x00063AE2
+		// Token: 0x17000AB7 RID: 2743
+		// (get) Token: 0x060028E0 RID: 10464 RVA: 0x0006C918 File Offset: 0x0006AB18
+		// (set) Token: 0x060028E1 RID: 10465 RVA: 0x0006C952 File Offset: 0x0006AB52
 		public virtual ESlashDirType? DefaultSlashDir
 		{
 			get
@@ -361,9 +361,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009FA RID: 2554
-		// (get) Token: 0x060025C2 RID: 9666 RVA: 0x000658F0 File Offset: 0x00063AF0
-		// (set) Token: 0x060025C3 RID: 9667 RVA: 0x00065951 File Offset: 0x00063B51
+		// Token: 0x17000AB8 RID: 2744
+		// (get) Token: 0x060028E2 RID: 10466 RVA: 0x0006C960 File Offset: 0x0006AB60
+		// (set) Token: 0x060028E3 RID: 10467 RVA: 0x0006C9C1 File Offset: 0x0006ABC1
 		public virtual VectorInfo CharacterLookAt
 		{
 			get
@@ -391,9 +391,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009FB RID: 2555
-		// (get) Token: 0x060025C4 RID: 9668 RVA: 0x00065968 File Offset: 0x00063B68
-		// (set) Token: 0x060025C5 RID: 9669 RVA: 0x000659A2 File Offset: 0x00063BA2
+		// Token: 0x17000AB9 RID: 2745
+		// (get) Token: 0x060028E4 RID: 10468 RVA: 0x0006C9D8 File Offset: 0x0006ABD8
+		// (set) Token: 0x060028E5 RID: 10469 RVA: 0x0006CA12 File Offset: 0x0006AC12
 		public virtual int? CharacterLookAtPointId
 		{
 			get
@@ -415,9 +415,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009FC RID: 2556
-		// (get) Token: 0x060025C6 RID: 9670 RVA: 0x000659B0 File Offset: 0x00063BB0
-		// (set) Token: 0x060025C7 RID: 9671 RVA: 0x000659EA File Offset: 0x00063BEA
+		// Token: 0x17000ABA RID: 2746
+		// (get) Token: 0x060028E6 RID: 10470 RVA: 0x0006CA20 File Offset: 0x0006AC20
+		// (set) Token: 0x060028E7 RID: 10471 RVA: 0x0006CA5A File Offset: 0x0006AC5A
 		public virtual int? SlashBackSafePointId
 		{
 			get
@@ -439,9 +439,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009FD RID: 2557
-		// (get) Token: 0x060025C8 RID: 9672 RVA: 0x000659F8 File Offset: 0x00063BF8
-		// (set) Token: 0x060025C9 RID: 9673 RVA: 0x00065A32 File Offset: 0x00063C32
+		// Token: 0x17000ABB RID: 2747
+		// (get) Token: 0x060028E8 RID: 10472 RVA: 0x0006CA68 File Offset: 0x0006AC68
+		// (set) Token: 0x060028E9 RID: 10473 RVA: 0x0006CAA2 File Offset: 0x0006ACA2
 		public virtual bool? IsAdjustCameraConfig
 		{
 			get
@@ -463,57 +463,57 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019AC RID: 6572
+		// Token: 0x04001BAB RID: 7083
 		protected new ISlashHook FbInstance;
 
-		// Token: 0x040019AD RID: 6573
+		// Token: 0x04001BAC RID: 7084
 		protected new ISlashHook_SetValue PocoInterface;
 
-		// Token: 0x040019AE RID: 6574
+		// Token: 0x04001BAD RID: 7085
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _HookActionsCache;
 
-		// Token: 0x040019AF RID: 6575
+		// Token: 0x04001BAE RID: 7086
 		private bool _HookActionsInited;
 
-		// Token: 0x040019B0 RID: 6576
+		// Token: 0x04001BAF RID: 7087
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ExitHookActionsCache;
 
-		// Token: 0x040019B1 RID: 6577
+		// Token: 0x04001BB0 RID: 7088
 		private bool _ExitHookActionsInited;
 
-		// Token: 0x040019B2 RID: 6578
+		// Token: 0x04001BB1 RID: 7089
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _FinishActionsCache;
 
-		// Token: 0x040019B3 RID: 6579
+		// Token: 0x04001BB2 RID: 7090
 		private bool _FinishActionsInited;
 
-		// Token: 0x040019B4 RID: 6580
-		[Nullable(1)]
+		// Token: 0x04001BB3 RID: 7091
+		[Nullable(0)]
 		private IClientHookActionConfig _ClientHookActionConfigCache;
 
-		// Token: 0x040019B5 RID: 6581
+		// Token: 0x04001BB4 RID: 7092
 		private bool _ClientHookActionConfigInited;
 
-		// Token: 0x040019B6 RID: 6582
-		[Nullable(1)]
+		// Token: 0x04001BB5 RID: 7093
+		[Nullable(0)]
 		private VectorInfo _CharacterLookAtCache;
 
-		// Token: 0x040019B7 RID: 6583
+		// Token: 0x04001BB6 RID: 7094
 		private bool _CharacterLookAtInited;
 	}
 }

@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067DE RID: 26590
+	// Token: 0x02006E5E RID: 28254
 	public class IFixTeleControllerPosT
 	{
 	}

@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A80 RID: 6784
+	// Token: 0x02001C15 RID: 7189
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFlowActorUnit_SetValue
 	{
-		// Token: 0x0400599F RID: 22943
+		// Token: 0x04005E04 RID: 24068
 		public int EntityId;
 
-		// Token: 0x040059A0 RID: 22944
+		// Token: 0x04005E05 RID: 24069
 		public int TalkerId;
 
-		// Token: 0x040059A1 RID: 22945
+		// Token: 0x04005E06 RID: 24070
 		public bool IsPlayer;
 
-		// Token: 0x040059A2 RID: 22946
+		// Token: 0x04005E07 RID: 24071
 		public bool IsResetPosition;
 
-		// Token: 0x040059A3 RID: 22947
+		// Token: 0x04005E08 RID: 24072
 		public string SeqFacePath;
 
-		// Token: 0x040059A4 RID: 22948
+		// Token: 0x04005E09 RID: 24073
 		public IActorInitialState InitialState;
 
-		// Token: 0x040059A5 RID: 22949
+		// Token: 0x04005E0A RID: 24074
 		public string EdTrialCharacterTemplate;
 	}
 }

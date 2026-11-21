@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061C3 RID: 25027
+	// Token: 0x02005141 RID: 20801
 	public class ActivityRoadBookDefine : IStaticVariableResetter
 	{
-		// Token: 0x0603F398 RID: 258968 RVA: 0x00F47025 File Offset: 0x00F45225
+		// Token: 0x06034059 RID: 213081 RVA: 0x00E8DF7D File Offset: 0x00E8C17D
 		static ActivityRoadBookDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityRoadBookDefine.CreateStaticDefaultValue), new Action(ActivityRoadBookDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603F399 RID: 258969 RVA: 0x00F47044 File Offset: 0x00F45244
+		// Token: 0x0603405A RID: 213082 RVA: 0x00E8DF9C File Offset: 0x00E8C19C
 		public static void CreateStaticDefaultValue()
 		{
 			ActivityRoadBookDefine.RoadBookPhantomColorText = new Dictionary<int, string>
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F39A RID: 258970 RVA: 0x00F47097 File Offset: 0x00F45297
+		// Token: 0x0603405B RID: 213083 RVA: 0x00E8DFEF File Offset: 0x00E8C1EF
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityRoadBookDefine.RoadBookPhantomColorText = null;
 		}
 
-		// Token: 0x04020F26 RID: 134950
+		// Token: 0x0401B855 RID: 112725
 		[Nullable(1)]
 		public static Dictionary<int, string> RoadBookPhantomColorText;
 	}

@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 {
-	// Token: 0x02006ED6 RID: 28374
+	// Token: 0x02006056 RID: 24662
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DollGrabShowcaseFocusView : UiViewBase
 	{
-		// Token: 0x060451ED RID: 283117 RVA: 0x01117930 File Offset: 0x01115B30
+		// Token: 0x0603B396 RID: 242582 RVA: 0x010C16C0 File Offset: 0x010BF8C0
 		public DollGrabShowcaseFocusView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060451EE RID: 283118 RVA: 0x0111798C File Offset: 0x01115B8C
+		// Token: 0x0603B397 RID: 242583 RVA: 0x010C171C File Offset: 0x010BF91C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060451EF RID: 283119 RVA: 0x01117A38 File Offset: 0x01115C38
+		// Token: 0x0603B398 RID: 242584 RVA: 0x010C17C8 File Offset: 0x010BF9C8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DollGrabShowcaseFocusView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060451F0 RID: 283120 RVA: 0x01117A7C File Offset: 0x01115C7C
+		// Token: 0x0603B399 RID: 242585 RVA: 0x010C180C File Offset: 0x010BFA0C
 		protected override void OnStart()
 		{
 			DollItemInfo data = this.Data;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			draggable.OnPointerEndDragCallBack.Bind(new Action<ULGUIPointerEventData>(this.OnPointerEndDrag));
 		}
 
-		// Token: 0x060451F1 RID: 283121 RVA: 0x01117B18 File Offset: 0x01115D18
+		// Token: 0x0603B39A RID: 242586 RVA: 0x010C18A8 File Offset: 0x010BFAA8
 		protected override UniTask OnBeforeShowAsyncImplementImplement()
 		{
 			DollGrabShowcaseFocusView.<OnBeforeShowAsyncImplementImplement>d__13 <OnBeforeShowAsyncImplementImplement>d__;
@@ -79,19 +79,19 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060451F2 RID: 283122 RVA: 0x01117B5B File Offset: 0x01115D5B
+		// Token: 0x0603B39B RID: 242587 RVA: 0x010C18EB File Offset: 0x010BFAEB
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<float>(EEventName.NavigationTriggerRoleTurn, new Action<float>(this.OnInputUiTurn));
 		}
 
-		// Token: 0x060451F3 RID: 283123 RVA: 0x01117B79 File Offset: 0x01115D79
+		// Token: 0x0603B39C RID: 242588 RVA: 0x010C1909 File Offset: 0x010BFB09
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.NavigationTriggerRoleTurn, new Action<float>(this.OnInputUiTurn));
 		}
 
-		// Token: 0x060451F4 RID: 283124 RVA: 0x01117B97 File Offset: 0x01115D97
+		// Token: 0x0603B39D RID: 242589 RVA: 0x010C1927 File Offset: 0x010BFB27
 		protected override void OnBeforeDestroy()
 		{
 			this.StopDollIdleAnimation();
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			dollShowCaseActor.K2_SetActorRotation(this.OriginalRotation.ToUeRotator(), false);
 		}
 
-		// Token: 0x060451F5 RID: 283125 RVA: 0x01117BD4 File Offset: 0x01115DD4
+		// Token: 0x0603B39E RID: 242590 RVA: 0x010C1964 File Offset: 0x010BFB64
 		private UniTask InitCaption()
 		{
 			DollGrabShowcaseFocusView.<InitCaption>d__17 <InitCaption>d__;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			return <InitCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060451F6 RID: 283126 RVA: 0x01117C17 File Offset: 0x01115E17
+		// Token: 0x0603B39F RID: 242591 RVA: 0x010C19A7 File Offset: 0x010BFBA7
 		protected void SetArrowActive(bool isActive)
 		{
 			if (this.IsArrowActive == isActive)
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			base.GetItem(3).SetUIActive(isActive);
 		}
 
-		// Token: 0x060451F7 RID: 283127 RVA: 0x01117C44 File Offset: 0x01115E44
+		// Token: 0x0603B3A0 RID: 242592 RVA: 0x010C19D4 File Offset: 0x010BFBD4
 		protected void PlayDollIdleAnimation()
 		{
 			if (!this.Data.IsCollectComplete())
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			skeletalMesh.Play(true);
 		}
 
-		// Token: 0x060451F8 RID: 283128 RVA: 0x01117C90 File Offset: 0x01115E90
+		// Token: 0x0603B3A1 RID: 242593 RVA: 0x010C1A20 File Offset: 0x010BFC20
 		protected void StopDollIdleAnimation()
 		{
 			USkeletalMeshComponent skeletalMesh = this.Data.DollShowCaseActor.SkeletalMesh;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			skeletalMesh.SetPosition(0f, false);
 		}
 
-		// Token: 0x060451F9 RID: 283129 RVA: 0x01117CC4 File Offset: 0x01115EC4
+		// Token: 0x0603B3A2 RID: 242594 RVA: 0x010C1A54 File Offset: 0x010BFC54
 		[NullableContext(2)]
 		private void OnPointerBeginDrag(ULGUIPointerEventData eventData)
 		{
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			this.SetArrowActive(false);
 		}
 
-		// Token: 0x060451FA RID: 283130 RVA: 0x01117CF4 File Offset: 0x01115EF4
+		// Token: 0x0603B3A3 RID: 242595 RVA: 0x010C1A84 File Offset: 0x010BFC84
 		[NullableContext(2)]
 		private void OnPointerDrag(ULGUIPointerEventData eventData)
 		{
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			dollShowCaseActor.K2_SetActorRotation(this.LastRotation.ToUeRotator(), false);
 		}
 
-		// Token: 0x060451FB RID: 283131 RVA: 0x01117DA2 File Offset: 0x01115FA2
+		// Token: 0x0603B3A4 RID: 242596 RVA: 0x010C1B32 File Offset: 0x010BFD32
 		[NullableContext(2)]
 		private void OnPointerEndDrag(ULGUIPointerEventData eventData)
 		{
@@ -216,13 +216,13 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			}
 		}
 
-		// Token: 0x060451FC RID: 283132 RVA: 0x01117DAE File Offset: 0x01115FAE
+		// Token: 0x0603B3A5 RID: 242597 RVA: 0x010C1B3E File Offset: 0x010BFD3E
 		private void CloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060451FD RID: 283133 RVA: 0x01117DB8 File Offset: 0x01115FB8
+		// Token: 0x0603B3A6 RID: 242598 RVA: 0x010C1B48 File Offset: 0x010BFD48
 		private void OnInputUiTurn(float value)
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -249,33 +249,33 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			dollShowCaseActor.K2_SetActorRotation(this.LastRotation.ToUeRotator(), false);
 		}
 
-		// Token: 0x04023FD5 RID: 147413
+		// Token: 0x0401F288 RID: 127624
 		protected readonly Rotator OriginalRotation = Rotator.Create();
 
-		// Token: 0x04023FD6 RID: 147414
+		// Token: 0x0401F289 RID: 127625
 		protected readonly Rotator LastRotation = Rotator.Create();
 
-		// Token: 0x04023FD7 RID: 147415
+		// Token: 0x0401F28A RID: 127626
 		protected readonly Vector2D LastPosition = Vector2D.Create();
 
-		// Token: 0x04023FD8 RID: 147416
+		// Token: 0x0401F28B RID: 127627
 		protected readonly Vector2D CurPosition = Vector2D.Create();
 
-		// Token: 0x04023FD9 RID: 147417
+		// Token: 0x0401F28C RID: 127628
 		protected readonly Vector2D DeltaPosition = Vector2D.Create();
 
-		// Token: 0x04023FDA RID: 147418
+		// Token: 0x0401F28D RID: 127629
 		[Nullable(2)]
 		protected DollItemInfo Data;
 
-		// Token: 0x04023FDB RID: 147419
+		// Token: 0x0401F28E RID: 127630
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04023FDC RID: 147420
+		// Token: 0x0401F28F RID: 127631
 		private bool IsFirstShow = true;
 
-		// Token: 0x04023FDD RID: 147421
+		// Token: 0x0401F290 RID: 127632
 		private bool IsArrowActive = true;
 	}
 }

@@ -1,13 +1,13 @@
 ﻿using System;
 
-// Token: 0x02000F9A RID: 3994
+// Token: 0x0200044F RID: 1103
 public interface IFurnitureCameraFadeInContext
 {
-	// Token: 0x1700080E RID: 2062
-	// (get) Token: 0x06006643 RID: 26179
+	// Token: 0x17000830 RID: 2096
+	// (get) Token: 0x060039DB RID: 14811
 	float FadeInTime { get; }
 
-	// Token: 0x1700080F RID: 2063
-	// (get) Token: 0x06006644 RID: 26180
+	// Token: 0x17000831 RID: 2097
+	// (get) Token: 0x060039DC RID: 14812
 	float FadeInExp { get; }
 }

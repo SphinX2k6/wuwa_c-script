@@ -8,12 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x02004378 RID: 17272
+	// Token: 0x02003399 RID: 13209
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ConditionAttribute.BP_SM_ConditionAttribute_C")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 68)]
 	public class BP_SM_ConditionAttribute_C : UASMConditionBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CC22 RID: 183330 RVA: 0x00A27D14 File Offset: 0x00A25F14
+		// Token: 0x06021840 RID: 137280 RVA: 0x00962B68 File Offset: 0x00960D68
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SM_ConditionAttribute_C._ClassPtr == IntPtr.Zero)
@@ -23,84 +23,84 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			return BP_SM_ConditionAttribute_C._ClassPtr;
 		}
 
-		// Token: 0x0602CC23 RID: 183331 RVA: 0x00A27D38 File Offset: 0x00A25F38
+		// Token: 0x06021841 RID: 137281 RVA: 0x00962B8C File Offset: 0x00960D8C
 		public BP_SM_ConditionAttribute_C() : this(BuiltinUtils.AllocNativeUObject(BP_SM_ConditionAttribute_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CC24 RID: 183332 RVA: 0x00A27D60 File Offset: 0x00A25F60
+		// Token: 0x06021842 RID: 137282 RVA: 0x00962BB4 File Offset: 0x00960DB4
 		[NullableContext(1)]
 		public BP_SM_ConditionAttribute_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SM_ConditionAttribute_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170070B9 RID: 28857
-		// (get) Token: 0x0602CC25 RID: 183333 RVA: 0x00A27D93 File Offset: 0x00A25F93
-		// (set) Token: 0x0602CC26 RID: 183334 RVA: 0x00A27DA7 File Offset: 0x00A25FA7
+		// Token: 0x170044BB RID: 17595
+		// (get) Token: 0x06021843 RID: 137283 RVA: 0x00962BE7 File Offset: 0x00960DE7
+		// (set) Token: 0x06021844 RID: 137284 RVA: 0x00962BFB File Offset: 0x00960DFB
 		public unsafe TEnumAsByte<EAttributeType> 属性类型
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_ConditionAttribute_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_SM_ConditionAttribute_C.__PropertyOffset_属性类型);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_ConditionAttribute_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_ConditionAttribute_C.__PropertyOffset_属性类型) = value;
 			}
 		}
 
-		// Token: 0x170070BA RID: 28858
-		// (get) Token: 0x0602CC27 RID: 183335 RVA: 0x00A27DBC File Offset: 0x00A25FBC
-		// (set) Token: 0x0602CC28 RID: 183336 RVA: 0x00A27DCC File Offset: 0x00A25FCC
+		// Token: 0x170044BC RID: 17596
+		// (get) Token: 0x06021845 RID: 137285 RVA: 0x00962C10 File Offset: 0x00960E10
+		// (set) Token: 0x06021846 RID: 137286 RVA: 0x00962C20 File Offset: 0x00960E20
 		public unsafe int Min
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_ConditionAttribute_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_SM_ConditionAttribute_C.__PropertyOffset_Min);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_ConditionAttribute_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_ConditionAttribute_C.__PropertyOffset_Min) = value;
 			}
 		}
 
-		// Token: 0x170070BB RID: 28859
-		// (get) Token: 0x0602CC29 RID: 183337 RVA: 0x00A27DDD File Offset: 0x00A25FDD
-		// (set) Token: 0x0602CC2A RID: 183338 RVA: 0x00A27DED File Offset: 0x00A25FED
+		// Token: 0x170044BD RID: 17597
+		// (get) Token: 0x06021847 RID: 137287 RVA: 0x00962C31 File Offset: 0x00960E31
+		// (set) Token: 0x06021848 RID: 137288 RVA: 0x00962C41 File Offset: 0x00960E41
 		public unsafe int Max
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_ConditionAttribute_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_SM_ConditionAttribute_C.__PropertyOffset_Max);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_ConditionAttribute_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_ConditionAttribute_C.__PropertyOffset_Max) = value;
 			}
 		}
 
-		// Token: 0x0602CC2B RID: 183339 RVA: 0x00A27DFE File Offset: 0x00A25FFE
+		// Token: 0x06021849 RID: 137289 RVA: 0x00962C52 File Offset: 0x00960E52
 		protected BP_SM_ConditionAttribute_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040179B4 RID: 96692
+		// Token: 0x04012535 RID: 75061
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ConditionAttribute.BP_SM_ConditionAttribute_C";
 
-		// Token: 0x040179B5 RID: 96693
+		// Token: 0x04012536 RID: 75062
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040179B6 RID: 96694
+		// Token: 0x04012537 RID: 75063
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040179B7 RID: 96695
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012538 RID: 75064
+		internal static int __PropertyOffset_属性类型;
 
-		// Token: 0x040179B8 RID: 96696
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012539 RID: 75065
+		internal static int __PropertyOffset_Min;
 
-		// Token: 0x040179B9 RID: 96697
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401253A RID: 75066
+		internal static int __PropertyOffset_Max;
 	}
 }

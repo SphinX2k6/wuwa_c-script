@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D47 RID: 11591
+// Token: 0x020022A1 RID: 8865
 [NullableContext(2)]
 [Nullable(0)]
 public class WeeklyRogueTokenInfoPanel : UiPanelBase
 {
-	// Token: 0x060185B0 RID: 99760 RVA: 0x00633538 File Offset: 0x00631738
+	// Token: 0x06015E52 RID: 89682 RVA: 0x00659548 File Offset: 0x00657748
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class WeeklyRogueTokenInfoPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060185B1 RID: 99761 RVA: 0x00633618 File Offset: 0x00631818
+	// Token: 0x06015E53 RID: 89683 RVA: 0x00659628 File Offset: 0x00657828
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyRogueTokenInfoPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ public class WeeklyRogueTokenInfoPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060185B2 RID: 99762 RVA: 0x0063365B File Offset: 0x0063185B
+	// Token: 0x06015E54 RID: 89684 RVA: 0x0065966B File Offset: 0x0065786B
 	protected override void OnStart()
 	{
 		this.RefreshArtifact();
@@ -55,7 +55,7 @@ public class WeeklyRogueTokenInfoPanel : UiPanelBase
 		artifactGrid.OnSelected(true);
 	}
 
-	// Token: 0x060185B3 RID: 99763 RVA: 0x00633680 File Offset: 0x00631880
+	// Token: 0x06015E55 RID: 89685 RVA: 0x00659690 File Offset: 0x00657890
 	private void OnTokenSelectedChange(int tokenId, bool selectOn)
 	{
 		if (!selectOn)
@@ -65,14 +65,14 @@ public class WeeklyRogueTokenInfoPanel : UiPanelBase
 		this.RefreshSelectOn(tokenId);
 	}
 
-	// Token: 0x060185B4 RID: 99764 RVA: 0x0063368D File Offset: 0x0063188D
+	// Token: 0x06015E56 RID: 89686 RVA: 0x0065969D File Offset: 0x0065789D
 	[NullableContext(1)]
 	private bool OnCanExecuteChange(object data, bool isForceSelected, EToggleState state)
 	{
 		return (int)data > 0;
 	}
 
-	// Token: 0x060185B5 RID: 99765 RVA: 0x00633698 File Offset: 0x00631898
+	// Token: 0x06015E57 RID: 89687 RVA: 0x006596A8 File Offset: 0x006578A8
 	[NullableContext(1)]
 	private WeeklyRogueTokenInfoGrid CreateTokenItem()
 	{
@@ -82,7 +82,7 @@ public class WeeklyRogueTokenInfoPanel : UiPanelBase
 		return weeklyRogueTokenInfoGrid;
 	}
 
-	// Token: 0x060185B6 RID: 99766 RVA: 0x006336C4 File Offset: 0x006318C4
+	// Token: 0x06015E58 RID: 89688 RVA: 0x006596D4 File Offset: 0x006578D4
 	private void RefreshSelectOn(int tokenId)
 	{
 		if (this.SelectOnTokenId > 0)
@@ -173,7 +173,7 @@ public class WeeklyRogueTokenInfoPanel : UiPanelBase
 		this.SelectOnTokenId = tokenId;
 	}
 
-	// Token: 0x060185B7 RID: 99767 RVA: 0x00633818 File Offset: 0x00631A18
+	// Token: 0x06015E59 RID: 89689 RVA: 0x00659828 File Offset: 0x00657A28
 	private void RefreshArtifact()
 	{
 		int artifactBuffId = WeeklyRogueModel.Instance.GetArtifactBuffId();
@@ -185,7 +185,7 @@ public class WeeklyRogueTokenInfoPanel : UiPanelBase
 		artifactGrid.Refresh(artifactBuffId, true, 0);
 	}
 
-	// Token: 0x060185B8 RID: 99768 RVA: 0x00633844 File Offset: 0x00631A44
+	// Token: 0x06015E5A RID: 89690 RVA: 0x00659854 File Offset: 0x00657A54
 	private void RefreshCoreBuff()
 	{
 		int artifactBuffId = WeeklyRogueModel.Instance.GetArtifactBuffId();
@@ -216,7 +216,7 @@ public class WeeklyRogueTokenInfoPanel : UiPanelBase
 		coreTokenLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x060185B9 RID: 99769 RVA: 0x00633900 File Offset: 0x00631B00
+	// Token: 0x06015E5B RID: 89691 RVA: 0x00659910 File Offset: 0x00657B10
 	private void RefreshBuff()
 	{
 		List<int> buffIdListByType = WeeklyRogueModel.Instance.GetBuffIdListByType(EWeeklyRogueBuffType.Token);
@@ -238,7 +238,7 @@ public class WeeklyRogueTokenInfoPanel : UiPanelBase
 		base.GetItem(6).SetUIActive(buffIdListByType.Count == 0);
 	}
 
-	// Token: 0x0400B4C5 RID: 46277
+	// Token: 0x0400B83A RID: 47162
 	[Nullable(new byte[]
 	{
 		2,
@@ -246,10 +246,10 @@ public class WeeklyRogueTokenInfoPanel : UiPanelBase
 	})]
 	protected GenericLayout<WeeklyRogueTokenInfoGrid, int> CoreTokenLayout;
 
-	// Token: 0x0400B4C6 RID: 46278
+	// Token: 0x0400B83B RID: 47163
 	protected WeeklyRogueArtifactGrid ArtifactGrid;
 
-	// Token: 0x0400B4C7 RID: 46279
+	// Token: 0x0400B83C RID: 47164
 	[Nullable(new byte[]
 	{
 		2,
@@ -257,36 +257,36 @@ public class WeeklyRogueTokenInfoPanel : UiPanelBase
 	})]
 	protected GenericLayout<WeeklyRogueTokenInfoGrid, int> TokenLayout;
 
-	// Token: 0x0400B4C8 RID: 46280
+	// Token: 0x0400B83D RID: 47165
 	protected WeeklyRogueTokenItem TokenItem;
 
-	// Token: 0x0400B4C9 RID: 46281
+	// Token: 0x0400B83E RID: 47166
 	protected WeeklyRogueArtifactItem ArtifactItem;
 
-	// Token: 0x0400B4CA RID: 46282
+	// Token: 0x0400B83F RID: 47167
 	protected int SelectOnTokenId = -1;
 
-	// Token: 0x020092D7 RID: 37591
+	// Token: 0x020084FE RID: 34046
 	[NullableContext(0)]
 	private enum EWeeklyRogueTokenInfoPanelDefine
 	{
-		// Token: 0x0402F75D RID: 194397
+		// Token: 0x0402ADE5 RID: 175589
 		ItemArtifact,
-		// Token: 0x0402F75E RID: 194398
+		// Token: 0x0402ADE6 RID: 175590
 		TxtCoreToken,
-		// Token: 0x0402F75F RID: 194399
+		// Token: 0x0402ADE7 RID: 175591
 		CoreTokenLayout,
-		// Token: 0x0402F760 RID: 194400
+		// Token: 0x0402ADE8 RID: 175592
 		CoreTokenItem,
-		// Token: 0x0402F761 RID: 194401
+		// Token: 0x0402ADE9 RID: 175593
 		TokenLayout,
-		// Token: 0x0402F762 RID: 194402
+		// Token: 0x0402ADEA RID: 175594
 		TokenItem,
-		// Token: 0x0402F763 RID: 194403
+		// Token: 0x0402ADEB RID: 175595
 		EmptyItem,
-		// Token: 0x0402F764 RID: 194404
+		// Token: 0x0402ADEC RID: 175596
 		TokenTips,
-		// Token: 0x0402F765 RID: 194405
+		// Token: 0x0402ADED RID: 175597
 		ArtifactTips
 	}
 }

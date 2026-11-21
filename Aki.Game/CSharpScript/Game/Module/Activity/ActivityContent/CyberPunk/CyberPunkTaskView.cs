@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -13,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068BD RID: 26813
+	// Token: 0x0200580D RID: 22541
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CyberPunkTaskView : UiViewBase
 	{
-		// Token: 0x06042E81 RID: 274049 RVA: 0x0104A425 File Offset: 0x01048625
+		// Token: 0x060379D9 RID: 227801 RVA: 0x00F8BA4D File Offset: 0x00F89C4D
 		public CyberPunkTaskView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06042E82 RID: 274050 RVA: 0x0104A43C File Offset: 0x0104863C
+		// Token: 0x060379DA RID: 227802 RVA: 0x00F8BA64 File Offset: 0x00F89C64
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -56,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042E83 RID: 274051 RVA: 0x0104A5A8 File Offset: 0x010487A8
+		// Token: 0x060379DB RID: 227803 RVA: 0x00F8BBD0 File Offset: 0x00F89DD0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CyberPunkTaskView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -67,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042E84 RID: 274052 RVA: 0x0104A5EC File Offset: 0x010487EC
+		// Token: 0x060379DC RID: 227804 RVA: 0x00F8BC14 File Offset: 0x00F89E14
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnCyberPunkTaskRefresh, new Action(this.OnCyberPunkTaskRefresh));
@@ -75,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			ActivityController.Instance.RegisterRefreshTimerDelegate(new Action<float>(this.OnTimerRefresh));
 		}
 
-		// Token: 0x06042E85 RID: 274053 RVA: 0x0104A648 File Offset: 0x01048848
+		// Token: 0x060379DD RID: 227805 RVA: 0x00F8BC70 File Offset: 0x00F89E70
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCyberPunkTaskRefresh, new Action(this.OnCyberPunkTaskRefresh));
@@ -83,13 +82,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			ActivityController.Instance.UnregisterRefreshTimerDelegate(new Action<float>(this.OnTimerRefresh));
 		}
 
-		// Token: 0x06042E86 RID: 274054 RVA: 0x0104A6A3 File Offset: 0x010488A3
+		// Token: 0x060379DE RID: 227806 RVA: 0x00F8BCCB File Offset: 0x00F89ECB
 		private void OnTimerRefresh(float delta)
 		{
 			this.RefreshTimerText();
 		}
 
-		// Token: 0x06042E87 RID: 274055 RVA: 0x0104A6AB File Offset: 0x010488AB
+		// Token: 0x060379DF RID: 227807 RVA: 0x00F8BCD3 File Offset: 0x00F89ED3
 		protected override void OnBeforeShow()
 		{
 			if (this.TabDataList.Count > 0)
@@ -98,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E88 RID: 274056 RVA: 0x0104A6C4 File Offset: 0x010488C4
+		// Token: 0x060379E0 RID: 227808 RVA: 0x00F8BCEC File Offset: 0x00F89EEC
 		private void OnCyberPunkTaskRefresh()
 		{
 			if (this.TabDataList.Count == 0)
@@ -117,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshSliderItem();
 		}
 
-		// Token: 0x06042E89 RID: 274057 RVA: 0x0104A718 File Offset: 0x01048918
+		// Token: 0x060379E1 RID: 227809 RVA: 0x00F8BD40 File Offset: 0x00F89F40
 		private void OnRefreshRedDot(int activityId)
 		{
 			CyberPunkData currentActivityData = CyberPunkController.Instance.GetCurrentActivityData();
@@ -127,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E8A RID: 274058 RVA: 0x0104A744 File Offset: 0x01048944
+		// Token: 0x060379E2 RID: 227810 RVA: 0x00F8BD6C File Offset: 0x00F89F6C
 		private void OnClickTabItem(int tabId, CyberPunkTaskTabItem tabItem)
 		{
 			CyberPunkTaskTabItem selectTabItem = this.SelectTabItem;
@@ -137,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 			this.SelectTabItem = tabItem;
 			this.SelectTabItem.SetSelected(true, false);
-			CyberPunkTaskTabData cyberPunkTaskTabData = this.TabDataList.FirstOrDefault((CyberPunkTaskTabData t) => t.TabId == tabId);
+			CyberPunkTaskTabData cyberPunkTaskTabData = this.TabDataList.Find((CyberPunkTaskTabData t) => t.TabId == tabId);
 			if (cyberPunkTaskTabData == null)
 			{
 				return;
@@ -151,19 +150,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshTaskList(cyberPunkTaskTabData, true);
 		}
 
-		// Token: 0x06042E8B RID: 274059 RVA: 0x0104A7C7 File Offset: 0x010489C7
+		// Token: 0x060379E3 RID: 227811 RVA: 0x00F8BDEF File Offset: 0x00F89FEF
 		private void OnClaimSliderReward(int scoreId)
 		{
 			CyberPunkController.Instance.RequestScoreReward(scoreId, null);
 		}
 
-		// Token: 0x06042E8C RID: 274060 RVA: 0x0104A7D5 File Offset: 0x010489D5
+		// Token: 0x060379E4 RID: 227812 RVA: 0x00F8BDFD File Offset: 0x00F89FFD
 		private void OnClickBack()
 		{
 			UiManager.Instance.CloseView(EUiViewName.CyberPunkTaskView, null);
 		}
 
-		// Token: 0x06042E8D RID: 274061 RVA: 0x0104A7E8 File Offset: 0x010489E8
+		// Token: 0x060379E5 RID: 227813 RVA: 0x00F8BE10 File Offset: 0x00F8A010
 		private void OnClickLook()
 		{
 			if (this.SliderItem == null)
@@ -173,11 +172,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			int currentItemId = this.SliderItem.GetCurrentItemId();
 			if (currentItemId > 0)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(currentItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(currentItemId, true, null, false);
 			}
 		}
 
-		// Token: 0x06042E8E RID: 274062 RVA: 0x0104A81C File Offset: 0x01048A1C
+		// Token: 0x060379E6 RID: 227814 RVA: 0x00F8BE44 File Offset: 0x00F8A044
 		private UniTask InitTopItem()
 		{
 			CyberPunkTaskView.<InitTopItem>d__22 <InitTopItem>d__;
@@ -188,14 +187,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <InitTopItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042E8F RID: 274063 RVA: 0x0104A860 File Offset: 0x01048A60
+		// Token: 0x060379E7 RID: 227815 RVA: 0x00F8BE88 File Offset: 0x00F8A088
 		private void InitTabLayout()
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(1);
 			this.TabLayout = new GenericLayout<CyberPunkTaskTabItem, CyberPunkTaskTabData>(verticalLayout, new Func<CyberPunkTaskTabItem>(this.OnCreateTabItem), null, false, true);
 		}
 
-		// Token: 0x06042E90 RID: 274064 RVA: 0x0104A890 File Offset: 0x01048A90
+		// Token: 0x060379E8 RID: 227816 RVA: 0x00F8BEB8 File Offset: 0x00F8A0B8
 		private void InitTaskScroll()
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(5);
@@ -204,7 +203,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.TaskScrollAnimController = (((content != null) ? content.GetComponentByClass(UUIInturnAnimController.StaticClass()) : null) as UUIInturnAnimController);
 		}
 
-		// Token: 0x06042E91 RID: 274065 RVA: 0x0104A8E8 File Offset: 0x01048AE8
+		// Token: 0x060379E9 RID: 227817 RVA: 0x00F8BF10 File Offset: 0x00F8A110
 		private UniTask InitSliderItem()
 		{
 			CyberPunkTaskView.<InitSliderItem>d__25 <InitSliderItem>d__;
@@ -215,7 +214,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <InitSliderItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042E92 RID: 274066 RVA: 0x0104A92B File Offset: 0x01048B2B
+		// Token: 0x060379EA RID: 227818 RVA: 0x00F8BF53 File Offset: 0x00F8A153
 		private CyberPunkTaskTabItem OnCreateTabItem()
 		{
 			return new CyberPunkTaskTabItem
@@ -224,13 +223,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x06042E93 RID: 274067 RVA: 0x0104A944 File Offset: 0x01048B44
+		// Token: 0x060379EB RID: 227819 RVA: 0x00F8BF6C File Offset: 0x00F8A16C
 		private CyberPunkTaskScrollItem OnCreateTaskItem()
 		{
 			return new CyberPunkTaskScrollItem();
 		}
 
-		// Token: 0x06042E94 RID: 274068 RVA: 0x0104A94C File Offset: 0x01048B4C
+		// Token: 0x060379EC RID: 227820 RVA: 0x00F8BF74 File Offset: 0x00F8A174
 		private void InitTabData()
 		{
 			CyberPunkData currentActivityData = CyberPunkController.Instance.GetCurrentActivityData();
@@ -241,7 +240,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.TabDataList = currentActivityData.GetCyberPunkTaskTabDataList();
 		}
 
-		// Token: 0x06042E95 RID: 274069 RVA: 0x0104A974 File Offset: 0x01048B74
+		// Token: 0x060379ED RID: 227821 RVA: 0x00F8BF9C File Offset: 0x00F8A19C
 		private void RefreshView()
 		{
 			if (this.TabDataList.Count == 0)
@@ -259,7 +258,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshTimerText();
 		}
 
-		// Token: 0x06042E96 RID: 274070 RVA: 0x0104A9B0 File Offset: 0x01048BB0
+		// Token: 0x060379EE RID: 227822 RVA: 0x00F8BFD8 File Offset: 0x00F8A1D8
 		private void InitializeSelectedTab()
 		{
 			if (this.TabDataList.Count == 0)
@@ -298,7 +297,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshTaskList(tabData, false);
 		}
 
-		// Token: 0x06042E97 RID: 274071 RVA: 0x0104AA88 File Offset: 0x01048C88
+		// Token: 0x060379EF RID: 227823 RVA: 0x00F8C0B0 File Offset: 0x00F8A2B0
 		private void RefreshTaskList(CyberPunkTaskTabData tabData, bool resetScroll = false)
 		{
 			CyberPunkData currentActivityData = CyberPunkController.Instance.GetCurrentActivityData();
@@ -332,7 +331,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E98 RID: 274072 RVA: 0x0104AAFC File Offset: 0x01048CFC
+		// Token: 0x060379F0 RID: 227824 RVA: 0x00F8C124 File Offset: 0x00F8A324
 		private void ResetTaskScrollState()
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(5);
@@ -349,7 +348,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E99 RID: 274073 RVA: 0x0104AB70 File Offset: 0x01048D70
+		// Token: 0x060379F1 RID: 227825 RVA: 0x00F8C198 File Offset: 0x00F8A398
 		private void PlayTaskScrollInturnAnimation()
 		{
 			UUIInturnAnimController taskScrollAnimController = this.TaskScrollAnimController;
@@ -360,7 +359,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			taskScrollAnimController.Play("", -1, false);
 		}
 
-		// Token: 0x06042E9A RID: 274074 RVA: 0x0104AB8C File Offset: 0x01048D8C
+		// Token: 0x060379F2 RID: 227826 RVA: 0x00F8C1B4 File Offset: 0x00F8A3B4
 		private void RefreshSliderItem()
 		{
 			if (this.SliderItem == null)
@@ -381,7 +380,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.SliderItem.Refresh(cyberPunkTaskData, false, 0);
 		}
 
-		// Token: 0x06042E9B RID: 274075 RVA: 0x0104ABFC File Offset: 0x01048DFC
+		// Token: 0x060379F3 RID: 227827 RVA: 0x00F8C224 File Offset: 0x00F8A424
 		private void RefreshTimerText()
 		{
 			CyberPunkData currentActivityData = CyberPunkController.Instance.GetCurrentActivityData();
@@ -423,7 +422,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E9C RID: 274076 RVA: 0x0104AC78 File Offset: 0x01048E78
+		// Token: 0x060379F4 RID: 227828 RVA: 0x00F8C2A0 File Offset: 0x00F8A4A0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -458,11 +457,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x04022CF8 RID: 142584
+		// Token: 0x0401D554 RID: 120148
 		[Nullable(2)]
 		private CyberPunkTaskTopItem TopItem;
 
-		// Token: 0x04022CF9 RID: 142585
+		// Token: 0x0401D555 RID: 120149
 		[Nullable(new byte[]
 		{
 			2,
@@ -471,7 +470,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 		})]
 		private GenericLayout<CyberPunkTaskTabItem, CyberPunkTaskTabData> TabLayout;
 
-		// Token: 0x04022CFA RID: 142586
+		// Token: 0x0401D556 RID: 120150
 		[Nullable(new byte[]
 		{
 			2,
@@ -480,50 +479,50 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 		})]
 		private GenericScrollViewNew<CyberPunkTaskScrollItem, CyberPunkTaskData> TaskScroll;
 
-		// Token: 0x04022CFB RID: 142587
+		// Token: 0x0401D557 RID: 120151
 		[Nullable(2)]
 		private UUIInturnAnimController TaskScrollAnimController;
 
-		// Token: 0x04022CFC RID: 142588
+		// Token: 0x0401D558 RID: 120152
 		[Nullable(2)]
 		private CyberPunkTaskSliderItem SliderItem;
 
-		// Token: 0x04022CFD RID: 142589
+		// Token: 0x0401D559 RID: 120153
 		private int SelectedTabIndex;
 
-		// Token: 0x04022CFE RID: 142590
+		// Token: 0x0401D55A RID: 120154
 		[Nullable(2)]
 		private CyberPunkTaskTabItem SelectTabItem;
 
-		// Token: 0x04022CFF RID: 142591
+		// Token: 0x0401D55B RID: 120155
 		private List<CyberPunkTaskTabData> TabDataList = new List<CyberPunkTaskTabData>();
 
-		// Token: 0x0200CA8E RID: 51854
+		// Token: 0x0200B456 RID: 46166
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x0403D398 RID: 250776
+			// Token: 0x04037C72 RID: 228466
 			public const int UiItemCaption = 0;
 
-			// Token: 0x0403D399 RID: 250777
+			// Token: 0x04037C73 RID: 228467
 			public const int TabLayout = 1;
 
-			// Token: 0x0403D39A RID: 250778
+			// Token: 0x04037C74 RID: 228468
 			public const int TogTab = 2;
 
-			// Token: 0x0403D39B RID: 250779
+			// Token: 0x04037C75 RID: 228469
 			public const int BtnLook = 3;
 
-			// Token: 0x0403D39C RID: 250780
+			// Token: 0x04037C76 RID: 228470
 			public const int TxtRemainTime = 4;
 
-			// Token: 0x0403D39D RID: 250781
+			// Token: 0x04037C77 RID: 228471
 			public const int ScrollLayout = 5;
 
-			// Token: 0x0403D39E RID: 250782
+			// Token: 0x04037C78 RID: 228472
 			public const int ScrollItem = 6;
 
-			// Token: 0x0403D39F RID: 250783
+			// Token: 0x04037C79 RID: 228473
 			public const int DownRewardLayout = 7;
 		}
 	}

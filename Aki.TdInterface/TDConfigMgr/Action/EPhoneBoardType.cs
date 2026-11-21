@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200166D RID: 5741
+	// Token: 0x020017DF RID: 6111
 	[EnumExtensions]
 	public enum EPhoneBoardType
 	{
-		// Token: 0x04004CE3 RID: 19683
+		// Token: 0x040050E5 RID: 20709
 		MessageBoard
 	}
 }

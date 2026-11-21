@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B47 RID: 15175
+	// Token: 0x02003F49 RID: 16201
 	public struct StringValue : IFlatbufferObject
 	{
-		// Token: 0x17006818 RID: 26648
-		// (get) Token: 0x06014BE5 RID: 84965 RVA: 0x00303F04 File Offset: 0x00302104
+		// Token: 0x17006DB3 RID: 28083
+		// (get) Token: 0x0601608F RID: 90255 RVA: 0x0032A194 File Offset: 0x00328394
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014BE6 RID: 84966 RVA: 0x00303F11 File Offset: 0x00302111
+		// Token: 0x06016090 RID: 90256 RVA: 0x0032A1A1 File Offset: 0x003283A1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014BE7 RID: 84967 RVA: 0x00303F18 File Offset: 0x00302118
+		// Token: 0x06016091 RID: 90257 RVA: 0x0032A1A8 File Offset: 0x003283A8
 		public static StringValue GetRootAsStringValue(ByteBuffer _bb)
 		{
 			return StringValue.GetRootAsStringValue(_bb, default(StringValue));
 		}
 
-		// Token: 0x06014BE8 RID: 84968 RVA: 0x00303F34 File Offset: 0x00302134
+		// Token: 0x06016092 RID: 90258 RVA: 0x0032A1C4 File Offset: 0x003283C4
 		public static StringValue GetRootAsStringValue(ByteBuffer _bb, StringValue obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014BE9 RID: 84969 RVA: 0x00303F51 File Offset: 0x00302151
+		// Token: 0x06016093 RID: 90259 RVA: 0x0032A1E1 File Offset: 0x003283E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014BEA RID: 84970 RVA: 0x00303F60 File Offset: 0x00302160
+		// Token: 0x06016094 RID: 90260 RVA: 0x0032A1F0 File Offset: 0x003283F0
 		public StringValue __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006819 RID: 26649
-		// (get) Token: 0x06014BEB RID: 84971 RVA: 0x00303F70 File Offset: 0x00302170
+		// Token: 0x17006DB4 RID: 28084
+		// (get) Token: 0x06016095 RID: 90261 RVA: 0x0032A200 File Offset: 0x00328400
 		public string Value
 		{
 			get
@@ -62,19 +62,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014BEC RID: 84972 RVA: 0x00303FA7 File Offset: 0x003021A7
+		// Token: 0x06016096 RID: 90262 RVA: 0x0032A237 File Offset: 0x00328437
 		public Span<byte> GetValueBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06014BED RID: 84973 RVA: 0x00303FB6 File Offset: 0x003021B6
+		// Token: 0x06016097 RID: 90263 RVA: 0x0032A246 File Offset: 0x00328446
 		public byte[] GetValueArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x06014BEE RID: 84974 RVA: 0x00303FC4 File Offset: 0x003021C4
+		// Token: 0x06016098 RID: 90264 RVA: 0x0032A254 File Offset: 0x00328454
 		public static Offset<StringValue> CreateStringValue(FlatBufferBuilder builder, StringOffset valueOffset = default(StringOffset))
 		{
 			builder.StartTable(1);
@@ -82,25 +82,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return StringValue.EndStringValue(builder);
 		}
 
-		// Token: 0x06014BEF RID: 84975 RVA: 0x00303FDA File Offset: 0x003021DA
+		// Token: 0x06016099 RID: 90265 RVA: 0x0032A26A File Offset: 0x0032846A
 		public static void StartStringValue(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06014BF0 RID: 84976 RVA: 0x00303FE3 File Offset: 0x003021E3
+		// Token: 0x0601609A RID: 90266 RVA: 0x0032A273 File Offset: 0x00328473
 		public static void AddValue(FlatBufferBuilder builder, StringOffset valueOffset)
 		{
 			builder.AddOffset(0, valueOffset.Value, 0);
 		}
 
-		// Token: 0x06014BF1 RID: 84977 RVA: 0x00303FF3 File Offset: 0x003021F3
+		// Token: 0x0601609B RID: 90267 RVA: 0x0032A283 File Offset: 0x00328483
 		public static Offset<StringValue> EndStringValue(FlatBufferBuilder builder)
 		{
 			return new Offset<StringValue>(builder.EndTable());
 		}
 
-		// Token: 0x06014BF2 RID: 84978 RVA: 0x00304000 File Offset: 0x00302200
+		// Token: 0x0601609C RID: 90268 RVA: 0x0032A290 File Offset: 0x00328490
 		public StringValueT UnPack()
 		{
 			StringValueT stringValueT = new StringValueT();
@@ -108,13 +108,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return stringValueT;
 		}
 
-		// Token: 0x06014BF3 RID: 84979 RVA: 0x0030401B File Offset: 0x0030221B
+		// Token: 0x0601609D RID: 90269 RVA: 0x0032A2AB File Offset: 0x003284AB
 		public void UnPackTo(StringValueT _o)
 		{
 			_o.Value = this.Value;
 		}
 
-		// Token: 0x06014BF4 RID: 84980 RVA: 0x0030402C File Offset: 0x0030222C
+		// Token: 0x0601609E RID: 90270 RVA: 0x0032A2BC File Offset: 0x003284BC
 		public static Offset<StringValue> Pack(FlatBufferBuilder builder, StringValueT _o)
 		{
 			if (_o == null)
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return StringValue.CreateStringValue(builder, valueOffset);
 		}
 
-		// Token: 0x0400B028 RID: 45096
+		// Token: 0x0400B995 RID: 47509
 		private Table __p;
 	}
 }

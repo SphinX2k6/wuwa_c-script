@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CommonH5
 {
-	// Token: 0x020068F6 RID: 26870
+	// Token: 0x02005846 RID: 22598
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CommonH5SubView : ActivitySubViewBase
 	{
-		// Token: 0x06043040 RID: 274496 RVA: 0x01052A50 File Offset: 0x01050C50
+		// Token: 0x06037B98 RID: 228248 RVA: 0x00F94078 File Offset: 0x00F92278
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CommonH5
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06043041 RID: 274497 RVA: 0x01052ABC File Offset: 0x01050CBC
+		// Token: 0x06037B99 RID: 228249 RVA: 0x00F940E4 File Offset: 0x00F922E4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CommonH5SubView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CommonH5
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043042 RID: 274498 RVA: 0x01052B00 File Offset: 0x01050D00
+		// Token: 0x06037B9A RID: 228250 RVA: 0x00F94128 File Offset: 0x00F92328
 		protected override void OnBeforeShow()
 		{
 			this.RefreshRedDot();
@@ -48,32 +48,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CommonH5
 			this.UiSequencePlayer.PlaySequenceAsync("Start", new CustomPromise<bool>(), false, false, null).Forget();
 		}
 
-		// Token: 0x06043043 RID: 274499 RVA: 0x01052B4D File Offset: 0x01050D4D
+		// Token: 0x06037B9B RID: 228251 RVA: 0x00F94175 File Offset: 0x00F92375
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RefreshCommonH5ActivityRedDot, new Action(this.OnDataUpdate));
 		}
 
-		// Token: 0x06043044 RID: 274500 RVA: 0x01052B6B File Offset: 0x01050D6B
+		// Token: 0x06037B9C RID: 228252 RVA: 0x00F94193 File Offset: 0x00F92393
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonH5ActivityRedDot, new Action(this.OnDataUpdate));
 		}
 
-		// Token: 0x06043045 RID: 274501 RVA: 0x01052B89 File Offset: 0x01050D89
+		// Token: 0x06037B9D RID: 228253 RVA: 0x00F941B1 File Offset: 0x00F923B1
 		private void OnDataUpdate()
 		{
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x06043046 RID: 274502 RVA: 0x01052B94 File Offset: 0x01050D94
+		// Token: 0x06037B9E RID: 228254 RVA: 0x00F941BC File Offset: 0x00F923BC
 		private void RefreshRedDot()
 		{
 			bool redPointShowState = (this.ActivityBaseData as CommonH5Data).RedPointShowState;
 			this.CommonInfoPanel.SetFunctionRedDotVisible(redPointShowState);
 		}
 
-		// Token: 0x06043047 RID: 274503 RVA: 0x01052BBE File Offset: 0x01050DBE
+		// Token: 0x06037B9F RID: 228255 RVA: 0x00F941E6 File Offset: 0x00F923E6
 		private void ClickCommonInfo(ActivityBaseData _)
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -83,16 +83,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CommonH5
 			});
 		}
 
-		// Token: 0x06043048 RID: 274504 RVA: 0x01052BDC File Offset: 0x01050DDC
+		// Token: 0x06037BA0 RID: 228256 RVA: 0x00F94204 File Offset: 0x00F92404
 		private bool ShowReceivedCallBack(TItem _)
 		{
 			return (this.ActivityBaseData as CommonH5Data).GetRewardClaimState();
 		}
 
-		// Token: 0x04022E35 RID: 142901
+		// Token: 0x0401D691 RID: 120465
 		protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-		// Token: 0x04022E36 RID: 142902
+		// Token: 0x0401D692 RID: 120466
 		private UiSequencePlayer UiSequencePlayer;
 	}
 }

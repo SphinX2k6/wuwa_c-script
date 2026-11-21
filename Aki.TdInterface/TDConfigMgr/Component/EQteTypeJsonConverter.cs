@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009E7 RID: 2535
+	// Token: 0x02000AAC RID: 2732
 	public class EQteTypeJsonConverter : JsonConverter<EQteType>
 	{
-		// Token: 0x06003842 RID: 14402 RVA: 0x00091D08 File Offset: 0x0008FF08
+		// Token: 0x06003C1A RID: 15386 RVA: 0x0009A5C8 File Offset: 0x000987C8
 		public override EQteType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EQteTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003843 RID: 14403 RVA: 0x00091D2C File Offset: 0x0008FF2C
+		// Token: 0x06003C1B RID: 15387 RVA: 0x0009A5EC File Offset: 0x000987EC
 		public override void Write(Utf8JsonWriter writer, EQteType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

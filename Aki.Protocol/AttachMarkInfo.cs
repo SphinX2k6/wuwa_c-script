@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000121 RID: 289
+	// Token: 0x02000123 RID: 291
 	public sealed class AttachMarkInfo : IMessage<AttachMarkInfo>, IMessage, IEquatable<AttachMarkInfo>, IDeepCloneable<AttachMarkInfo>, IBufferMessage
 	{
-		// Token: 0x060026FF RID: 9983 RVA: 0x000677C5 File Offset: 0x000659C5
+		// Token: 0x0600275E RID: 10078 RVA: 0x000687E9 File Offset: 0x000669E9
 		[NullableContext(1)]
 		public static AttachMarkInfo Create()
 		{
 			return new AttachMarkInfo();
 		}
 
-		// Token: 0x17000584 RID: 1412
-		// (get) Token: 0x06002700 RID: 9984 RVA: 0x000677CC File Offset: 0x000659CC
+		// Token: 0x17000592 RID: 1426
+		// (get) Token: 0x0600275F RID: 10079 RVA: 0x000687F0 File Offset: 0x000669F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000585 RID: 1413
-		// (get) Token: 0x06002701 RID: 9985 RVA: 0x000677CF File Offset: 0x000659CF
+		// Token: 0x17000593 RID: 1427
+		// (get) Token: 0x06002760 RID: 10080 RVA: 0x000687F3 File Offset: 0x000669F3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002702 RID: 9986 RVA: 0x000677D6 File Offset: 0x000659D6
+		// Token: 0x06002761 RID: 10081 RVA: 0x000687FA File Offset: 0x000669FA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AttachMarkInfo()
 		{
 		}
 
-		// Token: 0x06002703 RID: 9987 RVA: 0x000677E9 File Offset: 0x000659E9
+		// Token: 0x06002762 RID: 10082 RVA: 0x0006880D File Offset: 0x00066A0D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AttachMarkInfo(AttachMarkInfo other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06002704 RID: 9988 RVA: 0x00067813 File Offset: 0x00065A13
+		// Token: 0x06002763 RID: 10083 RVA: 0x00068837 File Offset: 0x00066A37
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AttachMarkInfo Clone()
@@ -66,8 +66,8 @@ namespace Aki.Protocol
 			return new AttachMarkInfo(this);
 		}
 
-		// Token: 0x17000586 RID: 1414
-		// (get) Token: 0x06002705 RID: 9989 RVA: 0x0006781B File Offset: 0x00065A1B
+		// Token: 0x17000594 RID: 1428
+		// (get) Token: 0x06002764 RID: 10084 RVA: 0x0006883F File Offset: 0x00066A3F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<MarkPointInfo> MarkPointInfo
@@ -78,7 +78,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002706 RID: 9990 RVA: 0x00067823 File Offset: 0x00065A23
+		// Token: 0x06002765 RID: 10085 RVA: 0x00068847 File Offset: 0x00066A47
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -86,7 +86,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AttachMarkInfo);
 		}
 
-		// Token: 0x06002707 RID: 9991 RVA: 0x00067831 File Offset: 0x00065A31
+		// Token: 0x06002766 RID: 10086 RVA: 0x00068855 File Offset: 0x00066A55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AttachMarkInfo other)
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.markPointInfo_.Equals(other.markPointInfo_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06002708 RID: 9992 RVA: 0x00067864 File Offset: 0x00065A64
+		// Token: 0x06002767 RID: 10087 RVA: 0x00068888 File Offset: 0x00066A88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002709 RID: 9993 RVA: 0x00067898 File Offset: 0x00065A98
+		// Token: 0x06002768 RID: 10088 RVA: 0x000688BC File Offset: 0x00066ABC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600270A RID: 9994 RVA: 0x000678A5 File Offset: 0x00065AA5
+		// Token: 0x06002769 RID: 10089 RVA: 0x000688C9 File Offset: 0x00066AC9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600270B RID: 9995 RVA: 0x000678AE File Offset: 0x00065AAE
+		// Token: 0x0600276A RID: 10090 RVA: 0x000688D2 File Offset: 0x00066AD2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600270C RID: 9996 RVA: 0x000678D8 File Offset: 0x00065AD8
+		// Token: 0x0600276B RID: 10091 RVA: 0x000688FC File Offset: 0x00066AFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600270D RID: 9997 RVA: 0x00067911 File Offset: 0x00065B11
+		// Token: 0x0600276C RID: 10092 RVA: 0x00068935 File Offset: 0x00066B35
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AttachMarkInfo other)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600270E RID: 9998 RVA: 0x0006793F File Offset: 0x00065B3F
+		// Token: 0x0600276D RID: 10093 RVA: 0x00068963 File Offset: 0x00066B63
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600270F RID: 9999 RVA: 0x00067948 File Offset: 0x00065B48
+		// Token: 0x0600276E RID: 10094 RVA: 0x0006896C File Offset: 0x00066B6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -194,16 +194,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002643 RID: 9795
+		// Token: 0x040026AE RID: 9902
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002644 RID: 9796
+		// Token: 0x040026AF RID: 9903
 		public const int MarkPointInfoFieldNumber = 1;
 
-		// Token: 0x04002645 RID: 9797
+		// Token: 0x040026B0 RID: 9904
 		private static readonly FieldCodec<MarkPointInfo> _repeated_markPointInfo_codec = FieldCodec.ForMessage<MarkPointInfo>(10U, Aki.Protocol.MarkPointInfo.Parser);
 
-		// Token: 0x04002646 RID: 9798
+		// Token: 0x040026B1 RID: 9905
 		private readonly RepeatedField<MarkPointInfo> markPointInfo_ = new RepeatedField<MarkPointInfo>();
 	}
 }

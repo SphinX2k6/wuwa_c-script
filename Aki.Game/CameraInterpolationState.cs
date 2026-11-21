@@ -2,74 +2,74 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Gameplay.RhythmGame;
 
-// Token: 0x0200107E RID: 4222
+// Token: 0x02000532 RID: 1330
 [NullableContext(1)]
 [Nullable(0)]
 internal class CameraInterpolationState : ICameraInterpolationState
 {
-	// Token: 0x170008E5 RID: 2277
-	// (get) Token: 0x06006D29 RID: 27945 RVA: 0x00161373 File Offset: 0x0015F573
-	// (set) Token: 0x06006D2A RID: 27946 RVA: 0x0016137B File Offset: 0x0015F57B
+	// Token: 0x17000905 RID: 2309
+	// (get) Token: 0x060040BE RID: 16574 RVA: 0x00169CA7 File Offset: 0x00167EA7
+	// (set) Token: 0x060040BF RID: 16575 RVA: 0x00169CAF File Offset: 0x00167EAF
 	public Vector StartPos { get; set; } = Vector.Create();
 
-	// Token: 0x170008E6 RID: 2278
-	// (get) Token: 0x06006D2B RID: 27947 RVA: 0x00161384 File Offset: 0x0015F584
-	// (set) Token: 0x06006D2C RID: 27948 RVA: 0x0016138C File Offset: 0x0015F58C
+	// Token: 0x17000906 RID: 2310
+	// (get) Token: 0x060040C0 RID: 16576 RVA: 0x00169CB8 File Offset: 0x00167EB8
+	// (set) Token: 0x060040C1 RID: 16577 RVA: 0x00169CC0 File Offset: 0x00167EC0
 	public Rotator StartRot { get; set; } = Rotator.Create();
 
-	// Token: 0x170008E7 RID: 2279
-	// (get) Token: 0x06006D2D RID: 27949 RVA: 0x00161395 File Offset: 0x0015F595
-	// (set) Token: 0x06006D2E RID: 27950 RVA: 0x0016139D File Offset: 0x0015F59D
+	// Token: 0x17000907 RID: 2311
+	// (get) Token: 0x060040C2 RID: 16578 RVA: 0x00169CC9 File Offset: 0x00167EC9
+	// (set) Token: 0x060040C3 RID: 16579 RVA: 0x00169CD1 File Offset: 0x00167ED1
 	public float StartFov { get; set; }
 
-	// Token: 0x170008E8 RID: 2280
-	// (get) Token: 0x06006D2F RID: 27951 RVA: 0x001613A6 File Offset: 0x0015F5A6
-	// (set) Token: 0x06006D30 RID: 27952 RVA: 0x001613AE File Offset: 0x0015F5AE
+	// Token: 0x17000908 RID: 2312
+	// (get) Token: 0x060040C4 RID: 16580 RVA: 0x00169CDA File Offset: 0x00167EDA
+	// (set) Token: 0x060040C5 RID: 16581 RVA: 0x00169CE2 File Offset: 0x00167EE2
 	public Vector TargetPos { get; set; } = Vector.Create();
 
-	// Token: 0x170008E9 RID: 2281
-	// (get) Token: 0x06006D31 RID: 27953 RVA: 0x001613B7 File Offset: 0x0015F5B7
-	// (set) Token: 0x06006D32 RID: 27954 RVA: 0x001613BF File Offset: 0x0015F5BF
+	// Token: 0x17000909 RID: 2313
+	// (get) Token: 0x060040C6 RID: 16582 RVA: 0x00169CEB File Offset: 0x00167EEB
+	// (set) Token: 0x060040C7 RID: 16583 RVA: 0x00169CF3 File Offset: 0x00167EF3
 	public Rotator TargetRot { get; set; } = Rotator.Create();
 
-	// Token: 0x170008EA RID: 2282
-	// (get) Token: 0x06006D33 RID: 27955 RVA: 0x001613C8 File Offset: 0x0015F5C8
-	// (set) Token: 0x06006D34 RID: 27956 RVA: 0x001613D0 File Offset: 0x0015F5D0
+	// Token: 0x1700090A RID: 2314
+	// (get) Token: 0x060040C8 RID: 16584 RVA: 0x00169CFC File Offset: 0x00167EFC
+	// (set) Token: 0x060040C9 RID: 16585 RVA: 0x00169D04 File Offset: 0x00167F04
 	public float TargetFov { get; set; }
 
-	// Token: 0x170008EB RID: 2283
-	// (get) Token: 0x06006D35 RID: 27957 RVA: 0x001613D9 File Offset: 0x0015F5D9
-	// (set) Token: 0x06006D36 RID: 27958 RVA: 0x001613E1 File Offset: 0x0015F5E1
+	// Token: 0x1700090B RID: 2315
+	// (get) Token: 0x060040CA RID: 16586 RVA: 0x00169D0D File Offset: 0x00167F0D
+	// (set) Token: 0x060040CB RID: 16587 RVA: 0x00169D15 File Offset: 0x00167F15
 	public Vector CurrentPos { get; set; } = Vector.Create();
 
-	// Token: 0x170008EC RID: 2284
-	// (get) Token: 0x06006D37 RID: 27959 RVA: 0x001613EA File Offset: 0x0015F5EA
-	// (set) Token: 0x06006D38 RID: 27960 RVA: 0x001613F2 File Offset: 0x0015F5F2
+	// Token: 0x1700090C RID: 2316
+	// (get) Token: 0x060040CC RID: 16588 RVA: 0x00169D1E File Offset: 0x00167F1E
+	// (set) Token: 0x060040CD RID: 16589 RVA: 0x00169D26 File Offset: 0x00167F26
 	public Rotator CurrentRot { get; set; } = Rotator.Create();
 
-	// Token: 0x170008ED RID: 2285
-	// (get) Token: 0x06006D39 RID: 27961 RVA: 0x001613FB File Offset: 0x0015F5FB
-	// (set) Token: 0x06006D3A RID: 27962 RVA: 0x00161403 File Offset: 0x0015F603
+	// Token: 0x1700090D RID: 2317
+	// (get) Token: 0x060040CE RID: 16590 RVA: 0x00169D2F File Offset: 0x00167F2F
+	// (set) Token: 0x060040CF RID: 16591 RVA: 0x00169D37 File Offset: 0x00167F37
 	public float CurrentFov { get; set; }
 
-	// Token: 0x170008EE RID: 2286
-	// (get) Token: 0x06006D3B RID: 27963 RVA: 0x0016140C File Offset: 0x0015F60C
-	// (set) Token: 0x06006D3C RID: 27964 RVA: 0x00161414 File Offset: 0x0015F614
+	// Token: 0x1700090E RID: 2318
+	// (get) Token: 0x060040D0 RID: 16592 RVA: 0x00169D40 File Offset: 0x00167F40
+	// (set) Token: 0x060040D1 RID: 16593 RVA: 0x00169D48 File Offset: 0x00167F48
 	public bool IsInterpolating { get; set; }
 
-	// Token: 0x170008EF RID: 2287
-	// (get) Token: 0x06006D3D RID: 27965 RVA: 0x0016141D File Offset: 0x0015F61D
-	// (set) Token: 0x06006D3E RID: 27966 RVA: 0x00161425 File Offset: 0x0015F625
+	// Token: 0x1700090F RID: 2319
+	// (get) Token: 0x060040D2 RID: 16594 RVA: 0x00169D51 File Offset: 0x00167F51
+	// (set) Token: 0x060040D3 RID: 16595 RVA: 0x00169D59 File Offset: 0x00167F59
 	public float InterpolationDuration { get; set; }
 
-	// Token: 0x170008F0 RID: 2288
-	// (get) Token: 0x06006D3F RID: 27967 RVA: 0x0016142E File Offset: 0x0015F62E
-	// (set) Token: 0x06006D40 RID: 27968 RVA: 0x00161436 File Offset: 0x0015F636
+	// Token: 0x17000910 RID: 2320
+	// (get) Token: 0x060040D4 RID: 16596 RVA: 0x00169D62 File Offset: 0x00167F62
+	// (set) Token: 0x060040D5 RID: 16597 RVA: 0x00169D6A File Offset: 0x00167F6A
 	public float ElapsedTime { get; set; }
 
-	// Token: 0x170008F1 RID: 2289
-	// (get) Token: 0x06006D41 RID: 27969 RVA: 0x0016143F File Offset: 0x0015F63F
-	// (set) Token: 0x06006D42 RID: 27970 RVA: 0x00161447 File Offset: 0x0015F647
+	// Token: 0x17000911 RID: 2321
+	// (get) Token: 0x060040D6 RID: 16598 RVA: 0x00169D73 File Offset: 0x00167F73
+	// (set) Token: 0x060040D7 RID: 16599 RVA: 0x00169D7B File Offset: 0x00167F7B
 	[Nullable(2)]
 	public RhythmGameSpeedLevelConfig PrevConfig { [NullableContext(2)] get; [NullableContext(2)] set; }
 }

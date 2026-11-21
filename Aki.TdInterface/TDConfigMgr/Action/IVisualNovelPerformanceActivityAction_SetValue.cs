@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200207A RID: 8314
+	// Token: 0x020022C5 RID: 8901
 	public class IVisualNovelPerformanceActivityAction_SetValue
 	{
-		// Token: 0x04006DA7 RID: 28071
+		// Token: 0x040073B4 RID: 29620
 		public EVisualNovelPerformanceType Type;
 
-		// Token: 0x04006DA8 RID: 28072
+		// Token: 0x040073B5 RID: 29621
 		public float? StartTime;
 
-		// Token: 0x04006DA9 RID: 28073
-		[Nullable(1)]
+		// Token: 0x040073B6 RID: 29622
 		public IVisualNovelActivityActionSolarSchool ActivityActionConfig;
 	}
 }

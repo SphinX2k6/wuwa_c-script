@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B4B RID: 27467
+	// Token: 0x02007291 RID: 29329
 	public struct IMoveOnWallConfig : IFlatbufferObject
 	{
-		// Token: 0x1700CC19 RID: 52249
-		// (get) Token: 0x06030367 RID: 197479 RVA: 0x0068D37F File Offset: 0x0068B57F
+		// Token: 0x1700D6FE RID: 55038
+		// (get) Token: 0x060331BE RID: 209342 RVA: 0x006E593B File Offset: 0x006E3B3B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030368 RID: 197480 RVA: 0x0068D38C File Offset: 0x0068B58C
+		// Token: 0x060331BF RID: 209343 RVA: 0x006E5948 File Offset: 0x006E3B48
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030369 RID: 197481 RVA: 0x0068D394 File Offset: 0x0068B594
+		// Token: 0x060331C0 RID: 209344 RVA: 0x006E5950 File Offset: 0x006E3B50
 		public static IMoveOnWallConfig GetRootAsIMoveOnWallConfig(ByteBuffer _bb)
 		{
 			return IMoveOnWallConfig.GetRootAsIMoveOnWallConfig(_bb, default(IMoveOnWallConfig));
 		}
 
-		// Token: 0x0603036A RID: 197482 RVA: 0x0068D3B0 File Offset: 0x0068B5B0
+		// Token: 0x060331C1 RID: 209345 RVA: 0x006E596C File Offset: 0x006E3B6C
 		public static IMoveOnWallConfig GetRootAsIMoveOnWallConfig(ByteBuffer _bb, IMoveOnWallConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603036B RID: 197483 RVA: 0x0068D3CD File Offset: 0x0068B5CD
+		// Token: 0x060331C2 RID: 209346 RVA: 0x006E5989 File Offset: 0x006E3B89
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603036C RID: 197484 RVA: 0x0068D3DC File Offset: 0x0068B5DC
+		// Token: 0x060331C3 RID: 209347 RVA: 0x006E5998 File Offset: 0x006E3B98
 		public IMoveOnWallConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CC1A RID: 52250
-		// (get) Token: 0x0603036D RID: 197485 RVA: 0x0068D3EC File Offset: 0x0068B5EC
+		// Token: 0x1700D6FF RID: 55039
+		// (get) Token: 0x060331C4 RID: 209348 RVA: 0x006E59A8 File Offset: 0x006E3BA8
 		public IVectorInfo? WallDetectDir
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603036E RID: 197486 RVA: 0x0068D449 File Offset: 0x0068B649
+		// Token: 0x060331C5 RID: 209349 RVA: 0x006E5A05 File Offset: 0x006E3C05
 		public static Offset<IMoveOnWallConfig> CreateIMoveOnWallConfig(FlatBufferBuilder builder, Offset<IVectorInfo> WallDetectDirOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(1);
@@ -71,25 +71,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMoveOnWallConfig.EndIMoveOnWallConfig(builder);
 		}
 
-		// Token: 0x0603036F RID: 197487 RVA: 0x0068D45F File Offset: 0x0068B65F
+		// Token: 0x060331C6 RID: 209350 RVA: 0x006E5A1B File Offset: 0x006E3C1B
 		public static void StartIMoveOnWallConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06030370 RID: 197488 RVA: 0x0068D468 File Offset: 0x0068B668
+		// Token: 0x060331C7 RID: 209351 RVA: 0x006E5A24 File Offset: 0x006E3C24
 		public static void AddWallDetectDir(FlatBufferBuilder builder, Offset<IVectorInfo> wallDetectDirOffset)
 		{
 			builder.AddOffset(0, wallDetectDirOffset.Value, 0);
 		}
 
-		// Token: 0x06030371 RID: 197489 RVA: 0x0068D478 File Offset: 0x0068B678
+		// Token: 0x060331C8 RID: 209352 RVA: 0x006E5A34 File Offset: 0x006E3C34
 		public static Offset<IMoveOnWallConfig> EndIMoveOnWallConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMoveOnWallConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06030372 RID: 197490 RVA: 0x0068D488 File Offset: 0x0068B688
+		// Token: 0x060331C9 RID: 209353 RVA: 0x006E5A44 File Offset: 0x006E3C44
 		public IMoveOnWallConfigT UnPack()
 		{
 			IMoveOnWallConfigT moveOnWallConfigT = new IMoveOnWallConfigT();
@@ -97,13 +97,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return moveOnWallConfigT;
 		}
 
-		// Token: 0x06030373 RID: 197491 RVA: 0x0068D4A4 File Offset: 0x0068B6A4
+		// Token: 0x060331CA RID: 209354 RVA: 0x006E5A60 File Offset: 0x006E3C60
 		public void UnPackTo(IMoveOnWallConfigT _o)
 		{
 			_o.WallDetectDir = ((this.WallDetectDir != null) ? this.WallDetectDir.Value.UnPack() : null);
 		}
 
-		// Token: 0x06030374 RID: 197492 RVA: 0x0068D4E0 File Offset: 0x0068B6E0
+		// Token: 0x060331CB RID: 209355 RVA: 0x006E5A9C File Offset: 0x006E3C9C
 		public static Offset<IMoveOnWallConfig> Pack(FlatBufferBuilder builder, IMoveOnWallConfigT _o)
 		{
 			if (_o == null)
@@ -114,7 +114,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMoveOnWallConfig.CreateIMoveOnWallConfig(builder, wallDetectDirOffset);
 		}
 
-		// Token: 0x040113EB RID: 70635
+		// Token: 0x04012314 RID: 74516
 		private Table __p;
 	}
 }

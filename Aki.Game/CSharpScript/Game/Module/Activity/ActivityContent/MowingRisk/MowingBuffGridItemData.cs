@@ -3,49 +3,49 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063BE RID: 25534
+	// Token: 0x0200533C RID: 21308
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MowingBuffGridItemData : IMowingBuffGridItemData
 	{
-		// Token: 0x170093B9 RID: 37817
-		// (get) Token: 0x060403D0 RID: 263120 RVA: 0x00F8B76F File Offset: 0x00F8996F
-		// (set) Token: 0x060403D1 RID: 263121 RVA: 0x00F8B777 File Offset: 0x00F89977
+		// Token: 0x1700671B RID: 26395
+		// (get) Token: 0x06035091 RID: 217233 RVA: 0x00ED2707 File Offset: 0x00ED0907
+		// (set) Token: 0x06035092 RID: 217234 RVA: 0x00ED270F File Offset: 0x00ED090F
 		public int BuffId { get; set; }
 
-		// Token: 0x170093BA RID: 37818
-		// (get) Token: 0x060403D2 RID: 263122 RVA: 0x00F8B780 File Offset: 0x00F89980
-		// (set) Token: 0x060403D3 RID: 263123 RVA: 0x00F8B788 File Offset: 0x00F89988
+		// Token: 0x1700671C RID: 26396
+		// (get) Token: 0x06035093 RID: 217235 RVA: 0x00ED2718 File Offset: 0x00ED0918
+		// (set) Token: 0x06035094 RID: 217236 RVA: 0x00ED2720 File Offset: 0x00ED0920
 		public string QualityPath { get; set; }
 
-		// Token: 0x170093BB RID: 37819
-		// (get) Token: 0x060403D4 RID: 263124 RVA: 0x00F8B791 File Offset: 0x00F89991
-		// (set) Token: 0x060403D5 RID: 263125 RVA: 0x00F8B799 File Offset: 0x00F89999
+		// Token: 0x1700671D RID: 26397
+		// (get) Token: 0x06035095 RID: 217237 RVA: 0x00ED2729 File Offset: 0x00ED0929
+		// (set) Token: 0x06035096 RID: 217238 RVA: 0x00ED2731 File Offset: 0x00ED0931
 		public string IconPath { get; set; }
 
-		// Token: 0x170093BC RID: 37820
-		// (get) Token: 0x060403D6 RID: 263126 RVA: 0x00F8B7A2 File Offset: 0x00F899A2
-		// (set) Token: 0x060403D7 RID: 263127 RVA: 0x00F8B7AA File Offset: 0x00F899AA
+		// Token: 0x1700671E RID: 26398
+		// (get) Token: 0x06035097 RID: 217239 RVA: 0x00ED273A File Offset: 0x00ED093A
+		// (set) Token: 0x06035098 RID: 217240 RVA: 0x00ED2742 File Offset: 0x00ED0942
 		public string NameTextId { get; set; }
 
-		// Token: 0x170093BD RID: 37821
-		// (get) Token: 0x060403D8 RID: 263128 RVA: 0x00F8B7B3 File Offset: 0x00F899B3
-		// (set) Token: 0x060403D9 RID: 263129 RVA: 0x00F8B7BB File Offset: 0x00F899BB
+		// Token: 0x1700671F RID: 26399
+		// (get) Token: 0x06035099 RID: 217241 RVA: 0x00ED274B File Offset: 0x00ED094B
+		// (set) Token: 0x0603509A RID: 217242 RVA: 0x00ED2753 File Offset: 0x00ED0953
 		public bool IsShowBackground { get; set; }
 
-		// Token: 0x170093BE RID: 37822
-		// (get) Token: 0x060403DA RID: 263130 RVA: 0x00F8B7C4 File Offset: 0x00F899C4
-		// (set) Token: 0x060403DB RID: 263131 RVA: 0x00F8B7CC File Offset: 0x00F899CC
+		// Token: 0x17006720 RID: 26400
+		// (get) Token: 0x0603509B RID: 217243 RVA: 0x00ED275C File Offset: 0x00ED095C
+		// (set) Token: 0x0603509C RID: 217244 RVA: 0x00ED2764 File Offset: 0x00ED0964
 		public bool IsChosen { get; set; }
 
-		// Token: 0x170093BF RID: 37823
-		// (get) Token: 0x060403DC RID: 263132 RVA: 0x00F8B7D5 File Offset: 0x00F899D5
-		// (set) Token: 0x060403DD RID: 263133 RVA: 0x00F8B7DD File Offset: 0x00F899DD
+		// Token: 0x17006721 RID: 26401
+		// (get) Token: 0x0603509D RID: 217245 RVA: 0x00ED276D File Offset: 0x00ED096D
+		// (set) Token: 0x0603509E RID: 217246 RVA: 0x00ED2775 File Offset: 0x00ED0975
 		public bool IsUnlock { get; set; }
 
-		// Token: 0x170093C0 RID: 37824
-		// (get) Token: 0x060403DE RID: 263134 RVA: 0x00F8B7E6 File Offset: 0x00F899E6
-		// (set) Token: 0x060403DF RID: 263135 RVA: 0x00F8B7EE File Offset: 0x00F899EE
+		// Token: 0x17006722 RID: 26402
+		// (get) Token: 0x0603509F RID: 217247 RVA: 0x00ED277E File Offset: 0x00ED097E
+		// (set) Token: 0x060350A0 RID: 217248 RVA: 0x00ED2786 File Offset: 0x00ED0986
 		public string LevelContent { get; set; }
 	}
 }

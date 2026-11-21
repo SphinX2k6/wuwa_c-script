@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C8F RID: 19599
+	// Token: 0x02005188 RID: 20872
 	public class IPreChildQuestT
 	{
-		// Token: 0x17008E4F RID: 36431
-		// (get) Token: 0x0601F161 RID: 127329 RVA: 0x004580DD File Offset: 0x004562DD
-		// (set) Token: 0x0601F162 RID: 127330 RVA: 0x004580E5 File Offset: 0x004562E5
+		// Token: 0x1700957D RID: 38269
+		// (get) Token: 0x06020D83 RID: 134531 RVA: 0x0048BC2D File Offset: 0x00489E2D
+		// (set) Token: 0x06020D84 RID: 134532 RVA: 0x0048BC35 File Offset: 0x00489E35
 		public EVisibleCondition Type { get; set; }
 
-		// Token: 0x17008E50 RID: 36432
-		// (get) Token: 0x0601F163 RID: 127331 RVA: 0x004580EE File Offset: 0x004562EE
-		// (set) Token: 0x0601F164 RID: 127332 RVA: 0x004580F6 File Offset: 0x004562F6
+		// Token: 0x1700957E RID: 38270
+		// (get) Token: 0x06020D85 RID: 134533 RVA: 0x0048BC3E File Offset: 0x00489E3E
+		// (set) Token: 0x06020D86 RID: 134534 RVA: 0x0048BC46 File Offset: 0x00489E46
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008E51 RID: 36433
-		// (get) Token: 0x0601F165 RID: 127333 RVA: 0x004580FF File Offset: 0x004562FF
-		// (set) Token: 0x0601F166 RID: 127334 RVA: 0x00458107 File Offset: 0x00456307
+		// Token: 0x1700957F RID: 38271
+		// (get) Token: 0x06020D87 RID: 134535 RVA: 0x0048BC4F File Offset: 0x00489E4F
+		// (set) Token: 0x06020D88 RID: 134536 RVA: 0x0048BC57 File Offset: 0x00489E57
 		public IChildQuestConditionT PreChildQuest { get; set; }
 
-		// Token: 0x0601F167 RID: 127335 RVA: 0x00458110 File Offset: 0x00456310
+		// Token: 0x06020D89 RID: 134537 RVA: 0x0048BC60 File Offset: 0x00489E60
 		public IPreChildQuestT()
 		{
 			this.Type = EVisibleCondition.Weather;

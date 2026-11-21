@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017CC RID: 6092
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001953 RID: 6483
 	public class IAirPassageMove : ISplineMovePattern
 	{
-		// Token: 0x060082C9 RID: 33481 RVA: 0x00138AEC File Offset: 0x00136CEC
+		// Token: 0x060089DB RID: 35291 RVA: 0x001480D4 File Offset: 0x001462D4
 		private IAirPassageMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060082CA RID: 33482 RVA: 0x00138B24 File Offset: 0x00136D24
+		// Token: 0x060089DC RID: 35292 RVA: 0x0014810C File Offset: 0x0014630C
 		public static IAirPassageMove Create([Nullable(2)] IAirPassageMove instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060082CB RID: 33483 RVA: 0x00138B37 File Offset: 0x00136D37
+		// Token: 0x060089DD RID: 35293 RVA: 0x0014811F File Offset: 0x0014631F
 		public static IAirPassageMove CreateFromSetValue([Nullable(2)] IAirPassageMove_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060082CC RID: 33484 RVA: 0x00138B4C File Offset: 0x00136D4C
+		// Token: 0x060089DE RID: 35294 RVA: 0x00148134 File Offset: 0x00146334
 		public new IAirPassageMove_SetValue ToSetValue()
 		{
 			return new IAirPassageMove_SetValue
@@ -66,9 +64,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B07 RID: 11015
-		// (get) Token: 0x060082CD RID: 33485 RVA: 0x00138BBE File Offset: 0x00136DBE
-		// (set) Token: 0x060082CE RID: 33486 RVA: 0x00138BE9 File Offset: 0x00136DE9
+		// Token: 0x17002CFD RID: 11517
+		// (get) Token: 0x060089DF RID: 35295 RVA: 0x001481A6 File Offset: 0x001463A6
+		// (set) Token: 0x060089E0 RID: 35296 RVA: 0x001481D1 File Offset: 0x001463D1
 		public override ESplineMovePattern Type
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B08 RID: 11016
-		// (get) Token: 0x060082CF RID: 33487 RVA: 0x00138BF8 File Offset: 0x00136DF8
-		// (set) Token: 0x060082D0 RID: 33488 RVA: 0x00138C32 File Offset: 0x00136E32
+		// Token: 0x17002CFE RID: 11518
+		// (get) Token: 0x060089E1 RID: 35297 RVA: 0x001481E0 File Offset: 0x001463E0
+		// (set) Token: 0x060089E2 RID: 35298 RVA: 0x0014821A File Offset: 0x0014641A
 		public override float? MaxOffsetDistance
 		{
 			get
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B09 RID: 11017
-		// (get) Token: 0x060082D1 RID: 33489 RVA: 0x00138C40 File Offset: 0x00136E40
-		// (set) Token: 0x060082D2 RID: 33490 RVA: 0x00138C7A File Offset: 0x00136E7A
+		// Token: 0x17002CFF RID: 11519
+		// (get) Token: 0x060089E3 RID: 35299 RVA: 0x00148228 File Offset: 0x00146428
+		// (set) Token: 0x060089E4 RID: 35300 RVA: 0x00148262 File Offset: 0x00146462
 		public override bool? IsOneWay
 		{
 			get
@@ -137,9 +135,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B0A RID: 11018
-		// (get) Token: 0x060082D3 RID: 33491 RVA: 0x00138C88 File Offset: 0x00136E88
-		// (set) Token: 0x060082D4 RID: 33492 RVA: 0x00138CC2 File Offset: 0x00136EC2
+		// Token: 0x17002D00 RID: 11520
+		// (get) Token: 0x060089E5 RID: 35301 RVA: 0x00148270 File Offset: 0x00146470
+		// (set) Token: 0x060089E6 RID: 35302 RVA: 0x001482AA File Offset: 0x001464AA
 		public override float? LayerVerticalLimit
 		{
 			get
@@ -161,9 +159,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B0B RID: 11019
-		// (get) Token: 0x060082D5 RID: 33493 RVA: 0x00138CD0 File Offset: 0x00136ED0
-		// (set) Token: 0x060082D6 RID: 33494 RVA: 0x00138D0A File Offset: 0x00136F0A
+		// Token: 0x17002D01 RID: 11521
+		// (get) Token: 0x060089E7 RID: 35303 RVA: 0x001482B8 File Offset: 0x001464B8
+		// (set) Token: 0x060089E8 RID: 35304 RVA: 0x001482F2 File Offset: 0x001464F2
 		public override bool? DynamicGravity
 		{
 			get
@@ -185,9 +183,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B0C RID: 11020
-		// (get) Token: 0x060082D7 RID: 33495 RVA: 0x00138D18 File Offset: 0x00136F18
-		// (set) Token: 0x060082D8 RID: 33496 RVA: 0x00138D52 File Offset: 0x00136F52
+		// Token: 0x17002D02 RID: 11522
+		// (get) Token: 0x060089E9 RID: 35305 RVA: 0x00148300 File Offset: 0x00146500
+		// (set) Token: 0x060089EA RID: 35306 RVA: 0x0014833A File Offset: 0x0014653A
 		public override float? GravitySwitchAngularVelocity
 		{
 			get
@@ -209,9 +207,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B0D RID: 11021
-		// (get) Token: 0x060082D9 RID: 33497 RVA: 0x00138D60 File Offset: 0x00136F60
-		// (set) Token: 0x060082DA RID: 33498 RVA: 0x00138D9A File Offset: 0x00136F9A
+		// Token: 0x17002D03 RID: 11523
+		// (get) Token: 0x060089EB RID: 35307 RVA: 0x00148348 File Offset: 0x00146548
+		// (set) Token: 0x060089EC RID: 35308 RVA: 0x00148382 File Offset: 0x00146582
 		public override int? AutoExitDistance
 		{
 			get
@@ -233,9 +231,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B0E RID: 11022
-		// (get) Token: 0x060082DB RID: 33499 RVA: 0x00138DA8 File Offset: 0x00136FA8
-		// (set) Token: 0x060082DC RID: 33500 RVA: 0x00138E09 File Offset: 0x00137009
+		// Token: 0x17002D04 RID: 11524
+		// (get) Token: 0x060089ED RID: 35309 RVA: 0x00148390 File Offset: 0x00146590
+		// (set) Token: 0x060089EE RID: 35310 RVA: 0x001483F1 File Offset: 0x001465F1
 		[Nullable(2)]
 		public virtual IAirPassageMoveLimit Limit
 		{
@@ -266,18 +264,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400531E RID: 21278
+		// Token: 0x04005762 RID: 22370
 		[Nullable(2)]
 		protected new IAirPassageMove FbInstance;
 
-		// Token: 0x0400531F RID: 21279
+		// Token: 0x04005763 RID: 22371
 		[Nullable(2)]
 		protected new IAirPassageMove_SetValue PocoInterface;
 
-		// Token: 0x04005320 RID: 21280
+		// Token: 0x04005764 RID: 22372
 		private IAirPassageMoveLimit _LimitCache;
 
-		// Token: 0x04005321 RID: 21281
+		// Token: 0x04005765 RID: 22373
 		private bool _LimitInited;
 	}
 }

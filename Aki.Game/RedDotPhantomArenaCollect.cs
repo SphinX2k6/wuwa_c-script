@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020033EF RID: 13295
+// Token: 0x02002961 RID: 10593
 public class RedDotPhantomArenaCollect : RedDotBase
 {
-	// Token: 0x0601CC94 RID: 117908 RVA: 0x0080A5FD File Offset: 0x008087FD
+	// Token: 0x0601A98C RID: 108940 RVA: 0x00830BC1 File Offset: 0x0082EDC1
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.RedDotPhantomArenaActivity);
 	}
 
-	// Token: 0x0601CC95 RID: 117909 RVA: 0x0080A609 File Offset: 0x00808809
+	// Token: 0x0601A98D RID: 108941 RVA: 0x00830BCD File Offset: 0x0082EDCD
 	protected override bool IsMultiple()
 	{
 		return true;

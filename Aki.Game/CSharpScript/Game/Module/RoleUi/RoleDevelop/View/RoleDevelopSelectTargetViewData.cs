@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D53 RID: 19795
+	// Token: 0x02003D1C RID: 15644
 	public class RoleDevelopSelectTargetViewData
 	{
-		// Token: 0x0401B2EC RID: 111340
+		// Token: 0x04015CC1 RID: 89281
 		public int? RoleId;
 
-		// Token: 0x0401B2ED RID: 111341
+		// Token: 0x04015CC2 RID: 89282
 		public ERoleDevelopUpdateTargetSource Source;
 	}
 }

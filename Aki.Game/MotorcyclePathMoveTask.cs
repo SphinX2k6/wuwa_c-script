@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020032E2 RID: 13026
+// Token: 0x02002854 RID: 10324
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcyclePathMoveTask : VehiclePathMoveTask
 {
-	// Token: 0x0601C55F RID: 116063 RVA: 0x007EBF0C File Offset: 0x007EA10C
+	// Token: 0x0601A205 RID: 107013 RVA: 0x00812694 File Offset: 0x00810894
 	public MotorcyclePathMoveTask(Entity entity, PathCurveInfo curveInfo, MoveStateInfo stateInfo) : base(entity, curveInfo, stateInfo)
 	{
 	}
 
-	// Token: 0x0601C560 RID: 116064 RVA: 0x007EBF64 File Offset: 0x007EA164
+	// Token: 0x0601A206 RID: 107014 RVA: 0x008126EC File Offset: 0x008108EC
 	public override bool Update(float delta)
 	{
 		if (this.CurveInfo == null || this.StateInfo == null)
@@ -29,7 +29,7 @@ public class MotorcyclePathMoveTask : VehiclePathMoveTask
 		return true;
 	}
 
-	// Token: 0x0601C561 RID: 116065 RVA: 0x007EBFBC File Offset: 0x007EA1BC
+	// Token: 0x0601A207 RID: 107015 RVA: 0x00812744 File Offset: 0x00810944
 	protected override void UpdateTransform(float delta)
 	{
 		MotorcyclePathMoveTask.<>c__DisplayClass11_0 CS$<>8__locals1 = new MotorcyclePathMoveTask.<>c__DisplayClass11_0();
@@ -69,7 +69,7 @@ public class MotorcyclePathMoveTask : VehiclePathMoveTask
 		});
 	}
 
-	// Token: 0x0601C562 RID: 116066 RVA: 0x007EC108 File Offset: 0x007EA308
+	// Token: 0x0601A208 RID: 107016 RVA: 0x00812890 File Offset: 0x00810A90
 	private UTraceSphereElement CreateTraceElement()
 	{
 		UTraceSphereElement utraceSphereElement = new UTraceSphereElement();
@@ -83,7 +83,7 @@ public class MotorcyclePathMoveTask : VehiclePathMoveTask
 		return utraceSphereElement;
 	}
 
-	// Token: 0x0601C563 RID: 116067 RVA: 0x007EC161 File Offset: 0x007EA361
+	// Token: 0x0601A209 RID: 107017 RVA: 0x008128E9 File Offset: 0x00810AE9
 	public override void GetTransformAtSplineIndex(int index, Transform outTransform)
 	{
 		this.CurveInfo.SplineCurve.GetTransformAtSplineIndex(index, ESplineCoordinateSpace.World, outTransform);
@@ -98,7 +98,7 @@ public class MotorcyclePathMoveTask : VehiclePathMoveTask
 		}
 	}
 
-	// Token: 0x0601C564 RID: 116068 RVA: 0x007EC19C File Offset: 0x007EA39C
+	// Token: 0x0601A20A RID: 107018 RVA: 0x00812924 File Offset: 0x00810B24
 	private void AdjustSplineTransform(Transform outTransform)
 	{
 		if (this.StateInfo == null || this.CurveInfo == null)
@@ -154,7 +154,7 @@ public class MotorcyclePathMoveTask : VehiclePathMoveTask
 		}
 	}
 
-	// Token: 0x0601C565 RID: 116069 RVA: 0x007EC3CC File Offset: 0x007EA5CC
+	// Token: 0x0601A20B RID: 107019 RVA: 0x00812B54 File Offset: 0x00810D54
 	private void AdjustKeepForwardSplineTransform(Transform outTransform)
 	{
 		outTransform.GetRotation().RotateVector(Vector.UpVectorProxy, this.TmpVector);
@@ -166,31 +166,31 @@ public class MotorcyclePathMoveTask : VehiclePathMoveTask
 		outTransform.SetRotation(rotation);
 	}
 
-	// Token: 0x0400E08C RID: 57484
+	// Token: 0x0400E537 RID: 58679
 	private const int MaxDegreePreSecond = 180;
 
-	// Token: 0x0400E08D RID: 57485
+	// Token: 0x0400E538 RID: 58680
 	public float TraceLength = 1000f;
 
-	// Token: 0x0400E08E RID: 57486
+	// Token: 0x0400E539 RID: 58681
 	public float TraceStartOffset = 500f;
 
-	// Token: 0x0400E08F RID: 57487
+	// Token: 0x0400E53A RID: 58682
 	private const int MotorcycleOffset = 50;
 
-	// Token: 0x0400E090 RID: 57488
+	// Token: 0x0400E53B RID: 58683
 	[Nullable(2)]
 	private UTraceSphereElement TraceElement;
 
-	// Token: 0x0400E091 RID: 57489
+	// Token: 0x0400E53C RID: 58684
 	private readonly Vector UpDirection = Vector.Create();
 
-	// Token: 0x0400E092 RID: 57490
+	// Token: 0x0400E53D RID: 58685
 	protected Vector TmpVector1 = Vector.Create();
 
-	// Token: 0x0400E093 RID: 57491
+	// Token: 0x0400E53E RID: 58686
 	protected Vector TmpVector3 = Vector.Create();
 
-	// Token: 0x0400E094 RID: 57492
+	// Token: 0x0400E53F RID: 58687
 	protected Rotator TmpRotator = Rotator.Create();
 }

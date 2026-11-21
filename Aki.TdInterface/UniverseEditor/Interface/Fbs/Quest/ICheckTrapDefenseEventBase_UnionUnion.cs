@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D7D RID: 15741
+	// Token: 0x02004194 RID: 16788
 	public class ICheckTrapDefenseEventBase_UnionUnion
 	{
-		// Token: 0x17006C04 RID: 27652
-		// (get) Token: 0x06015CAB RID: 89259 RVA: 0x00324395 File Offset: 0x00322595
-		// (set) Token: 0x06015CAC RID: 89260 RVA: 0x0032439D File Offset: 0x0032259D
+		// Token: 0x170071BE RID: 29118
+		// (get) Token: 0x060171E3 RID: 94691 RVA: 0x0034B60D File Offset: 0x0034980D
+		// (set) Token: 0x060171E4 RID: 94692 RVA: 0x0034B615 File Offset: 0x00349815
 		public ICheckTrapDefenseEventBase_Union Type { get; set; }
 
-		// Token: 0x17006C05 RID: 27653
-		// (get) Token: 0x06015CAD RID: 89261 RVA: 0x003243A6 File Offset: 0x003225A6
-		// (set) Token: 0x06015CAE RID: 89262 RVA: 0x003243AE File Offset: 0x003225AE
+		// Token: 0x170071BF RID: 29119
+		// (get) Token: 0x060171E5 RID: 94693 RVA: 0x0034B61E File Offset: 0x0034981E
+		// (set) Token: 0x060171E6 RID: 94694 RVA: 0x0034B626 File Offset: 0x00349826
 		public object Value { get; set; }
 
-		// Token: 0x06015CAF RID: 89263 RVA: 0x003243B7 File Offset: 0x003225B7
+		// Token: 0x060171E7 RID: 94695 RVA: 0x0034B62F File Offset: 0x0034982F
 		public ICheckTrapDefenseEventBase_UnionUnion()
 		{
 			this.Type = ICheckTrapDefenseEventBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06015CB0 RID: 89264 RVA: 0x003243CD File Offset: 0x003225CD
+		// Token: 0x060171E8 RID: 94696 RVA: 0x0034B645 File Offset: 0x00349845
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06015CB1 RID: 89265 RVA: 0x003243DF File Offset: 0x003225DF
+		// Token: 0x060171E9 RID: 94697 RVA: 0x0034B657 File Offset: 0x00349857
 		public ICheckTrapDefenseEventBaseT AsICheckTrapDefenseEventBase()
 		{
 			return this.As<ICheckTrapDefenseEventBaseT>();
 		}
 
-		// Token: 0x06015CB2 RID: 89266 RVA: 0x003243E7 File Offset: 0x003225E7
+		// Token: 0x060171EA RID: 94698 RVA: 0x0034B65F File Offset: 0x0034985F
 		public static ICheckTrapDefenseEventBase_UnionUnion FromICheckTrapDefenseEventBase(ICheckTrapDefenseEventBaseT _ichecktrapdefenseeventbase)
 		{
 			return new ICheckTrapDefenseEventBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015CB3 RID: 89267 RVA: 0x003243FC File Offset: 0x003225FC
+		// Token: 0x060171EB RID: 94699 RVA: 0x0034B674 File Offset: 0x00349874
 		public ICheckTrapDefenseEventMonsterKilledT AsICheckTrapDefenseEventMonsterKilled()
 		{
 			return this.As<ICheckTrapDefenseEventMonsterKilledT>();
 		}
 
-		// Token: 0x06015CB4 RID: 89268 RVA: 0x00324404 File Offset: 0x00322604
+		// Token: 0x060171EC RID: 94700 RVA: 0x0034B67C File Offset: 0x0034987C
 		public static ICheckTrapDefenseEventBase_UnionUnion FromICheckTrapDefenseEventMonsterKilled(ICheckTrapDefenseEventMonsterKilledT _ichecktrapdefenseeventmonsterkilled)
 		{
 			return new ICheckTrapDefenseEventBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015CB5 RID: 89269 RVA: 0x00324419 File Offset: 0x00322619
+		// Token: 0x060171ED RID: 94701 RVA: 0x0034B691 File Offset: 0x00349891
 		public ICheckTrapDefenseBdBuffQualityUpT AsICheckTrapDefenseBdBuffQualityUp()
 		{
 			return this.As<ICheckTrapDefenseBdBuffQualityUpT>();
 		}
 
-		// Token: 0x06015CB6 RID: 89270 RVA: 0x00324421 File Offset: 0x00322621
+		// Token: 0x060171EE RID: 94702 RVA: 0x0034B699 File Offset: 0x00349899
 		public static ICheckTrapDefenseEventBase_UnionUnion FromICheckTrapDefenseBdBuffQualityUp(ICheckTrapDefenseBdBuffQualityUpT _ichecktrapdefensebdbuffqualityup)
 		{
 			return new ICheckTrapDefenseEventBase_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015CB7 RID: 89271 RVA: 0x00324438 File Offset: 0x00322638
+		// Token: 0x060171EF RID: 94703 RVA: 0x0034B6B0 File Offset: 0x003498B0
 		public static int Pack(FlatBufferBuilder builder, ICheckTrapDefenseEventBase_UnionUnion _o)
 		{
 			switch (_o.Type)

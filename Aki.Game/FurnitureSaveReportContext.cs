@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FAC RID: 4012
+// Token: 0x02000461 RID: 1121
 [NullableContext(1)]
 [Nullable(0)]
 public class FurnitureSaveReportContext : IFurnitureSaveReportContext
 {
-	// Token: 0x1700083A RID: 2106
-	// (get) Token: 0x0600668B RID: 26251 RVA: 0x001441CC File Offset: 0x001423CC
-	// (set) Token: 0x0600668C RID: 26252 RVA: 0x001441D4 File Offset: 0x001423D4
+	// Token: 0x1700085C RID: 2140
+	// (get) Token: 0x06003A23 RID: 14883 RVA: 0x0014CA60 File Offset: 0x0014AC60
+	// (set) Token: 0x06003A24 RID: 14884 RVA: 0x0014CA68 File Offset: 0x0014AC68
 	public int AreaId { get; set; }
 
-	// Token: 0x1700083B RID: 2107
-	// (get) Token: 0x0600668D RID: 26253 RVA: 0x001441DD File Offset: 0x001423DD
-	// (set) Token: 0x0600668E RID: 26254 RVA: 0x001441E5 File Offset: 0x001423E5
+	// Token: 0x1700085D RID: 2141
+	// (get) Token: 0x06003A25 RID: 14885 RVA: 0x0014CA71 File Offset: 0x0014AC71
+	// (set) Token: 0x06003A26 RID: 14886 RVA: 0x0014CA79 File Offset: 0x0014AC79
 	public FurnitureAreaData OldAreaData { get; set; }
 
-	// Token: 0x1700083C RID: 2108
-	// (get) Token: 0x0600668F RID: 26255 RVA: 0x001441EE File Offset: 0x001423EE
-	// (set) Token: 0x06006690 RID: 26256 RVA: 0x001441F6 File Offset: 0x001423F6
+	// Token: 0x1700085E RID: 2142
+	// (get) Token: 0x06003A27 RID: 14887 RVA: 0x0014CA82 File Offset: 0x0014AC82
+	// (set) Token: 0x06003A28 RID: 14888 RVA: 0x0014CA8A File Offset: 0x0014AC8A
 	public FurnitureAreaData NewAreaData { get; set; }
 
-	// Token: 0x1700083D RID: 2109
-	// (get) Token: 0x06006691 RID: 26257 RVA: 0x001441FF File Offset: 0x001423FF
-	// (set) Token: 0x06006692 RID: 26258 RVA: 0x00144207 File Offset: 0x00142407
+	// Token: 0x1700085F RID: 2143
+	// (get) Token: 0x06003A29 RID: 14889 RVA: 0x0014CA93 File Offset: 0x0014AC93
+	// (set) Token: 0x06003A2A RID: 14890 RVA: 0x0014CA9B File Offset: 0x0014AC9B
 	public bool IsSave { get; set; }
 }

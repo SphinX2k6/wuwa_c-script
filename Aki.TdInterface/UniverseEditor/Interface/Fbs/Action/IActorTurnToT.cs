@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060F9 RID: 24825
+	// Token: 0x0200675B RID: 26459
 	public class IActorTurnToT
 	{
-		// Token: 0x1700B6FD RID: 46845
-		// (get) Token: 0x0602A6A9 RID: 173737 RVA: 0x005D82D3 File Offset: 0x005D64D3
-		// (set) Token: 0x0602A6AA RID: 173738 RVA: 0x005D82DB File Offset: 0x005D64DB
+		// Token: 0x1700C068 RID: 49256
+		// (get) Token: 0x0602CD8A RID: 183690 RVA: 0x0062227B File Offset: 0x0062047B
+		// (set) Token: 0x0602CD8B RID: 183691 RVA: 0x00622283 File Offset: 0x00620483
 		public int ActorIndex { get; set; }
 
-		// Token: 0x1700B6FE RID: 46846
-		// (get) Token: 0x0602A6AB RID: 173739 RVA: 0x005D82E4 File Offset: 0x005D64E4
-		// (set) Token: 0x0602A6AC RID: 173740 RVA: 0x005D82EC File Offset: 0x005D64EC
+		// Token: 0x1700C069 RID: 49257
+		// (get) Token: 0x0602CD8C RID: 183692 RVA: 0x0062228C File Offset: 0x0062048C
+		// (set) Token: 0x0602CD8D RID: 183693 RVA: 0x00622294 File Offset: 0x00620494
 		public TActorTurnToDataUnion Target { get; set; }
 
-		// Token: 0x1700B6FF RID: 46847
-		// (get) Token: 0x0602A6AD RID: 173741 RVA: 0x005D82F5 File Offset: 0x005D64F5
-		// (set) Token: 0x0602A6AE RID: 173742 RVA: 0x005D82FD File Offset: 0x005D64FD
+		// Token: 0x1700C06A RID: 49258
+		// (get) Token: 0x0602CD8E RID: 183694 RVA: 0x0062229D File Offset: 0x0062049D
+		// (set) Token: 0x0602CD8F RID: 183695 RVA: 0x006222A5 File Offset: 0x006204A5
 		public float DelayTime { get; set; }
 
-		// Token: 0x1700B700 RID: 46848
-		// (get) Token: 0x0602A6AF RID: 173743 RVA: 0x005D8306 File Offset: 0x005D6506
-		// (set) Token: 0x0602A6B0 RID: 173744 RVA: 0x005D830E File Offset: 0x005D650E
+		// Token: 0x1700C06B RID: 49259
+		// (get) Token: 0x0602CD90 RID: 183696 RVA: 0x006222AE File Offset: 0x006204AE
+		// (set) Token: 0x0602CD91 RID: 183697 RVA: 0x006222B6 File Offset: 0x006204B6
 		public bool UseLookAtForSmallAngle { get; set; }
 
-		// Token: 0x1700B701 RID: 46849
-		// (get) Token: 0x0602A6B1 RID: 173745 RVA: 0x005D8317 File Offset: 0x005D6517
-		// (set) Token: 0x0602A6B2 RID: 173746 RVA: 0x005D831F File Offset: 0x005D651F
+		// Token: 0x1700C06C RID: 49260
+		// (get) Token: 0x0602CD92 RID: 183698 RVA: 0x006222BF File Offset: 0x006204BF
+		// (set) Token: 0x0602CD93 RID: 183699 RVA: 0x006222C7 File Offset: 0x006204C7
 		public bool UpdatePosCache { get; set; }
 
-		// Token: 0x1700B702 RID: 46850
-		// (get) Token: 0x0602A6B3 RID: 173747 RVA: 0x005D8328 File Offset: 0x005D6528
-		// (set) Token: 0x0602A6B4 RID: 173748 RVA: 0x005D8330 File Offset: 0x005D6530
+		// Token: 0x1700C06D RID: 49261
+		// (get) Token: 0x0602CD94 RID: 183700 RVA: 0x006222D0 File Offset: 0x006204D0
+		// (set) Token: 0x0602CD95 RID: 183701 RVA: 0x006222D8 File Offset: 0x006204D8
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602A6B5 RID: 173749 RVA: 0x005D8339 File Offset: 0x005D6539
+		// Token: 0x0602CD96 RID: 183702 RVA: 0x006222E1 File Offset: 0x006204E1
 		public IActorTurnToT()
 		{
 			this.ActorIndex = 0;

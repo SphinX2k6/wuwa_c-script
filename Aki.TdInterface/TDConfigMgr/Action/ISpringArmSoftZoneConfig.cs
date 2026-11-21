@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EAF RID: 7855
+	// Token: 0x020020E8 RID: 8424
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ISpringArmSoftZoneConfig
 	{
-		// Token: 0x0600A806 RID: 43014 RVA: 0x0017B7A8 File Offset: 0x001799A8
-		[NullableContext(1)]
+		// Token: 0x0600B2D6 RID: 45782 RVA: 0x00191748 File Offset: 0x0018F948
+		[NullableContext(0)]
 		private ISpringArmSoftZoneConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A807 RID: 43015 RVA: 0x0017B7E0 File Offset: 0x001799E0
-		[NullableContext(1)]
+		// Token: 0x0600B2D7 RID: 45783 RVA: 0x00191780 File Offset: 0x0018F980
+		[NullableContext(0)]
 		public static ISpringArmSoftZoneConfig Create([Nullable(2)] ISpringArmSoftZoneConfig instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A808 RID: 43016 RVA: 0x0017B7F3 File Offset: 0x001799F3
-		[NullableContext(1)]
+		// Token: 0x0600B2D8 RID: 45784 RVA: 0x00191793 File Offset: 0x0018F993
+		[NullableContext(0)]
 		public static ISpringArmSoftZoneConfig CreateFromSetValue([Nullable(2)] ISpringArmSoftZoneConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A809 RID: 43017 RVA: 0x0017B806 File Offset: 0x00179A06
-		[NullableContext(1)]
+		// Token: 0x0600B2D9 RID: 45785 RVA: 0x001917A6 File Offset: 0x0018F9A6
+		[NullableContext(0)]
 		public ISpringArmSoftZoneConfig_SetValue ToSetValue()
 		{
 			return new ISpringArmSoftZoneConfig_SetValue
@@ -65,9 +65,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003354 RID: 13140
-		// (get) Token: 0x0600A80A RID: 43018 RVA: 0x0017B834 File Offset: 0x00179A34
-		// (set) Token: 0x0600A80B RID: 43019 RVA: 0x0017B895 File Offset: 0x00179A95
+		// Token: 0x1700361E RID: 13854
+		// (get) Token: 0x0600B2DA RID: 45786 RVA: 0x001917D4 File Offset: 0x0018F9D4
+		// (set) Token: 0x0600B2DB RID: 45787 RVA: 0x00191835 File Offset: 0x0018FA35
 		public virtual ISingleAxisSpringArmSoftZoneConfig LeftRightConfig
 		{
 			get
@@ -95,9 +95,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003355 RID: 13141
-		// (get) Token: 0x0600A80C RID: 43020 RVA: 0x0017B8AC File Offset: 0x00179AAC
-		// (set) Token: 0x0600A80D RID: 43021 RVA: 0x0017B90D File Offset: 0x00179B0D
+		// Token: 0x1700361F RID: 13855
+		// (get) Token: 0x0600B2DC RID: 45788 RVA: 0x0019184C File Offset: 0x0018FA4C
+		// (set) Token: 0x0600B2DD RID: 45789 RVA: 0x001918AD File Offset: 0x0018FAAD
 		public virtual ISingleAxisSpringArmSoftZoneConfig ForwardBackConfig
 		{
 			get
@@ -125,9 +125,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003356 RID: 13142
-		// (get) Token: 0x0600A80E RID: 43022 RVA: 0x0017B924 File Offset: 0x00179B24
-		// (set) Token: 0x0600A80F RID: 43023 RVA: 0x0017B985 File Offset: 0x00179B85
+		// Token: 0x17003620 RID: 13856
+		// (get) Token: 0x0600B2DE RID: 45790 RVA: 0x001918C4 File Offset: 0x0018FAC4
+		// (set) Token: 0x0600B2DF RID: 45791 RVA: 0x00191925 File Offset: 0x0018FB25
 		public virtual ISingleAxisSpringArmSoftZoneConfig UpDownConfig
 		{
 			get
@@ -155,31 +155,31 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006421 RID: 25633
+		// Token: 0x04006A0F RID: 27151
 		protected ISpringArmSoftZoneConfig FbInstance;
 
-		// Token: 0x04006422 RID: 25634
+		// Token: 0x04006A10 RID: 27152
 		protected ISpringArmSoftZoneConfig_SetValue PocoInterface;
 
-		// Token: 0x04006423 RID: 25635
-		[Nullable(1)]
+		// Token: 0x04006A11 RID: 27153
+		[Nullable(0)]
 		private ISingleAxisSpringArmSoftZoneConfig _LeftRightConfigCache;
 
-		// Token: 0x04006424 RID: 25636
+		// Token: 0x04006A12 RID: 27154
 		private bool _LeftRightConfigInited;
 
-		// Token: 0x04006425 RID: 25637
-		[Nullable(1)]
+		// Token: 0x04006A13 RID: 27155
+		[Nullable(0)]
 		private ISingleAxisSpringArmSoftZoneConfig _ForwardBackConfigCache;
 
-		// Token: 0x04006426 RID: 25638
+		// Token: 0x04006A14 RID: 27156
 		private bool _ForwardBackConfigInited;
 
-		// Token: 0x04006427 RID: 25639
-		[Nullable(1)]
+		// Token: 0x04006A15 RID: 27157
+		[Nullable(0)]
 		private ISingleAxisSpringArmSoftZoneConfig _UpDownConfigCache;
 
-		// Token: 0x04006428 RID: 25640
+		// Token: 0x04006A16 RID: 27158
 		private bool _UpDownConfigInited;
 	}
 }

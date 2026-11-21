@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A59 RID: 6745
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BEE RID: 7150
 	[JsonConverter(typeof(IFadeBackgroundUiPrefabTypeConverter))]
 	public class IFadeBackgroundUiPrefabType
 	{
-		// Token: 0x06009066 RID: 36966 RVA: 0x001509F4 File Offset: 0x0014EBF4
+		// Token: 0x060097D0 RID: 38864 RVA: 0x00160920 File Offset: 0x0015EB20
 		private IFadeBackgroundUiPrefabType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009067 RID: 36967 RVA: 0x00150A2C File Offset: 0x0014EC2C
+		// Token: 0x060097D1 RID: 38865 RVA: 0x00160958 File Offset: 0x0015EB58
 		public static IFadeBackgroundUiPrefabType Create([Nullable(2)] IFadeBackgroundUiPrefabType instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009068 RID: 36968 RVA: 0x00150A3F File Offset: 0x0014EC3F
+		// Token: 0x060097D2 RID: 38866 RVA: 0x0016096B File Offset: 0x0015EB6B
 		public static IFadeBackgroundUiPrefabType CreateFromSetValue([Nullable(2)] IFadeBackgroundUiPrefabType_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009069 RID: 36969 RVA: 0x00150A52 File Offset: 0x0014EC52
+		// Token: 0x060097D3 RID: 38867 RVA: 0x0016097E File Offset: 0x0015EB7E
 		public IFadeBackgroundUiPrefabType_SetValue ToSetValue()
 		{
 			return new IFadeBackgroundUiPrefabType_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E03 RID: 11779
-		// (get) Token: 0x0600906A RID: 36970 RVA: 0x00150A65 File Offset: 0x0014EC65
-		// (set) Token: 0x0600906B RID: 36971 RVA: 0x00150A90 File Offset: 0x0014EC90
+		// Token: 0x17003010 RID: 12304
+		// (get) Token: 0x060097D4 RID: 38868 RVA: 0x00160991 File Offset: 0x0015EB91
+		// (set) Token: 0x060097D5 RID: 38869 RVA: 0x001609BC File Offset: 0x0015EBBC
 		public virtual EFadeBackgroundUiPrefabType Type
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400592E RID: 22830
+		// Token: 0x04005D93 RID: 23955
 		[Nullable(2)]
 		protected IFadeBackgroundUiPrefabType FbInstance;
 
-		// Token: 0x0400592F RID: 22831
+		// Token: 0x04005D94 RID: 23956
 		[Nullable(2)]
 		protected IFadeBackgroundUiPrefabType_SetValue PocoInterface;
 	}

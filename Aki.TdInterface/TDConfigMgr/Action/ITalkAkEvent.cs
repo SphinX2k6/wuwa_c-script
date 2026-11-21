@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F15 RID: 7957
+	// Token: 0x0200214E RID: 8526
 	public class ITalkAkEvent
 	{
-		// Token: 0x0600AA28 RID: 43560 RVA: 0x0017F4B0 File Offset: 0x0017D6B0
-		[NullableContext(1)]
+		// Token: 0x0600B4FA RID: 46330 RVA: 0x001954A8 File Offset: 0x001936A8
 		public static ITalkAkEvent Create([Nullable(2)] ITalkAkEvent instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0400651D RID: 25885
+		// Token: 0x04006B0C RID: 27404
 		[Nullable(2)]
 		protected ITalkAkEvent FbInstance;
 	}

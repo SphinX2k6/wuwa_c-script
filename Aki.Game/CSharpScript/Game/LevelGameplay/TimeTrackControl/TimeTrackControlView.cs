@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 {
-	// Token: 0x020069EA RID: 27114
+	// Token: 0x02005B46 RID: 23366
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TimeTrackControlView : UiTickViewBase
 	{
-		// Token: 0x06043722 RID: 276258 RVA: 0x0107B66D File Offset: 0x0107986D
+		// Token: 0x0603975E RID: 235358 RVA: 0x0101FB21 File Offset: 0x0101DD21
 		[NullableContext(1)]
 		public TimeTrackControlView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06043723 RID: 276259 RVA: 0x0107B678 File Offset: 0x01079878
+		// Token: 0x0603975F RID: 235359 RVA: 0x0101FB2C File Offset: 0x0101DD2C
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			this.BtnBindInfo = list;
 		}
 
-		// Token: 0x06043724 RID: 276260 RVA: 0x0107B794 File Offset: 0x01079994
+		// Token: 0x06039760 RID: 235360 RVA: 0x0101FC48 File Offset: 0x0101DE48
 		protected override void OnStart()
 		{
 			this.BoxWidth = 26f;
@@ -93,25 +93,25 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			});
 		}
 
-		// Token: 0x06043725 RID: 276261 RVA: 0x0107B96E File Offset: 0x01079B6E
+		// Token: 0x06039761 RID: 235361 RVA: 0x0101FE22 File Offset: 0x0101E022
 		private void InitNotches()
 		{
 			this.BaseDistance = this.BoxWidth / (float)(this.Notches + 1);
 		}
 
-		// Token: 0x06043726 RID: 276262 RVA: 0x0107B986 File Offset: 0x01079B86
+		// Token: 0x06039762 RID: 235362 RVA: 0x0101FE3A File Offset: 0x0101E03A
 		protected override void OnAfterShow()
 		{
 			EventSystem.Instance.Add(EEventName.OnTimeTrackControlUpdate, new Action<int, ErrorCode>(this.HandleInputUpdate));
 		}
 
-		// Token: 0x06043727 RID: 276263 RVA: 0x0107B9A4 File Offset: 0x01079BA4
+		// Token: 0x06039763 RID: 235363 RVA: 0x0101FE58 File Offset: 0x0101E058
 		protected override void OnAfterHide()
 		{
 			EventSystem.Instance.Remove(EEventName.OnTimeTrackControlUpdate, new Action<int, ErrorCode>(this.HandleInputUpdate));
 		}
 
-		// Token: 0x06043728 RID: 276264 RVA: 0x0107B9C2 File Offset: 0x01079BC2
+		// Token: 0x06039764 RID: 235364 RVA: 0x0101FE76 File Offset: 0x0101E076
 		protected override void OnAddEventListener()
 		{
 			if (!EventSystem.Instance.HasWithTarget(SceneTeam.Local, EEventName.CharBeHitLocal, new Action<global::HitInformation, HitContext>(this.OnCharBeHit)))
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x06043729 RID: 276265 RVA: 0x0107BA01 File Offset: 0x01079C01
+		// Token: 0x06039765 RID: 235365 RVA: 0x0101FEB5 File Offset: 0x0101E0B5
 		protected override void OnRemoveEventListener()
 		{
 			if (EventSystem.Instance.HasWithTarget(SceneTeam.Local, EEventName.CharBeHitLocal, new Action<global::HitInformation, HitContext>(this.OnCharBeHit)))
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x0604372A RID: 276266 RVA: 0x0107BA40 File Offset: 0x01079C40
+		// Token: 0x06039766 RID: 235366 RVA: 0x0101FEF4 File Offset: 0x0101E0F4
 		[NullableContext(1)]
 		private void OnCharBeHit(global::HitInformation hitData, HitContext hitContext)
 		{
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0604372B RID: 276267 RVA: 0x0107BA64 File Offset: 0x01079C64
+		// Token: 0x06039767 RID: 235367 RVA: 0x0101FF18 File Offset: 0x0101E118
 		protected override void OnBeforeDestroy()
 		{
 			LongPressButtonItem leftBtnLongPress = this.LeftBtnLongPress;
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			TimeTrackController.Instance.HandleTimeTrackControlViewClose();
 		}
 
-		// Token: 0x0604372C RID: 276268 RVA: 0x0107BAF4 File Offset: 0x01079CF4
+		// Token: 0x06039768 RID: 235368 RVA: 0x0101FFA8 File Offset: 0x0101E1A8
 		private void HandleInputUpdate(int curPoint, ErrorCode code)
 		{
 			if (code == ErrorCode.ErrTimelineMove)
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			AudioSystem.Instance.PostEvent("play_ui_com_time_loop");
 		}
 
-		// Token: 0x0604372D RID: 276269 RVA: 0x0107BB80 File Offset: 0x01079D80
+		// Token: 0x06039769 RID: 235369 RVA: 0x01020034 File Offset: 0x0101E234
 		protected override void OnTick(float deltaTime)
 		{
 			if (!this.IsInAnimated)
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			indicatorCircle.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x0604372E RID: 276270 RVA: 0x0107BBF8 File Offset: 0x01079DF8
+		// Token: 0x0603976A RID: 235370 RVA: 0x010200AC File Offset: 0x0101E2AC
 		private void FinishedAnim()
 		{
 			this.CurLength = this.TargetLength;
@@ -241,13 +241,13 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			this.HandleLockBar();
 		}
 
-		// Token: 0x0604372F RID: 276271 RVA: 0x0107BCC7 File Offset: 0x01079EC7
+		// Token: 0x0603976B RID: 235371 RVA: 0x0102017B File Offset: 0x0101E37B
 		private float GetTargetLength(int inTargetPoint)
 		{
 			return MathUtils.Instance.RangeClamp((float)inTargetPoint * this.BaseDistance, 0f, 26f, -13f, 13f);
 		}
 
-		// Token: 0x06043730 RID: 276272 RVA: 0x0107BCF0 File Offset: 0x01079EF0
+		// Token: 0x0603976C RID: 235372 RVA: 0x010201A4 File Offset: 0x0101E3A4
 		private void OnClickBackBtn()
 		{
 			TimeTrackController.Instance.HandleTimeTrackControlViewClose();
@@ -255,19 +255,19 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06043731 RID: 276273 RVA: 0x0107BD0A File Offset: 0x01079F0A
+		// Token: 0x0603976D RID: 235373 RVA: 0x010201BE File Offset: 0x0101E3BE
 		private void OnClickRightBtn()
 		{
 			this.HandleTraceControl(true);
 		}
 
-		// Token: 0x06043732 RID: 276274 RVA: 0x0107BD13 File Offset: 0x01079F13
+		// Token: 0x0603976E RID: 235374 RVA: 0x010201C7 File Offset: 0x0101E3C7
 		private void OnClickLeftBtn()
 		{
 			this.HandleTraceControl(false);
 		}
 
-		// Token: 0x06043733 RID: 276275 RVA: 0x0107BD1C File Offset: 0x01079F1C
+		// Token: 0x0603976F RID: 235375 RVA: 0x010201D0 File Offset: 0x0101E3D0
 		private void HandleTraceControl(bool inForward)
 		{
 			if (this.IsInAnimated)
@@ -292,13 +292,13 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x06043734 RID: 276276 RVA: 0x0107BD72 File Offset: 0x01079F72
+		// Token: 0x06039770 RID: 235376 RVA: 0x01020226 File Offset: 0x0101E426
 		private void HandleLockHint()
 		{
 			this.UiViewSequence.PlaySequencePurely("Shake", true, false);
 		}
 
-		// Token: 0x06043735 RID: 276277 RVA: 0x0107BD88 File Offset: 0x01079F88
+		// Token: 0x06039771 RID: 235377 RVA: 0x0102023C File Offset: 0x0101E43C
 		private void HandleLockBar()
 		{
 			int num = this.CurNotch;
@@ -333,13 +333,13 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			base.GetSprite(8).SetUIActive(false);
 		}
 
-		// Token: 0x04023320 RID: 144160
+		// Token: 0x0401E510 RID: 124176
 		private UUIItem NotchListPanel;
 
-		// Token: 0x04023321 RID: 144161
+		// Token: 0x0401E511 RID: 124177
 		private int Notches;
 
-		// Token: 0x04023322 RID: 144162
+		// Token: 0x0401E512 RID: 124178
 		[Nullable(new byte[]
 		{
 			2,
@@ -347,72 +347,72 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 		})]
 		private TimeTrackControlPoint[] ControlPoints;
 
-		// Token: 0x04023323 RID: 144163
+		// Token: 0x0401E513 RID: 124179
 		private float BoxWidth;
 
-		// Token: 0x04023324 RID: 144164
+		// Token: 0x0401E514 RID: 124180
 		private float BaseDistance;
 
-		// Token: 0x04023325 RID: 144165
+		// Token: 0x0401E515 RID: 124181
 		private int CurNotch;
 
-		// Token: 0x04023326 RID: 144166
+		// Token: 0x0401E516 RID: 124182
 		private int MaxCounts;
 
-		// Token: 0x04023327 RID: 144167
+		// Token: 0x0401E517 RID: 124183
 		private float CurLength;
 
-		// Token: 0x04023328 RID: 144168
+		// Token: 0x0401E518 RID: 124184
 		private float TargetLength;
 
-		// Token: 0x04023329 RID: 144169
+		// Token: 0x0401E519 RID: 124185
 		private float DeltaSpeed;
 
-		// Token: 0x0402332A RID: 144170
+		// Token: 0x0401E51A RID: 124186
 		private bool IsInAnimated;
 
-		// Token: 0x0402332B RID: 144171
+		// Token: 0x0401E51B RID: 124187
 		private bool IsBtnClose;
 
-		// Token: 0x0402332C RID: 144172
+		// Token: 0x0401E51C RID: 124188
 		private bool IsHitClose;
 
-		// Token: 0x0402332D RID: 144173
+		// Token: 0x0401E51D RID: 124189
 		private float SegmentTime;
 
-		// Token: 0x0402332E RID: 144174
+		// Token: 0x0401E51E RID: 124190
 		private UUIItem IndicatorCircle;
 
-		// Token: 0x0402332F RID: 144175
+		// Token: 0x0401E51F RID: 124191
 		private global::Rotator CurRotator;
 
-		// Token: 0x04023330 RID: 144176
+		// Token: 0x0401E520 RID: 124192
 		private LongPressButtonItem LeftBtnLongPress;
 
-		// Token: 0x04023331 RID: 144177
+		// Token: 0x0401E521 RID: 124193
 		private LongPressButtonItem RightBtnLongPress;
 
-		// Token: 0x0200CB50 RID: 52048
+		// Token: 0x0200B72F RID: 46895
 		[NullableContext(0)]
 		public enum ETimeTrackControlComponent
 		{
-			// Token: 0x0403D646 RID: 251462
+			// Token: 0x04038A28 RID: 231976
 			LeftBtn,
-			// Token: 0x0403D647 RID: 251463
+			// Token: 0x04038A29 RID: 231977
 			RightBtn,
-			// Token: 0x0403D648 RID: 251464
+			// Token: 0x04038A2A RID: 231978
 			LockBarL,
-			// Token: 0x0403D649 RID: 251465
+			// Token: 0x04038A2B RID: 231979
 			NotchList,
-			// Token: 0x0403D64A RID: 251466
+			// Token: 0x04038A2C RID: 231980
 			FirstNotch,
-			// Token: 0x0403D64B RID: 251467
+			// Token: 0x04038A2D RID: 231981
 			IndicatorCircle,
-			// Token: 0x0403D64C RID: 251468
+			// Token: 0x04038A2E RID: 231982
 			Indicator,
-			// Token: 0x0403D64D RID: 251469
+			// Token: 0x04038A2F RID: 231983
 			CloseBtn,
-			// Token: 0x0403D64E RID: 251470
+			// Token: 0x04038A30 RID: 231984
 			LockBarR
 		}
 	}

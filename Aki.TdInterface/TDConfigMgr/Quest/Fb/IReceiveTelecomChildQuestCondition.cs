@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001398 RID: 5016
+	// Token: 0x020014E9 RID: 5353
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IReceiveTelecomChildQuestCondition : IQuestCondition
 	{
-		// Token: 0x060072B4 RID: 29364 RVA: 0x00113B31 File Offset: 0x00111D31
-		[NullableContext(1)]
+		// Token: 0x0600795A RID: 31066 RVA: 0x001221B5 File Offset: 0x001203B5
+		[NullableContext(0)]
 		public static IReceiveTelecomChildQuestCondition Create(IReceiveTelecomChildQuestCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002557 RID: 9559
-		// (get) Token: 0x060072B5 RID: 29365 RVA: 0x00113B50 File Offset: 0x00111D50
+		// Token: 0x1700272A RID: 10026
+		// (get) Token: 0x0600795B RID: 31067 RVA: 0x001221D4 File Offset: 0x001203D4
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002558 RID: 9560
-		// (get) Token: 0x060072B6 RID: 29366 RVA: 0x00113B5D File Offset: 0x00111D5D
+		// Token: 0x1700272B RID: 10027
+		// (get) Token: 0x0600795C RID: 31068 RVA: 0x001221E1 File Offset: 0x001203E1
 		public override IConditionGroup PreConditions
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002559 RID: 9561
-		// (get) Token: 0x060072B7 RID: 29367 RVA: 0x00113B91 File Offset: 0x00111D91
+		// Token: 0x1700272C RID: 10028
+		// (get) Token: 0x0600795D RID: 31069 RVA: 0x00122215 File Offset: 0x00120415
 		public virtual int TelecomId
 		{
 			get
@@ -60,13 +60,27 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004254 RID: 16980
+		// Token: 0x1700272D RID: 10029
+		// (get) Token: 0x0600795E RID: 31070 RVA: 0x00122224 File Offset: 0x00120424
+		public virtual bool? IsAutoAnswer
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 1) == 0)
+				{
+					return null;
+				}
+				return new bool?(this.Instance.IsAutoAnswer);
+			}
+		}
+
+		// Token: 0x040045D5 RID: 17877
 		private IReceiveTelecomChildQuestCondition Instance;
 
-		// Token: 0x04004255 RID: 16981
+		// Token: 0x040045D6 RID: 17878
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004256 RID: 16982
+		// Token: 0x040045D7 RID: 17879
 		private bool _PreConditionsInited;
 	}
 }

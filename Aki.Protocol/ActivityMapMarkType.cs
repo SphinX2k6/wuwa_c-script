@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200154A RID: 5450
+	// Token: 0x020015C0 RID: 5568
 	public enum ActivityMapMarkType
 	{
-		// Token: 0x0400A578 RID: 42360
+		// Token: 0x0400A9D6 RID: 43478
 		[OriginalName("None")]
 		None,
-		// Token: 0x0400A579 RID: 42361
+		// Token: 0x0400A9D7 RID: 43479
 		[OriginalName("WithActivity")]
 		WithActivity,
-		// Token: 0x0400A57A RID: 42362
+		// Token: 0x0400A9D8 RID: 43480
 		[OriginalName("WithGuideQuest")]
 		WithGuideQuest
 	}

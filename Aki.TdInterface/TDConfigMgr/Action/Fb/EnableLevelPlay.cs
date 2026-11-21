@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200276C RID: 10092
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A3E RID: 10814
 	public class EnableLevelPlay : ActionParams
 	{
-		// Token: 0x0600E0C4 RID: 57540 RVA: 0x002136FC File Offset: 0x002118FC
+		// Token: 0x0600EEE2 RID: 61154 RVA: 0x00230490 File Offset: 0x0022E690
 		public static EnableLevelPlay Create(IEnableLevelPlay? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043AE RID: 17326
-		// (get) Token: 0x0600E0C5 RID: 57541 RVA: 0x0021371C File Offset: 0x0021191C
+		// Token: 0x17004714 RID: 18196
+		// (get) Token: 0x0600EEE3 RID: 61155 RVA: 0x002304B0 File Offset: 0x0022E6B0
 		public virtual List<IEnableLevelPlayConfig> Configs
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043AF RID: 17327
-		// (get) Token: 0x0600E0C6 RID: 57542 RVA: 0x00213788 File Offset: 0x00211988
+		// Token: 0x17004715 RID: 18197
+		// (get) Token: 0x0600EEE4 RID: 61156 RVA: 0x0023051C File Offset: 0x0022E71C
 		public virtual EPlayerType? TargetPlayer
 		{
 			get
@@ -58,13 +55,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C74 RID: 31860
+		// Token: 0x0400832A RID: 33578
 		private IEnableLevelPlay Instance;
 
-		// Token: 0x04007C75 RID: 31861
+		// Token: 0x0400832B RID: 33579
 		private List<IEnableLevelPlayConfig> _ConfigsCache;
 
-		// Token: 0x04007C76 RID: 31862
+		// Token: 0x0400832C RID: 33580
 		private bool _ConfigsInited;
 	}
 }

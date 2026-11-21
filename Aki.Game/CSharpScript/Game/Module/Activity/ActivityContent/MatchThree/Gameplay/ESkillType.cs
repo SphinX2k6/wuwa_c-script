@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064BD RID: 25789
+	// Token: 0x0200543B RID: 21563
 	public enum ESkillType
 	{
-		// Token: 0x04021B63 RID: 138083
+		// Token: 0x0401C494 RID: 115860
 		AllureSmall = 1,
-		// Token: 0x04021B64 RID: 138084
+		// Token: 0x0401C495 RID: 115861
 		AllureBig,
-		// Token: 0x04021B65 RID: 138085
+		// Token: 0x0401C496 RID: 115862
 		ChainSmall,
-		// Token: 0x04021B66 RID: 138086
+		// Token: 0x0401C497 RID: 115863
 		ChainBig
 	}
 }

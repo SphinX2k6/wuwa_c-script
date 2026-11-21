@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048A4 RID: 18596
+	// Token: 0x02004D09 RID: 19721
 	public struct IScanDirectory : IFlatbufferObject
 	{
-		// Token: 0x170086D8 RID: 34520
-		// (get) Token: 0x0601D060 RID: 118880 RVA: 0x00419704 File Offset: 0x00417904
+		// Token: 0x17008D20 RID: 36128
+		// (get) Token: 0x0601E84D RID: 125005 RVA: 0x00445EA0 File Offset: 0x004440A0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D061 RID: 118881 RVA: 0x00419711 File Offset: 0x00417911
+		// Token: 0x0601E84E RID: 125006 RVA: 0x00445EAD File Offset: 0x004440AD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D062 RID: 118882 RVA: 0x00419718 File Offset: 0x00417918
+		// Token: 0x0601E84F RID: 125007 RVA: 0x00445EB4 File Offset: 0x004440B4
 		public static IScanDirectory GetRootAsIScanDirectory(ByteBuffer _bb)
 		{
 			return IScanDirectory.GetRootAsIScanDirectory(_bb, default(IScanDirectory));
 		}
 
-		// Token: 0x0601D063 RID: 118883 RVA: 0x00419734 File Offset: 0x00417934
+		// Token: 0x0601E850 RID: 125008 RVA: 0x00445ED0 File Offset: 0x004440D0
 		public static IScanDirectory GetRootAsIScanDirectory(ByteBuffer _bb, IScanDirectory obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D064 RID: 118884 RVA: 0x00419751 File Offset: 0x00417951
+		// Token: 0x0601E851 RID: 125009 RVA: 0x00445EED File Offset: 0x004440ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D065 RID: 118885 RVA: 0x00419760 File Offset: 0x00417960
+		// Token: 0x0601E852 RID: 125010 RVA: 0x00445EFC File Offset: 0x004440FC
 		public IScanDirectory __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170086D9 RID: 34521
-		// (get) Token: 0x0601D066 RID: 118886 RVA: 0x00419770 File Offset: 0x00417970
+		// Token: 0x17008D21 RID: 36129
+		// (get) Token: 0x0601E853 RID: 125011 RVA: 0x00445F0C File Offset: 0x0044410C
 		public bool IsEnable
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x170086DA RID: 34522
-		// (get) Token: 0x0601D067 RID: 118887 RVA: 0x004197B0 File Offset: 0x004179B0
+		// Token: 0x17008D22 RID: 36130
+		// (get) Token: 0x0601E854 RID: 125012 RVA: 0x00445F4C File Offset: 0x0044414C
 		public string Path
 		{
 			get
@@ -73,19 +73,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D068 RID: 118888 RVA: 0x004197E7 File Offset: 0x004179E7
+		// Token: 0x0601E855 RID: 125013 RVA: 0x00445F83 File Offset: 0x00444183
 		public Span<byte> GetPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601D069 RID: 118889 RVA: 0x004197F6 File Offset: 0x004179F6
+		// Token: 0x0601E856 RID: 125014 RVA: 0x00445F92 File Offset: 0x00444192
 		public byte[] GetPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601D06A RID: 118890 RVA: 0x00419804 File Offset: 0x00417A04
+		// Token: 0x0601E857 RID: 125015 RVA: 0x00445FA0 File Offset: 0x004441A0
 		public static Offset<IScanDirectory> CreateIScanDirectory(FlatBufferBuilder builder, bool IsEnable = false, StringOffset PathOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -94,31 +94,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IScanDirectory.EndIScanDirectory(builder);
 		}
 
-		// Token: 0x0601D06B RID: 118891 RVA: 0x00419821 File Offset: 0x00417A21
+		// Token: 0x0601E858 RID: 125016 RVA: 0x00445FBD File Offset: 0x004441BD
 		public static void StartIScanDirectory(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601D06C RID: 118892 RVA: 0x0041982A File Offset: 0x00417A2A
+		// Token: 0x0601E859 RID: 125017 RVA: 0x00445FC6 File Offset: 0x004441C6
 		public static void AddIsEnable(FlatBufferBuilder builder, bool isEnable)
 		{
 			builder.AddBool(0, isEnable, false);
 		}
 
-		// Token: 0x0601D06D RID: 118893 RVA: 0x00419835 File Offset: 0x00417A35
+		// Token: 0x0601E85A RID: 125018 RVA: 0x00445FD1 File Offset: 0x004441D1
 		public static void AddPath(FlatBufferBuilder builder, StringOffset pathOffset)
 		{
 			builder.AddOffset(1, pathOffset.Value, 0);
 		}
 
-		// Token: 0x0601D06E RID: 118894 RVA: 0x00419845 File Offset: 0x00417A45
+		// Token: 0x0601E85B RID: 125019 RVA: 0x00445FE1 File Offset: 0x004441E1
 		public static Offset<IScanDirectory> EndIScanDirectory(FlatBufferBuilder builder)
 		{
 			return new Offset<IScanDirectory>(builder.EndTable());
 		}
 
-		// Token: 0x0601D06F RID: 118895 RVA: 0x00419854 File Offset: 0x00417A54
+		// Token: 0x0601E85C RID: 125020 RVA: 0x00445FF0 File Offset: 0x004441F0
 		public IScanDirectoryT UnPack()
 		{
 			IScanDirectoryT scanDirectoryT = new IScanDirectoryT();
@@ -126,14 +126,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return scanDirectoryT;
 		}
 
-		// Token: 0x0601D070 RID: 118896 RVA: 0x0041986F File Offset: 0x00417A6F
+		// Token: 0x0601E85D RID: 125021 RVA: 0x0044600B File Offset: 0x0044420B
 		public void UnPackTo(IScanDirectoryT _o)
 		{
 			_o.IsEnable = this.IsEnable;
 			_o.Path = this.Path;
 		}
 
-		// Token: 0x0601D071 RID: 118897 RVA: 0x0041988C File Offset: 0x00417A8C
+		// Token: 0x0601E85E RID: 125022 RVA: 0x00446028 File Offset: 0x00444228
 		public static Offset<IScanDirectory> Pack(FlatBufferBuilder builder, IScanDirectoryT _o)
 		{
 			if (_o == null)
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IScanDirectory.CreateIScanDirectory(builder, _o.IsEnable, pathOffset);
 		}
 
-		// Token: 0x0400CE90 RID: 52880
+		// Token: 0x0400D8C9 RID: 55497
 		private Table __p;
 	}
 }

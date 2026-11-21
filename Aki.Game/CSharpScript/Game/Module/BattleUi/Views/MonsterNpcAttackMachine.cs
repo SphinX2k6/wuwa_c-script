@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D4D RID: 23885
+	// Token: 0x02004D2F RID: 19759
 	public class MonsterNpcAttackMachine
 	{
-		// Token: 0x0603CA4D RID: 248397 RVA: 0x00E8DE88 File Offset: 0x00E8C088
+		// Token: 0x060319A6 RID: 203174 RVA: 0x00DDE63C File Offset: 0x00DDC83C
 		public float UpdatePercent(float delta)
 		{
 			if (this.CurrentPercent == this.TargetPercent)
@@ -26,37 +26,37 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.CurrentPercent;
 		}
 
-		// Token: 0x0603CA4E RID: 248398 RVA: 0x00E8DF18 File Offset: 0x00E8C118
+		// Token: 0x060319A7 RID: 203175 RVA: 0x00DDE6CC File Offset: 0x00DDC8CC
 		public void SetTargetPercent(float percent, float lerpTime)
 		{
 			this.TargetPercent = percent;
 			this.Duration = lerpTime;
 		}
 
-		// Token: 0x0603CA4F RID: 248399 RVA: 0x00E8DF28 File Offset: 0x00E8C128
+		// Token: 0x060319A8 RID: 203176 RVA: 0x00DDE6DC File Offset: 0x00DDC8DC
 		public bool HasUpdate()
 		{
 			return this.State == MonsterNpcAttackMachine.EState.Updated;
 		}
 
-		// Token: 0x0401F961 RID: 129377
+		// Token: 0x0401A41A RID: 107546
 		public float TargetPercent;
 
-		// Token: 0x0401F962 RID: 129378
+		// Token: 0x0401A41B RID: 107547
 		public float CurrentPercent;
 
-		// Token: 0x0401F963 RID: 129379
+		// Token: 0x0401A41C RID: 107548
 		public float Duration;
 
-		// Token: 0x0401F964 RID: 129380
+		// Token: 0x0401A41D RID: 107549
 		private MonsterNpcAttackMachine.EState State;
 
-		// Token: 0x0200BFF0 RID: 49136
+		// Token: 0x0200A9F6 RID: 43510
 		private enum EState
 		{
-			// Token: 0x04039ECE RID: 237262
+			// Token: 0x04034890 RID: 215184
 			NoUpdate,
-			// Token: 0x04039ECF RID: 237263
+			// Token: 0x04034891 RID: 215185
 			Updated
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005730 RID: 22320
+	// Token: 0x02005D37 RID: 23863
 	public struct IPhysHandleConfig : IFlatbufferObject
 	{
-		// Token: 0x1700A657 RID: 42583
-		// (get) Token: 0x060255C2 RID: 153026 RVA: 0x00527B4B File Offset: 0x00525D4B
+		// Token: 0x1700AF7B RID: 44923
+		// (get) Token: 0x06027AE2 RID: 162530 RVA: 0x0056DCD7 File Offset: 0x0056BED7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060255C3 RID: 153027 RVA: 0x00527B58 File Offset: 0x00525D58
+		// Token: 0x06027AE3 RID: 162531 RVA: 0x0056DCE4 File Offset: 0x0056BEE4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060255C4 RID: 153028 RVA: 0x00527B60 File Offset: 0x00525D60
+		// Token: 0x06027AE4 RID: 162532 RVA: 0x0056DCEC File Offset: 0x0056BEEC
 		public static IPhysHandleConfig GetRootAsIPhysHandleConfig(ByteBuffer _bb)
 		{
 			return IPhysHandleConfig.GetRootAsIPhysHandleConfig(_bb, default(IPhysHandleConfig));
 		}
 
-		// Token: 0x060255C5 RID: 153029 RVA: 0x00527B7C File Offset: 0x00525D7C
+		// Token: 0x06027AE5 RID: 162533 RVA: 0x0056DD08 File Offset: 0x0056BF08
 		public static IPhysHandleConfig GetRootAsIPhysHandleConfig(ByteBuffer _bb, IPhysHandleConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060255C6 RID: 153030 RVA: 0x00527B99 File Offset: 0x00525D99
+		// Token: 0x06027AE6 RID: 162534 RVA: 0x0056DD25 File Offset: 0x0056BF25
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060255C7 RID: 153031 RVA: 0x00527BA8 File Offset: 0x00525DA8
+		// Token: 0x06027AE7 RID: 162535 RVA: 0x0056DD34 File Offset: 0x0056BF34
 		public IPhysHandleConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A658 RID: 42584
-		// (get) Token: 0x060255C8 RID: 153032 RVA: 0x00527BB8 File Offset: 0x00525DB8
+		// Token: 0x1700AF7C RID: 44924
+		// (get) Token: 0x06027AE8 RID: 162536 RVA: 0x0056DD44 File Offset: 0x0056BF44
 		public int PhysHandleLinearDamping
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A659 RID: 42585
-		// (get) Token: 0x060255C9 RID: 153033 RVA: 0x00527BF4 File Offset: 0x00525DF4
+		// Token: 0x1700AF7D RID: 44925
+		// (get) Token: 0x06027AE9 RID: 162537 RVA: 0x0056DD80 File Offset: 0x0056BF80
 		public int PhysHandleAngularStiffness
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A65A RID: 42586
-		// (get) Token: 0x060255CA RID: 153034 RVA: 0x00527C30 File Offset: 0x00525E30
+		// Token: 0x1700AF7E RID: 44926
+		// (get) Token: 0x06027AEA RID: 162538 RVA: 0x0056DDBC File Offset: 0x0056BFBC
 		public int PhysHandleLinearStiffness
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A65B RID: 42587
-		// (get) Token: 0x060255CB RID: 153035 RVA: 0x00527C6C File Offset: 0x00525E6C
+		// Token: 0x1700AF7F RID: 44927
+		// (get) Token: 0x06027AEB RID: 162539 RVA: 0x0056DDF8 File Offset: 0x0056BFF8
 		public int PhysHandleAngularDamping
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060255CC RID: 153036 RVA: 0x00527CA9 File Offset: 0x00525EA9
+		// Token: 0x06027AEC RID: 162540 RVA: 0x0056DE35 File Offset: 0x0056C035
 		public static Offset<IPhysHandleConfig> CreateIPhysHandleConfig(FlatBufferBuilder builder, int PhysHandleLinearDamping = 0, int PhysHandleAngularStiffness = 0, int PhysHandleLinearStiffness = 0, int PhysHandleAngularDamping = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPhysHandleConfig.EndIPhysHandleConfig(builder);
 		}
 
-		// Token: 0x060255CD RID: 153037 RVA: 0x00527CD5 File Offset: 0x00525ED5
+		// Token: 0x06027AED RID: 162541 RVA: 0x0056DE61 File Offset: 0x0056C061
 		public static void StartIPhysHandleConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060255CE RID: 153038 RVA: 0x00527CDE File Offset: 0x00525EDE
+		// Token: 0x06027AEE RID: 162542 RVA: 0x0056DE6A File Offset: 0x0056C06A
 		public static void AddPhysHandleLinearDamping(FlatBufferBuilder builder, int physHandleLinearDamping)
 		{
 			builder.AddInt(0, physHandleLinearDamping, 0);
 		}
 
-		// Token: 0x060255CF RID: 153039 RVA: 0x00527CE9 File Offset: 0x00525EE9
+		// Token: 0x06027AEF RID: 162543 RVA: 0x0056DE75 File Offset: 0x0056C075
 		public static void AddPhysHandleAngularStiffness(FlatBufferBuilder builder, int physHandleAngularStiffness)
 		{
 			builder.AddInt(1, physHandleAngularStiffness, 0);
 		}
 
-		// Token: 0x060255D0 RID: 153040 RVA: 0x00527CF4 File Offset: 0x00525EF4
+		// Token: 0x06027AF0 RID: 162544 RVA: 0x0056DE80 File Offset: 0x0056C080
 		public static void AddPhysHandleLinearStiffness(FlatBufferBuilder builder, int physHandleLinearStiffness)
 		{
 			builder.AddInt(2, physHandleLinearStiffness, 0);
 		}
 
-		// Token: 0x060255D1 RID: 153041 RVA: 0x00527CFF File Offset: 0x00525EFF
+		// Token: 0x06027AF1 RID: 162545 RVA: 0x0056DE8B File Offset: 0x0056C08B
 		public static void AddPhysHandleAngularDamping(FlatBufferBuilder builder, int physHandleAngularDamping)
 		{
 			builder.AddInt(3, physHandleAngularDamping, 0);
 		}
 
-		// Token: 0x060255D2 RID: 153042 RVA: 0x00527D0A File Offset: 0x00525F0A
+		// Token: 0x06027AF2 RID: 162546 RVA: 0x0056DE96 File Offset: 0x0056C096
 		public static Offset<IPhysHandleConfig> EndIPhysHandleConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IPhysHandleConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060255D3 RID: 153043 RVA: 0x00527D18 File Offset: 0x00525F18
+		// Token: 0x06027AF3 RID: 162547 RVA: 0x0056DEA4 File Offset: 0x0056C0A4
 		public IPhysHandleConfigT UnPack()
 		{
 			IPhysHandleConfigT physHandleConfigT = new IPhysHandleConfigT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return physHandleConfigT;
 		}
 
-		// Token: 0x060255D4 RID: 153044 RVA: 0x00527D33 File Offset: 0x00525F33
+		// Token: 0x06027AF4 RID: 162548 RVA: 0x0056DEBF File Offset: 0x0056C0BF
 		public void UnPackTo(IPhysHandleConfigT _o)
 		{
 			_o.PhysHandleLinearDamping = this.PhysHandleLinearDamping;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.PhysHandleAngularDamping = this.PhysHandleAngularDamping;
 		}
 
-		// Token: 0x060255D5 RID: 153045 RVA: 0x00527D68 File Offset: 0x00525F68
+		// Token: 0x06027AF5 RID: 162549 RVA: 0x0056DEF4 File Offset: 0x0056C0F4
 		public static Offset<IPhysHandleConfig> Pack(FlatBufferBuilder builder, IPhysHandleConfigT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPhysHandleConfig.CreateIPhysHandleConfig(builder, _o.PhysHandleLinearDamping, _o.PhysHandleAngularStiffness, _o.PhysHandleLinearStiffness, _o.PhysHandleAngularDamping);
 		}
 
-		// Token: 0x0400EBAE RID: 60334
+		// Token: 0x0400F899 RID: 63641
 		private Table __p;
 	}
 }

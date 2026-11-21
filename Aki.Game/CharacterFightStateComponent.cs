@@ -2,19 +2,19 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 
-// Token: 0x0200305A RID: 12378
+// Token: 0x020025B0 RID: 9648
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterFightStateComponent : EntityComponent
 {
-	// Token: 0x0601A53A RID: 107834 RVA: 0x006FC37C File Offset: 0x006FA57C
+	// Token: 0x06017EDF RID: 98015 RVA: 0x0072333C File Offset: 0x0072153C
 	protected override bool OnStart()
 	{
 		this.UnifiedComp = base.Entity.GetComponent<CharacterUnifiedStateComponent>();
 		return true;
 	}
 
-	// Token: 0x0601A53B RID: 107835 RVA: 0x006FC390 File Offset: 0x006FA590
+	// Token: 0x06017EE0 RID: 98016 RVA: 0x00723350 File Offset: 0x00721550
 	public bool PreSwitchRemoteFightState(int fightState)
 	{
 		int state = fightState >> 8;
@@ -27,7 +27,7 @@ public class CharacterFightStateComponent : EntityComponent
 		return flag;
 	}
 
-	// Token: 0x0601A53C RID: 107836 RVA: 0x006FC3F0 File Offset: 0x006FA5F0
+	// Token: 0x06017EE1 RID: 98017 RVA: 0x007233B0 File Offset: 0x007215B0
 	public int TrySwitchHitState(EHitAnim hitAnim, bool isLocal = false)
 	{
 		if (hitAnim == EHitAnim.被破弱)
@@ -53,7 +53,7 @@ public class CharacterFightStateComponent : EntityComponent
 		return this.TrySwitchState(ECharacterFightState.BeHit, 1, isLocal);
 	}
 
-	// Token: 0x0601A53D RID: 107837 RVA: 0x006FC460 File Offset: 0x006FA660
+	// Token: 0x06017EE2 RID: 98018 RVA: 0x00723420 File Offset: 0x00721620
 	public int TrySwitchSkillState(int interruptLevel, SSkillInfo skillInfo, bool isLocal = false)
 	{
 		int num = interruptLevel;
@@ -80,7 +80,7 @@ public class CharacterFightStateComponent : EntityComponent
 		return this.TrySwitchState(ECharacterFightState.NormalSkill, num, isLocal);
 	}
 
-	// Token: 0x0601A53E RID: 107838 RVA: 0x006FC4FC File Offset: 0x006FA6FC
+	// Token: 0x06017EE3 RID: 98019 RVA: 0x007234BC File Offset: 0x007216BC
 	public bool CheckSwitchHitState(EHitAnim hitAnim, bool isLocal = false)
 	{
 		if (hitAnim == EHitAnim.被破弱)
@@ -106,7 +106,7 @@ public class CharacterFightStateComponent : EntityComponent
 		return this.CheckSwitchState(ECharacterFightState.BeHit, 1, isLocal);
 	}
 
-	// Token: 0x0601A53F RID: 107839 RVA: 0x006FC56C File Offset: 0x006FA76C
+	// Token: 0x06017EE4 RID: 98020 RVA: 0x0072352C File Offset: 0x0072172C
 	public int SwitchHitState(EHitAnim hitAnim, bool isLocal = false)
 	{
 		if (hitAnim == EHitAnim.被破弱)
@@ -132,7 +132,7 @@ public class CharacterFightStateComponent : EntityComponent
 		return this.SwitchState(ECharacterFightState.BeHit, 1, isLocal);
 	}
 
-	// Token: 0x0601A540 RID: 107840 RVA: 0x006FC5DA File Offset: 0x006FA7DA
+	// Token: 0x06017EE5 RID: 98021 RVA: 0x0072359A File Offset: 0x0072179A
 	public bool CheckSwitchState(ECharacterFightState state, int subStatePriority, bool isLocal = false)
 	{
 		if (isLocal)
@@ -142,7 +142,7 @@ public class CharacterFightStateComponent : EntityComponent
 		return !this.WaitConfirm || !this.CheckSwitchStateInternal(state, subStatePriority, this.CurrentState, this.SubStatePriority);
 	}
 
-	// Token: 0x0601A541 RID: 107841 RVA: 0x006FC615 File Offset: 0x006FA815
+	// Token: 0x06017EE6 RID: 98022 RVA: 0x007235D5 File Offset: 0x007217D5
 	private bool CheckSwitchStateInternal(ECharacterFightState curState, int curSubState, ECharacterFightState newState, int newSubState)
 	{
 		if (newState == curState)
@@ -152,7 +152,7 @@ public class CharacterFightStateComponent : EntityComponent
 		return newState > curState;
 	}
 
-	// Token: 0x0601A542 RID: 107842 RVA: 0x006FC644 File Offset: 0x006FA844
+	// Token: 0x06017EE7 RID: 98023 RVA: 0x00723604 File Offset: 0x00721804
 	public int TrySwitchState(ECharacterFightState state, int subStatePriority, bool isLocal = false)
 	{
 		if (this.CheckSwitchState(state, subStatePriority, isLocal))
@@ -174,7 +174,7 @@ public class CharacterFightStateComponent : EntityComponent
 		return 0;
 	}
 
-	// Token: 0x0601A543 RID: 107843 RVA: 0x006FC6F0 File Offset: 0x006FA8F0
+	// Token: 0x06017EE8 RID: 98024 RVA: 0x007236B0 File Offset: 0x007218B0
 	private int SwitchState(ECharacterFightState state, int subStatePriority, bool isLocal = false)
 	{
 		this.CurrentState = state;
@@ -188,7 +188,7 @@ public class CharacterFightStateComponent : EntityComponent
 		return this.CurrentHandle;
 	}
 
-	// Token: 0x0601A544 RID: 107844 RVA: 0x006FC778 File Offset: 0x006FA978
+	// Token: 0x06017EE9 RID: 98025 RVA: 0x00723738 File Offset: 0x00721938
 	public void ConfirmState(int handle)
 	{
 		if (this.CurrentHandle == handle)
@@ -208,7 +208,7 @@ public class CharacterFightStateComponent : EntityComponent
 		instance.Info(flag, entity, defaultInterpolatedStringHandler.ToStringAndClear(), default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0601A545 RID: 107845 RVA: 0x006FC7FC File Offset: 0x006FA9FC
+	// Token: 0x06017EEA RID: 98026 RVA: 0x007237BC File Offset: 0x007219BC
 	public void ResetState()
 	{
 		CombatLog instance = CombatLog.Instance;
@@ -226,7 +226,7 @@ public class CharacterFightStateComponent : EntityComponent
 		this.CurrentHandle = 0;
 	}
 
-	// Token: 0x0601A546 RID: 107846 RVA: 0x006FC880 File Offset: 0x006FAA80
+	// Token: 0x06017EEB RID: 98027 RVA: 0x00723840 File Offset: 0x00721A40
 	public void ExitState(int handle)
 	{
 		if (this.CurrentHandle == handle)
@@ -250,7 +250,7 @@ public class CharacterFightStateComponent : EntityComponent
 		instance.Info(flag, entity, defaultInterpolatedStringHandler.ToStringAndClear(), default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0601A547 RID: 107847 RVA: 0x006FC93E File Offset: 0x006FAB3E
+	// Token: 0x06017EEC RID: 98028 RVA: 0x007238FE File Offset: 0x00721AFE
 	public int GetFightState()
 	{
 		if (this.CurrentHandle == 0)
@@ -260,7 +260,7 @@ public class CharacterFightStateComponent : EntityComponent
 		return (int)((int)this.CurrentState << 8 | (ECharacterFightState)this.SubStatePriority);
 	}
 
-	// Token: 0x0601A548 RID: 107848 RVA: 0x006FC95C File Offset: 0x006FAB5C
+	// Token: 0x06017EED RID: 98029 RVA: 0x0072391C File Offset: 0x00721B1C
 	private string CurrentStateToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(9, 2);
@@ -272,13 +272,13 @@ public class CharacterFightStateComponent : EntityComponent
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0601A549 RID: 107849 RVA: 0x006FC9C4 File Offset: 0x006FABC4
+	// Token: 0x06017EEE RID: 98030 RVA: 0x00723984 File Offset: 0x00721B84
 	private string TargetStateToString(int state, int subState)
 	{
 		return "[目标状态：" + this.FightStateToString(state, subState) + "]";
 	}
 
-	// Token: 0x0601A54A RID: 107850 RVA: 0x006FC9E0 File Offset: 0x006FABE0
+	// Token: 0x06017EEF RID: 98031 RVA: 0x007239A0 File Offset: 0x00721BA0
 	private string FightStateToString(int state, int subState)
 	{
 		string result = "";
@@ -398,7 +398,7 @@ public class CharacterFightStateComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601A54B RID: 107851 RVA: 0x006FCD0C File Offset: 0x006FAF0C
+	// Token: 0x06017EF0 RID: 98032 RVA: 0x00723CCC File Offset: 0x00721ECC
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -406,63 +406,52 @@ public class CharacterFightStateComponent : EntityComponent
 			return false;
 		}
 		CharacterFightStateComponent characterFightStateComponent = (CharacterFightStateComponent)componentTemplate;
-		if (base.CanResetComponentProperty("IncId"))
+		this.IncId = characterFightStateComponent.IncId;
+		if (characterFightStateComponent.UnifiedComp == null)
 		{
-			this.IncId = characterFightStateComponent.IncId;
+			this.UnifiedComp = null;
 		}
-		if (base.CanResetComponentProperty("UnifiedComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedComp), "UnifiedComp"))
 		{
-			if (characterFightStateComponent.UnifiedComp == null)
-			{
-				this.UnifiedComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedComp), "UnifiedComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CurrentState"))
-		{
-			this.CurrentState = characterFightStateComponent.CurrentState;
-		}
-		if (base.CanResetComponentProperty("SubStatePriority"))
-		{
-			this.SubStatePriority = characterFightStateComponent.SubStatePriority;
-		}
-		if (base.CanResetComponentProperty("IsLocal"))
-		{
-			this.IsLocal = characterFightStateComponent.IsLocal;
-		}
-		if (base.CanResetComponentProperty("WaitConfirm"))
-		{
-			this.WaitConfirm = characterFightStateComponent.WaitConfirm;
-		}
-		if (base.CanResetComponentProperty("CurrentHandle"))
-		{
-			this.CurrentHandle = characterFightStateComponent.CurrentHandle;
-		}
+		this.CurrentState = characterFightStateComponent.CurrentState;
+		this.SubStatePriority = characterFightStateComponent.SubStatePriority;
+		this.IsLocal = characterFightStateComponent.IsLocal;
+		this.WaitConfirm = characterFightStateComponent.WaitConfirm;
+		this.CurrentHandle = characterFightStateComponent.CurrentHandle;
 		return true;
 	}
 
-	// Token: 0x0400C8D8 RID: 51416
+	// Token: 0x17002565 RID: 9573
+	// (get) Token: 0x06017EF1 RID: 98033 RVA: 0x00723D5F File Offset: 0x00721F5F
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CCB2 RID: 52402
 	private int IncId;
 
-	// Token: 0x0400C8D9 RID: 51417
+	// Token: 0x0400CCB3 RID: 52403
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent UnifiedComp;
 
-	// Token: 0x0400C8DA RID: 51418
+	// Token: 0x0400CCB4 RID: 52404
 	public ECharacterFightState CurrentState;
 
-	// Token: 0x0400C8DB RID: 51419
+	// Token: 0x0400CCB5 RID: 52405
 	public int SubStatePriority;
 
-	// Token: 0x0400C8DC RID: 51420
+	// Token: 0x0400CCB6 RID: 52406
 	public bool IsLocal;
 
-	// Token: 0x0400C8DD RID: 51421
+	// Token: 0x0400CCB7 RID: 52407
 	public bool WaitConfirm;
 
-	// Token: 0x0400C8DE RID: 51422
+	// Token: 0x0400CCB8 RID: 52408
 	public int CurrentHandle;
 }

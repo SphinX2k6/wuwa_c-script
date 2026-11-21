@@ -8,7 +8,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class Application : Singleton
 {
-	// Token: 0x06000032 RID: 50 RVA: 0x00003B0C File Offset: 0x00001D0C
+	// Token: 0x06000032 RID: 50 RVA: 0x0000371C File Offset: 0x0000191C
 	public void Initialize()
 	{
 		if (this.IsInit)
@@ -24,7 +24,7 @@ public class Application : Singleton
 		UKuroApplicationLibrary.AddWindowActivationDelegate(fwindowActivation);
 	}
 
-	// Token: 0x06000033 RID: 51 RVA: 0x00003B78 File Offset: 0x00001D78
+	// Token: 0x06000033 RID: 51 RVA: 0x00003788 File Offset: 0x00001988
 	private void OnApplicationLifetimeDelegate(int type)
 	{
 		if (!this.HandleMap.ContainsKey((EApplicationLifetimeDelegate)type))
@@ -37,7 +37,7 @@ public class Application : Singleton
 		}
 	}
 
-	// Token: 0x06000034 RID: 52 RVA: 0x00003BE0 File Offset: 0x00001DE0
+	// Token: 0x06000034 RID: 52 RVA: 0x000037F0 File Offset: 0x000019F0
 	private void OnEditorPreEndPIEDelegate(bool bSimulateInEditor)
 	{
 		foreach (Action action in this.EditorHandleSet)
@@ -46,7 +46,7 @@ public class Application : Singleton
 		}
 	}
 
-	// Token: 0x06000035 RID: 53 RVA: 0x00003C30 File Offset: 0x00001E30
+	// Token: 0x06000035 RID: 53 RVA: 0x00003840 File Offset: 0x00001A40
 	public void Destroy()
 	{
 		if (!this.IsInit)
@@ -63,7 +63,7 @@ public class Application : Singleton
 		this.IsInit = false;
 	}
 
-	// Token: 0x06000036 RID: 54 RVA: 0x00003CA8 File Offset: 0x00001EA8
+	// Token: 0x06000036 RID: 54 RVA: 0x000038B8 File Offset: 0x00001AB8
 	private void OnWindowActivationDelegate(bool bIsActive)
 	{
 		bool? windowIsActive = this.WindowIsActive;
@@ -77,7 +77,7 @@ public class Application : Singleton
 		}
 	}
 
-	// Token: 0x06000037 RID: 55 RVA: 0x00003D20 File Offset: 0x00001F20
+	// Token: 0x06000037 RID: 55 RVA: 0x00003930 File Offset: 0x00001B30
 	public void AddApplicationHandler(EApplicationLifetimeDelegate e, Action handler)
 	{
 		if (!this.HandleMap.ContainsKey(e))
@@ -87,7 +87,7 @@ public class Application : Singleton
 		this.HandleMap[e].Add(handler);
 	}
 
-	// Token: 0x06000038 RID: 56 RVA: 0x00003D54 File Offset: 0x00001F54
+	// Token: 0x06000038 RID: 56 RVA: 0x00003964 File Offset: 0x00001B64
 	public void RemoveApplicationHandler(EApplicationLifetimeDelegate type, Action handler)
 	{
 		if (!this.HandleMap.ContainsKey(type))
@@ -97,44 +97,44 @@ public class Application : Singleton
 		this.HandleMap[type].Remove(handler);
 	}
 
-	// Token: 0x06000039 RID: 57 RVA: 0x00003D78 File Offset: 0x00001F78
+	// Token: 0x06000039 RID: 57 RVA: 0x00003988 File Offset: 0x00001B88
 	public void AddEditorPreEndPIEHandler(Action handler)
 	{
 		this.EditorHandleSet.Add(handler);
 	}
 
-	// Token: 0x0600003A RID: 58 RVA: 0x00003D87 File Offset: 0x00001F87
+	// Token: 0x0600003A RID: 58 RVA: 0x00003997 File Offset: 0x00001B97
 	public void RemoveEditorPreEndPIEHandler(Action handler)
 	{
 		this.EditorHandleSet.Remove(handler);
 	}
 
-	// Token: 0x0600003B RID: 59 RVA: 0x00003D96 File Offset: 0x00001F96
+	// Token: 0x0600003B RID: 59 RVA: 0x000039A6 File Offset: 0x00001BA6
 	public void AddWindowActivationHandler(Action<bool> handler)
 	{
 		this.WindowActivationHandleSet.Add(handler);
 	}
 
-	// Token: 0x0600003C RID: 60 RVA: 0x00003DA5 File Offset: 0x00001FA5
+	// Token: 0x0600003C RID: 60 RVA: 0x000039B5 File Offset: 0x00001BB5
 	public void RemoveWindowActivationHandler(Action<bool> handler)
 	{
 		this.WindowActivationHandleSet.Remove(handler);
 	}
 
-	// Token: 0x0600003D RID: 61 RVA: 0x00003DB4 File Offset: 0x00001FB4
+	// Token: 0x0600003D RID: 61 RVA: 0x000039C4 File Offset: 0x00001BC4
 	public bool? GetWindowActivationState()
 	{
 		return this.WindowIsActive;
 	}
 
-	// Token: 0x0600003E RID: 62 RVA: 0x00003DBC File Offset: 0x00001FBC
+	// Token: 0x0600003E RID: 62 RVA: 0x000039CC File Offset: 0x00001BCC
 	public bool IsPublicationApp()
 	{
 		return this.GmSimulatePublication || UKuroLauncherLibrary.GetAppInternalUseType() == "Publication";
 	}
 
 	// Token: 0x17000006 RID: 6
-	// (get) Token: 0x0600003F RID: 63 RVA: 0x00003DD7 File Offset: 0x00001FD7
+	// (get) Token: 0x0600003F RID: 63 RVA: 0x000039E7 File Offset: 0x00001BE7
 	public static Application Instance
 	{
 		get
@@ -148,12 +148,12 @@ public class Application : Singleton
 		}
 	}
 
-	// Token: 0x06000040 RID: 64 RVA: 0x00003DFA File Offset: 0x00001FFA
+	// Token: 0x06000040 RID: 64 RVA: 0x00003A0A File Offset: 0x00001C0A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06000041 RID: 65 RVA: 0x00003DFC File Offset: 0x00001FFC
+	// Token: 0x06000041 RID: 65 RVA: 0x00003A0C File Offset: 0x00001C0C
 	public static void ResetStaticDefaultValue()
 	{
 		Application instance = Application._instance;
@@ -164,7 +164,7 @@ public class Application : Singleton
 		Application._instance = null;
 	}
 
-	// Token: 0x06000042 RID: 66 RVA: 0x00003E15 File Offset: 0x00002015
+	// Token: 0x06000042 RID: 66 RVA: 0x00003A25 File Offset: 0x00001C25
 	static Application()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(Application.CreateStaticDefaultValue), new Action(Application.ResetStaticDefaultValue));

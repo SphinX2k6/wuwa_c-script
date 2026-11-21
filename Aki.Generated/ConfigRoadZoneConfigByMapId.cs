@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200081A RID: 2074
+	// Token: 0x02000836 RID: 2102
 	public class ConfigRoadZoneConfigByMapId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060030AE RID: 12462 RVA: 0x0016C71F File Offset: 0x0016A91F
+		// Token: 0x06003156 RID: 12630 RVA: 0x00173A07 File Offset: 0x00171C07
 		static ConfigRoadZoneConfigByMapId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoadZoneConfigByMapId.CreateStaticDefaultValue), new Action(ConfigRoadZoneConfigByMapId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060030AF RID: 12463 RVA: 0x0016C740 File Offset: 0x0016A940
+		// Token: 0x06003157 RID: 12631 RVA: 0x00173A28 File Offset: 0x00171C28
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoadZoneConfigByMapId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060030B0 RID: 12464 RVA: 0x0016C7BF File Offset: 0x0016A9BF
+		// Token: 0x06003158 RID: 12632 RVA: 0x00173AA7 File Offset: 0x00171CA7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoadZoneConfigByMapId.LogPair = null;
 			ConfigRoadZoneConfigByMapId.HandleId = 0;
 		}
 
-		// Token: 0x060030B1 RID: 12465 RVA: 0x0016C7CD File Offset: 0x0016A9CD
+		// Token: 0x06003159 RID: 12633 RVA: 0x00173AB5 File Offset: 0x00171CB5
 		public static void Init()
 		{
 			ConfigRoadZoneConfigByMapId.HandleId = ConfigCommon.InitDataStatement(ConfigRoadZoneConfigByMapId.HandleId, "db_roadzoneconfig.db", "select BinData from `RoadZoneConfig` where MapId=?");
 		}
 
-		// Token: 0x060030B2 RID: 12466 RVA: 0x0016C7E8 File Offset: 0x0016A9E8
+		// Token: 0x0600315A RID: 12634 RVA: 0x00173AD0 File Offset: 0x00171CD0
 		public static RoadZoneConfig? GetConfig(int p0MapId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoadZoneConfigByMapId.HandleId, ConfigRoadZoneConfigByMapId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoadZoneConfig?(rootAsRoadZoneConfig);
 		}
 
-		// Token: 0x0400389C RID: 14492
+		// Token: 0x04003960 RID: 14688
 		private const string DB = "db_roadzoneconfig.db";
 
-		// Token: 0x0400389D RID: 14493
+		// Token: 0x04003961 RID: 14689
 		private const string FILE = "UniverseEditor/LevelPlay/RoadZoneConfig.csv";
 
-		// Token: 0x0400389E RID: 14494
+		// Token: 0x04003962 RID: 14690
 		private const string TABLE = "RoadZoneConfig";
 
-		// Token: 0x0400389F RID: 14495
+		// Token: 0x04003963 RID: 14691
 		private const string COMMAND = "select BinData from `RoadZoneConfig` where MapId=?";
 
-		// Token: 0x040038A0 RID: 14496
+		// Token: 0x04003964 RID: 14692
 		private const string KEY_PREFIX = "RoadZoneConfigByMapId";
 
-		// Token: 0x040038A1 RID: 14497
+		// Token: 0x04003965 RID: 14693
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040038A2 RID: 14498
+		// Token: 0x04003966 RID: 14694
 		private static int HandleId;
 	}
 }

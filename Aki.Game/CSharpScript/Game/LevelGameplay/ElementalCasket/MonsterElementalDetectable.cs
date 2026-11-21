@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E7A RID: 28282
+	// Token: 0x02005FFB RID: 24571
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MonsterElementalDetectable
 	{
-		// Token: 0x06044ED4 RID: 282324 RVA: 0x011069C8 File Offset: 0x01104BC8
+		// Token: 0x0603B07A RID: 241786 RVA: 0x010B0FC4 File Offset: 0x010AF1C4
 		public bool Init(Entity entity)
 		{
 			if (!entity.IsInit)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044ED5 RID: 282325 RVA: 0x01106B48 File Offset: 0x01104D48
+		// Token: 0x0603B07B RID: 241787 RVA: 0x010B1144 File Offset: 0x010AF344
 		public void Clear(Entity entity)
 		{
 			if (this.ImmuneTagListenTask != null)
@@ -93,13 +93,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044ED6 RID: 282326 RVA: 0x01106BD8 File Offset: 0x01104DD8
+		// Token: 0x0603B07C RID: 241788 RVA: 0x010B11D4 File Offset: 0x010AF3D4
 		public EElementalType GetElementalType()
 		{
 			return this.ElementalType;
 		}
 
-		// Token: 0x06044ED7 RID: 282327 RVA: 0x01106BE0 File Offset: 0x01104DE0
+		// Token: 0x0603B07D RID: 241789 RVA: 0x010B11DC File Offset: 0x010AF3DC
 		private void RefreshImmuneFieldReaction(bool enable)
 		{
 			if (this.EntityId == 0)
@@ -114,29 +114,29 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			ElementalCasketController.Instance.StopImmuneFieldReaction(this.EntityId);
 		}
 
-		// Token: 0x06044ED8 RID: 282328 RVA: 0x01106C0F File Offset: 0x01104E0F
+		// Token: 0x0603B07E RID: 241790 RVA: 0x010B120B File Offset: 0x010AF40B
 		private void ImmuneTagListenTaskCallback(int tagId, bool bTagExists)
 		{
 			this.RefreshImmuneFieldReaction(bTagExists);
 		}
 
-		// Token: 0x06044ED9 RID: 282329 RVA: 0x01106C18 File Offset: 0x01104E18
+		// Token: 0x0603B07F RID: 241791 RVA: 0x010B1214 File Offset: 0x010AF414
 		private void OnMonsterDead()
 		{
 			ElementalCasketController.Instance.UnregisterDetectable(this.EntityId);
 		}
 
-		// Token: 0x04023E3B RID: 147003
+		// Token: 0x0401F0F3 RID: 127219
 		private readonly EElementalType ElementalType = EElementalType.Water;
 
-		// Token: 0x04023E3C RID: 147004
+		// Token: 0x0401F0F4 RID: 127220
 		private int EntityId;
 
-		// Token: 0x04023E3D RID: 147005
+		// Token: 0x0401F0F5 RID: 127221
 		[Nullable(2)]
 		private ITagTask ImmuneTagListenTask;
 
-		// Token: 0x04023E3E RID: 147006
+		// Token: 0x0401F0F6 RID: 127222
 		[Nullable(2)]
 		private UKuroFastCollisionShapeComponent OwnedShape;
 	}

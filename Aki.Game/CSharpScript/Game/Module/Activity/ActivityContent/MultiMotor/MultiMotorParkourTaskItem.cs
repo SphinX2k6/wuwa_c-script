@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
@@ -8,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x0200639C RID: 25500
+	// Token: 0x0200531A RID: 21274
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 	})]
 	public class MultiMotorParkourTaskItem : GridProxyAbstract<MultiMotorTaskData>
 	{
-		// Token: 0x06040228 RID: 262696 RVA: 0x00F86B0C File Offset: 0x00F84D0C
+		// Token: 0x06034EE9 RID: 216809 RVA: 0x00ECDA48 File Offset: 0x00ECBC48
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -46,17 +45,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040229 RID: 262697 RVA: 0x00F86C36 File Offset: 0x00F84E36
+		// Token: 0x06034EEA RID: 216810 RVA: 0x00ECDB72 File Offset: 0x00ECBD72
 		protected override void OnStart()
 		{
 			this.RewardScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(2), new Func<CommonItemSmallItemGrid>(this.CreatePropItem), null, false, null);
 		}
 
-		// Token: 0x0604022A RID: 262698 RVA: 0x00F86C5C File Offset: 0x00F84E5C
+		// Token: 0x06034EEB RID: 216811 RVA: 0x00ECDB98 File Offset: 0x00ECBD98
 		public override void Refresh(MultiMotorTaskData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
-			this.RewardScrollView.RefreshByData(data.RewardList.ToList<TItem>(), null, false);
+			this.RewardScrollView.RefreshByData(data.RewardList, null, false);
 			base.GetText(0).SetText(data.DescString, true);
 			UUIText text = base.GetText(1);
 			if (text != null)
@@ -81,23 +80,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			text2.SetUIActive(data.IsRunning);
 		}
 
-		// Token: 0x0604022B RID: 262699 RVA: 0x00F86D02 File Offset: 0x00F84F02
+		// Token: 0x06034EEC RID: 216812 RVA: 0x00ECDC39 File Offset: 0x00ECBE39
 		private CommonItemSmallItemGrid CreatePropItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0604022C RID: 262700 RVA: 0x00F86D09 File Offset: 0x00F84F09
+		// Token: 0x06034EED RID: 216813 RVA: 0x00ECDC40 File Offset: 0x00ECBE40
 		private void OnClickGetButton()
 		{
 			MultiMotorController.Instance.MotorOnlineRewardRequest(this.Data.LevelId);
 		}
 
-		// Token: 0x040216AA RID: 136874
+		// Token: 0x0401BFD9 RID: 114649
 		[Nullable(2)]
 		private MultiMotorTaskData Data;
 
-		// Token: 0x040216AB RID: 136875
+		// Token: 0x0401BFDA RID: 114650
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,26 +104,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-		// Token: 0x0200C5B5 RID: 50613
+		// Token: 0x0200AF9C RID: 44956
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BB13 RID: 244499
+			// Token: 0x04036472 RID: 222322
 			public const int TxtName = 0;
 
-			// Token: 0x0403BB14 RID: 244500
+			// Token: 0x04036473 RID: 222323
 			public const int ProgressText = 1;
 
-			// Token: 0x0403BB15 RID: 244501
+			// Token: 0x04036474 RID: 222324
 			public const int RewardScroll = 2;
 
-			// Token: 0x0403BB16 RID: 244502
+			// Token: 0x04036475 RID: 222325
 			public const int GetBtn = 3;
 
-			// Token: 0x0403BB17 RID: 244503
+			// Token: 0x04036476 RID: 222326
 			public const int DoingText = 4;
 
-			// Token: 0x0403BB18 RID: 244504
+			// Token: 0x04036477 RID: 222327
 			public const int PanelDone = 5;
 		}
 	}

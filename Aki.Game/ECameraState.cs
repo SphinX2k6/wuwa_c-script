@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02003047 RID: 12359
+// Token: 0x0200259D RID: 9629
 public enum ECameraState
 {
-	// Token: 0x0400C7BA RID: 51130
+	// Token: 0x0400CB94 RID: 52116
 	Disable,
-	// Token: 0x0400C7BB RID: 51131
+	// Token: 0x0400CB95 RID: 52117
 	Forward,
-	// Token: 0x0400C7BC RID: 51132
+	// Token: 0x0400CB96 RID: 52118
 	BackWard
 }

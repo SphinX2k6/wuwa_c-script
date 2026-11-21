@@ -10,19 +10,19 @@ using CSharpScript.Game.Module.BattleUi.Views;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001A69 RID: 6761
+// Token: 0x02000F28 RID: 3880
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoWorldQuestItem
 {
-	// Token: 0x0600C706 RID: 50950 RVA: 0x002D49E2 File Offset: 0x002D2BE2
+	// Token: 0x06009B16 RID: 39702 RVA: 0x002DFADA File Offset: 0x002DDCDA
 	public void Init(UUIScrollViewWithScrollbarComponent scroller, UUIItem item)
 	{
 		this.GoalLayout = new GenericScrollViewNew<DangoAbyssGoalItem, GoalPanelData>(scroller, new Func<DangoAbyssGoalItem>(this.InitGoalGrid), null, false, null);
 		this.AddEvents();
 	}
 
-	// Token: 0x0600C707 RID: 50951 RVA: 0x002D4A08 File Offset: 0x002D2C08
+	// Token: 0x06009B17 RID: 39703 RVA: 0x002DFB00 File Offset: 0x002DDD00
 	public void AddEvents()
 	{
 		EventSystem.Instance.Add<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
@@ -33,7 +33,7 @@ public class DangoWorldQuestItem
 		EventSystem.Instance.Add<BtType, long?>(EEventName.OnLogicTreeTrackUpdate, new Action<BtType, long?>(this.OnQuestChanged));
 	}
 
-	// Token: 0x0600C708 RID: 50952 RVA: 0x002D4AC0 File Offset: 0x002D2CC0
+	// Token: 0x06009B18 RID: 39704 RVA: 0x002DFBB8 File Offset: 0x002DDDB8
 	public void RemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
@@ -44,61 +44,61 @@ public class DangoWorldQuestItem
 		EventSystem.Instance.Remove(EEventName.OnLogicTreeTrackUpdate, new Action<BtType, long?>(this.OnQuestChanged));
 	}
 
-	// Token: 0x0600C709 RID: 50953 RVA: 0x002D4B75 File Offset: 0x002D2D75
+	// Token: 0x06009B19 RID: 39705 RVA: 0x002DFC6D File Offset: 0x002DDE6D
 	private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 	{
 		this.RefreshGoalLayout();
 	}
 
-	// Token: 0x0600C70A RID: 50954 RVA: 0x002D4B7D File Offset: 0x002D2D7D
+	// Token: 0x06009B1A RID: 39706 RVA: 0x002DFC75 File Offset: 0x002DDE75
 	private void OnStepConditionIndexChange(EMissionItemView eMissionItemView, int i, int? arg3)
 	{
 		this.RefreshGoalLayout();
 	}
 
-	// Token: 0x0600C70B RID: 50955 RVA: 0x002D4B85 File Offset: 0x002D2D85
+	// Token: 0x06009B1B RID: 39707 RVA: 0x002DFC7D File Offset: 0x002DDE7D
 	private void BehaviorTreeStartShow(BehaviorTreeViewShowData showBridge, ETreeTextExpressReason eTreeTextExpressReason, bool arg3)
 	{
 		this.RefreshGoalLayout();
 	}
 
-	// Token: 0x0600C70C RID: 50956 RVA: 0x002D4B8D File Offset: 0x002D2D8D
+	// Token: 0x06009B1C RID: 39708 RVA: 0x002DFC85 File Offset: 0x002DDE85
 	private void BehaviorTreeEndShow(long treeIncId, ETreeTextExpressReason reason, bool _)
 	{
 		this.RefreshGoalLayout();
 	}
 
-	// Token: 0x0600C70D RID: 50957 RVA: 0x002D4B95 File Offset: 0x002D2D95
+	// Token: 0x06009B1D RID: 39709 RVA: 0x002DFC8D File Offset: 0x002DDE8D
 	private void OnLogicTreeUpdateShow(BehaviorTreeViewShowData showData, bool bSkipAnim)
 	{
 		this.RefreshGoalLayout();
 	}
 
-	// Token: 0x0600C70E RID: 50958 RVA: 0x002D4B9D File Offset: 0x002D2D9D
+	// Token: 0x06009B1E RID: 39710 RVA: 0x002DFC95 File Offset: 0x002DDE95
 	private void OnQuestChanged(BtType _1, long? _2)
 	{
 		this.RefreshGoalLayout();
 	}
 
-	// Token: 0x0600C70F RID: 50959 RVA: 0x002D4BA5 File Offset: 0x002D2DA5
+	// Token: 0x06009B1F RID: 39711 RVA: 0x002DFC9D File Offset: 0x002DDE9D
 	public void Clear()
 	{
 		this.RemoveEvents();
 	}
 
-	// Token: 0x0600C710 RID: 50960 RVA: 0x002D4BAD File Offset: 0x002D2DAD
+	// Token: 0x06009B20 RID: 39712 RVA: 0x002DFCA5 File Offset: 0x002DDEA5
 	private DangoAbyssGoalItem InitGoalGrid()
 	{
 		return new DangoAbyssGoalItem();
 	}
 
-	// Token: 0x0600C711 RID: 50961 RVA: 0x002D4BB4 File Offset: 0x002D2DB4
+	// Token: 0x06009B21 RID: 39713 RVA: 0x002DFCAC File Offset: 0x002DDEAC
 	public void Refresh()
 	{
 		this.RefreshGoalLayout();
 	}
 
-	// Token: 0x0600C712 RID: 50962 RVA: 0x002D4BBC File Offset: 0x002D2DBC
+	// Token: 0x06009B22 RID: 39714 RVA: 0x002DFCB4 File Offset: 0x002DDEB4
 	private void RefreshGoalLayout()
 	{
 		global::Quest curTrackedQuest = QuestNewModel.Instance.GetCurTrackedQuest();
@@ -164,7 +164,7 @@ public class DangoWorldQuestItem
 		this.GoalLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600C713 RID: 50963 RVA: 0x002D4E20 File Offset: 0x002D3020
+	// Token: 0x06009B23 RID: 39715 RVA: 0x002DFF18 File Offset: 0x002DE118
 	private int GetNeedTraceQuestId()
 	{
 		List<global::Quest> questsByTypeAndSubType = QuestNewModel.Instance.GetQuestsByTypeAndSubType(10, 1);
@@ -183,7 +183,7 @@ public class DangoWorldQuestItem
 		return 0;
 	}
 
-	// Token: 0x0600C714 RID: 50964 RVA: 0x002D4EA8 File Offset: 0x002D30A8
+	// Token: 0x06009B24 RID: 39716 RVA: 0x002DFFA0 File Offset: 0x002DE1A0
 	public void Tick()
 	{
 		int needTraceQuestId = this.GetNeedTraceQuestId();
@@ -211,10 +211,10 @@ public class DangoWorldQuestItem
 		EventSystem.Instance.Emit<BtType, long?>(EEventName.OnLogicTreeTrackUpdate, quest.Tree.BtType, new long?(quest.Tree.TreeIncId));
 	}
 
-	// Token: 0x04005BAF RID: 23471
+	// Token: 0x04005C7E RID: 23678
 	private int CurrentTraceQuestId;
 
-	// Token: 0x04005BB0 RID: 23472
+	// Token: 0x04005C7F RID: 23679
 	[Nullable(new byte[]
 	{
 		2,

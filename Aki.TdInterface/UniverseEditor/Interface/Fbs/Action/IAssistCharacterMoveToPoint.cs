@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006197 RID: 24983
+	// Token: 0x02006802 RID: 26626
 	public struct IAssistCharacterMoveToPoint : IFlatbufferObject
 	{
-		// Token: 0x1700BA3A RID: 47674
-		// (get) Token: 0x0602B07A RID: 176250 RVA: 0x005EF636 File Offset: 0x005ED836
+		// Token: 0x1700C3B8 RID: 50104
+		// (get) Token: 0x0602D7AB RID: 186283 RVA: 0x00639EAA File Offset: 0x006380AA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B07B RID: 176251 RVA: 0x005EF643 File Offset: 0x005ED843
+		// Token: 0x0602D7AC RID: 186284 RVA: 0x00639EB7 File Offset: 0x006380B7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B07C RID: 176252 RVA: 0x005EF64C File Offset: 0x005ED84C
+		// Token: 0x0602D7AD RID: 186285 RVA: 0x00639EC0 File Offset: 0x006380C0
 		public static IAssistCharacterMoveToPoint GetRootAsIAssistCharacterMoveToPoint(ByteBuffer _bb)
 		{
 			return IAssistCharacterMoveToPoint.GetRootAsIAssistCharacterMoveToPoint(_bb, default(IAssistCharacterMoveToPoint));
 		}
 
-		// Token: 0x0602B07D RID: 176253 RVA: 0x005EF668 File Offset: 0x005ED868
+		// Token: 0x0602D7AE RID: 186286 RVA: 0x00639EDC File Offset: 0x006380DC
 		public static IAssistCharacterMoveToPoint GetRootAsIAssistCharacterMoveToPoint(ByteBuffer _bb, IAssistCharacterMoveToPoint obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B07E RID: 176254 RVA: 0x005EF685 File Offset: 0x005ED885
+		// Token: 0x0602D7AF RID: 186287 RVA: 0x00639EF9 File Offset: 0x006380F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B07F RID: 176255 RVA: 0x005EF694 File Offset: 0x005ED894
+		// Token: 0x0602D7B0 RID: 186288 RVA: 0x00639F08 File Offset: 0x00638108
 		public IAssistCharacterMoveToPoint __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BA3B RID: 47675
-		// (get) Token: 0x0602B080 RID: 176256 RVA: 0x005EF6A4 File Offset: 0x005ED8A4
+		// Token: 0x1700C3B9 RID: 50105
+		// (get) Token: 0x0602D7B1 RID: 186289 RVA: 0x00639F18 File Offset: 0x00638118
 		public EExecClientBattleActionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BA3C RID: 47676
-		// (get) Token: 0x0602B081 RID: 176257 RVA: 0x005EF6E0 File Offset: 0x005ED8E0
+		// Token: 0x1700C3BA RID: 50106
+		// (get) Token: 0x0602D7B2 RID: 186290 RVA: 0x00639F54 File Offset: 0x00638154
 		public int AssistCharacterId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BA3D RID: 47677
-		// (get) Token: 0x0602B082 RID: 176258 RVA: 0x005EF71C File Offset: 0x005ED91C
+		// Token: 0x1700C3BB RID: 50107
+		// (get) Token: 0x0602D7B3 RID: 186291 RVA: 0x00639F90 File Offset: 0x00638190
 		public TAssistCharacterMoveType MoveTypeType
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B083 RID: 176259 RVA: 0x005EF758 File Offset: 0x005ED958
+		// Token: 0x0602D7B4 RID: 186292 RVA: 0x00639FCC File Offset: 0x006381CC
 		public TTable? MoveType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -103,19 +103,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602B084 RID: 176260 RVA: 0x005EF7A0 File Offset: 0x005ED9A0
+		// Token: 0x0602D7B5 RID: 186293 RVA: 0x0063A014 File Offset: 0x00638214
 		public IAssistCharacterNavigationMove MoveTypeAsIAssistCharacterNavigationMove()
 		{
 			return this.MoveType<IAssistCharacterNavigationMove>().Value;
 		}
 
-		// Token: 0x0602B085 RID: 176261 RVA: 0x005EF7BC File Offset: 0x005ED9BC
+		// Token: 0x0602D7B6 RID: 186294 RVA: 0x0063A030 File Offset: 0x00638230
 		public IAssistCharacterSplineMove MoveTypeAsIAssistCharacterSplineMove()
 		{
 			return this.MoveType<IAssistCharacterSplineMove>().Value;
 		}
 
-		// Token: 0x0602B086 RID: 176262 RVA: 0x005EF7D7 File Offset: 0x005ED9D7
+		// Token: 0x0602D7B7 RID: 186295 RVA: 0x0063A04B File Offset: 0x0063824B
 		public static Offset<IAssistCharacterMoveToPoint> CreateIAssistCharacterMoveToPoint(FlatBufferBuilder builder, EExecClientBattleActionType Type = EExecClientBattleActionType.SendTagEventToControlCharacter, int AssistCharacterId = 0, TAssistCharacterMoveType MoveType_type = TAssistCharacterMoveType.NONE, int MoveTypeOffset = 0)
 		{
 			builder.StartTable(4);
@@ -126,43 +126,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAssistCharacterMoveToPoint.EndIAssistCharacterMoveToPoint(builder);
 		}
 
-		// Token: 0x0602B087 RID: 176263 RVA: 0x005EF803 File Offset: 0x005EDA03
+		// Token: 0x0602D7B8 RID: 186296 RVA: 0x0063A077 File Offset: 0x00638277
 		public static void StartIAssistCharacterMoveToPoint(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602B088 RID: 176264 RVA: 0x005EF80C File Offset: 0x005EDA0C
+		// Token: 0x0602D7B9 RID: 186297 RVA: 0x0063A080 File Offset: 0x00638280
 		public static void AddType(FlatBufferBuilder builder, EExecClientBattleActionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602B089 RID: 176265 RVA: 0x005EF817 File Offset: 0x005EDA17
+		// Token: 0x0602D7BA RID: 186298 RVA: 0x0063A08B File Offset: 0x0063828B
 		public static void AddAssistCharacterId(FlatBufferBuilder builder, int assistCharacterId)
 		{
 			builder.AddInt(1, assistCharacterId, 0);
 		}
 
-		// Token: 0x0602B08A RID: 176266 RVA: 0x005EF822 File Offset: 0x005EDA22
+		// Token: 0x0602D7BB RID: 186299 RVA: 0x0063A096 File Offset: 0x00638296
 		public static void AddMoveTypeType(FlatBufferBuilder builder, TAssistCharacterMoveType moveTypeType)
 		{
 			builder.AddByte(2, (byte)moveTypeType, 0);
 		}
 
-		// Token: 0x0602B08B RID: 176267 RVA: 0x005EF82D File Offset: 0x005EDA2D
+		// Token: 0x0602D7BC RID: 186300 RVA: 0x0063A0A1 File Offset: 0x006382A1
 		public static void AddMoveType(FlatBufferBuilder builder, int moveTypeOffset)
 		{
 			builder.AddOffset(3, moveTypeOffset, 0);
 		}
 
-		// Token: 0x0602B08C RID: 176268 RVA: 0x005EF838 File Offset: 0x005EDA38
+		// Token: 0x0602D7BD RID: 186301 RVA: 0x0063A0AC File Offset: 0x006382AC
 		public static Offset<IAssistCharacterMoveToPoint> EndIAssistCharacterMoveToPoint(FlatBufferBuilder builder)
 		{
 			return new Offset<IAssistCharacterMoveToPoint>(builder.EndTable());
 		}
 
-		// Token: 0x0602B08D RID: 176269 RVA: 0x005EF848 File Offset: 0x005EDA48
+		// Token: 0x0602D7BE RID: 186302 RVA: 0x0063A0BC File Offset: 0x006382BC
 		public IAssistCharacterMoveToPointT UnPack()
 		{
 			IAssistCharacterMoveToPointT assistCharacterMoveToPointT = new IAssistCharacterMoveToPointT();
@@ -170,7 +170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return assistCharacterMoveToPointT;
 		}
 
-		// Token: 0x0602B08E RID: 176270 RVA: 0x005EF864 File Offset: 0x005EDA64
+		// Token: 0x0602D7BF RID: 186303 RVA: 0x0063A0D8 File Offset: 0x006382D8
 		public void UnPackTo(IAssistCharacterMoveToPointT _o)
 		{
 			_o.Type = this.Type;
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.MoveType.Value = ((this.MoveType<IAssistCharacterSplineMove>() != null) ? this.MoveType<IAssistCharacterSplineMove>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0602B08F RID: 176271 RVA: 0x005EF920 File Offset: 0x005EDB20
+		// Token: 0x0602D7C0 RID: 186304 RVA: 0x0063A194 File Offset: 0x00638394
 		public static Offset<IAssistCharacterMoveToPoint> Pack(FlatBufferBuilder builder, IAssistCharacterMoveToPointT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAssistCharacterMoveToPoint.CreateIAssistCharacterMoveToPoint(builder, _o.Type, _o.AssistCharacterId, moveType_type, moveTypeOffset);
 		}
 
-		// Token: 0x040106A6 RID: 67238
+		// Token: 0x040114B5 RID: 70837
 		private Table __p;
 	}
 }

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000DD2 RID: 3538
+	// Token: 0x02000DC2 RID: 3522
 	[NetMessage(EMessageId.PreheatSignSurveyInfoResponse)]
 	public sealed class PreheatSignSurveyInfoResponse : IMessage<PreheatSignSurveyInfoResponse>, IMessage, IEquatable<PreheatSignSurveyInfoResponse>, IDeepCloneable<PreheatSignSurveyInfoResponse>, IBufferMessage
 	{
-		// Token: 0x060130B7 RID: 78007 RVA: 0x002C68AD File Offset: 0x002C4AAD
+		// Token: 0x06012FD2 RID: 77778 RVA: 0x002C51ED File Offset: 0x002C33ED
 		[NullableContext(1)]
 		public static PreheatSignSurveyInfoResponse Create()
 		{
 			return new PreheatSignSurveyInfoResponse();
 		}
 
-		// Token: 0x17003F31 RID: 16177
-		// (get) Token: 0x060130B8 RID: 78008 RVA: 0x002C68B4 File Offset: 0x002C4AB4
+		// Token: 0x17003F07 RID: 16135
+		// (get) Token: 0x06012FD3 RID: 77779 RVA: 0x002C51F4 File Offset: 0x002C33F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003F32 RID: 16178
-		// (get) Token: 0x060130B9 RID: 78009 RVA: 0x002C68B7 File Offset: 0x002C4AB7
+		// Token: 0x17003F08 RID: 16136
+		// (get) Token: 0x06012FD4 RID: 77780 RVA: 0x002C51F7 File Offset: 0x002C33F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060130BA RID: 78010 RVA: 0x002C68BE File Offset: 0x002C4ABE
+		// Token: 0x06012FD5 RID: 77781 RVA: 0x002C51FE File Offset: 0x002C33FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PreheatSignSurveyInfoResponse()
 		{
 		}
 
-		// Token: 0x060130BB RID: 78011 RVA: 0x002C68C8 File Offset: 0x002C4AC8
+		// Token: 0x06012FD6 RID: 77782 RVA: 0x002C5208 File Offset: 0x002C3408
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PreheatSignSurveyInfoResponse(PreheatSignSurveyInfoResponse other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060130BC RID: 78012 RVA: 0x002C6914 File Offset: 0x002C4B14
+		// Token: 0x06012FD7 RID: 77783 RVA: 0x002C5254 File Offset: 0x002C3454
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PreheatSignSurveyInfoResponse Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new PreheatSignSurveyInfoResponse(this);
 		}
 
-		// Token: 0x17003F33 RID: 16179
-		// (get) Token: 0x060130BD RID: 78013 RVA: 0x002C691C File Offset: 0x002C4B1C
-		// (set) Token: 0x060130BE RID: 78014 RVA: 0x002C6924 File Offset: 0x002C4B24
+		// Token: 0x17003F09 RID: 16137
+		// (get) Token: 0x06012FD8 RID: 77784 RVA: 0x002C525C File Offset: 0x002C345C
+		// (set) Token: 0x06012FD9 RID: 77785 RVA: 0x002C5264 File Offset: 0x002C3464
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PreheatSignSurveyInfo PreheatSignSurveyInfo
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003F34 RID: 16180
-		// (get) Token: 0x060130BF RID: 78015 RVA: 0x002C692D File Offset: 0x002C4B2D
-		// (set) Token: 0x060130C0 RID: 78016 RVA: 0x002C6935 File Offset: 0x002C4B35
+		// Token: 0x17003F0A RID: 16138
+		// (get) Token: 0x06012FDA RID: 77786 RVA: 0x002C526D File Offset: 0x002C346D
+		// (set) Token: 0x06012FDB RID: 77787 RVA: 0x002C5275 File Offset: 0x002C3475
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode Error
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060130C1 RID: 78017 RVA: 0x002C693E File Offset: 0x002C4B3E
+		// Token: 0x06012FDC RID: 77788 RVA: 0x002C527E File Offset: 0x002C347E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PreheatSignSurveyInfoResponse);
 		}
 
-		// Token: 0x060130C2 RID: 78018 RVA: 0x002C694C File Offset: 0x002C4B4C
+		// Token: 0x06012FDD RID: 77789 RVA: 0x002C528C File Offset: 0x002C348C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PreheatSignSurveyInfoResponse other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.PreheatSignSurveyInfo, other.PreheatSignSurveyInfo) && this.Error == other.Error && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060130C3 RID: 78019 RVA: 0x002C699C File Offset: 0x002C4B9C
+		// Token: 0x06012FDE RID: 77790 RVA: 0x002C52DC File Offset: 0x002C34DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060130C4 RID: 78020 RVA: 0x002C69F7 File Offset: 0x002C4BF7
+		// Token: 0x06012FDF RID: 77791 RVA: 0x002C5337 File Offset: 0x002C3537
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060130C5 RID: 78021 RVA: 0x002C6A04 File Offset: 0x002C4C04
+		// Token: 0x06012FE0 RID: 77792 RVA: 0x002C5344 File Offset: 0x002C3544
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060130C6 RID: 78022 RVA: 0x002C6A10 File Offset: 0x002C4C10
+		// Token: 0x06012FE1 RID: 77793 RVA: 0x002C5350 File Offset: 0x002C3550
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.preheatSignSurveyInfo_ != null)
-			{
-				output.WriteRawTag(26);
-				output.WriteMessage(this.PreheatSignSurveyInfo);
-			}
 			if (this.Error != ErrorCode.Success)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(8);
 				output.WriteEnum((int)this.Error);
+			}
+			if (this.preheatSignSurveyInfo_ != null)
+			{
+				output.WriteRawTag(90);
+				output.WriteMessage(this.PreheatSignSurveyInfo);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060130C7 RID: 78023 RVA: 0x002C6A6C File Offset: 0x002C4C6C
+		// Token: 0x06012FE2 RID: 77794 RVA: 0x002C53A8 File Offset: 0x002C35A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060130C8 RID: 78024 RVA: 0x002C6AC4 File Offset: 0x002C4CC4
+		// Token: 0x06012FE3 RID: 77795 RVA: 0x002C5400 File Offset: 0x002C3600
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PreheatSignSurveyInfoResponse other)
@@ -220,7 +220,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060130C9 RID: 78025 RVA: 0x002C6B2C File Offset: 0x002C4D2C
+		// Token: 0x06012FE4 RID: 77796 RVA: 0x002C5468 File Offset: 0x002C3668
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060130CA RID: 78026 RVA: 0x002C6B38 File Offset: 0x002C4D38
+		// Token: 0x06012FE5 RID: 77797 RVA: 0x002C5474 File Offset: 0x002C3674
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -240,41 +240,41 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 26U)
+				if (num != 8U)
 				{
-					if (num != 80U)
+					if (num != 90U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.Error = (ErrorCode)input.ReadEnum();
+						if (this.preheatSignSurveyInfo_ == null)
+						{
+							this.PreheatSignSurveyInfo = new PreheatSignSurveyInfo();
+						}
+						input.ReadMessage(this.PreheatSignSurveyInfo);
 					}
 				}
 				else
 				{
-					if (this.preheatSignSurveyInfo_ == null)
-					{
-						this.PreheatSignSurveyInfo = new PreheatSignSurveyInfo();
-					}
-					input.ReadMessage(this.PreheatSignSurveyInfo);
+					this.Error = (ErrorCode)input.ReadEnum();
 				}
 			}
 		}
 
-		// Token: 0x0400758C RID: 30092
+		// Token: 0x040075B6 RID: 30134
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400758D RID: 30093
-		public const int PreheatSignSurveyInfoFieldNumber = 3;
+		// Token: 0x040075B7 RID: 30135
+		public const int PreheatSignSurveyInfoFieldNumber = 11;
 
-		// Token: 0x0400758E RID: 30094
+		// Token: 0x040075B8 RID: 30136
 		private PreheatSignSurveyInfo preheatSignSurveyInfo_;
 
-		// Token: 0x0400758F RID: 30095
-		public const int ErrorFieldNumber = 10;
+		// Token: 0x040075B9 RID: 30137
+		public const int ErrorFieldNumber = 1;
 
-		// Token: 0x04007590 RID: 30096
+		// Token: 0x040075BA RID: 30138
 		private ErrorCode error_;
 	}
 }

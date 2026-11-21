@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200284E RID: 10318
+// Token: 0x02001DC9 RID: 7625
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 {
-	// Token: 0x0601545F RID: 87135 RVA: 0x0055F7B0 File Offset: 0x0055D9B0
+	// Token: 0x06012E5D RID: 77405 RVA: 0x0058A50C File Offset: 0x0058870C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		};
 	}
 
-	// Token: 0x06015460 RID: 87136 RVA: 0x0055F8A0 File Offset: 0x0055DAA0
+	// Token: 0x06012E5E RID: 77406 RVA: 0x0058A5FC File Offset: 0x005887FC
 	protected override void OnStart()
 	{
 		this.Toggle = base.GetExtendToggle(4);
@@ -46,7 +46,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		button.RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x06015461 RID: 87137 RVA: 0x0055F8E5 File Offset: 0x0055DAE5
+	// Token: 0x06012E5F RID: 77407 RVA: 0x0058A641 File Offset: 0x00588841
 	[NullableContext(1)]
 	public override void Refresh(RoleFavorContentDataBase data, bool isSelected, int gridIndex)
 	{
@@ -56,7 +56,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		this.RefreshContentItem();
 	}
 
-	// Token: 0x06015462 RID: 87138 RVA: 0x0055F904 File Offset: 0x0055DB04
+	// Token: 0x06012E60 RID: 77408 RVA: 0x0058A660 File Offset: 0x00588860
 	public void RefreshContentItem()
 	{
 		switch (this.ContentData.FavorContentType)
@@ -89,21 +89,21 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		}
 	}
 
-	// Token: 0x06015463 RID: 87139 RVA: 0x0055F97B File Offset: 0x0055DB7B
+	// Token: 0x06012E61 RID: 77409 RVA: 0x0058A6D7 File Offset: 0x005888D7
 	[NullableContext(1)]
 	public void BindToggleFunction(TRoleFavorContentItemToggleFunction toggleFunction)
 	{
 		this.ToggleFunction = toggleFunction;
 	}
 
-	// Token: 0x06015464 RID: 87140 RVA: 0x0055F984 File Offset: 0x0055DB84
+	// Token: 0x06012E62 RID: 77410 RVA: 0x0058A6E0 File Offset: 0x005888E0
 	[NullableContext(1)]
 	public void BindButtonFunction(TRoleFavorContentItemButtonFunction buttonFunction)
 	{
 		this.ButtonFunction = buttonFunction;
 	}
 
-	// Token: 0x06015465 RID: 87141 RVA: 0x0055F990 File Offset: 0x0055DB90
+	// Token: 0x06012E63 RID: 77411 RVA: 0x0058A6EC File Offset: 0x005888EC
 	private void OnToggleClick(EToggleState state)
 	{
 		if (this.ToggleFunction != null)
@@ -118,7 +118,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		}
 	}
 
-	// Token: 0x06015466 RID: 87142 RVA: 0x0055F9DC File Offset: 0x0055DBDC
+	// Token: 0x06012E64 RID: 77412 RVA: 0x0058A738 File Offset: 0x00588938
 	private void OnButtonClick()
 	{
 		if (this.ButtonFunction != null)
@@ -127,7 +127,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		}
 	}
 
-	// Token: 0x06015467 RID: 87143 RVA: 0x0055F9F8 File Offset: 0x0055DBF8
+	// Token: 0x06012E65 RID: 77413 RVA: 0x0058A754 File Offset: 0x00588954
 	private void InitRoleBaseInfo()
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(3), "FavorBaseInfo", Array.Empty<object>());
@@ -140,7 +140,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		this.FavorItemStatus = new EFavorItemStatus?(EFavorItemStatus.ItemUnLocked);
 	}
 
-	// Token: 0x06015468 RID: 87144 RVA: 0x0055FA48 File Offset: 0x0055DC48
+	// Token: 0x06012E66 RID: 77414 RVA: 0x0058A7A4 File Offset: 0x005889A4
 	private void InitRolePowerFile()
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(3), "FavorPowerFile", Array.Empty<object>());
@@ -153,7 +153,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		this.FavorItemStatus = new EFavorItemStatus?(EFavorItemStatus.ItemUnLocked);
 	}
 
-	// Token: 0x06015469 RID: 87145 RVA: 0x0055FA98 File Offset: 0x0055DC98
+	// Token: 0x06012E67 RID: 77415 RVA: 0x0058A7F4 File Offset: 0x005889F4
 	private void InitExperienceInfo()
 	{
 		RoleFavorRoleInfoContentData roleFavorRoleInfoContentData = this.ContentData as RoleFavorRoleInfoContentData;
@@ -176,7 +176,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		this.InitRoleExperience();
 	}
 
-	// Token: 0x0601546A RID: 87146 RVA: 0x0055FAE0 File Offset: 0x0055DCE0
+	// Token: 0x06012E68 RID: 77416 RVA: 0x0058A83C File Offset: 0x00588A3C
 	private void InitRoleExperience()
 	{
 		RoleFavorStoryContentData roleFavorStoryContentData = this.ContentData as RoleFavorStoryContentData;
@@ -193,7 +193,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0601546B RID: 87147 RVA: 0x0055FB24 File Offset: 0x0055DD24
+	// Token: 0x06012E69 RID: 77417 RVA: 0x0058A880 File Offset: 0x00588A80
 	private void InitActionInfo()
 	{
 		RoleFavorActionContentData roleFavorActionContentData = this.ContentData as RoleFavorActionContentData;
@@ -215,7 +215,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0601546C RID: 87148 RVA: 0x0055FB84 File Offset: 0x0055DD84
+	// Token: 0x06012E6A RID: 77418 RVA: 0x0058A8E0 File Offset: 0x00588AE0
 	private void InitVoiceInfo()
 	{
 		RoleFavorVoiceContentData roleFavorVoiceContentData = this.ContentData as RoleFavorVoiceContentData;
@@ -239,7 +239,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0601546D RID: 87149 RVA: 0x0055FBF0 File Offset: 0x0055DDF0
+	// Token: 0x06012E6B RID: 77419 RVA: 0x0058A94C File Offset: 0x00588B4C
 	private void InitPreciousItem()
 	{
 		RoleFavorPreciousItemContentData roleFavorPreciousItemContentData = this.ContentData as RoleFavorPreciousItemContentData;
@@ -260,7 +260,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0601546E RID: 87150 RVA: 0x0055FC54 File Offset: 0x0055DE54
+	// Token: 0x06012E6C RID: 77420 RVA: 0x0058A9B0 File Offset: 0x00588BB0
 	private void InitMontageCompletedFunction()
 	{
 		if (this.OnMontageCompleted == null)
@@ -276,7 +276,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		}
 	}
 
-	// Token: 0x0601546F RID: 87151 RVA: 0x0055FC70 File Offset: 0x0055DE70
+	// Token: 0x06012E6D RID: 77421 RVA: 0x0058A9CC File Offset: 0x00588BCC
 	private void InitAudioCompletedFunction()
 	{
 		if (this.CloseAudioDelegate == null)
@@ -285,7 +285,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		}
 	}
 
-	// Token: 0x06015470 RID: 87152 RVA: 0x0055FC94 File Offset: 0x0055DE94
+	// Token: 0x06012E6E RID: 77422 RVA: 0x0058A9F0 File Offset: 0x00588BF0
 	protected override void OnBeforeDestroy()
 	{
 		this.ContentData = null;
@@ -306,7 +306,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		}
 	}
 
-	// Token: 0x06015471 RID: 87153 RVA: 0x0055FD08 File Offset: 0x0055DF08
+	// Token: 0x06012E6F RID: 77423 RVA: 0x0058AA64 File Offset: 0x00588C64
 	private void InitLockState()
 	{
 		EFavorContentType favorContentType = this.ContentData.FavorContentType;
@@ -337,7 +337,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		}
 	}
 
-	// Token: 0x06015472 RID: 87154 RVA: 0x0055FDC5 File Offset: 0x0055DFC5
+	// Token: 0x06012E70 RID: 77424 RVA: 0x0058AB21 File Offset: 0x00588D21
 	public void SetLockItemActive(bool active)
 	{
 		UUIItem item = base.GetItem(0);
@@ -358,7 +358,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		item3.SetUIActive(false);
 	}
 
-	// Token: 0x06015473 RID: 87155 RVA: 0x0055FE00 File Offset: 0x0055E000
+	// Token: 0x06012E71 RID: 77425 RVA: 0x0058AB5C File Offset: 0x00588D5C
 	private void SetPlayerState(EFavorPlayerStatus playerStatus)
 	{
 		if (this.ContentData == null)
@@ -395,13 +395,13 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		item3.SetUIActive(playerStatus == EFavorPlayerStatus.Stop);
 	}
 
-	// Token: 0x06015474 RID: 87156 RVA: 0x0055FE8D File Offset: 0x0055E08D
+	// Token: 0x06012E72 RID: 77426 RVA: 0x0058ABE9 File Offset: 0x00588DE9
 	public EFavorPlayerStatus GetCurVoiceState()
 	{
 		return this.CurPlayerStatus;
 	}
 
-	// Token: 0x06015475 RID: 87157 RVA: 0x0055FE95 File Offset: 0x0055E095
+	// Token: 0x06012E73 RID: 77427 RVA: 0x0058ABF1 File Offset: 0x00588DF1
 	public void EndPlayDelegate(EAkCallbackType type, UAkCallbackInfo info)
 	{
 		if (type == EAkCallbackType.EndOfEvent)
@@ -410,19 +410,19 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		}
 	}
 
-	// Token: 0x06015476 RID: 87158 RVA: 0x0055FEA0 File Offset: 0x0055E0A0
+	// Token: 0x06012E74 RID: 77428 RVA: 0x0058ABFC File Offset: 0x00588DFC
 	public void EndPlay()
 	{
 		this.SetPlayerState(EFavorPlayerStatus.Stop);
 	}
 
-	// Token: 0x06015477 RID: 87159 RVA: 0x0055FEA9 File Offset: 0x0055E0A9
+	// Token: 0x06012E75 RID: 77429 RVA: 0x0058AC05 File Offset: 0x00588E05
 	public void StartPlay()
 	{
 		this.SetPlayerState(EFavorPlayerStatus.Play);
 	}
 
-	// Token: 0x06015478 RID: 87160 RVA: 0x0055FEB2 File Offset: 0x0055E0B2
+	// Token: 0x06012E76 RID: 77430 RVA: 0x0058AC0E File Offset: 0x00588E0E
 	public void SetToggleState(EToggleState state)
 	{
 		if (this.Toggle != null)
@@ -431,7 +431,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		}
 	}
 
-	// Token: 0x06015479 RID: 87161 RVA: 0x0055FECC File Offset: 0x0055E0CC
+	// Token: 0x06012E77 RID: 77431 RVA: 0x0058AC28 File Offset: 0x00588E28
 	public void SetButtonActive(bool active)
 	{
 		if (this.Button != null)
@@ -440,7 +440,7 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		}
 	}
 
-	// Token: 0x0601547A RID: 87162 RVA: 0x0055FEFC File Offset: 0x0055E0FC
+	// Token: 0x06012E78 RID: 77432 RVA: 0x0058AC58 File Offset: 0x00588E58
 	private void RefreshRedDot()
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(this.ContentData.RoleId);
@@ -466,51 +466,51 @@ public class RoleFavorContentItem : GridProxyAbstract<RoleFavorContentDataBase>
 		item.SetUIActive(efavorItemStatus == EFavorItemStatus.ItemCanUnLock);
 	}
 
-	// Token: 0x04009ED3 RID: 40659
+	// Token: 0x0400A2BC RID: 41660
 	public RoleFavorContentDataBase ContentData;
 
-	// Token: 0x04009ED4 RID: 40660
+	// Token: 0x0400A2BD RID: 41661
 	private UUIExtendToggle Toggle;
 
-	// Token: 0x04009ED5 RID: 40661
+	// Token: 0x0400A2BE RID: 41662
 	private UUIButtonComponent Button;
 
-	// Token: 0x04009ED6 RID: 40662
+	// Token: 0x0400A2BF RID: 41663
 	private TRoleFavorContentItemToggleFunction ToggleFunction;
 
-	// Token: 0x04009ED7 RID: 40663
+	// Token: 0x0400A2C0 RID: 41664
 	private TRoleFavorContentItemButtonFunction ButtonFunction;
 
-	// Token: 0x04009ED8 RID: 40664
+	// Token: 0x0400A2C1 RID: 41665
 	private EFavorPlayerStatus CurPlayerStatus = EFavorPlayerStatus.Stop;
 
-	// Token: 0x04009ED9 RID: 40665
+	// Token: 0x0400A2C2 RID: 41666
 	private EFavorItemStatus? FavorItemStatus;
 
-	// Token: 0x04009EDA RID: 40666
+	// Token: 0x0400A2C3 RID: 41667
 	[Nullable(1)]
 	public FOnAkPostEventCallback CloseAudioDelegate;
 
-	// Token: 0x04009EDB RID: 40667
+	// Token: 0x0400A2C4 RID: 41668
 	public Action<UAnimMontage, bool> OnMontageCompleted;
 
-	// Token: 0x02008E85 RID: 36485
+	// Token: 0x020080CB RID: 32971
 	[NullableContext(0)]
 	private enum ERoleFavorContentItemDefine
 	{
-		// Token: 0x0402E391 RID: 189329
+		// Token: 0x04029A8B RID: 170635
 		LockItem,
-		// Token: 0x0402E392 RID: 189330
+		// Token: 0x04029A8C RID: 170636
 		PlayVoiceItem,
-		// Token: 0x0402E393 RID: 189331
+		// Token: 0x04029A8D RID: 170637
 		StopVoiceItem,
-		// Token: 0x0402E394 RID: 189332
+		// Token: 0x04029A8E RID: 170638
 		TitleText,
-		// Token: 0x0402E395 RID: 189333
+		// Token: 0x04029A8F RID: 170639
 		Toggle,
-		// Token: 0x0402E396 RID: 189334
+		// Token: 0x04029A90 RID: 170640
 		RedDot,
-		// Token: 0x0402E397 RID: 189335
+		// Token: 0x04029A91 RID: 170641
 		Button
 	}
 }

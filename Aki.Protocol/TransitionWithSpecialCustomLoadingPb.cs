@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001400 RID: 5120
+	// Token: 0x02001473 RID: 5235
 	public sealed class TransitionWithSpecialCustomLoadingPb : IMessage<TransitionWithSpecialCustomLoadingPb>, IMessage, IEquatable<TransitionWithSpecialCustomLoadingPb>, IDeepCloneable<TransitionWithSpecialCustomLoadingPb>, IBufferMessage
 	{
-		// Token: 0x0601B23B RID: 111163 RVA: 0x003EEBBC File Offset: 0x003ECDBC
+		// Token: 0x0601BCC6 RID: 113862 RVA: 0x00409E90 File Offset: 0x00408090
 		[NullableContext(1)]
 		public static TransitionWithSpecialCustomLoadingPb Create()
 		{
 			return new TransitionWithSpecialCustomLoadingPb();
 		}
 
-		// Token: 0x17005B82 RID: 23426
-		// (get) Token: 0x0601B23C RID: 111164 RVA: 0x003EEBC3 File Offset: 0x003ECDC3
+		// Token: 0x17005E17 RID: 24087
+		// (get) Token: 0x0601BCC7 RID: 113863 RVA: 0x00409E97 File Offset: 0x00408097
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B83 RID: 23427
-		// (get) Token: 0x0601B23D RID: 111165 RVA: 0x003EEBC6 File Offset: 0x003ECDC6
+		// Token: 0x17005E18 RID: 24088
+		// (get) Token: 0x0601BCC8 RID: 113864 RVA: 0x00409E9A File Offset: 0x0040809A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B23E RID: 111166 RVA: 0x003EEBCD File Offset: 0x003ECDCD
+		// Token: 0x0601BCC9 RID: 113865 RVA: 0x00409EA1 File Offset: 0x004080A1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionWithSpecialCustomLoadingPb()
 		{
 		}
 
-		// Token: 0x0601B23F RID: 111167 RVA: 0x003EEBD5 File Offset: 0x003ECDD5
+		// Token: 0x0601BCCA RID: 113866 RVA: 0x00409EA9 File Offset: 0x004080A9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionWithSpecialCustomLoadingPb(TransitionWithSpecialCustomLoadingPb other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B240 RID: 111168 RVA: 0x003EEC08 File Offset: 0x003ECE08
+		// Token: 0x0601BCCB RID: 113867 RVA: 0x00409EDC File Offset: 0x004080DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionWithSpecialCustomLoadingPb Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new TransitionWithSpecialCustomLoadingPb(this);
 		}
 
-		// Token: 0x17005B84 RID: 23428
-		// (get) Token: 0x0601B241 RID: 111169 RVA: 0x003EEC10 File Offset: 0x003ECE10
-		// (set) Token: 0x0601B242 RID: 111170 RVA: 0x003EEC28 File Offset: 0x003ECE28
+		// Token: 0x17005E19 RID: 24089
+		// (get) Token: 0x0601BCCC RID: 113868 RVA: 0x00409EE4 File Offset: 0x004080E4
+		// (set) Token: 0x0601BCCD RID: 113869 RVA: 0x00409EFC File Offset: 0x004080FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HonamiStoryCustomLoadingPb HonamiStoryCustomLoadingPb
@@ -90,8 +90,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B85 RID: 23429
-		// (get) Token: 0x0601B243 RID: 111171 RVA: 0x003EEC3E File Offset: 0x003ECE3E
+		// Token: 0x17005E1A RID: 24090
+		// (get) Token: 0x0601BCCE RID: 113870 RVA: 0x00409F12 File Offset: 0x00408112
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionWithSpecialCustomLoadingPb.LoadingTypeOneofCase LoadingTypeCase
@@ -102,7 +102,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B244 RID: 111172 RVA: 0x003EEC46 File Offset: 0x003ECE46
+		// Token: 0x0601BCCF RID: 113871 RVA: 0x00409F1A File Offset: 0x0040811A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearLoadingType()
@@ -111,7 +111,7 @@ namespace Aki.Protocol
 			this.loadingType_ = null;
 		}
 
-		// Token: 0x0601B245 RID: 111173 RVA: 0x003EEC56 File Offset: 0x003ECE56
+		// Token: 0x0601BCD0 RID: 113872 RVA: 0x00409F2A File Offset: 0x0040812A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -119,7 +119,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TransitionWithSpecialCustomLoadingPb);
 		}
 
-		// Token: 0x0601B246 RID: 111174 RVA: 0x003EEC64 File Offset: 0x003ECE64
+		// Token: 0x0601BCD1 RID: 113873 RVA: 0x00409F38 File Offset: 0x00408138
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TransitionWithSpecialCustomLoadingPb other)
@@ -127,7 +127,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.HonamiStoryCustomLoadingPb, other.HonamiStoryCustomLoadingPb) && this.LoadingTypeCase == other.LoadingTypeCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601B247 RID: 111175 RVA: 0x003EECB4 File Offset: 0x003ECEB4
+		// Token: 0x0601BCD2 RID: 113874 RVA: 0x00409F88 File Offset: 0x00408188
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B248 RID: 111176 RVA: 0x003EECFA File Offset: 0x003ECEFA
+		// Token: 0x0601BCD3 RID: 113875 RVA: 0x00409FCE File Offset: 0x004081CE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B249 RID: 111177 RVA: 0x003EED07 File Offset: 0x003ECF07
+		// Token: 0x0601BCD4 RID: 113876 RVA: 0x00409FDB File Offset: 0x004081DB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B24A RID: 111178 RVA: 0x003EED10 File Offset: 0x003ECF10
+		// Token: 0x0601BCD5 RID: 113877 RVA: 0x00409FE4 File Offset: 0x004081E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -177,7 +177,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B24B RID: 111179 RVA: 0x003EED44 File Offset: 0x003ECF44
+		// Token: 0x0601BCD6 RID: 113878 RVA: 0x0040A018 File Offset: 0x00408218
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -194,7 +194,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B24C RID: 111180 RVA: 0x003EED84 File Offset: 0x003ECF84
+		// Token: 0x0601BCD7 RID: 113879 RVA: 0x0040A058 File Offset: 0x00408258
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TransitionWithSpecialCustomLoadingPb other)
@@ -214,7 +214,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B24D RID: 111181 RVA: 0x003EEDD9 File Offset: 0x003ECFD9
+		// Token: 0x0601BCD8 RID: 113880 RVA: 0x0040A0AD File Offset: 0x004082AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -222,7 +222,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B24E RID: 111182 RVA: 0x003EEDE4 File Offset: 0x003ECFE4
+		// Token: 0x0601BCD9 RID: 113881 RVA: 0x0040A0B8 File Offset: 0x004082B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -251,24 +251,24 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009D01 RID: 40193
+		// Token: 0x0400A148 RID: 41288
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009D02 RID: 40194
+		// Token: 0x0400A149 RID: 41289
 		public const int HonamiStoryCustomLoadingPbFieldNumber = 1;
 
-		// Token: 0x04009D03 RID: 40195
+		// Token: 0x0400A14A RID: 41290
 		private object loadingType_;
 
-		// Token: 0x04009D04 RID: 40196
+		// Token: 0x0400A14B RID: 41291
 		private TransitionWithSpecialCustomLoadingPb.LoadingTypeOneofCase loadingTypeCase_;
 
-		// Token: 0x020019D3 RID: 6611
+		// Token: 0x02001A75 RID: 6773
 		public enum LoadingTypeOneofCase
 		{
-			// Token: 0x0400CA98 RID: 51864
+			// Token: 0x0400D003 RID: 53251
 			None,
-			// Token: 0x0400CA99 RID: 51865
+			// Token: 0x0400D004 RID: 53252
 			HonamiStoryCustomLoadingPb
 		}
 	}

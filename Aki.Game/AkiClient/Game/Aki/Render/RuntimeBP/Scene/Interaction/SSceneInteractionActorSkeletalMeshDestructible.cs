@@ -7,22 +7,22 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 {
-	// Token: 0x02003B45 RID: 15173
+	// Token: 0x020030BF RID: 12479
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Scene/Interaction/SSceneInteractionActorSkeletalmeshDestructible.SSceneInteractionActorSkeletalMeshDestructible")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 72)]
 	public class SSceneInteractionActorSkeletalMeshDestructible : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602194F RID: 137551 RVA: 0x008F01AF File Offset: 0x008EE3AF
+		// Token: 0x0601DFFF RID: 122879 RVA: 0x009081EE File Offset: 0x009063EE
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SSceneInteractionActorSkeletalMeshDestructible._ScriptStructPtr != 0) ? SSceneInteractionActorSkeletalMeshDestructible._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Render/RuntimeBP/Scene/Interaction/SSceneInteractionActorSkeletalmeshDestructible.SSceneInteractionActorSkeletalMeshDestructible", ref SSceneInteractionActorSkeletalMeshDestructible._ScriptStructPtr);
 		}
 
-		// Token: 0x17003750 RID: 14160
-		// (get) Token: 0x06021950 RID: 137552 RVA: 0x008F01D4 File Offset: 0x008EE3D4
-		// (set) Token: 0x06021951 RID: 137553 RVA: 0x008F0217 File Offset: 0x008EE417
+		// Token: 0x17003181 RID: 12673
+		// (get) Token: 0x0601E000 RID: 122880 RVA: 0x00908214 File Offset: 0x00906414
+		// (set) Token: 0x0601E001 RID: 122881 RVA: 0x00908257 File Offset: 0x00906457
 		public TArray<AKuroDestructibleActor> PlayDestructionAllImmediately
 		{
 			get
@@ -31,7 +31,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TArray<AKuroDestructibleActor> result;
 				if ((result = this._PlayDestructionAllImmediately) == null)
 				{
-					result = (this._PlayDestructionAllImmediately = new TArray<AKuroDestructibleActor>(base.NativePtr + (IntPtr)SSceneInteractionActorSkeletalMeshDestructible.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._PlayDestructionAllImmediately = new TArray<AKuroDestructibleActor>(base.NativePtr + (IntPtr)SSceneInteractionActorSkeletalMeshDestructible.__PropertyOffset_PlayDestructionAllImmediately, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -41,9 +41,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x17003751 RID: 14161
-		// (get) Token: 0x06021952 RID: 137554 RVA: 0x008F0228 File Offset: 0x008EE428
-		// (set) Token: 0x06021953 RID: 137555 RVA: 0x008F026B File Offset: 0x008EE46B
+		// Token: 0x17003182 RID: 12674
+		// (get) Token: 0x0601E002 RID: 122882 RVA: 0x00908268 File Offset: 0x00906468
+		// (set) Token: 0x0601E003 RID: 122883 RVA: 0x009082AB File Offset: 0x009064AB
 		public TArray<AKuroDestructibleActor> CanPlayDestructionWhenHit
 		{
 			get
@@ -52,7 +52,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TArray<AKuroDestructibleActor> result;
 				if ((result = this._CanPlayDestructionWhenHit) == null)
 				{
-					result = (this._CanPlayDestructionWhenHit = new TArray<AKuroDestructibleActor>(base.NativePtr + (IntPtr)SSceneInteractionActorSkeletalMeshDestructible.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._CanPlayDestructionWhenHit = new TArray<AKuroDestructibleActor>(base.NativePtr + (IntPtr)SSceneInteractionActorSkeletalMeshDestructible.__PropertyOffset_CanPlayDestructionWhenHit, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -62,9 +62,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x17003752 RID: 14162
-		// (get) Token: 0x06021954 RID: 137556 RVA: 0x008F027C File Offset: 0x008EE47C
-		// (set) Token: 0x06021955 RID: 137557 RVA: 0x008F02BF File Offset: 0x008EE4BF
+		// Token: 0x17003183 RID: 12675
+		// (get) Token: 0x0601E004 RID: 122884 RVA: 0x009082BC File Offset: 0x009064BC
+		// (set) Token: 0x0601E005 RID: 122885 RVA: 0x009082FF File Offset: 0x009064FF
 		public SSceneInteractionDestructibleInfo HitInfo
 		{
 			get
@@ -73,68 +73,60 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				SSceneInteractionDestructibleInfo result;
 				if ((result = this._HitInfo) == null)
 				{
-					result = (this._HitInfo = new SSceneInteractionDestructibleInfo(base.NativePtr + (IntPtr)SSceneInteractionActorSkeletalMeshDestructible.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._HitInfo = new SSceneInteractionDestructibleInfo(base.NativePtr + (IntPtr)SSceneInteractionActorSkeletalMeshDestructible.__PropertyOffset_HitInfo, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SSceneInteractionDestructibleInfo.StaticStruct(), base.NativePtr + (IntPtr)SSceneInteractionActorSkeletalMeshDestructible.__PropertyOffset_2, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SSceneInteractionDestructibleInfo.StaticStruct(), base.NativePtr + (IntPtr)SSceneInteractionActorSkeletalMeshDestructible.__PropertyOffset_HitInfo, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x06021956 RID: 137558 RVA: 0x008F02E0 File Offset: 0x008EE4E0
+		// Token: 0x0601E006 RID: 122886 RVA: 0x00908320 File Offset: 0x00906520
 		public SSceneInteractionActorSkeletalMeshDestructible()
 		{
 		}
 
-		// Token: 0x06021957 RID: 137559 RVA: 0x008F02E8 File Offset: 0x008EE4E8
-		public SSceneInteractionActorSkeletalMeshDestructible(TArray<AKuroDestructibleActor> PlayDestructionAllImmediately, TArray<AKuroDestructibleActor> CanPlayDestructionWhenHit, SSceneInteractionDestructibleInfo HitInfo)
-		{
-			this.PlayDestructionAllImmediately = PlayDestructionAllImmediately;
-			this.CanPlayDestructionWhenHit = CanPlayDestructionWhenHit;
-			this.HitInfo = HitInfo;
-		}
-
-		// Token: 0x06021958 RID: 137560 RVA: 0x008F0305 File Offset: 0x008EE505
+		// Token: 0x0601E007 RID: 122887 RVA: 0x00908328 File Offset: 0x00906528
 		protected override IntPtr GetUStructPtr()
 		{
 			return SSceneInteractionActorSkeletalMeshDestructible.StaticStruct();
 		}
 
-		// Token: 0x06021959 RID: 137561 RVA: 0x008F0311 File Offset: 0x008EE511
+		// Token: 0x0601E008 RID: 122888 RVA: 0x00908334 File Offset: 0x00906534
 		[NullableContext(2)]
 		public SSceneInteractionActorSkeletalMeshDestructible(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602195A RID: 137562 RVA: 0x008F031B File Offset: 0x008EE51B
+		// Token: 0x0601E009 RID: 122889 RVA: 0x0090833E File Offset: 0x0090653E
 		public SSceneInteractionActorSkeletalMeshDestructible(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602195B RID: 137563 RVA: 0x008F0326 File Offset: 0x008EE526
+		// Token: 0x0601E00A RID: 122890 RVA: 0x00908349 File Offset: 0x00906549
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SSceneInteractionActorSkeletalMeshDestructible(Pointer, false, true);
 		}
 
-		// Token: 0x0602195C RID: 137564 RVA: 0x008F0330 File Offset: 0x008EE530
+		// Token: 0x0601E00B RID: 122891 RVA: 0x00908353 File Offset: 0x00906553
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SSceneInteractionActorSkeletalMeshDestructible(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040105F3 RID: 67059
+		// Token: 0x0400FDA5 RID: 64933
 		public const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Scene/Interaction/SSceneInteractionActorSkeletalmeshDestructible.SSceneInteractionActorSkeletalMeshDestructible";
 
-		// Token: 0x040105F4 RID: 67060
+		// Token: 0x0400FDA6 RID: 64934
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040105F5 RID: 67061
-		internal static int __PropertyOffset_0;
+		// Token: 0x0400FDA7 RID: 64935
+		internal static int __PropertyOffset_PlayDestructionAllImmediately;
 
-		// Token: 0x040105F6 RID: 67062
+		// Token: 0x0400FDA8 RID: 64936
 		[Nullable(new byte[]
 		{
 			2,
@@ -142,10 +134,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TArray<AKuroDestructibleActor> _PlayDestructionAllImmediately;
 
-		// Token: 0x040105F7 RID: 67063
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FDA9 RID: 64937
+		internal static int __PropertyOffset_CanPlayDestructionWhenHit;
 
-		// Token: 0x040105F8 RID: 67064
+		// Token: 0x0400FDAA RID: 64938
 		[Nullable(new byte[]
 		{
 			2,
@@ -153,10 +145,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TArray<AKuroDestructibleActor> _CanPlayDestructionWhenHit;
 
-		// Token: 0x040105F9 RID: 67065
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400FDAB RID: 64939
+		internal static int __PropertyOffset_HitInfo;
 
-		// Token: 0x040105FA RID: 67066
+		// Token: 0x0400FDAC RID: 64940
 		[Nullable(2)]
 		private SSceneInteractionDestructibleInfo _HitInfo;
 	}

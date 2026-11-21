@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002722 RID: 10018
+// Token: 0x02001C0D RID: 7181
 public class RacingBetsTextBulletScreenItem : GridProxyAbstract<RacingBetsBulletScreen>
 {
-	// Token: 0x0601487B RID: 84091 RVA: 0x0052F00C File Offset: 0x0052D20C
+	// Token: 0x06011D5D RID: 73053 RVA: 0x0053DD28 File Offset: 0x0053BF28
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class RacingBetsTextBulletScreenItem : GridProxyAbstract<RacingBetsBullet
 		};
 	}
 
-	// Token: 0x0601487C RID: 84092 RVA: 0x0052F0A0 File Offset: 0x0052D2A0
+	// Token: 0x06011D5E RID: 73054 RVA: 0x0053DDBC File Offset: 0x0053BFBC
 	public override void Refresh(RacingBetsBulletScreen data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -67,14 +67,14 @@ public class RacingBetsTextBulletScreenItem : GridProxyAbstract<RacingBetsBullet
 		}
 	}
 
-	// Token: 0x0601487D RID: 84093 RVA: 0x0052F155 File Offset: 0x0052D355
+	// Token: 0x06011D5F RID: 73055 RVA: 0x0053DE71 File Offset: 0x0053C071
 	[NullableContext(1)]
 	public void BindClickBulletScreenCallBack(Action<RacingBetsBulletScreen> callBack)
 	{
 		this.ClickBulletScreenCallBack = callBack;
 	}
 
-	// Token: 0x0601487E RID: 84094 RVA: 0x0052F15E File Offset: 0x0052D35E
+	// Token: 0x06011D60 RID: 73056 RVA: 0x0053DE7A File Offset: 0x0053C07A
 	private void OnClickBulletScreenButton()
 	{
 		Action<RacingBetsBulletScreen> clickBulletScreenCallBack = this.ClickBulletScreenCallBack;
@@ -85,23 +85,23 @@ public class RacingBetsTextBulletScreenItem : GridProxyAbstract<RacingBetsBullet
 		clickBulletScreenCallBack(this.Data);
 	}
 
-	// Token: 0x04009A63 RID: 39523
+	// Token: 0x04009BBB RID: 39867
 	private RacingBetsBulletScreen Data;
 
-	// Token: 0x04009A64 RID: 39524
+	// Token: 0x04009BBC RID: 39868
 	[Nullable(2)]
 	private Action<RacingBetsBulletScreen> ClickBulletScreenCallBack;
 
-	// Token: 0x02008D77 RID: 36215
+	// Token: 0x02007F00 RID: 32512
 	private enum EComponent
 	{
-		// Token: 0x0402DE68 RID: 188008
+		// Token: 0x0402917F RID: 168319
 		Button,
-		// Token: 0x0402DE69 RID: 188009
+		// Token: 0x04029180 RID: 168320
 		Icon,
-		// Token: 0x0402DE6A RID: 188010
+		// Token: 0x04029181 RID: 168321
 		Text,
-		// Token: 0x0402DE6B RID: 188011
+		// Token: 0x04029182 RID: 168322
 		NormalIcon
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000173 RID: 371
+	// Token: 0x02000183 RID: 387
 	public class ConfigCircumScoreRewardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060008B3 RID: 2227 RVA: 0x0008A9E7 File Offset: 0x00088BE7
+		// Token: 0x06000913 RID: 2323 RVA: 0x00090543 File Offset: 0x0008E743
 		static ConfigCircumScoreRewardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCircumScoreRewardById.CreateStaticDefaultValue), new Action(ConfigCircumScoreRewardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060008B4 RID: 2228 RVA: 0x0008AA08 File Offset: 0x00088C08
+		// Token: 0x06000914 RID: 2324 RVA: 0x00090564 File Offset: 0x0008E764
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCircumScoreRewardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060008B5 RID: 2229 RVA: 0x0008AA87 File Offset: 0x00088C87
+		// Token: 0x06000915 RID: 2325 RVA: 0x000905E3 File Offset: 0x0008E7E3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCircumScoreRewardById.LogPair = null;
 			ConfigCircumScoreRewardById.HandleId = 0;
 		}
 
-		// Token: 0x060008B6 RID: 2230 RVA: 0x0008AA95 File Offset: 0x00088C95
+		// Token: 0x06000916 RID: 2326 RVA: 0x000905F1 File Offset: 0x0008E7F1
 		public static void Init()
 		{
 			ConfigCircumScoreRewardById.HandleId = ConfigCommon.InitDataStatement(ConfigCircumScoreRewardById.HandleId, "db_circumfluence.db", "select BinData from `CircumScoreReward` where Id=?");
 		}
 
-		// Token: 0x060008B7 RID: 2231 RVA: 0x0008AAB0 File Offset: 0x00088CB0
+		// Token: 0x06000917 RID: 2327 RVA: 0x0009060C File Offset: 0x0008E80C
 		public static CircumScoreReward? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCircumScoreRewardById.HandleId, ConfigCircumScoreRewardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CircumScoreReward?(rootAsCircumScoreReward);
 		}
 
-		// Token: 0x04000A09 RID: 2569
+		// Token: 0x04000A79 RID: 2681
 		private const string DB = "db_circumfluence.db";
 
-		// Token: 0x04000A0A RID: 2570
+		// Token: 0x04000A7A RID: 2682
 		private const string FILE = "h.回流活动.xlsx";
 
-		// Token: 0x04000A0B RID: 2571
+		// Token: 0x04000A7B RID: 2683
 		private const string TABLE = "CircumScoreReward";
 
-		// Token: 0x04000A0C RID: 2572
+		// Token: 0x04000A7C RID: 2684
 		private const string COMMAND = "select BinData from `CircumScoreReward` where Id=?";
 
-		// Token: 0x04000A0D RID: 2573
+		// Token: 0x04000A7D RID: 2685
 		private const string KEY_PREFIX = "CircumScoreRewardById";
 
-		// Token: 0x04000A0E RID: 2574
+		// Token: 0x04000A7E RID: 2686
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000A0F RID: 2575
+		// Token: 0x04000A7F RID: 2687
 		private static int HandleId;
 	}
 }

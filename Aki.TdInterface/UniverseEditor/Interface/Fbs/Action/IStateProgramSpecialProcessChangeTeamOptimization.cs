@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071C6 RID: 29126
+	// Token: 0x0200799B RID: 31131
 	public struct IStateProgramSpecialProcessChangeTeamOptimization : IFlatbufferObject
 	{
-		// Token: 0x1700D86A RID: 55402
-		// (get) Token: 0x06033AB2 RID: 211634 RVA: 0x006F53B2 File Offset: 0x006F35B2
+		// Token: 0x1700E463 RID: 58467
+		// (get) Token: 0x06036DB4 RID: 224692 RVA: 0x00756712 File Offset: 0x00754912
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033AB3 RID: 211635 RVA: 0x006F53BF File Offset: 0x006F35BF
+		// Token: 0x06036DB5 RID: 224693 RVA: 0x0075671F File Offset: 0x0075491F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033AB4 RID: 211636 RVA: 0x006F53C8 File Offset: 0x006F35C8
+		// Token: 0x06036DB6 RID: 224694 RVA: 0x00756728 File Offset: 0x00754928
 		public static IStateProgramSpecialProcessChangeTeamOptimization GetRootAsIStateProgramSpecialProcessChangeTeamOptimization(ByteBuffer _bb)
 		{
 			return IStateProgramSpecialProcessChangeTeamOptimization.GetRootAsIStateProgramSpecialProcessChangeTeamOptimization(_bb, default(IStateProgramSpecialProcessChangeTeamOptimization));
 		}
 
-		// Token: 0x06033AB5 RID: 211637 RVA: 0x006F53E4 File Offset: 0x006F35E4
+		// Token: 0x06036DB7 RID: 224695 RVA: 0x00756744 File Offset: 0x00754944
 		public static IStateProgramSpecialProcessChangeTeamOptimization GetRootAsIStateProgramSpecialProcessChangeTeamOptimization(ByteBuffer _bb, IStateProgramSpecialProcessChangeTeamOptimization obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033AB6 RID: 211638 RVA: 0x006F5401 File Offset: 0x006F3601
+		// Token: 0x06036DB8 RID: 224696 RVA: 0x00756761 File Offset: 0x00754961
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033AB7 RID: 211639 RVA: 0x006F5410 File Offset: 0x006F3610
+		// Token: 0x06036DB9 RID: 224697 RVA: 0x00756770 File Offset: 0x00754970
 		public IStateProgramSpecialProcessChangeTeamOptimization __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D86B RID: 55403
-		// (get) Token: 0x06033AB8 RID: 211640 RVA: 0x006F5420 File Offset: 0x006F3620
+		// Token: 0x1700E464 RID: 58468
+		// (get) Token: 0x06036DBA RID: 224698 RVA: 0x00756780 File Offset: 0x00754980
 		public ELogicProgramSpecialProcess Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D86C RID: 55404
-		// (get) Token: 0x06033AB9 RID: 211641 RVA: 0x006F545C File Offset: 0x006F365C
+		// Token: 0x1700E465 RID: 58469
+		// (get) Token: 0x06036DBB RID: 224699 RVA: 0x007567BC File Offset: 0x007549BC
 		public bool IsOpenBlackScreen
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D86D RID: 55405
-		// (get) Token: 0x06033ABA RID: 211642 RVA: 0x006F549C File Offset: 0x006F369C
+		// Token: 0x1700E466 RID: 58470
+		// (get) Token: 0x06036DBC RID: 224700 RVA: 0x007567FC File Offset: 0x007549FC
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033ABB RID: 211643 RVA: 0x006F54D8 File Offset: 0x006F36D8
+		// Token: 0x06036DBD RID: 224701 RVA: 0x00756838 File Offset: 0x00754A38
 		public static Offset<IStateProgramSpecialProcessChangeTeamOptimization> CreateIStateProgramSpecialProcessChangeTeamOptimization(FlatBufferBuilder builder, ELogicProgramSpecialProcess Type = ELogicProgramSpecialProcess.ChangeTeamOptimization, bool IsOpenBlackScreen = false, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IStateProgramSpecialProcessChangeTeamOptimization.EndIStateProgramSpecialProcessChangeTeamOptimization(builder);
 		}
 
-		// Token: 0x06033ABC RID: 211644 RVA: 0x006F54FC File Offset: 0x006F36FC
+		// Token: 0x06036DBE RID: 224702 RVA: 0x0075685C File Offset: 0x00754A5C
 		public static void StartIStateProgramSpecialProcessChangeTeamOptimization(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06033ABD RID: 211645 RVA: 0x006F5505 File Offset: 0x006F3705
+		// Token: 0x06036DBF RID: 224703 RVA: 0x00756865 File Offset: 0x00754A65
 		public static void AddType(FlatBufferBuilder builder, ELogicProgramSpecialProcess type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033ABE RID: 211646 RVA: 0x006F5510 File Offset: 0x006F3710
+		// Token: 0x06036DC0 RID: 224704 RVA: 0x00756870 File Offset: 0x00754A70
 		public static void AddIsOpenBlackScreen(FlatBufferBuilder builder, bool isOpenBlackScreen)
 		{
 			builder.AddBool(1, isOpenBlackScreen, false);
 		}
 
-		// Token: 0x06033ABF RID: 211647 RVA: 0x006F551B File Offset: 0x006F371B
+		// Token: 0x06036DC1 RID: 224705 RVA: 0x0075687B File Offset: 0x00754A7B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06033AC0 RID: 211648 RVA: 0x006F5526 File Offset: 0x006F3726
+		// Token: 0x06036DC2 RID: 224706 RVA: 0x00756886 File Offset: 0x00754A86
 		public static Offset<IStateProgramSpecialProcessChangeTeamOptimization> EndIStateProgramSpecialProcessChangeTeamOptimization(FlatBufferBuilder builder)
 		{
 			return new Offset<IStateProgramSpecialProcessChangeTeamOptimization>(builder.EndTable());
 		}
 
-		// Token: 0x06033AC1 RID: 211649 RVA: 0x006F5534 File Offset: 0x006F3734
+		// Token: 0x06036DC3 RID: 224707 RVA: 0x00756894 File Offset: 0x00754A94
 		public IStateProgramSpecialProcessChangeTeamOptimizationT UnPack()
 		{
 			IStateProgramSpecialProcessChangeTeamOptimizationT stateProgramSpecialProcessChangeTeamOptimizationT = new IStateProgramSpecialProcessChangeTeamOptimizationT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return stateProgramSpecialProcessChangeTeamOptimizationT;
 		}
 
-		// Token: 0x06033AC2 RID: 211650 RVA: 0x006F554F File Offset: 0x006F374F
+		// Token: 0x06036DC4 RID: 224708 RVA: 0x007568AF File Offset: 0x00754AAF
 		public void UnPackTo(IStateProgramSpecialProcessChangeTeamOptimizationT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06033AC3 RID: 211651 RVA: 0x006F5578 File Offset: 0x006F3778
+		// Token: 0x06036DC5 RID: 224709 RVA: 0x007568D8 File Offset: 0x00754AD8
 		public static Offset<IStateProgramSpecialProcessChangeTeamOptimization> Pack(FlatBufferBuilder builder, IStateProgramSpecialProcessChangeTeamOptimizationT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IStateProgramSpecialProcessChangeTeamOptimization.CreateIStateProgramSpecialProcessChangeTeamOptimization(builder, _o.Type, _o.IsOpenBlackScreen, _o.NullMask);
 		}
 
-		// Token: 0x04011CA9 RID: 72873
+		// Token: 0x04012CAB RID: 76971
 		private Table __p;
 	}
 }

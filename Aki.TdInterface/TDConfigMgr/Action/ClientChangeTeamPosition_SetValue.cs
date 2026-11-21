@@ -2,13 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014FC RID: 5372
+	// Token: 0x02001655 RID: 5717
 	public class ClientChangeTeamPosition_SetValue
 	{
-		// Token: 0x040046C7 RID: 18119
+		// Token: 0x04004A62 RID: 19042
 		public int PositionId;
-
-		// Token: 0x040046C8 RID: 18120
-		public bool? RestoreToPrevious;
 	}
 }

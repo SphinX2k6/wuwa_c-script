@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001CCD RID: 7373
+// Token: 0x0200118F RID: 4495
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,13 +11,13 @@ using Aki.Config;
 })]
 public class CollectionTypeItemData : MultiTemplateGridDataBase<MotorFightItemType, CollectionTypeItem>
 {
-	// Token: 0x0600DF2E RID: 57134 RVA: 0x00344399 File Offset: 0x00342599
+	// Token: 0x0600B34B RID: 45899 RVA: 0x0034FDC1 File Offset: 0x0034DFC1
 	public override int GetTemplateIndex()
 	{
 		return 0;
 	}
 
-	// Token: 0x0600DF2F RID: 57135 RVA: 0x0034439C File Offset: 0x0034259C
+	// Token: 0x0600B34C RID: 45900 RVA: 0x0034FDC4 File Offset: 0x0034DFC4
 	public override CollectionTypeItem CreateProxy()
 	{
 		return new CollectionTypeItem();

@@ -7,17 +7,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Action
 {
-	// Token: 0x02007350 RID: 29520
+	// Token: 0x020064D3 RID: 25811
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineActionCue : AiStateMachineAction
 	{
-		// Token: 0x060486A8 RID: 296616 RVA: 0x012A0A23 File Offset: 0x0129EC23
+		// Token: 0x0603EAF5 RID: 256757 RVA: 0x012434AB File Offset: 0x012416AB
 		public AiStateMachineActionCue(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.Action action) : base(stateMachineNode, action)
 		{
 		}
 
-		// Token: 0x060486A9 RID: 296617 RVA: 0x012A0A38 File Offset: 0x0129EC38
+		// Token: 0x0603EAF6 RID: 256758 RVA: 0x012434C0 File Offset: 0x012416C0
 		protected unsafe override bool OnInit(CombatStateMachineDefine.Fsm.Action action)
 		{
 			this.CueIds = new List<long>();
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.AI.StateMachine.Action
 			return true;
 		}
 
-		// Token: 0x060486AA RID: 296618 RVA: 0x012A0CAC File Offset: 0x0129EEAC
+		// Token: 0x0603EAF7 RID: 256759 RVA: 0x01243734 File Offset: 0x01241934
 		public override void DoAction(long? contextId = null)
 		{
 			foreach (long cueId in this.CueIds)
@@ -82,23 +82,23 @@ namespace CSharpScript.Game.AI.StateMachine.Action
 			}
 		}
 
-		// Token: 0x060486AB RID: 296619 RVA: 0x012A0D20 File Offset: 0x0129EF20
+		// Token: 0x0603EAF8 RID: 256760 RVA: 0x012437A8 File Offset: 0x012419A8
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x0402647D RID: 156797
+		// Token: 0x0402176A RID: 137066
 		[Nullable(2)]
 		private List<long> CueIds;
 
-		// Token: 0x0402647E RID: 156798
+		// Token: 0x0402176B RID: 137067
 		public int ConfigReplaceTagId;
 
-		// Token: 0x0402647F RID: 156799
+		// Token: 0x0402176C RID: 137068
 		public string ConfigReplaceTagName = "";
 
-		// Token: 0x04026480 RID: 156800
+		// Token: 0x0402176D RID: 137069
 		[Nullable(2)]
 		private IStateRepPerfBase ReplaceConfig;
 	}

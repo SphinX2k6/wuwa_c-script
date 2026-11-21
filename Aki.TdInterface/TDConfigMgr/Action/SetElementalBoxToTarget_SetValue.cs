@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021AC RID: 8620
+	// Token: 0x02002417 RID: 9239
 	public class SetElementalBoxToTarget_SetValue
 	{
-		// Token: 0x040070F1 RID: 28913
+		// Token: 0x04007739 RID: 30521
 		public int ElementalBoxId;
 
-		// Token: 0x040070F2 RID: 28914
-		[Nullable(1)]
+		// Token: 0x0400773A RID: 30522
 		public ITargetEntityType Target;
 	}
 }

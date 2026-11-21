@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 {
-	// Token: 0x02005271 RID: 21105
+	// Token: 0x02004241 RID: 16961
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleDetailsRoleItem : UiPanelBase
 	{
-		// Token: 0x06035F83 RID: 221059 RVA: 0x00CC5190 File Offset: 0x00CC3390
+		// Token: 0x0602AE7E RID: 175742 RVA: 0x00C12890 File Offset: 0x00C10A90
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,13 +29,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			};
 		}
 
-		// Token: 0x06035F84 RID: 221060 RVA: 0x00CC5242 File Offset: 0x00CC3442
+		// Token: 0x0602AE7F RID: 175743 RVA: 0x00C12942 File Offset: 0x00C10B42
 		protected override void OnStart()
 		{
 			this.DelegateDamage = DelegateUtils.ToManualReleaseDelegate<FLTweenFloatSetterDynamic>(new Action<float>(this.TweenCallDamage));
 		}
 
-		// Token: 0x06035F85 RID: 221061 RVA: 0x00CC525B File Offset: 0x00CC345B
+		// Token: 0x0602AE80 RID: 175744 RVA: 0x00C1295B File Offset: 0x00C10B5B
 		protected override void OnBeforeDestroy()
 		{
 			if (this.TweenerDamage != null)
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<float>(this.TweenCallDamage));
 		}
 
-		// Token: 0x06035F86 RID: 221062 RVA: 0x00CC5280 File Offset: 0x00CC3480
+		// Token: 0x0602AE81 RID: 175745 RVA: 0x00C12980 File Offset: 0x00C10B80
 		private UniTask InitRoleHead()
 		{
 			PhantomArenaBattleDetailsRoleItem.<InitRoleHead>d__12 <InitRoleHead>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			return <InitRoleHead>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035F87 RID: 221063 RVA: 0x00CC52C4 File Offset: 0x00CC34C4
+		// Token: 0x0602AE82 RID: 175746 RVA: 0x00C129C4 File Offset: 0x00C10BC4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaBattleDetailsRoleItem.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035F88 RID: 221064 RVA: 0x00CC5308 File Offset: 0x00CC3508
+		// Token: 0x0602AE83 RID: 175747 RVA: 0x00C12A08 File Offset: 0x00C10C08
 		public void RefreshLifeNum(int lifeNum, int maxLifeNum)
 		{
 			this.MaxLife = maxLifeNum;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			this.RoleHead.RefreshLifeBar((float)lifeNum / (float)maxLifeNum);
 		}
 
-		// Token: 0x06035F89 RID: 221065 RVA: 0x00CC5358 File Offset: 0x00CC3558
+		// Token: 0x0602AE84 RID: 175748 RVA: 0x00C12A58 File Offset: 0x00C10C58
 		public void SetHitNum(int damage)
 		{
 			UUIText text = base.GetText(3);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			text.SetText("-" + damage.ToString(), true);
 		}
 
-		// Token: 0x06035F8A RID: 221066 RVA: 0x00CC5380 File Offset: 0x00CC3580
+		// Token: 0x0602AE85 RID: 175749 RVA: 0x00C12A80 File Offset: 0x00C10C80
 		public void RefreshLifeAfterDamage(UCurveFloat curve, int damage)
 		{
 			int num = Math.Max(0, this.CurLife - damage);
@@ -102,19 +102,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			}
 		}
 
-		// Token: 0x06035F8B RID: 221067 RVA: 0x00CC541C File Offset: 0x00CC361C
+		// Token: 0x0602AE86 RID: 175750 RVA: 0x00C12B1C File Offset: 0x00C10D1C
 		public void SetBarActive(bool isOwn)
 		{
 			this.RoleHead.SetBarActive(isOwn);
 		}
 
-		// Token: 0x06035F8C RID: 221068 RVA: 0x00CC542A File Offset: 0x00CC362A
+		// Token: 0x0602AE87 RID: 175751 RVA: 0x00C12B2A File Offset: 0x00C10D2A
 		public void RefreshHeadIcon(string headIcon)
 		{
 			this.RoleHead.RefreshRoleIcon(headIcon);
 		}
 
-		// Token: 0x06035F8D RID: 221069 RVA: 0x00CC5438 File Offset: 0x00CC3638
+		// Token: 0x0602AE88 RID: 175752 RVA: 0x00C12B38 File Offset: 0x00C10D38
 		public void RefreshShieldNum(int shieldNum)
 		{
 			if (shieldNum > this.LastShieldNum && this.LastShieldNum == 0)
@@ -142,13 +142,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			this.LastShieldNum = shieldNum;
 		}
 
-		// Token: 0x06035F8E RID: 221070 RVA: 0x00CC54F4 File Offset: 0x00CC36F4
+		// Token: 0x0602AE89 RID: 175753 RVA: 0x00C12BF4 File Offset: 0x00C10DF4
 		public void RegisterViewProxy(PhantomArenaBattleDetailsViewProxy viewProxy)
 		{
 			this.ViewProxy = viewProxy;
 		}
 
-		// Token: 0x06035F8F RID: 221071 RVA: 0x00CC54FD File Offset: 0x00CC36FD
+		// Token: 0x0602AE8A RID: 175754 RVA: 0x00C12BFD File Offset: 0x00C10DFD
 		public void OnAccumulateAfterEvent()
 		{
 			PhantomArenaHeadItem roleHead = this.RoleHead;
@@ -159,13 +159,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			roleHead.PlayAccumulateDamage();
 		}
 
-		// Token: 0x06035F90 RID: 221072 RVA: 0x00CC550F File Offset: 0x00CC370F
+		// Token: 0x0602AE8B RID: 175755 RVA: 0x00C12C0F File Offset: 0x00C10E0F
 		public FVectorDouble GetHeadLocation()
 		{
 			return base.GetItem(0).D_K2_GetComponentLocation();
 		}
 
-		// Token: 0x06035F91 RID: 221073 RVA: 0x00CC5520 File Offset: 0x00CC3720
+		// Token: 0x0602AE8C RID: 175756 RVA: 0x00C12C20 File Offset: 0x00C10E20
 		private void TweenCallDamage(float value)
 		{
 			PhantomArenaHeadItem roleHead = this.RoleHead;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			base.GetText(1).SetText(num.ToString() + "/" + this.MaxLife.ToString(), true);
 		}
 
-		// Token: 0x06035F92 RID: 221074 RVA: 0x00CC557F File Offset: 0x00CC377F
+		// Token: 0x0602AE8D RID: 175757 RVA: 0x00C12C7F File Offset: 0x00C10E7F
 		private void OnTweenerEnd()
 		{
 			if (this.TweenerDamage != null)
@@ -186,53 +186,53 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			}
 		}
 
-		// Token: 0x0401C93F RID: 117055
+		// Token: 0x04017374 RID: 95092
 		protected PhantomArenaHeadItem RoleHead;
 
-		// Token: 0x0401C940 RID: 117056
+		// Token: 0x04017375 RID: 95093
 		protected PhantomArenaBattleDetailsViewProxy ViewProxy;
 
-		// Token: 0x0401C941 RID: 117057
+		// Token: 0x04017376 RID: 95094
 		protected ULTweener TweenerDamage;
 
-		// Token: 0x0401C942 RID: 117058
+		// Token: 0x04017377 RID: 95095
 		protected FLTweenFloatSetterDynamic DelegateDamage;
 
-		// Token: 0x0401C943 RID: 117059
+		// Token: 0x04017378 RID: 95096
 		public bool IsOwn;
 
-		// Token: 0x0401C944 RID: 117060
+		// Token: 0x04017379 RID: 95097
 		protected int MaxLife;
 
-		// Token: 0x0401C945 RID: 117061
+		// Token: 0x0401737A RID: 95098
 		protected int CurLife;
 
-		// Token: 0x0401C946 RID: 117062
+		// Token: 0x0401737B RID: 95099
 		protected int LastShieldNum;
 
-		// Token: 0x0200B463 RID: 46179
+		// Token: 0x02009E9B RID: 40603
 		[NullableContext(0)]
 		private class ERoleItem
 		{
-			// Token: 0x04036A77 RID: 223863
+			// Token: 0x040314CA RID: 201930
 			public const int HeadItem = 0;
 
-			// Token: 0x04036A78 RID: 223864
+			// Token: 0x040314CB RID: 201931
 			public const int LifeNum = 1;
 
-			// Token: 0x04036A79 RID: 223865
+			// Token: 0x040314CC RID: 201932
 			public const int PanelHit = 2;
 
-			// Token: 0x04036A7A RID: 223866
+			// Token: 0x040314CD RID: 201933
 			public const int HitNum = 3;
 
-			// Token: 0x04036A7B RID: 223867
+			// Token: 0x040314CE RID: 201934
 			public const int ShieldItem = 4;
 
-			// Token: 0x04036A7C RID: 223868
+			// Token: 0x040314CF RID: 201935
 			public const int ShieldNum = 5;
 
-			// Token: 0x04036A7D RID: 223869
+			// Token: 0x040314D0 RID: 201936
 			public const int ShieldReduceNum = 6;
 		}
 	}

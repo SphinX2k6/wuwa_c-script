@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B45 RID: 15173
+	// Token: 0x02003F47 RID: 16199
 	public class Record_ESystemModuleName_ISystemVarDefinesT
 	{
-		// Token: 0x17006816 RID: 26646
-		// (get) Token: 0x06014BDF RID: 84959 RVA: 0x00303E77 File Offset: 0x00302077
-		// (set) Token: 0x06014BE0 RID: 84960 RVA: 0x00303E7F File Offset: 0x0030207F
+		// Token: 0x17006DB1 RID: 28081
+		// (get) Token: 0x06016089 RID: 90249 RVA: 0x0032A107 File Offset: 0x00328307
+		// (set) Token: 0x0601608A RID: 90250 RVA: 0x0032A10F File Offset: 0x0032830F
 		public ESystemModuleName Key { get; set; }
 
-		// Token: 0x17006817 RID: 26647
-		// (get) Token: 0x06014BE1 RID: 84961 RVA: 0x00303E88 File Offset: 0x00302088
-		// (set) Token: 0x06014BE2 RID: 84962 RVA: 0x00303E90 File Offset: 0x00302090
+		// Token: 0x17006DB2 RID: 28082
+		// (get) Token: 0x0601608B RID: 90251 RVA: 0x0032A118 File Offset: 0x00328318
+		// (set) Token: 0x0601608C RID: 90252 RVA: 0x0032A120 File Offset: 0x00328320
 		public List<ISystemVarDefineT> Values { get; set; }
 
-		// Token: 0x06014BE3 RID: 84963 RVA: 0x00303E99 File Offset: 0x00302099
+		// Token: 0x0601608D RID: 90253 RVA: 0x0032A129 File Offset: 0x00328329
 		public Record_ESystemModuleName_ISystemVarDefinesT()
 		{
 			this.Key = ESystemModuleName.Common;

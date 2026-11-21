@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009A6 RID: 2470
+	// Token: 0x02000A5B RID: 2651
 	public static class EMotorSlideOffDirectionExtensions
 	{
-		// Token: 0x0600371C RID: 14108 RVA: 0x0008F45C File Offset: 0x0008D65C
+		// Token: 0x06003AAC RID: 15020 RVA: 0x00097520 File Offset: 0x00095720
 		public static string ToEnumString(this EMotorSlideOffDirection value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600371D RID: 14109 RVA: 0x0008F494 File Offset: 0x0008D694
+		// Token: 0x06003AAD RID: 15021 RVA: 0x00097558 File Offset: 0x00095758
 		public static EMotorSlideOffDirection FromString(string name)
 		{
 			EMotorSlideOffDirection result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600371E RID: 14110 RVA: 0x0008F4BD File Offset: 0x0008D6BD
+		// Token: 0x06003AAE RID: 15022 RVA: 0x00097581 File Offset: 0x00095781
 		public static bool TryFromString(string name, out EMotorSlideOffDirection value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600371F RID: 14111 RVA: 0x0008F4F6 File Offset: 0x0008D6F6
+		// Token: 0x06003AAF RID: 15023 RVA: 0x000975BA File Offset: 0x000957BA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003720 RID: 14112 RVA: 0x0008F50E File Offset: 0x0008D70E
+		// Token: 0x06003AB0 RID: 15024 RVA: 0x000975D2 File Offset: 0x000957D2
 		public static EMotorSlideOffDirection[] GetValues()
 		{
 			return new EMotorSlideOffDirection[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003721 RID: 14113 RVA: 0x0008F51A File Offset: 0x0008D71A
+		// Token: 0x06003AB1 RID: 15025 RVA: 0x000975DE File Offset: 0x000957DE
 		public static string[] GetNames()
 		{
 			return new string[]

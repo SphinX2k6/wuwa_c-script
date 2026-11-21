@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025DD RID: 9693
+	// Token: 0x0200289C RID: 10396
 	public class IBaseTime
 	{
-		// Token: 0x0600D9E2 RID: 55778 RVA: 0x00207DC6 File Offset: 0x00205FC6
-		[NullableContext(1)]
+		// Token: 0x0600E7AB RID: 59307 RVA: 0x002244B2 File Offset: 0x002226B2
 		public static IBaseTime Create(IBaseTime? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FEA RID: 16362
-		// (get) Token: 0x0600D9E3 RID: 55779 RVA: 0x00207DE5 File Offset: 0x00205FE5
+		// Token: 0x17004321 RID: 17185
+		// (get) Token: 0x0600E7AC RID: 59308 RVA: 0x002244D1 File Offset: 0x002226D1
 		public virtual int Hour
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FEB RID: 16363
-		// (get) Token: 0x0600D9E4 RID: 55780 RVA: 0x00207DF2 File Offset: 0x00205FF2
+		// Token: 0x17004322 RID: 17186
+		// (get) Token: 0x0600E7AD RID: 59309 RVA: 0x002244DE File Offset: 0x002226DE
 		public virtual int Minute
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007903 RID: 30979
+		// Token: 0x04007F9A RID: 32666
 		private IBaseTime Instance;
 	}
 }

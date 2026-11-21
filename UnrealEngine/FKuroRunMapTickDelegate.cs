@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000D0C RID: 3340
+	// Token: 0x0200022E RID: 558
 	public sealed class FKuroRunMapTickDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0600B256 RID: 45654 RVA: 0x000FDADD File Offset: 0x000FBCDD
+		// Token: 0x06002D1C RID: 11548 RVA: 0x0003FA91 File Offset: 0x0003DC91
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroRunMapTickDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0600B257 RID: 45655 RVA: 0x000FDAE9 File Offset: 0x000FBCE9
+		// Token: 0x06002D1D RID: 11549 RVA: 0x0003FA9D File Offset: 0x0003DC9D
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroRunMapTickDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FKuroRunMapTickDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0600B258 RID: 45656 RVA: 0x000FDB0C File Offset: 0x000FBD0C
+		// Token: 0x06002D1E RID: 11550 RVA: 0x0003FAC0 File Offset: 0x0003DCC0
 		public FKuroRunMapTickDelegate()
 		{
 		}
 
-		// Token: 0x0600B259 RID: 45657 RVA: 0x000FDB14 File Offset: 0x000FBD14
+		// Token: 0x06002D1F RID: 11551 RVA: 0x0003FAC8 File Offset: 0x0003DCC8
 		[NullableContext(2)]
 		public FKuroRunMapTickDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600B25A RID: 45658 RVA: 0x000FDB1E File Offset: 0x000FBD1E
+		// Token: 0x06002D20 RID: 11552 RVA: 0x0003FAD2 File Offset: 0x0003DCD2
 		public FKuroRunMapTickDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600B25B RID: 45659 RVA: 0x000FDB29 File Offset: 0x000FBD29
+		// Token: 0x06002D21 RID: 11553 RVA: 0x0003FADD File Offset: 0x0003DCDD
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<float, float, float>) ?? ((Action<float, float, float>)Delegate.CreateDelegate(typeof(Action<float, float, float>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0600B25C RID: 45660 RVA: 0x000FDB5B File Offset: 0x000FBD5B
+		// Token: 0x06002D22 RID: 11554 RVA: 0x0003FB0F File Offset: 0x0003DD0F
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<float, float, float> Callback)
 		{
 			if (FKuroRunMapTickDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FKuroRunMapTickDelegate.RegisterId);
 		}
 
-		// Token: 0x0600B25D RID: 45661 RVA: 0x000FDB98 File Offset: 0x000FBD98
+		// Token: 0x06002D23 RID: 11555 RVA: 0x0003FB4C File Offset: 0x0003DD4C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(float X, float Y, float Z)
 		{
 			FKuroRunMapTickDelegate.__FKuroRunMapTickDelegate_DelegateParams* ptr = stackalloc FKuroRunMapTickDelegate.__FKuroRunMapTickDelegate_DelegateParams[(UIntPtr)27] + 15L / (long)sizeof(FKuroRunMapTickDelegate.__FKuroRunMapTickDelegate_DelegateParams) & -16L;
@@ -78,10 +76,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0600B25E RID: 45662 RVA: 0x000FDBE4 File Offset: 0x000FBDE4
+		// Token: 0x06002D24 RID: 11556 RVA: 0x0003FB98 File Offset: 0x0003DD98
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<float, float, float> action = target as Action<float, float, float>;
@@ -92,39 +89,39 @@ namespace UnrealEngine
 			action(((FKuroRunMapTickDelegate.__FKuroRunMapTickDelegate_DelegateParams*)__Parameters)->X, ((FKuroRunMapTickDelegate.__FKuroRunMapTickDelegate_DelegateParams*)__Parameters)->Y, ((FKuroRunMapTickDelegate.__FKuroRunMapTickDelegate_DelegateParams*)__Parameters)->Z);
 		}
 
-		// Token: 0x04005D8A RID: 23946
+		// Token: 0x04000E4F RID: 3663
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04005D8B RID: 23947
+		// Token: 0x04000E50 RID: 3664
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.KuroRunMapTickDelegate__DelegateSignature";
 
-		// Token: 0x04005D8C RID: 23948
+		// Token: 0x04000E51 RID: 3665
 		private static int RegisterId;
 
-		// Token: 0x02002D37 RID: 11575
+		// Token: 0x020009B6 RID: 2486
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
-		protected ref struct __FKuroRunMapTickDelegate_DelegateParams
+		private ref struct __FKuroRunMapTickDelegate_DelegateParams
 		{
-			// Token: 0x04016737 RID: 91959
+			// Token: 0x0400593B RID: 22843
 			[FieldOffset(0)]
 			public float X;
 
-			// Token: 0x04016738 RID: 91960
+			// Token: 0x0400593C RID: 22844
 			[FieldOffset(4)]
 			public float Y;
 
-			// Token: 0x04016739 RID: 91961
+			// Token: 0x0400593D RID: 22845
 			[FieldOffset(8)]
 			public float Z;
 		}
 
-		// Token: 0x02002D38 RID: 11576
+		// Token: 0x020009B7 RID: 2487
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401673A RID: 91962
+			// Token: 0x0400593E RID: 22846
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

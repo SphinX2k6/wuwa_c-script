@@ -14,18 +14,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AAA RID: 23210
+	// Token: 0x02004A86 RID: 19078
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DreamLinkRewardViewLimit : UiTickViewBase
 	{
-		// Token: 0x0603ACB2 RID: 240818 RVA: 0x00E01EFD File Offset: 0x00E000FD
+		// Token: 0x0602FBFE RID: 195582 RVA: 0x00D524A7 File Offset: 0x00D506A7
 		[NullableContext(1)]
 		public DreamLinkRewardViewLimit(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603ACB3 RID: 240819 RVA: 0x00E01F18 File Offset: 0x00E00118
+		// Token: 0x0602FBFF RID: 195583 RVA: 0x00D524C4 File Offset: 0x00D506C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603ACB4 RID: 240820 RVA: 0x00E01FE4 File Offset: 0x00E001E4
+		// Token: 0x0602FC00 RID: 195584 RVA: 0x00D52590 File Offset: 0x00D50790
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DreamLinkRewardViewLimit.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603ACB5 RID: 240821 RVA: 0x00E02028 File Offset: 0x00E00228
+		// Token: 0x0602FC01 RID: 195585 RVA: 0x00D525D4 File Offset: 0x00D507D4
 		protected override void OnStart()
 		{
 			this.RemainTimeText = ConfigMultiTextLang.GetLocalTextNew("ActivityRemainingTime", null);
@@ -71,19 +71,19 @@ namespace CSharpScript.Game.Module.DreamLink
 			}, 0);
 		}
 
-		// Token: 0x0603ACB6 RID: 240822 RVA: 0x00E02094 File Offset: 0x00E00294
+		// Token: 0x0602FC02 RID: 195586 RVA: 0x00D52640 File Offset: 0x00D50840
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.DreamLinkLimitRewardRefresh, new Action(this.RefreshCurrentView));
 		}
 
-		// Token: 0x0603ACB7 RID: 240823 RVA: 0x00E020B2 File Offset: 0x00E002B2
+		// Token: 0x0602FC03 RID: 195587 RVA: 0x00D5265E File Offset: 0x00D5085E
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.DreamLinkLimitRewardRefresh, new Action(this.RefreshCurrentView));
 		}
 
-		// Token: 0x0603ACB8 RID: 240824 RVA: 0x00E020D0 File Offset: 0x00E002D0
+		// Token: 0x0602FC04 RID: 195588 RVA: 0x00D5267C File Offset: 0x00D5087C
 		protected override void OnTick(float delta)
 		{
 			this.OnRefreshTime();
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			weaponHandle.Tick(delta);
 		}
 
-		// Token: 0x0603ACB9 RID: 240825 RVA: 0x00E020EC File Offset: 0x00E002EC
+		// Token: 0x0602FC05 RID: 195589 RVA: 0x00D52698 File Offset: 0x00D50898
 		protected override void OnHandleLoadScene()
 		{
 			this.OriginCameraActor = CameraModel.Instance.MainModel.CurrentCameraActor;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.PlaySceneLevelSequence(resourcePath, new Action(this.PlayAutoRotate));
 		}
 
-		// Token: 0x0603ACBA RID: 240826 RVA: 0x00E02208 File Offset: 0x00E00408
+		// Token: 0x0602FC06 RID: 195590 RVA: 0x00D527B4 File Offset: 0x00D509B4
 		protected override void OnBeforeDestroy()
 		{
 			CameraController.Instance.SetViewTarget(this.OriginCameraActor, "DreamLinkRewardViewLimit.OnBeforeDestroy", 0f, EViewTargetBlendFunction.VTBlend_Linear, 0f, null, null, "MainCamera", null, null);
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			weaponHandle2.Destroy();
 		}
 
-		// Token: 0x0603ACBB RID: 240827 RVA: 0x00E022D5 File Offset: 0x00E004D5
+		// Token: 0x0602FC07 RID: 195591 RVA: 0x00D52881 File Offset: 0x00D50A81
 		private void RefreshCurrentView()
 		{
 			this.RefreshTabViewRedDot(this.CurrentTabIndex);
@@ -165,34 +165,34 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.SpecialRewardItem.Refresh();
 		}
 
-		// Token: 0x0603ACBC RID: 240828 RVA: 0x00E022FF File Offset: 0x00E004FF
+		// Token: 0x0602FC08 RID: 195592 RVA: 0x00D528AB File Offset: 0x00D50AAB
 		[NullableContext(1)]
 		private CommonTabItemData[] GetTabItemData()
 		{
 			return this.TabComponent.CreateTabItemDataByLength(this.ActivityDataBase.GetLimitTimeRewardTypeLength()).ToArray();
 		}
 
-		// Token: 0x0603ACBD RID: 240829 RVA: 0x00E0231C File Offset: 0x00E0051C
+		// Token: 0x0602FC09 RID: 195593 RVA: 0x00D528C8 File Offset: 0x00D50AC8
 		[NullableContext(1)]
 		private CommonTabItem ProxyCreateTabItem([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new CommonTabItem();
 		}
 
-		// Token: 0x0603ACBE RID: 240830 RVA: 0x00E02324 File Offset: 0x00E00524
+		// Token: 0x0602FC0A RID: 195594 RVA: 0x00D528D0 File Offset: 0x00D50AD0
 		private void RefreshTabViewRedDot(int index)
 		{
 			int tabId = index + 1;
 			this.TabComponent.GetTabItemByIndex(index).SetRedDotState(this.ActivityDataBase.CheckHasLimitTimeTabReward(tabId));
 		}
 
-		// Token: 0x0603ACBF RID: 240831 RVA: 0x00E02352 File Offset: 0x00E00552
+		// Token: 0x0602FC0B RID: 195595 RVA: 0x00D528FE File Offset: 0x00D50AFE
 		private void OnTypeButtonClicked(int index)
 		{
 			this.RefreshLayout(index).Forget();
 		}
 
-		// Token: 0x0603ACC0 RID: 240832 RVA: 0x00E02360 File Offset: 0x00E00560
+		// Token: 0x0602FC0C RID: 195596 RVA: 0x00D5290C File Offset: 0x00D50B0C
 		[NullableContext(1)]
 		private CommonTabData GetCommonData(int index)
 		{
@@ -203,14 +203,14 @@ namespace CSharpScript.Game.Module.DreamLink
 			return new CommonTabData(icon, new CommonTabTitleData(textId, Array.Empty<object>()), null);
 		}
 
-		// Token: 0x0603ACC1 RID: 240833 RVA: 0x00E02398 File Offset: 0x00E00598
+		// Token: 0x0602FC0D RID: 195597 RVA: 0x00D52944 File Offset: 0x00D50B44
 		[NullableContext(1)]
 		private DreamLinkRewardLimitTimeItem CreateTaskItem()
 		{
 			return new DreamLinkRewardLimitTimeItem();
 		}
 
-		// Token: 0x0603ACC2 RID: 240834 RVA: 0x00E023A0 File Offset: 0x00E005A0
+		// Token: 0x0602FC0E RID: 195598 RVA: 0x00D5294C File Offset: 0x00D50B4C
 		private UniTask RefreshLayout(int index)
 		{
 			DreamLinkRewardViewLimit.<RefreshLayout>d__30 <RefreshLayout>d__;
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <RefreshLayout>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603ACC3 RID: 240835 RVA: 0x00E023EC File Offset: 0x00E005EC
+		// Token: 0x0602FC0F RID: 195599 RVA: 0x00D52998 File Offset: 0x00D50B98
 		private void OnRefreshTime()
 		{
 			if (!this.LimitTimeRewardOn)
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.GetText(2).SetText(remainTimeText, true);
 		}
 
-		// Token: 0x0603ACC4 RID: 240836 RVA: 0x00E0245C File Offset: 0x00E0065C
+		// Token: 0x0602FC10 RID: 195600 RVA: 0x00D52A08 File Offset: 0x00D50C08
 		[NullableContext(1)]
 		protected void PlaySceneLevelSequence(string levelSequencePath, [Nullable(2)] Action startCallback = null)
 		{
@@ -271,7 +271,13 @@ namespace CSharpScript.Game.Module.DreamLink
 				UDefaultLevelSequenceInstanceData udefaultLevelSequenceInstanceData = this.SequenceActor.DefaultInstanceData as UDefaultLevelSequenceInstanceData;
 				FTransform transformOrigin = UKismetMathLibrary.Conv_TransformDoubleToTransform(RenderModuleController.Instance.GetKuroCurrentUiSceneTransform().Value);
 				udefaultLevelSequenceInstanceData.TransformOrigin = transformOrigin;
-				this.SequencePlayer.PlayTo(new FMovieSceneSequencePlaybackParams(this.SequencePlayer.GetEndTime().Time, 0f, "A", EMovieScenePositionType.MarkedFrame, EUpdatePositionMethod.Play));
+				this.SequencePlayer.PlayTo(new FMovieSceneSequencePlaybackParams
+				{
+					Frame = this.SequencePlayer.GetEndTime().Time,
+					MarkedFrame = "A",
+					PositionType = EMovieScenePositionType.MarkedFrame,
+					UpdateMethod = EUpdatePositionMethod.Play
+				});
 				Action startCallback2 = startCallback;
 				if (startCallback2 == null)
 				{
@@ -281,7 +287,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}, 100, this.MemoryTag);
 		}
 
-		// Token: 0x0603ACC5 RID: 240837 RVA: 0x00E024B8 File Offset: 0x00E006B8
+		// Token: 0x0602FC11 RID: 195601 RVA: 0x00D52A64 File Offset: 0x00D50C64
 		private void PlayAutoRotate()
 		{
 			AActor actorWithTag = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("WeaponRoot").Value, ECollectActorType.UI);
@@ -291,17 +297,17 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.WeaponHandle.StartRotate();
 		}
 
-		// Token: 0x0401EAF3 RID: 125683
+		// Token: 0x0401959A RID: 103834
 		private DreamLinkData ActivityDataBase;
 
-		// Token: 0x0401EAF4 RID: 125684
+		// Token: 0x0401959B RID: 103835
 		private bool LimitTimeRewardOn = true;
 
-		// Token: 0x0401EAF5 RID: 125685
+		// Token: 0x0401959C RID: 103836
 		[Nullable(1)]
 		private string RemainTimeText = "";
 
-		// Token: 0x0401EAF6 RID: 125686
+		// Token: 0x0401959D RID: 103837
 		[Nullable(new byte[]
 		{
 			2,
@@ -309,7 +315,7 @@ namespace CSharpScript.Game.Module.DreamLink
 		})]
 		private TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-		// Token: 0x0401EAF7 RID: 125687
+		// Token: 0x0401959E RID: 103838
 		[Nullable(new byte[]
 		{
 			2,
@@ -318,47 +324,47 @@ namespace CSharpScript.Game.Module.DreamLink
 		})]
 		private GenericScrollViewNew<DreamLinkRewardLimitTimeItem, DreamLinkRewardData> TaskLayout;
 
-		// Token: 0x0401EAF8 RID: 125688
+		// Token: 0x0401959F RID: 103839
 		private int CurrentTabIndex;
 
-		// Token: 0x0401EAF9 RID: 125689
+		// Token: 0x040195A0 RID: 103840
 		private DreamLinkRewardSpecialItem SpecialRewardItem;
 
-		// Token: 0x0401EAFA RID: 125690
+		// Token: 0x040195A1 RID: 103841
 		private ActivityWeaponDescribeComponent WeaponItem;
 
-		// Token: 0x0401EAFB RID: 125691
+		// Token: 0x040195A2 RID: 103842
 		private ULevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401EAFC RID: 125692
+		// Token: 0x040195A3 RID: 103843
 		private ALevelSequenceActor SequenceActor;
 
-		// Token: 0x0401EAFD RID: 125693
+		// Token: 0x040195A4 RID: 103844
 		private AActor OriginCameraActor;
 
-		// Token: 0x0401EAFE RID: 125694
+		// Token: 0x040195A5 RID: 103845
 		private AActor SceneCameraActor;
 
-		// Token: 0x0401EAFF RID: 125695
+		// Token: 0x040195A6 RID: 103846
 		private DreamLinkWeaponModelHandle WeaponHandle;
 
-		// Token: 0x0200BCF1 RID: 48369
+		// Token: 0x0200A6FA RID: 42746
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x04038FC3 RID: 233411
+			// Token: 0x0403398E RID: 211342
 			public const int CommonTabComponent = 0;
 
-			// Token: 0x04038FC4 RID: 233412
+			// Token: 0x0403398F RID: 211343
 			public const int Layout = 1;
 
-			// Token: 0x04038FC5 RID: 233413
+			// Token: 0x04033990 RID: 211344
 			public const int TxtTime = 2;
 
-			// Token: 0x04038FC6 RID: 233414
+			// Token: 0x04033991 RID: 211345
 			public const int PanelSpecial = 3;
 
-			// Token: 0x04038FC7 RID: 233415
+			// Token: 0x04033992 RID: 211346
 			public const int WeaponAttributeItem = 4;
 		}
 	}

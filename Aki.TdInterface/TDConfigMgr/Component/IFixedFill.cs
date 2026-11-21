@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000396 RID: 918
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003DF RID: 991
 	public class IFixedFill : IFillType
 	{
-		// Token: 0x0600123F RID: 4671 RVA: 0x0003C63C File Offset: 0x0003A83C
+		// Token: 0x06001383 RID: 4995 RVA: 0x0003F920 File Offset: 0x0003DB20
 		private IFixedFill_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001240 RID: 4672 RVA: 0x0003C674 File Offset: 0x0003A874
+		// Token: 0x06001384 RID: 4996 RVA: 0x0003F958 File Offset: 0x0003DB58
 		public static IFixedFill Create([Nullable(2)] IFixedFill instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001241 RID: 4673 RVA: 0x0003C687 File Offset: 0x0003A887
+		// Token: 0x06001385 RID: 4997 RVA: 0x0003F96B File Offset: 0x0003DB6B
 		public static IFixedFill CreateFromSetValue([Nullable(2)] IFixedFill_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001242 RID: 4674 RVA: 0x0003C69A File Offset: 0x0003A89A
+		// Token: 0x06001386 RID: 4998 RVA: 0x0003F97E File Offset: 0x0003DB7E
 		public new IFixedFill_SetValue ToSetValue()
 		{
 			return new IFixedFill_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700051C RID: 1308
-		// (get) Token: 0x06001243 RID: 4675 RVA: 0x0003C6D1 File Offset: 0x0003A8D1
-		// (set) Token: 0x06001244 RID: 4676 RVA: 0x0003C6FC File Offset: 0x0003A8FC
+		// Token: 0x17000570 RID: 1392
+		// (get) Token: 0x06001387 RID: 4999 RVA: 0x0003F9B5 File Offset: 0x0003DBB5
+		// (set) Token: 0x06001388 RID: 5000 RVA: 0x0003F9E0 File Offset: 0x0003DBE0
 		public override EFillType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700051D RID: 1309
-		// (get) Token: 0x06001245 RID: 4677 RVA: 0x0003C70C File Offset: 0x0003A90C
-		// (set) Token: 0x06001246 RID: 4678 RVA: 0x0003C746 File Offset: 0x0003A946
+		// Token: 0x17000571 RID: 1393
+		// (get) Token: 0x06001389 RID: 5001 RVA: 0x0003F9F0 File Offset: 0x0003DBF0
+		// (set) Token: 0x0600138A RID: 5002 RVA: 0x0003FA2A File Offset: 0x0003DC2A
 		public virtual int? ModelId
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700051E RID: 1310
-		// (get) Token: 0x06001247 RID: 4679 RVA: 0x0003C754 File Offset: 0x0003A954
-		// (set) Token: 0x06001248 RID: 4680 RVA: 0x0003C7B5 File Offset: 0x0003A9B5
+		// Token: 0x17000572 RID: 1394
+		// (get) Token: 0x0600138B RID: 5003 RVA: 0x0003FA38 File Offset: 0x0003DC38
+		// (set) Token: 0x0600138C RID: 5004 RVA: 0x0003FA99 File Offset: 0x0003DC99
 		public virtual IPieceIndex Centre
 		{
 			get
@@ -140,9 +138,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700051F RID: 1311
-		// (get) Token: 0x06001249 RID: 4681 RVA: 0x0003C7CC File Offset: 0x0003A9CC
-		// (set) Token: 0x0600124A RID: 4682 RVA: 0x0003C82D File Offset: 0x0003AA2D
+		// Token: 0x17000573 RID: 1395
+		// (get) Token: 0x0600138D RID: 5005 RVA: 0x0003FAB0 File Offset: 0x0003DCB0
+		// (set) Token: 0x0600138E RID: 5006 RVA: 0x0003FB11 File Offset: 0x0003DD11
 		public virtual IJigsawConfig Config
 		{
 			get
@@ -170,24 +168,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000EB7 RID: 3767
+		// Token: 0x04000FAE RID: 4014
 		[Nullable(2)]
 		protected new IFixedFill FbInstance;
 
-		// Token: 0x04000EB8 RID: 3768
+		// Token: 0x04000FAF RID: 4015
 		[Nullable(2)]
 		protected new IFixedFill_SetValue PocoInterface;
 
-		// Token: 0x04000EB9 RID: 3769
+		// Token: 0x04000FB0 RID: 4016
 		private IPieceIndex _CentreCache;
 
-		// Token: 0x04000EBA RID: 3770
+		// Token: 0x04000FB1 RID: 4017
 		private bool _CentreInited;
 
-		// Token: 0x04000EBB RID: 3771
+		// Token: 0x04000FB2 RID: 4018
 		private IJigsawConfig _ConfigCache;
 
-		// Token: 0x04000EBC RID: 3772
+		// Token: 0x04000FB3 RID: 4019
 		private bool _ConfigInited;
 	}
 }

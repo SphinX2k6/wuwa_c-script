@@ -2,30 +2,30 @@
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x020044E9 RID: 17641
+	// Token: 0x0200340B RID: 13323
 	public enum EFormulaValueType
 	{
-		// Token: 0x040184BA RID: 99514
+		// Token: 0x04012AE2 RID: 76514
 		None,
-		// Token: 0x040184BB RID: 99515
+		// Token: 0x04012AE3 RID: 76515
 		Double,
-		// Token: 0x040184BC RID: 99516
+		// Token: 0x04012AE4 RID: 76516
 		Bool,
-		// Token: 0x040184BD RID: 99517
+		// Token: 0x04012AE5 RID: 76517
 		String,
-		// Token: 0x040184BE RID: 99518
+		// Token: 0x04012AE6 RID: 76518
 		Entity,
-		// Token: 0x040184BF RID: 99519
+		// Token: 0x04012AE7 RID: 76519
 		DoubleArray,
-		// Token: 0x040184C0 RID: 99520
+		// Token: 0x04012AE8 RID: 76520
 		Context,
-		// Token: 0x040184C1 RID: 99521
+		// Token: 0x04012AE9 RID: 76521
 		StringArray,
-		// Token: 0x040184C2 RID: 99522
+		// Token: 0x04012AEA RID: 76522
 		TagContainer,
-		// Token: 0x040184C3 RID: 99523
+		// Token: 0x04012AEB RID: 76523
 		Vector,
-		// Token: 0x040184C4 RID: 99524
+		// Token: 0x04012AEC RID: 76524
 		Rotator
 	}
 }

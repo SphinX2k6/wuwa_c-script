@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,27 +12,27 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// Token: 0x02002282 RID: 8834
+// Token: 0x02001766 RID: 5990
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class MotorcycleDiyController : ControllerBase
 {
-	// Token: 0x06011401 RID: 70657 RVA: 0x004360E4 File Offset: 0x004342E4
+	// Token: 0x0600E897 RID: 59543 RVA: 0x00442CF0 File Offset: 0x00440EF0
 	protected override bool OnInit()
 	{
 		this.OnRegisterNetEvent();
 		return true;
 	}
 
-	// Token: 0x06011402 RID: 70658 RVA: 0x004360ED File Offset: 0x004342ED
+	// Token: 0x0600E898 RID: 59544 RVA: 0x00442CF9 File Offset: 0x00440EF9
 	protected override bool OnClear()
 	{
 		this.OnUnRegisterNetEvent();
 		return true;
 	}
 
-	// Token: 0x06011403 RID: 70659 RVA: 0x004360F8 File Offset: 0x004342F8
+	// Token: 0x0600E899 RID: 59545 RVA: 0x00442D04 File Offset: 0x00440F04
 	protected void OnRegisterNetEvent()
 	{
 		EventSystem.Instance.Add<EFunctionType, bool>(EEventName.OnFunctionOpenSet, new Action<EFunctionType, bool>(this.OnFunctionOpenSet));
@@ -46,7 +45,7 @@ public class MotorcycleDiyController : ControllerBase
 		Net.Instance.Register(ENotifyMessageId.MotorOutlookFullChangeNotify, new Action<IMessage, Net.CallbackStatus>(this.OnMotorOutlookFullChangeNotify));
 	}
 
-	// Token: 0x06011404 RID: 70660 RVA: 0x004361E8 File Offset: 0x004343E8
+	// Token: 0x0600E89A RID: 59546 RVA: 0x00442DF4 File Offset: 0x00440FF4
 	protected void OnUnRegisterNetEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnFunctionOpenSet, new Action<EFunctionType, bool>(this.OnFunctionOpenSet));
@@ -59,7 +58,7 @@ public class MotorcycleDiyController : ControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.MotorOutlookFullChangeNotify);
 	}
 
-	// Token: 0x06011405 RID: 70661 RVA: 0x00436299 File Offset: 0x00434499
+	// Token: 0x0600E89B RID: 59547 RVA: 0x00442EA5 File Offset: 0x004410A5
 	private void OnFunctionOpenSet(EFunctionType functionType, bool isOpen)
 	{
 		if (!isOpen)
@@ -72,7 +71,7 @@ public class MotorcycleDiyController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011406 RID: 70662 RVA: 0x004362AD File Offset: 0x004344AD
+	// Token: 0x0600E89C RID: 59548 RVA: 0x00442EB9 File Offset: 0x004410B9
 	private void OnFunctionOpenUpdate(EFunctionType functionType, bool isOpen)
 	{
 		if (!isOpen)
@@ -85,7 +84,7 @@ public class MotorcycleDiyController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011407 RID: 70663 RVA: 0x004362C4 File Offset: 0x004344C4
+	// Token: 0x0600E89D RID: 59549 RVA: 0x00442ED0 File Offset: 0x004410D0
 	private void OnAddCommonItemList(IReadOnlyList<IProto_NormalItem> normalItemList)
 	{
 		foreach (IProto_NormalItem proto_NormalItem in normalItemList)
@@ -98,7 +97,7 @@ public class MotorcycleDiyController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011408 RID: 70664 RVA: 0x0043632C File Offset: 0x0043452C
+	// Token: 0x0600E89E RID: 59550 RVA: 0x00442F38 File Offset: 0x00441138
 	[NullableContext(2)]
 	private void OnMotorOutlookRegionInfoNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -109,7 +108,7 @@ public class MotorcycleDiyController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011409 RID: 70665 RVA: 0x00436350 File Offset: 0x00434550
+	// Token: 0x0600E89F RID: 59551 RVA: 0x00442F5C File Offset: 0x0044115C
 	[NullableContext(2)]
 	private void OnMotorOutlookAddNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -121,7 +120,7 @@ public class MotorcycleDiyController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601140A RID: 70666 RVA: 0x00436384 File Offset: 0x00434584
+	// Token: 0x0600E8A0 RID: 59552 RVA: 0x00442F90 File Offset: 0x00441190
 	[NullableContext(2)]
 	private void OnMotorOutlookOwnedChangeNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -133,7 +132,7 @@ public class MotorcycleDiyController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601140B RID: 70667 RVA: 0x004363B8 File Offset: 0x004345B8
+	// Token: 0x0600E8A1 RID: 59553 RVA: 0x00442FC4 File Offset: 0x004411C4
 	[NullableContext(2)]
 	private void OnMotorOutlookEquippedChangeNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -145,7 +144,7 @@ public class MotorcycleDiyController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601140C RID: 70668 RVA: 0x004363EC File Offset: 0x004345EC
+	// Token: 0x0600E8A2 RID: 59554 RVA: 0x00442FF8 File Offset: 0x004411F8
 	[NullableContext(2)]
 	private void OnMotorOutlookFullChangeNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -158,7 +157,7 @@ public class MotorcycleDiyController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601140D RID: 70669 RVA: 0x00436430 File Offset: 0x00434630
+	// Token: 0x0600E8A3 RID: 59555 RVA: 0x0044303C File Offset: 0x0044123C
 	public void MotorDiyInfoRequest()
 	{
 		MotorOutlookInfoRequest message = MotorOutlookInfoRequest.Create();
@@ -174,11 +173,11 @@ public class MotorcycleDiyController : ControllerBase
 				MotorcycleDiyModel.Instance.UpdateMotorOutlookInfo(motorOutlookInfoResponse);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(motorOutlookInfoResponse.ErrorCode, 15636, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(motorOutlookInfoResponse.ErrorCode, 18366, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x0601140E RID: 70670 RVA: 0x00436474 File Offset: 0x00434674
+	// Token: 0x0600E8A4 RID: 59556 RVA: 0x00443080 File Offset: 0x00441280
 	[NullableContext(2)]
 	public void EquipMotorSkinRequest(int skinId, Action callBack = null)
 	{
@@ -193,7 +192,7 @@ public class MotorcycleDiyController : ControllerBase
 			}
 			if (motorUseSkinResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(motorUseSkinResponse.ErrorCode, 18288, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(motorUseSkinResponse.ErrorCode, 22488, null, true, true);
 				return;
 			}
 			Action callBack2 = callBack;
@@ -205,7 +204,7 @@ public class MotorcycleDiyController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0601140F RID: 70671 RVA: 0x004364B8 File Offset: 0x004346B8
+	// Token: 0x0600E8A5 RID: 59557 RVA: 0x004430C4 File Offset: 0x004412C4
 	public void EquipMotorOutLookRequest(List<int> stickerIds, List<int> decorateIds, int frameId, [Nullable(2)] Action callBack = null)
 	{
 		MotorChangeOutlookRequest motorChangeOutlookRequest = MotorChangeOutlookRequest.Create();
@@ -221,7 +220,7 @@ public class MotorcycleDiyController : ControllerBase
 			}
 			if (motorChangeOutlookResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(motorChangeOutlookResponse.ErrorCode, 21672, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(motorChangeOutlookResponse.ErrorCode, 26904, null, true, true);
 				return;
 			}
 			Action callBack2 = callBack;
@@ -233,7 +232,7 @@ public class MotorcycleDiyController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06011410 RID: 70672 RVA: 0x00436518 File Offset: 0x00434718
+	// Token: 0x0600E8A6 RID: 59558 RVA: 0x00443124 File Offset: 0x00441324
 	public void CreateMotorOutlookPresetRequest(List<int> stickerIds, List<int> decorateIds, int frameId, string name, [Nullable(new byte[]
 	{
 		2,
@@ -257,7 +256,7 @@ public class MotorcycleDiyController : ControllerBase
 			}
 			if (motorOutlookCreatePresetResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(motorOutlookCreatePresetResponse.ErrorCode, 17753, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(motorOutlookCreatePresetResponse.ErrorCode, 22153, null, true, true);
 				return;
 			}
 			MotorOutlookPlayerPresetPb motorOutlookPreset = motorOutlookCreatePresetResponse.MotorOutlookPreset;
@@ -268,11 +267,11 @@ public class MotorcycleDiyController : ControllerBase
 			{
 				return;
 			}
-			callBack2((plan != null) ? plan.ToList<MotorOutlookPresetPlanPb>() : new List<MotorOutlookPresetPlanPb>());
+			callBack2((plan != null) ? new List<MotorOutlookPresetPlanPb>(plan) : new List<MotorOutlookPresetPlanPb>());
 		}, 0);
 	}
 
-	// Token: 0x06011411 RID: 70673 RVA: 0x0043658C File Offset: 0x0043478C
+	// Token: 0x0600E8A7 RID: 59559 RVA: 0x00443198 File Offset: 0x00441398
 	[return: Nullable(0)]
 	public UniTask<Aki.Protocol.ErrorCode> CreateMotorOutlookPresetRequestAsync(List<int> stickerIds, List<int> decorateIds, int frameId, string name)
 	{
@@ -287,7 +286,7 @@ public class MotorcycleDiyController : ControllerBase
 		return <CreateMotorOutlookPresetRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011412 RID: 70674 RVA: 0x004365E8 File Offset: 0x004347E8
+	// Token: 0x0600E8A8 RID: 59560 RVA: 0x004431F4 File Offset: 0x004413F4
 	[NullableContext(2)]
 	public void DeleteMotorOutlookPresetRequest(int presetId, Action callBack = null)
 	{
@@ -302,7 +301,7 @@ public class MotorcycleDiyController : ControllerBase
 			}
 			if (motorOutlookDeletePresetResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(motorOutlookDeletePresetResponse.ErrorCode, 28770, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(motorOutlookDeletePresetResponse.ErrorCode, 16772, null, true, true);
 				return;
 			}
 			MotorcycleDiyModel.Instance.RemoveSingleCustomPresetInfo(presetId);
@@ -315,9 +314,9 @@ public class MotorcycleDiyController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06011413 RID: 70675 RVA: 0x00436638 File Offset: 0x00434838
+	// Token: 0x0600E8A9 RID: 59561 RVA: 0x00443244 File Offset: 0x00441444
 	[return: Nullable(0)]
-	public UniTask<Aki.Protocol.ErrorCode> EditMotorOutlookPresetRequestAsync(int presetId, List<int> stickerIds, List<int> decorateIds, int frameId, string name)
+	public UniTask<Aki.Protocol.ErrorCode> EditMotorOutlookPresetRequestAsync(int presetId, IEnumerable<int> stickerIds, IEnumerable<int> decorateIds, int frameId, string name)
 	{
 		MotorcycleDiyController.<EditMotorOutlookPresetRequestAsync>d__18 <EditMotorOutlookPresetRequestAsync>d__;
 		<EditMotorOutlookPresetRequestAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<Aki.Protocol.ErrorCode>.Create();
@@ -331,7 +330,7 @@ public class MotorcycleDiyController : ControllerBase
 		return <EditMotorOutlookPresetRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011414 RID: 70676 RVA: 0x004366A0 File Offset: 0x004348A0
+	// Token: 0x0600E8AA RID: 59562 RVA: 0x004432AC File Offset: 0x004414AC
 	public void EditMotorOutlookPresetRequest(int presetId, List<int> stickerIds, List<int> decorateIds, int frameId, string name, [Nullable(2)] Action callBack = null)
 	{
 		MotorOutlookEditPresetRequest motorOutlookEditPresetRequest = MotorOutlookEditPresetRequest.Create();
@@ -353,7 +352,7 @@ public class MotorcycleDiyController : ControllerBase
 			}
 			if (motorOutlookEditPresetResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(motorOutlookEditPresetResponse.ErrorCode, 24760, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(motorOutlookEditPresetResponse.ErrorCode, 23910, null, true, true);
 				return;
 			}
 			MotorcycleDiyModel.Instance.UpdateCustomPresetInfo(motorOutlookEditPresetResponse.MotorOutlookPreset);
@@ -366,7 +365,7 @@ public class MotorcycleDiyController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06011415 RID: 70677 RVA: 0x00436728 File Offset: 0x00434928
+	// Token: 0x0600E8AB RID: 59563 RVA: 0x00443334 File Offset: 0x00441534
 	public void EquipMotorStickerRequest(List<int> stickerIds, [Nullable(2)] Action callBack = null)
 	{
 		int equippedFrameId = MotorcycleDiyModel.Instance.GetEquippedFrameId();
@@ -374,7 +373,7 @@ public class MotorcycleDiyController : ControllerBase
 		this.EquipMotorOutLookRequest(stickerIds, equippedDecorationIdList, equippedFrameId, callBack);
 	}
 
-	// Token: 0x06011416 RID: 70678 RVA: 0x00436758 File Offset: 0x00434958
+	// Token: 0x0600E8AC RID: 59564 RVA: 0x00443364 File Offset: 0x00441564
 	[NullableContext(2)]
 	public void EquipMotorFrameRequest(int frameId, Action callBack = null)
 	{
@@ -383,7 +382,7 @@ public class MotorcycleDiyController : ControllerBase
 		this.EquipMotorOutLookRequest(equippedStickerIdList, equippedDecorationIdList, frameId, callBack);
 	}
 
-	// Token: 0x06011417 RID: 70679 RVA: 0x00436788 File Offset: 0x00434988
+	// Token: 0x0600E8AD RID: 59565 RVA: 0x00443394 File Offset: 0x00441594
 	public void EquipMotorDecorationRequest(List<int> decorateIds, [Nullable(2)] Action callBack = null)
 	{
 		List<int> equippedStickerIdList = MotorcycleDiyModel.Instance.GetEquippedStickerIdList();
@@ -391,7 +390,7 @@ public class MotorcycleDiyController : ControllerBase
 		this.EquipMotorOutLookRequest(equippedStickerIdList, decorateIds, equippedFrameId, callBack);
 	}
 
-	// Token: 0x06011418 RID: 70680 RVA: 0x004367B8 File Offset: 0x004349B8
+	// Token: 0x0600E8AE RID: 59566 RVA: 0x004433C4 File Offset: 0x004415C4
 	[NullableContext(2)]
 	public void UseMotorSceneRequest(int sceneId, Action callBack = null)
 	{
@@ -406,7 +405,7 @@ public class MotorcycleDiyController : ControllerBase
 			}
 			if (motorUseSceneResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(motorUseSceneResponse.ErrorCode, 23495, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(motorUseSceneResponse.ErrorCode, 26625, null, true, true);
 				return;
 			}
 			int currentSceneId = (motorUseSceneResponse.SceneInUse > 0) ? motorUseSceneResponse.SceneInUse : sceneId;
@@ -420,7 +419,7 @@ public class MotorcycleDiyController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06011419 RID: 70681 RVA: 0x00436808 File Offset: 0x00434A08
+	// Token: 0x0600E8AF RID: 59567 RVA: 0x00443414 File Offset: 0x00441614
 	[NullableContext(0)]
 	public UniTask<bool> OpenRootView()
 	{
@@ -431,7 +430,7 @@ public class MotorcycleDiyController : ControllerBase
 		return <OpenRootView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601141A RID: 70682 RVA: 0x00436844 File Offset: 0x00434A44
+	// Token: 0x0600E8B0 RID: 59568 RVA: 0x00443450 File Offset: 0x00441650
 	public void OpenTargetViewByReward(List<RewardItemData> motorItemDataList, int jumpDiyType = 0)
 	{
 		if (motorItemDataList.Count == 0)
@@ -464,7 +463,7 @@ public class MotorcycleDiyController : ControllerBase
 		});
 	}
 
-	// Token: 0x0601141B RID: 70683 RVA: 0x00436914 File Offset: 0x00434B14
+	// Token: 0x0600E8B1 RID: 59569 RVA: 0x00443520 File Offset: 0x00441720
 	public void OpenRootViewByReward(List<RewardItemData> motorItemDataList, int jumpDiyType = 0)
 	{
 		List<int> list = new List<int>();
@@ -551,7 +550,7 @@ public class MotorcycleDiyController : ControllerBase
 		});
 	}
 
-	// Token: 0x0601141C RID: 70684 RVA: 0x00436B84 File Offset: 0x00434D84
+	// Token: 0x0600E8B2 RID: 59570 RVA: 0x00443790 File Offset: 0x00441990
 	public void OpenMotorGeneralPreviewView(int previewId)
 	{
 		MotorGeneralPreview? motorGeneralPreviewConfig = MotorDiyConfig.Instance.GetMotorGeneralPreviewConfig(previewId);
@@ -575,7 +574,7 @@ public class MotorcycleDiyController : ControllerBase
 		UiManager.Instance.OpenView(euiViewName.Value, previewId, null);
 	}
 
-	// Token: 0x0601141D RID: 70685 RVA: 0x00436C44 File Offset: 0x00434E44
+	// Token: 0x0600E8B3 RID: 59571 RVA: 0x00443850 File Offset: 0x00441A50
 	[NullableContext(0)]
 	public UniTask<bool> OpenMotorcycleScenePopupView()
 	{
@@ -586,8 +585,8 @@ public class MotorcycleDiyController : ControllerBase
 		return <OpenMotorcycleScenePopupView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x170015F6 RID: 5622
-	// (get) Token: 0x0601141E RID: 70686 RVA: 0x00436C7F File Offset: 0x00434E7F
+	// Token: 0x1700162D RID: 5677
+	// (get) Token: 0x0600E8B4 RID: 59572 RVA: 0x0044388B File Offset: 0x00441A8B
 	public static MotorcycleDiyController Instance
 	{
 		get
@@ -596,7 +595,7 @@ public class MotorcycleDiyController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601141F RID: 70687 RVA: 0x00436C86 File Offset: 0x00434E86
+	// Token: 0x0600E8B5 RID: 59573 RVA: 0x00443892 File Offset: 0x00441A92
 	public static MotorcycleDiyController GetOrCreateInstance()
 	{
 		if (MotorcycleDiyController._Instance == null)
@@ -606,7 +605,7 @@ public class MotorcycleDiyController : ControllerBase
 		return MotorcycleDiyController._Instance;
 	}
 
-	// Token: 0x06011420 RID: 70688 RVA: 0x00436C9A File Offset: 0x00434E9A
+	// Token: 0x0600E8B6 RID: 59574 RVA: 0x004438A6 File Offset: 0x00441AA6
 	public static bool CreateInstance()
 	{
 		if (MotorcycleDiyController._Instance != null)
@@ -617,24 +616,24 @@ public class MotorcycleDiyController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06011421 RID: 70689 RVA: 0x00436CB0 File Offset: 0x00434EB0
+	// Token: 0x0600E8B7 RID: 59575 RVA: 0x004438BC File Offset: 0x00441ABC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011422 RID: 70690 RVA: 0x00436CB2 File Offset: 0x00434EB2
+	// Token: 0x0600E8B8 RID: 59576 RVA: 0x004438BE File Offset: 0x00441ABE
 	public static void ResetStaticDefaultValue()
 	{
 		MotorcycleDiyController._Instance = null;
 	}
 
-	// Token: 0x06011423 RID: 70691 RVA: 0x00436CBA File Offset: 0x00434EBA
+	// Token: 0x0600E8B9 RID: 59577 RVA: 0x004438C6 File Offset: 0x00441AC6
 	static MotorcycleDiyController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleDiyController.CreateStaticDefaultValue), new Action(MotorcycleDiyController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008337 RID: 33591
+	// Token: 0x04008475 RID: 33909
 	[Nullable(2)]
 	private static MotorcycleDiyController _Instance;
 }

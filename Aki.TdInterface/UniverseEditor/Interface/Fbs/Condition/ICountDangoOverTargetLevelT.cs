@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BF0 RID: 19440
+	// Token: 0x020050DD RID: 20701
 	public class ICountDangoOverTargetLevelT
 	{
-		// Token: 0x17008D35 RID: 36149
-		// (get) Token: 0x0601EC6B RID: 126059 RVA: 0x0044FC02 File Offset: 0x0044DE02
-		// (set) Token: 0x0601EC6C RID: 126060 RVA: 0x0044FC0A File Offset: 0x0044DE0A
+		// Token: 0x17009459 RID: 37977
+		// (get) Token: 0x06020851 RID: 133201 RVA: 0x0048326A File Offset: 0x0048146A
+		// (set) Token: 0x06020852 RID: 133202 RVA: 0x00483272 File Offset: 0x00481472
 		public ECheckDangoCultivationProgressType Type { get; set; }
 
-		// Token: 0x17008D36 RID: 36150
-		// (get) Token: 0x0601EC6D RID: 126061 RVA: 0x0044FC13 File Offset: 0x0044DE13
-		// (set) Token: 0x0601EC6E RID: 126062 RVA: 0x0044FC1B File Offset: 0x0044DE1B
+		// Token: 0x1700945A RID: 37978
+		// (get) Token: 0x06020853 RID: 133203 RVA: 0x0048327B File Offset: 0x0048147B
+		// (set) Token: 0x06020854 RID: 133204 RVA: 0x00483283 File Offset: 0x00481483
 		public int TargetNumber { get; set; }
 
-		// Token: 0x17008D37 RID: 36151
-		// (get) Token: 0x0601EC6F RID: 126063 RVA: 0x0044FC24 File Offset: 0x0044DE24
-		// (set) Token: 0x0601EC70 RID: 126064 RVA: 0x0044FC2C File Offset: 0x0044DE2C
+		// Token: 0x1700945B RID: 37979
+		// (get) Token: 0x06020855 RID: 133205 RVA: 0x0048328C File Offset: 0x0048148C
+		// (set) Token: 0x06020856 RID: 133206 RVA: 0x00483294 File Offset: 0x00481494
 		public int TargetLevel { get; set; }
 
-		// Token: 0x0601EC71 RID: 126065 RVA: 0x0044FC35 File Offset: 0x0044DE35
+		// Token: 0x06020857 RID: 133207 RVA: 0x0048329D File Offset: 0x0048149D
 		public ICountDangoOverTargetLevelT()
 		{
 			this.Type = ECheckDangoCultivationProgressType.CountDangoOverTargetLevel;

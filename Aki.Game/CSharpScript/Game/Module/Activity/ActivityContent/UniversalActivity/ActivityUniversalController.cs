@@ -12,19 +12,19 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 {
-	// Token: 0x02005F82 RID: 24450
+	// Token: 0x02004F69 RID: 20329
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ActivityUniversalController : ActivityControllerBase
 	{
-		// Token: 0x0603E0C5 RID: 254149 RVA: 0x00EFB1D1 File Offset: 0x00EF93D1
+		// Token: 0x0603305F RID: 208991 RVA: 0x00E4CEB1 File Offset: 0x00E4B0B1
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x0603E0C6 RID: 254150 RVA: 0x00EFB1D4 File Offset: 0x00EF93D4
+		// Token: 0x06033060 RID: 208992 RVA: 0x00E4CEB4 File Offset: 0x00E4B0B4
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 			if (this.GetFunctionTypeById(data.Id).GetValueOrDefault() != EActivityFunctionType.View)
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			this.ActivityFunctionExecute(data.Id);
 		}
 
-		// Token: 0x0603E0C7 RID: 254151 RVA: 0x00EFB208 File Offset: 0x00EF9408
+		// Token: 0x06033061 RID: 208993 RVA: 0x00E4CEE8 File Offset: 0x00E4B0E8
 		private EActivityFunctionType? GetFunctionTypeById(int activityId)
 		{
 			UniversalActivity? activityUniversalConfig = ActivityUniversalConfig.Instance.GetActivityUniversalConfig(activityId);
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			return new EActivityFunctionType?((EActivityFunctionType)activityUniversalConfig.Value.FunctionType);
 		}
 
-		// Token: 0x0603E0C8 RID: 254152 RVA: 0x00EFB248 File Offset: 0x00EF9448
+		// Token: 0x06033062 RID: 208994 RVA: 0x00E4CF28 File Offset: 0x00E4B128
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			UniversalActivity? activityUniversalConfig = ActivityUniversalConfig.Instance.GetActivityUniversalConfig(data.Id);
@@ -56,27 +56,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			return activityUniversalConfig.Value.UiResource;
 		}
 
-		// Token: 0x0603E0C9 RID: 254153 RVA: 0x00EFB284 File Offset: 0x00EF9484
+		// Token: 0x06033063 RID: 208995 RVA: 0x00E4CF64 File Offset: 0x00E4B164
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new ActivitySubViewUniversal();
 		}
 
-		// Token: 0x0603E0CA RID: 254154 RVA: 0x00EFB28B File Offset: 0x00EF948B
+		// Token: 0x06033064 RID: 208996 RVA: 0x00E4CF6B File Offset: 0x00E4B16B
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			this.UniversalActivityIdSet.Add(data.Id);
 			return new ActivityUniversalData();
 		}
 
-		// Token: 0x0603E0CB RID: 254155 RVA: 0x00EFB2A4 File Offset: 0x00EF94A4
+		// Token: 0x06033065 RID: 208997 RVA: 0x00E4CF84 File Offset: 0x00E4B184
 		protected override bool OnInit()
 		{
 			this.RegisterOpenViewFunc();
 			return true;
 		}
 
-		// Token: 0x0603E0CC RID: 254156 RVA: 0x00EFB2AD File Offset: 0x00EF94AD
+		// Token: 0x06033066 RID: 208998 RVA: 0x00E4CF8D File Offset: 0x00E4B18D
 		protected override bool OnClear()
 		{
 			this.UniversalActivityIdSet.Clear();
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			return true;
 		}
 
-		// Token: 0x0603E0CD RID: 254157 RVA: 0x00EFB2C8 File Offset: 0x00EF94C8
+		// Token: 0x06033067 RID: 208999 RVA: 0x00E4CFA8 File Offset: 0x00E4B1A8
 		public void ActivityFunctionExecute(int activityId)
 		{
 			UniversalActivity? activityUniversalConfig = ActivityUniversalConfig.Instance.GetActivityUniversalConfig(activityId);
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			case 2:
 				if (array.Length >= 1)
 				{
-					EUiViewName viewName = (EUiViewName)Enum.Parse(typeof(EUiViewName), array[0]);
+					EUiViewName viewName = (EUiViewName)array[0];
 					string[] array2 = new string[array.Length - 1];
 					Array.Copy(array, 1, array2, 0, array2.Length);
 					this.FunctionExecuteView(viewName, array2);
@@ -122,13 +122,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			}
 		}
 
-		// Token: 0x0603E0CE RID: 254158 RVA: 0x00EFB382 File Offset: 0x00EF9582
+		// Token: 0x06033068 RID: 209000 RVA: 0x00E4D053 File Offset: 0x00E4B253
 		private void FunctionExecuteQuest(int? questId = null)
 		{
 			UiManager.Instance.OpenView(EUiViewName.QuestView, questId, null);
 		}
 
-		// Token: 0x0603E0CF RID: 254159 RVA: 0x00EFB39C File Offset: 0x00EF959C
+		// Token: 0x06033069 RID: 209001 RVA: 0x00E4D06C File Offset: 0x00E4B26C
 		private void FunctionExecuteView(EUiViewName viewName, [Nullable(new byte[]
 		{
 			2,
@@ -144,14 +144,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			UiManager.Instance.OpenView(viewName, params_, null);
 		}
 
-		// Token: 0x0603E0D0 RID: 254160 RVA: 0x00EFB3CE File Offset: 0x00EF95CE
+		// Token: 0x0603306A RID: 209002 RVA: 0x00E4D09E File Offset: 0x00E4B29E
 		private void RegisterOpenViewFunc()
 		{
 			this.OpenViewFuncMap.Add(EUiViewName.WorldMapView, new Action<string[]>(this.OpenWorldMapView));
 			this.OpenViewFuncMap.Add(EUiViewName.RoguelikeActivityView, new Action<string[]>(this.OpenRoguelikeActivityView));
 		}
 
-		// Token: 0x0603E0D1 RID: 254161 RVA: 0x00EFB408 File Offset: 0x00EF9608
+		// Token: 0x0603306B RID: 209003 RVA: 0x00E4D0D8 File Offset: 0x00E4B2D8
 		private void OpenWorldMapView([Nullable(new byte[]
 		{
 			2,
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			WorldMapController.Instance.OpenView(EOpenMapType.Other, false, data, null);
 		}
 
-		// Token: 0x0603E0D2 RID: 254162 RVA: 0x00EFB4AA File Offset: 0x00EF96AA
+		// Token: 0x0603306C RID: 209004 RVA: 0x00E4D17A File Offset: 0x00E4B37A
 		private void OpenRoguelikeActivityView([Nullable(new byte[]
 		{
 			2,
@@ -183,8 +183,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			RoguelikeController.Instance.OpenRoguelikeActivityView();
 		}
 
-		// Token: 0x17008FDF RID: 36831
-		// (get) Token: 0x0603E0D3 RID: 254163 RVA: 0x00EFB4B7 File Offset: 0x00EF96B7
+		// Token: 0x170063B1 RID: 25521
+		// (get) Token: 0x0603306D RID: 209005 RVA: 0x00E4D187 File Offset: 0x00E4B387
 		public static ActivityUniversalController Instance
 		{
 			get
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			}
 		}
 
-		// Token: 0x0603E0D4 RID: 254164 RVA: 0x00EFB4BE File Offset: 0x00EF96BE
+		// Token: 0x0603306E RID: 209006 RVA: 0x00E4D18E File Offset: 0x00E4B38E
 		public static ActivityUniversalController GetOrCreateInstance()
 		{
 			if (ActivityUniversalController._Instance == null)
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			return ActivityUniversalController._Instance;
 		}
 
-		// Token: 0x0603E0D5 RID: 254165 RVA: 0x00EFB4D2 File Offset: 0x00EF96D2
+		// Token: 0x0603306F RID: 209007 RVA: 0x00E4D1A2 File Offset: 0x00E4B3A2
 		public static bool CreateInstance()
 		{
 			if (ActivityUniversalController._Instance != null)
@@ -214,27 +214,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			return true;
 		}
 
-		// Token: 0x0603E0D6 RID: 254166 RVA: 0x00EFB4E8 File Offset: 0x00EF96E8
+		// Token: 0x06033070 RID: 209008 RVA: 0x00E4D1B8 File Offset: 0x00E4B3B8
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603E0D7 RID: 254167 RVA: 0x00EFB4EA File Offset: 0x00EF96EA
+		// Token: 0x06033071 RID: 209009 RVA: 0x00E4D1BA File Offset: 0x00E4B3BA
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityUniversalController._Instance = null;
 		}
 
-		// Token: 0x0603E0D8 RID: 254168 RVA: 0x00EFB4F2 File Offset: 0x00EF96F2
+		// Token: 0x06033072 RID: 209010 RVA: 0x00E4D1C2 File Offset: 0x00E4B3C2
 		static ActivityUniversalController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityUniversalController.CreateStaticDefaultValue), new Action(ActivityUniversalController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04020676 RID: 132726
+		// Token: 0x0401B148 RID: 110920
 		public HashSet<int> UniversalActivityIdSet = new HashSet<int>();
 
-		// Token: 0x04020677 RID: 132727
+		// Token: 0x0401B149 RID: 110921
 		[Nullable(new byte[]
 		{
 			1,
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 		})]
 		public Dictionary<EUiViewName, Action<string[]>> OpenViewFuncMap = new Dictionary<EUiViewName, Action<string[]>>();
 
-		// Token: 0x04020678 RID: 132728
+		// Token: 0x0401B14A RID: 110922
 		[Nullable(2)]
 		private static ActivityUniversalController _Instance;
 	}

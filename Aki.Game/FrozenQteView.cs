@@ -4,19 +4,21 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Ui;
+using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002304 RID: 8964
+// Token: 0x020017E8 RID: 6120
 [NullableContext(1)]
 [Nullable(0)]
 public class FrozenQteView : PanelQteView
 {
-	// Token: 0x06011B0B RID: 72459 RVA: 0x004591C2 File Offset: 0x004573C2
+	// Token: 0x0600EFA3 RID: 61347 RVA: 0x00465EA2 File Offset: 0x004640A2
 	public FrozenQteView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011B0C RID: 72460 RVA: 0x004591E4 File Offset: 0x004573E4
+	// Token: 0x0600EFA4 RID: 61348 RVA: 0x00465EC4 File Offset: 0x004640C4
 	protected unsafe override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -40,7 +42,7 @@ public class FrozenQteView : PanelQteView
 			this.ComponentRegisterInfos = list;
 			return;
 		}
-		num2 = 3;
+		num2 = 5;
 		List<ValueTuple<int, Type>> list2 = new List<ValueTuple<int, Type>>(num2);
 		CollectionsMarshal.SetCount<ValueTuple<int, Type>>(list2, num2);
 		span = CollectionsMarshal.AsSpan<ValueTuple<int, Type>>(list2);
@@ -50,10 +52,42 @@ public class FrozenQteView : PanelQteView
 		*span[num] = new ValueTuple<int, Type>(1, typeof(UUIItem));
 		num++;
 		*span[num] = new ValueTuple<int, Type>(2, typeof(UUIItem));
+		num++;
+		*span[num] = new ValueTuple<int, Type>(3, typeof(UUIItem));
+		num++;
+		*span[num] = new ValueTuple<int, Type>(4, typeof(UUIItem));
 		this.ComponentRegisterInfos = list2;
 	}
 
-	// Token: 0x06011B0D RID: 72461 RVA: 0x00459320 File Offset: 0x00457520
+	// Token: 0x0600EFA5 RID: 61349 RVA: 0x00466040 File Offset: 0x00464240
+	protected override UniTask OnBeforeStartAsync()
+	{
+		FrozenQteView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
+		<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+		<OnBeforeStartAsync>d__.<>4__this = this;
+		<OnBeforeStartAsync>d__.<>1__state = -1;
+		<OnBeforeStartAsync>d__.<>t__builder.Start<FrozenQteView.<OnBeforeStartAsync>d__14>(ref <OnBeforeStartAsync>d__);
+		return <OnBeforeStartAsync>d__.<>t__builder.Task;
+	}
+
+	// Token: 0x0600EFA6 RID: 61350 RVA: 0x00466084 File Offset: 0x00464284
+	[return: Nullable(new byte[]
+	{
+		0,
+		1
+	})]
+	private UniTask<InputMultiKeyItem> NewKeyItem(int childType)
+	{
+		FrozenQteView.<NewKeyItem>d__15 <NewKeyItem>d__;
+		<NewKeyItem>d__.<>t__builder = AsyncUniTaskMethodBuilder<InputMultiKeyItem>.Create();
+		<NewKeyItem>d__.<>4__this = this;
+		<NewKeyItem>d__.childType = childType;
+		<NewKeyItem>d__.<>1__state = -1;
+		<NewKeyItem>d__.<>t__builder.Start<FrozenQteView.<NewKeyItem>d__15>(ref <NewKeyItem>d__);
+		return <NewKeyItem>d__.<>t__builder.Task;
+	}
+
+	// Token: 0x0600EFA7 RID: 61351 RVA: 0x004660D0 File Offset: 0x004642D0
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -92,7 +126,7 @@ public class FrozenQteView : PanelQteView
 		this.InitQteData();
 	}
 
-	// Token: 0x06011B0E RID: 72462 RVA: 0x00459434 File Offset: 0x00457634
+	// Token: 0x0600EFA8 RID: 61352 RVA: 0x004661E4 File Offset: 0x004643E4
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
@@ -103,7 +137,7 @@ public class FrozenQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011B0F RID: 72463 RVA: 0x00459480 File Offset: 0x00457680
+	// Token: 0x0600EFA9 RID: 61353 RVA: 0x00466230 File Offset: 0x00464430
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -123,7 +157,7 @@ public class FrozenQteView : PanelQteView
 		this.TipItem = null;
 	}
 
-	// Token: 0x06011B10 RID: 72464 RVA: 0x0045951C File Offset: 0x0045771C
+	// Token: 0x0600EFAA RID: 61354 RVA: 0x004662CC File Offset: 0x004644CC
 	private void StopDelayTimer()
 	{
 		if (this.DelayTimer != null)
@@ -133,7 +167,7 @@ public class FrozenQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011B11 RID: 72465 RVA: 0x00459540 File Offset: 0x00457740
+	// Token: 0x0600EFAB RID: 61355 RVA: 0x004662F0 File Offset: 0x004644F0
 	private void InitQteData()
 	{
 		this.InputCount = 0;
@@ -158,27 +192,27 @@ public class FrozenQteView : PanelQteView
 		base.InitBuff(context.Config);
 	}
 
-	// Token: 0x06011B12 RID: 72466 RVA: 0x0045962C File Offset: 0x0045782C
+	// Token: 0x0600EFAC RID: 61356 RVA: 0x004663DC File Offset: 0x004645DC
 	protected override void OnAddEventListener()
 	{
 		base.OnAddEventListener();
 		if (!this.IsMobile)
 		{
-			InputDistributeController.Instance.BindAxis("UiMoveRight", new TInputHandle<float>(this.OnInputCallback));
+			InputDistributeController.Instance.BindAxis("MoveRight", new TInputHandle<float>(this.OnInputCallback));
 		}
 	}
 
-	// Token: 0x06011B13 RID: 72467 RVA: 0x00459657 File Offset: 0x00457857
+	// Token: 0x0600EFAD RID: 61357 RVA: 0x00466407 File Offset: 0x00464607
 	protected override void OnRemoveEventListener()
 	{
 		base.OnRemoveEventListener();
 		if (!this.IsMobile)
 		{
-			InputDistributeController.Instance.UnBindAxis("UiMoveRight", new TInputHandle<float>(this.OnInputCallback));
+			InputDistributeController.Instance.UnBindAxis("MoveRight", new TInputHandle<float>(this.OnInputCallback));
 		}
 	}
 
-	// Token: 0x06011B14 RID: 72468 RVA: 0x00459684 File Offset: 0x00457884
+	// Token: 0x0600EFAE RID: 61358 RVA: 0x00466434 File Offset: 0x00464634
 	protected override void InputControllerChangeInner()
 	{
 		bool flag = Info.Instance.IsInGamepad();
@@ -186,9 +220,29 @@ public class FrozenQteView : PanelQteView
 		UUIItem item2 = base.GetItem(1);
 		item.SetUIActive(!flag);
 		item2.SetUIActive(flag);
+		if (!flag)
+		{
+			this.RefreshKeyName(this.LeftKeyItem, "MoveRight", 0);
+			this.RefreshKeyName(this.RightKeyItem, "MoveRight", 1);
+		}
 	}
 
-	// Token: 0x06011B15 RID: 72469 RVA: 0x004596BC File Offset: 0x004578BC
+	// Token: 0x0600EFAF RID: 61359 RVA: 0x00466494 File Offset: 0x00464694
+	private void RefreshKeyName([Nullable(2)] InputMultiKeyItem keyItem, string actionName, int index)
+	{
+		if (keyItem == null)
+		{
+			return;
+		}
+		InputActionOrAxisKeyItem actionOrAxisKeyItem = new InputActionOrAxisKeyItem
+		{
+			ActionOrAxisName = actionName,
+			Index = new int?(index)
+		};
+		keyItem.RefreshByActionOrAxis(actionOrAxisKeyItem, false);
+	}
+
+	// Token: 0x0600EFB0 RID: 61360 RVA: 0x004664C8 File Offset: 0x004646C8
 	private void OnInputCallback(string axisName, float value, InputIdentification identification)
 	{
 		if (this.IsQteEnd)
@@ -208,7 +262,7 @@ public class FrozenQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011B16 RID: 72470 RVA: 0x00459713 File Offset: 0x00457913
+	// Token: 0x0600EFB1 RID: 61361 RVA: 0x0046651F File Offset: 0x0046471F
 	private void OnPress(int index)
 	{
 		if (this.IsQteEnd)
@@ -219,7 +273,7 @@ public class FrozenQteView : PanelQteView
 		this.OnInput(index);
 	}
 
-	// Token: 0x06011B17 RID: 72471 RVA: 0x00459738 File Offset: 0x00457938
+	// Token: 0x0600EFB2 RID: 61362 RVA: 0x00466544 File Offset: 0x00464744
 	private void OnInput(int index)
 	{
 		this.Input[index] = true;
@@ -239,7 +293,7 @@ public class FrozenQteView : PanelQteView
 		base.AddBuff();
 	}
 
-	// Token: 0x06011B18 RID: 72472 RVA: 0x004597CC File Offset: 0x004579CC
+	// Token: 0x0600EFB3 RID: 61363 RVA: 0x004665D8 File Offset: 0x004647D8
 	protected override void HandleQteEnd()
 	{
 		if (this.DelayTimer != null)
@@ -257,55 +311,67 @@ public class FrozenQteView : PanelQteView
 		}, 100f, null, null, true, 1f);
 	}
 
-	// Token: 0x04008636 RID: 34358
+	// Token: 0x04008774 RID: 34676
 	private int InputCount;
 
-	// Token: 0x04008637 RID: 34359
+	// Token: 0x04008775 RID: 34677
 	private int MaxCount;
 
-	// Token: 0x04008638 RID: 34360
+	// Token: 0x04008776 RID: 34678
 	private readonly bool[] Input = new bool[2];
 
-	// Token: 0x04008639 RID: 34361
+	// Token: 0x04008777 RID: 34679
 	private readonly List<QteAnimItem> AnimItemList = new List<QteAnimItem>();
 
-	// Token: 0x0400863A RID: 34362
+	// Token: 0x04008778 RID: 34680
 	[Nullable(2)]
 	private TimerHandle DelayTimer;
 
-	// Token: 0x0400863B RID: 34363
+	// Token: 0x04008779 RID: 34681
 	[Nullable(2)]
 	private QteTipItem TipItem;
 
-	// Token: 0x0400863C RID: 34364
+	// Token: 0x0400877A RID: 34682
+	[Nullable(2)]
+	private InputMultiKeyItem LeftKeyItem;
+
+	// Token: 0x0400877B RID: 34683
+	[Nullable(2)]
+	private InputMultiKeyItem RightKeyItem;
+
+	// Token: 0x0400877C RID: 34684
 	private const int STOP_ANIM_TIME = 100;
 
-	// Token: 0x0400863D RID: 34365
+	// Token: 0x0400877D RID: 34685
 	private const int LOOP_ANIM_TIME = 230;
 
-	// Token: 0x02008880 RID: 34944
+	// Token: 0x02007A04 RID: 31236
 	[NullableContext(0)]
 	private enum EPadChildType
 	{
-		// Token: 0x0402C5E1 RID: 181729
+		// Token: 0x040278E3 RID: 162019
 		BtnClickLeft,
-		// Token: 0x0402C5E2 RID: 181730
+		// Token: 0x040278E4 RID: 162020
 		BtnClickRight,
-		// Token: 0x0402C5E3 RID: 181731
+		// Token: 0x040278E5 RID: 162021
 		ItemLeft,
-		// Token: 0x0402C5E4 RID: 181732
+		// Token: 0x040278E6 RID: 162022
 		ItemRight
 	}
 
-	// Token: 0x02008881 RID: 34945
+	// Token: 0x02007A05 RID: 31237
 	[NullableContext(0)]
 	private enum EDesktopChildType
 	{
-		// Token: 0x0402C5E6 RID: 181734
+		// Token: 0x040278E8 RID: 162024
 		KeyboardItem,
-		// Token: 0x0402C5E7 RID: 181735
+		// Token: 0x040278E9 RID: 162025
 		GamepadItem,
-		// Token: 0x0402C5E8 RID: 181736
-		AnimItem
+		// Token: 0x040278EA RID: 162026
+		AnimItem,
+		// Token: 0x040278EB RID: 162027
+		LeftKeyItem,
+		// Token: 0x040278EC RID: 162028
+		RightKeyItem
 	}
 }

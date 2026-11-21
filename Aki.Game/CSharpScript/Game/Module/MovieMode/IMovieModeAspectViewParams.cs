@@ -4,23 +4,23 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.MovieMode
 {
-	// Token: 0x02005389 RID: 21385
+	// Token: 0x0200436C RID: 17260
 	[NullableContext(2)]
 	public interface IMovieModeAspectViewParams
 	{
-		// Token: 0x17008391 RID: 33681
-		// (get) Token: 0x06036A19 RID: 223769
-		// (set) Token: 0x06036A1A RID: 223770
+		// Token: 0x1700575D RID: 22365
+		// (get) Token: 0x0602B95F RID: 178527
+		// (set) Token: 0x0602B960 RID: 178528
 		bool IsBanAdaptation { get; set; }
 
-		// Token: 0x17008392 RID: 33682
-		// (get) Token: 0x06036A1B RID: 223771
-		// (set) Token: 0x06036A1C RID: 223772
+		// Token: 0x1700575E RID: 22366
+		// (get) Token: 0x0602B961 RID: 178529
+		// (set) Token: 0x0602B962 RID: 178530
 		ELayerType[] AdaptUiLayers { get; set; }
 
-		// Token: 0x17008393 RID: 33683
-		// (get) Token: 0x06036A1D RID: 223773
-		// (set) Token: 0x06036A1E RID: 223774
+		// Token: 0x1700575F RID: 22367
+		// (get) Token: 0x0602B963 RID: 178531
+		// (set) Token: 0x0602B964 RID: 178532
 		bool? IsIgnoreUiLayerVisible { get; set; }
 	}
 }

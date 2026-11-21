@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E29 RID: 7721
+// Token: 0x020012EB RID: 4843
 [NullableContext(1)]
 [Nullable(0)]
 public class HandBootChipDynamicItem : UiPanelBase, IDynamicScrollBaseItem<HandBookChipDynamicData>
 {
-	// Token: 0x0600EAC3 RID: 60099 RVA: 0x00379F64 File Offset: 0x00378164
+	// Token: 0x0600BEE2 RID: 48866 RVA: 0x00385BF0 File Offset: 0x00383DF0
 	public UniTask Init(UUIItem actor)
 	{
 		HandBootChipDynamicItem.<Init>d__0 <Init>d__;
@@ -24,7 +24,7 @@ public class HandBootChipDynamicItem : UiPanelBase, IDynamicScrollBaseItem<HandB
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EAC4 RID: 60100 RVA: 0x00379FAF File Offset: 0x003781AF
+	// Token: 0x0600BEE3 RID: 48867 RVA: 0x00385C3B File Offset: 0x00383E3B
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class HandBootChipDynamicItem : UiPanelBase, IDynamicScrollBaseItem<HandB
 		};
 	}
 
-	// Token: 0x0600EAC5 RID: 60101 RVA: 0x00379FE8 File Offset: 0x003781E8
+	// Token: 0x0600BEE4 RID: 48868 RVA: 0x00385C74 File Offset: 0x00383E74
 	public FVector2D GetItemSize(HandBookChipDynamicData data)
 	{
 		if (data.HandBookChipConfigId != null)
@@ -51,7 +51,7 @@ public class HandBootChipDynamicItem : UiPanelBase, IDynamicScrollBaseItem<HandB
 		return new FVector2D(item2.GetWidth(), item2.GetHeight());
 	}
 
-	// Token: 0x0600EAC6 RID: 60102 RVA: 0x0037A052 File Offset: 0x00378252
+	// Token: 0x0600BEE5 RID: 48869 RVA: 0x00385CDE File Offset: 0x00383EDE
 	public void ClearItem()
 	{
 	}

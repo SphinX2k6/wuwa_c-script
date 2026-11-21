@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x0200129C RID: 4764
+// Token: 0x02000750 RID: 1872
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class LifePointDrawModel : ModelBase
 {
-	// Token: 0x0600826D RID: 33389 RVA: 0x001BAD8C File Offset: 0x001B8F8C
+	// Token: 0x06005604 RID: 22020 RVA: 0x001C3A5C File Offset: 0x001C1C5C
 	public string GetProgressByActivityId(int activityId, string formatString)
 	{
 		LifePointDrawActivityData lifePointDrawActivityData = ActivityModel.Instance.GetActivityById(activityId) as LifePointDrawActivityData;
@@ -27,14 +27,14 @@ public class LifePointDrawModel : ModelBase
 		return "";
 	}
 
-	// Token: 0x0600826E RID: 33390 RVA: 0x001BADF0 File Offset: 0x001B8FF0
+	// Token: 0x06005605 RID: 22021 RVA: 0x001C3AC0 File Offset: 0x001C1CC0
 	public bool GetGroupUnlockState(int activityId, int groupId)
 	{
 		LifePointDrawActivityData lifePointDrawActivityData = ActivityModel.Instance.GetActivityById(activityId) as LifePointDrawActivityData;
 		return lifePointDrawActivityData != null && lifePointDrawActivityData.GetGroupIfOverUnlockTime(groupId);
 	}
 
-	// Token: 0x0600826F RID: 33391 RVA: 0x001BAE1C File Offset: 0x001B901C
+	// Token: 0x06005606 RID: 22022 RVA: 0x001C3AEC File Offset: 0x001C1CEC
 	public long GetGroupUnlockTime(int activityId, int groupId)
 	{
 		LifePointDrawActivityData lifePointDrawActivityData = ActivityModel.Instance.GetActivityById(activityId) as LifePointDrawActivityData;
@@ -45,14 +45,14 @@ public class LifePointDrawModel : ModelBase
 		return 0L;
 	}
 
-	// Token: 0x06008270 RID: 33392 RVA: 0x001BAE48 File Offset: 0x001B9048
+	// Token: 0x06005607 RID: 22023 RVA: 0x001C3B18 File Offset: 0x001C1D18
 	public bool GetGroupRewardState(int activityId, int groupId)
 	{
 		LifePointDrawActivityData lifePointDrawActivityData = ActivityModel.Instance.GetActivityById(activityId) as LifePointDrawActivityData;
 		return lifePointDrawActivityData != null && lifePointDrawActivityData.GetGroupHasGetReward(groupId);
 	}
 
-	// Token: 0x06008271 RID: 33393 RVA: 0x001BAE74 File Offset: 0x001B9074
+	// Token: 0x06005608 RID: 22024 RVA: 0x001C3B44 File Offset: 0x001C1D44
 	public string GetGroupRewardProgress(int activityId, int groupId)
 	{
 		LifePointDrawActivityData lifePointDrawActivityData = ActivityModel.Instance.GetActivityById(activityId) as LifePointDrawActivityData;
@@ -69,7 +69,7 @@ public class LifePointDrawModel : ModelBase
 		return "";
 	}
 
-	// Token: 0x06008272 RID: 33394 RVA: 0x001BAEE0 File Offset: 0x001B90E0
+	// Token: 0x06005609 RID: 22025 RVA: 0x001C3BB0 File Offset: 0x001C1DB0
 	public bool GetGroupRedDotState(int groupId)
 	{
 		LifePointGroup? lifePointGroupByGroupId = LifePointDrawConfig.Instance.GetLifePointGroupByGroupId(groupId);
@@ -88,21 +88,21 @@ public class LifePointDrawModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06008273 RID: 33395 RVA: 0x001BAF3C File Offset: 0x001B913C
+	// Token: 0x0600560A RID: 22026 RVA: 0x001C3C0C File Offset: 0x001C1E0C
 	public bool GetChallengeFinishState(int activityId, int challengeId)
 	{
 		LifePointDrawActivityData lifePointDrawActivityData = ActivityModel.Instance.GetActivityById(activityId) as LifePointDrawActivityData;
 		return lifePointDrawActivityData != null && lifePointDrawActivityData.GetChallengeIfGetReward(challengeId);
 	}
 
-	// Token: 0x06008274 RID: 33396 RVA: 0x001BAF68 File Offset: 0x001B9168
+	// Token: 0x0600560B RID: 22027 RVA: 0x001C3C38 File Offset: 0x001C1E38
 	public bool GetChallengeRequireFinishState(int activityId, int challengeId)
 	{
 		LifePointDrawActivityData lifePointDrawActivityData = ActivityModel.Instance.GetActivityById(activityId) as LifePointDrawActivityData;
 		return lifePointDrawActivityData != null && lifePointDrawActivityData.GetChallengeRequireFinishState(challengeId);
 	}
 
-	// Token: 0x06008275 RID: 33397 RVA: 0x001BAF94 File Offset: 0x001B9194
+	// Token: 0x0600560C RID: 22028 RVA: 0x001C3C64 File Offset: 0x001C1E64
 	public bool GetChallengeRedDotState(int challengeId)
 	{
 		List<ActivityBaseData> currentShowingActivities = ActivityModel.Instance.GetCurrentShowingActivities();
@@ -129,7 +129,7 @@ public class LifePointDrawModel : ModelBase
 		return !activityCacheData && lifePointDrawActivityData.GetGroupIfOverUnlockTime(groupId) && challengeRequireFinishState;
 	}
 
-	// Token: 0x06008276 RID: 33398 RVA: 0x001BB060 File Offset: 0x001B9260
+	// Token: 0x0600560D RID: 22029 RVA: 0x001C3D30 File Offset: 0x001C1F30
 	public void SaveChallengeRedDotState(int activityId, int challengeId)
 	{
 		List<ActivityBaseData> currentShowingActivities = ActivityModel.Instance.GetCurrentShowingActivities();
@@ -153,8 +153,8 @@ public class LifePointDrawModel : ModelBase
 		ActivityModel.Instance.SaveActivityData(activityId, challengeId, 0, 0, 1);
 	}
 
-	// Token: 0x17000B2E RID: 2862
-	// (get) Token: 0x06008277 RID: 33399 RVA: 0x001BB0E4 File Offset: 0x001B92E4
+	// Token: 0x17000B4E RID: 2894
+	// (get) Token: 0x0600560E RID: 22030 RVA: 0x001C3DB4 File Offset: 0x001C1FB4
 	public static LifePointDrawModel Instance
 	{
 		get
@@ -163,7 +163,7 @@ public class LifePointDrawModel : ModelBase
 		}
 	}
 
-	// Token: 0x06008278 RID: 33400 RVA: 0x001BB0EB File Offset: 0x001B92EB
+	// Token: 0x0600560F RID: 22031 RVA: 0x001C3DBB File Offset: 0x001C1FBB
 	public static LifePointDrawModel GetOrCreateInstance()
 	{
 		if (LifePointDrawModel._Instance == null)
@@ -173,7 +173,7 @@ public class LifePointDrawModel : ModelBase
 		return LifePointDrawModel._Instance;
 	}
 
-	// Token: 0x06008279 RID: 33401 RVA: 0x001BB0FF File Offset: 0x001B92FF
+	// Token: 0x06005610 RID: 22032 RVA: 0x001C3DCF File Offset: 0x001C1FCF
 	public static bool CreateInstance()
 	{
 		if (LifePointDrawModel._Instance != null)
@@ -184,27 +184,27 @@ public class LifePointDrawModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600827A RID: 33402 RVA: 0x001BB115 File Offset: 0x001B9315
+	// Token: 0x06005611 RID: 22033 RVA: 0x001C3DE5 File Offset: 0x001C1FE5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600827B RID: 33403 RVA: 0x001BB117 File Offset: 0x001B9317
+	// Token: 0x06005612 RID: 22034 RVA: 0x001C3DE7 File Offset: 0x001C1FE7
 	public static void ResetStaticDefaultValue()
 	{
 		LifePointDrawModel._Instance = null;
 	}
 
-	// Token: 0x0600827C RID: 33404 RVA: 0x001BB11F File Offset: 0x001B931F
+	// Token: 0x06005613 RID: 22035 RVA: 0x001C3DEF File Offset: 0x001C1FEF
 	static LifePointDrawModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LifePointDrawModel.CreateStaticDefaultValue), new Action(LifePointDrawModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003AE7 RID: 15079
+	// Token: 0x04003B7F RID: 15231
 	public bool CurrentChallengeFinishState;
 
-	// Token: 0x04003AE8 RID: 15080
+	// Token: 0x04003B80 RID: 15232
 	[Nullable(2)]
 	private static LifePointDrawModel _Instance;
 }

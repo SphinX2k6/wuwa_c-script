@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004682 RID: 18050
+	// Token: 0x02004AEA RID: 19178
 	public class IRecordCombatOperationCaptureCheckpointT
 	{
-		// Token: 0x1700802C RID: 32812
-		// (get) Token: 0x0601B67B RID: 112251 RVA: 0x003E4F5A File Offset: 0x003E315A
-		// (set) Token: 0x0601B67C RID: 112252 RVA: 0x003E4F62 File Offset: 0x003E3162
+		// Token: 0x1700866D RID: 34413
+		// (get) Token: 0x0601CE50 RID: 118352 RVA: 0x004111F6 File Offset: 0x0040F3F6
+		// (set) Token: 0x0601CE51 RID: 118353 RVA: 0x004111FE File Offset: 0x0040F3FE
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x0601B67D RID: 112253 RVA: 0x003E4F6B File Offset: 0x003E316B
+		// Token: 0x0601CE52 RID: 118354 RVA: 0x00411207 File Offset: 0x0040F407
 		public IRecordCombatOperationCaptureCheckpointT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

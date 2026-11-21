@@ -4,18 +4,18 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Move;
 using UnrealEngine;
 
-// Token: 0x02003195 RID: 12693
+// Token: 0x02002703 RID: 9987
 [NullableContext(2)]
 [Nullable(0)]
 public class SpecialSkillLinnai : SpecialSkillBase
 {
-	// Token: 0x0601B550 RID: 111952 RVA: 0x00776BD6 File Offset: 0x00774DD6
+	// Token: 0x06019070 RID: 102512 RVA: 0x0079EE63 File Offset: 0x0079D063
 	[NullableContext(1)]
 	public SpecialSkillLinnai(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B551 RID: 111953 RVA: 0x00776BE0 File Offset: 0x00774DE0
+	// Token: 0x06019071 RID: 102513 RVA: 0x0079EE6C File Offset: 0x0079D06C
 	public override void OnStart()
 	{
 		Entity entity = this.SpecialSkillComponent.Entity;
@@ -30,7 +30,7 @@ public class SpecialSkillLinnai : SpecialSkillBase
 		this.SpecialTagListener = ((tagComp != null) ? tagComp.ListenForTagAddOrRemove(new int?(GameplayTagDefine.EGameplayTagId["角色.LinnaiMd10011.轮滑状态"]), new BaseTagComponent.TTagSwitchedCallback(this.OnSpecialTagChanged), null) : null);
 	}
 
-	// Token: 0x0601B552 RID: 111954 RVA: 0x00776C98 File Offset: 0x00774E98
+	// Token: 0x06019072 RID: 102514 RVA: 0x0079EF24 File Offset: 0x0079D124
 	public override void OnEnd()
 	{
 		CharacterSpecialTagComponent specialTagComp = this.SpecialTagComp;
@@ -51,7 +51,7 @@ public class SpecialSkillLinnai : SpecialSkillBase
 		this.SpecialTagListener = null;
 	}
 
-	// Token: 0x0601B553 RID: 111955 RVA: 0x00776D00 File Offset: 0x00774F00
+	// Token: 0x06019073 RID: 102515 RVA: 0x0079EF8C File Offset: 0x0079D18C
 	private bool CheckLinnaiSpecialState(double delta)
 	{
 		BaseUnifiedStateComponent unifiedComp = this.UnifiedComp;
@@ -84,7 +84,7 @@ public class SpecialSkillLinnai : SpecialSkillBase
 		return !flag3 && flag7 && !flag6;
 	}
 
-	// Token: 0x0601B554 RID: 111956 RVA: 0x00776EA4 File Offset: 0x007750A4
+	// Token: 0x06019074 RID: 102516 RVA: 0x0079F130 File Offset: 0x0079D330
 	private void OnSpecialTagChanged(int tagId, bool tagExists)
 	{
 		if (tagExists)
@@ -109,34 +109,34 @@ public class SpecialSkillLinnai : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0400D5BD RID: 54717
+	// Token: 0x0400DA40 RID: 55872
 	private const int JUMP_DELAY_TIME = 500;
 
-	// Token: 0x0400D5BE RID: 54718
+	// Token: 0x0400DA41 RID: 55873
 	private const int JUMP_EXIT_CLIMB_DELAY_TIME = 800;
 
-	// Token: 0x0400D5BF RID: 54719
+	// Token: 0x0400DA42 RID: 55874
 	[Nullable(1)]
 	private const string SPECIAL_TAG_LISTENER_DA = "/Game/Aki/Character/Role/FemaleM/LinNai/Data/DA_SpecialTagConfig.DA_SpecialTagConfig";
 
-	// Token: 0x0400D5C0 RID: 54720
+	// Token: 0x0400DA43 RID: 55875
 	private int SpecialTagListenerHandle;
 
-	// Token: 0x0400D5C1 RID: 54721
+	// Token: 0x0400DA44 RID: 55876
 	private CharacterClimbComponent ClimbComp;
 
-	// Token: 0x0400D5C2 RID: 54722
+	// Token: 0x0400DA45 RID: 55877
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400D5C3 RID: 54723
+	// Token: 0x0400DA46 RID: 55878
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400D5C4 RID: 54724
+	// Token: 0x0400DA47 RID: 55879
 	private BaseUnifiedStateComponent UnifiedComp;
 
-	// Token: 0x0400D5C5 RID: 54725
+	// Token: 0x0400DA48 RID: 55880
 	private CharacterSpecialTagComponent SpecialTagComp;
 
-	// Token: 0x0400D5C6 RID: 54726
+	// Token: 0x0400DA49 RID: 55881
 	private ITagTask SpecialTagListener;
 }

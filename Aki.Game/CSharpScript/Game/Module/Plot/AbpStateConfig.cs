@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FF9 RID: 20473
+	// Token: 0x02003FC3 RID: 16323
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AbpStateConfig : IAbpStateConfig
 	{
-		// Token: 0x17007FDC RID: 32732
-		// (get) Token: 0x060345EC RID: 214508 RVA: 0x00C4EA59 File Offset: 0x00C4CC59
-		// (set) Token: 0x060345ED RID: 214509 RVA: 0x00C4EA61 File Offset: 0x00C4CC61
+		// Token: 0x17005391 RID: 21393
+		// (get) Token: 0x06029477 RID: 169079 RVA: 0x00B98AB9 File Offset: 0x00B96CB9
+		// (set) Token: 0x06029478 RID: 169080 RVA: 0x00B98AC1 File Offset: 0x00B96CC1
 		public string Abp { get; set; }
 
-		// Token: 0x17007FDD RID: 32733
-		// (get) Token: 0x060345EE RID: 214510 RVA: 0x00C4EA6A File Offset: 0x00C4CC6A
-		// (set) Token: 0x060345EF RID: 214511 RVA: 0x00C4EA72 File Offset: 0x00C4CC72
+		// Token: 0x17005392 RID: 21394
+		// (get) Token: 0x06029479 RID: 169081 RVA: 0x00B98ACA File Offset: 0x00B96CCA
+		// (set) Token: 0x0602947A RID: 169082 RVA: 0x00B98AD2 File Offset: 0x00B96CD2
 		public string State1 { get; set; }
 
-		// Token: 0x17007FDE RID: 32734
-		// (get) Token: 0x060345F0 RID: 214512 RVA: 0x00C4EA7B File Offset: 0x00C4CC7B
-		// (set) Token: 0x060345F1 RID: 214513 RVA: 0x00C4EA83 File Offset: 0x00C4CC83
+		// Token: 0x17005393 RID: 21395
+		// (get) Token: 0x0602947B RID: 169083 RVA: 0x00B98ADB File Offset: 0x00B96CDB
+		// (set) Token: 0x0602947C RID: 169084 RVA: 0x00B98AE3 File Offset: 0x00B96CE3
 		public string State2 { get; set; }
 	}
 }

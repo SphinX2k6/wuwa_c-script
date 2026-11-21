@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061B6 RID: 25014
+	// Token: 0x02006824 RID: 26660
 	public class IAudioTypeBaseT
 	{
-		// Token: 0x1700BA83 RID: 47747
-		// (get) Token: 0x0602B1AE RID: 176558 RVA: 0x005F180E File Offset: 0x005EFA0E
-		// (set) Token: 0x0602B1AF RID: 176559 RVA: 0x005F1816 File Offset: 0x005EFA16
+		// Token: 0x1700C406 RID: 50182
+		// (get) Token: 0x0602D8F5 RID: 186613 RVA: 0x0063C282 File Offset: 0x0063A482
+		// (set) Token: 0x0602D8F6 RID: 186614 RVA: 0x0063C28A File Offset: 0x0063A48A
 		public EAudioType Type { get; set; }
 
-		// Token: 0x0602B1B0 RID: 176560 RVA: 0x005F181F File Offset: 0x005EFA1F
+		// Token: 0x0602D8F7 RID: 186615 RVA: 0x0063C293 File Offset: 0x0063A493
 		public IAudioTypeBaseT()
 		{
 			this.Type = EAudioType.RoleSceneVoice;

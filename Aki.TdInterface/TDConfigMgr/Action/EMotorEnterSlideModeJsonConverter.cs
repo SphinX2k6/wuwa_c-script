@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002390 RID: 9104
+	// Token: 0x02002619 RID: 9753
 	public class EMotorEnterSlideModeJsonConverter : JsonConverter<EMotorEnterSlideMode>
 	{
-		// Token: 0x0600C688 RID: 50824 RVA: 0x001D1420 File Offset: 0x001CF620
+		// Token: 0x0600D2CC RID: 53964 RVA: 0x001EA3F4 File Offset: 0x001E85F4
 		public override EMotorEnterSlideMode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EMotorEnterSlideModeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C689 RID: 50825 RVA: 0x001D1444 File Offset: 0x001CF644
+		// Token: 0x0600D2CD RID: 53965 RVA: 0x001EA418 File Offset: 0x001E8618
 		public override void Write(Utf8JsonWriter writer, EMotorEnterSlideMode value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

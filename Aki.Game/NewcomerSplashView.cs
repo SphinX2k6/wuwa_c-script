@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020013AB RID: 5035
+// Token: 0x0200085F RID: 2143
 [NullableContext(1)]
 [Nullable(0)]
 public class NewcomerSplashView : UiViewBase
 {
-	// Token: 0x06008D69 RID: 36201 RVA: 0x001E7007 File Offset: 0x001E5207
+	// Token: 0x060060FF RID: 24831 RVA: 0x001EFC57 File Offset: 0x001EDE57
 	public NewcomerSplashView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06008D6A RID: 36202 RVA: 0x001E7010 File Offset: 0x001E5210
+	// Token: 0x06006100 RID: 24832 RVA: 0x001EFC60 File Offset: 0x001EDE60
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -47,7 +47,7 @@ public class NewcomerSplashView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008D6B RID: 36203 RVA: 0x001E7119 File Offset: 0x001E5319
+	// Token: 0x06006101 RID: 24833 RVA: 0x001EFD69 File Offset: 0x001EDF69
 	private void OnClickEmptyBtn()
 	{
 		if (!this.CheckActivityData(this.ActivityIdCached))
@@ -58,7 +58,7 @@ public class NewcomerSplashView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06008D6C RID: 36204 RVA: 0x001E7148 File Offset: 0x001E5348
+	// Token: 0x06006102 RID: 24834 RVA: 0x001EFD98 File Offset: 0x001EDF98
 	protected override UniTask OnBeforeStartAsync()
 	{
 		NewcomerSplashView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -69,7 +69,7 @@ public class NewcomerSplashView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008D6D RID: 36205 RVA: 0x001E718C File Offset: 0x001E538C
+	// Token: 0x06006103 RID: 24835 RVA: 0x001EFDDC File Offset: 0x001EDFDC
 	private bool CheckActivityData(int activityId)
 	{
 		if (activityId <= 0)
@@ -100,7 +100,7 @@ public class NewcomerSplashView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x06008D6E RID: 36206 RVA: 0x001E7231 File Offset: 0x001E5431
+	// Token: 0x06006104 RID: 24836 RVA: 0x001EFE81 File Offset: 0x001EE081
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		CommonItemSmallItemGrid commonItemSmallItemGrid = new CommonItemSmallItemGrid();
@@ -108,7 +108,7 @@ public class NewcomerSplashView : UiViewBase
 		return commonItemSmallItemGrid;
 	}
 
-	// Token: 0x06008D6F RID: 36207 RVA: 0x001E7240 File Offset: 0x001E5440
+	// Token: 0x06006105 RID: 24837 RVA: 0x001EFE90 File Offset: 0x001EE090
 	protected override void OnBeforeShow()
 	{
 		this.LoadLogoTexture();
@@ -141,7 +141,7 @@ public class NewcomerSplashView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008D70 RID: 36208 RVA: 0x001E72F0 File Offset: 0x001E54F0
+	// Token: 0x06006106 RID: 24838 RVA: 0x001EFF40 File Offset: 0x001EE140
 	private void LoadLogoTexture()
 	{
 		UUITexture texture = base.GetTexture(6);
@@ -159,13 +159,13 @@ public class NewcomerSplashView : UiViewBase
 		}
 	}
 
-	// Token: 0x04003EC8 RID: 16072
+	// Token: 0x04003F60 RID: 16224
 	private const string NEWCOMER_LOGO_MALE_RESOURCE_ID = "T_RoleLogoMale";
 
-	// Token: 0x04003EC9 RID: 16073
+	// Token: 0x04003F61 RID: 16225
 	private const string NEWCOMER_LOGO_FEMALE_RESOURCE_ID = "T_RoleLogoFemale";
 
-	// Token: 0x04003ECA RID: 16074
+	// Token: 0x04003F62 RID: 16226
 	[Nullable(new byte[]
 	{
 		2,
@@ -173,35 +173,35 @@ public class NewcomerSplashView : UiViewBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x04003ECB RID: 16075
+	// Token: 0x04003F63 RID: 16227
 	private int ActivityIdCached;
 
-	// Token: 0x02007A1C RID: 31260
+	// Token: 0x02006BA2 RID: 27554
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x04028315 RID: 164629
+		// Token: 0x04023632 RID: 144946
 		public const int TxtDesc = 0;
 
-		// Token: 0x04028316 RID: 164630
+		// Token: 0x04023633 RID: 144947
 		public const int RewardLayout = 1;
 
-		// Token: 0x04028317 RID: 164631
+		// Token: 0x04023634 RID: 144948
 		public const int RewardItem = 2;
 
-		// Token: 0x04028318 RID: 164632
+		// Token: 0x04023635 RID: 144949
 		public const int TxtTipTitle = 3;
 
-		// Token: 0x04028319 RID: 164633
+		// Token: 0x04023636 RID: 144950
 		public const int TxtTitle = 4;
 
-		// Token: 0x0402831A RID: 164634
+		// Token: 0x04023637 RID: 144951
 		public const int EmptyBtn = 5;
 
-		// Token: 0x0402831B RID: 164635
+		// Token: 0x04023638 RID: 144952
 		public const int TitleLogo = 6;
 
-		// Token: 0x0402831C RID: 164636
+		// Token: 0x04023639 RID: 144953
 		public const int TitleLogo2 = 7;
 	}
 }

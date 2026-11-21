@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000E37 RID: 3639
+	// Token: 0x02000E27 RID: 3623
 	[NetMessage(EMessageId.QuickHackRamVerifyPush)]
 	public sealed class QuickHackRamVerifyPush : IMessage<QuickHackRamVerifyPush>, IMessage, IEquatable<QuickHackRamVerifyPush>, IDeepCloneable<QuickHackRamVerifyPush>, IBufferMessage
 	{
-		// Token: 0x06013887 RID: 80007 RVA: 0x002D6704 File Offset: 0x002D4904
+		// Token: 0x060137A2 RID: 79778 RVA: 0x002D5044 File Offset: 0x002D3244
 		[NullableContext(1)]
 		public static QuickHackRamVerifyPush Create()
 		{
 			return new QuickHackRamVerifyPush();
 		}
 
-		// Token: 0x170040C0 RID: 16576
-		// (get) Token: 0x06013888 RID: 80008 RVA: 0x002D670B File Offset: 0x002D490B
+		// Token: 0x17004096 RID: 16534
+		// (get) Token: 0x060137A3 RID: 79779 RVA: 0x002D504B File Offset: 0x002D324B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170040C1 RID: 16577
-		// (get) Token: 0x06013889 RID: 80009 RVA: 0x002D670E File Offset: 0x002D490E
+		// Token: 0x17004097 RID: 16535
+		// (get) Token: 0x060137A4 RID: 79780 RVA: 0x002D504E File Offset: 0x002D324E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601388A RID: 80010 RVA: 0x002D6715 File Offset: 0x002D4915
+		// Token: 0x060137A5 RID: 79781 RVA: 0x002D5055 File Offset: 0x002D3255
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuickHackRamVerifyPush()
 		{
 		}
 
-		// Token: 0x0601388B RID: 80011 RVA: 0x002D6728 File Offset: 0x002D4928
+		// Token: 0x060137A6 RID: 79782 RVA: 0x002D5068 File Offset: 0x002D3268
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuickHackRamVerifyPush(QuickHackRamVerifyPush other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601388C RID: 80012 RVA: 0x002D6775 File Offset: 0x002D4975
+		// Token: 0x060137A7 RID: 79783 RVA: 0x002D50B5 File Offset: 0x002D32B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuickHackRamVerifyPush Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new QuickHackRamVerifyPush(this);
 		}
 
-		// Token: 0x170040C2 RID: 16578
-		// (get) Token: 0x0601388D RID: 80013 RVA: 0x002D677D File Offset: 0x002D497D
-		// (set) Token: 0x0601388E RID: 80014 RVA: 0x002D6785 File Offset: 0x002D4985
+		// Token: 0x17004098 RID: 16536
+		// (get) Token: 0x060137A8 RID: 79784 RVA: 0x002D50BD File Offset: 0x002D32BD
+		// (set) Token: 0x060137A9 RID: 79785 RVA: 0x002D50C5 File Offset: 0x002D32C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DeviceID
@@ -86,8 +86,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170040C3 RID: 16579
-		// (get) Token: 0x0601388F RID: 80015 RVA: 0x002D678E File Offset: 0x002D498E
+		// Token: 0x17004099 RID: 16537
+		// (get) Token: 0x060137AA RID: 79786 RVA: 0x002D50CE File Offset: 0x002D32CE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> QuickHackSkillIdList
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170040C4 RID: 16580
-		// (get) Token: 0x06013890 RID: 80016 RVA: 0x002D6796 File Offset: 0x002D4996
-		// (set) Token: 0x06013891 RID: 80017 RVA: 0x002D679E File Offset: 0x002D499E
+		// Token: 0x1700409A RID: 16538
+		// (get) Token: 0x060137AB RID: 79787 RVA: 0x002D50D6 File Offset: 0x002D32D6
+		// (set) Token: 0x060137AC RID: 79788 RVA: 0x002D50DE File Offset: 0x002D32DE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long OpenQuickHackPreMessageId
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013892 RID: 80018 RVA: 0x002D67A7 File Offset: 0x002D49A7
+		// Token: 0x060137AD RID: 79789 RVA: 0x002D50E7 File Offset: 0x002D32E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return this.Equals(other as QuickHackRamVerifyPush);
 		}
 
-		// Token: 0x06013893 RID: 80019 RVA: 0x002D67B8 File Offset: 0x002D49B8
+		// Token: 0x060137AE RID: 79790 RVA: 0x002D50F8 File Offset: 0x002D32F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(QuickHackRamVerifyPush other)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.DeviceID == other.DeviceID && this.quickHackSkillIdList_.Equals(other.quickHackSkillIdList_) && this.OpenQuickHackPreMessageId == other.OpenQuickHackPreMessageId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06013894 RID: 80020 RVA: 0x002D6818 File Offset: 0x002D4A18
+		// Token: 0x060137AF RID: 79791 RVA: 0x002D5158 File Offset: 0x002D3358
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013895 RID: 80021 RVA: 0x002D687E File Offset: 0x002D4A7E
+		// Token: 0x060137B0 RID: 79792 RVA: 0x002D51BE File Offset: 0x002D33BE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06013896 RID: 80022 RVA: 0x002D688B File Offset: 0x002D4A8B
+		// Token: 0x060137B1 RID: 79793 RVA: 0x002D51CB File Offset: 0x002D33CB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -169,7 +169,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06013897 RID: 80023 RVA: 0x002D6894 File Offset: 0x002D4A94
+		// Token: 0x060137B2 RID: 79794 RVA: 0x002D51D4 File Offset: 0x002D33D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -177,7 +177,7 @@ namespace Aki.Protocol
 			this.quickHackSkillIdList_.WriteTo(ref output, QuickHackRamVerifyPush._repeated_quickHackSkillIdList_codec);
 			if (this.OpenQuickHackPreMessageId != 0L)
 			{
-				output.WriteRawTag(64);
+				output.WriteRawTag(80);
 				output.WriteInt64(this.OpenQuickHackPreMessageId);
 			}
 			if (this.DeviceID != 0)
@@ -191,7 +191,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013898 RID: 80024 RVA: 0x002D6900 File Offset: 0x002D4B00
+		// Token: 0x060137B3 RID: 79795 RVA: 0x002D5240 File Offset: 0x002D3440
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013899 RID: 80025 RVA: 0x002D696C File Offset: 0x002D4B6C
+		// Token: 0x060137B4 RID: 79796 RVA: 0x002D52AC File Offset: 0x002D34AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(QuickHackRamVerifyPush other)
@@ -234,7 +234,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601389A RID: 80026 RVA: 0x002D69CD File Offset: 0x002D4BCD
+		// Token: 0x060137B5 RID: 79797 RVA: 0x002D530D File Offset: 0x002D350D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -242,7 +242,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601389B RID: 80027 RVA: 0x002D69D8 File Offset: 0x002D4BD8
+		// Token: 0x060137B6 RID: 79798 RVA: 0x002D5318 File Offset: 0x002D3518
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -254,9 +254,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 50U)
+				if (num <= 34U)
 				{
-					if (num == 48U || num == 50U)
+					if (num == 32U || num == 34U)
 					{
 						this.quickHackSkillIdList_.AddEntriesFrom(ref input, QuickHackRamVerifyPush._repeated_quickHackSkillIdList_codec);
 						continue;
@@ -264,7 +264,7 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 64U)
+					if (num == 80U)
 					{
 						this.OpenQuickHackPreMessageId = input.ReadInt64();
 						continue;
@@ -279,28 +279,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400778D RID: 30605
+		// Token: 0x040077B7 RID: 30647
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400778E RID: 30606
+		// Token: 0x040077B8 RID: 30648
 		public const int DeviceIDFieldNumber = 11;
 
-		// Token: 0x0400778F RID: 30607
+		// Token: 0x040077B9 RID: 30649
 		private int deviceID_;
 
-		// Token: 0x04007790 RID: 30608
-		public const int QuickHackSkillIdListFieldNumber = 6;
+		// Token: 0x040077BA RID: 30650
+		public const int QuickHackSkillIdListFieldNumber = 4;
 
-		// Token: 0x04007791 RID: 30609
-		private static readonly FieldCodec<int> _repeated_quickHackSkillIdList_codec = FieldCodec.ForInt32(50U);
+		// Token: 0x040077BB RID: 30651
+		private static readonly FieldCodec<int> _repeated_quickHackSkillIdList_codec = FieldCodec.ForInt32(34U);
 
-		// Token: 0x04007792 RID: 30610
+		// Token: 0x040077BC RID: 30652
 		private readonly RepeatedField<int> quickHackSkillIdList_ = new RepeatedField<int>();
 
-		// Token: 0x04007793 RID: 30611
-		public const int OpenQuickHackPreMessageIdFieldNumber = 8;
+		// Token: 0x040077BD RID: 30653
+		public const int OpenQuickHackPreMessageIdFieldNumber = 10;
 
-		// Token: 0x04007794 RID: 30612
+		// Token: 0x040077BE RID: 30654
 		private long openQuickHackPreMessageId_;
 	}
 }

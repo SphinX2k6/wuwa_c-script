@@ -6,22 +6,23 @@ using AkiClient.Game.Aki.Character.Role.Common.Data.Enum;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.HandBook;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.UiComponent;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E28 RID: 7720
+// Token: 0x020012EA RID: 4842
 [NullableContext(1)]
 [Nullable(0)]
 public class HandBookRoleView : UiViewBase
 {
-	// Token: 0x0600EAB0 RID: 60080 RVA: 0x0037989E File Offset: 0x00377A9E
+	// Token: 0x0600BECF RID: 48847 RVA: 0x0038552A File Offset: 0x0038372A
 	public HandBookRoleView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600EAB1 RID: 60081 RVA: 0x003798B4 File Offset: 0x00377AB4
+	// Token: 0x0600BED0 RID: 48848 RVA: 0x00385540 File Offset: 0x00383740
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,13 +42,13 @@ public class HandBookRoleView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600EAB2 RID: 60082 RVA: 0x0037999F File Offset: 0x00377B9F
+	// Token: 0x0600BED1 RID: 48849 RVA: 0x0038562B File Offset: 0x0038382B
 	protected override void OnBeforeCreateImplementImplement()
 	{
 		this.UiSceneRoleActor = UiSceneManager.Instance.InitRoleSystemRoleActor(EUiModelUseWay.RoleInRoleView);
 	}
 
-	// Token: 0x0600EAB3 RID: 60083 RVA: 0x003799B4 File Offset: 0x00377BB4
+	// Token: 0x0600BED2 RID: 48850 RVA: 0x00385640 File Offset: 0x00383840
 	protected override void OnStart()
 	{
 		this.RoleScrollView = new LoopScrollView<HandBookRoleMediumItemGird, RoleDataBase>(base.GetLoopScrollViewComponent(2), base.GetItem(3).GetOwner() as AUIBaseActor, new Func<HandBookRoleMediumItemGird>(this.OnGridProxyCreate), false);
@@ -90,7 +91,7 @@ public class HandBookRoleView : UiViewBase
 		this.RefreshCollectText();
 	}
 
-	// Token: 0x0600EAB4 RID: 60084 RVA: 0x00379B6C File Offset: 0x00377D6C
+	// Token: 0x0600BED3 RID: 48851 RVA: 0x003857F8 File Offset: 0x003839F8
 	protected void RefreshCollectText()
 	{
 		int[] collectProgress = HandBookController.Instance.GetCollectProgress(EHandBookTabType.Role);
@@ -101,19 +102,19 @@ public class HandBookRoleView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0600EAB5 RID: 60085 RVA: 0x00379BBD File Offset: 0x00377DBD
+	// Token: 0x0600BED4 RID: 48852 RVA: 0x00385849 File Offset: 0x00383A49
 	protected override void OnHandleLoadScene()
 	{
 		this.InitRole();
 	}
 
-	// Token: 0x0600EAB6 RID: 60086 RVA: 0x00379BC5 File Offset: 0x00377DC5
+	// Token: 0x0600BED5 RID: 48853 RVA: 0x00385851 File Offset: 0x00383A51
 	protected override void OnBeforeShowImplementImplement()
 	{
 		UiSceneUtils.SetSceneFloorReflection(true, false);
 	}
 
-	// Token: 0x0600EAB7 RID: 60087 RVA: 0x00379BCE File Offset: 0x00377DCE
+	// Token: 0x0600BED6 RID: 48854 RVA: 0x0038585A File Offset: 0x00383A5A
 	protected void InitRole()
 	{
 		UiModelBase model = UiSceneManager.Instance.GetRoleSystemRoleActor().Model;
@@ -125,7 +126,7 @@ public class HandBookRoleView : UiViewBase
 		uiModelActorComponent.SetTransformByTag("RoleCase");
 	}
 
-	// Token: 0x0600EAB8 RID: 60088 RVA: 0x00379BFC File Offset: 0x00377DFC
+	// Token: 0x0600BED7 RID: 48855 RVA: 0x00385888 File Offset: 0x00383A88
 	private void UpdateList(List<RoleDataBase> list, bool isOutSideChange, EFilterSortType OperationType)
 	{
 		List<RoleDataBase> list2 = new List<RoleDataBase>();
@@ -141,7 +142,7 @@ public class HandBookRoleView : UiViewBase
 		this.RefreshRoleItem(list2);
 	}
 
-	// Token: 0x0600EAB9 RID: 60089 RVA: 0x00379C64 File Offset: 0x00377E64
+	// Token: 0x0600BED8 RID: 48856 RVA: 0x003858F0 File Offset: 0x00383AF0
 	private void RefreshRoleItem(List<RoleDataBase> roleList)
 	{
 		this.RoleScrollView.DeselectCurrentGridProxy(false);
@@ -167,7 +168,7 @@ public class HandBookRoleView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x0600EABA RID: 60090 RVA: 0x00379CB0 File Offset: 0x00377EB0
+	// Token: 0x0600BED9 RID: 48857 RVA: 0x0038593C File Offset: 0x00383B3C
 	private void SelectGridByRoleData(RoleDataBase roleInstance, bool needScroll = false)
 	{
 		int num = this.RoleDataList.IndexOf(roleInstance);
@@ -182,7 +183,7 @@ public class HandBookRoleView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EABB RID: 60091 RVA: 0x00379CF4 File Offset: 0x00377EF4
+	// Token: 0x0600BEDA RID: 48858 RVA: 0x00385980 File Offset: 0x00383B80
 	private void ChangeRoleByRoleId(RoleDataBase roleInstance)
 	{
 		int dataId = roleInstance.GetDataId();
@@ -210,13 +211,13 @@ public class HandBookRoleView : UiViewBase
 		RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Attribute_Perform, false, valueOrDefault > 0, false);
 	}
 
-	// Token: 0x0600EABC RID: 60092 RVA: 0x00379DD6 File Offset: 0x00377FD6
+	// Token: 0x0600BEDB RID: 48859 RVA: 0x00385A62 File Offset: 0x00383C62
 	private void SetNameText(string nameText)
 	{
 		base.GetText(1).SetText(nameText, true);
 	}
 
-	// Token: 0x0600EABD RID: 60093 RVA: 0x00379DE6 File Offset: 0x00377FE6
+	// Token: 0x0600BEDC RID: 48860 RVA: 0x00385A72 File Offset: 0x00383C72
 	private HandBookRoleMediumItemGird OnGridProxyCreate()
 	{
 		HandBookRoleMediumItemGird handBookRoleMediumItemGird = new HandBookRoleMediumItemGird();
@@ -225,7 +226,7 @@ public class HandBookRoleView : UiViewBase
 		return handBookRoleMediumItemGird;
 	}
 
-	// Token: 0x0600EABE RID: 60094 RVA: 0x00379E14 File Offset: 0x00378014
+	// Token: 0x0600BEDD RID: 48861 RVA: 0x00385AA0 File Offset: 0x00383CA0
 	private void ToggleFunction(MediumItemGridExtendCallback callbackParameter)
 	{
 		int state = (int)callbackParameter.State;
@@ -237,11 +238,11 @@ public class HandBookRoleView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EABF RID: 60095 RVA: 0x00379E4C File Offset: 0x0037804C
+	// Token: 0x0600BEDE RID: 48862 RVA: 0x00385AD8 File Offset: 0x00383CD8
 	[NullableContext(2)]
 	private bool CanExecuteChangeFunction(object data, bool isForceSelected, EToggleState state)
 	{
-		if (UiCameraAnimationManager.Instance.IsPlayingAnimation() && this.CurSelectRoleId != null && state == EToggleState.ETT_UnChecked)
+		if (UiCameraModel.Instance.IsPlayingAnimation() && this.CurSelectRoleId != null && state == EToggleState.ETT_UnChecked)
 		{
 			return false;
 		}
@@ -255,14 +256,14 @@ public class HandBookRoleView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x0600EAC0 RID: 60096 RVA: 0x00379EA7 File Offset: 0x003780A7
+	// Token: 0x0600BEDF RID: 48863 RVA: 0x00385B33 File Offset: 0x00383D33
 	protected override void OnBeforeDestroy()
 	{
 		UiSceneManager.Instance.DestroyRoleSystemRoleActor(this.UiSceneRoleActor);
 		this.RoleScrollView = null;
 	}
 
-	// Token: 0x0600EAC1 RID: 60097 RVA: 0x00379EC4 File Offset: 0x003780C4
+	// Token: 0x0600BEE0 RID: 48864 RVA: 0x00385B50 File Offset: 0x00383D50
 	private void OnDetailClick()
 	{
 		RoleInfo? roleInfo;
@@ -276,7 +277,7 @@ public class HandBookRoleView : UiViewBase
 		});
 	}
 
-	// Token: 0x04006CF7 RID: 27895
+	// Token: 0x04006DD8 RID: 28120
 	[Nullable(new byte[]
 	{
 		2,
@@ -285,15 +286,15 @@ public class HandBookRoleView : UiViewBase
 	})]
 	protected LoopScrollView<HandBookRoleMediumItemGird, RoleDataBase> RoleScrollView;
 
-	// Token: 0x04006CF8 RID: 27896
+	// Token: 0x04006DD9 RID: 28121
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04006CF9 RID: 27897
+	// Token: 0x04006DDA RID: 28122
 	[Nullable(2)]
 	private TsUiSceneRoleActor UiSceneRoleActor;
 
-	// Token: 0x04006CFA RID: 27898
+	// Token: 0x04006DDB RID: 28123
 	[Nullable(new byte[]
 	{
 		2,
@@ -301,38 +302,38 @@ public class HandBookRoleView : UiViewBase
 	})]
 	private FilterSortEntrance<RoleDataBase> FilterSortEntrance;
 
-	// Token: 0x04006CFB RID: 27899
+	// Token: 0x04006DDC RID: 28124
 	private int? CurSelectRoleId;
 
-	// Token: 0x04006CFC RID: 27900
+	// Token: 0x04006DDD RID: 28125
 	private List<RoleDataBase> RoleDataList = new List<RoleDataBase>();
 
-	// Token: 0x020083DA RID: 33754
+	// Token: 0x0200755F RID: 30047
 	[NullableContext(0)]
 	private class EHandBookRoleViewDefine
 	{
-		// Token: 0x0402AEC9 RID: 175817
+		// Token: 0x040261EC RID: 156140
 		public const int TitleItem = 0;
 
-		// Token: 0x0402AECA RID: 175818
+		// Token: 0x040261ED RID: 156141
 		public const int RoleName = 1;
 
-		// Token: 0x0402AECB RID: 175819
+		// Token: 0x040261EE RID: 156142
 		public const int ScrollView = 2;
 
-		// Token: 0x0402AECC RID: 175820
+		// Token: 0x040261EF RID: 156143
 		public const int ScrollViewItem = 3;
 
-		// Token: 0x0402AECD RID: 175821
+		// Token: 0x040261F0 RID: 156144
 		public const int FilterSortItem = 4;
 
-		// Token: 0x0402AECE RID: 175822
+		// Token: 0x040261F1 RID: 156145
 		public const int DetailBtn = 5;
 
-		// Token: 0x0402AECF RID: 175823
+		// Token: 0x040261F2 RID: 156146
 		public const int DateText = 6;
 
-		// Token: 0x0402AED0 RID: 175824
+		// Token: 0x040261F3 RID: 156147
 		public const int CollectCountText = 7;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200190C RID: 6412
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A95 RID: 6805
 	public class ICommonTip2PrepareCountdown : ICommonTip2Type
 	{
-		// Token: 0x06008965 RID: 35173 RVA: 0x001445E4 File Offset: 0x001427E4
+		// Token: 0x06009091 RID: 37009 RVA: 0x00153F24 File Offset: 0x00152124
 		private ICommonTip2PrepareCountdown_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008966 RID: 35174 RVA: 0x0014461C File Offset: 0x0014281C
+		// Token: 0x06009092 RID: 37010 RVA: 0x00153F5C File Offset: 0x0015215C
 		public static ICommonTip2PrepareCountdown Create([Nullable(2)] ICommonTip2PrepareCountdown instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008967 RID: 35175 RVA: 0x0014462F File Offset: 0x0014282F
+		// Token: 0x06009093 RID: 37011 RVA: 0x00153F6F File Offset: 0x0015216F
 		public static ICommonTip2PrepareCountdown CreateFromSetValue([Nullable(2)] ICommonTip2PrepareCountdown_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008968 RID: 35176 RVA: 0x00144644 File Offset: 0x00142844
+		// Token: 0x06009094 RID: 37012 RVA: 0x00153F84 File Offset: 0x00152184
 		public new ICommonTip2PrepareCountdown_SetValue ToSetValue()
 		{
 			return new ICommonTip2PrepareCountdown_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C75 RID: 11381
-		// (get) Token: 0x06008969 RID: 35177 RVA: 0x0014469E File Offset: 0x0014289E
-		// (set) Token: 0x0600896A RID: 35178 RVA: 0x001446C9 File Offset: 0x001428C9
+		// Token: 0x17002E75 RID: 11893
+		// (get) Token: 0x06009095 RID: 37013 RVA: 0x00153FDE File Offset: 0x001521DE
+		// (set) Token: 0x06009096 RID: 37014 RVA: 0x00154009 File Offset: 0x00152209
 		public override ECommonTip2Type Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C76 RID: 11382
-		// (get) Token: 0x0600896B RID: 35179 RVA: 0x001446D7 File Offset: 0x001428D7
-		// (set) Token: 0x0600896C RID: 35180 RVA: 0x00144702 File Offset: 0x00142902
+		// Token: 0x17002E76 RID: 11894
+		// (get) Token: 0x06009097 RID: 37015 RVA: 0x00154017 File Offset: 0x00152217
+		// (set) Token: 0x06009098 RID: 37016 RVA: 0x00154042 File Offset: 0x00152242
 		public virtual int CountDownNum
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C77 RID: 11383
-		// (get) Token: 0x0600896D RID: 35181 RVA: 0x00144710 File Offset: 0x00142910
-		// (set) Token: 0x0600896E RID: 35182 RVA: 0x0014473B File Offset: 0x0014293B
+		// Token: 0x17002E77 RID: 11895
+		// (get) Token: 0x06009099 RID: 37017 RVA: 0x00154050 File Offset: 0x00152250
+		// (set) Token: 0x0600909A RID: 37018 RVA: 0x0015407B File Offset: 0x0015227B
 		public virtual string TidCountDownTxt
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C78 RID: 11384
-		// (get) Token: 0x0600896F RID: 35183 RVA: 0x0014474C File Offset: 0x0014294C
-		// (set) Token: 0x06008970 RID: 35184 RVA: 0x00144786 File Offset: 0x00142986
+		// Token: 0x17002E78 RID: 11896
+		// (get) Token: 0x0600909B RID: 37019 RVA: 0x0015408C File Offset: 0x0015228C
+		// (set) Token: 0x0600909C RID: 37020 RVA: 0x001540C6 File Offset: 0x001522C6
 		public virtual ECountDownUiStyle? UiStyle
 		{
 			get
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C79 RID: 11385
-		// (get) Token: 0x06008971 RID: 35185 RVA: 0x00144794 File Offset: 0x00142994
-		// (set) Token: 0x06008972 RID: 35186 RVA: 0x001447CE File Offset: 0x001429CE
+		// Token: 0x17002E79 RID: 11897
+		// (get) Token: 0x0600909D RID: 37021 RVA: 0x001540D4 File Offset: 0x001522D4
+		// (set) Token: 0x0600909E RID: 37022 RVA: 0x0015410E File Offset: 0x0015230E
 		public virtual bool? IsBlockPlayer
 		{
 			get
@@ -181,9 +179,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C7A RID: 11386
-		// (get) Token: 0x06008973 RID: 35187 RVA: 0x001447DC File Offset: 0x001429DC
-		// (set) Token: 0x06008974 RID: 35188 RVA: 0x001447F3 File Offset: 0x001429F3
+		// Token: 0x17002E7A RID: 11898
+		// (get) Token: 0x0600909F RID: 37023 RVA: 0x0015411C File Offset: 0x0015231C
+		// (set) Token: 0x060090A0 RID: 37024 RVA: 0x00154133 File Offset: 0x00152333
 		[Nullable(2)]
 		public virtual string EdTidCountDownTxt
 		{
@@ -203,11 +201,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005618 RID: 22040
+		// Token: 0x04005A68 RID: 23144
 		[Nullable(2)]
 		protected new ICommonTip2PrepareCountdown FbInstance;
 
-		// Token: 0x04005619 RID: 22041
+		// Token: 0x04005A69 RID: 23145
 		[Nullable(2)]
 		protected new ICommonTip2PrepareCountdown_SetValue PocoInterface;
 	}

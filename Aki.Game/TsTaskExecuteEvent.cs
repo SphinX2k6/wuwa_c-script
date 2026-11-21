@@ -11,9 +11,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskExecuteEvent.TsTaskExecuteEvent_C")]
 public class TsTaskExecuteEvent : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700013C RID: 316
-	// (get) Token: 0x060007BA RID: 1978 RVA: 0x00026793 File Offset: 0x00024993
-	// (set) Token: 0x060007BB RID: 1979 RVA: 0x000267A3 File Offset: 0x000249A3
+	// Token: 0x1700013E RID: 318
+	// (get) Token: 0x060007BE RID: 1982 RVA: 0x00027543 File Offset: 0x00025743
+	// (set) Token: 0x060007BF RID: 1983 RVA: 0x00027553 File Offset: 0x00025753
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int EventGroupId
 	{
@@ -27,7 +27,7 @@ public class TsTaskExecuteEvent : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x060007BC RID: 1980 RVA: 0x000267B4 File Offset: 0x000249B4
+	// Token: 0x060007C0 RID: 1984 RVA: 0x00027564 File Offset: 0x00025764
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -36,30 +36,27 @@ public class TsTaskExecuteEvent : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x060007BD RID: 1981 RVA: 0x000267CC File Offset: 0x000249CC
+	// Token: 0x060007C1 RID: 1985 RVA: 0x0002757C File Offset: 0x0002577C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskExecuteEvent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskExecuteEvent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060007BE RID: 1982 RVA: 0x00026868 File Offset: 0x00024A68
+	// Token: 0x060007C2 RID: 1986 RVA: 0x0002762C File Offset: 0x0002582C
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -79,7 +76,7 @@ public class TsTaskExecuteEvent : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x060007BF RID: 1983 RVA: 0x000268D1 File Offset: 0x00024AD1
+	// Token: 0x060007C3 RID: 1987 RVA: 0x00027695 File Offset: 0x00025895
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskExecuteEvent._ClassPtr == IntPtr.Zero)
@@ -89,23 +86,23 @@ public class TsTaskExecuteEvent : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		return TsTaskExecuteEvent._ClassPtr;
 	}
 
-	// Token: 0x060007C0 RID: 1984 RVA: 0x000268F8 File Offset: 0x00024AF8
+	// Token: 0x060007C4 RID: 1988 RVA: 0x000276BC File Offset: 0x000258BC
 	public TsTaskExecuteEvent() : this(BuiltinUtils.AllocNativeUObject(TsTaskExecuteEvent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060007C1 RID: 1985 RVA: 0x00026920 File Offset: 0x00024B20
+	// Token: 0x060007C5 RID: 1989 RVA: 0x000276E4 File Offset: 0x000258E4
 	[NullableContext(1)]
 	public TsTaskExecuteEvent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskExecuteEvent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060007C2 RID: 1986 RVA: 0x00026953 File Offset: 0x00024B53
+	// Token: 0x060007C6 RID: 1990 RVA: 0x00027717 File Offset: 0x00025917
 	protected TsTaskExecuteEvent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060007C3 RID: 1987 RVA: 0x0002695C File Offset: 0x00024B5C
+	// Token: 0x060007C7 RID: 1991 RVA: 0x00027720 File Offset: 0x00025920
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -113,19 +110,19 @@ public class TsTaskExecuteEvent : TsTaskAbortImmediatelyBase, IUnrealUObject, IU
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x040005AB RID: 1451
+	// Token: 0x040005AF RID: 1455
 	private bool IsInitTsVariables;
 
-	// Token: 0x040005AC RID: 1452
+	// Token: 0x040005B0 RID: 1456
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskExecuteEvent.TsTaskExecuteEvent_C";
 
-	// Token: 0x040005AD RID: 1453
+	// Token: 0x040005B1 RID: 1457
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040005AE RID: 1454
+	// Token: 0x040005B2 RID: 1458
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040005AF RID: 1455
+	// Token: 0x040005B3 RID: 1459
 	private static int __PropertyOffset_EventGroupId;
 }

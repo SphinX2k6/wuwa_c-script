@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006654 RID: 26196
+	// Token: 0x02006CC5 RID: 27845
 	public struct IEnableClientFunction : IFlatbufferObject
 	{
-		// Token: 0x1700C29F RID: 49823
-		// (get) Token: 0x0602D807 RID: 186375 RVA: 0x0063B309 File Offset: 0x00639509
+		// Token: 0x1700CC3D RID: 52285
+		// (get) Token: 0x0602FFD8 RID: 196568 RVA: 0x00687E71 File Offset: 0x00686071
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D808 RID: 186376 RVA: 0x0063B316 File Offset: 0x00639516
+		// Token: 0x0602FFD9 RID: 196569 RVA: 0x00687E7E File Offset: 0x0068607E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D809 RID: 186377 RVA: 0x0063B320 File Offset: 0x00639520
+		// Token: 0x0602FFDA RID: 196570 RVA: 0x00687E88 File Offset: 0x00686088
 		public static IEnableClientFunction GetRootAsIEnableClientFunction(ByteBuffer _bb)
 		{
 			return IEnableClientFunction.GetRootAsIEnableClientFunction(_bb, default(IEnableClientFunction));
 		}
 
-		// Token: 0x0602D80A RID: 186378 RVA: 0x0063B33C File Offset: 0x0063953C
+		// Token: 0x0602FFDB RID: 196571 RVA: 0x00687EA4 File Offset: 0x006860A4
 		public static IEnableClientFunction GetRootAsIEnableClientFunction(ByteBuffer _bb, IEnableClientFunction obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D80B RID: 186379 RVA: 0x0063B359 File Offset: 0x00639559
+		// Token: 0x0602FFDC RID: 196572 RVA: 0x00687EC1 File Offset: 0x006860C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D80C RID: 186380 RVA: 0x0063B368 File Offset: 0x00639568
+		// Token: 0x0602FFDD RID: 196573 RVA: 0x00687ED0 File Offset: 0x006860D0
 		public IEnableClientFunction __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C2A0 RID: 49824
-		// (get) Token: 0x0602D80D RID: 186381 RVA: 0x0063B378 File Offset: 0x00639578
+		// Token: 0x1700CC3E RID: 52286
+		// (get) Token: 0x0602FFDE RID: 196574 RVA: 0x00687EE0 File Offset: 0x006860E0
 		public EEnableClientFunctionType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D80E RID: 186382 RVA: 0x0063B3B4 File Offset: 0x006395B4
+		// Token: 0x0602FFDF RID: 196575 RVA: 0x00687F1C File Offset: 0x0068611C
 		public static Offset<IEnableClientFunction> CreateIEnableClientFunction(FlatBufferBuilder builder, EEnableClientFunctionType Type = EEnableClientFunctionType.HealthBarDisplay)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnableClientFunction.EndIEnableClientFunction(builder);
 		}
 
-		// Token: 0x0602D80F RID: 186383 RVA: 0x0063B3CA File Offset: 0x006395CA
+		// Token: 0x0602FFE0 RID: 196576 RVA: 0x00687F32 File Offset: 0x00686132
 		public static void StartIEnableClientFunction(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602D810 RID: 186384 RVA: 0x0063B3D3 File Offset: 0x006395D3
+		// Token: 0x0602FFE1 RID: 196577 RVA: 0x00687F3B File Offset: 0x0068613B
 		public static void AddType(FlatBufferBuilder builder, EEnableClientFunctionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D811 RID: 186385 RVA: 0x0063B3DE File Offset: 0x006395DE
+		// Token: 0x0602FFE2 RID: 196578 RVA: 0x00687F46 File Offset: 0x00686146
 		public static Offset<IEnableClientFunction> EndIEnableClientFunction(FlatBufferBuilder builder)
 		{
 			return new Offset<IEnableClientFunction>(builder.EndTable());
 		}
 
-		// Token: 0x0602D812 RID: 186386 RVA: 0x0063B3EC File Offset: 0x006395EC
+		// Token: 0x0602FFE3 RID: 196579 RVA: 0x00687F54 File Offset: 0x00686154
 		public IEnableClientFunctionT UnPack()
 		{
 			IEnableClientFunctionT enableClientFunctionT = new IEnableClientFunctionT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return enableClientFunctionT;
 		}
 
-		// Token: 0x0602D813 RID: 186387 RVA: 0x0063B407 File Offset: 0x00639607
+		// Token: 0x0602FFE4 RID: 196580 RVA: 0x00687F6F File Offset: 0x0068616F
 		public void UnPackTo(IEnableClientFunctionT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602D814 RID: 186388 RVA: 0x0063B418 File Offset: 0x00639618
+		// Token: 0x0602FFE5 RID: 196581 RVA: 0x00687F80 File Offset: 0x00686180
 		public static Offset<IEnableClientFunction> Pack(FlatBufferBuilder builder, IEnableClientFunctionT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnableClientFunction.CreateIEnableClientFunction(builder, _o.Type);
 		}
 
-		// Token: 0x04010CF0 RID: 68848
+		// Token: 0x04011B0B RID: 72459
 		private Table __p;
 	}
 }

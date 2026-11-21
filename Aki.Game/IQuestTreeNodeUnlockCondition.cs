@@ -2,30 +2,30 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200269A RID: 9882
+// Token: 0x02001B85 RID: 7045
 [NullableContext(1)]
 public interface IQuestTreeNodeUnlockCondition
 {
-	// Token: 0x17001A2C RID: 6700
-	// (get) Token: 0x0601440C RID: 82956
+	// Token: 0x17001A64 RID: 6756
+	// (get) Token: 0x060118EE RID: 71918
 	bool IsFinished { get; }
 
-	// Token: 0x17001A2D RID: 6701
-	// (get) Token: 0x0601440D RID: 82957
+	// Token: 0x17001A65 RID: 6757
+	// (get) Token: 0x060118EF RID: 71919
 	string Text { get; }
 
-	// Token: 0x17001A2E RID: 6702
-	// (get) Token: 0x0601440E RID: 82958
+	// Token: 0x17001A66 RID: 6758
+	// (get) Token: 0x060118F0 RID: 71920
 	int HelpId { get; }
 
-	// Token: 0x17001A2F RID: 6703
-	// (get) Token: 0x0601440F RID: 82959
+	// Token: 0x17001A67 RID: 6759
+	// (get) Token: 0x060118F1 RID: 71921
 	List<object> TextParam { get; }
 
-	// Token: 0x17001A30 RID: 6704
-	// (get) Token: 0x06014410 RID: 82960
+	// Token: 0x17001A68 RID: 6760
+	// (get) Token: 0x060118F2 RID: 71922
 	bool HasGoto { get; }
 
-	// Token: 0x06014411 RID: 82961
+	// Token: 0x060118F3 RID: 71923
 	void Goto();
 }

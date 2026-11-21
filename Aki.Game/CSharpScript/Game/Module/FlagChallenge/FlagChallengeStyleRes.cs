@@ -5,13 +5,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A3D RID: 23101
+	// Token: 0x02004A19 RID: 18969
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeStyleRes : Singleton
 	{
-		// Token: 0x17008BF0 RID: 35824
-		// (get) Token: 0x0603A979 RID: 239993 RVA: 0x00DF1357 File Offset: 0x00DEF557
+		// Token: 0x17005FBE RID: 24510
+		// (get) Token: 0x0602F8C2 RID: 194754 RVA: 0x00D418DB File Offset: 0x00D3FADB
 		public static FlagChallengeStyleRes Instance
 		{
 			get
@@ -25,12 +25,12 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603A97A RID: 239994 RVA: 0x00DF137A File Offset: 0x00DEF57A
+		// Token: 0x0602F8C3 RID: 194755 RVA: 0x00D418FE File Offset: 0x00D3FAFE
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603A97B RID: 239995 RVA: 0x00DF137C File Offset: 0x00DEF57C
+		// Token: 0x0602F8C4 RID: 194756 RVA: 0x00D41900 File Offset: 0x00D3FB00
 		public static void ResetStaticDefaultValue()
 		{
 			FlagChallengeStyleRes instance = FlagChallengeStyleRes._instance;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			FlagChallengeStyleRes._instance = null;
 		}
 
-		// Token: 0x0603A97C RID: 239996 RVA: 0x00DF1395 File Offset: 0x00DEF595
+		// Token: 0x0602F8C5 RID: 194757 RVA: 0x00D41919 File Offset: 0x00D3FB19
 		static FlagChallengeStyleRes()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FlagChallengeStyleRes.CreateStaticDefaultValue), new Action(FlagChallengeStyleRes.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603A97D RID: 239997 RVA: 0x00DF13B4 File Offset: 0x00DEF5B4
+		// Token: 0x0602F8C6 RID: 194758 RVA: 0x00D41938 File Offset: 0x00D3FB38
 		public FlagChallengeStyleRes()
 		{
 			Dictionary<EFlagChallengeUiStyleType, FlagChallengeStyleFlat> dictionary = new Dictionary<EFlagChallengeUiStyleType, FlagChallengeStyleFlat>();
@@ -187,11 +187,11 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base..ctor();
 		}
 
-		// Token: 0x0401E848 RID: 125000
+		// Token: 0x040192EF RID: 103151
 		[StaticVariableRuleIgnore]
 		public readonly FrozenDictionary<EFlagChallengeUiStyleType, FlagChallengeStyleFlat> Data;
 
-		// Token: 0x0401E849 RID: 125001
+		// Token: 0x040192F0 RID: 103152
 		[Nullable(2)]
 		private static FlagChallengeStyleRes _instance;
 	}

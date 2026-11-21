@@ -16,12 +16,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D3E RID: 23870
+	// Token: 0x02004D20 RID: 19744
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleHeadStatePanel
 	{
-		// Token: 0x0603C8A3 RID: 247971 RVA: 0x00E864B0 File Offset: 0x00E846B0
+		// Token: 0x060317FC RID: 202748 RVA: 0x00DD6C50 File Offset: 0x00DD4E50
 		public BattleHeadStatePanel()
 		{
 			this.MonsterStateViewDisplayMaxDistance = (float)ConfigCommonParamById.GetIntConfig("ComStateShowMaxDistance").Value;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.DetailHeadStateRangeInternal = (float)ConfigCommonParamById.GetIntConfig("Detail_Head_State_Range").Value;
 		}
 
-		// Token: 0x0603C8A4 RID: 247972 RVA: 0x00E8657C File Offset: 0x00E8477C
+		// Token: 0x060317FD RID: 202749 RVA: 0x00DD6D1C File Offset: 0x00DD4F1C
 		public UniTask Preload()
 		{
 			BattleHeadStatePanel.<Preload>d__19 <Preload>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <Preload>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C8A5 RID: 247973 RVA: 0x00E865C0 File Offset: 0x00E847C0
+		// Token: 0x060317FE RID: 202750 RVA: 0x00DD6D60 File Offset: 0x00DD4F60
 		public void Init()
 		{
 			string stringConfig = ConfigCommonParamById.GetStringConfig("HeadStateScaleCurvePath");
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603C8A6 RID: 247974 RVA: 0x00E86624 File Offset: 0x00E84824
+		// Token: 0x060317FF RID: 202751 RVA: 0x00DD6DC4 File Offset: 0x00DD4FC4
 		private UniTask PreloadByType(EHeadStateViewType headStateType, int count)
 		{
 			BattleHeadStatePanel.<PreloadByType>d__21 <PreloadByType>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <PreloadByType>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C8A7 RID: 247975 RVA: 0x00E86678 File Offset: 0x00E84878
+		// Token: 0x06031800 RID: 202752 RVA: 0x00DD6E18 File Offset: 0x00DD5018
 		public void InitializeEntityList()
 		{
 			IReadOnlyList<EntityHandle> allEntities = CreatureModel.Instance.GetAllEntities();
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshAllHeadState(0f);
 		}
 
-		// Token: 0x0603C8A8 RID: 247976 RVA: 0x00E86700 File Offset: 0x00E84900
+		// Token: 0x06031801 RID: 202753 RVA: 0x00DD6EA0 File Offset: 0x00DD50A0
 		public void ResetAllHeadStates()
 		{
 			this.RemoveEvents();
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.DurabilityHeadStateScaleCurve = null;
 		}
 
-		// Token: 0x0603C8A9 RID: 247977 RVA: 0x00E86724 File Offset: 0x00E84924
+		// Token: 0x06031802 RID: 202754 RVA: 0x00DD6EC4 File Offset: 0x00DD50C4
 		public void ClearAllHeadState()
 		{
 			foreach (HeadStateViewBase headStateViewBase in this.HeadStateMap.Values)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HeadStatePreloadMap.Clear();
 		}
 
-		// Token: 0x0603C8AA RID: 247978 RVA: 0x00E86808 File Offset: 0x00E84A08
+		// Token: 0x06031803 RID: 202755 RVA: 0x00DD6FA8 File Offset: 0x00DD51A8
 		private void ClearAllHeadStateData()
 		{
 			foreach (HeadStateData headStateData in this.HeadStateDataMap.Values)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HeadStateDataMap.Clear();
 		}
 
-		// Token: 0x0603C8AB RID: 247979 RVA: 0x00E86868 File Offset: 0x00E84A68
+		// Token: 0x06031804 RID: 202756 RVA: 0x00DD7008 File Offset: 0x00DD5208
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnAnySceneItemEntityHit, new Action<Entity>(this.OnAnySceneItemEntityHit));
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.EntityCampModify, new Action<Entity, AkiClient.Game.Aki.Character.BaseCharacter.ECamp, AkiClient.Game.Aki.Character.BaseCharacter.ECamp>(this.OnEntityCampModify));
 		}
 
-		// Token: 0x0603C8AC RID: 247980 RVA: 0x00E86974 File Offset: 0x00E84B74
+		// Token: 0x06031805 RID: 202757 RVA: 0x00DD7114 File Offset: 0x00DD5314
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnAnySceneItemEntityHit, new Action<Entity>(this.OnAnySceneItemEntityHit));
@@ -152,13 +152,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.EntityCampModify, new Action<Entity, AkiClient.Game.Aki.Character.BaseCharacter.ECamp, AkiClient.Game.Aki.Character.BaseCharacter.ECamp>(this.OnEntityCampModify));
 		}
 
-		// Token: 0x0603C8AD RID: 247981 RVA: 0x00E86A7D File Offset: 0x00E84C7D
+		// Token: 0x06031806 RID: 202758 RVA: 0x00DD721D File Offset: 0x00DD541D
 		public void Tick(float delta)
 		{
 			this.RefreshAllHeadState(delta);
 		}
 
-		// Token: 0x0603C8AE RID: 247982 RVA: 0x00E86A88 File Offset: 0x00E84C88
+		// Token: 0x06031807 RID: 202759 RVA: 0x00DD7228 File Offset: 0x00DD5428
 		private void OnAnySceneItemEntityHit(Entity handle)
 		{
 			if (this.GetHeadStateType(handle.Id).GetValueOrDefault() == EHeadStateViewType.MultiDurability2 && this.IsSceneItem(handle))
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C8AF RID: 247983 RVA: 0x00E86AF8 File Offset: 0x00E84CF8
+		// Token: 0x06031808 RID: 202760 RVA: 0x00DD7298 File Offset: 0x00DD5498
 		private unsafe void OnAnySceneItemDurabilityChange(EntityHandle handle, int newDurability, int currentDurability)
 		{
 			if (newDurability == currentDurability)
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RemoveDisplayRole(handle.Entity, true);
 		}
 
-		// Token: 0x0603C8B0 RID: 247984 RVA: 0x00E86DEC File Offset: 0x00E84FEC
+		// Token: 0x06031809 RID: 202761 RVA: 0x00DD758C File Offset: 0x00DD578C
 		private unsafe void OnAnyProgressControlEnableStateChange(Entity entity, bool isEnable, SceneItemProgressControlComponent.TProgressData progressData)
 		{
 			CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -317,20 +317,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RemoveDisplayRole(entity, true);
 		}
 
-		// Token: 0x0603C8B1 RID: 247985 RVA: 0x00E870F0 File Offset: 0x00E852F0
+		// Token: 0x0603180A RID: 202762 RVA: 0x00DD7890 File Offset: 0x00DD5A90
 		private void OnOpenLoading()
 		{
 			this.ClearAllHeadState();
 		}
 
-		// Token: 0x0603C8B2 RID: 247986 RVA: 0x00E870F8 File Offset: 0x00E852F8
+		// Token: 0x0603180B RID: 202763 RVA: 0x00DD7898 File Offset: 0x00DD5A98
 		[NullableContext(2)]
 		private void OnTeleportComplete(TeleportContext _)
 		{
 			this.ClearAllHeadState();
 		}
 
-		// Token: 0x0603C8B3 RID: 247987 RVA: 0x00E87100 File Offset: 0x00E85300
+		// Token: 0x0603180C RID: 202764 RVA: 0x00DD78A0 File Offset: 0x00DD5AA0
 		private void OnAddOrRemoveBuff(int entityId, GameplayCue cue, bool isAdd, int handleId)
 		{
 			HeadStateViewBase activateHeadHead = this.GetActivateHeadHead(entityId);
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			activateHeadHead.AddOrRemoveBuff(entityId, cue, isAdd, handleId);
 		}
 
-		// Token: 0x0603C8B4 RID: 247988 RVA: 0x00E8711C File Offset: 0x00E8531C
+		// Token: 0x0603180D RID: 202765 RVA: 0x00DD78BC File Offset: 0x00DD5ABC
 		public void OnRoleLevelChange(int configId, int exp, int level)
 		{
 			foreach (HeadStateViewBase headStateViewBase in this.HeadStateMap.Values)
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C8B5 RID: 247989 RVA: 0x00E87174 File Offset: 0x00E85374
+		// Token: 0x0603180E RID: 202766 RVA: 0x00DD7914 File Offset: 0x00DD5B14
 		private void OnChangeTeam()
 		{
 			foreach (HeadStateViewBase headStateViewBase in this.HeadStateMap.Values)
@@ -359,7 +359,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C8B6 RID: 247990 RVA: 0x00E871CC File Offset: 0x00E853CC
+		// Token: 0x0603180F RID: 202767 RVA: 0x00DD796C File Offset: 0x00DD5B6C
 		private void OnEntityCampModify(Entity entity, AkiClient.Game.Aki.Character.BaseCharacter.ECamp oldCamp, AkiClient.Game.Aki.Character.BaseCharacter.ECamp newCamp)
 		{
 			HeadStateData valueOrDefault = this.HeadStateDataMap.GetValueOrDefault(entity.Id);
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			valueOrDefault.ModifyEntityCamp((Aki.TDConfigMgr.AutoGenerated.IMatch.ECamp)newCamp);
 		}
 
-		// Token: 0x0603C8B7 RID: 247991 RVA: 0x00E871EC File Offset: 0x00E853EC
+		// Token: 0x06031810 RID: 202768 RVA: 0x00DD798C File Offset: 0x00DD5B8C
 		public void RefreshAllHeadState(float delta)
 		{
 			foreach (HeadStateData headStateData in this.HeadStateDataMap.Values)
@@ -395,7 +395,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C8B8 RID: 247992 RVA: 0x00E8727C File Offset: 0x00E8547C
+		// Token: 0x06031811 RID: 202769 RVA: 0x00DD7A1C File Offset: 0x00DD5C1C
 		private bool IsHeadStateNeedActivate(HeadStateData headStateData)
 		{
 			if (!headStateData.IsEntityActive())
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603C8B9 RID: 247993 RVA: 0x00E8730C File Offset: 0x00E8550C
+		// Token: 0x06031812 RID: 202770 RVA: 0x00DD7AAC File Offset: 0x00DD5CAC
 		private void RefreshHeadStateView(HeadStateViewBase headState, float distance, float delta)
 		{
 			float num = -1f;
@@ -464,14 +464,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			headState.OnRefresh(distance, num, delta);
 		}
 
-		// Token: 0x0603C8BA RID: 247994 RVA: 0x00E87370 File Offset: 0x00E85570
+		// Token: 0x06031813 RID: 202771 RVA: 0x00DD7B10 File Offset: 0x00DD5D10
 		public void RefreshCurrentRole()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
 			this.CurrentRoleEntityId = ((getCurrentEntity != null) ? getCurrentEntity.Id : 0);
 		}
 
-		// Token: 0x0603C8BB RID: 247995 RVA: 0x00E8739C File Offset: 0x00E8559C
+		// Token: 0x06031814 RID: 202772 RVA: 0x00DD7B3C File Offset: 0x00DD5D3C
 		public void OnCreateEntity(Entity entity)
 		{
 			if (this.IsNormalMonsterBar(entity))
@@ -480,7 +480,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C8BC RID: 247996 RVA: 0x00E873C4 File Offset: 0x00E855C4
+		// Token: 0x06031815 RID: 202773 RVA: 0x00DD7B64 File Offset: 0x00DD5D64
 		public void OnRemoveEntity(Entity entity)
 		{
 			if (this.IsChargingDevice(entity))
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C8BD RID: 247997 RVA: 0x00E87444 File Offset: 0x00E85644
+		// Token: 0x06031816 RID: 202774 RVA: 0x00DD7BE4 File Offset: 0x00DD5DE4
 		[return: Nullable(2)]
 		private HeadStateData AddDisplayRole(Entity entity, float? originalHp = null)
 		{
@@ -528,7 +528,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return null;
 		}
 
-		// Token: 0x0603C8BE RID: 247998 RVA: 0x00E874EC File Offset: 0x00E856EC
+		// Token: 0x06031817 RID: 202775 RVA: 0x00DD7C8C File Offset: 0x00DD5E8C
 		private void AddAndActivateTempDisplayRole(Entity entity, float? originalHp = null, bool bAutoHide = true)
 		{
 			if (bAutoHide && this.TempDisplayHideTime == 0f)
@@ -564,13 +564,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C8BF RID: 247999 RVA: 0x00E87572 File Offset: 0x00E85772
+		// Token: 0x06031818 RID: 202776 RVA: 0x00DD7D12 File Offset: 0x00DD5F12
 		private void OnHideTimeDown(Entity entity)
 		{
 			this.RemoveDisplayRole(entity, false);
 		}
 
-		// Token: 0x0603C8C0 RID: 248000 RVA: 0x00E8757C File Offset: 0x00E8577C
+		// Token: 0x06031819 RID: 202777 RVA: 0x00DD7D1C File Offset: 0x00DD5F1C
 		private void RemoveDisplayRole(Entity entity, bool bLog = false)
 		{
 			this.DeactivateHeadStateByRole(entity, bLog);
@@ -584,7 +584,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HeadStateDataMap.Remove(id);
 		}
 
-		// Token: 0x0603C8C1 RID: 248001 RVA: 0x00E875BC File Offset: 0x00E857BC
+		// Token: 0x0603181A RID: 202778 RVA: 0x00DD7D5C File Offset: 0x00DD5F5C
 		[return: Nullable(2)]
 		private HeadStateViewBase NewHeadState(HeadStateData headStateData)
 		{
@@ -623,7 +623,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return headStateViewBase2;
 		}
 
-		// Token: 0x0603C8C2 RID: 248002 RVA: 0x00E87693 File Offset: 0x00E85893
+		// Token: 0x0603181B RID: 202779 RVA: 0x00DD7E33 File Offset: 0x00DD6033
 		[return: Nullable(2)]
 		private HeadStateViewBase ActivateHeadState(HeadStateData headStateData)
 		{
@@ -638,7 +638,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.NewHeadState(headStateData);
 		}
 
-		// Token: 0x0603C8C3 RID: 248003 RVA: 0x00E876C0 File Offset: 0x00E858C0
+		// Token: 0x0603181C RID: 202780 RVA: 0x00DD7E60 File Offset: 0x00DD6060
 		private void DeactivateHeadStateByEntityId(int entityId, bool bLog = false)
 		{
 			HeadStateViewBase activateHeadHead = this.GetActivateHeadHead(entityId);
@@ -675,7 +675,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HeadStateMap.Remove(entityId);
 		}
 
-		// Token: 0x0603C8C4 RID: 248004 RVA: 0x00E87774 File Offset: 0x00E85974
+		// Token: 0x0603181D RID: 202781 RVA: 0x00DD7F14 File Offset: 0x00DD6114
 		private void OnRecycleHeadStateView(HeadStateViewBase headState, EHeadStateViewType headStateType)
 		{
 			List<HeadStateViewBase> list;
@@ -687,7 +687,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			headState.DestroyHeadStateView();
 		}
 
-		// Token: 0x0603C8C5 RID: 248005 RVA: 0x00E877A0 File Offset: 0x00E859A0
+		// Token: 0x0603181E RID: 202782 RVA: 0x00DD7F40 File Offset: 0x00DD6140
 		[NullableContext(2)]
 		private void DeactivateHeadStateByRole(Entity entity, bool bLog = false)
 		{
@@ -708,20 +708,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.DeactivateHeadStateByEntityId(id, bLog);
 		}
 
-		// Token: 0x0603C8C6 RID: 248006 RVA: 0x00E87802 File Offset: 0x00E85A02
+		// Token: 0x0603181F RID: 202783 RVA: 0x00DD7FA2 File Offset: 0x00DD61A2
 		private bool IsNormalMonsterBar(Entity entity)
 		{
 			return HeadStateData.CheckIsNormalMonsterBar(entity.GetComponent<CharacterActorComponent>());
 		}
 
-		// Token: 0x0603C8C7 RID: 248007 RVA: 0x00E87810 File Offset: 0x00E85A10
+		// Token: 0x06031820 RID: 202784 RVA: 0x00DD7FB0 File Offset: 0x00DD61B0
 		private bool IsSceneItem(Entity entity)
 		{
 			BaseActorComponent component = entity.GetComponent<BaseActorComponent>();
 			return component != null && component.Valid && component.CreatureData.GetEntityType() == EEntityType.SceneItem;
 		}
 
-		// Token: 0x0603C8C8 RID: 248008 RVA: 0x00E87848 File Offset: 0x00E85A48
+		// Token: 0x06031821 RID: 202785 RVA: 0x00DD7FE8 File Offset: 0x00DD61E8
 		private bool IsChargingDevice(Entity entity)
 		{
 			if (!this.IsSceneItem(entity))
@@ -737,7 +737,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return progressData != null && progressData.ProgressCtrlType == EProgressBarControlType.ChargingDevice;
 		}
 
-		// Token: 0x0603C8C9 RID: 248009 RVA: 0x00E87890 File Offset: 0x00E85A90
+		// Token: 0x06031822 RID: 202786 RVA: 0x00DD8030 File Offset: 0x00DD6230
 		private EHeadStateViewType? GetHeadStateType(int entityId)
 		{
 			CreatureDataComponent component = EntitySystem.Instance.Get(entityId).GetComponent<CreatureDataComponent>();
@@ -760,37 +760,37 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new EHeadStateViewType?(eheadStateViewType2.GetValueOrDefault());
 		}
 
-		// Token: 0x0603C8CA RID: 248010 RVA: 0x00E87909 File Offset: 0x00E85B09
+		// Token: 0x06031823 RID: 202787 RVA: 0x00DD80A9 File Offset: 0x00DD62A9
 		[NullableContext(2)]
 		private HeadStateViewBase GetActivateHeadHead(int entityId)
 		{
 			return this.HeadStateMap.GetValueOrDefault(entityId);
 		}
 
-		// Token: 0x0603C8CB RID: 248011 RVA: 0x00E87917 File Offset: 0x00E85B17
+		// Token: 0x06031824 RID: 202788 RVA: 0x00DD80B7 File Offset: 0x00DD62B7
 		public bool TryGetFollowData(int entityId, HeadStateFollowData outData)
 		{
 			HeadStateViewBase valueOrDefault = this.HeadStateMap.GetValueOrDefault(entityId);
 			return valueOrDefault != null && valueOrDefault.TryGetFollowData(outData);
 		}
 
-		// Token: 0x0401F89E RID: 129182
+		// Token: 0x0401A357 RID: 107351
 		[StaticVariableRuleIgnore]
 		private static readonly Stat TickStatsObject = Stat.Create("[BattleView]BattleHeadStatePanelTick", "", "");
 
-		// Token: 0x0401F89F RID: 129183
+		// Token: 0x0401A358 RID: 107352
 		[StaticVariableRuleIgnore]
 		private static readonly Stat DeactivateHeadStateStat = Stat.Create("[BattleView]DeactivateHeadState", "", "");
 
-		// Token: 0x0401F8A0 RID: 129184
+		// Token: 0x0401A359 RID: 107353
 		[StaticVariableRuleIgnore]
 		private static readonly Stat ActivateHeadStateStat = Stat.Create("[BattleView]ActivateHeadState", "", "");
 
-		// Token: 0x0401F8A1 RID: 129185
+		// Token: 0x0401A35A RID: 107354
 		[StaticVariableRuleIgnore]
 		private static readonly Stat RefreshHeadStateStat = Stat.Create("[BattleView]RefreshHeadState", "", "");
 
-		// Token: 0x0401F8A2 RID: 129186
+		// Token: 0x0401A35B RID: 107355
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EHeadStateViewType, Func<HeadStateViewBase>> HeadStateViewMap = new Dictionary<EHeadStateViewType, Func<HeadStateViewBase>>
 		{
@@ -836,7 +836,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		};
 
-		// Token: 0x0401F8A3 RID: 129187
+		// Token: 0x0401A35C RID: 107356
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EHeadStateViewType, Func<HeadStateData>> SpecialHeadStateDataMap = new Dictionary<EHeadStateViewType, Func<HeadStateData>>
 		{
@@ -846,42 +846,42 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		};
 
-		// Token: 0x0401F8A4 RID: 129188
+		// Token: 0x0401A35D RID: 107357
 		private readonly Dictionary<int, HeadStateData> HeadStateDataMap = new Dictionary<int, HeadStateData>();
 
-		// Token: 0x0401F8A5 RID: 129189
+		// Token: 0x0401A35E RID: 107358
 		private readonly Dictionary<EHeadStateViewType, List<HeadStateViewBase>> HeadStatePreloadMap = new Dictionary<EHeadStateViewType, List<HeadStateViewBase>>();
 
-		// Token: 0x0401F8A6 RID: 129190
+		// Token: 0x0401A35F RID: 107359
 		private readonly Dictionary<int, HeadStateViewBase> HeadStateMap = new Dictionary<int, HeadStateViewBase>();
 
-		// Token: 0x0401F8A7 RID: 129191
+		// Token: 0x0401A360 RID: 107360
 		private int CurrentRoleEntityId;
 
-		// Token: 0x0401F8A8 RID: 129192
+		// Token: 0x0401A361 RID: 107361
 		private readonly float MonsterStateViewDisplayMaxDistance;
 
-		// Token: 0x0401F8A9 RID: 129193
+		// Token: 0x0401A362 RID: 107362
 		private readonly float MonsterStateViewDisplayMinDistance;
 
-		// Token: 0x0401F8AA RID: 129194
+		// Token: 0x0401A363 RID: 107363
 		private readonly float GameplayStateViewDisplayMaxDistance;
 
-		// Token: 0x0401F8AB RID: 129195
+		// Token: 0x0401A364 RID: 107364
 		private readonly float GameplayStateViewDisplayMinDistance;
 
-		// Token: 0x0401F8AC RID: 129196
+		// Token: 0x0401A365 RID: 107365
 		[Nullable(2)]
 		private UCurveFloat HeadStateScaleCurve;
 
-		// Token: 0x0401F8AD RID: 129197
+		// Token: 0x0401A366 RID: 107366
 		[Nullable(2)]
 		private UCurveFloat DurabilityHeadStateScaleCurve;
 
-		// Token: 0x0401F8AE RID: 129198
+		// Token: 0x0401A367 RID: 107367
 		private readonly float TempDisplayHideTime;
 
-		// Token: 0x0401F8AF RID: 129199
+		// Token: 0x0401A368 RID: 107368
 		private readonly float DetailHeadStateRangeInternal;
 	}
 }

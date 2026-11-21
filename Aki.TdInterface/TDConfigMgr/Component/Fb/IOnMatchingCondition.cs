@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B3C RID: 2876
+	// Token: 0x02000C0A RID: 3082
 	public class IOnMatchingCondition : IBulletCreateCondition
 	{
-		// Token: 0x0600425A RID: 16986 RVA: 0x000A9D46 File Offset: 0x000A7F46
-		[NullableContext(1)]
+		// Token: 0x060046B3 RID: 18099 RVA: 0x000B3E0A File Offset: 0x000B200A
 		public static IOnMatchingCondition Create(IOnMatchingCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700119F RID: 4511
-		// (get) Token: 0x0600425B RID: 16987 RVA: 0x000A9D65 File Offset: 0x000A7F65
+		// Token: 0x1700129A RID: 4762
+		// (get) Token: 0x060046B4 RID: 18100 RVA: 0x000B3E29 File Offset: 0x000B2029
 		public override EBulletCreateCondition Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011A0 RID: 4512
-		// (get) Token: 0x0600425C RID: 16988 RVA: 0x000A9D72 File Offset: 0x000A7F72
+		// Token: 0x1700129B RID: 4763
+		// (get) Token: 0x060046B5 RID: 18101 RVA: 0x000B3E36 File Offset: 0x000B2036
 		public override long BulletId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002567 RID: 9575
+		// Token: 0x040027AF RID: 10159
 		private IOnMatchingCondition Instance;
 	}
 }

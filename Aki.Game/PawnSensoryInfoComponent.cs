@@ -5,12 +5,12 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x0200328A RID: 12938
+// Token: 0x020027FB RID: 10235
 [NullableContext(1)]
 [Nullable(0)]
 public class PawnSensoryInfoComponent : EntityComponent
 {
-	// Token: 0x0601C01B RID: 114715 RVA: 0x007C8C48 File Offset: 0x007C6E48
+	// Token: 0x06019C29 RID: 105513 RVA: 0x007EFF7B File Offset: 0x007EE17B
 	protected override void OnEnable()
 	{
 		base.OnEnable();
@@ -20,7 +20,7 @@ public class PawnSensoryInfoComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C01C RID: 114716 RVA: 0x007C8C7C File Offset: 0x007C6E7C
+	// Token: 0x06019C2A RID: 105514 RVA: 0x007EFFAF File Offset: 0x007EE1AF
 	protected override void OnDisable(string reason)
 	{
 		base.OnDisable(reason);
@@ -30,7 +30,7 @@ public class PawnSensoryInfoComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C01D RID: 114717 RVA: 0x007C8CB4 File Offset: 0x007C6EB4
+	// Token: 0x06019C2B RID: 105515 RVA: 0x007EFFE4 File Offset: 0x007EE1E4
 	[NullableContext(2)]
 	[return: Nullable(1)]
 	public PlayerPerceptionEvent CreatePerceptionEvent(float enterDistance, uint entityToken = 0U, Action onEnter = null, Action onLeave = null, Action onDestroy = null, Func<bool> enterCondition = null, float leaveDistance = -1f, global::Vector locationOffset = null)
@@ -45,14 +45,14 @@ public class PawnSensoryInfoComponent : EntityComponent
 		return playerPerceptionEvent;
 	}
 
-	// Token: 0x0601C01E RID: 114718 RVA: 0x007C8D04 File Offset: 0x007C6F04
+	// Token: 0x06019C2C RID: 105516 RVA: 0x007F0034 File Offset: 0x007EE234
 	public void DeletePerceptionEvent(PlayerPerceptionEvent @event)
 	{
 		this.PerceptionsEvents.Remove(@event);
 		EnvironmentalPerceptionController.Instance.DestroyPlayerPerceptionEvent(@event);
 	}
 
-	// Token: 0x0601C01F RID: 114719 RVA: 0x007C8D20 File Offset: 0x007C6F20
+	// Token: 0x06019C2D RID: 105517 RVA: 0x007F0050 File Offset: 0x007EE250
 	private void ClearPerceptionEvent()
 	{
 		foreach (PlayerPerceptionEvent @event in this.PerceptionsEvents)
@@ -62,7 +62,7 @@ public class PawnSensoryInfoComponent : EntityComponent
 		this.PerceptionsEvents.Clear();
 	}
 
-	// Token: 0x0601C020 RID: 114720 RVA: 0x007C8D84 File Offset: 0x007C6F84
+	// Token: 0x06019C2E RID: 105518 RVA: 0x007F00B4 File Offset: 0x007EE2B4
 	public void RegisterPerceptionEvent()
 	{
 		uint gameBudgetManagedToken = base.Entity.GameBudgetManagedToken;
@@ -80,7 +80,7 @@ public class PawnSensoryInfoComponent : EntityComponent
 		UKuroPerceptionInterface.MarkElementDisable(gameBudgetManagedToken, !base.Entity.Active);
 	}
 
-	// Token: 0x0601C021 RID: 114721 RVA: 0x007C8E04 File Offset: 0x007C7004
+	// Token: 0x06019C2F RID: 105519 RVA: 0x007F0134 File Offset: 0x007EE334
 	protected override void OnActivate()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -105,7 +105,7 @@ public class PawnSensoryInfoComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C022 RID: 114722 RVA: 0x007C8EC8 File Offset: 0x007C70C8
+	// Token: 0x06019C30 RID: 105520 RVA: 0x007F01F8 File Offset: 0x007EE3F8
 	public void SetLogicRange(float range)
 	{
 		if (range > this.LogicRangeInternal)
@@ -124,7 +124,7 @@ public class PawnSensoryInfoComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C023 RID: 114723 RVA: 0x007C8F3C File Offset: 0x007C713C
+	// Token: 0x06019C31 RID: 105521 RVA: 0x007F026C File Offset: 0x007EE46C
 	private void OnRangeEnter()
 	{
 		this.IsInRangeInternal = true;
@@ -136,7 +136,7 @@ public class PawnSensoryInfoComponent : EntityComponent
 		EventSystem.Instance.Emit<int>(EEventName.PlayerSenseTargetEnter, base.Entity.Id);
 	}
 
-	// Token: 0x0601C024 RID: 114724 RVA: 0x007C8F8F File Offset: 0x007C718F
+	// Token: 0x06019C32 RID: 105522 RVA: 0x007F02BF File Offset: 0x007EE4BF
 	private void OnRangeLeave()
 	{
 		this.IsInRangeInternal = false;
@@ -144,7 +144,7 @@ public class PawnSensoryInfoComponent : EntityComponent
 		EventSystem.Instance.Emit<int>(EEventName.PlayerSenseTargetLeave, base.Entity.Id);
 	}
 
-	// Token: 0x0601C025 RID: 114725 RVA: 0x007C8FCC File Offset: 0x007C71CC
+	// Token: 0x06019C33 RID: 105523 RVA: 0x007F02FC File Offset: 0x007EE4FC
 	protected override bool OnEnd()
 	{
 		this.LogicRangeEvent = null;
@@ -155,7 +155,7 @@ public class PawnSensoryInfoComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601C026 RID: 114726 RVA: 0x007C901F File Offset: 0x007C721F
+	// Token: 0x06019C34 RID: 105524 RVA: 0x007F034F File Offset: 0x007EE54F
 	private void ExecuteInDefaultRange()
 	{
 		if (!this.IsAlreadyInitDefaultInternal)
@@ -169,8 +169,8 @@ public class PawnSensoryInfoComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170026B4 RID: 9908
-	// (get) Token: 0x0601C027 RID: 114727 RVA: 0x007C904B File Offset: 0x007C724B
+	// Token: 0x17002970 RID: 10608
+	// (get) Token: 0x06019C35 RID: 105525 RVA: 0x007F037B File Offset: 0x007EE57B
 	public double PlayerDistSquared
 	{
 		get
@@ -179,8 +179,8 @@ public class PawnSensoryInfoComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170026B5 RID: 9909
-	// (get) Token: 0x0601C028 RID: 114728 RVA: 0x007C9053 File Offset: 0x007C7253
+	// Token: 0x17002971 RID: 10609
+	// (get) Token: 0x06019C36 RID: 105526 RVA: 0x007F0383 File Offset: 0x007EE583
 	public double PlayerDist
 	{
 		get
@@ -189,8 +189,8 @@ public class PawnSensoryInfoComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170026B6 RID: 9910
-	// (get) Token: 0x0601C029 RID: 114729 RVA: 0x007C9060 File Offset: 0x007C7260
+	// Token: 0x17002972 RID: 10610
+	// (get) Token: 0x06019C37 RID: 105527 RVA: 0x007F0390 File Offset: 0x007EE590
 	public float LogicRange
 	{
 		get
@@ -199,8 +199,8 @@ public class PawnSensoryInfoComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170026B7 RID: 9911
-	// (get) Token: 0x0601C02A RID: 114730 RVA: 0x007C9068 File Offset: 0x007C7268
+	// Token: 0x17002973 RID: 10611
+	// (get) Token: 0x06019C38 RID: 105528 RVA: 0x007F0398 File Offset: 0x007EE598
 	public bool IsInLogicRange
 	{
 		get
@@ -209,7 +209,7 @@ public class PawnSensoryInfoComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C02B RID: 114731 RVA: 0x007C9070 File Offset: 0x007C7270
+	// Token: 0x06019C39 RID: 105529 RVA: 0x007F03A0 File Offset: 0x007EE5A0
 	public string GetDebugString()
 	{
 		string text = "";
@@ -235,7 +235,7 @@ public class PawnSensoryInfoComponent : EntityComponent
 		return text;
 	}
 
-	// Token: 0x0601C02C RID: 114732 RVA: 0x007C9164 File Offset: 0x007C7364
+	// Token: 0x06019C3A RID: 105530 RVA: 0x007F0494 File Offset: 0x007EE694
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -243,70 +243,95 @@ public class PawnSensoryInfoComponent : EntityComponent
 			return false;
 		}
 		PawnSensoryInfoComponent pawnSensoryInfoComponent = (PawnSensoryInfoComponent)componentTemplate;
-		if (base.CanResetComponentProperty("LogicRangeInternal"))
+		this.LogicRangeInternal = pawnSensoryInfoComponent.LogicRangeInternal;
+		this.IsInRangeInternal = pawnSensoryInfoComponent.IsInRangeInternal;
+		this.IsAlreadyInitDefaultInternal = pawnSensoryInfoComponent.IsAlreadyInitDefaultInternal;
+		if (pawnSensoryInfoComponent.DefaultRangeEvent == null)
 		{
-			this.LogicRangeInternal = pawnSensoryInfoComponent.LogicRangeInternal;
+			this.DefaultRangeEvent = null;
 		}
-		if (base.CanResetComponentProperty("IsInRangeInternal"))
-		{
-			this.IsInRangeInternal = pawnSensoryInfoComponent.IsInRangeInternal;
-		}
-		if (base.CanResetComponentProperty("IsAlreadyInitDefaultInternal"))
-		{
-			this.IsAlreadyInitDefaultInternal = pawnSensoryInfoComponent.IsAlreadyInitDefaultInternal;
-		}
-		if (base.CanResetComponentProperty("DefaultRangeEvent"))
-		{
-			if (pawnSensoryInfoComponent.DefaultRangeEvent == null)
-			{
-				this.DefaultRangeEvent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PlayerPerceptionEvent>(this.DefaultRangeEvent), "DefaultRangeEvent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PerceptionsEvents") && pawnSensoryInfoComponent.PerceptionsEvents != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<PlayerPerceptionEvent>(this.PerceptionsEvents), "PerceptionsEvents"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DefaultRangeEvent), "DefaultRangeEvent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LogicRangeEvent"))
+		if (pawnSensoryInfoComponent.PerceptionsEvents != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<PlayerPerceptionEvent>(this.PerceptionsEvents), "PerceptionsEvents"))
 		{
-			if (pawnSensoryInfoComponent.LogicRangeEvent == null)
-			{
-				this.LogicRangeEvent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PlayerPerceptionEvent>(this.LogicRangeEvent), "LogicRangeEvent"))
-			{
-				return false;
-			}
+			return false;
+		}
+		if (pawnSensoryInfoComponent.LogicRangeEvent == null)
+		{
+			this.LogicRangeEvent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LogicRangeEvent), "LogicRangeEvent"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400DD6B RID: 56683
+	// Token: 0x17002974 RID: 10612
+	// (get) Token: 0x06019C3B RID: 105531 RVA: 0x007F0550 File Offset: 0x007EE750
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002975 RID: 10613
+	// (get) Token: 0x06019C3C RID: 105532 RVA: 0x007F0553 File Offset: 0x007EE753
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002976 RID: 10614
+	// (get) Token: 0x06019C3D RID: 105533 RVA: 0x007F0556 File Offset: 0x007EE756
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002977 RID: 10615
+	// (get) Token: 0x06019C3E RID: 105534 RVA: 0x007F0559 File Offset: 0x007EE759
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E213 RID: 57875
 	public const int PERCEPTION_SEARCH_RANGE = 2000;
 
-	// Token: 0x0400DD6C RID: 56684
+	// Token: 0x0400E214 RID: 57876
 	private float LogicRangeInternal;
 
-	// Token: 0x0400DD6D RID: 56685
+	// Token: 0x0400E215 RID: 57877
 	private bool IsInRangeInternal;
 
-	// Token: 0x0400DD6E RID: 56686
+	// Token: 0x0400E216 RID: 57878
 	private bool IsAlreadyInitDefaultInternal;
 
-	// Token: 0x0400DD6F RID: 56687
+	// Token: 0x0400E217 RID: 57879
 	private readonly double PlayerDistSquaredInternal = double.MaxValue;
 
-	// Token: 0x0400DD70 RID: 56688
+	// Token: 0x0400E218 RID: 57880
 	[Nullable(2)]
 	private PlayerPerceptionEvent DefaultRangeEvent;
 
-	// Token: 0x0400DD71 RID: 56689
+	// Token: 0x0400E219 RID: 57881
 	private readonly HashSet<PlayerPerceptionEvent> PerceptionsEvents = new HashSet<PlayerPerceptionEvent>();
 
-	// Token: 0x0400DD72 RID: 56690
+	// Token: 0x0400E21A RID: 57882
 	[Nullable(2)]
 	private PlayerPerceptionEvent LogicRangeEvent;
 }

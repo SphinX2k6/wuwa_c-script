@@ -18,13 +18,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.ResManager
 {
-	// Token: 0x02004F0F RID: 20239
+	// Token: 0x02003ED8 RID: 16088
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class ResourceManagerController : ControllerBase
 	{
-		// Token: 0x06033E3F RID: 212543 RVA: 0x00C28324 File Offset: 0x00C26524
+		// Token: 0x06028CAA RID: 167082 RVA: 0x00B71914 File Offset: 0x00B6FB14
 		protected override bool OnInit()
 		{
 			this.InitBlockDownloadState();
@@ -32,28 +32,28 @@ namespace CSharpScript.Game.Module.ResManager
 			return true;
 		}
 
-		// Token: 0x06033E40 RID: 212544 RVA: 0x00C28333 File Offset: 0x00C26533
+		// Token: 0x06028CAB RID: 167083 RVA: 0x00B71923 File Offset: 0x00B6FB23
 		protected override bool OnClear()
 		{
 			this.RemoveEvents();
 			return true;
 		}
 
-		// Token: 0x06033E41 RID: 212545 RVA: 0x00C2833C File Offset: 0x00C2653C
+		// Token: 0x06028CAC RID: 167084 RVA: 0x00B7192C File Offset: 0x00B6FB2C
 		private void AddEvents()
 		{
-			EventSystem.Instance.Add(EEventName.OnQuestFinishListNotify, new Action(this.OnQuestFinishListNotify));
+			EventSystem.Instance.Add(EEventName.OnNormalQuestFinishListNotify, new Action(this.OnQuestFinishListNotify));
 			EventSystem.Instance.Add<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		}
 
-		// Token: 0x06033E42 RID: 212546 RVA: 0x00C28376 File Offset: 0x00C26576
+		// Token: 0x06028CAD RID: 167085 RVA: 0x00B71966 File Offset: 0x00B6FB66
 		private void RemoveEvents()
 		{
-			EventSystem.Instance.Remove(EEventName.OnQuestFinishListNotify, new Action(this.OnQuestFinishListNotify));
+			EventSystem.Instance.Remove(EEventName.OnNormalQuestFinishListNotify, new Action(this.OnQuestFinishListNotify));
 			EventSystem.Instance.Remove(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		}
 
-		// Token: 0x06033E43 RID: 212547 RVA: 0x00C283B0 File Offset: 0x00C265B0
+		// Token: 0x06028CAE RID: 167086 RVA: 0x00B719A0 File Offset: 0x00B6FBA0
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return new ValueTuple<bool, bool>(instance.GetBlockDownloadState(mapBlockFromPosition), instance.BlockNeedReOpenMap.Contains(mapBlockFromPosition));
 		}
 
-		// Token: 0x06033E44 RID: 212548 RVA: 0x00C28404 File Offset: 0x00C26604
+		// Token: 0x06028CAF RID: 167087 RVA: 0x00B719F4 File Offset: 0x00B6FBF4
 		public List<ResPackageInfo> GetMapBlockResPackageInfos(IReadOnlyList<int> blockIds)
 		{
 			ResourceManagerModel instance = ResourceManagerModel.Instance;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return list;
 		}
 
-		// Token: 0x06033E45 RID: 212549 RVA: 0x00C28548 File Offset: 0x00C26748
+		// Token: 0x06028CB0 RID: 167088 RVA: 0x00B71B38 File Offset: 0x00B6FD38
 		public UniTask InitSubPackageDownloader()
 		{
 			ResourceManagerController.<InitSubPackageDownloader>d__8 <InitSubPackageDownloader>d__;
@@ -127,13 +127,13 @@ namespace CSharpScript.Game.Module.ResManager
 			return <InitSubPackageDownloader>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033E46 RID: 212550 RVA: 0x00C2858B File Offset: 0x00C2678B
+		// Token: 0x06028CB1 RID: 167089 RVA: 0x00B71B7B File Offset: 0x00B6FD7B
 		protected override void OnTick(float deltaTime)
 		{
 			this.TickPushCurBlock(deltaTime);
 		}
 
-		// Token: 0x06033E47 RID: 212551 RVA: 0x00C28594 File Offset: 0x00C26794
+		// Token: 0x06028CB2 RID: 167090 RVA: 0x00B71B84 File Offset: 0x00B6FD84
 		private unsafe void TickPushCurBlock(float deltaTime)
 		{
 			this.PushCurBlockTimer += deltaTime;
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.ResManager
 			}
 		}
 
-		// Token: 0x06033E48 RID: 212552 RVA: 0x00C2868C File Offset: 0x00C2688C
+		// Token: 0x06028CB3 RID: 167091 RVA: 0x00B71C7C File Offset: 0x00B6FE7C
 		public void PushCurBlock(IReadOnlyList<int> blockIds, [Nullable(2)] string reason)
 		{
 			Log.Instance.Info(ELogModule.QuestResource, ELogAuthor.HWK, "推送当前地块:" + string.Join<int>(",", blockIds) + " 原因:" + reason, default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -183,13 +183,13 @@ namespace CSharpScript.Game.Module.ResManager
 			Net.Instance.Send(EPushMessageId.SceneBlockSplitPlayerNeedBlockPush, sceneBlockSplitPlayerNeedBlockPush);
 		}
 
-		// Token: 0x06033E49 RID: 212553 RVA: 0x00C286ED File Offset: 0x00C268ED
+		// Token: 0x06028CB4 RID: 167092 RVA: 0x00B71CDD File Offset: 0x00B6FEDD
 		public int GetMapBlockFromPosition(int mapId, global::Vector position)
 		{
 			return ResourceDiffUpdaterManager.Instance.BlockModule.GetMapBlockFromPosition(mapId, position.X, position.Y);
 		}
 
-		// Token: 0x06033E4A RID: 212554 RVA: 0x00C2870C File Offset: 0x00C2690C
+		// Token: 0x06028CB5 RID: 167093 RVA: 0x00B71CFC File Offset: 0x00B6FEFC
 		[NullableContext(0)]
 		public ValueTuple<bool, long, long> GetResourceDownloadStatus([Nullable(1)] string packName)
 		{
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return new ValueTuple<bool, long, long>(true, 0L, 0L);
 		}
 
-		// Token: 0x06033E4B RID: 212555 RVA: 0x00C28784 File Offset: 0x00C26984
+		// Token: 0x06028CB6 RID: 167094 RVA: 0x00B71D74 File Offset: 0x00B6FF74
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return new ValueTuple<long, HashSet<int>>(ResourceDiffUpdaterManager.Instance.VideoModule.GetLocalSizeByVideoIds(unusedVideos), unusedVideos);
 		}
 
-		// Token: 0x06033E4C RID: 212556 RVA: 0x00C287C0 File Offset: 0x00C269C0
+		// Token: 0x06028CB7 RID: 167095 RVA: 0x00B71DB0 File Offset: 0x00B6FFB0
 		public void DeleteUnneededResource(List<int> curQuestIds)
 		{
 			ValueTuple<long, HashSet<int>> unneededResourceSize = this.GetUnneededResourceSize(curQuestIds);
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.ResManager
 			}
 		}
 
-		// Token: 0x06033E4D RID: 212557 RVA: 0x00C28834 File Offset: 0x00C26A34
+		// Token: 0x06028CB8 RID: 167096 RVA: 0x00B71E24 File Offset: 0x00B70024
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return new ValueTuple<int[], int[]>(valueOrDefault ?? Array.Empty<int>(), questRefCgIds);
 		}
 
-		// Token: 0x06033E4E RID: 212558 RVA: 0x00C2886C File Offset: 0x00C26A6C
+		// Token: 0x06028CB9 RID: 167097 RVA: 0x00B71E5C File Offset: 0x00B7005C
 		[NullableContext(0)]
 		public ValueTuple<bool, long, long> GetMp4ResourceDownloadStatus(int videoId)
 		{
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return new ValueTuple<bool, long, long>(item == item2, item, item2);
 		}
 
-		// Token: 0x06033E4F RID: 212559 RVA: 0x00C2891C File Offset: 0x00C26B1C
+		// Token: 0x06028CBA RID: 167098 RVA: 0x00B71F0C File Offset: 0x00B7010C
 		private void OnQuestFinishListNotify()
 		{
 			this.SaveFinishedVideoList();
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.Module.ResManager
 			}
 		}
 
-		// Token: 0x06033E50 RID: 212560 RVA: 0x00C28967 File Offset: 0x00C26B67
+		// Token: 0x06028CBB RID: 167099 RVA: 0x00B71F57 File Offset: 0x00B70157
 		private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason arg3)
 		{
 			if (state == QuestState.Finish)
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.Module.ResManager
 			}
 		}
 
-		// Token: 0x06033E51 RID: 212561 RVA: 0x00C28990 File Offset: 0x00C26B90
+		// Token: 0x06028CBC RID: 167100 RVA: 0x00B71F80 File Offset: 0x00B70180
 		private unsafe void SaveFinishedVideoList()
 		{
 			if (KuroSdkController.Instance.CanUseSdk())
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Module.ResManager
 			}
 		}
 
-		// Token: 0x06033E52 RID: 212562 RVA: 0x00C28A50 File Offset: 0x00C26C50
+		// Token: 0x06028CBD RID: 167101 RVA: 0x00B72040 File Offset: 0x00B70240
 		protected void UpdateToServerResState()
 		{
 			QuestResourceModel instance = QuestResourceModel.Instance;
@@ -393,7 +393,7 @@ namespace CSharpScript.Game.Module.ResManager
 			Net.Instance.Send(EPushMessageId.SceneBlockSplitSwitchStatePush, sceneBlockSplitSwitchStatePush);
 		}
 
-		// Token: 0x06033E53 RID: 212563 RVA: 0x00C28BD8 File Offset: 0x00C26DD8
+		// Token: 0x06028CBE RID: 167102 RVA: 0x00B721C8 File Offset: 0x00B703C8
 		public void UpdateBlockDownloadState(int blockId, bool downloaded)
 		{
 			ResourceManagerModel instance = ResourceManagerModel.Instance;
@@ -414,13 +414,13 @@ namespace CSharpScript.Game.Module.ResManager
 			}
 		}
 
-		// Token: 0x06033E54 RID: 212564 RVA: 0x00C28C56 File Offset: 0x00C26E56
+		// Token: 0x06028CBF RID: 167103 RVA: 0x00B72246 File Offset: 0x00B70446
 		public bool IsNeedReOpenMap(int blockId)
 		{
 			return ResourceManagerModel.Instance.BlockNeedReOpenMap.Contains(blockId);
 		}
 
-		// Token: 0x06033E55 RID: 212565 RVA: 0x00C28C68 File Offset: 0x00C26E68
+		// Token: 0x06028CC0 RID: 167104 RVA: 0x00B72258 File Offset: 0x00B70458
 		public void UpdateServerQuestState()
 		{
 			if (!ResourceDiffUpdaterManager.Instance.IsGrayBoxHit())
@@ -487,7 +487,7 @@ namespace CSharpScript.Game.Module.ResManager
 			}, 0);
 		}
 
-		// Token: 0x06033E56 RID: 212566 RVA: 0x00C28E70 File Offset: 0x00C27070
+		// Token: 0x06028CC1 RID: 167105 RVA: 0x00B72460 File Offset: 0x00B70660
 		public List<int> GetDownloadedQuestListBeforeLogin(EPlayerGender gender = EPlayerGender.None)
 		{
 			List<int> list = new List<int>();
@@ -533,7 +533,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return list;
 		}
 
-		// Token: 0x06033E57 RID: 212567 RVA: 0x00C29060 File Offset: 0x00C27260
+		// Token: 0x06028CC2 RID: 167106 RVA: 0x00B72650 File Offset: 0x00B70850
 		public bool IsQuestResourceDownloaded(int questId, EPlayerGender gender)
 		{
 			ResourceManagerModel instance = ResourceManagerModel.Instance;
@@ -582,7 +582,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return flag;
 		}
 
-		// Token: 0x06033E58 RID: 212568 RVA: 0x00C291B0 File Offset: 0x00C273B0
+		// Token: 0x06028CC3 RID: 167107 RVA: 0x00B727A0 File Offset: 0x00B709A0
 		public void InitBlockDownloadState()
 		{
 			ResourceManagerModel instance = ResourceManagerModel.Instance;
@@ -617,7 +617,7 @@ namespace CSharpScript.Game.Module.ResManager
 			}
 		}
 
-		// Token: 0x06033E59 RID: 212569 RVA: 0x00C292D4 File Offset: 0x00C274D4
+		// Token: 0x06028CC4 RID: 167108 RVA: 0x00B728C4 File Offset: 0x00B70AC4
 		public UniTask TestDownload()
 		{
 			ResourceManagerController.<TestDownload>d__30 <TestDownload>d__;
@@ -628,7 +628,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return <TestDownload>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033E5A RID: 212570 RVA: 0x00C29318 File Offset: 0x00C27518
+		// Token: 0x06028CC5 RID: 167109 RVA: 0x00B72908 File Offset: 0x00B70B08
 		public void ChangeHttpTickFrequency()
 		{
 			Log.Instance.Info(ELogModule.SubPackageDownLoad, ELogAuthor.HWK, "ChangeHttpTickFrequency: set http tick to max", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -636,7 +636,7 @@ namespace CSharpScript.Game.Module.ResManager
 			Http.SetHttpThreadIdleMinimumSleepTimeInSeconds(0f);
 		}
 
-		// Token: 0x06033E5B RID: 212571 RVA: 0x00C29358 File Offset: 0x00C27558
+		// Token: 0x06028CC6 RID: 167110 RVA: 0x00B72948 File Offset: 0x00B70B48
 		public void RestoreHttpTickFrequency()
 		{
 			Log.Instance.Info(ELogModule.SubPackageDownLoad, ELogAuthor.HWK, "RestoreHttpTickFrequency: restore http tick to game default", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -644,8 +644,8 @@ namespace CSharpScript.Game.Module.ResManager
 			Http.SetHttpThreadIdleMinimumSleepTimeInSeconds(0.033f);
 		}
 
-		// Token: 0x17007F39 RID: 32569
-		// (get) Token: 0x06033E5C RID: 212572 RVA: 0x00C29398 File Offset: 0x00C27598
+		// Token: 0x170052E9 RID: 21225
+		// (get) Token: 0x06028CC7 RID: 167111 RVA: 0x00B72988 File Offset: 0x00B70B88
 		public static ResourceManagerController Instance
 		{
 			get
@@ -654,7 +654,7 @@ namespace CSharpScript.Game.Module.ResManager
 			}
 		}
 
-		// Token: 0x06033E5D RID: 212573 RVA: 0x00C2939F File Offset: 0x00C2759F
+		// Token: 0x06028CC8 RID: 167112 RVA: 0x00B7298F File Offset: 0x00B70B8F
 		public static ResourceManagerController GetOrCreateInstance()
 		{
 			if (ResourceManagerController._Instance == null)
@@ -664,7 +664,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return ResourceManagerController._Instance;
 		}
 
-		// Token: 0x06033E5E RID: 212574 RVA: 0x00C293B3 File Offset: 0x00C275B3
+		// Token: 0x06028CC9 RID: 167113 RVA: 0x00B729A3 File Offset: 0x00B70BA3
 		public static bool CreateInstance()
 		{
 			if (ResourceManagerController._Instance != null)
@@ -675,37 +675,37 @@ namespace CSharpScript.Game.Module.ResManager
 			return true;
 		}
 
-		// Token: 0x06033E5F RID: 212575 RVA: 0x00C293C9 File Offset: 0x00C275C9
+		// Token: 0x06028CCA RID: 167114 RVA: 0x00B729B9 File Offset: 0x00B70BB9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06033E60 RID: 212576 RVA: 0x00C293CB File Offset: 0x00C275CB
+		// Token: 0x06028CCB RID: 167115 RVA: 0x00B729BB File Offset: 0x00B70BBB
 		public static void ResetStaticDefaultValue()
 		{
 			ResourceManagerController._Instance = null;
 		}
 
-		// Token: 0x06033E61 RID: 212577 RVA: 0x00C293D3 File Offset: 0x00C275D3
+		// Token: 0x06028CCC RID: 167116 RVA: 0x00B729C3 File Offset: 0x00B70BC3
 		static ResourceManagerController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ResourceManagerController.CreateStaticDefaultValue), new Action(ResourceManagerController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401B956 RID: 112982
+		// Token: 0x04016329 RID: 90921
 		private const int CUE_BLOCK_PUSH_TIME = 3000;
 
-		// Token: 0x0401B957 RID: 112983
+		// Token: 0x0401632A RID: 90922
 		[Nullable(2)]
 		public CustomPromise LoginPrepareResCheckPromise;
 
-		// Token: 0x0401B958 RID: 112984
+		// Token: 0x0401632B RID: 90923
 		private float PushCurBlockTimer;
 
-		// Token: 0x0401B959 RID: 112985
+		// Token: 0x0401632C RID: 90924
 		private int CurBlockId = -1;
 
-		// Token: 0x0401B95A RID: 112986
+		// Token: 0x0401632D RID: 90925
 		[Nullable(2)]
 		private static ResourceManagerController _Instance;
 	}

@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007503 RID: 29955
+	// Token: 0x02007CF9 RID: 31993
 	public class IVehicleEnterT
 	{
-		// Token: 0x1700E34A RID: 58186
-		// (get) Token: 0x06036798 RID: 223128 RVA: 0x007668D1 File Offset: 0x00764AD1
-		// (set) Token: 0x06036799 RID: 223129 RVA: 0x007668D9 File Offset: 0x00764AD9
+		// Token: 0x1700EF74 RID: 61300
+		// (get) Token: 0x06039BAD RID: 236461 RVA: 0x007C9B21 File Offset: 0x007C7D21
+		// (set) Token: 0x06039BAE RID: 236462 RVA: 0x007C9B29 File Offset: 0x007C7D29
 		public TVehicleEnteringTargetUnion EnteringTarget { get; set; }
 
-		// Token: 0x1700E34B RID: 58187
-		// (get) Token: 0x0603679A RID: 223130 RVA: 0x007668E2 File Offset: 0x00764AE2
-		// (set) Token: 0x0603679B RID: 223131 RVA: 0x007668EA File Offset: 0x00764AEA
+		// Token: 0x1700EF75 RID: 61301
+		// (get) Token: 0x06039BAF RID: 236463 RVA: 0x007C9B32 File Offset: 0x007C7D32
+		// (set) Token: 0x06039BB0 RID: 236464 RVA: 0x007C9B3A File Offset: 0x007C7D3A
 		public TTargetVehicleUnion VehicleTarget { get; set; }
 
-		// Token: 0x1700E34C RID: 58188
-		// (get) Token: 0x0603679C RID: 223132 RVA: 0x007668F3 File Offset: 0x00764AF3
-		// (set) Token: 0x0603679D RID: 223133 RVA: 0x007668FB File Offset: 0x00764AFB
+		// Token: 0x1700EF76 RID: 61302
+		// (get) Token: 0x06039BB1 RID: 236465 RVA: 0x007C9B43 File Offset: 0x007C7D43
+		// (set) Token: 0x06039BB2 RID: 236466 RVA: 0x007C9B4B File Offset: 0x007C7D4B
 		public EVehicleSeat Seat { get; set; }
 
-		// Token: 0x1700E34D RID: 58189
-		// (get) Token: 0x0603679E RID: 223134 RVA: 0x00766904 File Offset: 0x00764B04
-		// (set) Token: 0x0603679F RID: 223135 RVA: 0x0076690C File Offset: 0x00764B0C
+		// Token: 0x1700EF77 RID: 61303
+		// (get) Token: 0x06039BB3 RID: 236467 RVA: 0x007C9B54 File Offset: 0x007C7D54
+		// (set) Token: 0x06039BB4 RID: 236468 RVA: 0x007C9B5C File Offset: 0x007C7D5C
 		public bool ForceExitLastVehicle { get; set; }
 
-		// Token: 0x1700E34E RID: 58190
-		// (get) Token: 0x060367A0 RID: 223136 RVA: 0x00766915 File Offset: 0x00764B15
-		// (set) Token: 0x060367A1 RID: 223137 RVA: 0x0076691D File Offset: 0x00764B1D
+		// Token: 0x1700EF78 RID: 61304
+		// (get) Token: 0x06039BB5 RID: 236469 RVA: 0x007C9B65 File Offset: 0x007C7D65
+		// (set) Token: 0x06039BB6 RID: 236470 RVA: 0x007C9B6D File Offset: 0x007C7D6D
 		public byte NullMask { get; set; }
 
-		// Token: 0x060367A2 RID: 223138 RVA: 0x00766926 File Offset: 0x00764B26
+		// Token: 0x06039BB7 RID: 236471 RVA: 0x007C9B76 File Offset: 0x007C7D76
 		public IVehicleEnterT()
 		{
 			this.EnteringTarget = null;

@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 {
-	// Token: 0x02005451 RID: 21585
+	// Token: 0x02004434 RID: 17460
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class BasicGraphicSettingSliderData
 	{
-		// Token: 0x060371C7 RID: 225735 RVA: 0x00D102A0 File Offset: 0x00D0E4A0
+		// Token: 0x0602C110 RID: 180496 RVA: 0x00C5F6B8 File Offset: 0x00C5D8B8
 		public BasicGraphicSettingSliderData(MenuData metaData)
 		{
 			this.FunctionId = new EFunction?(metaData.FunctionId);
@@ -21,8 +21,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			this.MetaData = metaData;
 		}
 
-		// Token: 0x1700844D RID: 33869
-		// (get) Token: 0x060371C8 RID: 225736 RVA: 0x00D10361 File Offset: 0x00D0E561
+		// Token: 0x17005819 RID: 22553
+		// (get) Token: 0x0602C111 RID: 180497 RVA: 0x00C5F779 File Offset: 0x00C5D979
 		public MenuData MenuData
 		{
 			get
@@ -31,8 +31,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			}
 		}
 
-		// Token: 0x1700844E RID: 33870
-		// (get) Token: 0x060371C9 RID: 225737 RVA: 0x00D10369 File Offset: 0x00D0E569
+		// Token: 0x1700581A RID: 22554
+		// (get) Token: 0x0602C112 RID: 180498 RVA: 0x00C5F781 File Offset: 0x00C5D981
 		public float MinValue
 		{
 			get
@@ -41,8 +41,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			}
 		}
 
-		// Token: 0x1700844F RID: 33871
-		// (get) Token: 0x060371CA RID: 225738 RVA: 0x00D10371 File Offset: 0x00D0E571
+		// Token: 0x1700581B RID: 22555
+		// (get) Token: 0x0602C113 RID: 180499 RVA: 0x00C5F789 File Offset: 0x00C5D989
 		public float MaxValue
 		{
 			get
@@ -51,8 +51,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			}
 		}
 
-		// Token: 0x17008450 RID: 33872
-		// (get) Token: 0x060371CB RID: 225739 RVA: 0x00D10379 File Offset: 0x00D0E579
+		// Token: 0x1700581C RID: 22556
+		// (get) Token: 0x0602C114 RID: 180500 RVA: 0x00C5F791 File Offset: 0x00C5D991
 		public float CurValue
 		{
 			get
@@ -61,8 +61,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			}
 		}
 
-		// Token: 0x17008451 RID: 33873
-		// (get) Token: 0x060371CC RID: 225740 RVA: 0x00D10381 File Offset: 0x00D0E581
+		// Token: 0x1700581D RID: 22557
+		// (get) Token: 0x0602C115 RID: 180501 RVA: 0x00C5F799 File Offset: 0x00C5D999
 		public float DefaultCurValue
 		{
 			get
@@ -71,8 +71,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			}
 		}
 
-		// Token: 0x17008452 RID: 33874
-		// (get) Token: 0x060371CD RID: 225741 RVA: 0x00D10389 File Offset: 0x00D0E589
+		// Token: 0x1700581E RID: 22558
+		// (get) Token: 0x0602C116 RID: 180502 RVA: 0x00C5F7A1 File Offset: 0x00C5D9A1
 		public string Title
 		{
 			get
@@ -81,35 +81,35 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			}
 		}
 
-		// Token: 0x060371CE RID: 225742 RVA: 0x00D10391 File Offset: 0x00D0E591
+		// Token: 0x0602C117 RID: 180503 RVA: 0x00C5F7A9 File Offset: 0x00C5D9A9
 		public void OnApplyValue()
 		{
 			GameSettingsManager.Instance.HandleValueChange(this.FunctionId.Value, (int)this.CurValueInternal, EGameSettingsApplyReason.WhenUi);
 		}
 
-		// Token: 0x0401D133 RID: 119091
+		// Token: 0x04017BCC RID: 97228
 		protected float MinValueInternal;
 
-		// Token: 0x0401D134 RID: 119092
+		// Token: 0x04017BCD RID: 97229
 		protected float MaxValueInternal;
 
-		// Token: 0x0401D135 RID: 119093
+		// Token: 0x04017BCE RID: 97230
 		protected float CurValueInternal;
 
-		// Token: 0x0401D136 RID: 119094
+		// Token: 0x04017BCF RID: 97231
 		protected float DefaultValueInternal;
 
-		// Token: 0x0401D137 RID: 119095
+		// Token: 0x04017BD0 RID: 97232
 		protected string TitleInternal = "";
 
-		// Token: 0x0401D138 RID: 119096
+		// Token: 0x04017BD1 RID: 97233
 		protected EFunction? FunctionId;
 
-		// Token: 0x0401D139 RID: 119097
+		// Token: 0x04017BD2 RID: 97234
 		[Nullable(2)]
 		protected MenuData MetaData;
 
-		// Token: 0x0401D13A RID: 119098
+		// Token: 0x04017BD3 RID: 97235
 		public Action<float> OnChangeValue = delegate(float value)
 		{
 		};

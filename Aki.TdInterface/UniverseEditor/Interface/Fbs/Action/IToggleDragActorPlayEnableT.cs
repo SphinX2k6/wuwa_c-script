@@ -2,50 +2,50 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073FE RID: 29694
+	// Token: 0x02007BE8 RID: 31720
 	public class IToggleDragActorPlayEnableT
 	{
-		// Token: 0x1700E18B RID: 57739
-		// (get) Token: 0x06035F29 RID: 220969 RVA: 0x007575E9 File Offset: 0x007557E9
-		// (set) Token: 0x06035F2A RID: 220970 RVA: 0x007575F1 File Offset: 0x007557F1
+		// Token: 0x1700EDA0 RID: 60832
+		// (get) Token: 0x060392DC RID: 234204 RVA: 0x007B9D5D File Offset: 0x007B7F5D
+		// (set) Token: 0x060392DD RID: 234205 RVA: 0x007B9D65 File Offset: 0x007B7F65
 		public EToggleDragActorPlayType Type { get; set; }
 
-		// Token: 0x1700E18C RID: 57740
-		// (get) Token: 0x06035F2B RID: 220971 RVA: 0x007575FA File Offset: 0x007557FA
-		// (set) Token: 0x06035F2C RID: 220972 RVA: 0x00757602 File Offset: 0x00755802
+		// Token: 0x1700EDA1 RID: 60833
+		// (get) Token: 0x060392DE RID: 234206 RVA: 0x007B9D6E File Offset: 0x007B7F6E
+		// (set) Token: 0x060392DF RID: 234207 RVA: 0x007B9D76 File Offset: 0x007B7F76
 		public IFixedCameraConfigT CameraConfig { get; set; }
 
-		// Token: 0x1700E18D RID: 57741
-		// (get) Token: 0x06035F2D RID: 220973 RVA: 0x0075760B File Offset: 0x0075580B
-		// (set) Token: 0x06035F2E RID: 220974 RVA: 0x00757613 File Offset: 0x00755813
+		// Token: 0x1700EDA2 RID: 60834
+		// (get) Token: 0x060392E0 RID: 234208 RVA: 0x007B9D7F File Offset: 0x007B7F7F
+		// (set) Token: 0x060392E1 RID: 234209 RVA: 0x007B9D87 File Offset: 0x007B7F87
 		public string TidMainText { get; set; }
 
-		// Token: 0x1700E18E RID: 57742
-		// (get) Token: 0x06035F2F RID: 220975 RVA: 0x0075761C File Offset: 0x0075581C
-		// (set) Token: 0x06035F30 RID: 220976 RVA: 0x00757624 File Offset: 0x00755824
+		// Token: 0x1700EDA3 RID: 60835
+		// (get) Token: 0x060392E2 RID: 234210 RVA: 0x007B9D90 File Offset: 0x007B7F90
+		// (set) Token: 0x060392E3 RID: 234211 RVA: 0x007B9D98 File Offset: 0x007B7F98
 		public string TidSubText { get; set; }
 
-		// Token: 0x1700E18F RID: 57743
-		// (get) Token: 0x06035F31 RID: 220977 RVA: 0x0075762D File Offset: 0x0075582D
-		// (set) Token: 0x06035F32 RID: 220978 RVA: 0x00757635 File Offset: 0x00755835
+		// Token: 0x1700EDA4 RID: 60836
+		// (get) Token: 0x060392E4 RID: 234212 RVA: 0x007B9DA1 File Offset: 0x007B7FA1
+		// (set) Token: 0x060392E5 RID: 234213 RVA: 0x007B9DA9 File Offset: 0x007B7FA9
 		public string TidHintText { get; set; }
 
-		// Token: 0x1700E190 RID: 57744
-		// (get) Token: 0x06035F33 RID: 220979 RVA: 0x0075763E File Offset: 0x0075583E
-		// (set) Token: 0x06035F34 RID: 220980 RVA: 0x00757646 File Offset: 0x00755846
+		// Token: 0x1700EDA5 RID: 60837
+		// (get) Token: 0x060392E6 RID: 234214 RVA: 0x007B9DB2 File Offset: 0x007B7FB2
+		// (set) Token: 0x060392E7 RID: 234215 RVA: 0x007B9DBA File Offset: 0x007B7FBA
 		public bool KeepDialog { get; set; }
 
-		// Token: 0x1700E191 RID: 57745
-		// (get) Token: 0x06035F35 RID: 220981 RVA: 0x0075764F File Offset: 0x0075584F
-		// (set) Token: 0x06035F36 RID: 220982 RVA: 0x00757657 File Offset: 0x00755857
+		// Token: 0x1700EDA6 RID: 60838
+		// (get) Token: 0x060392E8 RID: 234216 RVA: 0x007B9DC3 File Offset: 0x007B7FC3
+		// (set) Token: 0x060392E9 RID: 234217 RVA: 0x007B9DCB File Offset: 0x007B7FCB
 		public bool DisableExit { get; set; }
 
-		// Token: 0x1700E192 RID: 57746
-		// (get) Token: 0x06035F37 RID: 220983 RVA: 0x00757660 File Offset: 0x00755860
-		// (set) Token: 0x06035F38 RID: 220984 RVA: 0x00757668 File Offset: 0x00755868
+		// Token: 0x1700EDA7 RID: 60839
+		// (get) Token: 0x060392EA RID: 234218 RVA: 0x007B9DD4 File Offset: 0x007B7FD4
+		// (set) Token: 0x060392EB RID: 234219 RVA: 0x007B9DDC File Offset: 0x007B7FDC
 		public byte NullMask { get; set; }
 
-		// Token: 0x06035F39 RID: 220985 RVA: 0x00757671 File Offset: 0x00755871
+		// Token: 0x060392EC RID: 234220 RVA: 0x007B9DE5 File Offset: 0x007B7FE5
 		public IToggleDragActorPlayEnableT()
 		{
 			this.Type = EToggleDragActorPlayType.Enable;

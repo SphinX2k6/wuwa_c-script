@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FF5 RID: 4085
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001121 RID: 4385
 	public class ILevelPlayRecallData : IRecallData
 	{
-		// Token: 0x06005AE2 RID: 23266 RVA: 0x000DC8CC File Offset: 0x000DAACC
+		// Token: 0x060060C2 RID: 24770 RVA: 0x000E950C File Offset: 0x000E770C
 		private ILevelPlayRecallData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005AE3 RID: 23267 RVA: 0x000DC904 File Offset: 0x000DAB04
+		// Token: 0x060060C3 RID: 24771 RVA: 0x000E9544 File Offset: 0x000E7744
 		public static ILevelPlayRecallData Create([Nullable(2)] ILevelPlayRecallData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005AE4 RID: 23268 RVA: 0x000DC917 File Offset: 0x000DAB17
+		// Token: 0x060060C4 RID: 24772 RVA: 0x000E9557 File Offset: 0x000E7757
 		public static ILevelPlayRecallData CreateFromSetValue([Nullable(2)] ILevelPlayRecallData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005AE5 RID: 23269 RVA: 0x000DC92A File Offset: 0x000DAB2A
+		// Token: 0x060060C5 RID: 24773 RVA: 0x000E956A File Offset: 0x000E776A
 		public new ILevelPlayRecallData_SetValue ToSetValue()
 		{
 			return new ILevelPlayRecallData_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E03 RID: 7683
-		// (get) Token: 0x06005AE6 RID: 23270 RVA: 0x000DC955 File Offset: 0x000DAB55
-		// (set) Token: 0x06005AE7 RID: 23271 RVA: 0x000DC980 File Offset: 0x000DAB80
+		// Token: 0x17001FAC RID: 8108
+		// (get) Token: 0x060060C6 RID: 24774 RVA: 0x000E9595 File Offset: 0x000E7795
+		// (set) Token: 0x060060C7 RID: 24775 RVA: 0x000E95C0 File Offset: 0x000E77C0
 		public override ERecallDataType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E04 RID: 7684
-		// (get) Token: 0x06005AE8 RID: 23272 RVA: 0x000DC98E File Offset: 0x000DAB8E
-		// (set) Token: 0x06005AE9 RID: 23273 RVA: 0x000DC9B9 File Offset: 0x000DABB9
+		// Token: 0x17001FAD RID: 8109
+		// (get) Token: 0x060060C8 RID: 24776 RVA: 0x000E95CE File Offset: 0x000E77CE
+		// (set) Token: 0x060060C9 RID: 24777 RVA: 0x000E95F9 File Offset: 0x000E77F9
 		public override int Id
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E05 RID: 7685
-		// (get) Token: 0x06005AEA RID: 23274 RVA: 0x000DC9C8 File Offset: 0x000DABC8
-		// (set) Token: 0x06005AEB RID: 23275 RVA: 0x000DCA29 File Offset: 0x000DAC29
+		// Token: 0x17001FAE RID: 8110
+		// (get) Token: 0x060060CA RID: 24778 RVA: 0x000E9608 File Offset: 0x000E7808
+		// (set) Token: 0x060060CB RID: 24779 RVA: 0x000E9669 File Offset: 0x000E7869
 		public virtual ILevelPlayRecallConfig RecallConfig
 		{
 			get
@@ -137,18 +135,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040036B0 RID: 14000
+		// Token: 0x040039E8 RID: 14824
 		[Nullable(2)]
 		protected new ILevelPlayRecallData FbInstance;
 
-		// Token: 0x040036B1 RID: 14001
+		// Token: 0x040039E9 RID: 14825
 		[Nullable(2)]
 		protected new ILevelPlayRecallData_SetValue PocoInterface;
 
-		// Token: 0x040036B2 RID: 14002
+		// Token: 0x040039EA RID: 14826
 		private ILevelPlayRecallConfig _RecallConfigCache;
 
-		// Token: 0x040036B3 RID: 14003
+		// Token: 0x040039EB RID: 14827
 		private bool _RecallConfigInited;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C62 RID: 19554
+	// Token: 0x0200515B RID: 20827
 	public class IOnlinePlayerConditionTargetHostT
 	{
-		// Token: 0x17008E0A RID: 36362
-		// (get) Token: 0x0601F015 RID: 126997 RVA: 0x00455E4E File Offset: 0x0045404E
-		// (set) Token: 0x0601F016 RID: 126998 RVA: 0x00455E56 File Offset: 0x00454056
+		// Token: 0x17009538 RID: 38200
+		// (get) Token: 0x06020C37 RID: 134199 RVA: 0x0048999E File Offset: 0x00487B9E
+		// (set) Token: 0x06020C38 RID: 134200 RVA: 0x004899A6 File Offset: 0x00487BA6
 		public EOnlinePlayerConditionTarget Type { get; set; }
 
-		// Token: 0x0601F017 RID: 126999 RVA: 0x00455E5F File Offset: 0x0045405F
+		// Token: 0x06020C39 RID: 134201 RVA: 0x004899AF File Offset: 0x00487BAF
 		public IOnlinePlayerConditionTargetHostT()
 		{
 			this.Type = EOnlinePlayerConditionTarget.Host;

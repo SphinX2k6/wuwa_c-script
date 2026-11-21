@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200170F RID: 5903
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200188C RID: 6284
 	public class ExecResurrection : ActionParams
 	{
-		// Token: 0x06007D17 RID: 32023 RVA: 0x0012C538 File Offset: 0x0012A738
+		// Token: 0x060083F5 RID: 33781 RVA: 0x0013B5E4 File Offset: 0x001397E4
 		private ExecResurrection_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007D18 RID: 32024 RVA: 0x0012C570 File Offset: 0x0012A770
+		// Token: 0x060083F6 RID: 33782 RVA: 0x0013B61C File Offset: 0x0013981C
 		public static ExecResurrection Create([Nullable(2)] ExecResurrection instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D19 RID: 32025 RVA: 0x0012C583 File Offset: 0x0012A783
+		// Token: 0x060083F7 RID: 33783 RVA: 0x0013B62F File Offset: 0x0013982F
 		public static ExecResurrection CreateFromSetValue([Nullable(2)] ExecResurrection_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D1A RID: 32026 RVA: 0x0012C596 File Offset: 0x0012A796
+		// Token: 0x060083F8 RID: 33784 RVA: 0x0013B642 File Offset: 0x00139842
 		public ExecResurrection_SetValue ToSetValue()
 		{
 			return new ExecResurrection_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002944 RID: 10564
-		// (get) Token: 0x06007D1B RID: 32027 RVA: 0x0012C5A9 File Offset: 0x0012A7A9
-		// (set) Token: 0x06007D1C RID: 32028 RVA: 0x0012C5D4 File Offset: 0x0012A7D4
+		// Token: 0x17002B2F RID: 11055
+		// (get) Token: 0x060083F9 RID: 33785 RVA: 0x0013B655 File Offset: 0x00139855
+		// (set) Token: 0x060083FA RID: 33786 RVA: 0x0013B680 File Offset: 0x00139880
 		public virtual int ReviveId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004FE2 RID: 20450
+		// Token: 0x04005411 RID: 21521
 		[Nullable(2)]
 		protected new ExecResurrection FbInstance;
 
-		// Token: 0x04004FE3 RID: 20451
+		// Token: 0x04005412 RID: 21522
 		[Nullable(2)]
 		protected ExecResurrection_SetValue PocoInterface;
 	}

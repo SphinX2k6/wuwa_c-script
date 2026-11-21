@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002B0A RID: 11018
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DFE RID: 11774
 	public class CaptureElementalBox : ActionParams
 	{
-		// Token: 0x0600F140 RID: 61760 RVA: 0x0022FCFC File Offset: 0x0022DEFC
+		// Token: 0x0600FFF6 RID: 65526 RVA: 0x0024DA08 File Offset: 0x0024BC08
 		public static CaptureElementalBox Create(ICaptureElementalBox? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CEE RID: 19694
-		// (get) Token: 0x0600F141 RID: 61761 RVA: 0x0022FD1B File Offset: 0x0022DF1B
+		// Token: 0x170050A8 RID: 20648
+		// (get) Token: 0x0600FFF7 RID: 65527 RVA: 0x0024DA27 File Offset: 0x0024BC27
 		public virtual IControlElementalBoxTypeBase CtrlConfig
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CEF RID: 19695
-		// (get) Token: 0x0600F142 RID: 61762 RVA: 0x0022FD4A File Offset: 0x0022DF4A
+		// Token: 0x170050A9 RID: 20649
+		// (get) Token: 0x0600FFF8 RID: 65528 RVA: 0x0024DA56 File Offset: 0x0024BC56
 		public virtual IElementalBoxTargetPosTypeBase TargetPosConfig
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CF0 RID: 19696
-		// (get) Token: 0x0600F143 RID: 61763 RVA: 0x0022FD79 File Offset: 0x0022DF79
+		// Token: 0x170050AA RID: 20650
+		// (get) Token: 0x0600FFF9 RID: 65529 RVA: 0x0024DA85 File Offset: 0x0024BC85
 		public virtual float MoveSpeed
 		{
 			get
@@ -64,19 +61,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040084AC RID: 33964
+		// Token: 0x04008BB0 RID: 35760
 		private ICaptureElementalBox Instance;
 
-		// Token: 0x040084AD RID: 33965
+		// Token: 0x04008BB1 RID: 35761
 		private IControlElementalBoxTypeBase _CtrlConfigCache;
 
-		// Token: 0x040084AE RID: 33966
+		// Token: 0x04008BB2 RID: 35762
 		private bool _CtrlConfigInited;
 
-		// Token: 0x040084AF RID: 33967
+		// Token: 0x04008BB3 RID: 35763
 		private IElementalBoxTargetPosTypeBase _TargetPosConfigCache;
 
-		// Token: 0x040084B0 RID: 33968
+		// Token: 0x04008BB4 RID: 35764
 		private bool _TargetPosConfigInited;
 	}
 }

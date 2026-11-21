@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001936 RID: 6454
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001ABF RID: 6847
 	public class IControlElementalBoxReturn : IControlElementalBoxTypeBase
 	{
-		// Token: 0x06008A63 RID: 35427 RVA: 0x001460E8 File Offset: 0x001442E8
-		[NullableContext(1)]
+		// Token: 0x0600918F RID: 37263 RVA: 0x00155A28 File Offset: 0x00153C28
 		private IControlElementalBoxReturn_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008A64 RID: 35428 RVA: 0x00146120 File Offset: 0x00144320
-		[NullableContext(1)]
+		// Token: 0x06009190 RID: 37264 RVA: 0x00155A60 File Offset: 0x00153C60
 		public static IControlElementalBoxReturn Create([Nullable(2)] IControlElementalBoxReturn instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A65 RID: 35429 RVA: 0x00146133 File Offset: 0x00144333
-		[NullableContext(1)]
+		// Token: 0x06009191 RID: 37265 RVA: 0x00155A73 File Offset: 0x00153C73
 		public static IControlElementalBoxReturn CreateFromSetValue([Nullable(2)] IControlElementalBoxReturn_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A66 RID: 35430 RVA: 0x00146146 File Offset: 0x00144346
-		[NullableContext(1)]
+		// Token: 0x06009192 RID: 37266 RVA: 0x00155A86 File Offset: 0x00153C86
 		public new IControlElementalBoxReturn_SetValue ToSetValue()
 		{
 			return new IControlElementalBoxReturn_SetValue
@@ -64,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CB5 RID: 11445
-		// (get) Token: 0x06008A67 RID: 35431 RVA: 0x00146165 File Offset: 0x00144365
-		// (set) Token: 0x06008A68 RID: 35432 RVA: 0x00146190 File Offset: 0x00144390
+		// Token: 0x17002EB5 RID: 11957
+		// (get) Token: 0x06009193 RID: 37267 RVA: 0x00155AA5 File Offset: 0x00153CA5
+		// (set) Token: 0x06009194 RID: 37268 RVA: 0x00155AD0 File Offset: 0x00153CD0
 		public override EControlElementalBoxType Type
 		{
 			get
@@ -87,11 +81,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CB6 RID: 11446
-		// (get) Token: 0x06008A69 RID: 35433 RVA: 0x0014619E File Offset: 0x0014439E
-		// (set) Token: 0x06008A6A RID: 35434 RVA: 0x001461C5 File Offset: 0x001443C5
+		// Token: 0x17002EB6 RID: 11958
+		// (get) Token: 0x06009195 RID: 37269 RVA: 0x00155ADE File Offset: 0x00153CDE
+		// (set) Token: 0x06009196 RID: 37270 RVA: 0x00155B05 File Offset: 0x00153D05
+		[Nullable(2)]
 		public virtual string ReturnBeforeMoveSeq
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -105,16 +101,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.ReturnBeforeMoveSeq;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().ReturnBeforeMoveSeq = value;
 			}
 		}
 
-		// Token: 0x04005686 RID: 22150
+		// Token: 0x04005AD6 RID: 23254
+		[Nullable(2)]
 		protected new IControlElementalBoxReturn FbInstance;
 
-		// Token: 0x04005687 RID: 22151
+		// Token: 0x04005AD7 RID: 23255
+		[Nullable(2)]
 		protected new IControlElementalBoxReturn_SetValue PocoInterface;
 	}
 }

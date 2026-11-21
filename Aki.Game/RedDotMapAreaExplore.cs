@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020033BD RID: 13245
+// Token: 0x0200292F RID: 10543
 public class RedDotMapAreaExplore : RedDotBase
 {
-	// Token: 0x0601CBA9 RID: 117673 RVA: 0x00808A9D File Offset: 0x00806C9D
+	// Token: 0x0601A8A1 RID: 108705 RVA: 0x0082F061 File Offset: 0x0082D261
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.FunctionMap);

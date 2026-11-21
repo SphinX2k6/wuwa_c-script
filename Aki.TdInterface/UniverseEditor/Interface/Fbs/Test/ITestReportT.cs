@@ -3,55 +3,55 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Test
 {
-	// Token: 0x02003B73 RID: 15219
+	// Token: 0x02003F7B RID: 16251
 	public class ITestReportT
 	{
-		// Token: 0x17006843 RID: 26691
-		// (get) Token: 0x06014D37 RID: 85303 RVA: 0x00306502 File Offset: 0x00304702
-		// (set) Token: 0x06014D38 RID: 85304 RVA: 0x0030650A File Offset: 0x0030470A
+		// Token: 0x17006DE2 RID: 28130
+		// (get) Token: 0x06016201 RID: 90625 RVA: 0x0032CA9A File Offset: 0x0032AC9A
+		// (set) Token: 0x06016202 RID: 90626 RVA: 0x0032CAA2 File Offset: 0x0032ACA2
 		public string Name { get; set; }
 
-		// Token: 0x17006844 RID: 26692
-		// (get) Token: 0x06014D39 RID: 85305 RVA: 0x00306513 File Offset: 0x00304713
-		// (set) Token: 0x06014D3A RID: 85306 RVA: 0x0030651B File Offset: 0x0030471B
+		// Token: 0x17006DE3 RID: 28131
+		// (get) Token: 0x06016203 RID: 90627 RVA: 0x0032CAAB File Offset: 0x0032ACAB
+		// (set) Token: 0x06016204 RID: 90628 RVA: 0x0032CAB3 File Offset: 0x0032ACB3
 		public int RunTime { get; set; }
 
-		// Token: 0x17006845 RID: 26693
-		// (get) Token: 0x06014D3B RID: 85307 RVA: 0x00306524 File Offset: 0x00304724
-		// (set) Token: 0x06014D3C RID: 85308 RVA: 0x0030652C File Offset: 0x0030472C
+		// Token: 0x17006DE4 RID: 28132
+		// (get) Token: 0x06016205 RID: 90629 RVA: 0x0032CABC File Offset: 0x0032ACBC
+		// (set) Token: 0x06016206 RID: 90630 RVA: 0x0032CAC4 File Offset: 0x0032ACC4
 		public string File { get; set; }
 
-		// Token: 0x17006846 RID: 26694
-		// (get) Token: 0x06014D3D RID: 85309 RVA: 0x00306535 File Offset: 0x00304735
-		// (set) Token: 0x06014D3E RID: 85310 RVA: 0x0030653D File Offset: 0x0030473D
+		// Token: 0x17006DE5 RID: 28133
+		// (get) Token: 0x06016207 RID: 90631 RVA: 0x0032CACD File Offset: 0x0032ACCD
+		// (set) Token: 0x06016208 RID: 90632 RVA: 0x0032CAD5 File Offset: 0x0032ACD5
 		public string Follower { get; set; }
 
-		// Token: 0x17006847 RID: 26695
-		// (get) Token: 0x06014D3F RID: 85311 RVA: 0x00306546 File Offset: 0x00304746
-		// (set) Token: 0x06014D40 RID: 85312 RVA: 0x0030654E File Offset: 0x0030474E
+		// Token: 0x17006DE6 RID: 28134
+		// (get) Token: 0x06016209 RID: 90633 RVA: 0x0032CADE File Offset: 0x0032ACDE
+		// (set) Token: 0x0601620A RID: 90634 RVA: 0x0032CAE6 File Offset: 0x0032ACE6
 		public bool PackageNeedPass { get; set; }
 
-		// Token: 0x17006848 RID: 26696
-		// (get) Token: 0x06014D41 RID: 85313 RVA: 0x00306557 File Offset: 0x00304757
-		// (set) Token: 0x06014D42 RID: 85314 RVA: 0x0030655F File Offset: 0x0030475F
+		// Token: 0x17006DE7 RID: 28135
+		// (get) Token: 0x0601620B RID: 90635 RVA: 0x0032CAEF File Offset: 0x0032ACEF
+		// (set) Token: 0x0601620C RID: 90636 RVA: 0x0032CAF7 File Offset: 0x0032ACF7
 		public bool Resolving { get; set; }
 
-		// Token: 0x17006849 RID: 26697
-		// (get) Token: 0x06014D43 RID: 85315 RVA: 0x00306568 File Offset: 0x00304768
-		// (set) Token: 0x06014D44 RID: 85316 RVA: 0x00306570 File Offset: 0x00304770
+		// Token: 0x17006DE8 RID: 28136
+		// (get) Token: 0x0601620D RID: 90637 RVA: 0x0032CB00 File Offset: 0x0032AD00
+		// (set) Token: 0x0601620E RID: 90638 RVA: 0x0032CB08 File Offset: 0x0032AD08
 		public string ErrorMsg { get; set; }
 
-		// Token: 0x1700684A RID: 26698
-		// (get) Token: 0x06014D45 RID: 85317 RVA: 0x00306579 File Offset: 0x00304779
-		// (set) Token: 0x06014D46 RID: 85318 RVA: 0x00306581 File Offset: 0x00304781
+		// Token: 0x17006DE9 RID: 28137
+		// (get) Token: 0x0601620F RID: 90639 RVA: 0x0032CB11 File Offset: 0x0032AD11
+		// (set) Token: 0x06016210 RID: 90640 RVA: 0x0032CB19 File Offset: 0x0032AD19
 		public List<ITestReportT> SubReports { get; set; }
 
-		// Token: 0x1700684B RID: 26699
-		// (get) Token: 0x06014D47 RID: 85319 RVA: 0x0030658A File Offset: 0x0030478A
-		// (set) Token: 0x06014D48 RID: 85320 RVA: 0x00306592 File Offset: 0x00304792
+		// Token: 0x17006DEA RID: 28138
+		// (get) Token: 0x06016211 RID: 90641 RVA: 0x0032CB22 File Offset: 0x0032AD22
+		// (set) Token: 0x06016212 RID: 90642 RVA: 0x0032CB2A File Offset: 0x0032AD2A
 		public byte NullMask { get; set; }
 
-		// Token: 0x06014D49 RID: 85321 RVA: 0x0030659C File Offset: 0x0030479C
+		// Token: 0x06016213 RID: 90643 RVA: 0x0032CB34 File Offset: 0x0032AD34
 		public ITestReportT()
 		{
 			this.Name = null;

@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x02005689 RID: 22153
+	// Token: 0x0200465F RID: 18015
 	public enum ERewardPopType
 	{
-		// Token: 0x0401D9F3 RID: 121331
+		// Token: 0x0401847E RID: 99454
 		Unlock,
-		// Token: 0x0401D9F4 RID: 121332
+		// Token: 0x0401847F RID: 99455
 		Cook,
-		// Token: 0x0401D9F5 RID: 121333
+		// Token: 0x04018480 RID: 99456
 		Machining,
-		// Token: 0x0401D9F6 RID: 121334
+		// Token: 0x04018481 RID: 99457
 		StudyFail,
-		// Token: 0x0401D9F7 RID: 121335
+		// Token: 0x04018482 RID: 99458
 		Compose,
-		// Token: 0x0401D9F8 RID: 121336
+		// Token: 0x04018483 RID: 99459
 		Forging
 	}
 }

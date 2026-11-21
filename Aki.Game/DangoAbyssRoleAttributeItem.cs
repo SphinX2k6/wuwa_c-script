@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001A57 RID: 6743
+// Token: 0x02000F16 RID: 3862
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class DangoAbyssRoleAttributeItem : GridProxyAbstract<AttrListScrollData>
 {
-	// Token: 0x0600C676 RID: 50806 RVA: 0x002D2584 File Offset: 0x002D0784
+	// Token: 0x06009A86 RID: 39558 RVA: 0x002DD694 File Offset: 0x002DB894
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -36,7 +36,7 @@ public class DangoAbyssRoleAttributeItem : GridProxyAbstract<AttrListScrollData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C677 RID: 50807 RVA: 0x002D2674 File Offset: 0x002D0874
+	// Token: 0x06009A87 RID: 39559 RVA: 0x002DD784 File Offset: 0x002DB984
 	[NullableContext(1)]
 	public override void Refresh(AttrListScrollData data, bool isSelected, int gridIndex)
 	{
@@ -49,25 +49,25 @@ public class DangoAbyssRoleAttributeItem : GridProxyAbstract<AttrListScrollData>
 		base.GetText(1).SetText(formatAttributeValueString, true);
 	}
 
-	// Token: 0x02007FA1 RID: 32673
+	// Token: 0x02007130 RID: 28976
 	private class EChildType
 	{
-		// Token: 0x04029AC6 RID: 170694
+		// Token: 0x04024E03 RID: 151043
 		public const int AttributeText = 0;
 
-		// Token: 0x04029AC7 RID: 170695
+		// Token: 0x04024E04 RID: 151044
 		public const int AttributeNumText = 1;
 
-		// Token: 0x04029AC8 RID: 170696
+		// Token: 0x04024E05 RID: 151045
 		public const int ArrowItem = 2;
 
-		// Token: 0x04029AC9 RID: 170697
+		// Token: 0x04024E06 RID: 151046
 		public const int AttributeAddText = 3;
 
-		// Token: 0x04029ACA RID: 170698
+		// Token: 0x04024E07 RID: 151047
 		public const int AttributeIcon = 4;
 
-		// Token: 0x04029ACB RID: 170699
+		// Token: 0x04024E08 RID: 151048
 		public const int Bg = 5;
 	}
 }

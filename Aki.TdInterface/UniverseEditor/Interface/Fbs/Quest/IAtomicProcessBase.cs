@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D19 RID: 15641
+	// Token: 0x02004130 RID: 16688
 	public struct IAtomicProcessBase : IFlatbufferObject
 	{
-		// Token: 0x17006B4E RID: 27470
-		// (get) Token: 0x06015955 RID: 88405 RVA: 0x0031DF6E File Offset: 0x0031C16E
+		// Token: 0x17007108 RID: 28936
+		// (get) Token: 0x06016E8D RID: 93837 RVA: 0x003451E6 File Offset: 0x003433E6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015956 RID: 88406 RVA: 0x0031DF7B File Offset: 0x0031C17B
+		// Token: 0x06016E8E RID: 93838 RVA: 0x003451F3 File Offset: 0x003433F3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015957 RID: 88407 RVA: 0x0031DF84 File Offset: 0x0031C184
+		// Token: 0x06016E8F RID: 93839 RVA: 0x003451FC File Offset: 0x003433FC
 		public static IAtomicProcessBase GetRootAsIAtomicProcessBase(ByteBuffer _bb)
 		{
 			return IAtomicProcessBase.GetRootAsIAtomicProcessBase(_bb, default(IAtomicProcessBase));
 		}
 
-		// Token: 0x06015958 RID: 88408 RVA: 0x0031DFA0 File Offset: 0x0031C1A0
+		// Token: 0x06016E90 RID: 93840 RVA: 0x00345218 File Offset: 0x00343418
 		public static IAtomicProcessBase GetRootAsIAtomicProcessBase(ByteBuffer _bb, IAtomicProcessBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015959 RID: 88409 RVA: 0x0031DFBD File Offset: 0x0031C1BD
+		// Token: 0x06016E91 RID: 93841 RVA: 0x00345235 File Offset: 0x00343435
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601595A RID: 88410 RVA: 0x0031DFCC File Offset: 0x0031C1CC
+		// Token: 0x06016E92 RID: 93842 RVA: 0x00345244 File Offset: 0x00343444
 		public IAtomicProcessBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006B4F RID: 27471
-		// (get) Token: 0x0601595B RID: 88411 RVA: 0x0031DFDC File Offset: 0x0031C1DC
+		// Token: 0x17007109 RID: 28937
+		// (get) Token: 0x06016E93 RID: 93843 RVA: 0x00345254 File Offset: 0x00343454
 		public EAtomicProcess Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601595C RID: 88412 RVA: 0x0031E018 File Offset: 0x0031C218
+		// Token: 0x06016E94 RID: 93844 RVA: 0x00345290 File Offset: 0x00343490
 		public static Offset<IAtomicProcessBase> CreateIAtomicProcessBase(FlatBufferBuilder builder, EAtomicProcess Type = EAtomicProcess.StoveCoreFall)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IAtomicProcessBase.EndIAtomicProcessBase(builder);
 		}
 
-		// Token: 0x0601595D RID: 88413 RVA: 0x0031E02E File Offset: 0x0031C22E
+		// Token: 0x06016E95 RID: 93845 RVA: 0x003452A6 File Offset: 0x003434A6
 		public static void StartIAtomicProcessBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601595E RID: 88414 RVA: 0x0031E037 File Offset: 0x0031C237
+		// Token: 0x06016E96 RID: 93846 RVA: 0x003452AF File Offset: 0x003434AF
 		public static void AddType(FlatBufferBuilder builder, EAtomicProcess type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601595F RID: 88415 RVA: 0x0031E042 File Offset: 0x0031C242
+		// Token: 0x06016E97 RID: 93847 RVA: 0x003452BA File Offset: 0x003434BA
 		public static Offset<IAtomicProcessBase> EndIAtomicProcessBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IAtomicProcessBase>(builder.EndTable());
 		}
 
-		// Token: 0x06015960 RID: 88416 RVA: 0x0031E050 File Offset: 0x0031C250
+		// Token: 0x06016E98 RID: 93848 RVA: 0x003452C8 File Offset: 0x003434C8
 		public IAtomicProcessBaseT UnPack()
 		{
 			IAtomicProcessBaseT atomicProcessBaseT = new IAtomicProcessBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return atomicProcessBaseT;
 		}
 
-		// Token: 0x06015961 RID: 88417 RVA: 0x0031E06B File Offset: 0x0031C26B
+		// Token: 0x06016E99 RID: 93849 RVA: 0x003452E3 File Offset: 0x003434E3
 		public void UnPackTo(IAtomicProcessBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06015962 RID: 88418 RVA: 0x0031E07C File Offset: 0x0031C27C
+		// Token: 0x06016E9A RID: 93850 RVA: 0x003452F4 File Offset: 0x003434F4
 		public static Offset<IAtomicProcessBase> Pack(FlatBufferBuilder builder, IAtomicProcessBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IAtomicProcessBase.CreateIAtomicProcessBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400B5CE RID: 46542
+		// Token: 0x0400BF7B RID: 49019
 		private Table __p;
 	}
 }

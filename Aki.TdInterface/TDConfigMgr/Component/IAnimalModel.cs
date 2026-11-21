@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001C7 RID: 455
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001EA RID: 490
 	public class IAnimalModel : IModelConfig
 	{
-		// Token: 0x06000740 RID: 1856 RVA: 0x000249CC File Offset: 0x00022BCC
+		// Token: 0x06000794 RID: 1940 RVA: 0x00025CD0 File Offset: 0x00023ED0
 		private IAnimalModel_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000741 RID: 1857 RVA: 0x00024A04 File Offset: 0x00022C04
+		// Token: 0x06000795 RID: 1941 RVA: 0x00025D08 File Offset: 0x00023F08
 		public static IAnimalModel Create([Nullable(2)] IAnimalModel instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000742 RID: 1858 RVA: 0x00024A17 File Offset: 0x00022C17
+		// Token: 0x06000796 RID: 1942 RVA: 0x00025D1B File Offset: 0x00023F1B
 		public static IAnimalModel CreateFromSetValue([Nullable(2)] IAnimalModel_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000743 RID: 1859 RVA: 0x00024A2A File Offset: 0x00022C2A
+		// Token: 0x06000797 RID: 1943 RVA: 0x00025D2E File Offset: 0x00023F2E
 		public new IAnimalModel_SetValue ToSetValue()
 		{
 			return new IAnimalModel_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000253 RID: 595
-		// (get) Token: 0x06000744 RID: 1860 RVA: 0x00024A61 File Offset: 0x00022C61
-		// (set) Token: 0x06000745 RID: 1861 RVA: 0x00024A8C File Offset: 0x00022C8C
+		// Token: 0x17000268 RID: 616
+		// (get) Token: 0x06000798 RID: 1944 RVA: 0x00025D65 File Offset: 0x00023F65
+		// (set) Token: 0x06000799 RID: 1945 RVA: 0x00025D90 File Offset: 0x00023F90
 		public override EModelType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000254 RID: 596
-		// (get) Token: 0x06000746 RID: 1862 RVA: 0x00024A9A File Offset: 0x00022C9A
-		// (set) Token: 0x06000747 RID: 1863 RVA: 0x00024AC5 File Offset: 0x00022CC5
+		// Token: 0x17000269 RID: 617
+		// (get) Token: 0x0600079A RID: 1946 RVA: 0x00025D9E File Offset: 0x00023F9E
+		// (set) Token: 0x0600079B RID: 1947 RVA: 0x00025DC9 File Offset: 0x00023FC9
 		public virtual string BlueprintPath
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000255 RID: 597
-		// (get) Token: 0x06000748 RID: 1864 RVA: 0x00024AD4 File Offset: 0x00022CD4
-		// (set) Token: 0x06000749 RID: 1865 RVA: 0x00024B35 File Offset: 0x00022D35
+		// Token: 0x1700026A RID: 618
+		// (get) Token: 0x0600079C RID: 1948 RVA: 0x00025DD8 File Offset: 0x00023FD8
+		// (set) Token: 0x0600079D RID: 1949 RVA: 0x00025E39 File Offset: 0x00024039
 		[Nullable(2)]
 		public virtual IMeshAnimalModel AnimalModel
 		{
@@ -141,9 +139,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000256 RID: 598
-		// (get) Token: 0x0600074A RID: 1866 RVA: 0x00024B4A File Offset: 0x00022D4A
-		// (set) Token: 0x0600074B RID: 1867 RVA: 0x00024B75 File Offset: 0x00022D75
+		// Token: 0x1700026B RID: 619
+		// (get) Token: 0x0600079E RID: 1950 RVA: 0x00025E4E File Offset: 0x0002404E
+		// (set) Token: 0x0600079F RID: 1951 RVA: 0x00025E79 File Offset: 0x00024079
 		public virtual string Abp
 		{
 			get
@@ -164,18 +162,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400088B RID: 2187
+		// Token: 0x040008FF RID: 2303
 		[Nullable(2)]
 		protected new IAnimalModel FbInstance;
 
-		// Token: 0x0400088C RID: 2188
+		// Token: 0x04000900 RID: 2304
 		[Nullable(2)]
 		protected new IAnimalModel_SetValue PocoInterface;
 
-		// Token: 0x0400088D RID: 2189
+		// Token: 0x04000901 RID: 2305
 		private IMeshAnimalModel _AnimalModelCache;
 
-		// Token: 0x0400088E RID: 2190
+		// Token: 0x04000902 RID: 2306
 		private bool _AnimalModelInited;
 	}
 }

@@ -4,15 +4,15 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B69 RID: 27497
+	// Token: 0x02005CE1 RID: 23777
 	public class LevelEventSendAiEvent : LevelEventBase
 	{
-		// Token: 0x0604420F RID: 279055 RVA: 0x010C5E41 File Offset: 0x010C4041
+		// Token: 0x0603A361 RID: 238433 RVA: 0x0106FA11 File Offset: 0x0106DC11
 		public LevelEventSendAiEvent(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044210 RID: 279056 RVA: 0x010C5E4C File Offset: 0x010C404C
+		// Token: 0x0603A362 RID: 238434 RVA: 0x0106FA1C File Offset: 0x0106DC1C
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044211 RID: 279057 RVA: 0x010C5EFC File Offset: 0x010C40FC
+		// Token: 0x0603A363 RID: 238435 RVA: 0x0106FACC File Offset: 0x0106DCCC
 		private void OnPetStandUp(int entityId)
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(entityId);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044212 RID: 279058 RVA: 0x010C6034 File Offset: 0x010C4234
+		// Token: 0x0603A364 RID: 238436 RVA: 0x0106FC04 File Offset: 0x0106DE04
 		private void OnPetSitDown(int entityId)
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(entityId);
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044213 RID: 279059 RVA: 0x010C6128 File Offset: 0x010C4328
+		// Token: 0x0603A365 RID: 238437 RVA: 0x0106FCF8 File Offset: 0x0106DEF8
 		private void OnPetRandomAction(int entityId)
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(entityId);
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044214 RID: 279060 RVA: 0x010C61E8 File Offset: 0x010C43E8
+		// Token: 0x0603A366 RID: 238438 RVA: 0x0106FDB8 File Offset: 0x0106DFB8
 		[NullableContext(2)]
 		private void RemoveAiEventTag(BaseTagComponent gameplayTagComponent)
 		{

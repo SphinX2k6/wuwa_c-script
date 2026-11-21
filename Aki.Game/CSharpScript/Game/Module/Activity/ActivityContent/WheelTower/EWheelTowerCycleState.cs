@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F2A RID: 24362
+	// Token: 0x02004F11 RID: 20241
 	public enum EWheelTowerCycleState
 	{
-		// Token: 0x0402051F RID: 132383
+		// Token: 0x0401AFF1 RID: 110577
 		BeforeCycle,
-		// Token: 0x04020520 RID: 132384
+		// Token: 0x0401AFF2 RID: 110578
 		InCycle,
-		// Token: 0x04020521 RID: 132385
+		// Token: 0x0401AFF3 RID: 110579
 		AfterCycle
 	}
 }

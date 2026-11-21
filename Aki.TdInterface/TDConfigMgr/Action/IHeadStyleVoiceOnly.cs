@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AF3 RID: 6899
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CA0 RID: 7328
 	public class IHeadStyleVoiceOnly : IHeadStyle
 	{
-		// Token: 0x060093C8 RID: 37832 RVA: 0x00156B10 File Offset: 0x00154D10
+		// Token: 0x06009BA6 RID: 39846 RVA: 0x00167658 File Offset: 0x00165858
 		private IHeadStyleVoiceOnly_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060093C9 RID: 37833 RVA: 0x00156B48 File Offset: 0x00154D48
+		// Token: 0x06009BA7 RID: 39847 RVA: 0x00167690 File Offset: 0x00165890
 		public static IHeadStyleVoiceOnly Create([Nullable(2)] IHeadStyleVoiceOnly instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093CA RID: 37834 RVA: 0x00156B5B File Offset: 0x00154D5B
+		// Token: 0x06009BA8 RID: 39848 RVA: 0x001676A3 File Offset: 0x001658A3
 		public static IHeadStyleVoiceOnly CreateFromSetValue([Nullable(2)] IHeadStyleVoiceOnly_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093CB RID: 37835 RVA: 0x00156B6E File Offset: 0x00154D6E
+		// Token: 0x06009BA9 RID: 39849 RVA: 0x001676B6 File Offset: 0x001658B6
 		public new IHeadStyleVoiceOnly_SetValue ToSetValue()
 		{
 			return new IHeadStyleVoiceOnly_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002ECD RID: 11981
-		// (get) Token: 0x060093CC RID: 37836 RVA: 0x00156B8D File Offset: 0x00154D8D
-		// (set) Token: 0x060093CD RID: 37837 RVA: 0x00156BB8 File Offset: 0x00154DB8
+		// Token: 0x170030F0 RID: 12528
+		// (get) Token: 0x06009BAA RID: 39850 RVA: 0x001676D5 File Offset: 0x001658D5
+		// (set) Token: 0x06009BAB RID: 39851 RVA: 0x00167700 File Offset: 0x00165900
 		public override EHeadStyle Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002ECE RID: 11982
-		// (get) Token: 0x060093CE RID: 37838 RVA: 0x00156BC6 File Offset: 0x00154DC6
-		// (set) Token: 0x060093CF RID: 37839 RVA: 0x00156BF1 File Offset: 0x00154DF1
+		// Token: 0x170030F1 RID: 12529
+		// (get) Token: 0x06009BAC RID: 39852 RVA: 0x0016770E File Offset: 0x0016590E
+		// (set) Token: 0x06009BAD RID: 39853 RVA: 0x00167739 File Offset: 0x00165939
 		public virtual int WhoId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005ABE RID: 23230
+		// Token: 0x04005F55 RID: 24405
 		[Nullable(2)]
 		protected new IHeadStyleVoiceOnly FbInstance;
 
-		// Token: 0x04005ABF RID: 23231
+		// Token: 0x04005F56 RID: 24406
 		[Nullable(2)]
 		protected new IHeadStyleVoiceOnly_SetValue PocoInterface;
 	}

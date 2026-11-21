@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -18,18 +17,18 @@ using Google.Protobuf;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x02002405 RID: 9221
+// Token: 0x020018EA RID: 6378
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PhantomBattleController : UiControllerBase
 {
-	// Token: 0x06012780 RID: 75648 RVA: 0x0048DB51 File Offset: 0x0048BD51
+	// Token: 0x0600FC36 RID: 64566 RVA: 0x0049B175 File Offset: 0x00499375
 	public static void InitData()
 	{
 	}
 
-	// Token: 0x06012781 RID: 75649 RVA: 0x0048DB54 File Offset: 0x0048BD54
+	// Token: 0x0600FC37 RID: 64567 RVA: 0x0049B178 File Offset: 0x00499378
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<Aki.Protocol.PhantomItem>(EEventName.OnAddPhantomItem, new Action<Aki.Protocol.PhantomItem>(this.OnAddPhantomItem));
@@ -39,7 +38,7 @@ public class PhantomBattleController : UiControllerBase
 		EventSystem.Instance.Add(EEventName.ActiveBattleView, new Action(this.OnActiveBattleView));
 	}
 
-	// Token: 0x06012782 RID: 75650 RVA: 0x0048DBF0 File Offset: 0x0048BDF0
+	// Token: 0x0600FC38 RID: 64568 RVA: 0x0049B214 File Offset: 0x00499414
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAddPhantomItem, new Action<Aki.Protocol.PhantomItem>(this.OnAddPhantomItem));
@@ -49,19 +48,19 @@ public class PhantomBattleController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.ActiveBattleView, new Action(this.OnActiveBattleView));
 	}
 
-	// Token: 0x06012783 RID: 75651 RVA: 0x0048DC89 File Offset: 0x0048BE89
+	// Token: 0x0600FC39 RID: 64569 RVA: 0x0049B2AD File Offset: 0x004994AD
 	private void OnResponsePhantomItem(Aki.Protocol.PhantomItem phantomItem)
 	{
 		PhantomBattleModel.Instance.NewPhantomBattleData(phantomItem);
 	}
 
-	// Token: 0x06012784 RID: 75652 RVA: 0x0048DC97 File Offset: 0x0048BE97
+	// Token: 0x0600FC3A RID: 64570 RVA: 0x0049B2BB File Offset: 0x004994BB
 	private void OnAddPhantomItem(Aki.Protocol.PhantomItem phantomItem)
 	{
 		PhantomBattleModel.Instance.NewPhantomBattleData(phantomItem);
 	}
 
-	// Token: 0x06012785 RID: 75653 RVA: 0x0048DCA8 File Offset: 0x0048BEA8
+	// Token: 0x0600FC3B RID: 64571 RVA: 0x0049B2CC File Offset: 0x004994CC
 	private void OnRemovePhantomItem(IReadOnlyList<int> uniqueIdList)
 	{
 		foreach (int uniqueId in uniqueIdList)
@@ -70,7 +69,7 @@ public class PhantomBattleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06012786 RID: 75654 RVA: 0x0048DCF4 File Offset: 0x0048BEF4
+	// Token: 0x0600FC3C RID: 64572 RVA: 0x0049B318 File Offset: 0x00499518
 	private void OnEquipPhantomItem(PhantomItemResponse equipInfoList)
 	{
 		foreach (RolePhantomEquipInfo data in equipInfoList.EquipInfo)
@@ -84,20 +83,20 @@ public class PhantomBattleController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.PhantomEquip);
 	}
 
-	// Token: 0x06012787 RID: 75655 RVA: 0x0048DD98 File Offset: 0x0048BF98
+	// Token: 0x0600FC3D RID: 64573 RVA: 0x0049B3BC File Offset: 0x004995BC
 	[NullableContext(2)]
 	public PhantomBattleData GetPhantomItemDataByUniqueId(int uniqueId)
 	{
 		return PhantomBattleModel.Instance.GetPhantomBattleData(uniqueId);
 	}
 
-	// Token: 0x06012788 RID: 75656 RVA: 0x0048DDA5 File Offset: 0x0048BFA5
+	// Token: 0x0600FC3E RID: 64574 RVA: 0x0049B3C9 File Offset: 0x004995C9
 	public void ChangeRoleEvent(int roleId)
 	{
 		PhantomBattleModel.Instance.UpdateFetterList(roleId);
 	}
 
-	// Token: 0x06012789 RID: 75657 RVA: 0x0048DDB4 File Offset: 0x0048BFB4
+	// Token: 0x0600FC3F RID: 64575 RVA: 0x0049B3D8 File Offset: 0x004995D8
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.PhantomEquipInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnPhantomEquipInfoNotify));
@@ -108,7 +107,7 @@ public class PhantomBattleController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.PhantomUnlockNotify, new Action<IMessage, Net.CallbackStatus>(this.PhantomUnlockNotify));
 	}
 
-	// Token: 0x0601278A RID: 75658 RVA: 0x0048DE6C File Offset: 0x0048C06C
+	// Token: 0x0600FC40 RID: 64576 RVA: 0x0049B490 File Offset: 0x00499690
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.PhantomEquipInfoNotify);
@@ -119,7 +118,7 @@ public class PhantomBattleController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.PhantomUnlockNotify);
 	}
 
-	// Token: 0x0601278B RID: 75659 RVA: 0x0048DEDC File Offset: 0x0048C0DC
+	// Token: 0x0600FC41 RID: 64577 RVA: 0x0049B500 File Offset: 0x00499700
 	public void SendPhantomLevelUpRequest(int incId, List<PhantomConsumeItem> consumeItem, int identifyCount)
 	{
 		PhantomLevelUpRequest phantomLevelUpRequest = PhantomLevelUpRequest.Create();
@@ -138,7 +137,7 @@ public class PhantomBattleController : UiControllerBase
 					ErrorCodeController.Instance.OpenErrorCodeScrollingTipsView(phantomLevelUpResponse.ErrorCode, Array.Empty<string>());
 					return;
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomLevelUpResponse.ErrorCode, 22489, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomLevelUpResponse.ErrorCode, 29647, null, true, true);
 				return;
 			}
 			else
@@ -158,7 +157,7 @@ public class PhantomBattleController : UiControllerBase
 					return;
 				}
 				phantomItemDataByUniqueId.SetData(phantomLevelUpResponse.UpdateInfo);
-				instance.PhantomLevelUpReceiveItem(phantomLevelUpResponse.ItemMap.ToDictionary<int, int>());
+				instance.PhantomLevelUpReceiveItem(new Dictionary<int, int>(phantomLevelUpResponse.ItemMap));
 				instance.CachePhantomLevelUpData(data);
 				EventSystem.Instance.Emit(EEventName.PhantomLevelUp);
 				EventSystem.Instance.Emit<int>(EEventName.PhantomLevelUpWithId, incId);
@@ -167,7 +166,7 @@ public class PhantomBattleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0601278C RID: 75660 RVA: 0x0048DF58 File Offset: 0x0048C158
+	// Token: 0x0600FC42 RID: 64578 RVA: 0x0049B57C File Offset: 0x0049977C
 	public void TryShowReceiveItem()
 	{
 		TItem[] tempSaveItemList = PhantomBattleModel.Instance.GetTempSaveItemList();
@@ -186,7 +185,7 @@ public class PhantomBattleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601278D RID: 75661 RVA: 0x0048DFE0 File Offset: 0x0048C1E0
+	// Token: 0x0600FC43 RID: 64579 RVA: 0x0049B604 File Offset: 0x00499804
 	public void SendPhantomPutOnRequest(int incId, int roleId, int pos, int sourcePos = -1, bool fromDrag = false)
 	{
 		if (SceneTeamModel.Instance.GetCurrentEntity.Entity.GetComponent<BaseTagComponent>().HasTag(GameplayTagDefine.EGameplayTagId["幻象.Common.技能中"]))
@@ -268,7 +267,7 @@ public class PhantomBattleController : UiControllerBase
 			PhantomPutOnResponse phantomPutOnResponse = (PhantomPutOnResponse)msg;
 			if (phantomPutOnResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomPutOnResponse.ErrorCode, 16317, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomPutOnResponse.ErrorCode, 21144, null, true, true);
 				EventSystem.Instance.Emit(EEventName.PhantomEquipError);
 				return;
 			}
@@ -289,8 +288,8 @@ public class PhantomBattleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0601278E RID: 75662 RVA: 0x0048E214 File Offset: 0x0048C414
-	public void SendPhantomAutoPutRequest(int roleId, List<int> uniqueIdList, [Nullable(2)] Action successCallBack = null)
+	// Token: 0x0600FC44 RID: 64580 RVA: 0x0049B838 File Offset: 0x00499A38
+	public void SendPhantomAutoPutRequest(int roleId, IEnumerable<int> uniqueIdList, [Nullable(2)] Action successCallBack = null)
 	{
 		if (SceneTeamModel.Instance.GetCurrentEntity.Entity.GetComponent<BaseTagComponent>().HasTag(GameplayTagDefine.EGameplayTagId["幻象.Common.技能中"]))
 		{
@@ -325,7 +324,7 @@ public class PhantomBattleController : UiControllerBase
 			PhantomAutoPutResponse phantomAutoPutResponse = (PhantomAutoPutResponse)msg;
 			if (phantomAutoPutResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomAutoPutResponse.ErrorCode, 19223, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomAutoPutResponse.ErrorCode, 21508, null, true, true);
 				return;
 			}
 			RepeatedField<RolePhantomEquipInfo> equipInfoList = phantomAutoPutResponse.EquipInfoList;
@@ -350,7 +349,7 @@ public class PhantomBattleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0601278F RID: 75663 RVA: 0x0048E31C File Offset: 0x0048C51C
+	// Token: 0x0600FC45 RID: 64581 RVA: 0x0049B940 File Offset: 0x00499B40
 	public void ApplyRecommendEquip(int roleId, List<int> uniqueIdList, Action onSuccess)
 	{
 		if (!PhantomBattleModel.Instance.GetRoleIfEquipVision(roleId))
@@ -366,7 +365,7 @@ public class PhantomBattleController : UiControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06012790 RID: 75664 RVA: 0x0048E3A4 File Offset: 0x0048C5A4
+	// Token: 0x0600FC46 RID: 64582 RVA: 0x0049B9C8 File Offset: 0x00499BC8
 	[NullableContext(2)]
 	private void OnRolePhantomPropUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -377,7 +376,7 @@ public class PhantomBattleController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnRolePropUpdate);
 	}
 
-	// Token: 0x06012791 RID: 75665 RVA: 0x0048E418 File Offset: 0x0048C618
+	// Token: 0x0600FC47 RID: 64583 RVA: 0x0049BA3C File Offset: 0x00499C3C
 	[NullableContext(2)]
 	private void OnPhantomUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -385,7 +384,7 @@ public class PhantomBattleController : UiControllerBase
 		PhantomBattleModel.Instance.SetMaxCost(phantomUpdateNotify.TotalCost);
 	}
 
-	// Token: 0x06012792 RID: 75666 RVA: 0x0048E43C File Offset: 0x0048C63C
+	// Token: 0x0600FC48 RID: 64584 RVA: 0x0049BA60 File Offset: 0x00499C60
 	[NullableContext(2)]
 	private void PhantomUnlockNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -407,12 +406,12 @@ public class PhantomBattleController : UiControllerBase
 		this.DoShowNewItemView();
 	}
 
-	// Token: 0x06012793 RID: 75667 RVA: 0x0048E500 File Offset: 0x0048C700
+	// Token: 0x0600FC49 RID: 64585 RVA: 0x0049BB24 File Offset: 0x00499D24
 	[NullableContext(2)]
 	private void PhantomSkinAddNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RepeatedField<int> skinIds = ((PhantomSkinAddNotify)msg).SkinIds;
-		PhantomBattleModel.Instance.ConcatUnlockSkinList(skinIds.ToList<int>());
+		PhantomBattleModel.Instance.ConcatUnlockSkinList(skinIds);
 		foreach (int num in skinIds)
 		{
 			NewFlagModel.Instance.AddNewFlag(ELocalStoragePlayerKey.VisionSkin, num);
@@ -425,7 +424,7 @@ public class PhantomBattleController : UiControllerBase
 		}, (float)CalabashConfig.Instance.DelayTime, null, null, true, 1f);
 	}
 
-	// Token: 0x06012794 RID: 75668 RVA: 0x0048E5B0 File Offset: 0x0048C7B0
+	// Token: 0x0600FC4A RID: 64586 RVA: 0x0049BBCC File Offset: 0x00499DCC
 	[NullableContext(2)]
 	private void OnPhantomEquipInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -442,7 +441,7 @@ public class PhantomBattleController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.PhantomEquip);
 	}
 
-	// Token: 0x06012795 RID: 75669 RVA: 0x0048E638 File Offset: 0x0048C838
+	// Token: 0x0600FC4B RID: 64587 RVA: 0x0049BC54 File Offset: 0x00499E54
 	[NullableContext(2)]
 	private void OnPhantomItemUpdate(IMessage msg, Net.CallbackStatus status)
 	{
@@ -469,7 +468,7 @@ public class PhantomBattleController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnPhantomItemUpdate);
 	}
 
-	// Token: 0x06012796 RID: 75670 RVA: 0x0048E738 File Offset: 0x0048C938
+	// Token: 0x0600FC4C RID: 64588 RVA: 0x0049BD54 File Offset: 0x00499F54
 	public UniTask RequestPhantomIdentify(int uniqueId, int count)
 	{
 		PhantomBattleController.<RequestPhantomIdentify>d__22 <RequestPhantomIdentify>d__;
@@ -482,7 +481,7 @@ public class PhantomBattleController : UiControllerBase
 		return <RequestPhantomIdentify>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012797 RID: 75671 RVA: 0x0048E78C File Offset: 0x0048C98C
+	// Token: 0x0600FC4D RID: 64589 RVA: 0x0049BDA8 File Offset: 0x00499FA8
 	public void PhantomSkinChangeRequest(int uniqueId, int skinId, bool changeDefault)
 	{
 		if (SceneTeamModel.Instance.GetCurrentEntity.Entity.GetComponent<BaseTagComponent>().HasTag(GameplayTagDefine.EGameplayTagId["幻象.Common.技能中"]))
@@ -522,7 +521,7 @@ public class PhantomBattleController : UiControllerBase
 			PhantomSkinChangeResponse phantomSkinChangeResponse = (PhantomSkinChangeResponse)msg;
 			if (phantomSkinChangeResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomSkinChangeResponse.ErrorCode, 29630, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomSkinChangeResponse.ErrorCode, 26665, null, true, true);
 				return;
 			}
 			PhantomBattleData phantomItemDataByUniqueId = this.GetPhantomItemDataByUniqueId(uniqueId);
@@ -539,7 +538,7 @@ public class PhantomBattleController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06012798 RID: 75672 RVA: 0x0048E8E0 File Offset: 0x0048CAE0
+	// Token: 0x0600FC4E RID: 64590 RVA: 0x0049BEFC File Offset: 0x0049A0FC
 	public void RequestForTraceMonster(int monsterId)
 	{
 		if (GameModeController.Instance.IsInInstance())
@@ -569,7 +568,7 @@ public class PhantomBattleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06012799 RID: 75673 RVA: 0x0048E984 File Offset: 0x0048CB84
+	// Token: 0x0600FC4F RID: 64591 RVA: 0x0049BFA0 File Offset: 0x0049A1A0
 	[NullableContext(2)]
 	public UniTask OpenPhantomBattleFetterView(int selectedGroupId, int roleId, bool showFastFilter = true, List<int> recommendGroupIds = null)
 	{
@@ -584,7 +583,7 @@ public class PhantomBattleController : UiControllerBase
 		return <OpenPhantomBattleFetterView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601279A RID: 75674 RVA: 0x0048E9E0 File Offset: 0x0048CBE0
+	// Token: 0x0600FC50 RID: 64592 RVA: 0x0049BFFC File Offset: 0x0049A1FC
 	private void OnActiveBattleView()
 	{
 		if (PhantomBattleModel.Instance.QualityUnlockTipsList.Count > 0)
@@ -597,7 +596,7 @@ public class PhantomBattleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601279B RID: 75675 RVA: 0x0048EA14 File Offset: 0x0048CC14
+	// Token: 0x0600FC51 RID: 64593 RVA: 0x0049C030 File Offset: 0x0049A230
 	private void DoShowUnlockQualityView()
 	{
 		if (!UiManager.Instance.IsViewShow(EUiViewName.CalabashUnlockItemView) && UiManager.Instance.IsViewShow(EUiViewName.BattleView) && !SundryModel.Instance.IsBlockTips && PhantomBattleModel.Instance.QualityUnlockTipsList.Count > 0)
@@ -608,7 +607,7 @@ public class PhantomBattleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601279C RID: 75676 RVA: 0x0048EA94 File Offset: 0x0048CC94
+	// Token: 0x0600FC52 RID: 64594 RVA: 0x0049C0B0 File Offset: 0x0049A2B0
 	private void DoShowNewItemView()
 	{
 		if (!UiManager.Instance.IsViewShow(EUiViewName.CalabashUnlockItemView) && UiManager.Instance.IsViewShow(EUiViewName.BattleView) && !SundryModel.Instance.IsBlockTips && CalabashModel.Instance.CalabashUnlockTipsList.Count > 0)
@@ -619,49 +618,49 @@ public class PhantomBattleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601279D RID: 75677 RVA: 0x0048EB13 File Offset: 0x0048CD13
+	// Token: 0x0600FC53 RID: 64595 RVA: 0x0049C12F File Offset: 0x0049A32F
 	public bool CheckIsEquip(int uniqueId)
 	{
 		return PhantomBattleModel.Instance.CheckPhantomIsEquip(uniqueId);
 	}
 
-	// Token: 0x0601279E RID: 75678 RVA: 0x0048EB20 File Offset: 0x0048CD20
+	// Token: 0x0600FC54 RID: 64596 RVA: 0x0049C13C File Offset: 0x0049A33C
 	public bool CheckIsEquipByMonsterId(int monsterId, int roleId)
 	{
 		return PhantomBattleModel.Instance.CheckMonsterIsEquipOnRole(roleId, monsterId);
 	}
 
-	// Token: 0x0601279F RID: 75679 RVA: 0x0048EB2E File Offset: 0x0048CD2E
+	// Token: 0x0600FC55 RID: 64597 RVA: 0x0049C14A File Offset: 0x0049A34A
 	public bool CheckIsMain(int id)
 	{
 		return PhantomBattleModel.Instance.CheckPhantomIsMain(id);
 	}
 
-	// Token: 0x060127A0 RID: 75680 RVA: 0x0048EB3B File Offset: 0x0048CD3B
+	// Token: 0x0600FC56 RID: 64598 RVA: 0x0049C157 File Offset: 0x0049A357
 	public bool CheckIsSub(int id)
 	{
 		return PhantomBattleModel.Instance.CheckPhantomIsSub(id);
 	}
 
-	// Token: 0x060127A1 RID: 75681 RVA: 0x0048EB48 File Offset: 0x0048CD48
+	// Token: 0x0600FC57 RID: 64599 RVA: 0x0049C164 File Offset: 0x0049A364
 	public bool CheckFetterActivate(int fettersId, int roleId)
 	{
 		return PhantomBattleModel.Instance.CheckFetterActiveState(roleId, fettersId);
 	}
 
-	// Token: 0x060127A2 RID: 75682 RVA: 0x0048EB56 File Offset: 0x0048CD56
+	// Token: 0x0600FC58 RID: 64600 RVA: 0x0049C172 File Offset: 0x0049A372
 	public bool CheckPhantomIsUnlock(int monsterId)
 	{
 		return PhantomBattleModel.Instance.GetPhantomIsUnlock(monsterId);
 	}
 
-	// Token: 0x060127A3 RID: 75683 RVA: 0x0048EB63 File Offset: 0x0048CD63
+	// Token: 0x0600FC59 RID: 64601 RVA: 0x0049C17F File Offset: 0x0049A37F
 	public int? GetEquipRole(int uniqueId)
 	{
 		return PhantomBattleModel.Instance.GetPhantomEquipOnRoleId(uniqueId);
 	}
 
-	// Token: 0x060127A4 RID: 75684 RVA: 0x0048EB70 File Offset: 0x0048CD70
+	// Token: 0x0600FC5A RID: 64602 RVA: 0x0049C18C File Offset: 0x0049A38C
 	public void SetMeshShow(int itemId, [Nullable(2)] Action callBack, SkeletalObserverHandle observer, bool isChangeLocation = true)
 	{
 		PhantomBattleController.<>c__DisplayClass36_0 CS$<>8__locals1 = new PhantomBattleController.<>c__DisplayClass36_0();
@@ -710,55 +709,55 @@ public class PhantomBattleController : UiControllerBase
 		}, 100, "Ui.PhantomUi");
 	}
 
-	// Token: 0x060127A5 RID: 75685 RVA: 0x0048EC85 File Offset: 0x0048CE85
+	// Token: 0x0600FC5B RID: 64603 RVA: 0x0049C2A1 File Offset: 0x0049A4A1
 	public void SetMeshTransform(SkeletalObserverHandle observer)
 	{
 		observer.Model.CheckGetComponent<UiModelActorComponent>().SetTransformByTag("MonsterCase");
 	}
 
-	// Token: 0x060127A6 RID: 75686 RVA: 0x0048EC9C File Offset: 0x0048CE9C
+	// Token: 0x0600FC5C RID: 64604 RVA: 0x0049C2B8 File Offset: 0x0049A4B8
 	public EEquipType GetEquipState(int roleId, int index, int uniqueId)
 	{
 		return PhantomBattleModel.Instance.GetRolePhantomEquipState(roleId, index, uniqueId);
 	}
 
-	// Token: 0x060127A7 RID: 75687 RVA: 0x0048ECAB File Offset: 0x0048CEAB
+	// Token: 0x0600FC5D RID: 64605 RVA: 0x0049C2C7 File Offset: 0x0049A4C7
 	public int GetEquipByIndex(int roleId, int index)
 	{
 		return PhantomBattleModel.Instance.GetRoleIndexPhantomId(roleId, index);
 	}
 
-	// Token: 0x060127A8 RID: 75688 RVA: 0x0048ECB9 File Offset: 0x0048CEB9
+	// Token: 0x0600FC5E RID: 64606 RVA: 0x0049C2D5 File Offset: 0x0049A4D5
 	public List<ItemInfo> GetLevelUpItemList(int uniqueId)
 	{
-		return PhantomBattleModel.Instance.GetPhantomLevelUpItemSortList(uniqueId).ToList<ItemInfo>();
+		return new List<ItemInfo>(PhantomBattleModel.Instance.GetPhantomLevelUpItemSortList(uniqueId));
 	}
 
-	// Token: 0x060127A9 RID: 75689 RVA: 0x0048ECCB File Offset: 0x0048CECB
+	// Token: 0x0600FC5F RID: 64607 RVA: 0x0049C2E7 File Offset: 0x0049A4E7
 	public int GetLevelUpNeedCost(int exp)
 	{
 		return PhantomBattleModel.Instance.GetLevelUpNeedCost(exp);
 	}
 
-	// Token: 0x060127AA RID: 75690 RVA: 0x0048ECD8 File Offset: 0x0048CED8
+	// Token: 0x0600FC60 RID: 64608 RVA: 0x0049C2F4 File Offset: 0x0049A4F4
 	public int GetMaxLevel(int uniqueId)
 	{
 		return PhantomBattleModel.Instance.GetPhantomMaxLevel(uniqueId);
 	}
 
-	// Token: 0x060127AB RID: 75691 RVA: 0x0048ECE5 File Offset: 0x0048CEE5
+	// Token: 0x0600FC61 RID: 64609 RVA: 0x0049C301 File Offset: 0x0049A501
 	public bool CheckPhantomLevelSatisfied(int itemId, int level)
 	{
 		return PhantomBattleModel.Instance.CheckIfHasPhantomSatisfiedLevelCondition(itemId, level);
 	}
 
-	// Token: 0x060127AC RID: 75692 RVA: 0x0048ECF3 File Offset: 0x0048CEF3
+	// Token: 0x0600FC62 RID: 64610 RVA: 0x0049C30F File Offset: 0x0049A50F
 	public bool CheckHasPhantomMaxLevel()
 	{
 		return PhantomBattleModel.Instance.CheckIfHasPhantomLevelMax();
 	}
 
-	// Token: 0x060127AD RID: 75693 RVA: 0x0048ED00 File Offset: 0x0048CF00
+	// Token: 0x0600FC63 RID: 64611 RVA: 0x0049C31C File Offset: 0x0049A51C
 	[NullableContext(0)]
 	public UniTask<double> GetProgressCurveValue(float progress, double startPosition, double targetPosition)
 	{
@@ -772,7 +771,7 @@ public class PhantomBattleController : UiControllerBase
 		return <GetProgressCurveValue>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060127AE RID: 75694 RVA: 0x0048ED53 File Offset: 0x0048CF53
+	// Token: 0x0600FC64 RID: 64612 RVA: 0x0049C36F File Offset: 0x0049A56F
 	public void RecordVisionLevelUpSettingRedDot()
 	{
 		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.VisionLevelUpSettingRedDot, true);
@@ -780,7 +779,7 @@ public class PhantomBattleController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.RefreshVisionLevelUpSettingRedPoint);
 	}
 
-	// Token: 0x060127AF RID: 75695 RVA: 0x0048ED78 File Offset: 0x0048CF78
+	// Token: 0x0600FC65 RID: 64613 RVA: 0x0049C394 File Offset: 0x0049A594
 	[NullableContext(0)]
 	public UniTask<bool> RequestPhBaPlanUsePlan()
 	{
@@ -791,7 +790,7 @@ public class PhantomBattleController : UiControllerBase
 		return <RequestPhBaPlanUsePlan>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060127B0 RID: 75696 RVA: 0x0048EDB4 File Offset: 0x0048CFB4
+	// Token: 0x0600FC66 RID: 64614 RVA: 0x0049C3D0 File Offset: 0x0049A5D0
 	[NullableContext(0)]
 	public UniTask<bool> RequestPhBaPlanSaveUsePlan(bool isReset, [Nullable(1)] HashSet<int> openIdSet)
 	{
@@ -805,7 +804,7 @@ public class PhantomBattleController : UiControllerBase
 		return <RequestPhBaPlanSaveUsePlan>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060127B1 RID: 75697 RVA: 0x0048EE08 File Offset: 0x0048D008
+	// Token: 0x0600FC67 RID: 64615 RVA: 0x0049C424 File Offset: 0x0049A624
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -821,7 +820,7 @@ public class PhantomBattleController : UiControllerBase
 		return <RequestPhBaPlanFindPlan>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060127B2 RID: 75698 RVA: 0x0048EE4C File Offset: 0x0048D04C
+	// Token: 0x0600FC68 RID: 64616 RVA: 0x0049C468 File Offset: 0x0049A668
 	[NullableContext(0)]
 	public UniTask<bool> RequestPhBaPlanUpdatePlan()
 	{
@@ -832,7 +831,7 @@ public class PhantomBattleController : UiControllerBase
 		return <RequestPhBaPlanUpdatePlan>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060127B3 RID: 75699 RVA: 0x0048EE88 File Offset: 0x0048D088
+	// Token: 0x0600FC69 RID: 64617 RVA: 0x0049C4A4 File Offset: 0x0049A6A4
 	[NullableContext(0)]
 	public UniTask<bool> RequestPhBaPlanSetFiveStarSwitch()
 	{
@@ -843,9 +842,9 @@ public class PhantomBattleController : UiControllerBase
 		return <RequestPhBaPlanSetFiveStarSwitch>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060127B4 RID: 75700 RVA: 0x0048EEC4 File Offset: 0x0048D0C4
+	// Token: 0x0600FC6A RID: 64618 RVA: 0x0049C4E0 File Offset: 0x0049A6E0
 	[NullableContext(0)]
-	public UniTask<bool> RequestPhBaPlanSetPlanStatus([Nullable(1)] List<int> fetterIdList, bool isOpen)
+	public UniTask<bool> RequestPhBaPlanSetPlanStatus([Nullable(1)] IEnumerable<int> fetterIdList, bool isOpen)
 	{
 		PhantomBattleController.<RequestPhBaPlanSetPlanStatus>d__52 <RequestPhBaPlanSetPlanStatus>d__;
 		<RequestPhBaPlanSetPlanStatus>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
@@ -856,8 +855,8 @@ public class PhantomBattleController : UiControllerBase
 		return <RequestPhBaPlanSetPlanStatus>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x170017DF RID: 6111
-	// (get) Token: 0x060127B5 RID: 75701 RVA: 0x0048EF0F File Offset: 0x0048D10F
+	// Token: 0x17001819 RID: 6169
+	// (get) Token: 0x0600FC6B RID: 64619 RVA: 0x0049C52B File Offset: 0x0049A72B
 	public static PhantomBattleController Instance
 	{
 		get
@@ -866,7 +865,7 @@ public class PhantomBattleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060127B6 RID: 75702 RVA: 0x0048EF16 File Offset: 0x0048D116
+	// Token: 0x0600FC6C RID: 64620 RVA: 0x0049C532 File Offset: 0x0049A732
 	public static PhantomBattleController GetOrCreateInstance()
 	{
 		if (PhantomBattleController._Instance == null)
@@ -876,7 +875,7 @@ public class PhantomBattleController : UiControllerBase
 		return PhantomBattleController._Instance;
 	}
 
-	// Token: 0x060127B7 RID: 75703 RVA: 0x0048EF2A File Offset: 0x0048D12A
+	// Token: 0x0600FC6D RID: 64621 RVA: 0x0049C546 File Offset: 0x0049A746
 	public static bool CreateInstance()
 	{
 		if (PhantomBattleController._Instance != null)
@@ -887,24 +886,24 @@ public class PhantomBattleController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060127B8 RID: 75704 RVA: 0x0048EF40 File Offset: 0x0048D140
+	// Token: 0x0600FC6E RID: 64622 RVA: 0x0049C55C File Offset: 0x0049A75C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060127B9 RID: 75705 RVA: 0x0048EF42 File Offset: 0x0048D142
+	// Token: 0x0600FC6F RID: 64623 RVA: 0x0049C55E File Offset: 0x0049A75E
 	public static void ResetStaticDefaultValue()
 	{
 		PhantomBattleController._Instance = null;
 	}
 
-	// Token: 0x060127BA RID: 75706 RVA: 0x0048EF4A File Offset: 0x0048D14A
+	// Token: 0x0600FC70 RID: 64624 RVA: 0x0049C566 File Offset: 0x0049A766
 	static PhantomBattleController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhantomBattleController.CreateStaticDefaultValue), new Action(PhantomBattleController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008B6D RID: 35693
+	// Token: 0x04008CB4 RID: 36020
 	[Nullable(2)]
 	private static PhantomBattleController _Instance;
 }

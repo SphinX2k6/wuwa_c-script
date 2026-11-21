@@ -6,29 +6,29 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02007011 RID: 28689
+	// Token: 0x02006192 RID: 24978
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CommonTouchUiEditItem : ITouchUiEditItem, IStaticVariableResetter
 	{
-		// Token: 0x06045CF4 RID: 285940 RVA: 0x0115C1DA File Offset: 0x0115A3DA
+		// Token: 0x0603BEAA RID: 245418 RVA: 0x011065E6 File Offset: 0x011047E6
 		static CommonTouchUiEditItem()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CommonTouchUiEditItem.CreateStaticDefaultValue), new Action(CommonTouchUiEditItem.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x17009BA1 RID: 39841
-		// (get) Token: 0x06045CF5 RID: 285941 RVA: 0x0115C1F9 File Offset: 0x0115A3F9
-		// (set) Token: 0x06045CF6 RID: 285942 RVA: 0x0115C201 File Offset: 0x0115A401
+		// Token: 0x170070E1 RID: 28897
+		// (get) Token: 0x0603BEAB RID: 245419 RVA: 0x01106605 File Offset: 0x01104805
+		// (set) Token: 0x0603BEAC RID: 245420 RVA: 0x0110660D File Offset: 0x0110480D
 		public ITouchUiEditData Data { get; set; }
 
-		// Token: 0x17009BA2 RID: 39842
-		// (get) Token: 0x06045CF7 RID: 285943 RVA: 0x0115C20A File Offset: 0x0115A40A
-		// (set) Token: 0x06045CF8 RID: 285944 RVA: 0x0115C212 File Offset: 0x0115A412
+		// Token: 0x170070E2 RID: 28898
+		// (get) Token: 0x0603BEAD RID: 245421 RVA: 0x01106616 File Offset: 0x01104816
+		// (set) Token: 0x0603BEAE RID: 245422 RVA: 0x0110661E File Offset: 0x0110481E
 		[Nullable(1)]
 		public UUIItem RootItem { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x06045CF9 RID: 285945 RVA: 0x0115C21C File Offset: 0x0115A41C
+		// Token: 0x0603BEAF RID: 245423 RVA: 0x01106628 File Offset: 0x01104828
 		[NullableContext(1)]
 		public CommonTouchUiEditItem(UUIItem rootItem, [Nullable(2)] ITouchUiEditData data)
 		{
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.InputSetting
 			this.OriginalAnchorOffsetY = this.RootItem.GetAnchorOffsetY();
 		}
 
-		// Token: 0x06045CFA RID: 285946 RVA: 0x0115C490 File Offset: 0x0115A690
+		// Token: 0x0603BEB0 RID: 245424 RVA: 0x0110689C File Offset: 0x01104A9C
 		public void SetData(ITouchUiEditData data)
 		{
 			this.Data = data;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.InputSetting
 			this.CacheData(data);
 		}
 
-		// Token: 0x06045CFB RID: 285947 RVA: 0x0115C4FC File Offset: 0x0115A6FC
+		// Token: 0x0603BEB1 RID: 245425 RVA: 0x01106908 File Offset: 0x01104B08
 		private void CacheData(ITouchUiEditData data)
 		{
 			this.Cache = new ItemDataCache();
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.InputSetting
 			this.Cache.HierarchyIndex = ((data != null) ? data.HierarchyIndex : 0);
 		}
 
-		// Token: 0x06045CFC RID: 285948 RVA: 0x0115C598 File Offset: 0x0115A798
+		// Token: 0x0603BEB2 RID: 245426 RVA: 0x011069A4 File Offset: 0x01104BA4
 		public bool IsEdited()
 		{
 			MathUtils instance = MathUtils.Instance;
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.InputSetting
 			return true;
 		}
 
-		// Token: 0x06045CFD RID: 285949 RVA: 0x0115C714 File Offset: 0x0115A914
+		// Token: 0x0603BEB3 RID: 245427 RVA: 0x01106B20 File Offset: 0x01104D20
 		public void SetOffset(float x, float y)
 		{
 			float num = x - this.Data.OffsetX;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.InputSetting
 			this.FixLocation(this.ResultLocation);
 		}
 
-		// Token: 0x06045CFE RID: 285950 RVA: 0x0115C78A File Offset: 0x0115A98A
+		// Token: 0x0603BEB4 RID: 245428 RVA: 0x01106B96 File Offset: 0x01104D96
 		public void SetScale(float scale)
 		{
 			this.ScaleVector.X = scale;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.InputSetting
 			this.SetDataProperty("Scale", scale);
 		}
 
-		// Token: 0x06045CFF RID: 285951 RVA: 0x0115C7C4 File Offset: 0x0115A9C4
+		// Token: 0x0603BEB5 RID: 245429 RVA: 0x01106BD0 File Offset: 0x01104DD0
 		public void SetAlpha(float alpha)
 		{
 			if (MathUtils.Instance.IsNearlyEqual((double)alpha, (double)this.Data.Alpha, null))
@@ -178,13 +178,13 @@ namespace CSharpScript.Game.InputSetting
 			this.SetDataProperty("Alpha", alpha);
 		}
 
-		// Token: 0x06045D00 RID: 285952 RVA: 0x0115C806 File Offset: 0x0115AA06
+		// Token: 0x0603BEB6 RID: 245430 RVA: 0x01106C12 File Offset: 0x01104E12
 		public void SetHierarchyIndex(int index)
 		{
 			this.SetDataProperty("HierarchyIndex", index);
 		}
 
-		// Token: 0x06045D01 RID: 285953 RVA: 0x0115C81C File Offset: 0x0115AA1C
+		// Token: 0x0603BEB7 RID: 245431 RVA: 0x01106C28 File Offset: 0x01104E28
 		public void OnViewDestroy()
 		{
 			AActor owner = this.RootItem.GetOwner();
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045D02 RID: 285954 RVA: 0x0115C8E0 File Offset: 0x0115AAE0
+		// Token: 0x0603BEB8 RID: 245432 RVA: 0x01106CEC File Offset: 0x01104EEC
 		[NullableContext(1)]
 		private void SetDataProperty(string property, object value)
 		{
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.InputSetting
 			this.ApplyDataChange();
 		}
 
-		// Token: 0x06045D03 RID: 285955 RVA: 0x0115C95C File Offset: 0x0115AB5C
+		// Token: 0x0603BEB9 RID: 245433 RVA: 0x01106D68 File Offset: 0x01104F68
 		private void ApplyDataChange()
 		{
 			if (this.RootItem != null && this.Data != null)
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045D04 RID: 285956 RVA: 0x0115CA28 File Offset: 0x0115AC28
+		// Token: 0x0603BEBA RID: 245434 RVA: 0x01106E34 File Offset: 0x01105034
 		public void OnDrag(ULGUIPointerEventData eventData)
 		{
 			if (this.Data == null)
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.InputSetting
 			this.LocalOffsetVector = localPointInPlane;
 		}
 
-		// Token: 0x06045D05 RID: 285957 RVA: 0x0115CAFC File Offset: 0x0115ACFC
+		// Token: 0x0603BEBB RID: 245435 RVA: 0x01106F08 File Offset: 0x01105108
 		public void OnDragBegin(ULGUIPointerEventData eventData)
 		{
 			this.LocalOffsetVector = eventData.GetLocalPointInPlane();
@@ -286,19 +286,19 @@ namespace CSharpScript.Game.InputSetting
 			this.ResultLocation = new FVector(lguispaceAbsolutePosition.X, lguispaceAbsolutePosition.Y, lguispaceAbsolutePosition.Z);
 		}
 
-		// Token: 0x06045D06 RID: 285958 RVA: 0x0115CB3E File Offset: 0x0115AD3E
+		// Token: 0x0603BEBC RID: 245436 RVA: 0x01106F4A File Offset: 0x0110514A
 		public void OnDragEnd(ULGUIPointerEventData eventData)
 		{
 			this.LocalOffsetVector = default(FVector);
 		}
 
-		// Token: 0x06045D07 RID: 285959 RVA: 0x0115CB4C File Offset: 0x0115AD4C
+		// Token: 0x0603BEBD RID: 245437 RVA: 0x01106F58 File Offset: 0x01105158
 		private void OnButtonPress()
 		{
 			this.OnButtonPress(null);
 		}
 
-		// Token: 0x06045D08 RID: 285960 RVA: 0x0115CB58 File Offset: 0x0115AD58
+		// Token: 0x0603BEBE RID: 245438 RVA: 0x01106F64 File Offset: 0x01105164
 		public void OnButtonPress(ULGUIPointerEventData eventData)
 		{
 			if (this.Data == null)
@@ -312,19 +312,19 @@ namespace CSharpScript.Game.InputSetting
 			TouchUiEditViewModel.SetCurrentSelectedItem(this);
 		}
 
-		// Token: 0x06045D09 RID: 285961 RVA: 0x0115CBBD File Offset: 0x0115ADBD
+		// Token: 0x0603BEBF RID: 245439 RVA: 0x01106FC9 File Offset: 0x011051C9
 		private void OnButtonRelease()
 		{
 			this.OnButtonRelease(null);
 		}
 
-		// Token: 0x06045D0A RID: 285962 RVA: 0x0115CBC6 File Offset: 0x0115ADC6
+		// Token: 0x0603BEC0 RID: 245440 RVA: 0x01106FD2 File Offset: 0x011051D2
 		public void OnButtonRelease(ULGUIPointerEventData eventData)
 		{
 			this.LocalOffsetVector = default(FVector);
 		}
 
-		// Token: 0x06045D0B RID: 285963 RVA: 0x0115CBD4 File Offset: 0x0115ADD4
+		// Token: 0x0603BEC1 RID: 245441 RVA: 0x01106FE0 File Offset: 0x011051E0
 		public void OnExtendToggleStateChanged(EToggleState state)
 		{
 			if (this.Data == null)
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.InputSetting
 			TouchUiEditViewModel.SetCurrentSelectedItem(this);
 		}
 
-		// Token: 0x06045D0C RID: 285964 RVA: 0x0115CBEC File Offset: 0x0115ADEC
+		// Token: 0x0603BEC2 RID: 245442 RVA: 0x01106FF8 File Offset: 0x011051F8
 		public bool OnCheckCanExecuteChange()
 		{
 			if (this.Data == null)
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.InputSetting
 			return currentSelectedItem == null || currentSelectedItem != this;
 		}
 
-		// Token: 0x06045D0D RID: 285965 RVA: 0x0115CC2C File Offset: 0x0115AE2C
+		// Token: 0x0603BEC3 RID: 245443 RVA: 0x01107038 File Offset: 0x01105238
 		private FVector ClampBound(FVector location)
 		{
 			double x = (this.RootItem.GetOwner() as AUIBaseActor).D_GetActorScale3D().X;
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.InputSetting
 			return location;
 		}
 
-		// Token: 0x06045D0E RID: 285966 RVA: 0x0115CD1C File Offset: 0x0115AF1C
+		// Token: 0x0603BEC4 RID: 245444 RVA: 0x01107128 File Offset: 0x01105328
 		private void FixLocation(FVector location)
 		{
 			FVector fvector = this.ClampBound(location);
@@ -384,7 +384,7 @@ namespace CSharpScript.Game.InputSetting
 			this.Data.OffsetY += anchorOffsetY2 - anchorOffsetY;
 		}
 
-		// Token: 0x06045D0F RID: 285967 RVA: 0x0115CD9A File Offset: 0x0115AF9A
+		// Token: 0x0603BEC5 RID: 245445 RVA: 0x011071A6 File Offset: 0x011053A6
 		public static void CreateStaticDefaultValue()
 		{
 			CommonTouchUiEditItem.disableChildCompClasses = new TWeakObjectPtr<UClass>[]
@@ -394,13 +394,13 @@ namespace CSharpScript.Game.InputSetting
 			};
 		}
 
-		// Token: 0x06045D10 RID: 285968 RVA: 0x0115CDC9 File Offset: 0x0115AFC9
+		// Token: 0x0603BEC6 RID: 245446 RVA: 0x011071D5 File Offset: 0x011053D5
 		public static void ResetStaticDefaultValue()
 		{
 			CommonTouchUiEditItem.disableChildCompClasses = null;
 		}
 
-		// Token: 0x04024816 RID: 149526
+		// Token: 0x0401FACC RID: 129740
 		[Nullable(new byte[]
 		{
 			1,
@@ -409,22 +409,22 @@ namespace CSharpScript.Game.InputSetting
 		})]
 		private static TWeakObjectPtr<UClass>[] disableChildCompClasses;
 
-		// Token: 0x04024818 RID: 149528
+		// Token: 0x0401FACE RID: 129742
 		private ItemDataCache Cache;
 
-		// Token: 0x04024819 RID: 149529
+		// Token: 0x0401FACF RID: 129743
 		private FVector ScaleVector = new FVector(1f, 1f, 1f);
 
-		// Token: 0x0402481A RID: 149530
+		// Token: 0x0401FAD0 RID: 129744
 		private FVector LocalOffsetVector;
 
-		// Token: 0x0402481B RID: 149531
+		// Token: 0x0401FAD1 RID: 129745
 		private FVector ResultLocation;
 
-		// Token: 0x0402481C RID: 149532
+		// Token: 0x0401FAD2 RID: 129746
 		private readonly float OriginalAnchorOffsetX;
 
-		// Token: 0x0402481D RID: 149533
+		// Token: 0x0401FAD3 RID: 129747
 		private readonly float OriginalAnchorOffsetY;
 	}
 }

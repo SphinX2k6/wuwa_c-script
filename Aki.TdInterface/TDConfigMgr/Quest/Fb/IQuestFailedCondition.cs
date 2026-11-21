@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200143E RID: 5182
+	// Token: 0x02001596 RID: 5526
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IQuestFailedCondition
 	{
-		// Token: 0x060075C3 RID: 30147 RVA: 0x00119395 File Offset: 0x00117595
-		[NullableContext(1)]
+		// Token: 0x06007C88 RID: 31880 RVA: 0x00127DE1 File Offset: 0x00125FE1
+		[NullableContext(0)]
 		public static IQuestFailedCondition Create(IQuestFailedCondition? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700271A RID: 10010
-		// (get) Token: 0x060075C4 RID: 30148 RVA: 0x001193B4 File Offset: 0x001175B4
+		// Token: 0x170028FE RID: 10494
+		// (get) Token: 0x06007C89 RID: 31881 RVA: 0x00127E00 File Offset: 0x00126000
 		public virtual ITimerConfig Timer
 		{
 			get
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700271B RID: 10011
-		// (get) Token: 0x060075C5 RID: 30149 RVA: 0x001193E8 File Offset: 0x001175E8
+		// Token: 0x170028FF RID: 10495
+		// (get) Token: 0x06007C8A RID: 31882 RVA: 0x00127E34 File Offset: 0x00126034
 		public virtual ITimeRange TimeRange
 		{
 			get
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700271C RID: 10012
-		// (get) Token: 0x060075C6 RID: 30150 RVA: 0x0011941C File Offset: 0x0011761C
+		// Token: 0x17002900 RID: 10496
+		// (get) Token: 0x06007C8B RID: 31883 RVA: 0x00127E68 File Offset: 0x00126068
 		public virtual bool? CanGiveUp
 		{
 			get
@@ -71,8 +71,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700271D RID: 10013
-		// (get) Token: 0x060075C7 RID: 30151 RVA: 0x00119452 File Offset: 0x00117652
+		// Token: 0x17002901 RID: 10497
+		// (get) Token: 0x06007C8C RID: 31884 RVA: 0x00127E9E File Offset: 0x0012609E
 		public virtual string TidGiveUpText
 		{
 			get
@@ -81,8 +81,18 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700271E RID: 10014
-		// (get) Token: 0x060075C8 RID: 30152 RVA: 0x00119460 File Offset: 0x00117660
+		// Token: 0x17002902 RID: 10498
+		// (get) Token: 0x06007C8D RID: 31885 RVA: 0x00127EAB File Offset: 0x001260AB
+		public virtual string TidGiveUpConfirmText
+		{
+			get
+			{
+				return this.Instance.TidGiveUpConfirmText;
+			}
+		}
+
+		// Token: 0x17002903 RID: 10499
+		// (get) Token: 0x06007C8E RID: 31886 RVA: 0x00127EB8 File Offset: 0x001260B8
 		public virtual bool? IsTransferFailure
 		{
 			get
@@ -95,8 +105,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700271F RID: 10015
-		// (get) Token: 0x060075C9 RID: 30153 RVA: 0x00119498 File Offset: 0x00117698
+		// Token: 0x17002904 RID: 10500
+		// (get) Token: 0x06007C8F RID: 31887 RVA: 0x00127EF0 File Offset: 0x001260F0
 		public virtual bool? IsTeamDeathFailure
 		{
 			get
@@ -109,8 +119,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002720 RID: 10016
-		// (get) Token: 0x060075CA RID: 30154 RVA: 0x001194D0 File Offset: 0x001176D0
+		// Token: 0x17002905 RID: 10501
+		// (get) Token: 0x06007C90 RID: 31888 RVA: 0x00127F28 File Offset: 0x00126128
 		public virtual bool? IsNonAiTeamDeathFailure
 		{
 			get
@@ -123,8 +133,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002721 RID: 10017
-		// (get) Token: 0x060075CB RID: 30155 RVA: 0x00119508 File Offset: 0x00117708
+		// Token: 0x17002906 RID: 10502
+		// (get) Token: 0x06007C91 RID: 31889 RVA: 0x00127F60 File Offset: 0x00126160
 		public virtual bool? IsLeaveDungeonFailure
 		{
 			get
@@ -137,8 +147,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002722 RID: 10018
-		// (get) Token: 0x060075CC RID: 30156 RVA: 0x00119540 File Offset: 0x00117740
+		// Token: 0x17002907 RID: 10503
+		// (get) Token: 0x06007C92 RID: 31890 RVA: 0x00127F98 File Offset: 0x00126198
 		public virtual List<int> CheckDungeonFailure
 		{
 			get
@@ -162,8 +172,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002723 RID: 10019
-		// (get) Token: 0x060075CD RID: 30157 RVA: 0x001195B6 File Offset: 0x001177B6
+		// Token: 0x17002908 RID: 10504
+		// (get) Token: 0x06007C93 RID: 31891 RVA: 0x0012800E File Offset: 0x0012620E
 		public virtual IRangeLimitingCondition RangeLimiting
 		{
 			get
@@ -178,8 +188,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002724 RID: 10020
-		// (get) Token: 0x060075CE RID: 30158 RVA: 0x001195EA File Offset: 0x001177EA
+		// Token: 0x17002909 RID: 10505
+		// (get) Token: 0x06007C94 RID: 31892 RVA: 0x00128042 File Offset: 0x00126242
 		public virtual IEntityDistanceLimitingCondition EntityDistanceLimiting
 		{
 			get
@@ -194,8 +204,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002725 RID: 10021
-		// (get) Token: 0x060075CF RID: 30159 RVA: 0x0011961E File Offset: 0x0011781E
+		// Token: 0x1700290A RID: 10506
+		// (get) Token: 0x06007C95 RID: 31893 RVA: 0x00128076 File Offset: 0x00126276
 		public virtual IQuestFailedConditionEntityAlert EntityAlert
 		{
 			get
@@ -210,8 +220,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002726 RID: 10022
-		// (get) Token: 0x060075D0 RID: 30160 RVA: 0x00119652 File Offset: 0x00117852
+		// Token: 0x1700290B RID: 10507
+		// (get) Token: 0x06007C96 RID: 31894 RVA: 0x001280AA File Offset: 0x001262AA
 		public virtual IQuestFailedConditionEntityDeath EntityDeathCondition
 		{
 			get
@@ -226,8 +236,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002727 RID: 10023
-		// (get) Token: 0x060075D1 RID: 30161 RVA: 0x00119686 File Offset: 0x00117886
+		// Token: 0x1700290C RID: 10508
+		// (get) Token: 0x06007C97 RID: 31895 RVA: 0x001280DE File Offset: 0x001262DE
 		public virtual IQuestFailedConditionEntityState EntityStateCondition
 		{
 			get
@@ -242,8 +252,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002728 RID: 10024
-		// (get) Token: 0x060075D2 RID: 30162 RVA: 0x001196BA File Offset: 0x001178BA
+		// Token: 0x1700290D RID: 10509
+		// (get) Token: 0x06007C98 RID: 31896 RVA: 0x00128112 File Offset: 0x00126312
 		public virtual ISneakPlayCondition SneakPlayCondition
 		{
 			get
@@ -258,8 +268,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002729 RID: 10025
-		// (get) Token: 0x060075D3 RID: 30163 RVA: 0x001196EE File Offset: 0x001178EE
+		// Token: 0x1700290E RID: 10510
+		// (get) Token: 0x06007C99 RID: 31897 RVA: 0x00128146 File Offset: 0x00126346
 		public virtual IQuestFailedConditionPlayerMotionState PlayerMotionStateCondition
 		{
 			get
@@ -274,8 +284,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700272A RID: 10026
-		// (get) Token: 0x060075D4 RID: 30164 RVA: 0x00119722 File Offset: 0x00117922
+		// Token: 0x1700290F RID: 10511
+		// (get) Token: 0x06007C9A RID: 31898 RVA: 0x0012817A File Offset: 0x0012637A
 		public virtual IQuestFailedConditionPlayerMovementMode PlayerMovementModeCondition
 		{
 			get
@@ -290,8 +300,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700272B RID: 10027
-		// (get) Token: 0x060075D5 RID: 30165 RVA: 0x00119756 File Offset: 0x00117956
+		// Token: 0x17002910 RID: 10512
+		// (get) Token: 0x06007C9B RID: 31899 RVA: 0x001281AE File Offset: 0x001263AE
 		public virtual ICheckDataLayer CheckDataLayer
 		{
 			get
@@ -306,8 +316,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700272C RID: 10028
-		// (get) Token: 0x060075D6 RID: 30166 RVA: 0x0011978A File Offset: 0x0011798A
+		// Token: 0x17002911 RID: 10513
+		// (get) Token: 0x06007C9C RID: 31900 RVA: 0x001281E2 File Offset: 0x001263E2
 		public virtual IFailedTeleport FailedTeleport
 		{
 			get
@@ -322,8 +332,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700272D RID: 10029
-		// (get) Token: 0x060075D7 RID: 30167 RVA: 0x001197BE File Offset: 0x001179BE
+		// Token: 0x17002912 RID: 10514
+		// (get) Token: 0x06007C9D RID: 31901 RVA: 0x00128216 File Offset: 0x00126416
 		public virtual IAddTimeConfig AddTimeConfig
 		{
 			get
@@ -338,8 +348,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700272E RID: 10030
-		// (get) Token: 0x060075D8 RID: 30168 RVA: 0x001197F2 File Offset: 0x001179F2
+		// Token: 0x17002913 RID: 10515
+		// (get) Token: 0x06007C9E RID: 31902 RVA: 0x0012824A File Offset: 0x0012644A
 		public virtual ICompareVarConditionInQuestFailed CompareVar
 		{
 			get
@@ -354,8 +364,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700272F RID: 10031
-		// (get) Token: 0x060075D9 RID: 30169 RVA: 0x00119826 File Offset: 0x00117A26
+		// Token: 0x17002914 RID: 10516
+		// (get) Token: 0x06007C9F RID: 31903 RVA: 0x0012827E File Offset: 0x0012647E
 		public virtual IRecallFishingBoat RecallVehicle
 		{
 			get
@@ -370,8 +380,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002730 RID: 10032
-		// (get) Token: 0x060075DA RID: 30170 RVA: 0x0011985C File Offset: 0x00117A5C
+		// Token: 0x17002915 RID: 10517
+		// (get) Token: 0x06007CA0 RID: 31904 RVA: 0x001282B4 File Offset: 0x001264B4
 		public virtual bool? SwitchGameDifficulty
 		{
 			get
@@ -384,8 +394,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002731 RID: 10033
-		// (get) Token: 0x060075DB RID: 30171 RVA: 0x00119893 File Offset: 0x00117A93
+		// Token: 0x17002916 RID: 10518
+		// (get) Token: 0x06007CA1 RID: 31905 RVA: 0x001282EB File Offset: 0x001264EB
 		public virtual string EdTidGiveUpText
 		{
 			get
@@ -394,103 +404,113 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400443E RID: 17470
+		// Token: 0x17002917 RID: 10519
+		// (get) Token: 0x06007CA2 RID: 31906 RVA: 0x001282EE File Offset: 0x001264EE
+		public virtual string EdTidGiveUpConfirmText
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		// Token: 0x040047D2 RID: 18386
 		private IQuestFailedCondition Instance;
 
-		// Token: 0x0400443F RID: 17471
+		// Token: 0x040047D3 RID: 18387
 		private ITimerConfig _TimerCache;
 
-		// Token: 0x04004440 RID: 17472
+		// Token: 0x040047D4 RID: 18388
 		private bool _TimerInited;
 
-		// Token: 0x04004441 RID: 17473
+		// Token: 0x040047D5 RID: 18389
 		private ITimeRange _TimeRangeCache;
 
-		// Token: 0x04004442 RID: 17474
+		// Token: 0x040047D6 RID: 18390
 		private bool _TimeRangeInited;
 
-		// Token: 0x04004443 RID: 17475
+		// Token: 0x040047D7 RID: 18391
 		private List<int> _CheckDungeonFailureCache;
 
-		// Token: 0x04004444 RID: 17476
+		// Token: 0x040047D8 RID: 18392
 		private bool _CheckDungeonFailureInited;
 
-		// Token: 0x04004445 RID: 17477
+		// Token: 0x040047D9 RID: 18393
 		private IRangeLimitingCondition _RangeLimitingCache;
 
-		// Token: 0x04004446 RID: 17478
+		// Token: 0x040047DA RID: 18394
 		private bool _RangeLimitingInited;
 
-		// Token: 0x04004447 RID: 17479
+		// Token: 0x040047DB RID: 18395
 		private IEntityDistanceLimitingCondition _EntityDistanceLimitingCache;
 
-		// Token: 0x04004448 RID: 17480
+		// Token: 0x040047DC RID: 18396
 		private bool _EntityDistanceLimitingInited;
 
-		// Token: 0x04004449 RID: 17481
+		// Token: 0x040047DD RID: 18397
 		private IQuestFailedConditionEntityAlert _EntityAlertCache;
 
-		// Token: 0x0400444A RID: 17482
+		// Token: 0x040047DE RID: 18398
 		private bool _EntityAlertInited;
 
-		// Token: 0x0400444B RID: 17483
+		// Token: 0x040047DF RID: 18399
 		private IQuestFailedConditionEntityDeath _EntityDeathConditionCache;
 
-		// Token: 0x0400444C RID: 17484
+		// Token: 0x040047E0 RID: 18400
 		private bool _EntityDeathConditionInited;
 
-		// Token: 0x0400444D RID: 17485
+		// Token: 0x040047E1 RID: 18401
 		private IQuestFailedConditionEntityState _EntityStateConditionCache;
 
-		// Token: 0x0400444E RID: 17486
+		// Token: 0x040047E2 RID: 18402
 		private bool _EntityStateConditionInited;
 
-		// Token: 0x0400444F RID: 17487
+		// Token: 0x040047E3 RID: 18403
 		private ISneakPlayCondition _SneakPlayConditionCache;
 
-		// Token: 0x04004450 RID: 17488
+		// Token: 0x040047E4 RID: 18404
 		private bool _SneakPlayConditionInited;
 
-		// Token: 0x04004451 RID: 17489
+		// Token: 0x040047E5 RID: 18405
 		private IQuestFailedConditionPlayerMotionState _PlayerMotionStateConditionCache;
 
-		// Token: 0x04004452 RID: 17490
+		// Token: 0x040047E6 RID: 18406
 		private bool _PlayerMotionStateConditionInited;
 
-		// Token: 0x04004453 RID: 17491
+		// Token: 0x040047E7 RID: 18407
 		private IQuestFailedConditionPlayerMovementMode _PlayerMovementModeConditionCache;
 
-		// Token: 0x04004454 RID: 17492
+		// Token: 0x040047E8 RID: 18408
 		private bool _PlayerMovementModeConditionInited;
 
-		// Token: 0x04004455 RID: 17493
+		// Token: 0x040047E9 RID: 18409
 		private ICheckDataLayer _CheckDataLayerCache;
 
-		// Token: 0x04004456 RID: 17494
+		// Token: 0x040047EA RID: 18410
 		private bool _CheckDataLayerInited;
 
-		// Token: 0x04004457 RID: 17495
+		// Token: 0x040047EB RID: 18411
 		private IFailedTeleport _FailedTeleportCache;
 
-		// Token: 0x04004458 RID: 17496
+		// Token: 0x040047EC RID: 18412
 		private bool _FailedTeleportInited;
 
-		// Token: 0x04004459 RID: 17497
+		// Token: 0x040047ED RID: 18413
 		private IAddTimeConfig _AddTimeConfigCache;
 
-		// Token: 0x0400445A RID: 17498
+		// Token: 0x040047EE RID: 18414
 		private bool _AddTimeConfigInited;
 
-		// Token: 0x0400445B RID: 17499
+		// Token: 0x040047EF RID: 18415
 		private ICompareVarConditionInQuestFailed _CompareVarCache;
 
-		// Token: 0x0400445C RID: 17500
+		// Token: 0x040047F0 RID: 18416
 		private bool _CompareVarInited;
 
-		// Token: 0x0400445D RID: 17501
+		// Token: 0x040047F1 RID: 18417
 		private IRecallFishingBoat _RecallVehicleCache;
 
-		// Token: 0x0400445E RID: 17502
+		// Token: 0x040047F2 RID: 18418
 		private bool _RecallVehicleInited;
 	}
 }

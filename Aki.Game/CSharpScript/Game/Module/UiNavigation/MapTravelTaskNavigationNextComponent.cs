@@ -4,21 +4,21 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200498F RID: 18831
+	// Token: 0x02003909 RID: 14601
 	public class MapTravelTaskNavigationNextComponent : NavigationGroupNextComponent
 	{
-		// Token: 0x06031118 RID: 200984 RVA: 0x00B635F9 File Offset: 0x00B617F9
+		// Token: 0x06025C4E RID: 154702 RVA: 0x00A9E549 File Offset: 0x00A9C749
 		public MapTravelTaskNavigationNextComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031119 RID: 200985 RVA: 0x00B63602 File Offset: 0x00B61802
+		// Token: 0x06025C4F RID: 154703 RVA: 0x00A9E552 File Offset: 0x00A9C752
 		protected override void JumpToNextGroupListener()
 		{
 			EventSystem.Instance.Emit(EEventName.MapTravelTaskNavigationNext);
 		}
 
-		// Token: 0x0603111A RID: 200986 RVA: 0x00B63614 File Offset: 0x00B61814
+		// Token: 0x06025C50 RID: 154704 RVA: 0x00A9E564 File Offset: 0x00A9C764
 		protected override void OnRelease(HotKeyMap config)
 		{
 			EventSystem.Instance.Emit(EEventName.MapTravelTaskNavigationNext);

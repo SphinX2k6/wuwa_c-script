@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002C2 RID: 706
+	// Token: 0x02000309 RID: 777
 	public class IDollGrabInfiniteScoreReward_SetValue
 	{
-		// Token: 0x04000C1B RID: 3099
+		// Token: 0x04000D05 RID: 3333
 		public int TargetScore;
 
-		// Token: 0x04000C1C RID: 3100
+		// Token: 0x04000D06 RID: 3334
 		public int RewardId;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002A7 RID: 679
+	// Token: 0x020002BB RID: 699
 	public class ConfigExploreTypeByType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000FEF RID: 4079 RVA: 0x000B3800 File Offset: 0x000B1A00
+		// Token: 0x06001067 RID: 4199 RVA: 0x000B9AC4 File Offset: 0x000B7CC4
 		static ConfigExploreTypeByType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigExploreTypeByType.CreateStaticDefaultValue), new Action(ConfigExploreTypeByType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000FF0 RID: 4080 RVA: 0x000B3820 File Offset: 0x000B1A20
+		// Token: 0x06001068 RID: 4200 RVA: 0x000B9AE4 File Offset: 0x000B7CE4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigExploreTypeByType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000FF1 RID: 4081 RVA: 0x000B389F File Offset: 0x000B1A9F
+		// Token: 0x06001069 RID: 4201 RVA: 0x000B9B63 File Offset: 0x000B7D63
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigExploreTypeByType.LogPair = null;
 			ConfigExploreTypeByType.HandleId = 0;
 		}
 
-		// Token: 0x06000FF2 RID: 4082 RVA: 0x000B38AD File Offset: 0x000B1AAD
+		// Token: 0x0600106A RID: 4202 RVA: 0x000B9B71 File Offset: 0x000B7D71
 		public static void Init()
 		{
 			ConfigExploreTypeByType.HandleId = ConfigCommon.InitDataStatement(ConfigExploreTypeByType.HandleId, "db_explore_progress.db", "select BinData from `ExploreType` where ExploreTypeKey=?");
 		}
 
-		// Token: 0x06000FF3 RID: 4083 RVA: 0x000B38C8 File Offset: 0x000B1AC8
+		// Token: 0x0600106B RID: 4203 RVA: 0x000B9B8C File Offset: 0x000B7D8C
 		public static ExploreType? GetConfig(int p0ExploreTypeKey, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigExploreTypeByType.HandleId, ConfigExploreTypeByType.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ExploreType?(rootAsExploreType);
 		}
 
-		// Token: 0x04001275 RID: 4725
+		// Token: 0x04001301 RID: 4865
 		private const string DB = "db_explore_progress.db";
 
-		// Token: 0x04001276 RID: 4726
+		// Token: 0x04001302 RID: 4866
 		private const string FILE = "t.探索度.xlsx";
 
-		// Token: 0x04001277 RID: 4727
+		// Token: 0x04001303 RID: 4867
 		private const string TABLE = "ExploreType";
 
-		// Token: 0x04001278 RID: 4728
+		// Token: 0x04001304 RID: 4868
 		private const string COMMAND = "select BinData from `ExploreType` where ExploreTypeKey=?";
 
-		// Token: 0x04001279 RID: 4729
+		// Token: 0x04001305 RID: 4869
 		private const string KEY_PREFIX = "ExploreTypeByType";
 
-		// Token: 0x0400127A RID: 4730
+		// Token: 0x04001306 RID: 4870
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400127B RID: 4731
+		// Token: 0x04001307 RID: 4871
 		private static int HandleId;
 	}
 }

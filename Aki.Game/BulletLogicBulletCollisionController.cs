@@ -6,7 +6,7 @@ using CSharpScript.Game;
 using CSharpScript.Game.Camera;
 using UnrealEngine;
 
-// Token: 0x02002DC8 RID: 11720
+// Token: 0x02002322 RID: 8994
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,14 +16,14 @@ using UnrealEngine;
 })]
 public class BulletLogicBulletCollisionController : BulletLogicController<LogicDataBulletCollision, BulletInfo>
 {
-	// Token: 0x060189F1 RID: 100849 RVA: 0x0064B601 File Offset: 0x00649801
+	// Token: 0x06016299 RID: 90777 RVA: 0x006713E5 File Offset: 0x0066F5E5
 	public BulletLogicBulletCollisionController(LogicDataBulletCollision logicConfig, Entity bullet) : base(logicConfig, bullet)
 	{
 		this.ActorComponent = bullet.GetComponent<BulletActorComponent>();
 		this.BulletInfo = this.Bullet.GetBulletInfo();
 	}
 
-	// Token: 0x060189F2 RID: 100850 RVA: 0x0064B634 File Offset: 0x00649834
+	// Token: 0x0601629A RID: 90778 RVA: 0x00671418 File Offset: 0x0066F618
 	[NullableContext(2)]
 	public override void BulletLogicAction(BulletInfo otherBulletInfo = null)
 	{
@@ -117,7 +117,7 @@ public class BulletLogicBulletCollisionController : BulletLogicController<LogicD
 				ResourceSystem.Instance.LoadAsync<UClass>(this.LogicController.ScreenShake.ToAssetPathName(), delegate([Nullable(2)] UClass shakeType, string path)
 				{
 					FVectorDouble value2 = Global.CharacterCameraManager.D_GetCameraLocation();
-					CameraController.Instance.PlayWorldCameraShake(shakeType, new FVectorDouble?(value2), 0f, 100f, 1f, false, "MainCamera");
+					CameraController.Instance.PlayWorldCameraShake(new TSubclassOf<UCameraShakeBase>?(shakeType), new FVectorDouble?(value2), 0f, 100f, 1f, false, "MainCamera");
 				}, 100, "js_undefined");
 			}
 		}
@@ -158,13 +158,13 @@ public class BulletLogicBulletCollisionController : BulletLogicController<LogicD
 		BulletPool.RecycleVector(vector);
 	}
 
-	// Token: 0x060189F3 RID: 100851 RVA: 0x0064BB2F File Offset: 0x00649D2F
+	// Token: 0x0601629B RID: 90779 RVA: 0x00671913 File Offset: 0x0066FB13
 	public override void OnBulletDestroy()
 	{
 		this.TriggeredBulletIds.Clear();
 	}
 
-	// Token: 0x060189F4 RID: 100852 RVA: 0x0064BB3C File Offset: 0x00649D3C
+	// Token: 0x0601629C RID: 90780 RVA: 0x00671920 File Offset: 0x0066FB20
 	private unsafe bool ComputeSelfRadiusPoint(BulletInfo otherBulletInfo, global::Vector outLocation)
 	{
 		EBulletShape shape = this.BulletInfo.BulletDataMain.Base.Shape;
@@ -210,17 +210,17 @@ public class BulletLogicBulletCollisionController : BulletLogicController<LogicD
 		return result;
 	}
 
-	// Token: 0x0400B748 RID: 46920
+	// Token: 0x0400BAC3 RID: 47811
 	private const float OUTER_RADIUS = 100f;
 
-	// Token: 0x0400B749 RID: 46921
+	// Token: 0x0400BAC4 RID: 47812
 	[Nullable(2)]
 	private readonly BulletActorComponent ActorComponent;
 
-	// Token: 0x0400B74A RID: 46922
+	// Token: 0x0400BAC5 RID: 47813
 	[Nullable(2)]
 	private readonly BulletInfo BulletInfo;
 
-	// Token: 0x0400B74B RID: 46923
+	// Token: 0x0400BAC6 RID: 47814
 	private readonly HashSet<int> TriggeredBulletIds = new HashSet<int>();
 }

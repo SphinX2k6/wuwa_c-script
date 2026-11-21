@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020E6 RID: 8422
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002347 RID: 9031
 	public class NpcLeisureInteract : ActionParams
 	{
-		// Token: 0x0600B91E RID: 47390 RVA: 0x001AC10C File Offset: 0x001AA30C
+		// Token: 0x0600C4AA RID: 50346 RVA: 0x001C326C File Offset: 0x001C146C
 		private NpcLeisureInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B91F RID: 47391 RVA: 0x001AC144 File Offset: 0x001AA344
+		// Token: 0x0600C4AB RID: 50347 RVA: 0x001C32A4 File Offset: 0x001C14A4
 		public static NpcLeisureInteract Create([Nullable(2)] NpcLeisureInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B920 RID: 47392 RVA: 0x001AC157 File Offset: 0x001AA357
+		// Token: 0x0600C4AC RID: 50348 RVA: 0x001C32B7 File Offset: 0x001C14B7
 		public static NpcLeisureInteract CreateFromSetValue([Nullable(2)] NpcLeisureInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B921 RID: 47393 RVA: 0x001AC16A File Offset: 0x001AA36A
+		// Token: 0x0600C4AD RID: 50349 RVA: 0x001C32CA File Offset: 0x001C14CA
 		public NpcLeisureInteract_SetValue ToSetValue()
 		{
 			return new NpcLeisureInteract_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700388F RID: 14479
-		// (get) Token: 0x0600B922 RID: 47394 RVA: 0x001AC17D File Offset: 0x001AA37D
-		// (set) Token: 0x0600B923 RID: 47395 RVA: 0x001AC1A4 File Offset: 0x001AA3A4
+		// Token: 0x17003B7B RID: 15227
+		// (get) Token: 0x0600C4AE RID: 50350 RVA: 0x001C32DD File Offset: 0x001C14DD
+		// (set) Token: 0x0600C4AF RID: 50351 RVA: 0x001C3304 File Offset: 0x001C1504
 		public virtual INpcLeisureInteractType Option
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006EDF RID: 28383
+		// Token: 0x04007513 RID: 29971
 		[Nullable(2)]
 		protected new NpcLeisureInteract FbInstance;
 
-		// Token: 0x04006EE0 RID: 28384
+		// Token: 0x04007514 RID: 29972
 		[Nullable(2)]
 		protected NpcLeisureInteract_SetValue PocoInterface;
 	}

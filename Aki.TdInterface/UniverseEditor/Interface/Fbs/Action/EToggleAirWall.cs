@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200603B RID: 24635
+	// Token: 0x0200669B RID: 26267
 	public enum EToggleAirWall : byte
 	{
-		// Token: 0x04010176 RID: 65910
+		// Token: 0x04010F66 RID: 69478
 		Open,
-		// Token: 0x04010177 RID: 65911
+		// Token: 0x04010F67 RID: 69479
 		Close
 	}
 }

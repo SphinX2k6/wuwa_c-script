@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Phantom.Vision.View;
 
-// Token: 0x020018DA RID: 6362
+// Token: 0x02000D93 RID: 3475
 [NullableContext(1)]
 [Nullable(0)]
 public class TipsVisionData : ItemTipsData
 {
-	// Token: 0x0600BAA2 RID: 47778 RVA: 0x002A44B0 File Offset: 0x002A26B0
+	// Token: 0x06008E8B RID: 36491 RVA: 0x002AEC2C File Offset: 0x002ACE2C
 	public TipsVisionData(ItemTipsParam tipsParam) : base(tipsParam)
 	{
 		Aki.Protocol.PhantomItem phantomItem = tipsParam.ExtraParam as Aki.Protocol.PhantomItem;
@@ -150,28 +150,28 @@ public class TipsVisionData : ItemTipsData
 		this.VisionDetailInfoComponentData = visionDetailInfoComponentData;
 	}
 
-	// Token: 0x0600BAA3 RID: 47779 RVA: 0x002A4A68 File Offset: 0x002A2C68
+	// Token: 0x06008E8C RID: 36492 RVA: 0x002AF1E4 File Offset: 0x002AD3E4
 	protected override bool OnIsShowIconBig()
 	{
 		return true;
 	}
 
-	// Token: 0x040054B6 RID: 21686
+	// Token: 0x04005561 RID: 21857
 	public int VisionId;
 
-	// Token: 0x040054B7 RID: 21687
+	// Token: 0x04005562 RID: 21858
 	public string VisionType = "";
 
-	// Token: 0x040054B8 RID: 21688
+	// Token: 0x04005563 RID: 21859
 	public int Cost;
 
-	// Token: 0x040054B9 RID: 21689
+	// Token: 0x04005564 RID: 21860
 	public string UpgradeLevel = "";
 
-	// Token: 0x040054BA RID: 21690
+	// Token: 0x04005565 RID: 21861
 	public string MainSkillText = "";
 
-	// Token: 0x040054BB RID: 21691
+	// Token: 0x04005566 RID: 21862
 	[Nullable(new byte[]
 	{
 		2,
@@ -179,11 +179,11 @@ public class TipsVisionData : ItemTipsData
 	})]
 	public string[] MainSkillParams;
 
-	// Token: 0x040054BC RID: 21692
+	// Token: 0x04005567 RID: 21863
 	[Nullable(2)]
 	public string SkillUniqueText;
 
-	// Token: 0x040054BD RID: 21693
+	// Token: 0x04005568 RID: 21864
 	[Nullable(new byte[]
 	{
 		2,
@@ -191,10 +191,10 @@ public class TipsVisionData : ItemTipsData
 	})]
 	public string[] SkillUniqueTextParam;
 
-	// Token: 0x040054BE RID: 21694
+	// Token: 0x04005569 RID: 21865
 	public int? SkillUniqueRoleId;
 
-	// Token: 0x040054BF RID: 21695
+	// Token: 0x0400556A RID: 21866
 	[Nullable(new byte[]
 	{
 		2,
@@ -202,22 +202,22 @@ public class TipsVisionData : ItemTipsData
 	})]
 	public ITipsAttributeItemData[] AttributeData;
 
-	// Token: 0x040054C0 RID: 21696
+	// Token: 0x0400556B RID: 21867
 	public bool IsEquip;
 
-	// Token: 0x040054C1 RID: 21697
+	// Token: 0x0400556C RID: 21868
 	public int? EquippedId;
 
-	// Token: 0x040054C2 RID: 21698
+	// Token: 0x0400556D RID: 21869
 	public int StackCount = 1;
 
-	// Token: 0x040054C3 RID: 21699
+	// Token: 0x0400556E RID: 21870
 	public int SelectedCount;
 
-	// Token: 0x040054C4 RID: 21700
+	// Token: 0x0400556F RID: 21871
 	public bool CanStack;
 
-	// Token: 0x040054C5 RID: 21701
+	// Token: 0x04005570 RID: 21872
 	[Nullable(2)]
 	public VisionDetailInfoComponentData VisionDetailInfoComponentData;
 }

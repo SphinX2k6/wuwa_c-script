@@ -13,14 +13,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AutoPilot
 {
-	// Token: 0x02005E78 RID: 24184
+	// Token: 0x02004E5D RID: 20061
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class AutoPilotView : UiPanelBase, IExtraShowCursor
 	{
-		// Token: 0x17008E84 RID: 36484
-		// (get) Token: 0x0603D822 RID: 251938 RVA: 0x00ED82BF File Offset: 0x00ED64BF
-		// (set) Token: 0x0603D821 RID: 251937 RVA: 0x00ED828F File Offset: 0x00ED648F
+		// Token: 0x17006256 RID: 25174
+		// (get) Token: 0x060327B2 RID: 206770 RVA: 0x00E2984B File Offset: 0x00E27A4B
+		// (set) Token: 0x060327B1 RID: 206769 RVA: 0x00E2981B File Offset: 0x00E27A1B
 		private bool IsCanShowMovieBtn
 		{
 			get
@@ -41,9 +41,9 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x17008E85 RID: 36485
-		// (get) Token: 0x0603D824 RID: 251940 RVA: 0x00ED82DF File Offset: 0x00ED64DF
-		// (set) Token: 0x0603D823 RID: 251939 RVA: 0x00ED82C7 File Offset: 0x00ED64C7
+		// Token: 0x17006257 RID: 25175
+		// (get) Token: 0x060327B4 RID: 206772 RVA: 0x00E2986B File Offset: 0x00E27A6B
+		// (set) Token: 0x060327B3 RID: 206771 RVA: 0x00E29853 File Offset: 0x00E27A53
 		private bool IsCanShowSkipBtn
 		{
 			get
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D825 RID: 251941 RVA: 0x00ED82E8 File Offset: 0x00ED64E8
+		// Token: 0x060327B5 RID: 206773 RVA: 0x00E29874 File Offset: 0x00E27A74
 		protected override UniTask OnBeforeStartAsync()
 		{
 			AutoPilotView.<OnBeforeStartAsync>d__22 <OnBeforeStartAsync>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D826 RID: 251942 RVA: 0x00ED832B File Offset: 0x00ED652B
+		// Token: 0x060327B6 RID: 206774 RVA: 0x00E298B7 File Offset: 0x00E27AB7
 		protected override void OnStart()
 		{
 			this.AddTick();
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.AddEvents();
 		}
 
-		// Token: 0x0603D827 RID: 251943 RVA: 0x00ED8345 File Offset: 0x00ED6545
+		// Token: 0x060327B7 RID: 206775 RVA: 0x00E298D1 File Offset: 0x00E27AD1
 		protected virtual void InitUi()
 		{
 			this.InitSkipBtn();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			EventSystem.Instance.Emit<bool>(EEventName.OnAutoPilotTrackMarkVisibleChanged, true);
 		}
 
-		// Token: 0x0603D828 RID: 251944 RVA: 0x00ED8378 File Offset: 0x00ED6578
+		// Token: 0x060327B8 RID: 206776 RVA: 0x00E29904 File Offset: 0x00E27B04
 		private void AddEvents()
 		{
 			InputManager.Instance.RegisterLockShortcutKeyReason("AutoPilotView", new TLockShortcutKeyDelegate(this.LockShortCutKeyDelegate));
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			InputExtraShowCursorCenter.Instance.RegisterExtraRefreshData("AutoPilotView", this);
 		}
 
-		// Token: 0x0603D829 RID: 251945 RVA: 0x00ED8444 File Offset: 0x00ED6644
+		// Token: 0x060327B9 RID: 206777 RVA: 0x00E299D0 File Offset: 0x00E27BD0
 		private void RemoveEvents()
 		{
 			InputManager.Instance.RemoveLockShortcutKeyReason("AutoPilotView");
@@ -121,10 +121,10 @@ namespace CSharpScript.Game.Module.AutoPilot
 			InputExtraShowCursorCenter.Instance.UnRegisterExtraRefreshData("AutoPilotView");
 		}
 
-		// Token: 0x0603D82A RID: 251946
+		// Token: 0x060327BA RID: 206778
 		protected abstract int GetSkipBtnCompId();
 
-		// Token: 0x0603D82B RID: 251947 RVA: 0x00ED8504 File Offset: 0x00ED6704
+		// Token: 0x060327BB RID: 206779 RVA: 0x00E29A90 File Offset: 0x00E27C90
 		private void InitSkipBtn()
 		{
 			this.SkipBtn = base.GetButton(this.GetSkipBtnCompId());
@@ -140,10 +140,10 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.SkipBtn.RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x0603D82C RID: 251948
+		// Token: 0x060327BC RID: 206780
 		protected abstract int GetRideShareBtnCompId();
 
-		// Token: 0x0603D82D RID: 251949 RVA: 0x00ED8570 File Offset: 0x00ED6770
+		// Token: 0x060327BD RID: 206781 RVA: 0x00E29AFC File Offset: 0x00E27CFC
 		private void InitRideShareBtn()
 		{
 			this.RideShareBtn = base.GetButton(this.GetRideShareBtnCompId());
@@ -166,10 +166,10 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.RideSharePressConfigTime *= 1000f;
 		}
 
-		// Token: 0x0603D82E RID: 251950
+		// Token: 0x060327BE RID: 206782
 		protected abstract int GetExitBtnCompId();
 
-		// Token: 0x0603D82F RID: 251951 RVA: 0x00ED8621 File Offset: 0x00ED6821
+		// Token: 0x060327BF RID: 206783 RVA: 0x00E29BAD File Offset: 0x00E27DAD
 		private void InitExitBtn()
 		{
 			this.ExitBtn = base.GetButton(this.GetExitBtnCompId());
@@ -180,13 +180,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.ExitBtn.OnClickCallBack.Bind(new Action(this.OnClickExitBtn));
 		}
 
-		// Token: 0x0603D830 RID: 251952
+		// Token: 0x060327C0 RID: 206784
 		protected abstract int GetMovieBtnCompId();
 
-		// Token: 0x0603D831 RID: 251953
+		// Token: 0x060327C1 RID: 206785
 		protected abstract int GetMovieBtnProgressCompId();
 
-		// Token: 0x0603D832 RID: 251954 RVA: 0x00ED865C File Offset: 0x00ED685C
+		// Token: 0x060327C2 RID: 206786 RVA: 0x00E29BE8 File Offset: 0x00E27DE8
 		private void InitMovieBtn()
 		{
 			this.MovieBtn = base.GetButton(this.GetMovieBtnCompId());
@@ -211,10 +211,10 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.ExitMovieModeConfigTime = (float)ConfigCommonParamById.GetIntConfig("ExitMovieModeTimeThreshold").GetValueOrDefault(1);
 		}
 
-		// Token: 0x0603D833 RID: 251955
+		// Token: 0x060327C3 RID: 206787
 		protected abstract int GetPhotoBtnCompId();
 
-		// Token: 0x0603D834 RID: 251956 RVA: 0x00ED8732 File Offset: 0x00ED6932
+		// Token: 0x060327C4 RID: 206788 RVA: 0x00E29CBE File Offset: 0x00E27EBE
 		private void InitPhotoBtn()
 		{
 			this.PhotoBtn = base.GetButton(this.GetPhotoBtnCompId());
@@ -226,13 +226,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			photoBtn.OnClickCallBack.Bind(new Action(this.OnClickPhotoBtn));
 		}
 
-		// Token: 0x0603D835 RID: 251957 RVA: 0x00ED8767 File Offset: 0x00ED6967
+		// Token: 0x060327C5 RID: 206789 RVA: 0x00E29CF3 File Offset: 0x00E27EF3
 		private void AddTick()
 		{
 			this.TickId = TickSystem.Instance.Add(new Action<float>(this.OnTick), "AutoPilotView", ETickingGroup.TG_PrePhysics, true, 0, true).Id;
 		}
 
-		// Token: 0x0603D836 RID: 251958 RVA: 0x00ED8793 File Offset: 0x00ED6993
+		// Token: 0x060327C6 RID: 206790 RVA: 0x00E29D1F File Offset: 0x00E27F1F
 		protected override void OnBeforeShow()
 		{
 			if (this.TickId != -1)
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.UpdateRideShareProgress(0f);
 		}
 
-		// Token: 0x0603D837 RID: 251959 RVA: 0x00ED87BA File Offset: 0x00ED69BA
+		// Token: 0x060327C7 RID: 206791 RVA: 0x00E29D46 File Offset: 0x00E27F46
 		protected override void OnAfterHide()
 		{
 			if (this.TickId != -1)
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D838 RID: 251960 RVA: 0x00ED87D6 File Offset: 0x00ED69D6
+		// Token: 0x060327C8 RID: 206792 RVA: 0x00E29D62 File Offset: 0x00E27F62
 		private void OnTick(float deltaTime)
 		{
 			AutoPilotModel instance = AutoPilotModel.Instance;
@@ -263,22 +263,22 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.OnTickRideShareProgress(deltaTime);
 		}
 
-		// Token: 0x0603D839 RID: 251961 RVA: 0x00ED87FE File Offset: 0x00ED69FE
+		// Token: 0x060327C9 RID: 206793 RVA: 0x00E29D8A File Offset: 0x00E27F8A
 		private void OnClickSkipBtn()
 		{
 			this.HandleClickSkipBtn();
 		}
 
-		// Token: 0x0603D83A RID: 251962
+		// Token: 0x060327CA RID: 206794
 		protected abstract void HandleClickSkipBtn();
 
-		// Token: 0x0603D83B RID: 251963 RVA: 0x00ED8806 File Offset: 0x00ED6A06
+		// Token: 0x060327CB RID: 206795 RVA: 0x00E29D92 File Offset: 0x00E27F92
 		private void OnClickExitBtn()
 		{
 			this.HandleClickExitBtn().Forget();
 		}
 
-		// Token: 0x0603D83C RID: 251964 RVA: 0x00ED8814 File Offset: 0x00ED6A14
+		// Token: 0x060327CC RID: 206796 RVA: 0x00E29DA0 File Offset: 0x00E27FA0
 		private UniTask HandleClickExitBtn()
 		{
 			AutoPilotView.<HandleClickExitBtn>d__45 <HandleClickExitBtn>d__;
@@ -289,13 +289,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <HandleClickExitBtn>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D83D RID: 251965 RVA: 0x00ED8857 File Offset: 0x00ED6A57
+		// Token: 0x060327CD RID: 206797 RVA: 0x00E29DE3 File Offset: 0x00E27FE3
 		private void OnPointDownMovieBtn()
 		{
 			this.EnterMovieMode();
 		}
 
-		// Token: 0x0603D83E RID: 251966 RVA: 0x00ED8860 File Offset: 0x00ED6A60
+		// Token: 0x060327CE RID: 206798 RVA: 0x00E29DEC File Offset: 0x00E27FEC
 		private void OnPointUpMovieBtn()
 		{
 			AutoPilotModel instance = AutoPilotModel.Instance;
@@ -306,19 +306,19 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.ExitMovieMode(null).Forget();
 		}
 
-		// Token: 0x0603D83F RID: 251967 RVA: 0x00ED8895 File Offset: 0x00ED6A95
+		// Token: 0x060327CF RID: 206799 RVA: 0x00E29E21 File Offset: 0x00E28021
 		private void OnPointDownRideShareBtn()
 		{
 			this.IsRideSharePressed = true;
 		}
 
-		// Token: 0x0603D840 RID: 251968 RVA: 0x00ED889E File Offset: 0x00ED6A9E
+		// Token: 0x060327D0 RID: 206800 RVA: 0x00E29E2A File Offset: 0x00E2802A
 		private void OnPointUpRideShareBtn()
 		{
 			this.IsRideSharePressed = false;
 		}
 
-		// Token: 0x0603D841 RID: 251969 RVA: 0x00ED88A8 File Offset: 0x00ED6AA8
+		// Token: 0x060327D1 RID: 206801 RVA: 0x00E29E34 File Offset: 0x00E28034
 		private void EnterRideShareMode()
 		{
 			MovieModeController.Instance.ResetMovieModeHideUi(true);
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.OpenRideShareView().Forget();
 		}
 
-		// Token: 0x0603D842 RID: 251970 RVA: 0x00ED88F8 File Offset: 0x00ED6AF8
+		// Token: 0x060327D2 RID: 206802 RVA: 0x00E29E84 File Offset: 0x00E28084
 		private UniTask OpenRideShareViewWithRequest()
 		{
 			AutoPilotView.<OpenRideShareViewWithRequest>d__51 <OpenRideShareViewWithRequest>d__;
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <OpenRideShareViewWithRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D843 RID: 251971 RVA: 0x00ED893C File Offset: 0x00ED6B3C
+		// Token: 0x060327D3 RID: 206803 RVA: 0x00E29EC8 File Offset: 0x00E280C8
 		private UniTask OpenRideShareView()
 		{
 			AutoPilotView.<OpenRideShareView>d__52 <OpenRideShareView>d__;
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <OpenRideShareView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D844 RID: 251972 RVA: 0x00ED897F File Offset: 0x00ED6B7F
+		// Token: 0x060327D4 RID: 206804 RVA: 0x00E29F0B File Offset: 0x00E2810B
 		private void OpenMotorcycleTogetherView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MotorcycleTogetherView, null, delegate(bool success, int _)
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			});
 		}
 
-		// Token: 0x0603D845 RID: 251973 RVA: 0x00ED89A0 File Offset: 0x00ED6BA0
+		// Token: 0x060327D5 RID: 206805 RVA: 0x00E29F2C File Offset: 0x00E2812C
 		private UniTask AwaitRideShareCamera()
 		{
 			AutoPilotView.<AwaitRideShareCamera>d__54 <AwaitRideShareCamera>d__;
@@ -384,7 +384,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <AwaitRideShareCamera>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D846 RID: 251974 RVA: 0x00ED89DC File Offset: 0x00ED6BDC
+		// Token: 0x060327D6 RID: 206806 RVA: 0x00E29F68 File Offset: 0x00E28168
 		private UniTask AwaitEnterRideShare()
 		{
 			AutoPilotView.<AwaitEnterRideShare>d__55 <AwaitEnterRideShare>d__;
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <AwaitEnterRideShare>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D847 RID: 251975 RVA: 0x00ED8A18 File Offset: 0x00ED6C18
+		// Token: 0x060327D7 RID: 206807 RVA: 0x00E29FA4 File Offset: 0x00E281A4
 		private UniTask AwaitExitRideShare()
 		{
 			AutoPilotView.<AwaitExitRideShare>d__56 <AwaitExitRideShare>d__;
@@ -404,7 +404,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <AwaitExitRideShare>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D848 RID: 251976 RVA: 0x00ED8A54 File Offset: 0x00ED6C54
+		// Token: 0x060327D8 RID: 206808 RVA: 0x00E29FE0 File Offset: 0x00E281E0
 		protected void OnClickPhotoBtn()
 		{
 			PhotographController.Instance.ScreenShot(new PhotoSaveViewParam
@@ -420,7 +420,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			});
 		}
 
-		// Token: 0x0603D849 RID: 251977 RVA: 0x00ED8AA8 File Offset: 0x00ED6CA8
+		// Token: 0x060327D9 RID: 206809 RVA: 0x00E2A034 File Offset: 0x00E28234
 		public void EnterMovieMode()
 		{
 			string randomItem = MathUtils.Instance.GetRandomItem<string>(AutoPilotModel.Instance.MovieModeCameraRowNameArray);
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}).Forget();
 		}
 
-		// Token: 0x0603D84A RID: 251978 RVA: 0x00ED8B8C File Offset: 0x00ED6D8C
+		// Token: 0x060327DA RID: 206810 RVA: 0x00E2A118 File Offset: 0x00E28318
 		public UniTask ExitMovieMode(float? blendTime = null)
 		{
 			AutoPilotView.<ExitMovieMode>d__59 <ExitMovieMode>d__;
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <ExitMovieMode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D84B RID: 251979 RVA: 0x00ED8BD8 File Offset: 0x00ED6DD8
+		// Token: 0x060327DB RID: 206811 RVA: 0x00E2A164 File Offset: 0x00E28364
 		private void OnTickIsCanShowMovieBtn()
 		{
 			double autoPilotTime = AutoPilotModel.Instance.GetAutoPilotTime();
@@ -521,7 +521,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.IsCanShowMovieBtn = true;
 		}
 
-		// Token: 0x0603D84C RID: 251980 RVA: 0x00ED8C40 File Offset: 0x00ED6E40
+		// Token: 0x060327DC RID: 206812 RVA: 0x00E2A1CC File Offset: 0x00E283CC
 		private void OnTickIsCanShowSkipBtn()
 		{
 			double autoPilotTime = AutoPilotModel.Instance.GetAutoPilotTime();
@@ -543,7 +543,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.IsCanShowSkipBtn = true;
 		}
 
-		// Token: 0x0603D84D RID: 251981 RVA: 0x00ED8CA4 File Offset: 0x00ED6EA4
+		// Token: 0x060327DD RID: 206813 RVA: 0x00E2A230 File Offset: 0x00E28430
 		private void RefreshMovieBtnVisible()
 		{
 			bool isInMovieMode = AutoPilotModel.Instance.GetIsInMovieMode();
@@ -560,7 +560,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			uuiitem.SetUIActive(this.IsCanShowMovieBtn && !isInMovieMode);
 		}
 
-		// Token: 0x0603D84E RID: 251982 RVA: 0x00ED8CF0 File Offset: 0x00ED6EF0
+		// Token: 0x060327DE RID: 206814 RVA: 0x00E2A27C File Offset: 0x00E2847C
 		private void RefreshSkipBtnVisible()
 		{
 			UUIButtonComponent skipBtn = this.SkipBtn;
@@ -576,7 +576,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			uuiitem.SetUIActive(!this.IsMovieModeHideUi && this.IsCanShowSkipBtn);
 		}
 
-		// Token: 0x0603D84F RID: 251983 RVA: 0x00ED8D30 File Offset: 0x00ED6F30
+		// Token: 0x060327DF RID: 206815 RVA: 0x00E2A2BC File Offset: 0x00E284BC
 		private void RefreshExitBtnVisible()
 		{
 			UUIButtonComponent exitBtn = this.ExitBtn;
@@ -592,7 +592,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			uuiitem.SetUIActive(!this.IsMovieModeHideUi);
 		}
 
-		// Token: 0x0603D850 RID: 251984 RVA: 0x00ED8D68 File Offset: 0x00ED6F68
+		// Token: 0x060327E0 RID: 206816 RVA: 0x00E2A2F4 File Offset: 0x00E284F4
 		protected virtual void RefreshPhotoBtnVisible()
 		{
 			UUIButtonComponent photoBtn = this.PhotoBtn;
@@ -608,7 +608,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			uuiitem.SetUIActive(!this.IsMovieModeHideUi);
 		}
 
-		// Token: 0x0603D851 RID: 251985 RVA: 0x00ED8DA0 File Offset: 0x00ED6FA0
+		// Token: 0x060327E1 RID: 206817 RVA: 0x00E2A32C File Offset: 0x00E2852C
 		private void RefreshRideShareBtnVisible()
 		{
 			bool uiactive = AutoPilotModel.Instance.GetIsInMovieMode() && !this.IsMovieModeHideUi;
@@ -625,7 +625,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			uuiitem.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603D852 RID: 251986 RVA: 0x00ED8DEC File Offset: 0x00ED6FEC
+		// Token: 0x060327E2 RID: 206818 RVA: 0x00E2A378 File Offset: 0x00E28578
 		private void RefreshAutoPilotStateViewVisible()
 		{
 			bool isInMovieMode = AutoPilotModel.Instance.GetIsInMovieMode();
@@ -637,7 +637,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			autoPilotStateView.SetUiActive(!isInMovieMode);
 		}
 
-		// Token: 0x0603D853 RID: 251987 RVA: 0x00ED8E18 File Offset: 0x00ED7018
+		// Token: 0x060327E3 RID: 206819 RVA: 0x00E2A3A4 File Offset: 0x00E285A4
 		protected virtual void RefreshUiVisible()
 		{
 			this.RefreshRideShareBtnVisible();
@@ -647,7 +647,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.RefreshPhotoBtnVisible();
 		}
 
-		// Token: 0x0603D854 RID: 251988 RVA: 0x00ED8E38 File Offset: 0x00ED7038
+		// Token: 0x060327E4 RID: 206820 RVA: 0x00E2A3C4 File Offset: 0x00E285C4
 		protected virtual void RefreshUiByIsMovieModeHideUi()
 		{
 			this.RefreshSkipBtnVisible();
@@ -656,7 +656,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.RefreshRideShareBtnVisible();
 		}
 
-		// Token: 0x0603D855 RID: 251989 RVA: 0x00ED8E52 File Offset: 0x00ED7052
+		// Token: 0x060327E5 RID: 206821 RVA: 0x00E2A3DE File Offset: 0x00E285DE
 		protected virtual void RefreshUiByIsInMovieMode()
 		{
 			this.RefreshMovieBtnVisible();
@@ -664,14 +664,14 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.RefreshAutoPilotStateViewVisible();
 		}
 
-		// Token: 0x0603D856 RID: 251990 RVA: 0x00ED8E66 File Offset: 0x00ED7066
+		// Token: 0x060327E6 RID: 206822 RVA: 0x00E2A3F2 File Offset: 0x00E285F2
 		[NullableContext(1)]
 		private bool LockShortCutKeyDelegate(string actionName, InputDistributeDefine.EActionType actionType)
 		{
 			return AutoPilotModel.Instance.GetIsInMovieMode() || actionName != "地图";
 		}
 
-		// Token: 0x0603D857 RID: 251991 RVA: 0x00ED8E81 File Offset: 0x00ED7081
+		// Token: 0x060327E7 RID: 206823 RVA: 0x00E2A40D File Offset: 0x00E2860D
 		[NullableContext(1)]
 		private void ExitAutoPilotByInput(string axisName, float value, InputIdentification inputIdentification)
 		{
@@ -682,7 +682,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			AutoPilotController.Instance.ExitAutoPilot("ExitAutoPilotByInput", false).Forget();
 		}
 
-		// Token: 0x0603D858 RID: 251992 RVA: 0x00ED8EA4 File Offset: 0x00ED70A4
+		// Token: 0x060327E8 RID: 206824 RVA: 0x00E2A430 File Offset: 0x00E28630
 		[NullableContext(1)]
 		private void OnAspectOffsetUpdate(IMovieModeAspectOffset aspectOffset)
 		{
@@ -699,13 +699,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			BattleUiModel.Instance.SetBattleUiAlpha(1f - aspectOffset.Progress);
 		}
 
-		// Token: 0x0603D859 RID: 251993 RVA: 0x00ED8EFD File Offset: 0x00ED70FD
+		// Token: 0x060327E9 RID: 206825 RVA: 0x00E2A489 File Offset: 0x00E28689
 		private void OnMovieModeHideUiChange(bool isHide)
 		{
 			this.HandleMovieModeHideUiChange(isHide).Forget();
 		}
 
-		// Token: 0x0603D85A RID: 251994 RVA: 0x00ED8F0C File Offset: 0x00ED710C
+		// Token: 0x060327EA RID: 206826 RVA: 0x00E2A498 File Offset: 0x00E28698
 		private UniTask HandleMovieModeHideUiChange(bool isHide)
 		{
 			AutoPilotView.<HandleMovieModeHideUiChange>d__75 <HandleMovieModeHideUiChange>d__;
@@ -717,7 +717,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <HandleMovieModeHideUiChange>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D85B RID: 251995 RVA: 0x00ED8F58 File Offset: 0x00ED7158
+		// Token: 0x060327EB RID: 206827 RVA: 0x00E2A4E4 File Offset: 0x00E286E4
 		private void OnTickRideShareProgress(float deltaTime)
 		{
 			if (!AutoPilotModel.Instance.GetIsInMovieMode() || this.IsMovieModeHideUi)
@@ -751,13 +751,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.UpdateRideShareProgress(progress);
 		}
 
-		// Token: 0x0603D85C RID: 251996 RVA: 0x00ED901F File Offset: 0x00ED721F
+		// Token: 0x060327EC RID: 206828 RVA: 0x00E2A5AB File Offset: 0x00E287AB
 		protected virtual void UpdateRideShareProgress(float progress)
 		{
 			AutoPilotModel.Instance.RideShareBtnProgress = progress;
 		}
 
-		// Token: 0x0603D85D RID: 251997 RVA: 0x00ED902C File Offset: 0x00ED722C
+		// Token: 0x060327ED RID: 206829 RVA: 0x00E2A5B8 File Offset: 0x00E287B8
 		private void UpdateMovieBtnProgress(float progress)
 		{
 			UUITexture movieBtnProgress = this.MovieBtnProgress;
@@ -768,13 +768,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			movieBtnProgress.SetFillAmount(progress);
 		}
 
-		// Token: 0x0603D85E RID: 251998 RVA: 0x00ED903F File Offset: 0x00ED723F
+		// Token: 0x060327EE RID: 206830 RVA: 0x00E2A5CB File Offset: 0x00E287CB
 		public bool IsShowCursor()
 		{
 			return InputDistributeModel.Instance.GetNotAllowFightInputViewNameSet().Count > 0 || (AutoPilotModel.Instance.GetIsInMovieMode() && !this.IsMovieModeHideUi);
 		}
 
-		// Token: 0x0603D85F RID: 251999 RVA: 0x00ED906C File Offset: 0x00ED726C
+		// Token: 0x060327EF RID: 206831 RVA: 0x00E2A5F8 File Offset: 0x00E287F8
 		private void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.MotorcycleTogetherView)
@@ -789,7 +789,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.UpdateRideShareProgress(0f);
 		}
 
-		// Token: 0x0603D860 RID: 252000 RVA: 0x00ED909C File Offset: 0x00ED729C
+		// Token: 0x060327F0 RID: 206832 RVA: 0x00E2A628 File Offset: 0x00E28828
 		private void RemoveTick()
 		{
 			if (this.TickId != -1)
@@ -799,7 +799,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D861 RID: 252001 RVA: 0x00ED90BF File Offset: 0x00ED72BF
+		// Token: 0x060327F1 RID: 206833 RVA: 0x00E2A64B File Offset: 0x00E2884B
 		protected override void OnBeforeDestroy()
 		{
 			BattleUiModel.Instance.SetBattleUiAlpha(1f);
@@ -812,52 +812,52 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.RemoveEvents();
 		}
 
-		// Token: 0x0402019B RID: 131483
+		// Token: 0x0401AC62 RID: 109666
 		private AutoPilotStateView AutoPilotStateView;
 
-		// Token: 0x0402019C RID: 131484
+		// Token: 0x0401AC63 RID: 109667
 		private int TickId = -1;
 
-		// Token: 0x0402019D RID: 131485
+		// Token: 0x0401AC64 RID: 109668
 		private UUITexture MovieBtnProgress;
 
-		// Token: 0x0402019E RID: 131486
+		// Token: 0x0401AC65 RID: 109669
 		private UUIButtonComponent SkipBtn;
 
-		// Token: 0x0402019F RID: 131487
+		// Token: 0x0401AC66 RID: 109670
 		private UUIButtonComponent MovieBtn;
 
-		// Token: 0x040201A0 RID: 131488
+		// Token: 0x0401AC67 RID: 109671
 		private UUIButtonComponent RideShareBtn;
 
-		// Token: 0x040201A1 RID: 131489
+		// Token: 0x0401AC68 RID: 109672
 		private UUIButtonComponent ExitBtn;
 
-		// Token: 0x040201A2 RID: 131490
+		// Token: 0x0401AC69 RID: 109673
 		protected UUIButtonComponent PhotoBtn;
 
-		// Token: 0x040201A3 RID: 131491
+		// Token: 0x0401AC6A RID: 109674
 		protected bool IsMovieModeHideUi;
 
-		// Token: 0x040201A4 RID: 131492
+		// Token: 0x0401AC6B RID: 109675
 		private bool IsRideSharePressed;
 
-		// Token: 0x040201A5 RID: 131493
+		// Token: 0x0401AC6C RID: 109676
 		private float RideSharePressedTime;
 
-		// Token: 0x040201A6 RID: 131494
+		// Token: 0x0401AC6D RID: 109677
 		private float RideSharePressConfigTime;
 
-		// Token: 0x040201A7 RID: 131495
+		// Token: 0x0401AC6E RID: 109678
 		private float EnterMovieModeConfigTime;
 
-		// Token: 0x040201A8 RID: 131496
+		// Token: 0x0401AC6F RID: 109679
 		private float ExitMovieModeConfigTime;
 
-		// Token: 0x040201A9 RID: 131497
+		// Token: 0x0401AC70 RID: 109680
 		private bool IsCanShowMovieBtnInner;
 
-		// Token: 0x040201AA RID: 131498
+		// Token: 0x0401AC71 RID: 109681
 		private bool IsCanShowSkipBtnInner;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000867 RID: 2151
+	// Token: 0x02000883 RID: 2179
 	public class ConfigRogueSkillById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600327C RID: 12924 RVA: 0x00176E4B File Offset: 0x0017504B
+		// Token: 0x06003324 RID: 13092 RVA: 0x0017E133 File Offset: 0x0017C333
 		static ConfigRogueSkillById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueSkillById.CreateStaticDefaultValue), new Action(ConfigRogueSkillById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600327D RID: 12925 RVA: 0x00176E6C File Offset: 0x0017506C
+		// Token: 0x06003325 RID: 13093 RVA: 0x0017E154 File Offset: 0x0017C354
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueSkillById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600327E RID: 12926 RVA: 0x00176EEB File Offset: 0x001750EB
+		// Token: 0x06003326 RID: 13094 RVA: 0x0017E1D3 File Offset: 0x0017C3D3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueSkillById.LogPair = null;
 			ConfigRogueSkillById.HandleId = 0;
 		}
 
-		// Token: 0x0600327F RID: 12927 RVA: 0x00176EF9 File Offset: 0x001750F9
+		// Token: 0x06003327 RID: 13095 RVA: 0x0017E1E1 File Offset: 0x0017C3E1
 		public static void Init()
 		{
 			ConfigRogueSkillById.HandleId = ConfigCommon.InitDataStatement(ConfigRogueSkillById.HandleId, "db_rogue.db", "select BinData from `RogueSkill` where Id=?");
 		}
 
-		// Token: 0x06003280 RID: 12928 RVA: 0x00176F14 File Offset: 0x00175114
+		// Token: 0x06003328 RID: 13096 RVA: 0x0017E1FC File Offset: 0x0017C3FC
 		public static RogueSkill? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRogueSkillById.HandleId, ConfigRogueSkillById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RogueSkill?(rootAsRogueSkill);
 		}
 
-		// Token: 0x04003AB7 RID: 15031
+		// Token: 0x04003B7B RID: 15227
 		private const string DB = "db_rogue.db";
 
-		// Token: 0x04003AB8 RID: 15032
+		// Token: 0x04003B7C RID: 15228
 		private const string FILE = "r.肉鸽经典复开.xlsx";
 
-		// Token: 0x04003AB9 RID: 15033
+		// Token: 0x04003B7D RID: 15229
 		private const string TABLE = "RogueSkill";
 
-		// Token: 0x04003ABA RID: 15034
+		// Token: 0x04003B7E RID: 15230
 		private const string COMMAND = "select BinData from `RogueSkill` where Id=?";
 
-		// Token: 0x04003ABB RID: 15035
+		// Token: 0x04003B7F RID: 15231
 		private const string KEY_PREFIX = "RogueSkillById";
 
-		// Token: 0x04003ABC RID: 15036
+		// Token: 0x04003B80 RID: 15232
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003ABD RID: 15037
+		// Token: 0x04003B81 RID: 15233
 		private static int HandleId;
 	}
 }

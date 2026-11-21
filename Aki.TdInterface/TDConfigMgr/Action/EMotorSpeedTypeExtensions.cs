@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002397 RID: 9111
+	// Token: 0x02002622 RID: 9762
 	public static class EMotorSpeedTypeExtensions
 	{
-		// Token: 0x0600C6A6 RID: 50854 RVA: 0x001D17DC File Offset: 0x001CF9DC
+		// Token: 0x0600D2F3 RID: 54003 RVA: 0x001EA97C File Offset: 0x001E8B7C
 		public static string ToEnumString(this EMotorSpeedType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6A7 RID: 50855 RVA: 0x001D1804 File Offset: 0x001CFA04
+		// Token: 0x0600D2F4 RID: 54004 RVA: 0x001EA9A4 File Offset: 0x001E8BA4
 		public static EMotorSpeedType FromString(string name)
 		{
 			EMotorSpeedType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6A8 RID: 50856 RVA: 0x001D182D File Offset: 0x001CFA2D
+		// Token: 0x0600D2F5 RID: 54005 RVA: 0x001EA9CD File Offset: 0x001E8BCD
 		public static bool TryFromString(string name, out EMotorSpeedType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C6A9 RID: 50857 RVA: 0x001D1852 File Offset: 0x001CFA52
+		// Token: 0x0600D2F6 RID: 54006 RVA: 0x001EA9F2 File Offset: 0x001E8BF2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C6AA RID: 50858 RVA: 0x001D1862 File Offset: 0x001CFA62
+		// Token: 0x0600D2F7 RID: 54007 RVA: 0x001EAA02 File Offset: 0x001E8C02
 		public static EMotorSpeedType[] GetValues()
 		{
 			return new EMotorSpeedType[1];
 		}
 
-		// Token: 0x0600C6AB RID: 50859 RVA: 0x001D186A File Offset: 0x001CFA6A
+		// Token: 0x0600D2F8 RID: 54008 RVA: 0x001EAA0A File Offset: 0x001E8C0A
 		public static string[] GetNames()
 		{
 			return new string[]

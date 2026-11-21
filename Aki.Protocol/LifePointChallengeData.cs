@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000916 RID: 2326
+	// Token: 0x02000905 RID: 2309
 	public sealed class LifePointChallengeData : IMessage<LifePointChallengeData>, IMessage, IEquatable<LifePointChallengeData>, IDeepCloneable<LifePointChallengeData>, IBufferMessage
 	{
-		// Token: 0x0600CD44 RID: 52548 RVA: 0x001E3EC1 File Offset: 0x001E20C1
+		// Token: 0x0600CC28 RID: 52264 RVA: 0x001E1BF1 File Offset: 0x001DFDF1
 		[NullableContext(1)]
 		public static LifePointChallengeData Create()
 		{
 			return new LifePointChallengeData();
 		}
 
-		// Token: 0x17002973 RID: 10611
-		// (get) Token: 0x0600CD45 RID: 52549 RVA: 0x001E3EC8 File Offset: 0x001E20C8
+		// Token: 0x17002934 RID: 10548
+		// (get) Token: 0x0600CC29 RID: 52265 RVA: 0x001E1BF8 File Offset: 0x001DFDF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<LifePointChallengeData> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002974 RID: 10612
-		// (get) Token: 0x0600CD46 RID: 52550 RVA: 0x001E3ECF File Offset: 0x001E20CF
+		// Token: 0x17002935 RID: 10549
+		// (get) Token: 0x0600CC2A RID: 52266 RVA: 0x001E1BFF File Offset: 0x001DFDFF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002975 RID: 10613
-		// (get) Token: 0x0600CD47 RID: 52551 RVA: 0x001E3ED2 File Offset: 0x001E20D2
+		// Token: 0x17002936 RID: 10550
+		// (get) Token: 0x0600CC2B RID: 52267 RVA: 0x001E1C02 File Offset: 0x001DFE02
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600CD48 RID: 52552 RVA: 0x001E3ED9 File Offset: 0x001E20D9
+		// Token: 0x0600CC2C RID: 52268 RVA: 0x001E1C09 File Offset: 0x001DFE09
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LifePointChallengeData()
 		{
 		}
 
-		// Token: 0x0600CD49 RID: 52553 RVA: 0x001E3EE4 File Offset: 0x001E20E4
+		// Token: 0x0600CC2D RID: 52269 RVA: 0x001E1C14 File Offset: 0x001DFE14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LifePointChallengeData(LifePointChallengeData other) : this()
@@ -74,7 +74,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600CD4A RID: 52554 RVA: 0x001E3F50 File Offset: 0x001E2150
+		// Token: 0x0600CC2E RID: 52270 RVA: 0x001E1C80 File Offset: 0x001DFE80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LifePointChallengeData Clone()
@@ -82,9 +82,9 @@ namespace Aki.Protocol
 			return new LifePointChallengeData(this);
 		}
 
-		// Token: 0x17002976 RID: 10614
-		// (get) Token: 0x0600CD4B RID: 52555 RVA: 0x001E3F58 File Offset: 0x001E2158
-		// (set) Token: 0x0600CD4C RID: 52556 RVA: 0x001E3F60 File Offset: 0x001E2160
+		// Token: 0x17002937 RID: 10551
+		// (get) Token: 0x0600CC2F RID: 52271 RVA: 0x001E1C88 File Offset: 0x001DFE88
+		// (set) Token: 0x0600CC30 RID: 52272 RVA: 0x001E1C90 File Offset: 0x001DFE90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ChallengeId
@@ -99,9 +99,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002977 RID: 10615
-		// (get) Token: 0x0600CD4D RID: 52557 RVA: 0x001E3F69 File Offset: 0x001E2169
-		// (set) Token: 0x0600CD4E RID: 52558 RVA: 0x001E3F71 File Offset: 0x001E2171
+		// Token: 0x17002938 RID: 10552
+		// (get) Token: 0x0600CC31 RID: 52273 RVA: 0x001E1C99 File Offset: 0x001DFE99
+		// (set) Token: 0x0600CC32 RID: 52274 RVA: 0x001E1CA1 File Offset: 0x001DFEA1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Rewarded
@@ -116,9 +116,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002978 RID: 10616
-		// (get) Token: 0x0600CD4F RID: 52559 RVA: 0x001E3F7A File Offset: 0x001E217A
-		// (set) Token: 0x0600CD50 RID: 52560 RVA: 0x001E3F82 File Offset: 0x001E2182
+		// Token: 0x17002939 RID: 10553
+		// (get) Token: 0x0600CC33 RID: 52275 RVA: 0x001E1CAA File Offset: 0x001DFEAA
+		// (set) Token: 0x0600CC34 RID: 52276 RVA: 0x001E1CB2 File Offset: 0x001DFEB2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long OpenTime
@@ -133,9 +133,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002979 RID: 10617
-		// (get) Token: 0x0600CD51 RID: 52561 RVA: 0x001E3F8B File Offset: 0x001E218B
-		// (set) Token: 0x0600CD52 RID: 52562 RVA: 0x001E3F93 File Offset: 0x001E2193
+		// Token: 0x1700293A RID: 10554
+		// (get) Token: 0x0600CC35 RID: 52277 RVA: 0x001E1CBB File Offset: 0x001DFEBB
+		// (set) Token: 0x0600CC36 RID: 52278 RVA: 0x001E1CC3 File Offset: 0x001DFEC3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RewardId
@@ -150,9 +150,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700297A RID: 10618
-		// (get) Token: 0x0600CD53 RID: 52563 RVA: 0x001E3F9C File Offset: 0x001E219C
-		// (set) Token: 0x0600CD54 RID: 52564 RVA: 0x001E3FA4 File Offset: 0x001E21A4
+		// Token: 0x1700293B RID: 10555
+		// (get) Token: 0x0600CC37 RID: 52279 RVA: 0x001E1CCC File Offset: 0x001DFECC
+		// (set) Token: 0x0600CC38 RID: 52280 RVA: 0x001E1CD4 File Offset: 0x001DFED4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int EntityConfigId
@@ -167,9 +167,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700297B RID: 10619
-		// (get) Token: 0x0600CD55 RID: 52565 RVA: 0x001E3FAD File Offset: 0x001E21AD
-		// (set) Token: 0x0600CD56 RID: 52566 RVA: 0x001E3FB5 File Offset: 0x001E21B5
+		// Token: 0x1700293C RID: 10556
+		// (get) Token: 0x0600CC39 RID: 52281 RVA: 0x001E1CDD File Offset: 0x001DFEDD
+		// (set) Token: 0x0600CC3A RID: 52282 RVA: 0x001E1CE5 File Offset: 0x001DFEE5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool PreChallenged
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600CD57 RID: 52567 RVA: 0x001E3FBE File Offset: 0x001E21BE
+		// Token: 0x0600CC3B RID: 52283 RVA: 0x001E1CEE File Offset: 0x001DFEEE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -192,7 +192,7 @@ namespace Aki.Protocol
 			return this.Equals(other as LifePointChallengeData);
 		}
 
-		// Token: 0x0600CD58 RID: 52568 RVA: 0x001E3FCC File Offset: 0x001E21CC
+		// Token: 0x0600CC3C RID: 52284 RVA: 0x001E1CFC File Offset: 0x001DFEFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(LifePointChallengeData other)
@@ -200,7 +200,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ChallengeId == other.ChallengeId && this.Rewarded == other.Rewarded && this.OpenTime == other.OpenTime && this.RewardId == other.RewardId && this.EntityConfigId == other.EntityConfigId && this.PreChallenged == other.PreChallenged && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600CD59 RID: 52569 RVA: 0x001E4058 File Offset: 0x001E2258
+		// Token: 0x0600CC3D RID: 52285 RVA: 0x001E1D88 File Offset: 0x001DFF88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -237,7 +237,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600CD5A RID: 52570 RVA: 0x001E4114 File Offset: 0x001E2314
+		// Token: 0x0600CC3E RID: 52286 RVA: 0x001E1E44 File Offset: 0x001E0044
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -245,7 +245,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600CD5B RID: 52571 RVA: 0x001E4121 File Offset: 0x001E2321
+		// Token: 0x0600CC3F RID: 52287 RVA: 0x001E1E51 File Offset: 0x001E0051
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -253,7 +253,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600CD5C RID: 52572 RVA: 0x001E412C File Offset: 0x001E232C
+		// Token: 0x0600CC40 RID: 52288 RVA: 0x001E1E5C File Offset: 0x001E005C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600CD5D RID: 52573 RVA: 0x001E41F4 File Offset: 0x001E23F4
+		// Token: 0x0600CC41 RID: 52289 RVA: 0x001E1F24 File Offset: 0x001E0124
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -331,7 +331,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600CD5E RID: 52574 RVA: 0x001E4294 File Offset: 0x001E2494
+		// Token: 0x0600CC42 RID: 52290 RVA: 0x001E1FC4 File Offset: 0x001E01C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(LifePointChallengeData other)
@@ -367,7 +367,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600CD5F RID: 52575 RVA: 0x001E4334 File Offset: 0x001E2534
+		// Token: 0x0600CC43 RID: 52291 RVA: 0x001E2064 File Offset: 0x001E0264
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -375,7 +375,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600CD60 RID: 52576 RVA: 0x001E4340 File Offset: 0x001E2540
+		// Token: 0x0600CC44 RID: 52292 RVA: 0x001E2070 File Offset: 0x001E0270
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -427,46 +427,46 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040056E7 RID: 22247
+		// Token: 0x040056EE RID: 22254
 		private static readonly MessageParser<LifePointChallengeData> _parser = new MessageParser<LifePointChallengeData>(() => new LifePointChallengeData());
 
-		// Token: 0x040056E8 RID: 22248
+		// Token: 0x040056EF RID: 22255
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040056E9 RID: 22249
+		// Token: 0x040056F0 RID: 22256
 		public const int ChallengeIdFieldNumber = 1;
 
-		// Token: 0x040056EA RID: 22250
+		// Token: 0x040056F1 RID: 22257
 		private int challengeId_;
 
-		// Token: 0x040056EB RID: 22251
+		// Token: 0x040056F2 RID: 22258
 		public const int RewardedFieldNumber = 2;
 
-		// Token: 0x040056EC RID: 22252
+		// Token: 0x040056F3 RID: 22259
 		private bool rewarded_;
 
-		// Token: 0x040056ED RID: 22253
+		// Token: 0x040056F4 RID: 22260
 		public const int OpenTimeFieldNumber = 3;
 
-		// Token: 0x040056EE RID: 22254
+		// Token: 0x040056F5 RID: 22261
 		private long openTime_;
 
-		// Token: 0x040056EF RID: 22255
+		// Token: 0x040056F6 RID: 22262
 		public const int RewardIdFieldNumber = 4;
 
-		// Token: 0x040056F0 RID: 22256
+		// Token: 0x040056F7 RID: 22263
 		private int rewardId_;
 
-		// Token: 0x040056F1 RID: 22257
+		// Token: 0x040056F8 RID: 22264
 		public const int EntityConfigIdFieldNumber = 5;
 
-		// Token: 0x040056F2 RID: 22258
+		// Token: 0x040056F9 RID: 22265
 		private int entityConfigId_;
 
-		// Token: 0x040056F3 RID: 22259
+		// Token: 0x040056FA RID: 22266
 		public const int PreChallengedFieldNumber = 6;
 
-		// Token: 0x040056F4 RID: 22260
+		// Token: 0x040056FB RID: 22267
 		private bool preChallenged_;
 	}
 }

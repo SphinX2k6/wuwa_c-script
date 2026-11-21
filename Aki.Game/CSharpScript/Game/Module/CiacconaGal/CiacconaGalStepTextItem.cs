@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BE2 RID: 23522
+	// Token: 0x02004BC2 RID: 19394
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CiacconaGalStepTextItem : UiPanelBase
 	{
-		// Token: 0x0603B758 RID: 243544 RVA: 0x00E2D728 File Offset: 0x00E2B928
+		// Token: 0x060306A3 RID: 198307 RVA: 0x00D7DA30 File Offset: 0x00D7BC30
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B759 RID: 243545 RVA: 0x00E2D770 File Offset: 0x00E2B970
+		// Token: 0x060306A4 RID: 198308 RVA: 0x00D7DA78 File Offset: 0x00D7BC78
 		protected override void OnStart()
 		{
 			this.TextContent = base.GetText(0);
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.AnimHandler = new CiacconaGalTextAnimHandler(this.AnimComp);
 		}
 
-		// Token: 0x0603B75A RID: 243546 RVA: 0x00E2D7F4 File Offset: 0x00E2B9F4
+		// Token: 0x060306A5 RID: 198309 RVA: 0x00D7DAFC File Offset: 0x00D7BCFC
 		protected override void OnBeforeDestroy()
 		{
 			ULGUIPlayTweenComponent animComp = this.AnimComp;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B75B RID: 243547 RVA: 0x00E2D880 File Offset: 0x00E2BA80
+		// Token: 0x060306A6 RID: 198310 RVA: 0x00D7DB88 File Offset: 0x00D7BD88
 		[NullableContext(1)]
 		public void Refresh(CiacconaGalStepData data)
 		{
@@ -103,35 +103,35 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B75C RID: 243548 RVA: 0x00E2D9BA File Offset: 0x00E2BBBA
+		// Token: 0x060306A7 RID: 198311 RVA: 0x00D7DCC2 File Offset: 0x00D7BEC2
 		private void OnAnimEnd()
 		{
 			CiacconaGalController.Instance.GalPlayer.OnAnimEnd();
 		}
 
-		// Token: 0x0401EFA5 RID: 126885
+		// Token: 0x04019A56 RID: 105046
 		private ULGUIPlayTweenComponent AnimComp;
 
-		// Token: 0x0401EFA6 RID: 126886
+		// Token: 0x04019A57 RID: 105047
 		private UUIText TextContent;
 
-		// Token: 0x0401EFA7 RID: 126887
+		// Token: 0x04019A58 RID: 105048
 		private FLGUIPlayTweenCompleteDynamicDelegate OnAnimEndDelegate;
 
-		// Token: 0x0401EFA8 RID: 126888
+		// Token: 0x04019A59 RID: 105049
 		private FLGUIDelegateHandleWrapper OnAnimEndDelegateWrapper;
 
-		// Token: 0x0401EFA9 RID: 126889
+		// Token: 0x04019A5A RID: 105050
 		private CiacconaGalTextAnimHandler AnimHandler;
 
-		// Token: 0x0401EFAA RID: 126890
+		// Token: 0x04019A5B RID: 105051
 		private TimerHandle AnimDelayTimerHandle;
 
-		// Token: 0x0200BDC4 RID: 48580
+		// Token: 0x0200A7CD RID: 42957
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403938B RID: 234379
+			// Token: 0x04033D50 RID: 212304
 			public const int TextContent = 0;
 		}
 	}

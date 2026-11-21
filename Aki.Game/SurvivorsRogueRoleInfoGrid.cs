@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002B65 RID: 11109
+// Token: 0x020020E1 RID: 8417
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueRoleInfoGrid : UiPanelBase
 {
-	// Token: 0x0601705F RID: 94303 RVA: 0x005D8578 File Offset: 0x005D6778
+	// Token: 0x06014A90 RID: 84624 RVA: 0x006050E0 File Offset: 0x006032E0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class SurvivorsRogueRoleInfoGrid : UiPanelBase
 		};
 	}
 
-	// Token: 0x06017060 RID: 94304 RVA: 0x005D860C File Offset: 0x005D680C
+	// Token: 0x06014A91 RID: 84625 RVA: 0x00605174 File Offset: 0x00603374
 	private void OnBtnRoleClick()
 	{
 		SurvivorsTabMainViewData param = new SurvivorsTabMainViewData
@@ -36,14 +36,14 @@ public class SurvivorsRogueRoleInfoGrid : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsTabMainView, param, null);
 	}
 
-	// Token: 0x06017061 RID: 94305 RVA: 0x005D863C File Offset: 0x005D683C
+	// Token: 0x06014A92 RID: 84626 RVA: 0x006051A4 File Offset: 0x006033A4
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		this.SetSelectOn(false);
 	}
 
-	// Token: 0x06017062 RID: 94306 RVA: 0x005D8658 File Offset: 0x005D6858
+	// Token: 0x06014A93 RID: 84627 RVA: 0x006051C0 File Offset: 0x006033C0
 	public void Refresh(int roleId, int lv)
 	{
 		SurvivorsRole? survivorsRole = SurvivorsRogueConfig.Instance.GetSurvivorsRole(roleId);
@@ -62,7 +62,7 @@ public class SurvivorsRogueRoleInfoGrid : UiPanelBase
 		base.GetText(3).SetUIActive(true);
 	}
 
-	// Token: 0x06017063 RID: 94307 RVA: 0x005D8710 File Offset: 0x005D6910
+	// Token: 0x06014A94 RID: 84628 RVA: 0x00605278 File Offset: 0x00603478
 	public void SetSelectOn(bool bUp)
 	{
 		base.GetItem(2).SetUIActive(bUp);
@@ -74,23 +74,23 @@ public class SurvivorsRogueRoleInfoGrid : UiPanelBase
 		this.LevelSequencePlayer.StopSequenceByKey("PreArm", false, true);
 	}
 
-	// Token: 0x06017064 RID: 94308 RVA: 0x005D875C File Offset: 0x005D695C
+	// Token: 0x06014A95 RID: 84629 RVA: 0x006052C4 File Offset: 0x006034C4
 	public void SetLevelUp()
 	{
 		this.LevelSequencePlayer.StopSequenceByKey("PreArm", false, true);
 		this.LevelSequencePlayer.PlayOrReplaySequenceByName("LevelUp", false, null);
 	}
 
-	// Token: 0x0400AC18 RID: 44056
+	// Token: 0x0400B01E RID: 45086
 	private const string SURVIVORS_LV_KEY = "SurvivorsCombat_Lv";
 
-	// Token: 0x0400AC19 RID: 44057
+	// Token: 0x0400B01F RID: 45087
 	private const string SEQ_PRE_SELECT = "PreArm";
 
-	// Token: 0x0400AC1A RID: 44058
+	// Token: 0x0400B020 RID: 45088
 	private const string SEQ_LEVEL_UP = "LevelUp";
 
-	// Token: 0x0400AC1B RID: 44059
+	// Token: 0x0400B021 RID: 45089
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequencePlayer;
 }

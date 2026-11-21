@@ -2,28 +2,28 @@
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Infrastructure;
 
-// Token: 0x020033AD RID: 13229
+// Token: 0x0200291F RID: 10527
 public class RedDotInfrLimitedTask : RedDotBase
 {
-	// Token: 0x0601CB5A RID: 117594 RVA: 0x00807EBE File Offset: 0x008060BE
+	// Token: 0x0601A852 RID: 108626 RVA: 0x0082E482 File Offset: 0x0082C682
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.Infrastructure);
 	}
 
-	// Token: 0x0601CB5B RID: 117595 RVA: 0x00807ECA File Offset: 0x008060CA
+	// Token: 0x0601A853 RID: 108627 RVA: 0x0082E48E File Offset: 0x0082C68E
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.InfrastructureActivityTaskDataUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CB5C RID: 117596 RVA: 0x00807EE8 File Offset: 0x008060E8
+	// Token: 0x0601A854 RID: 108628 RVA: 0x0082E4AC File Offset: 0x0082C6AC
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.InfrastructureActivityTaskDataUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CB5D RID: 117597 RVA: 0x00807F06 File Offset: 0x00806106
+	// Token: 0x0601A855 RID: 108629 RVA: 0x0082E4CA File Offset: 0x0082C6CA
 	protected override bool OnCheck(int uId = 0)
 	{
 		InfrastructureActivityData activityData = InfrastructureModel.Instance.GetActivityData();

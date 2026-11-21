@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001489 RID: 5257
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020015E2 RID: 5602
 	public class AddBuffToEntity : ActionParams
 	{
-		// Token: 0x06007798 RID: 30616 RVA: 0x0011F0F0 File Offset: 0x0011D2F0
-		[NullableContext(1)]
+		// Token: 0x06007E65 RID: 32357 RVA: 0x0012DD3C File Offset: 0x0012BF3C
 		private AddBuffToEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007799 RID: 30617 RVA: 0x0011F128 File Offset: 0x0011D328
-		[NullableContext(1)]
+		// Token: 0x06007E66 RID: 32358 RVA: 0x0012DD74 File Offset: 0x0012BF74
 		public static AddBuffToEntity Create([Nullable(2)] AddBuffToEntity instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600779A RID: 30618 RVA: 0x0011F13B File Offset: 0x0011D33B
-		[NullableContext(1)]
+		// Token: 0x06007E67 RID: 32359 RVA: 0x0012DD87 File Offset: 0x0012BF87
 		public static AddBuffToEntity CreateFromSetValue([Nullable(2)] AddBuffToEntity_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600779B RID: 30619 RVA: 0x0011F14E File Offset: 0x0011D34E
-		[NullableContext(1)]
+		// Token: 0x06007E68 RID: 32360 RVA: 0x0012DD9A File Offset: 0x0012BF9A
 		public AddBuffToEntity_SetValue ToSetValue()
 		{
 			return new AddBuffToEntity_SetValue
@@ -67,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002834 RID: 10292
-		// (get) Token: 0x0600779C RID: 30620 RVA: 0x0011F188 File Offset: 0x0011D388
-		// (set) Token: 0x0600779D RID: 30621 RVA: 0x0011F1C2 File Offset: 0x0011D3C2
+		// Token: 0x17002A1E RID: 10782
+		// (get) Token: 0x06007E69 RID: 32361 RVA: 0x0012DDD4 File Offset: 0x0012BFD4
+		// (set) Token: 0x06007E6A RID: 32362 RVA: 0x0012DE0E File Offset: 0x0012C00E
 		public virtual int? EntityId
 		{
 			get
@@ -91,11 +85,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002835 RID: 10293
-		// (get) Token: 0x0600779E RID: 30622 RVA: 0x0011F1D0 File Offset: 0x0011D3D0
-		// (set) Token: 0x0600779F RID: 30623 RVA: 0x0011F1F7 File Offset: 0x0011D3F7
+		// Token: 0x17002A1F RID: 10783
+		// (get) Token: 0x06007E6B RID: 32363 RVA: 0x0012DE1C File Offset: 0x0012C01C
+		// (set) Token: 0x06007E6C RID: 32364 RVA: 0x0012DE43 File Offset: 0x0012C043
+		[Nullable(2)]
 		public virtual List<int> EntityIds
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -109,19 +105,18 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.EntityIds;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().EntityIds = value;
 			}
 		}
 
-		// Token: 0x17002836 RID: 10294
-		// (get) Token: 0x060077A0 RID: 30624 RVA: 0x0011F205 File Offset: 0x0011D405
-		// (set) Token: 0x060077A1 RID: 30625 RVA: 0x0011F22C File Offset: 0x0011D42C
-		[Nullable(1)]
+		// Token: 0x17002A20 RID: 10784
+		// (get) Token: 0x06007E6D RID: 32365 RVA: 0x0012DE51 File Offset: 0x0012C051
+		// (set) Token: 0x06007E6E RID: 32366 RVA: 0x0012DE78 File Offset: 0x0012C078
 		public virtual List<long> BuffIds
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -135,18 +130,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.BuffIds;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.GetOrCreatePoco().BuffIds = value;
 			}
 		}
 
-		// Token: 0x17002837 RID: 10295
-		// (get) Token: 0x060077A2 RID: 30626 RVA: 0x0011F23A File Offset: 0x0011D43A
-		// (set) Token: 0x060077A3 RID: 30627 RVA: 0x0011F261 File Offset: 0x0011D461
+		// Token: 0x17002A21 RID: 10785
+		// (get) Token: 0x06007E6F RID: 32367 RVA: 0x0012DE86 File Offset: 0x0012C086
+		// (set) Token: 0x06007E70 RID: 32368 RVA: 0x0012DEAD File Offset: 0x0012C0AD
+		[Nullable(2)]
 		public virtual List<long> PersistOnOfflineBuffIds
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -160,16 +156,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.PersistOnOfflineBuffIds;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().PersistOnOfflineBuffIds = value;
 			}
 		}
 
-		// Token: 0x04004590 RID: 17808
+		// Token: 0x0400492B RID: 18731
+		[Nullable(2)]
 		protected new AddBuffToEntity FbInstance;
 
-		// Token: 0x04004591 RID: 17809
+		// Token: 0x0400492C RID: 18732
+		[Nullable(2)]
 		protected AddBuffToEntity_SetValue PocoInterface;
 	}
 }

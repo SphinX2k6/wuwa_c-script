@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028A9 RID: 10409
+	// Token: 0x02002B7E RID: 11134
 	public class ICameraLockParams
 	{
-		// Token: 0x0600E679 RID: 59001 RVA: 0x0021DC60 File Offset: 0x0021BE60
-		[NullableContext(1)]
+		// Token: 0x0600F4A8 RID: 62632 RVA: 0x0023ABE0 File Offset: 0x00238DE0
 		public static ICameraLockParams Create(ICameraLockParams? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170046E9 RID: 18153
-		// (get) Token: 0x0600E67A RID: 59002 RVA: 0x0021DC7F File Offset: 0x0021BE7F
+		// Token: 0x17004A5A RID: 19034
+		// (get) Token: 0x0600F4A9 RID: 62633 RVA: 0x0023ABFF File Offset: 0x00238DFF
 		public virtual float RelativeYawHardMin
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046EA RID: 18154
-		// (get) Token: 0x0600E67B RID: 59003 RVA: 0x0021DC8C File Offset: 0x0021BE8C
+		// Token: 0x17004A5B RID: 19035
+		// (get) Token: 0x0600F4AA RID: 62634 RVA: 0x0023AC0C File Offset: 0x00238E0C
 		public virtual float RelativeYawHardMax
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046EB RID: 18155
-		// (get) Token: 0x0600E67C RID: 59004 RVA: 0x0021DC99 File Offset: 0x0021BE99
+		// Token: 0x17004A5C RID: 19036
+		// (get) Token: 0x0600F4AB RID: 62635 RVA: 0x0023AC19 File Offset: 0x00238E19
 		public virtual float RelativePitchHardMin
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046EC RID: 18156
-		// (get) Token: 0x0600E67D RID: 59005 RVA: 0x0021DCA6 File Offset: 0x0021BEA6
+		// Token: 0x17004A5D RID: 19037
+		// (get) Token: 0x0600F4AC RID: 62636 RVA: 0x0023AC26 File Offset: 0x00238E26
 		public virtual float RelativePitchHardMax
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046ED RID: 18157
-		// (get) Token: 0x0600E67E RID: 59006 RVA: 0x0021DCB3 File Offset: 0x0021BEB3
+		// Token: 0x17004A5E RID: 19038
+		// (get) Token: 0x0600F4AD RID: 62637 RVA: 0x0023AC33 File Offset: 0x00238E33
 		public virtual float YawSignAdaptionLockDirection
 		{
 			get
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046EE RID: 18158
-		// (get) Token: 0x0600E67F RID: 59007 RVA: 0x0021DCC0 File Offset: 0x0021BEC0
+		// Token: 0x17004A5F RID: 19039
+		// (get) Token: 0x0600F4AE RID: 62638 RVA: 0x0023AC40 File Offset: 0x00238E40
 		public virtual float RelativeRotationLagYawSpeedMin
 		{
 			get
@@ -81,8 +79,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046EF RID: 18159
-		// (get) Token: 0x0600E680 RID: 59008 RVA: 0x0021DCCD File Offset: 0x0021BECD
+		// Token: 0x17004A60 RID: 19040
+		// (get) Token: 0x0600F4AF RID: 62639 RVA: 0x0023AC4D File Offset: 0x00238E4D
 		public virtual float RelativeRotationLagYawSpeedMax
 		{
 			get
@@ -91,8 +89,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046F0 RID: 18160
-		// (get) Token: 0x0600E681 RID: 59009 RVA: 0x0021DCDA File Offset: 0x0021BEDA
+		// Token: 0x17004A61 RID: 19041
+		// (get) Token: 0x0600F4B0 RID: 62640 RVA: 0x0023AC5A File Offset: 0x00238E5A
 		public virtual float RelativeRotationLagYawAngleRange
 		{
 			get
@@ -101,8 +99,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046F1 RID: 18161
-		// (get) Token: 0x0600E682 RID: 59010 RVA: 0x0021DCE7 File Offset: 0x0021BEE7
+		// Token: 0x17004A62 RID: 19042
+		// (get) Token: 0x0600F4B1 RID: 62641 RVA: 0x0023AC67 File Offset: 0x00238E67
 		public virtual float RelativeRotationLagPitchSpeedMin
 		{
 			get
@@ -111,8 +109,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046F2 RID: 18162
-		// (get) Token: 0x0600E683 RID: 59011 RVA: 0x0021DCF4 File Offset: 0x0021BEF4
+		// Token: 0x17004A63 RID: 19043
+		// (get) Token: 0x0600F4B2 RID: 62642 RVA: 0x0023AC74 File Offset: 0x00238E74
 		public virtual float RelativeRotationLagPitchSpeedMax
 		{
 			get
@@ -121,8 +119,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046F3 RID: 18163
-		// (get) Token: 0x0600E684 RID: 59012 RVA: 0x0021DD01 File Offset: 0x0021BF01
+		// Token: 0x17004A64 RID: 19044
+		// (get) Token: 0x0600F4B3 RID: 62643 RVA: 0x0023AC81 File Offset: 0x00238E81
 		public virtual float RelativeRotationLagPitchAngleRange
 		{
 			get
@@ -131,8 +129,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046F4 RID: 18164
-		// (get) Token: 0x0600E685 RID: 59013 RVA: 0x0021DD0E File Offset: 0x0021BF0E
+		// Token: 0x17004A65 RID: 19045
+		// (get) Token: 0x0600F4B4 RID: 62644 RVA: 0x0023AC8E File Offset: 0x00238E8E
 		public virtual float RelativeRotationLagRatioMin
 		{
 			get
@@ -141,8 +139,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046F5 RID: 18165
-		// (get) Token: 0x0600E686 RID: 59014 RVA: 0x0021DD1B File Offset: 0x0021BF1B
+		// Token: 0x17004A66 RID: 19046
+		// (get) Token: 0x0600F4B5 RID: 62645 RVA: 0x0023AC9B File Offset: 0x00238E9B
 		public virtual float RelativeRotationLagRatioMax
 		{
 			get
@@ -151,8 +149,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046F6 RID: 18166
-		// (get) Token: 0x0600E687 RID: 59015 RVA: 0x0021DD28 File Offset: 0x0021BF28
+		// Token: 0x17004A67 RID: 19047
+		// (get) Token: 0x0600F4B6 RID: 62646 RVA: 0x0023ACA8 File Offset: 0x00238EA8
 		public virtual float RelativeRotationLagDistanceRangeMin
 		{
 			get
@@ -161,8 +159,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046F7 RID: 18167
-		// (get) Token: 0x0600E688 RID: 59016 RVA: 0x0021DD35 File Offset: 0x0021BF35
+		// Token: 0x17004A68 RID: 19048
+		// (get) Token: 0x0600F4B7 RID: 62647 RVA: 0x0023ACB5 File Offset: 0x00238EB5
 		public virtual float RelativeRotationLagDistanceRangeMax
 		{
 			get
@@ -171,7 +169,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F6B RID: 32619
+		// Token: 0x0400862A RID: 34346
 		private ICameraLockParams Instance;
 	}
 }

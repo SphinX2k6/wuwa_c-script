@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EE0 RID: 28384
+	// Token: 0x02006060 RID: 24672
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DollGrabEndlessStartView : UiViewBase
 	{
-		// Token: 0x06045240 RID: 283200 RVA: 0x01119E0A File Offset: 0x0111800A
+		// Token: 0x0603B3E9 RID: 242665 RVA: 0x010C3B9A File Offset: 0x010C1D9A
 		public DollGrabEndlessStartView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06045241 RID: 283201 RVA: 0x01119E14 File Offset: 0x01118014
+		// Token: 0x0603B3EA RID: 242666 RVA: 0x010C3BA4 File Offset: 0x010C1DA4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06045242 RID: 283202 RVA: 0x01119F1D File Offset: 0x0111811D
+		// Token: 0x0603B3EB RID: 242667 RVA: 0x010C3CAD File Offset: 0x010C1EAD
 		protected override void OnStart()
 		{
 			this.GenericLayout = new GenericLayout<DollGrabEndlessStartItem, IGrabItemData>(base.GetHorizontalLayout(1), new Func<DollGrabEndlessStartItem>(this.CreateDollGrabEndlessStartItem), null, false, true);
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.PnlScroll = base.GetItem(4);
 		}
 
-		// Token: 0x06045243 RID: 283203 RVA: 0x01119F5C File Offset: 0x0111815C
+		// Token: 0x0603B3EC RID: 242668 RVA: 0x010C3CEC File Offset: 0x010C1EEC
 		protected override UniTask OnBeforeShowAsyncImplementImplement()
 		{
 			DollGrabEndlessStartView.<OnBeforeShowAsyncImplementImplement>d__6 <OnBeforeShowAsyncImplementImplement>d__;
@@ -66,20 +66,20 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045244 RID: 283204 RVA: 0x01119F9F File Offset: 0x0111819F
+		// Token: 0x0603B3ED RID: 242669 RVA: 0x010C3D2F File Offset: 0x010C1F2F
 		private DollGrabEndlessStartItem CreateDollGrabEndlessStartItem()
 		{
 			return new DollGrabEndlessStartItem();
 		}
 
-		// Token: 0x06045245 RID: 283205 RVA: 0x01119FA6 File Offset: 0x011181A6
+		// Token: 0x0603B3EE RID: 242670 RVA: 0x010C3D36 File Offset: 0x010C1F36
 		private void OnMaskButtonClick()
 		{
 			DollGrabMachineController.Instance.OnClickStart();
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04024031 RID: 147505
+		// Token: 0x0401F2E4 RID: 127716
 		[Nullable(new byte[]
 		{
 			2,
@@ -88,11 +88,11 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 		})]
 		private GenericLayout<DollGrabEndlessStartItem, IGrabItemData> GenericLayout;
 
-		// Token: 0x04024032 RID: 147506
+		// Token: 0x0401F2E5 RID: 127717
 		[Nullable(2)]
 		private UUIText TxtDescri;
 
-		// Token: 0x04024033 RID: 147507
+		// Token: 0x0401F2E6 RID: 127718
 		[Nullable(2)]
 		private UUIItem PnlScroll;
 	}

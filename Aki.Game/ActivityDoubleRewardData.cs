@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.AdventureGuide;
 using CSharpScript.Game.Ui;
 
-// Token: 0x0200125E RID: 4702
+// Token: 0x02000712 RID: 1810
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityDoubleRewardData : ActivityBaseData
 {
-	// Token: 0x06007FD0 RID: 32720 RVA: 0x001B0ABF File Offset: 0x001AECBF
+	// Token: 0x06005367 RID: 21351 RVA: 0x001B977B File Offset: 0x001B797B
 	protected override void PhraseEx(ActivityData data)
 	{
 		int leftUpCount = this.LeftUpCount;
@@ -22,7 +22,7 @@ public class ActivityDoubleRewardData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007FD1 RID: 32721 RVA: 0x001B0AF4 File Offset: 0x001AECF4
+	// Token: 0x06005368 RID: 21352 RVA: 0x001B97B0 File Offset: 0x001B79B0
 	public override bool GetExDataRedPointShowState()
 	{
 		if (this.LeftUpCount == 0)
@@ -33,19 +33,19 @@ public class ActivityDoubleRewardData : ActivityBaseData
 		return ActivityModel.Instance.GetActivityCacheDataByKey(base.Id, 0, currentCrossDayIndex) != 1;
 	}
 
-	// Token: 0x06007FD2 RID: 32722 RVA: 0x001B0B2E File Offset: 0x001AED2E
+	// Token: 0x06005369 RID: 21353 RVA: 0x001B97EA File Offset: 0x001B79EA
 	protected override bool GetExDataFinishShowState()
 	{
 		return this.LeftUpCount == 0;
 	}
 
-	// Token: 0x06007FD3 RID: 32723 RVA: 0x001B0B39 File Offset: 0x001AED39
+	// Token: 0x0600536A RID: 21354 RVA: 0x001B97F5 File Offset: 0x001B79F5
 	public override bool NeedSelfControlFirstRedPoint()
 	{
 		return false;
 	}
 
-	// Token: 0x06007FD4 RID: 32724 RVA: 0x001B0B3C File Offset: 0x001AED3C
+	// Token: 0x0600536B RID: 21355 RVA: 0x001B97F8 File Offset: 0x001B79F8
 	public void ReadDailyRedDot()
 	{
 		int currentCrossDayIndex = TimeUtil.Instance.GetCurrentCrossDayIndex();
@@ -53,8 +53,8 @@ public class ActivityDoubleRewardData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x17000AE1 RID: 2785
-	// (get) Token: 0x06007FD5 RID: 32725 RVA: 0x001B0B7C File Offset: 0x001AED7C
+	// Token: 0x17000B01 RID: 2817
+	// (get) Token: 0x0600536C RID: 21356 RVA: 0x001B9838 File Offset: 0x001B7A38
 	public int LeftUpCount
 	{
 		get
@@ -63,8 +63,8 @@ public class ActivityDoubleRewardData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000AE2 RID: 2786
-	// (get) Token: 0x06007FD6 RID: 32726 RVA: 0x001B0B8C File Offset: 0x001AED8C
+	// Token: 0x17000B02 RID: 2818
+	// (get) Token: 0x0600536D RID: 21357 RVA: 0x001B9848 File Offset: 0x001B7A48
 	private int TotalUpCount
 	{
 		get
@@ -73,8 +73,8 @@ public class ActivityDoubleRewardData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000AE3 RID: 2787
-	// (get) Token: 0x06007FD7 RID: 32727 RVA: 0x001B0BB8 File Offset: 0x001AEDB8
+	// Token: 0x17000B03 RID: 2819
+	// (get) Token: 0x0600536E RID: 21358 RVA: 0x001B9874 File Offset: 0x001B7A74
 	public EActivityDoubleRewardType SubType
 	{
 		get
@@ -83,8 +83,8 @@ public class ActivityDoubleRewardData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000AE4 RID: 2788
-	// (get) Token: 0x06007FD8 RID: 32728 RVA: 0x001B0BE4 File Offset: 0x001AEDE4
+	// Token: 0x17000B04 RID: 2820
+	// (get) Token: 0x0600536F RID: 21359 RVA: 0x001B98A0 File Offset: 0x001B7AA0
 	public string Prefab
 	{
 		get
@@ -93,8 +93,8 @@ public class ActivityDoubleRewardData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000AE5 RID: 2789
-	// (get) Token: 0x06007FD9 RID: 32729 RVA: 0x001B0C10 File Offset: 0x001AEE10
+	// Token: 0x17000B05 RID: 2821
+	// (get) Token: 0x06005370 RID: 21360 RVA: 0x001B98CC File Offset: 0x001B7ACC
 	public EDungeonType[] AdventureGuideUpList
 	{
 		get
@@ -134,7 +134,7 @@ public class ActivityDoubleRewardData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007FDA RID: 32730 RVA: 0x001B0C98 File Offset: 0x001AEE98
+	// Token: 0x06005371 RID: 21361 RVA: 0x001B9954 File Offset: 0x001B7B54
 	public int[] GetDungeonUpList(bool isInstance)
 	{
 		switch (this.SubType)
@@ -167,7 +167,7 @@ public class ActivityDoubleRewardData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007FDB RID: 32731 RVA: 0x001B0CFB File Offset: 0x001AEEFB
+	// Token: 0x06005372 RID: 21362 RVA: 0x001B99B7 File Offset: 0x001B7BB7
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -178,13 +178,13 @@ public class ActivityDoubleRewardData : ActivityBaseData
 		return new ValueTuple<string, int, int>((this.LeftUpCount > 0) ? "Reward_doubling_time" : "Reward_doubling_end", this.LeftUpCount, this.TotalUpCount);
 	}
 
-	// Token: 0x06007FDC RID: 32732 RVA: 0x001B0D23 File Offset: 0x001AEF23
+	// Token: 0x06005373 RID: 21363 RVA: 0x001B99DF File Offset: 0x001B7BDF
 	public Tuple<string, int, int> GetFullTipNumTxtAndParam()
 	{
 		return new Tuple<string, int, int>((this.LeftUpCount > 0) ? "Reward_doubling_tips" : "Reward_doubling_end_tips", this.LeftUpCount, this.TotalUpCount);
 	}
 
-	// Token: 0x06007FDD RID: 32733 RVA: 0x001B0D4C File Offset: 0x001AEF4C
+	// Token: 0x06005374 RID: 21364 RVA: 0x001B9A08 File Offset: 0x001B7C08
 	public string GetFullTip()
 	{
 		Tuple<string, int, int> fullTipNumTxtAndParam = this.GetFullTipNumTxtAndParam();
@@ -195,16 +195,16 @@ public class ActivityDoubleRewardData : ActivityBaseData
 		});
 	}
 
-	// Token: 0x06007FDE RID: 32734 RVA: 0x001B0D93 File Offset: 0x001AEF93
+	// Token: 0x06005375 RID: 21365 RVA: 0x001B9A50 File Offset: 0x001B7C50
 	public void JumpToDungeon()
 	{
-		AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(EUiTabViewName.NewSoundAreaView), new int?((int)this.AdventureGuideUpList[0]), null);
+		AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(EUiTabViewName.NewSoundAreaView), new int?((int)this.AdventureGuideUpList[0]), null, null);
 	}
 
-	// Token: 0x04003A1D RID: 14877
+	// Token: 0x04003AB5 RID: 15029
 	private int ConsumeUpCountInternal;
 
-	// Token: 0x04003A1E RID: 14878
+	// Token: 0x04003AB6 RID: 15030
 	[Nullable(2)]
 	private EDungeonType[] UpDungeonTypeList;
 }

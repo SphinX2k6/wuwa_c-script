@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BAD RID: 2989
+	// Token: 0x02000C7B RID: 3195
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class INpcBumpShow
 	{
-		// Token: 0x06004493 RID: 17555 RVA: 0x000AE1FE File Offset: 0x000AC3FE
-		[NullableContext(1)]
+		// Token: 0x060048EC RID: 18668 RVA: 0x000B82C2 File Offset: 0x000B64C2
+		[NullableContext(0)]
 		public static INpcBumpShow Create(INpcBumpShow? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012F6 RID: 4854
-		// (get) Token: 0x06004494 RID: 17556 RVA: 0x000AE21D File Offset: 0x000AC41D
+		// Token: 0x170013F1 RID: 5105
+		// (get) Token: 0x060048ED RID: 18669 RVA: 0x000B82E1 File Offset: 0x000B64E1
 		public virtual INpcPerformBubble BumpBubble
 		{
 			get
@@ -39,13 +39,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026C0 RID: 9920
+		// Token: 0x04002908 RID: 10504
 		private INpcBumpShow Instance;
 
-		// Token: 0x040026C1 RID: 9921
+		// Token: 0x04002909 RID: 10505
 		private INpcPerformBubble _BumpBubbleCache;
 
-		// Token: 0x040026C2 RID: 9922
+		// Token: 0x0400290A RID: 10506
 		private bool _BumpBubbleInited;
 	}
 }

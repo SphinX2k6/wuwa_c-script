@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D2E RID: 3374
+	// Token: 0x02000E28 RID: 3624
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IAiGearStrategy
 	{
-		// Token: 0x06004CFF RID: 19711 RVA: 0x000BFA4E File Offset: 0x000BDC4E
-		[NullableContext(1)]
+		// Token: 0x0600521B RID: 21019 RVA: 0x000CB192 File Offset: 0x000C9392
+		[NullableContext(0)]
 		public static IAiGearStrategy Create(IAiGearStrategy? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001860 RID: 6240
-		// (get) Token: 0x06004D00 RID: 19712 RVA: 0x000BFA6D File Offset: 0x000BDC6D
+		// Token: 0x170019C6 RID: 6598
+		// (get) Token: 0x0600521C RID: 21020 RVA: 0x000CB1B1 File Offset: 0x000C93B1
 		public virtual EAiGearStrategy Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001861 RID: 6241
-		// (get) Token: 0x06004D01 RID: 19713 RVA: 0x000BFA7A File Offset: 0x000BDC7A
+		// Token: 0x170019C7 RID: 6599
+		// (get) Token: 0x0600521D RID: 21021 RVA: 0x000CB1BE File Offset: 0x000C93BE
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -50,13 +50,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C1F RID: 11295
+		// Token: 0x04002EDF RID: 11999
 		private IAiGearStrategy Instance;
 
-		// Token: 0x04002C20 RID: 11296
+		// Token: 0x04002EE0 RID: 12000
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002C21 RID: 11297
+		// Token: 0x04002EE1 RID: 12001
 		private bool _ConditionInited;
 	}
 }

@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D22 RID: 23842
+	// Token: 0x02004D04 RID: 19716
 	public class FishingButton : UiPanelBase
 	{
-		// Token: 0x0603C718 RID: 247576 RVA: 0x00E7E85C File Offset: 0x00E7CA5C
+		// Token: 0x06031671 RID: 202353 RVA: 0x00DCEFFC File Offset: 0x00DCD1FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603C719 RID: 247577 RVA: 0x00E7E92C File Offset: 0x00E7CB2C
+		// Token: 0x06031672 RID: 202354 RVA: 0x00DCF0CC File Offset: 0x00DCD2CC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingButton.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C71A RID: 247578 RVA: 0x00E7E96F File Offset: 0x00E7CB6F
+		// Token: 0x06031673 RID: 202355 RVA: 0x00DCF10F File Offset: 0x00DCD30F
 		protected override void OnBeforeShow()
 		{
 			if (this.ActionName == "切换角色3")
@@ -59,13 +59,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C71B RID: 247579 RVA: 0x00E7E98D File Offset: 0x00E7CB8D
+		// Token: 0x06031674 RID: 202356 RVA: 0x00DCF12D File Offset: 0x00DCD32D
 		private void OnClickedButton()
 		{
 			FishingController.Instance.FishingInputHandler(this.ActionName);
 		}
 
-		// Token: 0x0603C71C RID: 247580 RVA: 0x00E7E99F File Offset: 0x00E7CB9F
+		// Token: 0x06031675 RID: 202357 RVA: 0x00DCF13F File Offset: 0x00DCD33F
 		protected override void OnBeforeDestroy()
 		{
 			if (this.ActionName == "切换角色3")
@@ -74,22 +74,22 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F7F7 RID: 129015
+		// Token: 0x0401A2B0 RID: 107184
 		[Nullable(2)]
 		private InputMultiKeyItem KeyItem;
 
-		// Token: 0x0401F7F8 RID: 129016
+		// Token: 0x0401A2B1 RID: 107185
 		[Nullable(1)]
 		private string ActionName = string.Empty;
 
-		// Token: 0x0200BFA7 RID: 49063
+		// Token: 0x0200A9AD RID: 43437
 		private enum EChildType
 		{
-			// Token: 0x04039D1E RID: 236830
+			// Token: 0x040346E0 RID: 214752
 			Button,
-			// Token: 0x04039D1F RID: 236831
+			// Token: 0x040346E1 RID: 214753
 			RedDotItem,
-			// Token: 0x04039D20 RID: 236832
+			// Token: 0x040346E2 RID: 214754
 			KeyItem
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063CA RID: 25546
+	// Token: 0x02006A47 RID: 27207
 	public struct IClientFollowShooterResetToPlayer : IFlatbufferObject
 	{
-		// Token: 0x1700BE55 RID: 48725
-		// (get) Token: 0x0602C301 RID: 180993 RVA: 0x00611131 File Offset: 0x0060F331
+		// Token: 0x1700C7E6 RID: 51174
+		// (get) Token: 0x0602EAAC RID: 191148 RVA: 0x0065C87E File Offset: 0x0065AA7E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C302 RID: 180994 RVA: 0x0061113E File Offset: 0x0060F33E
+		// Token: 0x0602EAAD RID: 191149 RVA: 0x0065C88B File Offset: 0x0065AA8B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C303 RID: 180995 RVA: 0x00611148 File Offset: 0x0060F348
+		// Token: 0x0602EAAE RID: 191150 RVA: 0x0065C894 File Offset: 0x0065AA94
 		public static IClientFollowShooterResetToPlayer GetRootAsIClientFollowShooterResetToPlayer(ByteBuffer _bb)
 		{
 			return IClientFollowShooterResetToPlayer.GetRootAsIClientFollowShooterResetToPlayer(_bb, default(IClientFollowShooterResetToPlayer));
 		}
 
-		// Token: 0x0602C304 RID: 180996 RVA: 0x00611164 File Offset: 0x0060F364
+		// Token: 0x0602EAAF RID: 191151 RVA: 0x0065C8B0 File Offset: 0x0065AAB0
 		public static IClientFollowShooterResetToPlayer GetRootAsIClientFollowShooterResetToPlayer(ByteBuffer _bb, IClientFollowShooterResetToPlayer obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C305 RID: 180997 RVA: 0x00611181 File Offset: 0x0060F381
+		// Token: 0x0602EAB0 RID: 191152 RVA: 0x0065C8CD File Offset: 0x0065AACD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C306 RID: 180998 RVA: 0x00611190 File Offset: 0x0060F390
+		// Token: 0x0602EAB1 RID: 191153 RVA: 0x0065C8DC File Offset: 0x0065AADC
 		public IClientFollowShooterResetToPlayer __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BE56 RID: 48726
-		// (get) Token: 0x0602C307 RID: 180999 RVA: 0x006111A0 File Offset: 0x0060F3A0
+		// Token: 0x1700C7E7 RID: 51175
+		// (get) Token: 0x0602EAB2 RID: 191154 RVA: 0x0065C8EC File Offset: 0x0065AAEC
 		public EClientFollowShooterLeisureInteractType Type
 		{
 			get
@@ -56,39 +56,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				int num = this.__p.__offset(4);
 				if (num == 0)
 				{
-					return EClientFollowShooterLeisureInteractType.ResetToPlayer;
+					return EClientFollowShooterLeisureInteractType.PlayAnimation;
 				}
 				return (EClientFollowShooterLeisureInteractType)this.__p.bb.Get(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x0602C308 RID: 181000 RVA: 0x006111DC File Offset: 0x0060F3DC
-		public static Offset<IClientFollowShooterResetToPlayer> CreateIClientFollowShooterResetToPlayer(FlatBufferBuilder builder, EClientFollowShooterLeisureInteractType Type = EClientFollowShooterLeisureInteractType.ResetToPlayer)
+		// Token: 0x0602EAB3 RID: 191155 RVA: 0x0065C928 File Offset: 0x0065AB28
+		public static Offset<IClientFollowShooterResetToPlayer> CreateIClientFollowShooterResetToPlayer(FlatBufferBuilder builder, EClientFollowShooterLeisureInteractType Type = EClientFollowShooterLeisureInteractType.PlayAnimation)
 		{
 			builder.StartTable(1);
 			IClientFollowShooterResetToPlayer.AddType(builder, Type);
 			return IClientFollowShooterResetToPlayer.EndIClientFollowShooterResetToPlayer(builder);
 		}
 
-		// Token: 0x0602C309 RID: 181001 RVA: 0x006111F2 File Offset: 0x0060F3F2
+		// Token: 0x0602EAB4 RID: 191156 RVA: 0x0065C93E File Offset: 0x0065AB3E
 		public static void StartIClientFollowShooterResetToPlayer(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602C30A RID: 181002 RVA: 0x006111FB File Offset: 0x0060F3FB
+		// Token: 0x0602EAB5 RID: 191157 RVA: 0x0065C947 File Offset: 0x0065AB47
 		public static void AddType(FlatBufferBuilder builder, EClientFollowShooterLeisureInteractType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602C30B RID: 181003 RVA: 0x00611206 File Offset: 0x0060F406
+		// Token: 0x0602EAB6 RID: 191158 RVA: 0x0065C952 File Offset: 0x0065AB52
 		public static Offset<IClientFollowShooterResetToPlayer> EndIClientFollowShooterResetToPlayer(FlatBufferBuilder builder)
 		{
 			return new Offset<IClientFollowShooterResetToPlayer>(builder.EndTable());
 		}
 
-		// Token: 0x0602C30C RID: 181004 RVA: 0x00611214 File Offset: 0x0060F414
+		// Token: 0x0602EAB7 RID: 191159 RVA: 0x0065C960 File Offset: 0x0065AB60
 		public IClientFollowShooterResetToPlayerT UnPack()
 		{
 			IClientFollowShooterResetToPlayerT clientFollowShooterResetToPlayerT = new IClientFollowShooterResetToPlayerT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return clientFollowShooterResetToPlayerT;
 		}
 
-		// Token: 0x0602C30D RID: 181005 RVA: 0x0061122F File Offset: 0x0060F42F
+		// Token: 0x0602EAB8 RID: 191160 RVA: 0x0065C97B File Offset: 0x0065AB7B
 		public void UnPackTo(IClientFollowShooterResetToPlayerT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602C30E RID: 181006 RVA: 0x00611240 File Offset: 0x0060F440
+		// Token: 0x0602EAB9 RID: 191161 RVA: 0x0065C98C File Offset: 0x0065AB8C
 		public static Offset<IClientFollowShooterResetToPlayer> Pack(FlatBufferBuilder builder, IClientFollowShooterResetToPlayerT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientFollowShooterResetToPlayer.CreateIClientFollowShooterResetToPlayer(builder, _o.Type);
 		}
 
-		// Token: 0x040109A7 RID: 68007
+		// Token: 0x040117C8 RID: 71624
 		private Table __p;
 	}
 }

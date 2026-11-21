@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045B7 RID: 17847
+	// Token: 0x020034DF RID: 13535
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CharMaterialControlDataCache
 	{
-		// Token: 0x0602E052 RID: 188498 RVA: 0x00A994C0 File Offset: 0x00A976C0
+		// Token: 0x0602273C RID: 141116 RVA: 0x009C56E0 File Offset: 0x009C38E0
 		[NullableContext(1)]
 		public unsafe CharMaterialControlDataCache(string dataName, PD_CharacterControllerData_C data)
 		{
@@ -326,43 +326,43 @@ namespace CSharpScript.Game.Render
 			this.HiddenAfterEffect = data.HiddenAfterEffect;
 		}
 
-		// Token: 0x04018935 RID: 100661
+		// Token: 0x04012F70 RID: 77680
 		public PD_CharacterControllerData_C Data;
 
-		// Token: 0x04018936 RID: 100662
+		// Token: 0x04012F71 RID: 77681
 		public string DataName;
 
-		// Token: 0x04018937 RID: 100663
+		// Token: 0x04012F72 RID: 77682
 		public int RefCount;
 
-		// Token: 0x04018938 RID: 100664
+		// Token: 0x04012F73 RID: 77683
 		public Stat StatCharMaterialControlCacheData;
 
-		// Token: 0x04018939 RID: 100665
+		// Token: 0x04012F74 RID: 77684
 		public Stat StatCharMaterialControlUpdate;
 
-		// Token: 0x0401893A RID: 100666
+		// Token: 0x04012F75 RID: 77685
 		public float WholeLoopTime;
 
-		// Token: 0x0401893B RID: 100667
+		// Token: 0x04012F76 RID: 77686
 		public float DataLoopEnd;
 
-		// Token: 0x0401893C RID: 100668
+		// Token: 0x04012F77 RID: 77687
 		public float DataLoopStart;
 
-		// Token: 0x0401893D RID: 100669
+		// Token: 0x04012F78 RID: 77688
 		public float DataLoopTime;
 
-		// Token: 0x0401893E RID: 100670
+		// Token: 0x04012F79 RID: 77689
 		public bool IgnoreTimeDilation;
 
-		// Token: 0x0401893F RID: 100671
+		// Token: 0x04012F7A RID: 77690
 		public bool MaskOriginEffect;
 
-		// Token: 0x04018940 RID: 100672
+		// Token: 0x04012F7B RID: 77691
 		public ECharacterControllerType? DataType;
 
-		// Token: 0x04018941 RID: 100673
+		// Token: 0x04012F7C RID: 77692
 		[Nullable(new byte[]
 		{
 			2,
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Render
 		})]
 		public HashSet<string> OtherCases;
 
-		// Token: 0x04018942 RID: 100674
+		// Token: 0x04012F7D RID: 77693
 		[Nullable(new byte[]
 		{
 			2,
@@ -378,10 +378,10 @@ namespace CSharpScript.Game.Render
 		})]
 		public HashSet<string> WeaponCases;
 
-		// Token: 0x04018943 RID: 100675
+		// Token: 0x04012F7E RID: 77694
 		public ECharacterMeshPart[] SpecifiedParts;
 
-		// Token: 0x04018944 RID: 100676
+		// Token: 0x04012F7F RID: 77695
 		[Nullable(new byte[]
 		{
 			2,
@@ -389,7 +389,7 @@ namespace CSharpScript.Game.Render
 		})]
 		public string[] CustomPartNames;
 
-		// Token: 0x04018945 RID: 100677
+		// Token: 0x04012F80 RID: 77696
 		[Nullable(new byte[]
 		{
 			2,
@@ -397,91 +397,91 @@ namespace CSharpScript.Game.Render
 		})]
 		public string[] CustomExcludePartNames;
 
-		// Token: 0x04018946 RID: 100678
+		// Token: 0x04012F81 RID: 77697
 		public bool HiddenAfterEffect;
 
-		// Token: 0x04018947 RID: 100679
+		// Token: 0x04012F82 RID: 77698
 		public ECharacterBodySpecifiedType? SpecifiedBodyType;
 
-		// Token: 0x04018948 RID: 100680
+		// Token: 0x04012F83 RID: 77699
 		public ECharacterSlotSpecifiedType? SpecifiedSlotType;
 
-		// Token: 0x04018949 RID: 100681
+		// Token: 0x04012F84 RID: 77700
 		public ECharacterControllerApplyType? MaterialModifyType;
 
-		// Token: 0x0401894A RID: 100682
+		// Token: 0x04012F85 RID: 77701
 		public bool UseRim;
 
-		// Token: 0x0401894B RID: 100683
+		// Token: 0x04012F86 RID: 77702
 		public CharMaterialControlFloatGroup RimRange;
 
-		// Token: 0x0401894C RID: 100684
+		// Token: 0x04012F87 RID: 77703
 		public CharMaterialControlColorGroup RimColor;
 
-		// Token: 0x0401894D RID: 100685
+		// Token: 0x04012F88 RID: 77704
 		public CharMaterialControlFloatGroup RimIntensity;
 
-		// Token: 0x0401894E RID: 100686
+		// Token: 0x04012F89 RID: 77705
 		public int RimUseTex;
 
-		// Token: 0x0401894F RID: 100687
+		// Token: 0x04012F8A RID: 77706
 		public FLinearColor? RimChannel;
 
-		// Token: 0x04018950 RID: 100688
+		// Token: 0x04012F8B RID: 77707
 		public bool RimRevertProperty;
 
-		// Token: 0x04018951 RID: 100689
+		// Token: 0x04012F8C RID: 77708
 		public bool UseDissolve;
 
-		// Token: 0x04018952 RID: 100690
+		// Token: 0x04012F8D RID: 77709
 		public FLinearColor? DissolveChannel;
 
-		// Token: 0x04018953 RID: 100691
+		// Token: 0x04012F8E RID: 77710
 		public CharMaterialControlFloatGroup DissolveProgress;
 
-		// Token: 0x04018954 RID: 100692
+		// Token: 0x04012F8F RID: 77711
 		public CharMaterialControlFloatGroup DissolveSmooth;
 
-		// Token: 0x04018955 RID: 100693
+		// Token: 0x04012F90 RID: 77712
 		public CharMaterialControlFloatGroup DissolveColorIntensity;
 
-		// Token: 0x04018956 RID: 100694
+		// Token: 0x04012F91 RID: 77713
 		public CharMaterialControlColorGroup DissolveColor;
 
-		// Token: 0x04018957 RID: 100695
+		// Token: 0x04012F92 RID: 77714
 		public bool DissolveRevertProperty;
 
-		// Token: 0x04018958 RID: 100696
+		// Token: 0x04012F93 RID: 77715
 		public bool UseOutline;
 
-		// Token: 0x04018959 RID: 100697
+		// Token: 0x04012F94 RID: 77716
 		public bool OutlineRevertProperty;
 
-		// Token: 0x0401895A RID: 100698
+		// Token: 0x04012F95 RID: 77717
 		public float OutlineUseTex;
 
-		// Token: 0x0401895B RID: 100699
+		// Token: 0x04012F96 RID: 77718
 		public bool UseOuterOutlineEffect;
 
-		// Token: 0x0401895C RID: 100700
+		// Token: 0x04012F97 RID: 77719
 		public CharMaterialControlFloatGroup OutlineWidth;
 
-		// Token: 0x0401895D RID: 100701
+		// Token: 0x04012F98 RID: 77720
 		public CharMaterialControlColorGroup OutlineColor;
 
-		// Token: 0x0401895E RID: 100702
+		// Token: 0x04012F99 RID: 77721
 		public CharMaterialControlFloatGroup OutlineIntensity;
 
-		// Token: 0x0401895F RID: 100703
+		// Token: 0x04012F9A RID: 77722
 		public UMaterialInterface ReplaceMaterialInterface;
 
-		// Token: 0x04018960 RID: 100704
+		// Token: 0x04012F9B RID: 77723
 		public bool UseParameterModify;
 
-		// Token: 0x04018961 RID: 100705
+		// Token: 0x04012F9C RID: 77724
 		public FName[] ColorParameterNames;
 
-		// Token: 0x04018962 RID: 100706
+		// Token: 0x04012F9D RID: 77725
 		[Nullable(new byte[]
 		{
 			2,
@@ -489,10 +489,10 @@ namespace CSharpScript.Game.Render
 		})]
 		public CharMaterialControlColorGroup[] ColorParameterValues;
 
-		// Token: 0x04018963 RID: 100707
+		// Token: 0x04012F9E RID: 77726
 		public FName[] FloatParameterNames;
 
-		// Token: 0x04018964 RID: 100708
+		// Token: 0x04012F9F RID: 77727
 		[Nullable(new byte[]
 		{
 			2,
@@ -500,100 +500,100 @@ namespace CSharpScript.Game.Render
 		})]
 		public CharMaterialControlFloatGroup[] FloatParameterValues;
 
-		// Token: 0x04018965 RID: 100709
+		// Token: 0x04012FA0 RID: 77728
 		public bool RevertMaterial;
 
-		// Token: 0x04018966 RID: 100710
+		// Token: 0x04012FA1 RID: 77729
 		public CharMaterialControlColorGroup BaseColor;
 
-		// Token: 0x04018967 RID: 100711
+		// Token: 0x04012FA2 RID: 77730
 		public CharMaterialControlColorGroup EmissionColor;
 
-		// Token: 0x04018968 RID: 100712
+		// Token: 0x04012FA3 RID: 77731
 		public CharMaterialControlFloatGroup EmissionIntensity;
 
-		// Token: 0x04018969 RID: 100713
+		// Token: 0x04012FA4 RID: 77732
 		public CharMaterialControlFloatGroup BaseColorIntensity;
 
-		// Token: 0x0401896A RID: 100714
+		// Token: 0x04012FA5 RID: 77733
 		public float BaseUseTex;
 
-		// Token: 0x0401896B RID: 100715
+		// Token: 0x04012FA6 RID: 77734
 		public float EmissionUseTex;
 
-		// Token: 0x0401896C RID: 100716
+		// Token: 0x04012FA7 RID: 77735
 		public bool UseColor;
 
-		// Token: 0x0401896D RID: 100717
+		// Token: 0x04012FA8 RID: 77736
 		public bool ColorRevertProperty;
 
-		// Token: 0x0401896E RID: 100718
+		// Token: 0x04012FA9 RID: 77737
 		public bool UseTextureSample;
 
-		// Token: 0x0401896F RID: 100719
+		// Token: 0x04012FAA RID: 77738
 		public UTexture2D MaskTexture;
 
-		// Token: 0x04018970 RID: 100720
+		// Token: 0x04012FAB RID: 77739
 		public FLinearColor? UvSelection;
 
-		// Token: 0x04018971 RID: 100721
+		// Token: 0x04012FAC RID: 77740
 		public float UseScreenUv;
 
-		// Token: 0x04018972 RID: 100722
+		// Token: 0x04012FAD RID: 77741
 		public CharMaterialControlColorGroup TextureScaleAndOffset;
 
-		// Token: 0x04018973 RID: 100723
+		// Token: 0x04012FAE RID: 77742
 		public CharMaterialControlColorGroup TextureSpeed;
 
-		// Token: 0x04018974 RID: 100724
+		// Token: 0x04012FAF RID: 77743
 		public CharMaterialControlColorGroup TextureColorTint;
 
-		// Token: 0x04018975 RID: 100725
+		// Token: 0x04012FB0 RID: 77744
 		public CharMaterialControlFloatGroup Rotation;
 
-		// Token: 0x04018976 RID: 100726
+		// Token: 0x04012FB1 RID: 77745
 		public float UseAlphaToMask;
 
-		// Token: 0x04018977 RID: 100727
+		// Token: 0x04012FB2 RID: 77746
 		public CharMaterialControlFloatGroup TextureMaskRange;
 
-		// Token: 0x04018978 RID: 100728
+		// Token: 0x04012FB3 RID: 77747
 		public bool TextureSampleRevertProperty;
 
-		// Token: 0x04018979 RID: 100729
+		// Token: 0x04012FB4 RID: 77748
 		public bool UseMotionOffset;
 
-		// Token: 0x0401897A RID: 100730
+		// Token: 0x04012FB5 RID: 77749
 		public float MotionAffectVertexRange;
 
-		// Token: 0x0401897B RID: 100731
+		// Token: 0x04012FB6 RID: 77750
 		public float MotionOffsetLength;
 
-		// Token: 0x0401897C RID: 100732
+		// Token: 0x04012FB7 RID: 77751
 		public CharMaterialControlFloatGroup MotionNoiseSpeed;
 
-		// Token: 0x0401897D RID: 100733
+		// Token: 0x04012FB8 RID: 77752
 		public bool MotionOffsetRevertProperty;
 
-		// Token: 0x0401897E RID: 100734
+		// Token: 0x04012FB9 RID: 77753
 		public bool UseDitherEffect;
 
-		// Token: 0x0401897F RID: 100735
+		// Token: 0x04012FBA RID: 77754
 		public CharMaterialControlFloatGroup DitherValue;
 
-		// Token: 0x04018980 RID: 100736
+		// Token: 0x04012FBB RID: 77755
 		public bool DitherRevertProperty;
 
-		// Token: 0x04018981 RID: 100737
+		// Token: 0x04012FBC RID: 77756
 		public bool UseCustomMaterialEffect;
 
-		// Token: 0x04018982 RID: 100738
+		// Token: 0x04012FBD RID: 77757
 		public bool CustomRevertProperty;
 
-		// Token: 0x04018983 RID: 100739
+		// Token: 0x04012FBE RID: 77758
 		public FName[] CustomColorParameterNames;
 
-		// Token: 0x04018984 RID: 100740
+		// Token: 0x04012FBF RID: 77759
 		[Nullable(new byte[]
 		{
 			2,
@@ -601,10 +601,10 @@ namespace CSharpScript.Game.Render
 		})]
 		public CharMaterialControlColorGroup[] CustomColorParameterValues;
 
-		// Token: 0x04018985 RID: 100741
+		// Token: 0x04012FC0 RID: 77760
 		public FName[] CustomFloatParameterNames;
 
-		// Token: 0x04018986 RID: 100742
+		// Token: 0x04012FC1 RID: 77761
 		[Nullable(new byte[]
 		{
 			2,
@@ -612,10 +612,10 @@ namespace CSharpScript.Game.Render
 		})]
 		public CharMaterialControlFloatGroup[] CustomFloatParameterValues;
 
-		// Token: 0x04018987 RID: 100743
+		// Token: 0x04012FC2 RID: 77762
 		public FName[] CustomTextureParameterNames;
 
-		// Token: 0x04018988 RID: 100744
+		// Token: 0x04012FC3 RID: 77763
 		[Nullable(new byte[]
 		{
 			2,

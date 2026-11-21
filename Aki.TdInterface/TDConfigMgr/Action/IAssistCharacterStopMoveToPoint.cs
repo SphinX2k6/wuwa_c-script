@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017E0 RID: 6112
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001969 RID: 6505
 	public class IAssistCharacterStopMoveToPoint : IExecClientBattleActionType
 	{
-		// Token: 0x06008337 RID: 33591 RVA: 0x00139730 File Offset: 0x00137930
+		// Token: 0x06008A53 RID: 35411 RVA: 0x00148E18 File Offset: 0x00147018
 		private IAssistCharacterStopMoveToPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008338 RID: 33592 RVA: 0x00139768 File Offset: 0x00137968
+		// Token: 0x06008A54 RID: 35412 RVA: 0x00148E50 File Offset: 0x00147050
 		public static IAssistCharacterStopMoveToPoint Create([Nullable(2)] IAssistCharacterStopMoveToPoint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008339 RID: 33593 RVA: 0x0013977B File Offset: 0x0013797B
+		// Token: 0x06008A55 RID: 35413 RVA: 0x00148E63 File Offset: 0x00147063
 		public static IAssistCharacterStopMoveToPoint CreateFromSetValue([Nullable(2)] IAssistCharacterStopMoveToPoint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600833A RID: 33594 RVA: 0x0013978E File Offset: 0x0013798E
+		// Token: 0x06008A56 RID: 35414 RVA: 0x00148E76 File Offset: 0x00147076
 		public new IAssistCharacterStopMoveToPoint_SetValue ToSetValue()
 		{
 			return new IAssistCharacterStopMoveToPoint_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B20 RID: 11040
-		// (get) Token: 0x0600833B RID: 33595 RVA: 0x001397AD File Offset: 0x001379AD
-		// (set) Token: 0x0600833C RID: 33596 RVA: 0x001397D8 File Offset: 0x001379D8
+		// Token: 0x17002D18 RID: 11544
+		// (get) Token: 0x06008A57 RID: 35415 RVA: 0x00148E95 File Offset: 0x00147095
+		// (set) Token: 0x06008A58 RID: 35416 RVA: 0x00148EC0 File Offset: 0x001470C0
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B21 RID: 11041
-		// (get) Token: 0x0600833D RID: 33597 RVA: 0x001397E6 File Offset: 0x001379E6
-		// (set) Token: 0x0600833E RID: 33598 RVA: 0x00139811 File Offset: 0x00137A11
+		// Token: 0x17002D19 RID: 11545
+		// (get) Token: 0x06008A59 RID: 35417 RVA: 0x00148ECE File Offset: 0x001470CE
+		// (set) Token: 0x06008A5A RID: 35418 RVA: 0x00148EF9 File Offset: 0x001470F9
 		public virtual int AssistCharacterId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400534F RID: 21327
+		// Token: 0x04005797 RID: 22423
 		[Nullable(2)]
 		protected new IAssistCharacterStopMoveToPoint FbInstance;
 
-		// Token: 0x04005350 RID: 21328
+		// Token: 0x04005798 RID: 22424
 		[Nullable(2)]
 		protected new IAssistCharacterStopMoveToPoint_SetValue PocoInterface;
 	}

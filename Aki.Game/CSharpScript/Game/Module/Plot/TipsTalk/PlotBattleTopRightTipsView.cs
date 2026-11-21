@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.TipsTalk
 {
-	// Token: 0x0200500D RID: 20493
+	// Token: 0x02003FD7 RID: 16343
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotBattleTopRightTipsView : PlotTipsViewBase
 	{
-		// Token: 0x0603470A RID: 214794 RVA: 0x00C5979D File Offset: 0x00C5799D
+		// Token: 0x060295AD RID: 169389 RVA: 0x00BA4C9D File Offset: 0x00BA2E9D
 		public PlotBattleTopRightTipsView()
 		{
 			this.ResourceId = "UiItem_MainTalk";
 		}
 
-		// Token: 0x0603470B RID: 214795 RVA: 0x00C597B0 File Offset: 0x00C579B0
+		// Token: 0x060295AE RID: 169390 RVA: 0x00BA4CB0 File Offset: 0x00BA2EB0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603470C RID: 214796 RVA: 0x00C5985C File Offset: 0x00C57A5C
+		// Token: 0x060295AF RID: 169391 RVA: 0x00BA4D5C File Offset: 0x00BA2F5C
 		protected override void OnInit()
 		{
 			this.IconItem = base.GetTexture(0);
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			}
 		}
 
-		// Token: 0x0603470D RID: 214797 RVA: 0x00C59954 File Offset: 0x00C57B54
+		// Token: 0x060295B0 RID: 169392 RVA: 0x00BA4E54 File Offset: 0x00BA3054
 		protected override void OnAfterShow()
 		{
 			bool isHang = base.IsHang;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			}
 		}
 
-		// Token: 0x0603470E RID: 214798 RVA: 0x00C59984 File Offset: 0x00C57B84
+		// Token: 0x060295B1 RID: 169393 RVA: 0x00BA4E84 File Offset: 0x00BA3084
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			if (this.TweenOutComp != null && !base.IsHang)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0603470F RID: 214799 RVA: 0x00C599D0 File Offset: 0x00C57BD0
+		// Token: 0x060295B2 RID: 169394 RVA: 0x00BA4ED0 File Offset: 0x00BA30D0
 		protected override void OnBeforeDestroy()
 		{
 			if (this.TweenOutEndDelegate != null)
@@ -96,14 +96,14 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			}
 		}
 
-		// Token: 0x06034710 RID: 214800 RVA: 0x00C59A28 File Offset: 0x00C57C28
+		// Token: 0x060295B3 RID: 169395 RVA: 0x00BA4F28 File Offset: 0x00BA3128
 		private void OnTweenOutEndDelegate()
 		{
 			this.TweenOutPromise.SetResult(true);
 			this.TweenOutPromise = null;
 		}
 
-		// Token: 0x06034711 RID: 214801 RVA: 0x00C59A40 File Offset: 0x00C57C40
+		// Token: 0x060295B4 RID: 169396 RVA: 0x00BA4F40 File Offset: 0x00BA3140
 		protected override UUIItem GetParentItem()
 		{
 			EUiViewName? viewName = base.GetViewName();
@@ -118,35 +118,35 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			return base.GetParentItem();
 		}
 
-		// Token: 0x0401BEEB RID: 114411
+		// Token: 0x040168D4 RID: 92372
 		private ULGUIPlayTweenComponent TweenInComp;
 
-		// Token: 0x0401BEEC RID: 114412
+		// Token: 0x040168D5 RID: 92373
 		private ULGUIPlayTweenComponent TweenOutComp;
 
-		// Token: 0x0401BEED RID: 114413
+		// Token: 0x040168D6 RID: 92374
 		private FLGUIPlayTweenCompleteDynamicDelegate TweenOutEndDelegate;
 
-		// Token: 0x0401BEEE RID: 114414
+		// Token: 0x040168D7 RID: 92375
 		private FLGUIDelegateHandleWrapper TweenOutEndDelegateWrapper;
 
-		// Token: 0x0401BEEF RID: 114415
+		// Token: 0x040168D8 RID: 92376
 		private CustomPromise<bool> TweenOutPromise;
 
-		// Token: 0x0200B140 RID: 45376
+		// Token: 0x02009B78 RID: 39800
 		[NullableContext(0)]
 		private static class EChildCom
 		{
-			// Token: 0x04035C9A RID: 220314
+			// Token: 0x040306E2 RID: 198370
 			public const int Icon = 0;
 
-			// Token: 0x04035C9B RID: 220315
+			// Token: 0x040306E3 RID: 198371
 			public const int Text = 1;
 
-			// Token: 0x04035C9C RID: 220316
+			// Token: 0x040306E4 RID: 198372
 			public const int TweenIn = 2;
 
-			// Token: 0x04035C9D RID: 220317
+			// Token: 0x040306E5 RID: 198373
 			public const int TweenOut = 3;
 		}
 	}

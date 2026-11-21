@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002890 RID: 10384
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B65 RID: 11109
 	public class ISwitchSubLevelsDirectly : SwitchSubLevels
 	{
-		// Token: 0x0600E5F9 RID: 58873 RVA: 0x0021CCA3 File Offset: 0x0021AEA3
+		// Token: 0x0600F428 RID: 62504 RVA: 0x00239C23 File Offset: 0x00237E23
 		public static ISwitchSubLevelsDirectly Create(ISwitchSubLevelsDirectly? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700469B RID: 18075
-		// (get) Token: 0x0600E5FA RID: 58874 RVA: 0x0021CCC2 File Offset: 0x0021AEC2
+		// Token: 0x17004A0C RID: 18956
+		// (get) Token: 0x0600F429 RID: 62505 RVA: 0x00239C42 File Offset: 0x00237E42
 		public override ESwitchSubLevelsType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700469C RID: 18076
-		// (get) Token: 0x0600E5FB RID: 58875 RVA: 0x0021CCD0 File Offset: 0x0021AED0
+		// Token: 0x17004A0D RID: 18957
+		// (get) Token: 0x0600F42A RID: 62506 RVA: 0x00239C50 File Offset: 0x00237E50
 		public virtual List<string> LoadLevels
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700469D RID: 18077
-		// (get) Token: 0x0600E5FC RID: 58876 RVA: 0x0021CD34 File Offset: 0x0021AF34
+		// Token: 0x17004A0E RID: 18958
+		// (get) Token: 0x0600F42B RID: 62507 RVA: 0x00239CB4 File Offset: 0x00237EB4
 		public virtual List<string> UnloadLevels
 		{
 			get
@@ -75,8 +72,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700469E RID: 18078
-		// (get) Token: 0x0600E5FD RID: 58877 RVA: 0x0021CD98 File Offset: 0x0021AF98
+		// Token: 0x17004A0F RID: 18959
+		// (get) Token: 0x0600F42C RID: 62508 RVA: 0x00239D18 File Offset: 0x00237F18
 		public virtual int? TeleportEntityId
 		{
 			get
@@ -89,8 +86,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700469F RID: 18079
-		// (get) Token: 0x0600E5FE RID: 58878 RVA: 0x0021CDD0 File Offset: 0x0021AFD0
+		// Token: 0x17004A10 RID: 18960
+		// (get) Token: 0x0600F42D RID: 62509 RVA: 0x00239D50 File Offset: 0x00237F50
 		public virtual bool? IsWaitForSwitchComplete
 		{
 			get
@@ -103,19 +100,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F22 RID: 32546
+		// Token: 0x040085E1 RID: 34273
 		private ISwitchSubLevelsDirectly Instance;
 
-		// Token: 0x04007F23 RID: 32547
+		// Token: 0x040085E2 RID: 34274
 		private List<string> _LoadLevelsCache;
 
-		// Token: 0x04007F24 RID: 32548
+		// Token: 0x040085E3 RID: 34275
 		private bool _LoadLevelsInited;
 
-		// Token: 0x04007F25 RID: 32549
+		// Token: 0x040085E4 RID: 34276
 		private List<string> _UnloadLevelsCache;
 
-		// Token: 0x04007F26 RID: 32550
+		// Token: 0x040085E5 RID: 34277
 		private bool _UnloadLevelsInited;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200132B RID: 4907
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200147B RID: 5243
 	public class ITitlePreState
 	{
-		// Token: 0x06007090 RID: 28816 RVA: 0x0010FB71 File Offset: 0x0010DD71
+		// Token: 0x06007730 RID: 30512 RVA: 0x0011E0DD File Offset: 0x0011C2DD
 		public static ITitlePreState Create(ITitlePreState? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700240D RID: 9229
-		// (get) Token: 0x06007091 RID: 28817 RVA: 0x0010FB90 File Offset: 0x0010DD90
+		// Token: 0x170025DC RID: 9692
+		// (get) Token: 0x06007731 RID: 30513 RVA: 0x0011E0FC File Offset: 0x0011C2FC
 		public virtual string TidPreStateTitle
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700240E RID: 9230
-		// (get) Token: 0x06007092 RID: 28818 RVA: 0x0010FB9D File Offset: 0x0010DD9D
+		// Token: 0x170025DD RID: 9693
+		// (get) Token: 0x06007732 RID: 30514 RVA: 0x0011E109 File Offset: 0x0011C309
 		public virtual IConditionGroup SwitchConditions
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700240F RID: 9231
-		// (get) Token: 0x06007093 RID: 28819 RVA: 0x0010FBD1 File Offset: 0x0010DDD1
+		// Token: 0x170025DE RID: 9694
+		// (get) Token: 0x06007733 RID: 30515 RVA: 0x0011E13D File Offset: 0x0011C33D
 		[Nullable(2)]
 		public virtual string EdTidPreStateTitle
 		{
@@ -61,14 +59,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040ED RID: 16621
+		// Token: 0x04004469 RID: 17513
 		private ITitlePreState Instance;
 
-		// Token: 0x040040EE RID: 16622
+		// Token: 0x0400446A RID: 17514
 		[Nullable(2)]
 		private IConditionGroup _SwitchConditionsCache;
 
-		// Token: 0x040040EF RID: 16623
+		// Token: 0x0400446B RID: 17515
 		private bool _SwitchConditionsInited;
 	}
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A02 RID: 23042
+	// Token: 0x0200600F RID: 24591
 	public class ISunSpiritGearPerformScaleUpT
 	{
-		// Token: 0x1700AD1E RID: 44318
-		// (get) Token: 0x060271B6 RID: 160182 RVA: 0x00561371 File Offset: 0x0055F571
-		// (set) Token: 0x060271B7 RID: 160183 RVA: 0x00561379 File Offset: 0x0055F579
+		// Token: 0x1700B656 RID: 46678
+		// (get) Token: 0x0602972E RID: 169774 RVA: 0x005A8335 File Offset: 0x005A6535
+		// (set) Token: 0x0602972F RID: 169775 RVA: 0x005A833D File Offset: 0x005A653D
 		public ESunSpiritGearPerformType Type { get; set; }
 
-		// Token: 0x1700AD1F RID: 44319
-		// (get) Token: 0x060271B8 RID: 160184 RVA: 0x00561382 File Offset: 0x0055F582
-		// (set) Token: 0x060271B9 RID: 160185 RVA: 0x0056138A File Offset: 0x0055F58A
+		// Token: 0x1700B657 RID: 46679
+		// (get) Token: 0x06029730 RID: 169776 RVA: 0x005A8346 File Offset: 0x005A6546
+		// (set) Token: 0x06029731 RID: 169777 RVA: 0x005A834E File Offset: 0x005A654E
 		public float Scale { get; set; }
 
-		// Token: 0x1700AD20 RID: 44320
-		// (get) Token: 0x060271BA RID: 160186 RVA: 0x00561393 File Offset: 0x0055F593
-		// (set) Token: 0x060271BB RID: 160187 RVA: 0x0056139B File Offset: 0x0055F59B
+		// Token: 0x1700B658 RID: 46680
+		// (get) Token: 0x06029732 RID: 169778 RVA: 0x005A8357 File Offset: 0x005A6557
+		// (set) Token: 0x06029733 RID: 169779 RVA: 0x005A835F File Offset: 0x005A655F
 		public IScaleUpSpiritPerformConfigT ScaleUpPerformConfig { get; set; }
 
-		// Token: 0x060271BC RID: 160188 RVA: 0x005613A4 File Offset: 0x0055F5A4
+		// Token: 0x06029734 RID: 169780 RVA: 0x005A8368 File Offset: 0x005A6568
 		public ISunSpiritGearPerformScaleUpT()
 		{
 			this.Type = ESunSpiritGearPerformType.ToGearRelativePos;

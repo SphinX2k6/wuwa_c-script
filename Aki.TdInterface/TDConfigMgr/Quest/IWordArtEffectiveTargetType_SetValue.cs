@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001217 RID: 4631
+	// Token: 0x02001353 RID: 4947
 	public class IWordArtEffectiveTargetType_SetValue
 	{
-		// Token: 0x04003ED2 RID: 16082
+		// Token: 0x04004240 RID: 16960
 		public EWordArtEffectiveTargetType Type;
 	}
 }

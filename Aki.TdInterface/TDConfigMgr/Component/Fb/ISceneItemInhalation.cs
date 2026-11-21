@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D60 RID: 3424
+	// Token: 0x02000E5A RID: 3674
 	public class ISceneItemInhalation : IInhalationPerformanceType
 	{
-		// Token: 0x06004DFE RID: 19966 RVA: 0x000C1C4D File Offset: 0x000BFE4D
-		[NullableContext(1)]
+		// Token: 0x0600531A RID: 21274 RVA: 0x000CD391 File Offset: 0x000CB591
 		public static ISceneItemInhalation Create(ISceneItemInhalation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018FB RID: 6395
-		// (get) Token: 0x06004DFF RID: 19967 RVA: 0x000C1C6C File Offset: 0x000BFE6C
+		// Token: 0x17001A61 RID: 6753
+		// (get) Token: 0x0600531B RID: 21275 RVA: 0x000CD3B0 File Offset: 0x000CB5B0
 		public override EInhalationPerformanceType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CB5 RID: 11445
+		// Token: 0x04002F75 RID: 12149
 		private ISceneItemInhalation Instance;
 	}
 }

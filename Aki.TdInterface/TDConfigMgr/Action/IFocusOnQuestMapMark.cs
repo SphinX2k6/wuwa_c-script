@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AB1 RID: 6833
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C4A RID: 7242
 	public class IFocusOnQuestMapMark : IFocusOnMapMark
 	{
-		// Token: 0x0600928A RID: 37514 RVA: 0x00154A0C File Offset: 0x00152C0C
+		// Token: 0x06009A0A RID: 39434 RVA: 0x00164BF8 File Offset: 0x00162DF8
 		private IFocusOnQuestMapMark_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600928B RID: 37515 RVA: 0x00154A44 File Offset: 0x00152C44
+		// Token: 0x06009A0B RID: 39435 RVA: 0x00164C30 File Offset: 0x00162E30
 		public static IFocusOnQuestMapMark Create([Nullable(2)] IFocusOnQuestMapMark instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600928C RID: 37516 RVA: 0x00154A57 File Offset: 0x00152C57
+		// Token: 0x06009A0C RID: 39436 RVA: 0x00164C43 File Offset: 0x00162E43
 		public static IFocusOnQuestMapMark CreateFromSetValue([Nullable(2)] IFocusOnQuestMapMark_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600928D RID: 37517 RVA: 0x00154A6A File Offset: 0x00152C6A
+		// Token: 0x06009A0D RID: 39437 RVA: 0x00164C56 File Offset: 0x00162E56
 		public new IFocusOnQuestMapMark_SetValue ToSetValue()
 		{
 			return new IFocusOnQuestMapMark_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E91 RID: 11921
-		// (get) Token: 0x0600928E RID: 37518 RVA: 0x00154A89 File Offset: 0x00152C89
-		// (set) Token: 0x0600928F RID: 37519 RVA: 0x00154AB4 File Offset: 0x00152CB4
+		// Token: 0x170030A3 RID: 12451
+		// (get) Token: 0x06009A0E RID: 39438 RVA: 0x00164C75 File Offset: 0x00162E75
+		// (set) Token: 0x06009A0F RID: 39439 RVA: 0x00164CA0 File Offset: 0x00162EA0
 		public override EMapMarkType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E92 RID: 11922
-		// (get) Token: 0x06009290 RID: 37520 RVA: 0x00154AC2 File Offset: 0x00152CC2
-		// (set) Token: 0x06009291 RID: 37521 RVA: 0x00154AED File Offset: 0x00152CED
+		// Token: 0x170030A4 RID: 12452
+		// (get) Token: 0x06009A10 RID: 39440 RVA: 0x00164CAE File Offset: 0x00162EAE
+		// (set) Token: 0x06009A11 RID: 39441 RVA: 0x00164CD9 File Offset: 0x00162ED9
 		public virtual int QuestId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A38 RID: 23096
+		// Token: 0x04005EA8 RID: 24232
 		[Nullable(2)]
 		protected new IFocusOnQuestMapMark FbInstance;
 
-		// Token: 0x04005A39 RID: 23097
+		// Token: 0x04005EA9 RID: 24233
 		[Nullable(2)]
 		protected new IFocusOnQuestMapMark_SetValue PocoInterface;
 	}

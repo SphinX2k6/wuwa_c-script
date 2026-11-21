@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200012D RID: 301
+	// Token: 0x0200013E RID: 318
 	[EnumExtensions]
 	public enum ERoadNetworkNavigationType
 	{
-		// Token: 0x040005FC RID: 1532
+		// Token: 0x0400063A RID: 1594
 		Traffic
 	}
 }

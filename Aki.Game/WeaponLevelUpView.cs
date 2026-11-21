@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,12 +14,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002CFA RID: 11514
+// Token: 0x02002254 RID: 8788
 [NullableContext(1)]
 [Nullable(0)]
 public class WeaponLevelUpView : UiTabViewBase
 {
-	// Token: 0x06018300 RID: 99072 RVA: 0x00626F40 File Offset: 0x00625140
+	// Token: 0x06015BA1 RID: 88993 RVA: 0x0064CF08 File Offset: 0x0064B108
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -40,7 +39,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06018301 RID: 99073 RVA: 0x0062700C File Offset: 0x0062520C
+	// Token: 0x06015BA2 RID: 88994 RVA: 0x0064CFD4 File Offset: 0x0064B1D4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeaponLevelUpView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -51,7 +50,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018302 RID: 99074 RVA: 0x00627050 File Offset: 0x00625250
+	// Token: 0x06015BA3 RID: 88995 RVA: 0x0064D018 File Offset: 0x0064B218
 	protected override void OnStart()
 	{
 		int incId = (int)this.ExtraParams;
@@ -61,7 +60,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		this.InitConsumeComponent();
 	}
 
-	// Token: 0x06018303 RID: 99075 RVA: 0x0062708C File Offset: 0x0062528C
+	// Token: 0x06015BA4 RID: 88996 RVA: 0x0064D054 File Offset: 0x0064B254
 	protected override void OnBeforeDestroy()
 	{
 		this.ExpComponent.Destroy(null);
@@ -69,7 +68,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		this.CheckAndCloseItemHintViewNew();
 	}
 
-	// Token: 0x06018304 RID: 99076 RVA: 0x006270AC File Offset: 0x006252AC
+	// Token: 0x06015BA5 RID: 88997 RVA: 0x0064D074 File Offset: 0x0064B274
 	protected override void OnBeforeShow()
 	{
 		this.RefreshSelectedList();
@@ -79,7 +78,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		this.UpdateConsumeComponent();
 	}
 
-	// Token: 0x06018305 RID: 99077 RVA: 0x006270CC File Offset: 0x006252CC
+	// Token: 0x06015BA6 RID: 88998 RVA: 0x0064D094 File Offset: 0x0064B294
 	private void RefreshSelectedList()
 	{
 		if (this.SelectedList == null || this.SelectedList.Count == 0)
@@ -124,7 +123,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06018306 RID: 99078 RVA: 0x006271DC File Offset: 0x006253DC
+	// Token: 0x06015BA7 RID: 88999 RVA: 0x0064D1A4 File Offset: 0x0064B3A4
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.WeaponLevelUp, new Action(this.WeaponLevelUpEvent));
@@ -132,7 +131,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		EventSystem.Instance.Add<int>(EEventName.OnPlayerCurrencyChange, new Action<int>(this.OnPlayerCurrencyChange));
 	}
 
-	// Token: 0x06018307 RID: 99079 RVA: 0x00627240 File Offset: 0x00625440
+	// Token: 0x06015BA8 RID: 89000 RVA: 0x0064D208 File Offset: 0x0064B408
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.WeaponLevelUp, new Action(this.WeaponLevelUpEvent));
@@ -140,13 +139,13 @@ public class WeaponLevelUpView : UiTabViewBase
 		EventSystem.Instance.Remove<int>(EEventName.OnPlayerCurrencyChange, new Action<int>(this.OnPlayerCurrencyChange));
 	}
 
-	// Token: 0x06018308 RID: 99080 RVA: 0x006272A1 File Offset: 0x006254A1
+	// Token: 0x06015BA9 RID: 89001 RVA: 0x0064D269 File Offset: 0x0064B469
 	private void OnPlayerCurrencyChange(int i)
 	{
 		this.UpdateConsumeComponent();
 	}
 
-	// Token: 0x06018309 RID: 99081 RVA: 0x006272A9 File Offset: 0x006254A9
+	// Token: 0x06015BAA RID: 89002 RVA: 0x0064D271 File Offset: 0x0064B471
 	protected override void OnHideUiTabViewBase(bool fromToggle)
 	{
 		if (fromToggle)
@@ -155,7 +154,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601830A RID: 99082 RVA: 0x006272C0 File Offset: 0x006254C0
+	// Token: 0x06015BAB RID: 89003 RVA: 0x0064D288 File Offset: 0x0064B488
 	private void WeaponLevelUpEvent()
 	{
 		this.OnLevelUpSuccess();
@@ -166,10 +165,10 @@ public class WeaponLevelUpView : UiTabViewBase
 		this.ItemGridConsumeComponent.SetMaxState(this.WeaponInstance.IsLevelMax());
 	}
 
-	// Token: 0x0601830B RID: 99083 RVA: 0x0062731E File Offset: 0x0062551E
+	// Token: 0x06015BAC RID: 89004 RVA: 0x0064D2E6 File Offset: 0x0064B4E6
 	private void WeaponLevelUpReceiveItem(IReadOnlyList<TItem> itemList)
 	{
-		this.ReceiveItemList = itemList.ToList<TItem>();
+		this.ReceiveItemList = new List<TItem>(itemList);
 		this.ReceiveItemList.Sort(delegate(TItem a, TItem b)
 		{
 			CSharpScript.Game.Module.Inventory.ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(a.ItemData.ItemId);
@@ -177,7 +176,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		});
 	}
 
-	// Token: 0x0601830C RID: 99084 RVA: 0x00627358 File Offset: 0x00625558
+	// Token: 0x06015BAD RID: 89005 RVA: 0x0064D320 File Offset: 0x0064B520
 	private void InitExpComponent()
 	{
 		this.ExpComponent = new ExpComponent(base.GetItem(0), false);
@@ -188,14 +187,14 @@ public class WeaponLevelUpView : UiTabViewBase
 		this.CurrentExpData.SetMaxExpFunction(new Func<int, int>(this.GetCurLevelExp));
 	}
 
-	// Token: 0x0601830D RID: 99085 RVA: 0x006273CC File Offset: 0x006255CC
+	// Token: 0x06015BAE RID: 89006 RVA: 0x0064D394 File Offset: 0x0064B594
 	private void InitExp()
 	{
 		this.UpdateExpData();
 		this.ExpComponent.UpdateInitState(this.CurrentExpData);
 	}
 
-	// Token: 0x0601830E RID: 99086 RVA: 0x006273E8 File Offset: 0x006255E8
+	// Token: 0x06015BAF RID: 89007 RVA: 0x0064D3B0 File Offset: 0x0064B5B0
 	private void UpdateExpData()
 	{
 		int level = this.WeaponInstance.GetLevel();
@@ -205,26 +204,26 @@ public class WeaponLevelUpView : UiTabViewBase
 		this.CurrentExpData.UpdateComponent(level, currentMaxLevel, exp, new int?(maxLevel), false);
 	}
 
-	// Token: 0x0601830F RID: 99087 RVA: 0x0062743A File Offset: 0x0062563A
+	// Token: 0x06015BB0 RID: 89008 RVA: 0x0064D402 File Offset: 0x0064B602
 	private int GetCurLevelExp(int level)
 	{
 		return this.WeaponInstance.GetLevelExp(level);
 	}
 
-	// Token: 0x06018310 RID: 99088 RVA: 0x00627448 File Offset: 0x00625648
+	// Token: 0x06015BB1 RID: 89009 RVA: 0x0064D410 File Offset: 0x0064B610
 	private int GetItemExpFunction(ISelectedData selectedData)
 	{
 		return WeaponModel.Instance.GetWeaponItemExp(selectedData.IncId, selectedData.ItemId);
 	}
 
-	// Token: 0x06018311 RID: 99089 RVA: 0x00627460 File Offset: 0x00625660
+	// Token: 0x06015BB2 RID: 89010 RVA: 0x0064D428 File Offset: 0x0064B628
 	private void OnExpTweenComplete(bool _)
 	{
 		this.InitExp();
 		this.UpdateAttribute();
 	}
 
-	// Token: 0x06018312 RID: 99090 RVA: 0x00627470 File Offset: 0x00625670
+	// Token: 0x06015BB3 RID: 89011 RVA: 0x0064D438 File Offset: 0x0064B638
 	private void OnLevelUpSuccess()
 	{
 		int currentLevel = this.CurrentExpData.GetCurrentLevel();
@@ -286,23 +285,23 @@ public class WeaponLevelUpView : UiTabViewBase
 		}, (float)weaponLevelUpSuccessDelayTime.Value, null, null, true, 1f);
 	}
 
-	// Token: 0x06018313 RID: 99091 RVA: 0x0062763A File Offset: 0x0062583A
+	// Token: 0x06015BB4 RID: 89012 RVA: 0x0064D602 File Offset: 0x0064B802
 	private void InitAttributeItemList()
 	{
 		this.AttributeLayout = new GenericLayout<AttributeItem, CSharpScript.Game.Module.Common.AttributeData>(base.GetVerticalLayout(1), new Func<AttributeItem>(this.CreateAttributeItem), null, false, true);
 	}
 
-	// Token: 0x06018314 RID: 99092 RVA: 0x0062765D File Offset: 0x0062585D
+	// Token: 0x06015BB5 RID: 89013 RVA: 0x0064D625 File Offset: 0x0064B825
 	private AttributeItem CreateAttributeItem()
 	{
 		return new AttributeItem();
 	}
 
-	// Token: 0x06018315 RID: 99093 RVA: 0x00627664 File Offset: 0x00625864
+	// Token: 0x06015BB6 RID: 89014 RVA: 0x0064D62C File Offset: 0x0064B82C
 	private void UpdateAttribute()
 	{
 		WeaponConf? weaponConfig = this.WeaponInstance.GetWeaponConfig();
-		this.AttributeParamList = WeaponModel.Instance.GetWeaponAttributeParamList(weaponConfig.Value).ToList<IWeaponAttributeParam>();
+		this.AttributeParamList = new List<IWeaponAttributeParam>(WeaponModel.Instance.GetWeaponAttributeParamList(weaponConfig.Value));
 		int breachLevel = this.WeaponInstance.GetBreachLevel();
 		int currentLevel = this.CurrentExpData.GetCurrentLevel();
 		int arrivedLevel = this.CurrentExpData.GetArrivedLevel();
@@ -331,7 +330,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		this.AttributeLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x06018316 RID: 99094 RVA: 0x006277D4 File Offset: 0x006259D4
+	// Token: 0x06015BB7 RID: 89015 RVA: 0x0064D79C File Offset: 0x0064B99C
 	private List<IAttributeInfo> GetLevelUpAttributeDataList(int currentLevel, int arrivedLevel)
 	{
 		List<IAttributeInfo> list = new List<IAttributeInfo>();
@@ -349,7 +348,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		return list;
 	}
 
-	// Token: 0x06018317 RID: 99095 RVA: 0x006278C0 File Offset: 0x00625AC0
+	// Token: 0x06015BB8 RID: 89016 RVA: 0x0064D888 File Offset: 0x0064BA88
 	private void InitConsumeComponent()
 	{
 		this.ItemGridConsumeComponent.InitFilter(EItemGridConsumeLocalDropDown.WeaponLevelUp, new Action<int>(this.ConditionFunction));
@@ -367,14 +366,14 @@ public class WeaponLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06018318 RID: 99096 RVA: 0x00627956 File Offset: 0x00625B56
+	// Token: 0x06015BB9 RID: 89017 RVA: 0x0064D91E File Offset: 0x0064BB1E
 	private void UpdateConsumeComponent()
 	{
 		this.RefreshItemAndExp();
 		this.ItemGridConsumeComponent.SetMaxState(this.WeaponInstance.IsLevelMax());
 	}
 
-	// Token: 0x06018319 RID: 99097 RVA: 0x00627974 File Offset: 0x00625B74
+	// Token: 0x06015BBA RID: 89018 RVA: 0x0064D93C File Offset: 0x0064BB3C
 	private void LevelUpClick(int data)
 	{
 		if (this.SelectedList == null || this.SelectedList.Count <= 0)
@@ -429,7 +428,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		action();
 	}
 
-	// Token: 0x0601831A RID: 99098 RVA: 0x00627AA8 File Offset: 0x00625CA8
+	// Token: 0x06015BBB RID: 89019 RVA: 0x0064DA70 File Offset: 0x0064BC70
 	private List<string> GetConditionTextList()
 	{
 		bool flag = false;
@@ -473,7 +472,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		return list;
 	}
 
-	// Token: 0x0601831B RID: 99099 RVA: 0x00627BA8 File Offset: 0x00625DA8
+	// Token: 0x06015BBC RID: 89020 RVA: 0x0064DB70 File Offset: 0x0064BD70
 	private Dictionary<int, int> GetOverExpMap()
 	{
 		int overExp = this.CurrentExpData.GetOverExp();
@@ -489,7 +488,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		return result;
 	}
 
-	// Token: 0x0601831C RID: 99100 RVA: 0x00627BDC File Offset: 0x00625DDC
+	// Token: 0x06015BBD RID: 89021 RVA: 0x0064DBA4 File Offset: 0x0064BDA4
 	private ConfirmBoxDataNew CreateLevelUpTipsWithCondition(List<string> words)
 	{
 		EConfirmBoxConfigId? econfirmBoxConfigId = null;
@@ -510,7 +509,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		return confirmBoxDataNew;
 	}
 
-	// Token: 0x0601831D RID: 99101 RVA: 0x00627C42 File Offset: 0x00625E42
+	// Token: 0x06015BBE RID: 89022 RVA: 0x0064DC0A File Offset: 0x0064BE0A
 	private ConfirmBoxDataNew CreateLevelUpTipsWithOverflow(Dictionary<int, int> overItemMap)
 	{
 		return new ConfirmBoxDataNew(EConfirmBoxConfigId.WeaponOverflowExpTip)
@@ -519,7 +518,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x0601831E RID: 99102 RVA: 0x00627C54 File Offset: 0x00625E54
+	// Token: 0x06015BBF RID: 89023 RVA: 0x0064DC1C File Offset: 0x0064BE1C
 	private ConfirmBoxDataNew CreateLevelUpTipsWithAll(List<string> words, Dictionary<int, int> overItemMap)
 	{
 		EConfirmBoxConfigId? econfirmBoxConfigId = null;
@@ -541,7 +540,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		return confirmBoxDataNew;
 	}
 
-	// Token: 0x0601831F RID: 99103 RVA: 0x00627CD0 File Offset: 0x00625ED0
+	// Token: 0x06015BC0 RID: 89024 RVA: 0x0064DC98 File Offset: 0x0064BE98
 	private void MaterialItemFunction(int? incId, int? itemId)
 	{
 		CommonItemSelectViewOpenViewData<ItemDataBase> commonItemSelectViewOpenViewData = new CommonItemSelectViewOpenViewData<ItemDataBase>();
@@ -565,7 +564,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		UiManager.Instance.OpenView(EUiViewName.CommonItemSelectViewRight, commonItemSelectViewOpenViewData, null);
 	}
 
-	// Token: 0x06018320 RID: 99104 RVA: 0x00627DCF File Offset: 0x00625FCF
+	// Token: 0x06015BC1 RID: 89025 RVA: 0x0064DD97 File Offset: 0x0064BF97
 	private void OnChangeSelectedFunction(List<ISelectedData> currentSelectedData, SelectableExpData expData)
 	{
 		this.SelectedList = currentSelectedData;
@@ -573,20 +572,20 @@ public class WeaponLevelUpView : UiTabViewBase
 		this.RefreshItemAndExp();
 	}
 
-	// Token: 0x06018321 RID: 99105 RVA: 0x00627DE5 File Offset: 0x00625FE5
+	// Token: 0x06015BC2 RID: 89026 RVA: 0x0064DDAD File Offset: 0x0064BFAD
 	private void ItemClickFunction()
 	{
 		this.MaterialItemFunction(new int?(0), new int?(0));
 	}
 
-	// Token: 0x06018322 RID: 99106 RVA: 0x00627DF9 File Offset: 0x00625FF9
+	// Token: 0x06015BC3 RID: 89027 RVA: 0x0064DDC1 File Offset: 0x0064BFC1
 	private void OnClickDeleteSelectFunction()
 	{
 		this.SelectedList = new List<ISelectedData>();
 		this.RefreshItemAndExp();
 	}
 
-	// Token: 0x06018323 RID: 99107 RVA: 0x00627E0C File Offset: 0x0062600C
+	// Token: 0x06015BC4 RID: 89028 RVA: 0x0064DDD4 File Offset: 0x0064BFD4
 	private void OnClickAutoFunction(int qualityId)
 	{
 		List<ItemDataBase> weaponExpItemListUseToAuto = WeaponModel.Instance.GetWeaponExpItemListUseToAuto(this.WeaponInstance.GetIncId());
@@ -632,7 +631,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		this.RefreshItemAndExp();
 	}
 
-	// Token: 0x06018324 RID: 99108 RVA: 0x00627F58 File Offset: 0x00626158
+	// Token: 0x06015BC5 RID: 89029 RVA: 0x0064DF20 File Offset: 0x0064C120
 	private void OnClickItemReduce(int? incId, int? itemId)
 	{
 		for (int i = this.SelectedList.Count - 1; i >= 0; i--)
@@ -658,21 +657,21 @@ public class WeaponLevelUpView : UiTabViewBase
 		this.RefreshItemAndExp();
 	}
 
-	// Token: 0x06018325 RID: 99109 RVA: 0x0062800F File Offset: 0x0062620F
+	// Token: 0x06015BC6 RID: 89030 RVA: 0x0064DFD7 File Offset: 0x0064C1D7
 	private void ConditionFunction(int index)
 	{
 		this.CurrentAutoQualityIndex = new int?(index);
 		this.RefreshConditionText();
 	}
 
-	// Token: 0x06018326 RID: 99110 RVA: 0x00628024 File Offset: 0x00626224
+	// Token: 0x06015BC7 RID: 89031 RVA: 0x0064DFEC File Offset: 0x0064C1EC
 	private void RefreshConditionText()
 	{
 		int qualityIdByIndex = this.GetQualityIdByIndex(this.CurrentAutoQualityIndex.Value);
 		this.ItemGridConsumeComponent.RefreshConditionText(CommonConfig.Instance.GetItemQualityById(qualityIdByIndex).Value.ConsumeFilterText);
 	}
 
-	// Token: 0x06018327 RID: 99111 RVA: 0x0062806C File Offset: 0x0062626C
+	// Token: 0x06015BC8 RID: 89032 RVA: 0x0064E034 File Offset: 0x0064C234
 	private int GetQualityIdByIndex(int index)
 	{
 		List<QualityInfo> itemQualityList = CommonConfig.Instance.GetItemQualityList();
@@ -680,7 +679,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		return itemQualityList[index2].Id;
 	}
 
-	// Token: 0x06018328 RID: 99112 RVA: 0x006280A8 File Offset: 0x006262A8
+	// Token: 0x06015BC9 RID: 89033 RVA: 0x0064E070 File Offset: 0x0064C270
 	private void RefreshItemAndExp()
 	{
 		int num = 0;
@@ -704,7 +703,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		this.UpdateAttribute();
 	}
 
-	// Token: 0x06018329 RID: 99113 RVA: 0x00628188 File Offset: 0x00626388
+	// Token: 0x06015BCA RID: 89034 RVA: 0x0064E150 File Offset: 0x0064C350
 	private void RefreshName()
 	{
 		WeaponConf value = this.WeaponInstance.GetWeaponConfig().Value;
@@ -714,7 +713,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		base.GetText(4).ShowTextNew(weaponName);
 	}
 
-	// Token: 0x0601832A RID: 99114 RVA: 0x006281F4 File Offset: 0x006263F4
+	// Token: 0x06015BCB RID: 89035 RVA: 0x0064E1BC File Offset: 0x0064C3BC
 	private void ClearConsume()
 	{
 		for (int i = 0; i < this.ConsumeList.Count; i++)
@@ -726,7 +725,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601832B RID: 99115 RVA: 0x00628247 File Offset: 0x00626447
+	// Token: 0x06015BCC RID: 89036 RVA: 0x0064E20F File Offset: 0x0064C40F
 	private void TurnToBreachView()
 	{
 		UiInteractLogReport.ReportSpaceKeyInteract(EUiInteractSpaceKeyType.WeaponLevelUp);
@@ -734,7 +733,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		EventSystem.Instance.Emit(EEventName.WeaponCanGoBreach);
 	}
 
-	// Token: 0x0601832C RID: 99116 RVA: 0x00628265 File Offset: 0x00626465
+	// Token: 0x06015BCD RID: 89037 RVA: 0x0064E22D File Offset: 0x0064C42D
 	private void CheckAndCloseItemHintViewNew()
 	{
 		if (!UiManager.Instance.IsViewOpen(EUiViewName.ItemHintViewNew))
@@ -744,7 +743,7 @@ public class WeaponLevelUpView : UiTabViewBase
 		UiManager.Instance.CloseView(EUiViewName.ItemHintViewNew, null);
 	}
 
-	// Token: 0x0601832D RID: 99117 RVA: 0x0062828C File Offset: 0x0062648C
+	// Token: 0x06015BCE RID: 89038 RVA: 0x0064E254 File Offset: 0x0064C454
 	private void TryOpenItemHintView()
 	{
 		if (this.ReceiveItemList.Count > 0)
@@ -767,19 +766,19 @@ public class WeaponLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0400B3D7 RID: 46039
+	// Token: 0x0400B74C RID: 46924
 	[Nullable(2)]
 	private ExpComponent ExpComponent;
 
-	// Token: 0x0400B3D8 RID: 46040
+	// Token: 0x0400B74D RID: 46925
 	[Nullable(2)]
 	private SelectableExpData CurrentExpData;
 
-	// Token: 0x0400B3D9 RID: 46041
+	// Token: 0x0400B74E RID: 46926
 	[Nullable(2)]
 	protected WeaponInstance WeaponInstance;
 
-	// Token: 0x0400B3DA RID: 46042
+	// Token: 0x0400B74F RID: 46927
 	[Nullable(new byte[]
 	{
 		2,
@@ -787,15 +786,15 @@ public class WeaponLevelUpView : UiTabViewBase
 	})]
 	private List<IWeaponAttributeParam> AttributeParamList;
 
-	// Token: 0x0400B3DB RID: 46043
+	// Token: 0x0400B750 RID: 46928
 	[Nullable(2)]
 	private ItemGridConsumeComponent ItemGridConsumeComponent;
 
-	// Token: 0x0400B3DC RID: 46044
+	// Token: 0x0400B751 RID: 46929
 	[Nullable(2)]
 	private List<TItem> ReceiveItemList = new List<TItem>();
 
-	// Token: 0x0400B3DD RID: 46045
+	// Token: 0x0400B752 RID: 46930
 	[Nullable(new byte[]
 	{
 		2,
@@ -803,14 +802,14 @@ public class WeaponLevelUpView : UiTabViewBase
 	})]
 	private List<ISelectedData> SelectedList;
 
-	// Token: 0x0400B3DE RID: 46046
+	// Token: 0x0400B753 RID: 46931
 	[Nullable(2)]
 	private List<TCommonMultipleConsumeData> ConsumeList;
 
-	// Token: 0x0400B3DF RID: 46047
+	// Token: 0x0400B754 RID: 46932
 	private int? CurrentAutoQualityIndex;
 
-	// Token: 0x0400B3E0 RID: 46048
+	// Token: 0x0400B755 RID: 46933
 	[Nullable(new byte[]
 	{
 		2,
@@ -819,27 +818,27 @@ public class WeaponLevelUpView : UiTabViewBase
 	})]
 	private GenericLayout<AttributeItem, CSharpScript.Game.Module.Common.AttributeData> AttributeLayout;
 
-	// Token: 0x0400B3E1 RID: 46049
+	// Token: 0x0400B756 RID: 46934
 	[Nullable(2)]
 	private SkeletalObserverHandle WeaponObserver;
 
-	// Token: 0x0400B3E2 RID: 46050
+	// Token: 0x0400B757 RID: 46935
 	[Nullable(2)]
 	private SkeletalObserverHandle WeaponScabbardObserver;
 
-	// Token: 0x0200928E RID: 37518
+	// Token: 0x020084B6 RID: 33974
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402F62D RID: 194093
+		// Token: 0x0402ACB7 RID: 175287
 		ExpItem,
-		// Token: 0x0402F62E RID: 194094
+		// Token: 0x0402ACB8 RID: 175288
 		AttributeLayout,
-		// Token: 0x0402F62F RID: 194095
+		// Token: 0x0402ACB9 RID: 175289
 		ConsumeItem,
-		// Token: 0x0402F630 RID: 194096
+		// Token: 0x0402ACBA RID: 175290
 		AttributeItem,
-		// Token: 0x0402F631 RID: 194097
+		// Token: 0x0402ACBB RID: 175291
 		WeaponNameText
 	}
 }

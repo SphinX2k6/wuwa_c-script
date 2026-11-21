@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A99 RID: 19097
+	// Token: 0x02003A41 RID: 14913
 	public class TrapDefenseBuildingBranchSelectBtnItem : UiPanelBase
 	{
-		// Token: 0x060317FB RID: 202747 RVA: 0x00B79730 File Offset: 0x00B77930
+		// Token: 0x0602658B RID: 157067 RVA: 0x00ABD6E4 File Offset: 0x00ABB8E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060317FC RID: 202748 RVA: 0x00B79818 File Offset: 0x00B77A18
+		// Token: 0x0602658C RID: 157068 RVA: 0x00ABD7CC File Offset: 0x00ABB9CC
 		private void OnClickedBtn()
 		{
 			if (this.OnClickCb != null)
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060317FD RID: 202749 RVA: 0x00B79830 File Offset: 0x00B77A30
+		// Token: 0x0602658D RID: 157069 RVA: 0x00ABD7E4 File Offset: 0x00ABB9E4
 		[NullableContext(1)]
 		public void RefreshButton(TrapDefenseBuildingDevelopItemData data)
 		{
@@ -64,23 +64,23 @@ namespace CSharpScript.Game.Module.TrapDefense
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textStringId, branchDescArgs);
 		}
 
-		// Token: 0x0401A765 RID: 108389
+		// Token: 0x040150B7 RID: 86199
 		[Nullable(1)]
 		public Action OnClickCb;
 
-		// Token: 0x0200ABF2 RID: 44018
+		// Token: 0x02009612 RID: 38418
 		private class EBranchSelect
 		{
-			// Token: 0x04034403 RID: 214019
+			// Token: 0x0402EDB4 RID: 191924
 			public const int Btn = 0;
 
-			// Token: 0x04034404 RID: 214020
+			// Token: 0x0402EDB5 RID: 191925
 			public const int UpgradeState = 1;
 
-			// Token: 0x04034405 RID: 214021
+			// Token: 0x0402EDB6 RID: 191926
 			public const int TxtTitle = 2;
 
-			// Token: 0x04034406 RID: 214022
+			// Token: 0x0402EDB7 RID: 191927
 			public const int RedDot = 3;
 		}
 	}

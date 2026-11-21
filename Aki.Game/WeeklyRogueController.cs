@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,46 +12,46 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02002D5C RID: 11612
+// Token: 0x020022B6 RID: 8886
 [NullableContext(2)]
 [Nullable(0)]
 public class WeeklyRogueController : ActivityControllerBase
 {
-	// Token: 0x0601868D RID: 99981 RVA: 0x00637010 File Offset: 0x00635210
+	// Token: 0x06015F2F RID: 89903 RVA: 0x0065D020 File Offset: 0x0065B220
 	[NullableContext(1)]
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 		UiManager.Instance.OpenView(EUiViewName.WeeklyRogueActivityView, EWeeklyRogueOpenWay.UI, null);
 	}
 
-	// Token: 0x0601868E RID: 99982 RVA: 0x00637028 File Offset: 0x00635228
+	// Token: 0x06015F30 RID: 89904 RVA: 0x0065D038 File Offset: 0x0065B238
 	[NullableContext(1)]
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityRogue21";
 	}
 
-	// Token: 0x0601868F RID: 99983 RVA: 0x0063702F File Offset: 0x0063522F
+	// Token: 0x06015F31 RID: 89905 RVA: 0x0065D03F File Offset: 0x0065B23F
 	[NullableContext(1)]
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new WeeklyRogueSubView();
 	}
 
-	// Token: 0x06018690 RID: 99984 RVA: 0x00637036 File Offset: 0x00635236
+	// Token: 0x06015F32 RID: 89906 RVA: 0x0065D046 File Offset: 0x0065B246
 	[NullableContext(1)]
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return new WeeklyRogueData();
 	}
 
-	// Token: 0x06018691 RID: 99985 RVA: 0x0063703D File Offset: 0x0063523D
+	// Token: 0x06015F33 RID: 89907 RVA: 0x0065D04D File Offset: 0x0065B24D
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		throw new SystemException("Method not implemented.");
 	}
 
-	// Token: 0x06018692 RID: 99986 RVA: 0x00637049 File Offset: 0x00635249
+	// Token: 0x06015F34 RID: 89908 RVA: 0x0065D059 File Offset: 0x0065B259
 	private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason _)
 	{
 		WeeklyRogueData activityDataNew = WeeklyRogueModel.Instance.ActivityDataNew;
@@ -63,7 +62,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		activityDataNew.OnQuestStateChange(questId, state);
 	}
 
-	// Token: 0x06018693 RID: 99987 RVA: 0x00637064 File Offset: 0x00635264
+	// Token: 0x06015F35 RID: 89909 RVA: 0x0065D074 File Offset: 0x0065B274
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
@@ -71,7 +70,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 	}
 
-	// Token: 0x06018694 RID: 99988 RVA: 0x006370C8 File Offset: 0x006352C8
+	// Token: 0x06015F36 RID: 89910 RVA: 0x0065D0D8 File Offset: 0x0065B2D8
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
@@ -79,7 +78,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 	}
 
-	// Token: 0x06018695 RID: 99989 RVA: 0x0063712C File Offset: 0x0063532C
+	// Token: 0x06015F37 RID: 89911 RVA: 0x0065D13C File Offset: 0x0065B33C
 	public void MarkAutoOpenDailyActivityWeekly()
 	{
 		bool isOpenedViewByWorld = WeeklyRogueModel.Instance.IsOpenedViewByWorld;
@@ -87,7 +86,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		this.IsNeedShowDailyActivityWeekly = !isOpenedViewByWorld;
 	}
 
-	// Token: 0x06018696 RID: 99990 RVA: 0x0063715C File Offset: 0x0063535C
+	// Token: 0x06015F38 RID: 89912 RVA: 0x0065D16C File Offset: 0x0065B36C
 	private void OnWorldDone()
 	{
 		if (!this.IsNeedShowDailyActivityWeekly)
@@ -100,12 +99,12 @@ public class WeeklyRogueController : ActivityControllerBase
 			AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(EUiTabViewName.DailyActivityTabView), new int?(2), delegate(bool success, int _)
 			{
 				SplashScreenController.Instance.FinishCurTask(ESplashScreenSourceModuleType.None);
-			});
+			}, null);
 		});
 		SplashScreenController.Instance.PushSplashScreenTask(splashScreenTask, false);
 	}
 
-	// Token: 0x06018697 RID: 99991 RVA: 0x006371AC File Offset: 0x006353AC
+	// Token: 0x06015F39 RID: 89913 RVA: 0x0065D1BC File Offset: 0x0065B3BC
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.RogueWeeklyRoomInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRogueWeeklyRoomInfoNotify));
@@ -118,7 +117,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		Net.Instance.Register(ENotifyMessageId.RogueWeeklyInteractionResultNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRogueWeeklyInteractionResultNotify));
 	}
 
-	// Token: 0x06018698 RID: 99992 RVA: 0x0063729C File Offset: 0x0063549C
+	// Token: 0x06015F3A RID: 89914 RVA: 0x0065D2AC File Offset: 0x0065B4AC
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.RogueWeeklyRoomInfoNotify);
@@ -131,7 +130,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.RogueWeeklyInteractionResultNotify);
 	}
 
-	// Token: 0x06018699 RID: 99993 RVA: 0x0063732C File Offset: 0x0063552C
+	// Token: 0x06015F3B RID: 89915 RVA: 0x0065D33C File Offset: 0x0065B53C
 	private void OnRogueWeeklyRoomInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RogueWeeklyRoomInfoNotify rogueWeeklyRoomInfoNotify = (RogueWeeklyRoomInfoNotify)msg;
@@ -158,7 +157,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		WeatherController.Instance.StopWeather();
 	}
 
-	// Token: 0x0601869A RID: 99994 RVA: 0x00637438 File Offset: 0x00635638
+	// Token: 0x06015F3C RID: 89916 RVA: 0x0065D448 File Offset: 0x0065B648
 	private void OnRogueWeeklyInteractionResultNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RogueWeeklyInteractionResultNotify rogueWeeklyInteractionResultNotify = (RogueWeeklyInteractionResultNotify)msg;
@@ -170,7 +169,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.WeeklyRogueResultCheckView, param, null);
 	}
 
-	// Token: 0x0601869B RID: 99995 RVA: 0x0063747C File Offset: 0x0063567C
+	// Token: 0x06015F3D RID: 89917 RVA: 0x0065D48C File Offset: 0x0065B68C
 	private void OnRogueWeeklyCurrencyNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RogueWeeklyCurrencyNotify rogueWeeklyCurrencyNotify = (RogueWeeklyCurrencyNotify)msg;
@@ -184,7 +183,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0601869C RID: 99996 RVA: 0x00637504 File Offset: 0x00635704
+	// Token: 0x06015F3E RID: 89918 RVA: 0x0065D514 File Offset: 0x0065B714
 	private void OnRogueWeeklyCurrencyUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		foreach (KeyValuePair<int, int> keyValuePair in ((RogueWeeklyCurrencyUpdateNotify)msg).CurrencyDict)
@@ -202,14 +201,14 @@ public class WeeklyRogueController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0601869D RID: 99997 RVA: 0x0063759C File Offset: 0x0063579C
+	// Token: 0x06015F3F RID: 89919 RVA: 0x0065D5AC File Offset: 0x0065B7AC
 	private void OnRogueWeeklyResultNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RogueWeeklyResultNotify param = (RogueWeeklyResultNotify)msg;
 		UiManager.Instance.OpenView(EUiViewName.WeeklyRogueSettleView, param, null);
 	}
 
-	// Token: 0x0601869E RID: 99998 RVA: 0x006375C4 File Offset: 0x006357C4
+	// Token: 0x06015F40 RID: 89920 RVA: 0x0065D5D4 File Offset: 0x0065B7D4
 	private void OnRogueWeeklySubLevelNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		WeeklyRogueController.<>c__DisplayClass18_0 CS$<>8__locals1 = new WeeklyRogueController.<>c__DisplayClass18_0();
@@ -255,7 +254,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		action();
 	}
 
-	// Token: 0x0601869F RID: 99999 RVA: 0x00637678 File Offset: 0x00635878
+	// Token: 0x06015F41 RID: 89921 RVA: 0x0065D688 File Offset: 0x0065B888
 	private void OnRogueWeeklyBlackFlowerNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RogueWeeklyBlackFlowerNotify data = (RogueWeeklyBlackFlowerNotify)msg;
@@ -276,14 +275,14 @@ public class WeeklyRogueController : ActivityControllerBase
 					this.BlackFlowerRewardRequest(data.EntityConfigId, false, false, -1);
 				}
 			},
-			AvailableSilentArea = data.SilentAreaIds.ToList<int>(),
+			AvailableSilentArea = new List<int>(data.SilentAreaIds),
 			FreeCount = WeeklyRogueModel.Instance.ActivityData.FreeCount,
 			FreeMax = WeeklyRogueModel.Instance.ActivityData.FreeCountMax
 		};
 		UiManager.Instance.OpenView(EUiViewName.WeeklyRoguePhantomRewardView, param, null);
 	}
 
-	// Token: 0x060186A0 RID: 100000 RVA: 0x00637738 File Offset: 0x00635938
+	// Token: 0x06015F42 RID: 89922 RVA: 0x0065D748 File Offset: 0x0065B948
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -314,7 +313,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		return new ValueTuple<string[], string[]>(list.ToArray(), list2.ToArray());
 	}
 
-	// Token: 0x060186A1 RID: 100001 RVA: 0x00637800 File Offset: 0x00635A00
+	// Token: 0x06015F43 RID: 89923 RVA: 0x0065D810 File Offset: 0x0065BA10
 	private void OnRogueWeeklyInstInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RogueWeeklyInstInfoNotify data = (RogueWeeklyInstInfoNotify)msg;
@@ -322,7 +321,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		EventSystem.Instance.Emit(EEventName.WeeklyRogueInstDataUpdate);
 	}
 
-	// Token: 0x060186A2 RID: 100002 RVA: 0x00637830 File Offset: 0x00635A30
+	// Token: 0x06015F44 RID: 89924 RVA: 0x0065D840 File Offset: 0x0065BA40
 	public void SelectOptionRequest(Action<bool> callback = null)
 	{
 		RogueWeeklyOptionSelectRequest rogueWeeklyOptionSelectRequest = RogueWeeklyOptionSelectRequest.Create();
@@ -343,7 +342,7 @@ public class WeeklyRogueController : ActivityControllerBase
 			}
 			else if (rogueWeeklyOptionSelectResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(rogueWeeklyOptionSelectResponse.ErrorCode, 20557, rogueWeeklyOptionSelectResponse.ErrorParams.ToArray<string>(), true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(rogueWeeklyOptionSelectResponse.ErrorCode, 19544, rogueWeeklyOptionSelectResponse.ErrorParams, true, true);
 				Action<bool> callback3 = callback;
 				if (callback3 == null)
 				{
@@ -366,7 +365,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060186A3 RID: 100003 RVA: 0x00637894 File Offset: 0x00635A94
+	// Token: 0x06015F45 RID: 89925 RVA: 0x0065D8A4 File Offset: 0x0065BAA4
 	[NullableContext(0)]
 	public UniTask<bool> SelectArtifactRequest()
 	{
@@ -377,7 +376,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		return <SelectArtifactRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060186A4 RID: 100004 RVA: 0x006378D0 File Offset: 0x00635AD0
+	// Token: 0x06015F46 RID: 89926 RVA: 0x0065D8E0 File Offset: 0x0065BAE0
 	public void InstanceSettleRequest(Action<bool> callback = null)
 	{
 		RogueWeeklyResultRequest message = RogueWeeklyResultRequest.Create();
@@ -396,7 +395,7 @@ public class WeeklyRogueController : ActivityControllerBase
 			}
 			else if (rogueWeeklyResultResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(rogueWeeklyResultResponse.ErrorCode, 25097, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(rogueWeeklyResultResponse.ErrorCode, 28144, null, true, true);
 				Action<bool> callback3 = callback;
 				if (callback3 == null)
 				{
@@ -422,7 +421,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060186A5 RID: 100005 RVA: 0x00637910 File Offset: 0x00635B10
+	// Token: 0x06015F47 RID: 89927 RVA: 0x0065D920 File Offset: 0x0065BB20
 	public UniTask GotoNextRoomRequest(bool confirmEnter = true)
 	{
 		WeeklyRogueController.<GotoNextRoomRequest>d__25 <GotoNextRoomRequest>d__;
@@ -433,7 +432,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		return <GotoNextRoomRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060186A6 RID: 100006 RVA: 0x00637954 File Offset: 0x00635B54
+	// Token: 0x06015F48 RID: 89928 RVA: 0x0065D964 File Offset: 0x0065BB64
 	public void BlackFlowerRewardRequest(int entityId, bool isReceive, bool isDouble, int areaId)
 	{
 		RogueWeeklyBlackFlowerRequest rogueWeeklyBlackFlowerRequest = RogueWeeklyBlackFlowerRequest.Create();
@@ -446,7 +445,7 @@ public class WeeklyRogueController : ActivityControllerBase
 			RogueWeeklyBlackFlowerResponse rogueWeeklyBlackFlowerResponse = (RogueWeeklyBlackFlowerResponse)msg;
 			if (rogueWeeklyBlackFlowerResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(rogueWeeklyBlackFlowerResponse.ErrorCode, 18903, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(rogueWeeklyBlackFlowerResponse.ErrorCode, 21004, null, true, true);
 				return;
 			}
 			if (isReceive)
@@ -457,7 +456,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060186A7 RID: 100007 RVA: 0x006379B4 File Offset: 0x00635BB4
+	// Token: 0x06015F49 RID: 89929 RVA: 0x0065D9C4 File Offset: 0x0065BBC4
 	[NullableContext(1)]
 	public void RogueWeeklyStartRequest(List<int> roleList)
 	{
@@ -469,13 +468,13 @@ public class WeeklyRogueController : ActivityControllerBase
 			RogueWeeklyStartResponse rogueWeeklyStartResponse = (RogueWeeklyStartResponse)msg;
 			if (rogueWeeklyStartResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(rogueWeeklyStartResponse.ErrorCode, 26066, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(rogueWeeklyStartResponse.ErrorCode, 28012, null, true, true);
 				return;
 			}
 		}, 0);
 	}
 
-	// Token: 0x060186A8 RID: 100008 RVA: 0x00637A14 File Offset: 0x00635C14
+	// Token: 0x06015F4A RID: 89930 RVA: 0x0065DA24 File Offset: 0x0065BC24
 	public UniTask RogueWeeklyArtifactSelectStartRequest()
 	{
 		WeeklyRogueController.<RogueWeeklyArtifactSelectStartRequest>d__28 <RogueWeeklyArtifactSelectStartRequest>d__;
@@ -485,7 +484,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		return <RogueWeeklyArtifactSelectStartRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060186A9 RID: 100009 RVA: 0x00637A50 File Offset: 0x00635C50
+	// Token: 0x06015F4B RID: 89931 RVA: 0x0065DA60 File Offset: 0x0065BC60
 	public void MultiRogueWeeklyRewardRequest()
 	{
 		MulRogueWeeklyRewardRequest mulRogueWeeklyRewardRequest = MulRogueWeeklyRewardRequest.Create();
@@ -509,7 +508,7 @@ public class WeeklyRogueController : ActivityControllerBase
 			MulRogueWeeklyRewardResponse mulRogueWeeklyRewardResponse = (MulRogueWeeklyRewardResponse)msg;
 			if (mulRogueWeeklyRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(mulRogueWeeklyRewardResponse.ErrorCode, 28205, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(mulRogueWeeklyRewardResponse.ErrorCode, 16599, null, true, true);
 				return;
 			}
 			foreach (int id in configIds)
@@ -522,7 +521,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060186AA RID: 100010 RVA: 0x00637B4C File Offset: 0x00635D4C
+	// Token: 0x06015F4C RID: 89932 RVA: 0x0065DB5C File Offset: 0x0065BD5C
 	public UniTask RogueWeeklyLastInfoRequest()
 	{
 		WeeklyRogueController.<RogueWeeklyLastInfoRequest>d__30 <RogueWeeklyLastInfoRequest>d__;
@@ -532,7 +531,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		return <RogueWeeklyLastInfoRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060186AB RID: 100011 RVA: 0x00637B88 File Offset: 0x00635D88
+	// Token: 0x06015F4D RID: 89933 RVA: 0x0065DB98 File Offset: 0x0065BD98
 	[NullableContext(0)]
 	public UniTask<bool> OpenTokenSelectViewById(int boardId)
 	{
@@ -545,7 +544,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		return <OpenTokenSelectViewById>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060186AC RID: 100012 RVA: 0x00637BD4 File Offset: 0x00635DD4
+	// Token: 0x06015F4E RID: 89934 RVA: 0x0065DBE4 File Offset: 0x0065BDE4
 	public EUiViewName? GetViewNameByType(RogueWeeklyEntryType optionType)
 	{
 		if (optionType == RogueWeeklyEntryType.Unknow)
@@ -569,7 +568,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		return new EUiViewName?(EUiViewName.WeeklyRogueSelectToken);
 	}
 
-	// Token: 0x060186AD RID: 100013 RVA: 0x00637C47 File Offset: 0x00635E47
+	// Token: 0x06015F4F RID: 89935 RVA: 0x0065DC57 File Offset: 0x0065BE57
 	private void OnNewLinkStatusChanged(ENewLinkStatus stage)
 	{
 		this.NewLinkStage = (ENewLinkStage)stage;
@@ -581,7 +580,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		this.ClearLinkBurstBuffs();
 	}
 
-	// Token: 0x060186AE RID: 100014 RVA: 0x00637C68 File Offset: 0x00635E68
+	// Token: 0x06015F50 RID: 89936 RVA: 0x0065DC78 File Offset: 0x0065BE78
 	public bool RequestNewLinkBurst()
 	{
 		if (this.NewLinkStage != ENewLinkStage.Ready)
@@ -598,7 +597,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x060186AF RID: 100015 RVA: 0x00637CD0 File Offset: 0x00635ED0
+	// Token: 0x06015F51 RID: 89937 RVA: 0x0065DCE0 File Offset: 0x0065BEE0
 	private void AddLinkBuffAndBullet()
 	{
 		if (!WeeklyRogueModel.Instance.CheckIsInWeeklyRogue())
@@ -645,7 +644,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060186B0 RID: 100016 RVA: 0x00637E6C File Offset: 0x0063606C
+	// Token: 0x06015F52 RID: 89938 RVA: 0x0065DE7C File Offset: 0x0065C07C
 	private void ClearLinkBurstBuffs()
 	{
 		if (this.CurrentLinkBurstBuffs == null || this.CurrentLinkBurstBuffs.Count == 0)
@@ -670,8 +669,8 @@ public class WeeklyRogueController : ActivityControllerBase
 		this.CurrentLinkBurstBuffs.Clear();
 	}
 
-	// Token: 0x170020E7 RID: 8423
-	// (get) Token: 0x060186B1 RID: 100017 RVA: 0x00637F40 File Offset: 0x00636140
+	// Token: 0x17002142 RID: 8514
+	// (get) Token: 0x06015F53 RID: 89939 RVA: 0x0065DF50 File Offset: 0x0065C150
 	[Nullable(1)]
 	public static WeeklyRogueController Instance
 	{
@@ -682,7 +681,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060186B2 RID: 100018 RVA: 0x00637F47 File Offset: 0x00636147
+	// Token: 0x06015F54 RID: 89940 RVA: 0x0065DF57 File Offset: 0x0065C157
 	[NullableContext(1)]
 	public static WeeklyRogueController GetOrCreateInstance()
 	{
@@ -693,7 +692,7 @@ public class WeeklyRogueController : ActivityControllerBase
 		return WeeklyRogueController._Instance;
 	}
 
-	// Token: 0x060186B3 RID: 100019 RVA: 0x00637F5B File Offset: 0x0063615B
+	// Token: 0x06015F55 RID: 89941 RVA: 0x0065DF6B File Offset: 0x0065C16B
 	public static bool CreateInstance()
 	{
 		if (WeeklyRogueController._Instance != null)
@@ -704,32 +703,32 @@ public class WeeklyRogueController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x060186B4 RID: 100020 RVA: 0x00637F71 File Offset: 0x00636171
+	// Token: 0x06015F56 RID: 89942 RVA: 0x0065DF81 File Offset: 0x0065C181
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060186B5 RID: 100021 RVA: 0x00637F73 File Offset: 0x00636173
+	// Token: 0x06015F57 RID: 89943 RVA: 0x0065DF83 File Offset: 0x0065C183
 	public static void ResetStaticDefaultValue()
 	{
 		WeeklyRogueController._Instance = null;
 	}
 
-	// Token: 0x060186B6 RID: 100022 RVA: 0x00637F7B File Offset: 0x0063617B
+	// Token: 0x06015F58 RID: 89944 RVA: 0x0065DF8B File Offset: 0x0065C18B
 	static WeeklyRogueController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WeeklyRogueController.CreateStaticDefaultValue), new Action(WeeklyRogueController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B506 RID: 46342
+	// Token: 0x0400B87B RID: 47227
 	public bool IsNeedShowDailyActivityWeekly;
 
-	// Token: 0x0400B507 RID: 46343
+	// Token: 0x0400B87C RID: 47228
 	public ENewLinkStage NewLinkStage;
 
-	// Token: 0x0400B508 RID: 46344
+	// Token: 0x0400B87D RID: 47229
 	private List<long> CurrentLinkBurstBuffs;
 
-	// Token: 0x0400B509 RID: 46345
+	// Token: 0x0400B87E RID: 47230
 	private static WeeklyRogueController _Instance;
 }

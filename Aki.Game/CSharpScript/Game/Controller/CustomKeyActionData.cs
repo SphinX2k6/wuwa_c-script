@@ -6,12 +6,12 @@ using CSharpScript.Game.InputSetting;
 
 namespace CSharpScript.Game.Controller
 {
-	// Token: 0x0200727C RID: 29308
+	// Token: 0x020063FB RID: 25595
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CustomKeyActionData
 	{
-		// Token: 0x06047D5D RID: 294237 RVA: 0x012612CC File Offset: 0x0125F4CC
+		// Token: 0x0603E11D RID: 254237 RVA: 0x01201B0C File Offset: 0x011FFD0C
 		public void SetCustomAction(string keyName, string actionName)
 		{
 			HashSet<string> hashSet;
@@ -23,13 +23,13 @@ namespace CSharpScript.Game.Controller
 			hashSet.Add(actionName);
 		}
 
-		// Token: 0x06047D5E RID: 294238 RVA: 0x01261304 File Offset: 0x0125F504
+		// Token: 0x0603E11E RID: 254238 RVA: 0x01201B44 File Offset: 0x011FFD44
 		public void ResetAllCustomAction(string keyName)
 		{
 			this.CustomKeyActionMap.Remove(keyName);
 		}
 
-		// Token: 0x06047D5F RID: 294239 RVA: 0x01261314 File Offset: 0x0125F514
+		// Token: 0x0603E11F RID: 254239 RVA: 0x01201B54 File Offset: 0x011FFD54
 		public void ResetCustomAction(string keyName, string actionName)
 		{
 			HashSet<string> hashSet;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Controller
 			hashSet.Remove(actionName);
 		}
 
-		// Token: 0x06047D60 RID: 294240 RVA: 0x0126133C File Offset: 0x0125F53C
+		// Token: 0x0603E120 RID: 254240 RVA: 0x01201B7C File Offset: 0x011FFD7C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Controller
 			return result;
 		}
 
-		// Token: 0x06047D61 RID: 294241 RVA: 0x0126136C File Offset: 0x0125F56C
+		// Token: 0x0603E121 RID: 254241 RVA: 0x01201BAC File Offset: 0x011FFDAC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Controller
 			return list;
 		}
 
-		// Token: 0x06047D62 RID: 294242 RVA: 0x01261438 File Offset: 0x0125F638
+		// Token: 0x0603E122 RID: 254242 RVA: 0x01201C78 File Offset: 0x011FFE78
 		public void SetActionEnable(string actionName, bool bEnable)
 		{
 			if (bEnable)
@@ -108,13 +108,13 @@ namespace CSharpScript.Game.Controller
 			this.DisableActionSet.Add(actionName);
 		}
 
-		// Token: 0x06047D63 RID: 294243 RVA: 0x01261458 File Offset: 0x0125F658
+		// Token: 0x0603E123 RID: 254243 RVA: 0x01201C98 File Offset: 0x011FFE98
 		public bool IsActionEnable(string actionName)
 		{
 			return this.CacheReasonSet.Count > 0 || !this.DisableActionSet.Contains(actionName);
 		}
 
-		// Token: 0x06047D64 RID: 294244 RVA: 0x0126147C File Offset: 0x0125F67C
+		// Token: 0x0603E124 RID: 254244 RVA: 0x01201CBC File Offset: 0x011FFEBC
 		public unsafe void DisableCustomInputData(string reason)
 		{
 			this.CacheReasonSet.Add(reason);
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Controller
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06047D65 RID: 294245 RVA: 0x012614F0 File Offset: 0x0125F6F0
+		// Token: 0x0603E125 RID: 254245 RVA: 0x01201D30 File Offset: 0x011FFF30
 		public unsafe void EnableCustomInputData(string reason)
 		{
 			this.CacheReasonSet.Remove(reason);
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Controller
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06047D66 RID: 294246 RVA: 0x01261562 File Offset: 0x0125F762
+		// Token: 0x0603E126 RID: 254246 RVA: 0x01201DA2 File Offset: 0x011FFFA2
 		public void Clear()
 		{
 			this.CustomKeyActionMap.Clear();
@@ -150,13 +150,13 @@ namespace CSharpScript.Game.Controller
 			this.DisableActionSet.Clear();
 		}
 
-		// Token: 0x04025C4E RID: 154702
+		// Token: 0x04020F0E RID: 134926
 		private readonly Dictionary<string, HashSet<string>> CustomKeyActionMap = new Dictionary<string, HashSet<string>>();
 
-		// Token: 0x04025C4F RID: 154703
+		// Token: 0x04020F0F RID: 134927
 		private readonly HashSet<string> CacheReasonSet = new HashSet<string>();
 
-		// Token: 0x04025C50 RID: 154704
+		// Token: 0x04020F10 RID: 134928
 		private readonly HashSet<string> DisableActionSet = new HashSet<string>();
 	}
 }

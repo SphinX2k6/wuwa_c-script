@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020027F4 RID: 10228
+// Token: 0x02001D6F RID: 7535
 [NullableContext(1)]
 [Nullable(0)]
 public class PlanSwitchButtonState : IPlanSwitchButtonState
 {
-	// Token: 0x17001BA8 RID: 7080
-	// (get) Token: 0x06014FF7 RID: 86007 RVA: 0x005513EC File Offset: 0x0054F5EC
-	// (set) Token: 0x06014FF8 RID: 86008 RVA: 0x005513F4 File Offset: 0x0054F5F4
+	// Token: 0x17001C00 RID: 7168
+	// (get) Token: 0x060129F7 RID: 76279 RVA: 0x0057C15C File Offset: 0x0057A35C
+	// (set) Token: 0x060129F8 RID: 76280 RVA: 0x0057C164 File Offset: 0x0057A364
 	public bool IsShow { get; set; }
 
-	// Token: 0x17001BA9 RID: 7081
-	// (get) Token: 0x06014FF9 RID: 86009 RVA: 0x005513FD File Offset: 0x0054F5FD
-	// (set) Token: 0x06014FFA RID: 86010 RVA: 0x00551405 File Offset: 0x0054F605
+	// Token: 0x17001C01 RID: 7169
+	// (get) Token: 0x060129F9 RID: 76281 RVA: 0x0057C16D File Offset: 0x0057A36D
+	// (set) Token: 0x060129FA RID: 76282 RVA: 0x0057C175 File Offset: 0x0057A375
 	public string Text { get; set; } = string.Empty;
 
-	// Token: 0x17001BAA RID: 7082
-	// (get) Token: 0x06014FFB RID: 86011 RVA: 0x0055140E File Offset: 0x0054F60E
-	// (set) Token: 0x06014FFC RID: 86012 RVA: 0x00551416 File Offset: 0x0054F616
+	// Token: 0x17001C02 RID: 7170
+	// (get) Token: 0x060129FB RID: 76283 RVA: 0x0057C17E File Offset: 0x0057A37E
+	// (set) Token: 0x060129FC RID: 76284 RVA: 0x0057C186 File Offset: 0x0057A386
 	public bool IsHighlight { get; set; }
 }

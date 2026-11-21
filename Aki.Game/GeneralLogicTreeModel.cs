@@ -16,27 +16,27 @@ using CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express;
 using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Game.Module.Map;
 
-// Token: 0x02001D92 RID: 7570
+// Token: 0x02001254 RID: 4692
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class GeneralLogicTreeModel : ModelBase
 {
-	// Token: 0x0600E594 RID: 58772 RVA: 0x003611E9 File Offset: 0x0035F3E9
+	// Token: 0x0600B9B2 RID: 47538 RVA: 0x0036CE49 File Offset: 0x0036B049
 	protected override bool OnLeaveLevel()
 	{
 		this.SetAllTreesSleep();
 		return true;
 	}
 
-	// Token: 0x0600E595 RID: 58773 RVA: 0x003611F2 File Offset: 0x0035F3F2
+	// Token: 0x0600B9B3 RID: 47539 RVA: 0x0036CE52 File Offset: 0x0036B052
 	protected override bool OnChangeMode()
 	{
 		this.SetAllTreesSleep();
 		return true;
 	}
 
-	// Token: 0x0600E596 RID: 58774 RVA: 0x003611FC File Offset: 0x0035F3FC
+	// Token: 0x0600B9B4 RID: 47540 RVA: 0x0036CE5C File Offset: 0x0036B05C
 	private void SetAllTreesSleep()
 	{
 		foreach (BaseBehaviorTree baseBehaviorTree in this.Trees.Values)
@@ -46,7 +46,7 @@ public class GeneralLogicTreeModel : ModelBase
 		this.IsWakeUp = false;
 	}
 
-	// Token: 0x0600E597 RID: 58775 RVA: 0x0036125C File Offset: 0x0035F45C
+	// Token: 0x0600B9B5 RID: 47541 RVA: 0x0036CEBC File Offset: 0x0036B0BC
 	protected override bool OnClear()
 	{
 		this.Trees.Clear();
@@ -61,19 +61,19 @@ public class GeneralLogicTreeModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600E598 RID: 58776 RVA: 0x003612CD File Offset: 0x0035F4CD
+	// Token: 0x0600B9B6 RID: 47542 RVA: 0x0036CF2D File Offset: 0x0036B12D
 	public void SetTimerUiOwnerId(long treeIncId)
 	{
 		this.TimerUiOwnerId = treeIncId;
 	}
 
-	// Token: 0x0600E599 RID: 58777 RVA: 0x003612D6 File Offset: 0x0035F4D6
+	// Token: 0x0600B9B7 RID: 47543 RVA: 0x0036CF36 File Offset: 0x0036B136
 	public bool IsTimerUiOwner(long treeIncId)
 	{
 		return this.TimerUiOwnerId == treeIncId;
 	}
 
-	// Token: 0x0600E59A RID: 58778 RVA: 0x003612E4 File Offset: 0x0035F4E4
+	// Token: 0x0600B9B8 RID: 47544 RVA: 0x0036CF44 File Offset: 0x0036B144
 	[return: Nullable(2)]
 	public unsafe BaseBehaviorTree CreateBehaviorTree(TreeInfo treeInfo)
 	{
@@ -208,7 +208,7 @@ public class GeneralLogicTreeModel : ModelBase
 		return baseBehaviorTree;
 	}
 
-	// Token: 0x0600E59B RID: 58779 RVA: 0x003617B4 File Offset: 0x0035F9B4
+	// Token: 0x0600B9B9 RID: 47545 RVA: 0x0036D414 File Offset: 0x0036B614
 	[NullableContext(2)]
 	public BaseBehaviorTree RemoveBehaviorTree(long treeId, ETreeRemoveReason removeReason = ETreeRemoveReason.TreeDestroy)
 	{
@@ -233,13 +233,13 @@ public class GeneralLogicTreeModel : ModelBase
 		return baseBehaviorTree;
 	}
 
-	// Token: 0x0600E59C RID: 58780 RVA: 0x00361838 File Offset: 0x0035FA38
+	// Token: 0x0600B9BA RID: 47546 RVA: 0x0036D498 File Offset: 0x0036B698
 	public void AddToPendingDestroy(long treeId, BaseBehaviorTree tree)
 	{
 		this.PendingDestroyTrees[treeId] = tree;
 	}
 
-	// Token: 0x0600E59D RID: 58781 RVA: 0x00361847 File Offset: 0x0035FA47
+	// Token: 0x0600B9BB RID: 47547 RVA: 0x0036D4A7 File Offset: 0x0036B6A7
 	public void TryToRemovePendingDestroy(long treeId)
 	{
 		if (this.Trees.ContainsKey(treeId))
@@ -249,7 +249,7 @@ public class GeneralLogicTreeModel : ModelBase
 		this.PendingDestroyTrees.Remove(treeId);
 	}
 
-	// Token: 0x0600E59E RID: 58782 RVA: 0x00361868 File Offset: 0x0035FA68
+	// Token: 0x0600B9BC RID: 47548 RVA: 0x0036D4C8 File Offset: 0x0036B6C8
 	[NullableContext(2)]
 	public BaseBehaviorTree GetBehaviorTree(long? optIncId, bool bContainPendingDestroy = false)
 	{
@@ -271,7 +271,7 @@ public class GeneralLogicTreeModel : ModelBase
 		return baseBehaviorTree;
 	}
 
-	// Token: 0x0600E59F RID: 58783 RVA: 0x003618B4 File Offset: 0x0035FAB4
+	// Token: 0x0600B9BD RID: 47549 RVA: 0x0036D514 File Offset: 0x0036B714
 	public int? GetBehaviorTreeOwnerId(long? treeIncId)
 	{
 		if (treeIncId == null)
@@ -281,13 +281,13 @@ public class GeneralLogicTreeModel : ModelBase
 		return this.TreeOwners.GetValueOrNull(treeIncId.Value);
 	}
 
-	// Token: 0x0600E5A0 RID: 58784 RVA: 0x003618E6 File Offset: 0x0035FAE6
+	// Token: 0x0600B9BE RID: 47550 RVA: 0x0036D546 File Offset: 0x0036B746
 	public IReadOnlyDictionary<long, BaseBehaviorTree> GetAllBehaviorTrees()
 	{
 		return this.Trees;
 	}
 
-	// Token: 0x0600E5A1 RID: 58785 RVA: 0x003618F0 File Offset: 0x0035FAF0
+	// Token: 0x0600B9BF RID: 47551 RVA: 0x0036D550 File Offset: 0x0036B750
 	[NullableContext(2)]
 	public BaseBehaviorTree GetBehaviorTreeByConfigId(BtType btType, int treeConfigId)
 	{
@@ -317,7 +317,7 @@ public class GeneralLogicTreeModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600E5A2 RID: 58786 RVA: 0x003619AC File Offset: 0x0035FBAC
+	// Token: 0x0600B9C0 RID: 47552 RVA: 0x0036D60C File Offset: 0x0036B80C
 	public void SaveUpdateInfo(long treeIncId, int nodeId)
 	{
 		BaseBehaviorTree behaviorTree = this.GetBehaviorTree(new long?(treeIncId), false);
@@ -334,7 +334,7 @@ public class GeneralLogicTreeModel : ModelBase
 		blackBoard.RemoveTag(EBehaviorTreeTag.NewQuest, "");
 	}
 
-	// Token: 0x0600E5A3 RID: 58787 RVA: 0x00361A18 File Offset: 0x0035FC18
+	// Token: 0x0600B9C1 RID: 47553 RVA: 0x0036D678 File Offset: 0x0036B878
 	public void SaveUpdateInfoByQuestId(int questId)
 	{
 		global::Quest quest = QuestNewModel.Instance.GetQuest(questId);
@@ -347,7 +347,7 @@ public class GeneralLogicTreeModel : ModelBase
 		EventSystem.Instance.Emit<QuestUpdateTipsShowData>(EEventName.QuestUpdateInfoAdd, p);
 	}
 
-	// Token: 0x0600E5A4 RID: 58788 RVA: 0x00361A80 File Offset: 0x0035FC80
+	// Token: 0x0600B9C2 RID: 47554 RVA: 0x0036D6E0 File Offset: 0x0036B8E0
 	public void ApplyExpressionOccupation(long treeIncId)
 	{
 		if (treeIncId != 0L)
@@ -362,13 +362,13 @@ public class GeneralLogicTreeModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E5A5 RID: 58789 RVA: 0x00361ACB File Offset: 0x0035FCCB
+	// Token: 0x0600B9C3 RID: 47555 RVA: 0x0036D72B File Offset: 0x0036B92B
 	public bool IsExpressionInOccupying()
 	{
 		return this.ExpressionOccupationTreeIncId != null;
 	}
 
-	// Token: 0x0600E5A6 RID: 58790 RVA: 0x00361AD8 File Offset: 0x0035FCD8
+	// Token: 0x0600B9C4 RID: 47556 RVA: 0x0036D738 File Offset: 0x0036B938
 	public bool IsExpressionOccupyingByTree(long treeIncId)
 	{
 		if (this.ExpressionOccupationTreeIncId == null)
@@ -379,7 +379,7 @@ public class GeneralLogicTreeModel : ModelBase
 		return expressionOccupationTreeIncId.GetValueOrDefault() == treeIncId & expressionOccupationTreeIncId != null;
 	}
 
-	// Token: 0x0600E5A7 RID: 58791 RVA: 0x00361B10 File Offset: 0x0035FD10
+	// Token: 0x0600B9C5 RID: 47557 RVA: 0x0036D770 File Offset: 0x0036B970
 	public void TryReleaseExpressionOccupation(long treeIncId)
 	{
 		if ((this.ExpressionOccupationTreeIncId ?? 0L) != 0L)
@@ -394,37 +394,37 @@ public class GeneralLogicTreeModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E5A8 RID: 58792 RVA: 0x00361B7A File Offset: 0x0035FD7A
+	// Token: 0x0600B9C6 RID: 47558 RVA: 0x0036D7DA File Offset: 0x0036B9DA
 	public void UpdateGuideLineStartShowTime()
 	{
 		this.GuideLineStartShowTime = TimeUtil.Instance.GetServerTime();
 	}
 
-	// Token: 0x0600E5A9 RID: 58793 RVA: 0x00361B8C File Offset: 0x0035FD8C
+	// Token: 0x0600B9C7 RID: 47559 RVA: 0x0036D7EC File Offset: 0x0036B9EC
 	public double GetGuideLineStartShowTime()
 	{
 		return this.GuideLineStartShowTime;
 	}
 
-	// Token: 0x0600E5AA RID: 58794 RVA: 0x00361B94 File Offset: 0x0035FD94
+	// Token: 0x0600B9C8 RID: 47560 RVA: 0x0036D7F4 File Offset: 0x0036B9F4
 	public void AddOccupationInfo(OccupationPbInfo info)
 	{
 		this.OccupationInfos[info.ResourceName] = info.IncId;
 	}
 
-	// Token: 0x0600E5AB RID: 58795 RVA: 0x00361BAD File Offset: 0x0035FDAD
+	// Token: 0x0600B9C9 RID: 47561 RVA: 0x0036D80D File Offset: 0x0036BA0D
 	public void RemoveOccupationInfo(string resource)
 	{
 		this.OccupationInfos.Remove(resource);
 	}
 
-	// Token: 0x0600E5AC RID: 58796 RVA: 0x00361BBC File Offset: 0x0035FDBC
+	// Token: 0x0600B9CA RID: 47562 RVA: 0x0036D81C File Offset: 0x0036BA1C
 	public bool IsOccupationExist(string resource)
 	{
 		return this.OccupationInfos.ContainsKey(resource);
 	}
 
-	// Token: 0x0600E5AD RID: 58797 RVA: 0x00361BCC File Offset: 0x0035FDCC
+	// Token: 0x0600B9CB RID: 47563 RVA: 0x0036D82C File Offset: 0x0036BA2C
 	public bool IsInClosedSegmentOccupation()
 	{
 		foreach (KeyValuePair<string, long> keyValuePair in this.OccupationInfos)
@@ -441,13 +441,13 @@ public class GeneralLogicTreeModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600E5AE RID: 58798 RVA: 0x00361C48 File Offset: 0x0035FE48
+	// Token: 0x0600B9CC RID: 47564 RVA: 0x0036D8A8 File Offset: 0x0036BAA8
 	public long? GetOccupationTreeId(string resource)
 	{
 		return this.OccupationInfos.GetValueOrNull(resource);
 	}
 
-	// Token: 0x0600E5AF RID: 58799 RVA: 0x00361C58 File Offset: 0x0035FE58
+	// Token: 0x0600B9CD RID: 47565 RVA: 0x0036D8B8 File Offset: 0x0036BAB8
 	public string GetOccupationQuestName(string resource)
 	{
 		long num;
@@ -464,7 +464,7 @@ public class GeneralLogicTreeModel : ModelBase
 		return ((quest != null) ? quest.Name : null) ?? "";
 	}
 
-	// Token: 0x0600E5B0 RID: 58800 RVA: 0x00361CC4 File Offset: 0x0035FEC4
+	// Token: 0x0600B9CE RID: 47566 RVA: 0x0036D924 File Offset: 0x0036BB24
 	public string GetBehaviorTreeName(long incId)
 	{
 		BaseBehaviorTree behaviorTree = this.GetBehaviorTree(new long?(incId), false);
@@ -476,7 +476,7 @@ public class GeneralLogicTreeModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600E5B1 RID: 58801 RVA: 0x00361D08 File Offset: 0x0035FF08
+	// Token: 0x0600B9CF RID: 47567 RVA: 0x0036D968 File Offset: 0x0036BB68
 	[NullableContext(2)]
 	public void AddGuaranteeActionsWhenLogicTreeRemove(EGuaranteeAction guaranteeActionName, ActionParams @params = null, GeneralContext instigatorContext = null)
 	{
@@ -497,7 +497,7 @@ public class GeneralLogicTreeModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E5B2 RID: 58802 RVA: 0x00361D64 File Offset: 0x0035FF64
+	// Token: 0x0600B9D0 RID: 47568 RVA: 0x0036D9C4 File Offset: 0x0036BBC4
 	[return: Nullable(2)]
 	public GuaranteeActionInfo PopGuaranteeActionsWhenLogicTreeRemove(long incId, GuaranteeActionInfo guaranteeActionInfo)
 	{
@@ -521,7 +521,7 @@ public class GeneralLogicTreeModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600E5B3 RID: 58803 RVA: 0x00361DCC File Offset: 0x0035FFCC
+	// Token: 0x0600B9D1 RID: 47569 RVA: 0x0036DA2C File Offset: 0x0036BC2C
 	public void AddLevelPlayTrackBinding(int nodeId, long parentTreeId, int bindingTreeConfigId)
 	{
 		BaseBehaviorTree behaviorTree = this.GetBehaviorTree(new long?(parentTreeId), false);
@@ -542,7 +542,7 @@ public class GeneralLogicTreeModel : ModelBase
 		bindingExpressionHolder2.AddBindingExpression(nodeId, bindingTreeConfigId);
 	}
 
-	// Token: 0x0600E5B4 RID: 58804 RVA: 0x00361E10 File Offset: 0x00360010
+	// Token: 0x0600B9D2 RID: 47570 RVA: 0x0036DA70 File Offset: 0x0036BC70
 	public void RemoveLevelPlayTrackBinding(long parentTreeId, int bindingTreeConfigId)
 	{
 		BaseBehaviorTree behaviorTree = this.GetBehaviorTree(new long?(parentTreeId), false);
@@ -563,8 +563,8 @@ public class GeneralLogicTreeModel : ModelBase
 		bindingExpressionHolder2.RemoveWatchingLevelPlay(bindingTreeConfigId);
 	}
 
-	// Token: 0x17001256 RID: 4694
-	// (get) Token: 0x0600E5B5 RID: 58805 RVA: 0x00361E52 File Offset: 0x00360052
+	// Token: 0x17001280 RID: 4736
+	// (get) Token: 0x0600B9D3 RID: 47571 RVA: 0x0036DAB2 File Offset: 0x0036BCB2
 	public static GeneralLogicTreeModel Instance
 	{
 		get
@@ -573,7 +573,7 @@ public class GeneralLogicTreeModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600E5B6 RID: 58806 RVA: 0x00361E59 File Offset: 0x00360059
+	// Token: 0x0600B9D4 RID: 47572 RVA: 0x0036DAB9 File Offset: 0x0036BCB9
 	public static GeneralLogicTreeModel GetOrCreateInstance()
 	{
 		if (GeneralLogicTreeModel._Instance == null)
@@ -583,7 +583,7 @@ public class GeneralLogicTreeModel : ModelBase
 		return GeneralLogicTreeModel._Instance;
 	}
 
-	// Token: 0x0600E5B7 RID: 58807 RVA: 0x00361E6D File Offset: 0x0036006D
+	// Token: 0x0600B9D5 RID: 47573 RVA: 0x0036DACD File Offset: 0x0036BCCD
 	public static bool CreateInstance()
 	{
 		if (GeneralLogicTreeModel._Instance != null)
@@ -594,72 +594,72 @@ public class GeneralLogicTreeModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600E5B8 RID: 58808 RVA: 0x00361E83 File Offset: 0x00360083
+	// Token: 0x0600B9D6 RID: 47574 RVA: 0x0036DAE3 File Offset: 0x0036BCE3
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600E5B9 RID: 58809 RVA: 0x00361E85 File Offset: 0x00360085
+	// Token: 0x0600B9D7 RID: 47575 RVA: 0x0036DAE5 File Offset: 0x0036BCE5
 	public static void ResetStaticDefaultValue()
 	{
 		GeneralLogicTreeModel._Instance = null;
 	}
 
-	// Token: 0x0600E5BA RID: 58810 RVA: 0x00361E8D File Offset: 0x0036008D
+	// Token: 0x0600B9D8 RID: 47576 RVA: 0x0036DAED File Offset: 0x0036BCED
 	static GeneralLogicTreeModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GeneralLogicTreeModel.CreateStaticDefaultValue), new Action(GeneralLogicTreeModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006A48 RID: 27208
+	// Token: 0x04006B29 RID: 27433
 	private long TimerUiOwnerId;
 
-	// Token: 0x04006A49 RID: 27209
+	// Token: 0x04006B2A RID: 27434
 	private readonly Dictionary<long, BaseBehaviorTree> Trees = new Dictionary<long, BaseBehaviorTree>();
 
-	// Token: 0x04006A4A RID: 27210
+	// Token: 0x04006B2B RID: 27435
 	private readonly Dictionary<long, BaseBehaviorTree> PendingDestroyTrees = new Dictionary<long, BaseBehaviorTree>();
 
-	// Token: 0x04006A4B RID: 27211
+	// Token: 0x04006B2C RID: 27436
 	private readonly Dictionary<int, Dictionary<long, BaseBehaviorTree>> TreesGroupByType = new Dictionary<int, Dictionary<long, BaseBehaviorTree>>();
 
-	// Token: 0x04006A4C RID: 27212
+	// Token: 0x04006B2D RID: 27437
 	private readonly Dictionary<string, long> OccupationInfos = new Dictionary<string, long>();
 
-	// Token: 0x04006A4D RID: 27213
+	// Token: 0x04006B2E RID: 27438
 	private readonly Dictionary<BtType, Dictionary<int, BaseBehaviorTree>> ConfigIdTreeCacheMap = new Dictionary<BtType, Dictionary<int, BaseBehaviorTree>>();
 
-	// Token: 0x04006A4E RID: 27214
+	// Token: 0x04006B2F RID: 27439
 	private readonly Dictionary<long, int> TreeOwners = new Dictionary<long, int>();
 
-	// Token: 0x04006A4F RID: 27215
+	// Token: 0x04006B30 RID: 27440
 	public bool IsWakeUp;
 
-	// Token: 0x04006A50 RID: 27216
+	// Token: 0x04006B31 RID: 27441
 	public long? ExpressionOccupationTreeIncId;
 
-	// Token: 0x04006A51 RID: 27217
+	// Token: 0x04006B32 RID: 27442
 	public bool CountDownViewClosing;
 
-	// Token: 0x04006A52 RID: 27218
+	// Token: 0x04006B33 RID: 27443
 	public bool DisableInput;
 
-	// Token: 0x04006A53 RID: 27219
+	// Token: 0x04006B34 RID: 27444
 	private double GuideLineStartShowTime;
 
-	// Token: 0x04006A54 RID: 27220
+	// Token: 0x04006B35 RID: 27445
 	public int HistorySoarScore;
 
-	// Token: 0x04006A55 RID: 27221
+	// Token: 0x04006B36 RID: 27446
 	public readonly Dictionary<long, List<GuaranteeActionInfo>> GuaranteeActionsWhenLogicTreeRemove = new Dictionary<long, List<GuaranteeActionInfo>>();
 
-	// Token: 0x04006A56 RID: 27222
+	// Token: 0x04006B37 RID: 27447
 	public readonly Dictionary<int, long> LevelPlayTrackBindingMap = new Dictionary<int, long>();
 
-	// Token: 0x04006A57 RID: 27223
+	// Token: 0x04006B38 RID: 27448
 	public readonly Dictionary<ETimerUiType, int> CountDownTimerViewMap = new Dictionary<ETimerUiType, int>();
 
-	// Token: 0x04006A58 RID: 27224
+	// Token: 0x04006B39 RID: 27449
 	[Nullable(new byte[]
 	{
 		1,
@@ -669,7 +669,7 @@ public class GeneralLogicTreeModel : ModelBase
 	})]
 	public readonly Dictionary<ETimerUiType, List<ValueTuple<int, Action>>> CountDownTimerFuncMap = new Dictionary<ETimerUiType, List<ValueTuple<int, Action>>>();
 
-	// Token: 0x04006A59 RID: 27225
+	// Token: 0x04006B3A RID: 27450
 	[Nullable(2)]
 	private static GeneralLogicTreeModel _Instance;
 }

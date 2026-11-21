@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001B4 RID: 436
+	// Token: 0x020001C6 RID: 454
 	public class ConfigCustomSequenceById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000A3B RID: 2619 RVA: 0x00093658 File Offset: 0x00091858
+		// Token: 0x06000AA7 RID: 2727 RVA: 0x00099590 File Offset: 0x00097790
 		static ConfigCustomSequenceById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCustomSequenceById.CreateStaticDefaultValue), new Action(ConfigCustomSequenceById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A3C RID: 2620 RVA: 0x00093678 File Offset: 0x00091878
+		// Token: 0x06000AA8 RID: 2728 RVA: 0x000995B0 File Offset: 0x000977B0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCustomSequenceById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000A3D RID: 2621 RVA: 0x000936F7 File Offset: 0x000918F7
+		// Token: 0x06000AA9 RID: 2729 RVA: 0x0009962F File Offset: 0x0009782F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCustomSequenceById.LogPair = null;
 			ConfigCustomSequenceById.HandleId = 0;
 		}
 
-		// Token: 0x06000A3E RID: 2622 RVA: 0x00093705 File Offset: 0x00091905
+		// Token: 0x06000AAA RID: 2730 RVA: 0x0009963D File Offset: 0x0009783D
 		public static void Init()
 		{
 			ConfigCustomSequenceById.HandleId = ConfigCommon.InitDataStatement(ConfigCustomSequenceById.HandleId, "db_custom_sequence.db", "select BinData from `CustomSequence` where Id=?");
 		}
 
-		// Token: 0x06000A3F RID: 2623 RVA: 0x00093720 File Offset: 0x00091920
+		// Token: 0x06000AAB RID: 2731 RVA: 0x00099658 File Offset: 0x00097858
 		public static CustomSequence? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCustomSequenceById.HandleId, ConfigCustomSequenceById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CustomSequence?(rootAsCustomSequence);
 		}
 
-		// Token: 0x04000BD0 RID: 3024
+		// Token: 0x04000C4E RID: 3150
 		private const string DB = "db_custom_sequence.db";
 
-		// Token: 0x04000BD1 RID: 3025
+		// Token: 0x04000C4F RID: 3151
 		private const string FILE = "k.可视化编辑/c.Csv/z.自定义序列/*.csv*";
 
-		// Token: 0x04000BD2 RID: 3026
+		// Token: 0x04000C50 RID: 3152
 		private const string TABLE = "CustomSequence";
 
-		// Token: 0x04000BD3 RID: 3027
+		// Token: 0x04000C51 RID: 3153
 		private const string COMMAND = "select BinData from `CustomSequence` where Id=?";
 
-		// Token: 0x04000BD4 RID: 3028
+		// Token: 0x04000C52 RID: 3154
 		private const string KEY_PREFIX = "CustomSequenceById";
 
-		// Token: 0x04000BD5 RID: 3029
+		// Token: 0x04000C53 RID: 3155
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000BD6 RID: 3030
+		// Token: 0x04000C54 RID: 3156
 		private static int HandleId;
 	}
 }

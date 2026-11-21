@@ -4,42 +4,42 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200058F RID: 1423
+	// Token: 0x020005F8 RID: 1528
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class INpcUiInteractOnShop_SetValue
 	{
-		// Token: 0x040014FA RID: 5370
+		// Token: 0x04001668 RID: 5736
 		public ENpcUiInteractType Type;
 
-		// Token: 0x040014FB RID: 5371
-		[Nullable(1)]
+		// Token: 0x04001669 RID: 5737
+		[Nullable(0)]
 		public string EnterMontage;
 
-		// Token: 0x040014FC RID: 5372
-		[Nullable(1)]
+		// Token: 0x0400166A RID: 5738
+		[Nullable(0)]
 		public string StandByMontage;
 
-		// Token: 0x040014FD RID: 5373
-		[Nullable(1)]
+		// Token: 0x0400166B RID: 5739
+		[Nullable(0)]
 		public string ShopSuccessMontage;
 
-		// Token: 0x040014FE RID: 5374
+		// Token: 0x0400166C RID: 5740
 		public PlayFlow EnterFlow;
 
-		// Token: 0x040014FF RID: 5375
+		// Token: 0x0400166D RID: 5741
 		public PlayFlow ShopSuccessFlow;
 
-		// Token: 0x04001500 RID: 5376
+		// Token: 0x0400166E RID: 5742
 		public PlayFlow ShopFailedFlow;
 
-		// Token: 0x04001501 RID: 5377
+		// Token: 0x0400166F RID: 5743
 		public PlayFlow WorkingFlow;
 
-		// Token: 0x04001502 RID: 5378
+		// Token: 0x04001670 RID: 5744
 		public IMontageConfig ExitMontage;
 
-		// Token: 0x04001503 RID: 5379
+		// Token: 0x04001671 RID: 5745
 		public PlayFlow ExitFlow;
 	}
 }

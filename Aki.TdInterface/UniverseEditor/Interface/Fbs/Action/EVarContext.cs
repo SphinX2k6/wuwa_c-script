@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200604F RID: 24655
+	// Token: 0x020066B0 RID: 26288
 	public enum EVarContext : byte
 	{
-		// Token: 0x040101C8 RID: 65992
+		// Token: 0x04010FBB RID: 69563
 		None,
-		// Token: 0x040101C9 RID: 65993
+		// Token: 0x04010FBC RID: 69564
 		Entity,
-		// Token: 0x040101CA RID: 65994
+		// Token: 0x04010FBD RID: 69565
 		Quest,
-		// Token: 0x040101CB RID: 65995
+		// Token: 0x04010FBE RID: 69566
 		LevelPlay,
-		// Token: 0x040101CC RID: 65996
+		// Token: 0x04010FBF RID: 69567
 		EntityTemplate,
-		// Token: 0x040101CD RID: 65997
+		// Token: 0x04010FC0 RID: 69568
 		BehaviorTreeFragment,
-		// Token: 0x040101CE RID: 65998
+		// Token: 0x04010FC1 RID: 69569
 		CommonBt
 	}
 }

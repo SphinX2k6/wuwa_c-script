@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200547C RID: 21628
+	// Token: 0x02005A02 RID: 23042
 	public struct IInteractStyleEntityPart : IFlatbufferObject
 	{
-		// Token: 0x17009F2B RID: 40747
-		// (get) Token: 0x06023935 RID: 145717 RVA: 0x004EB5B0 File Offset: 0x004E97B0
+		// Token: 0x1700A765 RID: 42853
+		// (get) Token: 0x060259ED RID: 154093 RVA: 0x00528624 File Offset: 0x00526824
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023936 RID: 145718 RVA: 0x004EB5BD File Offset: 0x004E97BD
+		// Token: 0x060259EE RID: 154094 RVA: 0x00528631 File Offset: 0x00526831
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023937 RID: 145719 RVA: 0x004EB5C4 File Offset: 0x004E97C4
+		// Token: 0x060259EF RID: 154095 RVA: 0x00528638 File Offset: 0x00526838
 		public static IInteractStyleEntityPart GetRootAsIInteractStyleEntityPart(ByteBuffer _bb)
 		{
 			return IInteractStyleEntityPart.GetRootAsIInteractStyleEntityPart(_bb, default(IInteractStyleEntityPart));
 		}
 
-		// Token: 0x06023938 RID: 145720 RVA: 0x004EB5E0 File Offset: 0x004E97E0
+		// Token: 0x060259F0 RID: 154096 RVA: 0x00528654 File Offset: 0x00526854
 		public static IInteractStyleEntityPart GetRootAsIInteractStyleEntityPart(ByteBuffer _bb, IInteractStyleEntityPart obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023939 RID: 145721 RVA: 0x004EB5FD File Offset: 0x004E97FD
+		// Token: 0x060259F1 RID: 154097 RVA: 0x00528671 File Offset: 0x00526871
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602393A RID: 145722 RVA: 0x004EB60C File Offset: 0x004E980C
+		// Token: 0x060259F2 RID: 154098 RVA: 0x00528680 File Offset: 0x00526880
 		public IInteractStyleEntityPart __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009F2C RID: 40748
-		// (get) Token: 0x0602393B RID: 145723 RVA: 0x004EB61C File Offset: 0x004E981C
+		// Token: 0x1700A766 RID: 42854
+		// (get) Token: 0x060259F3 RID: 154099 RVA: 0x00528690 File Offset: 0x00526890
 		public EInteractStyleType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F2D RID: 40749
-		// (get) Token: 0x0602393C RID: 145724 RVA: 0x004EB658 File Offset: 0x004E9858
+		// Token: 0x1700A767 RID: 42855
+		// (get) Token: 0x060259F4 RID: 154100 RVA: 0x005286CC File Offset: 0x005268CC
 		public TInteractEntityPartBind BindType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602393D RID: 145725 RVA: 0x004EB694 File Offset: 0x004E9894
+		// Token: 0x060259F5 RID: 154101 RVA: 0x00528708 File Offset: 0x00526908
 		public TTable? Bind<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,20 +88,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602393E RID: 145726 RVA: 0x004EB6D8 File Offset: 0x004E98D8
+		// Token: 0x060259F6 RID: 154102 RVA: 0x0052874C File Offset: 0x0052694C
 		public IInteractEntityPartModelBind BindAsIInteractEntityPartModelBind()
 		{
 			return this.Bind<IInteractEntityPartModelBind>().Value;
 		}
 
-		// Token: 0x0602393F RID: 145727 RVA: 0x004EB6F4 File Offset: 0x004E98F4
+		// Token: 0x060259F7 RID: 154103 RVA: 0x00528768 File Offset: 0x00526968
 		public IInteractEntityPartPrefabBind BindAsIInteractEntityPartPrefabBind()
 		{
 			return this.Bind<IInteractEntityPartPrefabBind>().Value;
 		}
 
-		// Token: 0x17009F2E RID: 40750
-		// (get) Token: 0x06023940 RID: 145728 RVA: 0x004EB710 File Offset: 0x004E9910
+		// Token: 0x1700A768 RID: 42856
+		// (get) Token: 0x060259F8 RID: 154104 RVA: 0x00528784 File Offset: 0x00526984
 		public float ShowAngle
 		{
 			get
@@ -115,8 +115,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F2F RID: 40751
-		// (get) Token: 0x06023941 RID: 145729 RVA: 0x004EB754 File Offset: 0x004E9954
+		// Token: 0x1700A769 RID: 42857
+		// (get) Token: 0x060259F9 RID: 154105 RVA: 0x005287C8 File Offset: 0x005269C8
 		public float TriggerAngle
 		{
 			get
@@ -130,7 +130,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023942 RID: 145730 RVA: 0x004EB795 File Offset: 0x004E9995
+		// Token: 0x060259FA RID: 154106 RVA: 0x00528809 File Offset: 0x00526A09
 		public static Offset<IInteractStyleEntityPart> CreateIInteractStyleEntityPart(FlatBufferBuilder builder, EInteractStyleType Type = EInteractStyleType.Panorama, TInteractEntityPartBind Bind_type = TInteractEntityPartBind.NONE, int BindOffset = 0, float ShowAngle = 0f, float TriggerAngle = 0f)
 		{
 			builder.StartTable(5);
@@ -142,49 +142,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IInteractStyleEntityPart.EndIInteractStyleEntityPart(builder);
 		}
 
-		// Token: 0x06023943 RID: 145731 RVA: 0x004EB7C9 File Offset: 0x004E99C9
+		// Token: 0x060259FB RID: 154107 RVA: 0x0052883D File Offset: 0x00526A3D
 		public static void StartIInteractStyleEntityPart(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06023944 RID: 145732 RVA: 0x004EB7D2 File Offset: 0x004E99D2
+		// Token: 0x060259FC RID: 154108 RVA: 0x00528846 File Offset: 0x00526A46
 		public static void AddType(FlatBufferBuilder builder, EInteractStyleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06023945 RID: 145733 RVA: 0x004EB7DD File Offset: 0x004E99DD
+		// Token: 0x060259FD RID: 154109 RVA: 0x00528851 File Offset: 0x00526A51
 		public static void AddBindType(FlatBufferBuilder builder, TInteractEntityPartBind bindType)
 		{
 			builder.AddByte(1, (byte)bindType, 0);
 		}
 
-		// Token: 0x06023946 RID: 145734 RVA: 0x004EB7E8 File Offset: 0x004E99E8
+		// Token: 0x060259FE RID: 154110 RVA: 0x0052885C File Offset: 0x00526A5C
 		public static void AddBind(FlatBufferBuilder builder, int bindOffset)
 		{
 			builder.AddOffset(2, bindOffset, 0);
 		}
 
-		// Token: 0x06023947 RID: 145735 RVA: 0x004EB7F3 File Offset: 0x004E99F3
+		// Token: 0x060259FF RID: 154111 RVA: 0x00528867 File Offset: 0x00526A67
 		public static void AddShowAngle(FlatBufferBuilder builder, float showAngle)
 		{
 			builder.AddFloat(3, showAngle, 0.0);
 		}
 
-		// Token: 0x06023948 RID: 145736 RVA: 0x004EB806 File Offset: 0x004E9A06
+		// Token: 0x06025A00 RID: 154112 RVA: 0x0052887A File Offset: 0x00526A7A
 		public static void AddTriggerAngle(FlatBufferBuilder builder, float triggerAngle)
 		{
 			builder.AddFloat(4, triggerAngle, 0.0);
 		}
 
-		// Token: 0x06023949 RID: 145737 RVA: 0x004EB819 File Offset: 0x004E9A19
+		// Token: 0x06025A01 RID: 154113 RVA: 0x0052888D File Offset: 0x00526A8D
 		public static Offset<IInteractStyleEntityPart> EndIInteractStyleEntityPart(FlatBufferBuilder builder)
 		{
 			return new Offset<IInteractStyleEntityPart>(builder.EndTable());
 		}
 
-		// Token: 0x0602394A RID: 145738 RVA: 0x004EB828 File Offset: 0x004E9A28
+		// Token: 0x06025A02 RID: 154114 RVA: 0x0052889C File Offset: 0x00526A9C
 		public IInteractStyleEntityPartT UnPack()
 		{
 			IInteractStyleEntityPartT interactStyleEntityPartT = new IInteractStyleEntityPartT();
@@ -192,7 +192,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return interactStyleEntityPartT;
 		}
 
-		// Token: 0x0602394B RID: 145739 RVA: 0x004EB844 File Offset: 0x004E9A44
+		// Token: 0x06025A03 RID: 154115 RVA: 0x005288B8 File Offset: 0x00526AB8
 		public void UnPackTo(IInteractStyleEntityPartT _o)
 		{
 			_o.Type = this.Type;
@@ -214,7 +214,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.TriggerAngle = this.TriggerAngle;
 		}
 
-		// Token: 0x0602394C RID: 145740 RVA: 0x004EB910 File Offset: 0x004E9B10
+		// Token: 0x06025A04 RID: 154116 RVA: 0x00528984 File Offset: 0x00526B84
 		public static Offset<IInteractStyleEntityPart> Pack(FlatBufferBuilder builder, IInteractStyleEntityPartT _o)
 		{
 			if (_o == null)
@@ -226,7 +226,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IInteractStyleEntityPart.CreateIInteractStyleEntityPart(builder, _o.Type, bind_type, bindOffset, _o.ShowAngle, _o.TriggerAngle);
 		}
 
-		// Token: 0x0400E6FD RID: 59133
+		// Token: 0x0400F32E RID: 62254
 		private Table __p;
 	}
 }

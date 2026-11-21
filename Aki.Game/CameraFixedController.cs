@@ -6,24 +6,24 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020001FD RID: 509
+// Token: 0x02000201 RID: 513
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 {
-	// Token: 0x06002004 RID: 8196 RVA: 0x000A7584 File Offset: 0x000A5784
+	// Token: 0x060020B2 RID: 8370 RVA: 0x000AE8D8 File Offset: 0x000ACAD8
 	public CameraFixedController(FightCameraLogicComponent camera) : base(camera)
 	{
 	}
 
-	// Token: 0x06002005 RID: 8197 RVA: 0x000A758D File Offset: 0x000A578D
+	// Token: 0x060020B3 RID: 8371 RVA: 0x000AE8E1 File Offset: 0x000ACAE1
 	public override string Name()
 	{
 		return "FixedController";
 	}
 
-	// Token: 0x06002006 RID: 8198 RVA: 0x000A7594 File Offset: 0x000A5794
+	// Token: 0x060020B4 RID: 8372 RVA: 0x000AE8E8 File Offset: 0x000ACAE8
 	public void InitFixedCamera(Vector vectorLoc, Rotator vectorRot, float fov, float fadeInTime, float fadeOutTime)
 	{
 		if (this.NowInCamera == null || !this.CheckIfTheSameCamera(vectorLoc) || base.CameraModel.CurrentCameraActor != this.NowInCamera)
@@ -49,7 +49,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002007 RID: 8199 RVA: 0x000A7684 File Offset: 0x000A5884
+	// Token: 0x060020B5 RID: 8373 RVA: 0x000AE9D8 File Offset: 0x000ACBD8
 	private void AddFadeIn()
 	{
 		if (this.TickIdFadeIn != null && TimerSystem.Instance.Has(this.TickIdFadeIn))
@@ -66,7 +66,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		this.OnFadeIn(0f);
 	}
 
-	// Token: 0x06002008 RID: 8200 RVA: 0x000A7721 File Offset: 0x000A5921
+	// Token: 0x060020B6 RID: 8374 RVA: 0x000AEA75 File Offset: 0x000ACC75
 	private void RemoveFadeIn()
 	{
 		if (this.TickIdFadeIn != null && TimerSystem.Instance.Has(this.TickIdFadeIn))
@@ -76,7 +76,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002009 RID: 8201 RVA: 0x000A775C File Offset: 0x000A595C
+	// Token: 0x060020B7 RID: 8375 RVA: 0x000AEAB0 File Offset: 0x000ACCB0
 	private void AddFadeOut()
 	{
 		if (this.TickIdFadeOut != null && TimerSystem.Instance.Has(this.TickIdFadeOut))
@@ -93,7 +93,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		this.OnFadeOut(0f);
 	}
 
-	// Token: 0x0600200A RID: 8202 RVA: 0x000A77F9 File Offset: 0x000A59F9
+	// Token: 0x060020B8 RID: 8376 RVA: 0x000AEB4D File Offset: 0x000ACD4D
 	private void RemoveFadeOut()
 	{
 		if (this.TickIdFadeOut != null && TimerSystem.Instance.Has(this.TickIdFadeOut))
@@ -102,7 +102,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x0600200B RID: 8203 RVA: 0x000A7826 File Offset: 0x000A5A26
+	// Token: 0x060020B9 RID: 8377 RVA: 0x000AEB7A File Offset: 0x000ACD7A
 	private void OnFadeIn(float delta)
 	{
 		if (this.LastInCamera != this.NowInCamera)
@@ -117,7 +117,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		this.IsChangingCamera = false;
 	}
 
-	// Token: 0x0600200C RID: 8204 RVA: 0x000A7858 File Offset: 0x000A5A58
+	// Token: 0x060020BA RID: 8378 RVA: 0x000AEBAC File Offset: 0x000ACDAC
 	private void OnFadeOut(float delta)
 	{
 		base.CameraModel.FightCamera.LogicComponent.CameraInputController.Unlock(this);
@@ -139,7 +139,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		this.IsChangingCamera = false;
 	}
 
-	// Token: 0x0600200D RID: 8205 RVA: 0x000A78CC File Offset: 0x000A5ACC
+	// Token: 0x060020BB RID: 8379 RVA: 0x000AEC20 File Offset: 0x000ACE20
 	private void FixedCameraSetViewTarget()
 	{
 		CameraController.Instance.SetViewTarget(this.NowInCamera, "FixedCameraSetViewTarget", this.FadeInTime, EViewTargetBlendFunction.VTBlend_Linear, 0f, new bool?(false), new bool?(false), base.CameraModel.CameraName, null, null);
@@ -150,7 +150,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		this.AddFadeIn();
 	}
 
-	// Token: 0x0600200E RID: 8206 RVA: 0x000A7958 File Offset: 0x000A5B58
+	// Token: 0x060020BC RID: 8380 RVA: 0x000AECAC File Offset: 0x000ACEAC
 	public bool FixedCameraResetViewTarget()
 	{
 		if (this.LastInCamera != this.NowInCamera)
@@ -171,7 +171,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		return false;
 	}
 
-	// Token: 0x0600200F RID: 8207 RVA: 0x000A7A58 File Offset: 0x000A5C58
+	// Token: 0x060020BD RID: 8381 RVA: 0x000AEDAC File Offset: 0x000ACFAC
 	private void AddEventSystem()
 	{
 		if (!EventSystem.Instance.Has<float, string>(EEventName.CameraViewTargetChanged, new Action<float, string>(this.OnViewTargetChanged)))
@@ -184,7 +184,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002010 RID: 8208 RVA: 0x000A7AD8 File Offset: 0x000A5CD8
+	// Token: 0x060020BE RID: 8382 RVA: 0x000AEE2C File Offset: 0x000AD02C
 	private void RemoveEventSystem()
 	{
 		if (EventSystem.Instance.Has<float, string>(EEventName.CameraViewTargetChanged, new Action<float, string>(this.OnViewTargetChanged)))
@@ -197,7 +197,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002011 RID: 8209 RVA: 0x000A7B58 File Offset: 0x000A5D58
+	// Token: 0x060020BF RID: 8383 RVA: 0x000AEEAC File Offset: 0x000AD0AC
 	protected void OnViewTargetChanged(float f, string cameraName)
 	{
 		CameraModelInstance cameraModel = base.CameraModel;
@@ -213,7 +213,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002012 RID: 8210 RVA: 0x000A7BCB File Offset: 0x000A5DCB
+	// Token: 0x060020C0 RID: 8384 RVA: 0x000AEF1F File Offset: 0x000AD11F
 	protected void OnFixedCameraRestored()
 	{
 		if (this.IsLockedCamera)
@@ -223,7 +223,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		base.CameraModel.FightCamera.LogicComponent.SetIsDitherEffectEnable(true);
 	}
 
-	// Token: 0x06002013 RID: 8211 RVA: 0x000A7BF4 File Offset: 0x000A5DF4
+	// Token: 0x060020C1 RID: 8385 RVA: 0x000AEF48 File Offset: 0x000AD148
 	private bool CheckIfTheSameCamera(Vector vectorLoc)
 	{
 		ACameraActor nowInCamera = this.NowInCamera;
@@ -231,13 +231,13 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		return MathUtils.Instance.IsNearlyEqual(fvectorDouble.Value.X, vectorLoc.ToUeVector(false).X, new double?(0.0001)) && MathUtils.Instance.IsNearlyEqual(fvectorDouble.Value.Y, vectorLoc.ToUeVector(false).Y, new double?(0.0001)) && MathUtils.Instance.IsNearlyEqual(fvectorDouble.Value.Z, vectorLoc.ToUeVector(false).Z, new double?(0.0001));
 	}
 
-	// Token: 0x06002014 RID: 8212 RVA: 0x000A7CBA File Offset: 0x000A5EBA
+	// Token: 0x060020C2 RID: 8386 RVA: 0x000AF00E File Offset: 0x000AD20E
 	public override string GetConfigMapValue(int key)
 	{
 		return base.GetConfigMapValue(key);
 	}
 
-	// Token: 0x06002015 RID: 8213 RVA: 0x000A7CC4 File Offset: 0x000A5EC4
+	// Token: 0x060020C3 RID: 8387 RVA: 0x000AF018 File Offset: 0x000AD218
 	[NullableContext(0)]
 	public override bool TryGetMember(string key, out object value)
 	{
@@ -320,7 +320,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x06002016 RID: 8214 RVA: 0x000A7E38 File Offset: 0x000A6038
+	// Token: 0x060020C4 RID: 8388 RVA: 0x000AF18C File Offset: 0x000AD38C
 	[NullableContext(0)]
 	public override void SetMember(string key, object value)
 	{
@@ -453,7 +453,7 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		base.SetMember(key, value);
 	}
 
-	// Token: 0x06002017 RID: 8215 RVA: 0x000A808E File Offset: 0x000A628E
+	// Token: 0x060020C5 RID: 8389 RVA: 0x000AF3E2 File Offset: 0x000AD5E2
 	[NullableContext(0)]
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
@@ -462,31 +462,31 @@ public class CameraFixedController : CameraControllerBase, ICanGetConfigMapValue
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x040013EC RID: 5100
+	// Token: 0x0400142E RID: 5166
 	private float FadeInTime;
 
-	// Token: 0x040013ED RID: 5101
+	// Token: 0x0400142F RID: 5167
 	private float FadeOutTime;
 
-	// Token: 0x040013EE RID: 5102
+	// Token: 0x04001430 RID: 5168
 	[Nullable(2)]
 	private TimerHandle TickIdFadeIn;
 
-	// Token: 0x040013EF RID: 5103
+	// Token: 0x04001431 RID: 5169
 	[Nullable(2)]
 	private TimerHandle TickIdFadeOut;
 
-	// Token: 0x040013F0 RID: 5104
+	// Token: 0x04001432 RID: 5170
 	public bool IsLockedCamera;
 
-	// Token: 0x040013F1 RID: 5105
+	// Token: 0x04001433 RID: 5171
 	public bool IsChangingCamera;
 
-	// Token: 0x040013F2 RID: 5106
+	// Token: 0x04001434 RID: 5172
 	[Nullable(2)]
 	private ACameraActor NowInCamera;
 
-	// Token: 0x040013F3 RID: 5107
+	// Token: 0x04001435 RID: 5173
 	[Nullable(2)]
 	private ACameraActor LastInCamera;
 }

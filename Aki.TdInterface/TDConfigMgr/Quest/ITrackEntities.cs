@@ -6,13 +6,13 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011B8 RID: 4536
+	// Token: 0x020012F2 RID: 4850
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITrackEntities : ITrackType
 	{
-		// Token: 0x0600670A RID: 26378 RVA: 0x000F6CF4 File Offset: 0x000F4EF4
-		[NullableContext(1)]
+		// Token: 0x06006D43 RID: 27971 RVA: 0x00104544 File Offset: 0x00102744
+		[NullableContext(0)]
 		private ITrackEntities_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600670B RID: 26379 RVA: 0x000F6D2C File Offset: 0x000F4F2C
-		[NullableContext(1)]
+		// Token: 0x06006D44 RID: 27972 RVA: 0x0010457C File Offset: 0x0010277C
+		[NullableContext(0)]
 		public static ITrackEntities Create([Nullable(2)] ITrackEntities instance)
 		{
 			if (instance == null)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600670C RID: 26380 RVA: 0x000F6D3F File Offset: 0x000F4F3F
-		[NullableContext(1)]
+		// Token: 0x06006D45 RID: 27973 RVA: 0x0010458F File Offset: 0x0010278F
+		[NullableContext(0)]
 		public static ITrackEntities CreateFromSetValue([Nullable(2)] ITrackEntities_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600670D RID: 26381 RVA: 0x000F6D54 File Offset: 0x000F4F54
-		[NullableContext(1)]
+		// Token: 0x06006D46 RID: 27974 RVA: 0x001045A4 File Offset: 0x001027A4
+		[NullableContext(0)]
 		public new ITrackEntities_SetValue ToSetValue()
 		{
 			return new ITrackEntities_SetValue
@@ -69,9 +69,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002176 RID: 8566
-		// (get) Token: 0x0600670E RID: 26382 RVA: 0x000F6DA2 File Offset: 0x000F4FA2
-		// (set) Token: 0x0600670F RID: 26383 RVA: 0x000F6DCD File Offset: 0x000F4FCD
+		// Token: 0x17002336 RID: 9014
+		// (get) Token: 0x06006D47 RID: 27975 RVA: 0x001045F2 File Offset: 0x001027F2
+		// (set) Token: 0x06006D48 RID: 27976 RVA: 0x0010461D File Offset: 0x0010281D
 		public override ETrackType Type
 		{
 			get
@@ -92,9 +92,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002177 RID: 8567
-		// (get) Token: 0x06006710 RID: 26384 RVA: 0x000F6DDB File Offset: 0x000F4FDB
-		// (set) Token: 0x06006711 RID: 26385 RVA: 0x000F6E02 File Offset: 0x000F5002
+		// Token: 0x17002337 RID: 9015
+		// (get) Token: 0x06006D49 RID: 27977 RVA: 0x0010462B File Offset: 0x0010282B
+		// (set) Token: 0x06006D4A RID: 27978 RVA: 0x00104652 File Offset: 0x00102852
 		public override IGravityDirectionType GravityDirection
 		{
 			get
@@ -116,13 +116,13 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002178 RID: 8568
-		// (get) Token: 0x06006712 RID: 26386 RVA: 0x000F6E10 File Offset: 0x000F5010
-		// (set) Token: 0x06006713 RID: 26387 RVA: 0x000F6E37 File Offset: 0x000F5037
-		[Nullable(1)]
+		// Token: 0x17002338 RID: 9016
+		// (get) Token: 0x06006D4B RID: 27979 RVA: 0x00104660 File Offset: 0x00102860
+		// (set) Token: 0x06006D4C RID: 27980 RVA: 0x00104687 File Offset: 0x00102887
+		[Nullable(0)]
 		public virtual List<int> EntityIds
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -136,16 +136,16 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return pocoInterface.EntityIds;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().EntityIds = value;
 			}
 		}
 
-		// Token: 0x17002179 RID: 8569
-		// (get) Token: 0x06006714 RID: 26388 RVA: 0x000F6E48 File Offset: 0x000F5048
-		// (set) Token: 0x06006715 RID: 26389 RVA: 0x000F6EA9 File Offset: 0x000F50A9
+		// Token: 0x17002339 RID: 9017
+		// (get) Token: 0x06006D4D RID: 27981 RVA: 0x00104698 File Offset: 0x00102898
+		// (set) Token: 0x06006D4E RID: 27982 RVA: 0x001046F9 File Offset: 0x001028F9
 		public virtual IOutOfRangeTrackTarget OutOfRangeTrackTargetLocation
 		{
 			get
@@ -173,9 +173,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700217A RID: 8570
-		// (get) Token: 0x06006716 RID: 26390 RVA: 0x000F6EC0 File Offset: 0x000F50C0
-		// (set) Token: 0x06006717 RID: 26391 RVA: 0x000F6F21 File Offset: 0x000F5121
+		// Token: 0x1700233A RID: 9018
+		// (get) Token: 0x06006D4F RID: 27983 RVA: 0x00104710 File Offset: 0x00102910
+		// (set) Token: 0x06006D50 RID: 27984 RVA: 0x00104771 File Offset: 0x00102971
 		public virtual IOutOfRangeTrackEntity OutOfRangeTrackTarget
 		{
 			get
@@ -203,24 +203,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003DDD RID: 15837
+		// Token: 0x04004148 RID: 16712
 		protected new ITrackEntities FbInstance;
 
-		// Token: 0x04003DDE RID: 15838
+		// Token: 0x04004149 RID: 16713
 		protected new ITrackEntities_SetValue PocoInterface;
 
-		// Token: 0x04003DDF RID: 15839
-		[Nullable(1)]
+		// Token: 0x0400414A RID: 16714
+		[Nullable(0)]
 		private IOutOfRangeTrackTarget _OutOfRangeTrackTargetLocationCache;
 
-		// Token: 0x04003DE0 RID: 15840
+		// Token: 0x0400414B RID: 16715
 		private bool _OutOfRangeTrackTargetLocationInited;
 
-		// Token: 0x04003DE1 RID: 15841
-		[Nullable(1)]
+		// Token: 0x0400414C RID: 16716
+		[Nullable(0)]
 		private IOutOfRangeTrackEntity _OutOfRangeTrackTargetCache;
 
-		// Token: 0x04003DE2 RID: 15842
+		// Token: 0x0400414D RID: 16717
 		private bool _OutOfRangeTrackTargetInited;
 	}
 }

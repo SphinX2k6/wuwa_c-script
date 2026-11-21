@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Common.Connect
 {
-	// Token: 0x02007079 RID: 28793
+	// Token: 0x020061FA RID: 25082
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PathAdvanceConnectDriver
 	{
-		// Token: 0x060461A7 RID: 287143 RVA: 0x0117E840 File Offset: 0x0117CA40
+		// Token: 0x0603C3B1 RID: 246705 RVA: 0x0112805C File Offset: 0x0112625C
 		public PathAdvanceConnectDriver(Entity entity, IConnectorPointToPointPathAdvance config, Action<int> onReachEnd, Action<int> onWithdraw)
 		{
 			this.Entity = entity;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			this.OnWithdraw = onWithdraw;
 		}
 
-		// Token: 0x060461A8 RID: 287144 RVA: 0x0117E8E0 File Offset: 0x0117CAE0
+		// Token: 0x0603C3B2 RID: 246706 RVA: 0x011280FC File Offset: 0x011262FC
 		public bool Start()
 		{
 			this.Initiator = this.Config.Initiator;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			return true;
 		}
 
-		// Token: 0x060461A9 RID: 287145 RVA: 0x0117E9D8 File Offset: 0x0117CBD8
+		// Token: 0x0603C3B3 RID: 246707 RVA: 0x011281F4 File Offset: 0x011263F4
 		public void Tick(float delta)
 		{
 			if (this.Initiator == null || !this.IsDriveReady())
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			this.Recede(deltaSeconds);
 		}
 
-		// Token: 0x060461AA RID: 287146 RVA: 0x0117EA5D File Offset: 0x0117CC5D
+		// Token: 0x0603C3B4 RID: 246708 RVA: 0x01128279 File Offset: 0x01126479
 		public void Withdraw()
 		{
 			if (this.Initiator == null || !this.Started)
@@ -105,13 +105,13 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			this.Withdrawing = true;
 		}
 
-		// Token: 0x060461AB RID: 287147 RVA: 0x0117EA8A File Offset: 0x0117CC8A
+		// Token: 0x0603C3B5 RID: 246709 RVA: 0x011282A6 File Offset: 0x011264A6
 		public void SetRestorePending(bool restorePending)
 		{
 			this.RestorePending = restorePending;
 		}
 
-		// Token: 0x060461AC RID: 287148 RVA: 0x0117EA94 File Offset: 0x0117CC94
+		// Token: 0x0603C3B6 RID: 246710 RVA: 0x011282B0 File Offset: 0x011264B0
 		public void End()
 		{
 			WaitEntityTask targetWaitTask = this.TargetWaitTask;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			this.Initiator = null;
 		}
 
-		// Token: 0x060461AD RID: 287149 RVA: 0x0117EBBC File Offset: 0x0117CDBC
+		// Token: 0x0603C3B7 RID: 246711 RVA: 0x011283D8 File Offset: 0x011265D8
 		private void SetConstantTick(bool enabled)
 		{
 			if (enabled)
@@ -175,13 +175,13 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			this.ConstantTickEnabled = enabled;
 		}
 
-		// Token: 0x060461AE RID: 287150 RVA: 0x0117EC31 File Offset: 0x0117CE31
+		// Token: 0x0603C3B8 RID: 246712 RVA: 0x0112844D File Offset: 0x0112664D
 		private bool IsActive()
 		{
 			return this.StateComp != null && this.ActiveStateTagId != 0 && this.StateComp.StateTagId == this.ActiveStateTagId;
 		}
 
-		// Token: 0x060461AF RID: 287151 RVA: 0x0117EC58 File Offset: 0x0117CE58
+		// Token: 0x0603C3B9 RID: 246713 RVA: 0x01128474 File Offset: 0x01126674
 		private void WaitTargetEntity()
 		{
 			if (this.GetTargetEntity() != null)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			}, -1, false, false);
 		}
 
-		// Token: 0x060461B0 RID: 287152 RVA: 0x0117EC94 File Offset: 0x0117CE94
+		// Token: 0x0603C3BA RID: 246714 RVA: 0x011284B0 File Offset: 0x011266B0
 		[NullableContext(2)]
 		private Entity GetTargetEntity()
 		{
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			return entityByPbDataId.Entity;
 		}
 
-		// Token: 0x060461B1 RID: 287153 RVA: 0x0117ECBC File Offset: 0x0117CEBC
+		// Token: 0x0603C3BB RID: 246715 RVA: 0x011284D8 File Offset: 0x011266D8
 		private bool IsDriveReady()
 		{
 			if (!this.TargetReady)
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			return visualConfig == null || visualConfig.Type > EConnectorPathAdvanceVisualType.VasePlant || this.ScatterClassReady;
 		}
 
-		// Token: 0x060461B2 RID: 287154 RVA: 0x0117ECEC File Offset: 0x0117CEEC
+		// Token: 0x0603C3BC RID: 246716 RVA: 0x01128508 File Offset: 0x01126708
 		private void RestoreGrown()
 		{
 			this.StopGrowthAudio();
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			this.EnterPath(num, false);
 		}
 
-		// Token: 0x060461B3 RID: 287155 RVA: 0x0117ED6C File Offset: 0x0117CF6C
+		// Token: 0x0603C3BD RID: 246717 RVA: 0x01128588 File Offset: 0x01126788
 		private unsafe void Advance(float deltaSeconds)
 		{
 			if (this.Reached)
@@ -320,12 +320,12 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			}
 		}
 
-		// Token: 0x060461B4 RID: 287156 RVA: 0x0117EF82 File Offset: 0x0117D182
+		// Token: 0x0603C3BE RID: 246718 RVA: 0x0112879E File Offset: 0x0112699E
 		private void LogProgress(float progress)
 		{
 		}
 
-		// Token: 0x060461B5 RID: 287157 RVA: 0x0117EF84 File Offset: 0x0117D184
+		// Token: 0x0603C3BF RID: 246719 RVA: 0x011287A0 File Offset: 0x011269A0
 		private void NotifyWithdrawOnce()
 		{
 			if (!this.Reached)
@@ -336,7 +336,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			this.OnWithdraw(this.Initiator.TargetEntity);
 		}
 
-		// Token: 0x060461B6 RID: 287158 RVA: 0x0117EFAC File Offset: 0x0117D1AC
+		// Token: 0x0603C3C0 RID: 246720 RVA: 0x011287C8 File Offset: 0x011269C8
 		private void Recede(float deltaSeconds)
 		{
 			this.PauseGrowthAudio();
@@ -373,7 +373,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			}
 		}
 
-		// Token: 0x060461B7 RID: 287159 RVA: 0x0117F090 File Offset: 0x0117D290
+		// Token: 0x0603C3C1 RID: 246721 RVA: 0x011288AC File Offset: 0x01126AAC
 		private unsafe void EnterPath(int index, bool forward)
 		{
 			int num = this.Initiator.Paths[index];
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			this.UpdateGrowthAudioPosition();
 		}
 
-		// Token: 0x060461B8 RID: 287160 RVA: 0x0117F1AC File Offset: 0x0117D3AC
+		// Token: 0x0603C3C2 RID: 246722 RVA: 0x011289C8 File Offset: 0x01126BC8
 		private void PlayOrResumeGrowthAudio()
 		{
 			if (!this.EnsureGrowthAudioActor())
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			this.GrowthAudioPaused = false;
 		}
 
-		// Token: 0x060461B9 RID: 287161 RVA: 0x0117F240 File Offset: 0x0117D440
+		// Token: 0x0603C3C3 RID: 246723 RVA: 0x01128A5C File Offset: 0x01126C5C
 		private void PauseGrowthAudio()
 		{
 			if (this.GrowthAudioHandle == 0 || this.GrowthAudioPaused)
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			this.GrowthAudioPaused = true;
 		}
 
-		// Token: 0x060461BA RID: 287162 RVA: 0x0117F280 File Offset: 0x0117D480
+		// Token: 0x0603C3C4 RID: 246724 RVA: 0x01128A9C File Offset: 0x01126C9C
 		private void StopGrowthAudio()
 		{
 			if (this.GrowthAudioHandle != 0)
@@ -458,7 +458,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			this.GrowthAudioActor = null;
 		}
 
-		// Token: 0x060461BB RID: 287163 RVA: 0x0117F2F0 File Offset: 0x0117D4F0
+		// Token: 0x0603C3C5 RID: 246725 RVA: 0x01128B0C File Offset: 0x01126D0C
 		private bool EnsureGrowthAudioActor()
 		{
 			BP_EffectAudio_C growthAudioActor = this.GrowthAudioActor;
@@ -493,7 +493,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			return true;
 		}
 
-		// Token: 0x060461BC RID: 287164 RVA: 0x0117F3D0 File Offset: 0x0117D5D0
+		// Token: 0x0603C3C6 RID: 246726 RVA: 0x01128BEC File Offset: 0x01126DEC
 		private void UpdateGrowthAudioPosition()
 		{
 			BP_EffectAudio_C growthAudioActor = this.GrowthAudioActor;
@@ -509,7 +509,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			}
 		}
 
-		// Token: 0x060461BD RID: 287165 RVA: 0x0117F433 File Offset: 0x0117D633
+		// Token: 0x0603C3C7 RID: 246727 RVA: 0x01128C4F File Offset: 0x01126E4F
 		[NullableContext(2)]
 		private USplineComponent AcquireSpline(int splineId)
 		{
@@ -522,7 +522,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			return usplineComponent;
 		}
 
-		// Token: 0x060461BE RID: 287166 RVA: 0x0117F46B File Offset: 0x0117D66B
+		// Token: 0x0603C3C8 RID: 246728 RVA: 0x01128C87 File Offset: 0x01126E87
 		private void RequestScatterClass()
 		{
 			if (this.ScatterClassRequested)
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			}, "js_undefined");
 		}
 
-		// Token: 0x060461BF RID: 287167 RVA: 0x0117F4A0 File Offset: 0x0117D6A0
+		// Token: 0x0603C3C9 RID: 246729 RVA: 0x01128CBC File Offset: 0x01126EBC
 		private unsafe void PreloadPathTextures()
 		{
 			IConnectorPathAdvanceVasePlantVisual visualConfig = this.Initiator.VisualConfig;
@@ -573,7 +573,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			}
 		}
 
-		// Token: 0x060461C0 RID: 287168 RVA: 0x0117F52C File Offset: 0x0117D72C
+		// Token: 0x0603C3CA RID: 246730 RVA: 0x01128D48 File Offset: 0x01126F48
 		private void ApplyPathTexture(int index)
 		{
 			ScatterSegment scatterSegment = (index < this.ScatterSegments.Count) ? this.ScatterSegments[index] : null;
@@ -591,14 +591,14 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			}
 		}
 
-		// Token: 0x060461C1 RID: 287169 RVA: 0x0117F5C2 File Offset: 0x0117D7C2
+		// Token: 0x0603C3CB RID: 246731 RVA: 0x01128DDE File Offset: 0x01126FDE
 		private void ResetGrowthTime(BP_SplineScatter_C actor, float progress)
 		{
 			actor.LastGrowthTime = -1f;
 			actor.CustomTime = progress;
 		}
 
-		// Token: 0x060461C2 RID: 287170 RVA: 0x0117F5D6 File Offset: 0x0117D7D6
+		// Token: 0x0603C3CC RID: 246732 RVA: 0x01128DF2 File Offset: 0x01126FF2
 		private ScatterSegment GetSegment(int index)
 		{
 			while (this.ScatterSegments.Count <= index)
@@ -608,7 +608,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			return this.ScatterSegments[index];
 		}
 
-		// Token: 0x060461C3 RID: 287171 RVA: 0x0117F604 File Offset: 0x0117D804
+		// Token: 0x0603C3CD RID: 246733 RVA: 0x01128E20 File Offset: 0x01127020
 		[NullableContext(2)]
 		private unsafe void EnsureScatterActor(int index, float initProgress, USplineComponent spline)
 		{
@@ -687,7 +687,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			this.ApplyPathTexture(index);
 		}
 
-		// Token: 0x060461C4 RID: 287172 RVA: 0x0117F838 File Offset: 0x0117DA38
+		// Token: 0x0603C3CE RID: 246734 RVA: 0x01129054 File Offset: 0x01127254
 		private void ApplyProgress(int index, float progress)
 		{
 			BP_SplineScatter_C bp_SplineScatter_C;
@@ -712,7 +712,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			}
 		}
 
-		// Token: 0x060461C5 RID: 287173 RVA: 0x0117F899 File Offset: 0x0117DA99
+		// Token: 0x0603C3CF RID: 246735 RVA: 0x011290B5 File Offset: 0x011272B5
 		private void ResetActorIgnoreCache(ActorIgnoreCache cache)
 		{
 			cache.Entity = null;
@@ -720,7 +720,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			cache.Ready = false;
 		}
 
-		// Token: 0x060461C6 RID: 287174 RVA: 0x0117F8B4 File Offset: 0x0117DAB4
+		// Token: 0x0603C3D0 RID: 246736 RVA: 0x011290D0 File Offset: 0x011272D0
 		private void AddEntityActorsToIgnore(UTraceLineElement element, [Nullable(2)] Entity entity, ActorIgnoreCache cache)
 		{
 			if (cache.Entity != entity)
@@ -774,7 +774,7 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			}
 		}
 
-		// Token: 0x060461C7 RID: 287175 RVA: 0x0117F9C8 File Offset: 0x0117DBC8
+		// Token: 0x0603C3D1 RID: 246737 RVA: 0x011291E4 File Offset: 0x011273E4
 		[return: TupleElementNames(new string[]
 		{
 			"Dist",
@@ -842,22 +842,22 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			return new ValueTuple<float, string>(float.PositiveInfinity, "");
 		}
 
-		// Token: 0x04024B87 RID: 150407
+		// Token: 0x0401FE42 RID: 130626
 		private const float SCAN_BACK_MARGIN = 10f;
 
-		// Token: 0x04024B88 RID: 150408
+		// Token: 0x0401FE43 RID: 130627
 		private const float REACH_EPSILON = 1f;
 
-		// Token: 0x04024B89 RID: 150409
+		// Token: 0x0401FE44 RID: 130628
 		private const float INVALID_GROWTH_TIME = -1f;
 
-		// Token: 0x04024B8A RID: 150410
+		// Token: 0x0401FE45 RID: 130629
 		private const string PROFILE_KEY = "PathAdvanceConnectDriver.ScanObstacle";
 
-		// Token: 0x04024B8B RID: 150411
+		// Token: 0x0401FE46 RID: 130630
 		private const string GROWTH_AUDIO_EVENT = "play_sfx_gp_flower_road";
 
-		// Token: 0x04024B8C RID: 150412
+		// Token: 0x0401FE47 RID: 130631
 		private readonly EObjectTypeQuery[] ObstacleObjectTypes = new EObjectTypeQuery[]
 		{
 			KuroObjectTypeQuery.Destructible,
@@ -866,105 +866,105 @@ namespace CSharpScript.Game.NewWorld.Common.Connect
 			KuroObjectTypeQuery.WorldDynamic
 		};
 
-		// Token: 0x04024B8D RID: 150413
+		// Token: 0x0401FE48 RID: 130632
 		private readonly Entity Entity;
 
-		// Token: 0x04024B8E RID: 150414
+		// Token: 0x0401FE49 RID: 130633
 		private readonly IConnectorPointToPointPathAdvance Config;
 
-		// Token: 0x04024B8F RID: 150415
+		// Token: 0x0401FE4A RID: 130634
 		private readonly Action<int> OnReachEnd;
 
-		// Token: 0x04024B90 RID: 150416
+		// Token: 0x0401FE4B RID: 130635
 		private readonly Action<int> OnWithdraw;
 
-		// Token: 0x04024B91 RID: 150417
+		// Token: 0x0401FE4C RID: 130636
 		[Nullable(2)]
 		private IConnectorPathAdvanceInitiator Initiator;
 
-		// Token: 0x04024B92 RID: 150418
+		// Token: 0x0401FE4D RID: 130637
 		[Nullable(2)]
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x04024B93 RID: 150419
+		// Token: 0x0401FE4E RID: 130638
 		private int ActiveStateTagId;
 
-		// Token: 0x04024B94 RID: 150420
+		// Token: 0x0401FE4F RID: 130639
 		private int PbDataId;
 
-		// Token: 0x04024B95 RID: 150421
+		// Token: 0x0401FE50 RID: 130640
 		private int PathIndex;
 
-		// Token: 0x04024B96 RID: 150422
+		// Token: 0x0401FE51 RID: 130641
 		private float CurrentDistance;
 
-		// Token: 0x04024B97 RID: 150423
+		// Token: 0x0401FE52 RID: 130642
 		private float SplineLength;
 
-		// Token: 0x04024B98 RID: 150424
+		// Token: 0x0401FE53 RID: 130643
 		[Nullable(2)]
 		private USplineComponent Spline;
 
-		// Token: 0x04024B99 RID: 150425
+		// Token: 0x0401FE54 RID: 130644
 		private readonly List<float> PointDistances = new List<float>();
 
-		// Token: 0x04024B9A RID: 150426
+		// Token: 0x0401FE55 RID: 130645
 		private readonly List<int> LoadedSplineIds = new List<int>();
 
-		// Token: 0x04024B9B RID: 150427
+		// Token: 0x0401FE56 RID: 130646
 		private readonly List<ScatterSegment> ScatterSegments = new List<ScatterSegment>();
 
-		// Token: 0x04024B9C RID: 150428
+		// Token: 0x0401FE57 RID: 130647
 		private readonly ActorIgnoreCache SelfActorIgnoreCache = new ActorIgnoreCache();
 
-		// Token: 0x04024B9D RID: 150429
+		// Token: 0x0401FE58 RID: 130648
 		private readonly ActorIgnoreCache TargetActorIgnoreCache = new ActorIgnoreCache();
 
-		// Token: 0x04024B9E RID: 150430
+		// Token: 0x0401FE59 RID: 130649
 		private bool Started;
 
-		// Token: 0x04024B9F RID: 150431
+		// Token: 0x0401FE5A RID: 130650
 		private bool Reached;
 
-		// Token: 0x04024BA0 RID: 150432
+		// Token: 0x0401FE5B RID: 130651
 		private bool Withdrawing;
 
-		// Token: 0x04024BA1 RID: 150433
+		// Token: 0x0401FE5C RID: 130652
 		private bool ScatterClassRequested;
 
-		// Token: 0x04024BA2 RID: 150434
+		// Token: 0x0401FE5D RID: 130653
 		private bool ScatterClassReady;
 
-		// Token: 0x04024BA3 RID: 150435
+		// Token: 0x0401FE5E RID: 130654
 		private bool RestorePending;
 
-		// Token: 0x04024BA4 RID: 150436
+		// Token: 0x0401FE5F RID: 130655
 		private bool TargetReady;
 
-		// Token: 0x04024BA5 RID: 150437
+		// Token: 0x0401FE60 RID: 130656
 		[Nullable(2)]
 		private WaitEntityTask TargetWaitTask;
 
-		// Token: 0x04024BA6 RID: 150438
+		// Token: 0x0401FE61 RID: 130657
 		private bool Blocked;
 
-		// Token: 0x04024BA7 RID: 150439
+		// Token: 0x0401FE62 RID: 130658
 		private bool SplineInvalidLogged;
 
-		// Token: 0x04024BA8 RID: 150440
+		// Token: 0x0401FE63 RID: 130659
 		private bool ConstantTickEnabled;
 
-		// Token: 0x04024BA9 RID: 150441
+		// Token: 0x0401FE64 RID: 130660
 		[Nullable(2)]
 		private BP_EffectAudio_C GrowthAudioActor;
 
-		// Token: 0x04024BAA RID: 150442
+		// Token: 0x0401FE65 RID: 130661
 		private int GrowthAudioHandle;
 
-		// Token: 0x04024BAB RID: 150443
+		// Token: 0x0401FE66 RID: 130662
 		private bool GrowthAudioPaused;
 
-		// Token: 0x04024BAC RID: 150444
+		// Token: 0x0401FE67 RID: 130663
 		private readonly TArray<FVector> EmptyGrowthAudioLocationOffsets = new TArray<FVector>();
 	}
 }

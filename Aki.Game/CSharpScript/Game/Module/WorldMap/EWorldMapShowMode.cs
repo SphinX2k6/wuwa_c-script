@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x0200479E RID: 18334
+	// Token: 0x020036CF RID: 14031
 	public enum EWorldMapShowMode
 	{
-		// Token: 0x04019E08 RID: 105992
+		// Token: 0x040144B8 RID: 83128
 		Default,
-		// Token: 0x04019E09 RID: 105993
+		// Token: 0x040144B9 RID: 83129
 		Base,
-		// Token: 0x04019E0A RID: 105994
+		// Token: 0x040144BA RID: 83130
 		HonamiStory,
-		// Token: 0x04019E0B RID: 105995
+		// Token: 0x040144BB RID: 83131
 		Recall
 	}
 }

@@ -18,7 +18,7 @@ using UnrealEngine.Utils;
 public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x17000007 RID: 7
-	// (get) Token: 0x06000056 RID: 86 RVA: 0x000060DC File Offset: 0x000042DC
+	// (get) Token: 0x06000056 RID: 86 RVA: 0x0000615C File Offset: 0x0000435C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TMap<AActor, SHotPatchGamepad> ActionMap
 	{
@@ -35,7 +35,7 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 	}
 
 	// Token: 0x17000008 RID: 8
-	// (get) Token: 0x06000057 RID: 87 RVA: 0x00006118 File Offset: 0x00004318
+	// (get) Token: 0x06000057 RID: 87 RVA: 0x00006198 File Offset: 0x00004398
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TMap<AActor, string> AxisMap
 	{
@@ -51,27 +51,21 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 		}
 	}
 
-	// Token: 0x06000058 RID: 88 RVA: 0x00006154 File Offset: 0x00004354
+	// Token: 0x06000058 RID: 88 RVA: 0x000061D4 File Offset: 0x000043D4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void AwakeBP()
+	public override void AwakeBP()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AwakeBP"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsHotPatchPanelConfig) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AwakeBP"), TsHotPatchPanelConfig.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.AwakeBP_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06000059 RID: 89 RVA: 0x000061C4 File Offset: 0x000043C4
+	// Token: 0x06000059 RID: 89 RVA: 0x0000622D File Offset: 0x0000442D
 	protected virtual void AwakeBP_Implementation()
 	{
 		this.InputAction = delegate(bool bPress, string actionName)
@@ -105,61 +99,49 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 		};
 	}
 
-	// Token: 0x0600005A RID: 90 RVA: 0x000061EC File Offset: 0x000043EC
+	// Token: 0x0600005A RID: 90 RVA: 0x00006254 File Offset: 0x00004454
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void OnEnableBP()
+	public override void OnEnableBP()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnEnableBP"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsHotPatchPanelConfig) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnEnableBP"), TsHotPatchPanelConfig.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnEnableBP_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0600005B RID: 91 RVA: 0x0000625C File Offset: 0x0000445C
+	// Token: 0x0600005B RID: 91 RVA: 0x000062AD File Offset: 0x000044AD
 	protected virtual void OnEnableBP_Implementation()
 	{
 		this.RegisterTextureMap();
 		HotPatchInputManager.Instance.InsertPanelConfig(this);
 	}
 
-	// Token: 0x0600005C RID: 92 RVA: 0x00006270 File Offset: 0x00004470
+	// Token: 0x0600005C RID: 92 RVA: 0x000062C0 File Offset: 0x000044C0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void OnDisableBP()
+	public override void OnDisableBP()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnDisableBP"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsHotPatchPanelConfig) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnDisableBP"), TsHotPatchPanelConfig.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnDisableBP_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0600005D RID: 93 RVA: 0x000062E0 File Offset: 0x000044E0
+	// Token: 0x0600005D RID: 93 RVA: 0x00006319 File Offset: 0x00004519
 	protected virtual void OnDisableBP_Implementation()
 	{
 		HotPatchInputManager.Instance.RemovePanelConfig(this);
 		this.UnRegisterTextureMap();
 	}
 
-	// Token: 0x0600005E RID: 94 RVA: 0x000062F4 File Offset: 0x000044F4
+	// Token: 0x0600005E RID: 94 RVA: 0x0000632C File Offset: 0x0000452C
 	private void RegisterTextureMap()
 	{
 		this.TextureList = new List<ValueTuple<string, UUITexture>>();
@@ -174,13 +156,13 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 		}
 	}
 
-	// Token: 0x0600005F RID: 95 RVA: 0x0000637B File Offset: 0x0000457B
+	// Token: 0x0600005F RID: 95 RVA: 0x000063B3 File Offset: 0x000045B3
 	private void UnRegisterTextureMap()
 	{
 		this.TextureList = new List<ValueTuple<string, UUITexture>>();
 	}
 
-	// Token: 0x06000060 RID: 96 RVA: 0x00006388 File Offset: 0x00004588
+	// Token: 0x06000060 RID: 96 RVA: 0x000063C0 File Offset: 0x000045C0
 	private void RegisterAction()
 	{
 		this.RegisterActionMap = new Dictionary<string, List<UUIItem>>();
@@ -206,7 +188,7 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 		}
 	}
 
-	// Token: 0x06000061 RID: 97 RVA: 0x00006448 File Offset: 0x00004648
+	// Token: 0x06000061 RID: 97 RVA: 0x00006480 File Offset: 0x00004680
 	private void RegisterAxis()
 	{
 		this.RegisterAxisMap = new Dictionary<string, List<UUIScrollViewWithScrollbarComponent>>();
@@ -232,7 +214,7 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 		}
 	}
 
-	// Token: 0x06000062 RID: 98 RVA: 0x000064F0 File Offset: 0x000046F0
+	// Token: 0x06000062 RID: 98 RVA: 0x00006528 File Offset: 0x00004728
 	private void UnRegisterAction()
 	{
 		if (this.RegisterActionMap == null)
@@ -246,7 +228,7 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 		this.RegisterActionMap.Clear();
 	}
 
-	// Token: 0x06000063 RID: 99 RVA: 0x00006568 File Offset: 0x00004768
+	// Token: 0x06000063 RID: 99 RVA: 0x000065A0 File Offset: 0x000047A0
 	private void UnRegisterAxis()
 	{
 		if (this.RegisterAxisMap == null)
@@ -260,21 +242,21 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 		this.RegisterAxisMap.Clear();
 	}
 
-	// Token: 0x06000064 RID: 100 RVA: 0x000065E0 File Offset: 0x000047E0
+	// Token: 0x06000064 RID: 100 RVA: 0x00006618 File Offset: 0x00004818
 	public void RegisterActionAndAxis()
 	{
 		this.RegisterAction();
 		this.RegisterAxis();
 	}
 
-	// Token: 0x06000065 RID: 101 RVA: 0x000065EE File Offset: 0x000047EE
+	// Token: 0x06000065 RID: 101 RVA: 0x00006626 File Offset: 0x00004826
 	public void UnRegisterActionAndAxis()
 	{
 		this.UnRegisterAction();
 		this.UnRegisterAxis();
 	}
 
-	// Token: 0x06000066 RID: 102 RVA: 0x000065FC File Offset: 0x000047FC
+	// Token: 0x06000066 RID: 102 RVA: 0x00006634 File Offset: 0x00004834
 	public void RefreshTexture()
 	{
 		for (int i = 0; i < this.TextureList.Count; i++)
@@ -297,7 +279,7 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 		}
 	}
 
-	// Token: 0x06000067 RID: 103 RVA: 0x00006680 File Offset: 0x00004880
+	// Token: 0x06000067 RID: 103 RVA: 0x000066B8 File Offset: 0x000048B8
 	public void HideTexture()
 	{
 		for (int i = 0; i < this.TextureList.Count; i++)
@@ -306,7 +288,7 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 		}
 	}
 
-	// Token: 0x06000068 RID: 104 RVA: 0x000066BA File Offset: 0x000048BA
+	// Token: 0x06000068 RID: 104 RVA: 0x000066F2 File Offset: 0x000048F2
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsHotPatchPanelConfig._ClassPtr == IntPtr.Zero)
@@ -316,54 +298,44 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 		return TsHotPatchPanelConfig._ClassPtr;
 	}
 
-	// Token: 0x06000069 RID: 105 RVA: 0x000066E0 File Offset: 0x000048E0
+	// Token: 0x06000069 RID: 105 RVA: 0x00006718 File Offset: 0x00004918
 	public TsHotPatchPanelConfig() : this(BuiltinUtils.AllocNativeUObject(TsHotPatchPanelConfig.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600006A RID: 106 RVA: 0x00006708 File Offset: 0x00004908
+	// Token: 0x0600006A RID: 106 RVA: 0x00006740 File Offset: 0x00004940
 	public TsHotPatchPanelConfig(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsHotPatchPanelConfig.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600006B RID: 107 RVA: 0x0000673B File Offset: 0x0000493B
+	// Token: 0x0600006B RID: 107 RVA: 0x00006773 File Offset: 0x00004973
 	protected TsHotPatchPanelConfig(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600006C RID: 108 RVA: 0x00006744 File Offset: 0x00004944
+	// Token: 0x0600006C RID: 108 RVA: 0x0000677C File Offset: 0x0000497C
 	protected virtual void __CPPCALL_AwakeBP_Implementation()
 	{
 		this.AwakeBP_Implementation();
 	}
 
-	// Token: 0x0600006D RID: 109 RVA: 0x0000674C File Offset: 0x0000494C
+	// Token: 0x0600006D RID: 109 RVA: 0x00006784 File Offset: 0x00004984
 	protected virtual void __CPPCALL_OnEnableBP_Implementation()
 	{
 		this.OnEnableBP_Implementation();
 	}
 
-	// Token: 0x0600006E RID: 110 RVA: 0x00006754 File Offset: 0x00004954
+	// Token: 0x0600006E RID: 110 RVA: 0x0000678C File Offset: 0x0000498C
 	protected virtual void __CPPCALL_OnDisableBP_Implementation()
 	{
 		this.OnDisableBP_Implementation();
 	}
 
-	// Token: 0x04000023 RID: 35
+	// Token: 0x04000024 RID: 36
 	private TInputAction InputAction;
 
-	// Token: 0x04000024 RID: 36
-	private TInputAxis InputAxis;
-
 	// Token: 0x04000025 RID: 37
-	[Nullable(new byte[]
-	{
-		2,
-		1,
-		1,
-		1
-	})]
-	private Dictionary<string, List<UUIItem>> RegisterActionMap;
+	private TInputAxis InputAxis;
 
 	// Token: 0x04000026 RID: 38
 	[Nullable(new byte[]
@@ -373,9 +345,19 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 		1,
 		1
 	})]
-	private Dictionary<string, List<UUIScrollViewWithScrollbarComponent>> RegisterAxisMap;
+	private Dictionary<string, List<UUIItem>> RegisterActionMap;
 
 	// Token: 0x04000027 RID: 39
+	[Nullable(new byte[]
+	{
+		2,
+		1,
+		1,
+		1
+	})]
+	private Dictionary<string, List<UUIScrollViewWithScrollbarComponent>> RegisterAxisMap;
+
+	// Token: 0x04000028 RID: 40
 	[Nullable(new byte[]
 	{
 		2,
@@ -385,19 +367,19 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 	})]
 	private List<ValueTuple<string, UUITexture>> TextureList;
 
-	// Token: 0x04000028 RID: 40
+	// Token: 0x04000029 RID: 41
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Launcher/PlayerInput/TsHotPatchPanelConfig.TsHotPatchPanelConfig_C";
 
-	// Token: 0x04000029 RID: 41
+	// Token: 0x0400002A RID: 42
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400002A RID: 42
+	// Token: 0x0400002B RID: 43
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400002B RID: 43
+	// Token: 0x0400002C RID: 44
 	private static int __PropertyOffset_ActionMap;
 
-	// Token: 0x0400002C RID: 44
+	// Token: 0x0400002D RID: 45
 	[Nullable(new byte[]
 	{
 		2,
@@ -406,10 +388,10 @@ public class TsHotPatchPanelConfig : ULGUIBehaviour, IUnrealUObject, IUnrealObje
 	})]
 	private TMap<AActor, SHotPatchGamepad> _ActionMap;
 
-	// Token: 0x0400002D RID: 45
+	// Token: 0x0400002E RID: 46
 	private static int __PropertyOffset_AxisMap;
 
-	// Token: 0x0400002E RID: 46
+	// Token: 0x0400002F RID: 47
 	[Nullable(new byte[]
 	{
 		2,

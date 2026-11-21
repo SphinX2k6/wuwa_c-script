@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020028DD RID: 10461
+// Token: 0x02001E58 RID: 7768
 public class RoleMainPhantomItem : RolePhantomItem
 {
-	// Token: 0x0601597B RID: 88443 RVA: 0x0057304E File Offset: 0x0057124E
+	// Token: 0x0601337F RID: 78719 RVA: 0x0059DF16 File Offset: 0x0059C116
 	[NullableContext(1)]
 	public RoleMainPhantomItem(UUIItem uiItem, Action<int> onFunction, EPhantomItemIndex index) : base(uiItem, onFunction, index)
 	{
 	}
 
-	// Token: 0x0601597C RID: 88444 RVA: 0x0057305C File Offset: 0x0057125C
+	// Token: 0x06013380 RID: 78720 RVA: 0x0059DF24 File Offset: 0x0059C124
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,37 +30,37 @@ public class RoleMainPhantomItem : RolePhantomItem
 		};
 	}
 
-	// Token: 0x0601597D RID: 88445 RVA: 0x0057311B File Offset: 0x0057131B
+	// Token: 0x06013381 RID: 78721 RVA: 0x0059DFE3 File Offset: 0x0059C1E3
 	protected override void OnStart()
 	{
 		this.SkillButtonCompose = new SkillButtonCompose(base.GetItem(3), new Action(base.OnClickSkillButton));
 	}
 
-	// Token: 0x0601597E RID: 88446 RVA: 0x0057313B File Offset: 0x0057133B
+	// Token: 0x06013382 RID: 78722 RVA: 0x0059E003 File Offset: 0x0059C203
 	public override void UpdateItem(int id)
 	{
 		base.UpdateItem(id);
 		this.SkillButtonCompose.Update(id);
 	}
 
-	// Token: 0x0400A0B6 RID: 41142
+	// Token: 0x0400A4A0 RID: 42144
 	[Nullable(2)]
 	private SkillButtonCompose SkillButtonCompose;
 
-	// Token: 0x02008EEB RID: 36587
+	// Token: 0x02008133 RID: 33075
 	private enum EPhantomItemDefine
 	{
-		// Token: 0x0402E57E RID: 189822
+		// Token: 0x04029C79 RID: 171129
 		ItemButton,
-		// Token: 0x0402E57F RID: 189823
+		// Token: 0x04029C7A RID: 171130
 		PhantomIconTexture,
-		// Token: 0x0402E580 RID: 189824
+		// Token: 0x04029C7B RID: 171131
 		QualitySprite,
-		// Token: 0x0402E581 RID: 189825
+		// Token: 0x04029C7C RID: 171132
 		EquipSkillItem,
-		// Token: 0x0402E582 RID: 189826
+		// Token: 0x04029C7D RID: 171133
 		LevelItem,
-		// Token: 0x0402E583 RID: 189827
+		// Token: 0x04029C7E RID: 171134
 		LevelText
 	}
 }

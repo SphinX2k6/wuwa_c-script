@@ -11,27 +11,27 @@ using Google.Protobuf;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x020034D2 RID: 13522
+// Token: 0x02002A46 RID: 10822
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class AceAntiCheatController : ControllerBase
 {
-	// Token: 0x0601D886 RID: 120966 RVA: 0x0083C03C File Offset: 0x0083A23C
+	// Token: 0x0601B585 RID: 112005 RVA: 0x00863508 File Offset: 0x00861708
 	protected override bool OnInit()
 	{
 		Net.Instance.Register(ENotifyMessageId.BattleAntiCheatingLogNotify, new Action<IMessage, Net.CallbackStatus>(this.BattleAntiCheatingLogNotify));
 		return true;
 	}
 
-	// Token: 0x0601D887 RID: 120967 RVA: 0x0083C05B File Offset: 0x0083A25B
+	// Token: 0x0601B586 RID: 112006 RVA: 0x00863527 File Offset: 0x00861727
 	protected override bool OnClear()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.BattleAntiCheatingLogNotify);
 		return true;
 	}
 
-	// Token: 0x0601D888 RID: 120968 RVA: 0x0083C070 File Offset: 0x0083A270
+	// Token: 0x0601B587 RID: 112007 RVA: 0x0086353C File Offset: 0x0086173C
 	protected override void OnTick(float delta)
 	{
 		if (this.NeedColletSpeed)
@@ -105,7 +105,7 @@ public class AceAntiCheatController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D889 RID: 120969 RVA: 0x0083C208 File Offset: 0x0083A408
+	// Token: 0x0601B588 RID: 112008 RVA: 0x008636D4 File Offset: 0x008618D4
 	[NullableContext(2)]
 	private void BattleAntiCheatingLogNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -158,7 +158,7 @@ public class AceAntiCheatController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D88A RID: 120970 RVA: 0x0083C2E8 File Offset: 0x0083A4E8
+	// Token: 0x0601B589 RID: 112009 RVA: 0x008637B4 File Offset: 0x008619B4
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -192,7 +192,7 @@ public class AceAntiCheatController : ControllerBase
 		return group.GetRoleList();
 	}
 
-	// Token: 0x0601D88B RID: 120971 RVA: 0x0083C364 File Offset: 0x0083A564
+	// Token: 0x0601B58A RID: 112010 RVA: 0x00863830 File Offset: 0x00861A30
 	private void StartSecFbRound(long logId)
 	{
 		if (this.SecFbRoundLogId > 0L)
@@ -229,7 +229,7 @@ public class AceAntiCheatController : ControllerBase
 		Net.Instance.Call(ERequestMessageId.SecFBRoundStartFlowRequest, secFBRoundStartFlowRequest, null, 0);
 	}
 
-	// Token: 0x0601D88C RID: 120972 RVA: 0x0083C4B0 File Offset: 0x0083A6B0
+	// Token: 0x0601B58B RID: 112011 RVA: 0x0086397C File Offset: 0x00861B7C
 	private SrvFighterInfo GetSrvFighterInfo(SceneTeamRole sceneTeamRole)
 	{
 		SrvFighterInfo srvFighterInfo = SrvFighterInfo.Create();
@@ -281,7 +281,7 @@ public class AceAntiCheatController : ControllerBase
 		return srvFighterInfo;
 	}
 
-	// Token: 0x0601D88D RID: 120973 RVA: 0x0083C636 File Offset: 0x0083A836
+	// Token: 0x0601B58C RID: 112012 RVA: 0x00863B02 File Offset: 0x00861D02
 	private void SetCollectSpeed(bool isStart)
 	{
 		this.NeedColletSpeed = isStart;
@@ -291,7 +291,7 @@ public class AceAntiCheatController : ControllerBase
 		this.MinSpeed = 999999;
 	}
 
-	// Token: 0x0601D88E RID: 120974 RVA: 0x0083C660 File Offset: 0x0083A860
+	// Token: 0x0601B58D RID: 112013 RVA: 0x00863B2C File Offset: 0x00861D2C
 	private unsafe void EndSecFbRound(long logId)
 	{
 		if (this.SecFbRoundLogId != logId)
@@ -318,7 +318,7 @@ public class AceAntiCheatController : ControllerBase
 		this.SecFbRoundLogId = -1L;
 	}
 
-	// Token: 0x0601D88F RID: 120975 RVA: 0x0083C768 File Offset: 0x0083A968
+	// Token: 0x0601B58E RID: 112014 RVA: 0x00863C34 File Offset: 0x00861E34
 	private void StartSecRoleFightFlowBigWorld(long logId)
 	{
 		if (this.SecRoleFightFlowBigWorldLogId > 0L)
@@ -335,7 +335,7 @@ public class AceAntiCheatController : ControllerBase
 		this.SecRoleFightFlowBigWorldLogId = logId;
 	}
 
-	// Token: 0x0601D890 RID: 120976 RVA: 0x0083C7BC File Offset: 0x0083A9BC
+	// Token: 0x0601B58F RID: 112015 RVA: 0x00863C88 File Offset: 0x00861E88
 	private unsafe void EndSecRoleFightFlowBigWorld(long logId)
 	{
 		if (this.SecRoleFightFlowBigWorldLogId != logId)
@@ -354,7 +354,7 @@ public class AceAntiCheatController : ControllerBase
 		this.SecRoleFightFlowBigWorldLogId = -1L;
 	}
 
-	// Token: 0x0601D891 RID: 120977 RVA: 0x0083C848 File Offset: 0x0083AA48
+	// Token: 0x0601B590 RID: 112016 RVA: 0x00863D14 File Offset: 0x00861F14
 	private void OnAnyCurrentValueChange(EAttributeType attrId, float oldValue, float newValue)
 	{
 		if (this.FightRoleInfoMap == null)
@@ -386,7 +386,7 @@ public class AceAntiCheatController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D892 RID: 120978 RVA: 0x0083C940 File Offset: 0x0083AB40
+	// Token: 0x0601B591 RID: 112017 RVA: 0x00863E0C File Offset: 0x0086200C
 	private void OnDamage(Entity attacker, Entity victim, RequirementPayload requirements, DamageResult damageResult, FVectorDouble damagePosition)
 	{
 		if (this.FightRoleInfoMap == null)
@@ -438,7 +438,7 @@ public class AceAntiCheatController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D893 RID: 120979 RVA: 0x0083CAD0 File Offset: 0x0083ACD0
+	// Token: 0x0601B592 RID: 112018 RVA: 0x00863F9C File Offset: 0x0086219C
 	private void OnCharInputPress(EInputAction action, float time)
 	{
 		if (this.CurGlobalRoleCreatureId == null || this.FightRoleInfoMap == null)
@@ -479,7 +479,7 @@ public class AceAntiCheatController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D894 RID: 120980 RVA: 0x0083CB9C File Offset: 0x0083AD9C
+	// Token: 0x0601B593 RID: 112019 RVA: 0x00864068 File Offset: 0x00862268
 	private void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 	{
 		if (oldEntityHandle == null || this.FightRoleInfoMap == null)
@@ -519,7 +519,7 @@ public class AceAntiCheatController : ControllerBase
 		this.CurGlobalRoleCreatureId = curGlobalRoleCreatureId;
 	}
 
-	// Token: 0x0601D895 RID: 120981 RVA: 0x0083CC74 File Offset: 0x0083AE74
+	// Token: 0x0601B594 RID: 112020 RVA: 0x00864140 File Offset: 0x00862340
 	private void StartColletRoleFightFlow()
 	{
 		List<SceneTeamRole> roleList = this.GetRoleList();
@@ -590,7 +590,7 @@ public class AceAntiCheatController : ControllerBase
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 	}
 
-	// Token: 0x0601D896 RID: 120982 RVA: 0x0083CEAC File Offset: 0x0083B0AC
+	// Token: 0x0601B595 RID: 112021 RVA: 0x00864378 File Offset: 0x00862578
 	private void SendRoleFightFlowRequest(long logId, AceBattleAntiCheatingLogType logType)
 	{
 		if (this.FightRoleList == null || this.FightRoleInfoMap == null)
@@ -662,7 +662,7 @@ public class AceAntiCheatController : ControllerBase
 		this.FightRoleList = null;
 	}
 
-	// Token: 0x0601D897 RID: 120983 RVA: 0x0083D11C File Offset: 0x0083B31C
+	// Token: 0x0601B596 RID: 112022 RVA: 0x008645E8 File Offset: 0x008627E8
 	private void StartSecRoleFightFlowInst(long logId)
 	{
 		if (this.SecRoleFightFlowInstLogId > 0L)
@@ -679,7 +679,7 @@ public class AceAntiCheatController : ControllerBase
 		this.SecRoleFightFlowInstLogId = logId;
 	}
 
-	// Token: 0x0601D898 RID: 120984 RVA: 0x0083D170 File Offset: 0x0083B370
+	// Token: 0x0601B597 RID: 112023 RVA: 0x0086463C File Offset: 0x0086283C
 	private unsafe void EndSecRoleFightFlowInst(long logId)
 	{
 		if (this.SecRoleFightFlowInstLogId != logId)
@@ -698,7 +698,7 @@ public class AceAntiCheatController : ControllerBase
 		this.SecRoleFightFlowInstLogId = -1L;
 	}
 
-	// Token: 0x0601D899 RID: 120985 RVA: 0x0083D1FC File Offset: 0x0083B3FC
+	// Token: 0x0601B598 RID: 112024 RVA: 0x008646C8 File Offset: 0x008628C8
 	private void StartSecWorldInfoFlow(long logId, int endTime)
 	{
 		if (this.SecWorldInfoFlowLogId > 0L)
@@ -720,7 +720,7 @@ public class AceAntiCheatController : ControllerBase
 		}, (float)endTime, null, null, true, 1f);
 	}
 
-	// Token: 0x0601D89A RID: 120986 RVA: 0x0083D274 File Offset: 0x0083B474
+	// Token: 0x0601B599 RID: 112025 RVA: 0x00864740 File Offset: 0x00862940
 	private unsafe void EndSecWorldInfoFlow(long logId)
 	{
 		if (this.SecWorldInfoFlowLogId != logId)
@@ -751,7 +751,7 @@ public class AceAntiCheatController : ControllerBase
 		this.SecWorldInfoFlowLogId = -1L;
 	}
 
-	// Token: 0x0601D89B RID: 120987 RVA: 0x0083D384 File Offset: 0x0083B584
+	// Token: 0x0601B59A RID: 112026 RVA: 0x00864850 File Offset: 0x00862A50
 	private void StartSecWorldFlow(long logId)
 	{
 		if (this.SecWorldFlowLogId > 0L)
@@ -788,7 +788,7 @@ public class AceAntiCheatController : ControllerBase
 		Net.Instance.Call(ERequestMessageId.SecWorldStartFlowRequest, secWorldStartFlowRequest, null, 0);
 	}
 
-	// Token: 0x0601D89C RID: 120988 RVA: 0x0083D4D0 File Offset: 0x0083B6D0
+	// Token: 0x0601B59B RID: 112027 RVA: 0x0086499C File Offset: 0x00862B9C
 	private unsafe void EndSecWorldFlow(long logId)
 	{
 		if (this.SecWorldFlowLogId != logId)
@@ -815,7 +815,7 @@ public class AceAntiCheatController : ControllerBase
 		Net.Instance.Call(ERequestMessageId.SecWorldSEndFlowRequest, secWorldSEndFlowRequest, null, 0);
 	}
 
-	// Token: 0x0601D89D RID: 120989 RVA: 0x0083D5D8 File Offset: 0x0083B7D8
+	// Token: 0x0601B59C RID: 112028 RVA: 0x00864AA4 File Offset: 0x00862CA4
 	private void AddAceAntiCheatInputLayer(int entityId)
 	{
 		AceAntiCheatInputLayer aceAntiCheatInputLayer = InputController.Instance.CreateInputLayer(EInputLayer.AceAntiCheat) as AceAntiCheatInputLayer;
@@ -830,7 +830,7 @@ public class AceAntiCheatController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D89E RID: 120990 RVA: 0x0083D628 File Offset: 0x0083B828
+	// Token: 0x0601B59D RID: 112029 RVA: 0x00864AF4 File Offset: 0x00862CF4
 	private void RemoveAceAntiCheatInputLayer()
 	{
 		if (this.InputLayers != null)
@@ -844,14 +844,14 @@ public class AceAntiCheatController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D89F RID: 120991 RVA: 0x0083D694 File Offset: 0x0083B894
+	// Token: 0x0601B59E RID: 112030 RVA: 0x00864B60 File Offset: 0x00862D60
 	public void HandlePress(EInputAction action, float time)
 	{
 		this.OnCharInputPress(action, time);
 	}
 
-	// Token: 0x170028DA RID: 10458
-	// (get) Token: 0x0601D8A0 RID: 120992 RVA: 0x0083D69E File Offset: 0x0083B89E
+	// Token: 0x17002C72 RID: 11378
+	// (get) Token: 0x0601B59F RID: 112031 RVA: 0x00864B6A File Offset: 0x00862D6A
 	public static AceAntiCheatController Instance
 	{
 		get
@@ -860,7 +860,7 @@ public class AceAntiCheatController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8A1 RID: 120993 RVA: 0x0083D6A5 File Offset: 0x0083B8A5
+	// Token: 0x0601B5A0 RID: 112032 RVA: 0x00864B71 File Offset: 0x00862D71
 	public static AceAntiCheatController GetOrCreateInstance()
 	{
 		if (AceAntiCheatController._Instance == null)
@@ -870,7 +870,7 @@ public class AceAntiCheatController : ControllerBase
 		return AceAntiCheatController._Instance;
 	}
 
-	// Token: 0x0601D8A2 RID: 120994 RVA: 0x0083D6B9 File Offset: 0x0083B8B9
+	// Token: 0x0601B5A1 RID: 112033 RVA: 0x00864B85 File Offset: 0x00862D85
 	public static bool CreateInstance()
 	{
 		if (AceAntiCheatController._Instance != null)
@@ -881,48 +881,48 @@ public class AceAntiCheatController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D8A3 RID: 120995 RVA: 0x0083D6CF File Offset: 0x0083B8CF
+	// Token: 0x0601B5A2 RID: 112034 RVA: 0x00864B9B File Offset: 0x00862D9B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601D8A4 RID: 120996 RVA: 0x0083D6D1 File Offset: 0x0083B8D1
+	// Token: 0x0601B5A3 RID: 112035 RVA: 0x00864B9D File Offset: 0x00862D9D
 	public static void ResetStaticDefaultValue()
 	{
 		AceAntiCheatController._Instance = null;
 	}
 
-	// Token: 0x0601D8A5 RID: 120997 RVA: 0x0083D6D9 File Offset: 0x0083B8D9
+	// Token: 0x0601B5A4 RID: 112036 RVA: 0x00864BA5 File Offset: 0x00862DA5
 	static AceAntiCheatController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AceAntiCheatController.CreateStaticDefaultValue), new Action(AceAntiCheatController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E806 RID: 59398
+	// Token: 0x0400ECBA RID: 60602
 	private const int POSTICKTIME = 1000;
 
-	// Token: 0x0400E807 RID: 59399
+	// Token: 0x0400ECBB RID: 60603
 	private const int POSTICKCOUNT = 120;
 
-	// Token: 0x0400E808 RID: 59400
+	// Token: 0x0400ECBC RID: 60604
 	private const int MINSPEEDINIT = 999999;
 
-	// Token: 0x0400E809 RID: 59401
+	// Token: 0x0400ECBD RID: 60605
 	private long SecFbRoundLogId = -1L;
 
-	// Token: 0x0400E80A RID: 59402
+	// Token: 0x0400ECBE RID: 60606
 	private long SecRoleFightFlowBigWorldLogId = -1L;
 
-	// Token: 0x0400E80B RID: 59403
+	// Token: 0x0400ECBF RID: 60607
 	private long SecRoleFightFlowInstLogId = -1L;
 
-	// Token: 0x0400E80C RID: 59404
+	// Token: 0x0400ECC0 RID: 60608
 	private long SecWorldInfoFlowLogId = -1L;
 
-	// Token: 0x0400E80D RID: 59405
+	// Token: 0x0400ECC1 RID: 60609
 	private long SecWorldFlowLogId = -1L;
 
-	// Token: 0x0400E80E RID: 59406
+	// Token: 0x0400ECC2 RID: 60610
 	[Nullable(new byte[]
 	{
 		2,
@@ -930,31 +930,31 @@ public class AceAntiCheatController : ControllerBase
 	})]
 	private List<InputLayer> InputLayers;
 
-	// Token: 0x0400E80F RID: 59407
+	// Token: 0x0400ECC3 RID: 60611
 	private double SecFbRoundStartTime;
 
-	// Token: 0x0400E810 RID: 59408
+	// Token: 0x0400ECC4 RID: 60612
 	private int AvgSpeed;
 
-	// Token: 0x0400E811 RID: 59409
+	// Token: 0x0400ECC5 RID: 60613
 	private int MinSpeed;
 
-	// Token: 0x0400E812 RID: 59410
+	// Token: 0x0400ECC6 RID: 60614
 	private int MaxSpeed;
 
-	// Token: 0x0400E813 RID: 59411
+	// Token: 0x0400ECC7 RID: 60615
 	private int CurSpeedCount;
 
-	// Token: 0x0400E814 RID: 59412
+	// Token: 0x0400ECC8 RID: 60616
 	private bool NeedColletSpeed;
 
-	// Token: 0x0400E815 RID: 59413
+	// Token: 0x0400ECC9 RID: 60617
 	private bool NeedColletPos;
 
-	// Token: 0x0400E816 RID: 59414
+	// Token: 0x0400ECCA RID: 60618
 	private float PosTickTime;
 
-	// Token: 0x0400E817 RID: 59415
+	// Token: 0x0400ECCB RID: 60619
 	[Nullable(new byte[]
 	{
 		2,
@@ -962,7 +962,7 @@ public class AceAntiCheatController : ControllerBase
 	})]
 	private List<SceneTeamRole> FightRoleList;
 
-	// Token: 0x0400E818 RID: 59416
+	// Token: 0x0400ECCC RID: 60620
 	[Nullable(new byte[]
 	{
 		2,
@@ -970,17 +970,17 @@ public class AceAntiCheatController : ControllerBase
 	})]
 	private Dictionary<long, SecRoleFightFlowData> FightRoleInfoMap;
 
-	// Token: 0x0400E819 RID: 59417
+	// Token: 0x0400ECCD RID: 60621
 	private double ChangeRoleTimeStamp;
 
-	// Token: 0x0400E81A RID: 59418
+	// Token: 0x0400ECCE RID: 60622
 	private long? CurGlobalRoleCreatureId;
 
-	// Token: 0x0400E81B RID: 59419
+	// Token: 0x0400ECCF RID: 60623
 	[Nullable(2)]
 	private TimerHandle EndSecWorldInfoFlowTimerId;
 
-	// Token: 0x0400E81C RID: 59420
+	// Token: 0x0400ECD0 RID: 60624
 	[Nullable(2)]
 	private static AceAntiCheatController _Instance;
 }

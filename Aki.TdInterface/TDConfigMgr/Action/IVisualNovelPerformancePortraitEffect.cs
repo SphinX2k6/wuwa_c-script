@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200208F RID: 8335
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022DA RID: 8922
 	public class IVisualNovelPerformancePortraitEffect : IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600B740 RID: 46912 RVA: 0x001A8AC8 File Offset: 0x001A6CC8
+		// Token: 0x0600C26E RID: 49774 RVA: 0x001BF2E8 File Offset: 0x001BD4E8
 		private IVisualNovelPerformancePortraitEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B741 RID: 46913 RVA: 0x001A8B00 File Offset: 0x001A6D00
+		// Token: 0x0600C26F RID: 49775 RVA: 0x001BF320 File Offset: 0x001BD520
 		public static IVisualNovelPerformancePortraitEffect Create([Nullable(2)] IVisualNovelPerformancePortraitEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B742 RID: 46914 RVA: 0x001A8B13 File Offset: 0x001A6D13
+		// Token: 0x0600C270 RID: 49776 RVA: 0x001BF333 File Offset: 0x001BD533
 		public static IVisualNovelPerformancePortraitEffect CreateFromSetValue([Nullable(2)] IVisualNovelPerformancePortraitEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B743 RID: 46915 RVA: 0x001A8B28 File Offset: 0x001A6D28
+		// Token: 0x0600C271 RID: 49777 RVA: 0x001BF348 File Offset: 0x001BD548
 		public new IVisualNovelPerformancePortraitEffect_SetValue ToSetValue()
 		{
 			return new IVisualNovelPerformancePortraitEffect_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003822 RID: 14370
-		// (get) Token: 0x0600B744 RID: 46916 RVA: 0x001A8B76 File Offset: 0x001A6D76
-		// (set) Token: 0x0600B745 RID: 46917 RVA: 0x001A8BA1 File Offset: 0x001A6DA1
+		// Token: 0x17003B00 RID: 15104
+		// (get) Token: 0x0600C272 RID: 49778 RVA: 0x001BF396 File Offset: 0x001BD596
+		// (set) Token: 0x0600C273 RID: 49779 RVA: 0x001BF3C1 File Offset: 0x001BD5C1
 		public override EVisualNovelPerformanceType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003823 RID: 14371
-		// (get) Token: 0x0600B746 RID: 46918 RVA: 0x001A8BB0 File Offset: 0x001A6DB0
-		// (set) Token: 0x0600B747 RID: 46919 RVA: 0x001A8BEA File Offset: 0x001A6DEA
+		// Token: 0x17003B01 RID: 15105
+		// (get) Token: 0x0600C274 RID: 49780 RVA: 0x001BF3D0 File Offset: 0x001BD5D0
+		// (set) Token: 0x0600C275 RID: 49781 RVA: 0x001BF40A File Offset: 0x001BD60A
 		public override float? StartTime
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003824 RID: 14372
-		// (get) Token: 0x0600B748 RID: 46920 RVA: 0x001A8BF8 File Offset: 0x001A6DF8
-		// (set) Token: 0x0600B749 RID: 46921 RVA: 0x001A8C23 File Offset: 0x001A6E23
+		// Token: 0x17003B02 RID: 15106
+		// (get) Token: 0x0600C276 RID: 49782 RVA: 0x001BF418 File Offset: 0x001BD618
+		// (set) Token: 0x0600C277 RID: 49783 RVA: 0x001BF443 File Offset: 0x001BD643
 		public virtual int WhoId
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003825 RID: 14373
-		// (get) Token: 0x0600B74A RID: 46922 RVA: 0x001A8C31 File Offset: 0x001A6E31
-		// (set) Token: 0x0600B74B RID: 46923 RVA: 0x001A8C5C File Offset: 0x001A6E5C
+		// Token: 0x17003B03 RID: 15107
+		// (get) Token: 0x0600C278 RID: 49784 RVA: 0x001BF451 File Offset: 0x001BD651
+		// (set) Token: 0x0600C279 RID: 49785 RVA: 0x001BF47C File Offset: 0x001BD67C
 		public virtual EVisualNovelPortraitEffectType EffectType
 		{
 			get
@@ -156,9 +154,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003826 RID: 14374
-		// (get) Token: 0x0600B74C RID: 46924 RVA: 0x001A8C6C File Offset: 0x001A6E6C
-		// (set) Token: 0x0600B74D RID: 46925 RVA: 0x001A8CA6 File Offset: 0x001A6EA6
+		// Token: 0x17003B04 RID: 15108
+		// (get) Token: 0x0600C27A RID: 49786 RVA: 0x001BF48C File Offset: 0x001BD68C
+		// (set) Token: 0x0600C27B RID: 49787 RVA: 0x001BF4C6 File Offset: 0x001BD6C6
 		public virtual EVisualNovelAmplitude? Amplitude
 		{
 			get
@@ -180,11 +178,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E07 RID: 28167
+		// Token: 0x04007413 RID: 29715
 		[Nullable(2)]
 		protected new IVisualNovelPerformancePortraitEffect FbInstance;
 
-		// Token: 0x04006E08 RID: 28168
+		// Token: 0x04007414 RID: 29716
 		[Nullable(2)]
 		protected new IVisualNovelPerformancePortraitEffect_SetValue PocoInterface;
 	}

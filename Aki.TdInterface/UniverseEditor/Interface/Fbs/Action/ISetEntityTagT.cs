@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FE7 RID: 28647
+	// Token: 0x020077B0 RID: 30640
 	public class ISetEntityTagT
 	{
-		// Token: 0x1700D4B4 RID: 54452
-		// (get) Token: 0x06032A68 RID: 207464 RVA: 0x006D55EB File Offset: 0x006D37EB
-		// (set) Token: 0x06032A69 RID: 207465 RVA: 0x006D55F3 File Offset: 0x006D37F3
+		// Token: 0x1700E088 RID: 57480
+		// (get) Token: 0x06035CCE RID: 220366 RVA: 0x0073522F File Offset: 0x0073342F
+		// (set) Token: 0x06035CCF RID: 220367 RVA: 0x00735237 File Offset: 0x00733437
 		public int EntityId { get; set; }
 
-		// Token: 0x1700D4B5 RID: 54453
-		// (get) Token: 0x06032A6A RID: 207466 RVA: 0x006D55FC File Offset: 0x006D37FC
-		// (set) Token: 0x06032A6B RID: 207467 RVA: 0x006D5604 File Offset: 0x006D3804
+		// Token: 0x1700E089 RID: 57481
+		// (get) Token: 0x06035CD0 RID: 220368 RVA: 0x00735240 File Offset: 0x00733440
+		// (set) Token: 0x06035CD1 RID: 220369 RVA: 0x00735248 File Offset: 0x00733448
 		public string GameplayTag { get; set; }
 
-		// Token: 0x1700D4B6 RID: 54454
-		// (get) Token: 0x06032A6C RID: 207468 RVA: 0x006D560D File Offset: 0x006D380D
-		// (set) Token: 0x06032A6D RID: 207469 RVA: 0x006D5615 File Offset: 0x006D3815
+		// Token: 0x1700E08A RID: 57482
+		// (get) Token: 0x06035CD2 RID: 220370 RVA: 0x00735251 File Offset: 0x00733451
+		// (set) Token: 0x06035CD3 RID: 220371 RVA: 0x00735259 File Offset: 0x00733459
 		public ESetEntityTagType SetType { get; set; }
 
-		// Token: 0x1700D4B7 RID: 54455
-		// (get) Token: 0x06032A6E RID: 207470 RVA: 0x006D561E File Offset: 0x006D381E
-		// (set) Token: 0x06032A6F RID: 207471 RVA: 0x006D5626 File Offset: 0x006D3826
+		// Token: 0x1700E08B RID: 57483
+		// (get) Token: 0x06035CD4 RID: 220372 RVA: 0x00735262 File Offset: 0x00733462
+		// (set) Token: 0x06035CD5 RID: 220373 RVA: 0x0073526A File Offset: 0x0073346A
 		public float DelayTime { get; set; }
 
-		// Token: 0x1700D4B8 RID: 54456
-		// (get) Token: 0x06032A70 RID: 207472 RVA: 0x006D562F File Offset: 0x006D382F
-		// (set) Token: 0x06032A71 RID: 207473 RVA: 0x006D5637 File Offset: 0x006D3837
+		// Token: 0x1700E08C RID: 57484
+		// (get) Token: 0x06035CD6 RID: 220374 RVA: 0x00735273 File Offset: 0x00733473
+		// (set) Token: 0x06035CD7 RID: 220375 RVA: 0x0073527B File Offset: 0x0073347B
 		public bool BeforeHide { get; set; }
 
-		// Token: 0x1700D4B9 RID: 54457
-		// (get) Token: 0x06032A72 RID: 207474 RVA: 0x006D5640 File Offset: 0x006D3840
-		// (set) Token: 0x06032A73 RID: 207475 RVA: 0x006D5648 File Offset: 0x006D3848
+		// Token: 0x1700E08D RID: 57485
+		// (get) Token: 0x06035CD8 RID: 220376 RVA: 0x00735284 File Offset: 0x00733484
+		// (set) Token: 0x06035CD9 RID: 220377 RVA: 0x0073528C File Offset: 0x0073348C
 		public byte NullMask { get; set; }
 
-		// Token: 0x06032A74 RID: 207476 RVA: 0x006D5651 File Offset: 0x006D3851
+		// Token: 0x06035CDA RID: 220378 RVA: 0x00735295 File Offset: 0x00733495
 		public ISetEntityTagT()
 		{
 			this.EntityId = 0;

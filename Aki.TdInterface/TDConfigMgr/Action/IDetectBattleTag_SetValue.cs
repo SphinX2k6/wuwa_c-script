@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001999 RID: 6553
+	// Token: 0x02001B20 RID: 6944
 	public class IDetectBattleTag_SetValue
 	{
-		// Token: 0x04005756 RID: 22358
+		// Token: 0x04005B9F RID: 23455
 		public EDetectBattleConditionType Type;
 
-		// Token: 0x04005757 RID: 22359
+		// Token: 0x04005BA0 RID: 23456
 		public int EntityId;
 
-		// Token: 0x04005758 RID: 22360
-		[Nullable(1)]
+		// Token: 0x04005BA1 RID: 23457
 		public IDetectBattleMonsterOnGround TagOption;
 
-		// Token: 0x04005759 RID: 22361
+		// Token: 0x04005BA2 RID: 23458
 		public float MaxWaitTime;
 	}
 }

@@ -1,16 +1,16 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003423 RID: 13347
+// Token: 0x02002995 RID: 10645
 public class RedDotResonanceTab : RedDotBase
 {
-	// Token: 0x0601CD8F RID: 118159 RVA: 0x0080C851 File Offset: 0x0080AA51
+	// Token: 0x0601AA87 RID: 109191 RVA: 0x00832E15 File Offset: 0x00831015
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0601CD90 RID: 118160 RVA: 0x0080C854 File Offset: 0x0080AA54
+	// Token: 0x0601AA88 RID: 109192 RVA: 0x00832E18 File Offset: 0x00831018
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.RedDotRefreshItemData, new Action(base.EventCheck));
@@ -18,7 +18,7 @@ public class RedDotResonanceTab : RedDotBase
 		EventSystem.Instance.Add<int>(EEventName.RoleSystemChangeRole, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CD91 RID: 118161 RVA: 0x0080C8B8 File Offset: 0x0080AAB8
+	// Token: 0x0601AA89 RID: 109193 RVA: 0x00832E7C File Offset: 0x0083107C
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.RedDotRefreshItemData, new Action(base.EventCheck));
@@ -26,7 +26,7 @@ public class RedDotResonanceTab : RedDotBase
 		EventSystem.Instance.Remove<int>(EEventName.RoleSystemChangeRole, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CD92 RID: 118162 RVA: 0x0080C919 File Offset: 0x0080AB19
+	// Token: 0x0601AA8A RID: 109194 RVA: 0x00832EDD File Offset: 0x008310DD
 	protected override bool OnCheck(int uId = 0)
 	{
 		return RoleModel.Instance.RedDotResonanceTabCondition(uId);

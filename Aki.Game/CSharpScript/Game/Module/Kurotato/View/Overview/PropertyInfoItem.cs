@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Overview
 {
-	// Token: 0x02005746 RID: 22342
+	// Token: 0x0200471D RID: 18205
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 	})]
 	public class PropertyInfoItem : GridProxyAbstract<IKurotatoAttrDisplay>
 	{
-		// Token: 0x06038CC8 RID: 232648 RVA: 0x00D7D098 File Offset: 0x00D7B298
+		// Token: 0x0602DBD8 RID: 187352 RVA: 0x00CCB954 File Offset: 0x00CC9B54
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038CC9 RID: 232649 RVA: 0x00D7D144 File Offset: 0x00D7B344
+		// Token: 0x0602DBD9 RID: 187353 RVA: 0x00CCBA00 File Offset: 0x00CC9C00
 		[NullableContext(1)]
 		public override void Refresh(IKurotatoAttrDisplay data, bool isSelected, int gridIndex)
 		{
@@ -56,16 +56,16 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			base.GetTexture(3).SetUIActive(gridIndex % 2 == 0);
 		}
 
-		// Token: 0x0200B935 RID: 47413
+		// Token: 0x0200A354 RID: 41812
 		private enum EAttrChildComp
 		{
-			// Token: 0x04038052 RID: 229458
+			// Token: 0x04032A5C RID: 207452
 			TextureIcon,
-			// Token: 0x04038053 RID: 229459
+			// Token: 0x04032A5D RID: 207453
 			TextAttr,
-			// Token: 0x04038054 RID: 229460
+			// Token: 0x04032A5E RID: 207454
 			TextNum,
-			// Token: 0x04038055 RID: 229461
+			// Token: 0x04032A5F RID: 207455
 			TextureBg
 		}
 	}

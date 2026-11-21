@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x0200019E RID: 414
+	// Token: 0x020001A2 RID: 418
 	public class EventData
 	{
-		// Token: 0x04000725 RID: 1829
+		// Token: 0x04000761 RID: 1889
 		[Nullable(1)]
 		public string EventName = "";
 
-		// Token: 0x04000726 RID: 1830
+		// Token: 0x04000762 RID: 1890
 		public long EventPtr;
 
-		// Token: 0x04000727 RID: 1831
+		// Token: 0x04000763 RID: 1891
 		public long ProPtr;
 	}
 }

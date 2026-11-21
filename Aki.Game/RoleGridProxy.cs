@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001180 RID: 4480
+// Token: 0x02000634 RID: 1588
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 internal class RoleGridProxy : GridProxyAbstract<RoleData>
 {
-	// Token: 0x06007677 RID: 30327 RVA: 0x0018A310 File Offset: 0x00188510
+	// Token: 0x06004A0E RID: 18958 RVA: 0x00192EC0 File Offset: 0x001910C0
 	protected override void OnStart()
 	{
 		AActor rootActor = base.GetRootActor();
@@ -26,7 +26,7 @@ internal class RoleGridProxy : GridProxyAbstract<RoleData>
 		this.RoleGrid.CreateThenShowByActor(rootActor, null);
 	}
 
-	// Token: 0x06007678 RID: 30328 RVA: 0x0018A340 File Offset: 0x00188540
+	// Token: 0x06004A0F RID: 18959 RVA: 0x00192EF0 File Offset: 0x001910F0
 	public override void Refresh(RoleData data, bool isSelected, int gridIndex)
 	{
 		if (this.RoleGrid == null)
@@ -63,13 +63,13 @@ internal class RoleGridProxy : GridProxyAbstract<RoleData>
 		this.RoleGrid.SetExtendToggleEnable(false, false);
 	}
 
-	// Token: 0x06007679 RID: 30329 RVA: 0x0018A44D File Offset: 0x0018864D
+	// Token: 0x06004A10 RID: 18960 RVA: 0x00192FFD File Offset: 0x001911FD
 	public override object GetKey(RoleData data, int displayIndex)
 	{
 		return displayIndex;
 	}
 
-	// Token: 0x0400364F RID: 13903
+	// Token: 0x040036E8 RID: 14056
 	[Nullable(2)]
 	private SmallItemGrid RoleGrid;
 }

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001375 RID: 4981
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014C6 RID: 5318
 	public class IHandInItemRange
 	{
-		// Token: 0x060071FE RID: 29182 RVA: 0x00112805 File Offset: 0x00110A05
+		// Token: 0x060078A4 RID: 30884 RVA: 0x00120E89 File Offset: 0x0011F089
 		public static IHandInItemRange Create(IHandInItemRange? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170024E7 RID: 9447
-		// (get) Token: 0x060071FF RID: 29183 RVA: 0x00112824 File Offset: 0x00110A24
+		// Token: 0x170026BA RID: 9914
+		// (get) Token: 0x060078A5 RID: 30885 RVA: 0x00120EA8 File Offset: 0x0011F0A8
 		public virtual EHandInItemType HandInType
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024E8 RID: 9448
-		// (get) Token: 0x06007200 RID: 29184 RVA: 0x00112834 File Offset: 0x00110A34
+		// Token: 0x170026BB RID: 9915
+		// (get) Token: 0x060078A6 RID: 30886 RVA: 0x00120EB8 File Offset: 0x0011F0B8
 		public virtual List<int> ItemIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040041E1 RID: 16865
+		// Token: 0x04004562 RID: 17762
 		private IHandInItemRange Instance;
 
-		// Token: 0x040041E2 RID: 16866
+		// Token: 0x04004563 RID: 17763
 		private List<int> _ItemIdsCache;
 
-		// Token: 0x040041E3 RID: 16867
+		// Token: 0x04004564 RID: 17764
 		private bool _ItemIdsInited;
 	}
 }

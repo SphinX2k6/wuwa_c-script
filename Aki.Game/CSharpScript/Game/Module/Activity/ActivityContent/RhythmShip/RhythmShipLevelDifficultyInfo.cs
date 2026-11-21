@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 {
-	// Token: 0x02006202 RID: 25090
+	// Token: 0x02005180 RID: 20864
 	public class RhythmShipLevelDifficultyInfo : IRhythmShipLevelDifficultyInfo
 	{
-		// Token: 0x17009233 RID: 37427
-		// (get) Token: 0x0603F4F2 RID: 259314 RVA: 0x00F4C460 File Offset: 0x00F4A660
-		// (set) Token: 0x0603F4F3 RID: 259315 RVA: 0x00F4C468 File Offset: 0x00F4A668
+		// Token: 0x17006595 RID: 26005
+		// (get) Token: 0x060341B3 RID: 213427 RVA: 0x00E933B8 File Offset: 0x00E915B8
+		// (set) Token: 0x060341B4 RID: 213428 RVA: 0x00E933C0 File Offset: 0x00E915C0
 		public int HistoryScore { get; set; }
 
-		// Token: 0x17009234 RID: 37428
-		// (get) Token: 0x0603F4F4 RID: 259316 RVA: 0x00F4C471 File Offset: 0x00F4A671
-		// (set) Token: 0x0603F4F5 RID: 259317 RVA: 0x00F4C479 File Offset: 0x00F4A679
+		// Token: 0x17006596 RID: 26006
+		// (get) Token: 0x060341B5 RID: 213429 RVA: 0x00E933C9 File Offset: 0x00E915C9
+		// (set) Token: 0x060341B6 RID: 213430 RVA: 0x00E933D1 File Offset: 0x00E915D1
 		public int Accuracy { get; set; }
 
-		// Token: 0x17009235 RID: 37429
-		// (get) Token: 0x0603F4F6 RID: 259318 RVA: 0x00F4C482 File Offset: 0x00F4A682
-		// (set) Token: 0x0603F4F7 RID: 259319 RVA: 0x00F4C48A File Offset: 0x00F4A68A
+		// Token: 0x17006597 RID: 26007
+		// (get) Token: 0x060341B7 RID: 213431 RVA: 0x00E933DA File Offset: 0x00E915DA
+		// (set) Token: 0x060341B8 RID: 213432 RVA: 0x00E933E2 File Offset: 0x00E915E2
 		public int Rating { get; set; }
 	}
 }

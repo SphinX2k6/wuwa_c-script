@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 {
-	// Token: 0x02005455 RID: 21589
+	// Token: 0x02004438 RID: 17464
 	public class BasicGraphicSettingSliderContrastData : BasicGraphicSettingSliderData
 	{
-		// Token: 0x060371DA RID: 225754 RVA: 0x00D10676 File Offset: 0x00D0E876
+		// Token: 0x0602C123 RID: 180515 RVA: 0x00C5FA8E File Offset: 0x00C5DC8E
 		[NullableContext(1)]
 		public BasicGraphicSettingSliderContrastData(MenuData metaData) : base(metaData)
 		{
 		}
 
-		// Token: 0x060371DB RID: 225755 RVA: 0x00D10680 File Offset: 0x00D0E880
+		// Token: 0x0602C124 RID: 180516 RVA: 0x00C5FA98 File Offset: 0x00C5DC98
 		public new void OnChangeValue(float value)
 		{
 			float from = 0.5f;

@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020028B7 RID: 10423
+	// Token: 0x02000843 RID: 2115
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/SpinePlugin.TrackEntry")]
 	[UnrealStructLayout(152, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 152)]
 	public class UTrackEntry : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06026B1E RID: 158494 RVA: 0x003B0B41 File Offset: 0x003AED41
+		// Token: 0x0600B87D RID: 47229 RVA: 0x00127B4F File Offset: 0x00125D4F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UTrackEntry._ClassPtr;
 		}
 
-		// Token: 0x06026B1F RID: 158495 RVA: 0x003B0B50 File Offset: 0x003AED50
+		// Token: 0x0600B87E RID: 47230 RVA: 0x00127B5C File Offset: 0x00125D5C
 		public UTrackEntry() : this(BuiltinUtils.AllocNativeUObject(UTrackEntry.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06026B20 RID: 158496 RVA: 0x003B0B78 File Offset: 0x003AED78
+		// Token: 0x0600B87F RID: 47231 RVA: 0x00127B84 File Offset: 0x00125D84
 		public UTrackEntry(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UTrackEntry.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17009522 RID: 38178
-		// (get) Token: 0x06026B21 RID: 158497 RVA: 0x003B0BAC File Offset: 0x003AEDAC
-		// (set) Token: 0x06026B22 RID: 158498 RVA: 0x003B0BE5 File Offset: 0x003AEDE5
+		// Token: 0x17002273 RID: 8819
+		// (get) Token: 0x0600B880 RID: 47232 RVA: 0x00127BB8 File Offset: 0x00125DB8
+		// (set) Token: 0x0600B881 RID: 47233 RVA: 0x00127BF1 File Offset: 0x00125DF1
 		public FSpineAnimationStartDelegate AnimationStart
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009523 RID: 38179
-		// (get) Token: 0x06026B23 RID: 158499 RVA: 0x003B0C08 File Offset: 0x003AEE08
-		// (set) Token: 0x06026B24 RID: 158500 RVA: 0x003B0C41 File Offset: 0x003AEE41
+		// Token: 0x17002274 RID: 8820
+		// (get) Token: 0x0600B882 RID: 47234 RVA: 0x00127C14 File Offset: 0x00125E14
+		// (set) Token: 0x0600B883 RID: 47235 RVA: 0x00127C4D File Offset: 0x00125E4D
 		public FSpineAnimationInterruptDelegate AnimationInterrupt
 		{
 			get
@@ -71,30 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009524 RID: 38180
-		// (get) Token: 0x06026B25 RID: 158501 RVA: 0x003B0C64 File Offset: 0x003AEE64
-		// (set) Token: 0x06026B26 RID: 158502 RVA: 0x003B0C9D File Offset: 0x003AEE9D
-		public FSpineAnimationEventDelegate AnimationEvent
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FSpineAnimationEventDelegate result;
-				if ((result = this._AnimationEvent) == null)
-				{
-					result = (this._AnimationEvent = new FSpineAnimationEventDelegate(base.NativePtr + (IntPtr)UTrackEntry.__PropertyOffset_AnimationEvent, this));
-				}
-				return result;
-			}
-			set
-			{
-				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)UTrackEntry.__PropertyOffset_AnimationEvent, (value != null) ? value.NativePtr : ((IntPtr)0));
-			}
-		}
-
-		// Token: 0x17009525 RID: 38181
-		// (get) Token: 0x06026B27 RID: 158503 RVA: 0x003B0CC0 File Offset: 0x003AEEC0
-		// (set) Token: 0x06026B28 RID: 158504 RVA: 0x003B0CF9 File Offset: 0x003AEEF9
+		// Token: 0x17002275 RID: 8821
+		// (get) Token: 0x0600B884 RID: 47236 RVA: 0x00127C70 File Offset: 0x00125E70
+		// (set) Token: 0x0600B885 RID: 47237 RVA: 0x00127CA9 File Offset: 0x00125EA9
 		public FSpineAnimationCompleteDelegate AnimationComplete
 		{
 			get
@@ -113,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009526 RID: 38182
-		// (get) Token: 0x06026B29 RID: 158505 RVA: 0x003B0D1C File Offset: 0x003AEF1C
-		// (set) Token: 0x06026B2A RID: 158506 RVA: 0x003B0D55 File Offset: 0x003AEF55
+		// Token: 0x17002276 RID: 8822
+		// (get) Token: 0x0600B886 RID: 47238 RVA: 0x00127CCC File Offset: 0x00125ECC
+		// (set) Token: 0x0600B887 RID: 47239 RVA: 0x00127D05 File Offset: 0x00125F05
 		public FSpineAnimationEndDelegate AnimationEnd
 		{
 			get
@@ -134,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009527 RID: 38183
-		// (get) Token: 0x06026B2B RID: 158507 RVA: 0x003B0D78 File Offset: 0x003AEF78
-		// (set) Token: 0x06026B2C RID: 158508 RVA: 0x003B0DB1 File Offset: 0x003AEFB1
+		// Token: 0x17002277 RID: 8823
+		// (get) Token: 0x0600B888 RID: 47240 RVA: 0x00127D28 File Offset: 0x00125F28
+		// (set) Token: 0x0600B889 RID: 47241 RVA: 0x00127D61 File Offset: 0x00125F61
 		public FSpineAnimationDisposeDelegate AnimationDispose
 		{
 			get
@@ -155,386 +134,379 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06026B2D RID: 158509 RVA: 0x003B0DD2 File Offset: 0x003AEFD2
+		// Token: 0x0600B88A RID: 47242 RVA: 0x00127D82 File Offset: 0x00125F82
 		public void SetTrackTime(float trackTime)
 		{
 			UTrackEntry.__SetTrackTime_Internal(base.NativePtr, trackTime);
 		}
 
-		// Token: 0x06026B2E RID: 158510 RVA: 0x003B0DE0 File Offset: 0x003AEFE0
+		// Token: 0x0600B88B RID: 47243 RVA: 0x00127D90 File Offset: 0x00125F90
 		public void SetTrackEnd(float trackEnd)
 		{
 			UTrackEntry.__SetTrackEnd_Internal(base.NativePtr, trackEnd);
 		}
 
-		// Token: 0x06026B2F RID: 158511 RVA: 0x003B0DEE File Offset: 0x003AEFEE
+		// Token: 0x0600B88C RID: 47244 RVA: 0x00127D9E File Offset: 0x00125F9E
 		public void SetTimeScale(float timeScale)
 		{
 			UTrackEntry.__SetTimeScale_Internal(base.NativePtr, timeScale);
 		}
 
-		// Token: 0x06026B30 RID: 158512 RVA: 0x003B0DFC File Offset: 0x003AEFFC
+		// Token: 0x0600B88D RID: 47245 RVA: 0x00127DAC File Offset: 0x00125FAC
 		public void SetMixTime(float mixTime)
 		{
 			UTrackEntry.__SetMixTime_Internal(base.NativePtr, mixTime);
 		}
 
-		// Token: 0x06026B31 RID: 158513 RVA: 0x003B0E0A File Offset: 0x003AF00A
+		// Token: 0x0600B88E RID: 47246 RVA: 0x00127DBA File Offset: 0x00125FBA
 		public void SetMixDuration(float mixDuration)
 		{
 			UTrackEntry.__SetMixDuration_Internal(base.NativePtr, mixDuration);
 		}
 
-		// Token: 0x06026B32 RID: 158514 RVA: 0x003B0E18 File Offset: 0x003AF018
+		// Token: 0x0600B88F RID: 47247 RVA: 0x00127DC8 File Offset: 0x00125FC8
 		public void SetLoop(bool loop)
 		{
 			UTrackEntry.__SetLoop_Internal(base.NativePtr, loop);
 		}
 
-		// Token: 0x06026B33 RID: 158515 RVA: 0x003B0E26 File Offset: 0x003AF026
+		// Token: 0x0600B890 RID: 47248 RVA: 0x00127DD6 File Offset: 0x00125FD6
 		public void SetEventThreshold(float eventThreshold)
 		{
 			UTrackEntry.__SetEventThreshold_Internal(base.NativePtr, eventThreshold);
 		}
 
-		// Token: 0x06026B34 RID: 158516 RVA: 0x003B0E34 File Offset: 0x003AF034
+		// Token: 0x0600B891 RID: 47249 RVA: 0x00127DE4 File Offset: 0x00125FE4
 		public void SetDrawOrderThreshold(float drawOrderThreshold)
 		{
 			UTrackEntry.__SetDrawOrderThreshold_Internal(base.NativePtr, drawOrderThreshold);
 		}
 
-		// Token: 0x06026B35 RID: 158517 RVA: 0x003B0E42 File Offset: 0x003AF042
+		// Token: 0x0600B892 RID: 47250 RVA: 0x00127DF2 File Offset: 0x00125FF2
 		public void SetDelay(float delay)
 		{
 			UTrackEntry.__SetDelay_Internal(base.NativePtr, delay);
 		}
 
-		// Token: 0x06026B36 RID: 158518 RVA: 0x003B0E50 File Offset: 0x003AF050
+		// Token: 0x0600B893 RID: 47251 RVA: 0x00127E00 File Offset: 0x00126000
 		public void SetAttachmentThreshold(float attachmentThreshold)
 		{
 			UTrackEntry.__SetAttachmentThreshold_Internal(base.NativePtr, attachmentThreshold);
 		}
 
-		// Token: 0x06026B37 RID: 158519 RVA: 0x003B0E5E File Offset: 0x003AF05E
+		// Token: 0x0600B894 RID: 47252 RVA: 0x00127E0E File Offset: 0x0012600E
 		public void SetAnimationStart(float animationStart)
 		{
 			UTrackEntry.__SetAnimationStart_Internal(base.NativePtr, animationStart);
 		}
 
-		// Token: 0x06026B38 RID: 158520 RVA: 0x003B0E6C File Offset: 0x003AF06C
+		// Token: 0x0600B895 RID: 47253 RVA: 0x00127E1C File Offset: 0x0012601C
 		public void SetAnimationLast(float animationLast)
 		{
 			UTrackEntry.__SetAnimationLast_Internal(base.NativePtr, animationLast);
 		}
 
-		// Token: 0x06026B39 RID: 158521 RVA: 0x003B0E7A File Offset: 0x003AF07A
+		// Token: 0x0600B896 RID: 47254 RVA: 0x00127E2A File Offset: 0x0012602A
 		public void SetAnimationEnd(float animationEnd)
 		{
 			UTrackEntry.__SetAnimationEnd_Internal(base.NativePtr, animationEnd);
 		}
 
-		// Token: 0x06026B3A RID: 158522 RVA: 0x003B0E88 File Offset: 0x003AF088
+		// Token: 0x0600B897 RID: 47255 RVA: 0x00127E38 File Offset: 0x00126038
 		public void SetAlpha(float alpha)
 		{
 			UTrackEntry.__SetAlpha_Internal(base.NativePtr, alpha);
 		}
 
-		// Token: 0x06026B3B RID: 158523 RVA: 0x003B0E96 File Offset: 0x003AF096
+		// Token: 0x0600B898 RID: 47256 RVA: 0x00127E46 File Offset: 0x00126046
 		public bool isValidAnimation()
 		{
 			return UTrackEntry.__isValidAnimation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B3C RID: 158524 RVA: 0x003B0EA3 File Offset: 0x003AF0A3
+		// Token: 0x0600B899 RID: 47257 RVA: 0x00127E53 File Offset: 0x00126053
 		public float GetTrackTime()
 		{
 			return UTrackEntry.__GetTrackTime_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B3D RID: 158525 RVA: 0x003B0EB0 File Offset: 0x003AF0B0
+		// Token: 0x0600B89A RID: 47258 RVA: 0x00127E60 File Offset: 0x00126060
 		public int GetTrackIndex()
 		{
 			return UTrackEntry.__GetTrackIndex_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B3E RID: 158526 RVA: 0x003B0EBD File Offset: 0x003AF0BD
+		// Token: 0x0600B89B RID: 47259 RVA: 0x00127E6D File Offset: 0x0012606D
 		public float GetTrackEnd()
 		{
 			return UTrackEntry.__GetTrackEnd_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B3F RID: 158527 RVA: 0x003B0ECA File Offset: 0x003AF0CA
+		// Token: 0x0600B89C RID: 47260 RVA: 0x00127E7A File Offset: 0x0012607A
 		public float GetTimeScale()
 		{
 			return UTrackEntry.__GetTimeScale_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B40 RID: 158528 RVA: 0x003B0ED7 File Offset: 0x003AF0D7
+		// Token: 0x0600B89D RID: 47261 RVA: 0x00127E87 File Offset: 0x00126087
 		public float GetMixTime()
 		{
 			return UTrackEntry.__GetMixTime_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B41 RID: 158529 RVA: 0x003B0EE4 File Offset: 0x003AF0E4
+		// Token: 0x0600B89E RID: 47262 RVA: 0x00127E94 File Offset: 0x00126094
 		public float GetMixDuration()
 		{
 			return UTrackEntry.__GetMixDuration_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B42 RID: 158530 RVA: 0x003B0EF1 File Offset: 0x003AF0F1
+		// Token: 0x0600B89F RID: 47263 RVA: 0x00127EA1 File Offset: 0x001260A1
 		public bool GetLoop()
 		{
 			return UTrackEntry.__GetLoop_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B43 RID: 158531 RVA: 0x003B0EFE File Offset: 0x003AF0FE
+		// Token: 0x0600B8A0 RID: 47264 RVA: 0x00127EAE File Offset: 0x001260AE
 		public float GetEventThreshold()
 		{
 			return UTrackEntry.__GetEventThreshold_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B44 RID: 158532 RVA: 0x003B0F0B File Offset: 0x003AF10B
+		// Token: 0x0600B8A1 RID: 47265 RVA: 0x00127EBB File Offset: 0x001260BB
 		public float GetDrawOrderThreshold()
 		{
 			return UTrackEntry.__GetDrawOrderThreshold_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B45 RID: 158533 RVA: 0x003B0F18 File Offset: 0x003AF118
+		// Token: 0x0600B8A2 RID: 47266 RVA: 0x00127EC8 File Offset: 0x001260C8
 		public float GetDelay()
 		{
 			return UTrackEntry.__GetDelay_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B46 RID: 158534 RVA: 0x003B0F25 File Offset: 0x003AF125
+		// Token: 0x0600B8A3 RID: 47267 RVA: 0x00127ED5 File Offset: 0x001260D5
 		public float GetAttachmentThreshold()
 		{
 			return UTrackEntry.__GetAttachmentThreshold_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B47 RID: 158535 RVA: 0x003B0F32 File Offset: 0x003AF132
+		// Token: 0x0600B8A4 RID: 47268 RVA: 0x00127EE2 File Offset: 0x001260E2
 		public float GetAnimationStart()
 		{
 			return UTrackEntry.__GetAnimationStart_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B48 RID: 158536 RVA: 0x003B0F3F File Offset: 0x003AF13F
+		// Token: 0x0600B8A5 RID: 47269 RVA: 0x00127EEF File Offset: 0x001260EF
 		public string getAnimationName()
 		{
 			return FString.ToStringAndDeleteNativePtr(UTrackEntry.__getAnimationName_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06026B49 RID: 158537 RVA: 0x003B0F51 File Offset: 0x003AF151
+		// Token: 0x0600B8A6 RID: 47270 RVA: 0x00127F01 File Offset: 0x00126101
 		public float GetAnimationLast()
 		{
 			return UTrackEntry.__GetAnimationLast_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B4A RID: 158538 RVA: 0x003B0F5E File Offset: 0x003AF15E
+		// Token: 0x0600B8A7 RID: 47271 RVA: 0x00127F0E File Offset: 0x0012610E
 		public float GetAnimationEnd()
 		{
 			return UTrackEntry.__GetAnimationEnd_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B4B RID: 158539 RVA: 0x003B0F6B File Offset: 0x003AF16B
+		// Token: 0x0600B8A8 RID: 47272 RVA: 0x00127F1B File Offset: 0x0012611B
 		public float getAnimationDuration()
 		{
 			return UTrackEntry.__getAnimationDuration_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B4C RID: 158540 RVA: 0x003B0F78 File Offset: 0x003AF178
+		// Token: 0x0600B8A9 RID: 47273 RVA: 0x00127F28 File Offset: 0x00126128
 		public float GetAlpha()
 		{
 			return UTrackEntry.__GetAlpha_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026B4D RID: 158541
+		// Token: 0x0600B8AA RID: 47274
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTrackTime_Internal(IntPtr @this, float trackTime);
 
-		// Token: 0x06026B4E RID: 158542
+		// Token: 0x0600B8AB RID: 47275
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTrackEnd_Internal(IntPtr @this, float trackEnd);
 
-		// Token: 0x06026B4F RID: 158543
+		// Token: 0x0600B8AC RID: 47276
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTimeScale_Internal(IntPtr @this, float timeScale);
 
-		// Token: 0x06026B50 RID: 158544
+		// Token: 0x0600B8AD RID: 47277
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMixTime_Internal(IntPtr @this, float mixTime);
 
-		// Token: 0x06026B51 RID: 158545
+		// Token: 0x0600B8AE RID: 47278
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMixDuration_Internal(IntPtr @this, float mixDuration);
 
-		// Token: 0x06026B52 RID: 158546
+		// Token: 0x0600B8AF RID: 47279
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLoop_Internal(IntPtr @this, bool loop);
 
-		// Token: 0x06026B53 RID: 158547
+		// Token: 0x0600B8B0 RID: 47280
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEventThreshold_Internal(IntPtr @this, float eventThreshold);
 
-		// Token: 0x06026B54 RID: 158548
+		// Token: 0x0600B8B1 RID: 47281
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDrawOrderThreshold_Internal(IntPtr @this, float drawOrderThreshold);
 
-		// Token: 0x06026B55 RID: 158549
+		// Token: 0x0600B8B2 RID: 47282
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDelay_Internal(IntPtr @this, float delay);
 
-		// Token: 0x06026B56 RID: 158550
+		// Token: 0x0600B8B3 RID: 47283
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAttachmentThreshold_Internal(IntPtr @this, float attachmentThreshold);
 
-		// Token: 0x06026B57 RID: 158551
+		// Token: 0x0600B8B4 RID: 47284
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAnimationStart_Internal(IntPtr @this, float animationStart);
 
-		// Token: 0x06026B58 RID: 158552
+		// Token: 0x0600B8B5 RID: 47285
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAnimationLast_Internal(IntPtr @this, float animationLast);
 
-		// Token: 0x06026B59 RID: 158553
+		// Token: 0x0600B8B6 RID: 47286
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAnimationEnd_Internal(IntPtr @this, float animationEnd);
 
-		// Token: 0x06026B5A RID: 158554
+		// Token: 0x0600B8B7 RID: 47287
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAlpha_Internal(IntPtr @this, float alpha);
 
-		// Token: 0x06026B5B RID: 158555
+		// Token: 0x0600B8B8 RID: 47288
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __isValidAnimation_Internal(IntPtr @this);
 
-		// Token: 0x06026B5C RID: 158556
+		// Token: 0x0600B8B9 RID: 47289
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetTrackTime_Internal(IntPtr @this);
 
-		// Token: 0x06026B5D RID: 158557
+		// Token: 0x0600B8BA RID: 47290
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetTrackIndex_Internal(IntPtr @this);
 
-		// Token: 0x06026B5E RID: 158558
+		// Token: 0x0600B8BB RID: 47291
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetTrackEnd_Internal(IntPtr @this);
 
-		// Token: 0x06026B5F RID: 158559
+		// Token: 0x0600B8BC RID: 47292
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetTimeScale_Internal(IntPtr @this);
 
-		// Token: 0x06026B60 RID: 158560
+		// Token: 0x0600B8BD RID: 47293
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetMixTime_Internal(IntPtr @this);
 
-		// Token: 0x06026B61 RID: 158561
+		// Token: 0x0600B8BE RID: 47294
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetMixDuration_Internal(IntPtr @this);
 
-		// Token: 0x06026B62 RID: 158562
+		// Token: 0x0600B8BF RID: 47295
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetLoop_Internal(IntPtr @this);
 
-		// Token: 0x06026B63 RID: 158563
+		// Token: 0x0600B8C0 RID: 47296
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetEventThreshold_Internal(IntPtr @this);
 
-		// Token: 0x06026B64 RID: 158564
+		// Token: 0x0600B8C1 RID: 47297
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetDrawOrderThreshold_Internal(IntPtr @this);
 
-		// Token: 0x06026B65 RID: 158565
+		// Token: 0x0600B8C2 RID: 47298
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetDelay_Internal(IntPtr @this);
 
-		// Token: 0x06026B66 RID: 158566
+		// Token: 0x0600B8C3 RID: 47299
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetAttachmentThreshold_Internal(IntPtr @this);
 
-		// Token: 0x06026B67 RID: 158567
+		// Token: 0x0600B8C4 RID: 47300
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetAnimationStart_Internal(IntPtr @this);
 
-		// Token: 0x06026B68 RID: 158568
+		// Token: 0x0600B8C5 RID: 47301
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __getAnimationName_Internal(IntPtr @this);
 
-		// Token: 0x06026B69 RID: 158569
+		// Token: 0x0600B8C6 RID: 47302
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetAnimationLast_Internal(IntPtr @this);
 
-		// Token: 0x06026B6A RID: 158570
+		// Token: 0x0600B8C7 RID: 47303
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetAnimationEnd_Internal(IntPtr @this);
 
-		// Token: 0x06026B6B RID: 158571
+		// Token: 0x0600B8C8 RID: 47304
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __getAnimationDuration_Internal(IntPtr @this);
 
-		// Token: 0x06026B6C RID: 158572
+		// Token: 0x0600B8C9 RID: 47305
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetAlpha_Internal(IntPtr @this);
 
-		// Token: 0x06026B6D RID: 158573 RVA: 0x003B0F85 File Offset: 0x003AF185
+		// Token: 0x0600B8CA RID: 47306 RVA: 0x00127F35 File Offset: 0x00126135
 		static UTrackEntry()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SpinePlugin.TrackEntry");
 		}
 
-		// Token: 0x06026B6E RID: 158574 RVA: 0x003B0F93 File Offset: 0x003AF193
+		// Token: 0x0600B8CB RID: 47307 RVA: 0x00127F43 File Offset: 0x00126143
 		protected UTrackEntry(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040153D9 RID: 87001
+		// Token: 0x040053D1 RID: 21457
 		public new const string __ObjectPath = "/Script/SpinePlugin.TrackEntry";
 
-		// Token: 0x040153DA RID: 87002
+		// Token: 0x040053D2 RID: 21458
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040153DB RID: 87003
+		// Token: 0x040053D3 RID: 21459
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040153DC RID: 87004
+		// Token: 0x040053D4 RID: 21460
 		internal static int __PropertyOffset_AnimationStart;
 
-		// Token: 0x040153DD RID: 87005
+		// Token: 0x040053D5 RID: 21461
 		[Nullable(2)]
 		private FSpineAnimationStartDelegate _AnimationStart;
 
-		// Token: 0x040153DE RID: 87006
+		// Token: 0x040053D6 RID: 21462
 		internal static int __PropertyOffset_AnimationInterrupt;
 
-		// Token: 0x040153DF RID: 87007
+		// Token: 0x040053D7 RID: 21463
 		[Nullable(2)]
 		private FSpineAnimationInterruptDelegate _AnimationInterrupt;
 
-		// Token: 0x040153E0 RID: 87008
-		internal static int __PropertyOffset_AnimationEvent;
-
-		// Token: 0x040153E1 RID: 87009
-		[Nullable(2)]
-		private FSpineAnimationEventDelegate _AnimationEvent;
-
-		// Token: 0x040153E2 RID: 87010
+		// Token: 0x040053D8 RID: 21464
 		internal static int __PropertyOffset_AnimationComplete;
 
-		// Token: 0x040153E3 RID: 87011
+		// Token: 0x040053D9 RID: 21465
 		[Nullable(2)]
 		private FSpineAnimationCompleteDelegate _AnimationComplete;
 
-		// Token: 0x040153E4 RID: 87012
+		// Token: 0x040053DA RID: 21466
 		internal static int __PropertyOffset_AnimationEnd;
 
-		// Token: 0x040153E5 RID: 87013
+		// Token: 0x040053DB RID: 21467
 		[Nullable(2)]
 		private FSpineAnimationEndDelegate _AnimationEnd;
 
-		// Token: 0x040153E6 RID: 87014
+		// Token: 0x040053DC RID: 21468
 		internal static int __PropertyOffset_AnimationDispose;
 
-		// Token: 0x040153E7 RID: 87015
+		// Token: 0x040053DD RID: 21469
 		[Nullable(2)]
 		private FSpineAnimationDisposeDelegate _AnimationDispose;
 	}

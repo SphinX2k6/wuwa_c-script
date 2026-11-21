@@ -6,18 +6,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200465C RID: 18012
+	// Token: 0x0200358D RID: 13709
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiViewPlotContainer : UiViewContainer
 	{
-		// Token: 0x0602E7FA RID: 190458 RVA: 0x00ABE23C File Offset: 0x00ABC43C
+		// Token: 0x06022F44 RID: 143172 RVA: 0x009EB8BC File Offset: 0x009E9ABC
 		private void PushView(UiViewBase view)
 		{
 			this.Stack.Push(view);
 		}
 
-		// Token: 0x0602E7FB RID: 190459 RVA: 0x00ABE24C File Offset: 0x00ABC44C
+		// Token: 0x06022F45 RID: 143173 RVA: 0x009EB8CC File Offset: 0x009E9ACC
 		[NullableContext(2)]
 		private UiViewBase PopView()
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Ui
 			return uiViewBase;
 		}
 
-		// Token: 0x0602E7FC RID: 190460 RVA: 0x00ABE28C File Offset: 0x00ABC48C
+		// Token: 0x06022F46 RID: 143174 RVA: 0x009EB90C File Offset: 0x009E9B0C
 		private bool DeleteView(UiViewBase view)
 		{
 			bool flag = this.Stack.Delete(view);
@@ -46,14 +46,14 @@ namespace CSharpScript.Game.Ui
 			return flag;
 		}
 
-		// Token: 0x0602E7FD RID: 190461 RVA: 0x00ABE2E1 File Offset: 0x00ABC4E1
+		// Token: 0x06022F47 RID: 143175 RVA: 0x009EB961 File Offset: 0x009E9B61
 		public UiViewPlotContainer(global::Stack<UiViewBase> stack)
 		{
 			this.Stack = stack;
 		}
 
-		// Token: 0x17007605 RID: 30213
-		// (get) Token: 0x0602E7FE RID: 190462 RVA: 0x00ABE2FB File Offset: 0x00ABC4FB
+		// Token: 0x170048C1 RID: 18625
+		// (get) Token: 0x06022F48 RID: 143176 RVA: 0x009EB97B File Offset: 0x009E9B7B
 		private bool IsLock
 		{
 			get
@@ -62,14 +62,14 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E7FF RID: 190463 RVA: 0x00ABE303 File Offset: 0x00ABC503
+		// Token: 0x06022F49 RID: 143177 RVA: 0x009EB983 File Offset: 0x009E9B83
 		private void Lock()
 		{
 			this.Operating = true;
 			this.LockOperationPromise = new CustomPromise();
 		}
 
-		// Token: 0x0602E800 RID: 190464 RVA: 0x00ABE317 File Offset: 0x00ABC517
+		// Token: 0x06022F4A RID: 143178 RVA: 0x009EB997 File Offset: 0x009E9B97
 		private void Unlock(bool needHandlePending = true)
 		{
 			this.Operating = false;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E801 RID: 190465 RVA: 0x00ABE344 File Offset: 0x00ABC544
+		// Token: 0x06022F4B RID: 143179 RVA: 0x009EB9C4 File Offset: 0x009E9BC4
 		private unsafe UiViewPending AddPendingView(UiViewBase view, EViewPendingType type)
 		{
 			UiViewPending uiViewPending = new UiViewPending(view, type, null);
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Ui
 			return uiViewPending;
 		}
 
-		// Token: 0x0602E802 RID: 190466 RVA: 0x00ABE4D4 File Offset: 0x00ABC6D4
+		// Token: 0x06022F4C RID: 143180 RVA: 0x009EBB54 File Offset: 0x009E9D54
 		private UniTask ProcessViewPending()
 		{
 			UiViewPlotContainer.<ProcessViewPending>d__13 <ProcessViewPending>d__;
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Ui
 			return <ProcessViewPending>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E803 RID: 190467 RVA: 0x00ABE518 File Offset: 0x00ABC718
+		// Token: 0x06022F4D RID: 143181 RVA: 0x009EBB98 File Offset: 0x009E9D98
 		private UniTask OpenStackViewAsync(UiViewBase view, [Nullable(2)] UiViewBase lastView)
 		{
 			UiViewPlotContainer.<OpenStackViewAsync>d__14 <OpenStackViewAsync>d__;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Ui
 			return <OpenStackViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E804 RID: 190468 RVA: 0x00ABE564 File Offset: 0x00ABC764
+		// Token: 0x06022F4E RID: 143182 RVA: 0x009EBBE4 File Offset: 0x009E9DE4
 		private UniTask CloseViewInternal(UiViewBase view, [Nullable(2)] UiViewBase nextView)
 		{
 			UiViewPlotContainer.<CloseViewInternal>d__15 <CloseViewInternal>d__;
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Ui
 			return <CloseViewInternal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E805 RID: 190469 RVA: 0x00ABE5B8 File Offset: 0x00ABC7B8
+		// Token: 0x06022F4F RID: 143183 RVA: 0x009EBC38 File Offset: 0x009E9E38
 		[NullableContext(0)]
 		public override UniTask<bool> OpenViewAsync([Nullable(1)] UiViewBase view)
 		{
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Ui
 			return <OpenViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E806 RID: 190470 RVA: 0x00ABE604 File Offset: 0x00ABC804
+		// Token: 0x06022F50 RID: 143184 RVA: 0x009EBC84 File Offset: 0x009E9E84
 		public override UniTask PreOpenViewAsync(UiViewBase view)
 		{
 			UiViewPlotContainer.<PreOpenViewAsync>d__17 <PreOpenViewAsync>d__;
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Ui
 			return <PreOpenViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E807 RID: 190471 RVA: 0x00ABE648 File Offset: 0x00ABC848
+		// Token: 0x06022F51 RID: 143185 RVA: 0x009EBCC8 File Offset: 0x009E9EC8
 		public override UniTask OpenViewAfterPreOpenedAsync(UiViewBase view)
 		{
 			UiViewPlotContainer.<OpenViewAfterPreOpenedAsync>d__18 <OpenViewAfterPreOpenedAsync>d__;
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Ui
 			return <OpenViewAfterPreOpenedAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E808 RID: 190472 RVA: 0x00ABE68C File Offset: 0x00ABC88C
+		// Token: 0x06022F52 RID: 143186 RVA: 0x009EBD0C File Offset: 0x009E9F0C
 		public override UniTask CloseViewAsync(UiViewBase view)
 		{
 			UiViewPlotContainer.<CloseViewAsync>d__19 <CloseViewAsync>d__;
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Ui
 			return <CloseViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E809 RID: 190473 RVA: 0x00ABE6D8 File Offset: 0x00ABC8D8
+		// Token: 0x06022F53 RID: 143187 RVA: 0x009EBD58 File Offset: 0x009E9F58
 		public unsafe override void ClearContainer(bool isSeamlessTravel)
 		{
 			List<UiViewBase> list = new List<UiViewBase>();
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.Ui
 			Log.Instance.Info(ELogModule.PlotContainer, ELogAuthor.XXJ, "ClearContainer 清栈", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x04018E39 RID: 101945
+		// Token: 0x04013492 RID: 78994
 		[Nullable(new byte[]
 		{
 			2,
@@ -272,14 +272,14 @@ namespace CSharpScript.Game.Ui
 		})]
 		private readonly global::Stack<UiViewBase> Stack;
 
-		// Token: 0x04018E3A RID: 101946
+		// Token: 0x04013493 RID: 78995
 		[Nullable(2)]
 		private CustomPromise LockOperationPromise;
 
-		// Token: 0x04018E3B RID: 101947
+		// Token: 0x04013494 RID: 78996
 		private bool Operating;
 
-		// Token: 0x04018E3C RID: 101948
+		// Token: 0x04013495 RID: 78997
 		private readonly List<UiViewPending> ViewPendingList = new List<UiViewPending>();
 	}
 }

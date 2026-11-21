@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000596 RID: 1430
+	// Token: 0x020005AD RID: 1453
 	public class ConfigMotorFightRankAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002191 RID: 8593 RVA: 0x00117538 File Offset: 0x00115738
+		// Token: 0x0600221B RID: 8731 RVA: 0x0011DE20 File Offset: 0x0011C020
 		static ConfigMotorFightRankAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMotorFightRankAll.CreateStaticDefaultValue), new Action(ConfigMotorFightRankAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002192 RID: 8594 RVA: 0x00117558 File Offset: 0x00115758
+		// Token: 0x0600221C RID: 8732 RVA: 0x0011DE40 File Offset: 0x0011C040
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMotorFightRankAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002193 RID: 8595 RVA: 0x001175D7 File Offset: 0x001157D7
+		// Token: 0x0600221D RID: 8733 RVA: 0x0011DEBF File Offset: 0x0011C0BF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMotorFightRankAll.LogPair = null;
 			ConfigMotorFightRankAll.HandleId = 0;
 		}
 
-		// Token: 0x06002194 RID: 8596 RVA: 0x001175E5 File Offset: 0x001157E5
+		// Token: 0x0600221E RID: 8734 RVA: 0x0011DECD File Offset: 0x0011C0CD
 		public static void Init()
 		{
 			ConfigMotorFightRankAll.HandleId = ConfigCommon.InitDataStatement(ConfigMotorFightRankAll.HandleId, "db_motorfight.db", "select BinData from `MotorFightRank`");
 		}
 
-		// Token: 0x06002195 RID: 8597 RVA: 0x00117600 File Offset: 0x00115800
+		// Token: 0x0600221F RID: 8735 RVA: 0x0011DEE8 File Offset: 0x0011C0E8
 		[NullableContext(2)]
 		public static IReadOnlyList<MotorFightRank> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040026FE RID: 9982
+		// Token: 0x0400279F RID: 10143
 		private const string DB = "db_motorfight.db";
 
-		// Token: 0x040026FF RID: 9983
+		// Token: 0x040027A0 RID: 10144
 		private const string FILE = "m.摩托战斗_局外.xlsx";
 
-		// Token: 0x04002700 RID: 9984
+		// Token: 0x040027A1 RID: 10145
 		private const string TABLE = "MotorFightRank";
 
-		// Token: 0x04002701 RID: 9985
+		// Token: 0x040027A2 RID: 10146
 		private const string COMMAND = "select BinData from `MotorFightRank`";
 
-		// Token: 0x04002702 RID: 9986
+		// Token: 0x040027A3 RID: 10147
 		private const string KEY_PREFIX = "MotorFightRankAll";
 
-		// Token: 0x04002703 RID: 9987
+		// Token: 0x040027A4 RID: 10148
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002704 RID: 9988
+		// Token: 0x040027A5 RID: 10149
 		private static int HandleId;
 	}
 }

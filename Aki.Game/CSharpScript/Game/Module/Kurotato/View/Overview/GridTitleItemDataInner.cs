@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Overview
 {
-	// Token: 0x0200574E RID: 22350
+	// Token: 0x02004725 RID: 18213
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class GridTitleItemDataInner
 	{
-		// Token: 0x17008870 RID: 34928
-		// (get) Token: 0x06038CF9 RID: 232697 RVA: 0x00D7E501 File Offset: 0x00D7C701
-		// (set) Token: 0x06038CFA RID: 232698 RVA: 0x00D7E509 File Offset: 0x00D7C709
+		// Token: 0x17005C38 RID: 23608
+		// (get) Token: 0x0602DC09 RID: 187401 RVA: 0x00CCCEE1 File Offset: 0x00CCB0E1
+		// (set) Token: 0x0602DC0A RID: 187402 RVA: 0x00CCCEE9 File Offset: 0x00CCB0E9
 		public string Title { get; set; } = "";
 
-		// Token: 0x17008871 RID: 34929
-		// (get) Token: 0x06038CFB RID: 232699 RVA: 0x00D7E512 File Offset: 0x00D7C712
-		// (set) Token: 0x06038CFC RID: 232700 RVA: 0x00D7E51A File Offset: 0x00D7C71A
+		// Token: 0x17005C39 RID: 23609
+		// (get) Token: 0x0602DC0B RID: 187403 RVA: 0x00CCCEF2 File Offset: 0x00CCB0F2
+		// (set) Token: 0x0602DC0C RID: 187404 RVA: 0x00CCCEFA File Offset: 0x00CCB0FA
 		public string Num { get; set; } = "";
 	}
 }

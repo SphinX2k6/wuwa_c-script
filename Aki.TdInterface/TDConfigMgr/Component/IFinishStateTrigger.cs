@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000384 RID: 900
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003CD RID: 973
 	public class IFinishStateTrigger
 	{
-		// Token: 0x060011D9 RID: 4569 RVA: 0x0003BA54 File Offset: 0x00039C54
+		// Token: 0x0600131D RID: 4893 RVA: 0x0003ED38 File Offset: 0x0003CF38
 		private IFinishStateTrigger_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060011DA RID: 4570 RVA: 0x0003BA8C File Offset: 0x00039C8C
+		// Token: 0x0600131E RID: 4894 RVA: 0x0003ED70 File Offset: 0x0003CF70
 		public static IFinishStateTrigger Create([Nullable(2)] IFinishStateTrigger instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011DB RID: 4571 RVA: 0x0003BA9F File Offset: 0x00039C9F
+		// Token: 0x0600131F RID: 4895 RVA: 0x0003ED83 File Offset: 0x0003CF83
 		public static IFinishStateTrigger CreateFromSetValue([Nullable(2)] IFinishStateTrigger_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011DC RID: 4572 RVA: 0x0003BAB2 File Offset: 0x00039CB2
+		// Token: 0x06001320 RID: 4896 RVA: 0x0003ED96 File Offset: 0x0003CF96
 		public IFinishStateTrigger_SetValue ToSetValue()
 		{
 			return new IFinishStateTrigger_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000504 RID: 1284
-		// (get) Token: 0x060011DD RID: 4573 RVA: 0x0003BAD1 File Offset: 0x00039CD1
-		// (set) Token: 0x060011DE RID: 4574 RVA: 0x0003BAFC File Offset: 0x00039CFC
+		// Token: 0x17000558 RID: 1368
+		// (get) Token: 0x06001321 RID: 4897 RVA: 0x0003EDB5 File Offset: 0x0003CFB5
+		// (set) Token: 0x06001322 RID: 4898 RVA: 0x0003EDE0 File Offset: 0x0003CFE0
 		public virtual bool IsSilenceEntities
 		{
 			get
@@ -80,9 +78,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000505 RID: 1285
-		// (get) Token: 0x060011DF RID: 4575 RVA: 0x0003BB0C File Offset: 0x00039D0C
-		// (set) Token: 0x060011E0 RID: 4576 RVA: 0x0003BB6D File Offset: 0x00039D6D
+		// Token: 0x17000559 RID: 1369
+		// (get) Token: 0x06001323 RID: 4899 RVA: 0x0003EDF0 File Offset: 0x0003CFF0
+		// (set) Token: 0x06001324 RID: 4900 RVA: 0x0003EE51 File Offset: 0x0003D051
 		public virtual IEntityGroupCondition GroupCondition
 		{
 			get
@@ -110,18 +108,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E85 RID: 3717
+		// Token: 0x04000F7C RID: 3964
 		[Nullable(2)]
 		protected IFinishStateTrigger FbInstance;
 
-		// Token: 0x04000E86 RID: 3718
+		// Token: 0x04000F7D RID: 3965
 		[Nullable(2)]
 		protected IFinishStateTrigger_SetValue PocoInterface;
 
-		// Token: 0x04000E87 RID: 3719
+		// Token: 0x04000F7E RID: 3966
 		private IEntityGroupCondition _GroupConditionCache;
 
-		// Token: 0x04000E88 RID: 3720
+		// Token: 0x04000F7F RID: 3967
 		private bool _GroupConditionInited;
 	}
 }

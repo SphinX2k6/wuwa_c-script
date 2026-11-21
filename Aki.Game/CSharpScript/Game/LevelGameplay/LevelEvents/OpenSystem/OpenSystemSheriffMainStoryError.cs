@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006C1B RID: 27675
+	// Token: 0x02005D94 RID: 23956
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemSheriffMainStoryError : OpenSystemBase
 	{
-		// Token: 0x06044465 RID: 279653 RVA: 0x010D2897 File Offset: 0x010D0A97
+		// Token: 0x0603A5BD RID: 239037 RVA: 0x0107C7EB File Offset: 0x0107A9EB
 		public OpenSystemSheriffMainStoryError(LevelEventOpenSystem eventBase) : base(eventBase)
 		{
 		}
 
-		// Token: 0x06044466 RID: 279654 RVA: 0x010D28A0 File Offset: 0x010D0AA0
+		// Token: 0x0603A5BE RID: 239038 RVA: 0x0107C7F4 File Offset: 0x0107A9F4
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return <ExecuteOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044467 RID: 279655 RVA: 0x010D28E3 File Offset: 0x010D0AE3
+		// Token: 0x0603A5BF RID: 239039 RVA: 0x0107C837 File Offset: 0x0107AA37
 		private void OnWorldMapExtraUiOpen(EWorldMapExtraUiPanelName panelName)
 		{
 			if (panelName == EWorldMapExtraUiPanelName.SheriffMapPanel)
@@ -44,14 +44,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			}
 		}
 
-		// Token: 0x06044468 RID: 279656 RVA: 0x010D28F9 File Offset: 0x010D0AF9
+		// Token: 0x0603A5C0 RID: 239040 RVA: 0x0107C84D File Offset: 0x0107AA4D
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{
 			return new EUiViewName?(EUiViewName.SheriffErrorView);
 		}
 
-		// Token: 0x0402398B RID: 145803
+		// Token: 0x0401EC2D RID: 125997
 		[Nullable(2)]
 		private CustomPromise OpenMapPromise;
 	}

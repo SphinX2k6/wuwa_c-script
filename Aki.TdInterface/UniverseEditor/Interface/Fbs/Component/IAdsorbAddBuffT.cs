@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E60 RID: 20064
+	// Token: 0x02005371 RID: 21361
 	public class IAdsorbAddBuffT
 	{
-		// Token: 0x17008F95 RID: 36757
-		// (get) Token: 0x0601F800 RID: 129024 RVA: 0x004632D8 File Offset: 0x004614D8
-		// (set) Token: 0x0601F801 RID: 129025 RVA: 0x004632E0 File Offset: 0x004614E0
+		// Token: 0x170096CE RID: 38606
+		// (get) Token: 0x0602144B RID: 136267 RVA: 0x004972F0 File Offset: 0x004954F0
+		// (set) Token: 0x0602144C RID: 136268 RVA: 0x004972F8 File Offset: 0x004954F8
 		public EBuffProducerMode Type { get; set; }
 
-		// Token: 0x17008F96 RID: 36758
-		// (get) Token: 0x0601F802 RID: 129026 RVA: 0x004632E9 File Offset: 0x004614E9
-		// (set) Token: 0x0601F803 RID: 129027 RVA: 0x004632F1 File Offset: 0x004614F1
+		// Token: 0x170096CF RID: 38607
+		// (get) Token: 0x0602144D RID: 136269 RVA: 0x00497301 File Offset: 0x00495501
+		// (set) Token: 0x0602144E RID: 136270 RVA: 0x00497309 File Offset: 0x00495509
 		public int Speed { get; set; }
 
-		// Token: 0x0601F804 RID: 129028 RVA: 0x004632FA File Offset: 0x004614FA
+		// Token: 0x0602144F RID: 136271 RVA: 0x00497312 File Offset: 0x00495512
 		public IAdsorbAddBuffT()
 		{
 			this.Type = EBuffProducerMode.Immediate;

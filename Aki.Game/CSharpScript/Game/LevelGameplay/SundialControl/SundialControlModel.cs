@@ -11,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SundialControl
 {
-	// Token: 0x02006A08 RID: 27144
+	// Token: 0x02005B65 RID: 23397
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SundialControlModel : ModelBase
 	{
-		// Token: 0x1700988E RID: 39054
-		// (get) Token: 0x06043845 RID: 276549 RVA: 0x010833B2 File Offset: 0x010815B2
+		// Token: 0x17006D73 RID: 28019
+		// (get) Token: 0x06039891 RID: 235665 RVA: 0x010279D6 File Offset: 0x01025BD6
 		public SModelConfig ModelConfig
 		{
 			get
@@ -30,8 +30,8 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}
 		}
 
-		// Token: 0x1700988F RID: 39055
-		// (get) Token: 0x06043846 RID: 276550 RVA: 0x010833D9 File Offset: 0x010815D9
+		// Token: 0x17006D74 RID: 28020
+		// (get) Token: 0x06039892 RID: 235666 RVA: 0x010279FD File Offset: 0x01025BFD
 		public FVectorDouble TargetLocation
 		{
 			get
@@ -44,8 +44,8 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}
 		}
 
-		// Token: 0x17009890 RID: 39056
-		// (get) Token: 0x06043847 RID: 276551 RVA: 0x010833F4 File Offset: 0x010815F4
+		// Token: 0x17006D75 RID: 28021
+		// (get) Token: 0x06039893 RID: 235667 RVA: 0x01027A18 File Offset: 0x01025C18
 		public FRotator TargetRotation
 		{
 			get
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}
 		}
 
-		// Token: 0x06043848 RID: 276552 RVA: 0x01083410 File Offset: 0x01081610
+		// Token: 0x06039894 RID: 235668 RVA: 0x01027A34 File Offset: 0x01025C34
 		private void InitTargetActor()
 		{
 			if (!this.TargetActorInternal)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}
 		}
 
-		// Token: 0x06043849 RID: 276553 RVA: 0x010834DC File Offset: 0x010816DC
+		// Token: 0x06039895 RID: 235669 RVA: 0x01027B00 File Offset: 0x01025D00
 		public void InitRingActors(SceneInteractionLevel sceneInteractionInfo)
 		{
 			this.Rings = new List<RotatingRing>();
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			this.CurrentRingIndex = 0;
 		}
 
-		// Token: 0x0604384A RID: 276554 RVA: 0x010835AC File Offset: 0x010817AC
+		// Token: 0x06039896 RID: 235670 RVA: 0x01027BD0 File Offset: 0x01025DD0
 		public void ChangeCurrentRingIndex(int offset = 1)
 		{
 			this.CurrentRingIndex = (this.CurrentRingIndex + offset) % this.Rings.Count;
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			EventSystem.Instance.Emit<int>(EEventName.OnSundialRingSwitch, this.CurrentRingIndex);
 		}
 
-		// Token: 0x0604384B RID: 276555 RVA: 0x010835E4 File Offset: 0x010817E4
+		// Token: 0x06039897 RID: 235671 RVA: 0x01027C08 File Offset: 0x01025E08
 		public void SimpleAddCurRingSocket(int offset = 1)
 		{
 			RotatingRing rotatingRing = this.Rings[this.CurrentRingIndex];
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}
 		}
 
-		// Token: 0x0604384C RID: 276556 RVA: 0x0108368C File Offset: 0x0108188C
+		// Token: 0x06039898 RID: 235672 RVA: 0x01027CB0 File Offset: 0x01025EB0
 		public bool RotateCurrentRing(double delta)
 		{
 			RotatingRing rotatingRing = this.Rings[this.CurrentRingIndex];
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			return false;
 		}
 
-		// Token: 0x0604384D RID: 276557 RVA: 0x010837C4 File Offset: 0x010819C4
+		// Token: 0x06039899 RID: 235673 RVA: 0x01027DE8 File Offset: 0x01025FE8
 		public void ClearCacheActor()
 		{
 			if (this.TargetActorInternal)
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}
 		}
 
-		// Token: 0x0604384E RID: 276558 RVA: 0x0108381C File Offset: 0x01081A1C
+		// Token: 0x0603989A RID: 235674 RVA: 0x01027E40 File Offset: 0x01026040
 		public void ResetAll()
 		{
 			this.CurrentRingIndex = 0;
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			EventSystem.Instance.Emit<int>(EEventName.OnSundialRingSwitch, 0);
 		}
 
-		// Token: 0x0604384F RID: 276559 RVA: 0x010838B0 File Offset: 0x01081AB0
+		// Token: 0x0603989B RID: 235675 RVA: 0x01027ED4 File Offset: 0x010260D4
 		private void CheckRingShine()
 		{
 			for (int i = 0; i < this.Rings.Count; i++)
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}
 		}
 
-		// Token: 0x06043850 RID: 276560 RVA: 0x01083A48 File Offset: 0x01081C48
+		// Token: 0x0603989C RID: 235676 RVA: 0x0102806C File Offset: 0x0102626C
 		private void CheckFinish()
 		{
 			for (int i = 0; i < this.Rings.Count; i++)
@@ -254,14 +254,14 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			SundialControlController.Instance.PlayFinishAnimation();
 		}
 
-		// Token: 0x06043851 RID: 276561 RVA: 0x01083AF5 File Offset: 0x01081CF5
+		// Token: 0x0603989D RID: 235677 RVA: 0x01028119 File Offset: 0x01026319
 		public void UpdateTips()
 		{
 			EventSystem.Instance.Emit<int, int>(EEventName.OnNeedUpdateSundialTips, this.CurrentRingIndex, this.Rings[this.CurrentRingIndex].CurSocket);
 		}
 
-		// Token: 0x17009891 RID: 39057
-		// (get) Token: 0x06043852 RID: 276562 RVA: 0x01083B23 File Offset: 0x01081D23
+		// Token: 0x17006D76 RID: 28022
+		// (get) Token: 0x0603989E RID: 235678 RVA: 0x01028147 File Offset: 0x01026347
 		public static SundialControlModel Instance
 		{
 			get
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}
 		}
 
-		// Token: 0x06043853 RID: 276563 RVA: 0x01083B2A File Offset: 0x01081D2A
+		// Token: 0x0603989F RID: 235679 RVA: 0x0102814E File Offset: 0x0102634E
 		public static SundialControlModel GetOrCreateInstance()
 		{
 			if (SundialControlModel._Instance == null)
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			return SundialControlModel._Instance;
 		}
 
-		// Token: 0x06043854 RID: 276564 RVA: 0x01083B3E File Offset: 0x01081D3E
+		// Token: 0x060398A0 RID: 235680 RVA: 0x01028162 File Offset: 0x01026362
 		public static bool CreateInstance()
 		{
 			if (SundialControlModel._Instance != null)
@@ -291,24 +291,24 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			return true;
 		}
 
-		// Token: 0x06043855 RID: 276565 RVA: 0x01083B54 File Offset: 0x01081D54
+		// Token: 0x060398A1 RID: 235681 RVA: 0x01028178 File Offset: 0x01026378
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043856 RID: 276566 RVA: 0x01083B56 File Offset: 0x01081D56
+		// Token: 0x060398A2 RID: 235682 RVA: 0x0102817A File Offset: 0x0102637A
 		public static void ResetStaticDefaultValue()
 		{
 			SundialControlModel._Instance = null;
 		}
 
-		// Token: 0x06043857 RID: 276567 RVA: 0x01083B5E File Offset: 0x01081D5E
+		// Token: 0x060398A3 RID: 235683 RVA: 0x01028182 File Offset: 0x01026382
 		static SundialControlModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SundialControlModel.CreateStaticDefaultValue), new Action(SundialControlModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040233ED RID: 144365
+		// Token: 0x0401E5DF RID: 124383
 		[StaticVariableRuleIgnore]
 		public static readonly int[] finalSocket = new int[]
 		{
@@ -316,59 +316,59 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			2
 		};
 
-		// Token: 0x040233EE RID: 144366
+		// Token: 0x0401E5E0 RID: 124384
 		public const string SUNDIAL_MODEL_CONFIG_ID = "518056";
 
-		// Token: 0x040233EF RID: 144367
+		// Token: 0x0401E5E1 RID: 124385
 		public const string RING_ONE = "Ring_1";
 
-		// Token: 0x040233F0 RID: 144368
+		// Token: 0x0401E5E2 RID: 124386
 		public const string RING_TWO = "Ring_2";
 
-		// Token: 0x040233F1 RID: 144369
+		// Token: 0x0401E5E3 RID: 124387
 		public const string AK_ROTATING_1 = "play_amb_interact_sundial_outer_circle_loop";
 
-		// Token: 0x040233F2 RID: 144370
+		// Token: 0x0401E5E4 RID: 124388
 		public const string AK_STOP_ROTATING_1 = "play_amb_interact_sundial_outer_circle_stuck";
 
-		// Token: 0x040233F3 RID: 144371
+		// Token: 0x0401E5E5 RID: 124389
 		public const string AK_ROTATING_2 = "play_amb_interact_sundial_inner_circle_loop";
 
-		// Token: 0x040233F4 RID: 144372
+		// Token: 0x0401E5E6 RID: 124390
 		public const string AK_STOP_ROTATING_2 = "play_amb_interact_sundial_inner_circle_stuck";
 
-		// Token: 0x040233F5 RID: 144373
+		// Token: 0x0401E5E7 RID: 124391
 		public const string AK_SHOW_SHINE = "play_amb_interact_sundial_activate";
 
-		// Token: 0x040233F6 RID: 144374
+		// Token: 0x0401E5E8 RID: 124392
 		public const string AK_HIDE_SHINE = "play_amb_interact_sundial_deactivate";
 
-		// Token: 0x040233F7 RID: 144375
+		// Token: 0x0401E5E9 RID: 124393
 		public const string AK_FINISH = "play_amb_interact_sundial_finish";
 
-		// Token: 0x040233F8 RID: 144376
+		// Token: 0x0401E5EA RID: 124394
 		[Nullable(2)]
 		private SModelConfig ModelConfigInternal;
 
-		// Token: 0x040233F9 RID: 144377
+		// Token: 0x0401E5EB RID: 124395
 		private bool TargetActorInternal;
 
-		// Token: 0x040233FA RID: 144378
+		// Token: 0x0401E5EC RID: 124396
 		private FVectorDouble? TargetLocationInternal;
 
-		// Token: 0x040233FB RID: 144379
+		// Token: 0x0401E5ED RID: 124397
 		private FRotator? TargetRotationInternal;
 
-		// Token: 0x040233FC RID: 144380
+		// Token: 0x0401E5EE RID: 124398
 		private List<RotatingRing> Rings = new List<RotatingRing>();
 
-		// Token: 0x040233FD RID: 144381
+		// Token: 0x0401E5EF RID: 124399
 		private int CurrentRingIndex;
 
-		// Token: 0x040233FE RID: 144382
+		// Token: 0x0401E5F0 RID: 124400
 		private double RotatedAngle;
 
-		// Token: 0x040233FF RID: 144383
+		// Token: 0x0401E5F1 RID: 124401
 		[Nullable(2)]
 		private static SundialControlModel _Instance;
 	}

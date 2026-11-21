@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072CA RID: 29386
+	// Token: 0x0200644C RID: 25676
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CameraTransformBuffer
 	{
-		// Token: 0x0604818C RID: 295308 RVA: 0x0127CF60 File Offset: 0x0127B160
+		// Token: 0x0603E58F RID: 255375 RVA: 0x0121FA5C File Offset: 0x0121DC5C
 		public void Init(FightCameraLogicComponent camera)
 		{
 			this.Camera = camera;
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Camera
 			Log.Instance.Info(ELogModule.Camera, ELogAuthor.LJM, "[CameraTransformBuffer] Init", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0604818D RID: 295309 RVA: 0x0127CFAC File Offset: 0x0127B1AC
+		// Token: 0x0603E590 RID: 255376 RVA: 0x0121FAA8 File Offset: 0x0121DCA8
 		public void BufferPlayerLocation(float second, Vector outPlayerLocation)
 		{
 			if (this.Camera == null)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x0604818E RID: 295310 RVA: 0x0127D018 File Offset: 0x0127B218
+		// Token: 0x0603E591 RID: 255377 RVA: 0x0121FB14 File Offset: 0x0121DD14
 		public void StopBufferPlayerLocation()
 		{
 			foreach (IPlayerTransformBuffer playerTransformBuffer in this.CameraTransformBufferMap.Values)
@@ -45,18 +45,18 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x0604818F RID: 295311 RVA: 0x0127D070 File Offset: 0x0127B270
+		// Token: 0x0603E592 RID: 255378 RVA: 0x0121FB6C File Offset: 0x0121DD6C
 		public void Clear()
 		{
 			Log.Instance.Info(ELogModule.Camera, ELogAuthor.LJM, "[CameraTransformBuffer] Clear", default(ReadOnlySpan<ValueTuple<string, object>>));
 			this.Camera = null;
 		}
 
-		// Token: 0x040260AE RID: 155822
+		// Token: 0x04021391 RID: 136081
 		[Nullable(2)]
 		private FightCameraLogicComponent Camera;
 
-		// Token: 0x040260AF RID: 155823
+		// Token: 0x04021392 RID: 136082
 		private readonly Dictionary<ECameraTransformBufferType, IPlayerTransformBuffer> CameraTransformBufferMap = new Dictionary<ECameraTransformBufferType, IPlayerTransformBuffer>();
 	}
 }

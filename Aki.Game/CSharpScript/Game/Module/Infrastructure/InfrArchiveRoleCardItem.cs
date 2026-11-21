@@ -8,11 +8,11 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005908 RID: 22792
+	// Token: 0x020048E1 RID: 18657
 	public class InfrArchiveRoleCardItem : GridProxyAbstract<int>
 	{
-		// Token: 0x17008AD9 RID: 35545
-		// (get) Token: 0x06039E10 RID: 237072 RVA: 0x00DBF0FC File Offset: 0x00DBD2FC
+		// Token: 0x17005EA5 RID: 24229
+		// (get) Token: 0x0602ED33 RID: 191795 RVA: 0x00D0E394 File Offset: 0x00D0C594
 		public int MsgId
 		{
 			get
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039E11 RID: 237073 RVA: 0x00DBF104 File Offset: 0x00DBD304
+		// Token: 0x0602ED34 RID: 191796 RVA: 0x00D0E39C File Offset: 0x00D0C59C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -50,14 +50,14 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039E12 RID: 237074 RVA: 0x00DBF22E File Offset: 0x00DBD42E
+		// Token: 0x0602ED35 RID: 191797 RVA: 0x00D0E4C6 File Offset: 0x00D0C6C6
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.Id = data;
 			this.RefreshCardView();
 		}
 
-		// Token: 0x06039E13 RID: 237075 RVA: 0x00DBF240 File Offset: 0x00DBD440
+		// Token: 0x0602ED36 RID: 191798 RVA: 0x00D0E4D8 File Offset: 0x00D0C6D8
 		private void RefreshCardView()
 		{
 			InfrPhoneMessage? infrPhoneMessageConfigById = InfrastructureConfig.Instance.GetInfrPhoneMessageConfigById(this.Id);
@@ -68,14 +68,14 @@ namespace CSharpScript.Game.Module.Infrastructure
 			base.GetText(5).ShowTextNew(infrPhoneMessageConfigById.Value.Name);
 		}
 
-		// Token: 0x06039E14 RID: 237076 RVA: 0x00DBF2CD File Offset: 0x00DBD4CD
+		// Token: 0x0602ED37 RID: 191799 RVA: 0x00D0E565 File Offset: 0x00D0C765
 		[NullableContext(1)]
 		public void SetSelectedCallBack(Action<int> callback)
 		{
 			this.SelectedCallBack = callback;
 		}
 
-		// Token: 0x06039E15 RID: 237077 RVA: 0x00DBF2D6 File Offset: 0x00DBD4D6
+		// Token: 0x0602ED38 RID: 191800 RVA: 0x00D0E56E File Offset: 0x00D0C76E
 		private void OnClickBtnItem()
 		{
 			Action<int> selectedCallBack = this.SelectedCallBack;
@@ -86,32 +86,32 @@ namespace CSharpScript.Game.Module.Infrastructure
 			selectedCallBack(base.GridIndex);
 		}
 
-		// Token: 0x0401E309 RID: 123657
+		// Token: 0x04018DA6 RID: 101798
 		private int Id;
 
-		// Token: 0x0401E30A RID: 123658
+		// Token: 0x04018DA7 RID: 101799
 		[Nullable(2)]
 		public Action<int> SelectedCallBack;
 
-		// Token: 0x0200BB6F RID: 47983
+		// Token: 0x0200A57F RID: 42367
 		private class EChildType
 		{
-			// Token: 0x04038935 RID: 231733
+			// Token: 0x0403331F RID: 209695
 			public const int BtnItem = 0;
 
-			// Token: 0x04038936 RID: 231734
+			// Token: 0x04033320 RID: 209696
 			public const int PanelLock = 1;
 
-			// Token: 0x04038937 RID: 231735
+			// Token: 0x04033321 RID: 209697
 			public const int TextLockTitle = 2;
 
-			// Token: 0x04038938 RID: 231736
+			// Token: 0x04033322 RID: 209698
 			public const int PanelUnlock = 3;
 
-			// Token: 0x04038939 RID: 231737
+			// Token: 0x04033323 RID: 209699
 			public const int TextureCardRole = 4;
 
-			// Token: 0x0403893A RID: 231738
+			// Token: 0x04033324 RID: 209700
 			public const int TextTitle = 5;
 		}
 	}

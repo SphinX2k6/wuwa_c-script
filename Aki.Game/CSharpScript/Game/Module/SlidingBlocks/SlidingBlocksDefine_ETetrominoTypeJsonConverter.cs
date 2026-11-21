@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B8D RID: 19341
+	// Token: 0x02003B37 RID: 15159
 	public class SlidingBlocksDefine_ETetrominoTypeJsonConverter : JsonConverter<SlidingBlocksDefine.ETetrominoType>
 	{
-		// Token: 0x060321FE RID: 205310 RVA: 0x00BA4E30 File Offset: 0x00BA3030
+		// Token: 0x06026F8E RID: 159630 RVA: 0x00AE8F7C File Offset: 0x00AE717C
 		public override SlidingBlocksDefine.ETetrominoType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return SlidingBlocksDefine_ETetrominoTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060321FF RID: 205311 RVA: 0x00BA4E54 File Offset: 0x00BA3054
+		// Token: 0x06026F8F RID: 159631 RVA: 0x00AE8FA0 File Offset: 0x00AE71A0
 		public override void Write(Utf8JsonWriter writer, SlidingBlocksDefine.ETetrominoType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

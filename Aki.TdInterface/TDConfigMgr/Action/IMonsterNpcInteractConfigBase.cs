@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BF8 RID: 7160
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DE7 RID: 7655
 	public class IMonsterNpcInteractConfigBase
 	{
-		// Token: 0x06009955 RID: 39253 RVA: 0x00160E58 File Offset: 0x0015F058
+		// Token: 0x0600A285 RID: 41605 RVA: 0x00173DA4 File Offset: 0x00171FA4
 		private IMonsterNpcInteractConfigBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009956 RID: 39254 RVA: 0x00160E90 File Offset: 0x0015F090
+		// Token: 0x0600A286 RID: 41606 RVA: 0x00173DDC File Offset: 0x00171FDC
 		public static IMonsterNpcInteractConfigBase Create([Nullable(2)] IMonsterNpcInteractConfigBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009957 RID: 39255 RVA: 0x00160EA3 File Offset: 0x0015F0A3
+		// Token: 0x0600A287 RID: 41607 RVA: 0x00173DEF File Offset: 0x00171FEF
 		public static IMonsterNpcInteractConfigBase CreateFromSetValue([Nullable(2)] IMonsterNpcInteractConfigBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009958 RID: 39256 RVA: 0x00160EB6 File Offset: 0x0015F0B6
+		// Token: 0x0600A288 RID: 41608 RVA: 0x00173E02 File Offset: 0x00172002
 		public IMonsterNpcInteractConfigBase_SetValue ToSetValue()
 		{
 			return new IMonsterNpcInteractConfigBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700300D RID: 12301
-		// (get) Token: 0x06009959 RID: 39257 RVA: 0x00160EC9 File Offset: 0x0015F0C9
-		// (set) Token: 0x0600995A RID: 39258 RVA: 0x00160EF4 File Offset: 0x0015F0F4
+		// Token: 0x17003276 RID: 12918
+		// (get) Token: 0x0600A289 RID: 41609 RVA: 0x00173E15 File Offset: 0x00172015
+		// (set) Token: 0x0600A28A RID: 41610 RVA: 0x00173E40 File Offset: 0x00172040
 		public virtual EMonsterNpcInteractType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D5E RID: 23902
+		// Token: 0x04006285 RID: 25221
 		[Nullable(2)]
 		protected IMonsterNpcInteractConfigBase FbInstance;
 
-		// Token: 0x04005D5F RID: 23903
+		// Token: 0x04006286 RID: 25222
 		[Nullable(2)]
 		protected IMonsterNpcInteractConfigBase_SetValue PocoInterface;
 	}

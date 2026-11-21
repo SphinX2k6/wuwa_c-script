@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001B8E RID: 7054
+// Token: 0x0200104D RID: 4173
 [Nullable(new byte[]
 {
 	0,
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class FloroRanchDungeonSettleRewardItem : GridProxyAbstract<FloroRanchSubInsSettleReward>
 {
-	// Token: 0x0600D20E RID: 53774 RVA: 0x00302CF0 File Offset: 0x00300EF0
+	// Token: 0x0600A61F RID: 42527 RVA: 0x0030DDC8 File Offset: 0x0030BFC8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -44,7 +44,7 @@ public class FloroRanchDungeonSettleRewardItem : GridProxyAbstract<FloroRanchSub
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D20F RID: 53775 RVA: 0x00302E1C File Offset: 0x0030101C
+	// Token: 0x0600A620 RID: 42528 RVA: 0x0030DEF4 File Offset: 0x0030C0F4
 	[NullableContext(1)]
 	public override void Refresh(FloroRanchSubInsSettleReward data, bool isSelected, int gridIndex)
 	{
@@ -62,7 +62,7 @@ public class FloroRanchDungeonSettleRewardItem : GridProxyAbstract<FloroRanchSub
 		this.RefreshSkill(data.Id);
 	}
 
-	// Token: 0x0600D210 RID: 53776 RVA: 0x00302E68 File Offset: 0x00301068
+	// Token: 0x0600A621 RID: 42529 RVA: 0x0030DF40 File Offset: 0x0030C140
 	private void RefreshCard(int id)
 	{
 		FloroRanchCardData floroRanchCardData = FloroRanchModel.Instance.GetFloroRanchCardData(id);
@@ -85,7 +85,7 @@ public class FloroRanchDungeonSettleRewardItem : GridProxyAbstract<FloroRanchSub
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x0600D211 RID: 53777 RVA: 0x00302F00 File Offset: 0x00301100
+	// Token: 0x0600A622 RID: 42530 RVA: 0x0030DFD8 File Offset: 0x0030C1D8
 	private void RefreshToy(int id)
 	{
 		FloroRanchToyData floroRanchToyData = FloroRanchModel.Instance.GetFloroRanchToyData(id);
@@ -119,7 +119,7 @@ public class FloroRanchDungeonSettleRewardItem : GridProxyAbstract<FloroRanchSub
 		item3.SetUIActive(false);
 	}
 
-	// Token: 0x0600D212 RID: 53778 RVA: 0x00302FC4 File Offset: 0x003011C4
+	// Token: 0x0600A623 RID: 42531 RVA: 0x0030E09C File Offset: 0x0030C29C
 	private void RefreshSkill(int id)
 	{
 		FloroRanchSkillData floroRanchSkillData = FloroRanchModel.Instance.GetFloroRanchSkillData(id);
@@ -139,7 +139,7 @@ public class FloroRanchDungeonSettleRewardItem : GridProxyAbstract<FloroRanchSub
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x0600D213 RID: 53779 RVA: 0x00303030 File Offset: 0x00301230
+	// Token: 0x0600A624 RID: 42532 RVA: 0x0030E108 File Offset: 0x0030C308
 	private void OnClickButton()
 	{
 		if (this.Data == null)
@@ -167,29 +167,29 @@ public class FloroRanchDungeonSettleRewardItem : GridProxyAbstract<FloroRanchSub
 		}
 	}
 
-	// Token: 0x04006048 RID: 24648
+	// Token: 0x04006117 RID: 24855
 	[Nullable(2)]
 	private FloroRanchSubInsSettleReward Data;
 
-	// Token: 0x02008115 RID: 33045
+	// Token: 0x020072A3 RID: 29347
 	private class EComponent
 	{
-		// Token: 0x0402A21E RID: 172574
+		// Token: 0x04025552 RID: 152914
 		public const int Button = 0;
 
-		// Token: 0x0402A21F RID: 172575
+		// Token: 0x04025553 RID: 152915
 		public const int QualitySprite = 1;
 
-		// Token: 0x0402A220 RID: 172576
+		// Token: 0x04025554 RID: 152916
 		public const int Texture = 2;
 
-		// Token: 0x0402A221 RID: 172577
+		// Token: 0x04025555 RID: 152917
 		public const int ItemToyRaceType = 3;
 
-		// Token: 0x0402A222 RID: 172578
+		// Token: 0x04025556 RID: 152918
 		public const int TextureToyRaceIcon = 4;
 
-		// Token: 0x0402A223 RID: 172579
+		// Token: 0x04025557 RID: 152919
 		public const int ItemPhantomIcon = 5;
 	}
 }

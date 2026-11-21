@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200420B RID: 16907
+	// Token: 0x02004667 RID: 18023
 	public struct ITrackReturnDungeon : IFlatbufferObject
 	{
-		// Token: 0x17007815 RID: 30741
-		// (get) Token: 0x06018F98 RID: 102296 RVA: 0x0039828C File Offset: 0x0039648C
+		// Token: 0x17007E46 RID: 32326
+		// (get) Token: 0x0601A704 RID: 108292 RVA: 0x003C3964 File Offset: 0x003C1B64
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018F99 RID: 102297 RVA: 0x00398299 File Offset: 0x00396499
+		// Token: 0x0601A705 RID: 108293 RVA: 0x003C3971 File Offset: 0x003C1B71
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018F9A RID: 102298 RVA: 0x003982A0 File Offset: 0x003964A0
+		// Token: 0x0601A706 RID: 108294 RVA: 0x003C3978 File Offset: 0x003C1B78
 		public static ITrackReturnDungeon GetRootAsITrackReturnDungeon(ByteBuffer _bb)
 		{
 			return ITrackReturnDungeon.GetRootAsITrackReturnDungeon(_bb, default(ITrackReturnDungeon));
 		}
 
-		// Token: 0x06018F9B RID: 102299 RVA: 0x003982BC File Offset: 0x003964BC
+		// Token: 0x0601A707 RID: 108295 RVA: 0x003C3994 File Offset: 0x003C1B94
 		public static ITrackReturnDungeon GetRootAsITrackReturnDungeon(ByteBuffer _bb, ITrackReturnDungeon obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018F9C RID: 102300 RVA: 0x003982D9 File Offset: 0x003964D9
+		// Token: 0x0601A708 RID: 108296 RVA: 0x003C39B1 File Offset: 0x003C1BB1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018F9D RID: 102301 RVA: 0x003982E8 File Offset: 0x003964E8
+		// Token: 0x0601A709 RID: 108297 RVA: 0x003C39C0 File Offset: 0x003C1BC0
 		public ITrackReturnDungeon __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007816 RID: 30742
-		// (get) Token: 0x06018F9E RID: 102302 RVA: 0x003982F8 File Offset: 0x003964F8
+		// Token: 0x17007E47 RID: 32327
+		// (get) Token: 0x0601A70A RID: 108298 RVA: 0x003C39D0 File Offset: 0x003C1BD0
 		public int DungeonId
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007817 RID: 30743
-		// (get) Token: 0x06018F9F RID: 102303 RVA: 0x00398334 File Offset: 0x00396534
+		// Token: 0x17007E48 RID: 32328
+		// (get) Token: 0x0601A70B RID: 108299 RVA: 0x003C3A0C File Offset: 0x003C1C0C
 		public bool IsRegroup
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007818 RID: 30744
-		// (get) Token: 0x06018FA0 RID: 102304 RVA: 0x00398374 File Offset: 0x00396574
+		// Token: 0x17007E49 RID: 32329
+		// (get) Token: 0x0601A70C RID: 108300 RVA: 0x003C3A4C File Offset: 0x003C1C4C
 		public TTeleportTransitionOption TransitionOptionType
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018FA1 RID: 102305 RVA: 0x003983B0 File Offset: 0x003965B0
+		// Token: 0x0601A70D RID: 108301 RVA: 0x003C3A88 File Offset: 0x003C1C88
 		public TTable? TransitionOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -100,74 +100,74 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06018FA2 RID: 102306 RVA: 0x003983F8 File Offset: 0x003965F8
+		// Token: 0x0601A70E RID: 108302 RVA: 0x003C3AD0 File Offset: 0x003C1CD0
 		public ITeleportTransitionInDigitalScreen TransitionOptionAsITeleportTransitionInDigitalScreen()
 		{
 			return this.TransitionOption<ITeleportTransitionInDigitalScreen>().Value;
 		}
 
-		// Token: 0x06018FA3 RID: 102307 RVA: 0x00398414 File Offset: 0x00396614
+		// Token: 0x0601A70F RID: 108303 RVA: 0x003C3AEC File Offset: 0x003C1CEC
 		public ITeleportTransitionInSeamlessType TransitionOptionAsITeleportTransitionInSeamlessType()
 		{
 			return this.TransitionOption<ITeleportTransitionInSeamlessType>().Value;
 		}
 
-		// Token: 0x06018FA4 RID: 102308 RVA: 0x00398430 File Offset: 0x00396630
+		// Token: 0x0601A710 RID: 108304 RVA: 0x003C3B08 File Offset: 0x003C1D08
 		public ITeleportTransitionWithCenterText TransitionOptionAsITeleportTransitionWithCenterText()
 		{
 			return this.TransitionOption<ITeleportTransitionWithCenterText>().Value;
 		}
 
-		// Token: 0x06018FA5 RID: 102309 RVA: 0x0039844C File Offset: 0x0039664C
+		// Token: 0x0601A711 RID: 108305 RVA: 0x003C3B24 File Offset: 0x003C1D24
 		public ITeleportTransitionWithCharacterDisplay TransitionOptionAsITeleportTransitionWithCharacterDisplay()
 		{
 			return this.TransitionOption<ITeleportTransitionWithCharacterDisplay>().Value;
 		}
 
-		// Token: 0x06018FA6 RID: 102310 RVA: 0x00398468 File Offset: 0x00396668
+		// Token: 0x0601A712 RID: 108306 RVA: 0x003C3B40 File Offset: 0x003C1D40
 		public ITeleportTransitionWithCustomLoading TransitionOptionAsITeleportTransitionWithCustomLoading()
 		{
 			return this.TransitionOption<ITeleportTransitionWithCustomLoading>().Value;
 		}
 
-		// Token: 0x06018FA7 RID: 102311 RVA: 0x00398484 File Offset: 0x00396684
+		// Token: 0x0601A713 RID: 108307 RVA: 0x003C3B5C File Offset: 0x003C1D5C
 		public ITeleportTransitionWithCustomScreen TransitionOptionAsITeleportTransitionWithCustomScreen()
 		{
 			return this.TransitionOption<ITeleportTransitionWithCustomScreen>().Value;
 		}
 
-		// Token: 0x06018FA8 RID: 102312 RVA: 0x003984A0 File Offset: 0x003966A0
+		// Token: 0x0601A714 RID: 108308 RVA: 0x003C3B78 File Offset: 0x003C1D78
 		public ITeleportTransitionWithEffect TransitionOptionAsITeleportTransitionWithEffect()
 		{
 			return this.TransitionOption<ITeleportTransitionWithEffect>().Value;
 		}
 
-		// Token: 0x06018FA9 RID: 102313 RVA: 0x003984BC File Offset: 0x003966BC
+		// Token: 0x0601A715 RID: 108309 RVA: 0x003C3B94 File Offset: 0x003C1D94
 		public ITeleportTransitionWithFadeInScreen TransitionOptionAsITeleportTransitionWithFadeInScreen()
 		{
 			return this.TransitionOption<ITeleportTransitionWithFadeInScreen>().Value;
 		}
 
-		// Token: 0x06018FAA RID: 102314 RVA: 0x003984D8 File Offset: 0x003966D8
+		// Token: 0x0601A716 RID: 108310 RVA: 0x003C3BB0 File Offset: 0x003C1DB0
 		public ITeleportTransitionWithMp4 TransitionOptionAsITeleportTransitionWithMp4()
 		{
 			return this.TransitionOption<ITeleportTransitionWithMp4>().Value;
 		}
 
-		// Token: 0x06018FAB RID: 102315 RVA: 0x003984F4 File Offset: 0x003966F4
+		// Token: 0x0601A717 RID: 108311 RVA: 0x003C3BCC File Offset: 0x003C1DCC
 		public ITeleportTransitionWithPlayFlow TransitionOptionAsITeleportTransitionWithPlayFlow()
 		{
 			return this.TransitionOption<ITeleportTransitionWithPlayFlow>().Value;
 		}
 
-		// Token: 0x06018FAC RID: 102316 RVA: 0x00398510 File Offset: 0x00396710
+		// Token: 0x0601A718 RID: 108312 RVA: 0x003C3BE8 File Offset: 0x003C1DE8
 		public ITeleportTransitionWithSpecialCustomLoading TransitionOptionAsITeleportTransitionWithSpecialCustomLoading()
 		{
 			return this.TransitionOption<ITeleportTransitionWithSpecialCustomLoading>().Value;
 		}
 
-		// Token: 0x17007819 RID: 30745
-		// (get) Token: 0x06018FAD RID: 102317 RVA: 0x0039852C File Offset: 0x0039672C
+		// Token: 0x17007E4A RID: 32330
+		// (get) Token: 0x0601A719 RID: 108313 RVA: 0x003C3C04 File Offset: 0x003C1E04
 		public string TidTip
 		{
 			get
@@ -181,20 +181,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018FAE RID: 102318 RVA: 0x00398564 File Offset: 0x00396764
+		// Token: 0x0601A71A RID: 108314 RVA: 0x003C3C3C File Offset: 0x003C1E3C
 		public Span<byte> GetTidTipBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06018FAF RID: 102319 RVA: 0x00398574 File Offset: 0x00396774
+		// Token: 0x0601A71B RID: 108315 RVA: 0x003C3C4C File Offset: 0x003C1E4C
 		public byte[] GetTidTipArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x1700781A RID: 30746
-		// (get) Token: 0x06018FB0 RID: 102320 RVA: 0x00398584 File Offset: 0x00396784
+		// Token: 0x17007E4B RID: 32331
+		// (get) Token: 0x0601A71C RID: 108316 RVA: 0x003C3C5C File Offset: 0x003C1E5C
 		public byte NullMask
 		{
 			get
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018FB1 RID: 102321 RVA: 0x003985C1 File Offset: 0x003967C1
+		// Token: 0x0601A71D RID: 108317 RVA: 0x003C3C99 File Offset: 0x003C1E99
 		public static Offset<ITrackReturnDungeon> CreateITrackReturnDungeon(FlatBufferBuilder builder, int DungeonId = 0, bool IsRegroup = false, TTeleportTransitionOption TransitionOption_type = TTeleportTransitionOption.NONE, int TransitionOptionOffset = 0, StringOffset TidTipOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -221,55 +221,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITrackReturnDungeon.EndITrackReturnDungeon(builder);
 		}
 
-		// Token: 0x06018FB2 RID: 102322 RVA: 0x003985FD File Offset: 0x003967FD
+		// Token: 0x0601A71E RID: 108318 RVA: 0x003C3CD5 File Offset: 0x003C1ED5
 		public static void StartITrackReturnDungeon(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06018FB3 RID: 102323 RVA: 0x00398606 File Offset: 0x00396806
+		// Token: 0x0601A71F RID: 108319 RVA: 0x003C3CDE File Offset: 0x003C1EDE
 		public static void AddDungeonId(FlatBufferBuilder builder, int dungeonId)
 		{
 			builder.AddInt(0, dungeonId, 0);
 		}
 
-		// Token: 0x06018FB4 RID: 102324 RVA: 0x00398611 File Offset: 0x00396811
+		// Token: 0x0601A720 RID: 108320 RVA: 0x003C3CE9 File Offset: 0x003C1EE9
 		public static void AddIsRegroup(FlatBufferBuilder builder, bool isRegroup)
 		{
 			builder.AddBool(1, isRegroup, false);
 		}
 
-		// Token: 0x06018FB5 RID: 102325 RVA: 0x0039861C File Offset: 0x0039681C
+		// Token: 0x0601A721 RID: 108321 RVA: 0x003C3CF4 File Offset: 0x003C1EF4
 		public static void AddTransitionOptionType(FlatBufferBuilder builder, TTeleportTransitionOption transitionOptionType)
 		{
 			builder.AddByte(2, (byte)transitionOptionType, 0);
 		}
 
-		// Token: 0x06018FB6 RID: 102326 RVA: 0x00398627 File Offset: 0x00396827
+		// Token: 0x0601A722 RID: 108322 RVA: 0x003C3CFF File Offset: 0x003C1EFF
 		public static void AddTransitionOption(FlatBufferBuilder builder, int transitionOptionOffset)
 		{
 			builder.AddOffset(3, transitionOptionOffset, 0);
 		}
 
-		// Token: 0x06018FB7 RID: 102327 RVA: 0x00398632 File Offset: 0x00396832
+		// Token: 0x0601A723 RID: 108323 RVA: 0x003C3D0A File Offset: 0x003C1F0A
 		public static void AddTidTip(FlatBufferBuilder builder, StringOffset tidTipOffset)
 		{
 			builder.AddOffset(4, tidTipOffset.Value, 0);
 		}
 
-		// Token: 0x06018FB8 RID: 102328 RVA: 0x00398642 File Offset: 0x00396842
+		// Token: 0x0601A724 RID: 108324 RVA: 0x003C3D1A File Offset: 0x003C1F1A
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06018FB9 RID: 102329 RVA: 0x0039864D File Offset: 0x0039684D
+		// Token: 0x0601A725 RID: 108325 RVA: 0x003C3D25 File Offset: 0x003C1F25
 		public static Offset<ITrackReturnDungeon> EndITrackReturnDungeon(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrackReturnDungeon>(builder.EndTable());
 		}
 
-		// Token: 0x06018FBA RID: 102330 RVA: 0x0039865C File Offset: 0x0039685C
+		// Token: 0x0601A726 RID: 108326 RVA: 0x003C3D34 File Offset: 0x003C1F34
 		public ITrackReturnDungeonT UnPack()
 		{
 			ITrackReturnDungeonT trackReturnDungeonT = new ITrackReturnDungeonT();
@@ -277,7 +277,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return trackReturnDungeonT;
 		}
 
-		// Token: 0x06018FBB RID: 102331 RVA: 0x00398678 File Offset: 0x00396878
+		// Token: 0x0601A727 RID: 108327 RVA: 0x003C3D50 File Offset: 0x003C1F50
 		public void UnPackTo(ITrackReturnDungeonT _o)
 		{
 			_o.DungeonId = this.DungeonId;
@@ -324,7 +324,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06018FBC RID: 102332 RVA: 0x00398998 File Offset: 0x00396B98
+		// Token: 0x0601A728 RID: 108328 RVA: 0x003C4070 File Offset: 0x003C2270
 		public static Offset<ITrackReturnDungeon> Pack(FlatBufferBuilder builder, ITrackReturnDungeonT _o)
 		{
 			if (_o == null)
@@ -337,7 +337,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITrackReturnDungeon.CreateITrackReturnDungeon(builder, _o.DungeonId, _o.IsRegroup, transitionOption_type, transitionOptionOffset, tidTipOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400BE79 RID: 48761
+		// Token: 0x0400C886 RID: 51334
 		private Table __p;
 	}
 }

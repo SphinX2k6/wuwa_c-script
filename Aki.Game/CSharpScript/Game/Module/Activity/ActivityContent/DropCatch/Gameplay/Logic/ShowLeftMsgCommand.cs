@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006726 RID: 26406
+	// Token: 0x02005676 RID: 22134
 	public class ShowLeftMsgCommand : IDropCatchCommand
 	{
-		// Token: 0x06041EAA RID: 269994 RVA: 0x00FFCEF8 File Offset: 0x00FFB0F8
+		// Token: 0x060369F6 RID: 223734 RVA: 0x00F3E2C4 File Offset: 0x00F3C4C4
 		[NullableContext(1)]
 		public void Execute(ICommandContext context, [Nullable(2)] object @params)
 		{

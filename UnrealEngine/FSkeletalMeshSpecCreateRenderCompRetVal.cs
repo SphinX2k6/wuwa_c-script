@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200193A RID: 6458
+	// Token: 0x0200041C RID: 1052
 	public sealed class FSkeletalMeshSpecCreateRenderCompRetVal : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06017F23 RID: 98083 RVA: 0x00231581 File Offset: 0x0022F781
+		// Token: 0x060065D7 RID: 26071 RVA: 0x00091D13 File Offset: 0x0008FF13
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSkeletalMeshSpecCreateRenderCompRetVal.StaticFunctionPtr();
 		}
 
-		// Token: 0x06017F24 RID: 98084 RVA: 0x0023158D File Offset: 0x0022F78D
+		// Token: 0x060065D8 RID: 26072 RVA: 0x00091D1F File Offset: 0x0008FF1F
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSkeletalMeshSpecCreateRenderCompRetVal._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FSkeletalMeshSpecCreateRenderCompRetVal._FunctionPtr;
 		}
 
-		// Token: 0x06017F25 RID: 98085 RVA: 0x002315B0 File Offset: 0x0022F7B0
+		// Token: 0x060065D9 RID: 26073 RVA: 0x00091D42 File Offset: 0x0008FF42
 		public FSkeletalMeshSpecCreateRenderCompRetVal()
 		{
 		}
 
-		// Token: 0x06017F26 RID: 98086 RVA: 0x002315B8 File Offset: 0x0022F7B8
+		// Token: 0x060065DA RID: 26074 RVA: 0x00091D4A File Offset: 0x0008FF4A
 		[NullableContext(2)]
 		public FSkeletalMeshSpecCreateRenderCompRetVal(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017F27 RID: 98087 RVA: 0x002315C2 File Offset: 0x0022F7C2
+		// Token: 0x060065DB RID: 26075 RVA: 0x00091D54 File Offset: 0x0008FF54
 		public FSkeletalMeshSpecCreateRenderCompRetVal(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017F28 RID: 98088 RVA: 0x002315CD File Offset: 0x0022F7CD
+		// Token: 0x060065DC RID: 26076 RVA: 0x00091D5F File Offset: 0x0008FF5F
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<UActorComponent, USkeletalMeshComponent, AActor, UActorComponent>) ?? ((Func<UActorComponent, USkeletalMeshComponent, AActor, UActorComponent>)Delegate.CreateDelegate(typeof(Func<UActorComponent, USkeletalMeshComponent, AActor, UActorComponent>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017F29 RID: 98089 RVA: 0x002315FF File Offset: 0x0022F7FF
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060065DD RID: 26077 RVA: 0x00091D91 File Offset: 0x0008FF91
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -71,10 +70,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FSkeletalMeshSpecCreateRenderCompRetVal.RegisterId);
 		}
 
-		// Token: 0x06017F2A RID: 98090 RVA: 0x0023163C File Offset: 0x0022F83C
+		// Token: 0x060065DE RID: 26078 RVA: 0x00091DCC File Offset: 0x0008FFCC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe UActorComponent Execute(UActorComponent CharRenderingComponent, USkeletalMeshComponent SkeletalMeshComponent, AActor Owner)
 		{
 			FSkeletalMeshSpecCreateRenderCompRetVal.__FSkeletalMeshSpecCreateRenderCompRetVal_DelegateParams* ptr = stackalloc FSkeletalMeshSpecCreateRenderCompRetVal.__FSkeletalMeshSpecCreateRenderCompRetVal_DelegateParams[(UIntPtr)47] + 15L / (long)sizeof(FSkeletalMeshSpecCreateRenderCompRetVal.__FSkeletalMeshSpecCreateRenderCompRetVal_DelegateParams) & -16L;
@@ -86,10 +84,9 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UActorComponent>(ptr->__Result);
 		}
 
-		// Token: 0x06017F2B RID: 98091 RVA: 0x002316C0 File Offset: 0x0022F8C0
+		// Token: 0x060065DF RID: 26079 RVA: 0x00091E50 File Offset: 0x00090050
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<UActorComponent, USkeletalMeshComponent, AActor, UActorComponent> func = target as Func<UActorComponent, USkeletalMeshComponent, AActor, UActorComponent>;
@@ -104,43 +101,43 @@ namespace UnrealEngine
 			((FSkeletalMeshSpecCreateRenderCompRetVal.__FSkeletalMeshSpecCreateRenderCompRetVal_DelegateParams*)__Parameters)->__Result = ((uactorComponent != null) ? uactorComponent.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0400CF57 RID: 53079
+		// Token: 0x04002AD8 RID: 10968
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CF58 RID: 53080
+		// Token: 0x04002AD9 RID: 10969
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.SkeletalMeshSpecCreateRenderCompRetVal__DelegateSignature";
 
-		// Token: 0x0400CF59 RID: 53081
+		// Token: 0x04002ADA RID: 10970
 		private static int RegisterId;
 
-		// Token: 0x02002FFD RID: 12285
+		// Token: 0x02000B11 RID: 2833
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __FSkeletalMeshSpecCreateRenderCompRetVal_DelegateParams
+		private ref struct __FSkeletalMeshSpecCreateRenderCompRetVal_DelegateParams
 		{
-			// Token: 0x04016C0A RID: 93194
+			// Token: 0x04005BB3 RID: 23475
 			[FieldOffset(0)]
 			public IntPtr CharRenderingComponent;
 
-			// Token: 0x04016C0B RID: 93195
+			// Token: 0x04005BB4 RID: 23476
 			[FieldOffset(8)]
 			public IntPtr SkeletalMeshComponent;
 
-			// Token: 0x04016C0C RID: 93196
+			// Token: 0x04005BB5 RID: 23477
 			[FieldOffset(16)]
 			public IntPtr Owner;
 
-			// Token: 0x04016C0D RID: 93197
+			// Token: 0x04005BB6 RID: 23478
 			[FieldOffset(24)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02002FFE RID: 12286
+		// Token: 0x02000B12 RID: 2834
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016C0E RID: 93198
+			// Token: 0x04005BB7 RID: 23479
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

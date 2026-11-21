@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
-using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x020000C7 RID: 199
+// Token: 0x020000C9 RID: 201
 [NullableContext(1)]
 [Nullable(0)]
 public class PerfSight : Singleton
 {
-	// Token: 0x0600061F RID: 1567 RVA: 0x00020C94 File Offset: 0x0001EE94
+	// Token: 0x06000660 RID: 1632 RVA: 0x000211C0 File Offset: 0x0001F3C0
 	public bool Initialize()
 	{
 		if (!this.IsEnable)
@@ -37,68 +36,61 @@ public class PerfSight : Singleton
 		{
 			UPerfSightHelper.InitContext("688476493");
 		}
-		FKuroPerfSightHelper.SetFlameGraphQueueSize(20480);
-		FKuroPerfSightHelper.SetFlameGraphDropThresholds(Info.Instance.IsPlayInEditor ? 100000 : 50000);
-		if (!Info.Instance.IsPlayInEditor && !Info.Instance.IsPs5Platform())
-		{
-			FKuroPerfSightHelper.RegisterOnFrameBegin("FrameTime");
-			FKuroPerfSightHelper.RegisterTickGroupEvent();
-		}
 		return true;
 	}
 
-	// Token: 0x06000620 RID: 1568 RVA: 0x00020D4A File Offset: 0x0001EF4A
+	// Token: 0x06000661 RID: 1633 RVA: 0x00021228 File Offset: 0x0001F428
 	public void SetPcAppVersion(string version)
 	{
 		UPerfSightHelper.SetPCAppVersion(version);
 	}
 
-	// Token: 0x06000621 RID: 1569 RVA: 0x00020D52 File Offset: 0x0001EF52
+	// Token: 0x06000662 RID: 1634 RVA: 0x00021230 File Offset: 0x0001F430
 	public void SetVersionIden(string version)
 	{
 		UPerfSightHelper.SetVersionIden(version);
 	}
 
-	// Token: 0x06000622 RID: 1570 RVA: 0x00020D5A File Offset: 0x0001EF5A
+	// Token: 0x06000663 RID: 1635 RVA: 0x00021238 File Offset: 0x0001F438
 	[NullableContext(2)]
 	public void PostEvent(int key, string info = null)
 	{
 		UPerfSightHelper.PostEvent(key, info);
 	}
 
-	// Token: 0x06000623 RID: 1571 RVA: 0x00020D63 File Offset: 0x0001EF63
+	// Token: 0x06000664 RID: 1636 RVA: 0x00021241 File Offset: 0x0001F441
 	public void MarkLevelLoad(string sceneName, int? quality = null)
 	{
 		UPerfSightHelper.MarkLevelLoad(sceneName, quality.GetValueOrDefault());
 	}
 
-	// Token: 0x06000624 RID: 1572 RVA: 0x00020D72 File Offset: 0x0001EF72
+	// Token: 0x06000665 RID: 1637 RVA: 0x00021250 File Offset: 0x0001F450
 	public void MarkLevelFin()
 	{
 		UPerfSightHelper.MarkLevelFin();
 	}
 
-	// Token: 0x06000625 RID: 1573 RVA: 0x00020D79 File Offset: 0x0001EF79
+	// Token: 0x06000666 RID: 1638 RVA: 0x00021257 File Offset: 0x0001F457
 	public void MarkLevelLoadCompleted()
 	{
 		UPerfSightHelper.MarkLevelLoadCompleted();
 	}
 
-	// Token: 0x06000626 RID: 1574 RVA: 0x00020D80 File Offset: 0x0001EF80
+	// Token: 0x06000667 RID: 1639 RVA: 0x0002125E File Offset: 0x0001F45E
 	public void SetUserId(string playerId)
 	{
 		UPerfSightHelper.SetUserId(playerId);
 	}
 
-	// Token: 0x06000627 RID: 1575 RVA: 0x00020D88 File Offset: 0x0001EF88
+	// Token: 0x06000668 RID: 1640 RVA: 0x00021266 File Offset: 0x0001F466
 	[NullableContext(2)]
 	public void PostNetworkLatency(int latency, string customInfo = null, string ipAddress = null)
 	{
 		UPerfSightHelper.PostNetworkLatency(latency, customInfo, ipAddress);
 	}
 
-	// Token: 0x170000D2 RID: 210
-	// (get) Token: 0x06000628 RID: 1576 RVA: 0x00020D92 File Offset: 0x0001EF92
+	// Token: 0x170000E4 RID: 228
+	// (get) Token: 0x06000669 RID: 1641 RVA: 0x00021270 File Offset: 0x0001F470
 	public static PerfSight Instance
 	{
 		get
@@ -112,13 +104,13 @@ public class PerfSight : Singleton
 		}
 	}
 
-	// Token: 0x06000629 RID: 1577 RVA: 0x00020DB5 File Offset: 0x0001EFB5
+	// Token: 0x0600066A RID: 1642 RVA: 0x00021293 File Offset: 0x0001F493
 	public static void CreateStaticDefaultValue()
 	{
 		PerfSight.OnCreateStaticDefaultValue();
 	}
 
-	// Token: 0x0600062A RID: 1578 RVA: 0x00020DBC File Offset: 0x0001EFBC
+	// Token: 0x0600066B RID: 1643 RVA: 0x0002129A File Offset: 0x0001F49A
 	public static void ResetStaticDefaultValue()
 	{
 		PerfSight instance = PerfSight._instance;
@@ -130,39 +122,39 @@ public class PerfSight : Singleton
 		PerfSight.OnResetStaticDefaultValue();
 	}
 
-	// Token: 0x0600062B RID: 1579 RVA: 0x00020DDA File Offset: 0x0001EFDA
+	// Token: 0x0600066C RID: 1644 RVA: 0x000212B8 File Offset: 0x0001F4B8
 	private static void OnCreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600062C RID: 1580 RVA: 0x00020DDC File Offset: 0x0001EFDC
+	// Token: 0x0600066D RID: 1645 RVA: 0x000212BA File Offset: 0x0001F4BA
 	private static void OnResetStaticDefaultValue()
 	{
 		PerfSight.IsGlobalAreaHook = null;
 	}
 
-	// Token: 0x0600062D RID: 1581 RVA: 0x00020DE4 File Offset: 0x0001EFE4
+	// Token: 0x0600066E RID: 1646 RVA: 0x000212C2 File Offset: 0x0001F4C2
 	static PerfSight()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PerfSight.CreateStaticDefaultValue), new Action(PerfSight.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040004F6 RID: 1270
+	// Token: 0x04000504 RID: 1284
 	public static Func<bool> IsGlobalAreaHook;
 
-	// Token: 0x040004F7 RID: 1271
+	// Token: 0x04000505 RID: 1285
 	private const bool DEBUG_LOG = false;
 
-	// Token: 0x040004F8 RID: 1272
+	// Token: 0x04000506 RID: 1286
 	private const string APP_ID_LOCAL = "688476493";
 
-	// Token: 0x040004F9 RID: 1273
+	// Token: 0x04000507 RID: 1287
 	private const string APP_ID_GLOBAL = "424155224";
 
-	// Token: 0x040004FA RID: 1274
+	// Token: 0x04000508 RID: 1288
 	public bool IsEnable = true;
 
-	// Token: 0x040004FB RID: 1275
+	// Token: 0x04000509 RID: 1289
 	[Nullable(2)]
 	private static PerfSight _instance;
 }

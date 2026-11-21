@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012A7 RID: 4775
+// Token: 0x0200075B RID: 1883
 [NullableContext(1)]
 [Nullable(0)]
 public class LongShanView : UiViewBase
 {
-	// Token: 0x060082F7 RID: 33527 RVA: 0x001BD86B File Offset: 0x001BBA6B
+	// Token: 0x0600568E RID: 22158 RVA: 0x001C65FB File Offset: 0x001C47FB
 	public LongShanView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x060082F8 RID: 33528 RVA: 0x001BD874 File Offset: 0x001BBA74
+	// Token: 0x0600568F RID: 22159 RVA: 0x001C6604 File Offset: 0x001C4804
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -61,21 +60,21 @@ public class LongShanView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060082F9 RID: 33529 RVA: 0x001BDA47 File Offset: 0x001BBC47
+	// Token: 0x06005690 RID: 22160 RVA: 0x001C67D7 File Offset: 0x001C49D7
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.LongShanUpdate, new Action(this.RefreshTasks));
 		EventSystem.Instance.Add<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 	}
 
-	// Token: 0x060082FA RID: 33530 RVA: 0x001BDA81 File Offset: 0x001BBC81
+	// Token: 0x06005691 RID: 22161 RVA: 0x001C6811 File Offset: 0x001C4A11
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.LongShanUpdate, new Action(this.RefreshTasks));
 		EventSystem.Instance.Remove(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 	}
 
-	// Token: 0x060082FB RID: 33531 RVA: 0x001BDABC File Offset: 0x001BBCBC
+	// Token: 0x06005692 RID: 22162 RVA: 0x001C684C File Offset: 0x001C4A4C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		LongShanView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -86,7 +85,7 @@ public class LongShanView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060082FC RID: 33532 RVA: 0x001BDB00 File Offset: 0x001BBD00
+	// Token: 0x06005693 RID: 22163 RVA: 0x001C6890 File Offset: 0x001C4A90
 	protected override void OnBeforeShow()
 	{
 		this.RefreshTimer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnTimerRefresh), (float)TimeUtil.Instance.InverseMillisecond, 1f, null, null, true);
@@ -94,7 +93,7 @@ public class LongShanView : UiViewBase
 		this.OnTimerRefresh(0f);
 	}
 
-	// Token: 0x060082FD RID: 33533 RVA: 0x001BDB53 File Offset: 0x001BBD53
+	// Token: 0x06005694 RID: 22164 RVA: 0x001C68E3 File Offset: 0x001C4AE3
 	protected override void OnBeforeHide()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.RefreshTimer))
@@ -104,7 +103,7 @@ public class LongShanView : UiViewBase
 		}
 	}
 
-	// Token: 0x060082FE RID: 33534 RVA: 0x001BDB80 File Offset: 0x001BBD80
+	// Token: 0x06005695 RID: 22165 RVA: 0x001C6910 File Offset: 0x001C4B10
 	private void OnTimerRefresh(float _)
 	{
 		if (!this.ActivityBaseData.CheckIfInOpenTime())
@@ -119,7 +118,7 @@ public class LongShanView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(8), "ActivityRemainingTime", new <>z__ReadOnlySingleElementList<object>(item));
 	}
 
-	// Token: 0x060082FF RID: 33535 RVA: 0x001BDC20 File Offset: 0x001BBE20
+	// Token: 0x06005696 RID: 22166 RVA: 0x001C69B0 File Offset: 0x001C4BB0
 	[NullableContext(0)]
 	private ValueTuple<CommonDefine.ETimeType, CommonDefine.ETimeType> GetTimeTypeData(double remainTime)
 	{
@@ -138,19 +137,19 @@ public class LongShanView : UiViewBase
 		return new ValueTuple<CommonDefine.ETimeType, CommonDefine.ETimeType>(CommonDefine.ETimeType.Second, CommonDefine.ETimeType.Second);
 	}
 
-	// Token: 0x06008300 RID: 33536 RVA: 0x001BDC70 File Offset: 0x001BBE70
+	// Token: 0x06005697 RID: 22167 RVA: 0x001C6A00 File Offset: 0x001C4C00
 	private LongShanTaskItem CreateTaskItem()
 	{
 		return new LongShanTaskItem();
 	}
 
-	// Token: 0x06008301 RID: 33537 RVA: 0x001BDC77 File Offset: 0x001BBE77
+	// Token: 0x06005698 RID: 22168 RVA: 0x001C6A07 File Offset: 0x001C4C07
 	private PageDot<int> InitPageDot()
 	{
 		return new PageDot<int>();
 	}
 
-	// Token: 0x06008302 RID: 33538 RVA: 0x001BDC80 File Offset: 0x001BBE80
+	// Token: 0x06005699 RID: 22169 RVA: 0x001C6A10 File Offset: 0x001C4C10
 	public void RefreshView(int newIndex)
 	{
 		this.PageDotLayout.GetLayoutItemByIndex(this.CurrentIndex).UpdateShow(false);
@@ -166,7 +165,7 @@ public class LongShanView : UiViewBase
 		base.GetButton(6).RootUIComp.Get().SetUIActive(this.CurrentIndex < this.ActivityBaseData.StageIds.Length - 1);
 	}
 
-	// Token: 0x06008303 RID: 33539 RVA: 0x001BDD88 File Offset: 0x001BBF88
+	// Token: 0x0600569A RID: 22170 RVA: 0x001C6B18 File Offset: 0x001C4D18
 	private int TaskSort(LongShanTaskInfo a, LongShanTaskInfo b)
 	{
 		if (a.IsTaken != b.IsTaken)
@@ -197,13 +196,13 @@ public class LongShanView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008304 RID: 33540 RVA: 0x001BDE18 File Offset: 0x001BC018
+	// Token: 0x0600569B RID: 22171 RVA: 0x001C6BA8 File Offset: 0x001C4DA8
 	private void RefreshTasks()
 	{
 		int id = this.ActivityBaseData.StageIds[this.CurrentIndex];
 		int progress = this.ActivityBaseData.GetProgress(id);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "LongShanStage_ProgressPercentage", new <>z__ReadOnlySingleElementList<object>(progress));
-		List<LongShanTaskInfo> list = this.ActivityBaseData.GetStageInfoById(id).Tasks.ToList<LongShanTaskInfo>();
+		List<LongShanTaskInfo> list = new List<LongShanTaskInfo>(this.ActivityBaseData.GetStageInfoById(id).Tasks);
 		list.Sort(new Comparison<LongShanTaskInfo>(this.TaskSort));
 		GenericScrollViewNew<LongShanTaskItem, LongShanTaskInfo> taskScroll = this.TaskScroll;
 		if (taskScroll == null)
@@ -213,13 +212,13 @@ public class LongShanView : UiViewBase
 		taskScroll.RefreshByData(list, null, true);
 	}
 
-	// Token: 0x06008305 RID: 33541 RVA: 0x001BDEA2 File Offset: 0x001BC0A2
+	// Token: 0x0600569C RID: 22172 RVA: 0x001C6C32 File Offset: 0x001C4E32
 	private void OnClickPre()
 	{
 		this.RefreshView(this.CurrentIndex - 1);
 	}
 
-	// Token: 0x06008306 RID: 33542 RVA: 0x001BDEB4 File Offset: 0x001BC0B4
+	// Token: 0x0600569D RID: 22173 RVA: 0x001C6C44 File Offset: 0x001C4E44
 	private void OnClickNext()
 	{
 		int num = this.ActivityBaseData.StageIds[this.CurrentIndex + 1];
@@ -231,20 +230,20 @@ public class LongShanView : UiViewBase
 		ActivityLongShanController.Instance.ShowUnlockTip(num);
 	}
 
-	// Token: 0x06008307 RID: 33543 RVA: 0x001BDF00 File Offset: 0x001BC100
+	// Token: 0x0600569E RID: 22174 RVA: 0x001C6C90 File Offset: 0x001C4E90
 	private void OpenHelpView()
 	{
 		int helpId = this.ActivityBaseData.GetHelpId();
 		HelpController.Instance.OpenHelpById(helpId);
 	}
 
-	// Token: 0x06008308 RID: 33544 RVA: 0x001BDF24 File Offset: 0x001BC124
+	// Token: 0x0600569F RID: 22175 RVA: 0x001C6CB4 File Offset: 0x001C4EB4
 	private void CloseView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06008309 RID: 33545 RVA: 0x001BDF30 File Offset: 0x001BC130
+	// Token: 0x060056A0 RID: 22176 RVA: 0x001C6CC0 File Offset: 0x001C4EC0
 	private void OnActivityClose(IReadOnlySet<int> closeActivities)
 	{
 		if (closeActivities.Contains(this.ActivityBaseData.Id))
@@ -256,28 +255,28 @@ public class LongShanView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600830A RID: 33546 RVA: 0x001BDF94 File Offset: 0x001BC194
+	// Token: 0x060056A1 RID: 22177 RVA: 0x001C6D24 File Offset: 0x001C4F24
 	[CompilerGenerated]
 	private void <OnActivityClose>g__ConfirmCallback|25_0()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04003B0D RID: 15117
+	// Token: 0x04003BA5 RID: 15269
 	protected ActivityLongShanData ActivityBaseData;
 
-	// Token: 0x04003B0E RID: 15118
+	// Token: 0x04003BA6 RID: 15270
 	[Nullable(2)]
 	private TimerHandle RefreshTimer;
 
-	// Token: 0x04003B0F RID: 15119
+	// Token: 0x04003BA7 RID: 15271
 	private int CurrentIndex;
 
-	// Token: 0x04003B10 RID: 15120
+	// Token: 0x04003BA8 RID: 15272
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003B11 RID: 15121
+	// Token: 0x04003BA9 RID: 15273
 	[Nullable(new byte[]
 	{
 		2,
@@ -285,7 +284,7 @@ public class LongShanView : UiViewBase
 	})]
 	private GenericLayout<PageDot<int>, int> PageDotLayout;
 
-	// Token: 0x04003B12 RID: 15122
+	// Token: 0x04003BAA RID: 15274
 	[Nullable(new byte[]
 	{
 		2,
@@ -294,38 +293,38 @@ public class LongShanView : UiViewBase
 	})]
 	private GenericScrollViewNew<LongShanTaskItem, LongShanTaskInfo> TaskScroll;
 
-	// Token: 0x020078C1 RID: 30913
+	// Token: 0x02006A4B RID: 27211
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027C86 RID: 162950
+		// Token: 0x04022FB4 RID: 143284
 		public const int CaptionItem = 0;
 
-		// Token: 0x04027C87 RID: 162951
+		// Token: 0x04022FB5 RID: 143285
 		public const int TxtName = 1;
 
-		// Token: 0x04027C88 RID: 162952
+		// Token: 0x04022FB6 RID: 143286
 		public const int TxtProgress = 2;
 
-		// Token: 0x04027C89 RID: 162953
+		// Token: 0x04022FB7 RID: 143287
 		public const int LabelFinish = 3;
 
-		// Token: 0x04027C8A RID: 162954
+		// Token: 0x04022FB8 RID: 143288
 		public const int TaskParent = 4;
 
-		// Token: 0x04027C8B RID: 162955
+		// Token: 0x04022FB9 RID: 143289
 		public const int BtnPre = 5;
 
-		// Token: 0x04027C8C RID: 162956
+		// Token: 0x04022FBA RID: 143290
 		public const int BtnNext = 6;
 
-		// Token: 0x04027C8D RID: 162957
+		// Token: 0x04022FBB RID: 143291
 		public const int PageDotLayout = 7;
 
-		// Token: 0x04027C8E RID: 162958
+		// Token: 0x04022FBC RID: 143292
 		public const int TxtTime = 8;
 
-		// Token: 0x04027C8F RID: 162959
+		// Token: 0x04022FBD RID: 143293
 		public const int TexPicture = 9;
 	}
 }

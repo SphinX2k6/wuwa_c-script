@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002076 RID: 8310
+	// Token: 0x02000698 RID: 1688
 	public sealed class FLGUIExtendToggleWithEventDataDynamicDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F595 RID: 128405 RVA: 0x002E8FC2 File Offset: 0x002E71C2
+		// Token: 0x06009192 RID: 37266 RVA: 0x000DB0EA File Offset: 0x000D92EA
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIExtendToggleWithEventDataDynamicDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F596 RID: 128406 RVA: 0x002E8FCE File Offset: 0x002E71CE
+		// Token: 0x06009193 RID: 37267 RVA: 0x000DB0F6 File Offset: 0x000D92F6
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIExtendToggleWithEventDataDynamicDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FLGUIExtendToggleWithEventDataDynamicDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F597 RID: 128407 RVA: 0x002E8FF1 File Offset: 0x002E71F1
+		// Token: 0x06009194 RID: 37268 RVA: 0x000DB119 File Offset: 0x000D9319
 		public FLGUIExtendToggleWithEventDataDynamicDelegate()
 		{
 		}
 
-		// Token: 0x0601F598 RID: 128408 RVA: 0x002E8FF9 File Offset: 0x002E71F9
+		// Token: 0x06009195 RID: 37269 RVA: 0x000DB121 File Offset: 0x000D9321
 		[NullableContext(2)]
 		public FLGUIExtendToggleWithEventDataDynamicDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F599 RID: 128409 RVA: 0x002E9003 File Offset: 0x002E7203
+		// Token: 0x06009196 RID: 37270 RVA: 0x000DB12B File Offset: 0x000D932B
 		public FLGUIExtendToggleWithEventDataDynamicDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F59A RID: 128410 RVA: 0x002E900E File Offset: 0x002E720E
+		// Token: 0x06009197 RID: 37271 RVA: 0x000DB136 File Offset: 0x000D9336
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<EToggleState, ULGUIPointerEventData>) ?? ((Action<EToggleState, ULGUIPointerEventData>)Delegate.CreateDelegate(typeof(Action<EToggleState, ULGUIPointerEventData>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F59B RID: 128411 RVA: 0x002E9040 File Offset: 0x002E7240
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06009198 RID: 37272 RVA: 0x000DB168 File Offset: 0x000D9368
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIExtendToggleWithEventDataDynamicDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F59C RID: 128412 RVA: 0x002E907C File Offset: 0x002E727C
+		// Token: 0x06009199 RID: 37273 RVA: 0x000DB1A4 File Offset: 0x000D93A4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(EToggleState State, ULGUIPointerEventData eventData)
 		{
 			FLGUIExtendToggleWithEventDataDynamicDelegate.__FLGUIExtendToggleWithEventDataDynamicDelegate_DelegateParams* ptr = stackalloc FLGUIExtendToggleWithEventDataDynamicDelegate.__FLGUIExtendToggleWithEventDataDynamicDelegate_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FLGUIExtendToggleWithEventDataDynamicDelegate.__FLGUIExtendToggleWithEventDataDynamicDelegate_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F59D RID: 128413 RVA: 0x002E90D0 File Offset: 0x002E72D0
+		// Token: 0x0600919A RID: 37274 RVA: 0x000DB1F8 File Offset: 0x000D93F8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<EToggleState, ULGUIPointerEventData> action = target as Action<EToggleState, ULGUIPointerEventData>;
@@ -96,35 +93,35 @@ namespace UnrealEngine
 			action(((FLGUIExtendToggleWithEventDataDynamicDelegate.__FLGUIExtendToggleWithEventDataDynamicDelegate_DelegateParams*)__Parameters)->State, orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x04010F08 RID: 69384
+		// Token: 0x04003F75 RID: 16245
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010F09 RID: 69385
+		// Token: 0x04003F76 RID: 16246
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIExtendToggleWithEventDataDynamicDelegate__DelegateSignature";
 
-		// Token: 0x04010F0A RID: 69386
+		// Token: 0x04003F77 RID: 16247
 		private static int RegisterId;
 
-		// Token: 0x0200347C RID: 13436
+		// Token: 0x02000EBF RID: 3775
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FLGUIExtendToggleWithEventDataDynamicDelegate_DelegateParams
+		private ref struct __FLGUIExtendToggleWithEventDataDynamicDelegate_DelegateParams
 		{
-			// Token: 0x04017466 RID: 95334
+			// Token: 0x04006275 RID: 25205
 			[FieldOffset(0)]
 			public EToggleState State;
 
-			// Token: 0x04017467 RID: 95335
+			// Token: 0x04006276 RID: 25206
 			[FieldOffset(8)]
 			public IntPtr eventData;
 		}
 
-		// Token: 0x0200347D RID: 13437
+		// Token: 0x02000EC0 RID: 3776
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017468 RID: 95336
+			// Token: 0x04006277 RID: 25207
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020029E4 RID: 10724
+// Token: 0x02001F5F RID: 8031
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class ShipTowerWordItem : GridProxyAbstract<ShipTowerWordItemData>
 {
-	// Token: 0x060163C4 RID: 91076 RVA: 0x0059FB4C File Offset: 0x0059DD4C
+	// Token: 0x06013DCA RID: 81354 RVA: 0x005CAB04 File Offset: 0x005C8D04
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class ShipTowerWordItem : GridProxyAbstract<ShipTowerWordItemData>
 		};
 	}
 
-	// Token: 0x060163C5 RID: 91077 RVA: 0x0059FBA8 File Offset: 0x0059DDA8
+	// Token: 0x06013DCB RID: 81355 RVA: 0x005CAB60 File Offset: 0x005C8D60
 	public override void Refresh(ShipTowerWordItemData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -38,20 +38,20 @@ public class ShipTowerWordItem : GridProxyAbstract<ShipTowerWordItemData>
 		this.SetSpriteByPath(data.IconPath, base.GetSprite(2), false, null, null);
 	}
 
-	// Token: 0x0400A577 RID: 42359
+	// Token: 0x0400A961 RID: 43361
 	private ShipTowerWordItemData ItemData;
 
-	// Token: 0x02009018 RID: 36888
+	// Token: 0x0200825F RID: 33375
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402EA81 RID: 191105
+		// Token: 0x0402A179 RID: 172409
 		public const int SpriteBg = 0;
 
-		// Token: 0x0402EA82 RID: 191106
+		// Token: 0x0402A17A RID: 172410
 		public const int TxtName = 1;
 
-		// Token: 0x0402EA83 RID: 191107
+		// Token: 0x0402A17B RID: 172411
 		public const int SpriteIcon = 2;
 	}
 }

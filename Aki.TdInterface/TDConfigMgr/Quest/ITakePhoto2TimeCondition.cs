@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001184 RID: 4484
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012BE RID: 4798
 	public class ITakePhoto2TimeCondition
 	{
-		// Token: 0x060065D6 RID: 26070 RVA: 0x000F4400 File Offset: 0x000F2600
+		// Token: 0x06006C0D RID: 27661 RVA: 0x00101BCC File Offset: 0x000FFDCC
 		private ITakePhoto2TimeCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060065D7 RID: 26071 RVA: 0x000F4438 File Offset: 0x000F2638
+		// Token: 0x06006C0E RID: 27662 RVA: 0x00101C04 File Offset: 0x000FFE04
 		public static ITakePhoto2TimeCondition Create([Nullable(2)] ITakePhoto2TimeCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060065D8 RID: 26072 RVA: 0x000F444B File Offset: 0x000F264B
+		// Token: 0x06006C0F RID: 27663 RVA: 0x00101C17 File Offset: 0x000FFE17
 		public static ITakePhoto2TimeCondition CreateFromSetValue([Nullable(2)] ITakePhoto2TimeCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060065D9 RID: 26073 RVA: 0x000F445E File Offset: 0x000F265E
+		// Token: 0x06006C10 RID: 27664 RVA: 0x00101C2A File Offset: 0x000FFE2A
 		public ITakePhoto2TimeCondition_SetValue ToSetValue()
 		{
 			return new ITakePhoto2TimeCondition_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700212A RID: 8490
-		// (get) Token: 0x060065DA RID: 26074 RVA: 0x000F4480 File Offset: 0x000F2680
-		// (set) Token: 0x060065DB RID: 26075 RVA: 0x000F44E1 File Offset: 0x000F26E1
+		// Token: 0x170022E9 RID: 8937
+		// (get) Token: 0x06006C11 RID: 27665 RVA: 0x00101C4C File Offset: 0x000FFE4C
+		// (set) Token: 0x06006C12 RID: 27666 RVA: 0x00101CAD File Offset: 0x000FFEAD
 		public virtual IHourToHour TimeRange
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700212B RID: 8491
-		// (get) Token: 0x060065DC RID: 26076 RVA: 0x000F44F6 File Offset: 0x000F26F6
-		// (set) Token: 0x060065DD RID: 26077 RVA: 0x000F4521 File Offset: 0x000F2721
+		// Token: 0x170022EA RID: 8938
+		// (get) Token: 0x06006C13 RID: 27667 RVA: 0x00101CC2 File Offset: 0x000FFEC2
+		// (set) Token: 0x06006C14 RID: 27668 RVA: 0x00101CED File Offset: 0x000FFEED
 		public virtual ECompare Compare
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003D1D RID: 15645
+		// Token: 0x04004085 RID: 16517
 		[Nullable(2)]
 		protected ITakePhoto2TimeCondition FbInstance;
 
-		// Token: 0x04003D1E RID: 15646
+		// Token: 0x04004086 RID: 16518
 		[Nullable(2)]
 		protected ITakePhoto2TimeCondition_SetValue PocoInterface;
 
-		// Token: 0x04003D1F RID: 15647
+		// Token: 0x04004087 RID: 16519
 		private IHourToHour _TimeRangeCache;
 
-		// Token: 0x04003D20 RID: 15648
+		// Token: 0x04004088 RID: 16520
 		private bool _TimeRangeInited;
 	}
 }

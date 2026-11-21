@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C4B RID: 27723
+	// Token: 0x020073B2 RID: 29618
 	public struct IOptionLockTip : IFlatbufferObject
 	{
-		// Token: 0x1700CE76 RID: 52854
-		// (get) Token: 0x06030D67 RID: 200039 RVA: 0x006A265C File Offset: 0x006A085C
+		// Token: 0x1700D991 RID: 55697
+		// (get) Token: 0x06033CC2 RID: 212162 RVA: 0x006FCB5C File Offset: 0x006FAD5C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030D68 RID: 200040 RVA: 0x006A2669 File Offset: 0x006A0869
+		// Token: 0x06033CC3 RID: 212163 RVA: 0x006FCB69 File Offset: 0x006FAD69
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030D69 RID: 200041 RVA: 0x006A2670 File Offset: 0x006A0870
+		// Token: 0x06033CC4 RID: 212164 RVA: 0x006FCB70 File Offset: 0x006FAD70
 		public static IOptionLockTip GetRootAsIOptionLockTip(ByteBuffer _bb)
 		{
 			return IOptionLockTip.GetRootAsIOptionLockTip(_bb, default(IOptionLockTip));
 		}
 
-		// Token: 0x06030D6A RID: 200042 RVA: 0x006A268C File Offset: 0x006A088C
+		// Token: 0x06033CC5 RID: 212165 RVA: 0x006FCB8C File Offset: 0x006FAD8C
 		public static IOptionLockTip GetRootAsIOptionLockTip(ByteBuffer _bb, IOptionLockTip obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030D6B RID: 200043 RVA: 0x006A26A9 File Offset: 0x006A08A9
+		// Token: 0x06033CC6 RID: 212166 RVA: 0x006FCBA9 File Offset: 0x006FADA9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030D6C RID: 200044 RVA: 0x006A26B8 File Offset: 0x006A08B8
+		// Token: 0x06033CC7 RID: 212167 RVA: 0x006FCBB8 File Offset: 0x006FADB8
 		public IOptionLockTip __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CE77 RID: 52855
-		// (get) Token: 0x06030D6D RID: 200045 RVA: 0x006A26C8 File Offset: 0x006A08C8
+		// Token: 0x1700D992 RID: 55698
+		// (get) Token: 0x06033CC8 RID: 212168 RVA: 0x006FCBC8 File Offset: 0x006FADC8
 		public string TidAppendText
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030D6E RID: 200046 RVA: 0x006A26FF File Offset: 0x006A08FF
+		// Token: 0x06033CC9 RID: 212169 RVA: 0x006FCBFF File Offset: 0x006FADFF
 		public Span<byte> GetTidAppendTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06030D6F RID: 200047 RVA: 0x006A270E File Offset: 0x006A090E
+		// Token: 0x06033CCA RID: 212170 RVA: 0x006FCC0E File Offset: 0x006FAE0E
 		public byte[] GetTidAppendTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700CE78 RID: 52856
-		// (get) Token: 0x06030D70 RID: 200048 RVA: 0x006A271C File Offset: 0x006A091C
+		// Token: 0x1700D993 RID: 55699
+		// (get) Token: 0x06033CCB RID: 212171 RVA: 0x006FCC1C File Offset: 0x006FAE1C
 		public string TidHintText
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030D71 RID: 200049 RVA: 0x006A2753 File Offset: 0x006A0953
+		// Token: 0x06033CCC RID: 212172 RVA: 0x006FCC53 File Offset: 0x006FAE53
 		public Span<byte> GetTidHintTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06030D72 RID: 200050 RVA: 0x006A2762 File Offset: 0x006A0962
+		// Token: 0x06033CCD RID: 212173 RVA: 0x006FCC62 File Offset: 0x006FAE62
 		public byte[] GetTidHintTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700CE79 RID: 52857
-		// (get) Token: 0x06030D73 RID: 200051 RVA: 0x006A2770 File Offset: 0x006A0970
+		// Token: 0x1700D994 RID: 55700
+		// (get) Token: 0x06033CCE RID: 212174 RVA: 0x006FCC70 File Offset: 0x006FAE70
 		public int AppendTextId
 		{
 			get
@@ -116,8 +116,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CE7A RID: 52858
-		// (get) Token: 0x06030D74 RID: 200052 RVA: 0x006A27AC File Offset: 0x006A09AC
+		// Token: 0x1700D995 RID: 55701
+		// (get) Token: 0x06033CCF RID: 212175 RVA: 0x006FCCAC File Offset: 0x006FAEAC
 		public int HintTextId
 		{
 			get
@@ -131,8 +131,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CE7B RID: 52859
-		// (get) Token: 0x06030D75 RID: 200053 RVA: 0x006A27EC File Offset: 0x006A09EC
+		// Token: 0x1700D996 RID: 55702
+		// (get) Token: 0x06033CD0 RID: 212176 RVA: 0x006FCCEC File Offset: 0x006FAEEC
 		public byte NullMask
 		{
 			get
@@ -146,7 +146,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030D76 RID: 200054 RVA: 0x006A2829 File Offset: 0x006A0A29
+		// Token: 0x06033CD1 RID: 212177 RVA: 0x006FCD29 File Offset: 0x006FAF29
 		public static Offset<IOptionLockTip> CreateIOptionLockTip(FlatBufferBuilder builder, StringOffset TidAppendTextOffset = default(StringOffset), StringOffset TidHintTextOffset = default(StringOffset), int AppendTextId = 0, int HintTextId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -158,49 +158,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOptionLockTip.EndIOptionLockTip(builder);
 		}
 
-		// Token: 0x06030D77 RID: 200055 RVA: 0x006A285D File Offset: 0x006A0A5D
+		// Token: 0x06033CD2 RID: 212178 RVA: 0x006FCD5D File Offset: 0x006FAF5D
 		public static void StartIOptionLockTip(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06030D78 RID: 200056 RVA: 0x006A2866 File Offset: 0x006A0A66
+		// Token: 0x06033CD3 RID: 212179 RVA: 0x006FCD66 File Offset: 0x006FAF66
 		public static void AddTidAppendText(FlatBufferBuilder builder, StringOffset tidAppendTextOffset)
 		{
 			builder.AddOffset(0, tidAppendTextOffset.Value, 0);
 		}
 
-		// Token: 0x06030D79 RID: 200057 RVA: 0x006A2876 File Offset: 0x006A0A76
+		// Token: 0x06033CD4 RID: 212180 RVA: 0x006FCD76 File Offset: 0x006FAF76
 		public static void AddTidHintText(FlatBufferBuilder builder, StringOffset tidHintTextOffset)
 		{
 			builder.AddOffset(1, tidHintTextOffset.Value, 0);
 		}
 
-		// Token: 0x06030D7A RID: 200058 RVA: 0x006A2886 File Offset: 0x006A0A86
+		// Token: 0x06033CD5 RID: 212181 RVA: 0x006FCD86 File Offset: 0x006FAF86
 		public static void AddAppendTextId(FlatBufferBuilder builder, int appendTextId)
 		{
 			builder.AddInt(2, appendTextId, 0);
 		}
 
-		// Token: 0x06030D7B RID: 200059 RVA: 0x006A2891 File Offset: 0x006A0A91
+		// Token: 0x06033CD6 RID: 212182 RVA: 0x006FCD91 File Offset: 0x006FAF91
 		public static void AddHintTextId(FlatBufferBuilder builder, int hintTextId)
 		{
 			builder.AddInt(3, hintTextId, 0);
 		}
 
-		// Token: 0x06030D7C RID: 200060 RVA: 0x006A289C File Offset: 0x006A0A9C
+		// Token: 0x06033CD7 RID: 212183 RVA: 0x006FCD9C File Offset: 0x006FAF9C
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06030D7D RID: 200061 RVA: 0x006A28A7 File Offset: 0x006A0AA7
+		// Token: 0x06033CD8 RID: 212184 RVA: 0x006FCDA7 File Offset: 0x006FAFA7
 		public static Offset<IOptionLockTip> EndIOptionLockTip(FlatBufferBuilder builder)
 		{
 			return new Offset<IOptionLockTip>(builder.EndTable());
 		}
 
-		// Token: 0x06030D7E RID: 200062 RVA: 0x006A28B4 File Offset: 0x006A0AB4
+		// Token: 0x06033CD9 RID: 212185 RVA: 0x006FCDB4 File Offset: 0x006FAFB4
 		public IOptionLockTipT UnPack()
 		{
 			IOptionLockTipT optionLockTipT = new IOptionLockTipT();
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return optionLockTipT;
 		}
 
-		// Token: 0x06030D7F RID: 200063 RVA: 0x006A28CF File Offset: 0x006A0ACF
+		// Token: 0x06033CDA RID: 212186 RVA: 0x006FCDCF File Offset: 0x006FAFCF
 		public void UnPackTo(IOptionLockTipT _o)
 		{
 			_o.TidAppendText = this.TidAppendText;
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06030D80 RID: 200064 RVA: 0x006A2910 File Offset: 0x006A0B10
+		// Token: 0x06033CDB RID: 212187 RVA: 0x006FCE10 File Offset: 0x006FB010
 		public static Offset<IOptionLockTip> Pack(FlatBufferBuilder builder, IOptionLockTipT _o)
 		{
 			if (_o == null)
@@ -230,7 +230,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOptionLockTip.CreateIOptionLockTip(builder, tidAppendTextOffset, tidHintTextOffset, _o.AppendTextId, _o.HintTextId, _o.NullMask);
 		}
 
-		// Token: 0x04011589 RID: 71049
+		// Token: 0x040124E1 RID: 74977
 		private Table __p;
 	}
 }

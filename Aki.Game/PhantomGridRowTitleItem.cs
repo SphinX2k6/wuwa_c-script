@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002479 RID: 9337
+// Token: 0x0200195E RID: 6494
 public class PhantomGridRowTitleItem : SyncGridProxyAbstract<int>
 {
-	// Token: 0x06012BE0 RID: 76768 RVA: 0x0049FB28 File Offset: 0x0049DD28
+	// Token: 0x06010097 RID: 65687 RVA: 0x004AD280 File Offset: 0x004AB480
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class PhantomGridRowTitleItem : SyncGridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06012BE1 RID: 76769 RVA: 0x0049FB90 File Offset: 0x0049DD90
+	// Token: 0x06010098 RID: 65688 RVA: 0x004AD2E8 File Offset: 0x004AB4E8
 	public override void Refresh(int data)
 	{
 		bool uiactive = false;
@@ -64,7 +64,7 @@ public class PhantomGridRowTitleItem : SyncGridProxyAbstract<int>
 		button.SetSelfInteractive(selfInteractive);
 	}
 
-	// Token: 0x04008D2B RID: 36139
+	// Token: 0x04008E72 RID: 36466
 	[Nullable(2)]
 	public Action ClickRecommendBtnCb;
 }

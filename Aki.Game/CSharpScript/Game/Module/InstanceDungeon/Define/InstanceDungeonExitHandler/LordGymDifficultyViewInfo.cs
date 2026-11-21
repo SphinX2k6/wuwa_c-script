@@ -3,13 +3,13 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058F1 RID: 22769
+	// Token: 0x020048C9 RID: 18633
 	public struct LordGymDifficultyViewInfo
 	{
-		// Token: 0x0401E2D7 RID: 123607
+		// Token: 0x04018D74 RID: 101748
 		public EUiViewName ViewName;
 
-		// Token: 0x0401E2D8 RID: 123608
+		// Token: 0x04018D75 RID: 101749
 		public int EntranceSetId;
 	}
 }

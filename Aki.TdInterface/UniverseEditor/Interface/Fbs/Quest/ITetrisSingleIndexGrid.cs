@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041D2 RID: 16850
+	// Token: 0x0200462B RID: 17963
 	public struct ITetrisSingleIndexGrid : IFlatbufferObject
 	{
-		// Token: 0x17007777 RID: 30583
-		// (get) Token: 0x06018D22 RID: 101666 RVA: 0x0039242B File Offset: 0x0039062B
+		// Token: 0x17007DA3 RID: 32163
+		// (get) Token: 0x0601A478 RID: 107640 RVA: 0x003BD87F File Offset: 0x003BBA7F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018D23 RID: 101667 RVA: 0x00392438 File Offset: 0x00390638
+		// Token: 0x0601A479 RID: 107641 RVA: 0x003BD88C File Offset: 0x003BBA8C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018D24 RID: 101668 RVA: 0x00392440 File Offset: 0x00390640
+		// Token: 0x0601A47A RID: 107642 RVA: 0x003BD894 File Offset: 0x003BBA94
 		public static ITetrisSingleIndexGrid GetRootAsITetrisSingleIndexGrid(ByteBuffer _bb)
 		{
 			return ITetrisSingleIndexGrid.GetRootAsITetrisSingleIndexGrid(_bb, default(ITetrisSingleIndexGrid));
 		}
 
-		// Token: 0x06018D25 RID: 101669 RVA: 0x0039245C File Offset: 0x0039065C
+		// Token: 0x0601A47B RID: 107643 RVA: 0x003BD8B0 File Offset: 0x003BBAB0
 		public static ITetrisSingleIndexGrid GetRootAsITetrisSingleIndexGrid(ByteBuffer _bb, ITetrisSingleIndexGrid obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018D26 RID: 101670 RVA: 0x00392479 File Offset: 0x00390679
+		// Token: 0x0601A47C RID: 107644 RVA: 0x003BD8CD File Offset: 0x003BBACD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018D27 RID: 101671 RVA: 0x00392488 File Offset: 0x00390688
+		// Token: 0x0601A47D RID: 107645 RVA: 0x003BD8DC File Offset: 0x003BBADC
 		public ITetrisSingleIndexGrid __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007778 RID: 30584
-		// (get) Token: 0x06018D28 RID: 101672 RVA: 0x00392498 File Offset: 0x00390698
+		// Token: 0x17007DA4 RID: 32164
+		// (get) Token: 0x0601A47E RID: 107646 RVA: 0x003BD8EC File Offset: 0x003BBAEC
 		public int Index
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007779 RID: 30585
-		// (get) Token: 0x06018D29 RID: 101673 RVA: 0x003924D4 File Offset: 0x003906D4
+		// Token: 0x17007DA5 RID: 32165
+		// (get) Token: 0x0601A47F RID: 107647 RVA: 0x003BD928 File Offset: 0x003BBB28
 		public ITetrisSingleGrid? Value
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018D2A RID: 101674 RVA: 0x00392531 File Offset: 0x00390731
+		// Token: 0x0601A480 RID: 107648 RVA: 0x003BD985 File Offset: 0x003BBB85
 		public static Offset<ITetrisSingleIndexGrid> CreateITetrisSingleIndexGrid(FlatBufferBuilder builder, int Index = 0, Offset<ITetrisSingleGrid> ValueOffset = default(Offset<ITetrisSingleGrid>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITetrisSingleIndexGrid.EndITetrisSingleIndexGrid(builder);
 		}
 
-		// Token: 0x06018D2B RID: 101675 RVA: 0x0039254E File Offset: 0x0039074E
+		// Token: 0x0601A481 RID: 107649 RVA: 0x003BD9A2 File Offset: 0x003BBBA2
 		public static void StartITetrisSingleIndexGrid(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06018D2C RID: 101676 RVA: 0x00392557 File Offset: 0x00390757
+		// Token: 0x0601A482 RID: 107650 RVA: 0x003BD9AB File Offset: 0x003BBBAB
 		public static void AddIndex(FlatBufferBuilder builder, int index)
 		{
 			builder.AddInt(0, index, 0);
 		}
 
-		// Token: 0x06018D2D RID: 101677 RVA: 0x00392562 File Offset: 0x00390762
+		// Token: 0x0601A483 RID: 107651 RVA: 0x003BD9B6 File Offset: 0x003BBBB6
 		public static void AddValue(FlatBufferBuilder builder, Offset<ITetrisSingleGrid> valueOffset)
 		{
 			builder.AddOffset(1, valueOffset.Value, 0);
 		}
 
-		// Token: 0x06018D2E RID: 101678 RVA: 0x00392572 File Offset: 0x00390772
+		// Token: 0x0601A484 RID: 107652 RVA: 0x003BD9C6 File Offset: 0x003BBBC6
 		public static Offset<ITetrisSingleIndexGrid> EndITetrisSingleIndexGrid(FlatBufferBuilder builder)
 		{
 			return new Offset<ITetrisSingleIndexGrid>(builder.EndTable());
 		}
 
-		// Token: 0x06018D2F RID: 101679 RVA: 0x00392580 File Offset: 0x00390780
+		// Token: 0x0601A485 RID: 107653 RVA: 0x003BD9D4 File Offset: 0x003BBBD4
 		public ITetrisSingleIndexGridT UnPack()
 		{
 			ITetrisSingleIndexGridT tetrisSingleIndexGridT = new ITetrisSingleIndexGridT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return tetrisSingleIndexGridT;
 		}
 
-		// Token: 0x06018D30 RID: 101680 RVA: 0x0039259C File Offset: 0x0039079C
+		// Token: 0x0601A486 RID: 107654 RVA: 0x003BD9F0 File Offset: 0x003BBBF0
 		public void UnPackTo(ITetrisSingleIndexGridT _o)
 		{
 			_o.Index = this.Index;
 			_o.Value = ((this.Value != null) ? this.Value.Value.UnPack() : null);
 		}
 
-		// Token: 0x06018D31 RID: 101681 RVA: 0x003925E4 File Offset: 0x003907E4
+		// Token: 0x0601A487 RID: 107655 RVA: 0x003BDA38 File Offset: 0x003BBC38
 		public static Offset<ITetrisSingleIndexGrid> Pack(FlatBufferBuilder builder, ITetrisSingleIndexGridT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITetrisSingleIndexGrid.CreateITetrisSingleIndexGrid(builder, _o.Index, valueOffset);
 		}
 
-		// Token: 0x0400BE1C RID: 48668
+		// Token: 0x0400C826 RID: 51238
 		private Table __p;
 	}
 }

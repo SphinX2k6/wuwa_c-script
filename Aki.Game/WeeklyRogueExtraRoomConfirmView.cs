@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002D4E RID: 11598
+// Token: 0x020022A8 RID: 8872
 public class WeeklyRogueExtraRoomConfirmView : UiViewBase
 {
-	// Token: 0x060185F1 RID: 99825 RVA: 0x0063459D File Offset: 0x0063279D
+	// Token: 0x06015E93 RID: 89747 RVA: 0x0065A5AD File Offset: 0x006587AD
 	[NullableContext(1)]
 	public WeeklyRogueExtraRoomConfirmView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x060185F2 RID: 99826 RVA: 0x006345A8 File Offset: 0x006327A8
+	// Token: 0x06015E94 RID: 89748 RVA: 0x0065A5B8 File Offset: 0x006587B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class WeeklyRogueExtraRoomConfirmView : UiViewBase
 		};
 	}
 
-	// Token: 0x060185F3 RID: 99827 RVA: 0x00634680 File Offset: 0x00632880
+	// Token: 0x06015E95 RID: 89749 RVA: 0x0065A690 File Offset: 0x00658890
 	protected override void OnStart()
 	{
 		ExtraRoomTipsData extraRoomTipsData = this.OpenParam as ExtraRoomTipsData;
@@ -54,7 +54,7 @@ public class WeeklyRogueExtraRoomConfirmView : UiViewBase
 		childPopView.PopItem.OverrideBackBtnCallBack(new Action(this.OnClickLeft));
 	}
 
-	// Token: 0x060185F4 RID: 99828 RVA: 0x00634702 File Offset: 0x00632902
+	// Token: 0x06015E96 RID: 89750 RVA: 0x0065A712 File Offset: 0x00658912
 	private void OnClickLeft()
 	{
 		Action cancelFunc = this.Data.CancelFunc;
@@ -65,7 +65,7 @@ public class WeeklyRogueExtraRoomConfirmView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060185F5 RID: 99829 RVA: 0x00634721 File Offset: 0x00632921
+	// Token: 0x06015E97 RID: 89751 RVA: 0x0065A731 File Offset: 0x00658931
 	private void OnClickRight()
 	{
 		Action confirmFunc = this.Data.ConfirmFunc;
@@ -76,24 +76,24 @@ public class WeeklyRogueExtraRoomConfirmView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400B4D9 RID: 46297
+	// Token: 0x0400B84E RID: 47182
 	[Nullable(1)]
 	protected ExtraRoomTipsData Data;
 
-	// Token: 0x020092E0 RID: 37600
+	// Token: 0x02008507 RID: 34055
 	private enum EComponents
 	{
-		// Token: 0x0402F791 RID: 194449
+		// Token: 0x0402AE19 RID: 175641
 		TxtDesc,
-		// Token: 0x0402F792 RID: 194450
+		// Token: 0x0402AE1A RID: 175642
 		TxtCount,
-		// Token: 0x0402F793 RID: 194451
+		// Token: 0x0402AE1B RID: 175643
 		PanelTips,
-		// Token: 0x0402F794 RID: 194452
+		// Token: 0x0402AE1C RID: 175644
 		TxtTips,
-		// Token: 0x0402F795 RID: 194453
+		// Token: 0x0402AE1D RID: 175645
 		BtnLeft,
-		// Token: 0x0402F796 RID: 194454
+		// Token: 0x0402AE1E RID: 175646
 		BtnRight
 	}
 }

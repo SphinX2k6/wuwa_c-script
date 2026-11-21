@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200233C RID: 9020
+	// Token: 0x020025AD RID: 9645
 	public class EFireBulletTypeJsonConverter : JsonConverter<EFireBulletType>
 	{
-		// Token: 0x0600C50E RID: 50446 RVA: 0x001CC424 File Offset: 0x001CA624
+		// Token: 0x0600D0E6 RID: 53478 RVA: 0x001E44DC File Offset: 0x001E26DC
 		public override EFireBulletType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EFireBulletTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C50F RID: 50447 RVA: 0x001CC448 File Offset: 0x001CA648
+		// Token: 0x0600D0E7 RID: 53479 RVA: 0x001E4500 File Offset: 0x001E2700
 		public override void Write(Utf8JsonWriter writer, EFireBulletType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

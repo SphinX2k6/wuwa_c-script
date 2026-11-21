@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AA2 RID: 23202
+	// Token: 0x02004A7E RID: 19070
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DreamLinkWeaponModelHandle
 	{
-		// Token: 0x0603AC48 RID: 240712 RVA: 0x00DFF29F File Offset: 0x00DFD49F
+		// Token: 0x0602FB91 RID: 195473 RVA: 0x00D4F807 File Offset: 0x00D4DA07
 		[NullableContext(1)]
 		public DreamLinkWeaponModelHandle(AActor Actor)
 		{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.Rotator = Rotator.Create();
 		}
 
-		// Token: 0x0603AC49 RID: 240713 RVA: 0x00DFF2B9 File Offset: 0x00DFD4B9
+		// Token: 0x0602FB92 RID: 195474 RVA: 0x00D4F821 File Offset: 0x00D4DA21
 		public void SetRotateParam(float aroundTime, ERotateAxis axis = ERotateAxis.Yaw, bool isPlus = true)
 		{
 			this.DeltaSecondRotate = ((aroundTime != 0f) ? (360f / aroundTime) : 0f);
@@ -25,25 +25,25 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.IsRotatePlus = isPlus;
 		}
 
-		// Token: 0x0603AC4A RID: 240714 RVA: 0x00DFF2EA File Offset: 0x00DFD4EA
+		// Token: 0x0602FB93 RID: 195475 RVA: 0x00D4F852 File Offset: 0x00D4DA52
 		public void StartRotate()
 		{
 			this.IsRotating = true;
 		}
 
-		// Token: 0x0603AC4B RID: 240715 RVA: 0x00DFF2F3 File Offset: 0x00DFD4F3
+		// Token: 0x0602FB94 RID: 195476 RVA: 0x00D4F85B File Offset: 0x00D4DA5B
 		public void StopRotate()
 		{
 			this.IsRotating = false;
 		}
 
-		// Token: 0x0603AC4C RID: 240716 RVA: 0x00DFF2FC File Offset: 0x00DFD4FC
+		// Token: 0x0602FB95 RID: 195477 RVA: 0x00D4F864 File Offset: 0x00D4DA64
 		public void Tick(float deltaTime)
 		{
 			this.OnRotate(deltaTime);
 		}
 
-		// Token: 0x0603AC4D RID: 240717 RVA: 0x00DFF308 File Offset: 0x00DFD508
+		// Token: 0x0602FB96 RID: 195478 RVA: 0x00D4F870 File Offset: 0x00D4DA70
 		protected void OnRotate(float deltaTime)
 		{
 			if (!this.IsRotating || this.DeltaSecondRotate <= 0f)
@@ -74,28 +74,28 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.Actor.K2_AddActorLocalRotation(this.Rotator.ToUeRotator(), false, ref fhitResult, false);
 		}
 
-		// Token: 0x0603AC4E RID: 240718 RVA: 0x00DFF3D0 File Offset: 0x00DFD5D0
+		// Token: 0x0602FB97 RID: 195479 RVA: 0x00D4F938 File Offset: 0x00D4DB38
 		public void Destroy()
 		{
 			this.Actor = null;
 		}
 
-		// Token: 0x0401EAB4 RID: 125620
+		// Token: 0x0401955B RID: 103771
 		private AActor Actor;
 
-		// Token: 0x0401EAB5 RID: 125621
+		// Token: 0x0401955C RID: 103772
 		private float DeltaSecondRotate;
 
-		// Token: 0x0401EAB6 RID: 125622
+		// Token: 0x0401955D RID: 103773
 		private bool IsRotating;
 
-		// Token: 0x0401EAB7 RID: 125623
+		// Token: 0x0401955E RID: 103774
 		private Rotator Rotator;
 
-		// Token: 0x0401EAB8 RID: 125624
+		// Token: 0x0401955F RID: 103775
 		private ERotateAxis? RotateAxis;
 
-		// Token: 0x0401EAB9 RID: 125625
+		// Token: 0x04019560 RID: 103776
 		private bool IsRotatePlus;
 	}
 }

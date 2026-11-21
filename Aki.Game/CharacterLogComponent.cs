@@ -12,18 +12,18 @@ using CSharpScript.Game.Module.Area;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities;
 using CSharpScript.Module.InstanceDungeon;
 
-// Token: 0x02002ECB RID: 11979
+// Token: 0x0200241E RID: 9246
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x06019948 RID: 104776 RVA: 0x006A1AA8 File Offset: 0x0069FCA8
+	// Token: 0x0601723E RID: 94782 RVA: 0x006C7CB0 File Offset: 0x006C5EB0
 	static CharacterLogComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterLogComponent.CreateStaticDefaultValue), new Action(CharacterLogComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06019949 RID: 104777 RVA: 0x006A1BB4 File Offset: 0x0069FDB4
+	// Token: 0x0601723F RID: 94783 RVA: 0x006C7DBC File Offset: 0x006C5FBC
 	protected override bool OnStart()
 	{
 		if (!CharacterLogComponent.ClassInitiated)
@@ -106,14 +106,14 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601994A RID: 104778 RVA: 0x006A1D58 File Offset: 0x0069FF58
+	// Token: 0x06017240 RID: 94784 RVA: 0x006C7F60 File Offset: 0x006C6160
 	protected override bool OnEnd()
 	{
 		this.EndListenTasks();
 		return true;
 	}
 
-	// Token: 0x0601994B RID: 104779 RVA: 0x006A1D64 File Offset: 0x0069FF64
+	// Token: 0x06017241 RID: 94785 RVA: 0x006C7F6C File Offset: 0x006C616C
 	private void StartListenTasks()
 	{
 		EventSystem.Instance.AddWithTarget(base.Entity, EEventName.AiHateAddOrRemove, new Action<bool, AiController>(this.OnAggroChanged));
@@ -145,7 +145,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601994C RID: 104780 RVA: 0x006A1FD8 File Offset: 0x006A01D8
+	// Token: 0x06017242 RID: 94786 RVA: 0x006C81E0 File Offset: 0x006C63E0
 	private void EndListenTasks()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.AiHateAddOrRemove, new Action<bool, AiController>(this.OnAggroChanged));
@@ -183,7 +183,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601994D RID: 104781 RVA: 0x006A2204 File Offset: 0x006A0404
+	// Token: 0x06017243 RID: 94787 RVA: 0x006C840C File Offset: 0x006C660C
 	private static void OnToggleBattleStart(bool bStart)
 	{
 		if (bStart)
@@ -194,7 +194,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.LogOnBattleEnd();
 	}
 
-	// Token: 0x0601994E RID: 104782 RVA: 0x006A2214 File Offset: 0x006A0414
+	// Token: 0x06017244 RID: 94788 RVA: 0x006C841C File Offset: 0x006C661C
 	private static void StartInstInfoRecord()
 	{
 		if (GameModeModel.Instance.InstanceType > InstanceType.BigWorldInstance && !GameModeModel.Instance.IsMulti)
@@ -204,7 +204,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601994F RID: 104783 RVA: 0x006A223A File Offset: 0x006A043A
+	// Token: 0x06017245 RID: 94789 RVA: 0x006C8442 File Offset: 0x006C6642
 	private static void EndInstInfoRecord()
 	{
 		if (GameModeModel.Instance.InstanceType > InstanceType.BigWorldInstance && !GameModeModel.Instance.IsMulti)
@@ -214,7 +214,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019950 RID: 104784 RVA: 0x006A2260 File Offset: 0x006A0460
+	// Token: 0x06017246 RID: 94790 RVA: 0x006C8468 File Offset: 0x006C6668
 	private static void TriggerUiTimeDilation()
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -225,13 +225,13 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.InstFightEnd.i_stop_times++;
 	}
 
-	// Token: 0x06019951 RID: 104785 RVA: 0x006A228D File Offset: 0x006A048D
+	// Token: 0x06017247 RID: 94791 RVA: 0x006C8495 File Offset: 0x006C6695
 	private static bool CheckShouldRecord()
 	{
 		return !GameModeModel.Instance.IsMulti && !CharacterLogComponent.IsTrialInstance() && CharacterLogComponent.Timestamp > 0L;
 	}
 
-	// Token: 0x06019952 RID: 104786 RVA: 0x006A22B0 File Offset: 0x006A04B0
+	// Token: 0x06017248 RID: 94792 RVA: 0x006C84B8 File Offset: 0x006C66B8
 	private static bool IsTrialInstance()
 	{
 		InstanceDungeonConfig instance = InstanceDungeonConfig.Instance;
@@ -245,7 +245,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return ((fightFormationConfig != null) ? fightFormationConfig.GetValueOrDefault().TrialRoleLength : 0) > 0;
 	}
 
-	// Token: 0x06019953 RID: 104787 RVA: 0x006A232C File Offset: 0x006A052C
+	// Token: 0x06017249 RID: 94793 RVA: 0x006C8534 File Offset: 0x006C6734
 	public void OnAggroChanged(bool addOrRemove, AiController from)
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -284,7 +284,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		curAggroSet.Remove((long)id);
 	}
 
-	// Token: 0x06019954 RID: 104788 RVA: 0x006A2440 File Offset: 0x006A0640
+	// Token: 0x0601724A RID: 94794 RVA: 0x006C8648 File Offset: 0x006C6848
 	[NullableContext(2)]
 	private MonsterInfoLogData BuildMonsterData(int entityId)
 	{
@@ -300,7 +300,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x06019955 RID: 104789 RVA: 0x006A2484 File Offset: 0x006A0684
+	// Token: 0x0601724B RID: 94795 RVA: 0x006C868C File Offset: 0x006C688C
 	private bool CheckEntity(int entityId)
 	{
 		Entity entity = EntitySystem.Instance.Get(entityId);
@@ -313,7 +313,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return baseInfo != null && baseInfo.Category.MainType.GetValueOrDefault() == EEntityMainType.Monster;
 	}
 
-	// Token: 0x06019956 RID: 104790 RVA: 0x006A24DD File Offset: 0x006A06DD
+	// Token: 0x0601724C RID: 94796 RVA: 0x006C86E5 File Offset: 0x006C68E5
 	private void RecordSpecialDamage(float damageVal, bool isTargetKilled)
 	{
 		if (CharacterLogComponent.CheckShouldRecord())
@@ -326,7 +326,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019957 RID: 104791 RVA: 0x006A24FC File Offset: 0x006A06FC
+	// Token: 0x0601724D RID: 94797 RVA: 0x006C8704 File Offset: 0x006C6904
 	private void RecordDrown(bool isTargetKilled)
 	{
 		if (isTargetKilled)
@@ -335,7 +335,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019958 RID: 104792 RVA: 0x006A2508 File Offset: 0x006A0708
+	// Token: 0x0601724E RID: 94798 RVA: 0x006C8710 File Offset: 0x006C6910
 	private void RecordSkill([Nullable(2)] EntityHandle skillTarget, int skillId, IReadOnlyList<ESkillGenre> skillGenres)
 	{
 		if (!CharacterLogComponent.CheckShouldRecord())
@@ -421,7 +421,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.SkillHitCount[key] = false;
 	}
 
-	// Token: 0x06019959 RID: 104793 RVA: 0x006A26C4 File Offset: 0x006A08C4
+	// Token: 0x0601724F RID: 94799 RVA: 0x006C88CC File Offset: 0x006C6ACC
 	private void RecordBulletRebound(Entity attacker, int skillId)
 	{
 		if (!CharacterLogComponent.CheckShouldRecord())
@@ -435,7 +435,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.InstFightEnd.i_bullet_rebound_times++;
 	}
 
-	// Token: 0x0601995A RID: 104794 RVA: 0x006A2745 File Offset: 0x006A0945
+	// Token: 0x06017250 RID: 94800 RVA: 0x006C894D File Offset: 0x006C6B4D
 	private void CharOnElementEnergyChanged(EElementType elementId, float newValue, float oldValue)
 	{
 		if (!CharacterLogComponent.CheckShouldRecord())
@@ -448,7 +448,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601995B RID: 104795 RVA: 0x006A2774 File Offset: 0x006A0974
+	// Token: 0x06017251 RID: 94801 RVA: 0x006C897C File Offset: 0x006C6B7C
 	private void CharOnEnergyChanged(EAttributeType attribute, float newValue, float oldValue)
 	{
 		if (!CharacterLogComponent.CheckShouldRecord())
@@ -471,7 +471,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601995C RID: 104796 RVA: 0x006A27E0 File Offset: 0x006A09E0
+	// Token: 0x06017252 RID: 94802 RVA: 0x006C89E8 File Offset: 0x006C6BE8
 	private void OnMoveStateChanged(global::ECharMoveState oldState, global::ECharMoveState newState)
 	{
 		CharacterUnifiedStateComponent component = base.Entity.GetComponent<CharacterUnifiedStateComponent>();
@@ -481,7 +481,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601995D RID: 104797 RVA: 0x006A2800 File Offset: 0x006A0A00
+	// Token: 0x06017253 RID: 94803 RVA: 0x006C8A08 File Offset: 0x006C6C08
 	private void OnCharUseSkill(int tagId, bool start)
 	{
 		CharacterUnifiedStateComponent component = base.Entity.GetComponent<CharacterUnifiedStateComponent>();
@@ -491,7 +491,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601995E RID: 104798 RVA: 0x006A2820 File Offset: 0x006A0A20
+	// Token: 0x06017254 RID: 94804 RVA: 0x006C8A28 File Offset: 0x006C6C28
 	private void RecordRevive()
 	{
 		if (!CharacterLogComponent.CheckShouldRecord())
@@ -506,7 +506,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.InstFightEnd.i_revive_times++;
 	}
 
-	// Token: 0x0601995F RID: 104799 RVA: 0x006A2884 File Offset: 0x006A0A84
+	// Token: 0x06017255 RID: 94805 RVA: 0x006C8A8C File Offset: 0x006C6C8C
 	private static void RecordChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		CharacterLogComponent.CurrentEntity = newEntity;
@@ -537,7 +537,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.RefreshOperationState();
 	}
 
-	// Token: 0x06019960 RID: 104800 RVA: 0x006A2947 File Offset: 0x006A0B47
+	// Token: 0x06017256 RID: 94806 RVA: 0x006C8B4F File Offset: 0x006C6D4F
 	private static void RecordTeamDeath(bool isMyTeam, ETeamGroupType groupType, ETeamLivingState state, ETeamLivingState oldState)
 	{
 		if (!isMyTeam || groupType != ETeamGroupType.Battle || state == ETeamLivingState.Alive)
@@ -552,7 +552,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.OnToggleBattleStart(false);
 	}
 
-	// Token: 0x06019961 RID: 104801 RVA: 0x006A296C File Offset: 0x006A0B6C
+	// Token: 0x06017257 RID: 94807 RVA: 0x006C8B74 File Offset: 0x006C6D74
 	private void OnRageChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		float num = oldValue - newValue;
@@ -572,7 +572,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019962 RID: 104802 RVA: 0x006A29D0 File Offset: 0x006A0BD0
+	// Token: 0x06017258 RID: 94808 RVA: 0x006C8BD8 File Offset: 0x006C6DD8
 	[NullableContext(2)]
 	private static int GetEntityConfigId(Entity entity)
 	{
@@ -588,8 +588,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return component.GetRoleId();
 	}
 
-	// Token: 0x17002350 RID: 9040
-	// (get) Token: 0x06019963 RID: 104803 RVA: 0x006A2A10 File Offset: 0x006A0C10
+	// Token: 0x170023FC RID: 9212
+	// (get) Token: 0x06017259 RID: 94809 RVA: 0x006C8C18 File Offset: 0x006C6E18
 	private static List<EntityHandle> FormationRoles
 	{
 		get
@@ -598,8 +598,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002351 RID: 9041
-	// (get) Token: 0x06019964 RID: 104804 RVA: 0x006A2A1D File Offset: 0x006A0C1D
+	// Token: 0x170023FD RID: 9213
+	// (get) Token: 0x0601725A RID: 94810 RVA: 0x006C8C25 File Offset: 0x006C6E25
 	private static HashSet<long> CurAggroSet
 	{
 		get
@@ -608,8 +608,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002352 RID: 9042
-	// (get) Token: 0x06019965 RID: 104805 RVA: 0x006A2A24 File Offset: 0x006A0C24
+	// Token: 0x170023FE RID: 9214
+	// (get) Token: 0x0601725B RID: 94811 RVA: 0x006C8C2C File Offset: 0x006C6E2C
 	private static HashSet<long> SumAggroSet
 	{
 		get
@@ -618,8 +618,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002353 RID: 9043
-	// (get) Token: 0x06019966 RID: 104806 RVA: 0x006A2A2B File Offset: 0x006A0C2B
+	// Token: 0x170023FF RID: 9215
+	// (get) Token: 0x0601725C RID: 94812 RVA: 0x006C8C33 File Offset: 0x006C6E33
 	private static HashSet<long> DeathMonsterSet
 	{
 		get
@@ -628,8 +628,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002354 RID: 9044
-	// (get) Token: 0x06019967 RID: 104807 RVA: 0x006A2A32 File Offset: 0x006A0C32
+	// Token: 0x17002400 RID: 9216
+	// (get) Token: 0x0601725D RID: 94813 RVA: 0x006C8C3A File Offset: 0x006C6E3A
 	private static HashSet<long> EscapeMonsterSet
 	{
 		get
@@ -638,8 +638,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002355 RID: 9045
-	// (get) Token: 0x06019968 RID: 104808 RVA: 0x006A2A39 File Offset: 0x006A0C39
+	// Token: 0x17002401 RID: 9217
+	// (get) Token: 0x0601725E RID: 94814 RVA: 0x006C8C41 File Offset: 0x006C6E41
 	private static Dictionary<long, MonsterInfoLogData> MonsterDataMap
 	{
 		get
@@ -648,8 +648,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002356 RID: 9046
-	// (get) Token: 0x06019969 RID: 104809 RVA: 0x006A2A40 File Offset: 0x006A0C40
+	// Token: 0x17002402 RID: 9218
+	// (get) Token: 0x0601725F RID: 94815 RVA: 0x006C8C48 File Offset: 0x006C6E48
 	private static Dictionary<string, bool> SkillHitCount
 	{
 		get
@@ -658,8 +658,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002357 RID: 9047
-	// (get) Token: 0x0601996A RID: 104810 RVA: 0x006A2A47 File Offset: 0x006A0C47
+	// Token: 0x17002403 RID: 9219
+	// (get) Token: 0x06017260 RID: 94816 RVA: 0x006C8C4F File Offset: 0x006C6E4F
 	private static InstFightStartRecord InstFightStart
 	{
 		get
@@ -668,8 +668,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002358 RID: 9048
-	// (get) Token: 0x0601996B RID: 104811 RVA: 0x006A2A4E File Offset: 0x006A0C4E
+	// Token: 0x17002404 RID: 9220
+	// (get) Token: 0x06017261 RID: 94817 RVA: 0x006C8C56 File Offset: 0x006C6E56
 	private static InstFightEndRecord InstFightEnd
 	{
 		get
@@ -678,7 +678,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601996C RID: 104812 RVA: 0x006A2A58 File Offset: 0x006A0C58
+	// Token: 0x06017262 RID: 94818 RVA: 0x006C8C60 File Offset: 0x006C6E60
 	private EPlayerOperationState? GetCurrentSkillOperationState()
 	{
 		BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
@@ -693,7 +693,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return new EPlayerOperationState?(EPlayerOperationState.Skill);
 	}
 
-	// Token: 0x0601996D RID: 104813 RVA: 0x006A2AD0 File Offset: 0x006A0CD0
+	// Token: 0x06017263 RID: 94819 RVA: 0x006C8CD8 File Offset: 0x006C6ED8
 	private EPlayerOperationState GetCurrentMoveOperationState()
 	{
 		switch (base.Entity.GetComponent<CharacterUnifiedStateComponent>().MoveState)
@@ -724,7 +724,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return EPlayerOperationState.Other;
 	}
 
-	// Token: 0x0601996E RID: 104814 RVA: 0x006A2B54 File Offset: 0x006A0D54
+	// Token: 0x06017264 RID: 94820 RVA: 0x006C8D5C File Offset: 0x006C6F5C
 	private static EPlayerOperationState GetCurrentOperationState()
 	{
 		if (CharacterLogComponent.CurrentEntity == null)
@@ -756,7 +756,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return component2.GetCurrentMoveOperationState();
 	}
 
-	// Token: 0x0601996F RID: 104815 RVA: 0x006A2C14 File Offset: 0x006A0E14
+	// Token: 0x06017265 RID: 94821 RVA: 0x006C8E1C File Offset: 0x006C701C
 	private static void InitOperationState()
 	{
 		BattleEndLogData catchBattleEndData = CharacterLogComponent.CatchBattleEndData;
@@ -777,7 +777,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06019970 RID: 104816 RVA: 0x006A2CD0 File Offset: 0x006A0ED0
+	// Token: 0x06017266 RID: 94822 RVA: 0x006C8ED8 File Offset: 0x006C70D8
 	private static void RefreshOperationState()
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -841,7 +841,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		operationState.StartTime = new double?(serverTime);
 	}
 
-	// Token: 0x06019971 RID: 104817 RVA: 0x006A2ED8 File Offset: 0x006A10D8
+	// Token: 0x06017267 RID: 94823 RVA: 0x006C90E0 File Offset: 0x006C72E0
 	private static void ClearBattleSumInfo()
 	{
 		CharacterLogComponent.Timestamp = 0L;
@@ -885,8 +885,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.SkillHitCount.Clear();
 	}
 
-	// Token: 0x17002359 RID: 9049
-	// (get) Token: 0x06019972 RID: 104818 RVA: 0x006A30A1 File Offset: 0x006A12A1
+	// Token: 0x17002405 RID: 9221
+	// (get) Token: 0x06017268 RID: 94824 RVA: 0x006C92A9 File Offset: 0x006C74A9
 	private static Dictionary<long, RoleStateRecord> RoleTotalStateRecordMap
 	{
 		get
@@ -895,7 +895,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019973 RID: 104819 RVA: 0x006A30A8 File Offset: 0x006A12A8
+	// Token: 0x06017269 RID: 94825 RVA: 0x006C92B0 File Offset: 0x006C74B0
 	private static RoleStateRecord GetRoleStateRecord(int entityId)
 	{
 		RoleStateRecord roleStateRecord;
@@ -935,7 +935,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return roleStateRecord;
 	}
 
-	// Token: 0x06019974 RID: 104820 RVA: 0x006A3160 File Offset: 0x006A1360
+	// Token: 0x0601726A RID: 94826 RVA: 0x006C9368 File Offset: 0x006C7568
 	private static string GetRoleList()
 	{
 		List<EntityHandle> formationRoles = CharacterLogComponent.FormationRoles;
@@ -948,8 +948,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return string.Join<int>(",", list);
 	}
 
-	// Token: 0x1700235A RID: 9050
-	// (get) Token: 0x06019975 RID: 104821 RVA: 0x006A31D4 File Offset: 0x006A13D4
+	// Token: 0x17002406 RID: 9222
+	// (get) Token: 0x0601726B RID: 94827 RVA: 0x006C93DC File Offset: 0x006C75DC
 	private static Dictionary<string, RoleSkillRecord> RoleTotalSkillRecordMap
 	{
 		get
@@ -958,8 +958,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700235B RID: 9051
-	// (get) Token: 0x06019976 RID: 104822 RVA: 0x006A31DB File Offset: 0x006A13DB
+	// Token: 0x17002407 RID: 9223
+	// (get) Token: 0x0601726C RID: 94828 RVA: 0x006C93E3 File Offset: 0x006C75E3
 	private static Dictionary<long, List<RoleSkillRecord>> RoleSkillRecordMap
 	{
 		get
@@ -968,8 +968,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700235C RID: 9052
-	// (get) Token: 0x06019977 RID: 104823 RVA: 0x006A31E2 File Offset: 0x006A13E2
+	// Token: 0x17002408 RID: 9224
+	// (get) Token: 0x0601726D RID: 94829 RVA: 0x006C93EA File Offset: 0x006C75EA
 	private static Dictionary<long, RoleSkillReportLog> RoleSkillReportLogMap
 	{
 		get
@@ -978,7 +978,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019978 RID: 104824 RVA: 0x006A31EC File Offset: 0x006A13EC
+	// Token: 0x0601726E RID: 94830 RVA: 0x006C93F4 File Offset: 0x006C75F4
 	private static RoleSkillRecord GetRoleSkillRecord(int entityId, int skillId)
 	{
 		string key = entityId.ToString() + "-" + skillId.ToString();
@@ -1020,8 +1020,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return roleSkillRecord;
 	}
 
-	// Token: 0x1700235D RID: 9053
-	// (get) Token: 0x06019979 RID: 104825 RVA: 0x006A334E File Offset: 0x006A154E
+	// Token: 0x17002409 RID: 9225
+	// (get) Token: 0x0601726F RID: 94831 RVA: 0x006C9556 File Offset: 0x006C7756
 	private static Dictionary<long, MonsterStateRecord> MonsterTotalStateRecordMap
 	{
 		get
@@ -1030,7 +1030,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601997A RID: 104826 RVA: 0x006A3358 File Offset: 0x006A1558
+	// Token: 0x06017270 RID: 94832 RVA: 0x006C9560 File Offset: 0x006C7760
 	private static MonsterStateRecord GetMonsterStateRecord(int entityId)
 	{
 		MonsterStateRecord monsterStateRecord;
@@ -1052,16 +1052,15 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 				monsterStateRecord.s_battle_id = (((PlayerInfoModel.Instance.GetId() != null) ? num.GetValueOrDefault().ToString() : null) ?? "0") + "_" + CharacterLogComponent.Timestamp.ToString();
 				monsterStateRecord.i_monster_score = (int)CharacterLogComponent.GetMonsterScore((long)entityId);
 				int pbDataId = entity.GetComponent<CreatureDataComponent>().GetPbDataId();
-				IEntityOwnerInfo entityOwner = CreatureModel.Instance.GetEntityOwner(GameModeModel.Instance.MapConfig.MapId, pbDataId, false);
-				IEntityOwnerQuest entityOwnerQuest = entityOwner as IEntityOwnerQuest;
-				if (entityOwnerQuest != null && entityOwner.Type == EEntityOwnerType.Quest)
+				IEntityOwnerQuest entityOwnerQuest = CreatureModel.Instance.GetEntityOwner(GameModeModel.Instance.MapConfig.MapId, pbDataId, EEntityOwnerType.Quest) as IEntityOwnerQuest;
+				if (entityOwnerQuest != null)
 				{
 					monsterStateRecord.i_from_quest = entityOwnerQuest.QuestId;
 				}
 				else
 				{
-					IEntityOwnerLevelPlay entityOwnerLevelPlay = entityOwner as IEntityOwnerLevelPlay;
-					if (entityOwnerLevelPlay != null && entityOwner.Type == EEntityOwnerType.LevelPlay)
+					IEntityOwnerLevelPlay entityOwnerLevelPlay = CreatureModel.Instance.GetEntityOwner(GameModeModel.Instance.MapConfig.MapId, pbDataId, EEntityOwnerType.LevelPlay) as IEntityOwnerLevelPlay;
+					if (entityOwnerLevelPlay != null)
 					{
 						monsterStateRecord.i_from_play = entityOwnerLevelPlay.LevelPlayId;
 					}
@@ -1072,8 +1071,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return monsterStateRecord;
 	}
 
-	// Token: 0x1700235E RID: 9054
-	// (get) Token: 0x0601997B RID: 104827 RVA: 0x006A34AF File Offset: 0x006A16AF
+	// Token: 0x1700240A RID: 9226
+	// (get) Token: 0x06017271 RID: 94833 RVA: 0x006C96BD File Offset: 0x006C78BD
 	private static Dictionary<string, MonsterSkillRecord> MonsterTotalSkillRecordMap
 	{
 		get
@@ -1082,8 +1081,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700235F RID: 9055
-	// (get) Token: 0x0601997C RID: 104828 RVA: 0x006A34B6 File Offset: 0x006A16B6
+	// Token: 0x1700240B RID: 9227
+	// (get) Token: 0x06017272 RID: 94834 RVA: 0x006C96C4 File Offset: 0x006C78C4
 	private static Dictionary<long, List<MonsterSkillRecord>> MonsterSkillRecordMap
 	{
 		get
@@ -1092,8 +1091,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002360 RID: 9056
-	// (get) Token: 0x0601997D RID: 104829 RVA: 0x006A34BD File Offset: 0x006A16BD
+	// Token: 0x1700240C RID: 9228
+	// (get) Token: 0x06017273 RID: 94835 RVA: 0x006C96CB File Offset: 0x006C78CB
 	private static Dictionary<long, MonsterSkillReportLog> MonsterSkillReportLogMap
 	{
 		get
@@ -1102,7 +1101,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601997E RID: 104830 RVA: 0x006A34C4 File Offset: 0x006A16C4
+	// Token: 0x06017274 RID: 94836 RVA: 0x006C96D4 File Offset: 0x006C78D4
 	private static MonsterSkillRecord GetMonsterSkillRecord(int entityId, int skillId)
 	{
 		string key = entityId.ToString() + "-" + skillId.ToString();
@@ -1142,8 +1141,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return monsterSkillRecord;
 	}
 
-	// Token: 0x17002361 RID: 9057
-	// (get) Token: 0x0601997F RID: 104831 RVA: 0x006A361F File Offset: 0x006A181F
+	// Token: 0x1700240D RID: 9229
+	// (get) Token: 0x06017275 RID: 94837 RVA: 0x006C982F File Offset: 0x006C7A2F
 	private static Dictionary<string, ReactionRecord> ReactionRecordMap
 	{
 		get
@@ -1152,8 +1151,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002362 RID: 9058
-	// (get) Token: 0x06019980 RID: 104832 RVA: 0x006A3626 File Offset: 0x006A1826
+	// Token: 0x1700240E RID: 9230
+	// (get) Token: 0x06017276 RID: 94838 RVA: 0x006C9836 File Offset: 0x006C7A36
 	private static Dictionary<long, ReactionRecord> ReactionEntityMap
 	{
 		get
@@ -1162,8 +1161,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002363 RID: 9059
-	// (get) Token: 0x06019981 RID: 104833 RVA: 0x006A362D File Offset: 0x006A182D
+	// Token: 0x1700240F RID: 9231
+	// (get) Token: 0x06017277 RID: 94839 RVA: 0x006C983D File Offset: 0x006C7A3D
 	private static BattleStartLogData CatchBattleStartData
 	{
 		get
@@ -1172,7 +1171,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019982 RID: 104834 RVA: 0x006A3634 File Offset: 0x006A1834
+	// Token: 0x06017278 RID: 94840 RVA: 0x006C9844 File Offset: 0x006C7A44
 	private static void LogOnBattleStart()
 	{
 		if (CharacterLogComponent.Timestamp > 0L)
@@ -1229,8 +1228,8 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002364 RID: 9060
-	// (get) Token: 0x06019983 RID: 104835 RVA: 0x006A38AC File Offset: 0x006A1AAC
+	// Token: 0x17002410 RID: 9232
+	// (get) Token: 0x06017279 RID: 94841 RVA: 0x006C9ABC File Offset: 0x006C7CBC
 	private static BattleEndLogData CatchBattleEndData
 	{
 		get
@@ -1239,7 +1238,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019984 RID: 104836 RVA: 0x006A38B4 File Offset: 0x006A1AB4
+	// Token: 0x0601727A RID: 94842 RVA: 0x006C9AC4 File Offset: 0x006C7CC4
 	private static void LogOnBattleEnd()
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -1333,7 +1332,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.ClearBattleSumInfo();
 	}
 
-	// Token: 0x06019985 RID: 104837 RVA: 0x006A3C34 File Offset: 0x006A1E34
+	// Token: 0x0601727B RID: 94843 RVA: 0x006C9E44 File Offset: 0x006C8044
 	private static void LogSingleRoleState()
 	{
 		foreach (RoleStateRecord logData in CharacterLogComponent.RoleTotalStateRecordMap.Values)
@@ -1343,7 +1342,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.RoleTotalStateRecordMap.Clear();
 	}
 
-	// Token: 0x06019986 RID: 104838 RVA: 0x006A3C9C File Offset: 0x006A1E9C
+	// Token: 0x0601727C RID: 94844 RVA: 0x006C9EAC File Offset: 0x006C80AC
 	private static void LogSingleMonsterState()
 	{
 		foreach (MonsterStateRecord monsterStateRecord in CharacterLogComponent.MonsterTotalStateRecordMap.Values)
@@ -1359,7 +1358,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.MonsterTotalStateRecordMap.Clear();
 	}
 
-	// Token: 0x06019987 RID: 104839 RVA: 0x006A3D4C File Offset: 0x006A1F4C
+	// Token: 0x0601727D RID: 94845 RVA: 0x006C9F5C File Offset: 0x006C815C
 	private static void RecordRoleDeath(int entityId)
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -1388,7 +1387,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.InstFightEnd.i_death_role_count++;
 	}
 
-	// Token: 0x06019988 RID: 104840 RVA: 0x006A3DE8 File Offset: 0x006A1FE8
+	// Token: 0x0601727E RID: 94846 RVA: 0x006C9FF8 File Offset: 0x006C81F8
 	private static void LogSingleRoleSkill()
 	{
 		foreach (KeyValuePair<long, RoleSkillReportLog> keyValuePair in CharacterLogComponent.RoleSkillReportLogMap)
@@ -1400,7 +1399,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.RoleSkillReportLogMap.Clear();
 	}
 
-	// Token: 0x06019989 RID: 104841 RVA: 0x006A3E74 File Offset: 0x006A2074
+	// Token: 0x0601727F RID: 94847 RVA: 0x006CA084 File Offset: 0x006C8284
 	private static void LogOnElementReaction()
 	{
 		if (CharacterLogComponent.ReactionRecordMap.Count > 0)
@@ -1422,7 +1421,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.ReactionEntityMap.Clear();
 	}
 
-	// Token: 0x0601998A RID: 104842 RVA: 0x006A3F28 File Offset: 0x006A2128
+	// Token: 0x06017280 RID: 94848 RVA: 0x006CA138 File Offset: 0x006C8338
 	private static void LogOnInstFightStart()
 	{
 		CharacterLogComponent.InstFightStart.Clear();
@@ -1435,7 +1434,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		LogController.Instance.LogInstFightStartPush(CharacterLogComponent.InstFightStart);
 	}
 
-	// Token: 0x0601998B RID: 104843 RVA: 0x006A3FB4 File Offset: 0x006A21B4
+	// Token: 0x06017281 RID: 94849 RVA: 0x006CA1C4 File Offset: 0x006C83C4
 	private static void LogOnInstFightEnd()
 	{
 		CharacterLogComponent.InstFightEnd.i_inst_id = InstanceDungeonEntranceModel.Instance.InstanceId;
@@ -1456,7 +1455,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.InstFightEnd.Clear();
 	}
 
-	// Token: 0x0601998C RID: 104844 RVA: 0x006A40A0 File Offset: 0x006A22A0
+	// Token: 0x06017282 RID: 94850 RVA: 0x006CA2B0 File Offset: 0x006C84B0
 	private static void LogSingleMonsterSkill()
 	{
 		foreach (KeyValuePair<long, MonsterSkillReportLog> keyValuePair in CharacterLogComponent.MonsterSkillReportLogMap)
@@ -1468,7 +1467,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.MonsterSkillReportLogMap.Clear();
 	}
 
-	// Token: 0x0601998D RID: 104845 RVA: 0x006A412C File Offset: 0x006A232C
+	// Token: 0x06017283 RID: 94851 RVA: 0x006CA33C File Offset: 0x006C853C
 	private static Dictionary<string, int> GetRoleSkillState(long entityId)
 	{
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -1490,7 +1489,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return dictionary2;
 	}
 
-	// Token: 0x0601998E RID: 104846 RVA: 0x006A4218 File Offset: 0x006A2418
+	// Token: 0x06017284 RID: 94852 RVA: 0x006CA428 File Offset: 0x006C8628
 	private static List<List<int>> GetPhantomBattleDataList(int roleId)
 	{
 		List<List<int>> list = new List<List<int>>();
@@ -1511,7 +1510,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return list;
 	}
 
-	// Token: 0x0601998F RID: 104847 RVA: 0x006A429C File Offset: 0x006A249C
+	// Token: 0x06017285 RID: 94853 RVA: 0x006CA4AC File Offset: 0x006C86AC
 	private static long GetCharacterScore(int entityId)
 	{
 		Entity entity = EntitySystem.Instance.Get(entityId);
@@ -1551,7 +1550,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return (long)num;
 	}
 
-	// Token: 0x06019990 RID: 104848 RVA: 0x006A4424 File Offset: 0x006A2624
+	// Token: 0x06017286 RID: 94854 RVA: 0x006CA634 File Offset: 0x006C8834
 	[NullableContext(2)]
 	private static RoleStateRecord BuildRoleData(int entityId)
 	{
@@ -1635,7 +1634,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x06019991 RID: 104849 RVA: 0x006A467C File Offset: 0x006A287C
+	// Token: 0x06017287 RID: 94855 RVA: 0x006CA88C File Offset: 0x006C8A8C
 	private static float GetMonsterScore(long entityId)
 	{
 		BaseAttributeComponent component = EntitySystem.Instance.Get((int)entityId).GetComponent<BaseAttributeComponent>();
@@ -1658,7 +1657,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return (float)((double)num2 / num3);
 	}
 
-	// Token: 0x06019992 RID: 104850 RVA: 0x006A4780 File Offset: 0x006A2980
+	// Token: 0x06017288 RID: 94856 RVA: 0x006CA990 File Offset: 0x006C8B90
 	private void EnterParalysisMode(int tagId, bool bTagExists)
 	{
 		if (!CharacterLogComponent.CheckShouldRecord())
@@ -1671,7 +1670,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019993 RID: 104851 RVA: 0x006A47AA File Offset: 0x006A29AA
+	// Token: 0x06017289 RID: 94857 RVA: 0x006CA9BA File Offset: 0x006C8BBA
 	private static void OnInstResultNotify(InstResultNotify data)
 	{
 		if (data.Succ)
@@ -1684,7 +1683,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019994 RID: 104852 RVA: 0x006A47D8 File Offset: 0x006A29D8
+	// Token: 0x0601728A RID: 94858 RVA: 0x006CA9E8 File Offset: 0x006C8BE8
 	private static void OnTowerChallengeChangeTeamNotify()
 	{
 		if (GameModeModel.Instance.InstanceType > InstanceType.BigWorldInstance && !GameModeModel.Instance.IsMulti)
@@ -1695,13 +1694,13 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019995 RID: 104853 RVA: 0x006A4809 File Offset: 0x006A2A09
+	// Token: 0x0601728B RID: 94859 RVA: 0x006CAA19 File Offset: 0x006C8C19
 	private static bool IsInstFight()
 	{
 		return CharacterLogComponent.InstFightStart.i_start_time > 0.0;
 	}
 
-	// Token: 0x06019996 RID: 104854 RVA: 0x006A4820 File Offset: 0x006A2A20
+	// Token: 0x0601728C RID: 94860 RVA: 0x006CAA30 File Offset: 0x006C8C30
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1733,7 +1732,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		return new ValueTuple<List<int>, List<int>>(list, list2);
 	}
 
-	// Token: 0x06019997 RID: 104855 RVA: 0x006A4930 File Offset: 0x006A2B30
+	// Token: 0x0601728D RID: 94861 RVA: 0x006CAB40 File Offset: 0x006C8D40
 	public static void CreateStaticDefaultValue()
 	{
 		CharacterLogComponent.ClassInitiated = false;
@@ -1760,7 +1759,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent._catchBattleEndData = new BattleEndLogData();
 	}
 
-	// Token: 0x06019998 RID: 104856 RVA: 0x006A4A14 File Offset: 0x006A2C14
+	// Token: 0x0601728E RID: 94862 RVA: 0x006CAC24 File Offset: 0x006C8E24
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterLogComponent.ClassInitiated = false;
@@ -1808,7 +1807,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		CharacterLogComponent.InstAreaIndex = 0;
 	}
 
-	// Token: 0x06019999 RID: 104857 RVA: 0x006A4B48 File Offset: 0x006A2D48
+	// Token: 0x0601728F RID: 94863 RVA: 0x006CAD58 File Offset: 0x006C8F58
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1816,125 +1815,139 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 			return false;
 		}
 		CharacterLogComponent characterLogComponent = (CharacterLogComponent)componentTemplate;
-		if (base.CanResetComponentProperty("EnterParalysisTask"))
+		if (characterLogComponent.EnterParalysisTask == null)
 		{
-			if (characterLogComponent.EnterParalysisTask == null)
-			{
-				this.EnterParalysisTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.EnterParalysisTask), "EnterParalysisTask"))
-			{
-				return false;
-			}
+			this.EnterParalysisTask = null;
 		}
-		if (base.CanResetComponentProperty("ListenSkillTask") && characterLogComponent.ListenSkillTask != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.ListenSkillTask), "ListenSkillTask"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EnterParalysisTask), "EnterParalysisTask"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DeathReason"))
+		if (characterLogComponent.ListenSkillTask != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ListenSkillTask), "ListenSkillTask"))
 		{
-			this.DeathReason = characterLogComponent.DeathReason;
+			return false;
 		}
+		this.DeathReason = characterLogComponent.DeathReason;
 		return true;
 	}
 
-	// Token: 0x0400BF60 RID: 48992
+	// Token: 0x17002411 RID: 9233
+	// (get) Token: 0x06017290 RID: 94864 RVA: 0x006CADD1 File Offset: 0x006C8FD1
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002412 RID: 9234
+	// (get) Token: 0x06017291 RID: 94865 RVA: 0x006CADD4 File Offset: 0x006C8FD4
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C2FB RID: 49915
 	private const float ATK_RATIO = 1.4f;
 
-	// Token: 0x0400BF61 RID: 48993
+	// Token: 0x0400C2FC RID: 49916
 	private const float SKILLLEVEL_CONST = 0.111111f;
 
-	// Token: 0x0400BF62 RID: 48994
+	// Token: 0x0400C2FD RID: 49917
 	private const float RESONANT_CONST = 0.041667f;
 
-	// Token: 0x0400BF63 RID: 48995
+	// Token: 0x0400C2FE RID: 49918
 	private static bool ClassInitiated = false;
 
-	// Token: 0x0400BF64 RID: 48996
+	// Token: 0x0400C2FF RID: 49919
 	[Nullable(2)]
 	private ITagTask EnterParalysisTask;
 
-	// Token: 0x0400BF65 RID: 48997
+	// Token: 0x0400C300 RID: 49920
 	private readonly List<ITagTask> ListenSkillTask = new List<ITagTask>();
 
-	// Token: 0x0400BF66 RID: 48998
+	// Token: 0x0400C301 RID: 49921
 	[Nullable(2)]
 	public static EntityHandle CurrentEntity = null;
 
-	// Token: 0x0400BF67 RID: 48999
+	// Token: 0x0400C302 RID: 49922
 	private static long Timestamp = 0L;
 
-	// Token: 0x0400BF68 RID: 49000
+	// Token: 0x0400C303 RID: 49923
 	private static int TotalRoleDeathNumber = 0;
 
-	// Token: 0x0400BF69 RID: 49001
+	// Token: 0x0400C304 RID: 49924
 	private static int TotalRoleReviveNumber = 0;
 
-	// Token: 0x0400BF6A RID: 49002
+	// Token: 0x0400C305 RID: 49925
 	private static float TotalRoleGetDamage = 0f;
 
-	// Token: 0x0400BF6B RID: 49003
+	// Token: 0x0400C306 RID: 49926
 	private static float TotalRoleSpecialDamage = 0f;
 
-	// Token: 0x0400BF6C RID: 49004
+	// Token: 0x0400C307 RID: 49927
 	private static float TotalRoleMakeDamageForShield = 0f;
 
-	// Token: 0x0400BF6D RID: 49005
+	// Token: 0x0400C308 RID: 49928
 	private static float TotalRoleMakeDamage = 0f;
 
-	// Token: 0x0400BF6E RID: 49006
+	// Token: 0x0400C309 RID: 49929
 	private static float TotalRoleHealFromSkill = 0f;
 
-	// Token: 0x0400BF6F RID: 49007
+	// Token: 0x0400C30A RID: 49930
 	private static float TotalRoleHealFromItem = 0f;
 
-	// Token: 0x0400BF70 RID: 49008
+	// Token: 0x0400C30B RID: 49931
 	private static int TotalRoleDodgeTimes = 0;
 
-	// Token: 0x0400BF71 RID: 49009
+	// Token: 0x0400C30C RID: 49932
 	private static int TotalRoleLimitDodgeTimes = 0;
 
-	// Token: 0x0400BF72 RID: 49010
+	// Token: 0x0400C30D RID: 49933
 	private static int TotalStopTimes = 0;
 
-	// Token: 0x0400BF73 RID: 49011
+	// Token: 0x0400C30E RID: 49934
 	private static float RoleMaxDamage = 0f;
 
-	// Token: 0x0400BF74 RID: 49012
+	// Token: 0x0400C30F RID: 49935
 	private static int TotalSwitchRoleNumber = 0;
 
-	// Token: 0x0400BF75 RID: 49013
+	// Token: 0x0400C310 RID: 49936
 	private static int TotalQteTimes = 0;
 
-	// Token: 0x0400BF76 RID: 49014
+	// Token: 0x0400C311 RID: 49937
 	private static double BattleStartTime = 0.0;
 
-	// Token: 0x0400BF77 RID: 49015
+	// Token: 0x0400C312 RID: 49938
 	private static int BattleResult = 0;
 
-	// Token: 0x0400BF78 RID: 49016
+	// Token: 0x0400C313 RID: 49939
 	private static int TotalCountAttack = 0;
 
-	// Token: 0x0400BF79 RID: 49017
+	// Token: 0x0400C314 RID: 49940
 	private static int TotalBulletRebound = 0;
 
-	// Token: 0x0400BF7A RID: 49018
+	// Token: 0x0400C315 RID: 49941
 	[Nullable(2)]
 	private static HashSet<long> _curAggroSet;
 
-	// Token: 0x0400BF7B RID: 49019
+	// Token: 0x0400C316 RID: 49942
 	[Nullable(2)]
 	private static HashSet<long> _sumAggroSet;
 
-	// Token: 0x0400BF7C RID: 49020
+	// Token: 0x0400C317 RID: 49943
 	[Nullable(2)]
 	private static HashSet<long> _deathMonsterSet;
 
-	// Token: 0x0400BF7D RID: 49021
+	// Token: 0x0400C318 RID: 49944
 	[Nullable(2)]
 	private static HashSet<long> _escapeMonsterSet;
 
-	// Token: 0x0400BF7E RID: 49022
+	// Token: 0x0400C319 RID: 49945
 	[Nullable(new byte[]
 	{
 		2,
@@ -1942,7 +1955,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private static Dictionary<long, MonsterInfoLogData> _monsterDataMap;
 
-	// Token: 0x0400BF7F RID: 49023
+	// Token: 0x0400C31A RID: 49946
 	[Nullable(new byte[]
 	{
 		2,
@@ -1950,25 +1963,25 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private static Dictionary<string, bool> _skillHitCount;
 
-	// Token: 0x0400BF80 RID: 49024
+	// Token: 0x0400C31B RID: 49947
 	[Nullable(2)]
 	private static InstFightStartRecord _instFightStart;
 
-	// Token: 0x0400BF81 RID: 49025
+	// Token: 0x0400C31C RID: 49948
 	[Nullable(2)]
 	private static InstFightEndRecord _instFightEnd;
 
-	// Token: 0x0400BF82 RID: 49026
+	// Token: 0x0400C31D RID: 49949
 	private static int InstAreaIndex = 0;
 
-	// Token: 0x0400BF83 RID: 49027
+	// Token: 0x0400C31E RID: 49950
 	private ERoleDeathReason DeathReason;
 
-	// Token: 0x0400BF84 RID: 49028
+	// Token: 0x0400C31F RID: 49951
 	[Nullable(2)]
 	private static CharacterLogComponent.OperationStateData OperationState = null;
 
-	// Token: 0x0400BF85 RID: 49029
+	// Token: 0x0400C320 RID: 49952
 	[Nullable(new byte[]
 	{
 		2,
@@ -1976,7 +1989,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private static Dictionary<long, RoleStateRecord> _roleTotalStateRecordMap;
 
-	// Token: 0x0400BF86 RID: 49030
+	// Token: 0x0400C321 RID: 49953
 	[Nullable(new byte[]
 	{
 		2,
@@ -1985,7 +1998,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private static Dictionary<string, RoleSkillRecord> _roleTotalSkillRecordMap;
 
-	// Token: 0x0400BF87 RID: 49031
+	// Token: 0x0400C322 RID: 49954
 	[Nullable(new byte[]
 	{
 		2,
@@ -1994,7 +2007,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private static Dictionary<long, List<RoleSkillRecord>> _roleSkillRecordMap;
 
-	// Token: 0x0400BF88 RID: 49032
+	// Token: 0x0400C323 RID: 49955
 	[Nullable(new byte[]
 	{
 		2,
@@ -2002,7 +2015,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private static Dictionary<long, RoleSkillReportLog> _roleSkillReportLogMap;
 
-	// Token: 0x0400BF89 RID: 49033
+	// Token: 0x0400C324 RID: 49956
 	[Nullable(new byte[]
 	{
 		2,
@@ -2010,7 +2023,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private static Dictionary<long, MonsterStateRecord> _monsterTotalStateRecordMap;
 
-	// Token: 0x0400BF8A RID: 49034
+	// Token: 0x0400C325 RID: 49957
 	[Nullable(new byte[]
 	{
 		2,
@@ -2019,7 +2032,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private static Dictionary<string, MonsterSkillRecord> _monsterTotalSkillRecordMap;
 
-	// Token: 0x0400BF8B RID: 49035
+	// Token: 0x0400C326 RID: 49958
 	[Nullable(new byte[]
 	{
 		2,
@@ -2028,7 +2041,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private static Dictionary<long, List<MonsterSkillRecord>> _monsterSkillRecordMap;
 
-	// Token: 0x0400BF8C RID: 49036
+	// Token: 0x0400C327 RID: 49959
 	[Nullable(new byte[]
 	{
 		2,
@@ -2036,7 +2049,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private static Dictionary<long, MonsterSkillReportLog> _monsterSkillReportLogMap;
 
-	// Token: 0x0400BF8D RID: 49037
+	// Token: 0x0400C328 RID: 49960
 	[Nullable(new byte[]
 	{
 		2,
@@ -2045,7 +2058,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private static Dictionary<string, ReactionRecord> _reactionRecordMap;
 
-	// Token: 0x0400BF8E RID: 49038
+	// Token: 0x0400C329 RID: 49961
 	[Nullable(new byte[]
 	{
 		2,
@@ -2053,46 +2066,46 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private static Dictionary<long, ReactionRecord> _reactionEntityMap;
 
-	// Token: 0x0400BF8F RID: 49039
+	// Token: 0x0400C32A RID: 49962
 	[Nullable(2)]
 	private static BattleStartLogData _catchBattleStartData;
 
-	// Token: 0x0400BF90 RID: 49040
+	// Token: 0x0400C32B RID: 49963
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatLogOnBattleStart = Stat.Create("LogOnBattleStart", "", "");
 
-	// Token: 0x0400BF91 RID: 49041
+	// Token: 0x0400C32C RID: 49964
 	[Nullable(2)]
 	private static BattleEndLogData _catchBattleEndData;
 
-	// Token: 0x0400BF92 RID: 49042
+	// Token: 0x0400C32D RID: 49965
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatLogOnBattleEnd = Stat.Create("LogOnBattleEnd", "", "");
 
-	// Token: 0x020095F4 RID: 38388
+	// Token: 0x02008819 RID: 34841
 	[NullableContext(0)]
 	public class OperationStateData
 	{
-		// Token: 0x1700A10B RID: 41227
-		// (get) Token: 0x0604C168 RID: 311656 RVA: 0x0140E66F File Offset: 0x0140C86F
-		// (set) Token: 0x0604C169 RID: 311657 RVA: 0x0140E677 File Offset: 0x0140C877
+		// Token: 0x1700789A RID: 30874
+		// (get) Token: 0x060425F8 RID: 271864 RVA: 0x013B91C7 File Offset: 0x013B73C7
+		// (set) Token: 0x060425F9 RID: 271865 RVA: 0x013B91CF File Offset: 0x013B73CF
 		public EPlayerOperationState? State { get; set; }
 
-		// Token: 0x1700A10C RID: 41228
-		// (get) Token: 0x0604C16A RID: 311658 RVA: 0x0140E680 File Offset: 0x0140C880
-		// (set) Token: 0x0604C16B RID: 311659 RVA: 0x0140E688 File Offset: 0x0140C888
+		// Token: 0x1700789B RID: 30875
+		// (get) Token: 0x060425FA RID: 271866 RVA: 0x013B91D8 File Offset: 0x013B73D8
+		// (set) Token: 0x060425FB RID: 271867 RVA: 0x013B91E0 File Offset: 0x013B73E0
 		public double? StartTime { get; set; }
 	}
 
-	// Token: 0x020095F5 RID: 38389
+	// Token: 0x0200881A RID: 34842
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04030209 RID: 197129
+		// Token: 0x0402B89D RID: 178333
 		[Nullable(0)]
 		public static Action<bool> <0>__OnToggleBattleStart;
 
-		// Token: 0x0403020A RID: 197130
+		// Token: 0x0402B89E RID: 178334
 		[Nullable(new byte[]
 		{
 			0,
@@ -2101,27 +2114,27 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		})]
 		public static Action<EntityHandle, EntityHandle> <1>__RecordChangeRole;
 
-		// Token: 0x0403020B RID: 197131
+		// Token: 0x0402B89F RID: 178335
 		[Nullable(0)]
 		public static Action<bool, ETeamGroupType, ETeamLivingState, ETeamLivingState> <2>__RecordTeamDeath;
 
-		// Token: 0x0403020C RID: 197132
+		// Token: 0x0402B8A0 RID: 178336
 		[Nullable(0)]
 		public static Action<int> <3>__RecordRoleDeath;
 
-		// Token: 0x0403020D RID: 197133
+		// Token: 0x0402B8A1 RID: 178337
 		[Nullable(0)]
 		public static Action <4>__StartInstInfoRecord;
 
-		// Token: 0x0403020E RID: 197134
+		// Token: 0x0402B8A2 RID: 178338
 		[Nullable(0)]
 		public static Action <5>__EndInstInfoRecord;
 
-		// Token: 0x0403020F RID: 197135
+		// Token: 0x0402B8A3 RID: 178339
 		[Nullable(0)]
 		public static Action <6>__TriggerUiTimeDilation;
 
-		// Token: 0x04030210 RID: 197136
+		// Token: 0x0402B8A4 RID: 178340
 		[Nullable(new byte[]
 		{
 			0,
@@ -2129,7 +2142,7 @@ public class CharacterLogComponent : EntityComponent, IStaticVariableResetter
 		})]
 		public static Action<InstResultNotify> <7>__OnInstResultNotify;
 
-		// Token: 0x04030211 RID: 197137
+		// Token: 0x0402B8A5 RID: 178341
 		[Nullable(0)]
 		public static Action <8>__OnTowerChallengeChangeTeamNotify;
 	}

@@ -5,12 +5,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A16 RID: 18966
+	// Token: 0x020039BE RID: 14782
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBattleItemData
 	{
-		// Token: 0x060313C3 RID: 201667 RVA: 0x00B6AD57 File Offset: 0x00B68F57
+		// Token: 0x06026153 RID: 155987 RVA: 0x00AAED53 File Offset: 0x00AACF53
 		public static TrapDefenseBattleItemData Create(TrapDefenseItem config)
 		{
 			return new TrapDefenseBattleItemData
@@ -19,8 +19,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x17007A16 RID: 31254
-		// (get) Token: 0x060313C4 RID: 201668 RVA: 0x00B6AD65 File Offset: 0x00B68F65
+		// Token: 0x17004DC3 RID: 19907
+		// (get) Token: 0x06026154 RID: 155988 RVA: 0x00AAED61 File Offset: 0x00AACF61
 		public string Name
 		{
 			get
@@ -29,8 +29,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A17 RID: 31255
-		// (get) Token: 0x060313C5 RID: 201669 RVA: 0x00B6AD72 File Offset: 0x00B68F72
+		// Token: 0x17004DC4 RID: 19908
+		// (get) Token: 0x06026155 RID: 155989 RVA: 0x00AAED6E File Offset: 0x00AACF6E
 		public string Desc
 		{
 			get
@@ -39,8 +39,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A18 RID: 31256
-		// (get) Token: 0x060313C6 RID: 201670 RVA: 0x00B6AD7F File Offset: 0x00B68F7F
+		// Token: 0x17004DC5 RID: 19909
+		// (get) Token: 0x06026156 RID: 155990 RVA: 0x00AAED7B File Offset: 0x00AACF7B
 		public string Icon
 		{
 			get
@@ -49,8 +49,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A19 RID: 31257
-		// (get) Token: 0x060313C7 RID: 201671 RVA: 0x00B6AD8C File Offset: 0x00B68F8C
+		// Token: 0x17004DC6 RID: 19910
+		// (get) Token: 0x06026157 RID: 155991 RVA: 0x00AAED88 File Offset: 0x00AACF88
 		public int Type
 		{
 			get
@@ -59,8 +59,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A1A RID: 31258
-		// (get) Token: 0x060313C8 RID: 201672 RVA: 0x00B6AD99 File Offset: 0x00B68F99
+		// Token: 0x17004DC7 RID: 19911
+		// (get) Token: 0x06026158 RID: 155992 RVA: 0x00AAED95 File Offset: 0x00AACF95
 		public int ExploreToolId
 		{
 			get
@@ -69,8 +69,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A1B RID: 31259
-		// (get) Token: 0x060313C9 RID: 201673 RVA: 0x00B6ADA6 File Offset: 0x00B68FA6
+		// Token: 0x17004DC8 RID: 19912
+		// (get) Token: 0x06026159 RID: 155993 RVA: 0x00AAEDA2 File Offset: 0x00AACFA2
 		public bool IsUseSkill
 		{
 			get
@@ -79,8 +79,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A1C RID: 31260
-		// (get) Token: 0x060313CA RID: 201674 RVA: 0x00B6ADB9 File Offset: 0x00B68FB9
+		// Token: 0x17004DC9 RID: 19913
+		// (get) Token: 0x0602615A RID: 155994 RVA: 0x00AAEDB5 File Offset: 0x00AACFB5
 		public int SkillIndex
 		{
 			get
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060313CB RID: 201675 RVA: 0x00B6ADC6 File Offset: 0x00B68FC6
+		// Token: 0x0602615B RID: 155995 RVA: 0x00AAEDC2 File Offset: 0x00AACFC2
 		public void UpdateByServerData(int count, int limitCount)
 		{
 			this.InventoryCount = count;
@@ -97,13 +97,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			EventSystem.Instance.Emit(EEventName.TrapDefenseInventoryDataUpdate);
 		}
 
-		// Token: 0x0401A52F RID: 107823
+		// Token: 0x04014E86 RID: 85638
 		public TrapDefenseItem Config;
 
-		// Token: 0x0401A530 RID: 107824
+		// Token: 0x04014E87 RID: 85639
 		public int InventoryCount;
 
-		// Token: 0x0401A531 RID: 107825
+		// Token: 0x04014E88 RID: 85640
 		public int LimitCount = 1;
 	}
 }

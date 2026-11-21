@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x0200629B RID: 25243
+	// Token: 0x02005219 RID: 21017
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 	})]
 	public class MissionToggleItem : GridProxyAbstract<ActivityTaskData>
 	{
-		// Token: 0x0603F816 RID: 260118 RVA: 0x00F5AB44 File Offset: 0x00F58D44
+		// Token: 0x060344D7 RID: 214231 RVA: 0x00EA1AA0 File Offset: 0x00E9FCA0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F817 RID: 260119 RVA: 0x00F5AC0C File Offset: 0x00F58E0C
+		// Token: 0x060344D8 RID: 214232 RVA: 0x00EA1B68 File Offset: 0x00E9FD68
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MissionToggleItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F818 RID: 260120 RVA: 0x00F5AC50 File Offset: 0x00F58E50
+		// Token: 0x060344D9 RID: 214233 RVA: 0x00EA1BAC File Offset: 0x00E9FDAC
 		protected override void OnStart()
 		{
 			this.RewardScrollView = new GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData>(base.GetScrollViewWithScrollbar(2), () => new ActivitySmallItemGrid(), null, false, null);
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.RewardButton.SetLocalTextNew("RealmBetweenGetReward_Text", Array.Empty<object>());
 		}
 
-		// Token: 0x0603F819 RID: 260121 RVA: 0x00F5ACBC File Offset: 0x00F58EBC
+		// Token: 0x060344DA RID: 214234 RVA: 0x00EA1C18 File Offset: 0x00E9FE18
 		public override void Refresh(ActivityTaskData taskData, bool isSelected, int gridIndex)
 		{
 			this.TaskData = taskData;
@@ -73,13 +73,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			base.GetItem(7).SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603F81A RID: 260122 RVA: 0x00F5AD9B File Offset: 0x00F58F9B
+		// Token: 0x060344DB RID: 214235 RVA: 0x00EA1CF7 File Offset: 0x00E9FEF7
 		public void SetClickRewardCb(Action clickRewardCb)
 		{
 			this.OnClickRewardCb = clickRewardCb;
 		}
 
-		// Token: 0x0603F81B RID: 260123 RVA: 0x00F5ADA4 File Offset: 0x00F58FA4
+		// Token: 0x060344DC RID: 214236 RVA: 0x00EA1D00 File Offset: 0x00E9FF00
 		private void RefreshRewardData(int rewardId)
 		{
 			List<IItemGridData> list = new List<IItemGridData>();
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.RewardScrollView.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603F81C RID: 260124 RVA: 0x00F5AE34 File Offset: 0x00F59034
+		// Token: 0x060344DD RID: 214237 RVA: 0x00EA1D90 File Offset: 0x00E9FF90
 		private void OnClickedRewardButton()
 		{
 			Action onClickRewardCb = this.OnClickRewardCb;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			onClickRewardCb();
 		}
 
-		// Token: 0x04021335 RID: 135989
+		// Token: 0x0401BC64 RID: 113764
 		[Nullable(new byte[]
 		{
 			2,
@@ -115,16 +115,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 		})]
 		private GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData> RewardScrollView;
 
-		// Token: 0x04021336 RID: 135990
+		// Token: 0x0401BC65 RID: 113765
 		private ActivityButtonItem GotoButton;
 
-		// Token: 0x04021337 RID: 135991
+		// Token: 0x0401BC66 RID: 113766
 		private ActivityButtonItem RewardButton;
 
-		// Token: 0x04021338 RID: 135992
+		// Token: 0x0401BC67 RID: 113767
 		private ActivityTaskData TaskData;
 
-		// Token: 0x04021339 RID: 135993
+		// Token: 0x0401BC68 RID: 113768
 		[Nullable(2)]
 		private Action OnClickRewardCb;
 	}

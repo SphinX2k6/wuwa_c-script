@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200603C RID: 24636
+	// Token: 0x02004FBA RID: 20410
 	public enum ERewardState
 	{
-		// Token: 0x04020930 RID: 133424
+		// Token: 0x0401B25D RID: 111197
 		None,
-		// Token: 0x04020931 RID: 133425
+		// Token: 0x0401B25E RID: 111198
 		Progress,
-		// Token: 0x04020932 RID: 133426
+		// Token: 0x0401B25F RID: 111199
 		CanReceive,
-		// Token: 0x04020933 RID: 133427
+		// Token: 0x0401B260 RID: 111200
 		Received
 	}
 }

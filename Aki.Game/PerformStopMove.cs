@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200311F RID: 12575
+// Token: 0x0200267A RID: 9850
 public class PerformStopMove : PerformActionBase
 {
-	// Token: 0x0601B061 RID: 110689 RVA: 0x00755A93 File Offset: 0x00753C93
+	// Token: 0x06018ABC RID: 101052 RVA: 0x0077BAFF File Offset: 0x00779CFF
 	public PerformStopMove() : base(EPerformAction.StopMove)
 	{
 	}
 
-	// Token: 0x0601B062 RID: 110690 RVA: 0x00755A9C File Offset: 0x00753C9C
+	// Token: 0x06018ABD RID: 101053 RVA: 0x0077BB08 File Offset: 0x00779D08
 	protected override void OnExecute()
 	{
 		if (this.PerformComp.Entity.GetComponent<BaseCharacterComponent>() == null)

@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006587 RID: 25991
+	// Token: 0x02005505 RID: 21765
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 	})]
 	public class FishingRewardTargetTabItem : GridProxyAbstract<FishingRewardTargetTabData>
 	{
-		// Token: 0x06041234 RID: 266804 RVA: 0x00FC93C0 File Offset: 0x00FC75C0
+		// Token: 0x06035EF9 RID: 220921 RVA: 0x00F10378 File Offset: 0x00F0E578
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041235 RID: 266805 RVA: 0x00FC9488 File Offset: 0x00FC7688
+		// Token: 0x06035EFA RID: 220922 RVA: 0x00F10440 File Offset: 0x00F0E640
 		public void SetToggleState(bool bSelect, bool bFire)
 		{
 			EToggleState state = bSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			extendToggle.SetToggleState(state, bFire, false, false);
 		}
 
-		// Token: 0x06041236 RID: 266806 RVA: 0x00FC94B3 File Offset: 0x00FC76B3
+		// Token: 0x06035EFB RID: 220923 RVA: 0x00F1046B File Offset: 0x00F0E66B
 		private void SetRedDotVisible(bool bVisible)
 		{
 			UUIItem item = base.GetItem(2);
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			item.SetUIActive(bVisible);
 		}
 
-		// Token: 0x06041237 RID: 266807 RVA: 0x00FC94C8 File Offset: 0x00FC76C8
+		// Token: 0x06035EFC RID: 220924 RVA: 0x00F10480 File Offset: 0x00F0E680
 		public void RefreshRedDot()
 		{
 			FishingRewardTargetTabData tabData = this.TabData;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.SetRedDotVisible(valueOrDefault);
 		}
 
-		// Token: 0x06041238 RID: 266808 RVA: 0x00FC9520 File Offset: 0x00FC7720
+		// Token: 0x06035EFD RID: 220925 RVA: 0x00F104D8 File Offset: 0x00F0E6D8
 		[NullableContext(1)]
 		public override void Refresh(FishingRewardTargetTabData data, bool isSelected, int gridIndex)
 		{
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x06041239 RID: 266809 RVA: 0x00FC9560 File Offset: 0x00FC7760
+		// Token: 0x06035EFE RID: 220926 RVA: 0x00F10518 File Offset: 0x00F0E718
 		private void OnTabToggle(EToggleState _)
 		{
 			FishingRewardTargetTabData tabData = this.TabData;
@@ -113,23 +113,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			clickedCallback(this.TabIndex);
 		}
 
-		// Token: 0x04021EEF RID: 138991
+		// Token: 0x0401C820 RID: 116768
 		[Nullable(2)]
 		private FishingRewardTargetTabData TabData;
 
-		// Token: 0x04021EF0 RID: 138992
+		// Token: 0x0401C821 RID: 116769
 		private int TabIndex = -1;
 
-		// Token: 0x0200C77F RID: 51071
+		// Token: 0x0200B164 RID: 45412
 		private class EComponentDefine
 		{
-			// Token: 0x0403C45C RID: 246876
+			// Token: 0x04036DAD RID: 224685
 			public const int Name = 0;
 
-			// Token: 0x0403C45D RID: 246877
+			// Token: 0x04036DAE RID: 224686
 			public const int Toggle = 1;
 
-			// Token: 0x0403C45E RID: 246878
+			// Token: 0x04036DAF RID: 224687
 			public const int RedDot = 2;
 		}
 	}

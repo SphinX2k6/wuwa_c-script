@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C8F RID: 27791
+	// Token: 0x02005E09 RID: 24073
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckFightEnergyBar : LevelConditionBase
 	{
-		// Token: 0x060445AB RID: 279979 RVA: 0x010DAFF4 File Offset: 0x010D91F4
+		// Token: 0x0603A705 RID: 239365 RVA: 0x01084FA0 File Offset: 0x010831A0
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			if (inConditionInfo.LimitParamsLength == 0)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return (num6.GetValueOrDefault() >= num4.GetValueOrDefault() & (num6 != null & num4 != null)) && num == 1;
 		}
 
-		// Token: 0x060445AC RID: 279980 RVA: 0x010DB1E4 File Offset: 0x010D93E4
+		// Token: 0x0603A706 RID: 239366 RVA: 0x01085190 File Offset: 0x01083390
 		[return: Nullable(2)]
 		public SpecialEnergyAttributeIdInfo GetCurrentSpecialEnergyAttributeId(Entity entity)
 		{
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return null;
 		}
 
-		// Token: 0x060445AD RID: 279981 RVA: 0x010DB308 File Offset: 0x010D9508
+		// Token: 0x0603A707 RID: 239367 RVA: 0x010852B4 File Offset: 0x010834B4
 		public RoleInfo? GetRoleConfig(Entity entity)
 		{
 			CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return new RoleInfo?(roleDataById.GetRoleConfig());
 		}
 
-		// Token: 0x060445AE RID: 279982 RVA: 0x010DB358 File Offset: 0x010D9558
+		// Token: 0x0603A708 RID: 239368 RVA: 0x01085304 File Offset: 0x01083504
 		[return: Nullable(2)]
 		public SpecialEnergyAttributeIdInfo GetDefaultSpecialEnergyAttributeId(Entity entity)
 		{

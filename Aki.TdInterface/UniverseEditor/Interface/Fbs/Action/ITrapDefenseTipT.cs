@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200746D RID: 29805
+	// Token: 0x02007C60 RID: 31840
 	public class ITrapDefenseTipT
 	{
-		// Token: 0x1700E237 RID: 57911
-		// (get) Token: 0x0603625E RID: 221790 RVA: 0x0075CA89 File Offset: 0x0075AC89
-		// (set) Token: 0x0603625F RID: 221791 RVA: 0x0075CA91 File Offset: 0x0075AC91
+		// Token: 0x1700EE54 RID: 61012
+		// (get) Token: 0x06039647 RID: 235079 RVA: 0x007BF7B5 File Offset: 0x007BD9B5
+		// (set) Token: 0x06039648 RID: 235080 RVA: 0x007BF7BD File Offset: 0x007BD9BD
 		public ECommonTipType Type { get; set; }
 
-		// Token: 0x1700E238 RID: 57912
-		// (get) Token: 0x06036260 RID: 221792 RVA: 0x0075CA9A File Offset: 0x0075AC9A
-		// (set) Token: 0x06036261 RID: 221793 RVA: 0x0075CAA2 File Offset: 0x0075ACA2
+		// Token: 0x1700EE55 RID: 61013
+		// (get) Token: 0x06039649 RID: 235081 RVA: 0x007BF7C6 File Offset: 0x007BD9C6
+		// (set) Token: 0x0603964A RID: 235082 RVA: 0x007BF7CE File Offset: 0x007BD9CE
 		public string MainText { get; set; }
 
-		// Token: 0x1700E239 RID: 57913
-		// (get) Token: 0x06036262 RID: 221794 RVA: 0x0075CAAB File Offset: 0x0075ACAB
-		// (set) Token: 0x06036263 RID: 221795 RVA: 0x0075CAB3 File Offset: 0x0075ACB3
+		// Token: 0x1700EE56 RID: 61014
+		// (get) Token: 0x0603964B RID: 235083 RVA: 0x007BF7D7 File Offset: 0x007BD9D7
+		// (set) Token: 0x0603964C RID: 235084 RVA: 0x007BF7DF File Offset: 0x007BD9DF
 		public ETrapDefenseTipType TipType { get; set; }
 
-		// Token: 0x06036264 RID: 221796 RVA: 0x0075CABC File Offset: 0x0075ACBC
+		// Token: 0x0603964D RID: 235085 RVA: 0x007BF7E8 File Offset: 0x007BD9E8
 		public ITrapDefenseTipT()
 		{
 			this.Type = ECommonTipType.ChallengeCondition;

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BBF RID: 27583
+	// Token: 0x02007323 RID: 29475
 	public class INpcLeisureInteractT
 	{
-		// Token: 0x1700CCFE RID: 52478
-		// (get) Token: 0x0603074B RID: 198475 RVA: 0x006948D5 File Offset: 0x00692AD5
-		// (set) Token: 0x0603074C RID: 198476 RVA: 0x006948DD File Offset: 0x00692ADD
+		// Token: 0x1700D80A RID: 55306
+		// (get) Token: 0x06033667 RID: 210535 RVA: 0x006EE1D5 File Offset: 0x006EC3D5
+		// (set) Token: 0x06033668 RID: 210536 RVA: 0x006EE1DD File Offset: 0x006EC3DD
 		public TNpcLeisureInteractOpUnion Option { get; set; }
 
-		// Token: 0x0603074D RID: 198477 RVA: 0x006948E6 File Offset: 0x00692AE6
+		// Token: 0x06033669 RID: 210537 RVA: 0x006EE1E6 File Offset: 0x006EC3E6
 		public INpcLeisureInteractT()
 		{
 			this.Option = null;

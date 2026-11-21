@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200531E RID: 21278
+	// Token: 0x020058A4 RID: 22692
 	public struct IGraph3dNormal : IFlatbufferObject
 	{
-		// Token: 0x17009C3B RID: 39995
-		// (get) Token: 0x06022C2E RID: 142382 RVA: 0x004D0D40 File Offset: 0x004CEF40
+		// Token: 0x1700A473 RID: 42099
+		// (get) Token: 0x06024CE2 RID: 150754 RVA: 0x0050DC14 File Offset: 0x0050BE14
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022C2F RID: 142383 RVA: 0x004D0D4D File Offset: 0x004CEF4D
+		// Token: 0x06024CE3 RID: 150755 RVA: 0x0050DC21 File Offset: 0x0050BE21
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022C30 RID: 142384 RVA: 0x004D0D54 File Offset: 0x004CEF54
+		// Token: 0x06024CE4 RID: 150756 RVA: 0x0050DC28 File Offset: 0x0050BE28
 		public static IGraph3dNormal GetRootAsIGraph3dNormal(ByteBuffer _bb)
 		{
 			return IGraph3dNormal.GetRootAsIGraph3dNormal(_bb, default(IGraph3dNormal));
 		}
 
-		// Token: 0x06022C31 RID: 142385 RVA: 0x004D0D70 File Offset: 0x004CEF70
+		// Token: 0x06024CE5 RID: 150757 RVA: 0x0050DC44 File Offset: 0x0050BE44
 		public static IGraph3dNormal GetRootAsIGraph3dNormal(ByteBuffer _bb, IGraph3dNormal obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022C32 RID: 142386 RVA: 0x004D0D8D File Offset: 0x004CEF8D
+		// Token: 0x06024CE6 RID: 150758 RVA: 0x0050DC61 File Offset: 0x0050BE61
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022C33 RID: 142387 RVA: 0x004D0D9C File Offset: 0x004CEF9C
+		// Token: 0x06024CE7 RID: 150759 RVA: 0x0050DC70 File Offset: 0x0050BE70
 		public IGraph3dNormal __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009C3C RID: 39996
-		// (get) Token: 0x06022C34 RID: 142388 RVA: 0x004D0DAC File Offset: 0x004CEFAC
+		// Token: 0x1700A474 RID: 42100
+		// (get) Token: 0x06024CE8 RID: 150760 RVA: 0x0050DC80 File Offset: 0x0050BE80
 		public EGraph3dType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022C35 RID: 142389 RVA: 0x004D0DE8 File Offset: 0x004CEFE8
+		// Token: 0x06024CE9 RID: 150761 RVA: 0x0050DCBC File Offset: 0x0050BEBC
 		public IGraph3dNodeBase? Nodes(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IGraph3dNodeBase?(default(IGraph3dNodeBase).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009C3D RID: 39997
-		// (get) Token: 0x06022C36 RID: 142390 RVA: 0x004D0E48 File Offset: 0x004CF048
+		// Token: 0x1700A475 RID: 42101
+		// (get) Token: 0x06024CEA RID: 150762 RVA: 0x0050DD1C File Offset: 0x0050BF1C
 		public int NodesLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022C37 RID: 142391 RVA: 0x004D0E74 File Offset: 0x004CF074
+		// Token: 0x06024CEB RID: 150763 RVA: 0x0050DD48 File Offset: 0x0050BF48
 		public IGraph3dEdgeBase? Edges(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IGraph3dEdgeBase?(default(IGraph3dEdgeBase).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009C3E RID: 39998
-		// (get) Token: 0x06022C38 RID: 142392 RVA: 0x004D0ED4 File Offset: 0x004CF0D4
+		// Token: 0x1700A476 RID: 42102
+		// (get) Token: 0x06024CEC RID: 150764 RVA: 0x0050DDA8 File Offset: 0x0050BFA8
 		public int EdgesLength
 		{
 			get
@@ -115,7 +115,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022C39 RID: 142393 RVA: 0x004D0EFF File Offset: 0x004CF0FF
+		// Token: 0x06024CED RID: 150765 RVA: 0x0050DDD3 File Offset: 0x0050BFD3
 		public static Offset<IGraph3dNormal> CreateIGraph3dNormal(FlatBufferBuilder builder, EGraph3dType Type = EGraph3dType.Normal, VectorOffset NodesOffset = default(VectorOffset), VectorOffset EdgesOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -125,25 +125,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGraph3dNormal.EndIGraph3dNormal(builder);
 		}
 
-		// Token: 0x06022C3A RID: 142394 RVA: 0x004D0F23 File Offset: 0x004CF123
+		// Token: 0x06024CEE RID: 150766 RVA: 0x0050DDF7 File Offset: 0x0050BFF7
 		public static void StartIGraph3dNormal(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06022C3B RID: 142395 RVA: 0x004D0F2C File Offset: 0x004CF12C
+		// Token: 0x06024CEF RID: 150767 RVA: 0x0050DE00 File Offset: 0x0050C000
 		public static void AddType(FlatBufferBuilder builder, EGraph3dType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06022C3C RID: 142396 RVA: 0x004D0F37 File Offset: 0x004CF137
+		// Token: 0x06024CF0 RID: 150768 RVA: 0x0050DE0B File Offset: 0x0050C00B
 		public static void AddNodes(FlatBufferBuilder builder, VectorOffset nodesOffset)
 		{
 			builder.AddOffset(1, nodesOffset.Value, 0);
 		}
 
-		// Token: 0x06022C3D RID: 142397 RVA: 0x004D0F48 File Offset: 0x004CF148
+		// Token: 0x06024CF1 RID: 150769 RVA: 0x0050DE1C File Offset: 0x0050C01C
 		public static VectorOffset CreateNodesVector(FlatBufferBuilder builder, Offset<IGraph3dNodeBase>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022C3E RID: 142398 RVA: 0x004D0F88 File Offset: 0x004CF188
+		// Token: 0x06024CF2 RID: 150770 RVA: 0x0050DE5C File Offset: 0x0050C05C
 		public static VectorOffset CreateNodesVectorBlock(FlatBufferBuilder builder, Offset<IGraph3dNodeBase>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022C3F RID: 142399 RVA: 0x004D0FA2 File Offset: 0x004CF1A2
+		// Token: 0x06024CF3 RID: 150771 RVA: 0x0050DE76 File Offset: 0x0050C076
 		public static VectorOffset CreateNodesVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IGraph3dNodeBase>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -170,7 +170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022C40 RID: 142400 RVA: 0x004D0FC0 File Offset: 0x004CF1C0
+		// Token: 0x06024CF4 RID: 150772 RVA: 0x0050DE94 File Offset: 0x0050C094
 		public static VectorOffset CreateNodesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -178,19 +178,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022C41 RID: 142401 RVA: 0x004D0FD9 File Offset: 0x004CF1D9
+		// Token: 0x06024CF5 RID: 150773 RVA: 0x0050DEAD File Offset: 0x0050C0AD
 		public static void StartNodesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06022C42 RID: 142402 RVA: 0x004D0FE4 File Offset: 0x004CF1E4
+		// Token: 0x06024CF6 RID: 150774 RVA: 0x0050DEB8 File Offset: 0x0050C0B8
 		public static void AddEdges(FlatBufferBuilder builder, VectorOffset edgesOffset)
 		{
 			builder.AddOffset(2, edgesOffset.Value, 0);
 		}
 
-		// Token: 0x06022C43 RID: 142403 RVA: 0x004D0FF4 File Offset: 0x004CF1F4
+		// Token: 0x06024CF7 RID: 150775 RVA: 0x0050DEC8 File Offset: 0x0050C0C8
 		public static VectorOffset CreateEdgesVector(FlatBufferBuilder builder, Offset<IGraph3dEdgeBase>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022C44 RID: 142404 RVA: 0x004D1034 File Offset: 0x004CF234
+		// Token: 0x06024CF8 RID: 150776 RVA: 0x0050DF08 File Offset: 0x0050C108
 		public static VectorOffset CreateEdgesVectorBlock(FlatBufferBuilder builder, Offset<IGraph3dEdgeBase>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -209,7 +209,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022C45 RID: 142405 RVA: 0x004D104E File Offset: 0x004CF24E
+		// Token: 0x06024CF9 RID: 150777 RVA: 0x0050DF22 File Offset: 0x0050C122
 		public static VectorOffset CreateEdgesVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IGraph3dEdgeBase>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022C46 RID: 142406 RVA: 0x004D106C File Offset: 0x004CF26C
+		// Token: 0x06024CFA RID: 150778 RVA: 0x0050DF40 File Offset: 0x0050C140
 		public static VectorOffset CreateEdgesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -225,19 +225,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022C47 RID: 142407 RVA: 0x004D1085 File Offset: 0x004CF285
+		// Token: 0x06024CFB RID: 150779 RVA: 0x0050DF59 File Offset: 0x0050C159
 		public static void StartEdgesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06022C48 RID: 142408 RVA: 0x004D1090 File Offset: 0x004CF290
+		// Token: 0x06024CFC RID: 150780 RVA: 0x0050DF64 File Offset: 0x0050C164
 		public static Offset<IGraph3dNormal> EndIGraph3dNormal(FlatBufferBuilder builder)
 		{
 			return new Offset<IGraph3dNormal>(builder.EndTable());
 		}
 
-		// Token: 0x06022C49 RID: 142409 RVA: 0x004D10A0 File Offset: 0x004CF2A0
+		// Token: 0x06024CFD RID: 150781 RVA: 0x0050DF74 File Offset: 0x0050C174
 		public IGraph3dNormalT UnPack()
 		{
 			IGraph3dNormalT graph3dNormalT = new IGraph3dNormalT();
@@ -245,7 +245,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return graph3dNormalT;
 		}
 
-		// Token: 0x06022C4A RID: 142410 RVA: 0x004D10BC File Offset: 0x004CF2BC
+		// Token: 0x06024CFE RID: 150782 RVA: 0x0050DF90 File Offset: 0x0050C190
 		public void UnPackTo(IGraph3dNormalT _o)
 		{
 			_o.Type = this.Type;
@@ -261,7 +261,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022C4B RID: 142411 RVA: 0x004D117C File Offset: 0x004CF37C
+		// Token: 0x06024CFF RID: 150783 RVA: 0x0050E050 File Offset: 0x0050C250
 		public static Offset<IGraph3dNormal> Pack(FlatBufferBuilder builder, IGraph3dNormalT _o)
 		{
 			if (_o == null)
@@ -291,7 +291,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGraph3dNormal.CreateIGraph3dNormal(builder, _o.Type, nodesOffset, edgesOffset);
 		}
 
-		// Token: 0x0400E4D7 RID: 58583
+		// Token: 0x0400F107 RID: 61703
 		private Table __p;
 	}
 }

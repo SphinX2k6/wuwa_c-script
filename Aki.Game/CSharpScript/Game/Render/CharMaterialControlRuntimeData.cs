@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialContainer;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController;
@@ -8,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045B9 RID: 17849
+	// Token: 0x020034E1 RID: 13537
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CharMaterialControlRuntimeData
 	{
-		// Token: 0x0602E05C RID: 188508 RVA: 0x00A9A53C File Offset: 0x00A9873C
+		// Token: 0x06022746 RID: 141126 RVA: 0x009C675C File Offset: 0x009C495C
 		[NullableContext(1)]
 		public void Init(int id, PD_CharacterControllerData_C data, [Nullable(2)] UObject userData)
 		{
@@ -38,7 +37,7 @@ namespace CSharpScript.Game.Render
 			this.LastUpdateTime = Time.Instance.NowSeconds;
 		}
 
-		// Token: 0x0602E05D RID: 188509 RVA: 0x00A9A63C File Offset: 0x00A9883C
+		// Token: 0x06022747 RID: 141127 RVA: 0x009C685C File Offset: 0x009C4A5C
 		public void Destroy()
 		{
 			CharMaterialControlDataCacheMgr.Instance.RecycleDataCache(this.DataCache.DataName);
@@ -57,13 +56,13 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E05E RID: 188510 RVA: 0x00A9A6C8 File Offset: 0x00A988C8
+		// Token: 0x06022748 RID: 141128 RVA: 0x009C68E8 File Offset: 0x009C4AE8
 		public void ClearDestroyCallback()
 		{
 			this.DestroyCallbackSet = null;
 		}
 
-		// Token: 0x0602E05F RID: 188511 RVA: 0x00A9A6D1 File Offset: 0x00A988D1
+		// Token: 0x06022749 RID: 141129 RVA: 0x009C68F1 File Offset: 0x009C4AF1
 		[NullableContext(1)]
 		public bool AddDestroyCallback(Action<int> callback)
 		{
@@ -83,14 +82,14 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x0602E060 RID: 188512 RVA: 0x00A9A709 File Offset: 0x00A98909
+		// Token: 0x0602274A RID: 141130 RVA: 0x009C6929 File Offset: 0x009C4B29
 		[NullableContext(1)]
 		public bool RemoveDestroyCallback(Action<int> callback)
 		{
 			return callback != null && this.DestroyCallbackSet != null && this.DestroyCallbackSet.Remove(callback);
 		}
 
-		// Token: 0x0602E061 RID: 188513 RVA: 0x00A9A728 File Offset: 0x00A98928
+		// Token: 0x0602274B RID: 141131 RVA: 0x009C6948 File Offset: 0x009C4B48
 		[NullableContext(1)]
 		public void SetSpecifiedMaterialIndex(CharMaterialContainer materialContainer)
 		{
@@ -110,12 +109,12 @@ namespace CSharpScript.Game.Render
 						string item = enumerator.Current;
 						list.Add(item);
 					}
-					goto IL_DF;
+					goto IL_E3;
 				}
 			}
 			string[] bodyNamesByBodyType = RenderConfig.GetBodyNamesByBodyType(this.DataCache.SpecifiedBodyType.Value);
-			list = ((bodyNamesByBodyType != null) ? bodyNamesByBodyType.ToList<string>() : null);
-			IL_DF:
+			list = ((bodyNamesByBodyType == null) ? null : new List<string>(bodyNamesByBodyType));
+			IL_E3:
 			if (list == null || list.Count == 0)
 			{
 				return;
@@ -208,7 +207,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E062 RID: 188514 RVA: 0x00A9AA3C File Offset: 0x00A98C3C
+		// Token: 0x0602274C RID: 141132 RVA: 0x009C6C60 File Offset: 0x009C4E60
 		public unsafe void UpdateState(double delta, float timeDilation)
 		{
 			if (this.IsDead)
@@ -283,7 +282,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E063 RID: 188515 RVA: 0x00A9ACDF File Offset: 0x00A98EDF
+		// Token: 0x0602274D RID: 141133 RVA: 0x009C6F03 File Offset: 0x009C5103
 		public void RequestEffectStateEnter()
 		{
 			if (this.EffectState == EMaterialControllerEffectState.Reverted)
@@ -297,7 +296,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E064 RID: 188516 RVA: 0x00A9AD02 File Offset: 0x00A98F02
+		// Token: 0x0602274E RID: 141134 RVA: 0x009C6F26 File Offset: 0x009C5126
 		public void RequestEffectStateRevert()
 		{
 			if (this.EffectState == EMaterialControllerEffectState.Entered)
@@ -311,7 +310,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E065 RID: 188517 RVA: 0x00A9AD24 File Offset: 0x00A98F24
+		// Token: 0x0602274F RID: 141135 RVA: 0x009C6F48 File Offset: 0x009C5148
 		[NullableContext(1)]
 		public void UpdateEffect(CharMaterialContainer materialContainer)
 		{
@@ -339,7 +338,7 @@ namespace CSharpScript.Game.Render
 			materialContainer.StateUpdate(this);
 		}
 
-		// Token: 0x0602E066 RID: 188518 RVA: 0x00A9AD88 File Offset: 0x00A98F88
+		// Token: 0x06022750 RID: 141136 RVA: 0x009C6FAC File Offset: 0x009C51AC
 		private void InitInterpolateType(double delta)
 		{
 			float dataLoopStart = this.DataCache.DataLoopStart;
@@ -383,7 +382,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E067 RID: 188519 RVA: 0x00A9AEB0 File Offset: 0x00A990B0
+		// Token: 0x06022751 RID: 141137 RVA: 0x009C70D4 File Offset: 0x009C52D4
 		public unsafe void SetReadyToDie()
 		{
 			this.ReadyToDie = true;
@@ -409,7 +408,7 @@ namespace CSharpScript.Game.Render
 			this.CurrentTimeCounter = 0.0;
 		}
 
-		// Token: 0x0602E068 RID: 188520 RVA: 0x00A9AFCC File Offset: 0x00A991CC
+		// Token: 0x06022752 RID: 141138 RVA: 0x009C71F0 File Offset: 0x009C53F0
 		public void SetProgress(float progress)
 		{
 			ECharacterControllerType? dataType = this.DataCache.DataType;
@@ -423,7 +422,7 @@ namespace CSharpScript.Game.Render
 			this.InitInterpolateTypeManual(progress2);
 		}
 
-		// Token: 0x0602E069 RID: 188521 RVA: 0x00A9B028 File Offset: 0x00A99228
+		// Token: 0x06022753 RID: 141139 RVA: 0x009C724C File Offset: 0x009C544C
 		private void InitInterpolateTypeManual(float progress)
 		{
 			float dataLoopStart = this.DataCache.DataLoopStart;
@@ -446,7 +445,7 @@ namespace CSharpScript.Game.Render
 			this.InterpolateFactor.Factor = MathUtils.Instance.Clamp(this.InterpolateFactor.Factor, 0f, 1f);
 		}
 
-		// Token: 0x0602E06A RID: 188522 RVA: 0x00A9B115 File Offset: 0x00A99315
+		// Token: 0x06022754 RID: 141140 RVA: 0x009C7339 File Offset: 0x009C5539
 		public float GetSpecifiedLoopTime(EInterpolateRangeType interpolateType)
 		{
 			switch (interpolateType)
@@ -462,28 +461,28 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x04018993 RID: 100755
+		// Token: 0x04012FCE RID: 77774
 		public int Id;
 
-		// Token: 0x04018994 RID: 100756
+		// Token: 0x04012FCF RID: 77775
 		public CharMaterialControlDataCache DataCache;
 
-		// Token: 0x04018995 RID: 100757
+		// Token: 0x04012FD0 RID: 77776
 		public UObject UserData;
 
-		// Token: 0x04018996 RID: 100758
+		// Token: 0x04012FD1 RID: 77777
 		public double CurrentTimeCounter;
 
-		// Token: 0x04018997 RID: 100759
+		// Token: 0x04012FD2 RID: 77778
 		public double WholeLoopTimeCounter;
 
-		// Token: 0x04018998 RID: 100760
+		// Token: 0x04012FD3 RID: 77779
 		public InterpolateFactor InterpolateFactor;
 
-		// Token: 0x04018999 RID: 100761
+		// Token: 0x04012FD4 RID: 77780
 		public double LoopTimeCounter;
 
-		// Token: 0x0401899A RID: 100762
+		// Token: 0x04012FD5 RID: 77781
 		[Nullable(new byte[]
 		{
 			2,
@@ -492,43 +491,43 @@ namespace CSharpScript.Game.Render
 		})]
 		public Dictionary<string, List<int>> SpecifiedMaterialIndexMap;
 
-		// Token: 0x0401899B RID: 100763
+		// Token: 0x04012FD6 RID: 77782
 		public bool SelectedAllParts;
 
-		// Token: 0x0401899C RID: 100764
+		// Token: 0x04012FD7 RID: 77783
 		public bool ReadyToDie;
 
-		// Token: 0x0401899D RID: 100765
+		// Token: 0x04012FD8 RID: 77784
 		public bool IsDead;
 
-		// Token: 0x0401899E RID: 100766
+		// Token: 0x04012FD9 RID: 77785
 		public EMaterialControllerEffectState EffectState;
 
-		// Token: 0x0401899F RID: 100767
+		// Token: 0x04012FDA RID: 77786
 		public bool HasReverted;
 
-		// Token: 0x040189A0 RID: 100768
+		// Token: 0x04012FDB RID: 77787
 		private bool HasUpdated;
 
-		// Token: 0x040189A1 RID: 100769
+		// Token: 0x04012FDC RID: 77788
 		public UMaterialInstanceDynamic ReplaceMaterial;
 
-		// Token: 0x040189A2 RID: 100770
+		// Token: 0x04012FDD RID: 77789
 		public FVectorDouble? MotionStartLocation;
 
-		// Token: 0x040189A3 RID: 100771
+		// Token: 0x04012FDE RID: 77790
 		public USkeletalMeshComponent TargetSkeletalMesh;
 
-		// Token: 0x040189A4 RID: 100772
+		// Token: 0x04012FDF RID: 77791
 		public List<double> MotionEndLocation;
 
-		// Token: 0x040189A5 RID: 100773
+		// Token: 0x04012FE0 RID: 77792
 		private Stat DestroyCallbackStat;
 
-		// Token: 0x040189A6 RID: 100774
+		// Token: 0x04012FE1 RID: 77793
 		public double LastUpdateTime;
 
-		// Token: 0x040189A7 RID: 100775
+		// Token: 0x04012FE2 RID: 77794
 		[Nullable(new byte[]
 		{
 			2,

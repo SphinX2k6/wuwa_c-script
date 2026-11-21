@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000274 RID: 628
+	// Token: 0x0200027B RID: 635
 	public static class TBuildInfoKeyExtensions
 	{
-		// Token: 0x06000F47 RID: 3911 RVA: 0x00059298 File Offset: 0x00057498
+		// Token: 0x06000F92 RID: 3986 RVA: 0x0005C23C File Offset: 0x0005A43C
 		public static string ToEnumString(this TBuildInfoKey value)
 		{
 			string result;
@@ -36,7 +36,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return result;
 		}
 
-		// Token: 0x06000F48 RID: 3912 RVA: 0x00059304 File Offset: 0x00057504
+		// Token: 0x06000F93 RID: 3987 RVA: 0x0005C2A8 File Offset: 0x0005A4A8
 		public static TBuildInfoKey FromString(string name)
 		{
 			TBuildInfoKey result;
@@ -47,7 +47,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return result;
 		}
 
-		// Token: 0x06000F49 RID: 3913 RVA: 0x00059330 File Offset: 0x00057530
+		// Token: 0x06000F94 RID: 3988 RVA: 0x0005C2D4 File Offset: 0x0005A4D4
 		public static bool TryFromString(string name, out TBuildInfoKey value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -89,7 +89,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return true;
 		}
 
-		// Token: 0x06000F4A RID: 3914 RVA: 0x000593BC File Offset: 0x000575BC
+		// Token: 0x06000F95 RID: 3989 RVA: 0x0005C360 File Offset: 0x0005A560
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -103,7 +103,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			};
 		}
 
-		// Token: 0x06000F4B RID: 3915 RVA: 0x000593F4 File Offset: 0x000575F4
+		// Token: 0x06000F96 RID: 3990 RVA: 0x0005C398 File Offset: 0x0005A598
 		public static TBuildInfoKey[] GetValues()
 		{
 			return new TBuildInfoKey[]
@@ -117,7 +117,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			};
 		}
 
-		// Token: 0x06000F4C RID: 3916 RVA: 0x00059407 File Offset: 0x00057607
+		// Token: 0x06000F97 RID: 3991 RVA: 0x0005C3AB File Offset: 0x0005A5AB
 		public static string[] GetNames()
 		{
 			return new string[]

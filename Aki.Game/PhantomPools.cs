@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002455 RID: 9301
+// Token: 0x0200193A RID: 6458
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomPools
 {
-	// Token: 0x04008C86 RID: 35974
+	// Token: 0x04008DCD RID: 36301
 	public List<PhantomBattleData> HighGroupA;
 
-	// Token: 0x04008C87 RID: 35975
+	// Token: 0x04008DCE RID: 36302
 	public List<PhantomBattleData> MidGroupA;
 
-	// Token: 0x04008C88 RID: 35976
+	// Token: 0x04008DCF RID: 36303
 	public List<PhantomBattleData> HighGroupB;
 
-	// Token: 0x04008C89 RID: 35977
+	// Token: 0x04008DD0 RID: 36304
 	public List<PhantomBattleData> MidGroupB;
 
-	// Token: 0x04008C8A RID: 35978
+	// Token: 0x04008DD1 RID: 36305
 	public List<PhantomBattleData> GroupC;
 }

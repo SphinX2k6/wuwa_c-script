@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Aki.TDConfigMgr.Action;
@@ -9,13 +8,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 {
-	// Token: 0x02006A4E RID: 27214
+	// Token: 0x02005BAB RID: 23467
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SignalDeviceModel : ModelBase
 	{
-		// Token: 0x17009917 RID: 39191
-		// (get) Token: 0x06043AD5 RID: 277205 RVA: 0x0108E81B File Offset: 0x0108CA1B
+		// Token: 0x17006DFC RID: 28156
+		// (get) Token: 0x06039B23 RID: 236323 RVA: 0x01033023 File Offset: 0x01031223
 		public static int ROWNUM
 		{
 			get
@@ -24,7 +23,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			}
 		}
 
-		// Token: 0x06043AD6 RID: 277206 RVA: 0x0108E820 File Offset: 0x0108CA20
+		// Token: 0x06039B24 RID: 236324 RVA: 0x01033028 File Offset: 0x01031228
 		public void InitData(List<IColorPiece> config)
 		{
 			this.GridStateArray = new List<IGridState>(this.GridNum);
@@ -39,7 +38,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			this.ResetLinking();
 		}
 
-		// Token: 0x06043AD7 RID: 277207 RVA: 0x0108E880 File Offset: 0x0108CA80
+		// Token: 0x06039B25 RID: 236325 RVA: 0x01033088 File Offset: 0x01031288
 		public void ResetData()
 		{
 			foreach (IGridState gridState in this.GridStateArray)
@@ -50,25 +49,23 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			EventSystem.Instance.Emit(EEventName.OnSignalDeviceReset);
 		}
 
-		// Token: 0x06043AD8 RID: 277208 RVA: 0x0108E8E8 File Offset: 0x0108CAE8
+		// Token: 0x06039B26 RID: 236326 RVA: 0x010330F0 File Offset: 0x010312F0
 		public bool IsGridFinished(int index)
 		{
-			IGridState gridState = this.GridStateArray.ElementAtOrDefault(index);
-			return gridState != null && gridState.IsFinished;
+			return index >= 0 && index < this.GridStateArray.Count && this.GridStateArray[index].IsFinished;
 		}
 
-		// Token: 0x06043AD9 RID: 277209 RVA: 0x0108E901 File Offset: 0x0108CB01
+		// Token: 0x06039B27 RID: 236327 RVA: 0x01033117 File Offset: 0x01031317
 		public EPieceColorType GetGridColor(int index)
 		{
-			IGridState gridState = this.GridStateArray.ElementAtOrDefault(index);
-			if (gridState == null)
+			if (index < 0 || index >= this.GridStateArray.Count)
 			{
 				return EPieceColorType.White;
 			}
-			return gridState.Color;
+			return this.GridStateArray[index].Color;
 		}
 
-		// Token: 0x06043ADA RID: 277210 RVA: 0x0108E91A File Offset: 0x0108CB1A
+		// Token: 0x06039B28 RID: 236328 RVA: 0x0103313E File Offset: 0x0103133E
 		public void LinkingStart(int index, EPieceColorType color)
 		{
 			this.CurrentColor = color;
@@ -78,7 +75,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			};
 		}
 
-		// Token: 0x06043ADB RID: 277211 RVA: 0x0108E938 File Offset: 0x0108CB38
+		// Token: 0x06039B29 RID: 236329 RVA: 0x0103315C File Offset: 0x0103135C
 		public void Linking(int index)
 		{
 			int num = this.LinkingArray[this.LinkingArray.Count - 1];
@@ -99,7 +96,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			}
 		}
 
-		// Token: 0x06043ADC RID: 277212 RVA: 0x0108EA80 File Offset: 0x0108CC80
+		// Token: 0x06039B2A RID: 236330 RVA: 0x010332A4 File Offset: 0x010314A4
 		public ENeighborType NeighboringType(int indexFrom, int indexTo)
 		{
 			int num = indexFrom - indexTo;
@@ -132,13 +129,13 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			return ENeighborType.None;
 		}
 
-		// Token: 0x06043ADD RID: 277213 RVA: 0x0108EAC8 File Offset: 0x0108CCC8
+		// Token: 0x06039B2B RID: 236331 RVA: 0x010332EC File Offset: 0x010314EC
 		private bool LinkingValid(int index)
 		{
 			return (this.GridStateArray[index].Color == EPieceColorType.White && !this.GridStateArray[index].IsFinished) || this.GridStateArray[index].Color == this.CurrentColor;
 		}
 
-		// Token: 0x06043ADE RID: 277214 RVA: 0x0108EB18 File Offset: 0x0108CD18
+		// Token: 0x06039B2C RID: 236332 RVA: 0x0103333C File Offset: 0x0103153C
 		public void CheckLinking(int index)
 		{
 			if (this.LinkingArray.Count == 0)
@@ -154,7 +151,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			this.MarkCurrentLinking();
 		}
 
-		// Token: 0x06043ADF RID: 277215 RVA: 0x0108EB78 File Offset: 0x0108CD78
+		// Token: 0x06039B2D RID: 236333 RVA: 0x0103339C File Offset: 0x0103159C
 		public void MarkCurrentLinking()
 		{
 			EventSystem.Instance.Emit<bool, IReadOnlyList<int>>(EEventName.OnSignalDeviceLinkingCheck, true, this.LinkingArray);
@@ -169,14 +166,14 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			}
 		}
 
-		// Token: 0x06043AE0 RID: 277216 RVA: 0x0108EC04 File Offset: 0x0108CE04
+		// Token: 0x06039B2E RID: 236334 RVA: 0x01033428 File Offset: 0x01031628
 		public void CancelCurrentLinking()
 		{
 			EventSystem.Instance.Emit<bool, IReadOnlyList<int>>(EEventName.OnSignalDeviceLinkingCheck, false, this.LinkingArray);
 			this.ResetLinking();
 		}
 
-		// Token: 0x06043AE1 RID: 277217 RVA: 0x0108EC24 File Offset: 0x0108CE24
+		// Token: 0x06039B2F RID: 236335 RVA: 0x01033448 File Offset: 0x01031648
 		private bool CheckFinished()
 		{
 			foreach (IGridState gridState in this.GridStateArray)
@@ -189,7 +186,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			return true;
 		}
 
-		// Token: 0x06043AE2 RID: 277218 RVA: 0x0108EC88 File Offset: 0x0108CE88
+		// Token: 0x06039B30 RID: 236336 RVA: 0x010334AC File Offset: 0x010316AC
 		private void RequestFinish()
 		{
 			EventSystem.Instance.Emit(EEventName.OnSignalDeviceFinish);
@@ -209,22 +206,22 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			}, (float)((int)(1.7 * (double)TimeUtil.Instance.InverseMillisecond)), null, null, true, 1f);
 		}
 
-		// Token: 0x06043AE3 RID: 277219 RVA: 0x0108ECDB File Offset: 0x0108CEDB
+		// Token: 0x06039B31 RID: 236337 RVA: 0x010334FF File Offset: 0x010316FF
 		private void ClearData()
 		{
 			this.GridStateArray.Clear();
 			this.ResetLinking();
 		}
 
-		// Token: 0x06043AE4 RID: 277220 RVA: 0x0108ECEE File Offset: 0x0108CEEE
+		// Token: 0x06039B32 RID: 236338 RVA: 0x01033512 File Offset: 0x01031712
 		private void ResetLinking()
 		{
 			this.LinkingArray.Clear();
 			this.CurrentColor = EPieceColorType.White;
 		}
 
-		// Token: 0x17009918 RID: 39192
-		// (get) Token: 0x06043AE5 RID: 277221 RVA: 0x0108ED02 File Offset: 0x0108CF02
+		// Token: 0x17006DFD RID: 28157
+		// (get) Token: 0x06039B33 RID: 236339 RVA: 0x01033526 File Offset: 0x01031726
 		public static SignalDeviceModel Instance
 		{
 			get
@@ -233,7 +230,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			}
 		}
 
-		// Token: 0x06043AE6 RID: 277222 RVA: 0x0108ED09 File Offset: 0x0108CF09
+		// Token: 0x06039B34 RID: 236340 RVA: 0x0103352D File Offset: 0x0103172D
 		public static SignalDeviceModel GetOrCreateInstance()
 		{
 			if (SignalDeviceModel._Instance == null)
@@ -243,7 +240,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			return SignalDeviceModel._Instance;
 		}
 
-		// Token: 0x06043AE7 RID: 277223 RVA: 0x0108ED1D File Offset: 0x0108CF1D
+		// Token: 0x06039B35 RID: 236341 RVA: 0x01033541 File Offset: 0x01031741
 		public static bool CreateInstance()
 		{
 			if (SignalDeviceModel._Instance != null)
@@ -254,42 +251,42 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			return true;
 		}
 
-		// Token: 0x06043AE8 RID: 277224 RVA: 0x0108ED33 File Offset: 0x0108CF33
+		// Token: 0x06039B36 RID: 236342 RVA: 0x01033557 File Offset: 0x01031757
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043AE9 RID: 277225 RVA: 0x0108ED35 File Offset: 0x0108CF35
+		// Token: 0x06039B37 RID: 236343 RVA: 0x01033559 File Offset: 0x01031759
 		public static void ResetStaticDefaultValue()
 		{
 			SignalDeviceModel._Instance = null;
 		}
 
-		// Token: 0x06043AEA RID: 277226 RVA: 0x0108ED3D File Offset: 0x0108CF3D
+		// Token: 0x06039B38 RID: 236344 RVA: 0x01033561 File Offset: 0x01031761
 		static SignalDeviceModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SignalDeviceModel.CreateStaticDefaultValue), new Action(SignalDeviceModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023553 RID: 144723
+		// Token: 0x0401E745 RID: 124741
 		public int GridNum = 25;
 
-		// Token: 0x04023554 RID: 144724
+		// Token: 0x0401E746 RID: 124742
 		private List<IGridState> GridStateArray = new List<IGridState>();
 
-		// Token: 0x04023555 RID: 144725
+		// Token: 0x0401E747 RID: 124743
 		private List<int> LinkingArray = new List<int>();
 
-		// Token: 0x04023556 RID: 144726
+		// Token: 0x0401E748 RID: 124744
 		public EPieceColorType CurrentColor;
 
-		// Token: 0x04023557 RID: 144727
+		// Token: 0x0401E749 RID: 124745
 		public global::Rotator CacheRotator = global::Rotator.Create(0f, 0f, 0f);
 
-		// Token: 0x04023558 RID: 144728
+		// Token: 0x0401E74A RID: 124746
 		public EViewType ViewType;
 
-		// Token: 0x04023559 RID: 144729
+		// Token: 0x0401E74B RID: 124747
 		public readonly Dictionary<ENeighborType, int> RotateMap = new Dictionary<ENeighborType, int>
 		{
 			{
@@ -314,7 +311,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			}
 		};
 
-		// Token: 0x0402355A RID: 144730
+		// Token: 0x0401E74C RID: 124748
 		[Nullable(2)]
 		private static SignalDeviceModel _Instance;
 	}

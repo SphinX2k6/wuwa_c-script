@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E45 RID: 15941
+	// Token: 0x02004280 RID: 17024
 	public struct IFinishRoleTowerCondition : IFlatbufferObject
 	{
-		// Token: 0x17006E52 RID: 28242
-		// (get) Token: 0x060165EC RID: 91628 RVA: 0x0033AD76 File Offset: 0x00338F76
+		// Token: 0x17007436 RID: 29750
+		// (get) Token: 0x06017C13 RID: 97299 RVA: 0x003638A6 File Offset: 0x00361AA6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060165ED RID: 91629 RVA: 0x0033AD83 File Offset: 0x00338F83
+		// Token: 0x06017C14 RID: 97300 RVA: 0x003638B3 File Offset: 0x00361AB3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060165EE RID: 91630 RVA: 0x0033AD8C File Offset: 0x00338F8C
+		// Token: 0x06017C15 RID: 97301 RVA: 0x003638BC File Offset: 0x00361ABC
 		public static IFinishRoleTowerCondition GetRootAsIFinishRoleTowerCondition(ByteBuffer _bb)
 		{
 			return IFinishRoleTowerCondition.GetRootAsIFinishRoleTowerCondition(_bb, default(IFinishRoleTowerCondition));
 		}
 
-		// Token: 0x060165EF RID: 91631 RVA: 0x0033ADA8 File Offset: 0x00338FA8
+		// Token: 0x06017C16 RID: 97302 RVA: 0x003638D8 File Offset: 0x00361AD8
 		public static IFinishRoleTowerCondition GetRootAsIFinishRoleTowerCondition(ByteBuffer _bb, IFinishRoleTowerCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060165F0 RID: 91632 RVA: 0x0033ADC5 File Offset: 0x00338FC5
+		// Token: 0x06017C17 RID: 97303 RVA: 0x003638F5 File Offset: 0x00361AF5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060165F1 RID: 91633 RVA: 0x0033ADD4 File Offset: 0x00338FD4
+		// Token: 0x06017C18 RID: 97304 RVA: 0x00363904 File Offset: 0x00361B04
 		public IFinishRoleTowerCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006E53 RID: 28243
-		// (get) Token: 0x060165F2 RID: 91634 RVA: 0x0033ADE4 File Offset: 0x00338FE4
+		// Token: 0x17007437 RID: 29751
+		// (get) Token: 0x06017C19 RID: 97305 RVA: 0x00363914 File Offset: 0x00361B14
 		public EChildQuest Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006E54 RID: 28244
-		// (get) Token: 0x060165F3 RID: 91635 RVA: 0x0033AE20 File Offset: 0x00339020
+		// Token: 0x17007438 RID: 29752
+		// (get) Token: 0x06017C1A RID: 97306 RVA: 0x00363950 File Offset: 0x00361B50
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006E55 RID: 28245
-		// (get) Token: 0x060165F4 RID: 91636 RVA: 0x0033AE80 File Offset: 0x00339080
+		// Token: 0x17007439 RID: 29753
+		// (get) Token: 0x06017C1B RID: 97307 RVA: 0x003639B0 File Offset: 0x00361BB0
 		public TRoleTowerConditionStep StepType
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060165F5 RID: 91637 RVA: 0x0033AEBC File Offset: 0x003390BC
+		// Token: 0x06017C1C RID: 97308 RVA: 0x003639EC File Offset: 0x00361BEC
 		public TTable? Step<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -105,38 +105,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060165F6 RID: 91638 RVA: 0x0033AF04 File Offset: 0x00339104
+		// Token: 0x06017C1D RID: 97309 RVA: 0x00363A34 File Offset: 0x00361C34
 		public IRoleTowerConditionStepBattle StepAsIRoleTowerConditionStepBattle()
 		{
 			return this.Step<IRoleTowerConditionStepBattle>().Value;
 		}
 
-		// Token: 0x060165F7 RID: 91639 RVA: 0x0033AF20 File Offset: 0x00339120
+		// Token: 0x06017C1E RID: 97310 RVA: 0x00363A50 File Offset: 0x00361C50
 		public IRoleTowerConditionStepLoadSubLevel StepAsIRoleTowerConditionStepLoadSubLevel()
 		{
 			return this.Step<IRoleTowerConditionStepLoadSubLevel>().Value;
 		}
 
-		// Token: 0x060165F8 RID: 91640 RVA: 0x0033AF3C File Offset: 0x0033913C
+		// Token: 0x06017C1F RID: 97311 RVA: 0x00363A6C File Offset: 0x00361C6C
 		public IRoleTowerConditionStepPrepare StepAsIRoleTowerConditionStepPrepare()
 		{
 			return this.Step<IRoleTowerConditionStepPrepare>().Value;
 		}
 
-		// Token: 0x060165F9 RID: 91641 RVA: 0x0033AF58 File Offset: 0x00339158
+		// Token: 0x06017C20 RID: 97312 RVA: 0x00363A88 File Offset: 0x00361C88
 		public IRoleTowerConditionStepSettle StepAsIRoleTowerConditionStepSettle()
 		{
 			return this.Step<IRoleTowerConditionStepSettle>().Value;
 		}
 
-		// Token: 0x060165FA RID: 91642 RVA: 0x0033AF74 File Offset: 0x00339174
+		// Token: 0x06017C21 RID: 97313 RVA: 0x00363AA4 File Offset: 0x00361CA4
 		public IRoleTowerConditionStepTeamUpgrade StepAsIRoleTowerConditionStepTeamUpgrade()
 		{
 			return this.Step<IRoleTowerConditionStepTeamUpgrade>().Value;
 		}
 
-		// Token: 0x17006E56 RID: 28246
-		// (get) Token: 0x060165FB RID: 91643 RVA: 0x0033AF90 File Offset: 0x00339190
+		// Token: 0x1700743A RID: 29754
+		// (get) Token: 0x06017C22 RID: 97314 RVA: 0x00363AC0 File Offset: 0x00361CC0
 		public TVarRef BatchType
 		{
 			get
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060165FC RID: 91644 RVA: 0x0033AFD0 File Offset: 0x003391D0
+		// Token: 0x06017C23 RID: 97315 RVA: 0x00363B00 File Offset: 0x00361D00
 		public TTable? Batch<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(14);
@@ -161,37 +161,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060165FD RID: 91645 RVA: 0x0033B018 File Offset: 0x00339218
+		// Token: 0x06017C24 RID: 97316 RVA: 0x00363B48 File Offset: 0x00361D48
 		public IConstVarRef BatchAsIConstVarRef()
 		{
 			return this.Batch<IConstVarRef>().Value;
 		}
 
-		// Token: 0x060165FE RID: 91646 RVA: 0x0033B034 File Offset: 0x00339234
+		// Token: 0x06017C25 RID: 97317 RVA: 0x00363B64 File Offset: 0x00361D64
 		public IGlobalVarRef BatchAsIGlobalVarRef()
 		{
 			return this.Batch<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x060165FF RID: 91647 RVA: 0x0033B050 File Offset: 0x00339250
+		// Token: 0x06017C26 RID: 97318 RVA: 0x00363B80 File Offset: 0x00361D80
 		public IOtherVarRef BatchAsIOtherVarRef()
 		{
 			return this.Batch<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06016600 RID: 91648 RVA: 0x0033B06C File Offset: 0x0033926C
+		// Token: 0x06017C27 RID: 97319 RVA: 0x00363B9C File Offset: 0x00361D9C
 		public ISelfVarRef BatchAsISelfVarRef()
 		{
 			return this.Batch<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x06016601 RID: 91649 RVA: 0x0033B088 File Offset: 0x00339288
+		// Token: 0x06017C28 RID: 97320 RVA: 0x00363BB8 File Offset: 0x00361DB8
 		public ISystemVarRef BatchAsISystemVarRef()
 		{
 			return this.Batch<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x06016602 RID: 91650 RVA: 0x0033B0A3 File Offset: 0x003392A3
+		// Token: 0x06017C29 RID: 97321 RVA: 0x00363BD3 File Offset: 0x00361DD3
 		public static Offset<IFinishRoleTowerCondition> CreateIFinishRoleTowerCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), TRoleTowerConditionStep Step_type = TRoleTowerConditionStep.NONE, int StepOffset = 0, TVarRef Batch_type = TVarRef.NONE, int BatchOffset = 0)
 		{
 			builder.StartTable(6);
@@ -204,55 +204,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFinishRoleTowerCondition.EndIFinishRoleTowerCondition(builder);
 		}
 
-		// Token: 0x06016603 RID: 91651 RVA: 0x0033B0DF File Offset: 0x003392DF
+		// Token: 0x06017C2A RID: 97322 RVA: 0x00363C0F File Offset: 0x00361E0F
 		public static void StartIFinishRoleTowerCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06016604 RID: 91652 RVA: 0x0033B0E8 File Offset: 0x003392E8
+		// Token: 0x06017C2B RID: 97323 RVA: 0x00363C18 File Offset: 0x00361E18
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06016605 RID: 91653 RVA: 0x0033B0F3 File Offset: 0x003392F3
+		// Token: 0x06017C2C RID: 97324 RVA: 0x00363C23 File Offset: 0x00361E23
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06016606 RID: 91654 RVA: 0x0033B103 File Offset: 0x00339303
+		// Token: 0x06017C2D RID: 97325 RVA: 0x00363C33 File Offset: 0x00361E33
 		public static void AddStepType(FlatBufferBuilder builder, TRoleTowerConditionStep stepType)
 		{
 			builder.AddByte(2, (byte)stepType, 0);
 		}
 
-		// Token: 0x06016607 RID: 91655 RVA: 0x0033B10E File Offset: 0x0033930E
+		// Token: 0x06017C2E RID: 97326 RVA: 0x00363C3E File Offset: 0x00361E3E
 		public static void AddStep(FlatBufferBuilder builder, int stepOffset)
 		{
 			builder.AddOffset(3, stepOffset, 0);
 		}
 
-		// Token: 0x06016608 RID: 91656 RVA: 0x0033B119 File Offset: 0x00339319
+		// Token: 0x06017C2F RID: 97327 RVA: 0x00363C49 File Offset: 0x00361E49
 		public static void AddBatchType(FlatBufferBuilder builder, TVarRef batchType)
 		{
 			builder.AddByte(4, (byte)batchType, 0);
 		}
 
-		// Token: 0x06016609 RID: 91657 RVA: 0x0033B124 File Offset: 0x00339324
+		// Token: 0x06017C30 RID: 97328 RVA: 0x00363C54 File Offset: 0x00361E54
 		public static void AddBatch(FlatBufferBuilder builder, int batchOffset)
 		{
 			builder.AddOffset(5, batchOffset, 0);
 		}
 
-		// Token: 0x0601660A RID: 91658 RVA: 0x0033B12F File Offset: 0x0033932F
+		// Token: 0x06017C31 RID: 97329 RVA: 0x00363C5F File Offset: 0x00361E5F
 		public static Offset<IFinishRoleTowerCondition> EndIFinishRoleTowerCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IFinishRoleTowerCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601660B RID: 91659 RVA: 0x0033B13C File Offset: 0x0033933C
+		// Token: 0x06017C32 RID: 97330 RVA: 0x00363C6C File Offset: 0x00361E6C
 		public IFinishRoleTowerConditionT UnPack()
 		{
 			IFinishRoleTowerConditionT finishRoleTowerConditionT = new IFinishRoleTowerConditionT();
@@ -260,7 +260,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return finishRoleTowerConditionT;
 		}
 
-		// Token: 0x0601660C RID: 91660 RVA: 0x0033B158 File Offset: 0x00339358
+		// Token: 0x06017C33 RID: 97331 RVA: 0x00363C88 File Offset: 0x00361E88
 		public void UnPackTo(IFinishRoleTowerConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -309,7 +309,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601660D RID: 91661 RVA: 0x0033B45C File Offset: 0x0033965C
+		// Token: 0x06017C34 RID: 97332 RVA: 0x00363F8C File Offset: 0x0036218C
 		public static Offset<IFinishRoleTowerCondition> Pack(FlatBufferBuilder builder, IFinishRoleTowerConditionT _o)
 		{
 			if (_o == null)
@@ -324,7 +324,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFinishRoleTowerCondition.CreateIFinishRoleTowerCondition(builder, _o.Type, preConditionsOffset, step_type, stepOffset, batch_type, batchOffset);
 		}
 
-		// Token: 0x0400B7D8 RID: 47064
+		// Token: 0x0400C1AF RID: 49583
 		private Table __p;
 	}
 }

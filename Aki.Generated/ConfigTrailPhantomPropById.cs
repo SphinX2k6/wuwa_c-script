@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A14 RID: 2580
+	// Token: 0x02000AE9 RID: 2793
 	public class ConfigTrailPhantomPropById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003C8C RID: 15500 RVA: 0x001B01B3 File Offset: 0x001AE3B3
+		// Token: 0x0600418A RID: 16778 RVA: 0x001CF547 File Offset: 0x001CD747
 		static ConfigTrailPhantomPropById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTrailPhantomPropById.CreateStaticDefaultValue), new Action(ConfigTrailPhantomPropById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003C8D RID: 15501 RVA: 0x001B01D4 File Offset: 0x001AE3D4
+		// Token: 0x0600418B RID: 16779 RVA: 0x001CF568 File Offset: 0x001CD768
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTrailPhantomPropById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003C8E RID: 15502 RVA: 0x001B0253 File Offset: 0x001AE453
+		// Token: 0x0600418C RID: 16780 RVA: 0x001CF5E7 File Offset: 0x001CD7E7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTrailPhantomPropById.LogPair = null;
 			ConfigTrailPhantomPropById.HandleId = 0;
 		}
 
-		// Token: 0x06003C8F RID: 15503 RVA: 0x001B0261 File Offset: 0x001AE461
+		// Token: 0x0600418D RID: 16781 RVA: 0x001CF5F5 File Offset: 0x001CD7F5
 		public static void Init()
 		{
 			ConfigTrailPhantomPropById.HandleId = ConfigCommon.InitDataStatement(ConfigTrailPhantomPropById.HandleId, "db_trial_role.db", "select BinData from `TrailPhantomProp` where Id = ?");
 		}
 
-		// Token: 0x06003C90 RID: 15504 RVA: 0x001B027C File Offset: 0x001AE47C
+		// Token: 0x0600418E RID: 16782 RVA: 0x001CF610 File Offset: 0x001CD810
 		public static TrailPhantomProp? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTrailPhantomPropById.HandleId, ConfigTrailPhantomPropById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TrailPhantomProp?(rootAsTrailPhantomProp);
 		}
 
-		// Token: 0x04004672 RID: 18034
+		// Token: 0x04004C45 RID: 19525
 		private const string DB = "db_trial_role.db";
 
-		// Token: 0x04004673 RID: 18035
+		// Token: 0x04004C46 RID: 19526
 		private const string FILE = "s.试用角色.xlsx";
 
-		// Token: 0x04004674 RID: 18036
+		// Token: 0x04004C47 RID: 19527
 		private const string TABLE = "TrailPhantomProp";
 
-		// Token: 0x04004675 RID: 18037
+		// Token: 0x04004C48 RID: 19528
 		private const string COMMAND = "select BinData from `TrailPhantomProp` where Id = ?";
 
-		// Token: 0x04004676 RID: 18038
+		// Token: 0x04004C49 RID: 19529
 		private const string KEY_PREFIX = "TrailPhantomPropById";
 
-		// Token: 0x04004677 RID: 18039
+		// Token: 0x04004C4A RID: 19530
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004678 RID: 18040
+		// Token: 0x04004C4B RID: 19531
 		private static int HandleId;
 	}
 }

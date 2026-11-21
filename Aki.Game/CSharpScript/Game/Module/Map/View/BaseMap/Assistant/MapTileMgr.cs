@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -22,12 +21,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 {
-	// Token: 0x0200549B RID: 21659
+	// Token: 0x0200447E RID: 17534
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapTileMgr
 	{
-		// Token: 0x06037541 RID: 226625 RVA: 0x00D2277C File Offset: 0x00D2097C
+		// Token: 0x0602C497 RID: 181399 RVA: 0x00C72338 File Offset: 0x00C70538
 		public MapTileMgr(MapTileMgrParams tileMgrParams)
 		{
 			this.MapVersion = tileMgrParams.MapVersion;
@@ -94,7 +93,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.MapTileParams = tileMgrParams;
 		}
 
-		// Token: 0x06037542 RID: 226626 RVA: 0x00D22A28 File Offset: 0x00D20C28
+		// Token: 0x0602C498 RID: 181400 RVA: 0x00C725E4 File Offset: 0x00C707E4
 		private void OnCreate()
 		{
 			this.MapTiles = new List<UUITextureBase>();
@@ -107,14 +106,14 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.CreateMiniMapMultiMapTexToArea();
 		}
 
-		// Token: 0x06037543 RID: 226627 RVA: 0x00D22A9C File Offset: 0x00D20C9C
+		// Token: 0x0602C499 RID: 181401 RVA: 0x00C72658 File Offset: 0x00C70858
 		public void Initialize()
 		{
 			this.OnCreate();
 			this.AddEventListener();
 		}
 
-		// Token: 0x06037544 RID: 226628 RVA: 0x00D22AAA File Offset: 0x00D20CAA
+		// Token: 0x0602C49A RID: 181402 RVA: 0x00C72666 File Offset: 0x00C70866
 		private void CreateMiniMapMultiMapTexToArea()
 		{
 			this.MiniMapMultiMapTexToArea.Clear();
@@ -122,17 +121,16 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			{
 				foreach (string key in config.MiniMapTilePathIter())
 				{
-					int[] value = config.GetAreaArray().Select(delegate(int areaId)
+					this.MiniMapMultiMapTexToArea[key] = NoLinq.SelectToArray<int, int>(config.GetAreaArray(), delegate(int areaId)
 					{
 						Aki.Config.Area? areaInfo = AreaConfig.Instance.GetAreaInfo(areaId);
 						return AreaModel.Instance.GetAreaId(areaInfo.Value, new EAreaLevel?(EAreaLevel.FirstLevel));
-					}).ToArray<int>();
-					this.MiniMapMultiMapTexToArea[key] = value;
+					});
 				}
 			});
 		}
 
-		// Token: 0x06037545 RID: 226629 RVA: 0x00D22AD4 File Offset: 0x00D20CD4
+		// Token: 0x0602C49B RID: 181403 RVA: 0x00C72690 File Offset: 0x00C70890
 		public UniTask OnChangeTilesAsync(int mapId, int instanceId, EMapGravityDirection gravity)
 		{
 			MapTileMgr.<OnChangeTilesAsync>d__74 <OnChangeTilesAsync>d__;
@@ -146,7 +144,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return <OnChangeTilesAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037546 RID: 226630 RVA: 0x00D22B30 File Offset: 0x00D20D30
+		// Token: 0x0602C49C RID: 181404 RVA: 0x00C726EC File Offset: 0x00C708EC
 		public UniTask RebuildTilesAsync()
 		{
 			MapTileMgr.<RebuildTilesAsync>d__75 <RebuildTilesAsync>d__;
@@ -157,7 +155,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return <RebuildTilesAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037547 RID: 226631 RVA: 0x00D22B73 File Offset: 0x00D20D73
+		// Token: 0x0602C49D RID: 181405 RVA: 0x00C7272F File Offset: 0x00C7092F
 		private void RecycleMapTiles()
 		{
 			List<UUITextureBase> mapTiles = this.MapTiles;
@@ -188,14 +186,14 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.MapTiles = null;
 		}
 
-		// Token: 0x06037548 RID: 226632 RVA: 0x00D22B99 File Offset: 0x00D20D99
+		// Token: 0x0602C49E RID: 181406 RVA: 0x00C72755 File Offset: 0x00C70955
 		private void RecycleMapTile(UUITextureBase mapTile)
 		{
 			mapTile.SetUIActive(false);
 			this.MapTilePool.Add(mapTile);
 		}
 
-		// Token: 0x06037549 RID: 226633 RVA: 0x00D22BB0 File Offset: 0x00D20DB0
+		// Token: 0x0602C49F RID: 181407 RVA: 0x00C7276C File Offset: 0x00C7096C
 		private UUITextureBase GetOrCreateMapTile()
 		{
 			if (this.MapTilePool.Count > 0)
@@ -208,7 +206,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return LguiUtil.Instance.CopyItem(this.TileTexture, this.TileContainer) as UUITextureBase;
 		}
 
-		// Token: 0x0603754A RID: 226634 RVA: 0x00D22C08 File Offset: 0x00D20E08
+		// Token: 0x0602C4A0 RID: 181408 RVA: 0x00C727C4 File Offset: 0x00C709C4
 		private void ResetRefs()
 		{
 			if (this.TextureAssets != null)
@@ -254,7 +252,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.ToHandleUnlockFogId = -1;
 		}
 
-		// Token: 0x0603754B RID: 226635 RVA: 0x00D22CE4 File Offset: 0x00D20EE4
+		// Token: 0x0602C4A1 RID: 181409 RVA: 0x00C728A0 File Offset: 0x00C70AA0
 		public void Dispose()
 		{
 			this.RemoveEventListener();
@@ -307,7 +305,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.Destroy = true;
 		}
 
-		// Token: 0x0603754C RID: 226636 RVA: 0x00D22D88 File Offset: 0x00D20F88
+		// Token: 0x0602C4A2 RID: 181410 RVA: 0x00C72944 File Offset: 0x00C70B44
 		private void AddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.MapOpenFogChange, new Action<int>(this.OnMapOpenFogChange));
@@ -332,7 +330,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x0603754D RID: 226637 RVA: 0x00D22E88 File Offset: 0x00D21088
+		// Token: 0x0602C4A3 RID: 181411 RVA: 0x00C72A44 File Offset: 0x00C70C44
 		private void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.MapOpenFogChange, new Action<int>(this.OnMapOpenFogChange));
@@ -356,7 +354,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x0603754E RID: 226638 RVA: 0x00D22F78 File Offset: 0x00D21178
+		// Token: 0x0602C4A4 RID: 181412 RVA: 0x00C72B34 File Offset: 0x00C70D34
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -367,7 +365,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return this.MapTiles;
 		}
 
-		// Token: 0x0603754F RID: 226639 RVA: 0x00D22F80 File Offset: 0x00D21180
+		// Token: 0x0602C4A5 RID: 181413 RVA: 0x00C72B3C File Offset: 0x00C70D3C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -378,7 +376,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return this.MapTileItems;
 		}
 
-		// Token: 0x06037550 RID: 226640 RVA: 0x00D22F88 File Offset: 0x00D21188
+		// Token: 0x0602C4A6 RID: 181414 RVA: 0x00C72B44 File Offset: 0x00C70D44
 		public unsafe void OnMapSetUp()
 		{
 			if (this.MapType == EMapType.MiniMap && !WorldMapConfig.Instance.IsMapInWorld(this.MapId))
@@ -443,7 +441,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.UpdateCurrentAreaMapGroupIdSwitch = true;
 		}
 
-		// Token: 0x06037551 RID: 226641 RVA: 0x00D231AC File Offset: 0x00D213AC
+		// Token: 0x0602C4A7 RID: 181415 RVA: 0x00C72D68 File Offset: 0x00C70F68
 		private string TryTransformTilePath(string inPath, string targetPath)
 		{
 			if (this.MapType == EMapType.MiniMap)
@@ -453,7 +451,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return inPath;
 		}
 
-		// Token: 0x06037552 RID: 226642 RVA: 0x00D231BC File Offset: 0x00D213BC
+		// Token: 0x0602C4A8 RID: 181416 RVA: 0x00C72D78 File Offset: 0x00C70F78
 		private void SetUpFog()
 		{
 			this.OpenFogSet = new HashSet<int>();
@@ -471,14 +469,28 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x06037553 RID: 226643 RVA: 0x00D23238 File Offset: 0x00D21438
+		// Token: 0x0602C4A9 RID: 181417 RVA: 0x00C72DF4 File Offset: 0x00C70FF4
 		[NullableContext(2)]
 		public static bool ShouldLoadTileByFilter(int[] tileAreaList, IReadOnlyList<int> displayAreaList)
 		{
-			return displayAreaList == null || tileAreaList == null || tileAreaList.Length == 0 || tileAreaList.Any(new Func<int, bool>(displayAreaList.Contains<int>));
+			if (displayAreaList == null || tileAreaList == null || tileAreaList.Length == 0)
+			{
+				return true;
+			}
+			for (int i = 0; i < tileAreaList.Length; i++)
+			{
+				for (int j = 0; j < displayAreaList.Count; j++)
+				{
+					if (tileAreaList[i] == displayAreaList[j])
+					{
+						return true;
+					}
+				}
+			}
+			return false;
 		}
 
-		// Token: 0x06037554 RID: 226644 RVA: 0x00D23258 File Offset: 0x00D21458
+		// Token: 0x0602C4AA RID: 181418 RVA: 0x00C72E3C File Offset: 0x00C7103C
 		private void OnCreateTextureAssets()
 		{
 			IReadOnlyList<FogTextureConfig> allTileConfigByMapId = MapConfig.Instance.GetAllTileConfigByMapId(this.MapId);
@@ -531,7 +543,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x06037555 RID: 226645 RVA: 0x00D23484 File Offset: 0x00D21684
+		// Token: 0x0602C4AB RID: 181419 RVA: 0x00C73068 File Offset: 0x00C71268
 		[NullableContext(0)]
 		private unsafe ValueTuple<int, int> OnCalculateTileNum()
 		{
@@ -595,7 +607,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return new ValueTuple<int, int>(num2, num);
 		}
 
-		// Token: 0x06037556 RID: 226646 RVA: 0x00D235F3 File Offset: 0x00D217F3
+		// Token: 0x0602C4AC RID: 181420 RVA: 0x00C731D7 File Offset: 0x00C713D7
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -607,7 +619,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return new ValueTuple<int, int>(Math.Max(max, -1), 1 - Math.Min(min, 1));
 		}
 
-		// Token: 0x06037557 RID: 226647 RVA: 0x00D2360C File Offset: 0x00D2180C
+		// Token: 0x0602C4AD RID: 181421 RVA: 0x00C731F0 File Offset: 0x00C713F0
 		private void OnSetupDraggableParams(ITileNum tileNum)
 		{
 			ValueTuple<int, int> valueTuple = MapTileMgr.OriginAnchoredCount(tileNum.MaxX, tileNum.MinX);
@@ -628,7 +640,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x06037558 RID: 226648 RVA: 0x00D23714 File Offset: 0x00D21914
+		// Token: 0x0602C4AE RID: 181422 RVA: 0x00C732F8 File Offset: 0x00C714F8
 		private void CreateMapTile()
 		{
 			MapTileMgr.<>c__DisplayClass93_0 CS$<>8__locals1 = new MapTileMgr.<>c__DisplayClass93_0();
@@ -765,7 +777,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.OnSetupDraggableParams(this.TileNum);
 		}
 
-		// Token: 0x06037559 RID: 226649 RVA: 0x00D23C98 File Offset: 0x00D21E98
+		// Token: 0x0602C4AF RID: 181423 RVA: 0x00C7387C File Offset: 0x00C71A7C
 		[NullableContext(0)]
 		private ValueTuple<int, int> GetTilePositionByIndex(int index)
 		{
@@ -775,7 +787,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return new ValueTuple<int, int>(item, num);
 		}
 
-		// Token: 0x0603755A RID: 226650 RVA: 0x00D23CEC File Offset: 0x00D21EEC
+		// Token: 0x0602C4B0 RID: 181424 RVA: 0x00C738D0 File Offset: 0x00C71AD0
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -790,7 +802,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return new ValueTuple<int, int>(item, item2);
 		}
 
-		// Token: 0x0603755B RID: 226651 RVA: 0x00D23D1C File Offset: 0x00D21F1C
+		// Token: 0x0602C4B1 RID: 181425 RVA: 0x00C73900 File Offset: 0x00C71B00
 		private void LoadSingleFogTile(UUITextureBase mapTileItem, string fogTilePath, [Nullable(2)] TSingleTileLoadedCallBack singleTileLoadedCallback = null)
 		{
 			MapTileMgr.<>c__DisplayClass96_0 CS$<>8__locals1 = new MapTileMgr.<>c__DisplayClass96_0();
@@ -800,7 +812,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.LoadAndSetSingleFogTile(fogTilePath, new Action<UTexture, string>(CS$<>8__locals1.<LoadSingleFogTile>g__LoadCallback|0));
 		}
 
-		// Token: 0x0603755C RID: 226652 RVA: 0x00D23D58 File Offset: 0x00D21F58
+		// Token: 0x0602C4B2 RID: 181426 RVA: 0x00C7393C File Offset: 0x00C71B3C
 		private void LoadSingleFogTileV2(UUITextureBase mapTileItem, string fogTilePath, int part, [Nullable(2)] TSingleTileLoadedCallBack singleTileLoadedCallback = null)
 		{
 			MapTileMgr.<>c__DisplayClass97_0 CS$<>8__locals1 = new MapTileMgr.<>c__DisplayClass97_0();
@@ -811,7 +823,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.LoadAndSetSingleFogTile(fogTilePath, new Action<UTexture, string>(CS$<>8__locals1.<LoadSingleFogTileV2>g__LoadCallback|0));
 		}
 
-		// Token: 0x0603755D RID: 226653 RVA: 0x00D23D9C File Offset: 0x00D21F9C
+		// Token: 0x0602C4B3 RID: 181427 RVA: 0x00C73980 File Offset: 0x00C71B80
 		private void LoadMultiMapSingleFogTile(UUITextureBase mapTileItem, string fogTilePath, [Nullable(2)] TSingleTileLoadedCallBack singleTileLoadedCallback = null, int part = 1)
 		{
 			MapTileMgr.<>c__DisplayClass98_0 CS$<>8__locals1 = new MapTileMgr.<>c__DisplayClass98_0();
@@ -822,7 +834,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.LoadAndSetSingleFogTile(fogTilePath, new Action<UTexture, string>(CS$<>8__locals1.<LoadMultiMapSingleFogTile>g__LoadCallback|0));
 		}
 
-		// Token: 0x0603755E RID: 226654 RVA: 0x00D23DE0 File Offset: 0x00D21FE0
+		// Token: 0x0602C4B4 RID: 181428 RVA: 0x00C739C4 File Offset: 0x00C71BC4
 		private void LoadAndSetSingleFogTile(string fogTilePath, [Nullable(new byte[]
 		{
 			1,
@@ -839,7 +851,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			ResourceSystem.Instance.LoadAsync<UTexture>(fogTilePath, loadCallback, 102, "Ui.MapUi");
 		}
 
-		// Token: 0x0603755F RID: 226655 RVA: 0x00D23E1C File Offset: 0x00D2201C
+		// Token: 0x0602C4B5 RID: 181429 RVA: 0x00C73A00 File Offset: 0x00C71C00
 		public UniTask LoadMapBorder()
 		{
 			MapTileMgr.<LoadMapBorder>d__100 <LoadMapBorder>d__;
@@ -850,7 +862,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return <LoadMapBorder>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037560 RID: 226656 RVA: 0x00D23E60 File Offset: 0x00D22060
+		// Token: 0x0602C4B6 RID: 181430 RVA: 0x00C73A44 File Offset: 0x00C71C44
 		private void RefreshMapBorder([Nullable(new byte[]
 		{
 			2,
@@ -869,7 +881,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.LoadMapBorder().Forget();
 		}
 
-		// Token: 0x06037561 RID: 226657 RVA: 0x00D23ED4 File Offset: 0x00D220D4
+		// Token: 0x0602C4B7 RID: 181431 RVA: 0x00C73AB8 File Offset: 0x00C71CB8
 		public void UpdateMinimapTiles(global::Vector position)
 		{
 			if (this.MapType != EMapType.MiniMap || !this.IsTileShow)
@@ -959,7 +971,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.MiniMapShowMultiMapId = num;
 		}
 
-		// Token: 0x06037562 RID: 226658 RVA: 0x00D2420C File Offset: 0x00D2240C
+		// Token: 0x0602C4B8 RID: 181432 RVA: 0x00C73DF0 File Offset: 0x00C71FF0
 		private void ForceUpdateMiniMapTiles()
 		{
 			int num = (this.MapTiles.Count - 1) * 2 + 1;
@@ -975,13 +987,13 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x06037563 RID: 226659 RVA: 0x00D24284 File Offset: 0x00D22484
+		// Token: 0x0602C4B9 RID: 181433 RVA: 0x00C73E68 File Offset: 0x00C72068
 		private void OnMultiMapUnlockChanged()
 		{
 			this.MiniMapShowMultiMapId = -1;
 		}
 
-		// Token: 0x06037564 RID: 226660 RVA: 0x00D24290 File Offset: 0x00D22490
+		// Token: 0x0602C4BA RID: 181434 RVA: 0x00C73E74 File Offset: 0x00C72074
 		private unsafe void UpdateMiniMapSingleMultiFloorTile(UUITextureBase tile, int x, int y, int multiMapId, int areaId)
 		{
 			this.SubMapTileResourceIds.Remove(tile);
@@ -1174,7 +1186,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x06037565 RID: 226661 RVA: 0x00D2464C File Offset: 0x00D2284C
+		// Token: 0x0602C4BB RID: 181435 RVA: 0x00C74230 File Offset: 0x00C72430
 		private void UpdateMiniMapSingleBaseTiles(UUITextureBase tile, int x, int y)
 		{
 			MapTileMgr.<>c__DisplayClass106_0 CS$<>8__locals1 = new MapTileMgr.<>c__DisplayClass106_0();
@@ -1299,7 +1311,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}, ResourceSystem.EResourceLoadPriority.Default, "Ui.MapUi");
 		}
 
-		// Token: 0x06037566 RID: 226662 RVA: 0x00D248D8 File Offset: 0x00D22AD8
+		// Token: 0x0602C4BC RID: 181436 RVA: 0x00C744BC File Offset: 0x00C726BC
 		private unsafe List<FLinearColor> CalculateTileScaleBiasByPosition(global::Vector position, int row, int column)
 		{
 			Vector2D vector2D = Vector2D.Create(position);
@@ -1332,7 +1344,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return list;
 		}
 
-		// Token: 0x06037567 RID: 226663 RVA: 0x00D24AA4 File Offset: 0x00D22CA4
+		// Token: 0x0602C4BD RID: 181437 RVA: 0x00C74688 File Offset: 0x00C72888
 		private void UpdateTilesTransformAndUv(List<UUITextureBase> tiles, List<int> indexes, List<FLinearColor> scaleBias)
 		{
 			Vector2D vector2D = Vector2D.Create();
@@ -1350,7 +1362,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x06037568 RID: 226664 RVA: 0x00D24BC8 File Offset: 0x00D22DC8
+		// Token: 0x0602C4BE RID: 181438 RVA: 0x00C747AC File Offset: 0x00C729AC
 		public void ShowSubMapByPosition(int groupId, int layer, bool fastTween = false)
 		{
 			if (this.MapType == EMapType.MiniMap)
@@ -1375,7 +1387,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x06037569 RID: 226665 RVA: 0x00D24C1C File Offset: 0x00D22E1C
+		// Token: 0x0602C4BF RID: 181439 RVA: 0x00C74800 File Offset: 0x00C72A00
 		public void HideSubMap()
 		{
 			if (this.SubMapContainerActive)
@@ -1408,7 +1420,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.SubMapContainerActive = false;
 		}
 
-		// Token: 0x0603756A RID: 226666 RVA: 0x00D24C84 File Offset: 0x00D22E84
+		// Token: 0x0602C4C0 RID: 181440 RVA: 0x00C74868 File Offset: 0x00C72A68
 		[NullableContext(2)]
 		private void PlaySubMapTween(bool reverse = false, Action onComplete = null, bool fastTween = false)
 		{
@@ -1435,7 +1447,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x0603756B RID: 226667 RVA: 0x00D24D54 File Offset: 0x00D22F54
+		// Token: 0x0602C4C1 RID: 181441 RVA: 0x00C74938 File Offset: 0x00C72B38
 		private void ReleaseSubMapTweenDelegate()
 		{
 			if (this.SubMapTweenDelegate != null)
@@ -1445,7 +1457,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x0603756C RID: 226668 RVA: 0x00D24D70 File Offset: 0x00D22F70
+		// Token: 0x0602C4C2 RID: 181442 RVA: 0x00C74954 File Offset: 0x00C72B54
 		private void UnregisterSubMapEndCb()
 		{
 			if (this.SubMapContainerPlayEndCbWrapper != null)
@@ -1461,7 +1473,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.ReleaseSubMapTweenDelegate();
 		}
 
-		// Token: 0x0603756D RID: 226669 RVA: 0x00D24DC0 File Offset: 0x00D22FC0
+		// Token: 0x0602C4C3 RID: 181443 RVA: 0x00C749A4 File Offset: 0x00C72BA4
 		private void PlaySubMapItemFadeTween(UUITextureBase item, bool fadeIn = true)
 		{
 			ULGUIPlayTweenComponent subMapContainerTween = this.SubMapContainerTween;
@@ -1487,7 +1499,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x0603756E RID: 226670 RVA: 0x00D24E7C File Offset: 0x00D2307C
+		// Token: 0x0602C4C4 RID: 181444 RVA: 0x00C74A60 File Offset: 0x00C72C60
 		private void PlaySubMapItemSwitchTween(UUITextureBase item, bool switchShow = true)
 		{
 			AActor owner = item.GetOwner();
@@ -1516,7 +1528,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			ulguiplayTweenComponent.Play();
 		}
 
-		// Token: 0x0603756F RID: 226671 RVA: 0x00D24F14 File Offset: 0x00D23114
+		// Token: 0x0602C4C5 RID: 181445 RVA: 0x00C74AF8 File Offset: 0x00C72CF8
 		public int GetMultiMapAreaIdByPosition(global::Vector position)
 		{
 			int subMapGroupByPosition = this.GetSubMapGroupByPosition(position);
@@ -1532,7 +1544,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return 0;
 		}
 
-		// Token: 0x06037570 RID: 226672 RVA: 0x00D24F80 File Offset: 0x00D23180
+		// Token: 0x0602C4C6 RID: 181446 RVA: 0x00C74B64 File Offset: 0x00C72D64
 		[NullableContext(2)]
 		public global::Vector GetWorldMapCenterPosition()
 		{
@@ -1548,7 +1560,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return global::Vector.Create(ulguipointerEventData.GetLocalPointInPlane());
 		}
 
-		// Token: 0x06037571 RID: 226673 RVA: 0x00D24FC0 File Offset: 0x00D231C0
+		// Token: 0x0602C4C7 RID: 181447 RVA: 0x00C74BA4 File Offset: 0x00C72DA4
 		public unsafe int GetSubMapGroupByPosition(global::Vector position)
 		{
 			UUIItem mapRootItem = this.MapRootItem;
@@ -1588,30 +1600,26 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return 0;
 		}
 
-		// Token: 0x06037572 RID: 226674 RVA: 0x00D25154 File Offset: 0x00D23354
+		// Token: 0x0602C4C8 RID: 181448 RVA: 0x00C74D38 File Offset: 0x00C72F38
 		public void CreateSubMapTile(int groupId, int layer, bool switchLayer = false)
 		{
 			this.SubMapFadeInTiles = new List<UUITextureBase>();
 			List<MultiMap> list = ConfigCommon.ToList<MultiMap>(MapConfig.Instance.GetSubMapConfigByGroupId(groupId));
-			List<MultiMap> list2;
 			if (list == null)
-			{
-				list2 = null;
-			}
-			else
-			{
-				list2 = (from floorData in list
-				where MapModel.Instance.CheckUnlockMultiMapIds(floorData.Id)
-				select floorData).ToList<MultiMap>();
-			}
-			List<MultiMap> list3 = list2;
-			if (list3 == null)
 			{
 				return;
 			}
+			List<MultiMap> list2 = new List<MultiMap>();
+			foreach (MultiMap item in list)
+			{
+				if (MapModel.Instance.CheckUnlockMultiMapIds(item.Id))
+				{
+					list2.Add(item);
+				}
+			}
 			int num = 0;
 			int num2 = 0;
-			list3.Sort(delegate(MultiMap a, MultiMap b)
+			list2.Sort(delegate(MultiMap a, MultiMap b)
 			{
 				if (a.Floor == layer && b.Floor != layer)
 				{
@@ -1623,7 +1631,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 				}
 				return a.Floor - b.Floor;
 			});
-			using (List<MultiMap>.Enumerator enumerator = list3.GetEnumerator())
+			using (List<MultiMap>.Enumerator enumerator = list2.GetEnumerator())
 			{
 				while (enumerator.MoveNext())
 				{
@@ -1695,13 +1703,13 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x06037573 RID: 226675 RVA: 0x00D25464 File Offset: 0x00D23664
+		// Token: 0x0602C4C9 RID: 181449 RVA: 0x00C75080 File Offset: 0x00C73280
 		public Vector2D ConvertUiPositionToMapTilePosition(global::Vector uiPosition)
 		{
 			return Vector2D.Create();
 		}
 
-		// Token: 0x06037574 RID: 226676 RVA: 0x00D2546C File Offset: 0x00D2366C
+		// Token: 0x0602C4CA RID: 181450 RVA: 0x00C75088 File Offset: 0x00C73288
 		public void UpdateCurrentAreaMapGroupId(global::Vector position)
 		{
 			if (!this.UpdateCurrentAreaMapGroupIdSwitch)
@@ -1732,7 +1740,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			RegionalTerminalModel.Instance.CurrentAreaMapGroupId = 0;
 		}
 
-		// Token: 0x06037575 RID: 226677 RVA: 0x00D2555C File Offset: 0x00D2375C
+		// Token: 0x0602C4CB RID: 181451 RVA: 0x00C75178 File Offset: 0x00C73378
 		private void OnMapOpenFogChange(int fogId)
 		{
 			if (this.OpenFogSet == null)
@@ -1743,7 +1751,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.UpdateOpenArea();
 		}
 
-		// Token: 0x06037576 RID: 226678 RVA: 0x00D2557C File Offset: 0x00D2377C
+		// Token: 0x0602C4CC RID: 181452 RVA: 0x00C75198 File Offset: 0x00C73398
 		private void OnMapFogFullUpdate(IReadOnlyDictionary<int, bool> unlockFogIds)
 		{
 			if (this.OpenFogSet == null)
@@ -1758,7 +1766,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.UpdateOpenArea();
 		}
 
-		// Token: 0x06037577 RID: 226679 RVA: 0x00D255EC File Offset: 0x00D237EC
+		// Token: 0x0602C4CD RID: 181453 RVA: 0x00C75208 File Offset: 0x00C73408
 		public void UpdateOpenArea()
 		{
 			foreach (UUITextureBase mapTile in this.MapTiles)
@@ -1771,7 +1779,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x06037578 RID: 226680 RVA: 0x00D25688 File Offset: 0x00D23888
+		// Token: 0x0602C4CE RID: 181454 RVA: 0x00C752A4 File Offset: 0x00C734A4
 		public void HandleFogAreaOpen(int fogId)
 		{
 			this.FogOpenParamList = new List<FogOpenParams>();
@@ -1845,7 +1853,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.SetFogTitleColor(0f);
 		}
 
-		// Token: 0x06037579 RID: 226681 RVA: 0x00D258B4 File Offset: 0x00D23AB4
+		// Token: 0x0602C4CF RID: 181455 RVA: 0x00C754D0 File Offset: 0x00C736D0
 		private EChannel? GetChangedChannel(UUITextureBase mapTile, int fogId)
 		{
 			if (mapTile.texture == null)
@@ -1887,7 +1895,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return null;
 		}
 
-		// Token: 0x0603757A RID: 226682 RVA: 0x00D259D0 File Offset: 0x00D23BD0
+		// Token: 0x0602C4D0 RID: 181456 RVA: 0x00C755EC File Offset: 0x00C737EC
 		private void ChangeTileChannelColor(UUITextureBase title, EChannel channel, float value)
 		{
 			FLinearColor flinearColor = title.GetColor().ReinterpretAsLinear();
@@ -1909,7 +1917,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			title.SetColor(flinearColor.ToFColor(false));
 		}
 
-		// Token: 0x0603757B RID: 226683 RVA: 0x00D25A38 File Offset: 0x00D23C38
+		// Token: 0x0602C4D1 RID: 181457 RVA: 0x00C75654 File Offset: 0x00C73854
 		private void ChangeTileChannelColorV2(UUITextureBase tile, int channel, float value)
 		{
 			if (channel < 4)
@@ -1962,7 +1970,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			tile.SetCustomMaterialVectorParameter(MapTileMgr.FOG_MASK_2, value3);
 		}
 
-		// Token: 0x0603757C RID: 226684 RVA: 0x00D25BA4 File Offset: 0x00D23DA4
+		// Token: 0x0602C4D2 RID: 181458 RVA: 0x00C757C0 File Offset: 0x00C739C0
 		private void SetFogTitleColor(float value)
 		{
 			if (this.FogOpenParamList == null || this.FogOpenParamList.Count == 0 || this.MapTiles == null)
@@ -1987,7 +1995,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x0603757D RID: 226685 RVA: 0x00D25C5C File Offset: 0x00D23E5C
+		// Token: 0x0602C4D3 RID: 181459 RVA: 0x00C75878 File Offset: 0x00C73A78
 		private void HandleUnlockFog()
 		{
 			if (this.MapVersion != 2)
@@ -2029,7 +2037,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x0603757E RID: 226686 RVA: 0x00D25DD8 File Offset: 0x00D23FD8
+		// Token: 0x0602C4D4 RID: 181460 RVA: 0x00C759F4 File Offset: 0x00C73BF4
 		private FVectorDouble GetUnlockFogCenter(int fogId)
 		{
 			MapFog? mapFogConfig = WorldMapConfig.Instance.GetMapFogConfig(fogId);
@@ -2047,7 +2055,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return new FVectorDouble((double)array[0], (double)array[1], (double)array[2]);
 		}
 
-		// Token: 0x0603757F RID: 226687 RVA: 0x00D25E80 File Offset: 0x00D24080
+		// Token: 0x0602C4D5 RID: 181461 RVA: 0x00C75A9C File Offset: 0x00C73C9C
 		public void HandleDelegate()
 		{
 			if (this.FogOpenDelegate == null)
@@ -2067,7 +2075,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.ToHandleUnlockFogId = -1;
 		}
 
-		// Token: 0x06037580 RID: 226688 RVA: 0x00D25F18 File Offset: 0x00D24118
+		// Token: 0x0602C4D6 RID: 181462 RVA: 0x00C75B34 File Offset: 0x00C73D34
 		public void UnBindDelegate()
 		{
 			if (this.FogOpenDelegate != null)
@@ -2083,7 +2091,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x06037581 RID: 226689 RVA: 0x00D25F6C File Offset: 0x00D2416C
+		// Token: 0x0602C4D7 RID: 181463 RVA: 0x00C75B88 File Offset: 0x00C73D88
 		private void UpdateSingleTileOpenArea(UUITextureBase mapTile, [Nullable(2)] UTexture textureObject = null, int part = 0)
 		{
 			UTexture texture = mapTile.texture;
@@ -2133,7 +2141,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			mapTile.SetColor(fogAreaStateColor);
 		}
 
-		// Token: 0x06037582 RID: 226690 RVA: 0x00D26078 File Offset: 0x00D24278
+		// Token: 0x0602C4D8 RID: 181464 RVA: 0x00C75C94 File Offset: 0x00C73E94
 		private void UpdateMultiMapSingleTileOpenArea(UUITextureBase mapTile, [Nullable(2)] UTexture textureObject = null, int part = 1)
 		{
 			UTexture texture = mapTile.texture;
@@ -2151,15 +2159,29 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			if (this.MapVersion == 2)
 			{
 				string key;
-				int[] source;
-				if (this.SubMapTileResourceIds.TryGetValue(mapTile, out key) && this.MiniMapMultiMapTexToArea.TryGetValue(key, out source) && source.Any((int areaId) => (MapConfig.Instance.GetMapFogByAreaId(areaId) ?? Array.Empty<MapFog>()).Any(delegate(MapFog fog)
+				int[] array;
+				if (this.SubMapTileResourceIds.TryGetValue(mapTile, out key) && this.MiniMapMultiMapTexToArea.TryGetValue(key, out array))
 				{
-					HashSet<int> openFogSet = this.OpenFogSet;
-					return openFogSet != null && openFogSet.Contains(fog.Fog);
-				})))
-				{
-					mapTile.SetColor(ColorUtils.ColorWhile);
-					return;
+					bool flag = false;
+					int num = 0;
+					while (num < array.Length && !flag)
+					{
+						foreach (MapFog mapFog in (MapConfig.Instance.GetMapFogByAreaId(array[num]) ?? Array.Empty<MapFog>()))
+						{
+							HashSet<int> openFogSet = this.OpenFogSet;
+							if (openFogSet != null && openFogSet.Contains(mapFog.Fog))
+							{
+								flag = true;
+								break;
+							}
+						}
+						num++;
+					}
+					if (flag)
+					{
+						mapTile.SetColor(ColorUtils.ColorWhile);
+						return;
+					}
 				}
 			}
 			else
@@ -2178,7 +2200,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			}
 		}
 
-		// Token: 0x06037583 RID: 226691 RVA: 0x00D26148 File Offset: 0x00D24348
+		// Token: 0x0602C4D9 RID: 181465 RVA: 0x00C75DE8 File Offset: 0x00C73FE8
 		private FogBlock? GetConfigForBlockByTexName(string texName)
 		{
 			ValueTuple<int, int> positionKeyByTileName = this.GetPositionKeyByTileName(texName);
@@ -2190,7 +2212,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return MapConfig.Instance.GetFogBlockConfig(blockIndex, this.MapId);
 		}
 
-		// Token: 0x06037584 RID: 226692 RVA: 0x00D261A8 File Offset: 0x00D243A8
+		// Token: 0x0602C4DA RID: 181466 RVA: 0x00C75E48 File Offset: 0x00C74048
 		private void SetSingleTileOpenArea(UUITextureBase mapTile, string blockIndex)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -2245,7 +2267,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			mapTile.SetCustomMaterialVectorParameter(MapTileMgr.FOG_MASK_2, value2);
 		}
 
-		// Token: 0x06037585 RID: 226693 RVA: 0x00D26360 File Offset: 0x00D24560
+		// Token: 0x0602C4DB RID: 181467 RVA: 0x00C76000 File Offset: 0x00C74200
 		private float[] GetFinalColor(string v2BlockIndex)
 		{
 			S_FogToAreaIDs dataTableRow = DataTableUtil.GetDataTableRow<S_FogToAreaIDs>(this.DtFogAreaID, v2BlockIndex);
@@ -2272,7 +2294,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return array;
 		}
 
-		// Token: 0x06037586 RID: 226694 RVA: 0x00D26470 File Offset: 0x00D24670
+		// Token: 0x0602C4DC RID: 181468 RVA: 0x00C76110 File Offset: 0x00C74310
 		private FColor GetFogAreaStateColor(FogBlock configFogBlock)
 		{
 			HashSet<int> openFogSet = this.OpenFogSet;
@@ -2286,7 +2308,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return new FColor(r, g, b, a);
 		}
 
-		// Token: 0x06037587 RID: 226695 RVA: 0x00D2652C File Offset: 0x00D2472C
+		// Token: 0x0602C4DD RID: 181469 RVA: 0x00C761CC File Offset: 0x00C743CC
 		private FColor GetMultiMapFogAreaStateColor(FogBlock configFogBlock)
 		{
 			HashSet<int> openFogSet = this.OpenFogSet;
@@ -2304,28 +2326,28 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			return new FColor(b, b2, b3, b4);
 		}
 
-		// Token: 0x06037588 RID: 226696 RVA: 0x00D26650 File Offset: 0x00D24850
+		// Token: 0x0602C4DE RID: 181470 RVA: 0x00C762F0 File Offset: 0x00C744F0
 		public bool InValidTile(global::Vector worldPosition)
 		{
 			ITilePosition tilePosition = MapUtil.GetTilePosition(worldPosition, 0f);
 			return tilePosition.X >= this.TileNum.MinX && tilePosition.X <= this.TileNum.MaxX && tilePosition.Y >= this.TileNum.MinY && tilePosition.Y <= this.TileNum.MaxY;
 		}
 
-		// Token: 0x06037589 RID: 226697 RVA: 0x00D266BA File Offset: 0x00D248BA
+		// Token: 0x0602C4DF RID: 181471 RVA: 0x00C7635A File Offset: 0x00C7455A
 		[NullableContext(2)]
 		public Vector2D GetMapSizeOverride()
 		{
 			return this.OverrideMapSize;
 		}
 
-		// Token: 0x0603758A RID: 226698 RVA: 0x00D266C2 File Offset: 0x00D248C2
+		// Token: 0x0602C4E0 RID: 181472 RVA: 0x00C76362 File Offset: 0x00C74562
 		[NullableContext(2)]
 		public Vector2D GetContentCenterOffset()
 		{
 			return this.ContentCenterOffset;
 		}
 
-		// Token: 0x0603758B RID: 226699 RVA: 0x00D266CC File Offset: 0x00D248CC
+		// Token: 0x0602C4E1 RID: 181473 RVA: 0x00C7636C File Offset: 0x00C7456C
 		public void UpdateDraggableParams(ITileNum tileNum)
 		{
 			int num = tileNum.MaxX - tileNum.MinX + 1;
@@ -2338,7 +2360,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.FakeOffset = 2550f;
 		}
 
-		// Token: 0x0603758C RID: 226700 RVA: 0x00D26791 File Offset: 0x00D24991
+		// Token: 0x0602C4E2 RID: 181474 RVA: 0x00C76431 File Offset: 0x00C74631
 		public void ResetDraggableParams()
 		{
 			this.OverrideMapSize = null;
@@ -2346,7 +2368,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.OnSetupDraggableParams(this.TileNum);
 		}
 
-		// Token: 0x0603758D RID: 226701 RVA: 0x00D267B0 File Offset: 0x00D249B0
+		// Token: 0x0602C4E3 RID: 181475 RVA: 0x00C76450 File Offset: 0x00C74650
 		public void OnCalTotalTileNum()
 		{
 			ITileNum tileNum2;
@@ -2390,55 +2412,55 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 			this.TotalTileSize.Set((double)(num * 2 * 850), (double)(num2 * 2 * 850));
 		}
 
-		// Token: 0x0401D254 RID: 119380
+		// Token: 0x04017CF0 RID: 97520
 		private const int FAKE_TILE_COUNT = 3;
 
-		// Token: 0x0401D255 RID: 119381
+		// Token: 0x04017CF1 RID: 97521
 		private const string MAP_TILE_COMMON = "T_CommonDefault_UI";
 
-		// Token: 0x0401D256 RID: 119382
+		// Token: 0x04017CF2 RID: 97522
 		private const int MAX_COLOR = 255;
 
-		// Token: 0x0401D257 RID: 119383
+		// Token: 0x04017CF3 RID: 97523
 		private static readonly FName FOG_TEXTURE_NAME = new FName("FogTexture");
 
-		// Token: 0x0401D258 RID: 119384
+		// Token: 0x04017CF4 RID: 97524
 		private static readonly FName HD_TEXTURE_NAME = new FName("HDTexture");
 
-		// Token: 0x0401D259 RID: 119385
+		// Token: 0x04017CF5 RID: 97525
 		private static readonly FName HD_SCALAR_NAME = new FName("UseHDPicture");
 
-		// Token: 0x0401D25A RID: 119386
+		// Token: 0x04017CF6 RID: 97526
 		private static readonly FName FOG_MASK_1 = new FName("FogMask");
 
-		// Token: 0x0401D25B RID: 119387
+		// Token: 0x04017CF7 RID: 97527
 		private static readonly FName FOG_MASK_2 = new FName("FogMask2");
 
-		// Token: 0x0401D25C RID: 119388
+		// Token: 0x04017CF8 RID: 97528
 		private static readonly FName FOG_TEXTURE_1 = MapTileMgr.FOG_TEXTURE_NAME;
 
-		// Token: 0x0401D25D RID: 119389
+		// Token: 0x04017CF9 RID: 97529
 		private static readonly FName FOG_TEXTURE_2 = new FName("FogTexture2");
 
-		// Token: 0x0401D25E RID: 119390
+		// Token: 0x04017CFA RID: 97530
 		private static readonly FName FOG_UNLOCK_CENTERX_NAME = new FName("CenterX");
 
-		// Token: 0x0401D25F RID: 119391
+		// Token: 0x04017CFB RID: 97531
 		private static readonly FName FOG_UNLOCK_CENTERY_NAME = new FName("CenterY");
 
-		// Token: 0x0401D260 RID: 119392
+		// Token: 0x04017CFC RID: 97532
 		private const string DTPATH_AREA_ID_TO_MASK_CODE = "/Game/Aki/Data/PathLine/FogLine/DT_AreaToMaskCode.DT_AreaToMaskCode";
 
-		// Token: 0x0401D261 RID: 119393
+		// Token: 0x04017CFD RID: 97533
 		private const string DTPATH_FOG_AREA_ID = "/Game/Aki/Data/PathLine/FogLine/DT_FogToArea.DT_FogToArea";
 
-		// Token: 0x0401D262 RID: 119394
+		// Token: 0x04017CFE RID: 97534
 		private const string V2FogPath = "/Game/Aki/UI/UIResources/UIWorldMap/Image/FogTilesV2";
 
-		// Token: 0x0401D263 RID: 119395
+		// Token: 0x04017CFF RID: 97535
 		private const string V2FogMiniPath = "/Game/Aki/UI/UIResources/UIWorldMap/Image/FogTilesV2Mini";
 
-		// Token: 0x0401D264 RID: 119396
+		// Token: 0x04017D00 RID: 97536
 		[Nullable(new byte[]
 		{
 			2,
@@ -2446,10 +2468,10 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 		})]
 		private List<UUITextureBase> MapTiles;
 
-		// Token: 0x0401D265 RID: 119397
+		// Token: 0x04017D01 RID: 97537
 		private readonly List<UUITextureBase> MapTilePool = new List<UUITextureBase>();
 
-		// Token: 0x0401D266 RID: 119398
+		// Token: 0x04017D02 RID: 97538
 		[Nullable(new byte[]
 		{
 			2,
@@ -2457,7 +2479,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 		})]
 		private List<MapTileItem> MapTileItems;
 
-		// Token: 0x0401D267 RID: 119399
+		// Token: 0x04017D03 RID: 97539
 		[Nullable(new byte[]
 		{
 			2,
@@ -2465,7 +2487,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 		})]
 		private List<UUITextureBase> SubMapTiles;
 
-		// Token: 0x0401D268 RID: 119400
+		// Token: 0x04017D04 RID: 97540
 		[Nullable(new byte[]
 		{
 			2,
@@ -2473,17 +2495,17 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 		})]
 		private List<UUITextureBase> SubMapFadeInTiles;
 
-		// Token: 0x0401D269 RID: 119401
+		// Token: 0x04017D05 RID: 97541
 		private readonly List<UUIItem> BorderItems = new List<UUIItem>();
 
-		// Token: 0x0401D26A RID: 119402
+		// Token: 0x04017D06 RID: 97542
 		[Nullable(2)]
 		private ConditionPassCallback ConditionCallBack;
 
-		// Token: 0x0401D26B RID: 119403
+		// Token: 0x04017D07 RID: 97543
 		private readonly Dictionary<string, UTexture> PreloadMapTiles = new Dictionary<string, UTexture>();
 
-		// Token: 0x0401D26C RID: 119404
+		// Token: 0x04017D08 RID: 97544
 		[Nullable(new byte[]
 		{
 			2,
@@ -2493,97 +2515,97 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 		})]
 		private List<Dictionary<string, string>> TextureAssets;
 
-		// Token: 0x0401D26D RID: 119405
+		// Token: 0x04017D09 RID: 97545
 		[Nullable(2)]
 		public HashSet<int> OpenFogSet;
 
-		// Token: 0x0401D26E RID: 119406
+		// Token: 0x04017D0A RID: 97546
 		private int ToHandleUnlockFogId = -1;
 
-		// Token: 0x0401D26F RID: 119407
+		// Token: 0x04017D0B RID: 97547
 		private ITileNum TileNum;
 
-		// Token: 0x0401D270 RID: 119408
+		// Token: 0x04017D0C RID: 97548
 		private int CurrentColumnNum;
 
-		// Token: 0x0401D271 RID: 119409
+		// Token: 0x04017D0D RID: 97549
 		private readonly UUIItem MapRootItem;
 
-		// Token: 0x0401D272 RID: 119410
+		// Token: 0x04017D0E RID: 97550
 		private readonly UUIItem TileContainer;
 
-		// Token: 0x0401D273 RID: 119411
+		// Token: 0x04017D0F RID: 97551
 		private readonly UUITexture TileTexture;
 
-		// Token: 0x0401D274 RID: 119412
+		// Token: 0x04017D10 RID: 97552
 		[Nullable(2)]
 		private readonly UUIItem SubMapContainer;
 
-		// Token: 0x0401D275 RID: 119413
+		// Token: 0x04017D11 RID: 97553
 		private bool SubMapContainerActive;
 
-		// Token: 0x0401D276 RID: 119414
+		// Token: 0x04017D12 RID: 97554
 		[Nullable(2)]
 		private readonly UUITexture SubMapTexture;
 
-		// Token: 0x0401D277 RID: 119415
+		// Token: 0x04017D13 RID: 97555
 		[Nullable(2)]
 		private readonly UUIItem SubMapMask;
 
-		// Token: 0x0401D278 RID: 119416
+		// Token: 0x04017D14 RID: 97556
 		[Nullable(2)]
 		private ULGUIPlayTweenComponent SubMapContainerTween;
 
-		// Token: 0x0401D279 RID: 119417
+		// Token: 0x04017D15 RID: 97557
 		private readonly float SubMapContainerOriginalAlpha;
 
-		// Token: 0x0401D27A RID: 119418
+		// Token: 0x04017D16 RID: 97558
 		private readonly EMapType MapType = EMapType.WorldMap;
 
-		// Token: 0x0401D27B RID: 119419
+		// Token: 0x04017D17 RID: 97559
 		private int MapId;
 
-		// Token: 0x0401D27C RID: 119420
+		// Token: 0x04017D18 RID: 97560
 		private int InstanceDungeonId;
 
-		// Token: 0x0401D27D RID: 119421
+		// Token: 0x04017D19 RID: 97561
 		private readonly FColor FogDefaultColor = new FColor(0, 0, 0, byte.MaxValue);
 
-		// Token: 0x0401D27E RID: 119422
+		// Token: 0x04017D1A RID: 97562
 		private readonly FColor TransparentColor = new FColor(0, 0, 0, 0);
 
-		// Token: 0x0401D27F RID: 119423
+		// Token: 0x04017D1B RID: 97563
 		private readonly Dictionary<string, MultiMapAreaConfig> MultiMapAreaConfigCache = new Dictionary<string, MultiMapAreaConfig>();
 
-		// Token: 0x0401D280 RID: 119424
+		// Token: 0x04017D1C RID: 97564
 		private readonly Dictionary<int, int> MultiMapAreaCache = new Dictionary<int, int>();
 
-		// Token: 0x0401D281 RID: 119425
+		// Token: 0x04017D1D RID: 97565
 		private int MiniMapShowMultiMapId = -1;
 
-		// Token: 0x0401D282 RID: 119426
+		// Token: 0x04017D1E RID: 97566
 		public Vector4 MapOffset;
 
-		// Token: 0x0401D283 RID: 119427
+		// Token: 0x04017D1F RID: 97567
 		public float FakeOffset;
 
-		// Token: 0x0401D284 RID: 119428
+		// Token: 0x04017D20 RID: 97568
 		private int CurrentFocusRow = int.MaxValue;
 
-		// Token: 0x0401D285 RID: 119429
+		// Token: 0x04017D21 RID: 97569
 		private int CurrentFocusColumn = int.MaxValue;
 
-		// Token: 0x0401D286 RID: 119430
+		// Token: 0x04017D22 RID: 97570
 		private double CurrentFocusPosU = double.MaxValue;
 
-		// Token: 0x0401D287 RID: 119431
+		// Token: 0x04017D23 RID: 97571
 		private double CurrentFocusPosV = double.MaxValue;
 
-		// Token: 0x0401D288 RID: 119432
+		// Token: 0x04017D24 RID: 97572
 		[Nullable(2)]
 		private FLTweenFloatSetterDynamic FogOpenDelegate;
 
-		// Token: 0x0401D289 RID: 119433
+		// Token: 0x04017D25 RID: 97573
 		[Nullable(new byte[]
 		{
 			2,
@@ -2591,14 +2613,14 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 		})]
 		private List<FogOpenParams> FogOpenParamList;
 
-		// Token: 0x0401D28A RID: 119434
+		// Token: 0x04017D26 RID: 97574
 		[Nullable(2)]
 		private ULTweener FogOpenTweener;
 
-		// Token: 0x0401D28B RID: 119435
+		// Token: 0x04017D27 RID: 97575
 		private bool IsTileShow;
 
-		// Token: 0x0401D28C RID: 119436
+		// Token: 0x04017D28 RID: 97576
 		[Nullable(new byte[]
 		{
 			2,
@@ -2606,54 +2628,54 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 		})]
 		private TArray<UUIItem> LineTraceItemList;
 
-		// Token: 0x0401D28D RID: 119437
+		// Token: 0x04017D29 RID: 97577
 		[Nullable(2)]
 		private FLGUIDelegateHandleWrapper SubMapContainerPlayEndCbWrapper;
 
-		// Token: 0x0401D28E RID: 119438
+		// Token: 0x04017D2A RID: 97578
 		private readonly int MapVersion = 1;
 
-		// Token: 0x0401D28F RID: 119439
+		// Token: 0x04017D2B RID: 97579
 		[Nullable(2)]
 		private readonly UDataTable DtAreaIDToMaskCode;
 
-		// Token: 0x0401D290 RID: 119440
+		// Token: 0x04017D2C RID: 97580
 		[Nullable(2)]
 		private readonly UDataTable DtFogAreaID;
 
-		// Token: 0x0401D291 RID: 119441
+		// Token: 0x04017D2D RID: 97581
 		private readonly MapTileMgrParams MapTileParams;
 
-		// Token: 0x0401D292 RID: 119442
+		// Token: 0x04017D2E RID: 97582
 		private bool Destroy;
 
-		// Token: 0x0401D293 RID: 119443
+		// Token: 0x04017D2F RID: 97583
 		private EMapGravityDirection MapGravity = EMapGravityDirection.Down;
 
-		// Token: 0x0401D294 RID: 119444
+		// Token: 0x04017D30 RID: 97584
 		private List<int> MiniMapTileIndexes = new List<int>();
 
-		// Token: 0x0401D295 RID: 119445
+		// Token: 0x04017D31 RID: 97585
 		[Nullable(2)]
 		private TSubMapTweenOnComplete SubMapTweenDelegate;
 
-		// Token: 0x0401D296 RID: 119446
+		// Token: 0x04017D32 RID: 97586
 		public Vector2D TotalTileSize = Vector2D.Create();
 
-		// Token: 0x0401D297 RID: 119447
+		// Token: 0x04017D33 RID: 97587
 		private bool UpdateCurrentAreaMapGroupIdSwitch = true;
 
-		// Token: 0x0401D298 RID: 119448
+		// Token: 0x04017D34 RID: 97588
 		private Dictionary<string, int[]> MiniMapMultiMapTexToArea = new Dictionary<string, int[]>();
 
-		// Token: 0x0401D299 RID: 119449
+		// Token: 0x04017D35 RID: 97589
 		private readonly Dictionary<UUITextureBase, string> SubMapTileResourceIds = new Dictionary<UUITextureBase, string>();
 
-		// Token: 0x0401D29A RID: 119450
+		// Token: 0x04017D36 RID: 97590
 		[Nullable(2)]
 		private Vector2D OverrideMapSize;
 
-		// Token: 0x0401D29B RID: 119451
+		// Token: 0x04017D37 RID: 97591
 		[Nullable(2)]
 		private Vector2D ContentCenterOffset;
 	}

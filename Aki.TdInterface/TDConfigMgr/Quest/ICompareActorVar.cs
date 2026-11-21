@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F18 RID: 3864
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200102E RID: 4142
 	public class ICompareActorVar : IQuestCondition
 	{
-		// Token: 0x0600556E RID: 21870 RVA: 0x000D15C0 File Offset: 0x000CF7C0
+		// Token: 0x06005AEA RID: 23274 RVA: 0x000DD768 File Offset: 0x000DB968
 		private ICompareActorVar_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600556F RID: 21871 RVA: 0x000D15F8 File Offset: 0x000CF7F8
+		// Token: 0x06005AEB RID: 23275 RVA: 0x000DD7A0 File Offset: 0x000DB9A0
 		public static ICompareActorVar Create([Nullable(2)] ICompareActorVar instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005570 RID: 21872 RVA: 0x000D160B File Offset: 0x000CF80B
+		// Token: 0x06005AEC RID: 23276 RVA: 0x000DD7B3 File Offset: 0x000DB9B3
 		public static ICompareActorVar CreateFromSetValue([Nullable(2)] ICompareActorVar_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005571 RID: 21873 RVA: 0x000D161E File Offset: 0x000CF81E
+		// Token: 0x06005AED RID: 23277 RVA: 0x000DD7C6 File Offset: 0x000DB9C6
 		public new ICompareActorVar_SetValue ToSetValue()
 		{
 			return new ICompareActorVar_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C94 RID: 7316
-		// (get) Token: 0x06005572 RID: 21874 RVA: 0x000D1655 File Offset: 0x000CF855
-		// (set) Token: 0x06005573 RID: 21875 RVA: 0x000D1680 File Offset: 0x000CF880
+		// Token: 0x17001E2C RID: 7724
+		// (get) Token: 0x06005AEE RID: 23278 RVA: 0x000DD7FD File Offset: 0x000DB9FD
+		// (set) Token: 0x06005AEF RID: 23279 RVA: 0x000DD828 File Offset: 0x000DBA28
 		public override EChildQuest Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C95 RID: 7317
-		// (get) Token: 0x06005574 RID: 21876 RVA: 0x000D1690 File Offset: 0x000CF890
-		// (set) Token: 0x06005575 RID: 21877 RVA: 0x000D16F1 File Offset: 0x000CF8F1
+		// Token: 0x17001E2D RID: 7725
+		// (get) Token: 0x06005AF0 RID: 23280 RVA: 0x000DD838 File Offset: 0x000DBA38
+		// (set) Token: 0x06005AF1 RID: 23281 RVA: 0x000DD899 File Offset: 0x000DBA99
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -120,9 +118,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C96 RID: 7318
-		// (get) Token: 0x06005576 RID: 21878 RVA: 0x000D1706 File Offset: 0x000CF906
-		// (set) Token: 0x06005577 RID: 21879 RVA: 0x000D1731 File Offset: 0x000CF931
+		// Token: 0x17001E2E RID: 7726
+		// (get) Token: 0x06005AF2 RID: 23282 RVA: 0x000DD8AE File Offset: 0x000DBAAE
+		// (set) Token: 0x06005AF3 RID: 23283 RVA: 0x000DD8D9 File Offset: 0x000DBAD9
 		public virtual EConditionCount Count
 		{
 			get
@@ -143,9 +141,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C97 RID: 7319
-		// (get) Token: 0x06005578 RID: 21880 RVA: 0x000D1740 File Offset: 0x000CF940
-		// (set) Token: 0x06005579 RID: 21881 RVA: 0x000D17D3 File Offset: 0x000CF9D3
+		// Token: 0x17001E2F RID: 7727
+		// (get) Token: 0x06005AF4 RID: 23284 RVA: 0x000DD8E8 File Offset: 0x000DBAE8
+		// (set) Token: 0x06005AF5 RID: 23285 RVA: 0x000DD97B File Offset: 0x000DBB7B
 		public virtual List<ICompareActorVarInChildQuest> Conditions
 		{
 			get
@@ -181,24 +179,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040033AF RID: 13231
+		// Token: 0x040036BC RID: 14012
 		[Nullable(2)]
 		protected new ICompareActorVar FbInstance;
 
-		// Token: 0x040033B0 RID: 13232
+		// Token: 0x040036BD RID: 14013
 		[Nullable(2)]
 		protected new ICompareActorVar_SetValue PocoInterface;
 
-		// Token: 0x040033B1 RID: 13233
+		// Token: 0x040036BE RID: 14014
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040033B2 RID: 13234
+		// Token: 0x040036BF RID: 14015
 		private bool _PreConditionsInited;
 
-		// Token: 0x040033B3 RID: 13235
+		// Token: 0x040036C0 RID: 14016
 		private List<ICompareActorVarInChildQuest> _ConditionsCache;
 
-		// Token: 0x040033B4 RID: 13236
+		// Token: 0x040036C1 RID: 14017
 		private bool _ConditionsInited;
 	}
 }

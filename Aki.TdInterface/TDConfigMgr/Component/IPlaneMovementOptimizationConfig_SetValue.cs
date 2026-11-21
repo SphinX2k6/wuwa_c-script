@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000603 RID: 1539
+	// Token: 0x020006A0 RID: 1696
 	public class IPlaneMovementOptimizationConfig_SetValue
 	{
-		// Token: 0x04001709 RID: 5897
+		// Token: 0x040018FB RID: 6395
 		public EPerformanceOptimizationType Type;
 	}
 }

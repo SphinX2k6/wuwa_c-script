@@ -6,16 +6,16 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F9E RID: 8094
+// Token: 0x02001460 RID: 5216
 public class InfoDisplayTypeFiveView : UiViewBase
 {
-	// Token: 0x0600FB53 RID: 64339 RVA: 0x003CE632 File Offset: 0x003CC832
+	// Token: 0x0600CF75 RID: 53109 RVA: 0x003DA1F2 File Offset: 0x003D83F2
 	[NullableContext(1)]
 	public InfoDisplayTypeFiveView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FB54 RID: 64340 RVA: 0x003CE63C File Offset: 0x003CC83C
+	// Token: 0x0600CF76 RID: 53110 RVA: 0x003DA1FC File Offset: 0x003D83FC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -38,7 +38,7 @@ public class InfoDisplayTypeFiveView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FB55 RID: 64341 RVA: 0x003CE704 File Offset: 0x003CC904
+	// Token: 0x0600CF77 RID: 53111 RVA: 0x003DA2C4 File Offset: 0x003D84C4
 	protected override void OnStart()
 	{
 		InfoDisplay? config = ConfigInfoDisplayById.GetConfig(InfoDisplayModel.Instance.CurrentInformationId(), true);
@@ -50,22 +50,22 @@ public class InfoDisplayTypeFiveView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), config.Value.Text, Array.Empty<object>());
 	}
 
-	// Token: 0x0600FB56 RID: 64342 RVA: 0x003CE776 File Offset: 0x003CC976
+	// Token: 0x0600CF78 RID: 53112 RVA: 0x003DA336 File Offset: 0x003D8536
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0200858B RID: 34187
+	// Token: 0x02007710 RID: 30480
 	private class EComponentType
 	{
-		// Token: 0x0402B79A RID: 178074
+		// Token: 0x04026ABD RID: 158397
 		public const int TitleText = 0;
 
-		// Token: 0x0402B79B RID: 178075
+		// Token: 0x04026ABE RID: 158398
 		public const int DescText = 1;
 
-		// Token: 0x0402B79C RID: 178076
+		// Token: 0x04026ABF RID: 158399
 		public const int CloseButton = 2;
 	}
 }

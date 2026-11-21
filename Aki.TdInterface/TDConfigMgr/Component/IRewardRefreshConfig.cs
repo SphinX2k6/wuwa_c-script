@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000688 RID: 1672
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000729 RID: 1833
 	public class IRewardRefreshConfig
 	{
-		// Token: 0x060023D2 RID: 9170 RVA: 0x000618C4 File Offset: 0x0005FAC4
+		// Token: 0x060026EE RID: 9966 RVA: 0x0006888C File Offset: 0x00066A8C
 		private IRewardRefreshConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060023D3 RID: 9171 RVA: 0x000618FC File Offset: 0x0005FAFC
+		// Token: 0x060026EF RID: 9967 RVA: 0x000688C4 File Offset: 0x00066AC4
 		public static IRewardRefreshConfig Create([Nullable(2)] IRewardRefreshConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060023D4 RID: 9172 RVA: 0x0006190F File Offset: 0x0005FB0F
+		// Token: 0x060026F0 RID: 9968 RVA: 0x000688D7 File Offset: 0x00066AD7
 		public static IRewardRefreshConfig CreateFromSetValue([Nullable(2)] IRewardRefreshConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060023D5 RID: 9173 RVA: 0x00061922 File Offset: 0x0005FB22
+		// Token: 0x060026F1 RID: 9969 RVA: 0x000688EA File Offset: 0x00066AEA
 		public IRewardRefreshConfig_SetValue ToSetValue()
 		{
 			return new IRewardRefreshConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700097C RID: 2428
-		// (get) Token: 0x060023D6 RID: 9174 RVA: 0x0006194D File Offset: 0x0005FB4D
-		// (set) Token: 0x060023D7 RID: 9175 RVA: 0x00061974 File Offset: 0x0005FB74
+		// Token: 0x17000A38 RID: 2616
+		// (get) Token: 0x060026F2 RID: 9970 RVA: 0x00068915 File Offset: 0x00066B15
+		// (set) Token: 0x060026F3 RID: 9971 RVA: 0x0006893C File Offset: 0x00066B3C
 		[Nullable(2)]
 		public virtual IRefreshConditionBase RefreshCondition
 		{
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700097D RID: 2429
-		// (get) Token: 0x060023D8 RID: 9176 RVA: 0x00061982 File Offset: 0x0005FB82
-		// (set) Token: 0x060023D9 RID: 9177 RVA: 0x000619A9 File Offset: 0x0005FBA9
+		// Token: 0x17000A39 RID: 2617
+		// (get) Token: 0x060026F4 RID: 9972 RVA: 0x0006894A File Offset: 0x00066B4A
+		// (set) Token: 0x060026F5 RID: 9973 RVA: 0x00068971 File Offset: 0x00066B71
 		public virtual IRefreshRule RefreshType
 		{
 			get
@@ -112,9 +110,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700097E RID: 2430
-		// (get) Token: 0x060023DA RID: 9178 RVA: 0x000619B8 File Offset: 0x0005FBB8
-		// (set) Token: 0x060023DB RID: 9179 RVA: 0x000619F2 File Offset: 0x0005FBF2
+		// Token: 0x17000A3A RID: 2618
+		// (get) Token: 0x060026F6 RID: 9974 RVA: 0x00068980 File Offset: 0x00066B80
+		// (set) Token: 0x060026F7 RID: 9975 RVA: 0x000689BA File Offset: 0x00066BBA
 		public virtual int? MaxCount
 		{
 			get
@@ -136,11 +134,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040018B2 RID: 6322
+		// Token: 0x04001AAF RID: 6831
 		[Nullable(2)]
 		protected IRewardRefreshConfig FbInstance;
 
-		// Token: 0x040018B3 RID: 6323
+		// Token: 0x04001AB0 RID: 6832
 		[Nullable(2)]
 		protected IRewardRefreshConfig_SetValue PocoInterface;
 	}

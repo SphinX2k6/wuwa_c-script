@@ -1,52 +1,52 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200295D RID: 10589
+// Token: 0x02001ED8 RID: 7896
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ScoreModel : ModelBase
 {
-	// Token: 0x06015E45 RID: 89669 RVA: 0x005863E5 File Offset: 0x005845E5
+	// Token: 0x06013849 RID: 79945 RVA: 0x005B13E5 File Offset: 0x005AF5E5
 	public int GetCurrentScore()
 	{
 		return this.CurrentScore;
 	}
 
-	// Token: 0x06015E46 RID: 89670 RVA: 0x005863ED File Offset: 0x005845ED
+	// Token: 0x0601384A RID: 79946 RVA: 0x005B13ED File Offset: 0x005AF5ED
 	public int GetTargetScore()
 	{
 		return this.TargetScore;
 	}
 
-	// Token: 0x06015E47 RID: 89671 RVA: 0x005863F5 File Offset: 0x005845F5
+	// Token: 0x0601384B RID: 79947 RVA: 0x005B13F5 File Offset: 0x005AF5F5
 	public void SetCurrentScore(int score)
 	{
 		this.CurrentScore = score;
 	}
 
-	// Token: 0x06015E48 RID: 89672 RVA: 0x005863FE File Offset: 0x005845FE
+	// Token: 0x0601384C RID: 79948 RVA: 0x005B13FE File Offset: 0x005AF5FE
 	public void SetTargetScore(int score)
 	{
 		this.TargetScore = score;
 	}
 
-	// Token: 0x06015E49 RID: 89673 RVA: 0x00586407 File Offset: 0x00584607
+	// Token: 0x0601384D RID: 79949 RVA: 0x005B1407 File Offset: 0x005AF607
 	public void SetScore(int currentScore, int targetScore)
 	{
 		this.CurrentScore = currentScore;
 		this.TargetScore = targetScore;
 	}
 
-	// Token: 0x06015E4A RID: 89674 RVA: 0x00586417 File Offset: 0x00584617
+	// Token: 0x0601384E RID: 79950 RVA: 0x005B1417 File Offset: 0x005AF617
 	public void Reset()
 	{
 		this.CurrentScore = 0;
 		this.TargetScore = 0;
 	}
 
-	// Token: 0x17001D81 RID: 7553
-	// (get) Token: 0x06015E4B RID: 89675 RVA: 0x00586427 File Offset: 0x00584627
+	// Token: 0x17001DDA RID: 7642
+	// (get) Token: 0x0601384F RID: 79951 RVA: 0x005B1427 File Offset: 0x005AF627
 	public static ScoreModel Instance
 	{
 		get
@@ -55,7 +55,7 @@ public class ScoreModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015E4C RID: 89676 RVA: 0x0058642E File Offset: 0x0058462E
+	// Token: 0x06013850 RID: 79952 RVA: 0x005B142E File Offset: 0x005AF62E
 	public static ScoreModel GetOrCreateInstance()
 	{
 		if (ScoreModel._Instance == null)
@@ -65,7 +65,7 @@ public class ScoreModel : ModelBase
 		return ScoreModel._Instance;
 	}
 
-	// Token: 0x06015E4D RID: 89677 RVA: 0x00586442 File Offset: 0x00584642
+	// Token: 0x06013851 RID: 79953 RVA: 0x005B1442 File Offset: 0x005AF642
 	public static bool CreateInstance()
 	{
 		if (ScoreModel._Instance != null)
@@ -76,30 +76,30 @@ public class ScoreModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06015E4E RID: 89678 RVA: 0x00586458 File Offset: 0x00584658
+	// Token: 0x06013852 RID: 79954 RVA: 0x005B1458 File Offset: 0x005AF658
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06015E4F RID: 89679 RVA: 0x0058645A File Offset: 0x0058465A
+	// Token: 0x06013853 RID: 79955 RVA: 0x005B145A File Offset: 0x005AF65A
 	public static void ResetStaticDefaultValue()
 	{
 		ScoreModel._Instance = null;
 	}
 
-	// Token: 0x06015E50 RID: 89680 RVA: 0x00586462 File Offset: 0x00584662
+	// Token: 0x06013854 RID: 79956 RVA: 0x005B1462 File Offset: 0x005AF662
 	static ScoreModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ScoreModel.CreateStaticDefaultValue), new Action(ScoreModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A2F5 RID: 41717
+	// Token: 0x0400A6DF RID: 42719
 	private int CurrentScore;
 
-	// Token: 0x0400A2F6 RID: 41718
+	// Token: 0x0400A6E0 RID: 42720
 	private int TargetScore;
 
-	// Token: 0x0400A2F7 RID: 41719
+	// Token: 0x0400A6E1 RID: 42721
 	[Nullable(2)]
 	private static ScoreModel _Instance;
 }

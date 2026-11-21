@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02003533 RID: 13619
+// Token: 0x02002AA8 RID: 10920
 public class DelayTask : TaskBase
 {
-	// Token: 0x0601DED9 RID: 122585 RVA: 0x00863A73 File Offset: 0x00861C73
+	// Token: 0x0601BC01 RID: 113665 RVA: 0x0088B6AB File Offset: 0x008898AB
 	[NullableContext(2)]
 	public DelayTask([Nullable(1)] string name, Func<bool> runHandle = null, Func<bool> initHandle = null, int delay = 1000, Action<bool> finishedCallback = null) : base(name, initHandle, finishedCallback, null)
 	{
@@ -14,7 +14,7 @@ public class DelayTask : TaskBase
 		this.DelayTime = Math.Max(delay, 20);
 	}
 
-	// Token: 0x0601DEDA RID: 122586 RVA: 0x00863AA4 File Offset: 0x00861CA4
+	// Token: 0x0601BC02 RID: 113666 RVA: 0x0088B6DC File Offset: 0x008898DC
 	protected override UniTask<bool> OnRun()
 	{
 		DelayTask.<OnRun>d__5 <OnRun>d__;
@@ -25,17 +25,17 @@ public class DelayTask : TaskBase
 		return <OnRun>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400EB1A RID: 60186
+	// Token: 0x0400EFD7 RID: 61399
 	private const int DEFAULT_DELAY_TIME = 1000;
 
-	// Token: 0x0400EB1B RID: 60187
+	// Token: 0x0400EFD8 RID: 61400
 	[Nullable(2)]
 	private readonly Func<bool> RunHandle;
 
-	// Token: 0x0400EB1C RID: 60188
+	// Token: 0x0400EFD9 RID: 61401
 	private readonly int DelayTime;
 
-	// Token: 0x0400EB1D RID: 60189
+	// Token: 0x0400EFDA RID: 61402
 	[Nullable(1)]
 	private readonly UniTaskCompletionSource<bool> DelayPromise = new UniTaskCompletionSource<bool>();
 }

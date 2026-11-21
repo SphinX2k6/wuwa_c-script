@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 {
-	// Token: 0x0200631F RID: 25375
+	// Token: 0x0200529D RID: 21149
 	[NullableContext(1)]
 	public interface IPinballPlotOptionItemData
 	{
-		// Token: 0x170092E6 RID: 37606
-		// (get) Token: 0x0603FD5D RID: 261469
-		// (set) Token: 0x0603FD5E RID: 261470
+		// Token: 0x17006648 RID: 26184
+		// (get) Token: 0x06034A1E RID: 215582
+		// (set) Token: 0x06034A1F RID: 215583
 		int OptionIndex { get; set; }
 
-		// Token: 0x170092E7 RID: 37607
-		// (get) Token: 0x0603FD5F RID: 261471
-		// (set) Token: 0x0603FD60 RID: 261472
+		// Token: 0x17006649 RID: 26185
+		// (get) Token: 0x06034A20 RID: 215584
+		// (set) Token: 0x06034A21 RID: 215585
 		TableTextArgNew OptionText { get; set; }
 
-		// Token: 0x170092E8 RID: 37608
-		// (get) Token: 0x0603FD61 RID: 261473
-		// (set) Token: 0x0603FD62 RID: 261474
+		// Token: 0x1700664A RID: 26186
+		// (get) Token: 0x06034A22 RID: 215586
+		// (set) Token: 0x06034A23 RID: 215587
 		Action<int> OptionDelegate { get; set; }
 	}
 }

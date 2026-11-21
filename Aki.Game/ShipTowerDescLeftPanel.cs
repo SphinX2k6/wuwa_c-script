@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029A8 RID: 10664
+// Token: 0x02001F23 RID: 7971
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerDescLeftPanel : UiPanelBase
 {
-	// Token: 0x060161B1 RID: 90545 RVA: 0x00596DC0 File Offset: 0x00594FC0
+	// Token: 0x06013BB7 RID: 80823 RVA: 0x005C1D80 File Offset: 0x005BFF80
 	public UniTask Init(UUIItem item, ShipTowerStageData data)
 	{
 		ShipTowerDescLeftPanel.<Init>d__4 <Init>d__;
@@ -25,7 +25,7 @@ public class ShipTowerDescLeftPanel : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060161B2 RID: 90546 RVA: 0x00596E14 File Offset: 0x00595014
+	// Token: 0x06013BB8 RID: 80824 RVA: 0x005C1DD4 File Offset: 0x005BFFD4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -48,7 +48,7 @@ public class ShipTowerDescLeftPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060161B3 RID: 90547 RVA: 0x00596F44 File Offset: 0x00595144
+	// Token: 0x06013BB9 RID: 80825 RVA: 0x005C1F04 File Offset: 0x005C0104
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerDescLeftPanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ public class ShipTowerDescLeftPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060161B4 RID: 90548 RVA: 0x00596F87 File Offset: 0x00595187
+	// Token: 0x06013BBA RID: 80826 RVA: 0x005C1F47 File Offset: 0x005C0147
 	private CommonItemSmallItemGrid CreateRewardItemGrid()
 	{
 		return new CommonItemSmallItemGrid
@@ -68,13 +68,13 @@ public class ShipTowerDescLeftPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060161B5 RID: 90549 RVA: 0x00596FA0 File Offset: 0x005951A0
+	// Token: 0x06013BBB RID: 80827 RVA: 0x005C1F60 File Offset: 0x005C0160
 	protected override void OnBeforeShow()
 	{
 		this.UpdateData(this.StageData);
 	}
 
-	// Token: 0x060161B6 RID: 90550 RVA: 0x00596FAE File Offset: 0x005951AE
+	// Token: 0x06013BBC RID: 80828 RVA: 0x005C1F6E File Offset: 0x005C016E
 	public void UpdateViewAndShow(ShipTowerStageData data)
 	{
 		this.StageData = data;
@@ -86,7 +86,7 @@ public class ShipTowerDescLeftPanel : UiPanelBase
 		this.SetActive(true);
 	}
 
-	// Token: 0x060161B7 RID: 90551 RVA: 0x00596FD4 File Offset: 0x005951D4
+	// Token: 0x06013BBD RID: 80829 RVA: 0x005C1F94 File Offset: 0x005C0194
 	private void UpdateData(ShipTowerStageData data)
 	{
 		this.StageData = data;
@@ -119,7 +119,7 @@ public class ShipTowerDescLeftPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060161B8 RID: 90552 RVA: 0x005970B4 File Offset: 0x005952B4
+	// Token: 0x06013BBE RID: 80830 RVA: 0x005C2074 File Offset: 0x005C0274
 	private void UpdateIndex()
 	{
 		bool isEndLess = this.StageData.IsEndLess;
@@ -131,12 +131,12 @@ public class ShipTowerDescLeftPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060161B9 RID: 90553 RVA: 0x0059710A File Offset: 0x0059530A
+	// Token: 0x06013BBF RID: 80831 RVA: 0x005C20CA File Offset: 0x005C02CA
 	private void UpdateName()
 	{
 	}
 
-	// Token: 0x060161BA RID: 90554 RVA: 0x0059710C File Offset: 0x0059530C
+	// Token: 0x06013BC0 RID: 80832 RVA: 0x005C20CC File Offset: 0x005C02CC
 	private void OnBtnRewardDetailClick()
 	{
 		ShipTowerStageData stageData = this.StageData;
@@ -147,11 +147,11 @@ public class ShipTowerDescLeftPanel : UiPanelBase
 		stageData.OpenViewPassBuffShow();
 	}
 
-	// Token: 0x0400A4C4 RID: 42180
+	// Token: 0x0400A8AE RID: 43182
 	[Nullable(2)]
 	private ShipTowerStageData StageData;
 
-	// Token: 0x0400A4C5 RID: 42181
+	// Token: 0x0400A8AF RID: 43183
 	[Nullable(new byte[]
 	{
 		2,
@@ -160,7 +160,7 @@ public class ShipTowerDescLeftPanel : UiPanelBase
 	})]
 	private GenericLayout<ShipTowerScoreInfoItem, ShipTowerScoreInfoData> ScoreInfoLayout;
 
-	// Token: 0x0400A4C6 RID: 42182
+	// Token: 0x0400A8B0 RID: 43184
 	[Nullable(new byte[]
 	{
 		2,
@@ -168,41 +168,41 @@ public class ShipTowerDescLeftPanel : UiPanelBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x02008FB6 RID: 36790
+	// Token: 0x020081FF RID: 33279
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E8AE RID: 190638
+		// Token: 0x04029FAD RID: 171949
 		public const int TextureIndexBg = 0;
 
-		// Token: 0x0402E8AF RID: 190639
+		// Token: 0x04029FAE RID: 171950
 		public const int TxtIndex = 1;
 
-		// Token: 0x0402E8B0 RID: 190640
+		// Token: 0x04029FAF RID: 171951
 		public const int TextureEndlessNode = 2;
 
-		// Token: 0x0402E8B1 RID: 190641
+		// Token: 0x04029FB0 RID: 171952
 		public const int TxtStageName = 3;
 
-		// Token: 0x0402E8B2 RID: 190642
+		// Token: 0x04029FB1 RID: 171953
 		public const int TxtScore = 4;
 
-		// Token: 0x0402E8B3 RID: 190643
+		// Token: 0x04029FB2 RID: 171954
 		public const int TxtDesc = 5;
 
-		// Token: 0x0402E8B4 RID: 190644
+		// Token: 0x04029FB3 RID: 171955
 		public const int VLayoutScoreTarget = 6;
 
-		// Token: 0x0402E8B5 RID: 190645
+		// Token: 0x04029FB4 RID: 171956
 		public const int MLayoutReward = 7;
 
-		// Token: 0x0402E8B6 RID: 190646
+		// Token: 0x04029FB5 RID: 171957
 		public const int ItemReward = 8;
 
-		// Token: 0x0402E8B7 RID: 190647
+		// Token: 0x04029FB6 RID: 171958
 		public const int BtnRewardDetail = 9;
 
-		// Token: 0x0402E8B8 RID: 190648
+		// Token: 0x04029FB7 RID: 171959
 		public const int RewardTipRoot = 10;
 	}
 }

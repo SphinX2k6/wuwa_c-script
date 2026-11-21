@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006864 RID: 26724
+	// Token: 0x02006EF9 RID: 28409
 	public struct IFoxReversePush : IFlatbufferObject
 	{
-		// Token: 0x1700C680 RID: 50816
-		// (get) Token: 0x0602E999 RID: 190873 RVA: 0x0065B2B1 File Offset: 0x006594B1
+		// Token: 0x1700D054 RID: 53332
+		// (get) Token: 0x0603127F RID: 201343 RVA: 0x006A9B1D File Offset: 0x006A7D1D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E99A RID: 190874 RVA: 0x0065B2BE File Offset: 0x006594BE
+		// Token: 0x06031280 RID: 201344 RVA: 0x006A9B2A File Offset: 0x006A7D2A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E99B RID: 190875 RVA: 0x0065B2C8 File Offset: 0x006594C8
+		// Token: 0x06031281 RID: 201345 RVA: 0x006A9B34 File Offset: 0x006A7D34
 		public static IFoxReversePush GetRootAsIFoxReversePush(ByteBuffer _bb)
 		{
 			return IFoxReversePush.GetRootAsIFoxReversePush(_bb, default(IFoxReversePush));
 		}
 
-		// Token: 0x0602E99C RID: 190876 RVA: 0x0065B2E4 File Offset: 0x006594E4
+		// Token: 0x06031282 RID: 201346 RVA: 0x006A9B50 File Offset: 0x006A7D50
 		public static IFoxReversePush GetRootAsIFoxReversePush(ByteBuffer _bb, IFoxReversePush obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E99D RID: 190877 RVA: 0x0065B301 File Offset: 0x00659501
+		// Token: 0x06031283 RID: 201347 RVA: 0x006A9B6D File Offset: 0x006A7D6D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E99E RID: 190878 RVA: 0x0065B310 File Offset: 0x00659510
+		// Token: 0x06031284 RID: 201348 RVA: 0x006A9B7C File Offset: 0x006A7D7C
 		public IFoxReversePush __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C681 RID: 50817
-		// (get) Token: 0x0602E99F RID: 190879 RVA: 0x0065B320 File Offset: 0x00659520
+		// Token: 0x1700D055 RID: 53333
+		// (get) Token: 0x06031285 RID: 201349 RVA: 0x006A9B8C File Offset: 0x006A7D8C
 		public ELeisureInteract Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C682 RID: 50818
-		// (get) Token: 0x0602E9A0 RID: 190880 RVA: 0x0065B35C File Offset: 0x0065955C
+		// Token: 0x1700D056 RID: 53334
+		// (get) Token: 0x06031286 RID: 201350 RVA: 0x006A9BC8 File Offset: 0x006A7DC8
 		public int SplineEntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C683 RID: 50819
-		// (get) Token: 0x0602E9A1 RID: 190881 RVA: 0x0065B398 File Offset: 0x00659598
+		// Token: 0x1700D057 RID: 53335
+		// (get) Token: 0x06031287 RID: 201351 RVA: 0x006A9C04 File Offset: 0x006A7E04
 		public int SeqEntityId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C684 RID: 50820
-		// (get) Token: 0x0602E9A2 RID: 190882 RVA: 0x0065B3D4 File Offset: 0x006595D4
+		// Token: 0x1700D058 RID: 53336
+		// (get) Token: 0x06031288 RID: 201352 RVA: 0x006A9C40 File Offset: 0x006A7E40
 		public string SliderTag
 		{
 			get
@@ -107,20 +107,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E9A3 RID: 190883 RVA: 0x0065B40C File Offset: 0x0065960C
+		// Token: 0x06031289 RID: 201353 RVA: 0x006A9C78 File Offset: 0x006A7E78
 		public Span<byte> GetSliderTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0602E9A4 RID: 190884 RVA: 0x0065B41C File Offset: 0x0065961C
+		// Token: 0x0603128A RID: 201354 RVA: 0x006A9C88 File Offset: 0x006A7E88
 		public byte[] GetSliderTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700C685 RID: 50821
-		// (get) Token: 0x0602E9A5 RID: 190885 RVA: 0x0065B42C File Offset: 0x0065962C
+		// Token: 0x1700D059 RID: 53337
+		// (get) Token: 0x0603128B RID: 201355 RVA: 0x006A9C98 File Offset: 0x006A7E98
 		public float Radius
 		{
 			get
@@ -134,7 +134,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E9A6 RID: 190886 RVA: 0x0065B46D File Offset: 0x0065966D
+		// Token: 0x0603128C RID: 201356 RVA: 0x006A9CD9 File Offset: 0x006A7ED9
 		public static Offset<IFoxReversePush> CreateIFoxReversePush(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill, int SplineEntityId = 0, int SeqEntityId = 0, StringOffset SliderTagOffset = default(StringOffset), float Radius = 0f)
 		{
 			builder.StartTable(5);
@@ -146,49 +146,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFoxReversePush.EndIFoxReversePush(builder);
 		}
 
-		// Token: 0x0602E9A7 RID: 190887 RVA: 0x0065B4A1 File Offset: 0x006596A1
+		// Token: 0x0603128D RID: 201357 RVA: 0x006A9D0D File Offset: 0x006A7F0D
 		public static void StartIFoxReversePush(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602E9A8 RID: 190888 RVA: 0x0065B4AA File Offset: 0x006596AA
+		// Token: 0x0603128E RID: 201358 RVA: 0x006A9D16 File Offset: 0x006A7F16
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E9A9 RID: 190889 RVA: 0x0065B4B5 File Offset: 0x006596B5
+		// Token: 0x0603128F RID: 201359 RVA: 0x006A9D21 File Offset: 0x006A7F21
 		public static void AddSplineEntityId(FlatBufferBuilder builder, int splineEntityId)
 		{
 			builder.AddInt(1, splineEntityId, 0);
 		}
 
-		// Token: 0x0602E9AA RID: 190890 RVA: 0x0065B4C0 File Offset: 0x006596C0
+		// Token: 0x06031290 RID: 201360 RVA: 0x006A9D2C File Offset: 0x006A7F2C
 		public static void AddSeqEntityId(FlatBufferBuilder builder, int seqEntityId)
 		{
 			builder.AddInt(2, seqEntityId, 0);
 		}
 
-		// Token: 0x0602E9AB RID: 190891 RVA: 0x0065B4CB File Offset: 0x006596CB
+		// Token: 0x06031291 RID: 201361 RVA: 0x006A9D37 File Offset: 0x006A7F37
 		public static void AddSliderTag(FlatBufferBuilder builder, StringOffset sliderTagOffset)
 		{
 			builder.AddOffset(3, sliderTagOffset.Value, 0);
 		}
 
-		// Token: 0x0602E9AC RID: 190892 RVA: 0x0065B4DB File Offset: 0x006596DB
+		// Token: 0x06031292 RID: 201362 RVA: 0x006A9D47 File Offset: 0x006A7F47
 		public static void AddRadius(FlatBufferBuilder builder, float radius)
 		{
 			builder.AddFloat(4, radius, 0.0);
 		}
 
-		// Token: 0x0602E9AD RID: 190893 RVA: 0x0065B4EE File Offset: 0x006596EE
+		// Token: 0x06031293 RID: 201363 RVA: 0x006A9D5A File Offset: 0x006A7F5A
 		public static Offset<IFoxReversePush> EndIFoxReversePush(FlatBufferBuilder builder)
 		{
 			return new Offset<IFoxReversePush>(builder.EndTable());
 		}
 
-		// Token: 0x0602E9AE RID: 190894 RVA: 0x0065B4FC File Offset: 0x006596FC
+		// Token: 0x06031294 RID: 201364 RVA: 0x006A9D68 File Offset: 0x006A7F68
 		public IFoxReversePushT UnPack()
 		{
 			IFoxReversePushT foxReversePushT = new IFoxReversePushT();
@@ -196,7 +196,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return foxReversePushT;
 		}
 
-		// Token: 0x0602E9AF RID: 190895 RVA: 0x0065B517 File Offset: 0x00659717
+		// Token: 0x06031295 RID: 201365 RVA: 0x006A9D83 File Offset: 0x006A7F83
 		public void UnPackTo(IFoxReversePushT _o)
 		{
 			_o.Type = this.Type;
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.Radius = this.Radius;
 		}
 
-		// Token: 0x0602E9B0 RID: 190896 RVA: 0x0065B558 File Offset: 0x00659758
+		// Token: 0x06031296 RID: 201366 RVA: 0x006A9DC4 File Offset: 0x006A7FC4
 		public static Offset<IFoxReversePush> Pack(FlatBufferBuilder builder, IFoxReversePushT _o)
 		{
 			if (_o == null)
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFoxReversePush.CreateIFoxReversePush(builder, _o.Type, _o.SplineEntityId, _o.SeqEntityId, sliderTagOffset, _o.Radius);
 		}
 
-		// Token: 0x04010FB3 RID: 69555
+		// Token: 0x04011DFD RID: 73213
 		private Table __p;
 	}
 }

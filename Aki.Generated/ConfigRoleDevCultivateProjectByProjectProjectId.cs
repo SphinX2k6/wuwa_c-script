@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000893 RID: 2195
+	// Token: 0x020008AF RID: 2223
 	public class ConfigRoleDevCultivateProjectByProjectProjectId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003384 RID: 13188 RVA: 0x0017C93B File Offset: 0x0017AB3B
+		// Token: 0x0600342C RID: 13356 RVA: 0x00183C23 File Offset: 0x00181E23
 		static ConfigRoleDevCultivateProjectByProjectProjectId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleDevCultivateProjectByProjectProjectId.CreateStaticDefaultValue), new Action(ConfigRoleDevCultivateProjectByProjectProjectId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003385 RID: 13189 RVA: 0x0017C95C File Offset: 0x0017AB5C
+		// Token: 0x0600342D RID: 13357 RVA: 0x00183C44 File Offset: 0x00181E44
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleDevCultivateProjectByProjectProjectId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003386 RID: 13190 RVA: 0x0017C9DB File Offset: 0x0017ABDB
+		// Token: 0x0600342E RID: 13358 RVA: 0x00183CC3 File Offset: 0x00181EC3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleDevCultivateProjectByProjectProjectId.LogPair = null;
 			ConfigRoleDevCultivateProjectByProjectProjectId.HandleId = 0;
 		}
 
-		// Token: 0x06003387 RID: 13191 RVA: 0x0017C9E9 File Offset: 0x0017ABE9
+		// Token: 0x0600342F RID: 13359 RVA: 0x00183CD1 File Offset: 0x00181ED1
 		public static void Init()
 		{
 			ConfigRoleDevCultivateProjectByProjectProjectId.HandleId = ConfigCommon.InitDataStatement(ConfigRoleDevCultivateProjectByProjectProjectId.HandleId, "db_roledev.db", "select BinData from `RoleDevCultivateProject` where ProjectProjectId=?");
 		}
 
-		// Token: 0x06003388 RID: 13192 RVA: 0x0017CA04 File Offset: 0x0017AC04
+		// Token: 0x06003430 RID: 13360 RVA: 0x00183CEC File Offset: 0x00181EEC
 		public static RoleDevCultivateProject? GetConfig(int p0ProjectProjectId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleDevCultivateProjectByProjectProjectId.HandleId, ConfigRoleDevCultivateProjectByProjectProjectId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleDevCultivateProject?(rootAsRoleDevCultivateProject);
 		}
 
-		// Token: 0x04003BEB RID: 15339
+		// Token: 0x04003CAF RID: 15535
 		private const string DB = "db_roledev.db";
 
-		// Token: 0x04003BEC RID: 15340
+		// Token: 0x04003CB0 RID: 15536
 		private const string FILE = "g.共鸣者培养计划.xlsx";
 
-		// Token: 0x04003BED RID: 15341
+		// Token: 0x04003CB1 RID: 15537
 		private const string TABLE = "RoleDevCultivateProject";
 
-		// Token: 0x04003BEE RID: 15342
+		// Token: 0x04003CB2 RID: 15538
 		private const string COMMAND = "select BinData from `RoleDevCultivateProject` where ProjectProjectId=?";
 
-		// Token: 0x04003BEF RID: 15343
+		// Token: 0x04003CB3 RID: 15539
 		private const string KEY_PREFIX = "RoleDevCultivateProjectByProjectProjectId";
 
-		// Token: 0x04003BF0 RID: 15344
+		// Token: 0x04003CB4 RID: 15540
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003BF1 RID: 15345
+		// Token: 0x04003CB5 RID: 15541
 		private static int HandleId;
 	}
 }

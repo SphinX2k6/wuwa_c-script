@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004AE RID: 1198
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000507 RID: 1287
 	public class ILetGoDestroyCondition : ITeleControlDestroyCondition
 	{
-		// Token: 0x06001834 RID: 6196 RVA: 0x00048A6C File Offset: 0x00046C6C
+		// Token: 0x060019CE RID: 6606 RVA: 0x0004C7B4 File Offset: 0x0004A9B4
 		private ILetGoDestroyCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001835 RID: 6197 RVA: 0x00048AA4 File Offset: 0x00046CA4
+		// Token: 0x060019CF RID: 6607 RVA: 0x0004C7EC File Offset: 0x0004A9EC
 		public static ILetGoDestroyCondition Create([Nullable(2)] ILetGoDestroyCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001836 RID: 6198 RVA: 0x00048AB7 File Offset: 0x00046CB7
+		// Token: 0x060019D0 RID: 6608 RVA: 0x0004C7FF File Offset: 0x0004A9FF
 		public static ILetGoDestroyCondition CreateFromSetValue([Nullable(2)] ILetGoDestroyCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001837 RID: 6199 RVA: 0x00048ACA File Offset: 0x00046CCA
+		// Token: 0x060019D1 RID: 6609 RVA: 0x0004C812 File Offset: 0x0004AA12
 		public new ILetGoDestroyCondition_SetValue ToSetValue()
 		{
 			return new ILetGoDestroyCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000674 RID: 1652
-		// (get) Token: 0x06001838 RID: 6200 RVA: 0x00048ADD File Offset: 0x00046CDD
-		// (set) Token: 0x06001839 RID: 6201 RVA: 0x00048B08 File Offset: 0x00046D08
+		// Token: 0x170006DB RID: 1755
+		// (get) Token: 0x060019D2 RID: 6610 RVA: 0x0004C825 File Offset: 0x0004AA25
+		// (set) Token: 0x060019D3 RID: 6611 RVA: 0x0004C850 File Offset: 0x0004AA50
 		public override ETeleControlDestroyCondition Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001200 RID: 4608
+		// Token: 0x04001322 RID: 4898
 		[Nullable(2)]
 		protected new ILetGoDestroyCondition FbInstance;
 
-		// Token: 0x04001201 RID: 4609
+		// Token: 0x04001323 RID: 4899
 		[Nullable(2)]
 		protected new ILetGoDestroyCondition_SetValue PocoInterface;
 	}

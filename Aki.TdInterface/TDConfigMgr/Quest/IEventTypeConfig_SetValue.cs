@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F64 RID: 3940
+	// Token: 0x0200108E RID: 4238
 	public class IEventTypeConfig_SetValue
 	{
-		// Token: 0x040034EF RID: 13551
+		// Token: 0x04003820 RID: 14368
 		public ECommonEventType Type;
 	}
 }

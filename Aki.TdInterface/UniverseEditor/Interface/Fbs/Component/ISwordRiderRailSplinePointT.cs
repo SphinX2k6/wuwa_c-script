@@ -3,50 +3,50 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A17 RID: 23063
+	// Token: 0x02006024 RID: 24612
 	public class ISwordRiderRailSplinePointT
 	{
-		// Token: 0x1700AD5C RID: 44380
-		// (get) Token: 0x060272AF RID: 160431 RVA: 0x00563699 File Offset: 0x00561899
-		// (set) Token: 0x060272B0 RID: 160432 RVA: 0x005636A1 File Offset: 0x005618A1
+		// Token: 0x1700B694 RID: 46740
+		// (get) Token: 0x06029827 RID: 170023 RVA: 0x005AA65D File Offset: 0x005A885D
+		// (set) Token: 0x06029828 RID: 170024 RVA: 0x005AA665 File Offset: 0x005A8865
 		public IVectorInfoT Position { get; set; }
 
-		// Token: 0x1700AD5D RID: 44381
-		// (get) Token: 0x060272B1 RID: 160433 RVA: 0x005636AA File Offset: 0x005618AA
-		// (set) Token: 0x060272B2 RID: 160434 RVA: 0x005636B2 File Offset: 0x005618B2
+		// Token: 0x1700B695 RID: 46741
+		// (get) Token: 0x06029829 RID: 170025 RVA: 0x005AA66E File Offset: 0x005A886E
+		// (set) Token: 0x0602982A RID: 170026 RVA: 0x005AA676 File Offset: 0x005A8876
 		public IVectorInfoT ArriveTangent { get; set; }
 
-		// Token: 0x1700AD5E RID: 44382
-		// (get) Token: 0x060272B3 RID: 160435 RVA: 0x005636BB File Offset: 0x005618BB
-		// (set) Token: 0x060272B4 RID: 160436 RVA: 0x005636C3 File Offset: 0x005618C3
+		// Token: 0x1700B696 RID: 46742
+		// (get) Token: 0x0602982B RID: 170027 RVA: 0x005AA67F File Offset: 0x005A887F
+		// (set) Token: 0x0602982C RID: 170028 RVA: 0x005AA687 File Offset: 0x005A8887
 		public IVectorInfoT LeaveTangent { get; set; }
 
-		// Token: 0x1700AD5F RID: 44383
-		// (get) Token: 0x060272B5 RID: 160437 RVA: 0x005636CC File Offset: 0x005618CC
-		// (set) Token: 0x060272B6 RID: 160438 RVA: 0x005636D4 File Offset: 0x005618D4
+		// Token: 0x1700B697 RID: 46743
+		// (get) Token: 0x0602982D RID: 170029 RVA: 0x005AA690 File Offset: 0x005A8890
+		// (set) Token: 0x0602982E RID: 170030 RVA: 0x005AA698 File Offset: 0x005A8898
 		public ESplineLine LineType { get; set; }
 
-		// Token: 0x1700AD60 RID: 44384
-		// (get) Token: 0x060272B7 RID: 160439 RVA: 0x005636DD File Offset: 0x005618DD
-		// (set) Token: 0x060272B8 RID: 160440 RVA: 0x005636E5 File Offset: 0x005618E5
+		// Token: 0x1700B698 RID: 46744
+		// (get) Token: 0x0602982F RID: 170031 RVA: 0x005AA6A1 File Offset: 0x005A88A1
+		// (set) Token: 0x06029830 RID: 170032 RVA: 0x005AA6A9 File Offset: 0x005A88A9
 		public IVectorInfoT Rotation { get; set; }
 
-		// Token: 0x1700AD61 RID: 44385
-		// (get) Token: 0x060272B9 RID: 160441 RVA: 0x005636EE File Offset: 0x005618EE
-		// (set) Token: 0x060272BA RID: 160442 RVA: 0x005636F6 File Offset: 0x005618F6
+		// Token: 0x1700B699 RID: 46745
+		// (get) Token: 0x06029831 RID: 170033 RVA: 0x005AA6B2 File Offset: 0x005A88B2
+		// (set) Token: 0x06029832 RID: 170034 RVA: 0x005AA6BA File Offset: 0x005A88BA
 		public float Radius { get; set; }
 
-		// Token: 0x1700AD62 RID: 44386
-		// (get) Token: 0x060272BB RID: 160443 RVA: 0x005636FF File Offset: 0x005618FF
-		// (set) Token: 0x060272BC RID: 160444 RVA: 0x00563707 File Offset: 0x00561907
+		// Token: 0x1700B69A RID: 46746
+		// (get) Token: 0x06029833 RID: 170035 RVA: 0x005AA6C3 File Offset: 0x005A88C3
+		// (set) Token: 0x06029834 RID: 170036 RVA: 0x005AA6CB File Offset: 0x005A88CB
 		public int HalfAvailableAngle { get; set; }
 
-		// Token: 0x1700AD63 RID: 44387
-		// (get) Token: 0x060272BD RID: 160445 RVA: 0x00563710 File Offset: 0x00561910
-		// (set) Token: 0x060272BE RID: 160446 RVA: 0x00563718 File Offset: 0x00561918
+		// Token: 0x1700B69B RID: 46747
+		// (get) Token: 0x06029835 RID: 170037 RVA: 0x005AA6D4 File Offset: 0x005A88D4
+		// (set) Token: 0x06029836 RID: 170038 RVA: 0x005AA6DC File Offset: 0x005A88DC
 		public byte NullMask { get; set; }
 
-		// Token: 0x060272BF RID: 160447 RVA: 0x00563724 File Offset: 0x00561924
+		// Token: 0x06029837 RID: 170039 RVA: 0x005AA6E8 File Offset: 0x005A88E8
 		public ISwordRiderRailSplinePointT()
 		{
 			this.Position = null;

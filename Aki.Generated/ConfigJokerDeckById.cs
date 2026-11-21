@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000465 RID: 1125
+	// Token: 0x0200047B RID: 1147
 	public class ConfigJokerDeckById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001A68 RID: 6760 RVA: 0x000EEA7B File Offset: 0x000ECC7B
+		// Token: 0x06001AEC RID: 6892 RVA: 0x000F51CF File Offset: 0x000F33CF
 		static ConfigJokerDeckById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigJokerDeckById.CreateStaticDefaultValue), new Action(ConfigJokerDeckById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001A69 RID: 6761 RVA: 0x000EEA9C File Offset: 0x000ECC9C
+		// Token: 0x06001AED RID: 6893 RVA: 0x000F51F0 File Offset: 0x000F33F0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigJokerDeckById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001A6A RID: 6762 RVA: 0x000EEB1B File Offset: 0x000ECD1B
+		// Token: 0x06001AEE RID: 6894 RVA: 0x000F526F File Offset: 0x000F346F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigJokerDeckById.LogPair = null;
 			ConfigJokerDeckById.HandleId = 0;
 		}
 
-		// Token: 0x06001A6B RID: 6763 RVA: 0x000EEB29 File Offset: 0x000ECD29
+		// Token: 0x06001AEF RID: 6895 RVA: 0x000F527D File Offset: 0x000F347D
 		public static void Init()
 		{
 			ConfigJokerDeckById.HandleId = ConfigCommon.InitDataStatement(ConfigJokerDeckById.HandleId, "db_guessjokercard.db", "select BinData from `JokerDeck` where Id=?");
 		}
 
-		// Token: 0x06001A6C RID: 6764 RVA: 0x000EEB44 File Offset: 0x000ECD44
+		// Token: 0x06001AF0 RID: 6896 RVA: 0x000F5298 File Offset: 0x000F3498
 		public static JokerDeck? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigJokerDeckById.HandleId, ConfigJokerDeckById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new JokerDeck?(rootAsJokerDeck);
 		}
 
-		// Token: 0x04001EA7 RID: 7847
+		// Token: 0x04001F41 RID: 8001
 		private const string DB = "db_guessjokercard.db";
 
-		// Token: 0x04001EA8 RID: 7848
+		// Token: 0x04001F42 RID: 8002
 		private const string FILE = "c.猜鬼牌玩法.xlsx";
 
-		// Token: 0x04001EA9 RID: 7849
+		// Token: 0x04001F43 RID: 8003
 		private const string TABLE = "JokerDeck";
 
-		// Token: 0x04001EAA RID: 7850
+		// Token: 0x04001F44 RID: 8004
 		private const string COMMAND = "select BinData from `JokerDeck` where Id=?";
 
-		// Token: 0x04001EAB RID: 7851
+		// Token: 0x04001F45 RID: 8005
 		private const string KEY_PREFIX = "JokerDeckById";
 
-		// Token: 0x04001EAC RID: 7852
+		// Token: 0x04001F46 RID: 8006
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001EAD RID: 7853
+		// Token: 0x04001F47 RID: 8007
 		private static int HandleId;
 	}
 }

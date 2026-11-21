@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C9C RID: 3228
+	// Token: 0x02000D7E RID: 3454
 	public class LevitateMagnetComponent : IComponentBase
 	{
-		// Token: 0x060049CF RID: 18895 RVA: 0x000B8FE2 File Offset: 0x000B71E2
-		[NullableContext(1)]
+		// Token: 0x06004E7D RID: 20093 RVA: 0x000C39F2 File Offset: 0x000C1BF2
 		public static LevitateMagnetComponent Create(ILevitateMagnetComponent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001654 RID: 5716
-		// (get) Token: 0x060049D0 RID: 18896 RVA: 0x000B9004 File Offset: 0x000B7204
+		// Token: 0x1700177C RID: 6012
+		// (get) Token: 0x06004E7E RID: 20094 RVA: 0x000C3A14 File Offset: 0x000C1C14
 		public override bool? Disabled
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001655 RID: 5717
-		// (get) Token: 0x060049D1 RID: 18897 RVA: 0x000B903C File Offset: 0x000B723C
+		// Token: 0x1700177D RID: 6013
+		// (get) Token: 0x06004E7F RID: 20095 RVA: 0x000C3A4C File Offset: 0x000C1C4C
 		public override bool? EdIsLocked
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001656 RID: 5718
-		// (get) Token: 0x060049D2 RID: 18898 RVA: 0x000B9052 File Offset: 0x000B7252
+		// Token: 0x1700177E RID: 6014
+		// (get) Token: 0x06004E80 RID: 20096 RVA: 0x000C3A62 File Offset: 0x000C1C62
 		public virtual int MoveSpeed
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001657 RID: 5719
-		// (get) Token: 0x060049D3 RID: 18899 RVA: 0x000B9060 File Offset: 0x000B7260
+		// Token: 0x1700177F RID: 6015
+		// (get) Token: 0x06004E81 RID: 20097 RVA: 0x000C3A70 File Offset: 0x000C1C70
 		public virtual int? Test
 		{
 			get
@@ -69,7 +67,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A29 RID: 10793
+		// Token: 0x04002CA3 RID: 11427
 		private ILevitateMagnetComponent Instance;
 	}
 }

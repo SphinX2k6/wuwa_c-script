@@ -5,12 +5,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x0200451A RID: 17690
+	// Token: 0x0200343C RID: 13372
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ExpressionTreeModel : ModelBase
 	{
-		// Token: 0x0602D841 RID: 186433 RVA: 0x00A45D6C File Offset: 0x00A43F6C
+		// Token: 0x06021F11 RID: 139025 RVA: 0x00971B7C File Offset: 0x0096FD7C
 		protected override bool OnInit()
 		{
 			this._builtinFunc["EntityTagContainer"] = delegate(IExpressionContext context, TFormulaValue[] args)
@@ -157,14 +157,14 @@ namespace CSharpScript.Utils
 			return base.OnInit();
 		}
 
-		// Token: 0x0602D842 RID: 186434 RVA: 0x00A45EC8 File Offset: 0x00A440C8
+		// Token: 0x06021F12 RID: 139026 RVA: 0x00971CD8 File Offset: 0x0096FED8
 		protected override bool OnClear()
 		{
 			this._expressionCache.Clear();
 			return base.OnClear();
 		}
 
-		// Token: 0x0602D843 RID: 186435 RVA: 0x00A45EDC File Offset: 0x00A440DC
+		// Token: 0x06021F13 RID: 139027 RVA: 0x00971CEC File Offset: 0x0096FEEC
 		[NullableContext(2)]
 		public ExpressionTree Get(long damageId)
 		{
@@ -173,7 +173,7 @@ namespace CSharpScript.Utils
 			return result;
 		}
 
-		// Token: 0x0602D844 RID: 186436 RVA: 0x00A45EFC File Offset: 0x00A440FC
+		// Token: 0x06021F14 RID: 139028 RVA: 0x00971D0C File Offset: 0x0096FF0C
 		public void Add(long damageId, ExpressionTree expression)
 		{
 			this._expressionCache[damageId] = expression;
@@ -189,13 +189,13 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D845 RID: 186437 RVA: 0x00A45F74 File Offset: 0x00A44174
+		// Token: 0x06021F15 RID: 139029 RVA: 0x00971D84 File Offset: 0x0096FF84
 		public void Remove(long damageId)
 		{
 			this._expressionCache.Remove(damageId);
 		}
 
-		// Token: 0x0602D846 RID: 186438 RVA: 0x00A45F84 File Offset: 0x00A44184
+		// Token: 0x06021F16 RID: 139030 RVA: 0x00971D94 File Offset: 0x0096FF94
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -212,7 +212,7 @@ namespace CSharpScript.Utils
 			return null;
 		}
 
-		// Token: 0x0602D847 RID: 186439 RVA: 0x00A45FA4 File Offset: 0x00A441A4
+		// Token: 0x06021F17 RID: 139031 RVA: 0x00971DB4 File Offset: 0x0096FFB4
 		private static void AddContextError([Nullable(2)] IExpressionContext context, string error)
 		{
 			BaseContext baseContext = context as BaseContext;
@@ -228,8 +228,8 @@ namespace CSharpScript.Utils
 			baseContext.ErrorMsg.Add(error);
 		}
 
-		// Token: 0x170073F5 RID: 29685
-		// (get) Token: 0x0602D848 RID: 186440 RVA: 0x00A45FDD File Offset: 0x00A441DD
+		// Token: 0x170046AD RID: 18093
+		// (get) Token: 0x06021F18 RID: 139032 RVA: 0x00971DED File Offset: 0x0096FFED
 		public static ExpressionTreeModel Instance
 		{
 			get
@@ -238,7 +238,7 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D849 RID: 186441 RVA: 0x00A45FE4 File Offset: 0x00A441E4
+		// Token: 0x06021F19 RID: 139033 RVA: 0x00971DF4 File Offset: 0x0096FFF4
 		public static ExpressionTreeModel GetOrCreateInstance()
 		{
 			if (ExpressionTreeModel._Instance == null)
@@ -248,7 +248,7 @@ namespace CSharpScript.Utils
 			return ExpressionTreeModel._Instance;
 		}
 
-		// Token: 0x0602D84A RID: 186442 RVA: 0x00A45FF8 File Offset: 0x00A441F8
+		// Token: 0x06021F1A RID: 139034 RVA: 0x00971E08 File Offset: 0x00970008
 		public static bool CreateInstance()
 		{
 			if (ExpressionTreeModel._Instance != null)
@@ -259,33 +259,33 @@ namespace CSharpScript.Utils
 			return true;
 		}
 
-		// Token: 0x0602D84B RID: 186443 RVA: 0x00A4600E File Offset: 0x00A4420E
+		// Token: 0x06021F1B RID: 139035 RVA: 0x00971E1E File Offset: 0x0097001E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602D84C RID: 186444 RVA: 0x00A46010 File Offset: 0x00A44210
+		// Token: 0x06021F1C RID: 139036 RVA: 0x00971E20 File Offset: 0x00970020
 		public static void ResetStaticDefaultValue()
 		{
 			ExpressionTreeModel._Instance = null;
 		}
 
-		// Token: 0x0602D84D RID: 186445 RVA: 0x00A46018 File Offset: 0x00A44218
+		// Token: 0x06021F1D RID: 139037 RVA: 0x00971E28 File Offset: 0x00970028
 		static ExpressionTreeModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ExpressionTreeModel.CreateStaticDefaultValue), new Action(ExpressionTreeModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401855F RID: 99679
+		// Token: 0x04012B87 RID: 76679
 		private const int DAMAGE_EXPRESSION_CACHE = 100;
 
-		// Token: 0x04018560 RID: 99680
+		// Token: 0x04012B88 RID: 76680
 		private readonly Dictionary<long, ExpressionTree> _expressionCache = new Dictionary<long, ExpressionTree>();
 
-		// Token: 0x04018561 RID: 99681
+		// Token: 0x04012B89 RID: 76681
 		private readonly Dictionary<string, Func<IExpressionContext, TFormulaValue[], TFormulaValue>> _builtinFunc = new Dictionary<string, Func<IExpressionContext, TFormulaValue[], TFormulaValue>>();
 
-		// Token: 0x04018562 RID: 99682
+		// Token: 0x04012B8A RID: 76682
 		[Nullable(2)]
 		private static ExpressionTreeModel _Instance;
 	}

@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005619 RID: 22041
+	// Token: 0x020045EF RID: 17903
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueGridPath : UiPanelBase
 	{
-		// Token: 0x06038133 RID: 229683 RVA: 0x00D48332 File Offset: 0x00D46532
+		// Token: 0x0602D031 RID: 184369 RVA: 0x00C9607A File Offset: 0x00C9427A
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,12 +20,12 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x06038134 RID: 229684 RVA: 0x00D48355 File Offset: 0x00D46555
+		// Token: 0x0602D032 RID: 184370 RVA: 0x00C9609D File Offset: 0x00C9429D
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06038135 RID: 229685 RVA: 0x00D48357 File Offset: 0x00D46557
+		// Token: 0x0602D033 RID: 184371 RVA: 0x00C9609F File Offset: 0x00C9429F
 		public void SetShape(EShapeType shape, bool useArrow)
 		{
 			if (useArrow)
@@ -36,14 +36,14 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.SetBgSprite(this.shapeTypeMap[shape]);
 		}
 
-		// Token: 0x06038136 RID: 229686 RVA: 0x00D48384 File Offset: 0x00D46584
+		// Token: 0x0602D034 RID: 184372 RVA: 0x00C960CC File Offset: 0x00C942CC
 		protected void SetBgSprite(string path)
 		{
 			UUISprite sprite = base.GetSprite(0);
 			this.SetSpriteByPath(path, sprite, false, null, null);
 		}
 
-		// Token: 0x0401D7CA RID: 120778
+		// Token: 0x04018255 RID: 98901
 		public readonly Dictionary<EShapeType, string> shapeTypeMap = new Dictionary<EShapeType, string>
 		{
 			{
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		};
 
-		// Token: 0x0401D7CB RID: 120779
+		// Token: 0x04018256 RID: 98902
 		public readonly Dictionary<EShapeType, string> shapeArrowTypeMap = new Dictionary<EShapeType, string>
 		{
 			{

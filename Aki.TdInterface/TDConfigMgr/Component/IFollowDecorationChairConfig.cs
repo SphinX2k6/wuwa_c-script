@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003A4 RID: 932
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003ED RID: 1005
 	public class IFollowDecorationChairConfig : IFollowDecorationConfig
 	{
-		// Token: 0x06001295 RID: 4757 RVA: 0x0003D3DC File Offset: 0x0003B5DC
+		// Token: 0x060013DB RID: 5083 RVA: 0x00040714 File Offset: 0x0003E914
 		private IFollowDecorationChairConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001296 RID: 4758 RVA: 0x0003D414 File Offset: 0x0003B614
+		// Token: 0x060013DC RID: 5084 RVA: 0x0004074C File Offset: 0x0003E94C
 		public static IFollowDecorationChairConfig Create([Nullable(2)] IFollowDecorationChairConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001297 RID: 4759 RVA: 0x0003D427 File Offset: 0x0003B627
+		// Token: 0x060013DD RID: 5085 RVA: 0x0004075F File Offset: 0x0003E95F
 		public static IFollowDecorationChairConfig CreateFromSetValue([Nullable(2)] IFollowDecorationChairConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001298 RID: 4760 RVA: 0x0003D43A File Offset: 0x0003B63A
+		// Token: 0x060013DE RID: 5086 RVA: 0x00040772 File Offset: 0x0003E972
 		public new IFollowDecorationChairConfig_SetValue ToSetValue()
 		{
 			return new IFollowDecorationChairConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000532 RID: 1330
-		// (get) Token: 0x06001299 RID: 4761 RVA: 0x0003D465 File Offset: 0x0003B665
-		// (set) Token: 0x0600129A RID: 4762 RVA: 0x0003D490 File Offset: 0x0003B690
+		// Token: 0x17000587 RID: 1415
+		// (get) Token: 0x060013DF RID: 5087 RVA: 0x0004079D File Offset: 0x0003E99D
+		// (set) Token: 0x060013E0 RID: 5088 RVA: 0x000407C8 File Offset: 0x0003E9C8
 		public override EFollowDecorationType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000533 RID: 1331
-		// (get) Token: 0x0600129B RID: 4763 RVA: 0x0003D49E File Offset: 0x0003B69E
-		// (set) Token: 0x0600129C RID: 4764 RVA: 0x0003D4C9 File Offset: 0x0003B6C9
+		// Token: 0x17000588 RID: 1416
+		// (get) Token: 0x060013E1 RID: 5089 RVA: 0x000407D6 File Offset: 0x0003E9D6
+		// (set) Token: 0x060013E2 RID: 5090 RVA: 0x00040801 File Offset: 0x0003EA01
 		public virtual string Config
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000534 RID: 1332
-		// (get) Token: 0x0600129D RID: 4765 RVA: 0x0003D4D7 File Offset: 0x0003B6D7
-		// (set) Token: 0x0600129E RID: 4766 RVA: 0x0003D4FE File Offset: 0x0003B6FE
+		// Token: 0x17000589 RID: 1417
+		// (get) Token: 0x060013E3 RID: 5091 RVA: 0x0004080F File Offset: 0x0003EA0F
+		// (set) Token: 0x060013E4 RID: 5092 RVA: 0x00040836 File Offset: 0x0003EA36
 		public virtual ITriggerShape CollisionDetectionRange
 		{
 			get
@@ -132,11 +130,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000EF3 RID: 3827
+		// Token: 0x04000FEB RID: 4075
 		[Nullable(2)]
 		protected new IFollowDecorationChairConfig FbInstance;
 
-		// Token: 0x04000EF4 RID: 3828
+		// Token: 0x04000FEC RID: 4076
 		[Nullable(2)]
 		protected new IFollowDecorationChairConfig_SetValue PocoInterface;
 	}

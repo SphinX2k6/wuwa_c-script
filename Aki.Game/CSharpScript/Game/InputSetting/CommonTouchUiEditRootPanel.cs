@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02007012 RID: 28690
+	// Token: 0x02006193 RID: 24979
 	public class CommonTouchUiEditRootPanel : UiPanelBase
 	{
-		// Token: 0x06045D11 RID: 285969 RVA: 0x0115CDD1 File Offset: 0x0115AFD1
+		// Token: 0x0603BEC7 RID: 245447 RVA: 0x011071DD File Offset: 0x011053DD
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,14 +19,14 @@ namespace CSharpScript.Game.InputSetting
 			};
 		}
 
-		// Token: 0x06045D12 RID: 285970 RVA: 0x0115CE0A File Offset: 0x0115B00A
+		// Token: 0x0603BEC8 RID: 245448 RVA: 0x01107216 File Offset: 0x01105416
 		[NullableContext(2)]
 		public UUIItem GetItemAttachRoot()
 		{
 			return base.GetItem(0);
 		}
 
-		// Token: 0x06045D13 RID: 285971 RVA: 0x0115CE14 File Offset: 0x0115B014
+		// Token: 0x0603BEC9 RID: 245449 RVA: 0x01107220 File Offset: 0x01105420
 		[NullableContext(1)]
 		public void SetBackgroundTexture(string texturePath)
 		{
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.InputSetting
 			base.SetTextureByPath(texturePath, texture, null, null);
 		}
 
-		// Token: 0x0200CE0C RID: 52748
+		// Token: 0x0200B9FE RID: 47614
 		private static class EComponent
 		{
-			// Token: 0x0403E114 RID: 254228
+			// Token: 0x04039542 RID: 234818
 			public const int ItemAttachRoot = 0;
 
-			// Token: 0x0403E115 RID: 254229
+			// Token: 0x04039543 RID: 234819
 			public const int TexBg = 1;
 		}
 	}

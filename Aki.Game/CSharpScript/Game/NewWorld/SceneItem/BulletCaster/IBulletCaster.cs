@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 {
-	// Token: 0x02007232 RID: 29234
+	// Token: 0x020062E7 RID: 25319
 	public interface IBulletCaster
 	{
-		// Token: 0x06047A5D RID: 293469
+		// Token: 0x0603D3BE RID: 250814
 		void Start();
 
-		// Token: 0x06047A5E RID: 293470
+		// Token: 0x0603D3BF RID: 250815
 		void Stop();
 
-		// Token: 0x06047A5F RID: 293471
+		// Token: 0x0603D3C0 RID: 250816
 		void SetTimeDilationRespectOwnerEntity();
 
-		// Token: 0x06047A60 RID: 293472
+		// Token: 0x0603D3C1 RID: 250817
 		void SetTimeDilation(float timeDilation);
 	}
 }

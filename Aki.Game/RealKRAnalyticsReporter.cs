@@ -5,12 +5,12 @@ using CSharpScript.Launcher.BaseConfig;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x02002186 RID: 8582
+// Token: 0x0200166A RID: 5738
 [NullableContext(1)]
 [Nullable(0)]
 public class RealKRAnalyticsReporter : Singleton
 {
-	// Token: 0x06010AD1 RID: 68305 RVA: 0x0040CD24 File Offset: 0x0040AF24
+	// Token: 0x0600DF62 RID: 57186 RVA: 0x00419600 File Offset: 0x00417800
 	public void Init()
 	{
 		EventSystem.Instance.Add(EEventName.OnGetPlayerBasicInfo, new Action(RealKRAnalyticsReporter.Instance.OnGetPlayerBasicInfo));
@@ -18,19 +18,19 @@ public class RealKRAnalyticsReporter : Singleton
 		EventSystem.Instance.Add(EEventName.OnSetLoginServerId, new Action(RealKRAnalyticsReporter.Instance.SwitchToLoginServerConfig));
 	}
 
-	// Token: 0x06010AD2 RID: 68306 RVA: 0x0040CD94 File Offset: 0x0040AF94
+	// Token: 0x0600DF63 RID: 57187 RVA: 0x00419670 File Offset: 0x00417870
 	private void OnGetPlayerBasicInfo()
 	{
 		UKuroAnalytics.Login(PlayerInfoModel.Instance.GetId().ToString(), 0);
 	}
 
-	// Token: 0x06010AD3 RID: 68307 RVA: 0x0040CDBF File Offset: 0x0040AFBF
+	// Token: 0x0600DF64 RID: 57188 RVA: 0x0041969B File Offset: 0x0041789B
 	private void LogOut()
 	{
 		UKuroAnalytics.Logout(0);
 	}
 
-	// Token: 0x06010AD4 RID: 68308 RVA: 0x0040CDC8 File Offset: 0x0040AFC8
+	// Token: 0x0600DF65 RID: 57189 RVA: 0x004196A4 File Offset: 0x004178A4
 	private unsafe void SwitchToLoginServerConfig()
 	{
 		if (!KuroSdkController.Instance.GetIfGlobalSdk())
@@ -90,13 +90,13 @@ public class RealKRAnalyticsReporter : Singleton
 		Log.Instance.Error(ELogModule.Login, ELogAuthor.LW, "未找到 " + text + " 对应的KuroData上报配置", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06010AD5 RID: 68309 RVA: 0x0040CF7F File Offset: 0x0040B17F
+	// Token: 0x0600DF66 RID: 57190 RVA: 0x0041985B File Offset: 0x00417A5B
 	public void Report(string key, string jsonLog)
 	{
 		FKuroAnalyticsForCSharp.Track(key, jsonLog, 0);
 	}
 
-	// Token: 0x06010AD6 RID: 68310 RVA: 0x0040CF8C File Offset: 0x0040B18C
+	// Token: 0x0600DF67 RID: 57191 RVA: 0x00419868 File Offset: 0x00417A68
 	private void OnCalibrate(int index)
 	{
 		if (!UKuroAnalytics.HasInstanceTimeCalibrated(index))
@@ -105,8 +105,8 @@ public class RealKRAnalyticsReporter : Singleton
 		}
 	}
 
-	// Token: 0x17001525 RID: 5413
-	// (get) Token: 0x06010AD7 RID: 68311 RVA: 0x0040CFC0 File Offset: 0x0040B1C0
+	// Token: 0x1700155C RID: 5468
+	// (get) Token: 0x0600DF68 RID: 57192 RVA: 0x0041989C File Offset: 0x00417A9C
 	public static RealKRAnalyticsReporter Instance
 	{
 		get
@@ -120,12 +120,12 @@ public class RealKRAnalyticsReporter : Singleton
 		}
 	}
 
-	// Token: 0x06010AD8 RID: 68312 RVA: 0x0040CFE3 File Offset: 0x0040B1E3
+	// Token: 0x0600DF69 RID: 57193 RVA: 0x004198BF File Offset: 0x00417ABF
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010AD9 RID: 68313 RVA: 0x0040CFE5 File Offset: 0x0040B1E5
+	// Token: 0x0600DF6A RID: 57194 RVA: 0x004198C1 File Offset: 0x00417AC1
 	public static void ResetStaticDefaultValue()
 	{
 		RealKRAnalyticsReporter instance = RealKRAnalyticsReporter._instance;
@@ -136,20 +136,20 @@ public class RealKRAnalyticsReporter : Singleton
 		RealKRAnalyticsReporter._instance = null;
 	}
 
-	// Token: 0x06010ADA RID: 68314 RVA: 0x0040CFFE File Offset: 0x0040B1FE
+	// Token: 0x0600DF6B RID: 57195 RVA: 0x004198DA File Offset: 0x00417ADA
 	static RealKRAnalyticsReporter()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RealKRAnalyticsReporter.CreateStaticDefaultValue), new Action(RealKRAnalyticsReporter.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007EFA RID: 32506
+	// Token: 0x04008041 RID: 32833
 	private readonly Stat TrackStat = Stat.Create("KRAnalyticsReporter.Track", "", "");
 
-	// Token: 0x04007EFB RID: 32507
+	// Token: 0x04008042 RID: 32834
 	[Nullable(2)]
 	private FKAOnTimeCalibrated OnCalibrateDelegate;
 
-	// Token: 0x04007EFC RID: 32508
+	// Token: 0x04008043 RID: 32835
 	[Nullable(2)]
 	private static RealKRAnalyticsReporter _instance;
 }

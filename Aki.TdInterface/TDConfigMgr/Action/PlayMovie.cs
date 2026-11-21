@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200211B RID: 8475
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200237C RID: 9084
 	public class PlayMovie : ActionParams
 	{
-		// Token: 0x0600BA86 RID: 47750 RVA: 0x001AEF54 File Offset: 0x001AD154
-		[NullableContext(1)]
+		// Token: 0x0600C612 RID: 50706 RVA: 0x001C60B4 File Offset: 0x001C42B4
 		private PlayMovie_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BA87 RID: 47751 RVA: 0x001AEF8C File Offset: 0x001AD18C
-		[NullableContext(1)]
+		// Token: 0x0600C613 RID: 50707 RVA: 0x001C60EC File Offset: 0x001C42EC
 		public static PlayMovie Create([Nullable(2)] PlayMovie instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BA88 RID: 47752 RVA: 0x001AEF9F File Offset: 0x001AD19F
-		[NullableContext(1)]
+		// Token: 0x0600C614 RID: 50708 RVA: 0x001C60FF File Offset: 0x001C42FF
 		public static PlayMovie CreateFromSetValue([Nullable(2)] PlayMovie_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BA89 RID: 47753 RVA: 0x001AEFB4 File Offset: 0x001AD1B4
-		[NullableContext(1)]
+		// Token: 0x0600C615 RID: 50709 RVA: 0x001C6114 File Offset: 0x001C4314
 		public PlayMovie_SetValue ToSetValue()
 		{
 			return new PlayMovie_SetValue
@@ -64,19 +58,18 @@ namespace Aki.TDConfigMgr.Action
 				BackgroundFade = this.BackgroundFade,
 				ProgramSpecialConfig = this.ProgramSpecialConfig,
 				Mp4FadeOutTime = this.Mp4FadeOutTime,
+				Mp4FadeInTime = this.Mp4FadeInTime,
 				BlackBorderFadeOutTime = this.BlackBorderFadeOutTime,
 				Mp4FrameEvents = this.Mp4FrameEvents,
 				Mp4BlendAnim = this.Mp4BlendAnim
 			};
 		}
 
-		// Token: 0x170038F4 RID: 14580
-		// (get) Token: 0x0600BA8A RID: 47754 RVA: 0x001AF01A File Offset: 0x001AD21A
-		// (set) Token: 0x0600BA8B RID: 47755 RVA: 0x001AF045 File Offset: 0x001AD245
-		[Nullable(1)]
+		// Token: 0x17003BE0 RID: 15328
+		// (get) Token: 0x0600C616 RID: 50710 RVA: 0x001C6186 File Offset: 0x001C4386
+		// (set) Token: 0x0600C617 RID: 50711 RVA: 0x001C61B1 File Offset: 0x001C43B1
 		public virtual string VideoName
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -89,18 +82,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this.PocoInterface.VideoName;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.GetOrCreatePoco().VideoName = value;
 			}
 		}
 
-		// Token: 0x170038F5 RID: 14581
-		// (get) Token: 0x0600BA8C RID: 47756 RVA: 0x001AF054 File Offset: 0x001AD254
-		// (set) Token: 0x0600BA8D RID: 47757 RVA: 0x001AF0B5 File Offset: 0x001AD2B5
+		// Token: 0x17003BE1 RID: 15329
+		// (get) Token: 0x0600C618 RID: 50712 RVA: 0x001C61C0 File Offset: 0x001C43C0
+		// (set) Token: 0x0600C619 RID: 50713 RVA: 0x001C6221 File Offset: 0x001C4421
+		[Nullable(2)]
 		public virtual IMovieBackgroundFadeData BackgroundFade
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._BackgroundFadeInited)
@@ -119,6 +113,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this._BackgroundFadeCache;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().BackgroundFade = value;
@@ -126,11 +121,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038F6 RID: 14582
-		// (get) Token: 0x0600BA8E RID: 47758 RVA: 0x001AF0CC File Offset: 0x001AD2CC
-		// (set) Token: 0x0600BA8F RID: 47759 RVA: 0x001AF12D File Offset: 0x001AD32D
+		// Token: 0x17003BE2 RID: 15330
+		// (get) Token: 0x0600C61A RID: 50714 RVA: 0x001C6238 File Offset: 0x001C4438
+		// (set) Token: 0x0600C61B RID: 50715 RVA: 0x001C6299 File Offset: 0x001C4499
+		[Nullable(2)]
 		public virtual IMp4UiReplaceMaterial ProgramSpecialConfig
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._ProgramSpecialConfigInited)
@@ -149,6 +146,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this._ProgramSpecialConfigCache;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().ProgramSpecialConfig = value;
@@ -156,9 +154,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038F7 RID: 14583
-		// (get) Token: 0x0600BA90 RID: 47760 RVA: 0x001AF144 File Offset: 0x001AD344
-		// (set) Token: 0x0600BA91 RID: 47761 RVA: 0x001AF17E File Offset: 0x001AD37E
+		// Token: 0x17003BE3 RID: 15331
+		// (get) Token: 0x0600C61C RID: 50716 RVA: 0x001C62B0 File Offset: 0x001C44B0
+		// (set) Token: 0x0600C61D RID: 50717 RVA: 0x001C62EA File Offset: 0x001C44EA
 		public virtual float? Mp4FadeOutTime
 		{
 			get
@@ -180,9 +178,33 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038F8 RID: 14584
-		// (get) Token: 0x0600BA92 RID: 47762 RVA: 0x001AF18C File Offset: 0x001AD38C
-		// (set) Token: 0x0600BA93 RID: 47763 RVA: 0x001AF1C6 File Offset: 0x001AD3C6
+		// Token: 0x17003BE4 RID: 15332
+		// (get) Token: 0x0600C61E RID: 50718 RVA: 0x001C62F8 File Offset: 0x001C44F8
+		// (set) Token: 0x0600C61F RID: 50719 RVA: 0x001C6332 File Offset: 0x001C4532
+		public virtual float? Mp4FadeInTime
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.Mp4FadeInTime;
+				}
+				PlayMovie_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.Mp4FadeInTime;
+			}
+			set
+			{
+				this.GetOrCreatePoco().Mp4FadeInTime = value;
+			}
+		}
+
+		// Token: 0x17003BE5 RID: 15333
+		// (get) Token: 0x0600C620 RID: 50720 RVA: 0x001C6340 File Offset: 0x001C4540
+		// (set) Token: 0x0600C621 RID: 50721 RVA: 0x001C637A File Offset: 0x001C457A
 		public virtual float? BlackBorderFadeOutTime
 		{
 			get
@@ -204,20 +226,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038F9 RID: 14585
-		// (get) Token: 0x0600BA94 RID: 47764 RVA: 0x001AF1D4 File Offset: 0x001AD3D4
-		// (set) Token: 0x0600BA95 RID: 47765 RVA: 0x001AF267 File Offset: 0x001AD467
+		// Token: 0x17003BE6 RID: 15334
+		// (get) Token: 0x0600C622 RID: 50722 RVA: 0x001C6388 File Offset: 0x001C4588
+		// (set) Token: 0x0600C623 RID: 50723 RVA: 0x001C641B File Offset: 0x001C461B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMp4FrameEvent> Mp4FrameEvents
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -248,7 +270,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -257,11 +279,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038FA RID: 14586
-		// (get) Token: 0x0600BA96 RID: 47766 RVA: 0x001AF27C File Offset: 0x001AD47C
-		// (set) Token: 0x0600BA97 RID: 47767 RVA: 0x001AF2DD File Offset: 0x001AD4DD
+		// Token: 0x17003BE7 RID: 15335
+		// (get) Token: 0x0600C624 RID: 50724 RVA: 0x001C6430 File Offset: 0x001C4630
+		// (set) Token: 0x0600C625 RID: 50725 RVA: 0x001C6491 File Offset: 0x001C4691
+		[Nullable(2)]
 		public virtual SetBlendAnim Mp4BlendAnim
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._Mp4BlendAnimInited)
@@ -280,6 +304,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this._Mp4BlendAnimCache;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().Mp4BlendAnim = value;
@@ -287,42 +312,41 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006FA3 RID: 28579
+		// Token: 0x040075D7 RID: 30167
+		[Nullable(2)]
 		protected new PlayMovie FbInstance;
 
-		// Token: 0x04006FA4 RID: 28580
+		// Token: 0x040075D8 RID: 30168
+		[Nullable(2)]
 		protected PlayMovie_SetValue PocoInterface;
 
-		// Token: 0x04006FA5 RID: 28581
-		[Nullable(1)]
+		// Token: 0x040075D9 RID: 30169
 		private IMovieBackgroundFadeData _BackgroundFadeCache;
 
-		// Token: 0x04006FA6 RID: 28582
+		// Token: 0x040075DA RID: 30170
 		private bool _BackgroundFadeInited;
 
-		// Token: 0x04006FA7 RID: 28583
-		[Nullable(1)]
+		// Token: 0x040075DB RID: 30171
 		private IMp4UiReplaceMaterial _ProgramSpecialConfigCache;
 
-		// Token: 0x04006FA8 RID: 28584
+		// Token: 0x040075DC RID: 30172
 		private bool _ProgramSpecialConfigInited;
 
-		// Token: 0x04006FA9 RID: 28585
+		// Token: 0x040075DD RID: 30173
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMp4FrameEvent> _Mp4FrameEventsCache;
 
-		// Token: 0x04006FAA RID: 28586
+		// Token: 0x040075DE RID: 30174
 		private bool _Mp4FrameEventsInited;
 
-		// Token: 0x04006FAB RID: 28587
-		[Nullable(1)]
+		// Token: 0x040075DF RID: 30175
 		private SetBlendAnim _Mp4BlendAnimCache;
 
-		// Token: 0x04006FAC RID: 28588
+		// Token: 0x040075E0 RID: 30176
 		private bool _Mp4BlendAnimInited;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DFA RID: 24058
+	// Token: 0x02006437 RID: 25655
 	public struct IGravityDirectionType : IFlatbufferObject
 	{
-		// Token: 0x1700B407 RID: 46087
-		// (get) Token: 0x060292E2 RID: 168674 RVA: 0x005A6679 File Offset: 0x005A4879
+		// Token: 0x1700BD6D RID: 48493
+		// (get) Token: 0x0602B96C RID: 178540 RVA: 0x005EF3A9 File Offset: 0x005ED5A9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060292E3 RID: 168675 RVA: 0x005A6686 File Offset: 0x005A4886
+		// Token: 0x0602B96D RID: 178541 RVA: 0x005EF3B6 File Offset: 0x005ED5B6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060292E4 RID: 168676 RVA: 0x005A6690 File Offset: 0x005A4890
+		// Token: 0x0602B96E RID: 178542 RVA: 0x005EF3C0 File Offset: 0x005ED5C0
 		public static IGravityDirectionType GetRootAsIGravityDirectionType(ByteBuffer _bb)
 		{
 			return IGravityDirectionType.GetRootAsIGravityDirectionType(_bb, default(IGravityDirectionType));
 		}
 
-		// Token: 0x060292E5 RID: 168677 RVA: 0x005A66AC File Offset: 0x005A48AC
+		// Token: 0x0602B96F RID: 178543 RVA: 0x005EF3DC File Offset: 0x005ED5DC
 		public static IGravityDirectionType GetRootAsIGravityDirectionType(ByteBuffer _bb, IGravityDirectionType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060292E6 RID: 168678 RVA: 0x005A66C9 File Offset: 0x005A48C9
+		// Token: 0x0602B970 RID: 178544 RVA: 0x005EF3F9 File Offset: 0x005ED5F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060292E7 RID: 168679 RVA: 0x005A66D8 File Offset: 0x005A48D8
+		// Token: 0x0602B971 RID: 178545 RVA: 0x005EF408 File Offset: 0x005ED608
 		public IGravityDirectionType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B408 RID: 46088
-		// (get) Token: 0x060292E8 RID: 168680 RVA: 0x005A66E8 File Offset: 0x005A48E8
+		// Token: 0x1700BD6E RID: 48494
+		// (get) Token: 0x0602B972 RID: 178546 RVA: 0x005EF418 File Offset: 0x005ED618
 		public EGravityDirectionType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060292E9 RID: 168681 RVA: 0x005A6724 File Offset: 0x005A4924
+		// Token: 0x0602B973 RID: 178547 RVA: 0x005EF454 File Offset: 0x005ED654
 		public static Offset<IGravityDirectionType> CreateIGravityDirectionType(FlatBufferBuilder builder, EGravityDirectionType Type = EGravityDirectionType.SelfRotation)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IGravityDirectionType.EndIGravityDirectionType(builder);
 		}
 
-		// Token: 0x060292EA RID: 168682 RVA: 0x005A673A File Offset: 0x005A493A
+		// Token: 0x0602B974 RID: 178548 RVA: 0x005EF46A File Offset: 0x005ED66A
 		public static void StartIGravityDirectionType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060292EB RID: 168683 RVA: 0x005A6743 File Offset: 0x005A4943
+		// Token: 0x0602B975 RID: 178549 RVA: 0x005EF473 File Offset: 0x005ED673
 		public static void AddType(FlatBufferBuilder builder, EGravityDirectionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060292EC RID: 168684 RVA: 0x005A674E File Offset: 0x005A494E
+		// Token: 0x0602B976 RID: 178550 RVA: 0x005EF47E File Offset: 0x005ED67E
 		public static Offset<IGravityDirectionType> EndIGravityDirectionType(FlatBufferBuilder builder)
 		{
 			return new Offset<IGravityDirectionType>(builder.EndTable());
 		}
 
-		// Token: 0x060292ED RID: 168685 RVA: 0x005A675C File Offset: 0x005A495C
+		// Token: 0x0602B977 RID: 178551 RVA: 0x005EF48C File Offset: 0x005ED68C
 		public IGravityDirectionTypeT UnPack()
 		{
 			IGravityDirectionTypeT gravityDirectionTypeT = new IGravityDirectionTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return gravityDirectionTypeT;
 		}
 
-		// Token: 0x060292EE RID: 168686 RVA: 0x005A6777 File Offset: 0x005A4977
+		// Token: 0x0602B978 RID: 178552 RVA: 0x005EF4A7 File Offset: 0x005ED6A7
 		public void UnPackTo(IGravityDirectionTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060292EF RID: 168687 RVA: 0x005A6788 File Offset: 0x005A4988
+		// Token: 0x0602B979 RID: 178553 RVA: 0x005EF4B8 File Offset: 0x005ED6B8
 		public static Offset<IGravityDirectionType> Pack(FlatBufferBuilder builder, IGravityDirectionTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IGravityDirectionType.CreateIGravityDirectionType(builder, _o.Type);
 		}
 
-		// Token: 0x0400F7E7 RID: 63463
+		// Token: 0x04010542 RID: 66882
 		private Table __p;
 	}
 }

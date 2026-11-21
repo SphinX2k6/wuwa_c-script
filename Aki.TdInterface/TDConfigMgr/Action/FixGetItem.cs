@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200172A RID: 5930
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018A7 RID: 6311
 	public class FixGetItem : ActionParams
 	{
-		// Token: 0x06007D91 RID: 32145 RVA: 0x0012D2C0 File Offset: 0x0012B4C0
+		// Token: 0x0600846F RID: 33903 RVA: 0x0013C36C File Offset: 0x0013A56C
 		private FixGetItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007D92 RID: 32146 RVA: 0x0012D2F8 File Offset: 0x0012B4F8
+		// Token: 0x06008470 RID: 33904 RVA: 0x0013C3A4 File Offset: 0x0013A5A4
 		public static FixGetItem Create([Nullable(2)] FixGetItem instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D93 RID: 32147 RVA: 0x0012D30B File Offset: 0x0012B50B
+		// Token: 0x06008471 RID: 33905 RVA: 0x0013C3B7 File Offset: 0x0013A5B7
 		public static FixGetItem CreateFromSetValue([Nullable(2)] FixGetItem_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D94 RID: 32148 RVA: 0x0012D31E File Offset: 0x0012B51E
+		// Token: 0x06008472 RID: 33906 RVA: 0x0013C3CA File Offset: 0x0013A5CA
 		public FixGetItem_SetValue ToSetValue()
 		{
 			return new FixGetItem_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700295C RID: 10588
-		// (get) Token: 0x06007D95 RID: 32149 RVA: 0x0012D334 File Offset: 0x0012B534
-		// (set) Token: 0x06007D96 RID: 32150 RVA: 0x0012D3C7 File Offset: 0x0012B5C7
+		// Token: 0x17002B47 RID: 11079
+		// (get) Token: 0x06008473 RID: 33907 RVA: 0x0013C3E0 File Offset: 0x0013A5E0
+		// (set) Token: 0x06008474 RID: 33908 RVA: 0x0013C473 File Offset: 0x0013A673
 		public virtual List<IItemData> Items
 		{
 			get
@@ -98,18 +96,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400501D RID: 20509
+		// Token: 0x0400544C RID: 21580
 		[Nullable(2)]
 		protected new FixGetItem FbInstance;
 
-		// Token: 0x0400501E RID: 20510
+		// Token: 0x0400544D RID: 21581
 		[Nullable(2)]
 		protected FixGetItem_SetValue PocoInterface;
 
-		// Token: 0x0400501F RID: 20511
+		// Token: 0x0400544E RID: 21582
 		private List<IItemData> _ItemsCache;
 
-		// Token: 0x04005020 RID: 20512
+		// Token: 0x0400544F RID: 21583
 		private bool _ItemsInited;
 	}
 }

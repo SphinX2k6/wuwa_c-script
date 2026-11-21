@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,13 +14,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rewards
 {
-	// Token: 0x02006847 RID: 26695
+	// Token: 0x02005797 RID: 22423
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlRewardsView : UiTickViewBase
 	{
-		// Token: 0x17009755 RID: 38741
-		// (get) Token: 0x06042A1A RID: 272922 RVA: 0x01033973 File Offset: 0x01031B73
+		// Token: 0x17006A96 RID: 27286
+		// (get) Token: 0x0603756E RID: 226670 RVA: 0x00F74E7F File Offset: 0x00F7307F
 		private ActivityDangoBrawlData ActivityData
 		{
 			get
@@ -30,8 +29,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			}
 		}
 
-		// Token: 0x17009756 RID: 38742
-		// (get) Token: 0x06042A1B RID: 272923 RVA: 0x0103397F File Offset: 0x01031B7F
+		// Token: 0x17006A97 RID: 27287
+		// (get) Token: 0x0603756F RID: 226671 RVA: 0x00F74E8B File Offset: 0x00F7308B
 		private DangoBrawlOutGameData OutGameData
 		{
 			get
@@ -40,12 +39,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			}
 		}
 
-		// Token: 0x06042A1C RID: 272924 RVA: 0x0103398C File Offset: 0x01031B8C
+		// Token: 0x06037570 RID: 226672 RVA: 0x00F74E98 File Offset: 0x00F73098
 		public DangoBrawlRewardsView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06042A1D RID: 272925 RVA: 0x010339BC File Offset: 0x01031BBC
+		// Token: 0x06037571 RID: 226673 RVA: 0x00F74EC8 File Offset: 0x00F730C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -86,17 +85,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042A1E RID: 272926 RVA: 0x01033BB0 File Offset: 0x01031DB0
+		// Token: 0x06037572 RID: 226674 RVA: 0x00F750BC File Offset: 0x00F732BC
 		protected override void OnAddEventListener()
 		{
 		}
 
-		// Token: 0x06042A1F RID: 272927 RVA: 0x01033BB2 File Offset: 0x01031DB2
+		// Token: 0x06037573 RID: 226675 RVA: 0x00F750BE File Offset: 0x00F732BE
 		protected override void OnRemoveEventListener()
 		{
 		}
 
-		// Token: 0x06042A20 RID: 272928 RVA: 0x01033BB4 File Offset: 0x01031DB4
+		// Token: 0x06037574 RID: 226676 RVA: 0x00F750C0 File Offset: 0x00F732C0
 		protected override void OnStart()
 		{
 			this.InitQuestScroll();
@@ -104,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			this.InitProgressReward();
 		}
 
-		// Token: 0x06042A21 RID: 272929 RVA: 0x01033BC8 File Offset: 0x01031DC8
+		// Token: 0x06037575 RID: 226677 RVA: 0x00F750D4 File Offset: 0x00F732D4
 		private void InitTabLayout()
 		{
 			this.TabLayout = new GenericLayout<DangoBrawlRewardTabItem, DangoBrawlRewardTabData>(base.GetHorizontalLayout(2), new Func<DangoBrawlRewardTabItem>(this.CreateTabItem), base.GetItem(3).GetOwner() as AUIBaseActor, false, true);
@@ -125,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			}, false);
 		}
 
-		// Token: 0x06042A22 RID: 272930 RVA: 0x01033C30 File Offset: 0x01031E30
+		// Token: 0x06037576 RID: 226678 RVA: 0x00F7513C File Offset: 0x00F7333C
 		private List<DangoBrawlRewardTabData> CreateTabDataList()
 		{
 			List<DangoBrawlRewardTabData> list = new List<DangoBrawlRewardTabData>();
@@ -139,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			return list;
 		}
 
-		// Token: 0x06042A23 RID: 272931 RVA: 0x01033CC0 File Offset: 0x01031EC0
+		// Token: 0x06037577 RID: 226679 RVA: 0x00F751CC File Offset: 0x00F733CC
 		private DangoBrawlRewardTabItem CreateTabItem()
 		{
 			DangoBrawlRewardTabItem dangoBrawlRewardTabItem = new DangoBrawlRewardTabItem();
@@ -147,7 +146,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			return dangoBrawlRewardTabItem;
 		}
 
-		// Token: 0x06042A24 RID: 272932 RVA: 0x01033CD9 File Offset: 0x01031ED9
+		// Token: 0x06037578 RID: 226680 RVA: 0x00F751E5 File Offset: 0x00F733E5
 		private void OnClickTab(int tabIndex)
 		{
 			this.SelectedTabIndex = this.TabList[tabIndex].Id;
@@ -159,13 +158,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			this.RefreshQuestScroll(true);
 		}
 
-		// Token: 0x06042A25 RID: 272933 RVA: 0x01033D0C File Offset: 0x01031F0C
+		// Token: 0x06037579 RID: 226681 RVA: 0x00F75218 File Offset: 0x00F73418
 		private void InitQuestScroll()
 		{
 			this.QuestScroll = new GenericScrollViewNew<DangoBrawlRewardItem, DangoBrawlTaskData>(base.GetScrollViewWithScrollbar(4), new Func<DangoBrawlRewardItem>(this.CreateQuestItem), null, false, null);
 		}
 
-		// Token: 0x06042A26 RID: 272934 RVA: 0x01033D30 File Offset: 0x01031F30
+		// Token: 0x0603757A RID: 226682 RVA: 0x00F7523C File Offset: 0x00F7343C
 		private void RefreshQuestScroll(bool scrollToTop = false)
 		{
 			List<DangoBrawlTaskData> taskDataList = this.OutGameData.GetTaskDataList(new int?(this.SelectedTabIndex));
@@ -191,7 +190,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			questScroll.RefreshByData(taskDataList, callBack, true);
 		}
 
-		// Token: 0x06042A27 RID: 272935 RVA: 0x01033D8B File Offset: 0x01031F8B
+		// Token: 0x0603757B RID: 226683 RVA: 0x00F75297 File Offset: 0x00F73497
 		private DangoBrawlRewardItem CreateQuestItem()
 		{
 			DangoBrawlRewardItem dangoBrawlRewardItem = new DangoBrawlRewardItem();
@@ -199,14 +198,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			return dangoBrawlRewardItem;
 		}
 
-		// Token: 0x06042A28 RID: 272936 RVA: 0x01033DA4 File Offset: 0x01031FA4
+		// Token: 0x0603757C RID: 226684 RVA: 0x00F752B0 File Offset: 0x00F734B0
 		private void InitProgressReward()
 		{
 			this.GiftLayout = new GenericLayout<DangoBrawlGiftItem, int>(base.GetHorizontalLayout(8), new Func<DangoBrawlGiftItem>(this.CreateGiftItem), null, false, true);
 			this.ProgressBarWidth = base.GetSprite(7).GetWidth();
 		}
 
-		// Token: 0x06042A29 RID: 272937 RVA: 0x01033DD9 File Offset: 0x01031FD9
+		// Token: 0x0603757D RID: 226685 RVA: 0x00F752E5 File Offset: 0x00F734E5
 		private DangoBrawlGiftItem CreateGiftItem()
 		{
 			return new DangoBrawlGiftItem
@@ -215,22 +214,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			};
 		}
 
-		// Token: 0x06042A2A RID: 272938 RVA: 0x01033DF2 File Offset: 0x01031FF2
+		// Token: 0x0603757E RID: 226686 RVA: 0x00F752FE File Offset: 0x00F734FE
 		private void OnProgressRewardReceiveCallback()
 		{
 			this.RefreshView();
 		}
 
-		// Token: 0x06042A2B RID: 272939 RVA: 0x01033DFC File Offset: 0x01031FFC
+		// Token: 0x0603757F RID: 226687 RVA: 0x00F75308 File Offset: 0x00F73508
 		private void RefreshProgressReward()
 		{
 			int currentMilestone = this.OutGameData.GetCurrentMilestone();
-			IReadOnlyList<DangoBrawlScoreReward> allDangoBrawlScoreAwardConfig = DangoBrawlConfig.Instance.GetAllDangoBrawlScoreAwardConfig();
-			this.RefreshProgressItem(currentMilestone, (from config in allDangoBrawlScoreAwardConfig
-			select config.Id).ToList<int>());
+			IEnumerable<DangoBrawlScoreReward> allDangoBrawlScoreAwardConfig = DangoBrawlConfig.Instance.GetAllDangoBrawlScoreAwardConfig();
+			List<int> list = new List<int>();
+			foreach (DangoBrawlScoreReward dangoBrawlScoreReward in allDangoBrawlScoreAwardConfig)
+			{
+				list.Add(dangoBrawlScoreReward.Id);
+			}
+			this.RefreshProgressItem(currentMilestone, list);
 		}
 
-		// Token: 0x06042A2C RID: 272940 RVA: 0x01033E54 File Offset: 0x01032054
+		// Token: 0x06037580 RID: 226688 RVA: 0x00F7537C File Offset: 0x00F7357C
 		private void RefreshProgressItem(int currentProgress, IReadOnlyList<int> rewardIdList)
 		{
 			UUIText text = base.GetText(6);
@@ -284,12 +287,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 				{
 					return;
 				}
-				giftLayout2.RefreshByData(rewardIdList.ToList<int>(), null, false);
+				giftLayout2.RefreshByData(rewardIdList, null, false);
 				return;
 			}
 		}
 
-		// Token: 0x06042A2D RID: 272941 RVA: 0x01033F94 File Offset: 0x01032194
+		// Token: 0x06037581 RID: 226689 RVA: 0x00F754B8 File Offset: 0x00F736B8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlRewardsView.<OnBeforeStartAsync>d__31 <OnBeforeStartAsync>d__;
@@ -300,21 +303,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042A2E RID: 272942 RVA: 0x01033FD7 File Offset: 0x010321D7
+		// Token: 0x06037582 RID: 226690 RVA: 0x00F754FB File Offset: 0x00F736FB
 		protected override void OnBeforeShow()
 		{
-			HotKeyComponentUtil.SetupComponents<RewardTakeComponent>(this.RootItem, EHotKeyCacheKey.RewardTakeDataCallback, () => this.OutGameData.GetLastNotTakenScoreRewardIndex());
+			HotKeyComponentUtil.SetupComponents<RewardTakeComponent>(this.RootItem, EHotKeyCacheKey.RewardTakeDataCallback, delegate(RewardTakeComponent component)
+			{
+				component.SetDataCallback(() => this.OutGameData.GetLastNotTakenScoreRewardIndex());
+			});
 			this.RefreshView();
 			this.RefreshRemainTime();
 		}
 
-		// Token: 0x06042A2F RID: 272943 RVA: 0x01033FFD File Offset: 0x010321FD
+		// Token: 0x06037583 RID: 226691 RVA: 0x00F75521 File Offset: 0x00F73721
 		protected override void OnTick(float delta)
 		{
 			this.RefreshRemainTime();
 		}
 
-		// Token: 0x06042A30 RID: 272944 RVA: 0x01034005 File Offset: 0x01032205
+		// Token: 0x06037584 RID: 226692 RVA: 0x00F75529 File Offset: 0x00F73729
 		private void RefreshView()
 		{
 			this.RefreshQuestScroll(false);
@@ -322,7 +328,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			this.RefreshTabRedDot();
 		}
 
-		// Token: 0x06042A31 RID: 272945 RVA: 0x0103401C File Offset: 0x0103221C
+		// Token: 0x06037585 RID: 226693 RVA: 0x00F75540 File Offset: 0x00F73740
 		private void SyncTabCanReceive()
 		{
 			foreach (DangoBrawlRewardTabData dangoBrawlRewardTabData in this.TabList)
@@ -331,7 +337,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			}
 		}
 
-		// Token: 0x06042A32 RID: 272946 RVA: 0x01034084 File Offset: 0x01032284
+		// Token: 0x06037586 RID: 226694 RVA: 0x00F755A8 File Offset: 0x00F737A8
 		private void RefreshTabRedDot()
 		{
 			if (this.TabLayout == null)
@@ -339,15 +345,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 				return;
 			}
 			this.SyncTabCanReceive();
-			foreach (ValueTuple<DangoBrawlRewardTabItem, DangoBrawlRewardTabData> valueTuple in this.TabLayout.GetLayoutItemList().Zip(this.TabList))
+			List<DangoBrawlRewardTabItem> layoutItemList = this.TabLayout.GetLayoutItemList();
+			int num = 0;
+			while (num < layoutItemList.Count && num < this.TabList.Count)
 			{
-				DangoBrawlRewardTabItem item = valueTuple.Item1;
-				DangoBrawlRewardTabData item2 = valueTuple.Item2;
-				item.SetRedDotVisible(item2.CanReceive);
+				DangoBrawlRewardTabItem dangoBrawlRewardTabItem = layoutItemList[num];
+				DangoBrawlRewardTabData dangoBrawlRewardTabData = this.TabList[num];
+				dangoBrawlRewardTabItem.SetRedDotVisible(dangoBrawlRewardTabData.CanReceive);
+				num++;
 			}
 		}
 
-		// Token: 0x06042A33 RID: 272947 RVA: 0x01034104 File Offset: 0x01032304
+		// Token: 0x06037587 RID: 226695 RVA: 0x00F75610 File Offset: 0x00F73810
 		private void RefreshRemainTime()
 		{
 			string text = ConfigMultiTextLang.GetLocalTextNew("ActivityRemainingTime", null) ?? "";
@@ -360,13 +369,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			text2.SetText(newText, true);
 		}
 
-		// Token: 0x06042A34 RID: 272948 RVA: 0x0103415A File Offset: 0x0103235A
+		// Token: 0x06037588 RID: 226696 RVA: 0x00F75666 File Offset: 0x00F73866
 		private void OnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06042A35 RID: 272949 RVA: 0x01034164 File Offset: 0x01032364
+		// Token: 0x06037589 RID: 226697 RVA: 0x00F75670 File Offset: 0x00F73870
 		private void OnClickDetail()
 		{
 			DangoBrawlActivity? activityConfigById = DangoBrawlConfig.Instance.GetActivityConfigById(this.ActivityData.Id);
@@ -374,10 +383,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			{
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(activityConfigById.Value.LimitScoreRewardId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(activityConfigById.Value.LimitScoreRewardId, true, null, false);
 		}
 
-		// Token: 0x06042A36 RID: 272950 RVA: 0x010341AC File Offset: 0x010323AC
+		// Token: 0x0603758A RID: 226698 RVA: 0x00F756BC File Offset: 0x00F738BC
 		private void OnClickTaskReceive()
 		{
 			List<int> taskCanClaimableIdListByTabId = this.ActivityData.GetTaskCanClaimableIdListByTabId(this.SelectedTabIndex);
@@ -388,14 +397,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			ActivityDangoBrawlController.Instance.RequestTaskReward(taskCanClaimableIdListByTabId, new Action(this.RefreshView));
 		}
 
-		// Token: 0x04022B40 RID: 142144
+		// Token: 0x0401D39D RID: 119709
 		private const int REWARD_ITEM_WIDTH = 130;
 
-		// Token: 0x04022B41 RID: 142145
+		// Token: 0x0401D39E RID: 119710
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022B42 RID: 142146
+		// Token: 0x0401D39F RID: 119711
 		[Nullable(new byte[]
 		{
 			2,
@@ -404,7 +413,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 		})]
 		private GenericScrollViewNew<DangoBrawlRewardItem, DangoBrawlTaskData> QuestScroll;
 
-		// Token: 0x04022B43 RID: 142147
+		// Token: 0x0401D3A0 RID: 119712
 		[Nullable(new byte[]
 		{
 			2,
@@ -413,7 +422,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 		})]
 		private GenericLayout<DangoBrawlRewardTabItem, DangoBrawlRewardTabData> TabLayout;
 
-		// Token: 0x04022B44 RID: 142148
+		// Token: 0x0401D3A1 RID: 119713
 		[Nullable(new byte[]
 		{
 			2,
@@ -421,16 +430,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 		})]
 		private GenericLayout<DangoBrawlGiftItem, int> GiftLayout;
 
-		// Token: 0x04022B45 RID: 142149
+		// Token: 0x0401D3A2 RID: 119714
 		private List<DangoBrawlRewardTabData> TabList = new List<DangoBrawlRewardTabData>();
 
-		// Token: 0x04022B46 RID: 142150
+		// Token: 0x0401D3A3 RID: 119715
 		private float ProgressBarWidth;
 
-		// Token: 0x04022B47 RID: 142151
+		// Token: 0x0401D3A4 RID: 119716
 		private int SelectedTabIndex = -1;
 
-		// Token: 0x04022B48 RID: 142152
+		// Token: 0x0401D3A5 RID: 119717
 		private readonly EActivityTaskState[] StatusOrder = new EActivityTaskState[]
 		{
 			EActivityTaskState.FinishedAndUnclaimed,
@@ -438,33 +447,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			EActivityTaskState.FinishedAndClaimed
 		};
 
-		// Token: 0x0200CA0C RID: 51724
+		// Token: 0x0200B3D8 RID: 46040
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403D0EF RID: 250095
+			// Token: 0x040379D8 RID: 227800
 			Caption,
-			// Token: 0x0403D0F0 RID: 250096
+			// Token: 0x040379D9 RID: 227801
 			DetailButton,
-			// Token: 0x0403D0F1 RID: 250097
+			// Token: 0x040379DA RID: 227802
 			TabLayout,
-			// Token: 0x0403D0F2 RID: 250098
+			// Token: 0x040379DB RID: 227803
 			TabItem,
-			// Token: 0x0403D0F3 RID: 250099
+			// Token: 0x040379DC RID: 227804
 			QuestScroll,
-			// Token: 0x0403D0F4 RID: 250100
+			// Token: 0x040379DD RID: 227805
 			QuestItem,
-			// Token: 0x0403D0F5 RID: 250101
+			// Token: 0x040379DE RID: 227806
 			TextTotalScore,
-			// Token: 0x0403D0F6 RID: 250102
+			// Token: 0x040379DF RID: 227807
 			Bar,
-			// Token: 0x0403D0F7 RID: 250103
+			// Token: 0x040379E0 RID: 227808
 			PnlHLayout,
-			// Token: 0x0403D0F8 RID: 250104
+			// Token: 0x040379E1 RID: 227809
 			PnlGift,
-			// Token: 0x0403D0F9 RID: 250105
+			// Token: 0x040379E2 RID: 227810
 			SprDot,
-			// Token: 0x0403D0FA RID: 250106
+			// Token: 0x040379E3 RID: 227811
 			TxtLimitTime
 		}
 	}

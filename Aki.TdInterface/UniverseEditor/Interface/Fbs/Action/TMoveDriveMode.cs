@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007728 RID: 30504
+	// Token: 0x02007F51 RID: 32593
 	public enum TMoveDriveMode : byte
 	{
-		// Token: 0x04012848 RID: 75848
+		// Token: 0x040138DD RID: 80093
 		NONE,
-		// Token: 0x04012849 RID: 75849
+		// Token: 0x040138DE RID: 80094
 		IInputDrivenMoveDriveMode,
-		// Token: 0x0401284A RID: 75850
+		// Token: 0x040138DF RID: 80095
 		IPositionDrivenMoveDriveMode
 	}
 }

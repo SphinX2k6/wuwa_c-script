@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200056D RID: 1389
+	// Token: 0x02000583 RID: 1411
 	public class ConfigMoraleRoleGrowthByLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600209B RID: 8347 RVA: 0x00111B04 File Offset: 0x0010FD04
+		// Token: 0x0600211F RID: 8479 RVA: 0x00118258 File Offset: 0x00116458
 		static ConfigMoraleRoleGrowthByLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMoraleRoleGrowthByLevel.CreateStaticDefaultValue), new Action(ConfigMoraleRoleGrowthByLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600209C RID: 8348 RVA: 0x00111B24 File Offset: 0x0010FD24
+		// Token: 0x06002120 RID: 8480 RVA: 0x00118278 File Offset: 0x00116478
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMoraleRoleGrowthByLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600209D RID: 8349 RVA: 0x00111BA3 File Offset: 0x0010FDA3
+		// Token: 0x06002121 RID: 8481 RVA: 0x001182F7 File Offset: 0x001164F7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMoraleRoleGrowthByLevel.LogPair = null;
 			ConfigMoraleRoleGrowthByLevel.HandleId = 0;
 		}
 
-		// Token: 0x0600209E RID: 8350 RVA: 0x00111BB1 File Offset: 0x0010FDB1
+		// Token: 0x06002122 RID: 8482 RVA: 0x00118305 File Offset: 0x00116505
 		public static void Init()
 		{
 			ConfigMoraleRoleGrowthByLevel.HandleId = ConfigCommon.InitDataStatement(ConfigMoraleRoleGrowthByLevel.HandleId, "db_moraleplay.db", "select BinData from `MoraleRoleGrowth` where Level=?");
 		}
 
-		// Token: 0x0600209F RID: 8351 RVA: 0x00111BCC File Offset: 0x0010FDCC
+		// Token: 0x06002123 RID: 8483 RVA: 0x00118320 File Offset: 0x00116520
 		public static MoraleRoleGrowth? GetConfig(int p0Level, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMoraleRoleGrowthByLevel.HandleId, ConfigMoraleRoleGrowthByLevel.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MoraleRoleGrowth?(rootAsMoraleRoleGrowth);
 		}
 
-		// Token: 0x040025DF RID: 9695
+		// Token: 0x04002679 RID: 9849
 		private const string DB = "db_moraleplay.db";
 
-		// Token: 0x040025E0 RID: 9696
+		// Token: 0x0400267A RID: 9850
 		private const string FILE = "c.插旗玩法.xlsx";
 
-		// Token: 0x040025E1 RID: 9697
+		// Token: 0x0400267B RID: 9851
 		private const string TABLE = "MoraleRoleGrowth";
 
-		// Token: 0x040025E2 RID: 9698
+		// Token: 0x0400267C RID: 9852
 		private const string COMMAND = "select BinData from `MoraleRoleGrowth` where Level=?";
 
-		// Token: 0x040025E3 RID: 9699
+		// Token: 0x0400267D RID: 9853
 		private const string KEY_PREFIX = "MoraleRoleGrowthByLevel";
 
-		// Token: 0x040025E4 RID: 9700
+		// Token: 0x0400267E RID: 9854
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040025E5 RID: 9701
+		// Token: 0x0400267F RID: 9855
 		private static int HandleId;
 	}
 }

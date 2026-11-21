@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C46 RID: 23622
+	// Token: 0x0200626B RID: 25195
 	public class TInteractEntityPartBindUnion
 	{
-		// Token: 0x1700B20C RID: 45580
-		// (get) Token: 0x06028801 RID: 165889 RVA: 0x005924F2 File Offset: 0x005906F2
-		// (set) Token: 0x06028802 RID: 165890 RVA: 0x005924FA File Offset: 0x005906FA
+		// Token: 0x1700BB5E RID: 47966
+		// (get) Token: 0x0602AE0F RID: 175631 RVA: 0x005DA70A File Offset: 0x005D890A
+		// (set) Token: 0x0602AE10 RID: 175632 RVA: 0x005DA712 File Offset: 0x005D8912
 		public TInteractEntityPartBind Type { get; set; }
 
-		// Token: 0x1700B20D RID: 45581
-		// (get) Token: 0x06028803 RID: 165891 RVA: 0x00592503 File Offset: 0x00590703
-		// (set) Token: 0x06028804 RID: 165892 RVA: 0x0059250B File Offset: 0x0059070B
+		// Token: 0x1700BB5F RID: 47967
+		// (get) Token: 0x0602AE11 RID: 175633 RVA: 0x005DA71B File Offset: 0x005D891B
+		// (set) Token: 0x0602AE12 RID: 175634 RVA: 0x005DA723 File Offset: 0x005D8923
 		public object Value { get; set; }
 
-		// Token: 0x06028805 RID: 165893 RVA: 0x00592514 File Offset: 0x00590714
+		// Token: 0x0602AE13 RID: 175635 RVA: 0x005DA72C File Offset: 0x005D892C
 		public TInteractEntityPartBindUnion()
 		{
 			this.Type = TInteractEntityPartBind.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028806 RID: 165894 RVA: 0x0059252A File Offset: 0x0059072A
+		// Token: 0x0602AE14 RID: 175636 RVA: 0x005DA742 File Offset: 0x005D8942
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028807 RID: 165895 RVA: 0x0059253C File Offset: 0x0059073C
+		// Token: 0x0602AE15 RID: 175637 RVA: 0x005DA754 File Offset: 0x005D8954
 		public IInteractEntityPartModelBindT AsIInteractEntityPartModelBind()
 		{
 			return this.As<IInteractEntityPartModelBindT>();
 		}
 
-		// Token: 0x06028808 RID: 165896 RVA: 0x00592544 File Offset: 0x00590744
+		// Token: 0x0602AE16 RID: 175638 RVA: 0x005DA75C File Offset: 0x005D895C
 		public static TInteractEntityPartBindUnion FromIInteractEntityPartModelBind(IInteractEntityPartModelBindT _iinteractentitypartmodelbind)
 		{
 			return new TInteractEntityPartBindUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028809 RID: 165897 RVA: 0x00592559 File Offset: 0x00590759
+		// Token: 0x0602AE17 RID: 175639 RVA: 0x005DA771 File Offset: 0x005D8971
 		public IInteractEntityPartPrefabBindT AsIInteractEntityPartPrefabBind()
 		{
 			return this.As<IInteractEntityPartPrefabBindT>();
 		}
 
-		// Token: 0x0602880A RID: 165898 RVA: 0x00592561 File Offset: 0x00590761
+		// Token: 0x0602AE18 RID: 175640 RVA: 0x005DA779 File Offset: 0x005D8979
 		public static TInteractEntityPartBindUnion FromIInteractEntityPartPrefabBind(IInteractEntityPartPrefabBindT _iinteractentitypartprefabbind)
 		{
 			return new TInteractEntityPartBindUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602880B RID: 165899 RVA: 0x00592578 File Offset: 0x00590778
+		// Token: 0x0602AE19 RID: 175641 RVA: 0x005DA790 File Offset: 0x005D8990
 		public static int Pack(FlatBufferBuilder builder, TInteractEntityPartBindUnion _o)
 		{
 			TInteractEntityPartBind type = _o.Type;

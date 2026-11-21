@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001B3 RID: 435
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001CA RID: 458
 	public class IAiGearStrategy
 	{
-		// Token: 0x060006BC RID: 1724 RVA: 0x000238EC File Offset: 0x00021AEC
+		// Token: 0x060006D2 RID: 1746 RVA: 0x0002454C File Offset: 0x0002274C
 		private IAiGearStrategy_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060006BD RID: 1725 RVA: 0x00023924 File Offset: 0x00021B24
+		// Token: 0x060006D3 RID: 1747 RVA: 0x00024584 File Offset: 0x00022784
 		public static IAiGearStrategy Create([Nullable(2)] IAiGearStrategy instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060006BE RID: 1726 RVA: 0x00023937 File Offset: 0x00021B37
+		// Token: 0x060006D4 RID: 1748 RVA: 0x00024597 File Offset: 0x00022797
 		public static IAiGearStrategy CreateFromSetValue([Nullable(2)] IAiGearStrategy_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060006BF RID: 1727 RVA: 0x0002394A File Offset: 0x00021B4A
+		// Token: 0x060006D5 RID: 1749 RVA: 0x000245AA File Offset: 0x000227AA
 		public IAiGearStrategy_SetValue ToSetValue()
 		{
 			return new IAiGearStrategy_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700022F RID: 559
-		// (get) Token: 0x060006C0 RID: 1728 RVA: 0x00023969 File Offset: 0x00021B69
-		// (set) Token: 0x060006C1 RID: 1729 RVA: 0x00023994 File Offset: 0x00021B94
+		// Token: 0x17000237 RID: 567
+		// (get) Token: 0x060006D6 RID: 1750 RVA: 0x000245C9 File Offset: 0x000227C9
+		// (set) Token: 0x060006D7 RID: 1751 RVA: 0x000245F4 File Offset: 0x000227F4
 		public virtual EAiGearStrategy Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000230 RID: 560
-		// (get) Token: 0x060006C2 RID: 1730 RVA: 0x000239A4 File Offset: 0x00021BA4
-		// (set) Token: 0x060006C3 RID: 1731 RVA: 0x00023A05 File Offset: 0x00021C05
+		// Token: 0x17000238 RID: 568
+		// (get) Token: 0x060006D8 RID: 1752 RVA: 0x00024604 File Offset: 0x00022804
+		// (set) Token: 0x060006D9 RID: 1753 RVA: 0x00024665 File Offset: 0x00022865
 		[Nullable(2)]
 		public virtual IConditionGroup Condition
 		{
@@ -117,18 +115,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000843 RID: 2115
+		// Token: 0x0400089C RID: 2204
 		[Nullable(2)]
 		protected IAiGearStrategy FbInstance;
 
-		// Token: 0x04000844 RID: 2116
+		// Token: 0x0400089D RID: 2205
 		[Nullable(2)]
 		protected IAiGearStrategy_SetValue PocoInterface;
 
-		// Token: 0x04000845 RID: 2117
+		// Token: 0x0400089E RID: 2206
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04000846 RID: 2118
+		// Token: 0x0400089F RID: 2207
 		private bool _ConditionInited;
 	}
 }

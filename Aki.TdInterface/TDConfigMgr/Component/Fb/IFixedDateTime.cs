@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AB7 RID: 2743
+	// Token: 0x02000B81 RID: 2945
 	public class IFixedDateTime
 	{
-		// Token: 0x06003F39 RID: 16185 RVA: 0x000A19BE File Offset: 0x0009FBBE
-		[NullableContext(1)]
+		// Token: 0x06004363 RID: 17251 RVA: 0x000AAFB2 File Offset: 0x000A91B2
 		public static IFixedDateTime Create(IFixedDateTime? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F88 RID: 3976
-		// (get) Token: 0x06003F3A RID: 16186 RVA: 0x000A19DD File Offset: 0x0009FBDD
+		// Token: 0x1700105C RID: 4188
+		// (get) Token: 0x06004364 RID: 17252 RVA: 0x000AAFD1 File Offset: 0x000A91D1
 		public virtual int Hours
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F89 RID: 3977
-		// (get) Token: 0x06003F3B RID: 16187 RVA: 0x000A19EA File Offset: 0x0009FBEA
+		// Token: 0x1700105D RID: 4189
+		// (get) Token: 0x06004365 RID: 17253 RVA: 0x000AAFDE File Offset: 0x000A91DE
 		public virtual int Minutes
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F8A RID: 3978
-		// (get) Token: 0x06003F3C RID: 16188 RVA: 0x000A19F7 File Offset: 0x0009FBF7
+		// Token: 0x1700105E RID: 4190
+		// (get) Token: 0x06004366 RID: 17254 RVA: 0x000AAFEB File Offset: 0x000A91EB
 		public virtual int Seconds
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400231C RID: 8988
+		// Token: 0x04002538 RID: 9528
 		private IFixedDateTime Instance;
 	}
 }

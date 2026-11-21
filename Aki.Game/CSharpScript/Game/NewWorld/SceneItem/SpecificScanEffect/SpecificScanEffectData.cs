@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.SpecificScanEffect
 {
-	// Token: 0x020071B0 RID: 29104
+	// Token: 0x02006265 RID: 25189
 	public class SpecificScanEffectData : IStaticVariableResetter
 	{
-		// Token: 0x0604737F RID: 291711 RVA: 0x01219B3C File Offset: 0x01217D3C
+		// Token: 0x0603CC7A RID: 248954 RVA: 0x01173A40 File Offset: 0x01171C40
 		public SpecificScanEffectData(int id, [Nullable(new byte[]
 		{
 			0,
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SpecificScanEffect
 			this.ScanType = type.Value;
 		}
 
-		// Token: 0x06047380 RID: 291712 RVA: 0x01219BC9 File Offset: 0x01217DC9
+		// Token: 0x0603CC7B RID: 248955 RVA: 0x01173ACD File Offset: 0x01171CCD
 		static SpecificScanEffectData()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SpecificScanEffectData.CreateStaticDefaultValue), new Action(SpecificScanEffectData.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06047381 RID: 291713 RVA: 0x01219BE8 File Offset: 0x01217DE8
+		// Token: 0x0603CC7C RID: 248956 RVA: 0x01173AEC File Offset: 0x01171CEC
 		public static void CreateStaticDefaultValue()
 		{
 			SpecificScanEffectData._sphereTrace = null;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SpecificScanEffect
 			SpecificScanEffectData._maxScanInteractionEffectDistanceInternal = null;
 		}
 
-		// Token: 0x06047382 RID: 291714 RVA: 0x01219C12 File Offset: 0x01217E12
+		// Token: 0x0603CC7D RID: 248957 RVA: 0x01173B16 File Offset: 0x01171D16
 		public static void ResetStaticDefaultValue()
 		{
 			SpecificScanEffectData._sphereTrace = null;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SpecificScanEffect
 			SpecificScanEffectData._maxScanInteractionEffectDistanceInternal = null;
 		}
 
-		// Token: 0x06047383 RID: 291715 RVA: 0x01219C3C File Offset: 0x01217E3C
+		// Token: 0x0603CC7E RID: 248958 RVA: 0x01173B40 File Offset: 0x01171D40
 		public bool Update(float delta)
 		{
 			this.CurTime += delta * (float)TimeUtil.Instance.Millisecond;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SpecificScanEffect
 			return true;
 		}
 
-		// Token: 0x06047384 RID: 291716 RVA: 0x01219E0C File Offset: 0x0121800C
+		// Token: 0x0603CC7F RID: 248959 RVA: 0x01173D10 File Offset: 0x01171F10
 		private static void InitSphereTrace()
 		{
 			SpecificScanEffectData._sphereTrace = new UTraceSphereElement();
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SpecificScanEffect
 			}
 		}
 
-		// Token: 0x06047385 RID: 291717 RVA: 0x01219ED1 File Offset: 0x012180D1
+		// Token: 0x0603CC80 RID: 248960 RVA: 0x01173DD5 File Offset: 0x01171FD5
 		private static void CheckAndReleaseActor(float delta)
 		{
 			if (SpecificScanEffectData._useTrace)
@@ -160,8 +160,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SpecificScanEffect
 			SpecificScanEffectData._timer = null;
 		}
 
-		// Token: 0x17009DB2 RID: 40370
-		// (get) Token: 0x06047386 RID: 291718 RVA: 0x01219F10 File Offset: 0x01218110
+		// Token: 0x17007302 RID: 29442
+		// (get) Token: 0x0603CC81 RID: 248961 RVA: 0x01173E14 File Offset: 0x01172014
 		public static float MaxScanDistance
 		{
 			get
@@ -175,8 +175,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SpecificScanEffect
 			}
 		}
 
-		// Token: 0x17009DB3 RID: 40371
-		// (get) Token: 0x06047387 RID: 291719 RVA: 0x01219F7C File Offset: 0x0121817C
+		// Token: 0x17007303 RID: 29443
+		// (get) Token: 0x0603CC82 RID: 248962 RVA: 0x01173E80 File Offset: 0x01172080
 		public static float MaxScanInteractionEffectDistance
 		{
 			get
@@ -190,22 +190,22 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SpecificScanEffect
 			}
 		}
 
-		// Token: 0x06047388 RID: 291720 RVA: 0x01219FE5 File Offset: 0x012181E5
+		// Token: 0x0603CC83 RID: 248963 RVA: 0x01173EE9 File Offset: 0x011720E9
 		public static float GetScanMaxDistance()
 		{
 			return Math.Max(SpecificScanEffectData.MaxScanDistance, SpecificScanEffectData.MaxScanInteractionEffectDistance);
 		}
 
-		// Token: 0x0402572E RID: 153390
+		// Token: 0x0402039D RID: 131997
 		private const float SCAN_EFFECT_STOP_TIME = 1.6f;
 
-		// Token: 0x0402572F RID: 153391
+		// Token: 0x0402039E RID: 131998
 		private const int TIMER_PERIOD = 5000;
 
-		// Token: 0x04025730 RID: 153392
+		// Token: 0x0402039F RID: 131999
 		public int Id;
 
-		// Token: 0x04025731 RID: 153393
+		// Token: 0x040203A0 RID: 132000
 		[Nullable(new byte[]
 		{
 			0,
@@ -214,48 +214,48 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SpecificScanEffect
 		})]
 		public OneOf<BP_DistortionWave_C, BP_Fx_Scanning_2_7_C>? EffectActor;
 
-		// Token: 0x04025732 RID: 153394
+		// Token: 0x040203A1 RID: 132001
 		private readonly FVectorDouble? CurLoc;
 
-		// Token: 0x04025733 RID: 153395
+		// Token: 0x040203A2 RID: 132002
 		private float CurTime;
 
-		// Token: 0x04025734 RID: 153396
+		// Token: 0x040203A3 RID: 132003
 		private float CurRadius;
 
-		// Token: 0x04025735 RID: 153397
+		// Token: 0x040203A4 RID: 132004
 		private readonly ESpecificScanType ScanType = ESpecificScanType.ChargeSlash;
 
-		// Token: 0x04025736 RID: 153398
+		// Token: 0x040203A5 RID: 132005
 		[Nullable(1)]
 		private readonly HashSet<AActor> ScannedActor = new HashSet<AActor>();
 
-		// Token: 0x04025737 RID: 153399
+		// Token: 0x040203A6 RID: 132006
 		[Nullable(1)]
 		private readonly HashSet<TsBaseCharacter> TsBaseCharSet = new HashSet<TsBaseCharacter>();
 
-		// Token: 0x04025738 RID: 153400
+		// Token: 0x040203A7 RID: 132007
 		[Nullable(2)]
 		private static UTraceSphereElement _sphereTrace;
 
-		// Token: 0x04025739 RID: 153401
+		// Token: 0x040203A8 RID: 132008
 		private static bool _useTrace;
 
-		// Token: 0x0402573A RID: 153402
+		// Token: 0x040203A9 RID: 132009
 		[Nullable(2)]
 		private static TimerHandle _timer;
 
-		// Token: 0x0402573B RID: 153403
+		// Token: 0x040203AA RID: 132010
 		private static float? _maxScanDistanceInternal;
 
-		// Token: 0x0402573C RID: 153404
+		// Token: 0x040203AB RID: 132011
 		private static float? _maxScanInteractionEffectDistanceInternal;
 
-		// Token: 0x0200CF05 RID: 52997
+		// Token: 0x0200BA9A RID: 47770
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403E439 RID: 255033
+			// Token: 0x0403975E RID: 235358
 			public static TTimerAction <0>__CheckAndReleaseActor;
 		}
 	}

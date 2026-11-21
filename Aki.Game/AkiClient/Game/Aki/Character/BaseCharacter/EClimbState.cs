@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042A4 RID: 17060
+	// Token: 0x020032FF RID: 13055
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/EClimbState.EClimbState")]
 	public enum EClimbState : byte
 	{
-		// Token: 0x04017333 RID: 95027
+		// Token: 0x04012031 RID: 73777
 		无,
-		// Token: 0x04017334 RID: 95028
+		// Token: 0x04012032 RID: 73778
 		进入攀爬,
-		// Token: 0x04017335 RID: 95029
+		// Token: 0x04012033 RID: 73779
 		攀爬中,
-		// Token: 0x04017336 RID: 95030
+		// Token: 0x04012034 RID: 73780
 		退出攀爬,
-		// Token: 0x04017337 RID: 95031
+		// Token: 0x04012035 RID: 73781
 		跳下退出,
-		// Token: 0x04017338 RID: 95032
+		// Token: 0x04012036 RID: 73782
 		EClimbState_MAX
 	}
 }

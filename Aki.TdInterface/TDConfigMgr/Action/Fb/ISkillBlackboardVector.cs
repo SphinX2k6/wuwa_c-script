@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028CD RID: 10445
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BA2 RID: 11170
 	public class ISkillBlackboardVector
 	{
-		// Token: 0x0600E7FF RID: 59391 RVA: 0x00220E16 File Offset: 0x0021F016
+		// Token: 0x0600F62E RID: 63022 RVA: 0x0023DD96 File Offset: 0x0023BF96
 		public static ISkillBlackboardVector Create(ISkillBlackboardVector? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004827 RID: 18471
-		// (get) Token: 0x0600E800 RID: 59392 RVA: 0x00220E35 File Offset: 0x0021F035
+		// Token: 0x17004B98 RID: 19352
+		// (get) Token: 0x0600F62F RID: 63023 RVA: 0x0023DDB5 File Offset: 0x0023BFB5
 		public virtual string Key
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004828 RID: 18472
-		// (get) Token: 0x0600E801 RID: 59393 RVA: 0x00220E42 File Offset: 0x0021F042
+		// Token: 0x17004B99 RID: 19353
+		// (get) Token: 0x0600F630 RID: 63024 RVA: 0x0023DDC2 File Offset: 0x0023BFC2
 		public virtual VectorInfo Value
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400803F RID: 32831
+		// Token: 0x040086FE RID: 34558
 		private ISkillBlackboardVector Instance;
 
-		// Token: 0x04008040 RID: 32832
+		// Token: 0x040086FF RID: 34559
 		[Nullable(2)]
 		private VectorInfo _ValueCache;
 
-		// Token: 0x04008041 RID: 32833
+		// Token: 0x04008700 RID: 34560
 		private bool _ValueInited;
 	}
 }

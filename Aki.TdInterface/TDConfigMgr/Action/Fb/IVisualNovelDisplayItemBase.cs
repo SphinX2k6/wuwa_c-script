@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200256C RID: 9580
+	// Token: 0x02002815 RID: 10261
 	public class IVisualNovelDisplayItemBase
 	{
-		// Token: 0x0600D705 RID: 55045 RVA: 0x002009EB File Offset: 0x001FEBEB
-		[NullableContext(1)]
+		// Token: 0x0600E470 RID: 58480 RVA: 0x0021C5F4 File Offset: 0x0021A7F4
 		public static IVisualNovelDisplayItemBase Create(IVisualNovelDisplayItemBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003DEF RID: 15855
-		// (get) Token: 0x0600D706 RID: 55046 RVA: 0x00200A0A File Offset: 0x001FEC0A
+		// Token: 0x170040F4 RID: 16628
+		// (get) Token: 0x0600E471 RID: 58481 RVA: 0x0021C613 File Offset: 0x0021A813
 		public virtual EVisualNovelDisplayItemType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400770E RID: 30478
+		// Token: 0x04007D6B RID: 32107
 		private IVisualNovelDisplayItemBase Instance;
 	}
 }

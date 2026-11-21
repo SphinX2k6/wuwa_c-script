@@ -9,12 +9,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020011A4 RID: 4516
+// Token: 0x02000658 RID: 1624
 [NullableContext(1)]
 [Nullable(0)]
 public class BeginnerCarnivalTaskItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600778C RID: 30604 RVA: 0x0018FE14 File Offset: 0x0018E014
+	// Token: 0x06004B23 RID: 19235 RVA: 0x001989F8 File Offset: 0x00196BF8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,19 +38,19 @@ public class BeginnerCarnivalTaskItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0600778D RID: 30605 RVA: 0x0018FF5C File Offset: 0x0018E15C
+	// Token: 0x06004B24 RID: 19236 RVA: 0x00198B40 File Offset: 0x00196D40
 	protected override void OnStart()
 	{
 		this.ScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(6), new Func<CommonItemSmallItemGrid>(this.CreatePropItem), null, false, null);
 	}
 
-	// Token: 0x0600778E RID: 30606 RVA: 0x0018FF7F File Offset: 0x0018E17F
+	// Token: 0x06004B25 RID: 19237 RVA: 0x00198B63 File Offset: 0x00196D63
 	private CommonItemSmallItemGrid CreatePropItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600778F RID: 30607 RVA: 0x0018FF88 File Offset: 0x0018E188
+	// Token: 0x06004B26 RID: 19238 RVA: 0x00198B6C File Offset: 0x00196D6C
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.TaskId = data;
@@ -83,13 +83,13 @@ public class BeginnerCarnivalTaskItem : GridProxyAbstract<int>
 		base.GetText(2).SetUIActive(flag && !flag2);
 	}
 
-	// Token: 0x06007790 RID: 30608 RVA: 0x00190165 File Offset: 0x0018E365
+	// Token: 0x06004B27 RID: 19239 RVA: 0x00198D49 File Offset: 0x00196F49
 	private void OnClickGetBtn()
 	{
 		BeginnerCarnivalController.Instance.NewbieCarnivalAwardRequest(this.TaskId);
 	}
 
-	// Token: 0x06007791 RID: 30609 RVA: 0x00190178 File Offset: 0x0018E378
+	// Token: 0x06004B28 RID: 19240 RVA: 0x00198D5C File Offset: 0x00196F5C
 	private void OnClickCanNotJumpBtn()
 	{
 		List<IActivityConditionData> list = new List<IActivityConditionData>();
@@ -120,13 +120,13 @@ public class BeginnerCarnivalTaskItem : GridProxyAbstract<int>
 		UiManager.Instance.OpenView(EUiViewName.CommonConditionView, param, null);
 	}
 
-	// Token: 0x06007792 RID: 30610 RVA: 0x001902AD File Offset: 0x0018E4AD
+	// Token: 0x06004B29 RID: 19241 RVA: 0x00198E91 File Offset: 0x00197091
 	private bool IsConditionFinished(int conditionGroupId)
 	{
 		return this.HaveDoneConditionGroupList.Contains(conditionGroupId);
 	}
 
-	// Token: 0x06007793 RID: 30611 RVA: 0x001902BB File Offset: 0x0018E4BB
+	// Token: 0x06004B2A RID: 19242 RVA: 0x00198E9F File Offset: 0x0019709F
 	private void OnClickJumpBtn()
 	{
 		if (this.SkipId <= 0)
@@ -136,16 +136,16 @@ public class BeginnerCarnivalTaskItem : GridProxyAbstract<int>
 		SkipTaskManager.RunByConfigId(this.SkipId, null);
 	}
 
-	// Token: 0x0400370A RID: 14090
+	// Token: 0x040037A3 RID: 14243
 	private int TaskId;
 
-	// Token: 0x0400370B RID: 14091
+	// Token: 0x040037A4 RID: 14244
 	private int SkipId;
 
-	// Token: 0x0400370C RID: 14092
+	// Token: 0x040037A5 RID: 14245
 	private List<int> HaveDoneConditionGroupList = new List<int>();
 
-	// Token: 0x0400370D RID: 14093
+	// Token: 0x040037A6 RID: 14246
 	[Nullable(new byte[]
 	{
 		2,

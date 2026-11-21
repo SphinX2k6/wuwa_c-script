@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004648 RID: 17992
+	// Token: 0x02004AB0 RID: 19120
 	public struct IExitDungeonInGm : IFlatbufferObject
 	{
-		// Token: 0x17007FA6 RID: 32678
-		// (get) Token: 0x0601B40F RID: 111631 RVA: 0x003E0DD0 File Offset: 0x003DEFD0
+		// Token: 0x170085E7 RID: 34279
+		// (get) Token: 0x0601CBE4 RID: 117732 RVA: 0x0040D06C File Offset: 0x0040B26C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B410 RID: 111632 RVA: 0x003E0DDD File Offset: 0x003DEFDD
+		// Token: 0x0601CBE5 RID: 117733 RVA: 0x0040D079 File Offset: 0x0040B279
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B411 RID: 111633 RVA: 0x003E0DE4 File Offset: 0x003DEFE4
+		// Token: 0x0601CBE6 RID: 117734 RVA: 0x0040D080 File Offset: 0x0040B280
 		public static IExitDungeonInGm GetRootAsIExitDungeonInGm(ByteBuffer _bb)
 		{
 			return IExitDungeonInGm.GetRootAsIExitDungeonInGm(_bb, default(IExitDungeonInGm));
 		}
 
-		// Token: 0x0601B412 RID: 111634 RVA: 0x003E0E00 File Offset: 0x003DF000
+		// Token: 0x0601CBE7 RID: 117735 RVA: 0x0040D09C File Offset: 0x0040B29C
 		public static IExitDungeonInGm GetRootAsIExitDungeonInGm(ByteBuffer _bb, IExitDungeonInGm obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B413 RID: 111635 RVA: 0x003E0E1D File Offset: 0x003DF01D
+		// Token: 0x0601CBE8 RID: 117736 RVA: 0x0040D0B9 File Offset: 0x0040B2B9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B414 RID: 111636 RVA: 0x003E0E2C File Offset: 0x003DF02C
+		// Token: 0x0601CBE9 RID: 117737 RVA: 0x0040D0C8 File Offset: 0x0040B2C8
 		public IExitDungeonInGm __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007FA7 RID: 32679
-		// (get) Token: 0x0601B415 RID: 111637 RVA: 0x003E0E3C File Offset: 0x003DF03C
+		// Token: 0x170085E8 RID: 34280
+		// (get) Token: 0x0601CBEA RID: 117738 RVA: 0x0040D0D8 File Offset: 0x0040B2D8
 		public EGmCommand Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B416 RID: 111638 RVA: 0x003E0E78 File Offset: 0x003DF078
+		// Token: 0x0601CBEB RID: 117739 RVA: 0x0040D114 File Offset: 0x0040B314
 		public static Offset<IExitDungeonInGm> CreateIExitDungeonInGm(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IExitDungeonInGm.EndIExitDungeonInGm(builder);
 		}
 
-		// Token: 0x0601B417 RID: 111639 RVA: 0x003E0E8E File Offset: 0x003DF08E
+		// Token: 0x0601CBEC RID: 117740 RVA: 0x0040D12A File Offset: 0x0040B32A
 		public static void StartIExitDungeonInGm(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601B418 RID: 111640 RVA: 0x003E0E97 File Offset: 0x003DF097
+		// Token: 0x0601CBED RID: 117741 RVA: 0x0040D133 File Offset: 0x0040B333
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B419 RID: 111641 RVA: 0x003E0EA2 File Offset: 0x003DF0A2
+		// Token: 0x0601CBEE RID: 117742 RVA: 0x0040D13E File Offset: 0x0040B33E
 		public static Offset<IExitDungeonInGm> EndIExitDungeonInGm(FlatBufferBuilder builder)
 		{
 			return new Offset<IExitDungeonInGm>(builder.EndTable());
 		}
 
-		// Token: 0x0601B41A RID: 111642 RVA: 0x003E0EB0 File Offset: 0x003DF0B0
+		// Token: 0x0601CBEF RID: 117743 RVA: 0x0040D14C File Offset: 0x0040B34C
 		public IExitDungeonInGmT UnPack()
 		{
 			IExitDungeonInGmT exitDungeonInGmT = new IExitDungeonInGmT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return exitDungeonInGmT;
 		}
 
-		// Token: 0x0601B41B RID: 111643 RVA: 0x003E0ECB File Offset: 0x003DF0CB
+		// Token: 0x0601CBF0 RID: 117744 RVA: 0x0040D167 File Offset: 0x0040B367
 		public void UnPackTo(IExitDungeonInGmT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601B41C RID: 111644 RVA: 0x003E0EDC File Offset: 0x003DF0DC
+		// Token: 0x0601CBF1 RID: 117745 RVA: 0x0040D178 File Offset: 0x0040B378
 		public static Offset<IExitDungeonInGm> Pack(FlatBufferBuilder builder, IExitDungeonInGmT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IExitDungeonInGm.CreateIExitDungeonInGm(builder, _o.Type);
 		}
 
-		// Token: 0x0400C7BD RID: 51133
+		// Token: 0x0400D1EC RID: 53740
 		private Table __p;
 	}
 }

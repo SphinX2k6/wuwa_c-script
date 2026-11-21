@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056FE RID: 22270
+	// Token: 0x02005CED RID: 23789
 	public struct IPathDrivenActorSplineMove : IFlatbufferObject
 	{
-		// Token: 0x1700A5C0 RID: 42432
-		// (get) Token: 0x06025379 RID: 152441 RVA: 0x00522D36 File Offset: 0x00520F36
+		// Token: 0x1700AEC3 RID: 44739
+		// (get) Token: 0x060277E0 RID: 161760 RVA: 0x00567782 File Offset: 0x00565982
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602537A RID: 152442 RVA: 0x00522D43 File Offset: 0x00520F43
+		// Token: 0x060277E1 RID: 161761 RVA: 0x0056778F File Offset: 0x0056598F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602537B RID: 152443 RVA: 0x00522D4C File Offset: 0x00520F4C
+		// Token: 0x060277E2 RID: 161762 RVA: 0x00567798 File Offset: 0x00565998
 		public static IPathDrivenActorSplineMove GetRootAsIPathDrivenActorSplineMove(ByteBuffer _bb)
 		{
 			return IPathDrivenActorSplineMove.GetRootAsIPathDrivenActorSplineMove(_bb, default(IPathDrivenActorSplineMove));
 		}
 
-		// Token: 0x0602537C RID: 152444 RVA: 0x00522D68 File Offset: 0x00520F68
+		// Token: 0x060277E3 RID: 161763 RVA: 0x005677B4 File Offset: 0x005659B4
 		public static IPathDrivenActorSplineMove GetRootAsIPathDrivenActorSplineMove(ByteBuffer _bb, IPathDrivenActorSplineMove obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602537D RID: 152445 RVA: 0x00522D85 File Offset: 0x00520F85
+		// Token: 0x060277E4 RID: 161764 RVA: 0x005677D1 File Offset: 0x005659D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602537E RID: 152446 RVA: 0x00522D94 File Offset: 0x00520F94
+		// Token: 0x060277E5 RID: 161765 RVA: 0x005677E0 File Offset: 0x005659E0
 		public IPathDrivenActorSplineMove __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A5C1 RID: 42433
-		// (get) Token: 0x0602537F RID: 152447 RVA: 0x00522DA4 File Offset: 0x00520FA4
+		// Token: 0x1700AEC4 RID: 44740
+		// (get) Token: 0x060277E6 RID: 161766 RVA: 0x005677F0 File Offset: 0x005659F0
 		public EPathDrivenActorMoveType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025380 RID: 152448 RVA: 0x00522DE0 File Offset: 0x00520FE0
+		// Token: 0x060277E7 RID: 161767 RVA: 0x0056782C File Offset: 0x00565A2C
 		public int SplineEntityIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700A5C2 RID: 42434
-		// (get) Token: 0x06025381 RID: 152449 RVA: 0x00522E20 File Offset: 0x00521020
+		// Token: 0x1700AEC5 RID: 44741
+		// (get) Token: 0x060277E8 RID: 161768 RVA: 0x0056786C File Offset: 0x00565A6C
 		public int SplineEntityIdsLength
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025382 RID: 152450 RVA: 0x00522E4B File Offset: 0x0052104B
+		// Token: 0x060277E9 RID: 161769 RVA: 0x00567897 File Offset: 0x00565A97
 		public Span<int> GetSplineEntityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06025383 RID: 152451 RVA: 0x00522E5A File Offset: 0x0052105A
+		// Token: 0x060277EA RID: 161770 RVA: 0x005678A6 File Offset: 0x00565AA6
 		public int[] GetSplineEntityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x1700A5C3 RID: 42435
-		// (get) Token: 0x06025384 RID: 152452 RVA: 0x00522E68 File Offset: 0x00521068
+		// Token: 0x1700AEC6 RID: 44742
+		// (get) Token: 0x060277EB RID: 161771 RVA: 0x005678B4 File Offset: 0x00565AB4
 		public bool IsRandomSpline
 		{
 			get
@@ -112,8 +112,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A5C4 RID: 42436
-		// (get) Token: 0x06025385 RID: 152453 RVA: 0x00522EA8 File Offset: 0x005210A8
+		// Token: 0x1700AEC7 RID: 44743
+		// (get) Token: 0x060277EC RID: 161772 RVA: 0x005678F4 File Offset: 0x00565AF4
 		public bool IsChainedSpline
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A5C5 RID: 42437
-		// (get) Token: 0x06025386 RID: 152454 RVA: 0x00522EE8 File Offset: 0x005210E8
+		// Token: 0x1700AEC8 RID: 44744
+		// (get) Token: 0x060277ED RID: 161773 RVA: 0x00567934 File Offset: 0x00565B34
 		public bool IsLoop
 		{
 			get
@@ -134,8 +134,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A5C6 RID: 42438
-		// (get) Token: 0x06025387 RID: 152455 RVA: 0x00522F28 File Offset: 0x00521128
+		// Token: 0x1700AEC9 RID: 44745
+		// (get) Token: 0x060277EE RID: 161774 RVA: 0x00567974 File Offset: 0x00565B74
 		public bool IsFollowSplineDir
 		{
 			get
@@ -145,8 +145,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A5C7 RID: 42439
-		// (get) Token: 0x06025388 RID: 152456 RVA: 0x00522F68 File Offset: 0x00521168
+		// Token: 0x1700AECA RID: 44746
+		// (get) Token: 0x060277EF RID: 161775 RVA: 0x005679B4 File Offset: 0x00565BB4
 		public byte NullMask
 		{
 			get
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025389 RID: 152457 RVA: 0x00522FA8 File Offset: 0x005211A8
+		// Token: 0x060277F0 RID: 161776 RVA: 0x005679F4 File Offset: 0x00565BF4
 		public static Offset<IPathDrivenActorSplineMove> CreateIPathDrivenActorSplineMove(FlatBufferBuilder builder, EPathDrivenActorMoveType Type = EPathDrivenActorMoveType.Spline, VectorOffset SplineEntityIdsOffset = default(VectorOffset), bool IsRandomSpline = false, bool IsChainedSpline = false, bool IsLoop = false, bool IsFollowSplineDir = false, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -174,25 +174,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPathDrivenActorSplineMove.EndIPathDrivenActorSplineMove(builder);
 		}
 
-		// Token: 0x0602538A RID: 152458 RVA: 0x00522FF7 File Offset: 0x005211F7
+		// Token: 0x060277F1 RID: 161777 RVA: 0x00567A43 File Offset: 0x00565C43
 		public static void StartIPathDrivenActorSplineMove(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x0602538B RID: 152459 RVA: 0x00523000 File Offset: 0x00521200
+		// Token: 0x060277F2 RID: 161778 RVA: 0x00567A4C File Offset: 0x00565C4C
 		public static void AddType(FlatBufferBuilder builder, EPathDrivenActorMoveType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602538C RID: 152460 RVA: 0x0052300B File Offset: 0x0052120B
+		// Token: 0x060277F3 RID: 161779 RVA: 0x00567A57 File Offset: 0x00565C57
 		public static void AddSplineEntityIds(FlatBufferBuilder builder, VectorOffset splineEntityIdsOffset)
 		{
 			builder.AddOffset(1, splineEntityIdsOffset.Value, 0);
 		}
 
-		// Token: 0x0602538D RID: 152461 RVA: 0x0052301C File Offset: 0x0052121C
+		// Token: 0x060277F4 RID: 161780 RVA: 0x00567A68 File Offset: 0x00565C68
 		public static VectorOffset CreateSplineEntityIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -203,7 +203,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602538E RID: 152462 RVA: 0x00523053 File Offset: 0x00521253
+		// Token: 0x060277F5 RID: 161781 RVA: 0x00567A9F File Offset: 0x00565C9F
 		public static VectorOffset CreateSplineEntityIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -211,7 +211,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602538F RID: 152463 RVA: 0x0052306D File Offset: 0x0052126D
+		// Token: 0x060277F6 RID: 161782 RVA: 0x00567AB9 File Offset: 0x00565CB9
 		public static VectorOffset CreateSplineEntityIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -219,7 +219,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025390 RID: 152464 RVA: 0x0052308B File Offset: 0x0052128B
+		// Token: 0x060277F7 RID: 161783 RVA: 0x00567AD7 File Offset: 0x00565CD7
 		public static VectorOffset CreateSplineEntityIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -227,49 +227,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025391 RID: 152465 RVA: 0x005230A4 File Offset: 0x005212A4
+		// Token: 0x060277F8 RID: 161784 RVA: 0x00567AF0 File Offset: 0x00565CF0
 		public static void StartSplineEntityIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06025392 RID: 152466 RVA: 0x005230AF File Offset: 0x005212AF
+		// Token: 0x060277F9 RID: 161785 RVA: 0x00567AFB File Offset: 0x00565CFB
 		public static void AddIsRandomSpline(FlatBufferBuilder builder, bool isRandomSpline)
 		{
 			builder.AddBool(2, isRandomSpline, false);
 		}
 
-		// Token: 0x06025393 RID: 152467 RVA: 0x005230BA File Offset: 0x005212BA
+		// Token: 0x060277FA RID: 161786 RVA: 0x00567B06 File Offset: 0x00565D06
 		public static void AddIsChainedSpline(FlatBufferBuilder builder, bool isChainedSpline)
 		{
 			builder.AddBool(3, isChainedSpline, false);
 		}
 
-		// Token: 0x06025394 RID: 152468 RVA: 0x005230C5 File Offset: 0x005212C5
+		// Token: 0x060277FB RID: 161787 RVA: 0x00567B11 File Offset: 0x00565D11
 		public static void AddIsLoop(FlatBufferBuilder builder, bool isLoop)
 		{
 			builder.AddBool(4, isLoop, false);
 		}
 
-		// Token: 0x06025395 RID: 152469 RVA: 0x005230D0 File Offset: 0x005212D0
+		// Token: 0x060277FC RID: 161788 RVA: 0x00567B1C File Offset: 0x00565D1C
 		public static void AddIsFollowSplineDir(FlatBufferBuilder builder, bool isFollowSplineDir)
 		{
 			builder.AddBool(5, isFollowSplineDir, false);
 		}
 
-		// Token: 0x06025396 RID: 152470 RVA: 0x005230DB File Offset: 0x005212DB
+		// Token: 0x060277FD RID: 161789 RVA: 0x00567B27 File Offset: 0x00565D27
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x06025397 RID: 152471 RVA: 0x005230E6 File Offset: 0x005212E6
+		// Token: 0x060277FE RID: 161790 RVA: 0x00567B32 File Offset: 0x00565D32
 		public static Offset<IPathDrivenActorSplineMove> EndIPathDrivenActorSplineMove(FlatBufferBuilder builder)
 		{
 			return new Offset<IPathDrivenActorSplineMove>(builder.EndTable());
 		}
 
-		// Token: 0x06025398 RID: 152472 RVA: 0x005230F4 File Offset: 0x005212F4
+		// Token: 0x060277FF RID: 161791 RVA: 0x00567B40 File Offset: 0x00565D40
 		public IPathDrivenActorSplineMoveT UnPack()
 		{
 			IPathDrivenActorSplineMoveT pathDrivenActorSplineMoveT = new IPathDrivenActorSplineMoveT();
@@ -277,7 +277,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return pathDrivenActorSplineMoveT;
 		}
 
-		// Token: 0x06025399 RID: 152473 RVA: 0x00523110 File Offset: 0x00521310
+		// Token: 0x06027800 RID: 161792 RVA: 0x00567B5C File Offset: 0x00565D5C
 		public void UnPackTo(IPathDrivenActorSplineMoveT _o)
 		{
 			_o.Type = this.Type;
@@ -293,7 +293,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602539A RID: 152474 RVA: 0x00523194 File Offset: 0x00521394
+		// Token: 0x06027801 RID: 161793 RVA: 0x00567BE0 File Offset: 0x00565DE0
 		public static Offset<IPathDrivenActorSplineMove> Pack(FlatBufferBuilder builder, IPathDrivenActorSplineMoveT _o)
 		{
 			if (_o == null)
@@ -309,7 +309,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPathDrivenActorSplineMove.CreateIPathDrivenActorSplineMove(builder, _o.Type, splineEntityIdsOffset, _o.IsRandomSpline, _o.IsChainedSpline, _o.IsLoop, _o.IsFollowSplineDir, _o.NullMask);
 		}
 
-		// Token: 0x0400EB55 RID: 60245
+		// Token: 0x0400F822 RID: 63522
 		private Table __p;
 	}
 }

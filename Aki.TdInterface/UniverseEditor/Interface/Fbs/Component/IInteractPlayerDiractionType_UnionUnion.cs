@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005465 RID: 21605
+	// Token: 0x020059EB RID: 23019
 	public class IInteractPlayerDiractionType_UnionUnion
 	{
-		// Token: 0x17009F10 RID: 40720
-		// (get) Token: 0x060238A7 RID: 145575 RVA: 0x004EA865 File Offset: 0x004E8A65
-		// (set) Token: 0x060238A8 RID: 145576 RVA: 0x004EA86D File Offset: 0x004E8A6D
+		// Token: 0x1700A74A RID: 42826
+		// (get) Token: 0x0602595F RID: 153951 RVA: 0x005278D9 File Offset: 0x00525AD9
+		// (set) Token: 0x06025960 RID: 153952 RVA: 0x005278E1 File Offset: 0x00525AE1
 		public IInteractPlayerDiractionType_Union Type { get; set; }
 
-		// Token: 0x17009F11 RID: 40721
-		// (get) Token: 0x060238A9 RID: 145577 RVA: 0x004EA876 File Offset: 0x004E8A76
-		// (set) Token: 0x060238AA RID: 145578 RVA: 0x004EA87E File Offset: 0x004E8A7E
+		// Token: 0x1700A74B RID: 42827
+		// (get) Token: 0x06025961 RID: 153953 RVA: 0x005278EA File Offset: 0x00525AEA
+		// (set) Token: 0x06025962 RID: 153954 RVA: 0x005278F2 File Offset: 0x00525AF2
 		public object Value { get; set; }
 
-		// Token: 0x060238AB RID: 145579 RVA: 0x004EA887 File Offset: 0x004E8A87
+		// Token: 0x06025963 RID: 153955 RVA: 0x005278FB File Offset: 0x00525AFB
 		public IInteractPlayerDiractionType_UnionUnion()
 		{
 			this.Type = IInteractPlayerDiractionType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060238AC RID: 145580 RVA: 0x004EA89D File Offset: 0x004E8A9D
+		// Token: 0x06025964 RID: 153956 RVA: 0x00527911 File Offset: 0x00525B11
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060238AD RID: 145581 RVA: 0x004EA8AF File Offset: 0x004E8AAF
+		// Token: 0x06025965 RID: 153957 RVA: 0x00527923 File Offset: 0x00525B23
 		public IInteractPlayerDiractionTypeT AsIInteractPlayerDiractionType()
 		{
 			return this.As<IInteractPlayerDiractionTypeT>();
 		}
 
-		// Token: 0x060238AE RID: 145582 RVA: 0x004EA8B7 File Offset: 0x004E8AB7
+		// Token: 0x06025966 RID: 153958 RVA: 0x0052792B File Offset: 0x00525B2B
 		public static IInteractPlayerDiractionType_UnionUnion FromIInteractPlayerDiractionType(IInteractPlayerDiractionTypeT _iinteractplayerdiractiontype)
 		{
 			return new IInteractPlayerDiractionType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060238AF RID: 145583 RVA: 0x004EA8CC File Offset: 0x004E8ACC
+		// Token: 0x06025967 RID: 153959 RVA: 0x00527940 File Offset: 0x00525B40
 		public IInteractPlayerDiractionToNpcT AsIInteractPlayerDiractionToNpc()
 		{
 			return this.As<IInteractPlayerDiractionToNpcT>();
 		}
 
-		// Token: 0x060238B0 RID: 145584 RVA: 0x004EA8D4 File Offset: 0x004E8AD4
+		// Token: 0x06025968 RID: 153960 RVA: 0x00527948 File Offset: 0x00525B48
 		public static IInteractPlayerDiractionType_UnionUnion FromIInteractPlayerDiractionToNpc(IInteractPlayerDiractionToNpcT _iinteractplayerdiractiontonpc)
 		{
 			return new IInteractPlayerDiractionType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060238B1 RID: 145585 RVA: 0x004EA8E9 File Offset: 0x004E8AE9
+		// Token: 0x06025969 RID: 153961 RVA: 0x0052795D File Offset: 0x00525B5D
 		public IInteractPlayerDiractionToLeisureT AsIInteractPlayerDiractionToLeisure()
 		{
 			return this.As<IInteractPlayerDiractionToLeisureT>();
 		}
 
-		// Token: 0x060238B2 RID: 145586 RVA: 0x004EA8F1 File Offset: 0x004E8AF1
+		// Token: 0x0602596A RID: 153962 RVA: 0x00527965 File Offset: 0x00525B65
 		public static IInteractPlayerDiractionType_UnionUnion FromIInteractPlayerDiractionToLeisure(IInteractPlayerDiractionToLeisureT _iinteractplayerdiractiontoleisure)
 		{
 			return new IInteractPlayerDiractionType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060238B3 RID: 145587 RVA: 0x004EA908 File Offset: 0x004E8B08
+		// Token: 0x0602596B RID: 153963 RVA: 0x0052797C File Offset: 0x00525B7C
 		public static int Pack(FlatBufferBuilder builder, IInteractPlayerDiractionType_UnionUnion _o)
 		{
 			switch (_o.Type)

@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol.Summon;
 
-// Token: 0x02002F47 RID: 12103
+// Token: 0x0200249A RID: 9370
 [NullableContext(1)]
 [Nullable(0)]
 public class AddBuffToVision : BuffEffect
 {
-	// Token: 0x06019C45 RID: 105541 RVA: 0x006B75F8 File Offset: 0x006B57F8
+	// Token: 0x06017550 RID: 95568 RVA: 0x006DD914 File Offset: 0x006DBB14
 	public AddBuffToVision(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C46 RID: 105542 RVA: 0x006B7614 File Offset: 0x006B5814
+	// Token: 0x06017551 RID: 95569 RVA: 0x006DD930 File Offset: 0x006DBB30
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -35,7 +35,7 @@ public class AddBuffToVision : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C47 RID: 105543 RVA: 0x006B76B8 File Offset: 0x006B58B8
+	// Token: 0x06017552 RID: 95570 RVA: 0x006DD9D4 File Offset: 0x006DBBD4
 	public override void OnCreated()
 	{
 		EntityHandle summonedEntity = PhantomUtil.GetSummonedEntity(base.OwnerEntity, (ESummonType)this.SummonType, this.SummonIndex);
@@ -68,14 +68,14 @@ public class AddBuffToVision : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C48 RID: 105544 RVA: 0x006B77C6 File Offset: 0x006B59C6
+	// Token: 0x06017553 RID: 95571 RVA: 0x006DDAE2 File Offset: 0x006DBCE2
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C49 RID: 105545 RVA: 0x006B77CC File Offset: 0x006B59CC
+	// Token: 0x06017554 RID: 95572 RVA: 0x006DDAE8 File Offset: 0x006DBCE8
 	public override void OnRemoved(bool bPremature)
 	{
 		EntityHandle summonedEntity = PhantomUtil.GetSummonedEntity(base.OwnerEntity, (ESummonType)this.SummonType, 1);
@@ -97,12 +97,12 @@ public class AddBuffToVision : BuffEffect
 		}
 	}
 
-	// Token: 0x0400C23B RID: 49723
+	// Token: 0x0400C5DD RID: 50653
 	protected int SummonType;
 
-	// Token: 0x0400C23C RID: 49724
+	// Token: 0x0400C5DE RID: 50654
 	protected int SummonIndex;
 
-	// Token: 0x0400C23D RID: 49725
+	// Token: 0x0400C5DF RID: 50655
 	protected long[] BuffIds = Array.Empty<long>();
 }

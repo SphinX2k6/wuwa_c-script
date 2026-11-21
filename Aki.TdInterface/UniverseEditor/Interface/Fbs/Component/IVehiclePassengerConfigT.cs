@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B27 RID: 23335
+	// Token: 0x0200613D RID: 24893
 	public class IVehiclePassengerConfigT
 	{
-		// Token: 0x1700B028 RID: 45096
-		// (get) Token: 0x06027E26 RID: 163366 RVA: 0x0057C2D4 File Offset: 0x0057A4D4
-		// (set) Token: 0x06027E27 RID: 163367 RVA: 0x0057C2DC File Offset: 0x0057A4DC
+		// Token: 0x1700B970 RID: 47472
+		// (get) Token: 0x0602A3EA RID: 173034 RVA: 0x005C3D28 File Offset: 0x005C1F28
+		// (set) Token: 0x0602A3EB RID: 173035 RVA: 0x005C3D30 File Offset: 0x005C1F30
 		public int PassengerNpc { get; set; }
 
-		// Token: 0x1700B029 RID: 45097
-		// (get) Token: 0x06027E28 RID: 163368 RVA: 0x0057C2E5 File Offset: 0x0057A4E5
-		// (set) Token: 0x06027E29 RID: 163369 RVA: 0x0057C2ED File Offset: 0x0057A4ED
+		// Token: 0x1700B971 RID: 47473
+		// (get) Token: 0x0602A3EC RID: 173036 RVA: 0x005C3D39 File Offset: 0x005C1F39
+		// (set) Token: 0x0602A3ED RID: 173037 RVA: 0x005C3D41 File Offset: 0x005C1F41
 		public int Seat { get; set; }
 
-		// Token: 0x06027E2A RID: 163370 RVA: 0x0057C2F6 File Offset: 0x0057A4F6
+		// Token: 0x0602A3EE RID: 173038 RVA: 0x005C3D4A File Offset: 0x005C1F4A
 		public IVehiclePassengerConfigT()
 		{
 			this.PassengerNpc = 0;

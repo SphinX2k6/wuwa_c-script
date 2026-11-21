@@ -8,16 +8,16 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002433 RID: 9267
+// Token: 0x02001918 RID: 6424
 public class PhantomBattleFettersObtainView : UiViewBase
 {
-	// Token: 0x0601295C RID: 76124 RVA: 0x00495658 File Offset: 0x00493858
+	// Token: 0x0600FE12 RID: 65042 RVA: 0x004A2C24 File Offset: 0x004A0E24
 	[NullableContext(1)]
 	public PhantomBattleFettersObtainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601295D RID: 76125 RVA: 0x00495664 File Offset: 0x00493864
+	// Token: 0x0600FE13 RID: 65043 RVA: 0x004A2C30 File Offset: 0x004A0E30
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class PhantomBattleFettersObtainView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601295E RID: 76126 RVA: 0x004956CC File Offset: 0x004938CC
+	// Token: 0x0600FE14 RID: 65044 RVA: 0x004A2C98 File Offset: 0x004A0E98
 	[NullableContext(1)]
 	private ILayoutItem<PhantomFettersObtainItem> InitFettersItem(object data, UUIItem item, int index)
 	{
@@ -46,7 +46,7 @@ public class PhantomBattleFettersObtainView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601295F RID: 76127 RVA: 0x0049571C File Offset: 0x0049391C
+	// Token: 0x0600FE15 RID: 65045 RVA: 0x004A2CE8 File Offset: 0x004A0EE8
 	protected override void OnStart()
 	{
 		PhantomFetter fatterData = (PhantomFetter)this.OpenParam;
@@ -54,27 +54,27 @@ public class PhantomBattleFettersObtainView : UiViewBase
 		this.ShowFettersObtainView(fatterData);
 	}
 
-	// Token: 0x06012960 RID: 76128 RVA: 0x0049575B File Offset: 0x0049395B
+	// Token: 0x0600FE16 RID: 65046 RVA: 0x004A2D27 File Offset: 0x004A0F27
 	public void ShowFettersObtainView(PhantomFetter fatterData)
 	{
 		this.SetActive(true);
 		this.FetterData = new PhantomFetter?(fatterData);
 	}
 
-	// Token: 0x06012961 RID: 76129 RVA: 0x00495770 File Offset: 0x00493970
+	// Token: 0x0600FE17 RID: 65047 RVA: 0x004A2D3C File Offset: 0x004A0F3C
 	protected override void OnBeforeDestroy()
 	{
 		this.FettersObtainScroll.ClearChildren();
 	}
 
-	// Token: 0x06012962 RID: 76130 RVA: 0x00495780 File Offset: 0x00493980
+	// Token: 0x0600FE18 RID: 65048 RVA: 0x004A2D4C File Offset: 0x004A0F4C
 	private void OnOpenTrackView(int id)
 	{
 		CalabashDevelopReward? calabashDevelopReward;
 		AdventureGuideController.Instance.JumpToTargetView(EUiTabViewName.MonsterDetectView, (CalabashConfig.Instance.GetCalabashDevelopRewardByMonsterId(id) != null) ? new int?(calabashDevelopReward.GetValueOrDefault().MonsterProbeId) : null, null);
 	}
 
-	// Token: 0x06012963 RID: 76131 RVA: 0x004957D4 File Offset: 0x004939D4
+	// Token: 0x0600FE19 RID: 65049 RVA: 0x004A2DA0 File Offset: 0x004A0FA0
 	private void OnClose()
 	{
 		PhantomBattleModel.Instance.CurrentSelectedFetter = new PhantomFetter?(this.FetterData.Value);
@@ -96,10 +96,10 @@ public class PhantomBattleFettersObtainView : UiViewBase
 		}
 	}
 
-	// Token: 0x04008C07 RID: 35847
+	// Token: 0x04008D4E RID: 36174
 	private PhantomFetter? FetterData;
 
-	// Token: 0x04008C08 RID: 35848
+	// Token: 0x04008D4F RID: 36175
 	[Nullable(new byte[]
 	{
 		2,
@@ -107,12 +107,12 @@ public class PhantomBattleFettersObtainView : UiViewBase
 	})]
 	private GenericScrollView<PhantomFettersObtainItem> FettersObtainScroll;
 
-	// Token: 0x020089BA RID: 35258
+	// Token: 0x02007B41 RID: 31553
 	private enum EFettersObtainDefine
 	{
-		// Token: 0x0402CC03 RID: 183299
+		// Token: 0x04027F19 RID: 163609
 		ObtainScroll,
-		// Token: 0x0402CC04 RID: 183300
+		// Token: 0x04027F1A RID: 163610
 		ConfirmButton
 	}
 }

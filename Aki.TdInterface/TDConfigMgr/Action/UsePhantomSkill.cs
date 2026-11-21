@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200226B RID: 8811
+	// Token: 0x020024D8 RID: 9432
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class UsePhantomSkill : ActionParams
 	{
-		// Token: 0x0600C14C RID: 49484 RVA: 0x001BBA48 File Offset: 0x001B9C48
-		[NullableContext(1)]
+		// Token: 0x0600CD12 RID: 52498 RVA: 0x001D31CC File Offset: 0x001D13CC
+		[NullableContext(0)]
 		private UsePhantomSkill_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C14D RID: 49485 RVA: 0x001BBA80 File Offset: 0x001B9C80
-		[NullableContext(1)]
+		// Token: 0x0600CD13 RID: 52499 RVA: 0x001D3204 File Offset: 0x001D1404
+		[NullableContext(0)]
 		public static UsePhantomSkill Create([Nullable(2)] UsePhantomSkill instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C14E RID: 49486 RVA: 0x001BBA93 File Offset: 0x001B9C93
-		[NullableContext(1)]
+		// Token: 0x0600CD14 RID: 52500 RVA: 0x001D3217 File Offset: 0x001D1417
+		[NullableContext(0)]
 		public static UsePhantomSkill CreateFromSetValue([Nullable(2)] UsePhantomSkill_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C14F RID: 49487 RVA: 0x001BBAA6 File Offset: 0x001B9CA6
-		[NullableContext(1)]
+		// Token: 0x0600CD15 RID: 52501 RVA: 0x001D322A File Offset: 0x001D142A
+		[NullableContext(0)]
 		public UsePhantomSkill_SetValue ToSetValue()
 		{
 			return new UsePhantomSkill_SetValue
@@ -65,9 +65,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A73 RID: 14963
-		// (get) Token: 0x0600C150 RID: 49488 RVA: 0x001BBAD1 File Offset: 0x001B9CD1
-		// (set) Token: 0x0600C151 RID: 49489 RVA: 0x001BBAFC File Offset: 0x001B9CFC
+		// Token: 0x17003D6A RID: 15722
+		// (get) Token: 0x0600CD16 RID: 52502 RVA: 0x001D3255 File Offset: 0x001D1455
+		// (set) Token: 0x0600CD17 RID: 52503 RVA: 0x001D3280 File Offset: 0x001D1480
 		public virtual EPhantomSkillType SkillType
 		{
 			get
@@ -88,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A74 RID: 14964
-		// (get) Token: 0x0600C152 RID: 49490 RVA: 0x001BBB0C File Offset: 0x001B9D0C
-		// (set) Token: 0x0600C153 RID: 49491 RVA: 0x001BBB6D File Offset: 0x001B9D6D
+		// Token: 0x17003D6B RID: 15723
+		// (get) Token: 0x0600CD18 RID: 52504 RVA: 0x001D3290 File Offset: 0x001D1490
+		// (set) Token: 0x0600CD19 RID: 52505 RVA: 0x001D32F1 File Offset: 0x001D14F1
 		public virtual ISkillBlackboardVector BlackboardPos
 		{
 			get
@@ -118,9 +118,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A75 RID: 14965
-		// (get) Token: 0x0600C154 RID: 49492 RVA: 0x001BBB84 File Offset: 0x001B9D84
-		// (set) Token: 0x0600C155 RID: 49493 RVA: 0x001BBBE5 File Offset: 0x001B9DE5
+		// Token: 0x17003D6C RID: 15724
+		// (get) Token: 0x0600CD1A RID: 52506 RVA: 0x001D3308 File Offset: 0x001D1508
+		// (set) Token: 0x0600CD1B RID: 52507 RVA: 0x001D3369 File Offset: 0x001D1569
 		public virtual ISkillBlackboardVector BlackboardRot
 		{
 			get
@@ -148,24 +148,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400732C RID: 29484
+		// Token: 0x04007979 RID: 31097
 		protected new UsePhantomSkill FbInstance;
 
-		// Token: 0x0400732D RID: 29485
+		// Token: 0x0400797A RID: 31098
 		protected UsePhantomSkill_SetValue PocoInterface;
 
-		// Token: 0x0400732E RID: 29486
-		[Nullable(1)]
+		// Token: 0x0400797B RID: 31099
+		[Nullable(0)]
 		private ISkillBlackboardVector _BlackboardPosCache;
 
-		// Token: 0x0400732F RID: 29487
+		// Token: 0x0400797C RID: 31100
 		private bool _BlackboardPosInited;
 
-		// Token: 0x04007330 RID: 29488
-		[Nullable(1)]
+		// Token: 0x0400797D RID: 31101
+		[Nullable(0)]
 		private ISkillBlackboardVector _BlackboardRotCache;
 
-		// Token: 0x04007331 RID: 29489
+		// Token: 0x0400797E RID: 31102
 		private bool _BlackboardRotInited;
 	}
 }

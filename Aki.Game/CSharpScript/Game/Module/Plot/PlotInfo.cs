@@ -11,19 +11,19 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FE2 RID: 20450
+	// Token: 0x02003FAC RID: 16300
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotInfo : IStaticVariableResetter
 	{
-		// Token: 0x06034588 RID: 214408 RVA: 0x00C4CD41 File Offset: 0x00C4AF41
+		// Token: 0x06029411 RID: 168977 RVA: 0x00B96D89 File Offset: 0x00B94F89
 		static PlotInfo()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlotInfo.CreateStaticDefaultValue), new Action(PlotInfo.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x17007FC3 RID: 32707
-		// (get) Token: 0x06034589 RID: 214409 RVA: 0x00C4CD60 File Offset: 0x00C4AF60
+		// Token: 0x17005377 RID: 21367
+		// (get) Token: 0x06029412 RID: 168978 RVA: 0x00B96DA8 File Offset: 0x00B94FA8
 		[Nullable(1)]
 		private static Pool<PlotInfo> Pool
 		{
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0603458A RID: 214410 RVA: 0x00C4CD68 File Offset: 0x00C4AF68
+		// Token: 0x06029413 RID: 168979 RVA: 0x00B96DB0 File Offset: 0x00B94FB0
 		public PlotInfo()
 		{
 			this.FlowListName = "";
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.PreloadSequenceUiData = new List<string>();
 		}
 
-		// Token: 0x0603458B RID: 214411 RVA: 0x00C4CE28 File Offset: 0x00C4B028
+		// Token: 0x06029414 RID: 168980 RVA: 0x00B96E70 File Offset: 0x00B95070
 		public void Init(bool isServerNotify, long flowIncId, [Nullable(1)] string flowListName, int flowId, int stateId, [Nullable(1)] List<ActionInfo> stateActions, bool keepMusic, GeneralContext context, bool isAsync, UiParam uiParam = null, bool canBeAbandoned = false, bool isSkip = false, global::Vector pos = null, bool checkPreload = false, Action callback = null, bool isTeleportTransition = false, IStateProgramSpecialProcessChangeTeamOptimization programSpecialProcess = null)
 		{
 			this.FlowListName = flowListName;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Plot
 			PlotInfo.AnalyzeLevel(this, stateActions);
 		}
 
-		// Token: 0x0603458C RID: 214412 RVA: 0x00C4CEE0 File Offset: 0x00C4B0E0
+		// Token: 0x06029415 RID: 168981 RVA: 0x00B96F28 File Offset: 0x00B95128
 		[NullableContext(1)]
 		public static void AnalyzeLevel(PlotInfo plotInfo, List<ActionInfo> actions)
 		{
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0603458D RID: 214413 RVA: 0x00C4D180 File Offset: 0x00C4B380
+		// Token: 0x06029416 RID: 168982 RVA: 0x00B971C8 File Offset: 0x00B953C8
 		[NullableContext(1)]
 		private static EPlotLevel GetPlotLevelByMode(string mode)
 		{
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.Plot
 			return EPlotLevel.LevelC;
 		}
 
-		// Token: 0x0603458E RID: 214414 RVA: 0x00C4D1DF File Offset: 0x00C4B3DF
+		// Token: 0x06029417 RID: 168983 RVA: 0x00B97227 File Offset: 0x00B95427
 		private static EUiViewName GetViewName()
 		{
 			if (SlidingBlocksModel.Instance.IsInGame)
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.Plot
 			return UiModel.Instance.MainViewName;
 		}
 
-		// Token: 0x0603458F RID: 214415 RVA: 0x00C4D210 File Offset: 0x00C4B410
+		// Token: 0x06029418 RID: 168984 RVA: 0x00B97258 File Offset: 0x00B95458
 		[NullableContext(1)]
 		private unsafe static void ExtractIconTexturePathAndFirstAudio(List<ActionInfo> actions, PlotInfo plotInfo)
 		{
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x06034590 RID: 214416 RVA: 0x00C4D488 File Offset: 0x00C4B688
+		// Token: 0x06029419 RID: 168985 RVA: 0x00B974D0 File Offset: 0x00B956D0
 		public void Clear()
 		{
 			this.FlowListName = null;
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.ProgramSpecialProcess = null;
 		}
 
-		// Token: 0x06034591 RID: 214417 RVA: 0x00C4D554 File Offset: 0x00C4B754
+		// Token: 0x0602941A RID: 168986 RVA: 0x00B9759C File Offset: 0x00B9579C
 		[NullableContext(1)]
 		public static PlotInfo Create()
 		{
@@ -294,15 +294,15 @@ namespace CSharpScript.Game.Module.Plot
 			return plotInfo;
 		}
 
-		// Token: 0x06034592 RID: 214418 RVA: 0x00C4D57B File Offset: 0x00C4B77B
+		// Token: 0x0602941B RID: 168987 RVA: 0x00B975C3 File Offset: 0x00B957C3
 		public void Recycle()
 		{
 			this.Clear();
 			PlotInfo.Pool.Put(this);
 		}
 
-		// Token: 0x17007FC4 RID: 32708
-		// (get) Token: 0x06034593 RID: 214419 RVA: 0x00C4D590 File Offset: 0x00C4B790
+		// Token: 0x17005378 RID: 21368
+		// (get) Token: 0x0602941C RID: 168988 RVA: 0x00B975D8 File Offset: 0x00B957D8
 		[Nullable(1)]
 		public string FormatId
 		{
@@ -323,19 +323,19 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x06034594 RID: 214420 RVA: 0x00C4D600 File Offset: 0x00C4B800
+		// Token: 0x0602941D RID: 168989 RVA: 0x00B97648 File Offset: 0x00B95848
 		public static void CreateStaticDefaultValue()
 		{
 			PlotInfo._pool = new Pool<PlotInfo>(20, () => new PlotInfo(), null);
 		}
 
-		// Token: 0x06034595 RID: 214421 RVA: 0x00C4D62E File Offset: 0x00C4B82E
+		// Token: 0x0602941E RID: 168990 RVA: 0x00B97676 File Offset: 0x00B95876
 		public static void ResetStaticDefaultValue()
 		{
 			PlotInfo._pool = null;
 		}
 
-		// Token: 0x0401BD53 RID: 114003
+		// Token: 0x0401672E RID: 91950
 		[Nullable(new byte[]
 		{
 			2,
@@ -343,16 +343,16 @@ namespace CSharpScript.Game.Module.Plot
 		})]
 		private static Pool<PlotInfo> _pool;
 
-		// Token: 0x0401BD54 RID: 114004
+		// Token: 0x0401672F RID: 91951
 		public string FlowListName;
 
-		// Token: 0x0401BD55 RID: 114005
+		// Token: 0x04016730 RID: 91952
 		public int FlowId;
 
-		// Token: 0x0401BD56 RID: 114006
+		// Token: 0x04016731 RID: 91953
 		public int? StateId;
 
-		// Token: 0x0401BD57 RID: 114007
+		// Token: 0x04016732 RID: 91954
 		[Nullable(new byte[]
 		{
 			2,
@@ -360,58 +360,58 @@ namespace CSharpScript.Game.Module.Plot
 		})]
 		public List<ActionInfo> StateActions;
 
-		// Token: 0x0401BD58 RID: 114008
+		// Token: 0x04016733 RID: 91955
 		public bool KeepMusic;
 
-		// Token: 0x0401BD59 RID: 114009
+		// Token: 0x04016734 RID: 91956
 		public GeneralContext Context;
 
-		// Token: 0x0401BD5A RID: 114010
+		// Token: 0x04016735 RID: 91957
 		public bool IsServerNotify;
 
-		// Token: 0x0401BD5B RID: 114011
+		// Token: 0x04016736 RID: 91958
 		public long FlowIncId;
 
-		// Token: 0x0401BD5C RID: 114012
+		// Token: 0x04016737 RID: 91959
 		public bool IsBackground;
 
-		// Token: 0x0401BD5D RID: 114013
+		// Token: 0x04016738 RID: 91960
 		public bool IsBreakdown;
 
-		// Token: 0x0401BD5E RID: 114014
+		// Token: 0x04016739 RID: 91961
 		public bool IsServerEnd;
 
-		// Token: 0x0401BD5F RID: 114015
+		// Token: 0x0401673A RID: 91962
 		public bool IsAsync;
 
-		// Token: 0x0401BD60 RID: 114016
+		// Token: 0x0401673B RID: 91963
 		public EPlotLevel PlotLevel;
 
-		// Token: 0x0401BD61 RID: 114017
+		// Token: 0x0401673C RID: 91964
 		public bool IsWaitAnim;
 
-		// Token: 0x0401BD62 RID: 114018
+		// Token: 0x0401673D RID: 91965
 		public UiParam UiParam;
 
-		// Token: 0x0401BD63 RID: 114019
+		// Token: 0x0401673E RID: 91966
 		public bool CanBeAbandoned;
 
-		// Token: 0x0401BD64 RID: 114020
+		// Token: 0x0401673F RID: 91967
 		public EFadeInScreenShowType? FadeBegin;
 
-		// Token: 0x0401BD65 RID: 114021
+		// Token: 0x04016740 RID: 91968
 		public global::Vector Pos;
 
-		// Token: 0x0401BD66 RID: 114022
+		// Token: 0x04016741 RID: 91969
 		public bool KeepMainRolePose;
 
-		// Token: 0x0401BD67 RID: 114023
+		// Token: 0x04016742 RID: 91970
 		public bool CheckPreload;
 
-		// Token: 0x0401BD68 RID: 114024
+		// Token: 0x04016743 RID: 91971
 		public bool Seamless;
 
-		// Token: 0x0401BD69 RID: 114025
+		// Token: 0x04016744 RID: 91972
 		[Nullable(new byte[]
 		{
 			2,
@@ -419,22 +419,22 @@ namespace CSharpScript.Game.Module.Plot
 		})]
 		public List<string> PreloadSequenceUiData;
 
-		// Token: 0x0401BD6A RID: 114026
+		// Token: 0x04016745 RID: 91973
 		public EPromptStyle? PromptStyle;
 
-		// Token: 0x0401BD6B RID: 114027
+		// Token: 0x04016746 RID: 91974
 		public string BlockAudio;
 
-		// Token: 0x0401BD6C RID: 114028
+		// Token: 0x04016747 RID: 91975
 		public Action Callback;
 
-		// Token: 0x0401BD6D RID: 114029
+		// Token: 0x04016748 RID: 91976
 		public bool IsTeleportTransition;
 
-		// Token: 0x0401BD6E RID: 114030
+		// Token: 0x04016749 RID: 91977
 		public IStateProgramSpecialProcessChangeTeamOptimization ProgramSpecialProcess;
 
-		// Token: 0x0401BD6F RID: 114031
+		// Token: 0x0401674A RID: 91978
 		private string FormatIdInner;
 	}
 }

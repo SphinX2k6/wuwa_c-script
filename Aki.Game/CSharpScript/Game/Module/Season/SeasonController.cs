@@ -9,14 +9,14 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Module.Season
 {
-	// Token: 0x02004C79 RID: 19577
+	// Token: 0x02003C2A RID: 15402
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	[TickController(0)]
 	public class SeasonController : ControllerBase
 	{
-		// Token: 0x06032990 RID: 207248 RVA: 0x00BCC570 File Offset: 0x00BCA770
+		// Token: 0x06027743 RID: 161603 RVA: 0x00B111D4 File Offset: 0x00B0F3D4
 		protected override void OnTick(float delta)
 		{
 			SeasonModel instance = SeasonModel.Instance;
@@ -30,14 +30,14 @@ namespace CSharpScript.Game.Module.Season
 			this.WriteSeasonAudioState(instance);
 		}
 
-		// Token: 0x06032991 RID: 207249 RVA: 0x00BCC5AB File Offset: 0x00BCA7AB
+		// Token: 0x06027744 RID: 161604 RVA: 0x00B1120F File Offset: 0x00B0F40F
 		protected override bool OnLeaveLevel()
 		{
 			SeasonModel.Instance.ResetRuntime();
 			return true;
 		}
 
-		// Token: 0x06032992 RID: 207250 RVA: 0x00BCC5B8 File Offset: 0x00BCA7B8
+		// Token: 0x06027745 RID: 161605 RVA: 0x00B1121C File Offset: 0x00B0F41C
 		public void ApplyConfig(int volumeId, IClientSetSeasonStateConfig config, [Nullable(2)] TSeasonSwitchCallback onComplete = null)
 		{
 			SeasonModel instance = SeasonModel.Instance;
@@ -73,19 +73,19 @@ namespace CSharpScript.Game.Module.Season
 			this.PushSwitchJob(instance, (ISwitchSeason)config, onComplete);
 		}
 
-		// Token: 0x06032993 RID: 207251 RVA: 0x00BCC635 File Offset: 0x00BCA835
+		// Token: 0x06027746 RID: 161606 RVA: 0x00B11299 File Offset: 0x00B0F499
 		public void RegisterVolume(TsTriggerVolume volume)
 		{
 			SeasonModel.Instance.RegisterVolume(volume);
 		}
 
-		// Token: 0x06032994 RID: 207252 RVA: 0x00BCC642 File Offset: 0x00BCA842
+		// Token: 0x06027747 RID: 161607 RVA: 0x00B112A6 File Offset: 0x00B0F4A6
 		public void UnregisterVolume(TsTriggerVolume volume)
 		{
 			SeasonModel.Instance.UnregisterVolume(volume);
 		}
 
-		// Token: 0x06032995 RID: 207253 RVA: 0x00BCC650 File Offset: 0x00BCA850
+		// Token: 0x06027748 RID: 161608 RVA: 0x00B112B4 File Offset: 0x00B0F4B4
 		public void HandleVolumeEnter(TsTriggerVolume volume)
 		{
 			SeasonModel instance = SeasonModel.Instance;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Season
 			}
 		}
 
-		// Token: 0x06032996 RID: 207254 RVA: 0x00BCC68C File Offset: 0x00BCA88C
+		// Token: 0x06027749 RID: 161609 RVA: 0x00B112F0 File Offset: 0x00B0F4F0
 		public void HandleVolumeExit(TsTriggerVolume volume)
 		{
 			SeasonModel instance = SeasonModel.Instance;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Season
 			}
 		}
 
-		// Token: 0x06032997 RID: 207255 RVA: 0x00BCC6D0 File Offset: 0x00BCA8D0
+		// Token: 0x0602774A RID: 161610 RVA: 0x00B11334 File Offset: 0x00B0F534
 		public ESeason? GetSeasonByAreaId(int areaId)
 		{
 			SeasonModel instance = SeasonModel.Instance;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Season
 			return new ESeason?(this.LocateLoopPosition(instance.CurrentValue).Season);
 		}
 
-		// Token: 0x06032998 RID: 207256 RVA: 0x00BCC70C File Offset: 0x00BCA90C
+		// Token: 0x0602774B RID: 161611 RVA: 0x00B11370 File Offset: 0x00B0F570
 		private void StopLoop(SeasonModel model)
 		{
 			model.LoopConfig = null;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Season
 			}
 		}
 
-		// Token: 0x06032999 RID: 207257 RVA: 0x00BCC72D File Offset: 0x00BCA92D
+		// Token: 0x0602774C RID: 161612 RVA: 0x00B11391 File Offset: 0x00B0F591
 		private void StartOrReplaceLoop(SeasonModel model, ILoopSeasonChange config)
 		{
 			model.LoopConfig = config;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Season
 			this.EnterLoopFromCurrentValue(model);
 		}
 
-		// Token: 0x0603299A RID: 207258 RVA: 0x00BCC748 File Offset: 0x00BCA948
+		// Token: 0x0602774D RID: 161613 RVA: 0x00B113AC File Offset: 0x00B0F5AC
 		private void EnterLoopFromCurrentValue(SeasonModel model)
 		{
 			if (model.LoopConfig == null)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Season
 			this.SetDriverPhase(model, ESeasonDriverPhase.Looping);
 		}
 
-		// Token: 0x0603299B RID: 207259 RVA: 0x00BCC7B4 File Offset: 0x00BCA9B4
+		// Token: 0x0602774E RID: 161614 RVA: 0x00B11418 File Offset: 0x00B0F618
 		private void ActivateAreaWithEvents(SeasonModel model, int areaId)
 		{
 			if (areaId == 0 || model.IsAreaActive(areaId))
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Season
 			}
 		}
 
-		// Token: 0x0603299C RID: 207260 RVA: 0x00BCC7E4 File Offset: 0x00BCA9E4
+		// Token: 0x0602774F RID: 161615 RVA: 0x00B11448 File Offset: 0x00B0F648
 		private void DeactivateAreaWithEvents(SeasonModel model, int areaId)
 		{
 			if (areaId == 0 || !model.IsAreaActive(areaId))
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Season
 			model.DeactivateArea(areaId);
 		}
 
-		// Token: 0x0603299D RID: 207261 RVA: 0x00BCC814 File Offset: 0x00BCAA14
+		// Token: 0x06027750 RID: 161616 RVA: 0x00B11478 File Offset: 0x00B0F678
 		private void PushSwitchJob(SeasonModel model, ISwitchSeason job, [Nullable(2)] TSeasonSwitchCallback onComplete = null)
 		{
 			double seasonTimelineValue = SeasonDefine.GetSeasonTimelineValue(job.Season);
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.Season
 			}
 		}
 
-		// Token: 0x0603299E RID: 207262 RVA: 0x00BCC858 File Offset: 0x00BCAA58
+		// Token: 0x06027751 RID: 161617 RVA: 0x00B114BC File Offset: 0x00B0F6BC
 		private void InvokeJobComplete(ISeasonSwitchJob job, bool success)
 		{
 			TSeasonSwitchCallback onComplete = job.OnComplete;
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Season
 			}
 		}
 
-		// Token: 0x0603299F RID: 207263 RVA: 0x00BCC8C4 File Offset: 0x00BCAAC4
+		// Token: 0x06027752 RID: 161618 RVA: 0x00B11528 File Offset: 0x00B0F728
 		private void SetDriverPhase(SeasonModel model, ESeasonDriverPhase next)
 		{
 			if (model.DriverPhase == next)
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.Season
 			model.DriverPhase = next;
 		}
 
-		// Token: 0x060329A0 RID: 207264 RVA: 0x00BCC8D8 File Offset: 0x00BCAAD8
+		// Token: 0x06027753 RID: 161619 RVA: 0x00B1153C File Offset: 0x00B0F73C
 		private void AdvanceDriver(SeasonModel model, double delta)
 		{
 			switch (model.DriverPhase)
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.Season
 			}
 		}
 
-		// Token: 0x060329A1 RID: 207265 RVA: 0x00BCC910 File Offset: 0x00BCAB10
+		// Token: 0x06027754 RID: 161620 RVA: 0x00B11574 File Offset: 0x00B0F774
 		private void AdvanceSwitching(SeasonModel model, double delta)
 		{
 			ISeasonSwitchJob seasonSwitchJob = model.PeekSwitchHead();
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Season
 			}
 		}
 
-		// Token: 0x060329A2 RID: 207266 RVA: 0x00BCC991 File Offset: 0x00BCAB91
+		// Token: 0x06027755 RID: 161621 RVA: 0x00B115F5 File Offset: 0x00B0F7F5
 		private void LeaveSwitching(SeasonModel model)
 		{
 			if (model.LoopConfig != null)
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.Season
 			this.SetDriverPhase(model, ESeasonDriverPhase.Idle);
 		}
 
-		// Token: 0x060329A3 RID: 207267 RVA: 0x00BCC9AC File Offset: 0x00BCABAC
+		// Token: 0x06027756 RID: 161622 RVA: 0x00B11610 File Offset: 0x00B0F810
 		private void AdvanceLooping(SeasonModel model, double delta)
 		{
 			bool loopConfig = model.LoopConfig != null;
@@ -319,14 +319,14 @@ namespace CSharpScript.Game.Module.Season
 			this.CompletePhase(model, loopState);
 		}
 
-		// Token: 0x060329A4 RID: 207268 RVA: 0x00BCCA30 File Offset: 0x00BCAC30
+		// Token: 0x06027757 RID: 161623 RVA: 0x00B11694 File Offset: 0x00B0F894
 		private double GetPhaseDuration(SeasonModel model, ESeason season, ESeasonLoopPhase phase)
 		{
 			ISeasonLoopConfig seasonConfig = this.GetSeasonConfig(model, season);
 			return (double)((phase == ESeasonLoopPhase.Hold) ? seasonConfig.HoldTime : seasonConfig.SwitchTime);
 		}
 
-		// Token: 0x060329A5 RID: 207269 RVA: 0x00BCCA58 File Offset: 0x00BCAC58
+		// Token: 0x06027758 RID: 161624 RVA: 0x00B116BC File Offset: 0x00B0F8BC
 		private double ComputePhaseValue(ISeasonLoopState state, double duration)
 		{
 			if (state.Phase == ESeasonLoopPhase.Hold)
@@ -336,7 +336,7 @@ namespace CSharpScript.Game.Module.Season
 			return this.LerpForward(state.CurrentSeason, SeasonDefine.GetNextSeasonInLoop(state.CurrentSeason), state.PhaseElapsed / duration);
 		}
 
-		// Token: 0x060329A6 RID: 207270 RVA: 0x00BCCA90 File Offset: 0x00BCAC90
+		// Token: 0x06027759 RID: 161625 RVA: 0x00B116F4 File Offset: 0x00B0F8F4
 		private void CompletePhase(SeasonModel model, ISeasonLoopState state)
 		{
 			if (state.Phase == ESeasonLoopPhase.Hold)
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.Module.Season
 			model.CurrentValue = SeasonDefine.GetSeasonTimelineValue(state.CurrentSeason);
 		}
 
-		// Token: 0x060329A7 RID: 207271 RVA: 0x00BCCAE8 File Offset: 0x00BCACE8
+		// Token: 0x0602775A RID: 161626 RVA: 0x00B1174C File Offset: 0x00B0F94C
 		private ILocatedLoopPosition LocateLoopPosition(double value)
 		{
 			double num = this.WrapValue(value);
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.Module.Season
 			};
 		}
 
-		// Token: 0x060329A8 RID: 207272 RVA: 0x00BCCB68 File Offset: 0x00BCAD68
+		// Token: 0x0602775B RID: 161627 RVA: 0x00B117CC File Offset: 0x00B0F9CC
 		private double ComputePhaseElapsed(double value, ILocatedLoopPosition located, SeasonModel model)
 		{
 			if (located.Phase == ESeasonLoopPhase.Hold)
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.Module.Season
 			return (((value < seasonTimelineValue) ? (value + 1.0) : value) - seasonTimelineValue) / (num - seasonTimelineValue) * (double)switchTime;
 		}
 
-		// Token: 0x060329A9 RID: 207273 RVA: 0x00BCCBF4 File Offset: 0x00BCADF4
+		// Token: 0x0602775C RID: 161628 RVA: 0x00B11858 File Offset: 0x00B0FA58
 		private double LerpForward(ESeason from, ESeason to, double t)
 		{
 			double seasonTimelineValue = SeasonDefine.GetSeasonTimelineValue(from);
@@ -400,7 +400,7 @@ namespace CSharpScript.Game.Module.Season
 			return this.WrapValue(seasonTimelineValue + (num - seasonTimelineValue) * t);
 		}
 
-		// Token: 0x060329AA RID: 207274 RVA: 0x00BCCC2C File Offset: 0x00BCAE2C
+		// Token: 0x0602775D RID: 161629 RVA: 0x00B11890 File Offset: 0x00B0FA90
 		private double ForwardDistance(double from, double to)
 		{
 			double num = (to - from) % 1.0;
@@ -411,19 +411,19 @@ namespace CSharpScript.Game.Module.Season
 			return num + 1.0;
 		}
 
-		// Token: 0x060329AB RID: 207275 RVA: 0x00BCCC60 File Offset: 0x00BCAE60
+		// Token: 0x0602775E RID: 161630 RVA: 0x00B118C4 File Offset: 0x00B0FAC4
 		private double WrapValue(double v)
 		{
 			return v % 1.0;
 		}
 
-		// Token: 0x060329AC RID: 207276 RVA: 0x00BCCC6D File Offset: 0x00BCAE6D
+		// Token: 0x0602775F RID: 161631 RVA: 0x00B118D1 File Offset: 0x00B0FAD1
 		private ISeasonLoopConfig GetSeasonConfig(SeasonModel model, ESeason season)
 		{
 			return model.LoopConfigByIndex[(int)season];
 		}
 
-		// Token: 0x060329AD RID: 207277 RVA: 0x00BCCC7C File Offset: 0x00BCAE7C
+		// Token: 0x06027760 RID: 161632 RVA: 0x00B118E0 File Offset: 0x00B0FAE0
 		private void WriteSeasonScalar(SeasonModel model)
 		{
 			if (object.Equals(model.LastWrittenValue, model.CurrentValue))
@@ -463,7 +463,7 @@ namespace CSharpScript.Game.Module.Season
 			}
 		}
 
-		// Token: 0x060329AE RID: 207278 RVA: 0x00BCCD80 File Offset: 0x00BCAF80
+		// Token: 0x06027761 RID: 161633 RVA: 0x00B119E4 File Offset: 0x00B0FBE4
 		private void WriteSeasonAudioState(SeasonModel model)
 		{
 			ESeason season = this.LocateLoopPosition(model.CurrentValue).Season;
@@ -477,8 +477,8 @@ namespace CSharpScript.Game.Module.Season
 			AudioSystem.Instance.SetState("game_scene_season", SeasonDefine.GetSeasonAudioName(season), true);
 		}
 
-		// Token: 0x17007CD6 RID: 31958
-		// (get) Token: 0x060329AF RID: 207279 RVA: 0x00BCCDDF File Offset: 0x00BCAFDF
+		// Token: 0x17005080 RID: 20608
+		// (get) Token: 0x06027762 RID: 161634 RVA: 0x00B11A43 File Offset: 0x00B0FC43
 		public static SeasonController Instance
 		{
 			get
@@ -487,7 +487,7 @@ namespace CSharpScript.Game.Module.Season
 			}
 		}
 
-		// Token: 0x060329B0 RID: 207280 RVA: 0x00BCCDE6 File Offset: 0x00BCAFE6
+		// Token: 0x06027763 RID: 161635 RVA: 0x00B11A4A File Offset: 0x00B0FC4A
 		public static SeasonController GetOrCreateInstance()
 		{
 			if (SeasonController._Instance == null)
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.Module.Season
 			return SeasonController._Instance;
 		}
 
-		// Token: 0x060329B1 RID: 207281 RVA: 0x00BCCDFA File Offset: 0x00BCAFFA
+		// Token: 0x06027764 RID: 161636 RVA: 0x00B11A5E File Offset: 0x00B0FC5E
 		public static bool CreateInstance()
 		{
 			if (SeasonController._Instance != null)
@@ -508,18 +508,18 @@ namespace CSharpScript.Game.Module.Season
 			return true;
 		}
 
-		// Token: 0x060329B2 RID: 207282 RVA: 0x00BCCE10 File Offset: 0x00BCB010
+		// Token: 0x06027765 RID: 161637 RVA: 0x00B11A74 File Offset: 0x00B0FC74
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060329B3 RID: 207283 RVA: 0x00BCCE12 File Offset: 0x00BCB012
+		// Token: 0x06027766 RID: 161638 RVA: 0x00B11A76 File Offset: 0x00B0FC76
 		public static void ResetStaticDefaultValue()
 		{
 			SeasonController._Instance = null;
 		}
 
-		// Token: 0x060329B4 RID: 207284 RVA: 0x00BCCE1A File Offset: 0x00BCB01A
+		// Token: 0x06027767 RID: 161639 RVA: 0x00B11A7E File Offset: 0x00B0FC7E
 		static SeasonController()
 		{
 			ESeason[] array = new ESeason[4];
@@ -528,21 +528,21 @@ namespace CSharpScript.Game.Module.Season
 			StaticVariableRegister.RegisterAndExecute(new Action(SeasonController.CreateStaticDefaultValue), new Action(SeasonController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AEBC RID: 110268
+		// Token: 0x04015819 RID: 88089
 		[StaticVariableRuleIgnore]
 		private static readonly ESeason[] SeasonByQuarter;
 
-		// Token: 0x0401AEBD RID: 110269
+		// Token: 0x0401581A RID: 88090
 		private const int QUARTER_COUNT = 4;
 
-		// Token: 0x0401AEBE RID: 110270
+		// Token: 0x0401581B RID: 88091
 		private const double HOLD_EPSILON = 0.0001;
 
-		// Token: 0x0401AEBF RID: 110271
+		// Token: 0x0401581C RID: 88092
 		[StaticVariableRuleIgnore]
 		private static bool _writeBurstActive;
 
-		// Token: 0x0401AEC0 RID: 110272
+		// Token: 0x0401581D RID: 88093
 		[Nullable(2)]
 		private static SeasonController _Instance;
 	}

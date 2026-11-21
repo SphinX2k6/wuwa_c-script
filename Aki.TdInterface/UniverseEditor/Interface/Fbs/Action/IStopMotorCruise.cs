@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071D8 RID: 29144
+	// Token: 0x020079AD RID: 31149
 	public struct IStopMotorCruise : IFlatbufferObject
 	{
-		// Token: 0x1700D87F RID: 55423
-		// (get) Token: 0x06033B1F RID: 211743 RVA: 0x006F5DA6 File Offset: 0x006F3FA6
+		// Token: 0x1700E478 RID: 58488
+		// (get) Token: 0x06036E21 RID: 224801 RVA: 0x00757106 File Offset: 0x00755306
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,50 +16,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033B20 RID: 211744 RVA: 0x006F5DB3 File Offset: 0x006F3FB3
+		// Token: 0x06036E22 RID: 224802 RVA: 0x00757113 File Offset: 0x00755313
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033B21 RID: 211745 RVA: 0x006F5DBC File Offset: 0x006F3FBC
+		// Token: 0x06036E23 RID: 224803 RVA: 0x0075711C File Offset: 0x0075531C
 		public static IStopMotorCruise GetRootAsIStopMotorCruise(ByteBuffer _bb)
 		{
 			return IStopMotorCruise.GetRootAsIStopMotorCruise(_bb, default(IStopMotorCruise));
 		}
 
-		// Token: 0x06033B22 RID: 211746 RVA: 0x006F5DD8 File Offset: 0x006F3FD8
+		// Token: 0x06036E24 RID: 224804 RVA: 0x00757138 File Offset: 0x00755338
 		public static IStopMotorCruise GetRootAsIStopMotorCruise(ByteBuffer _bb, IStopMotorCruise obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033B23 RID: 211747 RVA: 0x006F5DF5 File Offset: 0x006F3FF5
+		// Token: 0x06036E25 RID: 224805 RVA: 0x00757155 File Offset: 0x00755355
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033B24 RID: 211748 RVA: 0x006F5E04 File Offset: 0x006F4004
+		// Token: 0x06036E26 RID: 224806 RVA: 0x00757164 File Offset: 0x00755364
 		public IStopMotorCruise __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06033B25 RID: 211749 RVA: 0x006F5E14 File Offset: 0x006F4014
+		// Token: 0x06036E27 RID: 224807 RVA: 0x00757174 File Offset: 0x00755374
 		public static void StartIStopMotorCruise(FlatBufferBuilder builder)
 		{
 			builder.StartTable(0);
 		}
 
-		// Token: 0x06033B26 RID: 211750 RVA: 0x006F5E1D File Offset: 0x006F401D
+		// Token: 0x06036E28 RID: 224808 RVA: 0x0075717D File Offset: 0x0075537D
 		public static Offset<IStopMotorCruise> EndIStopMotorCruise(FlatBufferBuilder builder)
 		{
 			return new Offset<IStopMotorCruise>(builder.EndTable());
 		}
 
-		// Token: 0x06033B27 RID: 211751 RVA: 0x006F5E2C File Offset: 0x006F402C
+		// Token: 0x06036E29 RID: 224809 RVA: 0x0075718C File Offset: 0x0075538C
 		public IStopMotorCruiseT UnPack()
 		{
 			IStopMotorCruiseT stopMotorCruiseT = new IStopMotorCruiseT();
@@ -67,12 +67,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return stopMotorCruiseT;
 		}
 
-		// Token: 0x06033B28 RID: 211752 RVA: 0x006F5E47 File Offset: 0x006F4047
+		// Token: 0x06036E2A RID: 224810 RVA: 0x007571A7 File Offset: 0x007553A7
 		public void UnPackTo(IStopMotorCruiseT _o)
 		{
 		}
 
-		// Token: 0x06033B29 RID: 211753 RVA: 0x006F5E4C File Offset: 0x006F404C
+		// Token: 0x06036E2B RID: 224811 RVA: 0x007571AC File Offset: 0x007553AC
 		public static Offset<IStopMotorCruise> Pack(FlatBufferBuilder builder, IStopMotorCruiseT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IStopMotorCruise.EndIStopMotorCruise(builder);
 		}
 
-		// Token: 0x04011CBB RID: 72891
+		// Token: 0x04012CBD RID: 76989
 		private Table __p;
 	}
 }

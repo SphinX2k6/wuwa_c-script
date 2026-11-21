@@ -5,13 +5,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 {
-	// Token: 0x02006098 RID: 24728
+	// Token: 0x02005016 RID: 20502
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Spring25ConfigContext
 	{
-		// Token: 0x1700907D RID: 36989
-		// (get) Token: 0x0603E806 RID: 256006 RVA: 0x00F1B684 File Offset: 0x00F19884
+		// Token: 0x170063DF RID: 25567
+		// (get) Token: 0x060334CA RID: 210122 RVA: 0x00E62448 File Offset: 0x00E60648
 		private Dictionary<int, SpringSign> SignCfgCache
 		{
 			get
@@ -36,8 +36,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x1700907E RID: 36990
-		// (get) Token: 0x0603E807 RID: 256007 RVA: 0x00F1B714 File Offset: 0x00F19914
+		// Token: 0x170063E0 RID: 25568
+		// (get) Token: 0x060334CB RID: 210123 RVA: 0x00E624D8 File Offset: 0x00E606D8
 		private Dictionary<int, SpringReward> TaskCfgCache
 		{
 			get
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x0603E808 RID: 256008 RVA: 0x00F1B7A4 File Offset: 0x00F199A4
+		// Token: 0x060334CC RID: 210124 RVA: 0x00E62568 File Offset: 0x00E60768
 		public Spring25ConfigContext(Spring25Model model)
 		{
 			this.AttachedModel = model;
 		}
 
-		// Token: 0x0603E809 RID: 256009 RVA: 0x00F1B7B3 File Offset: 0x00F199B3
+		// Token: 0x060334CD RID: 210125 RVA: 0x00E62577 File Offset: 0x00E60777
 		public void Dispose()
 		{
 			Dictionary<int, SpringReward> taskCfgCacheInternal = this.TaskCfgCacheInternal;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			this.SignCfgCacheInternal = null;
 		}
 
-		// Token: 0x0603E80A RID: 256010 RVA: 0x00F1B7E8 File Offset: 0x00F199E8
+		// Token: 0x060334CE RID: 210126 RVA: 0x00E625AC File Offset: 0x00E607AC
 		private SpringResource? GetResourceCfgBySignId(int id)
 		{
 			SpringSign springSign;
@@ -102,8 +102,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return new SpringResource?(configList[0]);
 		}
 
-		// Token: 0x1700907F RID: 36991
-		// (get) Token: 0x0603E80B RID: 256011 RVA: 0x00F1B844 File Offset: 0x00F19A44
+		// Token: 0x170063E1 RID: 25569
+		// (get) Token: 0x060334CF RID: 210127 RVA: 0x00E62608 File Offset: 0x00E60808
 		public Dictionary<int, SpringReward> TaskCfgMap
 		{
 			get
@@ -112,8 +112,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x17009080 RID: 36992
-		// (get) Token: 0x0603E80C RID: 256012 RVA: 0x00F1B84C File Offset: 0x00F19A4C
+		// Token: 0x170063E2 RID: 25570
+		// (get) Token: 0x060334D0 RID: 210128 RVA: 0x00E62610 File Offset: 0x00E60810
 		public Dictionary<int, SpringSign> SignCfgMap
 		{
 			get
@@ -122,8 +122,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x17009081 RID: 36993
-		// (get) Token: 0x0603E80D RID: 256013 RVA: 0x00F1B854 File Offset: 0x00F19A54
+		// Token: 0x170063E3 RID: 25571
+		// (get) Token: 0x060334D1 RID: 210129 RVA: 0x00E62618 File Offset: 0x00E60818
 		public int TaskCount
 		{
 			get
@@ -132,8 +132,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x17009082 RID: 36994
-		// (get) Token: 0x0603E80E RID: 256014 RVA: 0x00F1B861 File Offset: 0x00F19A61
+		// Token: 0x170063E4 RID: 25572
+		// (get) Token: 0x060334D2 RID: 210130 RVA: 0x00E62625 File Offset: 0x00E60825
 		public int SignCount
 		{
 			get
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x0603E80F RID: 256015 RVA: 0x00F1B86E File Offset: 0x00F19A6E
+		// Token: 0x060334D3 RID: 210131 RVA: 0x00E62632 File Offset: 0x00E60832
 		public SpringChat? StartChatCfgByGender(EPlayerGender gender)
 		{
 			if (gender == EPlayerGender.Male)
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return ConfigSpringChatById.GetConfig(100, true);
 		}
 
-		// Token: 0x0603E810 RID: 256016 RVA: 0x00F1B888 File Offset: 0x00F19A88
+		// Token: 0x060334D4 RID: 210132 RVA: 0x00E6264C File Offset: 0x00E6084C
 		public SpringChat? GetChatConfigBySignId(int id, EPlayerGender gender)
 		{
 			SpringResource? resourceCfgBySignId = this.GetResourceCfgBySignId(id);
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return ConfigSpringChatById.GetConfig(p0Id, true);
 		}
 
-		// Token: 0x0603E811 RID: 256017 RVA: 0x00F1B8E8 File Offset: 0x00F19AE8
+		// Token: 0x060334D5 RID: 210133 RVA: 0x00E626AC File Offset: 0x00E608AC
 		[NullableContext(2)]
 		public string GetLetterContentTextIdBySignId(int id)
 		{
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return resourceCfgBySignId.GetValueOrDefault().LetterContent;
 		}
 
-		// Token: 0x0603E812 RID: 256018 RVA: 0x00F1B918 File Offset: 0x00F19B18
+		// Token: 0x060334D6 RID: 210134 RVA: 0x00E626DC File Offset: 0x00E608DC
 		[NullableContext(2)]
 		public string GetLetterTitleTextIdBySignId(int id)
 		{
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return resourceCfgBySignId.GetValueOrDefault().LetterTitle;
 		}
 
-		// Token: 0x0603E813 RID: 256019 RVA: 0x00F1B948 File Offset: 0x00F19B48
+		// Token: 0x060334D7 RID: 210135 RVA: 0x00E6270C File Offset: 0x00E6090C
 		[NullableContext(2)]
 		public string GetLetterTabTextIdBySignId(int id)
 		{
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return resourceCfgBySignId.GetValueOrDefault().LetterTab;
 		}
 
-		// Token: 0x0603E814 RID: 256020 RVA: 0x00F1B978 File Offset: 0x00F19B78
+		// Token: 0x060334D8 RID: 210136 RVA: 0x00E6273C File Offset: 0x00E6093C
 		[NullableContext(2)]
 		public string GetLetterIconBySignId(int id)
 		{
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return resourceCfgBySignId.GetValueOrDefault().MailIcon;
 		}
 
-		// Token: 0x0603E815 RID: 256021 RVA: 0x00F1B9A8 File Offset: 0x00F19BA8
+		// Token: 0x060334D9 RID: 210137 RVA: 0x00E6276C File Offset: 0x00E6096C
 		[NullableContext(2)]
 		public string GetRoleNameTextIdBySignId(int id)
 		{
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return resourceCfgBySignId.GetValueOrDefault().RoleName;
 		}
 
-		// Token: 0x0603E816 RID: 256022 RVA: 0x00F1B9D8 File Offset: 0x00F19BD8
+		// Token: 0x060334DA RID: 210138 RVA: 0x00E6279C File Offset: 0x00E6099C
 		public ESpring25RoleType? GetResourceTypeBySignId(int id)
 		{
 			SpringSign? config = ConfigSpringSignById.GetConfig(id, true);
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return new ESpring25RoleType?((ESpring25RoleType)config.Value.ResourceTypeId);
 		}
 
-		// Token: 0x0603E817 RID: 256023 RVA: 0x00F1BA34 File Offset: 0x00F19C34
+		// Token: 0x060334DB RID: 210139 RVA: 0x00E627F8 File Offset: 0x00E609F8
 		[NullableContext(2)]
 		public string GetTaskNameTextIdByTaskId(int id)
 		{
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return springReward.TaskTitle;
 		}
 
-		// Token: 0x0603E818 RID: 256024 RVA: 0x00F1BA58 File Offset: 0x00F19C58
+		// Token: 0x060334DC RID: 210140 RVA: 0x00E6281C File Offset: 0x00E60A1C
 		public int GetTaskThresholdByTaskId(int id)
 		{
 			SpringReward springReward;
@@ -276,14 +276,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return springReward.TaskThreshold;
 		}
 
-		// Token: 0x04020B63 RID: 133987
+		// Token: 0x0401B490 RID: 111760
 		private readonly Spring25Model AttachedModel;
 
-		// Token: 0x04020B64 RID: 133988
+		// Token: 0x0401B491 RID: 111761
 		[Nullable(2)]
 		private Dictionary<int, SpringSign> SignCfgCacheInternal;
 
-		// Token: 0x04020B65 RID: 133989
+		// Token: 0x0401B492 RID: 111762
 		[Nullable(2)]
 		private Dictionary<int, SpringReward> TaskCfgCacheInternal;
 	}

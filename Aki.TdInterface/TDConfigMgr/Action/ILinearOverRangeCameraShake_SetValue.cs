@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B9B RID: 7067
+	// Token: 0x02001D48 RID: 7496
 	public class ILinearOverRangeCameraShake_SetValue
 	{
-		// Token: 0x04005C58 RID: 23640
+		// Token: 0x040060F1 RID: 24817
 		public ECameraShakeType Type;
 
-		// Token: 0x04005C59 RID: 23641
+		// Token: 0x040060F2 RID: 24818
 		public int CenterEntityId;
 
-		// Token: 0x04005C5A RID: 23642
+		// Token: 0x040060F3 RID: 24819
 		public int MinRange;
 
-		// Token: 0x04005C5B RID: 23643
+		// Token: 0x040060F4 RID: 24820
 		public int MaxRange;
 	}
 }

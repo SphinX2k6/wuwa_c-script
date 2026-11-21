@@ -1,26 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006400 RID: 25600
+	// Token: 0x0200537E RID: 21374
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorFightLevelData
 	{
-		// Token: 0x0604064F RID: 263759 RVA: 0x00F9456F File Offset: 0x00F9276F
+		// Token: 0x06035310 RID: 217872 RVA: 0x00EDB50F File Offset: 0x00ED970F
 		public MotorFightLevelData(MotorFightLevel config)
 		{
 			this.Config = config;
 		}
 
-		// Token: 0x1700943D RID: 37949
-		// (get) Token: 0x06040651 RID: 263761 RVA: 0x00F94593 File Offset: 0x00F92793
-		// (set) Token: 0x06040650 RID: 263760 RVA: 0x00F9457E File Offset: 0x00F9277E
+		// Token: 0x1700679F RID: 26527
+		// (get) Token: 0x06035312 RID: 217874 RVA: 0x00EDB533 File Offset: 0x00ED9733
+		// (set) Token: 0x06035311 RID: 217873 RVA: 0x00EDB51E File Offset: 0x00ED971E
 		public long UnlockTime
 		{
 			get
@@ -33,21 +32,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040652 RID: 263762 RVA: 0x00F9459C File Offset: 0x00F9279C
+		// Token: 0x06035313 RID: 217875 RVA: 0x00EDB53C File Offset: 0x00ED973C
 		public bool IsReachUnlockTime()
 		{
 			double serverTime = TimeUtil.Instance.GetServerTime();
 			return this.UnlockTimeInterval == 0L || (double)this.UnlockTime < serverTime;
 		}
 
-		// Token: 0x06040653 RID: 263763 RVA: 0x00F945C8 File Offset: 0x00F927C8
+		// Token: 0x06035314 RID: 217876 RVA: 0x00EDB568 File Offset: 0x00ED9768
 		public bool IsPreLevelFinished()
 		{
 			return this.PreMotorFightLevelData == null || this.PreMotorFightLevelData.IsFinished;
 		}
 
-		// Token: 0x1700943E RID: 37950
-		// (get) Token: 0x06040654 RID: 263764 RVA: 0x00F945DF File Offset: 0x00F927DF
+		// Token: 0x170067A0 RID: 26528
+		// (get) Token: 0x06035315 RID: 217877 RVA: 0x00EDB57F File Offset: 0x00ED977F
 		public bool IsUnLock
 		{
 			get
@@ -56,9 +55,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x1700943F RID: 37951
-		// (get) Token: 0x06040656 RID: 263766 RVA: 0x00F945FA File Offset: 0x00F927FA
-		// (set) Token: 0x06040655 RID: 263765 RVA: 0x00F945F1 File Offset: 0x00F927F1
+		// Token: 0x170067A1 RID: 26529
+		// (get) Token: 0x06035317 RID: 217879 RVA: 0x00EDB59A File Offset: 0x00ED979A
+		// (set) Token: 0x06035316 RID: 217878 RVA: 0x00EDB591 File Offset: 0x00ED9791
 		public int BestScore
 		{
 			get
@@ -71,9 +70,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x17009440 RID: 37952
-		// (get) Token: 0x06040658 RID: 263768 RVA: 0x00F9460B File Offset: 0x00F9280B
-		// (set) Token: 0x06040657 RID: 263767 RVA: 0x00F94602 File Offset: 0x00F92802
+		// Token: 0x170067A2 RID: 26530
+		// (get) Token: 0x06035319 RID: 217881 RVA: 0x00EDB5AB File Offset: 0x00ED97AB
+		// (set) Token: 0x06035318 RID: 217880 RVA: 0x00EDB5A2 File Offset: 0x00ED97A2
 		public bool IsFinished
 		{
 			get
@@ -86,9 +85,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x17009441 RID: 37953
-		// (get) Token: 0x0604065A RID: 263770 RVA: 0x00F9461C File Offset: 0x00F9281C
-		// (set) Token: 0x06040659 RID: 263769 RVA: 0x00F94613 File Offset: 0x00F92813
+		// Token: 0x170067A3 RID: 26531
+		// (get) Token: 0x0603531B RID: 217883 RVA: 0x00EDB5BC File Offset: 0x00ED97BC
+		// (set) Token: 0x0603531A RID: 217882 RVA: 0x00EDB5B3 File Offset: 0x00ED97B3
 		public int RoleId
 		{
 			get
@@ -101,8 +100,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x17009442 RID: 37954
-		// (get) Token: 0x0604065B RID: 263771 RVA: 0x00F94624 File Offset: 0x00F92824
+		// Token: 0x170067A4 RID: 26532
+		// (get) Token: 0x0603531C RID: 217884 RVA: 0x00EDB5C4 File Offset: 0x00ED97C4
 		public bool HasLevelRedDot
 		{
 			get
@@ -116,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x0604065C RID: 263772 RVA: 0x00F94664 File Offset: 0x00F92864
+		// Token: 0x0603531D RID: 217885 RVA: 0x00EDB604 File Offset: 0x00ED9804
 		public void ReadLevelRedDot()
 		{
 			HashSet<int> player = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.MotorFightLevelClicked, null);
@@ -133,8 +132,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.MotorFightLevelClicked, value);
 		}
 
-		// Token: 0x17009443 RID: 37955
-		// (get) Token: 0x0604065D RID: 263773 RVA: 0x00F946B9 File Offset: 0x00F928B9
+		// Token: 0x170067A5 RID: 26533
+		// (get) Token: 0x0603531E RID: 217886 RVA: 0x00EDB659 File Offset: 0x00ED9859
 		public int Id
 		{
 			get
@@ -143,8 +142,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x17009444 RID: 37956
-		// (get) Token: 0x0604065E RID: 263774 RVA: 0x00F946C6 File Offset: 0x00F928C6
+		// Token: 0x170067A6 RID: 26534
+		// (get) Token: 0x0603531F RID: 217887 RVA: 0x00EDB666 File Offset: 0x00ED9866
 		public string LevelName
 		{
 			get
@@ -153,8 +152,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x17009445 RID: 37957
-		// (get) Token: 0x0604065F RID: 263775 RVA: 0x00F946D3 File Offset: 0x00F928D3
+		// Token: 0x170067A7 RID: 26535
+		// (get) Token: 0x06035320 RID: 217888 RVA: 0x00EDB673 File Offset: 0x00ED9873
 		public string LevelDesc
 		{
 			get
@@ -163,8 +162,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x17009446 RID: 37958
-		// (get) Token: 0x06040660 RID: 263776 RVA: 0x00F946E0 File Offset: 0x00F928E0
+		// Token: 0x170067A8 RID: 26536
+		// (get) Token: 0x06035321 RID: 217889 RVA: 0x00EDB680 File Offset: 0x00ED9880
 		public string Number
 		{
 			get
@@ -173,8 +172,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x17009447 RID: 37959
-		// (get) Token: 0x06040661 RID: 263777 RVA: 0x00F946ED File Offset: 0x00F928ED
+		// Token: 0x170067A9 RID: 26537
+		// (get) Token: 0x06035322 RID: 217890 RVA: 0x00EDB68D File Offset: 0x00ED988D
 		public int RewardId
 		{
 			get
@@ -183,18 +182,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x17009448 RID: 37960
-		// (get) Token: 0x06040662 RID: 263778 RVA: 0x00F946FA File Offset: 0x00F928FA
+		// Token: 0x170067AA RID: 26538
+		// (get) Token: 0x06035323 RID: 217891 RVA: 0x00EDB69A File Offset: 0x00ED989A
 		public List<int> RecommendRoleIds
 		{
 			get
 			{
-				return this.Config.RecommnedRoleListIter().ToList<int>();
+				return new List<int>(this.Config.RecommnedRoleListIter());
 			}
 		}
 
-		// Token: 0x17009449 RID: 37961
-		// (get) Token: 0x06040663 RID: 263779 RVA: 0x00F9470C File Offset: 0x00F9290C
+		// Token: 0x170067AB RID: 26539
+		// (get) Token: 0x06035324 RID: 217892 RVA: 0x00EDB6AC File Offset: 0x00ED98AC
 		public EMotorFightLevelType Type
 		{
 			get
@@ -203,8 +202,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x1700944A RID: 37962
-		// (get) Token: 0x06040664 RID: 263780 RVA: 0x00F94719 File Offset: 0x00F92919
+		// Token: 0x170067AC RID: 26540
+		// (get) Token: 0x06035325 RID: 217893 RVA: 0x00EDB6B9 File Offset: 0x00ED98B9
 		public string LevelTexture
 		{
 			get
@@ -213,8 +212,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x1700944B RID: 37963
-		// (get) Token: 0x06040665 RID: 263781 RVA: 0x00F94726 File Offset: 0x00F92926
+		// Token: 0x170067AD RID: 26541
+		// (get) Token: 0x06035326 RID: 217894 RVA: 0x00EDB6C6 File Offset: 0x00ED98C6
 		public int ActivityId
 		{
 			get
@@ -223,8 +222,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x1700944C RID: 37964
-		// (get) Token: 0x06040666 RID: 263782 RVA: 0x00F94733 File Offset: 0x00F92933
+		// Token: 0x170067AE RID: 26542
+		// (get) Token: 0x06035327 RID: 217895 RVA: 0x00EDB6D3 File Offset: 0x00ED98D3
 		public int Column
 		{
 			get
@@ -233,8 +232,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x1700944D RID: 37965
-		// (get) Token: 0x06040667 RID: 263783 RVA: 0x00F94740 File Offset: 0x00F92940
+		// Token: 0x170067AF RID: 26543
+		// (get) Token: 0x06035328 RID: 217896 RVA: 0x00EDB6E0 File Offset: 0x00ED98E0
 		public int Row
 		{
 			get
@@ -243,18 +242,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x1700944E RID: 37966
-		// (get) Token: 0x06040668 RID: 263784 RVA: 0x00F9474D File Offset: 0x00F9294D
+		// Token: 0x170067B0 RID: 26544
+		// (get) Token: 0x06035329 RID: 217897 RVA: 0x00EDB6ED File Offset: 0x00ED98ED
 		public List<int> PreLevelIds
 		{
 			get
 			{
-				return this.Config.PreId().ToList<int>();
+				return new List<int>(this.Config.PreId());
 			}
 		}
 
-		// Token: 0x1700944F RID: 37967
-		// (get) Token: 0x06040669 RID: 263785 RVA: 0x00F9475F File Offset: 0x00F9295F
+		// Token: 0x170067B1 RID: 26545
+		// (get) Token: 0x0603532A RID: 217898 RVA: 0x00EDB6FF File Offset: 0x00ED98FF
 		public string LevelBg
 		{
 			get
@@ -263,23 +262,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x040217CC RID: 137164
+		// Token: 0x0401C0FB RID: 114939
 		private MotorFightLevel Config;
 
-		// Token: 0x040217CD RID: 137165
+		// Token: 0x0401C0FC RID: 114940
 		[Nullable(2)]
 		public MotorFightLevelData PreMotorFightLevelData;
 
-		// Token: 0x040217CE RID: 137166
+		// Token: 0x0401C0FD RID: 114941
 		private long UnlockTimeInterval;
 
-		// Token: 0x040217CF RID: 137167
+		// Token: 0x0401C0FE RID: 114942
 		private int BestScoreInterval;
 
-		// Token: 0x040217D0 RID: 137168
+		// Token: 0x0401C0FF RID: 114943
 		private int RoleIdInterval;
 
-		// Token: 0x040217D1 RID: 137169
+		// Token: 0x0401C100 RID: 114944
 		private bool IsFinishedInterval;
 	}
 }

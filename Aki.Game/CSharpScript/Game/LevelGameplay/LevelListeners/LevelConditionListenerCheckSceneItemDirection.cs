@@ -5,12 +5,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006AE3 RID: 27363
+	// Token: 0x02005C5B RID: 23643
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelConditionListenerCheckSceneItemDirection : LevelListenerBase
 	{
-		// Token: 0x06043F8C RID: 278412 RVA: 0x010AC2C4 File Offset: 0x010AA4C4
+		// Token: 0x0603A0DE RID: 237790 RVA: 0x01055B3C File Offset: 0x01053D3C
 		private void EventHandle()
 		{
 			TListenerCallbackFunc callback = this.Callback;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			callback(ClientEventContext.Create(EEventName.OnSceneItemRotateStopped, Array.Empty<object>()), Array.Empty<object>());
 		}
 
-		// Token: 0x06043F8D RID: 278413 RVA: 0x010AC2EC File Offset: 0x010AA4EC
+		// Token: 0x0603A0DF RID: 237791 RVA: 0x01055B64 File Offset: 0x01053D64
 		[NullableContext(1)]
 		protected override void OnListen(object listeningInfo, TListenerCallbackFunc callback, [Nullable(2)] GeneralContext context = null, params object[] otherParams)
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			this.HandleListenEntityStateChange();
 		}
 
-		// Token: 0x06043F8E RID: 278414 RVA: 0x010AC394 File Offset: 0x010AA594
+		// Token: 0x0603A0E0 RID: 237792 RVA: 0x01055C0C File Offset: 0x01053E0C
 		private void HandleListenEntityStateChange()
 		{
 			Entity listeningEntity = this.ListeningEntity;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F8F RID: 278415 RVA: 0x010AC41B File Offset: 0x010AA61B
+		// Token: 0x0603A0E1 RID: 237793 RVA: 0x01055C93 File Offset: 0x01053E93
 		protected override void OnUnListen()
 		{
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
@@ -69,10 +69,10 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			this.WaitEntityTask = null;
 		}
 
-		// Token: 0x04023863 RID: 145507
+		// Token: 0x0401EB05 RID: 125701
 		private Entity ListeningEntity;
 
-		// Token: 0x04023864 RID: 145508
+		// Token: 0x0401EB06 RID: 125702
 		private WaitEntityTask WaitEntityTask;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A2F RID: 6703
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BC4 RID: 7108
 	public class IExitVehicleType
 	{
-		// Token: 0x06008F8A RID: 36746 RVA: 0x0014F224 File Offset: 0x0014D424
+		// Token: 0x060096F4 RID: 38644 RVA: 0x0015F150 File Offset: 0x0015D350
 		private IExitVehicleType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008F8B RID: 36747 RVA: 0x0014F25C File Offset: 0x0014D45C
+		// Token: 0x060096F5 RID: 38645 RVA: 0x0015F188 File Offset: 0x0015D388
 		public static IExitVehicleType Create([Nullable(2)] IExitVehicleType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008F8C RID: 36748 RVA: 0x0014F26F File Offset: 0x0014D46F
+		// Token: 0x060096F6 RID: 38646 RVA: 0x0015F19B File Offset: 0x0015D39B
 		public static IExitVehicleType CreateFromSetValue([Nullable(2)] IExitVehicleType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008F8D RID: 36749 RVA: 0x0014F282 File Offset: 0x0014D482
+		// Token: 0x060096F7 RID: 38647 RVA: 0x0015F1AE File Offset: 0x0015D3AE
 		public IExitVehicleType_SetValue ToSetValue()
 		{
 			return new IExitVehicleType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DD4 RID: 11732
-		// (get) Token: 0x06008F8E RID: 36750 RVA: 0x0014F295 File Offset: 0x0014D495
-		// (set) Token: 0x06008F8F RID: 36751 RVA: 0x0014F2C0 File Offset: 0x0014D4C0
+		// Token: 0x17002FE1 RID: 12257
+		// (get) Token: 0x060096F8 RID: 38648 RVA: 0x0015F1C1 File Offset: 0x0015D3C1
+		// (set) Token: 0x060096F9 RID: 38649 RVA: 0x0015F1EC File Offset: 0x0015D3EC
 		public virtual EExitVehicleType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040058CB RID: 22731
+		// Token: 0x04005D30 RID: 23856
 		[Nullable(2)]
 		protected IExitVehicleType FbInstance;
 
-		// Token: 0x040058CC RID: 22732
+		// Token: 0x04005D31 RID: 23857
 		[Nullable(2)]
 		protected IExitVehicleType_SetValue PocoInterface;
 	}

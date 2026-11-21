@@ -2,55 +2,55 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200185C RID: 6236
+// Token: 0x02000D15 RID: 3349
 [NullableContext(2)]
 public interface IPhantomConfirmPopupViewData
 {
-	// Token: 0x17000F33 RID: 3891
-	// (get) Token: 0x0600B6C7 RID: 46791
-	// (set) Token: 0x0600B6C8 RID: 46792
+	// Token: 0x17000F56 RID: 3926
+	// (get) Token: 0x06008AB0 RID: 35504
+	// (set) Token: 0x06008AB1 RID: 35505
 	[Nullable(1)]
 	string Title { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17000F34 RID: 3892
-	// (get) Token: 0x0600B6C9 RID: 46793
-	// (set) Token: 0x0600B6CA RID: 46794
+	// Token: 0x17000F57 RID: 3927
+	// (get) Token: 0x06008AB2 RID: 35506
+	// (set) Token: 0x06008AB3 RID: 35507
 	[Nullable(1)]
 	string SubTitle { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17000F35 RID: 3893
-	// (get) Token: 0x0600B6CB RID: 46795
-	// (set) Token: 0x0600B6CC RID: 46796
+	// Token: 0x17000F58 RID: 3928
+	// (get) Token: 0x06008AB4 RID: 35508
+	// (set) Token: 0x06008AB5 RID: 35509
 	[Nullable(1)]
 	List<int> PhantomUniqueIdList { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17000F36 RID: 3894
-	// (get) Token: 0x0600B6CD RID: 46797
-	// (set) Token: 0x0600B6CE RID: 46798
+	// Token: 0x17000F59 RID: 3929
+	// (get) Token: 0x06008AB6 RID: 35510
+	// (set) Token: 0x06008AB7 RID: 35511
 	Action OnRight { get; set; }
 
-	// Token: 0x17000F37 RID: 3895
-	// (get) Token: 0x0600B6CF RID: 46799
-	// (set) Token: 0x0600B6D0 RID: 46800
+	// Token: 0x17000F5A RID: 3930
+	// (get) Token: 0x06008AB8 RID: 35512
+	// (set) Token: 0x06008AB9 RID: 35513
 	Action OnMiddle { get; set; }
 
-	// Token: 0x17000F38 RID: 3896
-	// (get) Token: 0x0600B6D1 RID: 46801
-	// (set) Token: 0x0600B6D2 RID: 46802
+	// Token: 0x17000F5B RID: 3931
+	// (get) Token: 0x06008ABA RID: 35514
+	// (set) Token: 0x06008ABB RID: 35515
 	Action OnLeft { get; set; }
 
-	// Token: 0x17000F39 RID: 3897
-	// (get) Token: 0x0600B6D3 RID: 46803
-	// (set) Token: 0x0600B6D4 RID: 46804
+	// Token: 0x17000F5C RID: 3932
+	// (get) Token: 0x06008ABC RID: 35516
+	// (set) Token: 0x06008ABD RID: 35517
 	string MiddleTxtKey { get; set; }
 
-	// Token: 0x17000F3A RID: 3898
-	// (get) Token: 0x0600B6D5 RID: 46805
-	// (set) Token: 0x0600B6D6 RID: 46806
+	// Token: 0x17000F5D RID: 3933
+	// (get) Token: 0x06008ABE RID: 35518
+	// (set) Token: 0x06008ABF RID: 35519
 	string RightTxtKey { get; set; }
 
-	// Token: 0x17000F3B RID: 3899
-	// (get) Token: 0x0600B6D7 RID: 46807
-	// (set) Token: 0x0600B6D8 RID: 46808
+	// Token: 0x17000F5E RID: 3934
+	// (get) Token: 0x06008AC0 RID: 35520
+	// (set) Token: 0x06008AC1 RID: 35521
 	string LeftTxtKey { get; set; }
 }

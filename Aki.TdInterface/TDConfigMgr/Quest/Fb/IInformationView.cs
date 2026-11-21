@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200139C RID: 5020
+	// Token: 0x020014ED RID: 5357
 	public class IInformationView : IShowUi
 	{
-		// Token: 0x060072C4 RID: 29380 RVA: 0x00113C5C File Offset: 0x00111E5C
-		[NullableContext(1)]
+		// Token: 0x0600796B RID: 31083 RVA: 0x00122318 File Offset: 0x00120518
 		public static IInformationView Create(IInformationView? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700255F RID: 9567
-		// (get) Token: 0x060072C5 RID: 29381 RVA: 0x00113C7B File Offset: 0x00111E7B
+		// Token: 0x17002733 RID: 10035
+		// (get) Token: 0x0600796C RID: 31084 RVA: 0x00122337 File Offset: 0x00120537
 		public override EShowUiType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002560 RID: 9568
-		// (get) Token: 0x060072C6 RID: 29382 RVA: 0x00113C88 File Offset: 0x00111E88
+		// Token: 0x17002734 RID: 10036
+		// (get) Token: 0x0600796D RID: 31085 RVA: 0x00122344 File Offset: 0x00120544
 		public virtual int InformationViewId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400425A RID: 16986
+		// Token: 0x040045DB RID: 17883
 		private IInformationView Instance;
 	}
 }

@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02002B5A RID: 11098
+// Token: 0x020020D6 RID: 8406
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRoleData : RoleDataBase
 {
-	// Token: 0x06017035 RID: 94261 RVA: 0x005D7F3C File Offset: 0x005D613C
+	// Token: 0x06014A66 RID: 84582 RVA: 0x00604AA8 File Offset: 0x00602CA8
 	public SurvivorsRoleData(int surRoleId, int trialRoleId, bool isUnLock) : base(trialRoleId)
 	{
 		this.SurRoleId = surRoleId;
@@ -25,82 +25,82 @@ public class SurvivorsRoleData : RoleDataBase
 		this.PropId = value2.PropId;
 	}
 
-	// Token: 0x06017036 RID: 94262 RVA: 0x005D800D File Offset: 0x005D620D
+	// Token: 0x06014A67 RID: 84583 RVA: 0x00604B79 File Offset: 0x00602D79
 	public override bool IsTrialRole()
 	{
 		return true;
 	}
 
-	// Token: 0x06017037 RID: 94263 RVA: 0x005D8010 File Offset: 0x005D6210
+	// Token: 0x06014A68 RID: 84584 RVA: 0x00604B7C File Offset: 0x00602D7C
 	public override int GetRoleId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x06017038 RID: 94264 RVA: 0x005D8018 File Offset: 0x005D6218
+	// Token: 0x06014A69 RID: 84585 RVA: 0x00604B84 File Offset: 0x00602D84
 	public override string GetName(int? playerId = null)
 	{
 		RoleInfo roleConfig = base.GetRoleConfig();
 		return RoleConfig.Instance.GetRoleName(roleConfig.Name);
 	}
 
-	// Token: 0x06017039 RID: 94265 RVA: 0x005D803D File Offset: 0x005D623D
+	// Token: 0x06014A6A RID: 84586 RVA: 0x00604BA9 File Offset: 0x00602DA9
 	public override bool CanChangeName()
 	{
 		return false;
 	}
 
-	// Token: 0x0601703A RID: 94266 RVA: 0x005D8040 File Offset: 0x005D6240
+	// Token: 0x06014A6B RID: 84587 RVA: 0x00604BAC File Offset: 0x00602DAC
 	public override bool IsOnlineRole()
 	{
 		return false;
 	}
 
-	// Token: 0x0601703B RID: 94267 RVA: 0x005D8043 File Offset: 0x005D6243
+	// Token: 0x06014A6C RID: 84588 RVA: 0x00604BAF File Offset: 0x00602DAF
 	public override int GetRoleCreateTime()
 	{
 		return 0;
 	}
 
-	// Token: 0x0601703C RID: 94268 RVA: 0x005D8046 File Offset: 0x005D6246
+	// Token: 0x06014A6D RID: 84589 RVA: 0x00604BB2 File Offset: 0x00602DB2
 	public override bool GetIsNew()
 	{
 		return false;
 	}
 
-	// Token: 0x0601703D RID: 94269 RVA: 0x005D8049 File Offset: 0x005D6249
+	// Token: 0x06014A6E RID: 84590 RVA: 0x00604BB5 File Offset: 0x00602DB5
 	public SurvivorsRole? GetSurRoleConfig()
 	{
 		return SurvivorsRogueConfig.Instance.GetSurvivorsRole(this.SurRoleId);
 	}
 
-	// Token: 0x0400ABEB RID: 44011
+	// Token: 0x0400AFF1 RID: 45041
 	public int SurRoleId;
 
-	// Token: 0x0400ABEC RID: 44012
+	// Token: 0x0400AFF2 RID: 45042
 	public bool IsUnLock;
 
-	// Token: 0x0400ABED RID: 44013
+	// Token: 0x0400AFF3 RID: 45043
 	public int TrialRoleId;
 
-	// Token: 0x0400ABEE RID: 44014
+	// Token: 0x0400AFF4 RID: 45044
 	public string IconPath;
 
-	// Token: 0x0400ABEF RID: 44015
+	// Token: 0x0400AFF5 RID: 45045
 	public int QualityId;
 
-	// Token: 0x0400ABF0 RID: 44016
+	// Token: 0x0400AFF6 RID: 45046
 	public int InitWeaponID;
 
-	// Token: 0x0400ABF1 RID: 44017
+	// Token: 0x0400AFF7 RID: 45047
 	public string DefaultEvolveTxtID;
 
-	// Token: 0x0400ABF2 RID: 44018
+	// Token: 0x0400AFF8 RID: 45048
 	public int UnlockConditionId;
 
-	// Token: 0x0400ABF3 RID: 44019
+	// Token: 0x0400AFF9 RID: 45049
 	public int PropId;
 
-	// Token: 0x0400ABF4 RID: 44020
+	// Token: 0x0400AFFA RID: 45050
 	public bool IsSurvivorsTrial;
 }

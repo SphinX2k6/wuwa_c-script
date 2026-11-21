@@ -6,12 +6,12 @@ using CSharpScript.Game.Effect;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x02002C88 RID: 11400
+// Token: 0x020021E1 RID: 8673
 [NullableContext(1)]
 [Nullable(0)]
 public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUiModelSetDitherEffect, IUiModelSetPlanarReflectionRenderOffset
 {
-	// Token: 0x06017D03 RID: 97539 RVA: 0x0060E8C4 File Offset: 0x0060CAC4
+	// Token: 0x06015576 RID: 87414 RVA: 0x0063438C File Offset: 0x0063258C
 	protected override void OnInit()
 	{
 		this.AnsControllerComponent = base.Owner.CheckGetComponent<UiModelAnsControllerComponent>();
@@ -19,7 +19,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		this.UiModelLoadComponent = base.Owner.GetComponentByCtor<UiModelLoadComponent>();
 	}
 
-	// Token: 0x06017D04 RID: 97540 RVA: 0x0060E8FC File Offset: 0x0060CAFC
+	// Token: 0x06015577 RID: 87415 RVA: 0x006343C4 File Offset: 0x006325C4
 	protected override void OnTick(float deltaTime)
 	{
 		if (!this.NeedSetUiScale || this.UiScaleEffectMap.Count == 0)
@@ -51,26 +51,26 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		}
 	}
 
-	// Token: 0x06017D05 RID: 97541 RVA: 0x0060EA0C File Offset: 0x0060CC0C
+	// Token: 0x06015578 RID: 87416 RVA: 0x006344D4 File Offset: 0x006326D4
 	protected override void OnStart()
 	{
 		UiModelAnsControllerComponent ansControllerComponent = this.AnsControllerComponent;
 		if (ansControllerComponent != null)
 		{
-			ansControllerComponent.RegisterAnsTrigger("UiEffectAnsContext", new Action<UiAnsContextBase>(this.OnAnsBegin), new Action<UiAnsContextBase>(this.OnAnsEnd), new Action<UiAnsContextBase>(this.OnAnsPreHide), new Action<UiAnsContextBase>(this.OnAnsPreHideRevert));
+			ansControllerComponent.RegisterAnsTrigger(typeof(UiEffectAnsContext), new Action<UiAnsContextBase>(this.OnAnsBegin), new Action<UiAnsContextBase>(this.OnAnsEnd), new Action<UiAnsContextBase>(this.OnAnsPreHide), new Action<UiAnsContextBase>(this.OnAnsPreHideRevert));
 		}
 		UiModelEffectController.Instance.SetEffectAdditionTimeScaleEnable(true, base.Owner.Id);
 		this.NeedTick = true;
 	}
 
-	// Token: 0x06017D06 RID: 97542 RVA: 0x0060EA7C File Offset: 0x0060CC7C
+	// Token: 0x06015579 RID: 87417 RVA: 0x00634549 File Offset: 0x00632749
 	protected override void OnEnd()
 	{
 		UiModelEffectController.Instance.SetEffectAdditionTimeScaleEnable(false, base.Owner.Id);
 		this.DestroyAllEffect();
 	}
 
-	// Token: 0x06017D07 RID: 97543 RVA: 0x0060EA9C File Offset: 0x0060CC9C
+	// Token: 0x0601557A RID: 87418 RVA: 0x00634568 File Offset: 0x00632768
 	public void OnModelVisibleChange(bool visible)
 	{
 		float ditherEffectValue = this.UiModelDataComponent.GetDitherEffectValue();
@@ -92,7 +92,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		this.PauseAllEffectTime();
 	}
 
-	// Token: 0x06017D08 RID: 97544 RVA: 0x0060EB0C File Offset: 0x0060CD0C
+	// Token: 0x0601557B RID: 87419 RVA: 0x006345D8 File Offset: 0x006327D8
 	public void OnModelDitherEffectChange(float value)
 	{
 		bool visible = this.UiModelDataComponent.GetVisible();
@@ -108,7 +108,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		}
 	}
 
-	// Token: 0x06017D09 RID: 97545 RVA: 0x0060EB78 File Offset: 0x0060CD78
+	// Token: 0x0601557C RID: 87420 RVA: 0x00634644 File Offset: 0x00632844
 	public void OnModelPlanarReflectionRenderOffsetChange(bool enable, FVector? offset)
 	{
 		foreach (int effectHandle in this.EffectHandleSet)
@@ -117,7 +117,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		}
 	}
 
-	// Token: 0x06017D0A RID: 97546 RVA: 0x0060EBD0 File Offset: 0x0060CDD0
+	// Token: 0x0601557D RID: 87421 RVA: 0x0063469C File Offset: 0x0063289C
 	private void SetEffectPlanarReflectionRenderOffset(int effectHandle, bool enable, FVector? offset)
 	{
 		AActor sureEffectActor = EffectSystem.Instance.GetSureEffectActor(effectHandle);
@@ -137,7 +137,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		}
 	}
 
-	// Token: 0x06017D0B RID: 97547 RVA: 0x0060EC60 File Offset: 0x0060CE60
+	// Token: 0x0601557E RID: 87422 RVA: 0x0063472C File Offset: 0x0063292C
 	private void ApplyPlanarReflectionRenderOffset(int effectHandle)
 	{
 		UiModelDataComponent uiModelDataComponent = this.UiModelDataComponent;
@@ -151,7 +151,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		this.SetEffectPlanarReflectionRenderOffset(effectHandle, value, (uiModelDataComponent2 != null) ? uiModelDataComponent2.GetPlanarReflectionRenderOffset() : null);
 	}
 
-	// Token: 0x06017D0C RID: 97548 RVA: 0x0060ECBC File Offset: 0x0060CEBC
+	// Token: 0x0601557F RID: 87423 RVA: 0x00634788 File Offset: 0x00632988
 	[NullableContext(2)]
 	private UPlanarReflectionComponent GetUiShowRoomPlanarReflection()
 	{
@@ -164,7 +164,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		return obj.PlanarReflection;
 	}
 
-	// Token: 0x06017D0D RID: 97549 RVA: 0x0060ED00 File Offset: 0x0060CF00
+	// Token: 0x06015580 RID: 87424 RVA: 0x006347CC File Offset: 0x006329CC
 	[NullableContext(2)]
 	private void ExcludeEffectFromReflectionIfNeeded(int effectHandle, string effectPath)
 	{
@@ -186,13 +186,13 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		EffectSystem.Instance.AddFinishCallback(effectHandle, new Action<int>(this.OnExcludedEffectFinish));
 	}
 
-	// Token: 0x06017D0E RID: 97550 RVA: 0x0060ED89 File Offset: 0x0060CF89
+	// Token: 0x06015581 RID: 87425 RVA: 0x00634855 File Offset: 0x00632A55
 	private void OnExcludedEffectFinish(int effectHandle)
 	{
 		this.RevertEffectReflectionExclusion(effectHandle);
 	}
 
-	// Token: 0x06017D0F RID: 97551 RVA: 0x0060ED94 File Offset: 0x0060CF94
+	// Token: 0x06015582 RID: 87426 RVA: 0x00634860 File Offset: 0x00632A60
 	private void RevertEffectReflectionExclusion(int effectHandle)
 	{
 		AActor aactor;
@@ -212,7 +212,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		}
 	}
 
-	// Token: 0x06017D10 RID: 97552 RVA: 0x0060EDDC File Offset: 0x0060CFDC
+	// Token: 0x06015583 RID: 87427 RVA: 0x006348A8 File Offset: 0x00632AA8
 	private void RevertAllEffectReflectionExclusion()
 	{
 		if (this.ReflectionExcludedActorMap.Count == 0)
@@ -234,13 +234,13 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		this.ReflectionExcludedActorMap.Clear();
 	}
 
-	// Token: 0x06017D11 RID: 97553 RVA: 0x0060EE70 File Offset: 0x0060D070
+	// Token: 0x06015584 RID: 87428 RVA: 0x0063493C File Offset: 0x00632B3C
 	public void PlayEffectOnRoot(string effectPath, USceneComponent sceneComponent, FName socketName, bool isForceShow)
 	{
 		this.PlayEffectByPath(effectPath, sceneComponent, socketName, true, false, Vector.ZeroVectorDouble, Rotator.ZeroRotator, Vector.OneVectorDouble, isForceShow, null, null);
 	}
 
-	// Token: 0x06017D12 RID: 97554 RVA: 0x0060EE9C File Offset: 0x0060D09C
+	// Token: 0x06015585 RID: 87429 RVA: 0x00634968 File Offset: 0x00632B68
 	public int PlayEffectByPath(string effectPath, USceneComponent sceneComponent, FName socket, bool attached, bool attachLocationOnly, FVectorDouble location, FRotator rotation, FVectorDouble scale, bool isForceShow, [Nullable(2)] EffectContext effectContext = null, [Nullable(2)] Action<ELoadEffectResult, int> callback = null)
 	{
 		EffectSystem instance = EffectSystem.Instance;
@@ -303,7 +303,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		return num;
 	}
 
-	// Token: 0x06017D13 RID: 97555 RVA: 0x0060EF84 File Offset: 0x0060D184
+	// Token: 0x06015586 RID: 87430 RVA: 0x00634A50 File Offset: 0x00632C50
 	public int PlayEffectByContext(UiModelEffectPlayContext context)
 	{
 		EffectSystem instance = EffectSystem.Instance;
@@ -368,7 +368,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		return num;
 	}
 
-	// Token: 0x06017D14 RID: 97556 RVA: 0x0060F034 File Offset: 0x0060D234
+	// Token: 0x06015587 RID: 87431 RVA: 0x00634B00 File Offset: 0x00632D00
 	public void PlayEffectByAnsContext(UiEffectAnsContext context)
 	{
 		if (this.AnsEffectMap.ContainsKey(context))
@@ -393,7 +393,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		context.Handle = new int?(num);
 	}
 
-	// Token: 0x06017D15 RID: 97557 RVA: 0x0060F104 File Offset: 0x0060D304
+	// Token: 0x06015588 RID: 87432 RVA: 0x00634BD0 File Offset: 0x00632DD0
 	public void StopEffectByAnsContext(UiEffectAnsContext context)
 	{
 		if (context.PlayOnEnd)
@@ -415,7 +415,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		this.PreHiddenAnsSet.Remove(context);
 	}
 
-	// Token: 0x06017D16 RID: 97558 RVA: 0x0060F1C8 File Offset: 0x0060D3C8
+	// Token: 0x06015589 RID: 87433 RVA: 0x00634C94 File Offset: 0x00632E94
 	public void HideEffectByAnsContext(UiEffectAnsContext context)
 	{
 		int handle;
@@ -425,7 +425,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		}
 	}
 
-	// Token: 0x06017D17 RID: 97559 RVA: 0x0060F1F4 File Offset: 0x0060D3F4
+	// Token: 0x0601558A RID: 87434 RVA: 0x00634CC0 File Offset: 0x00632EC0
 	public void DestroyAllEffect()
 	{
 		this.RevertAllEffectReflectionExclusion();
@@ -447,7 +447,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		this.UiScaleEffectMap.Clear();
 	}
 
-	// Token: 0x06017D18 RID: 97560 RVA: 0x0060F2C0 File Offset: 0x0060D4C0
+	// Token: 0x0601558B RID: 87435 RVA: 0x00634D8C File Offset: 0x00632F8C
 	public void SetAllEffectShowState(bool state)
 	{
 		foreach (int handle in this.EffectHandleSet)
@@ -456,7 +456,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		}
 	}
 
-	// Token: 0x06017D19 RID: 97561 RVA: 0x0060F320 File Offset: 0x0060D520
+	// Token: 0x0601558C RID: 87436 RVA: 0x00634DEC File Offset: 0x00632FEC
 	private void ResumeAllEffectTime()
 	{
 		foreach (int id in this.EffectHandleSet)
@@ -465,7 +465,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		}
 	}
 
-	// Token: 0x06017D1A RID: 97562 RVA: 0x0060F380 File Offset: 0x0060D580
+	// Token: 0x0601558D RID: 87437 RVA: 0x00634E4C File Offset: 0x0063304C
 	private void PauseAllEffectTime()
 	{
 		foreach (int id in this.EffectHandleSet)
@@ -474,7 +474,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		}
 	}
 
-	// Token: 0x06017D1B RID: 97563 RVA: 0x0060F3E0 File Offset: 0x0060D5E0
+	// Token: 0x0601558E RID: 87438 RVA: 0x00634EAC File Offset: 0x006330AC
 	public void StopEffect(int effectHandle, bool bFastStop = true)
 	{
 		if (EffectSystem.Instance.IsValid(effectHandle))
@@ -494,13 +494,13 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		this.UiScaleEffectMap.Remove(effectHandle);
 	}
 
-	// Token: 0x06017D1C RID: 97564 RVA: 0x0060F44F File Offset: 0x0060D64F
+	// Token: 0x0601558F RID: 87439 RVA: 0x00634F1B File Offset: 0x0063311B
 	public void OnAnsBegin(UiAnsContextBase ansContext)
 	{
 		this.PlayEffectByAnsContext(ansContext as UiEffectAnsContext);
 	}
 
-	// Token: 0x06017D1D RID: 97565 RVA: 0x0060F460 File Offset: 0x0060D660
+	// Token: 0x06015590 RID: 87440 RVA: 0x00634F2C File Offset: 0x0063312C
 	public void OnAnsPreHide(UiAnsContextBase ansContext)
 	{
 		UiEffectAnsContext uiEffectAnsContext = ansContext as UiEffectAnsContext;
@@ -517,7 +517,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		this.PreHiddenAnsSet.Add(uiEffectAnsContext);
 	}
 
-	// Token: 0x06017D1E RID: 97566 RVA: 0x0060F4A4 File Offset: 0x0060D6A4
+	// Token: 0x06015591 RID: 87441 RVA: 0x00634F70 File Offset: 0x00633170
 	public void OnAnsPreHideRevert(UiAnsContextBase ansContext)
 	{
 		UiEffectAnsContext uiEffectAnsContext = ansContext as UiEffectAnsContext;
@@ -537,7 +537,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		EffectSystem.Instance.SetEffectHidden(handle, !this.EffectShowState, null, false);
 	}
 
-	// Token: 0x06017D1F RID: 97567 RVA: 0x0060F4F4 File Offset: 0x0060D6F4
+	// Token: 0x06015592 RID: 87442 RVA: 0x00634FC0 File Offset: 0x006331C0
 	public void OnAnsEnd(UiAnsContextBase ansContext)
 	{
 		UiEffectAnsContext uiEffectAnsContext = ansContext as UiEffectAnsContext;
@@ -549,7 +549,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		this.StopEffectByAnsContext(uiEffectAnsContext);
 	}
 
-	// Token: 0x06017D20 RID: 97568 RVA: 0x0060F54C File Offset: 0x0060D74C
+	// Token: 0x06015593 RID: 87443 RVA: 0x00635018 File Offset: 0x00633218
 	private bool CheckHasOtherSameSlotAns(UiEffectAnsContext inEffectAnsContext)
 	{
 		FName? ansSlotName = inEffectAnsContext.EffectContext.AnsSlotName;
@@ -557,7 +557,7 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		{
 			return false;
 		}
-		foreach (UiAnsContextBase uiAnsContextBase in this.AnsControllerComponent.GetAnsContextSet("UiEffectAnsContext").ContextSet)
+		foreach (UiAnsContextBase uiAnsContextBase in this.AnsControllerComponent.GetAnsContextSet(typeof(UiEffectAnsContext)).ContextSet)
 		{
 			if (uiAnsContextBase != inEffectAnsContext)
 			{
@@ -571,42 +571,42 @@ public class UiModelEffectComponent : UiModelComponentBase, IUiModelVisible, IUi
 		return false;
 	}
 
-	// Token: 0x0400B197 RID: 45463
+	// Token: 0x0400B502 RID: 46338
 	public bool NeedSetUiScale;
 
-	// Token: 0x0400B198 RID: 45464
+	// Token: 0x0400B503 RID: 46339
 	private readonly HashSet<int> EffectHandleSet = new HashSet<int>();
 
-	// Token: 0x0400B199 RID: 45465
+	// Token: 0x0400B504 RID: 46340
 	private readonly Dictionary<UiEffectAnsContext, int> AnsEffectMap = new Dictionary<UiEffectAnsContext, int>();
 
-	// Token: 0x0400B19A RID: 45466
+	// Token: 0x0400B505 RID: 46341
 	private readonly HashSet<UiEffectAnsContext> PreHiddenAnsSet = new HashSet<UiEffectAnsContext>();
 
-	// Token: 0x0400B19B RID: 45467
+	// Token: 0x0400B506 RID: 46342
 	[Nullable(2)]
 	private UiModelAnsControllerComponent AnsControllerComponent;
 
-	// Token: 0x0400B19C RID: 45468
+	// Token: 0x0400B507 RID: 46343
 	[Nullable(2)]
 	private UiModelDataComponent UiModelDataComponent;
 
-	// Token: 0x0400B19D RID: 45469
+	// Token: 0x0400B508 RID: 46344
 	[Nullable(2)]
 	private UiModelLoadComponent UiModelLoadComponent;
 
-	// Token: 0x0400B19E RID: 45470
+	// Token: 0x0400B509 RID: 46345
 	private readonly Dictionary<int, USceneComponent> UiScaleEffectMap = new Dictionary<int, USceneComponent>();
 
-	// Token: 0x0400B19F RID: 45471
+	// Token: 0x0400B50A RID: 46346
 	private readonly Dictionary<int, AActor> ReflectionExcludedActorMap = new Dictionary<int, AActor>();
 
-	// Token: 0x0400B1A0 RID: 45472
+	// Token: 0x0400B50B RID: 46347
 	private bool EffectShowState = true;
 
-	// Token: 0x0400B1A1 RID: 45473
+	// Token: 0x0400B50C RID: 46348
 	private readonly float ShowEffectDither = 0.5f;
 
-	// Token: 0x0400B1A2 RID: 45474
+	// Token: 0x0400B50D RID: 46349
 	private readonly float HideEffectDither = 0.5f;
 }

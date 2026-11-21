@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001500 RID: 5376
+	// Token: 0x02001576 RID: 5494
 	[NetMessage(EMessageId.WeatherControlUnlockNotify)]
 	public sealed class WeatherControlUnlockNotify : IMessage<WeatherControlUnlockNotify>, IMessage, IEquatable<WeatherControlUnlockNotify>, IDeepCloneable<WeatherControlUnlockNotify>, IBufferMessage
 	{
-		// Token: 0x0601C6AC RID: 116396 RVA: 0x0041AD5C File Offset: 0x00418F5C
+		// Token: 0x0601D173 RID: 119155 RVA: 0x0043681C File Offset: 0x00434A1C
 		[NullableContext(1)]
 		public static WeatherControlUnlockNotify Create()
 		{
 			return new WeatherControlUnlockNotify();
 		}
 
-		// Token: 0x17005FCB RID: 24523
-		// (get) Token: 0x0601C6AD RID: 116397 RVA: 0x0041AD63 File Offset: 0x00418F63
+		// Token: 0x1700626C RID: 25196
+		// (get) Token: 0x0601D174 RID: 119156 RVA: 0x00436823 File Offset: 0x00434A23
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005FCC RID: 24524
-		// (get) Token: 0x0601C6AE RID: 116398 RVA: 0x0041AD66 File Offset: 0x00418F66
+		// Token: 0x1700626D RID: 25197
+		// (get) Token: 0x0601D175 RID: 119157 RVA: 0x00436826 File Offset: 0x00434A26
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C6AF RID: 116399 RVA: 0x0041AD6D File Offset: 0x00418F6D
+		// Token: 0x0601D176 RID: 119158 RVA: 0x0043682D File Offset: 0x00434A2D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeatherControlUnlockNotify()
 		{
 		}
 
-		// Token: 0x0601C6B0 RID: 116400 RVA: 0x0041AD75 File Offset: 0x00418F75
+		// Token: 0x0601D177 RID: 119159 RVA: 0x00436835 File Offset: 0x00434A35
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeatherControlUnlockNotify(WeatherControlUnlockNotify other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601C6B1 RID: 116401 RVA: 0x0041AD9A File Offset: 0x00418F9A
+		// Token: 0x0601D178 RID: 119160 RVA: 0x0043685A File Offset: 0x00434A5A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WeatherControlUnlockNotify Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new WeatherControlUnlockNotify(this);
 		}
 
-		// Token: 0x17005FCD RID: 24525
-		// (get) Token: 0x0601C6B2 RID: 116402 RVA: 0x0041ADA2 File Offset: 0x00418FA2
-		// (set) Token: 0x0601C6B3 RID: 116403 RVA: 0x0041ADAA File Offset: 0x00418FAA
+		// Token: 0x1700626E RID: 25198
+		// (get) Token: 0x0601D179 RID: 119161 RVA: 0x00436862 File Offset: 0x00434A62
+		// (set) Token: 0x0601D17A RID: 119162 RVA: 0x0043686A File Offset: 0x00434A6A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int WeatherSwitchId
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C6B4 RID: 116404 RVA: 0x0041ADB3 File Offset: 0x00418FB3
+		// Token: 0x0601D17B RID: 119163 RVA: 0x00436873 File Offset: 0x00434A73
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as WeatherControlUnlockNotify);
 		}
 
-		// Token: 0x0601C6B5 RID: 116405 RVA: 0x0041ADC1 File Offset: 0x00418FC1
+		// Token: 0x0601D17C RID: 119164 RVA: 0x00436881 File Offset: 0x00434A81
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(WeatherControlUnlockNotify other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.WeatherSwitchId == other.WeatherSwitchId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601C6B6 RID: 116406 RVA: 0x0041ADF0 File Offset: 0x00418FF0
+		// Token: 0x0601D17D RID: 119165 RVA: 0x004368B0 File Offset: 0x00434AB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C6B7 RID: 116407 RVA: 0x0041AE2F File Offset: 0x0041902F
+		// Token: 0x0601D17E RID: 119166 RVA: 0x004368EF File Offset: 0x00434AEF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601C6B8 RID: 116408 RVA: 0x0041AE3C File Offset: 0x0041903C
+		// Token: 0x0601D17F RID: 119167 RVA: 0x004368FC File Offset: 0x00434AFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601C6B9 RID: 116409 RVA: 0x0041AE45 File Offset: 0x00419045
+		// Token: 0x0601D180 RID: 119168 RVA: 0x00436905 File Offset: 0x00434B05
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.WeatherSwitchId != 0)
 			{
-				output.WriteRawTag(72);
+				output.WriteRawTag(56);
 				output.WriteInt32(this.WeatherSwitchId);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C6BA RID: 116410 RVA: 0x0041AE78 File Offset: 0x00419078
+		// Token: 0x0601D181 RID: 119169 RVA: 0x00436938 File Offset: 0x00434B38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C6BB RID: 116411 RVA: 0x0041AEB6 File Offset: 0x004190B6
+		// Token: 0x0601D182 RID: 119170 RVA: 0x00436976 File Offset: 0x00434B76
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(WeatherControlUnlockNotify other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601C6BC RID: 116412 RVA: 0x0041AEE7 File Offset: 0x004190E7
+		// Token: 0x0601D183 RID: 119171 RVA: 0x004369A7 File Offset: 0x00434BA7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601C6BD RID: 116413 RVA: 0x0041AEF0 File Offset: 0x004190F0
+		// Token: 0x0601D184 RID: 119172 RVA: 0x004369B0 File Offset: 0x00434BB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 72U)
+				if (num != 56U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400A2B5 RID: 41653
+		// Token: 0x0400A70E RID: 42766
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400A2B6 RID: 41654
-		public const int WeatherSwitchIdFieldNumber = 9;
+		// Token: 0x0400A70F RID: 42767
+		public const int WeatherSwitchIdFieldNumber = 7;
 
-		// Token: 0x0400A2B7 RID: 41655
+		// Token: 0x0400A710 RID: 42768
 		private int weatherSwitchId_;
 	}
 }

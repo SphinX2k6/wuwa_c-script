@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CF5 RID: 23797
+	// Token: 0x02004CD7 RID: 19671
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleSkillUltraItem : UiPanelBase
 	{
-		// Token: 0x0603C422 RID: 246818 RVA: 0x00E6CD18 File Offset: 0x00E6AF18
+		// Token: 0x06031378 RID: 201592 RVA: 0x00DBD2CC File Offset: 0x00DBB4CC
 		public BattleSkillUltraItem(UUIItem rootUiItem)
 		{
 			base.CreateByResourceIdAsync("UiItem_BattleSkillUltraItem", rootUiItem, false).Forget();
 		}
 
-		// Token: 0x0603C423 RID: 246819 RVA: 0x00E6CD74 File Offset: 0x00E6AF74
+		// Token: 0x06031379 RID: 201593 RVA: 0x00DBD328 File Offset: 0x00DBB528
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C424 RID: 246820 RVA: 0x00E6CE40 File Offset: 0x00E6B040
+		// Token: 0x0603137A RID: 201594 RVA: 0x00DBD3F4 File Offset: 0x00DBB5F4
 		protected override void OnStart()
 		{
 			this.FrameSprite = base.GetSprite(0);
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C425 RID: 246821 RVA: 0x00E6CED8 File Offset: 0x00E6B0D8
+		// Token: 0x0603137B RID: 201595 RVA: 0x00DBD48C File Offset: 0x00DBB68C
 		protected override void OnBeforeDestroy()
 		{
 			this.FrameSprite = null;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C426 RID: 246822 RVA: 0x00E6CF2E File Offset: 0x00E6B12E
+		// Token: 0x0603137C RID: 201596 RVA: 0x00DBD4E2 File Offset: 0x00DBB6E2
 		public void SetComponentActive(bool visibility)
 		{
 			this.Visible = visibility;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.<SetComponentActive>g__Callback|18_0();
 		}
 
-		// Token: 0x0603C427 RID: 246823 RVA: 0x00E6CF64 File Offset: 0x00E6B164
+		// Token: 0x0603137D RID: 201597 RVA: 0x00DBD518 File Offset: 0x00DBB718
 		public void SetBarPercent(float energyPercent, bool bPlayUpEffect)
 		{
 			BattleSkillUltraItem.<>c__DisplayClass19_0 CS$<>8__locals1 = new BattleSkillUltraItem.<>c__DisplayClass19_0();
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<SetBarPercent>g__Callback|0();
 		}
 
-		// Token: 0x0603C428 RID: 246824 RVA: 0x00E6CFC0 File Offset: 0x00E6B1C0
+		// Token: 0x0603137E RID: 201598 RVA: 0x00DBD574 File Offset: 0x00DBB774
 		public void SetBarVisible(bool flag)
 		{
 			BattleSkillUltraItem.<>c__DisplayClass20_0 CS$<>8__locals1 = new BattleSkillUltraItem.<>c__DisplayClass20_0();
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<SetBarVisible>g__Callback|0();
 		}
 
-		// Token: 0x0603C429 RID: 246825 RVA: 0x00E6D00C File Offset: 0x00E6B20C
+		// Token: 0x0603137F RID: 201599 RVA: 0x00DBD5C0 File Offset: 0x00DBB7C0
 		public void SetFrameSprite(FColor frameSpriteColor)
 		{
 			BattleSkillUltraItem.<>c__DisplayClass21_0 CS$<>8__locals1 = new BattleSkillUltraItem.<>c__DisplayClass21_0();
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<SetFrameSprite>g__Callback|0();
 		}
 
-		// Token: 0x0603C42A RID: 246826 RVA: 0x00E6D082 File Offset: 0x00E6B282
+		// Token: 0x06031380 RID: 201600 RVA: 0x00DBD636 File Offset: 0x00DBB836
 		[NullableContext(2)]
 		private void SetEffectEnable(UUINiagara effect, bool bEnable)
 		{
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C42B RID: 246827 RVA: 0x00E6D0AC File Offset: 0x00E6B2AC
+		// Token: 0x06031381 RID: 201601 RVA: 0x00DBD660 File Offset: 0x00DBB860
 		public void SetUltraEffectEnable(bool bEnable)
 		{
 			BattleSkillUltraItem.<>c__DisplayClass23_0 CS$<>8__locals1 = new BattleSkillUltraItem.<>c__DisplayClass23_0();
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<SetUltraEffectEnable>g__Callback|0();
 		}
 
-		// Token: 0x0603C42C RID: 246828 RVA: 0x00E6D0F8 File Offset: 0x00E6B2F8
+		// Token: 0x06031382 RID: 201602 RVA: 0x00DBD6AC File Offset: 0x00DBB8AC
 		public void SetUltraTipsEffectEnable(bool bEnable)
 		{
 			BattleSkillUltraItem.<>c__DisplayClass24_0 CS$<>8__locals1 = new BattleSkillUltraItem.<>c__DisplayClass24_0();
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<SetUltraTipsEffectEnable>g__Callback|0();
 		}
 
-		// Token: 0x0603C42D RID: 246829 RVA: 0x00E6D144 File Offset: 0x00E6B344
+		// Token: 0x06031383 RID: 201603 RVA: 0x00DBD6F8 File Offset: 0x00DBB8F8
 		public void SetUltraUpEffectEnable(bool bEnable)
 		{
 			BattleSkillUltraItem.<>c__DisplayClass25_0 CS$<>8__locals1 = new BattleSkillUltraItem.<>c__DisplayClass25_0();
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<SetUltraUpEffectEnable>g__Callback|0();
 		}
 
-		// Token: 0x0603C42E RID: 246830 RVA: 0x00E6D190 File Offset: 0x00E6B390
+		// Token: 0x06031384 RID: 201604 RVA: 0x00DBD744 File Offset: 0x00DBB944
 		public void RefreshUltraEffect(string effectPath, FLinearColor effectColor)
 		{
 			BattleSkillUltraItem.<>c__DisplayClass26_0 CS$<>8__locals1 = new BattleSkillUltraItem.<>c__DisplayClass26_0();
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<RefreshUltraEffect>g__Callback|0();
 		}
 
-		// Token: 0x0603C42F RID: 246831 RVA: 0x00E6D273 File Offset: 0x00E6B473
+		// Token: 0x06031385 RID: 201605 RVA: 0x00DBD827 File Offset: 0x00DBBA27
 		private void CancelLoadUltraNiagara()
 		{
 			if (this.LoadUltraNiagaraHandleId == null)
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LoadUltraNiagaraHandleId = null;
 		}
 
-		// Token: 0x0603C430 RID: 246832 RVA: 0x00E6D2A4 File Offset: 0x00E6B4A4
+		// Token: 0x06031386 RID: 201606 RVA: 0x00DBD858 File Offset: 0x00DBBA58
 		public void RefreshUltraTipsEffect(string effectPath)
 		{
 			BattleSkillUltraItem.<>c__DisplayClass28_0 CS$<>8__locals1 = new BattleSkillUltraItem.<>c__DisplayClass28_0();
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<RefreshUltraTipsEffect>g__Callback|0();
 		}
 
-		// Token: 0x0603C431 RID: 246833 RVA: 0x00E6D311 File Offset: 0x00E6B511
+		// Token: 0x06031387 RID: 201607 RVA: 0x00DBD8C5 File Offset: 0x00DBBAC5
 		private void CancelLoadUltraTipsNiagara()
 		{
 			if (this.LoadUltraTipsNiagaraHandleId == null)
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LoadUltraTipsNiagaraHandleId = null;
 		}
 
-		// Token: 0x0603C432 RID: 246834 RVA: 0x00E6D344 File Offset: 0x00E6B544
+		// Token: 0x06031388 RID: 201608 RVA: 0x00DBD8F8 File Offset: 0x00DBBAF8
 		public void RefreshUltraDynamicEffect(string effectPath, FLinearColor? effectColor = null)
 		{
 			BattleSkillUltraItem.<>c__DisplayClass30_0 CS$<>8__locals1 = new BattleSkillUltraItem.<>c__DisplayClass30_0();
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CS$<>8__locals1.<RefreshUltraDynamicEffect>g__Callback|0();
 		}
 
-		// Token: 0x0603C433 RID: 246835 RVA: 0x00E6D3B1 File Offset: 0x00E6B5B1
+		// Token: 0x06031389 RID: 201609 RVA: 0x00DBD965 File Offset: 0x00DBBB65
 		private void CancelLoadUltraDynamicNiagara()
 		{
 			if (this.LoadUltraDynamicNiagaraHandleId == null)
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LoadUltraDynamicNiagaraHandleId = null;
 		}
 
-		// Token: 0x0603C434 RID: 246836 RVA: 0x00E6D3E2 File Offset: 0x00E6B5E2
+		// Token: 0x0603138A RID: 201610 RVA: 0x00DBD996 File Offset: 0x00DBBB96
 		public void StopUltraDynamicEffect()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(4);
@@ -312,85 +312,85 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			uiNiagara.SetUIActive(false);
 		}
 
-		// Token: 0x0603C435 RID: 246837 RVA: 0x00E6D404 File Offset: 0x00E6B604
+		// Token: 0x0603138B RID: 201611 RVA: 0x00DBD9B8 File Offset: 0x00DBBBB8
 		public bool HasValidUltDynamicEffect()
 		{
 			return this.LoadUltraDynamicNiagaraHandleId != null && BattleLinkModel.Instance.CheckInDreamLink() && BattleLinkModel.Instance.CanUseLinkSkill(null);
 		}
 
-		// Token: 0x0603C436 RID: 246838 RVA: 0x00E6D43F File Offset: 0x00E6B63F
+		// Token: 0x0603138C RID: 201612 RVA: 0x00DBD9F3 File Offset: 0x00DBBBF3
 		private void OnBattleLinkStatusChanged(ELinkStatus state)
 		{
 			this.RefreshLinkEffect();
 		}
 
-		// Token: 0x0603C437 RID: 246839 RVA: 0x00E6D448 File Offset: 0x00E6B648
+		// Token: 0x0603138D RID: 201613 RVA: 0x00DBD9FC File Offset: 0x00DBBBFC
 		private void RefreshLinkEffect()
 		{
 			bool ultraEffectEnable = BattleLinkModel.Instance.CanUseLinkSkill(null);
 			this.SetUltraEffectEnable(ultraEffectEnable);
 		}
 
-		// Token: 0x0603C438 RID: 246840 RVA: 0x00E6D470 File Offset: 0x00E6B670
+		// Token: 0x0603138E RID: 201614 RVA: 0x00DBDA24 File Offset: 0x00DBBC24
 		[CompilerGenerated]
 		private void <SetComponentActive>g__Callback|18_0()
 		{
 			this.SetActive(this.Visible);
 		}
 
-		// Token: 0x0401F667 RID: 128615
+		// Token: 0x0401A120 RID: 106784
 		public bool Visible;
 
-		// Token: 0x0401F668 RID: 128616
+		// Token: 0x0401A121 RID: 106785
 		[Nullable(2)]
 		private UUISprite FrameSprite;
 
-		// Token: 0x0401F669 RID: 128617
+		// Token: 0x0401A122 RID: 106786
 		private FColor? FrameSpriteColor;
 
-		// Token: 0x0401F66A RID: 128618
+		// Token: 0x0401A123 RID: 106787
 		private string UltNiagaraPath = string.Empty;
 
-		// Token: 0x0401F66B RID: 128619
+		// Token: 0x0401A124 RID: 106788
 		private FLinearColor? UltNiagaraColor;
 
-		// Token: 0x0401F66C RID: 128620
+		// Token: 0x0401A125 RID: 106789
 		private string UltTipsNiagaraPath = string.Empty;
 
-		// Token: 0x0401F66D RID: 128621
+		// Token: 0x0401A126 RID: 106790
 		private string UltDynamicNiagaraPath = string.Empty;
 
-		// Token: 0x0401F66E RID: 128622
+		// Token: 0x0401A127 RID: 106791
 		private int? LoadUltraNiagaraHandleId;
 
-		// Token: 0x0401F66F RID: 128623
+		// Token: 0x0401A128 RID: 106792
 		private int? LoadUltraTipsNiagaraHandleId;
 
-		// Token: 0x0401F670 RID: 128624
+		// Token: 0x0401A129 RID: 106793
 		private int? LoadUltraDynamicNiagaraHandleId;
 
-		// Token: 0x0401F671 RID: 128625
+		// Token: 0x0401A12A RID: 106794
 		private float CurrentEnergyPercent = -1f;
 
-		// Token: 0x0401F672 RID: 128626
+		// Token: 0x0401A12B RID: 106795
 		private readonly Dictionary<string, Action> OperationMap = new Dictionary<string, Action>();
 
-		// Token: 0x0401F673 RID: 128627
+		// Token: 0x0401A12C RID: 106796
 		private bool HasBattleLinkEvent;
 
-		// Token: 0x0200BF57 RID: 48983
+		// Token: 0x0200A95D RID: 43357
 		[NullableContext(0)]
 		private enum ESkillUltraItem
 		{
-			// Token: 0x04039B4B RID: 236363
+			// Token: 0x0403450D RID: 214285
 			BarSprite,
-			// Token: 0x04039B4C RID: 236364
+			// Token: 0x0403450E RID: 214286
 			UltNiagara,
-			// Token: 0x04039B4D RID: 236365
+			// Token: 0x0403450F RID: 214287
 			UltTipsNiagara,
-			// Token: 0x04039B4E RID: 236366
+			// Token: 0x04034510 RID: 214288
 			UltUpNiagara,
-			// Token: 0x04039B4F RID: 236367
+			// Token: 0x04034511 RID: 214289
 			UltDynamicNiagara
 		}
 	}

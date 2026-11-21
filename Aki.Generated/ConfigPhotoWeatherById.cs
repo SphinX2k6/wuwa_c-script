@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000703 RID: 1795
+	// Token: 0x0200071B RID: 1819
 	public class ConfigPhotoWeatherById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002A22 RID: 10786 RVA: 0x001477FB File Offset: 0x001459FB
+		// Token: 0x06002AB2 RID: 10930 RVA: 0x0014E277 File Offset: 0x0014C477
 		static ConfigPhotoWeatherById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoWeatherById.CreateStaticDefaultValue), new Action(ConfigPhotoWeatherById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002A23 RID: 10787 RVA: 0x0014781C File Offset: 0x00145A1C
+		// Token: 0x06002AB3 RID: 10931 RVA: 0x0014E298 File Offset: 0x0014C498
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoWeatherById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002A24 RID: 10788 RVA: 0x0014789B File Offset: 0x00145A9B
+		// Token: 0x06002AB4 RID: 10932 RVA: 0x0014E317 File Offset: 0x0014C517
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoWeatherById.LogPair = null;
 			ConfigPhotoWeatherById.HandleId = 0;
 		}
 
-		// Token: 0x06002A25 RID: 10789 RVA: 0x001478A9 File Offset: 0x00145AA9
+		// Token: 0x06002AB5 RID: 10933 RVA: 0x0014E325 File Offset: 0x0014C525
 		public static void Init()
 		{
 			ConfigPhotoWeatherById.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoWeatherById.HandleId, "db_photonew.db", "select BinData from `PhotoWeather` where Id=?");
 		}
 
-		// Token: 0x06002A26 RID: 10790 RVA: 0x001478C4 File Offset: 0x00145AC4
+		// Token: 0x06002AB6 RID: 10934 RVA: 0x0014E340 File Offset: 0x0014C540
 		public static PhotoWeather? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhotoWeatherById.HandleId, ConfigPhotoWeatherById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhotoWeather?(rootAsPhotoWeather);
 		}
 
-		// Token: 0x040030FB RID: 12539
+		// Token: 0x040031A3 RID: 12707
 		private const string DB = "db_photonew.db";
 
-		// Token: 0x040030FC RID: 12540
+		// Token: 0x040031A4 RID: 12708
 		private const string FILE = "p.拍照新.xlsx";
 
-		// Token: 0x040030FD RID: 12541
+		// Token: 0x040031A5 RID: 12709
 		private const string TABLE = "PhotoWeather";
 
-		// Token: 0x040030FE RID: 12542
+		// Token: 0x040031A6 RID: 12710
 		private const string COMMAND = "select BinData from `PhotoWeather` where Id=?";
 
-		// Token: 0x040030FF RID: 12543
+		// Token: 0x040031A7 RID: 12711
 		private const string KEY_PREFIX = "PhotoWeatherById";
 
-		// Token: 0x04003100 RID: 12544
+		// Token: 0x040031A8 RID: 12712
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003101 RID: 12545
+		// Token: 0x040031A9 RID: 12713
 		private static int HandleId;
 	}
 }

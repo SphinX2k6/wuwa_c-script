@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002106 RID: 8454
+	// Token: 0x02002367 RID: 9063
 	public class PlayCustomSequence_SetValue
 	{
-		// Token: 0x04006F5D RID: 28509
+		// Token: 0x04007591 RID: 30097
 		public int CustomSeqId;
 
-		// Token: 0x04006F5E RID: 28510
-		[Nullable(1)]
+		// Token: 0x04007592 RID: 30098
 		public List<int> WhoIds;
 
-		// Token: 0x04006F5F RID: 28511
+		// Token: 0x04007593 RID: 30099
 		public bool? ResetCamera;
 	}
 }

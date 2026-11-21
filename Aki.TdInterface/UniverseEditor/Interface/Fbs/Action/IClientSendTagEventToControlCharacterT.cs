@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063E3 RID: 25571
+	// Token: 0x02006A63 RID: 27235
 	public class IClientSendTagEventToControlCharacterT
 	{
-		// Token: 0x1700BE7F RID: 48767
-		// (get) Token: 0x0602C3DD RID: 181213 RVA: 0x00612B47 File Offset: 0x00610D47
-		// (set) Token: 0x0602C3DE RID: 181214 RVA: 0x00612B4F File Offset: 0x00610D4F
+		// Token: 0x1700C819 RID: 51225
+		// (get) Token: 0x0602EBB3 RID: 191411 RVA: 0x0065E9D3 File Offset: 0x0065CBD3
+		// (set) Token: 0x0602EBB4 RID: 191412 RVA: 0x0065E9DB File Offset: 0x0065CBDB
 		public EExecClientBattleActionType Type { get; set; }
 
-		// Token: 0x1700BE80 RID: 48768
-		// (get) Token: 0x0602C3DF RID: 181215 RVA: 0x00612B58 File Offset: 0x00610D58
-		// (set) Token: 0x0602C3E0 RID: 181216 RVA: 0x00612B60 File Offset: 0x00610D60
+		// Token: 0x1700C81A RID: 51226
+		// (get) Token: 0x0602EBB5 RID: 191413 RVA: 0x0065E9E4 File Offset: 0x0065CBE4
+		// (set) Token: 0x0602EBB6 RID: 191414 RVA: 0x0065E9EC File Offset: 0x0065CBEC
 		public List<string> EventTags { get; set; }
 
-		// Token: 0x0602C3E1 RID: 181217 RVA: 0x00612B69 File Offset: 0x00610D69
+		// Token: 0x0602EBB7 RID: 191415 RVA: 0x0065E9F5 File Offset: 0x0065CBF5
 		public IClientSendTagEventToControlCharacterT()
 		{
 			this.Type = EExecClientBattleActionType.SendTagEventToControlCharacter;

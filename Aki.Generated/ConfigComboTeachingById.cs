@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000180 RID: 384
+	// Token: 0x02000192 RID: 402
 	public class ConfigComboTeachingById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000901 RID: 2305 RVA: 0x0008C508 File Offset: 0x0008A708
+		// Token: 0x0600096D RID: 2413 RVA: 0x00092440 File Offset: 0x00090640
 		static ConfigComboTeachingById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigComboTeachingById.CreateStaticDefaultValue), new Action(ConfigComboTeachingById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000902 RID: 2306 RVA: 0x0008C528 File Offset: 0x0008A728
+		// Token: 0x0600096E RID: 2414 RVA: 0x00092460 File Offset: 0x00090660
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigComboTeachingById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000903 RID: 2307 RVA: 0x0008C5A7 File Offset: 0x0008A7A7
+		// Token: 0x0600096F RID: 2415 RVA: 0x000924DF File Offset: 0x000906DF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigComboTeachingById.LogPair = null;
 			ConfigComboTeachingById.HandleId = 0;
 		}
 
-		// Token: 0x06000904 RID: 2308 RVA: 0x0008C5B5 File Offset: 0x0008A7B5
+		// Token: 0x06000970 RID: 2416 RVA: 0x000924ED File Offset: 0x000906ED
 		public static void Init()
 		{
 			ConfigComboTeachingById.HandleId = ConfigCommon.InitDataStatement(ConfigComboTeachingById.HandleId, "db_combo_teaching.db", "select BinData from `ComboTeaching` where Id=?");
 		}
 
-		// Token: 0x06000905 RID: 2309 RVA: 0x0008C5D0 File Offset: 0x0008A7D0
+		// Token: 0x06000971 RID: 2417 RVA: 0x00092508 File Offset: 0x00090708
 		public static ComboTeaching? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigComboTeachingById.HandleId, ConfigComboTeachingById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ComboTeaching?(rootAsComboTeaching);
 		}
 
-		// Token: 0x04000A64 RID: 2660
+		// Token: 0x04000AE2 RID: 2786
 		private const string DB = "db_combo_teaching.db";
 
-		// Token: 0x04000A65 RID: 2661
+		// Token: 0x04000AE3 RID: 2787
 		private const string FILE = "j.角色出招教学.xlsx";
 
-		// Token: 0x04000A66 RID: 2662
+		// Token: 0x04000AE4 RID: 2788
 		private const string TABLE = "ComboTeaching";
 
-		// Token: 0x04000A67 RID: 2663
+		// Token: 0x04000AE5 RID: 2789
 		private const string COMMAND = "select BinData from `ComboTeaching` where Id=?";
 
-		// Token: 0x04000A68 RID: 2664
+		// Token: 0x04000AE6 RID: 2790
 		private const string KEY_PREFIX = "ComboTeachingById";
 
-		// Token: 0x04000A69 RID: 2665
+		// Token: 0x04000AE7 RID: 2791
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000A6A RID: 2666
+		// Token: 0x04000AE8 RID: 2792
 		private static int HandleId;
 	}
 }

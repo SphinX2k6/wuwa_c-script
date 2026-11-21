@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.RoleUi;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A06 RID: 10758
+// Token: 0x02001F81 RID: 8065
 [NullableContext(1)]
 [Nullable(0)]
 public class ShowerInviteView : UiViewBase
 {
-	// Token: 0x06016530 RID: 91440 RVA: 0x005A6590 File Offset: 0x005A4790
+	// Token: 0x06013F37 RID: 81719 RVA: 0x005D1568 File Offset: 0x005CF768
 	public ShowerInviteView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016531 RID: 91441 RVA: 0x005A65B0 File Offset: 0x005A47B0
+	// Token: 0x06013F38 RID: 81720 RVA: 0x005D1588 File Offset: 0x005CF788
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -47,7 +47,7 @@ public class ShowerInviteView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016532 RID: 91442 RVA: 0x005A6728 File Offset: 0x005A4928
+	// Token: 0x06013F39 RID: 81721 RVA: 0x005D1700 File Offset: 0x005CF900
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShowerInviteView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -58,14 +58,14 @@ public class ShowerInviteView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016533 RID: 91443 RVA: 0x005A676C File Offset: 0x005A496C
+	// Token: 0x06013F3A RID: 81722 RVA: 0x005D1744 File Offset: 0x005CF944
 	protected override void OnStart()
 	{
 		List<int> showerSeatConfigIds = this.OpenParam as List<int>;
 		ShowerModel.Instance.SetShowerSeatConfigIds(showerSeatConfigIds);
 	}
 
-	// Token: 0x06016534 RID: 91444 RVA: 0x005A6790 File Offset: 0x005A4990
+	// Token: 0x06013F3B RID: 81723 RVA: 0x005D1768 File Offset: 0x005CF968
 	protected override void OnBeforeShow()
 	{
 		ShowerInviteView.<>c__DisplayClass10_0 CS$<>8__locals1 = new ShowerInviteView.<>c__DisplayClass10_0();
@@ -131,22 +131,22 @@ public class ShowerInviteView : UiViewBase
 		this.OnPosSwitchCallback(ShowerModel.Instance.CurSelectPosIndex);
 	}
 
-	// Token: 0x06016535 RID: 91445 RVA: 0x005A6940 File Offset: 0x005A4B40
+	// Token: 0x06013F3C RID: 81724 RVA: 0x005D1918 File Offset: 0x005CFB18
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnUiBlendInTimeCameraFinished, new Action<UiCameraHandleData>(this.OnCameraFinish));
 	}
 
-	// Token: 0x06016536 RID: 91446 RVA: 0x005A695E File Offset: 0x005A4B5E
+	// Token: 0x06013F3D RID: 81725 RVA: 0x005D1936 File Offset: 0x005CFB36
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnUiBlendInTimeCameraFinished, new Action<UiCameraHandleData>(this.OnCameraFinish));
 	}
 
-	// Token: 0x06016537 RID: 91447 RVA: 0x005A697C File Offset: 0x005A4B7C
+	// Token: 0x06013F3E RID: 81726 RVA: 0x005D1954 File Offset: 0x005CFB54
 	private void OnCameraFinish(UiCameraHandleData handleData)
 	{
-		if (handleData.ViewName == EUiViewName.ShowerInviteView)
+		if (handleData.GetViewName() == EUiViewName.ShowerInviteView)
 		{
 			Log.Instance.Info(ELogModule.Camera, ELogAuthor.LRC, "OnCameraFinish:ShowerInviteView OnCameraFinish", default(ReadOnlySpan<ValueTuple<string, object>>));
 			TimerSystem.Instance.Next(delegate(float _)
@@ -156,7 +156,7 @@ public class ShowerInviteView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016538 RID: 91448 RVA: 0x005A69D5 File Offset: 0x005A4BD5
+	// Token: 0x06013F3F RID: 81727 RVA: 0x005D19AD File Offset: 0x005CFBAD
 	private ShowerInviteItem CreateRoleInfoItem()
 	{
 		ShowerInviteItem showerInviteItem = new ShowerInviteItem();
@@ -164,7 +164,7 @@ public class ShowerInviteView : UiViewBase
 		return showerInviteItem;
 	}
 
-	// Token: 0x06016539 RID: 91449 RVA: 0x005A69F0 File Offset: 0x005A4BF0
+	// Token: 0x06013F40 RID: 81728 RVA: 0x005D19C8 File Offset: 0x005CFBC8
 	private void InitRoleItems()
 	{
 		int num = Math.Min(ShowerModel.Instance.PosCount, this.RoleItems.Count);
@@ -187,7 +187,7 @@ public class ShowerInviteView : UiViewBase
 		this.RefreshRoleItems();
 	}
 
-	// Token: 0x0601653A RID: 91450 RVA: 0x005A6A9C File Offset: 0x005A4C9C
+	// Token: 0x06013F41 RID: 81729 RVA: 0x005D1A74 File Offset: 0x005CFC74
 	private void RefreshRoleItems()
 	{
 		for (int i = 0; i < this.RoleShowCount; i++)
@@ -198,14 +198,14 @@ public class ShowerInviteView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601653B RID: 91451 RVA: 0x005A6AE2 File Offset: 0x005A4CE2
+	// Token: 0x06013F42 RID: 81730 RVA: 0x005D1ABA File Offset: 0x005CFCBA
 	private void OnRoleSelectCallback(RoleInstance roleInstance)
 	{
 		ShowerModel.Instance.InviteRole(roleInstance);
 		this.RefreshView();
 	}
 
-	// Token: 0x0601653C RID: 91452 RVA: 0x005A6AF5 File Offset: 0x005A4CF5
+	// Token: 0x06013F43 RID: 81731 RVA: 0x005D1ACD File Offset: 0x005CFCCD
 	private void OnPosSwitchCallback(int posIndex)
 	{
 		ShowerModel.Instance.ChangePos(posIndex);
@@ -213,7 +213,7 @@ public class ShowerInviteView : UiViewBase
 		this.SetSelectedRoleItem();
 	}
 
-	// Token: 0x0601653D RID: 91453 RVA: 0x005A6B10 File Offset: 0x005A4D10
+	// Token: 0x06013F44 RID: 81732 RVA: 0x005D1AE8 File Offset: 0x005CFCE8
 	private void RefreshView()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(8), "ShowerInvitePos", new <>z__ReadOnlySingleElementList<object>(ShowerModel.Instance.CurSelectPosIndex + 1));
@@ -226,7 +226,7 @@ public class ShowerInviteView : UiViewBase
 		this.RefreshRoleItems();
 	}
 
-	// Token: 0x0601653E RID: 91454 RVA: 0x005A6B90 File Offset: 0x005A4D90
+	// Token: 0x06013F45 RID: 81733 RVA: 0x005D1B68 File Offset: 0x005CFD68
 	private void SetSelectedRoleItem()
 	{
 		RoleInstance roleInstanceByPos = ShowerModel.Instance.GetRoleInstanceByPos(ShowerModel.Instance.CurSelectPosIndex);
@@ -244,14 +244,14 @@ public class ShowerInviteView : UiViewBase
 		this.RoleInfoScrollView.SelectGridProxy(num, false);
 	}
 
-	// Token: 0x0601653F RID: 91455 RVA: 0x005A6C10 File Offset: 0x005A4E10
+	// Token: 0x06013F46 RID: 81734 RVA: 0x005D1BE8 File Offset: 0x005CFDE8
 	private void OnConfirmButtonClick()
 	{
 		ShowerModel.Instance.SendAndSave();
 		UiManager.Instance.CloseAndOpenView(EUiViewName.ShowerInviteView, EUiViewName.ShowerMainView, null, null, true);
 	}
 
-	// Token: 0x06016540 RID: 91456 RVA: 0x005A6C33 File Offset: 0x005A4E33
+	// Token: 0x06013F47 RID: 81735 RVA: 0x005D1C0B File Offset: 0x005CFE0B
 	private void OnLeftButtonClick()
 	{
 		ShowerModel.Instance.LeftPos();
@@ -259,7 +259,7 @@ public class ShowerInviteView : UiViewBase
 		this.SetSelectedRoleItem();
 	}
 
-	// Token: 0x06016541 RID: 91457 RVA: 0x005A6C4B File Offset: 0x005A4E4B
+	// Token: 0x06013F48 RID: 81736 RVA: 0x005D1C23 File Offset: 0x005CFE23
 	private void OnRightButtonClick()
 	{
 		ShowerModel.Instance.RightPos();
@@ -267,7 +267,7 @@ public class ShowerInviteView : UiViewBase
 		this.SetSelectedRoleItem();
 	}
 
-	// Token: 0x06016542 RID: 91458 RVA: 0x005A6C64 File Offset: 0x005A4E64
+	// Token: 0x06013F49 RID: 81737 RVA: 0x005D1C3C File Offset: 0x005CFE3C
 	private void OnClickBack()
 	{
 		if (ShowerModel.Instance.IsInShower)
@@ -282,7 +282,7 @@ public class ShowerInviteView : UiViewBase
 		AudioSystem.Instance.PostEvent("play_ui_com_cam_whoosh");
 	}
 
-	// Token: 0x0400A60D RID: 42509
+	// Token: 0x0400A9F7 RID: 43511
 	[Nullable(new byte[]
 	{
 		2,
@@ -291,57 +291,57 @@ public class ShowerInviteView : UiViewBase
 	})]
 	private LoopScrollView<ShowerInviteItem, IShowerInviteItemData> RoleInfoScrollView;
 
-	// Token: 0x0400A60E RID: 42510
+	// Token: 0x0400A9F8 RID: 43512
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400A60F RID: 42511
+	// Token: 0x0400A9F9 RID: 43513
 	private readonly List<IShowerInviteItemData> RoleDataList = new List<IShowerInviteItemData>();
 
-	// Token: 0x0400A610 RID: 42512
+	// Token: 0x0400A9FA RID: 43514
 	private readonly List<ShowerRoleItem> RoleItems = new List<ShowerRoleItem>();
 
-	// Token: 0x0400A611 RID: 42513
+	// Token: 0x0400A9FB RID: 43515
 	private int RoleShowCount;
 
-	// Token: 0x02009041 RID: 36929
+	// Token: 0x02008288 RID: 33416
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402EB57 RID: 191319
+		// Token: 0x0402A24F RID: 172623
 		public const int RoleInfoScrollView = 0;
 
-		// Token: 0x0402EB58 RID: 191320
+		// Token: 0x0402A250 RID: 172624
 		public const int RoleInfoItem = 1;
 
-		// Token: 0x0402EB59 RID: 191321
+		// Token: 0x0402A251 RID: 172625
 		public const int ConfirmButton = 2;
 
-		// Token: 0x0402EB5A RID: 191322
+		// Token: 0x0402A252 RID: 172626
 		public const int ConfirmText = 3;
 
-		// Token: 0x0402EB5B RID: 191323
+		// Token: 0x0402A253 RID: 172627
 		public const int CaptionItem = 4;
 
-		// Token: 0x0402EB5C RID: 191324
+		// Token: 0x0402A254 RID: 172628
 		public const int MaxCountText = 5;
 
-		// Token: 0x0402EB5D RID: 191325
+		// Token: 0x0402A255 RID: 172629
 		public const int LeftButton = 6;
 
-		// Token: 0x0402EB5E RID: 191326
+		// Token: 0x0402A256 RID: 172630
 		public const int RightButton = 7;
 
-		// Token: 0x0402EB5F RID: 191327
+		// Token: 0x0402A257 RID: 172631
 		public const int PosNameText = 8;
 
-		// Token: 0x0402EB60 RID: 191328
+		// Token: 0x0402A258 RID: 172632
 		public const int FirstRole = 9;
 
-		// Token: 0x0402EB61 RID: 191329
+		// Token: 0x0402A259 RID: 172633
 		public const int SecondRole = 10;
 
-		// Token: 0x0402EB62 RID: 191330
+		// Token: 0x0402A25A RID: 172634
 		public const int ThirdRole = 11;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001840 RID: 6208
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019CB RID: 6603
 	public class ICameraLockConfig
 	{
-		// Token: 0x0600853D RID: 34109 RVA: 0x0013CF6C File Offset: 0x0013B16C
+		// Token: 0x06008C63 RID: 35939 RVA: 0x0014C760 File Offset: 0x0014A960
 		private ICameraLockConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600853E RID: 34110 RVA: 0x0013CFA4 File Offset: 0x0013B1A4
+		// Token: 0x06008C64 RID: 35940 RVA: 0x0014C798 File Offset: 0x0014A998
 		public static ICameraLockConfig Create([Nullable(2)] ICameraLockConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600853F RID: 34111 RVA: 0x0013CFB7 File Offset: 0x0013B1B7
+		// Token: 0x06008C65 RID: 35941 RVA: 0x0014C7AB File Offset: 0x0014A9AB
 		public static ICameraLockConfig CreateFromSetValue([Nullable(2)] ICameraLockConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008540 RID: 34112 RVA: 0x0013CFCA File Offset: 0x0013B1CA
+		// Token: 0x06008C66 RID: 35942 RVA: 0x0014C7BE File Offset: 0x0014A9BE
 		public ICameraLockConfig_SetValue ToSetValue()
 		{
 			return new ICameraLockConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B93 RID: 11155
-		// (get) Token: 0x06008541 RID: 34113 RVA: 0x0013CFEC File Offset: 0x0013B1EC
-		// (set) Token: 0x06008542 RID: 34114 RVA: 0x0013D04D File Offset: 0x0013B24D
+		// Token: 0x17002D8D RID: 11661
+		// (get) Token: 0x06008C67 RID: 35943 RVA: 0x0014C7E0 File Offset: 0x0014A9E0
+		// (set) Token: 0x06008C68 RID: 35944 RVA: 0x0014C841 File Offset: 0x0014AA41
 		public virtual ICameraLockTargetPosition LockTarget
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B94 RID: 11156
-		// (get) Token: 0x06008543 RID: 34115 RVA: 0x0013D064 File Offset: 0x0013B264
-		// (set) Token: 0x06008544 RID: 34116 RVA: 0x0013D0C5 File Offset: 0x0013B2C5
+		// Token: 0x17002D8E RID: 11662
+		// (get) Token: 0x06008C69 RID: 35945 RVA: 0x0014C858 File Offset: 0x0014AA58
+		// (set) Token: 0x06008C6A RID: 35946 RVA: 0x0014C8B9 File Offset: 0x0014AAB9
 		public virtual ICameraLockParams CameraParams
 		{
 			get
@@ -120,24 +118,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400542E RID: 21550
+		// Token: 0x0400587A RID: 22650
 		[Nullable(2)]
 		protected ICameraLockConfig FbInstance;
 
-		// Token: 0x0400542F RID: 21551
+		// Token: 0x0400587B RID: 22651
 		[Nullable(2)]
 		protected ICameraLockConfig_SetValue PocoInterface;
 
-		// Token: 0x04005430 RID: 21552
+		// Token: 0x0400587C RID: 22652
 		private ICameraLockTargetPosition _LockTargetCache;
 
-		// Token: 0x04005431 RID: 21553
+		// Token: 0x0400587D RID: 22653
 		private bool _LockTargetInited;
 
-		// Token: 0x04005432 RID: 21554
+		// Token: 0x0400587E RID: 22654
 		private ICameraLockParams _CameraParamsCache;
 
-		// Token: 0x04005433 RID: 21555
+		// Token: 0x0400587F RID: 22655
 		private bool _CameraParamsInited;
 	}
 }

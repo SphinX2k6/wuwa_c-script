@@ -6,46 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C77 RID: 7287
+	// Token: 0x02000519 RID: 1305
 	[UnrealObjectPath("/Script/KuroRopeEffect.RopeEffectDataAsset")]
 	[UnrealStructLayout(152, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 152)]
 	public class URopeEffectDataAsset : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601C452 RID: 115794 RVA: 0x0029AC7E File Offset: 0x00298E7E
+		// Token: 0x060079F5 RID: 31221 RVA: 0x000B2F88 File Offset: 0x000B1188
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return URopeEffectDataAsset._ClassPtr;
 		}
 
-		// Token: 0x0601C453 RID: 115795 RVA: 0x0029AC8C File Offset: 0x00298E8C
+		// Token: 0x060079F6 RID: 31222 RVA: 0x000B2F94 File Offset: 0x000B1194
 		public URopeEffectDataAsset() : this(BuiltinUtils.AllocNativeUObject(URopeEffectDataAsset.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601C454 RID: 115796 RVA: 0x0029ACB4 File Offset: 0x00298EB4
+		// Token: 0x060079F7 RID: 31223 RVA: 0x000B2FBC File Offset: 0x000B11BC
 		[NullableContext(1)]
 		public URopeEffectDataAsset(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(URopeEffectDataAsset.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007242 RID: 29250
-		// (get) Token: 0x0601C455 RID: 115797 RVA: 0x0029ACE7 File Offset: 0x00298EE7
-		// (set) Token: 0x0601C456 RID: 115798 RVA: 0x0029ACF7 File Offset: 0x00298EF7
-		public unsafe ERopeAxisMode AxisMode
-		{
-			get
-			{
-				return (ERopeAxisMode)(*(base.NativePtr + (IntPtr)URopeEffectDataAsset.__PropertyOffset_AxisMode));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)URopeEffectDataAsset.__PropertyOffset_AxisMode) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007243 RID: 29251
-		// (get) Token: 0x0601C457 RID: 115799 RVA: 0x0029AD08 File Offset: 0x00298F08
-		// (set) Token: 0x0601C458 RID: 115800 RVA: 0x0029AD18 File Offset: 0x00298F18
+		// Token: 0x170017A5 RID: 6053
+		// (get) Token: 0x060079F8 RID: 31224 RVA: 0x000B2FEF File Offset: 0x000B11EF
+		// (set) Token: 0x060079F9 RID: 31225 RVA: 0x000B2FFF File Offset: 0x000B11FF
 		public unsafe int NumRopes
 		{
 			get
@@ -58,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007244 RID: 29252
-		// (get) Token: 0x0601C459 RID: 115801 RVA: 0x0029AD29 File Offset: 0x00298F29
-		// (set) Token: 0x0601C45A RID: 115802 RVA: 0x0029AD39 File Offset: 0x00298F39
+		// Token: 0x170017A6 RID: 6054
+		// (get) Token: 0x060079FA RID: 31226 RVA: 0x000B3010 File Offset: 0x000B1210
+		// (set) Token: 0x060079FB RID: 31227 RVA: 0x000B3020 File Offset: 0x000B1220
 		public unsafe float SliceStartAlpha
 		{
 			get
@@ -73,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007245 RID: 29253
-		// (get) Token: 0x0601C45B RID: 115803 RVA: 0x0029AD4A File Offset: 0x00298F4A
-		// (set) Token: 0x0601C45C RID: 115804 RVA: 0x0029AD5A File Offset: 0x00298F5A
+		// Token: 0x170017A7 RID: 6055
+		// (get) Token: 0x060079FC RID: 31228 RVA: 0x000B3031 File Offset: 0x000B1231
+		// (set) Token: 0x060079FD RID: 31229 RVA: 0x000B3041 File Offset: 0x000B1241
 		public unsafe float SliceEndAlpha
 		{
 			get
@@ -88,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007246 RID: 29254
-		// (get) Token: 0x0601C45D RID: 115805 RVA: 0x0029AD6B File Offset: 0x00298F6B
-		// (set) Token: 0x0601C45E RID: 115806 RVA: 0x0029AD7B File Offset: 0x00298F7B
+		// Token: 0x170017A8 RID: 6056
+		// (get) Token: 0x060079FE RID: 31230 RVA: 0x000B3052 File Offset: 0x000B1252
+		// (set) Token: 0x060079FF RID: 31231 RVA: 0x000B3062 File Offset: 0x000B1262
 		public unsafe float SliceThickness
 		{
 			get
@@ -103,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007247 RID: 29255
-		// (get) Token: 0x0601C45F RID: 115807 RVA: 0x0029AD8C File Offset: 0x00298F8C
-		// (set) Token: 0x0601C460 RID: 115808 RVA: 0x0029AD9C File Offset: 0x00298F9C
+		// Token: 0x170017A9 RID: 6057
+		// (get) Token: 0x06007A00 RID: 31232 RVA: 0x000B3073 File Offset: 0x000B1273
+		// (set) Token: 0x06007A01 RID: 31233 RVA: 0x000B3083 File Offset: 0x000B1283
 		public unsafe int PointsPerRope
 		{
 			get
@@ -118,9 +103,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007248 RID: 29256
-		// (get) Token: 0x0601C461 RID: 115809 RVA: 0x0029ADAD File Offset: 0x00298FAD
-		// (set) Token: 0x0601C462 RID: 115810 RVA: 0x0029ADBD File Offset: 0x00298FBD
+		// Token: 0x170017AA RID: 6058
+		// (get) Token: 0x06007A02 RID: 31234 RVA: 0x000B3094 File Offset: 0x000B1294
+		// (set) Token: 0x06007A03 RID: 31235 RVA: 0x000B30A4 File Offset: 0x000B12A4
 		public unsafe float RadiusPadding
 		{
 			get
@@ -133,9 +118,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007249 RID: 29257
-		// (get) Token: 0x0601C463 RID: 115811 RVA: 0x0029ADCE File Offset: 0x00298FCE
-		// (set) Token: 0x0601C464 RID: 115812 RVA: 0x0029ADDE File Offset: 0x00298FDE
+		// Token: 0x170017AB RID: 6059
+		// (get) Token: 0x06007A04 RID: 31236 RVA: 0x000B30B5 File Offset: 0x000B12B5
+		// (set) Token: 0x06007A05 RID: 31237 RVA: 0x000B30C5 File Offset: 0x000B12C5
 		public unsafe int MinPointsPerSlice
 		{
 			get
@@ -148,9 +133,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700724A RID: 29258
-		// (get) Token: 0x0601C465 RID: 115813 RVA: 0x0029ADEF File Offset: 0x00298FEF
-		// (set) Token: 0x0601C466 RID: 115814 RVA: 0x0029ADFF File Offset: 0x00298FFF
+		// Token: 0x170017AC RID: 6060
+		// (get) Token: 0x06007A06 RID: 31238 RVA: 0x000B30D6 File Offset: 0x000B12D6
+		// (set) Token: 0x06007A07 RID: 31239 RVA: 0x000B30E6 File Offset: 0x000B12E6
 		public unsafe int PreferredLODIndex
 		{
 			get
@@ -163,9 +148,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700724B RID: 29259
-		// (get) Token: 0x0601C467 RID: 115815 RVA: 0x0029AE10 File Offset: 0x00299010
-		// (set) Token: 0x0601C468 RID: 115816 RVA: 0x0029AE20 File Offset: 0x00299020
+		// Token: 0x170017AD RID: 6061
+		// (get) Token: 0x06007A08 RID: 31240 RVA: 0x000B30F7 File Offset: 0x000B12F7
+		// (set) Token: 0x06007A09 RID: 31241 RVA: 0x000B3107 File Offset: 0x000B1307
 		public unsafe bool bClosedLoop
 		{
 			get
@@ -178,9 +163,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700724C RID: 29260
-		// (get) Token: 0x0601C469 RID: 115817 RVA: 0x0029AE31 File Offset: 0x00299031
-		// (set) Token: 0x0601C46A RID: 115818 RVA: 0x0029AE41 File Offset: 0x00299041
+		// Token: 0x170017AE RID: 6062
+		// (get) Token: 0x06007A0A RID: 31242 RVA: 0x000B3118 File Offset: 0x000B1318
+		// (set) Token: 0x06007A0B RID: 31243 RVA: 0x000B3128 File Offset: 0x000B1328
 		public unsafe float SplineVisualizationWidth
 		{
 			get
@@ -193,9 +178,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700724D RID: 29261
-		// (get) Token: 0x0601C46B RID: 115819 RVA: 0x0029AE52 File Offset: 0x00299052
-		// (set) Token: 0x0601C46C RID: 115820 RVA: 0x0029AE66 File Offset: 0x00299066
+		// Token: 0x170017AF RID: 6063
+		// (get) Token: 0x06007A0C RID: 31244 RVA: 0x000B3139 File Offset: 0x000B1339
+		// (set) Token: 0x06007A0D RID: 31245 RVA: 0x000B314D File Offset: 0x000B134D
 		public unsafe FLinearColor SplineColor
 		{
 			get
@@ -208,9 +193,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700724E RID: 29262
-		// (get) Token: 0x0601C46D RID: 115821 RVA: 0x0029AE7B File Offset: 0x0029907B
-		// (set) Token: 0x0601C46E RID: 115822 RVA: 0x0029AE8B File Offset: 0x0029908B
+		// Token: 0x170017B0 RID: 6064
+		// (get) Token: 0x06007A0E RID: 31246 RVA: 0x000B3162 File Offset: 0x000B1362
+		// (set) Token: 0x06007A0F RID: 31247 RVA: 0x000B3172 File Offset: 0x000B1372
 		public unsafe bool bEnableDynamicRopeTick
 		{
 			get
@@ -223,9 +208,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700724F RID: 29263
-		// (get) Token: 0x0601C46F RID: 115823 RVA: 0x0029AE9C File Offset: 0x0029909C
-		// (set) Token: 0x0601C470 RID: 115824 RVA: 0x0029AEAC File Offset: 0x002990AC
+		// Token: 0x170017B1 RID: 6065
+		// (get) Token: 0x06007A10 RID: 31248 RVA: 0x000B3183 File Offset: 0x000B1383
+		// (set) Token: 0x06007A11 RID: 31249 RVA: 0x000B3193 File Offset: 0x000B1393
 		public unsafe int DynamicRopeUpdateRate
 		{
 			get
@@ -238,9 +223,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007250 RID: 29264
-		// (get) Token: 0x0601C471 RID: 115825 RVA: 0x0029AEBD File Offset: 0x002990BD
-		// (set) Token: 0x0601C472 RID: 115826 RVA: 0x0029AECD File Offset: 0x002990CD
+		// Token: 0x170017B2 RID: 6066
+		// (get) Token: 0x06007A12 RID: 31250 RVA: 0x000B31A4 File Offset: 0x000B13A4
+		// (set) Token: 0x06007A13 RID: 31251 RVA: 0x000B31B4 File Offset: 0x000B13B4
 		public unsafe float PositionChangeThreshold
 		{
 			get
@@ -253,70 +238,67 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601C473 RID: 115827 RVA: 0x0029AEDE File Offset: 0x002990DE
+		// Token: 0x06007A14 RID: 31252 RVA: 0x000B31C5 File Offset: 0x000B13C5
 		static URopeEffectDataAsset()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRopeEffect.RopeEffectDataAsset");
 		}
 
-		// Token: 0x0601C474 RID: 115828 RVA: 0x0029AEEC File Offset: 0x002990EC
+		// Token: 0x06007A15 RID: 31253 RVA: 0x000B31D3 File Offset: 0x000B13D3
 		protected URopeEffectDataAsset(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400F336 RID: 62262
+		// Token: 0x040033D4 RID: 13268
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroRopeEffect.RopeEffectDataAsset";
 
-		// Token: 0x0400F337 RID: 62263
+		// Token: 0x040033D5 RID: 13269
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400F338 RID: 62264
+		// Token: 0x040033D6 RID: 13270
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400F339 RID: 62265
-		internal static int __PropertyOffset_AxisMode;
-
-		// Token: 0x0400F33A RID: 62266
+		// Token: 0x040033D7 RID: 13271
 		internal static int __PropertyOffset_NumRopes;
 
-		// Token: 0x0400F33B RID: 62267
+		// Token: 0x040033D8 RID: 13272
 		internal static int __PropertyOffset_SliceStartAlpha;
 
-		// Token: 0x0400F33C RID: 62268
+		// Token: 0x040033D9 RID: 13273
 		internal static int __PropertyOffset_SliceEndAlpha;
 
-		// Token: 0x0400F33D RID: 62269
+		// Token: 0x040033DA RID: 13274
 		internal static int __PropertyOffset_SliceThickness;
 
-		// Token: 0x0400F33E RID: 62270
+		// Token: 0x040033DB RID: 13275
 		internal static int __PropertyOffset_PointsPerRope;
 
-		// Token: 0x0400F33F RID: 62271
+		// Token: 0x040033DC RID: 13276
 		internal static int __PropertyOffset_RadiusPadding;
 
-		// Token: 0x0400F340 RID: 62272
+		// Token: 0x040033DD RID: 13277
 		internal static int __PropertyOffset_MinPointsPerSlice;
 
-		// Token: 0x0400F341 RID: 62273
+		// Token: 0x040033DE RID: 13278
 		internal static int __PropertyOffset_PreferredLODIndex;
 
-		// Token: 0x0400F342 RID: 62274
+		// Token: 0x040033DF RID: 13279
 		internal static int __PropertyOffset_bClosedLoop;
 
-		// Token: 0x0400F343 RID: 62275
+		// Token: 0x040033E0 RID: 13280
 		internal static int __PropertyOffset_SplineVisualizationWidth;
 
-		// Token: 0x0400F344 RID: 62276
+		// Token: 0x040033E1 RID: 13281
 		internal static int __PropertyOffset_SplineColor;
 
-		// Token: 0x0400F345 RID: 62277
+		// Token: 0x040033E2 RID: 13282
 		internal static int __PropertyOffset_bEnableDynamicRopeTick;
 
-		// Token: 0x0400F346 RID: 62278
+		// Token: 0x040033E3 RID: 13283
 		internal static int __PropertyOffset_DynamicRopeUpdateRate;
 
-		// Token: 0x0400F347 RID: 62279
+		// Token: 0x040033E4 RID: 13284
 		internal static int __PropertyOffset_PositionChangeThreshold;
 	}
 }

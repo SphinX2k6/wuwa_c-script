@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026A8 RID: 9896
+	// Token: 0x0200296B RID: 10603
 	public class ClaimDungeonReward : ActionParams
 	{
-		// Token: 0x0600DD7F RID: 56703 RVA: 0x0020E703 File Offset: 0x0020C903
-		[NullableContext(1)]
+		// Token: 0x0600EB56 RID: 60246 RVA: 0x0022AEA3 File Offset: 0x002290A3
 		public static ClaimDungeonReward Create(IClaimDungeonReward? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04007B00 RID: 31488
+		// Token: 0x0400819D RID: 33181
 		private IClaimDungeonReward Instance;
 	}
 }

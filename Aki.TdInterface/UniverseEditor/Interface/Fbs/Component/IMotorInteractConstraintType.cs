@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055C0 RID: 21952
+	// Token: 0x02005B5E RID: 23390
 	public struct IMotorInteractConstraintType : IFlatbufferObject
 	{
-		// Token: 0x1700A23D RID: 41533
-		// (get) Token: 0x060245DD RID: 148957 RVA: 0x005052AB File Offset: 0x005034AB
+		// Token: 0x1700AAC5 RID: 43717
+		// (get) Token: 0x060267EA RID: 157674 RVA: 0x00545823 File Offset: 0x00543A23
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060245DE RID: 148958 RVA: 0x005052B8 File Offset: 0x005034B8
+		// Token: 0x060267EB RID: 157675 RVA: 0x00545830 File Offset: 0x00543A30
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060245DF RID: 148959 RVA: 0x005052C0 File Offset: 0x005034C0
+		// Token: 0x060267EC RID: 157676 RVA: 0x00545838 File Offset: 0x00543A38
 		public static IMotorInteractConstraintType GetRootAsIMotorInteractConstraintType(ByteBuffer _bb)
 		{
 			return IMotorInteractConstraintType.GetRootAsIMotorInteractConstraintType(_bb, default(IMotorInteractConstraintType));
 		}
 
-		// Token: 0x060245E0 RID: 148960 RVA: 0x005052DC File Offset: 0x005034DC
+		// Token: 0x060267ED RID: 157677 RVA: 0x00545854 File Offset: 0x00543A54
 		public static IMotorInteractConstraintType GetRootAsIMotorInteractConstraintType(ByteBuffer _bb, IMotorInteractConstraintType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060245E1 RID: 148961 RVA: 0x005052F9 File Offset: 0x005034F9
+		// Token: 0x060267EE RID: 157678 RVA: 0x00545871 File Offset: 0x00543A71
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060245E2 RID: 148962 RVA: 0x00505308 File Offset: 0x00503508
+		// Token: 0x060267EF RID: 157679 RVA: 0x00545880 File Offset: 0x00543A80
 		public IMotorInteractConstraintType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A23E RID: 41534
-		// (get) Token: 0x060245E3 RID: 148963 RVA: 0x00505318 File Offset: 0x00503518
+		// Token: 0x1700AAC6 RID: 43718
+		// (get) Token: 0x060267F0 RID: 157680 RVA: 0x00545890 File Offset: 0x00543A90
 		public EMotorInteractConstraintType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060245E4 RID: 148964 RVA: 0x00505354 File Offset: 0x00503554
+		// Token: 0x060267F1 RID: 157681 RVA: 0x005458CC File Offset: 0x00543ACC
 		public static Offset<IMotorInteractConstraintType> CreateIMotorInteractConstraintType(FlatBufferBuilder builder, EMotorInteractConstraintType Type = EMotorInteractConstraintType.FaceToTarget)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMotorInteractConstraintType.EndIMotorInteractConstraintType(builder);
 		}
 
-		// Token: 0x060245E5 RID: 148965 RVA: 0x0050536A File Offset: 0x0050356A
+		// Token: 0x060267F2 RID: 157682 RVA: 0x005458E2 File Offset: 0x00543AE2
 		public static void StartIMotorInteractConstraintType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060245E6 RID: 148966 RVA: 0x00505373 File Offset: 0x00503573
+		// Token: 0x060267F3 RID: 157683 RVA: 0x005458EB File Offset: 0x00543AEB
 		public static void AddType(FlatBufferBuilder builder, EMotorInteractConstraintType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060245E7 RID: 148967 RVA: 0x0050537E File Offset: 0x0050357E
+		// Token: 0x060267F4 RID: 157684 RVA: 0x005458F6 File Offset: 0x00543AF6
 		public static Offset<IMotorInteractConstraintType> EndIMotorInteractConstraintType(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorInteractConstraintType>(builder.EndTable());
 		}
 
-		// Token: 0x060245E8 RID: 148968 RVA: 0x0050538C File Offset: 0x0050358C
+		// Token: 0x060267F5 RID: 157685 RVA: 0x00545904 File Offset: 0x00543B04
 		public IMotorInteractConstraintTypeT UnPack()
 		{
 			IMotorInteractConstraintTypeT motorInteractConstraintTypeT = new IMotorInteractConstraintTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return motorInteractConstraintTypeT;
 		}
 
-		// Token: 0x060245E9 RID: 148969 RVA: 0x005053A7 File Offset: 0x005035A7
+		// Token: 0x060267F6 RID: 157686 RVA: 0x0054591F File Offset: 0x00543B1F
 		public void UnPackTo(IMotorInteractConstraintTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060245EA RID: 148970 RVA: 0x005053B8 File Offset: 0x005035B8
+		// Token: 0x060267F7 RID: 157687 RVA: 0x00545930 File Offset: 0x00543B30
 		public static Offset<IMotorInteractConstraintType> Pack(FlatBufferBuilder builder, IMotorInteractConstraintTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMotorInteractConstraintType.CreateIMotorInteractConstraintType(builder, _o.Type);
 		}
 
-		// Token: 0x0400E907 RID: 59655
+		// Token: 0x0400F569 RID: 62825
 		private Table __p;
 	}
 }

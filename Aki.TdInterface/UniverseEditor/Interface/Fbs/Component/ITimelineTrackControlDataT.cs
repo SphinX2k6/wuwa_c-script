@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A80 RID: 23168
+	// Token: 0x0200608D RID: 24717
 	public class ITimelineTrackControlDataT
 	{
-		// Token: 0x1700AE83 RID: 44675
-		// (get) Token: 0x06027769 RID: 161641 RVA: 0x0056E216 File Offset: 0x0056C416
-		// (set) Token: 0x0602776A RID: 161642 RVA: 0x0056E21E File Offset: 0x0056C41E
+		// Token: 0x1700B7BB RID: 47035
+		// (get) Token: 0x06029CE1 RID: 171233 RVA: 0x005B5222 File Offset: 0x005B3422
+		// (set) Token: 0x06029CE2 RID: 171234 RVA: 0x005B522A File Offset: 0x005B342A
 		public ETrackControlMode Type { get; set; }
 
-		// Token: 0x0602776B RID: 161643 RVA: 0x0056E227 File Offset: 0x0056C427
+		// Token: 0x06029CE3 RID: 171235 RVA: 0x005B5233 File Offset: 0x005B3433
 		public ITimelineTrackControlDataT()
 		{
 			this.Type = ETrackControlMode.Sequence;

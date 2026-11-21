@@ -8,19 +8,19 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200171A RID: 5914
+// Token: 0x02000BD2 RID: 3026
 [NullableContext(2)]
 [Nullable(0)]
 public class BuffTargetRoleItem : UiPanelBase
 {
-	// Token: 0x0600AA94 RID: 43668 RVA: 0x002651AE File Offset: 0x002633AE
+	// Token: 0x06007E77 RID: 32375 RVA: 0x0026F6FE File Offset: 0x0026D8FE
 	[NullableContext(1)]
 	public void Initialize(AActor rootActor)
 	{
 		base.CreateThenShowByActor(rootActor, null);
 	}
 
-	// Token: 0x0600AA95 RID: 43669 RVA: 0x002651B8 File Offset: 0x002633B8
+	// Token: 0x06007E78 RID: 32376 RVA: 0x0026F708 File Offset: 0x0026D908
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +42,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600AA96 RID: 43670 RVA: 0x002652D0 File Offset: 0x002634D0
+	// Token: 0x06007E79 RID: 32377 RVA: 0x0026F820 File Offset: 0x0026DA20
 	private void OnClickedSelectedRoleButton()
 	{
 		if (this.OnClickedCallback != null)
@@ -51,7 +51,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600AA97 RID: 43671 RVA: 0x002652E8 File Offset: 0x002634E8
+	// Token: 0x06007E7A RID: 32378 RVA: 0x0026F838 File Offset: 0x0026DA38
 	protected override void OnStart()
 	{
 		this.ItemGrid = new MediumItemGrid();
@@ -61,7 +61,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.NiagaraBuffItem.SetUIActive(false);
 	}
 
-	// Token: 0x0600AA98 RID: 43672 RVA: 0x00265342 File Offset: 0x00263542
+	// Token: 0x06007E7B RID: 32379 RVA: 0x0026F892 File Offset: 0x0026DA92
 	protected override void OnBeforeDestroy()
 	{
 		this.ItemGrid = null;
@@ -75,7 +75,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.NiagaraBuffItem = null;
 	}
 
-	// Token: 0x0600AA99 RID: 43673 RVA: 0x0026536F File Offset: 0x0026356F
+	// Token: 0x06007E7C RID: 32380 RVA: 0x0026F8BF File Offset: 0x0026DABF
 	public void ResetBuffTargetRoleItem()
 	{
 		this.UseBuffItemRoleData = null;
@@ -83,7 +83,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.RemoveEntityEvents();
 	}
 
-	// Token: 0x0600AA9A RID: 43674 RVA: 0x00265385 File Offset: 0x00263585
+	// Token: 0x06007E7D RID: 32381 RVA: 0x0026F8D5 File Offset: 0x0026DAD5
 	public void Tick(float delta)
 	{
 		if (!this.IsPlayingAnimation)
@@ -99,7 +99,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.AnimationCurrentTime += delta;
 	}
 
-	// Token: 0x0600AA9B RID: 43675 RVA: 0x002653B8 File Offset: 0x002635B8
+	// Token: 0x06007E7E RID: 32382 RVA: 0x0026F908 File Offset: 0x0026DB08
 	[NullableContext(1)]
 	public void RefreshBuffTargetRoleItem(UseBuffItemRoleData useBuffItemRoleData)
 	{
@@ -131,7 +131,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.AddEntityEvents();
 	}
 
-	// Token: 0x0600AA9C RID: 43676 RVA: 0x002654B3 File Offset: 0x002636B3
+	// Token: 0x06007E7F RID: 32383 RVA: 0x0026FA03 File Offset: 0x0026DC03
 	public void RemoveRole()
 	{
 		this.SetNoneRole(true);
@@ -139,7 +139,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.UseBuffItemRoleData = null;
 	}
 
-	// Token: 0x0600AA9D RID: 43677 RVA: 0x002654C9 File Offset: 0x002636C9
+	// Token: 0x06007E80 RID: 32384 RVA: 0x0026FA19 File Offset: 0x0026DC19
 	private void AddEntityEvents()
 	{
 		if (this.UseBuffItemRoleData == null)
@@ -149,7 +149,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.UseBuffItemRoleData.Entity.GetComponent<BaseAttributeComponent>().AddListener(EAttributeType.Life, new Action<EAttributeType, float, float>(this.OnCharOnHealthChanged), "Life.BuffTargetRoleItem");
 	}
 
-	// Token: 0x0600AA9E RID: 43678 RVA: 0x002654FB File Offset: 0x002636FB
+	// Token: 0x06007E81 RID: 32385 RVA: 0x0026FA4B File Offset: 0x0026DC4B
 	private void RemoveEntityEvents()
 	{
 		if (this.UseBuffItemRoleData == null)
@@ -159,7 +159,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.UseBuffItemRoleData.Entity.GetComponent<BaseAttributeComponent>().RemoveListener(EAttributeType.Life, new Action<EAttributeType, float, float>(this.OnCharOnHealthChanged));
 	}
 
-	// Token: 0x0600AA9F RID: 43679 RVA: 0x0026552C File Offset: 0x0026372C
+	// Token: 0x06007E82 RID: 32386 RVA: 0x0026FA7C File Offset: 0x0026DC7C
 	private void OnCharOnHealthChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		if (newValue == oldValue)
@@ -175,7 +175,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.PlayPreviewBarAnimation(oldValue, newValue, currentValue);
 	}
 
-	// Token: 0x0600AAA0 RID: 43680 RVA: 0x00265574 File Offset: 0x00263774
+	// Token: 0x06007E83 RID: 32387 RVA: 0x0026FAC4 File Offset: 0x0026DCC4
 	public void RefreshPreviewUseItem(float currentAttribute, float maxAttribute, float addAttribute)
 	{
 		float num = Math.Min(currentAttribute + addAttribute, maxAttribute);
@@ -188,7 +188,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.SetPreviewValueText((int)Math.Floor((double)num), (int)Math.Floor((double)maxAttribute));
 	}
 
-	// Token: 0x0600AAA1 RID: 43681 RVA: 0x002655EC File Offset: 0x002637EC
+	// Token: 0x06007E84 RID: 32388 RVA: 0x0026FB3C File Offset: 0x0026DD3C
 	public void ResetPreviewUseItem()
 	{
 		float currentAttribute = this.UseBuffItemRoleData.CurrentAttribute;
@@ -198,7 +198,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.SetValueText((int)currentAttribute, (int)maxAttribute);
 	}
 
-	// Token: 0x0600AAA2 RID: 43682 RVA: 0x0026562C File Offset: 0x0026382C
+	// Token: 0x06007E85 RID: 32389 RVA: 0x0026FB7C File Offset: 0x0026DD7C
 	public void SetCurrentValueBarPercent(float percent)
 	{
 		UUISprite sprite = base.GetSprite(4);
@@ -209,25 +209,25 @@ public class BuffTargetRoleItem : UiPanelBase
 		sprite.SetFillAmount(percent);
 	}
 
-	// Token: 0x0600AAA3 RID: 43683 RVA: 0x00265667 File Offset: 0x00263867
+	// Token: 0x06007E86 RID: 32390 RVA: 0x0026FBB7 File Offset: 0x0026DDB7
 	public void SetPreviewValueBarPercent(float percent)
 	{
 		base.GetSprite(5).SetFillAmount(percent);
 	}
 
-	// Token: 0x0600AAA4 RID: 43684 RVA: 0x00265676 File Offset: 0x00263876
+	// Token: 0x06007E87 RID: 32391 RVA: 0x0026FBC6 File Offset: 0x0026DDC6
 	public void SetPreviewValueBarVisible(bool bVisible)
 	{
 		base.GetSprite(5).SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600AAA5 RID: 43685 RVA: 0x00265685 File Offset: 0x00263885
+	// Token: 0x06007E88 RID: 32392 RVA: 0x0026FBD5 File Offset: 0x0026DDD5
 	public void SetAnimationValueBarPercent(float percent)
 	{
 		base.GetSprite(3).SetFillAmount(percent);
 	}
 
-	// Token: 0x0600AAA6 RID: 43686 RVA: 0x00265694 File Offset: 0x00263894
+	// Token: 0x06007E89 RID: 32393 RVA: 0x0026FBE4 File Offset: 0x0026DDE4
 	private void SetAnimationColorState(float percent)
 	{
 		UUISprite sprite = base.GetSprite(3);
@@ -237,13 +237,13 @@ public class BuffTargetRoleItem : UiPanelBase
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x0600AAA7 RID: 43687 RVA: 0x002656C8 File Offset: 0x002638C8
+	// Token: 0x06007E8A RID: 32394 RVA: 0x0026FC18 File Offset: 0x0026DE18
 	public void SetAnimationValueBarVisible(bool bVisible)
 	{
 		base.GetSprite(3).SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600AAA8 RID: 43688 RVA: 0x002656D8 File Offset: 0x002638D8
+	// Token: 0x06007E8B RID: 32395 RVA: 0x0026FC28 File Offset: 0x0026DE28
 	public void SetAddValueText(int addValue)
 	{
 		UUIText text = base.GetText(1);
@@ -253,13 +253,13 @@ public class BuffTargetRoleItem : UiPanelBase
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x0600AAA9 RID: 43689 RVA: 0x00265716 File Offset: 0x00263916
+	// Token: 0x06007E8C RID: 32396 RVA: 0x0026FC66 File Offset: 0x0026DE66
 	private void SetAddValueTextVisible(bool bVisible)
 	{
 		base.GetText(1).SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600AAAA RID: 43690 RVA: 0x00265728 File Offset: 0x00263928
+	// Token: 0x06007E8D RID: 32397 RVA: 0x0026FC78 File Offset: 0x0026DE78
 	private void SetValueText(int currentValue, int maxValue)
 	{
 		UUIText text = base.GetText(2);
@@ -283,7 +283,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		uuitext2.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x0600AAAB RID: 43691 RVA: 0x002657D0 File Offset: 0x002639D0
+	// Token: 0x06007E8E RID: 32398 RVA: 0x0026FD20 File Offset: 0x0026DF20
 	public void SetPreviewValueText(int value, int maxValue)
 	{
 		UUIText text = base.GetText(2);
@@ -295,7 +295,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x0600AAAC RID: 43692 RVA: 0x00265824 File Offset: 0x00263A24
+	// Token: 0x06007E8F RID: 32399 RVA: 0x0026FD74 File Offset: 0x0026DF74
 	public void SetSelected(bool bSelected)
 	{
 		if (bSelected)
@@ -312,13 +312,13 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.IsRoleSelected = bSelected;
 	}
 
-	// Token: 0x0600AAAD RID: 43693 RVA: 0x0026587F File Offset: 0x00263A7F
+	// Token: 0x06007E90 RID: 32400 RVA: 0x0026FDCF File Offset: 0x0026DFCF
 	public bool IsSelected()
 	{
 		return this.IsRoleSelected;
 	}
 
-	// Token: 0x0600AAAE RID: 43694 RVA: 0x00265888 File Offset: 0x00263A88
+	// Token: 0x06007E91 RID: 32401 RVA: 0x0026FDD8 File Offset: 0x0026DFD8
 	public void SetNoneRole(bool bNone)
 	{
 		UUIItem item = base.GetItem(8);
@@ -327,20 +327,20 @@ public class BuffTargetRoleItem : UiPanelBase
 		item2.SetUIActive(!bNone);
 	}
 
-	// Token: 0x0600AAAF RID: 43695 RVA: 0x002658B4 File Offset: 0x00263AB4
+	// Token: 0x06007E92 RID: 32402 RVA: 0x0026FE04 File Offset: 0x0026E004
 	public UseBuffItemRoleData GetUseBuffItemRoleData()
 	{
 		return this.UseBuffItemRoleData;
 	}
 
-	// Token: 0x0600AAB0 RID: 43696 RVA: 0x002658BC File Offset: 0x00263ABC
+	// Token: 0x06007E93 RID: 32403 RVA: 0x0026FE0C File Offset: 0x0026E00C
 	[NullableContext(1)]
 	public void BindOnClickedBuffTargetRoleItem(Action<BuffTargetRoleItem> onClickedCallback)
 	{
 		this.OnClickedCallback = onClickedCallback;
 	}
 
-	// Token: 0x0600AAB1 RID: 43697 RVA: 0x002658C8 File Offset: 0x00263AC8
+	// Token: 0x06007E94 RID: 32404 RVA: 0x0026FE18 File Offset: 0x0026E018
 	private void StartNiagaraBuff()
 	{
 		Action startNiagaraAnimation = delegate()
@@ -361,14 +361,14 @@ public class BuffTargetRoleItem : UiPanelBase
 		startNiagaraAnimation();
 	}
 
-	// Token: 0x0600AAB2 RID: 43698 RVA: 0x00265931 File Offset: 0x00263B31
+	// Token: 0x06007E95 RID: 32405 RVA: 0x0026FE81 File Offset: 0x0026E081
 	private void EndNiagaraBuff()
 	{
 		this.NiagaraBuffItem.DeactivateSystem();
 		this.NiagaraBuffItem.SetUIActive(false);
 	}
 
-	// Token: 0x0600AAB3 RID: 43699 RVA: 0x0026594C File Offset: 0x00263B4C
+	// Token: 0x06007E96 RID: 32406 RVA: 0x0026FE9C File Offset: 0x0026E09C
 	private void PlayPreviewBarAnimation(float currentAttribute, float targetAttribute, float maxAttribute)
 	{
 		if (currentAttribute == targetAttribute)
@@ -401,7 +401,7 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Reply", false, null, false);
 	}
 
-	// Token: 0x0600AAB4 RID: 43700 RVA: 0x00265A34 File Offset: 0x00263C34
+	// Token: 0x06007E97 RID: 32407 RVA: 0x0026FF84 File Offset: 0x0026E184
 	private void FinishUseItemAnimation()
 	{
 		this.IsPlayingAnimation = false;
@@ -418,14 +418,14 @@ public class BuffTargetRoleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600AAB5 RID: 43701 RVA: 0x00265AA4 File Offset: 0x00263CA4
+	// Token: 0x06007E98 RID: 32408 RVA: 0x0026FFF4 File Offset: 0x0026E1F4
 	[NullableContext(1)]
 	public void BindOnUseItemAnimationFinished(Action onUseItemAnimationFinishedCallback)
 	{
 		this.OnUseItemAnimationFinishedCallback = onUseItemAnimationFinishedCallback;
 	}
 
-	// Token: 0x0600AAB6 RID: 43702 RVA: 0x00265AB0 File Offset: 0x00263CB0
+	// Token: 0x06007E99 RID: 32409 RVA: 0x00270000 File Offset: 0x0026E200
 	private void RefreshAnimationValueBar()
 	{
 		float alpha = Math.Min(this.AnimationCurrentTime / 200f, 1f);
@@ -433,28 +433,28 @@ public class BuffTargetRoleItem : UiPanelBase
 		this.SetAnimationValueBarPercent(this.AnimationCurrentAttribute / this.AnimationMaxAttribute);
 	}
 
-	// Token: 0x04004D70 RID: 19824
+	// Token: 0x04004E18 RID: 19992
 	private const int ANIMATION_LENGTH = 200;
 
-	// Token: 0x04004D71 RID: 19825
+	// Token: 0x04004E19 RID: 19993
 	private const float LOW_HP_PERCENT = 0.2f;
 
-	// Token: 0x04004D72 RID: 19826
+	// Token: 0x04004E1A RID: 19994
 	private UseBuffItemRoleData UseBuffItemRoleData;
 
-	// Token: 0x04004D73 RID: 19827
+	// Token: 0x04004E1B RID: 19995
 	private float AnimationCurrentAttribute = -1f;
 
-	// Token: 0x04004D74 RID: 19828
+	// Token: 0x04004E1C RID: 19996
 	private float AnimationTargetAttribute;
 
-	// Token: 0x04004D75 RID: 19829
+	// Token: 0x04004E1D RID: 19997
 	private float AnimationCurrentTime;
 
-	// Token: 0x04004D76 RID: 19830
+	// Token: 0x04004E1E RID: 19998
 	private bool IsPlayingAnimation;
 
-	// Token: 0x04004D77 RID: 19831
+	// Token: 0x04004E1F RID: 19999
 	[Nullable(new byte[]
 	{
 		2,
@@ -462,50 +462,50 @@ public class BuffTargetRoleItem : UiPanelBase
 	})]
 	private Action<BuffTargetRoleItem> OnClickedCallback;
 
-	// Token: 0x04004D78 RID: 19832
+	// Token: 0x04004E20 RID: 20000
 	private float AnimationMaxAttribute;
 
-	// Token: 0x04004D79 RID: 19833
+	// Token: 0x04004E21 RID: 20001
 	private Action OnUseItemAnimationFinishedCallback;
 
-	// Token: 0x04004D7A RID: 19834
+	// Token: 0x04004E22 RID: 20002
 	private MediumItemGrid ItemGrid;
 
-	// Token: 0x04004D7B RID: 19835
+	// Token: 0x04004E23 RID: 20003
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04004D7C RID: 19836
+	// Token: 0x04004E24 RID: 20004
 	private UUINiagara NiagaraBuffItem;
 
-	// Token: 0x04004D7D RID: 19837
+	// Token: 0x04004E25 RID: 20005
 	private bool NiagaraBuffResourceFlag;
 
-	// Token: 0x04004D7E RID: 19838
+	// Token: 0x04004E26 RID: 20006
 	private bool IsRoleSelected;
 
-	// Token: 0x02007D18 RID: 32024
+	// Token: 0x02006E9D RID: 28317
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04028F81 RID: 167809
+		// Token: 0x040242AA RID: 148138
 		ItemGridItem,
-		// Token: 0x04028F82 RID: 167810
+		// Token: 0x040242AB RID: 148139
 		AddValueText,
-		// Token: 0x04028F83 RID: 167811
+		// Token: 0x040242AC RID: 148140
 		CurrentValueText,
-		// Token: 0x04028F84 RID: 167812
+		// Token: 0x040242AD RID: 148141
 		AnimationValueBarSprite,
-		// Token: 0x04028F85 RID: 167813
+		// Token: 0x040242AE RID: 148142
 		CurrentValueBarSprite,
-		// Token: 0x04028F86 RID: 167814
+		// Token: 0x040242AF RID: 148143
 		PreviewValueBarSprite,
-		// Token: 0x04028F87 RID: 167815
+		// Token: 0x040242B0 RID: 148144
 		RoleDetailItem,
-		// Token: 0x04028F88 RID: 167816
+		// Token: 0x040242B1 RID: 148145
 		SelectedButton,
-		// Token: 0x04028F89 RID: 167817
+		// Token: 0x040242B2 RID: 148146
 		NoneRoleItem,
-		// Token: 0x04028F8A RID: 167818
+		// Token: 0x040242B3 RID: 148147
 		NiagaraBuff
 	}
 }

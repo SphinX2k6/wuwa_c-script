@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A7B RID: 23163
+	// Token: 0x02004A57 RID: 19031
 	public class FlagChallengeStrongholdPanel : UiPanelBase
 	{
-		// Token: 0x0603AAD5 RID: 240341 RVA: 0x00DF9655 File Offset: 0x00DF7855
+		// Token: 0x0602FA1E RID: 195102 RVA: 0x00D49BE9 File Offset: 0x00D47DE9
 		public FlagChallengeStrongholdPanel(int activityId, int strongholdId)
 		{
 			this.ActivityId = activityId;
 			this.StrongholdId = strongholdId;
 		}
 
-		// Token: 0x0603AAD6 RID: 240342 RVA: 0x00DF966C File Offset: 0x00DF786C
+		// Token: 0x0602FA1F RID: 195103 RVA: 0x00D49C00 File Offset: 0x00D47E00
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AAD7 RID: 240343 RVA: 0x00DF96DC File Offset: 0x00DF78DC
+		// Token: 0x0602FA20 RID: 195104 RVA: 0x00D49C70 File Offset: 0x00D47E70
 		protected override void OnStart()
 		{
 			FlagChallengeStrongholdData strongholdData = FlagChallengeModel.Instance.GetFlagChallengeData(this.ActivityId).GetStrongholdData(this.StrongholdId);
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AAD8 RID: 240344 RVA: 0x00DF97AC File Offset: 0x00DF79AC
+		// Token: 0x0602FA21 RID: 195105 RVA: 0x00D49D40 File Offset: 0x00D47F40
 		[NullableContext(1)]
 		private void SetDiffIcon(string resId)
 		{
@@ -62,10 +62,10 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base.SetTextureByPath(resourcePath, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x0401E9F0 RID: 125424
+		// Token: 0x04019497 RID: 103575
 		private readonly int ActivityId;
 
-		// Token: 0x0401E9F1 RID: 125425
+		// Token: 0x04019498 RID: 103576
 		private readonly int StrongholdId;
 	}
 }

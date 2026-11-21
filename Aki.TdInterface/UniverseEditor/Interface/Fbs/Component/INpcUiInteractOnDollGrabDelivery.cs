@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005671 RID: 22129
+	// Token: 0x02005C12 RID: 23570
 	public struct INpcUiInteractOnDollGrabDelivery : IFlatbufferObject
 	{
-		// Token: 0x1700A41F RID: 42015
-		// (get) Token: 0x06024D5D RID: 150877 RVA: 0x0051539B File Offset: 0x0051359B
+		// Token: 0x1700ACAE RID: 44206
+		// (get) Token: 0x06026F96 RID: 159638 RVA: 0x00555F37 File Offset: 0x00554137
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024D5E RID: 150878 RVA: 0x005153A8 File Offset: 0x005135A8
+		// Token: 0x06026F97 RID: 159639 RVA: 0x00555F44 File Offset: 0x00554144
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06024D5F RID: 150879 RVA: 0x005153B0 File Offset: 0x005135B0
+		// Token: 0x06026F98 RID: 159640 RVA: 0x00555F4C File Offset: 0x0055414C
 		public static INpcUiInteractOnDollGrabDelivery GetRootAsINpcUiInteractOnDollGrabDelivery(ByteBuffer _bb)
 		{
 			return INpcUiInteractOnDollGrabDelivery.GetRootAsINpcUiInteractOnDollGrabDelivery(_bb, default(INpcUiInteractOnDollGrabDelivery));
 		}
 
-		// Token: 0x06024D60 RID: 150880 RVA: 0x005153CC File Offset: 0x005135CC
+		// Token: 0x06026F99 RID: 159641 RVA: 0x00555F68 File Offset: 0x00554168
 		public static INpcUiInteractOnDollGrabDelivery GetRootAsINpcUiInteractOnDollGrabDelivery(ByteBuffer _bb, INpcUiInteractOnDollGrabDelivery obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06024D61 RID: 150881 RVA: 0x005153E9 File Offset: 0x005135E9
+		// Token: 0x06026F9A RID: 159642 RVA: 0x00555F85 File Offset: 0x00554185
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06024D62 RID: 150882 RVA: 0x005153F8 File Offset: 0x005135F8
+		// Token: 0x06026F9B RID: 159643 RVA: 0x00555F94 File Offset: 0x00554194
 		public INpcUiInteractOnDollGrabDelivery __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A420 RID: 42016
-		// (get) Token: 0x06024D63 RID: 150883 RVA: 0x00515408 File Offset: 0x00513608
+		// Token: 0x1700ACAF RID: 44207
+		// (get) Token: 0x06026F9C RID: 159644 RVA: 0x00555FA4 File Offset: 0x005541A4
 		public ENpcUiInteractType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A421 RID: 42017
-		// (get) Token: 0x06024D64 RID: 150884 RVA: 0x00515444 File Offset: 0x00513644
+		// Token: 0x1700ACB0 RID: 44208
+		// (get) Token: 0x06026F9D RID: 159645 RVA: 0x00555FE0 File Offset: 0x005541E0
 		public IOnDollGrabDeliveryPerform? OnFirstAchievementPerform
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A422 RID: 42018
-		// (get) Token: 0x06024D65 RID: 150885 RVA: 0x005154A4 File Offset: 0x005136A4
+		// Token: 0x1700ACB1 RID: 44209
+		// (get) Token: 0x06026F9E RID: 159646 RVA: 0x00556040 File Offset: 0x00554240
 		public IOnDollGrabDeliveryPerform? OnSubsequentAchievementPerform
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A423 RID: 42019
-		// (get) Token: 0x06024D66 RID: 150886 RVA: 0x00515504 File Offset: 0x00513704
+		// Token: 0x1700ACB2 RID: 44210
+		// (get) Token: 0x06026F9F RID: 159647 RVA: 0x005560A0 File Offset: 0x005542A0
 		public IOnDollGrabDeliveryPerform? OnNeverAchievementPerform
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A424 RID: 42020
-		// (get) Token: 0x06024D67 RID: 150887 RVA: 0x00515564 File Offset: 0x00513764
+		// Token: 0x1700ACB3 RID: 44211
+		// (get) Token: 0x06026FA0 RID: 159648 RVA: 0x00556100 File Offset: 0x00554300
 		public IOnDollGrabDeliveryPerform? OnAlreadyAchievementPerform
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024D68 RID: 150888 RVA: 0x005155C2 File Offset: 0x005137C2
+		// Token: 0x06026FA1 RID: 159649 RVA: 0x0055615E File Offset: 0x0055435E
 		public static Offset<INpcUiInteractOnDollGrabDelivery> CreateINpcUiInteractOnDollGrabDelivery(FlatBufferBuilder builder, ENpcUiInteractType Type = ENpcUiInteractType.HandInItem, Offset<IOnDollGrabDeliveryPerform> OnFirstAchievementPerformOffset = default(Offset<IOnDollGrabDeliveryPerform>), Offset<IOnDollGrabDeliveryPerform> OnSubsequentAchievementPerformOffset = default(Offset<IOnDollGrabDeliveryPerform>), Offset<IOnDollGrabDeliveryPerform> OnNeverAchievementPerformOffset = default(Offset<IOnDollGrabDeliveryPerform>), Offset<IOnDollGrabDeliveryPerform> OnAlreadyAchievementPerformOffset = default(Offset<IOnDollGrabDeliveryPerform>))
 		{
 			builder.StartTable(5);
@@ -134,49 +134,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcUiInteractOnDollGrabDelivery.EndINpcUiInteractOnDollGrabDelivery(builder);
 		}
 
-		// Token: 0x06024D69 RID: 150889 RVA: 0x005155F6 File Offset: 0x005137F6
+		// Token: 0x06026FA2 RID: 159650 RVA: 0x00556192 File Offset: 0x00554392
 		public static void StartINpcUiInteractOnDollGrabDelivery(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06024D6A RID: 150890 RVA: 0x005155FF File Offset: 0x005137FF
+		// Token: 0x06026FA3 RID: 159651 RVA: 0x0055619B File Offset: 0x0055439B
 		public static void AddType(FlatBufferBuilder builder, ENpcUiInteractType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06024D6B RID: 150891 RVA: 0x0051560A File Offset: 0x0051380A
+		// Token: 0x06026FA4 RID: 159652 RVA: 0x005561A6 File Offset: 0x005543A6
 		public static void AddOnFirstAchievementPerform(FlatBufferBuilder builder, Offset<IOnDollGrabDeliveryPerform> onFirstAchievementPerformOffset)
 		{
 			builder.AddOffset(1, onFirstAchievementPerformOffset.Value, 0);
 		}
 
-		// Token: 0x06024D6C RID: 150892 RVA: 0x0051561A File Offset: 0x0051381A
+		// Token: 0x06026FA5 RID: 159653 RVA: 0x005561B6 File Offset: 0x005543B6
 		public static void AddOnSubsequentAchievementPerform(FlatBufferBuilder builder, Offset<IOnDollGrabDeliveryPerform> onSubsequentAchievementPerformOffset)
 		{
 			builder.AddOffset(2, onSubsequentAchievementPerformOffset.Value, 0);
 		}
 
-		// Token: 0x06024D6D RID: 150893 RVA: 0x0051562A File Offset: 0x0051382A
+		// Token: 0x06026FA6 RID: 159654 RVA: 0x005561C6 File Offset: 0x005543C6
 		public static void AddOnNeverAchievementPerform(FlatBufferBuilder builder, Offset<IOnDollGrabDeliveryPerform> onNeverAchievementPerformOffset)
 		{
 			builder.AddOffset(3, onNeverAchievementPerformOffset.Value, 0);
 		}
 
-		// Token: 0x06024D6E RID: 150894 RVA: 0x0051563A File Offset: 0x0051383A
+		// Token: 0x06026FA7 RID: 159655 RVA: 0x005561D6 File Offset: 0x005543D6
 		public static void AddOnAlreadyAchievementPerform(FlatBufferBuilder builder, Offset<IOnDollGrabDeliveryPerform> onAlreadyAchievementPerformOffset)
 		{
 			builder.AddOffset(4, onAlreadyAchievementPerformOffset.Value, 0);
 		}
 
-		// Token: 0x06024D6F RID: 150895 RVA: 0x0051564A File Offset: 0x0051384A
+		// Token: 0x06026FA8 RID: 159656 RVA: 0x005561E6 File Offset: 0x005543E6
 		public static Offset<INpcUiInteractOnDollGrabDelivery> EndINpcUiInteractOnDollGrabDelivery(FlatBufferBuilder builder)
 		{
 			return new Offset<INpcUiInteractOnDollGrabDelivery>(builder.EndTable());
 		}
 
-		// Token: 0x06024D70 RID: 150896 RVA: 0x00515658 File Offset: 0x00513858
+		// Token: 0x06026FA9 RID: 159657 RVA: 0x005561F4 File Offset: 0x005543F4
 		public INpcUiInteractOnDollGrabDeliveryT UnPack()
 		{
 			INpcUiInteractOnDollGrabDeliveryT npcUiInteractOnDollGrabDeliveryT = new INpcUiInteractOnDollGrabDeliveryT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return npcUiInteractOnDollGrabDeliveryT;
 		}
 
-		// Token: 0x06024D71 RID: 150897 RVA: 0x00515674 File Offset: 0x00513874
+		// Token: 0x06026FAA RID: 159658 RVA: 0x00556210 File Offset: 0x00554410
 		public void UnPackTo(INpcUiInteractOnDollGrabDeliveryT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.OnAlreadyAchievementPerform = ((this.OnAlreadyAchievementPerform != null) ? this.OnAlreadyAchievementPerform.Value.UnPack() : null);
 		}
 
-		// Token: 0x06024D72 RID: 150898 RVA: 0x0051574C File Offset: 0x0051394C
+		// Token: 0x06026FAB RID: 159659 RVA: 0x005562E8 File Offset: 0x005544E8
 		public static Offset<INpcUiInteractOnDollGrabDelivery> Pack(FlatBufferBuilder builder, INpcUiInteractOnDollGrabDeliveryT _o)
 		{
 			if (_o == null)
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcUiInteractOnDollGrabDelivery.CreateINpcUiInteractOnDollGrabDelivery(builder, _o.Type, onFirstAchievementPerformOffset, onSubsequentAchievementPerformOffset, onNeverAchievementPerformOffset, onAlreadyAchievementPerformOffset);
 		}
 
-		// Token: 0x0400EA48 RID: 59976
+		// Token: 0x0400F6B1 RID: 63153
 		private Table __p;
 	}
 }

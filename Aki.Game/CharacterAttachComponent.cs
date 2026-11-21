@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x0200304E RID: 12366
+// Token: 0x020025A4 RID: 9636
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601A46A RID: 107626 RVA: 0x006F2438 File Offset: 0x006F0638
+	// Token: 0x06017DF6 RID: 97782 RVA: 0x00719758 File Offset: 0x00717958
 	protected override bool OnStart()
 	{
 		this.FollowerList = new List<EntityHandle>();
@@ -28,14 +28,14 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601A46B RID: 107627 RVA: 0x006F24E4 File Offset: 0x006F06E4
+	// Token: 0x06017DF7 RID: 97783 RVA: 0x00719804 File Offset: 0x00717A04
 	protected override void OnActivate()
 	{
 		this.InitAttachToTarget();
 		this.InitAttachToThis();
 	}
 
-	// Token: 0x0601A46C RID: 107628 RVA: 0x006F24F4 File Offset: 0x006F06F4
+	// Token: 0x06017DF8 RID: 97784 RVA: 0x00719814 File Offset: 0x00717A14
 	private void InitAttachToTarget()
 	{
 		CreatureDataComponent creatureDataComp = this.CreatureDataComp;
@@ -81,7 +81,7 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		this.AttachToTarget(handleByEntity, null, false);
 	}
 
-	// Token: 0x0601A46D RID: 107629 RVA: 0x006F2680 File Offset: 0x006F0880
+	// Token: 0x06017DF9 RID: 97785 RVA: 0x007199A0 File Offset: 0x00717BA0
 	private void InitAttachToThis()
 	{
 		CreatureDataComponent creatureDataComp = this.CreatureDataComp;
@@ -131,7 +131,7 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A46E RID: 107630 RVA: 0x006F2824 File Offset: 0x006F0A24
+	// Token: 0x06017DFA RID: 97786 RVA: 0x00719B44 File Offset: 0x00717D44
 	[NullableContext(1)]
 	public void StartAttachToTarget(EntityHandle targetHandle, FName socketName, FVector socketOffset, int partInfoIndex, FGameplayTag? tag)
 	{
@@ -171,7 +171,7 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		bool isShowDebugLog2 = CharacterAttachComponent.IsShowDebugLog;
 	}
 
-	// Token: 0x0601A46F RID: 107631 RVA: 0x006F2954 File Offset: 0x006F0B54
+	// Token: 0x06017DFB RID: 97787 RVA: 0x00719C74 File Offset: 0x00717E74
 	[NullableContext(1)]
 	public void AttachToTarget(EntityHandle targetHandle, long? preMessageId, bool isSendToServer)
 	{
@@ -214,7 +214,7 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A470 RID: 107632 RVA: 0x006F2A6C File Offset: 0x006F0C6C
+	// Token: 0x06017DFC RID: 97788 RVA: 0x00719D8C File Offset: 0x00717F8C
 	public void DetachFromHost(bool isDetachFollower, bool isRecursion, bool isNotifyServer, long? preMessageId = null)
 	{
 		if (!this.CheckValid())
@@ -282,7 +282,7 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		this.RemoveFromHost();
 	}
 
-	// Token: 0x0601A471 RID: 107633 RVA: 0x006F2B78 File Offset: 0x006F0D78
+	// Token: 0x06017DFD RID: 97789 RVA: 0x00719E98 File Offset: 0x00718098
 	private void DetachFollower(bool isRecursion, bool isNotifyServer, long? preMessageId = null)
 	{
 		for (int i = this.FollowerList.Count - 1; i >= 0; i--)
@@ -301,7 +301,7 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		this.FollowerList.Clear();
 	}
 
-	// Token: 0x0601A472 RID: 107634 RVA: 0x006F2BF4 File Offset: 0x006F0DF4
+	// Token: 0x06017DFE RID: 97790 RVA: 0x00719F14 File Offset: 0x00718114
 	private void AttachToHost()
 	{
 		EntityHandle attachTargetHandle = this.AttachTargetHandle;
@@ -317,7 +317,7 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		component.AddFollower(CharacterModel.Instance.GetHandleByEntity(base.Entity));
 	}
 
-	// Token: 0x0601A473 RID: 107635 RVA: 0x006F2C54 File Offset: 0x006F0E54
+	// Token: 0x06017DFF RID: 97791 RVA: 0x00719F74 File Offset: 0x00718174
 	private void RemoveFromHost()
 	{
 		EntityHandle attachTargetHandle = this.AttachTargetHandle;
@@ -333,7 +333,7 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		component.RemoveFollower(CharacterModel.Instance.GetHandleByEntity(base.Entity));
 	}
 
-	// Token: 0x0601A474 RID: 107636 RVA: 0x006F2CB2 File Offset: 0x006F0EB2
+	// Token: 0x06017E00 RID: 97792 RVA: 0x00719FD2 File Offset: 0x007181D2
 	private void AddFollower(EntityHandle follower)
 	{
 		if (follower == null || !follower.Valid || this.FollowerList.Contains(follower))
@@ -343,7 +343,7 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		this.FollowerList.Add(follower);
 	}
 
-	// Token: 0x0601A475 RID: 107637 RVA: 0x006F2CE0 File Offset: 0x006F0EE0
+	// Token: 0x06017E01 RID: 97793 RVA: 0x0071A000 File Offset: 0x00718200
 	private void RemoveFollower(EntityHandle follower)
 	{
 		if (follower == null || !follower.Valid)
@@ -358,13 +358,13 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		this.FollowerList.RemoveAt(num);
 	}
 
-	// Token: 0x0601A476 RID: 107638 RVA: 0x006F2D1D File Offset: 0x006F0F1D
+	// Token: 0x06017E02 RID: 97794 RVA: 0x0071A03D File Offset: 0x0071823D
 	public bool HasFollower(EntityHandle follower)
 	{
 		return this.CheckValid() && (follower != null && follower.Valid) && this.FollowerList.Contains(follower);
 	}
 
-	// Token: 0x0601A477 RID: 107639 RVA: 0x006F2D48 File Offset: 0x006F0F48
+	// Token: 0x06017E03 RID: 97795 RVA: 0x0071A068 File Offset: 0x00718268
 	public CombinePartInfo GetFollowerAttachInfo(long followerServerId)
 	{
 		if (!this.CheckValid())
@@ -395,13 +395,13 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0601A478 RID: 107640 RVA: 0x006F2DC6 File Offset: 0x006F0FC6
+	// Token: 0x06017E04 RID: 97796 RVA: 0x0071A0E6 File Offset: 0x007182E6
 	private bool CheckValid()
 	{
 		return this.Initial;
 	}
 
-	// Token: 0x0601A479 RID: 107641 RVA: 0x006F2DD0 File Offset: 0x006F0FD0
+	// Token: 0x06017E05 RID: 97797 RVA: 0x0071A0F0 File Offset: 0x007182F0
 	private unsafe void ExecuteCombineEntitiesRequest(long preMessageId)
 	{
 		bool isShowDebugLog = CharacterAttachComponent.IsShowDebugLog;
@@ -451,7 +451,7 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		}, new long?(preMessageId), null, null, null);
 	}
 
-	// Token: 0x0601A47A RID: 107642 RVA: 0x006F2EEC File Offset: 0x006F10EC
+	// Token: 0x06017E06 RID: 97798 RVA: 0x0071A20C File Offset: 0x0071840C
 	[CombatListen(ENotifyMessageId.AddCombineEntitiesRelationNotify, true, false)]
 	public static void AddCombineEntitiesRelationNotify(Entity entity, [Nullable(1)] AddCombineEntitiesRelationNotify data, CombatCommon combatCommon = null)
 	{
@@ -499,7 +499,7 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		bool isShowDebugLog2 = CharacterAttachComponent.IsShowDebugLog;
 	}
 
-	// Token: 0x0601A47B RID: 107643 RVA: 0x006F304C File Offset: 0x006F124C
+	// Token: 0x06017E07 RID: 97799 RVA: 0x0071A36C File Offset: 0x0071856C
 	private unsafe void ExecuteDissolveCombineRelationRequest(long? preMessageId)
 	{
 		bool isShowDebugLog = CharacterAttachComponent.IsShowDebugLog;
@@ -533,7 +533,7 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		}, preMessageId, null, null, null);
 	}
 
-	// Token: 0x0601A47C RID: 107644 RVA: 0x006F30DC File Offset: 0x006F12DC
+	// Token: 0x06017E08 RID: 97800 RVA: 0x0071A3FC File Offset: 0x007185FC
 	[CombatListen(ENotifyMessageId.RemoveCombineRelationNotify, true, false)]
 	public static void RemoveCombineRelationNotify(Entity entity, [Nullable(1)] RemoveCombineRelationNotify data, CombatCommon combatCommon = null)
 	{
@@ -551,13 +551,13 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		bool isShowDebugLog2 = CharacterAttachComponent.IsShowDebugLog;
 	}
 
-	// Token: 0x0601A47D RID: 107645 RVA: 0x006F3124 File Offset: 0x006F1324
+	// Token: 0x06017E09 RID: 97801 RVA: 0x0071A444 File Offset: 0x00718644
 	public void SetEnableDebugLog(bool isShowDebugLog)
 	{
 		CharacterAttachComponent.IsShowDebugLog = isShowDebugLog;
 	}
 
-	// Token: 0x0601A47E RID: 107646 RVA: 0x006F312C File Offset: 0x006F132C
+	// Token: 0x06017E0A RID: 97802 RVA: 0x0071A44C File Offset: 0x0071864C
 	private void ClearAttachState()
 	{
 		if (this.AttachTag != null)
@@ -605,13 +605,13 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		this.AttachState = EAttachState.Detach;
 	}
 
-	// Token: 0x0601A47F RID: 107647 RVA: 0x006F3260 File Offset: 0x006F1460
+	// Token: 0x06017E0B RID: 97803 RVA: 0x0071A580 File Offset: 0x00718780
 	private void OnEntityDead()
 	{
 		this.DetachFromHost(true, false, false, null);
 	}
 
-	// Token: 0x0601A480 RID: 107648 RVA: 0x006F3280 File Offset: 0x006F1480
+	// Token: 0x06017E0C RID: 97804 RVA: 0x0071A5A0 File Offset: 0x007187A0
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.CharOnRoleDeadTargetSelf, new Action(this.OnEntityDead));
@@ -623,24 +623,24 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601A481 RID: 107649 RVA: 0x006F32DE File Offset: 0x006F14DE
+	// Token: 0x06017E0D RID: 97805 RVA: 0x0071A5FE File Offset: 0x007187FE
 	static CharacterAttachComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterAttachComponent.CreateStaticDefaultValue), new Action(CharacterAttachComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601A482 RID: 107650 RVA: 0x006F32FD File Offset: 0x006F14FD
+	// Token: 0x06017E0E RID: 97806 RVA: 0x0071A61D File Offset: 0x0071881D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601A483 RID: 107651 RVA: 0x006F32FF File Offset: 0x006F14FF
+	// Token: 0x06017E0F RID: 97807 RVA: 0x0071A61F File Offset: 0x0071881F
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterAttachComponent.IsShowDebugLog = false;
 	}
 
-	// Token: 0x0601A484 RID: 107652 RVA: 0x006F3308 File Offset: 0x006F1508
+	// Token: 0x06017E10 RID: 97808 RVA: 0x0071A628 File Offset: 0x00718828
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -649,141 +649,135 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 			return false;
 		}
 		CharacterAttachComponent characterAttachComponent = (CharacterAttachComponent)componentTemplate;
-		if (base.CanResetComponentProperty("AttachTargetHandle"))
+		if (characterAttachComponent.AttachTargetHandle == null)
 		{
-			if (characterAttachComponent.AttachTargetHandle == null)
-			{
-				this.AttachTargetHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.AttachTargetHandle), "AttachTargetHandle"))
-			{
-				return false;
-			}
+			this.AttachTargetHandle = null;
 		}
-		if (base.CanResetComponentProperty("AttachTag"))
-		{
-			this.AttachTag = characterAttachComponent.AttachTag;
-		}
-		if (base.CanResetComponentProperty("AttachPartInfoIndex"))
-		{
-			this.AttachPartInfoIndex = characterAttachComponent.AttachPartInfoIndex;
-		}
-		if (base.CanResetComponentProperty("AttachSocketName"))
-		{
-			this.AttachSocketName = characterAttachComponent.AttachSocketName;
-		}
-		if (base.CanResetComponentProperty("AttachSocketOffset") && characterAttachComponent.AttachSocketOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.AttachSocketOffset), "AttachSocketOffset"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttachTargetHandle), "AttachTargetHandle"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("AttachState"))
+		this.AttachTag = characterAttachComponent.AttachTag;
+		this.AttachPartInfoIndex = characterAttachComponent.AttachPartInfoIndex;
+		this.AttachSocketName = characterAttachComponent.AttachSocketName;
+		if (characterAttachComponent.AttachSocketOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttachSocketOffset), "AttachSocketOffset"))
 		{
-			this.AttachState = characterAttachComponent.AttachState;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CreatureDataComp"))
+		this.AttachState = characterAttachComponent.AttachState;
+		if (characterAttachComponent.CreatureDataComp == null)
 		{
-			if (characterAttachComponent.CreatureDataComp == null)
-			{
-				this.CreatureDataComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-			{
-				return false;
-			}
+			this.CreatureDataComp = null;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 		{
-			if (characterAttachComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("MoveComp"))
+		if (characterAttachComponent.ActorComp == null)
 		{
-			if (characterAttachComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (characterAttachComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("MoveCompDisableHandle"))
+		if (characterAttachComponent.MoveComp == null)
 		{
-			this.MoveCompDisableHandle = characterAttachComponent.MoveCompDisableHandle;
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("FollowerList"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			if (characterAttachComponent.FollowerList == null)
-			{
-				this.FollowerList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<EntityHandle>>(this.FollowerList), "FollowerList"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("Initial"))
+		if (characterAttachComponent.TagComp == null)
 		{
-			this.Initial = characterAttachComponent.Initial;
+			this.TagComp = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+		{
+			return false;
+		}
+		this.MoveCompDisableHandle = characterAttachComponent.MoveCompDisableHandle;
+		if (characterAttachComponent.FollowerList == null)
+		{
+			this.FollowerList = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FollowerList), "FollowerList"))
+		{
+			return false;
+		}
+		this.Initial = characterAttachComponent.Initial;
 		return true;
 	}
 
-	// Token: 0x0400C84C RID: 51276
+	// Token: 0x1700253A RID: 9530
+	// (get) Token: 0x06017E11 RID: 97809 RVA: 0x0071A7B4 File Offset: 0x007189B4
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700253B RID: 9531
+	// (get) Token: 0x06017E12 RID: 97810 RVA: 0x0071A7B7 File Offset: 0x007189B7
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700253C RID: 9532
+	// (get) Token: 0x06017E13 RID: 97811 RVA: 0x0071A7BA File Offset: 0x007189BA
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CC25 RID: 52261
 	private static bool IsShowDebugLog;
 
-	// Token: 0x0400C84D RID: 51277
+	// Token: 0x0400CC26 RID: 52262
 	private EntityHandle AttachTargetHandle;
 
-	// Token: 0x0400C84E RID: 51278
+	// Token: 0x0400CC27 RID: 52263
 	private FGameplayTag? AttachTag;
 
-	// Token: 0x0400C84F RID: 51279
+	// Token: 0x0400CC28 RID: 52264
 	private int AttachPartInfoIndex;
 
-	// Token: 0x0400C850 RID: 51280
+	// Token: 0x0400CC29 RID: 52265
 	private FName AttachSocketName = FName.NAME_None;
 
-	// Token: 0x0400C851 RID: 51281
+	// Token: 0x0400CC2A RID: 52266
 	[Nullable(1)]
 	private readonly global::Vector AttachSocketOffset = global::Vector.Create();
 
-	// Token: 0x0400C852 RID: 51282
+	// Token: 0x0400CC2B RID: 52267
 	private EAttachState AttachState = EAttachState.Detach;
 
-	// Token: 0x0400C853 RID: 51283
+	// Token: 0x0400CC2C RID: 52268
 	private CreatureDataComponent CreatureDataComp;
 
-	// Token: 0x0400C854 RID: 51284
+	// Token: 0x0400CC2D RID: 52269
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400C855 RID: 51285
+	// Token: 0x0400CC2E RID: 52270
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400C856 RID: 51286
+	// Token: 0x0400CC2F RID: 52271
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400C857 RID: 51287
+	// Token: 0x0400CC30 RID: 52272
 	private int? MoveCompDisableHandle;
 
-	// Token: 0x0400C858 RID: 51288
+	// Token: 0x0400CC31 RID: 52273
 	[Nullable(new byte[]
 	{
 		2,
@@ -791,6 +785,6 @@ public class CharacterAttachComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private List<EntityHandle> FollowerList;
 
-	// Token: 0x0400C859 RID: 51289
+	// Token: 0x0400CC32 RID: 52274
 	private bool Initial;
 }

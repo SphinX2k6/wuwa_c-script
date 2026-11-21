@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006290 RID: 25232
+	// Token: 0x0200520E RID: 21006
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,26 +13,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 	})]
 	public class AreaTitleGridData : MultiTemplateGridDataBase<RealmBetweenAreaData, AreaTitleItem>
 	{
-		// Token: 0x0603F7D9 RID: 260057 RVA: 0x00F59A6E File Offset: 0x00F57C6E
+		// Token: 0x0603449A RID: 214170 RVA: 0x00EA09CA File Offset: 0x00E9EBCA
 		public AreaTitleGridData(RealmBetweenAreaData data, ActivityRealmBetweenData activity)
 		{
 			base.Data = data;
 			this.Activity = activity;
 		}
 
-		// Token: 0x0603F7DA RID: 260058 RVA: 0x00F59A84 File Offset: 0x00F57C84
+		// Token: 0x0603449B RID: 214171 RVA: 0x00EA09E0 File Offset: 0x00E9EBE0
 		public override int GetTemplateIndex()
 		{
 			return 0;
 		}
 
-		// Token: 0x0603F7DB RID: 260059 RVA: 0x00F59A87 File Offset: 0x00F57C87
+		// Token: 0x0603449C RID: 214172 RVA: 0x00EA09E3 File Offset: 0x00E9EBE3
 		public override AreaTitleItem CreateProxy()
 		{
 			return new AreaTitleItem(this.Activity);
 		}
 
-		// Token: 0x04021306 RID: 135942
+		// Token: 0x0401BC35 RID: 113717
 		private readonly ActivityRealmBetweenData Activity;
 	}
 }

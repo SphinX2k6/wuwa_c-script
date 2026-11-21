@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001C4D RID: 7245
+// Token: 0x0200110C RID: 4364
 internal enum EFuncOpenFlag
 {
-	// Token: 0x040063FF RID: 25599
+	// Token: 0x040064D1 RID: 25809
 	IsShow = 1,
-	// Token: 0x04006400 RID: 25600
+	// Token: 0x040064D2 RID: 25810
 	IsOpen,
-	// Token: 0x04006401 RID: 25601
+	// Token: 0x040064D3 RID: 25811
 	ClientShow = 4
 }

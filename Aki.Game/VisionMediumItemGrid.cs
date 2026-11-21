@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.RoleUi;
 using UnrealEngine;
 
-// Token: 0x020024D1 RID: 9425
+// Token: 0x020019B8 RID: 6584
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class VisionMediumItemGrid : LoopScrollMediumItemGrid<PhantomBattleData>
 {
-	// Token: 0x06012F41 RID: 77633 RVA: 0x004B1265 File Offset: 0x004AF465
+	// Token: 0x06010400 RID: 66560 RVA: 0x004BEE64 File Offset: 0x004BD064
 	protected override void OnStart()
 	{
 		base.BindOnExtendToggleStateChanged(delegate(MediumItemGridExtendCallback _)
@@ -33,19 +33,19 @@ public class VisionMediumItemGrid : LoopScrollMediumItemGrid<PhantomBattleData>
 		});
 	}
 
-	// Token: 0x06012F42 RID: 77634 RVA: 0x004B129D File Offset: 0x004AF49D
+	// Token: 0x06010401 RID: 66561 RVA: 0x004BEE9C File Offset: 0x004BD09C
 	public void SetOnPointDownCallBack(Action<VisionMediumItemGrid, PhantomBattleData> call)
 	{
 		this.OnPointDownCallBack = call;
 	}
 
-	// Token: 0x06012F43 RID: 77635 RVA: 0x004B12A6 File Offset: 0x004AF4A6
+	// Token: 0x06010402 RID: 66562 RVA: 0x004BEEA5 File Offset: 0x004BD0A5
 	public void SetOnPointUpCallBack(Action<VisionMediumItemGrid, PhantomBattleData> call)
 	{
 		this.OnPointUpCallBack = call;
 	}
 
-	// Token: 0x06012F44 RID: 77636 RVA: 0x004B12AF File Offset: 0x004AF4AF
+	// Token: 0x06010403 RID: 66563 RVA: 0x004BEEAE File Offset: 0x004BD0AE
 	private void OnToggleDown()
 	{
 		if (this.CurrentData != null)
@@ -59,7 +59,7 @@ public class VisionMediumItemGrid : LoopScrollMediumItemGrid<PhantomBattleData>
 		}
 	}
 
-	// Token: 0x06012F45 RID: 77637 RVA: 0x004B12D0 File Offset: 0x004AF4D0
+	// Token: 0x06010404 RID: 66564 RVA: 0x004BEECF File Offset: 0x004BD0CF
 	private void OnToggleUp()
 	{
 		if (this.CurrentData != null)
@@ -73,7 +73,7 @@ public class VisionMediumItemGrid : LoopScrollMediumItemGrid<PhantomBattleData>
 		}
 	}
 
-	// Token: 0x06012F46 RID: 77638 RVA: 0x004B12F1 File Offset: 0x004AF4F1
+	// Token: 0x06010405 RID: 66565 RVA: 0x004BEEF0 File Offset: 0x004BD0F0
 	private void OnClickEvent()
 	{
 		if (this.CurrentData != null)
@@ -87,13 +87,13 @@ public class VisionMediumItemGrid : LoopScrollMediumItemGrid<PhantomBattleData>
 		}
 	}
 
-	// Token: 0x06012F47 RID: 77639 RVA: 0x004B1317 File Offset: 0x004AF517
+	// Token: 0x06010406 RID: 66566 RVA: 0x004BEF16 File Offset: 0x004BD116
 	public void SetClickToggleEvent(Action<PhantomBattleData, int> call)
 	{
 		this.OnClickCallBack = call;
 	}
 
-	// Token: 0x06012F48 RID: 77640 RVA: 0x004B1320 File Offset: 0x004AF520
+	// Token: 0x06010407 RID: 66567 RVA: 0x004BEF20 File Offset: 0x004BD120
 	public override void OnSelected(bool fireEvent)
 	{
 		if (this.GetItemGridExtendToggle().ToggleState != EToggleState.ETT_Checked)
@@ -109,7 +109,7 @@ public class VisionMediumItemGrid : LoopScrollMediumItemGrid<PhantomBattleData>
 		}
 	}
 
-	// Token: 0x06012F49 RID: 77641 RVA: 0x004B1399 File Offset: 0x004AF599
+	// Token: 0x06010408 RID: 66568 RVA: 0x004BEF99 File Offset: 0x004BD199
 	public override void OnDeselected(bool fireEvent)
 	{
 		if (this.GetItemGridExtendToggle().ToggleState != EToggleState.ETT_UnChecked)
@@ -118,19 +118,19 @@ public class VisionMediumItemGrid : LoopScrollMediumItemGrid<PhantomBattleData>
 		}
 	}
 
-	// Token: 0x06012F4A RID: 77642 RVA: 0x004B13B0 File Offset: 0x004AF5B0
+	// Token: 0x06010409 RID: 66569 RVA: 0x004BEFB0 File Offset: 0x004BD1B0
 	public void SetOnRefreshEvent(Action<VisionMediumItemGrid> call)
 	{
 		this.OnRefreshCallBack = call;
 	}
 
-	// Token: 0x06012F4B RID: 77643 RVA: 0x004B13B9 File Offset: 0x004AF5B9
+	// Token: 0x0601040A RID: 66570 RVA: 0x004BEFB9 File Offset: 0x004BD1B9
 	public bool CheckSelectedState(PhantomBattleData currentSelectData)
 	{
 		return currentSelectData == this.CurrentData;
 	}
 
-	// Token: 0x06012F4C RID: 77644 RVA: 0x004B13C8 File Offset: 0x004AF5C8
+	// Token: 0x0601040B RID: 66571 RVA: 0x004BEFC8 File Offset: 0x004BD1C8
 	protected override void OnRefresh(PhantomBattleData data, bool isSelected, int gridIndex)
 	{
 		this.CurrentData = data;
@@ -244,7 +244,7 @@ public class VisionMediumItemGrid : LoopScrollMediumItemGrid<PhantomBattleData>
 		onRefreshCallBack(this);
 	}
 
-	// Token: 0x06012F4D RID: 77645 RVA: 0x004B1670 File Offset: 0x004AF870
+	// Token: 0x0601040C RID: 66572 RVA: 0x004BF270 File Offset: 0x004BD470
 	[return: Nullable(2)]
 	private MediumWarningPanelInfo GetWarningPanelInfo(PhantomBattleData data)
 	{
@@ -267,20 +267,20 @@ public class VisionMediumItemGrid : LoopScrollMediumItemGrid<PhantomBattleData>
 		return null;
 	}
 
-	// Token: 0x04008EB7 RID: 36535
+	// Token: 0x04009001 RID: 36865
 	[Nullable(2)]
 	private PhantomBattleData CurrentData;
 
-	// Token: 0x04008EB8 RID: 36536
+	// Token: 0x04009002 RID: 36866
 	private int CurrentIndex;
 
-	// Token: 0x04008EB9 RID: 36537
+	// Token: 0x04009003 RID: 36867
 	public ERoleViewSource Source;
 
-	// Token: 0x04008EBA RID: 36538
+	// Token: 0x04009004 RID: 36868
 	public int RoleId;
 
-	// Token: 0x04008EBB RID: 36539
+	// Token: 0x04009005 RID: 36869
 	[Nullable(new byte[]
 	{
 		2,
@@ -288,7 +288,7 @@ public class VisionMediumItemGrid : LoopScrollMediumItemGrid<PhantomBattleData>
 	})]
 	private Action<PhantomBattleData, int> OnClickCallBack;
 
-	// Token: 0x04008EBC RID: 36540
+	// Token: 0x04009006 RID: 36870
 	[Nullable(new byte[]
 	{
 		2,
@@ -296,7 +296,7 @@ public class VisionMediumItemGrid : LoopScrollMediumItemGrid<PhantomBattleData>
 	})]
 	private Action<VisionMediumItemGrid> OnRefreshCallBack;
 
-	// Token: 0x04008EBD RID: 36541
+	// Token: 0x04009007 RID: 36871
 	[Nullable(new byte[]
 	{
 		2,
@@ -305,7 +305,7 @@ public class VisionMediumItemGrid : LoopScrollMediumItemGrid<PhantomBattleData>
 	})]
 	private Action<VisionMediumItemGrid, PhantomBattleData> OnPointDownCallBack;
 
-	// Token: 0x04008EBE RID: 36542
+	// Token: 0x04009008 RID: 36872
 	[Nullable(new byte[]
 	{
 		2,

@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Activity
 {
-	// Token: 0x02005784 RID: 22404
+	// Token: 0x0200475B RID: 18267
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivitySubViewKurotato : ActivitySubViewBase
 	{
-		// Token: 0x17008879 RID: 34937
-		// (get) Token: 0x06038E93 RID: 233107 RVA: 0x00D869BC File Offset: 0x00D84BBC
+		// Token: 0x17005C41 RID: 23617
+		// (get) Token: 0x0602DDA3 RID: 187811 RVA: 0x00CD5700 File Offset: 0x00CD3900
 		protected new KurotatoActivityData ActivityBaseData
 		{
 			get
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			}
 		}
 
-		// Token: 0x06038E94 RID: 233108 RVA: 0x00D869CC File Offset: 0x00D84BCC
+		// Token: 0x0602DDA4 RID: 187812 RVA: 0x00CD5710 File Offset: 0x00CD3910
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038E95 RID: 233109 RVA: 0x00D86A58 File Offset: 0x00D84C58
+		// Token: 0x0602DDA5 RID: 187813 RVA: 0x00CD579C File Offset: 0x00CD399C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivitySubViewKurotato.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038E96 RID: 233110 RVA: 0x00D86A9C File Offset: 0x00D84C9C
+		// Token: 0x0602DDA6 RID: 187814 RVA: 0x00CD57E0 File Offset: 0x00CD39E0
 		protected override void OnBeforeShow()
 		{
 			this.OnRefreshView();
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			base.GetItem(2).SetUIActive(flag);
 		}
 
-		// Token: 0x06038E97 RID: 233111 RVA: 0x00D86B05 File Offset: 0x00D84D05
+		// Token: 0x0602DDA7 RID: 187815 RVA: 0x00CD5849 File Offset: 0x00CD3A49
 		protected override void OnBeforeHide()
 		{
 			KurotatoNormalRewardButton normalRewardBtn = this.NormalRewardBtn;
@@ -88,13 +88,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			limitedTimeRewardBtn.UnBindRedDot();
 		}
 
-		// Token: 0x06038E98 RID: 233112 RVA: 0x00D86B28 File Offset: 0x00D84D28
+		// Token: 0x0602DDA8 RID: 187816 RVA: 0x00CD586C File Offset: 0x00CD3A6C
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshBottomTimeText();
 		}
 
-		// Token: 0x06038E99 RID: 233113 RVA: 0x00D86B30 File Offset: 0x00D84D30
+		// Token: 0x0602DDA9 RID: 187817 RVA: 0x00CD5874 File Offset: 0x00CD3A74
 		protected override void OnRefreshView()
 		{
 			ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.LimitedTimeRewardBtn.SetProgressNumText(item3, item4);
 		}
 
-		// Token: 0x06038E9A RID: 233114 RVA: 0x00D86BEC File Offset: 0x00D84DEC
+		// Token: 0x0602DDAA RID: 187818 RVA: 0x00CD5930 File Offset: 0x00CD3B30
 		private void RefreshBottomTimeText()
 		{
 			bool flag = this.ActivityBaseData.CheckIfInLimitTime();
@@ -139,13 +139,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.LimitedTimeRewardBtn.SetLimitTimeText(remainTimeText ?? "");
 		}
 
-		// Token: 0x06038E9B RID: 233115 RVA: 0x00D86C54 File Offset: 0x00D84E54
+		// Token: 0x0602DDAB RID: 187819 RVA: 0x00CD5998 File Offset: 0x00CD3B98
 		private bool GetFunctionRedDotState()
 		{
 			return this.ActivityBaseData.IsActHaveRedDot();
 		}
 
-		// Token: 0x06038E9C RID: 233116 RVA: 0x00D86C61 File Offset: 0x00D84E61
+		// Token: 0x0602DDAC RID: 187820 RVA: 0x00CD59A5 File Offset: 0x00CD3BA5
 		private void OnEnterBtnClick(ActivityBaseData _)
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -165,36 +165,36 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			});
 		}
 
-		// Token: 0x06038E9D RID: 233117 RVA: 0x00D86C7F File Offset: 0x00D84E7F
+		// Token: 0x0602DDAD RID: 187821 RVA: 0x00CD59C3 File Offset: 0x00CD3BC3
 		private void OnLimitedTimeRewardBtnClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.KurotatoLimitedTimeRewardView, null, null);
 		}
 
-		// Token: 0x06038E9E RID: 233118 RVA: 0x00D86C92 File Offset: 0x00D84E92
+		// Token: 0x0602DDAE RID: 187822 RVA: 0x00CD59D6 File Offset: 0x00CD3BD6
 		private void OnNormalRewardBtnClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.KurotatoNormalRewardView, null, null);
 		}
 
-		// Token: 0x0401DD60 RID: 122208
+		// Token: 0x040187F6 RID: 100342
 		protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-		// Token: 0x0401DD61 RID: 122209
+		// Token: 0x040187F7 RID: 100343
 		protected KurotatoLimitTimeRewardButton LimitedTimeRewardBtn;
 
-		// Token: 0x0401DD62 RID: 122210
+		// Token: 0x040187F8 RID: 100344
 		protected KurotatoNormalRewardButton NormalRewardBtn;
 
-		// Token: 0x0200B9A6 RID: 47526
+		// Token: 0x0200A3BD RID: 41917
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04038221 RID: 229921
+			// Token: 0x04032C13 RID: 207891
 			CommonActionInfo,
-			// Token: 0x04038222 RID: 229922
+			// Token: 0x04032C14 RID: 207892
 			LimitedTimeRewardBtn,
-			// Token: 0x04038223 RID: 229923
+			// Token: 0x04032C15 RID: 207893
 			NormalRewardBtn
 		}
 	}

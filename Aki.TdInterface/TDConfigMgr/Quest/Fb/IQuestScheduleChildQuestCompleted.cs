@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200131D RID: 4893
+	// Token: 0x0200146D RID: 5229
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IQuestScheduleChildQuestCompleted : IQuestScheduleType
 	{
-		// Token: 0x0600704F RID: 28751 RVA: 0x0010F4B3 File Offset: 0x0010D6B3
-		[NullableContext(1)]
+		// Token: 0x060076EF RID: 30447 RVA: 0x0011DA1F File Offset: 0x0011BC1F
+		[NullableContext(0)]
 		public static IQuestScheduleChildQuestCompleted Create(IQuestScheduleChildQuestCompleted? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023E8 RID: 9192
-		// (get) Token: 0x06007050 RID: 28752 RVA: 0x0010F4D2 File Offset: 0x0010D6D2
+		// Token: 0x170025B7 RID: 9655
+		// (get) Token: 0x060076F0 RID: 30448 RVA: 0x0011DA3E File Offset: 0x0011BC3E
 		public override EQuestScheduleType Type
 		{
 			get
@@ -35,8 +35,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023E9 RID: 9193
-		// (get) Token: 0x06007051 RID: 28753 RVA: 0x0010F4DF File Offset: 0x0010D6DF
+		// Token: 0x170025B8 RID: 9656
+		// (get) Token: 0x060076F1 RID: 30449 RVA: 0x0011DA4B File Offset: 0x0011BC4B
 		public virtual int ChildQuestId
 		{
 			get
@@ -45,8 +45,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023EA RID: 9194
-		// (get) Token: 0x06007052 RID: 28754 RVA: 0x0010F4EC File Offset: 0x0010D6EC
+		// Token: 0x170025B9 RID: 9657
+		// (get) Token: 0x060076F2 RID: 30450 RVA: 0x0011DA58 File Offset: 0x0011BC58
 		public virtual bool? ShowTracking
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023EB RID: 9195
-		// (get) Token: 0x06007053 RID: 28755 RVA: 0x0010F524 File Offset: 0x0010D724
+		// Token: 0x170025BA RID: 9658
+		// (get) Token: 0x060076F3 RID: 30451 RVA: 0x0011DA90 File Offset: 0x0011BC90
 		public virtual bool? ShowComplete
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023EC RID: 9196
-		// (get) Token: 0x06007054 RID: 28756 RVA: 0x0010F55C File Offset: 0x0010D75C
+		// Token: 0x170025BB RID: 9659
+		// (get) Token: 0x060076F4 RID: 30452 RVA: 0x0011DAC8 File Offset: 0x0011BCC8
 		public virtual bool? OnlyShowWhileRunning
 		{
 			get
@@ -87,19 +87,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023ED RID: 9197
-		// (get) Token: 0x06007055 RID: 28757 RVA: 0x0010F592 File Offset: 0x0010D792
+		// Token: 0x170025BC RID: 9660
+		// (get) Token: 0x060076F5 RID: 30453 RVA: 0x0011DAFE File Offset: 0x0011BCFE
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<VarRef> Vars
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -117,8 +117,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023EE RID: 9198
-		// (get) Token: 0x06007056 RID: 28758 RVA: 0x0010F5D4 File Offset: 0x0010D7D4
+		// Token: 0x170025BD RID: 9661
+		// (get) Token: 0x060076F6 RID: 30454 RVA: 0x0011DB40 File Offset: 0x0011BD40
 		public virtual int? CustomIcon
 		{
 			get
@@ -131,8 +131,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023EF RID: 9199
-		// (get) Token: 0x06007057 RID: 28759 RVA: 0x0010F60B File Offset: 0x0010D80B
+		// Token: 0x170025BE RID: 9662
+		// (get) Token: 0x060076F7 RID: 30455 RVA: 0x0011DB77 File Offset: 0x0011BD77
 		public virtual ITitlePreState TitlePreState
 		{
 			get
@@ -147,24 +147,24 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040C9 RID: 16585
+		// Token: 0x04004445 RID: 17477
 		private IQuestScheduleChildQuestCompleted Instance;
 
-		// Token: 0x040040CA RID: 16586
+		// Token: 0x04004446 RID: 17478
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<VarRef> _VarsCache;
 
-		// Token: 0x040040CB RID: 16587
+		// Token: 0x04004447 RID: 17479
 		private bool _VarsInited;
 
-		// Token: 0x040040CC RID: 16588
+		// Token: 0x04004448 RID: 17480
 		private ITitlePreState _TitlePreStateCache;
 
-		// Token: 0x040040CD RID: 16589
+		// Token: 0x04004449 RID: 17481
 		private bool _TitlePreStateInited;
 	}
 }

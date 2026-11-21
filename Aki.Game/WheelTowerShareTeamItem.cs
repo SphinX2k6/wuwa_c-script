@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001608 RID: 5640
+// Token: 0x02000AC0 RID: 2752
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +14,7 @@ using UnrealEngine;
 })]
 public class WheelTowerShareTeamItem : GridProxyAbstract<TeamChallengeInfo>
 {
-	// Token: 0x06009EE5 RID: 40677 RVA: 0x0022BDF4 File Offset: 0x00229FF4
+	// Token: 0x060072C3 RID: 29379 RVA: 0x00235BF4 File Offset: 0x00233DF4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,20 +27,23 @@ public class WheelTowerShareTeamItem : GridProxyAbstract<TeamChallengeInfo>
 		};
 	}
 
-	// Token: 0x06009EE6 RID: 40678 RVA: 0x0022BE7A File Offset: 0x0022A07A
+	// Token: 0x060072C4 RID: 29380 RVA: 0x00235C7A File Offset: 0x00233E7A
 	protected override void OnStart()
 	{
 		this.RoleIconLayout = new GenericLayout<WheelTowerRoleItem, RoleDataWithBranch>(base.GetHorizontalLayout(1), new Func<WheelTowerRoleItem>(this.CreateRoleItem), null, false, true);
 	}
 
-	// Token: 0x06009EE7 RID: 40679 RVA: 0x0022BEA0 File Offset: 0x0022A0A0
+	// Token: 0x060072C5 RID: 29381 RVA: 0x00235CA0 File Offset: 0x00233EA0
 	public override void Refresh(TeamChallengeInfo data, bool isSelected, int gridIndex)
 	{
 		string icon = WheelTowerConfig.Instance.GetBuffConfigById(data.BuffIds[0]).Value.Icon;
 		base.SetTextureByPath(icon, base.GetTexture(3), null, null);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), "Share_NewTowerTotal_1004", new <>z__ReadOnlySingleElementList<object>(data.TeamScore));
-		List<RoleDataWithBranch> list = (from info in data.RoleSaveInfos
-		select new RoleDataWithBranch(info.RoleId, info.SkillBranchId)).ToList<RoleDataWithBranch>();
+		List<RoleDataWithBranch> list = new List<RoleDataWithBranch>();
+		foreach (RoleSaveInfo roleSaveInfo in data.RoleSaveInfos)
+		{
+			list.Add(new RoleDataWithBranch(roleSaveInfo.RoleId, roleSaveInfo.SkillBranchId));
+		}
 		int teamMaxRoleCount = WheelTowerModel.Instance.GetTeamMaxRoleCount();
 		while (list.Count < teamMaxRoleCount)
 		{
@@ -55,7 +57,7 @@ public class WheelTowerShareTeamItem : GridProxyAbstract<TeamChallengeInfo>
 		roleIconLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x06009EE8 RID: 40680 RVA: 0x0022BF7A File Offset: 0x0022A17A
+	// Token: 0x060072C6 RID: 29382 RVA: 0x00235DA8 File Offset: 0x00233FA8
 	private WheelTowerRoleItem CreateRoleItem()
 	{
 		return new WheelTowerRoleItem
@@ -65,7 +67,7 @@ public class WheelTowerShareTeamItem : GridProxyAbstract<TeamChallengeInfo>
 		};
 	}
 
-	// Token: 0x0400472A RID: 18218
+	// Token: 0x040047D0 RID: 18384
 	[Nullable(new byte[]
 	{
 		2,
@@ -74,21 +76,21 @@ public class WheelTowerShareTeamItem : GridProxyAbstract<TeamChallengeInfo>
 	})]
 	private GenericLayout<WheelTowerRoleItem, RoleDataWithBranch> RoleIconLayout;
 
-	// Token: 0x02007BD1 RID: 31697
+	// Token: 0x02006D5A RID: 27994
 	[NullableContext(0)]
 	private enum EComp
 	{
-		// Token: 0x04028AF0 RID: 166640
+		// Token: 0x04023E27 RID: 146983
 		PnlItem,
-		// Token: 0x04028AF1 RID: 166641
+		// Token: 0x04023E28 RID: 146984
 		LayoutRole,
-		// Token: 0x04028AF2 RID: 166642
+		// Token: 0x04023E29 RID: 146985
 		ItemRole,
-		// Token: 0x04028AF3 RID: 166643
+		// Token: 0x04023E2A RID: 146986
 		TextureSkillIcon,
-		// Token: 0x04028AF4 RID: 166644
+		// Token: 0x04023E2B RID: 146987
 		SkillEmpty,
-		// Token: 0x04028AF5 RID: 166645
+		// Token: 0x04023E2C RID: 146988
 		TextScore
 	}
 }

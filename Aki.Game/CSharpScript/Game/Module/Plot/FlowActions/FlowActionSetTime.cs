@@ -3,10 +3,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050D6 RID: 20694
+	// Token: 0x020040A6 RID: 16550
 	public class FlowActionSetTime : FlowActionBase
 	{
-		// Token: 0x06034F51 RID: 216913 RVA: 0x00C8B840 File Offset: 0x00C89A40
+		// Token: 0x06029E4A RID: 171594 RVA: 0x00BD8B28 File Offset: 0x00BD6D28
 		protected override void OnExecute()
 		{
 			AdjustTodTime adjustTodTime = this.ActionInfo.Params as AdjustTodTime;
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			PlotModel.Instance.PlotTimeOfDay.SetTime((int)num);
 		}
 
-		// Token: 0x06034F52 RID: 216914 RVA: 0x00C8B890 File Offset: 0x00C89A90
+		// Token: 0x06029E4B RID: 171595 RVA: 0x00BD8B78 File Offset: 0x00BD6D78
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();

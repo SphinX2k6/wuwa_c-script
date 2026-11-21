@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061DF RID: 25055
+	// Token: 0x0200515D RID: 20829
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoadBookTabDynamicItem : UiPanelBase, IDynamicScrollBaseItem<RoadBookAreaData>
 	{
-		// Token: 0x0603F418 RID: 259096 RVA: 0x00F490A8 File Offset: 0x00F472A8
+		// Token: 0x060340D9 RID: 213209 RVA: 0x00E90000 File Offset: 0x00E8E200
 		public UniTask Init(UUIItem actor)
 		{
 			RoadBookTabDynamicItem.<Init>d__1 <Init>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F419 RID: 259097 RVA: 0x00F490F3 File Offset: 0x00F472F3
+		// Token: 0x060340DA RID: 213210 RVA: 0x00E9004B File Offset: 0x00E8E24B
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F41A RID: 259098 RVA: 0x00F4912C File Offset: 0x00F4732C
+		// Token: 0x060340DB RID: 213211 RVA: 0x00E90084 File Offset: 0x00E8E284
 		public FVector2D GetItemSize(RoadBookAreaData itemData)
 		{
 			UUIItem rootItem = base.GetRootItem();
@@ -44,12 +44,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return this.VectorValue.ToUeVector2D(false);
 		}
 
-		// Token: 0x0603F41B RID: 259099 RVA: 0x00F49165 File Offset: 0x00F47365
+		// Token: 0x060340DC RID: 213212 RVA: 0x00E900BD File Offset: 0x00E8E2BD
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x04020FB8 RID: 135096
+		// Token: 0x0401B8E7 RID: 112871
 		private Vector2D VectorValue;
 	}
 }

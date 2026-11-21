@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000893 RID: 2195
+	// Token: 0x02000936 RID: 2358
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemMovementComponent : IComponentBase
 	{
-		// Token: 0x060030F5 RID: 12533 RVA: 0x0007DE60 File Offset: 0x0007C060
-		[NullableContext(1)]
+		// Token: 0x06003431 RID: 13361 RVA: 0x00085348 File Offset: 0x00083548
+		[NullableContext(0)]
 		private SceneItemMovementComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060030F6 RID: 12534 RVA: 0x0007DE98 File Offset: 0x0007C098
-		[NullableContext(1)]
+		// Token: 0x06003432 RID: 13362 RVA: 0x00085380 File Offset: 0x00083580
+		[NullableContext(0)]
 		public static SceneItemMovementComponent Create([Nullable(2)] SceneItemMovementComponent instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060030F7 RID: 12535 RVA: 0x0007DEAB File Offset: 0x0007C0AB
-		[NullableContext(1)]
+		// Token: 0x06003433 RID: 13363 RVA: 0x00085393 File Offset: 0x00083593
+		[NullableContext(0)]
 		public static SceneItemMovementComponent CreateFromSetValue([Nullable(2)] SceneItemMovementComponent_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060030F8 RID: 12536 RVA: 0x0007DEBE File Offset: 0x0007C0BE
-		[NullableContext(1)]
+		// Token: 0x06003434 RID: 13364 RVA: 0x000853A6 File Offset: 0x000835A6
+		[NullableContext(0)]
 		public new SceneItemMovementComponent_SetValue ToSetValue()
 		{
 			return new SceneItemMovementComponent_SetValue
@@ -66,9 +66,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D01 RID: 3329
-		// (get) Token: 0x060030F9 RID: 12537 RVA: 0x0007DEF8 File Offset: 0x0007C0F8
-		// (set) Token: 0x060030FA RID: 12538 RVA: 0x0007DF32 File Offset: 0x0007C132
+		// Token: 0x17000DCA RID: 3530
+		// (get) Token: 0x06003435 RID: 13365 RVA: 0x000853E0 File Offset: 0x000835E0
+		// (set) Token: 0x06003436 RID: 13366 RVA: 0x0008541A File Offset: 0x0008361A
 		public override bool? Disabled
 		{
 			get
@@ -90,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D02 RID: 3330
-		// (get) Token: 0x060030FB RID: 12539 RVA: 0x0007DF40 File Offset: 0x0007C140
-		// (set) Token: 0x060030FC RID: 12540 RVA: 0x0007DF6A File Offset: 0x0007C16A
+		// Token: 0x17000DCB RID: 3531
+		// (get) Token: 0x06003437 RID: 13367 RVA: 0x00085428 File Offset: 0x00083628
+		// (set) Token: 0x06003438 RID: 13368 RVA: 0x00085452 File Offset: 0x00083652
 		public override bool? EdIsLocked
 		{
 			get
@@ -109,9 +109,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D03 RID: 3331
-		// (get) Token: 0x060030FD RID: 12541 RVA: 0x0007DF78 File Offset: 0x0007C178
-		// (set) Token: 0x060030FE RID: 12542 RVA: 0x0007DFD9 File Offset: 0x0007C1D9
+		// Token: 0x17000DCC RID: 3532
+		// (get) Token: 0x06003439 RID: 13369 RVA: 0x00085460 File Offset: 0x00083660
+		// (set) Token: 0x0600343A RID: 13370 RVA: 0x000854C1 File Offset: 0x000836C1
 		public virtual ISplineMove Patrol
 		{
 			get
@@ -139,9 +139,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D04 RID: 3332
-		// (get) Token: 0x060030FF RID: 12543 RVA: 0x0007DFF0 File Offset: 0x0007C1F0
-		// (set) Token: 0x06003100 RID: 12544 RVA: 0x0007E051 File Offset: 0x0007C251
+		// Token: 0x17000DCD RID: 3533
+		// (get) Token: 0x0600343B RID: 13371 RVA: 0x000854D8 File Offset: 0x000836D8
+		// (set) Token: 0x0600343C RID: 13372 RVA: 0x00085539 File Offset: 0x00083739
 		public virtual IMovementPlatformConfig PlatformConfig
 		{
 			get
@@ -169,24 +169,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04002033 RID: 8243
+		// Token: 0x04002245 RID: 8773
 		protected new SceneItemMovementComponent FbInstance;
 
-		// Token: 0x04002034 RID: 8244
+		// Token: 0x04002246 RID: 8774
 		protected new SceneItemMovementComponent_SetValue PocoInterface;
 
-		// Token: 0x04002035 RID: 8245
-		[Nullable(1)]
+		// Token: 0x04002247 RID: 8775
+		[Nullable(0)]
 		private ISplineMove _PatrolCache;
 
-		// Token: 0x04002036 RID: 8246
+		// Token: 0x04002248 RID: 8776
 		private bool _PatrolInited;
 
-		// Token: 0x04002037 RID: 8247
-		[Nullable(1)]
+		// Token: 0x04002249 RID: 8777
+		[Nullable(0)]
 		private IMovementPlatformConfig _PlatformConfigCache;
 
-		// Token: 0x04002038 RID: 8248
+		// Token: 0x0400224A RID: 8778
 		private bool _PlatformConfigInited;
 	}
 }

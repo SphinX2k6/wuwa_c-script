@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002716 RID: 10006
+// Token: 0x02001C01 RID: 7169
 public class RacingBetsGearItem : GridProxyAbstract<RacingBettingGear>
 {
-	// Token: 0x06014821 RID: 84001 RVA: 0x0052DE5C File Offset: 0x0052C05C
+	// Token: 0x06011D03 RID: 72963 RVA: 0x0053CB78 File Offset: 0x0053AD78
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class RacingBetsGearItem : GridProxyAbstract<RacingBettingGear>
 		};
 	}
 
-	// Token: 0x06014822 RID: 84002 RVA: 0x0052DED9 File Offset: 0x0052C0D9
+	// Token: 0x06011D04 RID: 72964 RVA: 0x0053CBF5 File Offset: 0x0053ADF5
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -34,7 +34,7 @@ public class RacingBetsGearItem : GridProxyAbstract<RacingBettingGear>
 		extendToggle.CanExecuteChange.Bind(new Func<bool>(this.CanToggleExecuteChange));
 	}
 
-	// Token: 0x06014823 RID: 84003 RVA: 0x0052DF00 File Offset: 0x0052C100
+	// Token: 0x06011D05 RID: 72965 RVA: 0x0053CC1C File Offset: 0x0053AE1C
 	public override void Refresh(RacingBettingGear data, bool isSelected, int gridIndex)
 	{
 		this.Config = data;
@@ -55,19 +55,19 @@ public class RacingBetsGearItem : GridProxyAbstract<RacingBettingGear>
 		this.RefreshSelect(isSelected);
 	}
 
-	// Token: 0x06014824 RID: 84004 RVA: 0x0052DF6E File Offset: 0x0052C16E
+	// Token: 0x06011D06 RID: 72966 RVA: 0x0053CC8A File Offset: 0x0053AE8A
 	public override void OnSelected(bool fireEvent)
 	{
 		this.RefreshSelect(true);
 	}
 
-	// Token: 0x06014825 RID: 84005 RVA: 0x0052DF77 File Offset: 0x0052C177
+	// Token: 0x06011D07 RID: 72967 RVA: 0x0053CC93 File Offset: 0x0053AE93
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.RefreshSelect(false);
 	}
 
-	// Token: 0x06014826 RID: 84006 RVA: 0x0052DF80 File Offset: 0x0052C180
+	// Token: 0x06011D08 RID: 72968 RVA: 0x0053CC9C File Offset: 0x0053AE9C
 	private void RefreshSelect(bool isSelected)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -78,14 +78,14 @@ public class RacingBetsGearItem : GridProxyAbstract<RacingBettingGear>
 		extendToggle.SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06014827 RID: 84007 RVA: 0x0052DF9D File Offset: 0x0052C19D
+	// Token: 0x06011D09 RID: 72969 RVA: 0x0053CCB9 File Offset: 0x0053AEB9
 	[NullableContext(1)]
 	public void BindClickGearItemCallBack(Action<RacingBettingGear> clickGearItemCallBack)
 	{
 		this.ClickGearItemCallBack = clickGearItemCallBack;
 	}
 
-	// Token: 0x06014828 RID: 84008 RVA: 0x0052DFA6 File Offset: 0x0052C1A6
+	// Token: 0x06011D0A RID: 72970 RVA: 0x0053CCC2 File Offset: 0x0053AEC2
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		Action<RacingBettingGear> clickGearItemCallBack = this.ClickGearItemCallBack;
@@ -96,30 +96,30 @@ public class RacingBetsGearItem : GridProxyAbstract<RacingBettingGear>
 		clickGearItemCallBack(this.Config);
 	}
 
-	// Token: 0x06014829 RID: 84009 RVA: 0x0052DFBE File Offset: 0x0052C1BE
+	// Token: 0x06011D0B RID: 72971 RVA: 0x0053CCDA File Offset: 0x0053AEDA
 	private bool CanToggleExecuteChange()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
 		return extendToggle == null || extendToggle.GetToggleState() != EToggleState.ETT_Checked;
 	}
 
-	// Token: 0x04009A4B RID: 39499
+	// Token: 0x04009BA3 RID: 39843
 	private RacingBettingGear Config;
 
-	// Token: 0x04009A4C RID: 39500
+	// Token: 0x04009BA4 RID: 39844
 	[Nullable(2)]
 	private Action<RacingBettingGear> ClickGearItemCallBack;
 
-	// Token: 0x02008D6B RID: 36203
+	// Token: 0x02007EF4 RID: 32500
 	private class EComponent
 	{
-		// Token: 0x0402DE31 RID: 187953
+		// Token: 0x04029148 RID: 168264
 		public const int Toggle = 0;
 
-		// Token: 0x0402DE32 RID: 187954
+		// Token: 0x04029149 RID: 168265
 		public const int PercentNormalText = 1;
 
-		// Token: 0x0402DE33 RID: 187955
+		// Token: 0x0402914A RID: 168266
 		public const int PercentSelectText = 2;
 	}
 }

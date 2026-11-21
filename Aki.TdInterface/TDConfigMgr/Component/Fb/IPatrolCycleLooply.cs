@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C48 RID: 3144
+	// Token: 0x02000D1B RID: 3355
 	public class IPatrolCycleLooply : ICycleModeType
 	{
-		// Token: 0x060047FE RID: 18430 RVA: 0x000B51C3 File Offset: 0x000B33C3
-		[NullableContext(1)]
+		// Token: 0x06004C6F RID: 19567 RVA: 0x000BF5AB File Offset: 0x000BD7AB
 		public static IPatrolCycleLooply Create(IPatrolCycleLooply? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700152B RID: 5419
-		// (get) Token: 0x060047FF RID: 18431 RVA: 0x000B51E2 File Offset: 0x000B33E2
+		// Token: 0x17001634 RID: 5684
+		// (get) Token: 0x06004C70 RID: 19568 RVA: 0x000BF5CA File Offset: 0x000BD7CA
 		public override EPatrolCycleMode Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700152C RID: 5420
-		// (get) Token: 0x06004800 RID: 18432 RVA: 0x000B51EF File Offset: 0x000B33EF
+		// Token: 0x17001635 RID: 5685
+		// (get) Token: 0x06004C71 RID: 19569 RVA: 0x000BF5D7 File Offset: 0x000BD7D7
 		public virtual bool IsCircle
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028FB RID: 10491
+		// Token: 0x04002B50 RID: 11088
 		private IPatrolCycleLooply Instance;
 	}
 }

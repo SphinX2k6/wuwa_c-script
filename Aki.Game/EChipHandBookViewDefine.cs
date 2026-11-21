@@ -1,74 +1,74 @@
 ﻿using System;
 
-// Token: 0x02001DD8 RID: 7640
+// Token: 0x0200129A RID: 4762
 public class EChipHandBookViewDefine
 {
-	// Token: 0x04006B93 RID: 27539
+	// Token: 0x04006C74 RID: 27764
 	public const int TitleItem = 0;
 
-	// Token: 0x04006B94 RID: 27540
+	// Token: 0x04006C75 RID: 27765
 	public const int CollectCountText = 1;
 
-	// Token: 0x04006B95 RID: 27541
+	// Token: 0x04006C76 RID: 27766
 	public const int Layout = 2;
 
-	// Token: 0x04006B96 RID: 27542
+	// Token: 0x04006C77 RID: 27767
 	public const int ChipItem = 3;
 
-	// Token: 0x04006B97 RID: 27543
+	// Token: 0x04006C78 RID: 27768
 	public const int NameText = 4;
 
-	// Token: 0x04006B98 RID: 27544
+	// Token: 0x04006C79 RID: 27769
 	public const int TypeText = 5;
 
-	// Token: 0x04006B99 RID: 27545
+	// Token: 0x04006C7A RID: 27770
 	public const int DateText = 6;
 
-	// Token: 0x04006B9A RID: 27546
+	// Token: 0x04006C7B RID: 27771
 	public const int Texture = 7;
 
-	// Token: 0x04006B9B RID: 27547
+	// Token: 0x04006C7C RID: 27772
 	public const int ProgressText = 8;
 
-	// Token: 0x04006B9C RID: 27548
+	// Token: 0x04006C7D RID: 27773
 	public const int DescriptionText = 9;
 
-	// Token: 0x04006B9D RID: 27549
+	// Token: 0x04006C7E RID: 27774
 	public const int VoiceProgressText = 10;
 
-	// Token: 0x04006B9E RID: 27550
+	// Token: 0x04006C7F RID: 27775
 	public const int VoiceText = 11;
 
-	// Token: 0x04006B9F RID: 27551
+	// Token: 0x04006C80 RID: 27776
 	public const int StopButton = 12;
 
-	// Token: 0x04006BA0 RID: 27552
+	// Token: 0x04006C81 RID: 27777
 	public const int PlayButton = 13;
 
-	// Token: 0x04006BA1 RID: 27553
+	// Token: 0x04006C82 RID: 27778
 	public const int TextureButton = 14;
 
-	// Token: 0x04006BA2 RID: 27554
+	// Token: 0x04006C83 RID: 27779
 	public const int LockText = 15;
 
-	// Token: 0x04006BA3 RID: 27555
+	// Token: 0x04006C84 RID: 27780
 	public const int SoundItem = 16;
 
-	// Token: 0x04006BA4 RID: 27556
+	// Token: 0x04006C85 RID: 27781
 	public const int PhotoItem = 17;
 
-	// Token: 0x04006BA5 RID: 27557
+	// Token: 0x04006C86 RID: 27782
 	public const int WordItem = 18;
 
-	// Token: 0x04006BA6 RID: 27558
+	// Token: 0x04006C87 RID: 27783
 	public const int ChipTitleItem = 19;
 
-	// Token: 0x04006BA7 RID: 27559
+	// Token: 0x04006C88 RID: 27784
 	public const int BigWordItem = 20;
 
-	// Token: 0x04006BA8 RID: 27560
+	// Token: 0x04006C89 RID: 27785
 	public const int BigWordText = 21;
 
-	// Token: 0x04006BA9 RID: 27561
+	// Token: 0x04006C8A RID: 27786
 	public const int UnlockItem = 22;
 }

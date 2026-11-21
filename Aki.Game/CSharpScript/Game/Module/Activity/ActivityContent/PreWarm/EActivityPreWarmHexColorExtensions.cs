@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 {
-	// Token: 0x020062C2 RID: 25282
+	// Token: 0x02005240 RID: 21056
 	public static class EActivityPreWarmHexColorExtensions
 	{
-		// Token: 0x0603F957 RID: 260439 RVA: 0x00F617F0 File Offset: 0x00F5F9F0
+		// Token: 0x06034618 RID: 214552 RVA: 0x00EA874C File Offset: 0x00EA694C
 		public static string ToEnumString(this EActivityPreWarmHexColor value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return result;
 		}
 
-		// Token: 0x0603F958 RID: 260440 RVA: 0x00F61838 File Offset: 0x00F5FA38
+		// Token: 0x06034619 RID: 214553 RVA: 0x00EA8794 File Offset: 0x00EA6994
 		public static EActivityPreWarmHexColor FromString(string name)
 		{
 			EActivityPreWarmHexColor result;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return result;
 		}
 
-		// Token: 0x0603F959 RID: 260441 RVA: 0x00F61864 File Offset: 0x00F5FA64
+		// Token: 0x0603461A RID: 214554 RVA: 0x00EA87C0 File Offset: 0x00EA69C0
 		public static bool TryFromString(string name, out EActivityPreWarmHexColor value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return true;
 		}
 
-		// Token: 0x0603F95A RID: 260442 RVA: 0x00F618BA File Offset: 0x00F5FABA
+		// Token: 0x0603461B RID: 214555 RVA: 0x00EA8816 File Offset: 0x00EA6A16
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			};
 		}
 
-		// Token: 0x0603F95B RID: 260443 RVA: 0x00F618DA File Offset: 0x00F5FADA
+		// Token: 0x0603461C RID: 214556 RVA: 0x00EA8836 File Offset: 0x00EA6A36
 		public static EActivityPreWarmHexColor[] GetValues()
 		{
 			return new EActivityPreWarmHexColor[]
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			};
 		}
 
-		// Token: 0x0603F95C RID: 260444 RVA: 0x00F618EA File Offset: 0x00F5FAEA
+		// Token: 0x0603461D RID: 214557 RVA: 0x00EA8846 File Offset: 0x00EA6A46
 		public static string[] GetNames()
 		{
 			return new string[]

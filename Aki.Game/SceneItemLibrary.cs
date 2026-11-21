@@ -8,12 +8,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020032B3 RID: 12979
+// Token: 0x02002824 RID: 10276
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/SceneItem/Util/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/SceneItem/Util/SceneItemLibrary.SceneItemLibrary_C")]
 public class SceneItemLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601C205 RID: 115205 RVA: 0x007D47DC File Offset: 0x007D29DC
+	// Token: 0x06019E46 RID: 106054 RVA: 0x007FB8D8 File Offset: 0x007F9AD8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<TsSimpleInteractBase> FindInteractItemByTypeId(int typeId)
@@ -31,7 +31,7 @@ public class SceneItemLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnre
 		return tarray;
 	}
 
-	// Token: 0x0601C206 RID: 115206 RVA: 0x007D4844 File Offset: 0x007D2A44
+	// Token: 0x06019E47 RID: 106055 RVA: 0x007FB940 File Offset: 0x007F9B40
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (SceneItemLibrary._ClassPtr == IntPtr.Zero)
@@ -41,23 +41,23 @@ public class SceneItemLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnre
 		return SceneItemLibrary._ClassPtr;
 	}
 
-	// Token: 0x0601C207 RID: 115207 RVA: 0x007D4868 File Offset: 0x007D2A68
+	// Token: 0x06019E48 RID: 106056 RVA: 0x007FB964 File Offset: 0x007F9B64
 	public SceneItemLibrary() : this(BuiltinUtils.AllocNativeUObject(SceneItemLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601C208 RID: 115208 RVA: 0x007D4890 File Offset: 0x007D2A90
+	// Token: 0x06019E49 RID: 106057 RVA: 0x007FB98C File Offset: 0x007F9B8C
 	[NullableContext(1)]
 	public SceneItemLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(SceneItemLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601C209 RID: 115209 RVA: 0x007D48C3 File Offset: 0x007D2AC3
+	// Token: 0x06019E4A RID: 106058 RVA: 0x007FB9BF File Offset: 0x007F9BBF
 	protected SceneItemLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601C20A RID: 115210 RVA: 0x007D48CC File Offset: 0x007D2ACC
+	// Token: 0x06019E4B RID: 106059 RVA: 0x007FB9C8 File Offset: 0x007F9BC8
 	protected unsafe static void __CPPCALL_FindInteractItemByTypeId_Implementation(SceneItemLibrary.__FindInteractItemByTypeId_FunctionParams* __Params)
 	{
 		TArray<TsSimpleInteractBase> tarray = SceneItemLibrary.FindInteractItemByTypeId(__Params->typeId);
@@ -68,30 +68,30 @@ public class SceneItemLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnre
 		tarray.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0400DE88 RID: 56968
+	// Token: 0x0400E32E RID: 58158
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/SceneItem/Util/SceneItemLibrary.SceneItemLibrary_C";
 
-	// Token: 0x0400DE89 RID: 56969
+	// Token: 0x0400E32F RID: 58159
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400DE8A RID: 56970
+	// Token: 0x0400E330 RID: 58160
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0200974B RID: 38731
+	// Token: 0x02008972 RID: 35186
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __FindInteractItemByTypeId_FunctionParams
 	{
-		// Token: 0x04030675 RID: 198261
+		// Token: 0x0402BD0C RID: 179468
 		[FieldOffset(0)]
 		public int typeId;
 
-		// Token: 0x04030676 RID: 198262
+		// Token: 0x0402BD0D RID: 179469
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030677 RID: 198263
+		// Token: 0x0402BD0E RID: 179470
 		[FieldOffset(16)]
 		public byte __Result;
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F3F RID: 28479
+	// Token: 0x020076C6 RID: 30406
 	public struct ISceneItemNewSplineMoveTarget : IFlatbufferObject
 	{
-		// Token: 0x1700D3A1 RID: 54177
-		// (get) Token: 0x060324FF RID: 206079 RVA: 0x006CB7E8 File Offset: 0x006C99E8
+		// Token: 0x1700DEFD RID: 57085
+		// (get) Token: 0x06035557 RID: 218455 RVA: 0x00727750 File Offset: 0x00725950
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032500 RID: 206080 RVA: 0x006CB7F5 File Offset: 0x006C99F5
+		// Token: 0x06035558 RID: 218456 RVA: 0x0072775D File Offset: 0x0072595D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032501 RID: 206081 RVA: 0x006CB7FC File Offset: 0x006C99FC
+		// Token: 0x06035559 RID: 218457 RVA: 0x00727764 File Offset: 0x00725964
 		public static ISceneItemNewSplineMoveTarget GetRootAsISceneItemNewSplineMoveTarget(ByteBuffer _bb)
 		{
 			return ISceneItemNewSplineMoveTarget.GetRootAsISceneItemNewSplineMoveTarget(_bb, default(ISceneItemNewSplineMoveTarget));
 		}
 
-		// Token: 0x06032502 RID: 206082 RVA: 0x006CB818 File Offset: 0x006C9A18
+		// Token: 0x0603555A RID: 218458 RVA: 0x00727780 File Offset: 0x00725980
 		public static ISceneItemNewSplineMoveTarget GetRootAsISceneItemNewSplineMoveTarget(ByteBuffer _bb, ISceneItemNewSplineMoveTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032503 RID: 206083 RVA: 0x006CB835 File Offset: 0x006C9A35
+		// Token: 0x0603555B RID: 218459 RVA: 0x0072779D File Offset: 0x0072599D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032504 RID: 206084 RVA: 0x006CB844 File Offset: 0x006C9A44
+		// Token: 0x0603555C RID: 218460 RVA: 0x007277AC File Offset: 0x007259AC
 		public ISceneItemNewSplineMoveTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D3A2 RID: 54178
-		// (get) Token: 0x06032505 RID: 206085 RVA: 0x006CB854 File Offset: 0x006C9A54
+		// Token: 0x1700DEFE RID: 57086
+		// (get) Token: 0x0603555D RID: 218461 RVA: 0x007277BC File Offset: 0x007259BC
 		public ENewSplineMoveTargetType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D3A3 RID: 54179
-		// (get) Token: 0x06032506 RID: 206086 RVA: 0x006CB890 File Offset: 0x006C9A90
+		// Token: 0x1700DEFF RID: 57087
+		// (get) Token: 0x0603555E RID: 218462 RVA: 0x007277F8 File Offset: 0x007259F8
 		public int EntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D3A4 RID: 54180
-		// (get) Token: 0x06032507 RID: 206087 RVA: 0x006CB8CC File Offset: 0x006C9ACC
+		// Token: 0x1700DF00 RID: 57088
+		// (get) Token: 0x0603555F RID: 218463 RVA: 0x00727834 File Offset: 0x00725A34
 		public bool IsLookDir
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D3A5 RID: 54181
-		// (get) Token: 0x06032508 RID: 206088 RVA: 0x006CB90C File Offset: 0x006C9B0C
+		// Token: 0x1700DF01 RID: 57089
+		// (get) Token: 0x06035560 RID: 218464 RVA: 0x00727874 File Offset: 0x00725A74
 		public byte NullMask
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032509 RID: 206089 RVA: 0x006CB949 File Offset: 0x006C9B49
+		// Token: 0x06035561 RID: 218465 RVA: 0x007278B1 File Offset: 0x00725AB1
 		public static Offset<ISceneItemNewSplineMoveTarget> CreateISceneItemNewSplineMoveTarget(FlatBufferBuilder builder, ENewSplineMoveTargetType Type = ENewSplineMoveTargetType.Player, int EntityId = 0, bool IsLookDir = false, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -114,43 +114,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISceneItemNewSplineMoveTarget.EndISceneItemNewSplineMoveTarget(builder);
 		}
 
-		// Token: 0x0603250A RID: 206090 RVA: 0x006CB975 File Offset: 0x006C9B75
+		// Token: 0x06035562 RID: 218466 RVA: 0x007278DD File Offset: 0x00725ADD
 		public static void StartISceneItemNewSplineMoveTarget(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0603250B RID: 206091 RVA: 0x006CB97E File Offset: 0x006C9B7E
+		// Token: 0x06035563 RID: 218467 RVA: 0x007278E6 File Offset: 0x00725AE6
 		public static void AddType(FlatBufferBuilder builder, ENewSplineMoveTargetType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603250C RID: 206092 RVA: 0x006CB989 File Offset: 0x006C9B89
+		// Token: 0x06035564 RID: 218468 RVA: 0x007278F1 File Offset: 0x00725AF1
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x0603250D RID: 206093 RVA: 0x006CB994 File Offset: 0x006C9B94
+		// Token: 0x06035565 RID: 218469 RVA: 0x007278FC File Offset: 0x00725AFC
 		public static void AddIsLookDir(FlatBufferBuilder builder, bool isLookDir)
 		{
 			builder.AddBool(2, isLookDir, false);
 		}
 
-		// Token: 0x0603250E RID: 206094 RVA: 0x006CB99F File Offset: 0x006C9B9F
+		// Token: 0x06035566 RID: 218470 RVA: 0x00727907 File Offset: 0x00725B07
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0603250F RID: 206095 RVA: 0x006CB9AA File Offset: 0x006C9BAA
+		// Token: 0x06035567 RID: 218471 RVA: 0x00727912 File Offset: 0x00725B12
 		public static Offset<ISceneItemNewSplineMoveTarget> EndISceneItemNewSplineMoveTarget(FlatBufferBuilder builder)
 		{
 			return new Offset<ISceneItemNewSplineMoveTarget>(builder.EndTable());
 		}
 
-		// Token: 0x06032510 RID: 206096 RVA: 0x006CB9B8 File Offset: 0x006C9BB8
+		// Token: 0x06035568 RID: 218472 RVA: 0x00727920 File Offset: 0x00725B20
 		public ISceneItemNewSplineMoveTargetT UnPack()
 		{
 			ISceneItemNewSplineMoveTargetT sceneItemNewSplineMoveTargetT = new ISceneItemNewSplineMoveTargetT();
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return sceneItemNewSplineMoveTargetT;
 		}
 
-		// Token: 0x06032511 RID: 206097 RVA: 0x006CB9D3 File Offset: 0x006C9BD3
+		// Token: 0x06035569 RID: 218473 RVA: 0x0072793B File Offset: 0x00725B3B
 		public void UnPackTo(ISceneItemNewSplineMoveTargetT _o)
 		{
 			_o.Type = this.Type;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06032512 RID: 206098 RVA: 0x006CBA08 File Offset: 0x006C9C08
+		// Token: 0x0603556A RID: 218474 RVA: 0x00727970 File Offset: 0x00725B70
 		public static Offset<ISceneItemNewSplineMoveTarget> Pack(FlatBufferBuilder builder, ISceneItemNewSplineMoveTargetT _o)
 		{
 			if (_o == null)
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISceneItemNewSplineMoveTarget.CreateISceneItemNewSplineMoveTarget(builder, _o.Type, _o.EntityId, _o.IsLookDir, _o.NullMask);
 		}
 
-		// Token: 0x04011934 RID: 71988
+		// Token: 0x040128BC RID: 75964
 		private Table __p;
 	}
 }

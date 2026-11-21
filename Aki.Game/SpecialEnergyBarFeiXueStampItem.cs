@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.BattleUi.Views;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016FC RID: 5884
+// Token: 0x02000BB4 RID: 2996
 public class SpecialEnergyBarFeiXueStampItem : UiPanelBase
 {
-	// Token: 0x0600A8C2 RID: 43202 RVA: 0x0025F910 File Offset: 0x0025DB10
+	// Token: 0x06007CA2 RID: 31906 RVA: 0x00269D2C File Offset: 0x00267F2C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class SpecialEnergyBarFeiXueStampItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A8C3 RID: 43203 RVA: 0x0025F9D8 File Offset: 0x0025DBD8
+	// Token: 0x06007CA3 RID: 31907 RVA: 0x00269DF4 File Offset: 0x00267FF4
 	protected override void OnStart()
 	{
 		this.InitTweenAnim(2);
@@ -37,7 +37,7 @@ public class SpecialEnergyBarFeiXueStampItem : UiPanelBase
 		base.GetItem(1).SetUIActive(this.CurState == SpecialEnergyBarFeiXueStampItem.EState.Act);
 	}
 
-	// Token: 0x0600A8C4 RID: 43204 RVA: 0x0025FA3C File Offset: 0x0025DC3C
+	// Token: 0x06007CA4 RID: 31908 RVA: 0x00269E58 File Offset: 0x00268058
 	public void SetState(int state, bool isMoveIn)
 	{
 		if (this.CurState == (SpecialEnergyBarFeiXueStampItem.EState)state)
@@ -95,14 +95,14 @@ public class SpecialEnergyBarFeiXueStampItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A8C5 RID: 43205 RVA: 0x0025FB1A File Offset: 0x0025DD1A
+	// Token: 0x06007CA5 RID: 31909 RVA: 0x00269F36 File Offset: 0x00268136
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearAllTweenAnim();
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600A8C6 RID: 43206 RVA: 0x0025FB28 File Offset: 0x0025DD28
+	// Token: 0x06007CA6 RID: 31910 RVA: 0x00269F44 File Offset: 0x00268144
 	protected void InitTweenAnim(int componentType)
 	{
 		if (this.TweenAnimPlayer == null)
@@ -112,7 +112,7 @@ public class SpecialEnergyBarFeiXueStampItem : UiPanelBase
 		this.TweenAnimPlayer.InitTweenAnim(componentType, base.GetItem(componentType), false);
 	}
 
-	// Token: 0x0600A8C7 RID: 43207 RVA: 0x0025FB51 File Offset: 0x0025DD51
+	// Token: 0x06007CA7 RID: 31911 RVA: 0x00269F6D File Offset: 0x0026816D
 	protected void PlayTweenAnim(int componentType)
 	{
 		BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -123,7 +123,7 @@ public class SpecialEnergyBarFeiXueStampItem : UiPanelBase
 		tweenAnimPlayer.PlayTweenAnim(componentType);
 	}
 
-	// Token: 0x0600A8C8 RID: 43208 RVA: 0x0025FB64 File Offset: 0x0025DD64
+	// Token: 0x06007CA8 RID: 31912 RVA: 0x00269F80 File Offset: 0x00268180
 	protected void StopTweenAnim(int componentType)
 	{
 		BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -134,7 +134,7 @@ public class SpecialEnergyBarFeiXueStampItem : UiPanelBase
 		tweenAnimPlayer.StopTweenAnim(componentType);
 	}
 
-	// Token: 0x0600A8C9 RID: 43209 RVA: 0x0025FB77 File Offset: 0x0025DD77
+	// Token: 0x06007CA9 RID: 31913 RVA: 0x00269F93 File Offset: 0x00268193
 	protected void ClearAllTweenAnim()
 	{
 		BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -145,42 +145,42 @@ public class SpecialEnergyBarFeiXueStampItem : UiPanelBase
 		tweenAnimPlayer.Clear(false);
 	}
 
-	// Token: 0x04004D07 RID: 19719
+	// Token: 0x04004DAE RID: 19886
 	[Nullable(2)]
 	protected BattleUiTweenAnimPlayer TweenAnimPlayer;
 
-	// Token: 0x04004D08 RID: 19720
+	// Token: 0x04004DAF RID: 19887
 	private SpecialEnergyBarFeiXueStampItem.EState CurState;
 
-	// Token: 0x02007CBD RID: 31933
+	// Token: 0x02006E42 RID: 28226
 	private enum EChildType
 	{
-		// Token: 0x04028EB3 RID: 167603
+		// Token: 0x040241DC RID: 147932
 		DisItem,
-		// Token: 0x04028EB4 RID: 167604
+		// Token: 0x040241DD RID: 147933
 		ActItem,
-		// Token: 0x04028EB5 RID: 167605
+		// Token: 0x040241DE RID: 147934
 		AniActIn,
-		// Token: 0x04028EB6 RID: 167606
+		// Token: 0x040241DF RID: 147935
 		AniActOut,
-		// Token: 0x04028EB7 RID: 167607
+		// Token: 0x040241E0 RID: 147936
 		AniDisIn,
-		// Token: 0x04028EB8 RID: 167608
+		// Token: 0x040241E1 RID: 147937
 		AniDisOut,
-		// Token: 0x04028EB9 RID: 167609
+		// Token: 0x040241E2 RID: 147938
 		AniActMoveIn,
-		// Token: 0x04028EBA RID: 167610
+		// Token: 0x040241E3 RID: 147939
 		AniActMoveOut
 	}
 
-	// Token: 0x02007CBE RID: 31934
+	// Token: 0x02006E43 RID: 28227
 	private enum EState
 	{
-		// Token: 0x04028EBC RID: 167612
+		// Token: 0x040241E5 RID: 147941
 		None,
-		// Token: 0x04028EBD RID: 167613
+		// Token: 0x040241E6 RID: 147942
 		Dis,
-		// Token: 0x04028EBE RID: 167614
+		// Token: 0x040241E7 RID: 147943
 		Act
 	}
 }

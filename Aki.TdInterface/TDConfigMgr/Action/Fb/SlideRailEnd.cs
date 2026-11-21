@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A1A RID: 10778
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D07 RID: 11527
 	public class SlideRailEnd : ActionParams
 	{
-		// Token: 0x0600ED9C RID: 60828 RVA: 0x0022A137 File Offset: 0x00228337
+		// Token: 0x0600FC33 RID: 64563 RVA: 0x00247ABB File Offset: 0x00245CBB
 		public static SlideRailEnd Create(ISlideRailEnd? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B2A RID: 19242
-		// (get) Token: 0x0600ED9D RID: 60829 RVA: 0x0022A156 File Offset: 0x00228356
+		// Token: 0x17004ED3 RID: 20179
+		// (get) Token: 0x0600FC34 RID: 64564 RVA: 0x00247ADA File Offset: 0x00245CDA
 		public virtual ISlideRailEndType EndTarget
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082C8 RID: 33480
+		// Token: 0x040089B9 RID: 35257
 		private ISlideRailEnd Instance;
 
-		// Token: 0x040082C9 RID: 33481
+		// Token: 0x040089BA RID: 35258
 		private ISlideRailEndType _EndTargetCache;
 
-		// Token: 0x040082CA RID: 33482
+		// Token: 0x040089BB RID: 35259
 		private bool _EndTargetInited;
 	}
 }

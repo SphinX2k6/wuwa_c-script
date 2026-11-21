@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x0200701E RID: 28702
+	// Token: 0x0200619F RID: 24991
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TouchUiEditViewModel : IStaticVariableResetter
 	{
-		// Token: 0x06045DB2 RID: 286130 RVA: 0x0115E739 File Offset: 0x0115C939
+		// Token: 0x0603BF68 RID: 245608 RVA: 0x01108B35 File Offset: 0x01106D35
 		static TouchUiEditViewModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TouchUiEditViewModel.CreateStaticDefaultValue), new Action(TouchUiEditViewModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06045DB3 RID: 286131 RVA: 0x0115E758 File Offset: 0x0115C958
+		// Token: 0x0603BF69 RID: 245609 RVA: 0x01108B54 File Offset: 0x01106D54
 		[NullableContext(2)]
 		public static void SetCurrentSelectedItem(ITouchUiEditItem item)
 		{
@@ -28,60 +28,60 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045DB4 RID: 286132 RVA: 0x0115E769 File Offset: 0x0115C969
+		// Token: 0x0603BF6A RID: 245610 RVA: 0x01108B65 File Offset: 0x01106D65
 		[NullableContext(2)]
 		public static ITouchUiEditItem GetCurrentSelectedItem()
 		{
 			return TouchUiEditViewModel.CurrentSelectedItem;
 		}
 
-		// Token: 0x06045DB5 RID: 286133 RVA: 0x0115E770 File Offset: 0x0115C970
+		// Token: 0x0603BF6B RID: 245611 RVA: 0x01108B6C File Offset: 0x01106D6C
 		public static void AddTouchFingerData(TouchFingerData touchFingerData)
 		{
 			EFingerIndex fingerIndex = touchFingerData.GetFingerIndex();
 			TouchUiEditViewModel.TouchFingerDataMap[(int)fingerIndex] = touchFingerData;
 		}
 
-		// Token: 0x06045DB6 RID: 286134 RVA: 0x0115E790 File Offset: 0x0115C990
+		// Token: 0x0603BF6C RID: 245612 RVA: 0x01108B8C File Offset: 0x01106D8C
 		public static void RemoveTouchFingerData(TouchFingerData touchFingerData)
 		{
 			EFingerIndex fingerIndex = touchFingerData.GetFingerIndex();
 			TouchUiEditViewModel.TouchFingerDataMap.Remove((int)fingerIndex);
 		}
 
-		// Token: 0x06045DB7 RID: 286135 RVA: 0x0115E7B0 File Offset: 0x0115C9B0
+		// Token: 0x0603BF6D RID: 245613 RVA: 0x01108BAC File Offset: 0x01106DAC
 		[NullableContext(2)]
 		public static TouchFingerData GetTouchFingerData(int fingerIndex)
 		{
 			return TouchUiEditViewModel.TouchFingerDataMap.GetValueOrDefault(fingerIndex);
 		}
 
-		// Token: 0x06045DB8 RID: 286136 RVA: 0x0115E7BD File Offset: 0x0115C9BD
+		// Token: 0x0603BF6E RID: 245614 RVA: 0x01108BB9 File Offset: 0x01106DB9
 		public static int GetTouchFingerDataCount()
 		{
 			return TouchUiEditViewModel.TouchFingerDataMap.Count;
 		}
 
-		// Token: 0x06045DB9 RID: 286137 RVA: 0x0115E7C9 File Offset: 0x0115C9C9
+		// Token: 0x0603BF6F RID: 245615 RVA: 0x01108BC5 File Offset: 0x01106DC5
 		public static void SetRootItem(UUIItem rootItem)
 		{
 			TouchUiEditViewModel.RootItem = rootItem;
 		}
 
-		// Token: 0x06045DBA RID: 286138 RVA: 0x0115E7D1 File Offset: 0x0115C9D1
+		// Token: 0x0603BF70 RID: 245616 RVA: 0x01108BCD File Offset: 0x01106DCD
 		[NullableContext(2)]
 		public static UUIItem GetRootItem()
 		{
 			return TouchUiEditViewModel.RootItem;
 		}
 
-		// Token: 0x06045DBB RID: 286139 RVA: 0x0115E7D8 File Offset: 0x0115C9D8
+		// Token: 0x0603BF71 RID: 245617 RVA: 0x01108BD4 File Offset: 0x01106DD4
 		public static void AddDelegateOnSelectedItemChange(Action<ITouchUiEditItem> delegate_)
 		{
 			TouchUiEditViewModel.DelegatesOnSelectedItemChange.Add(delegate_);
 		}
 
-		// Token: 0x06045DBC RID: 286140 RVA: 0x0115E7E8 File Offset: 0x0115C9E8
+		// Token: 0x0603BF72 RID: 245618 RVA: 0x01108BE4 File Offset: 0x01106DE4
 		public static void RemoveDelegateOnSelectedItemChange(Action<ITouchUiEditItem> delegate_)
 		{
 			int num = TouchUiEditViewModel.DelegatesOnSelectedItemChange.IndexOf(delegate_);
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045DBD RID: 286141 RVA: 0x0115E810 File Offset: 0x0115CA10
+		// Token: 0x0603BF73 RID: 245619 RVA: 0x01108C0C File Offset: 0x01106E0C
 		public static void NotifySelectedItemChange(ITouchUiEditItem item)
 		{
 			if (TouchUiEditViewModel.CurrentSelectedItem != item)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045DBE RID: 286142 RVA: 0x0115E86C File Offset: 0x0115CA6C
+		// Token: 0x0603BF74 RID: 245620 RVA: 0x01108C68 File Offset: 0x01106E68
 		public static void CreateStaticDefaultValue()
 		{
 			TouchUiEditViewModel.CurrentSelectedItem = null;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.InputSetting
 			TouchUiEditViewModel.DelegatesOnSelectedItemChange = new List<Action<ITouchUiEditItem>>();
 		}
 
-		// Token: 0x06045DBF RID: 286143 RVA: 0x0115E88E File Offset: 0x0115CA8E
+		// Token: 0x0603BF75 RID: 245621 RVA: 0x01108C8A File Offset: 0x01106E8A
 		public static void ResetStaticDefaultValue()
 		{
 			TouchUiEditViewModel.CurrentSelectedItem = null;
@@ -122,18 +122,18 @@ namespace CSharpScript.Game.InputSetting
 			TouchUiEditViewModel.DelegatesOnSelectedItemChange = null;
 		}
 
-		// Token: 0x0402483C RID: 149564
+		// Token: 0x0401FAF2 RID: 129778
 		[Nullable(2)]
 		private static ITouchUiEditItem CurrentSelectedItem;
 
-		// Token: 0x0402483D RID: 149565
+		// Token: 0x0401FAF3 RID: 129779
 		[Nullable(2)]
 		private static UUIItem RootItem;
 
-		// Token: 0x0402483E RID: 149566
+		// Token: 0x0401FAF4 RID: 129780
 		private static Dictionary<int, TouchFingerData> TouchFingerDataMap;
 
-		// Token: 0x0402483F RID: 149567
+		// Token: 0x0401FAF5 RID: 129781
 		private static List<Action<ITouchUiEditItem>> DelegatesOnSelectedItemChange;
 	}
 }

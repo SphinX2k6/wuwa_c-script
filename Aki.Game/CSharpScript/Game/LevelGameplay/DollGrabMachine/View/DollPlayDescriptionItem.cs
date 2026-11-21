@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EF4 RID: 28404
+	// Token: 0x02006074 RID: 24692
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 	})]
 	public class DollPlayDescriptionItem : SyncGridProxyAbstract<IDollDescriptionItemData>
 	{
-		// Token: 0x06045295 RID: 283285 RVA: 0x0111B0B0 File Offset: 0x011192B0
+		// Token: 0x0603B43E RID: 242750 RVA: 0x010C4E40 File Offset: 0x010C3040
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06045296 RID: 283286 RVA: 0x0111B119 File Offset: 0x01119319
+		// Token: 0x0603B43F RID: 242751 RVA: 0x010C4EA9 File Offset: 0x010C30A9
 		public override void Refresh(IDollDescriptionItemData data)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.TextTitle, Array.Empty<object>());

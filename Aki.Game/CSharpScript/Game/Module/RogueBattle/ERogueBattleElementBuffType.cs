@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EC1 RID: 20161
+	// Token: 0x02003E8A RID: 16010
 	public enum ERogueBattleElementBuffType
 	{
-		// Token: 0x0401B81A RID: 112666
+		// Token: 0x040161ED RID: 90605
 		MainRole = 4,
-		// Token: 0x0401B81B RID: 112667
+		// Token: 0x040161EE RID: 90606
 		OtherRole
 	}
 }

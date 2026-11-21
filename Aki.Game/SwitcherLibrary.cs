@@ -9,12 +9,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020034CA RID: 13514
+// Token: 0x02002A3E RID: 10814
 [UClass("/Game/Aki/TypeScript/Game/Utils/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Utils/SwitcherLibrary.SwitcherLibrary_C")]
 public class SwitcherLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601D6F7 RID: 120567 RVA: 0x008372BC File Offset: 0x008354BC
+	// Token: 0x0601B3F6 RID: 111606 RVA: 0x0085E764 File Offset: 0x0085C964
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<string> GetAllSwitcher()
@@ -28,7 +28,7 @@ public class SwitcherLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrea
 		return tarray;
 	}
 
-	// Token: 0x0601D6F8 RID: 120568 RVA: 0x00837320 File Offset: 0x00835520
+	// Token: 0x0601B3F7 RID: 111607 RVA: 0x0085E7C8 File Offset: 0x0085C9C8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetSwitcher(string switcherName, bool value)
@@ -40,7 +40,7 @@ public class SwitcherLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x0601D6F9 RID: 120569 RVA: 0x00837350 File Offset: 0x00835550
+	// Token: 0x0601B3F8 RID: 111608 RVA: 0x0085E7F8 File Offset: 0x0085C9F8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetSwitcher(string switcherName)
@@ -49,7 +49,7 @@ public class SwitcherLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrea
 		return SwitcherManager.Instance.AllSwitcher.TryGetValue(switcherName, out valueTuple) && valueTuple.Item1();
 	}
 
-	// Token: 0x0601D6FA RID: 120570 RVA: 0x0083737E File Offset: 0x0083557E
+	// Token: 0x0601B3F9 RID: 111609 RVA: 0x0085E826 File Offset: 0x0085CA26
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (SwitcherLibrary._ClassPtr == IntPtr.Zero)
@@ -59,23 +59,23 @@ public class SwitcherLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrea
 		return SwitcherLibrary._ClassPtr;
 	}
 
-	// Token: 0x0601D6FB RID: 120571 RVA: 0x008373A4 File Offset: 0x008355A4
+	// Token: 0x0601B3FA RID: 111610 RVA: 0x0085E84C File Offset: 0x0085CA4C
 	public SwitcherLibrary() : this(BuiltinUtils.AllocNativeUObject(SwitcherLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D6FC RID: 120572 RVA: 0x008373CC File Offset: 0x008355CC
+	// Token: 0x0601B3FB RID: 111611 RVA: 0x0085E874 File Offset: 0x0085CA74
 	[NullableContext(1)]
 	public SwitcherLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(SwitcherLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D6FD RID: 120573 RVA: 0x008373FF File Offset: 0x008355FF
+	// Token: 0x0601B3FC RID: 111612 RVA: 0x0085E8A7 File Offset: 0x0085CAA7
 	protected SwitcherLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601D6FE RID: 120574 RVA: 0x00837408 File Offset: 0x00835608
+	// Token: 0x0601B3FD RID: 111613 RVA: 0x0085E8B0 File Offset: 0x0085CAB0
 	protected unsafe static void __CPPCALL_GetAllSwitcher_Implementation(SwitcherLibrary.__GetAllSwitcher_FunctionParams* __Params)
 	{
 		TArray<string> allSwitcher = SwitcherLibrary.GetAllSwitcher();
@@ -86,75 +86,75 @@ public class SwitcherLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrea
 		allSwitcher.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D6FF RID: 120575 RVA: 0x00837434 File Offset: 0x00835634
+	// Token: 0x0601B3FE RID: 111614 RVA: 0x0085E8DC File Offset: 0x0085CADC
 	protected unsafe static void __CPPCALL_SetSwitcher_Implementation(SwitcherLibrary.__SetSwitcher_FunctionParams* __Params)
 	{
 		SwitcherLibrary.SetSwitcher(FString.ToString((void*)(&__Params->switcherName)), __Params->value);
 	}
 
-	// Token: 0x0601D700 RID: 120576 RVA: 0x00837450 File Offset: 0x00835650
+	// Token: 0x0601B3FF RID: 111615 RVA: 0x0085E8F8 File Offset: 0x0085CAF8
 	protected unsafe static void __CPPCALL_GetSwitcher_Implementation(SwitcherLibrary.__GetSwitcher_FunctionParams* __Params)
 	{
 		string switcherName = FString.ToString((void*)(&__Params->switcherName));
 		__Params->__Result = SwitcherLibrary.GetSwitcher(switcherName);
 	}
 
-	// Token: 0x0400E7EA RID: 59370
+	// Token: 0x0400EC9E RID: 60574
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Utils/SwitcherLibrary.SwitcherLibrary_C";
 
-	// Token: 0x0400E7EB RID: 59371
+	// Token: 0x0400EC9F RID: 60575
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E7EC RID: 59372
+	// Token: 0x0400ECA0 RID: 60576
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x02009875 RID: 39029
+	// Token: 0x02008A8F RID: 35471
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetAllSwitcher_FunctionParams
 	{
-		// Token: 0x04030939 RID: 198969
+		// Token: 0x0402BFBC RID: 180156
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0403093A RID: 198970
+		// Token: 0x0402BFBD RID: 180157
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x02009876 RID: 39030
+	// Token: 0x02008A90 RID: 35472
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __SetSwitcher_FunctionParams
 	{
-		// Token: 0x0403093B RID: 198971
+		// Token: 0x0402BFBE RID: 180158
 		[FieldOffset(0)]
 		public FString switcherName;
 
-		// Token: 0x0403093C RID: 198972
+		// Token: 0x0402BFBF RID: 180159
 		[FieldOffset(16)]
 		public bool value;
 
-		// Token: 0x0403093D RID: 198973
+		// Token: 0x0402BFC0 RID: 180160
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009877 RID: 39031
+	// Token: 0x02008A91 RID: 35473
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetSwitcher_FunctionParams
 	{
-		// Token: 0x0403093E RID: 198974
+		// Token: 0x0402BFC1 RID: 180161
 		[FieldOffset(0)]
 		public FString switcherName;
 
-		// Token: 0x0403093F RID: 198975
+		// Token: 0x0402BFC2 RID: 180162
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030940 RID: 198976
+		// Token: 0x0402BFC3 RID: 180163
 		[FieldOffset(24)]
 		public bool __Result;
 	}

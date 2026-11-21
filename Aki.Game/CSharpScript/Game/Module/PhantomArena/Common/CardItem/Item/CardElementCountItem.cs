@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 {
-	// Token: 0x020051D0 RID: 20944
+	// Token: 0x020041A0 RID: 16800
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 	})]
 	public class CardElementCountItem : GridProxyAbstract<CardElementCount>
 	{
-		// Token: 0x060359C1 RID: 219585 RVA: 0x00CB38A0 File Offset: 0x00CB1AA0
+		// Token: 0x0602A8BC RID: 174268 RVA: 0x00C00EDC File Offset: 0x00BFF0DC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			};
 		}
 
-		// Token: 0x060359C2 RID: 219586 RVA: 0x00CB3928 File Offset: 0x00CB1B28
+		// Token: 0x0602A8BD RID: 174269 RVA: 0x00C00F64 File Offset: 0x00BFF164
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CardElementCountItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060359C3 RID: 219587 RVA: 0x00CB396B File Offset: 0x00CB1B6B
+		// Token: 0x0602A8BE RID: 174270 RVA: 0x00C00FA7 File Offset: 0x00BFF1A7
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(2);
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			extendToggle.OnStateChange.Add(new Action<EToggleState>(this.OnClickToggle));
 		}
 
-		// Token: 0x060359C4 RID: 219588 RVA: 0x00CB398F File Offset: 0x00CB1B8F
+		// Token: 0x0602A8BF RID: 174271 RVA: 0x00C00FCB File Offset: 0x00BFF1CB
 		public override void Refresh(CardElementCount data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			this.RefreshCount();
 		}
 
-		// Token: 0x060359C5 RID: 219589 RVA: 0x00CB39A4 File Offset: 0x00CB1BA4
+		// Token: 0x0602A8C0 RID: 174272 RVA: 0x00C00FE0 File Offset: 0x00BFF1E0
 		private void RefreshElement()
 		{
 			int elementId = this.Data.ElementId;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			this.ItemElement.SetActive(false);
 		}
 
-		// Token: 0x060359C6 RID: 219590 RVA: 0x00CB3A38 File Offset: 0x00CB1C38
+		// Token: 0x0602A8C1 RID: 174273 RVA: 0x00C01074 File Offset: 0x00BFF274
 		private void RefreshCount()
 		{
 			string text = this.Data.Count.ToString();
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			}), true);
 		}
 
-		// Token: 0x060359C7 RID: 219591 RVA: 0x00CB3A8C File Offset: 0x00CB1C8C
+		// Token: 0x0602A8C2 RID: 174274 RVA: 0x00C010C8 File Offset: 0x00BFF2C8
 		private void OnClickToggle(EToggleState state)
 		{
 			if (state == EToggleState.ETT_UnChecked)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			scrollViewDelegate.SelectGridProxy(base.GridIndex, base.DisplayIndex, false);
 		}
 
-		// Token: 0x060359C8 RID: 219592 RVA: 0x00CB3ADF File Offset: 0x00CB1CDF
+		// Token: 0x0602A8C3 RID: 174275 RVA: 0x00C0111B File Offset: 0x00BFF31B
 		public override void OnSelected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(2);
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			extendToggle.SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x060359C9 RID: 219593 RVA: 0x00CB3AF7 File Offset: 0x00CB1CF7
+		// Token: 0x0602A8C4 RID: 174276 RVA: 0x00C01133 File Offset: 0x00BFF333
 		public override void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(2);
@@ -146,38 +146,38 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x060359CA RID: 219594 RVA: 0x00CB3B0F File Offset: 0x00CB1D0F
+		// Token: 0x0602A8C5 RID: 174277 RVA: 0x00C0114B File Offset: 0x00BFF34B
 		public override object GetKey(CardElementCount data, int displayIndex)
 		{
 			return data.ElementId;
 		}
 
-		// Token: 0x0401C747 RID: 116551
+		// Token: 0x0401717C RID: 94588
 		private CardElementCount Data;
 
-		// Token: 0x0401C748 RID: 116552
+		// Token: 0x0401717D RID: 94589
 		private CardElementItem ItemElement;
 
-		// Token: 0x0401C749 RID: 116553
+		// Token: 0x0401717E RID: 94590
 		public Action<int> SelectCallBack;
 
-		// Token: 0x0200B35F RID: 45919
+		// Token: 0x02009D97 RID: 40343
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x040365E4 RID: 222692
+			// Token: 0x04031037 RID: 200759
 			public const int ItemElement = 0;
 
-			// Token: 0x040365E5 RID: 222693
+			// Token: 0x04031038 RID: 200760
 			public const int TextCount = 1;
 
-			// Token: 0x040365E6 RID: 222694
+			// Token: 0x04031039 RID: 200761
 			public const int Toggle = 2;
 
-			// Token: 0x040365E7 RID: 222695
+			// Token: 0x0403103A RID: 200762
 			public const int IconOther = 3;
 
-			// Token: 0x040365E8 RID: 222696
+			// Token: 0x0403103B RID: 200763
 			public const int IconAll = 4;
 		}
 	}

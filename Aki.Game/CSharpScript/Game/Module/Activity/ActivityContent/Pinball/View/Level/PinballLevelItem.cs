@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 {
-	// Token: 0x02006340 RID: 25408
+	// Token: 0x020052BE RID: 21182
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballLevelItem : UiPanelBase
 	{
-		// Token: 0x0603FEF9 RID: 261881 RVA: 0x00F78878 File Offset: 0x00F76A78
+		// Token: 0x06034BBA RID: 215994 RVA: 0x00EBF7D8 File Offset: 0x00EBD9D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -44,31 +44,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FEFA RID: 261882 RVA: 0x00F78981 File Offset: 0x00F76B81
+		// Token: 0x06034BBB RID: 215995 RVA: 0x00EBF8E1 File Offset: 0x00EBDAE1
 		protected override void OnStart()
 		{
 			this.StarLayout = new GenericLayout<PinballLevelStarItem, IPinballLevelStarData>(base.GetHorizontalLayout(1), new Func<PinballLevelStarItem>(this.InitStarItem), null, false, true);
 		}
 
-		// Token: 0x0603FEFB RID: 261883 RVA: 0x00F789A4 File Offset: 0x00F76BA4
+		// Token: 0x06034BBC RID: 215996 RVA: 0x00EBF904 File Offset: 0x00EBDB04
 		private PinballLevelStarItem InitStarItem()
 		{
 			return new PinballLevelStarItem();
 		}
 
-		// Token: 0x0603FEFC RID: 261884 RVA: 0x00F789AB File Offset: 0x00F76BAB
+		// Token: 0x06034BBD RID: 215997 RVA: 0x00EBF90B File Offset: 0x00EBDB0B
 		private bool IsLevelLock(int levelId)
 		{
 			return PinballModel.Instance.ActivityData.GetLevelLockStatus(levelId) != EPinballChapterLevelLockStatus.Activated;
 		}
 
-		// Token: 0x0603FEFD RID: 261885 RVA: 0x00F789C3 File Offset: 0x00F76BC3
+		// Token: 0x06034BBE RID: 215998 RVA: 0x00EBF923 File Offset: 0x00EBDB23
 		private string GetLevelLockTexts(int levelId)
 		{
 			return PinballModel.Instance.ActivityData.GetLevelPreConditionLockTexts(levelId);
 		}
 
-		// Token: 0x0603FEFE RID: 261886 RVA: 0x00F789D8 File Offset: 0x00F76BD8
+		// Token: 0x06034BBF RID: 215999 RVA: 0x00EBF938 File Offset: 0x00EBDB38
 		public void Refresh(PinballLevelRecordData data)
 		{
 			this.Data = data;
@@ -92,13 +92,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			base.GetItem(4).SetUIActive(!flag);
 		}
 
-		// Token: 0x0603FEFF RID: 261887 RVA: 0x00F78AA4 File Offset: 0x00F76CA4
+		// Token: 0x06034BC0 RID: 216000 RVA: 0x00EBFA04 File Offset: 0x00EBDC04
 		public void SelectLevel()
 		{
 			this.OnTogClick();
 		}
 
-		// Token: 0x0603FF00 RID: 261888 RVA: 0x00F78AAC File Offset: 0x00F76CAC
+		// Token: 0x06034BC1 RID: 216001 RVA: 0x00EBFA0C File Offset: 0x00EBDC0C
 		private void OnTogClick()
 		{
 			if (this.Data == null)
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			onTogLevelClick(this.Data, arg, base.GetExtendToggle(0));
 		}
 
-		// Token: 0x0402158F RID: 136591
+		// Token: 0x0401BEBE RID: 114366
 		[Nullable(new byte[]
 		{
 			2,
@@ -136,11 +136,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 		})]
 		public Action<PinballLevelRecordData, IPinballLevelInfoData, UUIExtendToggle> OnTogLevelClick;
 
-		// Token: 0x04021590 RID: 136592
+		// Token: 0x0401BEBF RID: 114367
 		[Nullable(2)]
 		private PinballLevelRecordData Data;
 
-		// Token: 0x04021591 RID: 136593
+		// Token: 0x0401BEC0 RID: 114368
 		[Nullable(new byte[]
 		{
 			2,
@@ -149,19 +149,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 		})]
 		private GenericLayout<PinballLevelStarItem, IPinballLevelStarData> StarLayout;
 
-		// Token: 0x0200C557 RID: 50519
+		// Token: 0x0200AF3E RID: 44862
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B8FF RID: 243967
+			// Token: 0x04036261 RID: 221793
 			TogItem,
-			// Token: 0x0403B900 RID: 243968
+			// Token: 0x04036262 RID: 221794
 			StarLayout,
-			// Token: 0x0403B901 RID: 243969
+			// Token: 0x04036263 RID: 221795
 			StarItem,
-			// Token: 0x0403B902 RID: 243970
+			// Token: 0x04036264 RID: 221796
 			LockItem,
-			// Token: 0x0403B903 RID: 243971
+			// Token: 0x04036265 RID: 221797
 			NumItem
 		}
 	}

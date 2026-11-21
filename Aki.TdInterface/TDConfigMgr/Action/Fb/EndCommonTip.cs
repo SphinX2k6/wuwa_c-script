@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002765 RID: 10085
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A37 RID: 10807
 	public class EndCommonTip : ActionParams
 	{
-		// Token: 0x0600E0AB RID: 57515 RVA: 0x002134B5 File Offset: 0x002116B5
+		// Token: 0x0600EEC9 RID: 61129 RVA: 0x00230249 File Offset: 0x0022E449
 		public static EndCommonTip Create(IEndCommonTip? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043A3 RID: 17315
-		// (get) Token: 0x0600E0AC RID: 57516 RVA: 0x002134D4 File Offset: 0x002116D4
+		// Token: 0x17004709 RID: 18185
+		// (get) Token: 0x0600EECA RID: 61130 RVA: 0x00230268 File Offset: 0x0022E468
 		public virtual string Token
 		{
 			get
@@ -32,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C69 RID: 31849
+		// Token: 0x0400831F RID: 33567
 		private IEndCommonTip Instance;
 	}
 }

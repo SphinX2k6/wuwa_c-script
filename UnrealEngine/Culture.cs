@@ -4,50 +4,50 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FD3 RID: 8147
+	// Token: 0x02000648 RID: 1608
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.Culture")]
 	public enum Culture : byte
 	{
-		// Token: 0x04010B15 RID: 68373
+		// Token: 0x04003D84 RID: 15748
 		en,
-		// Token: 0x04010B16 RID: 68374
+		// Token: 0x04003D85 RID: 15749
 		fr,
-		// Token: 0x04010B17 RID: 68375
+		// Token: 0x04003D86 RID: 15750
 		it,
-		// Token: 0x04010B18 RID: 68376
+		// Token: 0x04003D87 RID: 15751
 		de,
-		// Token: 0x04010B19 RID: 68377
+		// Token: 0x04003D88 RID: 15752
 		es,
-		// Token: 0x04010B1A RID: 68378
+		// Token: 0x04003D89 RID: 15753
 		es_419,
-		// Token: 0x04010B1B RID: 68379
+		// Token: 0x04003D8A RID: 15754
 		ru,
-		// Token: 0x04010B1C RID: 68380
+		// Token: 0x04003D8B RID: 15755
 		pl,
-		// Token: 0x04010B1D RID: 68381
+		// Token: 0x04003D8C RID: 15756
 		ar,
-		// Token: 0x04010B1E RID: 68382
+		// Token: 0x04003D8D RID: 15757
 		ko,
-		// Token: 0x04010B1F RID: 68383
+		// Token: 0x04003D8E RID: 15758
 		ja,
-		// Token: 0x04010B20 RID: 68384
+		// Token: 0x04003D8F RID: 15759
 		zh_Hans,
-		// Token: 0x04010B21 RID: 68385
+		// Token: 0x04003D90 RID: 15760
 		zh_Hant,
-		// Token: 0x04010B22 RID: 68386
+		// Token: 0x04003D91 RID: 15761
 		tr,
-		// Token: 0x04010B23 RID: 68387
+		// Token: 0x04003D92 RID: 15762
 		pt,
-		// Token: 0x04010B24 RID: 68388
+		// Token: 0x04003D93 RID: 15763
 		pt_BR,
-		// Token: 0x04010B25 RID: 68389
+		// Token: 0x04003D94 RID: 15764
 		id,
-		// Token: 0x04010B26 RID: 68390
+		// Token: 0x04003D95 RID: 15765
 		vi,
-		// Token: 0x04010B27 RID: 68391
+		// Token: 0x04003D96 RID: 15766
 		th,
-		// Token: 0x04010B28 RID: 68392
+		// Token: 0x04003D97 RID: 15767
 		Culture_MAX
 	}
 }

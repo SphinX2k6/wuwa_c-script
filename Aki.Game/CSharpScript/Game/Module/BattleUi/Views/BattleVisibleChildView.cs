@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CDC RID: 23772
+	// Token: 0x02004CBE RID: 19646
 	public class BattleVisibleChildView : BattleChildView
 	{
-		// Token: 0x0603C277 RID: 246391 RVA: 0x00E666B4 File Offset: 0x00E648B4
+		// Token: 0x060311CD RID: 201165 RVA: 0x00DB6C68 File Offset: 0x00DB4E68
 		protected void InitChildType(EBattleUiChild childType = EBattleUiChild.Common)
 		{
 			this.ChildType = childType;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ChildViewData.AddCallback(childType, new Action(this.OnBattleUiChildVisibleChanged));
 		}
 
-		// Token: 0x0603C278 RID: 246392 RVA: 0x00E66724 File Offset: 0x00E64924
+		// Token: 0x060311CE RID: 201166 RVA: 0x00DB6CD8 File Offset: 0x00DB4ED8
 		public virtual void ShowBattleVisibleChildView(bool checkVisible = false)
 		{
 			this.IsEnable = true;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C279 RID: 246393 RVA: 0x00E6675D File Offset: 0x00E6495D
+		// Token: 0x060311CF RID: 201167 RVA: 0x00DB6D11 File Offset: 0x00DB4F11
 		public virtual void HideBattleVisibleChildView()
 		{
 			this.IsEnable = false;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C27A RID: 246394 RVA: 0x00E66788 File Offset: 0x00E64988
+		// Token: 0x060311D0 RID: 201168 RVA: 0x00DB6D3C File Offset: 0x00DB4F3C
 		public override void Reset()
 		{
 			this.SetVisibleInner(0, false);
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603C27B RID: 246395 RVA: 0x00E667C4 File Offset: 0x00E649C4
+		// Token: 0x060311D1 RID: 201169 RVA: 0x00DB6D78 File Offset: 0x00DB4F78
 		public void ClearChildViewData()
 		{
 			if (this.ChildViewData != null)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C27C RID: 246396 RVA: 0x00E667F4 File Offset: 0x00E649F4
+		// Token: 0x060311D2 RID: 201170 RVA: 0x00DB6DA8 File Offset: 0x00DB4FA8
 		public override void SetActive(bool visibility)
 		{
 			if (this.GetVisible() != visibility)
@@ -84,13 +84,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetActive(visibility);
 		}
 
-		// Token: 0x0603C27D RID: 246397 RVA: 0x00E6682E File Offset: 0x00E64A2E
+		// Token: 0x060311D3 RID: 201171 RVA: 0x00DB6DE2 File Offset: 0x00DB4FE2
 		private void OnBattleUiChildVisibleChanged()
 		{
 			this.NotifyVisibleChanged();
 		}
 
-		// Token: 0x0603C27E RID: 246398 RVA: 0x00E66838 File Offset: 0x00E64A38
+		// Token: 0x060311D4 RID: 201172 RVA: 0x00DB6DEC File Offset: 0x00DB4FEC
 		private void NotifyVisibleChanged()
 		{
 			if (this.ChildViewData == null)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CheckVisibleChange(visible);
 		}
 
-		// Token: 0x0603C27F RID: 246399 RVA: 0x00E66874 File Offset: 0x00E64A74
+		// Token: 0x060311D5 RID: 201173 RVA: 0x00DB6E28 File Offset: 0x00DB5028
 		public void SetVisible(int visibleReason, bool bVisible)
 		{
 			bool visible = this.GetVisible();
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CheckVisibleChange(visible);
 		}
 
-		// Token: 0x0603C280 RID: 246400 RVA: 0x00E66898 File Offset: 0x00E64A98
+		// Token: 0x060311D6 RID: 201174 RVA: 0x00DB6E4C File Offset: 0x00DB504C
 		private void CheckVisibleChange(bool oldVisible)
 		{
 			if (!this.IsEnable)
@@ -131,42 +131,42 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnHideBattleChildView();
 		}
 
-		// Token: 0x0603C281 RID: 246401 RVA: 0x00E668D1 File Offset: 0x00E64AD1
+		// Token: 0x060311D7 RID: 201175 RVA: 0x00DB6E85 File Offset: 0x00DB5085
 		private void SetVisibleInner(int visibleReason, bool bVisible)
 		{
 			this.InnerVisibleState = VisibleStateUtil.SetVisible(this.InnerVisibleState, bVisible, visibleReason);
 		}
 
-		// Token: 0x0603C282 RID: 246402 RVA: 0x00E668E6 File Offset: 0x00E64AE6
+		// Token: 0x060311D8 RID: 201176 RVA: 0x00DB6E9A File Offset: 0x00DB509A
 		public bool GetVisible()
 		{
 			return this.BaseVisible && this.InnerVisibleState == 0;
 		}
 
-		// Token: 0x0603C283 RID: 246403 RVA: 0x00E668FB File Offset: 0x00E64AFB
+		// Token: 0x060311D9 RID: 201177 RVA: 0x00DB6EAF File Offset: 0x00DB50AF
 		protected override void OnShowBattleChildView()
 		{
 		}
 
-		// Token: 0x0603C284 RID: 246404 RVA: 0x00E668FD File Offset: 0x00E64AFD
+		// Token: 0x060311DA RID: 201178 RVA: 0x00DB6EB1 File Offset: 0x00DB50B1
 		protected override void OnHideBattleChildView()
 		{
 		}
 
-		// Token: 0x0401F5C0 RID: 128448
+		// Token: 0x0401A079 RID: 106617
 		[Nullable(2)]
 		protected BattleUiChildViewData ChildViewData;
 
-		// Token: 0x0401F5C1 RID: 128449
+		// Token: 0x0401A07A RID: 106618
 		protected EBattleUiChild ChildType;
 
-		// Token: 0x0401F5C2 RID: 128450
+		// Token: 0x0401A07B RID: 106619
 		protected bool BaseVisible;
 
-		// Token: 0x0401F5C3 RID: 128451
+		// Token: 0x0401A07C RID: 106620
 		protected bool IsEnable;
 
-		// Token: 0x0401F5C4 RID: 128452
+		// Token: 0x0401A07D RID: 106621
 		protected int InnerVisibleState;
 	}
 }

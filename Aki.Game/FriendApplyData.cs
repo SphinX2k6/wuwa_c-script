@@ -4,12 +4,12 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001C31 RID: 7217
+// Token: 0x020010F0 RID: 4336
 [NullableContext(2)]
 [Nullable(0)]
 public class FriendApplyData
 {
-	// Token: 0x0600D908 RID: 55560 RVA: 0x00324E14 File Offset: 0x00323014
+	// Token: 0x0600AD1E RID: 44318 RVA: 0x00330214 File Offset: 0x0032E414
 	[NullableContext(1)]
 	public UniTask InitializeFriendApply(FriendApply friendApply)
 	{
@@ -22,9 +22,9 @@ public class FriendApplyData
 		return <InitializeFriendApply>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x170011BB RID: 4539
-	// (get) Token: 0x0600D909 RID: 55561 RVA: 0x00324E5F File Offset: 0x0032305F
-	// (set) Token: 0x0600D90A RID: 55562 RVA: 0x00324E67 File Offset: 0x00323067
+	// Token: 0x170011E1 RID: 4577
+	// (get) Token: 0x0600AD1F RID: 44319 RVA: 0x0033025F File Offset: 0x0032E45F
+	// (set) Token: 0x0600AD20 RID: 44320 RVA: 0x00330267 File Offset: 0x0032E467
 	public long ApplyCreatedTime
 	{
 		get
@@ -37,9 +37,9 @@ public class FriendApplyData
 		}
 	}
 
-	// Token: 0x170011BC RID: 4540
-	// (get) Token: 0x0600D90B RID: 55563 RVA: 0x00324E70 File Offset: 0x00323070
-	// (set) Token: 0x0600D90C RID: 55564 RVA: 0x00324E78 File Offset: 0x00323078
+	// Token: 0x170011E2 RID: 4578
+	// (get) Token: 0x0600AD21 RID: 44321 RVA: 0x00330270 File Offset: 0x0032E470
+	// (set) Token: 0x0600AD22 RID: 44322 RVA: 0x00330278 File Offset: 0x0032E478
 	public FriendData ApplyPlayerData
 	{
 		get
@@ -52,9 +52,9 @@ public class FriendApplyData
 		}
 	}
 
-	// Token: 0x170011BD RID: 4541
-	// (get) Token: 0x0600D90D RID: 55565 RVA: 0x00324E81 File Offset: 0x00323081
-	// (set) Token: 0x0600D90E RID: 55566 RVA: 0x00324E94 File Offset: 0x00323094
+	// Token: 0x170011E3 RID: 4579
+	// (get) Token: 0x0600AD23 RID: 44323 RVA: 0x00330281 File Offset: 0x0032E481
+	// (set) Token: 0x0600AD24 RID: 44324 RVA: 0x00330294 File Offset: 0x0032E494
 	public double ApplyTimeLeftTime
 	{
 		get
@@ -67,15 +67,15 @@ public class FriendApplyData
 		}
 	}
 
-	// Token: 0x040062E9 RID: 25321
+	// Token: 0x040063BB RID: 25531
 	private FriendData PlayerData;
 
-	// Token: 0x040062EA RID: 25322
+	// Token: 0x040063BC RID: 25532
 	private long CreatedTime;
 
-	// Token: 0x040062EB RID: 25323
+	// Token: 0x040063BD RID: 25533
 	public bool Fresh = true;
 
-	// Token: 0x040062EC RID: 25324
+	// Token: 0x040063BE RID: 25534
 	private double ApplyTimeUpTime;
 }

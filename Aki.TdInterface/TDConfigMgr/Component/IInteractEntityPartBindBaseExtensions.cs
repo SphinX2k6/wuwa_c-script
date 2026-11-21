@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200047A RID: 1146
+	// Token: 0x020004D3 RID: 1235
 	public static class IInteractEntityPartBindBaseExtensions
 	{
-		// Token: 0x06001715 RID: 5909 RVA: 0x000465A0 File Offset: 0x000447A0
-		[NullableContext(1)]
+		// Token: 0x060018AF RID: 6319 RVA: 0x0004A2E8 File Offset: 0x000484E8
 		public static IReadOnlyList<object> GetOptionPoints(this IInteractEntityPartBindBase p)
 		{
 			IInteractEntityPartPrefabBind interactEntityPartPrefabBind = p as IInteractEntityPartPrefabBind;

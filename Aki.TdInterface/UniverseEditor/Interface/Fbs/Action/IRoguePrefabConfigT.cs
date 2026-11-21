@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EE3 RID: 28387
+	// Token: 0x02007667 RID: 30311
 	public class IRoguePrefabConfigT
 	{
-		// Token: 0x1700D32F RID: 54063
-		// (get) Token: 0x06032297 RID: 205463 RVA: 0x006C78B0 File Offset: 0x006C5AB0
-		// (set) Token: 0x06032298 RID: 205464 RVA: 0x006C78B8 File Offset: 0x006C5AB8
+		// Token: 0x1700DE86 RID: 56966
+		// (get) Token: 0x060352D7 RID: 217815 RVA: 0x007235E4 File Offset: 0x007217E4
+		// (set) Token: 0x060352D8 RID: 217816 RVA: 0x007235EC File Offset: 0x007217EC
 		public ECreatePrefabType Type { get; set; }
 
-		// Token: 0x1700D330 RID: 54064
-		// (get) Token: 0x06032299 RID: 205465 RVA: 0x006C78C1 File Offset: 0x006C5AC1
-		// (set) Token: 0x0603229A RID: 205466 RVA: 0x006C78C9 File Offset: 0x006C5AC9
+		// Token: 0x1700DE87 RID: 56967
+		// (get) Token: 0x060352D9 RID: 217817 RVA: 0x007235F5 File Offset: 0x007217F5
+		// (set) Token: 0x060352DA RID: 217818 RVA: 0x007235FD File Offset: 0x007217FD
 		public int Index { get; set; }
 
-		// Token: 0x0603229B RID: 205467 RVA: 0x006C78D2 File Offset: 0x006C5AD2
+		// Token: 0x060352DB RID: 217819 RVA: 0x00723606 File Offset: 0x00721806
 		public IRoguePrefabConfigT()
 		{
 			this.Type = ECreatePrefabType.PrefabId;

@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 {
-	// Token: 0x02004808 RID: 18440
+	// Token: 0x02003739 RID: 14137
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapMarkProgressItemData : IMapMarkProgressItemData
 	{
-		// Token: 0x170078DB RID: 30939
-		// (get) Token: 0x0603048B RID: 197771 RVA: 0x00B32E7F File Offset: 0x00B3107F
-		// (set) Token: 0x0603048C RID: 197772 RVA: 0x00B32E87 File Offset: 0x00B31087
+		// Token: 0x17004B98 RID: 19352
+		// (get) Token: 0x06024C5B RID: 150619 RVA: 0x00A62DE3 File Offset: 0x00A60FE3
+		// (set) Token: 0x06024C5C RID: 150620 RVA: 0x00A62DEB File Offset: 0x00A60FEB
 		public string NameId { get; set; } = "";
 
-		// Token: 0x170078DC RID: 30940
-		// (get) Token: 0x0603048D RID: 197773 RVA: 0x00B32E90 File Offset: 0x00B31090
-		// (set) Token: 0x0603048E RID: 197774 RVA: 0x00B32E98 File Offset: 0x00B31098
+		// Token: 0x17004B99 RID: 19353
+		// (get) Token: 0x06024C5D RID: 150621 RVA: 0x00A62DF4 File Offset: 0x00A60FF4
+		// (set) Token: 0x06024C5E RID: 150622 RVA: 0x00A62DFC File Offset: 0x00A60FFC
 		public float Progress { get; set; }
 
-		// Token: 0x170078DD RID: 30941
-		// (get) Token: 0x0603048F RID: 197775 RVA: 0x00B32EA1 File Offset: 0x00B310A1
-		// (set) Token: 0x06030490 RID: 197776 RVA: 0x00B32EA9 File Offset: 0x00B310A9
+		// Token: 0x17004B9A RID: 19354
+		// (get) Token: 0x06024C5F RID: 150623 RVA: 0x00A62E05 File Offset: 0x00A61005
+		// (set) Token: 0x06024C60 RID: 150624 RVA: 0x00A62E0D File Offset: 0x00A6100D
 		public float ProgressMax { get; set; }
 
-		// Token: 0x170078DE RID: 30942
-		// (get) Token: 0x06030491 RID: 197777 RVA: 0x00B32EB2 File Offset: 0x00B310B2
-		// (set) Token: 0x06030492 RID: 197778 RVA: 0x00B32EBA File Offset: 0x00B310BA
+		// Token: 0x17004B9B RID: 19355
+		// (get) Token: 0x06024C61 RID: 150625 RVA: 0x00A62E16 File Offset: 0x00A61016
+		// (set) Token: 0x06024C62 RID: 150626 RVA: 0x00A62E1E File Offset: 0x00A6101E
 		public float ProgressMin { get; set; }
 
-		// Token: 0x170078DF RID: 30943
-		// (get) Token: 0x06030493 RID: 197779 RVA: 0x00B32EC3 File Offset: 0x00B310C3
-		// (set) Token: 0x06030494 RID: 197780 RVA: 0x00B32ECB File Offset: 0x00B310CB
+		// Token: 0x17004B9C RID: 19356
+		// (get) Token: 0x06024C63 RID: 150627 RVA: 0x00A62E27 File Offset: 0x00A61027
+		// (set) Token: 0x06024C64 RID: 150628 RVA: 0x00A62E2F File Offset: 0x00A6102F
 		[Nullable(2)]
 		public Action<float> SetProgressCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

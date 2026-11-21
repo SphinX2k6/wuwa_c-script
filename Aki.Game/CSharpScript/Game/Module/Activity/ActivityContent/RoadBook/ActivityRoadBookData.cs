@@ -7,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061BF RID: 25023
+	// Token: 0x0200513D RID: 20797
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityRoadBookData : ActivityBaseData
 	{
-		// Token: 0x0603F366 RID: 258918 RVA: 0x00F45E80 File Offset: 0x00F44080
+		// Token: 0x06034027 RID: 213031 RVA: 0x00E8CDD8 File Offset: 0x00E8AFD8
 		protected override void OnInit(ActivityData data)
 		{
 			this.InitTravelLevelData();
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.LastExpCountInternal = this.GetExpItemCount();
 		}
 
-		// Token: 0x0603F367 RID: 258919 RVA: 0x00F45EE0 File Offset: 0x00F440E0
+		// Token: 0x06034028 RID: 213032 RVA: 0x00E8CE38 File Offset: 0x00E8B038
 		protected override void PhraseEx(ActivityData data)
 		{
 			RoadBookActivityInfo roadBookActivityInfo = data.RoadBookActivityInfo;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.RefreshRoadBookData(roadBookActivityInfo);
 		}
 
-		// Token: 0x0603F368 RID: 258920 RVA: 0x00F45F00 File Offset: 0x00F44100
+		// Token: 0x06034029 RID: 213033 RVA: 0x00E8CE58 File Offset: 0x00E8B058
 		protected void RefreshRoadBookData(RoadBookActivityInfo roadBookInfo)
 		{
 			this.TravelLevel = roadBookInfo.RoadBookLevel;
@@ -66,13 +66,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F369 RID: 258921 RVA: 0x00F45FD5 File Offset: 0x00F441D5
+		// Token: 0x0603402A RID: 213034 RVA: 0x00E8CF2D File Offset: 0x00E8B12D
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.CanTravelLevelUp() || this.GetTaskRedDotState(true) || this.GetAllMotorItemRedDot();
 		}
 
-		// Token: 0x0603F36A RID: 258922 RVA: 0x00F45FF8 File Offset: 0x00F441F8
+		// Token: 0x0603402B RID: 213035 RVA: 0x00E8CF50 File Offset: 0x00E8B150
 		protected override bool GetExDataFinishShowState()
 		{
 			if (this.MaxTravelLevel != this.TravelLevel)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return true;
 		}
 
-		// Token: 0x0603F36B RID: 258923 RVA: 0x00F460CC File Offset: 0x00F442CC
+		// Token: 0x0603402C RID: 213036 RVA: 0x00E8D024 File Offset: 0x00E8B224
 		public bool SaveFirstCheckRedDotState(ERoadBookSaveFlag saveFlag, int id = 0)
 		{
 			if (ActivityModel.Instance.GetActivityCacheData(base.Id, 0, (int)saveFlag, id, 0) == 1)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return false;
 		}
 
-		// Token: 0x0603F36C RID: 258924 RVA: 0x00F46104 File Offset: 0x00F44304
+		// Token: 0x0603402D RID: 213037 RVA: 0x00E8D05C File Offset: 0x00E8B25C
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return new ValueTuple<int, int>(num, item);
 		}
 
-		// Token: 0x0603F36D RID: 258925 RVA: 0x00F46200 File Offset: 0x00F44400
+		// Token: 0x0603402E RID: 213038 RVA: 0x00E8D158 File Offset: 0x00E8B358
 		public bool GetTypeRedDotState(ERoadBookSubType subType)
 		{
 			if (subType != ERoadBookSubType.TravelTask)
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return this.GetTaskRedDotState(false);
 		}
 
-		// Token: 0x0603F36E RID: 258926 RVA: 0x00F4621C File Offset: 0x00F4441C
+		// Token: 0x0603402F RID: 213039 RVA: 0x00E8D174 File Offset: 0x00E8B374
 		public bool GetTypeNewState(ERoadBookSubType subType)
 		{
 			switch (subType)
@@ -190,19 +190,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return false;
 		}
 
-		// Token: 0x0603F36F RID: 258927 RVA: 0x00F4624E File Offset: 0x00F4444E
+		// Token: 0x06034030 RID: 213040 RVA: 0x00E8D1A6 File Offset: 0x00E8B3A6
 		public void RefreshActivityRedDotState()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603F370 RID: 258928 RVA: 0x00F46268 File Offset: 0x00F44468
+		// Token: 0x06034031 RID: 213041 RVA: 0x00E8D1C0 File Offset: 0x00E8B3C0
 		public RoadBookConfig GetActivityConfig()
 		{
 			return ActivityRoadBookConfig.Instance.GetActivityConfig(base.Id).Value;
 		}
 
-		// Token: 0x0603F371 RID: 258929 RVA: 0x00F4628D File Offset: 0x00F4448D
+		// Token: 0x06034032 RID: 213042 RVA: 0x00E8D1E5 File Offset: 0x00E8B3E5
 		private Comparison<global::ActivityTaskData> SortTaskData()
 		{
 			return delegate(global::ActivityTaskData a, global::ActivityTaskData b)
@@ -215,8 +215,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x1700921A RID: 37402
-		// (get) Token: 0x0603F372 RID: 258930 RVA: 0x00F462AE File Offset: 0x00F444AE
+		// Token: 0x1700657C RID: 25980
+		// (get) Token: 0x06034033 RID: 213043 RVA: 0x00E8D206 File Offset: 0x00E8B406
 		public int LastTravelLevel
 		{
 			get
@@ -227,8 +227,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x1700921B RID: 37403
-		// (get) Token: 0x0603F373 RID: 258931 RVA: 0x00F462C2 File Offset: 0x00F444C2
+		// Token: 0x1700657D RID: 25981
+		// (get) Token: 0x06034034 RID: 213044 RVA: 0x00E8D21A File Offset: 0x00E8B41A
 		public int LastCurrentExpCount
 		{
 			get
@@ -239,8 +239,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x1700921C RID: 37404
-		// (get) Token: 0x0603F374 RID: 258932 RVA: 0x00F462D6 File Offset: 0x00F444D6
+		// Token: 0x1700657E RID: 25982
+		// (get) Token: 0x06034035 RID: 213045 RVA: 0x00E8D22E File Offset: 0x00E8B42E
 		public int LastExpCount
 		{
 			get
@@ -251,8 +251,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x1700921D RID: 37405
-		// (get) Token: 0x0603F375 RID: 258933 RVA: 0x00F462EC File Offset: 0x00F444EC
+		// Token: 0x1700657F RID: 25983
+		// (get) Token: 0x06034036 RID: 213046 RVA: 0x00E8D244 File Offset: 0x00E8B444
 		public int MaxTravelLevel
 		{
 			get
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F376 RID: 258934 RVA: 0x00F46308 File Offset: 0x00F44508
+		// Token: 0x06034037 RID: 213047 RVA: 0x00E8D260 File Offset: 0x00E8B460
 		private void InitTravelLevelData()
 		{
 			this.TravelLevelData.Clear();
@@ -281,14 +281,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F377 RID: 258935 RVA: 0x00F463B8 File Offset: 0x00F445B8
+		// Token: 0x06034038 RID: 213048 RVA: 0x00E8D310 File Offset: 0x00E8B510
 		public int GetExpItemCount()
 		{
 			int expItemId = this.GetActivityConfig().ExpItemId;
 			return InventoryModel.Instance.GetItemCountByConfigId(expItemId, 0);
 		}
 
-		// Token: 0x0603F378 RID: 258936 RVA: 0x00F463E0 File Offset: 0x00F445E0
+		// Token: 0x06034039 RID: 213049 RVA: 0x00E8D338 File Offset: 0x00E8B538
 		public int GetCurrentExp()
 		{
 			int expItemCount = this.GetExpItemCount();
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return expItemCount - accumulateExp;
 		}
 
-		// Token: 0x0603F379 RID: 258937 RVA: 0x00F4640C File Offset: 0x00F4460C
+		// Token: 0x0603403A RID: 213050 RVA: 0x00E8D364 File Offset: 0x00E8B564
 		public int GetCurrentTargetExp()
 		{
 			bool flag = this.MaxTravelLevel == this.TravelLevel;
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return roadBookLevelData.AccumulateExp;
 		}
 
-		// Token: 0x0603F37A RID: 258938 RVA: 0x00F46448 File Offset: 0x00F44648
+		// Token: 0x0603403B RID: 213051 RVA: 0x00E8D3A0 File Offset: 0x00E8B5A0
 		public bool CanTravelLevelUp()
 		{
 			if (this.MaxTravelLevel == this.TravelLevel)
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return expItemCount >= num;
 		}
 
-		// Token: 0x0603F37B RID: 258939 RVA: 0x00F46494 File Offset: 0x00F44694
+		// Token: 0x0603403C RID: 213052 RVA: 0x00E8D3EC File Offset: 0x00E8B5EC
 		private void InitTravelAreaData()
 		{
 			this.AreaDataMap.Clear();
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F37C RID: 258940 RVA: 0x00F4653C File Offset: 0x00F4473C
+		// Token: 0x0603403D RID: 213053 RVA: 0x00E8D494 File Offset: 0x00E8B694
 		public void UnlockAreaData(int areaId)
 		{
 			RoadBookAreaData roadBookAreaData;
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			roadBookAreaData.IsUnlock = true;
 		}
 
-		// Token: 0x0603F37D RID: 258941 RVA: 0x00F46561 File Offset: 0x00F44761
+		// Token: 0x0603403E RID: 213054 RVA: 0x00E8D4B9 File Offset: 0x00E8B6B9
 		public List<RoadBookAreaData> GetAllAreaData()
 		{
 			List<RoadBookAreaData> list = new List<RoadBookAreaData>(this.AreaDataMap.Values);
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return list;
 		}
 
-		// Token: 0x0603F37E RID: 258942 RVA: 0x00F46598 File Offset: 0x00F44798
+		// Token: 0x0603403F RID: 213055 RVA: 0x00E8D4F0 File Offset: 0x00E8B6F0
 		public bool GetAllAreaNewUnlockState()
 		{
 			foreach (int areaId in this.AreaDataMap.Keys)
@@ -376,7 +376,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return false;
 		}
 
-		// Token: 0x0603F37F RID: 258943 RVA: 0x00F465FC File Offset: 0x00F447FC
+		// Token: 0x06034040 RID: 213056 RVA: 0x00E8D554 File Offset: 0x00E8B754
 		public void RefreshTravelTaskData(ConditionTask task)
 		{
 			global::ActivityTaskData activityTaskData;
@@ -400,14 +400,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			});
 		}
 
-		// Token: 0x0603F380 RID: 258944 RVA: 0x00F466B2 File Offset: 0x00F448B2
+		// Token: 0x06034041 RID: 213057 RVA: 0x00E8D60A File Offset: 0x00E8B80A
 		public void SetTravelTaskDataDone(int taskId)
 		{
 			this.AreaTaskMap[taskId].Status = EActivityTaskState.FinishedAndClaimed;
 			this.TaskFinalRewardData.FinishedIdSet.Add(taskId);
 		}
 
-		// Token: 0x0603F381 RID: 258945 RVA: 0x00F466D8 File Offset: 0x00F448D8
+		// Token: 0x06034042 RID: 213058 RVA: 0x00E8D630 File Offset: 0x00E8B830
 		public bool IsAreaTaskFinish(int areaId)
 		{
 			foreach (int key in this.AreaDataMap[areaId].TravelTaskIdSet)
@@ -420,7 +420,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return true;
 		}
 
-		// Token: 0x0603F382 RID: 258946 RVA: 0x00F4674C File Offset: 0x00F4494C
+		// Token: 0x06034043 RID: 213059 RVA: 0x00E8D6A4 File Offset: 0x00E8B8A4
 		public int GetFinishedAreaTaskCount()
 		{
 			int num = 0;
@@ -437,7 +437,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return num;
 		}
 
-		// Token: 0x0603F383 RID: 258947 RVA: 0x00F467AC File Offset: 0x00F449AC
+		// Token: 0x06034044 RID: 213060 RVA: 0x00E8D704 File Offset: 0x00E8B904
 		public List<global::ActivityTaskData> GetAreaTaskDataList(int areaId)
 		{
 			List<global::ActivityTaskData> list = new List<global::ActivityTaskData>();
@@ -450,7 +450,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return list;
 		}
 
-		// Token: 0x0603F384 RID: 258948 RVA: 0x00F4682C File Offset: 0x00F44A2C
+		// Token: 0x06034045 RID: 213061 RVA: 0x00E8D784 File Offset: 0x00E8B984
 		public bool GetAreaNewUnlockState(int areaId)
 		{
 			bool isUnlock = this.AreaDataMap[areaId].IsUnlock;
@@ -459,7 +459,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return isUnlock && !flag2 && flag && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 5, areaId, 0) == 0;
 		}
 
-		// Token: 0x0603F385 RID: 258949 RVA: 0x00F46894 File Offset: 0x00F44A94
+		// Token: 0x06034046 RID: 213062 RVA: 0x00E8D7EC File Offset: 0x00E8B9EC
 		public bool GetAreaRewardState(int areaId)
 		{
 			RoadBookAreaData roadBookAreaData = this.AreaDataMap[areaId];
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return false;
 		}
 
-		// Token: 0x0603F386 RID: 258950 RVA: 0x00F46914 File Offset: 0x00F44B14
+		// Token: 0x06034047 RID: 213063 RVA: 0x00E8D86C File Offset: 0x00E8BA6C
 		public bool GetTaskRedDotState(bool checkAreaUnlock = false)
 		{
 			if (this.TaskFinalRewardData != null && this.TaskFinalRewardData.CanReceive())
@@ -498,7 +498,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return false;
 		}
 
-		// Token: 0x0603F387 RID: 258951 RVA: 0x00F4699C File Offset: 0x00F44B9C
+		// Token: 0x06034048 RID: 213064 RVA: 0x00E8D8F4 File Offset: 0x00E8BAF4
 		private void InitPhantomData()
 		{
 			this.PhantomDataMap.Clear();
@@ -508,13 +508,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F388 RID: 258952 RVA: 0x00F46A0C File Offset: 0x00F44C0C
+		// Token: 0x06034049 RID: 213065 RVA: 0x00E8D964 File Offset: 0x00E8BB64
 		public void UnlockPhantom(int phantomId)
 		{
 			this.PhantomDataMap[phantomId] = true;
 		}
 
-		// Token: 0x0603F389 RID: 258953 RVA: 0x00F46A1C File Offset: 0x00F44C1C
+		// Token: 0x0603404A RID: 213066 RVA: 0x00E8D974 File Offset: 0x00E8BB74
 		public bool GetAllPhantomNewUnlockState()
 		{
 			foreach (KeyValuePair<int, bool> keyValuePair in this.PhantomDataMap)
@@ -527,14 +527,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return false;
 		}
 
-		// Token: 0x0603F38A RID: 258954 RVA: 0x00F46A88 File Offset: 0x00F44C88
+		// Token: 0x0603404B RID: 213067 RVA: 0x00E8D9E0 File Offset: 0x00E8BBE0
 		public bool GetPhantomNewUnlockState(int phantomId)
 		{
 			int key = phantomId - 6000000;
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 4, key, 0) == 0;
 		}
 
-		// Token: 0x0603F38B RID: 258955 RVA: 0x00F46AB8 File Offset: 0x00F44CB8
+		// Token: 0x0603404C RID: 213068 RVA: 0x00E8DA10 File Offset: 0x00E8BC10
 		private void InitMotorChallengeData()
 		{
 			this.MotorChallengeRewardDataMap.Clear();
@@ -563,7 +563,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F38C RID: 258956 RVA: 0x00F46BFC File Offset: 0x00F44DFC
+		// Token: 0x0603404D RID: 213069 RVA: 0x00E8DB54 File Offset: 0x00E8BD54
 		public void RefreshMotorChallengePlayData(RoadBookMotorcycleInfo challengeInfo)
 		{
 			MotorChallengePlayData motorChallengePlayData;
@@ -600,13 +600,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F38D RID: 258957 RVA: 0x00F46CE4 File Offset: 0x00F44EE4
+		// Token: 0x0603404E RID: 213070 RVA: 0x00E8DC3C File Offset: 0x00E8BE3C
 		public void SetMotorChallengeRewardDone(int rewardId)
 		{
 			this.MotorChallengeRewardDataMap[rewardId].Status = EActivityTaskState.FinishedAndClaimed;
 		}
 
-		// Token: 0x0603F38E RID: 258958 RVA: 0x00F46CF8 File Offset: 0x00F44EF8
+		// Token: 0x0603404F RID: 213071 RVA: 0x00E8DC50 File Offset: 0x00E8BE50
 		protected void RefreshMotorChallengeUnlockState(int playId)
 		{
 			MotorChallengePlayData motorChallengePlayData = this.MotorChallengePlayDataMap[playId];
@@ -628,20 +628,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			motorChallengePlayData.IsNew = this.GetMotorItemNewUnlockState(playId);
 		}
 
-		// Token: 0x0603F38F RID: 258959 RVA: 0x00F46D80 File Offset: 0x00F44F80
+		// Token: 0x06034050 RID: 213072 RVA: 0x00E8DCD8 File Offset: 0x00E8BED8
 		public string GetMotorPlayLockTips(int playId)
 		{
 			MotorChallengePlayData motorChallengePlayData = this.MotorChallengePlayDataMap[playId];
 			return ActivityRoadBookConfig.Instance.GetMotorChallengeConfig(motorChallengePlayData.RewardIds[0]).Value.LockTips;
 		}
 
-		// Token: 0x0603F390 RID: 258960 RVA: 0x00F46DC0 File Offset: 0x00F44FC0
+		// Token: 0x06034051 RID: 213073 RVA: 0x00E8DD18 File Offset: 0x00E8BF18
 		public List<MotorChallengePlayData> GetAllMotorTabData()
 		{
 			return new List<MotorChallengePlayData>(this.MotorChallengePlayDataMap.Values);
 		}
 
-		// Token: 0x0603F391 RID: 258961 RVA: 0x00F46DD4 File Offset: 0x00F44FD4
+		// Token: 0x06034052 RID: 213074 RVA: 0x00E8DD2C File Offset: 0x00E8BF2C
 		public List<global::ActivityTaskData> GetMotorItemDataList(List<int> ids)
 		{
 			List<global::ActivityTaskData> list = new List<global::ActivityTaskData>();
@@ -657,7 +657,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return list;
 		}
 
-		// Token: 0x0603F392 RID: 258962 RVA: 0x00F46E48 File Offset: 0x00F45048
+		// Token: 0x06034053 RID: 213075 RVA: 0x00E8DDA0 File Offset: 0x00E8BFA0
 		protected bool GetAllMotorItemRedDot()
 		{
 			using (Dictionary<int, global::ActivityTaskData>.ValueCollection.Enumerator enumerator = this.MotorChallengeRewardDataMap.Values.GetEnumerator())
@@ -673,7 +673,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return false;
 		}
 
-		// Token: 0x0603F393 RID: 258963 RVA: 0x00F46EA8 File Offset: 0x00F450A8
+		// Token: 0x06034054 RID: 213076 RVA: 0x00E8DE00 File Offset: 0x00E8C000
 		protected bool RefreshAndGetAllMotorItemNewUnlock()
 		{
 			bool flag = false;
@@ -688,14 +688,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return flag;
 		}
 
-		// Token: 0x0603F394 RID: 258964 RVA: 0x00F46F14 File Offset: 0x00F45114
+		// Token: 0x06034055 RID: 213077 RVA: 0x00E8DE6C File Offset: 0x00E8C06C
 		public bool GetMotorItemNewUnlockState(int playId)
 		{
 			MotorChallengePlayData motorChallengePlayData = this.MotorChallengePlayDataMap[playId];
 			return motorChallengePlayData.IsUnlock && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 7, motorChallengePlayData.TabIndex, 0) == 0;
 		}
 
-		// Token: 0x0603F395 RID: 258965 RVA: 0x00F46F54 File Offset: 0x00F45154
+		// Token: 0x06034056 RID: 213078 RVA: 0x00E8DEAC File Offset: 0x00E8C0AC
 		protected bool CheckMotorItemRedDot(int[] ids)
 		{
 			foreach (int key in ids)
@@ -709,7 +709,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return false;
 		}
 
-		// Token: 0x0603F396 RID: 258966 RVA: 0x00F46F90 File Offset: 0x00F45190
+		// Token: 0x06034057 RID: 213079 RVA: 0x00E8DEE8 File Offset: 0x00E8C0E8
 		protected bool CheckMotorItemFinished(int[] ids)
 		{
 			foreach (int key in ids)
@@ -723,41 +723,41 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return true;
 		}
 
-		// Token: 0x04020F0C RID: 134924
+		// Token: 0x0401B83B RID: 112699
 		public const int PHANTOM_ID_OFFSET = 6000000;
 
-		// Token: 0x04020F0D RID: 134925
+		// Token: 0x0401B83C RID: 112700
 		public readonly Dictionary<int, IRoadBookLevelData> TravelLevelData = new Dictionary<int, IRoadBookLevelData>();
 
-		// Token: 0x04020F0E RID: 134926
+		// Token: 0x0401B83D RID: 112701
 		public int TravelLevel;
 
-		// Token: 0x04020F0F RID: 134927
+		// Token: 0x0401B83E RID: 112702
 		private int LastTravelLevelInternal;
 
-		// Token: 0x04020F10 RID: 134928
+		// Token: 0x0401B83F RID: 112703
 		private int LastExpCountInternal;
 
-		// Token: 0x04020F11 RID: 134929
+		// Token: 0x0401B840 RID: 112704
 		private int LastCurrentExpCountInternal;
 
-		// Token: 0x04020F12 RID: 134930
+		// Token: 0x0401B841 RID: 112705
 		protected Dictionary<int, RoadBookAreaData> AreaDataMap = new Dictionary<int, RoadBookAreaData>();
 
-		// Token: 0x04020F13 RID: 134931
+		// Token: 0x0401B842 RID: 112706
 		public Dictionary<int, global::ActivityTaskData> AreaTaskMap = new Dictionary<int, global::ActivityTaskData>();
 
-		// Token: 0x04020F14 RID: 134932
+		// Token: 0x0401B843 RID: 112707
 		[Nullable(2)]
 		public FinalTravelTaskData TaskFinalRewardData;
 
-		// Token: 0x04020F15 RID: 134933
+		// Token: 0x0401B844 RID: 112708
 		public Dictionary<int, bool> PhantomDataMap = new Dictionary<int, bool>();
 
-		// Token: 0x04020F16 RID: 134934
+		// Token: 0x0401B845 RID: 112709
 		public Dictionary<int, global::ActivityTaskData> MotorChallengeRewardDataMap = new Dictionary<int, global::ActivityTaskData>();
 
-		// Token: 0x04020F17 RID: 134935
+		// Token: 0x0401B846 RID: 112710
 		public Dictionary<int, MotorChallengePlayData> MotorChallengePlayDataMap = new Dictionary<int, MotorChallengePlayData>();
 	}
 }

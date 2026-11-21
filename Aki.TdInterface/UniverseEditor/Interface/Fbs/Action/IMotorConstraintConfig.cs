@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B15 RID: 27413
+	// Token: 0x0200724C RID: 29260
 	public struct IMotorConstraintConfig : IFlatbufferObject
 	{
-		// Token: 0x1700CBA2 RID: 52130
-		// (get) Token: 0x06030188 RID: 197000 RVA: 0x00689C0B File Offset: 0x00687E0B
+		// Token: 0x1700D671 RID: 54897
+		// (get) Token: 0x06032F5C RID: 208732 RVA: 0x006E12C3 File Offset: 0x006DF4C3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030189 RID: 197001 RVA: 0x00689C18 File Offset: 0x00687E18
+		// Token: 0x06032F5D RID: 208733 RVA: 0x006E12D0 File Offset: 0x006DF4D0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603018A RID: 197002 RVA: 0x00689C20 File Offset: 0x00687E20
+		// Token: 0x06032F5E RID: 208734 RVA: 0x006E12D8 File Offset: 0x006DF4D8
 		public static IMotorConstraintConfig GetRootAsIMotorConstraintConfig(ByteBuffer _bb)
 		{
 			return IMotorConstraintConfig.GetRootAsIMotorConstraintConfig(_bb, default(IMotorConstraintConfig));
 		}
 
-		// Token: 0x0603018B RID: 197003 RVA: 0x00689C3C File Offset: 0x00687E3C
+		// Token: 0x06032F5F RID: 208735 RVA: 0x006E12F4 File Offset: 0x006DF4F4
 		public static IMotorConstraintConfig GetRootAsIMotorConstraintConfig(ByteBuffer _bb, IMotorConstraintConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603018C RID: 197004 RVA: 0x00689C59 File Offset: 0x00687E59
+		// Token: 0x06032F60 RID: 208736 RVA: 0x006E1311 File Offset: 0x006DF511
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603018D RID: 197005 RVA: 0x00689C68 File Offset: 0x00687E68
+		// Token: 0x06032F61 RID: 208737 RVA: 0x006E1320 File Offset: 0x006DF520
 		public IMotorConstraintConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0603018E RID: 197006 RVA: 0x00689C78 File Offset: 0x00687E78
+		// Token: 0x06032F62 RID: 208738 RVA: 0x006E1330 File Offset: 0x006DF530
 		public EPlayerInputConstraintType DisableInput(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return (EPlayerInputConstraintType)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700CBA3 RID: 52131
-		// (get) Token: 0x0603018F RID: 197007 RVA: 0x00689CB8 File Offset: 0x00687EB8
+		// Token: 0x1700D672 RID: 54898
+		// (get) Token: 0x06032F63 RID: 208739 RVA: 0x006E1370 File Offset: 0x006DF570
 		public int DisableInputLength
 		{
 			get
@@ -74,13 +74,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030190 RID: 197008 RVA: 0x00689CE3 File Offset: 0x00687EE3
+		// Token: 0x06032F64 RID: 208740 RVA: 0x006E139B File Offset: 0x006DF59B
 		public Span<EPlayerInputConstraintType> GetDisableInputBytes()
 		{
 			return this.__p.__vector_as_span<EPlayerInputConstraintType>(4, 1);
 		}
 
-		// Token: 0x06030191 RID: 197009 RVA: 0x00689CF4 File Offset: 0x00687EF4
+		// Token: 0x06032F65 RID: 208741 RVA: 0x006E13AC File Offset: 0x006DF5AC
 		public EPlayerInputConstraintType[] GetDisableInputArray()
 		{
 			int num = this.__p.__offset(4);
@@ -98,8 +98,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return array;
 		}
 
-		// Token: 0x1700CBA4 RID: 52132
-		// (get) Token: 0x06030192 RID: 197010 RVA: 0x00689D60 File Offset: 0x00687F60
+		// Token: 0x1700D673 RID: 54899
+		// (get) Token: 0x06032F66 RID: 208742 RVA: 0x006E1418 File Offset: 0x006DF618
 		public byte NullMask
 		{
 			get
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030193 RID: 197011 RVA: 0x00689D9C File Offset: 0x00687F9C
+		// Token: 0x06032F67 RID: 208743 RVA: 0x006E1454 File Offset: 0x006DF654
 		public static Offset<IMotorConstraintConfig> CreateIMotorConstraintConfig(FlatBufferBuilder builder, VectorOffset DisableInputOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(2);
@@ -122,19 +122,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorConstraintConfig.EndIMotorConstraintConfig(builder);
 		}
 
-		// Token: 0x06030194 RID: 197012 RVA: 0x00689DB9 File Offset: 0x00687FB9
+		// Token: 0x06032F68 RID: 208744 RVA: 0x006E1471 File Offset: 0x006DF671
 		public static void StartIMotorConstraintConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06030195 RID: 197013 RVA: 0x00689DC2 File Offset: 0x00687FC2
+		// Token: 0x06032F69 RID: 208745 RVA: 0x006E147A File Offset: 0x006DF67A
 		public static void AddDisableInput(FlatBufferBuilder builder, VectorOffset disableInputOffset)
 		{
 			builder.AddOffset(0, disableInputOffset.Value, 0);
 		}
 
-		// Token: 0x06030196 RID: 197014 RVA: 0x00689DD4 File Offset: 0x00687FD4
+		// Token: 0x06032F6A RID: 208746 RVA: 0x006E148C File Offset: 0x006DF68C
 		public static VectorOffset CreateDisableInputVector(FlatBufferBuilder builder, EPlayerInputConstraintType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -145,7 +145,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06030197 RID: 197015 RVA: 0x00689E0B File Offset: 0x0068800B
+		// Token: 0x06032F6B RID: 208747 RVA: 0x006E14C3 File Offset: 0x006DF6C3
 		public static VectorOffset CreateDisableInputVectorBlock(FlatBufferBuilder builder, EPlayerInputConstraintType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -153,7 +153,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06030198 RID: 197016 RVA: 0x00689E25 File Offset: 0x00688025
+		// Token: 0x06032F6C RID: 208748 RVA: 0x006E14DD File Offset: 0x006DF6DD
 		public static VectorOffset CreateDisableInputVectorBlock(FlatBufferBuilder builder, ArraySegment<EPlayerInputConstraintType> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06030199 RID: 197017 RVA: 0x00689E43 File Offset: 0x00688043
+		// Token: 0x06032F6D RID: 208749 RVA: 0x006E14FB File Offset: 0x006DF6FB
 		public static VectorOffset CreateDisableInputVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -169,25 +169,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603019A RID: 197018 RVA: 0x00689E5C File Offset: 0x0068805C
+		// Token: 0x06032F6E RID: 208750 RVA: 0x006E1514 File Offset: 0x006DF714
 		public static void StartDisableInputVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0603019B RID: 197019 RVA: 0x00689E67 File Offset: 0x00688067
+		// Token: 0x06032F6F RID: 208751 RVA: 0x006E151F File Offset: 0x006DF71F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(1, nullMask, 0);
 		}
 
-		// Token: 0x0603019C RID: 197020 RVA: 0x00689E72 File Offset: 0x00688072
+		// Token: 0x06032F70 RID: 208752 RVA: 0x006E152A File Offset: 0x006DF72A
 		public static Offset<IMotorConstraintConfig> EndIMotorConstraintConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorConstraintConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0603019D RID: 197021 RVA: 0x00689E80 File Offset: 0x00688080
+		// Token: 0x06032F71 RID: 208753 RVA: 0x006E1538 File Offset: 0x006DF738
 		public IMotorConstraintConfigT UnPack()
 		{
 			IMotorConstraintConfigT motorConstraintConfigT = new IMotorConstraintConfigT();
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return motorConstraintConfigT;
 		}
 
-		// Token: 0x0603019E RID: 197022 RVA: 0x00689E9C File Offset: 0x0068809C
+		// Token: 0x06032F72 RID: 208754 RVA: 0x006E1554 File Offset: 0x006DF754
 		public void UnPackTo(IMotorConstraintConfigT _o)
 		{
 			_o.DisableInput = new List<EPlayerInputConstraintType>();
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603019F RID: 197023 RVA: 0x00689EE4 File Offset: 0x006880E4
+		// Token: 0x06032F73 RID: 208755 RVA: 0x006E159C File Offset: 0x006DF79C
 		public static Offset<IMotorConstraintConfig> Pack(FlatBufferBuilder builder, IMotorConstraintConfigT _o)
 		{
 			if (_o == null)
@@ -222,7 +222,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorConstraintConfig.CreateIMotorConstraintConfig(builder, disableInputOffset, _o.NullMask);
 		}
 
-		// Token: 0x04011396 RID: 70550
+		// Token: 0x040122A9 RID: 74409
 		private Table __p;
 	}
 }

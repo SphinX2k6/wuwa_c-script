@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002315 RID: 8981
+	// Token: 0x02002584 RID: 9604
 	public static class EElementalBoxTargetPosTypeExtensions
 	{
-		// Token: 0x0600C45D RID: 50269 RVA: 0x001CAA90 File Offset: 0x001C8C90
+		// Token: 0x0600D02C RID: 53292 RVA: 0x001E2958 File Offset: 0x001E0B58
 		public static string ToEnumString(this EElementalBoxTargetPosType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C45E RID: 50270 RVA: 0x001CAAC8 File Offset: 0x001C8CC8
+		// Token: 0x0600D02D RID: 53293 RVA: 0x001E2990 File Offset: 0x001E0B90
 		public static EElementalBoxTargetPosType FromString(string name)
 		{
 			EElementalBoxTargetPosType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C45F RID: 50271 RVA: 0x001CAAF1 File Offset: 0x001C8CF1
+		// Token: 0x0600D02E RID: 53294 RVA: 0x001E29B9 File Offset: 0x001E0BB9
 		public static bool TryFromString(string name, out EElementalBoxTargetPosType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C460 RID: 50272 RVA: 0x001CAB2A File Offset: 0x001C8D2A
+		// Token: 0x0600D02F RID: 53295 RVA: 0x001E29F2 File Offset: 0x001E0BF2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C461 RID: 50273 RVA: 0x001CAB42 File Offset: 0x001C8D42
+		// Token: 0x0600D030 RID: 53296 RVA: 0x001E2A0A File Offset: 0x001E0C0A
 		public static EElementalBoxTargetPosType[] GetValues()
 		{
 			return new EElementalBoxTargetPosType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C462 RID: 50274 RVA: 0x001CAB4E File Offset: 0x001C8D4E
+		// Token: 0x0600D031 RID: 53297 RVA: 0x001E2A16 File Offset: 0x001E0C16
 		public static string[] GetNames()
 		{
 			return new string[]

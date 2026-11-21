@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063E1 RID: 25569
+	// Token: 0x0200535F RID: 21343
 	public class MowingRiskInBattleView : BattleVisibleChildView
 	{
-		// Token: 0x060404FF RID: 263423 RVA: 0x00F8E358 File Offset: 0x00F8C558
+		// Token: 0x060351C0 RID: 217536 RVA: 0x00ED52F0 File Offset: 0x00ED34F0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040500 RID: 263424 RVA: 0x00F8E41F File Offset: 0x00F8C61F
+		// Token: 0x060351C1 RID: 217537 RVA: 0x00ED53B7 File Offset: 0x00ED35B7
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -46,14 +46,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.AddEventListeners();
 		}
 
-		// Token: 0x06040501 RID: 263425 RVA: 0x00F8E43D File Offset: 0x00F8C63D
+		// Token: 0x060351C2 RID: 217538 RVA: 0x00ED53D5 File Offset: 0x00ED35D5
 		public override void Reset()
 		{
 			base.Reset();
 			this.RemoveEventListeners();
 		}
 
-		// Token: 0x06040502 RID: 263426 RVA: 0x00F8E44B File Offset: 0x00F8C64B
+		// Token: 0x060351C3 RID: 217539 RVA: 0x00ED53E3 File Offset: 0x00ED35E3
 		protected override void OnStart()
 		{
 			UUISprite sprite = base.GetSprite(2);
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.Player.LiteJumpToEnd("Start");
 		}
 
-		// Token: 0x06040503 RID: 263427 RVA: 0x00F8E481 File Offset: 0x00F8C681
+		// Token: 0x060351C4 RID: 217540 RVA: 0x00ED5419 File Offset: 0x00ED3619
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer player = this.Player;
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.Player = null;
 		}
 
-		// Token: 0x06040504 RID: 263428 RVA: 0x00F8E49B File Offset: 0x00F8C69B
+		// Token: 0x060351C5 RID: 217541 RVA: 0x00ED5433 File Offset: 0x00ED3633
 		private void OnClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MowingBuffView, EMowingBuffViewUsage.InBattle, null);
 		}
 
-		// Token: 0x06040505 RID: 263429 RVA: 0x00F8E4B3 File Offset: 0x00F8C6B3
+		// Token: 0x060351C6 RID: 217542 RVA: 0x00ED544B File Offset: 0x00ED364B
 		[NullableContext(1)]
 		private void OnInputBuffAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification _)
 		{
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			}
 		}
 
-		// Token: 0x06040506 RID: 263430 RVA: 0x00F8E4DC File Offset: 0x00F8C6DC
+		// Token: 0x060351C7 RID: 217543 RVA: 0x00ED5474 File Offset: 0x00ED3674
 		private void AddEventListeners()
 		{
 			EventSystem.Instance.Add<IMowingRiskInBattleRootData>(EEventName.MowingRiskInBattleRootUpdate, new Action<IMowingRiskInBattleRootData>(this.HandleMowingRiskInBattleRootUpdate));
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			InputDistributeController.Instance.BindAction("割草BUFF信息PC触摸板", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputBuffAction));
 		}
 
-		// Token: 0x06040507 RID: 263431 RVA: 0x00F8E558 File Offset: 0x00F8C758
+		// Token: 0x060351C8 RID: 217544 RVA: 0x00ED54F0 File Offset: 0x00ED36F0
 		private void RemoveEventListeners()
 		{
 			EventSystem.Instance.Remove(EEventName.MowingRiskInBattleRootUpdate, new Action<IMowingRiskInBattleRootData>(this.HandleMowingRiskInBattleRootUpdate));
@@ -114,13 +114,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			InputDistributeController.Instance.UnBindAction("割草BUFF信息PC触摸板", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputBuffAction));
 		}
 
-		// Token: 0x06040508 RID: 263432 RVA: 0x00F8E5D3 File Offset: 0x00F8C7D3
+		// Token: 0x060351C9 RID: 217545 RVA: 0x00ED556B File Offset: 0x00ED376B
 		public void CustomSetActive(bool active)
 		{
 			base.SetVisible(1, active);
 		}
 
-		// Token: 0x06040509 RID: 263433 RVA: 0x00F8E5DD File Offset: 0x00F8C7DD
+		// Token: 0x060351CA RID: 217546 RVA: 0x00ED5575 File Offset: 0x00ED3775
 		[NullableContext(1)]
 		public void RefreshByCustomData(IMowingRiskInBattleRootData data)
 		{
@@ -137,14 +137,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			sprite.SetFillAmount(data.ProgressPercentage);
 		}
 
-		// Token: 0x0604050A RID: 263434 RVA: 0x00F8E60F File Offset: 0x00F8C80F
+		// Token: 0x060351CB RID: 217547 RVA: 0x00ED55A7 File Offset: 0x00ED37A7
 		[NullableContext(1)]
 		private void HandleMowingRiskInBattleRootUpdate(IMowingRiskInBattleRootData data)
 		{
 			this.RefreshByCustomData(data);
 		}
 
-		// Token: 0x0604050B RID: 263435 RVA: 0x00F8E618 File Offset: 0x00F8C818
+		// Token: 0x060351CC RID: 217548 RVA: 0x00ED55B0 File Offset: 0x00ED37B0
 		private void HandleMowingRiskOnNeedPlayLevelUpSequence()
 		{
 			UiSequencePlayer player = this.Player;
@@ -155,27 +155,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			player.LitePlayAsync("Start", false, false);
 		}
 
-		// Token: 0x04021762 RID: 137058
+		// Token: 0x0401C091 RID: 114833
 		[Nullable(2)]
 		private UiSequencePlayer Player;
 
-		// Token: 0x0200C5F9 RID: 50681
+		// Token: 0x0200AFE0 RID: 45024
 		private static class EComponent
 		{
-			// Token: 0x0403BC5F RID: 244831
+			// Token: 0x040365BE RID: 222654
 			public const int Button = 0;
 
-			// Token: 0x0403BC60 RID: 244832
+			// Token: 0x040365BF RID: 222655
 			public const int LevelText = 1;
 
-			// Token: 0x0403BC61 RID: 244833
+			// Token: 0x040365C0 RID: 222656
 			public const int ProgressSprite = 2;
 		}
 
-		// Token: 0x0200C5FA RID: 50682
+		// Token: 0x0200AFE1 RID: 45025
 		private static class EVisibleReason
 		{
-			// Token: 0x0403BC62 RID: 244834
+			// Token: 0x040365C1 RID: 222657
 			public const int Default = 1;
 		}
 	}

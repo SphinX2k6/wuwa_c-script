@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -8,22 +7,22 @@ using CSharpScript.Game.Module.Reward;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 {
-	// Token: 0x02006562 RID: 25954
+	// Token: 0x020054E0 RID: 21728
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LineCrossDetailViewModel
 	{
-		// Token: 0x17009543 RID: 38211
-		// (get) Token: 0x0604109E RID: 266398 RVA: 0x00FC3564 File Offset: 0x00FC1764
-		// (set) Token: 0x0604109F RID: 266399 RVA: 0x00FC356C File Offset: 0x00FC176C
+		// Token: 0x170068A5 RID: 26789
+		// (get) Token: 0x06035D63 RID: 220515 RVA: 0x00F0A54C File Offset: 0x00F0874C
+		// (set) Token: 0x06035D64 RID: 220516 RVA: 0x00F0A554 File Offset: 0x00F08754
 		public LineCrossActivityData LineCrossActivityData { get; set; }
 
-		// Token: 0x17009544 RID: 38212
-		// (get) Token: 0x060410A0 RID: 266400 RVA: 0x00FC3575 File Offset: 0x00FC1775
-		// (set) Token: 0x060410A1 RID: 266401 RVA: 0x00FC357D File Offset: 0x00FC177D
+		// Token: 0x170068A6 RID: 26790
+		// (get) Token: 0x06035D65 RID: 220517 RVA: 0x00F0A55D File Offset: 0x00F0875D
+		// (set) Token: 0x06035D66 RID: 220518 RVA: 0x00F0A565 File Offset: 0x00F08765
 		private LineCrossDetailView Panel { get; set; }
 
-		// Token: 0x060410A2 RID: 266402 RVA: 0x00FC3588 File Offset: 0x00FC1788
+		// Token: 0x06035D67 RID: 220519 RVA: 0x00F0A570 File Offset: 0x00F08770
 		[NullableContext(1)]
 		public void RegisterView(LineCrossDetailView view)
 		{
@@ -41,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			}
 		}
 
-		// Token: 0x060410A3 RID: 266403 RVA: 0x00FC35FE File Offset: 0x00FC17FE
+		// Token: 0x06035D68 RID: 220520 RVA: 0x00F0A5E6 File Offset: 0x00F087E6
 		public void OnSelectChallenge(int challengeId)
 		{
 			this.SelectChallengeId = challengeId;
@@ -54,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			this.PlaySwitchSequence();
 		}
 
-		// Token: 0x060410A4 RID: 266404 RVA: 0x00FC3631 File Offset: 0x00FC1831
+		// Token: 0x06035D69 RID: 220521 RVA: 0x00F0A619 File Offset: 0x00F08819
 		public void OnShowView()
 		{
 			this.RefreshRewardLayout();
@@ -68,14 +67,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			this.SaveCurrentChallengeRedDotState();
 		}
 
-		// Token: 0x060410A5 RID: 266405 RVA: 0x00FC366C File Offset: 0x00FC186C
+		// Token: 0x06035D6A RID: 220522 RVA: 0x00F0A654 File Offset: 0x00F08854
 		public bool GetCurrentChallengeFinishRewardState()
 		{
 			LineCrossActivityData lineCrossActivityData = ActivityModel.Instance.GetActivityById(this.LineCrossActivityData.Id) as LineCrossActivityData;
 			return lineCrossActivityData != null && lineCrossActivityData.GetChallengeIfGetReward(this.SelectChallengeId);
 		}
 
-		// Token: 0x060410A6 RID: 266406 RVA: 0x00FC36A8 File Offset: 0x00FC18A8
+		// Token: 0x06035D6B RID: 220523 RVA: 0x00F0A690 File Offset: 0x00F08890
 		public void RefreshRewardLayout()
 		{
 			int rewardId = LineCrossConfig.Instance.GetLineCrossChallengeById(this.SelectChallengeId).Value.RewardId;
@@ -92,19 +91,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			panel.RefreshRewardLayout(dropPackagePreviewItemList);
 		}
 
-		// Token: 0x060410A7 RID: 266407 RVA: 0x00FC36F8 File Offset: 0x00FC18F8
+		// Token: 0x06035D6C RID: 220524 RVA: 0x00F0A6E0 File Offset: 0x00F088E0
 		private void RefreshDifficultItem()
 		{
-			int[] source = LineCrossConfig.Instance.GetLineCrossGroupByGroupId(this.GroupId).Value.GetChallengeListArray() ?? Array.Empty<int>();
+			int[] dataList = LineCrossConfig.Instance.GetLineCrossGroupByGroupId(this.GroupId).Value.GetChallengeListArray() ?? Array.Empty<int>();
 			LineCrossDetailView panel = this.Panel;
 			if (panel == null)
 			{
 				return;
 			}
-			panel.RefreshDifficultItem(source.ToList<int>(), this.SelectChallengeId);
+			panel.RefreshDifficultItem(dataList, this.SelectChallengeId);
 		}
 
-		// Token: 0x060410A8 RID: 266408 RVA: 0x00FC374B File Offset: 0x00FC194B
+		// Token: 0x06035D6D RID: 220525 RVA: 0x00F0A72E File Offset: 0x00F0892E
 		private void RefreshDifficultSelection()
 		{
 			LineCrossDetailView panel = this.Panel;
@@ -115,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			panel.RefreshDifficultItemSelection(this.SelectChallengeId);
 		}
 
-		// Token: 0x060410A9 RID: 266409 RVA: 0x00FC3764 File Offset: 0x00FC1964
+		// Token: 0x06035D6E RID: 220526 RVA: 0x00F0A748 File Offset: 0x00F08948
 		private void RefreshNumSprite()
 		{
 			int num = this.GridIndex + 1;
@@ -127,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			panel.RefreshNumText(num);
 		}
 
-		// Token: 0x060410AA RID: 266410 RVA: 0x00FC378C File Offset: 0x00FC198C
+		// Token: 0x06035D6F RID: 220527 RVA: 0x00F0A770 File Offset: 0x00F08970
 		private void RefreshTitleText()
 		{
 			string name = LineCrossConfig.Instance.GetLineCrossChallengeById(this.SelectChallengeId).Value.Name;
@@ -139,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			panel.RefreshTitleText(name);
 		}
 
-		// Token: 0x060410AB RID: 266411 RVA: 0x00FC37CC File Offset: 0x00FC19CC
+		// Token: 0x06035D70 RID: 220528 RVA: 0x00F0A7B0 File Offset: 0x00F089B0
 		private void RefreshDifficultDescText()
 		{
 			string difficultDesc = LineCrossConfig.Instance.GetLineCrossChallengeById(this.SelectChallengeId).Value.DifficultDesc;
@@ -151,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			panel.RefreshDifficultDescText(difficultDesc);
 		}
 
-		// Token: 0x060410AC RID: 266412 RVA: 0x00FC380C File Offset: 0x00FC1A0C
+		// Token: 0x06035D71 RID: 220529 RVA: 0x00F0A7F0 File Offset: 0x00F089F0
 		private void RefreshDescText()
 		{
 			string desc = LineCrossConfig.Instance.GetLineCrossChallengeById(this.SelectChallengeId).Value.Desc;
@@ -163,7 +162,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			panel.ShowDescText(desc);
 		}
 
-		// Token: 0x060410AD RID: 266413 RVA: 0x00FC384C File Offset: 0x00FC1A4C
+		// Token: 0x06035D72 RID: 220530 RVA: 0x00F0A830 File Offset: 0x00F08A30
 		private void RefreshMiddle()
 		{
 			bool ifHiddenGroup = LineCrossModel.Instance.GetIfHiddenGroup(this.LineCrossActivityData.Id, this.GroupId);
@@ -176,7 +175,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			panel.RefreshMiddleByChallengeState(ifHiddenGroup, groupState);
 		}
 
-		// Token: 0x060410AE RID: 266414 RVA: 0x00FC38A3 File Offset: 0x00FC1AA3
+		// Token: 0x06035D73 RID: 220531 RVA: 0x00F0A887 File Offset: 0x00F08A87
 		private void PlaySwitchSequence()
 		{
 			LineCrossDetailView panel = this.Panel;
@@ -187,33 +186,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			panel.PlaySwitchSequence();
 		}
 
-		// Token: 0x060410AF RID: 266415 RVA: 0x00FC38B8 File Offset: 0x00FC1AB8
+		// Token: 0x06035D74 RID: 220532 RVA: 0x00F0A89C File Offset: 0x00F08A9C
 		[NullableContext(1)]
 		public string GetChallengeTitleId(int challengeId)
 		{
 			return LineCrossConfig.Instance.GetLineCrossChallengeById(challengeId).Value.SubTitle;
 		}
 
-		// Token: 0x060410B0 RID: 266416 RVA: 0x00FC38E0 File Offset: 0x00FC1AE0
+		// Token: 0x06035D75 RID: 220533 RVA: 0x00F0A8C4 File Offset: 0x00F08AC4
 		public bool GetChallengeLockState(int challengeId)
 		{
 			return !LineCrossModel.Instance.GetChallengeRequireFinishState(this.LineCrossActivityData.Id, challengeId);
 		}
 
-		// Token: 0x060410B1 RID: 266417 RVA: 0x00FC38FC File Offset: 0x00FC1AFC
+		// Token: 0x06035D76 RID: 220534 RVA: 0x00F0A8E0 File Offset: 0x00F08AE0
 		public bool GetChallengeFinishState(int challengeId)
 		{
 			LineCrossActivityData lineCrossActivityData = ActivityModel.Instance.GetActivityById(this.LineCrossActivityData.Id) as LineCrossActivityData;
 			return lineCrossActivityData != null && lineCrossActivityData.GetChallengeIfGetReward(challengeId);
 		}
 
-		// Token: 0x060410B2 RID: 266418 RVA: 0x00FC3930 File Offset: 0x00FC1B30
+		// Token: 0x06035D77 RID: 220535 RVA: 0x00F0A914 File Offset: 0x00F08B14
 		public int GetCurrentChallengeId()
 		{
 			return this.SelectChallengeId;
 		}
 
-		// Token: 0x060410B3 RID: 266419 RVA: 0x00FC3938 File Offset: 0x00FC1B38
+		// Token: 0x06035D78 RID: 220536 RVA: 0x00F0A91C File Offset: 0x00F08B1C
 		public void SaveCurrentChallengeRedDotState()
 		{
 			int currentChallengeId = this.GetCurrentChallengeId();
@@ -222,13 +221,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			EventSystem.Instance.Emit<int>(EEventName.RefreshLineCrossChallengeRedDot, currentChallengeId);
 		}
 
-		// Token: 0x04021E76 RID: 138870
+		// Token: 0x0401C7A7 RID: 116647
 		private int SelectChallengeId;
 
-		// Token: 0x04021E77 RID: 138871
+		// Token: 0x0401C7A8 RID: 116648
 		public int GroupId;
 
-		// Token: 0x04021E78 RID: 138872
+		// Token: 0x0401C7A9 RID: 116649
 		public int GridIndex;
 	}
 }

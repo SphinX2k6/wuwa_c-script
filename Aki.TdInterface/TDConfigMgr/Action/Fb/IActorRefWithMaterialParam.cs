@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002900 RID: 10496
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BDD RID: 11229
 	public class IActorRefWithMaterialParam
 	{
-		// Token: 0x0600E90F RID: 59663 RVA: 0x00222E99 File Offset: 0x00221099
+		// Token: 0x0600F761 RID: 63329 RVA: 0x002401B3 File Offset: 0x0023E3B3
 		public static IActorRefWithMaterialParam Create(IActorRefWithMaterialParam? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048D1 RID: 18641
-		// (get) Token: 0x0600E910 RID: 59664 RVA: 0x00222EB8 File Offset: 0x002210B8
+		// Token: 0x17004C55 RID: 19541
+		// (get) Token: 0x0600F762 RID: 63330 RVA: 0x002401D2 File Offset: 0x0023E3D2
 		public virtual IActorRef ActorRef
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048D2 RID: 18642
-		// (get) Token: 0x0600E911 RID: 59665 RVA: 0x00222EEC File Offset: 0x002210EC
+		// Token: 0x17004C56 RID: 19542
+		// (get) Token: 0x0600F763 RID: 63331 RVA: 0x00240206 File Offset: 0x0023E406
 		public virtual string MaterialParam
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080A8 RID: 32936
+		// Token: 0x04008775 RID: 34677
 		private IActorRefWithMaterialParam Instance;
 
-		// Token: 0x040080A9 RID: 32937
+		// Token: 0x04008776 RID: 34678
 		[Nullable(2)]
 		private IActorRef _ActorRefCache;
 
-		// Token: 0x040080AA RID: 32938
+		// Token: 0x04008777 RID: 34679
 		private bool _ActorRefInited;
 	}
 }

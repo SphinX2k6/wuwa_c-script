@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200562A RID: 22058
+	// Token: 0x02005BC8 RID: 23496
 	public class INpcModelConfigT
 	{
-		// Token: 0x1700A343 RID: 41795
-		// (get) Token: 0x06024A07 RID: 150023 RVA: 0x0050D92E File Offset: 0x0050BB2E
-		// (set) Token: 0x06024A08 RID: 150024 RVA: 0x0050D936 File Offset: 0x0050BB36
+		// Token: 0x1700ABCB RID: 43979
+		// (get) Token: 0x06026C18 RID: 158744 RVA: 0x0054DFAA File Offset: 0x0054C1AA
+		// (set) Token: 0x06026C19 RID: 158745 RVA: 0x0054DFB2 File Offset: 0x0054C1B2
 		public ENpcModelType Type { get; set; }
 
-		// Token: 0x06024A09 RID: 150025 RVA: 0x0050D93F File Offset: 0x0050BB3F
+		// Token: 0x06026C1A RID: 158746 RVA: 0x0054DFBB File Offset: 0x0054C1BB
 		public INpcModelConfigT()
 		{
 			this.Type = ENpcModelType.Mesh;

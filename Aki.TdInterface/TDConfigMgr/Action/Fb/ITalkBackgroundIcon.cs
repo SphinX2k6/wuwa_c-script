@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002524 RID: 9508
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027CB RID: 10187
 	public class ITalkBackgroundIcon : ITalkBackground
 	{
-		// Token: 0x0600D408 RID: 54280 RVA: 0x001F677E File Offset: 0x001F497E
+		// Token: 0x0600E168 RID: 57704 RVA: 0x002121DE File Offset: 0x002103DE
 		public static ITalkBackgroundIcon Create(ITalkBackgroundIcon? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B82 RID: 15234
-		// (get) Token: 0x0600D409 RID: 54281 RVA: 0x001F679D File Offset: 0x001F499D
+		// Token: 0x17003E80 RID: 16000
+		// (get) Token: 0x0600E169 RID: 57705 RVA: 0x002121FD File Offset: 0x002103FD
 		public override ETalkBackgroundType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B83 RID: 15235
-		// (get) Token: 0x0600D40A RID: 54282 RVA: 0x001F67AA File Offset: 0x001F49AA
+		// Token: 0x17003E81 RID: 16001
+		// (get) Token: 0x0600E16A RID: 57706 RVA: 0x0021220A File Offset: 0x0021040A
 		public virtual string ImageAsset
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400742A RID: 29738
+		// Token: 0x04007A7F RID: 31359
 		private ITalkBackgroundIcon Instance;
 	}
 }

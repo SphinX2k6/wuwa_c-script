@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D47 RID: 3399
+	// Token: 0x02000E2C RID: 3628
 	public struct HonamiStoryPollution : IFlatbufferObject
 	{
-		// Token: 0x1700180F RID: 6159
-		// (get) Token: 0x060080E3 RID: 32995 RVA: 0x00259725 File Offset: 0x00257925
+		// Token: 0x17001872 RID: 6258
+		// (get) Token: 0x060086FD RID: 34557 RVA: 0x00277F21 File Offset: 0x00276121
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060080E4 RID: 32996 RVA: 0x00259732 File Offset: 0x00257932
+		// Token: 0x060086FE RID: 34558 RVA: 0x00277F2E File Offset: 0x0027612E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060080E5 RID: 32997 RVA: 0x0025973C File Offset: 0x0025793C
+		// Token: 0x060086FF RID: 34559 RVA: 0x00277F38 File Offset: 0x00276138
 		public static HonamiStoryPollution GetRootAsHonamiStoryPollution(ByteBuffer _bb)
 		{
 			return HonamiStoryPollution.GetRootAsHonamiStoryPollution(_bb, default(HonamiStoryPollution));
 		}
 
-		// Token: 0x060080E6 RID: 32998 RVA: 0x00259758 File Offset: 0x00257958
+		// Token: 0x06008700 RID: 34560 RVA: 0x00277F54 File Offset: 0x00276154
 		public static HonamiStoryPollution GetRootAsHonamiStoryPollution(ByteBuffer _bb, HonamiStoryPollution obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060080E7 RID: 32999 RVA: 0x00259775 File Offset: 0x00257975
+		// Token: 0x06008701 RID: 34561 RVA: 0x00277F71 File Offset: 0x00276171
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060080E8 RID: 33000 RVA: 0x00259784 File Offset: 0x00257984
+		// Token: 0x06008702 RID: 34562 RVA: 0x00277F80 File Offset: 0x00276180
 		public HonamiStoryPollution __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001810 RID: 6160
-		// (get) Token: 0x060080E9 RID: 33001 RVA: 0x00259794 File Offset: 0x00257994
+		// Token: 0x17001873 RID: 6259
+		// (get) Token: 0x06008703 RID: 34563 RVA: 0x00277F90 File Offset: 0x00276190
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001811 RID: 6161
-		// (get) Token: 0x060080EA RID: 33002 RVA: 0x002597D0 File Offset: 0x002579D0
+		// Token: 0x17001874 RID: 6260
+		// (get) Token: 0x06008704 RID: 34564 RVA: 0x00277FCC File Offset: 0x002761CC
 		public int ActivityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001812 RID: 6162
-		// (get) Token: 0x060080EB RID: 33003 RVA: 0x0025980C File Offset: 0x00257A0C
+		// Token: 0x17001875 RID: 6261
+		// (get) Token: 0x06008705 RID: 34565 RVA: 0x00278008 File Offset: 0x00276208
 		public int Group
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001813 RID: 6163
-		// (get) Token: 0x060080EC RID: 33004 RVA: 0x00259848 File Offset: 0x00257A48
+		// Token: 0x17001876 RID: 6262
+		// (get) Token: 0x06008706 RID: 34566 RVA: 0x00278044 File Offset: 0x00276244
 		public int Level
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001814 RID: 6164
-		// (get) Token: 0x060080ED RID: 33005 RVA: 0x00259888 File Offset: 0x00257A88
+		// Token: 0x17001877 RID: 6263
+		// (get) Token: 0x06008707 RID: 34567 RVA: 0x00278084 File Offset: 0x00276284
 		public int PersistSecond
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001815 RID: 6165
-		// (get) Token: 0x060080EE RID: 33006 RVA: 0x002598C8 File Offset: 0x00257AC8
+		// Token: 0x17001878 RID: 6264
+		// (get) Token: 0x06008708 RID: 34568 RVA: 0x002780C4 File Offset: 0x002762C4
 		public int MonsterEnhanceLevel
 		{
 			get
@@ -137,7 +137,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004DC3 RID: 19907
+		// Token: 0x040053A8 RID: 21416
 		private Table __p;
 	}
 }

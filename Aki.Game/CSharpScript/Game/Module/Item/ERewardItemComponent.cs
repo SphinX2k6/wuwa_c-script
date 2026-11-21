@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Item
 {
-	// Token: 0x02005820 RID: 22560
+	// Token: 0x020047F7 RID: 18423
 	internal enum ERewardItemComponent
 	{
-		// Token: 0x0401DFAB RID: 122795
+		// Token: 0x04018A42 RID: 100930
 		Toggle,
-		// Token: 0x0401DFAC RID: 122796
+		// Token: 0x04018A43 RID: 100931
 		Texture,
-		// Token: 0x0401DFAD RID: 122797
+		// Token: 0x04018A44 RID: 100932
 		NameText,
-		// Token: 0x0401DFAE RID: 122798
+		// Token: 0x04018A45 RID: 100933
 		DoneItem,
-		// Token: 0x0401DFAF RID: 122799
+		// Token: 0x04018A46 RID: 100934
 		LimitInfoText
 	}
 }

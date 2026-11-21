@@ -5,7 +5,7 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200006E RID: 110
+	// Token: 0x02000053 RID: 83
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -14,14 +14,14 @@ namespace UnrealEngine
 	})]
 	public class UnrealObjectSetProcessor<[Nullable(0)] T> : NativeSetProcessor<T> where T : UnrealUObject
 	{
-		// Token: 0x06000DBC RID: 3516 RVA: 0x00013C48 File Offset: 0x00011E48
+		// Token: 0x0600094A RID: 2378 RVA: 0x0000E8F0 File Offset: 0x0000CAF0
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override T Get(IntPtr data, int index)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<T>(data + (IntPtr)index);
 		}
 
-		// Token: 0x06000DBD RID: 3517 RVA: 0x00013C53 File Offset: 0x00011E53
+		// Token: 0x0600094B RID: 2379 RVA: 0x0000E8FB File Offset: 0x0000CAFB
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override void Set(IntPtr data, int index, T value)
 		{

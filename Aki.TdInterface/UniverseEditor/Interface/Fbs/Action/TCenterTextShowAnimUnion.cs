@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200765A RID: 30298
+	// Token: 0x02007E68 RID: 32360
 	public class TCenterTextShowAnimUnion
 	{
-		// Token: 0x1700E5CF RID: 58831
-		// (get) Token: 0x0603728A RID: 225930 RVA: 0x0077A71A File Offset: 0x0077891A
-		// (set) Token: 0x0603728B RID: 225931 RVA: 0x0077A722 File Offset: 0x00778922
+		// Token: 0x1700F20D RID: 61965
+		// (get) Token: 0x0603A72F RID: 239407 RVA: 0x007DE816 File Offset: 0x007DCA16
+		// (set) Token: 0x0603A730 RID: 239408 RVA: 0x007DE81E File Offset: 0x007DCA1E
 		public TCenterTextShowAnim Type { get; set; }
 
-		// Token: 0x1700E5D0 RID: 58832
-		// (get) Token: 0x0603728C RID: 225932 RVA: 0x0077A72B File Offset: 0x0077892B
-		// (set) Token: 0x0603728D RID: 225933 RVA: 0x0077A733 File Offset: 0x00778933
+		// Token: 0x1700F20E RID: 61966
+		// (get) Token: 0x0603A731 RID: 239409 RVA: 0x007DE827 File Offset: 0x007DCA27
+		// (set) Token: 0x0603A732 RID: 239410 RVA: 0x007DE82F File Offset: 0x007DCA2F
 		public object Value { get; set; }
 
-		// Token: 0x0603728E RID: 225934 RVA: 0x0077A73C File Offset: 0x0077893C
+		// Token: 0x0603A733 RID: 239411 RVA: 0x007DE838 File Offset: 0x007DCA38
 		public TCenterTextShowAnimUnion()
 		{
 			this.Type = TCenterTextShowAnim.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603728F RID: 225935 RVA: 0x0077A752 File Offset: 0x00778952
+		// Token: 0x0603A734 RID: 239412 RVA: 0x007DE84E File Offset: 0x007DCA4E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037290 RID: 225936 RVA: 0x0077A764 File Offset: 0x00778964
+		// Token: 0x0603A735 RID: 239413 RVA: 0x007DE860 File Offset: 0x007DCA60
 		public IICenterTextFadeOutT AsIICenterTextFadeOut()
 		{
 			return this.As<IICenterTextFadeOutT>();
 		}
 
-		// Token: 0x06037291 RID: 225937 RVA: 0x0077A76C File Offset: 0x0077896C
+		// Token: 0x0603A736 RID: 239414 RVA: 0x007DE868 File Offset: 0x007DCA68
 		public static TCenterTextShowAnimUnion FromIICenterTextFadeOut(IICenterTextFadeOutT _iicentertextfadeout)
 		{
 			return new TCenterTextShowAnimUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037292 RID: 225938 RVA: 0x0077A781 File Offset: 0x00778981
+		// Token: 0x0603A737 RID: 239415 RVA: 0x007DE87D File Offset: 0x007DCA7D
 		public IICenterTextShowAllT AsIICenterTextShowAll()
 		{
 			return this.As<IICenterTextShowAllT>();
 		}
 
-		// Token: 0x06037293 RID: 225939 RVA: 0x0077A789 File Offset: 0x00778989
+		// Token: 0x0603A738 RID: 239416 RVA: 0x007DE885 File Offset: 0x007DCA85
 		public static TCenterTextShowAnimUnion FromIICenterTextShowAll(IICenterTextShowAllT _iicentertextshowall)
 		{
 			return new TCenterTextShowAnimUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037294 RID: 225940 RVA: 0x0077A79E File Offset: 0x0077899E
+		// Token: 0x0603A739 RID: 239417 RVA: 0x007DE89A File Offset: 0x007DCA9A
 		public IICenterTextTypeWriterT AsIICenterTextTypeWriter()
 		{
 			return this.As<IICenterTextTypeWriterT>();
 		}
 
-		// Token: 0x06037295 RID: 225941 RVA: 0x0077A7A6 File Offset: 0x007789A6
+		// Token: 0x0603A73A RID: 239418 RVA: 0x007DE8A2 File Offset: 0x007DCAA2
 		public static TCenterTextShowAnimUnion FromIICenterTextTypeWriter(IICenterTextTypeWriterT _iicentertexttypewriter)
 		{
 			return new TCenterTextShowAnimUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037296 RID: 225942 RVA: 0x0077A7BC File Offset: 0x007789BC
+		// Token: 0x0603A73B RID: 239419 RVA: 0x007DE8B8 File Offset: 0x007DCAB8
 		public static int Pack(FlatBufferBuilder builder, TCenterTextShowAnimUnion _o)
 		{
 			switch (_o.Type)

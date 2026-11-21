@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009E6 RID: 2534
+	// Token: 0x02000ABB RID: 2747
 	public class ConfigTimeScheduleById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003B78 RID: 15224 RVA: 0x001AA184 File Offset: 0x001A8384
+		// Token: 0x06004076 RID: 16502 RVA: 0x001C9518 File Offset: 0x001C7718
 		static ConfigTimeScheduleById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTimeScheduleById.CreateStaticDefaultValue), new Action(ConfigTimeScheduleById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003B79 RID: 15225 RVA: 0x001AA1A4 File Offset: 0x001A83A4
+		// Token: 0x06004077 RID: 16503 RVA: 0x001C9538 File Offset: 0x001C7738
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTimeScheduleById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003B7A RID: 15226 RVA: 0x001AA223 File Offset: 0x001A8423
+		// Token: 0x06004078 RID: 16504 RVA: 0x001C95B7 File Offset: 0x001C77B7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTimeScheduleById.LogPair = null;
 			ConfigTimeScheduleById.HandleId = 0;
 		}
 
-		// Token: 0x06003B7B RID: 15227 RVA: 0x001AA231 File Offset: 0x001A8431
+		// Token: 0x06004079 RID: 16505 RVA: 0x001C95C5 File Offset: 0x001C77C5
 		public static void Init()
 		{
 			ConfigTimeScheduleById.HandleId = ConfigCommon.InitDataStatement(ConfigTimeScheduleById.HandleId, "db_timeschedule.db", "select BinData from `TimeSchedule` where Id = ?");
 		}
 
-		// Token: 0x06003B7C RID: 15228 RVA: 0x001AA24C File Offset: 0x001A844C
+		// Token: 0x0600407A RID: 16506 RVA: 0x001C95E0 File Offset: 0x001C77E0
 		public static TimeSchedule? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTimeScheduleById.HandleId, ConfigTimeScheduleById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TimeSchedule?(rootAsTimeSchedule);
 		}
 
-		// Token: 0x04004530 RID: 17712
+		// Token: 0x04004B03 RID: 19203
 		private const string DB = "db_timeschedule.db";
 
-		// Token: 0x04004531 RID: 17713
+		// Token: 0x04004B04 RID: 19204
 		private const string FILE = "k.可视化编辑/c.Csv/r.日程表/*.csv*";
 
-		// Token: 0x04004532 RID: 17714
+		// Token: 0x04004B05 RID: 19205
 		private const string TABLE = "TimeSchedule";
 
-		// Token: 0x04004533 RID: 17715
+		// Token: 0x04004B06 RID: 19206
 		private const string COMMAND = "select BinData from `TimeSchedule` where Id = ?";
 
-		// Token: 0x04004534 RID: 17716
+		// Token: 0x04004B07 RID: 19207
 		private const string KEY_PREFIX = "TimeScheduleById";
 
-		// Token: 0x04004535 RID: 17717
+		// Token: 0x04004B08 RID: 19208
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004536 RID: 17718
+		// Token: 0x04004B09 RID: 19209
 		private static int HandleId;
 	}
 }

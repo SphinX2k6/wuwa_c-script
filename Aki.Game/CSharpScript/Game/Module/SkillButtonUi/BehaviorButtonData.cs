@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004BF9 RID: 19449
+	// Token: 0x02003BAA RID: 15274
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BehaviorButtonData
 	{
-		// Token: 0x060324B2 RID: 206002 RVA: 0x00BAF898 File Offset: 0x00BADA98
+		// Token: 0x06027258 RID: 160344 RVA: 0x00AF3EAC File Offset: 0x00AF20AC
 		[NullableContext(1)]
 		public void Refresh(EntityHandle entityHandle, BehaviorCommonButton config)
 		{
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.RefreshSkillTexturePath();
 		}
 
-		// Token: 0x060324B3 RID: 206003 RVA: 0x00BAF9C8 File Offset: 0x00BADBC8
+		// Token: 0x06027259 RID: 160345 RVA: 0x00AF3FDC File Offset: 0x00AF21DC
 		private void RefreshTag()
 		{
 			this.DisableTagIds.Clear();
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060324B4 RID: 206004 RVA: 0x00BAFC78 File Offset: 0x00BADE78
+		// Token: 0x0602725A RID: 160346 RVA: 0x00AF428C File Offset: 0x00AF248C
 		public void RefreshSkillId()
 		{
 			int skillId = this.SkillId;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060324B5 RID: 206005 RVA: 0x00BAFD18 File Offset: 0x00BADF18
+		// Token: 0x0602725B RID: 160347 RVA: 0x00AF432C File Offset: 0x00AF252C
 		private void RefreshSkillInfo()
 		{
 			if (this.SkillId == 0)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.SkillConfig = this.CharacterSkillComponent.GetSkillInfo(this.SkillId);
 		}
 
-		// Token: 0x060324B6 RID: 206006 RVA: 0x00BAFD44 File Offset: 0x00BADF44
+		// Token: 0x0602725C RID: 160348 RVA: 0x00AF4358 File Offset: 0x00AF2558
 		public void RefreshIsEnable()
 		{
 			foreach (int tagId in this.DisableTagIds)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.IsEnableInternal = true;
 		}
 
-		// Token: 0x060324B7 RID: 206007 RVA: 0x00BAFE24 File Offset: 0x00BAE024
+		// Token: 0x0602725D RID: 160349 RVA: 0x00AF4438 File Offset: 0x00AF2638
 		public void RefreshIsVisible()
 		{
 			if (this.VisibleTagIds.Count > 0)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.IsVisibleInternal = true;
 		}
 
-		// Token: 0x060324B8 RID: 206008 RVA: 0x00BAFF38 File Offset: 0x00BAE138
+		// Token: 0x0602725E RID: 160350 RVA: 0x00AF454C File Offset: 0x00AF274C
 		public void RefreshSkillTexturePath()
 		{
 			this.SkillIconTagId = 0;
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.SkillTexturePath = assetPathName.ToString();
 		}
 
-		// Token: 0x060324B9 RID: 206009 RVA: 0x00BB001C File Offset: 0x00BAE21C
+		// Token: 0x0602725F RID: 160351 RVA: 0x00AF4630 File Offset: 0x00AF2830
 		public void RefreshDynamicEffect()
 		{
 			foreach (KeyValuePair<int, int> keyValuePair in this.DynamicEffectTagIdMap)
@@ -255,13 +255,13 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.DynamicEffectId = 0;
 		}
 
-		// Token: 0x060324BA RID: 206010 RVA: 0x00BB0094 File Offset: 0x00BAE294
+		// Token: 0x06027260 RID: 160352 RVA: 0x00AF46A8 File Offset: 0x00AF28A8
 		private bool ContainTagId(int tagId)
 		{
 			return this.GameplayTagComponent != null && this.GameplayTagComponent.HasTag(tagId);
 		}
 
-		// Token: 0x060324BB RID: 206011 RVA: 0x00BB00AC File Offset: 0x00BAE2AC
+		// Token: 0x06027261 RID: 160353 RVA: 0x00AF46C0 File Offset: 0x00AF28C0
 		public void RefreshSkillTexturePathBySkillIconTag(int tagId)
 		{
 			if (this.SkillIconTagId != 0)
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.RefreshSkillTexturePathBySkillIconTagInner(tagId);
 		}
 
-		// Token: 0x060324BC RID: 206012 RVA: 0x00BB00C8 File Offset: 0x00BAE2C8
+		// Token: 0x06027262 RID: 160354 RVA: 0x00AF46DC File Offset: 0x00AF28DC
 		private bool RefreshSkillTexturePathBySkillIconTagInner(int tagId)
 		{
 			SkillIcon? skillIconConfigByTag = SkillButtonConfig.Instance.GetSkillIconConfigByTag(tagId);
@@ -291,56 +291,56 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return true;
 		}
 
-		// Token: 0x060324BD RID: 206013 RVA: 0x00BB012A File Offset: 0x00BAE32A
+		// Token: 0x06027263 RID: 160355 RVA: 0x00AF473E File Offset: 0x00AF293E
 		public bool IsEnable()
 		{
 			return this.IsEnableInternal;
 		}
 
-		// Token: 0x060324BE RID: 206014 RVA: 0x00BB0132 File Offset: 0x00BAE332
+		// Token: 0x06027264 RID: 160356 RVA: 0x00AF4746 File Offset: 0x00AF2946
 		public int? GetSkillId()
 		{
 			return new int?(this.SkillId);
 		}
 
-		// Token: 0x060324BF RID: 206015 RVA: 0x00BB013F File Offset: 0x00BAE33F
+		// Token: 0x06027265 RID: 160357 RVA: 0x00AF4753 File Offset: 0x00AF2953
 		[NullableContext(1)]
 		public Dictionary<int, HashSet<int>> GetDisableSkillIdTagIds()
 		{
 			return this.DisableSkillIdTagIds;
 		}
 
-		// Token: 0x060324C0 RID: 206016 RVA: 0x00BB0147 File Offset: 0x00BAE347
+		// Token: 0x06027266 RID: 160358 RVA: 0x00AF475B File Offset: 0x00AF295B
 		public void SetEnable(bool bEnable)
 		{
 			this.IsEnableInternal = bEnable;
 		}
 
-		// Token: 0x060324C1 RID: 206017 RVA: 0x00BB0150 File Offset: 0x00BAE350
+		// Token: 0x06027267 RID: 160359 RVA: 0x00AF4764 File Offset: 0x00AF2964
 		public int GetButtonType()
 		{
 			return this.ButtonType;
 		}
 
-		// Token: 0x060324C2 RID: 206018 RVA: 0x00BB0158 File Offset: 0x00BAE358
+		// Token: 0x06027268 RID: 160360 RVA: 0x00AF476C File Offset: 0x00AF296C
 		public bool IsVisible()
 		{
 			return this.IsVisibleInternal;
 		}
 
-		// Token: 0x060324C3 RID: 206019 RVA: 0x00BB0160 File Offset: 0x00BAE360
+		// Token: 0x06027269 RID: 160361 RVA: 0x00AF4774 File Offset: 0x00AF2974
 		public string GetSkillTexturePath()
 		{
 			return this.SkillTexturePath;
 		}
 
-		// Token: 0x060324C4 RID: 206020 RVA: 0x00BB0168 File Offset: 0x00BAE368
+		// Token: 0x0602726A RID: 160362 RVA: 0x00AF477C File Offset: 0x00AF297C
 		public bool IsSkillIdChangeByTag()
 		{
 			return this.SkillIdTagId != 0;
 		}
 
-		// Token: 0x060324C5 RID: 206021 RVA: 0x00BB0174 File Offset: 0x00BAE374
+		// Token: 0x0602726B RID: 160363 RVA: 0x00AF4788 File Offset: 0x00AF2988
 		public SkillButtonEffect? GetDynamicEffectConfig()
 		{
 			if (this.DynamicEffectId == 0)
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return SkillButtonConfig.Instance.GetSkillButtonEffectConfig(this.DynamicEffectId);
 		}
 
-		// Token: 0x060324C6 RID: 206022 RVA: 0x00BB01A4 File Offset: 0x00BAE3A4
+		// Token: 0x0602726C RID: 160364 RVA: 0x00AF47B8 File Offset: 0x00AF29B8
 		public string GetActionName()
 		{
 			string text;
@@ -361,7 +361,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return this.ActionName;
 		}
 
-		// Token: 0x060324C8 RID: 206024 RVA: 0x00BB0269 File Offset: 0x00BAE469
+		// Token: 0x0602726E RID: 160366 RVA: 0x00AF487D File Offset: 0x00AF2A7D
 		// Note: this type is marked as 'beforefieldinit'.
 		static BehaviorButtonData()
 		{
@@ -371,79 +371,79 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			BehaviorButtonData.MotorcycleActionNames = dictionary;
 		}
 
-		// Token: 0x0401ABF8 RID: 109560
+		// Token: 0x04015552 RID: 87378
 		[Nullable(1)]
 		private static readonly IReadOnlyDictionary<EBehaviorType, string> MotorcycleActionNames;
 
-		// Token: 0x0401ABF9 RID: 109561
+		// Token: 0x04015553 RID: 87379
 		public EntityHandle EntityHandle;
 
-		// Token: 0x0401ABFA RID: 109562
+		// Token: 0x04015554 RID: 87380
 		public BehaviorCommonButton? Config;
 
-		// Token: 0x0401ABFB RID: 109563
+		// Token: 0x04015555 RID: 87381
 		private CreatureDataComponent CreatureDataComponent;
 
-		// Token: 0x0401ABFC RID: 109564
+		// Token: 0x04015556 RID: 87382
 		private BaseTagComponent GameplayTagComponent;
 
-		// Token: 0x0401ABFD RID: 109565
+		// Token: 0x04015557 RID: 87383
 		private BaseSkillComponent CharacterSkillComponent;
 
-		// Token: 0x0401ABFE RID: 109566
+		// Token: 0x04015558 RID: 87384
 		public bool IsCurEntity;
 
-		// Token: 0x0401ABFF RID: 109567
+		// Token: 0x04015559 RID: 87385
 		public int ButtonType;
 
-		// Token: 0x0401AC00 RID: 109568
+		// Token: 0x0401555A RID: 87386
 		[Nullable(1)]
 		public string ActionName = "";
 
-		// Token: 0x0401AC01 RID: 109569
+		// Token: 0x0401555B RID: 87387
 		public EInputAction InputAction = EInputAction.None;
 
-		// Token: 0x0401AC02 RID: 109570
+		// Token: 0x0401555C RID: 87388
 		public RoleInfo? RoleConfig;
 
-		// Token: 0x0401AC03 RID: 109571
+		// Token: 0x0401555D RID: 87389
 		private SSkillInfo SkillConfig;
 
-		// Token: 0x0401AC04 RID: 109572
+		// Token: 0x0401555E RID: 87390
 		public int SkillId;
 
-		// Token: 0x0401AC05 RID: 109573
+		// Token: 0x0401555F RID: 87391
 		public int DefaultSkillId;
 
-		// Token: 0x0401AC06 RID: 109574
+		// Token: 0x04015560 RID: 87392
 		public Dictionary<int, int> SkillIdTagMap = new Dictionary<int, int>();
 
-		// Token: 0x0401AC07 RID: 109575
+		// Token: 0x04015561 RID: 87393
 		private int SkillIdTagId;
 
-		// Token: 0x0401AC08 RID: 109576
+		// Token: 0x04015562 RID: 87394
 		public int[] SkillIconTagIds;
 
-		// Token: 0x0401AC09 RID: 109577
+		// Token: 0x04015563 RID: 87395
 		private int SkillIconTagId;
 
-		// Token: 0x0401AC0A RID: 109578
+		// Token: 0x04015564 RID: 87396
 		public string SkillTexturePath = "";
 
-		// Token: 0x0401AC0B RID: 109579
+		// Token: 0x04015565 RID: 87397
 		public string SkillIconName = "";
 
-		// Token: 0x0401AC0C RID: 109580
+		// Token: 0x04015566 RID: 87398
 		[Nullable(1)]
 		public Dictionary<int, int> DynamicEffectTagIdMap = new Dictionary<int, int>();
 
-		// Token: 0x0401AC0D RID: 109581
+		// Token: 0x04015567 RID: 87399
 		public int DynamicEffectId;
 
-		// Token: 0x0401AC0E RID: 109582
+		// Token: 0x04015568 RID: 87400
 		public int State;
 
-		// Token: 0x0401AC0F RID: 109583
+		// Token: 0x04015569 RID: 87401
 		[Nullable(new byte[]
 		{
 			2,
@@ -451,26 +451,26 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 		})]
 		public List<string> SkillIconPathList;
 
-		// Token: 0x0401AC10 RID: 109584
+		// Token: 0x0401556A RID: 87402
 		[Nullable(1)]
 		public readonly List<int> DisableTagIds = new List<int>();
 
-		// Token: 0x0401AC11 RID: 109585
+		// Token: 0x0401556B RID: 87403
 		[Nullable(1)]
 		public readonly Dictionary<int, HashSet<int>> DisableSkillIdTagIds = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x0401AC12 RID: 109586
+		// Token: 0x0401556C RID: 87404
 		[Nullable(1)]
 		public readonly List<int> VisibleTagIds = new List<int>();
 
-		// Token: 0x0401AC13 RID: 109587
+		// Token: 0x0401556D RID: 87405
 		[Nullable(1)]
 		public readonly List<int> HiddenTagIds = new List<int>();
 
-		// Token: 0x0401AC14 RID: 109588
+		// Token: 0x0401556E RID: 87406
 		public bool IsEnableInternal;
 
-		// Token: 0x0401AC15 RID: 109589
+		// Token: 0x0401556F RID: 87407
 		public bool IsVisibleInternal;
 	}
 }

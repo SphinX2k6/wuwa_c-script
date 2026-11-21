@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000160 RID: 352
+	// Token: 0x02000170 RID: 368
 	public class ConfigChipTypeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000841 RID: 2113 RVA: 0x000881DF File Offset: 0x000863DF
+		// Token: 0x060008A1 RID: 2209 RVA: 0x0008DD3B File Offset: 0x0008BF3B
 		static ConfigChipTypeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigChipTypeById.CreateStaticDefaultValue), new Action(ConfigChipTypeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000842 RID: 2114 RVA: 0x00088200 File Offset: 0x00086400
+		// Token: 0x060008A2 RID: 2210 RVA: 0x0008DD5C File Offset: 0x0008BF5C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigChipTypeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000843 RID: 2115 RVA: 0x0008827F File Offset: 0x0008647F
+		// Token: 0x060008A3 RID: 2211 RVA: 0x0008DDDB File Offset: 0x0008BFDB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigChipTypeById.LogPair = null;
 			ConfigChipTypeById.HandleId = 0;
 		}
 
-		// Token: 0x06000844 RID: 2116 RVA: 0x0008828D File Offset: 0x0008648D
+		// Token: 0x060008A4 RID: 2212 RVA: 0x0008DDE9 File Offset: 0x0008BFE9
 		public static void Init()
 		{
 			ConfigChipTypeById.HandleId = ConfigCommon.InitDataStatement(ConfigChipTypeById.HandleId, "db_handbook.db", "select BinData from `ChipType` where Id=?");
 		}
 
-		// Token: 0x06000845 RID: 2117 RVA: 0x000882A8 File Offset: 0x000864A8
+		// Token: 0x060008A5 RID: 2213 RVA: 0x0008DE04 File Offset: 0x0008C004
 		public static ChipType? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigChipTypeById.HandleId, ConfigChipTypeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ChipType?(rootAsChipType);
 		}
 
-		// Token: 0x04000984 RID: 2436
+		// Token: 0x040009F4 RID: 2548
 		private const string DB = "db_handbook.db";
 
-		// Token: 0x04000985 RID: 2437
+		// Token: 0x040009F5 RID: 2549
 		private const string FILE = "t.图鉴系统.xlsx";
 
-		// Token: 0x04000986 RID: 2438
+		// Token: 0x040009F6 RID: 2550
 		private const string TABLE = "ChipType";
 
-		// Token: 0x04000987 RID: 2439
+		// Token: 0x040009F7 RID: 2551
 		private const string COMMAND = "select BinData from `ChipType` where Id=?";
 
-		// Token: 0x04000988 RID: 2440
+		// Token: 0x040009F8 RID: 2552
 		private const string KEY_PREFIX = "ChipTypeById";
 
-		// Token: 0x04000989 RID: 2441
+		// Token: 0x040009F9 RID: 2553
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400098A RID: 2442
+		// Token: 0x040009FA RID: 2554
 		private static int HandleId;
 	}
 }

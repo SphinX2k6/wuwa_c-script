@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004865 RID: 18533
+	// Token: 0x02004CCA RID: 19658
 	public struct IEditorRestartInfo : IFlatbufferObject
 	{
-		// Token: 0x17008576 RID: 34166
-		// (get) Token: 0x0601CC0E RID: 117774 RVA: 0x004107E2 File Offset: 0x0040E9E2
+		// Token: 0x17008BC0 RID: 35776
+		// (get) Token: 0x0601E3FF RID: 123903 RVA: 0x0043D08C File Offset: 0x0043B28C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CC0F RID: 117775 RVA: 0x004107EF File Offset: 0x0040E9EF
+		// Token: 0x0601E400 RID: 123904 RVA: 0x0043D099 File Offset: 0x0043B299
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601CC10 RID: 117776 RVA: 0x004107F8 File Offset: 0x0040E9F8
+		// Token: 0x0601E401 RID: 123905 RVA: 0x0043D0A0 File Offset: 0x0043B2A0
 		public static IEditorRestartInfo GetRootAsIEditorRestartInfo(ByteBuffer _bb)
 		{
 			return IEditorRestartInfo.GetRootAsIEditorRestartInfo(_bb, default(IEditorRestartInfo));
 		}
 
-		// Token: 0x0601CC11 RID: 117777 RVA: 0x00410814 File Offset: 0x0040EA14
+		// Token: 0x0601E402 RID: 123906 RVA: 0x0043D0BC File Offset: 0x0043B2BC
 		public static IEditorRestartInfo GetRootAsIEditorRestartInfo(ByteBuffer _bb, IEditorRestartInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601CC12 RID: 117778 RVA: 0x00410831 File Offset: 0x0040EA31
+		// Token: 0x0601E403 RID: 123907 RVA: 0x0043D0D9 File Offset: 0x0043B2D9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601CC13 RID: 117779 RVA: 0x00410840 File Offset: 0x0040EA40
+		// Token: 0x0601E404 RID: 123908 RVA: 0x0043D0E8 File Offset: 0x0043B2E8
 		public IEditorRestartInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008577 RID: 34167
-		// (get) Token: 0x0601CC14 RID: 117780 RVA: 0x00410850 File Offset: 0x0040EA50
+		// Token: 0x17008BC1 RID: 35777
+		// (get) Token: 0x0601E405 RID: 123909 RVA: 0x0043D0F8 File Offset: 0x0043B2F8
 		public bool IsRestarting
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008578 RID: 34168
-		// (get) Token: 0x0601CC15 RID: 117781 RVA: 0x00410890 File Offset: 0x0040EA90
+		// Token: 0x17008BC2 RID: 35778
+		// (get) Token: 0x0601E406 RID: 123910 RVA: 0x0043D138 File Offset: 0x0043B338
 		public bool IsUseIdleLoad
 		{
 			get
@@ -69,8 +69,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008579 RID: 34169
-		// (get) Token: 0x0601CC16 RID: 117782 RVA: 0x004108D0 File Offset: 0x0040EAD0
+		// Token: 0x17008BC3 RID: 35779
+		// (get) Token: 0x0601E407 RID: 123911 RVA: 0x0043D178 File Offset: 0x0043B378
 		public TEditorRestartReason Reason
 		{
 			get
@@ -84,8 +84,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x1700857A RID: 34170
-		// (get) Token: 0x0601CC17 RID: 117783 RVA: 0x0041090C File Offset: 0x0040EB0C
+		// Token: 0x17008BC4 RID: 35780
+		// (get) Token: 0x0601E408 RID: 123912 RVA: 0x0043D1B4 File Offset: 0x0043B3B4
 		public long Timestamp
 		{
 			get
@@ -99,7 +99,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CC18 RID: 117784 RVA: 0x0041094A File Offset: 0x0040EB4A
+		// Token: 0x0601E409 RID: 123913 RVA: 0x0043D1F2 File Offset: 0x0043B3F2
 		public static Offset<IEditorRestartInfo> CreateIEditorRestartInfo(FlatBufferBuilder builder, bool IsRestarting = false, bool IsUseIdleLoad = false, TEditorRestartReason Reason = TEditorRestartReason.ChangeMap, long Timestamp = 0L)
 		{
 			builder.StartTable(4);
@@ -110,43 +110,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IEditorRestartInfo.EndIEditorRestartInfo(builder);
 		}
 
-		// Token: 0x0601CC19 RID: 117785 RVA: 0x00410976 File Offset: 0x0040EB76
+		// Token: 0x0601E40A RID: 123914 RVA: 0x0043D21E File Offset: 0x0043B41E
 		public static void StartIEditorRestartInfo(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601CC1A RID: 117786 RVA: 0x0041097F File Offset: 0x0040EB7F
+		// Token: 0x0601E40B RID: 123915 RVA: 0x0043D227 File Offset: 0x0043B427
 		public static void AddIsRestarting(FlatBufferBuilder builder, bool isRestarting)
 		{
 			builder.AddBool(0, isRestarting, false);
 		}
 
-		// Token: 0x0601CC1B RID: 117787 RVA: 0x0041098A File Offset: 0x0040EB8A
+		// Token: 0x0601E40C RID: 123916 RVA: 0x0043D232 File Offset: 0x0043B432
 		public static void AddIsUseIdleLoad(FlatBufferBuilder builder, bool isUseIdleLoad)
 		{
 			builder.AddBool(1, isUseIdleLoad, false);
 		}
 
-		// Token: 0x0601CC1C RID: 117788 RVA: 0x00410995 File Offset: 0x0040EB95
+		// Token: 0x0601E40D RID: 123917 RVA: 0x0043D23D File Offset: 0x0043B43D
 		public static void AddReason(FlatBufferBuilder builder, TEditorRestartReason reason)
 		{
 			builder.AddByte(2, (byte)reason, 0);
 		}
 
-		// Token: 0x0601CC1D RID: 117789 RVA: 0x004109A0 File Offset: 0x0040EBA0
+		// Token: 0x0601E40E RID: 123918 RVA: 0x0043D248 File Offset: 0x0043B448
 		public static void AddTimestamp(FlatBufferBuilder builder, long timestamp)
 		{
 			builder.AddLong(3, timestamp, 0L);
 		}
 
-		// Token: 0x0601CC1E RID: 117790 RVA: 0x004109AC File Offset: 0x0040EBAC
+		// Token: 0x0601E40F RID: 123919 RVA: 0x0043D254 File Offset: 0x0043B454
 		public static Offset<IEditorRestartInfo> EndIEditorRestartInfo(FlatBufferBuilder builder)
 		{
 			return new Offset<IEditorRestartInfo>(builder.EndTable());
 		}
 
-		// Token: 0x0601CC1F RID: 117791 RVA: 0x004109BC File Offset: 0x0040EBBC
+		// Token: 0x0601E410 RID: 123920 RVA: 0x0043D264 File Offset: 0x0043B464
 		public IEditorRestartInfoT UnPack()
 		{
 			IEditorRestartInfoT editorRestartInfoT = new IEditorRestartInfoT();
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return editorRestartInfoT;
 		}
 
-		// Token: 0x0601CC20 RID: 117792 RVA: 0x004109D7 File Offset: 0x0040EBD7
+		// Token: 0x0601E411 RID: 123921 RVA: 0x0043D27F File Offset: 0x0043B47F
 		public void UnPackTo(IEditorRestartInfoT _o)
 		{
 			_o.IsRestarting = this.IsRestarting;
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			_o.Timestamp = this.Timestamp;
 		}
 
-		// Token: 0x0601CC21 RID: 117793 RVA: 0x00410A0C File Offset: 0x0040EC0C
+		// Token: 0x0601E412 RID: 123922 RVA: 0x0043D2B4 File Offset: 0x0043B4B4
 		public static Offset<IEditorRestartInfo> Pack(FlatBufferBuilder builder, IEditorRestartInfoT _o)
 		{
 			if (_o == null)
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IEditorRestartInfo.CreateIEditorRestartInfo(builder, _o.IsRestarting, _o.IsUseIdleLoad, _o.Reason, _o.Timestamp);
 		}
 
-		// Token: 0x0400CDD0 RID: 52688
+		// Token: 0x0400D80A RID: 55306
 		private Table __p;
 	}
 }

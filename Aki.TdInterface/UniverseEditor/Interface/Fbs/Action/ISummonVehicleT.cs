@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007239 RID: 29241
+	// Token: 0x02007A0E RID: 31246
 	public class ISummonVehicleT
 	{
-		// Token: 0x1700D8FE RID: 55550
-		// (get) Token: 0x06033DD8 RID: 212440 RVA: 0x006FA66D File Offset: 0x006F886D
-		// (set) Token: 0x06033DD9 RID: 212441 RVA: 0x006FA675 File Offset: 0x006F8875
+		// Token: 0x1700E4F7 RID: 58615
+		// (get) Token: 0x060370DA RID: 225498 RVA: 0x0075B9CD File Offset: 0x00759BCD
+		// (set) Token: 0x060370DB RID: 225499 RVA: 0x0075B9D5 File Offset: 0x00759BD5
 		public ESummonEntityType Type { get; set; }
 
-		// Token: 0x1700D8FF RID: 55551
-		// (get) Token: 0x06033DDA RID: 212442 RVA: 0x006FA67E File Offset: 0x006F887E
-		// (set) Token: 0x06033DDB RID: 212443 RVA: 0x006FA686 File Offset: 0x006F8886
+		// Token: 0x1700E4F8 RID: 58616
+		// (get) Token: 0x060370DC RID: 225500 RVA: 0x0075B9DE File Offset: 0x00759BDE
+		// (set) Token: 0x060370DD RID: 225501 RVA: 0x0075B9E6 File Offset: 0x00759BE6
 		public string TemplateId { get; set; }
 
-		// Token: 0x1700D900 RID: 55552
-		// (get) Token: 0x06033DDC RID: 212444 RVA: 0x006FA68F File Offset: 0x006F888F
-		// (set) Token: 0x06033DDD RID: 212445 RVA: 0x006FA697 File Offset: 0x006F8897
+		// Token: 0x1700E4F9 RID: 58617
+		// (get) Token: 0x060370DE RID: 225502 RVA: 0x0075B9EF File Offset: 0x00759BEF
+		// (set) Token: 0x060370DF RID: 225503 RVA: 0x0075B9F7 File Offset: 0x00759BF7
 		public int PositionEntityId { get; set; }
 
-		// Token: 0x06033DDE RID: 212446 RVA: 0x006FA6A0 File Offset: 0x006F88A0
+		// Token: 0x060370E0 RID: 225504 RVA: 0x0075BA00 File Offset: 0x00759C00
 		public ISummonVehicleT()
 		{
 			this.Type = ESummonEntityType.Vehicle;

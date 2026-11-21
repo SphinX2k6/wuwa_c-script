@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02000FE6 RID: 4070
+// Token: 0x0200049B RID: 1179
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 {
-	// Token: 0x0600687B RID: 26747 RVA: 0x0014C164 File Offset: 0x0014A364
+	// Token: 0x06003C13 RID: 15379 RVA: 0x00154A28 File Offset: 0x00152C28
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		};
 	}
 
-	// Token: 0x0600687C RID: 26748 RVA: 0x0014C2C4 File Offset: 0x0014A4C4
+	// Token: 0x06003C14 RID: 15380 RVA: 0x00154B88 File Offset: 0x00152D88
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -48,7 +48,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		extendToggle.OnPointEnterCallBack.Bind(new Action<EToggleState>(this.OnPointerEnterInternal));
 	}
 
-	// Token: 0x0600687D RID: 26749 RVA: 0x0014C31C File Offset: 0x0014A51C
+	// Token: 0x06003C15 RID: 15381 RVA: 0x00154BE0 File Offset: 0x00152DE0
 	[NullableContext(1)]
 	public override void Refresh(FurnitureScrollItemData data, bool isSelected, int gridIndex)
 	{
@@ -65,7 +65,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		this.RefreshQuality();
 	}
 
-	// Token: 0x0600687E RID: 26750 RVA: 0x0014C370 File Offset: 0x0014A570
+	// Token: 0x06003C16 RID: 15382 RVA: 0x00154C34 File Offset: 0x00152E34
 	public void RefreshItemToggle(bool bToEndFrame = false)
 	{
 		FurnitureScrollItemData data = this.Data;
@@ -73,7 +73,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		base.GetExtendToggle(0).SetToggleStateForce(state, false, false, bToEndFrame);
 	}
 
-	// Token: 0x0600687F RID: 26751 RVA: 0x0014C3A8 File Offset: 0x0014A5A8
+	// Token: 0x06003C17 RID: 15383 RVA: 0x00154C6C File Offset: 0x00152E6C
 	public void RefreshCheckItem()
 	{
 		FurnitureScrollItemData data = this.Data;
@@ -81,7 +81,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		base.GetItem(4).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06006880 RID: 26752 RVA: 0x0014C3D8 File Offset: 0x0014A5D8
+	// Token: 0x06003C18 RID: 15384 RVA: 0x00154C9C File Offset: 0x00152E9C
 	public void RefreshFurnitureIcon()
 	{
 		FurnitureScrollItemData data = this.Data;
@@ -89,7 +89,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		base.SetTextureByPath(((furniture != null) ? furniture.GetValueOrDefault().Icon : null) ?? "", base.GetTexture(2), null, null);
 	}
 
-	// Token: 0x06006881 RID: 26753 RVA: 0x0014C440 File Offset: 0x0014A640
+	// Token: 0x06003C19 RID: 15385 RVA: 0x00154D04 File Offset: 0x00152F04
 	public void RefreshCount()
 	{
 		FurnitureScrollItemData data = this.Data;
@@ -110,7 +110,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		}
 	}
 
-	// Token: 0x06006882 RID: 26754 RVA: 0x0014C4E0 File Offset: 0x0014A6E0
+	// Token: 0x06003C1A RID: 15386 RVA: 0x00154DA4 File Offset: 0x00152FA4
 	public void RefreshBan()
 	{
 		FurnitureScrollItemData data = this.Data;
@@ -124,7 +124,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		base.GetItem(3).SetUIActive(!flag && !flag2 && num > 0 && num2 <= 0);
 	}
 
-	// Token: 0x06006883 RID: 26755 RVA: 0x0014C564 File Offset: 0x0014A764
+	// Token: 0x06003C1B RID: 15387 RVA: 0x00154E28 File Offset: 0x00153028
 	public void RefreshRoleIcon()
 	{
 		FurnitureScrollItemData data = this.Data;
@@ -137,7 +137,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		}
 	}
 
-	// Token: 0x06006884 RID: 26756 RVA: 0x0014C5F4 File Offset: 0x0014A7F4
+	// Token: 0x06003C1C RID: 15388 RVA: 0x00154EB8 File Offset: 0x001530B8
 	public void RefreshAtmosphere()
 	{
 		FurnitureScrollItemData data = this.Data;
@@ -145,7 +145,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		base.GetText(9).SetText(((furniture != null) ? furniture.GetValueOrDefault().Atmosphere.ToString() : null) ?? "", true);
 	}
 
-	// Token: 0x06006885 RID: 26757 RVA: 0x0014C65B File Offset: 0x0014A85B
+	// Token: 0x06003C1D RID: 15389 RVA: 0x00154F1F File Offset: 0x0015311F
 	public void RefreshLock()
 	{
 		UUIItem item = base.GetItem(10);
@@ -153,7 +153,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		item.SetUIActive(data != null && data.IsLock);
 	}
 
-	// Token: 0x06006886 RID: 26758 RVA: 0x0014C67C File Offset: 0x0014A87C
+	// Token: 0x06003C1E RID: 15390 RVA: 0x00154F40 File Offset: 0x00153140
 	public void RefreshRedDot()
 	{
 		UUIItem item = base.GetItem(11);
@@ -161,7 +161,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		item.SetUIActive(data != null && data.RedDotShowState);
 	}
 
-	// Token: 0x06006887 RID: 26759 RVA: 0x0014C6A0 File Offset: 0x0014A8A0
+	// Token: 0x06003C1F RID: 15391 RVA: 0x00154F64 File Offset: 0x00153164
 	public void RefreshQuality()
 	{
 		FurnitureScrollItemData data = this.Data;
@@ -171,7 +171,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		base.GetSprite(1).SetColor(color);
 	}
 
-	// Token: 0x06006888 RID: 26760 RVA: 0x0014C70C File Offset: 0x0014A90C
+	// Token: 0x06003C20 RID: 15392 RVA: 0x00154FD0 File Offset: 0x001531D0
 	private void OnToggleStateChange(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -196,13 +196,13 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		}
 	}
 
-	// Token: 0x06006889 RID: 26761 RVA: 0x0014C73F File Offset: 0x0014A93F
+	// Token: 0x06003C21 RID: 15393 RVA: 0x00155003 File Offset: 0x00153203
 	private bool CanExecuteChangeInternal()
 	{
 		return this.CanToggleChangedDelegate == null || this.CanToggleChangedDelegate(base.GridIndex);
 	}
 
-	// Token: 0x0600688A RID: 26762 RVA: 0x0014C75C File Offset: 0x0014A95C
+	// Token: 0x06003C22 RID: 15394 RVA: 0x00155020 File Offset: 0x00153220
 	private void OnPointUpCallBackInternal(EToggleState _)
 	{
 		Action<int> onPointUpCallBackDelegate = this.OnPointUpCallBackDelegate;
@@ -213,7 +213,7 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		onPointUpCallBackDelegate(base.GridIndex);
 	}
 
-	// Token: 0x0600688B RID: 26763 RVA: 0x0014C774 File Offset: 0x0014A974
+	// Token: 0x06003C23 RID: 15395 RVA: 0x00155038 File Offset: 0x00153238
 	private void OnPointerEnterInternal(EToggleState _)
 	{
 		Action<int> onPointerEnterDelegate = this.OnPointerEnterDelegate;
@@ -224,21 +224,21 @@ public class FurnitureScrollItem : GridProxyAbstract<FurnitureScrollItemData>
 		onPointerEnterDelegate(base.GridIndex);
 	}
 
-	// Token: 0x04002FD1 RID: 12241
+	// Token: 0x0400306A RID: 12394
 	private FurnitureScrollItemData Data;
 
-	// Token: 0x04002FD2 RID: 12242
+	// Token: 0x0400306B RID: 12395
 	public Action<int> OnItemSelectedDelegate;
 
-	// Token: 0x04002FD3 RID: 12243
+	// Token: 0x0400306C RID: 12396
 	public Action<int> OnItemUnSelectedDelegate;
 
-	// Token: 0x04002FD4 RID: 12244
+	// Token: 0x0400306D RID: 12397
 	public Func<int, bool> CanToggleChangedDelegate;
 
-	// Token: 0x04002FD5 RID: 12245
+	// Token: 0x0400306E RID: 12398
 	public Action<int> OnPointUpCallBackDelegate;
 
-	// Token: 0x04002FD6 RID: 12246
+	// Token: 0x0400306F RID: 12399
 	public Action<int> OnPointerEnterDelegate;
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007ED RID: 2029
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000890 RID: 2192
 	public class IWoodenOxenAndFlowingHorsesPerform : INpcRideInVehiclePerformType
 	{
-		// Token: 0x06002C11 RID: 11281 RVA: 0x00072A28 File Offset: 0x00070C28
+		// Token: 0x06002F41 RID: 12097 RVA: 0x00079D8C File Offset: 0x00077F8C
 		private IWoodenOxenAndFlowingHorsesPerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002C12 RID: 11282 RVA: 0x00072A60 File Offset: 0x00070C60
+		// Token: 0x06002F42 RID: 12098 RVA: 0x00079DC4 File Offset: 0x00077FC4
 		public static IWoodenOxenAndFlowingHorsesPerform Create([Nullable(2)] IWoodenOxenAndFlowingHorsesPerform instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C13 RID: 11283 RVA: 0x00072A73 File Offset: 0x00070C73
+		// Token: 0x06002F43 RID: 12099 RVA: 0x00079DD7 File Offset: 0x00077FD7
 		public static IWoodenOxenAndFlowingHorsesPerform CreateFromSetValue([Nullable(2)] IWoodenOxenAndFlowingHorsesPerform_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C14 RID: 11284 RVA: 0x00072A88 File Offset: 0x00070C88
+		// Token: 0x06002F44 RID: 12100 RVA: 0x00079DEC File Offset: 0x00077FEC
 		public new IWoodenOxenAndFlowingHorsesPerform_SetValue ToSetValue()
 		{
 			return new IWoodenOxenAndFlowingHorsesPerform_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B88 RID: 2952
-		// (get) Token: 0x06002C15 RID: 11285 RVA: 0x00072AE2 File Offset: 0x00070CE2
-		// (set) Token: 0x06002C16 RID: 11286 RVA: 0x00072B0D File Offset: 0x00070D0D
+		// Token: 0x17000C4B RID: 3147
+		// (get) Token: 0x06002F45 RID: 12101 RVA: 0x00079E46 File Offset: 0x00078046
+		// (set) Token: 0x06002F46 RID: 12102 RVA: 0x00079E71 File Offset: 0x00078071
 		public override EVehicleType Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B89 RID: 2953
-		// (get) Token: 0x06002C17 RID: 11287 RVA: 0x00072B1B File Offset: 0x00070D1B
-		// (set) Token: 0x06002C18 RID: 11288 RVA: 0x00072B46 File Offset: 0x00070D46
+		// Token: 0x17000C4C RID: 3148
+		// (get) Token: 0x06002F47 RID: 12103 RVA: 0x00079E7F File Offset: 0x0007807F
+		// (set) Token: 0x06002F48 RID: 12104 RVA: 0x00079EAA File Offset: 0x000780AA
 		public override string Montage
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B8A RID: 2954
-		// (get) Token: 0x06002C19 RID: 11289 RVA: 0x00072B54 File Offset: 0x00070D54
-		// (set) Token: 0x06002C1A RID: 11290 RVA: 0x00072BB5 File Offset: 0x00070DB5
+		// Token: 0x17000C4D RID: 3149
+		// (get) Token: 0x06002F49 RID: 12105 RVA: 0x00079EB8 File Offset: 0x000780B8
+		// (set) Token: 0x06002F4A RID: 12106 RVA: 0x00079F19 File Offset: 0x00078119
 		public virtual IWoodenOxenAndFlowingHorsesPerformConfig MountPerformLeft
 		{
 			get
@@ -141,9 +139,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B8B RID: 2955
-		// (get) Token: 0x06002C1B RID: 11291 RVA: 0x00072BCC File Offset: 0x00070DCC
-		// (set) Token: 0x06002C1C RID: 11292 RVA: 0x00072C2D File Offset: 0x00070E2D
+		// Token: 0x17000C4E RID: 3150
+		// (get) Token: 0x06002F4B RID: 12107 RVA: 0x00079F30 File Offset: 0x00078130
+		// (set) Token: 0x06002F4C RID: 12108 RVA: 0x00079F91 File Offset: 0x00078191
 		public virtual IWoodenOxenAndFlowingHorsesPerformConfig MountPerformRight
 		{
 			get
@@ -171,9 +169,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B8C RID: 2956
-		// (get) Token: 0x06002C1D RID: 11293 RVA: 0x00072C44 File Offset: 0x00070E44
-		// (set) Token: 0x06002C1E RID: 11294 RVA: 0x00072CA5 File Offset: 0x00070EA5
+		// Token: 0x17000C4F RID: 3151
+		// (get) Token: 0x06002F4D RID: 12109 RVA: 0x00079FA8 File Offset: 0x000781A8
+		// (set) Token: 0x06002F4E RID: 12110 RVA: 0x0007A009 File Offset: 0x00078209
 		public virtual IWoodenOxenAndFlowingHorsesPerformConfig DismountPerformLeft
 		{
 			get
@@ -201,9 +199,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B8D RID: 2957
-		// (get) Token: 0x06002C1F RID: 11295 RVA: 0x00072CBC File Offset: 0x00070EBC
-		// (set) Token: 0x06002C20 RID: 11296 RVA: 0x00072D1D File Offset: 0x00070F1D
+		// Token: 0x17000C50 RID: 3152
+		// (get) Token: 0x06002F4F RID: 12111 RVA: 0x0007A020 File Offset: 0x00078220
+		// (set) Token: 0x06002F50 RID: 12112 RVA: 0x0007A081 File Offset: 0x00078281
 		public virtual IWoodenOxenAndFlowingHorsesPerformConfig DismountPerformRight
 		{
 			get
@@ -231,36 +229,36 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D34 RID: 7476
+		// Token: 0x04001F40 RID: 8000
 		[Nullable(2)]
 		protected new IWoodenOxenAndFlowingHorsesPerform FbInstance;
 
-		// Token: 0x04001D35 RID: 7477
+		// Token: 0x04001F41 RID: 8001
 		[Nullable(2)]
 		protected new IWoodenOxenAndFlowingHorsesPerform_SetValue PocoInterface;
 
-		// Token: 0x04001D36 RID: 7478
+		// Token: 0x04001F42 RID: 8002
 		private IWoodenOxenAndFlowingHorsesPerformConfig _MountPerformLeftCache;
 
-		// Token: 0x04001D37 RID: 7479
+		// Token: 0x04001F43 RID: 8003
 		private bool _MountPerformLeftInited;
 
-		// Token: 0x04001D38 RID: 7480
+		// Token: 0x04001F44 RID: 8004
 		private IWoodenOxenAndFlowingHorsesPerformConfig _MountPerformRightCache;
 
-		// Token: 0x04001D39 RID: 7481
+		// Token: 0x04001F45 RID: 8005
 		private bool _MountPerformRightInited;
 
-		// Token: 0x04001D3A RID: 7482
+		// Token: 0x04001F46 RID: 8006
 		private IWoodenOxenAndFlowingHorsesPerformConfig _DismountPerformLeftCache;
 
-		// Token: 0x04001D3B RID: 7483
+		// Token: 0x04001F47 RID: 8007
 		private bool _DismountPerformLeftInited;
 
-		// Token: 0x04001D3C RID: 7484
+		// Token: 0x04001F48 RID: 8008
 		private IWoodenOxenAndFlowingHorsesPerformConfig _DismountPerformRightCache;
 
-		// Token: 0x04001D3D RID: 7485
+		// Token: 0x04001F49 RID: 8009
 		private bool _DismountPerformRightInited;
 	}
 }

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000951 RID: 2385
+	// Token: 0x02000940 RID: 2368
 	public sealed class LongShanActivity : IMessage<LongShanActivity>, IMessage, IEquatable<LongShanActivity>, IDeepCloneable<LongShanActivity>, IBufferMessage
 	{
-		// Token: 0x0600D238 RID: 53816 RVA: 0x001EFBD2 File Offset: 0x001EDDD2
+		// Token: 0x0600D11E RID: 53534 RVA: 0x001ED9EA File Offset: 0x001EBBEA
 		[NullableContext(1)]
 		public static LongShanActivity Create()
 		{
 			return new LongShanActivity();
 		}
 
-		// Token: 0x17002A8C RID: 10892
-		// (get) Token: 0x0600D239 RID: 53817 RVA: 0x001EFBD9 File Offset: 0x001EDDD9
+		// Token: 0x17002A4E RID: 10830
+		// (get) Token: 0x0600D11F RID: 53535 RVA: 0x001ED9F1 File Offset: 0x001EBBF1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A8D RID: 10893
-		// (get) Token: 0x0600D23A RID: 53818 RVA: 0x001EFBDC File Offset: 0x001EDDDC
+		// Token: 0x17002A4F RID: 10831
+		// (get) Token: 0x0600D120 RID: 53536 RVA: 0x001ED9F4 File Offset: 0x001EBBF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D23B RID: 53819 RVA: 0x001EFBE3 File Offset: 0x001EDDE3
+		// Token: 0x0600D121 RID: 53537 RVA: 0x001ED9FB File Offset: 0x001EBBFB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LongShanActivity()
 		{
 		}
 
-		// Token: 0x0600D23C RID: 53820 RVA: 0x001EFC01 File Offset: 0x001EDE01
+		// Token: 0x0600D122 RID: 53538 RVA: 0x001EDA19 File Offset: 0x001EBC19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LongShanActivity(LongShanActivity other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600D23D RID: 53821 RVA: 0x001EFC3C File Offset: 0x001EDE3C
+		// Token: 0x0600D123 RID: 53539 RVA: 0x001EDA54 File Offset: 0x001EBC54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LongShanActivity Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new LongShanActivity(this);
 		}
 
-		// Token: 0x17002A8E RID: 10894
-		// (get) Token: 0x0600D23E RID: 53822 RVA: 0x001EFC44 File Offset: 0x001EDE44
+		// Token: 0x17002A50 RID: 10832
+		// (get) Token: 0x0600D124 RID: 53540 RVA: 0x001EDA5C File Offset: 0x001EBC5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<LongShanStageInfo> Stages
@@ -79,8 +79,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A8F RID: 10895
-		// (get) Token: 0x0600D23F RID: 53823 RVA: 0x001EFC4C File Offset: 0x001EDE4C
+		// Token: 0x17002A51 RID: 10833
+		// (get) Token: 0x0600D125 RID: 53541 RVA: 0x001EDA64 File Offset: 0x001EBC64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> ScoreRewardedIds
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D240 RID: 53824 RVA: 0x001EFC54 File Offset: 0x001EDE54
+		// Token: 0x0600D126 RID: 53542 RVA: 0x001EDA6C File Offset: 0x001EBC6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return this.Equals(other as LongShanActivity);
 		}
 
-		// Token: 0x0600D241 RID: 53825 RVA: 0x001EFC64 File Offset: 0x001EDE64
+		// Token: 0x0600D127 RID: 53543 RVA: 0x001EDA7C File Offset: 0x001EBC7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(LongShanActivity other)
@@ -107,7 +107,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.stages_.Equals(other.stages_) && this.scoreRewardedIds_.Equals(other.scoreRewardedIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600D242 RID: 53826 RVA: 0x001EFCB8 File Offset: 0x001EDEB8
+		// Token: 0x0600D128 RID: 53544 RVA: 0x001EDAD0 File Offset: 0x001EBCD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -122,7 +122,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D243 RID: 53827 RVA: 0x001EFCFA File Offset: 0x001EDEFA
+		// Token: 0x0600D129 RID: 53545 RVA: 0x001EDB12 File Offset: 0x001EBD12
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600D244 RID: 53828 RVA: 0x001EFD07 File Offset: 0x001EDF07
+		// Token: 0x0600D12A RID: 53546 RVA: 0x001EDB1F File Offset: 0x001EBD1F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600D245 RID: 53829 RVA: 0x001EFD10 File Offset: 0x001EDF10
+		// Token: 0x0600D12B RID: 53547 RVA: 0x001EDB28 File Offset: 0x001EBD28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D246 RID: 53830 RVA: 0x001EFD48 File Offset: 0x001EDF48
+		// Token: 0x0600D12C RID: 53548 RVA: 0x001EDB60 File Offset: 0x001EBD60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -166,7 +166,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D247 RID: 53831 RVA: 0x001EFD94 File Offset: 0x001EDF94
+		// Token: 0x0600D12D RID: 53549 RVA: 0x001EDBAC File Offset: 0x001EBDAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(LongShanActivity other)
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600D248 RID: 53832 RVA: 0x001EFDD3 File Offset: 0x001EDFD3
+		// Token: 0x0600D12E RID: 53550 RVA: 0x001EDBEB File Offset: 0x001EBDEB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -188,7 +188,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600D249 RID: 53833 RVA: 0x001EFDDC File Offset: 0x001EDFDC
+		// Token: 0x0600D12F RID: 53551 RVA: 0x001EDBF4 File Offset: 0x001EBDF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -218,25 +218,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005874 RID: 22644
+		// Token: 0x0400587D RID: 22653
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005875 RID: 22645
+		// Token: 0x0400587E RID: 22654
 		public const int StagesFieldNumber = 1;
 
-		// Token: 0x04005876 RID: 22646
+		// Token: 0x0400587F RID: 22655
 		private static readonly FieldCodec<LongShanStageInfo> _repeated_stages_codec = FieldCodec.ForMessage<LongShanStageInfo>(10U, LongShanStageInfo.Parser);
 
-		// Token: 0x04005877 RID: 22647
+		// Token: 0x04005880 RID: 22656
 		private readonly RepeatedField<LongShanStageInfo> stages_ = new RepeatedField<LongShanStageInfo>();
 
-		// Token: 0x04005878 RID: 22648
+		// Token: 0x04005881 RID: 22657
 		public const int ScoreRewardedIdsFieldNumber = 2;
 
-		// Token: 0x04005879 RID: 22649
+		// Token: 0x04005882 RID: 22658
 		private static readonly FieldCodec<int> _repeated_scoreRewardedIds_codec = FieldCodec.ForInt32(18U);
 
-		// Token: 0x0400587A RID: 22650
+		// Token: 0x04005883 RID: 22659
 		private readonly RepeatedField<int> scoreRewardedIds_ = new RepeatedField<int>();
 	}
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006213 RID: 25107
+	// Token: 0x02006884 RID: 26756
 	public class IBlendFunctionT
 	{
-		// Token: 0x1700BB1E RID: 47902
-		// (get) Token: 0x0602B477 RID: 177271 RVA: 0x005F619D File Offset: 0x005F439D
-		// (set) Token: 0x0602B478 RID: 177272 RVA: 0x005F61A5 File Offset: 0x005F43A5
+		// Token: 0x1700C4A4 RID: 50340
+		// (get) Token: 0x0602DBD0 RID: 187344 RVA: 0x00640D89 File Offset: 0x0063EF89
+		// (set) Token: 0x0602DBD1 RID: 187345 RVA: 0x00640D91 File Offset: 0x0063EF91
 		public EViewTargetBlendFunction Type { get; set; }
 
-		// Token: 0x1700BB1F RID: 47903
-		// (get) Token: 0x0602B479 RID: 177273 RVA: 0x005F61AE File Offset: 0x005F43AE
-		// (set) Token: 0x0602B47A RID: 177274 RVA: 0x005F61B6 File Offset: 0x005F43B6
+		// Token: 0x1700C4A5 RID: 50341
+		// (get) Token: 0x0602DBD2 RID: 187346 RVA: 0x00640D9A File Offset: 0x0063EF9A
+		// (set) Token: 0x0602DBD3 RID: 187347 RVA: 0x00640DA2 File Offset: 0x0063EFA2
 		public float BlendExp { get; set; }
 
-		// Token: 0x1700BB20 RID: 47904
-		// (get) Token: 0x0602B47B RID: 177275 RVA: 0x005F61BF File Offset: 0x005F43BF
-		// (set) Token: 0x0602B47C RID: 177276 RVA: 0x005F61C7 File Offset: 0x005F43C7
+		// Token: 0x1700C4A6 RID: 50342
+		// (get) Token: 0x0602DBD4 RID: 187348 RVA: 0x00640DAB File Offset: 0x0063EFAB
+		// (set) Token: 0x0602DBD5 RID: 187349 RVA: 0x00640DB3 File Offset: 0x0063EFB3
 		public string CurveAsset { get; set; }
 
-		// Token: 0x0602B47D RID: 177277 RVA: 0x005F61D0 File Offset: 0x005F43D0
+		// Token: 0x0602DBD6 RID: 187350 RVA: 0x00640DBC File Offset: 0x0063EFBC
 		public IBlendFunctionT()
 		{
 			this.Type = EViewTargetBlendFunction.Linear;

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000500 RID: 1280
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000561 RID: 1377
 	public class IMonsterChooseType
 	{
-		// Token: 0x06001A0A RID: 6666 RVA: 0x0004C634 File Offset: 0x0004A834
+		// Token: 0x06001BEC RID: 7148 RVA: 0x00051178 File Offset: 0x0004F378
 		private IMonsterChooseType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001A0B RID: 6667 RVA: 0x0004C66C File Offset: 0x0004A86C
+		// Token: 0x06001BED RID: 7149 RVA: 0x000511B0 File Offset: 0x0004F3B0
 		public static IMonsterChooseType Create([Nullable(2)] IMonsterChooseType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A0C RID: 6668 RVA: 0x0004C67F File Offset: 0x0004A87F
+		// Token: 0x06001BEE RID: 7150 RVA: 0x000511C3 File Offset: 0x0004F3C3
 		public static IMonsterChooseType CreateFromSetValue([Nullable(2)] IMonsterChooseType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A0D RID: 6669 RVA: 0x0004C692 File Offset: 0x0004A892
+		// Token: 0x06001BEF RID: 7151 RVA: 0x000511D6 File Offset: 0x0004F3D6
 		public IMonsterChooseType_SetValue ToSetValue()
 		{
 			return new IMonsterChooseType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006E4 RID: 1764
-		// (get) Token: 0x06001A0E RID: 6670 RVA: 0x0004C6A5 File Offset: 0x0004A8A5
-		// (set) Token: 0x06001A0F RID: 6671 RVA: 0x0004C6D0 File Offset: 0x0004A8D0
+		// Token: 0x17000763 RID: 1891
+		// (get) Token: 0x06001BF0 RID: 7152 RVA: 0x000511E9 File Offset: 0x0004F3E9
+		// (set) Token: 0x06001BF1 RID: 7153 RVA: 0x00051214 File Offset: 0x0004F414
 		public virtual EMonsterChooseType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040012FA RID: 4858
+		// Token: 0x0400145A RID: 5210
 		[Nullable(2)]
 		protected IMonsterChooseType FbInstance;
 
-		// Token: 0x040012FB RID: 4859
+		// Token: 0x0400145B RID: 5211
 		[Nullable(2)]
 		protected IMonsterChooseType_SetValue PocoInterface;
 	}

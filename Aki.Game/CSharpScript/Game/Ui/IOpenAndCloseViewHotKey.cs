@@ -3,94 +3,94 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046A9 RID: 18089
+	// Token: 0x020035DA RID: 13786
 	[NullableContext(1)]
 	public interface IOpenAndCloseViewHotKey
 	{
-		// Token: 0x1700763B RID: 30267
-		// (get) Token: 0x0602EA29 RID: 191017
-		// (set) Token: 0x0602EA2A RID: 191018
+		// Token: 0x170048F7 RID: 18679
+		// (get) Token: 0x06023175 RID: 143733
+		// (set) Token: 0x06023176 RID: 143734
 		int ConfigId { get; set; }
 
-		// Token: 0x1700763C RID: 30268
-		// (get) Token: 0x0602EA2B RID: 191019
-		// (set) Token: 0x0602EA2C RID: 191020
+		// Token: 0x170048F8 RID: 18680
+		// (get) Token: 0x06023177 RID: 143735
+		// (set) Token: 0x06023178 RID: 143736
 		string ActionName { get; set; }
 
-		// Token: 0x1700763D RID: 30269
-		// (get) Token: 0x0602EA2D RID: 191021
-		// (set) Token: 0x0602EA2E RID: 191022
+		// Token: 0x170048F9 RID: 18681
+		// (get) Token: 0x06023179 RID: 143737
+		// (set) Token: 0x0602317A RID: 143738
 		EOpenAndCloseViewInputControllerType InputControllerType { get; set; }
 
-		// Token: 0x1700763E RID: 30270
-		// (get) Token: 0x0602EA2F RID: 191023
-		// (set) Token: 0x0602EA30 RID: 191024
+		// Token: 0x170048FA RID: 18682
+		// (get) Token: 0x0602317B RID: 143739
+		// (set) Token: 0x0602317C RID: 143740
 		EUiViewName ViewName { get; set; }
 
-		// Token: 0x1700763F RID: 30271
-		// (get) Token: 0x0602EA31 RID: 191025
-		// (set) Token: 0x0602EA32 RID: 191026
+		// Token: 0x170048FB RID: 18683
+		// (get) Token: 0x0602317D RID: 143741
+		// (set) Token: 0x0602317E RID: 143742
 		string[] ViewParam { get; set; }
 
-		// Token: 0x17007640 RID: 30272
-		// (get) Token: 0x0602EA33 RID: 191027
-		// (set) Token: 0x0602EA34 RID: 191028
+		// Token: 0x170048FC RID: 18684
+		// (get) Token: 0x0602317F RID: 143743
+		// (set) Token: 0x06023180 RID: 143744
 		bool IsPressTrigger { get; set; }
 
-		// Token: 0x17007641 RID: 30273
-		// (get) Token: 0x0602EA35 RID: 191029
-		// (set) Token: 0x0602EA36 RID: 191030
+		// Token: 0x170048FD RID: 18685
+		// (get) Token: 0x06023181 RID: 143745
+		// (set) Token: 0x06023182 RID: 143746
 		int PressStartTime { get; set; }
 
-		// Token: 0x17007642 RID: 30274
-		// (get) Token: 0x0602EA37 RID: 191031
-		// (set) Token: 0x0602EA38 RID: 191032
+		// Token: 0x170048FE RID: 18686
+		// (get) Token: 0x06023183 RID: 143747
+		// (set) Token: 0x06023184 RID: 143748
 		int PressTriggerTime { get; set; }
 
-		// Token: 0x17007643 RID: 30275
-		// (get) Token: 0x0602EA39 RID: 191033
-		// (set) Token: 0x0602EA3A RID: 191034
+		// Token: 0x170048FF RID: 18687
+		// (get) Token: 0x06023185 RID: 143749
+		// (set) Token: 0x06023186 RID: 143750
 		bool IsReleaseTrigger { get; set; }
 
-		// Token: 0x17007644 RID: 30276
-		// (get) Token: 0x0602EA3B RID: 191035
-		// (set) Token: 0x0602EA3C RID: 191036
+		// Token: 0x17004900 RID: 18688
+		// (get) Token: 0x06023187 RID: 143751
+		// (set) Token: 0x06023188 RID: 143752
 		int ReleaseInvalidTime { get; set; }
 
-		// Token: 0x17007645 RID: 30277
-		// (get) Token: 0x0602EA3D RID: 191037
-		// (set) Token: 0x0602EA3E RID: 191038
+		// Token: 0x17004901 RID: 18689
+		// (get) Token: 0x06023189 RID: 143753
+		// (set) Token: 0x0602318A RID: 143754
 		bool IsPressClose { get; set; }
 
-		// Token: 0x17007646 RID: 30278
-		// (get) Token: 0x0602EA3F RID: 191039
-		// (set) Token: 0x0602EA40 RID: 191040
+		// Token: 0x17004902 RID: 18690
+		// (get) Token: 0x0602318B RID: 143755
+		// (set) Token: 0x0602318C RID: 143756
 		bool IsReleaseClose { get; set; }
 
-		// Token: 0x17007647 RID: 30279
-		// (get) Token: 0x0602EA41 RID: 191041
-		// (set) Token: 0x0602EA42 RID: 191042
+		// Token: 0x17004903 RID: 18691
+		// (get) Token: 0x0602318D RID: 143757
+		// (set) Token: 0x0602318E RID: 143758
 		Func<bool> IsAllowOpenViewByShortcutKey { get; set; }
 
-		// Token: 0x17007648 RID: 30280
-		// (get) Token: 0x0602EA43 RID: 191043
-		// (set) Token: 0x0602EA44 RID: 191044
+		// Token: 0x17004904 RID: 18692
+		// (get) Token: 0x0602318F RID: 143759
+		// (set) Token: 0x06023190 RID: 143760
 		Func<bool> IsAllowCloseViewByShortcutKey { get; set; }
 
-		// Token: 0x17007649 RID: 30281
-		// (get) Token: 0x0602EA45 RID: 191045
-		// (set) Token: 0x0602EA46 RID: 191046
+		// Token: 0x17004905 RID: 18693
+		// (get) Token: 0x06023191 RID: 143761
+		// (set) Token: 0x06023192 RID: 143762
 		Func<string, InputDistributeDefine.EActionType, bool> IsLockShortcutKey { get; set; }
 
-		// Token: 0x1700764A RID: 30282
-		// (get) Token: 0x0602EA47 RID: 191047
-		// (set) Token: 0x0602EA48 RID: 191048
+		// Token: 0x17004906 RID: 18694
+		// (get) Token: 0x06023193 RID: 143763
+		// (set) Token: 0x06023194 RID: 143764
 		[Nullable(2)]
 		Action OpenViewCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700764B RID: 30283
-		// (get) Token: 0x0602EA49 RID: 191049
-		// (set) Token: 0x0602EA4A RID: 191050
+		// Token: 0x17004907 RID: 18695
+		// (get) Token: 0x06023195 RID: 143765
+		// (set) Token: 0x06023196 RID: 143766
 		[Nullable(2)]
 		Action CloseViewCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

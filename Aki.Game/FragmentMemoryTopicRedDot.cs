@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003393 RID: 13203
+// Token: 0x02002905 RID: 10501
 public class FragmentMemoryTopicRedDot : RedDotBase
 {
-	// Token: 0x0601CAE4 RID: 117476 RVA: 0x00806EBC File Offset: 0x008050BC
+	// Token: 0x0601A7DC RID: 108508 RVA: 0x0082D480 File Offset: 0x0082B680
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<int>(EEventName.FragmentRewardTopicRedDot, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CAE5 RID: 117477 RVA: 0x00806EDA File Offset: 0x008050DA
+	// Token: 0x0601A7DD RID: 108509 RVA: 0x0082D49E File Offset: 0x0082B69E
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.FragmentRewardTopicRedDot, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CAE6 RID: 117478 RVA: 0x00806EF8 File Offset: 0x008050F8
+	// Token: 0x0601A7DE RID: 108510 RVA: 0x0082D4BC File Offset: 0x0082B6BC
 	protected override bool OnCheck(int uId = 0)
 	{
 		FragmentMemoryTopicData topicDataById = FragmentMemoryModel.Instance.GetTopicDataById(uId);

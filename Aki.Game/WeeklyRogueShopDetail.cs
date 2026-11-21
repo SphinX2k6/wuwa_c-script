@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002D42 RID: 11586
+// Token: 0x0200229C RID: 8860
 public class WeeklyRogueShopDetail : UiPanelBase
 {
-	// Token: 0x0601858F RID: 99727 RVA: 0x00632980 File Offset: 0x00630B80
+	// Token: 0x06015E31 RID: 89649 RVA: 0x00658990 File Offset: 0x00656B90
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,13 +36,13 @@ public class WeeklyRogueShopDetail : UiPanelBase
 		};
 	}
 
-	// Token: 0x06018590 RID: 99728 RVA: 0x00632AF4 File Offset: 0x00630CF4
+	// Token: 0x06015E32 RID: 89650 RVA: 0x00658B04 File Offset: 0x00656D04
 	protected override void OnStart()
 	{
 		this.TagLayout = new GenericLayout<WeeklyRogueTagItem, int>(base.GetHorizontalLayout(12), new Func<WeeklyRogueTagItem>(this.OnCreateTagItem), null, false, true);
 	}
 
-	// Token: 0x06018591 RID: 99729 RVA: 0x00632B18 File Offset: 0x00630D18
+	// Token: 0x06015E33 RID: 89651 RVA: 0x00658B28 File Offset: 0x00656D28
 	[NullableContext(1)]
 	public void Refresh(RogueWeeklyEntry data)
 	{
@@ -111,7 +111,7 @@ public class WeeklyRogueShopDetail : UiPanelBase
 		}
 	}
 
-	// Token: 0x06018592 RID: 99730 RVA: 0x00632D8B File Offset: 0x00630F8B
+	// Token: 0x06015E34 RID: 89652 RVA: 0x00658D9B File Offset: 0x00656F9B
 	private void OnBtnConfirm()
 	{
 		UUIButtonComponent button = base.GetButton(7);
@@ -133,14 +133,14 @@ public class WeeklyRogueShopDetail : UiPanelBase
 		});
 	}
 
-	// Token: 0x06018593 RID: 99731 RVA: 0x00632DB6 File Offset: 0x00630FB6
+	// Token: 0x06015E35 RID: 89653 RVA: 0x00658DC6 File Offset: 0x00656FC6
 	[NullableContext(1)]
 	private WeeklyRogueTagItem OnCreateTagItem()
 	{
 		return new WeeklyRogueTagItem();
 	}
 
-	// Token: 0x0400B4C1 RID: 46273
+	// Token: 0x0400B836 RID: 47158
 	[Nullable(new byte[]
 	{
 		2,
@@ -148,36 +148,36 @@ public class WeeklyRogueShopDetail : UiPanelBase
 	})]
 	private GenericLayout<WeeklyRogueTagItem, int> TagLayout;
 
-	// Token: 0x020092D0 RID: 37584
+	// Token: 0x020084F7 RID: 34039
 	private enum EWeeklyRogueShopDetailDefine
 	{
-		// Token: 0x0402F738 RID: 194360
+		// Token: 0x0402ADC0 RID: 175552
 		TxtName,
-		// Token: 0x0402F739 RID: 194361
+		// Token: 0x0402ADC1 RID: 175553
 		TxtHave,
-		// Token: 0x0402F73A RID: 194362
+		// Token: 0x0402ADC2 RID: 175554
 		TxtType,
-		// Token: 0x0402F73B RID: 194363
+		// Token: 0x0402ADC3 RID: 175555
 		TxtDesc,
-		// Token: 0x0402F73C RID: 194364
+		// Token: 0x0402ADC4 RID: 175556
 		PanelAttr,
-		// Token: 0x0402F73D RID: 194365
+		// Token: 0x0402ADC5 RID: 175557
 		AttrItem,
-		// Token: 0x0402F73E RID: 194366
+		// Token: 0x0402ADC6 RID: 175558
 		PanelCost,
-		// Token: 0x0402F73F RID: 194367
+		// Token: 0x0402ADC7 RID: 175559
 		BtnConfirm,
-		// Token: 0x0402F740 RID: 194368
+		// Token: 0x0402ADC8 RID: 175560
 		TextureCurrencyIcon,
-		// Token: 0x0402F741 RID: 194369
+		// Token: 0x0402ADC9 RID: 175561
 		TxtCurrencyCurPrice,
-		// Token: 0x0402F742 RID: 194370
+		// Token: 0x0402ADCA RID: 175562
 		TxtCurrencyOriginPrice,
-		// Token: 0x0402F743 RID: 194371
+		// Token: 0x0402ADCB RID: 175563
 		ElementLayout,
-		// Token: 0x0402F744 RID: 194372
+		// Token: 0x0402ADCC RID: 175564
 		TagLayout,
-		// Token: 0x0402F745 RID: 194373
+		// Token: 0x0402ADCD RID: 175565
 		TagItem
 	}
 }

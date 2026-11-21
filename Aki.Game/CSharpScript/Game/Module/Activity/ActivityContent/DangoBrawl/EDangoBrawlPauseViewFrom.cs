@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200682C RID: 26668
+	// Token: 0x0200577C RID: 22396
 	public enum EDangoBrawlPauseViewFrom
 	{
-		// Token: 0x04022ACB RID: 142027
+		// Token: 0x0401D328 RID: 119592
 		BattlePanel,
-		// Token: 0x04022ACC RID: 142028
+		// Token: 0x0401D329 RID: 119593
 		BackpackView
 	}
 }

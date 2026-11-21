@@ -6,12 +6,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020013A9 RID: 5033
+// Token: 0x0200085D RID: 2141
 [NullableContext(1)]
 [Nullable(0)]
 public class NewcomerJourneyTabItem : GridProxyAbstract<AdventureTaskChapterV2>
 {
-	// Token: 0x06008D50 RID: 36176 RVA: 0x001E62A4 File Offset: 0x001E44A4
+	// Token: 0x060060E6 RID: 24806 RVA: 0x001EEED8 File Offset: 0x001ED0D8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -38,13 +38,13 @@ public class NewcomerJourneyTabItem : GridProxyAbstract<AdventureTaskChapterV2>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008D51 RID: 36177 RVA: 0x001E63AD File Offset: 0x001E45AD
+	// Token: 0x060060E7 RID: 24807 RVA: 0x001EEFE1 File Offset: 0x001ED1E1
 	public void SetActivityData(ActivityNewcomerJourneyData data)
 	{
 		this.ActivityData = data;
 	}
 
-	// Token: 0x06008D52 RID: 36178 RVA: 0x001E63B8 File Offset: 0x001E45B8
+	// Token: 0x060060E8 RID: 24808 RVA: 0x001EEFEC File Offset: 0x001ED1EC
 	public override void Refresh(AdventureTaskChapterV2 config, bool isSelected, int gridIndex)
 	{
 		this.Config = new AdventureTaskChapterV2?(config);
@@ -78,13 +78,13 @@ public class NewcomerJourneyTabItem : GridProxyAbstract<AdventureTaskChapterV2>
 		}
 	}
 
-	// Token: 0x06008D53 RID: 36179 RVA: 0x001E64D0 File Offset: 0x001E46D0
+	// Token: 0x060060E9 RID: 24809 RVA: 0x001EF104 File Offset: 0x001ED304
 	public void SetBtnClickCallback(Action<AdventureTaskChapterV2, int> callback)
 	{
 		this.BtnClickCb = callback;
 	}
 
-	// Token: 0x06008D54 RID: 36180 RVA: 0x001E64D9 File Offset: 0x001E46D9
+	// Token: 0x060060EA RID: 24810 RVA: 0x001EF10D File Offset: 0x001ED30D
 	private void OnClickButton(EToggleState state)
 	{
 		Action<AdventureTaskChapterV2, int> btnClickCb = this.BtnClickCb;
@@ -95,13 +95,13 @@ public class NewcomerJourneyTabItem : GridProxyAbstract<AdventureTaskChapterV2>
 		btnClickCb(this.Config.Value, base.GridIndex);
 	}
 
-	// Token: 0x06008D55 RID: 36181 RVA: 0x001E64FC File Offset: 0x001E46FC
+	// Token: 0x060060EB RID: 24811 RVA: 0x001EF130 File Offset: 0x001ED330
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06008D56 RID: 36182 RVA: 0x001E650F File Offset: 0x001E470F
+	// Token: 0x060060EC RID: 24812 RVA: 0x001EF143 File Offset: 0x001ED343
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -112,40 +112,40 @@ public class NewcomerJourneyTabItem : GridProxyAbstract<AdventureTaskChapterV2>
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04003EBD RID: 16061
+	// Token: 0x04003F55 RID: 16213
 	private const string NEWCOMER_TAB_LOCKED_RESOURCE_ID = "SP_TabLock";
 
-	// Token: 0x04003EBE RID: 16062
+	// Token: 0x04003F56 RID: 16214
 	private const string NEWCOMER_TAB_FINISH_RESOURCE_ID = "SP_TabFinish";
 
-	// Token: 0x04003EBF RID: 16063
+	// Token: 0x04003F57 RID: 16215
 	protected AdventureTaskChapterV2? Config;
 
-	// Token: 0x04003EC0 RID: 16064
+	// Token: 0x04003F58 RID: 16216
 	[Nullable(2)]
 	protected ActivityNewcomerJourneyData ActivityData;
 
-	// Token: 0x04003EC1 RID: 16065
+	// Token: 0x04003F59 RID: 16217
 	[Nullable(2)]
 	private Action<AdventureTaskChapterV2, int> BtnClickCb;
 
-	// Token: 0x02007A19 RID: 31257
+	// Token: 0x02006BA0 RID: 27552
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04028302 RID: 164610
+		// Token: 0x04023622 RID: 144930
 		public const int ClickToggle = 0;
 
-		// Token: 0x04028303 RID: 164611
+		// Token: 0x04023623 RID: 144931
 		public const int ShowText = 1;
 
-		// Token: 0x04028304 RID: 164612
+		// Token: 0x04023624 RID: 144932
 		public const int StateIcon = 2;
 
-		// Token: 0x04028305 RID: 164613
+		// Token: 0x04023625 RID: 144933
 		public const int RedDotItem = 3;
 
-		// Token: 0x04028306 RID: 164614
+		// Token: 0x04023626 RID: 144934
 		public const int SelectBg = 4;
 	}
 }

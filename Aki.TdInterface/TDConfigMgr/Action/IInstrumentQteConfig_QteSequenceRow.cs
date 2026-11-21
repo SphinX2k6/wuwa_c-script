@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B41 RID: 6977
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CF0 RID: 7408
 	public class IInstrumentQteConfig_QteSequenceRow
 	{
-		// Token: 0x06009552 RID: 38226 RVA: 0x0015946E File Offset: 0x0015766E
+		// Token: 0x06009D3C RID: 40252 RVA: 0x0016A14A File Offset: 0x0016834A
 		public static IInstrumentQteConfig_QteSequenceRow Create([Nullable(2)] IInstrumentQteConfig_QteSequenceRow instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F1D RID: 12061
-		// (get) Token: 0x06009553 RID: 38227 RVA: 0x00159481 File Offset: 0x00157681
+		// Token: 0x17003143 RID: 12611
+		// (get) Token: 0x06009D3D RID: 40253 RVA: 0x0016A15D File Offset: 0x0016835D
 		public virtual List<int> Items
 		{
 			get
@@ -33,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B64 RID: 23396
+		// Token: 0x04006002 RID: 24578
 		private IInstrumentQteConfig_QteSequenceRow FbInstance;
 	}
 }

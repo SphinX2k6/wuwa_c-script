@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016F1 RID: 5873
+// Token: 0x02000BA9 RID: 2985
 public class AttributeView : UiViewBase
 {
-	// Token: 0x0600A860 RID: 43104 RVA: 0x0025D8E7 File Offset: 0x0025BAE7
+	// Token: 0x06007C40 RID: 31808 RVA: 0x00267D07 File Offset: 0x00265F07
 	[NullableContext(1)]
 	public AttributeView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600A861 RID: 43105 RVA: 0x0025D8F0 File Offset: 0x0025BAF0
+	// Token: 0x06007C41 RID: 31809 RVA: 0x00267D10 File Offset: 0x00265F10
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,15 +24,15 @@ public class AttributeView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600A862 RID: 43106 RVA: 0x0025D914 File Offset: 0x0025BB14
+	// Token: 0x06007C42 RID: 31810 RVA: 0x00267D34 File Offset: 0x00265F34
 	protected override void OnStart()
 	{
-		CommonAttributeData[] source = this.OpenParam as CommonAttributeData[];
+		CommonAttributeData[] data = this.OpenParam as CommonAttributeData[];
 		this.AttrScrollList = new GenericScrollView<CommonAttributeItem>(base.GetScrollViewWithScrollbar(0), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<CommonAttributeItem>(this.InitAttrItem), null);
-		this.AttrScrollList.RefreshByData<CommonAttributeData>(source.ToList<CommonAttributeData>(), null);
+		this.AttrScrollList.RefreshByData<CommonAttributeData>(data, null);
 	}
 
-	// Token: 0x0600A863 RID: 43107 RVA: 0x0025D968 File Offset: 0x0025BB68
+	// Token: 0x06007C43 RID: 31811 RVA: 0x00267D84 File Offset: 0x00265F84
 	[NullableContext(1)]
 	private ILayoutItem<CommonAttributeItem> InitAttrItem(object data, UUIItem item, int index)
 	{
@@ -46,7 +45,7 @@ public class AttributeView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600A864 RID: 43108 RVA: 0x0025D9A0 File Offset: 0x0025BBA0
+	// Token: 0x06007C44 RID: 31812 RVA: 0x00267DBC File Offset: 0x00265FBC
 	protected override void OnBeforeDestroy()
 	{
 		if (this.AttrScrollList != null)
@@ -56,7 +55,7 @@ public class AttributeView : UiViewBase
 		}
 	}
 
-	// Token: 0x04004CC8 RID: 19656
+	// Token: 0x04004D6F RID: 19823
 	[Nullable(new byte[]
 	{
 		2,
@@ -64,10 +63,10 @@ public class AttributeView : UiViewBase
 	})]
 	private GenericScrollView<CommonAttributeItem> AttrScrollList;
 
-	// Token: 0x02007CB8 RID: 31928
+	// Token: 0x02006E3D RID: 28221
 	private enum EAttributeView
 	{
-		// Token: 0x04028E86 RID: 167558
+		// Token: 0x040241AF RID: 147887
 		AttributeContent
 	}
 }

@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Audio
 {
-	// Token: 0x02005E8F RID: 24207
+	// Token: 0x02004E74 RID: 20084
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GameAudioModel : ModelBase
 	{
-		// Token: 0x17008E91 RID: 36497
-		// (get) Token: 0x0603D953 RID: 252243 RVA: 0x00EDE195 File Offset: 0x00EDC395
+		// Token: 0x17006263 RID: 25187
+		// (get) Token: 0x060328E3 RID: 207075 RVA: 0x00E2F725 File Offset: 0x00E2D925
 		private VehicleAudioEventInfo VehicleAudioInfo
 		{
 			get
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D954 RID: 252244 RVA: 0x00EDE1BC File Offset: 0x00EDC3BC
+		// Token: 0x060328E4 RID: 207076 RVA: 0x00E2F74C File Offset: 0x00E2D94C
 		public void CheckTimeOutCooldownRecords()
 		{
 			List<int> list = new List<int>();
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D955 RID: 252245 RVA: 0x00EDE27C File Offset: 0x00EDC47C
+		// Token: 0x060328E5 RID: 207077 RVA: 0x00E2F80C File Offset: 0x00E2DA0C
 		[NullableContext(2)]
 		public bool CheckAudioProbabilityInfo(int entityId, [Nullable(new byte[]
 		{
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Audio
 			return this.EntityTagProbabilityMap[cooldownMapKey].CheckPlayAudio(eventObj, param, update, log);
 		}
 
-		// Token: 0x0603D956 RID: 252246 RVA: 0x00EDE394 File Offset: 0x00EDC594
+		// Token: 0x060328E6 RID: 207078 RVA: 0x00E2F924 File Offset: 0x00E2DB24
 		public void UpdateAudioCooldownRecord(int entityId, [Nullable(new byte[]
 		{
 			0,
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.EntityTagProbabilityMap[cooldownMapKey].UpdateCooldownRecord(eventObj, probability, (double)cooldownTime, log);
 		}
 
-		// Token: 0x0603D957 RID: 252247 RVA: 0x00EDE40C File Offset: 0x00EDC60C
+		// Token: 0x060328E7 RID: 207079 RVA: 0x00E2F99C File Offset: 0x00E2DB9C
 		private int GetCooldownMapKey(int entityId, int modelId)
 		{
 			int result = entityId;
@@ -133,92 +133,92 @@ namespace CSharpScript.Game.Module.Audio
 			return result;
 		}
 
-		// Token: 0x0603D958 RID: 252248 RVA: 0x00EDE42E File Offset: 0x00EDC62E
+		// Token: 0x060328E8 RID: 207080 RVA: 0x00E2F9BE File Offset: 0x00E2DBBE
 		public void AddAllGondolaMusic(Entity entity)
 		{
 			this.VehicleAudioInfo.AddAllGondolaMusic(entity);
 		}
 
-		// Token: 0x0603D959 RID: 252249 RVA: 0x00EDE43C File Offset: 0x00EDC63C
+		// Token: 0x060328E9 RID: 207081 RVA: 0x00E2F9CC File Offset: 0x00E2DBCC
 		public void StopAllGondolaMusic()
 		{
 			this.VehicleAudioInfo.StopAllGondolaMusic();
 		}
 
-		// Token: 0x0603D95A RID: 252250 RVA: 0x00EDE449 File Offset: 0x00EDC649
+		// Token: 0x060328EA RID: 207082 RVA: 0x00E2F9D9 File Offset: 0x00E2DBD9
 		public void GondolaGetOnAudioEvent(Entity entity)
 		{
 			this.VehicleAudioInfo.GondolaGetOnAudioEvent(entity);
 		}
 
-		// Token: 0x0603D95B RID: 252251 RVA: 0x00EDE457 File Offset: 0x00EDC657
+		// Token: 0x060328EB RID: 207083 RVA: 0x00E2F9E7 File Offset: 0x00E2DBE7
 		public void RegisterDriveAudioEvent(int roleId, int roleCreatureId)
 		{
 			this.VehicleAudioInfo.RegisterDriveAudioEvent(roleId, roleCreatureId);
 		}
 
-		// Token: 0x0603D95C RID: 252252 RVA: 0x00EDE466 File Offset: 0x00EDC666
+		// Token: 0x060328EC RID: 207084 RVA: 0x00E2F9F6 File Offset: 0x00E2DBF6
 		public void RemoveDriveAudioEvent()
 		{
 			this.VehicleAudioInfo.RemoveDriveAudioEvent();
 		}
 
-		// Token: 0x0603D95D RID: 252253 RVA: 0x00EDE473 File Offset: 0x00EDC673
+		// Token: 0x060328ED RID: 207085 RVA: 0x00E2FA03 File Offset: 0x00E2DC03
 		public bool PlayRideSharingPlotAudio(EGondolaVoiceTriggeredType type)
 		{
 			return this.VehicleAudioInfo.PlayRideSharingPlotAudio(type);
 		}
 
-		// Token: 0x0603D95E RID: 252254 RVA: 0x00EDE481 File Offset: 0x00EDC681
+		// Token: 0x060328EE RID: 207086 RVA: 0x00E2FA11 File Offset: 0x00E2DC11
 		public bool CheckRideSharingState()
 		{
 			return this.VehicleAudioInfo.CheckRideSharingState();
 		}
 
-		// Token: 0x0603D95F RID: 252255 RVA: 0x00EDE48E File Offset: 0x00EDC68E
+		// Token: 0x060328EF RID: 207087 RVA: 0x00E2FA1E File Offset: 0x00E2DC1E
 		public void RegisterFishingAudioEvent()
 		{
 			this.VehicleAudioInfo.RegisterFishingAudioEvent();
 		}
 
-		// Token: 0x0603D960 RID: 252256 RVA: 0x00EDE49B File Offset: 0x00EDC69B
+		// Token: 0x060328F0 RID: 207088 RVA: 0x00E2FA2B File Offset: 0x00E2DC2B
 		public void RemoveFishingAudioEvent()
 		{
 			this.VehicleAudioInfo.RemoveFishingAudioEvent();
 		}
 
-		// Token: 0x0603D961 RID: 252257 RVA: 0x00EDE4A8 File Offset: 0x00EDC6A8
+		// Token: 0x060328F1 RID: 207089 RVA: 0x00E2FA38 File Offset: 0x00E2DC38
 		public bool PlayFishingAudio(EGondolaVoiceTriggeredType type)
 		{
 			return this.VehicleAudioInfo.PlayFishingAudio(type);
 		}
 
-		// Token: 0x0603D962 RID: 252258 RVA: 0x00EDE4B6 File Offset: 0x00EDC6B6
+		// Token: 0x060328F2 RID: 207090 RVA: 0x00E2FA46 File Offset: 0x00E2DC46
 		public void RegisterMotorDriveAudioEvent(int roleId, int roleCreatureId)
 		{
 			this.VehicleAudioInfo.RegisterMotorDriveAudioEvent(roleId, roleCreatureId);
 		}
 
-		// Token: 0x0603D963 RID: 252259 RVA: 0x00EDE4C5 File Offset: 0x00EDC6C5
+		// Token: 0x060328F3 RID: 207091 RVA: 0x00E2FA55 File Offset: 0x00E2DC55
 		public void RemoveMotorDriveAudioEvent()
 		{
 			this.VehicleAudioInfo.RemoveMotorDriveAudioEvent();
 		}
 
-		// Token: 0x0603D964 RID: 252260 RVA: 0x00EDE4D2 File Offset: 0x00EDC6D2
+		// Token: 0x060328F4 RID: 207092 RVA: 0x00E2FA62 File Offset: 0x00E2DC62
 		public bool PlayMotorPlotAudio(EGondolaVoiceTriggeredType type)
 		{
 			return this.VehicleAudioInfo.PlayMotorPlotAudioDefault(type);
 		}
 
-		// Token: 0x0603D965 RID: 252261 RVA: 0x00EDE4E0 File Offset: 0x00EDC6E0
+		// Token: 0x060328F5 RID: 207093 RVA: 0x00E2FA70 File Offset: 0x00E2DC70
 		public bool CheckMotorState()
 		{
 			return this.VehicleAudioInfo.CheckMotorState();
 		}
 
-		// Token: 0x17008E92 RID: 36498
-		// (get) Token: 0x0603D966 RID: 252262 RVA: 0x00EDE4ED File Offset: 0x00EDC6ED
+		// Token: 0x17006264 RID: 25188
+		// (get) Token: 0x060328F6 RID: 207094 RVA: 0x00E2FA7D File Offset: 0x00E2DC7D
 		public static GameAudioModel Instance
 		{
 			get
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D967 RID: 252263 RVA: 0x00EDE4F4 File Offset: 0x00EDC6F4
+		// Token: 0x060328F7 RID: 207095 RVA: 0x00E2FA84 File Offset: 0x00E2DC84
 		public static GameAudioModel GetOrCreateInstance()
 		{
 			if (GameAudioModel._Instance == null)
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Audio
 			return GameAudioModel._Instance;
 		}
 
-		// Token: 0x0603D968 RID: 252264 RVA: 0x00EDE508 File Offset: 0x00EDC708
+		// Token: 0x060328F8 RID: 207096 RVA: 0x00E2FA98 File Offset: 0x00E2DC98
 		public static bool CreateInstance()
 		{
 			if (GameAudioModel._Instance != null)
@@ -248,31 +248,31 @@ namespace CSharpScript.Game.Module.Audio
 			return true;
 		}
 
-		// Token: 0x0603D969 RID: 252265 RVA: 0x00EDE51E File Offset: 0x00EDC71E
+		// Token: 0x060328F9 RID: 207097 RVA: 0x00E2FAAE File Offset: 0x00E2DCAE
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603D96A RID: 252266 RVA: 0x00EDE520 File Offset: 0x00EDC720
+		// Token: 0x060328FA RID: 207098 RVA: 0x00E2FAB0 File Offset: 0x00E2DCB0
 		public static void ResetStaticDefaultValue()
 		{
 			GameAudioModel._Instance = null;
 		}
 
-		// Token: 0x0603D96B RID: 252267 RVA: 0x00EDE528 File Offset: 0x00EDC728
+		// Token: 0x060328FB RID: 207099 RVA: 0x00E2FAB8 File Offset: 0x00E2DCB8
 		static GameAudioModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GameAudioModel.CreateStaticDefaultValue), new Action(GameAudioModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04020237 RID: 131639
+		// Token: 0x0401ACFE RID: 109822
 		[Nullable(2)]
 		private VehicleAudioEventInfo VehicleAudioInfoInternal;
 
-		// Token: 0x04020238 RID: 131640
+		// Token: 0x0401ACFF RID: 109823
 		private readonly Dictionary<int, EntityCooldownProbability> EntityTagProbabilityMap = new Dictionary<int, EntityCooldownProbability>();
 
-		// Token: 0x04020239 RID: 131641
+		// Token: 0x0401AD00 RID: 109824
 		[Nullable(2)]
 		private static GameAudioModel _Instance;
 	}

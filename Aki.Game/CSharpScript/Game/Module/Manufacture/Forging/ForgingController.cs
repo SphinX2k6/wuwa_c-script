@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -26,13 +25,13 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Manufacture.Forging
 {
-	// Token: 0x02005643 RID: 22083
+	// Token: 0x02004619 RID: 17945
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ForgingController : UiControllerBase
 	{
-		// Token: 0x1700873A RID: 34618
-		// (get) Token: 0x06038250 RID: 229968 RVA: 0x00D4C7A8 File Offset: 0x00D4A9A8
+		// Token: 0x17005B01 RID: 23297
+		// (get) Token: 0x0602D14E RID: 184654 RVA: 0x00C9A4F0 File Offset: 0x00C986F0
 		public int ForgingCostId
 		{
 			get
@@ -41,21 +40,21 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}
 		}
 
-		// Token: 0x06038251 RID: 229969 RVA: 0x00D4C7C8 File Offset: 0x00D4A9C8
+		// Token: 0x0602D14F RID: 184655 RVA: 0x00C9A510 File Offset: 0x00C98710
 		protected override bool OnClear()
 		{
 			this.ClearCurrentInteractionEntityDisplay();
 			return true;
 		}
 
-		// Token: 0x06038252 RID: 229970 RVA: 0x00D4C7D1 File Offset: 0x00D4A9D1
+		// Token: 0x0602D150 RID: 184656 RVA: 0x00C9A519 File Offset: 0x00C98719
 		protected override bool OnLeaveLevel()
 		{
 			this.ClearCurrentInteractionEntityDisplay();
 			return true;
 		}
 
-		// Token: 0x06038253 RID: 229971 RVA: 0x00D4C7DC File Offset: 0x00D4A9DC
+		// Token: 0x0602D151 RID: 184657 RVA: 0x00C9A524 File Offset: 0x00C98724
 		protected override void OnAddEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -70,7 +69,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.LoadNewList));
 		}
 
-		// Token: 0x06038254 RID: 229972 RVA: 0x00D4C84C File Offset: 0x00D4AA4C
+		// Token: 0x0602D152 RID: 184658 RVA: 0x00C9A594 File Offset: 0x00C98794
 		protected override void OnRemoveEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -85,14 +84,14 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.LoadNewList));
 		}
 
-		// Token: 0x06038255 RID: 229973 RVA: 0x00D4C8BC File Offset: 0x00D4AABC
+		// Token: 0x0602D153 RID: 184659 RVA: 0x00C9A604 File Offset: 0x00C98804
 		private void LoadNewList()
 		{
 			ForgingModel.Instance.CreateForgingDataList();
 			this.SendForgeInfoRequest();
 		}
 
-		// Token: 0x06038256 RID: 229974 RVA: 0x00D4C8CE File Offset: 0x00D4AACE
+		// Token: 0x0602D154 RID: 184660 RVA: 0x00C9A616 File Offset: 0x00C98816
 		private void SwitchViewType(CSharpScript.Game.Module.Manufacture.Common.EViewType viewType)
 		{
 			if (CommonManager.Instance.GetCurrentSystem() != CSharpScript.Game.Module.Manufacture.Common.ESystemType.ForgingSystem)
@@ -111,19 +110,19 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			ForgingModel.Instance.CurrentForgingViewType = EForgingViewType.ForgingType;
 		}
 
-		// Token: 0x06038257 RID: 229975 RVA: 0x00D4C8FD File Offset: 0x00D4AAFD
+		// Token: 0x0602D155 RID: 184661 RVA: 0x00C9A645 File Offset: 0x00C98845
 		private static void UpdateHelpRoleItemDataList(int i)
 		{
 			ForgingModel.Instance.UpdateHelpRoleItemDataList();
 		}
 
-		// Token: 0x06038258 RID: 229976 RVA: 0x00D4C909 File Offset: 0x00D4AB09
+		// Token: 0x0602D156 RID: 184662 RVA: 0x00C9A651 File Offset: 0x00C98851
 		public void RegisterCurrentInteractionEntity()
 		{
 			this.CurrentInteractionEntityId = InteractionModel.Instance.CurrentInteractEntityId;
 		}
 
-		// Token: 0x06038259 RID: 229977 RVA: 0x00D4C91B File Offset: 0x00D4AB1B
+		// Token: 0x0602D157 RID: 184663 RVA: 0x00C9A663 File Offset: 0x00C98863
 		public void ClearCurrentInteractionEntityDisplay()
 		{
 			if (this.CurrentInteractionEntityId == null)
@@ -134,7 +133,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			this.CurrentInteractionEntityId = null;
 		}
 
-		// Token: 0x0603825A RID: 229978 RVA: 0x00D4C93D File Offset: 0x00D4AB3D
+		// Token: 0x0602D158 RID: 184664 RVA: 0x00C9A685 File Offset: 0x00C98885
 		[NullableContext(2)]
 		private void UpdateForgingDataCore(ForgeInfoResponse response)
 		{
@@ -142,7 +141,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			ForgingModel.Instance.UpdateForgingByServerConfig(response.ForgeInfoList);
 		}
 
-		// Token: 0x0603825B RID: 229979 RVA: 0x00D4C95F File Offset: 0x00D4AB5F
+		// Token: 0x0602D159 RID: 184665 RVA: 0x00C9A6A7 File Offset: 0x00C988A7
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.ForgeItemInfoUpdateNotify, delegate(IMessage msg, Net.CallbackStatus status)
@@ -169,13 +168,13 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			});
 		}
 
-		// Token: 0x0603825C RID: 229980 RVA: 0x00D4C990 File Offset: 0x00D4AB90
+		// Token: 0x0602D15A RID: 184666 RVA: 0x00C9A6D8 File Offset: 0x00C988D8
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.ForgeItemInfoUpdateNotify);
 		}
 
-		// Token: 0x0603825D RID: 229981 RVA: 0x00D4C9A4 File Offset: 0x00D4ABA4
+		// Token: 0x0602D15B RID: 184667 RVA: 0x00C9A6EC File Offset: 0x00C988EC
 		public void SendForgeInfoRequest()
 		{
 			if (this.SendForgeInfoRequestFlag)
@@ -195,7 +194,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 					EventSystem.Instance.Emit(EEventName.GetForgingData);
 					return;
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(forgeInfoResponse.Code, 28293, null, true, false);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(forgeInfoResponse.Code, 18747, null, true, false);
 				if (UiManager.Instance.IsViewShow(EUiViewName.ForgingRootView))
 				{
 					UiManager.Instance.CloseView(EUiViewName.ForgingRootView, null);
@@ -203,7 +202,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}, 0);
 		}
 
-		// Token: 0x0603825E RID: 229982 RVA: 0x00D4C9E4 File Offset: 0x00D4ABE4
+		// Token: 0x0602D15C RID: 184668 RVA: 0x00C9A72C File Offset: 0x00C9892C
 		public UniTask SendForgeInfoRequestAsync()
 		{
 			ForgingController.<SendForgeInfoRequestAsync>d__23 <SendForgeInfoRequestAsync>d__;
@@ -214,7 +213,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return <SendForgeInfoRequestAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603825F RID: 229983 RVA: 0x00D4CA28 File Offset: 0x00D4AC28
+		// Token: 0x0602D15D RID: 184669 RVA: 0x00C9A770 File Offset: 0x00C98970
 		public void SendForgeItemRequest(int id, int roleId, int forgingCount)
 		{
 			ForgeItemRequest forgeItemRequest = ForgeItemRequest.Create();
@@ -255,11 +254,11 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 					return;
 				}
 				EventSystem.Instance.Emit(EEventName.ForgingFail);
-				ErrorCodeController.Instance.OpenErrorCodeTipView(forgeItemResponse.Code, 27784, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(forgeItemResponse.Code, 24992, null, true, true);
 			}, 0);
 		}
 
-		// Token: 0x06038260 RID: 229984 RVA: 0x00D4CA84 File Offset: 0x00D4AC84
+		// Token: 0x0602D15E RID: 184670 RVA: 0x00C9A7CC File Offset: 0x00C989CC
 		public void SendForgeFormulaUnlockRequest(int formulaId)
 		{
 			ForgeFormulaUnlockRequest forgeFormulaUnlockRequest = ForgeFormulaUnlockRequest.Create();
@@ -278,27 +277,27 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 					EventSystem.Instance.Emit(EEventName.UpdateForgingFormula);
 					return;
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(forgeFormulaUnlockResponse.Code, 18480, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(forgeFormulaUnlockResponse.Code, 26326, null, true, true);
 			}, 0);
 		}
 
-		// Token: 0x06038261 RID: 229985 RVA: 0x00D4CAD0 File Offset: 0x00D4ACD0
+		// Token: 0x0602D15F RID: 184671 RVA: 0x00C9A818 File Offset: 0x00C98A18
 		public bool CheckIsBuff(int roleId, int id)
 		{
-			return ForgingConfig.Instance.GetForgeFormulaById(id).Value.RoleList().Contains(roleId);
+			return Array.IndexOf<int>(ForgingConfig.Instance.GetForgeFormulaById(id).Value.RoleList(), roleId) >= 0;
 		}
 
-		// Token: 0x06038262 RID: 229986 RVA: 0x00D4CB00 File Offset: 0x00D4AD00
+		// Token: 0x0602D160 RID: 184672 RVA: 0x00C9A84C File Offset: 0x00C98A4C
 		public bool CheckIsBuffEx(int roleId, int itemId)
 		{
-			int[] source = ForgingConfig.Instance.GetForgeFormulaById(itemId).Value.RoleList();
-			if (source.Contains(roleId))
+			int[] array = ForgingConfig.Instance.GetForgeFormulaById(itemId).Value.RoleList();
+			if (Array.IndexOf<int>(array, roleId) >= 0)
 			{
 				return false;
 			}
-			foreach (int value in RoleModel.Instance.GetRoleIdList())
+			foreach (int value in RoleModel.Instance.GetRoleIdList(null))
 			{
-				if (source.Contains(value))
+				if (Array.IndexOf<int>(array, value) >= 0)
 				{
 					return true;
 				}
@@ -306,13 +305,13 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return false;
 		}
 
-		// Token: 0x06038263 RID: 229987 RVA: 0x00D4CB8C File Offset: 0x00D4AD8C
+		// Token: 0x0602D161 RID: 184673 RVA: 0x00C9A8DC File Offset: 0x00C98ADC
 		public int GetMaxCreateCount(int itemId)
 		{
 			return this.DoGetMaxCreateCount(ForgingConfig.Instance.GetForgeFormulaById(itemId).Value.ConsumeItems(), ConfigCommonParamById.GetIntConfig("MaxForgingCount").Value);
 		}
 
-		// Token: 0x06038264 RID: 229988 RVA: 0x00D4CBCC File Offset: 0x00D4ADCC
+		// Token: 0x0602D162 RID: 184674 RVA: 0x00C9A91C File Offset: 0x00C98B1C
 		private int DoGetMaxCreateCount(IList<OneItemConfig> itemMap, int limitCount)
 		{
 			int num = limitCount;
@@ -330,7 +329,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return num;
 		}
 
-		// Token: 0x06038265 RID: 229989 RVA: 0x00D4CC4C File Offset: 0x00D4AE4C
+		// Token: 0x0602D163 RID: 184675 RVA: 0x00C9A99C File Offset: 0x00C98B9C
 		public string GetForgingInfoText(int roleId)
 		{
 			RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(roleId);
@@ -346,20 +345,20 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return result;
 		}
 
-		// Token: 0x06038266 RID: 229990 RVA: 0x00D4CCDC File Offset: 0x00D4AEDC
+		// Token: 0x0602D164 RID: 184676 RVA: 0x00C9AA2C File Offset: 0x00C98C2C
 		public bool CheckCanForging(int id)
 		{
 			return ForgingModel.Instance.CheckCanForging(id);
 		}
 
-		// Token: 0x06038267 RID: 229991 RVA: 0x00D4CCEC File Offset: 0x00D4AEEC
+		// Token: 0x0602D165 RID: 184677 RVA: 0x00C9AA3C File Offset: 0x00C98C3C
 		public bool CheckCanUnlock(int id)
 		{
 			ForgeFormula? forgeFormulaById = ForgingConfig.Instance.GetForgeFormulaById(id);
 			return InventoryModel.Instance.GetItemCountByConfigId(forgeFormulaById.Value.FormulaItemId, 0) != 0;
 		}
 
-		// Token: 0x06038268 RID: 229992 RVA: 0x00D4CD22 File Offset: 0x00D4AF22
+		// Token: 0x0602D166 RID: 184678 RVA: 0x00C9AA72 File Offset: 0x00C98C72
 		public bool CheckCanForgingOrCanUnlock(int id)
 		{
 			if (ForgingModel.Instance.GetForgingDataById(id).IsUnlock > 0)
@@ -369,50 +368,50 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return this.CheckCanUnlock(id);
 		}
 
-		// Token: 0x06038269 RID: 229993 RVA: 0x00D4CD48 File Offset: 0x00D4AF48
+		// Token: 0x0602D167 RID: 184679 RVA: 0x00C9AA98 File Offset: 0x00C98C98
 		public string GetForgingText(int id)
 		{
 			ForgeFormula? forgeFormulaById = ForgingConfig.Instance.GetForgeFormulaById(id);
 			return ForgingConfig.Instance.GetLocalText(forgeFormulaById.Value.Name);
 		}
 
-		// Token: 0x0603826A RID: 229994 RVA: 0x00D4CD7C File Offset: 0x00D4AF7C
+		// Token: 0x0602D168 RID: 184680 RVA: 0x00C9AACC File Offset: 0x00C98CCC
 		public int GetForgingId(int id)
 		{
 			return ForgingConfig.Instance.GetForgeFormulaById(id).Value.ItemId;
 		}
 
-		// Token: 0x0603826B RID: 229995 RVA: 0x00D4CDA4 File Offset: 0x00D4AFA4
+		// Token: 0x0602D169 RID: 184681 RVA: 0x00C9AAF4 File Offset: 0x00C98CF4
 		public List<ISingleItemInfo> GetForgingMaterialList(int itemId)
 		{
 			return ForgingModel.Instance.GetForgingMaterialList(itemId);
 		}
 
-		// Token: 0x0603826C RID: 229996 RVA: 0x00D4CDB1 File Offset: 0x00D4AFB1
+		// Token: 0x0602D16A RID: 184682 RVA: 0x00C9AB01 File Offset: 0x00C98D01
 		public List<ICommonRoleItemData> GetHelpRoleItemDataList(int itemId)
 		{
 			return ForgingModel.Instance.GetHelpRoleItemDataList(itemId);
 		}
 
-		// Token: 0x0603826D RID: 229997 RVA: 0x00D4CDBE File Offset: 0x00D4AFBE
+		// Token: 0x0602D16B RID: 184683 RVA: 0x00C9AB0E File Offset: 0x00C98D0E
 		public bool CheckShowRoleView()
 		{
 			return true;
 		}
 
-		// Token: 0x0603826E RID: 229998 RVA: 0x00D4CDC1 File Offset: 0x00D4AFC1
+		// Token: 0x0602D16C RID: 184684 RVA: 0x00C9AB11 File Offset: 0x00C98D11
 		public int GetCurrentRoleId()
 		{
 			return ForgingModel.Instance.CurrentForgingRoleId;
 		}
 
-		// Token: 0x0603826F RID: 229999 RVA: 0x00D4CDCD File Offset: 0x00D4AFCD
+		// Token: 0x0602D16D RID: 184685 RVA: 0x00C9AB1D File Offset: 0x00C98D1D
 		public void SetCurrentRoleId(int roleId)
 		{
 			ForgingModel.Instance.CurrentForgingRoleId = roleId;
 		}
 
-		// Token: 0x06038270 RID: 230000 RVA: 0x00D4CDDA File Offset: 0x00D4AFDA
+		// Token: 0x0602D16E RID: 184686 RVA: 0x00C9AB2A File Offset: 0x00C98D2A
 		public void SendManufacture(int itemId, int count)
 		{
 			if (!this.CheckCanForging(itemId))
@@ -423,13 +422,13 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			this.SendForgeItemRequest(itemId, this.GetCurrentRoleId(), count);
 		}
 
-		// Token: 0x06038271 RID: 230001 RVA: 0x00D4CE06 File Offset: 0x00D4B006
+		// Token: 0x0602D16F RID: 184687 RVA: 0x00C9AB56 File Offset: 0x00C98D56
 		public int GetForgingRoleId(int itemId)
 		{
 			return ForgingModel.Instance.GetForgingRoleId(itemId);
 		}
 
-		// Token: 0x06038272 RID: 230002 RVA: 0x00D4CE13 File Offset: 0x00D4B013
+		// Token: 0x0602D170 RID: 184688 RVA: 0x00C9AB63 File Offset: 0x00C98D63
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -440,7 +439,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return ForgingModel.Instance.GetForgingItemList();
 		}
 
-		// Token: 0x06038273 RID: 230003 RVA: 0x00D4CE20 File Offset: 0x00D4B020
+		// Token: 0x0602D171 RID: 184689 RVA: 0x00C9AB70 File Offset: 0x00C98D70
 		[NullableContext(2)]
 		public void PlayForgingEnterDisplay(Action onFinished = null)
 		{
@@ -455,7 +454,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			currentEntityTagComponent.AddTag(new int?(value));
 		}
 
-		// Token: 0x06038274 RID: 230004 RVA: 0x00D4CE68 File Offset: 0x00D4B068
+		// Token: 0x0602D172 RID: 184690 RVA: 0x00C9ABB8 File Offset: 0x00C98DB8
 		public void PlayForgingLoopDisplay()
 		{
 			this.ClearForgingDisplay();
@@ -467,7 +466,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			currentEntityTagComponent.AddTag(new int?(GameplayTagDefine.EGameplayTagId["关卡.场景交互物.循环"]));
 		}
 
-		// Token: 0x06038275 RID: 230005 RVA: 0x00D4CEA0 File Offset: 0x00D4B0A0
+		// Token: 0x0602D173 RID: 184691 RVA: 0x00C9ABF0 File Offset: 0x00C98DF0
 		[NullableContext(2)]
 		public bool PlayForgingWorkingDisplay(Action onFinished = null)
 		{
@@ -492,7 +491,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return true;
 		}
 
-		// Token: 0x06038276 RID: 230006 RVA: 0x00D4CF1C File Offset: 0x00D4B11C
+		// Token: 0x0602D174 RID: 184692 RVA: 0x00C9AC6C File Offset: 0x00C98E6C
 		[NullableContext(2)]
 		public unsafe void PlayForgingFlow(PlayFlow playFlow, EPlotLowLevelPosition position = EPlotLowLevelPosition.Center)
 		{
@@ -517,7 +516,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}
 		}
 
-		// Token: 0x06038277 RID: 230007 RVA: 0x00D4D004 File Offset: 0x00D4B204
+		// Token: 0x0602D175 RID: 184693 RVA: 0x00C9AD54 File Offset: 0x00C98F54
 		private void PlayForgingAudio(string audioId, [Nullable(2)] PlayResult result = null)
 		{
 			Audio? audioPath = AudioConfig.Instance.GetAudioPath(audioId);
@@ -528,13 +527,13 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			AudioController.Instance.PostEventByUi(audioPath.Value.Path, result, null, null);
 		}
 
-		// Token: 0x06038278 RID: 230008 RVA: 0x00D4D04B File Offset: 0x00D4B24B
+		// Token: 0x0602D176 RID: 184694 RVA: 0x00C9AD9B File Offset: 0x00C98F9B
 		public void PlayLeaveForgingAudio()
 		{
 			this.PlayForgingAudio("play_ui_fx_spl_gen_page_close", null);
 		}
 
-		// Token: 0x06038279 RID: 230009 RVA: 0x00D4D05C File Offset: 0x00D4B25C
+		// Token: 0x0602D177 RID: 184695 RVA: 0x00C9ADAC File Offset: 0x00C98FAC
 		[NullableContext(2)]
 		public void PlayForgingFailDisplay(Action onFinished = null)
 		{
@@ -558,7 +557,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}, 2000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603827A RID: 230010 RVA: 0x00D4D0DC File Offset: 0x00D4B2DC
+		// Token: 0x0602D178 RID: 184696 RVA: 0x00C9AE2C File Offset: 0x00C9902C
 		public void ClearForgingDisplay()
 		{
 			LevelTagComponent currentEntityTagComponent = this.GetCurrentEntityTagComponent();
@@ -576,7 +575,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}
 		}
 
-		// Token: 0x0603827B RID: 230011 RVA: 0x00D4D194 File Offset: 0x00D4B394
+		// Token: 0x0602D179 RID: 184697 RVA: 0x00C9AEE4 File Offset: 0x00C990E4
 		[NullableContext(2)]
 		private LevelTagComponent GetCurrentEntityTagComponent()
 		{
@@ -593,8 +592,8 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return entity.GetComponent<LevelTagComponent>();
 		}
 
-		// Token: 0x1700873B RID: 34619
-		// (get) Token: 0x0603827C RID: 230012 RVA: 0x00D4D1D4 File Offset: 0x00D4B3D4
+		// Token: 0x17005B02 RID: 23298
+		// (get) Token: 0x0602D17A RID: 184698 RVA: 0x00C9AF24 File Offset: 0x00C99124
 		public static ForgingController Instance
 		{
 			get
@@ -603,7 +602,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}
 		}
 
-		// Token: 0x0603827D RID: 230013 RVA: 0x00D4D1DB File Offset: 0x00D4B3DB
+		// Token: 0x0602D17B RID: 184699 RVA: 0x00C9AF2B File Offset: 0x00C9912B
 		public static ForgingController GetOrCreateInstance()
 		{
 			if (ForgingController._Instance == null)
@@ -613,7 +612,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return ForgingController._Instance;
 		}
 
-		// Token: 0x0603827E RID: 230014 RVA: 0x00D4D1EF File Offset: 0x00D4B3EF
+		// Token: 0x0602D17C RID: 184700 RVA: 0x00C9AF3F File Offset: 0x00C9913F
 		public static bool CreateInstance()
 		{
 			if (ForgingController._Instance != null)
@@ -624,59 +623,59 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return true;
 		}
 
-		// Token: 0x0603827F RID: 230015 RVA: 0x00D4D205 File Offset: 0x00D4B405
+		// Token: 0x0602D17D RID: 184701 RVA: 0x00C9AF55 File Offset: 0x00C99155
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06038280 RID: 230016 RVA: 0x00D4D207 File Offset: 0x00D4B407
+		// Token: 0x0602D17E RID: 184702 RVA: 0x00C9AF57 File Offset: 0x00C99157
 		public static void ResetStaticDefaultValue()
 		{
 			ForgingController._Instance = null;
 		}
 
-		// Token: 0x06038281 RID: 230017 RVA: 0x00D4D20F File Offset: 0x00D4B40F
+		// Token: 0x0602D17F RID: 184703 RVA: 0x00C9AF5F File Offset: 0x00C9915F
 		static ForgingController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ForgingController.CreateStaticDefaultValue), new Action(ForgingController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401D88A RID: 120970
+		// Token: 0x04018315 RID: 99093
 		public const string ENTER_AUDIO_ID = "play_ui_fx_spl_gen_page_open";
 
-		// Token: 0x0401D88B RID: 120971
+		// Token: 0x04018316 RID: 99094
 		public const string LEAVE_AUDIO_ID = "play_ui_fx_spl_gen_page_close";
 
-		// Token: 0x0401D88C RID: 120972
+		// Token: 0x04018317 RID: 99095
 		public const string SUCCESS_AUDIO_ID = "play_ui_fx_spl_gen_robot_success_vo";
 
-		// Token: 0x0401D88D RID: 120973
+		// Token: 0x04018318 RID: 99096
 		[Nullable(2)]
 		private TimerHandle ForgingDisplayTimerId;
 
-		// Token: 0x0401D88E RID: 120974
+		// Token: 0x04018319 RID: 99097
 		[Nullable(2)]
 		private Action OnWorkingDisplayFinished;
 
-		// Token: 0x0401D88F RID: 120975
+		// Token: 0x0401831A RID: 99098
 		[Nullable(2)]
 		private Action OnFailDisplayFinished;
 
-		// Token: 0x0401D890 RID: 120976
+		// Token: 0x0401831B RID: 99099
 		private int? CurrentInteractionEntityId = new int?(0);
 
-		// Token: 0x0401D891 RID: 120977
+		// Token: 0x0401831C RID: 99100
 		private bool SendForgeInfoRequestFlag;
 
-		// Token: 0x0401D892 RID: 120978
+		// Token: 0x0401831D RID: 99101
 		[Nullable(2)]
 		private static ForgingController _Instance;
 
-		// Token: 0x0200B7FA RID: 47098
+		// Token: 0x0200A225 RID: 41509
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04037A94 RID: 227988
+			// Token: 0x040324BE RID: 206014
 			[Nullable(0)]
 			public static Action<int> <0>__UpdateHelpRoleItemDataList;
 		}

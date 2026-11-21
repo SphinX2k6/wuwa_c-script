@@ -7,10 +7,10 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001579 RID: 5497
+// Token: 0x02000A31 RID: 2609
 internal class VersionPreheatToggleItem : UiPanelBase
 {
-	// Token: 0x06009D30 RID: 40240 RVA: 0x00220C78 File Offset: 0x0021EE78
+	// Token: 0x0600710E RID: 28942 RVA: 0x0022AA28 File Offset: 0x00228C28
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -31,7 +31,7 @@ internal class VersionPreheatToggleItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009D31 RID: 40241 RVA: 0x00220D20 File Offset: 0x0021EF20
+	// Token: 0x0600710F RID: 28943 RVA: 0x0022AAD0 File Offset: 0x00228CD0
 	private void HandleOnClick(EToggleState toggleState)
 	{
 		EventSystem.Instance.Emit<bool>(EEventName.VersionPreheatOnClickVote, this.PassData.ClickPassData);
@@ -39,7 +39,7 @@ internal class VersionPreheatToggleItem : UiPanelBase
 		passData.ClickFunc(passData.Id, passData.ClickPassData).Forget();
 	}
 
-	// Token: 0x06009D32 RID: 40242 RVA: 0x00220D6B File Offset: 0x0021EF6B
+	// Token: 0x06007110 RID: 28944 RVA: 0x0022AB1B File Offset: 0x00228D1B
 	[NullableContext(1)]
 	public void RefreshExternal(VersionPreheatVoteToggleData data)
 	{
@@ -48,7 +48,7 @@ internal class VersionPreheatToggleItem : UiPanelBase
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06009D33 RID: 40243 RVA: 0x00220DA1 File Offset: 0x0021EFA1
+	// Token: 0x06007111 RID: 28945 RVA: 0x0022AB51 File Offset: 0x00228D51
 	public void RefreshToggle(bool isChosen)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -56,23 +56,23 @@ internal class VersionPreheatToggleItem : UiPanelBase
 		extendToggle.IsSelfInteractive = false;
 	}
 
-	// Token: 0x06009D34 RID: 40244 RVA: 0x00220DC1 File Offset: 0x0021EFC1
+	// Token: 0x06007112 RID: 28946 RVA: 0x0022AB71 File Offset: 0x00228D71
 	public void RefreshToggleDirectly(bool isChosen)
 	{
 		base.GetExtendToggle(0).SetToggleState(isChosen ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x040044F7 RID: 17655
+	// Token: 0x0400459D RID: 17821
 	[Nullable(1)]
 	private VersionPreheatVoteToggleData PassData;
 
-	// Token: 0x02007BAB RID: 31659
+	// Token: 0x02006D36 RID: 27958
 	private class EToggleComponent
 	{
-		// Token: 0x04028A88 RID: 166536
+		// Token: 0x04023DC3 RID: 146883
 		public const int RootToggle = 0;
 
-		// Token: 0x04028A89 RID: 166537
+		// Token: 0x04023DC4 RID: 146884
 		public const int ContentText = 1;
 	}
 }

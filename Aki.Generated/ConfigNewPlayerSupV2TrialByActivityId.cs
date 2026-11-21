@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005F7 RID: 1527
+	// Token: 0x0200060F RID: 1551
 	public class ConfigNewPlayerSupV2TrialByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060023D9 RID: 9177 RVA: 0x00124254 File Offset: 0x00122454
+		// Token: 0x06002469 RID: 9321 RVA: 0x0012ACD0 File Offset: 0x00128ED0
 		static ConfigNewPlayerSupV2TrialByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNewPlayerSupV2TrialByActivityId.CreateStaticDefaultValue), new Action(ConfigNewPlayerSupV2TrialByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060023DA RID: 9178 RVA: 0x00124274 File Offset: 0x00122474
+		// Token: 0x0600246A RID: 9322 RVA: 0x0012ACF0 File Offset: 0x00128EF0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNewPlayerSupV2TrialByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060023DB RID: 9179 RVA: 0x001242F3 File Offset: 0x001224F3
+		// Token: 0x0600246B RID: 9323 RVA: 0x0012AD6F File Offset: 0x00128F6F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNewPlayerSupV2TrialByActivityId.LogPair = null;
 			ConfigNewPlayerSupV2TrialByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x060023DC RID: 9180 RVA: 0x00124301 File Offset: 0x00122501
+		// Token: 0x0600246C RID: 9324 RVA: 0x0012AD7D File Offset: 0x00128F7D
 		public static void Init()
 		{
 			ConfigNewPlayerSupV2TrialByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigNewPlayerSupV2TrialByActivityId.HandleId, "db_newplayersupportactivityv2.db", "select BinData from `NewPlayerSupV2Trial` where ActivityId=?");
 		}
 
-		// Token: 0x060023DD RID: 9181 RVA: 0x0012431C File Offset: 0x0012251C
+		// Token: 0x0600246D RID: 9325 RVA: 0x0012AD98 File Offset: 0x00128F98
 		[NullableContext(2)]
 		public static IReadOnlyList<NewPlayerSupV2Trial> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040029A7 RID: 10663
+		// Token: 0x04002A4F RID: 10831
 		private const string DB = "db_newplayersupportactivityv2.db";
 
-		// Token: 0x040029A8 RID: 10664
+		// Token: 0x04002A50 RID: 10832
 		private const string FILE = "x.新玩家助力活动V2.xlsx";
 
-		// Token: 0x040029A9 RID: 10665
+		// Token: 0x04002A51 RID: 10833
 		private const string TABLE = "NewPlayerSupV2Trial";
 
-		// Token: 0x040029AA RID: 10666
+		// Token: 0x04002A52 RID: 10834
 		private const string COMMAND = "select BinData from `NewPlayerSupV2Trial` where ActivityId=?";
 
-		// Token: 0x040029AB RID: 10667
+		// Token: 0x04002A53 RID: 10835
 		private const string KEY_PREFIX = "NewPlayerSupV2TrialByActivityId";
 
-		// Token: 0x040029AC RID: 10668
+		// Token: 0x04002A54 RID: 10836
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040029AD RID: 10669
+		// Token: 0x04002A55 RID: 10837
 		private static int HandleId;
 	}
 }

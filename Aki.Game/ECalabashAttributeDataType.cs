@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x0200174A RID: 5962
+// Token: 0x02000C03 RID: 3075
 internal enum ECalabashAttributeDataType
 {
-	// Token: 0x04004E54 RID: 20052
+	// Token: 0x04004EFD RID: 20221
 	Default = -1,
-	// Token: 0x04004E55 RID: 20053
+	// Token: 0x04004EFE RID: 20222
 	BasicAbsorption,
-	// Token: 0x04004E56 RID: 20054
+	// Token: 0x04004EFF RID: 20223
 	UpAbsorption,
-	// Token: 0x04004E57 RID: 20055
+	// Token: 0x04004F00 RID: 20224
 	LowCostUpAbsorption,
-	// Token: 0x04004E58 RID: 20056
+	// Token: 0x04004F01 RID: 20225
 	MaxQuality,
-	// Token: 0x04004E59 RID: 20057
+	// Token: 0x04004F02 RID: 20226
 	MaxCost
 }

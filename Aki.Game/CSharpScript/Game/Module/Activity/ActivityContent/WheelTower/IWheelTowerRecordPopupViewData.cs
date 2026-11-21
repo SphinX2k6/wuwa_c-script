@@ -3,39 +3,39 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F3B RID: 24379
+	// Token: 0x02004F22 RID: 20258
 	[NullableContext(1)]
 	public interface IWheelTowerRecordPopupViewData
 	{
-		// Token: 0x17008F5E RID: 36702
-		// (get) Token: 0x0603DEE3 RID: 253667
-		// (set) Token: 0x0603DEE4 RID: 253668
+		// Token: 0x17006330 RID: 25392
+		// (get) Token: 0x06032E7E RID: 208510
+		// (set) Token: 0x06032E7F RID: 208511
 		IWheelTowerPopupData BeforeData { get; set; }
 
-		// Token: 0x17008F5F RID: 36703
-		// (get) Token: 0x0603DEE5 RID: 253669
-		// (set) Token: 0x0603DEE6 RID: 253670
+		// Token: 0x17006331 RID: 25393
+		// (get) Token: 0x06032E80 RID: 208512
+		// (set) Token: 0x06032E81 RID: 208513
 		IWheelTowerPopupData AfterData { get; set; }
 
-		// Token: 0x17008F60 RID: 36704
-		// (get) Token: 0x0603DEE7 RID: 253671
-		// (set) Token: 0x0603DEE8 RID: 253672
+		// Token: 0x17006332 RID: 25394
+		// (get) Token: 0x06032E82 RID: 208514
+		// (set) Token: 0x06032E83 RID: 208515
 		bool IsEndless { get; set; }
 
-		// Token: 0x17008F61 RID: 36705
-		// (get) Token: 0x0603DEE9 RID: 253673
-		// (set) Token: 0x0603DEEA RID: 253674
+		// Token: 0x17006333 RID: 25395
+		// (get) Token: 0x06032E84 RID: 208516
+		// (set) Token: 0x06032E85 RID: 208517
 		int Round { get; set; }
 
-		// Token: 0x17008F62 RID: 36706
-		// (get) Token: 0x0603DEEB RID: 253675
-		// (set) Token: 0x0603DEEC RID: 253676
+		// Token: 0x17006334 RID: 25396
+		// (get) Token: 0x06032E86 RID: 208518
+		// (set) Token: 0x06032E87 RID: 208519
 		[Nullable(2)]
 		Action OnClickConfirm { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008F63 RID: 36707
-		// (get) Token: 0x0603DEED RID: 253677
-		// (set) Token: 0x0603DEEE RID: 253678
+		// Token: 0x17006335 RID: 25397
+		// (get) Token: 0x06032E88 RID: 208520
+		// (set) Token: 0x06032E89 RID: 208521
 		[Nullable(2)]
 		Action OnClickCancel { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

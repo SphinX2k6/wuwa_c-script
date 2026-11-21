@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A08 RID: 6664
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B9B RID: 7067
 	public class IEntityActionContext : IActionContextType
 	{
-		// Token: 0x06008EC3 RID: 36547 RVA: 0x0014DB74 File Offset: 0x0014BD74
+		// Token: 0x06009625 RID: 38437 RVA: 0x0015D9E4 File Offset: 0x0015BBE4
 		private IEntityActionContext_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008EC4 RID: 36548 RVA: 0x0014DBAC File Offset: 0x0014BDAC
+		// Token: 0x06009626 RID: 38438 RVA: 0x0015DA1C File Offset: 0x0015BC1C
 		public static IEntityActionContext Create([Nullable(2)] IEntityActionContext instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008EC5 RID: 36549 RVA: 0x0014DBBF File Offset: 0x0014BDBF
+		// Token: 0x06009627 RID: 38439 RVA: 0x0015DA2F File Offset: 0x0015BC2F
 		public static IEntityActionContext CreateFromSetValue([Nullable(2)] IEntityActionContext_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008EC6 RID: 36550 RVA: 0x0014DBD2 File Offset: 0x0014BDD2
+		// Token: 0x06009628 RID: 38440 RVA: 0x0015DA42 File Offset: 0x0015BC42
 		public new IEntityActionContext_SetValue ToSetValue()
 		{
 			return new IEntityActionContext_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DAA RID: 11690
-		// (get) Token: 0x06008EC7 RID: 36551 RVA: 0x0014DBE5 File Offset: 0x0014BDE5
-		// (set) Token: 0x06008EC8 RID: 36552 RVA: 0x0014DC10 File Offset: 0x0014BE10
+		// Token: 0x17002FB6 RID: 12214
+		// (get) Token: 0x06009629 RID: 38441 RVA: 0x0015DA55 File Offset: 0x0015BC55
+		// (set) Token: 0x0600962A RID: 38442 RVA: 0x0015DA80 File Offset: 0x0015BC80
 		public new virtual string Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400586D RID: 22637
+		// Token: 0x04005CCF RID: 23759
 		[Nullable(2)]
 		protected new IEntityActionContext FbInstance;
 
-		// Token: 0x0400586E RID: 22638
+		// Token: 0x04005CD0 RID: 23760
 		[Nullable(2)]
 		protected new IEntityActionContext_SetValue PocoInterface;
 	}

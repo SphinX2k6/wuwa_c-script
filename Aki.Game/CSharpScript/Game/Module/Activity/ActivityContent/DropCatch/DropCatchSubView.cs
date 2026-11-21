@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066C5 RID: 26309
+	// Token: 0x02005615 RID: 22037
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DropCatchSubView : ActivitySubViewBase
 	{
-		// Token: 0x06041CC1 RID: 269505 RVA: 0x00FF54C0 File Offset: 0x00FF36C0
+		// Token: 0x0603680D RID: 223245 RVA: 0x00F368C4 File Offset: 0x00F34AC4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			};
 		}
 
-		// Token: 0x06041CC2 RID: 269506 RVA: 0x00FF551C File Offset: 0x00FF371C
+		// Token: 0x0603680E RID: 223246 RVA: 0x00F36920 File Offset: 0x00F34B20
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DropCatchSubView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -37,19 +37,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041CC3 RID: 269507 RVA: 0x00FF555F File Offset: 0x00FF375F
+		// Token: 0x0603680F RID: 223247 RVA: 0x00F36963 File Offset: 0x00F34B63
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.DropCatchActivityRewardUpdate, new Action(this.RefreshProgress));
 		}
 
-		// Token: 0x06041CC4 RID: 269508 RVA: 0x00FF557D File Offset: 0x00FF377D
+		// Token: 0x06036810 RID: 223248 RVA: 0x00F36981 File Offset: 0x00F34B81
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.DropCatchActivityRewardUpdate, new Action(this.RefreshProgress));
 		}
 
-		// Token: 0x06041CC5 RID: 269509 RVA: 0x00FF559B File Offset: 0x00FF379B
+		// Token: 0x06036811 RID: 223249 RVA: 0x00F3699F File Offset: 0x00F34B9F
 		protected override void OnRefreshView()
 		{
 			ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			this.RefreshRecommendQuestTips();
 		}
 
-		// Token: 0x06041CC6 RID: 269510 RVA: 0x00FF55C0 File Offset: 0x00FF37C0
+		// Token: 0x06036812 RID: 223250 RVA: 0x00F369C4 File Offset: 0x00F34BC4
 		private void ClickCommonInfo()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			});
 		}
 
-		// Token: 0x06041CC7 RID: 269511 RVA: 0x00FF55E0 File Offset: 0x00FF37E0
+		// Token: 0x06036813 RID: 223251 RVA: 0x00F369E4 File Offset: 0x00F34BE4
 		private void OnRecommendBtnClick()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("DropCatchPreQuestId");
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			UiManager.Instance.OpenView(EUiViewName.QuestView, intConfig, null);
 		}
 
-		// Token: 0x06041CC8 RID: 269512 RVA: 0x00FF5640 File Offset: 0x00FF3840
+		// Token: 0x06036814 RID: 223252 RVA: 0x00F36A44 File Offset: 0x00F34C44
 		private void RefreshRecommendQuestTips()
 		{
 			bool flag = this.IsShowPreOpenTips();
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041CC9 RID: 269513 RVA: 0x00FF5680 File Offset: 0x00FF3880
+		// Token: 0x06036815 RID: 223253 RVA: 0x00F36A84 File Offset: 0x00F34C84
 		private bool IsShowPreOpenTips()
 		{
 			int num = this.ActivityBaseData.IsUnLock() ? 1 : 0;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return num == 0 && flag;
 		}
 
-		// Token: 0x06041CCA RID: 269514 RVA: 0x00FF56AC File Offset: 0x00FF38AC
+		// Token: 0x06036816 RID: 223254 RVA: 0x00F36AB0 File Offset: 0x00F34CB0
 		private void RefreshCondition()
 		{
 			ActivityFunctionalTypeA functional = this.CommonInfoPanel.GetFunctional();
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			functional.RefreshGeneralPerformance(parameters);
 		}
 
-		// Token: 0x06041CCB RID: 269515 RVA: 0x00FF56F0 File Offset: 0x00FF38F0
+		// Token: 0x06036817 RID: 223255 RVA: 0x00F36AF4 File Offset: 0x00F34CF4
 		private void RefreshProgress()
 		{
 			DropCatchActivityData dropCatchActivityData = this.ActivityBaseData as DropCatchActivityData;
@@ -169,10 +169,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x04022476 RID: 140406
+		// Token: 0x0401CCCF RID: 117967
 		protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-		// Token: 0x04022477 RID: 140407
+		// Token: 0x0401CCD0 RID: 117968
 		private RecommendQuestTipsSubPanel RecommendQuestTipsSubPanel;
 	}
 }

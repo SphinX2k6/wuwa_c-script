@@ -7,9 +7,9 @@ using UnrealEngine;
 // Token: 0x020000EA RID: 234
 public class LevelVarEventPair
 {
-	// Token: 0x1700025D RID: 605
-	// (get) Token: 0x06000D7E RID: 3454 RVA: 0x0004A6BE File Offset: 0x000488BE
-	// (set) Token: 0x06000D7D RID: 3453 RVA: 0x0004A65C File Offset: 0x0004885C
+	// Token: 0x17000260 RID: 608
+	// (get) Token: 0x06000D84 RID: 3460 RVA: 0x0004B25A File Offset: 0x0004945A
+	// (set) Token: 0x06000D83 RID: 3459 RVA: 0x0004B1F8 File Offset: 0x000493F8
 	protected OneOf<bool, int> CurrentValue
 	{
 		get
@@ -35,7 +35,7 @@ public class LevelVarEventPair
 		}
 	}
 
-	// Token: 0x06000D7F RID: 3455 RVA: 0x0004A6C6 File Offset: 0x000488C6
+	// Token: 0x06000D85 RID: 3461 RVA: 0x0004B262 File Offset: 0x00049462
 	[NullableContext(1)]
 	public virtual bool Init(SAiLevelVar levelVar, UKuroBooleanEventBinder boolEventBinder)
 	{
@@ -44,7 +44,7 @@ public class LevelVarEventPair
 		return true;
 	}
 
-	// Token: 0x06000D80 RID: 3456 RVA: 0x0004A6D7 File Offset: 0x000488D7
+	// Token: 0x06000D86 RID: 3462 RVA: 0x0004B273 File Offset: 0x00049473
 	[NullableContext(1)]
 	public virtual bool Init(SAiLevelVar levelVar, UKuroIntEventBinder intEventBinder)
 	{
@@ -53,7 +53,7 @@ public class LevelVarEventPair
 		return true;
 	}
 
-	// Token: 0x06000D81 RID: 3457 RVA: 0x0004A6E8 File Offset: 0x000488E8
+	// Token: 0x06000D87 RID: 3463 RVA: 0x0004B284 File Offset: 0x00049484
 	public virtual void Clear()
 	{
 		this.LevelVar = null;
@@ -61,7 +61,7 @@ public class LevelVarEventPair
 		this.IntEventBinder = null;
 	}
 
-	// Token: 0x06000D82 RID: 3458 RVA: 0x0004A700 File Offset: 0x00048900
+	// Token: 0x06000D88 RID: 3464 RVA: 0x0004B29C File Offset: 0x0004949C
 	[NullableContext(2)]
 	protected unsafe bool ParseValue(VarDefinePb treeValue, bool isInit = true)
 	{
@@ -133,21 +133,21 @@ public class LevelVarEventPair
 		}
 	}
 
-	// Token: 0x04000AE2 RID: 2786
+	// Token: 0x04000AEA RID: 2794
 	[Nullable(2)]
 	public SAiLevelVar LevelVar;
 
-	// Token: 0x04000AE3 RID: 2787
+	// Token: 0x04000AEB RID: 2795
 	[Nullable(2)]
 	public UKuroBooleanEventBinder BoolEventBinder;
 
-	// Token: 0x04000AE4 RID: 2788
+	// Token: 0x04000AEC RID: 2796
 	[Nullable(2)]
 	public UKuroIntEventBinder IntEventBinder;
 
-	// Token: 0x04000AE5 RID: 2789
+	// Token: 0x04000AED RID: 2797
 	protected OneOf<bool, int> CurrentValueInternal;
 
-	// Token: 0x04000AE6 RID: 2790
+	// Token: 0x04000AEE RID: 2798
 	protected bool IsInit;
 }

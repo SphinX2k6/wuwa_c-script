@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200605E RID: 24670
+	// Token: 0x020066BF RID: 26303
 	public enum EVisualNovelPortraitEffectType : byte
 	{
-		// Token: 0x0401020F RID: 66063
+		// Token: 0x04011002 RID: 69634
 		Jump,
-		// Token: 0x04010210 RID: 66064
+		// Token: 0x04011003 RID: 69635
 		Shake,
-		// Token: 0x04010211 RID: 66065
+		// Token: 0x04011004 RID: 69636
 		Sigh
 	}
 }

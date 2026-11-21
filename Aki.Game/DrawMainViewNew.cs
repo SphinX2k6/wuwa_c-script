@@ -13,16 +13,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C74 RID: 7284
+// Token: 0x02001133 RID: 4403
 public class DrawMainViewNew : UiTickViewBase
 {
-	// Token: 0x0600DB89 RID: 56201 RVA: 0x0033153A File Offset: 0x0032F73A
+	// Token: 0x0600AF9F RID: 44959 RVA: 0x0033C986 File Offset: 0x0033AB86
 	[NullableContext(1)]
 	public DrawMainViewNew(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600DB8A RID: 56202 RVA: 0x0033154C File Offset: 0x0032F74C
+	// Token: 0x0600AFA0 RID: 44960 RVA: 0x0033C998 File Offset: 0x0033AB98
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -43,7 +43,7 @@ public class DrawMainViewNew : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600DB8B RID: 56203 RVA: 0x003315F4 File Offset: 0x0032F7F4
+	// Token: 0x0600AFA1 RID: 44961 RVA: 0x0033CA40 File Offset: 0x0033AC40
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DrawMainViewNew.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ public class DrawMainViewNew : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DB8C RID: 56204 RVA: 0x00331630 File Offset: 0x0032F830
+	// Token: 0x0600AFA2 RID: 44962 RVA: 0x0033CA7C File Offset: 0x0033AC7C
 	protected override void OnBeforeShow()
 	{
 		if (this.IsFirstShow)
@@ -79,14 +79,14 @@ public class DrawMainViewNew : UiTickViewBase
 		MenuController.Instance.CloseAllFilter();
 	}
 
-	// Token: 0x0600DB8D RID: 56205 RVA: 0x00331704 File Offset: 0x0032F904
+	// Token: 0x0600AFA3 RID: 44963 RVA: 0x0033CB50 File Offset: 0x0033AD50
 	protected override void OnStart()
 	{
 		base.GetButton(1).RootUIComp.Get().SetUIActive(true);
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600DB8E RID: 56206 RVA: 0x0033173C File Offset: 0x0032F93C
+	// Token: 0x0600AFA4 RID: 44964 RVA: 0x0033CB88 File Offset: 0x0033AD88
 	protected override void OnTick(float delta)
 	{
 		if (!this.IsHold && !this.IsShowTips && !this.IsEnd)
@@ -99,7 +99,7 @@ public class DrawMainViewNew : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600DB8F RID: 56207 RVA: 0x00331778 File Offset: 0x0032F978
+	// Token: 0x0600AFA5 RID: 44965 RVA: 0x0033CBC4 File Offset: 0x0033ADC4
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.EndGachaScene, new Action(this.OnEndGacha));
@@ -107,7 +107,7 @@ public class DrawMainViewNew : UiTickViewBase
 		EventSystem.Instance.Add(EEventName.GachaInteractFinish, new Action(this.OnGachaInteractFinish));
 	}
 
-	// Token: 0x0600DB90 RID: 56208 RVA: 0x003317DC File Offset: 0x0032F9DC
+	// Token: 0x0600AFA6 RID: 44966 RVA: 0x0033CC28 File Offset: 0x0033AE28
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.EndGachaScene, new Action(this.OnEndGacha));
@@ -115,7 +115,7 @@ public class DrawMainViewNew : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.GachaInteractFinish, new Action(this.OnGachaInteractFinish));
 	}
 
-	// Token: 0x0600DB91 RID: 56209 RVA: 0x00331840 File Offset: 0x0032FA40
+	// Token: 0x0600AFA7 RID: 44967 RVA: 0x0033CC8C File Offset: 0x0033AE8C
 	protected void InitGachaBp(int times, int maxQuality)
 	{
 		E_GachaResultNew gachaResult = E_GachaResultNew.OneShotNormal;
@@ -154,7 +154,7 @@ public class DrawMainViewNew : UiTickViewBase
 		timeline_.SetTickableWhenPaused(true);
 	}
 
-	// Token: 0x0600DB92 RID: 56210 RVA: 0x003318D4 File Offset: 0x0032FAD4
+	// Token: 0x0600AFA8 RID: 44968 RVA: 0x0033CD20 File Offset: 0x0033AF20
 	protected void InitAudioState(int times, int maxQuality)
 	{
 		AudioSystem.Instance.SetState("ui_gacha_times", (times == 1) ? "one" : "ten", true);
@@ -174,7 +174,7 @@ public class DrawMainViewNew : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600DB93 RID: 56211 RVA: 0x00331950 File Offset: 0x0032FB50
+	// Token: 0x0600AFA9 RID: 44969 RVA: 0x0033CD9C File Offset: 0x0033AF9C
 	protected override void OnBeforeDestroyImplement()
 	{
 		BP_GachaInteract_C gachaBP = this.GachaBP;
@@ -204,7 +204,7 @@ public class DrawMainViewNew : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600DB94 RID: 56212 RVA: 0x003319A8 File Offset: 0x0032FBA8
+	// Token: 0x0600AFAA RID: 44970 RVA: 0x0033CDF4 File Offset: 0x0033AFF4
 	protected void OnClickSkip()
 	{
 		this.GachaBP.IsSkip = true;
@@ -220,7 +220,7 @@ public class DrawMainViewNew : UiTickViewBase
 		this.OnEndGacha();
 	}
 
-	// Token: 0x0600DB95 RID: 56213 RVA: 0x003319F8 File Offset: 0x0032FBF8
+	// Token: 0x0600AFAB RID: 44971 RVA: 0x0033CE44 File Offset: 0x0033B044
 	protected void OnEndGacha()
 	{
 		this.IsShowTips = true;
@@ -280,14 +280,14 @@ public class DrawMainViewNew : UiTickViewBase
 		this.IsFireEndGacha = true;
 	}
 
-	// Token: 0x0600DB96 RID: 56214 RVA: 0x00331A80 File Offset: 0x0032FC80
+	// Token: 0x0600AFAC RID: 44972 RVA: 0x0033CECC File Offset: 0x0033B0CC
 	protected void OnGachaInteractFinish()
 	{
 		this.IsEnd = true;
 		bool isShowTips = this.IsShowTips;
 	}
 
-	// Token: 0x0600DB97 RID: 56215 RVA: 0x00331A90 File Offset: 0x0032FC90
+	// Token: 0x0600AFAD RID: 44973 RVA: 0x0033CEDC File Offset: 0x0033B0DC
 	protected void OnGachaClick(bool isPress)
 	{
 		if (isPress)
@@ -300,47 +300,47 @@ public class DrawMainViewNew : UiTickViewBase
 		this.IsHold = false;
 	}
 
-	// Token: 0x040064BA RID: 25786
+	// Token: 0x0400658C RID: 25996
 	private const int SHOW_TIPS_DELAY = 2000;
 
-	// Token: 0x040064BB RID: 25787
+	// Token: 0x0400658D RID: 25997
 	protected float Delay;
 
-	// Token: 0x040064BC RID: 25788
+	// Token: 0x0400658E RID: 25998
 	protected bool IsHold;
 
-	// Token: 0x040064BD RID: 25789
+	// Token: 0x0400658F RID: 25999
 	protected bool IsShowTips;
 
-	// Token: 0x040064BE RID: 25790
+	// Token: 0x04006590 RID: 26000
 	protected bool IsEnd;
 
-	// Token: 0x040064BF RID: 25791
+	// Token: 0x04006591 RID: 26001
 	protected int MaxQuality;
 
-	// Token: 0x040064C0 RID: 25792
+	// Token: 0x04006592 RID: 26002
 	protected bool HasNewItems;
 
-	// Token: 0x040064C1 RID: 25793
+	// Token: 0x04006593 RID: 26003
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040064C2 RID: 25794
+	// Token: 0x04006594 RID: 26004
 	[Nullable(2)]
 	protected BP_GachaInteract_C GachaBP;
 
-	// Token: 0x040064C3 RID: 25795
+	// Token: 0x04006595 RID: 26005
 	protected bool IsFirstShow = true;
 
-	// Token: 0x040064C4 RID: 25796
+	// Token: 0x04006596 RID: 26006
 	protected bool IsFireEndGacha;
 
-	// Token: 0x0200822B RID: 33323
+	// Token: 0x020073B4 RID: 29620
 	private enum EDrawMainViewNewDefine
 	{
-		// Token: 0x0402A79B RID: 173979
+		// Token: 0x04025AC1 RID: 154305
 		DragArea,
-		// Token: 0x0402A79C RID: 173980
+		// Token: 0x04025AC2 RID: 154306
 		SkipBtn
 	}
 }

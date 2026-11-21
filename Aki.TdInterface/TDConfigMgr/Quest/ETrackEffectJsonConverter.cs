@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012A7 RID: 4775
+	// Token: 0x020013ED RID: 5101
 	public class ETrackEffectJsonConverter : JsonConverter<ETrackEffect>
 	{
-		// Token: 0x06006B98 RID: 27544 RVA: 0x00102E90 File Offset: 0x00101090
+		// Token: 0x06007206 RID: 29190 RVA: 0x00110E58 File Offset: 0x0010F058
 		public override ETrackEffect Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ETrackEffectExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006B99 RID: 27545 RVA: 0x00102EB4 File Offset: 0x001010B4
+		// Token: 0x06007207 RID: 29191 RVA: 0x00110E7C File Offset: 0x0010F07C
 		public override void Write(Utf8JsonWriter writer, ETrackEffect value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

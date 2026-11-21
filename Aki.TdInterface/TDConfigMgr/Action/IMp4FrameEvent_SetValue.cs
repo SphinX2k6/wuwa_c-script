@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C49 RID: 7241
+	// Token: 0x02001E40 RID: 7744
 	public class IMp4FrameEvent_SetValue
 	{
-		// Token: 0x04005E5C RID: 24156
+		// Token: 0x04006393 RID: 25491
 		public float Second;
 
-		// Token: 0x04005E5D RID: 24157
-		[Nullable(1)]
+		// Token: 0x04006394 RID: 25492
 		public List<ActionInfo> EventActions;
 	}
 }

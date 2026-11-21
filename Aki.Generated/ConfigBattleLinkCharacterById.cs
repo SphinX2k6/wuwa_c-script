@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000E4 RID: 228
+	// Token: 0x020000F3 RID: 243
 	public class ConfigBattleLinkCharacterById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000559 RID: 1369 RVA: 0x00077D6B File Offset: 0x00075F6B
+		// Token: 0x060005B3 RID: 1459 RVA: 0x0007D6CF File Offset: 0x0007B8CF
 		static ConfigBattleLinkCharacterById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBattleLinkCharacterById.CreateStaticDefaultValue), new Action(ConfigBattleLinkCharacterById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600055A RID: 1370 RVA: 0x00077D8C File Offset: 0x00075F8C
+		// Token: 0x060005B4 RID: 1460 RVA: 0x0007D6F0 File Offset: 0x0007B8F0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBattleLinkCharacterById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600055B RID: 1371 RVA: 0x00077E0B File Offset: 0x0007600B
+		// Token: 0x060005B5 RID: 1461 RVA: 0x0007D76F File Offset: 0x0007B96F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBattleLinkCharacterById.LogPair = null;
 			ConfigBattleLinkCharacterById.HandleId = 0;
 		}
 
-		// Token: 0x0600055C RID: 1372 RVA: 0x00077E19 File Offset: 0x00076019
+		// Token: 0x060005B6 RID: 1462 RVA: 0x0007D77D File Offset: 0x0007B97D
 		public static void Init()
 		{
 			ConfigBattleLinkCharacterById.HandleId = ConfigCommon.InitDataStatement(ConfigBattleLinkCharacterById.HandleId, "db_dreamlink.db", "select BinData from `BattleLinkCharacter` where Id=?");
 		}
 
-		// Token: 0x0600055D RID: 1373 RVA: 0x00077E34 File Offset: 0x00076034
+		// Token: 0x060005B7 RID: 1463 RVA: 0x0007D798 File Offset: 0x0007B998
 		public static BattleLinkCharacter? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBattleLinkCharacterById.HandleId, ConfigBattleLinkCharacterById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BattleLinkCharacter?(rootAsBattleLinkCharacter);
 		}
 
-		// Token: 0x04000620 RID: 1568
+		// Token: 0x04000689 RID: 1673
 		private const string DB = "db_dreamlink.db";
 
-		// Token: 0x04000621 RID: 1569
+		// Token: 0x0400068A RID: 1674
 		private const string FILE = "m.梦境链接活动.xlsx";
 
-		// Token: 0x04000622 RID: 1570
+		// Token: 0x0400068B RID: 1675
 		private const string TABLE = "BattleLinkCharacter";
 
-		// Token: 0x04000623 RID: 1571
+		// Token: 0x0400068C RID: 1676
 		private const string COMMAND = "select BinData from `BattleLinkCharacter` where Id=?";
 
-		// Token: 0x04000624 RID: 1572
+		// Token: 0x0400068D RID: 1677
 		private const string KEY_PREFIX = "BattleLinkCharacterById";
 
-		// Token: 0x04000625 RID: 1573
+		// Token: 0x0400068E RID: 1678
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000626 RID: 1574
+		// Token: 0x0400068F RID: 1679
 		private static int HandleId;
 	}
 }

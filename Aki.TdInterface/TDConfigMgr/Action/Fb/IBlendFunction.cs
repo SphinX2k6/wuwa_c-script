@@ -4,13 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028B0 RID: 10416
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02002B85 RID: 11141
 	public class IBlendFunction
 	{
-		// Token: 0x0600E6F7 RID: 59127 RVA: 0x0021ECAA File Offset: 0x0021CEAA
-		[NullableContext(1)]
+		// Token: 0x0600F526 RID: 62758 RVA: 0x0023BC2A File Offset: 0x00239E2A
 		public static IBlendFunction Create(IBlendFunction? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004759 RID: 18265
-		// (get) Token: 0x0600E6F8 RID: 59128 RVA: 0x0021ECC9 File Offset: 0x0021CEC9
+		// Token: 0x17004ACA RID: 19146
+		// (get) Token: 0x0600F527 RID: 62759 RVA: 0x0023BC49 File Offset: 0x00239E49
 		public virtual EViewTargetBlendFunction Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700475A RID: 18266
-		// (get) Token: 0x0600E6F9 RID: 59129 RVA: 0x0021ECD6 File Offset: 0x0021CED6
+		// Token: 0x17004ACB RID: 19147
+		// (get) Token: 0x0600F528 RID: 62760 RVA: 0x0023BC56 File Offset: 0x00239E56
 		public virtual float BlendExp
 		{
 			get
@@ -43,17 +40,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700475B RID: 18267
-		// (get) Token: 0x0600E6FA RID: 59130 RVA: 0x0021ECE3 File Offset: 0x0021CEE3
+		// Token: 0x17004ACC RID: 19148
+		// (get) Token: 0x0600F529 RID: 62761 RVA: 0x0023BC63 File Offset: 0x00239E63
+		[Nullable(2)]
 		public virtual string CurveAsset
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.Instance.CurveAsset;
 			}
 		}
 
-		// Token: 0x04007FA6 RID: 32678
+		// Token: 0x04008665 RID: 34405
 		private IBlendFunction Instance;
 	}
 }

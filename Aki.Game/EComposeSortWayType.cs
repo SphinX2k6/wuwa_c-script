@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200187E RID: 6270
+// Token: 0x02000D37 RID: 3383
 public enum EComposeSortWayType
 {
-	// Token: 0x040052F3 RID: 21235
+	// Token: 0x0400539E RID: 21406
 	Menu = 1,
-	// Token: 0x040052F4 RID: 21236
+	// Token: 0x0400539F RID: 21407
 	Make,
-	// Token: 0x040052F5 RID: 21237
+	// Token: 0x040053A0 RID: 21408
 	Quality
 }

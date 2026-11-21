@@ -4,13 +4,13 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Explore;
 
-// Token: 0x0200318B RID: 12683
+// Token: 0x020026F8 RID: 9976
 [NullableContext(1)]
 [Nullable(0)]
 public class SpecialSkillAimisi : SpecialSkillMorphBase
 {
-	// Token: 0x170025BF RID: 9663
-	// (get) Token: 0x0601B4AB RID: 111787 RVA: 0x007724E5 File Offset: 0x007706E5
+	// Token: 0x170027B0 RID: 10160
+	// (get) Token: 0x06018FB0 RID: 102320 RVA: 0x00799E49 File Offset: 0x00798049
 	protected override string MorphBuffsConfigKey
 	{
 		get
@@ -19,8 +19,8 @@ public class SpecialSkillAimisi : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x170025C0 RID: 9664
-	// (get) Token: 0x0601B4AC RID: 111788 RVA: 0x007724EC File Offset: 0x007706EC
+	// Token: 0x170027B1 RID: 10161
+	// (get) Token: 0x06018FB1 RID: 102321 RVA: 0x00799E50 File Offset: 0x00798050
 	protected override string MorphCueIdConfigKey
 	{
 		get
@@ -29,8 +29,8 @@ public class SpecialSkillAimisi : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x170025C1 RID: 9665
-	// (get) Token: 0x0601B4AD RID: 111789 RVA: 0x007724F3 File Offset: 0x007706F3
+	// Token: 0x170027B2 RID: 10162
+	// (get) Token: 0x06018FB2 RID: 102322 RVA: 0x00799E57 File Offset: 0x00798057
 	protected override string ResetMorphSkillsConfigKey
 	{
 		get
@@ -39,8 +39,8 @@ public class SpecialSkillAimisi : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x170025C2 RID: 9666
-	// (get) Token: 0x0601B4AE RID: 111790 RVA: 0x007724FA File Offset: 0x007706FA
+	// Token: 0x170027B3 RID: 10163
+	// (get) Token: 0x06018FB3 RID: 102323 RVA: 0x00799E5E File Offset: 0x0079805E
 	protected override string NotResetMorphSkillsConfigKey
 	{
 		get
@@ -49,8 +49,8 @@ public class SpecialSkillAimisi : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x170025C3 RID: 9667
-	// (get) Token: 0x0601B4AF RID: 111791 RVA: 0x00772501 File Offset: 0x00770701
+	// Token: 0x170027B4 RID: 10164
+	// (get) Token: 0x06018FB4 RID: 102324 RVA: 0x00799E65 File Offset: 0x00798065
 	protected override string ChangeRoleResetMorphTagsConfigKey
 	{
 		get
@@ -59,7 +59,7 @@ public class SpecialSkillAimisi : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0601B4B0 RID: 111792 RVA: 0x00772508 File Offset: 0x00770708
+	// Token: 0x06018FB5 RID: 102325 RVA: 0x00799E6C File Offset: 0x0079806C
 	protected override string GetSubMeshConfigKey(EMorphType morphType)
 	{
 		if (morphType == EMorphType.默认形态)
@@ -73,12 +73,12 @@ public class SpecialSkillAimisi : SpecialSkillMorphBase
 		return "AimisiMorph1SubMeshList";
 	}
 
-	// Token: 0x0601B4B1 RID: 111793 RVA: 0x00772524 File Offset: 0x00770724
+	// Token: 0x06018FB6 RID: 102326 RVA: 0x00799E88 File Offset: 0x00798088
 	public SpecialSkillAimisi(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B4B2 RID: 111794 RVA: 0x00772530 File Offset: 0x00770730
+	// Token: 0x06018FB7 RID: 102327 RVA: 0x00799E94 File Offset: 0x00798094
 	public override void OnStart()
 	{
 		base.OnStart();
@@ -91,7 +91,7 @@ public class SpecialSkillAimisi : SpecialSkillMorphBase
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 	}
 
-	// Token: 0x0601B4B3 RID: 111795 RVA: 0x00772588 File Offset: 0x00770788
+	// Token: 0x06018FB8 RID: 102328 RVA: 0x00799EEC File Offset: 0x007980EC
 	public override void OnEnd()
 	{
 		base.OnEnd();
@@ -107,7 +107,7 @@ public class SpecialSkillAimisi : SpecialSkillMorphBase
 		EventSystem.Instance.Remove<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 	}
 
-	// Token: 0x0601B4B4 RID: 111796 RVA: 0x007725E0 File Offset: 0x007707E0
+	// Token: 0x06018FB9 RID: 102329 RVA: 0x00799F44 File Offset: 0x00798144
 	private void SetMorphExploreSkill(string reason, bool skipCurrentEntityCheck = false)
 	{
 		CharacterExploreModel instance = CharacterExploreModel.Instance;
@@ -162,7 +162,7 @@ public class SpecialSkillAimisi : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0601B4B5 RID: 111797 RVA: 0x007726E0 File Offset: 0x007708E0
+	// Token: 0x06018FBA RID: 102330 RVA: 0x0079A044 File Offset: 0x00798244
 	private void ResetMorphExploreSkill(string reason, bool skipCurrentEntityCheck = false)
 	{
 		CharacterExploreModel instance = CharacterExploreModel.Instance;
@@ -204,7 +204,7 @@ public class SpecialSkillAimisi : SpecialSkillMorphBase
 		this.IsUsingAimisExploreSkill = false;
 	}
 
-	// Token: 0x0601B4B6 RID: 111798 RVA: 0x00772788 File Offset: 0x00770988
+	// Token: 0x06018FBB RID: 102331 RVA: 0x0079A0EC File Offset: 0x007982EC
 	private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		WorldEntity entity = newEntity.Entity;
@@ -234,7 +234,7 @@ public class SpecialSkillAimisi : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0601B4B7 RID: 111799 RVA: 0x00772848 File Offset: 0x00770A48
+	// Token: 0x06018FBC RID: 102332 RVA: 0x0079A1AC File Offset: 0x007983AC
 	protected override void OnCharacterMorphTypeChanged(Entity entity, EMorphType newMorphType, EMorphType oldMorphType)
 	{
 		base.RefreshNoUpdateMeshes(newMorphType);
@@ -246,9 +246,9 @@ public class SpecialSkillAimisi : SpecialSkillMorphBase
 		this.ResetMorphExploreSkill("Aimisi恢复到形态一", false);
 	}
 
-	// Token: 0x0400D52D RID: 54573
+	// Token: 0x0400D990 RID: 55696
 	public const int AIMISI_MORPH_EXPLORE_SKILL_ID = 121001;
 
-	// Token: 0x0400D52E RID: 54574
+	// Token: 0x0400D991 RID: 55697
 	private bool IsUsingAimisExploreSkill;
 }

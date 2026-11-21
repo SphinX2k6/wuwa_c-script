@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02000FE0 RID: 4064
+// Token: 0x02000495 RID: 1173
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class FurniturePresetGridItem : GridProxyAbstract<IFurniturePresetGridItemData>
 {
-	// Token: 0x06006861 RID: 26721 RVA: 0x0014B7DC File Offset: 0x001499DC
+	// Token: 0x06003BF9 RID: 15353 RVA: 0x001540A0 File Offset: 0x001522A0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class FurniturePresetGridItem : GridProxyAbstract<IFurniturePresetGridIte
 		};
 	}
 
-	// Token: 0x06006862 RID: 26722 RVA: 0x0014B836 File Offset: 0x00149A36
+	// Token: 0x06003BFA RID: 15354 RVA: 0x001540FA File Offset: 0x001522FA
 	public override void Refresh(IFurniturePresetGridItemData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -32,7 +32,7 @@ public class FurniturePresetGridItem : GridProxyAbstract<IFurniturePresetGridIte
 		this.RefreshDetail();
 	}
 
-	// Token: 0x06006863 RID: 26723 RVA: 0x0014B84C File Offset: 0x00149A4C
+	// Token: 0x06003BFB RID: 15355 RVA: 0x00154110 File Offset: 0x00152310
 	private void UpdateItemsVisible()
 	{
 		IFurniturePresetGridItemData data = this.Data;
@@ -52,7 +52,7 @@ public class FurniturePresetGridItem : GridProxyAbstract<IFurniturePresetGridIte
 		item2.SetUIActive(uiactive2);
 	}
 
-	// Token: 0x06006864 RID: 26724 RVA: 0x0014B8A4 File Offset: 0x00149AA4
+	// Token: 0x06003BFC RID: 15356 RVA: 0x00154168 File Offset: 0x00152368
 	public void RefreshDetail()
 	{
 		IFurniturePresetGridItemData data = this.Data;
@@ -60,7 +60,7 @@ public class FurniturePresetGridItem : GridProxyAbstract<IFurniturePresetGridIte
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x04002FA4 RID: 12196
+	// Token: 0x0400303D RID: 12349
 	[Nullable(2)]
 	private IFurniturePresetGridItemData Data;
 }

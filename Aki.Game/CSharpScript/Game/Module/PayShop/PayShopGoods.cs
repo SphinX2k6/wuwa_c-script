@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -10,7 +9,7 @@ using CSharpScript.Game.Module.Item;
 
 namespace CSharpScript.Game.Module.PayShop
 {
-	// Token: 0x02005355 RID: 21333
+	// Token: 0x02004338 RID: 17208
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,19 +18,19 @@ namespace CSharpScript.Game.Module.PayShop
 	})]
 	public class PayShopGoods : PayShopUnionData<PayShopGoodsData>
 	{
-		// Token: 0x060367D9 RID: 223193 RVA: 0x00CE6AE4 File Offset: 0x00CE4CE4
+		// Token: 0x0602B71A RID: 177946 RVA: 0x00C357E4 File Offset: 0x00C339E4
 		public PayShopGoods(PayShopDefine.EPayShopTabType payShopId)
 		{
 			this.PayShopId = payShopId;
 		}
 
-		// Token: 0x060367DA RID: 223194 RVA: 0x00CE6AFA File Offset: 0x00CE4CFA
+		// Token: 0x0602B71B RID: 177947 RVA: 0x00C357FA File Offset: 0x00C339FA
 		public void SetPayShopId(PayShopDefine.EPayShopTabType payShopId)
 		{
 			this.PayShopId = payShopId;
 		}
 
-		// Token: 0x060367DB RID: 223195 RVA: 0x00CE6B03 File Offset: 0x00CE4D03
+		// Token: 0x0602B71C RID: 177948 RVA: 0x00C35803 File Offset: 0x00C33A03
 		public void SetGoodsData(PayShopGoodsData data)
 		{
 			this.Data = data;
@@ -40,33 +39,33 @@ namespace CSharpScript.Game.Module.PayShop
 			this.CachePayShopItemBaseSt.PhraseFromPayItemData(this);
 		}
 
-		// Token: 0x060367DC RID: 223196 RVA: 0x00CE6B2F File Offset: 0x00CE4D2F
+		// Token: 0x0602B71D RID: 177949 RVA: 0x00C3582F File Offset: 0x00C33A2F
 		public void SetPayGiftId(int id)
 		{
 			this.PayGiftId = id;
 		}
 
-		// Token: 0x060367DD RID: 223197 RVA: 0x00CE6B38 File Offset: 0x00CE4D38
+		// Token: 0x0602B71E RID: 177950 RVA: 0x00C35838 File Offset: 0x00C33A38
 		[NullableContext(2)]
 		public PayPackageData GetGetPayGiftData()
 		{
 			return PayGiftModel.Instance.GetPayGiftDataById(this.PayGiftId);
 		}
 
-		// Token: 0x060367DE RID: 223198 RVA: 0x00CE6B4A File Offset: 0x00CE4D4A
+		// Token: 0x0602B71F RID: 177951 RVA: 0x00C3584A File Offset: 0x00C33A4A
 		[NullableContext(2)]
 		public PayShopGoodsData GetGoodsData()
 		{
 			return this.Data;
 		}
 
-		// Token: 0x060367DF RID: 223199 RVA: 0x00CE6B52 File Offset: 0x00CE4D52
+		// Token: 0x0602B720 RID: 177952 RVA: 0x00C35852 File Offset: 0x00C33A52
 		public bool IsLocked()
 		{
 			return this.Data.Locked;
 		}
 
-		// Token: 0x060367E0 RID: 223200 RVA: 0x00CE6B60 File Offset: 0x00CE4D60
+		// Token: 0x0602B721 RID: 177953 RVA: 0x00C35860 File Offset: 0x00C33A60
 		public string GetConditionTextId()
 		{
 			int buyConditionId = this.Data.GetBuyConditionId();
@@ -77,13 +76,13 @@ namespace CSharpScript.Game.Module.PayShop
 			return "";
 		}
 
-		// Token: 0x060367E1 RID: 223201 RVA: 0x00CE6B91 File Offset: 0x00CE4D91
+		// Token: 0x0602B722 RID: 177954 RVA: 0x00C35891 File Offset: 0x00C33A91
 		public int GetDiscountLabel()
 		{
 			return this.Data.LabelId;
 		}
 
-		// Token: 0x060367E2 RID: 223202 RVA: 0x00CE6BA0 File Offset: 0x00CE4DA0
+		// Token: 0x0602B723 RID: 177955 RVA: 0x00C358A0 File Offset: 0x00C33AA0
 		public IItemData GetItemData()
 		{
 			InventoryConfig instance = InventoryConfig.Instance;
@@ -100,13 +99,13 @@ namespace CSharpScript.Game.Module.PayShop
 			};
 		}
 
-		// Token: 0x060367E3 RID: 223203 RVA: 0x00CE6C20 File Offset: 0x00CE4E20
+		// Token: 0x0602B724 RID: 177956 RVA: 0x00C35920 File Offset: 0x00C33B20
 		public bool IfPayGift()
 		{
 			return this.Data.IfPayGift();
 		}
 
-		// Token: 0x060367E4 RID: 223204 RVA: 0x00CE6C30 File Offset: 0x00CE4E30
+		// Token: 0x0602B725 RID: 177957 RVA: 0x00C35930 File Offset: 0x00C33B30
 		public IPriceData GetPriceData()
 		{
 			int availableCouponDiscount = this.GetAvailableCouponDiscount();
@@ -129,7 +128,7 @@ namespace CSharpScript.Game.Module.PayShop
 			};
 		}
 
-		// Token: 0x060367E5 RID: 223205 RVA: 0x00CE6CFC File Offset: 0x00CE4EFC
+		// Token: 0x0602B726 RID: 177958 RVA: 0x00C359FC File Offset: 0x00C33BFC
 		public string GetDirectPriceText()
 		{
 			KuroSdkModel instance = KuroSdkModel.Instance;
@@ -142,7 +141,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return PayItemConfig.Instance.GetPayShow(id);
 		}
 
-		// Token: 0x060367E6 RID: 223206 RVA: 0x00CE6D54 File Offset: 0x00CE4F54
+		// Token: 0x0602B727 RID: 177959 RVA: 0x00C35A54 File Offset: 0x00C33C54
 		[NullableContext(2)]
 		public IRemainingData GetRemainingData()
 		{
@@ -154,19 +153,19 @@ namespace CSharpScript.Game.Module.PayShop
 			return new RemainingData(this.Data.GetRemainingTextId(), remainingCount);
 		}
 
-		// Token: 0x060367E7 RID: 223207 RVA: 0x00CE6D8D File Offset: 0x00CE4F8D
+		// Token: 0x0602B728 RID: 177960 RVA: 0x00C35A8D File Offset: 0x00C33C8D
 		public void SetUnLock()
 		{
 			this.Data.SetUnLock();
 		}
 
-		// Token: 0x060367E8 RID: 223208 RVA: 0x00CE6D9A File Offset: 0x00CE4F9A
+		// Token: 0x0602B729 RID: 177961 RVA: 0x00C35A9A File Offset: 0x00C33C9A
 		public int GetDiscount()
 		{
 			return this.Data.GetDiscount();
 		}
 
-		// Token: 0x060367E9 RID: 223209 RVA: 0x00CE6DA8 File Offset: 0x00CE4FA8
+		// Token: 0x0602B72A RID: 177962 RVA: 0x00C35AA8 File Offset: 0x00C33CA8
 		public int GetDiscountNew()
 		{
 			PayPackageData getPayGiftData = this.GetGetPayGiftData();
@@ -177,7 +176,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return this.Data.GetDiscountNew();
 		}
 
-		// Token: 0x060367EA RID: 223210 RVA: 0x00CE6DD4 File Offset: 0x00CE4FD4
+		// Token: 0x0602B72B RID: 177963 RVA: 0x00C35AD4 File Offset: 0x00C33CD4
 		public bool HasDiscount()
 		{
 			PayPackageData getPayGiftData = this.GetGetPayGiftData();
@@ -188,43 +187,66 @@ namespace CSharpScript.Game.Module.PayShop
 			return this.Data.HasDiscount();
 		}
 
-		// Token: 0x060367EB RID: 223211 RVA: 0x00CE6E00 File Offset: 0x00CE5000
+		// Token: 0x0602B72C RID: 177964 RVA: 0x00C35B00 File Offset: 0x00C33D00
 		public bool IsPermanentDiscount()
 		{
 			return (this.Data.EndPromotionTime == 0L && this.Data.BeginPromotionTime == 0L) || (this.Data.EndPromotionTime == 0L && TimeUtil.Instance.GetServerTime() >= (double)this.Data.BeginTime);
 		}
 
-		// Token: 0x060367EC RID: 223212 RVA: 0x00CE6E54 File Offset: 0x00CE5054
+		// Token: 0x0602B72D RID: 177965 RVA: 0x00C35B54 File Offset: 0x00C33D54
 		public bool IsPermanentSell()
 		{
 			return (this.Data.BeginTime == 0L && this.Data.EndTime == 0L) || (TimeUtil.Instance.GetServerTime() >= (double)this.Data.BeginTime && this.Data.EndTime == 0L);
 		}
 
-		// Token: 0x060367ED RID: 223213 RVA: 0x00CE6EA8 File Offset: 0x00CE50A8
+		// Token: 0x0602B72E RID: 177966 RVA: 0x00C35BA8 File Offset: 0x00C33DA8
 		public bool InSellTime()
 		{
 			return this.IsPermanentSell() || ((double)this.Data.EndTime > TimeUtil.Instance.GetServerTime() && TimeUtil.Instance.GetServerTime() >= (double)this.Data.BeginTime);
 		}
 
-		// Token: 0x060367EE RID: 223214 RVA: 0x00CE6EF4 File Offset: 0x00CE50F4
+		// Token: 0x0602B72F RID: 177967 RVA: 0x00C35BF4 File Offset: 0x00C33DF4
+		public bool HasShowTime()
+		{
+			return this.Data.ShowBeginTime > 0L;
+		}
+
+		// Token: 0x0602B730 RID: 177968 RVA: 0x00C35C08 File Offset: 0x00C33E08
+		public bool InShowTime()
+		{
+			if (!this.HasShowTime())
+			{
+				return true;
+			}
+			double serverTime = TimeUtil.Instance.GetServerTime();
+			return (double)this.Data.ShowEndTime > serverTime && serverTime >= (double)this.Data.ShowBeginTime;
+		}
+
+		// Token: 0x0602B731 RID: 177969 RVA: 0x00C35C4D File Offset: 0x00C33E4D
+		public bool IsShowTimePreview()
+		{
+			return this.HasShowTime() && this.InShowTime() && !this.InSellTime();
+		}
+
+		// Token: 0x0602B732 RID: 177970 RVA: 0x00C35C6A File Offset: 0x00C33E6A
 		public bool InLabelShowTime()
 		{
 			return this.Data.InLabelShowTime();
 		}
 
-		// Token: 0x060367EF RID: 223215 RVA: 0x00CE6F04 File Offset: 0x00CE5104
+		// Token: 0x0602B733 RID: 177971 RVA: 0x00C35C78 File Offset: 0x00C33E78
 		public bool InUnPermanentSellTime()
 		{
 			return !this.IsPermanentSell() && (double)this.Data.EndTime > TimeUtil.Instance.GetServerTime() && TimeUtil.Instance.GetServerTime() >= (double)this.Data.BeginTime;
 		}
 
-		// Token: 0x060367F0 RID: 223216 RVA: 0x00CE6F50 File Offset: 0x00CE5150
+		// Token: 0x0602B734 RID: 177972 RVA: 0x00C35CC4 File Offset: 0x00C33EC4
 		public bool WillSell()
 		{
 			return !this.IsOnSell && TimeUtil.Instance.GetServerTime() < (double)this.Data.BeginTime;
 		}
 
-		// Token: 0x060367F1 RID: 223217 RVA: 0x00CE6F78 File Offset: 0x00CE5178
+		// Token: 0x0602B735 RID: 177973 RVA: 0x00C35CEC File Offset: 0x00C33EEC
 		public CommonDefine.IPayShowCountDownRemainTime GetDiscountTimeData()
 		{
 			long endPromotionTime = this.Data.EndPromotionTime;
@@ -234,7 +256,7 @@ namespace CSharpScript.Game.Module.PayShop
 			};
 		}
 
-		// Token: 0x060367F2 RID: 223218 RVA: 0x00CE6FA4 File Offset: 0x00CE51A4
+		// Token: 0x0602B736 RID: 177974 RVA: 0x00C35D18 File Offset: 0x00C33F18
 		public CommonDefine.IRemainTime GetDiscountRemainTime()
 		{
 			double time = (double)this.Data.EndPromotionTime - TimeUtil.Instance.GetServerTime();
@@ -251,14 +273,14 @@ namespace CSharpScript.Game.Module.PayShop
 			return remainTime;
 		}
 
-		// Token: 0x060367F3 RID: 223219 RVA: 0x00CE7014 File Offset: 0x00CE5214
+		// Token: 0x0602B737 RID: 177975 RVA: 0x00C35D88 File Offset: 0x00C33F88
 		public CommonDefine.ICountDown GetDiscountCountDown()
 		{
 			double time = (double)this.Data.EndPromotionTime - TimeUtil.Instance.GetServerTime();
 			return TimeUtil.Instance.GetCountDownData(time, null, null);
 		}
 
-		// Token: 0x060367F4 RID: 223220 RVA: 0x00CE7058 File Offset: 0x00CE5258
+		// Token: 0x0602B738 RID: 177976 RVA: 0x00C35DCC File Offset: 0x00C33FCC
 		public CommonDefine.IPayShowCountDownRemainTime GetUpdateTimeRemainData()
 		{
 			long updateTime = this.Data.UpdateTime;
@@ -268,19 +290,19 @@ namespace CSharpScript.Game.Module.PayShop
 			};
 		}
 
-		// Token: 0x060367F5 RID: 223221 RVA: 0x00CE7082 File Offset: 0x00CE5282
+		// Token: 0x0602B739 RID: 177977 RVA: 0x00C35DF6 File Offset: 0x00C33FF6
 		public long GetUpdateRemainTime()
 		{
 			return (long)((double)this.Data.UpdateTime - TimeUtil.Instance.GetServerTime() + TimeUtil.Instance.TimeDeviation);
 		}
 
-		// Token: 0x060367F6 RID: 223222 RVA: 0x00CE70A7 File Offset: 0x00CE52A7
+		// Token: 0x0602B73A RID: 177978 RVA: 0x00C35E1B File Offset: 0x00C3401B
 		public bool InUpdateTime()
 		{
 			return this.Data.HasBuyLimit() && this.Data.UpdateTime != 0L && (double)this.Data.UpdateTime > TimeUtil.Instance.GetServerTime();
 		}
 
-		// Token: 0x060367F7 RID: 223223 RVA: 0x00CE70DF File Offset: 0x00CE52DF
+		// Token: 0x0602B73B RID: 177979 RVA: 0x00C35E53 File Offset: 0x00C34053
 		public bool NeedDown()
 		{
 			if (this.IsOnSell && !this.IsPermanentSell() && !this.InUnPermanentSellTime())
@@ -291,7 +313,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return false;
 		}
 
-		// Token: 0x060367F8 RID: 223224 RVA: 0x00CE7104 File Offset: 0x00CE5304
+		// Token: 0x0602B73C RID: 177980 RVA: 0x00C35E78 File Offset: 0x00C34078
 		public bool NeedUpdate()
 		{
 			if (this.InSellTime() && !this.IsOnSell)
@@ -302,7 +324,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return this.Data.HasBuyLimit() && this.Data.UpdateTime != 0L && (double)this.Data.UpdateTime <= TimeUtil.Instance.GetServerTime() && this.InSellTime();
 		}
 
-		// Token: 0x060367F9 RID: 223225 RVA: 0x00CE7168 File Offset: 0x00CE5368
+		// Token: 0x0602B73D RID: 177981 RVA: 0x00C35EDC File Offset: 0x00C340DC
 		[NullableContext(2)]
 		public static string GetEndTimeShowText(long endTime)
 		{
@@ -316,7 +338,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return TimeUtil.Instance.GetCountDownDataFormat2(num, new CommonDefine.ETimeType?((CommonDefine.ETimeType)timeTypeData.Item1), new CommonDefine.ETimeType?((CommonDefine.ETimeType)timeTypeData.Item2)).CountDownText;
 		}
 
-		// Token: 0x060367FA RID: 223226 RVA: 0x00CE71D9 File Offset: 0x00CE53D9
+		// Token: 0x0602B73E RID: 177982 RVA: 0x00C35F4D File Offset: 0x00C3414D
 		[NullableContext(0)]
 		public static ValueTuple<int, int> GetTimeTypeData(long remainTime)
 		{
@@ -331,7 +353,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return new ValueTuple<int, int>(0, 0);
 		}
 
-		// Token: 0x060367FB RID: 223227 RVA: 0x00CE7204 File Offset: 0x00CE5404
+		// Token: 0x0602B73F RID: 177983 RVA: 0x00C35F78 File Offset: 0x00C34178
 		public CommonDefine.IRemainTime GetTimeRemainData(long time)
 		{
 			double time2 = (double)time - TimeUtil.Instance.GetServerTime();
@@ -348,7 +370,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return remainTime;
 		}
 
-		// Token: 0x060367FC RID: 223228 RVA: 0x00CE7260 File Offset: 0x00CE5460
+		// Token: 0x0602B740 RID: 177984 RVA: 0x00C35FD4 File Offset: 0x00C341D4
 		public CommonDefine.IPayShowCountDownRemainTime GetEndTimeRemainData()
 		{
 			long endTime = this.Data.EndTime;
@@ -358,7 +380,7 @@ namespace CSharpScript.Game.Module.PayShop
 			};
 		}
 
-		// Token: 0x060367FD RID: 223229 RVA: 0x00CE728C File Offset: 0x00CE548C
+		// Token: 0x0602B741 RID: 177985 RVA: 0x00C36000 File Offset: 0x00C34200
 		[NullableContext(2)]
 		public string GetDownTipsText()
 		{
@@ -373,7 +395,7 @@ namespace CSharpScript.Game.Module.PayShop
 			if (!this.IfCanBuy())
 			{
 				InventoryDefine.EItemDataType itemDataTypeByConfigId = InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(this.GetGoodsData().ItemId));
-				if (this.GetGoodsData().GetItemConfig().ShowTypes.Contains(30) || itemDataTypeByConfigId == InventoryDefine.EItemDataType.RoleItem)
+				if (Array.IndexOf<int>(this.GetGoodsData().GetItemConfig().ShowTypes, 30) >= 0 || itemDataTypeByConfigId == InventoryDefine.EItemDataType.RoleItem)
 				{
 					return TextConfig.Instance.GetTextById("Text_Shop_Role_Text");
 				}
@@ -386,7 +408,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return "";
 		}
 
-		// Token: 0x060367FE RID: 223230 RVA: 0x00CE733D File Offset: 0x00CE553D
+		// Token: 0x0602B742 RID: 177986 RVA: 0x00C360B2 File Offset: 0x00C342B2
 		[NullableContext(2)]
 		public string GetConditionLimitText()
 		{
@@ -397,7 +419,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return "";
 		}
 
-		// Token: 0x060367FF RID: 223231 RVA: 0x00CE7360 File Offset: 0x00CE5560
+		// Token: 0x0602B743 RID: 177987 RVA: 0x00C360D4 File Offset: 0x00C342D4
 		[NullableContext(2)]
 		public string GetExtraLimitText()
 		{
@@ -405,17 +427,17 @@ namespace CSharpScript.Game.Module.PayShop
 			{
 				return "Text_MonthlyCardMax_Text";
 			}
-			if (this.IfCanBuy())
+			if (this.GetCantBuyReason() != PayShopDefine.EPayShopCantBuyReason.Other)
 			{
 				return null;
 			}
 			InventoryDefine.EItemDataType itemDataTypeByConfigId = InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(this.GetGoodsData().ItemId));
-			if (!this.GetGoodsData().GetItemConfig().ShowTypes.Contains(30) && itemDataTypeByConfigId != InventoryDefine.EItemDataType.RoleItem)
+			if (Array.IndexOf<int>(this.GetGoodsData().GetItemConfig().ShowTypes, 30) < 0 && itemDataTypeByConfigId != InventoryDefine.EItemDataType.RoleItem)
 			{
 				return this.GetConditionTextId();
 			}
 			int id;
-			if (this.GetGoodsData().GetItemConfig().ShowTypes.Contains(30))
+			if (Array.IndexOf<int>(this.GetGoodsData().GetItemConfig().ShowTypes, 30) >= 0)
 			{
 				id = RoleModel.Instance.GetResonantItemRoleId(this.GetGoodsData().ItemId)[0];
 			}
@@ -430,23 +452,23 @@ namespace CSharpScript.Game.Module.PayShop
 			return "RoleBrenchItemMax";
 		}
 
-		// Token: 0x06036800 RID: 223232 RVA: 0x00CE7420 File Offset: 0x00CE5620
+		// Token: 0x0602B744 RID: 177988 RVA: 0x00C36197 File Offset: 0x00C34397
 		public bool GetIfNeedExtraLimitText()
 		{
 			if (this.CheckIfMonthCardItem())
 			{
 				return !MonthCardModel.Instance.IsRemainDayInMaxLimit();
 			}
-			return !this.IfCanBuy();
+			return this.GetCantBuyReason() == PayShopDefine.EPayShopCantBuyReason.Other;
 		}
 
-		// Token: 0x06036801 RID: 223233 RVA: 0x00CE7444 File Offset: 0x00CE5644
+		// Token: 0x0602B745 RID: 177989 RVA: 0x00C361BC File Offset: 0x00C343BC
 		public bool GetIfNeedShowDownTipsText()
 		{
 			return (this.CheckIfMonthCardItem() && MonthCardModel.Instance.GetRemainDays() > ConfigCommonParamById.GetIntConfig("MonthCardMaxDays").Value) || (this.IsLimitGoods() && this.IsSoldOut()) || !this.IfCanBuy();
 		}
 
-		// Token: 0x06036802 RID: 223234 RVA: 0x00CE7498 File Offset: 0x00CE5698
+		// Token: 0x0602B746 RID: 177990 RVA: 0x00C36210 File Offset: 0x00C34410
 		public string GetSpriteTextBgColor()
 		{
 			if (this.CheckIfMonthCardItem() && MonthCardModel.Instance.GetRemainDays() > ConfigCommonParamById.GetIntConfig("MonthCardMaxDays").Value)
@@ -460,7 +482,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return "F9F9F9FF";
 		}
 
-		// Token: 0x06036803 RID: 223235 RVA: 0x00CE74EC File Offset: 0x00CE56EC
+		// Token: 0x0602B747 RID: 177991 RVA: 0x00C36264 File Offset: 0x00C34464
 		public string GetTextTipsColor()
 		{
 			if (this.CheckIfMonthCardItem() && MonthCardModel.Instance.GetRemainDays() > ConfigCommonParamById.GetIntConfig("MonthCardMaxDays").Value)
@@ -474,7 +496,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return "181818FF";
 		}
 
-		// Token: 0x06036804 RID: 223236 RVA: 0x00CE7540 File Offset: 0x00CE5740
+		// Token: 0x0602B748 RID: 177992 RVA: 0x00C362B8 File Offset: 0x00C344B8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -516,7 +538,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return new ValueTuple<EPayCountTimeType, CommonDefine.IPayShowCountDownRemainTime, double>(item, payShowCountDownRemainTime, num);
 		}
 
-		// Token: 0x06036805 RID: 223237 RVA: 0x00CE7640 File Offset: 0x00CE5840
+		// Token: 0x0602B749 RID: 177993 RVA: 0x00C363B8 File Offset: 0x00C345B8
 		public string GetResellText()
 		{
 			string result = "";
@@ -534,7 +556,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return result;
 		}
 
-		// Token: 0x06036806 RID: 223238 RVA: 0x00CE76AC File Offset: 0x00CE58AC
+		// Token: 0x0602B74A RID: 177994 RVA: 0x00C36424 File Offset: 0x00C34624
 		public string GetExchangePopViewResellText()
 		{
 			string result = "";
@@ -545,7 +567,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return result;
 		}
 
-		// Token: 0x06036807 RID: 223239 RVA: 0x00CE76F8 File Offset: 0x00CE58F8
+		// Token: 0x0602B74B RID: 177995 RVA: 0x00C36470 File Offset: 0x00C34670
 		public string GetBuyLimitText()
 		{
 			if (!this.IsLimitGoods())
@@ -588,7 +610,7 @@ namespace CSharpScript.Game.Module.PayShop
 			});
 		}
 
-		// Token: 0x06036808 RID: 223240 RVA: 0x00CE780C File Offset: 0x00CE5A0C
+		// Token: 0x0602B74C RID: 177996 RVA: 0x00C36584 File Offset: 0x00C34784
 		public string GetExchangeViewShopTipsText()
 		{
 			if (this.CheckIfMonthCardItem())
@@ -644,7 +666,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return "";
 		}
 
-		// Token: 0x06036809 RID: 223241 RVA: 0x00CE795C File Offset: 0x00CE5B5C
+		// Token: 0x0602B74D RID: 177997 RVA: 0x00C366D4 File Offset: 0x00C348D4
 		public string GetShopTipsText()
 		{
 			if (this.CheckIfMonthCardItem())
@@ -684,20 +706,26 @@ namespace CSharpScript.Game.Module.PayShop
 			return "";
 		}
 
-		// Token: 0x0603680A RID: 223242 RVA: 0x00CE7A3C File Offset: 0x00CE5C3C
+		// Token: 0x0602B74E RID: 177998 RVA: 0x00C367B4 File Offset: 0x00C349B4
 		public int GetTabId()
 		{
 			return this.Data.TabId;
 		}
 
-		// Token: 0x0603680B RID: 223243 RVA: 0x00CE7A49 File Offset: 0x00CE5C49
+		// Token: 0x0602B74F RID: 177999 RVA: 0x00C367C1 File Offset: 0x00C349C1
 		public bool IsLimitGoods()
 		{
 			return this.Data.HasBuyLimit();
 		}
 
-		// Token: 0x0603680C RID: 223244 RVA: 0x00CE7A58 File Offset: 0x00CE5C58
+		// Token: 0x0602B750 RID: 178000 RVA: 0x00C367CE File Offset: 0x00C349CE
 		public bool IfCanBuy()
+		{
+			return this.GetCantBuyReason() == PayShopDefine.EPayShopCantBuyReason.None;
+		}
+
+		// Token: 0x0602B751 RID: 178001 RVA: 0x00C367DC File Offset: 0x00C349DC
+		private bool IfCanBuyWithoutTime()
 		{
 			if (this.CheckIfMonthCardItem())
 			{
@@ -734,23 +762,33 @@ namespace CSharpScript.Game.Module.PayShop
 				}
 			}
 			CSharpScript.Game.Module.Inventory.ItemConfig itemConfig = this.GetGoodsData().GetItemConfig();
-			if (itemConfig != null)
+			if (itemConfig != null && itemConfig.ShowTypes != null && Array.IndexOf<int>(itemConfig.ShowTypes, 30) >= 0)
 			{
-				int[] showTypes = itemConfig.ShowTypes;
-				if (showTypes != null && showTypes.Contains(30))
+				int[] resonantItemRoleId = RoleModel.Instance.GetResonantItemRoleId(this.GetGoodsData().ItemId);
+				if (resonantItemRoleId != null && resonantItemRoleId.Length != 0)
 				{
-					int[] resonantItemRoleId = RoleModel.Instance.GetResonantItemRoleId(this.GetGoodsData().ItemId);
-					if (resonantItemRoleId != null && resonantItemRoleId.Length != 0)
-					{
-						int num2 = resonantItemRoleId[0];
-						return RoleModel.Instance.GetRoleInstanceById(num2) != null && RoleModel.Instance.GetRoleLeftResonantCountWithInventoryItem(num2) > 0;
-					}
+					int num2 = resonantItemRoleId[0];
+					return RoleModel.Instance.GetRoleInstanceById(num2) != null && RoleModel.Instance.GetRoleLeftResonantCountWithInventoryItem(num2) > 0;
 				}
 			}
 			return this.Data.GetIfCanBuy();
 		}
 
-		// Token: 0x0603680D RID: 223245 RVA: 0x00CE7B7C File Offset: 0x00CE5D7C
+		// Token: 0x0602B752 RID: 178002 RVA: 0x00C368FF File Offset: 0x00C34AFF
+		public PayShopDefine.EPayShopCantBuyReason GetCantBuyReason()
+		{
+			if (!this.IfCanBuyWithoutTime())
+			{
+				return PayShopDefine.EPayShopCantBuyReason.Other;
+			}
+			if (!this.InSellTime())
+			{
+				return PayShopDefine.EPayShopCantBuyReason.NotInSellTime;
+			}
+			return PayShopDefine.EPayShopCantBuyReason.None;
+		}
+
+		// Token: 0x0602B753 RID: 178003 RVA: 0x00C36918 File Offset: 0x00C34B18
 		public bool IsSoldOut()
 		{
 			if (this.Data.HasBuyLimit())
@@ -761,74 +799,107 @@ namespace CSharpScript.Game.Module.PayShop
 			return rewardRoleSkinId > 0 && !RoleSkinModel.Instance.GetRoleSkinData(rewardRoleSkinId).IsLocked();
 		}
 
-		// Token: 0x0603680E RID: 223246 RVA: 0x00CE7BCF File Offset: 0x00CE5DCF
+		// Token: 0x0602B754 RID: 178004 RVA: 0x00C3696B File Offset: 0x00C34B6B
 		public int GetGoodsId()
 		{
 			return this.Data.Id;
 		}
 
-		// Token: 0x0603680F RID: 223247 RVA: 0x00CE7BDC File Offset: 0x00CE5DDC
+		// Token: 0x0602B755 RID: 178005 RVA: 0x00C36978 File Offset: 0x00C34B78
 		public bool IsDirect()
 		{
 			return this.Data.IsDirect();
 		}
 
-		// Token: 0x06036810 RID: 223248 RVA: 0x00CE7BE9 File Offset: 0x00CE5DE9
+		// Token: 0x0602B756 RID: 178006 RVA: 0x00C36985 File Offset: 0x00C34B85
 		public void AddBoughtCount(int addCount)
 		{
 			this.Data.BoughtCount += addCount;
 		}
 
-		// Token: 0x06036811 RID: 223249 RVA: 0x00CE7BFE File Offset: 0x00CE5DFE
+		// Token: 0x0602B757 RID: 178007 RVA: 0x00C3699A File Offset: 0x00C34B9A
 		public bool IsShowInShop()
 		{
 			return this.Data.IsShowInShop();
 		}
 
-		// Token: 0x06036812 RID: 223250 RVA: 0x00CE7C0B File Offset: 0x00CE5E0B
+		// Token: 0x0602B758 RID: 178008 RVA: 0x00C369A7 File Offset: 0x00C34BA7
 		public PayShopItemBaseSt ConvertToPayShopBaseSt()
 		{
 			this.CachePayShopItemBaseSt.Refresh(this);
 			return this.CachePayShopItemBaseSt;
 		}
 
-		// Token: 0x06036813 RID: 223251 RVA: 0x00CE7C1F File Offset: 0x00CE5E1F
+		// Token: 0x0602B759 RID: 178009 RVA: 0x00C369BB File Offset: 0x00C34BBB
 		public bool CheckIfMonthCardItem()
 		{
 			return this.GetGoodsData().CheckIfMonthCardItem();
 		}
 
-		// Token: 0x06036814 RID: 223252 RVA: 0x00CE7C2C File Offset: 0x00CE5E2C
+		// Token: 0x0602B75A RID: 178010 RVA: 0x00C369C8 File Offset: 0x00C34BC8
 		public bool GetIfNeedRemind()
 		{
 			return this.IsGoodsFree() || this.IfNeedRemind();
 		}
 
-		// Token: 0x06036815 RID: 223253 RVA: 0x00CE7C41 File Offset: 0x00CE5E41
+		// Token: 0x0602B75B RID: 178011 RVA: 0x00C369DD File Offset: 0x00C34BDD
 		private bool IsGoodsFree()
 		{
 			return !this.IsLocked() && this.IfCanBuy() && !this.IsSoldOut() && this.CheckGoodIfShow() && !this.IsDirect() && this.GetPriceData().NowPrice == 0;
 		}
 
-		// Token: 0x06036816 RID: 223254 RVA: 0x00CE7C7B File Offset: 0x00CE5E7B
+		// Token: 0x0602B75C RID: 178012 RVA: 0x00C36A17 File Offset: 0x00C34C17
 		private bool IfNeedRemind()
 		{
 			return this.IfCanBuy() && !this.IsSoldOut() && this.CheckGoodIfShow() && this.Data.GetIfNeedRemind();
 		}
 
-		// Token: 0x06036817 RID: 223255 RVA: 0x00CE7CA2 File Offset: 0x00CE5EA2
+		// Token: 0x0602B75D RID: 178013 RVA: 0x00C36A3E File Offset: 0x00C34C3E
 		public bool GetIfShowRecommendTag()
 		{
 			return this.Data.ShowRecommendTag;
 		}
 
-		// Token: 0x06036818 RID: 223256 RVA: 0x00CE7CB0 File Offset: 0x00CE5EB0
-		public bool CheckGoodIfShow()
+		// Token: 0x0602B75E RID: 178014 RVA: 0x00C36A4C File Offset: 0x00C34C4C
+		public unsafe bool CheckGoodIfShow()
 		{
-			return this.IsShowInShop() && this.InSellTime() && this.GetGoodsData().Show && (!this.GetGoodsData().HasBuyLimit() || this.GetGoodsData().GetRemainingCount() != 0 || this.GetGoodsData().IsWeeklyRefresh() || this.GetGoodsData().IfShowAfterSoldOut()) && (!this.GetGoodsData().HasBuyLimit() || this.GetGoodsData().GetRemainingCount() != 0 || !this.GetGoodsData().IsWeeklyRefresh() || this.GetGoodsData().UpdateTime < this.GetGoodsData().EndTime || this.IsPermanentSell());
+			if (!this.IsShowInShop())
+			{
+				return false;
+			}
+			if (this.HasShowTime())
+			{
+				if (!this.InShowTime() && !this.InSellTime())
+				{
+					return false;
+				}
+				if (this.GetCantBuyReason() == PayShopDefine.EPayShopCantBuyReason.NotInSellTime)
+				{
+					int tabId = this.GetTabId();
+					PayShopTab? config = ConfigPayShopTabByShopIdAndTabId.GetConfig((int)this.PayShopId, tabId, true);
+					if (config == null || !config.GetValueOrDefault().NeedShowShowTime)
+					{
+						Log instance = Log.Instance;
+						ELogModule module = ELogModule.Shop;
+						ELogAuthor author = ELogAuthor.XXJ;
+						string message = "商城商品展示时间配置错误，PayShopTab未开启NeedShowShowTime";
+						<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("ConfigId", this.Data.Id);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("tabId", tabId);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("shopId", this.PayShopId);
+						instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
+						return false;
+					}
+				}
+			}
+			else if (!this.InSellTime())
+			{
+				return false;
+			}
+			return this.GetGoodsData().Show && (!this.GetGoodsData().HasBuyLimit() || this.GetGoodsData().GetRemainingCount() != 0 || this.GetGoodsData().IsWeeklyRefresh() || this.GetGoodsData().IfShowAfterSoldOut()) && (!this.GetGoodsData().HasBuyLimit() || this.GetGoodsData().GetRemainingCount() != 0 || !this.GetGoodsData().IsWeeklyRefresh() || this.GetGoodsData().UpdateTime < this.GetGoodsData().EndTime || this.IsPermanentSell());
 		}
 
-		// Token: 0x06036819 RID: 223257 RVA: 0x00CE7D60 File Offset: 0x00CE5F60
+		// Token: 0x0602B75F RID: 178015 RVA: 0x00C36BE8 File Offset: 0x00C34DE8
 		public void SaveRemindState(long timestamp)
 		{
 			if (this.Data.SaveRemindState(timestamp) == 0)
@@ -839,7 +910,7 @@ namespace CSharpScript.Game.Module.PayShop
 			}
 		}
 
-		// Token: 0x0603681A RID: 223258 RVA: 0x00CE7DB8 File Offset: 0x00CE5FB8
+		// Token: 0x0602B760 RID: 178016 RVA: 0x00C36C40 File Offset: 0x00C34E40
 		public bool CheckIfGiftPackage()
 		{
 			int itemId = this.GetGoodsData().ItemId;
@@ -873,7 +944,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return false;
 		}
 
-		// Token: 0x0603681B RID: 223259 RVA: 0x00CE7E68 File Offset: 0x00CE6068
+		// Token: 0x0602B761 RID: 178017 RVA: 0x00C36CF0 File Offset: 0x00C34EF0
 		public int GetPackageRewardId()
 		{
 			int itemId = this.GetGoodsData().ItemId;
@@ -911,7 +982,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return num.Value;
 		}
 
-		// Token: 0x0603681C RID: 223260 RVA: 0x00CE7F20 File Offset: 0x00CE6120
+		// Token: 0x0602B762 RID: 178018 RVA: 0x00C36DA8 File Offset: 0x00C34FA8
 		public int GetRewardRoleSkinId()
 		{
 			int itemId = this.GetGoodsData().ItemId;
@@ -940,7 +1011,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return 0;
 		}
 
-		// Token: 0x0603681D RID: 223261 RVA: 0x00CE8000 File Offset: 0x00CE6200
+		// Token: 0x0602B763 RID: 178019 RVA: 0x00C36E88 File Offset: 0x00C35088
 		public int GetRewardFlySkinId()
 		{
 			int itemId = this.GetGoodsData().ItemId;
@@ -969,7 +1040,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return 0;
 		}
 
-		// Token: 0x0603681E RID: 223262 RVA: 0x00CE80E0 File Offset: 0x00CE62E0
+		// Token: 0x0602B764 RID: 178020 RVA: 0x00C36F68 File Offset: 0x00C35168
 		public int GetRewardOrnamentId()
 		{
 			int itemId = this.GetGoodsData().ItemId;
@@ -1006,19 +1077,19 @@ namespace CSharpScript.Game.Module.PayShop
 			return 0;
 		}
 
-		// Token: 0x0603681F RID: 223263 RVA: 0x00CE81EC File Offset: 0x00CE63EC
+		// Token: 0x0602B765 RID: 178021 RVA: 0x00C37074 File Offset: 0x00C35274
 		public bool CheckIfOrnamentGoods()
 		{
 			return this.GetRewardOrnamentId() != 0;
 		}
 
-		// Token: 0x06036820 RID: 223264 RVA: 0x00CE81F7 File Offset: 0x00CE63F7
+		// Token: 0x0602B766 RID: 178022 RVA: 0x00C3707F File Offset: 0x00C3527F
 		public bool CheckIfRoleSkinGoods()
 		{
 			return this.GetRewardRoleSkinId() != 0;
 		}
 
-		// Token: 0x06036821 RID: 223265 RVA: 0x00CE8204 File Offset: 0x00CE6404
+		// Token: 0x0602B767 RID: 178023 RVA: 0x00C3708C File Offset: 0x00C3528C
 		public bool CheckIfFlySkinGoods()
 		{
 			int itemId = this.GetGoodsData().ItemId;
@@ -1051,7 +1122,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return false;
 		}
 
-		// Token: 0x06036822 RID: 223266 RVA: 0x00CE82F8 File Offset: 0x00CE64F8
+		// Token: 0x0602B768 RID: 178024 RVA: 0x00C37180 File Offset: 0x00C35380
 		[NullableContext(2)]
 		public CommonItemData GetAvailableCouponItem()
 		{
@@ -1066,7 +1137,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return null;
 		}
 
-		// Token: 0x06036823 RID: 223267 RVA: 0x00CE8360 File Offset: 0x00CE6560
+		// Token: 0x0602B769 RID: 178025 RVA: 0x00C371E8 File Offset: 0x00C353E8
 		public int GetAvailableCouponDiscount()
 		{
 			CommonItemData availableCouponItem = this.GetAvailableCouponItem();
@@ -1082,7 +1153,7 @@ namespace CSharpScript.Game.Module.PayShop
 			return config.Value.Param;
 		}
 
-		// Token: 0x06036824 RID: 223268 RVA: 0x00CE83A0 File Offset: 0x00CE65A0
+		// Token: 0x0602B76A RID: 178026 RVA: 0x00C37228 File Offset: 0x00C35428
 		public int GetRewardMotorSkinId()
 		{
 			int itemId = this.GetGoodsData().ItemId;
@@ -1120,19 +1191,19 @@ namespace CSharpScript.Game.Module.PayShop
 			return 0;
 		}
 
-		// Token: 0x06036825 RID: 223269 RVA: 0x00CE84B0 File Offset: 0x00CE66B0
+		// Token: 0x0602B76B RID: 178027 RVA: 0x00C37338 File Offset: 0x00C35538
 		public bool CheckIfMotorSkinGoods()
 		{
 			return this.GetRewardMotorSkinId() != 0;
 		}
 
-		// Token: 0x06036826 RID: 223270 RVA: 0x00CE84BB File Offset: 0x00CE66BB
+		// Token: 0x0602B76C RID: 178028 RVA: 0x00C37343 File Offset: 0x00C35543
 		public bool HasCloudGameInfo()
 		{
 			return this.Data.CloudGameTime > 0;
 		}
 
-		// Token: 0x06036827 RID: 223271 RVA: 0x00CE84CB File Offset: 0x00CE66CB
+		// Token: 0x0602B76D RID: 178029 RVA: 0x00C37353 File Offset: 0x00C35553
 		public string GetCloudGameDesc()
 		{
 			if (!this.HasCloudGameInfo())
@@ -1145,29 +1216,29 @@ namespace CSharpScript.Game.Module.PayShop
 			});
 		}
 
-		// Token: 0x06036828 RID: 223272 RVA: 0x00CE850A File Offset: 0x00CE670A
+		// Token: 0x0602B76E RID: 178030 RVA: 0x00C37392 File Offset: 0x00C35592
 		public string GetCloudGameIcon()
 		{
 			return this.Data.CloudGameIcon;
 		}
 
-		// Token: 0x06036829 RID: 223273 RVA: 0x00CE8517 File Offset: 0x00CE6717
+		// Token: 0x0602B76F RID: 178031 RVA: 0x00C3739F File Offset: 0x00C3559F
 		public bool GetIfShowTotalTopUpScore()
 		{
 			return TotalTopUpController.Instance.GetGoodsScore(this.GetGoodsId()) > 0;
 		}
 
-		// Token: 0x0401CD40 RID: 118080
+		// Token: 0x040177D4 RID: 96212
 		private bool IsOnSell;
 
-		// Token: 0x0401CD41 RID: 118081
+		// Token: 0x040177D5 RID: 96213
 		public PayShopDefine.EPayShopTabType PayShopId = PayShopDefine.EPayShopTabType.Recommend;
 
-		// Token: 0x0401CD42 RID: 118082
+		// Token: 0x040177D6 RID: 96214
 		[Nullable(2)]
 		private PayShopItemBaseSt CachePayShopItemBaseSt;
 
-		// Token: 0x0401CD43 RID: 118083
+		// Token: 0x040177D7 RID: 96215
 		private int PayGiftId;
 	}
 }

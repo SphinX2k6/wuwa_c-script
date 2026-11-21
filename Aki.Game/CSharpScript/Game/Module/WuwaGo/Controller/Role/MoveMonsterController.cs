@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 {
-	// Token: 0x02004759 RID: 18265
+	// Token: 0x0200368A RID: 13962
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -21,12 +21,12 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 	[Controller(0)]
 	public class MoveMonsterController : WuWaGoMonsterControllerBase<WuWaGoMoveMonster>
 	{
-		// Token: 0x0602FBFD RID: 195581 RVA: 0x00B0FF8A File Offset: 0x00B0E18A
+		// Token: 0x060243C7 RID: 148423 RVA: 0x00A3FF4A File Offset: 0x00A3E14A
 		public MoveMonsterController(WuWaGoMoveMonster role, WuWaGoGameData gameData, WuWaGoGameModeBase gameMode) : base(role, gameData, gameMode)
 		{
 		}
 
-		// Token: 0x0602FBFE RID: 195582 RVA: 0x00B0FFA1 File Offset: 0x00B0E1A1
+		// Token: 0x060243C8 RID: 148424 RVA: 0x00A3FF61 File Offset: 0x00A3E161
 		protected override bool OnCreate()
 		{
 			if (!base.OnCreate())
@@ -37,14 +37,14 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return true;
 		}
 
-		// Token: 0x0602FBFF RID: 195583 RVA: 0x00B0FFB4 File Offset: 0x00B0E1B4
+		// Token: 0x060243C9 RID: 148425 RVA: 0x00A3FF74 File Offset: 0x00A3E174
 		protected override void OnDestroy()
 		{
 			this.StopIdleMontage("Destroy");
 			base.OnDestroy();
 		}
 
-		// Token: 0x0602FC00 RID: 195584 RVA: 0x00B0FFC7 File Offset: 0x00B0E1C7
+		// Token: 0x060243CA RID: 148426 RVA: 0x00A3FF87 File Offset: 0x00A3E187
 		public override void OnRollbackRestore()
 		{
 			base.OnRollbackRestore();
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.PlayIdleMontage();
 		}
 
-		// Token: 0x0602FC01 RID: 195585 RVA: 0x00B0FFF0 File Offset: 0x00B0E1F0
+		// Token: 0x060243CB RID: 148427 RVA: 0x00A3FFB0 File Offset: 0x00A3E1B0
 		protected override UniTask OnExecuteAction()
 		{
 			MoveMonsterController.<OnExecuteAction>d__7 <OnExecuteAction>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <OnExecuteAction>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC02 RID: 195586 RVA: 0x00B10034 File Offset: 0x00B0E234
+		// Token: 0x060243CC RID: 148428 RVA: 0x00A3FFF4 File Offset: 0x00A3E1F4
 		protected override UniTask OnBeforeAttack(WuWaGoGrid targetGrid)
 		{
 			MoveMonsterController.<OnBeforeAttack>d__8 <OnBeforeAttack>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <OnBeforeAttack>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC03 RID: 195587 RVA: 0x00B10080 File Offset: 0x00B0E280
+		// Token: 0x060243CD RID: 148429 RVA: 0x00A40040 File Offset: 0x00A3E240
 		private void UpdateFootprintsByObservation(WuWaGoGrid playerGrid)
 		{
 			if (!this.Role.IsTracking)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.Role.PushFootprint(playerGrid);
 		}
 
-		// Token: 0x0602FC04 RID: 195588 RVA: 0x00B100F0 File Offset: 0x00B0E2F0
+		// Token: 0x060243CE RID: 148430 RVA: 0x00A400B0 File Offset: 0x00A3E2B0
 		private UniTask TryEnterTracking(WuWaGoGrid playerGrid)
 		{
 			MoveMonsterController.<TryEnterTracking>d__10 <TryEnterTracking>d__;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <TryEnterTracking>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC05 RID: 195589 RVA: 0x00B1013C File Offset: 0x00B0E33C
+		// Token: 0x060243CF RID: 148431 RVA: 0x00A400FC File Offset: 0x00A3E2FC
 		private UniTask PlayAlertMontage()
 		{
 			MoveMonsterController.<PlayAlertMontage>d__11 <PlayAlertMontage>d__;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <PlayAlertMontage>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC06 RID: 195590 RVA: 0x00B10180 File Offset: 0x00B0E380
+		// Token: 0x060243D0 RID: 148432 RVA: 0x00A40140 File Offset: 0x00A3E340
 		private UniTask AdvanceOneStep()
 		{
 			MoveMonsterController.<AdvanceOneStep>d__12 <AdvanceOneStep>d__;
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <AdvanceOneStep>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC07 RID: 195591 RVA: 0x00B101C4 File Offset: 0x00B0E3C4
+		// Token: 0x060243D1 RID: 148433 RVA: 0x00A40184 File Offset: 0x00A3E384
 		[NullableContext(2)]
 		private WuWaGoRole GetPlayerRole()
 		{
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return mainControlRole;
 		}
 
-		// Token: 0x0602FC08 RID: 195592 RVA: 0x00B101F0 File Offset: 0x00B0E3F0
+		// Token: 0x060243D2 RID: 148434 RVA: 0x00A401B0 File Offset: 0x00A3E3B0
 		private void ResetTracking(string reason)
 		{
 			WuWaGoMoveMonster role = this.Role;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.Role.ClearFootprints();
 		}
 
-		// Token: 0x0602FC09 RID: 195593 RVA: 0x00B1023C File Offset: 0x00B0E43C
+		// Token: 0x060243D3 RID: 148435 RVA: 0x00A401FC File Offset: 0x00A3E3FC
 		private unsafe void PlayIdleMontage()
 		{
 			if (this.Role.HasObservedPlayer || this.Role.IsDead || !this.Role.IsActorValid())
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			actorAnimInstance.OnMontageEnded.Add(new Action<UAnimMontage, bool>(this.OnIdleMontageEnded));
 		}
 
-		// Token: 0x0602FC0A RID: 195594 RVA: 0x00B103A4 File Offset: 0x00B0E5A4
+		// Token: 0x060243D4 RID: 148436 RVA: 0x00A40364 File Offset: 0x00A3E564
 		private void StopIdleMontage(string reason)
 		{
 			UAnimMontage playingIdleMontage = this.PlayingIdleMontage;
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			animInstance.Montage_Stop(MoveMonsterController.IdleMontageBlendOutTime, playingIdleMontage);
 		}
 
-		// Token: 0x0602FC0B RID: 195595 RVA: 0x00B10410 File Offset: 0x00B0E610
+		// Token: 0x060243D5 RID: 148437 RVA: 0x00A403D0 File Offset: 0x00A3E5D0
 		[NullableContext(2)]
 		private void OnIdleMontageEnded(UAnimMontage montage, bool bInterrupted)
 		{
@@ -251,13 +251,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.PlayIdleMontage();
 		}
 
-		// Token: 0x04019C42 RID: 105538
+		// Token: 0x040142F2 RID: 82674
 		private static readonly float IdleMontageBlendOutTime = 0.1f;
 
-		// Token: 0x04019C43 RID: 105539
+		// Token: 0x040142F3 RID: 82675
 		private readonly MoveCapability MoveCapability = new MoveCapability(role);
 
-		// Token: 0x04019C44 RID: 105540
+		// Token: 0x040142F4 RID: 82676
 		[Nullable(2)]
 		private UAnimMontage PlayingIdleMontage;
 	}

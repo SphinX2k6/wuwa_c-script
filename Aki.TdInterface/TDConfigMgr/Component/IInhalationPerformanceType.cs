@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200045A RID: 1114
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004B3 RID: 1203
 	public class IInhalationPerformanceType
 	{
-		// Token: 0x06001685 RID: 5765 RVA: 0x000456A4 File Offset: 0x000438A4
+		// Token: 0x0600181F RID: 6175 RVA: 0x000493EC File Offset: 0x000475EC
 		private IInhalationPerformanceType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001686 RID: 5766 RVA: 0x000456DC File Offset: 0x000438DC
+		// Token: 0x06001820 RID: 6176 RVA: 0x00049424 File Offset: 0x00047624
 		public static IInhalationPerformanceType Create([Nullable(2)] IInhalationPerformanceType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001687 RID: 5767 RVA: 0x000456EF File Offset: 0x000438EF
+		// Token: 0x06001821 RID: 6177 RVA: 0x00049437 File Offset: 0x00047637
 		public static IInhalationPerformanceType CreateFromSetValue([Nullable(2)] IInhalationPerformanceType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001688 RID: 5768 RVA: 0x00045702 File Offset: 0x00043902
+		// Token: 0x06001822 RID: 6178 RVA: 0x0004944A File Offset: 0x0004764A
 		public IInhalationPerformanceType_SetValue ToSetValue()
 		{
 			return new IInhalationPerformanceType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000619 RID: 1561
-		// (get) Token: 0x06001689 RID: 5769 RVA: 0x00045715 File Offset: 0x00043915
-		// (set) Token: 0x0600168A RID: 5770 RVA: 0x00045740 File Offset: 0x00043940
+		// Token: 0x17000680 RID: 1664
+		// (get) Token: 0x06001823 RID: 6179 RVA: 0x0004945D File Offset: 0x0004765D
+		// (set) Token: 0x06001824 RID: 6180 RVA: 0x00049488 File Offset: 0x00047688
 		public virtual EInhalationPerformanceType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400112A RID: 4394
+		// Token: 0x0400124C RID: 4684
 		[Nullable(2)]
 		protected IInhalationPerformanceType FbInstance;
 
-		// Token: 0x0400112B RID: 4395
+		// Token: 0x0400124D RID: 4685
 		[Nullable(2)]
 		protected IInhalationPerformanceType_SetValue PocoInterface;
 	}

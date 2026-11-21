@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024D8 RID: 9432
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200277D RID: 10109
 	public class WaitUntilLevelSequenceReachMark : ActionParams
 	{
-		// Token: 0x0600D2A2 RID: 53922 RVA: 0x001F3F49 File Offset: 0x001F2149
+		// Token: 0x0600DFF7 RID: 57335 RVA: 0x0020F7A5 File Offset: 0x0020D9A5
 		public static WaitUntilLevelSequenceReachMark Create(IWaitUntilLevelSequenceReachMark? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003AB4 RID: 15028
-		// (get) Token: 0x0600D2A3 RID: 53923 RVA: 0x001F3F68 File Offset: 0x001F2168
+		// Token: 0x17003DAB RID: 15787
+		// (get) Token: 0x0600DFF8 RID: 57336 RVA: 0x0020F7C4 File Offset: 0x0020D9C4
 		public virtual int EntityId
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AB5 RID: 15029
-		// (get) Token: 0x0600D2A4 RID: 53924 RVA: 0x001F3F75 File Offset: 0x001F2175
+		// Token: 0x17003DAC RID: 15788
+		// (get) Token: 0x0600DFF9 RID: 57337 RVA: 0x0020F7D1 File Offset: 0x0020D9D1
 		public virtual string Mark
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007386 RID: 29574
+		// Token: 0x040079D3 RID: 31187
 		private IWaitUntilLevelSequenceReachMark Instance;
 	}
 }

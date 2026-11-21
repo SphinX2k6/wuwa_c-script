@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002175 RID: 8565
+	// Token: 0x020023D6 RID: 9174
 	public class RogueSelectRoom_SetValue
 	{
-		// Token: 0x0400707F RID: 28799
-		[Nullable(1)]
+		// Token: 0x040076B4 RID: 30388
 		public IRogueRoleSelectRoom Config;
 	}
 }

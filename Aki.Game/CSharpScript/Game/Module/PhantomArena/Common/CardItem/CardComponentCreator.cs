@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem
 {
-	// Token: 0x020051C9 RID: 20937
-	// (Invoke) Token: 0x060359A5 RID: 219557
+	// Token: 0x02004199 RID: 16793
+	// (Invoke) Token: 0x0602A8A0 RID: 174240
 	public delegate ICardComponentBase CardComponentCreator();
 }

@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FBC RID: 8124
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020021FF RID: 8703
 	public class ITextStyle
 	{
-		// Token: 0x0600B2AE RID: 45742 RVA: 0x001A0580 File Offset: 0x0019E780
-		[NullableContext(1)]
+		// Token: 0x0600BDB2 RID: 48562 RVA: 0x001B6930 File Offset: 0x001B4B30
 		private ITextStyle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B2AF RID: 45743 RVA: 0x001A05B8 File Offset: 0x0019E7B8
-		[NullableContext(1)]
+		// Token: 0x0600BDB3 RID: 48563 RVA: 0x001B6968 File Offset: 0x001B4B68
 		public static ITextStyle Create([Nullable(2)] ITextStyle instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2B0 RID: 45744 RVA: 0x001A05CB File Offset: 0x0019E7CB
-		[NullableContext(1)]
+		// Token: 0x0600BDB4 RID: 48564 RVA: 0x001B697B File Offset: 0x001B4B7B
 		public static ITextStyle CreateFromSetValue([Nullable(2)] ITextStyle_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2B1 RID: 45745 RVA: 0x001A05DE File Offset: 0x0019E7DE
-		[NullableContext(1)]
+		// Token: 0x0600BDB5 RID: 48565 RVA: 0x001B698E File Offset: 0x001B4B8E
 		public ITextStyle_SetValue ToSetValue()
 		{
 			return new ITextStyle_SetValue
@@ -66,11 +60,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003715 RID: 14101
-		// (get) Token: 0x0600B2B2 RID: 45746 RVA: 0x001A0615 File Offset: 0x0019E815
-		// (set) Token: 0x0600B2B3 RID: 45747 RVA: 0x001A063C File Offset: 0x0019E83C
+		// Token: 0x170039EA RID: 14826
+		// (get) Token: 0x0600BDB6 RID: 48566 RVA: 0x001B69C5 File Offset: 0x001B4BC5
+		// (set) Token: 0x0600BDB7 RID: 48567 RVA: 0x001B69EC File Offset: 0x001B4BEC
+		[Nullable(2)]
 		public virtual ICenterTextShowType ShowAnim
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -84,15 +80,16 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.ShowAnim;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().ShowAnim = value;
 			}
 		}
 
-		// Token: 0x17003716 RID: 14102
-		// (get) Token: 0x0600B2B4 RID: 45748 RVA: 0x001A064C File Offset: 0x0019E84C
-		// (set) Token: 0x0600B2B5 RID: 45749 RVA: 0x001A0686 File Offset: 0x0019E886
+		// Token: 0x170039EB RID: 14827
+		// (get) Token: 0x0600BDB8 RID: 48568 RVA: 0x001B69FC File Offset: 0x001B4BFC
+		// (set) Token: 0x0600BDB9 RID: 48569 RVA: 0x001B6A36 File Offset: 0x001B4C36
 		public virtual EFontSize? FontSize
 		{
 			get
@@ -114,9 +111,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003717 RID: 14103
-		// (get) Token: 0x0600B2B6 RID: 45750 RVA: 0x001A0694 File Offset: 0x0019E894
-		// (set) Token: 0x0600B2B7 RID: 45751 RVA: 0x001A06CE File Offset: 0x0019E8CE
+		// Token: 0x170039EC RID: 14828
+		// (get) Token: 0x0600BDBA RID: 48570 RVA: 0x001B6A44 File Offset: 0x001B4C44
+		// (set) Token: 0x0600BDBB RID: 48571 RVA: 0x001B6A7E File Offset: 0x001B4C7E
 		public virtual ETextAlign? TextAlign
 		{
 			get
@@ -138,9 +135,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003718 RID: 14104
-		// (get) Token: 0x0600B2B8 RID: 45752 RVA: 0x001A06DC File Offset: 0x0019E8DC
-		// (set) Token: 0x0600B2B9 RID: 45753 RVA: 0x001A0716 File Offset: 0x0019E916
+		// Token: 0x170039ED RID: 14829
+		// (get) Token: 0x0600BDBC RID: 48572 RVA: 0x001B6A8C File Offset: 0x001B4C8C
+		// (set) Token: 0x0600BDBD RID: 48573 RVA: 0x001B6AC6 File Offset: 0x001B4CC6
 		public virtual ETextHorizontal? TextHorizontal
 		{
 			get
@@ -162,10 +159,12 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006BE6 RID: 27622
+		// Token: 0x040071E1 RID: 29153
+		[Nullable(2)]
 		protected ITextStyle FbInstance;
 
-		// Token: 0x04006BE7 RID: 27623
+		// Token: 0x040071E2 RID: 29154
+		[Nullable(2)]
 		protected ITextStyle_SetValue PocoInterface;
 	}
 }

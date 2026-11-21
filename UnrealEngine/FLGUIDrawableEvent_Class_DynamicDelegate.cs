@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002044 RID: 8260
+	// Token: 0x0200067E RID: 1662
 	public sealed class FLGUIDrawableEvent_Class_DynamicDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F3A6 RID: 127910 RVA: 0x002E5EA0 File Offset: 0x002E40A0
+		// Token: 0x0600905C RID: 36956 RVA: 0x000D8B3A File Offset: 0x000D6D3A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIDrawableEvent_Class_DynamicDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F3A7 RID: 127911 RVA: 0x002E5EAC File Offset: 0x002E40AC
+		// Token: 0x0600905D RID: 36957 RVA: 0x000D8B46 File Offset: 0x000D6D46
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIDrawableEvent_Class_DynamicDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLGUIDrawableEvent_Class_DynamicDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F3A8 RID: 127912 RVA: 0x002E5ECF File Offset: 0x002E40CF
+		// Token: 0x0600905E RID: 36958 RVA: 0x000D8B69 File Offset: 0x000D6D69
 		public FLGUIDrawableEvent_Class_DynamicDelegate()
 		{
 		}
 
-		// Token: 0x0601F3A9 RID: 127913 RVA: 0x002E5ED7 File Offset: 0x002E40D7
+		// Token: 0x0600905F RID: 36959 RVA: 0x000D8B71 File Offset: 0x000D6D71
 		[NullableContext(2)]
 		public FLGUIDrawableEvent_Class_DynamicDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F3AA RID: 127914 RVA: 0x002E5EE1 File Offset: 0x002E40E1
+		// Token: 0x06009060 RID: 36960 RVA: 0x000D8B7B File Offset: 0x000D6D7B
 		public FLGUIDrawableEvent_Class_DynamicDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F3AB RID: 127915 RVA: 0x002E5EEC File Offset: 0x002E40EC
+		// Token: 0x06009061 RID: 36961 RVA: 0x000D8B86 File Offset: 0x000D6D86
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as FLGUIDrawableEvent_Class_DynamicDelegate.FLGUIDrawableEvent_Class_DynamicDelegate_ScriptDelegate) ?? ((FLGUIDrawableEvent_Class_DynamicDelegate.FLGUIDrawableEvent_Class_DynamicDelegate_ScriptDelegate)Delegate.CreateDelegate(typeof(FLGUIDrawableEvent_Class_DynamicDelegate.FLGUIDrawableEvent_Class_DynamicDelegate_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F3AC RID: 127916 RVA: 0x002E5F1E File Offset: 0x002E411E
+		// Token: 0x06009062 RID: 36962 RVA: 0x000D8BB8 File Offset: 0x000D6DB8
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(FLGUIDrawableEvent_Class_DynamicDelegate.FLGUIDrawableEvent_Class_DynamicDelegate_ScriptDelegate Callback)
 		{
 			if (FLGUIDrawableEvent_Class_DynamicDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIDrawableEvent_Class_DynamicDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F3AD RID: 127917 RVA: 0x002E5F58 File Offset: 0x002E4158
+		// Token: 0x06009063 RID: 36963 RVA: 0x000D8BF4 File Offset: 0x000D6DF4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(UClassStackOnlyPtr value)
 		{
 			FLGUIDrawableEvent_Class_DynamicDelegate.__FLGUIDrawableEvent_Class_DynamicDelegate_DelegateParams* ptr = stackalloc FLGUIDrawableEvent_Class_DynamicDelegate.__FLGUIDrawableEvent_Class_DynamicDelegate_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FLGUIDrawableEvent_Class_DynamicDelegate.__FLGUIDrawableEvent_Class_DynamicDelegate_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F3AE RID: 127918 RVA: 0x002E5F98 File Offset: 0x002E4198
+		// Token: 0x06009064 RID: 36964 RVA: 0x000D8C34 File Offset: 0x000D6E34
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FLGUIDrawableEvent_Class_DynamicDelegate.FLGUIDrawableEvent_Class_DynamicDelegate_ScriptDelegate flguidrawableEvent_Class_DynamicDelegate_ScriptDelegate = target as FLGUIDrawableEvent_Class_DynamicDelegate.FLGUIDrawableEvent_Class_DynamicDelegate_ScriptDelegate;
@@ -90,35 +87,35 @@ namespace UnrealEngine
 			flguidrawableEvent_Class_DynamicDelegate_ScriptDelegate(((FLGUIDrawableEvent_Class_DynamicDelegate.__FLGUIDrawableEvent_Class_DynamicDelegate_DelegateParams*)__Parameters)->value);
 		}
 
-		// Token: 0x04010E71 RID: 69233
+		// Token: 0x04003F13 RID: 16147
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010E72 RID: 69234
+		// Token: 0x04003F14 RID: 16148
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIDrawableEvent_Class_DynamicDelegate__DelegateSignature";
 
-		// Token: 0x04010E73 RID: 69235
+		// Token: 0x04003F15 RID: 16149
 		private static int RegisterId;
 
-		// Token: 0x0200344C RID: 13388
-		// (Invoke) Token: 0x060285BE RID: 165310
+		// Token: 0x02000E8F RID: 3727
+		// (Invoke) Token: 0x0600BF27 RID: 48935
 		public delegate void FLGUIDrawableEvent_Class_DynamicDelegate_ScriptDelegate(UClassStackOnlyPtr value);
 
-		// Token: 0x0200344D RID: 13389
+		// Token: 0x02000E90 RID: 3728
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FLGUIDrawableEvent_Class_DynamicDelegate_DelegateParams
+		private ref struct __FLGUIDrawableEvent_Class_DynamicDelegate_DelegateParams
 		{
-			// Token: 0x04017430 RID: 95280
+			// Token: 0x0400623F RID: 25151
 			[FieldOffset(0)]
 			public UClassStackOnlyPtr value;
 		}
 
-		// Token: 0x0200344E RID: 13390
+		// Token: 0x02000E91 RID: 3729
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017431 RID: 95281
+			// Token: 0x04006240 RID: 25152
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

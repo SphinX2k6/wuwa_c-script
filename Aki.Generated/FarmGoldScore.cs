@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C5E RID: 3166
+	// Token: 0x02000D42 RID: 3394
 	public struct FarmGoldScore : IFlatbufferObject
 	{
-		// Token: 0x17001055 RID: 4181
-		// (get) Token: 0x06006CB9 RID: 27833 RVA: 0x0022B399 File Offset: 0x00229599
+		// Token: 0x170010B2 RID: 4274
+		// (get) Token: 0x060072C4 RID: 29380 RVA: 0x0024A6E9 File Offset: 0x002488E9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006CBA RID: 27834 RVA: 0x0022B3A6 File Offset: 0x002295A6
+		// Token: 0x060072C5 RID: 29381 RVA: 0x0024A6F6 File Offset: 0x002488F6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006CBB RID: 27835 RVA: 0x0022B3B0 File Offset: 0x002295B0
+		// Token: 0x060072C6 RID: 29382 RVA: 0x0024A700 File Offset: 0x00248900
 		public static FarmGoldScore GetRootAsFarmGoldScore(ByteBuffer _bb)
 		{
 			return FarmGoldScore.GetRootAsFarmGoldScore(_bb, default(FarmGoldScore));
 		}
 
-		// Token: 0x06006CBC RID: 27836 RVA: 0x0022B3CC File Offset: 0x002295CC
+		// Token: 0x060072C7 RID: 29383 RVA: 0x0024A71C File Offset: 0x0024891C
 		public static FarmGoldScore GetRootAsFarmGoldScore(ByteBuffer _bb, FarmGoldScore obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006CBD RID: 27837 RVA: 0x0022B3E9 File Offset: 0x002295E9
+		// Token: 0x060072C8 RID: 29384 RVA: 0x0024A739 File Offset: 0x00248939
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006CBE RID: 27838 RVA: 0x0022B3F8 File Offset: 0x002295F8
+		// Token: 0x060072C9 RID: 29385 RVA: 0x0024A748 File Offset: 0x00248948
 		public FarmGoldScore __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001056 RID: 4182
-		// (get) Token: 0x06006CBF RID: 27839 RVA: 0x0022B408 File Offset: 0x00229608
+		// Token: 0x170010B3 RID: 4275
+		// (get) Token: 0x060072CA RID: 29386 RVA: 0x0024A758 File Offset: 0x00248958
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001057 RID: 4183
-		// (get) Token: 0x06006CC0 RID: 27840 RVA: 0x0022B444 File Offset: 0x00229644
+		// Token: 0x170010B4 RID: 4276
+		// (get) Token: 0x060072CB RID: 29387 RVA: 0x0024A794 File Offset: 0x00248994
 		public int ActivityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001058 RID: 4184
-		// (get) Token: 0x06006CC1 RID: 27841 RVA: 0x0022B480 File Offset: 0x00229680
+		// Token: 0x170010B5 RID: 4277
+		// (get) Token: 0x060072CC RID: 29388 RVA: 0x0024A7D0 File Offset: 0x002489D0
 		public int Score
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001059 RID: 4185
-		// (get) Token: 0x06006CC2 RID: 27842 RVA: 0x0022B4BC File Offset: 0x002296BC
+		// Token: 0x170010B6 RID: 4278
+		// (get) Token: 0x060072CD RID: 29389 RVA: 0x0024A80C File Offset: 0x00248A0C
 		public int RewardId
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004CA9 RID: 19625
+		// Token: 0x0400528D RID: 21133
 		private Table __p;
 	}
 }

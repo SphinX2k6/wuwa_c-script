@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Map
 {
-	// Token: 0x02004C65 RID: 19557
+	// Token: 0x02003C16 RID: 15382
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 	})]
 	public class SheriffMapSubTabItem : GridProxyAbstract<ISheriffSubTabItemData>
 	{
-		// Token: 0x06032901 RID: 207105 RVA: 0x00BC8428 File Offset: 0x00BC6628
+		// Token: 0x060276B4 RID: 161460 RVA: 0x00B0D094 File Offset: 0x00B0B294
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032902 RID: 207106 RVA: 0x00BC8531 File Offset: 0x00BC6731
+		// Token: 0x060276B5 RID: 161461 RVA: 0x00B0D19D File Offset: 0x00B0B39D
 		private void OnClickItem()
 		{
 			if (this.Data == null)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			clickCallBack(this.Data);
 		}
 
-		// Token: 0x06032903 RID: 207107 RVA: 0x00BC8554 File Offset: 0x00BC6754
+		// Token: 0x060276B6 RID: 161462 RVA: 0x00B0D1C0 File Offset: 0x00B0B3C0
 		[NullableContext(1)]
 		public override void Refresh(ISheriffSubTabItemData data, bool isSelected, int gridIndex)
 		{
@@ -72,11 +72,11 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			base.GetItem(4).SetUIActive(data.IsFinished);
 		}
 
-		// Token: 0x0401AE7E RID: 110206
+		// Token: 0x040157DB RID: 88027
 		[Nullable(2)]
 		private ISheriffSubTabItemData Data;
 
-		// Token: 0x0401AE7F RID: 110207
+		// Token: 0x040157DC RID: 88028
 		[Nullable(new byte[]
 		{
 			2,
@@ -84,22 +84,22 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 		})]
 		public Action<ISheriffSubTabItemData> ClickCallBack;
 
-		// Token: 0x0200AE18 RID: 44568
+		// Token: 0x02009836 RID: 38966
 		private static class EComponent
 		{
-			// Token: 0x04034DF7 RID: 216567
+			// Token: 0x0402F79C RID: 194460
 			public const int Button = 0;
 
-			// Token: 0x04034DF8 RID: 216568
+			// Token: 0x0402F79D RID: 194461
 			public const int Icon = 1;
 
-			// Token: 0x04034DF9 RID: 216569
+			// Token: 0x0402F79E RID: 194462
 			public const int Text = 2;
 
-			// Token: 0x04034DFA RID: 216570
+			// Token: 0x0402F79F RID: 194463
 			public const int Arrow = 3;
 
-			// Token: 0x04034DFB RID: 216571
+			// Token: 0x0402F7A0 RID: 194464
 			public const int Finished = 4;
 		}
 	}

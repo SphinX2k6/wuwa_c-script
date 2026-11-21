@@ -8,22 +8,22 @@ namespace Aki.TDConfigMgr.Component
 	[Nullable(0)]
 	public class AttachTargetComponent_SetValue
 	{
-		// Token: 0x0400008D RID: 141
+		// Token: 0x04000092 RID: 146
 		public bool? Disabled;
 
-		// Token: 0x0400008E RID: 142
+		// Token: 0x04000093 RID: 147
 		public bool? EdIsLocked;
 
-		// Token: 0x0400008F RID: 143
+		// Token: 0x04000094 RID: 148
 		public IAttachTarget AttachTarget;
 
-		// Token: 0x04000090 RID: 144
+		// Token: 0x04000095 RID: 149
 		public EAttachRuleType? PosRule;
 
-		// Token: 0x04000091 RID: 145
+		// Token: 0x04000096 RID: 150
 		public EAttachRuleType? RotRule;
 
-		// Token: 0x04000092 RID: 146
+		// Token: 0x04000097 RID: 151
 		public IAttachTiming AttachTiming;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F78 RID: 8056
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021B3 RID: 8627
 	public class ITalkOptionPreOption : ITalkOptionPreConditionBase
 	{
-		// Token: 0x0600B140 RID: 45376 RVA: 0x0019DC30 File Offset: 0x0019BE30
+		// Token: 0x0600BC1A RID: 48154 RVA: 0x001B3B84 File Offset: 0x001B1D84
 		private ITalkOptionPreOption_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B141 RID: 45377 RVA: 0x0019DC68 File Offset: 0x0019BE68
+		// Token: 0x0600BC1B RID: 48155 RVA: 0x001B3BBC File Offset: 0x001B1DBC
 		public static ITalkOptionPreOption Create([Nullable(2)] ITalkOptionPreOption instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B142 RID: 45378 RVA: 0x0019DC7B File Offset: 0x0019BE7B
+		// Token: 0x0600BC1C RID: 48156 RVA: 0x001B3BCF File Offset: 0x001B1DCF
 		public static ITalkOptionPreOption CreateFromSetValue([Nullable(2)] ITalkOptionPreOption_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B143 RID: 45379 RVA: 0x0019DC8E File Offset: 0x0019BE8E
+		// Token: 0x0600BC1D RID: 48157 RVA: 0x001B3BE2 File Offset: 0x001B1DE2
 		public new ITalkOptionPreOption_SetValue ToSetValue()
 		{
 			return new ITalkOptionPreOption_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036C4 RID: 14020
-		// (get) Token: 0x0600B144 RID: 45380 RVA: 0x0019DCAD File Offset: 0x0019BEAD
-		// (set) Token: 0x0600B145 RID: 45381 RVA: 0x0019DCD8 File Offset: 0x0019BED8
+		// Token: 0x17003990 RID: 14736
+		// (get) Token: 0x0600BC1E RID: 48158 RVA: 0x001B3C01 File Offset: 0x001B1E01
+		// (set) Token: 0x0600BC1F RID: 48159 RVA: 0x001B3C2C File Offset: 0x001B1E2C
 		public override ETalkOptionPreConditionType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036C5 RID: 14021
-		// (get) Token: 0x0600B146 RID: 45382 RVA: 0x0019DCE6 File Offset: 0x0019BEE6
-		// (set) Token: 0x0600B147 RID: 45383 RVA: 0x0019DD0D File Offset: 0x0019BF0D
+		// Token: 0x17003991 RID: 14737
+		// (get) Token: 0x0600BC20 RID: 48160 RVA: 0x001B3C3A File Offset: 0x001B1E3A
+		// (set) Token: 0x0600BC21 RID: 48161 RVA: 0x001B3C61 File Offset: 0x001B1E61
 		public virtual List<int> PreOptions
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B39 RID: 27449
+		// Token: 0x04007121 RID: 28961
 		[Nullable(2)]
 		protected new ITalkOptionPreOption FbInstance;
 
-		// Token: 0x04006B3A RID: 27450
+		// Token: 0x04007122 RID: 28962
 		[Nullable(2)]
 		protected new ITalkOptionPreOption_SetValue PocoInterface;
 	}

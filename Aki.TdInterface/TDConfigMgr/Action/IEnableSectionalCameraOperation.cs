@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019EC RID: 6636
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B7F RID: 7039
 	[JsonConverter(typeof(IEnableSectionalCameraOperationConverter))]
 	public class IEnableSectionalCameraOperation : ICameraOperationType
 	{
-		// Token: 0x06008E15 RID: 36373 RVA: 0x0014C7A0 File Offset: 0x0014A9A0
+		// Token: 0x06009577 RID: 38263 RVA: 0x0015C610 File Offset: 0x0015A810
 		private IEnableSectionalCameraOperation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008E16 RID: 36374 RVA: 0x0014C7D8 File Offset: 0x0014A9D8
+		// Token: 0x06009578 RID: 38264 RVA: 0x0015C648 File Offset: 0x0015A848
 		public static IEnableSectionalCameraOperation Create([Nullable(2)] IEnableSectionalCameraOperation instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E17 RID: 36375 RVA: 0x0014C7EB File Offset: 0x0014A9EB
+		// Token: 0x06009579 RID: 38265 RVA: 0x0015C65B File Offset: 0x0015A85B
 		public static IEnableSectionalCameraOperation CreateFromSetValue([Nullable(2)] IEnableSectionalCameraOperation_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E18 RID: 36376 RVA: 0x0014C7FE File Offset: 0x0014A9FE
+		// Token: 0x0600957A RID: 38266 RVA: 0x0015C66E File Offset: 0x0015A86E
 		public new IEnableSectionalCameraOperation_SetValue ToSetValue()
 		{
 			return new IEnableSectionalCameraOperation_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D7D RID: 11645
-		// (get) Token: 0x06008E19 RID: 36377 RVA: 0x0014C829 File Offset: 0x0014AA29
-		// (set) Token: 0x06008E1A RID: 36378 RVA: 0x0014C854 File Offset: 0x0014AA54
+		// Token: 0x17002F89 RID: 12169
+		// (get) Token: 0x0600957B RID: 38267 RVA: 0x0015C699 File Offset: 0x0015A899
+		// (set) Token: 0x0600957C RID: 38268 RVA: 0x0015C6C4 File Offset: 0x0015A8C4
 		public override ECameraOperationType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D7E RID: 11646
-		// (get) Token: 0x06008E1B RID: 36379 RVA: 0x0014C864 File Offset: 0x0014AA64
-		// (set) Token: 0x06008E1C RID: 36380 RVA: 0x0014C89E File Offset: 0x0014AA9E
+		// Token: 0x17002F8A RID: 12170
+		// (get) Token: 0x0600957D RID: 38269 RVA: 0x0015C6D4 File Offset: 0x0015A8D4
+		// (set) Token: 0x0600957E RID: 38270 RVA: 0x0015C70E File Offset: 0x0015A90E
 		public virtual bool? EnableRotate
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D7F RID: 11647
-		// (get) Token: 0x06008E1D RID: 36381 RVA: 0x0014C8AC File Offset: 0x0014AAAC
-		// (set) Token: 0x06008E1E RID: 36382 RVA: 0x0014C8E6 File Offset: 0x0014AAE6
+		// Token: 0x17002F8B RID: 12171
+		// (get) Token: 0x0600957F RID: 38271 RVA: 0x0015C71C File Offset: 0x0015A91C
+		// (set) Token: 0x06009580 RID: 38272 RVA: 0x0015C756 File Offset: 0x0015A956
 		public virtual bool? EnableZoom
 		{
 			get
@@ -134,11 +132,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005824 RID: 22564
+		// Token: 0x04005C86 RID: 23686
 		[Nullable(2)]
 		protected new IEnableSectionalCameraOperation FbInstance;
 
-		// Token: 0x04005825 RID: 22565
+		// Token: 0x04005C87 RID: 23687
 		[Nullable(2)]
 		protected new IEnableSectionalCameraOperation_SetValue PocoInterface;
 	}

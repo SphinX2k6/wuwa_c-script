@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200556D RID: 21869
+	// Token: 0x02005AFF RID: 23295
 	public class IMonsterChooseType_UnionUnion
 	{
-		// Token: 0x1700A18E RID: 41358
-		// (get) Token: 0x060242D1 RID: 148177 RVA: 0x004FF13D File Offset: 0x004FD33D
-		// (set) Token: 0x060242D2 RID: 148178 RVA: 0x004FF145 File Offset: 0x004FD345
+		// Token: 0x1700AA04 RID: 43524
+		// (get) Token: 0x06026476 RID: 156790 RVA: 0x0053EA01 File Offset: 0x0053CC01
+		// (set) Token: 0x06026477 RID: 156791 RVA: 0x0053EA09 File Offset: 0x0053CC09
 		public IMonsterChooseType_Union Type { get; set; }
 
-		// Token: 0x1700A18F RID: 41359
-		// (get) Token: 0x060242D3 RID: 148179 RVA: 0x004FF14E File Offset: 0x004FD34E
-		// (set) Token: 0x060242D4 RID: 148180 RVA: 0x004FF156 File Offset: 0x004FD356
+		// Token: 0x1700AA05 RID: 43525
+		// (get) Token: 0x06026478 RID: 156792 RVA: 0x0053EA12 File Offset: 0x0053CC12
+		// (set) Token: 0x06026479 RID: 156793 RVA: 0x0053EA1A File Offset: 0x0053CC1A
 		public object Value { get; set; }
 
-		// Token: 0x060242D5 RID: 148181 RVA: 0x004FF15F File Offset: 0x004FD35F
+		// Token: 0x0602647A RID: 156794 RVA: 0x0053EA23 File Offset: 0x0053CC23
 		public IMonsterChooseType_UnionUnion()
 		{
 			this.Type = IMonsterChooseType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060242D6 RID: 148182 RVA: 0x004FF175 File Offset: 0x004FD375
+		// Token: 0x0602647B RID: 156795 RVA: 0x0053EA39 File Offset: 0x0053CC39
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060242D7 RID: 148183 RVA: 0x004FF187 File Offset: 0x004FD387
+		// Token: 0x0602647C RID: 156796 RVA: 0x0053EA4B File Offset: 0x0053CC4B
 		public IMonsterChooseTypeT AsIMonsterChooseType()
 		{
 			return this.As<IMonsterChooseTypeT>();
 		}
 
-		// Token: 0x060242D8 RID: 148184 RVA: 0x004FF18F File Offset: 0x004FD38F
+		// Token: 0x0602647D RID: 156797 RVA: 0x0053EA53 File Offset: 0x0053CC53
 		public static IMonsterChooseType_UnionUnion FromIMonsterChooseType(IMonsterChooseTypeT _imonsterchoosetype)
 		{
 			return new IMonsterChooseType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060242D9 RID: 148185 RVA: 0x004FF1A4 File Offset: 0x004FD3A4
+		// Token: 0x0602647E RID: 156798 RVA: 0x0053EA68 File Offset: 0x0053CC68
 		public IRandomPoolChooseT AsIRandomPoolChoose()
 		{
 			return this.As<IRandomPoolChooseT>();
 		}
 
-		// Token: 0x060242DA RID: 148186 RVA: 0x004FF1AC File Offset: 0x004FD3AC
+		// Token: 0x0602647F RID: 156799 RVA: 0x0053EA70 File Offset: 0x0053CC70
 		public static IMonsterChooseType_UnionUnion FromIRandomPoolChoose(IRandomPoolChooseT _irandompoolchoose)
 		{
 			return new IMonsterChooseType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060242DB RID: 148187 RVA: 0x004FF1C4 File Offset: 0x004FD3C4
+		// Token: 0x06026480 RID: 156800 RVA: 0x0053EA88 File Offset: 0x0053CC88
 		public static int Pack(FlatBufferBuilder builder, IMonsterChooseType_UnionUnion _o)
 		{
 			IMonsterChooseType_Union type = _o.Type;

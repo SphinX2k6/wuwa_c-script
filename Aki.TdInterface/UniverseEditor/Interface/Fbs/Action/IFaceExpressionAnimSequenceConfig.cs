@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006744 RID: 26436
+	// Token: 0x02006DC4 RID: 28100
 	public struct IFaceExpressionAnimSequenceConfig : IFlatbufferObject
 	{
-		// Token: 0x1700C443 RID: 50243
-		// (get) Token: 0x0602DFAD RID: 188333 RVA: 0x00648C12 File Offset: 0x00646E12
+		// Token: 0x1700CDF9 RID: 52729
+		// (get) Token: 0x060307F3 RID: 198643 RVA: 0x00696356 File Offset: 0x00694556
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DFAE RID: 188334 RVA: 0x00648C1F File Offset: 0x00646E1F
+		// Token: 0x060307F4 RID: 198644 RVA: 0x00696363 File Offset: 0x00694563
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DFAF RID: 188335 RVA: 0x00648C28 File Offset: 0x00646E28
+		// Token: 0x060307F5 RID: 198645 RVA: 0x0069636C File Offset: 0x0069456C
 		public static IFaceExpressionAnimSequenceConfig GetRootAsIFaceExpressionAnimSequenceConfig(ByteBuffer _bb)
 		{
 			return IFaceExpressionAnimSequenceConfig.GetRootAsIFaceExpressionAnimSequenceConfig(_bb, default(IFaceExpressionAnimSequenceConfig));
 		}
 
-		// Token: 0x0602DFB0 RID: 188336 RVA: 0x00648C44 File Offset: 0x00646E44
+		// Token: 0x060307F6 RID: 198646 RVA: 0x00696388 File Offset: 0x00694588
 		public static IFaceExpressionAnimSequenceConfig GetRootAsIFaceExpressionAnimSequenceConfig(ByteBuffer _bb, IFaceExpressionAnimSequenceConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DFB1 RID: 188337 RVA: 0x00648C61 File Offset: 0x00646E61
+		// Token: 0x060307F7 RID: 198647 RVA: 0x006963A5 File Offset: 0x006945A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DFB2 RID: 188338 RVA: 0x00648C70 File Offset: 0x00646E70
+		// Token: 0x060307F8 RID: 198648 RVA: 0x006963B4 File Offset: 0x006945B4
 		public IFaceExpressionAnimSequenceConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C444 RID: 50244
-		// (get) Token: 0x0602DFB3 RID: 188339 RVA: 0x00648C80 File Offset: 0x00646E80
+		// Token: 0x1700CDFA RID: 52730
+		// (get) Token: 0x060307F9 RID: 198649 RVA: 0x006963C4 File Offset: 0x006945C4
 		public EFaceExpressionConfigType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C445 RID: 50245
-		// (get) Token: 0x0602DFB4 RID: 188340 RVA: 0x00648CBC File Offset: 0x00646EBC
+		// Token: 0x1700CDFB RID: 52731
+		// (get) Token: 0x060307FA RID: 198650 RVA: 0x00696400 File Offset: 0x00694600
 		public string Path
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DFB5 RID: 188341 RVA: 0x00648CF3 File Offset: 0x00646EF3
+		// Token: 0x060307FB RID: 198651 RVA: 0x00696437 File Offset: 0x00694637
 		public Span<byte> GetPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602DFB6 RID: 188342 RVA: 0x00648D02 File Offset: 0x00646F02
+		// Token: 0x060307FC RID: 198652 RVA: 0x00696446 File Offset: 0x00694646
 		public byte[] GetPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0602DFB7 RID: 188343 RVA: 0x00648D10 File Offset: 0x00646F10
+		// Token: 0x060307FD RID: 198653 RVA: 0x00696454 File Offset: 0x00694654
 		public static Offset<IFaceExpressionAnimSequenceConfig> CreateIFaceExpressionAnimSequenceConfig(FlatBufferBuilder builder, EFaceExpressionConfigType Type = EFaceExpressionConfigType.Morph, StringOffset PathOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFaceExpressionAnimSequenceConfig.EndIFaceExpressionAnimSequenceConfig(builder);
 		}
 
-		// Token: 0x0602DFB8 RID: 188344 RVA: 0x00648D2D File Offset: 0x00646F2D
+		// Token: 0x060307FE RID: 198654 RVA: 0x00696471 File Offset: 0x00694671
 		public static void StartIFaceExpressionAnimSequenceConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602DFB9 RID: 188345 RVA: 0x00648D36 File Offset: 0x00646F36
+		// Token: 0x060307FF RID: 198655 RVA: 0x0069647A File Offset: 0x0069467A
 		public static void AddType(FlatBufferBuilder builder, EFaceExpressionConfigType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602DFBA RID: 188346 RVA: 0x00648D41 File Offset: 0x00646F41
+		// Token: 0x06030800 RID: 198656 RVA: 0x00696485 File Offset: 0x00694685
 		public static void AddPath(FlatBufferBuilder builder, StringOffset pathOffset)
 		{
 			builder.AddOffset(1, pathOffset.Value, 0);
 		}
 
-		// Token: 0x0602DFBB RID: 188347 RVA: 0x00648D51 File Offset: 0x00646F51
+		// Token: 0x06030801 RID: 198657 RVA: 0x00696495 File Offset: 0x00694695
 		public static Offset<IFaceExpressionAnimSequenceConfig> EndIFaceExpressionAnimSequenceConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IFaceExpressionAnimSequenceConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602DFBC RID: 188348 RVA: 0x00648D60 File Offset: 0x00646F60
+		// Token: 0x06030802 RID: 198658 RVA: 0x006964A4 File Offset: 0x006946A4
 		public IFaceExpressionAnimSequenceConfigT UnPack()
 		{
 			IFaceExpressionAnimSequenceConfigT faceExpressionAnimSequenceConfigT = new IFaceExpressionAnimSequenceConfigT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return faceExpressionAnimSequenceConfigT;
 		}
 
-		// Token: 0x0602DFBD RID: 188349 RVA: 0x00648D7B File Offset: 0x00646F7B
+		// Token: 0x06030803 RID: 198659 RVA: 0x006964BF File Offset: 0x006946BF
 		public void UnPackTo(IFaceExpressionAnimSequenceConfigT _o)
 		{
 			_o.Type = this.Type;
 			_o.Path = this.Path;
 		}
 
-		// Token: 0x0602DFBE RID: 188350 RVA: 0x00648D98 File Offset: 0x00646F98
+		// Token: 0x06030804 RID: 198660 RVA: 0x006964DC File Offset: 0x006946DC
 		public static Offset<IFaceExpressionAnimSequenceConfig> Pack(FlatBufferBuilder builder, IFaceExpressionAnimSequenceConfigT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFaceExpressionAnimSequenceConfig.CreateIFaceExpressionAnimSequenceConfig(builder, _o.Type, pathOffset);
 		}
 
-		// Token: 0x04010E2E RID: 69166
+		// Token: 0x04011C60 RID: 72800
 		private Table __p;
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002402 RID: 9218
+	// Token: 0x020026A1 RID: 9889
 	public class ESetBattleStateTypeJsonConverter : JsonConverter<ESetBattleStateType>
 	{
-		// Token: 0x0600C889 RID: 51337 RVA: 0x001D5938 File Offset: 0x001D3B38
+		// Token: 0x0600D530 RID: 54576 RVA: 0x001EF534 File Offset: 0x001ED734
 		public override ESetBattleStateType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESetBattleStateTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C88A RID: 51338 RVA: 0x001D595C File Offset: 0x001D3B5C
+		// Token: 0x0600D531 RID: 54577 RVA: 0x001EF558 File Offset: 0x001ED758
 		public override void Write(Utf8JsonWriter writer, ESetBattleStateType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

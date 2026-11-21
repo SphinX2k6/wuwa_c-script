@@ -8,7 +8,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200115C RID: 4444
+// Token: 0x02000610 RID: 1552
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class BabelTowerHardLevelChoseItem : GridProxyAbstract<BabelActivityLevelInfo>
 {
-	// Token: 0x06007517 RID: 29975 RVA: 0x0018115C File Offset: 0x0017F35C
+	// Token: 0x060048AE RID: 18606 RVA: 0x00189C8C File Offset: 0x00187E8C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 20;
@@ -76,14 +76,14 @@ public class BabelTowerHardLevelChoseItem : GridProxyAbstract<BabelActivityLevel
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007518 RID: 29976 RVA: 0x00181484 File Offset: 0x0017F684
+	// Token: 0x060048AF RID: 18607 RVA: 0x00189FB4 File Offset: 0x001881B4
 	protected override void OnStart()
 	{
 		this.RoleLayout = new GenericLayout<BabelTowerHardLevelRoleItem, int>(base.GetHorizontalLayout(8), new Func<BabelTowerHardLevelRoleItem>(this.InitRoleItem), null, false, true);
 		this.LevelPlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06007519 RID: 29977 RVA: 0x001814B8 File Offset: 0x0017F6B8
+	// Token: 0x060048B0 RID: 18608 RVA: 0x00189FE8 File Offset: 0x001881E8
 	public override void Refresh(BabelActivityLevelInfo data, bool isSelected, int gridIndex)
 	{
 		base.GetText(2).SetText((gridIndex + 1).ToString() ?? "", true);
@@ -155,13 +155,13 @@ public class BabelTowerHardLevelChoseItem : GridProxyAbstract<BabelActivityLevel
 		this.StopLoopSequence();
 	}
 
-	// Token: 0x0600751A RID: 29978 RVA: 0x001817CF File Offset: 0x0017F9CF
+	// Token: 0x060048B1 RID: 18609 RVA: 0x0018A2FF File Offset: 0x001884FF
 	protected override void OnBeforeDestroy()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.BabelTowerNewLevel, base.GetItem(17), this.LevelId);
 	}
 
-	// Token: 0x0600751B RID: 29979 RVA: 0x001817EE File Offset: 0x0017F9EE
+	// Token: 0x060048B2 RID: 18610 RVA: 0x0018A31E File Offset: 0x0018851E
 	private void OnClickButton()
 	{
 		if (this.IsUnlock)
@@ -175,26 +175,26 @@ public class BabelTowerHardLevelChoseItem : GridProxyAbstract<BabelActivityLevel
 		this.LevelPlayer.StopCurrentSequence(false, false);
 	}
 
-	// Token: 0x0600751C RID: 29980 RVA: 0x0018181C File Offset: 0x0017FA1C
+	// Token: 0x060048B3 RID: 18611 RVA: 0x0018A34C File Offset: 0x0018854C
 	private void OnClickResetButton()
 	{
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerResetView, this.LevelId, null);
 	}
 
-	// Token: 0x0600751D RID: 29981 RVA: 0x00181839 File Offset: 0x0017FA39
+	// Token: 0x060048B4 RID: 18612 RVA: 0x0018A369 File Offset: 0x00188569
 	private BabelTowerHardLevelRoleItem InitRoleItem()
 	{
 		return new BabelTowerHardLevelRoleItem();
 	}
 
-	// Token: 0x0600751E RID: 29982 RVA: 0x00181840 File Offset: 0x0017FA40
+	// Token: 0x060048B5 RID: 18613 RVA: 0x0018A370 File Offset: 0x00188570
 	public void DisableButton()
 	{
 		base.GetButton(11).RootUIComp.Get().SetUIActive(false);
 		base.GetItem(12).SetUIActive(false);
 	}
 
-	// Token: 0x0600751F RID: 29983 RVA: 0x00181878 File Offset: 0x0017FA78
+	// Token: 0x060048B6 RID: 18614 RVA: 0x0018A3A8 File Offset: 0x001885A8
 	public void PlayLoopSequence()
 	{
 		if (this.LevelPlayer.IsPlayingSequence("Loop_item"))
@@ -205,28 +205,28 @@ public class BabelTowerHardLevelChoseItem : GridProxyAbstract<BabelActivityLevel
 		this.LevelPlayer.PlayLevelSequenceByName("Loop_item", false, null, false);
 	}
 
-	// Token: 0x06007520 RID: 29984 RVA: 0x001818C3 File Offset: 0x0017FAC3
+	// Token: 0x060048B7 RID: 18615 RVA: 0x0018A3F3 File Offset: 0x001885F3
 	public void StopLoopSequence()
 	{
 		this.LevelPlayer.StopCurrentSequence(false, true);
 	}
 
-	// Token: 0x06007521 RID: 29985 RVA: 0x001818D2 File Offset: 0x0017FAD2
+	// Token: 0x060048B8 RID: 18616 RVA: 0x0018A402 File Offset: 0x00188602
 	public bool IsPlayingSequence()
 	{
 		return this.LevelPlayer.IsPlayingSequence("Loop_item");
 	}
 
-	// Token: 0x040035D1 RID: 13777
+	// Token: 0x0400366A RID: 13930
 	private bool IsUnlock;
 
-	// Token: 0x040035D2 RID: 13778
+	// Token: 0x0400366B RID: 13931
 	private bool RedDotHaveBind;
 
-	// Token: 0x040035D3 RID: 13779
+	// Token: 0x0400366C RID: 13932
 	private int LevelId;
 
-	// Token: 0x040035D4 RID: 13780
+	// Token: 0x0400366D RID: 13933
 	[Nullable(new byte[]
 	{
 		2,
@@ -234,76 +234,76 @@ public class BabelTowerHardLevelChoseItem : GridProxyAbstract<BabelActivityLevel
 	})]
 	private GenericLayout<BabelTowerHardLevelRoleItem, int> RoleLayout;
 
-	// Token: 0x040035D5 RID: 13781
+	// Token: 0x0400366E RID: 13934
 	[Nullable(2)]
 	public Action<int> OnClickButtonCallBack;
 
-	// Token: 0x040035D6 RID: 13782
+	// Token: 0x0400366F RID: 13935
 	[Nullable(2)]
 	private LevelSequencePlayer LevelPlayer;
 
-	// Token: 0x02007722 RID: 30498
+	// Token: 0x020068B0 RID: 26800
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x040274BD RID: 160957
+		// Token: 0x040227FC RID: 141308
 		public const int Button = 0;
 
-		// Token: 0x040274BE RID: 160958
+		// Token: 0x040227FD RID: 141309
 		public const int BgTexture = 1;
 
-		// Token: 0x040274BF RID: 160959
+		// Token: 0x040227FE RID: 141310
 		public const int IndexText = 2;
 
-		// Token: 0x040274C0 RID: 160960
+		// Token: 0x040227FF RID: 141311
 		public const int NameText = 3;
 
-		// Token: 0x040274C1 RID: 160961
+		// Token: 0x04022800 RID: 141312
 		public const int TimeText = 4;
 
-		// Token: 0x040274C2 RID: 160962
+		// Token: 0x04022801 RID: 141313
 		public const int DoneItem = 5;
 
-		// Token: 0x040274C3 RID: 160963
+		// Token: 0x04022802 RID: 141314
 		public const int NoneItem = 6;
 
-		// Token: 0x040274C4 RID: 160964
+		// Token: 0x04022803 RID: 141315
 		public const int StarText = 7;
 
-		// Token: 0x040274C5 RID: 160965
+		// Token: 0x04022804 RID: 141316
 		public const int RoleLayout = 8;
 
-		// Token: 0x040274C6 RID: 160966
+		// Token: 0x04022805 RID: 141317
 		public const int BuffItem1 = 9;
 
-		// Token: 0x040274C7 RID: 160967
+		// Token: 0x04022806 RID: 141318
 		public const int BuffItem2 = 10;
 
-		// Token: 0x040274C8 RID: 160968
+		// Token: 0x04022807 RID: 141319
 		public const int ResetBtn = 11;
 
-		// Token: 0x040274C9 RID: 160969
+		// Token: 0x04022808 RID: 141320
 		public const int GoItem = 12;
 
-		// Token: 0x040274CA RID: 160970
+		// Token: 0x04022809 RID: 141321
 		public const int LockItem = 13;
 
-		// Token: 0x040274CB RID: 160971
+		// Token: 0x0402280A RID: 141322
 		public const int OptionText = 14;
 
-		// Token: 0x040274CC RID: 160972
+		// Token: 0x0402280B RID: 141323
 		public const int BuffTexture1 = 15;
 
-		// Token: 0x040274CD RID: 160973
+		// Token: 0x0402280C RID: 141324
 		public const int BuffTexture2 = 16;
 
-		// Token: 0x040274CE RID: 160974
+		// Token: 0x0402280D RID: 141325
 		public const int RedDotItem = 17;
 
-		// Token: 0x040274CF RID: 160975
+		// Token: 0x0402280E RID: 141326
 		public const int TimeItem = 18;
 
-		// Token: 0x040274D0 RID: 160976
+		// Token: 0x0402280F RID: 141327
 		public const int FinishedItem = 19;
 	}
 }

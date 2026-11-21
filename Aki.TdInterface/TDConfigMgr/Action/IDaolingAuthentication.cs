@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001964 RID: 6500
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AEF RID: 6895
 	public class IDaolingAuthentication : IUiGame
 	{
-		// Token: 0x06008B41 RID: 35649 RVA: 0x001478C4 File Offset: 0x00145AC4
+		// Token: 0x06009277 RID: 37495 RVA: 0x00157300 File Offset: 0x00155500
 		private IDaolingAuthentication_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008B42 RID: 35650 RVA: 0x001478FC File Offset: 0x00145AFC
+		// Token: 0x06009278 RID: 37496 RVA: 0x00157338 File Offset: 0x00155538
 		public static IDaolingAuthentication Create([Nullable(2)] IDaolingAuthentication instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B43 RID: 35651 RVA: 0x0014790F File Offset: 0x00145B0F
+		// Token: 0x06009279 RID: 37497 RVA: 0x0015734B File Offset: 0x0015554B
 		public static IDaolingAuthentication CreateFromSetValue([Nullable(2)] IDaolingAuthentication_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B44 RID: 35652 RVA: 0x00147922 File Offset: 0x00145B22
+		// Token: 0x0600927A RID: 37498 RVA: 0x0015735E File Offset: 0x0015555E
 		public new IDaolingAuthentication_SetValue ToSetValue()
 		{
 			return new IDaolingAuthentication_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CDF RID: 11487
-		// (get) Token: 0x06008B45 RID: 35653 RVA: 0x00147935 File Offset: 0x00145B35
-		// (set) Token: 0x06008B46 RID: 35654 RVA: 0x00147960 File Offset: 0x00145B60
+		// Token: 0x17002EE1 RID: 12001
+		// (get) Token: 0x0600927B RID: 37499 RVA: 0x00157371 File Offset: 0x00155571
+		// (set) Token: 0x0600927C RID: 37500 RVA: 0x0015739C File Offset: 0x0015559C
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040056EA RID: 22250
+		// Token: 0x04005B3E RID: 23358
 		[Nullable(2)]
 		protected new IDaolingAuthentication FbInstance;
 
-		// Token: 0x040056EB RID: 22251
+		// Token: 0x04005B3F RID: 23359
 		[Nullable(2)]
 		protected new IDaolingAuthentication_SetValue PocoInterface;
 	}

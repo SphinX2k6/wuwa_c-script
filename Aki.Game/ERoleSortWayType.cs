@@ -1,44 +1,44 @@
 ﻿using System;
 
-// Token: 0x02001896 RID: 6294
+// Token: 0x02000D4F RID: 3407
 public enum ERoleSortWayType
 {
-	// Token: 0x04005364 RID: 21348
+	// Token: 0x0400540F RID: 21519
 	Level = 1,
-	// Token: 0x04005365 RID: 21349
+	// Token: 0x04005410 RID: 21520
 	Quality,
-	// Token: 0x04005366 RID: 21350
+	// Token: 0x04005411 RID: 21521
 	Formation,
-	// Token: 0x04005367 RID: 21351
+	// Token: 0x04005412 RID: 21522
 	Priority,
-	// Token: 0x04005368 RID: 21352
+	// Token: 0x04005413 RID: 21523
 	Resonance,
-	// Token: 0x04005369 RID: 21353
+	// Token: 0x04005414 RID: 21524
 	ResonanceIncreased,
-	// Token: 0x0400536A RID: 21354
+	// Token: 0x04005415 RID: 21525
 	InCollected,
-	// Token: 0x0400536B RID: 21355
+	// Token: 0x04005416 RID: 21526
 	Friendly,
-	// Token: 0x0400536C RID: 21356
+	// Token: 0x04005417 RID: 21527
 	CreateTime,
-	// Token: 0x0400536D RID: 21357
+	// Token: 0x04005418 RID: 21528
 	LifeLimit,
-	// Token: 0x0400536E RID: 21358
+	// Token: 0x04005419 RID: 21529
 	Attack,
-	// Token: 0x0400536F RID: 21359
+	// Token: 0x0400541A RID: 21530
 	Defense,
-	// Token: 0x04005370 RID: 21360
+	// Token: 0x0400541B RID: 21531
 	EditBattleTeamPosition,
-	// Token: 0x04005371 RID: 21361
+	// Token: 0x0400541C RID: 21532
 	EditFormationPosition,
-	// Token: 0x04005372 RID: 21362
+	// Token: 0x0400541D RID: 21533
 	IsTrailRole,
-	// Token: 0x04005373 RID: 21363
+	// Token: 0x0400541E RID: 21534
 	TowerCost,
-	// Token: 0x04005374 RID: 21364
+	// Token: 0x0400541F RID: 21535
 	RoguelikeDefault,
-	// Token: 0x04005375 RID: 21365
+	// Token: 0x04005420 RID: 21536
 	WeeklyRogueRecommend,
-	// Token: 0x04005376 RID: 21366
+	// Token: 0x04005421 RID: 21537
 	IsRecommend
 }

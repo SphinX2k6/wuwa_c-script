@@ -7,17 +7,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x0200733E RID: 29502
+	// Token: 0x020064C1 RID: 25793
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionHasMoveInput : AiStateMachineCondition
 	{
-		// Token: 0x0604863B RID: 296507 RVA: 0x0129EFF5 File Offset: 0x0129D1F5
+		// Token: 0x0603EA88 RID: 256648 RVA: 0x01241A7D File Offset: 0x0123FC7D
 		public AiStateMachineConditionHasMoveInput(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x0604863C RID: 296508 RVA: 0x0129F000 File Offset: 0x0129D200
+		// Token: 0x0603EA89 RID: 256649 RVA: 0x01241A88 File Offset: 0x0123FC88
 		protected override bool RegisterEvents()
 		{
 			if (base.RegisterEvents() && this.Node != null && this.Node.Entity != null)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return false;
 		}
 
-		// Token: 0x0604863D RID: 296509 RVA: 0x0129F0DC File Offset: 0x0129D2DC
+		// Token: 0x0603EA8A RID: 256650 RVA: 0x01241B64 File Offset: 0x0123FD64
 		protected override bool UnregisterEvents()
 		{
 			if (base.UnregisterEvents() && this.Node != null && this.Node.Entity != null)
@@ -59,20 +59,20 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return false;
 		}
 
-		// Token: 0x0604863E RID: 296510 RVA: 0x0129F1B6 File Offset: 0x0129D3B6
+		// Token: 0x0603EA8B RID: 256651 RVA: 0x01241C3E File Offset: 0x0123FE3E
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Condition condition)
 		{
 			this.RegisterEvents();
 			return true;
 		}
 
-		// Token: 0x0604863F RID: 296511 RVA: 0x0129F1C0 File Offset: 0x0129D3C0
+		// Token: 0x0603EA8C RID: 256652 RVA: 0x01241C48 File Offset: 0x0123FE48
 		protected override void OnClear()
 		{
 			this.UnregisterEvents();
 		}
 
-		// Token: 0x06048640 RID: 296512 RVA: 0x0129F1C9 File Offset: 0x0129D3C9
+		// Token: 0x0603EA8D RID: 256653 RVA: 0x01241C51 File Offset: 0x0123FE51
 		protected override void OnTick()
 		{
 			bool resultSelf;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			this.ResultSelf = resultSelf;
 		}
 
-		// Token: 0x06048641 RID: 296513 RVA: 0x0129F200 File Offset: 0x0129D400
+		// Token: 0x0603EA8E RID: 256654 RVA: 0x01241C88 File Offset: 0x0123FE88
 		private void OnInputMoveChanged(bool hadInputMove, bool hasInputMove)
 		{
 			bool resultSelf;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x06048642 RID: 296514 RVA: 0x0129F27C File Offset: 0x0129D47C
+		// Token: 0x0603EA8F RID: 256655 RVA: 0x01241D04 File Offset: 0x0123FF04
 		private void OnFloatingMoveInputChanged(bool hadFloatingMoveInput, bool hasFloatingMoveInput)
 		{
 			bool resultSelf;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x06048643 RID: 296515 RVA: 0x0129F2F5 File Offset: 0x0129D4F5
+		// Token: 0x0603EA90 RID: 256656 RVA: 0x01241D7D File Offset: 0x0123FF7D
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);

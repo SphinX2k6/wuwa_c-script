@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020024BF RID: 9407
+	// Token: 0x02002764 RID: 10084
 	public static class TActionContextTypeExtensions
 	{
-		// Token: 0x0600CBDA RID: 52186 RVA: 0x001E0394 File Offset: 0x001DE594
+		// Token: 0x0600D89C RID: 55452 RVA: 0x001FA628 File Offset: 0x001F8828
 		public static string ToEnumString(this TActionContextType value)
 		{
 			string result;
@@ -42,7 +42,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CBDB RID: 52187 RVA: 0x001E0418 File Offset: 0x001DE618
+		// Token: 0x0600D89D RID: 55453 RVA: 0x001FA6AC File Offset: 0x001F88AC
 		public static TActionContextType FromString(string name)
 		{
 			TActionContextType result;
@@ -53,7 +53,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CBDC RID: 52188 RVA: 0x001E0444 File Offset: 0x001DE644
+		// Token: 0x0600D89E RID: 55454 RVA: 0x001FA6D8 File Offset: 0x001F88D8
 		public static bool TryFromString(string name, out TActionContextType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -127,7 +127,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600CBDD RID: 52189 RVA: 0x001E0548 File Offset: 0x001DE748
+		// Token: 0x0600D89F RID: 55455 RVA: 0x001FA7DC File Offset: 0x001F89DC
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -143,7 +143,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CBDE RID: 52190 RVA: 0x001E059B File Offset: 0x001DE79B
+		// Token: 0x0600D8A0 RID: 55456 RVA: 0x001FA82F File Offset: 0x001F8A2F
 		public static TActionContextType[] GetValues()
 		{
 			return new TActionContextType[]
@@ -159,7 +159,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CBDF RID: 52191 RVA: 0x001E05B0 File Offset: 0x001DE7B0
+		// Token: 0x0600D8A1 RID: 55457 RVA: 0x001FA844 File Offset: 0x001F8A44
 		public static string[] GetNames()
 		{
 			return new string[]

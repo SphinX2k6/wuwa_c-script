@@ -5,16 +5,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001545 RID: 5445
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x020016A1 RID: 5793
 	public class IPresentationTypeConverter : JsonConverter<IPresentationType>
 	{
-		// Token: 0x06007B3D RID: 31549 RVA: 0x00128EB8 File Offset: 0x001270B8
+		// Token: 0x06008211 RID: 33297 RVA: 0x00137E64 File Offset: 0x00136064
 		[return: Nullable(2)]
 		public override IPresentationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
@@ -40,7 +34,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007B3E RID: 31550 RVA: 0x00128F34 File Offset: 0x00127134
+		// Token: 0x06008212 RID: 33298 RVA: 0x00137EE0 File Offset: 0x001360E0
 		public override void Write(Utf8JsonWriter writer, IPresentationType value, JsonSerializerOptions options)
 		{
 			IResetPresentationFailure resetPresentationFailure = value as IResetPresentationFailure;

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 {
-	// Token: 0x02004B9E RID: 19358
+	// Token: 0x02003B48 RID: 15176
 	public class PcControlItem : ControlItem
 	{
-		// Token: 0x0603228E RID: 205454 RVA: 0x00BA7AF4 File Offset: 0x00BA5CF4
+		// Token: 0x0602701E RID: 159774 RVA: 0x00AEBC40 File Offset: 0x00AE9E40
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			this.BtnBindInfo = list;
 		}
 
-		// Token: 0x0603228F RID: 205455 RVA: 0x00BA7BD4 File Offset: 0x00BA5DD4
+		// Token: 0x0602701F RID: 159775 RVA: 0x00AEBD20 File Offset: 0x00AE9F20
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PcControlItem.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -43,34 +43,34 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032290 RID: 205456 RVA: 0x00BA7C17 File Offset: 0x00BA5E17
+		// Token: 0x06027020 RID: 159776 RVA: 0x00AEBD63 File Offset: 0x00AE9F63
 		protected override void OnClimbBtnClick()
 		{
 			base.OnClimbBtnClick();
 		}
 
-		// Token: 0x06032291 RID: 205457 RVA: 0x00BA7C1F File Offset: 0x00BA5E1F
+		// Token: 0x06027021 RID: 159777 RVA: 0x00AEBD6B File Offset: 0x00AE9F6B
 		protected override void OnRotateBtnClick()
 		{
 			base.OnRotateBtnClick();
 		}
 
-		// Token: 0x06032292 RID: 205458 RVA: 0x00BA7C27 File Offset: 0x00BA5E27
+		// Token: 0x06027022 RID: 159778 RVA: 0x00AEBD73 File Offset: 0x00AE9F73
 		protected override void OnFallDownBtnClick()
 		{
 			base.OnFallDownBtnClick();
 		}
 
-		// Token: 0x0200ADC8 RID: 44488
+		// Token: 0x020097E7 RID: 38887
 		private class EViewComponent
 		{
-			// Token: 0x04034C86 RID: 216198
+			// Token: 0x0402F62D RID: 194093
 			public const int ClimbBtn = 0;
 
-			// Token: 0x04034C87 RID: 216199
+			// Token: 0x0402F62E RID: 194094
 			public const int RotateBtn = 1;
 
-			// Token: 0x04034C88 RID: 216200
+			// Token: 0x0402F62F RID: 194095
 			public const int FallDownBtn = 2;
 		}
 	}

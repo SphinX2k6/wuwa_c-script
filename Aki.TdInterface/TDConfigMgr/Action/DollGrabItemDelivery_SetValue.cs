@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001571 RID: 5489
+	// Token: 0x020016CF RID: 5839
 	public class DollGrabItemDelivery_SetValue
 	{
-		// Token: 0x0400474F RID: 18255
+		// Token: 0x04004AEF RID: 19183
 		public int ShowcaseId;
 	}
 }

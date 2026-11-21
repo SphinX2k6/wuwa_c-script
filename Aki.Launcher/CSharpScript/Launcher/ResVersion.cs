@@ -8,13 +8,13 @@ namespace CSharpScript.Launcher
 	[Nullable(0)]
 	public class ResVersion
 	{
-		// Token: 0x040001A3 RID: 419
+		// Token: 0x040001AF RID: 431
 		public string Name = "";
 
-		// Token: 0x040001A4 RID: 420
+		// Token: 0x040001B0 RID: 432
 		public string Version = "";
 
-		// Token: 0x040001A5 RID: 421
+		// Token: 0x040001B1 RID: 433
 		public string IndexSha1 = "";
 	}
 }

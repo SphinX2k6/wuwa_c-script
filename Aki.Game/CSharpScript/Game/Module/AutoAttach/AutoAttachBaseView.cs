@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AutoAttach
 {
-	// Token: 0x02005E7F RID: 24191
+	// Token: 0x02004E64 RID: 20068
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class AutoAttachBaseView<T, [Nullable(0)] TAttachItem> : IAutoAttachBaseView<T> where TAttachItem : AutoAttachItem<T>
 	{
-		// Token: 0x0603D878 RID: 252024 RVA: 0x00ED9430 File Offset: 0x00ED7630
+		// Token: 0x06032808 RID: 206856 RVA: 0x00E2A9BC File Offset: 0x00E28BBC
 		[NullableContext(1)]
 		public AutoAttachBaseView(AActor controllerActor, bool isNeedScrollCallback = false)
 		{
@@ -39,64 +39,64 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.IsNeedScrollCallback = isNeedScrollCallback;
 		}
 
-		// Token: 0x0603D879 RID: 252025 RVA: 0x00ED9606 File Offset: 0x00ED7806
+		// Token: 0x06032809 RID: 206857 RVA: 0x00E2AB92 File Offset: 0x00E28D92
 		private void OnActorDestroy(AActor actor)
 		{
 			this.Clear();
 		}
 
-		// Token: 0x0603D87A RID: 252026 RVA: 0x00ED960E File Offset: 0x00ED780E
+		// Token: 0x0603280A RID: 206858 RVA: 0x00E2AB9A File Offset: 0x00E28D9A
 		public virtual float GetTrueBoundary()
 		{
 			return 0f;
 		}
 
-		// Token: 0x0603D87B RID: 252027 RVA: 0x00ED9615 File Offset: 0x00ED7815
+		// Token: 0x0603280B RID: 206859 RVA: 0x00E2ABA1 File Offset: 0x00E28DA1
 		public void SetItemSelectMode(EAttachMode mode)
 		{
 			this.SelectItemModel = mode;
 		}
 
-		// Token: 0x0603D87C RID: 252028 RVA: 0x00ED961E File Offset: 0x00ED781E
+		// Token: 0x0603280C RID: 206860 RVA: 0x00E2ABAA File Offset: 0x00E28DAA
 		public void SetPageLimitState(bool state)
 		{
 			this.PageLimitState = state;
 		}
 
-		// Token: 0x0603D87D RID: 252029 RVA: 0x00ED9627 File Offset: 0x00ED7827
+		// Token: 0x0603280D RID: 206861 RVA: 0x00E2ABB3 File Offset: 0x00E28DB3
 		public void SetMoveMultiFactor(float value)
 		{
 			this.MoveMultiFactor = value;
 		}
 
-		// Token: 0x0603D87E RID: 252030 RVA: 0x00ED9630 File Offset: 0x00ED7830
+		// Token: 0x0603280E RID: 206862 RVA: 0x00E2ABBC File Offset: 0x00E28DBC
 		[NullableContext(1)]
 		public void SetDragBeginCallback(Action callback)
 		{
 			this.DragBegin = callback;
 		}
 
-		// Token: 0x0603D87F RID: 252031 RVA: 0x00ED9639 File Offset: 0x00ED7839
+		// Token: 0x0603280F RID: 206863 RVA: 0x00E2ABC5 File Offset: 0x00E28DC5
 		[NullableContext(1)]
 		public void SetMoveItemsCallback(Action callback)
 		{
 			this.MoveItemsCallback = callback;
 		}
 
-		// Token: 0x0603D880 RID: 252032 RVA: 0x00ED9642 File Offset: 0x00ED7842
+		// Token: 0x06032810 RID: 206864 RVA: 0x00E2ABCE File Offset: 0x00E28DCE
 		[NullableContext(1)]
 		public void SetAudioEvent(string eventName)
 		{
 			this.AudioEvent = eventName;
 		}
 
-		// Token: 0x0603D881 RID: 252033 RVA: 0x00ED964B File Offset: 0x00ED784B
+		// Token: 0x06032811 RID: 206865 RVA: 0x00E2ABD7 File Offset: 0x00E28DD7
 		public bool IsVelocityMoveState()
 		{
 			return this.VelocityMoveState;
 		}
 
-		// Token: 0x0603D882 RID: 252034 RVA: 0x00ED9654 File Offset: 0x00ED7854
+		// Token: 0x06032812 RID: 206866 RVA: 0x00E2ABE0 File Offset: 0x00E28DE0
 		[NullableContext(1)]
 		public void CreateItems(AActor itemActor, float initGap, Func<AActor, int, int, TAttachItem> createFunction, EAttachDirection direction = EAttachDirection.Horizontal)
 		{
@@ -113,37 +113,37 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.InitDefaultMoveBoundary();
 		}
 
-		// Token: 0x0603D883 RID: 252035 RVA: 0x00ED96EF File Offset: 0x00ED78EF
+		// Token: 0x06032813 RID: 206867 RVA: 0x00E2AC7B File Offset: 0x00E28E7B
 		public void SetMoveBoundary(float distance)
 		{
 			this.MoveBoundary = distance;
 		}
 
-		// Token: 0x0603D884 RID: 252036 RVA: 0x00ED96F8 File Offset: 0x00ED78F8
+		// Token: 0x06032814 RID: 206868 RVA: 0x00E2AC84 File Offset: 0x00E28E84
 		public EAttachDirection? GetCurrentMoveDirection()
 		{
 			return this.AttachDirection;
 		}
 
-		// Token: 0x0603D885 RID: 252037 RVA: 0x00ED9700 File Offset: 0x00ED7900
+		// Token: 0x06032815 RID: 206869 RVA: 0x00E2AC8C File Offset: 0x00E28E8C
 		private void InitDefaultMoveBoundary()
 		{
 			this.MoveBoundary = this.GetItemSize();
 		}
 
-		// Token: 0x0603D886 RID: 252038 RVA: 0x00ED970E File Offset: 0x00ED790E
+		// Token: 0x06032816 RID: 206870 RVA: 0x00E2AC9A File Offset: 0x00E28E9A
 		public void SetBoundDistance(float size)
 		{
 			this.MoveBoundary = size;
 		}
 
-		// Token: 0x0603D887 RID: 252039 RVA: 0x00ED9717 File Offset: 0x00ED7917
+		// Token: 0x06032817 RID: 206871 RVA: 0x00E2ACA3 File Offset: 0x00E28EA3
 		protected float GetItemGapSize()
 		{
 			return this.GetItemSize() + this.Gap;
 		}
 
-		// Token: 0x0603D888 RID: 252040 RVA: 0x00ED9728 File Offset: 0x00ED7928
+		// Token: 0x06032818 RID: 206872 RVA: 0x00E2ACB4 File Offset: 0x00E28EB4
 		private int GetCurrentShowNum()
 		{
 			EAttachDirection? attachDirection = this.AttachDirection;
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return num2 - 1;
 		}
 
-		// Token: 0x0603D889 RID: 252041 RVA: 0x00ED9788 File Offset: 0x00ED7988
+		// Token: 0x06032819 RID: 206873 RVA: 0x00E2AD14 File Offset: 0x00E28F14
 		public void EnableDragEvent()
 		{
 			if (this.ControllerActor != null)
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			}
 		}
 
-		// Token: 0x0603D88A RID: 252042 RVA: 0x00ED9854 File Offset: 0x00ED7A54
+		// Token: 0x0603281A RID: 206874 RVA: 0x00E2ADE0 File Offset: 0x00E28FE0
 		public void DisableDragEvent()
 		{
 			if (this.ControllerActor != null)
@@ -204,13 +204,13 @@ namespace CSharpScript.Game.Module.AutoAttach
 			}
 		}
 
-		// Token: 0x0603D88B RID: 252043 RVA: 0x00ED98BE File Offset: 0x00ED7ABE
+		// Token: 0x0603281B RID: 206875 RVA: 0x00E2AE4A File Offset: 0x00E2904A
 		public float GetGap()
 		{
 			return this.Gap;
 		}
 
-		// Token: 0x0603D88C RID: 252044 RVA: 0x00ED98C8 File Offset: 0x00ED7AC8
+		// Token: 0x0603281C RID: 206876 RVA: 0x00E2AE54 File Offset: 0x00E29054
 		public float GetItemSize()
 		{
 			EAttachDirection? attachDirection = this.AttachDirection;
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return result;
 		}
 
-		// Token: 0x0603D88D RID: 252045 RVA: 0x00ED990C File Offset: 0x00ED7B0C
+		// Token: 0x0603281D RID: 206877 RVA: 0x00E2AE98 File Offset: 0x00E29098
 		public float GetViewSize()
 		{
 			EAttachDirection? attachDirection = this.AttachDirection;
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return result;
 		}
 
-		// Token: 0x0603D88E RID: 252046 RVA: 0x00ED9950 File Offset: 0x00ED7B50
+		// Token: 0x0603281E RID: 206878 RVA: 0x00E2AEDC File Offset: 0x00E290DC
 		protected void Tick(float delta)
 		{
 			USequencerManager sequencerManager = ALGUIManagerActor.GetSequencerManager(GlobalData.World);
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			}
 		}
 
-		// Token: 0x0603D88F RID: 252047 RVA: 0x00ED9B20 File Offset: 0x00ED7D20
+		// Token: 0x0603281F RID: 206879 RVA: 0x00E2B0AC File Offset: 0x00E292AC
 		private void DoVelocityMove(float deltaTime)
 		{
 			float value = this.GetMoveTypeOffset(EMoveType.Velocity).Value;
@@ -364,7 +364,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			}
 		}
 
-		// Token: 0x0603D890 RID: 252048 RVA: 0x00ED9C3C File Offset: 0x00ED7E3C
+		// Token: 0x06032820 RID: 206880 RVA: 0x00E2B1C8 File Offset: 0x00E293C8
 		private void DoElasticMove(float deltaTime)
 		{
 			float value = this.GetMoveTypeOffset(EMoveType.Inertia).Value;
@@ -385,14 +385,14 @@ namespace CSharpScript.Game.Module.AutoAttach
 			}
 		}
 
-		// Token: 0x0603D891 RID: 252049 RVA: 0x00ED9CFC File Offset: 0x00ED7EFC
+		// Token: 0x06032821 RID: 206881 RVA: 0x00E2B288 File Offset: 0x00E29488
 		[NullableContext(1)]
 		protected float GetCurveValue(UCurveFloat curve, float progress)
 		{
 			return curve.GetFloatValue(progress);
 		}
 
-		// Token: 0x0603D892 RID: 252050 RVA: 0x00ED9D08 File Offset: 0x00ED7F08
+		// Token: 0x06032822 RID: 206882 RVA: 0x00E2B294 File Offset: 0x00E29494
 		private void EndVelocityMove()
 		{
 			this.VelocityMoveState = false;
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.ScrollToItem(item, false);
 		}
 
-		// Token: 0x0603D893 RID: 252051 RVA: 0x00ED9D32 File Offset: 0x00ED7F32
+		// Token: 0x06032823 RID: 206883 RVA: 0x00E2B2BE File Offset: 0x00E294BE
 		[NullableContext(1)]
 		public void ReloadView(int showItemNum, T[] data, int attachTo = 0)
 		{
@@ -409,19 +409,19 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.ReloadItems(showItemNum, data, attachTo);
 		}
 
-		// Token: 0x0603D894 RID: 252052 RVA: 0x00ED9D44 File Offset: 0x00ED7F44
+		// Token: 0x06032824 RID: 206884 RVA: 0x00E2B2D0 File Offset: 0x00E294D0
 		public int GetShowItemNum()
 		{
 			return this.ShowItemNum;
 		}
 
-		// Token: 0x0603D895 RID: 252053 RVA: 0x00ED9D4C File Offset: 0x00ED7F4C
+		// Token: 0x06032825 RID: 206885 RVA: 0x00E2B2D8 File Offset: 0x00E294D8
 		public int GetDataLength()
 		{
 			return this.DataLength;
 		}
 
-		// Token: 0x0603D896 RID: 252054 RVA: 0x00ED9D54 File Offset: 0x00ED7F54
+		// Token: 0x06032826 RID: 206886 RVA: 0x00E2B2E0 File Offset: 0x00E294E0
 		public void RefreshItems()
 		{
 			int count = this.Items.Count;
@@ -431,7 +431,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			}
 		}
 
-		// Token: 0x0603D897 RID: 252055 RVA: 0x00ED9D90 File Offset: 0x00ED7F90
+		// Token: 0x06032827 RID: 206887 RVA: 0x00E2B31C File Offset: 0x00E2951C
 		public TAttachItem FindNearestMiddleItem()
 		{
 			if (this.Items.Count == 0)
@@ -454,14 +454,14 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return result;
 		}
 
-		// Token: 0x0603D898 RID: 252056 RVA: 0x00ED9E58 File Offset: 0x00ED8058
+		// Token: 0x06032828 RID: 206888 RVA: 0x00E2B3E4 File Offset: 0x00E295E4
 		[NullableContext(1)]
 		public List<TAttachItem> GetItems()
 		{
 			return this.Items;
 		}
 
-		// Token: 0x0603D899 RID: 252057 RVA: 0x00ED9E60 File Offset: 0x00ED8060
+		// Token: 0x06032829 RID: 206889 RVA: 0x00E2B3EC File Offset: 0x00E295EC
 		protected TAttachItem GetShowIndexItem(int showIndex)
 		{
 			TAttachItem result = default(TAttachItem);
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return result;
 		}
 
-		// Token: 0x0603D89A RID: 252058 RVA: 0x00ED9EB8 File Offset: 0x00ED80B8
+		// Token: 0x0603282A RID: 206890 RVA: 0x00E2B444 File Offset: 0x00E29644
 		public TAttachItem GetItemByShowIndex(int showItemIndex)
 		{
 			foreach (TAttachItem tattachItem in this.Items)
@@ -490,7 +490,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return default(TAttachItem);
 		}
 
-		// Token: 0x0603D89B RID: 252059 RVA: 0x00ED9F24 File Offset: 0x00ED8124
+		// Token: 0x0603282B RID: 206891 RVA: 0x00E2B4B0 File Offset: 0x00E296B0
 		protected void ForceUnSelectItems()
 		{
 			int count = this.Items.Count;
@@ -501,7 +501,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.CurrentSelectState = false;
 		}
 
-		// Token: 0x0603D89C RID: 252060 RVA: 0x00ED9F68 File Offset: 0x00ED8168
+		// Token: 0x0603282C RID: 206892 RVA: 0x00E2B4F4 File Offset: 0x00E296F4
 		[NullableContext(1)]
 		public void ScrollToItem(TAttachItem item, bool force = false)
 		{
@@ -522,7 +522,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.InertiaState = true;
 		}
 
-		// Token: 0x0603D89D RID: 252061 RVA: 0x00ED9FCC File Offset: 0x00ED81CC
+		// Token: 0x0603282D RID: 206893 RVA: 0x00E2B558 File Offset: 0x00E29758
 		private void MoveToShowIndexForce(int showItemIndex)
 		{
 			TAttachItem tattachItem = this.FindNearestMiddleItem();
@@ -539,7 +539,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.VelocityMoveState = false;
 		}
 
-		// Token: 0x0603D89E RID: 252062 RVA: 0x00EDA040 File Offset: 0x00ED8240
+		// Token: 0x0603282E RID: 206894 RVA: 0x00E2B5CC File Offset: 0x00E297CC
 		[NullableContext(1)]
 		private void MoveToItemForce(TAttachItem item)
 		{
@@ -551,7 +551,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.VelocityMoveState = false;
 		}
 
-		// Token: 0x0603D89F RID: 252063 RVA: 0x00EDA084 File Offset: 0x00ED8284
+		// Token: 0x0603282F RID: 206895 RVA: 0x00E2B610 File Offset: 0x00E29810
 		public void AttachToNextItem(int direction)
 		{
 			TAttachItem tattachItem = this.FindNextDirectionItem(direction);
@@ -568,7 +568,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.AttachToIndex(tattachItem2.GetCurrentShowItemIndex(), false);
 		}
 
-		// Token: 0x0603D8A0 RID: 252064 RVA: 0x00EDA0D8 File Offset: 0x00ED82D8
+		// Token: 0x06032830 RID: 206896 RVA: 0x00E2B664 File Offset: 0x00E29864
 		public void AttachToIndex(int showItemIndex, bool force = false)
 		{
 			if (this.InertiaState && !force)
@@ -605,7 +605,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.Tick(0f);
 		}
 
-		// Token: 0x0603D8A1 RID: 252065 RVA: 0x00EDA18C File Offset: 0x00ED838C
+		// Token: 0x06032831 RID: 206897 RVA: 0x00E2B718 File Offset: 0x00E29918
 		protected int GetAutoAttachMoveMinusOffsetDirection()
 		{
 			EAttachDirection? attachDirection = this.AttachDirection;
@@ -617,38 +617,38 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return -1;
 		}
 
-		// Token: 0x0603D8A2 RID: 252066 RVA: 0x00EDA1B9 File Offset: 0x00ED83B9
+		// Token: 0x06032832 RID: 206898 RVA: 0x00E2B745 File Offset: 0x00E29945
 		public int GetCurrentSelectIndex()
 		{
 			return this.CurrentSelectItemIndex;
 		}
 
-		// Token: 0x0603D8A3 RID: 252067 RVA: 0x00EDA1C1 File Offset: 0x00ED83C1
+		// Token: 0x06032833 RID: 206899 RVA: 0x00E2B74D File Offset: 0x00E2994D
 		[NullableContext(1)]
 		public TAttachItem GetCurrentSelectItem()
 		{
 			return this.Items[this.CurrentSelectItemIndex];
 		}
 
-		// Token: 0x0603D8A4 RID: 252068 RVA: 0x00EDA1D4 File Offset: 0x00ED83D4
+		// Token: 0x06032834 RID: 206900 RVA: 0x00E2B760 File Offset: 0x00E29960
 		public bool MovingState()
 		{
 			return this.DragState || this.InertiaState;
 		}
 
-		// Token: 0x0603D8A5 RID: 252069 RVA: 0x00EDA1E6 File Offset: 0x00ED83E6
+		// Token: 0x06032835 RID: 206901 RVA: 0x00E2B772 File Offset: 0x00E29972
 		private void OnPointerDragCallback(ULGUIPointerEventData eventData)
 		{
 			this.OnPointerDrag(eventData);
 		}
 
-		// Token: 0x0603D8A6 RID: 252070 RVA: 0x00EDA1EF File Offset: 0x00ED83EF
+		// Token: 0x06032836 RID: 206902 RVA: 0x00E2B77B File Offset: 0x00E2997B
 		private void OnPointerDragEnd(ULGUIPointerEventData eventData)
 		{
 			this.OnPointerEndDrag(eventData);
 		}
 
-		// Token: 0x0603D8A7 RID: 252071 RVA: 0x00EDA1F8 File Offset: 0x00ED83F8
+		// Token: 0x06032837 RID: 206903 RVA: 0x00E2B784 File Offset: 0x00E29984
 		private void OnPointerBeginDrag(ULGUIPointerEventData eventData)
 		{
 			this.DragState = true;
@@ -670,19 +670,19 @@ namespace CSharpScript.Game.Module.AutoAttach
 			dragBegin();
 		}
 
-		// Token: 0x0603D8A8 RID: 252072 RVA: 0x00EDA29D File Offset: 0x00ED849D
+		// Token: 0x06032838 RID: 206904 RVA: 0x00E2B829 File Offset: 0x00E29A29
 		private void NavigateToPrev()
 		{
 			this.AttachToNextItem(-1);
 		}
 
-		// Token: 0x0603D8A9 RID: 252073 RVA: 0x00EDA2A6 File Offset: 0x00ED84A6
+		// Token: 0x06032839 RID: 206905 RVA: 0x00E2B832 File Offset: 0x00E29A32
 		private void NavigateToNext()
 		{
 			this.AttachToNextItem(1);
 		}
 
-		// Token: 0x0603D8AA RID: 252074 RVA: 0x00EDA2B0 File Offset: 0x00ED84B0
+		// Token: 0x0603283A RID: 206906 RVA: 0x00E2B83C File Offset: 0x00E29A3C
 		private void OnPointerScrollCallBack(ULGUIPointerEventData eventData)
 		{
 			float? num = (eventData != null) ? new float?(eventData.scrollAxisValue) : null;
@@ -700,7 +700,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			}
 		}
 
-		// Token: 0x0603D8AB RID: 252075 RVA: 0x00EDA388 File Offset: 0x00ED8588
+		// Token: 0x0603283B RID: 206907 RVA: 0x00E2B914 File Offset: 0x00E29B14
 		private void OnPointerDrag(ULGUIPointerEventData eventData)
 		{
 			this.OnPointerDragDelay = 0;
@@ -721,13 +721,13 @@ namespace CSharpScript.Game.Module.AutoAttach
 			}
 		}
 
-		// Token: 0x0603D8AC RID: 252076 RVA: 0x00EDA403 File Offset: 0x00ED8603
+		// Token: 0x0603283C RID: 206908 RVA: 0x00E2B98F File Offset: 0x00E29B8F
 		private void ApplyCachePointerDragData(ULGUIPointerEventData eventData)
 		{
 			this.CurrentPlanePosition = new FVector?(eventData.GetWorldPointInPlane());
 		}
 
-		// Token: 0x0603D8AD RID: 252077 RVA: 0x00EDA418 File Offset: 0x00ED8618
+		// Token: 0x0603283D RID: 206909 RVA: 0x00E2B9A4 File Offset: 0x00E29BA4
 		private void OnPointerEndDrag(ULGUIPointerEventData eventData)
 		{
 			int count = this.Items.Count;
@@ -769,7 +769,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			this.CurrentVelocityRunningTime = 0f;
 		}
 
-		// Token: 0x0603D8AE RID: 252078 RVA: 0x00EDA564 File Offset: 0x00ED8764
+		// Token: 0x0603283E RID: 206910 RVA: 0x00E2BAF0 File Offset: 0x00E29CF0
 		private float GetVectorPositionByMoveDirection(FVector vector)
 		{
 			EAttachDirection? attachDirection = this.AttachDirection;
@@ -781,7 +781,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return vector.Z;
 		}
 
-		// Token: 0x0603D8AF RID: 252079 RVA: 0x00EDA59C File Offset: 0x00ED879C
+		// Token: 0x0603283F RID: 206911 RVA: 0x00E2BB28 File Offset: 0x00E29D28
 		protected float? GetMoveTypeOffset(EMoveType type)
 		{
 			float value;
@@ -792,7 +792,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			return new float?(value);
 		}
 
-		// Token: 0x0603D8B0 RID: 252080 RVA: 0x00EDA5C9 File Offset: 0x00ED87C9
+		// Token: 0x06032840 RID: 206912 RVA: 0x00E2BB55 File Offset: 0x00E29D55
 		protected void SetMoveTypeOffset(EMoveType type, float offset)
 		{
 			this.CurrentMoveOffsetMap[type] = offset;
@@ -802,7 +802,7 @@ namespace CSharpScript.Game.Module.AutoAttach
 			}
 		}
 
-		// Token: 0x0603D8B1 RID: 252081 RVA: 0x00EDA5E8 File Offset: 0x00ED87E8
+		// Token: 0x06032841 RID: 206913 RVA: 0x00E2BB74 File Offset: 0x00E29D74
 		private void MoveItems(float offset, bool forceMove = false)
 		{
 			float num = 99999f;
@@ -853,24 +853,24 @@ namespace CSharpScript.Game.Module.AutoAttach
 			moveItemsCallback();
 		}
 
-		// Token: 0x0603D8B2 RID: 252082
+		// Token: 0x06032842 RID: 206914
 		[NullableContext(1)]
 		public abstract TAttachItem FindAutoAttachItem();
 
-		// Token: 0x0603D8B3 RID: 252083
+		// Token: 0x06032843 RID: 206915
 		protected abstract float RecalculateMoveOffset(float offset);
 
-		// Token: 0x0603D8B4 RID: 252084
+		// Token: 0x06032844 RID: 206916
 		[NullableContext(1)]
 		protected abstract void ReloadItems(int showItemNum, T[] data, int attachTo = 0);
 
-		// Token: 0x0603D8B5 RID: 252085
+		// Token: 0x06032845 RID: 206917
 		public abstract bool GetIfCircle();
 
-		// Token: 0x0603D8B6 RID: 252086
+		// Token: 0x06032846 RID: 206918
 		protected abstract TAttachItem FindNextDirectionItem(int direction);
 
-		// Token: 0x0603D8B7 RID: 252087 RVA: 0x00EDA76C File Offset: 0x00ED896C
+		// Token: 0x06032847 RID: 206919 RVA: 0x00E2BCF8 File Offset: 0x00E29EF8
 		public void Clear()
 		{
 			foreach (TAttachItem tattachItem in this.Items)
@@ -885,136 +885,136 @@ namespace CSharpScript.Game.Module.AutoAttach
 			}
 		}
 
-		// Token: 0x040201B5 RID: 131509
+		// Token: 0x0401AC7C RID: 109692
 		protected AActor SourceActor;
 
-		// Token: 0x040201B6 RID: 131510
+		// Token: 0x0401AC7D RID: 109693
 		protected UUIItem SourceItem;
 
-		// Token: 0x040201B7 RID: 131511
+		// Token: 0x0401AC7E RID: 109694
 		protected float SourceItemHeight;
 
-		// Token: 0x040201B8 RID: 131512
+		// Token: 0x0401AC7F RID: 109695
 		protected float SourceItemWidth;
 
-		// Token: 0x040201B9 RID: 131513
+		// Token: 0x0401AC80 RID: 109696
 		protected AActor ControllerActor;
 
-		// Token: 0x040201BA RID: 131514
+		// Token: 0x0401AC81 RID: 109697
 		protected UUIItem ControllerItem;
 
-		// Token: 0x040201BB RID: 131515
+		// Token: 0x0401AC82 RID: 109698
 		protected float ControllerHeight;
 
-		// Token: 0x040201BC RID: 131516
+		// Token: 0x0401AC83 RID: 109699
 		protected float ControllerWidth;
 
-		// Token: 0x040201BD RID: 131517
+		// Token: 0x0401AC84 RID: 109700
 		protected float Gap;
 
-		// Token: 0x040201BE RID: 131518
+		// Token: 0x0401AC85 RID: 109701
 		protected int ShowItemNum;
 
-		// Token: 0x040201BF RID: 131519
+		// Token: 0x0401AC86 RID: 109702
 		protected int DataLength;
 
-		// Token: 0x040201C0 RID: 131520
+		// Token: 0x0401AC87 RID: 109703
 		protected float MoveBoundary;
 
-		// Token: 0x040201C1 RID: 131521
+		// Token: 0x0401AC88 RID: 109704
 		protected bool InertiaState;
 
-		// Token: 0x040201C2 RID: 131522
+		// Token: 0x0401AC89 RID: 109705
 		private bool CheckInertiaSelectState;
 
-		// Token: 0x040201C3 RID: 131523
+		// Token: 0x0401AC8A RID: 109706
 		protected bool DragState;
 
-		// Token: 0x040201C4 RID: 131524
+		// Token: 0x0401AC8B RID: 109707
 		protected bool VelocityMoveState;
 
-		// Token: 0x040201C5 RID: 131525
+		// Token: 0x0401AC8C RID: 109708
 		private FVector? BeginPlanePosition;
 
-		// Token: 0x040201C6 RID: 131526
+		// Token: 0x0401AC8D RID: 109709
 		private FVector? CurrentPlanePosition;
 
-		// Token: 0x040201C7 RID: 131527
+		// Token: 0x0401AC8E RID: 109710
 		private readonly bool SupportVelocity = true;
 
-		// Token: 0x040201C8 RID: 131528
+		// Token: 0x0401AC8F RID: 109711
 		private float VelocityDirection;
 
-		// Token: 0x040201C9 RID: 131529
+		// Token: 0x0401AC90 RID: 109712
 		protected float CurrentVelocityRunningTime;
 
-		// Token: 0x040201CA RID: 131530
+		// Token: 0x0401AC91 RID: 109713
 		private readonly UCurveFloat VelocityCurve;
 
-		// Token: 0x040201CB RID: 131531
+		// Token: 0x0401AC92 RID: 109714
 		private readonly UCurveFloat InertiaCurve;
 
-		// Token: 0x040201CC RID: 131532
+		// Token: 0x0401AC93 RID: 109715
 		protected readonly UCurveFloat BoundaryCurve;
 
-		// Token: 0x040201CD RID: 131533
+		// Token: 0x0401AC94 RID: 109716
 		private readonly float FullVelocityTime;
 
-		// Token: 0x040201CE RID: 131534
+		// Token: 0x0401AC95 RID: 109717
 		private readonly float FullInertiaTime;
 
-		// Token: 0x040201CF RID: 131535
+		// Token: 0x0401AC96 RID: 109718
 		private float CurrentElasticMoveDelta;
 
-		// Token: 0x040201D0 RID: 131536
+		// Token: 0x0401AC97 RID: 109719
 		private float CurrentVelocityMoveDelta;
 
-		// Token: 0x040201D1 RID: 131537
+		// Token: 0x0401AC98 RID: 109720
 		private float MinusVelocityMoveDistance;
 
-		// Token: 0x040201D2 RID: 131538
+		// Token: 0x0401AC99 RID: 109721
 		[Nullable(1)]
 		private readonly Dictionary<EMoveType, float> CurrentMoveOffsetMap = new Dictionary<EMoveType, float>();
 
-		// Token: 0x040201D3 RID: 131539
+		// Token: 0x0401AC9A RID: 109722
 		[Nullable(1)]
 		protected List<TAttachItem> Items = new List<TAttachItem>();
 
-		// Token: 0x040201D4 RID: 131540
+		// Token: 0x0401AC9B RID: 109723
 		private TAttachItem ForceSelectItemCache;
 
-		// Token: 0x040201D5 RID: 131541
+		// Token: 0x0401AC9C RID: 109724
 		protected EAttachDirection? AttachDirection;
 
-		// Token: 0x040201D6 RID: 131542
+		// Token: 0x0401AC9D RID: 109725
 		protected bool CurrentSelectState;
 
-		// Token: 0x040201D7 RID: 131543
+		// Token: 0x0401AC9E RID: 109726
 		protected int CurrentSelectItemIndex;
 
-		// Token: 0x040201D8 RID: 131544
+		// Token: 0x0401AC9F RID: 109727
 		protected float CurrentRunningElasticTime;
 
-		// Token: 0x040201D9 RID: 131545
+		// Token: 0x0401ACA0 RID: 109728
 		private EAttachMode SelectItemModel = EAttachMode.EndMove;
 
-		// Token: 0x040201DA RID: 131546
+		// Token: 0x0401ACA1 RID: 109729
 		private int TickId = -1;
 
-		// Token: 0x040201DB RID: 131547
+		// Token: 0x0401ACA2 RID: 109730
 		private float MoveMultiFactor = 5f;
 
-		// Token: 0x040201DC RID: 131548
+		// Token: 0x0401ACA3 RID: 109731
 		private bool PageLimitState;
 
-		// Token: 0x040201DD RID: 131549
+		// Token: 0x0401ACA4 RID: 109732
 		[Nullable(1)]
 		private string AudioEvent = "ui_common_picker_tick";
 
-		// Token: 0x040201DE RID: 131550
+		// Token: 0x0401ACA5 RID: 109733
 		private int? CurrentMiddleIndex;
 
-		// Token: 0x040201DF RID: 131551
+		// Token: 0x0401ACA6 RID: 109734
 		[Nullable(new byte[]
 		{
 			1,
@@ -1023,44 +1023,44 @@ namespace CSharpScript.Game.Module.AutoAttach
 		})]
 		protected Func<AActor, int, int, TAttachItem> CreateItemFunction = (AActor actor, int index, int showNum) => default(TAttachItem);
 
-		// Token: 0x040201E0 RID: 131552
+		// Token: 0x0401ACA7 RID: 109735
 		private bool IsMoving;
 
-		// Token: 0x040201E1 RID: 131553
+		// Token: 0x0401ACA8 RID: 109736
 		private readonly bool IsNeedScrollCallback;
 
-		// Token: 0x040201E2 RID: 131554
+		// Token: 0x0401ACA9 RID: 109737
 		private Action DragBegin;
 
-		// Token: 0x040201E3 RID: 131555
+		// Token: 0x0401ACAA RID: 109738
 		private Action MoveItemsCallback;
 
-		// Token: 0x040201E4 RID: 131556
+		// Token: 0x0401ACAB RID: 109739
 		private const float ENDMOVEFLOAT = 0.01f;
 
-		// Token: 0x040201E5 RID: 131557
+		// Token: 0x0401ACAC RID: 109740
 		private const float MOVEMULFACTOR = 5f;
 
-		// Token: 0x040201E6 RID: 131558
+		// Token: 0x0401ACAD RID: 109741
 		private const float VERYBIGDISTANCE = 99999f;
 
-		// Token: 0x040201E7 RID: 131559
+		// Token: 0x0401ACAE RID: 109742
 		private const float DISTANCETOMIDDLE = 0.5f;
 
-		// Token: 0x040201E8 RID: 131560
+		// Token: 0x0401ACAF RID: 109743
 		[Nullable(1)]
 		private const string DEFALTAUDIO = "ui_common_picker_tick";
 
-		// Token: 0x040201E9 RID: 131561
+		// Token: 0x0401ACB0 RID: 109744
 		private int? ForceToItemIndex;
 
-		// Token: 0x040201EA RID: 131562
+		// Token: 0x0401ACB1 RID: 109745
 		private int OnPointerDragDelay;
 
-		// Token: 0x040201EB RID: 131563
+		// Token: 0x0401ACB2 RID: 109746
 		private bool NeedDelayApplyCachePointerDragData;
 
-		// Token: 0x040201EC RID: 131564
+		// Token: 0x0401ACB3 RID: 109747
 		private ULGUIPointerEventData OnPointerDragCacheData;
 	}
 }

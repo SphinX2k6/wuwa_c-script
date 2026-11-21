@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200640B RID: 25611
+	// Token: 0x02005389 RID: 21385
 	public class MotorFightRankDetailView : UiViewBase
 	{
-		// Token: 0x060406CD RID: 263885 RVA: 0x00F95A4A File Offset: 0x00F93C4A
+		// Token: 0x0603538E RID: 217998 RVA: 0x00EDC9EA File Offset: 0x00EDABEA
 		[NullableContext(1)]
 		public MotorFightRankDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060406CE RID: 263886 RVA: 0x00F95A54 File Offset: 0x00F93C54
+		// Token: 0x0603538F RID: 217999 RVA: 0x00EDC9F4 File Offset: 0x00EDABF4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060406CF RID: 263887 RVA: 0x00F95BC8 File Offset: 0x00F93DC8
+		// Token: 0x06035390 RID: 218000 RVA: 0x00EDCB68 File Offset: 0x00EDAD68
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorFightRankDetailView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -60,24 +60,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060406D0 RID: 263888 RVA: 0x00F95C0B File Offset: 0x00F93E0B
+		// Token: 0x06035391 RID: 218001 RVA: 0x00EDCBAB File Offset: 0x00EDADAB
 		[NullableContext(1)]
 		private MotorFightItemSmallGrid CreateItem()
 		{
 			return new MotorFightItemSmallGrid();
 		}
 
-		// Token: 0x060406D1 RID: 263889 RVA: 0x00F95C12 File Offset: 0x00F93E12
+		// Token: 0x06035392 RID: 218002 RVA: 0x00EDCBB2 File Offset: 0x00EDADB2
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x040217FE RID: 137214
+		// Token: 0x0401C12D RID: 114989
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x040217FF RID: 137215
+		// Token: 0x0401C12E RID: 114990
 		[Nullable(new byte[]
 		{
 			2,
@@ -86,40 +86,40 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 		})]
 		private LoopScrollView<MotorFightItemSmallGrid, MotorFightItemData> ItemLoopScrollView;
 
-		// Token: 0x0200C62E RID: 50734
+		// Token: 0x0200B015 RID: 45077
 		private class EComponent
 		{
-			// Token: 0x0403BD45 RID: 245061
+			// Token: 0x040366A2 RID: 222882
 			public const int ItemCaption = 0;
 
-			// Token: 0x0403BD46 RID: 245062
+			// Token: 0x040366A3 RID: 222883
 			public const int TextTitle = 1;
 
-			// Token: 0x0403BD47 RID: 245063
+			// Token: 0x040366A4 RID: 222884
 			public const int TextureRole = 2;
 
-			// Token: 0x0403BD48 RID: 245064
+			// Token: 0x040366A5 RID: 222885
 			public const int TextPlayerName = 3;
 
-			// Token: 0x0403BD49 RID: 245065
+			// Token: 0x040366A6 RID: 222886
 			public const int TextScore = 4;
 
-			// Token: 0x0403BD4A RID: 245066
+			// Token: 0x040366A7 RID: 222887
 			public const int TextWaveNum = 5;
 
-			// Token: 0x0403BD4B RID: 245067
+			// Token: 0x040366A8 RID: 222888
 			public const int TextKillNum = 6;
 
-			// Token: 0x0403BD4C RID: 245068
+			// Token: 0x040366A9 RID: 222889
 			public const int TextBuffGateNum = 7;
 
-			// Token: 0x0403BD4D RID: 245069
+			// Token: 0x040366AA RID: 222890
 			public const int LoopScrollViewItem = 8;
 
-			// Token: 0x0403BD4E RID: 245070
+			// Token: 0x040366AB RID: 222891
 			public const int ItemBase = 9;
 
-			// Token: 0x0403BD4F RID: 245071
+			// Token: 0x040366AC RID: 222892
 			public const int ItemEmptyPanel = 10;
 		}
 	}

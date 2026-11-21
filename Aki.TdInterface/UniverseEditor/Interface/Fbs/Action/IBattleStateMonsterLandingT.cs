@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061F2 RID: 25074
+	// Token: 0x02006860 RID: 26720
 	public class IBattleStateMonsterLandingT
 	{
-		// Token: 0x1700BAEE RID: 47854
-		// (get) Token: 0x0602B389 RID: 177033 RVA: 0x005F49DE File Offset: 0x005F2BDE
-		// (set) Token: 0x0602B38A RID: 177034 RVA: 0x005F49E6 File Offset: 0x005F2BE6
+		// Token: 0x1700C471 RID: 50289
+		// (get) Token: 0x0602DAD0 RID: 187088 RVA: 0x0063F452 File Offset: 0x0063D652
+		// (set) Token: 0x0602DAD1 RID: 187089 RVA: 0x0063F45A File Offset: 0x0063D65A
 		public ESetBattleTagType Type { get; set; }
 
-		// Token: 0x0602B38B RID: 177035 RVA: 0x005F49EF File Offset: 0x005F2BEF
+		// Token: 0x0602DAD2 RID: 187090 RVA: 0x0063F463 File Offset: 0x0063D663
 		public IBattleStateMonsterLandingT()
 		{
 			this.Type = ESetBattleTagType.BattleMonsterLanding;

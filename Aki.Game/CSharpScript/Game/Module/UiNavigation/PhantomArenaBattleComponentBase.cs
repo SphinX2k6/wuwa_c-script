@@ -5,18 +5,18 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049A9 RID: 18857
+	// Token: 0x02003923 RID: 14627
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PhantomArenaBattleComponentBase : HotKeyComponent
 	{
-		// Token: 0x0603117A RID: 201082 RVA: 0x00B644CB File Offset: 0x00B626CB
+		// Token: 0x06025CB0 RID: 154800 RVA: 0x00A9F41B File Offset: 0x00A9D61B
 		public PhantomArenaBattleComponentBase(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x170079DB RID: 31195
-		// (get) Token: 0x0603117B RID: 201083 RVA: 0x00B644D4 File Offset: 0x00B626D4
+		// Token: 0x17004D43 RID: 19779
+		// (get) Token: 0x06025CB1 RID: 154801 RVA: 0x00A9F424 File Offset: 0x00A9D624
 		protected PhantomArenaBattleProxy Proxy
 		{
 			get
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0603117C RID: 201084 RVA: 0x00B64518 File Offset: 0x00B62718
+		// Token: 0x06025CB2 RID: 154802 RVA: 0x00A9F468 File Offset: 0x00A9D668
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
@@ -52,19 +52,19 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, false, false);
 		}
 
-		// Token: 0x0603117D RID: 201085 RVA: 0x00B64568 File Offset: 0x00B62768
+		// Token: 0x06025CB3 RID: 154803 RVA: 0x00A9F4B8 File Offset: 0x00A9D6B8
 		protected virtual void OnRefreshSelfHotKeyStateImplement()
 		{
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, true, false);
 		}
 
-		// Token: 0x0603117E RID: 201086 RVA: 0x00B64573 File Offset: 0x00B62773
+		// Token: 0x06025CB4 RID: 154804 RVA: 0x00A9F4C3 File Offset: 0x00A9D6C3
 		protected virtual void OnRefreshSelfHotKeyStateIsMainInVisible()
 		{
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, false, false);
 		}
 
-		// Token: 0x0401A4B1 RID: 107697
+		// Token: 0x04014D23 RID: 85283
 		private PhantomArenaBattleProxy ProxyInternal;
 	}
 }

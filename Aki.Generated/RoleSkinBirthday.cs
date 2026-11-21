@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200105D RID: 4189
+	// Token: 0x02001145 RID: 4421
 	public struct RoleSkinBirthday : IFlatbufferObject
 	{
-		// Token: 0x1700335C RID: 13148
-		// (get) Token: 0x0600CB1C RID: 51996 RVA: 0x00300318 File Offset: 0x002FE518
+		// Token: 0x170033D9 RID: 13273
+		// (get) Token: 0x0600D173 RID: 53619 RVA: 0x0031C730 File Offset: 0x0031A930
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CB1D RID: 51997 RVA: 0x00300325 File Offset: 0x002FE525
+		// Token: 0x0600D174 RID: 53620 RVA: 0x0031C73D File Offset: 0x0031A93D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600CB1E RID: 51998 RVA: 0x0030032C File Offset: 0x002FE52C
+		// Token: 0x0600D175 RID: 53621 RVA: 0x0031C744 File Offset: 0x0031A944
 		public static RoleSkinBirthday GetRootAsRoleSkinBirthday(ByteBuffer _bb)
 		{
 			return RoleSkinBirthday.GetRootAsRoleSkinBirthday(_bb, default(RoleSkinBirthday));
 		}
 
-		// Token: 0x0600CB1F RID: 51999 RVA: 0x00300348 File Offset: 0x002FE548
+		// Token: 0x0600D176 RID: 53622 RVA: 0x0031C760 File Offset: 0x0031A960
 		public static RoleSkinBirthday GetRootAsRoleSkinBirthday(ByteBuffer _bb, RoleSkinBirthday obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600CB20 RID: 52000 RVA: 0x00300365 File Offset: 0x002FE565
+		// Token: 0x0600D177 RID: 53623 RVA: 0x0031C77D File Offset: 0x0031A97D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600CB21 RID: 52001 RVA: 0x00300374 File Offset: 0x002FE574
+		// Token: 0x0600D178 RID: 53624 RVA: 0x0031C78C File Offset: 0x0031A98C
 		public RoleSkinBirthday __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700335D RID: 13149
-		// (get) Token: 0x0600CB22 RID: 52002 RVA: 0x00300384 File Offset: 0x002FE584
+		// Token: 0x170033DA RID: 13274
+		// (get) Token: 0x0600D179 RID: 53625 RVA: 0x0031C79C File Offset: 0x0031A99C
 		public int Id
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005161 RID: 20833
+		// Token: 0x04005749 RID: 22345
 		private Table __p;
 	}
 }

@@ -2,44 +2,44 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200607A RID: 24698
+	// Token: 0x02004FF8 RID: 20472
 	internal enum <SpringManorAtmosphereView>FA7408CEA2A127E59DA136B4ACC8FE66B7D57F2B971AE2342A38959E9E953B533__EComp
 	{
-		// Token: 0x04020A98 RID: 133784
+		// Token: 0x0401B3C5 RID: 111557
 		Caption,
-		// Token: 0x04020A99 RID: 133785
+		// Token: 0x0401B3C6 RID: 111558
 		QuestScroll,
-		// Token: 0x04020A9A RID: 133786
+		// Token: 0x0401B3C7 RID: 111559
 		QuestItem,
-		// Token: 0x04020A9B RID: 133787
+		// Token: 0x0401B3C8 RID: 111560
 		UnlockPanel,
-		// Token: 0x04020A9C RID: 133788
+		// Token: 0x0401B3C9 RID: 111561
 		UnlockScroll,
-		// Token: 0x04020A9D RID: 133789
+		// Token: 0x0401B3CA RID: 111562
 		UnlockItem,
-		// Token: 0x04020A9E RID: 133790
+		// Token: 0x0401B3CB RID: 111563
 		RewardScroll,
-		// Token: 0x04020A9F RID: 133791
+		// Token: 0x0401B3CC RID: 111564
 		RewardItem,
-		// Token: 0x04020AA0 RID: 133792
+		// Token: 0x0401B3CD RID: 111565
 		BtnReceive,
-		// Token: 0x04020AA1 RID: 133793
+		// Token: 0x0401B3CE RID: 111566
 		TipsNotAchieved,
-		// Token: 0x04020AA2 RID: 133794
+		// Token: 0x0401B3CF RID: 111567
 		TipsFinished,
-		// Token: 0x04020AA3 RID: 133795
+		// Token: 0x0401B3D0 RID: 111568
 		RewardPanel,
-		// Token: 0x04020AA4 RID: 133796
+		// Token: 0x0401B3D1 RID: 111569
 		RewardEmptyPanel,
-		// Token: 0x04020AA5 RID: 133797
+		// Token: 0x0401B3D2 RID: 111570
 		LevelDrag,
-		// Token: 0x04020AA6 RID: 133798
+		// Token: 0x0401B3D3 RID: 111571
 		LevelItem,
-		// Token: 0x04020AA7 RID: 133799
+		// Token: 0x0401B3D4 RID: 111572
 		RefPoint,
-		// Token: 0x04020AA8 RID: 133800
+		// Token: 0x0401B3D5 RID: 111573
 		Progress,
-		// Token: 0x04020AA9 RID: 133801
+		// Token: 0x0401B3D6 RID: 111574
 		UnlockNonePanel
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000714 RID: 1812
+	// Token: 0x0200072C RID: 1836
 	public class ConfigPinballDailyConfigAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002A88 RID: 10888 RVA: 0x00149C94 File Offset: 0x00147E94
+		// Token: 0x06002B18 RID: 11032 RVA: 0x00150710 File Offset: 0x0014E910
 		static ConfigPinballDailyConfigAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPinballDailyConfigAll.CreateStaticDefaultValue), new Action(ConfigPinballDailyConfigAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002A89 RID: 10889 RVA: 0x00149CB4 File Offset: 0x00147EB4
+		// Token: 0x06002B19 RID: 11033 RVA: 0x00150730 File Offset: 0x0014E930
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPinballDailyConfigAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002A8A RID: 10890 RVA: 0x00149D33 File Offset: 0x00147F33
+		// Token: 0x06002B1A RID: 11034 RVA: 0x001507AF File Offset: 0x0014E9AF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPinballDailyConfigAll.LogPair = null;
 			ConfigPinballDailyConfigAll.HandleId = 0;
 		}
 
-		// Token: 0x06002A8B RID: 10891 RVA: 0x00149D41 File Offset: 0x00147F41
+		// Token: 0x06002B1B RID: 11035 RVA: 0x001507BD File Offset: 0x0014E9BD
 		public static void Init()
 		{
 			ConfigPinballDailyConfigAll.HandleId = ConfigCommon.InitDataStatement(ConfigPinballDailyConfigAll.HandleId, "db_pinballbattle.db", "select BinData from `PinballDailyConfig`");
 		}
 
-		// Token: 0x06002A8C RID: 10892 RVA: 0x00149D5C File Offset: 0x00147F5C
+		// Token: 0x06002B1C RID: 11036 RVA: 0x001507D8 File Offset: 0x0014E9D8
 		[NullableContext(2)]
 		public static IReadOnlyList<PinballDailyConfig> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003172 RID: 12658
+		// Token: 0x0400321A RID: 12826
 		private const string DB = "db_pinballbattle.db";
 
-		// Token: 0x04003173 RID: 12659
+		// Token: 0x0400321B RID: 12827
 		private const string FILE = "x.星弹奇游_关卡.xlsx";
 
-		// Token: 0x04003174 RID: 12660
+		// Token: 0x0400321C RID: 12828
 		private const string TABLE = "PinballDailyConfig";
 
-		// Token: 0x04003175 RID: 12661
+		// Token: 0x0400321D RID: 12829
 		private const string COMMAND = "select BinData from `PinballDailyConfig`";
 
-		// Token: 0x04003176 RID: 12662
+		// Token: 0x0400321E RID: 12830
 		private const string KEY_PREFIX = "PinballDailyConfigAll";
 
-		// Token: 0x04003177 RID: 12663
+		// Token: 0x0400321F RID: 12831
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003178 RID: 12664
+		// Token: 0x04003220 RID: 12832
 		private static int HandleId;
 	}
 }

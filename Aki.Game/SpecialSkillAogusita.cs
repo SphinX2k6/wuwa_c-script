@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.BattleUi;
 
-// Token: 0x0200318D RID: 12685
+// Token: 0x020026FA RID: 9978
 [NullableContext(2)]
 [Nullable(0)]
 public class SpecialSkillAogusita : SpecialSkillBase
 {
-	// Token: 0x0601B4E9 RID: 111849 RVA: 0x00774737 File Offset: 0x00772937
+	// Token: 0x06018FEE RID: 102382 RVA: 0x0079C09B File Offset: 0x0079A29B
 	[NullableContext(1)]
 	public SpecialSkillAogusita(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B4EA RID: 111850 RVA: 0x00774760 File Offset: 0x00772960
+	// Token: 0x06018FEF RID: 102383 RVA: 0x0079C0C4 File Offset: 0x0079A2C4
 	public override void OnStart()
 	{
 		Entity entity = this.SpecialSkillComponent.Entity;
@@ -33,7 +33,7 @@ public class SpecialSkillAogusita : SpecialSkillBase
 		EventSystem.Instance.AddWithTarget<int, bool>(entity, EEventName.CharBeforeSkillWithTarget, new Action<int, bool>(this.OnCharBeforeSkill));
 	}
 
-	// Token: 0x0601B4EB RID: 111851 RVA: 0x00774860 File Offset: 0x00772A60
+	// Token: 0x06018FF0 RID: 102384 RVA: 0x0079C1C4 File Offset: 0x0079A3C4
 	public override void OnEnd()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -62,7 +62,7 @@ public class SpecialSkillAogusita : SpecialSkillBase
 		EventSystem.Instance.RemoveWithTarget<int, bool>(this.SpecialSkillComponent.Entity, EEventName.CharBeforeSkillWithTarget, new Action<int, bool>(this.OnCharBeforeSkill));
 	}
 
-	// Token: 0x0601B4EC RID: 111852 RVA: 0x00774990 File Offset: 0x00772B90
+	// Token: 0x06018FF1 RID: 102385 RVA: 0x0079C2F4 File Offset: 0x0079A4F4
 	private void OnHideUiStateChanged(int tagId, bool bTagExists)
 	{
 		this.IsInHideUiState = bTagExists;
@@ -93,7 +93,7 @@ public class SpecialSkillAogusita : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4ED RID: 111853 RVA: 0x00774A18 File Offset: 0x00772C18
+	// Token: 0x06018FF2 RID: 102386 RVA: 0x0079C37C File Offset: 0x0079A57C
 	[NullableContext(1)]
 	private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
@@ -119,19 +119,19 @@ public class SpecialSkillAogusita : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4EE RID: 111854 RVA: 0x00774A9D File Offset: 0x00772C9D
+	// Token: 0x06018FF3 RID: 102387 RVA: 0x0079C401 File Offset: 0x0079A601
 	private void OnRoleDead()
 	{
 		this.SetUiVisible(true);
 	}
 
-	// Token: 0x0601B4EF RID: 111855 RVA: 0x00774AA6 File Offset: 0x00772CA6
+	// Token: 0x06018FF4 RID: 102388 RVA: 0x0079C40A File Offset: 0x0079A60A
 	private void OnCommonQteStart(int? handleId)
 	{
 		this.SkillComp.EndSkill(1306666, "触发通用QTE，终止奥古斯塔时停被动技能");
 	}
 
-	// Token: 0x0601B4F0 RID: 111856 RVA: 0x00774AC0 File Offset: 0x00772CC0
+	// Token: 0x06018FF5 RID: 102389 RVA: 0x0079C424 File Offset: 0x0079A624
 	private void SetUiVisible(bool visible)
 	{
 		if (this.IsUiVisible == visible)
@@ -148,7 +148,7 @@ public class SpecialSkillAogusita : SpecialSkillBase
 		inputComp.SetOnlyAllowFightInput(!visible);
 	}
 
-	// Token: 0x0601B4F1 RID: 111857 RVA: 0x00774B0C File Offset: 0x00772D0C
+	// Token: 0x06018FF6 RID: 102390 RVA: 0x0079C470 File Offset: 0x0079A670
 	private void OnCharBeforeSkill(int skillId, bool isAutonomousProxy)
 	{
 		if (WorldConfig.Instance.GetRoleCommonSkillRowNames().Contains(skillId.ToString()) && (long)skillId != 100003L && (long)skillId != 100004L)
@@ -157,7 +157,7 @@ public class SpecialSkillAogusita : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0400D576 RID: 54646
+	// Token: 0x0400D9D9 RID: 55769
 	[Nullable(1)]
 	private readonly EBattleUiChild[] hideBattleUiChildren = new EBattleUiChild[]
 	{
@@ -176,30 +176,30 @@ public class SpecialSkillAogusita : SpecialSkillBase
 		EBattleUiChild.Score
 	};
 
-	// Token: 0x0400D577 RID: 54647
+	// Token: 0x0400D9DA RID: 55770
 	private const int PASSIVE_SKILL_ID = 1306666;
 
-	// Token: 0x0400D578 RID: 54648
+	// Token: 0x0400D9DB RID: 55771
 	private const long JUMP_FORWARD = 100003L;
 
-	// Token: 0x0400D579 RID: 54649
+	// Token: 0x0400D9DC RID: 55772
 	private const long JUMP_BACKWARD = 100004L;
 
-	// Token: 0x0400D57A RID: 54650
+	// Token: 0x0400D9DD RID: 55773
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D57B RID: 54651
+	// Token: 0x0400D9DE RID: 55774
 	private CharacterInputComponent InputComp;
 
-	// Token: 0x0400D57C RID: 54652
+	// Token: 0x0400D9DF RID: 55775
 	private BaseSkillComponent SkillComp;
 
-	// Token: 0x0400D57D RID: 54653
+	// Token: 0x0400D9E0 RID: 55776
 	private ITagTask HideUiListener;
 
-	// Token: 0x0400D57E RID: 54654
+	// Token: 0x0400D9E1 RID: 55777
 	private bool IsInHideUiState;
 
-	// Token: 0x0400D57F RID: 54655
+	// Token: 0x0400D9E2 RID: 55778
 	private bool IsUiVisible = true;
 }

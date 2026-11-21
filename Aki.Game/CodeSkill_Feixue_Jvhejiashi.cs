@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using UnrealEngine;
 
-// Token: 0x02003181 RID: 12673
+// Token: 0x020026EE RID: 9966
 [NullableContext(1)]
 [Nullable(0)]
 public class CodeSkill_Feixue_Jvhejiashi : CodeSkillBase
 {
-	// Token: 0x0601B418 RID: 111640 RVA: 0x0076F589 File Offset: 0x0076D789
+	// Token: 0x06018F1D RID: 102173 RVA: 0x00796EED File Offset: 0x007950ED
 	public CodeSkill_Feixue_Jvhejiashi(SpecialSkillBase specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B419 RID: 111641 RVA: 0x0076F5B3 File Offset: 0x0076D7B3
+	// Token: 0x06018F1E RID: 102174 RVA: 0x00796F17 File Offset: 0x00795117
 	public override void OnBegin(Skill skill)
 	{
 		this.ClearForegroundLostTask();
@@ -24,13 +24,13 @@ public class CodeSkill_Feixue_Jvhejiashi : CodeSkillBase
 		this.PlayStanceMontage(skill);
 	}
 
-	// Token: 0x0601B41A RID: 111642 RVA: 0x0076F5D1 File Offset: 0x0076D7D1
+	// Token: 0x06018F1F RID: 102175 RVA: 0x00796F35 File Offset: 0x00795135
 	public override void OnEnd(Skill skill)
 	{
 		this.ClearForegroundLostTask();
 	}
 
-	// Token: 0x0601B41B RID: 111643 RVA: 0x0076F5DC File Offset: 0x0076D7DC
+	// Token: 0x06018F20 RID: 102176 RVA: 0x00796F40 File Offset: 0x00795140
 	private void PlayStanceMontage(Skill skill)
 	{
 		if (!base.SkillComp.PlaySkillMontage(0, "", 0f, delegate(bool isInterrupted)
@@ -47,7 +47,7 @@ public class CodeSkill_Feixue_Jvhejiashi : CodeSkillBase
 		this.RegisterForegroundLostListener(skill);
 	}
 
-	// Token: 0x0601B41C RID: 111644 RVA: 0x0076F648 File Offset: 0x0076D848
+	// Token: 0x06018F21 RID: 102177 RVA: 0x00796FAC File Offset: 0x007951AC
 	private bool ShouldBackStepToTarget()
 	{
 		if (this.GetForwardInputValue() < 0.75f)
@@ -58,7 +58,7 @@ public class CodeSkill_Feixue_Jvhejiashi : CodeSkillBase
 		return skillTarget != null && skillTarget.Valid && this.GetSkillTargetDistance() <= 1500.0;
 	}
 
-	// Token: 0x0601B41D RID: 111645 RVA: 0x0076F698 File Offset: 0x0076D898
+	// Token: 0x06018F22 RID: 102178 RVA: 0x00796FFC File Offset: 0x007951FC
 	private float GetForwardInputValue()
 	{
 		CharacterInputComponent component = base.Entity.GetComponent<CharacterInputComponent>();
@@ -70,7 +70,7 @@ public class CodeSkill_Feixue_Jvhejiashi : CodeSkillBase
 		return (float)this.MoveVector.X;
 	}
 
-	// Token: 0x0601B41E RID: 111646 RVA: 0x0076F6D4 File Offset: 0x0076D8D4
+	// Token: 0x06018F23 RID: 102179 RVA: 0x00797038 File Offset: 0x00795238
 	private double GetSkillTargetDistance()
 	{
 		CharacterActorComponent component = base.Entity.GetComponent<CharacterActorComponent>();
@@ -93,7 +93,7 @@ public class CodeSkill_Feixue_Jvhejiashi : CodeSkillBase
 		return Vector.Dist(component.ActorLocationProxy, baseActorComponent2.ActorLocationProxy);
 	}
 
-	// Token: 0x0601B41F RID: 111647 RVA: 0x0076F734 File Offset: 0x0076D934
+	// Token: 0x06018F24 RID: 102180 RVA: 0x00797098 File Offset: 0x00795298
 	private void ApplyBackStepAndRotation(Skill skill)
 	{
 		CharacterActorComponent component = base.Entity.GetComponent<CharacterActorComponent>();
@@ -113,7 +113,7 @@ public class CodeSkill_Feixue_Jvhejiashi : CodeSkillBase
 		component.SetActorRotation(value2, "CodeSkill_Feixue_Jvhejiashi.RotationAction", false);
 	}
 
-	// Token: 0x0601B420 RID: 111648 RVA: 0x0076F7AC File Offset: 0x0076D9AC
+	// Token: 0x06018F25 RID: 102181 RVA: 0x00797110 File Offset: 0x00795310
 	private void RegisterForegroundLostListener(Skill skill)
 	{
 		BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
@@ -126,7 +126,7 @@ public class CodeSkill_Feixue_Jvhejiashi : CodeSkillBase
 		}, null) : null);
 	}
 
-	// Token: 0x0601B421 RID: 111649 RVA: 0x0076F80C File Offset: 0x0076DA0C
+	// Token: 0x06018F26 RID: 102182 RVA: 0x00797170 File Offset: 0x00795370
 	private void ClearForegroundLostTask()
 	{
 		ITagTask foregroundLostTask = this.ForegroundLostTask;
@@ -137,7 +137,7 @@ public class CodeSkill_Feixue_Jvhejiashi : CodeSkillBase
 		this.ForegroundLostTask = null;
 	}
 
-	// Token: 0x0601B422 RID: 111650 RVA: 0x0076F826 File Offset: 0x0076DA26
+	// Token: 0x06018F27 RID: 102183 RVA: 0x0079718A File Offset: 0x0079538A
 	private static SSkillBehaviorAction CreateBackStepLocationAction()
 	{
 		return new SSkillBehaviorAction
@@ -148,28 +148,28 @@ public class CodeSkill_Feixue_Jvhejiashi : CodeSkillBase
 		};
 	}
 
-	// Token: 0x0400D4B7 RID: 54455
+	// Token: 0x0400D91A RID: 55578
 	private const int STANCE_MONTAGE_INDEX = 0;
 
-	// Token: 0x0400D4B8 RID: 54456
+	// Token: 0x0400D91B RID: 55579
 	private const float MAX_TARGET_DISTANCE = 1500f;
 
-	// Token: 0x0400D4B9 RID: 54457
+	// Token: 0x0400D91C RID: 55580
 	private const float FORWARD_INPUT_THRESHOLD = 0.75f;
 
-	// Token: 0x0400D4BA RID: 54458
+	// Token: 0x0400D91D RID: 55581
 	private const float BACK_STEP_OFFSET = -500f;
 
-	// Token: 0x0400D4BB RID: 54459
+	// Token: 0x0400D91E RID: 55582
 	[Nullable(2)]
 	private ITagTask ForegroundLostTask;
 
-	// Token: 0x0400D4BC RID: 54460
+	// Token: 0x0400D91F RID: 55583
 	private readonly Vector MoveVector = Vector.Create();
 
-	// Token: 0x0400D4BD RID: 54461
+	// Token: 0x0400D920 RID: 55584
 	private readonly SSkillBehaviorAction LocationAction = CodeSkill_Feixue_Jvhejiashi.CreateBackStepLocationAction();
 
-	// Token: 0x0400D4BE RID: 54462
+	// Token: 0x0400D921 RID: 55585
 	private readonly SSkillBehaviorAction RotationAction = new SSkillBehaviorAction();
 }

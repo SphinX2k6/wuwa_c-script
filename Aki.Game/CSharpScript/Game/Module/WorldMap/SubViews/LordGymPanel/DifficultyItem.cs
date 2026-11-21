@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 {
-	// Token: 0x0200480F RID: 18447
+	// Token: 0x02003740 RID: 14144
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 	})]
 	public class DifficultyItem : GridProxyAbstract<IDifficultyItemData>
 	{
-		// Token: 0x060304B4 RID: 197812 RVA: 0x00B33CAC File Offset: 0x00B31EAC
+		// Token: 0x06024C84 RID: 150660 RVA: 0x00A63C14 File Offset: 0x00A61E14
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060304B5 RID: 197813 RVA: 0x00B33D9C File Offset: 0x00B31F9C
+		// Token: 0x06024C85 RID: 150661 RVA: 0x00A63D04 File Offset: 0x00A61F04
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(2);
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			this.StateLayout = new GenericLayout<LordGymDifficultyStateItem, ELordGymDifficultyState>(horizontalLayout, gridProxyCreateFunction, ((item2 != null) ? item2.GetOwner() : null) as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x060304B6 RID: 197814 RVA: 0x00B33DF4 File Offset: 0x00B31FF4
+		// Token: 0x06024C86 RID: 150662 RVA: 0x00A63D5C File Offset: 0x00A61F5C
 		private LordGymDifficultyStateItem CreateStateItem()
 		{
 			return new LordGymDifficultyStateItem();
 		}
 
-		// Token: 0x060304B7 RID: 197815 RVA: 0x00B33DFC File Offset: 0x00B31FFC
+		// Token: 0x06024C87 RID: 150663 RVA: 0x00A63D64 File Offset: 0x00A61F64
 		public override void Refresh(IDifficultyItemData data, bool isSelected, int gridIndex)
 		{
 			if (data.NameTextArg != null)
@@ -77,13 +77,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			stateLayout.RefreshByData(data.StateList, null, false);
 		}
 
-		// Token: 0x060304B8 RID: 197816 RVA: 0x00B33E64 File Offset: 0x00B32064
+		// Token: 0x06024C88 RID: 150664 RVA: 0x00A63DCC File Offset: 0x00A61FCC
 		public override object GetKey(IDifficultyItemData data, int gridIndex)
 		{
 			return base.GridIndex;
 		}
 
-		// Token: 0x04019FD5 RID: 106453
+		// Token: 0x04014689 RID: 83593
 		[Nullable(new byte[]
 		{
 			2,

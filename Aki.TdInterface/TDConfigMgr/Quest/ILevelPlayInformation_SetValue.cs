@@ -4,18 +4,16 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FF0 RID: 4080
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200111C RID: 4380
 	public class ILevelPlayInformation_SetValue
 	{
-		// Token: 0x040036A3 RID: 13987
+		// Token: 0x040039DB RID: 14811
 		public string TidMainTitle;
 
-		// Token: 0x040036A4 RID: 13988
+		// Token: 0x040039DC RID: 14812
 		public List<IInformationSubTitle> SubTitles;
 
-		// Token: 0x040036A5 RID: 13989
+		// Token: 0x040039DD RID: 14813
 		[Nullable(2)]
 		public string EdTidMainTitle;
 	}

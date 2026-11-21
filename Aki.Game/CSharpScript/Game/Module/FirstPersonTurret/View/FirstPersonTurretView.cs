@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FirstPersonTurret.View
 {
-	// Token: 0x02005A85 RID: 23173
+	// Token: 0x02004A61 RID: 19041
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FirstPersonTurretView : UiTickViewBase
 	{
-		// Token: 0x0603AB08 RID: 240392 RVA: 0x00DFA2E4 File Offset: 0x00DF84E4
+		// Token: 0x0602FA51 RID: 195153 RVA: 0x00D4A878 File Offset: 0x00D48A78
 		public FirstPersonTurretView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603AB09 RID: 240393 RVA: 0x00DFA304 File Offset: 0x00DF8504
+		// Token: 0x0602FA52 RID: 195154 RVA: 0x00D4A898 File Offset: 0x00D48A98
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.ComponentRegisterInfos = list2;
 		}
 
-		// Token: 0x0603AB0A RID: 240394 RVA: 0x00DFA544 File Offset: 0x00DF8744
+		// Token: 0x0602FA53 RID: 195155 RVA: 0x00D4AAD8 File Offset: 0x00D48CD8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FirstPersonTurretView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AB0B RID: 240395 RVA: 0x00DFA588 File Offset: 0x00DF8788
+		// Token: 0x0602FA54 RID: 195156 RVA: 0x00D4AB1C File Offset: 0x00D48D1C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<ESkillButtonRefreshReason>(EEventName.OnSkillButtonDataRefresh, new Action<ESkillButtonRefreshReason>(this.OnSkillButtonDataRefresh));
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 		}
 
-		// Token: 0x0603AB0C RID: 240396 RVA: 0x00DFA6E8 File Offset: 0x00DF88E8
+		// Token: 0x0602FA55 RID: 195157 RVA: 0x00D4AC7C File Offset: 0x00D48E7C
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnSkillButtonDataRefresh, new Action<ESkillButtonRefreshReason>(this.OnSkillButtonDataRefresh));
@@ -120,13 +120,13 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			EventSystem.Instance.Remove<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 		}
 
-		// Token: 0x0603AB0D RID: 240397 RVA: 0x00DFA845 File Offset: 0x00DF8A45
+		// Token: 0x0602FA56 RID: 195158 RVA: 0x00D4ADD9 File Offset: 0x00D48FD9
 		protected override void OnAfterShow()
 		{
 			this.RefreshGamepadPsFeedback();
 		}
 
-		// Token: 0x0603AB0E RID: 240398 RVA: 0x00DFA850 File Offset: 0x00DF8A50
+		// Token: 0x0602FA57 RID: 195159 RVA: 0x00D4ADE4 File Offset: 0x00D48FE4
 		protected override void OnTick(float delta)
 		{
 			this.InitPlayerData();
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			}
 		}
 
-		// Token: 0x0603AB0F RID: 240399 RVA: 0x00DFA8C0 File Offset: 0x00DF8AC0
+		// Token: 0x0602FA58 RID: 195160 RVA: 0x00D4AE54 File Offset: 0x00D49054
 		protected override void OnBeforeDestroy()
 		{
 			GamepadController.Instance.RemoveFeedbackReason(EGamepadPsFeedbackReason.FirstPersonTurret);
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.ClearKscPlayerData();
 		}
 
-		// Token: 0x0603AB10 RID: 240400 RVA: 0x00DFA948 File Offset: 0x00DF8B48
+		// Token: 0x0602FA59 RID: 195161 RVA: 0x00D4AEDC File Offset: 0x00D490DC
 		private UniTask CreateRoleHpPanelAsync()
 		{
 			FirstPersonTurretView.<CreateRoleHpPanelAsync>d__17 <CreateRoleHpPanelAsync>d__;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			return <CreateRoleHpPanelAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AB11 RID: 240401 RVA: 0x00DFA98B File Offset: 0x00DF8B8B
+		// Token: 0x0602FA5A RID: 195162 RVA: 0x00D4AF1F File Offset: 0x00D4911F
 		private void ClearKscPlayerData()
 		{
 			this.AttrMap = null;
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.LastSyncMaxHp = null;
 		}
 
-		// Token: 0x0603AB12 RID: 240402 RVA: 0x00DFA9AC File Offset: 0x00DF8BAC
+		// Token: 0x0602FA5B RID: 195163 RVA: 0x00D4AF40 File Offset: 0x00D49140
 		private void InitPlayerData()
 		{
 			KscSubModelBase curSubModel = KuroSimpleCombatController.Instance.CurSubModel;
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.AttrMap = tmap2;
 		}
 
-		// Token: 0x0603AB13 RID: 240403 RVA: 0x00DFAA0C File Offset: 0x00DF8C0C
+		// Token: 0x0602FA5C RID: 195164 RVA: 0x00D4AFA0 File Offset: 0x00D491A0
 		private void RefreshKscPlayerHp()
 		{
 			if (this.AttrMap == null)
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.TrySyncKscPlayerHp(hp, maxHp);
 		}
 
-		// Token: 0x0603AB14 RID: 240404 RVA: 0x00DFAA54 File Offset: 0x00DF8C54
+		// Token: 0x0602FA5D RID: 195165 RVA: 0x00D4AFE8 File Offset: 0x00D491E8
 		private void TrySyncKscPlayerHp(int hp, int maxHp)
 		{
 			int? num = this.LastSyncHp;
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			roleHpPanel.Refresh((float)this.LastSyncHp.Value, (float)this.LastSyncMaxHp.Value);
 		}
 
-		// Token: 0x0603AB15 RID: 240405 RVA: 0x00DFAADC File Offset: 0x00DF8CDC
+		// Token: 0x0602FA5E RID: 195166 RVA: 0x00D4B070 File Offset: 0x00D49270
 		private UniTask CreateSkillItemsAsync()
 		{
 			FirstPersonTurretView.<CreateSkillItemsAsync>d__22 <CreateSkillItemsAsync>d__;
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			return <CreateSkillItemsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AB16 RID: 240406 RVA: 0x00DFAB20 File Offset: 0x00DF8D20
+		// Token: 0x0602FA5F RID: 195167 RVA: 0x00D4B0B4 File Offset: 0x00D492B4
 		private UniTask CreateSkillItemAsync([Nullable(2)] UUIButtonComponent button, FirstPersonTurretSkillItemParam param)
 		{
 			FirstPersonTurretView.<CreateSkillItemAsync>d__23 <CreateSkillItemAsync>d__;
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			return <CreateSkillItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AB17 RID: 240407 RVA: 0x00DFAB73 File Offset: 0x00DF8D73
+		// Token: 0x0602FA60 RID: 195168 RVA: 0x00D4B107 File Offset: 0x00D49307
 		private void RefreshAllSkillItems()
 		{
 			this.RefreshSkillItemsByButtonType(ESkillButtonType.攻击);
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.RefreshSkillItemsByButtonType(ESkillButtonType.大招);
 		}
 
-		// Token: 0x0603AB18 RID: 240408 RVA: 0x00DFAB8C File Offset: 0x00DF8D8C
+		// Token: 0x0602FA61 RID: 195169 RVA: 0x00D4B120 File Offset: 0x00D49320
 		private void RefreshSkillItemsByButtonType(ESkillButtonType buttonType)
 		{
 			this.ForEachSkillItem(buttonType, delegate(FirstPersonTurretSkillItem skillItem)
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			});
 		}
 
-		// Token: 0x0603AB19 RID: 240409 RVA: 0x00DFABC0 File Offset: 0x00DF8DC0
+		// Token: 0x0602FA62 RID: 195170 RVA: 0x00D4B154 File Offset: 0x00D49354
 		private void ForEachSkillItem(ESkillButtonType buttonType, Action<FirstPersonTurretSkillItem> callback)
 		{
 			List<FirstPersonTurretSkillItem> list;
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			}
 		}
 
-		// Token: 0x0603AB1A RID: 240410 RVA: 0x00DFAC20 File Offset: 0x00DF8E20
+		// Token: 0x0602FA63 RID: 195171 RVA: 0x00D4B1B4 File Offset: 0x00D493B4
 		private void OnSignoutClicked()
 		{
 			Action onExitClicked = this.OnExitClicked;
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			onExitClicked();
 		}
 
-		// Token: 0x0603AB1B RID: 240411 RVA: 0x00DFAC32 File Offset: 0x00DF8E32
+		// Token: 0x0602FA64 RID: 195172 RVA: 0x00D4B1C6 File Offset: 0x00D493C6
 		private void RefreshGamepadPsFeedback()
 		{
 			if (Info.Instance.IsInGamepad())
@@ -325,19 +325,19 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			GamepadController.Instance.RemoveFeedbackReason(EGamepadPsFeedbackReason.FirstPersonTurret);
 		}
 
-		// Token: 0x0603AB1C RID: 240412 RVA: 0x00DFAC5C File Offset: 0x00DF8E5C
+		// Token: 0x0602FA65 RID: 195173 RVA: 0x00D4B1F0 File Offset: 0x00D493F0
 		private void OnInputControllerChange(EInputControllerType _1, EInputControllerType _2)
 		{
 			this.RefreshGamepadPsFeedback();
 		}
 
-		// Token: 0x0603AB1D RID: 240413 RVA: 0x00DFAC64 File Offset: 0x00DF8E64
+		// Token: 0x0602FA66 RID: 195174 RVA: 0x00D4B1F8 File Offset: 0x00D493F8
 		private void OnSkillButtonDataRefresh(ESkillButtonRefreshReason refreshReason)
 		{
 			this.RefreshAllSkillItems();
 		}
 
-		// Token: 0x0603AB1E RID: 240414 RVA: 0x00DFAC6C File Offset: 0x00DF8E6C
+		// Token: 0x0602FA67 RID: 195175 RVA: 0x00D4B200 File Offset: 0x00D49400
 		private void OnSkillButtonEnableRefresh(ESkillButtonType buttonType, int extendCoolDown)
 		{
 			this.ForEachSkillItem(buttonType, delegate(FirstPersonTurretSkillItem skillItem)
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			});
 		}
 
-		// Token: 0x0603AB1F RID: 240415 RVA: 0x00DFAC94 File Offset: 0x00DF8E94
+		// Token: 0x0602FA68 RID: 195176 RVA: 0x00D4B228 File Offset: 0x00D49428
 		private void OnSkillButtonVisibleRefresh(ESkillButtonType buttonType)
 		{
 			this.ForEachSkillItem(buttonType, delegate(FirstPersonTurretSkillItem skillItem)
@@ -364,7 +364,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			});
 		}
 
-		// Token: 0x0603AB20 RID: 240416 RVA: 0x00DFACBC File Offset: 0x00DF8EBC
+		// Token: 0x0602FA69 RID: 195177 RVA: 0x00D4B250 File Offset: 0x00D49450
 		private void OnSkillButtonDynamicEffectRefresh(ESkillButtonType buttonType)
 		{
 			this.ForEachSkillItem(buttonType, delegate(FirstPersonTurretSkillItem skillItem)
@@ -377,7 +377,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			});
 		}
 
-		// Token: 0x0603AB21 RID: 240417 RVA: 0x00DFACE4 File Offset: 0x00DF8EE4
+		// Token: 0x0602FA6A RID: 195178 RVA: 0x00D4B278 File Offset: 0x00D49478
 		private void OnSkillButtonCustomRefresh(ESkillButtonType buttonType, int from, int param)
 		{
 			this.ForEachSkillItem(buttonType, delegate(FirstPersonTurretSkillItem skillItem)
@@ -390,13 +390,13 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			});
 		}
 
-		// Token: 0x0603AB22 RID: 240418 RVA: 0x00DFAD18 File Offset: 0x00DF8F18
+		// Token: 0x0602FA6B RID: 195179 RVA: 0x00D4B2AC File Offset: 0x00D494AC
 		private void OnSkillButtonSkillIdRefresh(ESkillButtonType buttonType)
 		{
 			this.RefreshSkillItemsByButtonType(buttonType);
 		}
 
-		// Token: 0x0603AB23 RID: 240419 RVA: 0x00DFAD21 File Offset: 0x00DF8F21
+		// Token: 0x0602FA6C RID: 195180 RVA: 0x00D4B2B5 File Offset: 0x00D494B5
 		private void OnSkillButtonAttributeRefresh(ESkillButtonType buttonType)
 		{
 			this.ForEachSkillItem(buttonType, delegate(FirstPersonTurretSkillItem skillItem)
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			});
 		}
 
-		// Token: 0x0603AB24 RID: 240420 RVA: 0x00DFAD49 File Offset: 0x00DF8F49
+		// Token: 0x0602FA6D RID: 195181 RVA: 0x00D4B2DD File Offset: 0x00D494DD
 		private void OnSkillButtonIconPathRefresh(ESkillButtonType buttonType)
 		{
 			this.ForEachSkillItem(buttonType, delegate(FirstPersonTurretSkillItem skillItem)
@@ -415,7 +415,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			});
 		}
 
-		// Token: 0x0603AB25 RID: 240421 RVA: 0x00DFAD71 File Offset: 0x00DF8F71
+		// Token: 0x0602FA6E RID: 195182 RVA: 0x00D4B305 File Offset: 0x00D49505
 		private void OnSkillButtonCdRefresh(ESkillButtonType buttonType)
 		{
 			this.ForEachSkillItem(buttonType, delegate(FirstPersonTurretSkillItem skillItem)
@@ -424,7 +424,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			});
 		}
 
-		// Token: 0x0603AB26 RID: 240422 RVA: 0x00DFAD99 File Offset: 0x00DF8F99
+		// Token: 0x0602FA6F RID: 195183 RVA: 0x00D4B32D File Offset: 0x00D4952D
 		private void OnSkillButtonLongPressRefresh(ESkillButtonType buttonType)
 		{
 			this.ForEachSkillItem(buttonType, delegate(FirstPersonTurretSkillItem skillItem)
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			});
 		}
 
-		// Token: 0x0603AB27 RID: 240423 RVA: 0x00DFADC1 File Offset: 0x00DF8FC1
+		// Token: 0x0602FA70 RID: 195184 RVA: 0x00D4B355 File Offset: 0x00D49555
 		private void OnSkillButtonExtraEffectRefresh(ESkillButtonType buttonType)
 		{
 			this.ForEachSkillItem(buttonType, delegate(FirstPersonTurretSkillItem skillItem)
@@ -443,35 +443,35 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			});
 		}
 
-		// Token: 0x0401EA31 RID: 125489
+		// Token: 0x040194D8 RID: 103640
 		[Nullable(2)]
 		public Action OnExitClicked;
 
-		// Token: 0x0401EA32 RID: 125490
+		// Token: 0x040194D9 RID: 103641
 		private const string PS_FEEDBACK_ID = "FirstPersonTurret";
 
-		// Token: 0x0401EA33 RID: 125491
+		// Token: 0x040194DA RID: 103642
 		[Nullable(2)]
 		private UUIButtonComponent ExitButton;
 
-		// Token: 0x0401EA34 RID: 125492
+		// Token: 0x040194DB RID: 103643
 		private readonly List<FirstPersonTurretSkillItem> SkillItemList = new List<FirstPersonTurretSkillItem>();
 
-		// Token: 0x0401EA35 RID: 125493
+		// Token: 0x040194DC RID: 103644
 		private readonly Dictionary<ESkillButtonType, List<FirstPersonTurretSkillItem>> SkillItemMap = new Dictionary<ESkillButtonType, List<FirstPersonTurretSkillItem>>();
 
-		// Token: 0x0401EA36 RID: 125494
+		// Token: 0x040194DD RID: 103645
 		[Nullable(2)]
 		private FirstPersonTurretRoleHpPanel RoleHpPanel;
 
-		// Token: 0x0401EA37 RID: 125495
+		// Token: 0x040194DE RID: 103646
 		[Nullable(2)]
 		private TMap<EKSC_AttrType, int> AttrMap;
 
-		// Token: 0x0401EA38 RID: 125496
+		// Token: 0x040194DF RID: 103647
 		private int? LastSyncHp;
 
-		// Token: 0x0401EA39 RID: 125497
+		// Token: 0x040194E0 RID: 103648
 		private int? LastSyncMaxHp;
 	}
 }

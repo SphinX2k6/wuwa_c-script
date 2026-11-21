@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200111A RID: 4378
+	// Token: 0x02001250 RID: 4688
 	public struct Teleporter : IFlatbufferObject
 	{
-		// Token: 0x170039DE RID: 14814
-		// (get) Token: 0x0600DD3C RID: 56636 RVA: 0x0032A560 File Offset: 0x00328760
+		// Token: 0x17003D34 RID: 15668
+		// (get) Token: 0x0600EA87 RID: 60039 RVA: 0x00355698 File Offset: 0x00353898
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DD3D RID: 56637 RVA: 0x0032A56D File Offset: 0x0032876D
+		// Token: 0x0600EA88 RID: 60040 RVA: 0x003556A5 File Offset: 0x003538A5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DD3E RID: 56638 RVA: 0x0032A574 File Offset: 0x00328774
+		// Token: 0x0600EA89 RID: 60041 RVA: 0x003556AC File Offset: 0x003538AC
 		public static Teleporter GetRootAsTeleporter(ByteBuffer _bb)
 		{
 			return Teleporter.GetRootAsTeleporter(_bb, default(Teleporter));
 		}
 
-		// Token: 0x0600DD3F RID: 56639 RVA: 0x0032A590 File Offset: 0x00328790
+		// Token: 0x0600EA8A RID: 60042 RVA: 0x003556C8 File Offset: 0x003538C8
 		public static Teleporter GetRootAsTeleporter(ByteBuffer _bb, Teleporter obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DD40 RID: 56640 RVA: 0x0032A5AD File Offset: 0x003287AD
+		// Token: 0x0600EA8B RID: 60043 RVA: 0x003556E5 File Offset: 0x003538E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DD41 RID: 56641 RVA: 0x0032A5BC File Offset: 0x003287BC
+		// Token: 0x0600EA8C RID: 60044 RVA: 0x003556F4 File Offset: 0x003538F4
 		public Teleporter __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170039DF RID: 14815
-		// (get) Token: 0x0600DD42 RID: 56642 RVA: 0x0032A5CC File Offset: 0x003287CC
+		// Token: 0x17003D35 RID: 15669
+		// (get) Token: 0x0600EA8D RID: 60045 RVA: 0x00355704 File Offset: 0x00353904
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039E0 RID: 14816
-		// (get) Token: 0x0600DD43 RID: 56643 RVA: 0x0032A608 File Offset: 0x00328808
+		// Token: 0x17003D36 RID: 15670
+		// (get) Token: 0x0600EA8E RID: 60046 RVA: 0x00355740 File Offset: 0x00353940
 		public int MapId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039E1 RID: 14817
-		// (get) Token: 0x0600DD44 RID: 56644 RVA: 0x0032A644 File Offset: 0x00328844
+		// Token: 0x17003D37 RID: 15671
+		// (get) Token: 0x0600EA8F RID: 60047 RVA: 0x0035577C File Offset: 0x0035397C
 		public int ObjectId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039E2 RID: 14818
-		// (get) Token: 0x0600DD45 RID: 56645 RVA: 0x0032A680 File Offset: 0x00328880
+		// Token: 0x17003D38 RID: 15672
+		// (get) Token: 0x0600EA90 RID: 60048 RVA: 0x003557B8 File Offset: 0x003539B8
 		public int FogId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039E3 RID: 14819
-		// (get) Token: 0x0600DD46 RID: 56646 RVA: 0x0032A6C0 File Offset: 0x003288C0
+		// Token: 0x17003D39 RID: 15673
+		// (get) Token: 0x0600EA91 RID: 60049 RVA: 0x003557F8 File Offset: 0x003539F8
 		public int Type
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039E4 RID: 14820
-		// (get) Token: 0x0600DD47 RID: 56647 RVA: 0x0032A700 File Offset: 0x00328900
+		// Token: 0x17003D3A RID: 15674
+		// (get) Token: 0x0600EA92 RID: 60050 RVA: 0x00355838 File Offset: 0x00353A38
 		public int TeleportEntityConfigId
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039E5 RID: 14821
-		// (get) Token: 0x0600DD48 RID: 56648 RVA: 0x0032A740 File Offset: 0x00328940
+		// Token: 0x17003D3B RID: 15675
+		// (get) Token: 0x0600EA93 RID: 60051 RVA: 0x00355878 File Offset: 0x00353A78
 		public string Plot
 		{
 			get
@@ -152,20 +152,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DD49 RID: 56649 RVA: 0x0032A778 File Offset: 0x00328978
+		// Token: 0x0600EA94 RID: 60052 RVA: 0x003558B0 File Offset: 0x00353AB0
 		public Span<byte> GetPlotBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600DD4A RID: 56650 RVA: 0x0032A788 File Offset: 0x00328988
+		// Token: 0x0600EA95 RID: 60053 RVA: 0x003558C0 File Offset: 0x00353AC0
 		public byte[] GetPlotArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170039E6 RID: 14822
-		// (get) Token: 0x0600DD4B RID: 56651 RVA: 0x0032A7A0 File Offset: 0x003289A0
+		// Token: 0x17003D3C RID: 15676
+		// (get) Token: 0x0600EA96 RID: 60054 RVA: 0x003558D8 File Offset: 0x00353AD8
 		public int AfterNetworkAction
 		{
 			get
@@ -179,8 +179,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039E7 RID: 14823
-		// (get) Token: 0x0600DD4C RID: 56652 RVA: 0x0032A7E0 File Offset: 0x003289E0
+		// Token: 0x17003D3D RID: 15677
+		// (get) Token: 0x0600EA97 RID: 60055 RVA: 0x00355918 File Offset: 0x00353B18
 		public bool ShowWorldMap
 		{
 			get
@@ -190,7 +190,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005257 RID: 21079
+		// Token: 0x0400589A RID: 22682
 		private Table __p;
 	}
 }

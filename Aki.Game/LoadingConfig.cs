@@ -3,45 +3,45 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002070 RID: 8304
+// Token: 0x02001543 RID: 5443
 [NullableContext(1)]
 [Nullable(0)]
 public class LoadingConfig : ConfigBase
 {
-	// Token: 0x06010593 RID: 66963 RVA: 0x003FD3ED File Offset: 0x003FB5ED
+	// Token: 0x0600D9FB RID: 55803 RVA: 0x00409835 File Offset: 0x00407A35
 	[NullableContext(2)]
 	public IReadOnlyList<LoadingTipsText> GetLoadingTipsTextList(int levelAreaId)
 	{
 		return ConfigLoadingTipsTextByLevelAreaId.GetConfigList(levelAreaId, true);
 	}
 
-	// Token: 0x06010594 RID: 66964 RVA: 0x003FD3F6 File Offset: 0x003FB5F6
+	// Token: 0x0600D9FC RID: 55804 RVA: 0x0040983E File Offset: 0x00407A3E
 	public BroadcastImage? GetBroadcastImageConfig(int id)
 	{
 		return ConfigBroadcastImageById.GetConfig(id, true);
 	}
 
-	// Token: 0x06010595 RID: 66965 RVA: 0x003FD3FF File Offset: 0x003FB5FF
+	// Token: 0x0600D9FD RID: 55805 RVA: 0x00409847 File Offset: 0x00407A47
 	[NullableContext(2)]
 	public IReadOnlyList<LoadingLevelArea> GetLevelArea()
 	{
 		return ConfigLoadingLevelAreaAll.GetConfigList(true);
 	}
 
-	// Token: 0x06010596 RID: 66966 RVA: 0x003FD407 File Offset: 0x003FB607
+	// Token: 0x0600D9FE RID: 55806 RVA: 0x0040984F File Offset: 0x00407A4F
 	public LoadingLevelArea? GetLevelAreaById(int id)
 	{
 		return ConfigLoadingLevelAreaById.GetConfig(id, true);
 	}
 
-	// Token: 0x06010597 RID: 66967 RVA: 0x003FD410 File Offset: 0x003FB610
+	// Token: 0x0600D9FF RID: 55807 RVA: 0x00409858 File Offset: 0x00407A58
 	public int GetLoadingTipsTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("loadingtips_time").GetValueOrDefault(1);
 	}
 
-	// Token: 0x1700142D RID: 5165
-	// (get) Token: 0x06010598 RID: 66968 RVA: 0x003FD430 File Offset: 0x003FB630
+	// Token: 0x1700145A RID: 5210
+	// (get) Token: 0x0600DA00 RID: 55808 RVA: 0x00409878 File Offset: 0x00407A78
 	public static LoadingConfig Instance
 	{
 		get
@@ -50,7 +50,7 @@ public class LoadingConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06010599 RID: 66969 RVA: 0x003FD437 File Offset: 0x003FB637
+	// Token: 0x0600DA01 RID: 55809 RVA: 0x0040987F File Offset: 0x00407A7F
 	public static LoadingConfig GetOrCreateInstance()
 	{
 		if (LoadingConfig._Instance == null)
@@ -60,7 +60,7 @@ public class LoadingConfig : ConfigBase
 		return LoadingConfig._Instance;
 	}
 
-	// Token: 0x0601059A RID: 66970 RVA: 0x003FD44B File Offset: 0x003FB64B
+	// Token: 0x0600DA02 RID: 55810 RVA: 0x00409893 File Offset: 0x00407A93
 	public static bool CreateInstance()
 	{
 		if (LoadingConfig._Instance != null)
@@ -71,27 +71,27 @@ public class LoadingConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601059B RID: 66971 RVA: 0x003FD461 File Offset: 0x003FB661
+	// Token: 0x0600DA03 RID: 55811 RVA: 0x004098A9 File Offset: 0x00407AA9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601059C RID: 66972 RVA: 0x003FD463 File Offset: 0x003FB663
+	// Token: 0x0600DA04 RID: 55812 RVA: 0x004098AB File Offset: 0x00407AAB
 	public static void ResetStaticDefaultValue()
 	{
 		LoadingConfig._Instance = null;
 	}
 
-	// Token: 0x0601059D RID: 66973 RVA: 0x003FD46B File Offset: 0x003FB66B
+	// Token: 0x0600DA05 RID: 55813 RVA: 0x004098B3 File Offset: 0x00407AB3
 	static LoadingConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LoadingConfig.CreateStaticDefaultValue), new Action(LoadingConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040078C6 RID: 30918
+	// Token: 0x040079AF RID: 31151
 	public int LoadingConfigRequestTimeoutMs = 3000;
 
-	// Token: 0x040078C7 RID: 30919
+	// Token: 0x040079B0 RID: 31152
 	[Nullable(2)]
 	private static LoadingConfig _Instance;
 }

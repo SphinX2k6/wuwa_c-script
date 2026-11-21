@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072B5 RID: 29365
+	// Token: 0x02006437 RID: 25655
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CameraModel : ModelBase
 	{
-		// Token: 0x17009F0D RID: 40717
-		// (get) Token: 0x06048090 RID: 295056 RVA: 0x012775F0 File Offset: 0x012757F0
-		// (set) Token: 0x06048091 RID: 295057 RVA: 0x012775F8 File Offset: 0x012757F8
+		// Token: 0x17007674 RID: 30324
+		// (get) Token: 0x0603E481 RID: 255105 RVA: 0x01219909 File Offset: 0x01217B09
+		// (set) Token: 0x0603E482 RID: 255106 RVA: 0x01219911 File Offset: 0x01217B11
 		public CameraModelInstance MainModel { get; private set; }
 
-		// Token: 0x06048092 RID: 295058 RVA: 0x01277604 File Offset: 0x01275804
+		// Token: 0x0603E483 RID: 255107 RVA: 0x0121991C File Offset: 0x01217B1C
 		public CameraModelInstance CreateSeparateCameraModel(string cameraName)
 		{
 			CameraModelInstance separateCameraModel = this.GetSeparateCameraModel(cameraName);
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Camera
 			return cameraModelInstance;
 		}
 
-		// Token: 0x06048093 RID: 295059 RVA: 0x01277661 File Offset: 0x01275861
+		// Token: 0x0603E484 RID: 255108 RVA: 0x01219979 File Offset: 0x01217B79
 		[return: Nullable(2)]
 		public CameraModelInstance GetSeparateCameraModel(string cameraName = "MainCamera")
 		{
@@ -49,21 +49,34 @@ namespace CSharpScript.Game.Camera
 			return this.CameraModelInstanceMap.GetValueOrDefault(cameraName);
 		}
 
-		// Token: 0x06048094 RID: 295060 RVA: 0x01277683 File Offset: 0x01275883
+		// Token: 0x0603E485 RID: 255109 RVA: 0x0121999B File Offset: 0x01217B9B
 		public bool HasSeparateCamera()
 		{
 			return this.CameraModelInstanceMap.Count > 0;
 		}
 
-		// Token: 0x06048095 RID: 295061 RVA: 0x01277694 File Offset: 0x01275894
-		public void DestroySeparateCameraModel(string cameraName)
+		// Token: 0x0603E486 RID: 255110 RVA: 0x012199AC File Offset: 0x01217BAC
+		[return: Nullable(2)]
+		public CameraModelInstance DetachSeparateCameraModel(string cameraName)
 		{
 			if (cameraName == "MainCamera")
 			{
-				return;
+				return null;
 			}
-			CameraModelInstance cameraModelInstance;
-			if (!this.CameraModelInstanceMap.TryGetValue(cameraName, out cameraModelInstance))
+			CameraModelInstance separateCameraModel = this.GetSeparateCameraModel(cameraName);
+			if (separateCameraModel == null)
+			{
+				return null;
+			}
+			this.CameraModelInstanceMap.Remove(cameraName);
+			return separateCameraModel;
+		}
+
+		// Token: 0x0603E487 RID: 255111 RVA: 0x012199E4 File Offset: 0x01217BE4
+		public void DestroySeparateCameraModel(string cameraName)
+		{
+			CameraModelInstance cameraModelInstance = this.DetachSeparateCameraModel(cameraName);
+			if (cameraModelInstance == null)
 			{
 				return;
 			}
@@ -74,10 +87,9 @@ namespace CSharpScript.Game.Camera
 			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("cameraName", cameraName);
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			cameraModelInstance.Clear();
-			this.CameraModelInstanceMap.Remove(cameraName);
 		}
 
-		// Token: 0x06048096 RID: 295062 RVA: 0x012776FB File Offset: 0x012758FB
+		// Token: 0x0603E488 RID: 255112 RVA: 0x01219A2B File Offset: 0x01217C2B
 		protected override bool OnInit()
 		{
 			this.UpdateCameraParam();
@@ -85,7 +97,7 @@ namespace CSharpScript.Game.Camera
 			return this.MainModel.Init();
 		}
 
-		// Token: 0x06048097 RID: 295063 RVA: 0x01277720 File Offset: 0x01275920
+		// Token: 0x0603E489 RID: 255113 RVA: 0x01219A50 File Offset: 0x01217C50
 		public void ModelIterator(Action<CameraModelInstance> action)
 		{
 			action(this.MainModel);
@@ -99,7 +111,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048098 RID: 295064 RVA: 0x01277794 File Offset: 0x01275994
+		// Token: 0x0603E48A RID: 255114 RVA: 0x01219AC4 File Offset: 0x01217CC4
 		protected override bool OnClear()
 		{
 			this.ModelIterator(delegate(CameraModelInstance instance)
@@ -115,7 +127,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x06048099 RID: 295065 RVA: 0x012777E4 File Offset: 0x012759E4
+		// Token: 0x0603E48B RID: 255115 RVA: 0x01219B14 File Offset: 0x01217D14
 		private void UpdateCameraParam()
 		{
 			if (Info.Instance.IsMobilePlatform())
@@ -141,7 +153,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x0604809A RID: 295066 RVA: 0x0127785C File Offset: 0x01275A5C
+		// Token: 0x0603E48C RID: 255116 RVA: 0x01219B8C File Offset: 0x01217D8C
 		private unsafe void UpdateHuaWeiParam()
 		{
 			FVector2D physicalScreenResolution = KuroScreen.GetPhysicalScreenResolution();
@@ -166,17 +178,17 @@ namespace CSharpScript.Game.Camera
 			this.GameScreenHeight = (float)Math.Min(x4, y4);
 			this.PhysicalDensityDpi = Math.Max((float)KuroScreen.GetPhysicalScreenDensityDPI(), 160f);
 			this.RealPhysicalDensityDpi = this.PhysicalScreenWidth / this.DisplayScreenWidth * this.PhysicalDensityDpi;
-			if (MathUtils.Instance.IsNearlyEqual((double)this.PhysicalScreenWidthV2, 0.0, null) || MathUtils.Instance.IsNearlyEqual((double)this.PhysicalScreenWidthV2, 0.0, null))
+			if (MathUtils.Instance.IsNearlyEqual((double)this.PhysicalScreenWidthV2, 0.0, null) || MathUtils.Instance.IsNearlyEqual((double)this.PhysicalScreenHeightV2, 0.0, null))
 			{
 				this.PhysicalScreenWidthV2 = this.GameScreenWidth;
-				this.PhysicalScreenWidthV2 = this.GameScreenHeight;
+				this.PhysicalScreenHeightV2 = this.GameScreenHeight;
 			}
 			this.MobileDensityYawScale = this.PhysicalScreenWidthV2 / (this.GameScreenWidth * this.RealPhysicalDensityDpi);
-			this.MobileDensityPitchScale = this.PhysicalScreenWidthV2 / (this.GameScreenHeight * this.RealPhysicalDensityDpi);
+			this.MobileDensityPitchScale = this.PhysicalScreenHeightV2 / (this.GameScreenHeight * this.RealPhysicalDensityDpi);
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.Camera;
 			ELogAuthor author = ELogAuthor.LJM;
-			string message = "CameraInputController";
+			string message = "CameraModel HuaWeiParam";
 			<>y__InlineArray12<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray12<ValueTuple<string, object>>);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray12<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("GameScreenWidth", this.GameScreenWidth);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray12<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("GameScreenHeight", this.GameScreenHeight);
@@ -193,7 +205,7 @@ namespace CSharpScript.Game.Camera
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray12<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 12));
 		}
 
-		// Token: 0x0604809B RID: 295067 RVA: 0x01277BB4 File Offset: 0x01275DB4
+		// Token: 0x0603E48D RID: 255117 RVA: 0x01219EE4 File Offset: 0x012180E4
 		private unsafe void UpdateMobileParam()
 		{
 			FVector2D physicalScreenResolution = KuroScreen.GetPhysicalScreenResolution();
@@ -224,7 +236,7 @@ namespace CSharpScript.Game.Camera
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.Camera;
 			ELogAuthor author = ELogAuthor.LJM;
-			string message = "CameraInputController";
+			string message = "CameraModel MobileParam";
 			<>y__InlineArray7<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray7<ValueTuple<string, object>>);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("GameScreenWidth", this.GameScreenWidth);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("GameScreenHeight", this.GameScreenHeight);
@@ -236,7 +248,7 @@ namespace CSharpScript.Game.Camera
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 7));
 		}
 
-		// Token: 0x0604809C RID: 295068 RVA: 0x01277E04 File Offset: 0x01276004
+		// Token: 0x0603E48E RID: 255118 RVA: 0x0121A134 File Offset: 0x01218334
 		private unsafe void UpdateCloudGameParam()
 		{
 			int deviceScreenWidth = CloudGameManager.Instance.DeviceScreenWidth;
@@ -270,8 +282,8 @@ namespace CSharpScript.Game.Camera
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 7));
 		}
 
-		// Token: 0x17009F0E RID: 40718
-		// (get) Token: 0x0604809D RID: 295069 RVA: 0x0127802F File Offset: 0x0127622F
+		// Token: 0x17007675 RID: 30325
+		// (get) Token: 0x0603E48F RID: 255119 RVA: 0x0121A35F File Offset: 0x0121855F
 		public static CameraModel Instance
 		{
 			get
@@ -280,7 +292,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x0604809E RID: 295070 RVA: 0x01278036 File Offset: 0x01276236
+		// Token: 0x0603E490 RID: 255120 RVA: 0x0121A366 File Offset: 0x01218566
 		public static CameraModel GetOrCreateInstance()
 		{
 			if (CameraModel._Instance == null)
@@ -290,7 +302,7 @@ namespace CSharpScript.Game.Camera
 			return CameraModel._Instance;
 		}
 
-		// Token: 0x0604809F RID: 295071 RVA: 0x0127804A File Offset: 0x0127624A
+		// Token: 0x0603E491 RID: 255121 RVA: 0x0121A37A File Offset: 0x0121857A
 		public static bool CreateInstance()
 		{
 			if (CameraModel._Instance != null)
@@ -301,75 +313,75 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x060480A0 RID: 295072 RVA: 0x01278060 File Offset: 0x01276260
+		// Token: 0x0603E492 RID: 255122 RVA: 0x0121A390 File Offset: 0x01218590
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060480A1 RID: 295073 RVA: 0x01278062 File Offset: 0x01276262
+		// Token: 0x0603E493 RID: 255123 RVA: 0x0121A392 File Offset: 0x01218592
 		public static void ResetStaticDefaultValue()
 		{
 			CameraModel._Instance = null;
 		}
 
-		// Token: 0x060480A2 RID: 295074 RVA: 0x0127806A File Offset: 0x0127626A
+		// Token: 0x0603E494 RID: 255124 RVA: 0x0121A39A File Offset: 0x0121859A
 		static CameraModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CameraModel.CreateStaticDefaultValue), new Action(CameraModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025FC7 RID: 155591
+		// Token: 0x040212A7 RID: 135847
 		public const string MAIN_CAMERA = "MainCamera";
 
-		// Token: 0x04025FC8 RID: 155592
+		// Token: 0x040212A8 RID: 135848
 		public const float CAMER_DEFAULT_NEAR_CLIP = 10f;
 
-		// Token: 0x04025FC9 RID: 155593
+		// Token: 0x040212A9 RID: 135849
 		internal const int MIN_PHYSICAL_DENSITY_DPI = 160;
 
-		// Token: 0x04025FCA RID: 155594
+		// Token: 0x040212AA RID: 135850
 		internal const int DEFAULT_DPI = 180;
 
-		// Token: 0x04025FCC RID: 155596
+		// Token: 0x040212AC RID: 135852
 		private readonly Dictionary<string, CameraModelInstance> CameraModelInstanceMap = new Dictionary<string, CameraModelInstance>();
 
-		// Token: 0x04025FCD RID: 155597
+		// Token: 0x040212AD RID: 135853
 		private float GameScreenWidth;
 
-		// Token: 0x04025FCE RID: 155598
+		// Token: 0x040212AE RID: 135854
 		private float GameScreenHeight;
 
-		// Token: 0x04025FCF RID: 155599
+		// Token: 0x040212AF RID: 135855
 		private float PhysicalScreenWidth;
 
-		// Token: 0x04025FD0 RID: 155600
+		// Token: 0x040212B0 RID: 135856
 		private float PhysicalScreenHeight;
 
-		// Token: 0x04025FD1 RID: 155601
+		// Token: 0x040212B1 RID: 135857
 		private float PhysicalScreenWidthV2;
 
-		// Token: 0x04025FD2 RID: 155602
+		// Token: 0x040212B2 RID: 135858
 		private float PhysicalScreenHeightV2;
 
-		// Token: 0x04025FD3 RID: 155603
+		// Token: 0x040212B3 RID: 135859
 		private float DisplayScreenWidth;
 
-		// Token: 0x04025FD4 RID: 155604
+		// Token: 0x040212B4 RID: 135860
 		private float DisplayScreenHeight;
 
-		// Token: 0x04025FD5 RID: 155605
+		// Token: 0x040212B5 RID: 135861
 		private float PhysicalDensityDpi;
 
-		// Token: 0x04025FD6 RID: 155606
+		// Token: 0x040212B6 RID: 135862
 		private float RealPhysicalDensityDpi;
 
-		// Token: 0x04025FD7 RID: 155607
+		// Token: 0x040212B7 RID: 135863
 		public float MobileDensityYawScale;
 
-		// Token: 0x04025FD8 RID: 155608
+		// Token: 0x040212B8 RID: 135864
 		public float MobileDensityPitchScale;
 
-		// Token: 0x04025FD9 RID: 155609
+		// Token: 0x040212B9 RID: 135865
 		[Nullable(2)]
 		private static CameraModel _Instance;
 	}

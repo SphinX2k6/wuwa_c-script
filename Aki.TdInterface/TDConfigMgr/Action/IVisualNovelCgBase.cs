@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200205F RID: 8287
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022A8 RID: 8872
 	public class IVisualNovelCgBase
 	{
-		// Token: 0x0600B612 RID: 46610 RVA: 0x001A6540 File Offset: 0x001A4740
+		// Token: 0x0600C138 RID: 49464 RVA: 0x001BCCAC File Offset: 0x001BAEAC
 		private IVisualNovelCgBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B613 RID: 46611 RVA: 0x001A6578 File Offset: 0x001A4778
+		// Token: 0x0600C139 RID: 49465 RVA: 0x001BCCE4 File Offset: 0x001BAEE4
 		public static IVisualNovelCgBase Create([Nullable(2)] IVisualNovelCgBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B614 RID: 46612 RVA: 0x001A658B File Offset: 0x001A478B
+		// Token: 0x0600C13A RID: 49466 RVA: 0x001BCCF7 File Offset: 0x001BAEF7
 		public static IVisualNovelCgBase CreateFromSetValue([Nullable(2)] IVisualNovelCgBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B615 RID: 46613 RVA: 0x001A659E File Offset: 0x001A479E
+		// Token: 0x0600C13B RID: 49467 RVA: 0x001BCD0A File Offset: 0x001BAF0A
 		public IVisualNovelCgBase_SetValue ToSetValue()
 		{
 			return new IVisualNovelCgBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037D3 RID: 14291
-		// (get) Token: 0x0600B616 RID: 46614 RVA: 0x001A65B1 File Offset: 0x001A47B1
-		// (set) Token: 0x0600B617 RID: 46615 RVA: 0x001A65DC File Offset: 0x001A47DC
+		// Token: 0x17003AB0 RID: 15024
+		// (get) Token: 0x0600C13C RID: 49468 RVA: 0x001BCD1D File Offset: 0x001BAF1D
+		// (set) Token: 0x0600C13D RID: 49469 RVA: 0x001BCD48 File Offset: 0x001BAF48
 		public virtual EVisualNovelCgType Type
 		{
 			get
@@ -72,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				if (this.PocoInterface == null)
 				{
-					return EVisualNovelCgType.LoadSpine;
+					return EVisualNovelCgType.LoadPrefab;
 				}
 				return this.PocoInterface.Type;
 			}
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D6E RID: 28014
+		// Token: 0x04007377 RID: 29559
 		[Nullable(2)]
 		protected IVisualNovelCgBase FbInstance;
 
-		// Token: 0x04006D6F RID: 28015
+		// Token: 0x04007378 RID: 29560
 		[Nullable(2)]
 		protected IVisualNovelCgBase_SetValue PocoInterface;
 	}

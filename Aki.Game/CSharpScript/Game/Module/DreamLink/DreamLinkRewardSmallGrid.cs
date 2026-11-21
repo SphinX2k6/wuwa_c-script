@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.Item;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005ABE RID: 23230
+	// Token: 0x02004A9A RID: 19098
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.Module.DreamLink
 	})]
 	public class DreamLinkRewardSmallGrid : LoopScrollSmallItemGrid<IDreamLinkRewardGridData>
 	{
-		// Token: 0x0603AD63 RID: 240995 RVA: 0x00E055C4 File Offset: 0x00E037C4
+		// Token: 0x0602FCAF RID: 195759 RVA: 0x00D55B8C File Offset: 0x00D53D8C
 		protected override void OnRefresh(IDreamLinkRewardGridData data, bool isSelected, int gridIndex)
 		{
 			this.RewardData = data;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.SetReceivableVisible(data.Status == EActivityTaskState.FinishedAndUnclaimed);
 		}
 
-		// Token: 0x0603AD64 RID: 240996 RVA: 0x00E05668 File Offset: 0x00E03868
+		// Token: 0x0602FCB0 RID: 195760 RVA: 0x00D55C30 File Offset: 0x00D53E30
 		protected override bool OnCanExecuteChange()
 		{
 			return false;
 		}
 
-		// Token: 0x0603AD65 RID: 240997 RVA: 0x00E0566B File Offset: 0x00E0386B
+		// Token: 0x0602FCB1 RID: 195761 RVA: 0x00D55C33 File Offset: 0x00D53E33
 		protected override void OnExtendToggleClicked()
 		{
 			if (this.RewardData.Status == EActivityTaskState.FinishedAndUnclaimed)
@@ -55,14 +55,14 @@ namespace CSharpScript.Game.Module.DreamLink
 				this.RewardData.ReceiveDelegate();
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null, false);
 		}
 
-		// Token: 0x0401EB3B RID: 125755
+		// Token: 0x040195E2 RID: 103906
 		[Nullable(2)]
 		private IDreamLinkRewardGridData RewardData;
 
-		// Token: 0x0401EB3C RID: 125756
+		// Token: 0x040195E3 RID: 103907
 		private int ConfigId;
 	}
 }

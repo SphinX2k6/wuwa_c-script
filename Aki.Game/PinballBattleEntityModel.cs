@@ -3,109 +3,109 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02000EA7 RID: 3751
+// Token: 0x0200035C RID: 860
 [NullableContext(2)]
 [Nullable(0)]
 public class PinballBattleEntityModel : PinballBattleEntityBaseModel, IPinballBattleCombatInfo, IStaticVariableResetter
 {
-	// Token: 0x170006D6 RID: 1750
-	// (get) Token: 0x06005C76 RID: 23670 RVA: 0x00110684 File Offset: 0x0010E884
-	// (set) Token: 0x06005C77 RID: 23671 RVA: 0x0011068C File Offset: 0x0010E88C
+	// Token: 0x170006FA RID: 1786
+	// (get) Token: 0x0600300D RID: 12301 RVA: 0x00118320 File Offset: 0x00116520
+	// (set) Token: 0x0600300E RID: 12302 RVA: 0x00118328 File Offset: 0x00116528
 	public EPinballBattleEntityType EntityType { get; set; }
 
-	// Token: 0x170006D7 RID: 1751
-	// (get) Token: 0x06005C78 RID: 23672 RVA: 0x00110695 File Offset: 0x0010E895
-	// (set) Token: 0x06005C79 RID: 23673 RVA: 0x0011069D File Offset: 0x0010E89D
+	// Token: 0x170006FB RID: 1787
+	// (get) Token: 0x0600300F RID: 12303 RVA: 0x00118331 File Offset: 0x00116531
+	// (set) Token: 0x06003010 RID: 12304 RVA: 0x00118339 File Offset: 0x00116539
 	public int Uid { get; set; }
 
-	// Token: 0x170006D8 RID: 1752
-	// (get) Token: 0x06005C7A RID: 23674 RVA: 0x001106A6 File Offset: 0x0010E8A6
-	// (set) Token: 0x06005C7B RID: 23675 RVA: 0x001106AE File Offset: 0x0010E8AE
+	// Token: 0x170006FC RID: 1788
+	// (get) Token: 0x06003011 RID: 12305 RVA: 0x00118342 File Offset: 0x00116542
+	// (set) Token: 0x06003012 RID: 12306 RVA: 0x0011834A File Offset: 0x0011654A
 	public int OwnerId { get; set; }
 
-	// Token: 0x170006D9 RID: 1753
-	// (get) Token: 0x06005C7C RID: 23676 RVA: 0x001106B7 File Offset: 0x0010E8B7
-	// (set) Token: 0x06005C7D RID: 23677 RVA: 0x001106BF File Offset: 0x0010E8BF
+	// Token: 0x170006FD RID: 1789
+	// (get) Token: 0x06003013 RID: 12307 RVA: 0x00118353 File Offset: 0x00116553
+	// (set) Token: 0x06003014 RID: 12308 RVA: 0x0011835B File Offset: 0x0011655B
 	public int TemplateId { get; set; }
 
-	// Token: 0x170006DA RID: 1754
-	// (get) Token: 0x06005C7E RID: 23678 RVA: 0x001106C8 File Offset: 0x0010E8C8
-	// (set) Token: 0x06005C7F RID: 23679 RVA: 0x001106D0 File Offset: 0x0010E8D0
+	// Token: 0x170006FE RID: 1790
+	// (get) Token: 0x06003015 RID: 12309 RVA: 0x00118364 File Offset: 0x00116564
+	// (set) Token: 0x06003016 RID: 12310 RVA: 0x0011836C File Offset: 0x0011656C
 	public int CombatId { get; set; }
 
-	// Token: 0x170006DB RID: 1755
-	// (get) Token: 0x06005C80 RID: 23680 RVA: 0x001106D9 File Offset: 0x0010E8D9
-	// (set) Token: 0x06005C81 RID: 23681 RVA: 0x001106E1 File Offset: 0x0010E8E1
+	// Token: 0x170006FF RID: 1791
+	// (get) Token: 0x06003017 RID: 12311 RVA: 0x00118375 File Offset: 0x00116575
+	// (set) Token: 0x06003018 RID: 12312 RVA: 0x0011837D File Offset: 0x0011657D
 	public int SubTypeId { get; set; }
 
-	// Token: 0x170006DC RID: 1756
-	// (get) Token: 0x06005C82 RID: 23682 RVA: 0x001106EA File Offset: 0x0010E8EA
-	// (set) Token: 0x06005C83 RID: 23683 RVA: 0x001106F2 File Offset: 0x0010E8F2
+	// Token: 0x17000700 RID: 1792
+	// (get) Token: 0x06003019 RID: 12313 RVA: 0x00118386 File Offset: 0x00116586
+	// (set) Token: 0x0600301A RID: 12314 RVA: 0x0011838E File Offset: 0x0011658E
 	public string PrefabPath { get; set; }
 
-	// Token: 0x170006DD RID: 1757
-	// (get) Token: 0x06005C84 RID: 23684 RVA: 0x001106FB File Offset: 0x0010E8FB
-	// (set) Token: 0x06005C85 RID: 23685 RVA: 0x00110703 File Offset: 0x0010E903
+	// Token: 0x17000701 RID: 1793
+	// (get) Token: 0x0600301B RID: 12315 RVA: 0x00118397 File Offset: 0x00116597
+	// (set) Token: 0x0600301C RID: 12316 RVA: 0x0011839F File Offset: 0x0011659F
 	public string AssetPath { get; set; }
 
-	// Token: 0x170006DE RID: 1758
-	// (get) Token: 0x06005C86 RID: 23686 RVA: 0x0011070C File Offset: 0x0010E90C
-	// (set) Token: 0x06005C87 RID: 23687 RVA: 0x00110714 File Offset: 0x0010E914
+	// Token: 0x17000702 RID: 1794
+	// (get) Token: 0x0600301D RID: 12317 RVA: 0x001183A8 File Offset: 0x001165A8
+	// (set) Token: 0x0600301E RID: 12318 RVA: 0x001183B0 File Offset: 0x001165B0
 	public int PropertyId { get; set; }
 
-	// Token: 0x170006DF RID: 1759
-	// (get) Token: 0x06005C88 RID: 23688 RVA: 0x0011071D File Offset: 0x0010E91D
-	// (set) Token: 0x06005C89 RID: 23689 RVA: 0x00110725 File Offset: 0x0010E925
+	// Token: 0x17000703 RID: 1795
+	// (get) Token: 0x0600301F RID: 12319 RVA: 0x001183B9 File Offset: 0x001165B9
+	// (set) Token: 0x06003020 RID: 12320 RVA: 0x001183C1 File Offset: 0x001165C1
 	public int? SplineId { get; set; }
 
-	// Token: 0x170006E0 RID: 1760
-	// (get) Token: 0x06005C8A RID: 23690 RVA: 0x0011072E File Offset: 0x0010E92E
-	// (set) Token: 0x06005C8B RID: 23691 RVA: 0x00110736 File Offset: 0x0010E936
+	// Token: 0x17000704 RID: 1796
+	// (get) Token: 0x06003021 RID: 12321 RVA: 0x001183CA File Offset: 0x001165CA
+	// (set) Token: 0x06003022 RID: 12322 RVA: 0x001183D2 File Offset: 0x001165D2
 	public Dictionary<int, int> BuffIdLayers { get; set; }
 
-	// Token: 0x170006E1 RID: 1761
-	// (get) Token: 0x06005C8C RID: 23692 RVA: 0x0011073F File Offset: 0x0010E93F
-	// (set) Token: 0x06005C8D RID: 23693 RVA: 0x00110747 File Offset: 0x0010E947
+	// Token: 0x17000705 RID: 1797
+	// (get) Token: 0x06003023 RID: 12323 RVA: 0x001183DB File Offset: 0x001165DB
+	// (set) Token: 0x06003024 RID: 12324 RVA: 0x001183E3 File Offset: 0x001165E3
 	public Dictionary<int, int> AttributeMap { get; set; }
 
-	// Token: 0x170006E2 RID: 1762
-	// (get) Token: 0x06005C8E RID: 23694 RVA: 0x00110750 File Offset: 0x0010E950
-	// (set) Token: 0x06005C8F RID: 23695 RVA: 0x00110758 File Offset: 0x0010E958
+	// Token: 0x17000706 RID: 1798
+	// (get) Token: 0x06003025 RID: 12325 RVA: 0x001183EC File Offset: 0x001165EC
+	// (set) Token: 0x06003026 RID: 12326 RVA: 0x001183F4 File Offset: 0x001165F4
 	[Nullable(1)]
 	public global::Vector Position { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x170006E3 RID: 1763
-	// (get) Token: 0x06005C90 RID: 23696 RVA: 0x00110761 File Offset: 0x0010E961
-	// (set) Token: 0x06005C91 RID: 23697 RVA: 0x00110769 File Offset: 0x0010E969
+	// Token: 0x17000707 RID: 1799
+	// (get) Token: 0x06003027 RID: 12327 RVA: 0x001183FD File Offset: 0x001165FD
+	// (set) Token: 0x06003028 RID: 12328 RVA: 0x00118405 File Offset: 0x00116605
 	[Nullable(1)]
 	public global::Rotator Rotation { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x06005C92 RID: 23698 RVA: 0x00110774 File Offset: 0x0010E974
+	// Token: 0x06003029 RID: 12329 RVA: 0x00118410 File Offset: 0x00116610
 	public PinballBattleEntityModel()
 	{
 		this.Position = global::Vector.Create(0.0, 0.0, 0.0);
 		this.Rotation = global::Rotator.Create(0f, 0f, 0f);
 	}
 
-	// Token: 0x06005C93 RID: 23699 RVA: 0x001107C7 File Offset: 0x0010E9C7
+	// Token: 0x0600302A RID: 12330 RVA: 0x00118463 File Offset: 0x00116663
 	static PinballBattleEntityModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PinballBattleEntityModel.CreateStaticDefaultValue), new Action(PinballBattleEntityModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06005C94 RID: 23700 RVA: 0x001107E6 File Offset: 0x0010E9E6
+	// Token: 0x0600302B RID: 12331 RVA: 0x00118482 File Offset: 0x00116682
 	public static void CreateStaticDefaultValue()
 	{
 		PinballBattleEntityModel.EntityPool = new Pool<PinballBattleEntityModel>(100, () => new PinballBattleEntityModel(), null);
 	}
 
-	// Token: 0x06005C95 RID: 23701 RVA: 0x00110814 File Offset: 0x0010EA14
+	// Token: 0x0600302C RID: 12332 RVA: 0x001184B0 File Offset: 0x001166B0
 	public static void ResetStaticDefaultValue()
 	{
 		PinballBattleEntityModel.EntityPool = null;
 	}
 
-	// Token: 0x06005C96 RID: 23702 RVA: 0x0011081C File Offset: 0x0010EA1C
+	// Token: 0x0600302D RID: 12333 RVA: 0x001184B8 File Offset: 0x001166B8
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public new static IPinballBattleCombatInfo BuildModel(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
@@ -126,13 +126,13 @@ public class PinballBattleEntityModel : PinballBattleEntityBaseModel, IPinballBa
 		return pinballBattleEntityModel;
 	}
 
-	// Token: 0x06005C97 RID: 23703 RVA: 0x0011085D File Offset: 0x0010EA5D
+	// Token: 0x0600302E RID: 12334 RVA: 0x001184F9 File Offset: 0x001166F9
 	public new static void Clear()
 	{
 		PinballBattleEntityModel.EntityPool.Clear();
 	}
 
-	// Token: 0x06005C98 RID: 23704 RVA: 0x0011086C File Offset: 0x0010EA6C
+	// Token: 0x0600302F RID: 12335 RVA: 0x00118508 File Offset: 0x00116708
 	[NullableContext(1)]
 	protected virtual void InitFromProto(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 	{
@@ -160,7 +160,7 @@ public class PinballBattleEntityModel : PinballBattleEntityBaseModel, IPinballBa
 		}
 	}
 
-	// Token: 0x06005C99 RID: 23705 RVA: 0x0011099C File Offset: 0x0010EB9C
+	// Token: 0x06003030 RID: 12336 RVA: 0x00118638 File Offset: 0x00116838
 	[NullableContext(1)]
 	public virtual void Update(IPinballBattleCombatInfo other)
 	{
@@ -179,13 +179,13 @@ public class PinballBattleEntityModel : PinballBattleEntityBaseModel, IPinballBa
 		this.Rotation.Set(other.Rotation.Pitch, other.Rotation.Yaw, other.Rotation.Roll);
 	}
 
-	// Token: 0x06005C9A RID: 23706 RVA: 0x00110A85 File Offset: 0x0010EC85
+	// Token: 0x06003031 RID: 12337 RVA: 0x00118721 File Offset: 0x00116921
 	public bool IsValid()
 	{
 		return this.Uid > 0;
 	}
 
-	// Token: 0x06005C9B RID: 23707 RVA: 0x00110A90 File Offset: 0x0010EC90
+	// Token: 0x06003032 RID: 12338 RVA: 0x0011872C File Offset: 0x0011692C
 	public virtual void Reset()
 	{
 		this.Uid = 0;
@@ -203,14 +203,14 @@ public class PinballBattleEntityModel : PinballBattleEntityBaseModel, IPinballBa
 		this.Rotation.Set(0f, 0f, 0f);
 	}
 
-	// Token: 0x06005C9C RID: 23708 RVA: 0x00110B32 File Offset: 0x0010ED32
+	// Token: 0x06003033 RID: 12339 RVA: 0x001187CE File Offset: 0x001169CE
 	public virtual void Release()
 	{
 		this.Reset();
 		PinballBattleEntityModel.EntityPool.Put(this);
 	}
 
-	// Token: 0x06005C9D RID: 23709 RVA: 0x00110B48 File Offset: 0x0010ED48
+	// Token: 0x06003034 RID: 12340 RVA: 0x001187E4 File Offset: 0x001169E4
 	[NullableContext(1)]
 	public virtual IPinballBattleCombatInfo Clone()
 	{
@@ -226,7 +226,7 @@ public class PinballBattleEntityModel : PinballBattleEntityBaseModel, IPinballBa
 		return pinballBattleEntityModel;
 	}
 
-	// Token: 0x04002A43 RID: 10819
+	// Token: 0x04002ADE RID: 10974
 	[Nullable(new byte[]
 	{
 		2,

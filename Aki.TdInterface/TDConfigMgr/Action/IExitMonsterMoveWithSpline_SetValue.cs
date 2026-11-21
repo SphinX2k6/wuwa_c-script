@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A26 RID: 6694
+	// Token: 0x02001BBB RID: 7099
 	public class IExitMonsterMoveWithSpline_SetValue
 	{
-		// Token: 0x040058B7 RID: 22711
+		// Token: 0x04005D1C RID: 23836
 		public EExecBattleActionType Type;
 
-		// Token: 0x040058B8 RID: 22712
-		[Nullable(1)]
+		// Token: 0x04005D1D RID: 23837
 		public List<int> TargetEntities;
 	}
 }

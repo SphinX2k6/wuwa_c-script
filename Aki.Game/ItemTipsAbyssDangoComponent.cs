@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A6A RID: 6762
+// Token: 0x02000F29 RID: 3881
 [NullableContext(1)]
 [Nullable(0)]
 public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 {
-	// Token: 0x0600C716 RID: 50966 RVA: 0x002D4F78 File Offset: 0x002D3178
+	// Token: 0x06009B26 RID: 39718 RVA: 0x002E0070 File Offset: 0x002DE270
 	public ItemTipsAbyssDangoComponent(UUIItem rootUiItem) : base(rootUiItem)
 	{
 		base.CreateThenShowByResourceIdAsync("UiItem_TipsChipInfo", rootUiItem, false);
 	}
 
-	// Token: 0x0600C717 RID: 50967 RVA: 0x002D4FE4 File Offset: 0x002D31E4
+	// Token: 0x06009B27 RID: 39719 RVA: 0x002E00DC File Offset: 0x002DE2DC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -62,25 +61,25 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C718 RID: 50968 RVA: 0x002D5201 File Offset: 0x002D3401
+	// Token: 0x06009B28 RID: 39720 RVA: 0x002E02F9 File Offset: 0x002DE4F9
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnItemFuncValueChange, new Action<int>(this.RefreshFuncState));
 	}
 
-	// Token: 0x0600C719 RID: 50969 RVA: 0x002D521F File Offset: 0x002D341F
+	// Token: 0x06009B29 RID: 39721 RVA: 0x002E0317 File Offset: 0x002DE517
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.OnItemFuncValueChange, new Action<int>(this.RefreshFuncState));
 	}
 
-	// Token: 0x0600C71A RID: 50970 RVA: 0x002D523D File Offset: 0x002D343D
+	// Token: 0x06009B2A RID: 39722 RVA: 0x002E0335 File Offset: 0x002DE535
 	private void RefreshFuncState(int _)
 	{
 		this.RefreshView(this.CurrentData);
 	}
 
-	// Token: 0x0600C71B RID: 50971 RVA: 0x002D524C File Offset: 0x002D344C
+	// Token: 0x06009B2B RID: 39723 RVA: 0x002E0344 File Offset: 0x002DE544
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ItemTipsAbyssDangoComponent.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -91,14 +90,14 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C71C RID: 50972 RVA: 0x002D5290 File Offset: 0x002D3490
+	// Token: 0x06009B2C RID: 39724 RVA: 0x002E0388 File Offset: 0x002DE588
 	protected override void OnStart()
 	{
 		this.AttributeScroller = new GenericLayout<DangoAbyssTipsAttributeItem, AttrListScrollData>(base.GetVerticalLayout(1), this.CreateItem, base.GetItem(2).GetOwner() as AUIBaseActor, false, true);
 		this.TagScroller = new GenericLayout<DangoAbyssTagItem, DangoAbyssDefine.DangoAbyssTagData>(base.GetVerticalLayout(3), this.CreateTagItem, base.GetItem(4).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x0600C71D RID: 50973 RVA: 0x002D52F4 File Offset: 0x002D34F4
+	// Token: 0x06009B2D RID: 39725 RVA: 0x002E03EC File Offset: 0x002DE5EC
 	public override void Refresh(ItemTipsData sourceData)
 	{
 		TipsAbyssDangoData data = (TipsAbyssDangoData)sourceData;
@@ -114,14 +113,14 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		action();
 	}
 
-	// Token: 0x0600C71E RID: 50974 RVA: 0x002D5348 File Offset: 0x002D3548
+	// Token: 0x06009B2E RID: 39726 RVA: 0x002E0440 File Offset: 0x002DE640
 	private void RefreshView(TipsAbyssDangoData data)
 	{
 		this.CurrentData = data;
 		AttrListScrollData[] pluginShowAttributeList = DangoAbyssModel.Instance.GetPluginShowAttributeList(data.ConfigId);
-		this.RefreshAttribute(pluginShowAttributeList.ToList<AttrListScrollData>());
+		this.RefreshAttribute(pluginShowAttributeList);
 		DangoAbyssDefine.DangoAbyssTagData[] pluginShowTagDataList = DangoAbyssModel.Instance.GetPluginShowTagDataList(data.ConfigId);
-		this.RefreshTag(pluginShowTagDataList.ToList<DangoAbyssDefine.DangoAbyssTagData>());
+		this.RefreshTag(pluginShowTagDataList);
 		string itemBgDesc = DangoAbyssConfig.Instance.GetItemBgDesc(data.ConfigId);
 		base.GetText(6).SetText(itemBgDesc, true);
 		this.RefreshState(data);
@@ -134,7 +133,7 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		this.RefreshType(data);
 	}
 
-	// Token: 0x0600C71F RID: 50975 RVA: 0x002D53F0 File Offset: 0x002D35F0
+	// Token: 0x06009B2F RID: 39727 RVA: 0x002E04DC File Offset: 0x002DE6DC
 	private void RefreshState(TipsAbyssDangoData data)
 	{
 		this.StateConfirm = DangoAbyssDefine.EAbyssItemTipsState.None;
@@ -157,7 +156,7 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		instance.Info(module, author, defaultInterpolatedStringHandler.ToStringAndClear(), default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600C720 RID: 50976 RVA: 0x002D5494 File Offset: 0x002D3694
+	// Token: 0x06009B30 RID: 39728 RVA: 0x002E0580 File Offset: 0x002DE780
 	private void RefreshIcon(TipsAbyssDangoData data)
 	{
 		DangoPluginIconInfo dangoPluginIconInfo = new DangoPluginIconInfo
@@ -172,7 +171,7 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		pluginIconItem.RefreshByInfo(dangoPluginIconInfo);
 	}
 
-	// Token: 0x0600C721 RID: 50977 RVA: 0x002D54C4 File Offset: 0x002D36C4
+	// Token: 0x06009B31 RID: 39729 RVA: 0x002E05B0 File Offset: 0x002DE7B0
 	private void RefreshLockToggle(TipsAbyssDangoData data)
 	{
 		ItemConfig dangoItemConfig = DangoAbyssModel.Instance.GetDangoItemConfig(data.ConfigId);
@@ -202,7 +201,7 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600C722 RID: 50978 RVA: 0x002D555C File Offset: 0x002D375C
+	// Token: 0x06009B32 RID: 39730 RVA: 0x002E0648 File Offset: 0x002DE848
 	private void RefreshConfirmBtn(TipsAbyssDangoData data)
 	{
 		this.ConfirmBtnItem.SetUiActive(true);
@@ -232,7 +231,7 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600C723 RID: 50979 RVA: 0x002D5634 File Offset: 0x002D3834
+	// Token: 0x06009B33 RID: 39731 RVA: 0x002E0720 File Offset: 0x002DE920
 	private void RefreshInActiveRedItem(TipsAbyssDangoData data)
 	{
 		this.InActiveRedItem.SetUiActive(true);
@@ -261,19 +260,19 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		this.InActiveRedItem.SetText("Text_DangoEquipRepeat_Text", Array.Empty<object>());
 	}
 
-	// Token: 0x0600C724 RID: 50980 RVA: 0x002D56F6 File Offset: 0x002D38F6
-	private void RefreshAttribute(List<AttrListScrollData> data)
+	// Token: 0x06009B34 RID: 39732 RVA: 0x002E07E2 File Offset: 0x002DE9E2
+	private void RefreshAttribute(IReadOnlyList<AttrListScrollData> data)
 	{
 		this.AttributeScroller.RefreshByData(data, null, false);
 	}
 
-	// Token: 0x0600C725 RID: 50981 RVA: 0x002D5706 File Offset: 0x002D3906
-	private void RefreshTag(List<DangoAbyssDefine.DangoAbyssTagData> data)
+	// Token: 0x06009B35 RID: 39733 RVA: 0x002E07F2 File Offset: 0x002DE9F2
+	private void RefreshTag(IReadOnlyList<DangoAbyssDefine.DangoAbyssTagData> data)
 	{
 		this.TagScroller.RefreshByData(data, null, false);
 	}
 
-	// Token: 0x0600C726 RID: 50982 RVA: 0x002D5718 File Offset: 0x002D3918
+	// Token: 0x06009B36 RID: 39734 RVA: 0x002E0804 File Offset: 0x002DEA04
 	private void RefreshName(TipsAbyssDangoData data)
 	{
 		UUIText text = base.GetText(10);
@@ -282,7 +281,7 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		LguiUtil.Instance.SetLocalTextNew(text, data.Title, Array.Empty<object>());
 	}
 
-	// Token: 0x0600C727 RID: 50983 RVA: 0x002D5774 File Offset: 0x002D3974
+	// Token: 0x06009B37 RID: 39735 RVA: 0x002E0860 File Offset: 0x002DEA60
 	private void RefreshQuality(TipsAbyssDangoData data)
 	{
 		UUINiagara uiNiagara = base.GetUiNiagara(13);
@@ -296,7 +295,7 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		base.SetTextureByPath(tipsQualityTexturePath, texture, null, null);
 	}
 
-	// Token: 0x0600C728 RID: 50984 RVA: 0x002D57E8 File Offset: 0x002D39E8
+	// Token: 0x06009B38 RID: 39736 RVA: 0x002E08D4 File Offset: 0x002DEAD4
 	private void RefreshType(TipsAbyssDangoData data)
 	{
 		int slotType = DangoAbyssConfig.Instance.GetDangoItemById(data.ConfigId).Value.SlotType;
@@ -307,7 +306,7 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600C729 RID: 50985 RVA: 0x002D5840 File Offset: 0x002D3A40
+	// Token: 0x06009B39 RID: 39737 RVA: 0x002E092C File Offset: 0x002DEB2C
 	private void OnConfirmBtnClick(int _)
 	{
 		if (this.StateConfirm == DangoAbyssDefine.EAbyssItemTipsState.DiffDango)
@@ -320,7 +319,7 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		this.OnPluginItemEquipConfirm();
 	}
 
-	// Token: 0x0600C72A RID: 50986 RVA: 0x002D588C File Offset: 0x002D3A8C
+	// Token: 0x06009B3A RID: 39738 RVA: 0x002E0978 File Offset: 0x002DEB78
 	private void OnPluginItemEquipConfirm()
 	{
 		if (this.CurrentData == null)
@@ -337,7 +336,7 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		DangoAbyssActivityController.Instance.RequestPutPluginOnDango(this.CurrentData.DangoId, dangoAbyssItemNewEquip, this.StateConfirm);
 	}
 
-	// Token: 0x0600C72B RID: 50987 RVA: 0x002D590C File Offset: 0x002D3B0C
+	// Token: 0x06009B3B RID: 39739 RVA: 0x002E09F8 File Offset: 0x002DEBF8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -362,23 +361,23 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 		};
 	}
 
-	// Token: 0x04005BB1 RID: 23473
+	// Token: 0x04005C80 RID: 23680
 	[Nullable(2)]
 	private TipsAbyssDangoData CurrentData;
 
-	// Token: 0x04005BB2 RID: 23474
+	// Token: 0x04005C81 RID: 23681
 	[Nullable(2)]
 	private InActiveRedItem InActiveRedItem;
 
-	// Token: 0x04005BB3 RID: 23475
+	// Token: 0x04005C82 RID: 23682
 	[Nullable(2)]
 	private ButtonItem ConfirmBtnItem;
 
-	// Token: 0x04005BB4 RID: 23476
+	// Token: 0x04005C83 RID: 23683
 	[Nullable(2)]
 	private MediumItemGridDangoPluginIconComponent PluginIconItem;
 
-	// Token: 0x04005BB5 RID: 23477
+	// Token: 0x04005C84 RID: 23684
 	[Nullable(new byte[]
 	{
 		2,
@@ -387,11 +386,11 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 	})]
 	private GenericLayout<DangoAbyssTipsAttributeItem, AttrListScrollData> AttributeScroller;
 
-	// Token: 0x04005BB6 RID: 23478
+	// Token: 0x04005C85 RID: 23685
 	[Nullable(2)]
 	private TipsLockButton TipsLockButton;
 
-	// Token: 0x04005BB7 RID: 23479
+	// Token: 0x04005C86 RID: 23686
 	[Nullable(new byte[]
 	{
 		2,
@@ -400,51 +399,51 @@ public class ItemTipsAbyssDangoComponent : TipsBaseSubComponent
 	})]
 	private GenericLayout<DangoAbyssTagItem, DangoAbyssDefine.DangoAbyssTagData> TagScroller;
 
-	// Token: 0x04005BB8 RID: 23480
+	// Token: 0x04005C87 RID: 23687
 	private DangoAbyssDefine.EAbyssItemTipsState StateConfirm;
 
-	// Token: 0x04005BB9 RID: 23481
+	// Token: 0x04005C88 RID: 23688
 	private readonly Func<DangoAbyssTagItem> CreateTagItem = () => new DangoAbyssTagItem
 	{
 		GetValueByTips = true
 	};
 
-	// Token: 0x04005BBA RID: 23482
+	// Token: 0x04005C89 RID: 23689
 	private readonly Func<DangoAbyssTipsAttributeItem> CreateItem = () => new DangoAbyssTipsAttributeItem();
 
-	// Token: 0x02007FB5 RID: 32693
+	// Token: 0x02007144 RID: 28996
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029B29 RID: 170793
+		// Token: 0x04024E66 RID: 151142
 		LockItem,
-		// Token: 0x04029B2A RID: 170794
+		// Token: 0x04024E67 RID: 151143
 		BaseAttributeLayout,
-		// Token: 0x04029B2B RID: 170795
+		// Token: 0x04024E68 RID: 151144
 		BaseAttributeItem,
-		// Token: 0x04029B2C RID: 170796
+		// Token: 0x04024E69 RID: 151145
 		TagPropVertical,
-		// Token: 0x04029B2D RID: 170797
+		// Token: 0x04024E6A RID: 151146
 		TagPropItem,
-		// Token: 0x04029B2E RID: 170798
+		// Token: 0x04024E6B RID: 151147
 		DescItem,
-		// Token: 0x04029B2F RID: 170799
+		// Token: 0x04024E6C RID: 151148
 		DescText,
-		// Token: 0x04029B30 RID: 170800
+		// Token: 0x04024E6D RID: 151149
 		ConfirmBtnItem,
-		// Token: 0x04029B31 RID: 170801
+		// Token: 0x04024E6E RID: 151150
 		InActiveRedItem,
-		// Token: 0x04029B32 RID: 170802
+		// Token: 0x04024E6F RID: 151151
 		PluginIconItem,
-		// Token: 0x04029B33 RID: 170803
+		// Token: 0x04024E70 RID: 151152
 		TextName,
-		// Token: 0x04029B34 RID: 170804
+		// Token: 0x04024E71 RID: 151153
 		IconQuality,
-		// Token: 0x04029B35 RID: 170805
+		// Token: 0x04024E72 RID: 151154
 		IconMain,
-		// Token: 0x04029B36 RID: 170806
+		// Token: 0x04024E73 RID: 151155
 		NiagaraQuality,
-		// Token: 0x04029B37 RID: 170807
+		// Token: 0x04024E74 RID: 151156
 		TextPluginType
 	}
 }

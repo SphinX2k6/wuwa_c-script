@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020024D7 RID: 9431
+// Token: 0x020019BE RID: 6590
 public class VisionNewRecommendPreviewTopData
 {
-	// Token: 0x04008ECA RID: 36554
+	// Token: 0x04009014 RID: 36884
 	public int Cost;
 
-	// Token: 0x04008ECB RID: 36555
+	// Token: 0x04009015 RID: 36885
 	[Nullable(1)]
 	public List<VisionAssembleSuitItemData> SuitList = new List<VisionAssembleSuitItemData>();
 }

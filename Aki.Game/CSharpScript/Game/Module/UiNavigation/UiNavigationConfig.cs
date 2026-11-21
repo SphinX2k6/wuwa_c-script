@@ -4,13 +4,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049F4 RID: 18932
+	// Token: 0x0200396E RID: 14702
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class UiNavigationConfig : ConfigBase
 	{
-		// Token: 0x06031273 RID: 201331 RVA: 0x00B66E04 File Offset: 0x00B65004
+		// Token: 0x06025DA9 RID: 155049 RVA: 0x00AA1DC0 File Offset: 0x00A9FFC0
 		public bool GetHighlightWhenMouseMoveOut()
 		{
 			bool? boolConfig = ConfigCommonParamById.GetBoolConfig("highlight_when_mouse_moveout");
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return boolConfig.GetValueOrDefault();
 		}
 
-		// Token: 0x06031274 RID: 201332 RVA: 0x00B66E4C File Offset: 0x00B6504C
+		// Token: 0x06025DAA RID: 155050 RVA: 0x00AA1E08 File Offset: 0x00AA0008
 		public bool GetMobileHighlight()
 		{
 			bool? boolConfig = ConfigCommonParamById.GetBoolConfig("mobile_highlight");
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return boolConfig.GetValueOrDefault();
 		}
 
-		// Token: 0x06031275 RID: 201333 RVA: 0x00B66E94 File Offset: 0x00B65094
+		// Token: 0x06025DAB RID: 155051 RVA: 0x00AA1E50 File Offset: 0x00AA0050
 		public bool GetPcPress()
 		{
 			bool? boolConfig = ConfigCommonParamById.GetBoolConfig("pc_press");
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return boolConfig.GetValueOrDefault();
 		}
 
-		// Token: 0x06031276 RID: 201334 RVA: 0x00B66EDC File Offset: 0x00B650DC
+		// Token: 0x06025DAC RID: 155052 RVA: 0x00AA1E98 File Offset: 0x00AA0098
 		public float GetNavigateTolerance()
 		{
 			float? floatConfig = ConfigCommonParamById.GetFloatConfig("navigate_tolerance");
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return floatConfig.GetValueOrDefault();
 		}
 
-		// Token: 0x06031277 RID: 201335 RVA: 0x00B66F24 File Offset: 0x00B65124
+		// Token: 0x06025DAD RID: 155053 RVA: 0x00AA1EE0 File Offset: 0x00AA00E0
 		public HotKeyView? GetHotKeyViewConfig(int id)
 		{
 			HotKeyView? config = ConfigHotKeyViewById.GetConfig(id, true);
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return config;
 		}
 
-		// Token: 0x06031278 RID: 201336 RVA: 0x00B66F74 File Offset: 0x00B65174
+		// Token: 0x06025DAE RID: 155054 RVA: 0x00AA1F30 File Offset: 0x00AA0130
 		public HotKeyMap? GetHotKeyMapConfig(int id)
 		{
 			if (id == -1)
@@ -90,13 +90,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return config;
 		}
 
-		// Token: 0x06031279 RID: 201337 RVA: 0x00B66FD4 File Offset: 0x00B651D4
+		// Token: 0x06025DAF RID: 155055 RVA: 0x00AA1F90 File Offset: 0x00AA0190
 		public HotKeyType? GetHotKeyTypeConfig(int id)
 		{
 			return ConfigHotKeyTypeById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603127A RID: 201338 RVA: 0x00B66FE0 File Offset: 0x00B651E0
+		// Token: 0x06025DB0 RID: 155056 RVA: 0x00AA1F9C File Offset: 0x00AA019C
 		public HotKeyIcon? GetHotKeyIconConfig(string keyName, bool warnOnly = false)
 		{
 			HotKeyIcon? config = ConfigHotKeyIconByKeyName.GetConfig(keyName, true);
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return config;
 		}
 
-		// Token: 0x0603127B RID: 201339 RVA: 0x00B67058 File Offset: 0x00B65258
+		// Token: 0x06025DB1 RID: 155057 RVA: 0x00AA2014 File Offset: 0x00AA0214
 		[return: Nullable(2)]
 		public string GetHotKeyText(string id)
 		{
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return config.GetValueOrDefault().Name;
 		}
 
-		// Token: 0x0603127C RID: 201340 RVA: 0x00B670BC File Offset: 0x00B652BC
+		// Token: 0x06025DB2 RID: 155058 RVA: 0x00AA2078 File Offset: 0x00AA0278
 		[return: Nullable(2)]
 		public string GetHotKeyIcon(string keyName, bool warnOnly = false)
 		{
@@ -157,8 +157,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return hotKeyIconConfig.GetValueOrDefault().Icon;
 		}
 
-		// Token: 0x170079DD RID: 31197
-		// (get) Token: 0x0603127D RID: 201341 RVA: 0x00B670EC File Offset: 0x00B652EC
+		// Token: 0x17004D45 RID: 19781
+		// (get) Token: 0x06025DB3 RID: 155059 RVA: 0x00AA20A8 File Offset: 0x00AA02A8
 		public static UiNavigationConfig Instance
 		{
 			get
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0603127E RID: 201342 RVA: 0x00B670F3 File Offset: 0x00B652F3
+		// Token: 0x06025DB4 RID: 155060 RVA: 0x00AA20AF File Offset: 0x00AA02AF
 		public static UiNavigationConfig GetOrCreateInstance()
 		{
 			if (UiNavigationConfig._Instance == null)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return UiNavigationConfig._Instance;
 		}
 
-		// Token: 0x0603127F RID: 201343 RVA: 0x00B67107 File Offset: 0x00B65307
+		// Token: 0x06025DB5 RID: 155061 RVA: 0x00AA20C3 File Offset: 0x00AA02C3
 		public static bool CreateInstance()
 		{
 			if (UiNavigationConfig._Instance != null)
@@ -188,24 +188,24 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return true;
 		}
 
-		// Token: 0x06031280 RID: 201344 RVA: 0x00B6711D File Offset: 0x00B6531D
+		// Token: 0x06025DB6 RID: 155062 RVA: 0x00AA20D9 File Offset: 0x00AA02D9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06031281 RID: 201345 RVA: 0x00B6711F File Offset: 0x00B6531F
+		// Token: 0x06025DB7 RID: 155063 RVA: 0x00AA20DB File Offset: 0x00AA02DB
 		public static void ResetStaticDefaultValue()
 		{
 			UiNavigationConfig._Instance = null;
 		}
 
-		// Token: 0x06031282 RID: 201346 RVA: 0x00B67127 File Offset: 0x00B65327
+		// Token: 0x06025DB8 RID: 155064 RVA: 0x00AA20E3 File Offset: 0x00AA02E3
 		static UiNavigationConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiNavigationConfig.CreateStaticDefaultValue), new Action(UiNavigationConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A4E6 RID: 107750
+		// Token: 0x04014D58 RID: 85336
 		[Nullable(2)]
 		private static UiNavigationConfig _Instance;
 	}

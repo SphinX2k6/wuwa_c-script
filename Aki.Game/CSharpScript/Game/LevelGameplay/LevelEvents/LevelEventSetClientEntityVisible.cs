@@ -4,15 +4,15 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B72 RID: 27506
+	// Token: 0x02005CEA RID: 23786
 	public class LevelEventSetClientEntityVisible : LevelEventBase
 	{
-		// Token: 0x0604423A RID: 279098 RVA: 0x010C8CDC File Offset: 0x010C6EDC
+		// Token: 0x0603A38C RID: 238476 RVA: 0x01072950 File Offset: 0x01070B50
 		public LevelEventSetClientEntityVisible(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604423B RID: 279099 RVA: 0x010C8CE8 File Offset: 0x010C6EE8
+		// Token: 0x0603A38D RID: 238477 RVA: 0x0107295C File Offset: 0x01070B5C
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

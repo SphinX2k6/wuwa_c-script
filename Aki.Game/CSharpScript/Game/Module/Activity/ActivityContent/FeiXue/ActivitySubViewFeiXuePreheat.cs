@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 {
-	// Token: 0x02006639 RID: 26169
+	// Token: 0x020055B7 RID: 21943
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivitySubViewFeiXuePreheat : ActivitySubViewBase
 	{
-		// Token: 0x17009614 RID: 38420
-		// (get) Token: 0x06041996 RID: 268694 RVA: 0x00FE8E04 File Offset: 0x00FE7004
+		// Token: 0x17006976 RID: 26998
+		// (get) Token: 0x0603665B RID: 222811 RVA: 0x00F2FEBC File Offset: 0x00F2E0BC
 		protected new ActivityFeiXuePreheatData ActivityBaseData
 		{
 			get
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			}
 		}
 
-		// Token: 0x06041997 RID: 268695 RVA: 0x00FE8E14 File Offset: 0x00FE7014
+		// Token: 0x0603665C RID: 222812 RVA: 0x00F2FECC File Offset: 0x00F2E0CC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			};
 		}
 
-		// Token: 0x06041998 RID: 268696 RVA: 0x00FE8E70 File Offset: 0x00FE7070
+		// Token: 0x0603665D RID: 222813 RVA: 0x00F2FF28 File Offset: 0x00F2E128
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivitySubViewFeiXuePreheat.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041999 RID: 268697 RVA: 0x00FE8EB4 File Offset: 0x00FE70B4
+		// Token: 0x0603665E RID: 222814 RVA: 0x00F2FF6C File Offset: 0x00F2E16C
 		protected override void OnRefreshView()
 		{
 			ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -77,25 +77,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			this.RefreshRecommendQuestTips();
 		}
 
-		// Token: 0x0604199A RID: 268698 RVA: 0x00FE8F62 File Offset: 0x00FE7162
+		// Token: 0x0603665F RID: 222815 RVA: 0x00F3001A File Offset: 0x00F2E21A
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x0604199B RID: 268699 RVA: 0x00FE8F80 File Offset: 0x00FE7180
+		// Token: 0x06036660 RID: 222816 RVA: 0x00F30038 File Offset: 0x00F2E238
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x0604199C RID: 268700 RVA: 0x00FE8F9E File Offset: 0x00FE719E
+		// Token: 0x06036661 RID: 222817 RVA: 0x00F30056 File Offset: 0x00F2E256
 		private bool GetFunctionRedDotState()
 		{
 			return this.ActivityBaseData.IsFirstDoingTaskIsUnClick() || this.ActivityBaseData.IsExistClaimableTask();
 		}
 
-		// Token: 0x0604199D RID: 268701 RVA: 0x00FE8FBC File Offset: 0x00FE71BC
+		// Token: 0x06036662 RID: 222818 RVA: 0x00F30074 File Offset: 0x00F2E274
 		private void RefreshCondition()
 		{
 			ActivityFunctionalTypeA functional = this.CommonInfoPanel.GetFunctional();
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			functional.RefreshGeneralPerformance(parameters);
 		}
 
-		// Token: 0x0604199E RID: 268702 RVA: 0x00FE9000 File Offset: 0x00FE7200
+		// Token: 0x06036663 RID: 222819 RVA: 0x00F300B8 File Offset: 0x00F2E2B8
 		private bool IsShowPreOpenTips()
 		{
 			int num = this.ActivityBaseData.IsUnLock() ? 1 : 0;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return num == 0 && flag;
 		}
 
-		// Token: 0x0604199F RID: 268703 RVA: 0x00FE902C File Offset: 0x00FE722C
+		// Token: 0x06036664 RID: 222820 RVA: 0x00F300E4 File Offset: 0x00F2E2E4
 		private void RefreshRecommendQuestTips()
 		{
 			bool flag = this.IsShowPreOpenTips();
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			}
 		}
 
-		// Token: 0x060419A0 RID: 268704 RVA: 0x00FE9064 File Offset: 0x00FE7264
+		// Token: 0x06036665 RID: 222821 RVA: 0x00F3011C File Offset: 0x00F2E31C
 		private void OnRefreshCommonActivityRedDot(int id)
 		{
 			if (this.ActivityBaseData.Id != id)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			commonInfoPanel.SetFunctionRedDotVisible(this.GetFunctionRedDotState());
 		}
 
-		// Token: 0x060419A1 RID: 268705 RVA: 0x00FE908B File Offset: 0x00FE728B
+		// Token: 0x06036666 RID: 222822 RVA: 0x00F30143 File Offset: 0x00F2E343
 		private void OnConfirmBtnClick()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -159,13 +159,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			});
 		}
 
-		// Token: 0x060419A2 RID: 268706 RVA: 0x00FE90A9 File Offset: 0x00FE72A9
+		// Token: 0x06036667 RID: 222823 RVA: 0x00F30161 File Offset: 0x00F2E361
 		private void OnRewardBtnClick(int _)
 		{
 			UiManager.Instance.OpenView(EUiViewName.FeiXuePreheatRewardView, this.ActivityBaseData, null);
 		}
 
-		// Token: 0x060419A3 RID: 268707 RVA: 0x00FE90C4 File Offset: 0x00FE72C4
+		// Token: 0x06036668 RID: 222824 RVA: 0x00F3017C File Offset: 0x00F2E37C
 		private void OnRecommendBtnClick()
 		{
 			if (QuestNewModel.Instance.GetQuest(165800001) == null)
@@ -175,13 +175,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			UiManager.Instance.OpenView(EUiViewName.QuestView, 165800001, null);
 		}
 
-		// Token: 0x04022205 RID: 139781
+		// Token: 0x0401CB36 RID: 117558
 		protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-		// Token: 0x04022206 RID: 139782
+		// Token: 0x0401CB37 RID: 117559
 		private RecommendQuestTipsSubPanel RecommendQuestTipsSubPanel;
 
-		// Token: 0x04022207 RID: 139783
+		// Token: 0x0401CB38 RID: 117560
 		private ButtonItem RewardBtn;
 	}
 }

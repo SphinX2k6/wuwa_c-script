@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FC4 RID: 20420
+	// Token: 0x02003F8D RID: 16269
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestMultiLineTimeLinePanel : UiPanelBase
 	{
-		// Token: 0x0603441B RID: 214043 RVA: 0x00C455DC File Offset: 0x00C437DC
+		// Token: 0x06029289 RID: 168585 RVA: 0x00B8ED94 File Offset: 0x00B8CF94
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			};
 		}
 
-		// Token: 0x0603441C RID: 214044 RVA: 0x00C456E0 File Offset: 0x00C438E0
+		// Token: 0x0602928A RID: 168586 RVA: 0x00B8EE98 File Offset: 0x00B8D098
 		protected override void OnStart()
 		{
 			this.ScrollView = new GenericScrollViewNew<QuestMultiLineTimePointItem, QuestMultiLineTimePointData>(base.GetScrollViewWithScrollbar(0), delegate()
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x0603441D RID: 214045 RVA: 0x00C457A0 File Offset: 0x00C439A0
+		// Token: 0x0602928B RID: 168587 RVA: 0x00B8EF58 File Offset: 0x00B8D158
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x0603441E RID: 214046 RVA: 0x00C457BC File Offset: 0x00C439BC
+		// Token: 0x0602928C RID: 168588 RVA: 0x00B8EF74 File Offset: 0x00B8D174
 		public UniTask RefreshTimeLine(List<QuestMultiLineTimePointData> timePointDataArray)
 		{
 			QuestMultiLineTimeLinePanel.<RefreshTimeLine>d__13 <RefreshTimeLine>d__;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <RefreshTimeLine>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603441F RID: 214047 RVA: 0x00C45808 File Offset: 0x00C43A08
+		// Token: 0x0602928D RID: 168589 RVA: 0x00B8EFC0 File Offset: 0x00B8D1C0
 		private void AdjustTimeLineWidth()
 		{
 			UUIItem svTimeLineRootItem = this.GetSvTimeLineRootItem();
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			rootItem.SetWidth(this.RootMaxWidth);
 		}
 
-		// Token: 0x06034420 RID: 214048 RVA: 0x00C458F1 File Offset: 0x00C43AF1
+		// Token: 0x0602928E RID: 168590 RVA: 0x00B8F0A9 File Offset: 0x00B8D2A9
 		[NullableContext(2)]
 		private UUIItem GetSvTimeLineRootItem()
 		{
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return obj as UUIItem;
 		}
 
-		// Token: 0x06034421 RID: 214049 RVA: 0x00C45918 File Offset: 0x00C43B18
+		// Token: 0x0602928F RID: 168591 RVA: 0x00B8F0D0 File Offset: 0x00B8D2D0
 		public void RefreshLeftRightBtnState()
 		{
 			List<QuestMultiLineTimePointData> list = this.ShowTimePointDataArray ?? new List<QuestMultiLineTimePointData>();
@@ -157,13 +157,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			base.GetButton(4).SetSelfInteractive(selfInteractive);
 		}
 
-		// Token: 0x06034422 RID: 214050 RVA: 0x00C4598F File Offset: 0x00C43B8F
+		// Token: 0x06029290 RID: 168592 RVA: 0x00B8F147 File Offset: 0x00B8D347
 		public void SetTimePointFunction(Action<QuestMultiLineTimePointData> timePointFunction)
 		{
 			this.TimePointFunction = timePointFunction;
 		}
 
-		// Token: 0x06034423 RID: 214051 RVA: 0x00C45998 File Offset: 0x00C43B98
+		// Token: 0x06029291 RID: 168593 RVA: 0x00B8F150 File Offset: 0x00B8D350
 		public bool SelectTimePoint(QuestMultiLineTimePointData timePoint)
 		{
 			if (!timePoint.IsUnLock)
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return true;
 		}
 
-		// Token: 0x06034424 RID: 214052 RVA: 0x00C45A08 File Offset: 0x00C43C08
+		// Token: 0x06029292 RID: 168594 RVA: 0x00B8F1C0 File Offset: 0x00B8D3C0
 		public void ScrollTimePointToViewportCenter(QuestMultiLineTimePointData timePoint)
 		{
 			if (this.ShowTimePointDataArray == null || this.ShowTimePointDataArray.Count == 0 || this.ScrollView == null)
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.ScrollView.LateScrollTo(uuiitem, null, false);
 		}
 
-		// Token: 0x06034425 RID: 214053 RVA: 0x00C45A70 File Offset: 0x00C43C70
+		// Token: 0x06029293 RID: 168595 RVA: 0x00B8F228 File Offset: 0x00B8D428
 		[NullableContext(2)]
 		public UUIItem GetGuideTimePointUiItem(int showIndex)
 		{
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return uuiitem;
 		}
 
-		// Token: 0x06034426 RID: 214054 RVA: 0x00C45AD8 File Offset: 0x00C43CD8
+		// Token: 0x06029294 RID: 168596 RVA: 0x00B8F290 File Offset: 0x00B8D490
 		private void OnClickLeft()
 		{
 			int num = this.CurTimePointIndex - 1;
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.RefreshLeftRightBtnState();
 		}
 
-		// Token: 0x06034427 RID: 214055 RVA: 0x00C45B70 File Offset: 0x00C43D70
+		// Token: 0x06029295 RID: 168597 RVA: 0x00B8F328 File Offset: 0x00B8D528
 		private void OnClickRight()
 		{
 			int num = this.CurTimePointIndex + 1;
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.RefreshLeftRightBtnState();
 		}
 
-		// Token: 0x06034428 RID: 214056 RVA: 0x00C45C07 File Offset: 0x00C43E07
+		// Token: 0x06029296 RID: 168598 RVA: 0x00B8F3BF File Offset: 0x00B8D5BF
 		public void OnClickTimePoint(QuestMultiLineTimePointData timePoint)
 		{
 			if (!this.SelectTimePoint(timePoint))
@@ -285,13 +285,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			timePointFunction(timePoint);
 		}
 
-		// Token: 0x06034429 RID: 214057 RVA: 0x00C45C24 File Offset: 0x00C43E24
+		// Token: 0x06029297 RID: 168599 RVA: 0x00B8F3DC File Offset: 0x00B8D5DC
 		private void OnScrollValueChange(FVector2D _)
 		{
 			this.RefreshSideRedDotIndicator();
 		}
 
-		// Token: 0x0603442A RID: 214058 RVA: 0x00C45C2C File Offset: 0x00C43E2C
+		// Token: 0x06029298 RID: 168600 RVA: 0x00B8F3E4 File Offset: 0x00B8D5E4
 		private void RefreshSideRedDotIndicator()
 		{
 			if (this.ScrollView == null)
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			rightRedDotIndicator.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603442B RID: 214059 RVA: 0x00C45D10 File Offset: 0x00C43F10
+		// Token: 0x06029299 RID: 168601 RVA: 0x00B8F4C8 File Offset: 0x00B8D6C8
 		public UniTask PlayShowAnimAsync()
 		{
 			QuestMultiLineTimeLinePanel.<PlayShowAnimAsync>d__26 <PlayShowAnimAsync>d__;
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <PlayShowAnimAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401BCB1 RID: 113841
+		// Token: 0x04016686 RID: 91782
 		[Nullable(new byte[]
 		{
 			2,
@@ -360,7 +360,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 		})]
 		private List<QuestMultiLineTimePointData> TimePointDataArray;
 
-		// Token: 0x0401BCB2 RID: 113842
+		// Token: 0x04016687 RID: 91783
 		[Nullable(new byte[]
 		{
 			2,
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 		})]
 		private List<QuestMultiLineTimePointData> ShowTimePointDataArray;
 
-		// Token: 0x0401BCB3 RID: 113843
+		// Token: 0x04016688 RID: 91784
 		[Nullable(new byte[]
 		{
 			2,
@@ -376,10 +376,10 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 		})]
 		private Action<QuestMultiLineTimePointData> TimePointFunction;
 
-		// Token: 0x0401BCB4 RID: 113844
+		// Token: 0x04016689 RID: 91785
 		private int CurTimePointIndex;
 
-		// Token: 0x0401BCB5 RID: 113845
+		// Token: 0x0401668A RID: 91786
 		[Nullable(new byte[]
 		{
 			2,
@@ -388,22 +388,22 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 		})]
 		private GenericScrollViewNew<QuestMultiLineTimePointItem, QuestMultiLineTimePointData> ScrollView;
 
-		// Token: 0x0401BCB6 RID: 113846
+		// Token: 0x0401668B RID: 91787
 		[Nullable(2)]
 		private UUIItem LeftRedDotIndicator;
 
-		// Token: 0x0401BCB7 RID: 113847
+		// Token: 0x0401668C RID: 91788
 		[Nullable(2)]
 		private UUIItem RightRedDotIndicator;
 
-		// Token: 0x0401BCB8 RID: 113848
+		// Token: 0x0401668D RID: 91789
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401BCB9 RID: 113849
+		// Token: 0x0401668E RID: 91790
 		private float SvTimeLineMaxWidth;
 
-		// Token: 0x0401BCBA RID: 113850
+		// Token: 0x0401668F RID: 91791
 		private float RootMaxWidth;
 	}
 }

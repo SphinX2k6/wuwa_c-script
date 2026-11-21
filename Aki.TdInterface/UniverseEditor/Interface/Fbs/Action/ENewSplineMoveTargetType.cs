@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FBD RID: 24509
+	// Token: 0x0200660F RID: 26127
 	public enum ENewSplineMoveTargetType : byte
 	{
-		// Token: 0x0400FEF4 RID: 65268
+		// Token: 0x04010CAC RID: 68780
 		Player,
-		// Token: 0x0400FEF5 RID: 65269
+		// Token: 0x04010CAD RID: 68781
 		Npc,
-		// Token: 0x0400FEF6 RID: 65270
+		// Token: 0x04010CAE RID: 68782
 		SceneItem,
-		// Token: 0x0400FEF7 RID: 65271
+		// Token: 0x04010CAF RID: 68783
 		Vehicle
 	}
 }

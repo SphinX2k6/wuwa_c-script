@@ -4,12 +4,12 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020034AB RID: 13483
+// Token: 0x02002A1F RID: 10783
 [NullableContext(1)]
 [Nullable(0)]
 public class CombatDebugDrawController : ControllerBase
 {
-	// Token: 0x0601D5FB RID: 120315 RVA: 0x00831B00 File Offset: 0x0082FD00
+	// Token: 0x0601B2FA RID: 111354 RVA: 0x00858F20 File Offset: 0x00857120
 	protected override bool OnInit()
 	{
 		this.RedColor = new FLinearColor(1f, 0f, 0f, 1f);
@@ -23,26 +23,26 @@ public class CombatDebugDrawController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D5FC RID: 120316 RVA: 0x00831C06 File Offset: 0x0082FE06
+	// Token: 0x0601B2FB RID: 111355 RVA: 0x00859026 File Offset: 0x00857226
 	protected override void OnTick(float delta)
 	{
 		bool debugMonsterControl = this.DebugMonsterControl;
 	}
 
-	// Token: 0x0601D5FD RID: 120317 RVA: 0x00831C0F File Offset: 0x0082FE0F
+	// Token: 0x0601B2FC RID: 111356 RVA: 0x0085902F File Offset: 0x0085722F
 	[Conditional("DEBUG")]
 	private void DrawMonsterControl()
 	{
 	}
 
-	// Token: 0x0601D5FE RID: 120318 RVA: 0x00831C11 File Offset: 0x0082FE11
+	// Token: 0x0601B2FD RID: 111357 RVA: 0x00859031 File Offset: 0x00857231
 	[Conditional("DEBUG")]
 	private void DrawEntityBox(int entityId)
 	{
 	}
 
-	// Token: 0x170028BB RID: 10427
-	// (get) Token: 0x0601D5FF RID: 120319 RVA: 0x00831C13 File Offset: 0x0082FE13
+	// Token: 0x17002C53 RID: 11347
+	// (get) Token: 0x0601B2FE RID: 111358 RVA: 0x00859033 File Offset: 0x00857233
 	public static CombatDebugDrawController Instance
 	{
 		get
@@ -51,7 +51,7 @@ public class CombatDebugDrawController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D600 RID: 120320 RVA: 0x00831C1A File Offset: 0x0082FE1A
+	// Token: 0x0601B2FF RID: 111359 RVA: 0x0085903A File Offset: 0x0085723A
 	public static CombatDebugDrawController GetOrCreateInstance()
 	{
 		if (CombatDebugDrawController._Instance == null)
@@ -61,7 +61,7 @@ public class CombatDebugDrawController : ControllerBase
 		return CombatDebugDrawController._Instance;
 	}
 
-	// Token: 0x0601D601 RID: 120321 RVA: 0x00831C2E File Offset: 0x0082FE2E
+	// Token: 0x0601B300 RID: 111360 RVA: 0x0085904E File Offset: 0x0085724E
 	public static bool CreateInstance()
 	{
 		if (CombatDebugDrawController._Instance != null)
@@ -72,69 +72,69 @@ public class CombatDebugDrawController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D602 RID: 120322 RVA: 0x00831C44 File Offset: 0x0082FE44
+	// Token: 0x0601B301 RID: 111361 RVA: 0x00859064 File Offset: 0x00857264
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601D603 RID: 120323 RVA: 0x00831C46 File Offset: 0x0082FE46
+	// Token: 0x0601B302 RID: 111362 RVA: 0x00859066 File Offset: 0x00857266
 	public static void ResetStaticDefaultValue()
 	{
 		CombatDebugDrawController._Instance = null;
 	}
 
-	// Token: 0x0601D604 RID: 120324 RVA: 0x00831C4E File Offset: 0x0082FE4E
+	// Token: 0x0601B303 RID: 111363 RVA: 0x0085906E File Offset: 0x0085726E
 	static CombatDebugDrawController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CombatDebugDrawController.CreateStaticDefaultValue), new Action(CombatDebugDrawController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E751 RID: 59217
+	// Token: 0x0400EC05 RID: 60421
 	public bool DebugMonsterMovePath;
 
-	// Token: 0x0400E752 RID: 59218
+	// Token: 0x0400EC06 RID: 60422
 	public bool DebugMonsterControl;
 
-	// Token: 0x0400E753 RID: 59219
+	// Token: 0x0400EC07 RID: 60423
 	public bool IsDrawEntityBoxEnabled = true;
 
-	// Token: 0x0400E754 RID: 59220
+	// Token: 0x0400EC08 RID: 60424
 	public bool IsDrawEntityBoxInfoEnabled;
 
-	// Token: 0x0400E755 RID: 59221
+	// Token: 0x0400EC09 RID: 60425
 	protected FLinearColor RedColor;
 
-	// Token: 0x0400E756 RID: 59222
+	// Token: 0x0400EC0A RID: 60426
 	protected FLinearColor GreenColor;
 
-	// Token: 0x0400E757 RID: 59223
+	// Token: 0x0400EC0B RID: 60427
 	protected FLinearColor BlueColor;
 
-	// Token: 0x0400E758 RID: 59224
+	// Token: 0x0400EC0C RID: 60428
 	protected FLinearColor YellowColor;
 
-	// Token: 0x0400E759 RID: 59225
+	// Token: 0x0400EC0D RID: 60429
 	protected FLinearColor EntityBoxColor;
 
-	// Token: 0x0400E75A RID: 59226
+	// Token: 0x0400EC0E RID: 60430
 	protected FLinearColor EntityBoxColorInvincible;
 
-	// Token: 0x0400E75B RID: 59227
+	// Token: 0x0400EC0F RID: 60431
 	protected FLinearColor EntityBoxColorCollisionDisabled;
 
-	// Token: 0x0400E75C RID: 59228
+	// Token: 0x0400EC10 RID: 60432
 	protected FLinearColor EntityBoxInfoColor;
 
-	// Token: 0x0400E75D RID: 59229
+	// Token: 0x0400EC11 RID: 60433
 	private readonly Vector LocationCache1 = Vector.Create();
 
-	// Token: 0x0400E75E RID: 59230
+	// Token: 0x0400EC12 RID: 60434
 	private readonly Vector LocationCache2 = Vector.Create();
 
-	// Token: 0x0400E75F RID: 59231
+	// Token: 0x0400EC13 RID: 60435
 	private readonly Dictionary<int, Entity> PlayerIdToEntity = new Dictionary<int, Entity>();
 
-	// Token: 0x0400E760 RID: 59232
+	// Token: 0x0400EC14 RID: 60436
 	[Nullable(2)]
 	private static CombatDebugDrawController _Instance;
 }

@@ -14,9 +14,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskCalculateBackwardPosition.TsTaskCalculateBackwardPosition_C")]
 public class TsTaskCalculateBackwardPosition : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700011F RID: 287
-	// (get) Token: 0x06000725 RID: 1829 RVA: 0x00024001 File Offset: 0x00022201
-	// (set) Token: 0x06000726 RID: 1830 RVA: 0x00024011 File Offset: 0x00022211
+	// Token: 0x17000121 RID: 289
+	// (get) Token: 0x06000729 RID: 1833 RVA: 0x00024D19 File Offset: 0x00022F19
+	// (set) Token: 0x0600072A RID: 1834 RVA: 0x00024D29 File Offset: 0x00022F29
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Distance
 	{
@@ -30,9 +30,9 @@ public class TsTaskCalculateBackwardPosition : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x17000120 RID: 288
-	// (get) Token: 0x06000727 RID: 1831 RVA: 0x00024022 File Offset: 0x00022222
-	// (set) Token: 0x06000728 RID: 1832 RVA: 0x00024036 File Offset: 0x00022236
+	// Token: 0x17000122 RID: 290
+	// (get) Token: 0x0600072B RID: 1835 RVA: 0x00024D3A File Offset: 0x00022F3A
+	// (set) Token: 0x0600072C RID: 1836 RVA: 0x00024D4E File Offset: 0x00022F4E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string BlackboardKey
 	{
@@ -46,27 +46,21 @@ public class TsTaskCalculateBackwardPosition : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x06000729 RID: 1833 RVA: 0x0002404C File Offset: 0x0002224C
+	// Token: 0x0600072D RID: 1837 RVA: 0x00024D64 File Offset: 0x00022F64
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void InitTsVariables()
+	protected virtual void InitTsVariables()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("InitTsVariables"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskCalculateBackwardPosition) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("InitTsVariables"), TsTaskCalculateBackwardPosition.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.InitTsVariables_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0600072A RID: 1834 RVA: 0x000240BC File Offset: 0x000222BC
+	// Token: 0x0600072E RID: 1838 RVA: 0x00024DBD File Offset: 0x00022FBD
 	protected void InitTsVariables_Implementation()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -77,30 +71,27 @@ public class TsTaskCalculateBackwardPosition : TsTaskAbortImmediatelyBase, IUnre
 		}
 	}
 
-	// Token: 0x0600072B RID: 1835 RVA: 0x000240EC File Offset: 0x000222EC
+	// Token: 0x0600072F RID: 1839 RVA: 0x00024DF0 File Offset: 0x00022FF0
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskCalculateBackwardPosition) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskCalculateBackwardPosition.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600072C RID: 1836 RVA: 0x00024188 File Offset: 0x00022388
+	// Token: 0x06000730 RID: 1840 RVA: 0x00024EA0 File Offset: 0x000230A0
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -138,7 +129,7 @@ public class TsTaskCalculateBackwardPosition : TsTaskAbortImmediatelyBase, IUnre
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x0600072D RID: 1837 RVA: 0x000242BA File Offset: 0x000224BA
+	// Token: 0x06000731 RID: 1841 RVA: 0x00024FD2 File Offset: 0x000231D2
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskCalculateBackwardPosition._ClassPtr == IntPtr.Zero)
@@ -148,28 +139,28 @@ public class TsTaskCalculateBackwardPosition : TsTaskAbortImmediatelyBase, IUnre
 		return TsTaskCalculateBackwardPosition._ClassPtr;
 	}
 
-	// Token: 0x0600072E RID: 1838 RVA: 0x000242E0 File Offset: 0x000224E0
+	// Token: 0x06000732 RID: 1842 RVA: 0x00024FF8 File Offset: 0x000231F8
 	public TsTaskCalculateBackwardPosition() : this(BuiltinUtils.AllocNativeUObject(TsTaskCalculateBackwardPosition.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600072F RID: 1839 RVA: 0x00024308 File Offset: 0x00022508
+	// Token: 0x06000733 RID: 1843 RVA: 0x00025020 File Offset: 0x00023220
 	public TsTaskCalculateBackwardPosition(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskCalculateBackwardPosition.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000730 RID: 1840 RVA: 0x0002433B File Offset: 0x0002253B
+	// Token: 0x06000734 RID: 1844 RVA: 0x00025053 File Offset: 0x00023253
 	protected TsTaskCalculateBackwardPosition(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000731 RID: 1841 RVA: 0x0002434F File Offset: 0x0002254F
+	// Token: 0x06000735 RID: 1845 RVA: 0x00025067 File Offset: 0x00023267
 	protected virtual void __CPPCALL_InitTsVariables_Implementation()
 	{
 		this.InitTsVariables_Implementation();
 	}
 
-	// Token: 0x06000732 RID: 1842 RVA: 0x00024358 File Offset: 0x00022558
+	// Token: 0x06000736 RID: 1846 RVA: 0x00025070 File Offset: 0x00023270
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -178,27 +169,27 @@ public class TsTaskCalculateBackwardPosition : TsTaskAbortImmediatelyBase, IUnre
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x04000543 RID: 1347
+	// Token: 0x04000547 RID: 1351
 	private bool IsInitTsVariables;
 
-	// Token: 0x04000544 RID: 1348
+	// Token: 0x04000548 RID: 1352
 	private float TsDistance;
 
-	// Token: 0x04000545 RID: 1349
+	// Token: 0x04000549 RID: 1353
 	private string TsBlackboardKey = "";
 
-	// Token: 0x04000546 RID: 1350
+	// Token: 0x0400054A RID: 1354
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskCalculateBackwardPosition.TsTaskCalculateBackwardPosition_C";
 
-	// Token: 0x04000547 RID: 1351
+	// Token: 0x0400054B RID: 1355
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000548 RID: 1352
+	// Token: 0x0400054C RID: 1356
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000549 RID: 1353
+	// Token: 0x0400054D RID: 1357
 	private static int __PropertyOffset_Distance;
 
-	// Token: 0x0400054A RID: 1354
+	// Token: 0x0400054E RID: 1358
 	private static int __PropertyOffset_BlackboardKey;
 }

@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007221 RID: 29217
+	// Token: 0x020062D6 RID: 25302
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemPhysicalAttachComponent : EntityComponent
 	{
-		// Token: 0x060478EF RID: 293103 RVA: 0x01244FA8 File Offset: 0x012431A8
+		// Token: 0x0603D22B RID: 250411 RVA: 0x0119E388 File Offset: 0x0119C588
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			object param = args.GetP1<CreateEntityData>().GetParam<SceneItemPhysicalAttachComponent>();
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060478F0 RID: 293104 RVA: 0x01244FD0 File Offset: 0x012431D0
+		// Token: 0x0603D22C RID: 250412 RVA: 0x0119E3B0 File Offset: 0x0119C5B0
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060478F1 RID: 293105 RVA: 0x01245040 File Offset: 0x01243240
+		// Token: 0x0603D22D RID: 250413 RVA: 0x0119E420 File Offset: 0x0119C620
 		protected override void OnActivate()
 		{
 			this.CreateAttachActor();
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			actorComp.GetPrimitiveComponent().SetCollisionObjectType(KuroCollisionChannel.Pawn);
 		}
 
-		// Token: 0x060478F2 RID: 293106 RVA: 0x012450A2 File Offset: 0x012432A2
+		// Token: 0x0603D22E RID: 250414 RVA: 0x0119E482 File Offset: 0x0119C682
 		protected override bool OnEnd()
 		{
 			this.ClearActors();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060478F3 RID: 293107 RVA: 0x012450B4 File Offset: 0x012432B4
+		// Token: 0x0603D22F RID: 250415 RVA: 0x0119E494 File Offset: 0x0119C694
 		protected override void OnTick(float delta)
 		{
 			if (this.AttachActor == null)
@@ -96,21 +96,21 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.ConstrainActor = null;
 		}
 
-		// Token: 0x060478F4 RID: 293108 RVA: 0x01245184 File Offset: 0x01243384
+		// Token: 0x0603D230 RID: 250416 RVA: 0x0119E564 File Offset: 0x0119C764
 		private void AddEvent()
 		{
 			EventSystem.Instance.AddWithTarget(this, EEventName.OnSceneItemHitByHitData, new Action<HitInformation>(this.OnHit));
 			EventSystem.Instance.AddWithTarget(base.Entity, EEventName.OnLevelTagChanged, new Action<IReadOnlyList<int>, IReadOnlyList<int>>(this.OnLevelTagChanged));
 		}
 
-		// Token: 0x060478F5 RID: 293109 RVA: 0x012451D0 File Offset: 0x012433D0
+		// Token: 0x0603D231 RID: 250417 RVA: 0x0119E5B0 File Offset: 0x0119C7B0
 		private void RemoveEvent()
 		{
 			EventSystem.Instance.RemoveWithTarget(this, EEventName.OnSceneItemHitByHitData, new Action<HitInformation>(this.OnHit));
 			EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.OnLevelTagChanged, new Action<IReadOnlyList<int>, IReadOnlyList<int>>(this.OnLevelTagChanged));
 		}
 
-		// Token: 0x060478F6 RID: 293110 RVA: 0x0124521C File Offset: 0x0124341C
+		// Token: 0x0603D232 RID: 250418 RVA: 0x0119E5FC File Offset: 0x0119C7FC
 		[NullableContext(1)]
 		private void OnHit(HitInformation hitData)
 		{
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			staticMeshComp2.SetPhysicsLinearVelocity(vector.ToUeVectorOld(), false, default(FName));
 		}
 
-		// Token: 0x060478F7 RID: 293111 RVA: 0x01245328 File Offset: 0x01243528
+		// Token: 0x0603D233 RID: 250419 RVA: 0x0119E708 File Offset: 0x0119C908
 		[NullableContext(1)]
 		private void OnLevelTagChanged(IReadOnlyList<int> added, IReadOnlyList<int> removed)
 		{
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.EffectHandle = null;
 		}
 
-		// Token: 0x060478F8 RID: 293112 RVA: 0x012453DC File Offset: 0x012435DC
+		// Token: 0x0603D234 RID: 250420 RVA: 0x0119E7BC File Offset: 0x0119C9BC
 		private void CreateAttachActor()
 		{
 			SceneItemPhysicalAttachComponent.<>c__DisplayClass21_0 CS$<>8__locals1 = new SceneItemPhysicalAttachComponent.<>c__DisplayClass21_0();
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478F9 RID: 293113 RVA: 0x012454E0 File Offset: 0x012436E0
+		// Token: 0x0603D235 RID: 250421 RVA: 0x0119E8C0 File Offset: 0x0119CAC0
 		private void InitPhysicsConstraint()
 		{
 			if (this.ConstrainActor == null)
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			constraintComp.SetConstrainedComponents(((attachActor != null) ? attachActor.GetComponentByClass(UPrimitiveComponent.StaticClass()) : null) as UPrimitiveComponent, null, this.StaticMeshComp, null);
 		}
 
-		// Token: 0x060478FA RID: 293114 RVA: 0x01245740 File Offset: 0x01243940
+		// Token: 0x0603D236 RID: 250422 RVA: 0x0119EB20 File Offset: 0x0119CD20
 		private void CreateSplineActor()
 		{
 			if (this.AttachActor == null || this.SplineActor != null)
@@ -316,14 +316,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			effectActor.K2_AttachToActor(splineActor, fname, EAttachmentRule.SnapToTarget, EAttachmentRule.SnapToTarget, EAttachmentRule.SnapToTarget, false);
 		}
 
-		// Token: 0x060478FB RID: 293115 RVA: 0x012458AE File Offset: 0x01243AAE
+		// Token: 0x0603D237 RID: 250423 RVA: 0x0119EC8E File Offset: 0x0119CE8E
 		private void GetSceneInteractionActor()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
 			this.SceneInteractionActor = (((actorComp != null) ? actorComp.GetInteractionMainActor() : null) as SceneInteractionActor);
 		}
 
-		// Token: 0x060478FC RID: 293116 RVA: 0x012458D0 File Offset: 0x01243AD0
+		// Token: 0x0603D238 RID: 250424 RVA: 0x0119ECB0 File Offset: 0x0119CEB0
 		private void ClearActors()
 		{
 			if (this.ConstrainActor != null)
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478FD RID: 293117 RVA: 0x012459AC File Offset: 0x01243BAC
+		// Token: 0x0603D239 RID: 250425 RVA: 0x0119ED8C File Offset: 0x0119CF8C
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -359,150 +359,157 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemPhysicalAttachComponent sceneItemPhysicalAttachComponent = (SceneItemPhysicalAttachComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemPhysicalAttachComponent.Config == null)
 			{
-				if (sceneItemPhysicalAttachComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PhysicsConstraintComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (sceneItemPhysicalAttachComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("StaticMeshComp"))
+			if (sceneItemPhysicalAttachComponent.ActorComp == null)
 			{
-				if (sceneItemPhysicalAttachComponent.StaticMeshComp == null)
-				{
-					this.StaticMeshComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UStaticMeshComponent>(this.StaticMeshComp), "StaticMeshComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("HitComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (sceneItemPhysicalAttachComponent.HitComp == null)
-				{
-					this.HitComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemHitComponent>(this.HitComp), "HitComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SceneInteractionActor"))
+			if (sceneItemPhysicalAttachComponent.StaticMeshComp == null)
 			{
-				if (sceneItemPhysicalAttachComponent.SceneInteractionActor == null)
-				{
-					this.SceneInteractionActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneInteractionActor>(this.SceneInteractionActor), "SceneInteractionActor"))
-				{
-					return false;
-				}
+				this.StaticMeshComp = null;
 			}
-			if (base.CanResetComponentProperty("ConstrainActor"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StaticMeshComp), "StaticMeshComp"))
 			{
-				if (sceneItemPhysicalAttachComponent.ConstrainActor == null)
-				{
-					this.ConstrainActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<APhysicsConstraintActor>(this.ConstrainActor), "ConstrainActor"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("AttachActor"))
+			if (sceneItemPhysicalAttachComponent.HitComp == null)
 			{
-				if (sceneItemPhysicalAttachComponent.AttachActor == null)
-				{
-					this.AttachActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.AttachActor), "AttachActor"))
-				{
-					return false;
-				}
+				this.HitComp = null;
 			}
-			if (base.CanResetComponentProperty("SplineActor"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitComp), "HitComp"))
 			{
-				if (sceneItemPhysicalAttachComponent.SplineActor == null)
-				{
-					this.SplineActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.SplineActor), "SplineActor"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SplineComp"))
+			if (sceneItemPhysicalAttachComponent.SceneInteractionActor == null)
 			{
-				if (sceneItemPhysicalAttachComponent.SplineComp == null)
-				{
-					this.SplineComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USplineComponent>(this.SplineComp), "SplineComp"))
-				{
-					return false;
-				}
+				this.SceneInteractionActor = null;
 			}
-			if (base.CanResetComponentProperty("EffectHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SceneInteractionActor), "SceneInteractionActor"))
 			{
-				this.EffectHandle = sceneItemPhysicalAttachComponent.EffectHandle;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CreatingAttachActor"))
+			if (sceneItemPhysicalAttachComponent.ConstrainActor == null)
 			{
-				this.CreatingAttachActor = sceneItemPhysicalAttachComponent.CreatingAttachActor;
+				this.ConstrainActor = null;
 			}
-			return !base.CanResetComponentProperty("OriginLocation") || sceneItemPhysicalAttachComponent.OriginLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.OriginLocation), "OriginLocation");
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConstrainActor), "ConstrainActor"))
+			{
+				return false;
+			}
+			if (sceneItemPhysicalAttachComponent.AttachActor == null)
+			{
+				this.AttachActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttachActor), "AttachActor"))
+			{
+				return false;
+			}
+			if (sceneItemPhysicalAttachComponent.SplineActor == null)
+			{
+				this.SplineActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineActor), "SplineActor"))
+			{
+				return false;
+			}
+			if (sceneItemPhysicalAttachComponent.SplineComp == null)
+			{
+				this.SplineComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineComp), "SplineComp"))
+			{
+				return false;
+			}
+			this.EffectHandle = sceneItemPhysicalAttachComponent.EffectHandle;
+			this.CreatingAttachActor = sceneItemPhysicalAttachComponent.CreatingAttachActor;
+			return sceneItemPhysicalAttachComponent.OriginLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.OriginLocation), "OriginLocation");
 		}
 
-		// Token: 0x04025A50 RID: 154192
+		// Token: 0x170073C0 RID: 29632
+		// (get) Token: 0x0603D23A RID: 250426 RVA: 0x0119EF69 File Offset: 0x0119D169
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073C1 RID: 29633
+		// (get) Token: 0x0603D23B RID: 250427 RVA: 0x0119EF6C File Offset: 0x0119D16C
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073C2 RID: 29634
+		// (get) Token: 0x0603D23C RID: 250428 RVA: 0x0119EF6F File Offset: 0x0119D16F
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073C3 RID: 29635
+		// (get) Token: 0x0603D23D RID: 250429 RVA: 0x0119EF72 File Offset: 0x0119D172
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040206BF RID: 132799
 		private PhysicsConstraintComponent Config;
 
-		// Token: 0x04025A51 RID: 154193
+		// Token: 0x040206C0 RID: 132800
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025A52 RID: 154194
+		// Token: 0x040206C1 RID: 132801
 		private UStaticMeshComponent StaticMeshComp;
 
-		// Token: 0x04025A53 RID: 154195
+		// Token: 0x040206C2 RID: 132802
 		private SceneItemHitComponent HitComp;
 
-		// Token: 0x04025A54 RID: 154196
+		// Token: 0x040206C3 RID: 132803
 		private SceneInteractionActor SceneInteractionActor;
 
-		// Token: 0x04025A55 RID: 154197
+		// Token: 0x040206C4 RID: 132804
 		private APhysicsConstraintActor ConstrainActor;
 
-		// Token: 0x04025A56 RID: 154198
+		// Token: 0x040206C5 RID: 132805
 		private AActor AttachActor;
 
-		// Token: 0x04025A57 RID: 154199
+		// Token: 0x040206C6 RID: 132806
 		private AActor SplineActor;
 
-		// Token: 0x04025A58 RID: 154200
+		// Token: 0x040206C7 RID: 132807
 		private USplineComponent SplineComp;
 
-		// Token: 0x04025A59 RID: 154201
+		// Token: 0x040206C8 RID: 132808
 		private int? EffectHandle;
 
-		// Token: 0x04025A5A RID: 154202
+		// Token: 0x040206C9 RID: 132809
 		private bool CreatingAttachActor;
 
-		// Token: 0x04025A5B RID: 154203
+		// Token: 0x040206CA RID: 132810
 		[Nullable(1)]
 		private readonly Vector OriginLocation = Vector.Create();
 	}

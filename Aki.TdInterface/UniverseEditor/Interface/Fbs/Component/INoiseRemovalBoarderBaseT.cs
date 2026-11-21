@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055FD RID: 22013
+	// Token: 0x02005B9B RID: 23451
 	public class INoiseRemovalBoarderBaseT
 	{
-		// Token: 0x1700A2E4 RID: 41700
-		// (get) Token: 0x0602486D RID: 149613 RVA: 0x0050A75A File Offset: 0x0050895A
-		// (set) Token: 0x0602486E RID: 149614 RVA: 0x0050A762 File Offset: 0x00508962
+		// Token: 0x1700AB6C RID: 43884
+		// (get) Token: 0x06026A7D RID: 158333 RVA: 0x0054AD72 File Offset: 0x00548F72
+		// (set) Token: 0x06026A7E RID: 158334 RVA: 0x0054AD7A File Offset: 0x00548F7A
 		public ENoiseRemovalBoarderShape Type { get; set; }
 
-		// Token: 0x0602486F RID: 149615 RVA: 0x0050A76B File Offset: 0x0050896B
+		// Token: 0x06026A7F RID: 158335 RVA: 0x0054AD83 File Offset: 0x00548F83
 		public INoiseRemovalBoarderBaseT()
 		{
 			this.Type = ENoiseRemovalBoarderShape.Box;

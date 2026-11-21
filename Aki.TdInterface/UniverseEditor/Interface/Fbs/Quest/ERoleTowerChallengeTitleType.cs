@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CC6 RID: 15558
+	// Token: 0x020040DA RID: 16602
 	public enum ERoleTowerChallengeTitleType : byte
 	{
-		// Token: 0x0400B4A9 RID: 46249
+		// Token: 0x0400BE4B RID: 48715
 		KillProgress,
-		// Token: 0x0400B4AA RID: 46250
+		// Token: 0x0400BE4C RID: 48716
 		PhantomExp,
-		// Token: 0x0400B4AB RID: 46251
+		// Token: 0x0400BE4D RID: 48717
 		CurrentFloor
 	}
 }

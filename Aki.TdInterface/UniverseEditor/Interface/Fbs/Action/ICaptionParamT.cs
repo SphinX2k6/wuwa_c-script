@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062AC RID: 25260
+	// Token: 0x0200691D RID: 26909
 	public class ICaptionParamT
 	{
-		// Token: 0x1700BC8F RID: 48271
-		// (get) Token: 0x0602BA5D RID: 178781 RVA: 0x00602074 File Offset: 0x00600274
-		// (set) Token: 0x0602BA5E RID: 178782 RVA: 0x0060207C File Offset: 0x0060027C
+		// Token: 0x1700C617 RID: 50711
+		// (get) Token: 0x0602E1BE RID: 188862 RVA: 0x0064CE7C File Offset: 0x0064B07C
+		// (set) Token: 0x0602E1BF RID: 188863 RVA: 0x0064CE84 File Offset: 0x0064B084
 		public float StartTime { get; set; }
 
-		// Token: 0x1700BC90 RID: 48272
-		// (get) Token: 0x0602BA5F RID: 178783 RVA: 0x00602085 File Offset: 0x00600285
-		// (set) Token: 0x0602BA60 RID: 178784 RVA: 0x0060208D File Offset: 0x0060028D
+		// Token: 0x1700C618 RID: 50712
+		// (get) Token: 0x0602E1C0 RID: 188864 RVA: 0x0064CE8D File Offset: 0x0064B08D
+		// (set) Token: 0x0602E1C1 RID: 188865 RVA: 0x0064CE95 File Offset: 0x0064B095
 		public float TotalTime { get; set; }
 
-		// Token: 0x1700BC91 RID: 48273
-		// (get) Token: 0x0602BA61 RID: 178785 RVA: 0x00602096 File Offset: 0x00600296
-		// (set) Token: 0x0602BA62 RID: 178786 RVA: 0x0060209E File Offset: 0x0060029E
+		// Token: 0x1700C619 RID: 50713
+		// (get) Token: 0x0602E1C2 RID: 188866 RVA: 0x0064CE9E File Offset: 0x0064B09E
+		// (set) Token: 0x0602E1C3 RID: 188867 RVA: 0x0064CEA6 File Offset: 0x0064B0A6
 		public float IntervalTime { get; set; }
 
-		// Token: 0x1700BC92 RID: 48274
-		// (get) Token: 0x0602BA63 RID: 178787 RVA: 0x006020A7 File Offset: 0x006002A7
-		// (set) Token: 0x0602BA64 RID: 178788 RVA: 0x006020AF File Offset: 0x006002AF
+		// Token: 0x1700C61A RID: 50714
+		// (get) Token: 0x0602E1C4 RID: 188868 RVA: 0x0064CEAF File Offset: 0x0064B0AF
+		// (set) Token: 0x0602E1C5 RID: 188869 RVA: 0x0064CEB7 File Offset: 0x0064B0B7
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602BA65 RID: 178789 RVA: 0x006020B8 File Offset: 0x006002B8
+		// Token: 0x0602E1C6 RID: 188870 RVA: 0x0064CEC0 File Offset: 0x0064B0C0
 		public ICaptionParamT()
 		{
 			this.StartTime = 0f;

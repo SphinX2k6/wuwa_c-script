@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x0200477F RID: 18303
+	// Token: 0x020036B0 RID: 14000
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class WorldMapDefine
 	{
-		// Token: 0x0602FE12 RID: 196114 RVA: 0x00B190D8 File Offset: 0x00B172D8
+		// Token: 0x060245DD RID: 148957 RVA: 0x00A48FB4 File Offset: 0x00A471B4
 		// Note: this type is marked as 'beforefieldinit'.
 		unsafe static WorldMapDefine()
 		{
@@ -183,46 +183,46 @@ namespace CSharpScript.Game.Module.WorldMap
 			};
 		}
 
-		// Token: 0x04019D06 RID: 105734
+		// Token: 0x040143B6 RID: 82870
 		public const string MULTI_MAP_SELECT_ICON_PATH = "SP_MarkMultiMapSelect";
 
-		// Token: 0x04019D07 RID: 105735
+		// Token: 0x040143B7 RID: 82871
 		public const string BLOCK_MARK_ICON_PATH = "SP_MarkBlock";
 
-		// Token: 0x04019D08 RID: 105736
+		// Token: 0x040143B8 RID: 82872
 		public const string SUB_ICON_PATH = "SP_MarkRecommend";
 
-		// Token: 0x04019D09 RID: 105737
+		// Token: 0x040143B9 RID: 82873
 		public const string MULTI_MAP_ICON_PATH = "SP_MarkMultiMap";
 
-		// Token: 0x04019D0A RID: 105738
+		// Token: 0x040143BA RID: 82874
 		public const string TEMPORARY_TELEPORT_NORMAL_ICON_PATH = "SP_MarkTime";
 
-		// Token: 0x04019D0B RID: 105739
+		// Token: 0x040143BB RID: 82875
 		public const string MORALE_FLAG_BOX_ICON_PATH = "SP_MarkGift";
 
-		// Token: 0x04019D0C RID: 105740
+		// Token: 0x040143BC RID: 82876
 		public const string MARK_ITEM_VIEW_PATH = "UiItem_WorldMapMark_Prefab";
 
-		// Token: 0x04019D0D RID: 105741
+		// Token: 0x040143BD RID: 82877
 		public const int MARK_CLICK_RANGE = 50;
 
-		// Token: 0x04019D0E RID: 105742
+		// Token: 0x040143BE RID: 82878
 		public const int DEBUG_SPHERE_DEFAULT_RADIUS = 30;
 
-		// Token: 0x04019D0F RID: 105743
+		// Token: 0x040143BF RID: 82879
 		public const int DEBUG_SPHERE_DEFAULT_SEGMENTS = 30;
 
-		// Token: 0x04019D10 RID: 105744
+		// Token: 0x040143C0 RID: 82880
 		public const int DEBUG_SPHERE_DEFAULT_DURATION = 3;
 
-		// Token: 0x04019D11 RID: 105745
+		// Token: 0x040143C1 RID: 82881
 		public const float SCALE_STEP = 0.1f;
 
-		// Token: 0x04019D12 RID: 105746
+		// Token: 0x040143C2 RID: 82882
 		public const int HUANG_LONG_COUNTRY_ID = 1;
 
-		// Token: 0x04019D13 RID: 105747
+		// Token: 0x040143C3 RID: 82883
 		[Nullable(new byte[]
 		{
 			1,
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.WorldMap
 		[StaticVariableRuleIgnore]
 		public static List<ValueTuple<int, Type>> SecondaryUiPanelComponentsRegisterInfoA;
 
-		// Token: 0x04019D14 RID: 105748
+		// Token: 0x040143C4 RID: 82884
 		[Nullable(new byte[]
 		{
 			1,
@@ -242,11 +242,11 @@ namespace CSharpScript.Game.Module.WorldMap
 		[StaticVariableRuleIgnore]
 		public static List<ValueTuple<int, Type>> SecondaryUiPanelComponentsRegisterInfoB;
 
-		// Token: 0x04019D15 RID: 105749
+		// Token: 0x040143C5 RID: 82885
 		[StaticVariableRuleIgnore]
 		public static readonly string[] OnlinePlayerIconPathList;
 
-		// Token: 0x04019D16 RID: 105750
+		// Token: 0x040143C6 RID: 82886
 		[StaticVariableRuleIgnore]
 		public static readonly string[] OnlinePlayerIconPathList2;
 	}

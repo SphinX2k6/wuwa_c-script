@@ -1,29 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002D02 RID: 11522
+// Token: 0x0200225C RID: 8796
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class WeaponConfig : ConfigBase
 {
-	// Token: 0x0601838A RID: 99210 RVA: 0x0062A609 File Offset: 0x00628809
+	// Token: 0x06015C2B RID: 89131 RVA: 0x006505DD File Offset: 0x0064E7DD
 	public WeaponConf? GetWeaponConfigByItemId(int itemId)
 	{
 		return ConfigWeaponConfByItemId.GetConfig(itemId, true);
 	}
 
-	// Token: 0x0601838B RID: 99211 RVA: 0x0062A612 File Offset: 0x00628812
+	// Token: 0x06015C2C RID: 89132 RVA: 0x006505E6 File Offset: 0x0064E7E6
 	[return: Nullable(2)]
 	public string GetWeaponName(string weaponNameId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(weaponNameId, null);
 	}
 
-	// Token: 0x0601838C RID: 99212 RVA: 0x0062A61C File Offset: 0x0062881C
+	// Token: 0x06015C2D RID: 89133 RVA: 0x006505F0 File Offset: 0x0064E7F0
 	public unsafe WeaponPropertyGrowth? GetWeaponPropertyGrowthConfig(int curveId, int level, int breach)
 	{
 		WeaponPropertyGrowth? config = ConfigWeaponPropertyGrowthByCurveIdLevelAndBreachLevel.GetConfig(curveId, level, breach, true);
@@ -42,7 +41,7 @@ public class WeaponConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0601838D RID: 99213 RVA: 0x0062A6B8 File Offset: 0x006288B8
+	// Token: 0x06015C2E RID: 89134 RVA: 0x0065068C File Offset: 0x0064E88C
 	public unsafe WeaponReson? GetWeaponResonanceConfig(int resonanceId, int level)
 	{
 		WeaponReson? config = ConfigWeaponResonByResonIdAndLevel.GetConfig(resonanceId, level, true);
@@ -60,21 +59,21 @@ public class WeaponConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0601838E RID: 99214 RVA: 0x0062A735 File Offset: 0x00628935
+	// Token: 0x06015C2F RID: 89135 RVA: 0x00650709 File Offset: 0x0064E909
 	[return: Nullable(2)]
 	public string GetWeaponResonanceDesc(string descId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(descId, null);
 	}
 
-	// Token: 0x0601838F RID: 99215 RVA: 0x0062A73E File Offset: 0x0062893E
+	// Token: 0x06015C30 RID: 89136 RVA: 0x00650712 File Offset: 0x0064E912
 	[return: Nullable(2)]
 	public string GetWeaponResonanceName(string resonanceNameId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(resonanceNameId, null);
 	}
 
-	// Token: 0x06018390 RID: 99216 RVA: 0x0062A748 File Offset: 0x00628948
+	// Token: 0x06015C31 RID: 89137 RVA: 0x0065071C File Offset: 0x0064E91C
 	[NullableContext(2)]
 	public string GetWeaponTypeName(int typeId)
 	{
@@ -86,7 +85,7 @@ public class WeaponConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x06018391 RID: 99217 RVA: 0x0062A788 File Offset: 0x00628988
+	// Token: 0x06015C32 RID: 89138 RVA: 0x0065075C File Offset: 0x0064E95C
 	[NullableContext(2)]
 	public string GetWeaponIconPath(int typeId)
 	{
@@ -104,33 +103,33 @@ public class WeaponConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x06018392 RID: 99218 RVA: 0x0062A7F4 File Offset: 0x006289F4
+	// Token: 0x06015C33 RID: 89139 RVA: 0x006507C8 File Offset: 0x0064E9C8
 	[NullableContext(2)]
 	public IReadOnlyList<WeaponBreach> GetWeaponBreachList(int breachId)
 	{
 		return ConfigWeaponBreachByBreachId.GetConfigList(breachId, true);
 	}
 
-	// Token: 0x06018393 RID: 99219 RVA: 0x0062A7FD File Offset: 0x006289FD
+	// Token: 0x06015C34 RID: 89140 RVA: 0x006507D1 File Offset: 0x0064E9D1
 	[NullableContext(2)]
 	public IReadOnlyList<WeaponLevel> GetWeaponLevelList(int levelId)
 	{
 		return ConfigWeaponLevelByLevelId.GetConfigList(levelId, true);
 	}
 
-	// Token: 0x06018394 RID: 99220 RVA: 0x0062A806 File Offset: 0x00628A06
+	// Token: 0x06015C35 RID: 89141 RVA: 0x006507DA File Offset: 0x0064E9DA
 	public WeaponLevel? GetWeaponLevelConfig(int levelId, int level)
 	{
 		return ConfigWeaponLevelByLevelIdAndLevel.GetConfig(levelId, level, true);
 	}
 
-	// Token: 0x06018395 RID: 99221 RVA: 0x0062A810 File Offset: 0x00628A10
+	// Token: 0x06015C36 RID: 89142 RVA: 0x006507E4 File Offset: 0x0064E9E4
 	public WeaponBreach? GetWeaponBreach(int breachId, int breachLevel)
 	{
 		return ConfigWeaponBreachByBreachIdAndLevel.GetConfig(breachId, breachLevel, true);
 	}
 
-	// Token: 0x06018396 RID: 99222 RVA: 0x0062A81C File Offset: 0x00628A1C
+	// Token: 0x06015C37 RID: 89143 RVA: 0x006507F0 File Offset: 0x0064E9F0
 	public int GetWeaponLevelLimit(int qualityId)
 	{
 		WeaponQualityInfo? config = ConfigWeaponQualityInfoById.GetConfig(qualityId, true);
@@ -141,115 +140,115 @@ public class WeaponConfig : ConfigBase
 		return config.GetValueOrDefault().LevelLimit;
 	}
 
-	// Token: 0x06018397 RID: 99223 RVA: 0x0062A84B File Offset: 0x00628A4B
+	// Token: 0x06015C38 RID: 89144 RVA: 0x0065081F File Offset: 0x0064EA1F
 	public WeaponExpItem? GetWeaponExpItemConfig(int itemId)
 	{
 		return ConfigWeaponExpItemById.GetConfig(itemId, true);
 	}
 
-	// Token: 0x06018398 RID: 99224 RVA: 0x0062A854 File Offset: 0x00628A54
+	// Token: 0x06015C39 RID: 89145 RVA: 0x00650828 File Offset: 0x0064EA28
 	public WeaponQualityInfo? GetWeaponQualityInfo(int qualityId)
 	{
 		return ConfigWeaponQualityInfoById.GetConfig(qualityId, true);
 	}
 
-	// Token: 0x06018399 RID: 99225 RVA: 0x0062A860 File Offset: 0x00628A60
+	// Token: 0x06015C3A RID: 89146 RVA: 0x00650834 File Offset: 0x0064EA34
 	public float GetWeaponLevelUpCostRatio()
 	{
 		return (float)ConfigCommonParamById.GetIntConfig("WeaponLevelUpCoinCost").GetValueOrDefault() / 1000f;
 	}
 
-	// Token: 0x0601839A RID: 99226 RVA: 0x0062A888 File Offset: 0x00628A88
+	// Token: 0x06015C3B RID: 89147 RVA: 0x0065085C File Offset: 0x0064EA5C
 	public float GetWeaponExpCoefficient()
 	{
 		return (float)ConfigCommonParamById.GetIntConfig("WeaponStrengthenExpCost").GetValueOrDefault() / 1000f;
 	}
 
-	// Token: 0x0601839B RID: 99227 RVA: 0x0062A8B0 File Offset: 0x00628AB0
+	// Token: 0x06015C3C RID: 89148 RVA: 0x00650884 File Offset: 0x0064EA84
 	public int GetWeaponQualityCheck()
 	{
 		return ConfigCommonParamById.GetIntConfig("weapon_strengthen_panel_restrain1").GetValueOrDefault();
 	}
 
-	// Token: 0x0601839C RID: 99228 RVA: 0x0062A8D0 File Offset: 0x00628AD0
+	// Token: 0x06015C3D RID: 89149 RVA: 0x006508A4 File Offset: 0x0064EAA4
 	public int GetWeaponLevelCheck()
 	{
 		return ConfigCommonParamById.GetIntConfig("weapon_strengthen_panel_restrain2").GetValueOrDefault();
 	}
 
-	// Token: 0x0601839D RID: 99229 RVA: 0x0062A8F0 File Offset: 0x00628AF0
+	// Token: 0x06015C3E RID: 89150 RVA: 0x006508C4 File Offset: 0x0064EAC4
 	public int GetWeaponResonanceCheck()
 	{
 		return ConfigCommonParamById.GetIntConfig("weapon_quick_strengthen_restrain_num").GetValueOrDefault();
 	}
 
-	// Token: 0x0601839E RID: 99230 RVA: 0x0062A910 File Offset: 0x00628B10
+	// Token: 0x06015C3F RID: 89151 RVA: 0x006508E4 File Offset: 0x0064EAE4
 	public int GetMaterialItemMaxCount()
 	{
 		return ConfigCommonParamById.GetIntConfig("weapon_strengthen_num_limit").GetValueOrDefault();
 	}
 
-	// Token: 0x0601839F RID: 99231 RVA: 0x0062A92F File Offset: 0x00628B2F
+	// Token: 0x06015C40 RID: 89152 RVA: 0x00650903 File Offset: 0x0064EB03
 	public QualityInfo? GetItemQuality(int qualityId)
 	{
 		return ConfigQualityInfoById.GetConfig(qualityId, true);
 	}
 
-	// Token: 0x060183A0 RID: 99232 RVA: 0x0062A938 File Offset: 0x00628B38
+	// Token: 0x06015C41 RID: 89153 RVA: 0x0065090C File Offset: 0x0064EB0C
 	public WeaponModelTransform? GetWeaponModelTransformData(int transformId)
 	{
 		return ConfigWeaponModelTransformById.GetConfig(transformId, true);
 	}
 
-	// Token: 0x060183A1 RID: 99233 RVA: 0x0062A941 File Offset: 0x00628B41
+	// Token: 0x06015C42 RID: 89154 RVA: 0x00650915 File Offset: 0x0064EB15
 	public TrialWeaponInfo? GetTrialWeaponConfig(int id)
 	{
 		return ConfigTrialWeaponInfoById.GetConfig(id, true);
 	}
 
-	// Token: 0x060183A2 RID: 99234 RVA: 0x0062A94A File Offset: 0x00628B4A
+	// Token: 0x06015C43 RID: 89155 RVA: 0x00650920 File Offset: 0x0064EB20
 	[NullableContext(2)]
 	public List<WeaponConf> GetWeaponForHandBook()
 	{
 		IReadOnlyList<WeaponConf> configList = ConfigWeaponConfByIsShow.GetConfigList(true, true);
-		if (configList == null)
+		if (configList != null)
 		{
-			return null;
+			return new List<WeaponConf>(configList);
 		}
-		return configList.ToList<WeaponConf>();
+		return null;
 	}
 
-	// Token: 0x060183A3 RID: 99235 RVA: 0x0062A95E File Offset: 0x00628B5E
+	// Token: 0x06015C44 RID: 89156 RVA: 0x00650940 File Offset: 0x0064EB40
 	[NullableContext(2)]
 	public List<WeaponSkin> GetWeaponSkinForHandBook()
 	{
 		IReadOnlyList<WeaponSkin> configList = ConfigWeaponSkinByIsShow.GetConfigList(true, true);
-		if (configList == null)
+		if (configList != null)
 		{
-			return null;
+			return new List<WeaponSkin>(configList);
 		}
-		return configList.ToList<WeaponSkin>();
+		return null;
 	}
 
-	// Token: 0x060183A4 RID: 99236 RVA: 0x0062A974 File Offset: 0x00628B74
+	// Token: 0x06015C45 RID: 89157 RVA: 0x00650960 File Offset: 0x0064EB60
 	public WeaponSkin GetWeaponSkinConfig(int id)
 	{
 		return ConfigWeaponSkinById.GetConfig(id, true).Value;
 	}
 
-	// Token: 0x060183A5 RID: 99237 RVA: 0x0062A990 File Offset: 0x00628B90
+	// Token: 0x06015C46 RID: 89158 RVA: 0x0065097C File Offset: 0x0064EB7C
 	[NullableContext(2)]
 	public List<WeaponExpItem> GetWeaponExpItemList()
 	{
 		IReadOnlyList<WeaponExpItem> configList = ConfigWeaponExpItemAll.GetConfigList(true);
-		if (configList == null)
+		if (configList != null)
 		{
-			return null;
+			return new List<WeaponExpItem>(configList);
 		}
-		return configList.ToList<WeaponExpItem>();
+		return null;
 	}
 
-	// Token: 0x060183A6 RID: 99238 RVA: 0x0062A9A3 File Offset: 0x00628BA3
+	// Token: 0x06015C47 RID: 89159 RVA: 0x0065099B File Offset: 0x0064EB9B
 	protected override bool OnClear()
 	{
 		this.WeaponConfigMap.Clear();
@@ -259,8 +258,8 @@ public class WeaponConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x170020A9 RID: 8361
-	// (get) Token: 0x060183A7 RID: 99239 RVA: 0x0062A9D2 File Offset: 0x00628BD2
+	// Token: 0x17002104 RID: 8452
+	// (get) Token: 0x06015C48 RID: 89160 RVA: 0x006509CA File Offset: 0x0064EBCA
 	public static WeaponConfig Instance
 	{
 		get
@@ -269,7 +268,7 @@ public class WeaponConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060183A8 RID: 99240 RVA: 0x0062A9D9 File Offset: 0x00628BD9
+	// Token: 0x06015C49 RID: 89161 RVA: 0x006509D1 File Offset: 0x0064EBD1
 	public static WeaponConfig GetOrCreateInstance()
 	{
 		if (WeaponConfig._Instance == null)
@@ -279,7 +278,7 @@ public class WeaponConfig : ConfigBase
 		return WeaponConfig._Instance;
 	}
 
-	// Token: 0x060183A9 RID: 99241 RVA: 0x0062A9ED File Offset: 0x00628BED
+	// Token: 0x06015C4A RID: 89162 RVA: 0x006509E5 File Offset: 0x0064EBE5
 	public static bool CreateInstance()
 	{
 		if (WeaponConfig._Instance != null)
@@ -290,36 +289,36 @@ public class WeaponConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060183AA RID: 99242 RVA: 0x0062AA03 File Offset: 0x00628C03
+	// Token: 0x06015C4B RID: 89163 RVA: 0x006509FB File Offset: 0x0064EBFB
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060183AB RID: 99243 RVA: 0x0062AA05 File Offset: 0x00628C05
+	// Token: 0x06015C4C RID: 89164 RVA: 0x006509FD File Offset: 0x0064EBFD
 	public static void ResetStaticDefaultValue()
 	{
 		WeaponConfig._Instance = null;
 	}
 
-	// Token: 0x060183AC RID: 99244 RVA: 0x0062AA0D File Offset: 0x00628C0D
+	// Token: 0x06015C4D RID: 89165 RVA: 0x00650A05 File Offset: 0x0064EC05
 	static WeaponConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WeaponConfig.CreateStaticDefaultValue), new Action(WeaponConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B409 RID: 46089
+	// Token: 0x0400B77E RID: 46974
 	private readonly Dictionary<int, WeaponConf> WeaponConfigMap = new Dictionary<int, WeaponConf>();
 
-	// Token: 0x0400B40A RID: 46090
+	// Token: 0x0400B77F RID: 46975
 	private readonly Dictionary<int, WeaponExpItem> WeaponExpItemMap = new Dictionary<int, WeaponExpItem>();
 
-	// Token: 0x0400B40B RID: 46091
+	// Token: 0x0400B780 RID: 46976
 	private readonly Dictionary<int, WeaponQualityInfo> WeaponQualityInfoMap = new Dictionary<int, WeaponQualityInfo>();
 
-	// Token: 0x0400B40C RID: 46092
+	// Token: 0x0400B781 RID: 46977
 	private readonly Dictionary<int, TrialWeaponInfo> TrialWeaponInfoMap = new Dictionary<int, TrialWeaponInfo>();
 
-	// Token: 0x0400B40D RID: 46093
+	// Token: 0x0400B782 RID: 46978
 	[Nullable(2)]
 	private static WeaponConfig _Instance;
 }

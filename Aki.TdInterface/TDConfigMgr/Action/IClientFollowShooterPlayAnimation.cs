@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018BA RID: 6330
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A47 RID: 6727
 	public class IClientFollowShooterPlayAnimation : IClientFollowShooterLeisureInteractType
 	{
-		// Token: 0x060087D3 RID: 34771 RVA: 0x00141B84 File Offset: 0x0013FD84
+		// Token: 0x06008F03 RID: 36611 RVA: 0x00151474 File Offset: 0x0014F674
 		private IClientFollowShooterPlayAnimation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060087D4 RID: 34772 RVA: 0x00141BBC File Offset: 0x0013FDBC
+		// Token: 0x06008F04 RID: 36612 RVA: 0x001514AC File Offset: 0x0014F6AC
 		public static IClientFollowShooterPlayAnimation Create([Nullable(2)] IClientFollowShooterPlayAnimation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060087D5 RID: 34773 RVA: 0x00141BCF File Offset: 0x0013FDCF
+		// Token: 0x06008F05 RID: 36613 RVA: 0x001514BF File Offset: 0x0014F6BF
 		public static IClientFollowShooterPlayAnimation CreateFromSetValue([Nullable(2)] IClientFollowShooterPlayAnimation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060087D6 RID: 34774 RVA: 0x00141BE2 File Offset: 0x0013FDE2
+		// Token: 0x06008F06 RID: 36614 RVA: 0x001514D2 File Offset: 0x0014F6D2
 		public new IClientFollowShooterPlayAnimation_SetValue ToSetValue()
 		{
 			return new IClientFollowShooterPlayAnimation_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C27 RID: 11303
-		// (get) Token: 0x060087D7 RID: 34775 RVA: 0x00141C01 File Offset: 0x0013FE01
-		// (set) Token: 0x060087D8 RID: 34776 RVA: 0x00141C2C File Offset: 0x0013FE2C
+		// Token: 0x17002E23 RID: 11811
+		// (get) Token: 0x06008F07 RID: 36615 RVA: 0x001514F1 File Offset: 0x0014F6F1
+		// (set) Token: 0x06008F08 RID: 36616 RVA: 0x0015151C File Offset: 0x0014F71C
 		public override EClientFollowShooterLeisureInteractType Type
 		{
 			get
@@ -73,7 +71,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				if (this.PocoInterface == null)
 				{
-					return EClientFollowShooterLeisureInteractType.ResetToPlayer;
+					return EClientFollowShooterLeisureInteractType.PlayAnimation;
 				}
 				return this.PocoInterface.Type;
 			}
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C28 RID: 11304
-		// (get) Token: 0x060087D9 RID: 34777 RVA: 0x00141C3A File Offset: 0x0013FE3A
-		// (set) Token: 0x060087DA RID: 34778 RVA: 0x00141C65 File Offset: 0x0013FE65
+		// Token: 0x17002E24 RID: 11812
+		// (get) Token: 0x06008F09 RID: 36617 RVA: 0x0015152A File Offset: 0x0014F72A
+		// (set) Token: 0x06008F0A RID: 36618 RVA: 0x00151555 File Offset: 0x0014F755
 		public virtual string Montage
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400556A RID: 21866
+		// Token: 0x040059BA RID: 22970
 		[Nullable(2)]
 		protected new IClientFollowShooterPlayAnimation FbInstance;
 
-		// Token: 0x0400556B RID: 21867
+		// Token: 0x040059BB RID: 22971
 		[Nullable(2)]
 		protected new IClientFollowShooterPlayAnimation_SetValue PocoInterface;
 	}

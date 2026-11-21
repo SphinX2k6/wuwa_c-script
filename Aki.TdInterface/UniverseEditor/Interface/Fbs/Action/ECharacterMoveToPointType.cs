@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F36 RID: 24374
+	// Token: 0x0200657A RID: 25978
 	public enum ECharacterMoveToPointType : byte
 	{
-		// Token: 0x0400FC86 RID: 64646
+		// Token: 0x040109FC RID: 68092
 		Walk,
-		// Token: 0x0400FC87 RID: 64647
+		// Token: 0x040109FD RID: 68093
 		Adaptive
 	}
 }

@@ -15,12 +15,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005322 RID: 21282
+	// Token: 0x020042F2 RID: 17138
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueIllustratedTokenTabView : UiTabViewBase
 	{
-		// Token: 0x060366B5 RID: 222901 RVA: 0x00CE1660 File Offset: 0x00CDF860
+		// Token: 0x0602B5B1 RID: 177585 RVA: 0x00C2F030 File Offset: 0x00C2D230
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x060366B6 RID: 222902 RVA: 0x00CE17A8 File Offset: 0x00CDF9A8
+		// Token: 0x0602B5B2 RID: 177586 RVA: 0x00C2F178 File Offset: 0x00C2D378
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueIllustratedTokenTabView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -58,31 +58,31 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060366B7 RID: 222903 RVA: 0x00CE17EB File Offset: 0x00CDF9EB
+		// Token: 0x0602B5B3 RID: 177587 RVA: 0x00C2F1BB File Offset: 0x00C2D3BB
 		protected override void OnBeforeShow()
 		{
 			this.RefreshItemData();
 		}
 
-		// Token: 0x060366B8 RID: 222904 RVA: 0x00CE17F3 File Offset: 0x00CDF9F3
+		// Token: 0x0602B5B4 RID: 177588 RVA: 0x00C2F1C3 File Offset: 0x00C2D3C3
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.PermanentRogueRewardUpdate, new Action(this.OnGetRewardUpdate));
 		}
 
-		// Token: 0x060366B9 RID: 222905 RVA: 0x00CE1811 File Offset: 0x00CDFA11
+		// Token: 0x0602B5B5 RID: 177589 RVA: 0x00C2F1E1 File Offset: 0x00C2D3E1
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.PermanentRogueRewardUpdate, new Action(this.OnGetRewardUpdate));
 		}
 
-		// Token: 0x060366BA RID: 222906 RVA: 0x00CE182F File Offset: 0x00CDFA2F
+		// Token: 0x0602B5B6 RID: 177590 RVA: 0x00C2F1FF File Offset: 0x00C2D3FF
 		protected override void OnStart()
 		{
 			this.RefreshGetAllRewardBtn();
 		}
 
-		// Token: 0x060366BB RID: 222907 RVA: 0x00CE1837 File Offset: 0x00CDFA37
+		// Token: 0x0602B5B7 RID: 177591 RVA: 0x00C2F207 File Offset: 0x00C2D407
 		protected override void OnBeforeDestroy()
 		{
 			this.SelectedItemViewData = null;
@@ -90,13 +90,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.RewardItemBtn = null;
 		}
 
-		// Token: 0x060366BC RID: 222908 RVA: 0x00CE184E File Offset: 0x00CDFA4E
+		// Token: 0x0602B5B8 RID: 177592 RVA: 0x00C2F21E File Offset: 0x00C2D41E
 		private void InitializeItemScrollView()
 		{
 			this.ItemScrollView = new LoopScrollView<RogueIllustratedTokenMediumItemGrid, RogueTokenViewData>(base.GetLoopScrollViewComponent(0), base.GetItem(7).GetOwner() as AUIBaseActor, new Func<RogueIllustratedTokenMediumItemGrid>(this.OnGridProxyCreate), false);
 		}
 
-		// Token: 0x060366BD RID: 222909 RVA: 0x00CE1880 File Offset: 0x00CDFA80
+		// Token: 0x0602B5B9 RID: 177593 RVA: 0x00C2F250 File Offset: 0x00C2D450
 		private void RefreshItemData()
 		{
 			RogueResTheme? config = ((RogueIllustratedTabData)this.Params).Config;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			instance.SetLocalTextNew(text, textStringId, new <>z__ReadOnlySingleElementList<object>(defaultInterpolatedStringHandler.ToStringAndClear()));
 		}
 
-		// Token: 0x060366BE RID: 222910 RVA: 0x00CE193B File Offset: 0x00CDFB3B
+		// Token: 0x0602B5BA RID: 177594 RVA: 0x00C2F30B File Offset: 0x00C2D50B
 		private RogueIllustratedTokenMediumItemGrid OnGridProxyCreate()
 		{
 			RogueIllustratedTokenMediumItemGrid rogueIllustratedTokenMediumItemGrid = new RogueIllustratedTokenMediumItemGrid();
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return rogueIllustratedTokenMediumItemGrid;
 		}
 
-		// Token: 0x060366BF RID: 222911 RVA: 0x00CE1954 File Offset: 0x00CDFB54
+		// Token: 0x0602B5BB RID: 177595 RVA: 0x00C2F324 File Offset: 0x00C2D524
 		private void OnItemButtonClicked(RogueTokenViewData data)
 		{
 			if (this.SelectedItemViewData == data)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.SelectedItem(data);
 		}
 
-		// Token: 0x060366C0 RID: 222912 RVA: 0x00CE1998 File Offset: 0x00CDFB98
+		// Token: 0x0602B5BC RID: 177596 RVA: 0x00C2F368 File Offset: 0x00C2D568
 		private void OnClickGetAllReward()
 		{
 			RogueResTheme? config = ((RogueIllustratedTabData)this.Params).Config;
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			(ActivityManager.GetActivityController(ActivityType.RogueRes) as ActivityPermanentRogueController).RequestIllustrationAward(list.ToArray());
 		}
 
-		// Token: 0x060366C1 RID: 222913 RVA: 0x00CE1A2C File Offset: 0x00CDFC2C
+		// Token: 0x0602B5BD RID: 177597 RVA: 0x00C2F3FC File Offset: 0x00C2D5FC
 		private void OnClickGetReward(MediumItemGridExtendCallback _)
 		{
 			if (this.SelectedItemViewData == null)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 			if (ActivityPermanentRogueModel.Instance.GetCollectItemState(this.SelectedItemViewData.GetCollectionIndex()) != SignState.Unlock)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(this.CurRewardItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(this.CurRewardItemId, true, null, false);
 				return;
 			}
 			(ActivityManager.GetActivityController(ActivityType.RogueRes) as ActivityPermanentRogueController).RequestIllustrationAward(new int[]
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			});
 		}
 
-		// Token: 0x060366C2 RID: 222914 RVA: 0x00CE1A94 File Offset: 0x00CDFC94
+		// Token: 0x0602B5BE RID: 177598 RVA: 0x00C2F464 File Offset: 0x00C2D664
 		private List<RogueTokenViewData> GenerateTokenViewData(RogueResTheme? config)
 		{
 			IEnumerable<int> tokenIndexSet = ActivityPermanentRogueModel.Instance.GetTokenIndexSet(config);
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return list;
 		}
 
-		// Token: 0x060366C3 RID: 222915 RVA: 0x00CE1B28 File Offset: 0x00CDFD28
+		// Token: 0x0602B5BF RID: 177599 RVA: 0x00C2F4F8 File Offset: 0x00C2D6F8
 		[NullableContext(2)]
 		private void SelectedItem(RogueTokenViewData data)
 		{
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.RefreshSelectedItemView(data);
 		}
 
-		// Token: 0x060366C4 RID: 222916 RVA: 0x00CE1B38 File Offset: 0x00CDFD38
+		// Token: 0x0602B5C0 RID: 177600 RVA: 0x00C2F508 File Offset: 0x00C2D708
 		private void RefreshSelectedItemView(RogueTokenViewData itemViewData)
 		{
 			if (this.SelectedItemViewData != null)
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			item.SetUIActive(this.RefreshRewardItemGrid(config.Value.Award, collectItemState == SignState.Lock));
 		}
 
-		// Token: 0x060366C5 RID: 222917 RVA: 0x00CE1C04 File Offset: 0x00CDFE04
+		// Token: 0x0602B5C1 RID: 177601 RVA: 0x00C2F5D4 File Offset: 0x00C2D7D4
 		public void RefreshItemTipsComp(RogueTokenViewData itemViewData)
 		{
 			RogueResGainData tokenTipsData = ActivityPermanentRogueModel.Instance.GetTokenTipsData(itemViewData.GetConfigId());
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			infoItem.Refresh(tokenTipsData, true, 0);
 		}
 
-		// Token: 0x060366C6 RID: 222918 RVA: 0x00CE1C38 File Offset: 0x00CDFE38
+		// Token: 0x0602B5C2 RID: 177602 RVA: 0x00C2F608 File Offset: 0x00C2D808
 		private RogueTokenViewData CreateTokenViewData(int indexId)
 		{
 			RogueResCollection? config = ConfigRogueResCollectionByIdKey.GetConfig(indexId, true);
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return new RogueTokenViewData(illustratedTokenDataInfo);
 		}
 
-		// Token: 0x060366C7 RID: 222919 RVA: 0x00CE1CC8 File Offset: 0x00CDFEC8
+		// Token: 0x0602B5C3 RID: 177603 RVA: 0x00C2F698 File Offset: 0x00C2D898
 		private bool RefreshRewardItemGrid(int rewardId, bool isLock)
 		{
 			DropPackage? dropPackage = CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackage(rewardId);
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return true;
 		}
 
-		// Token: 0x060366C8 RID: 222920 RVA: 0x00CE1E48 File Offset: 0x00CE0048
+		// Token: 0x0602B5C4 RID: 177604 RVA: 0x00C2F818 File Offset: 0x00C2DA18
 		private void RefreshGetAllRewardBtn()
 		{
 			RogueResTheme? config = ((RogueIllustratedTabData)this.Params).Config;
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			button.RootUIComp.Get().SetUIActive(haveTokenAward);
 		}
 
-		// Token: 0x060366C9 RID: 222921 RVA: 0x00CE1EAC File Offset: 0x00CE00AC
+		// Token: 0x0602B5C5 RID: 177605 RVA: 0x00C2F87C File Offset: 0x00C2DA7C
 		private void OnGetRewardUpdate()
 		{
 			this.RefreshGetAllRewardBtn();
@@ -359,7 +359,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.RefreshSelectedItemView(this.SelectedItemViewData);
 		}
 
-		// Token: 0x060366CD RID: 222925 RVA: 0x00CE1FB4 File Offset: 0x00CE01B4
+		// Token: 0x0602B5C9 RID: 177609 RVA: 0x00C2F984 File Offset: 0x00C2DB84
 		[CompilerGenerated]
 		internal static int <GenerateTokenViewData>g__stateSwitch|19_0(SignState a)
 		{
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return 0;
 		}
 
-		// Token: 0x0401CC4E RID: 117838
+		// Token: 0x04017684 RID: 95876
 		[Nullable(new byte[]
 		{
 			2,
@@ -383,21 +383,21 @@ namespace CSharpScript.Game.Module.PermanentRogue
 		})]
 		private LoopScrollView<RogueIllustratedTokenMediumItemGrid, RogueTokenViewData> ItemScrollView;
 
-		// Token: 0x0401CC4F RID: 117839
+		// Token: 0x04017685 RID: 95877
 		private List<RogueTokenViewData> ItemViewDataList = new List<RogueTokenViewData>();
 
-		// Token: 0x0401CC50 RID: 117840
+		// Token: 0x04017686 RID: 95878
 		[Nullable(2)]
 		private RogueTokenViewData SelectedItemViewData;
 
-		// Token: 0x0401CC51 RID: 117841
+		// Token: 0x04017687 RID: 95879
 		private int CurRewardItemId;
 
-		// Token: 0x0401CC52 RID: 117842
+		// Token: 0x04017688 RID: 95880
 		[Nullable(2)]
 		private RogueIllustratedTokenItem InfoItem;
 
-		// Token: 0x0401CC53 RID: 117843
+		// Token: 0x04017689 RID: 95881
 		[Nullable(2)]
 		private SmallItemGrid RewardItemBtn;
 	}

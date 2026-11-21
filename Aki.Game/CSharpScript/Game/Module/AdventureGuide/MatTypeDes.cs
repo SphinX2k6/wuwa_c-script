@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005ECD RID: 24269
+	// Token: 0x02004EB2 RID: 20146
 	public class MatTypeDes : IStaticVariableResetter
 	{
-		// Token: 0x0603DB40 RID: 252736 RVA: 0x00EE5E3C File Offset: 0x00EE403C
+		// Token: 0x06032AD0 RID: 207568 RVA: 0x00E37388 File Offset: 0x00E35588
 		static MatTypeDes()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MatTypeDes.CreateStaticDefaultValue), new Action(MatTypeDes.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x17008EE0 RID: 36576
-		// (get) Token: 0x0603DB41 RID: 252737 RVA: 0x00EE5E5B File Offset: 0x00EE405B
+		// Token: 0x170062B2 RID: 25266
+		// (get) Token: 0x06032AD1 RID: 207569 RVA: 0x00E373A7 File Offset: 0x00E355A7
 		[Nullable(1)]
 		public static Dictionary<EMatType, string> Values
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x0603DB42 RID: 252738 RVA: 0x00EE5E62 File Offset: 0x00EE4062
+		// Token: 0x06032AD2 RID: 207570 RVA: 0x00E373AE File Offset: 0x00E355AE
 		public static void CreateStaticDefaultValue()
 		{
 			Dictionary<EMatType, string> dictionary = new Dictionary<EMatType, string>();
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			MatTypeDes._values = dictionary;
 		}
 
-		// Token: 0x0603DB43 RID: 252739 RVA: 0x00EE5E9E File Offset: 0x00EE409E
+		// Token: 0x06032AD3 RID: 207571 RVA: 0x00E373EA File Offset: 0x00E355EA
 		public static void ResetStaticDefaultValue()
 		{
 			MatTypeDes._values = null;
 		}
 
-		// Token: 0x0402035E RID: 131934
+		// Token: 0x0401AE25 RID: 110117
 		[Nullable(new byte[]
 		{
 			2,

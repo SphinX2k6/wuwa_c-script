@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063CD RID: 25549
+	// Token: 0x02006A4A RID: 27210
 	public struct IClientGroupAiCommunicate : IFlatbufferObject
 	{
-		// Token: 0x1700BE58 RID: 48728
-		// (get) Token: 0x0602C313 RID: 181011 RVA: 0x006112A9 File Offset: 0x0060F4A9
+		// Token: 0x1700C7E9 RID: 51177
+		// (get) Token: 0x0602EABE RID: 191166 RVA: 0x0065C9F5 File Offset: 0x0065ABF5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C314 RID: 181012 RVA: 0x006112B6 File Offset: 0x0060F4B6
+		// Token: 0x0602EABF RID: 191167 RVA: 0x0065CA02 File Offset: 0x0065AC02
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C315 RID: 181013 RVA: 0x006112C0 File Offset: 0x0060F4C0
+		// Token: 0x0602EAC0 RID: 191168 RVA: 0x0065CA0C File Offset: 0x0065AC0C
 		public static IClientGroupAiCommunicate GetRootAsIClientGroupAiCommunicate(ByteBuffer _bb)
 		{
 			return IClientGroupAiCommunicate.GetRootAsIClientGroupAiCommunicate(_bb, default(IClientGroupAiCommunicate));
 		}
 
-		// Token: 0x0602C316 RID: 181014 RVA: 0x006112DC File Offset: 0x0060F4DC
+		// Token: 0x0602EAC1 RID: 191169 RVA: 0x0065CA28 File Offset: 0x0065AC28
 		public static IClientGroupAiCommunicate GetRootAsIClientGroupAiCommunicate(ByteBuffer _bb, IClientGroupAiCommunicate obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C317 RID: 181015 RVA: 0x006112F9 File Offset: 0x0060F4F9
+		// Token: 0x0602EAC2 RID: 191170 RVA: 0x0065CA45 File Offset: 0x0065AC45
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C318 RID: 181016 RVA: 0x00611308 File Offset: 0x0060F508
+		// Token: 0x0602EAC3 RID: 191171 RVA: 0x0065CA54 File Offset: 0x0065AC54
 		public IClientGroupAiCommunicate __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BE59 RID: 48729
-		// (get) Token: 0x0602C319 RID: 181017 RVA: 0x00611318 File Offset: 0x0060F518
+		// Token: 0x1700C7EA RID: 51178
+		// (get) Token: 0x0602EAC4 RID: 191172 RVA: 0x0065CA64 File Offset: 0x0065AC64
 		public EExecClientBattleActionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BE5A RID: 48730
-		// (get) Token: 0x0602C31A RID: 181018 RVA: 0x00611354 File Offset: 0x0060F554
+		// Token: 0x1700C7EB RID: 51179
+		// (get) Token: 0x0602EAC5 RID: 191173 RVA: 0x0065CAA0 File Offset: 0x0065ACA0
 		public int GroupEntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BE5B RID: 48731
-		// (get) Token: 0x0602C31B RID: 181019 RVA: 0x00611390 File Offset: 0x0060F590
+		// Token: 0x1700C7EC RID: 51180
+		// (get) Token: 0x0602EAC6 RID: 191174 RVA: 0x0065CADC File Offset: 0x0065ACDC
 		public TGroupAiCommunicateOption OptionType
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C31C RID: 181020 RVA: 0x006113CC File Offset: 0x0060F5CC
+		// Token: 0x0602EAC7 RID: 191175 RVA: 0x0065CB18 File Offset: 0x0065AD18
 		public TTable? Option<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -103,19 +103,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602C31D RID: 181021 RVA: 0x00611414 File Offset: 0x0060F614
+		// Token: 0x0602EAC8 RID: 191176 RVA: 0x0065CB60 File Offset: 0x0065AD60
 		public IGroupAiCommunicateAddTag OptionAsIGroupAiCommunicateAddTag()
 		{
 			return this.Option<IGroupAiCommunicateAddTag>().Value;
 		}
 
-		// Token: 0x0602C31E RID: 181022 RVA: 0x00611430 File Offset: 0x0060F630
+		// Token: 0x0602EAC9 RID: 191177 RVA: 0x0065CB7C File Offset: 0x0065AD7C
 		public IGroupAiCommunicateRemoveTag OptionAsIGroupAiCommunicateRemoveTag()
 		{
 			return this.Option<IGroupAiCommunicateRemoveTag>().Value;
 		}
 
-		// Token: 0x0602C31F RID: 181023 RVA: 0x0061144B File Offset: 0x0060F64B
+		// Token: 0x0602EACA RID: 191178 RVA: 0x0065CB97 File Offset: 0x0065AD97
 		public static Offset<IClientGroupAiCommunicate> CreateIClientGroupAiCommunicate(FlatBufferBuilder builder, EExecClientBattleActionType Type = EExecClientBattleActionType.SendTagEventToControlCharacter, int GroupEntityId = 0, TGroupAiCommunicateOption Option_type = TGroupAiCommunicateOption.NONE, int OptionOffset = 0)
 		{
 			builder.StartTable(4);
@@ -126,43 +126,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientGroupAiCommunicate.EndIClientGroupAiCommunicate(builder);
 		}
 
-		// Token: 0x0602C320 RID: 181024 RVA: 0x00611477 File Offset: 0x0060F677
+		// Token: 0x0602EACB RID: 191179 RVA: 0x0065CBC3 File Offset: 0x0065ADC3
 		public static void StartIClientGroupAiCommunicate(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602C321 RID: 181025 RVA: 0x00611480 File Offset: 0x0060F680
+		// Token: 0x0602EACC RID: 191180 RVA: 0x0065CBCC File Offset: 0x0065ADCC
 		public static void AddType(FlatBufferBuilder builder, EExecClientBattleActionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602C322 RID: 181026 RVA: 0x0061148B File Offset: 0x0060F68B
+		// Token: 0x0602EACD RID: 191181 RVA: 0x0065CBD7 File Offset: 0x0065ADD7
 		public static void AddGroupEntityId(FlatBufferBuilder builder, int groupEntityId)
 		{
 			builder.AddInt(1, groupEntityId, 0);
 		}
 
-		// Token: 0x0602C323 RID: 181027 RVA: 0x00611496 File Offset: 0x0060F696
+		// Token: 0x0602EACE RID: 191182 RVA: 0x0065CBE2 File Offset: 0x0065ADE2
 		public static void AddOptionType(FlatBufferBuilder builder, TGroupAiCommunicateOption optionType)
 		{
 			builder.AddByte(2, (byte)optionType, 0);
 		}
 
-		// Token: 0x0602C324 RID: 181028 RVA: 0x006114A1 File Offset: 0x0060F6A1
+		// Token: 0x0602EACF RID: 191183 RVA: 0x0065CBED File Offset: 0x0065ADED
 		public static void AddOption(FlatBufferBuilder builder, int optionOffset)
 		{
 			builder.AddOffset(3, optionOffset, 0);
 		}
 
-		// Token: 0x0602C325 RID: 181029 RVA: 0x006114AC File Offset: 0x0060F6AC
+		// Token: 0x0602EAD0 RID: 191184 RVA: 0x0065CBF8 File Offset: 0x0065ADF8
 		public static Offset<IClientGroupAiCommunicate> EndIClientGroupAiCommunicate(FlatBufferBuilder builder)
 		{
 			return new Offset<IClientGroupAiCommunicate>(builder.EndTable());
 		}
 
-		// Token: 0x0602C326 RID: 181030 RVA: 0x006114BC File Offset: 0x0060F6BC
+		// Token: 0x0602EAD1 RID: 191185 RVA: 0x0065CC08 File Offset: 0x0065AE08
 		public IClientGroupAiCommunicateT UnPack()
 		{
 			IClientGroupAiCommunicateT clientGroupAiCommunicateT = new IClientGroupAiCommunicateT();
@@ -170,7 +170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return clientGroupAiCommunicateT;
 		}
 
-		// Token: 0x0602C327 RID: 181031 RVA: 0x006114D8 File Offset: 0x0060F6D8
+		// Token: 0x0602EAD2 RID: 191186 RVA: 0x0065CC24 File Offset: 0x0065AE24
 		public void UnPackTo(IClientGroupAiCommunicateT _o)
 		{
 			_o.Type = this.Type;
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.Option.Value = ((this.Option<IGroupAiCommunicateRemoveTag>() != null) ? this.Option<IGroupAiCommunicateRemoveTag>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0602C328 RID: 181032 RVA: 0x00611594 File Offset: 0x0060F794
+		// Token: 0x0602EAD3 RID: 191187 RVA: 0x0065CCE0 File Offset: 0x0065AEE0
 		public static Offset<IClientGroupAiCommunicate> Pack(FlatBufferBuilder builder, IClientGroupAiCommunicateT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientGroupAiCommunicate.CreateIClientGroupAiCommunicate(builder, _o.Type, _o.GroupEntityId, option_type, optionOffset);
 		}
 
-		// Token: 0x040109A9 RID: 68009
+		// Token: 0x040117CA RID: 71626
 		private Table __p;
 	}
 }

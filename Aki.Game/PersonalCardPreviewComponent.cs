@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023CD RID: 9165
+// Token: 0x020018B2 RID: 6322
 public class PersonalCardPreviewComponent : UiPanelBase, IItemTipsUiProxy
 {
-	// Token: 0x0601252F RID: 75055 RVA: 0x004835B4 File Offset: 0x004817B4
+	// Token: 0x0600F9E1 RID: 63969 RVA: 0x00490AB4 File Offset: 0x0048ECB4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,19 +29,19 @@ public class PersonalCardPreviewComponent : UiPanelBase, IItemTipsUiProxy
 		};
 	}
 
-	// Token: 0x06012530 RID: 75056 RVA: 0x00483692 File Offset: 0x00481892
+	// Token: 0x0600F9E2 RID: 63970 RVA: 0x00490B92 File Offset: 0x0048ED92
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06012531 RID: 75057 RVA: 0x004836A5 File Offset: 0x004818A5
+	// Token: 0x0600F9E3 RID: 63971 RVA: 0x00490BA5 File Offset: 0x0048EDA5
 	protected override void OnBeforeShow()
 	{
 		this.PlayStartSequence();
 	}
 
-	// Token: 0x06012532 RID: 75058 RVA: 0x004836B0 File Offset: 0x004818B0
+	// Token: 0x0600F9E4 RID: 63972 RVA: 0x00490BB0 File Offset: 0x0048EDB0
 	private void PlayStartSequence()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -52,7 +52,7 @@ public class PersonalCardPreviewComponent : UiPanelBase, IItemTipsUiProxy
 		levelSequencePlayer.PlaySequencePurely("Start", false, false, null, null, false);
 	}
 
-	// Token: 0x06012533 RID: 75059 RVA: 0x004836E0 File Offset: 0x004818E0
+	// Token: 0x0600F9E5 RID: 63973 RVA: 0x00490BE0 File Offset: 0x0048EDE0
 	public UniTask PlayCloseSequence()
 	{
 		PersonalCardPreviewComponent.<PlayCloseSequence>d__7 <PlayCloseSequence>d__;
@@ -63,7 +63,7 @@ public class PersonalCardPreviewComponent : UiPanelBase, IItemTipsUiProxy
 		return <PlayCloseSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012534 RID: 75060 RVA: 0x00483724 File Offset: 0x00481924
+	// Token: 0x0600F9E6 RID: 63974 RVA: 0x00490C24 File Offset: 0x0048EE24
 	[NullableContext(1)]
 	public void Refresh(ItemTipsData data)
 	{
@@ -104,7 +104,7 @@ public class PersonalCardPreviewComponent : UiPanelBase, IItemTipsUiProxy
 		base.GetText(8).SetText(FunctionModel.Instance.GetPlayerName(), true);
 	}
 
-	// Token: 0x06012535 RID: 75061 RVA: 0x004838C3 File Offset: 0x00481AC3
+	// Token: 0x0600F9E7 RID: 63975 RVA: 0x00490DC3 File Offset: 0x0048EFC3
 	public override void SetActive(bool visibility)
 	{
 		UUIItem rootItem = this.RootItem;
@@ -115,34 +115,34 @@ public class PersonalCardPreviewComponent : UiPanelBase, IItemTipsUiProxy
 		rootItem.SetUIActive(visibility);
 	}
 
-	// Token: 0x04008A7E RID: 35454
+	// Token: 0x04008BC5 RID: 35781
 	[Nullable(2)]
 	private TipsCardData CurrentData;
 
-	// Token: 0x04008A7F RID: 35455
+	// Token: 0x04008BC6 RID: 35782
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02008970 RID: 35184
+	// Token: 0x02007AF9 RID: 31481
 	private enum EComponent
 	{
-		// Token: 0x0402CAA1 RID: 182945
+		// Token: 0x04027DBC RID: 163260
 		CardTexture,
-		// Token: 0x0402CAA2 RID: 182946
+		// Token: 0x04027DBD RID: 163261
 		CardDescText,
-		// Token: 0x0402CAA3 RID: 182947
+		// Token: 0x04027DBE RID: 163262
 		CardTipsText,
-		// Token: 0x0402CAA4 RID: 182948
+		// Token: 0x04027DBF RID: 163263
 		CardName,
-		// Token: 0x0402CAA5 RID: 182949
+		// Token: 0x04027DC0 RID: 163264
 		RoleHeadCardTexture,
-		// Token: 0x0402CAA6 RID: 182950
+		// Token: 0x04027DC1 RID: 163265
 		RoleHeadTexture,
-		// Token: 0x0402CAA7 RID: 182951
+		// Token: 0x04027DC2 RID: 163266
 		RoleFriendHeadTexture,
-		// Token: 0x0402CAA8 RID: 182952
+		// Token: 0x04027DC3 RID: 163267
 		LongCardTexture,
-		// Token: 0x0402CAA9 RID: 182953
+		// Token: 0x04027DC4 RID: 163268
 		PlayerNameText
 	}
 }

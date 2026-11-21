@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FC2 RID: 20418
+	// Token: 0x0200551E RID: 21790
 	public class IColorStrategyOfSplineEffectType_UnionUnion
 	{
-		// Token: 0x170093E0 RID: 37856
-		// (get) Token: 0x06020811 RID: 133137 RVA: 0x004856BD File Offset: 0x004838BD
-		// (set) Token: 0x06020812 RID: 133138 RVA: 0x004856C5 File Offset: 0x004838C5
+		// Token: 0x17009BB8 RID: 39864
+		// (get) Token: 0x06022705 RID: 141061 RVA: 0x004BEBA1 File Offset: 0x004BCDA1
+		// (set) Token: 0x06022706 RID: 141062 RVA: 0x004BEBA9 File Offset: 0x004BCDA9
 		public IColorStrategyOfSplineEffectType_Union Type { get; set; }
 
-		// Token: 0x170093E1 RID: 37857
-		// (get) Token: 0x06020813 RID: 133139 RVA: 0x004856CE File Offset: 0x004838CE
-		// (set) Token: 0x06020814 RID: 133140 RVA: 0x004856D6 File Offset: 0x004838D6
+		// Token: 0x17009BB9 RID: 39865
+		// (get) Token: 0x06022707 RID: 141063 RVA: 0x004BEBB2 File Offset: 0x004BCDB2
+		// (set) Token: 0x06022708 RID: 141064 RVA: 0x004BEBBA File Offset: 0x004BCDBA
 		public object Value { get; set; }
 
-		// Token: 0x06020815 RID: 133141 RVA: 0x004856DF File Offset: 0x004838DF
+		// Token: 0x06022709 RID: 141065 RVA: 0x004BEBC3 File Offset: 0x004BCDC3
 		public IColorStrategyOfSplineEffectType_UnionUnion()
 		{
 			this.Type = IColorStrategyOfSplineEffectType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06020816 RID: 133142 RVA: 0x004856F5 File Offset: 0x004838F5
+		// Token: 0x0602270A RID: 141066 RVA: 0x004BEBD9 File Offset: 0x004BCDD9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06020817 RID: 133143 RVA: 0x00485707 File Offset: 0x00483907
+		// Token: 0x0602270B RID: 141067 RVA: 0x004BEBEB File Offset: 0x004BCDEB
 		public IColorStrategyOfSplineEffectTypeT AsIColorStrategyOfSplineEffectType()
 		{
 			return this.As<IColorStrategyOfSplineEffectTypeT>();
 		}
 
-		// Token: 0x06020818 RID: 133144 RVA: 0x0048570F File Offset: 0x0048390F
+		// Token: 0x0602270C RID: 141068 RVA: 0x004BEBF3 File Offset: 0x004BCDF3
 		public static IColorStrategyOfSplineEffectType_UnionUnion FromIColorStrategyOfSplineEffectType(IColorStrategyOfSplineEffectTypeT _icolorstrategyofsplineeffecttype)
 		{
 			return new IColorStrategyOfSplineEffectType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06020819 RID: 133145 RVA: 0x00485724 File Offset: 0x00483924
+		// Token: 0x0602270D RID: 141069 RVA: 0x004BEC08 File Offset: 0x004BCE08
 		public IColorChangeStrategyOfRGBT AsIColorChangeStrategyOfRGB()
 		{
 			return this.As<IColorChangeStrategyOfRGBT>();
 		}
 
-		// Token: 0x0602081A RID: 133146 RVA: 0x0048572C File Offset: 0x0048392C
+		// Token: 0x0602270E RID: 141070 RVA: 0x004BEC10 File Offset: 0x004BCE10
 		public static IColorStrategyOfSplineEffectType_UnionUnion FromIColorChangeStrategyOfRGB(IColorChangeStrategyOfRGBT _icolorchangestrategyofrgb)
 		{
 			return new IColorStrategyOfSplineEffectType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602081B RID: 133147 RVA: 0x00485744 File Offset: 0x00483944
+		// Token: 0x0602270F RID: 141071 RVA: 0x004BEC28 File Offset: 0x004BCE28
 		public static int Pack(FlatBufferBuilder builder, IColorStrategyOfSplineEffectType_UnionUnion _o)
 		{
 			IColorStrategyOfSplineEffectType_Union type = _o.Type;

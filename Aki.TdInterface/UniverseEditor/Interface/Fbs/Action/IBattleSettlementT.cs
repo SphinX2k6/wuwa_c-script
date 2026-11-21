@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061EC RID: 25068
+	// Token: 0x0200685A RID: 26714
 	public class IBattleSettlementT
 	{
-		// Token: 0x1700BAE5 RID: 47845
-		// (get) Token: 0x0602B35F RID: 176991 RVA: 0x005F4670 File Offset: 0x005F2870
-		// (set) Token: 0x0602B360 RID: 176992 RVA: 0x005F4678 File Offset: 0x005F2878
+		// Token: 0x1700C468 RID: 50280
+		// (get) Token: 0x0602DAA6 RID: 187046 RVA: 0x0063F0E4 File Offset: 0x0063D2E4
+		// (set) Token: 0x0602DAA7 RID: 187047 RVA: 0x0063F0EC File Offset: 0x0063D2EC
 		public EDynamicSettlementType Type { get; set; }
 
-		// Token: 0x1700BAE6 RID: 47846
-		// (get) Token: 0x0602B361 RID: 176993 RVA: 0x005F4681 File Offset: 0x005F2881
-		// (set) Token: 0x0602B362 RID: 176994 RVA: 0x005F4689 File Offset: 0x005F2889
+		// Token: 0x1700C469 RID: 50281
+		// (get) Token: 0x0602DAA8 RID: 187048 RVA: 0x0063F0F5 File Offset: 0x0063D2F5
+		// (set) Token: 0x0602DAA9 RID: 187049 RVA: 0x0063F0FD File Offset: 0x0063D2FD
 		public int GamePlayCue { get; set; }
 
-		// Token: 0x1700BAE7 RID: 47847
-		// (get) Token: 0x0602B363 RID: 176995 RVA: 0x005F4692 File Offset: 0x005F2892
-		// (set) Token: 0x0602B364 RID: 176996 RVA: 0x005F469A File Offset: 0x005F289A
+		// Token: 0x1700C46A RID: 50282
+		// (get) Token: 0x0602DAAA RID: 187050 RVA: 0x0063F106 File Offset: 0x0063D306
+		// (set) Token: 0x0602DAAB RID: 187051 RVA: 0x0063F10E File Offset: 0x0063D30E
 		public EBattleSettlementBgmType BgmType { get; set; }
 
-		// Token: 0x1700BAE8 RID: 47848
-		// (get) Token: 0x0602B365 RID: 176997 RVA: 0x005F46A3 File Offset: 0x005F28A3
-		// (set) Token: 0x0602B366 RID: 176998 RVA: 0x005F46AB File Offset: 0x005F28AB
+		// Token: 0x1700C46B RID: 50283
+		// (get) Token: 0x0602DAAC RID: 187052 RVA: 0x0063F117 File Offset: 0x0063D317
+		// (set) Token: 0x0602DAAD RID: 187053 RVA: 0x0063F11F File Offset: 0x0063D31F
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602B367 RID: 176999 RVA: 0x005F46B4 File Offset: 0x005F28B4
+		// Token: 0x0602DAAE RID: 187054 RVA: 0x0063F128 File Offset: 0x0063D328
 		public IBattleSettlementT()
 		{
 			this.Type = EDynamicSettlementType.Battle;

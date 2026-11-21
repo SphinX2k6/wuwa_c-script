@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000895 RID: 2197
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000938 RID: 2360
 	public class SceneTextComponent : IComponentBase
 	{
-		// Token: 0x06003103 RID: 12547 RVA: 0x0007E078 File Offset: 0x0007C278
+		// Token: 0x0600343F RID: 13375 RVA: 0x00085560 File Offset: 0x00083760
 		private SceneTextComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003104 RID: 12548 RVA: 0x0007E0B0 File Offset: 0x0007C2B0
+		// Token: 0x06003440 RID: 13376 RVA: 0x00085598 File Offset: 0x00083798
 		public static SceneTextComponent Create([Nullable(2)] SceneTextComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003105 RID: 12549 RVA: 0x0007E0C3 File Offset: 0x0007C2C3
+		// Token: 0x06003441 RID: 13377 RVA: 0x000855AB File Offset: 0x000837AB
 		public static SceneTextComponent CreateFromSetValue([Nullable(2)] SceneTextComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003106 RID: 12550 RVA: 0x0007E0D8 File Offset: 0x0007C2D8
+		// Token: 0x06003442 RID: 13378 RVA: 0x000855C0 File Offset: 0x000837C0
 		public new SceneTextComponent_SetValue ToSetValue()
 		{
 			return new SceneTextComponent_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D05 RID: 3333
-		// (get) Token: 0x06003107 RID: 12551 RVA: 0x0007E128 File Offset: 0x0007C328
-		// (set) Token: 0x06003108 RID: 12552 RVA: 0x0007E162 File Offset: 0x0007C362
+		// Token: 0x17000DCE RID: 3534
+		// (get) Token: 0x06003443 RID: 13379 RVA: 0x00085610 File Offset: 0x00083810
+		// (set) Token: 0x06003444 RID: 13380 RVA: 0x0008564A File Offset: 0x0008384A
 		public override bool? Disabled
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D06 RID: 3334
-		// (get) Token: 0x06003109 RID: 12553 RVA: 0x0007E170 File Offset: 0x0007C370
-		// (set) Token: 0x0600310A RID: 12554 RVA: 0x0007E19A File Offset: 0x0007C39A
+		// Token: 0x17000DCF RID: 3535
+		// (get) Token: 0x06003445 RID: 13381 RVA: 0x00085658 File Offset: 0x00083858
+		// (set) Token: 0x06003446 RID: 13382 RVA: 0x00085682 File Offset: 0x00083882
 		public override bool? EdIsLocked
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D07 RID: 3335
-		// (get) Token: 0x0600310B RID: 12555 RVA: 0x0007E1A8 File Offset: 0x0007C3A8
-		// (set) Token: 0x0600310C RID: 12556 RVA: 0x0007E1D3 File Offset: 0x0007C3D3
+		// Token: 0x17000DD0 RID: 3536
+		// (get) Token: 0x06003447 RID: 13383 RVA: 0x00085690 File Offset: 0x00083890
+		// (set) Token: 0x06003448 RID: 13384 RVA: 0x000856BB File Offset: 0x000838BB
 		public virtual string DisplayState
 		{
 			get
@@ -130,9 +128,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D08 RID: 3336
-		// (get) Token: 0x0600310D RID: 12557 RVA: 0x0007E1E4 File Offset: 0x0007C3E4
-		// (set) Token: 0x0600310E RID: 12558 RVA: 0x0007E245 File Offset: 0x0007C445
+		// Token: 0x17000DD1 RID: 3537
+		// (get) Token: 0x06003449 RID: 13385 RVA: 0x000856CC File Offset: 0x000838CC
+		// (set) Token: 0x0600344A RID: 13386 RVA: 0x0008572D File Offset: 0x0008392D
 		[Nullable(2)]
 		public virtual PosAndRot RelativeTransform
 		{
@@ -163,9 +161,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D09 RID: 3337
-		// (get) Token: 0x0600310F RID: 12559 RVA: 0x0007E25A File Offset: 0x0007C45A
-		// (set) Token: 0x06003110 RID: 12560 RVA: 0x0007E281 File Offset: 0x0007C481
+		// Token: 0x17000DD2 RID: 3538
+		// (get) Token: 0x0600344B RID: 13387 RVA: 0x00085742 File Offset: 0x00083942
+		// (set) Token: 0x0600344C RID: 13388 RVA: 0x00085769 File Offset: 0x00083969
 		public virtual ISceneTextTypeBase TextConfig
 		{
 			get
@@ -187,18 +185,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400203D RID: 8253
+		// Token: 0x0400224F RID: 8783
 		[Nullable(2)]
 		protected new SceneTextComponent FbInstance;
 
-		// Token: 0x0400203E RID: 8254
+		// Token: 0x04002250 RID: 8784
 		[Nullable(2)]
 		protected new SceneTextComponent_SetValue PocoInterface;
 
-		// Token: 0x0400203F RID: 8255
+		// Token: 0x04002251 RID: 8785
 		private PosAndRot _RelativeTransformCache;
 
-		// Token: 0x04002040 RID: 8256
+		// Token: 0x04002252 RID: 8786
 		private bool _RelativeTransformInited;
 	}
 }

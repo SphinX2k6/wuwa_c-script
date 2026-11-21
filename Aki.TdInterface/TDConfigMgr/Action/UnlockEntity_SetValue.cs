@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002264 RID: 8804
+	// Token: 0x020024D1 RID: 9425
 	public class UnlockEntity_SetValue
 	{
-		// Token: 0x04007316 RID: 29462
-		[Nullable(1)]
+		// Token: 0x04007963 RID: 31075
 		public List<int> EntityIds;
 	}
 }

@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000BBD RID: 3005
+	// Token: 0x02000209 RID: 521
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EWindSourceType")]
 	public enum EWindSourceType : byte
 	{
-		// Token: 0x040052BD RID: 21181
+		// Token: 0x04000D16 RID: 3350
 		Directional,
-		// Token: 0x040052BE RID: 21182
+		// Token: 0x04000D17 RID: 3351
 		Point,
-		// Token: 0x040052BF RID: 21183
+		// Token: 0x04000D18 RID: 3352
 		EWindSourceType_MAX
 	}
 }

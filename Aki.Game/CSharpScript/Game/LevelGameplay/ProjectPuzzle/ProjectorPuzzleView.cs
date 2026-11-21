@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 {
-	// Token: 0x02006AB9 RID: 27321
+	// Token: 0x02005C16 RID: 23574
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ProjectorPuzzleView : UiTickViewBase
 	{
-		// Token: 0x06043E0A RID: 278026 RVA: 0x010A3A4F File Offset: 0x010A1C4F
+		// Token: 0x06039E64 RID: 237156 RVA: 0x010480DB File Offset: 0x010462DB
 		public ProjectorPuzzleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06043E0B RID: 278027 RVA: 0x010A3A64 File Offset: 0x010A1C64
+		// Token: 0x06039E65 RID: 237157 RVA: 0x010480F0 File Offset: 0x010462F0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06043E0C RID: 278028 RVA: 0x010A3B90 File Offset: 0x010A1D90
+		// Token: 0x06039E66 RID: 237158 RVA: 0x0104821C File Offset: 0x0104641C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ProjectorPuzzleView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043E0D RID: 278029 RVA: 0x010A3BD4 File Offset: 0x010A1DD4
+		// Token: 0x06039E67 RID: 237159 RVA: 0x01048260 File Offset: 0x01046460
 		protected override void OnStart()
 		{
 			this.DragComponent = base.GetDraggable(1);
@@ -81,14 +81,14 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.AddInputEventListener();
 		}
 
-		// Token: 0x06043E0E RID: 278030 RVA: 0x010A3C2E File Offset: 0x010A1E2E
+		// Token: 0x06039E68 RID: 237160 RVA: 0x010482BA File Offset: 0x010464BA
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearInput();
 			ProjectorPuzzleController.CloseGameplay(true, false, false);
 		}
 
-		// Token: 0x06043E0F RID: 278031 RVA: 0x010A3C40 File Offset: 0x010A1E40
+		// Token: 0x06039E69 RID: 237161 RVA: 0x010482CC File Offset: 0x010464CC
 		protected override void OnTick(float delta)
 		{
 			float rollInput = this.IsInputEnable ? (Info.Instance.IsInGamepad() ? this.GamepadRollValue : this.RollInputValue) : 0f;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.UpdateGamepadInput(delta);
 		}
 
-		// Token: 0x06043E10 RID: 278032 RVA: 0x010A3C88 File Offset: 0x010A1E88
+		// Token: 0x06039E6A RID: 237162 RVA: 0x01048314 File Offset: 0x01046514
 		private void AddInputEventListener()
 		{
 			UUIDraggableComponent dragComponent = this.DragComponent;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 		}
 
-		// Token: 0x06043E11 RID: 278033 RVA: 0x010A3E14 File Offset: 0x010A2014
+		// Token: 0x06039E6B RID: 237163 RVA: 0x010484A0 File Offset: 0x010466A0
 		private void RemoveInputEventListener()
 		{
 			UUIDraggableComponent dragComponent = this.DragComponent;
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			EventSystem.Instance.Remove(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 		}
 
-		// Token: 0x06043E12 RID: 278034 RVA: 0x010A3F00 File Offset: 0x010A2100
+		// Token: 0x06039E6C RID: 237164 RVA: 0x0104858C File Offset: 0x0104678C
 		private void ClearInput()
 		{
 			this.RemoveInputEventListener();
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.EndInput();
 		}
 
-		// Token: 0x06043E13 RID: 278035 RVA: 0x010A3F18 File Offset: 0x010A2118
+		// Token: 0x06039E6D RID: 237165 RVA: 0x010485A4 File Offset: 0x010467A4
 		private void EndInput()
 		{
 			this.IsPointerInput = false;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			ProjectorPuzzleController.EndInput();
 		}
 
-		// Token: 0x06043E14 RID: 278036 RVA: 0x010A3F6C File Offset: 0x010A216C
+		// Token: 0x06039E6E RID: 237166 RVA: 0x010485F8 File Offset: 0x010467F8
 		private bool TryGetDragSize(Vector2D outValue)
 		{
 			UUIItem dragItem = this.DragItem;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return true;
 		}
 
-		// Token: 0x06043E15 RID: 278037 RVA: 0x010A3FCC File Offset: 0x010A21CC
+		// Token: 0x06039E6F RID: 237167 RVA: 0x01048658 File Offset: 0x01046858
 		[NullableContext(2)]
 		private void OnPointerBegin(ULGUIPointerEventData eventData)
 		{
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			ProjectorPuzzleController.BeginInput(localPointInPlane.X, localPointInPlane.Y, this.DragSize.X, this.DragSize.Y);
 		}
 
-		// Token: 0x06043E16 RID: 278038 RVA: 0x010A402C File Offset: 0x010A222C
+		// Token: 0x06039E70 RID: 237168 RVA: 0x010486B8 File Offset: 0x010468B8
 		[NullableContext(2)]
 		private void OnPointerDrag(ULGUIPointerEventData eventData)
 		{
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			ProjectorPuzzleController.UpdateInput(localPointInPlane.X, localPointInPlane.Y, this.DragSize.X, this.DragSize.Y);
 		}
 
-		// Token: 0x06043E17 RID: 278039 RVA: 0x010A4082 File Offset: 0x010A2282
+		// Token: 0x06039E71 RID: 237169 RVA: 0x0104870E File Offset: 0x0104690E
 		[NullableContext(2)]
 		private void OnPointerEnd(ULGUIPointerEventData eventData)
 		{
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			ProjectorPuzzleController.EndInput();
 		}
 
-		// Token: 0x06043E18 RID: 278040 RVA: 0x010A4099 File Offset: 0x010A2299
+		// Token: 0x06039E72 RID: 237170 RVA: 0x01048725 File Offset: 0x01046925
 		private void OnResetButtonClick()
 		{
 			if (!this.IsInputEnable)
@@ -256,20 +256,20 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			ProjectorPuzzleController.ResetGameplay();
 		}
 
-		// Token: 0x06043E19 RID: 278041 RVA: 0x010A40AF File Offset: 0x010A22AF
+		// Token: 0x06039E73 RID: 237171 RVA: 0x0104873B File Offset: 0x0104693B
 		private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			this.EndInput();
 			this.SetGamepadInputEnable(Info.Instance.IsInGamepad());
 		}
 
-		// Token: 0x06043E1A RID: 278042 RVA: 0x010A40C7 File Offset: 0x010A22C7
+		// Token: 0x06039E74 RID: 237172 RVA: 0x01048753 File Offset: 0x01046953
 		private void OnCloseButtonClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06043E1B RID: 278043 RVA: 0x010A40D0 File Offset: 0x010A22D0
+		// Token: 0x06039E75 RID: 237173 RVA: 0x0104875C File Offset: 0x0104695C
 		private void SetGamepadInputEnable(bool enable)
 		{
 			if (enable)
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			}
 		}
 
-		// Token: 0x06043E1C RID: 278044 RVA: 0x010A41A1 File Offset: 0x010A23A1
+		// Token: 0x06039E76 RID: 237174 RVA: 0x0104882D File Offset: 0x01046A2D
 		private void OnInputUiLookUp(string axisName, float value, InputIdentification inputIdentification)
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.LookUpValue = value;
 		}
 
-		// Token: 0x06043E1D RID: 278045 RVA: 0x010A41C1 File Offset: 0x010A23C1
+		// Token: 0x06039E77 RID: 237175 RVA: 0x0104884D File Offset: 0x01046A4D
 		private void OnInputUiTurn(string axisName, float value, InputIdentification inputIdentification)
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.TurnValue = value;
 		}
 
-		// Token: 0x06043E1E RID: 278046 RVA: 0x010A41E1 File Offset: 0x010A23E1
+		// Token: 0x06039E78 RID: 237176 RVA: 0x0104886D File Offset: 0x01046A6D
 		private void OnInputUiMoveRight(string axisName, float value, InputIdentification inputIdentification)
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.GamepadRollValue = value;
 		}
 
-		// Token: 0x06043E1F RID: 278047 RVA: 0x010A4201 File Offset: 0x010A2401
+		// Token: 0x06039E79 RID: 237177 RVA: 0x0104888D File Offset: 0x01046A8D
 		private void OnRollUpButtonPress()
 		{
 			if (!this.IsInputEnable || Info.Instance.IsInGamepad())
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.UpdateRollInputValue();
 		}
 
-		// Token: 0x06043E20 RID: 278048 RVA: 0x010A422E File Offset: 0x010A242E
+		// Token: 0x06039E7A RID: 237178 RVA: 0x010488BA File Offset: 0x01046ABA
 		private void OnRollUpButtonRelease()
 		{
 			if (!this.IsRollUpPressed)
@@ -360,7 +360,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.UpdateRollInputValue();
 		}
 
-		// Token: 0x06043E21 RID: 278049 RVA: 0x010A4246 File Offset: 0x010A2446
+		// Token: 0x06039E7B RID: 237179 RVA: 0x010488D2 File Offset: 0x01046AD2
 		private void OnRollDownButtonPress()
 		{
 			if (!this.IsInputEnable || Info.Instance.IsInGamepad())
@@ -375,7 +375,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.UpdateRollInputValue();
 		}
 
-		// Token: 0x06043E22 RID: 278050 RVA: 0x010A4273 File Offset: 0x010A2473
+		// Token: 0x06039E7C RID: 237180 RVA: 0x010488FF File Offset: 0x01046AFF
 		private void OnRollDownButtonRelease()
 		{
 			if (!this.IsRollDownPressed)
@@ -386,13 +386,13 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.UpdateRollInputValue();
 		}
 
-		// Token: 0x06043E23 RID: 278051 RVA: 0x010A428B File Offset: 0x010A248B
+		// Token: 0x06039E7D RID: 237181 RVA: 0x01048917 File Offset: 0x01046B17
 		private void UpdateRollInputValue()
 		{
 			this.RollInputValue = (float)((this.IsRollUpPressed ? -1 : 0) + ((this.IsRollDownPressed > false) ? 1 : 0));
 		}
 
-		// Token: 0x06043E24 RID: 278052 RVA: 0x010A42AC File Offset: 0x010A24AC
+		// Token: 0x06039E7E RID: 237182 RVA: 0x01048938 File Offset: 0x01046B38
 		private void UpdateGamepadInput(float delta)
 		{
 			if (!this.IsInputEnable || this.IsPointerInput || !Info.Instance.IsInGamepad())
@@ -408,45 +408,45 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			ProjectorPuzzleController.UpdateStickRotation(turnValue, lookUpValue, delta);
 		}
 
-		// Token: 0x040237AA RID: 145322
+		// Token: 0x0401E99C RID: 125340
 		[Nullable(2)]
 		private UUIDraggableComponent DragComponent;
 
-		// Token: 0x040237AB RID: 145323
+		// Token: 0x0401E99D RID: 125341
 		[Nullable(2)]
 		private UUIItem DragItem;
 
-		// Token: 0x040237AC RID: 145324
+		// Token: 0x0401E99E RID: 125342
 		private bool IsInputEnable;
 
-		// Token: 0x040237AD RID: 145325
+		// Token: 0x0401E99F RID: 125343
 		private bool IsPointerInput;
 
-		// Token: 0x040237AE RID: 145326
+		// Token: 0x0401E9A0 RID: 125344
 		private bool HasBindGamepadInput;
 
-		// Token: 0x040237AF RID: 145327
+		// Token: 0x0401E9A1 RID: 125345
 		private float LookUpValue;
 
-		// Token: 0x040237B0 RID: 145328
+		// Token: 0x0401E9A2 RID: 125346
 		private float TurnValue;
 
-		// Token: 0x040237B1 RID: 145329
+		// Token: 0x0401E9A3 RID: 125347
 		private float RollInputValue;
 
-		// Token: 0x040237B2 RID: 145330
+		// Token: 0x0401E9A4 RID: 125348
 		private float GamepadRollValue;
 
-		// Token: 0x040237B3 RID: 145331
+		// Token: 0x0401E9A5 RID: 125349
 		private bool IsRollUpPressed;
 
-		// Token: 0x040237B4 RID: 145332
+		// Token: 0x0401E9A6 RID: 125350
 		private bool IsRollDownPressed;
 
-		// Token: 0x040237B5 RID: 145333
+		// Token: 0x0401E9A7 RID: 125351
 		private readonly Vector2D DragSize = Vector2D.Create();
 
-		// Token: 0x040237B6 RID: 145334
+		// Token: 0x0401E9A8 RID: 125352
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 	}

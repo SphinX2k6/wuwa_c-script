@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D4B RID: 3403
+	// Token: 0x02000E45 RID: 3653
 	public class ISharingVehicleFeature : IVehicleFeature
 	{
-		// Token: 0x06004D93 RID: 19859 RVA: 0x000C0E41 File Offset: 0x000BF041
-		[NullableContext(1)]
+		// Token: 0x060052AF RID: 21167 RVA: 0x000CC585 File Offset: 0x000CA785
 		public static ISharingVehicleFeature Create(ISharingVehicleFeature? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018BA RID: 6330
-		// (get) Token: 0x06004D94 RID: 19860 RVA: 0x000C0E60 File Offset: 0x000BF060
+		// Token: 0x17001A20 RID: 6688
+		// (get) Token: 0x060052B0 RID: 21168 RVA: 0x000CC5A4 File Offset: 0x000CA7A4
 		public override EVehicleFeatureFlag Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018BB RID: 6331
-		// (get) Token: 0x06004D95 RID: 19861 RVA: 0x000C0E70 File Offset: 0x000BF070
+		// Token: 0x17001A21 RID: 6689
+		// (get) Token: 0x060052B1 RID: 21169 RVA: 0x000CC5B4 File Offset: 0x000CA7B4
 		public virtual EAffectionDegreeSourceType? AffectionDegreeSourceType
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C78 RID: 11384
+		// Token: 0x04002F38 RID: 12088
 		private ISharingVehicleFeature Instance;
 	}
 }

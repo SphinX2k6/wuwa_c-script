@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B10 RID: 2832
+	// Token: 0x02000BDE RID: 3038
 	public class IGazePerformance
 	{
-		// Token: 0x0600416D RID: 16749 RVA: 0x000A7FEA File Offset: 0x000A61EA
-		[NullableContext(1)]
+		// Token: 0x060045C3 RID: 17859 RVA: 0x000B2016 File Offset: 0x000B0216
 		public static IGazePerformance Create(IGazePerformance? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700110A RID: 4362
-		// (get) Token: 0x0600416E RID: 16750 RVA: 0x000A8009 File Offset: 0x000A6209
+		// Token: 0x17001202 RID: 4610
+		// (get) Token: 0x060045C4 RID: 17860 RVA: 0x000B2035 File Offset: 0x000B0235
 		public virtual float FadeInTime
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700110B RID: 4363
-		// (get) Token: 0x0600416F RID: 16751 RVA: 0x000A8016 File Offset: 0x000A6216
+		// Token: 0x17001203 RID: 4611
+		// (get) Token: 0x060045C5 RID: 17861 RVA: 0x000B2042 File Offset: 0x000B0242
 		public virtual float StayTime
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700110C RID: 4364
-		// (get) Token: 0x06004170 RID: 16752 RVA: 0x000A8024 File Offset: 0x000A6224
+		// Token: 0x17001204 RID: 4612
+		// (get) Token: 0x060045C6 RID: 17862 RVA: 0x000B2050 File Offset: 0x000B0250
 		public virtual float? FadeOutTime
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700110D RID: 4365
-		// (get) Token: 0x06004171 RID: 16753 RVA: 0x000A805C File Offset: 0x000A625C
+		// Token: 0x17001205 RID: 4613
+		// (get) Token: 0x060045C7 RID: 17863 RVA: 0x000B2088 File Offset: 0x000B0288
 		public virtual bool? LockCamera
 		{
 			get
@@ -69,7 +67,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040024DD RID: 9437
+		// Token: 0x04002721 RID: 10017
 		private IGazePerformance Instance;
 	}
 }

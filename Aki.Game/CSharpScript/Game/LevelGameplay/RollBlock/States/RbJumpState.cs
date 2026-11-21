@@ -5,18 +5,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock.States
 {
-	// Token: 0x02006AAD RID: 27309
+	// Token: 0x02005C0A RID: 23562
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RbJumpState : RbBaseMoveState
 	{
-		// Token: 0x06043D82 RID: 277890 RVA: 0x0109FA4A File Offset: 0x0109DC4A
+		// Token: 0x06039DD8 RID: 237016 RVA: 0x01044152 File Offset: 0x01042352
 		[NullableContext(1)]
 		public RbJumpState(RbBlockComponent owner) : base(owner)
 		{
 		}
 
-		// Token: 0x06043D83 RID: 277891 RVA: 0x0109FA54 File Offset: 0x0109DC54
+		// Token: 0x06039DD9 RID: 237017 RVA: 0x0104415C File Offset: 0x0104235C
 		public override void Enter([Nullable(new byte[]
 		{
 			0,
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.States
 			this.IsFinishedInternal = false;
 		}
 
-		// Token: 0x06043D84 RID: 277892 RVA: 0x0109FB98 File Offset: 0x0109DD98
+		// Token: 0x06039DDA RID: 237018 RVA: 0x010442A0 File Offset: 0x010424A0
 		private void GenerateStaticDirector()
 		{
 			if (this.DirectorActor == null)
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.States
 			}
 		}
 
-		// Token: 0x06043D85 RID: 277893 RVA: 0x0109FBD4 File Offset: 0x0109DDD4
+		// Token: 0x06039DDB RID: 237019 RVA: 0x010442DC File Offset: 0x010424DC
 		private void OnSeqEnd(bool needNotify = false)
 		{
 			this.DirectorActor.SetActorTickEnabled(false);
@@ -108,10 +108,10 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.States
 			this.IsFinishedInternal = true;
 		}
 
-		// Token: 0x0402374D RID: 145229
+		// Token: 0x0401E93F RID: 125247
 		public RbJumpMovement Info;
 
-		// Token: 0x0402374E RID: 145230
+		// Token: 0x0401E940 RID: 125248
 		private ALevelSequenceActor DirectorActor;
 	}
 }

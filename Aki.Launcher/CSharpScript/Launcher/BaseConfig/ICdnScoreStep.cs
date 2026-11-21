@@ -4,24 +4,24 @@ using System.Text.Json;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x0200025A RID: 602
+	// Token: 0x0200025F RID: 607
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ICdnScoreStep
 	{
-		// Token: 0x040009CE RID: 2510
+		// Token: 0x04000A1A RID: 2586
 		public string Let = string.Empty;
 
-		// Token: 0x040009CF RID: 2511
+		// Token: 0x04000A1B RID: 2587
 		public string Op = string.Empty;
 
-		// Token: 0x040009D0 RID: 2512
+		// Token: 0x04000A1C RID: 2588
 		public JsonElement A;
 
-		// Token: 0x040009D1 RID: 2513
+		// Token: 0x04000A1D RID: 2589
 		public JsonElement? B;
 
-		// Token: 0x040009D2 RID: 2514
+		// Token: 0x04000A1E RID: 2590
 		[Nullable(2)]
 		public string Note;
 	}

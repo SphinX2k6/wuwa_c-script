@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02002CB1 RID: 11441
+// Token: 0x0200220A RID: 8714
 [NullableContext(2)]
 [Nullable(0)]
 public class UiRoleLoadComponent : UiModelLoadComponent
 {
-	// Token: 0x06017E7D RID: 97917 RVA: 0x00613A9F File Offset: 0x00611C9F
+	// Token: 0x060156F1 RID: 87793 RVA: 0x0063962B File Offset: 0x0063782B
 	protected override void OnInit()
 	{
 		base.OnInit();
@@ -16,13 +16,13 @@ public class UiRoleLoadComponent : UiModelLoadComponent
 		this.UiRoleMorphComponent = base.Owner.GetComponent<UiRoleMorphComponent>();
 	}
 
-	// Token: 0x06017E7E RID: 97918 RVA: 0x00613AC9 File Offset: 0x00611CC9
+	// Token: 0x060156F2 RID: 87794 RVA: 0x00639655 File Offset: 0x00637855
 	protected override void OnEnd()
 	{
 		base.OnEnd();
 	}
 
-	// Token: 0x06017E7F RID: 97919 RVA: 0x00613AD4 File Offset: 0x00611CD4
+	// Token: 0x060156F3 RID: 87795 RVA: 0x00639660 File Offset: 0x00637860
 	public unsafe void LoadModelByRoleDataId(int roleDataId, int roleSkinId, bool waitMeshStreaming = false, Action loadFinishCallBack = null)
 	{
 		if (roleDataId == this.UiRoleDataComponent.RoleDataId)
@@ -47,7 +47,7 @@ public class UiRoleLoadComponent : UiModelLoadComponent
 		base.LoadModel(waitMeshStreaming, null, 0);
 	}
 
-	// Token: 0x06017E80 RID: 97920 RVA: 0x00613BA4 File Offset: 0x00611DA4
+	// Token: 0x060156F4 RID: 87796 RVA: 0x00639730 File Offset: 0x00637930
 	public void LoadModelByRoleConfigId(int roleConfigId, int skinId, bool waitMeshStreaming = false, Action loadFinishCallBack = null)
 	{
 		if (roleConfigId == this.UiRoleDataComponent.RoleConfigId)
@@ -65,7 +65,7 @@ public class UiRoleLoadComponent : UiModelLoadComponent
 		base.LoadModel(waitMeshStreaming, null, 0);
 	}
 
-	// Token: 0x06017E81 RID: 97921 RVA: 0x00613C0C File Offset: 0x00611E0C
+	// Token: 0x060156F5 RID: 87797 RVA: 0x00639798 File Offset: 0x00637998
 	[NullableContext(1)]
 	protected override string GetAnimClassPath()
 	{
@@ -76,7 +76,7 @@ public class UiRoleLoadComponent : UiModelLoadComponent
 		return RoleSkinModel.Instance.GetRoleSkinData(this.UiRoleDataComponent.RoleSkinId).GetRoleSkinConfig().UiScenePerformanceABP;
 	}
 
-	// Token: 0x06017E82 RID: 97922 RVA: 0x00613C6F File Offset: 0x00611E6F
+	// Token: 0x060156F6 RID: 87798 RVA: 0x006397FB File Offset: 0x006379FB
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -92,7 +92,7 @@ public class UiRoleLoadComponent : UiModelLoadComponent
 		return uiRoleMorphComponent.GetAllMorphPathList();
 	}
 
-	// Token: 0x06017E83 RID: 97923 RVA: 0x00613C82 File Offset: 0x00611E82
+	// Token: 0x060156F7 RID: 87799 RVA: 0x0063980E File Offset: 0x00637A0E
 	protected override void FinishLoad()
 	{
 		base.FinishLoad();
@@ -104,9 +104,9 @@ public class UiRoleLoadComponent : UiModelLoadComponent
 		uiRoleMorphComponent.PreloadMorphData();
 	}
 
-	// Token: 0x0400B23B RID: 45627
+	// Token: 0x0400B5A6 RID: 46502
 	private UiRoleDataComponent UiRoleDataComponent;
 
-	// Token: 0x0400B23C RID: 45628
+	// Token: 0x0400B5A7 RID: 46503
 	private UiRoleMorphComponent UiRoleMorphComponent;
 }

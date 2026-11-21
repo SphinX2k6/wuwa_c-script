@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -7,14 +6,14 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 {
-	// Token: 0x020061AE RID: 25006
+	// Token: 0x0200512C RID: 20780
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivityRogueData : ActivityBaseData
 	{
-		// Token: 0x1700920B RID: 37387
-		// (get) Token: 0x0603F27F RID: 258687 RVA: 0x00F4198F File Offset: 0x00F3FB8F
-		// (set) Token: 0x0603F27E RID: 258686 RVA: 0x00F41970 File Offset: 0x00F3FB70
+		// Token: 0x1700656D RID: 25965
+		// (get) Token: 0x06033F3F RID: 212799 RVA: 0x00E88857 File Offset: 0x00E86A57
+		// (set) Token: 0x06033F3E RID: 212798 RVA: 0x00E88838 File Offset: 0x00E86A38
 		public bool FunctionBtnRedDot
 		{
 			get
@@ -28,8 +27,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			}
 		}
 
-		// Token: 0x1700920C RID: 37388
-		// (get) Token: 0x0603F280 RID: 258688 RVA: 0x00F41997 File Offset: 0x00F3FB97
+		// Token: 0x1700656E RID: 25966
+		// (get) Token: 0x06033F40 RID: 212800 RVA: 0x00E8885F File Offset: 0x00E86A5F
 		public RogueSeasonData SeasonData
 		{
 			get
@@ -38,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			}
 		}
 
-		// Token: 0x0603F281 RID: 258689 RVA: 0x00F419A0 File Offset: 0x00F3FBA0
+		// Token: 0x06033F41 RID: 212801 RVA: 0x00E88868 File Offset: 0x00E86A68
 		[NullableContext(1)]
 		protected override void PhraseEx(ActivityData data)
 		{
@@ -55,14 +54,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			this.FunctionBtnRedDotInternal = base.GetIfFirstOpen();
 		}
 
-		// Token: 0x0603F282 RID: 258690 RVA: 0x00F41A18 File Offset: 0x00F3FC18
+		// Token: 0x06033F42 RID: 212802 RVA: 0x00E888E0 File Offset: 0x00E86AE0
 		public override bool NeedSelfControlFirstRedPoint()
 		{
 			return false;
 		}
 
-		// Token: 0x1700920D RID: 37389
-		// (get) Token: 0x0603F283 RID: 258691 RVA: 0x00F41A1B File Offset: 0x00F3FC1B
+		// Token: 0x1700656F RID: 25967
+		// (get) Token: 0x06033F43 RID: 212803 RVA: 0x00E888E3 File Offset: 0x00E86AE3
 		public override bool RedPointShowState
 		{
 			get
@@ -71,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			}
 		}
 
-		// Token: 0x0603F284 RID: 258692 RVA: 0x00F41A48 File Offset: 0x00F3FC48
+		// Token: 0x06033F44 RID: 212804 RVA: 0x00E88910 File Offset: 0x00E86B10
 		public RogueActivity? GetExtraConfig()
 		{
 			ActivityRogueConfig instance = ActivityRogueConfig.Instance;
@@ -82,13 +81,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			return instance.GetActivityUniversalConfig(base.Id);
 		}
 
-		// Token: 0x0603F285 RID: 258693 RVA: 0x00F41A73 File Offset: 0x00F3FC73
+		// Token: 0x06033F45 RID: 212805 RVA: 0x00E8893B File Offset: 0x00E86B3B
 		public override bool GetExDataRedPointShowState()
 		{
 			return base.GetPreGuideQuestFinishState() && (this.FunctionBtnRedDotInternal || RoguelikeModel.Instance.GetRoguelikeAchievementRedDot() || RoguelikeModel.Instance.CheckHasCanUnlockSkill() || RoguelikeModel.Instance.CheckRoguelikeShopRedDot());
 		}
 
-		// Token: 0x0603F286 RID: 258694 RVA: 0x00F41AAB File Offset: 0x00F3FCAB
+		// Token: 0x06033F46 RID: 212806 RVA: 0x00E88973 File Offset: 0x00E86B73
 		public ERogueActivityState GetRogueActivityState()
 		{
 			if (this.CheckIfInOpenTime())
@@ -98,10 +97,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			return ERogueActivityState.Close;
 		}
 
-		// Token: 0x0603F287 RID: 258695 RVA: 0x00F41AB8 File Offset: 0x00F3FCB8
+		// Token: 0x06033F47 RID: 212807 RVA: 0x00E88980 File Offset: 0x00E86B80
 		public void OnQuestStateChange(int questId, QuestState state)
 		{
-			if (!this.LocalConfig.Value.PreShowGuideQuest().Contains(questId))
+			if (Array.IndexOf<int>(this.LocalConfig.Value.PreShowGuideQuest(), questId) < 0)
 			{
 				return;
 			}
@@ -112,10 +111,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x04020EAB RID: 134827
+		// Token: 0x0401B7D8 RID: 112600
 		private bool FunctionBtnRedDotInternal;
 
-		// Token: 0x04020EAC RID: 134828
+		// Token: 0x0401B7D9 RID: 112601
 		private RogueSeasonData SeasonDataInternal;
 	}
 }

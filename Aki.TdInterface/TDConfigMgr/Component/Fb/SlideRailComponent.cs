@@ -5,11 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D95 RID: 3477
+	// Token: 0x02000E91 RID: 3729
 	public class SlideRailComponent : IComponentBase
 	{
-		// Token: 0x06004F0E RID: 20238 RVA: 0x000C4045 File Offset: 0x000C2245
-		[NullableContext(1)]
+		// Token: 0x06005433 RID: 21555 RVA: 0x000CF895 File Offset: 0x000CDA95
 		public static SlideRailComponent Create(ISlideRailComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019A1 RID: 6561
-		// (get) Token: 0x06004F0F RID: 20239 RVA: 0x000C4064 File Offset: 0x000C2264
+		// Token: 0x17001B0C RID: 6924
+		// (get) Token: 0x06005434 RID: 21556 RVA: 0x000CF8B4 File Offset: 0x000CDAB4
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019A2 RID: 6562
-		// (get) Token: 0x06004F10 RID: 20240 RVA: 0x000C409C File Offset: 0x000C229C
+		// Token: 0x17001B0D RID: 6925
+		// (get) Token: 0x06005435 RID: 21557 RVA: 0x000CF8EC File Offset: 0x000CDAEC
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019A3 RID: 6563
-		// (get) Token: 0x06004F11 RID: 20241 RVA: 0x000C40B4 File Offset: 0x000C22B4
+		// Token: 0x17001B0E RID: 6926
+		// (get) Token: 0x06005436 RID: 21558 RVA: 0x000CF904 File Offset: 0x000CDB04
 		public virtual int? SlideSpeed
 		{
 			get
@@ -60,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019A4 RID: 6564
-		// (get) Token: 0x06004F12 RID: 20242 RVA: 0x000C40EC File Offset: 0x000C22EC
+		// Token: 0x17001B0F RID: 6927
+		// (get) Token: 0x06005437 RID: 21559 RVA: 0x000CF93C File Offset: 0x000CDB3C
 		public virtual int? UpSpeed
 		{
 			get
@@ -74,8 +73,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019A5 RID: 6565
-		// (get) Token: 0x06004F13 RID: 20243 RVA: 0x000C4124 File Offset: 0x000C2324
+		// Token: 0x17001B10 RID: 6928
+		// (get) Token: 0x06005438 RID: 21560 RVA: 0x000CF974 File Offset: 0x000CDB74
 		public virtual int? DownSpeed
 		{
 			get
@@ -88,8 +87,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019A6 RID: 6566
-		// (get) Token: 0x06004F14 RID: 20244 RVA: 0x000C415A File Offset: 0x000C235A
+		// Token: 0x17001B11 RID: 6929
+		// (get) Token: 0x06005439 RID: 21561 RVA: 0x000CF9AA File Offset: 0x000CDBAA
 		public virtual int RailSplineEntityId
 		{
 			get
@@ -98,19 +97,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019A7 RID: 6567
-		// (get) Token: 0x06004F15 RID: 20245 RVA: 0x000C4168 File Offset: 0x000C2368
+		// Token: 0x17001B12 RID: 6930
+		// (get) Token: 0x0600543A RID: 21562 RVA: 0x000CF9B8 File Offset: 0x000CDBB8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IExchangeSlideRailConfig> ExchangeRailConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -133,18 +132,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D70 RID: 11632
+		// Token: 0x04003036 RID: 12342
 		private ISlideRailComponent Instance;
 
-		// Token: 0x04002D71 RID: 11633
+		// Token: 0x04003037 RID: 12343
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IExchangeSlideRailConfig> _ExchangeRailConfigsCache;
 
-		// Token: 0x04002D72 RID: 11634
+		// Token: 0x04003038 RID: 12344
 		private bool _ExchangeRailConfigsInited;
 	}
 }

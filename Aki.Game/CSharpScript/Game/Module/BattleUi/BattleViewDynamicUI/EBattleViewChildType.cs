@@ -2,38 +2,38 @@
 
 namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 {
-	// Token: 0x02005E58 RID: 24152
+	// Token: 0x02004E3D RID: 20029
 	public enum EBattleViewChildType
 	{
-		// Token: 0x040200B1 RID: 131249
+		// Token: 0x0401AB78 RID: 109432
 		BossStatePanel,
-		// Token: 0x040200B2 RID: 131250
+		// Token: 0x0401AB79 RID: 109433
 		MissionPanel,
-		// Token: 0x040200B3 RID: 131251
+		// Token: 0x0401AB7A RID: 109434
 		FormationPanel,
-		// Token: 0x040200B4 RID: 131252
+		// Token: 0x0401AB7B RID: 109435
 		SkillButtonPanel,
-		// Token: 0x040200B5 RID: 131253
+		// Token: 0x0401AB7C RID: 109436
 		BottomPanel,
-		// Token: 0x040200B6 RID: 131254
+		// Token: 0x0401AB7D RID: 109437
 		TopPanel,
-		// Token: 0x040200B7 RID: 131255
+		// Token: 0x0401AB7E RID: 109438
 		CenterPanel,
-		// Token: 0x040200B8 RID: 131256
+		// Token: 0x0401AB7F RID: 109439
 		ChatPanel,
-		// Token: 0x040200B9 RID: 131257
+		// Token: 0x0401AB80 RID: 109440
 		FullScreenPanel,
-		// Token: 0x040200BA RID: 131258
+		// Token: 0x0401AB81 RID: 109441
 		PositionPanel,
-		// Token: 0x040200BB RID: 131259
+		// Token: 0x0401AB82 RID: 109442
 		OnlineInstanceDungeonDeathPanel,
-		// Token: 0x040200BC RID: 131260
+		// Token: 0x0401AB83 RID: 109443
 		ScorePanel,
-		// Token: 0x040200BD RID: 131261
+		// Token: 0x0401AB84 RID: 109444
 		PureModeRootItem = 14,
-		// Token: 0x040200BE RID: 131262
+		// Token: 0x0401AB85 RID: 109445
 		PureModeItem,
-		// Token: 0x040200BF RID: 131263
+		// Token: 0x0401AB86 RID: 109446
 		PureModeButton
 	}
 }

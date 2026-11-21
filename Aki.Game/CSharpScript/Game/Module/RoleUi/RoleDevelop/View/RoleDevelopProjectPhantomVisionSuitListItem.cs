@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Item;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D45 RID: 19781
+	// Token: 0x02003D0E RID: 15630
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 	})]
 	public class RoleDevelopProjectPhantomVisionSuitListItem : LoopScrollSmallItemGrid<RoleDevelopPhantomVisionSuitListItemData>
 	{
-		// Token: 0x060331B0 RID: 209328 RVA: 0x00BE95E9 File Offset: 0x00BE77E9
+		// Token: 0x06028013 RID: 163859 RVA: 0x00B3290C File Offset: 0x00B30B0C
 		protected override void OnRefresh(RoleDevelopPhantomVisionSuitListItemData data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 		}
 
-		// Token: 0x060331B1 RID: 209329 RVA: 0x00BE961C File Offset: 0x00BE781C
+		// Token: 0x06028014 RID: 163860 RVA: 0x00B32940 File Offset: 0x00B30B40
 		private void RefreshRewardItem(DropRewardItemData data)
 		{
 			if (InventoryConfig.Instance.GetItemConfigData(data.ItemId) == null)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			base.Apply<PropSmallItemGrid>(parameters);
 		}
 
-		// Token: 0x060331B2 RID: 209330 RVA: 0x00BE9684 File Offset: 0x00BE7884
+		// Token: 0x06028015 RID: 163861 RVA: 0x00B329A8 File Offset: 0x00B30BA8
 		private void RefreshMonsterItem(PhantomMonsterItemData data)
 		{
 			bool flag = HandBookModel.Instance.GetHandBookInfo(EHandBookTabType.Phantom, data.MonsterId) != null;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			base.Apply<PhantomSmallItemGrid>(parameters);
 		}
 
-		// Token: 0x060331B3 RID: 209331 RVA: 0x00BE9758 File Offset: 0x00BE7958
+		// Token: 0x06028016 RID: 163862 RVA: 0x00B32A7C File Offset: 0x00B30C7C
 		protected override void OnExtendToggleClicked()
 		{
 			RoleDevelopPhantomVisionSuitListItemData itemData = this.ItemData;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 			if (itemData.RewardData != null)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(itemData.RewardData.ItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(itemData.RewardData.ItemId, true, null, false);
 				return;
 			}
 			if (itemData.MonsterData != null)
@@ -92,13 +92,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 		}
 
-		// Token: 0x060331B4 RID: 209332 RVA: 0x00BE97AE File Offset: 0x00BE79AE
+		// Token: 0x06028017 RID: 163863 RVA: 0x00B32AD3 File Offset: 0x00B30CD3
 		protected override bool OnCanExecuteChange()
 		{
 			return false;
 		}
 
-		// Token: 0x0401B2AD RID: 111277
+		// Token: 0x04015C7E RID: 89214
 		private RoleDevelopPhantomVisionSuitListItemData ItemData;
 	}
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000ACF RID: 2767
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B99 RID: 2969
 	public class IEntityState
 	{
-		// Token: 0x06003FC2 RID: 16322 RVA: 0x000A3046 File Offset: 0x000A1246
+		// Token: 0x060043EC RID: 17388 RVA: 0x000AC63A File Offset: 0x000AA83A
 		public static IEntityState Create(IEntityState? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FE1 RID: 4065
-		// (get) Token: 0x06003FC3 RID: 16323 RVA: 0x000A3065 File Offset: 0x000A1265
+		// Token: 0x170010B5 RID: 4277
+		// (get) Token: 0x060043ED RID: 17389 RVA: 0x000AC659 File Offset: 0x000AA859
 		public virtual string Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FE2 RID: 4066
-		// (get) Token: 0x06003FC4 RID: 16324 RVA: 0x000A3072 File Offset: 0x000A1272
+		// Token: 0x170010B6 RID: 4278
+		// (get) Token: 0x060043EE RID: 17390 RVA: 0x000AC666 File Offset: 0x000AA866
 		public virtual string State
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400237C RID: 9084
+		// Token: 0x04002598 RID: 9624
 		private IEntityState Instance;
 	}
 }

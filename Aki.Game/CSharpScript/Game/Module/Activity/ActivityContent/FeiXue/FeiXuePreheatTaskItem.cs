@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 {
-	// Token: 0x02006649 RID: 26185
+	// Token: 0x020055C7 RID: 21959
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 	})]
 	public class FeiXuePreheatTaskItem : GridProxyAbstract<FeiXuePreheatTaskData>
 	{
-		// Token: 0x060419E2 RID: 268770 RVA: 0x00FEA568 File Offset: 0x00FE8768
+		// Token: 0x060366A7 RID: 222887 RVA: 0x00F31620 File Offset: 0x00F2F820
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			};
 		}
 
-		// Token: 0x060419E3 RID: 268771 RVA: 0x00FEA64D File Offset: 0x00FE884D
+		// Token: 0x060366A8 RID: 222888 RVA: 0x00F31705 File Offset: 0x00F2F905
 		protected override void OnStart()
 		{
 			this.RewardScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(4), new Func<CommonItemSmallItemGrid>(this.CreateRewardItem), null, false, null);
 		}
 
-		// Token: 0x060419E4 RID: 268772 RVA: 0x00FEA670 File Offset: 0x00FE8870
+		// Token: 0x060366A9 RID: 222889 RVA: 0x00F31728 File Offset: 0x00F2F928
 		public override void Refresh(FeiXuePreheatTaskData data, bool isSelected, int gridIndex)
 		{
 			this.TaskData = data;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			base.GetItem(2).SetUIActive(data.IsFinished);
 		}
 
-		// Token: 0x060419E5 RID: 268773 RVA: 0x00FEA788 File Offset: 0x00FE8988
+		// Token: 0x060366AA RID: 222890 RVA: 0x00F31840 File Offset: 0x00F2FA40
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
 			return new CommonItemSmallItemGrid
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			};
 		}
 
-		// Token: 0x04022272 RID: 139890
+		// Token: 0x0401CBA3 RID: 117667
 		[Nullable(new byte[]
 		{
 			2,
@@ -81,11 +81,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-		// Token: 0x04022273 RID: 139891
+		// Token: 0x0401CBA4 RID: 117668
 		[Nullable(2)]
 		private FeiXuePreheatTaskData TaskData;
 
-		// Token: 0x04022274 RID: 139892
+		// Token: 0x0401CBA5 RID: 117669
 		public Action OnRewardBtnClick = delegate()
 		{
 		};

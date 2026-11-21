@@ -5,19 +5,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006FA4 RID: 28580
+	// Token: 0x02006125 RID: 24869
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowTransitionToSpline : LevelFlowActionBase
 	{
-		// Token: 0x06045787 RID: 284551 RVA: 0x0113B840 File Offset: 0x01139A40
+		// Token: 0x0603B935 RID: 244021 RVA: 0x010E5644 File Offset: 0x010E3844
 		public LevelFlowTransitionToSpline Init(LevelFlowTransitionToSplineParam param)
 		{
 			this.Param = param;
 			return this;
 		}
 
-		// Token: 0x06045788 RID: 284552 RVA: 0x0113B84C File Offset: 0x01139A4C
+		// Token: 0x0603B936 RID: 244022 RVA: 0x010E5650 File Offset: 0x010E3850
 		protected override void OnExecute()
 		{
 			if (this.Param == null)
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			VehiclePathMoveController.Instance.AddSplineMoveTask(vehiclePathMoveTask);
 		}
 
-		// Token: 0x06045789 RID: 284553 RVA: 0x0113BA2C File Offset: 0x01139C2C
+		// Token: 0x0603B937 RID: 244023 RVA: 0x010E5830 File Offset: 0x010E3A30
 		private void SnapSplineTransformToWall(Transform outTransform)
 		{
 			UTraceSphereElement utraceSphereElement = new UTraceSphereElement();
@@ -107,17 +107,17 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x040243FA RID: 148474
+		// Token: 0x0401F6AF RID: 128687
 		[Nullable(2)]
 		private LevelFlowTransitionToSplineParam Param;
 
-		// Token: 0x040243FB RID: 148475
+		// Token: 0x0401F6B0 RID: 128688
 		public float TraceLength = 1000f;
 
-		// Token: 0x040243FC RID: 148476
+		// Token: 0x0401F6B1 RID: 128689
 		public float TraceStartOffset = 500f;
 
-		// Token: 0x040243FD RID: 148477
+		// Token: 0x0401F6B2 RID: 128690
 		private readonly float MotorcycleOffset;
 	}
 }

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001284 RID: 4740
+	// Token: 0x020012F3 RID: 4851
 	[NetMessage(EMessageId.SpringSignSkinRewardRequest)]
 	public sealed class SpringSignSkinRewardRequest : IMessage<SpringSignSkinRewardRequest>, IMessage, IEquatable<SpringSignSkinRewardRequest>, IDeepCloneable<SpringSignSkinRewardRequest>, IBufferMessage
 	{
-		// Token: 0x060193E3 RID: 103395 RVA: 0x003ABFBD File Offset: 0x003AA1BD
+		// Token: 0x06019E19 RID: 106009 RVA: 0x003C66ED File Offset: 0x003C48ED
 		[NullableContext(1)]
 		public static SpringSignSkinRewardRequest Create()
 		{
 			return new SpringSignSkinRewardRequest();
 		}
 
-		// Token: 0x17005527 RID: 21799
-		// (get) Token: 0x060193E4 RID: 103396 RVA: 0x003ABFC4 File Offset: 0x003AA1C4
+		// Token: 0x170057A8 RID: 22440
+		// (get) Token: 0x06019E1A RID: 106010 RVA: 0x003C66F4 File Offset: 0x003C48F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005528 RID: 21800
-		// (get) Token: 0x060193E5 RID: 103397 RVA: 0x003ABFC7 File Offset: 0x003AA1C7
+		// Token: 0x170057A9 RID: 22441
+		// (get) Token: 0x06019E1B RID: 106011 RVA: 0x003C66F7 File Offset: 0x003C48F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060193E6 RID: 103398 RVA: 0x003ABFCE File Offset: 0x003AA1CE
+		// Token: 0x06019E1C RID: 106012 RVA: 0x003C66FE File Offset: 0x003C48FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringSignSkinRewardRequest()
 		{
 		}
 
-		// Token: 0x060193E7 RID: 103399 RVA: 0x003ABFD6 File Offset: 0x003AA1D6
+		// Token: 0x06019E1D RID: 106013 RVA: 0x003C6706 File Offset: 0x003C4906
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringSignSkinRewardRequest(SpringSignSkinRewardRequest other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060193E8 RID: 103400 RVA: 0x003ABFEF File Offset: 0x003AA1EF
+		// Token: 0x06019E1E RID: 106014 RVA: 0x003C671F File Offset: 0x003C491F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringSignSkinRewardRequest Clone()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			return new SpringSignSkinRewardRequest(this);
 		}
 
-		// Token: 0x060193E9 RID: 103401 RVA: 0x003ABFF7 File Offset: 0x003AA1F7
+		// Token: 0x06019E1F RID: 106015 RVA: 0x003C6727 File Offset: 0x003C4927
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SpringSignSkinRewardRequest);
 		}
 
-		// Token: 0x060193EA RID: 103402 RVA: 0x003AC005 File Offset: 0x003AA205
+		// Token: 0x06019E20 RID: 106016 RVA: 0x003C6735 File Offset: 0x003C4935
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SpringSignSkinRewardRequest other)
@@ -81,7 +81,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x060193EB RID: 103403 RVA: 0x003AC024 File Offset: 0x003AA224
+		// Token: 0x06019E21 RID: 106017 RVA: 0x003C6754 File Offset: 0x003C4954
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060193EC RID: 103404 RVA: 0x003AC04A File Offset: 0x003AA24A
+		// Token: 0x06019E22 RID: 106018 RVA: 0x003C677A File Offset: 0x003C497A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -102,7 +102,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060193ED RID: 103405 RVA: 0x003AC057 File Offset: 0x003AA257
+		// Token: 0x06019E23 RID: 106019 RVA: 0x003C6787 File Offset: 0x003C4987
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060193EE RID: 103406 RVA: 0x003AC060 File Offset: 0x003AA260
+		// Token: 0x06019E24 RID: 106020 RVA: 0x003C6790 File Offset: 0x003C4990
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -121,7 +121,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060193EF RID: 103407 RVA: 0x003AC078 File Offset: 0x003AA278
+		// Token: 0x06019E25 RID: 106021 RVA: 0x003C67A8 File Offset: 0x003C49A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060193F0 RID: 103408 RVA: 0x003AC09E File Offset: 0x003AA29E
+		// Token: 0x06019E26 RID: 106022 RVA: 0x003C67CE File Offset: 0x003C49CE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SpringSignSkinRewardRequest other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060193F1 RID: 103409 RVA: 0x003AC0BB File Offset: 0x003AA2BB
+		// Token: 0x06019E27 RID: 106023 RVA: 0x003C67EB File Offset: 0x003C49EB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060193F2 RID: 103410 RVA: 0x003AC0C4 File Offset: 0x003AA2C4
+		// Token: 0x06019E28 RID: 106024 RVA: 0x003C67F4 File Offset: 0x003C49F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -170,7 +170,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400947D RID: 38013
+		// Token: 0x040098A7 RID: 39079
 		private UnknownFieldSet _unknownFields;
 	}
 }

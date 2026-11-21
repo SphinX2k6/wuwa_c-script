@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003E7 RID: 999
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000440 RID: 1088
 	public class IGraph3dNormal_SetValue
 	{
-		// Token: 0x04000FDD RID: 4061
+		// Token: 0x040010FF RID: 4351
 		public EGraph3dType Type;
 
-		// Token: 0x04000FDE RID: 4062
+		// Token: 0x04001100 RID: 4352
 		public List<IGraph3dNodeBase> Nodes;
 
-		// Token: 0x04000FDF RID: 4063
+		// Token: 0x04001101 RID: 4353
 		public List<IGraph3dEdgeBase> Edges;
 	}
 }

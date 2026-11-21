@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057F6 RID: 22518
+	// Token: 0x020047CD RID: 18381
 	public class CompositeRewardView : UiTickViewBase
 	{
-		// Token: 0x060393CD RID: 234445 RVA: 0x00D9257F File Offset: 0x00D9077F
+		// Token: 0x0602E2E1 RID: 189153 RVA: 0x00CE13C7 File Offset: 0x00CDF5C7
 		[NullableContext(1)]
 		public CompositeRewardView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060393CE RID: 234446 RVA: 0x00D92588 File Offset: 0x00D90788
+		// Token: 0x0602E2E2 RID: 189154 RVA: 0x00CE13D0 File Offset: 0x00CDF5D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -52,27 +52,27 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060393CF RID: 234447 RVA: 0x00D926F4 File Offset: 0x00D908F4
+		// Token: 0x0602E2E3 RID: 189155 RVA: 0x00CE153C File Offset: 0x00CDF73C
 		private void OnClickedMaskButton()
 		{
 			UiManager.Instance.CloseView(EUiViewName.CompositeRewardView, null);
 		}
 
-		// Token: 0x060393D0 RID: 234448 RVA: 0x00D92706 File Offset: 0x00D90906
+		// Token: 0x0602E2E4 RID: 189156 RVA: 0x00CE154E File Offset: 0x00CDF74E
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<IReadOnlyList<RewardItemData>>(EEventName.OnRefreshRewardViewItemList, new Action<IReadOnlyList<RewardItemData>>(this.OnRefreshRewardItemList));
 			EventSystem.Instance.Add(EEventName.OnRefreshRewardProgressBar, new Action(this.OnRefreshRewardProgressBar));
 		}
 
-		// Token: 0x060393D1 RID: 234449 RVA: 0x00D92740 File Offset: 0x00D90940
+		// Token: 0x0602E2E5 RID: 189157 RVA: 0x00CE1588 File Offset: 0x00CDF788
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRefreshRewardViewItemList, new Action<IReadOnlyList<RewardItemData>>(this.OnRefreshRewardItemList));
 			EventSystem.Instance.Remove(EEventName.OnRefreshRewardProgressBar, new Action(this.OnRefreshRewardProgressBar));
 		}
 
-		// Token: 0x060393D2 RID: 234450 RVA: 0x00D9277A File Offset: 0x00D9097A
+		// Token: 0x0602E2E6 RID: 189158 RVA: 0x00CE15C2 File Offset: 0x00CDF7C2
 		[NullableContext(1)]
 		private void OnRefreshRewardItemList(IReadOnlyList<RewardItemData> itemList)
 		{
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060393D3 RID: 234451 RVA: 0x00D9278A File Offset: 0x00D9098A
+		// Token: 0x0602E2E7 RID: 189159 RVA: 0x00CE15D2 File Offset: 0x00CDF7D2
 		private void OnRefreshRewardProgressBar()
 		{
 			if (this.RefreshProgressVisible())
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060393D4 RID: 234452 RVA: 0x00D9279C File Offset: 0x00D9099C
+		// Token: 0x0602E2E8 RID: 189160 RVA: 0x00CE15E4 File Offset: 0x00CDF7E4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CompositeRewardView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060393D5 RID: 234453 RVA: 0x00D927E0 File Offset: 0x00D909E0
+		// Token: 0x0602E2E9 RID: 189161 RVA: 0x00CE1628 File Offset: 0x00CDF828
 		protected override void OnStart()
 		{
 			this.RewardData = (this.OpenParam as RewardData<ICompositeRewardInfo>);
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			ItemRewardController.Instance.PlayAudio(audioId, null);
 		}
 
-		// Token: 0x060393D6 RID: 234454 RVA: 0x00D92864 File Offset: 0x00D90A64
+		// Token: 0x0602E2EA RID: 189162 RVA: 0x00CE16AC File Offset: 0x00CDF8AC
 		protected override void OnAfterShow()
 		{
 			if (this.RewardData.GetRewardInfo().IsSuccess)
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			EventSystem.Instance.Emit(EEventName.OnShowRewardView);
 		}
 
-		// Token: 0x060393D7 RID: 234455 RVA: 0x00D928C9 File Offset: 0x00D90AC9
+		// Token: 0x0602E2EB RID: 189163 RVA: 0x00CE1711 File Offset: 0x00CDF911
 		protected override void OnBeforeDestroy()
 		{
 			this.RewardProgressBar = null;
@@ -152,13 +152,13 @@ namespace CSharpScript.Game.Module.ItemReward
 			ItemRewardModel.Instance.ClearCurrentRewardData();
 		}
 
-		// Token: 0x060393D8 RID: 234456 RVA: 0x00D928E3 File Offset: 0x00D90AE3
+		// Token: 0x0602E2EC RID: 189164 RVA: 0x00CE172B File Offset: 0x00CDF92B
 		protected override void OnTick(float delta)
 		{
 			this.RewardProgressBar.Tick(delta);
 		}
 
-		// Token: 0x060393D9 RID: 234457 RVA: 0x00D928F4 File Offset: 0x00D90AF4
+		// Token: 0x0602E2ED RID: 189165 RVA: 0x00CE173C File Offset: 0x00CDF93C
 		private bool RefreshTitleVisible()
 		{
 			bool flag = !StringUtils.IsEmpty(this.RewardData.GetRewardInfo().Title);
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return flag;
 		}
 
-		// Token: 0x060393DA RID: 234458 RVA: 0x00D92928 File Offset: 0x00D90B28
+		// Token: 0x0602E2EE RID: 189166 RVA: 0x00CE1770 File Offset: 0x00CDF970
 		private void RefreshTitle()
 		{
 			string title = this.RewardData.GetRewardInfo().Title;
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			LguiUtil.Instance.SetLocalTextNew(text, title, Array.Empty<object>());
 		}
 
-		// Token: 0x060393DB RID: 234459 RVA: 0x00D92968 File Offset: 0x00D90B68
+		// Token: 0x0602E2EF RID: 189167 RVA: 0x00CE17B0 File Offset: 0x00CDF9B0
 		private bool RefreshTitleTextureVisible()
 		{
 			bool flag = !StringUtils.IsEmpty(this.RewardData.GetRewardInfo().TitleIconPath);
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return flag;
 		}
 
-		// Token: 0x060393DC RID: 234460 RVA: 0x00D929AC File Offset: 0x00D90BAC
+		// Token: 0x0602E2F0 RID: 189168 RVA: 0x00CE17F4 File Offset: 0x00CDF9F4
 		private void RefreshTitleTexture()
 		{
 			string titleIconPath = this.RewardData.GetRewardInfo().TitleIconPath;
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			});
 		}
 
-		// Token: 0x060393DD RID: 234461 RVA: 0x00D92A14 File Offset: 0x00D90C14
+		// Token: 0x0602E2F1 RID: 189169 RVA: 0x00CE185C File Offset: 0x00CDFA5C
 		private bool RefreshContinueTextVisible()
 		{
 			bool flag = !StringUtils.IsEmpty(this.RewardData.GetRewardInfo().ContinueText);
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return flag;
 		}
 
-		// Token: 0x060393DE RID: 234462 RVA: 0x00D92A48 File Offset: 0x00D90C48
+		// Token: 0x0602E2F2 RID: 189170 RVA: 0x00CE1890 File Offset: 0x00CDFA90
 		private void RefreshContinueText()
 		{
 			string continueText = this.RewardData.GetRewardInfo().ContinueText;
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			LguiUtil.Instance.SetLocalTextNew(text, continueText, Array.Empty<object>());
 		}
 
-		// Token: 0x060393DF RID: 234463 RVA: 0x00D92A88 File Offset: 0x00D90C88
+		// Token: 0x0602E2F3 RID: 189171 RVA: 0x00CE18D0 File Offset: 0x00CDFAD0
 		private bool RefreshItemListVisible()
 		{
 			bool isItemVisible = this.RewardData.GetRewardInfo().IsItemVisible;
@@ -238,13 +238,13 @@ namespace CSharpScript.Game.Module.ItemReward
 			return flag;
 		}
 
-		// Token: 0x060393E0 RID: 234464 RVA: 0x00D92AE4 File Offset: 0x00D90CE4
+		// Token: 0x0602E2F4 RID: 189172 RVA: 0x00CE192C File Offset: 0x00CDFB2C
 		private void RefreshItemList()
 		{
 			this.RewardItemList.Refresh(this.RewardData.GetItemList(), true);
 		}
 
-		// Token: 0x060393E1 RID: 234465 RVA: 0x00D92B00 File Offset: 0x00D90D00
+		// Token: 0x0602E2F5 RID: 189173 RVA: 0x00CE1948 File Offset: 0x00CDFB48
 		private bool RefreshProgressVisible()
 		{
 			ICompositeRewardInfo rewardInfo = this.RewardData.GetRewardInfo();
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return flag;
 		}
 
-		// Token: 0x060393E2 RID: 234466 RVA: 0x00D92B58 File Offset: 0x00D90D58
+		// Token: 0x0602E2F6 RID: 189174 RVA: 0x00CE19A0 File Offset: 0x00CDFBA0
 		private void RefreshProgressBar()
 		{
 			ICompositeRewardInfo rewardInfo = this.RewardData.GetRewardInfo();
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.RewardProgressBar.Refresh(rewardInfo.ProgressBarTitle, progressQueue, (float)rewardInfo.ProgressBarAnimationTime);
 		}
 
-		// Token: 0x0401DF14 RID: 122644
+		// Token: 0x040189AB RID: 100779
 		[Nullable(new byte[]
 		{
 			2,
@@ -276,39 +276,39 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		private RewardData<ICompositeRewardInfo> RewardData;
 
-		// Token: 0x0401DF15 RID: 122645
+		// Token: 0x040189AC RID: 100780
 		[Nullable(2)]
 		private RewardItemList RewardItemList;
 
-		// Token: 0x0401DF16 RID: 122646
+		// Token: 0x040189AD RID: 100781
 		[Nullable(2)]
 		private RewardProgressBar RewardProgressBar;
 
-		// Token: 0x0200B9D2 RID: 47570
+		// Token: 0x0200A3E8 RID: 41960
 		private class EChildType
 		{
-			// Token: 0x040382DA RID: 230106
+			// Token: 0x04032CC7 RID: 208071
 			public const int MaskButton = 0;
 
-			// Token: 0x040382DB RID: 230107
+			// Token: 0x04032CC8 RID: 208072
 			public const int TitleText = 1;
 
-			// Token: 0x040382DC RID: 230108
+			// Token: 0x04032CC9 RID: 208073
 			public const int TitleTexture = 2;
 
-			// Token: 0x040382DD RID: 230109
+			// Token: 0x04032CCA RID: 208074
 			public const int TitleBgTexture = 3;
 
-			// Token: 0x040382DE RID: 230110
+			// Token: 0x04032CCB RID: 208075
 			public const int TitlePanelItem = 4;
 
-			// Token: 0x040382DF RID: 230111
+			// Token: 0x04032CCC RID: 208076
 			public const int RewardItemListItem = 5;
 
-			// Token: 0x040382E0 RID: 230112
+			// Token: 0x04032CCD RID: 208077
 			public const int RewardProgressBarItem = 6;
 
-			// Token: 0x040382E1 RID: 230113
+			// Token: 0x04032CCE RID: 208078
 			public const int ContinueText = 7;
 		}
 	}

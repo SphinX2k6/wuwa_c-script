@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004E6 RID: 1254
+	// Token: 0x020004FC RID: 1276
 	public class ConfigLoadingTipsTextAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001D6F RID: 7535 RVA: 0x000FF978 File Offset: 0x000FDB78
+		// Token: 0x06001DF3 RID: 7667 RVA: 0x001060CC File Offset: 0x001042CC
 		static ConfigLoadingTipsTextAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLoadingTipsTextAll.CreateStaticDefaultValue), new Action(ConfigLoadingTipsTextAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001D70 RID: 7536 RVA: 0x000FF998 File Offset: 0x000FDB98
+		// Token: 0x06001DF4 RID: 7668 RVA: 0x001060EC File Offset: 0x001042EC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLoadingTipsTextAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001D71 RID: 7537 RVA: 0x000FFA17 File Offset: 0x000FDC17
+		// Token: 0x06001DF5 RID: 7669 RVA: 0x0010616B File Offset: 0x0010436B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLoadingTipsTextAll.LogPair = null;
 			ConfigLoadingTipsTextAll.HandleId = 0;
 		}
 
-		// Token: 0x06001D72 RID: 7538 RVA: 0x000FFA25 File Offset: 0x000FDC25
+		// Token: 0x06001DF6 RID: 7670 RVA: 0x00106179 File Offset: 0x00104379
 		public static void Init()
 		{
 			ConfigLoadingTipsTextAll.HandleId = ConfigCommon.InitDataStatement(ConfigLoadingTipsTextAll.HandleId, "db_loadingtips.db", "select BinData from `LoadingTipsText`");
 		}
 
-		// Token: 0x06001D73 RID: 7539 RVA: 0x000FFA40 File Offset: 0x000FDC40
+		// Token: 0x06001DF7 RID: 7671 RVA: 0x00106194 File Offset: 0x00104394
 		[NullableContext(2)]
 		public static IReadOnlyList<LoadingTipsText> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400222E RID: 8750
+		// Token: 0x040022C8 RID: 8904
 		private const string DB = "db_loadingtips.db";
 
-		// Token: 0x0400222F RID: 8751
+		// Token: 0x040022C9 RID: 8905
 		private const string FILE = "z.载入提示.xlsx";
 
-		// Token: 0x04002230 RID: 8752
+		// Token: 0x040022CA RID: 8906
 		private const string TABLE = "LoadingTipsText";
 
-		// Token: 0x04002231 RID: 8753
+		// Token: 0x040022CB RID: 8907
 		private const string COMMAND = "select BinData from `LoadingTipsText`";
 
-		// Token: 0x04002232 RID: 8754
+		// Token: 0x040022CC RID: 8908
 		private const string KEY_PREFIX = "LoadingTipsTextAll";
 
-		// Token: 0x04002233 RID: 8755
+		// Token: 0x040022CD RID: 8909
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002234 RID: 8756
+		// Token: 0x040022CE RID: 8910
 		private static int HandleId;
 	}
 }

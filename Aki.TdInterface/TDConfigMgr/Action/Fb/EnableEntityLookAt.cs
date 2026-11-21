@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A76 RID: 10870
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D6A RID: 11626
 	public class EnableEntityLookAt : ActionParams
 	{
-		// Token: 0x0600EEFB RID: 61179 RVA: 0x0022C339 File Offset: 0x0022A539
+		// Token: 0x0600FDB1 RID: 64945 RVA: 0x0024A045 File Offset: 0x00248245
 		public static EnableEntityLookAt Create(IEnableEntityLookAt? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BD1 RID: 19409
-		// (get) Token: 0x0600EEFC RID: 61180 RVA: 0x0022C358 File Offset: 0x0022A558
+		// Token: 0x17004F8B RID: 20363
+		// (get) Token: 0x0600FDB2 RID: 64946 RVA: 0x0024A064 File Offset: 0x00248264
 		public virtual string Key
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BD2 RID: 19410
-		// (get) Token: 0x0600EEFD RID: 61181 RVA: 0x0022C365 File Offset: 0x0022A565
+		// Token: 0x17004F8C RID: 20364
+		// (get) Token: 0x0600FDB3 RID: 64947 RVA: 0x0024A071 File Offset: 0x00248271
 		public virtual IDefaultLookAtType DefaultLookAtType
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BD3 RID: 19411
-		// (get) Token: 0x0600EEFE RID: 61182 RVA: 0x0022C394 File Offset: 0x0022A594
+		// Token: 0x17004F8D RID: 20365
+		// (get) Token: 0x0600FDB4 RID: 64948 RVA: 0x0024A0A0 File Offset: 0x002482A0
 		[Nullable(2)]
 		public virtual ICheckFlowLookAt OverrideLookAtType
 		{
@@ -67,8 +65,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BD4 RID: 19412
-		// (get) Token: 0x0600EEFF RID: 61183 RVA: 0x0022C3C8 File Offset: 0x0022A5C8
+		// Token: 0x17004F8E RID: 20366
+		// (get) Token: 0x0600FDB5 RID: 64949 RVA: 0x0024A0D4 File Offset: 0x002482D4
 		public virtual List<int> EntityIds
 		{
 			get
@@ -88,26 +86,26 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400837A RID: 33658
+		// Token: 0x04008A7E RID: 35454
 		private IEnableEntityLookAt Instance;
 
-		// Token: 0x0400837B RID: 33659
+		// Token: 0x04008A7F RID: 35455
 		private IDefaultLookAtType _DefaultLookAtTypeCache;
 
-		// Token: 0x0400837C RID: 33660
+		// Token: 0x04008A80 RID: 35456
 		private bool _DefaultLookAtTypeInited;
 
-		// Token: 0x0400837D RID: 33661
+		// Token: 0x04008A81 RID: 35457
 		[Nullable(2)]
 		private ICheckFlowLookAt _OverrideLookAtTypeCache;
 
-		// Token: 0x0400837E RID: 33662
+		// Token: 0x04008A82 RID: 35458
 		private bool _OverrideLookAtTypeInited;
 
-		// Token: 0x0400837F RID: 33663
+		// Token: 0x04008A83 RID: 35459
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04008380 RID: 33664
+		// Token: 0x04008A84 RID: 35460
 		private bool _EntityIdsInited;
 	}
 }

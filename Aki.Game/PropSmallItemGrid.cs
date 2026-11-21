@@ -1,11 +1,11 @@
 ﻿using System;
 using CSharpScript.Game.Module.RoleUi.RoleDevelop;
 
-// Token: 0x020019A0 RID: 6560
+// Token: 0x02000E5D RID: 3677
 public class PropSmallItemGrid : SmallItemGridBase
 {
-	// Token: 0x17001005 RID: 4101
-	// (get) Token: 0x0600BF80 RID: 49024 RVA: 0x002B3FD2 File Offset: 0x002B21D2
+	// Token: 0x17001029 RID: 4137
+	// (get) Token: 0x06009388 RID: 37768 RVA: 0x002BEF56 File Offset: 0x002BD156
 	public override ESmallItemGridType Type
 	{
 		get
@@ -14,39 +14,42 @@ public class PropSmallItemGrid : SmallItemGridBase
 		}
 	}
 
-	// Token: 0x040055FC RID: 22012
+	// Token: 0x040056AA RID: 22186
 	public ERoleDevelopStateTagType? RoleDevelopStateTagType;
 
-	// Token: 0x040055FD RID: 22013
+	// Token: 0x040056AB RID: 22187
+	public int? ElementId;
+
+	// Token: 0x040056AC RID: 22188
 	public bool? IsLockVisible;
 
-	// Token: 0x040055FE RID: 22014
+	// Token: 0x040056AD RID: 22189
 	public bool? IsLockVisibleBlack;
 
-	// Token: 0x040055FF RID: 22015
+	// Token: 0x040056AE RID: 22190
 	public bool? IsReceivableVisible;
 
-	// Token: 0x04005600 RID: 22016
+	// Token: 0x040056AF RID: 22191
 	public bool? IsStarReceivableVisible;
 
-	// Token: 0x04005601 RID: 22017
+	// Token: 0x040056B0 RID: 22192
 	public bool? IsReceivedVisible;
 
-	// Token: 0x04005602 RID: 22018
+	// Token: 0x040056B1 RID: 22193
 	public bool? IsNewVisible;
 
-	// Token: 0x04005603 RID: 22019
+	// Token: 0x040056B2 RID: 22194
 	public bool? IsNotFoundVisible;
 
-	// Token: 0x04005604 RID: 22020
+	// Token: 0x040056B3 RID: 22195
 	public int? CoolDownTime;
 
-	// Token: 0x04005605 RID: 22021
+	// Token: 0x040056B4 RID: 22196
 	public bool? IsBirthdayEffectVisible;
 
-	// Token: 0x04005606 RID: 22022
+	// Token: 0x040056B5 RID: 22197
 	public bool? IsOrnamentConflictVisible;
 
-	// Token: 0x04005607 RID: 22023
+	// Token: 0x040056B6 RID: 22198
 	public bool? IsTimeFlagVisible;
 }

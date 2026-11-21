@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020C3 RID: 8387
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002318 RID: 8984
 	public class IWriteLetterConfig
 	{
-		// Token: 0x0600B85E RID: 47198 RVA: 0x001AAAC0 File Offset: 0x001A8CC0
+		// Token: 0x0600C3B6 RID: 50102 RVA: 0x001C1708 File Offset: 0x001BF908
 		private IWriteLetterConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B85F RID: 47199 RVA: 0x001AAAF8 File Offset: 0x001A8CF8
+		// Token: 0x0600C3B7 RID: 50103 RVA: 0x001C1740 File Offset: 0x001BF940
 		public static IWriteLetterConfig Create([Nullable(2)] IWriteLetterConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B860 RID: 47200 RVA: 0x001AAB0B File Offset: 0x001A8D0B
+		// Token: 0x0600C3B8 RID: 50104 RVA: 0x001C1753 File Offset: 0x001BF953
 		public static IWriteLetterConfig CreateFromSetValue([Nullable(2)] IWriteLetterConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B861 RID: 47201 RVA: 0x001AAB1E File Offset: 0x001A8D1E
+		// Token: 0x0600C3B9 RID: 50105 RVA: 0x001C1766 File Offset: 0x001BF966
 		public IWriteLetterConfig_SetValue ToSetValue()
 		{
 			return new IWriteLetterConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003863 RID: 14435
-		// (get) Token: 0x0600B862 RID: 47202 RVA: 0x001AAB31 File Offset: 0x001A8D31
-		// (set) Token: 0x0600B863 RID: 47203 RVA: 0x001AAB5C File Offset: 0x001A8D5C
+		// Token: 0x17003B47 RID: 15175
+		// (get) Token: 0x0600C3BA RID: 50106 RVA: 0x001C1779 File Offset: 0x001BF979
+		// (set) Token: 0x0600C3BB RID: 50107 RVA: 0x001C17A4 File Offset: 0x001BF9A4
 		public virtual int LetterId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E84 RID: 28292
+		// Token: 0x040074A2 RID: 29858
 		[Nullable(2)]
 		protected IWriteLetterConfig FbInstance;
 
-		// Token: 0x04006E85 RID: 28293
+		// Token: 0x040074A3 RID: 29859
 		[Nullable(2)]
 		protected IWriteLetterConfig_SetValue PocoInterface;
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A22 RID: 2594
+	// Token: 0x02000AE7 RID: 2791
 	public static class EStreamingSourceModeExtensions
 	{
-		// Token: 0x0600394A RID: 14666 RVA: 0x000940D0 File Offset: 0x000922D0
+		// Token: 0x06003D22 RID: 15650 RVA: 0x0009CA04 File Offset: 0x0009AC04
 		public static string ToEnumString(this EStreamingSourceMode value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600394B RID: 14667 RVA: 0x00094108 File Offset: 0x00092308
+		// Token: 0x06003D23 RID: 15651 RVA: 0x0009CA3C File Offset: 0x0009AC3C
 		public static EStreamingSourceMode FromString(string name)
 		{
 			EStreamingSourceMode result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600394C RID: 14668 RVA: 0x00094131 File Offset: 0x00092331
+		// Token: 0x06003D24 RID: 15652 RVA: 0x0009CA65 File Offset: 0x0009AC65
 		public static bool TryFromString(string name, out EStreamingSourceMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600394D RID: 14669 RVA: 0x0009416A File Offset: 0x0009236A
+		// Token: 0x06003D25 RID: 15653 RVA: 0x0009CA9E File Offset: 0x0009AC9E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600394E RID: 14670 RVA: 0x00094182 File Offset: 0x00092382
+		// Token: 0x06003D26 RID: 15654 RVA: 0x0009CAB6 File Offset: 0x0009ACB6
 		public static EStreamingSourceMode[] GetValues()
 		{
 			return new EStreamingSourceMode[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600394F RID: 14671 RVA: 0x0009418E File Offset: 0x0009238E
+		// Token: 0x06003D27 RID: 15655 RVA: 0x0009CAC2 File Offset: 0x0009ACC2
 		public static string[] GetNames()
 		{
 			return new string[]

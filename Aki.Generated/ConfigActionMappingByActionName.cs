@@ -8,13 +8,13 @@ namespace Aki.Config
 	// Token: 0x0200003C RID: 60
 	public class ConfigActionMappingByActionName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000168 RID: 360 RVA: 0x00061ABB File Offset: 0x0005FCBB
+		// Token: 0x06000168 RID: 360 RVA: 0x0006535B File Offset: 0x0006355B
 		static ConfigActionMappingByActionName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigActionMappingByActionName.CreateStaticDefaultValue), new Action(ConfigActionMappingByActionName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000169 RID: 361 RVA: 0x00061ADC File Offset: 0x0005FCDC
+		// Token: 0x06000169 RID: 361 RVA: 0x0006537C File Offset: 0x0006357C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigActionMappingByActionName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600016A RID: 362 RVA: 0x00061B5B File Offset: 0x0005FD5B
+		// Token: 0x0600016A RID: 362 RVA: 0x000653FB File Offset: 0x000635FB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigActionMappingByActionName.LogPair = null;
 			ConfigActionMappingByActionName.HandleId = 0;
 		}
 
-		// Token: 0x0600016B RID: 363 RVA: 0x00061B69 File Offset: 0x0005FD69
+		// Token: 0x0600016B RID: 363 RVA: 0x00065409 File Offset: 0x00063609
 		public static void Init()
 		{
 			ConfigActionMappingByActionName.HandleId = ConfigCommon.InitDataStatement(ConfigActionMappingByActionName.HandleId, "db_input_settings.db", "select BinData from `ActionMapping` where ActionName=?");
 		}
 
-		// Token: 0x0600016C RID: 364 RVA: 0x00061B84 File Offset: 0x0005FD84
+		// Token: 0x0600016C RID: 364 RVA: 0x00065424 File Offset: 0x00063624
 		public static ActionMapping? GetConfig(string p0ActionName, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigActionMappingByActionName.HandleId, ConfigActionMappingByActionName.LogPair))

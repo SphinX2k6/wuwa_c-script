@@ -1,35 +1,35 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002991 RID: 10641
+// Token: 0x02001F0C RID: 7948
 [RequiredMember]
 public class ShipTowerReviewItemData
 {
-	// Token: 0x06016043 RID: 90179 RVA: 0x0058F0D5 File Offset: 0x0058D2D5
+	// Token: 0x06013A49 RID: 80457 RVA: 0x005BA099 File Offset: 0x005B8299
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public ShipTowerReviewItemData()
 	{
 	}
 
-	// Token: 0x0400A3FD RID: 41981
+	// Token: 0x0400A7E7 RID: 42983
 	[Nullable(1)]
 	[RequiredMember]
 	public string Title;
 
-	// Token: 0x0400A3FE RID: 41982
+	// Token: 0x0400A7E8 RID: 42984
 	[RequiredMember]
 	public int Score;
 
-	// Token: 0x0400A3FF RID: 41983
+	// Token: 0x0400A7E9 RID: 42985
 	[Nullable(2)]
 	public string Grade;
 
-	// Token: 0x0400A400 RID: 41984
+	// Token: 0x0400A7EA RID: 42986
 	[RequiredMember]
 	public int StageId;
 
-	// Token: 0x0400A401 RID: 41985
+	// Token: 0x0400A7EB RID: 42987
 	[RequiredMember]
 	public bool IsQuickPass;
 }

@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025C5 RID: 9669
+// Token: 0x02001AB0 RID: 6832
 public class PhotoFilterItem : UiPanelBase
 {
-	// Token: 0x060139C2 RID: 80322 RVA: 0x004E7C50 File Offset: 0x004E5E50
+	// Token: 0x06010EA2 RID: 69282 RVA: 0x004F6850 File Offset: 0x004F4A50
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class PhotoFilterItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060139C3 RID: 80323 RVA: 0x004E7D68 File Offset: 0x004E5F68
+	// Token: 0x06010EA3 RID: 69283 RVA: 0x004F6968 File Offset: 0x004F4B68
 	protected override void OnStart()
 	{
 		UUISliderComponent slider = base.GetSlider(4);
@@ -45,7 +45,7 @@ public class PhotoFilterItem : UiPanelBase
 		base.GetExtendToggle(0).OnPointEnterCallBack.Bind(new Action<EToggleState>(this.PointEnterCallBack));
 	}
 
-	// Token: 0x060139C4 RID: 80324 RVA: 0x004E7DC6 File Offset: 0x004E5FC6
+	// Token: 0x06010EA4 RID: 69284 RVA: 0x004F69C6 File Offset: 0x004F4BC6
 	protected override void OnBeforeDestroy()
 	{
 		UUISliderComponent slider = base.GetSlider(4);
@@ -56,14 +56,14 @@ public class PhotoFilterItem : UiPanelBase
 		this.FilterItemLevelSequencePlayer = null;
 	}
 
-	// Token: 0x060139C5 RID: 80325 RVA: 0x004E7DE8 File Offset: 0x004E5FE8
+	// Token: 0x06010EA5 RID: 69285 RVA: 0x004F69E8 File Offset: 0x004F4BE8
 	protected override void OnBeforeShow()
 	{
 		bool bSelected = !this.IsUnSelected();
 		this.SetSelected(bSelected, false);
 	}
 
-	// Token: 0x060139C6 RID: 80326 RVA: 0x004E7E08 File Offset: 0x004E6008
+	// Token: 0x06010EA6 RID: 69286 RVA: 0x004F6A08 File Offset: 0x004F4C08
 	public void Refresh(int photoFilterId)
 	{
 		if (photoFilterId == 0)
@@ -98,13 +98,13 @@ public class PhotoFilterItem : UiPanelBase
 		base.GetText(3).SetText(num.ToString(), true);
 	}
 
-	// Token: 0x060139C7 RID: 80327 RVA: 0x004E7F08 File Offset: 0x004E6108
+	// Token: 0x06010EA7 RID: 69287 RVA: 0x004F6B08 File Offset: 0x004F4D08
 	private bool IsUnSelected()
 	{
 		return PhotographModel.Instance.GetPhotographFilter() != this.PhotoFilterId;
 	}
 
-	// Token: 0x060139C8 RID: 80328 RVA: 0x004E7F20 File Offset: 0x004E6120
+	// Token: 0x06010EA8 RID: 69288 RVA: 0x004F6B20 File Offset: 0x004F4D20
 	private void OnValueChanged(float value)
 	{
 		PhotographController.Instance.SetSingleFilterStrength(this.PhotoFilterId, value);
@@ -112,14 +112,14 @@ public class PhotoFilterItem : UiPanelBase
 		base.GetText(3).SetText(num.ToString(), true);
 	}
 
-	// Token: 0x060139C9 RID: 80329 RVA: 0x004E7F61 File Offset: 0x004E6161
+	// Token: 0x06010EA9 RID: 69289 RVA: 0x004F6B61 File Offset: 0x004F4D61
 	[NullableContext(1)]
 	public void BindOnSelected(Action<PhotoFilterItem, bool> onSelected)
 	{
 		this.OnSelected = onSelected;
 	}
 
-	// Token: 0x060139CA RID: 80330 RVA: 0x004E7F6C File Offset: 0x004E616C
+	// Token: 0x06010EAA RID: 69290 RVA: 0x004F6B6C File Offset: 0x004F4D6C
 	public void SetSelected(bool bSelected, bool bFireEvent = false)
 	{
 		UUISprite sprite = base.GetSprite(7);
@@ -139,7 +139,7 @@ public class PhotoFilterItem : UiPanelBase
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, bFireEvent, false, false);
 	}
 
-	// Token: 0x060139CB RID: 80331 RVA: 0x004E7FD4 File Offset: 0x004E61D4
+	// Token: 0x06010EAB RID: 69291 RVA: 0x004F6BD4 File Offset: 0x004F4DD4
 	private void OnClicked(EToggleState state)
 	{
 		if (PhotographModel.Instance.GetPhotographFilter() == this.PhotoFilterId)
@@ -154,7 +154,7 @@ public class PhotoFilterItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060139CC RID: 80332 RVA: 0x004E8018 File Offset: 0x004E6218
+	// Token: 0x06010EAC RID: 69292 RVA: 0x004F6C18 File Offset: 0x004F4E18
 	public void SetFilterStrengthVisible(bool bShow, bool needAnim = true)
 	{
 		UUIItem panelFilterStrength = base.GetItem(8);
@@ -222,20 +222,20 @@ public class PhotoFilterItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060139CD RID: 80333 RVA: 0x004E8102 File Offset: 0x004E6302
+	// Token: 0x06010EAD RID: 69293 RVA: 0x004F6D02 File Offset: 0x004F4F02
 	public void ShowFilterItem()
 	{
 		this.IsVisible = true;
 		this.SetActive(true);
 	}
 
-	// Token: 0x060139CE RID: 80334 RVA: 0x004E8112 File Offset: 0x004E6312
+	// Token: 0x06010EAE RID: 69294 RVA: 0x004F6D12 File Offset: 0x004F4F12
 	public int GetPhotoFilterId()
 	{
 		return this.PhotoFilterId;
 	}
 
-	// Token: 0x060139CF RID: 80335 RVA: 0x004E811A File Offset: 0x004E631A
+	// Token: 0x06010EAF RID: 69295 RVA: 0x004F6D1A File Offset: 0x004F4F1A
 	public void PlayDisappearSequence(bool isByClickToggle)
 	{
 		this.IsVisible = false;
@@ -247,7 +247,7 @@ public class PhotoFilterItem : UiPanelBase
 		this.SetActive(false);
 	}
 
-	// Token: 0x060139D0 RID: 80336 RVA: 0x004E813C File Offset: 0x004E633C
+	// Token: 0x06010EB0 RID: 69296 RVA: 0x004F6D3C File Offset: 0x004F4F3C
 	public UniTask PlayDisappearSequenceAsync()
 	{
 		PhotoFilterItem.<PlayDisappearSequenceAsync>d__21 <PlayDisappearSequenceAsync>d__;
@@ -258,14 +258,14 @@ public class PhotoFilterItem : UiPanelBase
 		return <PlayDisappearSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060139D1 RID: 80337 RVA: 0x004E817F File Offset: 0x004E637F
+	// Token: 0x06010EB1 RID: 69297 RVA: 0x004F6D7F File Offset: 0x004F4F7F
 	[NullableContext(1)]
 	public void BindScrollToSelectedItem(Action<PhotoFilterItem> scrollToSelectedItem)
 	{
 		this.ScrollToSelectedItem = scrollToSelectedItem;
 	}
 
-	// Token: 0x060139D2 RID: 80338 RVA: 0x004E8188 File Offset: 0x004E6388
+	// Token: 0x06010EB2 RID: 69298 RVA: 0x004F6D88 File Offset: 0x004F4F88
 	private void PointEnterCallBack(EToggleState _)
 	{
 		if (this.IsUnSelected())
@@ -282,14 +282,14 @@ public class PhotoFilterItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x040093EA RID: 37866
+	// Token: 0x04009540 RID: 38208
 	private int PhotoFilterId;
 
-	// Token: 0x040093EB RID: 37867
+	// Token: 0x04009541 RID: 38209
 	[Nullable(2)]
 	private LevelSequencePlayer FilterItemLevelSequencePlayer;
 
-	// Token: 0x040093EC RID: 37868
+	// Token: 0x04009542 RID: 38210
 	[Nullable(new byte[]
 	{
 		2,
@@ -297,7 +297,7 @@ public class PhotoFilterItem : UiPanelBase
 	})]
 	private Action<PhotoFilterItem, bool> OnSelected;
 
-	// Token: 0x040093ED RID: 37869
+	// Token: 0x04009543 RID: 38211
 	[Nullable(new byte[]
 	{
 		2,
@@ -305,34 +305,34 @@ public class PhotoFilterItem : UiPanelBase
 	})]
 	private Action<PhotoFilterItem> ScrollToSelectedItem;
 
-	// Token: 0x040093EE RID: 37870
+	// Token: 0x04009544 RID: 38212
 	private PhotoFilter? PhotoFilterConfig;
 
-	// Token: 0x040093EF RID: 37871
+	// Token: 0x04009545 RID: 38213
 	private bool IsVisible;
 
-	// Token: 0x02008BD6 RID: 35798
+	// Token: 0x02007D5E RID: 32094
 	private enum EChildType
 	{
-		// Token: 0x0402D653 RID: 185939
+		// Token: 0x04028968 RID: 166248
 		Toggle,
-		// Token: 0x0402D654 RID: 185940
+		// Token: 0x04028969 RID: 166249
 		TextName,
-		// Token: 0x0402D655 RID: 185941
+		// Token: 0x0402896A RID: 166250
 		TextureIcon,
-		// Token: 0x0402D656 RID: 185942
+		// Token: 0x0402896B RID: 166251
 		TextFilterStrengthNum,
-		// Token: 0x0402D657 RID: 185943
+		// Token: 0x0402896C RID: 166252
 		ValueSlider,
-		// Token: 0x0402D658 RID: 185944
+		// Token: 0x0402896D RID: 166253
 		SpriteHandle,
-		// Token: 0x0402D659 RID: 185945
+		// Token: 0x0402896E RID: 166254
 		RedPoint,
-		// Token: 0x0402D65A RID: 185946
+		// Token: 0x0402896F RID: 166255
 		SpriteSelected,
-		// Token: 0x0402D65B RID: 185947
+		// Token: 0x04028970 RID: 166256
 		PanelFilterStrength,
-		// Token: 0x0402D65C RID: 185948
+		// Token: 0x04028971 RID: 166257
 		SpriteArrow
 	}
 }

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x0200515F RID: 20831
+	// Token: 0x0200412F RID: 16687
 	public class EntranceBackgroundPanel : UiPanelBase
 	{
-		// Token: 0x06035428 RID: 218152 RVA: 0x00C9CC9C File Offset: 0x00C9AE9C
+		// Token: 0x0602A324 RID: 172836 RVA: 0x00BEA19C File Offset: 0x00BE839C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035429 RID: 218153 RVA: 0x00C9CD38 File Offset: 0x00C9AF38
+		// Token: 0x0602A325 RID: 172837 RVA: 0x00BEA238 File Offset: 0x00BE8438
 		public void RefreshBg(bool isStart, int level)
 		{
 			string a = PhantomArenaDefine.positionGymLevel[level - 1];
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.SetRight(isStart);
 		}
 
-		// Token: 0x0603542A RID: 218154 RVA: 0x00C9CD90 File Offset: 0x00C9AF90
+		// Token: 0x0602A326 RID: 172838 RVA: 0x00BEA290 File Offset: 0x00BE8490
 		[NullableContext(1)]
 		private void SetTextureById(string resourceId, [Nullable(2)] UUITexture icon)
 		{
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			base.SetTextureByPath(resourcePath, icon, null, null);
 		}
 
-		// Token: 0x0603542B RID: 218155 RVA: 0x00C9CDBC File Offset: 0x00C9AFBC
+		// Token: 0x0602A327 RID: 172839 RVA: 0x00BEA2BC File Offset: 0x00BE84BC
 		public void SetLeft(bool isStart)
 		{
 			UUITexture icon = isStart ? base.GetTexture(3) : base.GetTexture(0);
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.SetTextureById("GymTabViewTextureBgRightGray", icon3);
 		}
 
-		// Token: 0x0603542C RID: 218156 RVA: 0x00C9CE2C File Offset: 0x00C9B02C
+		// Token: 0x0602A328 RID: 172840 RVA: 0x00BEA32C File Offset: 0x00BE852C
 		public void SetMiddle(bool isStart)
 		{
 			UUITexture icon = isStart ? base.GetTexture(3) : base.GetTexture(0);
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.SetTextureById("GymTabViewTextureBgRightGray", icon3);
 		}
 
-		// Token: 0x0603542D RID: 218157 RVA: 0x00C9CE9C File Offset: 0x00C9B09C
+		// Token: 0x0602A329 RID: 172841 RVA: 0x00BEA39C File Offset: 0x00BE859C
 		public void SetRight(bool isStart)
 		{
 			UUITexture icon = isStart ? base.GetTexture(3) : base.GetTexture(0);
@@ -85,25 +85,25 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.SetTextureById("GymTabViewTextureBgRightColor", icon3);
 		}
 
-		// Token: 0x0200B2C0 RID: 45760
+		// Token: 0x02009CF9 RID: 40185
 		private class EBgComponent
 		{
-			// Token: 0x0403628F RID: 221839
+			// Token: 0x04030CE4 RID: 199908
 			public const int IconLeftA = 0;
 
-			// Token: 0x04036290 RID: 221840
+			// Token: 0x04030CE5 RID: 199909
 			public const int IconMiddleA = 1;
 
-			// Token: 0x04036291 RID: 221841
+			// Token: 0x04030CE6 RID: 199910
 			public const int IconRightA = 2;
 
-			// Token: 0x04036292 RID: 221842
+			// Token: 0x04030CE7 RID: 199911
 			public const int IconLeftB = 3;
 
-			// Token: 0x04036293 RID: 221843
+			// Token: 0x04030CE8 RID: 199912
 			public const int IconMiddleB = 4;
 
-			// Token: 0x04036294 RID: 221844
+			// Token: 0x04030CE9 RID: 199913
 			public const int IconRightB = 5;
 		}
 	}

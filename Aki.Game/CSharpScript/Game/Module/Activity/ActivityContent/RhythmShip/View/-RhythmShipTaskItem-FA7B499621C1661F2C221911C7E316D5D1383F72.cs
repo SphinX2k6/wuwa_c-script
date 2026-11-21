@@ -2,26 +2,26 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006259 RID: 25177
+	// Token: 0x020051D7 RID: 20951
 	internal enum <RhythmShipTaskItem>FA7B499621C1661F2C221911C7E316D5D1383F723FDF7F834A9EE1BEFAF5E6D5D__EComponent
 	{
-		// Token: 0x040211F7 RID: 135671
+		// Token: 0x0401BB26 RID: 113446
 		RootItem,
-		// Token: 0x040211F8 RID: 135672
+		// Token: 0x0401BB27 RID: 113447
 		NameText,
-		// Token: 0x040211F9 RID: 135673
+		// Token: 0x0401BB28 RID: 113448
 		TargetText,
-		// Token: 0x040211FA RID: 135674
+		// Token: 0x0401BB29 RID: 113449
 		RewardScrollView,
-		// Token: 0x040211FB RID: 135675
+		// Token: 0x0401BB2A RID: 113450
 		RewardItem,
-		// Token: 0x040211FC RID: 135676
+		// Token: 0x0401BB2B RID: 113451
 		GotBtn,
-		// Token: 0x040211FD RID: 135677
+		// Token: 0x0401BB2C RID: 113452
 		GetBtn,
-		// Token: 0x040211FE RID: 135678
+		// Token: 0x0401BB2D RID: 113453
 		DoingItem,
-		// Token: 0x040211FF RID: 135679
+		// Token: 0x0401BB2E RID: 113454
 		DoneItem
 	}
 }

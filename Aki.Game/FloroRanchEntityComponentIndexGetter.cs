@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001B28 RID: 6952
+// Token: 0x02000FE7 RID: 4071
 [NullableContext(1)]
 [Nullable(0)]
 [StaticVariableRuleIgnore]
 public class FloroRanchEntityComponentIndexGetter<[Nullable(0)] T> where T : FloroRanchEntityComponentBase
 {
-	// Token: 0x17001136 RID: 4406
-	// (get) Token: 0x0600CE3E RID: 52798 RVA: 0x002EF77C File Offset: 0x002ED97C
+	// Token: 0x1700115B RID: 4443
+	// (get) Token: 0x0600A24F RID: 41551 RVA: 0x002FA85C File Offset: 0x002F8A5C
 	public static int Index { get; }
 
-	// Token: 0x0600CE3F RID: 52799 RVA: 0x002EF784 File Offset: 0x002ED984
+	// Token: 0x0600A250 RID: 41552 RVA: 0x002FA864 File Offset: 0x002F8A64
 	public static int GetByType(string typeName, bool useCache = false)
 	{
 		if (useCache)
@@ -45,7 +45,7 @@ public class FloroRanchEntityComponentIndexGetter<[Nullable(0)] T> where T : Flo
 		return (int)result;
 	}
 
-	// Token: 0x0600CE41 RID: 52801 RVA: 0x002EF7F0 File Offset: 0x002ED9F0
+	// Token: 0x0600A252 RID: 41554 RVA: 0x002FA8D0 File Offset: 0x002F8AD0
 	// Note: this type is marked as 'beforefieldinit'.
 	static FloroRanchEntityComponentIndexGetter()
 	{
@@ -53,6 +53,6 @@ public class FloroRanchEntityComponentIndexGetter<[Nullable(0)] T> where T : Flo
 		FloroRanchEntityComponentIndexGetter<T>.Index = (Enum.TryParse<EFloroRanchEntityComponent>(typeof(T).Name, out efloroRanchEntityComponent) ? efloroRanchEntityComponent : ((EFloroRanchEntityComponent)(-1)));
 	}
 
-	// Token: 0x04005E8E RID: 24206
+	// Token: 0x04005F5D RID: 24413
 	public static Dictionary<string, int> ComponentIndex;
 }

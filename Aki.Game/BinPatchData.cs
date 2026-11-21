@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002216 RID: 8726
+// Token: 0x020016FA RID: 5882
 [NullableContext(1)]
 [Nullable(0)]
 public class BinPatchData
 {
-	// Token: 0x04008176 RID: 33142
+	// Token: 0x040082B4 RID: 33460
 	public bool NeedWait;
 
-	// Token: 0x04008177 RID: 33143
+	// Token: 0x040082B5 RID: 33461
 	public float Rate;
 
-	// Token: 0x04008178 RID: 33144
+	// Token: 0x040082B6 RID: 33462
 	public string TextId = "";
 
-	// Token: 0x04008179 RID: 33145
+	// Token: 0x040082B7 RID: 33463
 	public string[] Args = new string[0];
 }

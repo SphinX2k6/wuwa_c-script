@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005B4 RID: 1460
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200061F RID: 1567
 	public class IOperationsAfterEntityGroupFailure
 	{
-		// Token: 0x06001ED2 RID: 7890 RVA: 0x00056EE8 File Offset: 0x000550E8
+		// Token: 0x060020E2 RID: 8418 RVA: 0x0005BF14 File Offset: 0x0005A114
 		private IOperationsAfterEntityGroupFailure_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001ED3 RID: 7891 RVA: 0x00056F20 File Offset: 0x00055120
+		// Token: 0x060020E3 RID: 8419 RVA: 0x0005BF4C File Offset: 0x0005A14C
 		public static IOperationsAfterEntityGroupFailure Create([Nullable(2)] IOperationsAfterEntityGroupFailure instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001ED4 RID: 7892 RVA: 0x00056F33 File Offset: 0x00055133
+		// Token: 0x060020E4 RID: 8420 RVA: 0x0005BF5F File Offset: 0x0005A15F
 		public static IOperationsAfterEntityGroupFailure CreateFromSetValue([Nullable(2)] IOperationsAfterEntityGroupFailure_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001ED5 RID: 7893 RVA: 0x00056F46 File Offset: 0x00055146
+		// Token: 0x060020E5 RID: 8421 RVA: 0x0005BF72 File Offset: 0x0005A172
 		public IOperationsAfterEntityGroupFailure_SetValue ToSetValue()
 		{
 			return new IOperationsAfterEntityGroupFailure_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700083A RID: 2106
-		// (get) Token: 0x06001ED6 RID: 7894 RVA: 0x00056F68 File Offset: 0x00055168
-		// (set) Token: 0x06001ED7 RID: 7895 RVA: 0x00056FA2 File Offset: 0x000551A2
+		// Token: 0x170008C1 RID: 2241
+		// (get) Token: 0x060020E6 RID: 8422 RVA: 0x0005BF94 File Offset: 0x0005A194
+		// (set) Token: 0x060020E7 RID: 8423 RVA: 0x0005BFCE File Offset: 0x0005A1CE
 		public virtual bool? IsResetState
 		{
 			get
@@ -87,20 +85,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700083B RID: 2107
-		// (get) Token: 0x06001ED8 RID: 7896 RVA: 0x00056FB0 File Offset: 0x000551B0
-		// (set) Token: 0x06001ED9 RID: 7897 RVA: 0x00057043 File Offset: 0x00055243
+		// Token: 0x170008C2 RID: 2242
+		// (get) Token: 0x060020E8 RID: 8424 RVA: 0x0005BFDC File Offset: 0x0005A1DC
+		// (set) Token: 0x060020E9 RID: 8425 RVA: 0x0005C06F File Offset: 0x0005A26F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -131,7 +129,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -140,23 +138,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040015E2 RID: 5602
+		// Token: 0x04001756 RID: 5974
 		[Nullable(2)]
 		protected IOperationsAfterEntityGroupFailure FbInstance;
 
-		// Token: 0x040015E3 RID: 5603
+		// Token: 0x04001757 RID: 5975
 		[Nullable(2)]
 		protected IOperationsAfterEntityGroupFailure_SetValue PocoInterface;
 
-		// Token: 0x040015E4 RID: 5604
+		// Token: 0x04001758 RID: 5976
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x040015E5 RID: 5605
+		// Token: 0x04001759 RID: 5977
 		private bool _ActionsInited;
 	}
 }

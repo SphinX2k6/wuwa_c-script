@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067DE RID: 26590
+	// Token: 0x0200572E RID: 22318
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class DangoBrawlStarUtil
 	{
-		// Token: 0x06042369 RID: 271209 RVA: 0x0100FE38 File Offset: 0x0100E038
+		// Token: 0x06036EBF RID: 224959 RVA: 0x00F51308 File Offset: 0x00F4F508
 		[NullableContext(2)]
 		public static void RefreshStarFillByWorldPos([Nullable(1)] IReadOnlyList<DangoBrawlGeneralStar> stars, IDangoBrawlBagDropZoneExtra bagExtra, ActivityDangoBrawlData actData, int selfUid)
 		{
@@ -67,9 +66,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			HashSet<int> hashSet2 = new HashSet<int>();
 			HashSet<int> hashSet3 = new HashSet<int>();
 			HashSet<int> hashSet4 = new HashSet<int>();
-			foreach (ValueTuple<int, PanelPos, int> valueTuple in from s in list
-			orderby s.Item2.RowIndex, s.Item2.ColIndex
-			select s)
+			List<ValueTuple<int, PanelPos, int>> list2 = new List<ValueTuple<int, PanelPos, int>>(list);
+			list2.Sort(delegate([TupleElementNames(new string[]
+			{
+				"Idx",
+				"Pos",
+				"Uid"
+			})] ValueTuple<int, PanelPos, int> a, [TupleElementNames(new string[]
+			{
+				"Idx",
+				"Pos",
+				"Uid"
+			})] ValueTuple<int, PanelPos, int> b)
+			{
+				int num4 = a.Item2.RowIndex.CompareTo(b.Item2.RowIndex);
+				if (num4 != 0)
+				{
+					return num4;
+				}
+				num4 = a.Item2.ColIndex.CompareTo(b.Item2.ColIndex);
+				if (num4 == 0)
+				{
+					return a.Item1.CompareTo(b.Item1);
+				}
+				return num4;
+			});
+			foreach (ValueTuple<int, PanelPos, int> valueTuple in list2)
 			{
 				if (valueTuple.Item3 != -1 && valueTuple.Item3 != selfUid && hashSet3.Add(valueTuple.Item3))
 				{
@@ -102,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0604236A RID: 271210 RVA: 0x01010194 File Offset: 0x0100E394
+		// Token: 0x06036EC0 RID: 224960 RVA: 0x00F51648 File Offset: 0x00F4F848
 		public static void RefreshStarFillByOutLayout(IReadOnlyList<DangoBrawlGeneralStar> stars, IReadOnlyList<PanelPos> starAbsPosList, DangoBrawlOutBackpackItemData selfItem, IReadOnlyList<DangoBrawlOutBackpackItemData> allItems)
 		{
 			if (stars.Count == 0 || starAbsPosList.Count == 0)
@@ -149,9 +171,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			HashSet<int> hashSet2 = new HashSet<int>();
 			HashSet<int> hashSet3 = new HashSet<int>();
 			HashSet<int> hashSet4 = new HashSet<int>();
-			foreach (ValueTuple<int, PanelPos, int> valueTuple in from s in list
-			orderby s.Item2.RowIndex, s.Item2.ColIndex
-			select s)
+			List<ValueTuple<int, PanelPos, int>> list2 = new List<ValueTuple<int, PanelPos, int>>(list);
+			list2.Sort(delegate([TupleElementNames(new string[]
+			{
+				"Idx",
+				"Pos",
+				"ItemIdx"
+			})] ValueTuple<int, PanelPos, int> a, [TupleElementNames(new string[]
+			{
+				"Idx",
+				"Pos",
+				"ItemIdx"
+			})] ValueTuple<int, PanelPos, int> b)
+			{
+				int num3 = a.Item2.RowIndex.CompareTo(b.Item2.RowIndex);
+				if (num3 != 0)
+				{
+					return num3;
+				}
+				num3 = a.Item2.ColIndex.CompareTo(b.Item2.ColIndex);
+				if (num3 == 0)
+				{
+					return a.Item1.CompareTo(b.Item1);
+				}
+				return num3;
+			});
+			foreach (ValueTuple<int, PanelPos, int> valueTuple in list2)
 			{
 				if (valueTuple.Item3 >= 0 && valueTuple.Item3 != num && hashSet3.Add(valueTuple.Item3))
 				{
@@ -181,7 +226,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0604236B RID: 271211 RVA: 0x010104D8 File Offset: 0x0100E6D8
+		// Token: 0x06036EC1 RID: 224961 RVA: 0x00F51970 File Offset: 0x00F4FB70
 		private static int FindOutItemIndex(IReadOnlyList<DangoBrawlOutBackpackItemData> allItems, DangoBrawlOutBackpackItemData selfItem)
 		{
 			for (int i = 0; i < allItems.Count; i++)

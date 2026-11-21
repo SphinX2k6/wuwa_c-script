@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025EE RID: 9710
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028AE RID: 10414
 	public class IPostProcessVolumeCenterPosition : IMpcEffectParamBase
 	{
-		// Token: 0x0600DA35 RID: 55861 RVA: 0x002085A3 File Offset: 0x002067A3
+		// Token: 0x0600E802 RID: 59394 RVA: 0x00224CF7 File Offset: 0x00222EF7
 		public static IPostProcessVolumeCenterPosition Create(IPostProcessVolumeCenterPosition? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700401B RID: 16411
-		// (get) Token: 0x0600DA36 RID: 55862 RVA: 0x002085C2 File Offset: 0x002067C2
+		// Token: 0x17004354 RID: 17236
+		// (get) Token: 0x0600E803 RID: 59395 RVA: 0x00224D16 File Offset: 0x00222F16
 		public override EMpcEffectParamType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700401C RID: 16412
-		// (get) Token: 0x0600DA37 RID: 55863 RVA: 0x002085CF File Offset: 0x002067CF
+		// Token: 0x17004355 RID: 17237
+		// (get) Token: 0x0600E804 RID: 59396 RVA: 0x00224D23 File Offset: 0x00222F23
 		public virtual VectorInfo Position
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007928 RID: 31016
+		// Token: 0x04007FC2 RID: 32706
 		private IPostProcessVolumeCenterPosition Instance;
 
-		// Token: 0x04007929 RID: 31017
+		// Token: 0x04007FC3 RID: 32707
 		[Nullable(2)]
 		private VectorInfo _PositionCache;
 
-		// Token: 0x0400792A RID: 31018
+		// Token: 0x04007FC4 RID: 32708
 		private bool _PositionInited;
 	}
 }

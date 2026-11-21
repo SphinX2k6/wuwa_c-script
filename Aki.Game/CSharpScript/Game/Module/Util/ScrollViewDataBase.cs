@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048DF RID: 18655
+	// Token: 0x02003856 RID: 14422
 	public abstract class ScrollViewDataBase
 	{
 	}

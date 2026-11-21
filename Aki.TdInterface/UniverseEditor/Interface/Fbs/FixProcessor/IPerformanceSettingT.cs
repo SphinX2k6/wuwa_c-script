@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 {
-	// Token: 0x0200476D RID: 18285
+	// Token: 0x02004BD5 RID: 19413
 	public class IPerformanceSettingT
 	{
-		// Token: 0x17008329 RID: 33577
-		// (get) Token: 0x0601C277 RID: 115319 RVA: 0x003FCF30 File Offset: 0x003FB130
-		// (set) Token: 0x0601C278 RID: 115320 RVA: 0x003FCF38 File Offset: 0x003FB138
+		// Token: 0x1700896A RID: 35178
+		// (get) Token: 0x0601DA4C RID: 121420 RVA: 0x004291CC File Offset: 0x004273CC
+		// (set) Token: 0x0601DA4D RID: 121421 RVA: 0x004291D4 File Offset: 0x004273D4
 		public string Author { get; set; }
 
-		// Token: 0x1700832A RID: 33578
-		// (get) Token: 0x0601C279 RID: 115321 RVA: 0x003FCF41 File Offset: 0x003FB141
-		// (set) Token: 0x0601C27A RID: 115322 RVA: 0x003FCF49 File Offset: 0x003FB149
+		// Token: 0x1700896B RID: 35179
+		// (get) Token: 0x0601DA4E RID: 121422 RVA: 0x004291DD File Offset: 0x004273DD
+		// (set) Token: 0x0601DA4F RID: 121423 RVA: 0x004291E5 File Offset: 0x004273E5
 		public string Note { get; set; }
 
-		// Token: 0x1700832B RID: 33579
-		// (get) Token: 0x0601C27B RID: 115323 RVA: 0x003FCF52 File Offset: 0x003FB152
-		// (set) Token: 0x0601C27C RID: 115324 RVA: 0x003FCF5A File Offset: 0x003FB15A
+		// Token: 0x1700896C RID: 35180
+		// (get) Token: 0x0601DA50 RID: 121424 RVA: 0x004291EE File Offset: 0x004273EE
+		// (set) Token: 0x0601DA51 RID: 121425 RVA: 0x004291F6 File Offset: 0x004273F6
 		public bool EnableOptimize { get; set; }
 
-		// Token: 0x1700832C RID: 33580
-		// (get) Token: 0x0601C27D RID: 115325 RVA: 0x003FCF63 File Offset: 0x003FB163
-		// (set) Token: 0x0601C27E RID: 115326 RVA: 0x003FCF6B File Offset: 0x003FB16B
+		// Token: 0x1700896D RID: 35181
+		// (get) Token: 0x0601DA52 RID: 121426 RVA: 0x004291FF File Offset: 0x004273FF
+		// (set) Token: 0x0601DA53 RID: 121427 RVA: 0x00429207 File Offset: 0x00427407
 		public List<int> RangeEntities { get; set; }
 
-		// Token: 0x1700832D RID: 33581
-		// (get) Token: 0x0601C27F RID: 115327 RVA: 0x003FCF74 File Offset: 0x003FB174
-		// (set) Token: 0x0601C280 RID: 115328 RVA: 0x003FCF7C File Offset: 0x003FB17C
+		// Token: 0x1700896E RID: 35182
+		// (get) Token: 0x0601DA54 RID: 121428 RVA: 0x00429210 File Offset: 0x00427410
+		// (set) Token: 0x0601DA55 RID: 121429 RVA: 0x00429218 File Offset: 0x00427418
 		public IHighPerformanceModeT Mode { get; set; }
 
-		// Token: 0x0601C281 RID: 115329 RVA: 0x003FCF85 File Offset: 0x003FB185
+		// Token: 0x0601DA56 RID: 121430 RVA: 0x00429221 File Offset: 0x00427421
 		public IPerformanceSettingT()
 		{
 			this.Author = null;

@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CB9 RID: 19641
+	// Token: 0x02003C6A RID: 15466
 	public enum EItemMaterialType
 	{
-		// Token: 0x0401B040 RID: 110656
+		// Token: 0x040159A1 RID: 88481
 		RoleExp = 1,
-		// Token: 0x0401B041 RID: 110657
+		// Token: 0x040159A2 RID: 88482
 		WeaponExp,
-		// Token: 0x0401B042 RID: 110658
+		// Token: 0x040159A3 RID: 88483
 		RoleBreak,
-		// Token: 0x0401B043 RID: 110659
+		// Token: 0x040159A4 RID: 88484
 		WeaponSkill,
-		// Token: 0x0401B044 RID: 110660
+		// Token: 0x040159A5 RID: 88485
 		Weekly,
-		// Token: 0x0401B045 RID: 110661
+		// Token: 0x040159A6 RID: 88486
 		Map,
-		// Token: 0x0401B046 RID: 110662
+		// Token: 0x040159A7 RID: 88487
 		Drop
 	}
 }

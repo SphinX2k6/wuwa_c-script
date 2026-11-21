@@ -8,18 +8,18 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045DA RID: 17882
+	// Token: 0x02003503 RID: 13571
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneCharacterFoliageEffect : IStaticVariableResetter
 	{
-		// Token: 0x0602E1A5 RID: 188837 RVA: 0x00AA117C File Offset: 0x00A9F37C
+		// Token: 0x06022899 RID: 141465 RVA: 0x009CD858 File Offset: 0x009CBA58
 		static SceneCharacterFoliageEffect()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneCharacterFoliageEffect.CreateStaticDefaultValue), new Action(SceneCharacterFoliageEffect.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602E1A6 RID: 188838 RVA: 0x00AA12F8 File Offset: 0x00A9F4F8
+		// Token: 0x0602289A RID: 141466 RVA: 0x009CD9D4 File Offset: 0x009CBBD4
 		public void Start(TsBaseCharacter owner)
 		{
 			if (!owner.IsValid())
@@ -94,14 +94,14 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E1A7 RID: 188839 RVA: 0x00AA1464 File Offset: 0x00A9F664
+		// Token: 0x0602289B RID: 141467 RVA: 0x009CDB40 File Offset: 0x009CBD40
 		[NullableContext(2)]
 		private void WeaponInteraction(FVectorDouble OriginPoint, BP_SceneBattleInteract_C Config, int Id)
 		{
 			this.WeaponPosition = new FVectorDouble?(OriginPoint);
 		}
 
-		// Token: 0x0602E1A8 RID: 188840 RVA: 0x00AA1474 File Offset: 0x00A9F674
+		// Token: 0x0602289C RID: 141468 RVA: 0x009CDB50 File Offset: 0x009CBD50
 		public void Enable()
 		{
 			if (!this.IsReady)
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Render
 			this.kuroEnviInteractionSystem = UKuroInteractionEffectSystem.GetKuroInteractionEffectSystem(this.Owner.GetWorld());
 		}
 
-		// Token: 0x0602E1A9 RID: 188841 RVA: 0x00AA1544 File Offset: 0x00A9F744
+		// Token: 0x0602289D RID: 141469 RVA: 0x009CDC20 File Offset: 0x009CBE20
 		public void Disable()
 		{
 			if (!this.IsEnabled)
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Render
 			bpEventManager.武器交互场景时.Remove(new Action<FVectorDouble, BP_SceneBattleInteract_C, int>(this.WeaponInteraction));
 		}
 
-		// Token: 0x0602E1AA RID: 188842 RVA: 0x00AA1580 File Offset: 0x00A9F780
+		// Token: 0x0602289E RID: 141470 RVA: 0x009CDC5C File Offset: 0x009CBE5C
 		private bool RefreshKuroEnviInteractionSystem()
 		{
 			if (this.Owner == null || !this.Owner.IsValid())
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Render
 			return this.kuroEnviInteractionSystem != null && this.kuroEnviInteractionSystem.IsValid();
 		}
 
-		// Token: 0x0602E1AB RID: 188843 RVA: 0x00AA15EC File Offset: 0x00A9F7EC
+		// Token: 0x0602289F RID: 141471 RVA: 0x009CDCC8 File Offset: 0x009CBEC8
 		public void Tick(float deltaSeconds)
 		{
 			if (!this.IsEnabled || this.Owner == null)
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E1AC RID: 188844 RVA: 0x00AA1664 File Offset: 0x00A9F864
+		// Token: 0x060228A0 RID: 141472 RVA: 0x009CDD40 File Offset: 0x009CBF40
 		private void SpawnNDC()
 		{
 			if (!this.IsReady || this.Owner == null || this.NDCAssetDefault == null || this.NDCAssetSeqFrame == null)
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E1AD RID: 188845 RVA: 0x00AA1754 File Offset: 0x00A9F954
+		// Token: 0x060228A1 RID: 141473 RVA: 0x009CDE30 File Offset: 0x009CC030
 		private void CalcSpeed()
 		{
 			if (!this.IsReady)
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Render
 			this.PlayerSpawn = this.CalcPlayerSpawn();
 		}
 
-		// Token: 0x0602E1AE RID: 188846 RVA: 0x00AA18D8 File Offset: 0x00A9FAD8
+		// Token: 0x060228A2 RID: 141474 RVA: 0x009CDFB4 File Offset: 0x009CC1B4
 		private void CalcSpawnMessage()
 		{
 			if (this.Owner == null || this.foliageNameArray == null || !this.RefreshKuroEnviInteractionSystem())
@@ -339,13 +339,13 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E1AF RID: 188847 RVA: 0x00AA1A94 File Offset: 0x00A9FC94
+		// Token: 0x060228A3 RID: 141475 RVA: 0x009CE170 File Offset: 0x009CC370
 		private bool ClampHeight(double Height)
 		{
 			return this.IsReady && (this.Owner != null && this.WeaponPosition != null && this.WeaponPosition.Value.Z - this.Owner.D_K2_GetActorLocation().Z <= Height);
 		}
 
-		// Token: 0x0602E1B0 RID: 188848 RVA: 0x00AA1AE8 File Offset: 0x00A9FCE8
+		// Token: 0x060228A4 RID: 141476 RVA: 0x009CE1C4 File Offset: 0x009CC3C4
 		private void SetFoliageMPC()
 		{
 			if (this.MPCAsset == null)
@@ -386,7 +386,7 @@ namespace CSharpScript.Game.Render
 			this.SeqFrameSpawnCount = this.SetSeqFrameFoliageMPC();
 		}
 
-		// Token: 0x0602E1B1 RID: 188849 RVA: 0x00AA1CF8 File Offset: 0x00A9FEF8
+		// Token: 0x060228A5 RID: 141477 RVA: 0x009CE3D4 File Offset: 0x009CC5D4
 		private int SetDefaultFoliageMPC()
 		{
 			if (this.MPCAsset == null)
@@ -432,7 +432,7 @@ namespace CSharpScript.Game.Render
 			return (int)MathUtils.Instance.GetFloatPointCeil(this.GetTotalSpawnCount(this.WeightSpawnArrayDefault, num), 0);
 		}
 
-		// Token: 0x0602E1B2 RID: 188850 RVA: 0x00AA21C8 File Offset: 0x00AA03C8
+		// Token: 0x060228A6 RID: 141478 RVA: 0x009CE8A4 File Offset: 0x009CCAA4
 		private int SetSeqFrameFoliageMPC()
 		{
 			if (this.MPCAsset == null)
@@ -478,21 +478,21 @@ namespace CSharpScript.Game.Render
 			return (int)MathUtils.Instance.GetFloatPointCeil(this.GetTotalSpawnCount(this.WeightSpawnArraySeqFrame, num), 0);
 		}
 
-		// Token: 0x0602E1B3 RID: 188851 RVA: 0x00AA2697 File Offset: 0x00AA0897
+		// Token: 0x060228A7 RID: 141479 RVA: 0x009CED73 File Offset: 0x009CCF73
 		private double CalcWeaponSpawn()
 		{
 			double num = MathUtils.Instance.Clamp(this.WeaponSpeed, 0.0, 300.0) / 300.0;
 			return num * num * 0.5;
 		}
 
-		// Token: 0x0602E1B4 RID: 188852 RVA: 0x00AA26D4 File Offset: 0x00AA08D4
+		// Token: 0x060228A8 RID: 141480 RVA: 0x009CEDB0 File Offset: 0x009CCFB0
 		private double CalcPlayerSpawn()
 		{
 			double num = this.OnMotorcycle ? 100.0 : 100.0;
 			return MathUtils.Instance.Clamp(this.PlayerSpeed, 0.0, num) / num * this.PlayerMoveTypeParam;
 		}
 
-		// Token: 0x0602E1B5 RID: 188853 RVA: 0x00AA2724 File Offset: 0x00AA0924
+		// Token: 0x060228A9 RID: 141481 RVA: 0x009CEE00 File Offset: 0x009CD000
 		private void UpdatePlayerState()
 		{
 			if (!this.IsReady)
@@ -545,7 +545,7 @@ namespace CSharpScript.Game.Render
 			this.PlayerMotorcycleSpawnOffset = new FVector?((value * (this.PlayerSpeed * 1.2)).ToVector());
 		}
 
-		// Token: 0x0602E1B6 RID: 188854 RVA: 0x00AA28F7 File Offset: 0x00AA0AF7
+		// Token: 0x060228AA RID: 141482 RVA: 0x009CEFD3 File Offset: 0x009CD1D3
 		private void SetTempColor(double R, double G, double B, double A)
 		{
 			this.TempColor.R = (float)R;
@@ -554,7 +554,7 @@ namespace CSharpScript.Game.Render
 			this.TempColor.A = (float)A;
 		}
 
-		// Token: 0x0602E1B7 RID: 188855 RVA: 0x00AA2930 File Offset: 0x00AA0B30
+		// Token: 0x060228AB RID: 141483 RVA: 0x009CF00C File Offset: 0x009CD20C
 		private double GetPlayerSpawnPercent(FKuroInteractionEffectNDCConfigBase config)
 		{
 			double num = this.PlayerSpawn * (double)config.MoveSpawn;
@@ -562,7 +562,7 @@ namespace CSharpScript.Game.Render
 			return Math.Round(MathUtils.Instance.Clamp((num + 0.001) / (num2 + num + 0.001), 0.0, 1.0) * 10.0);
 		}
 
-		// Token: 0x0602E1B8 RID: 188856 RVA: 0x00AA29A0 File Offset: 0x00AA0BA0
+		// Token: 0x060228AC RID: 141484 RVA: 0x009CF07C File Offset: 0x009CD27C
 		private double GetTotalSpawnCount([Nullable(new byte[]
 		{
 			1,
@@ -580,7 +580,7 @@ namespace CSharpScript.Game.Render
 			return num;
 		}
 
-		// Token: 0x0602E1B9 RID: 188857 RVA: 0x00AA2A18 File Offset: 0x00AA0C18
+		// Token: 0x060228AD RID: 141485 RVA: 0x009CF0F4 File Offset: 0x009CD2F4
 		private void TryInsertTopWeightedSpawn([Nullable(new byte[]
 		{
 			1,
@@ -610,7 +610,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E1BA RID: 188858 RVA: 0x00AA2AA0 File Offset: 0x00AA0CA0
+		// Token: 0x060228AE RID: 141486 RVA: 0x009CF17C File Offset: 0x009CD37C
 		private void SetScalarParameterValueIfChanged(FName paramName, double value)
 		{
 			if (this.MPCAsset == null || this.Owner == null)
@@ -627,7 +627,7 @@ namespace CSharpScript.Game.Render
 			UKismetMaterialLibrary.SetScalarParameterValue(this.Owner.GetWorld(), this.MPCAsset, paramName, (float)value);
 		}
 
-		// Token: 0x0602E1BB RID: 188859 RVA: 0x00AA2B08 File Offset: 0x00AA0D08
+		// Token: 0x060228AF RID: 141487 RVA: 0x009CF1E4 File Offset: 0x009CD3E4
 		private void SetVectorParameterValueIfChanged(FName paramName, double X, double Y, double Z, double W)
 		{
 			if (this.MPCAsset == null)
@@ -645,117 +645,117 @@ namespace CSharpScript.Game.Render
 			UKismetMaterialLibrary.SetVectorParameterValue(GlobalData.World, this.MPCAsset, paramName, this.TempColor);
 		}
 
-		// Token: 0x0602E1BC RID: 188860 RVA: 0x00AA2B9D File Offset: 0x00AA0D9D
+		// Token: 0x060228B0 RID: 141488 RVA: 0x009CF279 File Offset: 0x009CD479
 		public static void CreateStaticDefaultValue()
 		{
 			SceneCharacterFoliageEffect.NDCSearchParam = new FNiagaraDataChannelSearchParameters();
 		}
 
-		// Token: 0x0602E1BD RID: 188861 RVA: 0x00AA2BA9 File Offset: 0x00AA0DA9
+		// Token: 0x060228B1 RID: 141489 RVA: 0x009CF285 File Offset: 0x009CD485
 		public static void ResetStaticDefaultValue()
 		{
 			SceneCharacterFoliageEffect.NDCSearchParam = null;
 		}
 
-		// Token: 0x04018B35 RID: 101173
+		// Token: 0x04013173 RID: 78195
 		private const string NDCAssetPathDefault = "/Game/Aki/Effect/NiagaraDataChannel/NDCAsset/Scene/NDC_Leaves.NDC_Leaves";
 
-		// Token: 0x04018B36 RID: 101174
+		// Token: 0x04013174 RID: 78196
 		private const string NDCAssetPathSeqFrame = "/Game/Aki/Effect/NiagaraDataChannel/NDCAsset/Scene/NDC_Leaves_SF.NDC_Leaves_SF";
 
-		// Token: 0x04018B37 RID: 101175
+		// Token: 0x04013175 RID: 78197
 		private const string ConfigPath = "/Game/Aki/Data/Effect/DT_FoliageNDCEffect.DT_FoliageNDCEffect";
 
-		// Token: 0x04018B38 RID: 101176
+		// Token: 0x04013176 RID: 78198
 		private const string MPCPath = "/Game/Aki/Render/Shaders/Scene/Interaction/MPC_NDCParameter.MPC_NDCParameter";
 
-		// Token: 0x04018B39 RID: 101177
+		// Token: 0x04013177 RID: 78199
 		private const double WEAPON_SPAWN_PARAM = 300.0;
 
-		// Token: 0x04018B3A RID: 101178
+		// Token: 0x04013178 RID: 78200
 		private const double PLAYER_SPAWN_PARAM = 100.0;
 
-		// Token: 0x04018B3B RID: 101179
+		// Token: 0x04013179 RID: 78201
 		private const double PLAYER_MOTORCYCLE_SPAWN_PARAM = 100.0;
 
-		// Token: 0x04018B3C RID: 101180
+		// Token: 0x0401317A RID: 78202
 		private const int MAX_SPAWN_TYPE_COUNT = 4;
 
-		// Token: 0x04018B3D RID: 101181
+		// Token: 0x0401317B RID: 78203
 		private const double PLAYER_PERCENT_SCALE = 10.0;
 
-		// Token: 0x04018B3E RID: 101182
+		// Token: 0x0401317C RID: 78204
 		[Nullable(2)]
 		public TsBaseCharacter Owner;
 
-		// Token: 0x04018B3F RID: 101183
+		// Token: 0x0401317D RID: 78205
 		[Nullable(2)]
 		public CharacterActorComponent ActorComponent;
 
-		// Token: 0x04018B40 RID: 101184
+		// Token: 0x0401317E RID: 78206
 		public bool IsReady;
 
-		// Token: 0x04018B41 RID: 101185
+		// Token: 0x0401317F RID: 78207
 		protected int Timer;
 
-		// Token: 0x04018B42 RID: 101186
+		// Token: 0x04013180 RID: 78208
 		protected double WeaponSpeed;
 
-		// Token: 0x04018B43 RID: 101187
+		// Token: 0x04013181 RID: 78209
 		public FVector? WeaponVelocity;
 
-		// Token: 0x04018B44 RID: 101188
+		// Token: 0x04013182 RID: 78210
 		public FVector? PlayerVelocity;
 
-		// Token: 0x04018B45 RID: 101189
+		// Token: 0x04013183 RID: 78211
 		protected double PlayerSpeed;
 
-		// Token: 0x04018B46 RID: 101190
+		// Token: 0x04013184 RID: 78212
 		protected double WeaponSpawn;
 
-		// Token: 0x04018B47 RID: 101191
+		// Token: 0x04013185 RID: 78213
 		protected double PlayerSpawn;
 
-		// Token: 0x04018B48 RID: 101192
+		// Token: 0x04013186 RID: 78214
 		protected double PlayerMoveTypeParam = 0.1;
 
-		// Token: 0x04018B49 RID: 101193
+		// Token: 0x04013187 RID: 78215
 		protected FVector? PlayerMotorcycleSpawnOffset;
 
-		// Token: 0x04018B4A RID: 101194
+		// Token: 0x04013188 RID: 78216
 		protected bool OnMotorcycle;
 
-		// Token: 0x04018B4B RID: 101195
+		// Token: 0x04013189 RID: 78217
 		protected FVectorDouble? WeaponPosition;
 
-		// Token: 0x04018B4C RID: 101196
+		// Token: 0x0401318A RID: 78218
 		protected int DefaultSpawnCount;
 
-		// Token: 0x04018B4D RID: 101197
+		// Token: 0x0401318B RID: 78219
 		protected int SeqFrameSpawnCount;
 
-		// Token: 0x04018B4E RID: 101198
+		// Token: 0x0401318C RID: 78220
 		protected FVectorDouble? PreWeaponPosition;
 
-		// Token: 0x04018B4F RID: 101199
+		// Token: 0x0401318D RID: 78221
 		protected FVectorDouble? PrePlayerPosition;
 
-		// Token: 0x04018B50 RID: 101200
+		// Token: 0x0401318E RID: 78222
 		[Nullable(2)]
 		protected UNiagaraDataChannelAsset NDCAssetDefault;
 
-		// Token: 0x04018B51 RID: 101201
+		// Token: 0x0401318F RID: 78223
 		[Nullable(2)]
 		protected UNiagaraDataChannelAsset NDCAssetSeqFrame;
 
-		// Token: 0x04018B52 RID: 101202
+		// Token: 0x04013190 RID: 78224
 		[Nullable(2)]
 		protected UMaterialParameterCollection MPCAsset;
 
-		// Token: 0x04018B53 RID: 101203
+		// Token: 0x04013191 RID: 78225
 		protected Dictionary<string, FKuroInteractionEffectNDCConfigBase> ConfigMap = new Dictionary<string, FKuroInteractionEffectNDCConfigBase>();
 
-		// Token: 0x04018B54 RID: 101204
+		// Token: 0x04013192 RID: 78226
 		[Nullable(new byte[]
 		{
 			1,
@@ -764,7 +764,7 @@ namespace CSharpScript.Game.Render
 		})]
 		protected List<ValueTuple<double, FKuroInteractionEffectNDCConfigBase>> WeightSpawnArrayDefault = new List<ValueTuple<double, FKuroInteractionEffectNDCConfigBase>>();
 
-		// Token: 0x04018B55 RID: 101205
+		// Token: 0x04013193 RID: 78227
 		[Nullable(new byte[]
 		{
 			1,
@@ -773,15 +773,15 @@ namespace CSharpScript.Game.Render
 		})]
 		protected List<ValueTuple<double, FKuroInteractionEffectNDCConfigBase>> WeightSpawnArraySeqFrame = new List<ValueTuple<double, FKuroInteractionEffectNDCConfigBase>>();
 
-		// Token: 0x04018B56 RID: 101206
+		// Token: 0x04013194 RID: 78228
 		[Nullable(2)]
 		protected UKuroInteractionEffectSystem kuroEnviInteractionSystem;
 
-		// Token: 0x04018B57 RID: 101207
+		// Token: 0x04013195 RID: 78229
 		[Nullable(2)]
 		protected UKuroEnviInteractionComponent EnviInteractionComponent;
 
-		// Token: 0x04018B58 RID: 101208
+		// Token: 0x04013196 RID: 78230
 		[Nullable(new byte[]
 		{
 			2,
@@ -789,10 +789,10 @@ namespace CSharpScript.Game.Render
 		})]
 		protected TArray<string> foliageNameArray;
 
-		// Token: 0x04018B59 RID: 101209
+		// Token: 0x04013197 RID: 78231
 		protected readonly Dictionary<string, double> ScalarParameterCache = new Dictionary<string, double>();
 
-		// Token: 0x04018B5A RID: 101210
+		// Token: 0x04013198 RID: 78232
 		[Nullable(new byte[]
 		{
 			1,
@@ -801,80 +801,80 @@ namespace CSharpScript.Game.Render
 		})]
 		protected readonly Dictionary<string, ValueTuple<double, double, double, double>> VectorParameterCache = new Dictionary<string, ValueTuple<double, double, double, double>>();
 
-		// Token: 0x04018B5B RID: 101211
+		// Token: 0x04013199 RID: 78233
 		public static readonly FName MPC_LeaveSpawnPosition = new FName("NDC_LeaveSpawnPosition");
 
-		// Token: 0x04018B5C RID: 101212
+		// Token: 0x0401319A RID: 78234
 		public static readonly FName MPC_SpawnParam0 = new FName("SpawnParam0");
 
-		// Token: 0x04018B5D RID: 101213
+		// Token: 0x0401319B RID: 78235
 		public static readonly FName MPC_SpawnParam1 = new FName("SpawnParam1");
 
-		// Token: 0x04018B5E RID: 101214
+		// Token: 0x0401319C RID: 78236
 		public static readonly FName MPC_SpawnNum = new FName("SpawnNum");
 
-		// Token: 0x04018B5F RID: 101215
+		// Token: 0x0401319D RID: 78237
 		public static readonly FName MPC_SpawnParam0_SF = new FName("SpawnParam0_SF");
 
-		// Token: 0x04018B60 RID: 101216
+		// Token: 0x0401319E RID: 78238
 		public static readonly FName MPC_SpawnParam1_SF = new FName("SpawnParam1_SF");
 
-		// Token: 0x04018B61 RID: 101217
+		// Token: 0x0401319F RID: 78239
 		public static readonly FName MPC_SpawnNum_SF = new FName("SpawnNum_SF");
 
-		// Token: 0x04018B62 RID: 101218
+		// Token: 0x040131A0 RID: 78240
 		public static readonly FName MPC_OnMotorcycle = new FName("OnMotorcycle");
 
-		// Token: 0x04018B63 RID: 101219
+		// Token: 0x040131A1 RID: 78241
 		public static readonly FName MPC_PlayerSpeed = new FName("PlayerSpeed");
 
-		// Token: 0x04018B64 RID: 101220
+		// Token: 0x040131A2 RID: 78242
 		public static readonly FName MPC_PlayerSpawnPosition = new FName("NDC_PlayerSpawnPosition");
 
-		// Token: 0x04018B65 RID: 101221
+		// Token: 0x040131A3 RID: 78243
 		public static readonly FName MPC_PlayerSpawnOffset0 = new FName("PlayerSpawnOffset0");
 
-		// Token: 0x04018B66 RID: 101222
+		// Token: 0x040131A4 RID: 78244
 		public static readonly FName MPC_PlayerSpawnOffset1 = new FName("PlayerSpawnOffset1");
 
-		// Token: 0x04018B67 RID: 101223
+		// Token: 0x040131A5 RID: 78245
 		public static readonly FName MPC_PlayerSpawnOffset2 = new FName("PlayerSpawnOffset2");
 
-		// Token: 0x04018B68 RID: 101224
+		// Token: 0x040131A6 RID: 78246
 		public static readonly FName MPC_PlayerSpawnOffset3 = new FName("PlayerSpawnOffset3");
 
-		// Token: 0x04018B69 RID: 101225
+		// Token: 0x040131A7 RID: 78247
 		public static readonly FName MPC_PlayerPercent0123 = new FName("PlayerPercent0123");
 
-		// Token: 0x04018B6A RID: 101226
+		// Token: 0x040131A8 RID: 78248
 		public static readonly FName MPC_PlayerSpawnOffset0_SF = new FName("PlayerSpawnOffset0_SF");
 
-		// Token: 0x04018B6B RID: 101227
+		// Token: 0x040131A9 RID: 78249
 		public static readonly FName MPC_PlayerSpawnOffset1_SF = new FName("PlayerSpawnOffset1_SF");
 
-		// Token: 0x04018B6C RID: 101228
+		// Token: 0x040131AA RID: 78250
 		public static readonly FName MPC_PlayerSpawnOffset2_SF = new FName("PlayerSpawnOffset2_SF");
 
-		// Token: 0x04018B6D RID: 101229
+		// Token: 0x040131AB RID: 78251
 		public static readonly FName MPC_PlayerSpawnOffset3_SF = new FName("PlayerSpawnOffset3_SF");
 
-		// Token: 0x04018B6E RID: 101230
+		// Token: 0x040131AC RID: 78252
 		public static readonly FName MPC_PlayerPercent0123_SF = new FName("PlayerPercent0123_SF");
 
-		// Token: 0x04018B6F RID: 101231
+		// Token: 0x040131AD RID: 78253
 		public static readonly FName MPC_WeaponVelocity = new FName("WeaponVelocity");
 
-		// Token: 0x04018B70 RID: 101232
+		// Token: 0x040131AE RID: 78254
 		public static readonly FName MPC_PlayerVelocity = new FName("PlayerVelocity");
 
-		// Token: 0x04018B71 RID: 101233
+		// Token: 0x040131AF RID: 78255
 		protected FLinearColor TempColor;
 
-		// Token: 0x04018B72 RID: 101234
+		// Token: 0x040131B0 RID: 78256
 		[Nullable(2)]
 		protected static FNiagaraDataChannelSearchParameters NDCSearchParam = null;
 
-		// Token: 0x04018B73 RID: 101235
+		// Token: 0x040131B1 RID: 78257
 		public bool IsEnabled;
 	}
 }

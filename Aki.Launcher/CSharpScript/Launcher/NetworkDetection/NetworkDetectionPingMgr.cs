@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.NetworkDetection
 {
-	// Token: 0x020001BA RID: 442
+	// Token: 0x020001BE RID: 446
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class NetworkDetectionPingMgr
 	{
-		// Token: 0x06000BE7 RID: 3047 RVA: 0x0004A5F4 File Offset: 0x000487F4
+		// Token: 0x06000C1E RID: 3102 RVA: 0x0004CDE4 File Offset: 0x0004AFE4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -29,13 +29,13 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return <BatchPing>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000BE8 RID: 3048 RVA: 0x0004A648 File Offset: 0x00048848
+		// Token: 0x06000C1F RID: 3103 RVA: 0x0004CE38 File Offset: 0x0004B038
 		[return: Nullable(new byte[]
 		{
 			0,
 			1
 		})]
-		private static UniTask<IPingResult> PingAsync(string url, int timeOut)
+		public static UniTask<IPingResult> PingAsync(string url, int timeOut)
 		{
 			NetworkDetectionPingMgr.<PingAsync>d__1 <PingAsync>d__;
 			<PingAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<IPingResult>.Create();
@@ -46,7 +46,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return <PingAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000BE9 RID: 3049 RVA: 0x0004A694 File Offset: 0x00048894
+		// Token: 0x06000C20 RID: 3104 RVA: 0x0004CE84 File Offset: 0x0004B084
 		private static IBatchPingResult GetBatchPingResult(List<IPingResult> resultList)
 		{
 			IBatchPingResult batchPingResult = new IBatchPingResult

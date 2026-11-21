@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Ui.Splash
 {
-	// Token: 0x020000C4 RID: 196
+	// Token: 0x020000C7 RID: 199
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SplashUiView : LaunchComponentsAction
 	{
-		// Token: 0x06000670 RID: 1648 RVA: 0x000377D4 File Offset: 0x000359D4
+		// Token: 0x0600068C RID: 1676 RVA: 0x00039304 File Offset: 0x00037504
 		[NullableContext(1)]
 		public UniTask InitAsync(UObject worldContext)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Launcher.Ui.Splash
 			return <InitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000671 RID: 1649 RVA: 0x00037820 File Offset: 0x00035A20
+		// Token: 0x0600068D RID: 1677 RVA: 0x00039350 File Offset: 0x00037550
 		protected UniTask LoadResourceAsync()
 		{
 			SplashUiView.<LoadResourceAsync>d__15 <LoadResourceAsync>d__;
@@ -39,14 +39,14 @@ namespace CSharpScript.Launcher.Ui.Splash
 			return <LoadResourceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000672 RID: 1650 RVA: 0x00037863 File Offset: 0x00035A63
+		// Token: 0x0600068E RID: 1678 RVA: 0x00039393 File Offset: 0x00037593
 		[NullableContext(1)]
 		private void OnUiRootLoadCallback(AActor actor)
 		{
 			this.UiRoot = actor;
 		}
 
-		// Token: 0x06000673 RID: 1651 RVA: 0x0003786C File Offset: 0x00035A6C
+		// Token: 0x0600068F RID: 1679 RVA: 0x0003939C File Offset: 0x0003759C
 		[NullableContext(1)]
 		private void OnViewLoadCallback(AActor actor)
 		{
@@ -54,14 +54,14 @@ namespace CSharpScript.Launcher.Ui.Splash
 			this.UiActor = (this.RootItem.GetOwner() as AUIBaseActor);
 		}
 
-		// Token: 0x06000674 RID: 1652 RVA: 0x0003788B File Offset: 0x00035A8B
+		// Token: 0x06000690 RID: 1680 RVA: 0x000393BB File Offset: 0x000375BB
 		protected override void OnStart()
 		{
 			this.LanguageSuffixName = LauncherLanguageLib.Instance.PackageLanguage;
 			this.DefaultLanguageSuffixName = LauncherLanguageLib.Instance.GetDefaultCulture(this.LanguageSuffixName);
 		}
 
-		// Token: 0x06000675 RID: 1653 RVA: 0x000378B3 File Offset: 0x00035AB3
+		// Token: 0x06000691 RID: 1681 RVA: 0x000393E3 File Offset: 0x000375E3
 		protected override void OnBeforeDestroy()
 		{
 			if (this.DataTable != null)
@@ -76,14 +76,14 @@ namespace CSharpScript.Launcher.Ui.Splash
 			this.DefaultLanguageSuffixName = null;
 		}
 
-		// Token: 0x06000676 RID: 1654 RVA: 0x000378EE File Offset: 0x00035AEE
+		// Token: 0x06000692 RID: 1682 RVA: 0x0003941E File Offset: 0x0003761E
 		private void OnInitAndShow()
 		{
 			this.UpdateTexture();
 			this.UpdateText();
 		}
 
-		// Token: 0x06000677 RID: 1655 RVA: 0x000378FC File Offset: 0x00035AFC
+		// Token: 0x06000693 RID: 1683 RVA: 0x0003942C File Offset: 0x0003762C
 		private void UpdateTexture()
 		{
 			base.GetTexture(3).SetTexture(this.LogoTexture);
@@ -94,13 +94,13 @@ namespace CSharpScript.Launcher.Ui.Splash
 			}
 		}
 
-		// Token: 0x06000678 RID: 1656 RVA: 0x00037931 File Offset: 0x00035B31
+		// Token: 0x06000694 RID: 1684 RVA: 0x00039461 File Offset: 0x00037661
 		private bool GetIfGlobal()
 		{
 			return BaseConfigController.Instance.GetPublicValue("SdkArea") != "CN";
 		}
 
-		// Token: 0x06000679 RID: 1657 RVA: 0x0003794C File Offset: 0x00035B4C
+		// Token: 0x06000695 RID: 1685 RVA: 0x0003947C File Offset: 0x0003767C
 		private void UpdateText()
 		{
 			bool ifGlobal = this.GetIfGlobal();
@@ -148,7 +148,7 @@ namespace CSharpScript.Launcher.Ui.Splash
 			base.GetText(1).SetText(text2, true);
 		}
 
-		// Token: 0x0600067A RID: 1658 RVA: 0x00037AF0 File Offset: 0x00035CF0
+		// Token: 0x06000696 RID: 1686 RVA: 0x00039620 File Offset: 0x00037820
 		public void PlayAnimationLogo(Action finishCallback = null)
 		{
 			if (this.GetIfGlobal())
@@ -159,38 +159,38 @@ namespace CSharpScript.Launcher.Ui.Splash
 			this.PlaySequenceByName("LogoAnimationMain", finishCallback);
 		}
 
-		// Token: 0x0600067B RID: 1659 RVA: 0x00037B13 File Offset: 0x00035D13
+		// Token: 0x06000697 RID: 1687 RVA: 0x00039643 File Offset: 0x00037843
 		public void PlayWuthering(Action finishCallback = null)
 		{
 			this.PlaySequenceByName("WutheringWaveAnimation", finishCallback);
 		}
 
-		// Token: 0x0600067C RID: 1660 RVA: 0x00037B21 File Offset: 0x00035D21
+		// Token: 0x06000698 RID: 1688 RVA: 0x00039651 File Offset: 0x00037851
 		public void PlayCautionAnimation(Action finishCallback = null)
 		{
 			this.PlaySequenceByName("CautionAnimation", finishCallback);
 		}
 
-		// Token: 0x0600067D RID: 1661 RVA: 0x00037B2F File Offset: 0x00035D2F
+		// Token: 0x06000699 RID: 1689 RVA: 0x0003965F File Offset: 0x0003785F
 		public void PlayPreventAddictionAnimation(Action finishCallback = null)
 		{
 			this.PlaySequenceByName("PreventAddiction", finishCallback);
 		}
 
-		// Token: 0x0600067E RID: 1662 RVA: 0x00037B3D File Offset: 0x00035D3D
+		// Token: 0x0600069A RID: 1690 RVA: 0x0003966D File Offset: 0x0003786D
 		public void StopCurrentAnimation()
 		{
 			this.StopCurrentSequence();
 		}
 
-		// Token: 0x0600067F RID: 1663 RVA: 0x00037B45 File Offset: 0x00035D45
+		// Token: 0x0600069B RID: 1691 RVA: 0x00039675 File Offset: 0x00037875
 		[NullableContext(1)]
 		private string GetLocalText(string culture, string textTableId)
 		{
 			return LauncherConfigLib.Instance.GetHotPatchText(textTableId) ?? "";
 		}
 
-		// Token: 0x06000680 RID: 1664 RVA: 0x00037B5C File Offset: 0x00035D5C
+		// Token: 0x0600069C RID: 1692 RVA: 0x0003968C File Offset: 0x0003788C
 		private UniTask InitTextureAsync()
 		{
 			SplashUiView.<InitTextureAsync>d__30 <InitTextureAsync>d__;
@@ -201,7 +201,7 @@ namespace CSharpScript.Launcher.Ui.Splash
 			return <InitTextureAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000681 RID: 1665 RVA: 0x00037BA0 File Offset: 0x00035DA0
+		// Token: 0x0600069D RID: 1693 RVA: 0x000396D0 File Offset: 0x000378D0
 		[NullableContext(1)]
 		private void PlaySequenceByName(string name, [Nullable(2)] Action finishCallback = null)
 		{
@@ -225,7 +225,7 @@ namespace CSharpScript.Launcher.Ui.Splash
 			sequencePlayContextOfKey.ExecutePlay();
 		}
 
-		// Token: 0x06000682 RID: 1666 RVA: 0x00037BFC File Offset: 0x00035DFC
+		// Token: 0x0600069E RID: 1694 RVA: 0x0003972C File Offset: 0x0003792C
 		private void StopCurrentSequence()
 		{
 			if (this.CurrentSequenceName == null)
@@ -244,7 +244,7 @@ namespace CSharpScript.Launcher.Ui.Splash
 			this.CurrentSequenceName = null;
 		}
 
-		// Token: 0x06000683 RID: 1667 RVA: 0x00037C64 File Offset: 0x00035E64
+		// Token: 0x0600069F RID: 1695 RVA: 0x00039794 File Offset: 0x00037994
 		[NullableContext(1)]
 		private UniTask LoadTableAsync(string path)
 		{
@@ -257,7 +257,7 @@ namespace CSharpScript.Launcher.Ui.Splash
 			return <LoadTableAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000684 RID: 1668 RVA: 0x00037CB0 File Offset: 0x00035EB0
+		// Token: 0x060006A0 RID: 1696 RVA: 0x000397E0 File Offset: 0x000379E0
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -275,7 +275,7 @@ namespace CSharpScript.Launcher.Ui.Splash
 			return <LoadTextureAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000685 RID: 1669 RVA: 0x00037CFB File Offset: 0x00035EFB
+		// Token: 0x060006A1 RID: 1697 RVA: 0x0003982B File Offset: 0x00037A2B
 		public override void Destroy()
 		{
 			base.Destroy();
@@ -290,46 +290,46 @@ namespace CSharpScript.Launcher.Ui.Splash
 			}
 		}
 
-		// Token: 0x040003E2 RID: 994
+		// Token: 0x04000411 RID: 1041
 		[Nullable(1)]
 		private const string ENCOMPANYNAME = "Company_en";
 
-		// Token: 0x040003E3 RID: 995
+		// Token: 0x04000412 RID: 1042
 		private AActor UiRoot;
 
-		// Token: 0x040003E4 RID: 996
+		// Token: 0x04000413 RID: 1043
 		private AUIBaseActor UiActor;
 
-		// Token: 0x040003E5 RID: 997
+		// Token: 0x04000414 RID: 1044
 		private UObject WorldContext;
 
-		// Token: 0x040003E6 RID: 998
+		// Token: 0x04000415 RID: 1045
 		private string CurrentSequenceName;
 
-		// Token: 0x040003E7 RID: 999
+		// Token: 0x04000416 RID: 1046
 		private string LanguageSuffixName;
 
-		// Token: 0x040003E8 RID: 1000
+		// Token: 0x04000417 RID: 1047
 		private string DefaultLanguageSuffixName;
 
-		// Token: 0x040003E9 RID: 1001
+		// Token: 0x04000418 RID: 1048
 		[Nullable(1)]
 		private readonly string CompanyName = "Company_";
 
-		// Token: 0x040003EA RID: 1002
+		// Token: 0x04000419 RID: 1049
 		[Nullable(1)]
 		private readonly string LogoName = "WutheringWave_";
 
-		// Token: 0x040003EB RID: 1003
+		// Token: 0x0400041A RID: 1050
 		private UTexture LogoTexture;
 
-		// Token: 0x040003EC RID: 1004
+		// Token: 0x0400041B RID: 1051
 		private UTexture GameSplashTexture;
 
-		// Token: 0x040003ED RID: 1005
+		// Token: 0x0400041C RID: 1052
 		private UDataTable DataTable;
 
-		// Token: 0x040003EE RID: 1006
+		// Token: 0x0400041D RID: 1053
 		[Nullable(new byte[]
 		{
 			2,
@@ -338,32 +338,32 @@ namespace CSharpScript.Launcher.Ui.Splash
 		})]
 		private Dictionary<string, string> DataMap = new Dictionary<string, string>();
 
-		// Token: 0x02000353 RID: 851
+		// Token: 0x0200035E RID: 862
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x04001123 RID: 4387
+			// Token: 0x04001185 RID: 4485
 			public const int NameA = 0;
 
-			// Token: 0x04001124 RID: 4388
+			// Token: 0x04001186 RID: 4486
 			public const int NameB = 1;
 
-			// Token: 0x04001125 RID: 4389
+			// Token: 0x04001187 RID: 4487
 			public const int LogoItem = 2;
 
-			// Token: 0x04001126 RID: 4390
+			// Token: 0x04001188 RID: 4488
 			public const int LogoTexture = 3;
 
-			// Token: 0x04001127 RID: 4391
+			// Token: 0x04001189 RID: 4489
 			public const int TipItem = 4;
 
-			// Token: 0x04001128 RID: 4392
+			// Token: 0x0400118A RID: 4490
 			public const int TxtTipTitle = 5;
 
-			// Token: 0x04001129 RID: 4393
+			// Token: 0x0400118B RID: 4491
 			public const int TxtTip = 6;
 
-			// Token: 0x0400112A RID: 4394
+			// Token: 0x0400118C RID: 4492
 			public const int TxtLoading = 7;
 		}
 	}

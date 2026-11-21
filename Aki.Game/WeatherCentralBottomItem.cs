@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.Weather;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002D1E RID: 11550
+// Token: 0x02002278 RID: 8824
 [NullableContext(1)]
 [Nullable(0)]
 public class WeatherCentralBottomItem : UiPanelBase
 {
-	// Token: 0x06018496 RID: 99478 RVA: 0x0062E354 File Offset: 0x0062C554
+	// Token: 0x06015D37 RID: 89399 RVA: 0x00654348 File Offset: 0x00652548
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -50,7 +50,7 @@ public class WeatherCentralBottomItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06018497 RID: 99479 RVA: 0x0062E505 File Offset: 0x0062C705
+	// Token: 0x06015D38 RID: 89400 RVA: 0x006544F9 File Offset: 0x006526F9
 	private void OnCooldownTimer(int remainTime)
 	{
 		if (remainTime <= 0)
@@ -61,7 +61,7 @@ public class WeatherCentralBottomItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(8), "WeatherControl_Cooldown", new <>z__ReadOnlySingleElementList<object>(remainTime));
 	}
 
-	// Token: 0x06018498 RID: 99480 RVA: 0x0062E533 File Offset: 0x0062C733
+	// Token: 0x06015D39 RID: 89401 RVA: 0x00654527 File Offset: 0x00652727
 	private void OnClickConfirm()
 	{
 		Action clickConfirmCallback = this.ClickConfirmCallback;
@@ -72,7 +72,7 @@ public class WeatherCentralBottomItem : UiPanelBase
 		clickConfirmCallback();
 	}
 
-	// Token: 0x06018499 RID: 99481 RVA: 0x0062E548 File Offset: 0x0062C748
+	// Token: 0x06015D3A RID: 89402 RVA: 0x0065453C File Offset: 0x0065273C
 	private void OnClickSkip()
 	{
 		SkipTaskManager.Run(ESkipName.SkipToQuest, new object[]
@@ -81,13 +81,13 @@ public class WeatherCentralBottomItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x0601849A RID: 99482 RVA: 0x0062E589 File Offset: 0x0062C789
+	// Token: 0x06015D3B RID: 89403 RVA: 0x0065457D File Offset: 0x0065277D
 	public void SetClickConfirmCallback(Action callback)
 	{
 		this.ClickConfirmCallback = callback;
 	}
 
-	// Token: 0x0601849B RID: 99483 RVA: 0x0062E592 File Offset: 0x0062C792
+	// Token: 0x06015D3C RID: 89404 RVA: 0x00654586 File Offset: 0x00652786
 	public void RefreshByConfigId(int configId)
 	{
 		this.SelectedConfigId = configId;
@@ -96,7 +96,7 @@ public class WeatherCentralBottomItem : UiPanelBase
 		this.RefreshLockText();
 	}
 
-	// Token: 0x0601849C RID: 99484 RVA: 0x0062E5B0 File Offset: 0x0062C7B0
+	// Token: 0x06015D3D RID: 89405 RVA: 0x006545A4 File Offset: 0x006527A4
 	private void RefreshLockText()
 	{
 		WeatherSwitch? weatherSwitchConfig = WeatherModuleConfig.Instance.GetWeatherSwitchConfig(this.SelectedConfigId);
@@ -114,7 +114,7 @@ public class WeatherCentralBottomItem : UiPanelBase
 		text.ShowTextNew(key);
 	}
 
-	// Token: 0x0601849D RID: 99485 RVA: 0x0062E63C File Offset: 0x0062C83C
+	// Token: 0x06015D3E RID: 89406 RVA: 0x00654630 File Offset: 0x00652830
 	private void RefreshButtonState()
 	{
 		bool flag = WeatherModel.Instance.IsWeatherSwitchConfigUnlocked(this.SelectedConfigId);
@@ -150,7 +150,7 @@ public class WeatherCentralBottomItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601849E RID: 99486 RVA: 0x0062E6EC File Offset: 0x0062C8EC
+	// Token: 0x06015D3F RID: 89407 RVA: 0x006546E0 File Offset: 0x006528E0
 	private void RefreshTime()
 	{
 		bool flag = WeatherModel.Instance.IsCurrentTimeInValidTime(this.SelectedConfigId);
@@ -183,13 +183,13 @@ public class WeatherCentralBottomItem : UiPanelBase
 		item.SetUIActive(!flag);
 	}
 
-	// Token: 0x0601849F RID: 99487 RVA: 0x0062E76E File Offset: 0x0062C96E
+	// Token: 0x06015D40 RID: 89408 RVA: 0x00654762 File Offset: 0x00652962
 	private string GetCurrentTimeText()
 	{
 		return TimeOfDayModel.Instance.GameTime.HourMinuteString;
 	}
 
-	// Token: 0x060184A0 RID: 99488 RVA: 0x0062E780 File Offset: 0x0062C980
+	// Token: 0x06015D41 RID: 89409 RVA: 0x00654774 File Offset: 0x00652974
 	private string GetTargetTimeText()
 	{
 		string text = "0" + this.GetTargetTimeByConfigId(this.SelectedConfigId).ToString();
@@ -197,16 +197,16 @@ public class WeatherCentralBottomItem : UiPanelBase
 		return text.Substring(startIndex) + ":00";
 	}
 
-	// Token: 0x060184A1 RID: 99489 RVA: 0x0062E7CC File Offset: 0x0062C9CC
+	// Token: 0x06015D42 RID: 89410 RVA: 0x006547C0 File Offset: 0x006529C0
 	private int GetTargetTimeByConfigId(int configId)
 	{
 		return WeatherModuleConfig.Instance.GetWeatherSwitchConfig(configId).Value.ValidTime()[0];
 	}
 
-	// Token: 0x0400B455 RID: 46165
+	// Token: 0x0400B7CA RID: 47050
 	private int SelectedConfigId;
 
-	// Token: 0x0400B456 RID: 46166
+	// Token: 0x0400B7CB RID: 47051
 	[Nullable(2)]
 	private Action ClickConfirmCallback;
 }

@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol.Ai
 {
-	// Token: 0x020016A4 RID: 5796
+	// Token: 0x02001720 RID: 5920
 	[NetMessage(EMessageId.AiBlackboardCdPush)]
 	public sealed class AiBlackboardCdPush : IMessage<AiBlackboardCdPush>, IMessage, IEquatable<AiBlackboardCdPush>, IDeepCloneable<AiBlackboardCdPush>, IBufferMessage
 	{
-		// Token: 0x0601D0B7 RID: 118967 RVA: 0x004405D6 File Offset: 0x0043E7D6
+		// Token: 0x0601DB86 RID: 121734 RVA: 0x0045C316 File Offset: 0x0045A516
 		[NullableContext(1)]
 		public static AiBlackboardCdPush Create()
 		{
 			return new AiBlackboardCdPush();
 		}
 
-		// Token: 0x1700628F RID: 25231
-		// (get) Token: 0x0601D0B8 RID: 118968 RVA: 0x004405DD File Offset: 0x0043E7DD
+		// Token: 0x17006534 RID: 25908
+		// (get) Token: 0x0601DB87 RID: 121735 RVA: 0x0045C31D File Offset: 0x0045A51D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol.Ai
 			}
 		}
 
-		// Token: 0x17006290 RID: 25232
-		// (get) Token: 0x0601D0B9 RID: 118969 RVA: 0x004405E0 File Offset: 0x0043E7E0
+		// Token: 0x17006535 RID: 25909
+		// (get) Token: 0x0601DB88 RID: 121736 RVA: 0x0045C320 File Offset: 0x0045A520
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol.Ai
 			}
 		}
 
-		// Token: 0x0601D0BA RID: 118970 RVA: 0x004405E7 File Offset: 0x0043E7E7
+		// Token: 0x0601DB89 RID: 121737 RVA: 0x0045C327 File Offset: 0x0045A527
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiBlackboardCdPush()
 		{
 		}
 
-		// Token: 0x0601D0BB RID: 118971 RVA: 0x00440605 File Offset: 0x0043E805
+		// Token: 0x0601DB8A RID: 121738 RVA: 0x0045C345 File Offset: 0x0045A545
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiBlackboardCdPush(AiBlackboardCdPush other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol.Ai
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601D0BC RID: 118972 RVA: 0x00440640 File Offset: 0x0043E840
+		// Token: 0x0601DB8B RID: 121739 RVA: 0x0045C380 File Offset: 0x0045A580
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiBlackboardCdPush Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol.Ai
 			return new AiBlackboardCdPush(this);
 		}
 
-		// Token: 0x17006291 RID: 25233
-		// (get) Token: 0x0601D0BD RID: 118973 RVA: 0x00440648 File Offset: 0x0043E848
+		// Token: 0x17006536 RID: 25910
+		// (get) Token: 0x0601DB8C RID: 121740 RVA: 0x0045C388 File Offset: 0x0045A588
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<Int2Long> AiBlackboardCdModify
@@ -80,8 +80,8 @@ namespace Aki.Protocol.Ai
 			}
 		}
 
-		// Token: 0x17006292 RID: 25234
-		// (get) Token: 0x0601D0BE RID: 118974 RVA: 0x00440650 File Offset: 0x0043E850
+		// Token: 0x17006537 RID: 25911
+		// (get) Token: 0x0601DB8D RID: 121741 RVA: 0x0045C390 File Offset: 0x0045A590
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<Int2Bool> AiBlackboardCdComplete
@@ -92,7 +92,7 @@ namespace Aki.Protocol.Ai
 			}
 		}
 
-		// Token: 0x0601D0BF RID: 118975 RVA: 0x00440658 File Offset: 0x0043E858
+		// Token: 0x0601DB8E RID: 121742 RVA: 0x0045C398 File Offset: 0x0045A598
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -100,7 +100,7 @@ namespace Aki.Protocol.Ai
 			return this.Equals(other as AiBlackboardCdPush);
 		}
 
-		// Token: 0x0601D0C0 RID: 118976 RVA: 0x00440668 File Offset: 0x0043E868
+		// Token: 0x0601DB8F RID: 121743 RVA: 0x0045C3A8 File Offset: 0x0045A5A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AiBlackboardCdPush other)
@@ -108,7 +108,7 @@ namespace Aki.Protocol.Ai
 			return other != null && (other == this || (this.aiBlackboardCdModify_.Equals(other.aiBlackboardCdModify_) && this.aiBlackboardCdComplete_.Equals(other.aiBlackboardCdComplete_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601D0C1 RID: 118977 RVA: 0x004406BC File Offset: 0x0043E8BC
+		// Token: 0x0601DB90 RID: 121744 RVA: 0x0045C3FC File Offset: 0x0045A5FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -123,7 +123,7 @@ namespace Aki.Protocol.Ai
 			return num;
 		}
 
-		// Token: 0x0601D0C2 RID: 118978 RVA: 0x004406FE File Offset: 0x0043E8FE
+		// Token: 0x0601DB91 RID: 121745 RVA: 0x0045C43E File Offset: 0x0045A63E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -131,7 +131,7 @@ namespace Aki.Protocol.Ai
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601D0C3 RID: 118979 RVA: 0x0044070B File Offset: 0x0043E90B
+		// Token: 0x0601DB92 RID: 121746 RVA: 0x0045C44B File Offset: 0x0045A64B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -139,7 +139,7 @@ namespace Aki.Protocol.Ai
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601D0C4 RID: 118980 RVA: 0x00440714 File Offset: 0x0043E914
+		// Token: 0x0601DB93 RID: 121747 RVA: 0x0045C454 File Offset: 0x0045A654
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -152,7 +152,7 @@ namespace Aki.Protocol.Ai
 			}
 		}
 
-		// Token: 0x0601D0C5 RID: 118981 RVA: 0x0044074C File Offset: 0x0043E94C
+		// Token: 0x0601DB94 RID: 121748 RVA: 0x0045C48C File Offset: 0x0045A68C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -167,7 +167,7 @@ namespace Aki.Protocol.Ai
 			return num;
 		}
 
-		// Token: 0x0601D0C6 RID: 118982 RVA: 0x00440798 File Offset: 0x0043E998
+		// Token: 0x0601DB95 RID: 121749 RVA: 0x0045C4D8 File Offset: 0x0045A6D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AiBlackboardCdPush other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol.Ai
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601D0C7 RID: 118983 RVA: 0x004407D7 File Offset: 0x0043E9D7
+		// Token: 0x0601DB96 RID: 121750 RVA: 0x0045C517 File Offset: 0x0045A717
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol.Ai
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601D0C8 RID: 118984 RVA: 0x004407E0 File Offset: 0x0043E9E0
+		// Token: 0x0601DB97 RID: 121751 RVA: 0x0045C520 File Offset: 0x0045A720
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,9 +201,9 @@ namespace Aki.Protocol.Ai
 				{
 					return;
 				}
-				if (num != 26U)
+				if (num != 42U)
 				{
-					if (num != 122U)
+					if (num != 90U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -219,25 +219,25 @@ namespace Aki.Protocol.Ai
 			}
 		}
 
-		// Token: 0x0400C40C RID: 50188
+		// Token: 0x0400C93B RID: 51515
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400C40D RID: 50189
-		public const int AiBlackboardCdModifyFieldNumber = 15;
+		// Token: 0x0400C93C RID: 51516
+		public const int AiBlackboardCdModifyFieldNumber = 11;
 
-		// Token: 0x0400C40E RID: 50190
-		private static readonly FieldCodec<Int2Long> _repeated_aiBlackboardCdModify_codec = FieldCodec.ForMessage<Int2Long>(122U, Int2Long.Parser);
+		// Token: 0x0400C93D RID: 51517
+		private static readonly FieldCodec<Int2Long> _repeated_aiBlackboardCdModify_codec = FieldCodec.ForMessage<Int2Long>(90U, Int2Long.Parser);
 
-		// Token: 0x0400C40F RID: 50191
+		// Token: 0x0400C93E RID: 51518
 		private readonly RepeatedField<Int2Long> aiBlackboardCdModify_ = new RepeatedField<Int2Long>();
 
-		// Token: 0x0400C410 RID: 50192
-		public const int AiBlackboardCdCompleteFieldNumber = 3;
+		// Token: 0x0400C93F RID: 51519
+		public const int AiBlackboardCdCompleteFieldNumber = 5;
 
-		// Token: 0x0400C411 RID: 50193
-		private static readonly FieldCodec<Int2Bool> _repeated_aiBlackboardCdComplete_codec = FieldCodec.ForMessage<Int2Bool>(26U, Int2Bool.Parser);
+		// Token: 0x0400C940 RID: 51520
+		private static readonly FieldCodec<Int2Bool> _repeated_aiBlackboardCdComplete_codec = FieldCodec.ForMessage<Int2Bool>(42U, Int2Bool.Parser);
 
-		// Token: 0x0400C412 RID: 50194
+		// Token: 0x0400C941 RID: 51521
 		private readonly RepeatedField<Int2Bool> aiBlackboardCdComplete_ = new RepeatedField<Int2Bool>();
 	}
 }

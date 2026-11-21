@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001005 RID: 4101
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001131 RID: 4401
 	public class ILowMemorySceneSwitch : ISpecialProcess
 	{
-		// Token: 0x06005B8C RID: 23436 RVA: 0x000DE368 File Offset: 0x000DC568
+		// Token: 0x0600616C RID: 24940 RVA: 0x000EAFA8 File Offset: 0x000E91A8
 		private ILowMemorySceneSwitch_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005B8D RID: 23437 RVA: 0x000DE3A0 File Offset: 0x000DC5A0
+		// Token: 0x0600616D RID: 24941 RVA: 0x000EAFE0 File Offset: 0x000E91E0
 		public static ILowMemorySceneSwitch Create([Nullable(2)] ILowMemorySceneSwitch instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005B8E RID: 23438 RVA: 0x000DE3B3 File Offset: 0x000DC5B3
+		// Token: 0x0600616E RID: 24942 RVA: 0x000EAFF3 File Offset: 0x000E91F3
 		public static ILowMemorySceneSwitch CreateFromSetValue([Nullable(2)] ILowMemorySceneSwitch_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005B8F RID: 23439 RVA: 0x000DE3C6 File Offset: 0x000DC5C6
+		// Token: 0x0600616F RID: 24943 RVA: 0x000EB006 File Offset: 0x000E9206
 		public new ILowMemorySceneSwitch_SetValue ToSetValue()
 		{
 			return new ILowMemorySceneSwitch_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E40 RID: 7744
-		// (get) Token: 0x06005B90 RID: 23440 RVA: 0x000DE3E5 File Offset: 0x000DC5E5
-		// (set) Token: 0x06005B91 RID: 23441 RVA: 0x000DE410 File Offset: 0x000DC610
+		// Token: 0x17001FE9 RID: 8169
+		// (get) Token: 0x06006170 RID: 24944 RVA: 0x000EB025 File Offset: 0x000E9225
+		// (set) Token: 0x06006171 RID: 24945 RVA: 0x000EB050 File Offset: 0x000E9250
 		public override ESpecialProcess Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E41 RID: 7745
-		// (get) Token: 0x06005B92 RID: 23442 RVA: 0x000DE41E File Offset: 0x000DC61E
-		// (set) Token: 0x06005B93 RID: 23443 RVA: 0x000DE445 File Offset: 0x000DC645
+		// Token: 0x17001FEA RID: 8170
+		// (get) Token: 0x06006172 RID: 24946 RVA: 0x000EB05E File Offset: 0x000E925E
+		// (set) Token: 0x06006173 RID: 24947 RVA: 0x000EB085 File Offset: 0x000E9285
 		public virtual List<IOperation> Operations
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003729 RID: 14121
+		// Token: 0x04003A61 RID: 14945
 		[Nullable(2)]
 		protected new ILowMemorySceneSwitch FbInstance;
 
-		// Token: 0x0400372A RID: 14122
+		// Token: 0x04003A62 RID: 14946
 		[Nullable(2)]
 		protected new ILowMemorySceneSwitch_SetValue PocoInterface;
 	}

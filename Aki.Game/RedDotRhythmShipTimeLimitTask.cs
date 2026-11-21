@@ -2,22 +2,22 @@
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip;
 
-// Token: 0x0200340C RID: 13324
+// Token: 0x0200297E RID: 10622
 public class RedDotRhythmShipTimeLimitTask : RedDotBase
 {
-	// Token: 0x0601CD1D RID: 118045 RVA: 0x0080B4DA File Offset: 0x008096DA
+	// Token: 0x0601AA15 RID: 109077 RVA: 0x00831A9E File Offset: 0x0082FC9E
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnRhythmShipTaskRefresh, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CD1E RID: 118046 RVA: 0x0080B4F8 File Offset: 0x008096F8
+	// Token: 0x0601AA16 RID: 109078 RVA: 0x00831ABC File Offset: 0x0082FCBC
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRhythmShipTaskRefresh, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CD1F RID: 118047 RVA: 0x0080B516 File Offset: 0x00809716
+	// Token: 0x0601AA17 RID: 109079 RVA: 0x00831ADA File Offset: 0x0082FCDA
 	protected override bool OnCheck(int uId = 0)
 	{
 		return RhythmShipModel.Instance.GetCanTaskGetReward(1);

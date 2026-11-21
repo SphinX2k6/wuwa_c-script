@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005880 RID: 22656
+	// Token: 0x02004858 RID: 18520
 	public class InstanceDungeonTrialRoleItem : UiPanelBase
 	{
-		// Token: 0x06039A8C RID: 236172 RVA: 0x00DB40C7 File Offset: 0x00DB22C7
+		// Token: 0x0602E9AF RID: 190895 RVA: 0x00D02FDB File Offset: 0x00D011DB
 		[NullableContext(1)]
 		public InstanceDungeonTrialRoleItem(UUIItem baseUiItem, int roleId)
 		{
 			this.RoleId = roleId;
 		}
 
-		// Token: 0x06039A8D RID: 236173 RVA: 0x00DB40D8 File Offset: 0x00DB22D8
+		// Token: 0x0602E9B0 RID: 190896 RVA: 0x00D02FEC File Offset: 0x00D011EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039A8E RID: 236174 RVA: 0x00DB4164 File Offset: 0x00DB2364
+		// Token: 0x0602E9B1 RID: 190897 RVA: 0x00D03078 File Offset: 0x00D01278
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(7).CanExecuteChange.Bind(() => false);
@@ -48,39 +48,39 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ShowRoleTexture();
 		}
 
-		// Token: 0x06039A8F RID: 236175 RVA: 0x00DB41C7 File Offset: 0x00DB23C7
+		// Token: 0x0602E9B2 RID: 190898 RVA: 0x00D030DB File Offset: 0x00D012DB
 		protected override void OnBeforeDestroy()
 		{
 			this.RoleId = 0;
 		}
 
-		// Token: 0x06039A90 RID: 236176 RVA: 0x00DB41D0 File Offset: 0x00DB23D0
+		// Token: 0x0602E9B3 RID: 190899 RVA: 0x00D030E4 File Offset: 0x00D012E4
 		public void SetRoleId(int id)
 		{
 			this.RoleId = id;
 			this.ShowRoleTexture();
 		}
 
-		// Token: 0x06039A91 RID: 236177 RVA: 0x00DB41E0 File Offset: 0x00DB23E0
+		// Token: 0x0602E9B4 RID: 190900 RVA: 0x00D030F4 File Offset: 0x00D012F4
 		private void ShowRoleTexture()
 		{
 			RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(this.RoleId);
 			base.SetRoleIcon(((roleConfig != null) ? roleConfig.GetValueOrDefault().RoleHeadIcon : null) ?? "", base.GetTexture(1), this.RoleId, null, null);
 		}
 
-		// Token: 0x0401E216 RID: 123414
+		// Token: 0x04018CB3 RID: 101555
 		private int RoleId;
 
-		// Token: 0x0200BADC RID: 47836
+		// Token: 0x0200A4F5 RID: 42229
 		private static class EInstanceDungeonTrialRoleItem
 		{
-			// Token: 0x04038775 RID: 231285
+			// Token: 0x04033176 RID: 209270
 			public const int RoleTexture = 1;
 
-			// Token: 0x04038776 RID: 231286
+			// Token: 0x04033177 RID: 209271
 			public const int NameItem = 2;
 
-			// Token: 0x04038777 RID: 231287
+			// Token: 0x04033178 RID: 209272
 			public const int Toggle = 7;
 		}
 	}

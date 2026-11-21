@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057E2 RID: 22498
+	// Token: 0x020047B9 RID: 18361
 	[NullableContext(1)]
 	public interface IHonamiTowerSuccessData
 	{
-		// Token: 0x170089F0 RID: 35312
-		// (get) Token: 0x060392F5 RID: 234229
-		// (set) Token: 0x060392F6 RID: 234230
+		// Token: 0x17005DBA RID: 23994
+		// (get) Token: 0x0602E209 RID: 188937
+		// (set) Token: 0x0602E20A RID: 188938
 		IHonamiTowerRecordData[] RecordItemList { get; set; }
 
-		// Token: 0x170089F1 RID: 35313
-		// (get) Token: 0x060392F7 RID: 234231
-		// (set) Token: 0x060392F8 RID: 234232
+		// Token: 0x17005DBB RID: 23995
+		// (get) Token: 0x0602E20B RID: 188939
+		// (set) Token: 0x0602E20C RID: 188940
 		RewardItemData[] RewardItemList { get; set; }
 	}
 }

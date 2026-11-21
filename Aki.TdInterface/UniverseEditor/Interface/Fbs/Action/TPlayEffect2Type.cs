@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007752 RID: 30546
+	// Token: 0x02007F7B RID: 32635
 	public enum TPlayEffect2Type : byte
 	{
-		// Token: 0x040128B1 RID: 75953
+		// Token: 0x04013947 RID: 80199
 		NONE,
-		// Token: 0x040128B2 RID: 75954
+		// Token: 0x04013948 RID: 80200
 		IPlayCommonEffect,
-		// Token: 0x040128B3 RID: 75955
+		// Token: 0x04013949 RID: 80201
 		IPlayDissolveEffect,
-		// Token: 0x040128B4 RID: 75956
+		// Token: 0x0401394A RID: 80202
 		IPlayMpcEffect,
-		// Token: 0x040128B5 RID: 75957
+		// Token: 0x0401394B RID: 80203
 		IPlayScreenEffect,
-		// Token: 0x040128B6 RID: 75958
+		// Token: 0x0401394C RID: 80204
 		ISwitchEffectState
 	}
 }

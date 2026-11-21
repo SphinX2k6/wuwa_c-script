@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200693C RID: 26940
+	// Token: 0x02006FEF RID: 28655
 	public struct IICenterTextFadeOut : IFlatbufferObject
 	{
-		// Token: 0x1700C7E0 RID: 51168
-		// (get) Token: 0x0602F0A0 RID: 192672 RVA: 0x0066993E File Offset: 0x00667B3E
+		// Token: 0x1700D1E3 RID: 53731
+		// (get) Token: 0x06031A70 RID: 203376 RVA: 0x006B9E26 File Offset: 0x006B8026
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F0A1 RID: 192673 RVA: 0x0066994B File Offset: 0x00667B4B
+		// Token: 0x06031A71 RID: 203377 RVA: 0x006B9E33 File Offset: 0x006B8033
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F0A2 RID: 192674 RVA: 0x00669954 File Offset: 0x00667B54
+		// Token: 0x06031A72 RID: 203378 RVA: 0x006B9E3C File Offset: 0x006B803C
 		public static IICenterTextFadeOut GetRootAsIICenterTextFadeOut(ByteBuffer _bb)
 		{
 			return IICenterTextFadeOut.GetRootAsIICenterTextFadeOut(_bb, default(IICenterTextFadeOut));
 		}
 
-		// Token: 0x0602F0A3 RID: 192675 RVA: 0x00669970 File Offset: 0x00667B70
+		// Token: 0x06031A73 RID: 203379 RVA: 0x006B9E58 File Offset: 0x006B8058
 		public static IICenterTextFadeOut GetRootAsIICenterTextFadeOut(ByteBuffer _bb, IICenterTextFadeOut obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F0A4 RID: 192676 RVA: 0x0066998D File Offset: 0x00667B8D
+		// Token: 0x06031A74 RID: 203380 RVA: 0x006B9E75 File Offset: 0x006B8075
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F0A5 RID: 192677 RVA: 0x0066999C File Offset: 0x00667B9C
+		// Token: 0x06031A75 RID: 203381 RVA: 0x006B9E84 File Offset: 0x006B8084
 		public IICenterTextFadeOut __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C7E1 RID: 51169
-		// (get) Token: 0x0602F0A6 RID: 192678 RVA: 0x006699AC File Offset: 0x00667BAC
+		// Token: 0x1700D1E4 RID: 53732
+		// (get) Token: 0x06031A76 RID: 203382 RVA: 0x006B9E94 File Offset: 0x006B8094
 		public ECenterTextShowAnim Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C7E2 RID: 51170
-		// (get) Token: 0x0602F0A7 RID: 192679 RVA: 0x006699E8 File Offset: 0x00667BE8
+		// Token: 0x1700D1E5 RID: 53733
+		// (get) Token: 0x06031A77 RID: 203383 RVA: 0x006B9ED0 File Offset: 0x006B80D0
 		public float FadeInTime
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C7E3 RID: 51171
-		// (get) Token: 0x0602F0A8 RID: 192680 RVA: 0x00669A28 File Offset: 0x00667C28
+		// Token: 0x1700D1E6 RID: 53734
+		// (get) Token: 0x06031A78 RID: 203384 RVA: 0x006B9F10 File Offset: 0x006B8110
 		public float FadeOutTime
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F0A9 RID: 192681 RVA: 0x00669A68 File Offset: 0x00667C68
+		// Token: 0x06031A79 RID: 203385 RVA: 0x006B9F50 File Offset: 0x006B8150
 		public static Offset<IICenterTextFadeOut> CreateIICenterTextFadeOut(FlatBufferBuilder builder, ECenterTextShowAnim Type = ECenterTextShowAnim.ShowAll, float FadeInTime = 0f, float FadeOutTime = 0f)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IICenterTextFadeOut.EndIICenterTextFadeOut(builder);
 		}
 
-		// Token: 0x0602F0AA RID: 192682 RVA: 0x00669A8C File Offset: 0x00667C8C
+		// Token: 0x06031A7A RID: 203386 RVA: 0x006B9F74 File Offset: 0x006B8174
 		public static void StartIICenterTextFadeOut(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602F0AB RID: 192683 RVA: 0x00669A95 File Offset: 0x00667C95
+		// Token: 0x06031A7B RID: 203387 RVA: 0x006B9F7D File Offset: 0x006B817D
 		public static void AddType(FlatBufferBuilder builder, ECenterTextShowAnim type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602F0AC RID: 192684 RVA: 0x00669AA0 File Offset: 0x00667CA0
+		// Token: 0x06031A7C RID: 203388 RVA: 0x006B9F88 File Offset: 0x006B8188
 		public static void AddFadeInTime(FlatBufferBuilder builder, float fadeInTime)
 		{
 			builder.AddFloat(1, fadeInTime, 0.0);
 		}
 
-		// Token: 0x0602F0AD RID: 192685 RVA: 0x00669AB3 File Offset: 0x00667CB3
+		// Token: 0x06031A7D RID: 203389 RVA: 0x006B9F9B File Offset: 0x006B819B
 		public static void AddFadeOutTime(FlatBufferBuilder builder, float fadeOutTime)
 		{
 			builder.AddFloat(2, fadeOutTime, 0.0);
 		}
 
-		// Token: 0x0602F0AE RID: 192686 RVA: 0x00669AC6 File Offset: 0x00667CC6
+		// Token: 0x06031A7E RID: 203390 RVA: 0x006B9FAE File Offset: 0x006B81AE
 		public static Offset<IICenterTextFadeOut> EndIICenterTextFadeOut(FlatBufferBuilder builder)
 		{
 			return new Offset<IICenterTextFadeOut>(builder.EndTable());
 		}
 
-		// Token: 0x0602F0AF RID: 192687 RVA: 0x00669AD4 File Offset: 0x00667CD4
+		// Token: 0x06031A7F RID: 203391 RVA: 0x006B9FBC File Offset: 0x006B81BC
 		public IICenterTextFadeOutT UnPack()
 		{
 			IICenterTextFadeOutT iicenterTextFadeOutT = new IICenterTextFadeOutT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return iicenterTextFadeOutT;
 		}
 
-		// Token: 0x0602F0B0 RID: 192688 RVA: 0x00669AEF File Offset: 0x00667CEF
+		// Token: 0x06031A80 RID: 203392 RVA: 0x006B9FD7 File Offset: 0x006B81D7
 		public void UnPackTo(IICenterTextFadeOutT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.FadeOutTime = this.FadeOutTime;
 		}
 
-		// Token: 0x0602F0B1 RID: 192689 RVA: 0x00669B18 File Offset: 0x00667D18
+		// Token: 0x06031A81 RID: 203393 RVA: 0x006BA000 File Offset: 0x006B8200
 		public static Offset<IICenterTextFadeOut> Pack(FlatBufferBuilder builder, IICenterTextFadeOutT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IICenterTextFadeOut.CreateIICenterTextFadeOut(builder, _o.Type, _o.FadeInTime, _o.FadeOutTime);
 		}
 
-		// Token: 0x040110BA RID: 69818
+		// Token: 0x04011F26 RID: 73510
 		private Table __p;
 	}
 }

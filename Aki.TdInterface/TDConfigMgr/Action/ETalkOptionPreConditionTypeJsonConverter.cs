@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200245E RID: 9310
+	// Token: 0x020026FF RID: 9983
 	public class ETalkOptionPreConditionTypeJsonConverter : JsonConverter<ETalkOptionPreConditionType>
 	{
-		// Token: 0x0600CA27 RID: 51751 RVA: 0x001DBE2C File Offset: 0x001DA02C
+		// Token: 0x0600D6D7 RID: 54999 RVA: 0x001F5EE0 File Offset: 0x001F40E0
 		public override ETalkOptionPreConditionType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ETalkOptionPreConditionTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600CA28 RID: 51752 RVA: 0x001DBE50 File Offset: 0x001DA050
+		// Token: 0x0600D6D8 RID: 55000 RVA: 0x001F5F04 File Offset: 0x001F4104
 		public override void Write(Utf8JsonWriter writer, ETalkOptionPreConditionType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

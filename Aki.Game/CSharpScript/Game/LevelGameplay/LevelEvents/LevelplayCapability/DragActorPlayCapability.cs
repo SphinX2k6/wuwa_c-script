@@ -9,31 +9,31 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.LevelplayCapability
 {
-	// Token: 0x02006C33 RID: 27699
+	// Token: 0x02005DAC RID: 23980
 	public class DragActorPlayCapability : Capability
 	{
-		// Token: 0x060444B2 RID: 279730 RVA: 0x010D3288 File Offset: 0x010D1488
+		// Token: 0x0603A60A RID: 239114 RVA: 0x0107D1DC File Offset: 0x0107B3DC
 		[NullableContext(2)]
 		public DragActorPlayCapability(ICapabilityGameObject ownerGameObject = null) : base(ownerGameObject)
 		{
 		}
 
-		// Token: 0x060444B3 RID: 279731 RVA: 0x010D3291 File Offset: 0x010D1491
+		// Token: 0x0603A60B RID: 239115 RVA: 0x0107D1E5 File Offset: 0x0107B3E5
 		public override void Setup()
 		{
 		}
 
-		// Token: 0x060444B4 RID: 279732 RVA: 0x010D3293 File Offset: 0x010D1493
+		// Token: 0x0603A60C RID: 239116 RVA: 0x0107D1E7 File Offset: 0x0107B3E7
 		public override void PreTick(float deltaMilliseconds)
 		{
 		}
 
-		// Token: 0x060444B5 RID: 279733 RVA: 0x010D3295 File Offset: 0x010D1495
+		// Token: 0x0603A60D RID: 239117 RVA: 0x0107D1E9 File Offset: 0x0107B3E9
 		public override void TickActive(float deltaMilliseconds)
 		{
 		}
 
-		// Token: 0x060444B6 RID: 279734 RVA: 0x010D3297 File Offset: 0x010D1497
+		// Token: 0x0603A60E RID: 239118 RVA: 0x0107D1EB File Offset: 0x0107B3EB
 		public override bool ShouldActivate()
 		{
 			ICapabilityGameObject ownerGameObject = this.OwnerGameObject;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.LevelplayCapability
 			return ((dragActorPlayCameraConfigDataComponent != null) ? dragActorPlayCameraConfigDataComponent.CameraConfig : null) != null;
 		}
 
-		// Token: 0x060444B7 RID: 279735 RVA: 0x010D32C4 File Offset: 0x010D14C4
+		// Token: 0x0603A60F RID: 239119 RVA: 0x0107D218 File Offset: 0x0107B418
 		public override bool ShouldDeactivate()
 		{
 			return false;
 		}
 
-		// Token: 0x060444B8 RID: 279736 RVA: 0x010D32C8 File Offset: 0x010D14C8
+		// Token: 0x0603A610 RID: 239120 RVA: 0x0107D21C File Offset: 0x0107B41C
 		public unsafe override void OnActivated()
 		{
 			ICapabilityGameObject ownerGameObject = this.OwnerGameObject;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.LevelplayCapability
 			}, new UnrealEngine.EViewTargetBlendFunction?(UnrealEngine.EViewTargetBlendFunction.VTBlend_Linear), new float?(0f), new UnrealEngine.EViewTargetBlendFunction?(UnrealEngine.EViewTargetBlendFunction.VTBlend_Linear), new float?(0f), new bool?(false), null, new bool?(false), null, "DragActorPlayCapability.OnActivated", null, null, null, false, true);
 		}
 
-		// Token: 0x060444B9 RID: 279737 RVA: 0x010D3518 File Offset: 0x010D1718
+		// Token: 0x0603A611 RID: 239121 RVA: 0x0107D46C File Offset: 0x0107B66C
 		public override void OnDeactivated()
 		{
 			SplineConstrainedDragController.Instance.CloseSplineConstrainedDragView();
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.LevelplayCapability
 			this.LogError("OnDeactivated", "FightCamera.LogicComponent 不存在");
 		}
 
-		// Token: 0x060444BA RID: 279738 RVA: 0x010D35C0 File Offset: 0x010D17C0
+		// Token: 0x0603A612 RID: 239122 RVA: 0x0107D514 File Offset: 0x0107B714
 		[NullableContext(1)]
 		private unsafe void LogError(string stage, object err)
 		{

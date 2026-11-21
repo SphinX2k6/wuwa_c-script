@@ -4,230 +4,230 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200486F RID: 18543
+	// Token: 0x02004CD4 RID: 19668
 	public class IEditorStartConfigT
 	{
-		// Token: 0x170085F2 RID: 34290
-		// (get) Token: 0x0601CD7A RID: 118138 RVA: 0x00413F23 File Offset: 0x00412123
-		// (set) Token: 0x0601CD7B RID: 118139 RVA: 0x00413F2B File Offset: 0x0041212B
+		// Token: 0x17008C3C RID: 35900
+		// (get) Token: 0x0601E56B RID: 124267 RVA: 0x004407CB File Offset: 0x0043E9CB
+		// (set) Token: 0x0601E56C RID: 124268 RVA: 0x004407D3 File Offset: 0x0043E9D3
 		public string Account { get; set; }
 
-		// Token: 0x170085F3 RID: 34291
-		// (get) Token: 0x0601CD7C RID: 118140 RVA: 0x00413F34 File Offset: 0x00412134
-		// (set) Token: 0x0601CD7D RID: 118141 RVA: 0x00413F3C File Offset: 0x0041213C
+		// Token: 0x17008C3D RID: 35901
+		// (get) Token: 0x0601E56D RID: 124269 RVA: 0x004407DC File Offset: 0x0043E9DC
+		// (set) Token: 0x0601E56E RID: 124270 RVA: 0x004407E4 File Offset: 0x0043E9E4
 		public EEditorLoginAccountType LoginAccountType { get; set; }
 
-		// Token: 0x170085F4 RID: 34292
-		// (get) Token: 0x0601CD7E RID: 118142 RVA: 0x00413F45 File Offset: 0x00412145
-		// (set) Token: 0x0601CD7F RID: 118143 RVA: 0x00413F4D File Offset: 0x0041214D
+		// Token: 0x17008C3E RID: 35902
+		// (get) Token: 0x0601E56F RID: 124271 RVA: 0x004407ED File Offset: 0x0043E9ED
+		// (set) Token: 0x0601E570 RID: 124272 RVA: 0x004407F5 File Offset: 0x0043E9F5
 		public string CustomAccount { get; set; }
 
-		// Token: 0x170085F5 RID: 34293
-		// (get) Token: 0x0601CD80 RID: 118144 RVA: 0x00413F56 File Offset: 0x00412156
-		// (set) Token: 0x0601CD81 RID: 118145 RVA: 0x00413F5E File Offset: 0x0041215E
+		// Token: 0x17008C3F RID: 35903
+		// (get) Token: 0x0601E571 RID: 124273 RVA: 0x004407FE File Offset: 0x0043E9FE
+		// (set) Token: 0x0601E572 RID: 124274 RVA: 0x00440806 File Offset: 0x0043EA06
 		public string ArchiveAccount { get; set; }
 
-		// Token: 0x170085F6 RID: 34294
-		// (get) Token: 0x0601CD82 RID: 118146 RVA: 0x00413F67 File Offset: 0x00412167
-		// (set) Token: 0x0601CD83 RID: 118147 RVA: 0x00413F6F File Offset: 0x0041216F
+		// Token: 0x17008C40 RID: 35904
+		// (get) Token: 0x0601E573 RID: 124275 RVA: 0x0044080F File Offset: 0x0043EA0F
+		// (set) Token: 0x0601E574 RID: 124276 RVA: 0x00440817 File Offset: 0x0043EA17
 		public bool IsNetMode { get; set; }
 
-		// Token: 0x170085F7 RID: 34295
-		// (get) Token: 0x0601CD84 RID: 118148 RVA: 0x00413F78 File Offset: 0x00412178
-		// (set) Token: 0x0601CD85 RID: 118149 RVA: 0x00413F80 File Offset: 0x00412180
+		// Token: 0x17008C41 RID: 35905
+		// (get) Token: 0x0601E575 RID: 124277 RVA: 0x00440820 File Offset: 0x0043EA20
+		// (set) Token: 0x0601E576 RID: 124278 RVA: 0x00440828 File Offset: 0x0043EA28
 		public bool IsMale { get; set; }
 
-		// Token: 0x170085F8 RID: 34296
-		// (get) Token: 0x0601CD86 RID: 118150 RVA: 0x00413F89 File Offset: 0x00412189
-		// (set) Token: 0x0601CD87 RID: 118151 RVA: 0x00413F91 File Offset: 0x00412191
+		// Token: 0x17008C42 RID: 35906
+		// (get) Token: 0x0601E577 RID: 124279 RVA: 0x00440831 File Offset: 0x0043EA31
+		// (set) Token: 0x0601E578 RID: 124280 RVA: 0x00440839 File Offset: 0x0043EA39
 		public bool UseTemp { get; set; }
 
-		// Token: 0x170085F9 RID: 34297
-		// (get) Token: 0x0601CD88 RID: 118152 RVA: 0x00413F9A File Offset: 0x0041219A
-		// (set) Token: 0x0601CD89 RID: 118153 RVA: 0x00413FA2 File Offset: 0x004121A2
+		// Token: 0x17008C43 RID: 35907
+		// (get) Token: 0x0601E579 RID: 124281 RVA: 0x00440842 File Offset: 0x0043EA42
+		// (set) Token: 0x0601E57A RID: 124282 RVA: 0x0044084A File Offset: 0x0043EA4A
 		public string ServerIp { get; set; }
 
-		// Token: 0x170085FA RID: 34298
-		// (get) Token: 0x0601CD8A RID: 118154 RVA: 0x00413FAB File Offset: 0x004121AB
-		// (set) Token: 0x0601CD8B RID: 118155 RVA: 0x00413FB3 File Offset: 0x004121B3
+		// Token: 0x17008C44 RID: 35908
+		// (get) Token: 0x0601E57B RID: 124283 RVA: 0x00440853 File Offset: 0x0043EA53
+		// (set) Token: 0x0601E57C RID: 124284 RVA: 0x0044085B File Offset: 0x0043EA5B
 		public bool IsRelaxMode { get; set; }
 
-		// Token: 0x170085FB RID: 34299
-		// (get) Token: 0x0601CD8C RID: 118156 RVA: 0x00413FBC File Offset: 0x004121BC
-		// (set) Token: 0x0601CD8D RID: 118157 RVA: 0x00413FC4 File Offset: 0x004121C4
+		// Token: 0x17008C45 RID: 35909
+		// (get) Token: 0x0601E57D RID: 124285 RVA: 0x00440864 File Offset: 0x0043EA64
+		// (set) Token: 0x0601E57E RID: 124286 RVA: 0x0044086C File Offset: 0x0043EA6C
 		public int DungeonId { get; set; }
 
-		// Token: 0x170085FC RID: 34300
-		// (get) Token: 0x0601CD8E RID: 118158 RVA: 0x00413FCD File Offset: 0x004121CD
-		// (set) Token: 0x0601CD8F RID: 118159 RVA: 0x00413FD5 File Offset: 0x004121D5
+		// Token: 0x17008C46 RID: 35910
+		// (get) Token: 0x0601E57F RID: 124287 RVA: 0x00440875 File Offset: 0x0043EA75
+		// (set) Token: 0x0601E580 RID: 124288 RVA: 0x0044087D File Offset: 0x0043EA7D
 		public bool IsOpenDebugService { get; set; }
 
-		// Token: 0x170085FD RID: 34301
-		// (get) Token: 0x0601CD90 RID: 118160 RVA: 0x00413FDE File Offset: 0x004121DE
-		// (set) Token: 0x0601CD91 RID: 118161 RVA: 0x00413FE6 File Offset: 0x004121E6
+		// Token: 0x17008C47 RID: 35911
+		// (get) Token: 0x0601E581 RID: 124289 RVA: 0x00440886 File Offset: 0x0043EA86
+		// (set) Token: 0x0601E582 RID: 124290 RVA: 0x0044088E File Offset: 0x0043EA8E
 		public bool DisableAutoStartServer { get; set; }
 
-		// Token: 0x170085FE RID: 34302
-		// (get) Token: 0x0601CD92 RID: 118162 RVA: 0x00413FEF File Offset: 0x004121EF
-		// (set) Token: 0x0601CD93 RID: 118163 RVA: 0x00413FF7 File Offset: 0x004121F7
+		// Token: 0x17008C48 RID: 35912
+		// (get) Token: 0x0601E583 RID: 124291 RVA: 0x00440897 File Offset: 0x0043EA97
+		// (set) Token: 0x0601E584 RID: 124292 RVA: 0x0044089F File Offset: 0x0043EA9F
 		public bool ReloadEditorConfig { get; set; }
 
-		// Token: 0x170085FF RID: 34303
-		// (get) Token: 0x0601CD94 RID: 118164 RVA: 0x00414000 File Offset: 0x00412200
-		// (set) Token: 0x0601CD95 RID: 118165 RVA: 0x00414008 File Offset: 0x00412208
+		// Token: 0x17008C49 RID: 35913
+		// (get) Token: 0x0601E585 RID: 124293 RVA: 0x004408A8 File Offset: 0x0043EAA8
+		// (set) Token: 0x0601E586 RID: 124294 RVA: 0x004408B0 File Offset: 0x0043EAB0
 		public bool ReloadConfigTable { get; set; }
 
-		// Token: 0x17008600 RID: 34304
-		// (get) Token: 0x0601CD96 RID: 118166 RVA: 0x00414011 File Offset: 0x00412211
-		// (set) Token: 0x0601CD97 RID: 118167 RVA: 0x00414019 File Offset: 0x00412219
+		// Token: 0x17008C4A RID: 35914
+		// (get) Token: 0x0601E587 RID: 124295 RVA: 0x004408B9 File Offset: 0x0043EAB9
+		// (set) Token: 0x0601E588 RID: 124296 RVA: 0x004408C1 File Offset: 0x0043EAC1
 		public bool IsLoginByNewUserName { get; set; }
 
-		// Token: 0x17008601 RID: 34305
-		// (get) Token: 0x0601CD98 RID: 118168 RVA: 0x00414022 File Offset: 0x00412222
-		// (set) Token: 0x0601CD99 RID: 118169 RVA: 0x0041402A File Offset: 0x0041222A
+		// Token: 0x17008C4B RID: 35915
+		// (get) Token: 0x0601E589 RID: 124297 RVA: 0x004408CA File Offset: 0x0043EACA
+		// (set) Token: 0x0601E58A RID: 124298 RVA: 0x004408D2 File Offset: 0x0043EAD2
 		public EAccountType AccountType { get; set; }
 
-		// Token: 0x17008602 RID: 34306
-		// (get) Token: 0x0601CD9A RID: 118170 RVA: 0x00414033 File Offset: 0x00412233
-		// (set) Token: 0x0601CD9B RID: 118171 RVA: 0x0041403B File Offset: 0x0041223B
+		// Token: 0x17008C4C RID: 35916
+		// (get) Token: 0x0601E58B RID: 124299 RVA: 0x004408DB File Offset: 0x0043EADB
+		// (set) Token: 0x0601E58C RID: 124300 RVA: 0x004408E3 File Offset: 0x0043EAE3
 		public string GmPathOnLogin { get; set; }
 
-		// Token: 0x17008603 RID: 34307
-		// (get) Token: 0x0601CD9C RID: 118172 RVA: 0x00414044 File Offset: 0x00412244
-		// (set) Token: 0x0601CD9D RID: 118173 RVA: 0x0041404C File Offset: 0x0041224C
+		// Token: 0x17008C4D RID: 35917
+		// (get) Token: 0x0601E58D RID: 124301 RVA: 0x004408EC File Offset: 0x0043EAEC
+		// (set) Token: 0x0601E58E RID: 124302 RVA: 0x004408F4 File Offset: 0x0043EAF4
 		public int EditorPort { get; set; }
 
-		// Token: 0x17008604 RID: 34308
-		// (get) Token: 0x0601CD9E RID: 118174 RVA: 0x00414055 File Offset: 0x00412255
-		// (set) Token: 0x0601CD9F RID: 118175 RVA: 0x0041405D File Offset: 0x0041225D
+		// Token: 0x17008C4E RID: 35918
+		// (get) Token: 0x0601E58F RID: 124303 RVA: 0x004408FD File Offset: 0x0043EAFD
+		// (set) Token: 0x0601E590 RID: 124304 RVA: 0x00440905 File Offset: 0x0043EB05
 		public int GameClientGmPort { get; set; }
 
-		// Token: 0x17008605 RID: 34309
-		// (get) Token: 0x0601CDA0 RID: 118176 RVA: 0x00414066 File Offset: 0x00412266
-		// (set) Token: 0x0601CDA1 RID: 118177 RVA: 0x0041406E File Offset: 0x0041226E
+		// Token: 0x17008C4F RID: 35919
+		// (get) Token: 0x0601E591 RID: 124305 RVA: 0x0044090E File Offset: 0x0043EB0E
+		// (set) Token: 0x0601E592 RID: 124306 RVA: 0x00440916 File Offset: 0x0043EB16
 		public bool IsReLoadArchive { get; set; }
 
-		// Token: 0x17008606 RID: 34310
-		// (get) Token: 0x0601CDA2 RID: 118178 RVA: 0x00414077 File Offset: 0x00412277
-		// (set) Token: 0x0601CDA3 RID: 118179 RVA: 0x0041407F File Offset: 0x0041227F
+		// Token: 0x17008C50 RID: 35920
+		// (get) Token: 0x0601E593 RID: 124307 RVA: 0x0044091F File Offset: 0x0043EB1F
+		// (set) Token: 0x0601E594 RID: 124308 RVA: 0x00440927 File Offset: 0x0043EB27
 		public int PackageVersion { get; set; }
 
-		// Token: 0x17008607 RID: 34311
-		// (get) Token: 0x0601CDA4 RID: 118180 RVA: 0x00414088 File Offset: 0x00412288
-		// (set) Token: 0x0601CDA5 RID: 118181 RVA: 0x00414090 File Offset: 0x00412290
+		// Token: 0x17008C51 RID: 35921
+		// (get) Token: 0x0601E595 RID: 124309 RVA: 0x00440930 File Offset: 0x0043EB30
+		// (set) Token: 0x0601E596 RID: 124310 RVA: 0x00440938 File Offset: 0x0043EB38
 		public bool IsCustomAttachServerIp { get; set; }
 
-		// Token: 0x17008608 RID: 34312
-		// (get) Token: 0x0601CDA6 RID: 118182 RVA: 0x00414099 File Offset: 0x00412299
-		// (set) Token: 0x0601CDA7 RID: 118183 RVA: 0x004140A1 File Offset: 0x004122A1
+		// Token: 0x17008C52 RID: 35922
+		// (get) Token: 0x0601E597 RID: 124311 RVA: 0x00440941 File Offset: 0x0043EB41
+		// (set) Token: 0x0601E598 RID: 124312 RVA: 0x00440949 File Offset: 0x0043EB49
 		public string AttachServerIp { get; set; }
 
-		// Token: 0x17008609 RID: 34313
-		// (get) Token: 0x0601CDA8 RID: 118184 RVA: 0x004140AA File Offset: 0x004122AA
-		// (set) Token: 0x0601CDA9 RID: 118185 RVA: 0x004140B2 File Offset: 0x004122B2
+		// Token: 0x17008C53 RID: 35923
+		// (get) Token: 0x0601E599 RID: 124313 RVA: 0x00440952 File Offset: 0x0043EB52
+		// (set) Token: 0x0601E59A RID: 124314 RVA: 0x0044095A File Offset: 0x0043EB5A
 		public int AttachPlayerId { get; set; }
 
-		// Token: 0x1700860A RID: 34314
-		// (get) Token: 0x0601CDAA RID: 118186 RVA: 0x004140BB File Offset: 0x004122BB
-		// (set) Token: 0x0601CDAB RID: 118187 RVA: 0x004140C3 File Offset: 0x004122C3
+		// Token: 0x17008C54 RID: 35924
+		// (get) Token: 0x0601E59B RID: 124315 RVA: 0x00440963 File Offset: 0x0043EB63
+		// (set) Token: 0x0601E59C RID: 124316 RVA: 0x0044096B File Offset: 0x0043EB6B
 		public bool IsUseMobileStreamingParamsInPie { get; set; }
 
-		// Token: 0x1700860B RID: 34315
-		// (get) Token: 0x0601CDAC RID: 118188 RVA: 0x004140CC File Offset: 0x004122CC
-		// (set) Token: 0x0601CDAD RID: 118189 RVA: 0x004140D4 File Offset: 0x004122D4
+		// Token: 0x17008C55 RID: 35925
+		// (get) Token: 0x0601E59D RID: 124317 RVA: 0x00440974 File Offset: 0x0043EB74
+		// (set) Token: 0x0601E59E RID: 124318 RVA: 0x0044097C File Offset: 0x0043EB7C
 		public bool IsUseHighAoi { get; set; }
 
-		// Token: 0x1700860C RID: 34316
-		// (get) Token: 0x0601CDAE RID: 118190 RVA: 0x004140DD File Offset: 0x004122DD
-		// (set) Token: 0x0601CDAF RID: 118191 RVA: 0x004140E5 File Offset: 0x004122E5
+		// Token: 0x17008C56 RID: 35926
+		// (get) Token: 0x0601E59F RID: 124319 RVA: 0x00440985 File Offset: 0x0043EB85
+		// (set) Token: 0x0601E5A0 RID: 124320 RVA: 0x0044098D File Offset: 0x0043EB8D
 		public bool IsStayInSubWp { get; set; }
 
-		// Token: 0x1700860D RID: 34317
-		// (get) Token: 0x0601CDB0 RID: 118192 RVA: 0x004140EE File Offset: 0x004122EE
-		// (set) Token: 0x0601CDB1 RID: 118193 RVA: 0x004140F6 File Offset: 0x004122F6
+		// Token: 0x17008C57 RID: 35927
+		// (get) Token: 0x0601E5A1 RID: 124321 RVA: 0x00440996 File Offset: 0x0043EB96
+		// (set) Token: 0x0601E5A2 RID: 124322 RVA: 0x0044099E File Offset: 0x0043EB9E
 		public string CustomPlayerName { get; set; }
 
-		// Token: 0x1700860E RID: 34318
-		// (get) Token: 0x0601CDB2 RID: 118194 RVA: 0x004140FF File Offset: 0x004122FF
-		// (set) Token: 0x0601CDB3 RID: 118195 RVA: 0x00414107 File Offset: 0x00412307
+		// Token: 0x17008C58 RID: 35928
+		// (get) Token: 0x0601E5A3 RID: 124323 RVA: 0x004409A7 File Offset: 0x0043EBA7
+		// (set) Token: 0x0601E5A4 RID: 124324 RVA: 0x004409AF File Offset: 0x0043EBAF
 		public List<string> SubLevels { get; set; }
 
-		// Token: 0x1700860F RID: 34319
-		// (get) Token: 0x0601CDB4 RID: 118196 RVA: 0x00414110 File Offset: 0x00412310
-		// (set) Token: 0x0601CDB5 RID: 118197 RVA: 0x00414118 File Offset: 0x00412318
+		// Token: 0x17008C59 RID: 35929
+		// (get) Token: 0x0601E5A5 RID: 124325 RVA: 0x004409B8 File Offset: 0x0043EBB8
+		// (set) Token: 0x0601E5A6 RID: 124326 RVA: 0x004409C0 File Offset: 0x0043EBC0
 		public List<Record_Int_StringsT> SubLevelsMap { get; set; }
 
-		// Token: 0x17008610 RID: 34320
-		// (get) Token: 0x0601CDB6 RID: 118198 RVA: 0x00414121 File Offset: 0x00412321
-		// (set) Token: 0x0601CDB7 RID: 118199 RVA: 0x00414129 File Offset: 0x00412329
+		// Token: 0x17008C5A RID: 35930
+		// (get) Token: 0x0601E5A7 RID: 124327 RVA: 0x004409C9 File Offset: 0x0043EBC9
+		// (set) Token: 0x0601E5A8 RID: 124328 RVA: 0x004409D1 File Offset: 0x0043EBD1
 		public List<Record_Int_IntsT> DataLayers { get; set; }
 
-		// Token: 0x17008611 RID: 34321
-		// (get) Token: 0x0601CDB8 RID: 118200 RVA: 0x00414132 File Offset: 0x00412332
-		// (set) Token: 0x0601CDB9 RID: 118201 RVA: 0x0041413A File Offset: 0x0041233A
+		// Token: 0x17008C5B RID: 35931
+		// (get) Token: 0x0601E5A9 RID: 124329 RVA: 0x004409DA File Offset: 0x0043EBDA
+		// (set) Token: 0x0601E5AA RID: 124330 RVA: 0x004409E2 File Offset: 0x0043EBE2
 		public List<Record_Int_IDisableEntitiesT> DisableEntities { get; set; }
 
-		// Token: 0x17008612 RID: 34322
-		// (get) Token: 0x0601CDBA RID: 118202 RVA: 0x00414143 File Offset: 0x00412343
-		// (set) Token: 0x0601CDBB RID: 118203 RVA: 0x0041414B File Offset: 0x0041234B
+		// Token: 0x17008C5C RID: 35932
+		// (get) Token: 0x0601E5AB RID: 124331 RVA: 0x004409EB File Offset: 0x0043EBEB
+		// (set) Token: 0x0601E5AC RID: 124332 RVA: 0x004409F3 File Offset: 0x0043EBF3
 		public List<Record_Int_IntT> DungeonIdMap { get; set; }
 
-		// Token: 0x17008613 RID: 34323
-		// (get) Token: 0x0601CDBC RID: 118204 RVA: 0x00414154 File Offset: 0x00412354
-		// (set) Token: 0x0601CDBD RID: 118205 RVA: 0x0041415C File Offset: 0x0041235C
+		// Token: 0x17008C5D RID: 35933
+		// (get) Token: 0x0601E5AD RID: 124333 RVA: 0x004409FC File Offset: 0x0043EBFC
+		// (set) Token: 0x0601E5AE RID: 124334 RVA: 0x00440A04 File Offset: 0x0043EC04
 		public List<int> SkipQuests { get; set; }
 
-		// Token: 0x17008614 RID: 34324
-		// (get) Token: 0x0601CDBE RID: 118206 RVA: 0x00414165 File Offset: 0x00412365
-		// (set) Token: 0x0601CDBF RID: 118207 RVA: 0x0041416D File Offset: 0x0041236D
+		// Token: 0x17008C5E RID: 35934
+		// (get) Token: 0x0601E5AF RID: 124335 RVA: 0x00440A0D File Offset: 0x0043EC0D
+		// (set) Token: 0x0601E5B0 RID: 124336 RVA: 0x00440A15 File Offset: 0x0043EC15
 		public bool IsBornAtCamera { get; set; }
 
-		// Token: 0x17008615 RID: 34325
-		// (get) Token: 0x0601CDC0 RID: 118208 RVA: 0x00414176 File Offset: 0x00412376
-		// (set) Token: 0x0601CDC1 RID: 118209 RVA: 0x0041417E File Offset: 0x0041237E
+		// Token: 0x17008C5F RID: 35935
+		// (get) Token: 0x0601E5B1 RID: 124337 RVA: 0x00440A1E File Offset: 0x0043EC1E
+		// (set) Token: 0x0601E5B2 RID: 124338 RVA: 0x00440A26 File Offset: 0x0043EC26
 		public bool EnableDeltaReload { get; set; }
 
-		// Token: 0x17008616 RID: 34326
-		// (get) Token: 0x0601CDC2 RID: 118210 RVA: 0x00414187 File Offset: 0x00412387
-		// (set) Token: 0x0601CDC3 RID: 118211 RVA: 0x0041418F File Offset: 0x0041238F
+		// Token: 0x17008C60 RID: 35936
+		// (get) Token: 0x0601E5B3 RID: 124339 RVA: 0x00440A2F File Offset: 0x0043EC2F
+		// (set) Token: 0x0601E5B4 RID: 124340 RVA: 0x00440A37 File Offset: 0x0043EC37
 		public bool IsSkipQuests { get; set; }
 
-		// Token: 0x17008617 RID: 34327
-		// (get) Token: 0x0601CDC4 RID: 118212 RVA: 0x00414198 File Offset: 0x00412398
-		// (set) Token: 0x0601CDC5 RID: 118213 RVA: 0x004141A0 File Offset: 0x004123A0
+		// Token: 0x17008C61 RID: 35937
+		// (get) Token: 0x0601E5B5 RID: 124341 RVA: 0x00440A40 File Offset: 0x0043EC40
+		// (set) Token: 0x0601E5B6 RID: 124342 RVA: 0x00440A48 File Offset: 0x0043EC48
 		public bool IsUnlockExplore { get; set; }
 
-		// Token: 0x17008618 RID: 34328
-		// (get) Token: 0x0601CDC6 RID: 118214 RVA: 0x004141A9 File Offset: 0x004123A9
-		// (set) Token: 0x0601CDC7 RID: 118215 RVA: 0x004141B1 File Offset: 0x004123B1
+		// Token: 0x17008C62 RID: 35938
+		// (get) Token: 0x0601E5B7 RID: 124343 RVA: 0x00440A51 File Offset: 0x0043EC51
+		// (set) Token: 0x0601E5B8 RID: 124344 RVA: 0x00440A59 File Offset: 0x0043EC59
 		public bool IsUnlockSpecial { get; set; }
 
-		// Token: 0x17008619 RID: 34329
-		// (get) Token: 0x0601CDC8 RID: 118216 RVA: 0x004141BA File Offset: 0x004123BA
-		// (set) Token: 0x0601CDC9 RID: 118217 RVA: 0x004141C2 File Offset: 0x004123C2
+		// Token: 0x17008C63 RID: 35939
+		// (get) Token: 0x0601E5B9 RID: 124345 RVA: 0x00440A62 File Offset: 0x0043EC62
+		// (set) Token: 0x0601E5BA RID: 124346 RVA: 0x00440A6A File Offset: 0x0043EC6A
 		public IPosAT Location { get; set; }
 
-		// Token: 0x1700861A RID: 34330
-		// (get) Token: 0x0601CDCA RID: 118218 RVA: 0x004141CB File Offset: 0x004123CB
-		// (set) Token: 0x0601CDCB RID: 118219 RVA: 0x004141D3 File Offset: 0x004123D3
+		// Token: 0x17008C64 RID: 35940
+		// (get) Token: 0x0601E5BB RID: 124347 RVA: 0x00440A73 File Offset: 0x0043EC73
+		// (set) Token: 0x0601E5BC RID: 124348 RVA: 0x00440A7B File Offset: 0x0043EC7B
 		public bool EnableAllSystemWithoutPopWin { get; set; }
 
-		// Token: 0x1700861B RID: 34331
-		// (get) Token: 0x0601CDCC RID: 118220 RVA: 0x004141DC File Offset: 0x004123DC
-		// (set) Token: 0x0601CDCD RID: 118221 RVA: 0x004141E4 File Offset: 0x004123E4
+		// Token: 0x17008C65 RID: 35941
+		// (get) Token: 0x0601E5BD RID: 124349 RVA: 0x00440A84 File Offset: 0x0043EC84
+		// (set) Token: 0x0601E5BE RID: 124350 RVA: 0x00440A8C File Offset: 0x0043EC8C
 		public bool EnableAllTeleportPoints { get; set; }
 
-		// Token: 0x1700861C RID: 34332
-		// (get) Token: 0x0601CDCE RID: 118222 RVA: 0x004141ED File Offset: 0x004123ED
-		// (set) Token: 0x0601CDCF RID: 118223 RVA: 0x004141F5 File Offset: 0x004123F5
+		// Token: 0x17008C66 RID: 35942
+		// (get) Token: 0x0601E5BF RID: 124351 RVA: 0x00440A95 File Offset: 0x0043EC95
+		// (set) Token: 0x0601E5C0 RID: 124352 RVA: 0x00440A9D File Offset: 0x0043EC9D
 		public bool IsUnlockAllFog { get; set; }
 
-		// Token: 0x1700861D RID: 34333
-		// (get) Token: 0x0601CDD0 RID: 118224 RVA: 0x004141FE File Offset: 0x004123FE
-		// (set) Token: 0x0601CDD1 RID: 118225 RVA: 0x00414206 File Offset: 0x00412406
+		// Token: 0x17008C67 RID: 35943
+		// (get) Token: 0x0601E5C1 RID: 124353 RVA: 0x00440AA6 File Offset: 0x0043ECA6
+		// (set) Token: 0x0601E5C2 RID: 124354 RVA: 0x00440AAE File Offset: 0x0043ECAE
 		public bool IsDisableTeleportDungeon { get; set; }
 
-		// Token: 0x0601CDD2 RID: 118226 RVA: 0x00414210 File Offset: 0x00412410
+		// Token: 0x0601E5C3 RID: 124355 RVA: 0x00440AB8 File Offset: 0x0043ECB8
 		public IEditorStartConfigT()
 		{
 			this.Account = null;

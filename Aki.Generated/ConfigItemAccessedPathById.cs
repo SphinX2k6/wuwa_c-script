@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000453 RID: 1107
+	// Token: 0x02000469 RID: 1129
 	public class ConfigItemAccessedPathById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060019FC RID: 6652 RVA: 0x000EC615 File Offset: 0x000EA815
+		// Token: 0x06001A80 RID: 6784 RVA: 0x000F2D69 File Offset: 0x000F0F69
 		static ConfigItemAccessedPathById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigItemAccessedPathById.CreateStaticDefaultValue), new Action(ConfigItemAccessedPathById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060019FD RID: 6653 RVA: 0x000EC634 File Offset: 0x000EA834
+		// Token: 0x06001A81 RID: 6785 RVA: 0x000F2D88 File Offset: 0x000F0F88
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigItemAccessedPathById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060019FE RID: 6654 RVA: 0x000EC6B3 File Offset: 0x000EA8B3
+		// Token: 0x06001A82 RID: 6786 RVA: 0x000F2E07 File Offset: 0x000F1007
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigItemAccessedPathById.LogPair = null;
 			ConfigItemAccessedPathById.HandleId = 0;
 		}
 
-		// Token: 0x060019FF RID: 6655 RVA: 0x000EC6C1 File Offset: 0x000EA8C1
+		// Token: 0x06001A83 RID: 6787 RVA: 0x000F2E15 File Offset: 0x000F1015
 		public static void Init()
 		{
 			ConfigItemAccessedPathById.HandleId = ConfigCommon.InitDataStatement(ConfigItemAccessedPathById.HandleId, "db_giftpackage.db", "select BinData from `ItemAccessedPath` where Id=?");
 		}
 
-		// Token: 0x06001A00 RID: 6656 RVA: 0x000EC6DC File Offset: 0x000EA8DC
+		// Token: 0x06001A84 RID: 6788 RVA: 0x000F2E30 File Offset: 0x000F1030
 		public static ItemAccessedPath? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigItemAccessedPathById.HandleId, ConfigItemAccessedPathById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ItemAccessedPath?(rootAsItemAccessedPath);
 		}
 
-		// Token: 0x04001E29 RID: 7721
+		// Token: 0x04001EC3 RID: 7875
 		private const string DB = "db_giftpackage.db";
 
-		// Token: 0x04001E2A RID: 7722
+		// Token: 0x04001EC4 RID: 7876
 		private const string FILE = "l.礼包.xlsx";
 
-		// Token: 0x04001E2B RID: 7723
+		// Token: 0x04001EC5 RID: 7877
 		private const string TABLE = "ItemAccessedPath";
 
-		// Token: 0x04001E2C RID: 7724
+		// Token: 0x04001EC6 RID: 7878
 		private const string COMMAND = "select BinData from `ItemAccessedPath` where Id=?";
 
-		// Token: 0x04001E2D RID: 7725
+		// Token: 0x04001EC7 RID: 7879
 		private const string KEY_PREFIX = "ItemAccessedPathById";
 
-		// Token: 0x04001E2E RID: 7726
+		// Token: 0x04001EC8 RID: 7880
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001E2F RID: 7727
+		// Token: 0x04001EC9 RID: 7881
 		private static int HandleId;
 	}
 }

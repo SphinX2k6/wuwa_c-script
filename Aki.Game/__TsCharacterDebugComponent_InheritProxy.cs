@@ -3,93 +3,93 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x0200391C RID: 14620
+// Token: 0x02002E97 RID: 11927
 public class __TsCharacterDebugComponent_InheritProxy : TsCharacterDebugComponent
 {
-	// Token: 0x0601EBB0 RID: 125872 RVA: 0x00898988 File Offset: 0x00896B88
+	// Token: 0x0601C86C RID: 116844 RVA: 0x008BCEA4 File Offset: 0x008BB0A4
 	[NullableContext(1)]
 	public __TsCharacterDebugComponent_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsCharacterDebugComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601EBB1 RID: 125873 RVA: 0x008989BB File Offset: 0x00896BBB
+	// Token: 0x0601C86D RID: 116845 RVA: 0x008BCED7 File Offset: 0x008BB0D7
 	protected __TsCharacterDebugComponent_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601EBB2 RID: 125874 RVA: 0x008989C4 File Offset: 0x00896BC4
+	// Token: 0x0601C86E RID: 116846 RVA: 0x008BCEE0 File Offset: 0x008BB0E0
 	protected unsafe override void __CPPCALL_SetMovementDebug_Implementation(TsCharacterDebugComponent.__SetMovementDebug_FunctionParams* __Params)
 	{
 		base.SetMovementDebug_Implementation(__Params->newDebug);
 	}
 
-	// Token: 0x0601EBB3 RID: 125875 RVA: 0x008989D2 File Offset: 0x00896BD2
+	// Token: 0x0601C86F RID: 116847 RVA: 0x008BCEEE File Offset: 0x008BB0EE
 	protected override void __CPPCALL_ChangeEnterClimbTrace_Implementation()
 	{
 		base.ChangeEnterClimbTrace_Implementation();
 	}
 
-	// Token: 0x0601EBB4 RID: 125876 RVA: 0x008989DA File Offset: 0x00896BDA
+	// Token: 0x0601C870 RID: 116848 RVA: 0x008BCEF6 File Offset: 0x008BB0F6
 	protected override void __CPPCALL_ChangeVaultClimbTrace_Implementation()
 	{
 		base.ChangeVaultClimbTrace_Implementation();
 	}
 
-	// Token: 0x0601EBB5 RID: 125877 RVA: 0x008989E2 File Offset: 0x00896BE2
+	// Token: 0x0601C871 RID: 116849 RVA: 0x008BCEFE File Offset: 0x008BB0FE
 	protected override void __CPPCALL_ChangeUpArriveClimbTrace_Implementation()
 	{
 		base.ChangeUpArriveClimbTrace_Implementation();
 	}
 
-	// Token: 0x0601EBB6 RID: 125878 RVA: 0x008989EA File Offset: 0x00896BEA
+	// Token: 0x0601C872 RID: 116850 RVA: 0x008BCF06 File Offset: 0x008BB106
 	protected override void __CPPCALL_ChangeClimbingTrace_Implementation()
 	{
 		base.ChangeClimbingTrace_Implementation();
 	}
 
-	// Token: 0x0601EBB7 RID: 125879 RVA: 0x008989F2 File Offset: 0x00896BF2
+	// Token: 0x0601C873 RID: 116851 RVA: 0x008BCF0E File Offset: 0x008BB10E
 	protected override void __CPPCALL_ChangeNoTop_Implementation()
 	{
 		base.ChangeNoTop_Implementation();
 	}
 
-	// Token: 0x0601EBB8 RID: 125880 RVA: 0x008989FA File Offset: 0x00896BFA
+	// Token: 0x0601C874 RID: 116852 RVA: 0x008BCF16 File Offset: 0x008BB116
 	protected override void __CPPCALL_ReceiveBeginPlay_Implementation()
 	{
 		base.ReceiveBeginPlay_Implementation();
 	}
 
-	// Token: 0x0601EBB9 RID: 125881 RVA: 0x00898A02 File Offset: 0x00896C02
+	// Token: 0x0601C875 RID: 116853 RVA: 0x008BCF1E File Offset: 0x008BB11E
 	protected unsafe override void __CPPCALL_ReceiveTick_Implementation(UActorComponent.__ReceiveTick_FunctionParams* __Params)
 	{
 		base.ReceiveTick_Implementation(__Params->DeltaSeconds);
 	}
 
-	// Token: 0x0601EBBA RID: 125882 RVA: 0x00898A10 File Offset: 0x00896C10
+	// Token: 0x0601C876 RID: 116854 RVA: 0x008BCF2C File Offset: 0x008BB12C
 	protected unsafe override void __CPPCALL_ActivateDebugSpeed_Implementation(TsCharacterDebugComponent.__ActivateDebugSpeed_FunctionParams* __Params)
 	{
 		base.ActivateDebugSpeed_Implementation(__Params->activate);
 	}
 
-	// Token: 0x0601EBBB RID: 125883 RVA: 0x00898A1E File Offset: 0x00896C1E
+	// Token: 0x0601C877 RID: 116855 RVA: 0x008BCF3A File Offset: 0x008BB13A
 	protected override void __CPPCALL_DebugDrawActivateArea_Implementation()
 	{
 		base.DebugDrawActivateArea_Implementation();
 	}
 
-	// Token: 0x0601EBBC RID: 125884 RVA: 0x00898A26 File Offset: 0x00896C26
+	// Token: 0x0601C878 RID: 116856 RVA: 0x008BCF42 File Offset: 0x008BB142
 	protected unsafe override void __CPPCALL_SetDebugRiseEnable_Implementation(TsCharacterDebugComponent.__SetDebugRiseEnable_FunctionParams* __Params)
 	{
 		base.SetDebugRiseEnable_Implementation(__Params->enable);
 	}
 
-	// Token: 0x0601EBBD RID: 125885 RVA: 0x00898A34 File Offset: 0x00896C34
+	// Token: 0x0601C879 RID: 116857 RVA: 0x008BCF50 File Offset: 0x008BB150
 	protected override void __CPPCALL_DrawDebugPatrolPoints_Implementation()
 	{
 		base.DrawDebugPatrolPoints_Implementation();
 	}
 
-	// Token: 0x0601EBBE RID: 125886 RVA: 0x00898A3C File Offset: 0x00896C3C
+	// Token: 0x0601C87A RID: 116858 RVA: 0x008BCF58 File Offset: 0x008BB158
 	protected override void __CPPCALL_DrawErrorNavigationPaths_Implementation()
 	{
 		base.DrawErrorNavigationPaths_Implementation();

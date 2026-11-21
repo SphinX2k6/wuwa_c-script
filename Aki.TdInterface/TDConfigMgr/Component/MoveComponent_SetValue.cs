@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000840 RID: 2112
+	// Token: 0x020008E3 RID: 2275
 	public class MoveComponent_SetValue
 	{
-		// Token: 0x04001E95 RID: 7829
+		// Token: 0x040020A4 RID: 8356
 		public bool? Disabled;
 
-		// Token: 0x04001E96 RID: 7830
+		// Token: 0x040020A5 RID: 8357
 		public bool? EdIsLocked;
 
-		// Token: 0x04001E97 RID: 7831
+		// Token: 0x040020A6 RID: 8358
 		public float InitSpeed;
 	}
 }

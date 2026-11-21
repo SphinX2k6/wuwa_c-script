@@ -4,7 +4,7 @@ using CSharpScript.Game.Utils.ResponsibilityChain;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x02007150 RID: 29008
+	// Token: 0x0200637E RID: 25470
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,25 +13,25 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 	})]
 	public class RegardAsVehicleHandler : AbstractHandler<EntityHandleParameterContext>
 	{
-		// Token: 0x06046D27 RID: 290087 RVA: 0x011D9480 File Offset: 0x011D7680
+		// Token: 0x0603DB81 RID: 252801 RVA: 0x011E2634 File Offset: 0x011E0834
 		protected override bool CanHandle(EntityHandleParameterContext context)
 		{
 			return context.EntityHandle.EntityType == 10;
 		}
 
-		// Token: 0x06046D28 RID: 290088 RVA: 0x011D9491 File Offset: 0x011D7691
+		// Token: 0x0603DB82 RID: 252802 RVA: 0x011E2645 File Offset: 0x011E0845
 		protected override void ExecuteProcessing(EntityHandleParameterContext context)
 		{
 			context.OutPlayerFollowerHandlerType = new EPlayerFollowerHandlerType?(EPlayerFollowerHandlerType.Vehicle);
 		}
 
-		// Token: 0x06046D29 RID: 290089 RVA: 0x011D949F File Offset: 0x011D769F
+		// Token: 0x0603DB83 RID: 252803 RVA: 0x011E2653 File Offset: 0x011E0853
 		protected override bool ShouldStop(EntityHandleParameterContext context)
 		{
 			return false;
 		}
 
-		// Token: 0x06046D2A RID: 290090 RVA: 0x011D94A2 File Offset: 0x011D76A2
+		// Token: 0x0603DB84 RID: 252804 RVA: 0x011E2656 File Offset: 0x011E0856
 		protected override void ExecuteStopping(EntityHandleParameterContext context)
 		{
 		}

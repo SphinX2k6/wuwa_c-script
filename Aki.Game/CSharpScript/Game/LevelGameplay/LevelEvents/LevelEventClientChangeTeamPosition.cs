@@ -6,15 +6,15 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B05 RID: 27397
+	// Token: 0x02005C7D RID: 23677
 	public class LevelEventClientChangeTeamPosition : LevelEventBase
 	{
-		// Token: 0x06044057 RID: 278615 RVA: 0x010B6BA9 File Offset: 0x010B4DA9
+		// Token: 0x0603A1A9 RID: 237993 RVA: 0x01060434 File Offset: 0x0105E634
 		public LevelEventClientChangeTeamPosition(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044058 RID: 278616 RVA: 0x010B6BB4 File Offset: 0x010B4DB4
+		// Token: 0x0603A1AA RID: 237994 RVA: 0x01060440 File Offset: 0x0105E640
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			});
 		}
 
-		// Token: 0x06044059 RID: 278617 RVA: 0x010B6C12 File Offset: 0x010B4E12
+		// Token: 0x0603A1AB RID: 237995 RVA: 0x0106049E File Offset: 0x0105E69E
 		private UniTask<bool> WaitUpdateSceneTeam()
 		{
 			GameModePromise loadTeamPromise = SceneTeamModel.Instance.LoadTeamPromise;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return loadTeamPromise.Promise;
 		}
 
-		// Token: 0x0604405A RID: 278618 RVA: 0x010B6C30 File Offset: 0x010B4E30
+		// Token: 0x0603A1AC RID: 237996 RVA: 0x010604BC File Offset: 0x0105E6BC
 		private void ChangeRole(int roleId)
 		{
 			foreach (SceneTeamItem sceneTeamItem in SceneTeamModel.Instance.GetTeamItems(true))

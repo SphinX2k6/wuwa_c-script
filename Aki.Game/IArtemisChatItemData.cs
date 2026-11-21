@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020010F2 RID: 4338
+// Token: 0x020005A6 RID: 1446
 [NullableContext(1)]
 public interface IArtemisChatItemData
 {
-	// Token: 0x1700098E RID: 2446
-	// (get) Token: 0x0600711E RID: 28958
+	// Token: 0x170009AE RID: 2478
+	// (get) Token: 0x060044B4 RID: 17588
 	string Content { get; }
 
-	// Token: 0x1700098F RID: 2447
-	// (get) Token: 0x0600711F RID: 28959
+	// Token: 0x170009AF RID: 2479
+	// (get) Token: 0x060044B5 RID: 17589
 	string PicturePath { get; }
 
-	// Token: 0x17000990 RID: 2448
-	// (get) Token: 0x06007120 RID: 28960
+	// Token: 0x170009B0 RID: 2480
+	// (get) Token: 0x060044B6 RID: 17590
 	bool IsLock { get; }
 
-	// Token: 0x17000991 RID: 2449
-	// (get) Token: 0x06007121 RID: 28961
+	// Token: 0x170009B1 RID: 2481
+	// (get) Token: 0x060044B7 RID: 17591
 	bool IsShowEffect { get; }
 }

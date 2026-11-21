@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.AdventureGuide;
 
-// Token: 0x02002800 RID: 10240
+// Token: 0x02001D7B RID: 7547
 public class RoleDevPhantomDungeonData : RoleDevPhantomVisionSuitItemData
 {
-	// Token: 0x06015039 RID: 86073 RVA: 0x005527EC File Offset: 0x005509EC
+	// Token: 0x06012A39 RID: 76345 RVA: 0x0057D5C0 File Offset: 0x0057B7C0
 	public void InitByDungeon(int dungeonId)
 	{
 		if (dungeonId <= 0)
@@ -27,7 +27,7 @@ public class RoleDevPhantomDungeonData : RoleDevPhantomVisionSuitItemData
 		base.SetDungeonId(dungeonId);
 	}
 
-	// Token: 0x0601503A RID: 86074 RVA: 0x0055285C File Offset: 0x00550A5C
+	// Token: 0x06012A3A RID: 76346 RVA: 0x0057D630 File Offset: 0x0057B830
 	[NullableContext(1)]
 	protected List<IDropRewardItemData> GetDungeonDropRewards(SilentAreaDetection conf)
 	{

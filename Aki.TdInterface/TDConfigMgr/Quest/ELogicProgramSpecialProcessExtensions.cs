@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001254 RID: 4692
+	// Token: 0x02001394 RID: 5012
 	public static class ELogicProgramSpecialProcessExtensions
 	{
-		// Token: 0x06006A21 RID: 27169 RVA: 0x000FE748 File Offset: 0x000FC948
+		// Token: 0x06007074 RID: 28788 RVA: 0x0010C374 File Offset: 0x0010A574
 		public static string ToEnumString(this ELogicProgramSpecialProcess value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A22 RID: 27170 RVA: 0x000FE770 File Offset: 0x000FC970
+		// Token: 0x06007075 RID: 28789 RVA: 0x0010C39C File Offset: 0x0010A59C
 		public static ELogicProgramSpecialProcess FromString(string name)
 		{
 			ELogicProgramSpecialProcess result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A23 RID: 27171 RVA: 0x000FE799 File Offset: 0x000FC999
+		// Token: 0x06007076 RID: 28790 RVA: 0x0010C3C5 File Offset: 0x0010A5C5
 		public static bool TryFromString(string name, out ELogicProgramSpecialProcess value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006A24 RID: 27172 RVA: 0x000FE7BE File Offset: 0x000FC9BE
+		// Token: 0x06007077 RID: 28791 RVA: 0x0010C3EA File Offset: 0x0010A5EA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A25 RID: 27173 RVA: 0x000FE7CE File Offset: 0x000FC9CE
+		// Token: 0x06007078 RID: 28792 RVA: 0x0010C3FA File Offset: 0x0010A5FA
 		public static ELogicProgramSpecialProcess[] GetValues()
 		{
 			return new ELogicProgramSpecialProcess[1];
 		}
 
-		// Token: 0x06006A26 RID: 27174 RVA: 0x000FE7D6 File Offset: 0x000FC9D6
+		// Token: 0x06007079 RID: 28793 RVA: 0x0010C402 File Offset: 0x0010A602
 		public static string[] GetNames()
 		{
 			return new string[]

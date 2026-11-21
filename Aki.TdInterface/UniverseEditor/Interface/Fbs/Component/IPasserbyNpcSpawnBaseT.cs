@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056D5 RID: 22229
+	// Token: 0x02005CBB RID: 23739
 	public class IPasserbyNpcSpawnBaseT
 	{
-		// Token: 0x1700A56C RID: 42348
-		// (get) Token: 0x06025224 RID: 152100 RVA: 0x005203B8 File Offset: 0x0051E5B8
-		// (set) Token: 0x06025225 RID: 152101 RVA: 0x005203C0 File Offset: 0x0051E5C0
+		// Token: 0x1700AE61 RID: 44641
+		// (get) Token: 0x06027645 RID: 161349 RVA: 0x00564484 File Offset: 0x00562684
+		// (set) Token: 0x06027646 RID: 161350 RVA: 0x0056448C File Offset: 0x0056268C
 		public EPasserbyNpcSpawnType Type { get; set; }
 
-		// Token: 0x1700A56D RID: 42349
-		// (get) Token: 0x06025226 RID: 152102 RVA: 0x005203C9 File Offset: 0x0051E5C9
-		// (set) Token: 0x06025227 RID: 152103 RVA: 0x005203D1 File Offset: 0x0051E5D1
+		// Token: 0x1700AE62 RID: 44642
+		// (get) Token: 0x06027647 RID: 161351 RVA: 0x00564495 File Offset: 0x00562695
+		// (set) Token: 0x06027648 RID: 161352 RVA: 0x0056449D File Offset: 0x0056269D
 		public int MaxSpawnCount { get; set; }
 
-		// Token: 0x1700A56E RID: 42350
-		// (get) Token: 0x06025228 RID: 152104 RVA: 0x005203DA File Offset: 0x0051E5DA
-		// (set) Token: 0x06025229 RID: 152105 RVA: 0x005203E2 File Offset: 0x0051E5E2
+		// Token: 0x1700AE63 RID: 44643
+		// (get) Token: 0x06027649 RID: 161353 RVA: 0x005644A6 File Offset: 0x005626A6
+		// (set) Token: 0x0602764A RID: 161354 RVA: 0x005644AE File Offset: 0x005626AE
 		public int MinDistance { get; set; }
 
-		// Token: 0x1700A56F RID: 42351
-		// (get) Token: 0x0602522A RID: 152106 RVA: 0x005203EB File Offset: 0x0051E5EB
-		// (set) Token: 0x0602522B RID: 152107 RVA: 0x005203F3 File Offset: 0x0051E5F3
+		// Token: 0x1700AE64 RID: 44644
+		// (get) Token: 0x0602764B RID: 161355 RVA: 0x005644B7 File Offset: 0x005626B7
+		// (set) Token: 0x0602764C RID: 161356 RVA: 0x005644BF File Offset: 0x005626BF
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602522C RID: 152108 RVA: 0x005203FC File Offset: 0x0051E5FC
+		// Token: 0x0602764D RID: 161357 RVA: 0x005644C8 File Offset: 0x005626C8
 		public IPasserbyNpcSpawnBaseT()
 		{
 			this.Type = EPasserbyNpcSpawnType.FixInterval;

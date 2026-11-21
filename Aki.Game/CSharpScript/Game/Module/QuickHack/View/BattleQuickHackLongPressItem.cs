@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack.View
 {
-	// Token: 0x02004F8E RID: 20366
+	// Token: 0x02003F57 RID: 16215
 	public class BattleQuickHackLongPressItem : UiPanelBase
 	{
-		// Token: 0x06034267 RID: 213607 RVA: 0x00C3D3D0 File Offset: 0x00C3B5D0
+		// Token: 0x060290D5 RID: 168149 RVA: 0x00B86B7C File Offset: 0x00B84D7C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034268 RID: 213608 RVA: 0x00C3D521 File Offset: 0x00C3B721
+		// Token: 0x060290D6 RID: 168150 RVA: 0x00B86CCD File Offset: 0x00B84ECD
 		protected override void OnBeforeShow()
 		{
 			this.UpdateProgress();
 		}
 
-		// Token: 0x06034269 RID: 213609 RVA: 0x00C3D529 File Offset: 0x00C3B729
+		// Token: 0x060290D7 RID: 168151 RVA: 0x00B86CD5 File Offset: 0x00B84ED5
 		public void StartLongPress(float longPressTime)
 		{
 			this.CurrentPressTime = 0f;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.UpdateProgress();
 		}
 
-		// Token: 0x0603426A RID: 213610 RVA: 0x00C3D543 File Offset: 0x00C3B743
+		// Token: 0x060290D8 RID: 168152 RVA: 0x00B86CEF File Offset: 0x00B84EEF
 		public void StopLongPress()
 		{
 			this.CurrentPressTime = 0f;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.UpdateProgress();
 		}
 
-		// Token: 0x0603426B RID: 213611 RVA: 0x00C3D561 File Offset: 0x00C3B761
+		// Token: 0x060290D9 RID: 168153 RVA: 0x00B86D0D File Offset: 0x00B84F0D
 		public void Update(float delta)
 		{
 			if (this.MaxLongPressTime > 0f)
@@ -69,47 +69,47 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x0603426C RID: 213612 RVA: 0x00C3D584 File Offset: 0x00C3B784
+		// Token: 0x060290DA RID: 168154 RVA: 0x00B86D30 File Offset: 0x00B84F30
 		private void UpdateProgress()
 		{
 			float fillAmount = (this.MaxLongPressTime <= 0f) ? 0f : ((this.CurrentPressTime >= this.MaxLongPressTime) ? 1f : (this.CurrentPressTime / this.MaxLongPressTime));
 			base.GetTexture(0).SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x0401BB94 RID: 113556
+		// Token: 0x04016569 RID: 91497
 		public float CurrentPressTime;
 
-		// Token: 0x0401BB95 RID: 113557
+		// Token: 0x0401656A RID: 91498
 		private float MaxLongPressTime;
 
-		// Token: 0x0200B0A2 RID: 45218
+		// Token: 0x02009AD2 RID: 39634
 		private class EComponentType
 		{
-			// Token: 0x040359AC RID: 219564
+			// Token: 0x040303D7 RID: 197591
 			public const int ProgressTextureA = 0;
 
-			// Token: 0x040359AD RID: 219565
+			// Token: 0x040303D8 RID: 197592
 			public const int FlagItemA = 1;
 
-			// Token: 0x040359AE RID: 219566
+			// Token: 0x040303D9 RID: 197593
 			public const int FlagItemB = 2;
 
-			// Token: 0x040359AF RID: 219567
+			// Token: 0x040303DA RID: 197594
 			public const int FlagNumB = 3;
 
-			// Token: 0x040359B0 RID: 219568
+			// Token: 0x040303DB RID: 197595
 			public const int AniFlagSwitch = 4;
 
-			// Token: 0x040359B1 RID: 219569
+			// Token: 0x040303DC RID: 197596
 			public const int BarItemA = 5;
 
-			// Token: 0x040359B2 RID: 219570
+			// Token: 0x040303DD RID: 197597
 			public const int BarItemB = 6;
 
-			// Token: 0x040359B3 RID: 219571
+			// Token: 0x040303DE RID: 197598
 			public const int ProgressTextureB = 7;
 
-			// Token: 0x040359B4 RID: 219572
+			// Token: 0x040303DF RID: 197599
 			public const int FlagBg = 8;
 		}
 	}

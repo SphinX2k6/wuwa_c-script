@@ -5,14 +5,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.LogUpload
 {
-	// Token: 0x020001BE RID: 446
+	// Token: 0x020001C2 RID: 450
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class NetworkDetectionLogUploadHandle
 	{
-		// Token: 0x17000124 RID: 292
-		// (get) Token: 0x06000C03 RID: 3075 RVA: 0x0004B2AD File Offset: 0x000494AD
-		// (set) Token: 0x06000C04 RID: 3076 RVA: 0x0004B2B5 File Offset: 0x000494B5
+		// Token: 0x1700012A RID: 298
+		// (get) Token: 0x06000C3A RID: 3130 RVA: 0x0004DAC1 File Offset: 0x0004BCC1
+		// (set) Token: 0x06000C3B RID: 3131 RVA: 0x0004DAC9 File Offset: 0x0004BCC9
 		private EUploadState UploadState
 		{
 			get
@@ -25,7 +25,7 @@ namespace CSharpScript.Launcher.LogUpload
 			}
 		}
 
-		// Token: 0x06000C05 RID: 3077 RVA: 0x0004B2C0 File Offset: 0x000494C0
+		// Token: 0x06000C3C RID: 3132 RVA: 0x0004DAD4 File Offset: 0x0004BCD4
 		public void UploadLog()
 		{
 			switch (this.UploadState)
@@ -52,7 +52,7 @@ namespace CSharpScript.Launcher.LogUpload
 			}
 		}
 
-		// Token: 0x06000C06 RID: 3078 RVA: 0x0004B318 File Offset: 0x00049518
+		// Token: 0x06000C3D RID: 3133 RVA: 0x0004DB2C File Offset: 0x0004BD2C
 		protected void UploadEventCallBack(int inState, float rate)
 		{
 			if (this.UploadState != EUploadState.Uploading)
@@ -76,7 +76,7 @@ namespace CSharpScript.Launcher.LogUpload
 			this.Rate = rate;
 		}
 
-		// Token: 0x06000C07 RID: 3079 RVA: 0x0004B390 File Offset: 0x00049590
+		// Token: 0x06000C3E RID: 3134 RVA: 0x0004DBA4 File Offset: 0x0004BDA4
 		private void FinishUploadLog()
 		{
 			this.ClearDelegate();
@@ -89,7 +89,7 @@ namespace CSharpScript.Launcher.LogUpload
 			logUploadFinishCallBack();
 		}
 
-		// Token: 0x06000C08 RID: 3080 RVA: 0x0004B3CF File Offset: 0x000495CF
+		// Token: 0x06000C3F RID: 3135 RVA: 0x0004DBE3 File Offset: 0x0004BDE3
 		private void ClearDelegate()
 		{
 			UKuroTencentCOSLibrary.ClearAllProgressCallback();
@@ -100,7 +100,7 @@ namespace CSharpScript.Launcher.LogUpload
 			}
 		}
 
-		// Token: 0x06000C09 RID: 3081 RVA: 0x0004B3F6 File Offset: 0x000495F6
+		// Token: 0x06000C40 RID: 3136 RVA: 0x0004DC0A File Offset: 0x0004BE0A
 		public bool InterruptUploadLog()
 		{
 			if (this.UploadSendState.GetValueOrDefault() == ESendState.ESS_Compressing)
@@ -115,7 +115,7 @@ namespace CSharpScript.Launcher.LogUpload
 			return false;
 		}
 
-		// Token: 0x06000C0A RID: 3082 RVA: 0x0004B418 File Offset: 0x00049618
+		// Token: 0x06000C41 RID: 3137 RVA: 0x0004DC2C File Offset: 0x0004BE2C
 		private void StartUploadLog()
 		{
 			this.Rate = 0f;
@@ -130,19 +130,19 @@ namespace CSharpScript.Launcher.LogUpload
 			});
 		}
 
-		// Token: 0x0400079B RID: 1947
+		// Token: 0x040007D8 RID: 2008
 		private EUploadState UpdateStateInner;
 
-		// Token: 0x0400079C RID: 1948
+		// Token: 0x040007D9 RID: 2009
 		private ESendState? UploadSendState;
 
-		// Token: 0x0400079D RID: 1949
+		// Token: 0x040007DA RID: 2010
 		private float Rate;
 
-		// Token: 0x0400079E RID: 1950
+		// Token: 0x040007DB RID: 2011
 		protected FOnProgress UploadDelegate;
 
-		// Token: 0x0400079F RID: 1951
+		// Token: 0x040007DC RID: 2012
 		public TNetworkDetectionLogUploadFinishCallBack LogUploadFinishCallBack;
 	}
 }

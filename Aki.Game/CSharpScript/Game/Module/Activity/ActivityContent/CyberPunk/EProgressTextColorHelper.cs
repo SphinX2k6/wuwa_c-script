@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068B8 RID: 26808
+	// Token: 0x02005808 RID: 22536
 	public static class EProgressTextColorHelper
 	{
-		// Token: 0x06042E56 RID: 274006 RVA: 0x010492A0 File Offset: 0x010474A0
+		// Token: 0x060379AE RID: 227758 RVA: 0x00F8A8C8 File Offset: 0x00F88AC8
 		[NullableContext(1)]
 		public static string ToColorString(EProgressTextColor color)
 		{

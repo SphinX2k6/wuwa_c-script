@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012E6 RID: 4838
+	// Token: 0x0200142C RID: 5164
 	public class ILinkSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x06006E7E RID: 28286 RVA: 0x0010AFD9 File Offset: 0x001091D9
-		[NullableContext(1)]
+		// Token: 0x060074FE RID: 29950 RVA: 0x001192D9 File Offset: 0x001174D9
 		public static ILinkSystemConfig Create(ILinkSystemConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002285 RID: 8837
-		// (get) Token: 0x06006E7F RID: 28287 RVA: 0x0010AFF8 File Offset: 0x001091F8
+		// Token: 0x17002448 RID: 9288
+		// (get) Token: 0x060074FF RID: 29951 RVA: 0x001192F8 File Offset: 0x001174F8
 		public override EEnableSystemType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002286 RID: 8838
-		// (get) Token: 0x06006E80 RID: 28288 RVA: 0x0010B005 File Offset: 0x00109205
+		// Token: 0x17002449 RID: 9289
+		// (get) Token: 0x06007500 RID: 29952 RVA: 0x00119305 File Offset: 0x00117505
 		public virtual int LinkDataId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F50 RID: 16208
+		// Token: 0x040042BE RID: 17086
 		private ILinkSystemConfig Instance;
 	}
 }

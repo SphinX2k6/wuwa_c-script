@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E24 RID: 7716
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002057 RID: 8279
 	public class ISetJigsawFoundationType
 	{
-		// Token: 0x0600A50D RID: 42253 RVA: 0x001760C0 File Offset: 0x001742C0
+		// Token: 0x0600AFB5 RID: 44981 RVA: 0x0018BAC8 File Offset: 0x00189CC8
 		private ISetJigsawFoundationType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A50E RID: 42254 RVA: 0x001760F8 File Offset: 0x001742F8
+		// Token: 0x0600AFB6 RID: 44982 RVA: 0x0018BB00 File Offset: 0x00189D00
 		public static ISetJigsawFoundationType Create([Nullable(2)] ISetJigsawFoundationType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A50F RID: 42255 RVA: 0x0017610B File Offset: 0x0017430B
+		// Token: 0x0600AFB7 RID: 44983 RVA: 0x0018BB13 File Offset: 0x00189D13
 		public static ISetJigsawFoundationType CreateFromSetValue([Nullable(2)] ISetJigsawFoundationType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A510 RID: 42256 RVA: 0x0017611E File Offset: 0x0017431E
+		// Token: 0x0600AFB8 RID: 44984 RVA: 0x0018BB26 File Offset: 0x00189D26
 		public ISetJigsawFoundationType_SetValue ToSetValue()
 		{
 			return new ISetJigsawFoundationType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032A7 RID: 12967
-		// (get) Token: 0x0600A511 RID: 42257 RVA: 0x00176131 File Offset: 0x00174331
-		// (set) Token: 0x0600A512 RID: 42258 RVA: 0x0017615C File Offset: 0x0017435C
+		// Token: 0x17003566 RID: 13670
+		// (get) Token: 0x0600AFB9 RID: 44985 RVA: 0x0018BB39 File Offset: 0x00189D39
+		// (set) Token: 0x0600AFBA RID: 44986 RVA: 0x0018BB64 File Offset: 0x00189D64
 		public virtual ESetJigsawFoundationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040062BE RID: 25278
+		// Token: 0x04006895 RID: 26773
 		[Nullable(2)]
 		protected ISetJigsawFoundationType FbInstance;
 
-		// Token: 0x040062BF RID: 25279
+		// Token: 0x04006896 RID: 26774
 		[Nullable(2)]
 		protected ISetJigsawFoundationType_SetValue PocoInterface;
 	}

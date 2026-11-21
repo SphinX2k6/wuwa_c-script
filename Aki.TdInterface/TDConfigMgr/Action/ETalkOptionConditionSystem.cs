@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016C8 RID: 5832
+	// Token: 0x02001842 RID: 6210
 	[EnumExtensions]
 	public enum ETalkOptionConditionSystem
 	{
-		// Token: 0x04004ECA RID: 20170
+		// Token: 0x040052F0 RID: 21232
 		SolarSchool
 	}
 }

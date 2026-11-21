@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B48 RID: 6984
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CF7 RID: 7415
 	public class IInteractFlow : IInteractType
 	{
-		// Token: 0x06009575 RID: 38261 RVA: 0x0015985C File Offset: 0x00157A5C
+		// Token: 0x06009D5F RID: 40287 RVA: 0x0016A538 File Offset: 0x00168738
 		private IInteractFlow_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009576 RID: 38262 RVA: 0x00159894 File Offset: 0x00157A94
+		// Token: 0x06009D60 RID: 40288 RVA: 0x0016A570 File Offset: 0x00168770
 		public static IInteractFlow Create([Nullable(2)] IInteractFlow instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009577 RID: 38263 RVA: 0x001598A7 File Offset: 0x00157AA7
+		// Token: 0x06009D61 RID: 40289 RVA: 0x0016A583 File Offset: 0x00168783
 		public static IInteractFlow CreateFromSetValue([Nullable(2)] IInteractFlow_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009578 RID: 38264 RVA: 0x001598BA File Offset: 0x00157ABA
+		// Token: 0x06009D62 RID: 40290 RVA: 0x0016A596 File Offset: 0x00168796
 		public new IInteractFlow_SetValue ToSetValue()
 		{
 			return new IInteractFlow_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F25 RID: 12069
-		// (get) Token: 0x06009579 RID: 38265 RVA: 0x001598D9 File Offset: 0x00157AD9
-		// (set) Token: 0x0600957A RID: 38266 RVA: 0x00159904 File Offset: 0x00157B04
+		// Token: 0x1700314B RID: 12619
+		// (get) Token: 0x06009D63 RID: 40291 RVA: 0x0016A5B5 File Offset: 0x001687B5
+		// (set) Token: 0x06009D64 RID: 40292 RVA: 0x0016A5E0 File Offset: 0x001687E0
 		public override EInteractOption Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F26 RID: 12070
-		// (get) Token: 0x0600957B RID: 38267 RVA: 0x00159914 File Offset: 0x00157B14
-		// (set) Token: 0x0600957C RID: 38268 RVA: 0x00159975 File Offset: 0x00157B75
+		// Token: 0x1700314C RID: 12620
+		// (get) Token: 0x06009D65 RID: 40293 RVA: 0x0016A5F0 File Offset: 0x001687F0
+		// (set) Token: 0x06009D66 RID: 40294 RVA: 0x0016A651 File Offset: 0x00168851
 		public virtual PlayFlow Flow
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B74 RID: 23412
+		// Token: 0x04006012 RID: 24594
 		[Nullable(2)]
 		protected new IInteractFlow FbInstance;
 
-		// Token: 0x04005B75 RID: 23413
+		// Token: 0x04006013 RID: 24595
 		[Nullable(2)]
 		protected new IInteractFlow_SetValue PocoInterface;
 
-		// Token: 0x04005B76 RID: 23414
+		// Token: 0x04006014 RID: 24596
 		private PlayFlow _FlowCache;
 
-		// Token: 0x04005B77 RID: 23415
+		// Token: 0x04006015 RID: 24597
 		private bool _FlowInited;
 	}
 }

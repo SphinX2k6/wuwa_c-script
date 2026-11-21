@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Giant;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050BB RID: 20667
+	// Token: 0x0200408B RID: 16523
 	public class FlowActionGiantToggleModel : FlowActionBase
 	{
-		// Token: 0x06034EDC RID: 216796 RVA: 0x00C89754 File Offset: 0x00C87954
+		// Token: 0x06029DD5 RID: 171477 RVA: 0x00BD6A3C File Offset: 0x00BD4C3C
 		protected override void OnExecute()
 		{
 			GiantToggleModel giantToggleModel = this.ActionInfo.Params as GiantToggleModel;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034EDD RID: 216797 RVA: 0x00C89798 File Offset: 0x00C87998
+		// Token: 0x06029DD6 RID: 171478 RVA: 0x00BD6A80 File Offset: 0x00BD4C80
 		protected override void OnBackgroundExecute()
 		{
 			GiantToggleModel giantToggleModel = this.ActionInfo.Params as GiantToggleModel;

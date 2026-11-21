@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200170D RID: 5901
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200188A RID: 6282
 	public class ExecClientBattleAction : ActionParams
 	{
-		// Token: 0x06007D0F RID: 32015 RVA: 0x0012C480 File Offset: 0x0012A680
+		// Token: 0x060083ED RID: 33773 RVA: 0x0013B52C File Offset: 0x0013972C
 		private ExecClientBattleAction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007D10 RID: 32016 RVA: 0x0012C4B8 File Offset: 0x0012A6B8
+		// Token: 0x060083EE RID: 33774 RVA: 0x0013B564 File Offset: 0x00139764
 		public static ExecClientBattleAction Create([Nullable(2)] ExecClientBattleAction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D11 RID: 32017 RVA: 0x0012C4CB File Offset: 0x0012A6CB
+		// Token: 0x060083EF RID: 33775 RVA: 0x0013B577 File Offset: 0x00139777
 		public static ExecClientBattleAction CreateFromSetValue([Nullable(2)] ExecClientBattleAction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D12 RID: 32018 RVA: 0x0012C4DE File Offset: 0x0012A6DE
+		// Token: 0x060083F0 RID: 33776 RVA: 0x0013B58A File Offset: 0x0013978A
 		public ExecClientBattleAction_SetValue ToSetValue()
 		{
 			return new ExecClientBattleAction_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002943 RID: 10563
-		// (get) Token: 0x06007D13 RID: 32019 RVA: 0x0012C4F1 File Offset: 0x0012A6F1
-		// (set) Token: 0x06007D14 RID: 32020 RVA: 0x0012C518 File Offset: 0x0012A718
+		// Token: 0x17002B2E RID: 11054
+		// (get) Token: 0x060083F1 RID: 33777 RVA: 0x0013B59D File Offset: 0x0013979D
+		// (set) Token: 0x060083F2 RID: 33778 RVA: 0x0013B5C4 File Offset: 0x001397C4
 		public virtual IExecClientBattleActionType ClientBattleOption
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004FDF RID: 20447
+		// Token: 0x0400540E RID: 21518
 		[Nullable(2)]
 		protected new ExecClientBattleAction FbInstance;
 
-		// Token: 0x04004FE0 RID: 20448
+		// Token: 0x0400540F RID: 21519
 		[Nullable(2)]
 		protected ExecClientBattleAction_SetValue PocoInterface;
 	}

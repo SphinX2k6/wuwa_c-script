@@ -2,40 +2,40 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019B3 RID: 6579
+	// Token: 0x02001B3C RID: 6972
 	public class IDisableMoveOperation_SetValue
 	{
-		// Token: 0x0400579B RID: 22427
+		// Token: 0x04005BEA RID: 23530
 		public EMoveOperationType Type;
 
-		// Token: 0x0400579C RID: 22428
+		// Token: 0x04005BEB RID: 23531
 		public bool Forward;
 
-		// Token: 0x0400579D RID: 22429
+		// Token: 0x04005BEC RID: 23532
 		public bool Back;
 
-		// Token: 0x0400579E RID: 22430
+		// Token: 0x04005BED RID: 23533
 		public bool Left;
 
-		// Token: 0x0400579F RID: 22431
+		// Token: 0x04005BEE RID: 23534
 		public bool Right;
 
-		// Token: 0x040057A0 RID: 22432
+		// Token: 0x04005BEF RID: 23535
 		public bool? ForceWalk;
 
-		// Token: 0x040057A1 RID: 22433
+		// Token: 0x04005BF0 RID: 23536
 		public bool? ForceJog;
 
-		// Token: 0x040057A2 RID: 22434
+		// Token: 0x04005BF1 RID: 23537
 		public bool? ForbidSprint;
 
-		// Token: 0x040057A3 RID: 22435
+		// Token: 0x04005BF2 RID: 23538
 		public bool? ForbidAndDisableSprint;
 
-		// Token: 0x040057A4 RID: 22436
+		// Token: 0x04005BF3 RID: 23539
 		public bool? ForbidAndDisableMotorcycleSprint;
 
-		// Token: 0x040057A5 RID: 22437
+		// Token: 0x04005BF4 RID: 23540
 		public bool? DisableClimbAndStep;
 	}
 }

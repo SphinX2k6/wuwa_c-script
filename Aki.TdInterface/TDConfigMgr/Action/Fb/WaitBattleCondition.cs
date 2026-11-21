@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002709 RID: 9993
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029D0 RID: 10704
 	public class WaitBattleCondition : ActionParams
 	{
-		// Token: 0x0600DF00 RID: 57088 RVA: 0x00210EEC File Offset: 0x0020F0EC
+		// Token: 0x0600ECEC RID: 60652 RVA: 0x0022D895 File Offset: 0x0022BA95
 		public static WaitBattleCondition Create(IWaitBattleCondition? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042B0 RID: 17072
-		// (get) Token: 0x0600DF01 RID: 57089 RVA: 0x00210F0B File Offset: 0x0020F10B
+		// Token: 0x170045FA RID: 17914
+		// (get) Token: 0x0600ECED RID: 60653 RVA: 0x0022D8B4 File Offset: 0x0022BAB4
 		public virtual IDetectBattleTag StateOption
 		{
 			get
@@ -38,14 +36,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BC1 RID: 31681
+		// Token: 0x04008266 RID: 33382
 		private IWaitBattleCondition Instance;
 
-		// Token: 0x04007BC2 RID: 31682
+		// Token: 0x04008267 RID: 33383
 		[Nullable(2)]
 		private IDetectBattleTag _StateOptionCache;
 
-		// Token: 0x04007BC3 RID: 31683
+		// Token: 0x04008268 RID: 33384
 		private bool _StateOptionInited;
 	}
 }

@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200141C RID: 5148
+	// Token: 0x0200148F RID: 5263
 	public sealed class TrapDefenseComponentPb : IMessage<TrapDefenseComponentPb>, IMessage, IEquatable<TrapDefenseComponentPb>, IDeepCloneable<TrapDefenseComponentPb>, IBufferMessage
 	{
-		// Token: 0x0601B494 RID: 111764 RVA: 0x003F417D File Offset: 0x003F237D
+		// Token: 0x0601BF1F RID: 114463 RVA: 0x0040F451 File Offset: 0x0040D651
 		[NullableContext(1)]
 		public static TrapDefenseComponentPb Create()
 		{
 			return new TrapDefenseComponentPb();
 		}
 
-		// Token: 0x17005C0A RID: 23562
-		// (get) Token: 0x0601B495 RID: 111765 RVA: 0x003F4184 File Offset: 0x003F2384
+		// Token: 0x17005E9F RID: 24223
+		// (get) Token: 0x0601BF20 RID: 114464 RVA: 0x0040F458 File Offset: 0x0040D658
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005C0B RID: 23563
-		// (get) Token: 0x0601B496 RID: 111766 RVA: 0x003F4187 File Offset: 0x003F2387
+		// Token: 0x17005EA0 RID: 24224
+		// (get) Token: 0x0601BF21 RID: 114465 RVA: 0x0040F45B File Offset: 0x0040D65B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B497 RID: 111767 RVA: 0x003F418E File Offset: 0x003F238E
+		// Token: 0x0601BF22 RID: 114466 RVA: 0x0040F462 File Offset: 0x0040D662
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseComponentPb()
 		{
 		}
 
-		// Token: 0x0601B498 RID: 111768 RVA: 0x003F4198 File Offset: 0x003F2398
+		// Token: 0x0601BF23 RID: 114467 RVA: 0x0040F46C File Offset: 0x0040D66C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseComponentPb(TrapDefenseComponentPb other) : this()
@@ -74,7 +74,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B499 RID: 111769 RVA: 0x003F423E File Offset: 0x003F243E
+		// Token: 0x0601BF24 RID: 114468 RVA: 0x0040F512 File Offset: 0x0040D712
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseComponentPb Clone()
@@ -82,9 +82,9 @@ namespace Aki.Protocol
 			return new TrapDefenseComponentPb(this);
 		}
 
-		// Token: 0x17005C0C RID: 23564
-		// (get) Token: 0x0601B49A RID: 111770 RVA: 0x003F4246 File Offset: 0x003F2446
-		// (set) Token: 0x0601B49B RID: 111771 RVA: 0x003F425E File Offset: 0x003F245E
+		// Token: 0x17005EA1 RID: 24225
+		// (get) Token: 0x0601BF25 RID: 114469 RVA: 0x0040F51A File Offset: 0x0040D71A
+		// (set) Token: 0x0601BF26 RID: 114470 RVA: 0x0040F532 File Offset: 0x0040D732
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseBuildingPbData BuildingPbData
@@ -104,9 +104,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005C0D RID: 23565
-		// (get) Token: 0x0601B49C RID: 111772 RVA: 0x003F4274 File Offset: 0x003F2474
-		// (set) Token: 0x0601B49D RID: 111773 RVA: 0x003F428C File Offset: 0x003F248C
+		// Token: 0x17005EA2 RID: 24226
+		// (get) Token: 0x0601BF27 RID: 114471 RVA: 0x0040F548 File Offset: 0x0040D748
+		// (set) Token: 0x0601BF28 RID: 114472 RVA: 0x0040F560 File Offset: 0x0040D760
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseAuxiliaryPbData AuxiliaryPbData
@@ -126,9 +126,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005C0E RID: 23566
-		// (get) Token: 0x0601B49E RID: 111774 RVA: 0x003F42A2 File Offset: 0x003F24A2
-		// (set) Token: 0x0601B49F RID: 111775 RVA: 0x003F42BA File Offset: 0x003F24BA
+		// Token: 0x17005EA3 RID: 24227
+		// (get) Token: 0x0601BF29 RID: 114473 RVA: 0x0040F576 File Offset: 0x0040D776
+		// (set) Token: 0x0601BF2A RID: 114474 RVA: 0x0040F58E File Offset: 0x0040D78E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseMonsterPbData MonsterPbData
@@ -148,9 +148,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005C0F RID: 23567
-		// (get) Token: 0x0601B4A0 RID: 111776 RVA: 0x003F42D0 File Offset: 0x003F24D0
-		// (set) Token: 0x0601B4A1 RID: 111777 RVA: 0x003F42E8 File Offset: 0x003F24E8
+		// Token: 0x17005EA4 RID: 24228
+		// (get) Token: 0x0601BF2B RID: 114475 RVA: 0x0040F5A4 File Offset: 0x0040D7A4
+		// (set) Token: 0x0601BF2C RID: 114476 RVA: 0x0040F5BC File Offset: 0x0040D7BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseGoldenCoinPbData GoldenCoinPbData
@@ -170,9 +170,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005C10 RID: 23568
-		// (get) Token: 0x0601B4A2 RID: 111778 RVA: 0x003F42FE File Offset: 0x003F24FE
-		// (set) Token: 0x0601B4A3 RID: 111779 RVA: 0x003F4316 File Offset: 0x003F2516
+		// Token: 0x17005EA5 RID: 24229
+		// (get) Token: 0x0601BF2D RID: 114477 RVA: 0x0040F5D2 File Offset: 0x0040D7D2
+		// (set) Token: 0x0601BF2E RID: 114478 RVA: 0x0040F5EA File Offset: 0x0040D7EA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseSpecialCellPbData SpecialCellPbData
@@ -192,8 +192,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005C11 RID: 23569
-		// (get) Token: 0x0601B4A4 RID: 111780 RVA: 0x003F432C File Offset: 0x003F252C
+		// Token: 0x17005EA6 RID: 24230
+		// (get) Token: 0x0601BF2F RID: 114479 RVA: 0x0040F600 File Offset: 0x0040D800
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseComponentPb.DataOneofCase DataCase
@@ -204,7 +204,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B4A5 RID: 111781 RVA: 0x003F4334 File Offset: 0x003F2534
+		// Token: 0x0601BF30 RID: 114480 RVA: 0x0040F608 File Offset: 0x0040D808
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearData()
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			this.data_ = null;
 		}
 
-		// Token: 0x0601B4A6 RID: 111782 RVA: 0x003F4344 File Offset: 0x003F2544
+		// Token: 0x0601BF31 RID: 114481 RVA: 0x0040F618 File Offset: 0x0040D818
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -221,7 +221,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TrapDefenseComponentPb);
 		}
 
-		// Token: 0x0601B4A7 RID: 111783 RVA: 0x003F4354 File Offset: 0x003F2554
+		// Token: 0x0601BF32 RID: 114482 RVA: 0x0040F628 File Offset: 0x0040D828
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TrapDefenseComponentPb other)
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.BuildingPbData, other.BuildingPbData) && object.Equals(this.AuxiliaryPbData, other.AuxiliaryPbData) && object.Equals(this.MonsterPbData, other.MonsterPbData) && object.Equals(this.GoldenCoinPbData, other.GoldenCoinPbData) && object.Equals(this.SpecialCellPbData, other.SpecialCellPbData) && this.DataCase == other.DataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601B4A8 RID: 111784 RVA: 0x003F43F8 File Offset: 0x003F25F8
+		// Token: 0x0601BF33 RID: 114483 RVA: 0x0040F6CC File Offset: 0x0040D8CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -263,7 +263,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B4A9 RID: 111785 RVA: 0x003F449A File Offset: 0x003F269A
+		// Token: 0x0601BF34 RID: 114484 RVA: 0x0040F76E File Offset: 0x0040D96E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -271,7 +271,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B4AA RID: 111786 RVA: 0x003F44A7 File Offset: 0x003F26A7
+		// Token: 0x0601BF35 RID: 114485 RVA: 0x0040F77B File Offset: 0x0040D97B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -279,7 +279,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B4AB RID: 111787 RVA: 0x003F44B0 File Offset: 0x003F26B0
+		// Token: 0x0601BF36 RID: 114486 RVA: 0x0040F784 File Offset: 0x0040D984
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -315,7 +315,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B4AC RID: 111788 RVA: 0x003F4564 File Offset: 0x003F2764
+		// Token: 0x0601BF37 RID: 114487 RVA: 0x0040F838 File Offset: 0x0040DA38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -348,7 +348,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B4AD RID: 111789 RVA: 0x003F4608 File Offset: 0x003F2808
+		// Token: 0x0601BF38 RID: 114488 RVA: 0x0040F8DC File Offset: 0x0040DADC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TrapDefenseComponentPb other)
@@ -398,7 +398,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B4AE RID: 111790 RVA: 0x003F4717 File Offset: 0x003F2917
+		// Token: 0x0601BF39 RID: 114489 RVA: 0x0040F9EB File Offset: 0x0040DBEB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -406,7 +406,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B4AF RID: 111791 RVA: 0x003F4720 File Offset: 0x003F2920
+		// Token: 0x0601BF3A RID: 114490 RVA: 0x0040F9F4 File Offset: 0x0040DBF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -483,44 +483,44 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009DBF RID: 40383
+		// Token: 0x0400A206 RID: 41478
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009DC0 RID: 40384
+		// Token: 0x0400A207 RID: 41479
 		public const int BuildingPbDataFieldNumber = 1;
 
-		// Token: 0x04009DC1 RID: 40385
+		// Token: 0x0400A208 RID: 41480
 		public const int AuxiliaryPbDataFieldNumber = 2;
 
-		// Token: 0x04009DC2 RID: 40386
+		// Token: 0x0400A209 RID: 41481
 		public const int MonsterPbDataFieldNumber = 3;
 
-		// Token: 0x04009DC3 RID: 40387
+		// Token: 0x0400A20A RID: 41482
 		public const int GoldenCoinPbDataFieldNumber = 4;
 
-		// Token: 0x04009DC4 RID: 40388
+		// Token: 0x0400A20B RID: 41483
 		public const int SpecialCellPbDataFieldNumber = 5;
 
-		// Token: 0x04009DC5 RID: 40389
+		// Token: 0x0400A20C RID: 41484
 		private object data_;
 
-		// Token: 0x04009DC6 RID: 40390
+		// Token: 0x0400A20D RID: 41485
 		private TrapDefenseComponentPb.DataOneofCase dataCase_;
 
-		// Token: 0x020019D8 RID: 6616
+		// Token: 0x02001A7A RID: 6778
 		public enum DataOneofCase
 		{
-			// Token: 0x0400CAA2 RID: 51874
+			// Token: 0x0400D00D RID: 53261
 			None,
-			// Token: 0x0400CAA3 RID: 51875
+			// Token: 0x0400D00E RID: 53262
 			BuildingPbData,
-			// Token: 0x0400CAA4 RID: 51876
+			// Token: 0x0400D00F RID: 53263
 			AuxiliaryPbData,
-			// Token: 0x0400CAA5 RID: 51877
+			// Token: 0x0400D010 RID: 53264
 			MonsterPbData,
-			// Token: 0x0400CAA6 RID: 51878
+			// Token: 0x0400D011 RID: 53265
 			GoldenCoinPbData,
-			// Token: 0x0400CAA7 RID: 51879
+			// Token: 0x0400D012 RID: 53266
 			SpecialCellPbData
 		}
 	}

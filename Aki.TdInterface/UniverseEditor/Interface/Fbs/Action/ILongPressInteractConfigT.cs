@@ -3,60 +3,60 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A3F RID: 27199
+	// Token: 0x02007161 RID: 29025
 	public class ILongPressInteractConfigT
 	{
-		// Token: 0x1700C9CB RID: 51659
-		// (get) Token: 0x0602F9F2 RID: 195058 RVA: 0x0067B9A4 File Offset: 0x00679BA4
-		// (set) Token: 0x0602F9F3 RID: 195059 RVA: 0x0067B9AC File Offset: 0x00679BAC
+		// Token: 0x1700D476 RID: 54390
+		// (get) Token: 0x06032718 RID: 206616 RVA: 0x006D1A64 File Offset: 0x006CFC64
+		// (set) Token: 0x06032719 RID: 206617 RVA: 0x006D1A6C File Offset: 0x006CFC6C
 		public float PressDuration { get; set; }
 
-		// Token: 0x1700C9CC RID: 51660
-		// (get) Token: 0x0602F9F4 RID: 195060 RVA: 0x0067B9B5 File Offset: 0x00679BB5
-		// (set) Token: 0x0602F9F5 RID: 195061 RVA: 0x0067B9BD File Offset: 0x00679BBD
+		// Token: 0x1700D477 RID: 54391
+		// (get) Token: 0x0603271A RID: 206618 RVA: 0x006D1A75 File Offset: 0x006CFC75
+		// (set) Token: 0x0603271B RID: 206619 RVA: 0x006D1A7D File Offset: 0x006CFC7D
 		public ILongPressEffectConfigT PressEffect { get; set; }
 
-		// Token: 0x1700C9CD RID: 51661
-		// (get) Token: 0x0602F9F6 RID: 195062 RVA: 0x0067B9C6 File Offset: 0x00679BC6
-		// (set) Token: 0x0602F9F7 RID: 195063 RVA: 0x0067B9CE File Offset: 0x00679BCE
+		// Token: 0x1700D478 RID: 54392
+		// (get) Token: 0x0603271C RID: 206620 RVA: 0x006D1A86 File Offset: 0x006CFC86
+		// (set) Token: 0x0603271D RID: 206621 RVA: 0x006D1A8E File Offset: 0x006CFC8E
 		public TLongPressInteractStyleConfigUnion Style { get; set; }
 
-		// Token: 0x1700C9CE RID: 51662
-		// (get) Token: 0x0602F9F8 RID: 195064 RVA: 0x0067B9D7 File Offset: 0x00679BD7
-		// (set) Token: 0x0602F9F9 RID: 195065 RVA: 0x0067B9DF File Offset: 0x00679BDF
+		// Token: 0x1700D479 RID: 54393
+		// (get) Token: 0x0603271E RID: 206622 RVA: 0x006D1A97 File Offset: 0x006CFC97
+		// (set) Token: 0x0603271F RID: 206623 RVA: 0x006D1A9F File Offset: 0x006CFC9F
 		public bool ResetFromCurrentProgress { get; set; }
 
-		// Token: 0x1700C9CF RID: 51663
-		// (get) Token: 0x0602F9FA RID: 195066 RVA: 0x0067B9E8 File Offset: 0x00679BE8
-		// (set) Token: 0x0602F9FB RID: 195067 RVA: 0x0067B9F0 File Offset: 0x00679BF0
+		// Token: 0x1700D47A RID: 54394
+		// (get) Token: 0x06032720 RID: 206624 RVA: 0x006D1AA8 File Offset: 0x006CFCA8
+		// (set) Token: 0x06032721 RID: 206625 RVA: 0x006D1AB0 File Offset: 0x006CFCB0
 		public ILongPressButtonActionMappingT LongPressButtonActionMapping { get; set; }
 
-		// Token: 0x1700C9D0 RID: 51664
-		// (get) Token: 0x0602F9FC RID: 195068 RVA: 0x0067B9F9 File Offset: 0x00679BF9
-		// (set) Token: 0x0602F9FD RID: 195069 RVA: 0x0067BA01 File Offset: 0x00679C01
+		// Token: 0x1700D47B RID: 54395
+		// (get) Token: 0x06032722 RID: 206626 RVA: 0x006D1AB9 File Offset: 0x006CFCB9
+		// (set) Token: 0x06032723 RID: 206627 RVA: 0x006D1AC1 File Offset: 0x006CFCC1
 		public List<IActionInfoT> LongPressStartActions { get; set; }
 
-		// Token: 0x1700C9D1 RID: 51665
-		// (get) Token: 0x0602F9FE RID: 195070 RVA: 0x0067BA0A File Offset: 0x00679C0A
-		// (set) Token: 0x0602F9FF RID: 195071 RVA: 0x0067BA12 File Offset: 0x00679C12
+		// Token: 0x1700D47C RID: 54396
+		// (get) Token: 0x06032724 RID: 206628 RVA: 0x006D1ACA File Offset: 0x006CFCCA
+		// (set) Token: 0x06032725 RID: 206629 RVA: 0x006D1AD2 File Offset: 0x006CFCD2
 		public List<IActionInfoT> LongPressInterruptedActions { get; set; }
 
-		// Token: 0x1700C9D2 RID: 51666
-		// (get) Token: 0x0602FA00 RID: 195072 RVA: 0x0067BA1B File Offset: 0x00679C1B
-		// (set) Token: 0x0602FA01 RID: 195073 RVA: 0x0067BA23 File Offset: 0x00679C23
+		// Token: 0x1700D47D RID: 54397
+		// (get) Token: 0x06032726 RID: 206630 RVA: 0x006D1ADB File Offset: 0x006CFCDB
+		// (set) Token: 0x06032727 RID: 206631 RVA: 0x006D1AE3 File Offset: 0x006CFCE3
 		public List<IActionInfoT> LongPressSuccessActions { get; set; }
 
-		// Token: 0x1700C9D3 RID: 51667
-		// (get) Token: 0x0602FA02 RID: 195074 RVA: 0x0067BA2C File Offset: 0x00679C2C
-		// (set) Token: 0x0602FA03 RID: 195075 RVA: 0x0067BA34 File Offset: 0x00679C34
+		// Token: 0x1700D47E RID: 54398
+		// (get) Token: 0x06032728 RID: 206632 RVA: 0x006D1AEC File Offset: 0x006CFCEC
+		// (set) Token: 0x06032729 RID: 206633 RVA: 0x006D1AF4 File Offset: 0x006CFCF4
 		public List<ILongPressProgressActionT> LongPressProgressActions { get; set; }
 
-		// Token: 0x1700C9D4 RID: 51668
-		// (get) Token: 0x0602FA04 RID: 195076 RVA: 0x0067BA3D File Offset: 0x00679C3D
-		// (set) Token: 0x0602FA05 RID: 195077 RVA: 0x0067BA45 File Offset: 0x00679C45
+		// Token: 0x1700D47F RID: 54399
+		// (get) Token: 0x0603272A RID: 206634 RVA: 0x006D1AFD File Offset: 0x006CFCFD
+		// (set) Token: 0x0603272B RID: 206635 RVA: 0x006D1B05 File Offset: 0x006CFD05
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602FA06 RID: 195078 RVA: 0x0067BA50 File Offset: 0x00679C50
+		// Token: 0x0603272C RID: 206636 RVA: 0x006D1B10 File Offset: 0x006CFD10
 		public ILongPressInteractConfigT()
 		{
 			this.PressDuration = 0f;

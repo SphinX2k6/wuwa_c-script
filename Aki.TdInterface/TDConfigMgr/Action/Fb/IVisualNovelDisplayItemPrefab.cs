@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200256E RID: 9582
+	// Token: 0x02002817 RID: 10263
 	public class IVisualNovelDisplayItemPrefab : IVisualNovelDisplayItemBase
 	{
-		// Token: 0x0600D70C RID: 55052 RVA: 0x00200A60 File Offset: 0x001FEC60
-		[NullableContext(1)]
+		// Token: 0x0600E477 RID: 58487 RVA: 0x0021C669 File Offset: 0x0021A869
 		public static IVisualNovelDisplayItemPrefab Create(IVisualNovelDisplayItemPrefab? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003DF2 RID: 15858
-		// (get) Token: 0x0600D70D RID: 55053 RVA: 0x00200A7F File Offset: 0x001FEC7F
+		// Token: 0x170040F7 RID: 16631
+		// (get) Token: 0x0600E478 RID: 58488 RVA: 0x0021C688 File Offset: 0x0021A888
 		public override EVisualNovelDisplayItemType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003DF3 RID: 15859
-		// (get) Token: 0x0600D70E RID: 55054 RVA: 0x00200A8C File Offset: 0x001FEC8C
+		// Token: 0x170040F8 RID: 16632
+		// (get) Token: 0x0600E479 RID: 58489 RVA: 0x0021C695 File Offset: 0x0021A895
 		public virtual int PrefabId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007710 RID: 30480
+		// Token: 0x04007D6D RID: 32109
 		private IVisualNovelDisplayItemPrefab Instance;
 	}
 }

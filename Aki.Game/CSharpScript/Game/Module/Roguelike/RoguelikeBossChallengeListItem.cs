@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DCD RID: 19917
+	// Token: 0x02003D96 RID: 15766
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeBossChallengeListItem : UiPanelBase
 	{
-		// Token: 0x06033670 RID: 210544 RVA: 0x00C0045C File Offset: 0x00BFE65C
+		// Token: 0x060284DD RID: 165085 RVA: 0x00B4999C File Offset: 0x00B47B9C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -29,13 +29,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033671 RID: 210545 RVA: 0x00C004E6 File Offset: 0x00BFE6E6
+		// Token: 0x060284DE RID: 165086 RVA: 0x00B49A26 File Offset: 0x00B47C26
 		protected override void OnStart()
 		{
 			this.BossItemLayout = new GenericLayout<RoguelikeBossChallengeBossItem, RoguelikeBossChallengeBossData>(base.GetHorizontalLayout(1), new Func<RoguelikeBossChallengeBossItem>(this.CreateBossItem), base.GetItem(2).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x06033672 RID: 210546 RVA: 0x00C0051C File Offset: 0x00BFE71C
+		// Token: 0x060284DF RID: 165087 RVA: 0x00B49A5C File Offset: 0x00B47C5C
 		public void RefreshBossList(List<RoguelikeBossChallengeBossData> dataList, int currentBossId)
 		{
 			GenericLayout<RoguelikeBossChallengeBossItem, RoguelikeBossChallengeBossData> bossItemLayout = this.BossItemLayout;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}, false);
 		}
 
-		// Token: 0x06033673 RID: 210547 RVA: 0x00C0055C File Offset: 0x00BFE75C
+		// Token: 0x060284E0 RID: 165088 RVA: 0x00B49A9C File Offset: 0x00B47C9C
 		private void OnBossListRefreshed(int currentBossId)
 		{
 			if (this.BossItemLayout == null)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.PlayCurrentBossSwitchSequence(layoutItemList, currentBossId);
 		}
 
-		// Token: 0x06033674 RID: 210548 RVA: 0x00C005B0 File Offset: 0x00BFE7B0
+		// Token: 0x060284E1 RID: 165089 RVA: 0x00B49AF0 File Offset: 0x00B47CF0
 		private void PlayCurrentBossSwitchSequence(List<RoguelikeBossChallengeBossItem> itemList, int currentBossId)
 		{
 			if (currentBossId == 0)
@@ -82,13 +82,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033675 RID: 210549 RVA: 0x00C0060C File Offset: 0x00BFE80C
+		// Token: 0x060284E2 RID: 165090 RVA: 0x00B49B4C File Offset: 0x00B47D4C
 		protected override void OnBeforeDestroy()
 		{
 			this.BossItemLayout = null;
 		}
 
-		// Token: 0x06033676 RID: 210550 RVA: 0x00C00615 File Offset: 0x00BFE815
+		// Token: 0x060284E3 RID: 165091 RVA: 0x00B49B55 File Offset: 0x00B47D55
 		private RoguelikeBossChallengeBossItem CreateBossItem()
 		{
 			return new RoguelikeBossChallengeBossItem
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			};
 		}
 
-		// Token: 0x0401B4B3 RID: 111795
+		// Token: 0x04015E86 RID: 89734
 		[Nullable(new byte[]
 		{
 			2,
@@ -106,17 +106,17 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<RoguelikeBossChallengeBossItem, RoguelikeBossChallengeBossData> BossItemLayout;
 
-		// Token: 0x0200AF43 RID: 44867
+		// Token: 0x02009978 RID: 39288
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403537A RID: 217978
+			// Token: 0x0402FDAF RID: 196015
 			public const int TxtTitle = 0;
 
-			// Token: 0x0403537B RID: 217979
+			// Token: 0x0402FDB0 RID: 196016
 			public const int PnlBossItemLayout = 1;
 
-			// Token: 0x0403537C RID: 217980
+			// Token: 0x0402FDB1 RID: 196017
 			public const int UiItemRougueBossItem = 2;
 		}
 	}

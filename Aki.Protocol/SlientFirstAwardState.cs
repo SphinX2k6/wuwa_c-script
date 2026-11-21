@@ -3,19 +3,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200154E RID: 5454
+	// Token: 0x020015C4 RID: 5572
 	public enum SlientFirstAwardState
 	{
-		// Token: 0x0400A589 RID: 42377
+		// Token: 0x0400A9E7 RID: 43495
 		[OriginalName("NotUnlock")]
 		NotUnlock,
-		// Token: 0x0400A58A RID: 42378
+		// Token: 0x0400A9E8 RID: 43496
 		[OriginalName("NotFinish")]
 		NotFinish,
-		// Token: 0x0400A58B RID: 42379
+		// Token: 0x0400A9E9 RID: 43497
 		[OriginalName("IsFinish")]
 		IsFinish,
-		// Token: 0x0400A58C RID: 42380
+		// Token: 0x0400A9EA RID: 43498
 		[OriginalName("IsReceive")]
 		IsReceive
 	}

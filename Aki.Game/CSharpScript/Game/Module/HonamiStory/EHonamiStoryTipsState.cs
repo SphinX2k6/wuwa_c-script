@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x0200593E RID: 22846
+	// Token: 0x02004917 RID: 18711
 	public enum EHonamiStoryTipsState
 	{
-		// Token: 0x0401E411 RID: 123921
+		// Token: 0x04018EAE RID: 102062
 		InGame,
-		// Token: 0x0401E412 RID: 123922
+		// Token: 0x04018EAF RID: 102063
 		Inventory,
-		// Token: 0x0401E413 RID: 123923
+		// Token: 0x04018EB0 RID: 102064
 		ShopView
 	}
 }

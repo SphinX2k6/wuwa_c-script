@@ -4,10 +4,10 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050C4 RID: 20676
+	// Token: 0x02004094 RID: 16532
 	public class FlowActionOpenQuestChapterView : FlowActionBase
 	{
-		// Token: 0x06034EF8 RID: 216824 RVA: 0x00C89C7C File Offset: 0x00C87E7C
+		// Token: 0x06029DF1 RID: 171505 RVA: 0x00BD6F64 File Offset: 0x00BD5164
 		protected override void OnExecute()
 		{
 			PromptQuestChapterUI promptQuestChapterUI = this.ActionInfo.Params as PromptQuestChapterUI;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			GeneralLogicTreeUtil.Instance.OpenQuestChapterView(promptQuestChapterUI, num.Value, new Action(this.OnCloseView));
 		}
 
-		// Token: 0x06034EF9 RID: 216825 RVA: 0x00C89D78 File Offset: 0x00C87F78
+		// Token: 0x06029DF2 RID: 171506 RVA: 0x00BD7060 File Offset: 0x00BD5260
 		private void OnCloseView()
 		{
 			base.FinishExecute(true, true);

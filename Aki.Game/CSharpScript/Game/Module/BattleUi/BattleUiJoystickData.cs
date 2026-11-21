@@ -2,32 +2,34 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
+using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C91 RID: 23697
+	// Token: 0x02004C73 RID: 19571
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiJoystickData
 	{
-		// Token: 0x0603BDA1 RID: 245153 RVA: 0x00E4B888 File Offset: 0x00E49A88
+		// Token: 0x06030CF2 RID: 199922 RVA: 0x00D9BE10 File Offset: 0x00D9A010
 		public void Init()
 		{
 		}
 
-		// Token: 0x0603BDA2 RID: 245154 RVA: 0x00E4B88A File Offset: 0x00E49A8A
+		// Token: 0x06030CF3 RID: 199923 RVA: 0x00D9BE12 File Offset: 0x00D9A012
 		public void Clear()
 		{
+			this.ForceWalkRunRate = -1f;
 			this.ClearTasks();
 		}
 
-		// Token: 0x0603BDA3 RID: 245155 RVA: 0x00E4B892 File Offset: 0x00E49A92
+		// Token: 0x06030CF4 RID: 199924 RVA: 0x00D9BE25 File Offset: 0x00D9A025
 		public void OnLeaveLevel()
 		{
 			this.ClearTasks();
 		}
 
-		// Token: 0x0603BDA4 RID: 245156 RVA: 0x00E4B89C File Offset: 0x00E49A9C
+		// Token: 0x06030CF5 RID: 199925 RVA: 0x00D9BE30 File Offset: 0x00D9A030
 		public void EnterVehicle(VehiclePassengerInfo info)
 		{
 			if (!info.IsRolePassenger(true))
@@ -54,13 +56,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.RefreshMotorMobileButtonLayout(null);
 		}
 
-		// Token: 0x0603BDA5 RID: 245157 RVA: 0x00E4B97C File Offset: 0x00E49B7C
+		// Token: 0x06030CF6 RID: 199926 RVA: 0x00D9BF10 File Offset: 0x00D9A110
 		public void LeaveVehicle(VehiclePassengerInfo info)
 		{
 			this.ClearTasks();
 		}
 
-		// Token: 0x0603BDA6 RID: 245158 RVA: 0x00E4B984 File Offset: 0x00E49B84
+		// Token: 0x06030CF7 RID: 199927 RVA: 0x00D9BF18 File Offset: 0x00D9A118
 		private void OnEnableRoundJoystick(int tagId, bool tagExists)
 		{
 			if (tagExists)
@@ -74,7 +76,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.RefreshMotorcycleRoundJoystick(null);
 		}
 
-		// Token: 0x0603BDA7 RID: 245159 RVA: 0x00E4B9C0 File Offset: 0x00E49BC0
+		// Token: 0x06030CF8 RID: 199928 RVA: 0x00D9BF54 File Offset: 0x00D9A154
 		public void RefreshMotorcycleRoundJoystick(bool? isRoundJoystickButtonLayout = null)
 		{
 			bool motorMobileButtonLayout = this.GetMotorMobileButtonLayout(isRoundJoystickButtonLayout);
@@ -82,21 +84,21 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.MotorcycleData.SetIsRoundJoystick(isRoundJoystick);
 		}
 
-		// Token: 0x0603BDA8 RID: 245160 RVA: 0x00E4B9F8 File Offset: 0x00E49BF8
+		// Token: 0x06030CF9 RID: 199929 RVA: 0x00D9BF8C File Offset: 0x00D9A18C
 		public void RefreshMotorMobileSkillButtonLayout(bool? isRoundJoystickButtonLayout = null)
 		{
 			bool motorMobileButtonLayout = this.GetMotorMobileButtonLayout(isRoundJoystickButtonLayout);
 			BattleUiModel.Instance.MotorcycleData.SetIsRoundJoystickButtonLayout(motorMobileButtonLayout);
 		}
 
-		// Token: 0x0603BDA9 RID: 245161 RVA: 0x00E4BA1D File Offset: 0x00E49C1D
+		// Token: 0x06030CFA RID: 199930 RVA: 0x00D9BFB1 File Offset: 0x00D9A1B1
 		public void RefreshMotorMobileButtonLayout(bool? isRoundJoystickButtonLayout = null)
 		{
 			this.RefreshMotorMobileSkillButtonLayout(isRoundJoystickButtonLayout);
 			this.RefreshMotorcycleRoundJoystick(isRoundJoystickButtonLayout);
 		}
 
-		// Token: 0x0603BDAA RID: 245162 RVA: 0x00E4BA30 File Offset: 0x00E49C30
+		// Token: 0x06030CFB RID: 199931 RVA: 0x00D9BFC4 File Offset: 0x00D9A1C4
 		private bool GetMotorMobileButtonLayout(bool? isRoundJoystickButtonLayout = null)
 		{
 			if (isRoundJoystickButtonLayout != null)
@@ -108,7 +110,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return currentValue.GetValueOrDefault() == num & currentValue != null;
 		}
 
-		// Token: 0x0603BDAB RID: 245163 RVA: 0x00E4BA74 File Offset: 0x00E49C74
+		// Token: 0x06030CFC RID: 199932 RVA: 0x00D9C008 File Offset: 0x00D9A208
 		private void ClearTasks()
 		{
 			foreach (ITagTask tagTask in this.SwitchJoystickTasks)
@@ -119,10 +121,33 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.ForceRoundJoystickTagSet.Clear();
 		}
 
-		// Token: 0x0401F34B RID: 127819
+		// Token: 0x06030CFD RID: 199933 RVA: 0x00D9C070 File Offset: 0x00D9A270
+		public void SetForceWalkRunRate(float value = -1f)
+		{
+			this.ForceWalkRunRate = value;
+			EventSystem.Instance.Emit(EEventName.OnJoystickWalkRunRateChanged);
+		}
+
+		// Token: 0x06030CFE RID: 199934 RVA: 0x00D9C08C File Offset: 0x00D9A28C
+		public float GetWalkRunRate()
+		{
+			if (this.ForceWalkRunRate >= 0f)
+			{
+				return this.ForceWalkRunRate;
+			}
+			return GameSettingsManager.Instance.GetCurrentValueFloat(EFunction.WalkOrRunRate, true, true).GetValueOrDefault(0.3f);
+		}
+
+		// Token: 0x04019E02 RID: 105986
+		private const float WALK_TO_RUN_RATE = 0.3f;
+
+		// Token: 0x04019E03 RID: 105987
+		private float ForceWalkRunRate = -1f;
+
+		// Token: 0x04019E04 RID: 105988
 		private List<ITagTask> SwitchJoystickTasks = new List<ITagTask>();
 
-		// Token: 0x0401F34C RID: 127820
+		// Token: 0x04019E05 RID: 105989
 		private HashSet<int> ForceRoundJoystickTagSet = new HashSet<int>();
 	}
 }

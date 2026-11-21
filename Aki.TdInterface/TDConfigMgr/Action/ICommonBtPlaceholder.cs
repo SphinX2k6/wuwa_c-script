@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001906 RID: 6406
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A8D RID: 6797
 	public class ICommonBtPlaceholder
 	{
-		// Token: 0x0600893F RID: 35135 RVA: 0x001441E0 File Offset: 0x001423E0
+		// Token: 0x0600905D RID: 36957 RVA: 0x00153968 File Offset: 0x00151B68
 		private ICommonBtPlaceholder_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008940 RID: 35136 RVA: 0x00144218 File Offset: 0x00142418
+		// Token: 0x0600905E RID: 36958 RVA: 0x001539A0 File Offset: 0x00151BA0
 		public static ICommonBtPlaceholder Create([Nullable(2)] ICommonBtPlaceholder instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008941 RID: 35137 RVA: 0x0014422B File Offset: 0x0014242B
+		// Token: 0x0600905F RID: 36959 RVA: 0x001539B3 File Offset: 0x00151BB3
 		public static ICommonBtPlaceholder CreateFromSetValue([Nullable(2)] ICommonBtPlaceholder_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008942 RID: 35138 RVA: 0x0014423E File Offset: 0x0014243E
+		// Token: 0x06009060 RID: 36960 RVA: 0x001539C6 File Offset: 0x00151BC6
 		public ICommonBtPlaceholder_SetValue ToSetValue()
 		{
 			return new ICommonBtPlaceholder_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C6B RID: 11371
-		// (get) Token: 0x06008943 RID: 35139 RVA: 0x00144275 File Offset: 0x00142475
-		// (set) Token: 0x06008944 RID: 35140 RVA: 0x001442A0 File Offset: 0x001424A0
+		// Token: 0x17002E67 RID: 11879
+		// (get) Token: 0x06009061 RID: 36961 RVA: 0x001539FD File Offset: 0x00151BFD
+		// (set) Token: 0x06009062 RID: 36962 RVA: 0x00153A28 File Offset: 0x00151C28
 		public virtual int Id
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C6C RID: 11372
-		// (get) Token: 0x06008945 RID: 35141 RVA: 0x001442AE File Offset: 0x001424AE
-		// (set) Token: 0x06008946 RID: 35142 RVA: 0x001442D9 File Offset: 0x001424D9
+		// Token: 0x17002E68 RID: 11880
+		// (get) Token: 0x06009063 RID: 36963 RVA: 0x00153A36 File Offset: 0x00151C36
+		// (set) Token: 0x06009064 RID: 36964 RVA: 0x00153A61 File Offset: 0x00151C61
 		public virtual string Name
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C6D RID: 11373
-		// (get) Token: 0x06008947 RID: 35143 RVA: 0x001442E7 File Offset: 0x001424E7
-		// (set) Token: 0x06008948 RID: 35144 RVA: 0x0014430E File Offset: 0x0014250E
+		// Token: 0x17002E69 RID: 11881
+		// (get) Token: 0x06009065 RID: 36965 RVA: 0x00153A6F File Offset: 0x00151C6F
+		// (set) Token: 0x06009066 RID: 36966 RVA: 0x00153A96 File Offset: 0x00151C96
 		public virtual ICommonBtOverrideTaskInfoBase Value
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C6E RID: 11374
-		// (get) Token: 0x06008949 RID: 35145 RVA: 0x0014431C File Offset: 0x0014251C
-		// (set) Token: 0x0600894A RID: 35146 RVA: 0x00144343 File Offset: 0x00142543
+		// Token: 0x17002E6A RID: 11882
+		// (get) Token: 0x06009067 RID: 36967 RVA: 0x00153AA4 File Offset: 0x00151CA4
+		// (set) Token: 0x06009068 RID: 36968 RVA: 0x00153ACB File Offset: 0x00151CCB
 		public virtual List<int> RefTaskIds
 		{
 			get
@@ -157,11 +155,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005608 RID: 22024
+		// Token: 0x04005A52 RID: 23122
 		[Nullable(2)]
 		protected ICommonBtPlaceholder FbInstance;
 
-		// Token: 0x04005609 RID: 22025
+		// Token: 0x04005A53 RID: 23123
 		[Nullable(2)]
 		protected ICommonBtPlaceholder_SetValue PocoInterface;
 	}

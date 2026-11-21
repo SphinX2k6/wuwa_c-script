@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002712 RID: 10002
+// Token: 0x02001BFD RID: 7165
 [NullableContext(2)]
 [Nullable(0)]
 public class RacingBetsDangoRankItem : UiPanelBase
 {
-	// Token: 0x06014807 RID: 83975 RVA: 0x0052D714 File Offset: 0x0052B914
+	// Token: 0x06011CE9 RID: 72937 RVA: 0x0053C430 File Offset: 0x0053A630
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,14 +26,14 @@ public class RacingBetsDangoRankItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06014808 RID: 83976 RVA: 0x0052D79A File Offset: 0x0052B99A
+	// Token: 0x06011CEA RID: 72938 RVA: 0x0053C4B6 File Offset: 0x0053A6B6
 	protected override void OnBeforeCreateImplement()
 	{
 		this.UiLevelSequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.UiLevelSequence);
 	}
 
-	// Token: 0x06014809 RID: 83977 RVA: 0x0052D7B4 File Offset: 0x0052B9B4
+	// Token: 0x06011CEB RID: 72939 RVA: 0x0053C4D0 File Offset: 0x0053A6D0
 	[NullableContext(1)]
 	public void Init(RacingBetsDungeonDangoInfo data, UCurveFloat lerpCurve, int itemInterval)
 	{
@@ -71,7 +71,7 @@ public class RacingBetsDangoRankItem : UiPanelBase
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0601480A RID: 83978 RVA: 0x0052D8AC File Offset: 0x0052BAAC
+	// Token: 0x06011CEC RID: 72940 RVA: 0x0053C5C8 File Offset: 0x0053A7C8
 	public UniTask RefreshAsync()
 	{
 		RacingBetsDangoRankItem.<RefreshAsync>d__14 <RefreshAsync>d__;
@@ -82,7 +82,7 @@ public class RacingBetsDangoRankItem : UiPanelBase
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601480B RID: 83979 RVA: 0x0052D8F0 File Offset: 0x0052BAF0
+	// Token: 0x06011CED RID: 72941 RVA: 0x0053C60C File Offset: 0x0053A80C
 	public UniTask LerpRankTargetPosition()
 	{
 		RacingBetsDangoRankItem.<LerpRankTargetPosition>d__15 <LerpRankTargetPosition>d__;
@@ -93,7 +93,7 @@ public class RacingBetsDangoRankItem : UiPanelBase
 		return <LerpRankTargetPosition>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601480C RID: 83980 RVA: 0x0052D934 File Offset: 0x0052BB34
+	// Token: 0x06011CEE RID: 72942 RVA: 0x0053C650 File Offset: 0x0053A850
 	private void OnTick(float deltaTime)
 	{
 		this.CurLerpTime += deltaTime;
@@ -121,14 +121,14 @@ public class RacingBetsDangoRankItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601480D RID: 83981 RVA: 0x0052D9D1 File Offset: 0x0052BBD1
+	// Token: 0x06011CEF RID: 72943 RVA: 0x0053C6ED File Offset: 0x0053A8ED
 	protected override void OnBeforeDestroy()
 	{
 		this.ReleaseHandle();
 		this.ReleaseLerpPromise();
 	}
 
-	// Token: 0x0601480E RID: 83982 RVA: 0x0052D9DF File Offset: 0x0052BBDF
+	// Token: 0x06011CF0 RID: 72944 RVA: 0x0053C6FB File Offset: 0x0053A8FB
 	private float GetDangoAnchorOffsetY(int rank)
 	{
 		if (this.RootItem == null)
@@ -138,7 +138,7 @@ public class RacingBetsDangoRankItem : UiPanelBase
 		return (float)(-(float)(rank - 1)) * (this.RootItem.GetHeight() + (float)this.DangoRankInterval);
 	}
 
-	// Token: 0x0601480F RID: 83983 RVA: 0x0052DA08 File Offset: 0x0052BC08
+	// Token: 0x06011CF1 RID: 72945 RVA: 0x0053C724 File Offset: 0x0053A924
 	public void ReleaseHandle()
 	{
 		if (this.TimerHandle != null)
@@ -148,7 +148,7 @@ public class RacingBetsDangoRankItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06014810 RID: 83984 RVA: 0x0052DA2A File Offset: 0x0052BC2A
+	// Token: 0x06011CF2 RID: 72946 RVA: 0x0053C746 File Offset: 0x0053A946
 	private void ReleaseLerpPromise()
 	{
 		if (this.LerpPromise != null)
@@ -158,50 +158,50 @@ public class RacingBetsDangoRankItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04009A39 RID: 39481
+	// Token: 0x04009B91 RID: 39825
 	public UiBehaviorLevelSequence UiLevelSequence;
 
-	// Token: 0x04009A3A RID: 39482
+	// Token: 0x04009B92 RID: 39826
 	[Nullable(1)]
 	private RacingBetsDungeonDangoInfo DangoInfo;
 
-	// Token: 0x04009A3B RID: 39483
+	// Token: 0x04009B93 RID: 39827
 	private int DangoRankInterval;
 
-	// Token: 0x04009A3C RID: 39484
+	// Token: 0x04009B94 RID: 39828
 	public int LerpTime = 1000;
 
-	// Token: 0x04009A3D RID: 39485
+	// Token: 0x04009B95 RID: 39829
 	private float CurLerpTime;
 
-	// Token: 0x04009A3E RID: 39486
+	// Token: 0x04009B96 RID: 39830
 	private float StartOffsetY;
 
-	// Token: 0x04009A3F RID: 39487
+	// Token: 0x04009B97 RID: 39831
 	private float EndOffsetY;
 
-	// Token: 0x04009A40 RID: 39488
+	// Token: 0x04009B98 RID: 39832
 	private CustomPromise LerpPromise;
 
-	// Token: 0x04009A41 RID: 39489
+	// Token: 0x04009B99 RID: 39833
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04009A42 RID: 39490
+	// Token: 0x04009B9A RID: 39834
 	private UCurveFloat LerpCurve;
 
-	// Token: 0x02008D60 RID: 36192
+	// Token: 0x02007EE9 RID: 32489
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402DE02 RID: 187906
+		// Token: 0x04029119 RID: 168217
 		RankText,
-		// Token: 0x0402DE03 RID: 187907
+		// Token: 0x0402911A RID: 168218
 		HeadTexture,
-		// Token: 0x0402DE04 RID: 187908
+		// Token: 0x0402911B RID: 168219
 		NameText,
-		// Token: 0x0402DE05 RID: 187909
+		// Token: 0x0402911C RID: 168220
 		DiceTexture,
-		// Token: 0x0402DE06 RID: 187910
+		// Token: 0x0402911D RID: 168221
 		BetItem
 	}
 }

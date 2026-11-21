@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002179 RID: 8569
+	// Token: 0x020023DA RID: 9178
 	public class RotatorEntity_SetValue
 	{
-		// Token: 0x04007084 RID: 28804
-		[Nullable(1)]
+		// Token: 0x040076B9 RID: 30393
 		public ITargetEntityType Entity;
 	}
 }

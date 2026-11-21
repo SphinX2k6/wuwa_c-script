@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020E7 RID: 8423
+	// Token: 0x02002348 RID: 9032
 	public class NpcLeisureInteract_SetValue
 	{
-		// Token: 0x04006EE1 RID: 28385
-		[Nullable(1)]
+		// Token: 0x04007515 RID: 29973
 		public INpcLeisureInteractType Option;
 	}
 }

@@ -14,18 +14,18 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.World.Controller.SubLevelAssistant
 {
-	// Token: 0x02004542 RID: 17730
+	// Token: 0x0200346A RID: 13418
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SubLevelVisibleAssistant : ControllerAssistantBase
 	{
-		// Token: 0x0602DD4D RID: 187725 RVA: 0x00A88EBD File Offset: 0x00A870BD
+		// Token: 0x0602242F RID: 140335 RVA: 0x009B45F1 File Offset: 0x009B27F1
 		protected override void OnDestroy()
 		{
 			this.ClearPromise();
 		}
 
-		// Token: 0x0602DD4E RID: 187726 RVA: 0x00A88EC8 File Offset: 0x00A870C8
+		// Token: 0x06022430 RID: 140336 RVA: 0x009B45FC File Offset: 0x009B27FC
 		[NullableContext(0)]
 		public UniTask<bool> SetSubLevelVisible([Nullable(1)] SetSubLevelVisibleParams @params)
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.World.Controller.SubLevelAssistant
 			return <SetSubLevelVisible>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD4F RID: 187727 RVA: 0x00A88F14 File Offset: 0x00A87114
+		// Token: 0x06022431 RID: 140337 RVA: 0x009B4648 File Offset: 0x009B2848
 		[NullableContext(0)]
 		private UniTask<bool> ExecuteImp([Nullable(1)] SetSubLevelVisibleParams @params)
 		{
@@ -51,19 +51,19 @@ namespace CSharpScript.Game.World.Controller.SubLevelAssistant
 			return <ExecuteImp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD50 RID: 187728 RVA: 0x00A88F5F File Offset: 0x00A8715F
+		// Token: 0x06022432 RID: 140338 RVA: 0x009B4693 File Offset: 0x009B2893
 		private void InitPromise()
 		{
 			this.WaitSceneShotLoadedPromise = new CustomPromise<ELoadEffectResult>();
 		}
 
-		// Token: 0x0602DD51 RID: 187729 RVA: 0x00A88F6C File Offset: 0x00A8716C
+		// Token: 0x06022433 RID: 140339 RVA: 0x009B46A0 File Offset: 0x009B28A0
 		private void ClearPromise()
 		{
 			this.WaitSceneShotLoadedPromise = null;
 		}
 
-		// Token: 0x0602DD52 RID: 187730 RVA: 0x00A88F78 File Offset: 0x00A87178
+		// Token: 0x06022434 RID: 140340 RVA: 0x009B46AC File Offset: 0x009B28AC
 		private void BeforeStartSetSubLevelsVisible(ClientPreEnableSubLevels @params)
 		{
 			IEnableSubLevelTransitionWithSceneCapture transitionOption = @params.TransitionOption;
@@ -72,14 +72,14 @@ namespace CSharpScript.Game.World.Controller.SubLevelAssistant
 			InputDistributeController.Instance.RefreshInputTag();
 		}
 
-		// Token: 0x0602DD53 RID: 187731 RVA: 0x00A88FE6 File Offset: 0x00A871E6
+		// Token: 0x06022435 RID: 140341 RVA: 0x009B471A File Offset: 0x009B291A
 		private void AfterStartSetSubLevelsVisible(ClientPreEnableSubLevels @params)
 		{
 			SubLevelModel.Instance.UnsetSubLevelSwitching();
 			InputDistributeController.Instance.RefreshInputTag();
 		}
 
-		// Token: 0x0602DD54 RID: 187732 RVA: 0x00A88FFC File Offset: 0x00A871FC
+		// Token: 0x06022436 RID: 140342 RVA: 0x009B4730 File Offset: 0x009B2930
 		private UniTask StartSetSubLevelsVisible(ClientPreEnableSubLevels @params)
 		{
 			SubLevelVisibleAssistant.<StartSetSubLevelsVisible>d__12 <StartSetSubLevelsVisible>d__;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.World.Controller.SubLevelAssistant
 			return <StartSetSubLevelsVisible>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD55 RID: 187733 RVA: 0x00A89048 File Offset: 0x00A87248
+		// Token: 0x06022437 RID: 140343 RVA: 0x009B477C File Offset: 0x009B297C
 		private UniTask SetVisibleImp(ClientPreEnableSubLevels @params)
 		{
 			SubLevelVisibleAssistant.<SetVisibleImp>d__13 <SetVisibleImp>d__;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.World.Controller.SubLevelAssistant
 			return <SetVisibleImp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD56 RID: 187734 RVA: 0x00A89094 File Offset: 0x00A87294
+		// Token: 0x06022438 RID: 140344 RVA: 0x009B47C8 File Offset: 0x009B29C8
 		private UniTask EnableLevel(string levelPath)
 		{
 			SubLevelVisibleAssistant.<EnableLevel>d__14 <EnableLevel>d__;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.World.Controller.SubLevelAssistant
 			return <EnableLevel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD57 RID: 187735 RVA: 0x00A890E0 File Offset: 0x00A872E0
+		// Token: 0x06022439 RID: 140345 RVA: 0x009B4814 File Offset: 0x009B2A14
 		private UniTask DisableLevel(string levelPath)
 		{
 			SubLevelVisibleAssistant.<DisableLevel>d__15 <DisableLevel>d__;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.World.Controller.SubLevelAssistant
 			return <DisableLevel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD58 RID: 187736 RVA: 0x00A8912C File Offset: 0x00A8732C
+		// Token: 0x0602243A RID: 140346 RVA: 0x009B4860 File Offset: 0x009B2A60
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.World.Controller.SubLevelAssistant
 			return <PlayScreenEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD59 RID: 187737 RVA: 0x00A89178 File Offset: 0x00A87378
+		// Token: 0x0602243B RID: 140347 RVA: 0x009B48AC File Offset: 0x009B2AAC
 		private unsafe bool CheckLevelPathEmpty(string path, string enableOrDisable)
 		{
 			if (!StringUtils.IsBlank(path))
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.World.Controller.SubLevelAssistant
 			return true;
 		}
 
-		// Token: 0x0602DD5A RID: 187738 RVA: 0x00A892D4 File Offset: 0x00A874D4
+		// Token: 0x0602243C RID: 140348 RVA: 0x009B4A08 File Offset: 0x009B2C08
 		private void RequestSetSubLevelVisible([Nullable(new byte[]
 		{
 			2,
@@ -217,20 +217,20 @@ namespace CSharpScript.Game.World.Controller.SubLevelAssistant
 			}, 0);
 		}
 
-		// Token: 0x04018776 RID: 100214
+		// Token: 0x04012DB0 RID: 77232
 		[Nullable(2)]
 		private CustomPromise<ELoadEffectResult> WaitSceneShotLoadedPromise;
 
-		// Token: 0x04018777 RID: 100215
+		// Token: 0x04012DB1 RID: 77233
 		private int ScreenCaptureEffectHandle;
 
-		// Token: 0x04018778 RID: 100216
+		// Token: 0x04012DB2 RID: 77234
 		private int Id;
 
-		// Token: 0x04018779 RID: 100217
+		// Token: 0x04012DB3 RID: 77235
 		private int GroupId;
 
-		// Token: 0x0401877A RID: 100218
+		// Token: 0x04012DB4 RID: 77236
 		[Nullable(2)]
 		private GeneralContext Context;
 	}

@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.Common
 {
-	// Token: 0x02006F1B RID: 28443
+	// Token: 0x0200609C RID: 24732
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GameSplineComponent
 	{
-		// Token: 0x06045385 RID: 283525 RVA: 0x0112083C File Offset: 0x0111EA3C
+		// Token: 0x0603B533 RID: 242995 RVA: 0x010CA7DC File Offset: 0x010C89DC
 		public GameSplineComponent(int splineId)
 		{
 			this.SplineId = splineId;
 		}
 
-		// Token: 0x06045386 RID: 283526 RVA: 0x011208BC File Offset: 0x0111EABC
+		// Token: 0x0603B534 RID: 242996 RVA: 0x010CA85C File Offset: 0x010C8A5C
 		public bool Initialize()
 		{
 			this.SplineEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(this.SplineId), null);
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			return true;
 		}
 
-		// Token: 0x06045387 RID: 283527 RVA: 0x01120B00 File Offset: 0x0111ED00
+		// Token: 0x0603B535 RID: 242997 RVA: 0x010CAAA0 File Offset: 0x010C8CA0
 		public bool InitializeByEntityData(IEntityData entityData)
 		{
 			this.SplineEntityData = entityData;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			return true;
 		}
 
-		// Token: 0x06045388 RID: 283528 RVA: 0x01120CE4 File Offset: 0x0111EEE4
+		// Token: 0x0603B536 RID: 242998 RVA: 0x010CAC84 File Offset: 0x010C8E84
 		private void InitMainPathPointWithLevelAiSplinePoint(int index, ILevelAISplinePoint pInfo)
 		{
 			PatrolPoint patrolPoint = new PatrolPoint();
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			this.PathPoint.Add(patrolPoint);
 		}
 
-		// Token: 0x06045389 RID: 283529 RVA: 0x01120DA4 File Offset: 0x0111EFA4
+		// Token: 0x0603B537 RID: 242999 RVA: 0x010CAD44 File Offset: 0x010C8F44
 		private void InitMainPathPointWithPatrolSplinePoint(int index, IPatrolSplinePoint pInfo)
 		{
 			PatrolPoint patrolPoint = new PatrolPoint();
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			this.PathPoint.Add(patrolPoint);
 		}
 
-		// Token: 0x0604538A RID: 283530 RVA: 0x01120E50 File Offset: 0x0111F050
+		// Token: 0x0603B538 RID: 243000 RVA: 0x010CADF0 File Offset: 0x010C8FF0
 		private void InitMainPathPointWithBaseSplinePoint(int index)
 		{
 			PatrolPoint patrolPoint = new PatrolPoint();
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			this.PathPoint.Add(patrolPoint);
 		}
 
-		// Token: 0x0604538B RID: 283531 RVA: 0x01120E88 File Offset: 0x0111F088
+		// Token: 0x0603B539 RID: 243001 RVA: 0x010CAE28 File Offset: 0x010C9028
 		private void InitMainPathPoint(int index)
 		{
 			ILevelAISplinePoint levelAISplinePoint = this.Option.GetPoints()[index] as ILevelAISplinePoint;
@@ -169,8 +169,8 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			this.InitMainPathPointWithBaseSplinePoint(index);
 		}
 
-		// Token: 0x17009B07 RID: 39687
-		// (get) Token: 0x0604538C RID: 283532 RVA: 0x01120EE2 File Offset: 0x0111F0E2
+		// Token: 0x17007046 RID: 28742
+		// (get) Token: 0x0603B53A RID: 243002 RVA: 0x010CAE82 File Offset: 0x010C9082
 		public ISplineType Option
 		{
 			get
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			}
 		}
 
-		// Token: 0x0604538D RID: 283533 RVA: 0x01120EEA File Offset: 0x0111F0EA
+		// Token: 0x0603B53B RID: 243003 RVA: 0x010CAE8A File Offset: 0x010C908A
 		public int GetNumberOfSplinePoints()
 		{
 			if (this.OptionInternal == null)
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			return this.OptionInternal.GetPoints().Count;
 		}
 
-		// Token: 0x0604538E RID: 283534 RVA: 0x01120F08 File Offset: 0x0111F108
+		// Token: 0x0603B53C RID: 243004 RVA: 0x010CAEA8 File Offset: 0x010C90A8
 		public unsafe Vector GetWorldLocationAtSplinePoint(int index)
 		{
 			Vector vector;
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			return vector;
 		}
 
-		// Token: 0x0604538F RID: 283535 RVA: 0x011210A4 File Offset: 0x0111F2A4
+		// Token: 0x0603B53D RID: 243005 RVA: 0x010CB044 File Offset: 0x010C9244
 		public bool InitializeWithSubPoints(int actorPbDataId)
 		{
 			this.SplineEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(this.SplineId), null);
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			return true;
 		}
 
-		// Token: 0x06045390 RID: 283536 RVA: 0x01121328 File Offset: 0x0111F528
+		// Token: 0x0603B53E RID: 243006 RVA: 0x010CB2C8 File Offset: 0x010C94C8
 		public bool InitializeWithSplineCurve(SplineCurve splineCurve, SplineComponent splineData, bool sampling = true)
 		{
 			this.SplineComponentData = splineData;
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			return true;
 		}
 
-		// Token: 0x06045391 RID: 283537 RVA: 0x011214D0 File Offset: 0x0111F6D0
+		// Token: 0x0603B53F RID: 243007 RVA: 0x010CB47C File Offset: 0x010C967C
 		public int GetLastMainPointIndex(int index)
 		{
 			if (!this.IsInitSubPoint)
@@ -400,65 +400,65 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			return i - 1;
 		}
 
-		// Token: 0x06045392 RID: 283538 RVA: 0x0112157B File Offset: 0x0111F77B
+		// Token: 0x0603B540 RID: 243008 RVA: 0x010CB527 File Offset: 0x010C9727
 		public void Clear()
 		{
 			this.SplineVectorMap.Clear();
 		}
 
-		// Token: 0x0402415E RID: 147806
+		// Token: 0x0401F413 RID: 128019
 		private const float SAMPLE_ANGLE_LIMIT = 15f;
 
-		// Token: 0x0402415F RID: 147807
+		// Token: 0x0401F414 RID: 128020
 		private const float SAMPLE_STEP_DIST = 200f;
 
-		// Token: 0x04024160 RID: 147808
+		// Token: 0x0401F415 RID: 128021
 		public int SplineId;
 
-		// Token: 0x04024161 RID: 147809
+		// Token: 0x0401F416 RID: 128022
 		[Nullable(2)]
 		public IEntityData SplineEntityData;
 
-		// Token: 0x04024162 RID: 147810
+		// Token: 0x0401F417 RID: 128023
 		[Nullable(2)]
 		public SplineComponent SplineComponentData;
 
-		// Token: 0x04024163 RID: 147811
+		// Token: 0x0401F418 RID: 128024
 		public List<PatrolPoint> PathPoint = new List<PatrolPoint>();
 
-		// Token: 0x04024164 RID: 147812
+		// Token: 0x0401F419 RID: 128025
 		public bool IsInitSubPoint;
 
-		// Token: 0x04024165 RID: 147813
+		// Token: 0x0401F41A RID: 128026
 		[Nullable(2)]
 		public List<int> MainPointIndexArray;
 
-		// Token: 0x04024166 RID: 147814
+		// Token: 0x0401F41B RID: 128027
 		[Nullable(2)]
 		private ISplineType OptionInternal;
 
-		// Token: 0x04024167 RID: 147815
+		// Token: 0x0401F41C RID: 128028
 		private readonly Vector CacheVector = Vector.Create();
 
-		// Token: 0x04024168 RID: 147816
+		// Token: 0x0401F41D RID: 128029
 		private readonly Vector CacheVector2 = Vector.Create();
 
-		// Token: 0x04024169 RID: 147817
+		// Token: 0x0401F41E RID: 128030
 		private readonly Vector SplineLocation = Vector.Create();
 
-		// Token: 0x0402416A RID: 147818
+		// Token: 0x0401F41F RID: 128031
 		private readonly Rotator SplineRotation = Rotator.Create();
 
-		// Token: 0x0402416B RID: 147819
+		// Token: 0x0401F420 RID: 128032
 		private readonly Vector BasisForwardVector = Vector.Create();
 
-		// Token: 0x0402416C RID: 147820
+		// Token: 0x0401F421 RID: 128033
 		private readonly Vector BasisUpVector = Vector.Create();
 
-		// Token: 0x0402416D RID: 147821
+		// Token: 0x0401F422 RID: 128034
 		private readonly Vector BasisRightVector = Vector.Create();
 
-		// Token: 0x0402416E RID: 147822
+		// Token: 0x0401F423 RID: 128035
 		private readonly Dictionary<int, Vector> SplineVectorMap = new Dictionary<int, Vector>();
 	}
 }

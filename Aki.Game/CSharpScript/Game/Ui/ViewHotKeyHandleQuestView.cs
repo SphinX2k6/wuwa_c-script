@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200469F RID: 18079
+	// Token: 0x020035D0 RID: 13776
 	public class ViewHotKeyHandleQuestView : ViewHotKeyHandle
 	{
-		// Token: 0x0602E9DF RID: 190943 RVA: 0x00ACB065 File Offset: 0x00AC9265
+		// Token: 0x0602312B RID: 143659 RVA: 0x009F9939 File Offset: 0x009F7B39
 		[NullableContext(1)]
 		public ViewHotKeyHandleQuestView(IOpenAndCloseViewHotKey parameters) : base(parameters)
 		{
 		}
 
-		// Token: 0x17007635 RID: 30261
-		// (get) Token: 0x0602E9E0 RID: 190944 RVA: 0x00ACB06E File Offset: 0x00AC926E
+		// Token: 0x170048F1 RID: 18673
+		// (get) Token: 0x0602312C RID: 143660 RVA: 0x009F9942 File Offset: 0x009F7B42
 		public override EUiViewName? ViewName
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E9E1 RID: 190945 RVA: 0x00ACB088 File Offset: 0x00AC9288
+		// Token: 0x0602312D RID: 143661 RVA: 0x009F995C File Offset: 0x009F7B5C
 		protected override void OnOpenViewImplement()
 		{
 			if (HonamiStoryUtil.CheckHonamiQuestOpen())

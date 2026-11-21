@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02000F1C RID: 3868
+// Token: 0x020003D1 RID: 977
 public class AchievementCompleteTipsStarItem : GridProxyAbstract<bool>
 {
-	// Token: 0x060061DD RID: 25053 RVA: 0x00131A41 File Offset: 0x0012FC41
+	// Token: 0x06003575 RID: 13685 RVA: 0x0013A365 File Offset: 0x00138565
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -15,7 +15,7 @@ public class AchievementCompleteTipsStarItem : GridProxyAbstract<bool>
 		};
 	}
 
-	// Token: 0x060061DE RID: 25054 RVA: 0x00131A64 File Offset: 0x0012FC64
+	// Token: 0x06003576 RID: 13686 RVA: 0x0013A388 File Offset: 0x00138588
 	public override void Refresh(bool data, bool isSelected, int gridIndex)
 	{
 		UUIItem item = base.GetItem(0);
@@ -26,10 +26,10 @@ public class AchievementCompleteTipsStarItem : GridProxyAbstract<bool>
 		item.SetUIActive(data);
 	}
 
-	// Token: 0x02007561 RID: 30049
+	// Token: 0x020066F5 RID: 26357
 	private enum EComponent
 	{
-		// Token: 0x04026CF2 RID: 158962
+		// Token: 0x0402203D RID: 139325
 		StarObj
 	}
 }

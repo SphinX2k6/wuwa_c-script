@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005779 RID: 22393
+	// Token: 0x02005D80 RID: 23936
 	public class IPrefabCompTransformItemT
 	{
-		// Token: 0x1700A70A RID: 42762
-		// (get) Token: 0x0602589D RID: 153757 RVA: 0x0052DC83 File Offset: 0x0052BE83
-		// (set) Token: 0x0602589E RID: 153758 RVA: 0x0052DC8B File Offset: 0x0052BE8B
+		// Token: 0x1700B02E RID: 45102
+		// (get) Token: 0x06027DBD RID: 163261 RVA: 0x00573E0F File Offset: 0x0057200F
+		// (set) Token: 0x06027DBE RID: 163262 RVA: 0x00573E17 File Offset: 0x00572017
 		public bool IsAbsolute { get; set; }
 
-		// Token: 0x1700A70B RID: 42763
-		// (get) Token: 0x0602589F RID: 153759 RVA: 0x0052DC94 File Offset: 0x0052BE94
-		// (set) Token: 0x060258A0 RID: 153760 RVA: 0x0052DC9C File Offset: 0x0052BE9C
+		// Token: 0x1700B02F RID: 45103
+		// (get) Token: 0x06027DBF RID: 163263 RVA: 0x00573E20 File Offset: 0x00572020
+		// (set) Token: 0x06027DC0 RID: 163264 RVA: 0x00573E28 File Offset: 0x00572028
 		public IVectorInfoT Value { get; set; }
 
-		// Token: 0x060258A1 RID: 153761 RVA: 0x0052DCA5 File Offset: 0x0052BEA5
+		// Token: 0x06027DC1 RID: 163265 RVA: 0x00573E31 File Offset: 0x00572031
 		public IPrefabCompTransformItemT()
 		{
 			this.IsAbsolute = false;

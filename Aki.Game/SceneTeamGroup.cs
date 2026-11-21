@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200294C RID: 10572
+// Token: 0x02001EC7 RID: 7879
 [NullableContext(1)]
 [Nullable(0)]
 public class SceneTeamGroup
 {
-	// Token: 0x06015D9A RID: 89498 RVA: 0x005838FE File Offset: 0x00581AFE
+	// Token: 0x0601379E RID: 79774 RVA: 0x005AE8FE File Offset: 0x005ACAFE
 	public static SceneTeamGroup Create(int playerId, ETeamGroupType type)
 	{
 		return new SceneTeamGroup
@@ -18,7 +18,7 @@ public class SceneTeamGroup
 		};
 	}
 
-	// Token: 0x06015D9B RID: 89499 RVA: 0x00583913 File Offset: 0x00581B13
+	// Token: 0x0601379F RID: 79775 RVA: 0x005AE913 File Offset: 0x005ACB13
 	public void Clear()
 	{
 		this.GroupType = ETeamGroupType.Default;
@@ -27,13 +27,13 @@ public class SceneTeamGroup
 		this.CurrentRole = null;
 	}
 
-	// Token: 0x06015D9C RID: 89500 RVA: 0x00583935 File Offset: 0x00581B35
+	// Token: 0x060137A0 RID: 79776 RVA: 0x005AE935 File Offset: 0x005ACB35
 	public ETeamGroupType GetGroupType()
 	{
 		return this.GroupType;
 	}
 
-	// Token: 0x06015D9D RID: 89501 RVA: 0x00583940 File Offset: 0x00581B40
+	// Token: 0x060137A1 RID: 79777 RVA: 0x005AE940 File Offset: 0x005ACB40
 	public List<SceneTeamRole> GetRoleList()
 	{
 		List<SceneTeamRole> list = new List<SceneTeamRole>();
@@ -44,14 +44,14 @@ public class SceneTeamGroup
 		return list;
 	}
 
-	// Token: 0x06015D9E RID: 89502 RVA: 0x0058399C File Offset: 0x00581B9C
+	// Token: 0x060137A2 RID: 79778 RVA: 0x005AE99C File Offset: 0x005ACB9C
 	[NullableContext(2)]
 	public SceneTeamRole GetCurrentRole()
 	{
 		return this.CurrentRole;
 	}
 
-	// Token: 0x06015D9F RID: 89503 RVA: 0x005839A4 File Offset: 0x00581BA4
+	// Token: 0x060137A3 RID: 79779 RVA: 0x005AE9A4 File Offset: 0x005ACBA4
 	public bool HasRole(long creatureDataId)
 	{
 		using (List<SceneTeamRole>.Enumerator enumerator = this.RoleList.GetEnumerator())
@@ -67,7 +67,7 @@ public class SceneTeamGroup
 		return false;
 	}
 
-	// Token: 0x06015DA0 RID: 89504 RVA: 0x00583A00 File Offset: 0x00581C00
+	// Token: 0x060137A4 RID: 79780 RVA: 0x005AEA00 File Offset: 0x005ACC00
 	public void SetCurrentRole(long creatureDataId)
 	{
 		foreach (SceneTeamRole sceneTeamRole in this.RoleList)
@@ -79,13 +79,13 @@ public class SceneTeamGroup
 		}
 	}
 
-	// Token: 0x06015DA1 RID: 89505 RVA: 0x00583A5C File Offset: 0x00581C5C
+	// Token: 0x060137A5 RID: 79781 RVA: 0x005AEA5C File Offset: 0x005ACC5C
 	public ETeamLivingState GetLivingState()
 	{
 		return this.LivingState;
 	}
 
-	// Token: 0x06015DA2 RID: 89506 RVA: 0x00583A64 File Offset: 0x00581C64
+	// Token: 0x060137A6 RID: 79782 RVA: 0x005AEA64 File Offset: 0x005ACC64
 	public void UpdateLivingState(ETeamLivingState state)
 	{
 		ETeamLivingState livingState = this.LivingState;
@@ -97,7 +97,7 @@ public class SceneTeamGroup
 		}
 	}
 
-	// Token: 0x06015DA3 RID: 89507 RVA: 0x00583AB0 File Offset: 0x00581CB0
+	// Token: 0x060137A7 RID: 79783 RVA: 0x005AEAB0 File Offset: 0x005ACCB0
 	public void Update(IList<SceneTeamRole> groupRoleList, int currentRoleId, ETeamLivingState livingState, bool isFixedLocation)
 	{
 		this.RoleList.Clear();
@@ -118,7 +118,7 @@ public class SceneTeamGroup
 		}
 	}
 
-	// Token: 0x06015DA4 RID: 89508 RVA: 0x00583B38 File Offset: 0x00581D38
+	// Token: 0x060137A8 RID: 79784 RVA: 0x005AEB38 File Offset: 0x005ACD38
 	public void AddRoleList(SceneTeamRole[] groupRoleList)
 	{
 		foreach (SceneTeamRole item in groupRoleList)
@@ -127,22 +127,22 @@ public class SceneTeamGroup
 		}
 	}
 
-	// Token: 0x0400A289 RID: 41609
+	// Token: 0x0400A673 RID: 42611
 	private int PlayerId;
 
-	// Token: 0x0400A28A RID: 41610
+	// Token: 0x0400A674 RID: 42612
 	private ETeamGroupType GroupType;
 
-	// Token: 0x0400A28B RID: 41611
+	// Token: 0x0400A675 RID: 42613
 	private readonly List<SceneTeamRole> RoleList = new List<SceneTeamRole>();
 
-	// Token: 0x0400A28C RID: 41612
+	// Token: 0x0400A676 RID: 42614
 	[Nullable(2)]
 	private SceneTeamRole CurrentRole;
 
-	// Token: 0x0400A28D RID: 41613
+	// Token: 0x0400A677 RID: 42615
 	public bool IsFixedLocation;
 
-	// Token: 0x0400A28E RID: 41614
+	// Token: 0x0400A678 RID: 42616
 	private ETeamLivingState LivingState;
 }

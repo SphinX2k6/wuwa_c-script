@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FeedbackReward
 {
-	// Token: 0x02005A8A RID: 23178
+	// Token: 0x02004A66 RID: 19046
 	internal class TaskItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603AB47 RID: 240455 RVA: 0x00DFBCF0 File Offset: 0x00DF9EF0
+		// Token: 0x0602FA90 RID: 195216 RVA: 0x00D4C284 File Offset: 0x00D4A484
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603AB48 RID: 240456 RVA: 0x00DFBE3C File Offset: 0x00DFA03C
+		// Token: 0x0602FA91 RID: 195217 RVA: 0x00D4C3D0 File Offset: 0x00D4A5D0
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			GivebackTask? givebackTaskById = FeedbackRewardConfig.Instance.GetGivebackTaskById(data);
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			base.GetButton(0).RootUIComp.Get().SetUIActive(this.HelpId > 0);
 		}
 
-		// Token: 0x0603AB49 RID: 240457 RVA: 0x00DFBF6F File Offset: 0x00DFA16F
+		// Token: 0x0602FA92 RID: 195218 RVA: 0x00D4C503 File Offset: 0x00D4A703
 		private void OnClickHelpBtn()
 		{
 			if (this.HelpId == 0)
@@ -70,25 +70,25 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			HelpController.Instance.OpenHelpById(this.HelpId);
 		}
 
-		// Token: 0x0401EA45 RID: 125509
+		// Token: 0x040194EC RID: 103660
 		private int HelpId;
 
-		// Token: 0x0200BCC2 RID: 48322
+		// Token: 0x0200A6CB RID: 42699
 		private enum ETaskItem
 		{
-			// Token: 0x04038F17 RID: 233239
+			// Token: 0x040338E2 RID: 211170
 			HelpBtn,
-			// Token: 0x04038F18 RID: 233240
+			// Token: 0x040338E3 RID: 211171
 			TitleText,
-			// Token: 0x04038F19 RID: 233241
+			// Token: 0x040338E4 RID: 211172
 			DesText,
-			// Token: 0x04038F1A RID: 233242
+			// Token: 0x040338E5 RID: 211173
 			BarSprite,
-			// Token: 0x04038F1B RID: 233243
+			// Token: 0x040338E6 RID: 211174
 			CurrentCountText,
-			// Token: 0x04038F1C RID: 233244
+			// Token: 0x040338E7 RID: 211175
 			TargetText,
-			// Token: 0x04038F1D RID: 233245
+			// Token: 0x040338E8 RID: 211176
 			FinishItem
 		}
 	}

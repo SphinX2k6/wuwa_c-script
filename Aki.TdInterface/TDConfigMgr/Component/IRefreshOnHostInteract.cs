@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000670 RID: 1648
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200070D RID: 1805
 	public class IRefreshOnHostInteract : IRefreshConditionBase
 	{
-		// Token: 0x0600233E RID: 9022 RVA: 0x00060668 File Offset: 0x0005E868
+		// Token: 0x06002644 RID: 9796 RVA: 0x0006737C File Offset: 0x0006557C
 		private IRefreshOnHostInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600233F RID: 9023 RVA: 0x000606A0 File Offset: 0x0005E8A0
+		// Token: 0x06002645 RID: 9797 RVA: 0x000673B4 File Offset: 0x000655B4
 		public static IRefreshOnHostInteract Create([Nullable(2)] IRefreshOnHostInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002340 RID: 9024 RVA: 0x000606B3 File Offset: 0x0005E8B3
+		// Token: 0x06002646 RID: 9798 RVA: 0x000673C7 File Offset: 0x000655C7
 		public static IRefreshOnHostInteract CreateFromSetValue([Nullable(2)] IRefreshOnHostInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002341 RID: 9025 RVA: 0x000606C6 File Offset: 0x0005E8C6
+		// Token: 0x06002647 RID: 9799 RVA: 0x000673DA File Offset: 0x000655DA
 		public new IRefreshOnHostInteract_SetValue ToSetValue()
 		{
 			return new IRefreshOnHostInteract_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000956 RID: 2390
-		// (get) Token: 0x06002342 RID: 9026 RVA: 0x000606D9 File Offset: 0x0005E8D9
-		// (set) Token: 0x06002343 RID: 9027 RVA: 0x00060704 File Offset: 0x0005E904
+		// Token: 0x17000A0D RID: 2573
+		// (get) Token: 0x06002648 RID: 9800 RVA: 0x000673ED File Offset: 0x000655ED
+		// (set) Token: 0x06002649 RID: 9801 RVA: 0x00067418 File Offset: 0x00065618
 		public override ERewardDropType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001862 RID: 6242
+		// Token: 0x04001A54 RID: 6740
 		[Nullable(2)]
 		protected new IRefreshOnHostInteract FbInstance;
 
-		// Token: 0x04001863 RID: 6243
+		// Token: 0x04001A55 RID: 6741
 		[Nullable(2)]
 		protected new IRefreshOnHostInteract_SetValue PocoInterface;
 	}

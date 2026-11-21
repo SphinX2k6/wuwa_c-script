@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,7 +11,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001216 RID: 4630
+// Token: 0x020006CA RID: 1738
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -21,7 +20,7 @@ using UnrealEngine;
 })]
 public class DailyAdventureTaskItem : GridProxyAbstract<DailyAdventureTaskData>
 {
-	// Token: 0x06007C03 RID: 31747 RVA: 0x001A2E0C File Offset: 0x001A100C
+	// Token: 0x06004F99 RID: 20377 RVA: 0x001ABA84 File Offset: 0x001A9C84
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -56,7 +55,7 @@ public class DailyAdventureTaskItem : GridProxyAbstract<DailyAdventureTaskData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007C04 RID: 31748 RVA: 0x001A2F9C File Offset: 0x001A119C
+	// Token: 0x06004F9A RID: 20378 RVA: 0x001ABC14 File Offset: 0x001A9E14
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DailyAdventureTaskItem.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -67,7 +66,7 @@ public class DailyAdventureTaskItem : GridProxyAbstract<DailyAdventureTaskData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007C05 RID: 31749 RVA: 0x001A2FE0 File Offset: 0x001A11E0
+	// Token: 0x06004F9B RID: 20379 RVA: 0x001ABC58 File Offset: 0x001A9E58
 	private UniTask CreateRewardItem(AActor item)
 	{
 		DailyAdventureTaskItem.<CreateRewardItem>d__9 <CreateRewardItem>d__;
@@ -79,7 +78,7 @@ public class DailyAdventureTaskItem : GridProxyAbstract<DailyAdventureTaskData>
 		return <CreateRewardItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007C06 RID: 31750 RVA: 0x001A302C File Offset: 0x001A122C
+	// Token: 0x06004F9C RID: 20380 RVA: 0x001ABCA4 File Offset: 0x001A9EA4
 	private void HandleRewardItemClick(MediumItemGridExtendCallback parameter)
 	{
 		if (this.Data == null)
@@ -89,13 +88,13 @@ public class DailyAdventureTaskItem : GridProxyAbstract<DailyAdventureTaskData>
 		if (this.Data.TaskState != ERewardState.FinishedAndUnClaimed)
 		{
 			IItemGridData itemGridData = parameter.Data as IItemGridData;
-			ItemController.Instance.OpenItemTipsByItemId(itemGridData.Item.ItemData.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(itemGridData.Item.ItemData.ItemId, true, null, false);
 			return;
 		}
 		ActivityDailyAdventureController.Instance.RequestTaskReward(this.Data.TaskId);
 	}
 
-	// Token: 0x06007C07 RID: 31751 RVA: 0x001A3090 File Offset: 0x001A1290
+	// Token: 0x06004F9D RID: 20381 RVA: 0x001ABD08 File Offset: 0x001A9F08
 	public override void Refresh(DailyAdventureTaskData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -104,7 +103,7 @@ public class DailyAdventureTaskItem : GridProxyAbstract<DailyAdventureTaskData>
 		{
 			return;
 		}
-		List<string> list = dailyAdventureTaskConfig.Value.TaskFunc().ToList<string>();
+		List<string> list = new List<string>(dailyAdventureTaskConfig.Value.TaskFunc());
 		if (list.Count >= 1)
 		{
 			this.TaskJumpType = (EDailyAdventureTaskJumpType)int.Parse(list[0]);
@@ -161,7 +160,7 @@ public class DailyAdventureTaskItem : GridProxyAbstract<DailyAdventureTaskData>
 		this.RefreshState(data.TaskState);
 	}
 
-	// Token: 0x06007C08 RID: 31752 RVA: 0x001A3318 File Offset: 0x001A1518
+	// Token: 0x06004F9E RID: 20382 RVA: 0x001ABF90 File Offset: 0x001AA190
 	private void RefreshState(ERewardState state)
 	{
 		switch (state)
@@ -195,7 +194,7 @@ public class DailyAdventureTaskItem : GridProxyAbstract<DailyAdventureTaskData>
 		}
 	}
 
-	// Token: 0x06007C09 RID: 31753 RVA: 0x001A341C File Offset: 0x001A161C
+	// Token: 0x06004F9F RID: 20383 RVA: 0x001AC094 File Offset: 0x001AA294
 	private void SetTextChangeColor(bool useChangeColor)
 	{
 		UUIItem text = base.GetText(3);
@@ -203,7 +202,7 @@ public class DailyAdventureTaskItem : GridProxyAbstract<DailyAdventureTaskData>
 		text.SetChangeColor(useChangeColor, fcolor);
 	}
 
-	// Token: 0x06007C0A RID: 31754 RVA: 0x001A344C File Offset: 0x001A164C
+	// Token: 0x06004FA0 RID: 20384 RVA: 0x001AC0C4 File Offset: 0x001AA2C4
 	private void SetIconChangeColor(bool useChangeColor)
 	{
 		UUIItem sprite = base.GetSprite(2);
@@ -211,7 +210,7 @@ public class DailyAdventureTaskItem : GridProxyAbstract<DailyAdventureTaskData>
 		sprite.SetChangeColor(useChangeColor, fcolor);
 	}
 
-	// Token: 0x06007C0B RID: 31755 RVA: 0x001A347A File Offset: 0x001A167A
+	// Token: 0x06004FA1 RID: 20385 RVA: 0x001AC0F2 File Offset: 0x001AA2F2
 	private void ButtonJump()
 	{
 		if (this.Data == null || this.Data.TaskState != ERewardState.Progress)
@@ -221,7 +220,7 @@ public class DailyAdventureTaskItem : GridProxyAbstract<DailyAdventureTaskData>
 		DailyAdventureTaskController.Instance.TrackTaskByType(this.TaskJumpType, this.TaskJumpParams.ToArray());
 	}
 
-	// Token: 0x06007C0C RID: 31756 RVA: 0x001A34AE File Offset: 0x001A16AE
+	// Token: 0x06004FA2 RID: 20386 RVA: 0x001AC126 File Offset: 0x001AA326
 	private void ButtonReward()
 	{
 		if (this.Data == null || this.Data.TaskState != ERewardState.FinishedAndUnClaimed)
@@ -231,52 +230,52 @@ public class DailyAdventureTaskItem : GridProxyAbstract<DailyAdventureTaskData>
 		ActivityDailyAdventureController.Instance.RequestTaskReward(this.Data.TaskId);
 	}
 
-	// Token: 0x040038C9 RID: 14537
+	// Token: 0x04003962 RID: 14690
 	[Nullable(2)]
 	private DailyAdventureTaskData Data;
 
-	// Token: 0x040038CA RID: 14538
+	// Token: 0x04003963 RID: 14691
 	[Nullable(2)]
 	private DailyAdventureSmallGridItem RewardItemGrid;
 
-	// Token: 0x040038CB RID: 14539
+	// Token: 0x04003964 RID: 14692
 	protected EDailyAdventureTaskJumpType TaskJumpType = EDailyAdventureTaskJumpType.Normal;
 
-	// Token: 0x040038CC RID: 14540
+	// Token: 0x04003965 RID: 14693
 	protected List<string> TaskJumpParams = new List<string>();
 
-	// Token: 0x040038CD RID: 14541
+	// Token: 0x04003966 RID: 14694
 	private const float NORMAL_BG_ALPHA = 1f;
 
-	// Token: 0x040038CE RID: 14542
+	// Token: 0x04003967 RID: 14695
 	private const float CLAMIED_BG_ALPHA = 0.5f;
 
-	// Token: 0x020077F7 RID: 30711
+	// Token: 0x02006982 RID: 27010
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040278B3 RID: 161971
+		// Token: 0x04022BE4 RID: 142308
 		public const int ButtonReward = 0;
 
-		// Token: 0x040278B4 RID: 161972
+		// Token: 0x04022BE5 RID: 142309
 		public const int Item = 1;
 
-		// Token: 0x040278B5 RID: 161973
+		// Token: 0x04022BE6 RID: 142310
 		public const int SpriteIcon = 2;
 
-		// Token: 0x040278B6 RID: 161974
+		// Token: 0x04022BE7 RID: 142311
 		public const int TxtName = 3;
 
-		// Token: 0x040278B7 RID: 161975
+		// Token: 0x04022BE8 RID: 142312
 		public const int TxtInfo = 4;
 
-		// Token: 0x040278B8 RID: 161976
+		// Token: 0x04022BE9 RID: 142313
 		public const int ButtonJump = 5;
 
-		// Token: 0x040278B9 RID: 161977
+		// Token: 0x04022BEA RID: 142314
 		public const int SpriteBg = 6;
 
-		// Token: 0x040278BA RID: 161978
+		// Token: 0x04022BEB RID: 142315
 		public const int TxtOngoing = 7;
 	}
 }

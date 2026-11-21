@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061E3 RID: 25059
+	// Token: 0x02005161 RID: 20833
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoadBookTabItemBase : UiPanelBase
 	{
-		// Token: 0x0603F42A RID: 259114 RVA: 0x00F49369 File Offset: 0x00F47569
+		// Token: 0x060340EB RID: 213227 RVA: 0x00E902C1 File Offset: 0x00E8E4C1
 		public RoadBookTabItemBase(ActivityRoadBookData activityBaseData)
 		{
 			this.ActivityBaseData = activityBaseData;
 		}
 
-		// Token: 0x0603F42B RID: 259115 RVA: 0x00F49378 File Offset: 0x00F47578
+		// Token: 0x060340EC RID: 213228 RVA: 0x00E902D0 File Offset: 0x00E8E4D0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F42C RID: 259116 RVA: 0x00F49421 File Offset: 0x00F47621
+		// Token: 0x060340ED RID: 213229 RVA: 0x00E90379 File Offset: 0x00E8E579
 		private void OnToggleSelectOn(EToggleState toggleState)
 		{
 			if (this.Data != null)
@@ -48,28 +48,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F42D RID: 259117 RVA: 0x00F49448 File Offset: 0x00F47648
+		// Token: 0x060340EE RID: 213230 RVA: 0x00E903A0 File Offset: 0x00E8E5A0
 		public void SetToggleState(bool bOn, bool bFireEvent)
 		{
 			EToggleState state = bOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleState(state, bFireEvent, false, false);
 		}
 
-		// Token: 0x0603F42E RID: 259118 RVA: 0x00F4946E File Offset: 0x00F4766E
+		// Token: 0x060340EF RID: 213231 RVA: 0x00E903C6 File Offset: 0x00E8E5C6
 		public virtual void RefreshByData(RoadBookAreaData data, int index)
 		{
 			this.Data = data;
 			this.Index = index;
 		}
 
-		// Token: 0x04020FC8 RID: 135112
+		// Token: 0x0401B8F7 RID: 112887
 		[Nullable(2)]
 		protected RoadBookAreaData Data;
 
-		// Token: 0x04020FC9 RID: 135113
+		// Token: 0x0401B8F8 RID: 112888
 		protected int Index;
 
-		// Token: 0x04020FCA RID: 135114
+		// Token: 0x0401B8F9 RID: 112889
 		[Nullable(new byte[]
 		{
 			2,
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 		})]
 		public Action<RoadBookAreaData, int> SelectedCallBack;
 
-		// Token: 0x04020FCB RID: 135115
+		// Token: 0x0401B8FA RID: 112890
 		protected ActivityRoadBookData ActivityBaseData;
 	}
 }

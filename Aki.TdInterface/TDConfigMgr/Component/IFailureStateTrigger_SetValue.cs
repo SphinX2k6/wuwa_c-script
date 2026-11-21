@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000371 RID: 881
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003BA RID: 954
 	public class IFailureStateTrigger_SetValue
 	{
-		// Token: 0x04000E5D RID: 3677
+		// Token: 0x04000F54 RID: 3924
 		public List<IEntityGroupFailureCondition> FailureConditions;
 
-		// Token: 0x04000E5E RID: 3678
+		// Token: 0x04000F55 RID: 3925
 		public IOperationsAfterEntityGroupFailure FailureOperations;
 	}
 }

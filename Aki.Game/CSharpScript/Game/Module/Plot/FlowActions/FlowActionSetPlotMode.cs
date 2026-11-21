@@ -14,12 +14,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050D5 RID: 20693
+	// Token: 0x020040A5 RID: 16549
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FlowActionSetPlotMode : FlowActionBase
 	{
-		// Token: 0x06034F41 RID: 216897 RVA: 0x00C8B1DC File Offset: 0x00C893DC
+		// Token: 0x06029E3A RID: 171578 RVA: 0x00BD84C4 File Offset: 0x00BD66C4
 		protected unsafe override void OnExecute()
 		{
 			this.DelayBlendInDialogueCamera = this.Context.HasAdjustCamera;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}).Forget();
 		}
 
-		// Token: 0x06034F42 RID: 216898 RVA: 0x00C8B488 File Offset: 0x00C89688
+		// Token: 0x06029E3B RID: 171579 RVA: 0x00BD8770 File Offset: 0x00BD6970
 		[NullableContext(1)]
 		private UniTask HandleViewAsync(SetPlotMode inSetPlotMode)
 		{
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			return <HandleViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F43 RID: 216899 RVA: 0x00C8B4D4 File Offset: 0x00C896D4
+		// Token: 0x06029E3C RID: 171580 RVA: 0x00BD87BC File Offset: 0x00BD69BC
 		private UniTask LoadTypeAsync()
 		{
 			FlowActionSetPlotMode.<LoadTypeAsync>d__12 <LoadTypeAsync>d__;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			return <LoadTypeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F44 RID: 216900 RVA: 0x00C8B510 File Offset: 0x00C89710
+		// Token: 0x06029E3D RID: 171581 RVA: 0x00BD87F8 File Offset: 0x00BD69F8
 		private UniTask WaitInteractTurnAndChangeRoleAsync()
 		{
 			FlowActionSetPlotMode.<WaitInteractTurnAndChangeRoleAsync>d__13 <WaitInteractTurnAndChangeRoleAsync>d__;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			return <WaitInteractTurnAndChangeRoleAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F45 RID: 216901 RVA: 0x00C8B554 File Offset: 0x00C89754
+		// Token: 0x06029E3E RID: 171582 RVA: 0x00BD883C File Offset: 0x00BD6A3C
 		private UniTask OpenViewAsync()
 		{
 			FlowActionSetPlotMode.<OpenViewAsync>d__14 <OpenViewAsync>d__;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			return <OpenViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F46 RID: 216902 RVA: 0x00C8B598 File Offset: 0x00C89798
+		// Token: 0x06029E3F RID: 171583 RVA: 0x00BD8880 File Offset: 0x00BD6A80
 		private UniTask PreloadSequenceUiAsync()
 		{
 			FlowActionSetPlotMode.<PreloadSequenceUiAsync>d__15 <PreloadSequenceUiAsync>d__;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			return <PreloadSequenceUiAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F47 RID: 216903 RVA: 0x00C8B5DC File Offset: 0x00C897DC
+		// Token: 0x06029E40 RID: 171584 RVA: 0x00BD88C4 File Offset: 0x00BD6AC4
 		private UniTask WaitFadeIn()
 		{
 			FlowActionSetPlotMode.<WaitFadeIn>d__16 <WaitFadeIn>d__;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			return <WaitFadeIn>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F48 RID: 216904 RVA: 0x00C8B620 File Offset: 0x00C89820
+		// Token: 0x06029E41 RID: 171585 RVA: 0x00BD8908 File Offset: 0x00BD6B08
 		private UniTask WaitInteractTurnPromise()
 		{
 			FlowActionSetPlotMode.<WaitInteractTurnPromise>d__17 <WaitInteractTurnPromise>d__;
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			return <WaitInteractTurnPromise>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F49 RID: 216905 RVA: 0x00C8B664 File Offset: 0x00C89864
+		// Token: 0x06029E42 RID: 171586 RVA: 0x00BD894C File Offset: 0x00BD6B4C
 		private void OnCheckTurn(float deltaTime)
 		{
 			if (InteractionModel.Instance.IsInteractionTurning && this.WaitTurnTime < 3000f)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			this.WaitTurnPromise = null;
 		}
 
-		// Token: 0x06034F4A RID: 216906 RVA: 0x00C8B6D0 File Offset: 0x00C898D0
+		// Token: 0x06029E43 RID: 171587 RVA: 0x00BD89B8 File Offset: 0x00BD6BB8
 		private UniTask CheckPosSafe()
 		{
 			FlowActionSetPlotMode.<CheckPosSafe>d__19 <CheckPosSafe>d__;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			return <CheckPosSafe>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F4B RID: 216907 RVA: 0x00C8B714 File Offset: 0x00C89914
+		// Token: 0x06029E44 RID: 171588 RVA: 0x00BD89FC File Offset: 0x00BD6BFC
 		private void OnTeleportComplete(TeleportContext context = null)
 		{
 			global::Log.Instance.Info(ELogModule.Plot, ELogAuthor.FZX, "剧情前保底传送 -结束", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			teleportPromise.SetResult();
 		}
 
-		// Token: 0x06034F4C RID: 216908 RVA: 0x00C8B750 File Offset: 0x00C89950
+		// Token: 0x06029E45 RID: 171589 RVA: 0x00BD8A38 File Offset: 0x00BD6C38
 		protected override void OnInterruptExecute()
 		{
 			if (EventSystem.Instance.Has<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete)))
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}
 		}
 
-		// Token: 0x06034F4D RID: 216909 RVA: 0x00C8B7A0 File Offset: 0x00C899A0
+		// Token: 0x06029E46 RID: 171590 RVA: 0x00BD8A88 File Offset: 0x00BD6C88
 		protected override void OnBackgroundExecute()
 		{
 			SetPlotMode setPlotMode = this.ActionInfo.Params as SetPlotMode;
@@ -208,34 +208,34 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x0401C30E RID: 115470
+		// Token: 0x04016D3F RID: 93503
 		private const float GUARANTEED_WAIT_TIME = 3000f;
 
-		// Token: 0x0401C30F RID: 115471
+		// Token: 0x04016D40 RID: 93504
 		private const float DEFAULT_FADE_DURATION = 0.5f;
 
-		// Token: 0x0401C310 RID: 115472
+		// Token: 0x04016D41 RID: 93505
 		private const float SAFE_DISTANCE_SQAURED = 3000f;
 
-		// Token: 0x0401C311 RID: 115473
+		// Token: 0x04016D42 RID: 93506
 		private bool DelayBlendInDialogueCamera;
 
-		// Token: 0x0401C312 RID: 115474
+		// Token: 0x04016D43 RID: 93507
 		private CustomPromise WaitTurnPromise;
 
-		// Token: 0x0401C313 RID: 115475
+		// Token: 0x04016D44 RID: 93508
 		private int WaitTurnTicker = -1;
 
-		// Token: 0x0401C314 RID: 115476
+		// Token: 0x04016D45 RID: 93509
 		private float WaitTurnTime;
 
-		// Token: 0x0401C315 RID: 115477
+		// Token: 0x04016D46 RID: 93510
 		private FadeInScreen NeedFade;
 
-		// Token: 0x0401C316 RID: 115478
+		// Token: 0x04016D47 RID: 93511
 		private CustomPromise TeleportPromise;
 
-		// Token: 0x0401C317 RID: 115479
+		// Token: 0x04016D48 RID: 93512
 		[Nullable(new byte[]
 		{
 			2,

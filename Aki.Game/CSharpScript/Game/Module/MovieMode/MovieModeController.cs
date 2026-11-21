@@ -11,14 +11,14 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.MovieMode
 {
-	// Token: 0x0200537D RID: 21373
+	// Token: 0x02004360 RID: 17248
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class MovieModeController : UiControllerBase
 	{
-		// Token: 0x17008361 RID: 33633
-		// (get) Token: 0x06036993 RID: 223635 RVA: 0x00CEDEF4 File Offset: 0x00CEC0F4
+		// Token: 0x1700572D RID: 22317
+		// (get) Token: 0x0602B8D9 RID: 178393 RVA: 0x00C3CE1C File Offset: 0x00C3B01C
 		protected override bool IsTickEvenPausedInternal
 		{
 			get
@@ -27,13 +27,13 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x06036994 RID: 223636 RVA: 0x00CEDEF7 File Offset: 0x00CEC0F7
+		// Token: 0x0602B8DA RID: 178394 RVA: 0x00C3CE1F File Offset: 0x00C3B01F
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x06036995 RID: 223637 RVA: 0x00CEDEFC File Offset: 0x00CEC0FC
+		// Token: 0x0602B8DB RID: 178395 RVA: 0x00C3CE24 File Offset: 0x00C3B024
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.PlotSequenceStarted, new Action(this.PlotSequenceStarted));
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			EventSystem.Instance.Add(EEventName.UIViewPortSizeChanged, new Action(this.OnUiViewPortSizeChanged));
 		}
 
-		// Token: 0x06036996 RID: 223638 RVA: 0x00CEDF5C File Offset: 0x00CEC15C
+		// Token: 0x0602B8DC RID: 178396 RVA: 0x00C3CE84 File Offset: 0x00C3B084
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.PlotSequenceStarted, new Action(this.PlotSequenceStarted));
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			EventSystem.Instance.Remove(EEventName.UIViewPortSizeChanged, new Action(this.OnUiViewPortSizeChanged));
 		}
 
-		// Token: 0x06036997 RID: 223639 RVA: 0x00CEDFBA File Offset: 0x00CEC1BA
+		// Token: 0x0602B8DD RID: 178397 RVA: 0x00C3CEE2 File Offset: 0x00C3B0E2
 		private void OnUiViewPortSizeChanged()
 		{
 			MovieModeAspectView movieModeAspectView = this.MovieModeAspectView;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			movieModeAspectView.UpdateTransform();
 		}
 
-		// Token: 0x06036998 RID: 223640 RVA: 0x00CEDFCC File Offset: 0x00CEC1CC
+		// Token: 0x0602B8DE RID: 178398 RVA: 0x00C3CEF4 File Offset: 0x00C3B0F4
 		public int AddTick(Action<float> handle)
 		{
 			this.TickHandleId++;
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.Module.MovieMode
 			return this.TickHandleId;
 		}
 
-		// Token: 0x06036999 RID: 223641 RVA: 0x00CEDFF4 File Offset: 0x00CEC1F4
+		// Token: 0x0602B8DF RID: 178399 RVA: 0x00C3CF1C File Offset: 0x00C3B11C
 		public void RemoveTick(int id)
 		{
 			this.TickGroup.Remove(id);
 		}
 
-		// Token: 0x0603699A RID: 223642 RVA: 0x00CEE004 File Offset: 0x00CEC204
+		// Token: 0x0602B8E0 RID: 178400 RVA: 0x00C3CF2C File Offset: 0x00C3B12C
 		protected override void OnTick(float delta)
 		{
 			if (this.TickGroup.Count <= 0)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x0603699B RID: 223643 RVA: 0x00CEE06C File Offset: 0x00CEC26C
+		// Token: 0x0602B8E1 RID: 178401 RVA: 0x00C3CF94 File Offset: 0x00C3B194
 		public UniTask EnterMovieMode(IEnterMovieModeParams param, [Nullable(2)] Action<bool> callBack = null)
 		{
 			MovieModeController.<EnterMovieMode>d__15 <EnterMovieMode>d__;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			return <EnterMovieMode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603699C RID: 223644 RVA: 0x00CEE0C0 File Offset: 0x00CEC2C0
+		// Token: 0x0602B8E2 RID: 178402 RVA: 0x00C3CFE8 File Offset: 0x00C3B1E8
 		private UniTask ExecuteEnter(IEnterMovieModeParams param)
 		{
 			MovieModeController.<ExecuteEnter>d__16 <ExecuteEnter>d__;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			return <ExecuteEnter>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603699D RID: 223645 RVA: 0x00CEE10C File Offset: 0x00CEC30C
+		// Token: 0x0602B8E3 RID: 178403 RVA: 0x00C3D034 File Offset: 0x00C3B234
 		public UniTask ExitMovieMode(IExitMovieModeParams param, [Nullable(2)] Action<bool> callBack = null)
 		{
 			MovieModeController.<ExitMovieMode>d__17 <ExitMovieMode>d__;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			return <ExitMovieMode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603699E RID: 223646 RVA: 0x00CEE160 File Offset: 0x00CEC360
+		// Token: 0x0602B8E4 RID: 178404 RVA: 0x00C3D088 File Offset: 0x00C3B288
 		private UniTask ExecuteExit(IExitMovieModeParams param)
 		{
 			MovieModeController.<ExecuteExit>d__18 <ExecuteExit>d__;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			return <ExecuteExit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603699F RID: 223647 RVA: 0x00CEE1AC File Offset: 0x00CEC3AC
+		// Token: 0x0602B8E5 RID: 178405 RVA: 0x00C3D0D4 File Offset: 0x00C3B2D4
 		public UniTask CreateAspectView(IEnterMovieModeParams param)
 		{
 			MovieModeController.<CreateAspectView>d__19 <CreateAspectView>d__;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			return <CreateAspectView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060369A0 RID: 223648 RVA: 0x00CEE1F8 File Offset: 0x00CEC3F8
+		// Token: 0x0602B8E6 RID: 178406 RVA: 0x00C3D120 File Offset: 0x00C3B320
 		public UniTask RemoveAspectView(IExitMovieModeParams param)
 		{
 			MovieModeController.<RemoveAspectView>d__20 <RemoveAspectView>d__;
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			return <RemoveAspectView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060369A1 RID: 223649 RVA: 0x00CEE244 File Offset: 0x00CEC444
+		// Token: 0x0602B8E7 RID: 178407 RVA: 0x00C3D16C File Offset: 0x00C3B36C
 		public UniTask CreateUiView(IEnterMovieModeParams param)
 		{
 			MovieModeController.<CreateUiView>d__21 <CreateUiView>d__;
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			return <CreateUiView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060369A2 RID: 223650 RVA: 0x00CEE28F File Offset: 0x00CEC48F
+		// Token: 0x0602B8E8 RID: 178408 RVA: 0x00C3D1B7 File Offset: 0x00C3B3B7
 		public void RemoveUiView()
 		{
 			MovieModeUiView movieModeUiView = this.MovieModeUiView;
@@ -184,14 +184,14 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.MovieModeUiView = null;
 		}
 
-		// Token: 0x060369A3 RID: 223651 RVA: 0x00CEE2AA File Offset: 0x00CEC4AA
+		// Token: 0x0602B8E9 RID: 178409 RVA: 0x00C3D1D2 File Offset: 0x00C3B3D2
 		public bool IsHorizontalBlackBarsVisible()
 		{
 			MovieModeAspectView movieModeAspectView = this.MovieModeAspectView;
 			return movieModeAspectView != null && movieModeAspectView.IsHorizontalBlackBarsVisible();
 		}
 
-		// Token: 0x060369A4 RID: 223652 RVA: 0x00CEE2BD File Offset: 0x00CEC4BD
+		// Token: 0x0602B8EA RID: 178410 RVA: 0x00C3D1E5 File Offset: 0x00C3B3E5
 		[NullableContext(2)]
 		public IMovieModeAspectOffset GetAspectOffset()
 		{
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			return movieModeAspectView.GetAspectOffset();
 		}
 
-		// Token: 0x060369A5 RID: 223653 RVA: 0x00CEE2D0 File Offset: 0x00CEC4D0
+		// Token: 0x0602B8EB RID: 178411 RVA: 0x00C3D1F8 File Offset: 0x00C3B3F8
 		private void CancelEnterMovieMode()
 		{
 			global::Log.Instance.Info(ELogModule.MovieMode, ELogAuthor.CB, "取消进入电影模式", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.CurrentState = EMovieModeState.CancelEnter;
 		}
 
-		// Token: 0x060369A6 RID: 223654 RVA: 0x00CEE314 File Offset: 0x00CEC514
+		// Token: 0x0602B8EC RID: 178412 RVA: 0x00C3D23C File Offset: 0x00C3B43C
 		private void ReEnterMovieMode()
 		{
 			global::Log.Instance.Info(ELogModule.MovieMode, ELogAuthor.CB, "重新进入电影模式", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.CurrentState = EMovieModeState.Entering;
 		}
 
-		// Token: 0x060369A7 RID: 223655 RVA: 0x00CEE358 File Offset: 0x00CEC558
+		// Token: 0x0602B8ED RID: 178413 RVA: 0x00C3D280 File Offset: 0x00C3B480
 		private unsafe void PlayMovieCamera(IEnterMovieModeParams param)
 		{
 			if (param.MovieCameraConfig == null)
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x060369A8 RID: 223656 RVA: 0x00CEE444 File Offset: 0x00CEC644
+		// Token: 0x0602B8EE RID: 178414 RVA: 0x00C3D36C File Offset: 0x00C3B56C
 		private UniTask StopMovieCamera()
 		{
 			MovieModeController.<StopMovieCamera>d__28 <StopMovieCamera>d__;
@@ -283,14 +283,14 @@ namespace CSharpScript.Game.Module.MovieMode
 			return <StopMovieCamera>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060369A9 RID: 223657 RVA: 0x00CEE480 File Offset: 0x00CEC680
+		// Token: 0x0602B8EF RID: 178415 RVA: 0x00C3D3A8 File Offset: 0x00C3B5A8
 		public void ResumeMovieCamera()
 		{
 			CameraModel.Instance.MainModel.ResumeMovieCamera();
 			global::Log.Instance.Info(ELogModule.MovieMode, ELogAuthor.CB, "[电影镜头]通过MovieModeController恢复电影镜头播放", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060369AA RID: 223658 RVA: 0x00CEE4BC File Offset: 0x00CEC6BC
+		// Token: 0x0602B8F0 RID: 178416 RVA: 0x00C3D3E4 File Offset: 0x00C3B5E4
 		public UniTask PlaySpecialMovieCamera(string specialRowName)
 		{
 			MovieModeController.<PlaySpecialMovieCamera>d__30 <PlaySpecialMovieCamera>d__;
@@ -301,13 +301,13 @@ namespace CSharpScript.Game.Module.MovieMode
 			return <PlaySpecialMovieCamera>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060369AB RID: 223659 RVA: 0x00CEE4FF File Offset: 0x00CEC6FF
+		// Token: 0x0602B8F1 RID: 178417 RVA: 0x00C3D427 File Offset: 0x00C3B627
 		public bool IsPlayingSpecialMovieCamera(string specialRowName)
 		{
 			return CameraModel.Instance.MainModel.IsPlayingSpecialMovieCamera(specialRowName);
 		}
 
-		// Token: 0x060369AC RID: 223660 RVA: 0x00CEE511 File Offset: 0x00CEC711
+		// Token: 0x0602B8F2 RID: 178418 RVA: 0x00C3D439 File Offset: 0x00C3B639
 		public void ResetMovieModeHideUi(bool isHide)
 		{
 			if (MovieModeModel.Instance.IsFreezingUi)
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			movieModeUiView.ActivateTimer();
 		}
 
-		// Token: 0x060369AD RID: 223661 RVA: 0x00CEE544 File Offset: 0x00CEC744
+		// Token: 0x0602B8F3 RID: 178419 RVA: 0x00C3D46C File Offset: 0x00C3B66C
 		private void PlotSequenceStarted()
 		{
 			MovieModeUiView movieModeUiView = this.MovieModeUiView;
@@ -347,7 +347,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x060369AE RID: 223662 RVA: 0x00CEE5C0 File Offset: 0x00CEC7C0
+		// Token: 0x0602B8F4 RID: 178420 RVA: 0x00C3D4E8 File Offset: 0x00C3B6E8
 		private void PlotSequenceEnd()
 		{
 			MovieModeUiView movieModeUiView = this.MovieModeUiView;
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x060369AF RID: 223663 RVA: 0x00CEE60E File Offset: 0x00CEC80E
+		// Token: 0x0602B8F5 RID: 178421 RVA: 0x00C3D536 File Offset: 0x00C3B736
 		public void ClearViews()
 		{
 			if (this.MovieModeAspectView != null)
@@ -379,13 +379,13 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.CurrentState = EMovieModeState.Idle;
 		}
 
-		// Token: 0x060369B0 RID: 223664 RVA: 0x00CEE64D File Offset: 0x00CEC84D
+		// Token: 0x0602B8F6 RID: 178422 RVA: 0x00C3D575 File Offset: 0x00C3B775
 		public bool IsInMovieMode()
 		{
 			return this.CurrentState > EMovieModeState.Idle;
 		}
 
-		// Token: 0x060369B1 RID: 223665 RVA: 0x00CEE658 File Offset: 0x00CEC858
+		// Token: 0x0602B8F7 RID: 178423 RVA: 0x00C3D580 File Offset: 0x00C3B780
 		protected override bool OnClear()
 		{
 			this.ClearViews();
@@ -393,8 +393,8 @@ namespace CSharpScript.Game.Module.MovieMode
 			return true;
 		}
 
-		// Token: 0x17008362 RID: 33634
-		// (get) Token: 0x060369B2 RID: 223666 RVA: 0x00CEE66C File Offset: 0x00CEC86C
+		// Token: 0x1700572E RID: 22318
+		// (get) Token: 0x0602B8F8 RID: 178424 RVA: 0x00C3D594 File Offset: 0x00C3B794
 		public static MovieModeController Instance
 		{
 			get
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x060369B3 RID: 223667 RVA: 0x00CEE673 File Offset: 0x00CEC873
+		// Token: 0x0602B8F9 RID: 178425 RVA: 0x00C3D59B File Offset: 0x00C3B79B
 		public static MovieModeController GetOrCreateInstance()
 		{
 			if (MovieModeController._Instance == null)
@@ -413,7 +413,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			return MovieModeController._Instance;
 		}
 
-		// Token: 0x060369B4 RID: 223668 RVA: 0x00CEE687 File Offset: 0x00CEC887
+		// Token: 0x0602B8FA RID: 178426 RVA: 0x00C3D5AF File Offset: 0x00C3B7AF
 		public static bool CreateInstance()
 		{
 			if (MovieModeController._Instance != null)
@@ -424,44 +424,44 @@ namespace CSharpScript.Game.Module.MovieMode
 			return true;
 		}
 
-		// Token: 0x060369B5 RID: 223669 RVA: 0x00CEE69D File Offset: 0x00CEC89D
+		// Token: 0x0602B8FB RID: 178427 RVA: 0x00C3D5C5 File Offset: 0x00C3B7C5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060369B6 RID: 223670 RVA: 0x00CEE69F File Offset: 0x00CEC89F
+		// Token: 0x0602B8FC RID: 178428 RVA: 0x00C3D5C7 File Offset: 0x00C3B7C7
 		public static void ResetStaticDefaultValue()
 		{
 			MovieModeController._Instance = null;
 		}
 
-		// Token: 0x060369B7 RID: 223671 RVA: 0x00CEE6A7 File Offset: 0x00CEC8A7
+		// Token: 0x0602B8FD RID: 178429 RVA: 0x00C3D5CF File Offset: 0x00C3B7CF
 		static MovieModeController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MovieModeController.CreateStaticDefaultValue), new Action(MovieModeController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401CDC5 RID: 118213
+		// Token: 0x0401785D RID: 96349
 		[Nullable(2)]
 		private MovieModeAspectView MovieModeAspectView;
 
-		// Token: 0x0401CDC6 RID: 118214
+		// Token: 0x0401785E RID: 96350
 		[Nullable(2)]
 		private MovieModeUiView MovieModeUiView;
 
-		// Token: 0x0401CDC7 RID: 118215
+		// Token: 0x0401785F RID: 96351
 		private int TickHandleId;
 
-		// Token: 0x0401CDC8 RID: 118216
+		// Token: 0x04017860 RID: 96352
 		private readonly Dictionary<int, Action<float>> TickGroup = new Dictionary<int, Action<float>>();
 
-		// Token: 0x0401CDC9 RID: 118217
+		// Token: 0x04017861 RID: 96353
 		private EMovieModeState CurrentState;
 
-		// Token: 0x0401CDCA RID: 118218
+		// Token: 0x04017862 RID: 96354
 		private bool IsAutoExitInFlowSequence;
 
-		// Token: 0x0401CDCB RID: 118219
+		// Token: 0x04017863 RID: 96355
 		[Nullable(2)]
 		private static MovieModeController _Instance;
 	}

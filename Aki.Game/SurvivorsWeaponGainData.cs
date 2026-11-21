@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x02002AF1 RID: 10993
+// Token: 0x0200206D RID: 8301
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsWeaponGainData : global::SurvivorsGainData
 {
-	// Token: 0x06016DF3 RID: 93683 RVA: 0x005CD838 File Offset: 0x005CBA38
+	// Token: 0x06014824 RID: 84004 RVA: 0x005FA3B8 File Offset: 0x005F85B8
 	public SurvivorsWeaponGainData(int incId, int configId, Aki.Protocol.SurvivorsWeapon data, ESurvivorsRogueItemType type = ESurvivorsRogueItemType.Weapon) : base(incId, configId)
 	{
 		this.Data = data;
 		this.Type = type;
 	}
 
-	// Token: 0x06016DF4 RID: 93684 RVA: 0x005CD851 File Offset: 0x005CBA51
+	// Token: 0x06014825 RID: 84005 RVA: 0x005FA3D1 File Offset: 0x005F85D1
 	public int GetCurrentEvolveId()
 	{
 		if (this.Data.Evolves.Count == 0)
@@ -26,13 +26,13 @@ public class SurvivorsWeaponGainData : global::SurvivorsGainData
 		return this.Data.Evolves[this.Data.Evolves.Count - 1];
 	}
 
-	// Token: 0x06016DF5 RID: 93685 RVA: 0x005CD889 File Offset: 0x005CBA89
+	// Token: 0x06014826 RID: 84006 RVA: 0x005FA409 File Offset: 0x005F8609
 	public void SetWeaponKillCount(int count)
 	{
 		this.Data.KillMonsterCount = count;
 	}
 
-	// Token: 0x06016DF6 RID: 93686 RVA: 0x005CD898 File Offset: 0x005CBA98
+	// Token: 0x06014827 RID: 84007 RVA: 0x005FA418 File Offset: 0x005F8618
 	public List<ISurvivorsWeaponAttributeData> GetWeaponSpecialAttributeList()
 	{
 		List<ISurvivorsWeaponAttributeData> list = new List<ISurvivorsWeaponAttributeData>();
@@ -58,6 +58,6 @@ public class SurvivorsWeaponGainData : global::SurvivorsGainData
 		return list;
 	}
 
-	// Token: 0x0400A9CE RID: 43470
+	// Token: 0x0400ADD4 RID: 44500
 	public Aki.Protocol.SurvivorsWeapon Data;
 }

@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EF2 RID: 20210
+	// Token: 0x02003EBB RID: 16059
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleMapSummaryView : UiViewBase
 	{
-		// Token: 0x06033D90 RID: 212368 RVA: 0x00C251B7 File Offset: 0x00C233B7
+		// Token: 0x06028BFB RID: 166907 RVA: 0x00B6E75F File Offset: 0x00B6C95F
 		public RogueBattleMapSummaryView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033D91 RID: 212369 RVA: 0x00C251CC File Offset: 0x00C233CC
+		// Token: 0x06028BFC RID: 166908 RVA: 0x00B6E774 File Offset: 0x00B6C974
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,19 +36,19 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033D92 RID: 212370 RVA: 0x00C25268 File Offset: 0x00C23468
+		// Token: 0x06028BFD RID: 166909 RVA: 0x00B6E810 File Offset: 0x00B6CA10
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RogueResMapSummaryTeamToBondUpdate, new Action(this.OnJumpToBondTab));
 		}
 
-		// Token: 0x06033D93 RID: 212371 RVA: 0x00C25286 File Offset: 0x00C23486
+		// Token: 0x06028BFE RID: 166910 RVA: 0x00B6E82E File Offset: 0x00B6CA2E
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RogueResMapSummaryTeamToBondUpdate, new Action(this.OnJumpToBondTab));
 		}
 
-		// Token: 0x06033D94 RID: 212372 RVA: 0x00C252A4 File Offset: 0x00C234A4
+		// Token: 0x06028BFF RID: 166911 RVA: 0x00B6E84C File Offset: 0x00B6CA4C
 		protected override void OnStart()
 		{
 			this.TsUiSceneRoleActor = UiSceneManager.Instance.InitRoleSystemRoleActor(EUiModelUseWay.RoleInRoleView);
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.InitExtendToggle();
 		}
 
-		// Token: 0x06033D95 RID: 212373 RVA: 0x00C2539C File Offset: 0x00C2359C
+		// Token: 0x06028C00 RID: 166912 RVA: 0x00B6E944 File Offset: 0x00B6CB44
 		protected override UniTask OnBeforeShowAsyncImplementImplement()
 		{
 			RogueBattleMapSummaryView.<OnBeforeShowAsyncImplementImplement>d__11 <OnBeforeShowAsyncImplementImplement>d__;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033D96 RID: 212374 RVA: 0x00C253DF File Offset: 0x00C235DF
+		// Token: 0x06028C01 RID: 166913 RVA: 0x00B6E987 File Offset: 0x00B6CB87
 		protected override void OnBeforeDestroy()
 		{
 			if (this.TabComponent != null)
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D97 RID: 212375 RVA: 0x00C253FC File Offset: 0x00C235FC
+		// Token: 0x06028C02 RID: 166914 RVA: 0x00B6E9A4 File Offset: 0x00B6CBA4
 		protected override void OnHandleLoadScene()
 		{
 			if (this.TsUiSceneRoleActor == null)
@@ -142,20 +142,20 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033D98 RID: 212376 RVA: 0x00C25481 File Offset: 0x00C23681
+		// Token: 0x06028C03 RID: 166915 RVA: 0x00B6EA29 File Offset: 0x00B6CC29
 		protected override void OnHandleReleaseScene()
 		{
 			UiSceneManager.Instance.DestroyRoleSystemRoleActor(this.TsUiSceneRoleActor);
 			this.TsUiSceneRoleActor = null;
 		}
 
-		// Token: 0x06033D99 RID: 212377 RVA: 0x00C2549B File Offset: 0x00C2369B
+		// Token: 0x06028C04 RID: 166916 RVA: 0x00B6EA43 File Offset: 0x00B6CC43
 		private void OnCloseClicked()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06033D9A RID: 212378 RVA: 0x00C254A4 File Offset: 0x00C236A4
+		// Token: 0x06028C05 RID: 166917 RVA: 0x00B6EA4C File Offset: 0x00B6CC4C
 		protected void InitTabComponent()
 		{
 			CommonTabComponentData<CommonTabItem> data = new CommonTabComponentData<CommonTabItem>(new Func<UUIItem, int?, CommonTabItem>(this.ProxyCreate), new Action<int>(this.ToggleCallBack), new Func<int, CommonTabData>(this.GetCommonData));
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.TabViewComponent = new TabViewComponent<UiDynamicTab>(base.GetItem(1), EKeyMode.Default);
 		}
 
-		// Token: 0x06033D9B RID: 212379 RVA: 0x00C25540 File Offset: 0x00C23740
+		// Token: 0x06028C06 RID: 166918 RVA: 0x00B6EAE8 File Offset: 0x00B6CCE8
 		private UniTask RefreshTabListAsync()
 		{
 			RogueBattleMapSummaryView.<RefreshTabListAsync>d__17 <RefreshTabListAsync>d__;
@@ -177,14 +177,14 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <RefreshTabListAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033D9C RID: 212380 RVA: 0x00C25584 File Offset: 0x00C23784
+		// Token: 0x06028C07 RID: 166919 RVA: 0x00B6EB2C File Offset: 0x00B6CD2C
 		private CommonTabData GetCommonData(int index)
 		{
 			UiDynamicTab uiDynamicTab = this.TabDataList[index];
 			return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 		}
 
-		// Token: 0x06033D9D RID: 212381 RVA: 0x00C255BC File Offset: 0x00C237BC
+		// Token: 0x06028C08 RID: 166920 RVA: 0x00B6EB64 File Offset: 0x00B6CD64
 		protected bool CanToggleChange(int index, bool? _)
 		{
 			if (Info.Instance.IsInGamepad())
@@ -195,13 +195,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return this.LastClickTime == null || Time.Instance.Now - this.LastClickTime.Value >= (double)intConfig.Value;
 		}
 
-		// Token: 0x06033D9E RID: 212382 RVA: 0x00C25612 File Offset: 0x00C23812
+		// Token: 0x06028C09 RID: 166921 RVA: 0x00B6EBBA File Offset: 0x00B6CDBA
 		private CommonTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new CommonTabItem();
 		}
 
-		// Token: 0x06033D9F RID: 212383 RVA: 0x00C2561C File Offset: 0x00C2381C
+		// Token: 0x06028C0A RID: 166922 RVA: 0x00B6EBC4 File Offset: 0x00B6CDC4
 		private void ToggleCallBack(int index)
 		{
 			this.LastClickTime = new double?(Time.Instance.Now);
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.CurSelectTabView = new EUiTabViewName?(euiTabViewName);
 		}
 
-		// Token: 0x06033DA0 RID: 212384 RVA: 0x00C256AC File Offset: 0x00C238AC
+		// Token: 0x06028C0B RID: 166923 RVA: 0x00B6EC54 File Offset: 0x00B6CE54
 		private void OnTeamTabShow(bool isVisible)
 		{
 			TsUiSceneRoleActor tsUiSceneRoleActor = this.TsUiSceneRoleActor;
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			item.SetUIActive(!isVisible);
 		}
 
-		// Token: 0x06033DA1 RID: 212385 RVA: 0x00C256FC File Offset: 0x00C238FC
+		// Token: 0x06028C0C RID: 166924 RVA: 0x00B6ECA4 File Offset: 0x00B6CEA4
 		private void OnTokenTabShow(bool isOpen)
 		{
 			if (!isOpen)
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033DA2 RID: 212386 RVA: 0x00C25770 File Offset: 0x00C23970
+		// Token: 0x06028C0D RID: 166925 RVA: 0x00B6ED18 File Offset: 0x00B6CF18
 		private void OnJumpToBondTab()
 		{
 			for (int i = 0; i < this.TabDataList.Count; i++)
@@ -290,13 +290,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033DA3 RID: 212387 RVA: 0x00C257C6 File Offset: 0x00C239C6
+		// Token: 0x06028C0E RID: 166926 RVA: 0x00B6ED6E File Offset: 0x00B6CF6E
 		private void OnExtendToggleStateChange(EToggleState newState)
 		{
 			RogueBattleModel.Instance.ChangeDescMode();
 		}
 
-		// Token: 0x06033DA4 RID: 212388 RVA: 0x00C257D4 File Offset: 0x00C239D4
+		// Token: 0x06028C0F RID: 166927 RVA: 0x00B6ED7C File Offset: 0x00B6CF7C
 		protected void InitExtendToggle()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(3);
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			extendToggle.OnStateChange.Add(new Action<EToggleState>(this.OnExtendToggleStateChange));
 		}
 
-		// Token: 0x0401B8C4 RID: 112836
+		// Token: 0x04016297 RID: 90775
 		[Nullable(new byte[]
 		{
 			2,
@@ -320,20 +320,20 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		protected TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-		// Token: 0x0401B8C5 RID: 112837
+		// Token: 0x04016298 RID: 90776
 		[Nullable(2)]
 		protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-		// Token: 0x0401B8C6 RID: 112838
+		// Token: 0x04016299 RID: 90777
 		private double? LastClickTime;
 
-		// Token: 0x0401B8C7 RID: 112839
+		// Token: 0x0401629A RID: 90778
 		protected List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x0401B8C8 RID: 112840
+		// Token: 0x0401629B RID: 90779
 		private EUiTabViewName? CurSelectTabView;
 
-		// Token: 0x0401B8C9 RID: 112841
+		// Token: 0x0401629C RID: 90780
 		[Nullable(2)]
 		private TsUiSceneRoleActor TsUiSceneRoleActor;
 	}

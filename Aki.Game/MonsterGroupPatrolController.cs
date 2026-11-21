@@ -10,13 +10,13 @@ using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.Module.MonsterGroup;
 using UnrealEngine;
 
-// Token: 0x020031C7 RID: 12743
+// Token: 0x02002736 RID: 10038
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class MonsterGroupPatrolController : ControllerBase
 {
-	// Token: 0x0601B74B RID: 112459 RVA: 0x00783400 File Offset: 0x00781600
+	// Token: 0x06019284 RID: 103044 RVA: 0x007AB5F0 File Offset: 0x007A97F0
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnBeforeChangeRole, new Action<EntityHandle, EntityHandle>(this.OnPlayerPatrolInterrupted));
@@ -30,7 +30,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B74C RID: 112460 RVA: 0x007834EC File Offset: 0x007816EC
+	// Token: 0x06019285 RID: 103045 RVA: 0x007AB6DC File Offset: 0x007A98DC
 	protected override void OnTick(float delta)
 	{
 		this.TickPlayerGroupPatrol(delta);
@@ -89,7 +89,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B74D RID: 112461 RVA: 0x00783660 File Offset: 0x00781860
+	// Token: 0x06019286 RID: 103046 RVA: 0x007AB850 File Offset: 0x007A9A50
 	private void TickAllGroupFollowers(float delta)
 	{
 		float num = delta * 0.001f * Time.Instance.TimeDilation * Time.Instance.FlowTimeDilation;
@@ -109,7 +109,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B74E RID: 112462 RVA: 0x00783700 File Offset: 0x00781900
+	// Token: 0x06019287 RID: 103047 RVA: 0x007AB8F0 File Offset: 0x007A9AF0
 	private void TryGenerateAllPendingMonsterGroups()
 	{
 		if (this.PendingMonsterGroups.Count == 0)
@@ -127,7 +127,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B74F RID: 112463 RVA: 0x007837B8 File Offset: 0x007819B8
+	// Token: 0x06019288 RID: 103048 RVA: 0x007AB9A8 File Offset: 0x007A9BA8
 	public unsafe void RegisterMonsterPbDataId(int groupEntityId, Entity entity, int pbDataId, GroupAiComponent groupComp)
 	{
 		MonsterGroupPatrolModel instance = MonsterGroupPatrolModel.Instance;
@@ -183,7 +183,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		this.DeltaTime = 0f;
 	}
 
-	// Token: 0x0601B750 RID: 112464 RVA: 0x007838E8 File Offset: 0x00781AE8
+	// Token: 0x06019289 RID: 103049 RVA: 0x007ABAD8 File Offset: 0x007A9CD8
 	private IPendingMonsterGroup GetOrCreatePendingMonsterGroup(int groupEntityId, GroupAiComponent groupComp)
 	{
 		IPendingMonsterGroup pendingMonsterGroup;
@@ -199,14 +199,14 @@ public class MonsterGroupPatrolController : ControllerBase
 		return pendingMonsterGroup;
 	}
 
-	// Token: 0x0601B751 RID: 112465 RVA: 0x0078392B File Offset: 0x00781B2B
+	// Token: 0x0601928A RID: 103050 RVA: 0x007ABB1B File Offset: 0x007A9D1B
 	private void AddPendingMonsterGroupMember(int groupEntityId, int pbDataId, GroupAiComponent groupComp)
 	{
 		this.GetOrCreatePendingMonsterGroup(groupEntityId, groupComp).RegisteredPbDataIds.Add(pbDataId);
 		this.DeltaTime = 0f;
 	}
 
-	// Token: 0x0601B752 RID: 112466 RVA: 0x0078394C File Offset: 0x00781B4C
+	// Token: 0x0601928B RID: 103051 RVA: 0x007ABB3C File Offset: 0x007A9D3C
 	private void TryGeneratePendingMonsterGroup(int groupEntityId)
 	{
 		MonsterGroupPatrolModel instance = MonsterGroupPatrolModel.Instance;
@@ -250,7 +250,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		this.PendingMonsterGroups.Remove(groupEntityId);
 	}
 
-	// Token: 0x0601B753 RID: 112467 RVA: 0x00783A74 File Offset: 0x00781C74
+	// Token: 0x0601928C RID: 103052 RVA: 0x007ABC64 File Offset: 0x007A9E64
 	protected override bool OnClear()
 	{
 		this.StopPlayerGroupPatrol("MonsterGroupPatrolController.OnClear");
@@ -267,7 +267,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B754 RID: 112468 RVA: 0x00783B80 File Offset: 0x00781D80
+	// Token: 0x0601928D RID: 103053 RVA: 0x007ABD70 File Offset: 0x007A9F70
 	public bool IsEntityInGroupPatrol(Entity entity)
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -283,12 +283,12 @@ public class MonsterGroupPatrolController : ControllerBase
 		{
 			return false;
 		}
-		IEntityOwnerInfo entityOwner = CreatureModel.Instance.GetEntityOwner(GameModeModel.Instance.MapConfig.MapId, component.GetPbDataId(), false);
-		if (entityOwner == null || entityOwner.Type != EEntityOwnerType.Entity)
+		IEntityOwnerEntity entityOwnerEntity = CreatureModel.Instance.GetEntityOwner(GameModeModel.Instance.MapConfig.MapId, component.GetPbDataId(), EEntityOwnerType.Entity) as IEntityOwnerEntity;
+		if (entityOwnerEntity == null)
 		{
 			return false;
 		}
-		IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?((entityOwner as IEntityOwnerEntity).EntityId), null);
+		IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(entityOwnerEntity.EntityId), null);
 		if (completeEntityData == null)
 		{
 			return false;
@@ -297,7 +297,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		return component2 != null && component2.Option.Type == EGroupAiMode.Patrol;
 	}
 
-	// Token: 0x0601B755 RID: 112469 RVA: 0x00783C38 File Offset: 0x00781E38
+	// Token: 0x0601928E RID: 103054 RVA: 0x007ABE20 File Offset: 0x007AA020
 	public void RemoveEntityFromMonsterGroup(int entityId, int pbDataId)
 	{
 		int num;
@@ -322,7 +322,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B756 RID: 112470 RVA: 0x00783CAC File Offset: 0x00781EAC
+	// Token: 0x0601928F RID: 103055 RVA: 0x007ABE94 File Offset: 0x007AA094
 	public unsafe bool TryParticipateGroupPatrol(int groupEntityId, Entity playerEntity)
 	{
 		MonsterGroupPatrolModel instance = MonsterGroupPatrolModel.Instance;
@@ -430,7 +430,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B757 RID: 112471 RVA: 0x007840EC File Offset: 0x007822EC
+	// Token: 0x06019290 RID: 103056 RVA: 0x007AC2D4 File Offset: 0x007AA4D4
 	public void StopPlayerGroupPatrol(string reason)
 	{
 		PlayerGroupPatrolSession playerPatrolSession = this.PlayerPatrolSession;
@@ -460,7 +460,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		this.SetPlayerInputBlocked(false, playerPatrolSession);
 	}
 
-	// Token: 0x0601B758 RID: 112472 RVA: 0x007841E8 File Offset: 0x007823E8
+	// Token: 0x06019291 RID: 103057 RVA: 0x007AC3D0 File Offset: 0x007AA5D0
 	private void StartPlayerPatrolEcology(PlayerGroupPatrolSession session)
 	{
 		if (session.EcologyTagApplied)
@@ -474,7 +474,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B759 RID: 112473 RVA: 0x00784248 File Offset: 0x00782448
+	// Token: 0x06019292 RID: 103058 RVA: 0x007AC430 File Offset: 0x007AA630
 	private void StopPlayerPatrolEcology(PlayerGroupPatrolSession session)
 	{
 		if (!session.EcologyTagApplied)
@@ -493,7 +493,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B75A RID: 112474 RVA: 0x007842A4 File Offset: 0x007824A4
+	// Token: 0x06019293 RID: 103059 RVA: 0x007AC48C File Offset: 0x007AA68C
 	private void BindPlayerGroupSyncTag(PlayerGroupPatrolSession session)
 	{
 		if (session.GroupSyncTagListenerActive || session.GroupOwnerPbDataId <= 0 || session.TagComp == null)
@@ -514,7 +514,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B75B RID: 112475 RVA: 0x00784368 File Offset: 0x00782568
+	// Token: 0x06019294 RID: 103060 RVA: 0x007AC550 File Offset: 0x007AA750
 	private void UnbindPlayerGroupSyncTag(PlayerGroupPatrolSession session)
 	{
 		if (session.GroupSyncTagListenerActive)
@@ -533,7 +533,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		session.GroupSyncedTagIds.Clear();
 	}
 
-	// Token: 0x0601B75C RID: 112476 RVA: 0x00784420 File Offset: 0x00782620
+	// Token: 0x06019295 RID: 103061 RVA: 0x007AC608 File Offset: 0x007AA808
 	private unsafe void OnPlayerGroupSyncTagAdded(int ownerPbDataId, int tagId)
 	{
 		PlayerGroupPatrolSession playerPatrolSession = this.PlayerPatrolSession;
@@ -558,7 +558,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		playerPatrolSession.TagComp.AddTag(new int?(tagId));
 	}
 
-	// Token: 0x0601B75D RID: 112477 RVA: 0x00784500 File Offset: 0x00782700
+	// Token: 0x06019296 RID: 103062 RVA: 0x007AC6E8 File Offset: 0x007AA8E8
 	private void OnPlayerGroupSyncTagRemoved(int ownerPbDataId, int tagId)
 	{
 		PlayerGroupPatrolSession playerPatrolSession = this.PlayerPatrolSession;
@@ -574,7 +574,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		playerPatrolSession.GroupSyncedTagIds.RemoveWhere((int syncedTagId) => GameplayTagUtils.IsChildTag(syncedTagId, tagId));
 	}
 
-	// Token: 0x0601B75E RID: 112478 RVA: 0x00784564 File Offset: 0x00782764
+	// Token: 0x06019297 RID: 103063 RVA: 0x007AC74C File Offset: 0x007AA94C
 	private void TickPlayerGroupPatrol(float deltaMilliseconds)
 	{
 		PlayerGroupPatrolSession playerPatrolSession = this.PlayerPatrolSession;
@@ -604,7 +604,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		this.TickPlayerOrdinaryFollow(playerPatrolSession, monsterGroupInfo, distance, playerArriveDistance, captainMoveState);
 	}
 
-	// Token: 0x0601B75F RID: 112479 RVA: 0x007845F0 File Offset: 0x007827F0
+	// Token: 0x06019298 RID: 103064 RVA: 0x007AC7D8 File Offset: 0x007AA9D8
 	[return: Nullable(2)]
 	private MonsterGroupInfo ValidateAndRefreshPlayerPatrol(PlayerGroupPatrolSession session)
 	{
@@ -623,7 +623,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		return monsterGroupInfo;
 	}
 
-	// Token: 0x0601B760 RID: 112480 RVA: 0x007846AC File Offset: 0x007828AC
+	// Token: 0x06019299 RID: 103065 RVA: 0x007AC894 File Offset: 0x007AAA94
 	private bool TickPlayerInitialPlacement(PlayerGroupPatrolSession session, MonsterGroupInfo group, double distance, double endDistance, global::ECharMoveState captainMoveState)
 	{
 		if (session.InitialPlacementCompleted)
@@ -657,7 +657,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B761 RID: 112481 RVA: 0x0078472C File Offset: 0x0078292C
+	// Token: 0x0601929A RID: 103066 RVA: 0x007AC914 File Offset: 0x007AAB14
 	private void StartPlayerInitialTurn(PlayerGroupPatrolSession session, MonsterGroupInfo group)
 	{
 		MonsterPatrolInfo captainInfo = group.CaptainInfo;
@@ -680,7 +680,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B762 RID: 112482 RVA: 0x007847FC File Offset: 0x007829FC
+	// Token: 0x0601929B RID: 103067 RVA: 0x007AC9E4 File Offset: 0x007AABE4
 	private void OnPlayerInitialTurnCompleted(PlayerGroupPatrolSession session)
 	{
 		if (this.PlayerPatrolSession != session || !session.InitialTurnStarted)
@@ -699,7 +699,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		this.CompletePlayerInitialPlacement(session);
 	}
 
-	// Token: 0x0601B763 RID: 112483 RVA: 0x0078485F File Offset: 0x00782A5F
+	// Token: 0x0601929C RID: 103068 RVA: 0x007ACA47 File Offset: 0x007AAC47
 	private void StopPlayerInitialTurn(PlayerGroupPatrolSession session)
 	{
 		if (!session.InitialTurnStarted)
@@ -716,7 +716,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		initialTurnAction.Abort(false);
 	}
 
-	// Token: 0x0601B764 RID: 112484 RVA: 0x0078488C File Offset: 0x00782A8C
+	// Token: 0x0601929D RID: 103069 RVA: 0x007ACA74 File Offset: 0x007AAC74
 	private void TickPlayerOrdinaryFollow(PlayerGroupPatrolSession session, MonsterGroupInfo group, double distance, double endDistance, global::ECharMoveState captainMoveState)
 	{
 		this.StopPlayerPreciseFollow(session);
@@ -738,7 +738,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		moveToLocationLogic.UpdateConfigMoveState(new global::ECharMoveState?(captainMoveState));
 	}
 
-	// Token: 0x0601B765 RID: 112485 RVA: 0x007848E4 File Offset: 0x00782AE4
+	// Token: 0x0601929E RID: 103070 RVA: 0x007ACACC File Offset: 0x007AACCC
 	private void CompletePlayerInitialPlacement(PlayerGroupPatrolSession session)
 	{
 		session.InitialPlacementPending = false;
@@ -746,7 +746,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		this.StartPlayerPatrolEcology(session);
 	}
 
-	// Token: 0x0601B766 RID: 112486 RVA: 0x007848FB File Offset: 0x00782AFB
+	// Token: 0x0601929F RID: 103071 RVA: 0x007ACAE3 File Offset: 0x007AACE3
 	private void TryStartPlayerMoveToPlaceholder(PlayerGroupPatrolSession session, MonsterGroupInfo group)
 	{
 		if (this.StartPlayerMoveToPlaceholder(session, group))
@@ -760,7 +760,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B767 RID: 112487 RVA: 0x0078492C File Offset: 0x00782B2C
+	// Token: 0x060192A0 RID: 103072 RVA: 0x007ACB14 File Offset: 0x007AAD14
 	private bool StartPlayerMoveToPlaceholder(PlayerGroupPatrolSession session, MonsterGroupInfo group)
 	{
 		if (this.PlayerPatrolSession != session)
@@ -803,7 +803,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		return session.MoveComp.MoveController.NavigateMoveToLocation(moveConfig, new bool?(true), true, "MonsterGroupPatrolController.StartPlayerMoveToPlaceholder");
 	}
 
-	// Token: 0x0601B768 RID: 112488 RVA: 0x00784A60 File Offset: 0x00782C60
+	// Token: 0x060192A1 RID: 103073 RVA: 0x007ACC48 File Offset: 0x007AAE48
 	private unsafe void OnPlayerMoveToPlaceholderResult(PlayerGroupPatrolSession session, ELevelEventState result)
 	{
 		if (this.PlayerPatrolSession != session || result == ELevelEventState.Running)
@@ -836,7 +836,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B769 RID: 112489 RVA: 0x00784B60 File Offset: 0x00782D60
+	// Token: 0x060192A2 RID: 103074 RVA: 0x007ACD48 File Offset: 0x007AAF48
 	private void UpdatePlayerMoveSpeed(PlayerGroupPatrolSession session, MonsterGroupInfo group, double distance, double endDistance)
 	{
 		float captainMaxSpeed = group.GetCaptainMaxSpeed();
@@ -848,7 +848,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		session.MoveComp.SetMaxSpeed((float)((double)captainMaxSpeed * num));
 	}
 
-	// Token: 0x0601B76A RID: 112490 RVA: 0x00784BB0 File Offset: 0x00782DB0
+	// Token: 0x060192A3 RID: 103075 RVA: 0x007ACD98 File Offset: 0x007AAF98
 	private void UpdatePlayerOrdinaryFollowSpeed(PlayerGroupPatrolSession session, MonsterGroupInfo group, double distance, double endDistance)
 	{
 		float captainMaxSpeed = group.GetCaptainMaxSpeed();
@@ -870,7 +870,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		session.MoveComp.SetMaxSpeed((float)((double)captainMaxSpeed * num));
 	}
 
-	// Token: 0x0601B76B RID: 112491 RVA: 0x00784C37 File Offset: 0x00782E37
+	// Token: 0x060192A4 RID: 103076 RVA: 0x007ACE1F File Offset: 0x007AB01F
 	private void StartPlayerPreciseFollow(PlayerGroupPatrolSession session)
 	{
 		if (session.PreciseFollowActive)
@@ -882,7 +882,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		session.MoveComp.SetMaxSpeed(session.OriginalMaxSpeed);
 	}
 
-	// Token: 0x0601B76C RID: 112492 RVA: 0x00784C6A File Offset: 0x00782E6A
+	// Token: 0x060192A5 RID: 103077 RVA: 0x007ACE52 File Offset: 0x007AB052
 	private void StopPlayerPreciseFollow(PlayerGroupPatrolSession session)
 	{
 		if (!session.PreciseFollowActive)
@@ -898,7 +898,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B76D RID: 112493 RVA: 0x00784CAC File Offset: 0x00782EAC
+	// Token: 0x060192A6 RID: 103078 RVA: 0x007ACE94 File Offset: 0x007AB094
 	private void TickPlayerPreciseFollow(PlayerGroupPatrolSession session, MonsterGroupInfo group, double distance, double endDistance, float deltaMilliseconds)
 	{
 		BaseMoveComponent moveComp = session.MoveComp;
@@ -927,7 +927,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		float num = Math.Min(deltaMilliseconds * 0.001f * Time.Instance.TimeDilation * Time.Instance.FlowTimeDilation, 0.1f);
 		if ((double)num <= 1E-08 || distance <= 0.0001)
 		{
-			session.ActorComp.SetInputDirect(global::Vector.ZeroVectorProxy, false);
+			session.ActorComp.SetInputDirect(global::Vector.ZeroVectorProxy, false, EInputDirectSpace.World);
 			return;
 		}
 		global::Vector actorLocationProxy = session.ActorComp.ActorLocationProxy;
@@ -935,7 +935,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		double num3 = session.TargetLocation.Y - actorLocationProxy.Y;
 		session.PreciseMoveOffset.Set(num2, num3, 0.0);
 		session.ActorComp.SetInputFacing(session.PreciseMoveOffset, false);
-		session.ActorComp.SetInputDirect(session.ActorComp.ActorForwardProxy, false);
+		session.ActorComp.SetInputDirect(session.ActorComp.ActorForwardProxy, false, EInputDirectSpace.World);
 		float captainMaxSpeed = group.GetCaptainMaxSpeed();
 		double num4 = (double)((captainMaxSpeed > 0f) ? captainMaxSpeed : session.OriginalMaxSpeed);
 		double num5 = MathUtils.Instance.Clamp(distance / endDistance, 1.0, 1.5);
@@ -944,7 +944,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		moveComp.MoveCharacter(session.PreciseMoveOffset, num, "MonsterGroupPatrol.PlayerPreciseFollow");
 	}
 
-	// Token: 0x0601B76E RID: 112494 RVA: 0x00784EE8 File Offset: 0x007830E8
+	// Token: 0x060192A7 RID: 103079 RVA: 0x007AD0D4 File Offset: 0x007AB2D4
 	private bool SetPlayerPatrolRootMotionScale(PlayerGroupPatrolSession session, EPlayerPatrolRootMotionScaleMode mode, float scale)
 	{
 		ACharacter acharacter = session.ActorComp.Owner as ACharacter;
@@ -962,7 +962,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B76F RID: 112495 RVA: 0x00784F38 File Offset: 0x00783138
+	// Token: 0x060192A8 RID: 103080 RVA: 0x007AD124 File Offset: 0x007AB324
 	private void RestorePlayerPatrolRootMotionScale(PlayerGroupPatrolSession session)
 	{
 		if (session.RootMotionScaleMode == EPlayerPatrolRootMotionScaleMode.None)
@@ -978,13 +978,13 @@ public class MonsterGroupPatrolController : ControllerBase
 		session.RootMotionScaleMode = EPlayerPatrolRootMotionScaleMode.None;
 	}
 
-	// Token: 0x0601B770 RID: 112496 RVA: 0x00784F8D File Offset: 0x0078318D
+	// Token: 0x060192A9 RID: 103081 RVA: 0x007AD179 File Offset: 0x007AB379
 	private double GetPlayerArriveDistance(PlayerGroupPatrolSession session)
 	{
 		return (double)(30f + Math.Max(30f, session.ActorComp.Radius));
 	}
 
-	// Token: 0x0601B771 RID: 112497 RVA: 0x00784FAC File Offset: 0x007831AC
+	// Token: 0x060192AA RID: 103082 RVA: 0x007AD198 File Offset: 0x007AB398
 	private void UpdatePlayerPatrolMotionState(PlayerGroupPatrolSession session, float deltaMilliseconds)
 	{
 		global::Vector actorLocationProxy = session.ActorComp.ActorLocationProxy;
@@ -1017,7 +1017,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B772 RID: 112498 RVA: 0x007850B0 File Offset: 0x007832B0
+	// Token: 0x060192AB RID: 103083 RVA: 0x007AD29C File Offset: 0x007AB49C
 	private void ApplyPlayerWalkOrRun(PlayerGroupPatrolSession session, global::ECharMoveState moveState)
 	{
 		CharacterUnifiedStateComponent unifiedComp = session.UnifiedComp;
@@ -1028,7 +1028,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		session.UnifiedComp.MarkWalkOrRun(moveState == global::ECharMoveState.Walk, false, null);
 	}
 
-	// Token: 0x0601B773 RID: 112499 RVA: 0x007850FC File Offset: 0x007832FC
+	// Token: 0x060192AC RID: 103084 RVA: 0x007AD2E8 File Offset: 0x007AB4E8
 	private void SetPlayerPatrolState(PlayerGroupPatrolSession session, EPlayerGroupPatrolState state)
 	{
 		if (session.State == state)
@@ -1039,30 +1039,30 @@ public class MonsterGroupPatrolController : ControllerBase
 		this.OnPlayerPatrolStateChanged(session);
 	}
 
-	// Token: 0x0601B774 RID: 112500 RVA: 0x00785116 File Offset: 0x00783316
+	// Token: 0x060192AD RID: 103085 RVA: 0x007AD302 File Offset: 0x007AB502
 	private void OnPlayerPatrolStateChanged(PlayerGroupPatrolSession session)
 	{
 	}
 
-	// Token: 0x0601B775 RID: 112501 RVA: 0x00785118 File Offset: 0x00783318
+	// Token: 0x060192AE RID: 103086 RVA: 0x007AD304 File Offset: 0x007AB504
 	private void SetPlayerInputBlocked(bool blocked, PlayerGroupPatrolSession session)
 	{
 		session.CustomActionComp.SetPlayerControlImmediately(blocked, null);
 	}
 
-	// Token: 0x0601B776 RID: 112502 RVA: 0x00785127 File Offset: 0x00783327
+	// Token: 0x060192AF RID: 103087 RVA: 0x007AD313 File Offset: 0x007AB513
 	private void OnPlayerPatrolInterrupted(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		this.StopPlayerGroupPatrol("玩家状态切换");
 	}
 
-	// Token: 0x0601B777 RID: 112503 RVA: 0x00785134 File Offset: 0x00783334
+	// Token: 0x060192B0 RID: 103088 RVA: 0x007AD320 File Offset: 0x007AB520
 	private void OnPlayerTeleportStart(bool isTeleporting)
 	{
 		this.StopPlayerGroupPatrol("玩家传送");
 	}
 
-	// Token: 0x0601B778 RID: 112504 RVA: 0x00785144 File Offset: 0x00783344
+	// Token: 0x060192B1 RID: 103089 RVA: 0x007AD330 File Offset: 0x007AB530
 	private void OnPlayerEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		PlayerGroupPatrolSession playerPatrolSession = this.PlayerPatrolSession;
@@ -1075,7 +1075,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B779 RID: 112505 RVA: 0x007851BF File Offset: 0x007833BF
+	// Token: 0x060192B2 RID: 103090 RVA: 0x007AD3AB File Offset: 0x007AB5AB
 	private void OnPlayerRoleDead(int entityId)
 	{
 		PlayerGroupPatrolSession playerPatrolSession = this.PlayerPatrolSession;
@@ -1085,7 +1085,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B77A RID: 112506 RVA: 0x007851E4 File Offset: 0x007833E4
+	// Token: 0x060192B3 RID: 103091 RVA: 0x007AD3D0 File Offset: 0x007AB5D0
 	private void OnPlayerCharUnpossessed(Entity entity, [Nullable(2)] AController controller)
 	{
 		PlayerGroupPatrolSession playerPatrolSession = this.PlayerPatrolSession;
@@ -1097,7 +1097,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B77B RID: 112507 RVA: 0x00785237 File Offset: 0x00783437
+	// Token: 0x060192B4 RID: 103092 RVA: 0x007AD423 File Offset: 0x007AB623
 	private void OnPlayerActorHidden(int entityId, bool active)
 	{
 		if (!active)
@@ -1110,7 +1110,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B77C RID: 112508 RVA: 0x00785260 File Offset: 0x00783460
+	// Token: 0x060192B5 RID: 103093 RVA: 0x007AD44C File Offset: 0x007AB64C
 	private void OnPlayerEntityRemoved(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		PlayerGroupPatrolSession playerPatrolSession = this.PlayerPatrolSession;
@@ -1122,7 +1122,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B77D RID: 112509 RVA: 0x007852C5 File Offset: 0x007834C5
+	// Token: 0x060192B6 RID: 103094 RVA: 0x007AD4B1 File Offset: 0x007AB6B1
 	private void OnPlayerUseSkill(int entityId, int skillId, bool isBegin)
 	{
 		PlayerGroupPatrolSession playerPatrolSession = this.PlayerPatrolSession;
@@ -1132,8 +1132,8 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x17002604 RID: 9732
-	// (get) Token: 0x0601B77E RID: 112510 RVA: 0x007852F5 File Offset: 0x007834F5
+	// Token: 0x17002808 RID: 10248
+	// (get) Token: 0x060192B7 RID: 103095 RVA: 0x007AD4E1 File Offset: 0x007AB6E1
 	public static MonsterGroupPatrolController Instance
 	{
 		get
@@ -1142,7 +1142,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B77F RID: 112511 RVA: 0x007852FC File Offset: 0x007834FC
+	// Token: 0x060192B8 RID: 103096 RVA: 0x007AD4E8 File Offset: 0x007AB6E8
 	public static MonsterGroupPatrolController GetOrCreateInstance()
 	{
 		if (MonsterGroupPatrolController._Instance == null)
@@ -1152,7 +1152,7 @@ public class MonsterGroupPatrolController : ControllerBase
 		return MonsterGroupPatrolController._Instance;
 	}
 
-	// Token: 0x0601B780 RID: 112512 RVA: 0x00785310 File Offset: 0x00783510
+	// Token: 0x060192B9 RID: 103097 RVA: 0x007AD4FC File Offset: 0x007AB6FC
 	public static bool CreateInstance()
 	{
 		if (MonsterGroupPatrolController._Instance != null)
@@ -1163,70 +1163,70 @@ public class MonsterGroupPatrolController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B781 RID: 112513 RVA: 0x00785326 File Offset: 0x00783526
+	// Token: 0x060192BA RID: 103098 RVA: 0x007AD512 File Offset: 0x007AB712
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601B782 RID: 112514 RVA: 0x00785328 File Offset: 0x00783528
+	// Token: 0x060192BB RID: 103099 RVA: 0x007AD514 File Offset: 0x007AB714
 	public static void ResetStaticDefaultValue()
 	{
 		MonsterGroupPatrolController._Instance = null;
 	}
 
-	// Token: 0x0601B783 RID: 112515 RVA: 0x00785330 File Offset: 0x00783530
+	// Token: 0x060192BC RID: 103100 RVA: 0x007AD51C File Offset: 0x007AB71C
 	static MonsterGroupPatrolController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MonsterGroupPatrolController.CreateStaticDefaultValue), new Action(MonsterGroupPatrolController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400D777 RID: 55159
+	// Token: 0x0400DBFE RID: 56318
 	private const float INTERVAL_TIME = 1000f;
 
-	// Token: 0x0400D778 RID: 55160
+	// Token: 0x0400DBFF RID: 56319
 	private const float PLAYER_PATROL_END_DISTANCE = 30f;
 
-	// Token: 0x0400D779 RID: 55161
+	// Token: 0x0400DC00 RID: 56320
 	private const float PLAYER_PATROL_RETURN_TIMEOUT = 3f;
 
-	// Token: 0x0400D77A RID: 55162
+	// Token: 0x0400DC01 RID: 56321
 	private const int PLAYER_PATROL_MAX_MOVE_FAILURES = 3;
 
-	// Token: 0x0400D77B RID: 55163
+	// Token: 0x0400DC02 RID: 56322
 	private const int PLAYER_PATROL_LARGE_DELTA_RESET_MIN_MOVE = 500;
 
-	// Token: 0x0400D77C RID: 55164
+	// Token: 0x0400DC03 RID: 56323
 	private const float PLAYER_PATROL_MIN_SPEED_RATE = 1f;
 
-	// Token: 0x0400D77D RID: 55165
+	// Token: 0x0400DC04 RID: 56324
 	private const float PLAYER_PATROL_MAX_SPEED_RATE = 1.5f;
 
-	// Token: 0x0400D77E RID: 55166
+	// Token: 0x0400DC05 RID: 56325
 	private const string PLAYER_PRECISE_PATROL_INPUT_MOVEMENT_LOCK = "MonsterGroupPatrol.PlayerPreciseFollow";
 
-	// Token: 0x0400D77F RID: 55167
+	// Token: 0x0400DC06 RID: 56326
 	private const float PLAYER_PATROL_STAND_MAX_SPEED = 10f;
 
-	// Token: 0x0400D780 RID: 55168
+	// Token: 0x0400DC07 RID: 56327
 	private const float PLAYER_PATROL_STAND_DELAY_SECONDS = 0.3f;
 
-	// Token: 0x0400D781 RID: 55169
+	// Token: 0x0400DC08 RID: 56328
 	private const float PLAYER_PATROL_MAX_DELTA_SECONDS = 0.1f;
 
-	// Token: 0x0400D782 RID: 55170
+	// Token: 0x0400DC09 RID: 56329
 	private float DeltaTime;
 
-	// Token: 0x0400D783 RID: 55171
+	// Token: 0x0400DC0A RID: 56330
 	private readonly Dictionary<int, IPendingMonsterGroup> PendingMonsterGroups = new Dictionary<int, IPendingMonsterGroup>();
 
-	// Token: 0x0400D784 RID: 55172
+	// Token: 0x0400DC0B RID: 56331
 	private readonly Dictionary<int, int> EntityIdToGroupId = new Dictionary<int, int>();
 
-	// Token: 0x0400D785 RID: 55173
+	// Token: 0x0400DC0C RID: 56332
 	[Nullable(2)]
 	private PlayerGroupPatrolSession PlayerPatrolSession;
 
-	// Token: 0x0400D786 RID: 55174
+	// Token: 0x0400DC0D RID: 56333
 	[Nullable(2)]
 	private static MonsterGroupPatrolController _Instance;
 }

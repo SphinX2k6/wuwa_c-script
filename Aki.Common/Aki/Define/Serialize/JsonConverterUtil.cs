@@ -4,12 +4,12 @@ using System.Text.Json;
 
 namespace Aki.Define.Serialize
 {
-	// Token: 0x02000028 RID: 40
+	// Token: 0x02000029 RID: 41
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class JsonConverterUtil
 	{
-		// Token: 0x060000FF RID: 255 RVA: 0x0000B444 File Offset: 0x00009644
+		// Token: 0x0600016C RID: 364 RVA: 0x0000EC10 File Offset: 0x0000CE10
 		public static string GetPropertyValue(Utf8JsonReader reader, string propName)
 		{
 			if (reader.TokenType != JsonTokenType.StartObject)
@@ -35,7 +35,7 @@ namespace Aki.Define.Serialize
 			throw new JsonException("找不到属性值: " + propName);
 		}
 
-		// Token: 0x06000100 RID: 256 RVA: 0x0000B4C8 File Offset: 0x000096C8
+		// Token: 0x0600016D RID: 365 RVA: 0x0000EC94 File Offset: 0x0000CE94
 		[return: Nullable(2)]
 		public static string GetPropertyValueEx(Utf8JsonReader reader, string propName)
 		{
@@ -62,7 +62,7 @@ namespace Aki.Define.Serialize
 			return null;
 		}
 
-		// Token: 0x06000101 RID: 257 RVA: 0x0000B52C File Offset: 0x0000972C
+		// Token: 0x0600016E RID: 366 RVA: 0x0000ECF8 File Offset: 0x0000CEF8
 		public static int? GetPropertyValueInt(Utf8JsonReader reader, string propName)
 		{
 			if (reader.TokenType != JsonTokenType.StartObject)

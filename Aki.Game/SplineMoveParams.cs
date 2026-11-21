@@ -6,14 +6,14 @@ using CSharpScript.Game.LevelGamePlay.Common;
 using CSharpScript.Game.NewWorld.SceneItem;
 using UnrealEngine;
 
-// Token: 0x02003270 RID: 12912
+// Token: 0x020027DF RID: 10207
 [NullableContext(2)]
 [Nullable(0)]
 public class SplineMoveParams
 {
-	// Token: 0x17002689 RID: 9865
-	// (get) Token: 0x0601BEDC RID: 114396 RVA: 0x007BFD6E File Offset: 0x007BDF6E
-	// (set) Token: 0x0601BEDD RID: 114397 RVA: 0x007BFD76 File Offset: 0x007BDF76
+	// Token: 0x17002921 RID: 10529
+	// (get) Token: 0x06019ABC RID: 105148 RVA: 0x007E72FE File Offset: 0x007E54FE
+	// (set) Token: 0x06019ABD RID: 105149 RVA: 0x007E7306 File Offset: 0x007E5506
 	public float CurrentMaxOffset
 	{
 		get
@@ -27,8 +27,8 @@ public class SplineMoveParams
 		}
 	}
 
-	// Token: 0x1700268A RID: 9866
-	// (get) Token: 0x0601BEDE RID: 114398 RVA: 0x007BFD88 File Offset: 0x007BDF88
+	// Token: 0x17002922 RID: 10530
+	// (get) Token: 0x06019ABE RID: 105150 RVA: 0x007E7318 File Offset: 0x007E5518
 	public float CurrentMaxOffsetSquared
 	{
 		get
@@ -37,8 +37,8 @@ public class SplineMoveParams
 		}
 	}
 
-	// Token: 0x1700268B RID: 9867
-	// (get) Token: 0x0601BEDF RID: 114399 RVA: 0x007BFD90 File Offset: 0x007BDF90
+	// Token: 0x17002923 RID: 10531
+	// (get) Token: 0x06019ABF RID: 105151 RVA: 0x007E7320 File Offset: 0x007E5520
 	public bool OnlyPositiveMove
 	{
 		get
@@ -47,7 +47,7 @@ public class SplineMoveParams
 		}
 	}
 
-	// Token: 0x0601BEE0 RID: 114400 RVA: 0x007BFDA4 File Offset: 0x007BDFA4
+	// Token: 0x06019AC0 RID: 105152 RVA: 0x007E7334 File Offset: 0x007E5534
 	[NullableContext(1)]
 	public void InitBase(int id, ISplineMovePattern config, Entity entity)
 	{
@@ -192,7 +192,7 @@ public class SplineMoveParams
 		this.EarliestLeaveTime = Time.Instance.NowSeconds;
 	}
 
-	// Token: 0x0601BEE1 RID: 114401 RVA: 0x007C02BC File Offset: 0x007BE4BC
+	// Token: 0x06019AC1 RID: 105153 RVA: 0x007E784C File Offset: 0x007E5A4C
 	[NullableContext(1)]
 	public void InitByAutoPilotRoute(UAutopilotRoute route, Entity entity)
 	{
@@ -221,7 +221,7 @@ public class SplineMoveParams
 		}
 	}
 
-	// Token: 0x0601BEE2 RID: 114402 RVA: 0x007C03B0 File Offset: 0x007BE5B0
+	// Token: 0x06019AC2 RID: 105154 RVA: 0x007E7940 File Offset: 0x007E5B40
 	public void UpdateParamsByTimeKey(float timeKey)
 	{
 		if (this.AutopilotRoute == null)
@@ -245,7 +245,7 @@ public class SplineMoveParams
 		this.UpdateRouteParamsByIndex(num);
 	}
 
-	// Token: 0x0601BEE3 RID: 114403 RVA: 0x007C0400 File Offset: 0x007BE600
+	// Token: 0x06019AC3 RID: 105155 RVA: 0x007E7990 File Offset: 0x007E5B90
 	protected void UpdateRouteParamsByIndex(int index)
 	{
 		this.CurrentRouteIndex = index;
@@ -259,7 +259,7 @@ public class SplineMoveParams
 		this.CurrentMaxOffset = Math.Max(this.CurrentMaxOffset, this.MaxOffsetDist);
 	}
 
-	// Token: 0x0601BEE4 RID: 114404 RVA: 0x007C0494 File Offset: 0x007BE694
+	// Token: 0x06019AC4 RID: 105156 RVA: 0x007E7A24 File Offset: 0x007E5C24
 	public void EnableParams(bool enable)
 	{
 		if (this.Spline == null && enable)
@@ -277,7 +277,7 @@ public class SplineMoveParams
 		}
 	}
 
-	// Token: 0x0601BEE5 RID: 114405 RVA: 0x007C050A File Offset: 0x007BE70A
+	// Token: 0x06019AC5 RID: 105157 RVA: 0x007E7A9A File Offset: 0x007E5C9A
 	public void Clear()
 	{
 		if (this.AutopilotRoute != null && !this.MarkInherited)
@@ -286,137 +286,137 @@ public class SplineMoveParams
 		}
 	}
 
-	// Token: 0x0400DC72 RID: 56434
+	// Token: 0x0400E111 RID: 57617
 	private const float MAX_OFFSET_INCREASE = 100000f;
 
-	// Token: 0x0400DC73 RID: 56435
+	// Token: 0x0400E112 RID: 57618
 	private const float HEIGHT_LIMIT = 100000f;
 
-	// Token: 0x0400DC74 RID: 56436
+	// Token: 0x0400E113 RID: 57619
 	public int Id;
 
-	// Token: 0x0400DC75 RID: 56437
+	// Token: 0x0400E114 RID: 57620
 	public ISplineMovePattern Config;
 
-	// Token: 0x0400DC76 RID: 56438
+	// Token: 0x0400E115 RID: 57621
 	public Entity Entity;
 
-	// Token: 0x0400DC77 RID: 56439
+	// Token: 0x0400E116 RID: 57622
 	public bool AllowInherit;
 
-	// Token: 0x0400DC78 RID: 56440
+	// Token: 0x0400E117 RID: 57623
 	public bool MarkInherited;
 
-	// Token: 0x0400DC79 RID: 56441
+	// Token: 0x0400E118 RID: 57624
 	public USplineComponent Spline;
 
-	// Token: 0x0400DC7A RID: 56442
+	// Token: 0x0400E119 RID: 57625
 	private float CurrentMaxOffsetInternal;
 
-	// Token: 0x0400DC7B RID: 56443
+	// Token: 0x0400E11A RID: 57626
 	private float CurrentMaxOffsetSquaredInternal;
 
-	// Token: 0x0400DC7C RID: 56444
+	// Token: 0x0400E11B RID: 57627
 	public ESplineMovePattern Type;
 
-	// Token: 0x0400DC7D RID: 56445
+	// Token: 0x0400E11C RID: 57628
 	public float MaxOffsetDist;
 
-	// Token: 0x0400DC7E RID: 56446
+	// Token: 0x0400E11D RID: 57629
 	public bool OnlyForward;
 
-	// Token: 0x0400DC7F RID: 56447
+	// Token: 0x0400E11E RID: 57630
 	private bool PositiveMoveInternal;
 
-	// Token: 0x0400DC80 RID: 56448
+	// Token: 0x0400E11F RID: 57631
 	public float InputLimitAngle;
 
-	// Token: 0x0400DC81 RID: 56449
+	// Token: 0x0400E120 RID: 57632
 	public float InputLimitCos;
 
-	// Token: 0x0400DC82 RID: 56450
+	// Token: 0x0400E121 RID: 57633
 	public float InputLimitSin;
 
-	// Token: 0x0400DC83 RID: 56451
+	// Token: 0x0400E122 RID: 57634
 	public float LayerVerticalLimit = 100000f;
 
-	// Token: 0x0400DC84 RID: 56452
+	// Token: 0x0400E123 RID: 57635
 	public float AutoExitSplineDist;
 
-	// Token: 0x0400DC85 RID: 56453
+	// Token: 0x0400E124 RID: 57636
 	public bool UseSplineGravity;
 
-	// Token: 0x0400DC86 RID: 56454
+	// Token: 0x0400E125 RID: 57637
 	public EPathLineFacingType? AdjustFacingType;
 
-	// Token: 0x0400DC87 RID: 56455
+	// Token: 0x0400E126 RID: 57638
 	public string ConfigDaPath;
 
-	// Token: 0x0400DC88 RID: 56456
+	// Token: 0x0400E127 RID: 57639
 	public bool IsAdaptiveClimbInput;
 
-	// Token: 0x0400DC89 RID: 56457
+	// Token: 0x0400E128 RID: 57640
 	public bool IsDisableStopAnim;
 
-	// Token: 0x0400DC8A RID: 56458
+	// Token: 0x0400E129 RID: 57641
 	public bool IsAllowEarlyExitClimb;
 
-	// Token: 0x0400DC8B RID: 56459
+	// Token: 0x0400E12A RID: 57642
 	public float AdjustFacingLimit;
 
-	// Token: 0x0400DC8C RID: 56460
+	// Token: 0x0400E12B RID: 57643
 	public UCurveFloat AdjustFacingLimitCurve;
 
-	// Token: 0x0400DC8D RID: 56461
+	// Token: 0x0400E12C RID: 57644
 	public float AdjustFacingLimitPitchSin = (float)Math.Sin(1.0471975803375244);
 
-	// Token: 0x0400DC8E RID: 56462
+	// Token: 0x0400E12D RID: 57645
 	[Nullable(1)]
 	public CurveBase EdgeLimitCurve = CurveUtils.DefaultLinear;
 
-	// Token: 0x0400DC8F RID: 56463
+	// Token: 0x0400E12E RID: 57646
 	public bool IsDelayClear;
 
-	// Token: 0x0400DC90 RID: 56464
+	// Token: 0x0400E12F RID: 57647
 	public double EarliestLeaveTime;
 
-	// Token: 0x0400DC91 RID: 56465
+	// Token: 0x0400E130 RID: 57648
 	public bool NeedLimitSoarTransform;
 
-	// Token: 0x0400DC92 RID: 56466
+	// Token: 0x0400E131 RID: 57649
 	public float MaxSoarSplineSpeed;
 
-	// Token: 0x0400DC93 RID: 56467
+	// Token: 0x0400E132 RID: 57650
 	public float SoarFriction;
 
-	// Token: 0x0400DC94 RID: 56468
+	// Token: 0x0400E133 RID: 57651
 	public float SoarSprintLimit;
 
-	// Token: 0x0400DC95 RID: 56469
+	// Token: 0x0400E134 RID: 57652
 	public float PredictDist = 2000f;
 
-	// Token: 0x0400DC96 RID: 56470
+	// Token: 0x0400E135 RID: 57653
 	public float InputCorrectionBaseAngle = 30f;
 
-	// Token: 0x0400DC97 RID: 56471
+	// Token: 0x0400E136 RID: 57654
 	public UCurveFloat InputCorrectionCurve;
 
-	// Token: 0x0400DC98 RID: 56472
+	// Token: 0x0400E137 RID: 57655
 	public float AutoDriveStandbyTime;
 
-	// Token: 0x0400DC99 RID: 56473
+	// Token: 0x0400E138 RID: 57656
 	public bool AutoSprint;
 
-	// Token: 0x0400DC9A RID: 56474
+	// Token: 0x0400E139 RID: 57657
 	public bool DisableAutoForward;
 
-	// Token: 0x0400DC9B RID: 56475
+	// Token: 0x0400E13A RID: 57658
 	public UAutopilotRoute AutopilotRoute;
 
-	// Token: 0x0400DC9C RID: 56476
+	// Token: 0x0400E13B RID: 57659
 	public int CurrentRouteIndex;
 
-	// Token: 0x0400DC9D RID: 56477
+	// Token: 0x0400E13C RID: 57660
 	[Nullable(1)]
 	protected readonly List<float> KeyOfAutopilotRoute = new List<float>();
 }

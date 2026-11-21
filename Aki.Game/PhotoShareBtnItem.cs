@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020025DD RID: 9693
+// Token: 0x02001AC8 RID: 6856
 public class PhotoShareBtnItem : GridProxyAbstract<EChannelShare>
 {
-	// Token: 0x06013B41 RID: 80705 RVA: 0x004F00F4 File Offset: 0x004EE2F4
+	// Token: 0x06011023 RID: 69667 RVA: 0x004FEE24 File Offset: 0x004FD024
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,14 +22,14 @@ public class PhotoShareBtnItem : GridProxyAbstract<EChannelShare>
 		};
 	}
 
-	// Token: 0x06013B42 RID: 80706 RVA: 0x004F015C File Offset: 0x004EE35C
+	// Token: 0x06011024 RID: 69668 RVA: 0x004FEE8C File Offset: 0x004FD08C
 	protected override void OnStart()
 	{
 		this.ShareGap = CommonConfig.Instance.GetShareGap().GetValueOrDefault(1);
 		this.Transition = (base.GetSprite(0).GetOwner().GetComponentByClass(UUISpriteTransition.StaticClass()) as UUISpriteTransition);
 	}
 
-	// Token: 0x06013B43 RID: 80707 RVA: 0x004F01A8 File Offset: 0x004EE3A8
+	// Token: 0x06011025 RID: 69669 RVA: 0x004FEED8 File Offset: 0x004FD0D8
 	private void OnClickShare()
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -54,27 +54,27 @@ public class PhotoShareBtnItem : GridProxyAbstract<EChannelShare>
 		clickCallback((EChannelShare)shareId, channelShareId);
 	}
 
-	// Token: 0x06013B44 RID: 80708 RVA: 0x004F0229 File Offset: 0x004EE429
+	// Token: 0x06011026 RID: 69670 RVA: 0x004FEF59 File Offset: 0x004FD159
 	[NullableContext(1)]
 	public void SetClickCallBack(Action<EChannelShare, int> callback)
 	{
 		this.ClickCallback = callback;
 	}
 
-	// Token: 0x06013B45 RID: 80709 RVA: 0x004F0232 File Offset: 0x004EE432
+	// Token: 0x06011027 RID: 69671 RVA: 0x004FEF62 File Offset: 0x004FD162
 	public override void Refresh(EChannelShare data, bool isSelected, int gridIndex)
 	{
 		this.Update((int)data);
 		this.RefreshPanel();
 	}
 
-	// Token: 0x06013B46 RID: 80710 RVA: 0x004F0241 File Offset: 0x004EE441
+	// Token: 0x06011028 RID: 69672 RVA: 0x004FEF71 File Offset: 0x004FD171
 	public void Update(int channelShareId)
 	{
 		this.ChannelShareId = channelShareId;
 	}
 
-	// Token: 0x06013B47 RID: 80711 RVA: 0x004F024C File Offset: 0x004EE44C
+	// Token: 0x06011029 RID: 69673 RVA: 0x004FEF7C File Offset: 0x004FD17C
 	public void RefreshPanel()
 	{
 		SharePlatform? config = ConfigSharePlatformById.GetConfig(this.ChannelShareId, true);
@@ -93,35 +93,35 @@ public class PhotoShareBtnItem : GridProxyAbstract<EChannelShare>
 		});
 	}
 
-	// Token: 0x06013B48 RID: 80712 RVA: 0x004F02A2 File Offset: 0x004EE4A2
+	// Token: 0x0601102A RID: 69674 RVA: 0x004FEFD2 File Offset: 0x004FD1D2
 	protected override void OnBeforeDestroy()
 	{
 		this.Transition = null;
 	}
 
-	// Token: 0x0400946A RID: 37994
+	// Token: 0x040095C1 RID: 38337
 	private int ChannelShareId;
 
-	// Token: 0x0400946B RID: 37995
+	// Token: 0x040095C2 RID: 38338
 	[Nullable(2)]
 	private UUISpriteTransition Transition;
 
-	// Token: 0x0400946C RID: 37996
+	// Token: 0x040095C3 RID: 38339
 	private double LastClickTime;
 
-	// Token: 0x0400946D RID: 37997
+	// Token: 0x040095C4 RID: 38340
 	[Nullable(2)]
 	private Action<EChannelShare, int> ClickCallback;
 
-	// Token: 0x0400946E RID: 37998
+	// Token: 0x040095C5 RID: 38341
 	private int ShareGap = 1;
 
-	// Token: 0x02008C15 RID: 35861
+	// Token: 0x02007D9E RID: 32158
 	private enum EChildType
 	{
-		// Token: 0x0402D7AD RID: 186285
+		// Token: 0x04028AC5 RID: 166597
 		Icon,
-		// Token: 0x0402D7AE RID: 186286
+		// Token: 0x04028AC6 RID: 166598
 		Button
 	}
 }

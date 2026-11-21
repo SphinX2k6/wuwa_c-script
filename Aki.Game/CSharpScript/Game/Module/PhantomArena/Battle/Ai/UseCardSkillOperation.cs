@@ -7,23 +7,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 {
-	// Token: 0x020052E7 RID: 21223
+	// Token: 0x020042B7 RID: 17079
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UseCardSkillOperation : NpcAiOperation
 	{
-		// Token: 0x17008309 RID: 33545
-		// (get) Token: 0x0603649E RID: 222366 RVA: 0x00CD78CB File Offset: 0x00CD5ACB
-		// (set) Token: 0x0603649F RID: 222367 RVA: 0x00CD78D3 File Offset: 0x00CD5AD3
+		// Token: 0x170056C9 RID: 22217
+		// (get) Token: 0x0602B399 RID: 177049 RVA: 0x00C24FEF File Offset: 0x00C231EF
+		// (set) Token: 0x0602B39A RID: 177050 RVA: 0x00C24FF7 File Offset: 0x00C231F7
 		public NpcPhantomBattleCardSkillInfo Info { get; private set; }
 
-		// Token: 0x060364A0 RID: 222368 RVA: 0x00CD78DC File Offset: 0x00CD5ADC
+		// Token: 0x0602B39B RID: 177051 RVA: 0x00C25000 File Offset: 0x00C23200
 		public UseCardSkillOperation(NpcPhantomBattleCardSkillInfo info)
 		{
 			this.Info = info;
 		}
 
-		// Token: 0x060364A1 RID: 222369 RVA: 0x00CD78EC File Offset: 0x00CD5AEC
+		// Token: 0x0602B39C RID: 177052 RVA: 0x00C25010 File Offset: 0x00C23210
 		public override UniTask ExecuteAiOperation(PhantomArenaBattleProxy proxy)
 		{
 			UseCardSkillOperation.<ExecuteAiOperation>d__5 <ExecuteAiOperation>d__;

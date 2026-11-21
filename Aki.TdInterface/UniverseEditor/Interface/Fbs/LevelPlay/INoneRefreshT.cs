@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004531 RID: 17713
+	// Token: 0x02004999 RID: 18841
 	public class INoneRefreshT
 	{
-		// Token: 0x17007DA5 RID: 32165
-		// (get) Token: 0x0601AA39 RID: 109113 RVA: 0x003CD3E2 File Offset: 0x003CB5E2
-		// (set) Token: 0x0601AA3A RID: 109114 RVA: 0x003CD3EA File Offset: 0x003CB5EA
+		// Token: 0x170083E6 RID: 33766
+		// (get) Token: 0x0601C20E RID: 115214 RVA: 0x003F967E File Offset: 0x003F787E
+		// (set) Token: 0x0601C20F RID: 115215 RVA: 0x003F9686 File Offset: 0x003F7886
 		public ELevelPlayRefreshType Type { get; set; }
 
-		// Token: 0x0601AA3B RID: 109115 RVA: 0x003CD3F3 File Offset: 0x003CB5F3
+		// Token: 0x0601C210 RID: 115216 RVA: 0x003F968F File Offset: 0x003F788F
 		public INoneRefreshT()
 		{
 			this.Type = ELevelPlayRefreshType.None;

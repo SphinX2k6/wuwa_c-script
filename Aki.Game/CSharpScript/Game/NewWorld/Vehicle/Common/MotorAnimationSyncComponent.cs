@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Common
 {
-	// Token: 0x02007051 RID: 28753
+	// Token: 0x020061D2 RID: 25042
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorAnimationSyncComponent : CharacterAnimationSyncComponent
 	{
-		// Token: 0x06045FAB RID: 286635 RVA: 0x01170F5A File Offset: 0x0116F15A
+		// Token: 0x0603C191 RID: 246161 RVA: 0x0111ACF6 File Offset: 0x01118EF6
 		static MotorAnimationSyncComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MotorAnimationSyncComponent.CreateStaticDefaultValue), new Action(MotorAnimationSyncComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06045FAC RID: 286636 RVA: 0x01170F79 File Offset: 0x0116F179
+		// Token: 0x0603C192 RID: 246162 RVA: 0x0111AD15 File Offset: 0x01118F15
 		protected override void OnActivate()
 		{
 			base.OnActivate();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			this.VehicleMovement = (this.ActorComp.Owner.GetComponentByClass(UKuroVehicleMovementComponent.StaticClass()) as UKuroVehicleMovementComponent);
 		}
 
-		// Token: 0x06045FAD RID: 286637 RVA: 0x01170FB7 File Offset: 0x0116F1B7
+		// Token: 0x0603C193 RID: 246163 RVA: 0x0111AD53 File Offset: 0x01118F53
 		protected override void AfterTickInner(float delta)
 		{
 			base.AfterTickInner(delta);
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			this.TryPushAnimationParams();
 		}
 
-		// Token: 0x06045FAE RID: 286638 RVA: 0x01170FCD File Offset: 0x0116F1CD
+		// Token: 0x0603C194 RID: 246164 RVA: 0x0111AD69 File Offset: 0x01118F69
 		protected override void OnTick(float delta)
 		{
 			this.ApplyMotorAnimSample();
 		}
 
-		// Token: 0x06045FAF RID: 286639 RVA: 0x01170FD8 File Offset: 0x0116F1D8
+		// Token: 0x0603C195 RID: 246165 RVA: 0x0111AD74 File Offset: 0x01118F74
 		private bool TryCollectAnimationParams()
 		{
 			if (GameModeModel.Instance.IsMulti)
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			return false;
 		}
 
-		// Token: 0x06045FB0 RID: 286640 RVA: 0x011712FC File Offset: 0x0116F4FC
+		// Token: 0x0603C196 RID: 246166 RVA: 0x0111B098 File Offset: 0x01119298
 		private void TryPushAnimationParams()
 		{
 			if (this.PendingAnimInfos.Count == 0)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			this.PendingAnimInfos = new List<MotorAnimInfo>();
 		}
 
-		// Token: 0x06045FB1 RID: 286641 RVA: 0x011713D8 File Offset: 0x0116F5D8
+		// Token: 0x0603C197 RID: 246167 RVA: 0x0111B174 File Offset: 0x01119374
 		public void ReceiveMotorAnimSample(IList<MotorAnimInfo> data)
 		{
 			foreach (MotorAnimInfo element in data)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			}
 		}
 
-		// Token: 0x06045FB2 RID: 286642 RVA: 0x01171428 File Offset: 0x0116F628
+		// Token: 0x0603C198 RID: 246168 RVA: 0x0111B1C4 File Offset: 0x011193C4
 		private void ApplyMotorAnimSample()
 		{
 			if (!GameModeModel.Instance.IsMulti)
@@ -254,21 +254,21 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 			}
 		}
 
-		// Token: 0x06045FB3 RID: 286643 RVA: 0x011716CA File Offset: 0x0116F8CA
+		// Token: 0x0603C199 RID: 246169 RVA: 0x0111B466 File Offset: 0x01119666
 		public new static void CreateStaticDefaultValue()
 		{
 			MotorAnimationSyncComponent.WheelInfosRef = null;
 			MotorAnimationSyncComponent.WheelInfos = null;
 		}
 
-		// Token: 0x06045FB4 RID: 286644 RVA: 0x011716D8 File Offset: 0x0116F8D8
+		// Token: 0x0603C19A RID: 246170 RVA: 0x0111B474 File Offset: 0x01119674
 		public new static void ResetStaticDefaultValue()
 		{
 			MotorAnimationSyncComponent.WheelInfosRef = null;
 			MotorAnimationSyncComponent.WheelInfos = null;
 		}
 
-		// Token: 0x06045FB5 RID: 286645 RVA: 0x011716E8 File Offset: 0x0116F8E8
+		// Token: 0x0603C19B RID: 246171 RVA: 0x0111B484 File Offset: 0x01119684
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -276,83 +276,99 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 				return false;
 			}
 			MotorAnimationSyncComponent motorAnimationSyncComponent = (MotorAnimationSyncComponent)componentTemplate;
-			if (base.CanResetComponentProperty("VehicleMovement"))
+			if (motorAnimationSyncComponent.VehicleMovement == null)
 			{
-				if (motorAnimationSyncComponent.VehicleMovement == null)
-				{
-					this.VehicleMovement = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroVehicleMovementComponent>(this.VehicleMovement), "VehicleMovement"))
-				{
-					return false;
-				}
+				this.VehicleMovement = null;
 			}
-			if (base.CanResetComponentProperty("VehiclePerformComponent"))
-			{
-				if (motorAnimationSyncComponent.VehiclePerformComponent == null)
-				{
-					this.VehiclePerformComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehiclePerformComponent>(this.VehiclePerformComponent), "VehiclePerformComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PendingAnimInfos"))
-			{
-				if (motorAnimationSyncComponent.PendingAnimInfos == null)
-				{
-					this.PendingAnimInfos = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<MotorAnimInfo>>(this.PendingAnimInfos), "PendingAnimInfos"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ReplaySampleQueue") && motorAnimationSyncComponent.ReplaySampleQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Deque<MotorAnimInfo>>(this.ReplaySampleQueue), "ReplaySampleQueue"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleMovement), "VehicleMovement"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("MotorAnimInstance"))
+			if (motorAnimationSyncComponent.VehiclePerformComponent == null)
 			{
-				if (motorAnimationSyncComponent.MotorAnimInstance == null)
-				{
-					this.MotorAnimInstance = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ABP_Motor_BaseVehicle_C>(this.MotorAnimInstance), "MotorAnimInstance"))
-				{
-					return false;
-				}
+				this.VehiclePerformComponent = null;
 			}
-			if (base.CanResetComponentProperty("LastPendingTime"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehiclePerformComponent), "VehiclePerformComponent"))
 			{
-				this.LastPendingTime = motorAnimationSyncComponent.LastPendingTime;
+				return false;
 			}
-			if (base.CanResetComponentProperty("LastSyncImpactTime"))
+			if (motorAnimationSyncComponent.PendingAnimInfos == null)
 			{
-				this.LastSyncImpactTime = motorAnimationSyncComponent.LastSyncImpactTime;
+				this.PendingAnimInfos = null;
 			}
-			if (base.CanResetComponentProperty("LastReplayBeingImpactedTime"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingAnimInfos), "PendingAnimInfos"))
 			{
-				this.LastReplayBeingImpactedTime = motorAnimationSyncComponent.LastReplayBeingImpactedTime;
+				return false;
 			}
-			if (base.CanResetComponentProperty("LastBeingImpacted"))
+			if (motorAnimationSyncComponent.ReplaySampleQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReplaySampleQueue), "ReplaySampleQueue"))
 			{
-				this.LastBeingImpacted = motorAnimationSyncComponent.LastBeingImpacted;
+				return false;
 			}
+			if (motorAnimationSyncComponent.MotorAnimInstance == null)
+			{
+				this.MotorAnimInstance = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MotorAnimInstance), "MotorAnimInstance"))
+			{
+				return false;
+			}
+			this.LastPendingTime = motorAnimationSyncComponent.LastPendingTime;
+			this.LastSyncImpactTime = motorAnimationSyncComponent.LastSyncImpactTime;
+			this.LastReplayBeingImpactedTime = motorAnimationSyncComponent.LastReplayBeingImpactedTime;
+			this.LastBeingImpacted = motorAnimationSyncComponent.LastBeingImpacted;
 			return true;
 		}
 
-		// Token: 0x04024A09 RID: 150025
+		// Token: 0x17007160 RID: 29024
+		// (get) Token: 0x0603C19C RID: 246172 RVA: 0x0111B5A2 File Offset: 0x011197A2
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007161 RID: 29025
+		// (get) Token: 0x0603C19D RID: 246173 RVA: 0x0111B5A5 File Offset: 0x011197A5
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007162 RID: 29026
+		// (get) Token: 0x0603C19E RID: 246174 RVA: 0x0111B5A8 File Offset: 0x011197A8
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007163 RID: 29027
+		// (get) Token: 0x0603C19F RID: 246175 RVA: 0x0111B5AB File Offset: 0x011197AB
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FCBF RID: 130239
 		private const float ANIMSYNCUDPSENDINTERVAL = 0.1f;
 
-		// Token: 0x04024A0A RID: 150026
+		// Token: 0x0401FCC0 RID: 130240
 		private const float COLLISIONANIMSYNCUDPSENDINTERVAL = 1f;
 
-		// Token: 0x04024A0B RID: 150027
+		// Token: 0x0401FCC1 RID: 130241
 		private const float ANIM_SYNC_IMPACT_INTERVAL = 0.1f;
 
-		// Token: 0x04024A0C RID: 150028
+		// Token: 0x0401FCC2 RID: 130242
 		[Nullable(new byte[]
 		{
 			2,
@@ -360,7 +376,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 		})]
 		private static TArray<FMotorWheelDisplayInfo> WheelInfosRef;
 
-		// Token: 0x04024A0D RID: 150029
+		// Token: 0x0401FCC3 RID: 130243
 		[Nullable(new byte[]
 		{
 			2,
@@ -368,34 +384,34 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Common
 		})]
 		private static TArray<FMotorWheelDisplayInfo> WheelInfos;
 
-		// Token: 0x04024A0E RID: 150030
+		// Token: 0x0401FCC4 RID: 130244
 		[Nullable(2)]
 		public UKuroVehicleMovementComponent VehicleMovement;
 
-		// Token: 0x04024A0F RID: 150031
+		// Token: 0x0401FCC5 RID: 130245
 		[Nullable(2)]
 		private VehiclePerformComponent VehiclePerformComponent;
 
-		// Token: 0x04024A10 RID: 150032
+		// Token: 0x0401FCC6 RID: 130246
 		public List<MotorAnimInfo> PendingAnimInfos = new List<MotorAnimInfo>();
 
-		// Token: 0x04024A11 RID: 150033
+		// Token: 0x0401FCC7 RID: 130247
 		private readonly Deque<MotorAnimInfo> ReplaySampleQueue = new Deque<MotorAnimInfo>(4);
 
-		// Token: 0x04024A12 RID: 150034
+		// Token: 0x0401FCC8 RID: 130248
 		[Nullable(2)]
 		private ABP_Motor_BaseVehicle_C MotorAnimInstance;
 
-		// Token: 0x04024A13 RID: 150035
+		// Token: 0x0401FCC9 RID: 130249
 		private double LastPendingTime;
 
-		// Token: 0x04024A14 RID: 150036
+		// Token: 0x0401FCCA RID: 130250
 		private double LastSyncImpactTime;
 
-		// Token: 0x04024A15 RID: 150037
+		// Token: 0x0401FCCB RID: 130251
 		private double LastReplayBeingImpactedTime;
 
-		// Token: 0x04024A16 RID: 150038
+		// Token: 0x0401FCCC RID: 130252
 		private bool LastBeingImpacted;
 	}
 }

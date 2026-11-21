@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F0A RID: 20234
+	// Token: 0x0200543C RID: 21564
 	public enum IBeamLayoutConfig_Union : byte
 	{
-		// Token: 0x0400DD4E RID: 56654
+		// Token: 0x0400E8FD RID: 59645
 		NONE,
-		// Token: 0x0400DD4F RID: 56655
+		// Token: 0x0400E8FE RID: 59646
 		IBeamLayoutConfig,
-		// Token: 0x0400DD50 RID: 56656
+		// Token: 0x0400E8FF RID: 59647
 		IBeamLayoutConfigWall
 	}
 }

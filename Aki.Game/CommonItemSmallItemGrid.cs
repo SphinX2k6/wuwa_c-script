@@ -5,18 +5,18 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x020018B9 RID: 6329
+// Token: 0x02000D72 RID: 3442
 [NullableContext(2)]
 [Nullable(0)]
 public class CommonItemSmallItemGrid : LoopScrollSmallItemGrid<TItem>
 {
-	// Token: 0x0600B97E RID: 47486 RVA: 0x002A1177 File Offset: 0x0029F377
+	// Token: 0x06008D67 RID: 36199 RVA: 0x002AB8CB File Offset: 0x002A9ACB
 	protected override void OnRefresh(TItem data, bool isSelected, int gridIndex)
 	{
 		this.Refresh(data);
 	}
 
-	// Token: 0x0600B97F RID: 47487 RVA: 0x002A1180 File Offset: 0x0029F380
+	// Token: 0x06008D68 RID: 36200 RVA: 0x002AB8D4 File Offset: 0x002A9AD4
 	public void Refresh(TItem data)
 	{
 		InventoryDefine.IGetItemData itemData = data.ItemData;
@@ -134,7 +134,7 @@ public class CommonItemSmallItemGrid : LoopScrollSmallItemGrid<TItem>
 		base.Apply<PropSmallItemGrid>(parameters4);
 	}
 
-	// Token: 0x0600B980 RID: 47488 RVA: 0x002A14D4 File Offset: 0x0029F6D4
+	// Token: 0x06008D69 RID: 36201 RVA: 0x002ABC28 File Offset: 0x002A9E28
 	public void RefreshByConfigId(int itemConfigId, int? count = null, object data = null, bool showReceived = false, bool isDoubleRewardVisible = false)
 	{
 		this.ConfigId = itemConfigId;
@@ -244,37 +244,37 @@ public class CommonItemSmallItemGrid : LoopScrollSmallItemGrid<TItem>
 		base.Apply<PropSmallItemGrid>(parameters4);
 	}
 
-	// Token: 0x0600B981 RID: 47489 RVA: 0x002A1738 File Offset: 0x0029F938
+	// Token: 0x06008D6A RID: 36202 RVA: 0x002ABE8C File Offset: 0x002AA08C
 	protected override bool OnCanExecuteChange()
 	{
 		return false;
 	}
 
-	// Token: 0x0600B982 RID: 47490 RVA: 0x002A173B File Offset: 0x0029F93B
+	// Token: 0x06008D6B RID: 36203 RVA: 0x002ABE8F File Offset: 0x002AA08F
 	public void SetAllowClickBack(bool isAllow)
 	{
 		this.AllowClickBack = isAllow;
 	}
 
-	// Token: 0x0600B983 RID: 47491 RVA: 0x002A1744 File Offset: 0x0029F944
+	// Token: 0x06008D6C RID: 36204 RVA: 0x002ABE98 File Offset: 0x002AA098
 	protected override void OnExtendToggleClicked()
 	{
 		if (!this.AllowClickBack)
 		{
 			return;
 		}
-		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null, false);
 	}
 
-	// Token: 0x04005427 RID: 21543
+	// Token: 0x040054D2 RID: 21714
 	protected int ConfigId;
 
-	// Token: 0x04005428 RID: 21544
+	// Token: 0x040054D3 RID: 21715
 	private bool AllowClickBack = true;
 
-	// Token: 0x04005429 RID: 21545
+	// Token: 0x040054D4 RID: 21716
 	public Func<TItem, bool> ShowReceivedCallBack;
 
-	// Token: 0x0400542A RID: 21546
+	// Token: 0x040054D5 RID: 21717
 	public Func<TItem, bool> ShowReceivableCallBack;
 }

@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02001FB8 RID: 8120
+// Token: 0x0200147A RID: 5242
 [NullableContext(1)]
 [Nullable(0)]
 public class WeaponItemData : AttributeItemData
 {
-	// Token: 0x0600FDDA RID: 64986 RVA: 0x003D9644 File Offset: 0x003D7844
+	// Token: 0x0600D200 RID: 53760 RVA: 0x003E5020 File Offset: 0x003E3220
 	public WeaponItemData(int configId, int uniqueId, int functionValue, InventoryDefine.EItemDataType itemDataType) : base(configId, uniqueId, functionValue, itemDataType)
 	{
 	}
 
-	// Token: 0x0600FDDB RID: 64987 RVA: 0x003D9654 File Offset: 0x003D7854
+	// Token: 0x0600D201 RID: 53761 RVA: 0x003E5030 File Offset: 0x003E3230
 	public override TItemConfig GetConfig()
 	{
 		WeaponConf? weaponItemConfig = InventoryConfig.Instance.GetWeaponItemConfig(this.ConfigId);
@@ -24,8 +24,8 @@ public class WeaponItemData : AttributeItemData
 		return weaponItemConfig.GetValueOrDefault();
 	}
 
-	// Token: 0x1700135E RID: 4958
-	// (get) Token: 0x0600FDDC RID: 64988 RVA: 0x003D968C File Offset: 0x003D788C
+	// Token: 0x1700138A RID: 5002
+	// (get) Token: 0x0600D202 RID: 53762 RVA: 0x003E5068 File Offset: 0x003E3268
 	public WeaponConf WeaponConfig
 	{
 		get
@@ -34,56 +34,56 @@ public class WeaponItemData : AttributeItemData
 		}
 	}
 
-	// Token: 0x0600FDDD RID: 64989 RVA: 0x003D96AC File Offset: 0x003D78AC
+	// Token: 0x0600D203 RID: 53763 RVA: 0x003E5088 File Offset: 0x003E3288
 	public override InventoryDefine.EItemMainTypeId? GetMainType()
 	{
 		return new InventoryDefine.EItemMainTypeId?(InventoryDefine.EItemMainTypeId.Weapon);
 	}
 
-	// Token: 0x0600FDDE RID: 64990 RVA: 0x003D96B4 File Offset: 0x003D78B4
+	// Token: 0x0600D204 RID: 53764 RVA: 0x003E5090 File Offset: 0x003E3290
 	public override InventoryDefine.EItemType? GetType()
 	{
 		return new InventoryDefine.EItemType?(InventoryDefine.EItemType.Weapon);
 	}
 
-	// Token: 0x0600FDDF RID: 64991 RVA: 0x003D96BC File Offset: 0x003D78BC
+	// Token: 0x0600D205 RID: 53765 RVA: 0x003E5098 File Offset: 0x003E3298
 	public override int GetQuality()
 	{
 		return this.WeaponConfig.QualityId;
 	}
 
-	// Token: 0x0600FDE0 RID: 64992 RVA: 0x003D96D8 File Offset: 0x003D78D8
+	// Token: 0x0600D206 RID: 53766 RVA: 0x003E50B4 File Offset: 0x003E32B4
 	public override int GetSortIndex()
 	{
 		return this.WeaponConfig.SortIndex;
 	}
 
-	// Token: 0x0600FDE1 RID: 64993 RVA: 0x003D96F4 File Offset: 0x003D78F4
+	// Token: 0x0600D207 RID: 53767 RVA: 0x003E50D0 File Offset: 0x003E32D0
 	[NullableContext(0)]
 	public override Span<int> GetItemAccess()
 	{
 		return this.WeaponConfig.GetItemAccessBytes();
 	}
 
-	// Token: 0x0600FDE2 RID: 64994 RVA: 0x003D970F File Offset: 0x003D790F
+	// Token: 0x0600D208 RID: 53768 RVA: 0x003E50EB File Offset: 0x003E32EB
 	public override int GetMaxStackCount()
 	{
 		return 1;
 	}
 
-	// Token: 0x0600FDE3 RID: 64995 RVA: 0x003D9712 File Offset: 0x003D7912
+	// Token: 0x0600D209 RID: 53769 RVA: 0x003E50EE File Offset: 0x003E32EE
 	public override string GetDefaultDownText()
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(TextConfig.Instance.GetTextContentIdById("LevelShow"), null) ?? "";
 	}
 
-	// Token: 0x0600FDE4 RID: 64996 RVA: 0x003D9734 File Offset: 0x003D7934
+	// Token: 0x0600D20A RID: 53770 RVA: 0x003E5110 File Offset: 0x003E3310
 	public override InventoryDefine.ERedDotDisableRule GetRedDotDisableRule()
 	{
 		return (InventoryDefine.ERedDotDisableRule)this.WeaponConfig.RedDotDisableRule;
 	}
 
-	// Token: 0x0600FDE5 RID: 64997 RVA: 0x003D9750 File Offset: 0x003D7950
+	// Token: 0x0600D20B RID: 53771 RVA: 0x003E512C File Offset: 0x003E332C
 	public override InventoryDefine.IItemViewDataInfo GetItemViewDataInfo(ItemViewDefine.EItemOperationMode viewMode)
 	{
 		if (this.GetConfig() == null)

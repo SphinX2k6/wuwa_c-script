@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000065 RID: 101
+// Token: 0x02000067 RID: 103
 [NullableContext(1)]
 [Nullable(0)]
 public class Core : Singleton
 {
-	// Token: 0x060002FD RID: 765 RVA: 0x00010BAC File Offset: 0x0000EDAC
+	// Token: 0x06000338 RID: 824 RVA: 0x00011994 File Offset: 0x0000FB94
 	[NullableContext(0)]
 	public UniTask<bool> Initialize([Nullable(1)] UGameInstance gameInstance)
 	{
@@ -24,43 +24,43 @@ public class Core : Singleton
 		return <Initialize>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060002FE RID: 766 RVA: 0x00010BF7 File Offset: 0x0000EDF7
+	// Token: 0x06000339 RID: 825 RVA: 0x000119DF File Offset: 0x0000FBDF
 	public void TickPriority2(float delta)
 	{
-		if (Core.Instance.ForbiddenTickPriority)
+		if (this.ForbiddenTickPriority)
 		{
 			return;
 		}
-		Core.Instance.NextTickedPriority = 1;
+		this.NextTickedPriority = 1;
 		Time.Instance.Tick(delta);
 	}
 
-	// Token: 0x060002FF RID: 767 RVA: 0x00010C1C File Offset: 0x0000EE1C
+	// Token: 0x0600033A RID: 826 RVA: 0x000119FC File Offset: 0x0000FBFC
 	public void TickPriority1(float delta)
 	{
-		if (Core.Instance.NextTickedPriority == 1)
+		if (this.NextTickedPriority == 1)
 		{
-			Core.Instance.NextTickedPriority = 0;
+			this.NextTickedPriority = 0;
 			return;
 		}
-		Core.Instance.ForbiddenTickPriority = true;
+		this.ForbiddenTickPriority = true;
 	}
 
-	// Token: 0x06000300 RID: 768 RVA: 0x00010C44 File Offset: 0x0000EE44
+	// Token: 0x0600033B RID: 827 RVA: 0x00011A18 File Offset: 0x0000FC18
 	public void Tick(float delta)
 	{
-		if (Core.Instance.NextTickedPriority != 0)
+		if (this.NextTickedPriority != 0)
 		{
 			Time.Instance.Tick(delta);
-			Core.Instance.ForbiddenTickPriority = true;
+			this.ForbiddenTickPriority = true;
 		}
-		Core.Instance.NextTickedPriority = -1;
+		this.NextTickedPriority = -1;
 		CycleCounter.Instance.RefreshState();
 		float num = delta / 1000f;
 		Net.Instance.Tick(num);
 		if (!TickSystem.Instance.IsPaused)
 		{
-			foreach (Action<float> action in Core.Instance.PreTickFunctions)
+			foreach (Action<float> action in this.PreTickFunctions)
 			{
 				action(delta);
 			}
@@ -88,11 +88,11 @@ public class Core : Singleton
 		}
 	}
 
-	// Token: 0x06000301 RID: 769 RVA: 0x00010DC0 File Offset: 0x0000EFC0
+	// Token: 0x0600033C RID: 828 RVA: 0x00011B84 File Offset: 0x0000FD84
 	public void AfterTick(float delta)
 	{
-		Core.Instance.NextTickedPriority = 2;
-		Core.Instance.ForbiddenTickPriority = false;
+		this.NextTickedPriority = 2;
+		this.ForbiddenTickPriority = false;
 		if (!TickSystem.Instance.IsPaused && Info.Instance.EnableForceTick)
 		{
 			EntitySystem.Instance.ForceAfterTick(delta);
@@ -104,7 +104,7 @@ public class Core : Singleton
 		}
 	}
 
-	// Token: 0x06000302 RID: 770 RVA: 0x00010E2C File Offset: 0x0000F02C
+	// Token: 0x0600033D RID: 829 RVA: 0x00011BE8 File Offset: 0x0000FDE8
 	public void RegisterPreTick(Action<float> func)
 	{
 		if (this.PreTickFunctions.Contains(func))
@@ -115,7 +115,7 @@ public class Core : Singleton
 		this.PreTickFunctions.Add(func);
 	}
 
-	// Token: 0x06000303 RID: 771 RVA: 0x00010E70 File Offset: 0x0000F070
+	// Token: 0x0600033E RID: 830 RVA: 0x00011C2C File Offset: 0x0000FE2C
 	public void UnRegisterPreTick(Action<float> func)
 	{
 		if (!this.PreTickFunctions.Contains(func))
@@ -126,7 +126,7 @@ public class Core : Singleton
 		this.PreTickFunctions.Remove(func);
 	}
 
-	// Token: 0x06000304 RID: 772 RVA: 0x00010EB4 File Offset: 0x0000F0B4
+	// Token: 0x0600033F RID: 831 RVA: 0x00011C70 File Offset: 0x0000FE70
 	private UniTask WaitFrame()
 	{
 		UniTaskCompletionSource tcs = new UniTaskCompletionSource();
@@ -137,8 +137,8 @@ public class Core : Singleton
 		return tcs.Task;
 	}
 
-	// Token: 0x1700006D RID: 109
-	// (get) Token: 0x06000305 RID: 773 RVA: 0x00010EF6 File Offset: 0x0000F0F6
+	// Token: 0x17000074 RID: 116
+	// (get) Token: 0x06000340 RID: 832 RVA: 0x00011CB2 File Offset: 0x0000FEB2
 	public static Core Instance
 	{
 		get
@@ -152,12 +152,12 @@ public class Core : Singleton
 		}
 	}
 
-	// Token: 0x06000306 RID: 774 RVA: 0x00010F19 File Offset: 0x0000F119
+	// Token: 0x06000341 RID: 833 RVA: 0x00011CD5 File Offset: 0x0000FED5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06000307 RID: 775 RVA: 0x00010F1B File Offset: 0x0000F11B
+	// Token: 0x06000342 RID: 834 RVA: 0x00011CD7 File Offset: 0x0000FED7
 	public static void ResetStaticDefaultValue()
 	{
 		Core instance = Core._instance;
@@ -168,22 +168,22 @@ public class Core : Singleton
 		Core._instance = null;
 	}
 
-	// Token: 0x06000308 RID: 776 RVA: 0x00010F34 File Offset: 0x0000F134
+	// Token: 0x06000343 RID: 835 RVA: 0x00011CF0 File Offset: 0x0000FEF0
 	static Core()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(Core.CreateStaticDefaultValue), new Action(Core.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04000221 RID: 545
+	// Token: 0x04000237 RID: 567
 	private readonly HashSet<Action<float>> PreTickFunctions = new HashSet<Action<float>>();
 
-	// Token: 0x04000222 RID: 546
+	// Token: 0x04000238 RID: 568
 	private int NextTickedPriority = 2;
 
-	// Token: 0x04000223 RID: 547
+	// Token: 0x04000239 RID: 569
 	public bool ForbiddenTickPriority;
 
-	// Token: 0x04000224 RID: 548
+	// Token: 0x0400023A RID: 570
 	[Nullable(2)]
 	private static Core _instance;
 }

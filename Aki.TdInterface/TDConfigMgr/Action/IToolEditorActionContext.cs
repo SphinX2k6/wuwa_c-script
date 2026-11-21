@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FD2 RID: 8146
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002219 RID: 8729
 	public class IToolEditorActionContext : IActionContextType
 	{
-		// Token: 0x0600B33A RID: 45882 RVA: 0x001A1564 File Offset: 0x0019F764
+		// Token: 0x0600BE50 RID: 48720 RVA: 0x001B7AD0 File Offset: 0x001B5CD0
 		private IToolEditorActionContext_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B33B RID: 45883 RVA: 0x001A159C File Offset: 0x0019F79C
+		// Token: 0x0600BE51 RID: 48721 RVA: 0x001B7B08 File Offset: 0x001B5D08
 		public static IToolEditorActionContext Create([Nullable(2)] IToolEditorActionContext instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B33C RID: 45884 RVA: 0x001A15AF File Offset: 0x0019F7AF
+		// Token: 0x0600BE52 RID: 48722 RVA: 0x001B7B1B File Offset: 0x001B5D1B
 		public static IToolEditorActionContext CreateFromSetValue([Nullable(2)] IToolEditorActionContext_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B33D RID: 45885 RVA: 0x001A15C2 File Offset: 0x0019F7C2
+		// Token: 0x0600BE53 RID: 48723 RVA: 0x001B7B2E File Offset: 0x001B5D2E
 		public new IToolEditorActionContext_SetValue ToSetValue()
 		{
 			return new IToolEditorActionContext_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700373A RID: 14138
-		// (get) Token: 0x0600B33E RID: 45886 RVA: 0x001A15D5 File Offset: 0x0019F7D5
-		// (set) Token: 0x0600B33F RID: 45887 RVA: 0x001A1600 File Offset: 0x0019F800
+		// Token: 0x17003A12 RID: 14866
+		// (get) Token: 0x0600BE54 RID: 48724 RVA: 0x001B7B41 File Offset: 0x001B5D41
+		// (set) Token: 0x0600BE55 RID: 48725 RVA: 0x001B7B6C File Offset: 0x001B5D6C
 		public new virtual string Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C25 RID: 27685
+		// Token: 0x04007227 RID: 29223
 		[Nullable(2)]
 		protected new IToolEditorActionContext FbInstance;
 
-		// Token: 0x04006C26 RID: 27686
+		// Token: 0x04007228 RID: 29224
 		[Nullable(2)]
 		protected new IToolEditorActionContext_SetValue PocoInterface;
 	}

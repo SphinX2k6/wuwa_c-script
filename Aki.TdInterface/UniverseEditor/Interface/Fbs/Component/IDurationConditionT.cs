@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050D0 RID: 20688
+	// Token: 0x02005635 RID: 22069
 	public class IDurationConditionT
 	{
-		// Token: 0x17009691 RID: 38545
-		// (get) Token: 0x0602148B RID: 136331 RVA: 0x0049F7EC File Offset: 0x0049D9EC
-		// (set) Token: 0x0602148C RID: 136332 RVA: 0x0049F7F4 File Offset: 0x0049D9F4
+		// Token: 0x17009E7E RID: 40574
+		// (get) Token: 0x060233DF RID: 144351 RVA: 0x004D9778 File Offset: 0x004D7978
+		// (set) Token: 0x060233E0 RID: 144352 RVA: 0x004D9780 File Offset: 0x004D7980
 		public ESpawnMonsterCompleteCondition Type { get; set; }
 
-		// Token: 0x17009692 RID: 38546
-		// (get) Token: 0x0602148D RID: 136333 RVA: 0x0049F7FD File Offset: 0x0049D9FD
-		// (set) Token: 0x0602148E RID: 136334 RVA: 0x0049F805 File Offset: 0x0049DA05
+		// Token: 0x17009E7F RID: 40575
+		// (get) Token: 0x060233E1 RID: 144353 RVA: 0x004D9789 File Offset: 0x004D7989
+		// (set) Token: 0x060233E2 RID: 144354 RVA: 0x004D9791 File Offset: 0x004D7991
 		public float Duration { get; set; }
 
-		// Token: 0x17009693 RID: 38547
-		// (get) Token: 0x0602148F RID: 136335 RVA: 0x0049F80E File Offset: 0x0049DA0E
-		// (set) Token: 0x06021490 RID: 136336 RVA: 0x0049F816 File Offset: 0x0049DA16
+		// Token: 0x17009E80 RID: 40576
+		// (get) Token: 0x060233E3 RID: 144355 RVA: 0x004D979A File Offset: 0x004D799A
+		// (set) Token: 0x060233E4 RID: 144356 RVA: 0x004D97A2 File Offset: 0x004D79A2
 		public bool Refill { get; set; }
 
-		// Token: 0x17009694 RID: 38548
-		// (get) Token: 0x06021491 RID: 136337 RVA: 0x0049F81F File Offset: 0x0049DA1F
-		// (set) Token: 0x06021492 RID: 136338 RVA: 0x0049F827 File Offset: 0x0049DA27
+		// Token: 0x17009E81 RID: 40577
+		// (get) Token: 0x060233E5 RID: 144357 RVA: 0x004D97AB File Offset: 0x004D79AB
+		// (set) Token: 0x060233E6 RID: 144358 RVA: 0x004D97B3 File Offset: 0x004D79B3
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021493 RID: 136339 RVA: 0x0049F830 File Offset: 0x0049DA30
+		// Token: 0x060233E7 RID: 144359 RVA: 0x004D97BC File Offset: 0x004D79BC
 		public IDurationConditionT()
 		{
 			this.Type = ESpawnMonsterCompleteCondition.AllKill;

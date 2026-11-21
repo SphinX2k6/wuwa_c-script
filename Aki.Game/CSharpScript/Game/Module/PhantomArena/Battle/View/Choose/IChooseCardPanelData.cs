@@ -7,28 +7,28 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 {
-	// Token: 0x0200526A RID: 21098
+	// Token: 0x0200423A RID: 16954
 	[NullableContext(1)]
 	public interface IChooseCardPanelData
 	{
-		// Token: 0x17008270 RID: 33392
-		// (get) Token: 0x06035F21 RID: 220961
-		// (set) Token: 0x06035F22 RID: 220962
+		// Token: 0x17005630 RID: 22064
+		// (get) Token: 0x0602AE1C RID: 175644
+		// (set) Token: 0x0602AE1D RID: 175645
 		Func<List<int>, UniTask> ConfirmFunc { get; set; }
 
-		// Token: 0x17008271 RID: 33393
-		// (get) Token: 0x06035F23 RID: 220963
-		// (set) Token: 0x06035F24 RID: 220964
+		// Token: 0x17005631 RID: 22065
+		// (get) Token: 0x0602AE1E RID: 175646
+		// (set) Token: 0x0602AE1F RID: 175647
 		int LimitCount { get; set; }
 
-		// Token: 0x17008272 RID: 33394
-		// (get) Token: 0x06035F25 RID: 220965
-		// (set) Token: 0x06035F26 RID: 220966
+		// Token: 0x17005632 RID: 22066
+		// (get) Token: 0x0602AE20 RID: 175648
+		// (set) Token: 0x0602AE21 RID: 175649
 		List<PhantomCardData> CardDataList { get; set; }
 
-		// Token: 0x17008273 RID: 33395
-		// (get) Token: 0x06035F27 RID: 220967
-		// (set) Token: 0x06035F28 RID: 220968
+		// Token: 0x17005633 RID: 22067
+		// (get) Token: 0x0602AE22 RID: 175650
+		// (set) Token: 0x0602AE23 RID: 175651
 		EBvbPlayerOperationType? GuideType { get; set; }
 	}
 }

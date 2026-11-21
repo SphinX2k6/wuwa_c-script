@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 {
-	// Token: 0x02005213 RID: 21011
+	// Token: 0x020041E3 RID: 16867
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CardDescriptionData : ICardDescriptionData
 	{
-		// Token: 0x1700820B RID: 33291
-		// (get) Token: 0x06035BB6 RID: 220086 RVA: 0x00CB8713 File Offset: 0x00CB6913
-		// (set) Token: 0x06035BB7 RID: 220087 RVA: 0x00CB871B File Offset: 0x00CB691B
+		// Token: 0x170055CB RID: 21963
+		// (get) Token: 0x0602AAB1 RID: 174769 RVA: 0x00C05D57 File Offset: 0x00C03F57
+		// (set) Token: 0x0602AAB2 RID: 174770 RVA: 0x00C05D5F File Offset: 0x00C03F5F
 		public string Description { get; set; }
 
-		// Token: 0x1700820C RID: 33292
-		// (get) Token: 0x06035BB8 RID: 220088 RVA: 0x00CB8724 File Offset: 0x00CB6924
-		// (set) Token: 0x06035BB9 RID: 220089 RVA: 0x00CB872C File Offset: 0x00CB692C
+		// Token: 0x170055CC RID: 21964
+		// (get) Token: 0x0602AAB3 RID: 174771 RVA: 0x00C05D68 File Offset: 0x00C03F68
+		// (set) Token: 0x0602AAB4 RID: 174772 RVA: 0x00C05D70 File Offset: 0x00C03F70
 		public List<string> DescriptionParams { get; set; }
 	}
 }

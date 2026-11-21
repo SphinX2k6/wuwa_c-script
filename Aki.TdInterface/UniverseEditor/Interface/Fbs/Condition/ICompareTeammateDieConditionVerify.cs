@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BC7 RID: 19399
+	// Token: 0x020050B4 RID: 20660
 	public static class ICompareTeammateDieConditionVerify
 	{
-		// Token: 0x0601E9D6 RID: 125398 RVA: 0x0044808C File Offset: 0x0044628C
+		// Token: 0x060205A4 RID: 132516 RVA: 0x0047AF98 File Offset: 0x00479198
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			return verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 8, 4UL, 4UL, false) && verifier.VerifyTableEnd(tablePos);

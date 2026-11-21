@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DCA RID: 24010
+	// Token: 0x02004DAE RID: 19886
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarAiMiSiSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D044 RID: 249924 RVA: 0x00EAC17C File Offset: 0x00EAA37C
+		// Token: 0x06031FBB RID: 204731 RVA: 0x00DFD070 File Offset: 0x00DFB270
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarAiMiSiSlot.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D045 RID: 249925 RVA: 0x00EAC1C0 File Offset: 0x00EAA3C0
+		// Token: 0x06031FBC RID: 204732 RVA: 0x00DFD0B4 File Offset: 0x00DFB2B4
 		protected override void OnStart()
 		{
 			this.ForceEffectBasePercent = 0.29268292f;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D046 RID: 249926 RVA: 0x00EAC228 File Offset: 0x00EAA428
+		// Token: 0x06031FBD RID: 204733 RVA: 0x00DFD11C File Offset: 0x00DFB31C
 		protected override void OnInitData()
 		{
 			base.OnInitData();
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D047 RID: 249927 RVA: 0x00EAC2DC File Offset: 0x00EAA4DC
+		// Token: 0x06031FBE RID: 204734 RVA: 0x00DFD1D0 File Offset: 0x00DFB3D0
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(keyEnable, isStart);
 		}
 
-		// Token: 0x0603D048 RID: 249928 RVA: 0x00EAC344 File Offset: 0x00EAA544
+		// Token: 0x06031FBF RID: 204735 RVA: 0x00DFD238 File Offset: 0x00DFB438
 		public void SetBarColor(int type)
 		{
 			foreach (SpecialEnergyBarSlotItem specialEnergyBarSlotItem in this.SlotItemList)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ReplaceFullEffect(this.NiagaraList[type - 1]);
 		}
 
-		// Token: 0x0603D049 RID: 249929 RVA: 0x00EAC3D8 File Offset: 0x00EAA5D8
+		// Token: 0x06031FC0 RID: 204736 RVA: 0x00DFD2CC File Offset: 0x00DFB4CC
 		public void SetKeyVisible(bool bVisible)
 		{
 			UUIItem item = base.GetItem(this.SlotNum);
@@ -107,10 +107,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetUIActive(bVisible);
 		}
 
-		// Token: 0x0401FC9F RID: 130207
+		// Token: 0x0401A75C RID: 108380
 		private readonly List<FColor> ColorList = new List<FColor>();
 
-		// Token: 0x0401FCA0 RID: 130208
+		// Token: 0x0401A75D RID: 108381
 		private readonly List<FColor> PointColorList = new List<FColor>();
 	}
 }

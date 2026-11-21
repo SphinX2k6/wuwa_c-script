@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200297B RID: 10619
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C61 RID: 11361
 	public class IFaceExpressionAnimSequenceConfig : IFaceExpressionConfig
 	{
-		// Token: 0x0600EB47 RID: 60231 RVA: 0x00226BB8 File Offset: 0x00224DB8
+		// Token: 0x0600F9C2 RID: 63938 RVA: 0x00244310 File Offset: 0x00242510
 		public static IFaceExpressionAnimSequenceConfig Create(IFaceExpressionAnimSequenceConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A13 RID: 18963
-		// (get) Token: 0x0600EB48 RID: 60232 RVA: 0x00226BD7 File Offset: 0x00224DD7
+		// Token: 0x17004DAE RID: 19886
+		// (get) Token: 0x0600F9C3 RID: 63939 RVA: 0x0024432F File Offset: 0x0024252F
 		public override EFaceExpressionConfigType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A14 RID: 18964
-		// (get) Token: 0x0600EB49 RID: 60233 RVA: 0x00226BE4 File Offset: 0x00224DE4
+		// Token: 0x17004DAF RID: 19887
+		// (get) Token: 0x0600F9C4 RID: 63940 RVA: 0x0024433C File Offset: 0x0024253C
 		public virtual string Path
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008193 RID: 33171
+		// Token: 0x04008877 RID: 34935
 		private IFaceExpressionAnimSequenceConfig Instance;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C2C RID: 15404
+	// Token: 0x0200403B RID: 16443
 	public class IRangeT
 	{
-		// Token: 0x17006A10 RID: 27152
-		// (get) Token: 0x06015435 RID: 87093 RVA: 0x00313FF2 File Offset: 0x003121F2
-		// (set) Token: 0x06015436 RID: 87094 RVA: 0x00313FFA File Offset: 0x003121FA
+		// Token: 0x17006FC1 RID: 28609
+		// (get) Token: 0x06016949 RID: 92489 RVA: 0x0033AE92 File Offset: 0x00339092
+		// (set) Token: 0x0601694A RID: 92490 RVA: 0x0033AE9A File Offset: 0x0033909A
 		public ERangeType Type { get; set; }
 
-		// Token: 0x06015437 RID: 87095 RVA: 0x00314003 File Offset: 0x00312203
+		// Token: 0x0601694B RID: 92491 RVA: 0x0033AEA3 File Offset: 0x003390A3
 		public IRangeT()
 		{
 			this.Type = ERangeType.CircleRange;

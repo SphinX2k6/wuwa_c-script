@@ -3,30 +3,30 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000E75 RID: 3701
+// Token: 0x0200032A RID: 810
 [NullableContext(1)]
 [Nullable(0)]
 public class FinalBattleSubModel : KscSubModelBase
 {
-	// Token: 0x06005A19 RID: 23065 RVA: 0x00106C62 File Offset: 0x00104E62
+	// Token: 0x06002DB0 RID: 11696 RVA: 0x0010E912 File Offset: 0x0010CB12
 	public override string GetSkillDtPath()
 	{
 		return FinalBattleSubModel.SkillDtPath;
 	}
 
-	// Token: 0x06005A1A RID: 23066 RVA: 0x00106C69 File Offset: 0x00104E69
+	// Token: 0x06002DB1 RID: 11697 RVA: 0x0010E919 File Offset: 0x0010CB19
 	public override string GetEntityDtPath()
 	{
 		return FinalBattleSubModel.EntityDtPath;
 	}
 
-	// Token: 0x06005A1B RID: 23067 RVA: 0x00106C70 File Offset: 0x00104E70
+	// Token: 0x06002DB2 RID: 11698 RVA: 0x0010E920 File Offset: 0x0010CB20
 	public string GetBulletDtPath()
 	{
 		return FinalBattleSubModel.BulletDtPath;
 	}
 
-	// Token: 0x06005A1C RID: 23068 RVA: 0x00106C78 File Offset: 0x00104E78
+	// Token: 0x06002DB3 RID: 11699 RVA: 0x0010E928 File Offset: 0x0010CB28
 	[NullableContext(2)]
 	public IFinalBattleCombatInfo GetEntity(int uid)
 	{
@@ -38,7 +38,7 @@ public class FinalBattleSubModel : KscSubModelBase
 		return result;
 	}
 
-	// Token: 0x06005A1D RID: 23069 RVA: 0x00106C98 File Offset: 0x00104E98
+	// Token: 0x06002DB4 RID: 11700 RVA: 0x0010E948 File Offset: 0x0010CB48
 	public void GetAllEntities(List<IFinalBattleCombatInfo> entities)
 	{
 		entities.Clear();
@@ -48,7 +48,7 @@ public class FinalBattleSubModel : KscSubModelBase
 		}
 	}
 
-	// Token: 0x06005A1E RID: 23070 RVA: 0x00106CF8 File Offset: 0x00104EF8
+	// Token: 0x06002DB5 RID: 11701 RVA: 0x0010E9A8 File Offset: 0x0010CBA8
 	[return: Nullable(2)]
 	public string TryAddEntity(IFinalBattleCombatInfo entityModel)
 	{
@@ -65,7 +65,7 @@ public class FinalBattleSubModel : KscSubModelBase
 		return null;
 	}
 
-	// Token: 0x06005A1F RID: 23071 RVA: 0x00106D40 File Offset: 0x00104F40
+	// Token: 0x06002DB6 RID: 11702 RVA: 0x0010E9F0 File Offset: 0x0010CBF0
 	[NullableContext(2)]
 	public IFinalBattleCombatInfo RemoveEntity(int uid)
 	{
@@ -78,7 +78,7 @@ public class FinalBattleSubModel : KscSubModelBase
 		return null;
 	}
 
-	// Token: 0x06005A20 RID: 23072 RVA: 0x00106D6D File Offset: 0x00104F6D
+	// Token: 0x06002DB7 RID: 11703 RVA: 0x0010EA1D File Offset: 0x0010CC1D
 	protected override bool OnClear()
 	{
 		this.AllEntities.Clear();
@@ -86,25 +86,25 @@ public class FinalBattleSubModel : KscSubModelBase
 		return true;
 	}
 
-	// Token: 0x06005A21 RID: 23073 RVA: 0x00106D82 File Offset: 0x00104F82
+	// Token: 0x06002DB8 RID: 11704 RVA: 0x0010EA32 File Offset: 0x0010CC32
 	public override bool IsCreatureIdValid(int creatureId)
 	{
 		return this.AllEntities.ContainsKey(creatureId);
 	}
 
-	// Token: 0x04002928 RID: 10536
+	// Token: 0x040029C3 RID: 10691
 	public static readonly string SkillDtPath = "";
 
-	// Token: 0x04002929 RID: 10537
+	// Token: 0x040029C4 RID: 10692
 	public static readonly string EntityDtPath = "";
 
-	// Token: 0x0400292A RID: 10538
+	// Token: 0x040029C5 RID: 10693
 	public static readonly string BulletDtPath = "/Game/Aki/Data/SimpleCombat/3_5FinalBattle/DT_KuroBulletData_FinalBattle.DT_KuroBulletData_FinalBattle";
 
-	// Token: 0x0400292B RID: 10539
+	// Token: 0x040029C6 RID: 10694
 	[Nullable(2)]
 	public UDataTable BulletDataTable;
 
-	// Token: 0x0400292C RID: 10540
+	// Token: 0x040029C7 RID: 10695
 	private readonly Dictionary<int, IFinalBattleCombatInfo> AllEntities = new Dictionary<int, IFinalBattleCombatInfo>();
 }

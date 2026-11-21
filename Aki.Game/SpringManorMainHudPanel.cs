@@ -13,12 +13,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D15 RID: 7445
+// Token: 0x020011D7 RID: 4567
 [NullableContext(2)]
 [Nullable(0)]
 public class SpringManorMainHudPanel : BattleChildViewPanel
 {
-	// Token: 0x0600E0FF RID: 57599 RVA: 0x0034C430 File Offset: 0x0034A630
+	// Token: 0x0600B51C RID: 46364 RVA: 0x00357E60 File Offset: 0x00356060
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -64,7 +64,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		};
 	}
 
-	// Token: 0x0600E100 RID: 57600 RVA: 0x0034C778 File Offset: 0x0034A978
+	// Token: 0x0600B51D RID: 46365 RVA: 0x003581A8 File Offset: 0x003563A8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SpringManorMainHudPanel.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -75,7 +75,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E101 RID: 57601 RVA: 0x0034C7BC File Offset: 0x0034A9BC
+	// Token: 0x0600B51E RID: 46366 RVA: 0x003581EC File Offset: 0x003563EC
 	protected override void OnStart()
 	{
 		this.InitializeBattleViewPanel();
@@ -87,7 +87,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600E102 RID: 57602 RVA: 0x0034C822 File Offset: 0x0034AA22
+	// Token: 0x0600B51F RID: 46367 RVA: 0x00358252 File Offset: 0x00356452
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer atmosphereSeqPlayer = this.AtmosphereSeqPlayer;
@@ -98,7 +98,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		atmosphereSeqPlayer.Clear();
 	}
 
-	// Token: 0x0600E103 RID: 57603 RVA: 0x0034C834 File Offset: 0x0034AA34
+	// Token: 0x0600B520 RID: 46368 RVA: 0x00358264 File Offset: 0x00356464
 	private void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.SpringManorFunctionOpenNotify, new Action(this.OnActivityUpdate));
@@ -120,7 +120,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		childViewData2.AddCallback(EBattleUiChild.Mission, new Action(this.RefreshMissionRootPanelVisible));
 	}
 
-	// Token: 0x0600E104 RID: 57604 RVA: 0x0034C928 File Offset: 0x0034AB28
+	// Token: 0x0600B521 RID: 46369 RVA: 0x00358358 File Offset: 0x00356558
 	private void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.SpringManorFunctionOpenNotify, new Action(this.OnActivityUpdate));
@@ -142,7 +142,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		childViewData2.RemoveCallback(EBattleUiChild.Mission, new Action(this.RefreshMissionRootPanelVisible));
 	}
 
-	// Token: 0x0600E105 RID: 57605 RVA: 0x0034CA08 File Offset: 0x0034AC08
+	// Token: 0x0600B522 RID: 46370 RVA: 0x00358438 File Offset: 0x00356638
 	private void OnBattleViewChildVisibleChanged()
 	{
 		BattleUiChildViewData childViewData = BattleUiModel.Instance.ChildViewData;
@@ -160,7 +160,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		item2.SetUIActive(flag.GetValueOrDefault());
 	}
 
-	// Token: 0x0600E106 RID: 57606 RVA: 0x0034CA70 File Offset: 0x0034AC70
+	// Token: 0x0600B523 RID: 46371 RVA: 0x003584A0 File Offset: 0x003566A0
 	private void RefreshMissionRootPanelVisible()
 	{
 		BattleUiChildViewData childViewData = BattleUiModel.Instance.ChildViewData;
@@ -173,21 +173,21 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		item.SetUIActive(flag.GetValueOrDefault());
 	}
 
-	// Token: 0x0600E107 RID: 57607 RVA: 0x0034CABB File Offset: 0x0034ACBB
+	// Token: 0x0600B524 RID: 46372 RVA: 0x003584EB File Offset: 0x003566EB
 	private void OnAtmosphereUpdate()
 	{
 		this.RefreshAtmosphere();
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0600E108 RID: 57608 RVA: 0x0034CAC9 File Offset: 0x0034ACC9
+	// Token: 0x0600B525 RID: 46373 RVA: 0x003584F9 File Offset: 0x003566F9
 	[NullableContext(1)]
 	private void AddNewQuest(TQuest quest)
 	{
 		this.OnActivityUpdate();
 	}
 
-	// Token: 0x0600E109 RID: 57609 RVA: 0x0034CAD1 File Offset: 0x0034ACD1
+	// Token: 0x0600B526 RID: 46374 RVA: 0x00358501 File Offset: 0x00356701
 	private void OnActivityUpdate()
 	{
 		this.RefreshAtmosphere();
@@ -195,7 +195,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0600E10A RID: 57610 RVA: 0x0034CAE8 File Offset: 0x0034ACE8
+	// Token: 0x0600B527 RID: 46375 RVA: 0x00358518 File Offset: 0x00356718
 	private void RefreshRedDot()
 	{
 		SpringManorModel instance = SpringManorModel.Instance;
@@ -242,14 +242,14 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		questButton.RefreshRedDot();
 	}
 
-	// Token: 0x0600E10B RID: 57611 RVA: 0x0034CBA3 File Offset: 0x0034ADA3
+	// Token: 0x0600B528 RID: 46376 RVA: 0x003585D3 File Offset: 0x003567D3
 	private void InitializeBattleViewPanel()
 	{
 		this.Visible = true;
 		base.ShowBattleChildViewPanel();
 	}
 
-	// Token: 0x0600E10C RID: 57612 RVA: 0x0034CBB4 File Offset: 0x0034ADB4
+	// Token: 0x0600B529 RID: 46377 RVA: 0x003585E4 File Offset: 0x003567E4
 	protected override void OnShowBattleChildViewPanel(bool isFirst)
 	{
 		TrackedMarksView trackPanel = this.TrackPanel;
@@ -287,7 +287,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		this.AddEventListener();
 	}
 
-	// Token: 0x0600E10D RID: 57613 RVA: 0x0034CC80 File Offset: 0x0034AE80
+	// Token: 0x0600B52A RID: 46378 RVA: 0x003586B0 File Offset: 0x003568B0
 	protected override void OnHideBattleChildViewPanel()
 	{
 		TrackedMarksView trackPanel = this.TrackPanel;
@@ -315,7 +315,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		this.RemoveEventListener();
 	}
 
-	// Token: 0x0600E10E RID: 57614 RVA: 0x0034CCF8 File Offset: 0x0034AEF8
+	// Token: 0x0600B52B RID: 46379 RVA: 0x00358728 File Offset: 0x00356928
 	public override void OnTickBattleChildViewPanel(float delta)
 	{
 		this.CheckMissionTrack();
@@ -327,7 +327,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		this.RefreshTimeText();
 	}
 
-	// Token: 0x0600E10F RID: 57615 RVA: 0x0034CD18 File Offset: 0x0034AF18
+	// Token: 0x0600B52C RID: 46380 RVA: 0x00358748 File Offset: 0x00356948
 	public override void Reset()
 	{
 		MissionPanel missionPanel = this.MissionPanel;
@@ -338,7 +338,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		missionPanel.Reset();
 	}
 
-	// Token: 0x0600E110 RID: 57616 RVA: 0x0034CD2A File Offset: 0x0034AF2A
+	// Token: 0x0600B52D RID: 46381 RVA: 0x0035875A File Offset: 0x0035695A
 	public override void OnAfterTickBattleChildViewPanel(float delta)
 	{
 		TrackedMarksView trackPanel = this.TrackPanel;
@@ -349,7 +349,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		trackPanel.Update(delta);
 	}
 
-	// Token: 0x0600E111 RID: 57617 RVA: 0x0034CD40 File Offset: 0x0034AF40
+	// Token: 0x0600B52E RID: 46382 RVA: 0x00358770 File Offset: 0x00356970
 	private void SetBattleChildViewPanelVisible(bool visible)
 	{
 		foreach (EBattleUiChild childType in SpringManorMainHudPanel.controlBattleChildUiChildList)
@@ -362,7 +362,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E112 RID: 57618 RVA: 0x0034CD80 File Offset: 0x0034AF80
+	// Token: 0x0600B52F RID: 46383 RVA: 0x003587B0 File Offset: 0x003569B0
 	private UniTask NewFullScreenPanel()
 	{
 		SpringManorMainHudPanel.<NewFullScreenPanel>d__32 <NewFullScreenPanel>d__;
@@ -373,7 +373,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		return <NewFullScreenPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E113 RID: 57619 RVA: 0x0034CDC4 File Offset: 0x0034AFC4
+	// Token: 0x0600B530 RID: 46384 RVA: 0x003587F4 File Offset: 0x003569F4
 	private UniTask NewTrackedMarksView()
 	{
 		SpringManorMainHudPanel.<NewTrackedMarksView>d__33 <NewTrackedMarksView>d__;
@@ -384,7 +384,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		return <NewTrackedMarksView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E114 RID: 57620 RVA: 0x0034CE08 File Offset: 0x0034B008
+	// Token: 0x0600B531 RID: 46385 RVA: 0x00358838 File Offset: 0x00356A38
 	private UniTask NewMissionPanel()
 	{
 		SpringManorMainHudPanel.<NewMissionPanel>d__34 <NewMissionPanel>d__;
@@ -395,7 +395,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		return <NewMissionPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E115 RID: 57621 RVA: 0x0034CE4B File Offset: 0x0034B04B
+	// Token: 0x0600B532 RID: 46386 RVA: 0x0035887B File Offset: 0x00356A7B
 	public void SetTipsVisible(bool visible)
 	{
 		UUIItem timeTipsItem = this.TimeTipsItem;
@@ -406,7 +406,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		timeTipsItem.SetUIActive(visible);
 	}
 
-	// Token: 0x0600E116 RID: 57622 RVA: 0x0034CE60 File Offset: 0x0034B060
+	// Token: 0x0600B533 RID: 46387 RVA: 0x00358890 File Offset: 0x00356A90
 	[NullableContext(1)]
 	public void SetTipsText(string str)
 	{
@@ -422,7 +422,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		timeTipsText.SetText(newText, true);
 	}
 
-	// Token: 0x0600E117 RID: 57623 RVA: 0x0034CE98 File Offset: 0x0034B098
+	// Token: 0x0600B534 RID: 46388 RVA: 0x003588C8 File Offset: 0x00356AC8
 	private void RefreshTimeText()
 	{
 		if (this.CurrentTraceMainQuestId != 0 || SpringManorModel.Instance.CheckMainQuestIsFinished())
@@ -439,13 +439,13 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E118 RID: 57624 RVA: 0x0034CEEC File Offset: 0x0034B0EC
+	// Token: 0x0600B535 RID: 46389 RVA: 0x0035891C File Offset: 0x00356B1C
 	private int GetNeedTraceMainQuestId()
 	{
 		return SpringManorModel.Instance.GetMainQuestId().GetValueOrDefault();
 	}
 
-	// Token: 0x0600E119 RID: 57625 RVA: 0x0034CF0C File Offset: 0x0034B10C
+	// Token: 0x0600B536 RID: 46390 RVA: 0x0035893C File Offset: 0x00356B3C
 	public void CheckMissionTrack()
 	{
 		int needTraceMainQuestId = this.GetNeedTraceMainQuestId();
@@ -472,7 +472,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		EventSystem.Instance.Emit<BtType, long?>(EEventName.OnLogicTreeTrackUpdate, quest.Tree.BtType, new long?(quest.Tree.TreeIncId));
 	}
 
-	// Token: 0x0600E11A RID: 57626 RVA: 0x0034CFDC File Offset: 0x0034B1DC
+	// Token: 0x0600B537 RID: 46391 RVA: 0x00358A0C File Offset: 0x00356C0C
 	private void PlayAtmosphereStageUpAnimation()
 	{
 		if (this.AtmosphereStageUpParam == null)
@@ -502,7 +502,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		this.AtmosphereTweener.OnCompleteCallBack.Bind(new Action(this.OnAtmosphereStageUpAnimationCompleted));
 	}
 
-	// Token: 0x0600E11B RID: 57627 RVA: 0x0034D11B File Offset: 0x0034B31B
+	// Token: 0x0600B538 RID: 46392 RVA: 0x00358B4B File Offset: 0x00356D4B
 	private void OnAtmosphereStageUpAnimationChange(float value)
 	{
 		UUISliderComponent atmosphereProgressBar = this.AtmosphereProgressBar;
@@ -513,7 +513,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		atmosphereProgressBar.SetValue(value, true);
 	}
 
-	// Token: 0x0600E11C RID: 57628 RVA: 0x0034D130 File Offset: 0x0034B330
+	// Token: 0x0600B539 RID: 46393 RVA: 0x00358B60 File Offset: 0x00356D60
 	private void OnAtmosphereStageUpAnimationCompleted()
 	{
 		this.ClearTweener();
@@ -544,7 +544,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		this.AtmosphereTweener.OnCompleteCallBack.Bind(new Action(this.ClearTweener));
 	}
 
-	// Token: 0x0600E11D RID: 57629 RVA: 0x0034D274 File Offset: 0x0034B474
+	// Token: 0x0600B53A RID: 46394 RVA: 0x00358CA4 File Offset: 0x00356EA4
 	private void PlayAtmosphereStageUpBgAnimation(int stage)
 	{
 		UUIItem item = base.GetItem(3);
@@ -584,7 +584,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		atmosphereSeqPlayer3.PlaySequencePurely("NumChange", false, false, null, null, false);
 	}
 
-	// Token: 0x0600E11E RID: 57630 RVA: 0x0034D337 File Offset: 0x0034B537
+	// Token: 0x0600B53B RID: 46395 RVA: 0x00358D67 File Offset: 0x00356F67
 	private void ClearTweener()
 	{
 		if (this.AtmosphereTweener != null)
@@ -594,7 +594,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E11F RID: 57631 RVA: 0x0034D354 File Offset: 0x0034B554
+	// Token: 0x0600B53C RID: 46396 RVA: 0x00358D84 File Offset: 0x00356F84
 	public void RefreshAtmosphere()
 	{
 		if (this.AtmosphereTweener != null)
@@ -638,7 +638,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		atmosphereProgressBar.SetValue(inValue, true);
 	}
 
-	// Token: 0x0600E120 RID: 57632 RVA: 0x0034D484 File Offset: 0x0034B684
+	// Token: 0x0600B53D RID: 46397 RVA: 0x00358EB4 File Offset: 0x003570B4
 	public void RefreshPassBg(int stage)
 	{
 		UUIItem item = base.GetItem(3);
@@ -659,7 +659,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		item3.SetUIActive(stage == 3);
 	}
 
-	// Token: 0x0600E121 RID: 57633 RVA: 0x0034D4D4 File Offset: 0x0034B6D4
+	// Token: 0x0600B53E RID: 46398 RVA: 0x00358F04 File Offset: 0x00357104
 	public void RefreshAtmosphereProgressText(int curLevel, int curProgress, int targetProgress)
 	{
 		UUIArtText artText = base.GetArtText(6);
@@ -674,13 +674,13 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		}));
 	}
 
-	// Token: 0x0600E122 RID: 57634 RVA: 0x0034D52E File Offset: 0x0034B72E
+	// Token: 0x0600B53F RID: 46399 RVA: 0x00358F5E File Offset: 0x0035715E
 	private void OnClickAtmosphere()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SpringManorAtmosphereLevelView, null, null);
 	}
 
-	// Token: 0x0600E123 RID: 57635 RVA: 0x0034D544 File Offset: 0x0034B744
+	// Token: 0x0600B540 RID: 46400 RVA: 0x00358F74 File Offset: 0x00357174
 	private UniTask InitializeFunctionButton()
 	{
 		SpringManorMainHudPanel.<InitializeFunctionButton>d__52 <InitializeFunctionButton>d__;
@@ -691,14 +691,14 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		return <InitializeFunctionButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E124 RID: 57636 RVA: 0x0034D587 File Offset: 0x0034B787
+	// Token: 0x0600B541 RID: 46401 RVA: 0x00358FB7 File Offset: 0x003571B7
 	private void InitializeFunctionButtonMap()
 	{
 		this.FunctionButtonMap[ESpringFunctionType.Gameplay] = base.GetItem(12);
 		this.FunctionButtonMap[ESpringFunctionType.DIY] = base.GetItem(14);
 	}
 
-	// Token: 0x0600E125 RID: 57637 RVA: 0x0034D5B4 File Offset: 0x0034B7B4
+	// Token: 0x0600B542 RID: 46402 RVA: 0x00358FE4 File Offset: 0x003571E4
 	private void RefreshFunctionButtonVisible()
 	{
 		SpringManorData activityData = SpringManorModel.Instance.ActivityData;
@@ -709,7 +709,7 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E126 RID: 57638 RVA: 0x0034D628 File Offset: 0x0034B828
+	// Token: 0x0600B543 RID: 46403 RVA: 0x00359058 File Offset: 0x00357258
 	private void OnClickExit()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.BattleViewLeaveInstance);
@@ -720,49 +720,49 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600E127 RID: 57639 RVA: 0x0034D673 File Offset: 0x0034B873
+	// Token: 0x0600B544 RID: 46404 RVA: 0x003590A3 File Offset: 0x003572A3
 	private void OnClickSetting()
 	{
 		UiManager.Instance.OpenView(EUiViewName.MenuView, null, null);
 	}
 
-	// Token: 0x0600E128 RID: 57640 RVA: 0x0034D686 File Offset: 0x0034B886
+	// Token: 0x0600B545 RID: 46405 RVA: 0x003590B6 File Offset: 0x003572B6
 	private void OnClickQuest()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SpringManorQuestView, null, null);
 	}
 
-	// Token: 0x0600E129 RID: 57641 RVA: 0x0034D699 File Offset: 0x0034B899
+	// Token: 0x0600B546 RID: 46406 RVA: 0x003590C9 File Offset: 0x003572C9
 	private void OnClickGameplay()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SpringManorGameplayEntryView, null, null);
 	}
 
-	// Token: 0x0600E12A RID: 57642 RVA: 0x0034D6AC File Offset: 0x0034B8AC
+	// Token: 0x0600B547 RID: 46407 RVA: 0x003590DC File Offset: 0x003572DC
 	private void OnClickDiy()
 	{
 		FurnitureController.Instance.OpenFurnitureAreaSelectView();
 	}
 
-	// Token: 0x0600E12B RID: 57643 RVA: 0x0034D6B8 File Offset: 0x0034B8B8
+	// Token: 0x0600B548 RID: 46408 RVA: 0x003590E8 File Offset: 0x003572E8
 	private void OnClickReward()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SpringManorRewardView, null, null);
 	}
 
-	// Token: 0x0600E12C RID: 57644 RVA: 0x0034D6CB File Offset: 0x0034B8CB
+	// Token: 0x0600B549 RID: 46409 RVA: 0x003590FB File Offset: 0x003572FB
 	private void OnClickOpenPhotograph()
 	{
 		FunctionController.Instance.OpenFunctionRelateView(EFunctionType.Photograph);
 	}
 
-	// Token: 0x0600E12D RID: 57645 RVA: 0x0034D6DC File Offset: 0x0034B8DC
+	// Token: 0x0600B54A RID: 46410 RVA: 0x0035910C File Offset: 0x0035730C
 	private void OnClickRoleSwitch()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SpringManorRoleSwitchView, null, null);
 	}
 
-	// Token: 0x040067EF RID: 26607
+	// Token: 0x040068CE RID: 26830
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly EBattleUiChild[] controlBattleChildUiChildList = new EBattleUiChild[]
@@ -773,142 +773,142 @@ public class SpringManorMainHudPanel : BattleChildViewPanel
 		EBattleUiChild.ScreenEffect
 	};
 
-	// Token: 0x040067F0 RID: 26608
+	// Token: 0x040068CF RID: 26831
 	private MissionPanel MissionPanel;
 
-	// Token: 0x040067F1 RID: 26609
+	// Token: 0x040068D0 RID: 26832
 	[Nullable(1)]
 	private readonly Dictionary<ESpringFunctionType, UUIItem> FunctionButtonMap = new Dictionary<ESpringFunctionType, UUIItem>();
 
-	// Token: 0x040067F2 RID: 26610
+	// Token: 0x040068D1 RID: 26833
 	private TrackedMarksView TrackPanel;
 
-	// Token: 0x040067F3 RID: 26611
+	// Token: 0x040068D2 RID: 26834
 	private FullScreenPanel FullScreenPanel;
 
-	// Token: 0x040067F4 RID: 26612
+	// Token: 0x040068D3 RID: 26835
 	private UUIItem TimeTipsItem;
 
-	// Token: 0x040067F5 RID: 26613
+	// Token: 0x040068D4 RID: 26836
 	private UUIText TimeTipsText;
 
-	// Token: 0x040067F6 RID: 26614
+	// Token: 0x040068D5 RID: 26837
 	[Nullable(1)]
 	private readonly string TimeLimitString = ConfigMultiTextLang.GetLocalTextNew("Spring26_MainHud_MissionRemain", null) ?? "";
 
-	// Token: 0x040067F7 RID: 26615
+	// Token: 0x040068D6 RID: 26838
 	private LevelSequencePlayer AtmosphereSeqPlayer;
 
-	// Token: 0x040067F8 RID: 26616
+	// Token: 0x040068D7 RID: 26839
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x040067F9 RID: 26617
+	// Token: 0x040068D8 RID: 26840
 	private UUISliderComponent AtmosphereProgressBar;
 
-	// Token: 0x040067FA RID: 26618
+	// Token: 0x040068D9 RID: 26841
 	private SpringManorQuestButton QuestButton;
 
-	// Token: 0x040067FB RID: 26619
+	// Token: 0x040068DA RID: 26842
 	private int CurrentTraceMainQuestId;
 
-	// Token: 0x040067FC RID: 26620
+	// Token: 0x040068DB RID: 26843
 	private ULTweener AtmosphereTweener;
 
-	// Token: 0x040067FD RID: 26621
+	// Token: 0x040068DC RID: 26844
 	private AtmosphereStageUpParam AtmosphereStageUpParam;
 
-	// Token: 0x020082FF RID: 33535
+	// Token: 0x02007488 RID: 29832
 	[NullableContext(0)]
 	private static class EComp
 	{
-		// Token: 0x0402AB97 RID: 174999
+		// Token: 0x04025EBF RID: 155327
 		public const int BtnExit = 0;
 
-		// Token: 0x0402AB98 RID: 175000
+		// Token: 0x04025EC0 RID: 155328
 		public const int BtnSetting = 1;
 
-		// Token: 0x0402AB99 RID: 175001
+		// Token: 0x04025EC1 RID: 155329
 		public const int CostRoot = 2;
 
-		// Token: 0x0402AB9A RID: 175002
+		// Token: 0x04025EC2 RID: 155330
 		public const int PassBg1 = 3;
 
-		// Token: 0x0402AB9B RID: 175003
+		// Token: 0x04025EC3 RID: 155331
 		public const int PassBg2 = 4;
 
-		// Token: 0x0402AB9C RID: 175004
+		// Token: 0x04025EC4 RID: 155332
 		public const int PassBg3 = 5;
 
-		// Token: 0x0402AB9D RID: 175005
+		// Token: 0x04025EC5 RID: 155333
 		public const int PassLevel = 6;
 
-		// Token: 0x0402AB9E RID: 175006
+		// Token: 0x04025EC6 RID: 155334
 		public const int PassName = 7;
 
-		// Token: 0x0402AB9F RID: 175007
+		// Token: 0x04025EC7 RID: 155335
 		public const int PassSliderBar = 8;
 
-		// Token: 0x0402ABA0 RID: 175008
+		// Token: 0x04025EC8 RID: 155336
 		public const int PassProgress = 9;
 
-		// Token: 0x0402ABA1 RID: 175009
+		// Token: 0x04025EC9 RID: 155337
 		public const int BtnQuest = 10;
 
-		// Token: 0x0402ABA2 RID: 175010
+		// Token: 0x04025ECA RID: 155338
 		public const int QuestContentLayout = 11;
 
-		// Token: 0x0402ABA3 RID: 175011
+		// Token: 0x04025ECB RID: 155339
 		public const int BtnGameplay = 12;
 
-		// Token: 0x0402ABA4 RID: 175012
+		// Token: 0x04025ECC RID: 155340
 		public const int BtnReward = 13;
 
-		// Token: 0x0402ABA5 RID: 175013
+		// Token: 0x04025ECD RID: 155341
 		public const int BtnDIY = 14;
 
-		// Token: 0x0402ABA6 RID: 175014
+		// Token: 0x04025ECE RID: 155342
 		public const int TimeTips = 15;
 
-		// Token: 0x0402ABA7 RID: 175015
+		// Token: 0x04025ECF RID: 155343
 		public const int TimeTipsText = 16;
 
-		// Token: 0x0402ABA8 RID: 175016
+		// Token: 0x04025ED0 RID: 155344
 		public const int BtnTimeTips = 17;
 
-		// Token: 0x0402ABA9 RID: 175017
+		// Token: 0x04025ED1 RID: 155345
 		public const int TrackItem = 18;
 
-		// Token: 0x0402ABAA RID: 175018
+		// Token: 0x04025ED2 RID: 155346
 		public const int BtnAtmosphere = 19;
 
-		// Token: 0x0402ABAB RID: 175019
+		// Token: 0x04025ED3 RID: 155347
 		public const int AtmospherePanel = 20;
 
-		// Token: 0x0402ABAC RID: 175020
+		// Token: 0x04025ED4 RID: 155348
 		public const int BtnGameplayRedDotItem = 21;
 
-		// Token: 0x0402ABAD RID: 175021
+		// Token: 0x04025ED5 RID: 155349
 		public const int BtnDIYRedDotItem = 22;
 
-		// Token: 0x0402ABAE RID: 175022
+		// Token: 0x04025ED6 RID: 155350
 		public const int BtnRewardRedDotItem = 23;
 
-		// Token: 0x0402ABAF RID: 175023
+		// Token: 0x04025ED7 RID: 155351
 		public const int BtnCamera = 24;
 
-		// Token: 0x0402ABB0 RID: 175024
+		// Token: 0x04025ED8 RID: 155352
 		public const int BtnSwitch = 25;
 
-		// Token: 0x0402ABB1 RID: 175025
+		// Token: 0x04025ED9 RID: 155353
 		public const int BtnAtmosphereRedDotItem = 26;
 
-		// Token: 0x0402ABB2 RID: 175026
+		// Token: 0x04025EDA RID: 155354
 		public const int HideLeft = 27;
 
-		// Token: 0x0402ABB3 RID: 175027
+		// Token: 0x04025EDB RID: 155355
 		public const int HideRight = 28;
 
-		// Token: 0x0402ABB4 RID: 175028
+		// Token: 0x04025EDC RID: 155356
 		public const int FullScreenPanel = 29;
 	}
 }

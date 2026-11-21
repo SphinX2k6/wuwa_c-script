@@ -2,60 +2,60 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D4F RID: 23887
+	// Token: 0x02006386 RID: 25478
 	public enum IBvbEventData_Union : byte
 	{
-		// Token: 0x0400F703 RID: 63235
+		// Token: 0x04010455 RID: 66645
 		NONE,
-		// Token: 0x0400F704 RID: 63236
+		// Token: 0x04010456 RID: 66646
 		IBvbEventData,
-		// Token: 0x0400F705 RID: 63237
+		// Token: 0x04010457 RID: 66647
 		IBvbAiEvolutionData,
-		// Token: 0x0400F706 RID: 63238
+		// Token: 0x04010458 RID: 66648
 		IBvbAiDeployData,
-		// Token: 0x0400F707 RID: 63239
+		// Token: 0x04010459 RID: 66649
 		IBvbAiChangeData,
-		// Token: 0x0400F708 RID: 63240
+		// Token: 0x0401045A RID: 66650
 		IBvbAiRecycleData,
-		// Token: 0x0400F709 RID: 63241
+		// Token: 0x0401045B RID: 66651
 		IBvbAiRearrangeData,
-		// Token: 0x0400F70A RID: 63242
+		// Token: 0x0401045C RID: 66652
 		IBvbAiSwapData,
-		// Token: 0x0400F70B RID: 63243
+		// Token: 0x0401045D RID: 66653
 		IBvbAiDiscardData,
-		// Token: 0x0400F70C RID: 63244
+		// Token: 0x0401045E RID: 66654
 		IBvbAiGetBestDeployData,
-		// Token: 0x0400F70D RID: 63245
+		// Token: 0x0401045F RID: 66655
 		IBvbAiGetBestRearrangeData,
-		// Token: 0x0400F70E RID: 63246
+		// Token: 0x04010460 RID: 66656
 		IBvbAiGetBestSwapData,
-		// Token: 0x0400F70F RID: 63247
+		// Token: 0x04010461 RID: 66657
 		IBvbAiGetBestReplaceData,
-		// Token: 0x0400F710 RID: 63248
+		// Token: 0x04010462 RID: 66658
 		IBvbAiDiscardForEnergyAndActData,
-		// Token: 0x0400F711 RID: 63249
+		// Token: 0x04010463 RID: 66659
 		IBvbAiTurnEndData,
-		// Token: 0x0400F712 RID: 63250
+		// Token: 0x04010464 RID: 66660
 		IBvbStartAiData,
-		// Token: 0x0400F713 RID: 63251
+		// Token: 0x04010465 RID: 66661
 		IBvbStartBattleData,
-		// Token: 0x0400F714 RID: 63252
+		// Token: 0x04010466 RID: 66662
 		IBvbEnableHatredData,
-		// Token: 0x0400F715 RID: 63253
+		// Token: 0x04010467 RID: 66663
 		IBvbStartRoundData,
-		// Token: 0x0400F716 RID: 63254
+		// Token: 0x04010468 RID: 66664
 		IBvbBurnBuffTimeUpData,
-		// Token: 0x0400F717 RID: 63255
+		// Token: 0x04010469 RID: 66665
 		IBvbWaitForGameBeginData,
-		// Token: 0x0400F718 RID: 63256
+		// Token: 0x0401046A RID: 66666
 		IBvbPlayerTurnStartData,
-		// Token: 0x0400F719 RID: 63257
+		// Token: 0x0401046B RID: 66667
 		IBvbPlayerTurnEndData,
-		// Token: 0x0400F71A RID: 63258
+		// Token: 0x0401046C RID: 66668
 		IBvbAiBattleWinData,
-		// Token: 0x0400F71B RID: 63259
+		// Token: 0x0401046D RID: 66669
 		IBvbPlayerBattleWinData,
-		// Token: 0x0400F71C RID: 63260
+		// Token: 0x0401046E RID: 66670
 		IBvbSelectCardsEndData
 	}
 }

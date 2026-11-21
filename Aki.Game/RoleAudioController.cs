@@ -10,13 +10,13 @@ using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x0200325B RID: 12891
+// Token: 0x020027CA RID: 10186
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class RoleAudioController : ControllerBase
 {
-	// Token: 0x0601BCFA RID: 113914 RVA: 0x007AF348 File Offset: 0x007AD548
+	// Token: 0x060198C1 RID: 104641 RVA: 0x007D7678 File Offset: 0x007D5878
 	private void InitCoolDownMap()
 	{
 		foreach (ERoleAudioType eroleAudioType in new ERoleAudioType[]
@@ -70,7 +70,7 @@ public class RoleAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601BCFB RID: 113915 RVA: 0x007AF468 File Offset: 0x007AD668
+	// Token: 0x060198C2 RID: 104642 RVA: 0x007D7798 File Offset: 0x007D5998
 	protected override bool OnInit()
 	{
 		this.InitCoolDownMap();
@@ -85,7 +85,7 @@ public class RoleAudioController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601BCFC RID: 113916 RVA: 0x007AF548 File Offset: 0x007AD748
+	// Token: 0x060198C3 RID: 104643 RVA: 0x007D7878 File Offset: 0x007D5A78
 	protected override void OnTick(float delta)
 	{
 		if (this.UpdateDynamicTrace)
@@ -115,7 +115,7 @@ public class RoleAudioController : ControllerBase
 		this.SetUpdateAudioDynamicTrace(false);
 	}
 
-	// Token: 0x0601BCFD RID: 113917 RVA: 0x007AF5FC File Offset: 0x007AD7FC
+	// Token: 0x060198C4 RID: 104644 RVA: 0x007D792C File Offset: 0x007D5B2C
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove<int, int, bool>(EEventName.CharUseSkill, new Action<int, int, bool>(this.OnUseSkill));
@@ -127,7 +127,7 @@ public class RoleAudioController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601BCFE RID: 113918 RVA: 0x007AF69E File Offset: 0x007AD89E
+	// Token: 0x060198C5 RID: 104645 RVA: 0x007D79CE File Offset: 0x007D5BCE
 	public void SetUpdateAudioDynamicTrace(bool force = false)
 	{
 		this.ForceUpdateDynamicTrace = force;
@@ -139,7 +139,7 @@ public class RoleAudioController : ControllerBase
 		this.LastSetDynamicTrace = false;
 	}
 
-	// Token: 0x0601BCFF RID: 113919 RVA: 0x007AF6C0 File Offset: 0x007AD8C0
+	// Token: 0x060198C6 RID: 104646 RVA: 0x007D79F0 File Offset: 0x007D5BF0
 	private void UpdateAudioDynamicTrace()
 	{
 		UKuroAudioEnvironmentSubsystem audioEnvironmentSubsystem = UKuroAudioStatics.GetAudioEnvironmentSubsystem(Info.Instance.World);
@@ -172,7 +172,7 @@ public class RoleAudioController : ControllerBase
 		this.UpdateDynamicTrace = false;
 	}
 
-	// Token: 0x0601BD00 RID: 113920 RVA: 0x007AF754 File Offset: 0x007AD954
+	// Token: 0x060198C7 RID: 104647 RVA: 0x007D7A84 File Offset: 0x007D5C84
 	public int PlayRoleAudio(Entity entity, ERoleAudioType type, [Nullable(2)] Action<EAkCallbackType, UAkCallbackInfo> callback = null)
 	{
 		CharacterActorComponent characterActorComponent = (entity != null) ? entity.GetComponent<CharacterActorComponent>() : null;
@@ -202,7 +202,7 @@ public class RoleAudioController : ControllerBase
 		return this.OnPlayRoleAudio(characterActorComponent.CreatureData.GetPbDataId(), entity.Id, uakComponent, type, this.GetRoleAudioConfig(type, roleAudioComponent.GetConfig()), callback);
 	}
 
-	// Token: 0x0601BD01 RID: 113921 RVA: 0x007AF838 File Offset: 0x007ADA38
+	// Token: 0x060198C8 RID: 104648 RVA: 0x007D7B68 File Offset: 0x007D5D68
 	private unsafe int OnPlayRoleAudio(int roleId, int entityId, UAkComponent akComponent, ERoleAudioType type, string eventName, [Nullable(2)] Action<EAkCallbackType, UAkCallbackInfo> callback = null)
 	{
 		Entity entity = EntitySystem.Instance.Get(entityId);
@@ -288,7 +288,7 @@ public class RoleAudioController : ControllerBase
 		return AudioSystem.Instance.PostEvent(eventName, akComponent, null);
 	}
 
-	// Token: 0x0601BD02 RID: 113922 RVA: 0x007AFA64 File Offset: 0x007ADC64
+	// Token: 0x060198C9 RID: 104649 RVA: 0x007D7D94 File Offset: 0x007D5F94
 	public void RefreshPlayAudioCooldownTime(ERoleAudioType type, int entityId)
 	{
 		RoleAudioCoolDownTime roleAudioCoolDownTime;
@@ -305,7 +305,7 @@ public class RoleAudioController : ControllerBase
 		roleAudioCoolDownTime.RefreshCoolDownTime(entityId, true);
 	}
 
-	// Token: 0x0601BD03 RID: 113923 RVA: 0x007AFAB8 File Offset: 0x007ADCB8
+	// Token: 0x060198CA RID: 104650 RVA: 0x007D7DE8 File Offset: 0x007D5FE8
 	[NullableContext(2)]
 	private void OnUpdateAudioIgnoreNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -313,7 +313,7 @@ public class RoleAudioController : ControllerBase
 		this.RoleAudioIgnoreType = roleSceneVoiceSwitchNotify.VoiceGroupData;
 	}
 
-	// Token: 0x0601BD04 RID: 113924 RVA: 0x007AFAD8 File Offset: 0x007ADCD8
+	// Token: 0x060198CB RID: 104651 RVA: 0x007D7E08 File Offset: 0x007D6008
 	private void OnUseSkill(int charId, int skillId, bool isAutonomousProxy)
 	{
 		Entity entity = EntitySystem.Instance.Get(charId);
@@ -338,7 +338,7 @@ public class RoleAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601BD05 RID: 113925 RVA: 0x007AFB74 File Offset: 0x007ADD74
+	// Token: 0x060198CC RID: 104652 RVA: 0x007D7EA4 File Offset: 0x007D60A4
 	private void OnUpdateSceneTeam()
 	{
 		this.CacheList.Clear();
@@ -378,7 +378,7 @@ public class RoleAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601BD06 RID: 113926 RVA: 0x007AFD18 File Offset: 0x007ADF18
+	// Token: 0x060198CD RID: 104653 RVA: 0x007D8048 File Offset: 0x007D6248
 	private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		WorldEntity entity = newEntity.Entity;
@@ -398,7 +398,7 @@ public class RoleAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601BD07 RID: 113927 RVA: 0x007AFDBD File Offset: 0x007ADFBD
+	// Token: 0x060198CE RID: 104654 RVA: 0x007D80ED File Offset: 0x007D62ED
 	private void OnOpenTreasureBox(int entityId)
 	{
 		if (this.ActorComponent == null)
@@ -408,7 +408,7 @@ public class RoleAudioController : ControllerBase
 		this.PlayRoleAudio(this.ActorComponent.Entity, ERoleAudioType.OpenTreasureBox, null);
 	}
 
-	// Token: 0x0601BD08 RID: 113928 RVA: 0x007AFDE0 File Offset: 0x007ADFE0
+	// Token: 0x060198CF RID: 104655 RVA: 0x007D8110 File Offset: 0x007D6310
 	private void OnStrengthChanged(EFormationAttributeId attrId, float newValue, float oldValue)
 	{
 		if (attrId != EFormationAttributeId.Strength || newValue > oldValue)
@@ -461,7 +461,7 @@ public class RoleAudioController : ControllerBase
 		this.OnPlayRoleAudio(this.ActorComponent.CreatureData.GetPbDataId(), id, uakComponent, ERoleAudioType.StrengthChangeTired, text, null);
 	}
 
-	// Token: 0x0601BD09 RID: 113929 RVA: 0x007AFF24 File Offset: 0x007AE124
+	// Token: 0x060198D0 RID: 104656 RVA: 0x007D8254 File Offset: 0x007D6454
 	public void OnPlayerIsHit(Entity entity)
 	{
 		this.ResetDodgeAudioLevel();
@@ -471,7 +471,7 @@ public class RoleAudioController : ControllerBase
 		}, null, null);
 	}
 
-	// Token: 0x0601BD0A RID: 113930 RVA: 0x007AFF64 File Offset: 0x007AE164
+	// Token: 0x060198D1 RID: 104657 RVA: 0x007D8294 File Offset: 0x007D6494
 	public void OnPlayerEnterFight(Entity entity, double distance)
 	{
 		if (distance >= 1000.0)
@@ -487,7 +487,7 @@ public class RoleAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601BD0B RID: 113931 RVA: 0x007AFFC4 File Offset: 0x007AE1C4
+	// Token: 0x060198D2 RID: 104658 RVA: 0x007D82F4 File Offset: 0x007D64F4
 	public void OnMoveStateChange(global::ECharMoveState state, Entity entity)
 	{
 		switch (state)
@@ -508,7 +508,7 @@ public class RoleAudioController : ControllerBase
 		this.InterruptAccelerateAudio(state, entity);
 	}
 
-	// Token: 0x0601BD0C RID: 113932 RVA: 0x007B004C File Offset: 0x007AE24C
+	// Token: 0x060198D3 RID: 104659 RVA: 0x007D837C File Offset: 0x007D657C
 	public void OnPlayerDies(Entity entity)
 	{
 		CharacterActorComponent characterActorComponent = (entity != null) ? entity.GetComponent<CharacterActorComponent>() : null;
@@ -527,7 +527,7 @@ public class RoleAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601BD0D RID: 113933 RVA: 0x007B00F4 File Offset: 0x007AE2F4
+	// Token: 0x060198D4 RID: 104660 RVA: 0x007D8424 File Offset: 0x007D6624
 	public void OnPlayAccelerateAudio(Entity entity, global::ECharMoveState moveState, global::ECharPositionState positionState, int? movementMode = null, int? customMode = null)
 	{
 		if (!FormationDataController.Instance.GlobalIsInFight && moveState == global::ECharMoveState.Sprint)
@@ -539,7 +539,7 @@ public class RoleAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601BD0E RID: 113934 RVA: 0x007B0124 File Offset: 0x007AE324
+	// Token: 0x060198D5 RID: 104661 RVA: 0x007D8454 File Offset: 0x007D6654
 	private void InterruptAccelerateAudio(global::ECharMoveState state, Entity entity)
 	{
 		if (this.AccelerateAudioHandle == 0 || this.AccelerateAudioHandle != 0)
@@ -558,7 +558,7 @@ public class RoleAudioController : ControllerBase
 		this.AccelerateAudioHandle = 0;
 	}
 
-	// Token: 0x0601BD0F RID: 113935 RVA: 0x007B018C File Offset: 0x007AE38C
+	// Token: 0x060198D6 RID: 104662 RVA: 0x007D84BC File Offset: 0x007D66BC
 	private void InitDodgeProgressionParams()
 	{
 		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("DodgeProgressionAudioResetList");
@@ -575,7 +575,7 @@ public class RoleAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601BD10 RID: 113936 RVA: 0x007B0208 File Offset: 0x007AE408
+	// Token: 0x060198D7 RID: 104663 RVA: 0x007D8538 File Offset: 0x007D6738
 	private void UpdateDodgeAudioEvent(Entity entity)
 	{
 		if (this.DodgeProgressionAudioResetList == null || this.DodgeProgressionAudioResetList.Count == 0 || this.DodgeProgressionAudioEventList == null || this.DodgeProgressionAudioEventList.Count == 0 || this.DodgeProgressionAudioTimesList == null || this.DodgeProgressionAudioTimesList.Count == 0)
@@ -611,19 +611,19 @@ public class RoleAudioController : ControllerBase
 		this.LastDodgeTime = now;
 	}
 
-	// Token: 0x0601BD11 RID: 113937 RVA: 0x007B0367 File Offset: 0x007AE567
+	// Token: 0x060198D8 RID: 104664 RVA: 0x007D8697 File Offset: 0x007D6897
 	public void ResetDodgeAudioLevel()
 	{
 		this.CurrentDodgeTimes = 0;
 	}
 
-	// Token: 0x0601BD12 RID: 113938 RVA: 0x007B0370 File Offset: 0x007AE570
+	// Token: 0x060198D9 RID: 104665 RVA: 0x007D86A0 File Offset: 0x007D68A0
 	public bool CheckSkillAudioId(long id)
 	{
 		return this.SkillAudioId.Contains((int)id);
 	}
 
-	// Token: 0x0601BD13 RID: 113939 RVA: 0x007B0380 File Offset: 0x007AE580
+	// Token: 0x060198DA RID: 104666 RVA: 0x007D86B0 File Offset: 0x007D68B0
 	public string GetRoleAudioConfig(ERoleAudioType type, RoleSkinAudio? config)
 	{
 		if (config == null)
@@ -677,7 +677,7 @@ public class RoleAudioController : ControllerBase
 		return "";
 	}
 
-	// Token: 0x0601BD14 RID: 113940 RVA: 0x007B050C File Offset: 0x007AE70C
+	// Token: 0x060198DB RID: 104667 RVA: 0x007D883C File Offset: 0x007D6A3C
 	public string GetRoleAudioTypeDesc(ERoleAudioType type)
 	{
 		if (type <= ERoleAudioType.Accelerate)
@@ -735,8 +735,8 @@ public class RoleAudioController : ControllerBase
 		return "未定义";
 	}
 
-	// Token: 0x17002647 RID: 9799
-	// (get) Token: 0x0601BD15 RID: 113941 RVA: 0x007B05F2 File Offset: 0x007AE7F2
+	// Token: 0x170028C9 RID: 10441
+	// (get) Token: 0x060198DC RID: 104668 RVA: 0x007D8922 File Offset: 0x007D6B22
 	public static RoleAudioController Instance
 	{
 		get
@@ -745,7 +745,7 @@ public class RoleAudioController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601BD16 RID: 113942 RVA: 0x007B05F9 File Offset: 0x007AE7F9
+	// Token: 0x060198DD RID: 104669 RVA: 0x007D8929 File Offset: 0x007D6B29
 	public static RoleAudioController GetOrCreateInstance()
 	{
 		if (RoleAudioController._Instance == null)
@@ -755,7 +755,7 @@ public class RoleAudioController : ControllerBase
 		return RoleAudioController._Instance;
 	}
 
-	// Token: 0x0601BD17 RID: 113943 RVA: 0x007B060D File Offset: 0x007AE80D
+	// Token: 0x060198DE RID: 104670 RVA: 0x007D893D File Offset: 0x007D6B3D
 	public static bool CreateInstance()
 	{
 		if (RoleAudioController._Instance != null)
@@ -766,88 +766,88 @@ public class RoleAudioController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601BD18 RID: 113944 RVA: 0x007B0623 File Offset: 0x007AE823
+	// Token: 0x060198DF RID: 104671 RVA: 0x007D8953 File Offset: 0x007D6B53
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601BD19 RID: 113945 RVA: 0x007B0625 File Offset: 0x007AE825
+	// Token: 0x060198E0 RID: 104672 RVA: 0x007D8955 File Offset: 0x007D6B55
 	public static void ResetStaticDefaultValue()
 	{
 		RoleAudioController._Instance = null;
 	}
 
-	// Token: 0x0601BD1A RID: 113946 RVA: 0x007B062D File Offset: 0x007AE82D
+	// Token: 0x060198E1 RID: 104673 RVA: 0x007D895D File Offset: 0x007D6B5D
 	static RoleAudioController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleAudioController.CreateStaticDefaultValue), new Action(RoleAudioController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400DB75 RID: 56181
+	// Token: 0x0400E014 RID: 57364
 	[Nullable(2)]
 	private List<int> FixHookSkillList;
 
-	// Token: 0x0400DB76 RID: 56182
+	// Token: 0x0400E015 RID: 57365
 	[Nullable(2)]
 	private List<int> SuperSprintStartSkillList;
 
-	// Token: 0x0400DB77 RID: 56183
+	// Token: 0x0400E016 RID: 57366
 	[Nullable(2)]
 	private List<int> SuperSprintEndSkillList;
 
-	// Token: 0x0400DB78 RID: 56184
+	// Token: 0x0400E017 RID: 57367
 	[Nullable(2)]
 	private CharacterActorComponent ActorComponent;
 
-	// Token: 0x0400DB79 RID: 56185
+	// Token: 0x0400E018 RID: 57368
 	[Nullable(2)]
 	private RoleAudioComponent AudioComponent;
 
-	// Token: 0x0400DB7A RID: 56186
+	// Token: 0x0400E019 RID: 57369
 	private double LowStrengthPercentage;
 
-	// Token: 0x0400DB7B RID: 56187
+	// Token: 0x0400E01A RID: 57370
 	private readonly HashSet<int> SkillAudioId = new HashSet<int>();
 
-	// Token: 0x0400DB7C RID: 56188
+	// Token: 0x0400E01B RID: 57371
 	private readonly Dictionary<ERoleAudioType, RoleAudioCoolDownTime> IntervalCoolDownTimeMap = new Dictionary<ERoleAudioType, RoleAudioCoolDownTime>();
 
-	// Token: 0x0400DB7D RID: 56189
+	// Token: 0x0400E01C RID: 57372
 	private int IntervalTime = 500;
 
-	// Token: 0x0400DB7E RID: 56190
+	// Token: 0x0400E01D RID: 57373
 	private double LastTime;
 
-	// Token: 0x0400DB7F RID: 56191
+	// Token: 0x0400E01E RID: 57374
 	private bool LastSetDynamicTrace;
 
-	// Token: 0x0400DB80 RID: 56192
+	// Token: 0x0400E01F RID: 57375
 	private bool UpdateDynamicTrace;
 
-	// Token: 0x0400DB81 RID: 56193
+	// Token: 0x0400E020 RID: 57376
 	private bool ForceUpdateDynamicTrace;
 
-	// Token: 0x0400DB82 RID: 56194
+	// Token: 0x0400E021 RID: 57377
 	private int RoleAudioIgnoreType;
 
-	// Token: 0x0400DB83 RID: 56195
+	// Token: 0x0400E022 RID: 57378
 	private readonly List<string> LastAudioEvents = new List<string>();
 
-	// Token: 0x0400DB84 RID: 56196
+	// Token: 0x0400E023 RID: 57379
 	private readonly List<string> CacheList = new List<string>();
 
-	// Token: 0x0400DB85 RID: 56197
+	// Token: 0x0400E024 RID: 57380
 	private int AccelerateAudioHandle;
 
-	// Token: 0x0400DB86 RID: 56198
+	// Token: 0x0400E025 RID: 57381
 	[Nullable(2)]
 	private List<int> DodgeProgressionAudioResetList;
 
-	// Token: 0x0400DB87 RID: 56199
+	// Token: 0x0400E026 RID: 57382
 	[Nullable(2)]
 	private List<int> DodgeProgressionAudioTimesList;
 
-	// Token: 0x0400DB88 RID: 56200
+	// Token: 0x0400E027 RID: 57383
 	[Nullable(new byte[]
 	{
 		2,
@@ -855,16 +855,16 @@ public class RoleAudioController : ControllerBase
 	})]
 	private List<string> DodgeProgressionAudioEventList;
 
-	// Token: 0x0400DB89 RID: 56201
+	// Token: 0x0400E028 RID: 57384
 	private double LastDodgeTime;
 
-	// Token: 0x0400DB8A RID: 56202
+	// Token: 0x0400E029 RID: 57385
 	private int LastDodgeLevelIndex;
 
-	// Token: 0x0400DB8B RID: 56203
+	// Token: 0x0400E02A RID: 57386
 	private int CurrentDodgeTimes;
 
-	// Token: 0x0400DB8C RID: 56204
+	// Token: 0x0400E02B RID: 57387
 	[Nullable(2)]
 	private static RoleAudioController _Instance;
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005DA RID: 1498
+	// Token: 0x020005F2 RID: 1522
 	public class ConfigMultiPlatformGuideStepById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002329 RID: 9001 RVA: 0x001203D4 File Offset: 0x0011E5D4
+		// Token: 0x060023B9 RID: 9145 RVA: 0x00126E50 File Offset: 0x00125050
 		static ConfigMultiPlatformGuideStepById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMultiPlatformGuideStepById.CreateStaticDefaultValue), new Action(ConfigMultiPlatformGuideStepById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600232A RID: 9002 RVA: 0x001203F4 File Offset: 0x0011E5F4
+		// Token: 0x060023BA RID: 9146 RVA: 0x00126E70 File Offset: 0x00125070
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMultiPlatformGuideStepById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600232B RID: 9003 RVA: 0x00120473 File Offset: 0x0011E673
+		// Token: 0x060023BB RID: 9147 RVA: 0x00126EEF File Offset: 0x001250EF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMultiPlatformGuideStepById.LogPair = null;
 			ConfigMultiPlatformGuideStepById.HandleId = 0;
 		}
 
-		// Token: 0x0600232C RID: 9004 RVA: 0x00120481 File Offset: 0x0011E681
+		// Token: 0x060023BC RID: 9148 RVA: 0x00126EFD File Offset: 0x001250FD
 		public static void Init()
 		{
 			ConfigMultiPlatformGuideStepById.HandleId = ConfigCommon.InitDataStatement(ConfigMultiPlatformGuideStepById.HandleId, "db_guide_new.db", "select BinData from `MultiPlatformGuideStep` where Id=?");
 		}
 
-		// Token: 0x0600232D RID: 9005 RVA: 0x0012049C File Offset: 0x0011E69C
+		// Token: 0x060023BD RID: 9149 RVA: 0x00126F18 File Offset: 0x00125118
 		public static MultiPlatformGuideStep? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMultiPlatformGuideStepById.HandleId, ConfigMultiPlatformGuideStepById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MultiPlatformGuideStep?(rootAsMultiPlatformGuideStep);
 		}
 
-		// Token: 0x040028DA RID: 10458
+		// Token: 0x04002982 RID: 10626
 		private const string DB = "db_guide_new.db";
 
-		// Token: 0x040028DB RID: 10459
+		// Token: 0x04002983 RID: 10627
 		private const string FILE = "y.引导(新).xlsx";
 
-		// Token: 0x040028DC RID: 10460
+		// Token: 0x04002984 RID: 10628
 		private const string TABLE = "MultiPlatformGuideStep";
 
-		// Token: 0x040028DD RID: 10461
+		// Token: 0x04002985 RID: 10629
 		private const string COMMAND = "select BinData from `MultiPlatformGuideStep` where Id=?";
 
-		// Token: 0x040028DE RID: 10462
+		// Token: 0x04002986 RID: 10630
 		private const string KEY_PREFIX = "MultiPlatformGuideStepById";
 
-		// Token: 0x040028DF RID: 10463
+		// Token: 0x04002987 RID: 10631
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040028E0 RID: 10464
+		// Token: 0x04002988 RID: 10632
 		private static int HandleId;
 	}
 }

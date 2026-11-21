@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200487D RID: 18557
+	// Token: 0x02004CE2 RID: 19682
 	public struct IGameServerConnectionConfig : IFlatbufferObject
 	{
-		// Token: 0x17008655 RID: 34389
-		// (get) Token: 0x0601CE92 RID: 118418 RVA: 0x0041605C File Offset: 0x0041425C
+		// Token: 0x17008C9D RID: 35997
+		// (get) Token: 0x0601E67F RID: 124543 RVA: 0x004427F8 File Offset: 0x004409F8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CE93 RID: 118419 RVA: 0x00416069 File Offset: 0x00414269
+		// Token: 0x0601E680 RID: 124544 RVA: 0x00442805 File Offset: 0x00440A05
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601CE94 RID: 118420 RVA: 0x00416070 File Offset: 0x00414270
+		// Token: 0x0601E681 RID: 124545 RVA: 0x0044280C File Offset: 0x00440A0C
 		public static IGameServerConnectionConfig GetRootAsIGameServerConnectionConfig(ByteBuffer _bb)
 		{
 			return IGameServerConnectionConfig.GetRootAsIGameServerConnectionConfig(_bb, default(IGameServerConnectionConfig));
 		}
 
-		// Token: 0x0601CE95 RID: 118421 RVA: 0x0041608C File Offset: 0x0041428C
+		// Token: 0x0601E682 RID: 124546 RVA: 0x00442828 File Offset: 0x00440A28
 		public static IGameServerConnectionConfig GetRootAsIGameServerConnectionConfig(ByteBuffer _bb, IGameServerConnectionConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601CE96 RID: 118422 RVA: 0x004160A9 File Offset: 0x004142A9
+		// Token: 0x0601E683 RID: 124547 RVA: 0x00442845 File Offset: 0x00440A45
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601CE97 RID: 118423 RVA: 0x004160B8 File Offset: 0x004142B8
+		// Token: 0x0601E684 RID: 124548 RVA: 0x00442854 File Offset: 0x00440A54
 		public IGameServerConnectionConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008656 RID: 34390
-		// (get) Token: 0x0601CE98 RID: 118424 RVA: 0x004160C8 File Offset: 0x004142C8
+		// Token: 0x17008C9E RID: 35998
+		// (get) Token: 0x0601E685 RID: 124549 RVA: 0x00442864 File Offset: 0x00440A64
 		public string LocalGameServerNode
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CE99 RID: 118425 RVA: 0x004160FF File Offset: 0x004142FF
+		// Token: 0x0601E686 RID: 124550 RVA: 0x0044289B File Offset: 0x00440A9B
 		public Span<byte> GetLocalGameServerNodeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0601CE9A RID: 118426 RVA: 0x0041610E File Offset: 0x0041430E
+		// Token: 0x0601E687 RID: 124551 RVA: 0x004428AA File Offset: 0x00440AAA
 		public byte[] GetLocalGameServerNodeArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x17008657 RID: 34391
-		// (get) Token: 0x0601CE9B RID: 118427 RVA: 0x0041611C File Offset: 0x0041431C
+		// Token: 0x17008C9F RID: 35999
+		// (get) Token: 0x0601E688 RID: 124552 RVA: 0x004428B8 File Offset: 0x00440AB8
 		public int LocalGameServerApiPort
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008658 RID: 34392
-		// (get) Token: 0x0601CE9C RID: 118428 RVA: 0x00416158 File Offset: 0x00414358
+		// Token: 0x17008CA0 RID: 36000
+		// (get) Token: 0x0601E689 RID: 124553 RVA: 0x004428F4 File Offset: 0x00440AF4
 		public int LocalGameServerLoginPort
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008659 RID: 34393
-		// (get) Token: 0x0601CE9D RID: 118429 RVA: 0x00416194 File Offset: 0x00414394
+		// Token: 0x17008CA1 RID: 36001
+		// (get) Token: 0x0601E68A RID: 124554 RVA: 0x00442930 File Offset: 0x00440B30
 		public byte NullMask
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CE9E RID: 118430 RVA: 0x004161D1 File Offset: 0x004143D1
+		// Token: 0x0601E68B RID: 124555 RVA: 0x0044296D File Offset: 0x00440B6D
 		public static Offset<IGameServerConnectionConfig> CreateIGameServerConnectionConfig(FlatBufferBuilder builder, StringOffset LocalGameServerNodeOffset = default(StringOffset), int LocalGameServerApiPort = 0, int LocalGameServerLoginPort = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -130,43 +130,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IGameServerConnectionConfig.EndIGameServerConnectionConfig(builder);
 		}
 
-		// Token: 0x0601CE9F RID: 118431 RVA: 0x004161FD File Offset: 0x004143FD
+		// Token: 0x0601E68C RID: 124556 RVA: 0x00442999 File Offset: 0x00440B99
 		public static void StartIGameServerConnectionConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601CEA0 RID: 118432 RVA: 0x00416206 File Offset: 0x00414406
+		// Token: 0x0601E68D RID: 124557 RVA: 0x004429A2 File Offset: 0x00440BA2
 		public static void AddLocalGameServerNode(FlatBufferBuilder builder, StringOffset localGameServerNodeOffset)
 		{
 			builder.AddOffset(0, localGameServerNodeOffset.Value, 0);
 		}
 
-		// Token: 0x0601CEA1 RID: 118433 RVA: 0x00416216 File Offset: 0x00414416
+		// Token: 0x0601E68E RID: 124558 RVA: 0x004429B2 File Offset: 0x00440BB2
 		public static void AddLocalGameServerApiPort(FlatBufferBuilder builder, int localGameServerApiPort)
 		{
 			builder.AddInt(1, localGameServerApiPort, 0);
 		}
 
-		// Token: 0x0601CEA2 RID: 118434 RVA: 0x00416221 File Offset: 0x00414421
+		// Token: 0x0601E68F RID: 124559 RVA: 0x004429BD File Offset: 0x00440BBD
 		public static void AddLocalGameServerLoginPort(FlatBufferBuilder builder, int localGameServerLoginPort)
 		{
 			builder.AddInt(2, localGameServerLoginPort, 0);
 		}
 
-		// Token: 0x0601CEA3 RID: 118435 RVA: 0x0041622C File Offset: 0x0041442C
+		// Token: 0x0601E690 RID: 124560 RVA: 0x004429C8 File Offset: 0x00440BC8
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0601CEA4 RID: 118436 RVA: 0x00416237 File Offset: 0x00414437
+		// Token: 0x0601E691 RID: 124561 RVA: 0x004429D3 File Offset: 0x00440BD3
 		public static Offset<IGameServerConnectionConfig> EndIGameServerConnectionConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IGameServerConnectionConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601CEA5 RID: 118437 RVA: 0x00416244 File Offset: 0x00414444
+		// Token: 0x0601E692 RID: 124562 RVA: 0x004429E0 File Offset: 0x00440BE0
 		public IGameServerConnectionConfigT UnPack()
 		{
 			IGameServerConnectionConfigT gameServerConnectionConfigT = new IGameServerConnectionConfigT();
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return gameServerConnectionConfigT;
 		}
 
-		// Token: 0x0601CEA6 RID: 118438 RVA: 0x0041625F File Offset: 0x0041445F
+		// Token: 0x0601E693 RID: 124563 RVA: 0x004429FB File Offset: 0x00440BFB
 		public void UnPackTo(IGameServerConnectionConfigT _o)
 		{
 			_o.LocalGameServerNode = this.LocalGameServerNode;
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601CEA7 RID: 118439 RVA: 0x00416294 File Offset: 0x00414494
+		// Token: 0x0601E694 RID: 124564 RVA: 0x00442A30 File Offset: 0x00440C30
 		public static Offset<IGameServerConnectionConfig> Pack(FlatBufferBuilder builder, IGameServerConnectionConfigT _o)
 		{
 			if (_o == null)
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IGameServerConnectionConfig.CreateIGameServerConnectionConfig(builder, localGameServerNodeOffset, _o.LocalGameServerApiPort, _o.LocalGameServerLoginPort, _o.NullMask);
 		}
 
-		// Token: 0x0400CE43 RID: 52803
+		// Token: 0x0400D87C RID: 55420
 		private Table __p;
 	}
 }

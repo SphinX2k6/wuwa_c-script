@@ -4,13 +4,13 @@ using AkiClient.Game.Aki.Data.Camera.PhotoCamera;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002570 RID: 9584
+// Token: 0x02001A5B RID: 6747
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoDetailPanelBase : UiPanelBase
 {
-	// Token: 0x170018FC RID: 6396
-	// (get) Token: 0x06013593 RID: 79251 RVA: 0x004D0911 File Offset: 0x004CEB11
+	// Token: 0x17001936 RID: 6454
+	// (get) Token: 0x06010A75 RID: 68213 RVA: 0x004DF549 File Offset: 0x004DD749
 	protected virtual int TabLockPanelIndex
 	{
 		get
@@ -19,8 +19,8 @@ public class PhotoDetailPanelBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x170018FD RID: 6397
-	// (get) Token: 0x06013594 RID: 79252 RVA: 0x004D0914 File Offset: 0x004CEB14
+	// Token: 0x17001937 RID: 6455
+	// (get) Token: 0x06010A76 RID: 68214 RVA: 0x004DF54C File Offset: 0x004DD74C
 	protected virtual int SubTabLockPanelIndex
 	{
 		get
@@ -29,8 +29,8 @@ public class PhotoDetailPanelBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x170018FE RID: 6398
-	// (get) Token: 0x06013595 RID: 79253 RVA: 0x004D0917 File Offset: 0x004CEB17
+	// Token: 0x17001938 RID: 6456
+	// (get) Token: 0x06010A77 RID: 68215 RVA: 0x004DF54F File Offset: 0x004DD74F
 	protected virtual string SubTabSwitchSequenceName
 	{
 		get
@@ -39,8 +39,8 @@ public class PhotoDetailPanelBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x170018FF RID: 6399
-	// (get) Token: 0x06013596 RID: 79254 RVA: 0x004D091E File Offset: 0x004CEB1E
+	// Token: 0x17001939 RID: 6457
+	// (get) Token: 0x06010A78 RID: 68216 RVA: 0x004DF556 File Offset: 0x004DD756
 	protected bool IsCurrentTabBanned
 	{
 		get
@@ -49,8 +49,8 @@ public class PhotoDetailPanelBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x17001900 RID: 6400
-	// (get) Token: 0x06013597 RID: 79255 RVA: 0x004D093B File Offset: 0x004CEB3B
+	// Token: 0x1700193A RID: 6458
+	// (get) Token: 0x06010A79 RID: 68217 RVA: 0x004DF573 File Offset: 0x004DD773
 	protected bool IsCurrentSubTabBanned
 	{
 		get
@@ -59,19 +59,19 @@ public class PhotoDetailPanelBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013598 RID: 79256 RVA: 0x004D0962 File Offset: 0x004CEB62
+	// Token: 0x06010A7A RID: 68218 RVA: 0x004DF59A File Offset: 0x004DD79A
 	public void SetViewModel(PhotoMainViewModel viewModel)
 	{
 		this.ViewModel = viewModel;
 	}
 
-	// Token: 0x06013599 RID: 79257 RVA: 0x004D096B File Offset: 0x004CEB6B
+	// Token: 0x06010A7B RID: 68219 RVA: 0x004DF5A3 File Offset: 0x004DD7A3
 	public void SetTabId(int tabId)
 	{
 		this.TabId = tabId;
 	}
 
-	// Token: 0x0601359A RID: 79258 RVA: 0x004D0974 File Offset: 0x004CEB74
+	// Token: 0x06010A7C RID: 68220 RVA: 0x004DF5AC File Offset: 0x004DD7AC
 	public void ShowDetail()
 	{
 		base.SetUiActive(true);
@@ -80,7 +80,7 @@ public class PhotoDetailPanelBase : UiPanelBase
 		this.RefreshDetail();
 	}
 
-	// Token: 0x0601359B RID: 79259 RVA: 0x004D0990 File Offset: 0x004CEB90
+	// Token: 0x06010A7D RID: 68221 RVA: 0x004DF5C8 File Offset: 0x004DD7C8
 	public void RefreshLockState()
 	{
 		PhotoCameraType currentMode = this.ViewModel.CurrentMode;
@@ -91,12 +91,12 @@ public class PhotoDetailPanelBase : UiPanelBase
 		this.RefreshContentVisible();
 	}
 
-	// Token: 0x0601359C RID: 79260 RVA: 0x004D09F3 File Offset: 0x004CEBF3
+	// Token: 0x06010A7E RID: 68222 RVA: 0x004DF62B File Offset: 0x004DD82B
 	protected virtual void RefreshContentVisible()
 	{
 	}
 
-	// Token: 0x0601359D RID: 79261 RVA: 0x004D09F5 File Offset: 0x004CEBF5
+	// Token: 0x06010A7F RID: 68223 RVA: 0x004DF62D File Offset: 0x004DD82D
 	protected void SetSubTabId(int subTabId, bool playSwitchAnim = false)
 	{
 		this.CurrentSubTabId = subTabId;
@@ -107,7 +107,7 @@ public class PhotoDetailPanelBase : UiPanelBase
 		this.RefreshLockState();
 	}
 
-	// Token: 0x0601359E RID: 79262 RVA: 0x004D0A13 File Offset: 0x004CEC13
+	// Token: 0x06010A80 RID: 68224 RVA: 0x004DF64B File Offset: 0x004DD84B
 	private void SetLockPanelActive(int index, bool isActive)
 	{
 		if (index < 0)
@@ -122,29 +122,29 @@ public class PhotoDetailPanelBase : UiPanelBase
 		item.SetUIActive(isActive);
 	}
 
-	// Token: 0x0601359F RID: 79263 RVA: 0x004D0A2C File Offset: 0x004CEC2C
+	// Token: 0x06010A81 RID: 68225 RVA: 0x004DF664 File Offset: 0x004DD864
 	public virtual void RefreshDetail()
 	{
 	}
 
-	// Token: 0x060135A0 RID: 79264 RVA: 0x004D0A2E File Offset: 0x004CEC2E
+	// Token: 0x06010A82 RID: 68226 RVA: 0x004DF666 File Offset: 0x004DD866
 	public virtual void OnTick(float delta)
 	{
 	}
 
-	// Token: 0x060135A1 RID: 79265 RVA: 0x004D0A30 File Offset: 0x004CEC30
+	// Token: 0x06010A83 RID: 68227 RVA: 0x004DF668 File Offset: 0x004DD868
 	public virtual void HideDetail()
 	{
 		base.SetUiActive(false);
 	}
 
-	// Token: 0x060135A2 RID: 79266 RVA: 0x004D0A39 File Offset: 0x004CEC39
+	// Token: 0x06010A84 RID: 68228 RVA: 0x004DF671 File Offset: 0x004DD871
 	public void PlaySwitchAnim()
 	{
 		this.PlaySequence("Switch");
 	}
 
-	// Token: 0x060135A3 RID: 79267 RVA: 0x004D0A48 File Offset: 0x004CEC48
+	// Token: 0x06010A85 RID: 68229 RVA: 0x004DF680 File Offset: 0x004DD880
 	protected void PlaySequence(string sequenceName)
 	{
 		if (this.SequencePlayer == null)
@@ -155,7 +155,7 @@ public class PhotoDetailPanelBase : UiPanelBase
 		this.SequencePlayer.PlayLevelSequenceByName(sequenceName, false, null, false);
 	}
 
-	// Token: 0x060135A4 RID: 79268 RVA: 0x004D0A92 File Offset: 0x004CEC92
+	// Token: 0x06010A86 RID: 68230 RVA: 0x004DF6CA File Offset: 0x004DD8CA
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -166,16 +166,16 @@ public class PhotoDetailPanelBase : UiPanelBase
 		this.SequencePlayer = null;
 	}
 
-	// Token: 0x040091D2 RID: 37330
+	// Token: 0x0400932B RID: 37675
 	private int TabId;
 
-	// Token: 0x040091D3 RID: 37331
+	// Token: 0x0400932C RID: 37676
 	private int CurrentSubTabId;
 
-	// Token: 0x040091D4 RID: 37332
+	// Token: 0x0400932D RID: 37677
 	protected PhotoMainViewModel ViewModel;
 
-	// Token: 0x040091D5 RID: 37333
+	// Token: 0x0400932E RID: 37678
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 }

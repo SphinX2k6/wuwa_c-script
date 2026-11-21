@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001C03 RID: 7171
+// Token: 0x020010C2 RID: 4290
 public class FormationEditHeadItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600D643 RID: 54851 RVA: 0x00318A58 File Offset: 0x00316C58
+	// Token: 0x0600AA56 RID: 43606 RVA: 0x00323D48 File Offset: 0x00321F48
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -30,7 +30,7 @@ public class FormationEditHeadItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D644 RID: 54852 RVA: 0x00318B24 File Offset: 0x00316D24
+	// Token: 0x0600AA57 RID: 43607 RVA: 0x00323E14 File Offset: 0x00322014
 	public override void Refresh(int roleId, bool isSelected, int gridIndex)
 	{
 		RoleInfo? roleInfo = (roleId > 0) ? RoleConfig.Instance.GetRoleConfig(roleId) : null;
@@ -77,18 +77,18 @@ public class FormationEditHeadItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x020081AF RID: 33199
+	// Token: 0x02007339 RID: 29497
 	private enum EHeadChildType
 	{
-		// Token: 0x0402A512 RID: 173330
+		// Token: 0x0402583C RID: 153660
 		SpriteQuality,
-		// Token: 0x0402A513 RID: 173331
+		// Token: 0x0402583D RID: 153661
 		TexRoleIcon,
-		// Token: 0x0402A514 RID: 173332
+		// Token: 0x0402583E RID: 153662
 		SpriteTagIcon,
-		// Token: 0x0402A515 RID: 173333
+		// Token: 0x0402583F RID: 153663
 		PanelRoleHead,
-		// Token: 0x0402A516 RID: 173334
+		// Token: 0x04025840 RID: 153664
 		SpriteEmpty
 	}
 }
